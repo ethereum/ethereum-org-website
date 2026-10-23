@@ -134,7 +134,7 @@ Wrapper placeholders (translate text between tags): <HTML-PLACEHOLDER-LINK-*****
 You MAY reorder wrapper placeholders to match natural ${targetLanguage} word order.
 
 OUTPUT FORMAT:
-Return each translated section in the same envelope it arrived in, one block per section ID in the TRANSLATE list, with the opening and closing tags each on their own line. Example:
+Return one <SECTION> block per section ID in the TRANSLATE list, with the opening and closing tags each on their own line. Carry the id attribute only -- do not repeat action or heading. Example:
 
 <SECTION id="section-id-1">
 translated content...
@@ -144,7 +144,7 @@ translated content...
 translated content...
 </SECTION>
 
-Write the translation exactly as it should appear in the file: quotes, backslashes and newlines are literal and MUST NOT be escaped. Return nothing for CONTEXT sections. No JSON, no markdown wrapping, no explanations.
+Every ID in the TRANSLATE list must appear exactly once; a response missing any of them is discarded in full. Write the translation exactly as it should appear in the file: quotes, backslashes and newlines are literal and MUST NOT be escaped. Return nothing for CONTEXT sections. No JSON, no markdown wrapping, no explanations.
 
 === SECTIONS ===
 ${sectionBlocks}
@@ -155,9 +155,16 @@ ${sectionBlocks}
 // Response parser
 // ---------------------------------------------------------------------------
 
-/** One returned section: the id, then the body up to a closing tag. */
+/**
+ * One returned section: the opening tag's attributes, then the body up to a
+ * closing tag. Attributes are read as "anything but > or a quoted string", so
+ * a `>` inside a heading value (`heading="## 32 >= limit"`) cannot end the tag
+ * early and bleed the rest of the attribute into the body.
+ */
 const RESPONSE_SECTION_RE =
-  /<SECTION\b[^>]*\bid="([^"]*)"[^>]*>([\s\S]*?)<\/SECTION\s*>/g
+  /<SECTION\b((?:[^>"]|"[^"]*")*)>([\s\S]*?)<\/SECTION\s*>/g
+
+const ID_ATTR_RE = /\bid="([^"]*)"/
 
 /**
  * Parse Gemini's response into a section ID -> translation map.
@@ -169,7 +176,8 @@ const RESPONSE_SECTION_RE =
  * and five tasks a run died on it.
  */
 export function parseIncrementalResponse(
-  responseText: string
+  responseText: string,
+  expectedIds: string[]
 ): Record<string, string> {
   // Strip markdown code block wrapping if present
   let cleaned = responseText.trim()
@@ -179,7 +187,7 @@ export function parseIncrementalResponse(
 
   const translations: Record<string, string> = {}
   for (const m of cleaned.matchAll(RESPONSE_SECTION_RE)) {
-    const id = m[1]
+    const id = ID_ATTR_RE.exec(m[1])?.[1]
     if (!id) {
       throw fail("a <SECTION> block carries no id", responseText)
     }
@@ -189,14 +197,30 @@ export function parseIncrementalResponse(
     if (m[2].includes("<SECTION")) {
       throw fail(`section "${id}" is missing its closing tag`, responseText)
     }
-    // The envelope puts the body on its own lines; those two newlines are
-    // the envelope's, not the content's.
-    translations[id] = m[2].replace(/^\n/, "").replace(/\n$/, "")
+    // The envelope puts the body on its own lines; those newlines are the
+    // envelope's, not the content's.
+    translations[id] = m[2].replace(/^\r?\n/, "").replace(/\r?\n$/, "")
   }
 
   if (Object.keys(translations).length === 0) {
     throw fail(
       'no <SECTION id="...">...</SECTION> block found in the response',
+      responseText
+    )
+  }
+
+  // Output that stops early -- a token limit, a dropped connection -- still
+  // parses, because every block before the cut is well formed. callGeminiRaw
+  // only refuses a response that is entirely empty, so a truncated one arrives
+  // here looking like a success; assembly would fall the absent sections back
+  // to English, commit that, and stamp the manifest, after which no drift is
+  // ever detected again. Demanding every requested id makes that a parse
+  // failure the retry can clear.
+  const missing = expectedIds.filter((id) => !(id in translations))
+  if (missing.length > 0) {
+    const shown = missing.slice(0, 5).join(", ")
+    throw fail(
+      `response is missing ${missing.length} of ${expectedIds.length} requested section(s): ${shown}${missing.length > 5 ? ", ..." : ""}`,
       responseText
     )
   }
@@ -237,8 +261,9 @@ function reparseInstruction(error: Error): string {
     "YOUR PREVIOUS RESPONSE COULD NOT BE READ and was discarded.",
     `The reader reported: ${parserComplaint(error)}`,
     "Send every translated section again, each in its own envelope:",
-    '- Open with <SECTION id="the-section-id"> on its own line.',
+    '- Open with <SECTION id="the-section-id"> on its own line, id only.',
     "- Close with </SECTION> on its own line.",
+    "- Include every section ID that was asked for, exactly once.",
     "- Write the translation literally -- do not escape quotes or backslashes.",
     "- Output the blocks only: no JSON, no markdown fences, no commentary.",
   ].join("\n")
@@ -253,6 +278,8 @@ type BatchCaller = (prompt: string) => Promise<{
 interface RetryableBatch {
   prompt: string
   irreducible: boolean
+  /** Every id the response must carry back, or the batch failed. */
+  translateIds: string[]
 }
 
 /**
@@ -298,7 +325,10 @@ export async function translateBatchWithParseRetry(
     tokens.output += result.tokensUsed.output
 
     try {
-      return { translations: parseIncrementalResponse(result.text), tokens }
+      return {
+        translations: parseIncrementalResponse(result.text, batch.translateIds),
+        tokens,
+      }
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(String(error))
       if (attempt === PARSE_ATTEMPTS) break

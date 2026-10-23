@@ -436,7 +436,7 @@ async function buildGeminiTranslator(
     budget.spend(batch.bytes, `batch ${index + 1}/${plan.length}`)
 
     log(
-      `  Calling LLM: ${batch.translateCount} sections, ${batch.prompt.length} chars`
+      `  Calling LLM: ${batch.translateIds.length} sections, ${batch.prompt.length} chars`
     )
 
     // A batch that cannot be parsed must fail the task. Continuing would leave
