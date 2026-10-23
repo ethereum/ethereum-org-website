@@ -12,7 +12,7 @@ import {
   MAX_BATCHES_PER_FILE,
   MAX_CHUNK_BYTES,
   MAX_CONTEXT_BYTES,
-  MAX_PROMPT_BYTES,
+  MAX_PLANNED_PROMPT_BYTES,
   MIN_CONTENT_BUDGET_BYTES,
 } from "../../constants"
 
@@ -177,7 +177,7 @@ export function planIncrementalBatches(
         bytes,
         translateCount: translate.length,
         irreducible,
-        overCeiling: !irreducible && bytes > MAX_PROMPT_BYTES,
+        overCeiling: !irreducible && bytes > MAX_PLANNED_PROMPT_BYTES,
       }
     })
   }
@@ -196,7 +196,7 @@ export function planIncrementalBatches(
     )
     contentBudget = Math.max(
       MIN_CONTENT_BUDGET_BYTES,
-      contentBudget - (worst - MAX_PROMPT_BYTES) - 1024
+      contentBudget - (worst - MAX_PLANNED_PROMPT_BYTES) - 1024
     )
     planned = buildPlan(contentBudget)
     if (contentBudget <= MIN_CONTENT_BUDGET_BYTES) break
@@ -220,7 +220,7 @@ export function planIncrementalBatches(
   if (planned.some((b) => b.overCeiling)) {
     throw new Error(
       `[cost-guard] ${filePath} (${locale}): cannot fit batches under the ` +
-        `${MAX_PROMPT_BYTES.toLocaleString("en-US")}-byte per-call ceiling. Prompt overhead is ` +
+        `${MAX_PLANNED_PROMPT_BYTES.toLocaleString("en-US")}-byte planning ceiling. Prompt overhead is ` +
         `${overheadBytes.toLocaleString("en-US")} bytes (rules + ${glossaryTerms.size} glossary terms) ` +
         `and context is capped at ${MAX_CONTEXT_BYTES.toLocaleString("en-US")}. Refusing to send.`
     )

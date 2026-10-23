@@ -80,7 +80,7 @@ npm init
 
 설치 질문에 어떻게 대답하든 크게 상관없습니다. 참고를 위해 우리가 작성한 방식은 다음과 같습니다.
 
-```text
+```console
 package name: (my-nft)
 version: (1.0.0)
 description: My first NFT!

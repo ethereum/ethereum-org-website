@@ -66,7 +66,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
-- [Documentation](https://docs.infura.io/api)
+- [Documentation](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Cost-effective EVM JSON-RPC provider_**
@@ -77,7 +77,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **NOWNodes - _Full Nodes and Block Explorers._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentation](https://nownodes.gitbook.io/documentation)
+- [Documentation](https://docs.nownodes.io/)
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 
@@ -210,7 +210,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Documentation](https://www.covalenthq.com/docs/api/)
+- [Documentation](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 

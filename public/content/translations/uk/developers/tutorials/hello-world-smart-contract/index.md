@@ -81,7 +81,7 @@ npm init
 
 Не має великого значення, як ви відповісте на запитання під час встановлення, ось як ми це зробили для довідки:
 
-```text
+```console
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract

@@ -171,3 +171,15 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 11 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The prose is fluent and accurate, especially in the rewritten prediction-markets page and the new wallet descriptions. The criticals are all cases where this run broke wording that was already right on dev: Latin `Ethereum` in app-plasma, the Manticore case ending, and the three English founders tags.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- No Russian contamination. Warnings: decimal separator; MetaMask UI labels given only in Ukrainian.

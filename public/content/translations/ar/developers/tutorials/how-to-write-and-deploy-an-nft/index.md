@@ -76,7 +76,7 @@ npm init
 
 لا يهم حقًا كيف تجيب على أسئلة التثبيت؛ إليك كيف فعلنا ذلك كمرجع:
 
-```text
+```console
 package name: (my-nft)
 version: (1.0.0)
 description: My first NFT!

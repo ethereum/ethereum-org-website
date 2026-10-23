@@ -76,7 +76,7 @@ npm init
 
 Haijalishi sana jinsi unavyojibu maswali ya usakinishaji, hivi ndivyo tulivyofanya kwa marejeleo:
 
-```text
+```console
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract
