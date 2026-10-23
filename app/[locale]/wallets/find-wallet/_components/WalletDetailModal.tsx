@@ -3,13 +3,13 @@
 import type { ChainName } from "@/lib/types"
 
 import CatalogDetailModal from "@/components/CatalogDetailModal"
-import DetailRow from "@/components/CatalogDetailModal/DetailRow"
+import DetailRow, {
+  SupportedValue,
+} from "@/components/CatalogDetailModal/DetailRow"
 import CatalogItemLinkButtons, {
   type CatalogItemLinkLabels,
 } from "@/components/CatalogItem/LinkButtons"
 import ChainImages, { getRenderableChains } from "@/components/ChainImages"
-import { CheckCircle } from "@/components/icons/CheckCircle"
-import { XCircle } from "@/components/icons/XCircle"
 import { LinkWithArrow } from "@/components/ui/Link"
 
 import type { CatalogWalletCard } from "@/lib/utils/walletData"
@@ -125,17 +125,10 @@ const WalletDetailModal = ({
                 label={feature.label}
                 tooltip={feature.tooltip}
               >
-                {supported ? (
-                  <span className="inline-flex items-center gap-1.5 font-bold text-success">
-                    <CheckCircle className="my-0 shrink-0" />
-                    {labels.yes}
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center gap-1.5 font-bold text-error">
-                    <XCircle className="my-0 shrink-0" />
-                    {labels.no}
-                  </span>
-                )}
+                <SupportedValue
+                  supported={supported}
+                  label={supported ? labels.yes : labels.no}
+                />
               </DetailRow>
             )
           })}

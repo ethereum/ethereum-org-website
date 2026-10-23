@@ -70,6 +70,9 @@ const ToolsPageBody = async ({
             resultsLabel: t("page-developers-tools-results-label"),
             noResults: t("page-developers-tools-no-results"),
             cropsNative: t("page-developers-tools-crops-native"),
+            cropsNativeLearnMore: t(
+              "page-developers-tools-crops-native-learn-more"
+            ),
             filtersToggle: tTable("table-filters"),
             applyLabel: t("page-developers-tools-show-results"),
             closeLabel: tCommon("close"),
