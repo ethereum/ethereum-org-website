@@ -23,7 +23,11 @@ import {
 import { normalizeContent } from "../../../src/scripts/intl-pipeline/lib/llm/content-normalizer"
 import { planIncrementalBatches } from "../../../src/scripts/intl-pipeline/lib/llm/plan"
 import { classifyFailure } from "../../../src/scripts/intl-pipeline/lib/quarantine"
-import { PROSE_FENCE_TAGS } from "../../../src/scripts/intl-pipeline/lib/shared-patterns"
+import {
+  FENCED_BLOCK_RE,
+  fenceLanguage,
+  PROSE_FENCE_TAGS,
+} from "../../../src/scripts/intl-pipeline/lib/shared-patterns"
 import { verifyMarkdown } from "../../../src/scripts/intl-pipeline/lib/verify-structure"
 
 /** The real shape of the defect: an untagged `clef` console transcript. */
@@ -350,11 +354,13 @@ test("no English prose fence carries an escaped quote", () => {
       }
       if (!entry.name.endsWith(".md")) continue
       const src = fs.readFileSync(full, "utf-8")
-      for (const m of src.matchAll(
-        /^[ \t]*```([a-zA-Z]*)[ \t]*\n([\s\S]*?)^[ \t]*```/gm
-      )) {
-        if (!PROSE_FENCE_TAGS.has(m[1].toLowerCase())) continue
-        if (m[2].includes('\\"')) {
+      // The pipeline's own pattern, so the guard cannot drift from what it
+      // actually translates: tildes and empty fences included.
+      for (const m of src.matchAll(FENCED_BLOCK_RE)) {
+        const body = m[4]
+        if (!body) continue
+        if (!PROSE_FENCE_TAGS.has(fenceLanguage(m[3]))) continue
+        if (body.includes('\\"')) {
           offenders.push(path.relative(root, full))
         }
       }

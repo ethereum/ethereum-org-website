@@ -214,7 +214,7 @@ function reparseInstruction(error: Error): string {
     "",
     "YOUR PREVIOUS RESPONSE WAS NOT VALID JSON and could not be used.",
     `The parser reported: ${parserComplaint(error)}`,
-    "Send the same translations again as ONE valid JSON object:",
+    "Send the translations as ONE valid JSON object:",
     '- Escape every double quote inside a value as \\" -- attribute syntax',
     '  like <span dir="ltr"> must be written <span dir=\\"ltr\\">.',
     "- Escape every backslash as \\\\ and every newline as \\n.",

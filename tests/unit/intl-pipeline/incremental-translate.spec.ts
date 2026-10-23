@@ -567,10 +567,7 @@ test.describe("translateBatchWithParseRetry", () => {
   const unescapedQuote =
     '{"a-section": "Un <span dir="ltr">NFT</span> acuñado."}'
   // The mr shape: a bare `\` from reproduced program output.
-  const badEscape = '{"a-section": "echo \\"Error\\" && exit 1"}'.replace(
-    '\\"Error\\"',
-    "\\xError\\x"
-  )
+  const badEscape = '{"a-section": "echo \\xError\\x && exit 1"}'
 
   test("returns the first parsable response without re-sending", async () => {
     let calls = 0
