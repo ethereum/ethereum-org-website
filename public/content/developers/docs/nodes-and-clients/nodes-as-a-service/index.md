@@ -379,6 +379,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay in Crypto
     - External support for extra behavior requirements
 
+- [**Triport**](https://triport.io/ethereum-rpc)
+  - [Docs](https://triport.io/docs/eth)
+  - Features
+    - Keyless public endpoint (rate limited): `https://triport.io/public/eth`
+    - Flat monthly plans limited by requests per second, with no credits, compute units or overage
+    - JSON-RPC and WebSocket (`eth_subscribe`) endpoints
+    - `trace_*` and `debug_*` methods (Pro plan and above)
+    - Beacon API proxy and Beacon events (SSE)
+    - `txpool_*` methods and a mempool stream
+    - One API key across Ethereum, Solana, Base, BNB Smart Chain, Polygon, Robinhood Chain, TRON, TON and Stellar
+    - Pay in crypto
+    - 7-day free trial
+
 - [**Watchdata**](https://watchdata.io/)
   - [Docs](https://docs.watchdata.io/)
   - Features
