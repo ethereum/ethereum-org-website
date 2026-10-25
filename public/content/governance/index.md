@@ -71,7 +71,7 @@ The formal process for introducing changes to the Ethereum protocol is as follow
 
 1. **Propose a Core EIP**: as described in [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), the first step to formally proposing a change to Ethereum is to detail it in a Core EIP. This will act as the official specification for an EIP that Protocol Developers will implement if accepted.
 
-2. **Present your EIP to Protocol Developers**: once you have a Core EIP for which you've gathered community input, you should present it to Protocol Developers. You can do so by proposing it for discussion on an [AllCoreDevs call](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). It is likely some discussions will have already happened asynchronously on the [Ethereum Magician's forum](https://ethereum-magicians.org/) or in the [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw).
+2. **Present your EIP to Protocol Developers**: once you have a Core EIP for which you've gathered community input, you should present it to Protocol Developers. You can do so by proposing it for discussion on an [AllCoreDevs call](https://eips.ethereum.org/EIPS/eip-7723). It is likely some discussions will have already happened asynchronously on the [Ethereum Magician's forum](https://ethereum-magicians.org/) or in the [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw).
 
 > Potential outcomes of this stage are:
 

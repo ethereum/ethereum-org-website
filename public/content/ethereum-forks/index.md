@@ -160,7 +160,7 @@ Notably this includes EIP-4844, known as **Proto-Danksharding**, which significa
 - [Layer 2 rollups](/layer-2/)
 - [Proto-Danksharding](/roadmap/scaling/#proto-danksharding)
 - [Danksharding](/roadmap/danksharding/)
-- [Read the Cancun upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md)
+- [Read the Cancun upgrade specification](https://ethereum.github.io/execution-specs/src/ethereum/forks/cancun/index.html)
 
 #### Deneb summary {#deneb-summary}
 
@@ -209,7 +209,7 @@ The Shanghai upgrade brought staking withdrawals to the execution layer. In tand
 
 </ExpandableCard>
 
-- [Read the Shanghai upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+- [Read the Shanghai upgrade specification](https://ethereum.github.io/execution-specs/src/ethereum/forks/shanghai/index.html)
 
 #### Capella summary {#capella-summary}
 
@@ -234,7 +234,7 @@ The upgrade also provided automatic account sweeping functionality, which contin
 
 The Paris upgrade was triggered by the proof-of-work blockchain passing a [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000. This happened at block 15537393 on 15th September 2022, triggering the Paris upgrade the next block. Paris was [The Merge](/roadmap/merge/) transition - its major feature was switching off the [proof-of-work](/developers/docs/consensus-mechanisms/pow) mining algorithm and associated consensus logic and switching on [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Paris itself was an upgrade to the [execution clients](/developers/docs/nodes-and-clients/#execution-clients) (equivalent to Bellatrix on the consensus layer) that enabled them to take instruction from their connected [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients). This required a new set of internal API methods, collectively known as the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), to be activated. This was arguably the most significant upgrade in Ethereum history since [Homestead](#homestead)!
 
-- [Read the Paris upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+- [Read the Paris upgrade specification](https://ethereum.github.io/execution-specs/src/ethereum/forks/paris/index.html)
 
 <ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
 
@@ -342,7 +342,7 @@ The implementation of [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) in the
 
 This video explains EIP-1559 and the benefits it brings: [EIP-1559 Explained](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
-- [Are you a dapp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
+- [Are you a dapp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/London/london-ecosystem-readinesss.md)
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
