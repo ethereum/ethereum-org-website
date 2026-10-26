@@ -171,7 +171,7 @@ function DiagramIllustration({
       >
         {part ? (
           <>
-            <span className="font-bold text-body">{part.label}</span>
+            <span className="text-body">{part.label}</span>
             {": "}
             {part.definition}
           </>
@@ -418,7 +418,7 @@ export function DiagramReadout({
       {rows.map((row, i) => (
         <div key={i} className="contents">
           <dt className="min-w-0 text-body-medium">{row.label}</dt>
-          <dd className="m-0 text-end font-mono font-bold text-body tabular-nums">
+          <dd className="m-0 text-end font-mono text-body tabular-nums">
             {row.value}
           </dd>
         </div>
