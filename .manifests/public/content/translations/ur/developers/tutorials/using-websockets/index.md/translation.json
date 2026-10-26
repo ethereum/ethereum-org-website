@@ -1,22 +1,36 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ur",
-  "translatedAt": "2026-06-19T23:28:06.999Z",
-  "englishManifestHash": "1c5732c054be",
+  "translatedAt": "2026-10-26T17:18:51.632Z",
+  "englishManifestHash": "f5b14801f6d1",
   "placeholderOrder": [
-    "LINK-dca13e",
+    "LINK-526327",
+    "CODE-4c61a5",
+    "CODE-29f7ca",
+    "LINK-68f992",
+    "LINK-a04871",
+    "LINK-c11257",
+    "CODE-29f606",
     "LINK-f99ca4",
-    "CODE-2a9751",
-    "LINK-3f0bf9",
-    "CODEBLOCK-9e4d9b",
-    "LINK-8df021",
-    "IMAGE-645485",
-    "LINK-13d16b",
-    "CODEBLOCK-5ebff4",
+    "CODEBLOCK-26908b",
+    "CODE-62b67e",
+    "CODE-dabd3a",
+    "LINK-177004",
+    "CODE-a61d35",
+    "CODE-66dfee",
+    "IMAGE-3c599f",
+    "LINK-9d3f4f",
+    "LINK-d16d1b",
+    "CODE-e0603c",
+    "CODE-c4d322",
+    "CODE-5c39d7",
+    "CODE-d6299b",
+    "CODE-0ab3cc",
+    "CODEBLOCK-d63fb1",
     "CODE-5c43f8",
     "CODE-e46548",
     "CODE-5c43f8",
-    "LINK-ef2b78",
+    "LINK-1d282a",
     "CODE-5c43f8",
     "CODE-e46548",
     "CODE-e7a027",
@@ -25,11 +39,8 @@
     "CODE-a8fa7f",
     "CODE-5c43f8",
     "CODE-f6a214",
-    "CODE-e8b27f",
-    "CODE-33df59",
-    "CODEBLOCK-13b455",
     "CODE-cd55ad",
-    "CODEBLOCK-f28612",
+    "CODEBLOCK-ce7388",
     "CODE-98f38f",
     "CODE-e1f797",
     "CODE-b5bea4",
@@ -42,50 +53,121 @@
     "CODE-9fe610",
     "CODE-c44525",
     "CODE-6f3060",
-    "CODEBLOCK-ebd368",
+    "LINK-63dbf5",
+    "CODE-0da00b",
+    "CODEBLOCK-49eb51",
+    "CODE-fa3eb9",
+    "CODEBLOCK-3cd95a",
+    "LINK-7d6815",
+    "CODE-be88b3",
+    "CODE-8fd853",
+    "CODE-636558",
+    "CODE-3f3e6a",
     "CODE-e46548",
     "CODE-5c43f8",
     "CODE-b5bea4",
     "CODE-fcbcf1",
-    "CODEBLOCK-70c551",
-    "CODEBLOCK-1b449a",
+    "CODE-e46548",
+    "CODEBLOCK-eae897",
     "LINK-9d7f22",
-    "LINK-8e3456",
-    "LINK-1e6b20"
+    "LINK-f728fb",
+    "LINK-36ee50"
   ],
   "placeholderMap": {
-    "CODEBLOCK-9e4d9b": {
+    "CODEBLOCK-26908b": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-5ebff4": {
+    "CODEBLOCK-d63fb1": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-13b455": {
+    "CODEBLOCK-ce7388": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-f28612": {
+    "CODEBLOCK-49eb51": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-ebd368": {
+    "CODEBLOCK-3cd95a": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-70c551": {
+    "CODEBLOCK-eae897": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-1b449a": {
-      "type": "code-fence",
-      "values": {}
-    },
-    "CODE-2a9751": {
+    "CODE-4c61a5": {
       "type": "inline-code",
       "values": {
-        "content": "demo"
+        "content": "wss://<provider-host>/<your-api-key>"
+      }
+    },
+    "CODE-29f7ca": {
+      "type": "inline-code",
+      "values": {
+        "content": "wss://eth-mainnet.g.alchemy.com/v2/<your-api-key>"
+      }
+    },
+    "CODE-29f606": {
+      "type": "inline-code",
+      "values": {
+        "content": "wss://ethereum-rpc.publicnode.com"
+      }
+    },
+    "CODE-62b67e": {
+      "type": "inline-code",
+      "values": {
+        "content": ">"
+      }
+    },
+    "CODE-dabd3a": {
+      "type": "inline-code",
+      "values": {
+        "content": "<"
+      }
+    },
+    "CODE-a61d35": {
+      "type": "inline-code",
+      "values": {
+        "content": "wss://"
+      }
+    },
+    "CODE-66dfee": {
+      "type": "inline-code",
+      "values": {
+        "content": "https://"
+      }
+    },
+    "CODE-c4d322": {
+      "type": "inline-code",
+      "values": {
+        "content": "webSocket"
+      }
+    },
+    "CODE-e0603c": {
+      "type": "inline-code",
+      "values": {
+        "content": "http"
+      }
+    },
+    "CODE-5c39d7": {
+      "type": "inline-code",
+      "values": {
+        "content": "npm install viem"
+      }
+    },
+    "CODE-d6299b": {
+      "type": "inline-code",
+      "values": {
+        "content": "index.mjs"
+      }
+    },
+    "CODE-0ab3cc": {
+      "type": "inline-code",
+      "values": {
+        "content": "node index.mjs"
       }
     },
     "CODE-5c43f8": {
@@ -128,18 +210,6 @@
       "type": "inline-code",
       "values": {
         "content": "result"
-      }
-    },
-    "CODE-e8b27f": {
-      "type": "inline-code",
-      "values": {
-        "content": "alchemy_newFullPendingTransactions"
-      }
-    },
-    "CODE-33df59": {
-      "type": "inline-code",
-      "values": {
-        "content": "web3.eth.subscribe(\"pendingTransactions\")"
       }
     },
     "CODE-cd55ad": {
@@ -214,22 +284,76 @@
         "content": "[[A, B], [A, B]]"
       }
     },
+    "CODE-0da00b": {
+      "type": "inline-code",
+      "values": {
+        "content": "Deposit"
+      }
+    },
+    "CODE-fa3eb9": {
+      "type": "inline-code",
+      "values": {
+        "content": "newPendingTransactions"
+      }
+    },
+    "CODE-be88b3": {
+      "type": "inline-code",
+      "values": {
+        "content": "alchemy_pendingTransactions"
+      }
+    },
+    "CODE-8fd853": {
+      "type": "inline-code",
+      "values": {
+        "content": "fromAddress"
+      }
+    },
+    "CODE-636558": {
+      "type": "inline-code",
+      "values": {
+        "content": "toAddress"
+      }
+    },
+    "CODE-3f3e6a": {
+      "type": "inline-code",
+      "values": {
+        "content": "hashesOnly"
+      }
+    },
     "CODE-fcbcf1": {
       "type": "inline-code",
       "values": {
         "content": "false"
       }
     },
-    "IMAGE-645485": {
+    "IMAGE-3c599f": {
       "type": "image",
       "values": {
-        "path": "./use-websockets.gif"
+        "path": "./use-websockets.mp4#602x280"
       }
     },
-    "LINK-dca13e": {
+    "LINK-526327": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/reference/api-overview"
+        "url": "https://viem.sh/docs/clients/transports/websocket"
+      }
+    },
+    "LINK-68f992": {
+      "type": "link",
+      "values": {
+        "url": "https://auth.alchemy.com/signup"
+      }
+    },
+    "LINK-a04871": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/nodes-as-a-service/"
+      }
+    },
+    "LINK-c11257": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/nodes-and-clients/run-a-node/"
       }
     },
     "LINK-f99ca4": {
@@ -238,28 +362,40 @@
         "url": "https://github.com/websockets/wscat"
       }
     },
-    "LINK-3f0bf9": {
-      "type": "link",
-      "values": {
-        "url": "https://auth.alchemy.com/signup"
-      }
-    },
-    "LINK-8df021": {
+    "LINK-177004": {
       "type": "link",
       "values": {
         "url": "https://dashboard.alchemy.com/"
       }
     },
-    "LINK-13d16b": {
+    "LINK-9d3f4f": {
       "type": "link",
       "values": {
-        "url": "https://www.alchemy.com/docs/reference/api-overview"
+        "url": "/developers/docs/apis/json-rpc/"
       }
     },
-    "LINK-ef2b78": {
+    "LINK-d16d1b": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/reference/eth-subscribe"
+        "url": "https://viem.sh/"
+      }
+    },
+    "LINK-1d282a": {
+      "type": "link",
+      "values": {
+        "url": "https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub"
+      }
+    },
+    "LINK-63dbf5": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+      }
+    },
+    "LINK-7d6815": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/docs/reference/alchemy-pendingtransactions"
       }
     },
     "LINK-9d7f22": {
@@ -268,22 +404,22 @@
         "url": "https://auth.alchemy.com"
       }
     },
-    "LINK-8e3456": {
+    "LINK-f728fb": {
       "type": "link",
       "values": {
         "url": "https://www.alchemy.com/docs/"
       }
     },
-    "LINK-1e6b20": {
+    "LINK-36ee50": {
       "type": "link",
       "values": {
-        "url": "https://x.com/AlchemyPlatform"
+        "url": "https://x.com/Alchemy"
       }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T23:28:06.999Z",
+      "translatedAt": "2026-10-26T17:18:51.632Z",
       "status": "success"
     }
   }
