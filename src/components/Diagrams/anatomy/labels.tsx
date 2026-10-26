@@ -338,7 +338,7 @@ export function AnatomyLabels({
               labelRefs.current[spot.id] = el
             }}
             className={cn(
-              "absolute text-xs leading-tight whitespace-nowrap",
+              "absolute text-sm leading-tight whitespace-nowrap",
               PLACEMENT[spot.placement],
               isHidden(spot.id) ? "invisible" : "pointer-events-auto"
             )}
