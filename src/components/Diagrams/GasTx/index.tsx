@@ -1,5 +1,3 @@
-import { cn } from "@/lib/utils/cn"
-
 import { DiagramMessages } from "../diagram-messages"
 
 import { GasTxPlayer } from "./lazy-player"
@@ -32,13 +30,12 @@ const GasTxDiagram = ({
   className,
 }: GasTxDiagramProps) => (
   <DiagramMessages prefix="gas-tx">
-    <div className={cn("not-prose my-8", className)}>
-      <GasTxPlayer
-        initialPreset={initialPreset}
-        initialStep={initialStep}
-        fig={fig}
-      />
-    </div>
+    <GasTxPlayer
+      initialPreset={initialPreset}
+      initialStep={initialStep}
+      fig={fig}
+      className={className}
+    />
   </DiagramMessages>
 )
 

@@ -49,6 +49,7 @@ interface GasEvmPlayerProps {
   initialStep?: number
   /** Figure number on the page, if the page numbers its figures. */
   fig?: number
+  className?: string
 }
 
 /**
@@ -59,6 +60,7 @@ export function GasEvmPlayer({
   initialPreset = "enough",
   initialStep = GAS_EVM_IDLE_STEP,
   fig,
+  className,
 }: GasEvmPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
@@ -113,6 +115,7 @@ export function GasEvmPlayer({
 
   return (
     <InteractiveDiagram
+      className={className}
       caption={t("gas-evm-caption")}
       description={t("gas-evm-description", {
         intrinsic: format(INTRINSIC_GAS),

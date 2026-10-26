@@ -59,8 +59,6 @@ Compiled smart contract bytecode executes as a number of EVM [opcodes](/develope
 
 <GasEvmDiagram fig={1} />
 
-_Inspired by [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
 ## EVM implementations {#evm-implementations}
 
 All implementations of the EVM must adhere to the specification described in the Ethereum Yellowpaper.
