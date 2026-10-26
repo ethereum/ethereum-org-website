@@ -4,6 +4,7 @@ import { memo, useEffect, useState } from "react"
 
 import Checkbox from "@/components/ui/checkbox"
 
+import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import CatalogFilterGroup from "./CatalogFilterGroup"
@@ -61,13 +62,24 @@ function CatalogCheckboxGroup({
       {options.map((option) => (
         <label
           key={option.id}
-          className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-background-highlight"
+          className={cn(
+            "flex cursor-pointer gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-background-highlight",
+            option.description ? "items-start" : "items-center"
+          )}
         >
           <Checkbox
             checked={selectedIds.includes(option.id)}
             onCheckedChange={() => onToggle(option.id)}
+            className={cn(option.description && "mt-0.5")}
           />
-          <span className="flex-1 select-none">{option.label}</span>
+          <span className="flex-1 select-none">
+            {option.label}
+            {option.description && (
+              <span className="mt-1 block text-xs text-body-medium">
+                {option.description}
+              </span>
+            )}
+          </span>
           {typeof option.count === "number" && (
             <span className="text-xs text-body-medium">
               {nf.format(option.count)}
