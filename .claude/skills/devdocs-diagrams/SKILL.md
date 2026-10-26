@@ -58,11 +58,12 @@ Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` pe
 - **Active part.** Takes its role colour (tint and outline), and its label and leader switch to it. Never the site `primary`, never a heavier stroke.
 - **Detail and shadow.** 2-4 small marks per object from `isoDetail`. One ground shadow under the plate and a contact shadow per object (`isoShadow`, radial gradient from `IsoDefs`). No SVG filters, no CSS blur. Budget about 300 SVG nodes per diagram (they run 100-135).
 - **Simple parts.** One solid per object, at most one icon, each on its own footprint. Show quantities moving: levels fill and drain, a burning part glows in proportion, readouts count up with the drawing.
-- **Labels.** Concept names, single line, 12px, fully outside the plate, short straight or single-elbow leaders that cross nothing. `AnatomyLabels` drops any label that would leave the drawing, touch a shape or touch another label or leader (earlier spots win); narrow screens fall back to fewer labels plus the caption. Before its first measurement (server HTML) only the top three spots show, so order spots by priority.
+- **Labels.** Concept names, single line, 14px, fully outside the plate, short straight or single-elbow leaders that cross nothing. `AnatomyLabels` drops any label that would leave the drawing, touch a shape or touch another label or leader (earlier spots win); narrow screens fall back to fewer labels plus the caption. Before its first measurement (server HTML) only the top three spots show, so order spots by priority.
+- **Type.** 14px (`text-sm`) minimum for every piece of diagram text: labels, figure header, status line, legend, tags. Sans throughout; monospace only for the readout numbers, where digits line up.
 
 ## Shell (`InteractiveDiagram`)
 
-One card, so controls sit in the same places everywhere. From a 640px card width (container query) a 15rem panel sits on the inline-end side; narrower it stacks under the illustration. Illustration column: figure header in small mono caps ("Fig. N · Title", from `fig={N}`), drawing, status line (two lines reserved; the step at rest, "Label: definition" on hover), legend. Panel, top to bottom:
+One card, so controls sit in the same places everywhere. From a 640px card width (container query) a 15rem panel sits on the inline-end side; narrower it stacks under the illustration. Illustration column: figure header in small caps ("Fig. N · Title", from `fig={N}`), drawing, status line (sans, two lines reserved; the step at rest, "Label: definition" on hover), legend. Panel, top to bottom:
 
 1. `DiagramPresets`: "Example values", segmented, `aria-pressed`.
 2. `DiagramTransport`: primary action (disabled while running), then previous, "Step x of n" (`current`, `total` numbers), next (`data-diagram-next`), reset.

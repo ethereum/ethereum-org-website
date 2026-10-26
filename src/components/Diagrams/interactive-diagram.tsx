@@ -31,7 +31,7 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
  * narrower it stacks under the illustration.
  *
  * Illustration column, top to bottom: the figure header ("Fig. N", title, in
- * small mono caps), the drawing, a status line (the step, or the hovered
+ * small caps), the drawing, a status line (the step, or the hovered
  * part's definition) and a legend of the role colours.
  * Panel, top to bottom: presets ("Example values"), transport (primary
  * action, then previous / "Step x of n" / next / reset), caption, readout.
@@ -155,7 +155,7 @@ function DiagramIllustration({
 
   return (
     <div className="flex w-full min-w-0 flex-col gap-2">
-      <p className="m-0 font-mono text-xs tracking-wider text-body-medium uppercase">
+      <p className="m-0 text-sm tracking-wider text-body-medium uppercase">
         {figLabel && (
           <>
             <span className="text-body">{figLabel}</span>
@@ -172,7 +172,7 @@ function DiagramIllustration({
           nothing below moves when the text changes. */}
       <p
         aria-hidden
-        className="m-0 line-clamp-2 min-h-[2lh] font-mono text-xs leading-snug text-body-medium"
+        className="m-0 line-clamp-2 min-h-[2lh] text-sm leading-snug text-body-medium"
       >
         {part ? (
           <>
@@ -184,7 +184,7 @@ function DiagramIllustration({
           status
         )}
       </p>
-      <ul className="m-0 flex list-none flex-wrap gap-x-4 gap-y-1 p-0 text-xs text-body-medium">
+      <ul className="m-0 flex list-none flex-wrap gap-x-4 gap-y-1 p-0 text-sm text-body-medium">
         {legend.map((item) => (
           <li key={item.hue} className="m-0 flex items-center gap-1.5">
             <span
