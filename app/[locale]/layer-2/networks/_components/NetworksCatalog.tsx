@@ -14,6 +14,7 @@ import type { CatalogSelectOption } from "@/components/FilterableCatalog/types"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import {
   filterNetwork,
+  getNetworkHref,
   MAINNET_ID,
   NETWORK_FILTER_KEYS,
   type NetworkCardData,
@@ -82,6 +83,7 @@ const NetworksResults = memo(function NetworksResults({
           : labels.mainNetwork
       }
       walletsCount={labels.walletsCount}
+      href={network.slug && getNetworkHref(network.slug)}
       onOpen={() => onOpen(network.slug ?? MAINNET_ID)}
     />
   )
@@ -162,6 +164,7 @@ export default function NetworksCatalog({
               : labels.mainNetwork
           }
           labels={labels.modal}
+          fullDetailsHref={openNetwork.slug && getNetworkHref(openNetwork.slug)}
           onClose={close}
           // Radix aims focus at whatever was focused when the dialog mounted,
           // which lands on the body here; put the visitor back on the card.

@@ -75,6 +75,7 @@ const NetworksPageBody = async ({
       txFeeTooltip: t("page-layer-2-networks-transaction-fee-description"),
       bridgeTo: t("page-layer-2-networks-bridge-to"),
       viewApps: t("page-layer-2-networks-view-apps"),
+      fullDetails: t("page-layer-2-networks-full-details"),
     },
     maturity,
     mainNetwork: t("page-layer-2-networks-main-network"),
