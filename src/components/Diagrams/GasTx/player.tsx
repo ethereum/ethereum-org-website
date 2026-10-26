@@ -64,6 +64,7 @@ interface GasTxPlayerProps {
   initialStep?: number
   /** Figure number on the page, if the page numbers its figures. */
   fig?: number
+  className?: string
 }
 
 /**
@@ -74,6 +75,7 @@ export function GasTxPlayer({
   initialPreset = "light",
   initialStep = GAS_TX_IDLE_STEP,
   fig,
+  className,
 }: GasTxPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
@@ -122,6 +124,7 @@ export function GasTxPlayer({
 
   return (
     <InteractiveDiagram
+      className={className}
       caption={t("gas-tx-caption")}
       description={t("gas-tx-description")}
       figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}

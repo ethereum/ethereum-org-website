@@ -52,7 +52,7 @@ export interface DiagramLegendItem {
 }
 
 export interface InteractiveDiagramProps {
-  /** Intro text, shown above the card as the figcaption. */
+  /** What the diagram shows, centred under the card as the figcaption. */
   caption: ReactNode
   /** Screen-reader description of the whole figure. */
   description: ReactNode
@@ -100,7 +100,6 @@ export function InteractiveDiagram({
     <DiagramHoverProvider>
       <DiagramFigure
         caption={caption}
-        captionPlacement="top"
         description={description}
         className={className}
       >

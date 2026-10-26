@@ -172,8 +172,6 @@ Validator keeps the tip **+0.000210 ETH**
 
 <GasTxDiagram fig={2} />
 
-_Inspired by [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
 Any gas not used in a transaction is refunded to the user account.
 
 ### Smart contract interactions {#smart-contract-interactions}

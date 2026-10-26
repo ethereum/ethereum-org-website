@@ -12,7 +12,7 @@ import {
 
 const STRINGS = {
   en: {
-    intro: "Intro text: what the diagram shows, above the card.",
+    intro: "Caption: what the diagram shows, under the card.",
     presets: "Example values",
     presetA: "Light call",
     presetB: "Heavy call",

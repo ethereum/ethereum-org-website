@@ -30,7 +30,7 @@ Shared pieces in `src/components/Diagrams/`:
 | `use-step-player.ts`      | `useStepPlayer({ idle, last, initial, dwellMs, dwellReducedMs, paused })`: step state, `run`, `goTo`, `reset`                                   |
 | `diagram-hover.tsx`       | Shared hover/focus state (`usePartState`, `useHoverTargets`) and `useDiagramInView` (pauses off screen)                                         |
 | `diagram-messages.tsx`    | Server component: hands the player only its own strings plus shared `diagram-*` ones                                                            |
-| `diagram-figure.tsx`      | `<figure>` with the visible intro and the screen-reader description                                                                             |
+| `diagram-figure.tsx`      | `<figure>` (`my-space-2x`), the centred caption under the card, the screen-reader description                                                   |
 | `anatomy/iso.tsx`         | `isoProjection` (`P`, `line`, `path`, `box`, `cylinder`, `footprint`), `IsoPlate`, `IsoSolid`, `IsoCylinder`, `IsoPipe`, `IsoDefs`, `isoShadow` |
 | `anatomy/detail.tsx`      | `isoDetail`: seams, plates, cells, vents, tank marks                                                                                            |
 | `anatomy/labels.tsx`      | `AnatomyLabels`: concept labels with leaders, collision-dropped, one tab stop                                                                   |
@@ -43,10 +43,10 @@ Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` pe
 
 1. **Read the PNG.** List what it shows and decide what a reader should _watch_ change, step by step. Map each concept to one simple solid on the plate (world state). Pick 2-4 presets of example values only if comparing them teaches something.
 2. **Model** (`model.ts`). Presets, steps (`IDLE_STEP`, then one per step), and a pure `get<Name>View` that returns everything the drawing, readout, captions and status read: levels, lit part, which parts are reached, caption key, values. Numbers that must add up are integers (e.g. whole gwei), so the readout sums exactly.
-3. **Strings.** Labels, one-line `-definition-<part>`s, `-title`, `-caption` (intro), `-description` (narrates the whole drawing; it is the text alternative), `-step-*` captions and short `-status-*` lines. **Every number is an ICU param** (`{limit}`, `{cost}`, `{step}`), formatted by the player with `useDiagramFormat()` (wraps `numberFormat`: arabext digits for `ur`, locale grouping elsewhere). Never write digits into a string. Opcode names and code stay as literal text.
+3. **Strings.** Labels, one-line `-definition-<part>`s, `-title`, `-caption` (one line under the card), `-description` (narrates the whole drawing; it is the text alternative), `-step-*` captions and short `-status-*` lines. **Every number is an ICU param** (`{limit}`, `{cost}`, `{step}`), formatted by the player with `useDiagramFormat()` (wraps `numberFormat`: arabext digits for `ur`, locale grouping elsewhere). Never write digits into a string. Opcode names and code stay as literal text.
 4. **Rig** (`rig.tsx`). Geometry, detail and shadows built once at module level; `<g data-part="id">` per part; root `<svg aria-hidden data-anatomy-drawing {...DIAGRAM_SVG_FALLBACKS} className={ISO_SVG_CLASS}>`; `AnatomyLabels` with spots in priority order. Use `useTranslations` only for shared strings like `diagram-reverted`. `export default memo(Rig)`.
 5. **Player** (`player.tsx`). `useStepPlayer` (never a hand-rolled timer), `useMemo` the view per preset and step, `useMemo` labels and definitions on `t`. Readout numbers that move use `<DiagramCountUp value delay />`. Pass every caption the preset can show to `DiagramCaption all`.
-6. **Wire in.** `index.tsx` wraps the lazy player in `DiagramMessages`; import it in `src/layouts/Docs.tsx` and add it to `docsComponents`. Swap the `![...](x.png)` line in **English markdown only** for `<Name fig={N} />`, keeping the credit line as "Inspired by ...". Leave the PNG and translated markdown alone; the intl pipeline propagates.
+6. **Wire in.** `index.tsx` wraps the lazy player in `DiagramMessages` (no extra wrapper: the `<figure>` carries `my-space-2x` and takes `className`); import it in `src/layouts/Docs.tsx` and add it to `docsComponents`. Swap the `![...](x.png)` line in **English markdown only** for `<Name fig={N} />` and drop the PNG's "adapted from" credit line: the diagrams are original drawings. Leave the PNG and translated markdown alone; the intl pipeline propagates.
 7. **Guard and stories** (below), then the PR.
 
 ## Visual rules
@@ -74,7 +74,7 @@ Hover and focus are built in: wrap each part in `<g data-part="id">` with the sa
 
 ## Accessibility
 
-- `<figure>` with the intro as `<figcaption>` and the `-description` linked by `aria-describedby`. The drawing is `aria-hidden`.
+- `<figure>` with a centred `<figcaption>` under the card (14px, `text-body-medium`) and the `-description` linked by `aria-describedby`. The drawing is `aria-hidden`.
 - Labels are **one tab stop** (roving tabindex) in a `role="group"` named by `diagram-parts-label`; arrow keys (mirrored in RTL), Home and End move between visible labels. Each label's definition is its `aria-describedby`.
 - Step changes are announced once by the caption's `role="status"`; the status line is `aria-hidden`.
 - Reduced motion: nothing moves, steps jump to their end state, dwell is longer, count-ups are instant.
