@@ -1,4 +1,5 @@
-import { type ReactNode, useId } from "react"
+import { memo, type ReactNode, useId } from "react"
+import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -24,12 +25,17 @@ import {
 } from "../anatomy"
 import { usePartState } from "../diagram-hover"
 
-import { GAS_EVM_SIZE } from "./layout"
-import { type GasEvmPart, type GasEvmView, PROGRAM } from "./model"
+import {
+  GAS_EVM_SIZE,
+  type GasEvmPart,
+  type GasEvmView,
+  PROGRAM,
+} from "./model"
 
 /*
  * Isometric drawing for the EVM gas diagram, on the shared anatomy
- * primitives. Lazy-loaded by GasEvmPlayer; everything comes from the view.
+ * primitives. Server-rendered with the player; everything comes from the
+ * view.
  *
  * Grouped by meaning (after the original evm.png): the stack and memory are
  * volatile machine state, so they sit on the EVM's own plinth either side of
@@ -189,18 +195,17 @@ interface GasEvmRigProps {
   runKey: string
   labels: Record<GasEvmPart, ReactNode>
   definitions: Record<GasEvmPart, ReactNode>
-  revertedLabel: string
   className?: string
 }
 
-export default function GasEvmRig({
+function GasEvmRig({
   view,
   runKey,
   labels,
   definitions,
-  revertedLabel,
   className,
 }: GasEvmRigProps) {
+  const t = useTranslations("component-diagrams")
   const id = useId()
   const { state, dimmed } = usePartState(view.litPart)
   const part = (name: GasEvmPart) => ({
@@ -357,9 +362,13 @@ export default function GasEvmRig({
             top: pct(REVERTED_AT[1], H),
           }}
         >
-          {revertedLabel}
+          {t("diagram-reverted")}
         </span>
       )}
     </div>
   )
 }
+
+// Memoised: the player re-renders on visibility and run state; the drawing
+// only needs to when its view, labels or hover state change.
+export default memo(GasEvmRig)

@@ -12,6 +12,9 @@
 
 export const INTRINSIC_GAS = 21_000
 
+/** viewBox of the drawing. */
+export const GAS_EVM_SIZE = { width: 400, height: 330 }
+
 export const GAS_EVM_PRESET_IDS = ["enough", "out-of-gas"] as const
 export type GasEvmPresetId = (typeof GAS_EVM_PRESET_IDS)[number]
 

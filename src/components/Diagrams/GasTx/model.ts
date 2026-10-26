@@ -29,7 +29,7 @@ export type GasTxStep = (typeof GAS_TX_STEPS)[number]
 export const GAS_TX_IDLE_STEP = -1
 
 /** Labelled parts of the fuel-rig drawing. */
-export const GAS_RIG_PARTS = [
+export const GAS_TX_PARTS = [
   "deck",
   "order",
   "pump",
@@ -39,10 +39,10 @@ export const GAS_RIG_PARTS = [
   "returnLine",
   "meter",
 ] as const
-export type GasRigPart = (typeof GAS_RIG_PARTS)[number]
+export type GasTxPart = (typeof GAS_TX_PARTS)[number]
 
 /** The step at which each part is first shown at full strength. */
-export const GAS_RIG_PART_STEP: Record<GasRigPart, GasTxStep> = {
+export const GAS_TX_PART_STEP: Record<GasTxPart, GasTxStep> = {
   deck: "enter",
   order: "enter",
   pump: "enter",
@@ -53,8 +53,8 @@ export const GAS_RIG_PART_STEP: Record<GasRigPart, GasTxStep> = {
   meter: "return",
 }
 
-/** viewBox of the rig; the lazy-load placeholder reserves the same box. */
-export const GAS_RIG_SIZE = { width: 500, height: 342 }
+/** viewBox of the drawing. */
+export const GAS_TX_SIZE = { width: 500, height: 342 }
 
 export type GasTxOutcome = "success" | "out-of-gas"
 
@@ -72,7 +72,7 @@ export interface GasTxView {
   stepIndex: number
   motion: GasTxMotion | null
   /** The one part the reader should watch now (drawn in its role colour, heavier). */
-  litPart: GasRigPart | null
+  litPart: GasTxPart | null
   /** Which parts of the drawing are shown at full strength. */
   reached: Record<GasTxStep, boolean>
   /** Out of gas, from step 3: the call failed and its state is reverted. */
@@ -141,7 +141,7 @@ export const getGasTxView = (
     return: success ? "gas-tx-step-return" : "gas-tx-step-revert",
   }
 
-  const litParts: Record<GasTxMotion, GasRigPart> = {
+  const litParts: Record<GasTxMotion, GasTxPart> = {
     enter: "order",
     reserve: "tank",
     execute: "feed",

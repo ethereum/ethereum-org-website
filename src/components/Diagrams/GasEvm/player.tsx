@@ -1,46 +1,31 @@
 "use client"
 
-import { type ReactNode, useEffect, useState } from "react"
+import { useMemo, useState } from "react"
 import { Play } from "lucide-react"
-import dynamic from "next/dynamic"
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 
-import { useCountUp } from "@/components/Diagrams/anatomy"
 import { useDiagramInView } from "@/components/Diagrams/diagram-hover"
 import {
   DiagramCaption,
+  DiagramCountUp,
   DiagramPresets,
   DiagramReadout,
   DiagramTransport,
   InteractiveDiagram,
+  useDiagramFormat,
 } from "@/components/Diagrams/interactive-diagram"
+import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
-import { numberFormat } from "@/lib/utils/numbers"
-
-import { GAS_EVM_SIZE } from "./layout"
 import {
   GAS_EVM_IDLE_STEP,
   GAS_EVM_PRESET_IDS,
   type GasEvmPart,
   type GasEvmPresetId,
   getGasEvmView,
+  INTRINSIC_GAS,
+  PROGRAM,
 } from "./model"
-
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
-
-// Decorative SVG, not needed for the first paint: its own chunk after
-// hydration, behind a placeholder of the same size.
-const RigPlaceholder = () => (
-  <div
-    aria-hidden
-    className="w-full"
-    style={{ aspectRatio: `${GAS_EVM_SIZE.width} / ${GAS_EVM_SIZE.height}` }}
-  />
-)
-const GasEvmRig = dynamic(() => import("./gas-evm-rig"), {
-  ssr: false,
-  loading: RigPlaceholder,
-})
+import GasEvmRig from "./rig"
 
 const RUN_DWELL_MS = 1100
 const RUN_DWELL_REDUCED_MS = 2000
@@ -53,6 +38,11 @@ const PARTS: GasEvmPart[] = [
   "memory",
   "storage",
 ]
+
+// Numbers quoted in the description and definitions, from the program.
+const PUSH = PROGRAM.find((ins) => ins.op === "PUSH1")!
+const SSTORE = PROGRAM.find((ins) => ins.op === "SSTORE")!
+const SLOT = PROGRAM.filter((ins) => ins.op === "PUSH1")[1]!
 
 interface GasEvmPlayerProps {
   initialPreset?: GasEvmPresetId
@@ -71,73 +61,65 @@ export function GasEvmPlayer({
   fig,
 }: GasEvmPlayerProps) {
   const t = useTranslations("component-diagrams")
-  const locale = useLocale()
-  const { prefersReducedMotion } = usePrefersReducedMotion()
+  const format = useDiagramFormat()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<GasEvmPresetId>(initialPreset)
-  const [stepIndex, setStepIndex] = useState(initialStep)
-  const [isRunning, setIsRunning] = useState(false)
+  // The run's length depends on the preset (out of gas ends early).
+  const lastStep = getGasEvmView(presetId, GAS_EVM_IDLE_STEP).lastStep
+  const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
+    idle: GAS_EVM_IDLE_STEP,
+    last: lastStep,
+    initial: initialStep,
+    dwellMs: RUN_DWELL_MS,
+    dwellReducedMs: RUN_DWELL_REDUCED_MS,
+    paused: !inView.visible,
+  })
 
-  const view = getGasEvmView(presetId, stepIndex)
-  const atEnd = view.stepIndex >= view.lastStep
-
-  useEffect(() => {
-    // Off screen, a run holds where it is and carries on when it is back.
-    if (!isRunning || !inView.visible || atEnd) return
-    const timeout = window.setTimeout(
-      () => {
-        setStepIndex(view.stepIndex + 1)
-        if (view.stepIndex + 1 >= view.lastStep) setIsRunning(false)
-      },
-      prefersReducedMotion ? RUN_DWELL_REDUCED_MS : RUN_DWELL_MS
-    )
-    return () => window.clearTimeout(timeout)
-  }, [
-    isRunning,
-    inView.visible,
-    atEnd,
-    view.stepIndex,
-    view.lastStep,
-    prefersReducedMotion,
-  ])
-
-  const usedShown = useCountUp(view.gasUsed, { instant: prefersReducedMotion })
-  const leftShown = useCountUp(view.gasLeft, { instant: prefersReducedMotion })
-  const format = (value: number) => numberFormat(locale).format(value)
-  const valuesFor = (v: ReturnType<typeof getGasEvmView>) =>
-    Object.fromEntries(
+  const view = useMemo(() => getGasEvmView(presetId, step), [presetId, step])
+  const valuesFor = (v: typeof view) => ({
+    step: format(v.stepIndex),
+    ...Object.fromEntries(
       Object.entries(v.captionValues).map(([k, n]) => [k, format(n)])
-    )
+    ),
+  })
 
-  const textFor = (kind: "label" | "definition") =>
-    Object.fromEntries(
-      PARTS.map((part) => [part, t(`gas-evm-${kind}-${part}`)])
-    ) as Record<GasEvmPart, ReactNode>
-  const labels = textFor("label")
-  const definitions = textFor("definition")
+  const { labels, definitions, parts } = useMemo(() => {
+    const values = {
+      stack: { cost: format(PUSH.cost) },
+      storage: { cost: format(SSTORE.cost) },
+    } as Partial<Record<GasEvmPart, Record<string, string>>>
+    const labels = {} as Record<GasEvmPart, string>
+    const definitions = {} as Record<GasEvmPart, string>
+    for (const part of PARTS) {
+      labels[part] = t(`gas-evm-label-${part}`)
+      definitions[part] = t(`gas-evm-definition-${part}`, values[part])
+    }
+    const parts = Object.fromEntries(
+      PARTS.map((part) => [
+        part,
+        { label: labels[part], definition: definitions[part] },
+      ])
+    )
+    return { labels, definitions, parts }
+  }, [t, format])
 
   // Every caption this preset can show, so the caption area keeps the height
   // of the longest one.
-  const allCaptions = Array.from({ length: view.lastStep + 2 }, (_, i) => {
+  const allCaptions = Array.from({ length: lastStep + 2 }, (_, i) => {
     const v = getGasEvmView(presetId, i - 1)
     return t(v.captionKey, valuesFor(v))
   })
 
-  const goTo = (index: number) => {
-    setIsRunning(false)
-    setStepIndex(index)
-  }
-
-  const run = () => {
-    setStepIndex(atEnd || view.stepIndex < 0 ? 0 : view.stepIndex + 1)
-    setIsRunning(true)
-  }
-
   return (
     <InteractiveDiagram
       caption={t("gas-evm-caption")}
-      description={t("gas-evm-description")}
+      description={t("gas-evm-description", {
+        intrinsic: format(INTRINSIC_GAS),
+        value: format(PUSH.arg ?? 0),
+        slot: format(SLOT.arg ?? 0),
+        sstore: format(SSTORE.cost),
+      })}
       figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
       title={t("gas-evm-title")}
       status={
@@ -155,12 +137,7 @@ export function GasEvmPlayer({
                   cost: format(view.lastCost),
                 })
       }
-      parts={Object.fromEntries(
-        PARTS.map((part) => [
-          part,
-          { label: labels[part], definition: definitions[part] },
-        ])
-      )}
+      parts={parts}
       legend={[
         { hue: "entity", label: t("diagram-legend-evm") },
         { hue: "gas", label: t("diagram-legend-gas") },
@@ -169,31 +146,23 @@ export function GasEvmPlayer({
       inViewRef={inView.ref}
       paused={!inView.visible}
       illustration={
-        // The drawing loads once the diagram comes near the viewport.
-        inView.seen ? (
-          <GasEvmRig
-            view={view}
-            runKey={`${presetId}-${view.stepIndex}`}
-            labels={labels}
-            definitions={definitions}
-            revertedLabel={t("gas-tx-reverted")}
-          />
-        ) : (
-          <RigPlaceholder />
-        )
+        <GasEvmRig
+          view={view}
+          runKey={`${presetId}-${view.stepIndex}`}
+          labels={labels}
+          definitions={definitions}
+        />
       }
       presets={
         <DiagramPresets
-          label={t("gas-tx-presets-label")}
           options={GAS_EVM_PRESET_IDS.map((id) => ({
             id,
             label: t(`gas-evm-preset-${id}`),
           }))}
           value={presetId}
           onChange={(id) => {
-            setIsRunning(false)
             setPresetId(id)
-            setStepIndex(GAS_EVM_IDLE_STEP)
+            reset()
           }}
           eventAction="gas-evm preset"
         />
@@ -206,21 +175,14 @@ export function GasEvmPlayer({
             onClick: run,
             disabled: isRunning,
           }}
-          counter={t("gas-tx-step-counter", {
-            current: format(view.stepIndex + 1),
-            total: format(view.lastStep + 1),
-          })}
-          onPrevious={() => goTo(view.stepIndex - 1)}
-          onNext={() => goTo(view.stepIndex + 1)}
-          onReset={() => goTo(GAS_EVM_IDLE_STEP)}
+          current={view.stepIndex + 1}
+          total={view.lastStep + 1}
+          onPrevious={() => goTo(step - 1)}
+          onNext={() => goTo(step + 1)}
+          onReset={reset}
           canGoPrevious={view.stepIndex > 0}
           canGoNext={!atEnd}
           canReset={view.stepIndex !== GAS_EVM_IDLE_STEP}
-          labels={{
-            previous: t("gas-tx-previous-step"),
-            next: t("gas-tx-next-step"),
-            reset: t("diagram-reset"),
-          }}
           eventAction="gas-evm transport"
         />
       }
@@ -232,7 +194,6 @@ export function GasEvmPlayer({
       }
       readout={
         <DiagramReadout
-          label={t("gas-tx-readout-label")}
           rows={[
             { label: t("gas-evm-readout-limit"), value: format(view.gasLimit) },
             {
@@ -251,8 +212,14 @@ export function GasEvmPlayer({
               label: t("gas-evm-readout-last-cost"),
               value: view.stepIndex >= 0 ? format(view.lastCost) : "–",
             },
-            { label: t("gas-evm-readout-used"), value: format(usedShown) },
-            { label: t("gas-evm-readout-left"), value: format(leftShown) },
+            {
+              label: t("gas-evm-readout-used"),
+              value: <DiagramCountUp value={view.gasUsed} />,
+            },
+            {
+              label: t("gas-evm-readout-left"),
+              value: <DiagramCountUp value={view.gasLeft} />,
+            },
           ]}
         />
       }

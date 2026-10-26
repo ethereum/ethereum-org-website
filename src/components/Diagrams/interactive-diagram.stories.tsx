@@ -18,7 +18,6 @@ const STRINGS = {
     presetB: "Heavy call",
     presetC: "Out of gas",
     run: "Run",
-    step: (n: number, total: number) => `Step ${n} of ${total}`,
     captions: [
       "Pick an example and run it.",
       "Step 1: something happens.",
@@ -44,7 +43,6 @@ const STRINGS = {
     presetB: "Schwerer Aufruf",
     presetC: "Gas aufgebraucht",
     run: "Transaktion senden",
-    step: (n: number, total: number) => `Schritt ${n} von ${total}`,
     captions: [
       "Wählen Sie ein Beispiel und führen Sie es aus.",
       "Schritt 1: Etwas passiert.",
@@ -116,18 +114,14 @@ function Demo({ lang = "en" }: { lang?: keyof typeof STRINGS }) {
             icon: <Play />,
             onClick: () => setStep(1),
           }}
-          counter={s.step(step, total)}
+          current={step}
+          total={total}
           onPrevious={() => setStep(Math.max(0, step - 1))}
           onNext={() => setStep(Math.min(total, step + 1))}
           onReset={() => setStep(0)}
           canGoPrevious={step > 0}
           canGoNext={step < total}
           canReset={step > 0}
-          labels={{
-            previous: "Previous step",
-            next: "Next step",
-            reset: "Reset",
-          }}
           eventAction="story transport"
         />
       }

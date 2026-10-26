@@ -8,5 +8,5 @@ import dynamic from "next/dynamic"
  * every diagram, so a static import would ship it to every docs page).
  */
 export const GasTxPlayer = dynamic(() =>
-  import("./gas-tx-player").then((m) => m.GasTxPlayer)
+  import("./player").then((m) => m.GasTxPlayer)
 )

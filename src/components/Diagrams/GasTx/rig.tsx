@@ -1,4 +1,5 @@
-import { type ReactNode, useId } from "react"
+import { memo, type ReactNode, useId } from "react"
+import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -24,19 +25,19 @@ import {
 import { usePartState } from "../diagram-hover"
 
 import {
-  GAS_RIG_PART_STEP,
-  GAS_RIG_SIZE,
-  type GasRigPart,
+  GAS_TX_PART_STEP,
+  GAS_TX_SIZE,
+  type GasTxPart,
   type GasTxView,
 } from "./model"
 
 /*
  * Isometric fuel rig for the gas-tx diagram, built from the shared anatomy
- * primitives. Lazy-loaded by GasTxPlayer (next/dynamic, ssr: false);
- * everything it shows comes from the model view.
+ * primitives. Server-rendered with the player, so the idle drawing is in the
+ * page HTML; everything it shows comes from the model view.
  */
 
-const { width: W, height: H } = GAS_RIG_SIZE
+const { width: W, height: H } = GAS_TX_SIZE
 const PROJECTION = isoProjection(180, 74)
 const { P, line, path, box, cylinder, footprint } = PROJECTION
 const D = isoDetail(PROJECTION)
@@ -206,37 +207,35 @@ const SPOTS: AnatomyLabelSpot[] = [
 
 const pct = (n: number, of: number) => `${r1((n / of) * 100)}%`
 
-interface GasRigProps {
+interface GasTxRigProps {
   view: GasTxView
   /** Changes on every step or preset change, to restart one-shot animations. */
   runKey: string
   /** Translated concept name per part. */
-  labels: Record<GasRigPart, ReactNode>
+  labels: Record<GasTxPart, ReactNode>
   /** Translated one-line definition per part. */
-  definitions: Record<GasRigPart, ReactNode>
-  /** Translated text of the out-of-gas tag on the contract. */
-  revertedLabel: string
+  definitions: Record<GasTxPart, ReactNode>
   className?: string
 }
 
-export default function GasRig({
+function GasTxRig({
   view,
   runKey,
   labels,
   definitions,
-  revertedLabel,
   className,
-}: GasRigProps) {
+}: GasTxRigProps) {
+  const t = useTranslations("component-diagrams")
   const id = useId()
   const { state, dimmed } = usePartState(view.litPart)
 
   // A part not reached yet sits back; while another part is hovered, it dims.
-  const part = (name: GasRigPart) => ({
+  const part = (name: GasTxPart) => ({
     "data-part": name,
     className: ISO_DIM_CLASS,
     style: {
       opacity:
-        (view.reached[GAS_RIG_PART_STEP[name]] ? 1 : 0.4) *
+        (view.reached[GAS_TX_PART_STEP[name]] ? 1 : 0.4) *
         (dimmed(name) ? 0.7 : 1),
     },
   })
@@ -376,9 +375,13 @@ export default function GasRig({
             animationDelay: view.motion === "execute" ? "1400ms" : "0ms",
           }}
         >
-          {revertedLabel}
+          {t("diagram-reverted")}
         </span>
       )}
     </div>
   )
 }
+
+// Memoised: the player re-renders on visibility and run state; the drawing
+// only needs to when its view, labels or hover state change.
+export default memo(GasTxRig)

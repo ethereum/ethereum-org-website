@@ -1,7 +1,8 @@
 "use client"
 
-import { type ReactNode, type Ref, useId } from "react"
+import { type ReactNode, type Ref, useId, useMemo } from "react"
 import { RotateCcw } from "lucide-react"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
@@ -9,15 +10,19 @@ import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { DiagramStage } from "./anatomy/stage"
 import { anatomyFill, type AnatomyHue } from "./anatomy/tokens"
+import { useCountUp } from "./anatomy/use-count-up"
 import { DiagramFigure } from "./diagram-figure"
 import {
   DiagramHoverProvider,
   useDiagramHover,
   useHoverTargets,
 } from "./diagram-hover"
+
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 
 /*
  * The shell every interactive diagram uses, so controls and framing sit in
@@ -210,20 +215,23 @@ export interface DiagramPresetOption<T extends string> {
  * panel and a horizontal row when the panel is stacked.
  */
 export function DiagramPresets<T extends string>({
-  label,
+  label: labelProp,
   options,
   value,
   onChange,
   eventCategory = "Diagram",
   eventAction,
 }: {
-  label: ReactNode
+  /** Defaults to "Example values". */
+  label?: ReactNode
   options: DiagramPresetOption<T>[]
   value: T
   onChange: (id: T) => void
   eventCategory?: string
   eventAction: string
 }) {
+  const t = useTranslations("component-diagrams")
+  const label = labelProp ?? t("diagram-presets-label")
   const labelId = useId()
   const last = options.length - 1
   return (
@@ -281,14 +289,14 @@ const ICON_BUTTON = "size-8 min-h-8 shrink-0 p-0"
  */
 export function DiagramTransport({
   primary,
-  counter,
+  current,
+  total,
   onPrevious,
   onNext,
   onReset,
   canGoPrevious,
   canGoNext,
   canReset,
-  labels,
   eventCategory = "Diagram",
   eventAction,
 }: {
@@ -298,18 +306,20 @@ export function DiagramTransport({
     onClick: () => void
     disabled?: boolean
   }
-  /** e.g. "Step 2 of 4". */
-  counter: ReactNode
+  /** Shown as "Step {current} of {total}". */
+  current: number
+  total: number
   onPrevious: () => void
   onNext: () => void
   onReset: () => void
   canGoPrevious: boolean
   canGoNext: boolean
   canReset: boolean
-  labels: { previous: string; next: string; reset: string }
   eventCategory?: string
   eventAction: string
 }) {
+  const t = useTranslations("component-diagrams")
+  const format = useDiagramFormat()
   return (
     <div className="flex flex-col gap-2">
       <Button
@@ -330,7 +340,7 @@ export function DiagramTransport({
         <Button
           size="sm"
           variant="outline"
-          aria-label={labels.previous}
+          aria-label={t("diagram-previous-step")}
           disabled={!canGoPrevious}
           onClick={onPrevious}
           className={ICON_BUTTON}
@@ -338,12 +348,15 @@ export function DiagramTransport({
           <ChevronPrev />
         </Button>
         <span className="min-w-0 flex-1 text-center text-sm text-body-medium tabular-nums">
-          {counter}
+          {t("diagram-step-counter", {
+            current: format(current),
+            total: format(total),
+          })}
         </span>
         <Button
           size="sm"
           variant="outline"
-          aria-label={labels.next}
+          aria-label={t("diagram-next-step")}
           disabled={!canGoNext}
           onClick={onNext}
           data-diagram-next=""
@@ -354,7 +367,7 @@ export function DiagramTransport({
         <Button
           size="sm"
           variant="outline"
-          aria-label={labels.reset}
+          aria-label={t("diagram-reset")}
           disabled={!canReset}
           onClick={onReset}
           className={ICON_BUTTON}
@@ -369,9 +382,10 @@ export function DiagramTransport({
 /* ---------- Caption ---------- */
 
 /**
- * The step caption, in a polite live region. Every possible caption is laid
- * out invisibly in the same cell, so the area is always as tall as its
- * longest step and nothing below it jumps.
+ * The step caption, in a polite live region. Every caption this diagram can
+ * show is laid out in the same cell as an empty sizer whose text comes from
+ * CSS (`content: attr()`), so the area is as tall as its longest step and
+ * nothing below it jumps, without repeating the text in the page.
  */
 export function DiagramCaption({
   current,
@@ -379,21 +393,20 @@ export function DiagramCaption({
 }: {
   current: ReactNode
   /** Every caption this diagram can show (current preset), for sizing. */
-  all: ReactNode[]
+  all: string[]
 }) {
   return (
     <div className="grid text-sm text-body">
       <p role="status" className="col-start-1 row-start-1 m-0">
         {current}
       </p>
-      {all.map((text, i) => (
-        <p
-          key={i}
+      {[...new Set(all)].map((text) => (
+        <span
+          key={text}
           aria-hidden
-          className="invisible col-start-1 row-start-1 m-0"
-        >
-          {text}
-        </p>
+          data-sizer={text}
+          className="invisible col-start-1 row-start-1 before:content-[attr(data-sizer)]"
+        />
       ))}
     </div>
   )
@@ -406,13 +419,14 @@ export function DiagramReadout({
   label,
   rows,
 }: {
-  /** Accessible name for the list. */
-  label: string
+  /** Accessible name for the list; defaults to the gas readout name. */
+  label?: string
   rows: { label: ReactNode; value: ReactNode }[]
 }) {
+  const t = useTranslations("component-diagrams")
   return (
     <dl
-      aria-label={label}
+      aria-label={label ?? t("diagram-readout-label")}
       className="m-0 grid grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-1 border-t border-border pt-3 text-sm"
     >
       {rows.map((row, i) => (
@@ -425,4 +439,33 @@ export function DiagramReadout({
       ))}
     </dl>
   )
+}
+
+/* ---------- Numbers ---------- */
+
+/** A memoised `numberFormat` for the current locale (arabext for Urdu). */
+export function useDiagramFormat() {
+  const locale = useLocale()
+  return useMemo(() => {
+    const formatter = numberFormat(locale)
+    return (value: number) => formatter.format(value)
+  }, [locale])
+}
+
+/**
+ * A readout number that counts up with the drawing. Its own leaf, so the
+ * per-frame tween re-renders only this text, not the diagram.
+ */
+export function DiagramCountUp({
+  value,
+  delay,
+}: {
+  value: number
+  /** ms before counting starts, to follow the drawing's motion. */
+  delay?: number
+}) {
+  const format = useDiagramFormat()
+  const { prefersReducedMotion } = usePrefersReducedMotion()
+  const shown = useCountUp(value, { delay, instant: prefersReducedMotion })
+  return <>{format(shown)}</>
 }
