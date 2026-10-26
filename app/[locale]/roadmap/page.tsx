@@ -185,6 +185,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <Alert variant="banner">{t("page-roadmap-banner-notification")}</Alert>
 
       <HubHero
+        breadcrumbs={{ slug: "roadmap" }}
         heroImg={roadmapHeroImg}
         header={t("page-roadmap-title")}
         description={t("page-roadmap-meta-description")}
