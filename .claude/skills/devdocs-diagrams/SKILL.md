@@ -5,7 +5,7 @@ description: Use when converting a developer-docs schematic PNG (gas.png, evm.pn
 
 # Devdocs diagrams
 
-Developer-docs schematics (adapted from _Ethereum EVM illustrated_) are being replaced, one PR per PNG, by theme-aware, translatable, accessible interactive figures. Each is a small isometric "anatomy" drawing on shared primitives, inside one shared shell (`InteractiveDiagram`). Done so far: `gas-tx.png` (`GasTx`) and `gas.png` (`GasEvm`). Also load the `design-system` skill.
+Developer-docs schematics (adapted from _Ethereum EVM illustrated_) are being replaced, one PR per PNG, by theme-aware, translatable, accessible interactive figures. Each is a small isometric "anatomy" drawing on shared primitives, inside one shared shell (`InteractiveDiagram`). Done so far: `gas-tx.png` (`GasTx`), `gas.png` (`GasEvm`), `tx.png` (`TxApply`) and `evm.png` (`EvmZones`). Also load the `design-system` skill.
 
 This file is the canonical reference. The Storybook page **Components / Data Viz / Diagrams / Overview** is a short visual intro that links here; don't duplicate rules there.
 
@@ -37,7 +37,7 @@ Shared pieces in `src/components/Diagrams/`:
 | `anatomy/stage.tsx`       | `DiagramStage`: the single card, illustration plus panel                                                                                        |
 | `anatomy/tokens.ts`       | `DIAGRAM_COLOR`, `anatomyFill`, stroke classes, `DIAGRAM_SVG_FALLBACKS`                                                                         |
 
-Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` per diagram (`gas-tx-`, `gas-evm-`), shared ones `diagram-` (counter, previous/next/reset, presets label, readout label, reverted, legend, figure number, parts group). Tokens: `--diagram-*` in `src/styles/semantic-tokens.css`, registered in `theme.css`. Keyframes: `--animate-diagram-{flow,travel-y,pop}` in `theme.css`.
+Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` per diagram (`gas-tx-`, `gas-evm-`, `tx-apply-`, `evm-zones-`), shared ones `diagram-` (counter, previous/next/reset, presets label, readout label, reverted, legend, figure number, parts group). Tokens: `--diagram-*` in `src/styles/semantic-tokens.css`, registered in `theme.css`. Keyframes: `--animate-diagram-{flow,travel-y,pop}` in `theme.css`.
 
 ## Recipe
 
@@ -52,7 +52,7 @@ Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` pe
 ## Visual rules
 
 - **No vanishing lines.** Colours come only from `--diagram-*` tokens, through static literal classes (`stroke-diagram-pipe`, never string-built) or `DIAGRAM_COLOR` values with fallbacks. The root `<svg>` spreads `DIAGRAM_SVG_FALLBACKS` (`fill="none" stroke="currentColor"`). Shapes that must not be stroked say so (`stroke="none"` / `stroke-none`). An unset SVG fill renders black, so set one on every shape, clip geometry included.
-- **Colour roles.** Blue (`--diagram-entity`) = accounts, contracts and the EVM. Orange (`--diagram-gas`) = gas only: tanks, levels, flowing gas, glow, meters. Values that aren't gas (ETH, stored words) are a stronger blue, never orange. Neutral = structure: plate, pipes at rest, leaders. Failure uses `--diagram-revert`.
+- **Colour roles.** Blue (`--diagram-entity`) = accounts, contracts and the EVM. Orange (`--diagram-gas`) = gas: tanks, levels, flowing gas, glow, meters. Values are not gas: a pipe carrying a stored word stays a neutral tube and the receiving part lights instead (EvmZones' storage pipe). The one exception is ETH in `TxApply`, where the roles are accounts vs. money, so ETH flows orange and the legend says "Value". Neutral = structure: plate, pipes at rest, leaders. Failure uses `--diagram-revert`.
 - **Lines.** Every outline and leader is 1px (non-scaling; on 1x screens anything thinner renders below 3:1). Hierarchy by colour, not width: `--diagram-line-faint` seams, `--diagram-line` outlines, `--diagram-line-strong` the hovered part. Pipes are 1.4px tubes with a 0.4px decorative highlight; a one-shot orange dash flows only while gas moves.
 - **Fills.** `anatomyFill(hue, face, state)`: `color-mix(in oklab, hue N%, background)`, top lightest. Rest shares `--diagram-mix-*` (7/14/22% light, 20/32/45% dark); the active or hovered part takes `--diagram-mix-*-active` (15/30/45%, 30/50/70% dark). Dark uses one step lighter hues (`blue-300`, `yellow-500`). Plate: `--diagram-plate` top, sides a darker neutral tint.
 - **Active part.** Takes its role colour (tint and outline), and its label and leader switch to it. Never the site `primary`, never a heavier stroke.
@@ -64,7 +64,7 @@ Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` pe
 
 One card, so controls sit in the same places everywhere. From a 640px card width (container query) a 15rem panel sits on the inline-end side; narrower it stacks under the illustration. Illustration column: figure header in small mono caps ("Fig. N · Title", from `fig={N}`), drawing, status line (two lines reserved; the step at rest, "Label: definition" on hover), legend. Panel, top to bottom:
 
-1. `DiagramPresets`: "Example values", segmented, `aria-pressed`.
+1. `DiagramPresets` (optional; omit for a diagram with one fixed example): "Example values", segmented, `aria-pressed`.
 2. `DiagramTransport`: primary action (disabled while running), then previous, "Step x of n" (`current`, `total` numbers), next (`data-diagram-next`), reset.
 3. `DiagramCaption`: polite `role="status"`; sized by empty CSS-content sizers (`content: attr(data-sizer)`), one per possible caption, so the height never jumps and the text appears in the page only once.
 4. `DiagramReadout`: two columns, mono tabular numbers.
@@ -97,4 +97,4 @@ Hover and focus are built in: wrap each part in `<g data-part="id">` with the sa
 
 ## Remaining PNGs
 
-All next to the listed `index.md` under `public/content/developers/docs/`: `tx.png` (`transactions/`), `evm.png` (`evm/`), `tx-block.png` (`blocks/`), `accounts.png` (`accounts/`), `nodes.png` and `eth1eth2client.png` (`nodes-and-clients/`), `diagram.png` (`nodes-and-clients/run-a-node/`), `node-architecture-text-background.png` (`nodes-and-clients/node-architecture/`), `attestation_schematic.png` (`consensus-mechanisms/pos/attestations/`), `reorg-schematic.png` (`consensus-mechanisms/pos/attack-and-defense/`), `multiple-keys.png` and `validator-key-schematic.png` (`consensus-mechanisms/pos/keys/`).
+All next to the listed `index.md` under `public/content/developers/docs/`: `tx-block.png` (`blocks/`), `accounts.png` (`accounts/`), `nodes.png` and `eth1eth2client.png` (`nodes-and-clients/`), `diagram.png` (`nodes-and-clients/run-a-node/`), `node-architecture-text-background.png` (`nodes-and-clients/node-architecture/`), `attestation_schematic.png` (`consensus-mechanisms/pos/attestations/`), `reorg-schematic.png` (`consensus-mechanisms/pos/attack-and-defense/`), `multiple-keys.png` and `validator-key-schematic.png` (`consensus-mechanisms/pos/keys/`).
