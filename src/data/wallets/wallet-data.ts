@@ -2209,6 +2209,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    erc_5792_support: false,
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
     supported_chains: [
