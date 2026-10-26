@@ -18,7 +18,6 @@ import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import {
   Card,
-  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -28,7 +27,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -37,12 +35,12 @@ import { L2BEAT_SOURCE, sumL2Breakdown } from "@/lib/utils/l2beat"
 import { getMetadata } from "@/lib/utils/metadata"
 import { metricStat } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
-import { isExternal } from "@/lib/utils/url"
 
 import ChecklistPanel from "../../_components/checklist-panel"
 import ComparisonTable from "../../_components/comparison-table"
 import ExpertContacts from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
+import NetworkLinkList from "../../_components/network-link-list"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
 import { organizationPages } from "../../_lib/pages"
@@ -341,59 +339,27 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-organizations-enterprise-l2s-deployment-description")}
               </p>
             </div>
-            <div className="flex-1 rounded-4xl bg-tint-primary p-page">
-              <ul className="ms-0 list-none divide-y divide-background">
-                {networks.map(({ key, href, logo }) => (
-                  <li key={key} className="py-2 first:pt-0">
-                    <BaseLink
-                      href={href}
-                      hideArrow
-                      data-external={isExternal(href) || undefined}
-                      className="group/link -mx-3 flex flex-wrap items-center gap-4 rounded-2xl p-3 text-body no-underline hover:bg-background/50 hover:text-body"
-                    >
-                      <Image
-                        src={logo}
-                        alt=""
-                        className="size-14 shrink-0 rounded-md bg-background object-contain p-1 shadow-md"
-                        sizes="56px"
-                      />
-                      <div className="min-w-48 flex-1">
-                        <h3 className="text-h5">
-                          {t(
-                            `page-organizations-enterprise-l2s-deployment-${key}-name`
-                          )}
-                        </h3>
-                        <p className="text-body-medium">
-                          {t(
-                            `page-organizations-enterprise-l2s-deployment-${key}-description`
-                          )}
-                        </p>
-                      </div>
-                      <CardButtonFake variant="outline" size="sm">
-                        {t("page-organizations-enterprise-l2s-deployment-cta")}
-                      </CardButtonFake>
-                    </BaseLink>
-                  </li>
-                ))}
-              </ul>
-              {/* Same badge markup as the network list on /layer-2/ */}
-              <div className="mt-space flex">
-                <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
-                  <Image
-                    src={ethereumLogo}
-                    // decorative: the adjacent label already names Ethereum
-                    alt=""
-                    className="size-6 object-contain"
-                    sizes="24px"
-                  />
-                  <p>
-                    {t(
-                      "page-organizations-enterprise-l2s-deployment-powered-by"
-                    )}
-                  </p>
-                </div>
-              </div>
-            </div>
+            <NetworkLinkList
+              className="flex-1"
+              networks={networks.map(({ key, href, logo }) => ({
+                key,
+                href,
+                logo,
+                name: t(
+                  `page-organizations-enterprise-l2s-deployment-${key}-name`
+                ),
+                description: t(
+                  `page-organizations-enterprise-l2s-deployment-${key}-description`
+                ),
+              }))}
+              ctaLabel={t("page-organizations-enterprise-l2s-deployment-cta")}
+              badge={{
+                logo: ethereumLogo,
+                label: t(
+                  "page-organizations-enterprise-l2s-deployment-powered-by"
+                ),
+              }}
+            />
           </Section>
           <ExpertContacts />
 
