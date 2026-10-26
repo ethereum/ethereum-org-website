@@ -18,7 +18,7 @@ export const GAS_EVM_SIZE = { width: 400, height: 330 }
 export const GAS_EVM_PRESET_IDS = ["enough", "out-of-gas"] as const
 export type GasEvmPresetId = (typeof GAS_EVM_PRESET_IDS)[number]
 
-// Example values, labelled as such in the UI.
+// Example values, offered as scenarios in the UI.
 export const GAS_EVM_PRESETS: Record<GasEvmPresetId, { gasLimit: number }> = {
   enough: { gasLimit: 50_000 },
   "out-of-gas": { gasLimit: 40_000 },
