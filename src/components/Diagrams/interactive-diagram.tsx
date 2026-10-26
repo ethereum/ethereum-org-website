@@ -305,7 +305,8 @@ export function DiagramTransport({
     onClick: () => void
     disabled?: boolean
   }
-  /** Shown as "Step {current} of {total}". */
+  /** 1 to `total` for a step, shown as "Step 2 of 4"; 0 at idle, shown as
+   * "4 steps". */
   current: number
   total: number
   onPrevious: () => void
@@ -347,10 +348,12 @@ export function DiagramTransport({
           <ChevronPrev />
         </Button>
         <span className="min-w-0 flex-1 text-center text-sm text-body-medium tabular-nums">
-          {t("diagram-step-counter", {
-            current: format(current),
-            total: format(total),
-          })}
+          {current > 0
+            ? t("diagram-step-counter", {
+                current: format(current),
+                total: format(total),
+              })
+            : t("diagram-step-total", { count: total, total: format(total) })}
         </span>
         <Button
           size="sm"

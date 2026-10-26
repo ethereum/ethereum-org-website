@@ -14,7 +14,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Interactive replacement for `gas.png` on `/developers/docs/gas/` and `/developers/docs/evm/`, used in markdown as `<GasEvmDiagram />`. The transaction first pays 21,000 gas of intrinsic cost (step 0), then the program counter steps through seven opcodes: each draws its cost from the gas supply (a pulse along the pipe, stronger for SSTORE) and changes the stack, memory or storage. Stack and memory sit on the EVM's plinth (volatile machine state); storage stands apart on the plate (persistent world state). Built on `InteractiveDiagram` and the shared anatomy primitives; everything reads from `model.ts`. Step stories set `initialStep` so each snapshot is a deterministic end state.",
+          "Interactive replacement for `gas.png` on `/developers/docs/gas/` and `/developers/docs/evm/`, used in markdown as `<GasEvmDiagram />`. The transaction first pays 21,000 gas of intrinsic cost (step 1), then the program counter steps through seven opcodes: each draws its cost from the gas supply (a pulse along the pipe, stronger for SSTORE) and changes the stack, memory or storage. Stack and memory sit on the EVM's plinth (volatile machine state); storage stands apart on the plate (persistent world state). Built on `InteractiveDiagram` and the shared anatomy primitives; everything reads from `model.ts`. Step stories set `initialStep` so each snapshot is a deterministic end state.",
       },
     },
   },

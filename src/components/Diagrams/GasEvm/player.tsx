@@ -80,7 +80,7 @@ export function GasEvmPlayer({
 
   const view = useMemo(() => getGasEvmView(presetId, step), [presetId, step])
   const valuesFor = (v: typeof view) => ({
-    step: format(v.stepIndex),
+    step: format(v.stepIndex + 1),
     ...Object.fromEntries(
       Object.entries(v.captionValues).map(([k, n]) => [k, format(n)])
     ),
