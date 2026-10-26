@@ -33,6 +33,7 @@ interface EvmZonesPlayerProps {
   initialStep?: number
   /** Figure number on the page, if the page numbers its figures. */
   fig?: number
+  className?: string
 }
 
 /**
@@ -43,6 +44,7 @@ interface EvmZonesPlayerProps {
 export function EvmZonesPlayer({
   initialStep = IDLE_STEP,
   fig,
+  className,
 }: EvmZonesPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
@@ -82,6 +84,7 @@ export function EvmZonesPlayer({
 
   return (
     <InteractiveDiagram
+      className={className}
       caption={t("evm-zones-caption")}
       description={t(
         "evm-zones-description",

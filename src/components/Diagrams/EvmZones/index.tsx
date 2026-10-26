@@ -1,5 +1,3 @@
-import { cn } from "@/lib/utils/cn"
-
 import { DiagramMessages } from "../diagram-messages"
 
 import { EvmZonesPlayer } from "./lazy-player"
@@ -23,9 +21,7 @@ const EvmZonesDiagram = ({
   className,
 }: EvmZonesDiagramProps) => (
   <DiagramMessages prefix="evm-zones">
-    <div className={cn("not-prose my-8", className)}>
-      <EvmZonesPlayer initialStep={initialStep} fig={fig} />
-    </div>
+    <EvmZonesPlayer initialStep={initialStep} fig={fig} className={className} />
   </DiagramMessages>
 )
 

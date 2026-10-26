@@ -39,6 +39,7 @@ interface TxApplyPlayerProps {
   initialStep?: number
   /** Figure number on the page, if the page numbers its figures. */
   fig?: number
+  className?: string
 }
 
 /**
@@ -49,6 +50,7 @@ interface TxApplyPlayerProps {
 export function TxApplyPlayer({
   initialStep = IDLE_STEP,
   fig,
+  className,
 }: TxApplyPlayerProps) {
   const t = useTranslations("component-diagrams")
   const locale = useLocale()
@@ -125,6 +127,7 @@ export function TxApplyPlayer({
 
   return (
     <InteractiveDiagram
+      className={className}
       caption={t("tx-apply-caption", amounts)}
       description={t("tx-apply-description", amounts)}
       figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}

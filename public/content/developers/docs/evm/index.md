@@ -18,8 +18,6 @@ While Ethereum has its own native cryptocurrency (ether) that follows almost exa
 
 <EvmZonesDiagram fig={1} />
 
-_Inspired by [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
-
 ## The Ethereum state transition function {#the-ethereum-state-transition-function}
 
 The EVM behaves as a mathematical function would: Given an input, it produces a deterministic output. It therefore is quite helpful to more formally describe Ethereum as having a **state transition function**:
