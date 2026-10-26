@@ -1,297 +1,100 @@
 ---
 name: devdocs-diagrams
-description: Use when converting a developer-docs schematic PNG (gas.png, evm.png, tx.png, accounts.png, nodes.png, attestation_schematic.png, ...) into an interactive or static React diagram, or when editing src/components/Diagrams/ (DiagramNode, DiagramGroup, DiagramConnector, DiagramElbow, DiagramBadge, DiagramPill, DiagramFigure, GasTx). One PR per diagram.
+description: Use when converting a developer-docs schematic PNG (gas.png, evm.png, tx.png, accounts.png, nodes.png, attestation_schematic.png, ...) into an interactive React diagram, or when editing src/components/Diagrams/ (InteractiveDiagram, the anatomy primitives, GasTx, GasEvm, or any diagram folder). One PR per diagram, or per page when diagrams share one.
 ---
 
 # Devdocs diagrams
 
-Developer docs schematics (adapted from _Ethereum EVM illustrated_) are being
-replaced, one PR per PNG, by theme-aware, translatable, accessible React
-figures built from a shared set of primitives. PR 1 converted `gas-tx.png` and
-introduced the primitives. `gas.png` (`GasEvm`, on the gas and EVM pages) followed on `InteractiveDiagram`. Start every later PR here; also load the
-`design-system` skill.
+Developer-docs schematics (adapted from _Ethereum EVM illustrated_) are being replaced, one PR per PNG, by theme-aware, translatable, accessible interactive figures. Each is a small isometric "anatomy" drawing on shared primitives, inside one shared shell (`InteractiveDiagram`). Done so far: `gas-tx.png` (`GasTx`) and `gas.png` (`GasEvm`). Also load the `design-system` skill.
 
-`GasTx` is drawn as a simple isometric fuel rig (`GasTx/gas-rig.tsx`) on the
-shared anatomy primitives in `Diagrams/anatomy/`:
+This file is the canonical reference. The Storybook page **Components / Data Viz / Diagrams / Overview** is a short visual intro that links here; don't duplicate rules there.
 
-| Piece                                                   | What it does                                                                        |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `isoProjection(x, y)`                                   | `P`, `line`, `path`, `box`, `disc`, `cylinder` for one plate origin                 |
-| `IsoPlate`                                              | the world-state slab (`data-anatomy-plate`)                                         |
-| `IsoSolid`                                              | a box with three-tint shading and a hairline outline (`state`: rest, lit, hover)    |
-| `IsoCylinder`                                           | a cylinder with an optional level fill                                              |
-| `IsoPipe`                                               | neutral 1.25px pipe; `flowing` turns it orange with a one-shot dash flow            |
-| `AnatomyLabels`                                         | concept labels + leaders, focusable, drive hover; drops what doesn't fit            |
-| `DiagramStage`                                          | the single Card container: illustration + controls panel                            |
-| `DIAGRAM_COLOR`, `anatomyFill`, `DIAGRAM_SVG_FALLBACKS` | `--diagram-*` colour values with fallbacks, the shading formula, root SVG fallbacks |
+## File shape
 
-Mark the drawing's root `<svg>` with `data-anatomy-drawing` and give it
-`ISO_SVG_CLASS`. Lazy-load the drawing (`next/dynamic`, `ssr: false`) with a
-same-size placeholder. Use this family when a diagram reads better as a
-machine than as boxes and arrows; otherwise compose the box-and-arrow
-primitives. Either way, follow the rules below.
+Every diagram folder has the same files:
 
-## Rules every diagram must follow
+| File                     | Role                                                                                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<Name>/index.tsx`       | Server wrapper, the default export registered in `docsComponents`. Wraps the player in `DiagramMessages prefix="<key-prefix>"`                          |
+| `<Name>/lazy-player.tsx` | `"use client"` `next/dynamic` import of the player. Keeps its JS off docs pages that don't render it (the docs layout imports every diagram statically) |
+| `<Name>/player.tsx`      | `"use client"` state: presets, `useStepPlayer`, model view, strings, the `InteractiveDiagram` slots                                                     |
+| `<Name>/rig.tsx`         | The isometric drawing, `memo`-wrapped default export. Server-rendered with the player                                                                   |
+| `<Name>/model.ts`        | Plain TS, no React: presets, steps, `get<Name>View(preset, step)`, and the drawing's viewBox size `<NAME>_SIZE`                                         |
+| `<Name>/*.stories.tsx`   | Co-located stories, title `Components / Data Viz / Diagrams / <Name>`                                                                                   |
 
-Later diagrams must follow these. The shared pieces live in
-`src/components/Diagrams/anatomy/` (story: Components / Data Viz / Diagrams /
-Anatomy).
+Shared pieces in `src/components/Diagrams/`:
 
-- **No vanishing lines.** Colours come only from the `--diagram-*` tokens in
-  `src/styles` (`--diagram-bg`, `-plate`, `-edge`, `-pipe`, `-entity`, `-gas`,
-  `-revert`), used through static literal classes (`stroke-diagram-pipe`,
-  never a string-built class) or `DIAGRAM_COLOR` values that carry a
-  fallback. The drawing's root `<svg>` spreads `DIAGRAM_SVG_FALLBACKS`
-  (`fill="none" stroke="currentColor"`), so a missing utility degrades to a
-  neutral line instead of nothing or black. Shapes that must not be stroked
-  say so (`stroke="none"` or `stroke-none`).
-- **Guard.** `tests/e2e/diagram-strokes.spec.ts` walks every shape of every
-  `DiagramStage` on the pages it lists, for every preset and step, in light
-  and dark, and fails if a shape that should be stroked has no visible stroke
-  or any fill is black. Add each new diagram's page to it, and give the
-  next-step button `data-diagram-next`.
-- **Nothing black, nothing unresolved.** Every fill and stroke resolves to a
-  site token in both themes. An unset SVG fill renders black, so set one on
-  every shape (even clip-path geometry). Audit with a script, not by eye.
-- **Shading formula.** A solid's three faces are tints of one hue mixed with
-  the background token: `color-mix(in oklab, var(<hue>) N%, var(--background))`
-  with N = 15% (top), 30% (inline-start face), 45% (inline-end face). Mixing
-  with the dark background makes the same formula adapt to dark mode.
-  `anatomyFill(hue, face)` implements it.
-- **Plate (world state).** `--background-highlight` fill, a thin
-  `--border-high-contrast` edge, side faces a slightly darker tint of that
-  neutral (25% / 40%). Never black.
-- **Colour roles.** Blue (`accent-a`) = accounts and contracts. Orange
-  (`diagram-state`; `yellow-700` light, `yellow-600` dark, a true orange,
-  not gold) = gas and value: tanks, levels, flowing gas, glow, meters.
-  Neutral = structure: plate (`border-high-contrast` edge), pipes at rest
-  (`body-medium`), leader lines. The failure state uses `diagram-revert`.
-- **Line weight: hairlines, hierarchy by colour.** Every outline and leader
-  is 0.6px (non-scaling). `--diagram-line-faint` for seams and panel lines,
-  `--diagram-line` for outlines at rest, `--diagram-line-strong` for the
-  hovered part. Pipes are thin tubes: a 1.4px `body-medium` stroke with a
-  0.4px plate-coloured highlight; a one-shot orange dash flows along a pipe
-  only while gas moves through it.
-- **Fills.** Light role tints at rest (`--diagram-mix-*`: 7/14/22% light,
-  20/32/45% dark, top lightest); the active or hovered part takes the
-  stronger `--diagram-mix-*-active` shares (15/30/45%, 30/50/70% dark).
-- **Active state.** The part to watch takes its role colour: stronger tints
-  and a role-coloured hairline (blue for accounts and contracts, orange for
-  gas), and its label and leader switch to that colour. Never the site
-  `primary`, never a heavier stroke.
-- **Detail (static).** 2 to 4 small marks per object that say what it is,
-  from `isoDetail` (`anatomy/detail.tsx`): a bevel on the plate, seams and a
-  base band on boxes, a name plate on accounts, a rim and level marks on a
-  tank, cells on memory and storage, lines on a slip. Build every detail
-  element once at module level (`const SENDER_DETAIL = ...`) and render it
-  as-is: React skips an element it has seen, so steps and hovers never
-  re-render it. Budget: about 300 SVG nodes per diagram (they run 80-110).
-- **Shadow.** One soft ground shadow under the plate and a small contact
-  shadow under each object, both `isoShadow` (a footprint filled with the
-  drawing's radial gradient from `IsoDefs`). No SVG filters, no CSS blur.
-  Labels may sit on shadows (`data-anatomy-shadow` is skipped in the hit test).
-- **Show the quantity moving.** Levels change with the step (a tank fills,
-  drains as gas burns, drains the rest back), a burning part glows orange in
-  proportion (`IsoSolid glow`: top face and outline tinted toward the gas
-  hue alone, never blended with blue), and readouts count up in step with the
-  drawing (`useCountUp`, the one JS-driven motion: a one-shot ~700ms tween,
-  instant under reduced motion).
-- **Simple parts.** One simple solid per object, at most one icon per object,
-  each object on its own footprint (no overlaps).
-- **Labels.** Concept names only, single line, 12px, fully outside the plate
-  (including its sloping front edge across the label's whole width), each
-  with a short straight (or single-elbow) leader that never crosses a pipe, a
-  solid or another label. Labels are focusable; there is no tooltip.
-  `AnatomyLabels` drops any label that would leave the drawing, touch any
-  shape (the plate included) or touch another label or leader, earlier spots
-  winning, so narrow screens fall back to fewer labels plus the figcaption.
-- **One shell: `InteractiveDiagram`** (`src/components/Diagrams/interactive-diagram.tsx`).
-  Every interactive diagram uses it, so controls sit in the same places
-  everywhere. It wraps `DiagramFigure` (intro text as the figcaption, above)
-  and `DiagramStage` (one card). From a 640px card width (container query)
-  the illustration takes the remaining width and a 15rem panel sits on the
-  inline-end side, vertically centred; narrower, the panel sits directly
-  under the illustration, same order. Slots, top to bottom:
-  1. `presets`: `DiagramPresets`, "Example values" as a segmented control
-     (vertical full-width rows in the side panel, a row when stacked).
-  2. `transport`: `DiagramTransport`, the primary action (full width in the
-     side panel; "Send transaction", "Run", ...), then previous, "Step x of
-     n", next, reset as 32px icon buttons. Same icons and order everywhere;
-     next carries `data-diagram-next` for the stroke guard.
-  3. `stepCaption`: `DiagramCaption`, a polite live region sized to its
-     longest step (pass every caption), so nothing jumps.
-  4. `readout`: `DiagramReadout`, a compact two-column list with right-aligned
-     tabular mono numbers.
-- **Hover and focus (built into the shell).** Wrap each part's shapes (and
-  its static detail) in `<g data-part="id">`, with the same id as its label
-  spot. Pointing at a part or its label, or focusing the label, draws the
-  part's outline in `line-strong` (`usePartState(...).state(id)` returns
-  `"hover"`), turns its label to its role colour, dims the other parts to
-  70% and shows "Label: definition" in the status line. Touch: a tap selects
-  a part. Screen readers get the definition through the label's
-  `aria-describedby`.
-- **Framing (built into the shell).** A figure header in small mono caps
-  ("Fig. N · Title"; pass `fig={N}` from the markdown), a status line under
-  the drawing (mono, two lines reserved; the step at rest, the hovered
-  part's definition on hover) and a legend of the role colours, one word
-  each.
-- **Performance.** Animate only opacity, transform and stroke-dashoffset (no
-  fill or stroke transitions). Each player uses `useDiagramInView`: the
-  drawing chunk loads when the figure comes within 200px of the viewport,
-  and runs, timers and CSS animations pause while it is off screen
-  (`paused` → `data-paused`). The docs layout knows every diagram, so the
-  server wrapper (`index.tsx`) imports its player through a client
-  `lazy-player.tsx` (`next/dynamic`): the player is still server-rendered,
-  but its client code loads only on pages that render it.
-- **Dark mode.** The same tint tokens, about double light mode's, with one
-  step lighter hues (`blue-300`, `yellow-500`), so blue and orange still read
-  as colour.
-- **Verify.** Screenshot light and dark at 1440px, 1024px and 390px (2x),
-  with reduced motion and RTL, and each step of each preset. Check no black
-  paint, no label collisions, no labels on shapes or the plate, no leader
-  crossings, nothing clipped. Translated pages keep the old image until the
-  intl pipeline runs, so check RTL with `dir="rtl"` or the `ar` story.
+| Piece                     | What it does                                                                                                                                    |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `interactive-diagram.tsx` | `InteractiveDiagram` shell plus `DiagramPresets`, `DiagramTransport`, `DiagramCaption`, `DiagramReadout`, `DiagramCountUp`, `useDiagramFormat`  |
+| `use-step-player.ts`      | `useStepPlayer({ idle, last, initial, dwellMs, dwellReducedMs, paused })`: step state, `run`, `goTo`, `reset`                                   |
+| `diagram-hover.tsx`       | Shared hover/focus state (`usePartState`, `useHoverTargets`) and `useDiagramInView` (pauses off screen)                                         |
+| `diagram-messages.tsx`    | Server component: hands the player only its own strings plus shared `diagram-*` ones                                                            |
+| `diagram-figure.tsx`      | `<figure>` with the visible intro and the screen-reader description                                                                             |
+| `anatomy/iso.tsx`         | `isoProjection` (`P`, `line`, `path`, `box`, `cylinder`, `footprint`), `IsoPlate`, `IsoSolid`, `IsoCylinder`, `IsoPipe`, `IsoDefs`, `isoShadow` |
+| `anatomy/detail.tsx`      | `isoDetail`: seams, plates, cells, vents, tank marks                                                                                            |
+| `anatomy/labels.tsx`      | `AnatomyLabels`: concept labels with leaders, collision-dropped, one tab stop                                                                   |
+| `anatomy/stage.tsx`       | `DiagramStage`: the single card, illustration plus panel                                                                                        |
+| `anatomy/tokens.ts`       | `DIAGRAM_COLOR`, `anatomyFill`, stroke classes, `DIAGRAM_SVG_FALLBACKS`                                                                         |
 
-Human-facing docs: Storybook **Components / Data Viz / Diagrams / Overview**
-(`src/components/Diagrams/diagrams-overview.mdx`). Keep this file and that page
-in sync.
-
-## File locations
-
-| What                           | Where                                                                                                        |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Primitives (Server Components) | `src/components/Diagrams/diagram-*.tsx`, exported from `index.ts`                                            |
-| Tooltip trigger (client)       | `src/components/Diagrams/diagram-tooltip-target.tsx`                                                         |
-| A diagram                      | `src/components/Diagrams/<Name>/index.tsx` (+ `model.ts`, `<name>-player.tsx` if interactive)                |
-| Strings                        | `src/intl/en/component-diagrams.json`, keys prefixed `<diagram>-`                                            |
-| Tokens                         | `diagram-*` in `src/styles/semantic-tokens.css` + `theme.css`                                                |
-| Keyframes                      | `--animate-diagram-{flow,travel-x,travel-y,pop}` in `src/styles/theme.css`                                   |
-| MD registration                | `docsComponents` in `src/layouts/Docs.tsx`                                                                   |
-| Namespace loading              | `LAYOUT_NAMESPACES.docs` (`src/lib/utils/translations.ts`) and `.storybook/next-intl.ts` `ns` (already done) |
-| Stories                        | co-located `*.stories.tsx`, titles `Components / Data Viz / Diagrams / <Name>`                               |
+Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` per diagram (`gas-tx-`, `gas-evm-`), shared ones `diagram-` (counter, previous/next/reset, presets label, readout label, reverted, legend, figure number, parts group). Tokens: `--diagram-*` in `src/styles/semantic-tokens.css`, registered in `theme.css`. Keyframes: `--animate-diagram-{flow,travel-y,pop}` in `theme.css`.
 
 ## Recipe
 
-1. **Inventory the PNG.** Open it. List nodes (entity = blue, state = orange,
-   chip = pale sub-box), groups (outlined grey vs dashed tinted), connectors
-   (solid = call, dashed = message/flow; arrow ends; elbows), pills, badges and
-   titles. Map each to a primitive. If something doesn't fit, **add a variant**
-   to the closest primitive (`tv()`), don't create a new component. Check the
-   "Extra grammar" column below first.
-2. **Strings.** Add `<diagram>-*` keys to `component-diagrams.json`: labels,
-   one-line `-definition`s for each node and badge, `-title`, `-caption`, and a
-   `-description` that narrates the whole drawing in prose (it is the text
-   alternative). One sentence per key; interpolate numbers as ICU args.
-3. **Server Component.** `async` + `getTranslations("component-diagrams")`.
-   Shape: `DiagramFigure` > `DiagramTitle` + a CSS grid. Nodes go in columns;
-   connectors go in **their own lanes** between them and stretch to fill. Use
-   `orientation="responsive"` so lanes turn vertical below `md`. Share the grid
-   template string between rows that must align.
-4. **Interactive? Add an island.**
-   - Write a plain-TS `model.ts` (no React). The drawing, readout, caption and
-     screen-reader text all read from it.
-   - The `"use client"` player wraps the server drawing as `children` and only
-     sets `data-*` flags (and CSS vars like `--diagram-level`) on a
-     `group/diagram` wrapper. The drawing reacts with
-     `group-data-[...]/diagram:` classes.
-   - Write those classes as literal strings so Tailwind sees them.
-   - Use design-system `Button`/`ButtonGroup` with `aria-pressed`, plus
-     `numberFormat()`.
-   - Captions go in `role="status"`.
-5. **Wire in.** Register in `docsComponents`. Replace the `![...](x.png)` line
-   in **English markdown only**, keeping the "adapted from" caption line.
-   Leave the PNG and translated markdown alone (the intl pipeline handles
-   them).
-6. **Stories and checks** (below), then a draft PR.
+1. **Read the PNG.** List what it shows and decide what a reader should _watch_ change, step by step. Map each concept to one simple solid on the plate (world state). Pick 2-4 presets of example values only if comparing them teaches something.
+2. **Model** (`model.ts`). Presets, steps (`IDLE_STEP`, then one per step), and a pure `get<Name>View` that returns everything the drawing, readout, captions and status read: levels, lit part, which parts are reached, caption key, values. Numbers that must add up are integers (e.g. whole gwei), so the readout sums exactly.
+3. **Strings.** Labels, one-line `-definition-<part>`s, `-title`, `-caption` (intro), `-description` (narrates the whole drawing; it is the text alternative), `-step-*` captions and short `-status-*` lines. **Every number is an ICU param** (`{limit}`, `{cost}`, `{step}`), formatted by the player with `useDiagramFormat()` (wraps `numberFormat`: arabext digits for `ur`, locale grouping elsewhere). Never write digits into a string. Opcode names and code stay as literal text.
+4. **Rig** (`rig.tsx`). Geometry, detail and shadows built once at module level; `<g data-part="id">` per part; root `<svg aria-hidden data-anatomy-drawing {...DIAGRAM_SVG_FALLBACKS} className={ISO_SVG_CLASS}>`; `AnatomyLabels` with spots in priority order. Use `useTranslations` only for shared strings like `diagram-reverted`. `export default memo(Rig)`.
+5. **Player** (`player.tsx`). `useStepPlayer` (never a hand-rolled timer), `useMemo` the view per preset and step, `useMemo` labels and definitions on `t`. Readout numbers that move use `<DiagramCountUp value delay />`. Pass every caption the preset can show to `DiagramCaption all`.
+6. **Wire in.** `index.tsx` wraps the lazy player in `DiagramMessages`; import it in `src/layouts/Docs.tsx` and add it to `docsComponents`. Swap the `![...](x.png)` line in **English markdown only** for `<Name fig={N} />`, keeping the credit line as "Inspired by ...". Leave the PNG and translated markdown alone; the intl pipeline propagates.
+7. **Guard and stories** (below), then the PR.
 
-## Rules that bite
+## Visual rules
 
-- **Radix `asChild` + Server Component children renders nothing after
-  hydration.** React serializes server-passed elements as lazy references,
-  which `Slot` can't clone. Always go through `DiagramTooltipTarget`, which
-  creates the trigger element on the client. Never wrap a server-rendered node
-  in `<Tooltip asChild>` directly.
-- `@/components/Tooltip` renders `null` on the server unless you pass
-  `renderChildrenOnServer` (`DiagramTooltipTarget` does).
-- Containers with children expose only their **label** as the tooltip trigger,
-  so nested nodes and badges keep their own.
-- Titles are `DiagramTitle` (`<p>`), never headings: diagrams must not enter
-  the page ToC.
-- Labels wrap. Never use `whitespace-nowrap` on node or badge labels.
-  Vertical-lane pills already use `writing-mode: vertical-rl`.
-- Logical CSS only. Inline arrowheads, lines and tokens already mirror in RTL;
-  directional icons get `rtl:-scale-x-100`.
-- No hex or `rgb()`. Inside tinted fills use `text-body`, not
-  `text-body-medium`.
-- In `tv()` slot styles, a `className` override with the same utility group
-  wins (e.g. `size-20` beats the badge's `size-24`).
+- **No vanishing lines.** Colours come only from `--diagram-*` tokens, through static literal classes (`stroke-diagram-pipe`, never string-built) or `DIAGRAM_COLOR` values with fallbacks. The root `<svg>` spreads `DIAGRAM_SVG_FALLBACKS` (`fill="none" stroke="currentColor"`). Shapes that must not be stroked say so (`stroke="none"` / `stroke-none`). An unset SVG fill renders black, so set one on every shape, clip geometry included.
+- **Colour roles.** Blue (`--diagram-entity`) = accounts, contracts and the EVM. Orange (`--diagram-gas`) = gas only: tanks, levels, flowing gas, glow, meters. Values that aren't gas (ETH, stored words) are a stronger blue, never orange. Neutral = structure: plate, pipes at rest, leaders. Failure uses `--diagram-revert`.
+- **Lines.** Every outline and leader is 1px (non-scaling; on 1x screens anything thinner renders below 3:1). Hierarchy by colour, not width: `--diagram-line-faint` seams, `--diagram-line` outlines, `--diagram-line-strong` the hovered part. Pipes are 1.4px tubes with a 0.4px decorative highlight; a one-shot orange dash flows only while gas moves.
+- **Fills.** `anatomyFill(hue, face, state)`: `color-mix(in oklab, hue N%, background)`, top lightest. Rest shares `--diagram-mix-*` (7/14/22% light, 20/32/45% dark); the active or hovered part takes `--diagram-mix-*-active` (15/30/45%, 30/50/70% dark). Dark uses one step lighter hues (`blue-300`, `yellow-500`). Plate: `--diagram-plate` top, sides a darker neutral tint.
+- **Active part.** Takes its role colour (tint and outline), and its label and leader switch to it. Never the site `primary`, never a heavier stroke.
+- **Detail and shadow.** 2-4 small marks per object from `isoDetail`. One ground shadow under the plate and a contact shadow per object (`isoShadow`, radial gradient from `IsoDefs`). No SVG filters, no CSS blur. Budget about 300 SVG nodes per diagram (they run 100-135).
+- **Simple parts.** One solid per object, at most one icon, each on its own footprint. Show quantities moving: levels fill and drain, a burning part glows in proportion, readouts count up with the drawing.
+- **Labels.** Concept names, single line, 12px, fully outside the plate, short straight or single-elbow leaders that cross nothing. `AnatomyLabels` drops any label that would leave the drawing, touch a shape or touch another label or leader (earlier spots win); narrow screens fall back to fewer labels plus the caption. Before its first measurement (server HTML) only the top three spots show, so order spots by priority.
 
-## Motion
+## Shell (`InteractiveDiagram`)
 
-- CSS only: `stroke-dashoffset` (`animate-diagram-flow` on dashed lines via
-  `lineClassName`), travelling dot (`tokenClassName`), opacity,
-  `animate-diagram-pop`, and the badge gauge (`level`).
-- One-shot, 500-700 ms, ease-out. No idle or looping animation.
-- One moving element at a time, and it is the only element in `primary`.
-- Reduced motion: the token is `motion-reduce:invisible`, transitions are
-  `motion-reduce:transition-none`, and the flow is `motion-reduce:animate-none`.
-  Steps jump to their end state; the controls still work with a longer dwell.
+One card, so controls sit in the same places everywhere. From a 640px card width (container query) a 15rem panel sits on the inline-end side; narrower it stacks under the illustration. Illustration column: figure header in small mono caps ("Fig. N · Title", from `fig={N}`), drawing, status line (two lines reserved; the step at rest, "Label: definition" on hover), legend. Panel, top to bottom:
 
-## Tokens
+1. `DiagramPresets`: "Example values", segmented, `aria-pressed`.
+2. `DiagramTransport`: primary action (disabled while running), then previous, "Step x of n" (`current`, `total` numbers), next (`data-diagram-next`), reset.
+3. `DiagramCaption`: polite `role="status"`; sized by empty CSS-content sizers (`content: attr(data-sizer)`), one per possible caption, so the height never jumps and the text appears in the page only once.
+4. `DiagramReadout`: two columns, mono tabular numbers.
 
-Full light and dark table with contrast ratios: see the Overview MDX.
+Hover and focus are built in: wrap each part in `<g data-part="id">` with the same id as its label spot. Pointing at a part or label, or focusing the label, outlines the part in `line-strong`, colours its label, dims the others to 70% and shows the definition in the status line. A tap selects a part on touch.
 
-| Role                    | Token                                           |
-| ----------------------- | ----------------------------------------------- |
-| Entity stroke and icons | `accent-a`                                      |
-| Entity fill             | `diagram-entity-fill`                           |
-| State stroke and icons  | `diagram-state`                                 |
-| State fill              | `diagram-state-fill`                            |
-| Dashed group            | `diagram-group-fill` (+ `diagram-state` stroke) |
-| Revert                  | `diagram-revert`                                |
-| Connectors              | `body-medium`                                   |
-| Outlined container      | `border-high-contrast`                          |
-| Pill                    | `background-low`                                |
-| The one moving element  | `primary`                                       |
+## Accessibility
 
-If a new pair is needed, compute WCAG contrast in **both** themes (text 4.5:1,
-strokes 3:1) before adding a token.
+- `<figure>` with the intro as `<figcaption>` and the `-description` linked by `aria-describedby`. The drawing is `aria-hidden`.
+- Labels are **one tab stop** (roving tabindex) in a `role="group"` named by `diagram-parts-label`; arrow keys (mirrored in RTL), Home and End move between visible labels. Each label's definition is its `aria-describedby`.
+- Step changes are announced once by the caption's `role="status"`; the status line is `aria-hidden`.
+- Reduced motion: nothing moves, steps jump to their end state, dwell is longer, count-ups are instant.
+- Contrast: text 4.5:1 and graphics 3:1 in both themes; compute it before adding a token.
 
-## Story checklist
+## Performance
 
-- One story per state. Interactive diagrams take an `initialStep` prop so each
-  step is a deterministic static snapshot.
-- `Dark` (`globals: { theme: "dark" }`), `Rtl` (`globals: { locale: "ar" }`),
-  `Mobile` (`globals: { viewport: { value: "base", isRotated: false } }`),
-  `ReducedMotion`.
-- `chromatic.modes`: `viewportModes` base and lg. Chromatic already runs with
-  `prefersReducedMotion: "reduce"` globally.
-- Open the stories in `pnpm storybook`; `build-storybook` doesn't execute them.
-- Screenshot at 2x in both themes and at 360 px. Check arrow alignment,
-  clipped text and contrast.
-- Run `pnpm lint`, `pnpm type-check`, `pnpm build-storybook` and `pnpm lint:md`.
-- Chromatic CI skips draft PRs; the link appears when the PR is ready for
-  review.
+- Server-rendered: the idle drawing is in the page HTML (about 2.5-3 KB gzipped per diagram), so no placeholder pop-in and something to show without JS.
+- Client JS loads only on pages that render the diagram (`lazy-player.tsx`). Strings ship only with the diagram (`DiagramMessages`); `component-diagrams` is not a layout namespace.
+- Fonts: only the site's existing faces (Inter, IBM Plex Mono 400). Never add a weight or style for a diagram: `next/font` preloads every face on every page.
+- Animate only opacity, transform and stroke-dashoffset. Runs, timers and CSS animations pause off screen (`useDiagramInView` → `data-paused`).
+- The only JS-driven motion is `DiagramCountUp` (a ~700ms tween), a leaf so it re-renders only its own text. Rigs are memoised; static detail is built at module level.
+- Label collision checks wait until the drawing nears the viewport, then re-run on resize and once fonts load.
 
-## Remaining diagrams
+## Guard, stories and checks
 
-All files sit next to the listed `index.md` under
-`public/content/developers/docs/`.
+- `tests/e2e/diagram-strokes.spec.ts` walks every shape of every `DiagramStage` on the pages it lists, for every preset and step and each label's hover state, light and dark, and fails on a missing stroke or a black fill. Add each new diagram's page.
+- Stories: idle, each step (`initialStep`), each preset, `Dark`, `Rtl` (`globals: { locale: "ar" }`), mobile (`viewport: base`), reduced motion, a hover story with a play function that focuses a label. Open them in `pnpm storybook`; `build-storybook` doesn't execute them.
+- Screenshot light and dark at 1440px, 1024px and 390px, RTL, every step: no black paint, no label collisions, no labels on shapes, no leader crossings, nothing clipped.
+- `pnpm lint`, `pnpm type-check`, `pnpm lint:md`, `pnpm build-storybook`.
 
-| PNG                                     | Used in                                        | Extra grammar it needs beyond PR 1                                                      |
-| --------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `evm.png`                               | `evm/`                                         | Nested filled entity containers; large icon tiles; title + subtitle pair. No connectors |
-| `tx.png`                                | `transactions/`                                | "?" glyph over a labelled dashed arrow (simplest one)                                   |
-| `tx-block.png`                          | `blocks/`                                      | State node holding pill chips                                                           |
-| `accounts.png`                          | `accounts/`                                    | Stacked "multiple" outline; bidirectional S-elbows; list of state rows                  |
-| `nodes.png`                             | `nodes-and-clients/`                           | Circle entity "You"; ETH logo badge; chip list in a node                                |
-| `diagram.png`                           | `nodes-and-clients/run-a-node/`                | Group title at bottom; free-floating labels above/below a bidirectional line            |
-| `eth1eth2client.png`                    | `nodes-and-clients/`                           | Segmented node ("p2p" part); pills on elbow lines; fan-out network stubs                |
-| `node-architecture-text-background.png` | `nodes-and-clients/node-architecture/`         | Dashed entity group; bullet lists in nodes; peer mesh with off-canvas dotted links      |
-| `attestation_schematic.png`             | `consensus-mechanisms/pos/attestations/`       | Merging lines; filled-orange circle; tab pills (`shape="tab"`); block chain row         |
-| `reorg-schematic.png`                   | `consensus-mechanisms/pos/attack-and-defense/` | Undirected edges (`arrow="none"`); free-text annotations                                |
-| `multiple-keys.png`                     | `consensus-mechanisms/pos/keys/`               | Fan-out tree (several `DiagramElbow`s) with tab pills; row labels                       |
-| `validator-key-schematic.png`           | `consensus-mechanisms/pos/keys/`               | Three-way tree; bracket rail connector on the start side                                |
+## Remaining PNGs
 
-Bracket rails, off-canvas mesh links and segmented nodes have no primitive
-yet. Add them as variants in the PR that first needs them.
+All next to the listed `index.md` under `public/content/developers/docs/`: `tx.png` (`transactions/`), `evm.png` (`evm/`), `tx-block.png` (`blocks/`), `accounts.png` (`accounts/`), `nodes.png` and `eth1eth2client.png` (`nodes-and-clients/`), `diagram.png` (`nodes-and-clients/run-a-node/`), `node-architecture-text-background.png` (`nodes-and-clients/node-architecture/`), `attestation_schematic.png` (`consensus-mechanisms/pos/attestations/`), `reorg-schematic.png` (`consensus-mechanisms/pos/attack-and-defense/`), `multiple-keys.png` and `validator-key-schematic.png` (`consensus-mechanisms/pos/keys/`).
