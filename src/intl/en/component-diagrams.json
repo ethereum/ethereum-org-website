@@ -134,7 +134,7 @@
   "evm-zones-definition-tank": "The gas left for this call. What remains at the end is returned.",
   "evm-zones-definition-stack": "Short-lived working values, up to {depth} deep.",
   "evm-zones-definition-memory": "Scratch space for the call, cleared when it ends.",
-  "evm-zones-definition-storage": "The contract's own key-value store. Writes made here outlast the call.",
+  "evm-zones-definition-storage": "The contract's own key-value store. Writes made here outlast the call, unless it reverts.",
   "evm-zones-zone-machine": "Machine state (volatile)",
   "evm-zones-zone-rom": "Virtual ROM (immutable)",
   "evm-zones-zone-world": "World state (persistent)",
