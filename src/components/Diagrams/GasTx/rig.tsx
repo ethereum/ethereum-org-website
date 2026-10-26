@@ -293,9 +293,7 @@ function GasTxRig({
             hue="gas"
             clipId={`${id}-tank`}
             level={view.tankLevel}
-            levelStyle={{
-              transitionDelay: view.motion === "execute" ? "700ms" : "0ms",
-            }}
+            levelDelay={view.motion === "execute" ? 700 : 0}
             state={state("tank")}
           />
           {TANK_DETAIL}

@@ -1,5 +1,3 @@
-import type { CSSProperties } from "react"
-
 import { cn } from "@/lib/utils/cn"
 
 import {
@@ -35,6 +33,7 @@ export interface IsoBox {
 export interface IsoCylinderGeometry {
   body: string
   top: { cx: number; cy: number; rx: number; ry: number }
+  base: { cx: number; cy: number; rx: number; ry: number }
   /** Box a level fill spans, from the bottom of the body to its top. */
   fill: { x: number; y: number; width: number; height: number }
 }
@@ -104,6 +103,7 @@ export function isoProjection(originX: number, originY: number) {
     return {
       body: `M${l},${top.cy} L${l},${base.cy} A${base.rx},${base.ry} 0 0 0 ${rt},${base.cy} L${rt},${top.cy} Z`,
       top,
+      base,
       fill: {
         x: l,
         y: top.cy,
@@ -144,7 +144,7 @@ export type IsoProjection = ReturnType<typeof isoProjection>
 export const ISO_SVG_CLASS =
   "block h-auto w-full overflow-visible text-diagram-line rtl:-scale-x-100 [stroke-width:1] [&_*]:[vector-effect:non-scaling-stroke] [[data-paused]_&_*]:[animation-play-state:paused]"
 
-/** Classes for a level fill that scales up from its bottom edge. */
+/** Classes for a moving level (tank liquid, meter needle): eased, 700ms. */
 export const ISO_LEVEL_CLASS =
   "origin-bottom [transform-box:fill-box] transition-transform duration-700 ease-out motion-reduce:transition-none"
 
@@ -270,15 +270,18 @@ export function IsoPlate({
 }
 
 /**
- * A vertical cylinder (e.g. a tank). With `level` (0-1) it shows a fill of
- * the hue rising from the bottom (a transform); `levelStyle` can delay it.
+ * A vertical cylinder (e.g. a tank). With `level` (0-1) it shows the hue
+ * filled to that level; the liquid's surface is the cylinder's own
+ * cross-section (the same ellipse as its top and base) at that height. At
+ * empty the liquid is exactly the base ellipse, then fades out as the last of
+ * it drains. `levelDelay` (ms) holds the motion back, e.g. to follow a flow.
  */
 export function IsoCylinder({
   geometry,
   hue,
   clipId,
   level,
-  levelStyle,
+  levelDelay = 0,
   state = "rest",
 }: {
   geometry: IsoCylinderGeometry
@@ -286,7 +289,7 @@ export function IsoCylinder({
   /** Unique id for the body's clip path. */
   clipId: string
   level?: number
-  levelStyle?: CSSProperties
+  levelDelay?: number
   state?: AnatomyState
 }) {
   const stroke = anatomyStroke(hue, state)
@@ -303,16 +306,35 @@ export function IsoCylinder({
       />
       {level !== undefined && (
         <g clipPath={`url(#${clipId})`}>
-          <rect
-            {...geometry.fill}
-            stroke="none"
-            className={ISO_LEVEL_CLASS}
+          {/* Fades only once the drain has reached the base. */}
+          <g
+            className="transition-opacity duration-300 ease-out motion-reduce:transition-none"
             style={{
-              fill: anatomyStrong(hue),
-              transform: `scaleY(${level})`,
-              ...levelStyle,
+              opacity: level > 0 ? 1 : 0,
+              transitionDelay: `${level > 0 ? 0 : levelDelay + 700}ms`,
             }}
-          />
+          >
+            {/* The liquid and its surface move together: the surface is the
+                top ellipse at full and the base ellipse at empty. */}
+            <g
+              className={ISO_LEVEL_CLASS}
+              style={{
+                transform: `translateY(${r1((1 - level) * (geometry.base.cy - geometry.top.cy))}px)`,
+                transitionDelay: `${levelDelay}ms`,
+              }}
+            >
+              <rect
+                {...geometry.fill}
+                stroke="none"
+                style={{ fill: anatomyStrong(hue) }}
+              />
+              <ellipse
+                {...geometry.top}
+                className={stroke}
+                style={{ fill: anatomyFill(hue, "end", "lit") }}
+              />
+            </g>
+          </g>
         </g>
       )}
       <ellipse
