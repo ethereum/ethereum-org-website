@@ -219,9 +219,9 @@ function GasEvmRig({
   const written = `color-mix(in oklab, ${DIAGRAM_COLOR.entity} 65%, ${DIAGRAM_COLOR.bg})`
   const activeCell = `color-mix(in oklab, ${DIAGRAM_COLOR.entity} 85%, ${DIAGRAM_COLOR.bg})`
   const cellFill = (i: number) =>
-    view.pc === i
+    view.opIndex === i
       ? activeCell
-      : view.pc !== null && i < view.pc
+      : view.opIndex !== null && i < view.opIndex
         ? anatomyFill("entity", "start")
         : anatomyFill("entity", "top")
 
@@ -292,7 +292,7 @@ function GasEvmRig({
               <polygon
                 key={cell}
                 points={cell}
-                className={cn(view.pc === i && "stroke-diagram-entity")}
+                className={cn(view.opIndex === i && "stroke-diagram-entity")}
                 style={{ fill: cellFill(i) }}
               />
             ))}

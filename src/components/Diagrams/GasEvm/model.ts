@@ -44,6 +44,14 @@ export const PROGRAM: Instruction[] = [
   { op: "STOP", cost: 0 },
 ]
 
+/** Byte offset of each opcode in the code: PUSH1 takes a one-byte operand. */
+const BYTE_OFFSETS = PROGRAM.map((_, i) =>
+  PROGRAM.slice(0, i).reduce(
+    (offset, ins) => offset + (ins.op === "PUSH1" ? 2 : 1),
+    0
+  )
+)
+
 /** -1 is idle; 0 is the intrinsic draw; 1..n run PROGRAM[step - 1]. */
 export const GAS_EVM_IDLE_STEP = -1
 
@@ -63,7 +71,10 @@ export interface GasEvmView {
   stepIndex: number
   /** The last step this run reaches (the STOP, or the failing opcode). */
   lastStep: number
-  /** Program counter of the current opcode, or null before the code runs. */
+  /** Index of the current opcode in PROGRAM (its code cell), or null. */
+  opIndex: number | null
+  /** Program counter of the current opcode: its byte offset in the code
+   * (PUSH1 is two bytes, the rest one), or null before the code runs. */
   pc: number | null
   instruction: Instruction | null
   /** Gas drawn by the current step: intrinsic at step 0, then the opcode's. */
@@ -137,8 +148,8 @@ export const getGasEvmView = (
     }
   }
 
-  const pc = stepIndex >= 1 ? stepIndex - 1 : null
-  const instruction = pc !== null ? PROGRAM[pc] : null
+  const opIndex = stepIndex >= 1 ? stepIndex - 1 : null
+  const instruction = opIndex !== null ? PROGRAM[opIndex] : null
   const gasUsed = gasLimit - gasLeft
 
   const captionKey =
@@ -172,7 +183,8 @@ export const getGasEvmView = (
     gasLeft,
     stepIndex,
     lastStep,
-    pc,
+    opIndex,
+    pc: opIndex !== null ? BYTE_OFFSETS[opIndex] : null,
     instruction,
     lastCost:
       // Out of gas, the failing opcode consumes everything that was left.
