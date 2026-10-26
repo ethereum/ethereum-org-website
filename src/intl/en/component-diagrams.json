@@ -6,7 +6,7 @@
   "gas-tx-gas-supply": "Gas supply",
   "gas-tx-message": "Message",
   "diagram-reverted": "Reverted",
-  "diagram-presets-label": "Example values",
+  "diagram-presets-label": "Choose scenario",
   "gas-tx-preset-light": "Light call",
   "gas-tx-preset-heavy": "Heavy call",
   "gas-tx-preset-out-of-gas": "Out of gas",

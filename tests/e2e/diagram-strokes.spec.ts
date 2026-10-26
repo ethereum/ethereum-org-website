@@ -12,7 +12,7 @@ import { expect, type Locator, test } from "@playwright/test"
  *
  * Diagrams opt in by rendering `DiagramStage` (`data-diagram-stage`), marking
  * their drawing `data-anatomy-drawing` and their next-step button
- * `data-diagram-next`; presets are the `aria-pressed` buttons in the stage.
+ * `data-diagram-next`; presets are the `role="radio"` options in the stage.
  * At the last step it also focuses every visible label, checking each part's
  * hover state.
  */
@@ -71,7 +71,7 @@ for (const theme of ["light", "dark"] as const) {
           await stage.scrollIntoViewIfNeeded()
           await expect(stage.locator("[data-anatomy-drawing]")).toBeVisible()
 
-          const presets = stage.locator("button[aria-pressed]")
+          const presets = stage.locator("[role=radio]")
           const presetCount = Math.max(await presets.count(), 1)
           for (let p = 0; p < presetCount; p++) {
             if ((await presets.count()) > 0) await presets.nth(p).click()

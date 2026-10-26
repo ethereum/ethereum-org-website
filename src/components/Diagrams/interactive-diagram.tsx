@@ -4,12 +4,12 @@ import { type ReactNode, type Ref, useId, useMemo } from "react"
 import { RotateCcw } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
-import type { MatomoEventOptions } from "@/lib/types"
-
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 import { Button } from "@/components/ui/buttons/Button"
+import { RadioGroup, RadioGroupSegment } from "@/components/ui/radio-group"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import { DiagramStage } from "./anatomy/stage"
@@ -33,7 +33,7 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
  * Illustration column, top to bottom: the figure header ("Fig. N", title, in
  * small caps), the drawing, a status line (the step, or the hovered
  * part's definition) and a legend of the role colours.
- * Panel, top to bottom: presets ("Example values"), transport (primary
+ * Panel, top to bottom: presets ("Choose scenario"), transport (primary
  * action, then previous / "Step x of n" / next / reset), caption, readout.
  *
  * Hover and focus are built in (see diagram-hover.tsx). Pass `inViewRef`
@@ -210,8 +210,8 @@ export interface DiagramPresetOption<T extends string> {
 }
 
 /**
- * "Example values": a segmented control, vertical full-width rows in the side
- * panel and a horizontal row when the panel is stacked.
+ * "Choose scenario": a segmented radio group (one tab stop, arrow keys
+ * select), a column in the side panel and a row when the panel is stacked.
  */
 export function DiagramPresets<T extends string>({
   label: labelProp,
@@ -221,7 +221,7 @@ export function DiagramPresets<T extends string>({
   eventCategory = "Diagram",
   eventAction,
 }: {
-  /** Defaults to "Example values". */
+  /** Defaults to "Choose scenario". */
   label?: ReactNode
   options: DiagramPresetOption<T>[]
   value: T
@@ -232,48 +232,27 @@ export function DiagramPresets<T extends string>({
   const t = useTranslations("component-diagrams")
   const label = labelProp ?? t("diagram-presets-label")
   const labelId = useId()
-  const last = options.length - 1
   return (
     <div className="flex flex-col gap-2">
       <span id={labelId} className="text-sm text-body-medium">
         {label}
       </span>
-      <div
-        role="group"
+      <RadioGroup
+        variant="segmented"
         aria-labelledby={labelId}
-        className="flex @[640px]:flex-col"
+        value={value}
+        onValueChange={(id) => {
+          onChange(id as T)
+          trackCustomEvent({ eventCategory, eventAction, eventName: id })
+        }}
+        className="@[640px]:flex-col @[640px]:divide-x-0 @[640px]:divide-y"
       >
-        {options.map((option, i) => (
-          <Button
-            key={option.id}
-            size="sm"
-            variant={option.id === value ? "solid" : "outline"}
-            aria-pressed={option.id === value}
-            onClick={() => onChange(option.id)}
-            className={cn(
-              "min-w-0 flex-1 whitespace-normal",
-              // Joined borders: a row when stacked, a column in the side panel.
-              i > 0 && "-ms-px @[640px]:ms-0 @[640px]:-mt-px",
-              i === 0 &&
-                i !== last &&
-                "rounded-e-none @[640px]:rounded @[640px]:rounded-b-none",
-              i > 0 && i < last && "rounded-none @[640px]:rounded-none",
-              i === last &&
-                i !== 0 &&
-                "rounded-s-none @[640px]:rounded @[640px]:rounded-t-none"
-            )}
-            customEventOptions={
-              {
-                eventCategory,
-                eventAction,
-                eventName: option.id,
-              } satisfies MatomoEventOptions
-            }
-          >
+        {options.map((option) => (
+          <RadioGroupSegment key={option.id} value={option.id}>
             {option.label}
-          </Button>
+          </RadioGroupSegment>
         ))}
-      </div>
+      </RadioGroup>
     </div>
   )
 }
@@ -283,7 +262,7 @@ export function DiagramPresets<T extends string>({
 const ICON_BUTTON = "size-8 min-h-8 shrink-0 p-0"
 
 /**
- * The primary action (full width in the side panel), then one row: previous,
+ * The primary action (full width), then one row: previous,
  * "Step x of n", next, reset. Same icons and order on every diagram.
  */
 export function DiagramTransport({
@@ -326,7 +305,6 @@ export function DiagramTransport({
         size="sm"
         onClick={primary.onClick}
         disabled={primary.disabled}
-        className="self-start @[640px]:self-stretch"
         customEventOptions={{
           eventCategory,
           eventAction,

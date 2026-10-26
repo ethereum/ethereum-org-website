@@ -65,8 +65,8 @@ Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` pe
 
 One card, so controls sit in the same places everywhere. From a 640px card width (container query) a 15rem panel sits on the inline-end side; narrower it stacks under the illustration. Illustration column: figure header in small caps ("Fig. N · Title", from `fig={N}`), drawing, status line (sans, two lines reserved; the step at rest, "Label: definition" on hover), legend. Panel, top to bottom:
 
-1. `DiagramPresets`: "Example values", segmented, `aria-pressed`.
-2. `DiagramTransport`: primary action (disabled while running), then previous, "Step x of n" (`current`, `total` numbers), next (`data-diagram-next`), reset.
+1. `DiagramPresets`: "Choose scenario", a segmented `ui/radio-group` (radio roles, one tab stop, arrow keys).
+2. `DiagramTransport`: primary action (full width of the panel, disabled while running), then previous, "Step x of n" (`current`, `total` numbers), next (`data-diagram-next`), reset.
 3. `DiagramCaption`: polite `role="status"`; sized by empty CSS-content sizers (`content: attr(data-sizer)`), one per possible caption, so the height never jumps and the text appears in the page only once.
 4. `DiagramReadout`: two columns, mono tabular numbers.
 

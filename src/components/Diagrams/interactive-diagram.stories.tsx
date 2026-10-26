@@ -13,7 +13,7 @@ import {
 const STRINGS = {
   en: {
     intro: "Caption: what the diagram shows, under the card.",
-    presets: "Example values",
+    presets: "Choose scenario",
     presetA: "Light call",
     presetB: "Heavy call",
     presetC: "Out of gas",
@@ -38,7 +38,7 @@ const STRINGS = {
   de: {
     intro:
       "Einführungstext: was das Diagramm zeigt, oberhalb der Karte, deutlich länger als im Englischen.",
-    presets: "Beispielwerte",
+    presets: "Szenario wählen",
     presetA: "Leichter Aufruf",
     presetB: "Schwerer Aufruf",
     presetC: "Gas aufgebraucht",

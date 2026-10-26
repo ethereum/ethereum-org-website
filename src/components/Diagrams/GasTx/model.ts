@@ -15,7 +15,7 @@ interface GasTxPreset {
   gasNeeded: number
 }
 
-// Example values, labelled as such in the UI.
+// Example values, offered as scenarios in the UI.
 export const GAS_TX_PRESETS: Record<GasTxPresetId, GasTxPreset> = {
   light: { gasLimit: 100_000, gasNeeded: 46_000 },
   heavy: { gasLimit: 100_000, gasNeeded: 92_000 },
