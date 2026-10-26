@@ -11,6 +11,7 @@ import {
   Citations,
   citedSources,
   groupExcerpts,
+  matchBuyQuery,
   matchReferral,
   withLeads,
 } from "../../../app/api/ask/grounding"
@@ -81,6 +82,42 @@ test.describe("withLeads", () => {
   test("does not repeat a lead the excerpt already holds", () => {
     const leads = new Map([["/dao/", "Launch a DAO"]])
     expect(withLeads([excerpt], leads)[0].text).toBe("Launch a DAO")
+  })
+})
+
+test.describe("matchBuyQuery", () => {
+  test("routes a payment app or exchange named anywhere in the query", () => {
+    // Real no-match asks from the issue: a local app, a bank, an exchange.
+    expect(matchBuyQuery("easypaisa")).toBe(true)
+    expect(matchBuyQuery("how to buy eth with JazzCash")).toBe(true)
+    expect(matchBuyQuery("islami bank plc")).toBe(true)
+    expect(matchBuyQuery("Toobit")).toBe(true)
+    expect(matchBuyQuery("can I use opay?")).toBe(true)
+  })
+
+  test("normalises punctuation, so m-pesa and M PESA both match", () => {
+    expect(matchBuyQuery("buy ETH with M-Pesa")).toBe(true)
+    expect(matchBuyQuery("mpesa")).toBe(true)
+    expect(matchBuyQuery("google pay")).toBe(true)
+  })
+
+  test("matches whole words only", () => {
+    expect(matchBuyQuery("opaque")).toBe(false)
+    expect(matchBuyQuery("upington")).toBe(false)
+  })
+
+  test("matches everyday words only as the whole query", () => {
+    expect(matchBuyQuery("wave")).toBe(true)
+    expect(matchBuyQuery("Dana")).toBe(true)
+    expect(matchBuyQuery("what is a wave of liquidations")).toBe(false)
+    expect(matchBuyQuery("rocket")).toBe(false)
+    expect(matchBuyQuery("dbbl rocket")).toBe(true)
+  })
+
+  test("leaves other queries and wallet names alone", () => {
+    expect(matchBuyQuery("")).toBe(false)
+    expect(matchBuyQuery("what is proof of stake")).toBe(false)
+    expect(matchBuyQuery("trust wallet")).toBe(false)
   })
 })
 
