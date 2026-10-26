@@ -173,3 +173,54 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - glamsterdam:31 Latin `devnets` vs glossary `மேம்பாட்டாளர் வலையமைப்பு` (not auto-fixed, inflection).
 - zk-rollups `பூஜ்ஜிய`/`பூஜ்ய` and `எத்தேரியம்`/`எத்திரியம்` drift in one file; open-access stablecoin alias.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 7.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- Transliterated loanwords -> glossary native forms: wallet `வாலெட்` -> `பணப்பை` x4, smart contract -> `திறன் ஒப்பந்தம்` x3, cryptography -> `குறியாக்கவியல்` x2, node -> `கணு`, smart account -> `திறன் கணக்கு`, token -> `வில்லை` x2, devnet -> `மேம்பாட்டாளர் வலையமைப்பு`.
+- `small-business` refund agency inverted x2 (`திரும்பப் பெற` receive -> `திருப்பி அளிக்க` issue).
+
+**Open (warnings):**
+
+- glamsterdam parallelization regressed to `இணைப்படுத்தல்`; `பயன்பாட்டு வழக்குகள்` reads as lawsuits; privacy pools `குளங்கள்`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: "exchanges" `பரிமாற்றங்களும்` (acts of exchange) -> dev `பரிமாற்றகங்களும்`.
+- Open: glossary `testnet faucet` (`சோதனைவலை குழாய்`) vs `faucet` (`பாசெட்`) conflict, upstream.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 7.6/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- prediction-markets:35 odds = contradictions (`சந்தை உந்துதல் முரண்பாடுகள்` -> `சந்தையால் இயக்கப்படும் வாய்ப்புகள்`)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:375: "Deploy TimeLock" became "Use TimeLock". This is a regression and breaks ETHGlossary deploy=நிலைநிறுத்து (translate entry) (`1. TimeLock ஐப் பயன்படுத்தவும்` -> `1. TimeLock ஐ நிலைநிறுத்தவும்`)
+- developers/docs/smart-contracts/security/index.md:376: Same regression: "Deploy" became "use" (`Attack ஐப் பயன்படுத்தவும்` -> `Attack ஐ நிலைநிறுத்தவும்`)
+- common.json:149: Breaks ETHGlossary fork=கவை (the ta tree has about 400 uses of கவை and 8 of ஃபோர்க்) (`ஃபோர்க்குகளின் வரலாறு` -> `கவைகளின் வரலாறு`)
+- page-wallet-descriptions.json:5, 8, 9, 10, 11, 13, 14, 27, 40, 45, 47: Breaks ETHGlossary network=பிணையம். All 13 occurrences in this new file use the transliteration (the src/intl/ta tree has 728 uses of பிணைய)
+- page-wallet-descriptions.json:33, 35, 42: Breaks ETHGlossary blockchain=தொகுதிச்சங்கிலி
+- 20 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** ETHGlossary filter output: /tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-ta/ (aggregated terms in /tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-ta-terms.tsv)
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `இலசவமாக` typo changed to `இலவசமாக` (websockets:244)
+
+**Notes:**
+
+- Warnings: constructor term drift; எமது/நமது mixed; "call out" mistranslated (write-deploy:374).

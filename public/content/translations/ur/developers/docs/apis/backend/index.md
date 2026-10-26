@@ -35,7 +35,7 @@ lang: ur
 - [دستاویزات](https://docs.allthatnode.com)
 - [ڈسکارڈ](https://discord.gg/GmcdVEUbJM)
 
-**<span dir="ltr">Bware Labs</span> کی جانب سے Blast -** **_ایتھیریم مین نیٹ اور ٹیسٹ نیٹس کے لیے غیر مرکزی ⁦APIs⁩۔_**
+**<span dir="ltr">Bware Labs</span> کی جانب سے Blast -** **_ایتھیریم مین نیٹ اور ٹیسٹ نیٹس کے لیے ڈی سینٹرلائزڈ ⁦APIs⁩۔_**
 
 - [<span dir="ltr">blastapi.io</span>](https://blastapi.io/)
 - [دستاویزات](https://docs.blastapi.io)
@@ -58,7 +58,7 @@ lang: ur
 **Blockscout - اوپن سورس بلاک ایکسپلورر**
 - [دستاویزات](https://docs.blockscout.com/)
 
-**<span dir="ltr">GetBlock</span>-** **_Web3 ڈیولپمنٹ کے لیے بلاک چین ایز اے سروس (<span dir="ltr">Blockchain-as-a-service</span>)_**
+**<span dir="ltr">GetBlock</span> -** **_Web3 ڈیولپمنٹ کے لیے بلاک چین ایز اے سروس (<span dir="ltr">Blockchain-as-a-service</span>)_**
 
 - [<span dir="ltr">GetBlock.io</span>](https://getblock.io/)
 - [دستاویزات](https://docs.getblock.io/)
@@ -79,7 +79,7 @@ lang: ur
 - [<span dir="ltr">NOWNodes.io</span>](https://nownodes.io/)
 - [دستاویزات](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_بلاک چین انفراسٹرکچر بطور سروس۔_**
+**QuickNode -** **_بلاک چین انفراسٹرکچر ایز اے سروس۔_**
 
 - [<span dir="ltr">quicknode.com</span>](https://quicknode.com)
 - [دستاویزات](https://www.quicknode.com/docs/welcome)
@@ -91,6 +91,12 @@ lang: ur
 - [دستاویزات](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**<span dir="ltr">SolidRPC</span> -** **_فل، آرکائیو، اور کی لیس (<span dir="ltr">keyless</span>) عوامی رسائی کے ساتھ ⁦EVM⁩ جے سن آر پی سی انفراسٹرکچر۔_**
+
+- [<span dir="ltr">solidrpc.io</span>](https://solidrpc.io/)
+- [دستاویزات](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **<span dir="ltr">Zmok</span> -** **_رفتار پر مبنی ایتھیریم نوڈز بطور جے سن آر پی سی/ویب ساکٹس (<span dir="ltr">WebSockets</span>) ⁦API⁩۔_**
 
 - [<span dir="ltr">zmok.io</span>](https://zmok.io/)
@@ -100,13 +106,19 @@ lang: ur
 
 ### ڈیولپمنٹ ٹولز {#development-tools}
 
+**<span dir="ltr">eth.zig</span> -** **_ایتھیریم کے لیے ایک <span dir="ltr">Zig</span> لائبریری، جس میں کمپائل ٹائم ایپلیکیشن بائنری انٹرفیس (اے بی آئی) انکوڈنگ اور کنٹریکٹ بائنڈنگز شامل ہیں۔_**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [دستاویزات](https://ethzig.org)
+- [مثالیں](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
 **<span dir="ltr">ethers-kt</span> -** **_⁦EVM⁩ پر مبنی بلاک چینز کے لیے غیر مطابقت پذیر (<span dir="ltr">Async</span>)، اعلیٰ کارکردگی والی <span dir="ltr">Kotlin</span>/Java/Android لائبریری۔_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [مثالیں](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [ڈسکارڈ](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_بلاک چین کے لیے ایک اوپن سورس <span dir="ltr">.NET</span> انضمام لائبریری۔_**
+**Nethereum -** **_بلاک چین کے لیے ایک اوپن سورس <span dir="ltr">.NET</span> انٹیگریشن لائبریری۔_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [دستاویزات](https://docs.nethereum.com/docs/getting-started/welcome/)
@@ -125,7 +137,7 @@ lang: ur
 - [دستاویزات](https://docs.tatum.io/)
 - [ڈسکارڈ](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_ایتھیریم کے لیے ایک Java/Android/<span dir="ltr">Kotlin</span>/<span dir="ltr">Scala</span> انضمام لائبریری۔_**
+**Web3j -** **_ایتھیریم کے لیے ایک Java/Android/<span dir="ltr">Kotlin</span>/<span dir="ltr">Scala</span> انٹیگریشن لائبریری۔_**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [دستاویزات](https://docs.web3j.io/)

@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/contributing/adding-wallets/index.md",
-  "generatedAt": "2026-06-08T08:11:42.064Z",
-  "rootHash": "df65fc6c9354",
+  "generatedAt": "2026-10-21T21:41:36.698Z",
+  "rootHash": "db7895a279c8",
   "tree": {
-    "contentHash": "48db5570cdeb",
+    "contentHash": "66fd8e3a31ee",
     "anchorHash": "ab8ab653a3d3",
     "children": {
       "frontmatter:title": {
@@ -106,7 +106,7 @@
         ]
       },
       "adding-a-wallet": {
-        "contentHash": "a78baa78374a",
+        "contentHash": "eca1561fbbb0",
         "anchorHash": "98299143b686",
         "labelHash": "c7d62f4162e0",
         "children": {
@@ -115,7 +115,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "9ca0388ac653",
+            "contentHash": "15d670991c78",
             "anchorHash": "e3b0c44298fc"
           },
           "component:2": {
@@ -225,5 +225,5 @@
       "terms-of-use"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

@@ -58,6 +58,10 @@ const tableVariants = tv({
         ...baseStyles,
         thead: "bg-background-highlight",
         td: `${baseStyles.td} first:bg-background-highlight first:font-bold`,
+        // A row header (`<th scope="row">` in the body) is the accessible form
+        // of the highlighted first column, so it gets the same treatment as the
+        // `td` case above. Scoped to `tbody` so the header row is unaffected.
+        th: `${baseStyles.th} [tbody_&]:bg-background-highlight [tbody_&]:font-bold [tbody_&]:align-top [tbody_&]:border-b-0`,
       },
     },
   },

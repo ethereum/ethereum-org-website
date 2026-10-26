@@ -18,7 +18,7 @@ A wallet that supports ERC-7730 reads your descriptor and shows:
 > **Swap**  
 > Send: 1,000 USDC  
 > Receive minimum: 0.42 WETH  
-> Protocol: Uniswap V3
+> Protocol: Uniswap V2
 
 Or a single constructed sentence readable by humans and agents alike:
 
@@ -32,7 +32,7 @@ This is [clear signing](https://clearsigning.org/) — "What You See Is What You
 
 - Familiarity with Solidity and smart contract ABIs
 - A deployed smart contract with a verified ABI ([Sourcify](https://sourcify.dev) verification is required before a descriptor is accepted to the registry) 
-- Python 3.12+ for the validation CLI 
+- Python 3.12 for the validation CLI (the pinned `erc7730` package does not install on Python 3.13 or later). If your system Python is a different version, [uv](https://docs.astral.sh/uv/) can download and run Python 3.12 for you
 - Basic JSON knowledge
 
 ## What is an ERC-7730 descriptor? {#what-is-an-erc-7730-descriptor}
@@ -49,7 +49,7 @@ Because the descriptor is separate from the contract itself, you can add clear s
 
 ## Step 1: Create the file skeleton {#step-1-create-the-file-skeleton}
 
-Create a file named `calldata-<contractname>-<descriptorversion>.json`. The `calldata-` prefix tells the registry this descriptor covers contract function calls, as opposed to `eip712-` for typed-data messages. The `descriptorversion` tells the registry the version of the descriptor file, 0 by default if no version is provided.
+Create a file named `calldata-<ContractName>.json`, for example `calldata-SwapRouter.json`. The `calldata-` prefix tells the registry this descriptor covers contract function calls, as opposed to `eip712-` for typed-data messages. If you need to describe several versions of a contract, include the contract version in the name, as in the registry's `calldata-UniswapV3Router02.json`.
 
 
 ```json
@@ -69,7 +69,7 @@ The `context` section binds the descriptor to one or more contract deployments. 
 
 ```json
 "context": {
-  "$id": "uniswap-v3-router-mainnet",
+  "$id": "example-swap-router",
   "contract": {
     "deployments": [
       { "chainId": 1, "address": "0xYourContractAddressOnMainnet" },
@@ -84,7 +84,7 @@ The `context` section binds the descriptor to one or more contract deployments. 
 - `context.$id` — A unique identifier for this descriptor document or deployment configuration.
 - `contract.deployments` — The set of deployments this descriptor applies to.
 - `deployments[].chainId` — The EVM chain ID for a deployment. Include every chain where your contract is deployed.
-- `deployments[].address` — The contract address wallets should associate with this descriptor. Use the implementation address that holds the execution logic.
+- `deployments[].address` — The contract address wallets should associate with this descriptor. This is the address users actually send transactions to. If your contract is upgradeable, that is the proxy address, not the implementation address, while the function signatures in `display.formats` come from the implementation's ABI.
 
 ## Step 3: Write the metadata section {#step-3-write-the-metadata-section}
 
@@ -115,6 +115,8 @@ Each key is a human-readable ABI fragment — the function signature including b
 
 ### Example: Describing a token swap {#eg-describing-token-swap}
 
+This example describes `swapExactTokensForTokens` from the Uniswap V2 `Router02` contract. The input token is the first element of `path`, and the output token is the last one (`path` can have more than two elements for a multi-hop swap).
+
 ```json
 "display": {
   "formats": {
@@ -127,7 +129,7 @@ Each key is a human-readable ABI fragment — the function signature including b
           "label": "Send",
           "format": "tokenAmount",
           "params": {
-            "tokenPath": "#.path[0]"
+            "tokenPath": "#.path.[0]"
           }
         },
         {
@@ -135,7 +137,7 @@ Each key is a human-readable ABI fragment — the function signature including b
           "label": "Receive minimum",
           "format": "tokenAmount",
           "params": {
-            "tokenPath": "#.path[1]"
+            "tokenPath": "#.path.[-1]"
           }
         },
         {
@@ -159,7 +161,6 @@ Each key is a human-readable ABI fragment — the function signature including b
     }
   }
 }
-
 ```
 
 ### Display fields {#display-fields}
@@ -167,7 +168,7 @@ Each key is a human-readable ABI fragment — the function signature including b
 - **`intent`** — **(Required)** A short, user-friendly description of the action, such as "Swap".
 - **`interpolatedIntent`** — **(Recommended)** A richer sentence template that embeds formatted field values, such as `"Swap {amountIn} for at least {amountOutMin}"`. Include this alongside `intent` to provide an even more user friendly descriptor that wallets can choose to show provided any display constraints.
 - **`fields`** — **(Required)** The ordered list of transaction fields wallets should display to users.
-  - **`path`** — **(Required)** A reference to the transaction data. `#.fieldName` points to a decoded calldata parameter by the name in the ABI. `@.value` refers to the ETH value sent with the transaction.
+  - **`path`** — **(Required)** A reference to the transaction data. `#.fieldName` points to a decoded calldata parameter by the name in the ABI. `@.value` refers to the ETH value sent with the transaction. Array elements are written with a `.` before the brackets: `#.path.[0]` is the first element and `#.path.[-1]` the last. `#.path[0]` (without the dot) is rejected by the linter.
   - **`label`** — **(Required)** The human-readable label shown beside the value.
   - **`format`** — **(Recommended)** Controls how the value should be rendered. Common formats include:
     - `tokenAmount`
@@ -183,11 +184,13 @@ Each key is a human-readable ABI fragment — the function signature including b
 
 ## The complete descriptor {#the-complete-descriptor}
 
+Replace the placeholder addresses with the addresses of your deployed contract. The linter checks the descriptor against the verified ABI at those addresses, so it reports errors until you do.
+
 ```json
 {
   "$schema": "https://eips.ethereum.org/assets/eip-7730/erc7730-v2.schema.json",
   "context": {
-    "$id": "uniswap-v3-router-mainnet",
+    "$id": "example-swap-router",
     "contract": {
       "deployments": [
         {
@@ -219,7 +222,7 @@ Each key is a human-readable ABI fragment — the function signature including b
             "label": "Send",
             "format": "tokenAmount",
             "params": {
-              "tokenPath": "#.path[0]"
+              "tokenPath": "#.path.[0]"
             }
           },
           {
@@ -227,7 +230,7 @@ Each key is a human-readable ABI fragment — the function signature including b
             "label": "Receive minimum",
             "format": "tokenAmount",
             "params": {
-              "tokenPath": "#.path[1]"
+              "tokenPath": "#.path.[-1]"
             }
           },
           {
@@ -258,11 +261,72 @@ Each key is a human-readable ABI fragment — the function signature including b
 
 The [ERC-7730 registry](https://github.com/ethereum/clear-signing-erc7730-registry) is an open repository hosted by the [Ethereum Foundation](/foundation/) as a neutral steward. Anyone is free to clone and self-host it — wallets independently decide which registry instances they trust.
 
-1. Fork the repository on GitHub  
-2. Create a folder at `registry/<your-project-name>/`  
-3. Place your file inside it: `registry/myproject/calldata-mycontract-0_0.json`  
-4. Update the `$schema` field to the relative path used within the repo: `"../../specs/erc7730-v2.schema.json"`  
-5. Open a pull request
+1. Fork the repository on GitHub
+2. Create a folder at `registry/<your-project-name>/`
+3. Place your file inside it: `registry/myproject/calldata-SwapRouter.json`
+4. Update the `$schema` field to the relative path used within the repo: `"../../specs/erc7730-v2.schema.json"`. CI rejects a URL here.
+5. Add a test file (see below)
+6. Validate your files locally (see below)
+7. Open a pull request. Each pull request can change only one folder under `registry/`
+
+### Add a test file {#add-a-test-file}
+
+Every descriptor you add or change needs a test file, so the clear signing implementations can be checked against it. Create `registry/<your-project-name>/testsv2/calldata-<ContractName>.tests.json` with at least one test case for every function in `display.formats`. CI derives the function selector of each format and fails if no test transaction calls it.
+
+```json
+{
+  "$schema": "../../../specs/erc7730-tests-v2.schema.json",
+  "descriptor": "../calldata-SwapRouter.json",
+  "dataProvider": {
+    "tokens": {
+      "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": { "symbol": "USDC", "decimals": 6, "name": "USD Coin" },
+      "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": { "symbol": "WETH", "decimals": 18, "name": "Wrapped Ether" }
+    }
+  },
+  "tests": [
+    {
+      "description": "Swap 1,000 USDC for at least 0.42 WETH",
+      "rawTx": "0x02f9012f0180843b9aca00...",
+      "expected": {
+        "intent": "Swap",
+        "interpolatedIntent": "Swap 1000 USDC for at least 0.42 WETH",
+        "owner": "Example Swap Protocol",
+        "fields": [
+          { "label": "Send", "value": "1000 USDC" },
+          { "label": "Receive minimum", "value": "0.42 WETH" },
+          { "label": "Recipient", "value": "0x1234567890123456789012345678901234567890" },
+          { "label": "Expires", "value": "2026-01-01 00:00:00Z" }
+        ]
+      }
+    }
+  ]
+}
+```
+
+- `rawTx` is the full serialized **unsigned** transaction (shortened here), not only the calldata. Real transactions to your contract are the best test cases.
+- `dataProvider` supplies the token metadata (and optionally address and ENS names) so the tests do not need network access.
+- `expected` is what a wallet should display. CI renders each test case with the clear signing implementations and reports any differences on the pull request.
+
+See [Reference test cases](https://github.com/ethereum/clear-signing-erc7730-registry#reference-test-cases) in the registry README for the full format, including test files for EIP-712 descriptors.
+
+### Validate locally {#validate-locally}
+
+The registry checks descriptors with the [`erc7730`](https://github.com/sourcifyeth/python-erc7730) command-line tool, pinned in `.github/requirements.txt`. Run it from the root of your fork, in a Python 3.12 environment:
+
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r .github/requirements.txt
+erc7730 lint registry/myproject/calldata-SwapRouter.json
+```
+
+If you use [uv](https://docs.astral.sh/uv/), you can skip the virtual environment, and uv downloads Python 3.12 if needed:
+
+```sh
+uvx --python 3.12 --from "$(cat .github/requirements.txt)" erc7730 lint registry/myproject/calldata-SwapRouter.json
+```
+
+The linter checks the descriptor against the schema and against your contract's verified ABI. Fix every error. Warnings such as `Missing display format` mean the contract has functions your descriptor does not describe yet. To also check the `$schema` paths and the test file the way CI does, see [How to validate](https://github.com/ethereum/clear-signing-erc7730-registry#how-to-validate) in the registry README.
 
 When you open the PR, CI automatically runs schema validation, checks that function signatures produce valid selectors, confirms the contract address is verified on Sourcify, and flags ABI inconsistencies. The check results appear inline on the PR. Registry maintainers screen submissions for malformed or potentially malicious descriptors. Inclusion in the registry does not imply audit or endorsement.
 
@@ -276,7 +340,7 @@ When you open the PR, CI automatically runs schema validation, checks that funct
 
 ## What happens after merging? {#what-happens-after-merging}
 
-All descriptors in the registry are open to auditors. After your PR is merged, any auditor can review your descriptor and publish a cryptographic attestation (under [ERC-8176](https://github.com/ethereum/ERCs/pull/1576)) confirming its accuracy. 
+All descriptors in the registry are open to auditors. After your PR is merged, any auditor can review your descriptor and publish a cryptographic attestation (under [ERC-8176](https://eips.ethereum.org/EIPS/eip-8176)) confirming its accuracy. 
 
 These attestation signals let wallets apply their own trust policies — a descriptor with multiple independent attestations carries more weight than one without. You can reach the auditor community through [clearsigning.org](https://clearsigning.org).
 

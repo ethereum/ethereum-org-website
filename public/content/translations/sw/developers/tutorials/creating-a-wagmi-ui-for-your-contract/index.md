@@ -165,7 +165,7 @@ Kitambulisho cha mnyororo wa Sepolia.
 function App() {
 ```
 
-Hii ndiyo njia ya kawaida ya kuunda kijenzi cha React: fafanua chaguo la kukokotoa ambalo linaitwa wakati wowote linapohitaji kutolewa. Chaguo hili la kukokotoa kwa kawaida lina kodi ya TypeScript au JavaScript, ikifuatiwa na taarifa ya `return` inayorudisha kodi ya JSX.
+Hii ndiyo njia ya kawaida ya kuunda kijenzi cha React: fafanua chaguo la kukokotoa ambalo linaitwa wakati wowote linapohitaji kutolewa. Chaguo hili la kukokotoa kwa kawaida lina kodi ya TypeScript au JavaScript, ikifuatiwa na kauli ya `return` inayorudisha kodi ya JSX.
 
 ```tsx
   const connection = useConnection()
@@ -173,7 +173,7 @@ Hii ndiyo njia ya kawaida ya kuunda kijenzi cha React: fafanua chaguo la kukokot
 
 Tumia [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) kupata taarifa zinazohusiana na muunganisho wa sasa, kama vile anwani na `chainId`.
 
-Kwa kawaida, katika React chaguo za kukokotoa zinazoitwa `use...` ni [ndoano (hooks)](https://www.w3schools.com/react/react_hooks.asp). Chaguo hizi za kukokotoa hazirudishi tu data kwenye kijenzi; pia zinahakikisha inatolewa tena (chaguo la kukokotoa la kijenzi linatekelezwa tena, na pato lake linachukua nafasi ya lile la awali katika HTML) wakati data hiyo inabadilika.
+Kwa kawaida, katika React chaguo za kukokotoa zinazoitwa `use...` ni [ndoano (hooks)](https://www.w3schools.com/react/react_hooks.asp). Chaguo hizi za kukokotoa hazirudishi tu data kwenye kijenzi; pia zinahakikisha kinatolewa tena (chaguo la kukokotoa la kijenzi linatekelezwa tena, na pato lake linachukua nafasi ya lile la awali katika HTML) wakati data hiyo inabadilika.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -191,13 +191,13 @@ Tumia [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect) kupata taarifa
   const { switchChain } = useSwitchChain()
 ```
 
-[Ndoano hii](https://wagmi.sh/react/api/hooks/useSwitchChain) inaturuhusu kubadili minyororo.
+[Ndoano hii](https://wagmi.sh/react/api/hooks/useSwitchChain) inaturuhusu kubadilisha minyororo.
 
 ```tsx
   useEffect(() => {
 ```
 
-Ndoano ya React [`useEffect`](https://react.dev/reference/react/useEffect) inakuruhusu kuendesha chaguo la kukokotoa wakati wowote thamani ya kigezo inabadilika ili kusawazisha mfumo wa nje.
+Ndoano ya React ya [`useEffect`](https://react.dev/reference/react/useEffect) inakuruhusu kuendesha chaguo la kukokotoa wakati wowote thamani ya kigezo inapobadilika ili kusawazisha mfumo wa nje.
 
 ```tsx
     if (connection.status === 'connected' &&
@@ -207,20 +207,20 @@ Ndoano ya React [`useEffect`](https://react.dev/reference/react/useEffect) inaku
     }
 ```
 
-Ikiwa tumeunganishwa, lakini si kwenye mnyororo wa vitalu wa Sepolia, badili kwenda Sepolia.
+Ikiwa tumeunganishwa, lakini si kwenye mnyororo wa vitalu wa Sepolia, badilisha kwenda Sepolia.
 
 ```tsx
   }, [connection.status, connection.chainId])
 ```
 
-Endesha tena chaguo la kukokotoa kila wakati hali ya muunganisho au chainId ya muunganisho inabadilika.
+Endesha tena chaguo la kukokotoa kila wakati hali ya muunganisho au chainId ya muunganisho inapobadilika.
 
 ```tsx
   return (
     <>
 ```
 
-JSX ya kijenzi cha React _lazima_ irudishe kijenzi kimoja cha HTML. Tunapokuwa na vijenzi vingi na hatuhitaji kontena la kuvifunga vyote, tunatumia kijenzi kitupu (`<> ... </>`) kuviunganisha kuwa kijenzi kimoja.
+JSX ya kijenzi cha React _lazima_ irudishe kijenzi kimoja cha HTML. Tunapokuwa na vijenzi vingi na hatuhitaji kontena la kuvifunga vyote, tunatumia kijenzi tupu (`<> ... </>`) kuviunganisha kuwa kijenzi kimoja.
 
 ```tsx
       <h2>Connection</h2>
@@ -240,9 +240,9 @@ Toa taarifa kuhusu muunganisho wa sasa. Ndani ya JSX, `{<expression>}` inamaanis
       {connection.status === 'connected' && (
 ```
 
-Sintaksia `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
+Sintaksia `{<condition> && <value>}` inamaanisha "ikiwa sharti ni `true`, tathmini kwa thamani; ikiwa sivyo, tathmini kwa `false`".
 
-Hii ndiyo njia ya kawaida ya kuweka taarifa za if ndani ya JSX.
+Hii ndiyo njia ya kawaida ya kuweka kauli za if ndani ya JSX.
 
 ```tsx
         <div>
@@ -250,9 +250,9 @@ Hii ndiyo njia ya kawaida ya kuweka taarifa za if ndani ya JSX.
           <hr />
 ```
 
-JSX inafuata kiwango cha XML, ambacho ni kikali zaidi kuliko HTML. Ikiwa lebo haina lebo ya mwisho inayolingana, _lazima_ iwe na mkwaju (`/`) mwishoni ili kuikomesha.
+JSX inafuata kiwango cha XML, ambacho ni kikali zaidi kuliko HTML. Ikiwa lebo haina lebo ya mwisho inayolingana, _lazima_ iwe na mkwaju (`/`) mwishoni ili kuikamilisha.
 
-Hapa tuna lebo mbili kama hizo, `<Greeter />` (ambayo kwa kweli ina kodi ya HTML inayozungumza na mkataba) na [`<hr />` kwa ajili ya mstari wa mlalo](https://www.w3schools.com/tags/tag_hr.asp).
+Hapa tuna lebo mbili kama hizo, `<Greeter />` (ambayo kwa kweli ina kodi ya HTML inayozungumza na mkataba) na [`<hr />` kwa mstari wa mlalo](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>
@@ -269,7 +269,7 @@ Ikiwa mtumiaji atabofya kitufe hiki, ita chaguo la kukokotoa la `disconnect`.
       {connection.status !== 'connected' && (
 ```
 
-Ikiwa _hatujaunganishwa_, onyesha chaguo zinazohitajika ili kuunganisha kwenye mkoba.
+Ikiwa _hatujaunganishwa_, onyesha chaguo muhimu za kuunganisha kwenye mkoba.
 
 ```tsx
         <div>
@@ -284,7 +284,7 @@ Katika `connectors` tuna orodha ya viunganishi. Tunatumia [`map`](https://www.w3
               key={connector.uid}
 ```
 
-Katika JSX ni lazima kwa lebo "ndugu" (lebo zinazotoka kwa mzazi mmoja) kuwa na vitambulisho tofauti.
+Katika JSX ni muhimu kwa lebo "ndugu" (lebo zinazotoka kwa mzazi mmoja) kuwa na vitambulisho tofauti.
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -305,9 +305,9 @@ Vitufe vya kiunganishi.
       )}
 ```
 
-Toa taarifa za ziada. Sintaksia ya usemi `<variable>?.<field>` inaiambia JavaScript kwamba ikiwa kigezo kimefafanuliwa, tathmini kwenye uwanja huo. Ikiwa kigezo hakijafafanuliwa, basi usemi huu unatathminiwa kuwa `undefined`.
+Toa taarifa za ziada. Sintaksia ya usemi `<variable>?.<field>` inaiambia JavaScript kwamba ikiwa kigezo kimefafanuliwa, tathmini kwa uga huo. Ikiwa kigezo hakijafafanuliwa, basi usemi huu unatathminiwa kuwa `undefined`.
 
-Usemi `error.message`, wakati hakuna hitilafu, ungeibua ubaguzi. Kutumia `error?.message` kunaturuhusu kuepuka suala hilo.
+Usemi `error.message`, wakati hakuna hitilafu, ungeibua ubaguzi. Kutumia `error?.message` kunaturuhusu kuepuka suala hili.
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 

@@ -83,32 +83,25 @@ export function useHoverTargets() {
 }
 
 /**
- * Whether the diagram is on screen: `seen` turns true once it comes near the
- * viewport (to load the drawing) and `visible` follows it (to pause
- * animations and timers while it is off screen).
+ * Whether the diagram is on screen, to pause animations and timers while it
+ * is not.
  */
 export function useDiagramInView<T extends HTMLElement>() {
   const ref = useRef<T>(null)
   const [visible, setVisible] = useState(false)
-  const [seen, setSeen] = useState(false)
 
   useEffect(() => {
     const element = ref.current
     if (!element || typeof IntersectionObserver === "undefined") {
       setVisible(true)
-      setSeen(true)
       return
     }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setVisible(entry.isIntersecting)
-        if (entry.isIntersecting) setSeen(true)
-      },
-      { rootMargin: "200px 0px" }
+    const observer = new IntersectionObserver(([entry]) =>
+      setVisible(entry.isIntersecting)
     )
     observer.observe(element)
     return () => observer.disconnect()
   }, [])
 
-  return { ref, visible, seen }
+  return { ref, visible }
 }

@@ -15,7 +15,7 @@ published: 2021-03-09
 
 ఎథీరియం యొక్క అత్యంత సాధారణ ఉపయోగాలలో ఒకటి, ఒక సమూహం వర్తకం చేయదగిన టోకెన్‌ను సృష్టించడం, ఒక రకంగా చెప్పాలంటే వారి స్వంత కరెన్సీని సృష్టించడం. ఈ టోకెన్‌లు సాధారణంగా ఒక ప్రమాణాన్ని అనుసరిస్తాయి, అదే [ERC-20](/developers/docs/standards/tokens/erc-20/). ఈ ప్రమాణం అన్ని ERC-20 టోకెన్‌లతో పనిచేసే లిక్విడిటీ పూల్స్ మరియు వాలెట్‌ల వంటి సాధనాలను వ్రాయడాన్ని సాధ్యం చేస్తుంది. ఈ వ్యాసంలో మనం [ఓపెన్‌జెప్పెలిన్ Solidity ERC20 అమలు](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)తో పాటు [ఇంటర్‌ఫేస్ నిర్వచనాన్ని](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) విశ్లేషిస్తాము.
 
-ఇది ఉల్లేఖించబడిన సోర్స్ కోడ్. మీరు ERC-20ని అమలు చేయాలనుకుంటే, [ఈ ట్యుటోరియల్ చదవండి](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+ఇది ఉల్లేఖించబడిన సోర్స్ కోడ్. మీరు ERC-20ని అమలు చేయాలనుకుంటే, [ఈ ట్యుటోరియల్ చదవండి](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## ఇంటర్‌ఫేస్ {#the-interface}
 

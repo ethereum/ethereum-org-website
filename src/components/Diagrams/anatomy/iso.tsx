@@ -136,13 +136,13 @@ export type IsoProjection = ReturnType<typeof isoProjection>
 
 /**
  * Classes for the diagram's root `<svg>`: hairline strokes at any size
- * (0.6px, non-scaling), mirrored in RTL, never clipped. Also give the root
+ * (1px, non-scaling), mirrored in RTL, never clipped. Also give the root
  * `data-anatomy-drawing` so AnatomyLabels keeps labels off its shapes. When
  * the diagram is off screen (`data-paused` on an ancestor) its animations
  * hold still.
  */
 export const ISO_SVG_CLASS =
-  "block h-auto w-full overflow-visible text-diagram-line rtl:-scale-x-100 [stroke-width:0.6] [&_*]:[vector-effect:non-scaling-stroke] [[data-paused]_&_*]:[animation-play-state:paused]"
+  "block h-auto w-full overflow-visible text-diagram-line rtl:-scale-x-100 [stroke-width:1] [&_*]:[vector-effect:non-scaling-stroke] [[data-paused]_&_*]:[animation-play-state:paused]"
 
 /** Classes for a level fill that scales up from its bottom edge. */
 export const ISO_LEVEL_CLASS =

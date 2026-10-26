@@ -213,9 +213,6 @@
 
   /* Colors: diagrams */
   --color-diagram-entity-fill: hsla(var(--diagram-entity-fill));
-  --color-diagram-state: hsla(var(--diagram-state));
-  --color-diagram-state-fill: hsla(var(--diagram-state-fill));
-  --color-diagram-group-fill: hsla(var(--diagram-group-fill));
   --color-diagram-revert: hsla(var(--diagram-revert));
   --color-diagram-bg: hsla(var(--diagram-bg));
   --color-diagram-plate: hsla(var(--diagram-plate));
@@ -226,9 +223,6 @@
   --color-diagram-line-faint: hsla(var(--diagram-line-faint));
   --color-diagram-line: hsla(var(--diagram-line));
   --color-diagram-line-strong: hsla(var(--diagram-line-strong));
-  /* Outlines at rest: the hue, a little softer in dark mode. */
-  --color-diagram-entity-rest: color-mix(in oklab, hsla(var(--diagram-entity)) var(--diagram-rest-mix), hsla(var(--diagram-bg)));
-  --color-diagram-gas-rest: color-mix(in oklab, hsla(var(--diagram-gas)) var(--diagram-rest-mix), hsla(var(--diagram-bg)));
 
   /* Border radius */
   --radius-base: var(--radius-2xl);
@@ -249,9 +243,8 @@
   --animate-counter-spin-9: spin 18s linear infinite reverse;
   --animate-pulse-light: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-fade-in: fade-in 150ms ease-in-out;
-  /* Diagrams: one-shot, never looping (see Components / Data Viz / Diagrams / Overview) */
+  /* Diagrams: one-shot, never looping (see .claude/skills/devdocs-diagrams) */
   --animate-diagram-flow: diagram-flow 700ms ease-out both;
-  --animate-diagram-travel-x: diagram-travel-x 700ms ease-out both;
   --animate-diagram-travel-y: diagram-travel-y 700ms ease-out both;
   --animate-diagram-pop: diagram-pop 500ms ease-out both;
   --animate-blink: blink 1.06s step-end infinite;
@@ -283,11 +276,6 @@
   @keyframes diagram-flow {
     from { stroke-dashoffset: 48; }
     to { stroke-dashoffset: 0; }
-  }
-
-  @keyframes diagram-travel-x {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
   }
 
   @keyframes diagram-travel-y {

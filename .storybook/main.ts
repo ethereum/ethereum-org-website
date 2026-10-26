@@ -90,6 +90,20 @@ const config: StorybookConfig = {
       type: "json",
     })
 
+    // The next/cache mock reaches next's render-result, which lazily requires node:stream.
+    config.plugins = [
+      ...(config.plugins || []),
+      {
+        apply: (compiler) =>
+          new compiler.webpack.NormalModuleReplacementPlugin(
+            /^node:stream$/,
+            (resource) => {
+              resource.request = "stream"
+            }
+          ).apply(compiler),
+      },
+    ]
+
     return config
   },
 

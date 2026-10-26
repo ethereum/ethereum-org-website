@@ -22,26 +22,26 @@ Estas bibliotecas abstraen gran parte de la complejidad de interactuar directame
 
 ### Infraestructura y servicios de nodos {#infrastructure-and-node-services}
 
-**Alchemy:** **_Plataforma de desarrollo de Ethereum._**
+**Alchemy -** **_Plataforma de desarrollo de Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [Documentación](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node:** **_Nodo como servicio._**
+**All That Node -** **_Nodo como servicio._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Documentación](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast de Bware Labs:** **_API descentralizadas para la red principal de Ethereum y redes de prueba._**
+**Blast de Bware Labs -** **_API descentralizadas para la red principal de Ethereum y redes de prueba._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Documentación](https://docs.blastapi.io)
 - [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi:** **_Proporciona servicios RPC más eficientes y rápidos_**
+**BlockPi -** **_Proporciona servicios RPC más eficientes y rápidos._**
 
 - [blockpi.io](https://blockpi.io/)
 - [Documentación](https://docs.blockpi.io/)
@@ -52,46 +52,52 @@ Estas bibliotecas abstraen gran parte de la complejidad de interactuar directame
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan: explorador de bloques y API de transacciones**
+**Etherscan - Explorador de bloques y API de transacciones**
 - [Documentación](https://docs.etherscan.io/)
 
-**Blockscout: explorador de bloques de código abierto**
+**Blockscout - Explorador de bloques de código abierto**
 - [Documentación](https://docs.blockscout.com/)
 
-**GetBlock:** **_Cadena de bloques como servicio para el desarrollo de Web3_**
+**GetBlock -** **_Cadena de bloques como servicio para el desarrollo de Web3._**
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentación](https://docs.getblock.io/)
 
-**Infura:** **_La API de Ethereum como servicio._**
+**Infura -** **_La API de Ethereum como servicio._**
 
 - [infura.io](https://infura.io)
 - [Documentación](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC: _Proveedor rentable de JSON-RPC para EVM_**
+**Node RPC - _Proveedor de JSON-RPC de EVM rentable._**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Documentación](https://docs.noderpc.xyz/node-rpc)
 
-**NOWNodes: _Nodos completos y exploradores de bloques._**
+**NOWNodes - _Nodos completos y exploradores de bloques._**
 
 - [NOWNodes.io](https://nownodes.io/)
 - [Documentación](https://nownodes.gitbook.io/documentation)
 
-**QuickNode:** **_Infraestructura de cadena de bloques como servicio._**
+**QuickNode -** **_Infraestructura de cadena de bloques como servicio._**
 
 - [quicknode.com](https://quicknode.com)
 - [Documentación](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet:** **_API de Ethereum y Ethereum Classic como servicio impulsadas por software de código abierto._**
+**Rivet -** **_API de Ethereum y Ethereum Classic como servicio impulsadas por software de código abierto._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Documentación](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok:** **_Nodos de Ethereum orientados a la velocidad como API JSON-RPC/WebSockets._**
+**SolidRPC -** **_Infraestructura JSON-RPC de EVM con acceso público completo, de archivo y sin claves._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Documentación](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
+**Zmok -** **_Nodos de Ethereum orientados a la velocidad como API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -100,32 +106,38 @@ Estas bibliotecas abstraen gran parte de la complejidad de interactuar directame
 
 ### Herramientas de desarrollo {#development-tools}
 
-**ethers-kt:** **_Biblioteca asíncrona de alto rendimiento en Kotlin/Java/Android para cadenas de bloques basadas en EVM._**
+**eth.zig -** **_Una biblioteca de Zig para Ethereum, con codificación de interfaz binaria de aplicación (ABI) en tiempo de compilación y enlaces de contratos._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Documentación](https://ethzig.org)
+- [Ejemplos](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_Biblioteca asíncrona y de alto rendimiento de Kotlin/Java/Android para cadenas de bloques basadas en EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Ejemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum:** **_Una biblioteca de integración .NET de código abierto para cadenas de bloques._**
+**Nethereum -** **_Una biblioteca de integración .NET de código abierto para cadenas de bloques._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Documentación](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Herramientas de Python:** **_Variedad de bibliotecas para la interacción con Ethereum a través de Python._**
+**Herramientas de Python -** **_Variedad de bibliotecas para la interacción con Ethereum a través de Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [GitHub de Web3.py](https://github.com/ethereum/web3.py)
 - [Chat de Web3.py](https://gitter.im/ethereum/web3.py)
 
-**Tatum:** **_La plataforma de desarrollo de cadenas de bloques definitiva._**
+**Tatum -** **_La plataforma definitiva de desarrollo de cadenas de bloques._**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
 - [Documentación](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**Web3j:** **_Una biblioteca de integración en Java/Android/Kotlin/Scala para Ethereum._**
+**Web3j -** **_Una biblioteca de integración de Java/Android/Kotlin/Scala para Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Documentación](https://docs.web3j.io/)

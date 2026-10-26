@@ -38,7 +38,10 @@ import {
   translateFenceComments,
   translateFile,
 } from "./lib/llm/gemini"
-import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
+import {
+  PARSE_ATTEMPTS,
+  translateBatchWithParseRetry,
+} from "./lib/llm/incremental-translate"
 import {
   extractAttributeLeaves,
   translateJsxAttributes,
@@ -79,6 +82,7 @@ import {
   LLM_PROVIDER,
   MANIFESTS_DIR,
   MAX_BATCHES_PER_FILE,
+  MAX_PLANNED_PROMPT_BYTES,
   MAX_PROMPT_BYTES,
   MIN_CONTENT_BUDGET_BYTES,
   OUTPUT_RATE_USD_PER_1M,
@@ -410,7 +414,7 @@ async function buildGeminiTranslator(
   if (oversized.length > 0) {
     throw new Error(
       `[cost-guard] ${filePath} (${locale}): ${oversized.length} batch(es) exceed the ` +
-        `${MAX_PROMPT_BYTES}-byte per-call ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
+        `${MAX_PLANNED_PROMPT_BYTES}-byte planning ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
         `despite being splittable. Refusing to send.`
     )
   }
@@ -424,7 +428,9 @@ async function buildGeminiTranslator(
     `  Incremental plan: ${plan.length} batch(es), ${projectedBytes} of ${budget.limitBytes} budgeted prompt bytes`
   )
 
-  const allTranslations: Record<string, string> = {}
+  // Null prototype -- see parseIncrementalResponse; a section id of
+  // "constructor" must not resolve to Object through the chain.
+  const allTranslations: Record<string, string> = Object.create(null)
   let totalInput = 0
   let totalOutput = 0
 
@@ -432,15 +438,8 @@ async function buildGeminiTranslator(
     budget.spend(batch.bytes, `batch ${index + 1}/${plan.length}`)
 
     log(
-      `  Calling LLM: ${batch.translateCount} sections, ${batch.prompt.length} chars`
+      `  Calling LLM: ${batch.translateIds.length} sections, ${batch.prompt.length} chars`
     )
-
-    const result = await callGeminiRaw(batch.prompt, {
-      filePath,
-      targetLanguage: locale,
-      label: "incremental",
-      irreducible: batch.irreducible,
-    })
 
     // A batch that cannot be parsed must fail the task. Continuing would leave
     // its sections untranslated, fall them back to English in assembly, commit
@@ -448,10 +447,28 @@ async function buildGeminiTranslator(
     // English text is permanent in the locale file. Failing here costs this
     // file+locale's calls; every other locale's completed work is already
     // committed to the temp branch and still merges.
-    const translations = parseIncrementalResponse(result.text)
+    //
+    // So the batch is re-sent first: a malformed envelope is a sampling slip
+    // that a fresh sample clears. The file budget is not charged for the
+    // re-sends (see createFileBudget) -- the run fuse still meters them.
+    const { translations, tokens } = await translateBatchWithParseRetry(
+      batch,
+      (prompt) =>
+        callGeminiRaw(prompt, {
+          filePath,
+          targetLanguage: locale,
+          label: "incremental",
+          irreducible: batch.irreducible,
+        }),
+      (attempt, error) =>
+        log(
+          `  batch ${index + 1}/${plan.length} did not parse (attempt ${attempt}/${PARSE_ATTEMPTS}), re-sending: ${error.message.split("\n")[0]}`,
+          "warn"
+        )
+    )
     Object.assign(allTranslations, translations)
-    totalInput += result.tokensUsed.input
-    totalOutput += result.tokensUsed.output
+    totalInput += tokens.input
+    totalOutput += tokens.output
   }
 
   // Fence bodies never went to the model, so their comments are translated
@@ -475,14 +492,16 @@ async function buildGeminiTranslator(
   )
 
   for (const id of sectionIds) {
-    if (!allTranslations[id]) {
+    if (!Object.hasOwn(allTranslations, id)) {
       console.warn(`  Section "${id}" not returned by LLM`)
     }
   }
 
   return {
     translator: (sectionId: string, englishFallback: string) => {
-      const translated = allTranslations[sectionId]
+      const translated = Object.hasOwn(allTranslations, sectionId)
+        ? allTranslations[sectionId]
+        : undefined
       if (!translated) return englishFallback
       const blocks = codeBlocks.get(sectionId)
       if (!blocks || blocks.length === 0) return translated

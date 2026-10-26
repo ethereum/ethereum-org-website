@@ -1,5 +1,3 @@
-import { getTranslations } from "next-intl/server"
-
 import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
@@ -13,6 +11,7 @@ import {
 } from "@/lib/utils/developerToolsData"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -27,8 +26,6 @@ export default async function DevelopersToolsToolJsonLD({
   categoryLabel: string
   contributors: FileContributor[]
 }) {
-  const tCommon = await getTranslations({ locale, namespace: "common" })
-
   const url = normalizeUrlForJsonLd(
     locale,
     `/developers/tools/${getToolKey(tool)}/`
@@ -64,35 +61,11 @@ export default async function DevelopersToolsToolJsonLD({
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         // Mirrors the visible breadcrumb (flat URL, no category crumb).
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "ethereum.org",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: tCommon("developers"),
-              item: normalizeUrlForJsonLd(locale, "/developers/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: tCommon("tools"),
-              item: normalizeUrlForJsonLd(locale, "/developers/tools/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 4,
-              name: tool.name,
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          `/developers/tools/${getToolKey(tool)}`,
+          tool.name
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#tool` },

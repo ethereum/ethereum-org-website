@@ -8653,7 +8653,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/89507661?v=4",
       "profile": "https://github.com/pankajjagtapp",
       "contributions": [
-        "doc"
+        "doc",
+        "tool"
       ]
     },
     {
@@ -14549,6 +14550,78 @@
       "profile": "https://discord.com/invite/JTkeNXX",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "DamianFigiel",
+      "name": "Damian Figiel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68967763?v=4",
+      "profile": "https://github.com/DamianFigiel",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "koko1123",
+      "name": "Amlandeep Bhadra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7771746?v=4",
+      "profile": "https://www.linkedin.com/in/amlandeep-bhadra-52678964",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "supertj",
+      "name": "Super Lede",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20788648?v=4",
+      "profile": "https://backupdrill.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "mikeua",
+      "name": "mikeua",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2239742?v=4",
+      "profile": "https://github.com/mikeua",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ohilhwan",
+      "name": "ohilhwan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18180404?v=4",
+      "profile": "https://github.com/ohilhwan",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zachsplat",
+      "name": "Zachary Alexander",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86435089?v=4",
+      "profile": "https://nonceworks.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "patrick-star-10",
+      "name": "patrick-star-10",
+      "avatar_url": "https://avatars.githubusercontent.com/u/204532789?v=4",
+      "profile": "https://github.com/patrick-star-10",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "SayedZahur786",
+      "name": "Mohd Jahur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177766328?v=4",
+      "profile": "https://github.com/SayedZahur786",
+      "contributions": [
+        "bug"
       ]
     }
   ],

@@ -1,11 +1,8 @@
 {
-  "augur-cta": "Augur'u İnceleyin",
-  "augur-description": "Fiyat eğilimlerini tahmin etmek için kullanılan tamamen merkeziyetsiz bir tahmin piyasası protokolü. Uyarı: Augur'u kullanmaya başlamak için biraz teknik uzmanlığa ihtiyacınız olacak.",
-  "augur-title": "Augur",
-  "kalshi-cta": "Kalshi'yi Deneyin",
-  "kalshi-description": "USDC yatırma işlemleri için Ethereum kullanan, CFTC uyumlu bir platform. (Sadece ABD)",
-  "kalshi-title": "Kalshi",
+  "limitless-cta": "Limitless'ı Keşfedin",
+  "limitless-description": "Bir Ethereum katman 2 (l2) olan Base üzerinde inşa edilmiş bir tahmin piyasası. İşlemler USDC cinsinden zincir içi olarak sonuçlanır ve çoğu fiyat piyasası zincir içi fiyat akışları aracılığıyla otomatik olarak çözümlenir. Her ülkede mevcut değildir.",
+  "limitless-title": "Limitless",
   "polymarket-cta": "Polymarket'i Keşfedin",
-  "polymarket-description": "Gerçek zamanlı alım satım imkanı sunan popüler bir tahmin piyasası.",
+  "polymarket-description": "En büyük tahmin piyasalarından biri. İşlemler Polygon üzerinde sonuçlanır ve sonuçlar UMA kâhini aracılığıyla belirlenir. Her ülkede mevcut değildir.",
   "polymarket-title": "Polymarket"
 }

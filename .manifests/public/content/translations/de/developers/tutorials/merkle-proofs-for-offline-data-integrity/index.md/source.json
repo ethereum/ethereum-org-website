@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md",
-  "generatedAt": "2026-06-18T00:12:57.969Z",
-  "rootHash": "37f6251a528c",
+  "generatedAt": "2026-10-21T22:09:02.240Z",
+  "rootHash": "d16d8aaaef9c",
   "tree": {
     "contentHash": "ba2298980153",
-    "anchorHash": "56ce7f7fc6b6",
+    "anchorHash": "9060143c4e6d",
     "children": {
       "frontmatter:title": {
         "contentHash": "7766c3092b92",
@@ -160,7 +160,7 @@
       },
       "implementation": {
         "contentHash": "cd9f5e4ac87d",
-        "anchorHash": "0557f87d86ce",
+        "anchorHash": "11b5adb29f50",
         "labelHash": "1cff7713912f",
         "children": {
           "_label": {
@@ -177,7 +177,7 @@
           },
           "offchain-code": {
             "contentHash": "fda476e43a18",
-            "anchorHash": "da29b84a5004",
+            "anchorHash": "ec97aad19edd",
             "labelHash": "7b6c83c07f65",
             "children": {
               "_label": {
@@ -430,7 +430,7 @@
               },
               "creating-a-merkle-proof": {
                 "contentHash": "73383cf4c33f",
-                "anchorHash": "0bd613a1cbd5",
+                "anchorHash": "8ddbba4e1292",
                 "labelHash": "6de5aac6c012",
                 "children": {
                   "_label": {
@@ -471,7 +471,7 @@
                   },
                   "code-fence:9": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "930bcd2b67ea"
+                    "anchorHash": "fcadc8d7c563"
                   },
                   "prose:2": {
                     "contentHash": "42c1be65dac7",
@@ -499,7 +499,7 @@
                   },
                   "code-fence:16": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "0ed35460b9a5"
+                    "anchorHash": "2516fb9f9f4b"
                   }
                 },
                 "childrenOrder": [
@@ -532,7 +532,7 @@
           },
           "onchain-code": {
             "contentHash": "cb8ce7d4361f",
-            "anchorHash": "ae09ac1a06f5",
+            "anchorHash": "30db0d1f5cc1",
             "labelHash": "181f85ede676",
             "children": {
               "_label": {
@@ -585,7 +585,7 @@
               },
               "code-fence:14": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "49134fa128ca"
+                "anchorHash": "953107fc41d7"
               },
               "prose:0": {
                 "contentHash": "1d9f99a841d5",
@@ -593,7 +593,7 @@
               },
               "code-fence:16": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "c8c8b5c05873"
+                "anchorHash": "f47d6fc6c662"
               },
               "inline-code:0": {
                 "contentHash": "e3b0c44298fc",
@@ -633,7 +633,7 @@
               },
               "code-fence:27": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "7fdc51857183"
+                "anchorHash": "a10fae46e19a"
               }
             },
             "childrenOrder": [
@@ -764,5 +764,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

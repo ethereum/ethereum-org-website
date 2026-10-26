@@ -1,6 +1,6 @@
 ---
 title: Statelessness, state expiry and history expiry
-description: Explanation of history expiry and stateless Ethereum
+description: "Learn how history expiry, state expiry and statelessness could cut the disk space needed to run an Ethereum node, keeping the network decentralized."
 lang: en
 template: roadmap
 ---

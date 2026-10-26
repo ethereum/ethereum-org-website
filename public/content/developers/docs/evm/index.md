@@ -72,7 +72,7 @@ Over Ethereum's ten year history, the EVM has undergone several revisions, and t
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Further Reading {#further-reading}

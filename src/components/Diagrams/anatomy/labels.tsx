@@ -1,6 +1,14 @@
 "use client"
 
-import { type ReactNode, useId, useLayoutEffect, useRef, useState } from "react"
+import {
+  type KeyboardEvent,
+  type ReactNode,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from "react"
+import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -56,6 +64,10 @@ const pct = (n: number, of: number) => `${r1((n / of) * 100)}%`
 // Breathing room between two labels before they count as colliding.
 const GAP_PX = 4
 
+// Until the first measurement (server HTML, before hydration), only the
+// highest-priority labels show, so none can overlap before they are checked.
+const UNMEASURED_LABELS = 3
+
 /**
  * Concept labels for an anatomy diagram: single-line HTML text pinned beside
  * each part, joined by a short hairline leader. Labels never wrap: one that
@@ -63,10 +75,14 @@ const GAP_PX = 4
  * leader in `spots` is dropped with its leader. On narrow screens the figure
  * then relies on the remaining labels and the figcaption.
  *
- * Each label is focusable. Pointing at or focusing it highlights its part
- * (shared hover state, see diagram-hover.tsx), which shows the part's
- * definition in the status line; screen readers get the definition through
- * `aria-describedby`.
+ * The labels are one tab stop (roving tabindex): Tab reaches the group,
+ * arrow keys, Home and End move between visible labels. Pointing at or
+ * focusing a label highlights its part (shared hover state, see
+ * diagram-hover.tsx), which shows the part's definition in the status line;
+ * screen readers get the definition through `aria-describedby`.
+ *
+ * Measuring waits until the drawing is near the viewport, so a server-rendered
+ * diagram costs no layout work while the page loads.
  */
 export function AnatomyLabels({
   width,
@@ -86,13 +102,43 @@ export function AnatomyLabels({
   definitions: Record<string, ReactNode>
   litId?: string | null
 }) {
+  const t = useTranslations("component-diagrams")
   const idPrefix = useId()
   const { hovered, setHovered } = useDiagramHover()
   const containerRef = useRef<HTMLDivElement>(null)
   const labelRefs = useRef<Record<string, HTMLSpanElement | null>>({})
-  const [hidden, setHidden] = useState<string[]>([])
+  const focusRefs = useRef<Record<string, HTMLSpanElement | null>>({})
+  // null until measured: see UNMEASURED_LABELS.
+  const [hidden, setHidden] = useState<string[] | null>(null)
+  const [focusId, setFocusId] = useState(spots[0]?.id)
 
-  useLayoutEffect(() => {
+  const isHidden = (id: string) =>
+    hidden
+      ? hidden.includes(id)
+      : spots.findIndex((spot) => spot.id === id) >= UNMEASURED_LABELS
+  const visibleIds = spots.map(({ id }) => id).filter((id) => !isHidden(id))
+  const tabStop = visibleIds.includes(focusId) ? focusId : visibleIds[0]
+
+  const onKeyDown = (event: KeyboardEvent, id: string) => {
+    const rtl = getComputedStyle(event.currentTarget).direction === "rtl"
+    const i = visibleIds.indexOf(id)
+    const n = visibleIds.length
+    const target = {
+      ArrowDown: i + 1,
+      ArrowUp: i - 1,
+      ArrowRight: rtl ? i - 1 : i + 1,
+      ArrowLeft: rtl ? i + 1 : i - 1,
+      Home: 0,
+      End: n - 1,
+    }[event.key]
+    if (target === undefined || n === 0) return
+    event.preventDefault()
+    const next = visibleIds[(target + n) % n]
+    setFocusId(next)
+    focusRefs.current[next]?.focus()
+  }
+
+  useEffect(() => {
     const container = containerRef.current
     if (!container) return
 
@@ -210,7 +256,9 @@ export function AnatomyLabels({
         } else drop.push(spot.id)
       }
       setHidden((prev) =>
-        prev.length === drop.length && prev.every((id, i) => id === drop[i])
+        prev &&
+        prev.length === drop.length &&
+        prev.every((id, i) => id === drop[i])
           ? prev
           : drop
       )
@@ -225,10 +273,33 @@ export function AnatomyLabels({
         // keep the previous placement
       }
     }
-    safeMeasure()
-    const observer = new ResizeObserver(safeMeasure)
-    observer.observe(container)
-    return () => observer.disconnect()
+    // First measure once near the viewport, then on every resize and once
+    // the web fonts have loaded (a font swap changes label widths, not the
+    // container's size).
+    let resize: ResizeObserver | undefined
+    const start = () => {
+      if (resize) return
+      resize = new ResizeObserver(safeMeasure)
+      resize.observe(container)
+      document.fonts?.ready.then(safeMeasure)
+    }
+    const inView =
+      typeof IntersectionObserver === "undefined"
+        ? undefined
+        : new IntersectionObserver(
+            ([entry]) => {
+              if (!entry.isIntersecting) return
+              inView?.disconnect()
+              start()
+            },
+            { rootMargin: "200px 0px" }
+          )
+    if (inView) inView.observe(container)
+    else start()
+    return () => {
+      inView?.disconnect()
+      resize?.disconnect()
+    }
   }, [spots, width, height])
 
   return (
@@ -240,7 +311,7 @@ export function AnatomyLabels({
         className={cn(ISO_SVG_CLASS, "absolute inset-0 h-full")}
       >
         {spots.map((spot) =>
-          hidden.includes(spot.id) ? null : (
+          isHidden(spot.id) ? null : (
             <path
               key={spot.id}
               d={leaderPath(spot)}
@@ -258,43 +329,52 @@ export function AnatomyLabels({
         )}
       </svg>
 
-      {spots.map((spot) => (
-        <span
-          key={spot.id}
-          data-part={spot.id}
-          ref={(el) => {
-            labelRefs.current[spot.id] = el
-          }}
-          className={cn(
-            "absolute text-xs leading-tight whitespace-nowrap",
-            PLACEMENT[spot.placement],
-            hidden.includes(spot.id) ? "invisible" : "pointer-events-auto"
-          )}
-          style={{
-            insetInlineStart: pct(spot.anchor[0], width),
-            top: pct(spot.anchor[1], height),
-          }}
-        >
+      <div role="group" aria-label={t("diagram-parts-label")}>
+        {spots.map((spot) => (
           <span
-            tabIndex={0}
-            aria-describedby={`${idPrefix}-${spot.id}`}
-            onFocus={() => setHovered(spot.id)}
-            onBlur={() => setHovered(null)}
+            key={spot.id}
+            data-part={spot.id}
+            ref={(el) => {
+              labelRefs.current[spot.id] = el
+            }}
             className={cn(
-              "cursor-default rounded-sm font-bold outline-offset-2 transition-opacity duration-200 focus-visible:outline-2 focus-visible:outline-primary motion-reduce:transition-none",
-              hovered === spot.id || litId === spot.id
-                ? ANATOMY_LIT_TEXT[spot.tone]
-                : "text-body",
-              hovered !== null && hovered !== spot.id && "opacity-70"
+              "absolute text-xs leading-tight whitespace-nowrap",
+              PLACEMENT[spot.placement],
+              isHidden(spot.id) ? "invisible" : "pointer-events-auto"
             )}
+            style={{
+              insetInlineStart: pct(spot.anchor[0], width),
+              top: pct(spot.anchor[1], height),
+            }}
           >
-            {labels[spot.id]}
+            <span
+              ref={(el) => {
+                focusRefs.current[spot.id] = el
+              }}
+              tabIndex={spot.id === tabStop ? 0 : -1}
+              aria-describedby={`${idPrefix}-${spot.id}`}
+              onKeyDown={(event) => onKeyDown(event, spot.id)}
+              onFocus={() => {
+                setFocusId(spot.id)
+                setHovered(spot.id)
+              }}
+              onBlur={() => setHovered(null)}
+              className={cn(
+                "cursor-default rounded-sm font-bold outline-offset-2 transition-opacity duration-200 focus-visible:outline-2 focus-visible:outline-primary motion-reduce:transition-none",
+                hovered === spot.id || litId === spot.id
+                  ? ANATOMY_LIT_TEXT[spot.tone]
+                  : "text-body",
+                hovered !== null && hovered !== spot.id && "opacity-70"
+              )}
+            >
+              {labels[spot.id]}
+            </span>
+            <span id={`${idPrefix}-${spot.id}`} className="sr-only">
+              {definitions[spot.id]}
+            </span>
           </span>
-          <span id={`${idPrefix}-${spot.id}`} className="sr-only">
-            {definitions[spot.id]}
-          </span>
-        </span>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }

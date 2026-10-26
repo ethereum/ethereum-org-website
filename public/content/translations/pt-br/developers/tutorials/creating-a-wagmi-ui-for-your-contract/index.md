@@ -235,7 +235,7 @@ Forneça informações sobre a conexão atual. Dentro do JSX, `{<expression>}` s
       {connection.status === 'connected' && (
 ```
 
-A sintaxe `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
+A sintaxe `{<condition> && <value>}` significa "se a condição for `true`, avalie para o valor; se não for, avalie para `false`".
 
 Esta é a maneira padrão de colocar instruções if dentro do JSX.
 

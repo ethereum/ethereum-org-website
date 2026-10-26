@@ -1,6 +1,6 @@
 ---
-title: Додавання гаманців
-description: Політика, яку ми використовуємо під час додавання гаманця на ethereum.org
+title: "Додавання гаманців"
+description: "Політика, яку ми використовуємо під час додавання гаманця на ethereum.org"
 lang: uk
 ---
 
@@ -58,10 +58,10 @@ lang: uk
 
 ## Додавання гаманця {#adding-a-wallet}
 
-Якщо ви хочете додати гаманець на ethereum.org, створіть проблему (issue) на GitHub.
+Якщо ви хочете додати гаманець на ethereum.org, створіть проблему (issue) на GitHub. Опис гаманця, який ви надасте в issue, відображатиметься на сторінці гаманця, тому обмежтеся одним або двома фактологічними реченнями.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
-  Створити проблему
+  Створити проблему (issue)
 </ButtonLink>
 
 ## Обслуговування {#maintenance}

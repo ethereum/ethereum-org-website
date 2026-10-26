@@ -9,7 +9,7 @@
  * Colour roles: blue = accounts and contracts, orange = gas and value,
  * neutral = structure (plate, pipes at rest, leader lines).
  *
- * Every line is a hairline (0.6px, non-scaling); hierarchy comes from
+ * Every line is a hairline (1px, non-scaling); hierarchy comes from
  * colour: `line-faint` for seams and panel lines, `line` for outlines,
  * `line-strong` for the hovered part. Fills are light role tints at rest;
  * only the active or hovered part takes the full role colour.

@@ -29,7 +29,7 @@ Ethereum smart contracts are like public APIs, so anyone can interact with the c
 
 ### Shorter development cycle {#shorter-development-cycle}
 
-Composability reduces the work that developers have to do when creating [dapps](/apps/#what-are-dapps). [As Naval Ravikant puts it:](https://twitter.com/naval/status/1444366754650656770) "Open source means every problem has to be solved once."
+Composability reduces the work that developers have to do when creating [dapps](/what-are-apps/). [As Naval Ravikant puts it:](https://twitter.com/naval/status/1444366754650656770) "Open source means every problem has to be solved once."
 
 If there is a smart contract that solves one problem, other developers can reuse it, so they don’t have to solve the same problem. This way, developers can take existing software libraries and add extra functionality to create new dapps.
 
@@ -62,10 +62,6 @@ Building bespoke governance systems for a [DAO](/dao/) can be expensive and time
 ### Identity management {#identity-management}
 
 Instead of building a custom authentication system or relying on centralized providers, you can integrate decentralized identity (DID) tools to manage authentication for users. An example is [SpruceID](https://www.spruceid.com/), an open-source toolkit which offers a "Sign in with Ethereum" functionality that lets users authenticate identities with an Ethereum wallet.
-
-## Related tutorials {#related-tutorials}
-
-- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– An overview of how to use create-eth-app to create apps with popular smart contracts out the box._
 
 ## Further reading {#further-reading}
 

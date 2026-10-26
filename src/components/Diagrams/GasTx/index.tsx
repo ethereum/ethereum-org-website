@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils/cn"
 
+import { DiagramMessages } from "../diagram-messages"
+
 import { GasTxPlayer } from "./lazy-player"
 import type { GasTxPresetId } from "./model"
 
@@ -19,8 +21,9 @@ export interface GasTxDiagramProps {
  * fuel per operation, and unused fuel flows back through a meter. Out of gas,
  * the engine stalls and the contract's state is reverted.
  *
- * Server wrapper only: the controls, caption and readout are server-rendered
- * by `GasTxPlayer`; the isometric drawing is lazy-loaded on the client.
+ * Server wrapper: hands the player only this diagram's strings. The player
+ * (drawing included) is server-rendered; its client code loads only on pages
+ * that use it (see lazy-player.tsx).
  */
 const GasTxDiagram = ({
   initialPreset,
@@ -28,13 +31,15 @@ const GasTxDiagram = ({
   fig,
   className,
 }: GasTxDiagramProps) => (
-  <div className={cn("not-prose my-8", className)}>
-    <GasTxPlayer
-      initialPreset={initialPreset}
-      initialStep={initialStep}
-      fig={fig}
-    />
-  </div>
+  <DiagramMessages prefix="gas-tx">
+    <div className={cn("not-prose my-8", className)}>
+      <GasTxPlayer
+        initialPreset={initialPreset}
+        initialStep={initialStep}
+        fig={fig}
+      />
+    </div>
+  </DiagramMessages>
 )
 
 export default GasTxDiagram

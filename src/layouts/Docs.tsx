@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic"
 import { MDXRemoteProps } from "next-mdx-remote"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -7,6 +6,10 @@ import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 import CallToContribute from "@/components/CallToContribute"
 import ContentFeedback from "@/components/ContentFeedback"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
+import EvmZonesDiagram from "@/components/Diagrams/EvmZones"
+import GasEvmDiagram from "@/components/Diagrams/GasEvm"
+import GasTxDiagram from "@/components/Diagrams/GasTx"
+import TxApplyDiagram from "@/components/Diagrams/TxApply"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
 import FileContributors from "@/components/FileContributors"
@@ -27,12 +30,6 @@ import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { addSlashes } from "@/lib/utils/url"
-
-// Interactive diagrams: each loads its client code only on pages that use it.
-const EvmZonesDiagram = dynamic(() => import("@/components/Diagrams/EvmZones"))
-const GasEvmDiagram = dynamic(() => import("@/components/Diagrams/GasEvm"))
-const GasTxDiagram = dynamic(() => import("@/components/Diagrams/GasTx"))
-const TxApplyDiagram = dynamic(() => import("@/components/Diagrams/TxApply"))
 
 export const docsComponents = {
   ...mdxTableComponents,

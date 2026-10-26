@@ -58,18 +58,11 @@
   "page-apps-filter-by": "Filtrovat podle",
   "page-apps-filter-all": "Vše",
   "page-apps-showing": "Zobrazeno",
-  "page-apps-visit-app": "Navštívit {appName}",
-  "page-apps-see-next": "Zobrazit další",
-  "page-apps-info-title": "Informace",
   "page-apps-info-founded": "Založeno",
   "page-apps-info-creator": "Tvůrce",
-  "page-apps-info-last-updated": "Naposledy aktualizováno",
-  "page-apps-gallery-title": "Galerie",
-  "page-apps-gallery-screenshot-alt": "Snímek obrazovky {index} aplikace {appName} zobrazující rozhraní aplikace",
-  "page-apps-gallery-modal-title": "Snímky obrazovky {appName}",
+  "page-apps-info-languages": "Jazyky",
+  "page-apps-info-listing-reviewed": "Záznam zkontrolován",
+  "page-apps-info-listing-reviewed-tooltip": "Kdy byly naposledy zkontrolovány podrobnosti o této aplikaci na ethereum.org. Neukazuje to, kdy se naposledy změnila samotná aplikace.",
   "page-apps-more-apps-like-this": "Další podobné aplikace",
-  "page-apps-by-company": "od {company}",
-  "page-apps-today": "Dnes",
-  "page-apps-one-day-ago": "Před 1 dnem",
-  "page-apps-days-ago": "Před {days} dny"
+  "page-apps-detail-meta-title": "Aplikace na Ethereu - {name}"
 }

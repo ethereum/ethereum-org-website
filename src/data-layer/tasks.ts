@@ -13,8 +13,12 @@ import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBlobStats } from "./fetchers/fetchBlobStats"
+import { fetchCollectibles } from "./fetchers/fetchCollectibles"
 import { fetchCommunityPicks } from "./fetchers/fetchCommunityPicks"
+import { fetchDefiTvlShare } from "./fetchers/fetchDefiTvlShare"
+import { fetchDexVolume } from "./fetchers/fetchDexVolume"
 import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
+import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
 import { fetchEvents } from "./fetchers/fetchEvents"
 import { fetchGasPrice } from "./fetchers/fetchGasPrice"
@@ -24,12 +28,14 @@ import { fetchGrowThePie } from "./fetchers/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "./fetchers/fetchGrowThePieMaster"
 import { fetchL2beat } from "./fetchers/fetchL2beat"
+import { fetchL2beatActivity } from "./fetchers/fetchL2beatActivity"
 import { fetchMeetupImages } from "./fetchers/fetchMeetupImages"
 import { fetchQuizStats } from "./fetchers/fetchQuizStats"
 import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchStakedPercentage } from "./fetchers/fetchStakedPercentage"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
+import { fetchTotalValueSecured } from "./fetchers/fetchTotalValueSecured"
 import { fetchVideoThumbnails } from "./fetchers/fetchVideoThumbnails"
 import { KEYS, set } from "./storage"
 
@@ -47,12 +53,18 @@ const DAILY: TaskDef[] = [
   [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
   [KEYS.BLOB_STATS, fetchBlobStats],
+  [KEYS.COLLECTIBLES, fetchCollectibles],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
   [KEYS.GFIS, fetchGFIs],
   [KEYS.GROW_THE_PIE, fetchGrowThePie],
   [KEYS.GROW_THE_PIE_BLOCKSPACE, fetchGrowThePieBlockspace],
   [KEYS.GROW_THE_PIE_MASTER, fetchGrowThePieMaster],
   [KEYS.L2BEAT, fetchL2beat],
+  [KEYS.L2BEAT_ACTIVITY, fetchL2beatActivity],
+  [KEYS.DEFI_TVL_SHARE, fetchDefiTvlShare],
+  [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
+  [KEYS.DEX_VOLUME, fetchDexVolume],
+  [KEYS.TOTAL_VALUE_SECURED, fetchTotalValueSecured],
   [KEYS.MEETUP_IMAGES, fetchMeetupImages],
   [KEYS.RSS, fetchRSS],
   [KEYS.EVENTS, fetchEvents],
@@ -121,26 +133,25 @@ export const hourlyTask = schedules.task({
   run: () => Promise.all(hourlyFetchTasks.map((t) => t.trigger())),
 })
 
-// ─── Global failure handler → Sentry + Discord ───
+// ─── Global failure handler → Sentry + Mattermost ───
 tasks.onFailure(async ({ ctx, error }) => {
   Sentry.captureException(error, {
     tags: { module: "data-layer" },
     extra: { taskId: ctx.task.id },
   })
 
-  const webhookUrl = process.env.DISCORD_WEBHOOK_URL
+  const webhookUrl = process.env.MATTERMOST_ALERTS_WEBHOOK_URL
   if (!webhookUrl) return
 
   await fetch(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      embeds: [
+      attachments: [
         {
           title: `Data Fetch Failed: ${ctx.task.id}`,
-          color: 0xff0000,
-          description: String(error).slice(0, 2000),
-          timestamp: new Date().toISOString(),
+          color: "#ff0000",
+          text: String(error).slice(0, 2000),
         },
       ],
     }),

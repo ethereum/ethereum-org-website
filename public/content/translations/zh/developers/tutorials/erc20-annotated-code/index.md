@@ -13,7 +13,7 @@ published: 2021-03-09
 
 以太坊最常见的用途之一是让一个群体创建可交易的代币，在某种意义上就是他们自己的货币。这些代币通常遵循一个标准，即 [ERC-20](/developers/docs/standards/tokens/erc-20/)。该标准使得编写能够与所有 ERC-20 代币配合使用的工具（如流动性池和钱包）成为可能。在本文中，我们将分析 [欧本齐柏林 Solidity ERC20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)，以及[接口定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)。
 
-这是带有注释的源代码。如果你想实现 ERC-20，请[阅读本教程](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)。
+这是带有注释的源代码。如果你想实现 ERC-20，请[阅读本教程](https://docs.openzeppelin.com/contracts/3.x/erc20-supply)。
 
 ## 接口 {#the-interface}
 

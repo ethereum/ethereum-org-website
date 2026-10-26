@@ -10,7 +10,7 @@ Bu liste topluluğumuz tarafından derlenmiştir. Eksik veya yanlış bir şey v
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Kurucular, işinizi hızlandırmak için yardıma mı ihtiyacınız var? [Kurucu Destek sayfasına gidin](/founders/)</div>
+<div>Kurucular, işinizi hızlandırmak için yardıma mı ihtiyacınız var? [Kurucu Destek sayfasına gidin](/organizations/founders/)</div>
 </Alert>
 
 ## Geniş Ethereum ekosistemi {#broad-ethereum-ecosystem}

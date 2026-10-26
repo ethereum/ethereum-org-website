@@ -1,7 +1,7 @@
 ---
 title: About ethereum.org
 metaTitle: About Us
-description: About the team, community and mission of ethereum.org
+description: "Meet the team and community behind ethereum.org: our mission, how the site is built and governed in the open, and how you can help improve it."
 lang: en
 ---
 

@@ -69,7 +69,6 @@ for (const theme of ["light", "dark"] as const) {
         for (let s = 0; s < stageCount; s++) {
           const stage = stages.nth(s)
           await stage.scrollIntoViewIfNeeded()
-          // The drawing is lazy-loaded after hydration.
           await expect(stage.locator("[data-anatomy-drawing]")).toBeVisible()
 
           const presets = stage.locator("button[aria-pressed]")
