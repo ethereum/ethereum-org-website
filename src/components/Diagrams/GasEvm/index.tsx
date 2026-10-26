@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils/cn"
 
+import { DiagramMessages } from "../diagram-messages"
+
 import { GasEvmPlayer } from "./lazy-player"
 import type { GasEvmPresetId } from "./model"
 
@@ -23,13 +25,15 @@ const GasEvmDiagram = ({
   fig,
   className,
 }: GasEvmDiagramProps) => (
-  <div className={cn("not-prose my-8", className)}>
-    <GasEvmPlayer
-      initialPreset={initialPreset}
-      initialStep={initialStep}
-      fig={fig}
-    />
-  </div>
+  <DiagramMessages prefix="gas-evm">
+    <div className={cn("not-prose my-8", className)}>
+      <GasEvmPlayer
+        initialPreset={initialPreset}
+        initialStep={initialStep}
+        fig={fig}
+      />
+    </div>
+  </DiagramMessages>
 )
 
 export default GasEvmDiagram
