@@ -34,7 +34,9 @@ Poiché l'account sceglie le proprie regole, può anche scegliere uno schema di 
 
 ## Cos'altro c'è in Hegotá {#scope}
 
-Non è ancora stato deciso. FOCIL e le transazioni frame sono le due modifiche programmate finora; ne sono state proposte dozzine di altre e nessuna di esse è definitiva. Questa pagina rimarrà breve finché l'ambito non si sarà consolidato — per lo stato attuale della discussione, consulta le risorse di seguito.
+Non è ancora stato deciso. FOCIL e le transazioni frame sono le due modifiche programmate finora; ne sono state proposte dozzine di altre e nessuna di esse è definitiva. Questa pagina rimarrà breve finché l'ambito non si consoliderà — per lo stato attuale della discussione, consulta le risorse di seguito.
+
+Le proposte attualmente prese in considerazione per l'inclusione comprendono EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279 ed EIP-8365. Essere prese in considerazione significa che i team dei client stanno valutando una proposta, non che verrà rilasciata in Hegotá.
 
 ## Letture consigliate {#further-reading}
 

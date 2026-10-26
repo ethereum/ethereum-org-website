@@ -237,3 +237,54 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 - `zk-rollups:69` `<span dir="ltr">18 days</span>` untranslated.
 - learn-quizzes `سحب` for "drawn at random" collides with glossary withdrawal; `أقل اختبارًا في المعارك` calques battle-tested.
 - F-Droid `البرامج المجانية` (gratis, #83); cookie banner `شعار` (logo) should be `شريط`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `page-organizations-enterprise-l2s` `deployment-arbitrum-description` half-Latin `أربيتروم One` -> `⁦Arbitrum One⁩` (#44 recurrence).
+- `small-business` `compare-privacy` stealth address `العناوين المخفية` -> `العناوين المتخفية`.
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: discarded by the placeholder-count gate bug (#85).
+- `treasuries` read as vaults (`الخزانات`); `cold storage` `التخزين البارد` collides with staking term; إيثيريوم gender masculine in public-sector vs feminine elsewhere.
+- `security/index.md` full retranslation repaired rotated anchors (legit 126-line deletion); `3-of-5` left untranslated.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.6/10
+
+- Fixed (JSON, #86): `stat-defi-tvl` -> `⁦DeFi TVL⁩`, `compare-col-private-dlt` -> `⁦DLT⁩ الخاصة`, `meta-description` DLT expansion removed (170 -> 152 chars).
+- Open: CTA/title `(⁦DeFi⁩)`/`(⁦L2s⁩)` appended where English has none; `proprietary` -> `الاحتكارية` (monopolistic), `المملوكة` closer; md L31 definiteness (`المصرح بها`, `المفتوحة`), L21 garbled `سلسلة كتل إنتاج`; faucet labels Latin vs transliterated headings split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:1228 split L2s bidi span (`(L<span dir="ltr">2s</span>)` -> `(<span dir="ltr">L2s</span>)`)
+- scam-token-tricks:82 English date (`<span dir="ltr">May 19th, 2023</span>` -> `<span dir="ltr">19</span> مايو <span dir="ltr">202`)
+- prediction-markets:38,68 English dates (`<span dir="ltr">November 2022</span> إلى <span dir` -> `نوفمبر 2022 إلى مارس 2026`)
+- prediction-markets:70 English dates (`<span dir="ltr">February 2024</span> و <span dir="` -> `فبراير 2024 وفبراير 2026`)
+- page-founders.json:34 English month (`⁦October 2026⁩` -> `أكتوبر 2026`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 16 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The glossary handling is solid and none of the old ar failure modes came back (no `الدولة` for state, no Ethereum spelling drift, no garbled brands). The criticals are deterministic regressions: English dates left inside isolates, one split LTR span, and three founders tags left in English. The main warnings are wording choices in the regenerated app-plasma and security pages (code→`رمز`, unsigned, underflow).
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: `حساب` used for "computation" right after the same word for "account" (mint:116); English alt text (write-deploy:32,44); "leave `gas` out" rendered as "leave it empty" (sending:198).

@@ -3,7 +3,7 @@ import * as Sentry from "@sentry/nextjs"
 import { KNOWN_ORGANIZATIONS } from "./organizations"
 import { KNOWN_PERSONS } from "./persons"
 import { REFERENCE } from "./references"
-import type { KnownEntity } from "./types"
+import type { AuthorReference, KnownEntity } from "./types"
 
 /**
  * Helper to get an @id reference for a known Person
@@ -83,24 +83,46 @@ export function resolveKnownEntities(
 }
 
 /**
- * Resolve frontmatter author field(s) into JSON-LD @graph nodes and @id
- * references. Handles both the `authors` array and legacy singular
- * `author` string.
+ * Resolve frontmatter author field(s) into JSON-LD @graph nodes and author
+ * references. Known entities use their stable @id references; unresolved
+ * names are preserved as inline Person nodes. Handles both the `authors`
+ * array and legacy singular `author` string.
  *
- * Falls back to the community organization reference when nothing
- * resolves.
+ * The community organization reference is always appended as a baseline
+ * author.
  */
 export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
   authorGraphNodes: KnownEntity[]
-  authorIds: Array<{ "@id": string }>
+  authorReferences: AuthorReference[]
 } {
-  const entities = resolveKnownEntities(authors)
+  const inputValues = !authors
+    ? []
+    : Array.isArray(authors)
+      ? authors
+      : [authors]
+  const seen = new Set<string>()
+  const values = inputValues
+    .map((value) => value.trim())
+    .filter((value) => {
+      const key = value.toLowerCase()
+      if (!key || seen.has(key)) return false
+
+      seen.add(key)
+      return true
+    })
+  const resolvedAuthors = values.map((name) => ({
+    name,
+    entity: resolveKnownEntities(name)[0],
+  }))
+  const authorGraphNodes = resolvedAuthors.flatMap(({ entity }) =>
+    entity ? [entity] : []
+  )
+  const authorReferences = resolvedAuthors.map(({ name, entity }) =>
+    entity ? { "@id": entity["@id"] } : { "@type": "Person" as const, name }
+  )
 
   return {
-    authorGraphNodes: entities,
-    authorIds: [
-      ...entities.map((e) => ({ "@id": e["@id"] })),
-      REFERENCE.ETHEREUM_COMMUNITY,
-    ],
+    authorGraphNodes,
+    authorReferences: [...authorReferences, REFERENCE.ETHEREUM_COMMUNITY],
   }
 }

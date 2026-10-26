@@ -9,26 +9,34 @@ lang: ar
 published: 2021-04-22
 ---
 
-هذا البرنامج التعليمي هو الجزء <span dir="ltr">3/3</span> من سلسلة دروس <span dir="ltr">NFT</span>، حيث نعرض <span dir="ltr">NFT</span> الذي تم سكه حديثًا. ومع ذلك، يمكنك استخدام البرنامج التعليمي العام لأي رمز مميز <span dir="ltr">ERC-721</span> باستخدام ميتاماسك، بما في ذلك على الشبكة الرئيسية أو أي شبكة اختبار. إذا كنت ترغب في معرفة كيفية سك <span dir="ltr">NFT</span> الخاص بك على إيثيريوم، يجب عليك التحقق من [الجزء الأول حول كيفية كتابة ونشر عقد ذكي لـ <span dir="ltr">NFT</span>](/developers/tutorials/how-to-write-and-deploy-an-nft)!
+هذا البرنامج التعليمي هو الجزء <span dir="ltr">3/3</span> من سلسلة دروس رمز غير قابل للاستبدال (<span dir="ltr">NFT</span>)، حيث نعرض <span dir="ltr">NFT</span> الذي تم سكه حديثًا. ومع ذلك، يمكنك استخدام البرنامج التعليمي العام لأي رمز مميز <span dir="ltr">ERC-721</span> باستخدام ميتاماسك، بما في ذلك على الشبكة الرئيسية أو أي شبكة اختبار. إذا كنت ترغب في معرفة كيفية سك <span dir="ltr">NFT</span> الخاص بك على إيثيريوم، فيجب عليك التحقق من [الجزء الأول حول كيفية كتابة ونشر عقد ذكي لـ <span dir="ltr">NFT</span>](/developers/tutorials/how-to-write-and-deploy-an-nft)!
 
-تهانينا! لقد وصلت إلى الجزء الأقصر والأبسط من سلسلة دروس <span dir="ltr">NFT</span> الخاصة بنا — كيفية عرض <span dir="ltr">NFT</span> الذي تم سكه حديثًا على محفظة افتراضية. سنستخدم ميتاماسك في هذا المثال لأن هذا ما استخدمناه في الجزأين السابقين.
+تهانينا! لقد وصلت إلى الجزء الأقصر والأبسط من سلسلة دروس <span dir="ltr">NFT</span> الخاصة بنا — كيفية عرض <span dir="ltr">NFT</span> الذي تم سكه حديثًا على محفظة افتراضية. سنستخدم ميتاماسك في هذا المثال لأنه ما استخدمناه في الجزأين السابقين.
 
-كمتطلب أساسي، يجب أن يكون لديك بالفعل تطبيق ميتاماسك مثبتًا على الهاتف المحمول، ويجب أن يتضمن الحساب الذي قمت بسك <span dir="ltr">NFT</span> الخاص بك إليه — يمكنك الحصول على التطبيق مجانًا على [<span dir="ltr">iOS</span>](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) أو [<span dir="ltr">Android</span>](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
+كمتطلب أساسي، يجب أن يكون لديك بالفعل ميتاماسك مثبتًا، إما امتداد المتصفح أو تطبيق الهاتف المحمول، ويجب أن يتضمن الحساب الذي قمت بسك <span dir="ltr">NFT</span> الخاص بك إليه. يمكنك الحصول على ميتاماسك مجانًا من [صفحة تنزيل ميتاماسك](https://metamask.io/download).
 
-## الخطوة 1: تعيين شبكتك إلى <span dir="ltr">Sepolia</span> {#set-network-to-sepolia}
+## الخطوة 1: تعيين شبكتك إلى Sepolia {#set-network-to-sepolia}
 
-في الجزء العلوي من التطبيق، اضغط على زر "المحفظة" (Wallet)، وبعد ذلك سيُطلب منك تحديد شبكة. نظرًا لأن <span dir="ltr">NFT</span> الخاص بنا تم سكه على شبكة <span dir="ltr">Sepolia</span>، فستحتاج إلى تحديد <span dir="ltr">Sepolia</span> كشبكتك.
+نظرًا لأن رمز غير قابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بنا تم سكه على شبكة اختبار Sepolia، فستحتاج إلى تحديد Sepolia كشبكتك. يخفي ميتاماسك شبكات الاختبار افتراضيًا، لذا قم بتشغيلها أولاً:
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
+1. افتح القائمة في الزاوية العلوية اليمنى وحدد "الشبكات".
+2. قم بالتمرير لأسفل إلى أسفل قائمة الشبكات وقم بتشغيل "إظهار شبكات الاختبار".
+3. حدد "Sepolia" من قائمة الشبكات.
+
+راجع [دليل ميتاماسك لعرض شبكات الاختبار](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/) إذا كانت القوائم تبدو مختلفة في إصدار ميتاماسك الخاص بك.
 
 ## الخطوة 2: إضافة العنصر القابل للجمع الخاص بك إلى ميتاماسك {#add-nft-to-metamask}
 
-بمجرد أن تكون على شبكة <span dir="ltr">Sepolia</span>، حدد علامة التبويب "المقتنيات" (Collectibles) على اليمين وأضف عنوان العقد الذكي لـ <span dir="ltr">NFT</span> ومعرف الرمز المميز <span dir="ltr">ERC-721</span> الخاص بـ <span dir="ltr">NFT</span> الخاص بك — والذي يجب أن تكون قادرًا على العثور عليه على <span dir="ltr">Etherscan</span> بناءً على تجزئة المعاملة من <span dir="ltr">NFT</span> الخاص بك الذي تم نشره في الجزء الثاني من برنامجنا التعليمي.
+يكتشف ميتاماسك الرموز غير القابلة للاستبدال (<span dir="ltr">NFTs</span>) تلقائيًا فقط على بعض الشبكات، والتي لا تتضمن Sepolia، لذا ستحتاج إلى استيراد <span dir="ltr">NFT</span> الخاص بك يدويًا. للقيام بذلك، تحتاج إلى عنوان العقد الذكي لـ <span dir="ltr">NFT</span> ومعرف الرمز المميز <span dir="ltr">ERC-721</span> الخاص بـ <span dir="ltr">NFT</span> الخاص بك — والذي يجب أن تكون قادرًا على العثور عليه على Etherscan بناءً على تجزئة المعاملة من <span dir="ltr">NFT</span> الخاص بك الذي تم سكه في الجزء الثاني من برنامجنا التعليمي. إذا استخدمت العقد من الجزء الأول، فإن أول <span dir="ltr">NFT</span> لك سيكون له معرف الرمز المميز 1.
 
-![How to find your transaction hash and <span dir="ltr">ERC-721</span> token ID](./findNFTEtherscan.png)
+![كيفية العثور على تجزئة المعاملة ومعرف الرمز المميز <span dir="ltr">ERC-721</span>](./findNFTEtherscan.png)
 
-قد تحتاج إلى التحديث بضع مرات لعرض <span dir="ltr">NFT</span> الخاص بك — ولكنه سيكون هناك <Emoji text="😄" size={1} />!
+ثم، في ميتاماسك (الامتداد أو الهاتف المحمول):
 
-![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
+1. انتقل إلى قسم "<span dir="ltr">NFTs</span>" في الشاشة الرئيسية وحدد "استيراد <span dir="ltr">NFT</span>".
+2. حدد Sepolia كشبكة، والصق عنوان العقد الذكي لـ <span dir="ltr">NFT</span> الخاص بك في مربع "العنوان".
+3. أدخل معرف الرمز المميز الخاص بك في مربع "معرف الرمز المميز" وحدد "استيراد".
+
+قد تحتاج إلى التحديث بضع مرات لعرض <span dir="ltr">NFT</span> الخاص بك — ولكنه سيكون هناك <Emoji text="😄" size={1} />! إذا أخبرك ميتاماسك أنك لست مالك <span dir="ltr">NFT</span>، فتحقق من أنك حددت الحساب الذي قمت بسك <span dir="ltr">NFT</span> إليه. لمزيد من المساعدة، راجع [دليل ميتاماسك للرموز غير القابلة للاستبدال (NFTs)](https://support.metamask.io/manage-crypto/nfts/nft-tokens-in-your-metamask-wallet/).
 
 تهانينا! لقد قمت بنجاح بسك <span dir="ltr">NFT</span>، ويمكنك الآن عرضه! لا يسعنا الانتظار لرؤية كيف ستكتسح عالم <span dir="ltr">NFT</span>!

@@ -12,7 +12,7 @@ lang: cs
 published: 2024-06-29
 ---
 
-Napsali jste úžasnou novou decentralizovanou aplikaci (dapp). Dokonce jste pro ni napsali [uživatelské rozhraní](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Nyní se ale obáváte, že se ji někdo pokusí cenzurovat tím, že vaše uživatelské rozhraní, které běží jen na jednom serveru v cloudu, odstaví. V tomto tutoriálu se dozvíte, jak se vyhnout cenzuře umístěním vašeho uživatelského rozhraní na **[meziplanetární souborový systém (IPFS)](https://ipfs.tech/developers/)**, aby si jej kdokoli mohl připnout (pin) na server pro budoucí přístup.
+Napsali jste úžasnou novou decentralizovanou aplikaci (dapp). Dokonce jste pro ni napsali [uživatelské rozhraní](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Nyní se ale obáváte, že se ji někdo pokusí cenzurovat tím, že vaše uživatelské rozhraní, které běží jen na jednom serveru v cloudu, odstaví. V tomto tutoriálu se dozvíte, jak se vyhnout cenzuře umístěním vašeho uživatelského rozhraní na **[meziplanetární souborový systém (IPFS)](https://docs.ipfs.tech/)**, aby si jej kdokoli mohl připnout (pin) na server pro budoucí přístup.
 
 K provedení veškeré práce byste mohli použít službu třetí strany, jako je [Fleek](https://resources.fleek.xyz/docs/). Tento tutoriál je pro lidi, kteří chtějí udělat dost pro to, aby pochopili, co dělají, i když to znamená více práce.
 

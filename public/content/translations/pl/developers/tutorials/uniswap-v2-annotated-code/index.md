@@ -103,21 +103,6 @@ Jest to najczęstszy przepływ, używany przez traderów:
 5. Spalenie tokenów płynności
 6. Wywołanie `_update` w celu aktualizacji kwot rezerw
 
-```yaml
-title: "Inteligentne kontrakty Uniswap v2"
-description: "Szczegółowe omówienie inteligentnych kontraktów Uniswap v2"
-author: "Ori Pomerantz"
-tags:
-  - "inteligentne kontrakty"
-  - "DeFi"
-  - "Solidity"
-skill: advanced
-lang: pl
-published: 2022-08-16
-source: Uniswap v2
-sourceUrl: https://github.com/Uniswap/v2-core/tree/master/contracts
----
-
 ## Główne kontrakty {#core-contracts}
 
 Są to bezpieczne kontrakty, które przechowują płynność.
@@ -150,7 +135,7 @@ Ten kontrakt dziedziczy po `UniswapV2ERC20`, który dostarcza funkcje ERC-20 dla
     using SafeMath  for uint;
 ```
 
-[Biblioteka SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) jest używana, aby uniknąć przepełnień i niedomiarów (overflows i underflows). Jest to ważne, ponieważ w przeciwnym razie moglibyśmy skończyć w sytuacji, w której wartość powinna wynosić `-1`, ale zamiast tego wynosi `2^256-1`.
+[Biblioteka SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) jest używana, aby uniknąć przepełnień i niedomiarów (overflows i underflows). Jest to ważne, ponieważ w przeciwnym razie moglibyśmy skończyć w sytuacji, w której wartość powinna wynosić `-1`, ale zamiast tego wynosi `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -913,7 +898,6 @@ Ze skrótu (digest) i podpisu możemy uzyskać adres, który go podpisał, używ
 ```
 
 Jeśli wszystko jest w porządku, potraktuj to jako [zatwierdzenie (approve) ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
-```
 
 ## Kontrakty peryferyjne {#periphery-contracts}
 
@@ -1689,7 +1673,7 @@ Ten kontrakt został użyty do migracji wymian ze starej wersji v1 do v2. Teraz,
 
 ## Biblioteki {#libraries}
 
-[Biblioteka SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) jest dobrze udokumentowana, więc nie ma potrzeby opisywać jej tutaj.
+[Biblioteka SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) jest dobrze udokumentowana, więc nie ma potrzeby opisywać jej tutaj.
 
 ### Math {#math}
 

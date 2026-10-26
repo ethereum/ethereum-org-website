@@ -1,7 +1,7 @@
 ---
 title: AI agents
 metaTitle: AI agents | AI agents on Ethereum
-description: An overview of AI agents on Ethereum
+description: "What are AI agents on Ethereum? Learn how autonomous agents hold assets, trade, use DeFi and pay each other onchain, plus the risks to watch for."
 lang: en
 template: use-cases
 sidebarDepth: 2

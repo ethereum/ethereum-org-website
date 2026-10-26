@@ -209,7 +209,7 @@ sidebarDepth: 2
     - 存取超過 50 個區塊鏈節點
 
 - [**Infura**](https://infura.io/)
-  - [文件](https://infura.io/docs)
+  - [文件](https://docs.infura.io/)
   - 功能
     - 免費方案選項
     - 隨需擴展

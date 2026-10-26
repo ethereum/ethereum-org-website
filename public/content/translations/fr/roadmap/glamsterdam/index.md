@@ -28,7 +28,7 @@ Ces améliorations garantissent qu'Ethereum reste rapide, abordable et décentra
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Remarque : Cet article met en évidence une sélection de propositions d'amélioration d'Ethereum (EIP) dont l'inclusion est prévue dans Glamsterdam. D'autres propositions prévues en cours de test sur les réseaux de développement (devnets) incluent EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 et EIP-8282. La portée est gelée mais peut encore changer avant le réseau principal, car la méta-EIP reste à l'état de brouillon. Pour les dernières mises à jour de statut, consultez la [mise à jour Glamsterdam sur Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Remarque : Cet article met en évidence une sélection de propositions d'amélioration d'Ethereum (EIP) dont l'inclusion est prévue dans Glamsterdam. D'autres propositions prévues en cours de test sur les réseaux de développement incluent les EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246 et EIP-8282. Le périmètre est gelé mais peut encore changer avant le déploiement sur le réseau principal, car la méta-EIP reste à l'état de brouillon. Pour les dernières mises à jour de statut, consultez la [mise à jour Glamsterdam sur Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 Si vous souhaitez ajouter une EIP qui est envisagée pour Glamsterdam, mais qui n'a pas encore été ajoutée à cette page, [découvrez comment contribuer à ethereum.org ici](/contributing/).
 </AlertDescription>
@@ -38,7 +38,7 @@ Si vous souhaitez ajouter une EIP qui est envisagée pour Glamsterdam, mais qui 
 La mise à jour Glamsterdam se concentre sur trois objectifs principaux :
 
 - Accélérer le traitement (parallélisation) : Réorganiser la façon dont le réseau enregistre les dépendances de données, afin qu'il puisse traiter en toute sécurité de nombreuses transactions en même temps au lieu d'une séquence lente, une par une.
-- Augmenter la capacité : Répartir le gros du travail de création et de vérification des blocs, donnant au réseau plus de temps pour propager de plus grandes quantités de données sans ralentir.
+- Augmenter la capacité : Répartir le travail fastidieux de création et de vérification des blocs, donnant au réseau plus de temps pour propager de plus grandes quantités de données sans ralentir.
 - Prévenir l'encombrement de la base de données (durabilité) : Ajuster les frais du réseau pour refléter avec précision le coût matériel à long terme du stockage de nouvelles données, débloquant les futures augmentations de la limite de gaz tout en empêchant la dégradation des performances matérielles.
 
 En bref, Glamsterdam introduira des changements structurels pour s'assurer qu'à mesure que le réseau augmente sa capacité, il reste durable et que les performances restent élevées.

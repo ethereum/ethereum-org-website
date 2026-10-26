@@ -209,7 +209,7 @@ sidebarDepth: 2
     - 50+ ब्लॉकचेन नोड तक पहुंच
 
 - [**Infura**](https://infura.io/)
-  - [दस्तावेज़](https://infura.io/docs)
+  - [दस्तावेज़](https://docs.infura.io/)
   - सुविधाएँ
     - मुफ़्त टियर विकल्प
     - आवश्यकतानुसार स्केल करें

@@ -10,6 +10,7 @@ import { expect, test } from "@playwright/test"
 import {
   INPUT_RATE_USD_PER_1M,
   MAX_CHUNK_BYTES,
+  MAX_PLANNED_PROMPT_BYTES,
   MAX_PROMPT_BYTES,
   OUTPUT_RATE_USD_PER_1M,
   REASONING_TOKENS_PER_CALL,
@@ -183,7 +184,8 @@ test.describe("Irreducible content", () => {
     })!
     for (const b of plan.batches) {
       expect(b.overCeiling).toBe(false)
-      expect(b.bytes).toBeLessThanOrEqual(MAX_PROMPT_BYTES)
+      // Headroom for the re-parse note, not just the per-call ceiling.
+      expect(b.bytes).toBeLessThanOrEqual(MAX_PLANNED_PROMPT_BYTES)
     }
   })
 
@@ -213,7 +215,7 @@ test.describe("Irreducible content", () => {
         sectionIds: Array.from({ length: 20 }, (_, i) => `s-${i}`),
         glossaryTerms: glossary,
       })
-    ).toThrow(/per-call ceiling/)
+    ).toThrow(/planning ceiling/)
   })
 })
 

@@ -1,7 +1,8 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-08-20 (PR #19034 full pipeline, 24 langs: **bracket-placeholder blanks are a coverage gap `verify-structure` cannot see** (11 locales), character-level generation corruption in 3 locales, the semantic-translation-of-an-org-name split, `soundness`/`test harness` as glossary gaps, the ar `validator` glossary entry breaking NFC, and the rule that a dominant-but-wrong tree form must be fixed globally or not at all; fleet avg 8.67)
+> Last updated: 2026-10-15 (PR #19486, 24 langs: networks/index.md quarantine release -- a full re-translation of a released file regresses dev-correct wording; ar enterprise JSON repeats #86; fleet avg 9.3)
+> Previous: 2026-08-20 (PR #19034 full pipeline, 24 langs: **bracket-placeholder blanks are a coverage gap `verify-structure` cannot see** (11 locales), character-level generation corruption in 3 locales, the semantic-translation-of-an-org-name split, `soundness`/`test harness` as glossary gaps, the ar `validator` glossary entry breaking NFC, and the rule that a dominant-but-wrong tree form must be fixed globally or not at all; fleet avg 8.67)
 > Previous: 2026-08-14 (PR #19076 find-wallet JSON, 24 langs: **ETHGlossary's own term data is the defect source** for lowercased acronym parentheticals and non-Western numerals, runtime-composed fragment keys forcing per-locale agreement guesses, the check-the-tree-before-fixing-a-term-of-art hygiene rule, and three glossary coverage gaps; fleet avg 9.35)
 > Previous: 2026-07-29 (PR #18938 full pipeline, 24 langs: Indic loaded-polyseme bloc failure, sanitizer frontmatter-guard newline bug corrupting `uploadDate`, `/videos` frontmatter bypassing ETHGlossary, split-sentence `-strong` keys, partial-update manifest drift; fleet avg 8.9 -- lowest in months)
 > Previous: 2026-07-22 (PR #18868 full pipeline, 22 langs: YAML colon-in-description build-breaker, raw-`<`-in-prose MDX break, and the `ExpandableCard title= "` attribute-extraction gap; fleet avg 9.7)
@@ -1097,6 +1098,8 @@ Short-form availability is not universal, so the rule has to be conditional:
 
 PR #19357: #19266 renamed `page-find-wallet-privacy{,-desc}` to `page-find-wallet-private-transactions{,-desc}` with identical English text. The title key came back translated, but `-desc` shipped as the English string in all 24 locales. verify-structure cannot see it (keys and placeholders match) and the candidate glossary pass cannot either (no glossary term). Detection: for every key added in the PR, flag a locale value byte-identical to English when English is prose. Repair: when the English value is unchanged across a rename, restore the locale's old-key value from `dev` -- no retranslation needed.
 
+Recurred in PR #19556: `page-founders-support-tag-{accelerator,events,mentorship}` -> `page-founders-tag-*` (English `Accelerator` / `Events` / `Mentorship` unchanged) shipped English in all 24 locales; 10 of 24 review agents missed it because short single-word values look like loanwords. Restored from `dev` (70 values). Second occurrence, so this needs a pipeline fix: carry the old-key value forward when a removed and an added key share byte-identical English.
+
 ### 82. "Both" dropped from a two-fact privacy claim (PATTERN -- semantic, fleet-wide)
 
 PR #19357 `page-privacy-online.json` `vpn-tor-description-1`, `vpn-relay-description`, `app-tor-browser-description`: "no single relay knows *both* who you are and where you go" became "no relay knows who you are or where you go" in at least bn, ta, te, es, pt-br. The rewrite overstates Tor/Private Relay (each hop knows one fact). Same file also produced "very few [people] earn a recommendation" for VPNs (hi, mr, te) and "place you by location" read as "put you somewhere" (hi, mr). Treat as a warning unless the claim inverts; fix by adding the language's "both / at the same time" particle.
@@ -1108,3 +1111,53 @@ PR #19357 `app-f-droid-description`: F-Droid's "free software" became the price 
 ### 84. Pre-pass glossary matching is dominated by unchanged lines (INFORMATIONAL -- review method)
 
 A naive "English has term X, locale lacks form Y" scan over PR files produced ~3.7k candidate rows for PR #19357; well over 80% sat on lines the PR never touched (the ~70 `videos/*` files only gained a `topic:` tag and an EOF newline). Real pre-existing deviations surfaced this way (ru `Бинанс Академи`, uk `Майкрософт Сек'юріті`, mr `वेब3`, te `లిడో`, mr `डेंकुन`, ur `ڈینکون`) are out of scope for the PR but worth a cleanup pass. Restrict candidate rows to added lines before handing them to review agents.
+
+### 85. Placeholder-count gate discards valid ICU plurals (CRITICAL -- pipeline bug)
+
+PR #19474: `verify-structure.ts` `icu()` compares sorted placeholder *occurrence* lists, not the set of names. English `{years, plural, one {{count} year} other {{count} years}}` has `{count}` twice; a correct cs (one/few/other), pl/ru/uk (one/few/many/other) or ar (six forms) plural repeats it 3-6 times and fails `json-placeholder`. `page-organizations-enterprise.json` was translated, then discarded and quarantined for ar/cs/pl/ru/uk (expires 2026-10-28), so those locales fall back to English. Committed files with the same shape (`page-developers-tools-modal-more`, `page-find-wallet-meta-description-fallback`) only passed because they predate the gate. Reviewer rule: a locale missing a namespace that every other locale has is almost always this gate -- check `.manifests/quarantine.json` before calling it a translation gap. Fix: compare unique names (and balanced tags), then release the quarantine entries and re-dispatch.
+
+### 86. Acronym expansion in stat captions and column headers (PATTERN -- #80 in a new slot)
+
+PR #19474: the new /organizations pages render short stat-tile captions (`-stat-*`) and comparison-table headers (`-compare-col-*`, `-approach-col-*`). MT expanded every bare acronym there: en `DeFi TVL` -> it `Valore totale bloccato (TVL) della finanza decentralizzata (DeFi)`; en `L1 alternatives` -> es `Alternativas de capa 1 (l1)`. 184 strings across 23 locales (de clean); also an added `(l2)` in `l2s-meta-title` where English has no acronym. ETHGlossary `ui` context could only collapse ~54 (TVL/DeFi); for L1/L2 and some DEX the `ui` form is itself the expanded lowercase phrase (es `Capa 2 (l2)`, pl `Warstwa 2`), so a glossary-driven patch is insufficient (normalization queue 13). Fixed by per-language agents: bare uppercase acronym mirroring English, locale case endings (tr `L1'deki`, te `L2లపై`, bn `L2-গুলো`), ar/ur bidi isolates, gender agreement in Romance/Slavic. Prose expansion left as warning.
+
+### 87. Semantic traps recurring in the /organizations content (PATTERN -- semantic)
+
+PR #19474: "database corruption" -> moral corruption/bribery (bn `দুর্নীতি`, te `అవినీతి`, hi `भ्रष्टाचार`); "tokenized treasuries" (government bills) -> treasury department/vault (de `Schatzkammern` fixed; es/pt-br/fr/id/vi/tr/ar/ur/te left as warnings); relational "settle against liquidity" -> "in opposition to" (te, hi -- known trap); "scalable" -> "measurable" (mr `मोजण्यायोग्य`); refund agency inverted (ta: staff *receive* refunds); "reused address" -> "used once" (te); "for 120 days after a sale" -> "after 120 days" (hi). "Ethereum for enterprises" and "Ethereum for business" collapse to one title in tr, sw, de -- two pathway cards with identical headings.
+
+### 88. Metavariable placeholders translated inside inline code (CRITICAL -- code)
+
+PR #19480: the wagmi tutorial's pseudo-syntax spans `{<expression>}`, `{<condition> && <value>}` and `<variable>?.<field>` were translated in cs, pl, tr and fr (`{<výraz>}`, `<zmienna>?.<pole>`, `<değişken>?.<alan>`, `<valeur>`), though dev had them in English and the other 20 locales kept them. A retranslation pass of a line can reach code spans that earlier runs left alone. Restore English; the surrounding prose explains the placeholders.
+
+### 89. Underscore emphasis between CJK characters renders literally (WARNING -- rendering)
+
+PR #19480: zh retranslation turned `它**必须**在` / `我们**未**连接` into `它_必须_在` / `我们_未_连接`. remark-gfm with no CJK plugin cannot open `_` emphasis flanked by CJK characters, so readers see the underscores. `**` works in that position; `<em>` always works. Revert to the dev form when the run regressed it; pre-existing cases in ja/zh-tw are warnings.
+
+### 90. Gate quarantines that never clear (INFORMATIONAL -- pipeline)
+
+PR #19480 `.manifests/quarantine.json`: (a) `developers/docs/networks/index.md` gated in all 24 locales because English h5 headings (`##### Resources`, `##### Faucets`) carry no ID and the model emits an empty `{#}` -- it will re-quarantine every run until English h5s get IDs or the sanitizer strips empty `{#}`. (b) ar `page-organizations-enterprise.json` gated by `json-plural-branch` because the Arabic `two` (dual) branch omits `{count}` -- idiomatic Arabic, gate false positive (follow-up to #85).
+
+### 91. Quarantine release = full re-translation that regresses dev-correct text (PATTERN -- review scope)
+
+PR #19486: the #90 networks quarantine cleared, so all 24 locales re-translated `developers/docs/networks/index.md` even though English only gained 4 links. Most findings were regressions of wording that was already right on dev: sw translated the brand `Chain Platform` (`Jukwaa la Chain`), te/ur transliterated it and ur did the same to `Google Cloud`; hi/mr swapped glossary `staker`/`peer` for descriptive phrases (mr `सहकाऱ्यांमधील` = "among coworkers"); mr "deprecated" -> `नाकारलेले` ("rejected", 8x); cs/ja `EVM-based Chains` label and ja `Optimistic Sepolia` heading reverted to English; ta "exchanges" -> `பரிமாற்றங்களும்` (acts of exchange); de `Layer 2-Testnetze` lost compound hyphenation; ur `EF بلاگ` -> `EF Blog`; bn/te gained RTL isolates (U+2066/2068/2069) around `ETH` on an LTR page. ar `page-organizations-enterprise.json` (released from the same quarantine) re-expanded `DeFi TVL`/`Private DLT` exactly as #86. **Reviewer rule:** for a quarantine-release file, diff every `+` line against `origin/dev` and treat "dev was right, run changed it" as the default suspicion; brand names absent from ETHGlossary (Chain Platform) have no guard and drift per locale.
+
+PR #19556: the same regression happened without any quarantine release. `smart-contracts/security` and `app-plasma` were fully retranslated, which reverted earlier review fixes: hi `अनुबंध` -> `कॉन्ट्रैक्ट` (141 sites, previously fixed in #19474) and `लेन-देन` -> `लेनदेन` (56); ur `سمارٹ کنٹریکٹ` -> `اسمارٹ کانٹریکٹ` (196); id `orakel` -> `oracle` (16); transliterated brands went back to Latin in ur/uk/zh-tw (OpenZeppelin, Slither, Manticore, Nethermind, ConsenSys, Ethereum); and ar/ur dates went back to English inside `dir="ltr"` spans. Large one-way swaps of a glossary term in a single file can be restored mechanically after you check for compound exceptions (hi `लेनदेन हैश`, id `masalah oracle` / `oracle blockchain`).
+
+### 92. Code-only English edits never propagate (CRITICAL -- pipeline gap)
+
+PR #19568: drift detection hashes only translatable leaves (prose and code comments; `lib/llm/content-normalizer.ts`), so an English edit that only changes a fence language tag or a non-comment code line never marks the section stale. The tutorial repairs added `sh` tags (hello-world, sending-transactions) and changed `npm install dotenv --save` to `npm install dotenv`; all 23 locales kept the old code while their manifests were stamped current. The fix is mechanical: compare fence info strings and non-comment code lines between English and the locale, and restore them from English while keeping translated comments. Until the pipeline syncs code deterministically, run that comparison on every review.
+
+### 93. Indented code converted to a fence is duplicated (CRITICAL -- pipeline bug)
+
+PR #19568: English Step 5 of how-to-write-and-deploy-an-nft turned a 4-space-indented inline-code line into a fenced `json` block. In the 21 locales updated incrementally, the old indented line survived in place and the lifted fence was restored at the end of the section, directly against the next heading with no blank line. A fence-count check passes, because the stale copy is not a fence. Detect it by grepping each locale for the English fence body occurring twice, or for a 4-space-indented code line English no longer has. Locales that were retranslated in full (ar, te) were correct.
+
+PR #19608: ur was quarantined during #19568. When its quarantine was released, it ran incrementally and hit the same defect. The fix in #19568 does not carry over to locales that were quarantined at that time, so check #93 again on every quarantine release of this file.
+
+### 94. Unescaped `dir="ltr"` quotes break the ur JSON reply (INFORMATIONAL -- pipeline)
+
+PR #19568: 4 of 5 quarantined tasks were ur, all failing with `Expected ',' or '}' after property value`. The model writes `<span dir="ltr">` inside JSON string values without escaping the quotes. The mr failure was a bad escape sequence. Reruns usually pass; a durable fix is a repair step that escapes attribute quotes inside the reply before `JSON.parse`, or asking for `dir='ltr'`.
+
+PR #19608: on the second attempt, 3 ur tasks failed again with the same error (mint-nft, sending-transactions, using-websockets). This means a plain rerun does not reliably clear it, and the repair step is needed.
+
+### 95. ETHGlossary `/filter` returns lowercase tickers (INFORMATIONAL -- glossary)
+
+PR #19568: `/filter` returned `Wrapped Ether (WETH) -> ... (weth)` for mr, pt-br, bn and it, while the glossary website pages show `WETH`. Agents following the API flagged correct uppercase as a deviation, and in mr the translation itself copied `(weth)`. Tickers stay uppercase whatever the API returns. Report the casing discrepancy to ETHGlossary.

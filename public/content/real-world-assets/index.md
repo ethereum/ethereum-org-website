@@ -1,7 +1,7 @@
 ---
 title: Real-world assets (RWAs)
 metaTitle: What are RWAs? | Benefits and Use of Real-world assets
-description: An overview of Real-world assets on Ethereum
+description: "What are real-world assets (RWAs)? Learn how assets like treasuries, real estate and commodities are tokenized on Ethereum, and the benefits and risks."
 lang: en
 template: use-cases
 image: /images/man-and-dog-playing.png

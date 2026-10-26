@@ -150,3 +150,49 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 **Open (warnings):**
 
 - F-Droid `ücretsiz` (#83); `düşük engelli` (low-disabled); proposer `teklifçi` vs glossary `teklif edici` needs one locale call.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- `İşletmeler için Ethereum` used for both enterprise and business pathways; `tekil` for single recurs; PostgreSQL sidecars translated literally.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+- Warning: hook/kanca drift within wagmi; `değere göre değerlendir` shifts "evaluate to".
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:896 encodes = encrypts (`şifrelediği işlemi` -> `kodladığı işlemi`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: ETHGlossary deviation on a `translate` term: `eoa` → `harici sahipli hesap`. The PR moved this away from the glossary (it was `harici olarak sahip olunan`). Flag for human. (`[dışarıdan sahipli bir hesaptır]` -> `[harici sahipli bir hesaptır]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA deviation, 2 occurrences on this line.
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA deviation. (`dışarıdan sahipli hesaplar` -> `harici sahipli hesaplar`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA deviation. (`dışarıdan sahipli bir hesaptan` -> `harici sahipli bir hesaptan`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA deviation. (`dışarıdan sahipli bir hesapsa` -> `harici sahipli bir hesapsa`)
+- 14 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and faithful, and none of tr's historical failure modes recurred: client stays `istemci`, mainnet stays `Ana Ağ`, and there are no ticker transpositions or brand mistranslations. The real problems are three page-founders tags shipped in English and one encode/encrypt error. The EOA term drifting away from the glossary needs a human call.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: decimal separator and betik/komut dosyası differ between files; glossary-driven mid-sentence capitals (known).

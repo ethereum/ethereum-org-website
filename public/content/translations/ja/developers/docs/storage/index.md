@@ -142,7 +142,7 @@ KYCのない分散型ツール：
 **Arweave - _Arweaveは、データを保存するためのdStorageプラットフォームです。_**
 
 - [Arweave.org](https://www.arweave.org/)
-- [ドキュメント](https://docs.arweave.org/info/)
+- [ドキュメント](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züsは、シャーディングとブロバーを備えたプルーフ・オブ・ステークのdStorageプラットフォームです。_**
