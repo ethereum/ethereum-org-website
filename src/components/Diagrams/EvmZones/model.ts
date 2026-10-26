@@ -8,6 +8,12 @@
  * `getEvmZonesView`.
  */
 
+/** viewBox of the drawing. */
+export const EVM_ZONES_SIZE = { width: 400, height: 330 }
+
+/** The EVM stack's maximum depth, quoted in the stack's definition. */
+export const STACK_DEPTH = 1024
+
 export const EVM_ZONES_STEPS = ["idle", "load", "run", "store", "end"] as const
 export type EvmZonesStep = (typeof EVM_ZONES_STEPS)[number]
 export const EVM_ZONES_LAST_STEP = EVM_ZONES_STEPS.length - 1
@@ -25,7 +31,7 @@ export type EvmZonesPart = (typeof EVM_ZONES_PARTS)[number]
 
 export type EvmZone = "machine" | "rom" | "world"
 
-/** Which zone each part belongs to (shown in its tooltip). */
+/** Which zone each part belongs to (shown in its definition). */
 export const EVM_ZONE_OF: Record<EvmZonesPart, EvmZone> = {
   deck: "world",
   machine: "machine",

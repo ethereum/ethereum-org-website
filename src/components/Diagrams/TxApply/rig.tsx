@@ -1,4 +1,4 @@
-import { type ReactNode, useId } from "react"
+import { memo, type ReactNode, useId } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -22,12 +22,11 @@ import {
 } from "../anatomy"
 import { usePartState } from "../diagram-hover"
 
-import { TX_APPLY_SIZE } from "./layout"
-import type { TxApplyPart, TxApplyView } from "./model"
+import { TX_APPLY_SIZE, type TxApplyPart, type TxApplyView } from "./model"
 
 /*
  * Isometric drawing for "Applying a transaction", on the shared anatomy
- * primitives. Lazy-loaded by TxApplyPlayer; everything comes from the view.
+ * primitives. Server-rendered with the player.
  *
  * The world-state plate carries the sender (with the signed transaction slip
  * on top) and the recipient, joined by the value pipe along the back. The
@@ -173,7 +172,7 @@ interface TxApplyRigProps {
   className?: string
 }
 
-export default function TxApplyRig({
+function TxApplyRig({
   view,
   runKey,
   labels,
@@ -299,3 +298,7 @@ export default function TxApplyRig({
     </div>
   )
 }
+
+// Memoised: the player re-renders on visibility and run state; the drawing
+// only needs to when its view, labels or hover state change.
+export default memo(TxApplyRig)

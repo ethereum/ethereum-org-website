@@ -8,5 +8,5 @@ import dynamic from "next/dynamic"
  * every diagram, so a static import would ship it to every docs page).
  */
 export const EvmZonesPlayer = dynamic(() =>
-  import("./evm-zones-player").then((m) => m.EvmZonesPlayer)
+  import("./player").then((m) => m.EvmZonesPlayer)
 )

@@ -1,4 +1,4 @@
-import { type ReactNode, useId } from "react"
+import { memo, type ReactNode, useId } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -25,8 +25,7 @@ import {
 import { usePartState } from "../diagram-hover"
 import { PROGRAM } from "../GasEvm/model"
 
-import { EVM_ZONES_SIZE } from "./layout"
-import type { EvmZonesPart, EvmZonesView } from "./model"
+import { EVM_ZONES_SIZE, type EvmZonesPart, type EvmZonesView } from "./model"
 
 /*
  * Isometric drawing for "What survives a call", on the same objects as the
@@ -36,7 +35,7 @@ import type { EvmZonesPart, EvmZonesView } from "./model"
  *   stack and memory, with the program counter as the lit code cell;
  * - virtual ROM (immutable): the code strip on the EVM itself;
  * - world state (persistent): the plate, with storage standing on it.
- * Lazy-loaded by EvmZonesPlayer; everything comes from the view.
+ * Server-rendered with the player.
  */
 
 const { width: W, height: H } = EVM_ZONES_SIZE
@@ -198,7 +197,7 @@ interface EvmZonesRigProps {
   className?: string
 }
 
-export default function EvmZonesRig({
+function EvmZonesRig({
   view,
   runKey,
   labels,
@@ -355,3 +354,7 @@ export default function EvmZonesRig({
     </div>
   )
 }
+
+// Memoised: the player re-renders on visibility and run state; the drawing
+// only needs to when its view, labels or hover state change.
+export default memo(EvmZonesRig)

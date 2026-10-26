@@ -8,5 +8,5 @@ import dynamic from "next/dynamic"
  * every diagram, so a static import would ship it to every docs page).
  */
 export const TxApplyPlayer = dynamic(() =>
-  import("./tx-apply-player").then((m) => m.TxApplyPlayer)
+  import("./player").then((m) => m.TxApplyPlayer)
 )

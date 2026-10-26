@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils/cn"
 
+import { DiagramMessages } from "../diagram-messages"
+
 import { TxApplyPlayer } from "./lazy-player"
 
 export interface TxApplyDiagramProps {
@@ -21,9 +23,11 @@ const TxApplyDiagram = ({
   fig,
   className,
 }: TxApplyDiagramProps) => (
-  <div className={cn("not-prose my-8", className)}>
-    <TxApplyPlayer initialStep={initialStep} fig={fig} />
-  </div>
+  <DiagramMessages prefix="tx-apply">
+    <div className={cn("not-prose my-8", className)}>
+      <TxApplyPlayer initialStep={initialStep} fig={fig} />
+    </div>
+  </DiagramMessages>
 )
 
 export default TxApplyDiagram

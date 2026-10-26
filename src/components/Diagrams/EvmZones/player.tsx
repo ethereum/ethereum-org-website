@@ -1,9 +1,8 @@
 "use client"
 
+import { useMemo } from "react"
 import { Play } from "lucide-react"
-import dynamic from "next/dynamic"
-import { useLocale, useTranslations } from "next-intl"
-import type { ReactNode } from "react"
+import { useTranslations } from "next-intl"
 
 import { useDiagramInView } from "@/components/Diagrams/diagram-hover"
 import {
@@ -11,12 +10,10 @@ import {
   DiagramReadout,
   DiagramTransport,
   InteractiveDiagram,
+  useDiagramFormat,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
-import { numberFormat } from "@/lib/utils/numbers"
-
-import { EVM_ZONES_SIZE } from "./layout"
 import {
   EVM_ZONE_OF,
   EVM_ZONES_LAST_STEP,
@@ -24,23 +21,12 @@ import {
   EVM_ZONES_STEPS,
   type EvmZonesPart,
   getEvmZonesView,
+  STACK_DEPTH,
 } from "./model"
+import EvmZonesRig from "./rig"
 
-// Decorative SVG, not needed for the first paint: its own chunk after
-// hydration, behind a placeholder of the same size.
-const RigPlaceholder = () => (
-  <div
-    aria-hidden
-    className="w-full"
-    style={{
-      aspectRatio: `${EVM_ZONES_SIZE.width} / ${EVM_ZONES_SIZE.height}`,
-    }}
-  />
-)
-const EvmZonesRig = dynamic(() => import("./evm-zones-rig"), {
-  ssr: false,
-  loading: RigPlaceholder,
-})
+/** Step 0 is idle; steps 1 to EVM_ZONES_LAST_STEP. */
+const IDLE_STEP = 0
 
 interface EvmZonesPlayerProps {
   /** Step to start on (0 = idle, 1-4), for stories. */
@@ -54,45 +40,57 @@ interface EvmZonesPlayerProps {
  * keeps what. Machine state fills and then clears, the code never changes,
  * and the storage write is all that survives.
  */
-export function EvmZonesPlayer({ initialStep = 0, fig }: EvmZonesPlayerProps) {
+export function EvmZonesPlayer({
+  initialStep = IDLE_STEP,
+  fig,
+}: EvmZonesPlayerProps) {
   const t = useTranslations("component-diagrams")
-  const locale = useLocale()
+  const format = useDiagramFormat()
   const inView = useDiagramInView<HTMLDivElement>()
-  const { step, isRunning, atEnd, run, goTo } = useStepPlayer({
-    lastStep: EVM_ZONES_LAST_STEP,
-    initialStep,
+  const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
+    idle: IDLE_STEP,
+    last: EVM_ZONES_LAST_STEP,
+    initial: initialStep,
     paused: !inView.visible,
   })
-  const view = getEvmZonesView(step)
-  const format = (value: number) => numberFormat(locale).format(value)
+  const view = useMemo(() => getEvmZonesView(step), [step])
 
-  const labels = Object.fromEntries(
-    EVM_ZONES_PARTS.map((part) => [part, t(`evm-zones-label-${part}`)])
-  ) as Record<EvmZonesPart, ReactNode>
-  // Each part's one-line definition, then the zone it belongs to.
-  const definitions = Object.fromEntries(
-    EVM_ZONES_PARTS.map((part) => [
-      part,
-      t("evm-zones-definition-with-zone", {
-        definition: t(`evm-zones-definition-${part}`),
+  const { labels, definitions, parts } = useMemo(() => {
+    const labels = {} as Record<EvmZonesPart, string>
+    const definitions = {} as Record<EvmZonesPart, string>
+    for (const part of EVM_ZONES_PARTS) {
+      labels[part] = t(`evm-zones-label-${part}`)
+      // Each part's one-line definition, then the zone it belongs to.
+      definitions[part] = t("evm-zones-definition-with-zone", {
+        definition: t(`evm-zones-definition-${part}`, {
+          depth: format(STACK_DEPTH),
+        }),
         zone: t(`evm-zones-zone-${EVM_ZONE_OF[part]}`),
-      }),
-    ])
-  ) as Record<EvmZonesPart, ReactNode>
+      })
+    }
+    const parts = Object.fromEntries(
+      EVM_ZONES_PARTS.map((part) => [
+        part,
+        { label: labels[part], definition: definitions[part] },
+      ])
+    )
+    return { labels, definitions, parts }
+  }, [t, format])
+
+  const captionFor = (index: number) =>
+    t(`evm-zones-step-${EVM_ZONES_STEPS[index]}`, { step: format(index) })
 
   return (
     <InteractiveDiagram
       caption={t("evm-zones-caption")}
-      description={t("evm-zones-description")}
+      description={t(
+        "evm-zones-description",
+        Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)]))
+      )}
       figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
       title={t("evm-zones-title")}
       status={t(`evm-zones-status-${view.motion}`)}
-      parts={Object.fromEntries(
-        EVM_ZONES_PARTS.map((part) => [
-          part,
-          { label: labels[part], definition: definitions[part] },
-        ])
-      )}
+      parts={parts}
       legend={[
         { hue: "entity", label: t("diagram-legend-evm") },
         { hue: "gas", label: t("diagram-legend-gas") },
@@ -101,17 +99,12 @@ export function EvmZonesPlayer({ initialStep = 0, fig }: EvmZonesPlayerProps) {
       inViewRef={inView.ref}
       paused={!inView.visible}
       illustration={
-        // The drawing loads once the diagram comes near the viewport.
-        inView.seen ? (
-          <EvmZonesRig
-            view={view}
-            runKey={`step-${view.step}`}
-            labels={labels}
-            definitions={definitions}
-          />
-        ) : (
-          <RigPlaceholder />
-        )
+        <EvmZonesRig
+          view={view}
+          runKey={`step-${view.step}`}
+          labels={labels}
+          definitions={definitions}
+        />
       }
       transport={
         <DiagramTransport
@@ -121,28 +114,21 @@ export function EvmZonesPlayer({ initialStep = 0, fig }: EvmZonesPlayerProps) {
             onClick: run,
             disabled: isRunning,
           }}
-          counter={t("gas-tx-step-counter", {
-            current: format(view.step),
-            total: format(EVM_ZONES_LAST_STEP),
-          })}
+          current={view.step}
+          total={EVM_ZONES_LAST_STEP}
           onPrevious={() => goTo(view.step - 1)}
           onNext={() => goTo(view.step + 1)}
-          onReset={() => goTo(0)}
+          onReset={reset}
           canGoPrevious={view.step > 1}
           canGoNext={!atEnd}
-          canReset={view.step > 0}
-          labels={{
-            previous: t("gas-tx-previous-step"),
-            next: t("gas-tx-next-step"),
-            reset: t("diagram-reset"),
-          }}
+          canReset={view.step > IDLE_STEP}
           eventAction="evm-zones transport"
         />
       }
       stepCaption={
         <DiagramCaption
-          current={t(view.captionKey)}
-          all={EVM_ZONES_STEPS.map((motion) => t(`evm-zones-step-${motion}`))}
+          current={captionFor(view.step)}
+          all={EVM_ZONES_STEPS.map((_, i) => captionFor(i))}
         />
       }
       readout={
@@ -159,7 +145,13 @@ export function EvmZonesPlayer({ initialStep = 0, fig }: EvmZonesPlayerProps) {
             },
             {
               label: t("evm-zones-readout-storage"),
-              value: t(`evm-zones-storage-${view.storage}`),
+              value:
+                view.storage === "written"
+                  ? t("evm-zones-storage-written", {
+                      count: 1,
+                      slots: format(1),
+                    })
+                  : t("evm-zones-storage-no-writes"),
             },
           ]}
         />

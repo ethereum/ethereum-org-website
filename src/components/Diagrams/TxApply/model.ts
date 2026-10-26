@@ -10,6 +10,9 @@
  * sender = −(1 + 0.0042) = −1.0042 ETH.
  */
 
+/** viewBox of the drawing. */
+export const TX_APPLY_SIZE = { width: 480, height: 330 }
+
 export const GWEI_PER_ETH = 1_000_000_000
 
 export const TX_EXAMPLE = {

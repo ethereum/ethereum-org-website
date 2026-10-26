@@ -459,13 +459,16 @@ export function useDiagramFormat() {
 export function DiagramCountUp({
   value,
   delay,
+  format,
 }: {
   value: number
   /** ms before counting starts, to follow the drawing's motion. */
   delay?: number
+  /** Display format; a plain locale number by default. */
+  format?: (value: number) => ReactNode
 }) {
-  const format = useDiagramFormat()
+  const formatNumber = useDiagramFormat()
   const { prefersReducedMotion } = usePrefersReducedMotion()
   const shown = useCountUp(value, { delay, instant: prefersReducedMotion })
-  return <>{format(shown)}</>
+  return <>{(format ?? formatNumber)(shown)}</>
 }
