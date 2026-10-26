@@ -177,7 +177,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Shared pieces for isometric anatomy diagrams (`Diagrams/anatomy/`): `isoProjection`, `IsoPlate`, `IsoSolid`, `IsoCylinder`, `IsoPipe`, `AnatomyLabels` and `DiagramStage`, coloured by the `--diagram-*` tokens. Hairline outlines (0.6px) with hierarchy by colour (`--diagram-line-faint`, `--diagram-line`, `--diagram-line-strong`); faces are light `color-mix(in oklab, hue N%, background)` tints at rest and stronger when active or hovered, so the same drawing adapts to dark mode. Static detail (`isoDetail`) and soft gradient shadows (`isoShadow`, no filters) are built once at module level. Labels are single-line concept names outside the plate; any label that wouldn't fit, would sit on a shape or would touch another label or leader is dropped. See Overview for the full rules.",
+          "Shared pieces for isometric anatomy diagrams (`Diagrams/anatomy/`): `isoProjection`, `IsoPlate`, `IsoSolid`, `IsoCylinder`, `IsoPipe`, `AnatomyLabels` and `DiagramStage`, coloured by the `--diagram-*` tokens. 1px outlines with hierarchy by colour (`--diagram-line-faint`, `--diagram-line`, `--diagram-line-strong`); faces are light `color-mix(in oklab, hue N%, background)` tints at rest and stronger when active or hovered, so the same drawing adapts to dark mode. Static detail (`isoDetail`) and soft gradient shadows (`isoShadow`, no filters) are built once at module level. Labels are single-line concept names outside the plate; any label that wouldn't fit, would sit on a shape or would touch another label or leader is dropped. See Overview for the full rules.",
       },
     },
   },
