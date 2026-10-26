@@ -294,14 +294,7 @@ body:
     id: wallet_fee_market_support
     attributes:
       label: Does the wallet support Ethereum's current fee market?
-      description: Fees must track the current base fee on Ethereum Mainnet rather than a fixed legacy `gasPrice`. This may be through EIP-1559 (type 2) transactions, EIP-7702, or ERC-4337. Please describe which transaction or account mechanisms your wallet uses.
-    validations:
-      required: true
-  - type: input
-    id: wallet_erc_5792_support
-    attributes:
-      label: Does the wallet support atomic batch calls (ERC-5792)?
-      description: Does your wallet support `wallet_sendCalls` with the `atomic` capability, so a batch of calls either all succeed or all fail? Please provide documentation, or the `wallet_getCapabilities` response for Mainnet.
+      description: The wallet must support dynamic transaction fees on Ethereum Mainnet and must not rely exclusively on legacy `gasPrice` transactions. This may be through EIP-1559 (type 2) transactions, EIP-7702, or ERC-4337. Please describe which transaction or account mechanisms your wallet uses.
     validations:
       required: true
   - type: textarea
@@ -365,6 +358,16 @@ body:
     attributes:
       label: Does the wallet support Account Upgrades (EIP-7702)?
       description: Allows EOA accounts to temporarily use smart contract features
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: wallet_erc_5792_support
+    attributes:
+      label: Does the wallet support atomic batch calls (ERC-5792)?
+      description: On Mainnet, `wallet_getCapabilities` reports the `atomic` capability as `supported` or `ready`, and `wallet_sendCalls` executes a batch so that all calls succeed or none do
       options:
         - "Yes"
         - "No"

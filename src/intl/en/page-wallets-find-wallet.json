@@ -123,7 +123,7 @@
   "page-find-wallet-methodology-criterion-maintenance": "Actively maintained, with support available for users.",
   "page-find-wallet-methodology-criterion-honest-info": "Provides honest, accurate listing information. Products that falsify details are removed.",
   "page-find-wallet-methodology-criterion-contact": "Has a named point of contact so we can verify information when it changes.",
-  "page-find-wallet-methodology-criterion-eip1559": "Supports EIP-1559 (type 2) transactions on Ethereum Mainnet.",
+  "page-find-wallet-methodology-criterion-eip1559": "Supports Ethereum's current fee market on Mainnet (EIP-1559, EIP-7702 or ERC-4337), not only legacy gas price transactions.",
   "page-find-wallet-methodology-criterion-ux": "Offers a reviewable user experience. If our team finds a product difficult to use, we may request improvements before listing it.",
   "page-find-wallet-methodology-criterion-ethereum-focused": "Is Ethereum-focused, with Ethereum or a Layer 2 set as the default network.",
   "page-find-wallet-methodology-verification": "Listings are not static. Wallet providers are required to resubmit information every six months. If a team does not respond, we remove the wallet. This keeps the directory accurate as products evolve.",

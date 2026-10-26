@@ -2753,6 +2753,7 @@ export const walletsData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     eip_7702_support: true,
+    erc_5792_support: false,
     onboard_documentation:
       "https://support.uniswap.org/hc/en-us/categories/11301970439565-Uniswap-Wallet",
     documentation: "https://docs.uniswap.org/",
