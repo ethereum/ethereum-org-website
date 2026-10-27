@@ -85,6 +85,13 @@ export const defineABFlag = (
     adapter: createMatomoAdapter(key),
   })
 
+export const homeSearchCtaFlag = defineABFlag(
+  "HomeSearchCTA",
+  "Homepage hero search: button beside Start here vs field below it"
+)
+
+export const homepageFlags = [homeSearchCtaFlag] as const
+
 /**
  * A/B-tested routes and the flags precomputed for each.
  *
@@ -96,4 +103,6 @@ export const defineABFlag = (
  * pages. Every route registered here needs a matching coded page at
  * <path>/ab-code/[code]/ - see docs/ab-testing.md for the recipe.
  */
-export const abTestRoutes: Record<string, readonly ABFlag[]> = {}
+export const abTestRoutes: Record<string, readonly ABFlag[]> = {
+  "/": homepageFlags,
+}
