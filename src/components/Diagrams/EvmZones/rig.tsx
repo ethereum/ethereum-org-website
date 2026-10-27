@@ -294,11 +294,11 @@ function EvmZonesRig({
               <polygon
                 key={cell}
                 points={cell}
-                className={cn(view.pc === i && "stroke-diagram-entity")}
+                className={cn(view.opIndex === i && "stroke-diagram-entity")}
                 style={{
                   fill: !view.codeLoaded
                     ? anatomyFill("entity", "top")
-                    : view.pc === i
+                    : view.opIndex === i
                       ? activeCell
                       : anatomyFill("entity", "end", "lit"),
                 }}

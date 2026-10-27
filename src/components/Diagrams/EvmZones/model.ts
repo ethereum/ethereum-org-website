@@ -50,8 +50,8 @@ export interface EvmZonesView {
   step: number
   motion: EvmZonesStep
   codeLoaded: boolean
-  /** Index of the code cell the program counter is on, or null. */
-  pc: number | null
+  /** Index of the code cell being executed, or null. */
+  opIndex: number | null
   /** Values on the stack, bottom first. */
   stack: number[]
   memoryWritten: boolean
@@ -78,8 +78,8 @@ export const getEvmZonesView = (requestedStep: number): EvmZonesView => {
     step,
     motion,
     codeLoaded: step >= 1,
-    // Run: just pushed 42 and 0 again (PC 4); store: SSTORE (PC 5).
-    pc: motion === "run" ? 4 : motion === "store" ? 5 : null,
+    // Run: just pushed 42 and 0 again (cell 4); store: SSTORE (cell 5).
+    opIndex: motion === "run" ? 4 : motion === "store" ? 5 : null,
     // SSTORE takes its two values off the stack.
     stack: motion === "run" ? [42, 0] : [],
     memoryWritten: running,
