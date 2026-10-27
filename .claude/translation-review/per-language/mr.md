@@ -152,3 +152,32 @@ Scope: 25 files (smart-contracts/security + app-plasma retranslations, predictio
 - 13 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The Marathi is fluent and closely follows the glossary, including the large new JSON sets (founders, wallet descriptions, stories map). There are no build- or navigation-breaking defects. The two criticals are glossary "translate" deviations that need a person to fix. The rest are small regressions from the retranslation and inconsistencies between files.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- `(weth)` changed to `(WETH)` (websockets:175; #95)
+
+**Notes:**
+
+- hello-world quarantined (JSON parse error). Warnings: Latin `MetaMask` link label, English alt text, `तोच खाते` should be `तेच खाते`.
+
+## PR #19608 (intl/pending-dev, run 1023-1817) -- 2026-10-23 -- Score 9.2/10
+Scope: hello-world-smart-contract (released from quarantine and fully reworked for Hardhat 3) and how-to-write-and-deploy-an-nft (small edit). Changed lines only.
+
+**Fixed in this branch:**
+
+- None (0 critical)
+
+**Notes:**
+
+- Glossary is followed in full. Code, fence tags, hrefs and IDs match English exactly.
+
+**Open (warnings):**
+
+- hello-world:219 "compromising your secrets" is rendered as `तडजोड` (compromise in the sense of a concession; same polyseme as #19115). Prefer `सिक्रेट्स धोक्यात आणत आहात`
+- hello-world:344 "under the hood" is `तांत्रिकदृष्ट्या` here but `अंतर्गतपणे` at L346
+- nft:66-75 the PR's `इनिशियलाईज`/`टाईप` disagrees with `टाइप` elsewhere in the file and with the hello-world spelling

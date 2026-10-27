@@ -136,3 +136,15 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 15 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** Fluent, structurally clean Indonesian. The main problem is that the security page went back from `orakel` to `oracle`, against the high-confidence glossary entry, plus a few meaning shifts in the new founders and prediction-markets copy.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: exclusive `kami` mixed with inclusive `kita` in the mint tutorial; `peristiwa` vs glossary `kejadian` (websockets:79).

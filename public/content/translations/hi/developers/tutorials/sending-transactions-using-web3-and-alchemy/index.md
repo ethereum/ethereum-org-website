@@ -1,8 +1,8 @@
 ---
-title: "Web3 का उपयोग करके लेन-देन भेजना"
-description: "यह Web3 का उपयोग करके इथेरियम लेन-देन भेजने के लिए शुरुआती लोगों के अनुकूल एक मार्गदर्शिका है। इथेरियम ब्लॉकचेन पर लेन-देन भेजने के लिए तीन मुख्य चरण हैं: बनाना, हस्ताक्षर करना और ब्रॉडकास्ट करना। हम इन तीनों के बारे में जानेंगे।"
+title: "Viem का उपयोग करके लेन-देन भेजना"
+description: "यह Viem लाइब्रेरी का उपयोग करके इथेरियम लेन-देन भेजने के लिए शुरुआती लोगों के अनुकूल एक मार्गदर्शिका है। इथेरियम ब्लॉकचेन पर लेन-देन भेजने के लिए तीन मुख्य चरण हैं: बनाना, हस्ताक्षर करना और प्रसारित करना। हम इन तीनों के बारे में जानेंगे।"
 author: "एलन हैल्परन"
-tags: ["लेन-देन", "web3.js", "Alchemy"]
+tags: ["लेन-देन", "Viem", "Alchemy"]
 skill: beginner
 breadcrumb: "लेन-देन भेजें"
 lang: hi
@@ -11,9 +11,9 @@ source: Alchemy docs
 sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 ---
 
-यह Web3 का उपयोग करके इथेरियम लेन-देन भेजने के लिए शुरुआती लोगों के अनुकूल एक मार्गदर्शिका है। इथेरियम ब्लॉकचेन पर लेन-देन भेजने के लिए तीन मुख्य चरण हैं: बनाना, हस्ताक्षर करना और ब्रॉडकास्ट करना। हम इन तीनों के बारे में जानेंगे, और उम्मीद है कि आपके किसी भी सवाल का जवाब देंगे! इस ट्यूटोरियल में, हम अपने लेन-देन को इथेरियम चेन पर भेजने के लिए [Alchemy](https://www.alchemy.com/) का उपयोग करेंगे। आप [यहां एक मुफ्त Alchemy खाता बना सकते हैं](https://auth.alchemy.com/signup)।
+यह [Viem](https://viem.sh/) लाइब्रेरी का उपयोग करके इथेरियम लेन-देन भेजने के लिए शुरुआती लोगों के अनुकूल एक मार्गदर्शिका है। इथेरियम ब्लॉकचेन पर लेन-देन भेजने के लिए तीन मुख्य चरण हैं: बनाना, हस्ताक्षर करना और प्रसारित करना। हम इन तीनों के बारे में जानेंगे, और उम्मीद है कि आपके किसी भी प्रश्न का उत्तर देंगे! इस ट्यूटोरियल में, हम अपने लेन-देन को इथेरियम चेन पर भेजने के लिए [Alchemy](https://www.alchemy.com/) का उपयोग करेंगे। आप [यहां एक मुफ्त Alchemy खाता बना सकते हैं](https://auth.alchemy.com/signup)।
 
-**नोट:** यह मार्गदर्शिका आपके ऐप के _बैकएंड_ पर आपके लेन-देन पर हस्ताक्षर करने के लिए है। यदि आप फ्रंटएंड पर अपने लेन-देन पर हस्ताक्षर करने को एकीकृत करना चाहते हैं, तो [ब्राउज़र प्रदाता के साथ Web3](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider) को एकीकृत करने के बारे में देखें।
+**नोट:** यह मार्गदर्शिका आपके ऐप के _बैकएंड_ पर आपके लेन-देन पर हस्ताक्षर करने के लिए है। यदि आप फ्रंटएंड पर अपने लेन-देन पर हस्ताक्षर करने को एकीकृत करना चाहते हैं, तो [मेटामास्क प्रदाता API](https://docs.metamask.io/wallet/reference/provider-api/) देखें।
 
 ## मूल बातें {#the-basics}
 
@@ -24,10 +24,11 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 - इसका मतलब है कि Alchemy आपकी ओर से लेन-देन पर हस्ताक्षर करके उन्हें भेज नहीं सकता है। इसका कारण सुरक्षा उद्देश्य है। Alchemy आपसे कभी भी अपनी निजी कुंजी साझा करने के लिए नहीं कहेगा, और आपको कभी भी अपनी निजी कुंजी किसी होस्ट किए गए नोड (या किसी और के साथ) साझा नहीं करनी चाहिए।
 - आप Alchemy के कोर API का उपयोग करके ब्लॉकचेन से पढ़ सकते हैं, लेकिन इस पर लिखने के लिए आपको Alchemy के माध्यम से भेजने से पहले अपने लेन-देन पर हस्ताक्षर करने के लिए किसी अन्य चीज़ का उपयोग करने की आवश्यकता होगी (यह किसी भी अन्य [नोड सेवा](/developers/docs/nodes-and-clients/nodes-as-a-service/) के लिए समान है)।
 
-### 2\. "साइनर" (signer) क्या है? {#what-is-a-signer}
+### 2\. "हस्ताक्षरकर्ता" (signer) क्या है? {#what-is-a-signer}
 
-- साइनर आपकी निजी कुंजी का उपयोग करके आपके लिए लेन-देन पर हस्ताक्षर करेंगे। इस ट्यूटोरियल में हम अपने लेन-देन पर हस्ताक्षर करने के लिए [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) का उपयोग करेंगे, लेकिन आप किसी अन्य Web3 लाइब्रेरी का भी उपयोग कर सकते हैं।
-- फ्रंटएंड पर, साइनर का एक अच्छा उदाहरण [मेटामास्क](https://metamask.io/) होगा, जो आपकी ओर से लेन-देन पर हस्ताक्षर करेगा और भेजेगा।
+- हस्ताक्षरकर्ता आपकी निजी कुंजी का उपयोग करके आपके लिए लेन-देन पर हस्ताक्षर करेंगे। इस ट्यूटोरियल में हम अपने लेन-देन पर हस्ताक्षर करने के लिए [Viem](https://viem.sh/) का उपयोग करेंगे, लेकिन आप किसी अन्य Web3 लाइब्रेरी का भी उपयोग कर सकते हैं।
+- फ्रंटएंड पर, हस्ताक्षरकर्ता का एक अच्छा उदाहरण [मेटामास्क](https://metamask.io/) होगा, जो आपकी ओर से लेन-देन पर हस्ताक्षर करेगा और भेजेगा।
+
 ### 3\. मुझे अपने लेन-देन पर हस्ताक्षर करने की आवश्यकता क्यों है? {#why-do-i-need-to-sign-my-transactions}
 
 - इथेरियम नेटवर्क पर लेन-देन भेजने के इच्छुक प्रत्येक उपयोगकर्ता को लेन-देन पर (अपनी निजी कुंजी का उपयोग करके) हस्ताक्षर करना होगा, ताकि यह मान्य किया जा सके कि लेन-देन का मूल वही है जो वह होने का दावा करता है।
@@ -39,21 +40,21 @@ sourceUrl: https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum
 
 ### 5\. `eth_sendTransaction` और `eth_sendRawTransaction` के बीच क्या अंतर है? {#difference-between-send-and-send-raw}
 
-`eth_sendTransaction` और `eth_sendRawTransaction` दोनों इथेरियम API फ़ंक्शन हैं जो इथेरियम नेटवर्क पर एक लेन-देन को ब्रॉडकास्ट करते हैं ताकि इसे भविष्य के ब्लॉक में जोड़ा जा सके। वे लेन-देन पर हस्ताक्षर करने के तरीके में भिन्न होते हैं।
+`eth_sendTransaction` और `eth_sendRawTransaction` दोनों इथेरियम एप्लिकेशन प्रोग्रामिंग इंटरफ़ेस (API) फ़ंक्शन हैं जो इथेरियम नेटवर्क पर एक लेन-देन प्रसारित करते हैं ताकि इसे भविष्य के ब्लॉक में जोड़ा जा सके। वे लेन-देन पर हस्ताक्षर करने के तरीके में भिन्न होते हैं।
 
-- [`eth_sendTransaction`](https://docs.web3js.org/api/web3-eth/function/sendTransaction) का उपयोग _बिना हस्ताक्षर वाले_ लेन-देन भेजने के लिए किया जाता है, जिसका अर्थ है कि जिस नोड पर आप भेज रहे हैं उसे आपकी निजी कुंजी का प्रबंधन करना होगा ताकि वह चेन पर ब्रॉडकास्ट करने से पहले लेन-देन पर हस्ताक्षर कर सके। चूंकि Alchemy उपयोगकर्ताओं की निजी कुंजियों को नहीं रखता है, इसलिए वे इस पद्धति का समर्थन नहीं करते हैं।
-- [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) का उपयोग उन लेन-देन को ब्रॉडकास्ट करने के लिए किया जाता है जिन पर पहले ही हस्ताक्षर किए जा चुके हैं। इसका मतलब है कि आपको पहले [`signTransaction(tx, private_key)`](https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction) का उपयोग करना होगा, फिर परिणाम को `eth_sendRawTransaction` में पास करना होगा।
+- [`eth_sendTransaction`](/developers/docs/apis/json-rpc/#eth-sendtransaction) का उपयोग _बिना हस्ताक्षर वाले_ लेन-देन भेजने के लिए किया जाता है, जिसका अर्थ है कि जिस नोड को आप भेज रहे हैं उसे आपकी निजी कुंजी का प्रबंधन करना होगा ताकि वह चेन पर प्रसारित करने से पहले लेन-देन पर हस्ताक्षर कर सके। चूंकि Alchemy उपयोगकर्ता की निजी कुंजियों को नहीं रखता है, इसलिए वे इस पद्धति का समर्थन नहीं करते हैं।
+- [`eth_sendRawTransaction`](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction) का उपयोग उन लेन-देन को प्रसारित करने के लिए किया जाता है जिन पर पहले ही हस्ताक्षर किए जा चुके हैं। इसका मतलब है कि आपको पहले अपनी निजी कुंजी के साथ लेन-देन पर हस्ताक्षर करना होगा (Viem में, [स्थानीय खाते](https://viem.sh/docs/accounts/local/privateKeyToAccount) के साथ [`signTransaction`](https://viem.sh/docs/actions/wallet/signTransaction) का उपयोग करके), फिर परिणाम को `eth_sendRawTransaction` में पास करना होगा।
 
-Web3 का उपयोग करते समय, [web3.eth.sendSignedTransaction](https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction) फ़ंक्शन को कॉल करके `eth_sendRawTransaction` तक पहुंचा जाता है।
+Viem का उपयोग करते समय, `eth_sendRawTransaction` को [`sendRawTransaction`](https://viem.sh/docs/actions/wallet/sendRawTransaction) फ़ंक्शन कॉल करके एक्सेस किया जाता है।
 
 इस ट्यूटोरियल में हम इसी का उपयोग करेंगे।
 
 ### 6\. Web3 लाइब्रेरी क्या है? {#what-is-the-web3-library}
 
-- Web3.js मानक जेसन-आरपीसी (JSON-RPC) कॉल के चारों ओर एक रैपर लाइब्रेरी है जिसका उपयोग इथेरियम विकास में काफी आम है।
-- विभिन्न भाषाओं के लिए कई Web3 लाइब्रेरी हैं। इस ट्यूटोरियल में हम [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) का उपयोग करेंगे जो JavaScript में लिखा गया है। आप [यहां](/developers/docs/apis/javascript/) अन्य विकल्पों की जांच कर सकते हैं जैसे [Ethers.js](https://docs.ethers.org/v5/)।
+- एक Web3 लाइब्रेरी मानक [जेसन-आरपीसी कॉल](/developers/docs/apis/json-rpc/) के चारों ओर एक रैपर है जिसका उपयोग इथेरियम विकास में काफी आम है।
+- विभिन्न भाषाओं के लिए कई Web3 लाइब्रेरी हैं। इस ट्यूटोरियल में हम [Viem](https://viem.sh/) का उपयोग करेंगे, जो TypeScript में लिखा गया है और किसी भी JavaScript प्रोजेक्ट में काम करता है। आप [यहां](/developers/docs/apis/javascript/) अन्य विकल्प देख सकते हैं जैसे [Ethers.js](https://docs.ethers.org/v6/)।
 
-ठीक है, अब जब हमने इनमें से कुछ सवालों को स्पष्ट कर लिया है, तो आइए ट्यूटोरियल पर आगे बढ़ते हैं। Alchemy [डिस्कॉर्ड](https://discord.gg/gWuC7zB) में कभी भी सवाल पूछने के लिए स्वतंत्र महसूस करें!
+ठीक है, अब जब हमने इनमें से कुछ सवालों के जवाब दे दिए हैं, तो आइए ट्यूटोरियल पर आगे बढ़ते हैं। Alchemy [डिस्कॉर्ड](https://discord.gg/gWuC7zB) में कभी भी प्रश्न पूछने के लिए स्वतंत्र महसूस करें!
 
 ### 7\. सुरक्षित, गैस-अनुकूलित और निजी लेन-देन कैसे भेजें? {#how-to-send-secure-gas-optimized-and-private-transactions}
 
@@ -73,134 +74,158 @@ Web3 का उपयोग करते समय, [web3.eth.sendSignedTransact
 
 ### 2\. Sepolia फॉसेट से ETH का अनुरोध करें {#request-eth-from-sepolia-faucet}
 
-ETH प्राप्त करने के लिए [Alchemy Sepolia फॉसेट](https://www.sepoliafaucet.com/) पर दिए गए निर्देशों का पालन करें। सुनिश्चित करें कि आप अपना **Sepolia** इथेरियम पता (मेटामास्क से) शामिल करें, न कि किसी अन्य नेटवर्क का। निर्देशों का पालन करने के बाद, दोबारा जांच लें कि आपको अपने वॉलेट में ETH प्राप्त हो गया है।
+ETH प्राप्त करने के लिए [Alchemy Sepolia फॉसेट](https://www.alchemy.com/faucets/ethereum-sepolia) पर दिए गए निर्देशों का पालन करें, या अन्य [Sepolia फॉसेट](/developers/docs/networks/#sepolia) में से किसी एक का उपयोग करें। फॉसेट छोटी मात्रा देते हैं (Alchemy फॉसेट प्रति दिन 0.1 ETH देता है), जो इस ट्यूटोरियल के लिए पर्याप्त है। सुनिश्चित करें कि आप अपना **Sepolia** इथेरियम पता (मेटामास्क से) शामिल करें न कि किसी अन्य नेटवर्क का। निर्देशों का पालन करने के बाद, दोबारा जांच लें कि आपको अपने वॉलेट में ETH प्राप्त हो गया है।
 
 ### 3\. एक नई प्रोजेक्ट डायरेक्टरी बनाएं और उसमें `cd` करें {#create-a-new-project-direction}
 
 कमांड लाइन (Mac के लिए टर्मिनल) से एक नई प्रोजेक्ट डायरेक्टरी बनाएं और उसमें नेविगेट करें:
 
-```
+```sh
 mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4\. Alchemy Web3 (या कोई भी Web3 लाइब्रेरी) स्थापित करें {#install-alchemy-web3}
+### 4\. Viem (या कोई भी Web3 लाइब्रेरी) स्थापित करें {#install-alchemy-web3}
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) स्थापित करने के लिए अपनी प्रोजेक्ट डायरेक्टरी में निम्नलिखित कमांड चलाएं:
+[Viem](https://viem.sh/) स्थापित करने के लिए अपनी प्रोजेक्ट डायरेक्टरी में निम्नलिखित कमांड चलाएँ:
 
 ध्यान दें, यदि आप Ethers.js लाइब्रेरी का उपयोग करना चाहते हैं, तो [यहां दिए गए निर्देशों का पालन करें](https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum)।
 
-```
-npm install @alch/alchemy-web3
+```sh
+npm init -y
+npm install viem
 ```
 
 ### 5\. dotenv स्थापित करें {#install-dotenv}
 
 हम अपनी API कुंजी और निजी कुंजी को सुरक्षित रूप से संग्रहीत करने के लिए एक `.env` फ़ाइल का उपयोग करेंगे।
 
-```
-npm install dotenv --save
+```sh
+npm install dotenv
 ```
 
 ### 6\. `.env` फ़ाइल बनाएं {#create-the-dotenv-file}
 
-अपनी प्रोजेक्ट डायरेक्टरी में एक `.env` फ़ाइल बनाएं और निम्नलिखित जोड़ें ("`your-api-url`" और "`your-private-key`" को बदलते हुए):
+अपनी प्रोजेक्ट डायरेक्टरी में एक `.env` फ़ाइल बनाएं और निम्नलिखित जोड़ें ("`your-api-url`" और "`your-private-key`" को बदलते हुए)
 
-- अपना Alchemy API URL खोजने के लिए, अपने डैशबोर्ड पर अभी बनाए गए ऐप के ऐप विवरण पृष्ठ पर जाएं, ऊपरी दाएं कोने में "View Key" पर क्लिक करें, और HTTP URL प्राप्त करें।
-- मेटामास्क का उपयोग करके अपनी निजी कुंजी खोजने के लिए, इस [मार्गदर्शिका](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) को देखें।
+- अपना Alchemy API URL खोजने के लिए, अपने डैशबोर्ड पर अभी बनाए गए ऐप के ऐप विवरण पृष्ठ पर नेविगेट करें, ऊपरी दाएं कोने में "View Key" पर क्लिक करें, और HTTP URL लें।
+- मेटामास्क का उपयोग करके अपनी निजी कुंजी खोजने के लिए, इस [मार्गदर्शिका](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) को देखें। ऐसे खाते का उपयोग करें जिसमें केवल टेस्टनेट ETH हो।
 
-```
-API_URL = "your-api-url"
-PRIVATE_KEY = "your-private-key"
+```sh
+API_URL="your-api-url"
+PRIVATE_KEY="your-private-key"
 ```
 
 <Alert variant="warning">
 <AlertContent>
 <AlertDescription>
-<code>.env</code> को कमिट न करें! कृपया सुनिश्चित करें कि आप अपनी <code>.env</code> फ़ाइल को कभी भी किसी के साथ साझा या उजागर न करें, क्योंकि ऐसा करके आप अपने रहस्यों से समझौता कर रहे हैं। यदि आप संस्करण नियंत्रण (version control) का उपयोग कर रहे हैं, तो अपने <code>.env</code> को एक <a href="https://git-scm.com/docs/gitignore">gitignore</a> फ़ाइल में जोड़ें।
+<code>.env</code> को कमिट न करें! कृपया सुनिश्चित करें कि आप अपनी <code>.env</code> फ़ाइल को कभी भी किसी के साथ साझा या उजागर न करें, क्योंकि ऐसा करने से आप अपने रहस्यों से समझौता कर रहे हैं। यदि आप संस्करण नियंत्रण (version control) का उपयोग कर रहे हैं, तो अपनी <code>.env</code> को <a href="https://git-scm.com/docs/gitignore">gitignore</a> फ़ाइल में जोड़ें।
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ### 7\. `sendTx.js` फ़ाइल बनाएं {#create-sendtx-js}
 
-बहुत बढ़िया, अब जब हमने अपने संवेदनशील डेटा को `.env` फ़ाइल में सुरक्षित कर लिया है, तो आइए कोडिंग शुरू करें। हमारे लेन-देन भेजने के उदाहरण के लिए, हम Sepolia फॉसेट में ETH वापस भेजेंगे।
+बहुत बढ़िया, अब जब हमारा संवेदनशील डेटा `.env` फ़ाइल में सुरक्षित है, तो आइए कोडिंग शुरू करें। हमारे लेन-देन भेजने के उदाहरण के लिए, हम आपके द्वारा नियंत्रित किसी अन्य पते पर 0.001 ETH भेजेंगे, जैसे कि मेटामास्क में दूसरा खाता।
 
 एक `sendTx.js` फ़ाइल बनाएं, जहां हम अपने उदाहरण लेन-देन को कॉन्फ़िगर करेंगे और भेजेंगे, और इसमें कोड की निम्नलिखित पंक्तियां जोड़ें:
 
-```
+```js
+require("dotenv").config({ quiet: true })
+const { createPublicClient, createWalletClient, http, parseEther } = require("viem")
+const { privateKeyToAccount } = require("viem/accounts")
+const { sepolia } = require("viem/chains")
+
 async function main() {
-    require('dotenv').config();
-    const { API_URL, PRIVATE_KEY } = process.env;
-    const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-    const web3 = createAlchemyWeb3(API_URL);
-    const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: इस पते को अपने स्वयं के सार्वजनिक पते से बदलें
+  const { API_URL, PRIVATE_KEY } = process.env
+  const account = privateKeyToAccount(
+    PRIVATE_KEY.startsWith("0x") ? PRIVATE_KEY : `0x${PRIVATE_KEY}`
+  )
+  const publicClient = createPublicClient({
+    chain: sepolia,
+    transport: http(API_URL),
+  })
+  const walletClient = createWalletClient({
+    account,
+    chain: sepolia,
+    transport: http(API_URL),
+  })
 
-    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // नॉन्स 0 से गिनना शुरू करता है
+  const nonce = await publicClient.getTransactionCount({
+    address: account.address,
+    blockTag: "pending",
+  }) // नॉन्स की गिनती 0 से शुरू होती है
 
-    const transaction = {
-     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // ETH वापस करने के लिए फॉसेट का पता
-     'value': 1000000000000000000, // 1 ETH
-     'gas': 30000,
-     'nonce': nonce,
-     // संदेश भेजने या स्मार्ट अनुबंध निष्पादित करने के लिए वैकल्पिक डेटा फ़ील्ड
-    };
+  const transaction = await walletClient.prepareTransactionRequest({
+    to: "0xYourSecondAddress", // TODO: उस पते से बदलें जिस पर आप ETH भेजना चाहते हैं
+    value: parseEther("0.001"), // 0.001 ETH
+    gas: 21000n,
+    nonce,
+    // संदेश भेजने या स्मार्ट अनुबंध निष्पादित करने के लिए वैकल्पिक डेटा फ़ील्ड
+  })
 
-    const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
+  const signedTx = await walletClient.signTransaction(transaction)
 
-    web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
-    if (!error) {
-      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
-    } else {
-      console.log("❗Something went wrong while submitting your transaction:", error)
-    }
-   });
+  try {
+    const hash = await walletClient.sendRawTransaction({
+      serializedTransaction: signedTx,
+    })
+    console.log("🎉 The hash of your transaction is:", hash)
+
+    const receipt = await publicClient.waitForTransactionReceipt({ hash })
+    console.log(`Transaction ${receipt.status} in block ${receipt.blockNumber}`)
+  } catch (error) {
+    console.log(
+      "❗Something went wrong while submitting your transaction:",
+      error.details ?? error.message
+    )
+  }
 }
 
-main();
+main()
 ```
 
-**पंक्ति 6** पर दिए गए पते को अपने स्वयं के सार्वजनिक पते से बदलना सुनिश्चित करें।
+सुनिश्चित करें कि आप `0xYourSecondAddress` को उस पते से बदल दें जिस पर आप ETH भेजना चाहते हैं। स्क्रिप्ट `PRIVATE_KEY` से आपका अपना (भेजने वाला) पता प्राप्त करती है, इसलिए आपको इसे दर्ज करने की आवश्यकता नहीं है।
 
 अब, इस कोड को चलाने से पहले, आइए यहां कुछ घटकों के बारे में बात करते हैं।
 
-- `nonce` : नॉन्स विनिर्देश का उपयोग आपके पते से भेजे गए लेन-देन की संख्या पर नज़र रखने के लिए किया जाता है। हमें सुरक्षा उद्देश्यों और रीप्ले हमलों (replay attacks) को रोकने के लिए इसकी आवश्यकता है। आपके पते से भेजे गए लेन-देन की संख्या प्राप्त करने के लिए हम [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count) का उपयोग करते हैं।
-- `transaction`: लेन-देन ऑब्जेक्ट के कुछ पहलू हैं जिन्हें हमें निर्दिष्ट करने की आवश्यकता है
-  - `to`: यह वह पता है जिस पर हम ETH भेजना चाहते हैं। इस मामले में, हम उस [Sepolia फॉसेट](https://sepoliafaucet.com/) पर ETH वापस भेज रहे हैं जिससे हमने शुरू में अनुरोध किया था।
-  - `value`: यह वह राशि है जिसे हम भेजना चाहते हैं, जिसे Wei में निर्दिष्ट किया गया है जहां 10^18 Wei = 1 ETH
-  - `gas`: आपके लेन-देन में शामिल करने के लिए गैस की सही मात्रा निर्धारित करने के कई तरीके हैं। Alchemy [वेबहुक](https://www.alchemy.com/docs/reference/webhooks-overview) का समर्थन करता है जो आपको ऑनचेन गतिविधि के बारे में सूचित कर सकता है। मेननेट लेन-देन के लिए, शामिल करने के लिए गैस की सही मात्रा निर्धारित करने के लिए वर्तमान गैस स्थितियों की जांच करना एक अच्छा अभ्यास है। 21000 गैस की न्यूनतम मात्रा है जिसका उपयोग इथेरियम पर एक ऑपरेशन करेगा, इसलिए यह सुनिश्चित करने के लिए कि हमारा लेन-देन निष्पादित किया जाएगा, हम यहां 30000 डालते हैं।
+- `account`: [`privateKeyToAccount`](https://viem.sh/docs/accounts/local/privateKeyToAccount) के साथ आपकी निजी कुंजी से बनाया गया एक स्थानीय खाता। हस्ताक्षर करना आपकी मशीन पर होता है, और निजी कुंजी कभी भी Alchemy को नहीं भेजी जाती है।
+- `publicClient` और `walletClient`: Viem क्लाइंट जो आपके Alchemy URL पर जेसन-आरपीसी अनुरोध भेजते हैं। सार्वजनिक क्लाइंट चेन से पढ़ता है, और वॉलेट क्लाइंट आपके खाते के लिए लेन-देन तैयार करता है और उन पर हस्ताक्षर करता है।
+- `nonce` : नॉन्स विनिर्देश का उपयोग आपके पते से भेजे गए लेन-देन की संख्या पर नज़र रखने के लिए किया जाता है। हमें सुरक्षा उद्देश्यों और रीप्ले हमलों को रोकने के लिए इसकी आवश्यकता है। आपके पते से भेजे गए लेन-देन की संख्या प्राप्त करने के लिए हम [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count) का उपयोग करते हैं। Viem भी इसे आपके लिए भर देगा, लेकिन हम इसे स्पष्ट रूप से यहां लाते हैं ताकि यह दिखाया जा सके कि यह कहां से आता है।
+- `transaction`: लेन-देन ऑब्जेक्ट के कुछ पहलू हैं जिन्हें हमें निर्दिष्ट करने की आवश्यकता है। [`prepareTransactionRequest`](https://viem.sh/docs/actions/wallet/prepareTransactionRequest) हमारे लिए बाकी भरता है, जिसमें वर्तमान नेटवर्क स्थितियों के आधार पर `chainId` और [EIP-1559](/developers/docs/gas/) शुल्क फ़ील्ड `maxFeePerGas` और `maxPriorityFeePerGas` शामिल हैं।
+  - `to`: यह वह पता है जिस पर हम ETH भेजना चाहते हैं।
+  - `value`: यह वह राशि है जिसे हम भेजना चाहते हैं, जिसे Wei में निर्दिष्ट किया गया है जहां 10^18 Wei = 1 ETH। [`parseEther`](https://viem.sh/docs/utilities/parseEther) हमारे लिए ETH राशि को Wei में परिवर्तित करता है। आपके खाते को इससे थोड़ा अधिक चाहिए, क्योंकि यह गैस के लिए भी भुगतान करता है।
+  - `gas`: आपके लेन-देन में शामिल करने के लिए गैस की सही मात्रा निर्धारित करने के कई तरीके हैं। Alchemy [वेबहुक](https://www.alchemy.com/docs/reference/webhooks-overview) का समर्थन करता है जो आपको ऑनचेन गतिविधि के बारे में सूचित कर सकता है। मेननेट लेन-देन के लिए, शामिल करने के लिए गैस की सही मात्रा निर्धारित करने के लिए वर्तमान गैस स्थितियों की जांच करना एक अच्छा अभ्यास है। एक साधारण पते पर एक सादा ETH ट्रांसफर हमेशा ठीक 21000 गैस का उपयोग करता है, जो किसी भी लेन-देन के लिए न्यूनतम है, इसलिए हम यहां 21000 डालते हैं। यदि आप `gas` को छोड़ देते हैं, तो Viem आपके लिए इसका अनुमान लगाता है।
   - `nonce`: ऊपर नॉन्स परिभाषा देखें। नॉन्स शून्य से गिनना शुरू करता है।
   - [वैकल्पिक] data: आपके ट्रांसफर के साथ अतिरिक्त जानकारी भेजने, या स्मार्ट अनुबंध को कॉल करने के लिए उपयोग किया जाता है, बैलेंस ट्रांसफर के लिए आवश्यक नहीं है, नीचे दिया गया नोट देखें।
-- `signedTx`: हमारे लेन-देन ऑब्जेक्ट पर हस्ताक्षर करने के लिए हम अपनी `PRIVATE_KEY` के साथ `signTransaction` विधि का उपयोग करेंगे
-- `sendSignedTransaction`: एक बार जब हमारे पास हस्ताक्षरित लेन-देन हो जाता है, तो हम `sendSignedTransaction` का उपयोग करके इसे बाद के ब्लॉक में शामिल करने के लिए भेज सकते हैं
+- `signedTx`: हमारे लेन-देन ऑब्जेक्ट पर हस्ताक्षर करने के लिए हम `signTransaction` विधि का उपयोग करेंगे, जो इसे हमारे `PRIVATE_KEY` से बनाए गए खाते के साथ स्थानीय रूप से हस्ताक्षर करता है।
+- `sendRawTransaction`: एक बार जब हमारे पास एक हस्ताक्षरित लेन-देन होता है, तो हम इसे `sendRawTransaction` का उपयोग करके बाद के ब्लॉक में शामिल करने के लिए भेज सकते हैं, जो `eth_sendRawTransaction` को कॉल करता है।
+- `waitForTransactionReceipt`: लेन-देन के ब्लॉक में शामिल होने तक प्रतीक्षा करता है और इसकी रसीद देता है।
 
 **डेटा पर एक नोट**
 इथेरियम में दो मुख्य प्रकार के लेन-देन भेजे जा सकते हैं।
 
 - बैलेंस ट्रांसफर: एक पते से दूसरे पते पर ETH भेजें। किसी डेटा फ़ील्ड की आवश्यकता नहीं है, हालांकि, यदि आप अपने लेन-देन के साथ अतिरिक्त जानकारी भेजना चाहते हैं, तो आप इस फ़ील्ड में HEX प्रारूप में वह जानकारी शामिल कर सकते हैं।
-  - उदाहरण के लिए, मान लें कि हम एक IPFS दस्तावेज़ के हैश को इथेरियम चेन पर लिखना चाहते हैं ताकि इसे एक अपरिवर्तनीय टाइमस्टैम्प दिया जा सके। तब हमारा डेटा फ़ील्ड इस तरह दिखना चाहिए: `web3.utils.toHex(‘IPFS hash‘)`। और अब कोई भी चेन से पूछताछ कर सकता है और देख सकता है कि वह दस्तावेज़ कब जोड़ा गया था।
+  - उदाहरण के लिए, मान लें कि हम एक IPFS दस्तावेज़ के हैश को इथेरियम चेन पर लिखना चाहते हैं ताकि इसे एक अपरिवर्तनीय टाइमस्टैम्प दिया जा सके। हमारा डेटा फ़ील्ड तब Viem के [`toHex`](https://viem.sh/docs/utilities/toHex) का उपयोग करके `data: toHex("IPFS hash")` जैसा दिखना चाहिए। और अब कोई भी चेन से पूछताछ कर सकता है और देख सकता है कि वह दस्तावेज़ कब जोड़ा गया था।
 - स्मार्ट अनुबंध लेन-देन: चेन पर कुछ स्मार्ट अनुबंध कोड निष्पादित करें। इस मामले में, डेटा फ़ील्ड में वह स्मार्ट फ़ंक्शन होना चाहिए जिसे आप निष्पादित करना चाहते हैं, साथ ही कोई भी पैरामीटर।
   - एक व्यावहारिक उदाहरण के लिए, [हैलो वर्ल्ड स्मार्ट अनुबंध ट्यूटोरियल](/developers/tutorials/hello-world-smart-contract/) देखें।
+
 ### 8\. `node sendTx.js` का उपयोग करके कोड चलाएं {#run-the-code-using-node-sendtx-js}
 
 अपने टर्मिनल या कमांड लाइन पर वापस नेविगेट करें और चलाएं:
 
-```
+```sh
 node sendTx.js
 ```
 
-### 9\. मेमपूल में अपना लेन-देन देखें {#see-your-transaction-in-the-mempool}
+### 9\. ब्लॉक एक्सप्लोरर पर अपना लेन-देन देखें {#see-your-transaction-in-the-mempool}
 
-अपने Alchemy डैशबोर्ड में [मेमपूल पृष्ठ](https://dashboard.alchemy.com/mempool) खोलें और अपना लेन-देन खोजने के लिए अपने द्वारा बनाए गए ऐप के आधार पर फ़िल्टर करें। यह वह जगह है जहां हम अपने लेन-देन को लंबित (pending) स्थिति से माइन की गई (mined) स्थिति (यदि सफल हो) या ड्रॉप की गई (dropped) स्थिति (यदि असफल हो) में बदलते हुए देख सकते हैं। सुनिश्चित करें कि आप इसे "All" पर रखें ताकि आप "mined", "pending", और "dropped" लेन-देन को कैप्चर कर सकें। आप `0x31b98d14007bdee637298086988a0bbd31184523` पते पर भेजे गए लेन-देन को देखकर भी अपना लेन-देन खोज सकते हैं।
+जैसे ही नोड लेन-देन स्वीकार करता है, स्क्रिप्ट लेनदेन हैश प्रिंट करती है, फिर इसके ब्लॉक में शामिल होने तक प्रतीक्षा करती है (आमतौर पर कुछ सेकंड के भीतर) और परिणाम प्रिंट करती है। विवरण देखने के लिए, हैश को Sepolia ब्लॉक एक्सप्लोरर जैसे [Sepolia Etherscan](https://sepolia.etherscan.io/) या [Blockscout](https://eth-sepolia.blockscout.com/) में पेस्ट करें। वहां आप लेन-देन को लंबित से शामिल होने तक देख सकते हैं, और वह राशि, शुल्क और ब्लॉक देख सकते हैं जिसमें यह उतरा है।
 
-एक बार जब आप अपना लेन-देन पा लेते हैं, तो उसका विवरण देखने के लिए tx हैश का चयन करें, जो आपको एक ऐसे दृश्य पर ले जाएगा जो इस तरह दिखता है:
-
-![मेमपूल वॉचर स्क्रीनशॉट](./mempool.png)
-
-वहां से आप लाल रंग के घेरे वाले आइकन पर क्लिक करके Etherscan पर अपना लेन-देन देख सकते हैं!
+यदि आप इसके बजाय `insufficient funds` त्रुटि देखते हैं, तो आपके खाते में मूल्य और गैस को कवर करने के लिए पर्याप्त Sepolia ETH नहीं है। चरण 2 पर वापस जाएं और फॉसेट से अधिक का अनुरोध करें।
 
 **वाह! आपने अभी Alchemy का उपयोग करके अपना पहला इथेरियम लेन-देन भेजा है 🎉**
 
-_इस मार्गदर्शिका के बारे में प्रतिक्रिया और सुझावों के लिए, कृपया Alchemy के [डिस्कॉर्ड](https://discord.gg/A39JVCM) पर Elan को संदेश भेजें!_
+_इस मार्गदर्शिका के बारे में प्रतिक्रिया और सुझावों के लिए, कृपया Alchemy के [डिस्कॉर्ड](https://discord.gg/gWuC7zB) पर Elan को संदेश भेजें!_
 
 _मूल रूप से Alchemy द्वारा प्रकाशित।_

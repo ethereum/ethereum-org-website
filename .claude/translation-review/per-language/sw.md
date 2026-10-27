@@ -159,3 +159,16 @@ Scope: 25 files (smart-contracts/security + app-plasma retranslations, predictio
 - 19 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The new prediction-markets, founders and wallet-description content reads fluently and follows the glossary for brands. The app-plasma retranslation made one meaning reversal and a "phone call" regression, and the wallet descriptions brought in a wrong blockchain term; these need fixing before merge.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `kizuizi` (obstacle) changed to `kitalu` (block) (mint:142)
+
+**Notes:**
+
+- Warnings (heaviest drift): `simu` (phone call) used for RPC calls; `iliyokufuliwa` should be `iliyofuliwa`; private key / metadata / blockchain / function terms differ between files.

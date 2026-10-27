@@ -1,6 +1,6 @@
 ---
 title: Single slot finality
-description: Explanation of single slot finality
+description: "Single slot finality could cut Ethereum's time to finality from about 15 minutes to a single slot. Learn how it works and the tradeoffs involved."
 lang: en
 template: roadmap
 ---

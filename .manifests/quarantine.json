@@ -79,6 +79,39 @@
       "expiresAt": "2026-11-04T21:58:56.766Z"
     },
     {
+      "file": "public/content/developers/tutorials/how-to-mint-an-nft/index.md",
+      "locale": "ur",
+      "englishHash": "568b240d1510",
+      "class": "parse",
+      "reason": "Failed to parse incremental translation response: Expected ',' or '}' after property value in JSON at position 2468 (line 6 column 421)\nRaw response (first 500 chars): {\n  \"frontmatter:description\": \"یہ ٹیوٹوریل بتاتا ہے کہ ہمارے سمارٹ کنٹریکٹ، ⁦Hardhat⁩ اور ⁦ethers.js⁩ کا استعمال کرتے ہوئے ایتھیریم",
+      "attempts": 2,
+      "firstSeen": "2026-10-22T21:22:11.540Z",
+      "lastSeen": "2026-10-23T18:24:46.311Z",
+      "expiresAt": "2026-11-06T18:24:46.311Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md",
+      "locale": "ur",
+      "englishHash": "6de23ab5b542",
+      "class": "parse",
+      "reason": "Failed to parse incremental translation response: Expected ',' or '}' after property value in JSON at position 10476 (line 12 column 3078)\nRaw response (first 500 chars): {\n  \"frontmatter:title\": \"⁦viem⁩ کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنا\",\n  \"frontmatter:description\": \"یہ ⁦viem⁩ لائبریری کا است",
+      "attempts": 2,
+      "firstSeen": "2026-10-22T21:30:16.900Z",
+      "lastSeen": "2026-10-23T18:24:06.679Z",
+      "expiresAt": "2026-11-06T18:24:06.679Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/using-websockets/index.md",
+      "locale": "ur",
+      "englishHash": "f5b14801f6d1",
+      "class": "parse",
+      "reason": "Failed to parse incremental translation response: Expected ',' or '}' after property value in JSON at position 3284 (line 6 column 205)\nRaw response (first 500 chars): {\n  \"frontmatter:description\": \"کسی بھی ایتھیریم نوڈ پرووائیڈر کے ساتھ ⁦JSON-RPC⁩ درخواستیں کرنے اور ایونٹس کو سبسکرائب کرنے کے لیے ",
+      "attempts": 2,
+      "firstSeen": "2026-10-22T21:31:16.722Z",
+      "lastSeen": "2026-10-23T18:22:58.294Z",
+      "expiresAt": "2026-11-06T18:22:58.294Z"
+    },
+    {
       "file": "src/intl/en/page-developers-tools-descriptions.json",
       "locale": "ar",
       "englishHash": "be5bf65b8dc0",

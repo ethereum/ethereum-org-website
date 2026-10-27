@@ -164,3 +164,17 @@ Scope: 25 files (smart-contracts/security + app-plasma retranslations, predictio
 - 12 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The prose is high quality and matches the glossary. Every critical comes from the pipeline: renamed keys that shipped in English, acronym expansion in breadcrumb slots, and CJK underscore emphasis. All of them can be fixed by restoring the dev or ETHGlossary ui-context forms.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `梅塔马斯` changed to `梅塔马斯克` (view-nft:40)
+- `_x_` italics next to CJK characters converted to `<em>` (3 sites)
+
+**Notes:**
+
+- Warning: `gas 限制` in code comments vs `gas 上限` in prose.

@@ -1,6 +1,6 @@
 ---
 title: The Merge
-description: Learn about The Merge - when Mainnet Ethereum adopted proof-of-stake.
+description: "Learn about The Merge, when Ethereum Mainnet moved from proof-of-work to proof-of-stake in September 2022, cutting its energy use by about 99.95%."
 lang: en
 template: upgrade
 image: /images/upgrades/merge.png
