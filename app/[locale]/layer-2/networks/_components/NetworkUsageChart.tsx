@@ -16,9 +16,12 @@ const COLORS: Record<keyof BlockspaceData, string> = {
 const KEYS = Object.keys(COLORS) as (keyof BlockspaceData)[]
 
 const CustomLegend = ({ payload, chartConfig }) => (
-  <div className="mt-4 flex flex-wrap justify-center gap-2">
+  <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 lg:flex-nowrap">
     {payload.map((entry, index) => (
-      <div key={`legend-${index}`} className="flex items-center">
+      <div
+        key={`legend-${index}`}
+        className="flex items-center whitespace-nowrap"
+      >
         <div
           className="me-2 h-3 w-3 rounded-full"
           style={{ backgroundColor: entry.color }}
@@ -50,10 +53,7 @@ const NetworkUsageChart = ({
   ) satisfies ChartConfig
 
   return (
-    <ChartContainer
-      config={chartConfig}
-      className="h-[200px] max-w-[250px] sm:max-w-full"
-    >
+    <ChartContainer config={chartConfig} className="h-[200px] w-full">
       <BarChart accessibilityLayer data={chartData} barGap={"10%"}>
         <YAxis
           domain={[0, (dataMax) => dataMax + 15]}

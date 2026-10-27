@@ -195,7 +195,7 @@ const Page = async (props: { params: Promise<NetworkPageParams> }) => {
           ))}
         </div>
         {network.blockspaceData && (
-          <div className="w-fit rounded-2xl bg-background p-4">
+          <div className="w-full rounded-2xl bg-background p-4">
             <h3 className="text-sm font-bold text-body-medium">
               {t("page-layer-2-networks-network-usage")}
             </h3>
