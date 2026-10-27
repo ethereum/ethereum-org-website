@@ -300,4 +300,12 @@ module.exports = [
     "/storybook/staging",
     "https://staging--63b7ea99632763723c7f4d6b.chromatic.com/",
   ],
+  // Paths that AI assistants and old links still request (see #19140)
+  ["/developers/apis/json-rpc", "/developers/docs/apis/json-rpc/"],
+  [
+    "/developers/tutorials/solidity-and-truffle-continuous-integration-setup",
+    "/developers/tutorials/",
+  ],
+  ["/apps/cowswap", "/apps/"],
+  ["/apps/scout-game", "/apps/"],
 ]
