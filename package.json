@@ -194,6 +194,13 @@
       "react": "$react",
       "react-dom": "$react-dom"
     },
+    "packageExtensions": {
+      "typesense-docsearch-react": {
+        "dependencies": {
+          "@babel/runtime": "^7.29.7"
+        }
+      }
+    },
     "patchedDependencies": {
       "typesense-docsearch-react": "patches/typesense-docsearch-react.patch"
     }
