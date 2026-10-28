@@ -3,6 +3,13 @@ import type { BlockspaceData } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 import { numberToPercent } from "@/lib/utils/numbers"
 
+const COLORS: Partial<Record<keyof BlockspaceData, string>> = {
+  nft: "#0872FC",
+  defi: "#C32E8A",
+  social: "#1B9A92",
+  token_transfers: "#8E30FF",
+}
+
 /** Share of transactions per usage category, ranked; unlabeled always last. */
 const NetworkUsageChart = ({
   usageData,
@@ -46,11 +53,11 @@ const NetworkUsageChart = ({
             </div>
             <div className="h-1.5 overflow-hidden rounded-full bg-background">
               <div
-                className={cn(
-                  "h-full rounded-full",
-                  muted ? "bg-body-medium" : "bg-primary"
-                )}
-                style={{ width: `${share * 100}%` }}
+                className="h-full rounded-full bg-body-medium"
+                style={{
+                  width: `${share * 100}%`,
+                  backgroundColor: COLORS[key],
+                }}
               />
             </div>
           </li>
