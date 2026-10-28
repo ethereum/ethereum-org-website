@@ -53,14 +53,6 @@ const trackHeaderReset = () =>
     eventName: "reset_click",
   })
 
-// Category kept from the old table's empty state for trend comparability.
-const trackEmptyStateReset = () =>
-  trackCustomEvent({
-    eventCategory: "Layer2NetworksTable",
-    eventAction: "Reset button",
-    eventName: "reset_click",
-  })
-
 const NetworksResults = memo(function NetworksResults({
   mainnet,
   networks,
@@ -130,7 +122,6 @@ export default function NetworksCatalog({
         mobileVariant="sheet"
         urlParamKey={WALLET_KEY}
         labels={labels.catalog}
-        onReset={trackEmptyStateReset}
         renderSidebarHeader={({ state, setFilter }) => (
           <CatalogFiltersHeader
             state={state}
