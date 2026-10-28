@@ -34,6 +34,10 @@ const config: StorybookConfig = {
     { from: "../public/audio", to: "/audio" },
   ],
 
+  // next >=16.4 picocolors reads globalThis.process.env unguarded at import time.
+  previewHead: (head) =>
+    `${head}<script>globalThis.process ??= { env: {} }</script>`,
+
   framework: {
     name: "@storybook/nextjs",
     options: {},

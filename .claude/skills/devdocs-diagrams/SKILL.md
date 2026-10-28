@@ -30,7 +30,7 @@ Shared pieces in `src/components/Diagrams/`:
 | `use-step-player.ts`      | `useStepPlayer({ idle, last, initial, dwellMs, dwellReducedMs, paused })`: step state, `run`, `goTo`, `reset`                                   |
 | `diagram-hover.tsx`       | Shared hover/focus state (`usePartState`, `useHoverTargets`) and `useDiagramInView` (pauses off screen)                                         |
 | `diagram-messages.tsx`    | Server component: hands the player only its own strings plus shared `diagram-*` ones                                                            |
-| `diagram-figure.tsx`      | `<figure>` (`my-space-2x`), the centred caption under the card, the screen-reader description                                                   |
+| `diagram-figure.tsx`      | `<figure id="fig-N">` (`my-space-2x`), the centred caption under the card, the screen-reader description, the no-JS style                       |
 | `anatomy/iso.tsx`         | `isoProjection` (`P`, `line`, `path`, `box`, `cylinder`, `footprint`), `IsoPlate`, `IsoSolid`, `IsoCylinder`, `IsoPipe`, `IsoDefs`, `isoShadow` |
 | `anatomy/detail.tsx`      | `isoDetail`: seams, plates, cells, vents, tank marks                                                                                            |
 | `anatomy/labels.tsx`      | `AnatomyLabels`: concept labels with leaders, collision-dropped, one tab stop                                                                   |
@@ -48,8 +48,8 @@ Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` pe
 3. **Strings.** Labels, one-line `-definition-<part>`s, `-title`, `-caption` (one line under the card), `-description` (narrates the whole drawing; it is the text alternative), `-step-*` captions and short `-status-*` lines. **Every number is an ICU param** (`{limit}`, `{cost}`, `{step}`), formatted by the player with `useDiagramFormat()` (wraps `numberFormat`: arabext digits for `ur`, locale grouping elsewhere). Never write digits into a string. Opcode names and code stay as literal text. Idle copy invites the reader to act with the same words as the controls: "Choose a scenario and send the transaction..." for a diagram with presets, "Apply the transaction to follow..." without.
 4. **Rig** (`rig.tsx`). Geometry, detail and shadows built once at module level; `<g data-part="id">` per part; root `<svg aria-hidden data-anatomy-drawing {...DIAGRAM_SVG_FALLBACKS} className={ISO_SVG_CLASS}>`; `AnatomyLabels` with spots in priority order. Use `useTranslations` only for shared strings like `diagram-reverted`. `export default memo(Rig)`.
 5. **Player** (`player.tsx`). `useStepPlayer` (never a hand-rolled timer), `useMemo` the view per preset and step, `useMemo` labels and definitions on `t`. Readout numbers that move use `<DiagramCountUp value delay />`. Pass every caption the preset can show to `DiagramCaption all`.
-6. **Wire in.** `index.tsx` wraps the lazy player in `DiagramMessages` (no extra wrapper: the `<figure>` carries `my-space-2x` and takes `className`); import it in `src/layouts/Docs.tsx` and add it to `docsComponents`. Swap the `![...](x.png)` line in **English markdown only** for `<Name fig={N} />` and drop the PNG's "adapted from" credit line: the diagrams are original drawings. Leave the PNG and translated markdown alone; the intl pipeline propagates.
-7. **Guard and stories** (below), then the PR.
+6. **Wire in.** `index.tsx` wraps the lazy player in `DiagramMessages` (no extra wrapper: the `<figure>` carries `my-space-2x` and takes `className`); import it in `src/layouts/Docs.tsx` and add it to `docsComponents`. Swap the `![...](x.png)` line in **English markdown only** for `<Name />` (no `fig`: the page numbers it) and drop the PNG's "adapted from" credit line: the diagrams are original drawings. Leave the PNG and translated markdown alone; the intl pipeline propagates.
+7. **Stories and checks** (below), then the PR.
 
 ## Content accuracy
 
@@ -76,10 +76,10 @@ A diagram teaches, so its numbers and words get the same review as the page text
 
 ## Shell (`InteractiveDiagram`)
 
-One card, so controls sit in the same places everywhere. From a 640px card width (container query) a 15rem panel sits on the inline-end side; narrower it stacks under the illustration. Illustration column: figure header in small caps ("Fig. N · Title", from `fig={N}`), drawing, status line (sans, two lines reserved; the step at rest, "Label: definition" on hover), legend. Panel, top to bottom:
+One card, so controls sit in the same places everywhere. From a 640px card width (container query) a 15rem panel sits on the inline-end side; narrower it stacks under the illustration. Illustration column: figure header in small caps ("Fig. N · Title", from `fig`), drawing, status line (sans, two lines reserved; the step at rest, "Label: definition" on hover), legend. Panel, top to bottom:
 
 1. `DiagramPresets` (optional; omit for a diagram with one fixed example): "Choose scenario", a segmented `ui/radio-group` (radio roles, one tab stop, arrow keys).
-2. `DiagramTransport`: primary action (full width of the panel, disabled while running), then previous, the counter, next (`data-diagram-next`), reset. Pass `current` (1 to `total` for a step, 0 at idle) and `total`: it shows "Step 2 of 4", and "4 steps" at idle.
+2. `DiagramTransport`: primary action (full width of the panel, disabled while running), then previous, the counter, next, reset. Pass `current` (1 to `total` for a step, 0 at idle) and `total`: it shows "Step 2 of 4", and "4 steps" at idle.
 3. `DiagramCaption`: polite `role="status"`; sized by empty CSS-content sizers (`content: attr(data-sizer)`), one per possible caption, so the height never jumps and the text appears in the page only once.
 4. `DiagramReadout`: two columns, mono tabular numbers.
 
@@ -87,6 +87,7 @@ Hover and focus are built in: wrap each part in `<g data-part="id">` with the sa
 
 ## Accessibility
 
+- **Figure numbers and anchors.** `remarkFigureNumbers` (`src/lib/md/compile.ts`) numbers every `<…Diagram />` element on a docs page in order and passes `fig={n}`; images aren't counted, and a `fig` written in the markdown wins. `fig` renders "Fig. N" in the header and the `<figure>`'s `id="fig-N"` (`figure` gets `scroll-mt-32` from `base.css`), so `#fig-2` links to it. Name every diagram component `<Name>Diagram` or it won't be numbered.
 - `<figure>` with a centred `<figcaption>` under the card (14px, `text-body-medium`) and the `-description` linked by `aria-describedby`. The drawing is `aria-hidden`.
 - Labels are **one tab stop** (roving tabindex) in a `role="group"` named by `diagram-parts-label`; arrow keys (mirrored in RTL), Home and End move between visible labels. Each label's definition is its `aria-describedby`.
 - Step changes are announced once by the caption's `role="status"`; the status line is `aria-hidden`.
@@ -95,17 +96,18 @@ Hover and focus are built in: wrap each part in `<g data-part="id">` with the sa
 
 ## Performance
 
-- Server-rendered: the idle drawing is in the page HTML (about 2.5-3 KB gzipped per diagram), so no placeholder pop-in and something to show without JS.
+- Server-rendered: the idle drawing is in the page HTML (about 2.5-3 KB gzipped per diagram), so no placeholder pop-in and something to show without JS. Without JS a `<noscript>` style in `DiagramFigure` hides the controls panel (`data-diagram-panel`), widens the drawing and shows the `-description` as text, so the walkthrough is still readable. No extra strings.
 - Client JS loads only on pages that render the diagram (`lazy-player.tsx`). Strings ship only with the diagram (`DiagramMessages`); `component-diagrams` is not a layout namespace.
 - Fonts: only the site's existing faces (Inter, IBM Plex Mono 400). Never add a weight or style for a diagram: `next/font` preloads every face on every page.
 - Animate only opacity, transform and stroke-dashoffset. Runs, timers and CSS animations pause off screen (`useDiagramInView` → `data-paused`).
 - The only JS-driven motion is `DiagramCountUp` (a ~700ms tween), a leaf so it re-renders only its own text. Rigs are memoised; static detail is built at module level.
 - Label collision checks wait until the drawing nears the viewport, then re-run on resize and once fonts load.
 
-## Guard, stories and checks
+## Stories and checks
 
-- `tests/e2e/diagram-strokes.spec.ts` walks every shape of every `DiagramStage` on the pages it lists, for every preset and step and each label's hover state, light and dark, and fails on a missing stroke or a black fill. Add each new diagram's page.
-- Stories: idle, each step (`initialStep`), each preset, `Dark`, `Rtl` (`globals: { locale: "ar" }`), mobile (`viewport: base`), reduced motion, a hover story with a play function that focuses a label. Open them in `pnpm storybook`; `build-storybook` doesn't execute them.
+- Stories: idle, each step (`initialStep`), each preset, `Dark`, `Rtl` (`globals: { locale: "ar" }`), mobile (`viewport: base`), a hover story with a play function that focuses a label. Chromatic already runs with reduced motion, so no separate reduced-motion story. Open them in `pnpm storybook`; `build-storybook` doesn't execute them.
+- **Snapshots: key states only.** Set `chromatic: { disableSnapshot: true }` on the meta and opt in per story with `disableSnapshot: false`: idle, the final step, the failure end state (e.g. out of gas), dark, RTL and mobile. Step-by-step and hover stories stay unsnapshotted. Don't add a mobile story when the meta's modes already include the `base` viewport.
+- No e2e guard for strokes: static token classes and the `var()` fallbacks in `DIAGRAM_SVG_FALLBACKS` prevent vanishing lines, and the snapshots show it if one breaks.
 - Screenshot light and dark at 1440px, 1024px and 390px, RTL, every step: no black paint, no label collisions, no labels on shapes, no leader crossings, nothing clipped.
 - `pnpm lint`, `pnpm type-check`, `pnpm lint:md`, `pnpm build-storybook`.
 

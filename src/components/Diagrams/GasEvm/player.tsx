@@ -123,7 +123,7 @@ export function GasEvmPlayer({
         slot: format(SLOT.arg ?? 0),
         sstore: format(SSTORE.cost),
       })}
-      figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
+      fig={fig}
       title={t("gas-evm-title")}
       status={
         view.stepIndex < 0

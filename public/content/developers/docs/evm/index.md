@@ -56,7 +56,7 @@ Contracts contain a Merkle Patricia _storage_ trie (as a word-addressable word a
 
 Compiled smart contract bytecode executes as a number of EVM [opcodes](/developers/docs/evm/opcodes), which perform standard stack operations like `XOR`, `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc. The opcode set also includes `TSTORE` and `TLOAD`, which provide access to transient storage.
 
-<GasEvmDiagram fig={2} />
+<GasEvmDiagram />
 
 ## EVM implementations {#evm-implementations}
 

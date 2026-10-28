@@ -127,7 +127,7 @@ export function GasTxPlayer({
       className={className}
       caption={t("gas-tx-caption")}
       description={t("gas-tx-description")}
-      figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
+      fig={fig}
       title={t("gas-tx-title")}
       status={t(view.captionKey.replace("-step-", "-status-"), valuesFor(view))}
       parts={parts}
