@@ -79,7 +79,7 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 - CPU with 2+ cores
 - 16 GB RAM (32 GB recommended for stability)
-- 2 TB NVMe SSD (likely exceeded by 2027, read more about [Great and less great SSDs for Ethereum nodes](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- 4 TB NVMe SSD (read more about [Great and less great SSDs for Ethereum nodes](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - 25+ MBit/s bandwidth
 
 ##### Recommended specifications
