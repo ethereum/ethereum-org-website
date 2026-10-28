@@ -130,7 +130,7 @@ export function TxApplyPlayer({
       className={className}
       caption={t("tx-apply-caption", amounts)}
       description={t("tx-apply-description", amounts)}
-      figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
+      fig={fig}
       title={t("tx-apply-title")}
       status={t(`tx-apply-status-${view.motion}`, amounts)}
       parts={parts}

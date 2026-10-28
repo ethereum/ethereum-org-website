@@ -90,7 +90,7 @@ export function EvmZonesPlayer({
         "evm-zones-description",
         Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)]))
       )}
-      figLabel={fig ? t("diagram-fig", { number: format(fig) }) : undefined}
+      fig={fig}
       title={t("evm-zones-title")}
       status={t(`evm-zones-status-${view.motion}`)}
       parts={parts}

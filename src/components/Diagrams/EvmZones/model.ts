@@ -1,7 +1,7 @@
 /**
  * Plain model for the evm.png replacement ("What survives a call"). The EVM's
  * parts sit in three zones: machine state (volatile: program counter, stack,
- * memory, gas available), the virtual ROM (immutable: the EVM code) and world
+ * memory, gas supply), the virtual ROM (immutable: the EVM code) and world
  * state (persistent: account storage). One call runs the gas diagram's
  * program (store 42 in memory, then in a storage slot); when it ends, only
  * the storage write is left. The drawing, readout and captions all read from
@@ -56,7 +56,7 @@ export interface EvmZonesView {
   stack: number[]
   memoryWritten: boolean
   storageWritten: boolean
-  /** Share of the gas available, 0-1. */
+  /** Share of the gas supply left, 0-1. */
   tankLevel: number
   /** Gas is being drawn in this step. */
   gasFlowing: boolean
