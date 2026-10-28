@@ -56,7 +56,12 @@ export interface InteractiveDiagramProps {
   caption: ReactNode
   /** Screen-reader description of the whole figure. */
   description: ReactNode
-  /** e.g. "Fig. 2"; omitted when the page does not number its figures. */
+  /**
+   * Figure number on the page: shown as "Fig. N" and the figure's `#fig-N`
+   * anchor. Docs pages get it automatically (`remarkFigureNumbers`).
+   */
+  fig?: number
+  /** Overrides the "Fig. N" text, e.g. for a story with literal strings. */
   figLabel?: ReactNode
   /** Short title, shown in the figure header. */
   title: ReactNode
@@ -82,6 +87,7 @@ export interface InteractiveDiagramProps {
 export function InteractiveDiagram({
   caption,
   description,
+  fig,
   figLabel,
   title,
   illustration,
@@ -96,9 +102,12 @@ export function InteractiveDiagram({
   paused,
   className,
 }: InteractiveDiagramProps) {
+  const t = useTranslations("component-diagrams")
+  const format = useDiagramFormat()
   return (
     <DiagramHoverProvider>
       <DiagramFigure
+        id={fig ? `fig-${fig}` : undefined}
         caption={caption}
         description={description}
         className={className}
@@ -107,7 +116,10 @@ export function InteractiveDiagram({
           <DiagramStage
             illustration={
               <DiagramIllustration
-                figLabel={figLabel}
+                figLabel={
+                  figLabel ??
+                  (fig ? t("diagram-fig", { number: format(fig) }) : undefined)
+                }
                 title={title}
                 status={status}
                 parts={parts}

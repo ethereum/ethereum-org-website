@@ -29,9 +29,14 @@ export function DiagramStage({
       data-diagram-stage=""
       className={cn("@container", className)}
     >
-      <div className="grid gap-3 p-(--card-pad) @[640px]:grid-cols-[minmax(0,1fr)_15rem] @[640px]:items-center @[640px]:gap-6">
+      <div
+        data-diagram-grid=""
+        className="grid gap-3 p-(--card-pad) @[640px]:grid-cols-[minmax(0,1fr)_15rem] @[640px]:items-center @[640px]:gap-6"
+      >
         <div className="flex min-w-0 justify-center">{illustration}</div>
-        <div className="flex min-w-0 flex-col gap-4">{panel}</div>
+        <div data-diagram-panel="" className="flex min-w-0 flex-col gap-4">
+          {panel}
+        </div>
       </div>
     </Card>
   )

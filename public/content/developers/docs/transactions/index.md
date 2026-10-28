@@ -169,7 +169,7 @@ The base fee will be burned **-0.00399 ETH**
 Validator keeps the tip **+0.000210 ETH**
 
 
-<GasTxDiagram fig={1} />
+<GasTxDiagram />
 
 Any gas not used in a transaction is refunded to the user account.
 
