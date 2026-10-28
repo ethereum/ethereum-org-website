@@ -6,8 +6,10 @@ import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 import CallToContribute from "@/components/CallToContribute"
 import ContentFeedback from "@/components/ContentFeedback"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
+import EvmZonesDiagram from "@/components/Diagrams/EvmZones"
 import GasEvmDiagram from "@/components/Diagrams/GasEvm"
 import GasTxDiagram from "@/components/Diagrams/GasTx"
+import TxApplyDiagram from "@/components/Diagrams/TxApply"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
 import FileContributors from "@/components/FileContributors"
@@ -37,10 +39,12 @@ export const docsComponents = {
   DeveloperDocsLinks,
   Divider,
   Emoji,
+  EvmZonesDiagram,
   GasEvmDiagram,
   GasTxDiagram,
   GlossaryTooltip,
   PieChart,
+  TxApplyDiagram,
   YouTube,
 } as MDXRemoteProps["components"]
 

@@ -54,7 +54,7 @@ export const OutOfGas: Story = {
     docs: {
       description: {
         story:
-          "All 100,000 gas is consumed, state changes are reverted, and the refund lane stays dimmed: nothing is returned.",
+          "All 100,000 gas is consumed, state changes are reverted, and the return lane stays dimmed: nothing is returned.",
       },
     },
   },
