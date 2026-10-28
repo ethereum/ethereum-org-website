@@ -1,106 +1,127 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ur",
-  "translatedAt": "2026-06-17T00:51:44.135Z",
-  "englishManifestHash": "abeabd1a0da0",
+  "translatedAt": "2026-10-26T17:20:08.598Z",
+  "englishManifestHash": "6de23ab5b542",
   "placeholderOrder": [
+    "LINK-d16d1b",
     "LINK-63b4bc",
-    "LINK-1e2240",
-    "LINK-65f5a1",
+    "LINK-90c44a",
+    "LINK-21b465",
     "LINK-754df5",
-    "LINK-84d76c",
+    "LINK-d16d1b",
     "LINK-5c9ac9",
     "CODE-e9cbb0",
     "CODE-beee7c",
     "CODE-4731fa",
     "CODE-beee7c",
     "CODE-4731fa",
-    "LINK-026b50",
+    "LINK-34435b",
     "CODE-beee7c",
-    "LINK-885480",
+    "LINK-29d086",
     "CODE-4731fa",
-    "LINK-055fc2",
-    "CODE-014e0f",
+    "LINK-ff0d02",
+    "LINK-896bb0",
+    "CODE-99f391",
     "CODE-4731fa",
+    "LINK-6fc94f",
+    "CODE-4010ff",
     "CODE-4731fa",
-    "LINK-8a50f3",
-    "LINK-dca13e",
-    "LINK-8d4123",
-    "LINK-4d6f08",
+    "LINK-926d6f",
+    "LINK-d16d1b",
+    "LINK-a570c8",
+    "LINK-faa750",
     "LINK-d80c17",
-    "LINK-7f9ae6",
-    "LINK-303158",
-    "LINK-110d5d",
+    "LINK-041291",
+    "LINK-d98384",
+    "LINK-a235f5",
     "LINK-9a5946",
-    "LINK-a6ccfd",
-    "LINK-d34211",
-    "LINK-76e312",
+    "LINK-f25404",
+    "LINK-3ac423",
+    "LINK-e46028",
+    "LINK-36e14c",
     "CODE-21e721",
-    "CODEBLOCK-fcba10",
-    "LINK-dca13e",
-    "LINK-88f803",
-    "CODEBLOCK-a323be",
+    "CODEBLOCK-8d37bd",
+    "LINK-d16d1b",
+    "LINK-983a45",
+    "CODEBLOCK-49061d",
     "CODE-e9cbb0",
-    "CODEBLOCK-065740",
+    "CODEBLOCK-914967",
     "CODE-e9cbb0",
     "CODE-e9cbb0",
     "CODE-de21f6",
     "CODE-5ce4be",
-    "LINK-9b6cf0",
-    "CODEBLOCK-490b36",
+    "LINK-9e1387",
+    "CODEBLOCK-547052",
     "HTMLTAG-cee394",
     "CODE-76884f",
     "CODE-e9cbb0",
     "CODE-76884f",
-    "CODEBLOCK-5af9ce",
+    "CODEBLOCK-9d0f4c",
+    "CODE-68ba74",
+    "CODE-c52233",
+    "CODE-9af211",
+    "LINK-998284",
+    "CODE-306679",
+    "CODE-a8e495",
+    "CODE-044fcc",
     "CODE-78377b",
-    "LINK-364bc2",
-    "LINK-a4b1de",
+    "LINK-d045f2",
     "CODE-ce9225",
+    "LINK-b1857d",
+    "CODE-c9fea5",
+    "CODE-be6206",
+    "LINK-47d0ce",
+    "CODE-7c58b1",
+    "CODE-8c83aa",
     "CODE-663ea1",
-    "LINK-f03b13",
     "CODE-cd4240",
+    "LINK-ef4f6f",
+    "CODE-c3f6c2",
     "CODE-2fe840",
-    "LINK-619fbd",
-    "LINK-80b591",
+    "LINK-c1c779",
+    "CODE-2fe840",
     "CODE-78377b",
     "CODE-6a31b6",
-    "CODE-c52233",
     "CODE-99f391",
-    "CODE-9f2eeb",
-    "CODE-9f2eeb",
-    "CODE-d21f08",
-    "LINK-80eb46",
+    "CODE-c52233",
+    "CODE-4010ff",
+    "CODE-4010ff",
+    "CODE-4731fa",
+    "CODE-3fef10",
+    "LINK-164a6a",
+    "CODE-9b5f3b",
+    "CODE-844ab0",
+    "LINK-481f0a",
     "CODE-6f7915",
-    "CODEBLOCK-d12e41",
-    "LINK-c7daa7",
-    "CODE-a4de46",
-    "IMAGE-5a2d01",
-    "LINK-f975b1",
-    "LINK-9398ff"
+    "CODEBLOCK-5fb420",
+    "LINK-33e7a5",
+    "LINK-88ed30",
+    "CODE-142012",
+    "LINK-19a85e"
   ],
   "placeholderMap": {
-    "CODEBLOCK-fcba10": {
+    "CODEBLOCK-8d37bd": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-a323be": {
+    "CODEBLOCK-49061d": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-065740": {
+    "CODEBLOCK-914967": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-490b36": {
+    "CODEBLOCK-547052": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-5af9ce": {
+    "CODEBLOCK-9d0f4c": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-d12e41": {
+    "CODEBLOCK-5fb420": {
       "type": "code-fence",
       "values": {}
     },
@@ -129,10 +150,16 @@
         "content": "eth_sendRawTransaction"
       }
     },
-    "CODE-014e0f": {
+    "CODE-99f391": {
       "type": "inline-code",
       "values": {
-        "content": "signTransaction(tx, private_key)"
+        "content": "signTransaction"
+      }
+    },
+    "CODE-4010ff": {
+      "type": "inline-code",
+      "values": {
+        "content": "sendRawTransaction"
       }
     },
     "CODE-21e721": {
@@ -159,6 +186,42 @@
         "content": "sendTx.js"
       }
     },
+    "CODE-68ba74": {
+      "type": "inline-code",
+      "values": {
+        "content": "0xYourSecondAddress"
+      }
+    },
+    "CODE-c52233": {
+      "type": "inline-code",
+      "values": {
+        "content": "PRIVATE_KEY"
+      }
+    },
+    "CODE-9af211": {
+      "type": "inline-code",
+      "values": {
+        "content": "account"
+      }
+    },
+    "CODE-306679": {
+      "type": "inline-code",
+      "values": {
+        "content": "privateKeyToAccount"
+      }
+    },
+    "CODE-a8e495": {
+      "type": "inline-code",
+      "values": {
+        "content": "publicClient"
+      }
+    },
+    "CODE-044fcc": {
+      "type": "inline-code",
+      "values": {
+        "content": "walletClient"
+      }
+    },
     "CODE-78377b": {
       "type": "inline-code",
       "values": {
@@ -169,6 +232,30 @@
       "type": "inline-code",
       "values": {
         "content": "transaction"
+      }
+    },
+    "CODE-c9fea5": {
+      "type": "inline-code",
+      "values": {
+        "content": "prepareTransactionRequest"
+      }
+    },
+    "CODE-be6206": {
+      "type": "inline-code",
+      "values": {
+        "content": "chainId"
+      }
+    },
+    "CODE-7c58b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "maxFeePerGas"
+      }
+    },
+    "CODE-8c83aa": {
+      "type": "inline-code",
+      "values": {
+        "content": "maxPriorityFeePerGas"
       }
     },
     "CODE-663ea1": {
@@ -183,6 +270,12 @@
         "content": "value"
       }
     },
+    "CODE-c3f6c2": {
+      "type": "inline-code",
+      "values": {
+        "content": "parseEther"
+      }
+    },
     "CODE-2fe840": {
       "type": "inline-code",
       "values": {
@@ -195,28 +288,22 @@
         "content": "signedTx"
       }
     },
-    "CODE-99f391": {
+    "CODE-3fef10": {
       "type": "inline-code",
       "values": {
-        "content": "signTransaction"
+        "content": "waitForTransactionReceipt"
       }
     },
-    "CODE-c52233": {
+    "CODE-844ab0": {
       "type": "inline-code",
       "values": {
-        "content": "PRIVATE_KEY"
+        "content": "data: toHex(\"IPFS hash\")"
       }
     },
-    "CODE-9f2eeb": {
+    "CODE-9b5f3b": {
       "type": "inline-code",
       "values": {
-        "content": "sendSignedTransaction"
-      }
-    },
-    "CODE-d21f08": {
-      "type": "inline-code",
-      "values": {
-        "content": "web3.utils.toHex(‘IPFS hash‘)"
+        "content": "toHex"
       }
     },
     "CODE-6f7915": {
@@ -225,16 +312,16 @@
         "content": "node sendTx.js"
       }
     },
-    "CODE-a4de46": {
+    "CODE-142012": {
       "type": "inline-code",
       "values": {
-        "content": "0x31b98d14007bdee637298086988a0bbd31184523"
+        "content": "insufficient funds"
       }
     },
-    "IMAGE-5a2d01": {
-      "type": "image",
+    "LINK-d16d1b": {
+      "type": "link",
       "values": {
-        "path": "./mempool.png"
+        "url": "https://viem.sh/"
       }
     },
     "LINK-63b4bc": {
@@ -243,16 +330,16 @@
         "url": "https://www.alchemy.com/"
       }
     },
-    "LINK-1e2240": {
+    "LINK-90c44a": {
       "type": "link",
       "values": {
-        "url": "https://auth.alchemyapi.io/signup"
+        "url": "https://auth.alchemy.com/signup"
       }
     },
-    "LINK-65f5a1": {
+    "LINK-21b465": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/reference/api-overview#with-a-browser-provider"
+        "url": "https://docs.metamask.io/wallet/reference/provider-api/"
       }
     },
     "LINK-754df5": {
@@ -261,58 +348,58 @@
         "url": "/developers/docs/nodes-and-clients/nodes-as-a-service/"
       }
     },
-    "LINK-84d76c": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3"
-      }
-    },
     "LINK-5c9ac9": {
       "type": "link",
       "values": {
         "url": "https://metamask.io/"
       }
     },
-    "LINK-026b50": {
+    "LINK-34435b": {
       "type": "link",
       "values": {
-        "url": "https://docs.web3js.org/api/web3-eth/function/sendTransaction"
+        "url": "/developers/docs/apis/json-rpc/#eth-sendtransaction"
       }
     },
-    "LINK-885480": {
+    "LINK-29d086": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction"
+        "url": "https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-send-raw-transaction"
       }
     },
-    "LINK-055fc2": {
+    "LINK-896bb0": {
       "type": "link",
       "values": {
-        "url": "https://docs.web3js.org/api/web3-eth-accounts/function/signTransaction"
+        "url": "https://viem.sh/docs/actions/wallet/signTransaction"
       }
     },
-    "LINK-8a50f3": {
+    "LINK-ff0d02": {
       "type": "link",
       "values": {
-        "url": "https://docs.web3js.org/api/web3-eth/function/sendSignedTransaction"
+        "url": "https://viem.sh/docs/accounts/local/privateKeyToAccount"
       }
     },
-    "LINK-dca13e": {
+    "LINK-6fc94f": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/reference/api-overview"
+        "url": "https://viem.sh/docs/actions/wallet/sendRawTransaction"
       }
     },
-    "LINK-8d4123": {
+    "LINK-926d6f": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries"
+        "url": "/developers/docs/apis/json-rpc/"
       }
     },
-    "LINK-4d6f08": {
+    "LINK-a570c8": {
       "type": "link",
       "values": {
-        "url": "https://docs.ethers.org/v5/"
+        "url": "/developers/docs/apis/javascript/"
+      }
+    },
+    "LINK-faa750": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.org/v6/"
       }
     },
     "LINK-d80c17": {
@@ -321,22 +408,22 @@
         "url": "https://discord.gg/gWuC7zB"
       }
     },
-    "LINK-7f9ae6": {
+    "LINK-041291": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/reference/transact-api-quickstart"
+        "url": "https://www.alchemy.com/docs/sending-transactions"
       }
     },
-    "LINK-303158": {
+    "LINK-d98384": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/docs/alchemy-notify"
+        "url": "https://www.alchemy.com/docs/reference/webhooks-overview"
       }
     },
-    "LINK-110d5d": {
+    "LINK-a235f5": {
       "type": "link",
       "values": {
-        "url": "https://auth.alchemyapi.io/signup"
+        "url": "https://auth.alchemy.com/signup"
       }
     },
     "LINK-9a5946": {
@@ -345,94 +432,112 @@
         "url": "https://metamask.io/"
       }
     },
-    "LINK-a6ccfd": {
+    "LINK-f25404": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/alchemy/guides/alchemy-for-macs"
+        "url": "https://nodejs.org/en/download/"
       }
     },
-    "LINK-d34211": {
+    "LINK-3ac423": {
       "type": "link",
       "values": {
-        "url": "https://dashboard.alchemyapi.io/"
+        "url": "https://dashboard.alchemy.com/"
       }
     },
-    "LINK-76e312": {
+    "LINK-e46028": {
       "type": "link",
       "values": {
-        "url": "https://www.sepoliafaucet.com/"
+        "url": "https://www.alchemy.com/faucets/ethereum-sepolia"
       }
     },
-    "LINK-88f803": {
+    "LINK-36e14c": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum"
+        "url": "/developers/docs/networks/#sepolia"
       }
     },
-    "LINK-9b6cf0": {
+    "LINK-983a45": {
       "type": "link",
       "values": {
-        "url": "https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key"
+        "url": "https://www.alchemy.com/docs/how-to-send-transactions-on-ethereum"
       }
     },
-    "LINK-364bc2": {
+    "LINK-9e1387": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce"
+        "url": "https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/"
       }
     },
-    "LINK-a4b1de": {
+    "LINK-998284": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount"
+        "url": "https://viem.sh/docs/accounts/local/privateKeyToAccount"
       }
     },
-    "LINK-f03b13": {
+    "LINK-d045f2": {
       "type": "link",
       "values": {
-        "url": "https://sepoliafaucet.com/"
+        "url": "https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count"
       }
     },
-    "LINK-619fbd": {
+    "LINK-b1857d": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1"
+        "url": "https://viem.sh/docs/actions/wallet/prepareTransactionRequest"
       }
     },
-    "LINK-80b591": {
+    "LINK-47d0ce": {
       "type": "link",
       "values": {
-        "url": "https://ethgasstation.info/"
+        "url": "/developers/docs/gas/"
       }
     },
-    "LINK-80eb46": {
+    "LINK-ef4f6f": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction"
+        "url": "https://viem.sh/docs/utilities/parseEther"
       }
     },
-    "LINK-c7daa7": {
+    "LINK-c1c779": {
       "type": "link",
       "values": {
-        "url": "https://dashboard.alchemyapi.io/mempool"
+        "url": "https://www.alchemy.com/docs/reference/webhooks-overview"
       }
     },
-    "LINK-f975b1": {
+    "LINK-164a6a": {
       "type": "link",
       "values": {
-        "url": "https://discord.gg/A39JVCM"
+        "url": "https://viem.sh/docs/utilities/toHex"
       }
     },
-    "LINK-9398ff": {
+    "LINK-481f0a": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy"
+        "url": "/developers/tutorials/hello-world-smart-contract/"
+      }
+    },
+    "LINK-33e7a5": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.etherscan.io/"
+      }
+    },
+    "LINK-88ed30": {
+      "type": "link",
+      "values": {
+        "url": "https://eth-sepolia.blockscout.com/"
+      }
+    },
+    "LINK-19a85e": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.gg/gWuC7zB"
       }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T00:51:44.135Z",
+      "translatedAt": "2026-10-26T17:20:08.598Z",
       "status": "success"
     }
   }

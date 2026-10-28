@@ -160,6 +160,7 @@ const stripTitleSuffix = (node: Record<string, unknown>, depth = 0) => {
 interface SearchModalProps {
   onClose: () => void
   className?: string
+  getInitialQuery?: () => string
 }
 
 /**
@@ -169,7 +170,11 @@ interface SearchModalProps {
  * featured networks. None of that belongs in a bundle a reader pays for before they have
  * opened search.
  */
-const SearchModal = ({ onClose, className }: SearchModalProps) => {
+const SearchModal = ({
+  onClose,
+  className,
+  getInitialQuery,
+}: SearchModalProps) => {
   const locale = useLocale()
   const t = useTranslations("common")
   const windowScrollY = typeof window === "undefined" ? 0 : window.scrollY
@@ -427,6 +432,7 @@ const SearchModal = ({ onClose, className }: SearchModalProps) => {
     typesenseServerConfig,
     typesenseSearchParameters,
     onClose,
+    initialQuery: getInitialQuery?.(),
     // Nothing pre-highlighted where Ask exists, so Enter asks.
     defaultActiveItemId: canAsk ? null : 0,
     hitComponent,

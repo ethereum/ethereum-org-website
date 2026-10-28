@@ -28,7 +28,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 4. **Server Components by default.** Only `"use client"` when you need state, effects, browser APIs, or inline event handlers.
 5. **All text is translatable.** `getTranslations` from `next-intl/server` (server) or `useTranslations` from `next-intl` (client). One namespace-bound `t` per namespace -- bind a second function (e.g. `const tCommon = useTranslations("common")`) to access another namespace. The legacy `@/hooks/useTranslation` wrapper is deprecated for new code. Never hard-code user-facing English. **In an `app/[locale]/` page or `generateMetadata`, call `setRequestLocale(locale)` before any next-intl API** or on-demand renders throw `static to dynamic ... reason: headers` -- see `references/i18n-rtl.md`.
 6. **Logical CSS for direction.** Use `ms-`/`me-`/`ps-`/`pe-`/`inset-s-`/`inset-e-`/`border-s`/`border-e`/`text-start`/`text-end`. The site supports Arabic and Urdu (RTL). Hard-coded `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` breaks RTL.
-7. **Locale-aware formatters.** `numberFormat()` from `@/lib/utils/numbers`, `dateTimeFormat()` from `@/lib/utils/date`. Never `toLocaleString` / `Intl.NumberFormat` directly.
+7. **Locale-aware formatters.** `numberFormat()` from `@/lib/utils/numbers`, `formatDateTime()` / `formatDate()` from `@/lib/utils/date` (UTC + hydration-safe). Never `toLocaleString` / `Intl.NumberFormat` directly.
 8. **`useRtlFlip()` for directional icons** (right-pointing arrows/chevrons). Or use `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
 9. **Markdown content goes through `MdComponents`.** The `<Card>` markdown shortcode is backed by `@/components/MarkdownCard` (a thin wrapper around the `ui/card` primitives with an MDX-friendly prop shape). For app code, compose the primitives directly from `@/components/ui/card`.
 10. **Storybook stories ship with new UI components.** No automated unit tests; Storybook + Chromatic + types are the verification layer.
@@ -73,7 +73,7 @@ Old-shadow-token mapping table: `references/cleanup-playbook.md`.
 | Big numeric display | `import BigNumber from "@/components/BigNumber"` |
 | Layout | `import { Stack, HStack, VStack, Flex, Center } from "@/components/ui/flex"` |
 | Number formatting | `import { numberFormat } from "@/lib/utils/numbers"` |
-| Date formatting | `import { dateTimeFormat } from "@/lib/utils/date"` |
+| Date formatting | `import { formatDateTime } from "@/lib/utils/date"` |
 | RTL flip helper | `import { useRtlFlip } from "@/hooks/useRtlFlip"` |
 
 For full decision trees with all the look-alike landmines, see `references/canonical-imports.md`.
@@ -110,7 +110,7 @@ Before opening a PR for any UI work:
 - [ ] No hard-coded colors (`#hex`, `rgb()`, `hsla()`); semantic tokens only
 - [ ] No `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` (use logical equivalents)
 - [ ] All user-facing strings translatable
-- [ ] `numberFormat()`/`dateTimeFormat()` for formatting (not native APIs)
+- [ ] `numberFormat()`/`formatDateTime()` for formatting (not native APIs)
 - [ ] Server Components wherever possible
 - [ ] New UI primitives have a `.stories.tsx`
 - [ ] Headings use `<h1>`-`<h6>` (not `<div className="text-5xl font-bold">`)
