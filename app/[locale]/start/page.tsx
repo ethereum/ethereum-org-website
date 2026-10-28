@@ -34,9 +34,9 @@ import PageJsonLD from "./page-jsonld"
 
 import { getStaticAppsData } from "@/lib/data"
 import AaveImage from "@/public/images/dapps/aave.png"
-import FarcasterImage from "@/public/images/dapps/farcaster.png"
 import OpenSeaImage from "@/public/images/dapps/opensea.png"
 import UniswapImage from "@/public/images/dapps/uni.png"
+import ZoraImage from "@/public/images/dapps/zora.png"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
@@ -156,11 +156,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const apps = [
     {
-      name: "Farcaster",
-      tag: appTags.socials,
-      description: t("page-start-apps-farcaster-description"),
-      url: "https://www.farcaster.xyz/",
-      image: FarcasterImage,
+      name: "Uniswap",
+      tag: appTags.finance,
+      description: t("page-start-apps-uniswap-description"),
+      url: "https://app.uniswap.org/",
+      image: UniswapImage,
     },
     {
       name: "Aave",
@@ -170,18 +170,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       image: AaveImage,
     },
     {
-      name: "Uniswap",
-      tag: appTags.finance,
-      description: t("page-start-apps-uniswap-description"),
-      url: "https://app.uniswap.org/",
-      image: UniswapImage,
-    },
-    {
       name: "OpenSea",
       tag: appTags.collectibles,
       description: t("page-start-apps-opensea-description"),
       url: "https://opensea.io/",
       image: OpenSeaImage,
+    },
+    {
+      name: "Zora",
+      tag: appTags.socials,
+      description: t("page-start-apps-zora-description"),
+      url: "https://zora.co/",
+      image: ZoraImage,
     },
   ]
 

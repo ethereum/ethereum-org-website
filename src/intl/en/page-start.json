@@ -12,7 +12,7 @@
   "page-start-steps-get-eth-description": "{count, plural, one {The wallet above lets} other {All {countFormatted} wallets above let}} you buy ETH with a card inside the app, so this can happen without leaving your wallet. You can also buy on an exchange and send it to your own address, or see other ways to get ETH.",
   "page-start-steps-get-eth-cta": "Get ETH",
   "page-start-steps-apps-title": "Try an app",
-  "page-start-steps-apps-description": "Use your wallet to send money, swap tokens, play games and more.",
+  "page-start-steps-apps-description": "Use your wallet to swap tokens, lend and earn interest, buy and sell art, play games and more.",
   "page-start-steps-apps-cta": "Explore apps",
   "page-start-steps-apps-cta-count": "Explore {count, plural, one {{countFormatted} app} other {{countFormatted} apps}}",
   "page-start-steps-connect-title": "Bonus: Connect your wallet",
@@ -37,8 +37,8 @@
   "page-start-apps-socials-tag": "SOCIALS",
   "page-start-apps-finance-tag": "FINANCE",
   "page-start-apps-collectibles-tag": "COLLECTIBLES",
-  "page-start-apps-farcaster-description": "The social and community platform of crypto.",
   "page-start-apps-aave-description": "Lend your tokens to earn interest and withdraw any time.",
   "page-start-apps-uniswap-description": "Swap your tokens for different ones globally.",
-  "page-start-apps-opensea-description": "Buy, sell, discover, and trade limited-edition goods."
+  "page-start-apps-opensea-description": "Buy, sell, discover, and trade limited-edition goods.",
+  "page-start-apps-zora-description": "Post what you make and earn when others collect it."
 }
