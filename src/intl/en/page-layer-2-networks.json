@@ -74,6 +74,8 @@
   "page-layer-2-networks-search-networks": "Search networks",
   "page-layer-2-networks-filters": "Filters",
   "page-layer-2-networks-wallets-count": "{count} wallets",
+  "page-layer-2-networks-full-details": "Full details",
+  "page-layer-2-networks-similar-title": "Similar layer 2s",
   "page-layer-2-network-maturity-component-title": "Network maturity explained",
   "page-layer-2-network-maturity-intro": "We review the network's progress towards <link>Ethereum alignment</link>: <strong>total value locked (TVL)</strong>, <strong>time live in production</strong>, and <strong>risk considerations</strong>. These levels help track network development and provide a standardized way for the community to evaluate progress.",
   "page-layer-2-network-maturity-component-7": "Technical progress alone is not enough, user adoption and age are essential part of the overall strength and maturity on any network.",
