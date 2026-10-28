@@ -351,7 +351,6 @@ export function DiagramTransport({
           aria-label={t("diagram-next-step")}
           disabled={!canGoNext}
           onClick={onNext}
-          data-diagram-next=""
           className={ICON_BUTTON}
         >
           <ChevronNext />

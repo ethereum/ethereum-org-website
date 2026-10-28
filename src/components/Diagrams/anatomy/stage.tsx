@@ -26,7 +26,6 @@ export function DiagramStage({
       variant="nested"
       border
       size="md"
-      data-diagram-stage=""
       className={cn("@container", className)}
     >
       <div

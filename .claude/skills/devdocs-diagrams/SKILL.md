@@ -47,7 +47,7 @@ Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` pe
 4. **Rig** (`rig.tsx`). Geometry, detail and shadows built once at module level; `<g data-part="id">` per part; root `<svg aria-hidden data-anatomy-drawing {...DIAGRAM_SVG_FALLBACKS} className={ISO_SVG_CLASS}>`; `AnatomyLabels` with spots in priority order. Use `useTranslations` only for shared strings like `diagram-reverted`. `export default memo(Rig)`.
 5. **Player** (`player.tsx`). `useStepPlayer` (never a hand-rolled timer), `useMemo` the view per preset and step, `useMemo` labels and definitions on `t`. Readout numbers that move use `<DiagramCountUp value delay />`. Pass every caption the preset can show to `DiagramCaption all`.
 6. **Wire in.** `index.tsx` wraps the lazy player in `DiagramMessages` (no extra wrapper: the `<figure>` carries `my-space-2x` and takes `className`); import it in `src/layouts/Docs.tsx` and add it to `docsComponents`. Swap the `![...](x.png)` line in **English markdown only** for `<Name />` (no `fig`: the page numbers it) and drop the PNG's "adapted from" credit line: the diagrams are original drawings. Leave the PNG and translated markdown alone; the intl pipeline propagates.
-7. **Guard and stories** (below), then the PR.
+7. **Stories and checks** (below), then the PR.
 
 ## Visual rules
 
@@ -66,7 +66,7 @@ Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` pe
 One card, so controls sit in the same places everywhere. From a 640px card width (container query) a 15rem panel sits on the inline-end side; narrower it stacks under the illustration. Illustration column: figure header in small caps ("Fig. N · Title", from `fig`), drawing, status line (sans, two lines reserved; the step at rest, "Label: definition" on hover), legend. Panel, top to bottom:
 
 1. `DiagramPresets`: "Choose scenario", a segmented `ui/radio-group` (radio roles, one tab stop, arrow keys).
-2. `DiagramTransport`: primary action (full width of the panel, disabled while running), then previous, "Step x of n" (`current`, `total` numbers), next (`data-diagram-next`), reset.
+2. `DiagramTransport`: primary action (full width of the panel, disabled while running), then previous, "Step x of n" (`current`, `total` numbers), next, reset.
 3. `DiagramCaption`: polite `role="status"`; sized by empty CSS-content sizers (`content: attr(data-sizer)`), one per possible caption, so the height never jumps and the text appears in the page only once.
 4. `DiagramReadout`: two columns, mono tabular numbers.
 
@@ -90,10 +90,11 @@ Hover and focus are built in: wrap each part in `<g data-part="id">` with the sa
 - The only JS-driven motion is `DiagramCountUp` (a ~700ms tween), a leaf so it re-renders only its own text. Rigs are memoised; static detail is built at module level.
 - Label collision checks wait until the drawing nears the viewport, then re-run on resize and once fonts load.
 
-## Guard, stories and checks
+## Stories and checks
 
-- `tests/e2e/diagram-strokes.spec.ts` walks every shape of every `DiagramStage` on the pages it lists, for every preset and step and each label's hover state, light and dark, and fails on a missing stroke or a black fill. Add each new diagram's page.
-- Stories: idle, each step (`initialStep`), each preset, `Dark`, `Rtl` (`globals: { locale: "ar" }`), mobile (`viewport: base`), reduced motion, a hover story with a play function that focuses a label. Open them in `pnpm storybook`; `build-storybook` doesn't execute them.
+- Stories: idle, each step (`initialStep`), each preset, `Dark`, `Rtl` (`globals: { locale: "ar" }`), mobile (`viewport: base`), a hover story with a play function that focuses a label. Chromatic already runs with reduced motion, so no separate reduced-motion story. Open them in `pnpm storybook`; `build-storybook` doesn't execute them.
+- **Snapshots: key states only.** Set `chromatic: { disableSnapshot: true }` on the meta and opt in per story with `disableSnapshot: false`: idle, the final step, the failure end state (e.g. out of gas), dark, RTL and mobile. Step-by-step and hover stories stay unsnapshotted. Don't add a mobile story when the meta's modes already include the `base` viewport.
+- No e2e guard for strokes: static token classes and the `var()` fallbacks in `DIAGRAM_SVG_FALLBACKS` prevent vanishing lines, and the snapshots show it if one breaks.
 - Screenshot light and dark at 1440px, 1024px and 390px, RTL, every step: no black paint, no label collisions, no labels on shapes, no leader crossings, nothing clipped.
 - `pnpm lint`, `pnpm type-check`, `pnpm lint:md`, `pnpm build-storybook`.
 

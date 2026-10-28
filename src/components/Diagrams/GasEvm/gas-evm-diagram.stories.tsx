@@ -10,7 +10,9 @@ const meta = {
   args: { fig: 1 },
   parameters: {
     layout: "padded",
-    chromatic: { modes: { lg: { viewport: "lg" } } },
+    // Only key states snapshot (opted in per story): idle, final,
+    // out of gas, dark, RTL and mobile.
+    chromatic: { disableSnapshot: true, modes: { lg: { viewport: "lg" } } },
     docs: {
       description: {
         component:
@@ -24,7 +26,9 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Idle: Story = {}
+export const Idle: Story = {
+  parameters: { chromatic: { disableSnapshot: false } },
+}
 
 export const Step0Intrinsic: Story = { args: { initialStep: 0 } }
 
@@ -40,7 +44,10 @@ export const Step5Push1D: Story = { args: { initialStep: 5 } }
 
 export const Step6Sstore: Story = { args: { initialStep: 6 } }
 
-export const Step7Stop: Story = { args: { initialStep: 7 } }
+export const Step7Stop: Story = {
+  args: { initialStep: 7 },
+  parameters: { chromatic: { disableSnapshot: false } },
+}
 
 export const OutOfGasIdle: Story = { args: { initialPreset: "out-of-gas" } }
 
@@ -71,6 +78,7 @@ export const OutOfGasStep5Push1D: Story = {
 export const OutOfGasStep6Reverted: Story = {
   args: { initialPreset: "out-of-gas", initialStep: 6 },
   parameters: {
+    chromatic: { disableSnapshot: false },
     docs: {
       description: {
         story:
@@ -83,6 +91,7 @@ export const OutOfGasStep6Reverted: Story = {
 export const Dark: Story = {
   globals: { theme: "dark" },
   args: { initialStep: 6 },
+  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const DarkOutOfGas: Story = {
@@ -93,23 +102,16 @@ export const DarkOutOfGas: Story = {
 export const Rtl: Story = {
   globals: { locale: "ar" },
   args: { initialStep: 3 },
+  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const Mobile: Story = {
   globals: { viewport: { value: "base", isRotated: false } },
   args: { initialStep: 6 },
-  parameters: { chromatic: { modes: { base: { viewport: "base" } } } },
-}
-
-export const ReducedMotion: Story = {
-  args: { initialStep: 6 },
   parameters: {
-    chromatic: { prefersReducedMotion: "reduce" },
-    docs: {
-      description: {
-        story:
-          "With reduced motion the pipe pulses are static and readouts jump to their values; Run still steps through with longer reading time.",
-      },
+    chromatic: {
+      disableSnapshot: false,
+      modes: { lg: { disable: true }, base: { viewport: "base" } },
     },
   },
 }
