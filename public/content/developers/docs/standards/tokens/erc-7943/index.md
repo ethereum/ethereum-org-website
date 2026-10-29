@@ -190,7 +190,7 @@ If you are building a protocol, wallet or marketplace that must handle compliant
 2. **Check before acting.** Call `canTransfer(from, to, amount)` before quoting or executing, and check balance and allowance separately. Treat `false` as "currently blocked", not "permanently blocked": compliance state changes.
 3. **Call from the right context.** The checks MAY depend on `msg.sender`, the block timestamp or the block number. A check run from a frontend can return a different result than the same check run from your contract at execution time.
 4. **Handle reverts anyway.** The state behind the checks can change between your check and your transaction, and the revert errors are not guaranteed to be the `ERC7943*` ones.
-5. **Compute available balance.** An account's transferable balance is `balanceOf - getFrozenTokens`, clamped at zero.
+5. **Compute available balance.** For fungible tokens, the transferable balance is `balanceOf - getFrozenTokens`, clamped at zero. Multi-token contracts apply the same formula per `tokenId`. For non-fungible tokens, a token is transferable only if `getFrozenTokens(account, tokenId)` returns `false`.
 6. **Surface enforcement.** Index `ForcedTransfer` and `Frozen` so users can see why a balance changed or became unavailable without their action.
 
 ## Security considerations {#security-considerations}
