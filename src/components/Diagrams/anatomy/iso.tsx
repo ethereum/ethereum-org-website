@@ -348,15 +348,19 @@ export function IsoCylinder({
 
 /**
  * A pipe: a thin neutral tube at rest (a stroke with a hairline highlight
- * down its middle). While gas flows through it, a one-shot orange dash flow
- * runs along it (static under reduced motion). Change `flowKey` to restart.
+ * down its middle). While something flows through it, a one-shot dash flow
+ * runs along it (static under reduced motion): orange for gas, or blue with
+ * `hue="entity"` for messages and value, whose tube also turns blue when lit.
+ * Change `flowKey` to restart.
  */
 export function IsoPipe({
   d,
   flowing,
   flowD,
   flowKey,
+  flowDelay,
   flowEmphasis,
+  hue = "gas",
   state = "rest",
   className,
 }: {
@@ -364,12 +368,16 @@ export function IsoPipe({
   flowing?: boolean
   /** A stronger, longer pulse (e.g. an expensive operation). */
   flowEmphasis?: boolean
-  /** The stretch gas flows along, if not the whole pipe. */
+  /** The stretch the flow runs along, if not the whole pipe. */
   flowD?: string
   flowKey?: string
+  /** ms before the flow starts, to follow an earlier flow. */
+  flowDelay?: number
+  hue?: "gas" | "entity"
   state?: AnatomyState
   className?: string
 }) {
+  const litEntity = hue === "entity" && state === "lit"
   return (
     <g
       fill="none"
@@ -383,7 +391,9 @@ export function IsoPipe({
           "[stroke-width:1.4]",
           state === "hover"
             ? "stroke-diagram-line-strong"
-            : "stroke-diagram-pipe"
+            : litEntity
+              ? "stroke-diagram-entity"
+              : "stroke-diagram-pipe"
         )}
       />
       <path d={d} className="stroke-diagram-plate [stroke-width:0.4]" />
@@ -393,11 +403,17 @@ export function IsoPipe({
           d={flowD ?? d}
           strokeDasharray="4 5"
           className={cn(
-            "animate-diagram-flow stroke-diagram-gas motion-reduce:animate-none",
+            "animate-diagram-flow motion-reduce:animate-none",
+            hue === "gas"
+              ? "stroke-diagram-gas"
+              : litEntity
+                ? "stroke-diagram-plate"
+                : "stroke-diagram-entity",
             flowEmphasis
               ? "[stroke-width:2] [animation-duration:1400ms]"
               : "[stroke-width:1.4]"
           )}
+          style={flowDelay ? { animationDelay: `${flowDelay}ms` } : undefined}
         />
       )}
     </g>
