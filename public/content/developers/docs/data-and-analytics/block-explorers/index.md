@@ -23,6 +23,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 - [Blockchair](https://blockchair.com/ethereum) - Private Ethereum explorer. Also for sorting and filtering (mempool) data. Available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi
 - [Chainlens](https://www.chainlens.com/)
+- [Codex Scan](https://scan.codex.io/eth) - Multichain explorer with decoded transactions and protocol labels
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - Also available in Chinese, Korean, Russian, and Japanese
