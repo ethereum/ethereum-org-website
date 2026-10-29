@@ -447,6 +447,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               ),
             })}
           </p>
+          <LinkWithArrow href="/what-is-ether/supply/">
+            {t("page-what-is-ether-what-is-the-eth-supply-learn-more")}
+          </LinkWithArrow>
         </Section>
 
         <Section id={getIdFromHash(tocItems[6].url)}>

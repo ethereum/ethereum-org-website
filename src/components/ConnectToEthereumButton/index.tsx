@@ -1,9 +1,12 @@
+import { useTranslations } from "next-intl"
 import { ConnectButton } from "@rainbow-me/rainbowkit"
 
 import EthGlyphSolid from "@/components/icons/eth-glyph-solid.svg"
 import { Button } from "@/components/ui/buttons/Button"
 
 const ConnectToEthereumButton = ({ onClick }: { onClick: () => void }) => {
+  const t = useTranslations("common")
+
   return (
     <ConnectButton.Custom>
       {({ account, chain, openConnectModal, mounted }) => {
@@ -23,7 +26,7 @@ const ConnectToEthereumButton = ({ onClick }: { onClick: () => void }) => {
             className="w-full px-8 sm:w-auto"
           >
             <EthGlyphSolid />
-            Sign in with Ethereum
+            {t("sign-in-with-ethereum")}
           </Button>
         )
       }}

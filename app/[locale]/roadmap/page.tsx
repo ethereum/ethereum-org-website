@@ -29,6 +29,7 @@ import Translation from "@/components/Translation"
 import { AccordionContainer } from "@/components/ui/accordion"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardButtonFake,
@@ -54,6 +55,7 @@ import ethBlocksImg from "@/public/images/developers-eth-blocks.png"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
 import communityHeroPortraitImg from "@/public/images/heroes/community-hero-portrait.png"
 import roadmapHeroImg from "@/public/images/heroes/roadmap-hub-hero.jpg"
+import mergeImg from "@/public/images/upgrades/merge.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -347,6 +349,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </ExpandableCard>
               </AccordionContainer>
             </div>
+          </Section>
+
+          {/* Ethereum forks */}
+          <Section id="ethereum-forks">
+            <Callout
+              title={t("page-roadmap-forks-title")}
+              description={t("page-roadmap-forks-description")}
+              image={mergeImg}
+              variant="sm"
+            >
+              <ButtonLink href="/ethereum-forks/">
+                {t("page-roadmap-forks-cta")}
+              </ButtonLink>
+            </Callout>
           </Section>
         </MainArticle>
 
