@@ -19,8 +19,7 @@ Since each Ethereum transaction requires computational resources to execute, tho
 
 The gas fee is **the amount of gas used to do some operation, multiplied by the cost per unit gas**. The fee is paid regardless of whether a transaction succeeds or fails.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 Gas fees have to be paid in Ethereum's native currency, ether (ETH). Gas prices are usually quoted in gwei, which is a denomination of ETH. Each gwei is equal to one-billionth of an ETH (0.000000001 ETH or 10<sup>-9</sup> ETH).
 
@@ -105,8 +104,7 @@ In short, gas fees help keep the Ethereum network secure. By requiring a fee for
 
 Although a transaction includes a limit, any gas not used in a transaction is returned to the user (e.g., `max fee - (base fee + tip)` is returned).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## What is the gas limit? {#what-is-gas-limit}
 

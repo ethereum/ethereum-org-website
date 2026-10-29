@@ -74,6 +74,34 @@
     --staking-red: 4, 36%, 46%;
     --staking-red-fill: 140, 27%, 98%;
 
+    /* Diagrams (devdocs schematics). */
+    --diagram-entity-fill: var(--blue-100);
+    --diagram-revert: var(--red-700);
+    /* Isometric diagrams. Aliases, redeclared under .dark so they always
+       resolve where the theme class applies. */
+    --diagram-bg: var(--background);
+    --diagram-plate: var(--background-highlight);
+    --diagram-edge: var(--border-high-contrast);
+    --diagram-pipe: var(--body-medium);
+    --diagram-entity: var(--accent-a);
+    --diagram-gas: var(--yellow-700);
+    /* Line hierarchy by colour, not width (all 1px): seams and panel
+       lines, outlines, and the hovered part. Shadow is the ground shadow's
+       colour (used at low opacity). */
+    --diagram-line-faint: var(--gray-200);
+    --diagram-line: var(--gray-400);
+    --diagram-line-strong: var(--gray-900);
+    --diagram-shadow: var(--gray-900);
+    /* Face tints: share of the hue mixed into each face (top, inline-start,
+       inline-end). Light at rest; the active or hovered part takes the
+       stronger -active shares. */
+    --diagram-mix-top: 7%;
+    --diagram-mix-start: 14%;
+    --diagram-mix-end: 22%;
+    --diagram-mix-top-active: 15%;
+    --diagram-mix-start-active: 30%;
+    --diagram-mix-end-active: 45%;
+
     /* Fonts */
     --font-inter: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", Courier, monospace;
@@ -145,5 +173,27 @@
     --staking-blue-fill: 150, 10%, 19%;
     --staking-red: 6, 24%, 78%;
     --staking-red-fill: 140, 3%, 19%;
+
+    /* Diagrams */
+    --diagram-entity-fill: var(--blue-900);
+    --diagram-revert: var(--red-300);
+    --diagram-bg: var(--background);
+    --diagram-plate: var(--background-highlight);
+    --diagram-edge: var(--border-high-contrast);
+    --diagram-pipe: var(--body-medium);
+    --diagram-line-faint: var(--gray-600);
+    --diagram-line: var(--gray-400);
+    --diagram-line-strong: var(--gray-100);
+    --diagram-shadow: var(--black);
+    /* Dark: one step lighter hues and about double the face tints of light
+       mode (rest and active), so blue and orange still read as colour. */
+    --diagram-entity: var(--blue-300);
+    --diagram-gas: var(--yellow-500);
+    --diagram-mix-top: 20%;
+    --diagram-mix-start: 32%;
+    --diagram-mix-end: 45%;
+    --diagram-mix-top-active: 30%;
+    --diagram-mix-start-active: 50%;
+    --diagram-mix-end-active: 70%;
   }
 }

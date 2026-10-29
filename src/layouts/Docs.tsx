@@ -6,6 +6,8 @@ import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 import CallToContribute from "@/components/CallToContribute"
 import ContentFeedback from "@/components/ContentFeedback"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
+import GasEvmDiagram from "@/components/Diagrams/GasEvm"
+import GasTxDiagram from "@/components/Diagrams/GasTx"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
 import FileContributors from "@/components/FileContributors"
@@ -35,6 +37,8 @@ export const docsComponents = {
   DeveloperDocsLinks,
   Divider,
   Emoji,
+  GasEvmDiagram,
+  GasTxDiagram,
   GlossaryTooltip,
   PieChart,
   YouTube,
