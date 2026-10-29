@@ -59,6 +59,19 @@ jobs:
         with:
           globs: ${{ steps.changed.outputs.files }}
 
+  content-checks:
+    name: Orphaned intl keys & added links
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Check intl keys and links
+        env:
+          BASE_REF: origin/${{ github.base_ref }}
+        run: bash .github/scripts/pr-content-checks.sh "$BASE_REF"
+
   unit-tests:
     name: Unit tests
     runs-on: ubuntu-latest

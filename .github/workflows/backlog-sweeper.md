@@ -9,12 +9,24 @@ on:
         description: "Review only this PR number, like a /review comment (empty = normal backlog sweep)"
         required: false
         type: string
+      dry_run:
+        description: "Upload the rendered review as an artifact instead of posting it or labelling; closed PRs allowed (for evals)"
+        required: false
+        type: boolean
+      as_of:
+        description: "Dry runs only: base commit to review against (e.g. dev at the original review time); review files come from the dispatched ref"
+        required: false
+        type: string
+      head:
+        description: "Dry runs only: PR head commit to review (e.g. the sha of the original review)"
+        required: false
+        type: string
   slash_command:
     name: review
     events: [pull_request_comment]
 if: github.event.action != 'edited'
 concurrency:
-  group: "gh-aw-${{ github.workflow }}"
+  group: "gh-aw-${{ github.workflow }}${{ inputs.dry_run == true && format('-{0}', github.run_id) || '' }}"
   queue: max
 permissions:
   contents: read
@@ -35,6 +47,7 @@ tools:
     toolsets: [default, actions]
   bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "ls", "cat", "grep", "head", "wc"]
 safe-outputs:
+  staged: ${{ inputs.dry_run == true }}
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
     private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
@@ -76,17 +89,28 @@ pre-agent-steps:
       GH_TOKEN: ${{ github.token }}
       REPO: ${{ github.repository }}
       PR_NUMBER: ${{ github.event.issue.number || inputs.pr }}
+      DRY_RUN: ${{ inputs.dry_run == true }}
+      HEAD_SHA: ${{ inputs.head }}
     run: bash .github/scripts/backlog-sweeper-queue.sh
   # gh-aw checks out the PR head on comment events; the review diffs from the base branch.
   - name: Return to the base branch on single-PR runs
     if: github.event_name == 'issue_comment' || inputs.pr != ''
     env:
       PR_NUMBER: ${{ github.event.issue.number || inputs.pr }}
+      DRY_RUN: ${{ inputs.dry_run == true }}
+      AS_OF: ${{ inputs.as_of }}
     run: |
       meta=/tmp/gh-aw/agent/pr-$PR_NUMBER/pr-meta.json
       [ -f "$meta" ] || exit 0
-      git fetch -q --no-tags origin "$(jq -r .baseRefName "$meta")"
-      git checkout -q -f --detach FETCH_HEAD
+      if [ "$DRY_RUN" = true ] && [ -n "$AS_OF" ]; then
+        [[ "$AS_OF" =~ ^[0-9a-f]{7,40}$ ]] || { echo "::error::as_of must be a commit sha"; exit 1; }
+        git checkout -q -f --detach "$AS_OF"
+      else
+        git fetch -q --no-tags origin "$(jq -r .baseRefName "$meta")"
+        git checkout -q -f --detach FETCH_HEAD
+      fi
+      # Dry runs evaluate the dispatched ref's review instructions and conventions, whatever base they review against.
+      [ "$DRY_RUN" != true ] || git checkout -q "$GITHUB_SHA" -- .github AGENTS.md CLAUDE.md .claude
 imports:
   - shared/pr-review-core.md
   - shared/submit-review.md
@@ -100,7 +124,7 @@ The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists t
 
 ## For each selected PR
 
-Review it following the core instructions below and call `submit_review` once for it, with its own `pr` and `sha`. For PR `<n>`, the pre-fetched metadata is `/tmp/gh-aw/agent/pr-<n>/pr-meta.json`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in Step 1.
+Review it following the core instructions below and call `submit_review` once for it, with its own `pr` and `sha`. For PR `<n>`, the pre-fetched metadata is `/tmp/gh-aw/agent/pr-<n>/pr-meta.json`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in the core instructions.
 
 ## Termination
 
