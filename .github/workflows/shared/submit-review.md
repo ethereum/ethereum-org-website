@@ -78,6 +78,7 @@ safe-outputs:
             EVENT_PR: ${{ github.event.pull_request.number || github.event.issue.number || inputs.pr }}
             EVENT_SHA: ${{ github.event.pull_request.head.sha }}
             RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            DRY_RUN: ${{ inputs.dry_run == true }}
           run: |
             set -euo pipefail
             jq -c '.items[] | select(.type == "submit_review")' "$GH_AW_AGENT_OUTPUT" > items.jsonl
@@ -92,7 +93,7 @@ safe-outputs:
 
             if [ -n "$EVENT_PR" ]; then
               [ "$pr" = "$EVENT_PR" ] || { echo "::error::PR #$pr is not the triggering PR"; exit 1; }
-              gh api "repos/$REPO/pulls/$pr" --jq '.state' | grep -qx open || { echo "PR #$pr closed before the review finished"; exit 0; }
+              [ "$DRY_RUN" = true ] || gh api "repos/$REPO/pulls/$pr" --jq '.state' | grep -qx open || { echo "PR #$pr closed before the review finished"; exit 0; }
             else
               # The agent can write files, so sweeper scope is re-checked here rather than trusted from its workspace.
               gh api "repos/$REPO/pulls/$pr" --jq '.state == "open" and (.draft | not) and .user.type != "Bot"' | grep -qx true \
@@ -160,6 +161,12 @@ safe-outputs:
               + "\n\n<!-- ethorg-review: " + tojson + " -->"
             ' <<<"$review")
 
+            if [ "$DRY_RUN" = true ]; then
+              mkdir -p reviews && printf '%s\n' "$body" > "reviews/review-$pr.md"
+              echo "Dry run: rendered review for #$pr"
+              exit 0
+            fi
+
             existing=$(gh api --paginate "repos/$REPO/issues/$pr/comments?per_page=100" \
               --jq '.[] | select(.user.login == "ethorg-agent[bot]" and (.body | contains("First-pass review"))) | .id' | tail -n 1)
             if [ -n "$existing" ]; then
@@ -176,4 +183,11 @@ safe-outputs:
               bash review-one.sh "$item" || failed=1
             done < items.jsonl
             exit "$failed"
+        - name: Upload dry-run reviews
+          if: always() && inputs.dry_run == true
+          uses: actions/upload-artifact@v7
+          with:
+            name: dry-run-reviews
+            path: reviews/
+            if-no-files-found: ignore
 ---
