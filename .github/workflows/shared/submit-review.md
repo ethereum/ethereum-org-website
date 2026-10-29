@@ -58,7 +58,7 @@ safe-outputs:
       steps:
         - uses: actions/checkout@v6
           with:
-            ref: ${{ github.event.pull_request.base.sha || github.sha }}
+            ref: ${{ github.sha }}
             sparse-checkout: .github/scripts/pr-risk-floor.sh
             sparse-checkout-cone-mode: false
             persist-credentials: false
