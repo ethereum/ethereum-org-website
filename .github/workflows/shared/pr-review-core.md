@@ -36,7 +36,7 @@ A failed check (read them with the GitHub actions tools) is a finding; ignore pe
 <findings>
 ## What counts as a finding
 
-Look broadly, then post only what clears this bar: you can cite the `file:line` at `pr-head` (or the commit) and the input or state that triggers it; this PR introduced it or made it worse; lint, type-check, Prettier and markdownlint would not catch it (CI runs them); and it meets the lane's report bar.
+Look broadly, then post only what clears this bar: you can cite the `file:line` at `pr-head` (or the commit) and the input or state that triggers it; this PR introduced it or made it worse; CI would not catch it (lint, type-check, Prettier, markdownlint, and the orphaned-intl-key and added-link checks); and it meets the lane's report bar.
 
 - `blocking` — merging as-is breaks a feature for some users, loses data, disables a check, corrupts analytics or ships broken content, or the base branch already does what the PR does.
 - `should fix` — a real defect with limited impact.

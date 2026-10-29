@@ -13,6 +13,23 @@ WORKFLOW=backlog-sweeper.lock.yml
 CASES="$(dirname "$0")/cases.json"
 JUDGE_MODEL="${JUDGE_MODEL:-claude-sonnet-5-5}"
 
+# The base branch as it was at the review, minus the PR itself if it had already merged by then.
+as_of() {
+  local pr=$1 at=$2 head=$3 base sha
+  base=$(gh pr view "$pr" --repo "$REPO" --json baseRefName -q .baseRefName)
+  if git rev-parse -q --verify "origin/$base" >/dev/null; then
+    sha=$(git rev-list -1 --before="$at" "origin/$base")
+  else
+    sha=$(gh pr view "$pr" --repo "$REPO" --json baseRefOid -q .baseRefOid)
+    git fetch -q origin "$sha"
+  fi
+  git fetch -q origin "$head"
+  if git merge-base --is-ancestor "$head" "$sha"; then
+    sha=$(gh api "repos/$REPO/pulls/$pr/commits?per_page=1" --jq '.[0].parents[0].sha')
+  fi
+  echo "$sha"
+}
+
 run() {
   local ref=$1 out=$2; shift 2
   mkdir -p "$out"
@@ -24,8 +41,7 @@ run() {
     case=$(jq -c --argjson pr "$pr" '.[] | select(.pr == $pr)' "$CASES")
     [ -n "$case" ] || { echo "No case for #$pr" >&2; continue; }
     at=$(jq -r .at <<<"$case"); head=$(jq -r .head <<<"$case")
-    base=$(gh pr view "$pr" --repo "$REPO" --json baseRefName -q .baseRefName)
-    as_of=$(git rev-list -1 --before="$at" "origin/$base")
+    as_of=$(as_of "$pr" "$at" "$head")
 
     before=$(gh run list --repo "$REPO" --workflow "$WORKFLOW" --event workflow_dispatch -L 1 --json databaseId -q '.[0].databaseId // 0')
     gh workflow run "$WORKFLOW" --repo "$REPO" --ref "$ref" -f pr="$pr" -f dry_run=true -f as_of="$as_of" -f head="$head" >/dev/null
