@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="monospace" font-size="12">
+  <style>
+    text { fill: #1a1a2e; }
+    .title { font-weight: bold; font-size: 16px; }
+    .head { font-weight: bold; font-size: 13px; }
+    .note { font-size: 11px; fill: #5a5a6a; }
+    .free { fill: #e3f4e9; stroke: #1a1a2e; stroke-width: 1.5; }
+    .frozen { fill: #f6d7d5; stroke: #1a1a2e; stroke-width: 1.5; }
+    .ahead { fill: #fcefee; stroke: #b42318; stroke-width: 1.5; stroke-dasharray: 5,3; }
+    .brace { stroke: #1a1a2e; stroke-width: 1.2; fill: none; }
+  </style>
+
+  <!-- Opaque background so the diagram is legible in both light and dark mode -->
+  <rect x="0" y="0" width="600" height="400" rx="8" fill="#ffffff"/>
+
+  <text x="300" y="32" text-anchor="middle" class="title">Frozen vs. transferable balance (fungible)</text>
+
+  <!-- Case 1: frozen below balance. Scale: 4px per token -->
+  <text x="40" y="68" class="head">Case 1: balance 100, frozen 30</text>
+
+  <rect class="free" x="40" y="80" width="280" height="34"/>
+  <rect class="frozen" x="320" y="80" width="120" height="34"/>
+  <text x="180" y="101" text-anchor="middle">transferable</text>
+  <text x="380" y="101" text-anchor="middle">frozen</text>
+
+  <path class="brace" d="M41,122 V128 H319 V122"/>
+  <text x="180" y="144" text-anchor="middle">transferable = 70</text>
+  <path class="brace" d="M321,122 V128 H439 V122"/>
+  <text x="380" y="144" text-anchor="middle">getFrozenTokens = 30</text>
+
+  <path class="brace" d="M41,154 V160 H439 V154"/>
+  <text x="240" y="176" text-anchor="middle">balanceOf = 100</text>
+
+  <!-- Case 2: frozen above balance -->
+  <text x="40" y="218" class="head">Case 2: balance 40, frozen 60</text>
+
+  <rect class="frozen" x="40" y="230" width="160" height="34"/>
+  <rect class="ahead" x="200" y="230" width="80" height="34"/>
+  <text x="120" y="251" text-anchor="middle">frozen</text>
+  <text x="292" y="245" class="note">frozen ahead of</text>
+  <text x="292" y="259" class="note">tokens not yet received</text>
+
+  <path class="brace" d="M41,272 V278 H199 V272"/>
+  <text x="120" y="294" text-anchor="middle">balanceOf = 40</text>
+  <text x="292" y="294">transferable = 0</text>
+
+  <path class="brace" d="M41,304 V310 H279 V304"/>
+  <text x="160" y="326" text-anchor="middle">getFrozenTokens = 60</text>
+
+  <text x="40" y="362" class="note">transferable = max(0, balanceOf − getFrozenTokens)</text>
+  <text x="40" y="380" class="note">setFrozenTokens overwrites the frozen amount, like approve does for allowances</text>
+</svg>
