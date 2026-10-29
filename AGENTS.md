@@ -169,7 +169,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 6. **Consider i18n** - All user-facing text should be translatable. Server components: `getTranslations` and `getLocale` from `next-intl/server`. Client components: `useTranslations` from `next-intl`, one namespace-bound function per namespace - to access a second namespace, bind another function (e.g. `const tCommon = useTranslations("common")`) rather than reaching across namespaces
 7. **Mobile-first** - Design for mobile, enhance for desktop
 8. **Accessibility** - Use Radix primitives, semantic HTML
-9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
+9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `formatDateTime()` / `formatDate()` from `src/lib/utils/date.ts` (built on `dateTimeFormat()`, pinned to UTC and whitespace-normalized so SSR and client agree) instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
 
 ### Component Development
 
