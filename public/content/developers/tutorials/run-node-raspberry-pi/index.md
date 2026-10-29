@@ -17,7 +17,7 @@ To use Ethereum on Arm to turn a Raspberry Pi into an Ethereum node, the followi
 
 - Raspberry Pi 5 with 16 GB of RAM
 - An NVMe HAT for the Raspberry Pi 5, to connect an NVMe disk
-- NVMe SSD (M.2 2280), 2 TB minimum, 4 TB recommended. Avoid disks with a Phison controller, which have known compatibility issues.
+- NVMe SSD (M.2 2280), 4 TB minimum. Avoid disks with a Phison controller, which have known compatibility issues.
 - MicroSD Card (16 GB Class 10 minimum)
 - Power supply
 - Ethernet cable
