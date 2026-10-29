@@ -418,12 +418,13 @@ export function DiagramReadout({
   return (
     <dl
       aria-label={label ?? t("diagram-readout-label")}
-      className="m-0 grid grid-cols-[minmax(0,1fr)_auto] gap-x-3 gap-y-1 border-t border-border pt-3 text-sm"
+      className="m-0 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 border-t border-border pt-3 text-sm"
     >
       {rows.map((row, i) => (
         <div key={i} className="contents">
-          <dt className="min-w-0 text-body-medium">{row.label}</dt>
-          <dd className="m-0 text-end font-mono text-body tabular-nums">
+          <dt className="text-body-medium">{row.label}</dt>
+          {/* Long code values (API paths, method names) wrap, not the label. */}
+          <dd className="m-0 text-end font-mono [overflow-wrap:anywhere] text-body tabular-nums">
             {row.value}
           </dd>
         </div>
