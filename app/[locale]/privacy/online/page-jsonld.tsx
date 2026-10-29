@@ -12,11 +12,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function PrivacyOnlinePageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditIsoTimestamp,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditIsoTimestamp: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-privacy-online")
@@ -75,7 +75,7 @@ export default async function PrivacyOnlinePageJsonLD({
               "Companies that collect and sell personal information, and the opt-out and deletion rights that apply to them",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditIsoTimestamp || undefined,
       },
     ],
   }

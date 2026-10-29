@@ -12,11 +12,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function PrivacyEthereumPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditIsoTimestamp,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditIsoTimestamp: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-privacy-ethereum")
@@ -75,7 +75,7 @@ export default async function PrivacyEthereumPageJsonLD({
               "A decentralized platform for applications and digital economies powered by smart contracts",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditIsoTimestamp || undefined,
       },
     ],
   }
