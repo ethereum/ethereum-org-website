@@ -284,6 +284,10 @@ module.exports = [
     "/developers/tutorials/?removed",
   ],
   [
+    "/developers/tutorials/solidity-and-truffle-continuous-integration-setup",
+    "/developers/tutorials/?removed",
+  ],
+  [
     "/developers/tutorials/the-graph-fixing-web3-data-querying",
     "/developers/tutorials/?removed",
   ],
@@ -302,10 +306,6 @@ module.exports = [
   ],
   // Paths that AI assistants and old links still request (see #19140)
   ["/developers/apis/json-rpc", "/developers/docs/apis/json-rpc/"],
-  [
-    "/developers/tutorials/solidity-and-truffle-continuous-integration-setup",
-    "/developers/tutorials/",
-  ],
   ["/apps/cowswap", "/apps/"],
   ["/apps/scout-game", "/apps/"],
 ]
