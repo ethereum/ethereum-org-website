@@ -30,8 +30,21 @@ safe-outputs:
           description: "One line: why this risk"
           required: true
           type: string
+        goal:
+          description: "One sentence in your own words: what the PR is trying to achieve, from its title, body, linked issue and diff"
+          required: true
+          type: string
+        base:
+          description: "Whether the base branch, as it is now, still needs this PR. already-done or partly-done must also be reported as a finding naming the commit (blocking for already-done)"
+          required: true
+          type: choice
+          options: ["needed", "partly-done", "already-done"]
+        claims:
+          description: 'JSON array, possibly empty, of the concrete claims the PR body makes about behaviour, numbers or testing, each checked against pr-head: {"claim": "short paraphrase", "status": "verified"|"contradicted"|"unverifiable", "evidence": "file:line, commit, or why it cannot be checked from the repo"}. A contradicted claim must also be a finding'
+          required: true
+          type: string
         summary:
-          description: "One sentence: what the PR does"
+          description: "One sentence: whether the PR achieves its goal, and the main reason"
           required: true
           type: string
         findings:
@@ -39,7 +52,7 @@ safe-outputs:
           required: true
           type: string
         unreviewed:
-          description: "Files not reviewed, comma-separated, or empty"
+          description: "Paths of files not reviewed, comma-separated, or empty. Paths only, no explanations"
           required: false
           type: string
       steps:
@@ -100,13 +113,21 @@ safe-outputs:
                      line: ((.line | tostring | match("[0-9]+").string | tonumber)? // null),
                      title: (.title // "" | clean), detail: (.detail // "" | clean), fix: (.fix // "" | clean)}
                 ) | sort_by({"blocking":0,"should fix":1,"nit":2}[.severity])) as $all
-              | {v: 1, pr: (.pr | tostring | gsub("[^0-9]"; "") | tonumber),
+              | (.claims // "" | if . == "" then "[]" else . end | fromjson) as $c
+              | if ($c | type) != "array" then error("claims is not an array") else . end
+              | ($c | map(
+                  if (.status | IN("verified", "contradicted", "unverifiable")) | not then error("bad claim status: \(.status)") else . end
+                  | {claim: (.claim // "" | clean), status, evidence: (.evidence // "" | clean)}
+                ) | .[0:10]) as $claims
+              | if (.base | IN("needed", "partly-done", "already-done")) | not then error("bad base: \(.base)") else . end
+              | {v: 2, pr: (.pr | tostring | gsub("[^0-9]"; "") | tonumber),
                  sha: (.sha as $s | if ($s | type) == "string" and ($commits | index($s)) != null then $s
                        elif $evsha != "" then $evsha else $commits[-1] end),
                  lanes: (.lanes | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != "")) | unique
                    | if length == 0 or any(IN("code", "tooling", "data", "content", "translation", "deps", "docs") | not) then error("bad lanes") else . end),
                  risk: ([.risk, $paths.floor] | max),
                  reason: (if $paths.floor > .risk then "\($paths.floor) floor for `\($paths.floorReason)`; reviewer said \(.risk): \(.reason | clean)" else (.reason | clean) end),
+                 goal: (.goal // "" | clean), base, claims: $claims,
                  summary: (.summary | clean),
                  findings: $all[0:25],
                  counts: {blocking: ($all | map(select(.severity == "blocking")) | length),
@@ -121,12 +142,20 @@ safe-outputs:
               def say: gsub("@"; "@​");
               (.counts.blocking + .counts.should_fix + .counts.nit) as $n
               | "## 🔎 First-pass review — " + (if $n == 0 then "no findings" elif $n == 1 then "1 finding" else "\($n) findings" end)
-              + "\n\n" + (.summary | say)
+              + "\n\n**Goal:** " + (.goal | say) + "\n\n" + (.summary | say)
+              + ({"already-done": " **The base branch already does this.**", "partly-done": " **The base branch already does part of this.**"}[.base] // "")
               + (if (.findings | length) > 0 then "\n\n" + ([.findings | to_entries[] | .value as $x
                   | "\(.key + 1). **\($x.severity)** `\($x.file)\(if $x.line then ":\($x.line)" else "" end)` — \($x.title | say)"
                     + (if $x.detail != "" then ". \($x.detail | say)" else "" end)
                     + (if $x.fix != "" then " **Fix:** \($x.fix | say)" else "" end)] | join("\n")) else "" end)
               + (if $n > (.findings | length) then "\n\n_\($n - (.findings | length)) more findings not shown._" else "" end)
+              + (if (.claims | length) > 0 then "\n\n<details><summary>PR claims checked: "
+                  + ([("verified", "contradicted", "unverifiable") as $s | (.claims | map(select(.status == $s)) | length) as $k
+                      | select($k > 0) | "\($k) \($s)"] | join(", "))
+                  + "</summary>\n\n"
+                  + ([.claims[] | "- " + {"verified": "✅", "contradicted": "❌", "unverifiable": "❔"}[.status] + " \(.claim | say)"
+                      + (if .evidence != "" then " — \(.evidence | say)" else "" end)] | join("\n"))
+                  + "\n\n</details>" else "" end)
               + (if (.unreviewed | length) > 0 then "\n\n_Not reviewed: " + (.unreviewed | map("`\(.)`") | join(", ")) + "_" else "" end)
               + "\n\n<!-- ethorg-review: " + tojson + " -->"
             ' <<<"$review")
