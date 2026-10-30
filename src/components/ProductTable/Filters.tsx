@@ -24,7 +24,12 @@ const Filters = ({
   const t = useTranslations("table")
 
   return (
-    <div className="w-full lg:w-80" data-testid="filters-container">
+    // aside: filter controls aren't content, and the search crawler skips asides
+    <aside
+      className="w-full lg:w-80"
+      aria-label={t("table-filters")}
+      data-testid="filters-container"
+    >
       <div className="width-full sticky top-0 z-10 mb-2 flex flex-row items-center justify-between border-b border-b-background-highlight bg-background px-2 py-1.5 lg:top-[76px] lg:px-6">
         <p className="text-md font-bold">
           {t("table-filters")} ({activeFiltersCount})
@@ -54,7 +59,7 @@ const Filters = ({
           )
         })}
       </Accordion>
-    </div>
+    </aside>
   )
 }
 
