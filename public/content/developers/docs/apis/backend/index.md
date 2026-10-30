@@ -63,6 +63,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GetBlock.io](https://getblock.io/)
 - [Documentation](https://docs.getblock.io/)
 
+**Goldsky Boost -** **_Free JSON-RPC cache in front of your existing provider._**
+
+- [goldsky.com](https://goldsky.com/products/boost)
+- [Documentation](https://docs.goldsky.com/boost)
+
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
