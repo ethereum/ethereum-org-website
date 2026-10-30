@@ -19,6 +19,9 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import ToolCard from "./ToolCard"
 
+const SIDEBAR_FOOTER_LINK_CLASSES =
+  "flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-sm text-body-medium no-underline hover:bg-background-highlight hover:text-primary"
+
 const SUGGEST_RESOURCE_ISSUE_URL =
   "https://github.com/ethereum/builder-resources/issues/new?template=add-resource.yml"
 
@@ -41,6 +44,7 @@ type ToolsCatalogProps = {
     resultsLabel: string
     noResults: string
     cropsNative: string
+    cropsNativeLearnMore: string
     filtersToggle: string
     applyLabel: string
     closeLabel: string
@@ -300,12 +304,20 @@ export default function ToolsCatalog({
         />
       )}
       sidebarFooter={
-        <BaseLink
-          href={SUGGEST_RESOURCE_ISSUE_URL}
-          className="flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-sm text-body-medium no-underline hover:bg-background-highlight hover:text-primary"
-        >
-          {labels.suggestButton}
-        </BaseLink>
+        <>
+          <BaseLink
+            href="/foundation/mandate/"
+            className={SIDEBAR_FOOTER_LINK_CLASSES}
+          >
+            {labels.cropsNativeLearnMore}
+          </BaseLink>
+          <BaseLink
+            href={SUGGEST_RESOURCE_ISSUE_URL}
+            className={SIDEBAR_FOOTER_LINK_CLASSES}
+          >
+            {labels.suggestButton}
+          </BaseLink>
+        </>
       }
       renderResults={(filteredTools) => (
         <ToolsResults
