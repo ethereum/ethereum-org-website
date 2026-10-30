@@ -23,7 +23,7 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **Worked on by an active team** - this helps to ensure quality and that a user will get support for their queries.
 - **Honest and accurate listing information** - it is expected that any suggested listings from projects come with honest and accurate information. Products that falsify listing information, such as declaring your product is “open source” when it is not, will be removed.
 - **Point of contact** - A point of contact for the wallet will greatly help us get accurate information when changes are made. This will keep updating ethereum.org manageable when gathering future information.
-- **EIP-1559 (type 2) transactions** - your wallet must support EIP-1559 (type 2) transactions for transactions on Mainnet Ethereum.
+- **Supports Ethereum's current fee market** - your wallet must support dynamic transaction fees for the account and transaction mechanisms it uses, and must not rely exclusively on legacy `gasPrice` transactions. This may be satisfied through EIP-1559 transactions, EIP-7702, or ERC-4337 account abstraction.
 - **Good user experience** - While UX is subjective, if several core team members test the product and find it difficult to use, we reserve the right to reject the wallet and will instead provide useful suggestions to improve. This is done to protect our user base that is mostly comprised of beginners.
 - **Ethereum focused** - A wallet must provide a primary Ethereum-focused experience. This means Ethereum (or any L2) is set as the default network, ERC assets are properly supported, and features are aligned with the Ethereum ecosystem. Wallets that prioritize in the UI alternative layer 1s will not be listed. 
 
@@ -46,7 +46,7 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **Swaps** - users are able to swap tokens through the wallet.
 - **Multichain networks** - your wallet supports users accessing multiple blockchain networks by default.
 - **Layer 2 networks** - your wallet supports users accessing layer 2 networks by default.
-- **Customize gas fees** - your wallet allows users to customize their transaction gas fees (base fee, priority fee, max fee).
+- **Customize gas fees** - your wallet allows users to adjust their transaction fees or priority.
 - **ENS support** - your wallet allows users to send transactions to ENS names.
 - **ERC-20 support** - your wallet allows users to import ERC-20 token contracts, or automatically queries and displays ERC-20 tokens.
 - **Buy crypto** - your wallet supports users directly purchasing and onboarding to crypto.

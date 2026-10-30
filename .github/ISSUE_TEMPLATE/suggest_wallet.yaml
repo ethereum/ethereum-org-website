@@ -290,11 +290,14 @@ body:
       description: Please provide documentation on how to import tokens into the wallet.
     validations:
       required: true
-  - type: input
-    id: wallet_eip_1559_support
+  - type: textarea
+    id: wallet_fee_market_support
     attributes:
-      label: Does the wallet support EIP-1559 (type 2) transactions?
-      description: Does your wallet support EIP-1559 (type 2) transactions for Ethereum Mainnet. Please provide information on the type of transactions this wallet supports. If this is not applicable, please explain.
+      label: How does the wallet set transaction fees on Ethereum Mainnet?
+      description: |
+        Listed wallets must support dynamic transaction fees and must not rely exclusively on legacy `gasPrice` transactions.
+        Tell us which mechanism the wallet uses (EIP-1559 transactions, EIP-7702, or ERC-4337 UserOperations) and link one recent Mainnet transaction sent from the wallet. For ERC-4337 wallets, link the UserOperation.
+      placeholder: "EIP-1559 (type 2) transactions. Example: https://etherscan.io/tx/0x…"
     validations:
       required: true
   - type: textarea
@@ -336,13 +339,6 @@ body:
     attributes:
       label: Does the wallet support social recovery?
       description: Please provide documentation on how users set up guardians and use social recovery for the wallet.
-  - type: input
-    id: wallet_bundled_transactions
-    attributes:
-      label: Does the wallet support bundled transactions?
-      description: Please provide any documentation on bundled transactions
-    validations:
-      required: true
   - type: dropdown
     id: wallet_eip_4337_support
     attributes:
@@ -363,6 +359,22 @@ body:
         - "No"
     validations:
       required: true
+  - type: dropdown
+    id: wallet_erc_5792_support
+    attributes:
+      label: Does the wallet support atomic batch calls (ERC-5792)?
+      description: On Mainnet, `wallet_getCapabilities` reports the `atomic` capability as `supported` or `ready`, and `wallet_sendCalls` executes a batch so that all calls succeed or none do
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: false
+  - type: textarea
+    id: wallet_erc_5792_capabilities
+    attributes:
+      label: Output of `wallet_getCapabilities` on Mainnet (optional)
+      render: json
   - type: markdown
     id: support
     attributes:
