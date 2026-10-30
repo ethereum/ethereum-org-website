@@ -1740,6 +1740,18 @@ const chains = [
     shortName: "memento-mainnet",
   },
   {
+    name: "Regulated Layer One",
+    infoURL: "https://rl1.network",
+    chainId: 53147,
+    nativeCurrency: {
+      name: "RL1 Ether",
+      symbol: "RETH",
+      decimals: 18,
+    },
+    chain: "RL1",
+    shortName: "rl1",
+  },
+  {
     name: "BirdLayer",
     infoURL: "https://www.dodochain.com",
     chainId: 53456,
@@ -2194,6 +2206,18 @@ const chains = [
     },
     chain: "ARTIS",
     shortName: "ats",
+  },
+  {
+    name: "BrainChain",
+    infoURL: "https://usebrainchain.com",
+    chainId: 274663,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+    shortName: "brainchain",
   },
   {
     name: "Athene Parthenon",
