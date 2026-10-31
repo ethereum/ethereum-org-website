@@ -25,7 +25,7 @@ Three things are worth knowing up front:
 3. Under **Other Transactions**, the **Authorizations (EIP-7702)** tab lists the EIP-7702 authorizations recorded for your address, with the delegated address and when each one happened.
 4. **Repeat this on every network where you hold funds**, using that network's block explorer. A delegation on one chain won't show on another chain's explorer.
 
-If you'd rather not rely on an explorer's labels: a delegated account's code is the 23 bytes `0xef0100` followed by the 20-byte address of the contract it delegates to. An account with no delegation has no code at all.
+If you'd rather not rely on an explorer's labels: a delegated account's code is the 23 bytes `0xef0100` followed by the 20-byte address of the contract it delegates to. An account with no delegation has no code at all. Developers can read this code directly with the [`eth_getCode`](/developers/docs/apis/json-rpc/#eth-getcode) JSON-RPC method.
 
 ## Step 2: Decide whether you expect it {#step-2-decide-whether-you-expect-it}
 
@@ -60,7 +60,7 @@ Then check your old account for token approvals too, using our guide on [how to 
 
 - **Never sign a delegation a website asks for.** Use your wallet's own smart account features instead.
 - **Read every signature request.** If your wallet shows a contract you don't recognize, or says you're changing your account's code, stop.
-- **Use a hardware wallet for anything of size.** ethereum.org's [guidelines for hardware wallets](/roadmap/pectra/7702/) recommend allowing delegation only to a list of trusted contracts.
+- **Use a hardware wallet for anything of size.** ethereum.org's [hardware wallet guidelines](/roadmap/pectra/7702/#hardware-wallet-guidelines) say hardware wallets shouldn't expose arbitrary delegation and should use a list of trusted delegator contracts.
 
 <br />
 
