@@ -1129,7 +1129,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2026-07-13",
+    last_updated: "2026-11-01",
     name: "TokenPocket",
     fees: [
       { type: "swap", text: "undisclosed", qualifier: "tpt-holder-discounts" },
@@ -1195,6 +1195,8 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: true,
     social_recovery: false,
+    eip_4337_support: true,
+    eip_7702_support: true,
     onboard_documentation: "https://help.tokenpocket.pro/en",
     documentation: "https://help.tokenpocket.pro/developer-en/",
     supported_chains: [
