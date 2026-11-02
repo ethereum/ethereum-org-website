@@ -74,6 +74,6 @@ Users can query the ether balance of any [account](/developers/docs/accounts/) b
 - [Defining ether and Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): The original proposal for Ethereum. This document includes a description of ether and the motivations behind its creation.
 - [Gwei Calculator](https://www.alchemy.com/gwei-calculator): Use this gwei calculator to easily convert wei, gwei, and ether. Simply plug in any amount of wei, gwei, or ETH and automatically calculate the conversion.
-- [Kumocast ETH page](https://www.kumocast.io/ethereum-price-prediction): Support and resistance levels, volatility ranges and indicator readings for ether, each with a short plain-language explanation.
+- [Kumocast ETH market data](https://www.kumocast.io/ethereum-price-prediction): Free ETH market data and analysis – support and resistance levels, volatility ranges and indicator readings, each explained in plain language.
 
 _Know of a community resource that helped you? Edit this page and add it!_
