@@ -88,6 +88,7 @@ To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/H
 - [SubQuery Ethereum Quick Start Guide](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD Network Overview](https://docs.sqd.dev/)
 - [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
+- [Kumocast ETH dashboard](https://www.kumocast.io/ethereum-price-prediction) – example of a live market dashboard for ETH built from public exchange and onchain perps data, refreshed every 30 minutes
 
 ## Tutorials: Data & analytics / SQL on Ethereum {#tutorials}
 
