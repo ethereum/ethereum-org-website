@@ -76,6 +76,12 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 
 To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart) to create, deploy, and query an indexer.
 
+## CryptoKeyhole {#cryptokeyhole}
+
+[CryptoKeyhole](https://cryptokeyhole.com/) publishes Ethereum network metrics, such as supply, staking, stablecoin supply and exchange balances, calculated from its own Erigon and Lighthouse nodes, with the method documented on each chart. Free series are available through a keyless JSON API under CC BY 4.0.
+
+To get started, see the [data access guide](https://cryptokeyhole.com/data-access/) or the [OpenAPI specification](https://cryptokeyhole.com/api/v1/openapi.json).
+
 ## Further Reading {#further-reading}
 
 - [Exploring Crypto Data I: Data Flow Architectures](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
