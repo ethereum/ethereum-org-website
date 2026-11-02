@@ -353,6 +353,7 @@ The DeFi ecosystem continues to expand into new areas:
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [Kumocast](https://www.kumocast.io/crypto) – live price levels and volatility ranges for ETH and DeFi tokens such as UNI, AAVE and ENA
 
 ### DeFi articles {#defi-articles}
 
