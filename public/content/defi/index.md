@@ -353,7 +353,7 @@ The DeFi ecosystem continues to expand into new areas:
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [Kumocast](https://www.kumocast.io/crypto) – free market data and analysis for ETH and DeFi tokens such as UNI, AAVE and ENA
+- [On-chain vs centralized perpetuals funding](https://www.kumocast.io/research/hyperliquid-vs-binance-funding-rates) – an open-data study comparing funding rates on an on-chain perpetuals exchange and a centralized one, with downloadable data – _Kumo Research_
 
 ### DeFi articles {#defi-articles}
 
