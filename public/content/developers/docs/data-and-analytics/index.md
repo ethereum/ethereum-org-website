@@ -78,7 +78,7 @@ To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/H
 
 ## CryptoKeyhole {#cryptokeyhole}
 
-[CryptoKeyhole](https://cryptokeyhole.com/) publishes Ethereum network metrics, such as supply, staking, stablecoin supply and exchange balances, calculated from its own Erigon and Lighthouse nodes, with the method documented on each chart. Free series are available through a keyless JSON API under CC BY 4.0.
+[CryptoKeyhole](https://cryptokeyhole.com/) publishes Ethereum network metrics, such as supply, staking, stablecoin supply and exchange balances, calculated from its own Erigon and Lighthouse nodes, with the method documented on each chart. Free series are available through a keyless JSON API under CC BY 4.0; some other data requires a paid plan.
 
 To get started, see the [data access guide](https://cryptokeyhole.com/data-access/) or the [OpenAPI specification](https://cryptokeyhole.com/api/v1/openapi.json).
 
