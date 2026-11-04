@@ -353,12 +353,12 @@ The DeFi ecosystem continues to expand into new areas:
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [On-chain vs centralized perpetuals funding](https://www.kumocast.io/research/hyperliquid-vs-binance-funding-rates) – an open-data study comparing funding rates on an on-chain perpetuals exchange and a centralized one, with downloadable data – _Kumo Research_
 
 ### DeFi articles {#defi-articles}
 
 - [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6, 2020_
 - [EEA DeFi Risk Assessment Guidelines](https://entethalliance.org/specs/defi-risks/) – An industry-backed overview of how to identify and assess key risks in DeFi protocols.
+- [Funding rates on an on-chain perpetuals exchange vs a centralized one](https://www.kumocast.io/research/hyperliquid-vs-binance-funding-rates) – A data study comparing Hyperliquid and Binance perpetual funding rates, with the method and downloadable data. – _Kumo Research, 2026_
 
 ### Videos {#videos}
 
