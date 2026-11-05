@@ -12,7 +12,7 @@ export const getAppPageLastCommitDate = (
       const commitDate = new Date(contributor.date)
       return commitDate > latest ? commitDate : latest
     }, new Date(0))
-    .toString()
+    .toISOString()
 }
 
 const LABELS_TO_SEARCH = [
