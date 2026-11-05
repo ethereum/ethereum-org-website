@@ -97,6 +97,7 @@
   "docsearch-ask-answer": "Ethereum.org answer",
   "docsearch-ask-beta": "Beta",
   "docsearch-ask-dismiss": "Dismiss",
+  "docsearch-ask-buy-route": "We can't recommend specific payment apps or exchanges, but you can find the exchanges available in your country.",
   "docsearch-ask-busy": "Too many questions at once. Try again in about {seconds} seconds.",
   "docsearch-ask-disclaimer": "Generated from ethereum.org pages. This feature is currently in beta. Check the sources before acting on it.",
   "docsearch-ask-error": "The answer could not be generated. Try the search results instead.",

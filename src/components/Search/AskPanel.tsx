@@ -11,6 +11,7 @@ import { BaseLink } from "@/components/ui/Link"
 import {
   type AskAllowance,
   type AskErrorCode,
+  type AskNoMatchCode,
   isAllowedAnswerLink,
   scrubQuery,
   type Source,
@@ -21,6 +22,7 @@ import { cn } from "@/lib/utils/cn"
 import { isExplorerLookup } from "@/lib/utils/explorerQuery"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { ASK_BUY_ROUTE_PATH } from "@/data/ask-buy-terms"
 import { ASK_FOLLOWUPS, type AskFollowupPath } from "@/data/ask-followups"
 
 /** Where the model was told to send the reader instead of answering from excerpts. */
@@ -76,6 +78,8 @@ const AskPanel = ({
   const [sources, setSources] = useState<Source[]>([])
   const [referral, setReferral] = useState<ReferralNote | null>(null)
   const [followup, setFollowup] = useState<AskFollowupPath | null>(null)
+  // A local payment app or exchange: point to the country picker, not "English only".
+  const [buyRoute, setBuyRoute] = useState(false)
   const [error, setError] = useState("")
   const [notice, setNotice] = useState("")
   const [done, setDone] = useState(false)
@@ -134,8 +138,18 @@ const AskPanel = ({
         if (!response.ok || !response.body) {
           // Nothing retrieved, usually a question asked in another language.
           if (response.status === 422) {
-            setNotice(t("docsearch-ask-english-only"))
-            report("no match")
+            const code: AskNoMatchCode | undefined = await response
+              .json()
+              .then((body) => body?.code)
+              .catch(() => undefined)
+            if (code === "buy-route") {
+              setNotice(t("docsearch-ask-buy-route"))
+              setBuyRoute(true)
+              report("buy route")
+            } else {
+              setNotice(t("docsearch-ask-english-only"))
+              report("no match")
+            }
             setDone(true)
             return
           }
@@ -205,13 +219,16 @@ const AskPanel = ({
 
   const targets = useMemo(
     () => [
+      ...(buyRoute ? [{ url: ASK_BUY_ROUTE_PATH }] : []),
       ...(followup ? [{ url: followup }] : []),
       ...(referral ? [{ url: referral.url }] : []),
       ...sources.map((source) => ({ url: source.url })),
     ],
-    [followup, referral, sources]
+    [buyRoute, followup, referral, sources]
   )
-  const offset = (followup ? 1 : 0) + (referral ? 1 : 0)
+  // Navigable targets render in this order: buy route, follow-up, referral, sources.
+  const buyCount = buyRoute ? 1 : 0
+  const offset = buyCount + (followup ? 1 : 0) + (referral ? 1 : 0)
 
   // Records the question and the cited paths, not the prose: bad answers have almost
   // always been bad grounding.
@@ -345,8 +362,16 @@ const AskPanel = ({
 
       {notice && <p className="text-sm text-body-medium">{notice}</p>}
 
-      {done && followup && (
+      {done && buyRoute && (
         <p {...targetProps(0)}>
+          <BaseLink href={ASK_BUY_ROUTE_PATH} className={LINK}>
+            {t("docsearch-ask-followup-get-eth")}
+          </BaseLink>
+        </p>
+      )}
+
+      {done && followup && (
+        <p {...targetProps(buyCount)}>
           <BaseLink href={followup} className={LINK}>
             {t(ASK_FOLLOWUPS[followup])}
           </BaseLink>
@@ -354,7 +379,7 @@ const AskPanel = ({
       )}
 
       {done && referral && (
-        <p {...targetProps(followup ? 1 : 0)}>
+        <p {...targetProps(buyCount + (followup ? 1 : 0))}>
           <BaseLink href={referral.url} className={LINK}>
             {referral.name}
           </BaseLink>
