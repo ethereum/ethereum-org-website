@@ -971,11 +971,14 @@ This is not a full production version; it is merely an example to teach the basi
 
 ### Smarter trading {#smart-trading}
 
-There are two important facts the agent ignores when deciding what to do.
+There are three important facts the agent ignores when deciding what to do.
 
 - _The magnitude of anticipated change_. The agent sells a fixed amount of `WETH` if the price is expected to decline, regardless of the magnitude of the decline.
   Arguably, it would be better to ignore minor changes and sell based on how much we expect the price to decline.
 - _The current portfolio_. If 10% of your portfolio is in WETH and you think the price will go up, it probably makes sense to buy more. But if 90% of your portfolio is in WETH, you may be sufficiently exposed, and there is no need to buy more. The reverse is true if you expect the price to go down.
+- _Volatility_. A predicted 1% move means little for a token that usually moves 4% a day, but a lot for one that usually moves 0.5%.
+  It would be better to compare the expected change to the token's normal daily range (for example its [average true range](https://www.investopedia.com/terms/a/atr.asp)) and only trade when the expected move stands out from that noise.
+  Open-data studies such as [ETH vs BTC, 2017–2026](https://www.kumocast.io/research/eth-vs-btc-correlation-ratio-cycles) (_Kumo Research_) show how large ETH's moves have been relative to BTC over many years, which you can use to sanity-check the values your agent produces.
 
 ### What if you want to keep your trading strategy a secret? {#secret}
 
