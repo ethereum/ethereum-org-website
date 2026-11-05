@@ -1596,8 +1596,7 @@ export interface CatalogItem {
   logo?: string | StaticImageData
   banner?: string | StaticImageData
   screenshots: (string | StaticImageData)[]
-  /** `node` replaces the default `Tag` render, e.g. for an interactive badge. */
-  tags: { label: string; status?: TagProps["status"]; node?: ReactNode }[]
+  tags: { label: string; status?: TagProps["status"] }[]
   subtitle?: string
   chains: ChainName[]
   /** Localized; rendered as markdown. */
