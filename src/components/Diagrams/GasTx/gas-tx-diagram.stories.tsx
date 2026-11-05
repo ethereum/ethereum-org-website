@@ -1,0 +1,120 @@
+import { pickBy } from "lodash"
+import { within } from "storybook/test"
+import type { Meta, StoryObj } from "@storybook/nextjs"
+
+import { viewportModes } from "@/storybook/modes"
+
+import GasTxDiagram from "."
+
+const meta = {
+  title: "Components / Data Viz / Diagrams / GasTx",
+  component: GasTxDiagram,
+  tags: ["autodocs"],
+  args: { fig: 1 },
+  parameters: {
+    layout: "padded",
+    // Only key states snapshot (opted in per story): idle, final,
+    // out of gas, dark and RTL, each at base and lg.
+    chromatic: {
+      disableSnapshot: true,
+      modes: pickBy(viewportModes, (args) =>
+        ["base", "lg"].includes(args.viewport)
+      ),
+    },
+    docs: {
+      description: {
+        component:
+          'Interactive replacement for `gas-tx.png` on `/developers/docs/transactions/` and `/developers/docs/gas/`, used in markdown as `<GasTxDiagram />`. Drawn as a fuel rig: a pump (externally owned account) fills a tank to the gas limit, a feed pipe carries the message to an engine (contract account) that burns fuel per operation, and unused fuel flows back through a meter; out of gas, the engine stalls and the contract shows a Reverted tag.\n\nThe player (`player.tsx`) and drawing (`rig.tsx`) are server-rendered in the `InteractiveDiagram` shell; everything reads from the plain-TS model in `model.ts`. Step stories set `initialStep` so each snapshot is a deterministic end state. Chromatic runs with `prefersReducedMotion: "reduce"` globally.',
+      },
+    },
+  },
+} satisfies Meta<typeof GasTxDiagram>
+
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const LightCall: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    docs: {
+      description: {
+        story:
+          "Idle: the complete diagram before **Send transaction**. Limit 100,000, used 46,000, 54,000 returned.",
+      },
+    },
+  },
+}
+
+export const HeavyCall: Story = { args: { initialPreset: "heavy" } }
+
+export const OutOfGas: Story = {
+  args: { initialPreset: "out-of-gas" },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "All 100,000 gas is consumed, state changes are reverted, and the refund lane stays dimmed: nothing is returned.",
+      },
+    },
+  },
+}
+
+export const Step1Enter: Story = { args: { initialStep: 0 } }
+
+export const Step2Reserve: Story = { args: { initialStep: 1 } }
+
+export const Step3Execute: Story = { args: { initialStep: 2 } }
+
+export const Step4Return: Story = {
+  args: { initialStep: 3 },
+  parameters: { chromatic: { disableSnapshot: false } },
+}
+
+export const Step3OutOfGas: Story = {
+  args: { initialPreset: "out-of-gas", initialStep: 2 },
+}
+
+export const Step4Reverted: Story = {
+  args: { initialPreset: "out-of-gas", initialStep: 3 },
+  parameters: { chromatic: { disableSnapshot: false } },
+}
+
+export const Dark: Story = {
+  globals: { theme: "dark" },
+  args: { initialStep: 2 },
+  parameters: { chromatic: { disableSnapshot: false } },
+}
+
+export const DarkReverted: Story = {
+  globals: { theme: "dark" },
+  args: { initialPreset: "out-of-gas", initialStep: 3 },
+}
+
+export const Rtl: Story = {
+  globals: { locale: "ar" },
+  args: { initialStep: 3 },
+  parameters: {
+    chromatic: { disableSnapshot: false },
+    docs: {
+      description: {
+        story:
+          "Arabic: the rig, its labels and the controls panel mirror, so the flow runs from the inline-start (right) side. Strings fall back to English until the intl pipeline translates the namespace.",
+      },
+    },
+  },
+}
+
+/** Focusing a label highlights its part and shows its definition in the status line. */
+export const HoverPart: Story = {
+  args: { initialStep: 3, fig: 1 },
+  play: async ({ canvasElement }) => {
+    const label = await within(canvasElement).findByText("Gas supply")
+    label.focus()
+  },
+}
+
+export const HoverPartDark: Story = {
+  ...HoverPart,
+  globals: { theme: "dark" },
+}

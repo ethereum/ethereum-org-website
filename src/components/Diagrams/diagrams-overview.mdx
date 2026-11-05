@@ -1,0 +1,20 @@
+import { Meta } from "@storybook/addon-docs/blocks"
+
+<Meta title="Components / Data Viz / Diagrams / Overview" />
+
+# Diagrams
+
+The developer docs explain protocol mechanics with schematic PNGs (adapted from _Ethereum EVM illustrated_). PNGs don't follow the theme, can't be translated, and give screen readers one alt string. These interactive diagrams replace them one at a time: a small isometric drawing that steps through the mechanism, with example values, a caption per step and a live readout.
+
+Every diagram uses the same shell, **InteractiveDiagram**: the drawing with a figure header, status line and legend, then a panel with example values, playback controls, the step caption and the readout. The isometric parts come from **Anatomy**.
+
+| Story              | What it shows                                                   |
+| ------------------ | --------------------------------------------------------------- |
+| InteractiveDiagram | The shell and its slots, side panel and stacked, German strings |
+| Anatomy            | The shared isometric primitives, labels and colour roles        |
+| GasTx              | Message call (`gas-tx.png`)                                     |
+| GasEvm             | Gas inside the EVM (`gas.png`)                                  |
+
+Colour roles: **blue** for accounts, contracts and the EVM, **orange** for gas only, **neutral** for structure.
+
+The rules, file layout, recipe for converting the next PNG, accessibility and performance budget live in one place: [`.claude/skills/devdocs-diagrams/SKILL.md`](https://github.com/ethereum/ethereum-org-website/blob/dev/.claude/skills/devdocs-diagrams/SKILL.md).
