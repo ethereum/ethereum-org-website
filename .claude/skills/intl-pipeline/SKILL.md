@@ -5,7 +5,7 @@ description: Use when working on the translation pipeline (`src/scripts/intl-pip
 
 # intl-pipeline
 
-LLM-based, manifest-driven, incremental translation pipeline for ethereum.org. Translates English content (markdown in `public/content/`, JSON UI strings in `src/intl/en/`) into 24 target languages via Gemini — reached either directly or through OpenRouter (`LLM_PROVIDER`), whose keys carry a server-side spend limit — with a post-import sanitizer normalizing common artifacts. **The workflow is manual-dispatch only**; the daily cron was removed after a run billed $1,108 unattended (`references/runbooks/cost-guard-tripped.md`). ETHGlossary is the authoritative source for all Ethereum-ecosystem term translations consumed by the pipeline. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
+LLM-based, manifest-driven, incremental translation pipeline for ethereum.org. Translates English content (markdown in `public/content/`, JSON UI strings in `src/intl/en/`) into 24 target languages via Gemini — reached either directly or through OpenRouter (`LLM_PROVIDER`), whose keys carry a server-side spend limit — with a post-import sanitizer normalizing common artifacts. **The workflow runs daily at 04:20 UTC and on manual dispatch**; the cron was off between 2026-08-12 and 2026-08-27 after a run billed $1,108 unattended, and was restored once the input-side bounds had supervised runs behind them (`references/runbooks/cost-guard-tripped.md`). ETHGlossary is the authoritative source for all Ethereum-ecosystem term translations consumed by the pipeline. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
 
 ## The Core Rule: Don't Hand-Propagate English Changes
 
