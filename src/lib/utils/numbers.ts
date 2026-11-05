@@ -1,3 +1,4 @@
+import { safeLocale } from "./date"
 import { normalizeIntlSpaces } from "./intl"
 
 /**
@@ -31,7 +32,7 @@ export function numberFormat(
     ...(numberingSystem && { numberingSystem }),
   }
 
-  return new Intl.NumberFormat(locale, finalOptions)
+  return new Intl.NumberFormat(safeLocale(locale), finalOptions)
 }
 
 export const formatLargeUSD = (value: number, locale: string): string => {
