@@ -248,7 +248,11 @@ const CollectiblesCurrentYear = ({
         <p className="mt-2">{t("page-collectibles-code-content-desc")}</p>
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1" className="mt-4">
-            <AccordionTrigger className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent">
+            <AccordionTrigger
+              className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent"
+              headingLevel="h4"
+              headingId="code-content-instructions"
+            >
               {t("page-collectibles-instructions-label")}
             </AccordionTrigger>
             <AccordionContent className="text-base">
@@ -460,7 +464,11 @@ const CollectiblesCurrentYear = ({
 
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1" className="mt-4">
-            <AccordionTrigger className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent">
+            <AccordionTrigger
+              className="w-full justify-start !border-none !px-0 py-2 font-bold hover:bg-transparent [&[data-state=open]]:bg-transparent"
+              headingLevel="h4"
+              headingId="social-instructions"
+            >
               {t("page-collectibles-instructions-label")}
             </AccordionTrigger>
             <AccordionContent className="text-base">
