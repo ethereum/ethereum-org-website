@@ -403,6 +403,7 @@ export const walletsData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     eip_7702_support: true,
+    erc_5792_support: true,
     onboard_documentation: "https://support.metamask.io",
     documentation: "https://docs.metamask.io/",
     supported_chains: [
@@ -464,6 +465,7 @@ export const walletsData: WalletData[] = [
     multisig: true,
     social_recovery: true,
     eip_4337_support: true,
+    erc_5792_support: true,
     onboard_documentation: "https://docs.safe.global/",
     documentation: "https://docs.safe.global/",
     supported_chains: [
@@ -602,6 +604,7 @@ export const walletsData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     eip_4337_support: true,
+    erc_5792_support: true,
     onboard_documentation:
       "https://help.ambire.com/hc/en-us/categories/4404980091538-Ambire-Wallet",
     documentation: "",
@@ -1520,6 +1523,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    erc_5792_support: false,
     onboard_documentation: "",
     documentation: "",
     supported_chains: [
@@ -1594,6 +1598,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    erc_5792_support: false,
     onboard_documentation:
       "https://help.zerion.io/en/collections/5525626-zerion-wallet",
     documentation: "https://help.zerion.io/en/",
@@ -1765,6 +1770,7 @@ export const walletsData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     eip_7702_support: true,
+    erc_5792_support: false,
     onboard_documentation: "https://study.bitkeep.com/en/",
     documentation: "https://docs.bitkeep.com/en/docs/guide/",
     supported_chains: [
@@ -1972,6 +1978,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    erc_5792_support: false,
     onboard_documentation: "https://phantom.com/learn",
     documentation: "https://docs.phantom.com/",
     supported_chains: ["Ethereum Mainnet", "Base"],
@@ -2202,6 +2209,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    erc_5792_support: false,
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
     supported_chains: [
@@ -2642,6 +2650,7 @@ export const walletsData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     eip_7702_support: true,
+    erc_5792_support: true,
     onboard_documentation: "https://support.nu.fi/",
     documentation: "https://support.nu.fi/",
     supported_chains: [
@@ -2745,6 +2754,7 @@ export const walletsData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     eip_7702_support: true,
+    erc_5792_support: false,
     onboard_documentation:
       "https://support.uniswap.org/hc/en-us/categories/11301970439565-Uniswap-Wallet",
     documentation: "https://docs.uniswap.org/",

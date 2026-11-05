@@ -865,6 +865,7 @@ export type WalletData = {
   social_recovery: boolean
   eip_4337_support?: boolean
   eip_7702_support?: boolean
+  erc_5792_support?: boolean
   onboard_documentation: string
   documentation: string
   mpc?: boolean
