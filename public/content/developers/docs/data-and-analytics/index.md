@@ -76,6 +76,12 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 
 To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart) to create, deploy, and query an indexer.
 
+## Pinax {#pinax}
+
+[Pinax](https://pinax.network/) provides streaming access to Ethereum data through Firehose and Substreams, two open-source projects it maintains alongside StreamingFast. Firehose streams full blocks over gRPC, including call traces, balance changes and storage changes that a JSON-RPC node does not return. Substreams runs Rust modules in parallel on top of those blocks, writing the result to PostgreSQL or ClickHouse, streaming it to a consumer, or feeding a Graph Node as a subgraph data source.
+
+Pinax also serves a Token API for balances, transfers, holders, NFTs and DEX activity, and archive JSON-RPC endpoints. To get started, create a key at [app.pinax.network](https://app.pinax.network/) and follow the [Substreams quickstart](https://docs.substreams.dev/).
+
 ## Further Reading {#further-reading}
 
 - [Exploring Crypto Data I: Data Flow Architectures](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)

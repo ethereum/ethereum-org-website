@@ -290,6 +290,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Personal Account Manager
     - Shared, archive, backup and dedicated nodes
 
+- [**Pinax**](https://pinax.network/)
+  - [Docs](https://app.pinax.network/docs)
+  - Features
+    - Archive nodes with full historical state
+    - Firehose and Substreams alongside JSON-RPC
+    - Free and paid plans
+    - 37 networks, including Ethereum mainnet, Sepolia and Hoodi
+
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/)
   - Features
