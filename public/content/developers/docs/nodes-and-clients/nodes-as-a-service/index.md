@@ -196,6 +196,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Automated updates
     - Technical support
 
+- [**Goldsky Edge RPC**](https://goldsky.com/products/edge)
+  - [Docs](https://docs.goldsky.com/edge-rpc/introduction)
+  - Features
+    - HTTPS JSON-RPC for Ethereum Mainnet and Sepolia
+    - Archive data and trace/debug methods
+    - Multi-region routing with automatic upstream failover
+    - $5 per million requests; free Starter credit
+
 - [**InfStones**](https://infstones.com/)
   - Features
     - Free tier option
