@@ -66,6 +66,12 @@ To get started, visit the [documentation](https://docs.codex.io), try the [Explo
 
 To get started, visit the [documentation](https://docs.mobula.io), explore the [API reference](https://docs.mobula.io/reference/), or sign up at the [dashboard](https://mobula.io/).
 
+## Serialized {#serialized}
+
+[Serialized](https://serialized.xyz/) is a real-time onchain data API built for trading apps, terminals and wallets on Ethereum, Solana and other EVM chains such as Base, BNB Chain, Arbitrum and Avalanche. Developers can access token prices, OHLCV candles, trades, holders, top traders, wallet positions and PnL, and token security signals over REST, or subscribe to live WebSocket streams, without running their own indexing infrastructure. Serialized offers free trial credits, then pay-as-you-go and monthly plans.
+
+To get started, visit the [documentation](https://docs.serialized.xyz/introduction) or sign up at the [portal](https://serialized.xyz/portal).
+
 ## EVM Query Language {#evm-query-language}
 
 EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum Virtual Machine) chains. EQL's ultimate goal is to support complex relational queries on EVM chain first-class citizens (blocks, accounts, and transactions) while providing developers and researchers with an ergonomic syntax for everyday use. With EQL, developers can fetch blockchain data using familiar SQL-like syntax and eliminate the need for complex boilerplate code. EQL supports standard blockchain data requests (e.g., retrieving an account's nonce and balance on Ethereum or fetching the current block size and timestamp) and is continually adding support for more complex requests and featuresets.

@@ -213,6 +213,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
+**Serialized -** **_Real-time onchain market data API for trading apps, with REST and WebSocket streams._**
+
+- [serialized.xyz](https://serialized.xyz/)
+- [Documentation](https://docs.serialized.xyz/introduction)
+
 
 ## Further reading {#further-reading}
 
