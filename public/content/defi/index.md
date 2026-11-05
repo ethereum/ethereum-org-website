@@ -358,6 +358,7 @@ The DeFi ecosystem continues to expand into new areas:
 
 - [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6, 2020_
 - [EEA DeFi Risk Assessment Guidelines](https://entethalliance.org/specs/defi-risks/) – An industry-backed overview of how to identify and assess key risks in DeFi protocols.
+- [Funding rates on an on-chain perpetuals exchange vs a centralized one](https://www.kumocast.io/research/hyperliquid-vs-binance-funding-rates) – A data study comparing Hyperliquid and Binance perpetual funding rates, with the method and downloadable data. – _Kumo Research, 2026_
 
 ### Videos {#videos}
 
