@@ -82,7 +82,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
     const siteTitle = t("site-title")
     ```
 
-    > **In an `app/[locale]/` page or `generateMetadata`, call `setRequestLocale(locale)` before any next-intl API** (including the `getMetadata`/`getMdMetadata` helpers). Otherwise on-demand renders throw `Page changed from static to dynamic at runtime, reason: headers`. See `docs/solutions/architecture/setrequestlocale-static-to-dynamic-rendering.md`.
+    > The locale comes from `next/root-params` in `src/i18n/request.ts`, so next-intl APIs read the `[locale]` segment without touching request headers and pages stay static on their own. No priming call is needed before them. Route Handlers and Server Actions are the exception -- `next/root-params` doesn't reach them yet, so pass the locale explicitly there: `getTranslations({ locale, namespace })`.
 
 ## React Hooks
 

@@ -1,6 +1,5 @@
 import { generatePermutations, getPrecomputed } from "flags/next"
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
@@ -32,8 +31,6 @@ export default async function PrecomputedHomePage({
 }) {
   const { locale, code } = await params
   if (locale !== DEFAULT_LOCALE) notFound()
-  setRequestLocale(locale)
-
   let searchCtaVariant: number
   try {
     ;[searchCtaVariant] = await getPrecomputed(

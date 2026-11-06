@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
@@ -33,8 +33,6 @@ const Page = async (props: {
 }) => {
   const params = await props.params
   const { locale, category } = params
-
-  setRequestLocale(locale)
 
   const [data, { contributors }, t, toolDescriptions] = await Promise.all([
     getDeveloperToolsData(),
@@ -119,8 +117,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, category } = params
-
-  setRequestLocale(locale)
 
   // Guard against legacy/invalid slugs: the page itself redirects or 404s,
   // so skip building metadata from a nonexistent translation key
