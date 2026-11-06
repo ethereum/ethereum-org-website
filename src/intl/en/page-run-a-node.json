@@ -5,7 +5,7 @@
   "page-run-a-node-build-your-own-min-ram": "4 - 8 GB RAM",
   "page-run-a-node-build-your-own-ram-note-1": "See note on staking",
   "page-run-a-node-build-your-own-ram-note-2": "See note on Raspberry Pi",
-  "page-run-a-node-build-your-own-min-ssd": "2 TB SSD",
+  "page-run-a-node-build-your-own-min-ssd": "4 TB SSD",
   "page-run-a-node-build-your-own-ssd-note": "SSD necessary for required write speeds.",
   "page-run-a-node-build-your-own-recommended": "Recommended",
   "page-run-a-node-build-your-own-nuc": "Intel NUC, 7th gen or higher",
