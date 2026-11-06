@@ -131,26 +131,6 @@ export const formatDateRange = (
     }).formatRange(new Date(start), new Date(end || start))
   )
 
-/**
- * Date range split into parts so callers can style them individually (e.g. a
- * lighter year), instead of hand-assembling the string -- which would hard-code
- * English part order. Whitespace is normalized as in `formatDateRange`.
- */
-export const formatDateRangeToParts = (
-  start: Date | string,
-  end: Date | string,
-  locale: string = DEFAULT_LOCALE,
-  options?: Intl.DateTimeFormatOptions
-) =>
-  dateTimeFormat(locale, {
-    timeZone: "UTC",
-    month: "short",
-    day: "numeric",
-    ...options,
-  })
-    .formatRangeToParts(new Date(start), new Date(end))
-    .map(({ type, value }) => ({ type, value: normalizeIntlSpaces(value) }))
-
 export const getLocaleYear = (
   locale: string = "en-US",
   date?: ConstructorParameters<DateConstructor>[0]
