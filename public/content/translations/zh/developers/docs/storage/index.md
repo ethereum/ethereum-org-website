@@ -142,7 +142,7 @@ IPFS 是一个用于存储和访问文件、网站、应用和数据的分布式
 **Arweave - _Arweave 是一个用于存储数据的去中心化存储（dStorage）平台。_**
 
 - [Arweave.org](https://www.arweave.org/)
-- [文档](https://docs.arweave.org/info/)
+- [文档](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs 是一个具有分片和 blobber 的权益证明去中心化存储（dStorage）平台。_**

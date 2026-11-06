@@ -142,7 +142,7 @@ IPFS هو نظام موزع لتخزين والوصول إلى الملفات و
 **Arweave - _Arweave هي منصة تخزين لامركزي (<span dir="ltr">dStorage</span>) لتخزين البيانات._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [الوثائق](https://docs.arweave.org/info/)
+- [الوثائق](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs هي منصة تخزين لامركزي (<span dir="ltr">dStorage</span>) قائمة على إثبات الحصة مع تجزئة إلى شظايا وعقد تخزين (blobbers)._**

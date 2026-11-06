@@ -7,8 +7,7 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "blockchain"
-  - "cryptography"
+  - "how-ethereum-works"
 format: presentation
 author: "安德斯·布朗沃思"
 breadcrumb: "區塊鏈 101"

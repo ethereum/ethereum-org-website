@@ -13,7 +13,7 @@ published: 2021-03-09
 
 Одно из самых распространенных применений Эфириума — создание группой людей торгуемого токена, в некотором смысле их собственной валюты. Эти токены обычно следуют стандарту [ERC-20](/developers/docs/standards/tokens/erc-20/). Этот стандарт позволяет создавать инструменты, такие как пулы ликвидности и кошельки, которые работают со всеми токенами ERC-20. В этой статье мы проанализируем [реализацию ERC20 на Solidity от ОпенЗеппелин](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), а также [определение интерфейса](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-Это аннотированный исходный код. Если вы хотите реализовать ERC-20, [прочтите это руководство](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+Это аннотированный исходный код. Если вы хотите реализовать ERC-20, [прочтите это руководство](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Интерфейс {#the-interface}
 

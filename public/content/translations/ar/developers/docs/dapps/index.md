@@ -47,7 +47,7 @@ lang: ar
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## أدوات لإنشاء التطبيقات اللامركزية (dapps)
+## أدوات لإنشاء التطبيقات اللامركزية (dapps) {#dapp-tools}
 
 **<span dir="ltr">Scaffold-ETH 2</span> _- جرب <span dir="ltr">Solidity</span> بسرعة باستخدام واجهة أمامية تتكيف مع عقدك الذكي._**
 

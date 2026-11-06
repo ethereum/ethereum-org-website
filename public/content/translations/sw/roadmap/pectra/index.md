@@ -43,9 +43,9 @@ Soma uchunguzi wa kina kuhusu MaxEB [hapa](/roadmap/pectra/maxeb/)
 
 ### Ongezeko la uwezo wa upitishaji wa blobu {#7691}
 
-Mablobu hutoa [upatikanaji wa data](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) kwa L2s. Yalianzishwa katika [sasisho la mtandao lililopita](/roadmap/dencun/). 
+Mablobu yanatoa [upatikanaji wa data](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) kwa L2s. Yalianzishwa katika [sasisho lililopita la mtandao](/roadmap/dencun/). 
 
-Kwa sasa, mtandao unalenga wastani wa mablobu 3 kwa kila kitalu na kiwango cha juu cha mablobu 6. Kwa [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), wastani wa idadi ya mablobu utaongezwa hadi 6, na kiwango cha juu cha 9 kwa kila kitalu, na kusababisha ongezeko la uwezo kwa mikusanyiko ya Ethereum. EIP hii inasaidia kuziba pengo hadi [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) iwezeshe idadi kubwa zaidi ya mablobu.
+Kabla ya Pectra, mtandao ulilenga wastani wa mablobu 3 kwa kila kitalu na kiwango cha juu cha 6. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) iliongeza lengo hadi 6 na kiwango cha juu hadi 9 kwa kila kitalu, ikiongeza uwezo kwa ajili ya mikusanyiko ya Ethereum. Iliziba pengo hadi [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594), ambayo ilitolewa katika [Fusaka](/roadmap/fusaka/) na inaruhusu idadi kubwa zaidi ya mablobu.
 
 ### Kuongeza gharama ya data za mwito {#7623}
 

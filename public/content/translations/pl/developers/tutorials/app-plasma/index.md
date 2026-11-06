@@ -1,53 +1,58 @@
 ---
-title: "Napisz aplikację typu Plasma chroniącą prywatność"
+title: "Napisz specyficzną dla aplikacji sieć Plasma, która chroni prywatność"
 description: "W tym samouczku budujemy na wpół tajny bank dla depozytów. Bank jest scentralizowanym komponentem; zna saldo każdego użytkownika. Jednak te informacje nie są przechowywane onchain. Zamiast tego bank publikuje hash stanu. Za każdym razem, gdy ma miejsce transakcja, bank publikuje nowy hash wraz z dowodem z wiedzą zerową, że posiada podpisaną transakcję, która zmienia stan hasha na nowy. Po przeczytaniu tego samouczka zrozumiesz nie tylko, jak używać dowodów z wiedzą zerową, ale także dlaczego się ich używa i jak robić to bezpiecznie."
 author: Ori Pomerantz
-tags: ["wiedza zerowa", "serwer", "pozałańcuchowy", "prywatność"]
+tags:
+  - wiedza zerowa
+  - serwer
+  - pozałańcuchowy
+  - prywatność
 skill: advanced
-breadcrumb: Aplikacja typu Plasma
+breadcrumb: Specyficzna dla aplikacji Plasma
 lang: pl
 published: 2025-10-15
 ---
+
 ## Wprowadzenie {#introduction}
 
-W przeciwieństwie do [rollupów](/developers/docs/scaling/zk-rollups/), [sieci Plasma](/developers/docs/scaling/plasma) wykorzystują sieć główną Ethereum do zapewnienia integralności, ale nie dostępności. W tym artykule napiszemy aplikację, która zachowuje się jak Plasma, gdzie Ethereum gwarantuje integralność (brak nieautoryzowanych zmian), ale nie dostępność (scentralizowany komponent może ulec awarii i wyłączyć cały system).
+W przeciwieństwie do [rollupów](/developers/docs/scaling/zk-rollups/), sieci [Plasma](/developers/docs/scaling/plasma) wykorzystują sieć główną Ethereum do zapewnienia integralności, ale nie dostępności. W tym artykule napiszemy aplikację, która zachowuje się jak Plasma, gdzie Ethereum gwarantuje integralność (brak nieautoryzowanych zmian), ale nie dostępność (scentralizowany komponent może ulec awarii i unieruchomić cały system).
 
-Aplikacja, którą tu napiszemy, to bank chroniący prywatność. Różne adresy mają konta z saldami i mogą wysyłać pieniądze (ETH) na inne konta. Bank publikuje hashe stanu (kont i ich sald) oraz transakcji, ale przechowuje rzeczywiste salda pozałańcuchowo, gdzie mogą pozostać prywatne.
+Aplikacja, którą tu napiszemy, to bank chroniący prywatność. Różne adresy posiadają konta z saldami i mogą wysyłać pieniądze (ETH) na inne konta. Bank publikuje hashe stanu (kont i ich sald) oraz transakcji, ale przechowuje rzeczywiste salda pozałańcuchowo (offchain), gdzie mogą pozostać prywatne.
 
 ## Projekt {#design}
 
-Nie jest to system gotowy do wdrożenia produkcyjnego, lecz narzędzie edukacyjne. W związku z tym został napisany z kilkoma upraszczającymi założeniami.
+Nie jest to system gotowy do wdrożenia produkcyjnego, lecz narzędzie edukacyjne. Jako takie, zostało napisane z kilkoma upraszczającymi założeniami.
 
-- Stała pula kont. Istnieje określona liczba kont, a każde konto należy do z góry określonego adresu. Znacznie upraszcza to system, ponieważ w dowodach z wiedzą zerową trudno jest obsługiwać struktury danych o zmiennym rozmiarze. W systemie gotowym do wdrożenia produkcyjnego możemy użyć [korzenia drzewa Merklego](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) jako hasha stanu i dostarczyć dowody Merklego dla wymaganych sald.
+- Stała pula kont. Istnieje określona liczba kont, a każde konto należy do z góry określonego adresu. Czyni to system znacznie prostszym, ponieważ w dowodach z wiedzą zerową trudno jest obsługiwać struktury danych o zmiennym rozmiarze. W systemie gotowym do wdrożenia produkcyjnego możemy użyć [korzenia drzewa Merklego](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) jako hasha stanu i dostarczać dowody Merklego dla wymaganych sald.
 
-- Przechowywanie w pamięci. W systemie produkcyjnym musimy zapisywać wszystkie salda kont na dysku, aby zachować je w przypadku restartu. Tutaj nie ma problemu, jeśli informacje po prostu zostaną utracone.
+- Przechowywanie w pamięci. W systemie produkcyjnym musimy zapisywać wszystkie salda kont na dysku, aby zachować je w przypadku restartu. Tutaj jest w porządku, jeśli informacje po prostu zostaną utracone.
 
 - Tylko transfery. System produkcyjny wymagałby sposobu na deponowanie aktywów w banku i ich wypłacanie. Jednak celem tutaj jest jedynie zilustrowanie koncepcji, więc ten bank ogranicza się do transferów.
 
 ### Dowody z wiedzą zerową {#zero-knowledge-proofs}
 
-Na podstawowym poziomie dowód z wiedzą zerową pokazuje, że prover zna pewne dane, _Data<sub>private</sub>_, takie że istnieje relacja _Relationship_ między pewnymi danymi publicznymi, _Data<sub>public</sub>_, a _Data<sub>private</sub>_. Weryfikator zna _Relationship_ oraz _Data<sub>public</sub>_.
+Na podstawowym poziomie dowód z wiedzą zerową pokazuje, że prover zna pewne dane, _Dane<sub>prywatne</sub>_, takie, że istnieje relacja _Relacja_ między pewnymi danymi publicznymi, _Dane<sub>publiczne</sub>_, a _Dane<sub>prywatne</sub>_. Weryfikator zna _Relację_ i _Dane<sub>publiczne</sub>_.
 
-Aby zachować prywatność, stany i transakcje muszą być prywatne. Jednak aby zapewnić integralność, potrzebujemy, aby [kryptograficzny hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) stanów był publiczny. Aby udowodnić osobom przesyłającym transakcje, że te transakcje rzeczywiście miały miejsce, musimy również publikować hashe transakcji.
+Aby zachować prywatność, stany i transakcje muszą być prywatne. Aby jednak zapewnić integralność, [kryptograficzny hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) stanów musi być publiczny. Aby udowodnić osobom przesyłającym transakcje, że te transakcje naprawdę miały miejsce, musimy również publikować hashe transakcji.
 
-W większości przypadków _Data<sub>private</sub>_ to dane wejściowe do programu dowodu z wiedzą zerową, a _Data<sub>public</sub>_ to dane wyjściowe.
+W większości przypadków _Dane<sub>prywatne</sub>_ są wejściem do programu dowodu z wiedzą zerową, a _Dane<sub>publiczne</sub>_ są wyjściem.
 
-Te pola w _Data<sub>private</sub>_ to:
+Te pola w _Dane<sub>prywatne</sub>_:
 
-- _State<sub>n</sub>_, stary stan
-- _State<sub>n+1</sub>_, nowy stan
-- _Transaction_, transakcja, która zmienia stary stan na nowy. Ta transakcja musi zawierać następujące pola:
-  - _Destination address_ (adres docelowy), który otrzymuje transfer
-  - _Amount_ (kwota), która jest transferowana
+- _Stan<sub>n</sub>_, stary stan
+- _Stan<sub>n+1</sub>_, nowy stan
+- _Transakcja_, transakcja, która zmienia stary stan na nowy. Transakcja ta musi zawierać następujące pola:
+  - _Adres docelowy_, który otrzymuje transfer
+  - _Kwota_, która jest transferowana
   - _Nonce_, aby upewnić się, że każda transakcja może zostać przetworzona tylko raz.
     Adres źródłowy nie musi znajdować się w transakcji, ponieważ można go odzyskać z podpisu.
-- _Signature_ (podpis), podpis upoważniony do wykonania transakcji. W naszym przypadku jedynym adresem upoważnionym do wykonania transakcji jest adres źródłowy. Ponieważ nasz system z wiedzą zerową działa w określony sposób, oprócz podpisu Ethereum potrzebujemy również klucza publicznego konta.
+- _Podpis_, podpis upoważniony do wykonania transakcji. W naszym przypadku jedynym adresem upoważnionym do wykonania transakcji jest adres źródłowy. Ponieważ nasz system z wiedzą zerową działa w taki a nie inny sposób, oprócz podpisu Ethereum potrzebujemy również klucza publicznego konta.
 
-Oto pola w _Data<sub>public</sub>_:
+Oto pola w _Dane<sub>publiczne</sub>_:
 
-- _Hash(State<sub>n</sub>)_, hash starego stanu
-- _Hash(State<sub>n+1</sub>)_, hash nowego stanu
-- _Hash(Transaction)_, hash transakcji, która zmienia stan z _State<sub>n</sub>_ na _State<sub>n+1</sub>_.
+- _Hash(Stan<sub>n</sub>)_ hash starego stanu
+- _Hash(Stan<sub>n+1</sub>)_ hash nowego stanu
+- _Hash(Transakcja)_ hash transakcji, która zmienia stan ze _Stan<sub>n</sub>_ na _Stan<sub>n+1</sub>_.
 
 Relacja sprawdza kilka warunków:
 
@@ -55,29 +60,29 @@ Relacja sprawdza kilka warunków:
 - Transakcja, po zastosowaniu do starego stanu, skutkuje nowym stanem.
 - Podpis pochodzi z adresu źródłowego transakcji.
 
-Ze względu na właściwości kryptograficznych funkcji skrótu, udowodnienie tych warunków wystarczy do zapewnienia integralności.
+Ze względu na właściwości kryptograficznych funkcji skrótu, udowodnienie tych warunków wystarczy, aby zapewnić integralność.
 
 ### Struktury danych {#data-structures}
 
-Podstawową strukturą danych jest stan przechowywany przez serwer. Dla każdego konta serwer śledzi saldo konta oraz [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), używany do zapobiegania [atakom typu replay](https://en.wikipedia.org/wiki/Replay_attack).
+Podstawową strukturą danych jest stan utrzymywany przez serwer. Dla każdego konta serwer śledzi saldo konta oraz [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce), używane do zapobiegania [atakom powtórzeniowym (replay attacks)](https://en.wikipedia.org/wiki/Replay_attack).
 
 ### Komponenty {#components}
 
 Ten system wymaga dwóch komponentów:
 
-- _Serwera_, który odbiera transakcje, przetwarza je i publikuje hashe w łańcuchu wraz z dowodami z wiedzą zerową.
-- _Inteligentnego kontraktu_, który przechowuje hashe i weryfikuje dowody z wiedzą zerową, aby upewnić się, że przejścia stanów są prawidłowe.
+- _Serwer_, który odbiera transakcje, przetwarza je i publikuje hashe w łańcuchu wraz z dowodami z wiedzą zerową.
+- _Inteligentny kontrakt_, który przechowuje hashe i weryfikuje dowody z wiedzą zerową, aby upewnić się, że przejścia stanów są prawidłowe.
 
 ### Przepływ danych i sterowania {#flows}
 
-Oto sposoby, w jakie różne komponenty komunikują się w celu wykonania transferu z jednego konta na drugie.
+Oto sposoby, w jakie różne komponenty komunikują się w celu transferu z jednego konta na drugie.
 
 1. Przeglądarka internetowa przesyła podpisaną transakcję z prośbą o transfer z konta podpisującego na inne konto.
 
 2. Serwer weryfikuje, czy transakcja jest ważna:
 
-   - Podpisujący ma konto w banku z wystarczającym saldem.
-   - Odbiorca ma konto w banku.
+   - Podpisujący posiada konto w banku z wystarczającym saldem.
+   - Odbiorca posiada konto w banku.
 
 3. Serwer oblicza nowy stan, odejmując transferowaną kwotę od salda podpisującego i dodając ją do salda odbiorcy.
 
@@ -85,21 +90,21 @@ Oto sposoby, w jakie różne komponenty komunikują się w celu wykonania transf
 
 5. Serwer przesyła do Ethereum transakcję, która zawiera:
 
-   - Hash nowego stanu
+   - Nowy hash stanu
    - Hash transakcji (aby nadawca transakcji wiedział, że została przetworzona)
    - Dowód z wiedzą zerową, który udowadnia, że przejście do nowego stanu jest prawidłowe
 
 6. Inteligentny kontrakt weryfikuje dowód z wiedzą zerową.
 
-7. Jeśli dowód z wiedzą zerową zostanie pomyślnie zweryfikowany, inteligentny kontrakt wykonuje następujące akcje:
-   - Aktualizuje hash obecnego stanu na hash nowego stanu
-   - Emituje wpis w logach z hashem nowego stanu i hashem transakcji
+7. Jeśli dowód z wiedzą zerową jest poprawny, inteligentny kontrakt wykonuje następujące czynności:
+   - Aktualizuje obecny hash stanu na nowy hash stanu
+   - Emituje wpis logu z nowym hashem stanu i hashem transakcji
 
 ### Narzędzia {#tools}
 
-Do kodu po stronie klienta użyjemy [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) oraz [Wagmi](https://wagmi.sh/). Są to standardowe narzędzia w branży; jeśli ich nie znasz, możesz skorzystać z [tego samouczka](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
+W przypadku kodu po stronie klienta użyjemy [Vite](https://vite.dev/), [React](https://react.dev/), [Viem](https://viem.sh/) i [Wagmi](https://wagmi.sh/). Są to standardowe narzędzia w branży; jeśli nie jesteś z nimi zaznajomiony, możesz skorzystać z [tego samouczka](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/).
 
-Większość serwera jest napisana w języku JavaScript przy użyciu [Node](https://nodejs.org/en). Część dotycząca wiedzy zerowej jest napisana w języku [Noir](https://noir-lang.org/). Potrzebujemy wersji `1.0.0-beta.10`, więc po [zainstalowaniu Noir zgodnie z instrukcjami](https://noir-lang.org/docs/getting_started/quick_start), uruchom:
+Większość serwera jest napisana w JavaScript przy użyciu [Node](https://nodejs.org/en). Część dotycząca wiedzy zerowej jest napisana w języku [Noir](https://noir-lang.org/). Potrzebujemy wersji `1.0.0-beta.10`, więc po [zainstalowaniu Noir zgodnie z instrukcjami](https://noir-lang.org/docs/getting_started/quick_start), uruchom:
 
 ```
 noirup -v 1.0.0-beta.10
@@ -113,13 +118,13 @@ Ponieważ jest to złożony system, wdrożymy go etapami.
 
 ### Etap 1 - Ręczna wiedza zerowa {#stage-1}
 
-W pierwszym etapie podpiszemy transakcję w przeglądarce, a następnie ręcznie przekażemy informacje do dowodu z wiedzą zerową. Kod wiedzy zerowej oczekuje otrzymania tych informacji w pliku `server/noir/Prover.toml` (udokumentowanym [tutaj](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
+W pierwszym etapie podpiszemy transakcję w przeglądarce, a następnie ręcznie dostarczymy informacje do dowodu z wiedzą zerową. Kod wiedzy zerowej oczekuje tych informacji w `server/noir/Prover.toml` (udokumentowane [tutaj](https://noir-lang.org/docs/getting_started/project_breakdown#provertoml-1)).
 
 Aby zobaczyć to w akcji:
 
-1. Upewnij się, że masz zainstalowane [Node](https://nodejs.org/en/download) i [Noir](https://noir-lang.org/install). Najlepiej zainstalować je w systemie UNIX, takim jak macOS, Linux lub [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. Upewnij się, że masz zainstalowane [Node](https://nodejs.org/en/download) i [Noir](https://noir-lang.org/docs/installation). Najlepiej zainstalować je w systemie UNIX, takim jak macOS, Linux lub [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-2. Pobierz kod etapu 1 i uruchom serwer WWW, aby udostępnić kod klienta.
+2. Pobierz kod etapu 1 i uruchom serwer WWW, aby serwować kod klienta.
 
    ```sh
    git clone https://github.com/qbzzt/250911-zk-bank.git -b 01-manual-zk
@@ -133,7 +138,7 @@ Aby zobaczyć to w akcji:
 
 3. Otwórz przeglądarkę z portfelem.
 
-4. W portfelu wprowadź nową frazę odzyskiwania (passphrase). Pamiętaj, że spowoduje to usunięcie istniejącej frazy, więc _upewnij się, że masz kopię zapasową_.
+4. W portfelu wprowadź nową frazę odzyskiwania (passphrase). Zauważ, że to usunie twoją obecną frazę odzyskiwania, więc _upewnij się, że masz kopię zapasową_.
 
    Fraza odzyskiwania to `test test test test test test test test test test test junk`, domyślna testowa fraza dla anvil.
 
@@ -143,7 +148,7 @@ Aby zobaczyć to w akcji:
 
 7. Kliknij **Sign** (Podpisz) i podpisz transakcję.
 
-8. Pod nagłówkiem **Prover.toml** znajdziesz tekst. Zastąp zawartość pliku `server/noir/Prover.toml` tym tekstem.
+8. Pod nagłówkiem **Prover.toml** znajdziesz tekst. Zastąp `server/noir/Prover.toml` tym tekstem.
 
 9. Wykonaj dowód z wiedzą zerową.
 
@@ -152,17 +157,17 @@ Aby zobaczyć to w akcji:
    nargo execute
    ```
 
-   Wynik powinien być podobny do:
+   Wynik powinien być podobny do
 
-      ```
-ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
+   ```
+   ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
 
    [zkBank] Circuit witness successfully solved
    [zkBank] Witness saved to target/zkBank.gz
    [zkBank] Circuit output: (0x199aa62af8c1d562a6ec96e66347bf3240ab2afb5d022c895e6bf6a5e617167b, 0x0cfc0a67cb7308e4e9b254026b54204e34f6c8b041be207e64c5db77d95dd82d, 0x450cf9da6e180d6159290554ae3d8787, 0x6d8bc5a15b9037e52fb59b6b98722a85)
-      ```
+   ```
 
-10. Porównaj dwie ostatnie wartości z hashem widocznym w przeglądarce internetowej, aby sprawdzić, czy wiadomość została poprawnie zhashowana.
+10. Porównaj dwie ostatnie wartości z hashem, który widzisz w przeglądarce internetowej, aby sprawdzić, czy wiadomość została poprawnie zhashowana.
 
 #### `server/noir/Prover.toml` {#server-noir-prover-toml}
 
@@ -172,9 +177,9 @@ ori@CryptoDocGuy:~/noir/250911-zk-bank/server/noir$ nargo execute
 message="send 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 500 finney (milliEth) 0                             "
 ```
 
-Wiadomość jest w formacie tekstowym, co ułatwia użytkownikowi jej zrozumienie (co jest konieczne podczas podpisywania), a kodowi Noir jej parsowanie. Kwota jest podana w finneyach, aby z jednej strony umożliwić ułamkowe transfery, a z drugiej być łatwo czytelną. Ostatnia liczba to [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
+Wiadomość jest w formacie tekstowym, co ułatwia jej zrozumienie przez użytkownika (co jest konieczne podczas podpisywania) oraz parsowanie przez kod Noir. Kwota jest podana w finneyach, aby z jednej strony umożliwić transfery ułamkowe, a z drugiej być łatwo czytelną. Ostatnia liczba to [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce).
 
-Ciąg znaków ma długość 100 znaków. Dowody z wiedzą zerową nie radzą sobie dobrze z danymi o zmiennej wielkości, dlatego często konieczne jest dopełnianie (padding) danych.
+Ciąg znaków ma długość 100 znaków. Dowody z wiedzą zerową nie radzą sobie dobrze z danymi o zmiennym rozmiarze, więc często konieczne jest dopełnianie danych (padding).
 
 ```toml
 pubKeyX=["0x83",...,"0x75"]
@@ -196,7 +201,7 @@ balance=100_000
 nonce=0
 ```
 
-W ten sposób określa się tablicę struktur. Dla każdego wpisu podajemy adres, saldo (w milliETH, czyli [finney](https://cryptovalleyjournal.com/glossary/finney/)) oraz następną wartość nonce.
+W ten sposób określa się tablicę struktur. Dla każdego wpisu określamy adres, saldo (w milliETH, czyli [finney](https://cryptovalleyjournal.com/glossary/finney/)) oraz następną wartość nonce.
 
 #### `client/src/Transfer.tsx` {#client-src-transfer-tsx}
 
@@ -208,7 +213,7 @@ Oto wyjaśnienie ciekawszych części.
 export default attrs =>  {
 ```
 
-Ta funkcja tworzy komponent React `Transfer`, który mogą importować inne pliki.
+Ta funkcja tworzy komponent React `Transfer`, który inne pliki mogą importować.
 
 ```tsx
   const accounts = [
@@ -241,7 +246,7 @@ To jest wiadomość, dopełniona spacjami. Za każdym razem, gdy zmienia się je
   const sign = async () => {
 ```
 
-Ta funkcja jest wywoływana, gdy użytkownik kliknie przycisk **Sign** (Podpisz). Wiadomość jest automatycznie aktualizowana, ale podpis wymaga zatwierdzenia przez użytkownika w portfelu, a my nie chcemy o to prosić, chyba że jest to konieczne.
+Ta funkcja jest wywoływana, gdy użytkownik kliknie przycisk **Sign**. Wiadomość jest automatycznie aktualizowana, ale podpis wymaga zatwierdzenia przez użytkownika w portfelu, a nie chcemy o to prosić, chyba że jest to konieczne.
 
 ```tsx
     const signature = await wallet.signMessage({
@@ -288,24 +293,24 @@ pubKeyX=${hexToArray(pubKey.slice(4,4+2*32))}
 pubKeyY=${hexToArray(pubKey.slice(4+2*32))}
 ```
 
-Viem dostarcza nam klucz publiczny jako 65-bajtowy ciąg szesnastkowy. Pierwszy bajt to `0x04`, znacznik wersji. Następnie znajduje się 32 bajtów dla `x` klucza publicznego, a potem 32 bajty dla `y` klucza publicznego.
+Viem dostarcza nam klucz publiczny jako 65-bajtowy ciąg szesnastkowy. Pierwszy bajt to `0x04`, znacznik wersji. Następnie mamy 32 bajty dla wartości `x` klucza publicznego, a potem 32 bajty dla wartości `y` klucza publicznego.
 
 Jednak Noir oczekuje otrzymania tych informacji jako dwóch tablic bajtów, jednej dla `x` i jednej dla `y`. Łatwiej jest to sparsować tutaj, po stronie klienta, niż jako część dowodu z wiedzą zerową.
 
-Zauważ, że jest to ogólnie dobra praktyka w przypadku wiedzy zerowej. Kod wewnątrz dowodu z wiedzą zerową jest kosztowny, więc każde przetwarzanie, które można wykonać poza dowodem z wiedzą zerową, _powinno_ zostać wykonane poza nim.
+Należy pamiętać, że jest to ogólnie dobra praktyka w dziedzinie wiedzy zerowej. Kod wewnątrz dowodu z wiedzą zerową jest kosztowny, więc wszelkie przetwarzanie, które można wykonać poza dowodem z wiedzą zerową, _powinno_ być wykonywane poza nim.
 
 ```tsx
 signature=${hexToArray(signature.slice(2,-2))}
 ```
 
-Podpis jest również dostarczany jako 65-bajtowy ciąg szesnastkowy. Jednak ostatni bajt jest potrzebny tylko do odzyskania klucza publicznego. Ponieważ klucz publiczny zostanie już dostarczony do kodu Noir, nie potrzebujemy go do weryfikacji podpisu, a kod Noir go nie wymaga.
+Podpis jest również dostarczany jako 65-bajtowy ciąg szesnastkowy. Jednak ostatni bajt jest niezbędny tylko do odzyskania klucza publicznego. Ponieważ klucz publiczny zostanie już dostarczony do kodu Noir, nie potrzebujemy go do weryfikacji podpisu, a kod Noir go nie wymaga.
 
 ```tsx
 ${accounts.map(accountInProverToml).reduce((a,b) => a+b, "")}
 `
 ```
 
-Podaj konta.
+Dostarcz konta.
 
 ```tsx
     setProverToml(proverToml)
@@ -326,14 +331,14 @@ To jest format HTML (a dokładniej [JSX](https://react.dev/learn/writing-markup-
 use std::hash::pedersen_hash;
 ```
 
-[Hash Pedersena](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) jest dostarczany z [biblioteką standardową Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Dowody z wiedzą zerową powszechnie używają tej funkcji skrótu. Jest ona znacznie łatwiejsza do obliczenia wewnątrz [obwodów arytmetycznych](https://rareskills.io/post/arithmetic-circuit) w porównaniu do standardowych funkcji skrótu.
+[Hash Pedersena](https://rya-sge.github.io/access-denied/2024/05/07/pedersen-hash-function/) jest dostarczany z [biblioteką standardową Noir](https://noir-lang.org/docs/noir/standard_library/cryptographic_primitives/hashes#pedersen_hash). Dowody z wiedzą zerową powszechnie używają tej funkcji skrótu. Jest ona o wiele łatwiejsza do obliczenia wewnątrz [obwodów arytmetycznych](https://rareskills.io/post/arithmetic-circuit) w porównaniu ze standardowymi funkcjami skrótu.
 
 ```
 use keccak256::keccak256;
 use dep::ecrecover;
 ```
 
-Te dwie funkcje to zewnętrzne biblioteki, zdefiniowane w [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Robią dokładnie to, na co wskazują ich nazwy: funkcja obliczająca [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) oraz funkcja weryfikująca podpisy Ethereum i odzyskująca adres Ethereum podpisującego.
+Te dwie funkcje to zewnętrzne biblioteki, zdefiniowane w [`Nargo.toml`](https://github.com/qbzzt/250911-zk-bank/blob/01-manual-zk/server/noir/Nargo.toml). Robią dokładnie to, na co wskazują ich nazwy: funkcja obliczająca [hash keccak256](https://emn178.github.io/online-tools/keccak_256.html) oraz funkcja, która weryfikuje podpisy Ethereum i odzyskuje adres Ethereum podpisującego.
 
 ```
 global ACCOUNT_NUMBER : u32 = 5;
@@ -341,7 +346,7 @@ global ACCOUNT_NUMBER : u32 = 5;
 
 Noir jest inspirowany językiem [Rust](https://www.rust-lang.org/). Zmienne domyślnie są stałymi. W ten sposób definiujemy globalne stałe konfiguracyjne. W szczególności `ACCOUNT_NUMBER` to liczba kont, które przechowujemy.
 
-Typy danych o nazwie `u<number>` to bez znaku (unsigned) liczby o podanej liczbie bitów. Jedyne obsługiwane typy to `u8`, `u16`, `u32`, `u64` i `u128`.
+Typy danych o nazwie `u<number>` oznaczają tę liczbę bitów, bez znaku (unsigned). Jedyne obsługiwane typy to `u8`, `u16`, `u32`, `u64` i `u128`.
 
 ```
 global FLAT_ACCOUNT_FIELDS : u32 = 2;
@@ -353,7 +358,7 @@ Ta zmienna jest używana do hasha Pedersena kont, jak wyjaśniono poniżej.
 global MESSAGE_LENGTH : u32 = 100;
 ```
 
-Jak wyjaśniono powyżej, długość wiadomości jest stała. Jest ona określona tutaj.
+Jak wyjaśniono powyżej, długość wiadomości jest stała. Została ona określona tutaj.
 
 ```
 global ASCII_MESSAGE_LENGTH : [u8; 3] = [0x31, 0x30, 0x30];
@@ -387,23 +392,23 @@ Informacje, które przechowujemy dla transakcji transferu.
 fn flatten_account(account: Account) -> [Field; FLAT_ACCOUNT_FIELDS] {
 ```
 
-Definicja funkcji. Parametrem są informacje o `Account`. Wynikiem jest tablica zmiennych `Field`, której długość wynosi `FLAT_ACCOUNT_FIELDS`.
+Definicja funkcji. Parametrem są informacje `Account`. Wynikiem jest tablica zmiennych `Field`, której długość to `FLAT_ACCOUNT_FIELDS`
 
 ```
-let flat = [
+    let flat = [
         account.address,
         ((account.balance << 32) + account.nonce.into()).into(),
     ];
 ```
 
-Pierwsza wartość w tablicy to adres konta. Druga zawiera zarówno saldo, jak i nonce. Wywołania `.into()` zmieniają liczbę na wymagany typ danych. `account.nonce` to wartość `u32`, ale aby dodać ją do `account.balance << 32`, wartości `u128`, musi ona być typu `u128`. To jest pierwsze `.into()`. Drugie konwertuje wynik `u128` na `Field`, aby pasował do tablicy.
+Pierwsza wartość w tablicy to adres konta. Druga zawiera zarówno saldo, jak i nonce. Wywołania `.into()` zmieniają liczbę na wymagany typ danych. `account.nonce` to wartość `u32`, ale aby dodać ją do `account.balance << 32`, wartości `u128`, musi być typu `u128`. To jest pierwsze `.into()`. Drugie konwertuje wynik `u128` na `Field`, aby pasował do tablicy.
 
 ```
-flat
+    flat
 }
 ```
 
-W Noir funkcje mogą zwracać wartość tylko na końcu (nie ma wczesnego powrotu - early return). Aby określić zwracaną wartość, ewaluujesz ją tuż przed nawiasem zamykającym funkcję.
+W Noir funkcje mogą zwracać wartość tylko na końcu (nie ma wczesnego powrotu, ang. early return). Aby określić wartość zwracaną, obliczasz ją tuż przed nawiasem zamykającym funkcję.
 
 ```
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
@@ -412,19 +417,19 @@ fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT
 Ta funkcja zamienia tablicę kont w tablicę `Field`, która może być użyta jako wejście do hasha Pedersena.
 
 ```
-let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
+    let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
 ```
 
-W ten sposób określa się zmienną mutowalną, czyli _nie_ stałą. Zmienne w Noir muszą zawsze mieć wartość, więc inicjujemy tę zmienną samymi zerami.
+W ten sposób określasz zmienną modyfikowalną (mutable), czyli _nie_ stałą. Zmienne w Noir muszą zawsze mieć wartość, więc inicjujemy tę zmienną samymi zerami.
 
 ```
-for i in 0..ACCOUNT_NUMBER {
+    for i in 0..ACCOUNT_NUMBER {
 ```
 
-To jest pętla `for`. Zauważ, że granice są stałymi. Pętle w Noir muszą mieć granice znane w czasie kompilacji. Powodem jest to, że obwody arytmetyczne nie obsługują sterowania przepływem. Podczas przetwarzania pętli `for` kompilator po prostu umieszcza kod wewnątrz niej wielokrotnie, po jednym razie dla każdej iteracji.
+To jest pętla `for`. Zauważ, że granice są stałymi. Pętle w Noir muszą mieć granice znane w czasie kompilacji. Powodem jest to, że obwody arytmetyczne nie obsługują sterowania przepływem. Podczas przetwarzania pętli `for`, kompilator po prostu umieszcza kod wewnątrz niej wielokrotnie, raz dla każdej iteracji.
 
 ```
-let fields = flatten_account(accounts[i]);
+        let fields = flatten_account(accounts[i]);
         for j in 0..FLAT_ACCOUNT_FIELDS {
             flat[i*FLAT_ACCOUNT_FIELDS + j] = fields[j];
         }
@@ -453,13 +458,13 @@ fn find_account(accounts: [Account; ACCOUNT_NUMBER], address: Field) -> u32 {
 
 Ta funkcja znajduje konto o określonym adresie. Funkcja ta byłaby strasznie nieefektywna w standardowym kodzie, ponieważ iteruje po wszystkich kontach, nawet po znalezieniu adresu.
 
-Jednak w dowodach z wiedzą zerową nie ma sterowania przepływem. Jeśli kiedykolwiek musimy sprawdzić warunek, musimy to robić za każdym razem.
+Jednak w dowodach z wiedzą zerową nie ma sterowania przepływem. Jeśli kiedykolwiek musimy sprawdzić warunek, musimy go sprawdzać za każdym razem.
 
-Podobna sytuacja ma miejsce w przypadku instrukcji `if`. Instrukcja `if` w powyższej pętli jest tłumaczona na te matematyczne wyrażenia.
+Podobna rzecz dzieje się z instrukcjami `if`. Instrukcja `if` w powyższej pętli jest tłumaczona na te instrukcje matematyczne.
 
-_condition<sub>result</sub> = accounts[i].address == address_ // jeden, jeśli są równe, zero w przeciwnym razie
+_wynik<sub>warunku</sub> = accounts[i].address == address_ // jeden, jeśli są równe, w przeciwnym razie zero
 
-_account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result</sub>)\*account<sub>old</sub>_
+_konto<sub>nowe</sub> = wynik<sub>warunku</sub>\*i + (1-wynik<sub>warunku</sub>)\*konto<sub>stare</sub>_
 
 ```rust
     assert (account < ACCOUNT_NUMBER, f"{address} does not have an account");
@@ -468,7 +473,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-Funkcja [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) powoduje awarię dowodu z wiedzą zerową, jeśli asercja jest fałszywa. W tym przypadku, jeśli nie możemy znaleźć konta z odpowiednim adresem. Aby zgłosić adres, używamy [ciągu formatującego](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+Funkcja [`assert`](https://noir-lang.org/docs/language/assert) powoduje awarię dowodu z wiedzą zerową, jeśli asercja jest fałszywa. W tym przypadku, jeśli nie możemy znaleźć konta z odpowiednim adresem. Aby zgłosić adres, używamy [ciągu formatującego](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
@@ -484,7 +489,7 @@ Ta funkcja stosuje transakcję transferu i zwraca nową tablicę kont.
         (txn.from, txn.amount, txn.nonce, accounts[from].nonce);
 ```
 
-W Noir nie możemy uzyskać dostępu do elementów struktury wewnątrz ciągu formatującego, więc tworzymy użyteczną kopię.
+Nie możemy uzyskać dostępu do elementów struktury wewnątrz ciągu formatującego w Noir, więc tworzymy użyteczną kopię.
 
 ```rust
     assert (accounts[from].balance >= txn.amount,
@@ -507,7 +512,7 @@ Są to dwa warunki, które mogłyby sprawić, że transakcja będzie nieważna.
 }
 ```
 
-Utwórz nową tablicę kont, a następnie ją zwróć.
+Utwórz nową tablicę kont i następnie ją zwróć.
 
 ```rust
 fn readAddress(messageBytes: [u8; MESSAGE_LENGTH]) -> Field
@@ -522,7 +527,7 @@ Ta funkcja odczytuje adres z wiadomości.
     for i in 7..47 {
 ```
 
-Adres ma zawsze 20 bajtów (czyli 40 cyfr szesnastkowych) długości i zaczyna się od znaku nr 7.
+Adres ma zawsze długość 20 bajtów (czyli 40 cyfr szesnastkowych) i zaczyna się od 7. znaku.
 
 ```rust
         result *= 0x10;
@@ -554,7 +559,7 @@ Odczytaj kwotę i nonce z wiadomości.
     let mut stillReadingNonce: bool = false;
 ```
 
-W wiadomości pierwsza liczba po adresie to kwota finneyów (czyli tysięcznych części ETH) do przetransferowania. Druga liczba to nonce. Dowolny tekst między nimi jest ignorowany.
+W wiadomości pierwsza liczba po adresie to kwota finney (czyli tysięcznych części ETH) do transferu. Druga liczba to nonce. Dowolny tekst między nimi jest ignorowany.
 
 ```rust
     for i in 48..MESSAGE_LENGTH {
@@ -613,7 +618,7 @@ Ta funkcja konwertuje wiadomość na bajty, a następnie konwertuje kwoty na `Tr
 fn hashMessage(message: str<MESSAGE_LENGTH>) -> [u8;32] {
 ```
 
-Mogliśmy użyć hasha Pedersena dla kont, ponieważ są one hashowane tylko wewnątrz dowodu z wiedzą zerową. Jednak w tym kodzie musimy sprawdzić podpis wiadomości, który jest generowany przez przeglądarkę. W tym celu musimy postępować zgodnie z formatem podpisywania Ethereum w [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Oznacza to, że musimy utworzyć połączony bufor ze standardowym prefiksem, długością wiadomości w ASCII i samą wiadomością, a następnie użyć standardowego dla Ethereum keccak256 do jego zhashowania.
+Byliśmy w stanie użyć hasha Pedersena dla kont, ponieważ są one hashowane tylko wewnątrz dowodu z wiedzą zerową. Jednak w tym kodzie musimy sprawdzić podpis wiadomości, który jest generowany przez przeglądarkę. W tym celu musimy postępować zgodnie z formatem podpisywania Ethereum w [EIP-191](https://eips.ethereum.org/EIPS/eip-191). Oznacza to, że musimy utworzyć połączony bufor ze standardowym prefiksem, długością wiadomości w ASCII i samą wiadomością, a następnie użyć standardowego dla Ethereum keccak256, aby go zhashować.
 
 ```rust
     // Prefiks ASCII
@@ -690,7 +695,7 @@ Aby uniknąć przypadków, w których aplikacja prosi użytkownika o podpisanie 
     assert(MESSAGE_LENGTH < 1000, "Messages whose length is over three digits are not supported");
 ```
 
-Obsługuj długości wiadomości do 999 i zgłaszaj błąd, jeśli jest większa. Dodałem ten kod, mimo że długość wiadomości jest stałą, ponieważ ułatwia to jej zmianę. W systemie produkcyjnym prawdopodobnie po prostu założyłbyś, że `MESSAGE_LENGTH` się nie zmienia, w celu uzyskania lepszej wydajności.
+Obsłuż długości wiadomości do 999 i zgłoś błąd, jeśli jest większa. Dodałem ten kod, mimo że długość wiadomości jest stała, ponieważ ułatwia to jej zmianę. W systemie produkcyjnym prawdopodobnie założyłbyś po prostu, że `MESSAGE_LENGTH` nie ulega zmianie w celu uzyskania lepszej wydajności.
 
 ```rust
     keccak256::keccak256(buffer, HASH_BUFFER_SIZE)
@@ -711,7 +716,7 @@ fn signatureToAddressAndHash(
 
 Ta funkcja weryfikuje podpis, co wymaga hasha wiadomości. Następnie dostarcza nam adres, który go podpisał, oraz hash wiadomości. Hash wiadomości jest dostarczany w dwóch wartościach `Field`, ponieważ są one łatwiejsze do użycia w reszcie programu niż tablica bajtów.
 
-Musimy użyć dwóch wartości `Field`, ponieważ obliczenia na ciałach (fields) są wykonywane [modulo](https://en.wikipedia.org/wiki/Modulo) duża liczba, ale ta liczba jest zazwyczaj mniejsza niż 256 bitów (w przeciwnym razie trudno byłoby wykonać te obliczenia w EVM).
+Musimy użyć dwóch wartości `Field`, ponieważ obliczenia na ciałach (fields) są wykonywane [modulo](https://en.wikipedia.org/wiki/Modulo) duża liczba, ale ta liczba ma zazwyczaj mniej niż 256 bitów (w przeciwnym razie trudno byłoby wykonać te obliczenia w EVM).
 
 ```rust
     let hash = hashMessage(message);
@@ -724,7 +729,7 @@ Musimy użyć dwóch wartości `Field`, ponieważ obliczenia na ciałach (fields
     }
 ```
 
-Określ `hash1` i `hash2` jako zmienne mutowalne i zapisz w nich hash bajt po bajcie.
+Określ `hash1` i `hash2` jako zmienne modyfikowalne i zapisz w nich hash bajt po bajcie.
 
 ```rust
     (
@@ -733,8 +738,8 @@ Określ `hash1` i `hash2` jako zmienne mutowalne i zapisz w nich hash bajt po ba
     
 Jest to podobne do [`ecrecover` w Solidity](https://docs.soliditylang.org/en/v0.8.30/cheatsheet.html#mathematical-and-cryptographic-functions), z dwiema ważnymi różnicami:
 
-- Jeśli podpis jest nieważny, wywołanie nie przechodzi `assert` i program zostaje przerwany.
-- Chociaż klucz publiczny można odzyskać z podpisu i hasha, jest to przetwarzanie, które można wykonać zewnętrznie, a zatem nie warto go robić wewnątrz dowodu z wiedzą zerową. Jeśli ktoś spróbuje nas tutaj oszukać, weryfikacja podpisu się nie powiedzie.
+- Jeśli podpis jest nieważny, wywołanie kończy się błędem `assert` i program zostaje przerwany.
+- Podczas gdy klucz publiczny można odzyskać z podpisu i hasha, jest to przetwarzanie, które można wykonać zewnętrznie i dlatego nie warto go wykonywać wewnątrz dowodu z wiedzą zerową. Jeśli ktoś spróbuje nas tu oszukać, weryfikacja podpisu się nie powiedzie.
 
 ```rust
         hash1,
@@ -749,8 +754,8 @@ fn main(
         pubKeyY: [u8; 32],
         signature: [u8; 64],
     ) -> pub (
-        Field,  // Hash starej tablicy kont
-        Field,  // Hash nowej tablicy kont
+        Field,  // Hash tablicy starych kont
+        Field,  // Hash tablicy nowych kont
         Field,  // Pierwsze 16 bajtów hasha wiadomości
         Field,  // Ostatnie 16 bajtów hasha wiadomości
     )
@@ -763,7 +768,7 @@ Wreszcie docieramy do funkcji `main`. Musimy udowodnić, że mamy transakcję, k
     let mut txn = readTransferTxn(message);
 ```
 
-Potrzebujemy, aby `txn` było mutowalne, ponieważ nie odczytujemy adresu nadawcy z wiadomości, odczytujemy go z podpisu. 
+Potrzebujemy, aby `txn` było modyfikowalne, ponieważ nie odczytujemy adresu nadawcy (from) z wiadomości, odczytujemy go z podpisu. 
 
 ```rust
     let (fromAddress, txnHash1, txnHash2) = signatureToAddressAndHash(
@@ -811,7 +816,7 @@ Aby zobaczyć to w akcji:
    npm run start
    ```
 
-4. W osobnym oknie wiersza poleceń uruchom Vite, aby udostępnić kod przeglądarki.
+4. W osobnym oknie wiersza poleceń uruchom Vite, aby serwować kod przeglądarki.
 
    ```sh
    cd client
@@ -822,16 +827,16 @@ Aby zobaczyć to w akcji:
 
 6. Zanim będziesz mógł wydać transakcję, musisz znać nonce, a także kwotę, którą możesz wysłać. Aby uzyskać te informacje, kliknij **Update account data** (Aktualizuj dane konta) i podpisz wiadomość.
 
-   Mamy tu dylemat. Z jednej strony nie chcemy podpisywać wiadomości, która może zostać użyta ponownie ([atak powtórzeniowy - replay attack](https://en.wikipedia.org/wiki/Replay_attack)), dlatego w ogóle chcemy nonce. Jednak nie mamy jeszcze nonce. Rozwiązaniem jest wybranie nonce, które może być użyte tylko raz i które już mamy po obu stronach, na przykład aktualny czas.
+   Mamy tu dylemat. Z jednej strony nie chcemy podpisywać wiadomości, która może zostać użyta ponownie ([atak powtórzeniowy](https://en.wikipedia.org/wiki/Replay_attack)), dlatego w ogóle chcemy mieć nonce. Jednak nie mamy jeszcze nonce. Rozwiązaniem jest wybranie nonce, które może zostać użyte tylko raz i które już mamy po obu stronach, takie jak aktualny czas.
 
-   Problem z tym rozwiązaniem polega na tym, że czas może nie być idealnie zsynchronizowany. Zamiast tego podpisujemy wartość, która zmienia się co minutę. Oznacza to, że nasze okno podatności na ataki powtórzeniowe wynosi co najwyżej jedną minutę. Biorąc pod uwagę, że w środowisku produkcyjnym podpisane żądanie będzie chronione przez TLS, a druga strona tunelu — serwer — może już ujawnić saldo i nonce (musi je znać, aby działać), jest to akceptowalne ryzyko.
+   Problemem z tym rozwiązaniem jest to, że czas może nie być idealnie zsynchronizowany. Dlatego zamiast tego podpisujemy wartość, która zmienia się co minutę. Oznacza to, że nasze okno podatności na ataki powtórzeniowe wynosi co najwyżej jedną minutę. Biorąc pod uwagę, że w produkcji podpisane żądanie będzie chronione przez TLS, a druga strona tunelu---serwer---może już ujawnić saldo i nonce (musi je znać, aby działać), jest to akceptowalne ryzyko.
 
-7. Gdy przeglądarka otrzyma z powrotem saldo i nonce, wyświetli formularz transferu. Wybierz adres docelowy oraz kwotę i kliknij **Transfer**. Podpisz to żądanie.
+7. Gdy przeglądarka otrzyma z powrotem saldo i nonce, wyświetli formularz transferu. Wybierz adres docelowy i kwotę, a następnie kliknij **Transfer**. Podpisz to żądanie.
 
-8. Aby zobaczyć transfer, kliknij **Update account data** (Aktualizuj dane konta) lub spójrz w okno, w którym uruchomiłeś serwer. Serwer loguje stan za każdym razem, gdy ulega on zmianie.
+8. Aby zobaczyć transfer, kliknij **Update account data** lub spójrz w okno, w którym uruchomiłeś serwer. Serwer loguje stan za każdym razem, gdy ulega on zmianie.
 
-        ```
-ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+    ```
+    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -858,11 +863,11 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
     0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC has 100000 (0)
     0x90F79bf6EB2c4f870365E785982E1f101E93b906 has 139000 (0)
     0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65 has 100000 (0)
-        ```
+    ```
 
 #### `server/index.mjs` {#server-index-mjs-1}
 
-[Ten plik](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) zawiera proces serwera i wchodzi w interakcję z kodem Noir w [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Oto wyjaśnienie ciekawych części.
+[Ten plik](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/index.mjs) zawiera proces serwera i wchodzi w interakcję z kodem Noir w [`main.nr`](https://github.com/qbzzt/250911-zk-bank/blob/02-add-server/server/noir/src/main.nr). Oto wyjaśnienie ciekawszych części.
 
 ```js
 import { Noir } from '@noir-lang/noir_js'
@@ -875,7 +880,7 @@ const circuit = JSON.parse(await fs.readFile("./noir/target/zkBank.json"))
 const noir = new Noir(circuit)
 ```
 
-Załaduj obwód arytmetyczny — skompilowany program Noir, który utworzyliśmy w poprzednim etapie — i przygotuj się do jego wykonania.
+Załaduj obwód arytmetyczny---skompilowany program Noir, który stworzyliśmy w poprzednim etapie---i przygotuj go do wykonania.
 
 ```js
 // Udostępniamy informacje o koncie tylko w odpowiedzi na podpisane żądanie
@@ -886,7 +891,7 @@ const accountInformation = async signature => {
     })
 ```
 
-Aby podać informacje o koncie, potrzebujemy tylko podpisu. Powodem jest to, że już wiemy, jaka będzie wiadomość, a co za tym idzie, hash wiadomości.
+Aby dostarczyć informacje o koncie, potrzebujemy tylko podpisu. Powodem jest to, że już wiemy, jaka będzie wiadomość, a co za tym idzie hash wiadomości.
 
 ```js
 const processMessage = async (message, signature) => {
@@ -902,7 +907,7 @@ Przetwórz wiadomość i wykonaj transakcję, którą koduje.
     })
 ```
 
-Teraz, gdy uruchamiamy JavaScript na serwerze, możemy pobrać klucz publiczny tam, a nie na kliencie.
+Teraz, gdy uruchamiamy JavaScript na serwerze, możemy pobrać klucz publiczny tam, zamiast na kliencie.
 
 ```js
     let noirResult
@@ -962,7 +967,7 @@ Początkowa struktura `Accounts`.
 
 3. Uruchom `anvil` w osobnym oknie wiersza poleceń.
 
-4. Wygeneruj klucz weryfikacyjny i weryfikator Solidity, a następnie skopiuj kod weryfikatora do projektu Solidity.
+4. Wygeneruj klucz weryfikacyjny i weryfikator w Solidity, a następnie skopiuj kod weryfikatora do projektu Solidity.
 
    ```sh
    cd noir
@@ -993,7 +998,7 @@ Początkowa struktura `Accounts`.
    echo $ZKBANK_ADDRESS
    ```
 
-   Wartość `0x199..67b` to hash Pedersena początkowego stanu `Accounts`. Jeśli zmodyfikujesz ten stan początkowy w `server/index.mjs`, możesz uruchomić transakcję, aby zobaczyć początkowy hash zgłoszony przez dowód z wiedzą zerową.
+   Wartość `0x199..67b` to hash Pedersena początkowego stanu `Accounts`. Jeśli zmodyfikujesz ten początkowy stan w `server/index.mjs`, możesz uruchomić transakcję, aby zobaczyć początkowy hash zgłoszony przez dowód z wiedzą zerową.
 
 8. Uruchom serwer.
 
@@ -1011,12 +1016,12 @@ Początkowa struktura `Accounts`.
 
 10. Uruchom kilka transakcji.
 
-11. Aby zweryfikować, czy stan zmienił się onchain, zrestartuj proces serwera. Zobaczysz, że `ZkBank` nie akceptuje już transakcji, ponieważ oryginalna wartość hasha w transakcjach różni się od wartości hasha przechowywanej onchain.
+11. Aby zweryfikować, czy stan zmienił się onchain, zrestartuj proces serwera. Zobacz, że `ZkBank` nie akceptuje już transakcji, ponieważ oryginalna wartość hasha w transakcjach różni się od wartości hasha przechowywanej onchain.
 
-    Jest to oczekiwany rodzaj błędu.
+    To jest oczekiwany typ błędu.
 
-        ```
-ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
+    ```
+    ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
 
     > server@1.0.0 start
     > node --experimental-json-modules index.mjs
@@ -1029,7 +1034,7 @@ ori@CryptoDocGuy:~/x/250911-zk-bank/server$ npm run start
         address:   0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
         function:  processTransaction(bytes _proof, bytes32[] _publicInputs)
         args:                        (0x0000000000000000000000000000000000000000000000042ab5d6d1986846cf00000000000000000000000000000000000000000000000b75c020998797da7800000000000000000000000000000000000000000000000
-        ```
+    ```
 
 #### `server/index.mjs` {#server-index-mjs-2}
 
@@ -1042,15 +1047,15 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-Musimy użyć [pakietu Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg), aby utworzyć właściwy dowód do wysłania onchain. Możemy użyć tego pakietu, uruchamiając interfejs wiersza poleceń (`bb`) lub używając [biblioteki JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Biblioteka JavaScript jest znacznie wolniejsza niż natywne uruchamianie kodu, więc używamy tutaj [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback), aby skorzystać z wiersza poleceń.
+Musimy użyć [pakietu Barretenberg](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg), aby utworzyć właściwy dowód do wysłania onchain. Możemy użyć tego pakietu albo uruchamiając interfejs wiersza poleceń (`bb`), albo używając [biblioteki JavaScript, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). Biblioteka JavaScript jest znacznie wolniejsza niż natywne uruchamianie kodu, więc używamy tutaj [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback), aby skorzystać z wiersza poleceń.
 
-Zauważ, że jeśli zdecydujesz się użyć `bb.js`, musisz użyć wersji zgodnej z używaną wersją Noir. W momencie pisania tego tekstu obecna wersja Noir (1.0.0-beta.11) używa `bb.js` w wersji 0.87.
+Zauważ, że jeśli zdecydujesz się użyć `bb.js`, musisz użyć wersji kompatybilnej z używaną wersją Noir. W momencie pisania tego tekstu obecna wersja Noir (1.0.0-beta.11) używa `bb.js` w wersji 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
 ```
 
-Adres tutaj to ten, który otrzymujesz, gdy zaczynasz z czystym `anvil` i postępujesz zgodnie z powyższymi wskazówkami.
+Adres tutaj to ten, który otrzymujesz, gdy zaczynasz od czystego `anvil` i postępujesz zgodnie z powyższymi instrukcjami.
 
 ```js
 const walletClient = createWalletClient({ 
@@ -1060,7 +1065,7 @@ const walletClient = createWalletClient({
 })
 ```
 
-Ten klucz prywatny to jedno z domyślnych, wstępnie zasilonych kont w `anvil`. 
+Ten klucz prywatny należy do jednego z domyślnych, zasilonych kont w `anvil`. 
 
 ```js
 const generateProof = async (witness, fileID) => {
@@ -1079,7 +1084,7 @@ Zapisz świadka do pliku.
     await execPromise(`bb prove -b ./noir/target/zkBank.json -w ${fname} -o ${fileID} --oracle_hash keccak --output_format fields`)
 ```
 
-Właściwe utworzenie dowodu. Ten krok tworzy również plik ze zmiennymi publicznymi, ale nie potrzebujemy go. Otrzymaliśmy już te zmienne z `noir.execute`.
+Właściwe tworzenie dowodu. Ten krok tworzy również plik ze zmiennymi publicznymi, ale nie jest on nam potrzebny. Te zmienne otrzymaliśmy już z `noir.execute`.
 
 ```js
     const proof = "0x" + JSON.parse(await fs.readFile(`./${fileID}/proof_fields.json`)).reduce((a,b) => a+b, "").replace(/0x/g, "")
@@ -1094,7 +1099,7 @@ Dowód to tablica JSON wartości `Field`, z których każda jest reprezentowana 
 }
 ```
 
-Wyczyść i zwróć dowód.
+Posprzątaj i zwróć dowód.
 
 ```js
 const processMessage = async (message, signature) => {
@@ -1105,13 +1110,13 @@ const processMessage = async (message, signature) => {
     const publicFields = noirResult.returnValue.map(x=>'0x' + x.slice(2).padStart(64, "0"))
 ```
 
-Pola publiczne muszą być tablicą 32-bajtowych wartości. Ponieważ jednak musieliśmy podzielić hash transakcji między dwie wartości `Field`, pojawia się on jako wartość 16-bajtowa. Tutaj dodajemy zera, aby Viem zrozumiał, że w rzeczywistości jest to 32 bajty.
+Pola publiczne muszą być tablicą 32-bajtowych wartości. Jednak ponieważ musieliśmy podzielić hash transakcji między dwie wartości `Field`, pojawia się on jako wartość 16-bajtowa. Tutaj dodajemy zera, aby Viem zrozumiał, że w rzeczywistości ma on 32 bajty.
 
 ```js
     const proof = await generateProof(noirResult.witness, `${fromAddress}-${nonce}`)
 ```
 
-Każdy adres używa każdego nonce tylko raz, dzięki czemu możemy użyć kombinacji `fromAddress` i `nonce` jako unikalnego identyfikatora dla pliku świadka i katalogu wyjściowego.
+Każdy adres używa danego nonce tylko raz, dzięki czemu możemy użyć kombinacji `fromAddress` i `nonce` jako unikalnego identyfikatora dla pliku świadka i katalogu wyjściowego.
 
 ```js
     try {
@@ -1150,7 +1155,7 @@ contract ZkBank {
     }
 ```
 
-Kod onchain musi śledzić dwie zmienne: weryfikator (osobny kontrakt tworzony przez `nargo`) oraz aktualny hash stanu.
+Kod onchain musi śledzić dwie zmienne: weryfikator (osobny kontrakt tworzony przez `nargo`) oraz obecny hash stanu.
 
 ```solidity
     event TransactionProcessed(
@@ -1169,7 +1174,7 @@ Za każdym razem, gdy stan ulega zmianie, emitujemy zdarzenie `TransactionProces
     ) public {
 ```
 
-Ta funkcja przetwarza transakcje. Pobiera dowód (jako `bytes`) i wejścia publiczne (jako tablicę `bytes32`) w formacie wymaganym przez weryfikator (aby zminimalizować przetwarzanie onchain, a tym samym koszty gazu).
+Ta funkcja przetwarza transakcje. Otrzymuje dowód (jako `bytes`) i wejścia publiczne (jako tablicę `bytes32`) w formacie wymaganym przez weryfikator (aby zminimalizować przetwarzanie onchain, a co za tym idzie koszty gazu).
 
 ```solidity
         require(_publicInputs[0] == currentStateHash,
@@ -1196,60 +1201,60 @@ Wywołaj kontrakt weryfikatora, aby zweryfikować dowód z wiedzą zerową. Ten 
 }
 ```
 
-Jeśli wszystko się zgadza, zaktualizuj hash stanu do nowej wartości i wyemituj zdarzenie `TransactionProcessed`.
+Jeśli wszystko się zgadza, zaktualizuj hash stanu na nową wartość i wyemituj zdarzenie `TransactionProcessed`.
 
 ## Nadużycia ze strony scentralizowanego komponentu {#abuses}
 
 Bezpieczeństwo informacji składa się z trzech atrybutów:
 
-- _Poufność_ – użytkownicy nie mogą czytać informacji, do których nie mają uprawnień.
-- _Integralność_ – informacje nie mogą być zmieniane, z wyjątkiem autoryzowanych użytkowników w autoryzowany sposób.
-- _Dostępność_ – autoryzowani użytkownicy mogą korzystać z systemu.
+- _Poufność_, użytkownicy nie mogą czytać informacji, do których nie są upoważnieni.
+- _Integralność_, informacje nie mogą być zmieniane, z wyjątkiem przez upoważnionych użytkowników w autoryzowany sposób.
+- _Dostępność_, upoważnieni użytkownicy mogą korzystać z systemu.
 
 W tym systemie integralność jest zapewniana poprzez dowody z wiedzą zerową. Dostępność jest znacznie trudniejsza do zagwarantowania, a poufność jest niemożliwa, ponieważ bank musi znać saldo każdego konta i wszystkie transakcje. Nie ma sposobu, aby zapobiec udostępnianiu informacji przez podmiot, który je posiada.
 
-Stworzenie prawdziwie poufnego banku mogłoby być możliwe przy użyciu [ukrytych adresów](https://vitalik.eth.limo/general/2023/01/20/stealth.html), ale wykracza to poza zakres tego artykułu.
+Możliwe byłoby stworzenie prawdziwie poufnego banku przy użyciu [ukrytych adresów (stealth addresses)](https://vitalik.eth.limo/general/2023/01/20/stealth.html), ale wykracza to poza zakres tego artykułu.
 
 ### Fałszywe informacje {#false-info}
 
-Jednym ze sposobów, w jaki serwer może naruszyć integralność, jest dostarczenie fałszywych informacji, gdy [żądane są dane](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
+Jednym ze sposobów, w jaki serwer może naruszyć integralność, jest dostarczanie fałszywych informacji, gdy [żądane są dane](https://github.com/qbzzt/250911-zk-bank/blob/03-smart-contracts/server/index.mjs#L278-L291).
 
-Aby to rozwiązać, możemy napisać drugi program w języku Noir, który otrzymuje konta jako prywatne dane wejściowe oraz adres, dla którego żądane są informacje, jako publiczne dane wejściowe. Wynikiem jest saldo i nonce tego adresu oraz hash kont.
+Aby to rozwiązać, możemy napisać drugi program Noir, który otrzymuje konta jako wejście prywatne oraz adres, dla którego żądane są informacje, jako wejście publiczne. Wyjściem jest saldo i nonce tego adresu, a także hash kont.
 
-Oczywiście ten dowód nie może zostać zweryfikowany onchain, ponieważ nie chcemy publikować wartości nonce i sald onchain. Może on jednak zostać zweryfikowany przez kod klienta działający w przeglądarce.
+Oczywiście tego dowodu nie można zweryfikować onchain, ponieważ nie chcemy publikować wartości nonce i sald onchain. Można go jednak zweryfikować za pomocą kodu klienta działającego w przeglądarce.
 
 ### Wymuszone transakcje {#forced-txns}
 
-Zwykłym mechanizmem zapewniającym dostępność i zapobiegającym cenzurze w sieciach L2 są [wymuszone transakcje](https://docs.optimism.io/stack/transactions/forced-transaction). Jednak wymuszone transakcje nie łączą się z dowodami z wiedzą zerową. Serwer jest jedynym podmiotem, który może weryfikować transakcje.
+Zwykłym mechanizmem zapewniania dostępności i zapobiegania cenzurze na L2 są [wymuszone transakcje (forced transactions)](https://docs.optimism.io/stack/transactions/forced-transaction). Ale wymuszone transakcje nie łączą się z dowodami z wiedzą zerową. Serwer jest jedynym podmiotem, który może weryfikować transakcje.
 
-Możemy zmodyfikować `smart-contracts/src/ZkBank.sol`, aby akceptował wymuszone transakcje i zapobiegał zmianie stanu przez serwer, dopóki nie zostaną one przetworzone. Otwiera to jednak drogę do prostego ataku typu odmowa usługi (DoS). Co jeśli wymuszona transakcja jest nieprawidłowa i w związku z tym niemożliwa do przetworzenia?
+Możemy zmodyfikować `smart-contracts/src/ZkBank.sol`, aby akceptował wymuszone transakcje i zapobiegał zmianie stanu przez serwer do czasu ich przetworzenia. Jednak to naraża nas na prosty atak typu odmowa usługi (denial-of-service). Co jeśli wymuszona transakcja jest nieważna i w związku z tym niemożliwa do przetworzenia?
 
-Rozwiązaniem jest posiadanie dowodu z wiedzą zerową na to, że wymuszona transakcja jest nieprawidłowa. Daje to serwerowi trzy opcje:
+Rozwiązaniem jest posiadanie dowodu z wiedzą zerową, że wymuszona transakcja jest nieważna. Daje to serwerowi trzy opcje:
 
-- Przetworzyć wymuszoną transakcję, dostarczając dowód z wiedzą zerową, że została ona przetworzona, oraz nowy hash stanu.
-- Odrzucić wymuszoną transakcję i dostarczyć kontraktowi dowód z wiedzą zerową, że transakcja jest nieprawidłowa (nieznany adres, zły nonce lub niewystarczające saldo).
+- Przetworzyć wymuszoną transakcję, dostarczając dowód z wiedzą zerową, że została przetworzona, oraz nowy hash stanu.
+- Odrzucić wymuszoną transakcję i dostarczyć kontraktowi dowód z wiedzą zerową, że transakcja jest nieważna (nieznany adres, zły nonce lub niewystarczające saldo).
 - Zignorować wymuszoną transakcję. Nie ma sposobu, aby zmusić serwer do faktycznego przetworzenia transakcji, ale oznacza to, że cały system jest niedostępny.
 
 #### Kaucje dostępności {#avail-bonds}
 
-W rzeczywistej implementacji prawdopodobnie istniałby jakiś motyw zysku za utrzymanie działania serwera. Możemy wzmocnić tę zachętę, wymagając od serwera wpłacenia kaucji dostępności, którą każdy może spalić, jeśli wymuszona transakcja nie zostanie przetworzona w określonym czasie.
+W rzeczywistej implementacji prawdopodobnie istniałby jakiś motyw zysku za utrzymanie działania serwera. Możemy wzmocnić tę zachętę, zmuszając serwer do wpłacenia kaucji dostępności (availability bond), którą każdy może spalić, jeśli wymuszona transakcja nie zostanie przetworzona w określonym czasie.
 
 ### Zły kod Noir {#bad-noir-code}
 
 Zazwyczaj, aby wzbudzić zaufanie ludzi do inteligentnego kontraktu, przesyłamy kod źródłowy do [eksploratora bloków](https://eth.blockscout.com/address/0x7D16d2c4e96BCFC8f815E15b771aC847EcbDB48b?tab=contract). Jednak w przypadku dowodów z wiedzą zerową jest to niewystarczające.
 
-`Verifier.sol` zawiera klucz weryfikacyjny, który jest funkcją programu Noir. Jednak ten klucz nie mówi nam, czym był program Noir. Aby faktycznie mieć zaufane rozwiązanie, należy przesłać program Noir (oraz wersję, która go utworzyła). W przeciwnym razie dowody z wiedzą zerową mogą odzwierciedlać inny program, taki z tylną furtką (backdoorem).
+`Verifier.sol` zawiera klucz weryfikacyjny, który jest funkcją programu Noir. Jednak ten klucz nie mówi nam, jaki to był program Noir. Aby faktycznie mieć zaufane rozwiązanie, należy przesłać program Noir (i wersję, która go utworzyła). W przeciwnym razie dowody z wiedzą zerową mogą odzwierciedlać inny program, taki z tylną furtką (back door).
 
-Dopóki eksploratory bloków nie zaczną pozwalać nam na przesyłanie i weryfikację programów Noir, powinieneś robić to sam (najlepiej do [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Wtedy zaawansowani użytkownicy będą mogli pobrać kod źródłowy, skompilować go samodzielnie, utworzyć `Verifier.sol` i zweryfikować, czy jest on identyczny z tym onchain.
+Zanim eksploratory bloków zaczną pozwalać nam na przesyłanie i weryfikację programów Noir, powinieneś robić to sam (najlepiej do [IPFS](/developers/tutorials/ipfs-decentralized-ui/)). Wtedy zaawansowani użytkownicy będą mogli pobrać kod źródłowy, skompilować go samodzielnie, utworzyć `Verifier.sol` i zweryfikować, czy jest identyczny z tym onchain.
 
-## Podsumowanie {#conclusion}
+## Wniosek {#conclusion}
 
-Aplikacje typu Plasma wymagają scentralizowanego komponentu do przechowywania informacji. Stwarza to potencjalne luki w zabezpieczeniach, ale w zamian pozwala nam zachować prywatność w sposób niedostępny na samym blockchainie. Dzięki dowodom z wiedzą zerową możemy zapewnić integralność i potencjalnie sprawić, że utrzymanie dostępności będzie opłacalne ekonomicznie dla każdego, kto obsługuje scentralizowany komponent.
+Aplikacje typu Plasma wymagają scentralizowanego komponentu jako magazynu informacji. Otwiera to potencjalne luki w zabezpieczeniach, ale w zamian pozwala nam zachować prywatność w sposób niedostępny na samym blockchainie. Dzięki dowodom z wiedzą zerową możemy zapewnić integralność i potencjalnie uczynić ekonomicznie opłacalnym dla osoby zarządzającej scentralizowanym komponentem utrzymanie dostępności.
 
-[Więcej moich prac znajdziesz tutaj](https://cryptodocguy.pro/).
+[Zobacz tutaj więcej moich prac](https://cryptodocguy.pro/).
 
 ## Podziękowania {#acknowledgements}
 
-- Josh Crites przeczytał wersję roboczą tego artykułu i pomógł mi z trudnym problemem w Noir.
+- Josh Crites przeczytał szkic tego artykułu i pomógł mi z trudnym problemem w Noir.
 
-Za wszelkie pozostałe błędy ponoszę odpowiedzialność.
+Wszelkie pozostałe błędy są moją odpowiedzialnością.

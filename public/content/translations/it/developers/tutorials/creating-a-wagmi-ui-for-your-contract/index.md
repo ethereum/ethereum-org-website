@@ -160,15 +160,15 @@ L'ID della catena di Sepolia.
 function App() {
 ```
 
-Questo è il modo standard per creare un componente React: definire una funzione che viene chiamata ogni volta che deve essere renderizzata. Questa funzione contiene in genere codice TypeScript o JavaScript, seguito da un'istruzione `return` che restituisce il codice JSX.
+Questo è il modo standard per creare un componente React: definire una funzione che viene chiamata ogni volta che deve essere renderizzato. Questa funzione contiene in genere codice TypeScript o JavaScript, seguito da un'istruzione `return` che restituisce il codice JSX.
 
 ```tsx
   const connection = useConnection()
 ```
 
-Usa [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) per ottenere informazioni relative alla connessione corrente, come l'indirizzo e `chainId`.
+Usa [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) per ottenere informazioni relative alla connessione corrente, come l'indirizzo e il `chainId`.
 
-Per convenzione, in React le funzioni chiamate `use...` sono [hook](https://www.w3schools.com/react/react_hooks.asp). Queste funzioni non si limitano a restituire dati al componente; assicurano anche che venga renderizzato di nuovo (la funzione del componente viene eseguita di nuovo e il suo output sostituisce il precedente nell'HTML) quando quei dati cambiano.
+Per convenzione, in React le funzioni chiamate `use...` sono [hook](https://www.w3schools.com/react/react_hooks.asp). Queste funzioni non si limitano a restituire dati al componente; assicurano anche che venga renderizzato di nuovo (la funzione del componente viene eseguita di nuovo e il suo output sostituisce quello precedente nell'HTML) quando quei dati cambiano.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -208,7 +208,7 @@ Se siamo connessi, ma non alla blockchain di Sepolia, passa a Sepolia.
   }, [connection.status, connection.chainId])
 ```
 
-Esegui nuovamente la funzione ogni volta che cambia lo stato della connessione o il chainId della connessione.
+Esegui di nuovo la funzione ogni volta che lo stato della connessione o il chainId della connessione cambiano.
 
 ```tsx
   return (
@@ -235,7 +235,7 @@ Fornisci informazioni sulla connessione corrente. All'interno di JSX, `{<express
       {connection.status === 'connected' && (
 ```
 
-La sintassi `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
+La sintassi `{<condition> && <value>}` significa "se la condizione è `true`, valuta il valore; se non lo è, valuta `false`".
 
 Questo è il modo standard per inserire istruzioni if all'interno di JSX.
 
@@ -300,9 +300,9 @@ I pulsanti del connettore.
       )}
 ```
 
-Fornisci informazioni aggiuntive. La sintassi dell'espressione `<variable>?.<field>` dice a JavaScript che se la variabile è definita, deve valutare quel campo. Se la variabile non è definita, allora questa espressione restituisce `undefined`.
+Fornisci informazioni aggiuntive. La sintassi dell'espressione `<variable>?.<field>` dice a JavaScript che se la variabile è definita, valuta quel campo. Se la variabile non è definita, allora questa espressione valuta `undefined`.
 
-L'espressione `error.message`, quando non ci sono errori, solleverebbe un'eccezione. L'uso di `error?.message` ci permette di evitare questo problema.
+L'espressione `error.message`, quando non c'è alcun errore, solleverebbe un'eccezione. L'uso di `error?.message` ci permette di evitare questo problema.
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 

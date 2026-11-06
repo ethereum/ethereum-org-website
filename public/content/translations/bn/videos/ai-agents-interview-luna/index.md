@@ -8,9 +8,6 @@ duration: "1:08:42"
 educationLevel: intermediate
 topic:
   - "use-cases"
-  - "ai"
-  - "agents"
-  - "dapps"
 format: interview
 author: "হোয়েন শিফট হ্যাপেনস"
 breadcrumb: "এআই এজেন্ট: লুনা"

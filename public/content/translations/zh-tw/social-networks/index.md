@@ -69,7 +69,7 @@ summaryPoints:
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) 是一個「充分去中心化」的社群網路，類似於 X 和 Reddit，允許使用者分享和發現「casts」。它建立在 Optimism 第二層 (L2) 網路上，以保持相對便宜的交易費用。
+[Farcaster](https://farcaster.xyz/) 是一個類似於 X 和 Reddit 的「充分去中心化」社群網路，允許使用者分享和探索「casts」。它建立在 Optimism 第二層 (L2) 網路上，以保持相對低廉的交易費用。
 
 ## 使用去中心化社群網路 {#use-decentralized-social-networks}
 

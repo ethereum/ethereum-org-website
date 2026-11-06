@@ -48,7 +48,7 @@ These are safe to do by hand without breaking the manifest:
 - **Sanitizer follow-up edits** — `/fix-sanitizer-bug` or manual application of a sanitizer pattern.
 - **Native-speaker corrections** during review — replacing a phonetic transliteration with the established one.
 - **Typo fixes in localized content** — the English version doesn't have the same typo.
-- **Comment-only edits inside code fences** — code comments may be translated; if you adjust one, the manifest doesn't care.
+- **Comment-only edits inside code fences** — code comments may be translated; if you adjust one, the manifest doesn't care, and `code-fence-content` ignores comments. Everything else inside a non-prose fence must stay byte-identical to English, or the gate fails the pair.
 
 In all of these, the manifest's English-to-locale mapping is still accurate after the edit. The next pipeline run sees the corrected locale as the new baseline.
 

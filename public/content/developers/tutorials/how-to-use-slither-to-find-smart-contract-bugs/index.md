@@ -8,7 +8,7 @@ skill: advanced
 breadcrumb: Slither
 published: 2020-06-09
 source: Building secure contracts
-sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
+sourceUrl: https://github.com/crytic/slither/tree/master/docs/src/tutorials
 ---
 
 ## How to use Slither {#how-to-use-slither}
@@ -22,35 +22,51 @@ The aim of this tutorial is to show how to use Slither to automatically find bug
 
 ## Installation {#installation}
 
-Slither requires Python >= 3.6. It can be installed through pip or using docker.
+Slither requires Python 3.10 or later. It can be installed with [uv](https://github.com/astral-sh/uv), with pip inside a virtual environment, or using docker.
 
-Slither through pip:
+Slither through uv:
 
-```bash
-pip3 install --user slither-analyzer
+```sh
+uv tool install slither-analyzer
+```
+
+Slither through pip, inside a virtual environment:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install slither-analyzer
+```
+
+Unless your project uses a [supported compilation framework](https://github.com/crytic/crytic-compile) such as Foundry or Hardhat, Slither needs the Solidity compiler (`solc`). [solc-select](https://github.com/crytic/solc-select) lets you install and switch between compiler versions. The pip install above includes it in the virtual environment; with uv, install it with `uv tool install solc-select`. Pick the version your contracts use, for example:
+
+```sh
+solc-select install 0.8.28
+solc-select use 0.8.28
 ```
 
 Slither through docker:
 
-```bash
-docker pull trailofbits/eth-security-toolbox
-docker run -it -v "$PWD":/home/trufflecon trailofbits/eth-security-toolbox
+```sh
+docker pull ghcr.io/trailofbits/eth-security-toolbox:nightly
+docker run -it -v "$PWD":/share ghcr.io/trailofbits/eth-security-toolbox:nightly
 ```
 
-_The last command runs eth-security-toolbox in a docker that has access to your current directory. You can change the files from your host, and run the tools on the files from the docker_
+_The last command runs [eth-security-toolbox](https://github.com/trailofbits/eth-security-toolbox) in a docker that has access to your current directory. You can change the files from your host, and run the tools on the files from the docker_
 
 Inside docker, run:
 
-```bash
-solc-select 0.5.11
-cd /home/trufflecon/
+```sh
+cd /share
 ```
+
+The image comes with several `solc` versions preinstalled. Use `solc-select versions` to list them, and `solc-select install` and `solc-select use` as shown above to change versions.
 
 ### Running a script {#running-a-script}
 
 To run a python script with python 3:
 
-```bash
+```sh
 python3 script.py
 ```
 
@@ -58,13 +74,11 @@ python3 script.py
 
 **Command line versus user-defined scripts.** Slither comes with a set of predefined detectors that find many common bugs. Calling Slither from the command line will run all the detectors, no detailed knowledge of static analysis needed:
 
-```bash
+```sh
 slither project_paths
 ```
 
 In addition to detectors, Slither has code review capabilities through its [printers](https://github.com/crytic/slither#printers) and [tools](https://github.com/crytic/slither#tools).
-
-Use [crytic.io](https://github.com/crytic) to get access to private detectors and GitHub integration.
 
 ## Static analysis {#static-analysis}
 
@@ -112,6 +126,11 @@ from slither.visitors.expression.expression import ExpressionVisitor
 from slither.core.expressions.binary_operation import BinaryOperationType
 
 class HasAddition(ExpressionVisitor):
+
+    def __init__(self, expression):
+        # Must be set before super().__init__(), which visits the expression
+        self._result = False
+        super().__init__(expression)
 
     def result(self):
         return self._result
@@ -174,14 +193,14 @@ An example of data dependency usage can be found in the [dangerous strict equali
 If your analysis navigates through the CFG and follows the edges, you are likely to see already visited nodes. For example, if a loop is presented as shown below:
 
 ```solidity
-for(uint i; i < range; ++){
-    variable_a += 1
+for(uint i; i < range; ++i){
+    variable_a += 1;
 }
 ```
 
 Your analysis will need to know when to stop. There are two main strategies here: (1) iterate on each node a finite number of times, (2) compute a so-called _fixpoint_. A fixpoint basically means that analyzing this node does not provide any meaningful information.
 
-An example of fixpoint used can be found in the reentrancy detectors: Slither explores the nodes, and look for externals calls, write and read to storage. Once it has reached a fixpoint ([reentrancy.py#L125-L131](https://github.com/crytic/slither/blob/master/slither/detectors/reentrancy/reentrancy.py#L125-L131)), it stops the exploration, and analyze the results to see if a reentrancy is present, through different reentrancy patterns ([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py), [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py), [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
+An example of fixpoint used can be found in the reentrancy detectors: Slither explores the nodes, and look for externals calls, write and read to storage. Once it has reached a fixpoint ([reentrancy.py#L312-L319](https://github.com/crytic/slither/blob/eef5df948b8992eff85786b6b0bb4a193933e2c9/slither/detectors/reentrancy/reentrancy.py#L312-L319)), it stops the exploration, and analyze the results to see if a reentrancy is present, through different reentrancy patterns ([reentrancy_benign.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_benign.py), [reentrancy_read_before_write.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_read_before_write.py), [reentrancy_eth.py](https://github.com/crytic/slither/blob/b275bcc824b1b932310cf03b6bfb1a1fef0ebae1/slither/detectors/reentrancy/reentrancy_eth.py)).
 
 Writing analyses using efficient fixed point computation requires a good understanding of how the analysis propagates its information.
 
@@ -209,7 +228,7 @@ A `Slither` object has:
 
 - `contracts (list(Contract)`: list of contracts
 - `contracts_derived (list(Contract)`: list of contracts that are not inherited by another contract (subset of contracts)
-- `get_contract_from_name (str)`: Return a contract from its name
+- `get_contract_from_name (str)`: Return a list of the contracts with that name (use `[0]` for the first one)
 
 A `Contract` object has:
 
@@ -225,10 +244,10 @@ A `Contract` object has:
 A `Function` or a `Modifier` object has:
 
 - `name (str)`: Name of the function
-- `contract (contract)`: the contract where the function is declared
+- `contract (contract)`: The contract where the function is declared
 - `nodes (list(Node))`: List of the nodes composing the CFG of the function/modifier
 - `entry_point (Node)`: Entry point of the CFG
 - `variables_read (list(Variable))`: List of variables read
 - `variables_written (list(Variable))`: List of variables written
-- `state_variables_read (list(StateVariable))`: List of state variables read (subset of variables`read)
-- `state_variables_written (list(StateVariable))`: List of state variables written (subset of variables`written)
+- `state_variables_read (list(StateVariable))`: List of state variables read (subset of `variables_read`)
+- `state_variables_written (list(StateVariable))`: List of state variables written (subset of `variables_written`)

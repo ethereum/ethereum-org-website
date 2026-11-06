@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "transactions"
+  - "how-ethereum-works"
 format: tutorial
 author: "오스틴 그리피스"
 breadcrumb: "트랜잭션 (ETH.BUILD)"

@@ -10,7 +10,7 @@ Esta lista está seleccionada por nuestra comunidad. Si falta algo o hay algún 
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Fundadores, ¿necesitan ayuda para acelerar su negocio? [Diríjanse a Founders Support](/founders/)</div>
+<div>Fundadores, ¿necesitan ayuda para acelerar su negocio? [Diríjanse a Founders Support](/organizations/founders/)</div>
 </Alert>
 
 ## Ecosistema general de Ethereum {#broad-ethereum-ecosystem}

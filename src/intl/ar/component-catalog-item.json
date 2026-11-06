@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "نبذة عن ⁦{name}⁩",
+  "catalog-item-gallery-modal-title": "لقطات شاشة ⁦{name}⁩",
+  "catalog-item-gallery-screenshot-alt": "لقطة الشاشة ⁦{index}⁩ لـ ⁦{name}⁩",
+  "catalog-item-gallery-title": "معرض الصور",
+  "catalog-item-info-title": "معلومات",
+  "catalog-item-link-label": "⁦{name}⁩ على ⁦{platform}⁩",
+  "catalog-item-see-next": "عرض التالي",
+  "catalog-item-source-code": "الكود المصدري",
+  "catalog-item-view-on-github": "عرض على ⁦GitHub⁩",
+  "catalog-item-visit-website": "زيارة الموقع الإلكتروني"
+}

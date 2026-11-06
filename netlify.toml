@@ -16,6 +16,8 @@
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
+  # Serve /_next assets from the deploy that rendered the HTML (stops post-deploy chunk 404s)
+  NETLIFY_NEXT_SKEW_PROTECTION="true"
 
 [[headers]]
   for = "/*"

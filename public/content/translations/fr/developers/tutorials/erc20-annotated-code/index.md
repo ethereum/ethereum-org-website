@@ -13,7 +13,7 @@ published: 2021-03-09
 
 L'une des utilisations les plus courantes d'Ethereum est la création par un groupe d'un jeton échangeable, en un sens leur propre monnaie. Ces jetons suivent généralement un standard, l'[ERC-20](/developers/docs/standards/tokens/erc-20/). Ce standard permet d'écrire des outils, tels que des réserves de liquidité et des portefeuilles, qui fonctionnent avec tous les jetons ERC-20. Dans cet article, nous analyserons l'[implémentation ERC20 en Solidity d'OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), ainsi que la [définition de l'interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-Il s'agit d'un code source annoté. Si vous souhaitez implémenter l'ERC-20, [lisez ce tutoriel](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+Il s'agit d'un code source annoté. Si vous souhaitez implémenter l'ERC-20, [lisez ce tutoriel](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## L'interface {#the-interface}
 

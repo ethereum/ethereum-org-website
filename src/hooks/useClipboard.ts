@@ -14,9 +14,11 @@ export const useClipboard = ({ timeout = 1500 }: UseClipboardOptions = {}) => {
 
   const onCopy = async (value: string) => {
     try {
-      await copy(value)
+      const copied = await copy(value)
 
-      setHasCopied(true)
+      setHasCopied(copied)
+      if (!copied) return
+
       setTimeout(() => {
         setHasCopied(false)
       }, timeout)

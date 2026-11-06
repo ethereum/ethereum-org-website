@@ -161,7 +161,7 @@ The gallery page includes `CollectionPage` + `ItemList` JSON-LD (`app/[locale]/v
 
 ### Sitemap
 
-Video pages are explicitly added to the sitemap in `app/sitemap.ts` with `changeFrequency: "monthly"` and `priority: 0.6`. Each video URL includes hreflang alternates for all supported locales.
+Video pages are included in the sitemap through the same content-driven path as other pages: `getAllPagesWithTranslations()` in `src/lib/i18n/translationRegistry.ts` adds every `videos/<slug>` page, and `app/sitemaps/sitemap.ts` generates one sitemap per locale (indexed by `app/sitemap.xml/route.ts`). Each video URL includes hreflang alternates for the locales it is translated into.
 
 ## Navigation
 

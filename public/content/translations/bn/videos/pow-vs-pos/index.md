@@ -7,9 +7,8 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "consensus-mechanisms"
+  - "how-ethereum-works"
   - "security"
-  - "consensus"
 format: interview
 author: "ব্যাংকলেস"
 breadcrumb: "PoW বনাম PoS বিতর্ক"

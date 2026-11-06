@@ -130,7 +130,7 @@ Vamos a usar [Vite](https://vite.dev/) y [React](https://react.dev/). Estas son 
 
 #### El componente WASM {#wasm}
 
-El código fuente que se compila en WASM está escrito en [Rust](https://rust-lang.org/). Puede verlo en [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Este código es principalmente una interfaz entre el código JavaScript y [la biblioteca `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+El código fuente que se compila en WASM está escrito en [Rust](https://rust-lang.org/). Puede verlo en [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Este código es principalmente una interfaz entre el código JavaScript y [la biblioteca `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
@@ -155,7 +155,7 @@ El paquete [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) necesita g
 console_error_panic_hook = "0.1.7"
 ```
 
-[Esta biblioteca](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) nos da mensajes de error más significativos cuando el código WASM entra en pánico y no puede continuar.
+[Esta biblioteca](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) nos brinda mensajes de error más significativos cuando el código WASM entra en pánico (panic) y no puede continuar.
 
 ```toml
 [lib]
@@ -174,7 +174,7 @@ use wasm_bindgen::prelude::*;
 
 Las definiciones para crear un paquete WASM a partir de Rust. Están documentadas [aquí](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -188,19 +188,19 @@ Las funciones que necesitamos de [la biblioteca `eth-stealth-addresses`](https:/
 use hex::{decode,encode};
 ```
 
-Rust normalmente usa [matrices](https://doc.rust-lang.org/std/primitive.array.html) de bytes (`[u8; <size>]`) para los valores. Pero en JavaScript, normalmente usamos cadenas hexadecimales. [La biblioteca `hex`](https://docs.rs/hex/latest/hex/) traduce por nosotros de una representación a la otra.
+Rust normalmente usa [matrices](https://doc.rust-lang.org/std/primitive.array.html) (arrays) de bytes (`[u8; <size>]`) para los valores. Pero en JavaScript, normalmente usamos cadenas hexadecimales. [La biblioteca `hex`](https://docs.rs/hex/latest/hex/) traduce por nosotros de una representación a la otra.
 
 ```rust
 #[wasm_bindgen]
 ```
 
-Genere enlaces WASM para poder llamar a esta función desde JavaScript.
+Genera enlaces (bindings) WASM para poder llamar a esta función desde JavaScript.
 
 ```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-La forma más fácil de devolver un objeto con múltiples campos es devolver una cadena JSON. 
+La forma más sencilla de devolver un objeto con varios campos es devolver una cadena JSON. 
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
@@ -236,7 +236,7 @@ La expresión `<const N: usize>` se llama [genérico](https://doc.rust-lang.org/
 
 El valor de retorno es `Option<[u8; N]>`, lo que significa que la matriz devuelta es [opcional](https://doc.rust-lang.org/std/option/). Este es un patrón típico en Rust para funciones que pueden fallar.
 
-Por ejemplo, si llamamos a `str_to_array::10("bad060a7")`, se supone que la función devuelve una matriz de diez valores, pero la entrada es de solo cuatro bytes. La función necesita fallar, y lo hace devolviendo `None`. El valor de retorno para `str_to_array::4("bad060a7")` sería `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+Por ejemplo, si llamamos a `str_to_array::10("bad060a7")`, se supone que la función devuelve una matriz de diez valores, pero la entrada es de solo cuatro bytes. La función debe fallar y lo hace devolviendo `None`. El valor de retorno para `str_to_array::4("bad060a7")` sería `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
     // decode devuelve Result<Vec<u8>, _>
@@ -245,7 +245,7 @@ Por ejemplo, si llamamos a `str_to_array::10("bad060a7")`, se supone que la func
 
 La función [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) devuelve un `Result<Vec<u8>, FromHexError>`. El tipo [`Result`](https://doc.rust-lang.org/std/result/) puede contener un resultado exitoso (`Ok(value)`) o un error (`Err(error)`).
 
-El método `.ok()` convierte el `Result` en un `Option`, cuyo valor es el valor `Ok()` si tiene éxito o `None` si no. Finalmente, el [operador de signo de interrogación](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) aborta las funciones actuales y devuelve un `None` si el `Option` está vacío. De lo contrario, desenvuelve el valor y lo devuelve (en este caso, para asignar un valor a `vec`).
+El método `.ok()` convierte el `Result` en un `Option`, cuyo valor es el valor `Ok()` si tiene éxito o `None` si no lo tiene. Finalmente, el [operador de signo de interrogación](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) aborta las funciones actuales y devuelve un `None` si el `Option` está vacío. De lo contrario, desenvuelve el valor y lo devuelve (en este caso, para asignar un valor a `vec`).
 
 Esto parece un método extrañamente enrevesado para manejar errores, pero `Result` y `Option` aseguran que todos los errores se manejen, de una forma u otra.
 
@@ -253,14 +253,14 @@ Esto parece un método extrañamente enrevesado para manejar errores, pero `Resu
     if vec.len() != N { return None; }
 ```
 
-Si el número de bytes es incorrecto, eso es una falla y devolvemos `None`.
+Si el número de bytes es incorrecto, es un fallo y devolvemos `None`.
 
 ```rust
     // try_into consume vec e intenta crear [u8; N]
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust tiene dos tipos de matrices. Las [matrices](https://doc.rust-lang.org/std/primitive.array.html) tienen un tamaño fijo. Los [vectores](https://doc.rust-lang.org/std/vec/index.html) pueden crecer y encogerse. `hex::decode` devuelve un vector, pero la biblioteca `eth_stealth_addresses` quiere recibir matrices. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) convierte un valor en otro tipo, por ejemplo, un vector en una matriz.
+Rust tiene dos tipos de matrices. Las [matrices](https://doc.rust-lang.org/std/primitive.array.html) (arrays) tienen un tamaño fijo. Los [vectores](https://doc.rust-lang.org/std/vec/index.html) pueden crecer y encogerse. `hex::decode` devuelve un vector, pero la biblioteca `eth_stealth_addresses` quiere recibir matrices. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) convierte un valor en otro tipo, por ejemplo, un vector en una matriz.
 
 ```rust
     Some(array)
@@ -294,7 +294,7 @@ Usamos la función [`generate_stealth_address`](https://docs.rs/eth-stealth-addr
 }
 ```
 
-Prepare la cadena de salida codificada en JSON.
+Prepara la cadena de salida codificada en JSON.
 
 ```rust
 #[wasm_bindgen]
@@ -329,7 +329,7 @@ pub fn main() {
 }
 ```
 
-Este código especifica que la salida de pánico se envíe a la consola de JavaScript. Para verlo en acción, use la aplicación y dele a Bill una metadirección no válida (simplemente cambie un dígito hexadecimal). Verá este error en la consola de JavaScript:
+Este código especifica que la salida de pánico (panic) se envíe a la consola de JavaScript. Para verlo en acción, use la aplicación y dele a Bill una metadirección no válida (simplemente cambie un dígito hexadecimal). Verá este error en la consola de JavaScript:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -338,14 +338,14 @@ assertion `left == right` failed
  right: 1
 ```
 
-Seguido de un seguimiento de la pila. Luego, dele a Bill la metadirección válida y dele a Alice una dirección no válida o una clave pública no válida. Verá este error:
+Seguido de un seguimiento de pila (stack trace). Luego, dele a Bill la metadirección válida y dele a Alice una dirección no válida o una clave pública no válida. Verá este error:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-Nuevamente, seguido de un seguimiento de la pila.
+Nuevamente, seguido de un seguimiento de pila.
 
 #### La interfaz de usuario {#ui}
 
@@ -368,7 +368,7 @@ export default defineConfig({
 })
 ```
 
-Necesitamos dos complementos de Vite: [react](https://www.npmjs.com/package/@vitejs/plugin-react) y [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
+Necesitamos dos complementos (plugins) de Vite: [react](https://www.npmjs.com/package/@vitejs/plugin-react) y [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
 
 **`App.jsx`**
 
@@ -378,7 +378,7 @@ Este archivo es el componente principal de la aplicación. Es un contenedor que 
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Cuando usamos [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), crea dos archivos que usamos aquí: un archivo wasm con el código real (aquí, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) y un archivo JavaScript con las definiciones para usarlo (aquí, `src/rust_wasm/pkg/rust_wasm.js`). La exportación predeterminada de ese archivo JavaScript es el código que debe ejecutarse para iniciar WASM.
+Cuando usamos [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), crea dos archivos que usamos aquí: un archivo wasm con el código real (aquí, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) y un archivo JavaScript con las definiciones para usarlo (aquí, `src/rust-wasm/pkg/rust_wasm.js`). La exportación predeterminada de ese archivo JavaScript es el código que debe ejecutarse para iniciar WASM.
 
 ```jsx
 function App() {
@@ -403,7 +403,7 @@ function App() {
 
 El [hook `useEffect`](https://react.dev/reference/react/useEffect) le permite especificar una función que se ejecuta cuando cambian las variables de estado. Aquí, la lista de variables de estado está vacía (`[]`), por lo que esta función se ejecuta solo una vez cuando se carga la página.
 
-La función de efecto tiene que regresar inmediatamente. Para usar código asíncrono, como el `init` de WASM (que tiene que cargar el archivo `.wasm` y, por lo tanto, lleva tiempo), definimos una función interna [`async`](https://en.wikipedia.org/wiki/Async/await) y la ejecutamos sin un `await`.
+La función de efecto debe regresar inmediatamente. Para usar código asíncrono, como el `init` de WASM (que tiene que cargar el archivo `.wasm` y, por lo tanto, lleva tiempo), definimos una función [`async`](https://en.wikipedia.org/wiki/Async/await) interna y la ejecutamos sin un `await`.
 
 **`Bill.jsx`**
 
@@ -421,7 +421,7 @@ Además de la exportación predeterminada, el código JavaScript generado por `w
             }}>
 ```
 
-Para llamar a las funciones de WASM, simplemente llamamos a la función exportada por el archivo JavaScript creado por `wasm-pack`.
+Para llamar a las funciones WASM, simplemente llamamos a la función exportada por el archivo JavaScript creado por `wasm-pack`.
 
 **`Alice.jsx`**
 

@@ -1,7 +1,7 @@
 ---
-title: Ether được bọc (WETH)
-metaTitle: Ether được bọc (WETH) là gì
-description: Giới thiệu về Ether được bọc (WETH)—một trình bọc tương thích với ERC-20 dành cho ether (ETH). 
+title: "Ether được bọc (WETH)"
+metaTitle: "Ether được bọc (WETH) là gì"
+description: "Giới thiệu về Ether được bọc (WETH)—một trình bọc tương thích với ERC-20 dành cho ether (ETH)."
 lang: vi
 ---
 
@@ -31,7 +31,7 @@ Bạn có thể mở bọc WETH để lấy ETH bằng cách sử dụng hợp �
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Ether được bọc (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nguồn cung | [Nguồn cung của ETH](/eth/supply/) được quản lý bởi Giao thức [Ethereum](/). Việc [phát hành](/roadmap/merge/issuance) ETH được xử lý bởi các trình xác thực Ethereum khi xử lý giao dịch và tạo khối.                           | WETH là một token ERC-20 có nguồn cung được quản lý bởi một hợp đồng thông minh. Các đơn vị WETH mới được hợp đồng phát hành sau khi nhận được tiền nạp ETH từ người dùng, hoặc các đơn vị WETH sẽ bị đốt khi người dùng muốn quy đổi WETH lấy ETH.                                                                                                                                        |
+| Nguồn cung | [Nguồn cung của ETH](/what-is-ether/supply/) được quản lý bởi Giao thức [Ethereum](/). Việc [phát hành](/roadmap/merge/issuance) ETH được xử lý bởi các trình xác thực Ethereum khi xử lý giao dịch và tạo khối.                           | WETH là một token ERC-20 có nguồn cung được quản lý bởi một hợp đồng thông minh. Các đơn vị WETH mới được hợp đồng phát hành sau khi nhận được tiền nạp ETH từ người dùng, hoặc các đơn vị WETH sẽ bị đốt khi người dùng muốn quy đổi WETH lấy ETH.                                                                                                                                        |
 | Quyền sở hữu | Quyền sở hữu được quản lý bởi Giao thức Ethereum thông qua số dư Tài khoản của bạn.  | Quyền sở hữu WETH được quản lý bởi hợp đồng thông minh token WETH, được bảo mật bởi Giao thức Ethereum.                                                                                                                                         |
 | Gas        | Ether (ETH) là đơn vị thanh toán được chấp nhận cho việc tính toán trên mạng lưới Ethereum. Phí Gas được tính bằng Gwei (một đơn vị của ether).                                                                                    | Việc trả phí Gas bằng token WETH không được hỗ trợ nguyên bản.                                                                                                                                                                                              |
 

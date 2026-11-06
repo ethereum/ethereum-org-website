@@ -91,7 +91,7 @@ export const TopicLayout = async ({
     <>
       {editBanner}
       <PageHero
-        breadcrumbs={{ slug, startDepth: 1 }}
+        breadcrumbs={{ slug }}
         heroImg={
           frontmatter.image
             ? {

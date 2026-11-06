@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "transactions"
+  - "how-ethereum-works"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Transactions (ETH.BUILD)"

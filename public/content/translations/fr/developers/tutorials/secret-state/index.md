@@ -710,8 +710,7 @@ En général, lorsque le traitement peut être effectué soit dans TypeScript, s
 
 Cependant, nous continuons d'[aplatir la carte dans Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), alors que nous aurions pu le faire dans TypeScript. La raison est que les autres options sont, à mon avis, pires.
 
-- Fournir un tableau unidimensionnel de booléens au code Zokrates, et utiliser une expression telle que `x*(height+2)
-+y` pour obtenir la carte bidimensionnelle. Cela rendrait [le code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) un peu plus compliqué, j'ai donc décidé que le gain de performances n'en valait pas la peine pour un tutoriel.
+- Fournir un tableau unidimensionnel de booléens au code Zokrates, et utiliser une expression telle que `x*(height+2)+y` pour obtenir la carte bidimensionnelle. Cela rendrait [le code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) un peu plus compliqué, j'ai donc décidé que le gain de performances n'en valait pas la peine pour un tutoriel.
 
 - Envoyer à Zokrates à la fois le tableau unidimensionnel et le tableau bidimensionnel. Cependant, cette solution ne nous apporte rien. Le code Zokrates devrait vérifier que le tableau unidimensionnel qui lui est fourni est bien la représentation correcte du tableau bidimensionnel. Il n'y aurait donc aucun gain de performances.
 

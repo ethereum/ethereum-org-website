@@ -12,7 +12,7 @@ lang: zh
 published: 2024-06-29
 ---
 
-你编写了一个出色的全新去中心化应用 (dapp)。你甚至为它编写了[用户界面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。但现在你担心有人会试图通过关闭你的用户界面（它只是云端的一台服务器）来审查它。在本教程中，你将学习如何通过将用户界面部署到**[星际文件系统 (IPFS)](https://ipfs.tech/developers/)** 上来避免审查，这样任何感兴趣的人都可以将其固定在服务器上以供将来访问。
+你编写了一个出色的全新去中心化应用 (dapp)。你甚至为它编写了[用户界面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。但现在你担心有人会试图通过关闭你的用户界面（它只是云端的一台服务器）来审查它。在本教程中，你将学习如何通过将用户界面部署到**[星际文件系统 (IPFS)](https://docs.ipfs.tech/)** 上来避免审查，这样任何感兴趣的人都可以将其固定在服务器上以供将来访问。
 
 你可以使用像 [Fleek](https://resources.fleek.xyz/docs/) 这样的第三方服务来完成所有工作。本教程面向那些希望通过亲自动手来充分理解其工作原理的人，即使这需要做更多的工作。
 

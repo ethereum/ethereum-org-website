@@ -1,6 +1,6 @@
 ---
-title: Добавление кошельков
-description: Политика, которую мы используем при добавлении кошелька на ethereum.org
+title: "Добавление кошельков"
+description: "Политика, которую мы используем при добавлении кошелька на ethereum.org"
 lang: ru
 ---
 
@@ -58,7 +58,7 @@ lang: ru
 
 ## Добавление кошелька {#adding-a-wallet}
 
-Если вы хотите добавить кошелек на ethereum.org, создайте задачу (issue) на GitHub.
+Если вы хотите добавить кошелек на ethereum.org, создайте задачу (issue) на GitHub. Описание кошелька, которое вы укажете в задаче, будет отображаться на странице кошелька, поэтому ограничьтесь одним или двумя предложениями, содержащими только факты.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Создать задачу

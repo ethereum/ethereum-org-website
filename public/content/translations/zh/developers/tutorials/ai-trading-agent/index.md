@@ -219,7 +219,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-从 Web3 调用 EVM 上函数的语法是：`<contract object>.functions.<function name>().call(<parameters>)`。参数可以是 EVM 函数的参数（如果有；这里没有），或者是用于修改区块链行为的[命名参数](https://en.wikipedia.org/wiki/Named_parameter)。这里我们使用了一个参数 `block_identifier`，来指定我们希望在其中运行的[区块号](/developers/docs/apis/json-rpc/#default-block)。
+从 Web3 调用 EVM 上函数的语法是：`<contract object>.functions.<function name>().call(<parameters>)`。参数可以是 EVM 函数的参数（如果有；这里没有），或者是用于修改区块链行为的[命名参数](https://en.wikipedia.org/wiki/Named_parameter)。这里我们使用了一个参数 `block_identifier`，来指定我们希望在其中运行的[区块号](/developers/docs/apis/json-rpc/#block-parameter)。
 
 结果是[这个结构体，以数组形式呈现](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72)。第一个值是两个代币之间汇率的函数。
 

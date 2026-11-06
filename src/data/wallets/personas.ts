@@ -23,24 +23,14 @@ export const WALLET_PERSONAS = [
     metaDescKey: "page-find-wallet-new-to-crypto-meta-description",
   },
   {
-    id: "developer",
-    features: DEVELOPER_FEATURES,
-    titleKey: "page-find-wallet-developer-title",
-    descKey: "page-find-wallet-developer-desc",
-    heroTitleKey: "page-find-wallet-developer-hero-title",
-    heroDescKey: "page-find-wallet-developer-hero-description",
-    metaTitleKey: "page-find-wallet-developer-meta-title",
-    metaDescKey: "page-find-wallet-developer-meta-description",
-  },
-  {
-    id: "finance",
-    features: FINANCE_FEATURES,
-    titleKey: "page-find-wallet-finance-title",
-    descKey: "page-find-wallet-finance-desc",
-    heroTitleKey: "page-find-wallet-finance-hero-title",
-    heroDescKey: "page-find-wallet-finance-hero-description",
-    metaTitleKey: "page-find-wallet-finance-meta-title",
-    metaDescKey: "page-find-wallet-finance-meta-description",
+    id: "nfts",
+    features: NFTS_FEATURES,
+    titleKey: "page-find-wallet-nfts-title",
+    descKey: "page-find-wallet-nfts-desc",
+    heroTitleKey: "page-find-wallet-nfts-hero-title",
+    heroDescKey: "page-find-wallet-nfts-hero-description",
+    metaTitleKey: "page-find-wallet-nfts-meta-title",
+    metaDescKey: "page-find-wallet-nfts-meta-description",
   },
   {
     id: "hardware",
@@ -53,14 +43,24 @@ export const WALLET_PERSONAS = [
     metaDescKey: "page-find-wallet-hardware-meta-description",
   },
   {
-    id: "nfts",
-    features: NFTS_FEATURES,
-    titleKey: "page-find-wallet-nfts-title",
-    descKey: "page-find-wallet-nfts-desc",
-    heroTitleKey: "page-find-wallet-nfts-hero-title",
-    heroDescKey: "page-find-wallet-nfts-hero-description",
-    metaTitleKey: "page-find-wallet-nfts-meta-title",
-    metaDescKey: "page-find-wallet-nfts-meta-description",
+    id: "finance",
+    features: FINANCE_FEATURES,
+    titleKey: "page-find-wallet-finance-title",
+    descKey: "page-find-wallet-finance-desc",
+    heroTitleKey: "page-find-wallet-finance-hero-title",
+    heroDescKey: "page-find-wallet-finance-hero-description",
+    metaTitleKey: "page-find-wallet-finance-meta-title",
+    metaDescKey: "page-find-wallet-finance-meta-description",
+  },
+  {
+    id: "developer",
+    features: DEVELOPER_FEATURES,
+    titleKey: "page-find-wallet-developer-title",
+    descKey: "page-find-wallet-developer-desc",
+    heroTitleKey: "page-find-wallet-developer-hero-title",
+    heroDescKey: "page-find-wallet-developer-hero-description",
+    metaTitleKey: "page-find-wallet-developer-meta-title",
+    metaDescKey: "page-find-wallet-developer-meta-description",
   },
 ] as const
 
@@ -79,6 +79,7 @@ type PersonaStyle = {
   tag: PersonaTagStatus
   text: string
   border: string
+  bg: string
   bgTint: string
 }
 
@@ -92,24 +93,28 @@ export const PERSONA_STYLES: Record<WalletPersonaId, PersonaStyle> = {
     tag: "primary",
     text: "text-primary",
     border: "border-primary",
+    bg: "bg-primary",
     bgTint: "bg-primary/10",
   },
   developer: {
     tag: "accent-b",
     text: "text-accent-b",
     border: "border-accent-b",
+    bg: "bg-accent-b",
     bgTint: "bg-accent-b/10",
   },
   finance: {
     tag: "accent-c",
     text: "text-accent-c",
     border: "border-accent-c",
+    bg: "bg-accent-c",
     bgTint: "bg-accent-c/10",
   },
   hardware: {
     tag: "accent-a",
     text: "text-accent-a",
     border: "border-accent-a",
+    bg: "bg-accent-a",
     bgTint: "bg-accent-a/10",
   },
   // No accent-d token exists, so nfts rides the warning/yellow family.
@@ -117,6 +122,7 @@ export const PERSONA_STYLES: Record<WalletPersonaId, PersonaStyle> = {
     tag: "tag-yellow",
     text: "text-warning-dark dark:text-yellow-500",
     border: "border-warning-dark dark:border-yellow-500",
+    bg: "bg-warning-dark dark:bg-yellow-500",
     bgTint: "bg-warning-dark/10 dark:bg-yellow-500/10",
   },
 }

@@ -1,6 +1,6 @@
 ---
 title: "ஒரு NFT-ஐ அச்சிடுவது எப்படி (NFT பயிற்சித் தொடரின் பகுதி 2/3)"
-description: "எங்கள் ஸ்மார்ட் ஒப்பந்தம் மற்றும் Web3-ஐப் பயன்படுத்தி எத்திரியம் தொகுதிச்சங்கிலியில் ஒரு NFT-ஐ எவ்வாறு அச்சிடுவது என்பதை இந்தப் பயிற்சி விவரிக்கிறது."
+description: "எமது திறன் ஒப்பந்தம், Hardhat மற்றும் ethers.js ஆகியவற்றைப் பயன்படுத்தி எத்திரியம் தொகுதிச்சங்கிலியில் ஒரு NFT-ஐ எவ்வாறு அச்சிடுவது என்பதை இந்தப் பயிற்சி விவரிக்கிறது."
 author: "சுமி முத்கில்"
 tags:
   - ERC-721
@@ -13,79 +13,55 @@ lang: ta
 published: 2021-04-22
 ---
 
-[Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): $69 மில்லியன்
-[3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): $11 மில்லியன்
-[Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): $6 மில்லியன்
+"ஒரு NFT-ஐ அச்சிடுதல்" என்பது தொகுதிச்சங்கிலியில் உங்கள் ERC-721 வில்லையின் தனித்துவமான ஒரு நிகழ்வை வெளியிடும் செயலாகும். [இந்த NFT பயிற்சித் தொடரின் பகுதி 1](/developers/tutorials/how-to-write-and-deploy-an-nft/)-லிருந்து எமது திறன் ஒப்பந்தத்தைப் பயன்படுத்தி, நமது Web3 திறன்களை வெளிப்படுத்தி ஒரு NFT-ஐ அச்சிடுவோம். இந்தப் பயிற்சியின் முடிவில், உங்கள் மனமும் (மற்றும் பணப்பையும்) விரும்பும் அளவுக்கு எத்தனை NFT-களையும் உங்களால் அச்சிட முடியும்!
 
-இவர்கள் அனைவரும் Alchemy-இன் சக்திவாய்ந்த API-ஐப் பயன்படுத்தி தங்களின் NFT-களை அச்சிட்டனர். இந்தப் பயிற்சியில், 10 நிமிடங்களுக்குள் அதை எப்படிச் செய்வது என்பதை நாங்கள் உங்களுக்குக் கற்பிப்போம்.
+தொடங்குவோம்!
 
-“ஒரு NFT-ஐ அச்சிடுதல்” என்பது தொகுதிச்சங்கிலியில் உங்கள் ERC-721 டோக்கனின் தனித்துவமான நிகழ்வை வெளியிடும் செயலாகும். [இந்த NFT பயிற்சித் தொடரின் பகுதி 1](/developers/tutorials/how-to-write-and-deploy-an-nft/)-இல் உள்ள எங்கள் ஸ்மார்ட் ஒப்பந்தத்தைப் பயன்படுத்தி, நமது Web3 திறன்களை வெளிப்படுத்தி ஒரு NFT-ஐ அச்சிடுவோம். இந்தப் பயிற்சியின் முடிவில், உங்கள் மனமும் (மற்றும் பணப்பையும்) விரும்பும் அளவுக்கு பல NFT-களை உங்களால் அச்சிட முடியும்!
+## படி 1: உங்கள் அமைப்பைச் சரிபார்க்கவும் {#install-web3}
 
-வாருங்கள் தொடங்கலாம்!
+உங்கள் NFT திறன் ஒப்பந்தத்தை உருவாக்குவது குறித்த முதல் பயிற்சியை நீங்கள் பின்பற்றியிருந்தால், உங்களுக்குத் தேவையான அனைத்தும் உங்களிடம் ஏற்கனவே இருக்கும்: [Ethers செருகுநிரல்](https://hardhat.org/docs/plugins/hardhat-ethers) மற்றும் [ethers.js](https://docs.ethers.org/v6/) உடனான ஒரு Hardhat 3 திட்டம், இது [எத்திரியம்](/) தொகுதிச்சங்கிலிக்கு கோரிக்கைகளை உருவாக்குவதை எளிதாக்கப் பயன்படும் ஒரு நிரலகமாகும். எமது அச்சிடும் குறியீட்டை ஒரு Hardhat ஸ்கிரிப்டாக எழுதுவோம், எனவே இது Sepolia பிணைய அமைப்புகளையும் பகுதி 1-லிருந்து `API_URL` மற்றும் `PRIVATE_KEY` மதிப்புகளையும் மீண்டும் பயன்படுத்துகிறது — புதிதாக நிறுவ எதுவும் இல்லை.
 
-## படி 1: Web3-ஐ நிறுவுங்கள் {#install-web3}
+## படி 2: ஒரு `mint-nft.js` கோப்பை உருவாக்கவும் {#create-mintnftjs}
 
-உங்கள் NFT ஸ்மார்ட் ஒப்பந்தத்தை உருவாக்குவது குறித்த முதல் பயிற்சியை நீங்கள் பின்பற்றியிருந்தால், Ethers.js-ஐப் பயன்படுத்திய அனுபவம் உங்களுக்கு ஏற்கனவே இருக்கும். Web3 என்பது Ethers-ஐப் போன்றதே, ஏனெனில் இது [எத்திரியம்](/) தொகுதிச்சங்கிலிக்கு கோரிக்கைகளை உருவாக்குவதை எளிதாக்கப் பயன்படும் ஒரு நூலகமாகும். இந்தப் பயிற்சியில் நாம் [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)-ஐப் பயன்படுத்துவோம், இது தானியங்கி மறுமுயற்சிகள் மற்றும் வலுவான WebSocket ஆதரவை வழங்கும் மேம்படுத்தப்பட்ட Web3 நூலகமாகும்.
-
-உங்கள் திட்டத்தின் முகப்பு கோப்பகத்தில் (home directory) இதை இயக்கவும்:
-
-```
-npm install @alch/alchemy-web3
-```
-
-## படி 2: ஒரு `mint-nft.js` கோப்பை உருவாக்குங்கள் {#create-mintnftjs}
-
-உங்கள் scripts கோப்பகத்திற்குள், ஒரு `mint-nft.js` கோப்பை உருவாக்கி, பின்வரும் குறியீட்டு வரிகளைச் சேர்க்கவும்:
+உங்கள் scripts கோப்பகத்திற்குள், `mint-nft.js` என்ற கோப்பை உருவாக்கி, பின்வரும் குறியீட்டு வரிகளைச் சேர்க்கவும்:
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+import { network } from "hardhat"
+
+const { ethers } = await network.create()
 ```
 
-## படி 3: உங்கள் ஒப்பந்த ABI-ஐப் பெறுங்கள் {#contract-abi}
+எமது நிலைநிறுத்தும் ஸ்கிரிப்டைப் போலவே, நீங்கள் ஸ்கிரிப்டை இயக்கும் போது `--network` மூலம் நீங்கள் தேர்ந்தெடுக்கும் பிணையத்துடன் `network.create()` இணைகிறது, மேலும் அதற்கான ஒரு `ethers` பொருளை நமக்கு வழங்குகிறது.
 
-நமது ஒப்பந்த ABI (Application Binary Interface) என்பது நமது ஸ்மார்ட் ஒப்பந்தத்துடன் தொடர்புகொள்வதற்கான இடைமுகமாகும். [ஒப்பந்த ABI-கள்](/glossary/#abi) பற்றி நீங்கள் மேலும் அறியலாம். Hardhat தானாகவே நமக்காக ஒரு ABI-ஐ உருவாக்கி அதை `MyNFT.json` கோப்பில் சேமிக்கிறது. இதைப் பயன்படுத்த, நமது `mint-nft.js` கோப்பில் பின்வரும் குறியீட்டு வரிகளைச் சேர்ப்பதன் மூலம் உள்ளடக்கங்களைப் பாகுபடுத்த (parse) வேண்டும்:
+## படி 3: உங்கள் ஒப்பந்த ABI-ஐப் பெறவும் {#contract-abi}
 
-```js
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
+எமது ஒப்பந்த ABI (பயன்பாட்டு இரும இடைமுகம் (ABI)) என்பது எமது திறன் ஒப்பந்தத்துடன் தொடர்புகொள்வதற்கான இடைமுகமாகும். [ஒப்பந்த ABI-கள்](/glossary/#abi) பற்றி நீங்கள் மேலும் அறியலாம். Hardhat ஒப்பந்தத்தைத் தொகுக்கும்போது நமக்காக ஒரு ABI-ஐத் தானாகவே உருவாக்கி, அதை `artifacts/contracts/MyNFT.sol/MyNFT.json` கோப்பில் சேமிக்கிறது. படி 5-இல் எமது ஒப்பந்த நிகழ்வை உருவாக்கும்போது Hardhat Ethers செருகுநிரல் அங்கிருந்து நமக்காக அதைப் படிக்கிறது, எனவே நாமே அதை ஏற்ற வேண்டியதில்லை.
+
+நீங்கள் ABI-ஐக் காண விரும்பினால், அதை உங்கள் கன்சோலில் அச்சிடலாம். உங்கள் திட்டத்தின் ரூட் கோப்பகத்திலிருந்து, இதை இயக்கவும்:
+
+```sh
+node -p "JSON.stringify(require('./artifacts/contracts/MyNFT.sol/MyNFT.json').abi)"
 ```
 
-நீங்கள் ABI-ஐப் பார்க்க விரும்பினால், அதை உங்கள் கன்சோலில் அச்சிடலாம்:
-
-```js
-console.log(JSON.stringify(contract.abi))
-```
-
-`mint-nft.js`-ஐ இயக்கி, உங்கள் ABI கன்சோலில் அச்சிடப்படுவதைப் பார்க்க, உங்கள் முனையத்திற்குச் சென்று இதை இயக்கவும்:
-
-```js
-node scripts/mint-nft.js
-```
 ## படி 4: IPFS-ஐப் பயன்படுத்தி உங்கள் NFT-க்கான மீத்தரவை உள்ளமைக்கவும் {#config-meta}
 
-பகுதி 1-இல் உள்ள நமது பயிற்சியிலிருந்து உங்களுக்கு நினைவிருந்தால், நமது `mintNFT` ஸ்மார்ட் ஒப்பந்தச் செயல்பாடு ஒரு tokenURI அளவுருவை எடுத்துக்கொள்கிறது, அது NFT-இன் மீத்தரவை விவரிக்கும் ஒரு JSON ஆவணமாகத் தீர்க்கப்பட வேண்டும்— இதுவே உண்மையில் NFT-க்கு உயிரூட்டுகிறது, பெயர், விளக்கம், படம் மற்றும் பிற பண்புக்கூறுகள் போன்ற உள்ளமைக்கக்கூடிய பண்புகளைக் கொண்டிருக்க அனுமதிக்கிறது.
+பகுதி 1-இல் உள்ள எமது பயிற்சியிலிருந்து உங்களுக்கு நினைவிருந்தால், எமது `mintNFT` திறன் ஒப்பந்தச் செயல்பாடு ஒரு tokenURI அளவுருவை எடுத்துக்கொள்கிறது, அது NFT-இன் மீத்தரவை விவரிக்கும் ஒரு JSON ஆவணமாகத் தீர்க்கப்பட வேண்டும்— இதுவே உண்மையில் NFT-க்கு உயிரூட்டுகிறது, பெயர், விளக்கம், படம் மற்றும் பிற பண்புக்கூறுகள் போன்ற உள்ளமைக்கக்கூடிய பண்புகளைக் கொண்டிருக்க இது அனுமதிக்கிறது.
 
-> _Interplanetary File System (IPFS) என்பது பகிரப்பட்ட கோப்பு முறைமையில் தரவைச் சேமிப்பதற்கும் பகிர்வதற்கும் பயன்படும் ஒரு பரவலாக்கப்பட்ட நெறிமுறை மற்றும் சக-முனைய பிணையம் ஆகும்._
+> _இன்டர்பிளானட்டரி ஃபைல் சிஸ்டம் (IPFS) என்பது ஒரு பரவலாக்கப்பட்ட நெறிமுறை மற்றும் பகிரப்பட்ட கோப்பு முறைமையில் தரவைச் சேமிப்பதற்கும் பகிர்வதற்கும் ஒரு சக-முனைய பிணையமாகும்._
 
-நமது NFT சொத்து மற்றும் மீத்தரவைச் சேமித்து, நமது NFT உண்மையாகவே பரவலாக்கப்பட்டிருப்பதை உறுதிசெய்ய, வசதியான IPFS API மற்றும் கருவித்தொகுப்பான Pinata-ஐப் பயன்படுத்துவோம். உங்களிடம் Pinata கணக்கு இல்லையென்றால், [இங்கே](https://app.pinata.cloud) இலவசக் கணக்கிற்குப் பதிவுசெய்து, உங்கள் மின்னஞ்சலைச் சரிபார்க்கும் படிகளை முடிக்கவும்.
+எமது NFT உண்மையாகவே பரவலாக்கப்பட்டிருப்பதை உறுதிசெய்ய, எமது NFT சொத்து மற்றும் மீத்தரவைச் சேமிக்க, வசதியான IPFS பயன்பாட்டு நிரலாக்க இடைமுகம் (API) மற்றும் கருவித்தொகுப்பான Pinata-ஐப் பயன்படுத்துவோம். உங்களிடம் Pinata கணக்கு இல்லையென்றால், [இங்கே](https://app.pinata.cloud) இலவசக் கணக்கிற்குப் பதிவுசெய்து, உங்கள் மின்னஞ்சலைச் சரிபார்க்கும் படிகளை முடிக்கவும்.
 
 நீங்கள் ஒரு கணக்கை உருவாக்கியதும்:
 
-- “Files” பக்கத்திற்குச் சென்று, பக்கத்தின் மேல்-இடதுபுறத்தில் உள்ள நீல நிற "Upload" பொத்தானைக் கிளிக் செய்யவும்.
+- [கோப்புகள் பக்கத்திற்குச் சென்று](https://app.pinata.cloud/ipfs/files) பக்கத்தின் மேல் வலது மூலையில் உள்ள "Add" பொத்தானைக் கிளிக் செய்யவும்.
 
-- Pinata-இல் ஒரு படத்தைப் பதிவேற்றவும் — இதுவே உங்கள் NFT-க்கான படச் சொத்தாக இருக்கும். இந்தச் சொத்திற்கு நீங்கள் விரும்பும் எந்தப் பெயரையும் தாராளமாக வைக்கலாம்
+- Pinata-க்கு ஒரு படத்தைப் பதிவேற்றவும் — இது உங்கள் NFT-க்கான படச் சொத்தாக இருக்கும். சொத்திற்கு நீங்கள் விரும்பும் எந்தப் பெயரையும் தயங்காமல் சூட்டலாம். பொதுவான IPFS-இல் அதைப் பதிவேற்றுவதை உறுதிசெய்யவும்: உங்கள் NFT-ஐக் காண்பிக்கும் பணப்பைகள் மற்றும் சந்தைகளால் [தனிப்பட்ட IPFS](https://docs.pinata.cloud/files/private-ipfs)-இல் உள்ள கோப்புகளைப் பெற முடியாது.
 
-- நீங்கள் பதிவேற்றிய பிறகு, "Files" பக்கத்தில் உள்ள அட்டவணையில் கோப்புத் தகவலைக் காண்பீர்கள். ஒரு CID நெடுவரிசையையும் காண்பீர்கள். அதன் அருகில் உள்ள நகலெடு பொத்தானைக் கிளிக் செய்வதன் மூலம் CID-ஐ நகலெடுக்கலாம். நீங்கள் பதிவேற்றியதை இங்கே பார்க்கலாம்: `https://gateway.pinata.cloud/ipfs/<CID>`. எடுத்துக்காட்டாக, நாங்கள் IPFS-இல் பயன்படுத்திய படத்தை [இங்கே](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5) காணலாம்.
+- நீங்கள் பதிவேற்றிய பிறகு, கோப்புகள் பக்கத்தில் அதன் CID (உள்ளடக்க அடையாளங்காட்டி) உடன் கோப்பு பட்டியலிடப்பட்டிருப்பதைக் காண்பீர்கள். CID-ஐ நகலெடுக்கவும். உங்கள் பதிவேற்றத்தை: `https://gateway.pinata.cloud/ipfs/<CID>`-இல் அல்லது Pinata பக்கப்பட்டியில் "Gateways" என்பதன் கீழ் பட்டியலிடப்பட்டுள்ள பிரத்யேக நுழைவாயில் மூலம் பார்க்கலாம். எடுத்துக்காட்டாக, IPFS-இல் நாங்கள் பயன்படுத்திய படத்தை [இங்கே](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5) காணலாம்.
 
-காட்சிகள் மூலம் கற்பவர்களுக்கு, மேலே உள்ள படிகள் இங்கே சுருக்கப்பட்டுள்ளன:
+இப்போது, Pinata-க்கு மேலும் ஒரு ஆவணத்தைப் பதிவேற்ற விரும்புகிறோம். ஆனால் அதைச் செய்வதற்கு முன், நாம் அதை உருவாக்க வேண்டும்!
 
-![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
-
-இப்போது, நாம் Pinata-இல் மேலும் ஒரு ஆவணத்தைப் பதிவேற்றப் போகிறோம். ஆனால் அதைச் செய்வதற்கு முன், நாம் அதை உருவாக்க வேண்டும்!
-
-உங்கள் மூலக் கோப்பகத்தில் (root directory), `nft-metadata.json` என்ற புதிய கோப்பை உருவாக்கி, பின்வரும் json குறியீட்டைச் சேர்க்கவும்:
+உங்கள் ரூட் கோப்பகத்தில், `nft-metadata.json` என்ற புதிய கோப்பை உருவாக்கி, பின்வரும் json குறியீட்டைச் சேர்க்கவும்:
 
 ```json
 {
@@ -105,226 +81,151 @@ node scripts/mint-nft.js
 }
 ```
 
-json-இல் உள்ள தரவை நீங்கள் தாராளமாக மாற்றலாம். பண்புக்கூறுகள் (attributes) பிரிவில் நீங்கள் நீக்கலாம் அல்லது சேர்க்கலாம். மிக முக்கியமாக, image புலம் உங்கள் IPFS படத்தின் இருப்பிடத்தைக் குறிக்கிறதா என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள் — இல்லையெனில், உங்கள் NFT-இல் ஒரு (மிகவும் அழகான!) நாயின் புகைப்படம் இடம்பெறும்.
+json-இல் உள்ள தரவை மாற்ற தயங்க வேண்டாம். பண்புக்கூறுகள் பிரிவில் நீங்கள் நீக்கலாம் அல்லது சேர்க்கலாம். மிக முக்கியமாக, படப் புலம் உங்கள் IPFS படத்தின் இருப்பிடத்தை `ipfs://<image-CID>` என்ற வடிவத்தில் சுட்டிக்காட்டுகிறதா என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள் — இல்லையெனில், உங்கள் NFT-இல் ஒரு (மிகவும் அழகான!) நாயின் புகைப்படம் அடங்கும்.
 
-JSON கோப்பைத் திருத்தி முடித்ததும், அதைச் சேமித்து, படத்தைப் பதிவேற்றுவதற்கு நாம் செய்த அதே படிகளைப் பின்பற்றி Pinata-இல் பதிவேற்றவும்.
+JSON கோப்பைத் திருத்தி முடித்ததும், படத்தைப் பதிவேற்றுவதற்கு நாங்கள் செய்த அதே படிகளைப் பின்பற்றி, அதைச் சேமித்து Pinata-க்கு பதிவேற்றவும். `nft-metadata.json`-இன் CID-ஐயும் நகலெடுக்கவும்; படி 9-இல் அது நமக்குத் தேவைப்படும்.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
+## படி 5: உங்கள் ஒப்பந்தத்தின் ஒரு நிகழ்வை உருவாக்கவும் {#instance-contract}
 
-## படி 5: உங்கள் ஒப்பந்தத்தின் ஒரு நிகழ்வை (instance) உருவாக்குங்கள் {#instance-contract}
+இப்போது, எமது ஒப்பந்தத்துடன் தொடர்புகொள்ள, எமது குறியீட்டில் அதன் ஒரு நிகழ்வை உருவாக்க வேண்டும். அவ்வாறு செய்ய, எமது ஒப்பந்த முகவரி தேவைப்படும், அதை எமது நிலைநிறுத்தும் ஸ்கிரிப்ட் பகுதி 1-இல் அச்சிட்டது. ஒப்பந்தத்தை நிலைநிறுத்த நீங்கள் பயன்படுத்திய முகவரியைத் தேடுவதன் மூலம் [Etherscan](https://sepolia.etherscan.io/) அல்லது [Blockscout](https://eth-sepolia.blockscout.com/)-இலும் அதைக் கண்டறியலாம்.
 
-இப்போது, நமது ஒப்பந்தத்துடன் தொடர்புகொள்ள, நமது குறியீட்டில் அதன் ஒரு நிகழ்வை உருவாக்க வேண்டும். அவ்வாறு செய்ய, நமது ஒப்பந்த முகவரி தேவைப்படும், அதை நிலைநிறுத்தத்திலிருந்து அல்லது ஒப்பந்தத்தை நிலைநிறுத்த நீங்கள் பயன்படுத்திய முகவரியைத் தேடுவதன் மூலம் [Blockscout](https://eth-sepolia.blockscout.com/)-இலிருந்து பெறலாம்.
+![Etherscan-இல் உங்கள் ஒப்பந்த முகவரியைக் காண்க](./view-contract-etherscan.png)
 
-![View your contract address on Etherscan](./view-contract-etherscan.png)
+மேற்கண்ட எடுத்துக்காட்டில், எமது ஒப்பந்த முகவரி 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778 ஆகும்.
 
-மேலே உள்ள எடுத்துக்காட்டில், நமது ஒப்பந்த முகவரி 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778 ஆகும்.
-
-அடுத்து, ABI மற்றும் முகவரியைப் பயன்படுத்தி நமது ஒப்பந்தத்தை உருவாக்க Web3 [contract முறையை](https://docs.web3js.org/api/web3-eth-contract/class/Contract) பயன்படுத்துவோம். உங்கள் `mint-nft.js` கோப்பில், பின்வருவனவற்றைச் சேர்க்கவும்:
+அடுத்து, Hardhat Ethers செருகுநிரலின் `getContractAt` முறையைப் பயன்படுத்தி எமது ஒப்பந்தத்தை அதன் பெயர் (எந்த ABI-ஐப் பயன்படுத்த வேண்டும் என்பதை இது கூறுகிறது) மற்றும் அதன் முகவரியைப் பயன்படுத்தி உருவாக்குவோம். உங்கள் `mint-nft.js` கோப்பில், முகவரியை உங்களுடையதாக மாற்றி, பின்வருவனவற்றைச் சேர்க்கவும்:
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 ```
 
-## படி 6: `.env` கோப்பைப் புதுப்பிக்கவும் {#update-env}
+## படி 6: `.env` கோப்பைச் சரிபார்க்கவும் {#update-env}
 
-இப்போது, எத்திரியம் சங்கிலிக்கு பரிவர்த்தனைகளை உருவாக்கி அனுப்ப, கணக்கு நான்ஸைப் பெற (கீழே விளக்கப்படும்) உங்கள் பொது எத்திரியம் கணக்கு முகவரியைப் பயன்படுத்துவோம்.
+நாம் அனுப்பும் ஒவ்வொரு பரிவர்த்தனையும் உங்கள் கணக்கின் தனிப்பட்ட திறவுகோல் மூலம் கையொப்பமிடப்பட வேண்டும். நீங்கள் பயிற்சியின் பகுதி 1-ஐ முடித்திருந்தால், எமது `.env` கோப்பு ஏற்கனவே இப்படித்தான் இருக்க வேண்டும்:
 
-உங்கள் பொது விசையை உங்கள் `.env` கோப்பில் சேர்க்கவும் — நீங்கள் பயிற்சியின் பகுதி 1-ஐ முடித்திருந்தால், நமது `.env` கோப்பு இப்போது இப்படி இருக்க வேண்டும்:
-
-```js
-API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-PRIVATE_KEY = "your-private-account-address"
-PUBLIC_KEY = "your-public-account-address"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
 ```
 
-## படி 7: உங்கள் பரிவர்த்தனையை உருவாக்குங்கள் {#create-txn}
+உங்கள் பொது முகவரியைச் சேர்க்க வேண்டிய அவசியமில்லை: தனிப்பட்ட திறவுகோலில் இருந்து ethers அதைக் கண்டறியும்.
 
-முதலில், `mintNFT(tokenData)` என்ற பெயரிடப்பட்ட ஒரு செயல்பாட்டை வரையறுத்து, பின்வருவனவற்றைச் செய்வதன் மூலம் நமது பரிவர்த்தனையை உருவாக்குவோம்:
+## படி 7: உங்கள் பரிவர்த்தனையை உருவாக்கவும் {#create-txn}
 
-1. `.env` கோப்பிலிருந்து உங்கள் _PRIVATE_KEY_ மற்றும் _PUBLIC_KEY_-ஐப் பெறுங்கள்.
+முதலில், `mintNFT(tokenURI)` என்ற பெயரில் ஒரு செயல்பாட்டை வரையறுத்து, பின்வருவனவற்றைச் செய்வதன் மூலம் எமது பரிவர்த்தனையை உருவாக்குவோம்:
 
-1. அடுத்து, நாம் கணக்கு நான்ஸைக் கண்டறிய வேண்டும். உங்கள் முகவரியிலிருந்து அனுப்பப்பட்ட பரிவர்த்தனைகளின் எண்ணிக்கையைக் கண்காணிக்க நான்ஸ் விவரக்குறிப்பு பயன்படுத்தப்படுகிறது — இது பாதுகாப்பு நோக்கங்களுக்காகவும், மறுஇயக்கத் தாக்குதல்களைத் (replay attacks) தடுக்கவும் நமக்குத் தேவை. உங்கள் முகவரியிலிருந்து அனுப்பப்பட்ட பரிவர்த்தனைகளின் எண்ணிக்கையைப் பெற, நாம் [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count)-ஐப் பயன்படுத்துகிறோம்.
+1. நாம் பரிவர்த்தனையை அனுப்பும் கணக்கைப் பெறவும். `ethers.getSigners()` பிணையத்திற்காக உள்ளமைக்கப்பட்ட கணக்குகளை வழங்குகிறது, இது Sepolia-வில் `.env`-இல் தனிப்பட்ட திறவுகோலைக் கொண்ட கணக்காகும். `mintNFT` என்பது `onlyOwner` என்பதால், இது ஒப்பந்தத்தை நிலைநிறுத்திய அதே கணக்காக இருக்க வேண்டும்.
 
-1. இறுதியாக, பின்வரும் தகவல்களுடன் நமது பரிவர்த்தனையை அமைப்போம்:
+1. எமது ஒப்பந்த நிகழ்வில் `mintNFT` செயல்பாட்டை அழைக்கவும், பெறுநராக எமது சொந்த முகவரியையும் மீத்தரவு URI-ஐயும் பயன்படுத்தவும். இந்தப் பரிவர்த்தனையில் நாம் செய்ய விரும்பும் கணக்கீடு இதுதான் — இது இந்த நிலையில் ஒரு NFT-ஐ அச்சிடுவதாகும்.
 
-- `'from': PUBLIC_KEY` — நமது பரிவர்த்தனையின் தோற்றம் நமது பொது முகவரியாகும்
-
-- `'to': contractAddress` — நாம் தொடர்புகொள்ளவும் பரிவர்த்தனையை அனுப்பவும் விரும்பும் ஒப்பந்தம்
-
-- `'nonce': nonce` — நமது முகவரியிலிருந்து அனுப்பப்பட்ட பரிவர்த்தனைகளின் எண்ணிக்கையைக் கொண்ட கணக்கு நான்ஸ்
-
-- `'gas': estimatedGas` — பரிவர்த்தனையை முடிக்கத் தேவையான மதிப்பிடப்பட்ட எரிவாயு
-
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — இந்தப் பரிவர்த்தனையில் நாம் செய்ய விரும்பும் கணக்கீடு — இந்தச் சூழலில் இது ஒரு NFT-ஐ அச்சிடுவதாகும்
+நான்ஸ் (உங்கள் முகவரியிலிருந்து அனுப்பப்பட்ட பரிவர்த்தனைகளின் எண்ணிக்கை, இது ரீப்ளே தாக்குதல்களைத் தடுக்கிறது), எரிவாயு வரம்பு அல்லது கட்டணங்களை நீங்களே கணக்கிடத் தேவையில்லை: பரிவர்த்தனையை அனுப்புவதற்கு முன்பு ethers அவற்றைப் பெறுகிறது அல்லது மதிப்பிடுகிறது.
 
 உங்கள் `mint-nft.js` கோப்பு இப்போது இப்படி இருக்க வேண்டும்:
 
 ```js
-   require('dotenv').config();
-   const API_URL = process.env.API_URL;
-   const PUBLIC_KEY = process.env.PUBLIC_KEY;
-   const PRIVATE_KEY = process.env.PRIVATE_KEY;
+import { network } from "hardhat"
 
-   const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-   const web3 = createAlchemyWeb3(API_URL);
+const { ethers } = await network.create()
 
-   const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-   const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778";
-   const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
-
-   async function mintNFT(tokenURI) {
-     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //சமீபத்திய நான்ஸைப் பெறுக
-
-   //பரிவர்த்தனை
-     const tx = {
-       'from': PUBLIC_KEY,
-       'to': contractAddress,
-       'nonce': nonce,
-       'gas': 500000,
-       'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
-     };
-   }​
-```
-## படி 8: பரிவர்த்தனையில் கையொப்பமிடுங்கள் {#sign-txn}
-
-இப்போது நாம் நமது பரிவர்த்தனையை உருவாக்கிவிட்டதால், அதை அனுப்புவதற்கு அதில் கையொப்பமிட வேண்டும். இங்குதான் நாம் நமது தனிப்பட்ட திறவுகோலைப் பயன்படுத்துவோம்.
-
-`web3.eth.sendSignedTransaction` நமக்கு பரிவர்த்தனை ஹாஷை வழங்கும், நமது பரிவர்த்தனை வெட்டியெடுக்கப்பட்டதா (mined) மற்றும் பிணையத்தால் கைவிடப்படவில்லையா என்பதை உறுதிப்படுத்த இதைப் பயன்படுத்தலாம். பரிவர்த்தனையில் கையொப்பமிடும் பிரிவில், சில பிழைச் சரிபார்ப்புகளைச் சேர்த்திருப்பதை நீங்கள் கவனிப்பீர்கள், இதன் மூலம் நமது பரிவர்த்தனை வெற்றிகரமாகச் சென்றதா என்பதை நாம் அறியலாம்.
-
-```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
-
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
-
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //சமீபத்திய நான்ஸைப் பெறுக
+  const [signer] = await ethers.getSigners()
 
-  //பரிவர்த்தனை
-  const tx = {
-    from: PUBLIC_KEY,
-    to: contractAddress,
-    nonce: nonce,
-    gas: 500000,
-    data: nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
-  }
-
-  const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
-  signPromise
-    .then((signedTx) => {
-      web3.eth.sendSignedTransaction(
-        signedTx.rawTransaction,
-        function (err, hash) {
-          if (!err) {
-            console.log(
-              "The hash of your transaction is: ",
-              hash,
-              "\nCheck Alchemy's Mempool to view the status of your transaction!"
-            )
-          } else {
-            console.log(
-              "Something went wrong when submitting your transaction:",
-              err
-            )
-          }
-        }
-      )
-    })
-    .catch((err) => {
-      console.log(" Promise failed:", err)
-    })
+  // பரிவர்த்தனையை அனுப்பவும். ethers நமக்காக நான்ஸ், எரிவாயு வரம்பு மற்றும் கட்டணங்களை நிரப்புகிறது.
+  const tx = await nftContract.mintNFT(signer.address, tokenURI)
 }
 ```
 
-## படி 9: `mintNFT`-ஐ அழைத்து, node `mint-nft.js`-ஐ இயக்கவும் {#call-mintnft-fn}
+## படி 8: பரிவர்த்தனையில் கையொப்பமிடவும் {#sign-txn}
 
-நீங்கள் Pinata-இல் பதிவேற்றிய `metadata.json` நினைவிருக்கிறதா? Pinata-இலிருந்து அதன் ஹாஷ்கோடைப் பெற்று, பின்வருவனவற்றை `mintNFT` செயல்பாட்டிற்கு அளவுருவாக அனுப்பவும் `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
+பிணையம் எமது தனிப்பட்ட திறவுகோல் மூலம் உள்ளமைக்கப்பட்டுள்ளதால், அதை அனுப்புவதற்கு முன்பு ethers தானாகவே பரிவர்த்தனையில் கையொப்பமிடுகிறது.
 
-ஹாஷ்கோடை எவ்வாறு பெறுவது என்பது இங்கே:
+பரிவர்த்தனை அனுப்பப்பட்டவுடன் `mintNFT`-ஐ அழைப்பது திரும்பும், மேலும் பரிவர்த்தனை ஹாஷ்-ஐ நமக்கு வழங்குகிறது, எமது பரிவர்த்தனை வெட்டியெடுக்கப்பட்டதா மற்றும் பிணையத்தால் கைவிடப்படவில்லையா என்பதை உறுதிப்படுத்த இதைப் பயன்படுத்தலாம். `tx.wait()` பின்னர் பரிவர்த்தனை ஒரு தொகுதியில் சேர்க்கப்படும் வரை காத்திருக்கிறது. எமது பரிவர்த்தனை வெற்றிகரமாக நடந்ததா என்பதை அறிய சில பிழைச் சரிபார்ப்புகளையும் சேர்த்துள்ளோம்.
 
-![How to get your nft metadata hashcode on Pinata](./metadataPinata.gif)_Pinata-இல் உங்கள் nft மீத்தரவு ஹாஷ்கோடை எவ்வாறு பெறுவது_
+```js
+import { network } from "hardhat"
 
-> `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`-ஐ ஒரு தனி சாளரத்தில் ஏற்றுவதன் மூலம், நீங்கள் நகலெடுத்த ஹாஷ்கோடு உங்கள் **metadata.json**-உடன் இணைக்கப்பட்டுள்ளதா என்பதை இருமுறை சரிபார்க்கவும். பக்கம் கீழே உள்ள ஸ்கிரீன்ஷாட்டைப் போலவே இருக்க வேண்டும்:
+const { ethers } = await network.create()
 
-![Your page should display the json metadata](./metadataJSON.png)_உங்கள் பக்கம் json மீத்தரவைக் காட்ட வேண்டும்_
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
+
+async function mintNFT(tokenURI) {
+  const [signer] = await ethers.getSigners()
+
+  try {
+    // பரிவர்த்தனையை அனுப்பவும். ethers நமக்காக நான்ஸ், எரிவாயு வரம்பு மற்றும் கட்டணங்களை நிரப்புகிறது.
+    const tx = await nftContract.mintNFT(signer.address, tokenURI)
+    console.log("The hash of your transaction is:", tx.hash)
+
+    // பரிவர்த்தனை ஒரு தொகுதியில் சேர்க்கப்படும் வரை காத்திருக்கவும்.
+    const receipt = await tx.wait()
+    console.log("Your NFT was minted in block", receipt.blockNumber)
+  } catch (err) {
+    console.log("Something went wrong when submitting your transaction:", err)
+  }
+}
+```
+
+## படி 9: `mintNFT`-ஐ அழைத்து `mint-nft.js`-ஐ இயக்கவும் {#call-mintnft-fn}
+
+Pinata-க்கு நீங்கள் பதிவேற்றிய `nft-metadata.json` நினைவிருக்கிறதா? Pinata-விலிருந்து அதன் CID-ஐப் பெற்று, `ipfs://<metadata-CID>` என்பதை `mintNFT` செயல்பாட்டிற்கு அளவுருவாக அனுப்பவும். பணப்பைகள் மற்றும் சந்தைகள் தங்களுக்கு விருப்பமான IPFS நுழைவாயில் மூலம் `ipfs://` URI-களைத் தீர்க்கின்றன, எனவே உங்கள் NFT எந்த ஒரு நுழைவாயிலையும் சார்ந்து இருக்காது.
+
+> `https://gateway.pinata.cloud/ipfs/<metadata-CID>`-ஐ ஒரு தனி சாளரத்தில் ஏற்றுவதன் மூலம் நீங்கள் நகலெடுத்த CID உங்கள் **nft-metadata.json**-உடன் இணைக்கப்பட்டுள்ளதா என்பதை இருமுறை சரிபார்க்கவும். பக்கம் கீழே உள்ள ஸ்கிரீன்ஷாட்டைப் போலவே இருக்க வேண்டும்:
+
+![உங்கள் பக்கம் json மீத்தரவைக் காட்ட வேண்டும்](./metadataJSON.png)_உங்கள் பக்கம் json மீத்தரவைக் காட்ட வேண்டும்_
 
 ஒட்டுமொத்தமாக, உங்கள் குறியீடு இதுபோன்று இருக்க வேண்டும்:
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
+import { network } from "hardhat"
 
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+const { ethers } = await network.create()
 
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //சமீபத்திய நான்ஸைப் பெறுக
+  const [signer] = await ethers.getSigners()
 
-  //பரிவர்த்தனை
-  const tx = {
-    from: PUBLIC_KEY,
-    to: contractAddress,
-    nonce: nonce,
-    gas: 500000,
-    data: nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
+  try {
+    // பரிவர்த்தனையை அனுப்பவும். ethers நமக்காக நான்ஸ், எரிவாயு வரம்பு மற்றும் கட்டணங்களை நிரப்புகிறது.
+    const tx = await nftContract.mintNFT(signer.address, tokenURI)
+    console.log("The hash of your transaction is:", tx.hash)
+
+    // பரிவர்த்தனை ஒரு தொகுதியில் சேர்க்கப்படும் வரை காத்திருக்கவும்.
+    const receipt = await tx.wait()
+    console.log("Your NFT was minted in block", receipt.blockNumber)
+  } catch (err) {
+    console.log("Something went wrong when submitting your transaction:", err)
   }
-
-  const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
-  signPromise
-    .then((signedTx) => {
-      web3.eth.sendSignedTransaction(
-        signedTx.rawTransaction,
-        function (err, hash) {
-          if (!err) {
-            console.log(
-              "The hash of your transaction is: ",
-              hash,
-              "\nCheck Alchemy's Mempool to view the status of your transaction!"
-            )
-          } else {
-            console.log(
-              "Something went wrong when submitting your transaction:",
-              err
-            )
-          }
-        }
-      )
-    })
-    .catch((err) => {
-      console.log("Promise failed:", err)
-    })
 }
 
-mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
+await mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
-இப்போது, உங்கள் NFT-ஐ நிலைநிறுத்த `node scripts/mint-nft.js`-ஐ இயக்கவும். சில வினாடிகளுக்குப் பிறகு, உங்கள் முனையத்தில் இது போன்ற ஒரு பதிலைக் காண வேண்டும்:
+இப்போது, உங்கள் NFT-ஐ அச்சிட Sepolia-க்கு எதிராக ஸ்கிரிப்டை இயக்கவும்:
 
-    The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+```sh
+npx hardhat run scripts/mint-nft.js --network sepolia
+```
 
-    Check Alchemy's Mempool to view the status of your transaction!
+சில வினாடிகளுக்குப் பிறகு, உங்கள் முனையத்தில் இது போன்ற ஒரு பதிலைக் காண வேண்டும்:
 
-அடுத்து, உங்கள் பரிவர்த்தனையின் நிலையைப் பார்க்க (அது நிலுவையில் உள்ளதா, வெட்டியெடுக்கப்பட்டதா அல்லது பிணையத்தால் கைவிடப்பட்டதா) உங்கள் [Alchemy மெம்பூலைப்](https://dashboard.alchemy.com/mempool) பார்வையிடவும். உங்கள் பரிவர்த்தனை கைவிடப்பட்டால், [Blockscout](https://eth-sepolia.blockscout.com/)-ஐச் சரிபார்த்து உங்கள் பரிவர்த்தனை ஹாஷைத் தேடுவதும் உதவியாக இருக்கும்.
+```text
+The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+Your NFT was minted in block <block number>
+```
 
-![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Etherscan-இல் உங்கள் NFT பரிவர்த்தனை ஹாஷைப் பார்க்கவும்_
+உங்கள் பரிவர்த்தனையின் விவரங்களைக் காண, [Etherscan](https://sepolia.etherscan.io/) அல்லது [Blockscout](https://eth-sepolia.blockscout.com/)-இல் அதன் ஹாஷ்-ஐத் தேடவும்.
+
+![Etherscan-இல் உங்கள் NFT பரிவர்த்தனை ஹாஷ்-ஐக் காண்க](./view-nft-etherscan.png)_Etherscan-இல் உங்கள் NFT பரிவர்த்தனை ஹாஷ்-ஐக் காண்க_
 
 அவ்வளவுதான்! நீங்கள் இப்போது எத்திரியம் தொகுதிச்சங்கிலியில் ஒரு NFT-ஐ நிலைநிறுத்தி அச்சிட்டுள்ளீர்கள் <Emoji text=":money_mouth_face:" size={1} />
 
-`mint-nft.js`-ஐப் பயன்படுத்தி உங்கள் மனமும் (மற்றும் பணப்பையும்) விரும்பும் அளவுக்கு பல NFT-களை உங்களால் அச்சிட முடியும்! NFT-இன் மீத்தரவை விவரிக்கும் புதிய tokenURI-ஐ அனுப்புவதை மட்டும் உறுதிசெய்து கொள்ளுங்கள் (இல்லையெனில், வெவ்வேறு ID-களுடன் ஒரே மாதிரியான பலவற்றை உருவாக்குவீர்கள்).
+`mint-nft.js`-ஐப் பயன்படுத்தி உங்கள் மனமும் (மற்றும் பணப்பையும்) விரும்பும் அளவுக்கு எத்தனை NFT-களையும் அச்சிடலாம்! NFT-இன் மீத்தரவை விவரிக்கும் புதிய tokenURI-ஐ அனுப்புவதை உறுதிப்படுத்திக் கொள்ளுங்கள் (இல்லையெனில், வெவ்வேறு ID-களுடன் ஒரே மாதிரியான பலவற்றை உருவாக்குவீர்கள்).
 
-உங்கள் பணப்பையில் உள்ள உங்கள் NFT-ஐ நீங்கள் காட்ட விரும்புவீர்கள் என்று நம்புகிறோம் — எனவே [பகுதி 3: உங்கள் பணப்பையில் உங்கள் NFT-ஐ எவ்வாறு பார்ப்பது](/developers/tutorials/how-to-view-nft-in-metamask/) என்பதைப் பார்க்க மறக்காதீர்கள்!
+உங்கள் பணப்பையில் உங்கள் NFT-ஐக் காட்ட நீங்கள் விரும்பலாம் — எனவே [பகுதி 3: உங்கள் பணப்பையில் உங்கள் NFT-ஐ எவ்வாறு பார்ப்பது](/developers/tutorials/how-to-view-nft-in-metamask/)-ஐப் பார்க்க மறக்காதீர்கள்!

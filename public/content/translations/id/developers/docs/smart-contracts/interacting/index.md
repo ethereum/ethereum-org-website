@@ -82,7 +82,7 @@ Pengembang biasanya menggunakan pustaka JavaScript/TypeScript untuk berinteraksi
 
 - **[ethers.js](https://docs.ethers.org/)** - Juga berfungsi di Node.js untuk skrip sisi server dan bot
 - **[web3.py](https://web3py.readthedocs.io/)** - Pustaka Python untuk interaksi Ethereum
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Pustaka Go resmi dari tim Geth
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Pustaka Go resmi dari tim Geth
 
 ### Contoh: membaca saldo token dengan Viem {#example-viem}
 

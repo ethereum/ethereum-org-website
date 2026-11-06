@@ -1,6 +1,6 @@
 ---
-title: 新增錢包
-description: 我們在 ethereum.org 上新增錢包時所使用的政策
+title: "新增錢包"
+description: "我們在 ethereum.org 上新增錢包時所使用的政策"
 lang: zh-tw
 ---
 
@@ -58,7 +58,7 @@ lang: zh-tw
 
 ## 新增錢包 {#adding-a-wallet}
 
-如果你想在 ethereum.org 上新增錢包，請在 GitHub 上建立一個問題 (issue)。
+如果你想在 ethereum.org 上新增錢包，請在 GitHub 上建立問題。你在問題中提供的錢包描述將顯示在該錢包的頁面上，因此請將其控制在一到兩句陳述事實的句子。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   建立問題

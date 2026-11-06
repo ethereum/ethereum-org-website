@@ -7,9 +7,9 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "ethereum"
-  - "proof-of-stake"
-  - "the-merge"
+  - "how-ethereum-works"
+  - "network-upgrades"
+  - "community-stories"
 format: interview
 author: "이더리움 파운데이션"
 breadcrumb: "대니 라이언 인터뷰"

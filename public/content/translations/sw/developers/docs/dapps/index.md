@@ -47,7 +47,7 @@ Mkataba mahiri ni msimbo unaoishi kwenye mnyororo wa vitalu wa Ethereum na unaen
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Zana za kuunda programu tumizi zilizogatuliwa (dapps)
+## Zana za kuunda programu tumizi zilizogatuliwa (dapps) {#dapp-tools}
 
 **Scaffold-ETH 2 _- Fanya majaribio haraka ukitumia Solidity kwa kutumia kiolesura cha mbele kinachoendana na mkataba mahiri wako._**
 

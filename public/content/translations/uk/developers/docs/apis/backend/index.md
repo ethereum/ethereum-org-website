@@ -29,19 +29,19 @@ lang: uk
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node —** **_Вузол як послуга (Node-as-a-Service)._**
+**All That Node —** **_Вузол як послуга._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Документація](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast від Bware Labs —** **_Децентралізовані API для головної мережі Ethereum та тестових мереж._**
+**Blast від Bware Labs —** **_Децентралізовані інтерфейси прикладного програмування (API) для головної мережі Ethereum та тестових мереж._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Документація](https://docs.blastapi.io)
 - [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi —** **_Надає більш ефективні та швидкі сервіси RPC_**
+**BlockPi —** **_Надає більш ефективні та швидкі сервіси RPC._**
 
 - [blockpi.io](https://blockpi.io/)
 - [Документація](https://docs.blockpi.io/)
@@ -58,7 +58,7 @@ lang: uk
 **Blockscout — Оглядач блоків з відкритим вихідним кодом**
 - [Документація](https://docs.blockscout.com/)
 
-**GetBlock —** **_Блокчейн як послуга (Blockchain-as-a-service) для розробки Web3_**
+**GetBlock —** **_Блокчейн як послуга для розробки Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Документація](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ lang: uk
 - [Документація](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC — _Економічно вигідний провайдер EVM JSON-RPC_**
+**Node RPC — _Економічно вигідний провайдер JSON-RPC для віртуальної машини Ethereum (EVM)_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Документація](https://docs.noderpc.xyz/node-rpc)
@@ -91,6 +91,12 @@ lang: uk
 - [Документація](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC —** **_Інфраструктура JSON-RPC для EVM з повним, архівним та публічним доступом без ключів._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Документація](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok —** **_Орієнтовані на швидкість вузли Етеріуму як API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
@@ -98,34 +104,40 @@ lang: uk
 - [Документація](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
-### Інструменти розробки {#development-tools}
+### Інструменти для розробки {#development-tools}
 
-**ethers-kt —** **_Асинхронна, високопродуктивна бібліотека Kotlin/Java/Android для блокчейнів на базі EVM._**
+**eth.zig —** **_Бібліотека Zig для Етеріуму з кодуванням двійкового інтерфейсу програми (ABI) під час компіляції та прив'язками контрактів._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Документація](https://ethzig.org)
+- [Приклади](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt —** **_Асинхронна, високопродуктивна бібліотека Kotlin/Java/Android для блокчейнів на базі віртуальної машини Ethereum (EVM)._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Приклади](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum —** **_Бібліотека інтеграції .NET з відкритим вихідним кодом для блокчейну._**
+**Nethereum —** **_Інтеграційна бібліотека .NET з відкритим вихідним кодом для блокчейну._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Документація](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Інструменти Python —** **_Різноманітні бібліотеки для взаємодії з Етеріумом через Python._**
+**Інструменти Python —** **_Різноманітні бібліотеки для взаємодії з Етеріумом за допомогою Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [GitHub Web3.py](https://github.com/ethereum/web3.py)
-- [Чат Web3.py](https://gitter.im/ethereum/web3.py)
+- [GitHub web3.py](https://github.com/ethereum/web3.py)
+- [Чат web3.py](https://gitter.im/ethereum/web3.py)
 
-**Tatum —** **_Універсальна платформа для розробки на блокчейні._**
+**Tatum —** **_Комплексна платформа для розробки на блокчейні._**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
 - [Документація](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**Web3j —** **_Бібліотека інтеграції Java/Android/Kotlin/Scala для Етеріуму._**
+**web3j —** **_Інтеграційна бібліотека Java/Android/Kotlin/Scala для Етеріуму._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Документація](https://docs.web3j.io/)

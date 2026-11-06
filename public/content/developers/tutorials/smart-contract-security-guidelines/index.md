@@ -23,7 +23,7 @@ Documentation can be written at different levels, and should be updated while im
 
 - **A plain English description of the system**, describing what the contracts do and any assumptions on the codebase.
 - **Schema and architectural diagrams**, including the contract interactions and the state machine of the system. [Slither printers](https://github.com/crytic/slither/wiki/Printer-documentation) can help to generate these schemas.
-- **Thorough code documentation**, the [Natspec format](https://docs.soliditylang.org/en/develop/natspec-format.html) can be used for Solidity.
+- **Thorough code documentation**, the [Natspec format](https://docs.soliditylang.org/en/latest/natspec-format.html) can be used for Solidity.
 
 ### Onchain vs offchain computation {#onchain-vs-offchain-computation}
 
@@ -73,13 +73,13 @@ The architecture of your codebase should make your code easy to review. Avoid ar
 ### Testing and verification {#testing-and-verification}
 
 - **Write thorough unit-tests.** An extensive test suite is crucial to build high-quality software.
-- **Write [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) and [Manticore](https://github.com/trailofbits/manticore) custom checks and properties.** Automated tools will help ensure your contract is secure. Review the rest of this guide to learn how to write efficient checks and properties.
-- **Use [crytic.io](https://crytic.io/).** Crytic integrates with GitHub, provides access to private Slither detectors, and runs custom property checks from Echidna.
+- **Write [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) and [Medusa](https://github.com/crytic/medusa) custom checks and properties.** Automated tools will help ensure your contract is secure. Review the rest of this guide to learn how to write efficient checks and properties.
+- **Run these tools in continuous integration.** Running Slither and your fuzzing properties on every pull request catches regressions before they are merged.
 
 ### Solidity {#solidity}
 
-- **Favor Solidity 0.5 over 0.4 and 0.6.** In our opinion, Solidity 0.5 is more secure and has better built-in practices than 0.4. Solidity 0.6 has proven too unstable for production and needs time to mature.
-- **Use a stable release to compile; use the latest release to check for warnings.** Check that your code has no reported issues with the latest compiler version. However, Solidity has a fast release cycle and has a history of compiler bugs, so we do not recommend the latest version for deployment (see Slither’s [solc version recommendation](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)).
+- **Use a recent Solidity 0.8.x release with no known severe bugs.** Solidity 0.8 checks arithmetic for overflow and underflow by default, and older versions miss newer compiler security checks. See Slither’s [solc version recommendation](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity).
+- **Use a stable release to compile; use the latest release to check for warnings.** Check that your code has no reported issues with the latest compiler version. However, Solidity has a fast release cycle and has a history of compiler bugs, so avoid deploying with a version released only days ago. Check the [list of known compiler bugs](https://docs.soliditylang.org/en/latest/bugs.html) for the version you choose.
 - **Do not use inline assembly.** Assembly requires EVM expertise. Do not write EVM code if you have not _mastered_ the yellow paper.
 
 ## Deployment guidelines {#deployment-guidelines}

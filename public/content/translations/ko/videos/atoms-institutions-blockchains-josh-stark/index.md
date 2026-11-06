@@ -8,8 +8,6 @@ duration: "0:29:13"
 educationLevel: beginner
 topic:
   - "how-ethereum-works"
-  - "blockchain"
-  - "ethereum"
 format: presentation
 author: "이더글로벌"
 breadcrumb: "원자, 제도, 블록체인"

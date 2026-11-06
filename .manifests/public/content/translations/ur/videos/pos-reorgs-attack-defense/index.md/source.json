@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/pos-reorgs-attack-defense/index.md",
-  "generatedAt": "2026-04-29T05:58:56.188Z",
-  "rootHash": "7d4dd313504d",
+  "generatedAt": "2026-09-30T19:13:20.095Z",
+  "rootHash": "a018162e57e9",
   "tree": {
-    "contentHash": "1738fa9057d7",
-    "anchorHash": "c65d6743c29f",
+    "contentHash": "78cdb988481f",
+    "anchorHash": "e51ef8ada7f6",
     "children": {
       "frontmatter:title": {
-        "contentHash": "26a2e9a7299c",
+        "contentHash": "aa1a6be2ebe9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "1a4baad85738",
+        "contentHash": "cce07622950b",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "2a3b4edd3406"
+        "anchorHash": "4e371e548398"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "240007e5b784"
+        "anchorHash": "a64e57ab88f8"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d21f85ea3816"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "97a433a3f3b8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5d2d3ceb7abe"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d923231f50cf"
+        "anchorHash": "7bc0b31308d7"
       },
       "prose:1": {
         "contentHash": "8c5b133fe59c",
@@ -261,5 +275,5 @@
       "key-takeaways-1648"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

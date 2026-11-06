@@ -8,7 +8,7 @@ duration: "0:36:34"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "use-cases"
 format: interview
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "Aave-ஐ உருவாக்குதல்"

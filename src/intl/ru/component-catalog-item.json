@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "О {name}",
+  "catalog-item-gallery-modal-title": "Скриншоты {name}",
+  "catalog-item-gallery-screenshot-alt": "Скриншот {index} из {name}",
+  "catalog-item-gallery-title": "Галерея",
+  "catalog-item-info-title": "Информация",
+  "catalog-item-link-label": "{name} на {platform}",
+  "catalog-item-see-next": "Смотреть далее",
+  "catalog-item-source-code": "Исходный код",
+  "catalog-item-view-on-github": "Посмотреть на GitHub",
+  "catalog-item-visit-website": "Перейти на сайт"
+}

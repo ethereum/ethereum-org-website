@@ -113,3 +113,86 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - Full-file retranslation re-termed two settled locale words: `Kâhinler` -> `Oracle'lar` (the link target page is still titled `Kâhinler` in tr), and `borç ver/al` -> `ödünç ver/al`.
 - `gizlilik` used for both "secrecy" (negative) and "privacy" (positive) on the same page.
 - None of tr's historical brand failure modes recurred -- no `katillik`, no `MeFi`, no `Müşteri`-for-client.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/tr/page-apps.json`. 2 critical, 11 warnings. Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: tr not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (tr-specific):**
+
+- "Linting" rendered `Hata ayıklama` (= *debugging*) in a sentence about static analysis -> `[Linting]`. The 3 genuine debugging uses in the same file were left
+- "arbitrary properties" rendered `isteğe bağlı` (= *optional*) -> `keyfi özellikleri`
+
+**Notes:**
+
+- Zero cross-script contamination; the tr Devanagari-leak pattern did not recur.
+- `bulanıklaştırma (fuzzing)` and `ticaret` verified as established tr corpus conventions, not drift. `` `CREATE` işlemi `` is faithful since English says "operation", not "opcode": closes a prior KB open item.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online L162 `araştır` (imperative) -> `araştırır`.
+- open-access `sabit coin` -> `sabitcoin` (4th recurrence after #18772/#19015/#19076).
+
+**Open (warnings):**
+
+- F-Droid `ücretsiz` (#83); `düşük engelli` (low-disabled); proposer `teklifçi` vs glossary `teklif edici` needs one locale call.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- `İşletmeler için Ethereum` used for both enterprise and business pathways; `tekil` for single recurs; PostgreSQL sidecars translated literally.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+- Warning: hook/kanca drift within wagmi; `değere göre değerlendir` shifts "evaluate to".
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:896 encodes = encrypts (`şifrelediği işlemi` -> `kodladığı işlemi`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: ETHGlossary deviation on a `translate` term: `eoa` → `harici sahipli hesap`. The PR moved this away from the glossary (it was `harici olarak sahip olunan`). Flag for human. (`[dışarıdan sahipli bir hesaptır]` -> `[harici sahipli bir hesaptır]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA deviation, 2 occurrences on this line.
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA deviation. (`dışarıdan sahipli hesaplar` -> `harici sahipli hesaplar`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA deviation. (`dışarıdan sahipli bir hesaptan` -> `harici sahipli bir hesaptan`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA deviation. (`dışarıdan sahipli bir hesapsa` -> `harici sahipli bir hesapsa`)
+- 14 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and faithful, and none of tr's historical failure modes recurred: client stays `istemci`, mainnet stays `Ana Ağ`, and there are no ticker transpositions or brand mistranslations. The real problems are three page-founders tags shipped in English and one encode/encrypt error. The EOA term drifting away from the glossary needs a human call.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: decimal separator and betik/komut dosyası differ between files; glossary-driven mid-sentence capitals (known).

@@ -230,5 +230,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFG의 진입점
 - `variables_read (list(Variable))`: 읽은 변수 목록
 - `variables_written (list(Variable))`: 쓴 변수 목록
-- `state_variables_read (list(StateVariable))`: 읽은 상태 변수 목록(variables`read의 하위 집합)
-- `state_variables_written (list(StateVariable))`: 쓴 상태 변수 목록(variables`written의 하위 집합)
+- `state_variables_read (list(StateVariable))`: 읽은 상태 변수 목록(`variables_read`의 하위 집합)
+- `state_variables_written (list(StateVariable))`: 쓴 상태 변수 목록(`variables_written`의 하위 집합)

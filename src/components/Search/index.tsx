@@ -1,35 +1,56 @@
 "use client"
 
-import { useRef } from "react"
+import { type RefObject, useRef } from "react"
 import dynamic from "next/dynamic"
-import { useLocale, useTranslations } from "next-intl"
-import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
+import { useTranslations } from "next-intl"
+import { useDocSearchKeyboardEvents } from "typesense-docsearch-react"
 import * as Portal from "@radix-ui/react-portal"
 import { Slot } from "@radix-ui/react-slot"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
-import { sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
 import SearchInputButton from "./SearchInputButton"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
+import { useOnHash } from "@/hooks/useOnHash"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
+const noop = () => {}
+
 interface SearchProps {
   asChild?: boolean
-  children?: React.ReactElement<unknown>
+  /** An element to open the modal on click (with `asChild`), or a render function handed the opener. */
+  children?:
+    | React.ReactElement<unknown>
+    | ((open: () => void) => React.ReactNode)
+  /**
+   * Whether this instance answers the global open shortcut. Exactly one mounted instance
+   * may: the hook binds at the document, so a second would open a second modal on the
+   * same keypress. The nav's instance owns it; a trigger elsewhere on the page opts out
+   * and opens on click alone. Escape still closes whichever one is open.
+   */
+  ownsShortcut?: boolean
+  /** Read when the modal mounts, not when it is asked to open, so keystrokes typed while it loads are kept. */
+  getInitialQuery?: () => string
+  /** Opens the modal when the page loads with, or navigates to, this URL fragment. */
+  openOnHash?: string
 }
 
-const Search = ({ asChild = false, children }: SearchProps) => {
+const Search = ({
+  asChild = false,
+  children,
+  ownsShortcut = true,
+  getInitialQuery,
+  openOnHash,
+}: SearchProps) => {
   const disclosure = useDisclosure()
   const { isOpen, onOpen, onClose } = disclosure
 
-  const locale = useLocale()
   const searchButtonRef = useRef<HTMLButtonElement>(null)
   const t = useTranslations("common")
 
@@ -42,86 +63,36 @@ const Search = ({ asChild = false, children }: SearchProps) => {
     })
   }
 
-  useDocSearchKeyboardEvents({
-    isOpen,
-    onOpen: handleOpen,
-    onClose,
-    searchButtonRef,
+  useOnHash(openOnHash, () => {
+    onOpen()
+    trackCustomEvent({
+      eventCategory: "nav bar",
+      eventAction: "link",
+      eventName: "search open",
+    })
   })
 
-  const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ""
-  const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ""
-  const indexName =
-    process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
-
-  const searchModalProps = {
-    apiKey,
-    appId,
-    indexName,
+  useDocSearchKeyboardEvents({
+    isOpen,
+    onOpen: ownsShortcut ? handleOpen : noop,
     onClose,
-    searchParameters: {
-      facetFilters: [`lang:${locale}`],
-    },
-    transformItems: (items: DocSearchHit[]) =>
-      items.map((item: DocSearchHit) => {
-        // Use JSON clone for browser compatibility (structuredClone not available in Chrome < 98)
-        const newItem: DocSearchHit = JSON.parse(JSON.stringify(item))
-        newItem.url = sanitizeHitUrl(item.url)
-        const newTitle = sanitizeHitTitle(item.hierarchy.lvl0 || "")
-        newItem.hierarchy.lvl0 = newTitle
-        return newItem
-      }),
-    placeholder: t("search-ethereum-org"),
-    translations: {
-      searchBox: {
-        resetButtonTitle: t("clear"),
-        resetButtonAriaLabel: t("clear"),
-        cancelButtonText: t("close"),
-        cancelButtonAriaLabel: t("close"),
-      },
-      footer: {
-        selectText: t("docsearch-to-select"),
-        selectKeyAriaLabel: t("docsearch-to-select"),
-        navigateText: t("docsearch-to-navigate"),
-        navigateUpKeyAriaLabel: t("up"),
-        navigateDownKeyAriaLabel: t("down"),
-        closeText: t("docsearch-to-close"),
-        closeKeyAriaLabel: t("docsearch-to-close"),
-        searchByText: t("docsearch-search-by"),
-      },
-      errorScreen: {
-        titleText: t("docsearch-error-title"),
-        helpText: t("docsearch-error-help"),
-      },
-      startScreen: {
-        recentSearchesTitle: t("docsearch-start-recent-searches-title"),
-        noRecentSearchesText: t("docsearch-start-no-recent-searches"),
-        saveRecentSearchButtonTitle: t("docsearch-start-save-recent-search"),
-        removeRecentSearchButtonTitle: t(
-          "docsearch-start-remove-recent-search"
-        ),
-        favoriteSearchesTitle: t("docsearch-start-favorite-searches"),
-        removeFavoriteSearchButtonTitle: t(
-          "docsearch-start-remove-favorite-search"
-        ),
-      },
-      noResultsScreen: {
-        noResultsText: t("docsearch-no-results-text"),
-        suggestedQueryText: t("docsearch-no-results-suggested-query"),
-        reportMissingResultsText: t("docsearch-no-results-missing"),
-        reportMissingResultsLinkText: t("docsearch-no-results-missing-link"),
-      },
-    },
-  }
+    // The fork's React 18-era types want a non-null ref; React 19's useRef
+    // yields RefObject<T | null>. Safe to narrow — the hook only reads .current.
+    searchButtonRef: searchButtonRef as RefObject<HTMLButtonElement>,
+  })
+
+  // DocSearch already opens on these chords, so there is nothing to do here.
+  // The registration exists only so the hook counts a keyboard-opened search
+  // separately from the button, which share the event above.
+  useKeyboardShortcut("search", () => {}, { enabled: ownsShortcut })
 
   return (
     <>
-      {asChild ? (
-        <Slot
-          ref={searchButtonRef}
-          onClick={handleOpen}
-          data-testid="search-button"
-        >
+      {typeof children === "function" ? (
+        children(handleOpen)
+      ) : asChild ? (
+        // No test id here: `search-button` belongs to the nav, and e2e expects one per page.
+        <Slot ref={searchButtonRef} onClick={handleOpen}>
           {children}
         </Slot>
       ) : (
@@ -161,7 +132,7 @@ const Search = ({ asChild = false, children }: SearchProps) => {
               </div>
             )}
           >
-            <SearchModal {...searchModalProps} />
+            <SearchModal onClose={onClose} getInitialQuery={getInitialQuery} />
           </ErrorBoundary>
         )}
       </Portal.Root>

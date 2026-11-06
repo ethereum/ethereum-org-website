@@ -5,8 +5,10 @@ import NextImage, {
 
 export type ImageProps = NextImageProps
 
+// The `src !== null` check is load-bearing: `typeof null === "object"`, so a null
+// src reaches the `in` operator and throws, which aborts the whole static export.
 const isStaticImageData = (src: ImageProps["src"]): src is StaticImageData => {
-  return typeof src === "object" && "blurDataURL" in src
+  return typeof src === "object" && src !== null && "blurDataURL" in src
 }
 
 const DefaultNextImage = (props: ImageProps) => {

@@ -703,8 +703,7 @@ proof.proof = {
 
 하지만 TypeScript에서 할 수 있었음에도 불구하고, 우리는 여전히 [Zokrates에서 맵을 평탄화(flatten)](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20)합니다. 그 이유는 제 생각에 다른 옵션들이 더 나쁘기 때문입니다.
 
-- Zokrates 코드에 1차원 불리언 배열을 제공하고, `x*(height+2)
-+y`와 같은 표현식을 사용하여 2차원 맵을 얻습니다. 이렇게 하면 [코드](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)가 다소 복잡해지므로, 튜토리얼에서는 성능 향상이 그만한 가치가 없다고 판단했습니다.
+- Zokrates 코드에 1차원 불리언 배열을 제공하고, `x*(height+2)+y`와 같은 표현식을 사용하여 2차원 맵을 얻습니다. 이렇게 하면 [코드](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)가 다소 복잡해지므로, 튜토리얼에서는 성능 향상이 그만한 가치가 없다고 판단했습니다.
 
 - Zokrates에 1차원 배열과 2차원 배열을 모두 보냅니다. 하지만 이 솔루션은 우리에게 아무런 이점도 주지 않습니다. Zokrates 코드는 제공된 1차원 배열이 2차원 배열의 올바른 표현인지 검증해야 합니다. 따라서 성능 향상은 없을 것입니다.
 

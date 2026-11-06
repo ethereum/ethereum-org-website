@@ -12,7 +12,7 @@ lang: ko
 published: 2024-06-29
 ---
 
-여러분은 놀랍고 새로운 탈중앙화 애플리케이션 (dapp)을 작성했습니다. 심지어 이를 위한 [사용자 인터페이스](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)도 작성했습니다. 하지만 이제 누군가 클라우드의 단일 서버에 불과한 사용자 인터페이스를 다운시켜 검열을 시도할까 봐 걱정될 수 있습니다. 이 튜토리얼에서는 사용자 인터페이스를 <strong>[IPFS(Interplanetary File System)](https://ipfs.tech/developers/)</strong>에 올려 검열을 피하는 방법을 배웁니다. 이를 통해 관심 있는 누구나 향후 접근을 위해 서버에 고정(pin)할 수 있습니다.
+여러분은 놀랍고 새로운 탈중앙화 애플리케이션 (dapp)을 작성했습니다. 심지어 이를 위한 [사용자 인터페이스](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)도 작성했습니다. 하지만 이제 누군가 클라우드의 단일 서버에 불과한 사용자 인터페이스를 다운시켜 검열을 시도할까 봐 걱정될 수 있습니다. 이 튜토리얼에서는 사용자 인터페이스를 <strong>[IPFS(Interplanetary File System)](https://docs.ipfs.tech/)</strong>에 올려 검열을 피하는 방법을 배웁니다. 이를 통해 관심 있는 누구나 향후 접근을 위해 서버에 고정(pin)할 수 있습니다.
 
 [Fleek](https://resources.fleek.xyz/docs/)과 같은 서드파티 서비스를 사용하여 모든 작업을 처리할 수도 있습니다. 이 튜토리얼은 작업량이 더 많더라도 자신이 무엇을 하고 있는지 충분히 이해하고 싶은 사람들을 위한 것입니다.
 

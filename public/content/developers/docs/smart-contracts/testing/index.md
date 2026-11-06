@@ -165,7 +165,7 @@ Property-based testing is the process of checking that a smart contract satisfie
 
 A static analyzer takes as input the source code of a smart contract and outputs results declaring whether a contract satisfies a property or not. Unlike dynamic analysis, static analysis doesn't involve executing a contract to analyze it for correctness. Static analysis instead reasons about all the possible paths that a smart contract could take during execution (i.e., by examining the structure of the source code to determine what it would mean for the contracts operation at runtime).
 
-[Linting](https://www.perforce.com/blog/qac/what-is-linting) and [static testing](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) are common methods for running static analysis on contracts. Both require analyzing low-level representations of a contracts execution such as [abstract syntax trees](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) and [control flow graphs](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) output by the compiler.
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) and [static testing](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) are common methods for running static analysis on contracts. Both require analyzing low-level representations of a contracts execution such as [abstract syntax trees](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) and [control flow graphs](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) output by the compiler.
 
 In most cases, static analysis is useful for detecting safety issues like use of unsafe constructs, syntax errors, or violations of coding standards in a contracts code. However, static analyzers are known to be generally unsound at detecting deeper vulnerabilities, and may produce excessive false positives.
 
@@ -276,7 +276,7 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter for enforcing style and security best practices for the Solidity smart contract programming language._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rust-based static analyzer specifically designed for Web3 smart contract security and development._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Rust-based static analyzer specifically designed for Web3 smart contract security and development._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Python-based static analysis framework with vulnerability and code quality detectors, printers for extracting useful information from code and support for writing custom submodules._
 
@@ -298,7 +298,6 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - [An overview and comparison of different testing products](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [How to run unit tests in Solidity using Foundry](https://www.rareskills.io/post/foundry-testing-solidity)

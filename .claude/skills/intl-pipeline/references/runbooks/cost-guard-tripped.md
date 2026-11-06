@@ -32,7 +32,7 @@ How batching packs calls (Phase 4):
 Two accounting notes that matter when reading a log:
 
 - **Thinking tokens are billed as output on both transports**, and they dominate the output bill for small incremental updates (~5,200 per call). `tokens_out` in the per-call log is the billable total on either provider, with `reasoning=` reported as a subset of it, not an addition.
-- **The run fuse reserves worst-case cost for in-flight calls** (`reserveForCall`), because up to `GEMINI_CONCURRENCY` requests are outstanding at once and spend is only recorded when each resolves. Without the reservation every in-flight call could clear a fuse that one of them goes on to blow.
+- **The run fuse reserves the cost of each in-flight call** (`reserveForCall`), because up to `GEMINI_CONCURRENCY` requests are outstanding at once and spend is only recorded when each resolves. Without the reservation every in-flight call could clear a fuse that one of them goes on to blow. The reservation is sized from the prompt actually being sent (`callReserveUsd`: prompt as input, same again as output, plus the per-call reasoning), not from the 64KB ceiling -- ceiling-sized reservations at concurrency 16 held $4.89 before a cent was spent and made any fuse under $5 trip on reservations alone (run 35252423844). Startup logs the reservation range for one wave at the chosen concurrency and refuses a fuse below `minimumFuseUsd(concurrency)`, the smallest wave that can get off the ground.
 
 ## Triage
 
@@ -45,15 +45,15 @@ One file+locale was skipped; the rest of the run continued. Decide which case yo
 
 Tell them apart by batches-per-changed-byte: a legitimate plan is roughly `changedWireBytes / 32KB` batches. Hundreds of batches for tens of KB is a bug.
 
-### `[cost-guard] aborting run: $X spent … reached the $Y fuse`
+### `[cost-guard] aborting run: $X spent … plus $Z reserved for N call(s) in flight … reached the $Y fuse`
 
-The run stopped mid-flight; the temp branch is preserved and manifests were not stamped, so nothing is half-committed (see `references/recovery.md`). Before raising `INTL_MAX_COST_USD`, check input tokens per call in the log:
+The run stopped mid-flight; the temp branch is preserved and manifests were not stamped, so nothing is half-committed (see `references/recovery.md`). If `$Z reserved` is most of the fuse, the fuse is simply too small for the concurrency: lower the `concurrency` input or raise the fuse to at least the "one wave" figure the startup log printed. Otherwise, before raising `INTL_MAX_COST_USD`, check input tokens per call in the log:
 
 ```
 grep -o 'tokens_in=[0-9]*' <log> | cut -d= -f2 | sort -n | tail -5
 ```
 
-Healthy is 4k–9k per call. Anything above ~50k means context is being resent per call — a bug, not a budget problem. (The input:output *ratio* is not a signal — incremental translation legitimately runs anywhere from 1:1 to 180:1; judge input tokens per call only.)
+Healthy is 4k–9k per call. Anything above ~50k means context is being resent per call — a bug, not a budget problem. (The input:output _ratio_ is not a signal — incremental translation legitimately runs anywhere from 1:1 to 180:1; judge input tokens per call only.)
 
 ### `[cost-guard] prompt for … is N bytes, over the … ceiling`
 

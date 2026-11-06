@@ -57,4 +57,20 @@ test.describe("Localized JSON-LD", () => {
       expectLocalized(webPage.description)
     })
   }
+
+  for (const { locale, path } of [
+    { locale: "English", path: "/videos/ethereum-privacy-stack-andy-guzman/" },
+    {
+      locale: "Spanish",
+      path: "/es/videos/ethereum-privacy-stack-andy-guzman/",
+    },
+  ]) {
+    test(`omits ${locale} video transcript from JSON-LD`, async ({ page }) => {
+      const video = await getJsonLdNode(page, path, "VideoObject")
+
+      expectLocalized(video.name)
+      expect(video).not.toHaveProperty("transcript")
+      await expect(page.locator("main")).toContainText("Andy Guzman")
+    })
+  }
 })

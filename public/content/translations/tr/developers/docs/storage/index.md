@@ -142,7 +142,7 @@ Hisse Kanıtı tabanlı:
 **Arweave - _Arweave, verileri depolamak için bir dStorage platformudur._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Belgeler](https://docs.arweave.org/info/)
+- [Belgeler](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs, parça zinciri (sharding) ve blobber'lara sahip bir Hisse Kanıtı dStorage platformudur._**

@@ -2,21 +2,16 @@
 title: "Quelques astuces utilisées par les jetons frauduleux et comment les détecter"
 description: "Dans ce tutoriel, nous décortiquons un jeton frauduleux pour voir certaines des astuces utilisées par les escrocs, comment ils les mettent en œuvre et comment nous pouvons les détecter."
 author: Ori Pomerantz
-tags:
-  - escroquerie
-  - solidity
-  - erc-20
-  - javascript
-  - typescript
+tags: ["escroquerie", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
 breadcrumb: Astuces des jetons frauduleux
 published: 2023-09-15
 lang: fr
 ---
 
-Dans ce tutoriel, nous décortiquons [un jeton frauduleux](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) pour voir certaines des astuces utilisées par les escrocs et comment ils les mettent en œuvre. À la fin de ce tutoriel, vous aurez une vue plus complète des contrats de jetons ERC-20, de leurs capacités et des raisons pour lesquelles le scepticisme est nécessaire. Ensuite, nous examinerons les événements émis par ce jeton frauduleux et verrons comment nous pouvons identifier automatiquement qu'il n'est pas légitime.
+Dans ce tutoriel, nous décortiquons [un jeton frauduleux](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) pour voir certaines des astuces utilisées par les escrocs et comment ils les mettent en œuvre. À la fin du tutoriel, vous aurez une vue plus complète des contrats de jetons ERC-20, de leurs capacités et des raisons pour lesquelles le scepticisme est de mise. Ensuite, nous examinerons les événements émis par ce jeton frauduleux et verrons comment nous pouvons identifier automatiquement qu'il n'est pas légitime.
 
-## Jetons frauduleux - ce qu'ils sont, pourquoi les gens les créent et comment les éviter {#scam-tokens}
+## Jetons frauduleux - que sont-ils, pourquoi les gens les créent-ils et comment les éviter {#scam-tokens}
 
 L'une des utilisations les plus courantes d'Ethereum est la création par un groupe d'un jeton négociable, en un sens leur propre monnaie. Cependant, partout où il y a des cas d'utilisation légitimes qui apportent de la valeur, il y a aussi des criminels qui essaient de voler cette valeur pour eux-mêmes.
 
@@ -44,7 +39,7 @@ Nous allons comparer ce jeton à des jetons ERC-20 légitimes. Si vous n'êtes p
 
 Les contrats ont parfois besoin d'adresses privilégiées. Les contrats conçus pour une utilisation à long terme permettent à une adresse privilégiée de modifier ces adresses, par exemple pour permettre l'utilisation d'un nouveau contrat multisig. Il existe plusieurs façons de le faire.
 
-Le [contrat de jeton `HOP`](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) utilise le modèle [`Ownable`](https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable). L'adresse privilégiée est conservée dans le stockage, dans un champ appelé `_owner` (voir le troisième fichier, `Ownable.sol`).
+Le [contrat de jeton `HOP`](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) utilise le modèle [`Ownable`](https://docs.openzeppelin.com/contracts/3.x/access-control#ownership-and-ownable). L'adresse privilégiée est conservée dans le stockage, dans un champ appelé `_owner` (voir le troisième fichier, `Ownable.sol`).
 
 ```solidity
 abstract contract Ownable is Context {
@@ -59,7 +54,7 @@ Le [contrat de jeton `ARB`](https://etherscan.io/address/0xad0c361ef902a7d9851ca
 
 ```solidity
     /**
-     * @dev Stocke une nouvelle adresse dans l'emplacement d'administrateur EIP1967.
+     * @dev Stocke une nouvelle adresse dans l'emplacement d'administration EIP1967.
      */
     function _setAdmin(address newAdmin) private {
         require(newAdmin != address(0), "ERC1967: new admin is the zero address");
@@ -82,7 +77,7 @@ contract WrappedArbitrum is Context, IERC20 {
 }
 ```
 
-[Ce propriétaire de contrat](https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33) n'est pas un contrat qui pourrait être contrôlé par différents comptes à différents moments, mais un [compte détenu en externe](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs). Cela signifie qu'il est probablement conçu pour une utilisation à court terme par un individu, plutôt que comme une solution à long terme pour contrôler un ERC-20 qui conservera sa valeur.
+[Ce propriétaire de contrat](https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33) n'est pas un contrat qui pourrait être contrôlé par différents comptes à différents moments, mais un [compte externe](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs). Cela signifie qu'il est probablement conçu pour une utilisation à court terme par un individu, plutôt que comme une solution à long terme pour contrôler un ERC-20 qui conservera sa valeur.
 
 Et en effet, si nous regardons dans Etherscan, nous voyons que l'escroc n'a utilisé ce contrat que pendant 12 heures (de la [première transaction](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2) à la [dernière transaction](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b)) au cours du 19 mai 2023.
 
@@ -157,7 +152,7 @@ Lorsque nous regardons les fonctions qui sont appelées pour transférer des jet
 
 Il y a deux signaux d'alarme potentiels dans cette fonction.
 
-- L'utilisation du [modificateur de fonction](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `_mod_`. Cependant, lorsque nous regardons dans le code source, nous voyons que `_mod_` est en fait inoffensif.
+- L'utilisation du [modificateur de fonction](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) `_mod_`. Cependant, lorsque nous examinons le code source, nous voyons que `_mod_` est en fait inoffensif.
 
   ```solidity
   modifier _mod_(address sender, address recipient, uint256 amount){
@@ -167,9 +162,9 @@ Il y a deux signaux d'alarme potentiels dans cette fonction.
 
 - Le même problème que nous avons vu dans `_transfer`, à savoir que lorsque `contract_owner` envoie des jetons, ils semblent provenir de `deployer`.
 
-### La fausse fonction d'événements `dropNewTokens` {#the-fake-events-function-dropnewtokens}
+### La fonction de faux événements `dropNewTokens` {#the-fake-events-function-dropnewtokens}
 
-Nous en arrivons maintenant à quelque chose qui ressemble à une véritable escroquerie. J'ai un peu modifié la fonction pour des raisons de lisibilité, mais elle est fonctionnellement équivalente.
+Nous en arrivons maintenant à ce qui ressemble à une véritable escroquerie. J'ai un peu modifié la fonction pour des raisons de lisibilité, mais elle est fonctionnellement équivalente.
 
 ```solidity
 function dropNewTokens(address uPool,
@@ -177,7 +172,7 @@ function dropNewTokens(address uPool,
                        uint256[] memory eAmounts) public auth()
 ```
 
-Cette fonction a le modificateur `auth()`, ce qui signifie qu'elle ne peut être appelée que par le propriétaire du contrat.
+Cette fonction possède le modificateur `auth()`, ce qui signifie qu'elle ne peut être appelée que par le propriétaire du contrat.
 
 ```solidity
 modifier auth() {
@@ -196,13 +191,13 @@ Cette restriction est tout à fait logique, car nous ne voudrions pas que des co
 }
 ```
 
-Une fonction pour transférer d'un compte de pool vers un tableau de destinataires un tableau de montants est tout à fait logique. Il existe de nombreux cas d'utilisation dans lesquels vous voudrez distribuer des jetons d'une source unique vers plusieurs destinations, comme la paie, les airdrops, etc. Il est moins cher (en gaz) de le faire en une seule transaction au lieu d'émettre plusieurs transactions, ou même d'appeler l'ERC-20 plusieurs fois à partir d'un contrat différent dans le cadre de la même transaction.
+Une fonction permettant de transférer depuis un compte commun vers un tableau de destinataires un tableau de montants est tout à fait logique. Il existe de nombreux cas d'utilisation dans lesquels vous souhaiterez distribuer des jetons d'une source unique vers plusieurs destinations, comme la paie, les airdrops, etc. Il est moins cher (en gaz) de le faire en une seule transaction au lieu d'émettre plusieurs transactions, ou même d'appeler l'ERC-20 plusieurs fois depuis un contrat différent dans le cadre de la même transaction.
 
 Cependant, `dropNewTokens` ne fait pas cela. Elle émet des [événements `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1), mais ne transfère en réalité aucun jeton. Il n'y a aucune raison légitime de semer la confusion dans les applications hors chaîne en leur signalant un transfert qui n'a pas vraiment eu lieu.
 
 ### La fonction `Approve` pour brûler {#the-burning-approve-function}
 
-Les contrats ERC-20 sont censés avoir [une fonction `approve`](/developers/tutorials/erc20-annotated-code/#approve) pour les allocations, et en effet notre jeton frauduleux a une telle fonction, et elle est même correcte. Cependant, comme Solidity descend du C, il est sensible à la casse. « Approve » et « approve » sont des chaînes de caractères différentes.
+Les contrats ERC-20 sont censés avoir [une fonction `approve`](/developers/tutorials/erc20-annotated-code/#approve) pour les allocations, et en effet notre jeton frauduleux a une telle fonction, et elle est même correcte. Cependant, comme Solidity descend du C, il est sensible à la casse. "Approve" et "approve" sont des chaînes de caractères différentes.
 
 De plus, la fonctionnalité n'est pas liée à `approve`.
 
@@ -232,17 +227,17 @@ Le modificateur `approver()` s'assure que seul `contract_owner` est autorisé à
 
 ```
 
-Pour chaque adresse de détenteur, la fonction déplace le solde entier du détenteur vers l'adresse `0x00...01`, le brûlant effectivement (le véritable `burn` dans la norme modifie également l'offre totale, et transfère les jetons vers `0x00...00`). Cela signifie que `contract_owner` peut supprimer les actifs de n'importe quel utilisateur. Cela ne semble pas être une fonctionnalité que vous voudriez dans un jeton de gouvernance.
+Pour chaque adresse de détenteur, la fonction déplace le solde entier du détenteur vers l'adresse `0x00...01`, le brûlant effectivement (le véritable `burn` dans la norme modifie également l'offre totale et transfère les jetons vers `0x00...00`). Cela signifie que `contract_owner` peut supprimer les actifs de n'importe quel utilisateur. Cela ne semble pas être une fonctionnalité que vous souhaiteriez dans un jeton de gouvernance.
 
 ### Problèmes de qualité du code {#code-quality-issues}
 
-Ces problèmes de qualité du code ne _prouvent_ pas que ce code est une escroquerie, mais ils le rendent suspect. Les entreprises organisées telles qu'Arbitrum ne publient généralement pas de code aussi mauvais.
+Ces problèmes de qualité du code ne _prouvent_ pas que ce code est une escroquerie, mais ils le rendent suspect. Les entreprises organisées telles qu'Arbitrum ne publient généralement pas de code d'aussi mauvaise qualité.
 
 #### La fonction `mount` {#the-mount-function}
 
-Bien que ce ne soit pas spécifié dans [la norme](https://eips.ethereum.org/EIPS/eip-20), en règle générale, la fonction qui crée de nouveaux jetons est appelée [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+Bien que cela ne soit pas spécifié dans [la norme](https://eips.ethereum.org/EIPS/eip-20), en règle générale, la fonction qui crée de nouveaux jetons est appelée [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
-Si nous regardons dans le constructeur `wARB`, nous voyons que la fonction de frappe a été renommée en `mount` pour une raison quelconque, et est appelée cinq fois avec un cinquième de l'offre initiale, au lieu d'une seule fois pour le montant total par souci d'efficacité.
+Si nous regardons dans le constructeur `wARB`, nous voyons que la fonction de frappe a été renommée en `mount` pour une raison quelconque, et est appelée cinq fois avec un cinquième de l'offre initiale, au lieu d'une seule fois pour la totalité du montant par souci d'efficacité.
 
 ```solidity
     constructor () public {
@@ -267,7 +262,7 @@ La fonction `mount` elle-même est également suspecte.
         require(msg.sender == contract_owner, "ERC20: mint to the zero address");
 ```
 
-En regardant le `require`, nous voyons que seul le propriétaire du contrat est autorisé à frapper. C'est légitime. Mais le message d'erreur devrait être _only owner is allowed to mint_ ou quelque chose de similaire. Au lieu de cela, il s'agit du message non pertinent _ERC20: mint to the zero address_. Le test correct pour la frappe vers l'adresse zéro est `require(account != address(0), "<error message>")`, que le contrat ne prend jamais la peine de vérifier.
+En regardant le `require`, nous voyons que seul le propriétaire du contrat est autorisé à frapper. C'est légitime. Mais le message d'erreur devrait être _only owner is allowed to mint_ ou quelque chose de similaire. Au lieu de cela, il s'agit du message non pertinent _ERC20: mint to the zero address_. Le test correct pour la frappe vers l'adresse zéro est `require(account != address(0), "<error message>")`, ce que le contrat ne prend jamais la peine de vérifier.
 
 ```solidity
         _totalSupply = _totalSupply.add(amount);
@@ -318,14 +313,14 @@ Il existe quelques astuces que nous pouvons utiliser pour identifier qu'un jeton
 
 Les [événements `Approval`](https://eips.ethereum.org/EIPS/eip-20#approval) ne devraient se produire qu'avec une requête directe (contrairement aux [événements `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1) qui peuvent se produire à la suite d'une allocation). [Consultez la documentation de Solidity](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) pour une explication détaillée de ce problème et pourquoi les requêtes doivent être directes, plutôt que médiées par un contrat.
 
-Cela signifie que les événements `Approval` qui approuvent les dépenses à partir d'un [compte détenu en externe](/developers/docs/accounts/#types-of-account) doivent provenir de transactions qui ont pour origine ce compte, et dont la destination est le contrat ERC-20. Tout autre type d'approbation provenant d'un compte détenu en externe est suspect.
+Cela signifie que les événements `Approval` qui approuvent des dépenses à partir d'un [compte externe](/developers/docs/accounts/#types-of-account) doivent provenir de transactions qui ont pour origine ce compte, et dont la destination est le contrat ERC-20. Tout autre type d'approbation provenant d'un compte externe est suspect.
 
 Voici [un programme qui identifie ce type d'événement](https://github.com/qbzzt/20230915-scam-token-detection), en utilisant [Viem](https://viem.sh/) et [TypeScript](https://www.typescriptlang.org/docs/), une variante de JavaScript avec sécurité de typage. Pour l'exécuter :
 
 1. Copiez `.env.example` vers `.env`.
 2. Modifiez `.env` pour fournir l'URL vers un nœud du réseau principal Ethereum.
 3. Exécutez `pnpm install` pour installer les paquets nécessaires.
-4. Exécutez `pnpm susApproval` pour rechercher les approbations suspectes.
+4. Exécutez `pnpm susApproval` pour rechercher des approbations suspectes.
 
 Voici une explication ligne par ligne :
 
@@ -364,7 +359,7 @@ const fromBlock = 16859812n
 const toBlock = 16873372n
 ```
 
-L'adresse du contrat ERC-20 suspect, et les blocs dans lesquels nous chercherons des événements. Les fournisseurs de nœuds limitent généralement notre capacité à lire les événements car la bande passante peut devenir coûteuse. Heureusement, `wARB` n'a pas été utilisé pendant une période de dix-huit heures, nous pouvons donc rechercher tous les événements (il n'y en avait que 13 au total).
+L'adresse du contrat ERC-20 suspect, et les blocs dans lesquels nous chercherons des événements. Les fournisseurs de nœuds limitent généralement notre capacité à lire les événements car la bande passante peut coûter cher. Heureusement, `wARB` n'a pas été utilisé pendant une période de dix-huit heures, nous pouvons donc rechercher tous les événements (il n'y en a eu que 13 au total).
 
 ```typescript
 const approvalEvents = await client.getLogs({
@@ -384,9 +379,9 @@ const isContract = async (addr: Address): boolean =>
   await client.getBytecode({ address: addr })
 ```
 
-Notre algorithme n'est applicable qu'aux comptes détenus en externe. S'il y a un bytecode renvoyé par `client.getBytecode`, cela signifie qu'il s'agit d'un contrat et nous devrions simplement l'ignorer.
+Notre algorithme n'est applicable qu'aux comptes externes. S'il y a un bytecode renvoyé par `client.getBytecode`, cela signifie qu'il s'agit d'un contrat et nous devrions simplement l'ignorer.
 
-Si vous n'avez jamais utilisé TypeScript auparavant, la définition de la fonction peut sembler un peu étrange. Nous ne lui disons pas seulement que le premier (et unique) paramètre s'appelle `addr`, mais aussi qu'il est de type `Address`. De même, la partie `: boolean` indique à TypeScript que la valeur de retour de la fonction est un booléen.
+Si vous n'avez jamais utilisé TypeScript auparavant, la définition de la fonction peut sembler un peu bizarre. Nous ne lui disons pas seulement que le premier (et unique) paramètre s'appelle `addr`, mais aussi qu'il est de type `Address`. De même, la partie `: boolean` indique à TypeScript que la valeur de retour de la fonction est un booléen.
 
 ```typescript
 const getEventTxn = async (ev: Event): TransactionReceipt =>
@@ -418,7 +413,7 @@ Si le propriétaire est un contrat, supposez que cette approbation n'est pas sus
 const txn = await getEventTxn(ev)
 ```
 
-Si l'approbation provient d'un compte détenu en externe, obtenez la transaction qui l'a causée.
+Si l'approbation provient d'un compte externe, obtenez la transaction qui l'a causée.
 
 ```typescript
 // L'approbation est suspecte si elle provient d'un propriétaire d'EOA qui n'est pas le `from` de la transaction
@@ -427,7 +422,7 @@ if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 
 Nous ne pouvons pas simplement vérifier l'égalité des chaînes de caractères car les adresses sont hexadécimales, elles contiennent donc des lettres. Parfois, par exemple dans `txn.from`, ces lettres sont toutes en minuscules. Dans d'autres cas, comme `ev.args._owner`, l'adresse est en [casse mixte pour l'identification des erreurs](https://eips.ethereum.org/EIPS/eip-55).
 
-Mais si la transaction ne provient pas du propriétaire, et que ce propriétaire est détenu en externe, alors nous avons une transaction suspecte.
+Mais si la transaction ne provient pas du propriétaire, et que ce propriétaire est un compte externe, alors nous avons une transaction suspecte.
 
 ```typescript
 // C'est également suspect si la destination de la transaction n'est pas le contrat ERC-20 que nous
@@ -438,7 +433,7 @@ if (txn.to.toLowerCase() != testedAddress) return ev
 De même, si l'adresse `to` de la transaction, le premier contrat appelé, n'est pas le contrat ERC-20 en cours d'investigation, alors elle est suspecte.
 
 ```typescript
-    // S'il n'y a aucune raison d'avoir des soupçons, renvoyer null.
+    // S'il n'y a aucune raison d'avoir des soupçons, retourner null.
     return null
 }
 ```
@@ -458,12 +453,12 @@ Ici, nous utilisons [`map`](https://www.w3schools.com/jsref/jsref_map.asp) pour 
 
 ### Événements `Transfer` suspects {#suspicious-transfer-events}
 
-Une autre façon possible d'identifier les jetons frauduleux est de voir s'ils ont des transferts suspects. Par exemple, des transferts depuis des comptes qui n'ont pas autant de jetons. Vous pouvez voir [comment mettre en œuvre ce test](https://github.com/qbzzt/20230915-scam-token-detection/blob/main/susTransfer.ts), mais `wARB` n'a pas ce problème.
+Une autre façon possible d'identifier les jetons frauduleux est de voir s'ils ont des transferts suspects. Par exemple, des transferts depuis des comptes qui n'ont pas autant de jetons. Vous pouvez voir [comment mettre en œuvre ce test](https://github.com/qbzzt/20230915-scam-token-detection/blob/main/susTransfer.ts), mais `wARB` ne présente pas ce problème.
 
 ## Conclusion {#conclusion}
 
-La détection automatisée des escroqueries ERC-20 souffre de [faux négatifs](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), car une escroquerie peut utiliser un contrat de jeton ERC-20 parfaitement normal qui ne représente tout simplement rien de réel. Vous devriez donc toujours essayer d'obtenir _l'adresse du jeton à partir d'une source de confiance_.
+La détection automatisée des escroqueries ERC-20 souffre de [faux négatifs](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), car une escroquerie peut utiliser un contrat de jeton ERC-20 parfaitement normal qui ne représente tout simplement rien de réel. Vous devriez donc toujours essayer d'_obtenir l'adresse du jeton auprès d'une source de confiance_.
 
-La détection automatisée peut aider dans certains cas, comme les éléments de la DeFi, où il y a de nombreux jetons et où ils doivent être gérés automatiquement. Mais comme toujours, [la prudence est de mise](https://www.investopedia.com/terms/c/caveatemptor.asp), faites vos propres recherches et encouragez vos utilisateurs à faire de même.
+La détection automatisée peut aider dans certains cas, comme les éléments de la finance décentralisée (DeFi), où il y a de nombreux jetons et où ils doivent être gérés automatiquement. Mais comme toujours, [soyez vigilant](https://www.investopedia.com/terms/c/caveatemptor.asp), faites vos propres recherches et encouragez vos utilisateurs à faire de même.
 
-[Voir ici pour plus de mon travail](https://cryptodocguy.pro/).
+[Voir ici pour plus de mes travaux](https://cryptodocguy.pro/).

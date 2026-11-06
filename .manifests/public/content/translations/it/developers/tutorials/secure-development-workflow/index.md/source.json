@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/secure-development-workflow/index.md",
   "generatedAt": "2026-06-17T00:46:36.698Z",
-  "rootHash": "3a1fbbcbd2ad",
+  "rootHash": "170381faaeb1",
   "tree": {
-    "contentHash": "477f1e406445",
-    "anchorHash": "2992ecc4d37e",
+    "contentHash": "d4e76b180192",
+    "anchorHash": "176a5deb1ba1",
     "children": {
       "frontmatter:title": {
         "contentHash": "594a71f50dec",
@@ -17,11 +17,30 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f10cc36124c6"
+        "anchorHash": "d78efb663a1b"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "977631f6d019"
+        "contentHash": "574c2c6f3916",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "5d2d3ceb7abe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

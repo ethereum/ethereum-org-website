@@ -17,7 +17,7 @@ Moja ya matumizi ya kawaida ya Ethereum ni kwa kikundi kuunda tokeni inayoweza k
 [ufafanuzi wa kiolesura](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Huu ni msimbo wa chanzo uliofafanuliwa. Ikiwa unataka kutekeleza ERC-20,
-[soma mafunzo haya](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+[soma mafunzo haya](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Kiolesura {#the-interface}
 

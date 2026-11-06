@@ -209,7 +209,7 @@ Zde je seznam některých z nejpopulárnějších poskytovatelů uzlů Etherea, 
     - Přístup k 50+ blockchainovým uzlům
 
 - [**Infura**](https://infura.io/)
-  - [Dokumentace](https://infura.io/docs)
+  - [Dokumentace](https://docs.infura.io/)
   - Funkce
     - Možnost bezplatné úrovně
     - Škálování podle potřeby

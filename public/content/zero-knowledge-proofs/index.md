@@ -1,7 +1,7 @@
 ---
 title: What are zero-knowledge proofs?
 metaTitle: Zero-knowledge proofs
-description: A non-technical introduction to zero-knowledge proofs for beginners.
+description: "What are zero-knowledge proofs? A beginner-friendly introduction to how ZK proofs verify a claim without revealing the data, and how Ethereum uses them."
 lang: en
 ---
 

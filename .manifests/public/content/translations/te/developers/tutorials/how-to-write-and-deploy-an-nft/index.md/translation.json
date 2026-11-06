@@ -1,94 +1,202 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "te",
-  "translatedAt": "2026-06-18T00:10:02.101Z",
-  "englishManifestHash": "2b00fe7982a8",
+  "translatedAt": "2026-10-22T21:30:27.915Z",
+  "englishManifestHash": "9cbc748cd4a0",
   "placeholderOrder": [
     "LINK-5c9ac9",
-    "LINK-c6b559",
+    "LINK-124cbf",
     "LINK-e4be84",
     "LINK-694db2",
     "LINK-2e186a",
     "LINK-34265f",
-    "LINK-65b093",
+    "LINK-7ace60",
     "LINK-2e186a",
     "LINK-e49f0e",
-    "LINK-31af26",
-    "IMAGE-285c94",
-    "IMAGE-4dfa9c",
+    "LINK-849114",
+    "IMAGE-a72e7d",
+    "LINK-773f64",
     "LINK-0eaf8d",
     "LINK-f9ea87",
-    "IMAGE-848058",
-    "LINK-0475cf",
-    "LINK-969eb0",
-    "LINK-97d164",
-    "CODE-9a90f2",
-    "LINK-90a487",
-    "LINK-5a960d",
-    "CODEBLOCK-07a90c",
-    "LINK-56ca94",
-    "LINK-88781b",
+    "LINK-07f818",
+    "IMAGE-ce130a",
+    "LINK-319a33",
+    "LINK-e46028",
+    "LINK-d8ad93",
+    "LINK-3eef18",
+    "CODEBLOCK-90a9f4",
+    "CODEBLOCK-d26cc4",
+    "LINK-ad8b1d",
+    "CODEBLOCK-d97fa8",
+    "CODEBLOCK-6fb011",
+    "CODEBLOCK-050e3a",
+    "LINK-b2200c",
+    "CODEBLOCK-46b0ae",
+    "LINK-2e5289",
+    "CODE-521275",
+    "CODE-cf4ef7",
+    "CODEBLOCK-e7c08f",
+    "CODEBLOCK-c492f3",
     "LINK-191c9a",
     "CODE-b094db",
-    "LINK-a13ed3",
-    "CODEBLOCK-a7cfb2",
-    "CODE-71859f",
+    "LINK-93ca11",
+    "CODEBLOCK-3710ff",
+    "CODE-17cc7d",
     "LINK-898c48",
     "LINK-301fcb",
-    "LINK-0b9f6b",
+    "LINK-53843a",
+    "CODE-4d6962",
+    "CODE-238c19",
+    "CODE-d5e646",
+    "CODE-480e30",
+    "CODE-1db978",
     "CODE-a5fbc1",
     "CODE-b7f373",
+    "CODE-3342f9",
+    "CODE-b458b2",
     "CODE-09565d",
     "CODE-915310",
     "CODE-e6ec7f",
     "CODE-480e30",
-    "LINK-907faa",
+    "LINK-b22254",
     "CODE-e9cbb0",
-    "LINK-5ebe14",
-    "IMAGE-83922d",
+    "LINK-29f937",
+    "IMAGE-399c8f",
+    "CODE-e9cbb0",
+    "CODEBLOCK-4a5198",
     "CODE-e9cbb0",
     "LINK-794750",
-    "LINK-d5ca30",
-    "LINK-459fd8",
-    "LINK-df2c52",
-    "CODEBLOCK-49f2b6",
-    "LINK-5715b2",
+    "LINK-f41766",
+    "LINK-2b67ba",
+    "LINK-cbcd5a",
+    "CODEBLOCK-699133",
+    "CODEBLOCK-481171",
+    "CODE-398717",
+    "CODE-eba8dc",
+    "LINK-00f5ef",
+    "CODEBLOCK-225fea",
+    "CODE-ef1f7a",
+    "LINK-34265f",
     "CODE-a3e5b0",
     "CODE-c34f3d",
-    "CODEBLOCK-507091",
-    "LINK-dd6f99",
+    "CODEBLOCK-7ffac2",
+    "CODEBLOCK-9ac910",
+    "CODE-757ac4",
+    "CODE-374543",
+    "CODE-57a849",
+    "CODE-4e2bf9",
+    "CODEBLOCK-a41a3c",
+    "CODE-79c798",
+    "CODE-e9cbb0",
+    "CODEBLOCK-b83ad4",
+    "CODEBLOCK-ec4626",
+    "CODE-4d6962",
+    "CODE-e8160b",
+    "CODE-c6d213",
+    "LINK-d2c363",
+    "CODEBLOCK-3f56b4",
+    "CODEBLOCK-23cc2f",
     "LINK-18d20e",
     "IMAGE-7db63f",
     "IMAGE-0ce9e0",
-    "LINK-8b3416",
-    "IMAGE-1cdcfd",
-    "LINK-3a0da8",
-    "LINK-8fb112",
-    "LINK-d2691d",
+    "LINK-1bad48",
+    "LINK-83da5d",
+    "LINK-c0c53c",
+    "LINK-b22254",
     "LINK-5b60a4",
     "LINK-262065"
   ],
   "placeholderMap": {
-    "CODEBLOCK-07a90c": {
+    "CODEBLOCK-90a9f4": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-a7cfb2": {
+    "CODEBLOCK-d26cc4": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-49f2b6": {
+    "CODEBLOCK-d97fa8": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-507091": {
+    "CODEBLOCK-6fb011": {
       "type": "code-fence",
       "values": {}
     },
-    "CODE-9a90f2": {
+    "CODEBLOCK-050e3a": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-46b0ae": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-e7c08f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-c492f3": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3710ff": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-4a5198": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-699133": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-481171": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-225fea": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-7ffac2": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-9ac910": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-a41a3c": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b83ad4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-ec4626": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-3f56b4": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-23cc2f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-521275": {
       "type": "inline-code",
       "values": {
-        "content": "{\"jsonrpc\": \"2.0\", \"id\": 0, \"result\": \"0xde0b6b3a7640000\"}"
+        "content": "npx hardhat --init"
+      }
+    },
+    "CODE-cf4ef7": {
+      "type": "inline-code",
+      "values": {
+        "content": "hardhat.config.js"
       }
     },
     "CODE-b094db": {
@@ -97,10 +205,40 @@
         "content": "contracts"
       }
     },
-    "CODE-71859f": {
+    "CODE-17cc7d": {
       "type": "inline-code",
       "values": {
-        "content": "npm install @openzeppelin/contracts^4.0.0"
+        "content": "npm install @openzeppelin/contracts"
+      }
+    },
+    "CODE-4d6962": {
+      "type": "inline-code",
+      "values": {
+        "content": "initialOwner"
+      }
+    },
+    "CODE-238c19": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ownable"
+      }
+    },
+    "CODE-d5e646": {
+      "type": "inline-code",
+      "values": {
+        "content": "Ownable(initialOwner)"
+      }
+    },
+    "CODE-1db978": {
+      "type": "inline-code",
+      "values": {
+        "content": "onlyOwner"
+      }
+    },
+    "CODE-480e30": {
+      "type": "inline-code",
+      "values": {
+        "content": "mintNFT"
       }
     },
     "CODE-a5fbc1": {
@@ -113,6 +251,18 @@
       "type": "inline-code",
       "values": {
         "content": "transferFrom"
+      }
+    },
+    "CODE-3342f9": {
+      "type": "inline-code",
+      "values": {
+        "content": "_nextTokenId"
+      }
+    },
+    "CODE-b458b2": {
+      "type": "inline-code",
+      "values": {
+        "content": "++_nextTokenId"
       }
     },
     "CODE-09565d": {
@@ -133,16 +283,28 @@
         "content": "string memory tokenURI"
       }
     },
-    "CODE-480e30": {
-      "type": "inline-code",
-      "values": {
-        "content": "mintNFT"
-      }
-    },
     "CODE-e9cbb0": {
       "type": "inline-code",
       "values": {
         "content": ".env"
+      }
+    },
+    "CODE-398717": {
+      "type": "inline-code",
+      "values": {
+        "content": "configVariable"
+      }
+    },
+    "CODE-eba8dc": {
+      "type": "inline-code",
+      "values": {
+        "content": "compile"
+      }
+    },
+    "CODE-ef1f7a": {
+      "type": "inline-code",
+      "values": {
+        "content": "Compiled 1 Solidity file with solc 0.8.34"
       }
     },
     "CODE-a3e5b0": {
@@ -157,28 +319,64 @@
         "content": "deploy.js"
       }
     },
-    "IMAGE-285c94": {
-      "type": "image",
+    "CODE-374543": {
+      "type": "inline-code",
       "values": {
-        "path": "./create-your-app.png"
+        "content": "network.create()"
       }
     },
-    "IMAGE-4dfa9c": {
-      "type": "image",
+    "CODE-757ac4": {
+      "type": "inline-code",
       "values": {
-        "path": "./alchemy-explorer-sepolia.png"
+        "content": "--network"
       }
     },
-    "IMAGE-848058": {
-      "type": "image",
+    "CODE-57a849": {
+      "type": "inline-code",
       "values": {
-        "path": "./metamask-goerli.png"
+        "content": "hardhat-ethers"
       }
     },
-    "IMAGE-83922d": {
+    "CODE-4e2bf9": {
+      "type": "inline-code",
+      "values": {
+        "content": "ethers"
+      }
+    },
+    "CODE-79c798": {
+      "type": "inline-code",
+      "values": {
+        "content": "getSigners()"
+      }
+    },
+    "CODE-e8160b": {
+      "type": "inline-code",
+      "values": {
+        "content": "waitForDeployment()"
+      }
+    },
+    "CODE-c6d213": {
+      "type": "inline-code",
+      "values": {
+        "content": "getAddress()"
+      }
+    },
+    "IMAGE-a72e7d": {
       "type": "image",
       "values": {
-        "path": "./copy-alchemy-api-url.gif"
+        "path": "./alchemy-create-new-app.png"
+      }
+    },
+    "IMAGE-ce130a": {
+      "type": "image",
+      "values": {
+        "path": "./metamask-sepolia.png"
+      }
+    },
+    "IMAGE-399c8f": {
+      "type": "image",
+      "values": {
+        "path": "./copy-alchemy-api-url.mp4#842x480"
       }
     },
     "IMAGE-7db63f": {
@@ -193,22 +391,16 @@
         "path": "./etherscan-sepolia-tx-details.png"
       }
     },
-    "IMAGE-1cdcfd": {
-      "type": "image",
-      "values": {
-        "path": "./alchemy-explorer-goerli.png"
-      }
-    },
     "LINK-5c9ac9": {
       "type": "link",
       "values": {
         "url": "https://metamask.io/"
       }
     },
-    "LINK-c6b559": {
+    "LINK-124cbf": {
       "type": "link",
       "values": {
-        "url": "https://docs.soliditylang.org/en/v0.8.0/"
+        "url": "https://docs.soliditylang.org/"
       }
     },
     "LINK-e4be84": {
@@ -235,10 +427,10 @@
         "url": "https://discord.gg/gWuC7zB"
       }
     },
-    "LINK-65b093": {
+    "LINK-7ace60": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemy.com/alchemy/enhanced-apis/nft-api"
+        "url": "https://www.alchemy.com/docs/reference/nft-api-quickstart"
       }
     },
     "LINK-e49f0e": {
@@ -247,10 +439,16 @@
         "url": "https://alchemy.com/signup/eth"
       }
     },
-    "LINK-31af26": {
+    "LINK-849114": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/guides/choosing-a-network"
+        "url": "https://www.alchemy.com/docs/choosing-a-web3-network"
+      }
+    },
+    "LINK-773f64": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/networks/#ethereum-testnets"
       }
     },
     "LINK-0eaf8d": {
@@ -265,46 +463,52 @@
         "url": "https://metamask.io/download"
       }
     },
-    "LINK-0475cf": {
+    "LINK-07f818": {
       "type": "link",
       "values": {
-        "url": "https://sepoliafaucet.com/"
+        "url": "https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/"
       }
     },
-    "LINK-97d164": {
+    "LINK-319a33": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance"
+        "url": "/developers/docs/networks/#sepolia"
       }
     },
-    "LINK-969eb0": {
+    "LINK-e46028": {
       "type": "link",
       "values": {
-        "url": "https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D"
+        "url": "https://www.alchemy.com/faucets/ethereum-sepolia"
       }
     },
-    "LINK-90a487": {
+    "LINK-3eef18": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm"
+        "url": "https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-balance"
       }
     },
-    "LINK-5a960d": {
+    "LINK-d8ad93": {
+      "type": "link",
+      "values": {
+        "url": "https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest"
+      }
+    },
+    "LINK-ad8b1d": {
       "type": "link",
       "values": {
         "url": "https://nodejs.org/en/download/"
       }
     },
-    "LINK-56ca94": {
+    "LINK-b2200c": {
       "type": "link",
       "values": {
-        "url": "https://hardhat.org/getting-started/#overview"
+        "url": "https://hardhat.org/docs/getting-started"
       }
     },
-    "LINK-88781b": {
+    "LINK-2e5289": {
       "type": "link",
       "values": {
-        "url": "https://hardhat.org/getting-started/#overview"
+        "url": "https://hardhat.org/docs/getting-started"
       }
     },
     "LINK-191c9a": {
@@ -313,10 +517,10 @@
         "url": "https://code.visualstudio.com/"
       }
     },
-    "LINK-a13ed3": {
+    "LINK-93ca11": {
       "type": "link",
       "values": {
-        "url": "https://docs.openzeppelin.com/contracts/3.x/erc721"
+        "url": "https://docs.openzeppelin.com/contracts/5.x/erc721"
       }
     },
     "LINK-898c48": {
@@ -331,22 +535,22 @@
         "url": "https://eips.ethereum.org/EIPS/eip-721"
       }
     },
-    "LINK-0b9f6b": {
+    "LINK-53843a": {
       "type": "link",
       "values": {
-        "url": "https://docs.openzeppelin.com/contracts/3.x/access-control"
+        "url": "https://docs.openzeppelin.com/contracts/5.x/access-control"
       }
     },
-    "LINK-907faa": {
+    "LINK-b22254": {
       "type": "link",
       "values": {
-        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+        "url": "/developers/docs/transactions/"
       }
     },
-    "LINK-5ebe14": {
+    "LINK-29f937": {
       "type": "link",
       "values": {
-        "url": "https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key"
+        "url": "https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/"
       }
     },
     "LINK-794750": {
@@ -355,34 +559,34 @@
         "url": "/developers/docs/apis/json-rpc/"
       }
     },
-    "LINK-d5ca30": {
+    "LINK-f41766": {
       "type": "link",
       "values": {
-        "url": "https://hardhat.org/plugins/"
+        "url": "https://hardhat.org/docs/plugins/official-plugins"
       }
     },
-    "LINK-459fd8": {
+    "LINK-2b67ba": {
       "type": "link",
       "values": {
-        "url": "https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers"
+        "url": "https://hardhat.org/docs/plugins/hardhat-ethers"
       }
     },
-    "LINK-df2c52": {
+    "LINK-cbcd5a": {
       "type": "link",
       "values": {
-        "url": "https://github.com/ethers-io/ethers.js/"
+        "url": "https://docs.ethers.org/v6/"
       }
     },
-    "LINK-5715b2": {
+    "LINK-00f5ef": {
       "type": "link",
       "values": {
-        "url": "https://discord.gg/u72VCg3"
+        "url": "https://hardhat.org/docs/guides/configuration-variables"
       }
     },
-    "LINK-dd6f99": {
+    "LINK-d2c363": {
       "type": "link",
       "values": {
-        "url": "https://hardhat.org/tutorial/testing-contracts.html#writing-tests"
+        "url": "https://docs.ethers.org/v6/api/contract/"
       }
     },
     "LINK-18d20e": {
@@ -391,28 +595,22 @@
         "url": "https://sepolia.etherscan.io/"
       }
     },
-    "LINK-8b3416": {
+    "LINK-1bad48": {
       "type": "link",
       "values": {
-        "url": "https://dashboard.alchemyapi.io/explorer"
+        "url": "https://dashboard.alchemy.com/"
       }
     },
-    "LINK-3a0da8": {
+    "LINK-83da5d": {
       "type": "link",
       "values": {
-        "url": "/developers/docs/apis/json-rpc/#eth_sendrawtransaction"
+        "url": "/developers/docs/apis/json-rpc/#eth-sendrawtransaction"
       }
     },
-    "LINK-8fb112": {
+    "LINK-c0c53c": {
       "type": "link",
       "values": {
-        "url": "/developers/docs/apis/json-rpc/#eth_gettransactionbyhash"
-      }
-    },
-    "LINK-d2691d": {
-      "type": "link",
-      "values": {
-        "url": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/"
+        "url": "/developers/docs/apis/json-rpc/#eth-gettransactionbyhash"
       }
     },
     "LINK-5b60a4": {
@@ -430,7 +628,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T00:10:02.101Z",
+      "translatedAt": "2026-10-22T21:30:27.915Z",
       "status": "success"
     }
   }

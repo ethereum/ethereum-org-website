@@ -8,8 +8,6 @@ duration: "0:11:39"
 educationLevel: intermediate
 topic:
   - "how-ethereum-works"
-  - "staking"
-  - "withdrawals"
 format: explainer
 author: "파인매틱스"
 breadcrumb: "스테이킹 인출"

@@ -13,7 +13,7 @@ published: 2021-03-09
 
 Одне з найпоширеніших застосувань Етеріуму — це створення групою людей токена, яким можна торгувати, у певному сенсі їхньої власної валюти. Ці токени зазвичай відповідають стандарту [ERC-20](/developers/docs/standards/tokens/erc-20/). Цей стандарт дає змогу створювати інструменти, такі як пули ліквідності та гаманці, які працюють з усіма токенами ERC-20. У цій статті ми проаналізуємо [реалізацію ERC-20 на Solidity від ОупенЗеппелін](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), а також [визначення інтерфейсу](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-Це анотований вихідний код. Якщо ви хочете реалізувати ERC-20, [прочитайте цей посібник](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+Це анотований вихідний код. Якщо ви хочете реалізувати ERC-20, [прочитайте цей посібник](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Інтерфейс {#the-interface}
 

@@ -47,7 +47,7 @@ dappを紹介するには、適切な言葉が見つかりませんが、dappの
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## dappを作成するためのツール
+## dappを作成するためのツール {#dapp-tools}
 
 **Scaffold-ETH 2 _- スマート・コントラクトに適応するフロントエンドを使用して、Solidityをすばやく試すことができます。_**
 

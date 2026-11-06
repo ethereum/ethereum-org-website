@@ -84,7 +84,7 @@ Environ 0,33 % du nombre total de validateurs peut sortir un jour donné. Par d�
 
 ### Répartition de l'inflation après La Fusion {#post-merge-inflation-breakdown}
 
-- [Offre totale d'ETH](/eth/supply/) : **\~120 520 000 ETH** (au moment de La Fusion en septembre 2022)
+- [Offre totale d'ETH](/what-is-ether/supply/) : **\~120 520 000 ETH** (au moment de La Fusion en septembre 2022)
 - Émission sur la couche d'exécution : **0**
 - Émission sur la couche de consensus : Identique à ci-dessus, taux d'émission annualisé d'**\~0,52 %** (avec 14 millions d'ETH mis en jeu au total)
 

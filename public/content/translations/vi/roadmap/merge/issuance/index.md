@@ -84,7 +84,7 @@ Khi có nhiều trình xác thực rút tiền hơn, số lượng tối đa cá
 
 ### Phân tích chi tiết lạm phát sau The Merge {#post-merge-inflation-breakdown}
 
-- [Tổng nguồn cung ETH](/eth/supply/): **\~120.520.000 ETH** (tại thời điểm The Merge vào tháng 9 năm 2022)
+- [Tổng nguồn cung ETH](/what-is-ether/supply/): **\~120.520.000 ETH** (tại thời điểm The Merge vào tháng 9 năm 2022)
 - Phát hành ở lớp thực thi: **0**
 - Phát hành ở lớp đồng thuận: Giống như trên, tỷ lệ phát hành hàng năm **\~0,52%** (với tổng số 14 triệu ETH được đặt cọc)
 

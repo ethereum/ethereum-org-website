@@ -209,7 +209,7 @@ sidebarDepth: 2
     - 50以上のブロックチェーンノードへのアクセス
 
 - [**Infura**](https://infura.io/)
-  - [ドキュメント](https://infura.io/docs)
+  - [ドキュメント](https://docs.infura.io/)
   - 機能
     - 無料枠のオプション
     - 従量課金制のスケーリング

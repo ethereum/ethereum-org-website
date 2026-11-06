@@ -7,8 +7,7 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "consensus"
-  - "blockchain"
+  - "how-ethereum-works"
 format: explainer
 author: "टेक इन एशिया"
 breadcrumb: "सर्वसम्मति तंत्र"

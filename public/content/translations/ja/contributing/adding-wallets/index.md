@@ -1,6 +1,6 @@
 ---
-title: ウォレットの追加
-description: ethereum.orgにウォレットを追加する際のポリシー
+title: "ウォレットの追加"
+description: "ethereum.orgにウォレットを追加する際のポリシー"
 lang: ja
 ---
 
@@ -58,10 +58,10 @@ lang: ja
 
 ## ウォレットの追加 {#adding-a-wallet}
 
-ethereum.orgにウォレットを追加したい場合は、GitHubでIssueを作成してください。
+ethereum.orgにウォレットを追加したい場合は、GitHubでIssueを作成してください。Issueに記載するウォレットの説明はウォレットのページに表示されるため、事実に基づいた1〜2文に留めてください。
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
-  Issueを作成する
+  Issueを作成
 </ButtonLink>
 
 ## メンテナンス {#maintenance}

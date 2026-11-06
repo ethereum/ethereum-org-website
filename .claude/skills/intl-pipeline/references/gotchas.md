@@ -76,3 +76,10 @@ There is no `TARGET_FILES` env var — the sanitizer only reads `TARGET_LANGUAGE
 
 ETHGlossary entries have `id` (slug, e.g., `"vitalik-buterin"`) and `term` (display form, e.g., `"Vitalik Buterin"`). Per-term lookups use the ID; the API also matches aliases intelligently. When searching, prefer the slug ID; for display, use the term.
 
+## Output length floor is script-aware
+
+`validateTranslatedMarkdown` rejects output below a fraction of the English character count as truncated. That fraction is not one number: CJK renders the same content in far fewer characters, so `zh`, `zh-tw`, `ja` and `ko` get a 0.2 floor and everything else 0.3 (`LENGTH_FLOOR_*` in `output-validation.ts`). Measured across `public/content`, whole-file translated/English ratios are median 0.49 / min 0.34 for zh and zh-tw, 0.64 / 0.47 for ja and ko, and >=0.76 for every other locale; chunk-level ratios run lower than whole-file ones.
+
+The flat 0.3 floor that predated this is what kept `whitepaper/index.md` zh + zh-tw failing every scheduled run from 2026-07-30 to 2026-08-20 — a correct 0.245-ratio chunk read as truncation, three retries burned, no manifest stamped, and the next run repeated the entire 90KB file. If you see `Suspiciously short` for a locale that legitimately compresses, check the floor before blaming the model. Keep in mind this floor is the only truncation check in the run path: `verify-structure.ts` exists but is a standalone CLI, not wired into `main.ts`.
+
+The call site must pass `targetLanguage` — omitting it silently falls back to the 0.3 default.

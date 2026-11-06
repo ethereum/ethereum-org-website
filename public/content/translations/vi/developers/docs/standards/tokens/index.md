@@ -29,7 +29,7 @@ Dưới đây là một số tiêu chuẩn token phổ biến nhất trên Ether
 
 Danh sách đầy đủ các đề xuất [ERC](https://eips.ethereum.org/erc).
 
-## Đọc thêm
+## Đọc thêm {#further-reading}
 
 _Bạn biết một tài nguyên cộng đồng nào đó hữu ích? Hãy chỉnh sửa trang này và thêm nó vào!_
 

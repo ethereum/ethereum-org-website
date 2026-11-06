@@ -95,3 +95,85 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 **Fixed in this branch:**
 
 - `Devcon` -> `డెవ్కాన్` in `title` and `subtitle`. Derived form (Gemini 3.1 Pro), applying 6.1's te rule for consonant-final loanwords: standard written transliteration with the halant, not a colloquial vowel-appended form. `logo-alt` stays Latin.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/te/page-apps.json`. 7 critical, 6 warnings. Brand 10/10 | Technical 7/10 | Semantic 9/10 | Consistency 8/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: te affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (te-specific):**
+
+- `యానిట్` -> `యూనిట్`; the only occurrence in the te tree against 35 correct ones in the same file
+- `డాప్‌లను` -> `dappలను` per the glossary Latin form; the same file already used `dapp` four lines earlier. ZWNJ dropped to match the tree-dominant form
+
+**Notes:**
+
+- The `testing` page title now correctly matches its site-nav label, fixing the PR #19115 nav/title mismatch class here rather than repeating it.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.6/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `policies-services` Consumer Reports stat: `సున్నా మరియు 59 శాతం మధ్య నిర్వహించబడ్డాయి` -> `సున్నా నుండి 59 శాతం మాత్రమే తొలగించగలిగాయి`; `70 శాతాన్ని కోల్పోయారు` -> `70 శాతం తొలగించబడ్డాయి` (native check welcome).
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `లిడో` (glossary Lido), `డెన్‌కున్` (glossary Dencun).
+- "both" dropped (#82); `ఒక పార్టీ` political sense again (hegota:21).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` database corruption `అవినీతి` -> `పాడైపోవడం`; relational against `వ్యతిరేకంగా` -> `ఉపయోగించి`.
+- `small-business` `compare-privacy` reused address inverted to used-once -> `పదే పదే ఉపయోగించే`.
+
+**Open (warnings):**
+
+- `ఉత్పత్తి` for production recurs; rollup `రోలప్`/`రోల్అప్` mirrors glossary inconsistency; treasuries `ఖజానాలు`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.8/10
+
+- Fixed: `Chain Platform` transliterated -> Latin (L54, L83); stray U+2068/U+2069 around `ETH`.
+- Open: bare dApp/EVM expanded (#80); glossary EVM entry spells `ఈథీరియం` vs file `ఎథీరియం`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.2/10
+
+Scope: 27 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:966 Solidity always_latin (`సోలిడిటీ ధృవీకర్తను` -> `Solidity ధృవీకర్తను`)
+- security/index.md:18-27 fabricated second frontmatter block deleted
+
+**Open (native call needed):**
+
+- None at critical level.
+- 17 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is fluent and mostly faithful. te's known reported-speech negation error (the `-మని` suffix flipping meaning) did not recur. The two te-specific must-fixes are the made-up frontmatter block in the security page and the transliterated Solidity; the founders tag regression affects other locales too.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Retranslated in full (write-deploy correct). Warnings: English alt text; NFT spelled out too often.

@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "⁦{name}⁩ کے بارے میں",
+  "catalog-item-gallery-modal-title": "⁦{name}⁩ کے اسکرین شاٹس",
+  "catalog-item-gallery-screenshot-alt": "⁦{name}⁩ کا اسکرین شاٹ {index}",
+  "catalog-item-gallery-title": "گیلری",
+  "catalog-item-info-title": "معلومات",
+  "catalog-item-link-label": "⁦{platform}⁩ پر ⁦{name}⁩",
+  "catalog-item-see-next": "اگلا دیکھیں",
+  "catalog-item-source-code": "سورس کوڈ",
+  "catalog-item-view-on-github": "⁦GitHub⁩ پر دیکھیں",
+  "catalog-item-visit-website": "ویب سائٹ پر جائیں"
+}

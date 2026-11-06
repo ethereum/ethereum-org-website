@@ -230,5 +230,5 @@ Objek `Function` atau `Modifier` memiliki:
 - `entry_point (Node)`: Titik masuk CFG
 - `variables_read (list(Variable))`: Daftar variabel yang dibaca
 - `variables_written (list(Variable))`: Daftar variabel yang ditulis
-- `state_variables_read (list(StateVariable))`: Daftar variabel state yang dibaca (subset dari variables`read)
-- `state_variables_written (list(StateVariable))`: Daftar variabel state yang ditulis (subset dari variables`written)
+- `state_variables_read (list(StateVariable))`: Daftar variabel state yang dibaca (subset dari `variables_read`)
+- `state_variables_written (list(StateVariable))`: Daftar variabel state yang ditulis (subset dari `variables_written`)

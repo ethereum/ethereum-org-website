@@ -1,6 +1,6 @@
 ---
 title: "Používání WebSocketů"
-description: "Průvodce používáním WebSocketů a Alchemy k provádění JSON-RPC požadavků a odebírání událostí."
+description: "Průvodce používáním WebSocketů k provádění JSON-RPC požadavků a odebírání událostí u jakéhokoli poskytovatele uzlů Etherea."
 author: "Elan Halpern"
 lang: cs
 tags: ["Alchemy", "websockets", "dotazování", "JavaScript"]
@@ -11,46 +11,63 @@ sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-webso
 published: 2020-12-01
 ---
 
-Toto je úvodní průvodce používáním WebSocketů a Alchemy k provádění požadavků na blockchain Etherea.
+Toto je úvodní průvodce používáním WebSocketů k odesílání požadavků na blockchain Etherea. Příklady používají standardní metody JSON-RPC, takže fungují s jakýmkoli uzlem nebo poskytovatelem uzlů, který nabízí koncový bod WebSocket, včetně Alchemy.
 
 ## WebSockets vs. HTTP {#websockets-vs-http}
 
-Na rozdíl od HTTP nemusíte u WebSocketů neustále odesílat požadavky, když chcete konkrétní informace. WebSockety pro vás udržují síťové připojení (pokud jsou správně implementovány) a naslouchají změnám.
+Na rozdíl od HTTP u WebSocketů nemusíte neustále odesílat požadavky, když chcete konkrétní informace. WebSockety pro vás udržují síťové připojení (pokud jsou správně implementovány) a naslouchají změnám.
 
-Jako u každého síťového připojení byste neměli předpokládat, že WebSocket zůstane otevřený navždy bez přerušení, ale správné ruční ošetření výpadků připojení a opětovného připojení může být náročné. Další nevýhodou WebSocketů je, že v odpovědi nedostáváte stavové kódy HTTP, ale pouze chybovou zprávu.
+Stejně jako u jakéhokoli síťového připojení byste neměli předpokládat, že WebSocket zůstane otevřený navždy bez přerušení, ale správné ruční zpracování přerušených připojení a opětovného připojení může být náročné. Další nevýhodou WebSocketů je, že v odpovědi nedostáváte stavové kódy HTTP, ale pouze chybovou zprávu.
 
-​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automaticky přidává zpracování selhání WebSocketů a opakované pokusy bez nutnosti jakékoliv konfigurace.
+Klientské knihovny to mohou vyřešit za vás. Například [WebSocket transport knihovny Viem](https://viem.sh/docs/clients/transports/websocket) se ve výchozím nastavení při selhání socketu znovu připojí a odesílá udržovací (keep-alive) pingy.
 
 ## Vyzkoušejte si to {#try-it-out}
 
-Nejjednodušší způsob, jak otestovat WebSockety, je nainstalovat si nástroj příkazového řádku pro odesílání WebSocket požadavků, jako je [wscat](https://github.com/websockets/wscat). Pomocí wscat můžete odesílat požadavky následovně:
+Potřebujete WebSocket URL pro uzel Etherea. Poskytovatelé uzlů vám ho dají, když si vytvoříte klíč rozhraní pro programování aplikací (API), obvykle ve formátu `wss://<provider-host>/<your-api-key>`. Například URL pro Ethereum Mainnet od Alchemy vypadá jako `wss://eth-mainnet.g.alchemy.com/v2/<your-api-key>` ([zaregistrujte si bezplatný účet Alchemy](https://auth.alchemy.com/signup)). Podívejte se na [uzly jako službu](/developers/docs/nodes-and-clients/nodes-as-a-service/) pro další poskytovatele, nebo použijte koncový bod WebSocket [vašeho vlastního uzlu](/developers/docs/nodes-and-clients/run-a-node/). Veřejné koncové body jako `wss://ethereum-rpc.publicnode.com` také fungují pro rychlé experimenty, ale mají omezenou rychlost (rate-limited) a nemusí podporovat každý typ odběru.
 
-_Poznámka: pokud máte účet na Alchemy, můžete nahradit `demo` svým vlastním API klíčem. [Zaregistrujte si bezplatný účet na Alchemy zde!](https://auth.alchemy.com/signup)_
+Nejjednodušší způsob, jak otestovat WebSockety, je nainstalovat nástroj příkazového řádku pro odesílání WebSocket požadavků, jako je [wscat](https://github.com/websockets/wscat). Pomocí wscat můžete odesílat požadavky následovně:
 
+```sh
+npx wscat -c wss://<provider-host>/<your-api-key>
+
+> {"jsonrpc": "2.0", "id": 0, "method": "eth_gasPrice"}
+
+< {"jsonrpc": "2.0", "result": "0x41f9de2", "id": 0}
 ```
-wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
->  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
-
-<  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-```
+Řádky začínající `>` jsou to, co píšete, a řádky začínající `<` jsou to, co uzel posílá zpět.
 
 ## Jak používat WebSockety {#how-to-use-websockets}
 
-Pro začátek otevřete WebSocket pomocí WebSocket URL vaší aplikace. WebSocket URL vaší aplikace najdete tak, že otevřete stránku aplikace na [vašem panelu (dashboard)](https://dashboard.alchemy.com/) a kliknete na „View Key“. Všimněte si, že URL vaší aplikace pro WebSockety se liší od URL pro HTTP požadavky, ale obě lze najít kliknutím na „View Key“.
+Chcete-li začít, otevřete WebSocket pomocí WebSocket URL vašeho poskytovatele. U Alchemy ho najdete tak, že otevřete svou aplikaci v [řídicím panelu](https://dashboard.alchemy.com/) a zobrazíte její klíč rozhraní pro programování aplikací (API). Všimněte si, že URL pro WebSockety (`wss://`) se liší od URL pro HTTP požadavky (`https://`), ačkoli většina poskytovatelů používá stejný API klíč pro obojí.
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
+![Kde najít WebSocket URL v řídicím panelu Alchemy](./use-websockets.mp4#602x280)
 
-Jakékoliv z API uvedených v [referenční příručce Alchemy API](https://www.alchemy.com/docs/reference/api-overview) lze použít přes WebSocket. K tomu použijte stejná data (payload), která by byla odeslána jako tělo HTTP POST požadavku, ale místo toho je odešlete přes WebSocket.
+Jakákoli z [metod JSON-RPC](/developers/docs/apis/json-rpc/), kterou váš poskytovatel podporuje, může být použita přes WebSocket. K tomu použijte stejná data (payload), která by byla odeslána jako tělo HTTP POST požadavku, ale místo toho je odešlete přes WebSocket.
 
 ## S Web3 {#with-web3}
 
-Přechod na WebSockety při používání klientské knihovny, jako je Web3, je jednoduchý. Při vytváření instance vašeho Web3 klienta jednoduše předejte WebSocket URL místo HTTP URL. Například:
+Přechod na WebSockety při používání klientské knihovny, jako je [Viem](https://viem.sh/), je jednoduchý. Použijte transport `webSocket` s vaším WebSocket URL místo transportu `http`. Například po `npm install viem` uložte toto jako `index.mjs` a spusťte `node index.mjs`:
 
 ```js
-const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
+import { createPublicClient, webSocket } from "viem"
+import { mainnet } from "viem/chains"
 
-web3.eth.getBlockNumber().then(console.log) // -> 7946893
+const client = createPublicClient({
+  chain: mainnet,
+  transport: webSocket("wss://<provider-host>/<your-api-key>"),
+})
+
+console.log(await client.getBlockNumber()) // -> 26243602n
+
+// Přihlásit se k odběru nových bloků přes stejný WebSocket
+const unwatch = client.watchBlocks({
+  onBlock: (block) => {
+    console.log(block.number, block.hash)
+    unwatch()
+    process.exit(0)
+  },
+})
 ```
 
 ## API pro odběry (Subscription API) {#subscription-api}
@@ -59,7 +76,7 @@ Při připojení přes WebSocket můžete použít dvě další metody: `eth_sub
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Vytvoří nový odběr pro zadané události. [Zjistěte více o `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
+Vytvoří nový odběr pro zadané události. [Zjistěte více o `eth_subscribe`](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub).
 
 #### Parametry {#parameters}
 
@@ -84,130 +101,125 @@ Zatímco je odběr aktivní, budete dostávat události, což jsou objekty s ná
 
 #### Typy odběrů {#subscription-types}
 
-1. `alchemy_newFullPendingTransactions`
+1. `newHeads`
 
-Vrací informace o transakci pro všechny transakce, které jsou přidány do čekajícího stavu (pending state). Tento typ odběru odebírá čekající transakce, podobně jako standardní volání Web3 `web3.eth.subscribe("pendingTransactions")`, ale liší se tím, že vysílá _úplné informace o transakci_ namísto pouhých hashů transakcí.
+Vyvolá událost pokaždé, když je do řetězce přidána nová hlavička, a to i během reorganizace řetězce.
 
-Příklad:
-
-```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["alchemy_newFullPendingTransactions"]}
-
-<  {"id":1,"result":"0x9a52eeddc2b289f985c0e23a7d8427c8","jsonrpc":"2.0"}
-<  {
-      "jsonrpc":"2.0",
-      "method":"eth_subscription",
-      "params":{
-          "result":{
-          "blockHash":null,
-          "blockNumber":null,
-          "from":"0xa36452fc31f6f482ad823cd1cf5515177d57667f",
-          "gas":"0x1adb0",
-          "gasPrice":"0x7735c4d40",
-          "hash":"0x50bff0736c713458c92dd1848d12f3354149be1363123dae35e94e0f2a9d56bf",
-"input":"0xa9059cbb0000000000000000000000000d0707963952f2fba59dd06f2b425ace40b492fe0000000000000000000000000000000000000000000015b1111266cfca100000",
-          "nonce":"0x0",
-          "to":"0xea38eaa3c86c8f9b751533ba2e562deb9acded40",
-          "transactionIndex":null,
-          "value":"0x0",
-          "v":"0x26",
-          "r":"0x195c2c1ed126088e12d290aa93541677d3e3b1d10f137e11f86b1b9227f01e3b",
-          "s":"0x60fc4edbf1527832a2a36dbc1e63ed6193a6eee654472fbebbf88ef1750b5344"},
-          "subscription":"0x9a52eeddc2b289f985c0e23a7d8427c8"
-      }
-  }
-
-```
-
-2. `newHeads`
-
-Vyšle událost pokaždé, když je do řetězce přidána nová hlavička, a to i během reorganizace řetězce.
-
-Když dojde k reorganizaci řetězce, tento odběr vyšle událost obsahující všechny nové hlavičky pro nový řetězec. Konkrétně to znamená, že můžete vidět více vyslaných hlaviček se stejnou výškou bloku, a když k tomu dojde, pozdější hlavička by měla být po reorganizaci považována za tu správnou.
+Když dojde k reorganizaci řetězce, tento odběr vyvolá událost obsahující všechny nové hlavičky pro nový řetězec. Konkrétně to znamená, že můžete vidět více hlaviček vyvolaných se stejnou výškou, a když k tomu dojde, pozdější hlavička by měla být po reorganizaci považována za tu správnou.
 
 Příklad:
 
 ```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["newHeads"]}
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 
-<  {"jsonrpc":"2.0","id":2,"result":"0x9ce59a13059e417087c02d3236a0b1cc"}
-<  {
-  "jsonrpc":  "2.0",
-  "method":  "eth_subscription",
-  "params":  {
-      "result":  {
-          "extraData":  "0xd983010305844765746887676f312e342e328777696e646f7773",
-          "gasLimit":  "0x47e7c4",
-          "gasUsed":  "0x38658",
-          "logsBloom":
-"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-          "nonce":  "0x084149998194cc5f",
-          "number":  "0x1348c9",
-          "parentHash":  "0x7736fab79e05dc611604d22470dadad26f56fe494421b5b333de816ce1f25701",
-          "receiptRoot":  "0x2fab35823ad00c7bb388595cb46652fe7886e00660a01e867824d3dceb1c8d36",
-          "sha3Uncles":  "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-          "stateRoot":  "0xb3346685172db67de536d8765c43c31009d0eb3bd9c501c9be3229203f15f378",
-          "timestamp":  "0x56ffeff8",
-          "transactionsRoot":  "0x0167ffa60e3ebc0b080cdb95f7c0087dd6c0e61413140e39d94d3468d7c9689f"
-      },
-  "subscription":  "0x9ce59a13059e417087c02d3236a0b1cc"
+< {"jsonrpc":"2.0","result":"0xe0d4abf5caf333fbf94c5f02182e6469","id":1}
+< {
+  "jsonrpc": "2.0",
+  "method": "eth_subscription",
+  "params": {
+    "result": {
+      "baseFeePerGas": "0x41f9de2",
+      "blobGasUsed": "0xc0000",
+      "difficulty": "0x0",
+      "excessBlobGas": "0xa88af38",
+      "extraData": "0xe29ca82051756173617220287175617361722e77696e2920e29ca8",
+      "gasLimit": "0x3938700",
+      "gasUsed": "0x1a17224",
+      "hash": "0xedc43a71b7ff13880bdbe7b748a225b91a11a91e79173fe28011363c10acaea5",
+      "logsBloom": "0x4beaef4e7dbb1bfdb3df673fab6cdf1cf9fc0e7f743d672c761551767b7dad953d79cf86e56e6195ae1b57dff20a0fd46e57c545af166ff49394df3839e269a6ff877b6baf9d899fd9666c58b7dfa7add4febf78b466e7f71af2dcbad53fdcfa3f7277d2fbfffcff953f9ef37b3af8fffb296a3adb94dc463ff0d6d5173f1beda0fd662d77eaedb34ff99f3eeed38a77e7d0cd63e917d4efbdfcb7d0d19437f98ff60773d0effbfbdfdbef9ebbf6a2c35efedd677a795d3ccd777e127eeb657f6a8dffaf64f3b8d998b516c78e661ef77fded57fb66d687fab17739b3ef5aa2765777d8cce0ef59a9ceebeceabbb7f76ed7fc65df7e8bccf7938eb3fb7de57f7",
+      "miner": "0x396343362be2a4da1ce0c1c210945346fb82aa49",
+      "mixHash": "0xa72c9201f502df607d0d7551ccc171ce37a5146747f04c6c495b0aebecb045c7",
+      "nonce": "0x0000000000000000",
+      "number": "0x1907212",
+      "parentBeaconBlockRoot": "0x34f3f289459913dd80ec9c20aa535866cd2bd310ac26e47570601e263d593735",
+      "parentHash": "0xe62c150ffbbd04e95343f945b70fa53756aba6c0bf96c0440d1ae354fa007a7c",
+      "receiptsRoot": "0x94951d882544da76e30b145b26a39b126e8acfba9db929351b84b2f4c847e3ed",
+      "requestsHash": "0xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+      "size": "0x1f4bc",
+      "stateRoot": "0x12771ea73858277034cf6604aee0abbf889c15091ab8ef9be81bf7258458a036",
+      "timestamp": "0x6ad92b47",
+      "transactionsRoot": "0xbd58ebe5c8c5519e458266a7db3ad049a7bffa106dc9a14f2fe6edb3f8ad5d70",
+      "withdrawalsRoot": "0x56a083b6140663c9e98c30167ee90a1ffb157505ba89cb584583b71cba100d2a"
+    },
+    "subscription": "0xe0d4abf5caf333fbf94c5f02182e6469"
   }
 }
-
 ```
 
-3. `logs`
+2. `logs`
 
-Vysílá logy, které jsou součástí nově přidaných bloků a odpovídají zadaným kritériím filtru.
+Vyvolává logy, které jsou součástí nově přidaných bloků a odpovídají zadaným kritériím filtru.
 
-Když dojde k reorganizaci řetězce, logy, které jsou součástí bloků ve starém řetězci, budou znovu vyslány s vlastností `removed` nastavenou na `true`. Dále jsou vyslány logy, které jsou součástí bloků v novém řetězci, což znamená, že v případě reorganizace je možné vidět logy pro stejnou transakci vícekrát.
+Když dojde k reorganizaci řetězce, logy, které jsou součástí bloků ve starém řetězci, budou znovu vyvolány s vlastností `removed` nastavenou na `true`. Dále jsou vyvolány logy, které jsou součástí bloků v novém řetězci, což znamená, že v případě reorganizace je možné vidět logy pro stejnou transakci vícekrát.
 
 Parametry
 
 1. Objekt s následujícími poli:
    - `address` (volitelné): buď řetězec představující adresu, nebo pole takových řetězců.
-     - Budou vyslány pouze logy vytvořené z jedné z těchto adres.
-   - `topics`: pole specifikátorů témat (topics).
+     - Budou vyvolány pouze logy vytvořené z jedné z těchto adres.
+   - `topics`: pole specifikátorů témat.
      - Každý specifikátor tématu je buď `null`, řetězec představující téma, nebo pole řetězců.
-     - Každá pozice v poli, která není `null`, omezuje vysílané logy pouze na ty, které mají na dané pozici jedno z uvedených témat.
+     - Každá pozice v poli, která není `null`, omezuje vyvolané logy pouze na ty, které mají na dané pozici jedno z uvedených témat.
 
 Několik příkladů specifikací témat:
 
-- `[]`: Povolena jakákoliv témata.
-- `[A]`: A na první pozici (a cokoliv poté).
-- `[null, B]`: Cokoliv na první pozici a B na druhé pozici (a cokoliv poté).
-- `[A, B]`: A na první pozici a B na druhé pozici (a cokoliv poté).
-- `[[A, B], [A, B]]`: (A nebo B) na první pozici a (A nebo B) na druhé pozici (a cokoliv poté).
+- `[]`: Povolena jakákoli témata.
+- `[A]`: A na první pozici (a cokoli za ním).
+- `[null, B]`: Cokoli na první pozici a B na druhé pozici (a cokoli za ním).
+- `[A, B]`: A na první pozici a B na druhé pozici (a cokoli za ním).
+- `[[A, B], [A, B]]`: (A nebo B) na první pozici a (A nebo B) na druhé pozici (a cokoli za ním).
+
+Příklad:
+
+Tento příklad naslouchá událostem `Deposit` z [kontraktu zabaleného etheru (WETH)](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) na síti Ethereum Mainnet:
+
+```json
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["logs", {"address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "topics": ["0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c"]}]}
+
+< {"jsonrpc":"2.0","result":"0x69a0e61ae8e3d61a93479858e8f1b43a","id":1}
+< {
+  "jsonrpc": "2.0",
+  "method": "eth_subscription",
+  "params": {
+    "result": {
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "blockHash": "0x168e06e5733df993078bb635cb9925f80ff39d12a36bd301052c44d7bf6b6068",
+      "blockNumber": "0x190720e",
+      "blockTimestamp": "0x6ad92b17",
+      "data": "0x000000000000000000000000000000000000000000000000039ed0c3d7848a1c",
+      "logIndex": "0x11",
+      "removed": false,
+      "topics": [
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c",
+        "0x00000000000000000000000023617e59a5925b2a4bf75d73ff6711cd0b29de85"
+      ],
+      "transactionHash": "0xc956e7012c2af8ff87db88e059336842ee872bfc93de1eac9760510d0bd801be",
+      "transactionIndex": "0xb"
+    },
+    "subscription": "0x69a0e61ae8e3d61a93479858e8f1b43a"
+  }
+}
+```
+
+3. `newPendingTransactions`
+
+Vyvolá hash každé transakce, která je přidána do čekajícího stavu uzlu (jeho mempoolu).
 
 Příklad:
 
 ```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["logs",  {"address":  "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd",  "topics":  ["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"]}]}
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["newPendingTransactions"]}
 
-<  {"jsonrpc":"2.0","id":2,"result":"0x4a8a4c0517381924f9838102c5a4dcb7"}
-<  {
-  "jsonrpc":  "2.0",
-  "method":  "eth_subscription",
-  "params":  {
-      "subscription":  "0x4a8a4c0517381924f9838102c5a4dcb7",
-      "result":  {
-          "address":  "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd",
-          "blockHash":  "0x61cdb2a09ab99abf791d474f20c2ea89bf8de2923a2d42bb49944c8c993cbf04",
-          "blockNumber":  "0x29e87",
-          "data": "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000003",
-          "logIndex":"0x0",
-          "topics":["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"],
-          "transactionHash":  "0xe044554a0a55067caafd07f8020ab9f2af60bdfe337e395ecd84b4877a3d1ab4",
-          "transactionIndex":  "0x0"
-      }
-  }
-}
-
+< {"jsonrpc":"2.0","result":"0x1c2365b029179adf1e84b9e327315249","id":1}
+< {"jsonrpc":"2.0","method":"eth_subscription","params":{"result":"0x4a62d0ad7c8868fbbfa10604e68638e637c6fc6f64fd1fb4ca042dcd0158c992","subscription":"0x1c2365b029179adf1e84b9e327315249"}}
 ```
+
+Někteří poskytovatelé nabízejí také své vlastní typy odběrů. Například [`alchemy_pendingTransactions`](https://www.alchemy.com/docs/reference/alchemy-pendingtransactions) od Alchemy vyvolává _celé objekty transakcí_ místo pouhých hashů a přijímá volitelné filtry `fromAddress`, `toAddress` a `hashesOnly`. Ty nejsou součástí standardního JSON-RPC rozhraní pro programování aplikací (API), takže fungují pouze s tímto poskytovatelem.
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-Zruší existující odběr, takže nebudou odesílány žádné další události.
+Zruší existující odběr, takže již nebudou odesílány žádné další události.
 
 Parametry
 
@@ -217,27 +229,16 @@ Návratové hodnoty
 
 `true`, pokud byl odběr úspěšně zrušen, nebo `false`, pokud neexistoval žádný odběr s daným ID.
 
+Odběr existuje pouze na WebSocket připojení, které jej vytvořilo, takže `eth_unsubscribe` musí být odesláno přes stejné připojení. Nelze jej odeslat jako samostatný HTTP požadavek. Uzavření připojení také zruší všechny jeho odběry.
+
 Příklad:
 
-**Požadavek**
-
-```
-curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
--X POST
--H "Content-Type: application/json"
--d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-```
-
-**Výsledek**
-
 ```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": true
-}
+> {"jsonrpc": "2.0", "id": 2, "method": "eth_unsubscribe", "params": ["0xe0d4abf5caf333fbf94c5f02182e6469"]}
+
+< {"jsonrpc":"2.0","result":true,"id":2}
 ```
 
 ---
 
-[Zaregistrujte se na Alchemy](https://auth.alchemy.com) zdarma, podívejte se na [naši dokumentaci](https://www.alchemy.com/docs/) a pro nejnovější zprávy nás sledujte na [Twitteru](https://x.com/AlchemyPlatform).
+[Zaregistrujte se u Alchemy](https://auth.alchemy.com) zdarma, podívejte se na [dokumentaci Alchemy](https://www.alchemy.com/docs/) a pro nejnovější zprávy sledujte Alchemy na [Twitteru](https://x.com/Alchemy).

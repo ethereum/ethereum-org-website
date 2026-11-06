@@ -15,7 +15,7 @@ published: 2021-03-09
 
 ایتھیریم کے سب سے عام استعمالات میں سے ایک کسی گروپ کے لیے قابلِ تجارت ٹوکن بنانا ہے، جو ایک لحاظ سے ان کی اپنی کرنسی ہوتی ہے۔ یہ ٹوکنز عام طور پر ایک معیار کی پیروی کرتے ہیں، [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/)۔ یہ معیار ایسے ٹولز لکھنا ممکن بناتا ہے، جیسے سیالیت کا پول اور والیٹ، جو تمام <span dir="ltr">ERC-20</span> ٹوکنز کے ساتھ کام کرتے ہیں۔ اس مضمون میں ہم [اوپن زیپلن Solidity ERC20 کے نفاذ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol) کے ساتھ ساتھ [انٹرفیس کی تعریف](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) کا تجزیہ کریں گے۔
 
-یہ تشریح شدہ سورس کوڈ ہے۔ اگر آپ <span dir="ltr">ERC-20</span> کو نافذ کرنا چاہتے ہیں، تو [یہ ٹیوٹوریل پڑھیں](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)۔
+یہ تشریح شدہ سورس کوڈ ہے۔ اگر آپ <span dir="ltr">ERC-20</span> کو نافذ کرنا چاہتے ہیں، تو [یہ ٹیوٹوریل پڑھیں](https://docs.openzeppelin.com/contracts/3.x/erc20-supply)۔
 
 ## انٹرفیس {#the-interface}
 

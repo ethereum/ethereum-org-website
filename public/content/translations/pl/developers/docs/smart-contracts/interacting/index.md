@@ -1,6 +1,6 @@
 ---
 title: Interakcja z inteligentnymi kontraktami
-description: Dowiedz się, jak odczytywać i zapisywać dane w inteligentnych kontraktach, które zostały już wdrożone w Ethereum.
+description: "Dowiedz się, jak odczytywać i zapisywać dane w inteligentnych kontraktach, które zostały już wdrożone w Ethereum."
 lang: pl
 ---
 
@@ -82,7 +82,7 @@ Programiści zazwyczaj używają biblioteki JavaScript/TypeScript do interakcji 
 
 - **[ethers.js](https://docs.ethers.org/)** - Działa również w Node.js dla skryptów po stronie serwera i botów
 - **[web3.py](https://web3py.readthedocs.io/)** - Biblioteka Python do interakcji z Ethereum
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Oficjalna biblioteka Go od zespołu Geth
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Oficjalna biblioteka Go od zespołu Geth
 
 ### Przykład: odczytywanie salda tokenów za pomocą Viem {#example-viem}
 

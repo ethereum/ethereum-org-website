@@ -11,6 +11,7 @@ import {
 } from "@/lib/utils/developerToolsData"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -36,7 +37,7 @@ export default async function DevelopersToolsCategoryJsonLD({
 
   const url = normalizeUrlForJsonLd(
     locale,
-    `/developers/tools/categories/${category}`
+    `/developers/tools/categories/${category}/`
   )
 
   const contributorList = contributors.map((contributor) => ({
@@ -59,35 +60,11 @@ export default async function DevelopersToolsCategoryJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Developers",
-              item: normalizeUrlForJsonLd(locale, "/developers/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: t("page-developers-tools-meta-title"),
-              item: normalizeUrlForJsonLd(locale, "/developers/tools/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 4,
-              name: categoryLabel,
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          `/developers/tools/categories/${category}`,
+          categoryLabel
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#category-tools` },

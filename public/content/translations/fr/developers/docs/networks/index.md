@@ -6,7 +6,7 @@ lang: fr
 
 Les réseaux [Ethereum](/) sont des groupes d'ordinateurs connectés qui communiquent en utilisant le protocole Ethereum. Il n'y a qu'un seul réseau principal Ethereum, mais des réseaux indépendants conformes aux mêmes règles de protocole peuvent être créés à des fins de test et de développement. Il existe de nombreux « réseaux » indépendants qui se conforment au protocole sans interagir les uns avec les autres. Vous pouvez même en démarrer un localement sur votre propre ordinateur pour tester vos contrats intelligents et vos applications Web3.
 
-Votre compte Ethereum fonctionnera sur les différents réseaux, mais le solde de votre compte et l'historique de vos transactions ne seront pas transférés depuis le réseau principal Ethereum. À des fins de test, il est utile de savoir quels réseaux sont disponibles et comment obtenir de l'ETH de réseau de test pour faire des essais. En général, pour des raisons de sécurité, il n'est pas recommandé de réutiliser des comptes du Réseau principal sur des réseaux de test ou vice versa.
+Votre compte Ethereum fonctionnera sur les différents réseaux, mais le solde de votre compte et l'historique de vos transactions ne seront pas transférés depuis le réseau principal Ethereum. À des fins de test, il est utile de savoir quels réseaux sont disponibles et comment obtenir des ETH de réseau de test pour faire des essais. En général, pour des raisons de sécurité, il n'est pas recommandé de réutiliser des comptes du Réseau principal sur des réseaux de test ou vice versa.
 
 ## Prérequis {#prerequisites}
 
@@ -26,11 +26,11 @@ Lorsque les gens et les plateformes d'échange discutent des prix de l'ETH, ils 
 
 En plus du Réseau principal, il existe des réseaux de test publics. Ce sont des réseaux utilisés par les développeurs de protocoles ou les développeurs de contrats intelligents pour tester à la fois les mises à niveau du protocole ainsi que les contrats intelligents potentiels dans un environnement de type production avant le déploiement sur le Réseau principal. Considérez cela comme un analogue aux serveurs de production par rapport aux serveurs de préproduction.
 
-Vous devriez tester tout code de contrat que vous écrivez sur un réseau de test avant de le déployer sur le Réseau principal. Parmi les applications décentralisées (dapps) qui s'intègrent aux contrats intelligents existants, la plupart des projets ont des copies déployées sur des réseaux de test.
+Vous devriez tester tout code de contrat que vous écrivez sur un réseau de test avant de le déployer sur le Réseau principal. Parmi les applications décentralisées (dapp) qui s'intègrent aux contrats intelligents existants, la plupart des projets ont des copies déployées sur des réseaux de test.
 
 La plupart des réseaux de test ont commencé par utiliser un mécanisme de consensus de preuve d'autorité (PoA) à permission. Cela signifie qu'un petit nombre de nœuds sont choisis pour valider les transactions et créer de nouveaux blocs – en mettant en jeu leur identité dans le processus. Alternativement, certains réseaux de test disposent d'un mécanisme de consensus de preuve d'enjeu (PoS) ouvert où tout le monde peut tester l'exécution d'un validateur, tout comme sur le réseau principal Ethereum.
 
-L'ETH sur les réseaux de test est censé n'avoir aucune valeur réelle ; cependant, des marchés ont été créés pour certains types d'ETH de réseau de test qui sont devenus rares ou difficiles à obtenir. Puisque vous avez besoin d'ETH pour interagir réellement avec Ethereum (même sur les réseaux de test), la plupart des gens obtiennent gratuitement de l'ETH de réseau de test à partir de faucets. La plupart des faucets sont des applications web où vous pouvez saisir une adresse à laquelle vous demandez que de l'ETH soit envoyé.
+L'ETH sur les réseaux de test est censé n'avoir aucune valeur réelle ; cependant, des marchés ont été créés pour certains types d'ETH de réseau de test qui sont devenus rares ou difficiles à obtenir. Puisque vous avez besoin d'ETH pour interagir réellement avec Ethereum (même sur les réseaux de test), la plupart des gens obtiennent gratuitement des ETH de réseau de test à partir de faucets. La plupart des faucets sont des applications web où vous pouvez saisir une adresse à laquelle vous demandez que des ETH soient envoyés.
 
 #### Quel réseau de test dois-je utiliser ? {#which-testnet-should-i-use}
 
@@ -41,6 +41,7 @@ Les deux réseaux de test publics que les développeurs de clients maintiennent 
 **Sepolia est le réseau de test par défaut recommandé pour le développement d'applications**. Le réseau Sepolia utilise un ensemble de validateurs à permission contrôlé par les équipes de clients et de test.
 
 ##### Ressources
+
 - [Site web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -48,14 +49,15 @@ Les deux réseaux de test publics que les développeurs de clients maintiennent 
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucets
+
 - [Faucet Sepolia d'Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet Sepolia de Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Faucet Sepolia de Chainstack](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Faucet de l'écosystème Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 - [Faucet Sepolia d'ethfaucet.com](https://ethfaucet.com/networks/ethereum)
 - [Faucet Sepolia de Google Cloud Web3](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet Sepolia d'Infura](https://www.infura.io/faucet)
+- [Faucet Sepolia d'OpenFaucet.org](https://openfaucet.org/ethereum-sepolia)
 - [Faucet PoW](https://sepolia-faucet.pk910.de/)
 - [Faucet Sepolia de QuickNode](https://faucet.quicknode.com/ethereum/sepolia)
 
@@ -80,6 +82,7 @@ Hoodi est un réseau de test pour tester la validation et le staking. Le réseau
 
 - [Faucet Hoodi de Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet Hoodi](https://hoodi.ethpandaops.io/)
+- [Faucet Hoodi d'OpenFaucet.org](https://openfaucet.org/ethereum-hoodi)
 - [Faucet PoW](https://hoodi-faucet.pk910.de/)
 
 #### Ephemery {#ephemery}
@@ -95,7 +98,7 @@ Ephemery est un type unique de réseau de test qui se réinitialise complètemen
 
 - [Site web](https://ephemery.dev/)
 - [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
-- [Chat de la communauté](https://matrix.to/#/#staker-testnet:matrix.org)
+- [Chat communautaire](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)
 - [Explorateur Beacon](https://beaconlight.ephemery.dev/)
@@ -132,6 +135,7 @@ Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 - [Faucet Arbitrum Sepolia d'Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet Arbitrum Sepolia de Chainlink](https://faucets.chain.link/arbitrum-sepolia)
 - [Faucet Arbitrum Sepolia d'ethfaucet.com](https://ethfaucet.com/networks/arbitrum)
+- [Faucet Arbitrum Sepolia d'OpenFaucet.org](https://openfaucet.org/arbitrum-sepolia)
 - [Faucet Arbitrum Sepolia de QuickNode](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
@@ -148,7 +152,8 @@ Un réseau de test pour [Optimism](https://www.optimism.io/).
 - [Faucet d'Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet de Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Faucet Optimism Sepolia d'ethfaucet.com](https://ethfaucet.com/networks/optimism)
-- [Faucet de réseau de test](https://docs.optimism.io/builders/tools/build/faucets)
+- [Faucet Optimism Sepolia d'OpenFaucet.org](https://openfaucet.org/optimism-sepolia)
+- [Faucet de réseau de test](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
@@ -172,7 +177,7 @@ Un réseau Ethereum est un réseau privé si ses nœuds ne sont pas connectés �
 
 Pour développer une application Ethereum, vous voudrez l'exécuter sur un réseau privé pour voir comment elle fonctionne avant de la déployer. De la même manière que vous créez un serveur local sur votre ordinateur pour le développement web, vous pouvez créer une instance locale de chaîne de blocs pour tester votre dapp. Cela permet une itération beaucoup plus rapide qu'un réseau de test public.
 
-Il existe des projets et des outils dédiés pour vous y aider. Apprenez-en plus sur les [réseaux de développement](/developers/docs/development-networks/).
+Il existe des projets et des outils dédiés pour vous y aider. En savoir plus sur les [réseaux de développement](/developers/docs/development-networks/).
 
 ### Réseaux de consortium {#consortium-networks}
 
@@ -189,7 +194,7 @@ De nombreux réseaux de test Ethereum portent le nom de stations de métro ou de
 - **Sepolia** - Un quartier relié au métro à Athènes, en Grèce. Actuellement utilisé pour les tests de contrats intelligents et de dapps.
 - **Hoodi** - Nommé d'après la station de métro Hoodi à Bengaluru, en Inde. Utilisé pour les tests de validateurs et de mises à niveau du protocole.
 - **Goerli** _(obsolète)_ - Nommé d'après la Görlitzer Bahnhof à Berlin, en Allemagne.
-- **Rinkeby** _(obsolète)_ - Nommé d'après une banlieue de Stockholm dotée d'une station de métro.
+- **Rinkeby** _(obsolète)_ - Nommé d'après une banlieue de Stockholm avec une station de métro.
 - **Ropsten** _(obsolète)_ - Fait référence à une zone et à un ancien terminal de ferry/métro à Stockholm.
 - **Kovan** _(obsolète)_ - Nommé d'après une station de MRT de Singapour.
 - **Morden** _(obsolète)_ - Nommé d'après une station du métro de Londres. Le premier réseau de test public d'Ethereum.

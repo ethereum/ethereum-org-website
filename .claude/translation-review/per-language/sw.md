@@ -79,3 +79,96 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `madaraja` for "classes" collides with `madaraja` = bridges in the same file.
 - `au kuendelea` ("or continues") for "or moves on" -- near-opposite.
 - Glossary entries wanted for `custodial`/`locally`/`derivatives` (`viingilio` = "entrance fees" is tree-established but semantically wrong).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/sw/page-apps.json`. 3 critical, 20 warnings. Brand 8/10 | Technical 6/10 | Semantic 6/10 | Consistency 7/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: sw affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (sw-specific):**
+
+- cryptographic `"salt"` rendered `chumvi`, the edible kind -> restored to English `"salt"` per PR #18942's decision; no glossary entry exists and English scare-quotes it as a coinage
+- "manual" rendered `mwongozo` (= *a guide*) at 16 sites, worst at "difficult to carry out **by guide**" -> `mikono`. The 5 plural `miongozo` ("guidelines") and 3 capitalized `Mwongozo` link labels were deliberately left; the strings share no substring so no match was possible
+
+**Notes:**
+
+- The report claimed the missing trailing newline would fail Prettier. It would not: `format` covers only `js/jsx/ts/tsx`, lint-staged runs prettier on the same set, `lint:md` excludes translations, and ci.yml has no prettier job.
+- `mteja wa Ethereum` at `accounts/index.md:79` is glossary-sanctioned per PR #19115. Do not sweep it to `kiteja`.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- open-access `wakala wa kifedha` (agent/broker, inverts "financial agency") -> `uhuru wa kujiamulia kifedha` (native check welcome).
+- learn-quizzes staking pool `makusanyiko` -> `mabwawa`; page-resources `shughuli za mtumiaji` -> `operesheni za mtumiaji`; fusaka:256 `Waundaji` -> `Wajenzi` (regression).
+
+**Open (warnings):**
+
+- stealth-addr swapped all 21 `kitendaji` for `fomula` -- revert recommended (tree 164:47).
+- Bare `mteja` for software client recurs in new sentences; glamsterdam:20 `Blobs` kept Latin in quoted track name.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` stealth address `Anwani za siri` -> `Anwani fiche`; smart account `Akaunti mahiri` -> `Akaunti janja`; `enterprise-l2s` `kificho` -> `kriptografia`.
+
+**Open (warnings):**
+
+- client rendered as customer (`Wateja`, `Mteja`) recurs; needs glossary ruling (execution client = kiteja, consensus client = mteja conflict).
+- enterprise and business pathway titles collide (`Ethereum kwa biashara`).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.0/10
+
+- Fixed: brand `Chain Platform` translated as `Jukwaa la Chain` (L54, L83).
+- Open: "development" `maendeleo` -> `usanidi` (reads as configure/setup), needs native check; "scaling" `kuongeza ukubwa` weaker than dev `kuongeza uwezo`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:828 at most -> at least inversion (`ni angalau dakika moja` -> `si zaidi ya dakika moja`)
+- app-plasma:1186 call = phone call (`Piga simu kwa mkataba wa mhakiki` -> `Ita mkataba wa mhakiki`)
+- page-wallet-descriptions.json:39 multicall = many phones (`simu nyingi (multicall)` -> `miito mingi (multicall)`)
+- app-plasma:115 glossary hyphen (`Sifuri maarifa ya mikono` -> `Sifuri-maarifa ya mikono`)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:33: ETHGlossary `blockchain` = `mnyororo wa vitalu`. `minyororo ya kuzuia` means "chains of blocking/preventing" (trust-wallet) (`minyororo mingi ya kuzuia` -> `minyororo mingi ya vitalu`)
+- page-wallet-descriptions.json:35: Same `blockchain` deviation (gem-wallet) (`minyororo mingi ya kuzuia` -> `minyororo mingi ya vitalu`)
+- page-wallet-descriptions.json:42: Same `blockchain` deviation (edge-wallet) (`minyororo ya kuzuia` -> `minyororo ya vitalu`)
+- page-wallet-descriptions.json:23: ETHGlossary `private key` = `ufunguo wa siri` (ledger) (`funguo zako za faragha` -> `funguo zako za siri`)
+- developers/tutorials/app-plasma/index.md:1186: ETHGlossary `revert` = `tengua`. `hurejesha` reads as "returns" (`hurejesha muamala` -> `hutengua muamala`)
+- developers/tutorials/app-plasma/index.md:22: ETHGlossary `Merkle proof` = `ushahidi wa Merkle` (37 site uses vs 3 of this form) (`kutoa uthibitisho wa Merkle` -> `kutoa ushahidi wa Merkle`)
+- 19 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The new prediction-markets, founders and wallet-description content reads fluently and follows the glossary for brands. The app-plasma retranslation made one meaning reversal and a "phone call" regression, and the wallet descriptions brought in a wrong blockchain term; these need fixing before merge.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `kizuizi` (obstacle) changed to `kitalu` (block) (mint:142)
+
+**Notes:**
+
+- Warnings (heaviest drift): `simu` (phone call) used for RPC calls; `iliyokufuliwa` should be `iliyofuliwa`; private key / metadata / blockchain / function terms differ between files.

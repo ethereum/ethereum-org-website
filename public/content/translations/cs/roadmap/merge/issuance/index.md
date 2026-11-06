@@ -84,7 +84,7 @@ S tím, jak bude vybírat více validátorů, se maximální počet vystupujíc�
 
 ### Rozbor inflace po Merge {#post-merge-inflation-breakdown}
 
-- [Celková nabídka ETH](/eth/supply/): **\~120 520 000 ETH** (v době Merge v září 2022)
+- [Celková nabídka ETH](/what-is-ether/supply/): **\~120 520 000 ETH** (v době Merge v září 2022)
 - Emise na exekuční vrstvě: **0**
 - Emise na vrstvě konsensu: Stejná jako výše, **\~0,52 %** anualizovaná míra emise (při celkovém počtu 14 milionů stakovaných ETH)
 

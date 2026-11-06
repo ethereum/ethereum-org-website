@@ -47,7 +47,7 @@ Một hợp đồng thông minh là mã tồn tại trên Chuỗi khối Ethereu
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Các công cụ để tạo ứng dụng phi tập trung (dapp)
+## Các công cụ để tạo ứng dụng phi tập trung (dapp) {#dapp-tools}
 **Scaffold-ETH 2 _- Nhanh chóng thử nghiệm với Solidity bằng cách sử dụng một frontend thích ứng với hợp đồng thông minh của bạn._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)

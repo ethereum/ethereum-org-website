@@ -18,7 +18,7 @@ Soma zaidi kwa maelezo ya kina...
 
 ### Tuzo {#rewards-2}
 
-Wathibitishaji hupokea tuzo wanapopiga kura zinazoendana na wingi wa wathibitishaji wengine, wanapopendekeza vitalu, na wanaposhiriki katika kamati za usawazishaji. Thamani ya tuzo katika kila kipindi hukokotolewa kutoka kwenye `base_reward`. Hiki ni kipimo cha msingi ambacho tuzo nyingine hukokotolewa kutoka kwacho. `base_reward` inawakilisha wastani wa tuzo inayopokelewa na mthibitishaji chini ya hali bora kwa kila kipindi. Hii inakokotolewa kutoka kwenye salio tendaji la mthibitishaji na jumla ya idadi ya wathibitishaji wanaofanya kazi kama ifuatavyo:
+Wathibitishaji hupokea tuzo wanapopiga kura zinazoendana na wingi wa wathibitishaji wengine, wanapopendekeza vitalu, na wanaposhiriki katika kamati za usawazishaji. Thamani ya tuzo katika kila kipindi hukokotolewa kutoka kwenye `base_reward`. Hiki ni kipimo cha msingi ambacho tuzo nyingine hukokotolewa kutoka kwacho. `base_reward` inawakilisha wastani wa tuzo anayopokea mthibitishaji chini ya hali bora kwa kila kipindi. Hii inakokotolewa kutoka kwenye salio tendaji la mthibitishaji na jumla ya idadi ya wathibitishaji wanaofanya kazi kama ifuatavyo:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -26,11 +26,11 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 ambapo `base_reward_factor` ni 64, `base_rewards_per_epoch` ni 4 na `sum(active balance)` ni jumla ya Etha iliyowekwa dhamana kwa wathibitishaji wote wanaofanya kazi.
 
-Hii inamaanisha tuzo ya msingi inawiana na salio tendaji la mthibitishaji na inawiana kinyume na idadi ya wathibitishaji kwenye mtandao. Kadiri wathibitishaji wanavyokuwa wengi, ndivyo utoaji wa jumla unavyokuwa mkubwa (kama `sqrt(N)` lakini `base_reward` inakuwa ndogo kwa kila mthibitishaji (kama `1/sqrt(N)`). Sababu hizi huathiri APR kwa nodi ya uwekaji dhamana. Soma mantiki ya hili katika [madokezo ya Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+Hii inamaanisha kuwa tuzo ya msingi inawiana na salio tendaji la mthibitishaji na inawiana kinyume na idadi ya wathibitishaji kwenye mtandao. Kadiri wathibitishaji wanavyokuwa wengi, ndivyo utoaji wa jumla unavyokuwa mkubwa (kama `sqrt(N)`) lakini `base_reward` kwa kila mthibitishaji inakuwa ndogo (kama `1/sqrt(N)`). Sababu hizi huathiri APR kwa nodi inayoweka dhamana. Soma mantiki ya hili katika [vidokezo vya Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
 Jumla ya tuzo kisha inakokotolewa kama jumla ya vipengele vitano ambavyo kila kimoja kina uzito unaoamua ni kiasi gani kila kipengele kinaongeza kwenye jumla ya tuzo. Vipengele hivyo ni:
 
-```
+```text
 1. kura ya chanzo: mthibitishaji amepiga kura kwa wakati kwa kituo sahihi cha ukaguzi cha chanzo
 2. kura ya lengo: mthibitishaji amepiga kura kwa wakati kwa kituo sahihi cha ukaguzi cha lengo
 3. kura ya kichwa: mthibitishaji amepiga kura kwa wakati kwa kitalu sahihi cha kichwa
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-Uzito huu unajumlishwa kuwa 64. Tuzo inakokotolewa kama jumla ya uzito unaotumika ikigawanywa kwa 64. Mthibitishaji ambaye amepiga kura za chanzo, lengo na kichwa kwa wakati, akapendekeza kitalu na kushiriki katika kamati ya usawazishaji anaweza kupokea `64/64 * base_reward == base_reward`. Hata hivyo, mthibitishaji kwa kawaida si mpendekezaji wa bloku, kwa hivyo tuzo yao ya juu zaidi ni `64-8 /64 * base_reward == 7/8 * base_reward`. Wathibitishaji ambao si wapendekezaji wa bloku wala hawapo kwenye kamati ya usawazishaji wanaweza kupokea `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+Jumla ya uzito huu ni 64. Tuzo inakokotolewa kama jumla ya uzito unaotumika ikigawanywa kwa 64. Mthibitishaji ambaye amepiga kura za chanzo, lengo na kichwa kwa wakati, akapendekeza kitalu na kushiriki katika kamati ya usawazishaji anaweza kupokea `64/64 * base_reward == base_reward`. Hata hivyo, kwa kawaida mthibitishaji si mpendekezaji wa bloku, kwa hivyo tuzo yao ya juu zaidi ni `64-8 /64 * base_reward == 7/8 * base_reward`. Wathibitishaji ambao si wapendekezaji wa bloku wala hawapo kwenye kamati ya usawazishaji wanaweza kupokea `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-Tuzo ya ziada inaongezwa ili kuhamasisha uthibitisho wa haraka. Hii ni `inclusion_delay_reward`. Hii ina thamani sawa na `base_reward` ikizidishwa na `1/delay` ambapo `delay` ni idadi ya sloti zinazotenganisha pendekezo la kitalu na uthibitisho. Kwa mfano, ikiwa uthibitisho unawasilishwa ndani ya sloti moja ya pendekezo la kitalu, mtoa uthibitisho anapokea `base_reward * 1/1 == base_reward`. Ikiwa uthibitisho utafika katika sloti inayofuata, mtoa uthibitisho anapokea `base_reward * 1/2` na kadhalika.
+Tuzo ya ziada inaongezwa ili kuhamasisha uthibitisho wa haraka. Hii ni `inclusion_delay_reward`. Hii ina thamani sawa na `base_reward` ikizidishwa kwa `1/delay` ambapo `delay` ni idadi ya sloti zinazotenganisha pendekezo la kitalu na uthibitisho. Kwa mfano, ikiwa uthibitisho utawasilishwa ndani ya sloti moja ya pendekezo la kitalu, mtoa uthibitisho anapokea `base_reward * 1/1 == base_reward`. Ikiwa uthibitisho utafika katika sloti inayofuata, mtoa uthibitisho anapokea `base_reward * 1/2` na kuendelea.
 
-Wapendekezaji wa bloku hupokea `8 / 64 * base_reward` kwa **kila uthibitisho halali** uliojumuishwa kwenye kitalu, kwa hivyo thamani halisi ya tuzo inaongezeka kulingana na idadi ya wathibitishaji wanaotoa uthibitisho. Wapendekezaji wa bloku wanaweza pia kuongeza tuzo yao kwa kujumuisha ushahidi wa utovu wa nidhamu wa wathibitishaji wengine katika kitalu chao kilichopendekezwa. Tuzo hizi ni "vivutio" vinavyohamasisha uaminifu wa mthibitishaji. Mpendekezaji wa bloku anayejumuisha ukataji atatuzwa kwa `slashed_validators_effective_balance / 512`.
+Wapendekezaji wa bloku hupokea `8 / 64 * base_reward` kwa **kila uthibitisho halali** uliojumuishwa kwenye kitalu, kwa hivyo thamani halisi ya tuzo huongezeka kulingana na idadi ya wathibitishaji wanaotoa uthibitisho. Wapendekezaji wa bloku wanaweza pia kuongeza tuzo yao kwa kujumuisha ushahidi wa tabia mbaya ya wathibitishaji wengine katika kitalu chao kilichopendekezwa. Tuzo hizi ni "vivutio" vinavyohamasisha uaminifu wa mthibitishaji. Mpendekezaji wa bloku anayejumuisha ukataji atatuzwa kwa `slashed_validators_effective_balance / 512`.
 
 ### Adhabu {#penalties}
 

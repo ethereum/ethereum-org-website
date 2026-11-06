@@ -12,10 +12,15 @@ import {
   MAX_BATCHES_PER_FILE,
   MAX_CHUNK_BYTES,
   MAX_CONTEXT_BYTES,
-  MAX_PROMPT_BYTES,
+  MAX_PLANNED_PROMPT_BYTES,
   MIN_CONTENT_BUDGET_BYTES,
 } from "../../constants"
 
+import {
+  type CodeBlock,
+  extractCodeFencesOnly,
+  extractComments,
+} from "./code-block-extractor"
 import { createFileBudget, type FileBudget } from "./cost-meter"
 import {
   batchSections,
@@ -25,11 +30,13 @@ import {
   extractSections,
   sectionWireBytes,
 } from "./incremental-translate"
+import { buildCommentPrompt } from "./prompt-builder"
 
 export interface PlannedBatch {
   prompt: string
   bytes: number
-  translateCount: number
+  /** Section ids this batch asks for; the parser requires all of them back. */
+  translateIds: string[]
   /**
    * Carries one section already past the content budget, so no smaller call
    * exists and the per-call ceiling does not apply.
@@ -53,6 +60,19 @@ export interface IncrementalPlan {
   budget: FileBudget
   overBudget: boolean
   tooManyBatches: boolean
+  /**
+   * Code fences lifted out of each TRANSLATE section, keyed by section id.
+   * The caller must restore these into the model's reply; the planner does the
+   * extraction because the prompt bytes it measures are the post-extraction
+   * ones.
+   */
+  codeBlocks: Map<string, CodeBlock[]>
+  /**
+   * Prompt bytes for the separate code-comment call, 0 when the lifted fences
+   * hold no comments. Rendered from the real prompt and counted in
+   * projectedBytes, because that call is money too.
+   */
+  commentPromptBytes: number
 }
 
 export interface PlanOptions {
@@ -93,6 +113,22 @@ export function planIncrementalBatches(
     extract(localeContent),
     sectionIds
   )
+
+  // Lift code fences out before anything measures or sends a section. The
+  // incremental path used to send section bodies completely raw, so a
+  // `solidity` fence reached the model with nothing marking it as code -- and
+  // this is the path nearly every file takes. Prose-tagged fences stay inline;
+  // JSON sections hold string values, never fences.
+  const codeBlocks = new Map<string, CodeBlock[]>()
+  if (fileType === "markdown") {
+    for (const section of sectionList) {
+      const { prose, blocks } = extractCodeFencesOnly(section.content || "")
+      if (blocks.length === 0) continue
+      section.content = prose
+      // CONTEXT sections are never returned, so nothing restores into them.
+      if (section.action === "TRANSLATE") codeBlocks.set(section.id, blocks)
+    }
+  }
 
   const translateSections = sectionList.filter((s) => s.action === "TRANSLATE")
   if (translateSections.length === 0) return null
@@ -140,9 +176,9 @@ export function planIncrementalBatches(
       return {
         prompt,
         bytes,
-        translateCount: translate.length,
+        translateIds: translate.map((t) => t.id),
         irreducible,
-        overCeiling: !irreducible && bytes > MAX_PROMPT_BYTES,
+        overCeiling: !irreducible && bytes > MAX_PLANNED_PROMPT_BYTES,
       }
     })
   }
@@ -161,7 +197,7 @@ export function planIncrementalBatches(
     )
     contentBudget = Math.max(
       MIN_CONTENT_BUDGET_BYTES,
-      contentBudget - (worst - MAX_PROMPT_BYTES) - 1024
+      contentBudget - (worst - MAX_PLANNED_PROMPT_BYTES) - 1024
     )
     planned = buildPlan(contentBudget)
     if (contentBudget <= MIN_CONTENT_BUDGET_BYTES) break
@@ -185,7 +221,7 @@ export function planIncrementalBatches(
   if (planned.some((b) => b.overCeiling)) {
     throw new Error(
       `[cost-guard] ${filePath} (${locale}): cannot fit batches under the ` +
-        `${MAX_PROMPT_BYTES.toLocaleString("en-US")}-byte per-call ceiling. Prompt overhead is ` +
+        `${MAX_PLANNED_PROMPT_BYTES.toLocaleString("en-US")}-byte planning ceiling. Prompt overhead is ` +
         `${overheadBytes.toLocaleString("en-US")} bytes (rules + ${glossaryTerms.size} glossary terms) ` +
         `and context is capped at ${MAX_CONTEXT_BYTES.toLocaleString("en-US")}. Refusing to send.`
     )
@@ -207,8 +243,30 @@ export function planIncrementalBatches(
     (sum, s) => sum + Buffer.byteLength(s.content || "", "utf-8"),
     0
   )
+  // Comments inside the lifted fences are still translated, in one small call
+  // of their own (`translateFenceComments`). Render it here so the projection
+  // covers every request the task will make.
+  const fenceComments = [...codeBlocks.values()]
+    .flat()
+    .flatMap((b) =>
+      extractComments(b.content, b.language).comments.map((c) => c.text)
+    )
+    .filter((text) => text.trim())
+  const commentPromptBytes =
+    fenceComments.length === 0
+      ? 0
+      : Buffer.byteLength(
+          buildCommentPrompt({
+            comments: fenceComments,
+            languageName,
+            glossaryTerms,
+          }),
+          "utf-8"
+        )
+
   const budget = createFileBudget(`${filePath} (${locale})`, translatableBytes)
-  const projectedBytes = planned.reduce((sum, p) => sum + p.bytes, 0)
+  const projectedBytes =
+    planned.reduce((sum, p) => sum + p.bytes, 0) + commentPromptBytes
 
   return {
     batches: planned,
@@ -220,6 +278,8 @@ export function planIncrementalBatches(
     budget,
     overBudget: projectedBytes > budget.limitBytes,
     tooManyBatches: planned.length > MAX_BATCHES_PER_FILE,
+    codeBlocks,
+    commentPromptBytes,
   }
 }
 

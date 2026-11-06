@@ -1,6 +1,6 @@
 ---
-title: التفاعل مع العقود الذكية
-description: تعلم كيفية القراءة من والكتابة إلى العقود الذكية المنشورة بالفعل على إيثيريوم.
+title: "التفاعل مع العقود الذكية"
+description: "تعلم كيفية القراءة من والكتابة إلى العقود الذكية المنشورة بالفعل على إيثيريوم."
 lang: ar
 ---
 
@@ -82,7 +82,7 @@ lang: ar
 
 - **[ethers.js](https://docs.ethers.org/)** - تعمل أيضًا في Node.js للبرامج النصية والروبوتات من جانب الخادم
 - **[web3.py](https://web3py.readthedocs.io/)** - مكتبة Python للتفاعل مع إيثيريوم
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - مكتبة Go الرسمية من فريق جو إيثريوم (geth)
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - مكتبة Go الرسمية من فريق جو إيثريوم (geth)
 
 ### مثال: قراءة رصيد رمز مميز باستخدام Viem {#example-viem}
 

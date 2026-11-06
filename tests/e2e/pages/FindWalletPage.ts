@@ -5,7 +5,7 @@ import { testData } from "../fixtures/testData"
 import { BasePage } from "./BasePage"
 
 export class FindWalletPage extends BasePage {
-  private readonly url = "/wallets/find-wallet"
+  private readonly url = "/wallets/find-wallet/"
 
   private readonly pageHeading: Locator
   // The "/ total" keeps this from matching a persona card's "… available".
@@ -47,9 +47,19 @@ export class FindWalletPage extends BasePage {
     return (await this.parseResultsCounter()).total
   }
 
-  async openPersona(personaSlug: string) {
-    await this.page.locator(`a[href*="/personas/${personaSlug}/"]`).click()
-    await this.assertUrlMatches(new RegExp(`/personas/${personaSlug}/?$`))
+  /** Clicks the card's label; the real checkbox is visually hidden. */
+  async togglePersona(title: string) {
+    await this.page
+      .getByTestId("persona-cards-container")
+      .locator("label")
+      .filter({ hasText: new RegExp(`^${title} \\(`) })
+      .click()
+  }
+
+  personaCheckbox(title: string): Locator {
+    return this.page
+      .getByTestId("persona-cards-container")
+      .getByRole("checkbox", { name: new RegExp(`^${title}\\b`) })
   }
 
   /**
@@ -77,6 +87,12 @@ export class FindWalletPage extends BasePage {
       await group.click()
     }
     await this.clickFilterOption(/^Advanced filters/, label)
+  }
+
+  /** The sidebar header's reset; lives inside the filter sheet below lg. */
+  async resetFilters() {
+    await this.openFiltersIfCollapsed()
+    await this.page.getByRole("button", { name: "Reset", exact: true }).click()
   }
 
   /**

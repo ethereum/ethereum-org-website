@@ -1,9 +1,12 @@
 import { memo } from "react"
+import { useLocale } from "next-intl"
 
 import { ChainName } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import Tooltip from "@/components/Tooltip"
+
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { appOnlyNetworks } from "@/data/networks/app-networks"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
@@ -30,6 +33,8 @@ interface ChainImagesProps {
    * hover/open) and the default tooltip would blend in.
    */
   nested?: boolean
+  /** Icons shown before collapsing the rest into a "+N" tooltip. */
+  max?: number
 }
 
 const ChainImages = ({
@@ -37,8 +42,18 @@ const ChainImages = ({
   size = 24,
   className = "",
   nested,
+  max = Infinity,
 }: ChainImagesProps) => {
-  const filteredChains = getRenderableChains(chains)
+  const locale = useLocale()
+  const renderable = getRenderableChains(chains)
+  const filteredChains = renderable.slice(0, max)
+  const hiddenNames = renderable
+    .slice(max)
+    .map(
+      (chain) =>
+        networkData.find((network) => network.chainName === chain)?.name ??
+        chain
+    )
 
   return (
     <div className={`flex flex-row ${className}`}>
@@ -73,6 +88,13 @@ const ChainImages = ({
           </div>
         )
       })}
+      {hiddenNames.length > 0 && (
+        <Tooltip content={hiddenNames.join(", ")} nested={nested}>
+          <span className="ms-1 text-sm leading-none text-body-medium">
+            <bdi>+{numberFormat(locale).format(hiddenNames.length)}</bdi>
+          </span>
+        </Tooltip>
+      )}
     </div>
   )
 }

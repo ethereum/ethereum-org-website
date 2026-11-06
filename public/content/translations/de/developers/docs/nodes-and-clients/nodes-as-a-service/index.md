@@ -209,7 +209,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Zugang zu 50+ Blockchain-Knoten
 
 - [**Infura**](https://infura.io/)
-  - [Dokumentation](https://infura.io/docs)
+  - [Dokumentation](https://docs.infura.io/)
   - Funktionen
     - Kostenlose Tarifoption
     - Skalierung nach Bedarf

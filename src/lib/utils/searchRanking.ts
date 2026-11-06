@@ -9,7 +9,7 @@
  *
  * Depth stands in for generality. A page one level below a topic is still about that
  * topic; three levels down it is about a detail of it. Flattening everything below the
- * root into one bucket made `/eth/supply` and `/roadmap/merge/issuance` indistinguishable
+ * root into one bucket made `/what-is-ether/supply` and `/roadmap/merge/issuance` indistinguishable
  * on a query about ETH issuance, where the shallower page is plainly the better answer.
  *
  * Split from `metadata.ts` so the policy can be tested directly -- it is expected to be

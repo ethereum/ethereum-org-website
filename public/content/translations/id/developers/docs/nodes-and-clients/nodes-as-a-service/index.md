@@ -209,7 +209,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Akses ke 50+ node rantai blok
 
 - [**Infura**](https://infura.io/)
-  - [Dokumentasi](https://infura.io/docs)
+  - [Dokumentasi](https://docs.infura.io/)
   - Fitur
     - Opsi tingkat gratis
     - Skalakan sesuai kebutuhan Anda

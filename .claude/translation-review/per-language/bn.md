@@ -86,3 +86,95 @@ Form is **derived, not established**: Gemini 3.1 Pro asserted "Established. Tech
 **Notes:**
 
 - Western numerals are correct here: 6.1 explicitly carves out UI elements from the native-Bengali-numerals-in-prose rule, and 7.5 says default conservative when the surface is ambiguous. The tree agrees (`src/intl/bn` is 4654 Western vs 225 native).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.2/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/bn/page-apps.json`. 8 critical, 15 warnings. Brand 9/10 | Technical 8/10 | Semantic 9/10 | Consistency 7/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: bn affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: not affected.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (bn-specific):**
+
+- `dapp` / `dApp` -> Latin per ETHGlossary, 3 sites including one link text
+
+**Deliberately not fixed:**
+
+- `কেক্যাক-২৫৬` / `লেয়ার ২` numeral conflict (issue #53), unresolved between the bn entry and the cross-cutting rule
+
+**Notes:**
+
+- A single-file `গুলো` -> `গুলি` dialect flip and an English `-s` plural on `অ্যাপ` in `page-apps.json` point the same direction as the acronym expansion; worth watching next run.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.4/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- privacy-online `vpn-relay-description` "hundreds of millions" -> `কয়েকশো মিলিয়ন` (was `কয়েক মিলিয়ন`).
+- learn-quizzes `proof-of-stake-3-d-explanation` broken negation `পারে কক্ষনো না` -> `পারে না` (same family as `থাকেবিধা নেই`).
+
+**Open (warnings):**
+
+- `roadmap/privacy:120` `জিরো-নলেজ প্রুফগুলো` (alias) replaced compound `শূন্য-জ্ঞান প্রমাণ`.
+- "both" dropped in Tor/Relay keys (#82); "time served" `পরিবেশন করা সময়`.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` `problems-fragility-description` database corruption rendered as bribery `দুর্নীতি` -> `নষ্ট হয়ে যাওয়া`.
+
+**Open (warnings):**
+
+- Visa/J.P. Morgan script switches between files; `আরবিট্রাম One` hybrid; `অনুমান` for speculation; `-গুলি`/`-গুলো` split across files.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: stray U+2066/U+2069 isolates around `ETH` in description (LTR page).
+- Open: `deprecated` -> `অবচয়িত` (depreciation sense) vs dev `বাতিলকৃত`, needs native check; bare "EVM networks" expanded (#80).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.1/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:1216 dropped link (`ডেটার জন্য অনুরোধ করা হলে ভুল তথ্য` -> `ডেটার জন্য [অনুরোধ করা হলে](https://github.com/qbz`)
+- app-plasma:966 Solidity always_latin (`সলিডিটি যাচাইকারী (solidity verifier)` -> `Solidity যাচাইকারী`)
+- app-plasma:200 ETH always_latin (`মিলি-ইটিএইচ` -> `milliETH`)
+- app-plasma:558 ETH always_latin (`ইটিএইচ এর` -> `ETH-এর`)
+
+**Open (native call needed):**
+
+- developers/tutorials/app-plasma/index.md:294: The text uses a hybrid of the bare "zero-knowledge" entry and a translated head noun. The glossary has a compound entry: `zk-proof` is `শূন্য-জ্ঞান প্রমাণ` (translate, confidence high). The rest of th (`জিরো-নলেজ প্রমাণের অংশ` -> `শূন্য-জ্ঞান প্রমাণের অংশ`)
+- developers/tutorials/app-plasma/index.md:296: Same zk-proof hybrid, 3 occurrences on this line. Replace all of them. Flag for a human. (`জিরো-নলেজ প্রমাণের` -> `শূন্য-জ্ঞান প্রমাণের`)
+- developers/tutorials/app-plasma/index.md:738: Same zk-proof hybrid. Flag for a human. (`জিরো-নলেজ প্রমাণের ভেতরে` -> `শূন্য-জ্ঞান প্রমাণের ভেতরে`)
+- developers/tutorials/scam-token-tricks/index.md:462: DeFi is transliterated as a hybrid that is not in the glossary. The `decentralized-finance-defi` entry is "translate", and its ui/tag form is `DeFi` with note "Acronym preferred in all contexts". dev  (`ডিফাই (DeFi)` -> `DeFi`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Good fluency overall, with the prediction-markets rewrite reading well. The defects are concentrated in the full app-plasma retranslation, which regressed wording that was correct on dev, and in three founders tags that shipped in English after the key rename.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `transactions` concept tag restored to `ট্রানজ্যাকশন`; literal `\n` at the end of the description removed (sending)
+
+**Notes:**
+
+- Warnings: doubled ABI expansion (mint:38); `[Ethers plugin]` left untranslated; native and Western numerals mixed in part references. Glossary returns `(weth)` lowercase (#95).

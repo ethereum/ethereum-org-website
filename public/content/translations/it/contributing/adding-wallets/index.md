@@ -58,7 +58,7 @@ I portafogli cambiano rapidamente su Ethereum. Abbiamo cercato di creare un quad
 
 ## Aggiungere un portafoglio {#adding-a-wallet}
 
-Se vuoi aggiungere un portafoglio su ethereum.org, crea una issue su GitHub.
+Se desideri aggiungere un portafoglio su ethereum.org, crea una issue su GitHub. La descrizione del portafoglio che fornisci nella issue viene mostrata nella pagina del portafoglio, quindi limitati a una o due frasi oggettive.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Crea una issue

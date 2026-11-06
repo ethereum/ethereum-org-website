@@ -22,10 +22,19 @@ tags:
   - "mdx"
 discovered_at: "2026-03-17"
 discovered_in: "PR #17722"
-status: "open"
+status: "resolved"
 ---
 
 # Async Server Components in MDX Pages Cause 404s on Netlify
+
+## Resolution
+
+Fixed two ways, depending on the route. Check which applies before treating this as a live risk:
+
+- **Catch-all MDX pages (`[...slug]`)** stay fully static. Embedded components read `revalidate: false` getters (`getStaticAppsData`, `getStaticDeveloperToolsData` in `src/lib/data/index.ts`), so the page never enters ISR.
+- **TSX hub routes that read `public/content` at render time** (`[locale]`, `[locale]/latest`, `[locale]/developers`) can use ISR safely. `outputFileTracingIncludes` in `next.config.js` (commit `99988f89bb`) bundles the markdown they read into the Netlify function. Verified on prod in Oct 2026: `/developers` regenerates after deploys with its blog posts intact.
+
+A new hub route that reads `public/content` and uses a revalidating getter needs its own `outputFileTracingIncludes` entry. The sections below describe the original problem.
 
 ## Problem
 

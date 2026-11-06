@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/quarkid-south-america-ssi/index.md",
   "generatedAt": "2026-07-29T05:54:06.897Z",
-  "rootHash": "4f7436bea17c",
+  "rootHash": "8a3a1c5af538",
   "tree": {
-    "contentHash": "6aebaf46b5da",
-    "anchorHash": "0c95cdb76d35",
+    "contentHash": "90a8835807f2",
+    "anchorHash": "6c4f28a35cb4",
     "children": {
       "frontmatter:title": {
-        "contentHash": "51854963e291",
+        "contentHash": "9bede19b77d7",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "3842a47272e9",
+        "contentHash": "adb09832b88c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "3434ade8a939"
+        "anchorHash": "3ece7d4b7501"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "8baaf7030c39"
+        "anchorHash": "a89df9d14fdb"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "3f162a661afb"
+        "anchorHash": "c46640ff525e"
       }
     },
     "childrenOrder": [

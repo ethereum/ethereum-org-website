@@ -84,7 +84,7 @@ Aproximadamente 0,33% da contagem total de validadores pode fazer a saída em um
 
 ### Detalhamento da inflação pós-merge {#post-merge-inflation-breakdown}
 
-- [Oferta total de ETH](/eth/supply/): **\~120.520.000 ETH** (no momento do The Merge em setembro de 2022)
+- [Oferta total de ETH](/what-is-ether/supply/): **\~120.520.000 ETH** (no momento do The Merge em setembro de 2022)
 - Emissão na camada de execução: **0**
 - Emissão na camada de consenso: Igual ao acima, taxa de emissão anualizada de **\~0,52%** (com 14 milhões de ETH em stake no total)
 

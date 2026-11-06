@@ -152,7 +152,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 
 ## SEO & Meta
 
-- Sitemap generation in `app/sitemap.ts`
+- Sitemap generation in `app/sitemaps/sitemap.ts` (one sitemap per locale, indexed by `app/sitemap.xml/route.ts`)
 - Meta tags and Open Graph optimization
 - Structured data for search engines
 - Security headers (X-Frame-Options: DENY)
@@ -169,7 +169,7 @@ For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `i
 6. **Consider i18n** - All user-facing text should be translatable. Server components: `getTranslations` and `getLocale` from `next-intl/server`. Client components: `useTranslations` from `next-intl`, one namespace-bound function per namespace - to access a second namespace, bind another function (e.g. `const tCommon = useTranslations("common")`) rather than reaching across namespaces
 7. **Mobile-first** - Design for mobile, enhance for desktop
 8. **Accessibility** - Use Radix primitives, semantic HTML
-9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
+9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `formatDateTime()` / `formatDate()` from `src/lib/utils/date.ts` (built on `dateTimeFormat()`, pinned to UTC and whitespace-normalized so SSR and client agree) instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
 
 ### Component Development
 
@@ -264,11 +264,23 @@ Key gotcha: **variants are matched by array index, not names** — the `variants
 
 Full guide (architecture, step-by-step recipe, env vars): `docs/ab-testing.md`. Code: `proxy.ts`, `src/lib/ab-testing/`, `src/components/AB/`, `app/[locale]/ab-code/`.
 
+## Site Search
+
+Search runs on a self-hosted Typesense instance, one collection per locale, crawled by DocSearch from production ethereum.org. Publishing is gated: a crawl goes to a staging collection and the live alias only moves if the new index passes size, field and relevance checks.
+
+Two things bite most often. **Ranking hints reach the index as `docsearch:*` meta tags** from `src/lib/utils/metadata.ts`, so a ranking change does nothing until the site is deployed and re-crawled. And **the networks offered as block explorer results come from `src/data/networks/networks.ts`** -- the same list `/layer-2/networks` renders -- so adding an L2 there is the only edit needed.
+
+Overview: `docs/site-search.md`. Runbook, secrets and recovery: `typesense/README.md`. Code: `src/components/Search/`, `src/scripts/typesense/`, `typesense/`.
+
 ## Deployment
 
 - **Platform**: Netlify (config in `netlify.toml`)
 - **Next.js Integration**: Uses `@netlify/plugin-nextjs` for seamless Netlify and Next.js compatibility
 - **Monitoring**: Matomo analytics integration
+
+### Runtime constraints
+
+- **`public/content` is not in the Netlify server function** (CDN-only). A page that reads it at render time must stay static (`revalidate: false` getters like `getStaticAppsData`) or have an `outputFileTracingIncludes` entry in `next.config.js`. A finite-`revalidate` getter (e.g. `getEventsData`, 24h) turns the whole route into ISR. Details: `docs/solutions/integration-issues/netlify-isr-404-async-server-components.md`.
 
 ## Internal Infrastructure
 

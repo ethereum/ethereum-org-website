@@ -29,7 +29,7 @@ Voici quelques-uns des standards de jetons les plus populaires sur Ethereum :
 
 La liste complète des propositions [ERC](https://eips.ethereum.org/erc).
 
-## Lectures complémentaires
+## Lectures complémentaires {#further-reading}
 
 _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette page et ajoutez-la !_
 

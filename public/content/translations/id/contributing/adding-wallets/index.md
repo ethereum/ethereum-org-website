@@ -58,7 +58,7 @@ Dompet berubah dengan cepat di Ethereum. Kami telah mencoba membuat kerangka ker
 
 ## Menambahkan dompet {#adding-a-wallet}
 
-Jika Anda ingin menambahkan dompet ke ethereum.org, buatlah sebuah isu di GitHub.
+Jika Anda ingin menambahkan dompet ke ethereum.org, buat isu di GitHub. Deskripsi dompet yang Anda berikan di isu tersebut akan ditampilkan di halaman dompet, jadi pastikan hanya terdiri dari satu atau dua kalimat faktual.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Buat isu

@@ -5,7 +5,7 @@ description: Erfahre mehr über 7702 im Pectra-Release
 lang: de
 ---
 
-## Zusammenfassung
+## Zusammenfassung {#abstract}
 
 EIP-7702 definiert einen Mechanismus, um einem EOA Code hinzuzufügen. Dieser Vorschlag ermöglicht es EOAs, den alten Ethereum-Konten, kurzfristige Funktionsverbesserungen zu erhalten, was die Benutzerfreundlichkeit von Anwendungen erhöht. Dies geschieht durch das Setzen eines Zeigers auf bereits bereitgestellten Code mithilfe eines neuen Transaktionstyps: 4.
 
@@ -23,7 +23,7 @@ Dieser neue Transaktionstyp führt eine Autorisierungsliste ein. Jedes Autorisie
 Eine Delegation kann zurückgesetzt werden, indem an die Null-Adresse delegiert wird.
 
 Der private Schlüssel des EOA behält nach der Delegation die volle Kontrolle über das Konto. Zum Beispiel macht das Delegieren an einen Safe das Konto nicht zu einer Multisig, da es immer noch einen einzigen Schlüssel gibt, der jede Signaturrichtlinie umgehen kann. Zukünftig sollten Entwickler unter der Annahme entwerfen, dass jeder Teilnehmer im System ein Smart Contract sein könnte. Für Smart Contract-Entwickler ist es nicht mehr sicher anzunehmen, dass sich `tx.origin` auf ein EOA bezieht.
-## Best Practices
+## Best Practices {#best-practices}
 
 **Kontoabstraktion**: Ein Delegationsvertrag sollte sich an Ethereums breiteren Standards zur Kontoabstraktion (AA) orientieren, um die Kompatibilität zu maximieren. Insbesondere sollte er idealerweise ERC-4337-konform oder -kompatibel sein.
 
@@ -104,7 +104,7 @@ Wenn Benutzer delegierte Signaturen durchführen, sollte der Zielvertrag, der di
 
 **Minimale vertrauenswürdige Angriffsfläche & Sicherheit**: Obwohl ein Delegationsvertrag Flexibilität bietet, sollte er seine Kernlogik minimal und überprüfbar halten. Der Vertrag ist faktisch eine Erweiterung des EOA des Benutzers, sodass jeder Fehler katastrophal sein kann. Implementierungen sollten den Best Practices der Smart Contract-Sicherheitscommunity folgen. Zum Beispiel müssen Konstruktor- oder Initialisierungsfunktionen sorgfältig abgesichert werden – wie von Alchemy hervorgehoben, könnte bei Verwendung eines Proxy-Musters unter 7702 ein ungeschützter Initialisierer einem Angreifer ermöglichen, das Konto zu übernehmen. Teams sollten darauf abzielen, den Onchain-Code einfach zu halten: Der 7702-Vertrag von Ambire umfasst nur etwa 200 Zeilen Solidity, wodurch die Komplexität bewusst minimiert wird, um Fehler zu reduzieren. Es muss ein Gleichgewicht zwischen funktionsreicher Logik und der Einfachheit, die Audits erleichtert, gefunden werden.
 
-### Bekannte Implementierungen
+### Bekannte Implementierungen {#known-implementations}
 
 Aufgrund der Natur von EIP-7702 wird empfohlen, dass Wallets Vorsicht walten lassen, wenn sie Benutzern helfen, an einen Vertrag eines Drittanbieters zu delegieren. Nachfolgend ist eine Sammlung bekannter Implementierungen aufgeführt, die geprüft wurden:
 
@@ -132,12 +132,12 @@ Hinweis: Einige Vermögenswerte könnten vom Delegationscode automatisch abgeleh
 
 Benachrichtige den Benutzer, dass eine Delegation für das EOA vorliegt, indem dessen Code überprüft wird, und biete optional an, die Delegation zu entfernen.
 
-#### Allgemeine Delegation
+#### Allgemeine Delegation {#common-delegation}
 
 Der Hardware-Anbieter setzt bekannte Delegationsverträge auf eine Whitelist und implementiert deren Unterstützung in der Begleitsoftware. Es wird empfohlen, einen Vertrag mit vollständiger ERC-4337-Unterstützung zu wählen.
 
 EOAs, die an einen anderen delegiert sind, werden als Standard-EOAs behandelt.
-#### Benutzerdefinierte Delegation
+#### Benutzerdefinierte Delegation {#custom-delegation}
 
 Der Hardware-Anbieter implementiert seinen eigenen Delegationsvertrag, fügt ihn der Liste hinzu und implementiert dessen Unterstützung in der Begleitsoftware. Es wird empfohlen, einen Vertrag mit vollständiger ERC-4337-Unterstützung zu erstellen.
 

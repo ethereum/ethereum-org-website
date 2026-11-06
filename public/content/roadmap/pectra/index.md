@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Learn about the Pectra protocol upgrade
+description: "Pectra went live on May 7, 2025. Learn what this Ethereum upgrade changed, including EIP-7702 smart accounts and a 2048 ETH max validator balance."
 lang: en
 template: upgrade
 authors: ["Nixo", "Mario Havel"]

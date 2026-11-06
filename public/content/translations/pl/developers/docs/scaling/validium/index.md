@@ -101,11 +101,11 @@ W schemacie dostępności danych zabezpieczonej kaucją każdy może zostać prz
 
 ## Volitions i validium {#volitions-and-validium}
 
-Validium oferują wiele korzyści, ale wiążą się z kompromisami (przede wszystkim z dostępnością danych). Jednak, podobnie jak w przypadku wielu rozwiązań skalujących, validium są dostosowane do konkretnych przypadków użycia — dlatego właśnie stworzono volitions.
+Validium oferują wiele korzyści, ale wiążą się z kompromisami (przede wszystkim w kwestii dostępności danych). Jednak, podobnie jak w przypadku wielu rozwiązań skalujących, validium są dostosowane do konkretnych przypadków użycia — dlatego właśnie powstały volitions.
 
-Volitions łączą ZK-rollup i łańcuch validium oraz pozwalają użytkownikom przełączać się między tymi dwoma rozwiązaniami skalującymi. Dzięki volitions użytkownicy mogą korzystać z pozałańcuchowej dostępności danych validium dla niektórych transakcji, zachowując jednocześnie swobodę przełączenia się na rozwiązanie dostępności danych onchain (ZK-rollup) w razie potrzeby. Zasadniczo daje to użytkownikom swobodę wyboru kompromisów podyktowanych ich unikalnymi okolicznościami.
+Volitions łączą ZK-rollup i łańcuch validium oraz pozwalają użytkownikom przełączać się między tymi dwoma rozwiązaniami skalującymi. Dzięki volitions użytkownicy mogą korzystać z pozałańcuchowej dostępności danych validium dla niektórych transakcji, zachowując jednocześnie swobodę przejścia na rozwiązanie dostępności danych onchain (ZK-rollup) w razie potrzeby. Zasadniczo daje to użytkownikom swobodę wyboru kompromisów podyktowanych ich unikalną sytuacją.
 
-Zdecentralizowana giełda (DEX) może preferować korzystanie ze skalowalnej i prywatnej infrastruktury validium do transakcji o dużej wartości. Może również korzystać z ZK-rollupa dla użytkowników, którzy chcą wyższych gwarancji bezpieczeństwa i bezzaufaniowości ZK-rollupa.
+Zdecentralizowana giełda (DEX) może preferować skalowalność validium i jego zdolność do ograniczania publicznego dostępu do danych transakcji w przypadku transakcji o wysokiej wartości. Utrzymywanie danych pozałańcuchowo ogranicza to, kto może je zobaczyć, ale samo w sobie nie sprawia, że transakcje są kryptograficznie prywatne: poufność zależy od kontroli dostępu i mechanizmów prywatności wdrożenia, a dane pozostają widoczne dla operatora i każdego, kto je przechowuje. DEX może również używać ZK-rollupa dla użytkowników, którzy oczekują wyższych gwarancji bezpieczeństwa i bezzaufaniowości ZK-rollupa.
 
 ## Validium i kompatybilność z EVM {#validiums-and-evm-compatibility}
 

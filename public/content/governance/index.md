@@ -1,7 +1,7 @@
 ---
 title: Introduction to Ethereum governance
 metaTitle: Ethereum Governance
-description: An introduction to how decisions about Ethereum are made.
+description: "How are decisions about Ethereum made? Learn how protocol changes are proposed, debated and adopted by developers, node operators and the community."
 lang: en
 ---
 

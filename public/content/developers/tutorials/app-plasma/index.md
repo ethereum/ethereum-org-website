@@ -102,9 +102,18 @@ For the client-side code, we are going to use [Vite](https://vite.dev/), [React]
 
 The majority of the server is written in JavaScript using [Node](https://nodejs.org/en). The zero-knowledge part is written in [Noir](https://noir-lang.org/). We need version `1.0.0-beta.10`, so after you [install Noir as instructed](https://noir-lang.org/docs/getting_started/quick_start), run:
 
-```
+```sh
 noirup -v 1.0.0-beta.10
 ```
+
+To create proofs that can be verified onchain (in stage 3) we also need [Barretenberg](https://barretenberg.aztec.network/docs/getting_started) (`bb`), the proving backend, in the version that matches this Noir release. Install `bbup`, the Barretenberg installer, and then use it to install `bb` version `0.87.0` (if `bbup` is not found, open a new terminal so the updated `PATH` takes effect):
+
+```sh
+curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash
+bbup -v 0.87.0
+```
+
+This tutorial was tested with `nargo` 1.0.0-beta.10, `bb` 0.87.0, and (in the server) `@noir-lang/noir_js` 1.0.0-beta.11. Do not use newer versions: the Noir code does not compile with the current 1.0 release candidates, and current versions of `bb` cannot read circuits compiled by `nargo` 1.0.0-beta.10 and no longer accept the `--oracle_hash` flag.
 
 The blockchain we use is `anvil`, a local testing blockchain which is part of [Foundry](https://getfoundry.sh/introduction/installation).
 
@@ -118,7 +127,7 @@ For the first stage, we'll sign a transaction in the browser and then manually p
 
 To see it in action:
 
-1. Make sure you have [Node](https://nodejs.org/en/download) and [Noir](https://noir-lang.org/install) installed. Preferably, install them on a UNIX system such macOS, Linux, or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. Make sure you have [Node](https://nodejs.org/en/download) and [Noir](https://noir-lang.org/docs/installation) installed. Preferably, install them on a UNIX system such macOS, Linux, or [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 2. Download the stage 1 code and start the web server to serve the client code.
 
@@ -410,7 +419,7 @@ In Noir, functions can only return a value at the end (there is no early return)
 fn flatten_accounts(accounts: [Account; ACCOUNT_NUMBER]) -> [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] {
 ```
 
-This function turns the accounts array into a `Field` array, which can be used as the input to a Petersen Hash.
+This function turns the accounts array into a `Field` array, which can be used as the input to a Pedersen hash.
 
 ```
     let mut flat: [Field; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER] = [0; FLAT_ACCOUNT_FIELDS*ACCOUNT_NUMBER];
@@ -469,7 +478,7 @@ _account<sub>new</sub> = condition<sub>result</sub>\*i + (1-condition<sub>result
 }
 ```
 
-The [`assert`](https://noir-lang.org/docs/dev/noir/concepts/assert) function causes the zero-knowledge proof to crash if the assertion is false. In this case, if we can't find an account with the relevant address. To report the address, we use a [format string](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
+The [`assert`](https://noir-lang.org/docs/language/assert) function causes the zero-knowledge proof to crash if the assertion is false. In this case, if we can't find an account with the relevant address. To report the address, we use a [format string](https://noir-lang.org/docs/noir/concepts/data_types/strings#format-strings).
 
 ```rust
 fn apply_transfer_txn(accounts: [Account; ACCOUNT_NUMBER], txn: TransferTxn) -> [Account; ACCOUNT_NUMBER] {
@@ -812,7 +821,7 @@ To see it in action:
    npm run start
    ```
 
-4. In a separate command-line window, run Vite to serve the browser code.
+4. In a separate command-line window, starting from the repository root, run Vite to serve the browser code.
 
    ```sh
    cd client
@@ -994,7 +1003,7 @@ The initial `Accounts` structure.
    echo $ZKBANK_ADDRESS
    ```
 
-   The `0x199..67b` value is the Pederson hash of the initial state of `Accounts`. If you modify this initial state in `server/index.mjs`, you can run a transaction to see the initial hash reported by the zero-knowledge proof.
+   The `0x199..67b` value is the Pedersen hash of the initial state of `Accounts`. If you modify this initial state in `server/index.mjs`, you can run a transaction to see the initial hash reported by the zero-knowledge proof.
 
 8. Run the server.
 
@@ -1003,7 +1012,7 @@ The initial `Accounts` structure.
    npm run start
    ```
 
-9. Run the client in a different command-line window.
+9. Run the client in a different command-line window, starting from the repository root.
 
    ```sh
    cd client
@@ -1043,9 +1052,9 @@ import util from 'util'
 const execPromise = util.promisify(exec)
 ```
 
-We need to use [the Barretenberg package](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) to create the actual proof to send onchain. We can use this package either by running the command-line interface (`bb`)or by using the [JavaScript library, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). The JavaScript library is much slower than running code natively, so we use [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) here to use the command-line.
+We need to use [the Barretenberg package](https://github.com/AztecProtocol/aztec-packages/tree/next/barretenberg) to create the actual proof to send onchain. We can use this package either by running the command-line interface (`bb`) or by using the [JavaScript library, `bb.js`](https://www.npmjs.com/package/@aztec/bb.js). The JavaScript library is much slower than running code natively, so we use [`exec`](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback) here to use the command-line.
 
-Note that if you do decide to use `bb.js`, you need to use a version that is compatible with the version of Noir you are using. At the time of writing, the current Noir version (1.0.0-beta.11) uses `bb.js` version 0.87.
+Note that if you do decide to use `bb.js`, you need to use a version that is compatible with the version of Noir you are using. For example, Noir 1.0.0-beta.10 and 1.0.0-beta.11 both go with `bb` and `bb.js` version 0.87.
 
 ```js
 const zkBankAddress = process.env.ZKBANK_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
@@ -1151,7 +1160,7 @@ contract ZkBank {
     }
 ```
 
-The onchain code needs to keep track of two variables: the verifier (a separate contract that is created by `nargo`) and the current state hash.
+The onchain code needs to keep track of two variables: the verifier (a separate contract that is generated by Barretenberg's `bb write_solidity_verifier`) and the current state hash.
 
 ```solidity
     event TransactionProcessed(
@@ -1173,7 +1182,7 @@ Every time the state changes, we emit a `TransactionProcessed` event.
 This function processes transactions. It gets the proof (as `bytes`) and the public inputs (as a `bytes32` array), in the format that the verifier requires (to minimize onchain processing and therefore gas costs).
 
 ```solidity
-        require(_publicInputs[0] == currentStateHash,
+        require(_publicFields[0] == currentStateHash,
             "Wrong old state hash");
 ```
 

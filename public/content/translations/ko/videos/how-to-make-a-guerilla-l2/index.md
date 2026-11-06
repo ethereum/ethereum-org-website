@@ -7,10 +7,8 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "privacy-and-security"
-  - "scaling-and-layer-2"
   - "privacy"
-  - "layer-2"
+  - "scaling-and-layer-2"
 format: interview
 author: "웹3프라이버시 나우"
 breadcrumb: "게릴라 l2"

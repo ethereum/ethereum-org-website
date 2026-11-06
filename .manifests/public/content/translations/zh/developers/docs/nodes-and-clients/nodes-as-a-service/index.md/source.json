@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/nodes-and-clients/nodes-as-a-service/index.md",
-  "generatedAt": "2026-07-29T05:51:16.220Z",
-  "rootHash": "ef689a94a4cd",
+  "generatedAt": "2026-10-21T21:45:02.748Z",
+  "rootHash": "ca1ac2470e7d",
   "tree": {
     "contentHash": "8ccdc33627fe",
-    "anchorHash": "78687f6e9537",
+    "anchorHash": "1d681c3f8e9f",
     "children": {
       "frontmatter:title": {
         "contentHash": "9ce1b5bd629a",
@@ -229,7 +229,7 @@
       },
       "popular-node-services": {
         "contentHash": "600959e21339",
-        "anchorHash": "9a251b6c7abc",
+        "anchorHash": "74d210a3c27c",
         "labelHash": "6460fdda49a3",
         "children": {
           "_label": {
@@ -482,7 +482,7 @@
           },
           "link:30": {
             "contentHash": "7af023c43013",
-            "anchorHash": "777567d19cf9"
+            "anchorHash": "989bffbf7743"
           },
           "prose:95": {
             "contentHash": "d41480a8f96b",
@@ -986,5 +986,5 @@
       "related-tutorials"
     ]
   },
-  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

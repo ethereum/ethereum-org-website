@@ -148,13 +148,13 @@ import { useEffect } from 'react'
 import { Greeter } from './Greeter'
 ```
 
-Importieren Sie die benötigten Bibliotheken sowie [die `Greeter`-Komponente](#greeter-tsx).
+Importieren Sie die benötigten Bibliotheken sowie [die Komponente `Greeter`](#greeter-tsx).
 
 ```tsx
 const SEPOLIA_CHAIN_ID = 11155111
 ```
 
-Die Sepolia-Chain-ID.
+Die Chain-ID von Sepolia.
 
 ```
 function App() {
@@ -166,9 +166,9 @@ Dies ist der Standardweg, um eine React-Komponente zu erstellen: Definieren Sie 
   const connection = useConnection()
 ```
 
-Verwenden Sie [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection), um Informationen zur aktuellen Verbindung zu erhalten, wie die Adresse und `chainId`.
+Verwenden Sie [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection), um Informationen zur aktuellen Verbindung zu erhalten, wie z. B. die Adresse und die `chainId`.
 
-Konventionsgemäß sind in React Funktionen, die `use...` genannt werden, [Hooks](https://www.w3schools.com/react/react_hooks.asp). Diese Funktionen geben nicht nur Daten an die Komponente zurück; sie stellen auch sicher, dass sie neu gerendert wird (die Komponentenfunktion wird erneut ausgeführt und ihre Ausgabe ersetzt die vorherige im HTML), wenn sich diese Daten ändern.
+Konventionsgemäß sind in React Funktionen, die `use...` heißen, [Hooks](https://www.w3schools.com/react/react_hooks.asp). Diese Funktionen geben nicht nur Daten an die Komponente zurück; sie stellen auch sicher, dass sie neu gerendert wird (die Komponentenfunktion wird erneut ausgeführt und ihre Ausgabe ersetzt die vorherige im HTML), wenn sich diese Daten ändern.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -186,7 +186,7 @@ Verwenden Sie [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect), um In
   const { switchChain } = useSwitchChain()
 ```
 
-[Dieser Hook](https://wagmi.sh/react/api/hooks/useSwitchChain) lässt uns zwischen Chains wechseln.
+[Dieser Hook](https://wagmi.sh/react/api/hooks/useSwitchChain) ermöglicht es uns, Chains zu wechseln.
 
 ```tsx
   useEffect(() => {
@@ -208,7 +208,7 @@ Wenn wir verbunden sind, aber nicht mit der Sepolia-Blockchain, wechseln Sie zu 
   }, [connection.status, connection.chainId])
 ```
 
-Führen Sie die Funktion jedes Mal erneut aus, wenn sich entweder der Verbindungsstatus oder die Verbindungs-chainId ändert.
+Führen Sie die Funktion jedes Mal erneut aus, wenn sich entweder der Verbindungsstatus oder die `chainId` der Verbindung ändert.
 
 ```tsx
   return (
@@ -235,7 +235,7 @@ Stellen Sie Informationen über die aktuelle Verbindung bereit. Innerhalb von JS
       {connection.status === 'connected' && (
 ```
 
-Die Syntax `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`“.
+Die Syntax `{<condition> && <value>}` bedeutet: „Wenn die Bedingung `true` ist, werte zum Wert aus; wenn nicht, werte zu `false` aus“.
 
 Dies ist der Standardweg, um if-Anweisungen in JSX einzufügen.
 
@@ -247,7 +247,7 @@ Dies ist der Standardweg, um if-Anweisungen in JSX einzufügen.
 
 JSX folgt dem XML-Standard, der strenger ist als HTML. Wenn ein Tag kein entsprechendes End-Tag hat, _muss_ es einen Schrägstrich (`/`) am Ende haben, um es abzuschließen.
 
-Hier haben wir zwei solcher Tags, `<Greeter />` (das tatsächlich den HTML-Code enthält, der mit dem Vertrag kommuniziert) und [`<hr />` für eine horizontale Linie](https://www.w3schools.com/tags/tag_hr.asp).
+Hier haben wir zwei solcher Tags, `<Greeter />` (das eigentlich den HTML-Code enthält, der mit dem Vertrag kommuniziert) und [`<hr />` für eine horizontale Linie](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>
@@ -264,7 +264,7 @@ Wenn der Benutzer auf diese Schaltfläche klickt, rufen Sie die Funktion `discon
       {connection.status !== 'connected' && (
 ```
 
-Wenn wir _nicht_ verbunden sind, zeigen Sie die erforderlichen Optionen an, um sich mit der Wallet zu verbinden.
+Wenn wir _nicht_ verbunden sind, zeigen Sie die erforderlichen Optionen an, um eine Verbindung zur Wallet herzustellen.
 
 ```tsx
         <div>
@@ -279,7 +279,7 @@ In `connectors` haben wir eine Liste von Konnektoren. Wir verwenden [`map`](http
               key={connector.uid}
 ```
 
-In JSX ist es notwendig, dass „Geschwister“-Tags (Tags, die vom selben übergeordneten Element abstammen) unterschiedliche Identifikatoren haben.
+In JSX ist es erforderlich, dass „Geschwister“-Tags (Tags, die vom selben übergeordneten Element abstammen) unterschiedliche Identifikatoren haben.
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -300,7 +300,7 @@ Die Konnektor-Schaltflächen.
       )}
 ```
 
-Stellen Sie zusätzliche Informationen bereit. Die Ausdruckssyntax `<variable>?.<field>` teilt JavaScript mit, dass, wenn die Variable definiert ist, sie zu diesem Feld ausgewertet werden soll. Wenn die Variable nicht definiert ist, wird dieser Ausdruck zu `undefined` ausgewertet.
+Stellen Sie zusätzliche Informationen bereit. Die Ausdruckssyntax `<variable>?.<field>` teilt JavaScript mit, dass, wenn die Variable definiert ist, zu diesem Feld ausgewertet werden soll. Wenn die Variable nicht definiert ist, wird dieser Ausdruck zu `undefined` ausgewertet.
 
 Der Ausdruck `error.message` würde, wenn kein Fehler vorliegt, eine Ausnahme auslösen. Die Verwendung von `error?.message` lässt uns dieses Problem vermeiden.
 

@@ -5,7 +5,7 @@ description: Jifunze zaidi kuhusu 7702 katika toleo la Pectra
 lang: sw
 ---
 
-## Muhtasari
+## Muhtasari {#abstract}
 
 EIP-7702 inafafanua utaratibu wa kuongeza msimbo kwenye EOA. Pendekezo hili linaruhusu EOA, akaunti za zamani za Ethereum, kupokea maboresho ya utendaji wa muda mfupi, na kuongeza utumikaji wa programu. Hili linafanywa kwa kuweka kielekezi kwenye msimbo ambao tayari umesambazwa kwa kutumia aina mpya ya muamala: 4.
 
@@ -23,7 +23,7 @@ Aina hii mpya ya muamala inaleta orodha ya uidhinishaji. Kila tuple ya uidhinish
 Ukaimishaji unaweza kuwekwa upya kwa kukaimisha kwenye anwani tupu.
 
 Ufunguo wa siri wa EOA unabaki na udhibiti kamili wa akaunti baada ya ukaimishaji. Kwa mfano kukaimisha kwenye Safe hakufanyi akaunti kuwa saini-nyingi kwa sababu bado kuna ufunguo mmoja unaoweza kukwepa sera yoyote ya kusaini. Kusonga mbele, wasanidi programu wanapaswa kubuni kwa dhana kwamba mshiriki yeyote katika mfumo anaweza kuwa mkataba mahiri. Kwa wasanidi wa mkataba mahiri, si salama tena kudhani kwamba `tx.origin` inarejelea EOA.
-## Mbinu bora
+## Mbinu bora {#best-practices}
 
 **Udhanifu wa Akaunti**: Mkataba wa ukaimishaji unapaswa kuendana na viwango vipana vya udhanifu wa akaunti (AA) vya Ethereum ili kuongeza utangamano. Hasa, inapaswa kuwa inatii au inayoendana na ERC-4337.
 
@@ -104,7 +104,7 @@ Wakati watumiaji wanafanya sahihi zilizokaimishwa, mkataba lengwa unaopokea ukai
 
 **Uso Mdogo Unaoaminika na Usalama**: Ingawa inatoa unyumbufu, mkataba wa ukaimishaji unapaswa kuweka mantiki yake ya msingi kuwa ndogo na inayoweza kukaguliwa. Mkataba huo kwa kweli ni ugani wa EOA ya mtumiaji, kwa hivyo dosari yoyote inaweza kuwa mbaya sana. Utekelezaji unapaswa kufuata mbinu bora kutoka kwa jamii ya usalama wa mkataba mahiri. Kwa mfano, vitendakazi vya konstrukta au kianzishaji lazima vilindwe kwa uangalifu – kama ilivyoangaziwa by Alchemy, ikiwa unatumia muundo wa uwakilishi chini ya 7702, kianzishaji kisicholindwa kinaweza kuruhusu mshambuliaji kuchukua akaunti. Timu zinapaswa kulenga kuweka msimbo mnyororoni kuwa rahisi: Mkataba wa 7702 wa Ambire ni mistari ~200 tu ya Solidity, ikipunguza ugumu kwa makusudi ili kupunguza hitilafu. Usawa lazima upatikane kati ya mantiki yenye vipengele vingi na urahisi unaorahisisha ukaguzi.
 
-### Utekelezaji unaojulikana
+### Utekelezaji unaojulikana {#known-implementations}
 
 Kutokana na asili ya EIP-7702, inashauriwa mikoba itumie tahadhari wakati wa kusaidia watumiaji kukaimisha kwenye mkataba wa mtu wa tatu. Imeorodheshwa hapa chini ni mkusanyiko wa utekelezaji unaojulikana ambao umekaguliwa:
 
@@ -132,12 +132,12 @@ Kumbuka : baadhi ya mali zinaweza kukataliwa kiotomatiki na msimbo wa ukaimishaj
 
 Mjulishe mtumiaji kwamba ukaimishaji upo kwa EOA kwa kuangalia msimbo wake, na kwa hiari toa ofa ya kuondoa ukaimishaji.
 
-#### Ukaimishaji wa kawaida
+#### Ukaimishaji wa kawaida {#common-delegation}
 
 Mtoa huduma wa maunzi anaidhinisha mikataba inayojulikana ya ukaimishaji na kutekeleza usaidizi wake katika programu shirikishi. Inashauriwa kuchagua mkataba wenye usaidizi kamili wa ERC-4337.
 
 EOA zilizokaimishwa kwa mwingine tofauti zitashughulikiwa kama EOA za kawaida.
-#### Ukaimishaji maalum
+#### Ukaimishaji maalum {#custom-delegation}
 
 Mtoa huduma wa maunzi anatekeleza mkataba wake wa ukaimishaji na kuuongeza kwenye orodha anatekeleza usaidizi wake katika programu shirikishi. Inashauriwa kujenga mkataba wenye usaidizi kamili wa ERC-4337.
 

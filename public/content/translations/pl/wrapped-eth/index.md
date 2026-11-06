@@ -1,7 +1,7 @@
 ---
 title: Opakowany ether (WETH)
 metaTitle: Czym jest opakowany ether (WETH)
-description: Wprowadzenie do opakowanego etheru (WETH) — kompatybilnego z ERC-20 opakowania dla etheru (ETH).
+description: "Wprowadzenie do opakowanego etheru (WETH) — kompatybilnego z ERC-20 opakowania dla etheru (ETH)."
 lang: pl
 ---
 
@@ -31,7 +31,7 @@ Możesz rozpakować WETH do ETH za pomocą inteligentnego kontraktu WETH. Możes
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Opakowany ether (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Podaż     | [Podaż ETH](/eth/supply/) jest zarządzana przez protokół [Ethereum](/). [Emisja](/roadmap/merge/issuance) ETH jest obsługiwana przez walidatorów Ethereum podczas przetwarzania transakcji i tworzenia bloków.                           | WETH to token ERC-20, którego podażą zarządza inteligentny kontrakt. Nowe jednostki WETH są emitowane przez kontrakt po otrzymaniu depozytów ETH od użytkowników, a jednostki WETH są spalane, gdy użytkownik chce wymienić WETH na ETH.                                                                                                                                        |
+| Podaż     | [Podaż ETH](/what-is-ether/supply/) jest zarządzana przez protokół [Ethereum](/). [Emisja](/roadmap/merge/issuance) ETH jest obsługiwana przez walidatorów Ethereum podczas przetwarzania transakcji i tworzenia bloków.                           | WETH to token ERC-20, którego podażą zarządza inteligentny kontrakt. Nowe jednostki WETH są emitowane przez kontrakt po otrzymaniu depozytów ETH od użytkowników, a jednostki WETH są spalane, gdy użytkownik chce wymienić WETH na ETH.                                                                                                                                        |
 | Własność  | Własność jest zarządzana przez protokół Ethereum poprzez saldo Twojego konta.  | Własność WETH jest zarządzana przez inteligentny kontrakt tokena WETH, zabezpieczony przez protokół Ethereum.                                                                                                                                         |
 | Gaz        | Ether (ETH) jest akceptowaną jednostką płatności za obliczenia w sieci Ethereum. Opłaty za gaz są wyrażane w gwei (jednostka etheru).                                                                                    | Płacenie za gaz tokenami WETH nie jest natywnie obsługiwane.                                                                                                                                                                                              |
 

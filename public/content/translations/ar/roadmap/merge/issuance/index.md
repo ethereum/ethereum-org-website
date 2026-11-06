@@ -84,7 +84,7 @@ title="خلاصة إصدار ETH">
 
 ### تفصيل التضخم بعد الدمج {#post-merge-inflation-breakdown}
 
-- [إجمالي المعروض من <span dir="ltr">ETH</span>](/eth/supply/): **<span dir="ltr">\~120,520,000 ETH</span>** (في وقت الدمج في <span dir="ltr">September 2022</span>)
+- [إجمالي المعروض من <span dir="ltr">ETH</span>](/what-is-ether/supply/): **<span dir="ltr">\~120,520,000 ETH</span>** (في وقت الدمج في <span dir="ltr">September 2022</span>)
 - إصدار طبقة التنفيذ: **0**
 - إصدار طبقة الإجماع: كما هو مذكور أعلاه، معدل إصدار سنوي يبلغ **<span dir="ltr">\~0.52%</span>** (مع إجمالي 14 مليون <span dir="ltr">ETH</span> مخزنة كحصة تخزين)
 

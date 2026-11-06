@@ -1,6 +1,6 @@
 ---
 title: How to swap tokens
-description: A guide on how to swap tokens on Ethereum.
+description: "A step-by-step guide to swapping tokens on Ethereum: connect your wallet to a decentralized exchange, review fees and slippage, and confirm the trade."
 lang: en
 ---
 

@@ -4,7 +4,7 @@ description: Daftar semua opcode yang tersedia untuk mesin virtual Ethereum.
 lang: id
 ---
 
-## Ikhtisar
+## Ikhtisar {#overview}
 
 Ini adalah versi yang diperbarui dari halaman referensi EVM di [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes).
 Juga diambil dari [Kertas Kuning](https://ethereum.github.io/yellowpaper/paper.pdf), [Jello Paper](https://jellopaper.org/evm/), dan implementasi [geth](https://github.com/ethereum/go-ethereum).

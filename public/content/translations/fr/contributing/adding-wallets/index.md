@@ -58,7 +58,7 @@ Les portefeuilles évoluent rapidement sur Ethereum. Nous avons essayé de crée
 
 ## Ajouter un portefeuille {#adding-a-wallet}
 
-Si vous souhaitez ajouter un portefeuille sur ethereum.org, créez un ticket sur GitHub.
+Si vous souhaitez ajouter un portefeuille sur ethereum.org, créez un ticket sur GitHub. La description du portefeuille que vous donnez dans le ticket est affichée sur la page du portefeuille, limitez-la donc à une ou deux phrases factuelles.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Créer un ticket

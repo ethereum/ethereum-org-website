@@ -75,3 +75,76 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `soundness` -> `keandalan` (reliability) at 3 sites; no established id form exists.
 - `telah tidak disadari` is ungrammatical (perfective + negation).
 - `salah satu` narrows a universal to an existential in `copyleft-description-3`.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/id/page-apps.json`. 2 critical, 14 warnings. Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: id not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: **regression introduced by this PR**; fixed.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (id-specific):**
+
+- `-defi-description` lost a coordinate verb because the glossary maps both *lending* and *borrowing* to `peminjaman` -> all four verbs restored
+
+**Notes:**
+
+- The `akun milik eksternal (EOA)` / `disebarkan` glossary migration and the cross-contract and testnet corrections are real upstream fixes.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.2/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- privacy-fixes video L42 `melakukan Log` (glossary casing leaked into a verb) -> `mencatat`.
+- zk-rollups:43 `diwajibkan` over-applied for "required"; API/ENS over-expansion.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.4/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- l2/L2 casing split; `Perbendaharaan` for treasuries; Auditabilitas/Kemampuan audit split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.0/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:440-456 `oracle` -> `orakel` restored (16 sites; `masalah oracle`/`oracle blockchain` kept)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:33: ETHGlossary `blockchain` (translate, high) is `rantai blok` (`dari banyak blockchain di` -> `dari banyak rantai blok di`)
+- page-wallet-descriptions.json:35: Same `blockchain` deviation (`untuk banyak blockchain,` -> `untuk banyak rantai blok,`)
+- page-wallet-descriptions.json:42: Same `blockchain` deviation (`di seluruh blockchain` -> `di seluruh rantai blok`)
+- common.json:149: ETHGlossary `fork` (translate, high) is `percabangan`. English: "History of forks". (`"Riwayat fork"` -> `"Riwayat percabangan"`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Fluent, structurally clean Indonesian. The main problem is that the security page went back from `orakel` to `oracle`, against the high-confidence glossary entry, plus a few meaning shifts in the new founders and prediction-markets copy.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: exclusive `kami` mixed with inclusive `kita` in the mint tutorial; `peristiwa` vs glossary `kejadian` (websockets:79).

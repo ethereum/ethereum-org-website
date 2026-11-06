@@ -13,22 +13,30 @@ This tutorial is Part 3/3 in the NFT Tutorial series, where we view our newly mi
 
 Congrats! You’ve made it to the shortest and simplest part of our NFT tutorial series — how to view your freshly minted NFT on a virtual wallet. We’ll be using MetaMask for this example since it is what we used in the previous two parts.
 
-As a prerequisite, you should already have MetaMask on mobile installed, and it should include the account to which you minted your NFT — you can get the app for free on [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) or [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
+As a prerequisite, you should already have MetaMask installed, either the browser extension or the mobile app, and it should include the account to which you minted your NFT. You can get MetaMask for free from the [MetaMask download page](https://metamask.io/download).
 
 ## Step 1: Set your network to Sepolia {#set-network-to-sepolia}
 
-At the top of the app, press the “Wallet” button, after which you’ll be prompted to select a network. As our NFT was minted on the Sepolia network, you’ll want to select Sepolia as your network.
+As our NFT was minted on the Sepolia test network, you’ll want to select Sepolia as your network. MetaMask hides test networks by default, so first turn them on:
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
+1. Open the menu in the top right corner and select "Networks".
+2. Scroll down to the bottom of the network list and toggle "Show test networks" on.
+3. Select "Sepolia" from the network list.
+
+See [MetaMask's guide to viewing testnets](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/) if the menus look different in your version of MetaMask.
 
 ## Step 2: Add your collectable to MetaMask {#add-nft-to-metamask}
 
-Once you’re on the Sepolia network, select the “Collectibles” tab on the right and add the NFT smart contract address and the ERC-721 token ID of your NFT — which you should be able to find on Etherscan based on the transaction hash from your NFT deployed in Part II of our tutorial.
+MetaMask detects NFTs automatically only on some networks, which don’t include Sepolia, so you’ll need to import your NFT manually. For that you need the NFT smart contract address and the ERC-721 token ID of your NFT — which you should be able to find on Etherscan based on the transaction hash from your NFT minted in Part II of our tutorial. If you used the contract from Part 1, your first NFT has token ID 1.
 
 ![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
 
-You may need to refresh a couple times to view your NFT — but it will be there <Emoji text="😄" size={1} />!
+Then, in MetaMask (extension or mobile):
 
-![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
+1. Go to the "NFTs" section of the home screen and select "Import NFT".
+2. Select Sepolia as the network, and paste your NFT smart contract address into the "Address" box.
+3. Enter your token ID into the "Token ID" box and select "Import".
+
+You may need to refresh a couple times to view your NFT — but it will be there <Emoji text="😄" size={1} />! If MetaMask says you are not the owner of the NFT, check that you selected the account you minted the NFT to. For more help, see [MetaMask's guide to NFTs](https://support.metamask.io/manage-crypto/nfts/nft-tokens-in-your-metamask-wallet/).
 
 Congrats! You have successfully minted an NFT, and you can now view it! We can’t wait to see how you’ll take the NFT world by storm!

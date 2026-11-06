@@ -1,6 +1,6 @@
 ---
 title: Adicionando carteiras
-description: A política que usamos ao adicionar uma carteira ao ethereum.org
+description: "A política que usamos ao adicionar uma carteira ao ethereum.org"
 lang: pt-br
 ---
 
@@ -58,7 +58,7 @@ As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutur
 
 ## Adicionando uma carteira {#adding-a-wallet}
 
-Se você quiser adicionar uma carteira ao ethereum.org, crie uma issue no GitHub.
+Se você deseja adicionar uma carteira ao ethereum.org, crie uma issue no GitHub. A descrição da carteira que você fornecer na issue será exibida na página da carteira, portanto, limite-a a uma ou duas frases factuais.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Criar uma issue

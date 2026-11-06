@@ -219,7 +219,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Web3からEVM上の関数を呼び出す構文は次のとおりです：`<contract object>.functions.<function name>().call(<parameters>)`。パラメータは、EVM関数のパラメータ（もしあれば。ここではなし）、またはブロックチェーンの動作を変更するための[名前付きパラメータ](https://en.wikipedia.org/wiki/Named_parameter)にすることができます。ここでは、実行したい[ブロック番号](/developers/docs/apis/json-rpc/#default-block)を指定するために、`block_identifier`というパラメータを1つ使用します。
+Web3からEVM上の関数を呼び出す構文は次のとおりです：`<contract object>.functions.<function name>().call(<parameters>)`。パラメータは、EVM関数のパラメータ（もしあれば。ここではなし）、またはブロックチェーンの動作を変更するための[名前付きパラメータ](https://en.wikipedia.org/wiki/Named_parameter)にすることができます。ここでは、実行したい[ブロック番号](/developers/docs/apis/json-rpc/#block-parameter)を指定するために、`block_identifier`というパラメータを1つ使用します。
 
 結果は[配列形式のこの構造体](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72)です。最初の値は、2つのトークン間の為替レートの関数です。
 

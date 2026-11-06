@@ -13,7 +13,7 @@ published: 2021-03-09
 
 Uno degli usi più comuni di Ethereum è la creazione di un token scambiabile da parte di un gruppo, in un certo senso la propria valuta. Questi token seguono tipicamente uno standard, l'[ERC-20](/developers/docs/standards/tokens/erc-20/). Questo standard rende possibile scrivere strumenti, come pool di liquidità e portafogli, che funzionano con tutti i token ERC-20. In questo articolo analizzeremo l'[implementazione ERC20 in Solidity di OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), così come la [definizione dell'interfaccia](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-Questo è codice sorgente annotato. Se vuoi implementare l'ERC-20, [leggi questo tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+Questo è codice sorgente annotato. Se vuoi implementare l'ERC-20, [leggi questo tutorial](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## L'interfaccia {#the-interface}
 

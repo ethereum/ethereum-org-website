@@ -1,6 +1,6 @@
 ---
-title: ⁦سمارٹ کنٹریکٹس کے ساتھ تعامل⁩
-description: ⁦جانیں کہ ایتھیریم پر پہلے سے تعینات سمارٹ کنٹریکٹس سے کیسے پڑھا جائے اور ان میں کیسے لکھا جائے۔⁩
+title: "⁦سمارٹ کنٹریکٹس کے ساتھ تعامل⁩"
+description: "⁦جانیں کہ ایتھیریم پر پہلے سے تعینات سمارٹ کنٹریکٹس سے کیسے پڑھا جائے اور ان میں کیسے لکھا جائے۔⁩"
 lang: ur
 ---
 
@@ -82,7 +82,7 @@ lang: ur
 
 - **[ethers.js](https://docs.ethers.org/)** - سرور سائیڈ سکرپٹس اور بوٹس کے لیے Node.js میں بھی کام کرتی ہے
 - **[web3.py](https://web3py.readthedocs.io/)** - ایتھیریم کے ساتھ تعامل کے لیے Python لائبریری
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - گو ایتھیریم (geth) ٹیم کی جانب سے آفیشل Go لائبریری
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - گو ایتھیریم (geth) ٹیم کی جانب سے آفیشل Go لائبریری
 
 ### مثال: Viem کے ساتھ ٹوکن بیلنس پڑھنا {#example-viem}
 

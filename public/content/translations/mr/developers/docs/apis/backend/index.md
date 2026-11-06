@@ -20,7 +20,7 @@ lang: mr
 
 ## उपलब्ध लायब्ररी {#available-libraries}
 
-### पायाभूत सुविधा आणि नोड सेवा {#infrastructure-and-node-services}
+### इन्फ्रास्ट्रक्चर आणि नोड सेवा {#infrastructure-and-node-services}
 
 **Alchemy -** **_इथेरियम डेव्हलपमेंट प्लॅटफॉर्म._**
 
@@ -35,7 +35,7 @@ lang: mr
 - [डॉक्युमेंटेशन](https://docs.allthatnode.com)
 - [डिस्कॉर्ड्](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs द्वारे Blast -** **_इथरियम मेननेट आणि टेस्टनेट्ससाठी विकेंद्रित APIs._**
+**Bware Labs द्वारे Blast -** **_इथरियम मेननेट आणि टेस्टनेट्ससाठी डिसेंट्रलाइज्ड APIs._**
 
 - [blastapi.io](https://blastapi.io/)
 - [डॉक्युमेंटेशन](https://docs.blastapi.io)
@@ -69,7 +69,7 @@ lang: mr
 - [डॉक्युमेंटेशन](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**नोड RPC - _किफायतशीर EVM जेसॉन-आरपीसी प्रोव्हायडर_**
+**Node RPC - _किफायतशीर इथरियम व्हर्च्युअल मशीन (EVM) जेसॉन-आरपीसी प्रोव्हायडर_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [डॉक्युमेंटेशन](https://docs.noderpc.xyz/node-rpc)
@@ -91,7 +91,13 @@ lang: mr
 - [डॉक्युमेंटेशन](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_जेसॉन-आरपीसी/WebSockets API म्हणून गती-देणारे इथेरियम नोड्स._**
+**SolidRPC -** **_फुल, अर्काइव्ह आणि कीलेस पब्लिक ॲक्सेससह इथरियम व्हर्च्युअल मशीन (EVM) जेसॉन-आरपीसी इन्फ्रास्ट्रक्चर._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [डॉक्युमेंटेशन](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
+**Zmok -** **_जेसॉन-आरपीसी/WebSockets API म्हणून गती-केंद्रित इथेरियम नोड्स._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -100,7 +106,13 @@ lang: mr
 
 ### डेव्हलपमेंट टूल्स {#development-tools}
 
-**ethers-kt -** **_EVM-आधारित ब्लॉकचेनसाठी असिंक, उच्च-कार्यक्षमता असलेली Kotlin/Java/Android लायब्ररी._**
+**eth.zig -** **_इथेरियमसाठी एक Zig लायब्ररी, ज्यामध्ये कंपाइल-टाइम ॲप्लिकेशन बायनरी इंटरफेस (ABI) एन्कोडिंग आणि कॉन्ट्रॅक्ट बाइंडिंग्ज आहेत._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [डॉक्युमेंटेशन](https://ethzig.org)
+- [उदाहरणे](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_इथरियम व्हर्च्युअल मशीन (EVM)-आधारित ब्लॉकचेन्ससाठी Async, उच्च-कार्यक्षमता असलेली Kotlin/Java/Android लायब्ररी._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [उदाहरणे](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -118,7 +130,7 @@ lang: mr
 - [Web3.py GitHub](https://github.com/ethereum/web3.py)
 - [Web3.py चॅट](https://gitter.im/ethereum/web3.py)
 
-**Tatum -** **_सर्वोत्तम ब्लॉकचेन डेव्हलपमेंट प्लॅटफॉर्म._**
+**Tatum -** **_अल्टीमेट ब्लॉकचेन डेव्हलपमेंट प्लॅटफॉर्म._**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
@@ -128,7 +140,7 @@ lang: mr
 **Web3j -** **_इथेरियमसाठी एक Java/Android/Kotlin/Scala इंटिग्रेशन लायब्ररी._**
 
 - [GitHub](https://github.com/web3j/web3j)
-- [डॉक्युमेंट्स](https://docs.web3j.io/)
+- [डॉक्स](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
 ### ब्लॉकचेन सेवा {#blockchain-services}

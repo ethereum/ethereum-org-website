@@ -35,7 +35,7 @@ In order to create a digital signature for use on Ethereum-based blockchains, yo
 
 Your Ethereum account (i.e., your externally-owned account/EOA) has a private key associated with it, and this is the private key that’s typically used when a website or dapp asks you for a signature (e.g., for “Log in with Ethereum”).
 
-An app can [verify a signature](https://www.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) you create using a third-party library like ethers.js [without knowing your private key](https://en.wikipedia.org/wiki/Public-key_cryptography) and be confident that _you_ were the one that created the signature.
+An app can [verify a signature](https://viem.sh/docs/actions/public/verifyMessage) you create using a library like viem or ethers.js [without knowing your private key](https://en.wikipedia.org/wiki/Public-key_cryptography) and be confident that _you_ were the one that created the signature.
 
 > In fact, because EOA digital signatures use public-key cryptography, they can be generated and verified **offchain**! This is how gasless DAO voting works — instead of submitting votes onchain, digital signatures can be created and verified offchain using cryptographic libraries.
 
@@ -59,7 +59,7 @@ If `isValidSignature` returns a valid result, that’s pretty much the contract 
 
 Here’s the exact interface in the EIP-1271 spec (we’ll talk about the `_hash` parameter below, but for now, think of it as the message that is being verified):
 
-```jsx
+```solidity
 pragma solidity ^0.5.0;
 
 contract ERC1271 {
@@ -85,17 +85,29 @@ contract ERC1271 {
 }
 ```
 
+This spec snippet targets Solidity 0.5 and does not compile with Solidity 0.8, which requires such a contract to be marked `abstract` and its function `virtual`. With a current compiler, declare it as an interface instead:
+
+```solidity
+pragma solidity ^0.8.0;
+
+interface IERC1271 {
+    function isValidSignature(bytes32 hash, bytes memory signature) external view returns (bytes4 magicValue);
+}
+```
+
+OpenZeppelin Contracts ships this interface as [`IERC1271`](https://docs.openzeppelin.com/contracts/5.x/api/interfaces#IERC1271), and its [`SignatureChecker`](https://docs.openzeppelin.com/contracts/5.x/api/utils/cryptography#SignatureChecker) library verifies a signature from either an EOA or an EIP-1271 contract.
+
 ## Example EIP-1271 Implementation: Safe {#example-eip-1271-implementation-safe}
 
 Contracts can implement `isValidSignature` in many ways — the spec only doesn’t say much about the exact implementation.
 
 One notable contract which implements EIP-1271 is Safe (previously Gnosis Safe).
 
-In Safe’s code, `isValidSignature` [is implemented](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol) so that signatures can be created and verified in [two ways](https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support):
+In Safe’s code (linked here at the [v1.5.0 release](https://github.com/safe-fndn/safe-smart-account/releases/tag/v1.5.0)), `isValidSignature` [is implemented](https://github.com/safe-fndn/safe-smart-account/blob/dc437e8fba8b4805d76bcbd1c668c9fd3d1e83be/contracts/handler/CompatibilityFallbackHandler.sol) so that signatures can be created and verified in [two ways](https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support):
 
 1. Onchain messages
-   1. Creation: a safe owner creates a new safe transaction to “sign” a message, passing the message as data into the transaction. Once enough owners sign the transaction to reach the multisig threshold, the transaction is broadcast and run. In the transaction, there is a safe function called (`signMessage(bytes calldata _data)`) which adds the message to a list of “approved” messages.
-   2. Verification: call `isValidSignature` on the Safe contract, and pass in the message to verify as the message parameter and [an empty value for the signature parameter](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32) (i.e., `0x`). The Safe will see that the signature parameter is empty and instead of cryptographically verifying the signature, it will know to just go ahead and check whether the message is on the list of “approved” messages.
+   1. Creation: a safe owner creates a new safe transaction to “sign” a message, passing the message as data into the transaction. Once enough owners sign the transaction to reach the multisig threshold, the transaction is broadcast and run. In the transaction, there is a safe function called ([`signMessage(bytes calldata _data)`](https://github.com/safe-fndn/safe-smart-account/blob/dc437e8fba8b4805d76bcbd1c668c9fd3d1e83be/contracts/libraries/SignMessageLib.sol)) which adds the message to a list of “approved” messages.
+   2. Verification: call `isValidSignature` on the Safe contract, and pass in the message to verify as the message parameter and [an empty value for the signature parameter](https://github.com/safe-fndn/safe-smart-account/blob/dc437e8fba8b4805d76bcbd1c668c9fd3d1e83be/contracts/handler/CompatibilityFallbackHandler.sol#L78-L79) (i.e., `0x`). The Safe will see that the signature parameter is empty and instead of cryptographically verifying the signature, it will know to just go ahead and check whether the message is on the list of “approved” messages.
 2. Offchain messages:
    1. Creation: a safe owner creates a message offchain, then gets other safe owners to sign the message each individually until there are enough signatures to overcome the multisig approval threshold.
    2. Verification: call `isValidSignature`. In the message parameter, pass in the message to be verified. In the signature parameter, pass in each safe owner’s individual signatures all concatenated together, back-to-back. The Safe will check that there are enough signatures to meet the threshold **and** that each signature is valid. If so, it will return a value indicating successful signature verification.
@@ -104,11 +116,11 @@ In Safe’s code, `isValidSignature` [is implemented](https://github.com/safe-gl
 
 You might have noticed that the `isValidSignature` function in the [EIP-1271 interface](https://eips.ethereum.org/EIPS/eip-1271) doesn’t take in the message itself, but instead a `_hash` parameter. What this means is that instead of passing the full arbitrary-length message to `isValidSignature`, we instead pass a 32-byte hash of the message (generally keccak256).
 
-Each byte of calldata — i.e., function parameter data passed to a smart contract function — [costs 16 gas (4 gas if zero byte)](https://eips.ethereum.org/EIPS/eip-2028), so this can save a lot of gas if a message is long.
+Each byte of calldata — i.e., function parameter data passed to a smart contract function — [costs 16 gas (4 gas if zero byte)](https://eips.ethereum.org/EIPS/eip-2028) (and since the Pectra upgrade, data-heavy transactions pay a [higher floor price](https://eips.ethereum.org/EIPS/eip-7623)), so this can save a lot of gas if a message is long.
 
 ### Previous EIP-1271 Specifications {#previous-eip-1271-specifications}
 
-There are EIP-1271 specifications in the wild that have an `isValidSignature` function with a first parameter of type `bytes` (arbitrary-length, instead of a fixed-length `bytes32`) and parameter name `message`. This is an [older version](https://github.com/safe-global/safe-contracts/issues/391#issuecomment-1075427206) of the EIP-1271 standard.
+There are EIP-1271 specifications in the wild that have an `isValidSignature` function with a first parameter of type `bytes` (arbitrary-length, instead of a fixed-length `bytes32`) and parameter name `message`. This is an [older version](https://github.com/safe-fndn/safe-smart-account/issues/391#issuecomment-1075427206) of the EIP-1271 standard.
 
 ## How should EIP-1271 be implemented in my own contracts? {#how-should-eip-1271-be-implemented-in-my-own-contracts}
 

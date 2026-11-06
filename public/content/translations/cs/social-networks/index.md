@@ -69,7 +69,7 @@ Uživatelé k platbám za položky používají nativní [ERC-20](/glossary/#erc
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) je „dostatečně decentralizovaná“ sociální síť podobná X a Redditu, která uživatelům umožňuje sdílet a objevovat „casty“. Je postavena na síti vrstvy 2 (L2) Optimism, aby se transakce udržely relativně levné.
+[Farcaster](https://farcaster.xyz/) je „dostatečně decentralizovaná“ sociální síť podobná X a Redditu, která uživatelům umožňuje sdílet a objevovat „casty“. Je postavena na síti vrstvy 2 (L2) Optimism, aby transakce zůstaly relativně levné.
 
 ## Používejte decentralizované sociální sítě {#use-decentralized-social-networks}
 

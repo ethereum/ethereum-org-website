@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/atoms-institutions-blockchains-josh-stark/index.md",
-  "generatedAt": "2026-04-28T22:45:27.719Z",
-  "rootHash": "7afb590290aa",
+  "generatedAt": "2026-09-30T18:34:15.875Z",
+  "rootHash": "4cd8325c8f1f",
   "tree": {
-    "contentHash": "5b644f8a3638",
-    "anchorHash": "55e729912c29",
+    "contentHash": "48c205cb18d7",
+    "anchorHash": "e2afb4e8c0d0",
     "children": {
       "frontmatter:title": {
-        "contentHash": "276232e147e4",
+        "contentHash": "eaf413198a03",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "bc80c32db896",
+        "contentHash": "c47819874f21",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f2024e5d5df2"
+        "anchorHash": "9acb6f9b4901"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "53ee00ec0dbf"
+        "anchorHash": "8fd6e3de3a5e"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "bf63cf23317d"
+        "anchorHash": "d9f9b23fced7"
       },
       "prose:1": {
         "contentHash": "ba380c610f26",
@@ -281,5 +287,5 @@
       "raising-our-ambitions-2700"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -178,7 +178,7 @@ _図は[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethere
 
 スマート・コントラクトが関与するすべてのトランザクションにはガスが必要です。
 
-スマート・コントラクトには、コントラクトの状態を変更しない[`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions)または[`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions)関数と呼ばれる関数を含めることもできます。そのため、EOAからこれらの関数を呼び出す場合、ガスは必要ありません。このシナリオの基盤となるRPC呼び出しは[`eth_call`](/developers/docs/apis/json-rpc#eth_call)です。
+スマート・コントラクトには、コントラクトの状態を変更しない[`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions)または[`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions)関数と呼ばれる関数を含めることもできます。そのため、EOAからこれらの関数を呼び出す場合、ガスは必要ありません。このシナリオの基盤となるRPC呼び出しは[`eth_call`](/developers/docs/apis/json-rpc/#eth-call)です。
 
 `eth_call`を使用してアクセスする場合とは異なり、これらの`view`または`pure`関数は内部的（つまり、コントラクト自体または別のコントラクトから）に呼び出されることも一般的であり、その場合はガスがかかります。
 

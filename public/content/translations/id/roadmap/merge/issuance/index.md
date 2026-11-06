@@ -84,7 +84,7 @@ Semakin banyak validator yang menarik diri, jumlah maksimum validator yang kelua
 
 ### Rincian inflasi pasca-merge {#post-merge-inflation-breakdown}
 
-- [Total pasokan ETH](/eth/supply/): **\~120.520.000 ETH** (pada saat The Merge di bulan September 2022)
+- [Total pasokan ETH](/what-is-ether/supply/): **\~120.520.000 ETH** (pada saat The Merge di bulan September 2022)
 - Penerbitan lapisan eksekusi: **0**
 - Penerbitan lapisan konsensus: Sama seperti di atas, tingkat penerbitan tahunan **\~0,52%** (dengan total 14 juta ETH yang di-stake)
 

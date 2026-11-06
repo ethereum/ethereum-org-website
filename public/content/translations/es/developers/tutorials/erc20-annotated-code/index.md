@@ -17,7 +17,7 @@ Uno de los usos más comunes de Ethereum es que un grupo cree un token negociabl
 [definición de la interfaz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Este es un código fuente comentado. Si desea implementar ERC-20,
-[lea este tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+[lea este tutorial](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## La interfaz {#the-interface}
 

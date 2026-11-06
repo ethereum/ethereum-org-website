@@ -1,11 +1,8 @@
 {
-  "augur-cta": "تعمق في ⁦Augur⁩",
-  "augur-description": "بروتوكول لامركزي بالكامل لسوق التوقعات يُستخدم لتوقع اتجاهات الأسعار. إخلاء مسؤولية: ستحتاج إلى بعض الخبرة الفنية للبدء في استخدام ⁦Augur⁩.",
-  "augur-title": "Augur",
-  "kalshi-cta": "جرّب ⁦Kalshi⁩",
-  "kalshi-description": "منصة متوافقة مع ⁦CFTC⁩ تستخدم إيثيريوم لإيداعات ⁦USDC⁩. (الولايات المتحدة فقط)",
-  "kalshi-title": "Kalshi",
+  "limitless-cta": "استكشف ⁦Limitless⁩",
+  "limitless-description": "سوق توقعات مبني على ⁦Base⁩، وهي طبقة 2 (L2) لشبكة إيثيريوم. تتم تسوية التداولات على السلسلة بعملة ⁦USDC⁩، ويتم حسم معظم أسواق الأسعار تلقائيًا من خلال خلاصات الأسعار على السلسلة. غير متاح في جميع البلدان.",
+  "limitless-title": "⁦Limitless⁩",
   "polymarket-cta": "استكشف ⁦Polymarket⁩",
-  "polymarket-description": "سوق توقعات شهيرة تتميز بالتداول في الوقت الفعلي.",
+  "polymarket-description": "أحد أكبر أسواق التوقعات. تتم تسوية التداولات على بوليغون، ويتم تحديد النتائج من خلال أوراكل ⁦UMA⁩. غير متاح في جميع البلدان.",
   "polymarket-title": "Polymarket"
 }

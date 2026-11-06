@@ -19,8 +19,8 @@ export class BasePage {
   constructor(protected page: Page) {
     this.searchButton = page.getByTestId("search-button")
     this.searchInputButton = page.getByTestId("search-input-button")
-    this.searchInput = page.getByPlaceholder("Search")
     this.searchModal = page.getByTestId("search-modal")
+    this.searchInput = this.searchModal.getByRole("searchbox")
     this.searchResults = page.getByRole("listbox")
     this.primaryNav = page.getByRole("navigation", { name: "Primary" })
     this.mobileMenuButton = this.primaryNav.getByRole("button", {

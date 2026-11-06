@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/staking/solo/index.md",
   "generatedAt": "2026-08-19T21:42:14.651Z",
-  "rootHash": "cf81a825d683",
+  "rootHash": "e0433f0763e7",
   "tree": {
-    "contentHash": "042c3ead9425",
-    "anchorHash": "061dfe0e5d21",
+    "contentHash": "1e24a48ba19f",
+    "anchorHash": "56d65dc6df2b",
     "children": {
       "frontmatter:title": {
         "contentHash": "5b7cb5e07235",
@@ -32,8 +32,27 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "d501ce021673",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "fd7617cf53f2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "e24075b4651e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "acba85e02d8b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "what-is-solo-staking": {
         "contentHash": "dfff031024ee",

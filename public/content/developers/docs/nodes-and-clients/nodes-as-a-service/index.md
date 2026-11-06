@@ -209,7 +209,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Access to 50+ blockchain nodes
 
 - [**Infura**](https://infura.io/)
-  - [Docs](https://infura.io/docs)
+  - [Docs](https://docs.infura.io/)
   - Features
     - Free tier option
     - Scale as you go
@@ -422,5 +422,4 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 
 ## Related tutorials {#related-tutorials}
 
-- [Getting started with Ethereum development using Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guide to sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

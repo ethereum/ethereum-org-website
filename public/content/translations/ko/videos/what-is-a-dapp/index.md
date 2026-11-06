@@ -7,8 +7,8 @@ uploadDate: 2019-04-01
 duration: "0:05:11"
 educationLevel: beginner
 topic:
-  - "dapps"
-  - "smart-contracts"
+  - "use-cases"
+  - "how-ethereum-works"
 format: explainer
 author: "디스트릭트제로엑스 네트워크"
 breadcrumb: "Dapp이란 무엇인가요?"

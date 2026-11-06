@@ -17,6 +17,7 @@ import type {
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
+import type { TagProps } from "@/components/ui/tag"
 
 import chains from "@/data/chains"
 import { Rollup, Rollups } from "@/data/networks/networks"
@@ -24,7 +25,6 @@ import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
 import { screens } from "./utils/screen"
-import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/layouts"
 
@@ -382,22 +382,6 @@ export type CostLeaderboardData = Pick<
 
 // GitHub contributors
 
-export type Commit = {
-  commit: {
-    author: {
-      name: string
-      email: string
-      date: string
-    }
-    message: string
-  }
-  author: {
-    avatar_url: string
-    login: string
-    html_url: string
-  }
-}
-
 export type Author = {
   name: string
   email: string
@@ -548,11 +532,6 @@ export type EtherscanTxCountResponse = {
   result: EtherscanTxCountItem[]
 }
 
-export type DefiLlamaTVLResponse = {
-  date: number
-  tvl: number
-}[]
-
 export type MetricReturnData = ValueOrError<number>
 
 export type EthPriceData =
@@ -634,18 +613,14 @@ export type GrowThePieMasterData = {
   launchDates: Record<string, string>
 }
 
-export type GithubRepoData = {
-  starCount: number
-  languages: string[]
-}
-
 export type L2beatData = {
   projects: Record<
     string,
     {
       stage: string
+      type?: "layer2" | "layer3"
       tvl: { total: number }
-      tvs: { breakdown: { total: number } }
+      tvs: { breakdown: { total: number; stablecoin?: number } }
       risks: Array<{ name: string; sentiment: string }>
     }
   >
@@ -678,8 +653,9 @@ export type PhoneScreenProps = SimulatorNavProps & {
 // Events (Geode Labs Supabase API)
 export interface GeodeApiEventItem {
   title: string
-  logoImage: string
-  bannerImage: string
+  // Nullable: the feed sends null for events with no image.
+  logoImage: string | null
+  bannerImage: string | null
   startTime: string
   endTime: string | null
   location: string
@@ -701,6 +677,9 @@ export type EventType =
   | "other"
 
 export interface EventItem extends GeodeApiEventItem {
+  // Narrowed from the raw feed: transformEvent normalizes a missing image to "".
+  logoImage: string
+  bannerImage: string
   id: string // slugified title
   eventTypes: EventType[]
   eventTypesLabels?: string[]
@@ -754,7 +733,7 @@ export type ChainIdNetworkResponse = {
 
 export type Chain = Pick<
   ChainIdNetworkResponse,
-  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain" | "shortName"
 >
 
 export type ChainName = (typeof chains)[number]["name"]
@@ -843,9 +822,9 @@ export type WalletData = {
   name: string
   /** Set only to keep a URL stable across a rename; defaults to slugified name. */
   slug?: string
-  /** Optional forever — cards and search degrade gracefully without it. */
-  description?: string
   image: StaticImageData
+  banner?: StaticImageData
+  screenshots?: StaticImageData[]
   twBackgroundColor: string
   twGradiantBrandColor: string
   url: string
@@ -900,14 +879,6 @@ export type WalletData = {
 
 export type Wallet = WalletData & {
   supportedLanguages: string[]
-}
-
-export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
-
-export interface WalletFilterData {
-  title: TranslationKey
-  filterKey?: string
-  description: TranslationKey | ""
 }
 
 export type FilterInputState = boolean | Lang | string | string[] | null
@@ -1246,16 +1217,6 @@ export type CommunityBlog = {
   href: string
 } & ({ name: string; feed?: string } | { name?: string; feed: string })
 
-type NestedDivs = {
-  div: NestedDivs[]
-}
-
-export type HTMLResult = {
-  html: {
-    body: Record<string, NestedDivs>[]
-  }
-}
-
 export type EventCardProps = {
   title: string
   href: string
@@ -1440,10 +1401,20 @@ export type AppData =
   | PrivacyApp
   | GovernanceDaoApp
 
+export interface MeetupGroup {
+  title: string
+  location: string
+  link: string
+  logoImage?: string
+  bannerImage?: string
+}
+
 export type CommunityPick = {
   name: string
   twitterURL: string
   twitterHandle: string
+  /** S3 avatar; `""` = mirroring failed, `undefined` = not synced yet */
+  avatarImage?: string
   app1Name: string | null
   app2Name: string | null
   app3Name: string | null
@@ -1535,6 +1506,7 @@ export type DeveloperToolsRepoLink = {
   finalScore?: number
   scoreSource?: "official-weight" | "github-inferred" | "unscored"
   lastUpdated?: string | null
+  license?: string | null
 }
 
 export type DeveloperToolsPackageLink = {
@@ -1553,11 +1525,14 @@ export type BuilderResourcesCatalogResource = {
   tags: string[]
   website?: string | null
   llmstext?: string | null
+  crops_native?: true
   subcategory_id: string
   resource_raw_score?: number
   resource_score?: number
   resource_rank?: number
   resource_score_source?: "official-weight" | "github-inferred" | "unscored"
+  /** Last edit of this entry in the upstream catalog (ISO date). */
+  updated_at?: string
 }
 
 export type DeveloperToolsRankingCoverage = {
@@ -1596,4 +1571,41 @@ export interface BuilderResourcesTaxonomy {
     definitions: BuilderResourcesTaxonomyCategory[]
   }
   tags: string[]
+}
+
+export type CatalogItemKind = "app" | "tool" | "wallet"
+
+export type CatalogItemLinkKind =
+  | "x"
+  | "discord"
+  | "telegram"
+  | "reddit"
+  | "farcaster"
+  | "github"
+  | "code"
+
+export interface CatalogItemLink {
+  kind: CatalogItemLinkKind
+  href: string
+}
+
+export interface CatalogItem {
+  kind: CatalogItemKind
+  slug: string
+  name: string
+  logo?: string | StaticImageData
+  banner?: string | StaticImageData
+  screenshots: (string | StaticImageData)[]
+  /** `node` replaces the default `Tag` render, e.g. for an interactive badge. */
+  tags: { label: string; status?: TagProps["status"]; node?: ReactNode }[]
+  subtitle?: string
+  chains: ChainName[]
+  /** Localized; rendered as markdown. */
+  description?: string
+  primaryLink?: { href: string; label: string }
+  socialLinks: CatalogItemLink[]
+  infoRows: { label: string; value: ReactNode; tooltip?: string }[]
+  /** Page path; the trail comes from the breadcrumb IA map, closed by `name` */
+  breadcrumbSlug: string
+  next?: { name: string; href: string }
 }

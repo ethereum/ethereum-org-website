@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/post-quantum-security-ethereum-roadmap/index.md",
   "generatedAt": "2026-04-29T06:00:14.777Z",
-  "rootHash": "0961f2ca122d",
+  "rootHash": "9989768519dd",
   "tree": {
-    "contentHash": "c2f50928ec06",
-    "anchorHash": "0edf79182569",
+    "contentHash": "7ed1b51dc33b",
+    "anchorHash": "46cfeb26b934",
     "children": {
       "frontmatter:title": {
-        "contentHash": "0fbd2580c641",
+        "contentHash": "d0bf90c57052",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "96fcd05adfd5",
+        "contentHash": "ed91feaa50f7",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f5ce62f9dcee"
+        "anchorHash": "30a8249787f6"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "acaf0e9c0def"
+        "anchorHash": "e07aacd43c2f"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d21f85ea3816"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "df571735a772",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "9a28841c23f2"
+        "anchorHash": "4933a23552d0"
       },
       "prose:1": {
         "contentHash": "92e654bcc412",

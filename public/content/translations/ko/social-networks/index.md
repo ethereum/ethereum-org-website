@@ -69,7 +69,7 @@ Mirror에 게시된 글은 탈중앙화 스토리지 플랫폼인 Arweave에 영
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/)는 사용자가 "캐스트(casts)"를 공유하고 발견할 수 있게 해주는 X 및 레딧과 유사한 "충분히 탈중앙화된" 소셜 네트워크입니다. 트랜잭션 비용을 비교적 저렴하게 유지하기 위해 옵티미즘 레이어 2 (l2) 네트워크 위에 구축되었습니다.
+[Farcaster](https://farcaster.xyz/)는 사용자가 "casts"를 공유하고 발견할 수 있게 해주는, X 및 레딧과 유사한 "충분히 탈중앙화된" 소셜 네트워크입니다. 트랜잭션 비용을 비교적 저렴하게 유지하기 위해 옵티미즘 레이어 2 (l2) 네트워크를 기반으로 구축되었습니다.
 
 ## 탈중앙화 소셜 네트워크 사용하기 {#use-decentralized-social-networks}
 

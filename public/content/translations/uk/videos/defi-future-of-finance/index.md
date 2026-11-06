@@ -7,8 +7,7 @@ uploadDate: 2020-09-24
 duration: "0:14:48"
 educationLevel: beginner
 topic:
-  - "defi"
-  - "finance"
+  - "use-cases"
 format: explainer
 author: "Фінематікс"
 breadcrumb: "DeFi: майбутнє фінансів"

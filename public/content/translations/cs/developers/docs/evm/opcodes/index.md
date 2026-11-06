@@ -4,7 +4,7 @@ description: "Seznam všech dostupných operačních kódů pro virtuální stro
 lang: cs
 ---
 
-## Přehled
+## Přehled {#overview}
 
 Toto je aktualizovaná verze referenční stránky EVM na [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes).
 Čerpá také z [Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf), [Jello Paper](https://jellopaper.org/evm/) a implementace [geth](https://github.com/ethereum/go-ethereum).

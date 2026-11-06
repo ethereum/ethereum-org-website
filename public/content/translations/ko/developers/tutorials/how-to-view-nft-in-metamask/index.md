@@ -9,26 +9,34 @@ lang: ko
 published: 2021-04-22
 ---
 
-이 튜토리얼은 NFT 튜토리얼 시리즈의 3/3부로, 새로 발행된 NFT를 확인해 봅니다. 하지만 메인넷이나 테스트넷을 포함하여 메타마스크를 사용하는 모든 ERC-721 토큰에 대해 이 일반적인 튜토리얼을 사용할 수 있습니다. 이더리움에서 자신만의 NFT를 발행하는 방법을 배우고 싶다면, [NFT 스마트 컨트랙트 작성 및 배포 방법에 대한 1부](/developers/tutorials/how-to-write-and-deploy-an-nft)를 확인해 보세요!
+이 튜토리얼은 새로 발행한 대체 불가능 토큰 (NFT)을 확인하는 NFT 튜토리얼 시리즈의 3/3부입니다. 하지만 메인넷이나 모든 테스트넷을 포함하여 메타마스크를 사용하는 모든 ERC-721 토큰에 대해 이 일반적인 튜토리얼을 사용할 수 있습니다. 이더리움에서 자신만의 NFT를 발행하는 방법을 배우고 싶다면 [NFT 스마트 컨트랙트를 작성하고 배포하는 방법에 대한 1부](/developers/tutorials/how-to-write-and-deploy-an-nft)를 확인해 보세요!
 
-축하합니다! NFT 튜토리얼 시리즈 중 가장 짧고 간단한 부분인 가상 지갑에서 갓 발행된 NFT를 보는 방법에 도달하셨습니다. 이전 두 부분에서 사용했던 메타마스크를 이 예제에서도 사용할 것입니다.
+축하합니다! 가상 지갑에서 갓 발행한 NFT를 보는 방법인 NFT 튜토리얼 시리즈 중 가장 짧고 간단한 부분에 도달했습니다. 이전 두 부분에서 사용했던 메타마스크를 이 예제에서 사용할 것입니다.
 
-사전 준비 사항으로 모바일에 메타마스크가 이미 설치되어 있어야 하며, NFT를 발행한 계정이 포함되어 있어야 합니다. 이 앱은 [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) 또는 [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US)에서 무료로 다운로드할 수 있습니다.
+사전 준비 사항으로 브라우저 확장 프로그램이나 모바일 앱 중 하나로 메타마스크가 이미 설치되어 있어야 하며, NFT를 발행한 계정이 포함되어 있어야 합니다. [메타마스크 다운로드 페이지](https://metamask.io/download)에서 메타마스크를 무료로 받을 수 있습니다.
 
 ## 1단계: 네트워크를 Sepolia로 설정하기 {#set-network-to-sepolia}
 
-앱 상단에서 "지갑(Wallet)" 버튼을 누르면 네트워크를 선택하라는 메시지가 표시됩니다. 우리의 NFT는 Sepolia 네트워크에서 발행되었으므로, 네트워크로 Sepolia를 선택해야 합니다.
+우리의 대체 불가능 토큰 (NFT)은 Sepolia 테스트 네트워크에서 발행되었으므로, 네트워크로 Sepolia를 선택해야 합니다. 메타마스크는 기본적으로 테스트 네트워크를 숨기므로 먼저 이를 켜야 합니다.
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
+1. 오른쪽 상단 모서리에 있는 메뉴를 열고 "네트워크"를 선택합니다.
+2. 네트워크 목록의 맨 아래로 스크롤하여 "테스트 네트워크 표시"를 켭니다.
+3. 네트워크 목록에서 "Sepolia"를 선택합니다.
+
+사용 중인 메타마스크 버전에서 메뉴가 다르게 보이는 경우 [테스트넷 보기에 대한 메타마스크의 가이드](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/)를 참조하세요.
 
 ## 2단계: 메타마스크에 수집품 추가하기 {#add-nft-to-metamask}
 
-Sepolia 네트워크에 접속한 후, 오른쪽에 있는 "수집품(Collectibles)" 탭을 선택하고 NFT 스마트 컨트랙 주소와 NFT의 ERC-721 토큰 ID를 추가합니다. 이는 튜토리얼 2부에서 배포한 NFT의 트랜잭션 해시를 기반으로 Etherscan에서 찾을 수 있습니다.
+메타마스크는 Sepolia가 포함되지 않은 일부 네트워크에서만 대체 불가능 토큰 (NFT)을 자동으로 감지하므로, NFT를 수동으로 가져와야 합니다. 이를 위해서는 NFT 스마트 컨트랙트 주소와 NFT의 ERC-721 토큰 ID가 필요합니다. 이는 튜토리얼 2부에서 발행한 NFT의 트랜잭션 해시를 기반으로 Etherscan에서 찾을 수 있습니다. 1부의 컨트랙트를 사용했다면 첫 번째 NFT의 토큰 ID는 1입니다.
 
-![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
+![트랜잭션 해시 및 ERC-721 토큰 ID를 찾는 방법](./findNFTEtherscan.png)
 
-NFT를 보려면 몇 번 새로고침해야 할 수도 있지만, 곧 나타날 것입니다 <Emoji text="😄" size={1} />!
+그런 다음 메타마스크(확장 프로그램 또는 모바일)에서 다음을 수행합니다.
 
-![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
+1. 홈 화면의 "NFT" 섹션으로 이동하여 "NFT 가져오기"를 선택합니다.
+2. 네트워크로 Sepolia를 선택하고 "주소" 상자에 NFT 스마트 컨트랙트 주소를 붙여넣습니다.
+3. "토큰 ID" 상자에 토큰 ID를 입력하고 "가져오기"를 선택합니다.
 
-축하합니다! 성공적으로 NFT를 발행했으며, 이제 이를 확인할 수 있습니다! 여러분이 NFT 세계에 어떤 돌풍을 일으킬지 무척 기대됩니다!
+NFT를 보려면 몇 번 새로고침해야 할 수도 있지만, 거기에 있을 것입니다 <Emoji text="😄" size={1} />! 메타마스크에서 사용자가 NFT의 소유자가 아니라고 표시하는 경우, NFT를 발행한 계정을 선택했는지 확인하세요. 더 많은 도움이 필요하면 [NFT에 대한 메타마스크의 가이드](https://support.metamask.io/manage-crypto/nfts/nft-tokens-in-your-metamask-wallet/)를 참조하세요.
+
+축하합니다! 성공적으로 NFT를 발행했으며 이제 확인할 수 있습니다! 여러분이 NFT 세계에 어떤 돌풍을 일으킬지 무척 기대됩니다!

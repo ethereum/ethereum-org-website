@@ -9,26 +9,34 @@ lang: vi
 published: 2021-04-22
 ---
 
-Hướng dẫn này là Phần 3/3 trong chuỗi Hướng dẫn về NFT, nơi chúng ta sẽ xem NFT mới được đúc của mình. Tuy nhiên, bạn có thể sử dụng hướng dẫn chung này cho bất kỳ token ERC-721 nào sử dụng MetaMask, bao gồm cả trên Mạng chính hoặc bất kỳ mạng thử nghiệm nào. Nếu bạn muốn tìm hiểu cách đúc NFT của riêng mình trên Ethereum, bạn nên xem [Phần 1 về Cách viết & Triển khai hợp đồng thông minh NFT](/developers/tutorials/how-to-write-and-deploy-an-nft)!
+Hướng dẫn này là Phần 3/3 trong chuỗi Hướng dẫn về NFT, nơi chúng ta xem token không thể thay thế (NFT) mới được đúc của mình. Tuy nhiên, bạn có thể sử dụng hướng dẫn chung này cho bất kỳ token ERC-721 nào bằng MetaMask, bao gồm cả trên Mạng chính hoặc bất kỳ mạng thử nghiệm nào. Nếu bạn muốn tìm hiểu cách đúc NFT của riêng mình trên Ethereum, bạn nên xem [Phần 1 về Cách viết & Triển khai hợp đồng thông minh NFT](/developers/tutorials/how-to-write-and-deploy-an-nft)!
 
 Chúc mừng! Bạn đã đến với phần ngắn nhất và đơn giản nhất trong chuỗi hướng dẫn về NFT của chúng tôi — cách xem NFT mới đúc của bạn trên một ví ảo. Chúng ta sẽ sử dụng MetaMask cho ví dụ này vì đây là những gì chúng ta đã sử dụng trong hai phần trước.
 
-Như một điều kiện tiên quyết, bạn đã phải cài đặt MetaMask trên thiết bị di động và nó phải bao gồm tài khoản mà bạn đã đúc NFT của mình — bạn có thể tải ứng dụng miễn phí trên [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) hoặc [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
+Như một điều kiện tiên quyết, bạn đã phải cài đặt MetaMask, có thể là tiện ích mở rộng trình duyệt hoặc ứng dụng di động, và nó phải bao gồm tài khoản mà bạn đã đúc NFT của mình. Bạn có thể tải MetaMask miễn phí từ [trang tải xuống MetaMask](https://metamask.io/download).
 
 ## Bước 1: Đặt mạng lưới của bạn thành Sepolia {#set-network-to-sepolia}
 
-Ở đầu ứng dụng, nhấn nút “Ví”, sau đó bạn sẽ được nhắc chọn một mạng lưới. Vì NFT của chúng ta đã được đúc trên mạng lưới Sepolia, bạn sẽ muốn chọn Sepolia làm mạng lưới của mình.
+Vì NFT của chúng ta đã được đúc trên mạng thử nghiệm Sepolia, bạn sẽ muốn chọn Sepolia làm mạng lưới của mình. MetaMask ẩn các mạng thử nghiệm theo mặc định, vì vậy trước tiên hãy bật chúng lên:
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
+1. Mở menu ở góc trên cùng bên phải và chọn "Networks" (Mạng lưới).
+2. Cuộn xuống cuối danh sách mạng lưới và bật "Show test networks" (Hiển thị mạng thử nghiệm).
+3. Chọn "Sepolia" từ danh sách mạng lưới.
+
+Xem [hướng dẫn của MetaMask về cách xem các mạng thử nghiệm](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/) nếu các menu trông khác trong phiên bản MetaMask của bạn.
 
 ## Bước 2: Thêm vật phẩm sưu tầm của bạn vào MetaMask {#add-nft-to-metamask}
 
-Khi bạn đang ở trên mạng lưới Sepolia, hãy chọn tab “Collectibles” (Vật phẩm sưu tầm) ở bên phải và thêm địa chỉ hợp đồng thông minh NFT cùng với ID token ERC-721 của NFT của bạn — những thông tin này bạn có thể tìm thấy trên Etherscan dựa trên mã băm giao dịch từ NFT của bạn đã được triển khai trong Phần II của hướng dẫn.
+MetaMask chỉ tự động phát hiện NFT trên một số mạng lưới, không bao gồm Sepolia, vì vậy bạn sẽ cần nhập NFT của mình theo cách thủ công. Để làm điều đó, bạn cần địa chỉ hợp đồng thông minh NFT và ID token ERC-721 của NFT của bạn — những thông tin này bạn có thể tìm thấy trên Etherscan dựa trên mã băm giao dịch từ NFT mà bạn đã đúc trong Phần II của hướng dẫn của chúng tôi. Nếu bạn đã sử dụng hợp đồng từ Phần 1, NFT đầu tiên của bạn có ID token là 1.
 
-![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
+![Cách tìm mã băm giao dịch và ID token ERC-721 của bạn](./findNFTEtherscan.png)
 
-Bạn có thể cần làm mới vài lần để xem NFT của mình — nhưng nó sẽ ở đó <Emoji text="😄" size={1} />!
+Sau đó, trong MetaMask (tiện ích mở rộng hoặc thiết bị di động):
 
-![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
+1. Đi tới phần "NFTs" trên màn hình chính và chọn "Import NFT" (Nhập NFT).
+2. Chọn Sepolia làm mạng lưới và dán địa chỉ hợp đồng thông minh NFT của bạn vào ô "Address" (Địa chỉ).
+3. Nhập ID token của bạn vào ô "Token ID" và chọn "Import" (Nhập).
 
-Chúc mừng! Bạn đã đúc thành công một NFT và bây giờ bạn có thể xem nó! Chúng tôi rất nóng lòng muốn xem cách bạn sẽ khuấy đảo thế giới NFT!
+Bạn có thể cần làm mới vài lần để xem NFT của mình — nhưng nó sẽ ở đó <Emoji text="😄" size={1} />! Nếu MetaMask thông báo bạn không phải là chủ sở hữu của NFT, hãy kiểm tra xem bạn đã chọn đúng tài khoản mà bạn đã đúc NFT vào chưa. Để được trợ giúp thêm, hãy xem [hướng dẫn của MetaMask về NFT](https://support.metamask.io/manage-crypto/nfts/nft-tokens-in-your-metamask-wallet/).
+
+Chúc mừng! Bạn đã đúc thành công một NFT và bây giờ bạn có thể xem nó! Chúng tôi rất nóng lòng muốn xem cách bạn sẽ làm khuynh đảo thế giới NFT!

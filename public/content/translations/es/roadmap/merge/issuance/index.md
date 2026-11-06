@@ -84,7 +84,7 @@ A medida que más validadores se retiran, el número máximo de validadores que 
 
 ### Desglose de la inflación después de La Fusión {#post-merge-inflation-breakdown}
 
-- [Suministro total de ETH](/eth/supply/): **\~120.520.000 ETH** (en el momento de La Fusión en septiembre de 2022)
+- [Suministro total de ETH](/what-is-ether/supply/): **\~120.520.000 ETH** (en el momento de La Fusión en septiembre de 2022)
 - Emisión en la capa de ejecución: **0**
 - Emisión en la capa de consenso: Igual que arriba, **\~0,52 %** de tasa de emisión anualizada (con 14 millones de ETH en participación total)
 

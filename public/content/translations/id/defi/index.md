@@ -102,7 +102,7 @@ Sebagai rantai blok, Ethereum dirancang untuk mengirim transaksi dengan cara yan
 
 #### Mengalirkan uang ke seluruh dunia... {#stream-money}
 
-Anda juga dapat mengalirkan uang melalui Ethereum. Ini memungkinkan Anda membayar gaji seseorang setiap detik, memberi mereka akses ke uang mereka kapan pun mereka membutuhkannya. Atau menyewa sesuatu setiap detik seperti loker penyimpanan atau skuter listrik.
+Anda juga dapat mengalirkan uang melalui Ethereum. Alih-alih mengirimkan satu pembayaran besar, pembayaran yang dialirkan mentransfer jumlah kecil secara terus-menerus seiring waktu. Ini memungkinkan Anda membayar gaji seseorang setiap detik, memberi mereka akses ke uang mereka kapan pun mereka membutuhkannya. Ini juga dapat digunakan untuk membayar layanan yang ditagih secara terus-menerus, seperti menyewa loker penyimpanan atau skuter listrik.
 
 Dan jika Anda tidak ingin mengirim atau mengalirkan [ETH](/glossary/#ether) karena nilainya yang dapat berubah-ubah, ada mata uang alternatif di Ethereum: [stablecoin](/glossary/#stablecoin).
 

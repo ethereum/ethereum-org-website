@@ -41,7 +41,7 @@ lang: ar
 - [التوثيق](https://docs.blastapi.io)
 - [ديسكورد](https://discord.gg/SaRqmRUjjQ)
 
-**<span dir="ltr">BlockPi</span> -** **_توفير خدمات RPC أكثر كفاءة وسرعة_**
+**<span dir="ltr">BlockPi</span> -** **_توفير خدمات <span dir="ltr">RPC</span> أكثر كفاءة وسرعة_**
 
 - [<span dir="ltr">blockpi.io</span>](https://blockpi.io/)
 - [التوثيق](https://docs.blockpi.io/)
@@ -58,7 +58,7 @@ lang: ar
 **<span dir="ltr">Blockscout</span> - مستكشف الكتل مفتوح المصدر**
 - [التوثيق](https://docs.blockscout.com/)
 
-**<span dir="ltr">GetBlock</span>-** **_سلسلة الكتل كخدمة لتطوير <span dir="ltr">Web3</span>_**
+**<span dir="ltr">GetBlock</span> -** **_سلسلة الكتل كخدمة لتطوير <span dir="ltr">Web3</span>_**
 
 - [<span dir="ltr">GetBlock.io</span>](https://getblock.io/)
 - [التوثيق](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ lang: ar
 - [التوثيق](https://docs.infura.io/api)
 - [<span dir="ltr">GitHub</span>](https://github.com/INFURA)
 
-**<span dir="ltr">Node RPC</span> - _مزود <span dir="ltr">JSON-RPC</span> لآلة إيثيريوم الافتراضية (EVM) فعال من حيث التكلفة_**
+**<span dir="ltr">Node RPC</span> - _مزود <span dir="ltr">JSON-RPC</span> لآلة إيثريوم الافتراضية (EVM) فعال من حيث التكلفة_**
 
 - [<span dir="ltr">noderpc.xyz</span>](https://www.noderpc.xyz/)
 - [التوثيق](https://docs.noderpc.xyz/node-rpc)
@@ -91,7 +91,13 @@ lang: ar
 - [التوثيق](https://rivet.cloud/docs/)
 - [<span dir="ltr">GitHub</span>](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**<span dir="ltr">Zmok</span> -** **_عقد إيثيريوم موجهة نحو السرعة كواجهة برمجة تطبيقات (API) لـ <span dir="ltr">JSON-RPC</span>/<span dir="ltr">WebSockets</span>._**
+**<span dir="ltr">SolidRPC</span> -** **_بنية تحتية لـ <span dir="ltr">JSON-RPC</span> لآلة إيثريوم الافتراضية (EVM) مع وصول عام كامل وأرشيفي وبدون مفتاح._**
+
+- [<span dir="ltr">solidrpc.io</span>](https://solidrpc.io/)
+- [التوثيق](https://solidrpc.io/docs)
+- [<span dir="ltr">GitHub</span>](https://github.com/SolidRPC)
+
+**<span dir="ltr">Zmok</span> -** **_عقد إيثيريوم موجهة نحو السرعة كواجهة برمجة تطبيقات (API) لـ <span dir="ltr">JSON-RPC/WebSockets</span>._**
 
 - [<span dir="ltr">zmok.io</span>](https://zmok.io/)
 - [<span dir="ltr">GitHub</span>](https://github.com/zmok-io)
@@ -100,7 +106,13 @@ lang: ar
 
 ### أدوات التطوير {#development-tools}
 
-**<span dir="ltr">ethers-kt</span> -** **_مكتبة <span dir="ltr">Kotlin</span>/<span dir="ltr">Java</span>/<span dir="ltr">Android</span> غير متزامنة وعالية الأداء لسلاسل الكتل القائمة على آلة إيثيريوم الافتراضية (EVM)._**
+**<span dir="ltr">eth.zig</span> -** **_مكتبة <span dir="ltr">Zig</span> لإيثيريوم، مع ترميز واجهة التطبيق الثنائية (ABI) في وقت الترجمة وارتباطات العقود._**
+
+- [<span dir="ltr">GitHub</span>](https://github.com/StrobeLabs/eth.zig)
+- [التوثيق](https://ethzig.org)
+- [أمثلة](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**<span dir="ltr">ethers-kt</span> -** **_مكتبة <span dir="ltr">Kotlin/Java/Android</span> غير متزامنة وعالية الأداء لسلاسل الكتل القائمة على آلة إيثريوم الافتراضية (EVM)._**
 
 - [<span dir="ltr">GitHub</span>](https://github.com/Kr1ptal/ethers-kt)
 - [أمثلة](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -115,20 +127,20 @@ lang: ar
 **أدوات <span dir="ltr">Python</span> -** **_مجموعة متنوعة من المكتبات للتفاعل مع إيثيريوم عبر <span dir="ltr">Python</span>._**
 
 - [<span dir="ltr">py.ethereum.org</span>](https://snakecharmers.ethereum.org/)
-- [<span dir="ltr">GitHub</span> لـ <span dir="ltr">Web3.py</span>](https://github.com/ethereum/web3.py)
-- [دردشة <span dir="ltr">Web3.py</span>](https://gitter.im/ethereum/web3.py)
+- [<span dir="ltr">GitHub</span> لـ <span dir="ltr">web3.py</span>](https://github.com/ethereum/web3.py)
+- [دردشة <span dir="ltr">web3.py</span>](https://gitter.im/ethereum/web3.py)
 
-**<span dir="ltr">Tatum</span> -** **_منصة تطوير سلسلة الكتل المثالية._**
+**<span dir="ltr">Tatum</span> -** **_منصة تطوير سلسلة الكتل المثلى._**
 
 - [<span dir="ltr">Tatum</span>](https://tatum.io/)
 - [<span dir="ltr">GitHub</span>](https://github.com/tatumio/)
 - [التوثيق](https://docs.tatum.io/)
 - [ديسكورد](https://discord.gg/EDmW3kjTC9)
 
-**<span dir="ltr">Web3j</span> -** **_مكتبة تكامل <span dir="ltr">Java</span>/<span dir="ltr">Android</span>/<span dir="ltr">Kotlin</span>/<span dir="ltr">Scala</span> لإيثيريوم._**
+**<span dir="ltr">web3j</span> -** **_مكتبة تكامل <span dir="ltr">Java/Android/Kotlin/Scala</span> لإيثيريوم._**
 
 - [<span dir="ltr">GitHub</span>](https://github.com/web3j/web3j)
-- [المستندات](https://docs.web3j.io/)
+- [التوثيق](https://docs.web3j.io/)
 - [<span dir="ltr">Gitter</span>](https://gitter.im/web3j/web3j)
 
 ### خدمات سلسلة الكتل {#blockchain-services}

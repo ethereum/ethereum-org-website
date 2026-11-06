@@ -39,6 +39,7 @@ export const GET = async () => {
     renderNavSection(nav.build, findFooter(nav.build.label)),
     renderNavSection(nav.participate, findFooter(nav.participate.label)),
     renderNavSection(nav.research, findFooter(nav.research.label)),
+    renderNavSection(nav.organizations, findFooter(nav.organizations.label)),
     SECURITY,
     renderLegalSection(dipperLinks),
     "",

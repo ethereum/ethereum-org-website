@@ -9,6 +9,7 @@ import {
   getWalletPlatforms,
 } from "@/lib/utils/walletData"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 import { WALLET_APPLICATION_CATEGORY } from "@/lib/jsonld/software"
@@ -54,29 +55,11 @@ export default async function WalletDetailPageJsonLD({
         inLanguage: locale,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: t("page-find-wallet-title"),
-              item: normalizeUrlForJsonLd(locale, "/wallets/find-wallet/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: wallet.name,
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          `/wallets/find-wallet/${wallet.slug}`,
+          wallet.name
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#wallet` },

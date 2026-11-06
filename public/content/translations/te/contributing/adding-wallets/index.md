@@ -1,6 +1,6 @@
 ---
-title: వాలెట్లను జోడించడం
-description: ethereum.orgకి వాలెట్‌ను జోడించేటప్పుడు మేము ఉపయోగించే విధానం
+title: "వాలెట్లను జోడించడం"
+description: "ethereum.orgకి వాలెట్‌ను జోడించేటప్పుడు మేము ఉపయోగించే విధానం"
 lang: te
 ---
 
@@ -58,7 +58,7 @@ ethereum.orgలో వాలెట్‌ను జోడించమని ఎ�
 
 ## వాలెట్‌ను జోడించడం {#adding-a-wallet}
 
-మీరు ethereum.orgకి వాలెట్‌ను జోడించాలనుకుంటే, GitHubలో ఒక ఇష్యూను సృష్టించండి.
+మీరు ethereum.orgకి వాలెట్‌ను జోడించాలనుకుంటే, GitHubలో ఒక ఇష్యూను సృష్టించండి. ఇష్యూలో మీరు ఇచ్చే వాలెట్ వివరణ వాలెట్ పేజీలో చూపబడుతుంది, కాబట్టి దానిని ఒకటి లేదా రెండు వాస్తవిక వాక్యాలకు పరిమితం చేయండి.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   ఇష్యూను సృష్టించండి

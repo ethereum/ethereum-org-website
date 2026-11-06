@@ -16,7 +16,7 @@ Yıllar boyunca ethereum.org'u onlarca dilde erişilebilir kılan binlerce toplu
 
 Mevcut bir çeviride hata fark ederseniz, lütfen [GitHub'da bir sorun açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Soru sormak veya geri bildirim paylaşmak için [ethereum.org Discord](https://discord.gg/ethereum-org) sunucusuna katılın._
+_Soru sormak veya geri bildirim paylaşmak için [ethereum.org Discord](/discord/) sunucusuna katılın._
 
 ## Çeviri Programı Hakkında {#about-us}
 
@@ -63,7 +63,7 @@ Diğer faydalı çeviri araçları, çevirmen toplulukları ve Çeviri Programı
 
 ## İletişime geçin {#get-in-touch}
 
-Herhangi bir sorunuz mu var? Veya ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://discord.gg/ethereum-org) #translations kanalında paylaşım yapın.
+Herhangi bir sorunuz mu var? Veya ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](/discord/) #translations kanalında paylaşım yapın.
 
 Bize translations@ethereum.org adresinden de ulaşabilirsiniz.
 

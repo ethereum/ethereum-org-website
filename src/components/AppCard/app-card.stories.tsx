@@ -9,6 +9,9 @@ import TruncatedText from "@/components/ui/TruncatedText"
 
 import AppCard from "."
 
+import aaveLogo from "@/public/images/dapps/aave.png"
+import uniLogo from "@/public/images/dapps/uni.png"
+
 const meta = {
   title: "Components / Cards / AppCard",
   component: AppCard,
@@ -31,7 +34,7 @@ const sampleApp = {
   name: "Uniswap",
   description:
     "Uniswap is a decentralized exchange protocol that allows users to swap tokens without intermediaries. It uses an automated market maker model.",
-  thumbnail: "/images/dapps/uni.png",
+  thumbnail: uniLogo.src,
   category: "DeFi",
   categoryTagStatus: "tag" as const,
   tags: ["Exchange", "AMM", "Trading"],
@@ -197,7 +200,7 @@ export const CategoryTagStatuses = {
         <AppCard
           key={status}
           name={`${category} App`}
-          thumbnail="/images/dapps/uni.png"
+          thumbnail={uniLogo.src}
           category={category}
           categoryTagStatus={status}
           tags={["Tag 1", "Tag 2"]}
@@ -218,7 +221,7 @@ export const AppsPageStyle = {
       <AppCard
         name="Aave"
         description="Aave is an open source and non-custodial liquidity protocol for earning interest on deposits and borrowing assets."
-        thumbnail="/images/dapps/aave.png"
+        thumbnail={aaveLogo.src}
         category="DeFi"
         categoryTagStatus="tag"
         tags={["Lending", "Borrowing", "Flash Loans"]}
@@ -243,7 +246,7 @@ export const DeveloperAppsPageStyle = {
       </p>
       <AppCard
         name="Hardhat"
-        thumbnail="/images/dapps/uni.png"
+        thumbnail={uniLogo.src}
         tags={["Testing", "Debugging", "Solidity"]}
         imageSize="thumbnail"
         href="?appId=hardhat"
@@ -279,7 +282,7 @@ export const CategoryListStyle = {
             <div key={app.name} className="border-b last:border-b-0">
               <AppCard
                 name={app.name}
-                thumbnail="/images/dapps/uni.png"
+                thumbnail={uniLogo.src}
                 tags={app.tags}
                 imageSize="medium"
                 hover="none"
@@ -309,12 +312,7 @@ export const HighlightCardCover = {
         <LinkOverlay href="/apps/uniswap" className="no-underline">
           {/* Banner image - cover crops to fill */}
           <CardBanner fit="cover" background="accent-a" className="mb-2">
-            <Image
-              src="/images/dapps/uni.png"
-              alt="App banner"
-              width={400}
-              height={200}
-            />
+            <Image src={uniLogo} alt="App banner" width={400} height={200} />
           </CardBanner>
           {/* Description */}
           <div className="mb-4">
@@ -327,7 +325,7 @@ export const HighlightCardCover = {
           {/* Static AppCard (no href - parent handles link) */}
           <AppCard
             name="Uniswap"
-            thumbnail="/images/dapps/uni.png"
+            thumbnail={uniLogo.src}
             category="DeFi"
             categoryTagStatus="tag"
             tags={["Exchange", "AMM"]}
@@ -350,12 +348,7 @@ export const HighlightCardContain = {
         <LinkOverlay href="/apps/uniswap" className="no-underline">
           {/* Banner image - contain shows full image with blur bg */}
           <CardBanner fit="contain" background="accent-a" className="mb-2">
-            <Image
-              src="/images/dapps/uni.png"
-              alt="App banner"
-              width={400}
-              height={200}
-            />
+            <Image src={uniLogo} alt="App banner" width={400} height={200} />
           </CardBanner>
           {/* Description */}
           <div className="mb-4">
@@ -368,7 +361,7 @@ export const HighlightCardContain = {
           {/* Static AppCard (no href - parent handles link) */}
           <AppCard
             name="Uniswap"
-            thumbnail="/images/dapps/uni.png"
+            thumbnail={uniLogo.src}
             category="DeFi"
             categoryTagStatus="tag"
             tags={["Exchange", "AMM"]}

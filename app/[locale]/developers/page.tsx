@@ -82,7 +82,6 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
   const t = await getTranslations("page-developers-index")
-  const tCommon = await getTranslations("common")
 
   // client messages for the swipers (the page has no root I18nProvider)
   const allMessages = await getMessages({ locale })
@@ -136,11 +135,11 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
       />
 
       <HubHero
+        breadcrumbs={{ slug: "developers" }}
         heroImg={heroImage}
         header={`${t("page-developers-title-1")} ${t(
           "page-developers-title-2"
         )} ${t("page-developers-title-3")}`}
-        title={tCommon("developers")}
         description={t("page-developers-subtitle")}
       />
 

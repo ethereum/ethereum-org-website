@@ -32,12 +32,14 @@ const scheduleIdleCallback =
 // Use only for user-initiated actions (clicks, submits, swipes). Passive
 // visibility/scroll tracking inflates `nb_actions` and breaks bounce-rate
 // comparability with pages that don't auto-fire events.
-export const trackCustomEvent = ({
-  eventCategory,
-  eventAction,
-  eventName,
-  eventValue,
-}: MatomoEventOptions): void => {
+export const trackCustomEvent = (
+  { eventCategory, eventAction, eventName, eventValue }: MatomoEventOptions,
+  // Queue synchronously. `alwaysUseSendBeacon` keeps a request alive across a navigation,
+  // but only one the tracker has already issued -- an idle callback does not run once the
+  // browser starts unloading, so an event on a link that navigates this tab is lost
+  // without this.
+  { immediate = false }: { immediate?: boolean } = {}
+): void => {
   if (!IS_PROD) return
 
   // Respect Do Not Track header
@@ -49,10 +51,13 @@ export const trackCustomEvent = ({
   // window.location before the idle callback fires
   const currentUrl = window.location.href.split(/[?#]/)[0]
 
-  scheduleIdleCallback(() => {
+  const send = () => {
     push([`setCustomUrl`, currentUrl])
     push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
-  })
+  }
+
+  if (immediate) send()
+  else scheduleIdleCallback(send)
 }
 
 // Dimension 1 is the A/B variant; 2 must exist in Matomo with visit scope.

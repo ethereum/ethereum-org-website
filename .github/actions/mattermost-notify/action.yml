@@ -1,0 +1,26 @@
+name: Mattermost notify
+description: Post a message to a Mattermost incoming webhook.
+
+inputs:
+  webhook:
+    description: Mattermost incoming webhook URL (pass an empty string to skip).
+    required: true
+  message:
+    description: Message text (Markdown).
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        WEBHOOK: ${{ inputs.webhook }}
+        MSG: ${{ inputs.message }}
+      run: |
+        if [[ -z "$WEBHOOK" ]]; then
+          echo "No Mattermost webhook configured — skipping."
+          exit 0
+        fi
+        jq -nc --arg t "$MSG" '{text: $t}' |
+          curl -fsS -X POST -H 'Content-Type: application/json' -d @- "$WEBHOOK" >/dev/null ||
+          echo "::warning::Mattermost POST failed — continuing."

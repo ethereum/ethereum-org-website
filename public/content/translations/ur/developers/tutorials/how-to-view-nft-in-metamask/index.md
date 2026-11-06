@@ -9,26 +9,34 @@ lang: ur
 published: 2021-04-22
 ---
 
-یہ ٹیوٹوریل <span dir="ltr">NFT</span> ٹیوٹوریل سیریز کا حصہ <span dir="ltr">3/3</span> ہے، جہاں ہم اپنا نیا ڈھالا گیا <span dir="ltr">NFT</span> دیکھتے ہیں۔ تاہم، آپ میٹاماسک کا استعمال کرتے ہوئے کسی بھی <span dir="ltr">ERC-721</span> ٹوکن کے لیے یہ عمومی ٹیوٹوریل استعمال کر سکتے ہیں، بشمول مین نیٹ یا کسی بھی آزمائشی نیٹ ورک پر۔ اگر آپ ایتھیریم پر اپنا <span dir="ltr">NFT</span> ڈھالنا سیکھنا چاہتے ہیں، تو آپ کو [<span dir="ltr">NFT</span> سمارٹ کنٹریکٹ لکھنے اور تعینات کرنے کے طریقے پر حصہ 1](/developers/tutorials/how-to-write-and-deploy-an-nft) دیکھنا چاہیے!
+یہ ٹیوٹوریل غیر متبادل ٹوکن (NFT) ٹیوٹوریل سیریز کا حصہ <span dir="ltr">3/3</span> ہے، جہاں ہم اپنا نیا ڈھالا گیا <span dir="ltr">NFT</span> دیکھتے ہیں۔ تاہم، آپ کسی بھی <span dir="ltr">ERC-721</span> ٹوکن کے لیے میٹاماسک کا استعمال کرتے ہوئے عام ٹیوٹوریل استعمال کر سکتے ہیں، بشمول مین نیٹ یا کسی بھی آزمائشی نیٹ ورک پر۔ اگر آپ ایتھیریم پر اپنا <span dir="ltr">NFT</span> ڈھالنے کا طریقہ سیکھنا چاہتے ہیں، تو آپ کو [<span dir="ltr">NFT</span> سمارٹ کنٹریکٹ کیسے لکھیں اور تعینات کریں پر حصہ 1](/developers/tutorials/how-to-write-and-deploy-an-nft) دیکھنا چاہیے!
 
-مبارک ہو! آپ ہماری <span dir="ltr">NFT</span> ٹیوٹوریل سیریز کے سب سے مختصر اور آسان ترین حصے تک پہنچ گئے ہیں — ورچوئل والیٹ پر اپنا تازہ ڈھالا گیا <span dir="ltr">NFT</span> کیسے دیکھیں۔ ہم اس مثال کے لیے میٹاماسک کا استعمال کریں گے کیونکہ ہم نے پچھلے دو حصوں میں یہی استعمال کیا تھا۔
+مبارک ہو! آپ ہماری <span dir="ltr">NFT</span> ٹیوٹوریل سیریز کے سب سے چھوٹے اور آسان ترین حصے تک پہنچ گئے ہیں — اپنے نئے ڈھالے گئے <span dir="ltr">NFT</span> کو ورچوئل والیٹ پر کیسے دیکھیں۔ ہم اس مثال کے لیے میٹاماسک کا استعمال کریں گے کیونکہ ہم نے پچھلے دو حصوں میں یہی استعمال کیا تھا۔
 
-ایک شرط کے طور پر، آپ کے پاس موبائل پر میٹاماسک پہلے سے انسٹال ہونا چاہیے، اور اس میں وہ اکاؤنٹ شامل ہونا چاہیے جس پر آپ نے اپنا <span dir="ltr">NFT</span> ڈھالا تھا — آپ یہ ایپ [<span dir="ltr">iOS</span>](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) یا [<span dir="ltr">Android</span>](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) پر مفت حاصل کر سکتے ہیں۔
+ایک شرط کے طور پر، آپ کے پاس پہلے سے ہی میٹاماسک انسٹال ہونا چاہیے، یا تو براؤزر ایکسٹینشن یا موبائل ایپ، اور اس میں وہ اکاؤنٹ شامل ہونا چاہیے جس پر آپ نے اپنا <span dir="ltr">NFT</span> ڈھالا تھا۔ آپ میٹاماسک کو مفت میں [میٹاماسک ڈاؤن لوڈ صفحہ](https://metamask.io/download) سے حاصل کر سکتے ہیں۔
 
 ## مرحلہ 1: اپنا نیٹ ورک <span dir="ltr">Sepolia</span> پر سیٹ کریں {#set-network-to-sepolia}
 
-ایپ کے اوپری حصے میں، "والیٹ" بٹن دبائیں، جس کے بعد آپ کو ایک نیٹ ورک منتخب کرنے کا کہا جائے گا۔ چونکہ ہمارا <span dir="ltr">NFT</span> <span dir="ltr">Sepolia</span> نیٹ ورک پر ڈھالا گیا تھا، اس لیے آپ کو اپنا نیٹ ورک <span dir="ltr">Sepolia</span> منتخب کرنا ہوگا۔
+چونکہ ہمارا <span dir="ltr">NFT</span> <span dir="ltr">Sepolia</span> آزمائشی نیٹ ورک پر ڈھالا گیا تھا، اس لیے آپ <span dir="ltr">Sepolia</span> کو اپنے نیٹ ورک کے طور پر منتخب کرنا چاہیں گے۔ میٹاماسک پہلے سے طے شدہ طور پر آزمائشی نیٹ ورکس کو چھپاتا ہے، لہذا پہلے انہیں آن کریں:
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
+1. اوپری دائیں کونے میں مینو کھولیں اور "Networks" کو منتخب کریں۔
+2. نیٹ ورک کی فہرست میں نیچے سکرول کریں اور "Show test networks" کو آن کریں۔
+3. نیٹ ورک کی فہرست سے "Sepolia" کو منتخب کریں۔
 
-## مرحلہ 2: اپنے کلیکٹ ایبل کو میٹاماسک میں شامل کریں {#add-nft-to-metamask}
+اگر آپ کے میٹاماسک کے ورژن میں مینو مختلف نظر آتے ہیں تو [آزمائشی نیٹ ورکس دیکھنے کے لیے میٹاماسک کی گائیڈ](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/) دیکھیں۔
 
-ایک بار جب آپ <span dir="ltr">Sepolia</span> نیٹ ورک پر آ جائیں، تو دائیں جانب "Collectibles" ٹیب کو منتخب کریں اور اپنے <span dir="ltr">NFT</span> کا سمارٹ کنٹریکٹ پتہ اور <span dir="ltr">ERC-721</span> ٹوکن <span dir="ltr">ID</span> شامل کریں — جسے آپ ہمارے ٹیوٹوریل کے حصہ دوم میں تعینات کیے گئے اپنے <span dir="ltr">NFT</span> کے ٹرانزیکشن ہیش کی بنیاد پر <span dir="ltr">Etherscan</span> پر تلاش کر سکتے ہیں۔
+## مرحلہ 2: اپنے قابل جمع اثاثہ کو میٹاماسک میں شامل کریں {#add-nft-to-metamask}
 
-![How to find your transaction hash and <span dir="ltr">ERC-721</span> token ID](./findNFTEtherscan.png)
+میٹاماسک صرف کچھ نیٹ ورکس پر خود بخود <span dir="ltr">NFTs</span> کا پتہ لگاتا ہے، جن میں <span dir="ltr">Sepolia</span> شامل نہیں ہے، لہذا آپ کو اپنا <span dir="ltr">NFT</span> دستی طور پر درآمد کرنے کی ضرورت ہوگی۔ اس کے لیے آپ کو اپنے <span dir="ltr">NFT</span> کا <span dir="ltr">NFT</span> سمارٹ کنٹریکٹ پتہ اور <span dir="ltr">ERC-721</span> ٹوکن <span dir="ltr">ID</span> درکار ہے — جو آپ ہمارے ٹیوٹوریل کے حصہ دوم میں ڈھالے گئے اپنے <span dir="ltr">NFT</span> کی ٹرانزیکشن ہیش کی بنیاد پر <span dir="ltr">Etherscan</span> پر تلاش کر سکتے ہیں۔ اگر آپ نے حصہ 1 سے کنٹریکٹ استعمال کیا ہے، تو آپ کے پہلے <span dir="ltr">NFT</span> کی ٹوکن <span dir="ltr">ID 1</span> ہے۔
 
-اپنا <span dir="ltr">NFT</span> دیکھنے کے لیے آپ کو چند بار ریفریش کرنے کی ضرورت پڑ سکتی ہے — لیکن یہ وہاں موجود ہوگا <Emoji text="😄" size={1} />!
+![اپنی ٹرانزیکشن ہیش اور <span dir="ltr">ERC-721</span> ٹوکن ID کیسے تلاش کریں](./findNFTEtherscan.png)
 
-![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
+پھر، میٹاماسک میں (ایکسٹینشن یا موبائل):
+
+1. ہوم سکرین کے "NFTs" سیکشن پر جائیں اور "Import NFT" کو منتخب کریں۔
+2. نیٹ ورک کے طور پر <span dir="ltr">Sepolia</span> کو منتخب کریں، اور اپنا <span dir="ltr">NFT</span> سمارٹ کنٹریکٹ پتہ "Address" باکس میں پیسٹ کریں۔
+3. اپنی ٹوکن <span dir="ltr">ID</span> کو "Token ID" باکس میں درج کریں اور "Import" کو منتخب کریں۔
+
+اپنا <span dir="ltr">NFT</span> دیکھنے کے لیے آپ کو چند بار ریفریش کرنے کی ضرورت پڑ سکتی ہے — لیکن یہ وہاں موجود ہوگا <Emoji text="😄" size={1} />! اگر میٹاماسک کہتا ہے کہ آپ <span dir="ltr">NFT</span> کے مالک نہیں ہیں، تو چیک کریں کہ آپ نے وہی اکاؤنٹ منتخب کیا ہے جس پر آپ نے <span dir="ltr">NFT</span> ڈھالا تھا۔ مزید مدد کے لیے، [<span dir="ltr">NFTs</span> کے لیے میٹاماسک کی گائیڈ](https://support.metamask.io/manage-crypto/nfts/nft-tokens-in-your-metamask-wallet/) دیکھیں۔
 
 مبارک ہو! آپ نے کامیابی کے ساتھ ایک <span dir="ltr">NFT</span> ڈھال لیا ہے، اور اب آپ اسے دیکھ سکتے ہیں! ہم یہ دیکھنے کے لیے بے تاب ہیں کہ آپ <span dir="ltr">NFT</span> کی دنیا میں کیسے تہلکہ مچاتے ہیں!

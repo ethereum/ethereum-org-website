@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Допоміжні функції Web3.js](https://docs.web3js.org/api/web3-utils)
 - [Допоміжні функції Ethers](https://docs.ethers.org/v6/api/utils/)
 
-## Доступні бібліотеки
+## Доступні бібліотеки {#available-libraries}
 
 **Web3.js -** **_JavaScript API для Етеріум._**
 

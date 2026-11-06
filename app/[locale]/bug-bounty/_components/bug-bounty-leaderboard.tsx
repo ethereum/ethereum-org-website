@@ -7,7 +7,7 @@ import { Flex } from "@/components/ui/flex"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { List, ListItem } from "@/components/ui/list"
 
-import { GITHUB_URL } from "@/lib/constants"
+import { GITHUB_URL, GITHUB_USERNAME_REGEX } from "@/lib/constants"
 
 type Person = {
   name: string
@@ -34,9 +34,13 @@ const BugBountyLeaderboard = async ({
       {content
         .filter((_, idx) => idx < limit)
         .map(({ name, username, score }, idx) => {
-          const hasGitHub = !!username
-          const avatarImg = GITHUB_URL + (username || "random") + ".png?size=40"
-          const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
+          const hasGitHub = GITHUB_USERNAME_REGEX.test(username ?? "")
+          // Empty src renders initials; never use a placeholder handle (github.com/random is a real user)
+          const avatarImg = hasGitHub
+            ? `${GITHUB_URL}${username}.png?size=40`
+            : ""
+          // Also the source of Avatar's initials
+          const avatarAlt = hasGitHub ? `${username} GitHub avatar` : name
 
           let emoji: string | null = null
           if (idx === 0) {

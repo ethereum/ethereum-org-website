@@ -92,3 +92,89 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 - `Gas 上限计划` casing vs glossary `gas 上限`.
 - ASCII/full-width comma mixing inside single strings.
 - Zero Traditional-character leakage; the prior `slot`->`时段` collapse did not recur.
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 7.8/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/zh/page-apps.json`. 6 critical, 11 warnings. Brand 9/10 | Technical 6/10 | Semantic 9/10 | Consistency 9/10 | Tone 6/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: zh affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- `accounts/index.md` flipped wholesale from 你 (21 on dev) to 您 (24) while the two sibling files changed in the same PR kept 你; the zh dev-docs corpus runs 840:69 for 你. Third recorded instance, so it wants a pipeline pin rather than per-run repair.
+- Zero ETHGlossary deviations across ~60 applicable terms, no Traditional leakage, and the run repaired three pre-existing errors: `原生 EVM` -> `原始 EVM`, the inverted Vyper "less features" clause, and an MMORPG/RPG over-expansion.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 7.8/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+- page-resources bundler `打包者` (builder alias) -> `打包器`.
+
+**Open (warnings):**
+
+- 您/你 split: new page-privacy-online all 您, page-open-access all 你; glamsterdam:33 lone 您.
+- whitepaper:301 data chunks as `区块`; privacy-online `句柄`, `遭到破坏`, `暗黑模式`; Hegotá `赫戈塔` nav label vs Latin elsewhere.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` stealth address `隐身地址` -> `隐形地址`.
+
+**Open (warnings):**
+
+- 你/您 split across /organizations files; `透明的实用定价` mistranslates utility pricing.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.2/10
+
+- Fixed: `**必须**`/`**未**` regressed to `_..._` (literal underscores, known-patterns #89).
+- Warning: Hook/钩子 drift; 求值 -> 计算 drift.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.0/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- common.json:15 (l2) added (#86) (`"添加二层网络 (l2)"` -> `"添加二层网络"`)
+- common.json:43 (l2) added (#86) (`"什么是二层网络 (l2)？"` -> `"什么是二层网络？"`)
+- common.json:36 acronym expanded (#80) (`"以太坊改进提案 (EIP)"` -> `"EIP"`)
+- common.json:76 acronym expanded (#80) (`"去中心化自治组织 (DAO)"` -> `"DAO"`)
+- common.json:85 acronym expanded (#80) (`"去中心化金融 (DeFi)"` -> `"DeFi"`)
+- common.json:165 acronym expanded (#80) (`"非同质化代币 (NFT)"` -> `"NFT"`)
+- app-plasma:45 CJK underscore emphasis (#89) (`接收转账的_目标地址_` -> `接收转账的*目标地址*`)
+- app-plasma:46 CJK underscore emphasis (#89) (`转账_金额_` -> `转账*金额*`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 12 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is high quality and matches the glossary. Every critical comes from the pipeline: renamed keys that shipped in English, acronym expansion in breadcrumb slots, and CJK underscore emphasis. All of them can be fixed by restoring the dev or ETHGlossary ui-context forms.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `梅塔马斯` changed to `梅塔马斯克` (view-nft:40)
+- `_x_` italics next to CJK characters converted to `<em>` (3 sites)
+
+**Notes:**
+
+- Warning: `gas 限制` in code comments vs `gas 上限` in prose.

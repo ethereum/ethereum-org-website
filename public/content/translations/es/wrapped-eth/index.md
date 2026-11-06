@@ -1,7 +1,7 @@
 ---
 title: Ether envuelto (WETH)
-metaTitle: Qué es el ether envuelto (WETH)
-description: Una introducción al ether envuelto (WETH), un envoltorio compatible con ERC-20 para el ether (ETH). 
+metaTitle: "Qué es el ether envuelto (WETH)"
+description: "Una introducción al ether envuelto (WETH), un envoltorio compatible con ERC-20 para el ether (ETH)."
 lang: es
 ---
 
@@ -31,7 +31,7 @@ Puedes desenvolver WETH por ETH utilizando el contrato inteligente de WETH. Pued
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Ether envuelto (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Suministro | El [suministro de ETH](/eth/supply/) es gestionado por el protocolo [Ethereum](/). La [emisión](/roadmap/merge/issuance) de ETH es manejada por los validadores de Ethereum al procesar transacciones y crear bloques.                           | El WETH es un token ERC-20 cuyo suministro es gestionado por un contrato inteligente. El contrato emite nuevas unidades de WETH después de recibir depósitos de ETH de los usuarios, o se queman unidades de WETH cuando un usuario desea canjear WETH por ETH.                                                                                                                                        |
+| Suministro | El [suministro de ETH](/what-is-ether/supply/) es gestionado por el protocolo [Ethereum](/). La [emisión](/roadmap/merge/issuance) de ETH es manejada por los validadores de Ethereum al procesar transacciones y crear bloques.                           | El WETH es un token ERC-20 cuyo suministro es gestionado por un contrato inteligente. El contrato emite nuevas unidades de WETH después de recibir depósitos de ETH de los usuarios, o se queman unidades de WETH cuando un usuario desea canjear WETH por ETH.                                                                                                                                        |
 | Propiedad  | La propiedad es gestionada por el protocolo Ethereum a través del saldo de tu cuenta.  | La propiedad del WETH es gestionada por el contrato inteligente del token WETH, asegurado por el protocolo Ethereum.                                                                                                                                         |
 | Gas        | El ether (ETH) es la unidad de pago aceptada para la computación en la red Ethereum. Las tarifas de gas se denominan en Gwei (una unidad de ether).                                                                                    | El pago de gas con tokens WETH no es compatible de forma nativa.                                                                                                                                                                                              |
 

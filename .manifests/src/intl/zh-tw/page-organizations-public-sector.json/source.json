@@ -1,0 +1,230 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-organizations-public-sector.json",
+  "generatedAt": "2026-10-14T17:39:02.565Z",
+  "rootHash": "49e7f6de34d0",
+  "tree": {
+    "contentHash": "dc797930e2cd",
+    "anchorHash": "e8803ec897c3",
+    "children": {
+      "page-organizations-public-sector-case-studies-bhutan-description": {
+        "contentHash": "1520e0cb42bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-bhutan-title": {
+        "contentHash": "286356916918",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-cta": {
+        "contentHash": "4800d5445a63",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-description": {
+        "contentHash": "3cde197da457",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-giga-description": {
+        "contentHash": "7fbf71b06d2d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-giga-title": {
+        "contentHash": "3766c7b51d5d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-itcilo-description": {
+        "contentHash": "0e5da397d5c1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-itcilo-title": {
+        "contentHash": "cdaebccf8b1d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-title": {
+        "contentHash": "68c88400f03c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-unicef-description": {
+        "contentHash": "f85960ce3ead",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-case-studies-unicef-title": {
+        "contentHash": "3a8820ea1c1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-caption": {
+        "contentHash": "970e28355e46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-col-help": {
+        "contentHash": "05b338f3a224",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-col-need": {
+        "contentHash": "4c2bc9a00002",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-description": {
+        "contentHash": "3356f696a2f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-borders-help": {
+        "contentHash": "a81dfcabd3c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-borders-need": {
+        "contentHash": "82140722d5b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-coordinate-help": {
+        "contentHash": "92f79d9c8294",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-coordinate-need": {
+        "contentHash": "0e6c65351957",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-credentials-help": {
+        "contentHash": "1324c404f831",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-credentials-need": {
+        "contentHash": "2659703d8bb9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-privacy-help": {
+        "contentHash": "07482671c32e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-privacy-need": {
+        "contentHash": "fa97b8a8c692",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-transparency-help": {
+        "contentHash": "6d72a5c959c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-transparency-need": {
+        "contentHash": "a4c95932c25e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-vendor-help": {
+        "contentHash": "588fed4446cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-row-vendor-need": {
+        "contentHash": "9478487f92d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-fits-title": {
+        "contentHash": "c635e6ede019",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-hero-description-1": {
+        "contentHash": "088e400e9c56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-hero-description-2": {
+        "contentHash": "81ce52597560",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-hero-title": {
+        "contentHash": "cb946b5213d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-meta-description": {
+        "contentHash": "10c7c1de462c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-meta-title": {
+        "contentHash": "2e7446245a25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-description": {
+        "contentHash": "e4538812c033",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-finance-description": {
+        "contentHash": "39e2deb254b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-finance-title": {
+        "contentHash": "4c113edd39b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-funding-description": {
+        "contentHash": "3cf49ce720fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-funding-title": {
+        "contentHash": "f672f1692f72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-identity-description": {
+        "contentHash": "4c2c42a3e670",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-identity-title": {
+        "contentHash": "84e9ae53f02a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-records-description": {
+        "contentHash": "76ec699e335e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-records-title": {
+        "contentHash": "d1283ff1afa0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-public-sector-use-cases-title": {
+        "contentHash": "feee6726267a",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-organizations-public-sector-case-studies-bhutan-description",
+      "page-organizations-public-sector-case-studies-bhutan-title",
+      "page-organizations-public-sector-case-studies-cta",
+      "page-organizations-public-sector-case-studies-description",
+      "page-organizations-public-sector-case-studies-giga-description",
+      "page-organizations-public-sector-case-studies-giga-title",
+      "page-organizations-public-sector-case-studies-itcilo-description",
+      "page-organizations-public-sector-case-studies-itcilo-title",
+      "page-organizations-public-sector-case-studies-title",
+      "page-organizations-public-sector-case-studies-unicef-description",
+      "page-organizations-public-sector-case-studies-unicef-title",
+      "page-organizations-public-sector-fits-caption",
+      "page-organizations-public-sector-fits-col-help",
+      "page-organizations-public-sector-fits-col-need",
+      "page-organizations-public-sector-fits-description",
+      "page-organizations-public-sector-fits-row-borders-help",
+      "page-organizations-public-sector-fits-row-borders-need",
+      "page-organizations-public-sector-fits-row-coordinate-help",
+      "page-organizations-public-sector-fits-row-coordinate-need",
+      "page-organizations-public-sector-fits-row-credentials-help",
+      "page-organizations-public-sector-fits-row-credentials-need",
+      "page-organizations-public-sector-fits-row-privacy-help",
+      "page-organizations-public-sector-fits-row-privacy-need",
+      "page-organizations-public-sector-fits-row-transparency-help",
+      "page-organizations-public-sector-fits-row-transparency-need",
+      "page-organizations-public-sector-fits-row-vendor-help",
+      "page-organizations-public-sector-fits-row-vendor-need",
+      "page-organizations-public-sector-fits-title",
+      "page-organizations-public-sector-hero-description-1",
+      "page-organizations-public-sector-hero-description-2",
+      "page-organizations-public-sector-hero-title",
+      "page-organizations-public-sector-meta-description",
+      "page-organizations-public-sector-meta-title",
+      "page-organizations-public-sector-use-cases-description",
+      "page-organizations-public-sector-use-cases-finance-description",
+      "page-organizations-public-sector-use-cases-finance-title",
+      "page-organizations-public-sector-use-cases-funding-description",
+      "page-organizations-public-sector-use-cases-funding-title",
+      "page-organizations-public-sector-use-cases-identity-description",
+      "page-organizations-public-sector-use-cases-identity-title",
+      "page-organizations-public-sector-use-cases-records-description",
+      "page-organizations-public-sector-use-cases-records-title",
+      "page-organizations-public-sector-use-cases-title"
+    ]
+  },
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+}

@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3js 유틸리티 함수](https://docs.web3js.org/api/web3-utils)
 - [Ethers 유틸리티 함수](https://docs.ethers.org/v6/api/utils/)
 
-## 사용 가능한 라이브러리
+## 사용 가능한 라이브러리 {#available-libraries}
 
 **Web3.js -** **_이더리움 JavaScript API._**
 

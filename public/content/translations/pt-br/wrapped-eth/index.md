@@ -1,7 +1,7 @@
 ---
 title: Ether empacotado (WETH)
-metaTitle: O que é o Ether Empacotado (WETH)
-description: Uma introdução ao ether empacotado (WETH) — um invólucro compatível com ERC-20 para o ether (ETH). 
+metaTitle: "O que é o Ether Empacotado (WETH)"
+description: "Uma introdução ao ether empacotado (WETH) — um invólucro compatível com ERC-20 para o ether (ETH)."
 lang: pt-br
 ---
 
@@ -31,7 +31,7 @@ O [ERC-20](/developers/docs/standards/tokens/erc-20/) define uma interface padr�
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Ether Empacotado (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Suprimento | O [suprimento de ETH](/eth/supply/) é gerenciado pelo protocolo [Ethereum](/). A [emissão](/roadmap/merge/issuance) de ETH é tratada pelos validadores do Ethereum ao processar transações e criar blocos. | O WETH é um token ERC-20 cujo suprimento é gerenciado por um contrato inteligente. Novas unidades de WETH são emitidas pelo contrato após receber depósitos de ETH dos usuários, ou unidades de WETH são queimadas quando um usuário deseja resgatar WETH por ETH. |
+| Suprimento | O [suprimento de ETH](/what-is-ether/supply/) é gerenciado pelo protocolo [Ethereum](/). A [emissão](/roadmap/merge/issuance) de ETH é tratada pelos validadores do Ethereum ao processar transações e criar blocos. | O WETH é um token ERC-20 cujo suprimento é gerenciado por um contrato inteligente. Novas unidades de WETH são emitidas pelo contrato após receber depósitos de ETH dos usuários, ou unidades de WETH são queimadas quando um usuário deseja resgatar WETH por ETH. |
 | Propriedade | A propriedade é gerenciada pelo protocolo Ethereum por meio do saldo da sua conta. | A propriedade do WETH é gerenciada pelo contrato inteligente do token WETH, protegido pelo protocolo Ethereum. |
 | Gás | O ether (ETH) é a unidade de pagamento aceita para computação na rede Ethereum. As taxas de gás são denominadas em gwei (uma unidade de ether). | O pagamento de gás com tokens WETH não é suportado nativamente. |
 

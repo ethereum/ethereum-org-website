@@ -78,13 +78,13 @@ Oba podejścia są nadal badane pod kątem wydajności i praktyczności w skali 
 
 Jest to pragmatyczne podejście. Użytkownicy i portfele, którzy chcą wcześnie uzyskać ochronę postkwantową, mogą ją dobrowolnie wdrożyć, podczas gdy szersza migracja będzie następować z czasem.
 
-### 4. Dowody ZK w warstwie aplikacji {#zk-proofs}
+### 4. Dowody z wiedzą zerową w warstwie aplikacji {#zk-proofs}
 
-**Co to robi**: Systemy dowodów z wiedzą zerową są używane przez rollupy warstwy 2 (L2) i inne aplikacje do weryfikacji obliczeń bez ujawniania podstawowych danych.
+**Co to robi**: Systemy dowodów są używane przez rollupy warstwy 2 (L2) do weryfikacji obliczeń bez ich ponownego wykonywania, a tam, gdzie aplikacja implementuje właściwość wiedzy zerowej, do udowadniania twierdzeń bez ujawniania kryjących się za nimi prywatnych danych wejściowych.
 
-**Dlaczego jest to podatne na ataki**: Wiele popularnych systemów dowodów ZK (SNARK wykorzystujące parowania krzywych eliptycznych) opiera się na założeniach podatnych na ataki kwantowe.
+**Dlaczego jest to podatne na ataki**: Wiele popularnych systemów dowodów z wiedzą zerową (SNARK-i wykorzystujące parowania krzywych eliptycznych) opiera się na założeniach podatnych na ataki kwantowe.
 
-**Podejście**: STARK, które opierają się na funkcjach hashujących, a nie na krzywych eliptycznych, są już odporne na ataki kwantowe i są używane przez kilka rollupów. Naturalna adopcja systemów opartych na STARK w ekosystemie już teraz zapewnia bezpieczeństwo postkwantowe w warstwie aplikacji.
+**Podejście**: STARK-i, które opierają się na funkcjach hashujących, a nie na krzywych eliptycznych, są już odporne na ataki kwantowe i są używane przez kilka rollupów. Naturalna adopcja systemów opartych na STARK-ach w ekosystemie już teraz zapewnia bezpieczeństwo postkwantowe w warstwie aplikacji.
 
 ## Standardy NIST {#nist-standards}
 

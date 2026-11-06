@@ -35,13 +35,13 @@ lang: ko
 - [문서](https://docs.allthatnode.com)
 - [디스코드](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs의 Blast -** **_이더리움 메인넷 및 테스트넷을 위한 탈중앙화 API._**
+**Bware Labs의 Blast -** **_이더리움 메인넷 및 테스트넷을 위한 탈중앙화 애플리케이션 프로그래밍 인터페이스 (API)._**
 
 - [blastapi.io](https://blastapi.io/)
 - [문서](https://docs.blastapi.io)
 - [디스코드](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_더욱 효율적이고 빠른 RPC 서비스 제공_**
+**BlockPi -** **_더 효율적이고 빠른 RPC 서비스 제공_**
 
 - [blockpi.io](https://blockpi.io/)
 - [문서](https://docs.blockpi.io/)
@@ -69,7 +69,7 @@ lang: ko
 - [문서](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _비용 효율적인 EVM JSON-RPC 제공자_**
+**Node RPC - _비용 효율적인 이더리움 가상 머신 (EVM) JSON-RPC 제공자_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [문서](https://docs.noderpc.xyz/node-rpc)
@@ -85,11 +85,17 @@ lang: ko
 - [문서](https://www.quicknode.com/docs/welcome)
 - [디스코드](https://discord.gg/quicknode)
 
-**Rivet -** **_오픈 소스 소프트웨어 기반의 서비스형 이더리움 및 이더리움 클래식 API._**
+**Rivet -** **_오픈 소스 소프트웨어로 구동되는 서비스형 이더리움 및 이더리움 클래식 API._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [문서](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+
+**SolidRPC -** **_풀, 아카이브 및 키 없는 퍼블릭 액세스를 제공하는 EVM JSON-RPC 인프라._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [문서](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
 
 **Zmok -** **_JSON-RPC/WebSockets API 형태의 속도 지향 이더리움 노드._**
 
@@ -100,7 +106,13 @@ lang: ko
 
 ### 개발 도구 {#development-tools}
 
-**ethers-kt -** **_EVM 기반 블록체인을 위한 비동기식 고성능 Kotlin/Java/Android 라이브러리._**
+**eth.zig -** **_컴파일 타임 애플리케이션 바이너리 인터페이스 (ABI) 인코딩 및 컨트랙트 바인딩을 지원하는 이더리움용 Zig 라이브러리._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [문서](https://ethzig.org)
+- [예제](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_이더리움 가상 머신 (EVM) 기반 블록체인을 위한 비동기식 고성능 Kotlin/Java/Android 라이브러리._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [예제](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)

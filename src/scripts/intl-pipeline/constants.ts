@@ -48,6 +48,20 @@ export const OUTPUT_RATE_USD_PER_1M = 12.0
 // wrong". Override with INTL_MAX_COST_USD.
 export const RUN_FUSE_USD = Number(process.env.INTL_MAX_COST_USD || 100)
 
+// Thinking tokens billed as output on every call, roughly constant whatever the
+// prompt size. Measured across 24 locales on run 31745 (Gemini 3.1 Pro via
+// OpenRouter). Used by the estimator and by the in-flight reservation.
+export const REASONING_TOKENS_PER_CALL = 5_200
+
+// Deterministic-failure quarantine: pairs that failed the same way against the
+// same English are skipped for a while instead of retried every run. Lives
+// with the manifests so it travels through intl/pending-{base}.
+export const QUARANTINE_PATH = ".manifests/quarantine.json"
+export const QUARANTINE_TTL_DAYS = 14
+export const QUARANTINE_MAX_TTL_DAYS = 90
+/** Pseudo-language key the committer records the quarantine file under */
+export const QUARANTINE_LANG = "quarantine"
+
 // Least content a batch may carry after prompt overhead (rules + glossary +
 // replicated context) is accounted for. Hitting this means overhead has grown
 // enough to crowd out the work; fail loudly rather than fan out into many tiny
@@ -60,6 +74,15 @@ export const MIN_CONTENT_BUDGET_BYTES = 4_096
 // worst case on learn-quizzes.json is 49KB, so this leaves ~30% headroom.
 export const MAX_PROMPT_BYTES = 65_536
 
+// Headroom kept inside MAX_PROMPT_BYTES for the re-parse note (see
+// translateBatchWithParseRetry): a batch planned flush against the ceiling
+// could not be re-sent, and the refusal would mask the parse error.
+export const RETRY_NOTE_RESERVE_BYTES = 1_024
+
+// What the planner targets, so every batch it emits leaves room for that note.
+export const MAX_PLANNED_PROMPT_BYTES =
+  MAX_PROMPT_BYTES - RETRY_NOTE_RESERVE_BYTES
+
 // Maximum recursion depth when splitting a failed batch into sub-batches.
 // On retry exhaustion (validation failure or timeout), translateJsonFile
 // will split the batch in half and retry each half, up to this many levels.
@@ -70,13 +93,7 @@ export const MAX_SPLIT_DEPTH = 2
 // Structure: {MANIFESTS_DIR}/{dest-file-path}/source.json | translation.json
 export const MANIFESTS_DIR = ".manifests"
 
-// Paths that should never be translated
-export const DO_NOT_TRANSLATE_PATHS = [
-  // Legal pages
-  "/cookie-policy/",
-  "/privacy-policy/",
-  "/terms-of-use/",
-  "/terms-and-conditions/",
-  // Contributing pages
-  "/style-guide/",
-]
+// Paths that should never be translated. Defined in a leaf module because the
+// client-side TranslationBanner reads it, and importing this file would pull
+// the LLM adapters into the browser bundle.
+export { DO_NOT_TRANSLATE_PATHS } from "./do-not-translate-paths"

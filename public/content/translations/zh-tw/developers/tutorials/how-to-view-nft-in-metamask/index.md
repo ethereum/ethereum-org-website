@@ -9,26 +9,34 @@ lang: zh-tw
 published: 2021-04-22
 ---
 
-本教學是 NFT 教學系列的第 3/3 部分，我們將在其中檢視我們新鑄造的 NFT。不過，您可以將這份一般教學用於任何使用 MetaMask 的 ERC-721 代幣，包括在主網或任何測試網上。如果您想學習如何在以太坊上鑄造自己的 NFT，您應該查看[第 1 部分：如何撰寫與部署 NFT 智能合約](/developers/tutorials/how-to-write-and-deploy-an-nft)！
+本教學是 NFT 教學系列的第 3/3 部分，我們將在其中檢視新鑄造的非同質化代幣 (NFT)。不過，您可以將此一般教學用於任何使用 MetaMask 的 ERC-721 代幣，包含在主網或任何測試網上。如果您想學習如何在以太坊上鑄造自己的 NFT，您應該查看[第 1 部分：如何撰寫和部署 NFT 智能合約](/developers/tutorials/how-to-write-and-deploy-an-nft)！
 
-恭喜！您已經來到了我們 NFT 教學系列中最短、最簡單的部分——如何在虛擬錢包上檢視您剛鑄造的 NFT。我們將在這個範例中使用 MetaMask，因為這是我們在前兩個部分中所使用的。
+恭喜！您已經來到了我們 NFT 教學系列中最簡短、最簡單的部分——如何在虛擬錢包上檢視您剛鑄造的 NFT。我們將在此範例中使用 MetaMask，因為這是我們在前兩部分中使用的錢包。
 
-作為先決條件，您應該已經在行動裝置上安裝了 MetaMask，並且它應該包含您鑄造 NFT 的帳戶——您可以在 [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) 或 [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) 上免費取得該應用程式。
+作為先決條件，您應該已經安裝了 MetaMask（瀏覽器擴充功能或行動應用程式），並且它應該包含您鑄造 NFT 的帳戶。您可以從 [MetaMask 下載頁面](https://metamask.io/download)免費取得 MetaMask。
 
 ## 第 1 步：將您的網路設定為 Sepolia {#set-network-to-sepolia}
 
-在應用程式頂部，按下「錢包」按鈕，之後系統會提示您選擇一個網路。由於我們的 NFT 是在 Sepolia 網路上鑄造的，因此您需要選擇 Sepolia 作為您的網路。
+由於我們的 NFT 是在 Sepolia 測試網路上鑄造的，因此您會想要選擇 Sepolia 作為您的網路。MetaMask 預設會隱藏測試網路，因此請先將其開啟：
 
-![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask-portrait.mp4#304x672)
+1. 開啟右上角的選單並選擇「網路 (Networks)」。
+2. 向下捲動到網路清單底部，並開啟「顯示測試網路 (Show test networks)」。
+3. 從網路清單中選擇「Sepolia」。
+
+如果您使用的 MetaMask 版本中選單看起來不同，請參閱 [MetaMask 的檢視測試網指南](https://support.metamask.io/configure/networks/how-to-view-testnets-in-metamask/)。
 
 ## 第 2 步：將您的收藏品新增至 MetaMask {#add-nft-to-metamask}
 
-當您進入 Sepolia 網路後，選擇右側的「收藏品 (Collectibles)」分頁，並新增您的 NFT 智能合約地址與 ERC-721 代幣 ID——您應該能夠根據我們教學第 2 部分中部署 NFT 的交易雜湊值，在 Etherscan 上找到這些資訊。
+MetaMask 僅在某些網路上自動偵測 NFT，其中不包含 Sepolia，因此您需要手動匯入您的 NFT。為此，您需要 NFT 智能合約地址和您 NFT 的 ERC-721 代幣 ID——您應該能夠根據我們教學第 2 部分中鑄造 NFT 的交易雜湊值，在 Etherscan 上找到這些資訊。如果您使用了第 1 部分的合約，您的第一個 NFT 的代幣 ID 為 1。
 
-![How to find your transaction hash and ERC-721 token ID](./findNFTEtherscan.png)
+![如何尋找您的交易雜湊值與 ERC-721 代幣 ID](./findNFTEtherscan.png)
 
-您可能需要重新整理幾次才能檢視您的 NFT——但它會在那裡的 <Emoji text="😄" size={1} />！
+接著，在 MetaMask（擴充功能或行動版）中：
 
-![How to upload your NFT to MetaMask](./findNFTMetamask-portrait.mp4#304x672)
+1. 前往主畫面的「NFT」部分，並選擇「匯入 NFT (Import NFT)」。
+2. 選擇 Sepolia 作為網路，並將您的 NFT 智能合約地址貼到「地址 (Address)」方塊中。
+3. 將您的代幣 ID 輸入「代幣 ID (Token ID)」方塊，然後選擇「匯入 (Import)」。
 
-恭喜！您已成功鑄造了一個 NFT，現在您可以檢視它了！我們迫不及待地想看到您將如何在 NFT 世界中大展身手！
+您可能需要重新整理幾次才能檢視您的 NFT——但它會在那裡的 <Emoji text="😄" size={1} />！如果 MetaMask 顯示您不是該 NFT 的擁有者，請檢查您是否選擇了鑄造該 NFT 的帳戶。如需更多協助，請參閱 [MetaMask 的 NFT 指南](https://support.metamask.io/manage-crypto/nfts/nft-tokens-in-your-metamask-wallet/)。
+
+恭喜！您已成功鑄造了一個 NFT，而且現在可以檢視它了！我們迫不及待想看到您將如何在 NFT 世界掀起風潮！

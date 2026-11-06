@@ -178,7 +178,7 @@ _[ఎథీరియం EVM ఇలస్ట్రేటెడ్](https://takeno
 
 స్మార్ట్ కాంట్రాక్ట్‌తో కూడిన ఏదైనా లావాదేవీకి గ్యాస్ అవసరం.
 
-స్మార్ట్ కాంట్రాక్ట్‌లు [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) లేదా [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) ఫంక్షన్‌లుగా పిలువబడే ఫంక్షన్‌లను కూడా కలిగి ఉంటాయి, ఇవి కాంట్రాక్ట్ స్థితిని మార్చవు. అందువల్ల, EOA నుండి ఈ ఫంక్షన్‌లను కాల్ చేయడానికి ఎలాంటి గ్యాస్ అవసరం లేదు. ఈ దృశ్యం కోసం అంతర్లీన RPC కాల్ [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+స్మార్ట్ కాంట్రాక్ట్‌లు [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) లేదా [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) ఫంక్షన్‌లుగా పిలువబడే ఫంక్షన్‌లను కూడా కలిగి ఉంటాయి, ఇవి కాంట్రాక్ట్ స్థితిని మార్చవు. అందువల్ల, EOA నుండి ఈ ఫంక్షన్‌లను కాల్ చేయడానికి ఎలాంటి గ్యాస్ అవసరం లేదు. ఈ దృశ్యం కోసం అంతర్లీన RPC కాల్ [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 `eth_call`ని ఉపయోగించి యాక్సెస్ చేసినప్పుడు కాకుండా, ఈ `view` లేదా `pure` ఫంక్షన్‌లు అంతర్గతంగా కూడా సాధారణంగా కాల్ చేయబడతాయి (అంటే, కాంట్రాక్ట్ నుండి లేదా మరొక కాంట్రాక్ట్ నుండి) దీనికి గ్యాస్ ఖర్చవుతుంది.
 

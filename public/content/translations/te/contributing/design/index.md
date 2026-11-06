@@ -1,7 +1,7 @@
 ---
-title: ethereum.org కు డిజైన్ సహకారం
-metaTitle: డిజైన్ సహకారం
-description: ethereum.org కు డిజైన్ సహకారం
+title: "ethereum.org కు డిజైన్ సహకారం"
+metaTitle: "డిజైన్ సహకారం"
+description: "ethereum.org కు డిజైన్ సహకారం"
 lang: te
 ---
 
@@ -15,7 +15,7 @@ lang: te
 
 మా ప్రాథమిక ఆలోచనలను పరీక్షించడంలో మాకు కొన్నిసార్లు సహాయం అవసరం. ఎలాంటి సాంకేతిక పరిజ్ఞానం లేకుండా సహకరించడానికి ఇది ఒక గొప్ప మార్గం.
 
-1. డిజైన్ బృందం [డిస్కార్డ్](https://discord.com/invite/ethereum-org) మరియు [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) లో మాకప్ డిజైన్‌ను పంచుకుంటుంది.
+1. డిజైన్ బృందం [డిస్కార్డ్](/discord/) మరియు [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) లో మాకప్ డిజైన్‌ను పంచుకుంటుంది.
 2. కామెంట్స్ ఫంక్షన్ ద్వారా అభిప్రాయాన్ని అందించడానికి డిజైన్‌ల ద్వారా మీకు మార్గనిర్దేశం చేయబడుతుంది.
 3. ఫలితం GitHub ఇష్యూలో భాగస్వామ్యం చేయబడుతుంది మరియు ఆ తర్వాత బృందం ద్వారా మూసివేయబడుతుంది.
 

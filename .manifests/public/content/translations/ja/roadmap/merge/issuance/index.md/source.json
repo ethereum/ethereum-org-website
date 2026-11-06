@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/merge/issuance/index.md",
-  "generatedAt": "2026-06-30T00:52:30.437Z",
-  "rootHash": "6042ebca6731",
+  "generatedAt": "2026-10-21T22:19:10.757Z",
+  "rootHash": "1ca42cf45882",
   "tree": {
     "contentHash": "bd3a08b9828c",
-    "anchorHash": "c8f2b3b7f0de",
+    "anchorHash": "d87a23753b82",
     "children": {
       "frontmatter:title": {
         "contentHash": "53b7490818a9",
@@ -241,7 +241,7 @@
       },
       "post-merge": {
         "contentHash": "b7ee08293cd1",
-        "anchorHash": "8fb9a108e1cb",
+        "anchorHash": "2e0b4ba6d836",
         "labelHash": "d99f7639a8f7",
         "children": {
           "_label": {
@@ -288,7 +288,7 @@
           },
           "post-merge-inflation-breakdown": {
             "contentHash": "505e9f65dc55",
-            "anchorHash": "feca66795529",
+            "anchorHash": "d93cf86fb890",
             "labelHash": "9f91123f2e70",
             "children": {
               "_label": {
@@ -301,7 +301,7 @@
               },
               "link:0": {
                 "contentHash": "a0d74a027b8e",
-                "anchorHash": "94f254dbdfb4"
+                "anchorHash": "68f65f0eae8f"
               },
               "prose:2": {
                 "contentHash": "ca24447a7f3f",
@@ -702,5 +702,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

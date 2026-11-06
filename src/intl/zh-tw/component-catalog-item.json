@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "關於 {name}",
+  "catalog-item-gallery-modal-title": "{name} 螢幕截圖",
+  "catalog-item-gallery-screenshot-alt": "{name} 的第 {index} 張螢幕截圖",
+  "catalog-item-gallery-title": "圖庫",
+  "catalog-item-info-title": "資訊",
+  "catalog-item-link-label": "{platform} 上的 {name}",
+  "catalog-item-see-next": "查看下一個",
+  "catalog-item-source-code": "原始碼",
+  "catalog-item-view-on-github": "在 GitHub 上查看",
+  "catalog-item-visit-website": "造訪網站"
+}

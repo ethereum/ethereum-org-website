@@ -165,7 +165,7 @@ SepoliaのチェーンIDです。
 function App() {
 ```
 
-これはReactコンポーネントを作成する標準的な方法です。レンダリングが必要になるたびに呼び出される関数を定義します。この関数には通常、TypeScriptまたはJavaScriptのコードが含まれ、その後にJSXコードを返す`return`ステートメントが続きます。
+これはReactコンポーネントを作成する標準的な方法です。レンダリングが必要になるたびに呼び出される関数を定義します。この関数には通常、TypeScriptまたはJavaScriptのコードが含まれ、その後にJSXコードを返す`return`文が続きます。
 
 ```tsx
   const connection = useConnection()
@@ -173,7 +173,7 @@ function App() {
 
 [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection)を使用して、アドレスや`chainId`など、現在の接続に関連する情報を取得します。
 
-慣例として、Reactでは`use...`と呼ばれる関数は[フック](https://www.w3schools.com/react/react_hooks.asp)です。これらの関数はコンポーネントにデータを返すだけでなく、そのデータが変更されたときにコンポーネントが再レンダリングされる（コンポーネント関数が再度実行され、その出力がHTML内の前の出力を置き換える）ことを保証します。
+慣例として、Reactでは`use...`と呼ばれる関数は[フック](https://www.w3schools.com/react/react_hooks.asp)です。これらの関数は、コンポーネントにデータを返すだけでなく、そのデータが変更されたときにコンポーネントが再レンダリングされる（コンポーネント関数が再度実行され、その出力がHTML内の以前の出力を置き換える）ことを保証します。
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -240,7 +240,7 @@ ReactコンポーネントのJSXは、単一のHTMLコンポーネントを返�
       {connection.status === 'connected' && (
 ```
 
-構文`{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`"です。
+`{<condition> && <value>}`という構文は、「条件が`true`の場合は値として評価し、そうでない場合は`false`として評価する」ことを意味します。
 
 これは、JSX内にif文を記述する標準的な方法です。
 
@@ -250,9 +250,9 @@ ReactコンポーネントのJSXは、単一のHTMLコンポーネントを返�
           <hr />
 ```
 
-JSXはHTMLよりも厳密なXML標準に従います。タグに対応する終了タグがない場合は、終了させるために末尾にスラッシュ（`/`）を付ける_必要があります_。
+JSXは、HTMLよりも厳密なXML標準に従います。タグに対応する終了タグがない場合は、終了させるために末尾にスラッシュ（`/`）を付ける_必要があります_。
 
-ここにはそのようなタグが2つあります。`<Greeter />`（実際にはコントラクトと通信するHTMLコードが含まれています）と、[水平線用の`<hr />`](https://www.w3schools.com/tags/tag_hr.asp)です。
+ここには、そのようなタグが2つあります。`<Greeter />`（実際にコントラクトと通信するHTMLコードが含まれています）と、[水平線を表す`<hr />`](https://www.w3schools.com/tags/tag_hr.asp)です。
 
 ```tsx
           <button type="button" onClick={disconnect}>
@@ -277,14 +277,14 @@ JSXはHTMLよりも厳密なXML標準に従います。タグに対応する終�
           {connectors.map((connector) => (
 ```
 
-`connectors`にはコネクタのリストがあります。[`map`](https://www.w3schools.com/jsref/jsref_map.asp)を使用して、これを表示用のJSXボタンのリストに変換します。
+`connectors`には、コネクタのリストがあります。[`map`](https://www.w3schools.com/jsref/jsref_map.asp)を使用して、これを表示するJSXボタンのリストに変換します。
 
 ```tsx
             <button
               key={connector.uid}
 ```
 
-JSXでは、「兄弟」タグ（同じ親から派生したタグ）が異なる識別子を持つ必要があります。
+JSXでは、「兄弟」タグ（同じ親から派生するタグ）が異なる識別子を持つ必要があります。
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -305,9 +305,9 @@ JSXでは、「兄弟」タグ（同じ親から派生したタグ）が異な�
       )}
 ```
 
-追加情報を提供します。式構文`<variable>?.<field>`は、変数が定義されている場合はそのフィールドを評価するようにJavaScriptに指示します。変数が定義されていない場合、この式は`undefined`と評価されます。
+追加情報を提供します。`<variable>?.<field>`という式の構文は、変数が定義されている場合はそのフィールドとして評価するようにJavaScriptに指示します。変数が定義されていない場合、この式は`undefined`として評価されます。
 
-式`error.message`は、エラーがない場合に例外を発生させます。`error?.message`を使用すると、この問題を回避できます。
+`error.message`という式は、エラーがない場合に例外を発生させます。`error?.message`を使用すると、この問題を回避できます。
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 

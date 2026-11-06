@@ -1,6 +1,6 @@
 ---
 title: "WebSockets ব্যবহার করা"
-description: "JSON-RPC রিকোয়েস্ট করতে এবং ইভেন্ট সাবস্ক্রাইব করতে WebSockets এবং Alchemy ব্যবহারের গাইড।"
+description: "যেকোনো ইথেরিয়াম নোড প্রোভাইডারের সাথে জেসন-আরপিসি রিকোয়েস্ট করতে এবং ইভেন্টগুলোতে সাবস্ক্রাইব করতে WebSockets ব্যবহারের গাইড।"
 author: "এলান হ্যালপার্ন"
 lang: bn
 tags: ["Alchemy", "websockets", "কোয়েরি করা", "JavaScript"]
@@ -11,46 +11,63 @@ sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-webso
 published: 2020-12-01
 ---
 
-এটি ইথেরিয়াম ব্লকচেইনে রিকোয়েস্ট করার জন্য WebSockets এবং Alchemy ব্যবহারের একটি প্রাথমিক স্তরের গাইড।
+এটি ইথেরিয়াম ব্লকচেইনে রিকোয়েস্ট করার জন্য WebSockets ব্যবহারের একটি প্রাথমিক গাইড। উদাহরণগুলোতে স্ট্যান্ডার্ড জেসন-আরপিসি মেথড ব্যবহার করা হয়েছে, তাই এগুলো Alchemy সহ যেকোনো নোড বা নোড প্রোভাইডারের সাথে কাজ করে যা একটি WebSocket এন্ডপয়েন্ট অফার করে।
 
 ## WebSockets বনাম HTTP {#websockets-vs-http}
 
-HTTP-এর বিপরীতে, WebSockets-এর মাধ্যমে নির্দিষ্ট তথ্যের প্রয়োজন হলে আপনাকে বারবার রিকোয়েস্ট করতে হয় না। WebSockets আপনার জন্য একটি নেটওয়ার্ক সংযোগ বজায় রাখে (যদি সঠিকভাবে করা হয়) এবং পরিবর্তনের জন্য অপেক্ষা করে।
+HTTP-এর বিপরীতে, WebSockets-এর মাধ্যমে নির্দিষ্ট তথ্যের প্রয়োজন হলে আপনাকে বারবার রিকোয়েস্ট করতে হয় না। WebSockets আপনার জন্য একটি নেটওয়ার্ক কানেকশন বজায় রাখে (যদি সঠিকভাবে করা হয়) এবং পরিবর্তনের জন্য অপেক্ষা করে।
 
-যেকোনো নেটওয়ার্ক সংযোগের মতোই, আপনার এমনটা ধরে নেওয়া উচিত নয় যে একটি WebSocket কোনো বাধা ছাড়াই চিরকাল খোলা থাকবে, তবে ড্রপ হওয়া সংযোগগুলো এবং ম্যানুয়ালি পুনরায় সংযোগ করার বিষয়টি সঠিকভাবে পরিচালনা করা বেশ চ্যালেঞ্জিং হতে পারে। WebSockets-এর আরেকটি অসুবিধা হলো আপনি রেসপন্সে কোনো HTTP স্ট্যাটাস কোড পান না, বরং শুধুমাত্র এরর মেসেজ পান।
+যেকোনো নেটওয়ার্ক কানেকশনের মতো, আপনার ধরে নেওয়া উচিত নয় যে একটি WebSocket কোনো বাধা ছাড়াই চিরকাল খোলা থাকবে, তবে ড্রপ হওয়া কানেকশন এবং ম্যানুয়ালি পুনরায় কানেক্ট করা সঠিকভাবে পরিচালনা করা চ্যালেঞ্জিং হতে পারে। WebSockets-এর আরেকটি অসুবিধা হলো আপনি রেসপন্সে HTTP স্ট্যাটাস কোড পান না, কেবল এরর বার্তা পান।
 
-​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) কোনো কনফিগারেশন ছাড়াই স্বয়ংক্রিয়ভাবে WebSocket ফেইলিওর এবং রিট্রাই পরিচালনা করে।
+ক্লায়েন্ট লাইব্রেরিগুলো আপনার জন্য এটি পরিচালনা করতে পারে। উদাহরণস্বরূপ, [viem-এর WebSocket ট্রান্সপোর্ট](https://viem.sh/docs/clients/transports/websocket) সকেট ফেইলিউরে পুনরায় কানেক্ট করে এবং ডিফল্টভাবে কিপ-অ্যালাইভ (keep-alive) পিং পাঠায়।
 
-## নিজে চেষ্টা করে দেখুন {#try-it-out}
+## ট্রাই করে দেখুন {#try-it-out}
 
-WebSockets পরীক্ষা করার সবচেয়ে সহজ উপায় হলো WebSocket রিকোয়েস্ট করার জন্য একটি কমান্ড লাইন টুল ইনস্টল করা, যেমন [wscat](https://github.com/websockets/wscat)। wscat ব্যবহার করে, আপনি নিচের মতো করে রিকোয়েস্ট পাঠাতে পারেন:
+আপনার একটি ইথেরিয়াম নোডের জন্য একটি WebSocket URL প্রয়োজন। আপনি যখন একটি অ্যাপ্লিকেশন প্রোগ্রামিং ইন্টারফেস (এপিআই) কী তৈরি করেন তখন নোড প্রোভাইডাররা আপনাকে একটি দেয়, সাধারণত `wss://<provider-host>/<your-api-key>` ফর্মে। উদাহরণস্বরূপ, একটি Alchemy ইথেরিয়াম মেইননেট URL দেখতে `wss://eth-mainnet.g.alchemy.com/v2/<your-api-key>` এর মতো হয় ([একটি বিনামূল্যের Alchemy অ্যাকাউন্টের জন্য সাইন আপ করুন](https://auth.alchemy.com/signup))। অন্যান্য প্রোভাইডারদের জন্য [সার্ভিস হিসেবে নোড](/developers/docs/nodes-and-clients/nodes-as-a-service/) দেখুন, অথবা [আপনার নিজের নোডের](/developers/docs/nodes-and-clients/run-a-node/) WebSocket এন্ডপয়েন্ট ব্যবহার করুন। `wss://ethereum-rpc.publicnode.com` এর মতো পাবলিক এন্ডপয়েন্টগুলোও দ্রুত পরীক্ষার জন্য কাজ করে, তবে এগুলো রেট-লিমিটেড এবং প্রতিটি সাবস্ক্রিপশনের ধরন সমর্থন নাও করতে পারে।
 
-_নোট: আপনার যদি একটি Alchemy অ্যাকাউন্ট থাকে তবে আপনি `demo`-কে আপনার নিজস্ব API কী দিয়ে প্রতিস্থাপন করতে পারেন। [এখানে একটি বিনামূল্যের Alchemy অ্যাকাউন্টের জন্য সাইন আপ করুন!](https://auth.alchemy.com/signup)_
+WebSockets পরীক্ষা করার সবচেয়ে সহজ উপায় হলো WebSocket রিকোয়েস্ট করার জন্য একটি কমান্ড লাইন টুল ইনস্টল করা, যেমন [wscat](https://github.com/websockets/wscat)। wscat ব্যবহার করে, আপনি নিচের মতো রিকোয়েস্ট পাঠাতে পারেন:
 
+```sh
+npx wscat -c wss://<provider-host>/<your-api-key>
+
+> {"jsonrpc": "2.0", "id": 0, "method": "eth_gasPrice"}
+
+< {"jsonrpc": "2.0", "result": "0x41f9de2", "id": 0}
 ```
-wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
->  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
-
-<  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-```
+`>` দিয়ে শুরু হওয়া লাইনগুলো হলো যা আপনি টাইপ করেন এবং `<` দিয়ে শুরু হওয়া লাইনগুলো হলো যা নোড ফেরত পাঠায়।
 
 ## WebSockets কীভাবে ব্যবহার করবেন {#how-to-use-websockets}
 
-শুরু করতে, আপনার অ্যাপের জন্য WebSocket URL ব্যবহার করে একটি WebSocket খুলুন। আপনি [আপনার ড্যাশবোর্ডে](https://dashboard.alchemy.com/) অ্যাপের পেজটি খুলে এবং "View Key"-তে ক্লিক করে আপনার অ্যাপের WebSocket URL খুঁজে পেতে পারেন। মনে রাখবেন যে WebSockets-এর জন্য আপনার অ্যাপের URL এবং HTTP রিকোয়েস্টের জন্য এর URL আলাদা, তবে "View Key"-তে ক্লিক করে উভয়ই পাওয়া যেতে পারে।
+শুরু করতে, আপনার প্রোভাইডারের WebSocket URL ব্যবহার করে একটি WebSocket খুলুন। Alchemy-এর সাথে, আপনি [ড্যাশবোর্ডে](https://dashboard.alchemy.com/) আপনার অ্যাপ খুলে এবং এর অ্যাপ্লিকেশন প্রোগ্রামিং ইন্টারফেস (এপিআই) কী দেখে এটি খুঁজে পেতে পারেন। মনে রাখবেন যে WebSockets-এর URL (`wss://`) HTTP রিকোয়েস্টের URL (`https://`) থেকে আলাদা, যদিও বেশিরভাগ প্রোভাইডার উভয়ের জন্য একই এপিআই কী ব্যবহার করে।
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
+![আপনার Alchemy ড্যাশবোর্ডে আপনার WebSocket URL কোথায় পাবেন](./use-websockets.mp4#602x280)
 
-[Alchemy API রেফারেন্সে](https://www.alchemy.com/docs/reference/api-overview) তালিকাভুক্ত যেকোনো API WebSocket-এর মাধ্যমে ব্যবহার করা যেতে পারে। এটি করার জন্য, একটি HTTP POST রিকোয়েস্টের বডি হিসেবে যে পেলোড পাঠানো হতো সেটিই ব্যবহার করুন, তবে এর পরিবর্তে সেই পেলোডটি WebSocket-এর মাধ্যমে পাঠান।
+আপনার প্রোভাইডার সমর্থন করে এমন যেকোনো [জেসন-আরপিসি মেথড](/developers/docs/apis/json-rpc/) WebSocket-এর মাধ্যমে ব্যবহার করা যেতে পারে। এটি করতে, একটি HTTP POST রিকোয়েস্টের বডি হিসেবে যে পেলোড পাঠানো হতো সেই একই পেলোড ব্যবহার করুন, তবে এর পরিবর্তে সেই পেলোডটি WebSocket-এর মাধ্যমে পাঠান।
 
-## Web3-এর সাথে {#with-web3}
+## Web3 এর সাথে {#with-web3}
 
-Web3-এর মতো একটি ক্লায়েন্ট লাইব্রেরি ব্যবহার করার সময় WebSockets-এ ট্রানজিশন করা সহজ। আপনার Web3 ক্লায়েন্ট ইনস্ট্যানশিয়েট করার সময় কেবল HTTP-এর পরিবর্তে WebSocket URL পাস করুন। উদাহরণস্বরূপ:
+[viem](https://viem.sh/)-এর মতো একটি ক্লায়েন্ট লাইব্রেরি ব্যবহার করার সময় WebSockets-এ ট্রানজিশন করা সহজ। `http` ট্রান্সপোর্টের পরিবর্তে আপনার WebSocket URL-এর সাথে `webSocket` ট্রান্সপোর্ট ব্যবহার করুন। উদাহরণস্বরূপ, `npm install viem`-এর পরে, এটিকে `index.mjs` হিসেবে সেভ করুন এবং `node index.mjs` রান করুন:
 
 ```js
-const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
+import { createPublicClient, webSocket } from "viem"
+import { mainnet } from "viem/chains"
 
-web3.eth.getBlockNumber().then(console.log) // -> 7946893
+const client = createPublicClient({
+  chain: mainnet,
+  transport: webSocket("wss://<provider-host>/<your-api-key>"),
+})
+
+console.log(await client.getBlockNumber()) // -> 26243602n
+
+// একই ওয়েবসকেটের মাধ্যমে নতুন ব্লকগুলোতে সাবস্ক্রাইব করুন
+const unwatch = client.watchBlocks({
+  onBlock: (block) => {
+    console.log(block.number, block.hash)
+    unwatch()
+    process.exit(0)
+  },
+})
 ```
 
 ## সাবস্ক্রিপশন API {#subscription-api}
@@ -59,7 +76,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ### `eth_subscribe` {#eth-subscribe}
 
-নির্দিষ্ট ইভেন্টগুলোর জন্য একটি নতুন সাবস্ক্রিপশন তৈরি করে। [`eth_subscribe` সম্পর্কে আরও জানুন](https://docs.alchemy.com/reference/eth-subscribe)।
+নির্দিষ্ট ইভেন্টগুলোর জন্য একটি নতুন সাবস্ক্রিপশন তৈরি করে। [`eth_subscribe` সম্পর্কে আরও জানুন](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub)।
 
 #### প্যারামিটার {#parameters}
 
@@ -84,126 +101,121 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 #### সাবস্ক্রিপশনের ধরন {#subscription-types}
 
-1. `alchemy_newFullPendingTransactions`
+1. `newHeads`
 
-পেন্ডিং স্টেটে যোগ করা সমস্ত ট্রানজ্যাকশনের জন্য ট্রানজ্যাকশন তথ্য রিটার্ন করে। এই সাবস্ক্রিপশনের ধরনটি স্ট্যান্ডার্ড Web3 কল `web3.eth.subscribe("pendingTransactions")`-এর মতোই পেন্ডিং ট্রানজ্যাকশনগুলোতে সাবস্ক্রাইব করে, তবে পার্থক্য হলো এটি শুধুমাত্র ট্রানজ্যাকশন হ্যাশের পরিবর্তে _সম্পূর্ণ ট্রানজ্যাকশন তথ্য_ প্রদান করে।
+চেইন রিঅর্গ চলাকালীন সময়সহ, চেইনে নতুন হেডার যোগ হওয়ার যেকোনো সময় একটি ইভেন্ট এমিট করে।
 
-উদাহরণ:
-
-```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["alchemy_newFullPendingTransactions"]}
-
-<  {"id":1,"result":"0x9a52eeddc2b289f985c0e23a7d8427c8","jsonrpc":"2.0"}
-<  {
-      "jsonrpc":"2.0",
-      "method":"eth_subscription",
-      "params":{
-          "result":{
-          "blockHash":null,
-          "blockNumber":null,
-          "from":"0xa36452fc31f6f482ad823cd1cf5515177d57667f",
-          "gas":"0x1adb0",
-          "gasPrice":"0x7735c4d40",
-          "hash":"0x50bff0736c713458c92dd1848d12f3354149be1363123dae35e94e0f2a9d56bf",
-"input":"0xa9059cbb0000000000000000000000000d0707963952f2fba59dd06f2b425ace40b492fe0000000000000000000000000000000000000000000015b1111266cfca100000",
-          "nonce":"0x0",
-          "to":"0xea38eaa3c86c8f9b751533ba2e562deb9acded40",
-          "transactionIndex":null,
-          "value":"0x0",
-          "v":"0x26",
-          "r":"0x195c2c1ed126088e12d290aa93541677d3e3b1d10f137e11f86b1b9227f01e3b",
-          "s":"0x60fc4edbf1527832a2a36dbc1e63ed6193a6eee654472fbebbf88ef1750b5344"},
-          "subscription":"0x9a52eeddc2b289f985c0e23a7d8427c8"
-      }
-  }
-
-```
-
-2. `newHeads`
-
-চেইনে নতুন কোনো হেডার যোগ করা হলে, এমনকি চেইন রি-অর্গ চলাকালীন সময়েও এটি একটি ইভেন্ট প্রদান করে।
-
-যখন একটি চেইন রি-অর্গ ঘটে, তখন এই সাবস্ক্রিপশনটি নতুন চেইনের জন্য সমস্ত নতুন হেডার ধারণকারী একটি ইভেন্ট প্রদান করবে। বিশেষ করে, এর মানে হলো আপনি একই উচ্চতার একাধিক হেডার দেখতে পেতে পারেন এবং যখন এমনটি ঘটে তখন রি-অর্গের পরে আসা পরবর্তী হেডারটিকে সঠিক হিসেবে ধরে নেওয়া উচিত।
+যখন একটি চেইন রিঅর্গ ঘটে, তখন এই সাবস্ক্রিপশনটি নতুন চেইনের জন্য সমস্ত নতুন হেডার ধারণকারী একটি ইভেন্ট এমিট করবে। বিশেষ করে, এর মানে হলো আপনি একই উচ্চতার সাথে একাধিক হেডার এমিট হতে দেখতে পারেন, এবং যখন এটি ঘটে তখন রিঅর্গ-এর পরে পরবর্তী হেডারটিকে সঠিক হিসেবে নেওয়া উচিত।
 
 উদাহরণ:
 
 ```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["newHeads"]}
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 
-<  {"jsonrpc":"2.0","id":2,"result":"0x9ce59a13059e417087c02d3236a0b1cc"}
-<  {
-  "jsonrpc":  "2.0",
-  "method":  "eth_subscription",
-  "params":  {
-      "result":  {
-          "extraData":  "0xd983010305844765746887676f312e342e328777696e646f7773",
-          "gasLimit":  "0x47e7c4",
-          "gasUsed":  "0x38658",
-          "logsBloom":
-"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-          "nonce":  "0x084149998194cc5f",
-          "number":  "0x1348c9",
-          "parentHash":  "0x7736fab79e05dc611604d22470dadad26f56fe494421b5b333de816ce1f25701",
-          "receiptRoot":  "0x2fab35823ad00c7bb388595cb46652fe7886e00660a01e867824d3dceb1c8d36",
-          "sha3Uncles":  "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-          "stateRoot":  "0xb3346685172db67de536d8765c43c31009d0eb3bd9c501c9be3229203f15f378",
-          "timestamp":  "0x56ffeff8",
-          "transactionsRoot":  "0x0167ffa60e3ebc0b080cdb95f7c0087dd6c0e61413140e39d94d3468d7c9689f"
-      },
-  "subscription":  "0x9ce59a13059e417087c02d3236a0b1cc"
+< {"jsonrpc":"2.0","result":"0xe0d4abf5caf333fbf94c5f02182e6469","id":1}
+< {
+  "jsonrpc": "2.0",
+  "method": "eth_subscription",
+  "params": {
+    "result": {
+      "baseFeePerGas": "0x41f9de2",
+      "blobGasUsed": "0xc0000",
+      "difficulty": "0x0",
+      "excessBlobGas": "0xa88af38",
+      "extraData": "0xe29ca82051756173617220287175617361722e77696e2920e29ca8",
+      "gasLimit": "0x3938700",
+      "gasUsed": "0x1a17224",
+      "hash": "0xedc43a71b7ff13880bdbe7b748a225b91a11a91e79173fe28011363c10acaea5",
+      "logsBloom": "0x4beaef4e7dbb1bfdb3df673fab6cdf1cf9fc0e7f743d672c761551767b7dad953d79cf86e56e6195ae1b57dff20a0fd46e57c545af166ff49394df3839e269a6ff877b6baf9d899fd9666c58b7dfa7add4febf78b466e7f71af2dcbad53fdcfa3f7277d2fbfffcff953f9ef37b3af8fffb296a3adb94dc463ff0d6d5173f1beda0fd662d77eaedb34ff99f3eeed38a77e7d0cd63e917d4efbdfcb7d0d19437f98ff60773d0effbfbdfdbef9ebbf6a2c35efedd677a795d3ccd777e127eeb657f6a8dffaf64f3b8d998b516c78e661ef77fded57fb66d687fab17739b3ef5aa2765777d8cce0ef59a9ceebeceabbb7f76ed7fc65df7e8bccf7938eb3fb7de57f7",
+      "miner": "0x396343362be2a4da1ce0c1c210945346fb82aa49",
+      "mixHash": "0xa72c9201f502df607d0d7551ccc171ce37a5146747f04c6c495b0aebecb045c7",
+      "nonce": "0x0000000000000000",
+      "number": "0x1907212",
+      "parentBeaconBlockRoot": "0x34f3f289459913dd80ec9c20aa535866cd2bd310ac26e47570601e263d593735",
+      "parentHash": "0xe62c150ffbbd04e95343f945b70fa53756aba6c0bf96c0440d1ae354fa007a7c",
+      "receiptsRoot": "0x94951d882544da76e30b145b26a39b126e8acfba9db929351b84b2f4c847e3ed",
+      "requestsHash": "0xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+      "size": "0x1f4bc",
+      "stateRoot": "0x12771ea73858277034cf6604aee0abbf889c15091ab8ef9be81bf7258458a036",
+      "timestamp": "0x6ad92b47",
+      "transactionsRoot": "0xbd58ebe5c8c5519e458266a7db3ad049a7bffa106dc9a14f2fe6edb3f8ad5d70",
+      "withdrawalsRoot": "0x56a083b6140663c9e98c30167ee90a1ffb157505ba89cb584583b71cba100d2a"
+    },
+    "subscription": "0xe0d4abf5caf333fbf94c5f02182e6469"
   }
 }
-
 ```
 
-3. `logs`
+2. `logs`
 
-নির্দিষ্ট ফিল্টার মানদণ্ডের সাথে মিলে যাওয়া নতুন যোগ করা ব্লকগুলোর অংশ হিসেবে থাকা লগগুলো প্রদান করে।
+নির্দিষ্ট ফিল্টার মানদণ্ডের সাথে মিলে যাওয়া নতুন যোগ করা ব্লকগুলোর অংশ এমন লগগুলো এমিট করে।
 
-যখন একটি চেইন রি-অর্গ ঘটে, তখন পুরানো চেইনের ব্লকগুলোর অংশ হিসেবে থাকা লগগুলো `removed` প্রপার্টি `true`-তে সেট করে পুনরায় প্রদান করা হবে। এছাড়া, নতুন চেইনের ব্লকগুলোর অংশ হিসেবে থাকা লগগুলোও প্রদান করা হয়, যার মানে হলো রি-অর্গের ক্ষেত্রে একই ট্রানজ্যাকশনের জন্য একাধিকবার লগ দেখা সম্ভব।
+যখন একটি চেইন রিঅর্গ ঘটে, তখন পুরানো চেইনের ব্লকগুলোর অংশ এমন লগগুলো `removed` প্রপার্টি `true` সেট করে আবার এমিট করা হবে। উপরন্তু, নতুন চেইনের ব্লকগুলোর অংশ এমন লগগুলো এমিট করা হয়, যার মানে হলো রিঅর্গ-এর ক্ষেত্রে একই ট্রানজ্যাকশন-এর জন্য একাধিকবার লগ দেখা সম্ভব।
 
 প্যারামিটার
 
 1. নিচের ফিল্ডগুলোসহ একটি অবজেক্ট:
-   - `address` (ঐচ্ছিক): একটি ঠিকানাকে উপস্থাপনকারী স্ট্রিং অথবা এই ধরনের স্ট্রিংগুলোর একটি অ্যারে।
-     - শুধুমাত্র এই ঠিকানাগুলোর যেকোনো একটি থেকে তৈরি করা লগগুলো প্রদান করা হবে।
+   - `address` (ঐচ্ছিক): একটি ঠিকানা উপস্থাপনকারী স্ট্রিং অথবা এই ধরনের স্ট্রিংগুলোর একটি অ্যারে।
+     - শুধুমাত্র এই ঠিকানাগুলোর একটি থেকে তৈরি করা লগগুলো এমিট করা হবে।
    - `topics`: টপিক স্পেসিফায়ারগুলোর একটি অ্যারে।
-     - প্রতিটি টপিক স্পেসিফায়ার হতে পারে `null`, একটি টপিককে উপস্থাপনকারী স্ট্রিং, অথবা স্ট্রিংগুলোর একটি অ্যারে।
-     - অ্যারের প্রতিটি পজিশন যা `null` নয়, তা প্রদান করা লগগুলোকে শুধুমাত্র তাদের মধ্যেই সীমাবদ্ধ করে যাদের সেই পজিশনে প্রদত্ত টপিকগুলোর মধ্যে একটি রয়েছে।
+     - প্রতিটি টপিক স্পেসিফায়ার হয় `null`, একটি টপিক উপস্থাপনকারী স্ট্রিং, অথবা স্ট্রিংগুলোর একটি অ্যারে।
+     - অ্যারের প্রতিটি পজিশন যা `null` নয়, এমিট করা লগগুলোকে শুধুমাত্র তাদের মধ্যে সীমাবদ্ধ করে যাদের সেই পজিশনে প্রদত্ত টপিকগুলোর একটি রয়েছে।
 
 টপিক স্পেসিফিকেশনের কিছু উদাহরণ:
 
 - `[]`: যেকোনো টপিক অনুমোদিত।
-- `[A]`: প্রথম পজিশনে A (এবং এরপর যেকোনো কিছু)।
-- `[null, B]`: প্রথম পজিশনে যেকোনো কিছু এবং দ্বিতীয় পজিশনে B (এবং এরপর যেকোনো কিছু)।
-- `[A, B]`: প্রথম পজিশনে A এবং দ্বিতীয় পজিশনে B (এবং এরপর যেকোনো কিছু)।
-- `[[A, B], [A, B]]`: প্রথম পজিশনে (A অথবা B) এবং দ্বিতীয় পজিশনে (A অথবা B) (এবং এরপর যেকোনো কিছু)।
+- `[A]`: প্রথম পজিশনে A (এবং এর পরে যেকোনো কিছু)।
+- `[null, B]`: প্রথম পজিশনে যেকোনো কিছু এবং দ্বিতীয় পজিশনে B (এবং এর পরে যেকোনো কিছু)।
+- `[A, B]`: প্রথম পজিশনে A এবং দ্বিতীয় পজিশনে B (এবং এর পরে যেকোনো কিছু)।
+- `[[A, B], [A, B]]`: প্রথম পজিশনে (A বা B) এবং দ্বিতীয় পজিশনে (A বা B) (এবং এর পরে যেকোনো কিছু)।
+
+উদাহরণ:
+
+এই উদাহরণটি ইথেরিয়াম মেইননেট-এ [WETH কন্ট্রাক্ট](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) থেকে `Deposit` ইভেন্টগুলোর জন্য অপেক্ষা করে:
+
+```json
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["logs", {"address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "topics": ["0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c"]}]}
+
+< {"jsonrpc":"2.0","result":"0x69a0e61ae8e3d61a93479858e8f1b43a","id":1}
+< {
+  "jsonrpc": "2.0",
+  "method": "eth_subscription",
+  "params": {
+    "result": {
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "blockHash": "0x168e06e5733df993078bb635cb9925f80ff39d12a36bd301052c44d7bf6b6068",
+      "blockNumber": "0x190720e",
+      "blockTimestamp": "0x6ad92b17",
+      "data": "0x000000000000000000000000000000000000000000000000039ed0c3d7848a1c",
+      "logIndex": "0x11",
+      "removed": false,
+      "topics": [
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c",
+        "0x00000000000000000000000023617e59a5925b2a4bf75d73ff6711cd0b29de85"
+      ],
+      "transactionHash": "0xc956e7012c2af8ff87db88e059336842ee872bfc93de1eac9760510d0bd801be",
+      "transactionIndex": "0xb"
+    },
+    "subscription": "0x69a0e61ae8e3d61a93479858e8f1b43a"
+  }
+}
+```
+
+3. `newPendingTransactions`
+
+নোডের পেন্ডিং স্টেট (এর মেমপুল)-এ যোগ করা প্রতিটি ট্রানজ্যাকশন-এর হ্যাশ এমিট করে।
 
 উদাহরণ:
 
 ```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["logs",  {"address":  "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd",  "topics":  ["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"]}]}
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["newPendingTransactions"]}
 
-<  {"jsonrpc":"2.0","id":2,"result":"0x4a8a4c0517381924f9838102c5a4dcb7"}
-<  {
-  "jsonrpc":  "2.0",
-  "method":  "eth_subscription",
-  "params":  {
-      "subscription":  "0x4a8a4c0517381924f9838102c5a4dcb7",
-      "result":  {
-          "address":  "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd",
-          "blockHash":  "0x61cdb2a09ab99abf791d474f20c2ea89bf8de2923a2d42bb49944c8c993cbf04",
-          "blockNumber":  "0x29e87",
-          "data": "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000003",
-          "logIndex":"0x0",
-          "topics":["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"],
-          "transactionHash":  "0xe044554a0a55067caafd07f8020ab9f2af60bdfe337e395ecd84b4877a3d1ab4",
-          "transactionIndex":  "0x0"
-      }
-  }
-}
-
+< {"jsonrpc":"2.0","result":"0x1c2365b029179adf1e84b9e327315249","id":1}
+< {"jsonrpc":"2.0","method":"eth_subscription","params":{"result":"0x4a62d0ad7c8868fbbfa10604e68638e637c6fc6f64fd1fb4ca042dcd0158c992","subscription":"0x1c2365b029179adf1e84b9e327315249"}}
 ```
+
+কিছু প্রোভাইডার তাদের নিজস্ব সাবস্ক্রিপশনের ধরনও অফার করে। উদাহরণস্বরূপ, Alchemy-এর [`alchemy_pendingTransactions`](https://www.alchemy.com/docs/reference/alchemy-pendingtransactions) শুধুমাত্র হ্যাশ-এর পরিবর্তে _সম্পূর্ণ ট্রানজ্যাকশন অবজেক্ট_ এমিট করে এবং ঐচ্ছিক `fromAddress`, `toAddress` এবং `hashesOnly` ফিল্টার গ্রহণ করে। এগুলো স্ট্যান্ডার্ড জেসন-আরপিসি অ্যাপ্লিকেশন প্রোগ্রামিং ইন্টারফেস (এপিআই)-এর অংশ নয়, তাই এগুলো শুধুমাত্র সেই প্রোভাইডারের সাথেই কাজ করে।
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
@@ -211,33 +223,22 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 প্যারামিটার
 
-1. সাবস্ক্রিপশন ID, যা পূর্বে একটি `eth_subscribe` কল থেকে রিটার্ন করা হয়েছিল।
+1. সাবস্ক্রিপশন ID, যা আগে একটি `eth_subscribe` কল থেকে রিটার্ন করা হয়েছিল।
 
 রিটার্নস (Returns)
 
-সাবস্ক্রিপশন সফলভাবে বাতিল হলে `true`, অথবা প্রদত্ত ID-এর সাথে কোনো সাবস্ক্রিপশন না থাকলে `false`।
+`true` যদি একটি সাবস্ক্রিপশন সফলভাবে বাতিল করা হয়, অথবা `false` যদি প্রদত্ত ID-এর সাথে কোনো সাবস্ক্রিপশন না থাকে।
+
+একটি সাবস্ক্রিপশন শুধুমাত্র সেই WebSocket কানেকশনে বিদ্যমান থাকে যা এটি তৈরি করেছে, তাই `eth_unsubscribe` অবশ্যই সেই একই কানেকশনের মাধ্যমে পাঠাতে হবে। এটি একটি পৃথক HTTP রিকোয়েস্ট হিসেবে পাঠানো যাবে না। কানেকশন বন্ধ করলেও এর সমস্ত সাবস্ক্রিপশন বাতিল হয়ে যায়।
 
 উদাহরণ:
 
-**রিকোয়েস্ট**
-
-```
-curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
--X POST
--H "Content-Type: application/json"
--d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-```
-
-**ফলাফল**
-
 ```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": true
-}
+> {"jsonrpc": "2.0", "id": 2, "method": "eth_unsubscribe", "params": ["0xe0d4abf5caf333fbf94c5f02182e6469"]}
+
+< {"jsonrpc":"2.0","result":true,"id":2}
 ```
 
 ---
 
-বিনামূল্যে [Alchemy-তে সাইন আপ করুন](https://auth.alchemy.com), [আমাদের ডকুমেন্টেশন](https://www.alchemy.com/docs/) দেখুন এবং সর্বশেষ খবরের জন্য [টুইটার](https://x.com/AlchemyPlatform)-এ আমাদের অনুসরণ করুন।
+বিনামূল্যে [Alchemy-এর সাথে সাইন আপ করুন](https://auth.alchemy.com), [Alchemy-এর ডকুমেন্টেশন](https://www.alchemy.com/docs/) দেখুন এবং সর্বশেষ খবরের জন্য [টুইটার](https://x.com/Alchemy)-এ Alchemy-কে ফলো করুন।

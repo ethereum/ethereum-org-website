@@ -48,7 +48,7 @@ lang: zh
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum Hackers</Link> - 由 ETHGlobal 运营的 Discord 聊天室：面向全球以太坊黑客的在线社区</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 专注于以太坊开发的 Discord 社区</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> - 社区运营的指南、教育、支持以及为现有和潜在质押者提供的资源</SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org 网站团队</Link> - 欢迎来与团队及社区成员交流 ethereum.org 的网站开发与设计</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="/discord/">Ethereum.org 网站团队</Link> - 欢迎来与团队及社区成员交流 ethereum.org 的网站开发与设计</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3 创作者社区，建设者、行业领袖和以太坊爱好者常聚于此。我们对 Web3 开发、设计和文化充满热情。快来和我们一起建设吧。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 开发聊天室 (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- 问答论坛</i></SocialListItem>

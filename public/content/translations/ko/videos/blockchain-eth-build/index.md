@@ -7,8 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "mining"
-  - "blockchain"
+  - "how-ethereum-works"
 format: tutorial
 author: "오스틴 그리피스"
 breadcrumb: "블록체인 (ETH.BUILD)"

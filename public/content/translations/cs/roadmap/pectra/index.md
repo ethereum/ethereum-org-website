@@ -45,7 +45,7 @@ Přečtěte si podrobnější informace o MaxEB [zde](/roadmap/pectra/maxeb/)
 
 Bloby poskytují [dostupnost dat](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) pro L2. Byly představeny v [předchozí aktualizaci sítě](/roadmap/dencun/). 
 
-V současné době síť cílí na průměrně 3 bloby na blok s maximem 6 blobů. S [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) se průměrný počet blobů zvýší na 6, s maximem 9 na blok, což povede ke zvýšení kapacity pro Ethereum rollupy. Toto EIP pomáhá překlenout mezeru, dokud [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) neumožní ještě vyšší počty blobů.
+Před aktualizací Pectra síť cílila na průměrně 3 bloby na blok s maximem 6. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) zvýšil cíl na 6 a maximum na 9 na blok, čímž se zvýšila kapacita pro rollupy Etherea. Překlenul tak mezeru do zavedení [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594), který byl spuštěn v aktualizaci [Fusaka](/roadmap/fusaka/) a umožňuje ještě vyšší počet blobů.
 
 ### Zvýšení nákladů na data volání {#7623}
 

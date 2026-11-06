@@ -209,7 +209,7 @@ Voici une liste de certains des fournisseurs de nœuds Ethereum les plus populai
     - Accès à plus de 50 nœuds de chaînes de blocs
 
 - [**Infura**](https://infura.io/)
-  - [Documentation](https://infura.io/docs)
+  - [Documentation](https://docs.infura.io/)
   - Fonctionnalités
     - Option de niveau gratuit
     - Évolutivité à la demande

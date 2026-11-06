@@ -29,7 +29,7 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Węzeł jako usługa (Node-as-a-Service)._**
+**All That Node -** **_Węzeł jako usługa._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Dokumentacja](https://docs.allthatnode.com)
@@ -55,10 +55,10 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 **Etherscan - Eksplorator bloków i API transakcji**
 - [Dokumentacja](https://docs.etherscan.io/)
 
-**Blockscout - Eksplorator bloków o otwartym kodzie źródłowym**
+**Blockscout - Eksplorator bloków open source**
 - [Dokumentacja](https://docs.blockscout.com/)
 
-**GetBlock -** **_Blockchain jako usługa dla rozwoju Web3_**
+**GetBlock -** **_Blockchain jako usługa dla programowania Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Dokumentacja](https://docs.getblock.io/)
@@ -91,6 +91,12 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 - [Dokumentacja](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_Infrastruktura EVM JSON-RPC z pełnym, archiwalnym i bezkluczowym dostępem publicznym._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Dokumentacja](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_Zorientowane na szybkość węzły Ethereum jako API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
@@ -100,13 +106,19 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 
 ### Narzędzia programistyczne {#development-tools}
 
+**eth.zig -** **_Biblioteka Zig dla Ethereum, z kodowaniem ABI w czasie kompilacji i powiązaniami kontraktów._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Dokumentacja](https://ethzig.org)
+- [Przykłady](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
 **ethers-kt -** **_Asynchroniczna, wysokowydajna biblioteka Kotlin/Java/Android dla blockchainów opartych na EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Przykłady](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_Biblioteka integracyjna .NET o otwartym kodzie źródłowym dla blockchaina._**
+**Nethereum -** **_Biblioteka integracyjna .NET open source dla blockchaina._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Dokumentacja](https://docs.nethereum.com/docs/getting-started/welcome/)

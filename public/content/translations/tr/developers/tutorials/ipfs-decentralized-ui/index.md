@@ -12,7 +12,7 @@ lang: tr
 published: 2024-06-29
 ---
 
-İnanılmaz yeni bir merkeziyetsiz uygulama (dapp) yazdınız. Hatta bunun için bir [kullanıcı arayüzü](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) bile yazdınız. Ancak şimdi, buluttaki tek bir sunucudan ibaret olan kullanıcı arayüzünüzü çökerterek birinin onu sansürlemeye çalışacağından korkuyorsunuz. Bu eğitimde, ilgilenen herkesin gelecekte erişmek üzere bir sunucuya sabitleyebilmesi (pin) için kullanıcı arayüzünüzü **[gezegenler arası dosya sistemine (IPFS)](https://ipfs.tech/developers/)** koyarak sansürden nasıl kaçınacağınızı öğreneceksiniz.
+İnanılmaz yeni bir merkeziyetsiz uygulama (dapp) yazdınız. Hatta bunun için bir [kullanıcı arayüzü](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) bile yazdınız. Ancak şimdi, buluttaki tek bir sunucudan ibaret olan kullanıcı arayüzünüzü çökerterek birinin onu sansürlemeye çalışacağından korkuyorsunuz. Bu eğitimde, ilgilenen herkesin gelecekte erişmek üzere bir sunucuya sabitleyebilmesi (pin) için kullanıcı arayüzünüzü **[gezegenler arası dosya sistemine (IPFS)](https://docs.ipfs.tech/)** koyarak sansürden nasıl kaçınacağınızı öğreneceksiniz.
 
 Tüm işi yapması için [Fleek](https://resources.fleek.xyz/docs/) gibi üçüncü taraf bir hizmet kullanabilirsiniz. Bu eğitim, daha fazla iş gerektirse bile ne yaptıklarını anlayacak kadarını kendi yapmak isteyenler içindir.
 

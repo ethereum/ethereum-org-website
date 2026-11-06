@@ -1,11 +1,8 @@
 {
-  "augur-cta": "Khám phá Augur",
-  "augur-description": "Một giao thức thị trường dự đoán hoàn toàn phi tập trung được sử dụng để dự đoán xu hướng giá. Lưu ý: bạn sẽ cần một chút kiến thức chuyên môn về kỹ thuật để bắt đầu sử dụng Augur.",
-  "augur-title": "Augur",
-  "kalshi-cta": "Thử Kalshi",
-  "kalshi-description": "Một nền tảng tuân thủ CFTC sử dụng Ethereum để nạp USDC. (Chỉ dành cho Hoa Kỳ)",
-  "kalshi-title": "Kalshi",
+  "limitless-cta": "Khám phá Limitless",
+  "limitless-description": "Một thị trường dự đoán được xây dựng trên Base, một lớp 2 (l2) của Ethereum. Các giao dịch được thanh toán trên chuỗi bằng USDC và hầu hết các thị trường giá được giải quyết tự động thông qua các nguồn cấp dữ liệu giá trên chuỗi. Không khả dụng ở mọi quốc gia.",
+  "limitless-title": "Limitless",
   "polymarket-cta": "Khám phá Polymarket",
-  "polymarket-description": "Một thị trường dự báo phổ biến với tính năng giao dịch theo thời gian thực.",
+  "polymarket-description": "Một trong những thị trường dự đoán lớn nhất. Các giao dịch được thanh toán trên Polygon và kết quả được quyết định thông qua nguồn cấp dữ liệu UMA. Không khả dụng ở mọi quốc gia.",
   "polymarket-title": "Polymarket"
 }

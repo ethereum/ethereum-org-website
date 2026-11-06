@@ -29,8 +29,10 @@ export const SITE_URL =
 
 export const IS_PRODUCTION_DEPLOY =
   process.env.NEXT_PUBLIC_CONTEXT === "production"
-export const DISCORD_PATH = "https://discord.gg/ethereum-org/"
-export const ENTERPRISE_ETHEREUM_URL = "https://institutions.ethereum.org/"
+// Internal path; redirects.config.js holds the one canonical invite URL.
+export const DISCORD_PATH = "/discord/"
+/** Absolute form of DISCORD_PATH, for link hrefs and JSON-LD. */
+export const DISCORD_URL = new URL(DISCORD_PATH, SITE_URL).href
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
@@ -45,6 +47,8 @@ export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
+// Looser than GitHub's signup rule: legacy handles like `p-` end in a hyphen
+export const GITHUB_USERNAME_REGEX = /^[a-zA-Z0-9][a-zA-Z0-9-]{0,38}$/
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // API timing
@@ -70,36 +74,6 @@ export const DUNE_API_URL = "https://api.dune.com"
 
 // Wallets
 export const NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN = 5
-
-export const WALLETS_FILTERS_DEFAULT = {
-  android: false,
-  ios: false,
-  linux: false,
-  windows: false,
-  macOS: false,
-  firefox: false,
-  chromium: false,
-  hardware: false,
-  open_source: false,
-  non_custodial: false,
-  hardware_support: false,
-  rpc_importing: false,
-  nft_support: false,
-  connect_to_dapps: false,
-  staking: false,
-  swaps: false,
-  layer_2: false,
-  gas_fee_customization: false,
-  ens_support: false,
-  erc_20_support: false,
-  buy_crypto: false,
-  withdraw_crypto: false,
-  multisig: false,
-  social_recovery: false,
-  eip_4337_support: false,
-  eip_7702_support: false,
-  new_to_crypto: false,
-}
 
 export const NEW_TO_CRYPTO_FEATURES = ["new_to_crypto"]
 
@@ -159,6 +133,7 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "build",
   "participate",
   "research",
+  "organizations",
 ]
 
 // Glossary Definition Component
@@ -253,3 +228,6 @@ export const LINE_CLAMP_CLASS_MAPPING = {
 
 export const DEVCON_INDIA_START_DATE = new Date(Date.UTC(2026, 10, 3, 6, 0, 0))
 export const DEVCON_INDIA_END_DATE = new Date(Date.UTC(2026, 10, 6, 18, 0, 0))
+
+/** `/#ask` sends a reader straight to the homepage hero's search. */
+export const HOME_SEARCH_HASH = "ask"

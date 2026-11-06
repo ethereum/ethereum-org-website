@@ -47,7 +47,7 @@ ERC-721 接口内置于 Vyper 语言中。
 ```python
 #pragma version >0.3.10
 ```
-### ERC721Receiver 接口
+### ERC721Receiver 接口 {#receiver-interface}
 
 ```python
 # 由 safeTransferFrom() 调用的合约接口
@@ -87,7 +87,7 @@ ERC-721 代币 ID 为 256 位。通常，它们是通过对代币所代表的内
 
 为了防止合约意外接受转账的情况，返回值不是布尔值，而是一个特定的四字节值，即 `onERC721Received` 的函数选择器。该函数是 `nonpayable` 的，因为接收合约在接受代币时可能会改变其自身的状态。
 
-### 事件
+### 事件 {#events}
 
 触发[事件](/developers/docs/smart-contracts/anatomy/#events-and-logs)是为了向区块链外部的用户和服务器通知事件的发生。请注意，区块链上的合约无法访问事件的内容。这三个 ERC-721 事件由我们导入的 `IERC721` 接口定义，因此该合约本身并不声明它们；它使用 `log IERC721.<Event>(...)` 来触发它们，正如我们将在下面的转账函数中看到的那样。
 
@@ -97,7 +97,7 @@ ERC-721 授权类似于 ERC-20 授权额度：允许特定地址转账特定代�
 
 最后，当为所有者启用或禁用_操作员_时，会触发 `ApprovalForAll`（`owner`、`operator`、`approved`）。有时，拥有一个可以管理账户中所有特定类型代币（由特定合约管理的代币）的操作员是很有用的，类似于委托书。例如，我可能想将这种权力赋予一个合约，该合约会检查我是否已有六个月没有联系它，如果是，则将我的资产分配给我的继承人（如果其中一人提出请求，因为如果没有被交易调用，合约什么也做不了）。在 ERC-20 中，我们只需给继承合约一个很高的授权额度即可，但这对于 ERC-721 不起作用，因为代币是非同质化的。这就是等效的机制。`approved` 值告诉我们该事件是用于授权还是撤销授权。
 
-### 状态变量
+### 状态变量 {#state-vars}
 
 这些变量包含代币的当前状态：哪些代币可用以及谁拥有它们。其中大多数是 `HashMap` 对象，即[存在于两种类型之间的单向映射](https://vyper.readthedocs.io/en/latest/types.html#mappings)。
 
@@ -150,7 +150,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 
 这些是实际实现 ERC-721 的函数。
 
-#### 构造函数
+#### 构造函数 {#constructor}
 
 ```python
 @deploy
@@ -173,7 +173,7 @@ def __init__():
 
 要访问状态变量，你可以使用 `self.<variable name>`（同样，与 Python 相同）。构造函数将部署合约的账户记录为 `minter`。
 
-#### 视图函数
+#### 视图函数 {#views}
 
 这些函数不会修改区块链的状态，因此如果从外部调用它们，可以免费执行。如果视图函数由合约调用，它们仍然必须在每个节点上执行，因此会消耗 Gas。
 
@@ -272,7 +272,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 此函数检查是否允许 `_operator` 管理此合约中 `_owner` 的所有代币。因为可以有多个操作员，所以这是一个两级 HashMap。
 
-#### 转账辅助函数
+#### 转账辅助函数 {#transfer-helpers}
 
 这些函数实现了作为转账或管理代币一部分的操作。
 
@@ -389,7 +389,7 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
 
 要在 Vyper 中触发事件，你可以使用 `log` 语句（[有关更多详细信息，请参见此处](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)）。因为事件属于导入的接口，所以我们将它们称为 `IERC721.Transfer` 并通过关键字传递它们的字段。
 
-#### 转账函数
+#### 转账函数 {#transfer-funs}
 
 ```python
 

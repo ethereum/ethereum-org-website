@@ -22,20 +22,20 @@ Queste librerie astraggono gran parte della complessità dell'interazione dirett
 
 ### Infrastruttura e servizi di nodo {#infrastructure-and-node-services}
 
-**Alchemy -** **_Piattaforma di sviluppo Ethereum._**
+**Alchemy -** **_Piattaforma di sviluppo di Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [Documentazione](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Node-as-a-Service._**
+**All That Node -** **_Nodo come servizio._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Documentazione](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast di Bware Labs -** **_API decentralizzate per la Mainnet di Ethereum e le reti di test._**
+**Blast by Bware Labs -** **_Interfacce di programmazione delle applicazioni (API) decentralizzate per la Mainnet di Ethereum e le reti di test._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Documentazione](https://docs.blastapi.io)
@@ -52,13 +52,13 @@ Queste librerie astraggono gran parte della complessità dell'interazione dirett
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Block explorer e API per le transazioni**
+**Etherscan - Block explorer e API di transazione**
 - [Documentazione](https://docs.etherscan.io/)
 
 **Blockscout - Block explorer open source**
 - [Documentazione](https://docs.blockscout.com/)
 
-**GetBlock -** **_Blockchain-as-a-service per lo sviluppo Web3_**
+**GetBlock-** **_Blockchain come servizio per lo sviluppo nel Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentazione](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ Queste librerie astraggono gran parte della complessità dell'interazione dirett
 - [Documentazione](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Provider JSON-RPC EVM conveniente_**
+**Node RPC - _Provider JSON-RPC per la Macchina Virtuale di Ethereum (EVM) conveniente_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Documentazione](https://docs.noderpc.xyz/node-rpc)
@@ -85,11 +85,17 @@ Queste librerie astraggono gran parte della complessità dell'interazione dirett
 - [Documentazione](https://www.quicknode.com/docs/welcome)
 - [Discord](https://discord.gg/quicknode)
 
-**Rivet -** **_API di Ethereum ed Ethereum Classic come servizio basato su software open source._**
+**Rivet -** **_API di Ethereum ed Ethereum Classic come servizio basate su software open source._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Documentazione](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+
+**SolidRPC -** **_Infrastruttura JSON-RPC per l'EVM con accesso pubblico completo, di archivio e senza chiavi._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Documentazione](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
 
 **Zmok -** **_Nodi Ethereum orientati alla velocità come API JSON-RPC/WebSockets._**
 
@@ -100,7 +106,13 @@ Queste librerie astraggono gran parte della complessità dell'interazione dirett
 
 ### Strumenti di sviluppo {#development-tools}
 
-**ethers-kt -** **_Libreria asincrona e ad alte prestazioni in Kotlin/Java/Android per blockchain basate su EVM._**
+**eth.zig -** **_Una libreria Zig per Ethereum, con codifica dell'Interfaccia binaria dell'applicazione (ABI) a tempo di compilazione e binding dei contratti._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Documentazione](https://ethzig.org)
+- [Esempi](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_Libreria asincrona e ad alte prestazioni in Kotlin/Java/Android per blockchain basate sulla Macchina Virtuale di Ethereum (EVM)._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Esempi](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -115,8 +127,8 @@ Queste librerie astraggono gran parte della complessità dell'interazione dirett
 **Strumenti Python -** **_Varietà di librerie per l'interazione con Ethereum tramite Python._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [GitHub di Web3.py](https://github.com/ethereum/web3.py)
-- [Chat di Web3.py](https://gitter.im/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_La piattaforma di sviluppo blockchain definitiva._**
 
@@ -125,7 +137,7 @@ Queste librerie astraggono gran parte della complessità dell'interazione dirett
 - [Documentazione](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_Una libreria di integrazione Java/Android/Kotlin/Scala per Ethereum._**
+**web3j -** **_Una libreria di integrazione Java/Android/Kotlin/Scala per Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Documentazione](https://docs.web3j.io/)

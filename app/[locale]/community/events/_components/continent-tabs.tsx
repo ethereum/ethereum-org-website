@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Globe } from "lucide-react"
+import { Globe, MapPin } from "lucide-react"
 
 import type {
   Continent,
@@ -167,14 +167,18 @@ export default function ContinentTabs({
                       ...matomoLinkOptions,
                     }}
                   >
-                    <div className="flex size-12 shrink-0 overflow-hidden rounded-lg">
-                      <Image
-                        src={event.logoImage}
-                        alt={event.title}
-                        className="size-full object-contain"
-                        width={48}
-                        height={48}
-                      />
+                    <div className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-tint-body">
+                      {event.logoImage ? (
+                        <Image
+                          src={event.logoImage}
+                          alt={event.title}
+                          className="size-full object-contain"
+                          width={48}
+                          height={48}
+                        />
+                      ) : (
+                        <MapPin className="size-6 text-body-medium" />
+                      )}
                     </div>
                     <div className="min-w-0">
                       <p className="flex items-center gap-1 font-bold text-body group-hover:text-primary">

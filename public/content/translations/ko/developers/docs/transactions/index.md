@@ -178,7 +178,7 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 
 스마트 컨트랙트가 포함된 모든 트랜잭션에는 가스가 필요합니다.
 
-스마트 컨트랙트에는 컨트랙트의 상태를 변경하지 않는 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 또는 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 함수로 알려진 함수도 포함될 수 있습니다. 따라서 EOA에서 이러한 함수를 호출하는 데는 가스가 필요하지 않습니다. 이 시나리오의 기본 RPC 호출은 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)입니다.
+스마트 컨트랙트에는 컨트랙트의 상태를 변경하지 않는 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 또는 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 함수로 알려진 함수도 포함될 수 있습니다. 따라서 EOA에서 이러한 함수를 호출하는 데는 가스가 필요하지 않습니다. 이 시나리오의 기본 RPC 호출은 [`eth_call`](/developers/docs/apis/json-rpc/#eth-call)입니다.
 
 `eth_call`를 사용하여 액세스할 때와 달리, 이러한 `view` 또는 `pure` 함수는 내부적으로(즉, 컨트랙트 자체 또는 다른 컨트랙트에서) 호출되는 경우도 흔하며 이 경우에는 가스 비용이 발생합니다.
 

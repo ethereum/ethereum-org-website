@@ -8,8 +8,6 @@ duration: "0:29:13"
 educationLevel: beginner
 topic:
   - "how-ethereum-works"
-  - "blockchain"
-  - "ethereum"
 format: presentation
 author: ETHGlobal
 breadcrumb: "अणू, संस्था, ब्लॉकचेन्स"

@@ -175,7 +175,7 @@ print("Addr Balance:", addr_balance)
 - [أوبن زبلن - تنفيذ <span dir="ltr">ERC-20</span>](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - دليل لرموز ERC20 في Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
-## معايير الرموز القابلة للاستبدال الأخرى
+## معايير الرموز القابلة للاستبدال الأخرى {#fungible-token-standards}
 - [<span dir="ltr">ERC-223</span>](/developers/docs/standards/tokens/erc-223)
 - [<span dir="ltr">ERC-1363</span>](/developers/docs/standards/tokens/erc-1363)
 - [<span dir="ltr">ERC-777</span>](/developers/docs/standards/tokens/erc-777)

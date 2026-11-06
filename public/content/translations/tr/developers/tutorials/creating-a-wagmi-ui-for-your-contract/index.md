@@ -148,27 +148,27 @@ import { useEffect } from 'react'
 import { Greeter } from './Greeter'
 ```
 
-İhtiyacımız olan kütüphaneleri ve [`Greeter` bileşenini](#greeter-tsx) içe aktarın.
+İhtiyacımız olan kütüphanelerin yanı sıra [`Greeter` bileşenini](#greeter-tsx) de içe aktarın.
 
 ```tsx
 const SEPOLIA_CHAIN_ID = 11155111
 ```
 
-Sepolia zincir kimliği (chain ID).
+Sepolia zincir kimliği.
 
 ```
 function App() {
 ```
 
-Bu, bir React bileşeni oluşturmanın standart yoludur: işlenmesi (render) gerektiğinde çağrılan bir işlev tanımlayın. Bu işlev tipik olarak TypeScript veya JavaScript kodu içerir ve ardından JSX kodunu döndüren bir `return` ifadesi gelir.
+Bu, bir React bileşeni oluşturmanın standart yoludur: işlenmesi gerektiğinde çağrılan bir işlev tanımlayın. Bu işlev genellikle TypeScript veya JavaScript kodu içerir ve ardından JSX kodunu döndüren bir `return` ifadesi gelir.
 
 ```tsx
   const connection = useConnection()
 ```
 
-Adres ve `chainId` gibi mevcut bağlantıyla ilgili bilgileri almak için [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) kullanın.
+Mevcut bağlantıyla ilgili adres ve `chainId` gibi bilgileri almak için [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) kullanın.
 
-Geleneksel olarak, React'te `use...` olarak adlandırılan işlevler [kancalardır (hooks)](https://www.w3schools.com/react/react_hooks.asp). Bu işlevler yalnızca bileşene veri döndürmekle kalmaz; aynı zamanda bu veri değiştiğinde bileşenin yeniden işlenmesini (bileşen işlevi tekrar yürütülür ve çıktısı HTML'deki eskisinin yerini alır) sağlarlar.
+Geleneksel olarak, React'te `use...` olarak adlandırılan işlevler [hook'lardır](https://www.w3schools.com/react/react_hooks.asp). Bu işlevler yalnızca bileşene veri döndürmekle kalmaz; aynı zamanda bu veri değiştiğinde yeniden işlenmesini (bileşen işlevi tekrar yürütülür ve çıktısı HTML'deki öncekinin yerini alır) sağlarlar.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -180,19 +180,19 @@ Cüzdan bağlantısı hakkında bilgi almak için [`useConnect`](https://wagmi.s
   const { disconnect } = useDisconnect()
 ```
 
-[Bu kanca](https://wagmi.sh/react/api/hooks/useDisconnect) bize cüzdan bağlantısını kesme işlevini verir.
+[Bu hook](https://wagmi.sh/react/api/hooks/useDisconnect) bize cüzdan bağlantısını kesme işlevini verir.
 
 ```tsx
   const { switchChain } = useSwitchChain()
 ```
 
-[Bu kanca](https://wagmi.sh/react/api/hooks/useSwitchChain) zincirleri değiştirmemizi sağlar.
+[Bu hook](https://wagmi.sh/react/api/hooks/useSwitchChain) zincirleri değiştirmemizi sağlar.
 
 ```tsx
   useEffect(() => {
 ```
 
-React kancası [`useEffect`](https://react.dev/reference/react/useEffect), harici bir sistemi senkronize etmek için bir değişkenin değeri her değiştiğinde bir işlev çalıştırmanıza olanak tanır.
+React hook'u [`useEffect`](https://react.dev/reference/react/useEffect), harici bir sistemi senkronize etmek için bir değişkenin değeri her değiştiğinde bir işlev çalıştırmanıza olanak tanır.
 
 ```tsx
     if (connection.status === 'connected' &&
@@ -208,14 +208,14 @@ Bağlıysak ancak Sepolia blokzincirine bağlı değilsek, Sepolia'ya geçin.
   }, [connection.status, connection.chainId])
 ```
 
-Bağlantı durumu veya bağlantı chainId'si her değiştiğinde işlevi yeniden çalıştırın.
+Bağlantı durumu veya bağlantının chainId'si her değiştiğinde işlevi yeniden çalıştırın.
 
 ```tsx
   return (
     <>
 ```
 
-Bir React bileşeninin JSX'i tek bir HTML bileşeni döndürmek _zorundadır_. Birden fazla bileşenimiz olduğunda ve hepsini sarmak için bir kapsayıcıya ihtiyaç duymadığımızda, bunları tek bir bileşende birleştirmek için boş bir bileşen (`<> ... </>`) kullanırız.
+Bir React bileşeninin JSX'i _mutlaka_ tek bir HTML bileşeni döndürmelidir. Birden fazla bileşenimiz olduğunda ve hepsini sarmak için bir kapsayıcıya ihtiyaç duymadığımızda, bunları tek bir bileşende birleştirmek için boş bir bileşen (`<> ... </>`) kullanırız.
 
 ```tsx
       <h2>Connection</h2>
@@ -229,13 +229,13 @@ Bir React bileşeninin JSX'i tek bir HTML bileşeni döndürmek _zorundadır_. B
 </div>
 ```
 
-Mevcut bağlantı hakkında bilgi sağlayın. JSX içinde `{<expression>}`, ifadeyi JavaScript olarak değerlendirmek anlamına gelir.
+Mevcut bağlantı hakkında bilgi sağlayın. JSX içinde `{<expression>}`, ifadenin JavaScript olarak değerlendirileceği anlamına gelir.
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-Sözdizimi `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
+`{<condition> && <value>}` sözdizimi, "koşul `true` ise değere göre değerlendir; değilse `false` olarak değerlendir" anlamına gelir.
 
 Bu, JSX içine if ifadeleri koymanın standart yoludur.
 
@@ -245,7 +245,7 @@ Bu, JSX içine if ifadeleri koymanın standart yoludur.
           <hr />
 ```
 
-JSX, HTML'den daha katı olan XML standardını izler. Bir etiketin karşılık gelen bir bitiş etiketi yoksa, onu sonlandırmak için sonunda bir eğik çizgi (`/`) _olmalıdır_.
+JSX, HTML'den daha katı olan XML standardını izler. Bir etiketin karşılık gelen bir bitiş etiketi yoksa, sonlandırmak için sonunda _mutlaka_ bir eğik çizgi (`/`) olmalıdır.
 
 Burada bu tür iki etiketimiz var: `<Greeter />` (aslında sözleşmeyle konuşan HTML kodunu içerir) ve [yatay bir çizgi için `<hr />`](https://www.w3schools.com/tags/tag_hr.asp).
 
@@ -272,14 +272,14 @@ Eğer bağlı _değilsek_, cüzdana bağlanmak için gerekli seçenekleri göste
           {connectors.map((connector) => (
 ```
 
-`connectors` içinde bir bağlayıcı listemiz var. Bunu görüntülenecek bir JSX düğmeleri listesine dönüştürmek için [`map`](https://www.w3schools.com/jsref/jsref_map.asp) kullanırız.
+`connectors` içinde bir bağlayıcı listemiz var. Bunu görüntülenecek JSX düğmeleri listesine dönüştürmek için [`map`](https://www.w3schools.com/jsref/jsref_map.asp) kullanıyoruz.
 
 ```tsx
             <button
               key={connector.uid}
 ```
 
-JSX'te "kardeş" etiketlerin (aynı ebeveynden gelen etiketler) farklı tanımlayıcılara sahip olması gerekir.
+JSX'te "kardeş" etiketlerin (aynı üst öğeden gelen etiketler) farklı tanımlayıcılara sahip olması gerekir.
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -300,9 +300,9 @@ Bağlayıcı düğmeleri.
       )}
 ```
 
-Ek bilgi sağlayın. `<variable>?.<field>` ifade sözdizimi JavaScript'e, değişken tanımlanmışsa o alanı değerlendirmesini söyler. Değişken tanımlanmamışsa, bu ifade `undefined` olarak değerlendirilir.
+Ek bilgi sağlayın. `<variable>?.<field>` ifade sözdizimi, JavaScript'e değişken tanımlanmışsa o alana göre değerlendirmesini söyler. Değişken tanımlanmamışsa, bu ifade `undefined` olarak değerlendirilir.
 
-`error.message` ifadesi, hata olmadığında bir istisna (exception) oluşturur. `error?.message` kullanmak bu sorundan kaçınmamızı sağlar.
+Hata olmadığında `error.message` ifadesi bir istisna (exception) oluşturur. `error?.message` kullanmak bu sorunu önlememizi sağlar.
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 

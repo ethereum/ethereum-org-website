@@ -9,8 +9,11 @@
   "projects": {
     "arbitrum": {
       "stage": "Stage 1",
+      "type": "layer2",
       "tvl": { "total": 17221070848 },
-      "tvs": { "breakdown": { "total": 17221070848 } },
+      "tvs": {
+        "breakdown": { "total": 17221070848, "stablecoin": 4530596095 }
+      },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "good" },
         { "name": "State Validation", "sentiment": "good" },
@@ -21,8 +24,11 @@
     },
     "base": {
       "stage": "Stage 1",
+      "type": "layer2",
       "tvl": { "total": 12157637632 },
-      "tvs": { "breakdown": { "total": 12157637632 } },
+      "tvs": {
+        "breakdown": { "total": 12157637632, "stablecoin": 4974851112 }
+      },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "good" },
         { "name": "State Validation", "sentiment": "good" },
@@ -33,8 +39,9 @@
     },
     "optimism": {
       "stage": "Stage 1",
+      "type": "layer2",
       "tvl": { "total": 2263227136 },
-      "tvs": { "breakdown": { "total": 2263227136 } },
+      "tvs": { "breakdown": { "total": 2263227136, "stablecoin": 555270680 } },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "good" },
         { "name": "State Validation", "sentiment": "good" },
@@ -45,8 +52,9 @@
     },
     "zksync2": {
       "stage": "Stage 0",
+      "type": "layer2",
       "tvl": { "total": 451107552 },
-      "tvs": { "breakdown": { "total": 451107552 } },
+      "tvs": { "breakdown": { "total": 451107552, "stablecoin": 34947739 } },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "warning" },
         { "name": "State Validation", "sentiment": "good" },
@@ -57,8 +65,9 @@
     },
     "linea": {
       "stage": "Stage 0",
+      "type": "layer2",
       "tvl": { "total": 525505280 },
-      "tvs": { "breakdown": { "total": 525505280 } },
+      "tvs": { "breakdown": { "total": 525505280, "stablecoin": 31127322 } },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "bad" },
         { "name": "State Validation", "sentiment": "good" },
@@ -69,8 +78,9 @@
     },
     "scroll": {
       "stage": "Stage 1",
+      "type": "layer2",
       "tvl": { "total": 120399552 },
-      "tvs": { "breakdown": { "total": 120399552 } },
+      "tvs": { "breakdown": { "total": 120399552, "stablecoin": 9550706 } },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "good" },
         { "name": "State Validation", "sentiment": "good" },
@@ -81,8 +91,9 @@
     },
     "starknet": {
       "stage": "Stage 1",
+      "type": "layer2",
       "tvl": { "total": 753634560 },
-      "tvs": { "breakdown": { "total": 753634560 } },
+      "tvs": { "breakdown": { "total": 753634560, "stablecoin": 153955799 } },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "warning" },
         { "name": "State Validation", "sentiment": "good" },
@@ -93,8 +104,9 @@
     },
     "unichain": {
       "stage": "Stage 1",
+      "type": "layer2",
       "tvl": { "total": 259711024 },
-      "tvs": { "breakdown": { "total": 259711024 } },
+      "tvs": { "breakdown": { "total": 259711024, "stablecoin": 29733858 } },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "good" },
         { "name": "State Validation", "sentiment": "good" },
@@ -105,8 +117,9 @@
     },
     "ink": {
       "stage": "Stage 1",
+      "type": "layer2",
       "tvl": { "total": 406536160 },
-      "tvs": { "breakdown": { "total": 406536160 } },
+      "tvs": { "breakdown": { "total": 406536160, "stablecoin": 171230801 } },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "good" },
         { "name": "State Validation", "sentiment": "good" },
@@ -117,8 +130,9 @@
     },
     "zircuit": {
       "stage": "Stage 0",
+      "type": "layer2",
       "tvl": { "total": 350000000 },
-      "tvs": { "breakdown": { "total": 350000000 } },
+      "tvs": { "breakdown": { "total": 350000000, "stablecoin": 463857 } },
       "risks": [
         { "name": "Sequencer Failure", "sentiment": "bad" },
         { "name": "State Validation", "sentiment": "good" },

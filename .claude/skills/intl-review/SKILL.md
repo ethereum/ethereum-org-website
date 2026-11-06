@@ -5,13 +5,13 @@ description: Use when reviewing translation imports/PRs (especially against `int
 
 # intl-review
 
-Translation-quality review for ethereum.org's 24-language pipeline output. Reviews target the LLM (Gemini)-produced translations on `intl/pending-{base}` branches plus any historical Crowdin imports still in flight. ETHGlossary (https://ethglossary.visual-20-hoists.workers.dev) is the authoritative source for terminology — deviations are **critical issues**, not warnings. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
+Translation-quality review for ethereum.org's 24-language pipeline output. Reviews target the LLM (Gemini)-produced translations on `intl/pending-{base}` branches plus any historical Crowdin imports still in flight. ETHGlossary (https://glossary.ethereum.org) is the authoritative source for terminology — deviations are **critical issues**, not warnings. Read this file fully on activation; pull from `references/` only when the listed trigger applies.
 
 ## The Core Rule: ETHGlossary Is Authority
 
 When evaluating a translated brand name, person name, programming language, OS name, or any Ethereum-ecosystem term, **the ETHGlossary entry for that term in that language is the truth**. Deviations are **critical** issues that must be flagged (and auto-fixed when running `/review-translations` without `--no-fix`).
 
-This is not a stylistic preference — it's a determinism guarantee. The translation pipeline queries ETHGlossary; reviewers verify the output matches. If you think the glossary is wrong, the fix is to update ETHGlossary (https://github.com/wackerow/ethglossary), not to leave the translation as-is.
+This is not a stylistic preference — it's a determinism guarantee. The translation pipeline queries ETHGlossary; reviewers verify the output matches. If you think the glossary is wrong, the fix is to update ETHGlossary (https://github.com/ethereum/ethglossary), not to leave the translation as-is.
 
 Use the `/filter` endpoint to get the subset of glossary terms that actually appear in a given English source file. Don't reason from memory about brand names; look them up.
 
@@ -66,7 +66,7 @@ Single-open / double-close backticks (`` `text`` ``), missing `</em>`before`</li
 | Per-language findings                  | `.claude/translation-review/per-language/{lang}.md`                                                                |
 | ETHGlossary terms (filtered to source) | `POST /api/v1/filter`                                                                                              |
 | ETHGlossary terms (full per-language)  | `GET /api/v1/translations/{lang}`                                                                                  |
-| ETHGlossary policy                     | https://github.com/wackerow/ethglossary/blob/main/docs/translation-policy.md                                       |
+| ETHGlossary policy                     | https://github.com/ethereum/ethglossary/blob/main/docs/translation-policy.md                                       |
 | Sanitizer source                       | `src/scripts/intl-pipeline/intl-sanitizer.ts`                                                                      |
 | Sanitizer test research                | `docs/solutions/integration-issues/sanitizer-test-research.md`                                                     |
 | Past review post-mortems               | `docs/solutions/integration-issues/` + `docs/solutions/logic-errors/`                                              |

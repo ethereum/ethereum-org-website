@@ -137,7 +137,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-[SafeMath 库](https://docs.openzeppelin.com/contracts/2.x/api/math)用于避免溢出和下溢。这很重要，因为否则我们可能会遇到一个值本应是 `-1`，但实际上却是 `2^256-1` 的情况。
+[SafeMath 库](https://docs.openzeppelin.com/contracts/3.x/api/math)用于避免溢出和下溢。这很重要，因为否则我们可能会遇到一个值本应是 `-1`，但实际上却是 `2^256-1` 的情况。
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1674,7 +1674,7 @@ Solidity 中的函数参数可以存储在 `memory` 或 `calldata` 中。如果�
 
 ## 库 {#libraries}
 
-[SafeMath 库](https://docs.openzeppelin.com/contracts/2.x/api/math)有详细的文档，因此无需在此处记录。
+[SafeMath 库](https://docs.openzeppelin.com/contracts/3.x/api/math)有详细的文档，因此无需在此处记录。
 
 ### Math {#math}
 

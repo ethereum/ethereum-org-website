@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
@@ -10,7 +11,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import {
   getCatalogWallets,
   getLastUpdatedDisplay,
-  getPersonaCounts,
   getWalletLanguageOptions,
   getWalletNetworks,
   getWalletsByPersona,
@@ -19,7 +19,6 @@ import {
   WALLET_PERSONAS,
 } from "@/lib/utils/walletData"
 
-import FindWalletBreadcrumbs from "../../_components/FindWalletBreadcrumbs"
 import WalletsPageBody from "../../_components/WalletsPageBody"
 
 import PersonaPageJsonLD from "./page-jsonld"
@@ -42,21 +41,33 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
     namespace: "page-wallets-find-wallet",
   })
 
-  const allWallets = getCatalogWallets(locale)
-  const wallets = getWalletsByPersona(allWallets, personaId)
+  // The catalog gets every wallet with this persona pre-selected, so a second
+  // persona can be added client-side; only the structured data stays subset-only.
+  const walletDescriptions = await getTranslations({
+    locale,
+    namespace: "page-wallet-descriptions",
+  })
+  const wallets = getCatalogWallets(locale, walletDescriptions)
+  const personaWallets = getWalletsByPersona(wallets, personaId)
   const networks = getWalletNetworks(wallets)
   const languages = getWalletLanguageOptions(wallets, locale)
-  const personaCounts = getPersonaCounts(allWallets)
 
-  const lastUpdatedDisplay = getLastUpdatedDisplay(wallets, locale)
+  const lastUpdatedDisplay = getLastUpdatedDisplay(personaWallets, locale)
 
   return (
     <>
-      <PersonaPageJsonLD locale={locale} persona={persona} wallets={wallets} />
+      <PersonaPageJsonLD
+        locale={locale}
+        persona={persona}
+        wallets={personaWallets}
+      />
       <MainArticle className="relative flex flex-col">
         <PageHero
           breadcrumbs={
-            <FindWalletBreadcrumbs locale={locale} leaf={t(persona.titleKey)} />
+            <Breadcrumbs
+              slug={`/wallets/find-wallet/personas/${personaId}`}
+              label={t(persona.titleKey)}
+            />
           }
           title={t(persona.heroTitleKey)}
           description={t(persona.heroDescKey)}
@@ -67,9 +78,8 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
           wallets={wallets}
           networks={networks}
           languages={languages}
-          personaCounts={personaCounts}
           lastUpdatedDisplay={lastUpdatedDisplay}
-          currentPersonaId={personaId}
+          initialPersonaId={personaId}
         />
       </MainArticle>
     </>

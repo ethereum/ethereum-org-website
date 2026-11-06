@@ -1,8 +1,8 @@
 ---
-title: 私たちのデザイン原則
-metaTitle: デザイン原則
+title: "私たちのデザイン原則"
+metaTitle: "デザイン原則"
 lang: ja
-description: ethereum.orgのデザインとコンテンツ決定の背後にある原則
+description: "ethereum.orgのデザインとコンテンツ決定の背後にある原則"
 ---
 
 <Emoji text=":wave:" size={1} /> こんにちは、ethereum.orgのデザイン原則へようこそ。これは、ethereum.orgを進化させ、改善するための継続的なプロセスの一部です。
@@ -89,4 +89,4 @@ ethereum.orgの文脈において、これらのデザイン原則は、私た�
 
 これらの原則はethereum.orgのウェブサイトに焦点を当てていますが、その多くがイーサリアムエコシステム全体の価値観を代表するものであることを願っています。あなた自身のプロジェクトにいくつか取り入れたいと思うかもしれません！
 
-[ディスコードサーバー](https://discord.gg/ethereum-org)、または[Issueの作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)を通じて、あなたのご意見をお聞かせください。
+[ディスコードサーバー](/discord/)、または[Issueの作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)を通じて、あなたのご意見をお聞かせください。

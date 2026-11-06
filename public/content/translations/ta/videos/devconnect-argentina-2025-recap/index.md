@@ -7,8 +7,7 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "community-stories"
-  - "community"
+  - "events"
 format: explainer
 author: "எத்திரியம் ஃபவுண்டேஷன்"
 breadcrumb: "Devconnect சுருக்கம்"

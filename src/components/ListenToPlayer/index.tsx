@@ -48,6 +48,7 @@ const ListenToPlayer = ({ slug, className }: ListenToPlayerProps) => {
     const audioPlayer = new Howl({
       src: [playlist[currentTrackIndex].audioFile],
       html5: true,
+      preload: "metadata",
       onload: () => {
         setSound(audioPlayer)
         setTimeRemaining(audioPlayer.duration())

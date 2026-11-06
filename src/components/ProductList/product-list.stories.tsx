@@ -2,6 +2,12 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 
 import ProductList, { type ProductListContent } from "."
 
+import aaveLogo from "@/public/images/dapps/aave.png"
+import compoundLogo from "@/public/images/dapps/compound.png"
+import morphoLogo from "@/public/images/dapps/morpho.png"
+import sparkfiLogo from "@/public/images/dapps/sparkfi.png"
+import uniLogo from "@/public/images/dapps/uni.png"
+
 const meta = {
   title: "Components / ProductList",
   component: ProductList,
@@ -33,7 +39,7 @@ const sampleContent: ProductListContent[] = [
     title: "Uniswap",
     description:
       "A decentralized exchange protocol that lets users swap tokens without intermediaries.",
-    image: "/images/dapps/uni.png",
+    image: uniLogo,
     alt: "Uniswap logo",
     href: "https://uniswap.org",
     ctaLabel: "Visit Uniswap",
@@ -42,7 +48,7 @@ const sampleContent: ProductListContent[] = [
     title: "Aave",
     description:
       "An open-source, non-custodial protocol for earning interest on deposits and borrowing assets.",
-    image: "/images/dapps/aave.png",
+    image: aaveLogo,
     alt: "Aave logo",
     href: "https://aave.com",
     ctaLabel: "Visit Aave",
@@ -51,7 +57,7 @@ const sampleContent: ProductListContent[] = [
     title: "Compound",
     description:
       "An algorithmic, autonomous interest rate protocol for lending and borrowing crypto assets.",
-    image: "/images/dapps/compound.png",
+    image: compoundLogo,
     alt: "Compound logo",
     href: "https://compound.finance",
     ctaLabel: "Visit Compound",
@@ -93,7 +99,7 @@ export const MultipleParagraphs: Story = {
           "Permissionless lending markets with isolated risk and curated vaults.",
           "Isolated markets, audited contracts.",
         ],
-        image: "/images/dapps/morpho.png",
+        image: morphoLogo,
         alt: "Morpho logo",
         href: "https://morpho.org",
         ctaLabel: "Visit Morpho",
@@ -104,7 +110,7 @@ export const MultipleParagraphs: Story = {
           "Borrow and save against blue-chip collateral on Ethereum mainnet.",
           "Predictable savings rates, backed by the DAI stablecoin.",
         ],
-        image: "/images/dapps/sparkfi.png",
+        image: sparkfiLogo,
         alt: "Spark logo",
         href: "https://spark.fi",
         ctaLabel: "Visit Spark",

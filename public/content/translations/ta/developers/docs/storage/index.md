@@ -142,7 +142,7 @@ KYC இல்லாத பரவலாக்கப்பட்ட கருவ�
 **Arweave - _Arweave என்பது தரவைச் சேமிப்பதற்கான ஒரு dStorage தளமாகும்._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [ஆவணங்கள்](https://docs.arweave.org/info/)
+- [ஆவணங்கள்](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs என்பது ஷார்டிங் (sharding) மற்றும் ப்ளாப்பர்களைக் (blobbers) கொண்ட ஒரு உரிமைச் சான்று dStorage தளமாகும்._**

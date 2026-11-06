@@ -8,8 +8,6 @@ duration: "0:29:13"
 educationLevel: beginner
 topic:
   - "how-ethereum-works"
-  - "blockchain"
-  - "ethereum"
 format: presentation
 author: "ইটিএইচগ্লোবাল"
 breadcrumb: "অ্যাটম, প্রতিষ্ঠান, ব্লকচেইন"

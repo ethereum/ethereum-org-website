@@ -1,31 +1,50 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/latest/next-great-wallet-private/index.md",
   "generatedAt": "2026-07-23T00:10:27.976Z",
-  "rootHash": "30ecd6a17bb1",
+  "rootHash": "b732d3220314",
   "tree": {
-    "contentHash": "8c9ddc3d35c2",
-    "anchorHash": "e71881a5e11e",
+    "contentHash": "66a561153883",
+    "anchorHash": "e8d16cb9baed",
     "children": {
       "frontmatter:title": {
-        "contentHash": "07037563eb24",
+        "contentHash": "7fecc4a016f5",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "95d052c80bd5",
+        "contentHash": "085fe5b9bccf",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "b65057beac5b"
+        "anchorHash": "bbf318b24f65"
       },
       "frontmatter:team": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "12ae32cb1ec0"
+        "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "57e4442e7678",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "a4cc6bc01a92",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "4085118690b6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "dd34ba59731d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:published": {
         "contentHash": "e3b0c44298fc",
@@ -37,7 +56,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "c825be42b865"
+        "anchorHash": "e1d9be56c2fe"
       },
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",

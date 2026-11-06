@@ -13,6 +13,9 @@ updates:
     commit-message:
       prefix: chore(deps)
       prefix-development: chore(deps-dev)
+    ignore:
+      # sharp must match the version next depends on, or Netlify ships two libvips and SSR 500s (#18946)
+      - dependency-name: sharp
     groups:
       security-production:
         applies-to: security-updates

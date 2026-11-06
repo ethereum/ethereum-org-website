@@ -178,7 +178,7 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 
 திறன் ஒப்பந்தம் சம்பந்தப்பட்ட எந்தவொரு பரிவர்த்தனைக்கும் எரிவாயு தேவை.
 
-திறன் ஒப்பந்தங்களில் [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) அல்லது [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) செயல்பாடுகள் எனப்படும் செயல்பாடுகளும் இருக்கலாம், அவை ஒப்பந்தத்தின் நிலையை மாற்றாது. எனவே, EOA-இலிருந்து இந்தச் செயல்பாடுகளை அழைப்பதற்கு எந்த எரிவாயுவும் தேவையில்லை. இந்தச் சூழலுக்கான அடிப்படை RPC அழைப்பு [`eth_call`](/developers/docs/apis/json-rpc#eth_call) ஆகும்.
+திறன் ஒப்பந்தங்களில் [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) அல்லது [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) செயல்பாடுகள் எனப்படும் செயல்பாடுகளும் இருக்கலாம், அவை ஒப்பந்தத்தின் நிலையை மாற்றாது. எனவே, EOA-இலிருந்து இந்தச் செயல்பாடுகளை அழைப்பதற்கு எந்த எரிவாயுவும் தேவையில்லை. இந்தச் சூழலுக்கான அடிப்படை RPC அழைப்பு [`eth_call`](/developers/docs/apis/json-rpc/#eth-call) ஆகும்.
 
 `eth_call`-ஐப் பயன்படுத்தி அணுகுவதைப் போலல்லாமல், இந்த `view` அல்லது `pure` செயல்பாடுகள் பொதுவாக உள்நாட்டிலும் (அதாவது, ஒப்பந்தத்திலிருந்தோ அல்லது மற்றொரு ஒப்பந்தத்திலிருந்தோ) அழைக்கப்படுகின்றன, இதற்கு எரிவாயு செலவாகும்.
 

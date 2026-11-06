@@ -1,11 +1,15 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "tr",
-  "translatedAt": "2026-05-26T16:37:00.774Z",
-  "englishManifestHash": "cc2207d66e71",
+  "translatedAt": "2026-09-25T23:18:03.282Z",
+  "englishManifestHash": "712d9728cab2",
   "placeholderOrder": [
     "ICU-VARIABLE-0",
-    "ICU-VARIABLE-1"
+    "ICU-VARIABLE-1",
+    "ICU-VARIABLE-2",
+    "ICU-VARIABLE-3",
+    "ICU-VARIABLE-4",
+    "ICU-VARIABLE-5"
   ],
   "placeholderMap": {
     "ICU-VARIABLE-0": {
@@ -17,13 +21,37 @@
     "ICU-VARIABLE-1": {
       "type": "icu-variable",
       "values": {
+        "value": "{index}"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{appName}"
+      }
+    },
+    "ICU-VARIABLE-3": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{appName}"
+      }
+    },
+    "ICU-VARIABLE-4": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{company}"
+      }
+    },
+    "ICU-VARIABLE-5": {
+      "type": "icu-variable",
+      "values": {
         "value": "{days}"
       }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-05-26T16:37:00.774Z",
+      "translatedAt": "2026-09-25T23:18:03.282Z",
       "status": "success"
     }
   }

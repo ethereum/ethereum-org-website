@@ -8,7 +8,7 @@ duration: "0:36:34"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
+  - "use-cases"
 format: interview
 author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "Aave তৈরি করা"

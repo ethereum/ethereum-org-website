@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/interacting/index.md",
-  "generatedAt": "2026-07-22T23:24:24.778Z",
-  "rootHash": "071420150073",
+  "generatedAt": "2026-10-14T17:47:29.679Z",
+  "rootHash": "38e85133da97",
   "tree": {
     "contentHash": "a0b85d16a9e2",
-    "anchorHash": "37684efe829d",
+    "anchorHash": "6893dda05171",
     "children": {
       "frontmatter:title": {
         "contentHash": "22a72cebcec0",
@@ -217,7 +217,7 @@
       },
       "tools-and-libraries": {
         "contentHash": "77995bc6896a",
-        "anchorHash": "b2474a215add",
+        "anchorHash": "768a422d7a2f",
         "labelHash": "c4670b75b635",
         "children": {
           "_label": {
@@ -279,7 +279,7 @@
           },
           "backend-libraries": {
             "contentHash": "8f9c9322260e",
-            "anchorHash": "85870d8bc21d",
+            "anchorHash": "1acb669a3d42",
             "labelHash": "6da3e2711b65",
             "children": {
               "_label": {
@@ -308,7 +308,7 @@
               },
               "link:2": {
                 "contentHash": "780ae282ce05",
-                "anchorHash": "7e7237e68846"
+                "anchorHash": "7b6b5b491af2"
               },
               "prose:6": {
                 "contentHash": "66cb71f74c7e",
@@ -651,5 +651,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

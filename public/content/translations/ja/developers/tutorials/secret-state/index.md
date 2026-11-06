@@ -236,7 +236,7 @@ import "utils/pack/bool/pack128.zok" as pack128;
 Zokratesのフィールド要素は通常256ビット未満ですが、それほど小さくはありません。コードを簡素化するために、マップを最大512ビットに制限し、4つのフィールドの配列をハッシュ化し、各フィールドでは128ビットのみを使用します。[`pack128`関数](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok)は、この目的のために128ビットの配列を`field`に変換します。
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> field {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
 この行は関数定義の開始です。`hashMap`は、`map`という単一のパラメータ（2次元の`bool`(ean)配列）を受け取ります。マップのサイズが`width+2`×`height+2`である理由は、[後述します](#why-map-border)。
@@ -246,7 +246,7 @@ Zokratesプログラムはこのアプリケーション内で[テンプレー�
 戻り値は、ハッシュを含む`field`です。
 
 ```
-bool[512] mut map1d = [false; 512];
+   bool[512] mut map1d = [false; 512];
 ```
 
 マップは2次元です。しかし、`pack128`関数は2次元配列では機能しません。そのため、まず`map1d`を使用してマップを512バイトの配列に平坦化します。デフォルトではZokratesの変数は定数ですが、ループ内でこの配列に値を代入する必要があるため、[`mut`](https://zokrates.github.io/language/variables.html#mutability)として定義します。
@@ -254,19 +254,19 @@ bool[512] mut map1d = [false; 512];
 Zokratesには`undefined`がないため、配列を初期化する必要があります。`[false; 512]`という式は、[512個の`false`値の配列](https://zokrates.github.io/language/types.html#declaration-and-initialization)を意味します。
 
 ```
-u32 mut counter = 0;
+   u32 mut counter = 0;
 ```
 
 また、`map1d`にすでに入力したビットとまだ入力していないビットを区別するためのカウンターも必要です。
 
 ```
-for u32 x in 0..${width+2} {
+   for u32 x in 0..${width+2} {
 ```
 
 これがZokratesで[`for`ループ](https://zokrates.github.io/language/control_flow.html#for-loops)を宣言する方法です。Zokratesの`for`ループは固定の境界を持つ必要があります。なぜなら、ループのように見えても、コンパイラは実際にはそれを「展開（アンロール）」するからです。`width`はコンパイラを呼び出す前にTypeScriptコードによって設定されるため、`${width+2}`という式はコンパイル時の定数になります。
 
 ```
-for u32 y in 0..${height+2} {
+      for u32 y in 0..${height+2} {
          map1d[counter] = map[x][y];
          counter = counter+1;
       }
@@ -276,7 +276,7 @@ for u32 y in 0..${height+2} {
 マップ内のすべての場所について、その値を`map1d`配列に入れ、カウンターをインクリメントします。
 
 ```
-field[4] hashMe = [
+    field[4] hashMe = [
         pack128(map1d[0..128]),
         pack128(map1d[128..256]),
         pack128(map1d[256..384]),
@@ -287,7 +287,7 @@ field[4] hashMe = [
 `map1d`から4つの`field`値の配列を作成するための`pack128`です。Zokratesでは、`array[a..b]`は`a`から始まり`b-1`で終わる配列のスライスを意味します。
 
 ```
-return poseidon(hashMe);
+    return poseidon(hashMe);
 }
 ```
 
@@ -343,19 +343,19 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 これは別の悪用の道を開きます。プルーバーは正しい座標を使用しつつ、その場所の周囲、あるいはその場所自体に任意の数の地雷があるマップを作成する可能性があります。この悪用を防ぐために、ゼロ知識証明にゲーム識別子であるマップのハッシュを含めるようにします。
 
 ```
-return (hashMap(map),
+   return (hashMap(map),
 ```
 
 ここでの戻り値は、マップのハッシュ配列と掘削結果を含むタプルです。
 
 ```
-if map2mineCount(map, x, y) > 0 { 0xFF } else {
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
 ```
 
 その場所自体に爆弾がある場合の特別な値として255を使用します。
 
 ```
-map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
             map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
             map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)
          }
@@ -505,13 +505,12 @@ Solidityの検証者。ブロックチェーンにデプロイし、`digCompiled
 ```
 
 最後に、他のコードが必要とする可能性のあるすべてのものを返します。
-```
 
-## セキュリティ・テスト
+## セキュリティ・テスト {#security-tests}
 
 機能のバグはいずれ明らかになるため、セキュリティ・テストは重要です。しかし、アプリケーションが安全でない場合、誰かが不正行為を行い、他人のリソースを奪って逃げることで発覚するまで、長期間隠れたままになる可能性が高いです。
 
-### パーミッション
+### パーミッション {#permissions}
 
 このゲームには、サーバーという1つの特権エンティティが存在します。これは、[`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)内の関数を呼び出すことが許可されている唯一のユーザーです。[`cast`](https://book.getfoundry.sh/cast/)を使用して、パーミッションドな関数への呼び出しがサーバーのアカウントとしてのみ許可されていることを検証できます。
 
@@ -543,11 +542,11 @@ Solidityの検証者。ブロックチェーンにデプロイし、`digCompiled
 
 同じ`System`内のすべてのMUD関数は同じアクセス制御を経由するため、このテストで十分だと考えられます。そう思わない場合は、[`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol)内の他の関数を確認できます。
 
-### ゼロ知識の悪用
+### ゼロ知識の悪用 {#zero-knowledge-abuses}
 
 Zokratesを検証するための数学は、このチュートリアルの範囲（および私の能力）を超えています。しかし、ゼロ知識のコードに対してさまざまなチェックを実行し、正しく行われない場合に失敗することを検証できます。これらのテストはすべて、[`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts)を変更し、アプリケーション全体を再起動する必要があります。サーバープロセスを再起動するだけでは不十分です。なぜなら、アプリケーションが不可能な状態（プレイヤーはゲームを進行中だが、サーバーからはそのゲームが利用できなくなる）に陥るからです。
 
-#### 間違った答え
+#### 間違った答え {#wrong-answer}
 
 最も単純な可能性は、ゼロ知識証明で間違った答えを提供することです。これを行うには、`zkDig`の中に入り、[91行目を変更します](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L91)。
 
@@ -558,7 +557,7 @@ proof.inputs[3] = "0x" + "1".padStart(64, "0")
 これは、正解に関係なく、常に爆弾が1つあると請求することを意味します。このバージョンでプレイしてみると、`pnpm dev`画面の**server**タブに次のエラーが表示されます。
 
 ```
-cause: {
+      cause: {
         code: 3,
         message: 'execution reverted: revert: Zero knowledge verification fail',
         data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
@@ -569,7 +568,7 @@ e206661696c'
 
 したがって、この種の不正行為は失敗します。
 
-#### 間違った証明
+#### 間違った証明 {#wrong-proof}
 
 正しい情報を提供しつつ、証明データだけが間違っている場合はどうなるでしょうか？次に、91行目を次のように置き換えます。
 
@@ -586,7 +585,7 @@ proof.proof = {
 
 やはり失敗しますが、今回は検証者の呼び出し中に発生するため、理由なしで失敗します。
 
-### ユーザーはどのようにしてゼロトラストコードを検証できるか？
+### ユーザーはどのようにしてゼロトラストコードを検証できるか？ {#user-verify-zero-trust}
 
 スマート・コントラクトの検証は比較的簡単です。通常、開発者はソースコードをブロック・エクスプローラーに公開し、ブロック・エクスプローラーはソースコードが[コントラクトのデプロイのトランザクション](/developers/docs/smart-contracts/deploying/)内のコードにコンパイルされることを検証します。MUDの`System`の場合、これは[少し複雑になります](https://mud.dev/cli/verify)が、それほどではありません。
 
@@ -661,11 +660,11 @@ proof.proof = {
    diff verifier.sol ~/20240901-secret-state/packages/contracts/src/verifier.sol
    ```
 
-## 設計上の決定事項
+## 設計上の決定事項 {#design}
 
 十分に複雑なアプリケーションでは、トレードオフを必要とする競合する設計目標が存在します。いくつかのトレードオフと、現在のソリューションが他の選択肢よりも好ましい理由を見てみましょう。
 
-### なぜゼロ知識なのか
+### なぜゼロ知識なのか {#why-zero-knowledge}
 
 マインスイーパーの場合、実際にはゼロ知識は必要ありません。サーバーは常にマップを保持し、ゲームが終了したときにすべてを公開するだけで済みます。そして、ゲームの終了時に、スマート・コントラクトがマップのハッシュを計算し、それが一致するかどうかを検証し、一致しない場合はサーバーにペナルティを科すか、ゲームを完全に無効にすることができます。
 
@@ -673,19 +672,19 @@ proof.proof = {
 
 チュートリアルとして、この記事には理解しやすい短いゲームが必要でしたが、この手法はより長いゲームで最も役立ちます。
 
-### なぜZokratesなのか？
+### なぜZokratesなのか？ {#why-zokrates}
 
 利用可能なゼロ知識ライブラリは[Zokrates](https://zokrates.github.io/)だけではありませんが、通常の[命令型](https://en.wikipedia.org/wiki/Imperative_programming)プログラミング言語に似ており、ブール変数をサポートしています。
 
 要件が異なるアプリケーションの場合は、[Circum](https://docs.circom.io/getting-started/installation/)や[Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/)を使用する方が適しているかもしれません。
 
-### Zokratesをコンパイルするタイミング
+### Zokratesをコンパイルするタイミング {#when-compile-zokrates}
 
 このプログラムでは、[サーバーが起動するたびに](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61)Zokratesプログラムをコンパイルします。これは明らかにリソースの無駄ですが、これはシンプルさを最適化したチュートリアルです。
 
 本番レベルのアプリケーションを作成する場合、この地雷原のサイズでコンパイルされたZokratesプログラムのファイルがあるかどうかを確認し、あればそれを使用します。検証者コントラクトをオンチェーンにデプロイする場合も同様です。
 
-### 検証者とプルーバーの鍵の作成
+### 検証者とプルーバーの鍵の作成 {#key-creation}
 
 [鍵の作成](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L63-L69)も純粋な計算であり、特定の地雷原のサイズに対して複数回行う必要はありません。ここでも、シンプルにするために1回だけ行われます。
 
@@ -693,32 +692,31 @@ proof.proof = {
 
 ここでは、数十人が参加した[perpetual powers of tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau)に依存しています。これはおそらく十分に安全であり、はるかにシンプルです。また、鍵の作成中にエントロピーを追加しないため、ユーザーが[ゼロ知識の設定を検証する](#user-verify-zero-trust)のが容易になります。
 
-### どこで検証するか
+### どこで検証するか {#where-verification}
 
 ゼロ知識証明は、オンチェーン（ガスがかかります）またはクライアント内（[`verify`](https://zokrates.github.io/toolbox/zokrates_js.html#verifyverificationkey-proof)を使用）のいずれかで検証できます。私は前者を選びました。なぜなら、これにより[検証者を検証する](#user-verify-zero-trust)ことが一度で済み、その後はコントラクトのアドレスが同じである限り変更されないと信頼できるからです。クライアントで検証が行われる場合、クライアントをダウンロードするたびに受け取るコードを検証する必要があります。
 
 また、このゲームはシングルプレイヤーですが、多くのブロックチェーンゲームはマルチプレイヤーです。オンチェーンでの検証は、ゼロ知識証明を一度だけ検証することを意味します。クライアントでこれを行うと、各クライアントが独立して検証する必要があります。
 
-### TypeScriptとZokratesのどちらでマップをフラット化するか？
+### TypeScriptとZokratesのどちらでマップをフラット化するか？ {#where-flatten}
 
 一般的に、処理をTypeScriptまたはZokratesのどちらでも実行できる場合は、はるかに高速でゼロ知識証明を必要としないTypeScriptで実行する方が適しています。これが、たとえば、Zokratesにハッシュを提供してそれが正しいことを検証させない理由です。ハッシュ化はZokrates内で行う必要がありますが、返されたハッシュとオンチェーンのハッシュの一致確認は外部で行うことができます。
 
 しかし、TypeScriptで実行できたにもかかわらず、依然として[Zokratesでマップをフラット化](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20)しています。その理由は、私の意見では、他の選択肢の方が悪いからです。
 
-- Zokratesコードにブール値の1次元配列を提供し、`x*(height+2)
-+y` のような式を使用して2次元マップを取得する。これにより[コード](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)がやや複雑になるため、チュートリアルとしてはパフォーマンスの向上に見合わないと判断しました。
+- Zokratesコードにブール値の1次元配列を提供し、`x*(height+2)+y` のような式を使用して2次元マップを取得する。これにより[コード](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)がやや複雑になるため、チュートリアルとしてはパフォーマンスの向上に見合わないと判断しました。
 
 - 1次元配列と2次元配列の両方をZokratesに送信する。しかし、このソリューションでは何も得られません。Zokratesコードは、提供された1次元配列が本当に2次元配列の正しい表現であることを検証する必要があります。そのため、パフォーマンスの向上はありません。
 
 - Zokratesで2次元配列をフラット化する。これが最もシンプルな選択肢であるため、これを選びました。
 
-### マップをどこに保存するか
+### マップをどこに保存するか {#where-store-maps}
 
 このアプリケーションでは、[`gamesInProgress`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L20)は単なるメモリ上の変数です。これは、サーバーがダウンして再起動する必要がある場合、保存されていたすべての情報が失われることを意味します。プレイヤーはゲームを続行できないだけでなく、オンチェーンのコンポーネントがまだゲームが進行中であると認識しているため、新しいゲームを開始することすらできません。
 
 これは、この情報をデータベースに保存する本番システムにとっては明らかに悪い設計です。ここで変数を使用した唯一の理由は、これがチュートリアルであり、シンプルさを主な考慮事項としているためです。
 
-## 結論：どのような条件でこの手法が適切か？
+## 結論：どのような条件でこの手法が適切か？ {#conclusion}
 
 これで、オンチェーンに置くべきではない秘密の状態を保存するサーバーを使ったゲームの書き方がわかりました。しかし、どのような場合にこれを行うべきでしょうか？主に2つの考慮事項があります。
 
@@ -728,7 +726,7 @@ proof.proof = {
 
 [私の他の作品についてはこちらをご覧ください](https://cryptodocguy.pro/)。
 
-### 謝辞
+### 謝辞 {#acknowledgements}
 
 - Alvaro Alonso氏はこの記事の草稿を読み、Zokratesに関する私の誤解のいくつかを解いてくれました。
 

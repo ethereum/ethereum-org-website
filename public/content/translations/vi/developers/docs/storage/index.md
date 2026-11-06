@@ -142,7 +142,7 @@ Dựa trên Bằng chứng cổ phần:
 **Arweave - _Arweave là một nền tảng dStorage để lưu trữ dữ liệu._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Tài liệu](https://docs.arweave.org/info/)
+- [Tài liệu](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs là một nền tảng dStorage Bằng chứng cổ phần với phân mảnh và blobber._**

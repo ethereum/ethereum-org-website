@@ -14,6 +14,8 @@ import {
   TOC_ITEMS,
 } from "./fixtures"
 
+import leslieSolo from "@/public/images/staking/leslie-solo.png"
+
 const meta = {
   title: "Layouts / Topic",
   component: TopicLayout,
@@ -52,7 +54,7 @@ const baseArgs = {
     title: "Stake your ETH",
     description: "Earn rewards for helping secure Ethereum.",
     lang: LANG,
-    image: "/images/staking/leslie-solo.png",
+    image: leslieSolo.src,
     alt: "",
     blurDataURL: "",
     summaryPoints: [

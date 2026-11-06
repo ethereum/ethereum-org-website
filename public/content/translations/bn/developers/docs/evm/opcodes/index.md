@@ -4,7 +4,7 @@ description: "ইথেরিয়াম ভার্চুয়াল মে�
 lang: bn
 ---
 
-## ওভারভিউ
+## ওভারভিউ {#overview}
 
 এটি [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes)-এ থাকা EVM রেফারেন্স পেজের একটি আপডেট করা সংস্করণ।
 এছাড়াও এটি [ইয়েলো পেপার](https://ethereum.github.io/yellowpaper/paper.pdf), [Jello Paper](https://jellopaper.org/evm/) এবং [geth](https://github.com/ethereum/go-ethereum) ইমপ্লিমেন্টেশন থেকে নেওয়া হয়েছে।

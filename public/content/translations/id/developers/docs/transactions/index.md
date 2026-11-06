@@ -178,7 +178,7 @@ Setiap gas yang tidak digunakan dalam transaksi akan dikembalikan ke akun penggu
 
 Gas diperlukan untuk setiap transaksi yang melibatkan kontrak pintar.
 
-Kontrak pintar juga dapat berisi fungsi yang dikenal sebagai fungsi [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) atau [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), yang tidak mengubah state kontrak. Oleh karena itu, memanggil fungsi-fungsi ini dari EOA tidak akan memerlukan gas apa pun. Panggilan RPC yang mendasari untuk skenario ini adalah [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Kontrak pintar juga dapat berisi fungsi yang dikenal sebagai fungsi [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) atau [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), yang tidak mengubah state kontrak. Oleh karena itu, memanggil fungsi-fungsi ini dari EOA tidak akan memerlukan gas apa pun. Panggilan RPC yang mendasari untuk skenario ini adalah [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 Tidak seperti saat diakses menggunakan `eth_call`, fungsi `view` atau `pure` ini juga umumnya dipanggil secara internal (yaitu, dari kontrak itu sendiri atau dari kontrak lain) yang memerlukan biaya gas.
 

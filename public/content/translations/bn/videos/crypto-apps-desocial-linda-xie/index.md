@@ -7,9 +7,7 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "social"
-  - "decentralization"
-  - "dapps"
+  - "use-cases"
 format: presentation
 author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "ক্রিপ্টো অ্যাপ এবং ডি-সোশ্যাল"

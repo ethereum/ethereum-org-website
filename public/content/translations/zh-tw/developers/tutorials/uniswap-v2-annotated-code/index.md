@@ -135,7 +135,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-[SafeMath 函式庫](https://docs.openzeppelin.com/contracts/2.x/api/math)用於避免溢位和下溢。這很重要，因為否則我們可能會遇到一個值應該是 `-1`，但卻變成 `2^256-1` 的情況。
+[SafeMath 函式庫](https://docs.openzeppelin.com/contracts/3.x/api/math)用於避免溢位和下溢。這很重要，因為否則我們可能會遇到一個值應該是 `-1`，但卻變成 `2^256-1` 的情況。
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1672,7 +1672,7 @@ Solidity 中的函式參數可以儲存在 `memory` 或 `calldata` 中。如果�
 
 ## 函式庫 {#libraries}
 
-[SafeMath 函式庫](https://docs.openzeppelin.com/contracts/2.x/api/math)已有完善的說明文件，因此不需要在此贅述。
+[SafeMath 函式庫](https://docs.openzeppelin.com/contracts/3.x/api/math)已有完善的說明文件，因此不需要在此贅述。
 
 ### Math {#math}
 

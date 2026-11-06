@@ -2,14 +2,13 @@ import { useEffect, useRef, useState } from "react"
 import type { MotionProps } from "motion/react"
 import { useLocale } from "next-intl"
 
-import { isModified } from "@/lib/utils/keyboard"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
+import { MAIN_NAV_ID } from "@/lib/constants"
 
 import type { NavSectionKey, NavSections } from "../types"
 
-import { useEventListener } from "@/hooks/useEventListener"
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 // How long the pointer must rest on a section before the open is reported.
@@ -31,22 +30,15 @@ export const useNavMenu = (sections: NavSections) => {
   )
 
   // Focus corresponding nav section when number keys pressed
-  useEventListener("keydown", (event) => {
-    if (!document || !event.key.match(/^[1-9]$/) || isModified(event)) return
-    if (event.target instanceof HTMLInputElement) return
-    if (event.target instanceof HTMLTextAreaElement) return
-    if (event.target instanceof HTMLSelectElement) return
-
+  useKeyboardShortcut("navSections", (event) => {
     const sectionIdx = parseInt(event.key) - 1
-    if (sectionIdx >= SECTION_LABELS.length) return
 
     const button = document.querySelector(
       `#${MAIN_NAV_ID} li:nth-of-type(${sectionIdx + 1}) button`
     )
-    if (!button) return
+    if (!(button instanceof HTMLButtonElement)) return
 
-    event.preventDefault()
-    ;(button as HTMLButtonElement).focus()
+    button.focus()
   })
 
   const getEnglishSectionName = (

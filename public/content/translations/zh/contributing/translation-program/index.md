@@ -16,7 +16,7 @@ ethereum.org 翻译项目正在逐步结束，不再接收新译者。Crowdin �
 
 如果你在现有翻译中发现错误，请[在 GitHub 上提交 issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)。
 
-_加入 [ethereum.org Discord](https://discord.gg/ethereum-org) 提问或分享反馈。_
+_加入 [ethereum.org Discord](/discord/) 提问或分享反馈。_
 
 ## 关于翻译项目 {#about-us}
 
@@ -63,7 +63,7 @@ Ethereum.org 已由数千名社区成员翻译，他们是翻译项目的关键�
 
 ## 联系我们 {#get-in-touch}
 
-你有任何问题吗？或者想与我们的团队和其他译者合作？请在我们的 [ethereum.org Discord 服务器](https://discord.gg/ethereum-org)的 #translations 频道中发帖。
+你有任何问题吗？或者想与我们的团队和其他译者合作？请在我们的 [ethereum.org Discord 服务器](/discord/)的 #translations 频道中发帖。
 
 你也可以通过 translations@ethereum.org 联系我们。
 

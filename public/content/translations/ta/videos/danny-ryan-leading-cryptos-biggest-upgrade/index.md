@@ -7,9 +7,9 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "ethereum"
-  - "proof-of-stake"
-  - "the-merge"
+  - "how-ethereum-works"
+  - "network-upgrades"
+  - "community-stories"
 format: interview
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "டேனி ரையன் நேர்காணல்"

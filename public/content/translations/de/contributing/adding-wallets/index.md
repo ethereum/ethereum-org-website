@@ -1,6 +1,6 @@
 ---
-title: Wallets hinzufügen
-description: Die Richtlinie, die wir beim Hinzufügen einer Wallet zu ethereum.org anwenden
+title: "Wallets hinzufügen"
+description: "Die Richtlinie, die wir beim Hinzufügen einer Wallet zu ethereum.org anwenden"
 lang: de
 ---
 
@@ -58,7 +58,7 @@ Wallets verändern sich in Ethereum rasant. Wir haben versucht, einen fairen Rah
 
 ## Eine Wallet hinzufügen {#adding-a-wallet}
 
-Wenn du eine Wallet zu ethereum.org hinzufügen möchtest, erstelle ein Issue auf GitHub.
+Wenn du eine Wallet zu ethereum.org hinzufügen möchtest, erstelle ein Issue auf GitHub. Die Wallet-Beschreibung, die du im Issue angibst, wird auf der Seite der Wallet angezeigt, beschränke sie daher auf ein oder zwei sachliche Sätze.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Ein Issue erstellen

@@ -66,7 +66,7 @@ const getImageSize = (src: string, dir: string) => {
   if (dir && shouldJoin) {
     src = path.join(dir, src)
   }
-  return sizeOf(src)
+  return sizeOf(fs.readFileSync(src))
 }
 
 /**

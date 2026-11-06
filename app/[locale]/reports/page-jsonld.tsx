@@ -10,6 +10,7 @@ import { SITE_URL } from "@/lib/constants"
 
 import type { Report } from "./data"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 import { resolveKnownEntities } from "@/lib/jsonld/utils"
@@ -119,23 +120,7 @@ export default async function ReportsPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: t("page-reports-title"),
-              item: normalizeUrlForJsonLd(locale, "/reports/"),
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "reports"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": itemListId },

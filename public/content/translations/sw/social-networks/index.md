@@ -69,7 +69,7 @@ Watumiaji hutumia tokeni asili ya jukwaa ya [ERC-20](/glossary/#erc-20) $MIND ku
 
 ### Farcaster {#farcaster}
 
-[Farcaster](https://farcaster.xyz/) ni mtandao wa kijamii "uliogatuliwa vya kutosha" sawa na X na Reddit ambao huruhusu watumiaji kushiriki na kugundua "casts". Imejengwa kwenye mtandao wa tabaka la 2 (l2) wa Optimism ili kuweka miamala kuwa ya bei nafuu kiasi.
+[Farcaster](https://farcaster.xyz/) ni mtandao wa kijamii "uliogatuliwa vya kutosha" sawa na X na Reddit ambao unaruhusu watumiaji kushiriki na kugundua "casts". Imejengwa kwenye mtandao wa tabaka la 2 (l2) wa Optimism ili kufanya miamala kuwa nafuu kiasi.
 
 ## Tumia mitandao ya kijamii iliyogatuliwa {#use-decentralized-social-networks}
 

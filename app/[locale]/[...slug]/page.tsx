@@ -70,6 +70,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
           slug={slug}
           frontmatter={frontmatter}
           contributors={contributors}
+          layout={layout}
         />
         <I18nProvider locale={locale} messages={messages}>
           <TopicLayout
@@ -97,6 +98,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
         slug={slug}
         frontmatter={frontmatter}
         contributors={contributors}
+        layout={layout}
       />
       <I18nProvider locale={locale} messages={messages}>
         <Layout

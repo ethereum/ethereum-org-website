@@ -1,8 +1,13 @@
 ---
 title: "诈骗代币使用的一些伎俩以及如何检测它们"
-description: "在本教程中，我们将剖析一个诈骗代币，看看诈骗者玩弄的一些伎俩、他们是如何实现这些伎俩的，以及我们如何检测它们。"
+description: "在本教程中，我们将剖析一个诈骗代币，看看诈骗者玩弄的一些伎俩、他们如何实现这些伎俩，以及我们如何检测它们。"
 author: "奥里·波梅兰茨"
-tags: ["诈骗", "Solidity", "ERC-20", "JavaScript", "TypeScript"]
+tags:
+  - 诈骗
+  - solidity
+  - erc-20
+  - javascript
+  - typescript
 skill: intermediate
 breadcrumb: "诈骗代币伎俩"
 published: 2023-09-15
@@ -15,17 +20,17 @@ lang: zh
 
 以太坊最常见的用途之一是让一个群体创建一个可交易的代币，在某种意义上就是他们自己的货币。然而，只要有带来价值的合法用例，就会有试图为自己窃取该价值的犯罪分子。
 
-你可以从用户角度在 [ethereum.org 的其他地方](/guides/how-to-id-scam-tokens/)阅读有关此主题的更多信息。本教程侧重于剖析诈骗代币，看看它是如何运作的以及如何检测它。
+你可以从用户角度在[以太坊网站 (ethereum.org) 的其他地方](/guides/how-to-id-scam-tokens/)阅读有关此主题的更多信息。本教程侧重于剖析一个诈骗代币，看看它是如何运作的以及如何检测它。
 
 ### 我怎么知道 wARB 是一个骗局？ {#warb-scam}
 
 我们剖析的代币是 [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code)，它假装等同于合法的 [ARB 代币](https://etherscan.io/token/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)。
 
-知道哪个是合法代币的最简单方法是查看其发起组织 [Arbitrum](https://arbitrum.foundation/)。合法地址在[他们的文档中](https://docs.arbitrum.foundation/deployment-addresses#token)有明确说明。
+知道哪个是合法代币的最简单方法是查看其发行组织 [Arbitrum](https://arbitrum.foundation/)。合法地址在[他们的文档中](https://docs.arbitrum.foundation/deployment-addresses#token)有明确说明。
 
 ### 为什么源代码是公开的？ {#why-source}
 
-通常我们会认为试图诈骗他人的人会遮遮掩掩，事实上许多诈骗代币并没有公开其代码（例如，[这个](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452#code)和[这个](https://optimistic.etherscan.io/token/0x026b623eb4aada7de37ef25256854f9235207178#code)）。
+通常我们会认为试图诈骗他人的人会很隐秘，事实上许多诈骗代币并没有公开其代码（例如，[这个](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452#code)和[这个](https://optimistic.etherscan.io/token/0x026b623eb4aada7de37ef25256854f9235207178#code)）。
 
 然而，合法的代币通常会发布其源代码，因此为了显得合法，诈骗代币的作者有时也会这样做。[wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) 就是那些公开了源代码的代币之一，这使得我们更容易理解它。
 
@@ -37,9 +42,9 @@ lang: zh
 
 ### 特权地址的常量 {#constants-for-privileged-addresses}
 
-合约有时需要特权地址。为长期使用而设计的合约允许某些特权地址更改这些地址，例如为了启用新的多重签名合约。有几种方法可以做到这一点。
+合约有时需要特权地址。专为长期使用而设计的合约允许某些特权地址更改这些地址，例如为了启用新的多重签名合约。有几种方法可以做到这一点。
 
-[`HOP` 代币合约](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code)使用了 [`Ownable`](https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable) 模式。特权地址保存在存储中，位于一个名为 `_owner` 的字段中（参见第三个文件 `Ownable.sol`）。
+[`HOP` 代币合约](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code)使用了 [`Ownable`](https://docs.openzeppelin.com/contracts/3.x/access-control#ownership-and-ownable) 模式。特权地址保存在存储中，位于一个名为 `_owner` 的字段中（参见第三个文件 `Ownable.sol`）。
 
 ```solidity
 abstract contract Ownable is Context {
@@ -50,11 +55,11 @@ abstract contract Ownable is Context {
 }
 ```
 
-[`ARB` 代币合约](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code)没有直接的特权地址。然而，它并不需要。它位于 [地址 `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code) 的 [`proxy`](https://docs.openzeppelin.com/contracts/5.x/api/proxy) 后面。该合约有一个特权地址（参见第四个文件 `ERC1967Upgrade.sol`），可用于升级。
+[`ARB` 代币合约](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc85535da2d3c6fc7#code)没有直接的特权地址。然而，它也不需要。它位于[地址 `0xb50721bcf8d664c30412cfbc6cf7a15145234ad1`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1#code)的 [`proxy`](https://docs.openzeppelin.com/contracts/5.x/api/proxy) 后面。该合约有一个特权地址（参见第四个文件 `ERC1967Upgrade.sol`），可用于升级。
 
 ```solidity
     /**
-     * @dev 在 EIP1967 管理员槽位中存储一个新地址。
+     * @dev 在 EIP1967 管理员插槽中存储一个新地址。
      */
     function _setAdmin(address newAdmin) private {
         require(newAdmin != address(0), "ERC1967: new admin is the zero address");
@@ -77,7 +82,7 @@ contract WrappedArbitrum is Context, IERC20 {
 }
 ```
 
-[这个合约所有者](https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33)不是一个可以在不同时间由不同账户控制的合约，而是一个[外部拥有账户](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs)。这意味着它可能是为个人短期使用而设计的，而不是作为控制将保持价值的 ERC-20 代币的长期解决方案。
+[这个合约所有者](https://etherscan.io/address/0xb40dE7b1beE84Ff2dc22B70a049A07A13a411A33)不是一个可以在不同时间由不同账户控制的合约，而是一个[外部拥有账户](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs)。这意味着它可能是为个人短期使用而设计的，而不是作为控制将保持价值的 ERC-20 的长期解决方案。
 
 事实上，如果我们查看 Etherscan，我们会发现诈骗者在 2023 年 5 月 19 日期间仅使用了该合约 12 个小时（从[第一笔交易](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2)到[最后一笔交易](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b)）。
 
@@ -160,11 +165,11 @@ contract WrappedArbitrum is Context, IERC20 {
   }
   ```
 
-- 我们在 `_transfer` 中看到的相同问题，即当 `contract_owner` 发送代币时，它们看起来像是来自 `deployer`。
+- 我们在 `_transfer` 中看到了同样的问题，即当 `contract_owner` 发送代币时，它们似乎来自 `deployer`。
 
 ### 伪造事件的函数 `dropNewTokens` {#the-fake-events-function-dropnewtokens}
 
-现在我们来看一些看起来像真正骗局的东西。为了提高可读性，我对该函数进行了一些编辑，但其功能是等效的。
+现在我们来看一些看起来像真正骗局的东西。为了提高可读性，我对该函数进行了一些编辑，但它在功能上是等效的。
 
 ```solidity
 function dropNewTokens(address uPool,
@@ -172,7 +177,7 @@ function dropNewTokens(address uPool,
                        uint256[] memory eAmounts) public auth()
 ```
 
-这个函数具有 `auth()` 修饰符，这意味着它只能由合约所有者调用。
+这个函数有 `auth()` 修饰符，这意味着它只能由合约所有者调用。
 
 ```solidity
 modifier auth() {
@@ -191,11 +196,11 @@ modifier auth() {
 }
 ```
 
-一个将代币从资金池账户转账到接收者数组（对应金额数组）的函数是完全合理的。在许多用例中，你会希望将代币从单一来源分发到多个目的地，例如工资单、空投等。在单笔交易中执行此操作比发出多笔交易，甚至作为同一笔交易的一部分从不同合约多次调用 ERC-20 更便宜（在 Gas 方面）。
+一个从资金池账户向接收者数组转账金额数组的函数是完全合理的。在许多用例中，你会希望将代币从单一来源分发到多个目的地，例如工资单、空投等。在单笔交易中执行此操作比发出多笔交易，甚至作为同一笔交易的一部分从不同合约多次调用 ERC-20 更便宜（在 Gas 方面）。
 
-然而，`dropNewTokens` 并没有这样做。它触发了 [`Transfer` 事件](https://eips.ethereum.org/EIPS/eip-20#transfer-1)，但实际上并没有转账任何代币。没有任何正当理由通过告诉链下应用程序发生了实际上并未发生的转账来混淆它们。
+然而，`dropNewTokens` 并没有这样做。它触发了 [`Transfer` 事件](https://eips.ethereum.org/EIPS/eip-20#transfer-1)，但实际上并没有转账任何代币。没有任何正当理由通过告诉链下应用程序一笔并未真正发生的转账来混淆它们。
 
-### 销毁代币的 `Approve` 函数 {#the-burning-approve-function}
+### 销毁函数 `Approve` {#the-burning-approve-function}
 
 ERC-20 合约应该有一个用于授权额度的 [`approve` 函数](/developers/tutorials/erc20-annotated-code/#approve)，事实上我们的诈骗代币确实有这样一个函数，而且它甚至是正确的。然而，因为 Solidity 派生自 C 语言，所以它是区分大小写的。“Approve”和“approve”是不同的字符串。
 
@@ -231,13 +236,13 @@ ERC-20 合约应该有一个用于授权额度的 [`approve` 函数](/developers
 
 ### 代码质量问题 {#code-quality-issues}
 
-这些代码质量问题并不能_证明_这段代码是一个骗局，但它们使其显得很可疑。像 Arbitrum 这样有组织的实体通常不会发布这么糟糕的代码。
+这些代码质量问题并不能_证明_这段代码是一个骗局，但它们使其显得很可疑。像 Arbitrum 这样有组织的机构通常不会发布这么糟糕的代码。
 
 #### `mount` 函数 {#the-mount-function}
 
 虽然[标准](https://eips.ethereum.org/EIPS/eip-20)中没有规定，但一般来说，创建新代币的函数被称为 [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)。
 
-如果我们查看 `wARB` 构造函数，我们会发现出于某种原因，铸造函数被重命名为 `mount`，并且被调用了五次，每次铸造初始供应量的五分之一，而不是为了效率一次性铸造全部数量。
+如果我们查看 `wARB` 构造函数，我们会发现由于某种原因，铸造函数被重命名为 `mount`，并且被调用了五次，每次铸造初始供应量的五分之一，而不是为了效率一次性铸造全部数量。
 
 ```solidity
     constructor () public {
@@ -262,7 +267,7 @@ ERC-20 合约应该有一个用于授权额度的 [`approve` 函数](/developers
         require(msg.sender == contract_owner, "ERC20: mint to the zero address");
 ```
 
-查看 `require`，我们发现只有合约所有者才被允许铸造。这是合法的。但是错误消息应该是 _only owner is allowed to mint_（仅允许所有者铸造）或类似的内容。相反，它是毫不相干的 _ERC20: mint to the zero address_（ERC20：铸造到零地址）。测试是否铸造到零地址的正确方法是 `require(account != address(0), "<error message>")`，而该合约根本懒得去检查。
+查看 `require`，我们发现只有合约所有者才被允许铸造。这是合法的。但是错误消息应该是 _only owner is allowed to mint_（仅允许所有者铸造）或类似的内容。相反，它是不相关的 _ERC20: mint to the zero address_（ERC20：铸造到零地址）。测试是否铸造到零地址的正确方法是 `require(account != address(0), "<error message>")`，而该合约根本懒得去检查。
 
 ```solidity
         _totalSupply = _totalSupply.add(amount);
@@ -311,7 +316,7 @@ ERC-20 合约应该有一个用于授权额度的 [`approve` 函数](/developers
 
 ## 可疑的 `Approval` 事件 {#suspicious-approval-events}
 
-[`Approval` 事件](https://eips.ethereum.org/EIPS/eip-20#approval)应该只在直接请求时发生（与可能作为授权额度结果发生的 [`Transfer` 事件](https://eips.ethereum.org/EIPS/eip-20#transfer-1)相反）。有关此问题的详细解释以及为什么请求需要是直接的而不是由合约调解的，请[参阅 Solidity 文档](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin)。
+[`Approval` 事件](https://eips.ethereum.org/EIPS/eip-20#approval)应该只在直接请求时发生（与可以作为授权额度结果发生的 [`Transfer` 事件](https://eips.ethereum.org/EIPS/eip-20#transfer-1)相反）。有关此问题以及为什么请求需要是直接的而不是由合约中介的详细解释，请[参阅 Solidity 文档](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin)。
 
 这意味着授权从[外部拥有账户](/developers/docs/accounts/#types-of-account)支出的 `Approval` 事件必须来自源自该账户且目的地为 ERC-20 合约的交易。来自外部拥有账户的任何其他类型的授权都是可疑的。
 
@@ -394,7 +399,7 @@ const getEventTxn = async (ev: Event): TransactionReceipt =>
 const suspiciousApprovalEvent = async (ev : Event) : (Event | null) => {
 ```
 
-这是最重要的函数，它实际决定了一个事件是否可疑。返回类型 `(Event | null)` 告诉 TypeScript 该函数可以返回 `Event` 或 `null`。如果事件不可疑，我们返回 `null`。
+这是最重要的函数，它实际决定了一个事件是否可疑。返回类型 `(Event | null)` 告诉 TypeScript 此函数可以返回 `Event` 或 `null`。如果事件不可疑，我们返回 `null`。
 
 ```typescript
 const owner = ev.args._owner
@@ -403,11 +408,11 @@ const owner = ev.args._owner
 Viem 拥有字段名称，因此它为我们解析了事件。`_owner` 是要支出的代币的所有者。
 
 ```typescript
-// 由合约进行的授权并不可疑
+// 合约的授权并不可疑
 if (await isContract(owner)) return null
 ```
 
-如果所有者是一个合约，则假设此授权不可疑。要检查合约的授权是否可疑，我们需要追踪交易的完整执行过程，看看它是否到达了所有者合约，以及该合约是否直接调用了 ERC-20 合约。这比我们愿意投入的资源要多得多。
+如果所有者是一个合约，则假设此授权不可疑。要检查合约的授权是否可疑，我们需要追踪交易的完整执行过程，看看它是否到达了所有者合约，以及该合约是否直接调用了 ERC-20 合约。这比我们愿意做的要消耗多得多的资源。
 
 ```typescript
 const txn = await getEventTxn(ev)
@@ -416,24 +421,24 @@ const txn = await getEventTxn(ev)
 如果授权来自外部拥有账户，则获取导致该授权的交易。
 
 ```typescript
-// 如果授权来自非交易 `from` 的 EOA 所有者，则该授权是可疑的
+// 如果授权来自不是交易 `from` 的 EOA 所有者，则该授权是可疑的
 if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 ```
 
-我们不能仅仅检查字符串是否相等，因为地址是十六进制的，所以它们包含字母。有时，例如在 `txn.from` 中，这些字母全都是小写的。在其他情况下，例如 `ev.args._owner`，地址采用[混合大小写以进行错误识别](https://eips.ethereum.org/EIPS/eip-55)。
+我们不能仅仅检查字符串是否相等，因为地址是十六进制的，所以它们包含字母。有时，例如在 `txn.from` 中，这些字母都是小写的。在其他情况下，例如 `ev.args._owner`，地址采用[混合大小写以进行错误识别](https://eips.ethereum.org/EIPS/eip-55)。
 
-但是，如果交易不是来自所有者，并且该所有者是外部拥有的，那么我们就发现了一笔可疑交易。
+但是，如果交易不是来自所有者，并且该所有者是外部拥有的，那么我们就遇到了一笔可疑交易。
 
 ```typescript
-// 如果交易目标不是我们正在调查的 ERC-20 合约，
-// 这也是可疑的
+// 这也是可疑的，如果交易目标不是该 ERC-20 合约——即我们正在
+// 调查的
 if (txn.to.toLowerCase() != testedAddress) return ev
 ```
 
-类似地，如果交易的 `to` 地址（即调用的第一个合约）不是正在调查的 ERC-20 合约，那么它也是可疑的。
+类似地，如果交易的 `to` 地址（调用的第一个合约）不是正在调查的 ERC-20 合约，那么它也是可疑的。
 
 ```typescript
-    // 如果没有可疑的理由，则返回 null。
+    // 如果没有理由怀疑，则返回 null。
     return null
 }
 ```
@@ -447,9 +452,9 @@ const testResults = (await Promise.all(testPromises)).filter((x) => x != null)
 console.log(testResults)
 ```
 
-[`async` 函数](https://www.w3schools.com/js/js_async.asp)返回一个 `Promise` 对象。使用常见的语法 `await x()`，我们会等待该 `Promise` 完成后再继续处理。这在编程和理解上很简单，但效率也很低。在等待特定事件的 `Promise` 完成时，我们其实已经可以开始处理下一个事件了。
+[`async` 函数](https://www.w3schools.com/js/js_async.asp)返回一个 `Promise` 对象。使用常见的语法 `await x()`，我们等待该 `Promise` 完成后再继续处理。这很容易编程和理解，但效率也很低。在等待特定事件的 `Promise` 完成时，我们其实已经可以开始处理下一个事件了。
 
-在这里，我们使用 [`map`](https://www.w3schools.com/jsref/jsref_map.asp) 创建一个 `Promise` 对象数组。然后我们使用 [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/) 等待所有这些 Promise 被解析。接着我们对这些结果进行 [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp)（过滤），以移除不可疑的事件。
+在这里，我们使用 [`map`](https://www.w3schools.com/jsref/jsref_map.asp) 创建一个 `Promise` 对象数组。然后我们使用 [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/) 等待所有这些 Promise 被解析。接着我们[`filter`](https://www.w3schools.com/jsref/jsref_filter.asp)这些结果，以移除不可疑的事件。
 
 ### 可疑的 `Transfer` 事件 {#suspicious-transfer-events}
 
@@ -459,6 +464,6 @@ console.log(testResults)
 
 自动检测 ERC-20 骗局会遇到[假阴性](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error)的问题，因为骗局可以使用一个完全正常的 ERC-20 代币合约，只是它不代表任何真实的东西。因此，你应该始终尝试_从受信任的来源获取代币地址_。
 
-自动检测在某些情况下会有所帮助，例如在去中心化金融 (DeFi) 领域，那里有许多代币并且需要自动处理。但一如既往，[买者自负](https://www.investopedia.com/terms/c/caveatemptor.asp)，请做好你自己的研究，并鼓励你的用户也这样做。
+自动检测在某些情况下会有所帮助，例如在去中心化金融 (DeFi) 领域，那里有许多代币并且需要自动处理。但一如既往，[买家需自行当心 (caveat emptor)](https://www.investopedia.com/terms/c/caveatemptor.asp)，做好你自己的研究，并鼓励你的用户也这样做。
 
 [点击此处查看我的更多作品](https://cryptodocguy.pro/)。

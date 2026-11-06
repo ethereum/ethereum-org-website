@@ -33,6 +33,6 @@ export const BrandAsset: Story = {
     title: "ETH diamond (gray)",
     image: ethDiamondBlack,
     perRow: 3,
-    svgUrl: "/images/assets/svgs/eth-diamond-black.svg",
+    svgUrl: "https://ethereum.org/images/assets/svgs/eth-diamond-black.svg",
   },
 }

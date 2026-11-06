@@ -8,7 +8,6 @@ duration: "0:22:45"
 educationLevel: intermediate
 topic:
   - "privacy"
-  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Privacidad"
@@ -80,11 +79,11 @@ El valor extraíble del minero (MEV) es una realidad repugnante de Ethereum. Tam
 
 ### Deberes legalmente exigibles de los validadores (15:23) {#legally-enforceable-duties-of-validators-1523}
 
-La táctica más amplia del Departamento de Justicia (DOJ) en el caso Pereira Bueno es que los validadores tienen deberes legalmente exigibles entre sí debido a la naturaleza pública de las transacciones que validan. Y si se incumplen esos deberes, los validadores, creo que piensan, deberían demandarse entre sí. Y si no lo hacen, el estado, el Distrito Sur de Nueva York, debería procesar a los validadores deshonestos por delitos. Y esto no se detiene solo en el fraude electrónico. Si puedes ver una transacción de lavado de dinero o podrías haberla visto usando análisis de la cadena de bloques, entonces, ¿cómo no eres cómplice de ese lavado de dinero?
+La mayor apuesta del Departamento de Justicia (DOJ) en el caso Pereira Bueno es que los validadores tienen deberes legalmente exigibles entre sí debido a la naturaleza pública de las transacciones que validan. Y si se incumplen esos deberes, los validadores, creo que piensan, deberían demandarse entre sí. Y si no lo hacen, el estado, el Distrito Sur de Nueva York, debería procesar a los validadores deshonestos por delitos. Y esto no se detiene solo en el fraude electrónico. Si puedes ver una transacción de lavado de dinero o podrías haberla visto usando análisis de la cadena de bloques, entonces, ¿cómo no eres cómplice de ese lavado de dinero?
 
-Si construyes sobre una versión de la cadena que tiene transacciones sancionadas, ¿no eres cómplice de la evasión de sanciones? Si introduces transacciones fraudulentas multimillonarias en el libro mayor, tal vez se te debería obligar a revertirlas. Y la ceguera voluntaria no es una defensa. No puedes simplemente decir que decidiste no usar una herramienta ampliamente disponible como el análisis de la cadena. Ignorar voluntariamente todo el conocimiento inherente a la cadena de bloques pública aún puede dar lugar a posibles cargos penales y siempre será procesado como tal.
+Si construyes sobre una versión de la cadena que contiene transacciones sancionadas, ¿no eres cómplice de la evasión de sanciones? Si introduces transacciones fraudulentas multimillonarias en el libro mayor, tal vez se te debería obligar a revertirlas. Y la ceguera voluntaria no es una defensa. No puedes simplemente decir que decidiste no usar una herramienta ampliamente disponible como el análisis de la cadena. Ignorar deliberadamente todo el conocimiento inherente a la cadena de bloques pública aún puede dar lugar a posibles cargos penales y siempre será procesado como tal.
 
-La ceguera voluntaria no es una defensa, pero la ceguera real sí lo es. Así que si realmente quieres la ausencia de necesidad de confianza, si verdaderamente quieres una infraestructura neutral, si quieres tuberías tontas (dumb pipes), entonces las tuberías deben ser realmente ciegas a lo que fluye a través de ellas.
+La ceguera voluntaria no es una defensa, pero la ceguera real sí lo es. Así que si realmente quieres ausencia de necesidad de confianza, si verdaderamente quieres una infraestructura neutral, si quieres tuberías tontas, entonces las tuberías deben ser realmente ciegas a lo que fluye a través de ellas.
 
 ### Tuberías de las finanzas tradicionales y SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
@@ -131,3 +130,4 @@ Creo que esto también resuena entre los profesionales de la seguridad nacional.
 **Peter Van Valkenburgh:** Simplemente me alegra que la gente conozca nuestra misión: defender la libertad de innovar utilizando tecnologías de cadenas de bloques abiertas y la capacidad de las personas para usar estas tecnologías de forma privada. Si esa es una misión que te importa, por favor visita coincenter.org. Gracias por darme la oportunidad de promocionarlo. Somos una organización sin fines de lucro financiada por donantes y dependemos de la buena voluntad de personas como tú que creen en nuestra misión para seguir haciendo el trabajo que estamos haciendo. Gracias por esta oportunidad y gracias por escuchar mi charla sobre la neutralidad.
 
 **Presentador:** Muchas gracias, Peter. Me encanta la camiseta.
+

@@ -78,3 +78,75 @@ Scope: new `component-devcon-banner.json` (6 keys). Fleet avg 9.9.
 
 - `Получите скидку 10%` deviates from ETHGlossary `claim` = `востребование`. `claim` has `script_rule: null`, so per the severity matrix this is High, not critical, and not auto-fixable. `востребуйте скидку` would be markedly worse Russian. See known-patterns #75.
 
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.4/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/ru/page-apps.json`. 5 critical, 10 warnings. Brand 9/10 | Technical 8/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: ru affected on the `<path>`/`<password>` placeholders only; restored. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: already repaired by this PR.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (ru-specific):**
+
+- `-dao-description`: `управлять` (instrumental) and `создавать` (accusative) shared one accusative object -> `создавать ... (DAO) и управлять ими`
+- `белым хакерам` (dat. pl.) -> `белым хакером` (instr. sg.), required by `лицу ... называемому`
+- `Мейннет Эфириума` -> glossary `основная сеть Ethereum`, which was in place pre-PR
+
+**Notes:**
+
+- `Ethereum Virtual Machine` is now capitalized mid-sentence in `languages`/`testing` but lowercase in `accounts`: a glossary-lemma-capitalization trap worth a standing rule rather than a per-run edit.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.4/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- Not fixed (unchanged lines): `Бинанс Академи` (glossary Binance, Latin).
+- `Хром` left undeclined (4 keys); F-Droid `бесплатного` (#83); `Предложение по улучшению Ethereum (EIP)-7805` expansion; Hegotá Cyrillic `Хегота` in page-upgrades-index only.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- Prividium transliterated `привидиум`; `производственного уровня` for production-grade; glamsterdam `devnets` regressed to English.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 20 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** ETHGlossary filter outputs are saved in `/tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-ru/`.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warning: period decimal separator.

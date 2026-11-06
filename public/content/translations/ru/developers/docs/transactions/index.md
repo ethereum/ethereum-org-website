@@ -178,7 +178,7 @@ _Схема адаптирована из [Ethereum EVM illustrated](https://tak
 
 Газ требуется для любой транзакции, в которой задействован смарт-контракт.
 
-Смарт-контракты также могут содержать функции, известные как функции [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) или [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), которые не изменяют состояние контракта. Таким образом, вызов этих функций с EOA не потребует газа. Базовым вызовом RPC для этого сценария является [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Смарт-контракты также могут содержать функции, известные как функции [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) или [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), которые не изменяют состояние контракта. Таким образом, вызов этих функций с EOA не потребует газа. Базовым вызовом RPC для этого сценария является [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 В отличие от доступа с использованием `eth_call`, эти функции `view` или `pure` также часто вызываются внутренне (то есть из самого контракта или из другого контракта), что требует затрат газа.
 

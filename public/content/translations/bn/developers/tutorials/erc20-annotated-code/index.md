@@ -15,7 +15,7 @@ published: 2021-03-09
 
 ইথেরিয়াম-এর অন্যতম সাধারণ ব্যবহার হলো কোনো গোষ্ঠীর জন্য একটি ট্রেডযোগ্য টোকেন তৈরি করা, যা এক অর্থে তাদের নিজস্ব মুদ্রা। এই টোকেনগুলো সাধারণত একটি স্ট্যান্ডার্ড অনুসরণ করে, [ERC-20](/developers/docs/standards/tokens/erc-20/)। এই স্ট্যান্ডার্ডটি এমন টুল তৈরি করা সম্ভব করে, যেমন তারল্য পুল এবং ওয়ালেট, যা সমস্ত ERC-20 টোকেনের সাথে কাজ করে। এই নিবন্ধে আমরা [ওপেনজেপেলিন Solidity ERC20 ইমপ্লিমেন্টেশন](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), এবং সেইসাথে [ইন্টারফেস ডেফিনিশন](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) বিশ্লেষণ করব।
 
-এটি টীকাযুক্ত সোর্স কোড। আপনি যদি ERC-20 ইমপ্লিমেন্ট করতে চান, তবে [এই টিউটোরিয়ালটি পড়ুন](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)।
+এটি টীকাযুক্ত সোর্স কোড। আপনি যদি ERC-20 ইমপ্লিমেন্ট করতে চান, তবে [এই টিউটোরিয়ালটি পড়ুন](https://docs.openzeppelin.com/contracts/3.x/erc20-supply)।
 
 ## ইন্টারফেস {#the-interface}
 

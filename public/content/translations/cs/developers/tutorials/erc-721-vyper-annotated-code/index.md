@@ -51,7 +51,7 @@ První řádek importuje rozhraní a druhý specifikuje, že ho zde implementuje
 ```python
 #pragma version >0.3.10
 ```
-### Rozhraní ERC721Receiver
+### Rozhraní ERC721Receiver {#receiver-interface}
 
 ```python
 # Rozhraní pro kontrakt volaný pomocí safeTransferFrom()
@@ -90,7 +90,7 @@ Požadavek může obsahovat až 1024 bajtů uživatelských dat.
 ```
 
 Aby se předešlo případům, kdy kontrakt omylem přijme převod, návratovou hodnotou není boolean, ale specifická čtyřbajtová hodnota, selektor funkce `onERC721Received`. Funkce je `nonpayable`, protože přijímající kontrakt může při přijetí tokenu změnit svůj vlastní stav.
-### Události
+### Události {#events}
 
 [Události](/developers/docs/smart-contracts/anatomy/#events-and-logs) jsou emitovány, aby informovaly uživatele a servery mimo blockchain o událostech. Všimněte si, že obsah událostí není dostupný kontraktům na blockchainu. Tři události ERC-721 jsou definovány rozhraním `IERC721`, které jsme importovali, takže je tento kontrakt nedeklaruje sám; emituje je pomocí `log IERC721.<Event>(...)`, jak uvidíme ve funkcích pro převod níže.
 
@@ -99,7 +99,7 @@ Aby se předešlo případům, kdy kontrakt omylem přijme převod, návratovou 
 Schválení (approval) u ERC-721 je podobné povolenému limitu u ERC-20: konkrétní adrese je povoleno převést konkrétní token a událost `Approval` (`owner`, `approved`, `token_id`) je emitována, kdykoli je tato schválená adresa nastavena nebo potvrzena. To poskytuje mechanismus, jak mohou kontrakty reagovat, když přijmou token. Kontrakty nemohou naslouchat událostem, takže pokud jim token pouze převedete, "nevědí" o tom. Tímto způsobem vlastník nejprve odešle schválení a poté pošle požadavek kontraktu: "Schválil jsem vám převod tokenu X, prosím udělejte...". Toto je rozhodnutí při návrhu, aby byl standard ERC-721 podobný standardu ERC-20. Protože tokeny ERC-721 nejsou zaměnitelné, kontrakt může také identifikovat, že dostal konkrétní token, tím, že se podívá na vlastnictví tokenu.
 
 Nakonec je emitována událost `ApprovalForAll` (`owner`, `operator`, `approved`), když je pro vlastníka povolen nebo zakázán _operátor_. Někdy je užitečné mít operátora, který může spravovat všechny tokeny účtu určitého typu (ty, které jsou spravovány konkrétním kontraktem), podobně jako plná moc. Například bych mohl chtít dát takovou moc kontraktu, který kontroluje, zda jsem ho nekontaktoval po dobu šesti měsíců, a pokud ano, rozdělí má aktiva mým dědicům (pokud o to některý z nich požádá, kontrakty nemohou nic dělat, aniž by byly zavolány transakcí). U ERC-20 můžeme dědickému kontraktu jednoduše dát vysoký povolený limit, ale to u ERC-721 nefunguje, protože tokeny nejsou zaměnitelné. Toto je ekvivalent. Hodnota `approved` nám říká, zda je událost pro schválení, nebo pro zrušení schválení.
-### Stavové proměnné
+### Stavové proměnné {#state-vars}
 
 Tyto proměnné obsahují aktuální stav tokenů: které jsou k dispozici a kdo je vlastní. Většina z nich jsou objekty `HashMap`, [jednosměrná mapování, která existují mezi dvěma typy](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -151,7 +151,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 
 Toto jsou funkce, které skutečně implementují ERC-721.
 
-#### Konstruktor
+#### Konstruktor {#constructor}
 
 ```python
 @deploy
@@ -173,7 +173,7 @@ V Pythonu a ve Vyperu můžete také vytvořit komentář zadáním víceřádko
 ```
 
 Pro přístup ke stavovým proměnným používáte `self.<název proměnné>` (opět stejně jako v Pythonu). Konstruktor zaznamená účet, který nasadil kontrakt, jako `minter`.
-#### View funkce
+#### View funkce {#views}
 
 Toto jsou funkce, které nemění stav blockchainu, a proto mohou být spuštěny zdarma, pokud jsou volány externě. Pokud jsou view funkce volány kontraktem, musí být stále spuštěny na každém uzlu, a proto stojí gas.
 
@@ -271,7 +271,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 ```
 
 Tato funkce kontroluje, zda má `_operator` povoleno spravovat všechny tokeny `_owner` v tomto kontraktu. Protože může existovat více operátorů, jedná se o dvouúrovňovou HashMap.
-#### Pomocné funkce pro převod
+#### Pomocné funkce pro převod {#transfer-helpers}
 
 Tyto funkce implementují operace, které jsou součástí převodu nebo správy tokenů.
 
@@ -387,7 +387,7 @@ Tuto interní funkci máme proto, že existují dva způsoby převodu tokenů (b
 ```
 
 K emitování události ve Vyperu používáte příkaz `log` ([více podrobností najdete zde](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)). Protože události patří do importovaného rozhraní, odkazujeme na ně jako na `IERC721.Transfer` a jejich pole předáváme pomocí klíčových slov.
-#### Funkce pro převod
+#### Funkce pro převod {#transfer-funs}
 
 ```python
 

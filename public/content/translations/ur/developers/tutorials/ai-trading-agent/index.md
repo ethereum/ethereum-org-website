@@ -219,7 +219,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-<span dir="ltr">Web3</span> سے <span dir="ltr">EVM</span> پر فنکشن کال کرنے کا سنٹیکس یہ ہے: `<contract object>.functions.<function name>().call(<parameters>)`۔ پیرامیٹرز <span dir="ltr">EVM</span> فنکشن کے پیرامیٹرز ہو سکتے ہیں (اگر کوئی ہوں؛ یہاں کوئی نہیں ہیں) یا بلاک چین کے رویے میں ترمیم کرنے کے لیے [نامزد پیرامیٹرز (named parameters)](https://en.wikipedia.org/wiki/Named_parameter)۔ یہاں ہم ایک، `block_identifier`، استعمال کرتے ہیں تاکہ [بلاک نمبر](/developers/docs/apis/json-rpc/#default-block) کی وضاحت کر سکیں جس میں ہم چلانا چاہتے ہیں۔
+<span dir="ltr">Web3</span> سے <span dir="ltr">EVM</span> پر فنکشن کال کرنے کا سنٹیکس یہ ہے: `<contract object>.functions.<function name>().call(<parameters>)`۔ پیرامیٹرز <span dir="ltr">EVM</span> فنکشن کے پیرامیٹرز ہو سکتے ہیں (اگر کوئی ہوں؛ یہاں کوئی نہیں ہیں) یا بلاک چین کے رویے میں ترمیم کرنے کے لیے [نامزد پیرامیٹرز (named parameters)](https://en.wikipedia.org/wiki/Named_parameter)۔ یہاں ہم ایک، `block_identifier`، استعمال کرتے ہیں تاکہ [بلاک نمبر](/developers/docs/apis/json-rpc/#block-parameter) کی وضاحت کر سکیں جس میں ہم چلانا چاہتے ہیں۔
 
 نتیجہ [یہ اسٹرکٹ (struct) ہے، جو سرنی (array) کی شکل میں ہے](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72)۔ پہلی قدر دونوں ٹوکنز کے درمیان شرح تبادلہ کا ایک فنکشن ہے۔
 

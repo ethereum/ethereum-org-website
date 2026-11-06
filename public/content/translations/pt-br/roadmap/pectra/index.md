@@ -43,9 +43,9 @@ Leia uma exploração detalhada sobre o MaxEB [aqui](/roadmap/pectra/maxeb/)
 
 ### Aumento da vazão de blobs {#7691}
 
-Os blobs fornecem [disponibilidade de dados](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) para L2s. Eles foram introduzidos na [atualização de rede anterior](/roadmap/dencun/). 
+Os blobs fornecem [disponibilidade de dados](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) para as L2s. Eles foram introduzidos na [atualização de rede anterior](/roadmap/dencun/). 
 
-Atualmente, a rede tem como meta uma média de 3 blobs por bloco, com um máximo de 6 blobs. Com a [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), a contagem média de blobs será aumentada para 6, com um máximo de 9 por bloco, resultando em maior capacidade para os rollups do Ethereum. Esta EIP ajuda a preencher a lacuna até que o [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) permita contagens de blobs ainda maiores.
+Antes da Pectra, a rede tinha como meta uma média de 3 blobs por bloco, com um máximo de 6. A [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) aumentou a meta para 6 e o máximo para 9 por bloco, aumentando a capacidade para os rollups do Ethereum. Ela preencheu a lacuna até o [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594), que foi lançado na [Fusaka](/roadmap/fusaka/) e permite contagens de blobs ainda maiores.
 
 ### Aumento do custo de dados de chamada {#7623}
 

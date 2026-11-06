@@ -29,13 +29,13 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Nodi-kama-Huduma._**
+**All That Node -** **_Nodi kama Huduma._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Nyaraka](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast na Bware Labs -** **_API Zilizogatuliwa kwa Mtandao Mkuu wa Ethereum na Mitandao ya Majaribio._**
+**Blast na Bware Labs -** **_Violesura vya Kupanga Programu Tumizi (API) vilivyogatuliwa kwa Mtandao Mkuu wa Ethereum na Mitandao ya Majaribio._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Nyaraka](https://docs.blastapi.io)
@@ -52,13 +52,13 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Kichunguzi cha Bloku na API za Muamala**
+**Etherscan - Kichunguzi cha Bloku na API za Miamala**
 - [Nyaraka](https://docs.etherscan.io/)
 
 **Blockscout - Kichunguzi cha Bloku cha Chanzo Wazi**
 - [Nyaraka](https://docs.blockscout.com/)
 
-**GetBlock-** **_Mnyororo wa vitalu-kama-huduma kwa maendeleo ya Web3_**
+**GetBlock-** **_Mnyororo wa vitalu kama huduma kwa maendeleo ya Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Nyaraka](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 - [Nyaraka](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Mtoa huduma wa EVM JSON-RPC wa gharama nafuu_**
+**Node RPC - _Mtoa huduma wa Mashine Pepe ya Ethereum (EVM) JSON-RPC wa gharama nafuu_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Nyaraka](https://docs.noderpc.xyz/node-rpc)
@@ -91,6 +91,12 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 - [Nyaraka](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_Miundombinu ya EVM JSON-RPC yenye ufikiaji kamili, wa kumbukumbu, na wa umma usio na ufunguo._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Nyaraka](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_Nodi za Ethereum zinazolenga kasi kama API ya JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
@@ -100,7 +106,13 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 
 ### Zana za maendeleo {#development-tools}
 
-**ethers-kt -** **_Maktaba ya Kotlin/Java/Android isiyolingana, yenye utendaji wa juu kwa minyororo ya vitalu inayotegemea EVM._**
+**eth.zig -** **_Maktaba ya Zig kwa Ethereum, yenye usimbaji wa kiolesura cha jozi cha programu (ABI) wakati wa kukusanya na vifungo vya mkataba._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Nyaraka](https://ethzig.org)
+- [Mifano](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_Maktaba ya Kotlin/Java/Android isiyosawazishwa, yenye utendaji wa juu kwa minyororo ya vitalu inayotegemea Mashine Pepe ya Ethereum (EVM)._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Mifano](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -118,7 +130,7 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 - [GitHub ya Web3.py](https://github.com/ethereum/web3.py)
 - [Soga ya Web3.py](https://gitter.im/ethereum/web3.py)
 
-**Tatum -** **_Jukwaa kuu la maendeleo la mnyororo wa vitalu._**
+**Tatum -** **_Jukwaa kuu la maendeleo ya mnyororo wa vitalu._**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)

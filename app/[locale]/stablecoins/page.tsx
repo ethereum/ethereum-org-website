@@ -20,6 +20,9 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import ProductList, { type ProductListContent } from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
+import StablecoinsTable, {
+  type StablecoinsTableRow,
+} from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -45,11 +48,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
-import { numberFormat } from "@/lib/utils/numbers"
+import { buildStablecoinRows } from "@/lib/utils/stablecoins"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import StablecoinsTable from "./_components/stablecoins-table"
-import { stablecoins } from "./data"
 import PageJsonLD from "./page-jsonld"
 
 import { getStablecoinsData } from "@/lib/data"
@@ -78,18 +79,6 @@ import earnCardImg from "@/public/images/upgrades/core.png"
 import borrowCardImg from "@/public/images/upgrades/upgrade_eth.png"
 import walletCardImg from "@/public/images/wallets/wallet-hero.png"
 
-export type CoinDetails = {
-  name: string
-  marketCap: string
-  image: string
-  type: string
-  url: string
-  peg: string
-  symbol: string
-}
-
-const MIN_MARKET_CAP_USD = 500_000
-
 async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
@@ -103,41 +92,14 @@ async function Page(props: { params: Promise<PageParams> }) {
   const messages = pick(allMessages, requiredNamespaces)
 
   let marketsHasError = false
-  const coinDetails: CoinDetails[] = []
+  let coinDetails: StablecoinsTableRow[] = []
 
   try {
-    marketsHasError = false
-
-    // Fetch stablecoins data using the data-layer function (already cached)
     const stablecoinsData = await getStablecoinsData()
-
     if (!stablecoinsData) {
       throw new Error("Failed to fetch stablecoins data")
     }
-
-    const ethereumStablecoinData = stablecoins
-      .map(({ id, ...rest }) => {
-        const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
-        if (!coinMarketData) {
-          return null
-        }
-        return { ...coinMarketData, ...rest }
-      })
-      .filter(
-        (coin): coin is Exclude<typeof coin, null> =>
-          coin !== null && coin.market_cap >= MIN_MARKET_CAP_USD
-      )
-      .sort((a, b) => b.market_cap - a.market_cap)
-      .map(({ market_cap, ...rest }) => ({
-        ...rest,
-        marketCap: numberFormat(locale, {
-          style: "currency",
-          currency: "USD",
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0,
-        }).format(market_cap),
-      }))
-    coinDetails.push(...ethereumStablecoinData)
+    coinDetails = buildStablecoinRows(stablecoinsData, locale)
   } catch (error) {
     console.error(error)
     marketsHasError = true

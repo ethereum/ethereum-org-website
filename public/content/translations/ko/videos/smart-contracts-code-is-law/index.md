@@ -7,7 +7,7 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "smart-contracts"
+  - "how-ethereum-works"
 format: explainer
 author: "파인매틱스"
 breadcrumb: "스마트 컨트랙트"

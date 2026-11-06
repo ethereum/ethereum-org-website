@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/staking/withdrawals/index.md",
   "generatedAt": "2026-08-19T21:51:42.348Z",
-  "rootHash": "ab551173f4d6",
+  "rootHash": "a385c6c1728b",
   "tree": {
-    "contentHash": "eccfe4f7c325",
-    "anchorHash": "03702b476117",
+    "contentHash": "af3ba00b4712",
+    "anchorHash": "2fe13f1cddea",
     "children": {
       "frontmatter:title": {
         "contentHash": "815840a47399",
@@ -32,8 +32,32 @@
         "anchorHash": "d4735e3a265e"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "7ae68a95094c",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "3a91a9b09546",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "fee333e69d0e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "781b64bf3f2b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "514ad0b4fe94",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "prose:2": {
         "contentHash": "1fa1e2a58159",

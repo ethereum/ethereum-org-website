@@ -8,7 +8,6 @@ duration: "0:16:30"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
 format: presentation
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "چیزیں جو مجھے پسند ہیں"

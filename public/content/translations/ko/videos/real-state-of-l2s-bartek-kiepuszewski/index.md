@@ -8,8 +8,6 @@ duration: "0:26:15"
 educationLevel: advanced
 topic:
   - "scaling-and-layer-2"
-  - "rollups"
-  - "layer-2"
 format: presentation
 author: "이더리움 재단"
 breadcrumb: "l2의 상태"

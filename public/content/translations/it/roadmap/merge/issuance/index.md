@@ -84,7 +84,7 @@ Man mano che più validatori prelevano, il numero massimo di validatori in uscit
 
 ### Analisi dell'inflazione post-merge {#post-merge-inflation-breakdown}
 
-- [Offerta totale di ETH](/eth/supply/): **\~120.520.000 ETH** (al momento di The Merge a settembre 2022)
+- [Offerta totale di ETH](/what-is-ether/supply/): **\~120.520.000 ETH** (al momento di The Merge a settembre 2022)
 - Emissione sul livello di esecuzione: **0**
 - Emissione sul livello di consenso: come sopra, tasso di emissione annualizzato di **\~0,52%** (con 14 milioni di ETH totali messi in staking)
 

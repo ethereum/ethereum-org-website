@@ -17,7 +17,7 @@ Một trong những ứng dụng phổ biến nhất của Ethereum là để m�
 [định nghĩa giao diện](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Đây là mã nguồn có chú thích. Nếu bạn muốn triển khai ERC-20,
-[hãy đọc hướng dẫn này](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+[hãy đọc hướng dẫn này](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Giao diện {#the-interface}
 

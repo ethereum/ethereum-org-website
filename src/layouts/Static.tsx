@@ -74,6 +74,7 @@ export const StaticLayout = ({
     <div dir={contentNotTranslated ? "ltr" : "unset"}>
       {isGuidesHub ? (
         <HubHero
+          breadcrumbs={{ slug }}
           heroImg={guideHeroImg}
           header={frontmatter.title}
           description={frontmatter.description}

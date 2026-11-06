@@ -234,9 +234,9 @@ For new sections (added):
 
 For frontmatter translatable fields:
 
-1. Extract the field value from english-B (e.g., new description text)
-2. Send to LLM with the locale-A version as context
-3. Receive translated value
+1. Extract the field value from english-B (e.g., new description text); a sequence becomes one item per line
+2. Send to LLM as a `frontmatter:<key>` section, with the locale-A value as CONTEXT when unchanged fields are present
+3. Receive translated value; a sequence must come back with exactly as many lines as english-B has items
 
 **Test assertions (with mocked LLM):**
 

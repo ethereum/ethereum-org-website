@@ -4,9 +4,9 @@ description: Una panoramica delle reti di Ethereum e dove ottenere ether (ETH) d
 lang: it
 ---
 
-Le reti di [Ethereum](/) sono gruppi di computer connessi che comunicano utilizzando il protocollo Ethereum. Esiste una sola Mainnet di Ethereum, ma è possibile creare reti indipendenti conformi alle stesse regole del protocollo per scopi di test e sviluppo. Esistono molte "reti" indipendenti che si conformano al protocollo senza interagire tra loro. Puoi persino avviarne una localmente sul tuo computer per testare i tuoi smart contract e le tue app Web3.
+Le reti [Ethereum](/) sono gruppi di computer connessi che comunicano utilizzando il protocollo Ethereum. Esiste una sola Mainnet di Ethereum, ma possono essere create reti indipendenti conformi alle stesse regole del protocollo per scopi di test e sviluppo. Esistono molte "reti" indipendenti che si conformano al protocollo senza interagire tra loro. Puoi persino avviarne una localmente sul tuo computer per testare i tuoi smart contract e le tue app Web3.
 
-Il tuo account Ethereum funzionerà su diverse reti, ma il saldo del tuo account e la cronologia delle transazioni non verranno trasferiti dalla rete principale di Ethereum. A scopo di test, è utile sapere quali reti sono disponibili e come ottenere ETH della testnet per fare delle prove. In generale, per motivi di sicurezza, non è consigliabile riutilizzare gli account della Mainnet sulle testnet o viceversa.
+Il tuo account Ethereum funzionerà sulle diverse reti, ma il saldo del tuo account e la cronologia delle transazioni non verranno trasferiti dalla rete principale di Ethereum. A scopo di test, è utile sapere quali reti sono disponibili e come ottenere ETH della testnet per fare delle prove. In generale, per motivi di sicurezza, non è consigliato riutilizzare gli account della Mainnet sulle testnet o viceversa.
 
 ## Prerequisiti {#prerequisites}
 
@@ -18,29 +18,30 @@ Le reti pubbliche sono accessibili a chiunque nel mondo disponga di una connessi
 
 ### Mainnet di Ethereum {#ethereum-mainnet}
 
-La Mainnet è la principale blockchain di produzione pubblica di Ethereum, in cui le transazioni di valore reale avvengono sul registro distribuito.
+La Mainnet è la blockchain di produzione pubblica primaria di Ethereum, in cui le transazioni di valore reale avvengono sul registro distribuito.
 
 Quando le persone e gli exchange discutono dei prezzi degli ETH, parlano degli ETH della Mainnet.
 
 ### Testnet di Ethereum {#ethereum-testnets}
 
-Oltre alla Mainnet, esistono testnet pubbliche. Si tratta di reti utilizzate dagli sviluppatori del protocollo o dagli sviluppatori di smart contract per testare sia gli aggiornamenti del protocollo sia i potenziali smart contract in un ambiente simile a quello di produzione prima della distribuzione sulla Mainnet. Pensa a questo come a un'analogia tra server di produzione e server di staging.
+Oltre alla Mainnet, esistono testnet pubbliche. Si tratta di reti utilizzate dagli sviluppatori del protocollo o dagli sviluppatori di smart contract per testare sia gli aggiornamenti del protocollo sia i potenziali smart contract in un ambiente simile a quello di produzione prima della distribuzione sulla Mainnet. Pensalo come un analogo dei server di produzione rispetto a quelli di staging.
 
 Dovresti testare qualsiasi codice di contratto che scrivi su una testnet prima di distribuirlo sulla Mainnet. Tra le applicazioni decentralizzate (dapp) che si integrano con gli smart contract esistenti, la maggior parte dei progetti ha copie distribuite sulle testnet.
 
-La maggior parte delle testnet è iniziata utilizzando un meccanismo di consenso di prova di autorità (PoA) autorizzata. Ciò significa che un piccolo numero di nodi viene scelto per convalidare le transazioni e creare nuovi blocchi, mettendo in gioco la propria identità nel processo. In alternativa, alcune testnet presentano un meccanismo di consenso Proof-of-Stake (PoS) aperto in cui tutti possono testare l'esecuzione di un validatore, proprio come sulla Mainnet di Ethereum.
+La maggior parte delle testnet è iniziata utilizzando un meccanismo di consenso di prova di autorità (PoA) autorizzato. Ciò significa che un piccolo numero di nodi viene scelto per convalidare le transazioni e creare nuovi blocchi, mettendo in gioco la propria identità nel processo. In alternativa, alcune testnet presentano un meccanismo di consenso Proof-of-Stake (PoS) aperto in cui tutti possono testare l'esecuzione di un validatore, proprio come sulla Mainnet di Ethereum.
 
-Si suppone che gli ETH sulle testnet non abbiano alcun valore reale; tuttavia, sono stati creati mercati per determinati tipi di ETH della testnet che sono diventati scarsi o difficili da ottenere. Poiché hai bisogno di ETH per interagire effettivamente con Ethereum (anche sulle testnet), la maggior parte delle persone ottiene ETH della testnet gratuitamente dai faucet. La maggior parte dei faucet sono app web in cui puoi inserire un indirizzo a cui richiedere l'invio di ETH.
+Si suppone che gli ETH sulle testnet non abbiano alcun valore reale; tuttavia, sono stati creati mercati per alcuni tipi di ETH della testnet che sono diventati scarsi o difficili da ottenere. Poiché hai bisogno di ETH per interagire effettivamente con Ethereum (anche sulle testnet), la maggior parte delle persone ottiene gratuitamente ETH della testnet dai faucet. La maggior parte dei faucet sono app web in cui puoi inserire un indirizzo a cui richiedere l'invio di ETH.
 
 #### Quale testnet dovrei usare? {#which-testnet-should-i-use}
 
-Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mantenendo sono Sepolia e Hoodi. Sepolia è una rete per gli sviluppatori di contratti e applicazioni per testare le loro applicazioni. La rete Hoodi consente agli sviluppatori del protocollo di testare gli aggiornamenti della rete e consente agli staker di testare l'esecuzione dei validatori.
+Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mantenendo sono Sepolia e Hoodi. Sepolia è una rete per gli sviluppatori di contratti e applicazioni per testare le loro applicazioni. La rete Hoodi consente agli sviluppatori del protocollo di testare gli aggiornamenti di rete e consente agli staker di testare l'esecuzione dei validatori.
 
 #### Sepolia {#sepolia}
 
 **Sepolia è la testnet predefinita consigliata per lo sviluppo di applicazioni**. La rete Sepolia utilizza un set di validatori autorizzato controllato dai team dei client e di test.
 
 ##### Risorse
+
 - [Sito web](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -48,14 +49,15 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucet
+
 - [Faucet di Sepolia di Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Faucet di Sepolia di Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Faucet di Sepolia di Chainstack](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [Faucet dell'ecosistema Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 - [Faucet di Sepolia di ethfaucet.com](https://ethfaucet.com/networks/ethereum)
 - [Faucet di Sepolia di Google Cloud Web3](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet di Sepolia di Infura](https://www.infura.io/faucet)
+- [Faucet di Sepolia di OpenFaucet.org](https://openfaucet.org/ethereum-sepolia)
 - [Faucet PoW](https://sepolia-faucet.pk910.de/)
 - [Faucet di Sepolia di QuickNode](https://faucet.quicknode.com/ethereum/sepolia)
 
@@ -63,7 +65,7 @@ Le due testnet pubbliche che gli sviluppatori di client stanno attualmente mante
 
 Hoodi è una testnet per testare la convalida e lo staking. La rete Hoodi è aperta agli utenti che desiderano eseguire un validatore della testnet. Gli staker che desiderano testare gli aggiornamenti del protocollo prima che vengano distribuiti sulla Mainnet dovrebbero quindi utilizzare Hoodi.
 
-- Set di validatori aperto, gli staker possono testare gli aggiornamenti della rete
+- Set di validatori aperto, gli staker possono testare gli aggiornamenti di rete
 - Stato di grandi dimensioni, utile per testare interazioni complesse di smart contract
 - Sincronizzazione più lunga e richiede più spazio di archiviazione per eseguire un nodo
 
@@ -72,7 +74,7 @@ Hoodi è una testnet per testare la convalida e lo staking. La rete Hoodi è ape
 - [Sito web](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
 - [Explorer](https://explorer.hoodi.ethpandaops.io/)
-- [Sincronizzazione del checkpoint](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Sincronizzazione tramite checkpoint](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 
@@ -80,6 +82,7 @@ Hoodi è una testnet per testare la convalida e lo staking. La rete Hoodi è ape
 
 - [Faucet di Hoodi di Chain Platform](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Faucet di Hoodi](https://hoodi.ethpandaops.io/)
+- [Faucet di Hoodi di OpenFaucet.org](https://openfaucet.org/ethereum-hoodi)
 - [Faucet PoW](https://hoodi-faucet.pk910.de/)
 
 #### Ephemery {#ephemery}
@@ -99,7 +102,7 @@ Ephemery è un tipo unico di testnet che si ripristina completamente ogni mese. 
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)
 - [Explorer della Beacon](https://beaconlight.ephemery.dev/)
-- [Sincronizzazione del checkpoint](https://checkpoint-sync.ephemery.ethpandaops.io)
+- [Sincronizzazione tramite checkpoint](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
 #### Faucet {#faucets}
@@ -132,6 +135,7 @@ Una testnet per [Arbitrum](https://arbitrum.io/).
 - [Faucet di Arbitrum Sepolia di Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Faucet di Arbitrum Sepolia di Chainlink](https://faucets.chain.link/arbitrum-sepolia)
 - [Faucet di Arbitrum Sepolia di ethfaucet.com](https://ethfaucet.com/networks/arbitrum)
+- [Faucet di Arbitrum Sepolia di OpenFaucet.org](https://openfaucet.org/arbitrum-sepolia)
 - [Faucet di Arbitrum Sepolia di QuickNode](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
@@ -148,7 +152,8 @@ Una testnet per [Optimism](https://www.optimism.io/).
 - [Faucet di Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Faucet di Chainlink](https://faucets.chain.link/optimism-sepolia)
 - [Faucet di Optimism Sepolia di ethfaucet.com](https://ethfaucet.com/networks/optimism)
-- [Faucet della testnet](https://docs.optimism.io/builders/tools/build/faucets)
+- [Faucet di Optimism Sepolia di OpenFaucet.org](https://openfaucet.org/optimism-sepolia)
+- [Faucet della testnet](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
@@ -166,23 +171,23 @@ Una testnet per [Starknet](https://www.starknet.io).
 
 ## Reti private {#private-networks}
 
-Una rete Ethereum è una rete privata se i suoi nodi non sono connessi a una rete pubblica (ovvero, la Mainnet o una testnet). In questo contesto, privato significa solo riservato o isolato, piuttosto che protetto o sicuro.
+Una rete Ethereum è una rete privata se i suoi nodi non sono connessi a una rete pubblica (ovvero, la Mainnet o una testnet). In questo contesto, privata significa solo riservata o isolata, piuttosto che protetta o sicura.
 
 ### Reti di sviluppo {#development-networks}
 
-Per sviluppare un'applicazione Ethereum, vorrai eseguirla su una rete privata per vedere come funziona prima di distribuirla. Similmente a come crei un server locale sul tuo computer per lo sviluppo web, puoi creare un'istanza blockchain locale per testare la tua dapp. Ciò consente un'iterazione molto più rapida rispetto a una testnet pubblica.
+Per sviluppare un'applicazione Ethereum, vorrai eseguirla su una rete privata per vedere come funziona prima di distribuirla. Similmente a come crei un server locale sul tuo computer per lo sviluppo web, puoi creare un'istanza locale della blockchain per testare la tua dapp. Ciò consente un'iterazione molto più rapida rispetto a una testnet pubblica.
 
 Esistono progetti e strumenti dedicati per assistere in questo. Scopri di più sulle [reti di sviluppo](/developers/docs/development-networks/).
 
 ### Reti di consorzio {#consortium-networks}
 
-Il processo di consenso è controllato da un insieme predefinito di nodi considerati attendibili. Ad esempio, una rete privata di istituzioni accademiche note che governano ciascuna un singolo nodo e i blocchi vengono convalidati da una soglia di firmatari all'interno della rete.
+Il processo di consenso è controllato da un insieme predefinito di nodi considerati affidabili. Ad esempio, una rete privata di istituzioni accademiche note che governano ciascuna un singolo nodo e i blocchi vengono convalidati da una soglia di firmatari all'interno della rete.
 
 Se una rete pubblica di Ethereum è come l'Internet pubblico, una rete di consorzio è come una intranet privata.
 
 ## <Emoji text="🚉" /> Perché le testnet di Ethereum prendono il nome dalle stazioni della metropolitana? {#why-naming}
 
-Molte testnet di Ethereum prendono il nome da stazioni della metropolitana o dei treni del mondo reale. Questa tradizione di denominazione è iniziata presto e riflette le città globali in cui i contributori hanno vissuto o lavorato. È simbolica, memorabile e pratica. Proprio come le testnet sono isolate dalla Mainnet di Ethereum, le linee della metropolitana corrono separatamente dal traffico di superficie.
+Molte testnet di Ethereum prendono il nome da stazioni della metropolitana o dei treni del mondo reale. Questa tradizione di denominazione è iniziata presto e riflette le città globali in cui i collaboratori hanno vissuto o lavorato. È simbolica, memorabile e pratica. Proprio come le testnet sono isolate dalla Mainnet di Ethereum, le linee della metropolitana corrono separatamente dal traffico di superficie.
 
 ### <Emoji text="🚧" /> Testnet comunemente usate e legacy {#common-and-legacy-testnets}
 
@@ -191,7 +196,7 @@ Molte testnet di Ethereum prendono il nome da stazioni della metropolitana o dei
 - **Goerli** _(deprecata)_ - Prende il nome dalla Görlitzer Bahnhof a Berlino, in Germania.
 - **Rinkeby** _(deprecata)_ - Prende il nome da un sobborgo di Stoccolma con una stazione della metropolitana.
 - **Ropsten** _(deprecata)_ - Si riferisce a un'area e a un ex terminal di traghetti/metropolitana a Stoccolma.
-- **Kovan** _(deprecata)_ - Prende il nome da una stazione MRT di Singapore.
+- **Kovan** _(deprecata)_ - Prende il nome da una stazione della MRT di Singapore.
 - **Morden** _(deprecata)_ - Prende il nome da una stazione della metropolitana di Londra. La prima testnet pubblica di Ethereum.
 
 ### <Emoji text="🧪" /> Altre testnet specializzate {#other-testnets}
@@ -210,5 +215,5 @@ L'utilizzo dei nomi delle stazioni della metropolitana aiuta gli sviluppatori a 
 
 ## Letture consigliate {#further-reading}
 
-- [Proposta: ciclo di vita prevedibile delle testnet di Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [Proposta: Ciclo di vita prevedibile delle testnet di Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [L'evoluzione delle testnet di Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

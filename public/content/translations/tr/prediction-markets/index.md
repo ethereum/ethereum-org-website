@@ -5,9 +5,9 @@ template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoints:
-  - "Doğru tahminler üretmek için finansal teşvikler alın"
-  - "Gelecekteki olaylar hakkında yüksek kaliteli tahminler"
-buttons: 
+  - "Gelecekteki olayların sonuçları üzerinden işlem yapın"
+  - "Fiyatlar, bir şeyin olma olasılığının canlı ve halka açık bir tahmini olarak çalışır"
+buttons:
   - content: Daha fazla bilgi edin
     toId: how-prediction-markets-work
   - content: Uygulamaları keşfet
@@ -15,39 +15,39 @@ buttons:
     isSecondary: false
 ---
 
-Tahmin piyasaları, olayları tahmin etmek için kitlelerin bilgeliğini ve finansal teşvikleri kullanır. Çeşitli, yüksek kaliteli veriler sunarlar ve 2024 ABD seçimleri sırasında ilgi görmüşlerdir.
+Tahmin piyasaları, insanların gelecekteki olayların sonuçlarına dair pay alıp satmalarını sağlar. Bir payın fiyatı, piyasanın bir bütün olarak o sonucun gerçekleşme olasılığını nasıl gördüğünü gösterir. 2024 ABD seçimleri sırasında geniş ilgi topladılar.
 
 ## Tahmin piyasaları nasıl çalışır? {#how-prediction-markets-work}
 
-Uzman görüşlerine, sınırlı anket örneklemlerine veya geçmiş verilere dayanan geleneksel tahmin yöntemlerinin aksine, tahmin piyasaları belirli bir olayla (seçimler, kripto fiyatları, spor sonuçları, kısacası her şey) ilgili içgörüler üretmek için **gerçek zamanlı finansal teşviklerden** ve **kitlelerin bilgeliğinden** yararlanır. 
+Her piyasa, "Yarın Lizbon'da yağmur yağacak mı?" gibi net bir cevabı olan bir soru sorar. Bir **Evet** payı, cevap evet çıkarsa 1$ öder, çıkmazsa hiçbir şey ödemez. Bir **Hayır** payı ise tam tersi şekilde çalışır.
 
-Bu, herkesin finansal bir taahhüt ile belirli bir sonuca olan desteğini göstermesine olanak tanır.
- 
-Gerçek dünyadaki olaylar üzerine bahis oynanmasını sağlayarak ve yeni bilgiler ortaya çıktıkça fiyatları ayarlayarak, bilgiye dayalı görüşlere daha fazla değer verilir ve doğruluk ödüllendirilebilir. 
+Eğer Evet payları 67 sentten işlem görüyorsa, piyasa yağmur yağma ihtimalinin kabaca %67 olduğunu söylüyordur. Gerçek ihtimalin farklı olduğunu düşünen herkes alım veya satım yapabilir ve bu da fiyatı hareket ettirir. Daha fazla bilgiye sahip olan kişilerin işlem yapmak için bir nedeni olduğundan, yeni bilgiler fiyata hızla yansıma eğilimindedir. Tahmin piyasalarının yararlı öngörüler olabilmesinin nedeni budur. Ancak kusursuz değillerdir.
 
-Teorik olarak, bahisçiler haklı çıkmaktan kâr elde edecekleri için tahmin piyasaları sonuçları büyük bir hassasiyetle tahmin edebilir. Blokzincir tabanlı tahmin piyasaları daha da heyecan vericidir, çünkü neredeyse herkes tahmin sürecine katılabilir ve sabitcoin veya kripto para ödülleri kazanabilir.
+Kazanan her pay, kaybeden tarafı elinde tutan biri tarafından ödenir. Tahmin piyasaları **sıfır toplamlıdır**: ücretler dışında, kazananların elde ettiği kâr, kaybedenlerin zararıdır.
 
 ## Bu neden önemli? {#why-does-this-matter}
 
-Geleneksel tahminlerin aksine, Blokzincir tabanlı tahmin piyasaları şöyledir:
+Blokzincir tabanlı tahmin piyasaları, geleneksel bahis sitelerinin ve borsaların sunmadığı birkaç şey ekler:
 
 <Grid>
-  <Card title="Teşvikli" emoji=":money_with_wings:" description="Katılımcılar gerçek fonları stake eder, bu da yüksek kaliteli tahminler anlamına gelir."/>
-  <Card title="Merkeziyetsizlik" emoji="🌎" description="Blokzincir ve akıllı sözleşmeler kullanmak, şeffaf ve otomatik ödemeler sağlar." />
-  <Card title="Piyasa odaklı oranlar" emoji="🤝" description="Fiyatlar, merkezi bir bahisçi tarafından önceden belirlenmek yerine, sonuç hisseleri alıp satan yatırımcılar tarafından belirlenir." />
+  <Card title="Açık veri" emoji="🔍" description="Her işlem zincir içi kaydedilir, böylece herkes fiyatları, hacimleri ve kimin kazanıp kimin kaybettiğini kontrol edebilir."/>
+  <Card title="Zincir içi mutabakat" emoji="🌎" description="Pozisyonlar kendi cüzdanınızdaki Token'lardır ve sonuç bildirildiğinde akıllı sözleşmeler kazanan payları öder." />
+  <Card title="Piyasa odaklı oranlar" emoji="🤝" description="Fiyatlar, merkezi bir bahisçi tarafından önceden belirlenmek yerine, sonuç paylarını alıp satan yatırımcılar tarafından belirlenir." />
 </Grid>
 
-Piyasanın bir gözlemcisi olarak bile, başka türlü ulaşılamayacak değerli verileri değerlendirebilirsiniz. Şöyle düşünün:
+Açık veri pratikte önemlidir. Araştırmacılar, işlemleri halka açık bir blokzincir üzerinde gerçekleştiği için Kasım 2022'den Mart 2026'ya kadar 2,4 milyondan fazla kullanıcıyı kapsayan [Polymarket'teki her işlemi inceleyebildiler](https://cepr.org/publications/dp21615). Bu tür bağımsız bir kontrol, işlemlerin ve ödemelerin şirketin kendi sistemlerinde gerçekleştiği Kalshi gibi merkezi platformlarda mümkün değildir. Denetlenecek halka açık bir kayıt ve kazanan pozisyonların ödeneceğini garanti eden bir akıllı sözleşme yoktur.
 
-1. Tahminler belirli bir olaya bağlıdır (örneğin, Beam Zinciri 2030'a kadar dağıtılacak mı?).
-2. Piyasa katılımcıları, herhangi bir sonuca olan güvenlerine dayanarak pay alır ve satarlar.
-3. Daha fazla katılımcı inançlarını stake ettikçe fiyatlar ayarlanır ve gerçek zamanlı içgörüleri yansıtır.
-4. Doğru bahis yapan herkes, stake edilen miktarla orantılı olarak kazanır. 
-5. Piyasa gözlemcileri, araştırmaları veya tartışmaları bilgilendirmek için açık verilerden yararlanabilir.
+Bir piyasa baştan sona şu şekilde işler:
+
+1. Nasıl karara bağlanacağına dair net kuralları olan bir soru etrafında bir piyasa oluşturulur.
+2. Yatırımcılar Evet ve Hayır payları alıp satarlar ve onlar işlem yaptıkça fiyat hareket eder.
+3. Olay gerçekleştiğinde, bir [kâhin](/developers/docs/oracles/) sonucu zincir içi bildirir. Polymarket'te herkes bir teminat yatırarak sonucu teklif edebilir ve başka herhangi biri buna itiraz edebilir. Bir anlaşmazlık çözülmezse, UMA Token sahipleri sonuç üzerine oy kullanır.
+4. Kazanan her pay 1$ karşılığında bozdurulabilir. Kaybeden payların hiçbir değeri yoktur.
+5. Herkes araştırma veya tartışma için fiyat geçmişini ve işlem verilerini kullanabilir.
 
 ## Bir tahmin piyasası bulun {#find-a-prediction-market}
 
-Çeşitli Ethereum tabanlı tahmin piyasaları mevcuttur. Bunlar günümüzdeki en bilinen tahmin piyasalarından bazılarıdır:
+Bu tahmin piyasaları işlemleri zincir içi sonuçlandırır, böylece herkes fiyatları ve işlem geçmişini kontrol edebilir:
 
 <PredictionMarketLists />
 
@@ -55,32 +55,36 @@ Piyasanın bir gözlemcisi olarak bile, başka türlü ulaşılamayacak değerli
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Risklere karşı dikkatli olun</strong></p>
-  <p className="mt-2">Yalnızca kaybetmeyi göze alabileceğiniz kadar bahis yapın ve olası bağımlılık yapıcı davranışların farkında olun.</p>
+  <p className="mt-0"><strong>Risklere karşı dikkatli olun</strong></p>
+  <p className="mt-2">Tahmin piyasalarında işlem yapan çoğu insan para kaybeder. Yalnızca kaybetmeyi göze alabileceğiniz miktarlarla işlem yapın ve olası bağımlılık yapan davranışların farkında olun.</p>
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Zorluklar ve Riskler {#challenges-and-risks}
 
-Blokzincir üzerindeki tahmin piyasaları adilliği, yasallığı ve doğruluğu etkileyebilecek bazı zorluklarla karşı karşıyadır.
+Tahmin piyasaları adilliği, yasallığı ve doğruluğu etkileyen gerçek zorluklarla karşı karşıyadır.
 
-⚠️ **Piyasa Manipülasyonu** – Varlıklı oyuncular, sahte işlemler (wash trading) yoluyla sonuçları çarpıtabilir.  
-💧 **Likidite Sorunları** – Düşük katılım ([düşük likidite](https://www.investopedia.com/terms/t/thinmarket.asp)) piyasa güvenilirliğini azaltabilir.  
-🏛 **Düzenleyici Belirsizlik** – Hükümetler bazı platformlara kısıtlamalar getirmiştir.
+📉 **Çoğu yatırımcı kaybeder** – Kasım 2022'den Mart 2026'ya kadar [her Polymarket işlemini inceleyen bir çalışma](https://cepr.org/publications/dp21615), kullanıcıların yaklaşık %69'unun kayıpla sonuçlandığını buldu. Para kazanan kullanıcılar arasında en üstteki %1'lik kesim kârın %76,5'ini aldı. En büyük kazananlar çoğunlukla limit emirleriyle, genellikle profesyonel olarak ve yüksek hacimde Likidite sağlayan yatırımcılardı.
 
-Bu sorunları hafifletmek için Ethereum geliştiricileri, fütarşi (tahmin piyasaları ile yönetişim) ve merkeziyetsiz kimlik doğrulaması gibi çözümler üzerinde deneyler yapmaktadır.
+🕵️ **İçeriden öğrenenlerin ticareti** – Sonucu önceden bilen kişiler, diğer yatırımcıların zararına kâr edebilir. [Columbia Hukuk Fakültesi ve Hayfa Üniversitesi'ndeki araştırmacılar](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6426778), şüpheli bilgili yatırımcıların Şubat 2024 ile Şubat 2026 arasında Polymarket'te yaklaşık 143 milyon dolar kazandığını tahmin ettiler.
 
-## Tahmin piyasaları ile deneyler yapmak {#experimenting-with-prediction-markets}
+⚖️ **Tartışmalı sonuçlar** – Akıllı sözleşmeler otomatik olarak ödeme yapabilir, ancak yine de birinin ne olduğunu bildirmesi gerekir. Bir soru gevşek bir şekilde ifade edildiğinde veya gerçekler belirsiz olduğunda, bildirilen sonuca itiraz edilebilir.
 
-Tahmin piyasaları, dijital çağda karar verme süreçlerini yeniden şekillendiriyor. Ethereum'dan yararlanarak, **geleceği tahmin etmenin adil, açık ve ödüllendirici yollarını** sunarlar.
+⚠️ **Piyasa manipülasyonu** – Çok parası olan yatırımcılar, özellikle küçük piyasalarda fiyatları hareket ettirebilir. Sahte işlem (wash trading - kendinizle işlem yapmak), bir piyasayı olduğundan daha hareketli gösterebilir.
 
-Tahmin araçlarını finansal kazanç dışında kullanmanın birçok yolu vardır. Örneğin, bir [DevCon İyileştirme Teklifi](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305)'nde (DIP), DevCon organizatörlerinin gelecekteki etkinliklere katılımı öngörmek için tahmin piyasalarını kullanması önerilmiştir. 
+💧 **Likidite sorunları** – Düşük katılım ([sığ Likidite](https://www.investopedia.com/terms/t/thinmarket.asp)), fiyatları daha az güvenilir hale getirebilir.
 
-Bu, organizatörlerin hangi konumun en büyük etkinliğe yol açacağını ve hangi konumun uluslararası düzeyde en erişilebilir olacağını belirlemelerine yardımcı olacaktır. Bunun faydaları, DevCon organizatörlerinin birden fazla vize politikasını, havalimanı erişimini ve bölgedeki yaşam maliyetini incelemek için gereken süreyi hızlandırabilmesi ve aynı zamanda potansiyel katılımcıların nereye gitmekten heyecan duyacaklarına dair veri toplayabilmesidir.
+🏛 **Düzenleyici belirsizliği** – Kurallar ülkeye göre farklılık gösterir ve hızla değişir. ABD'de düzenleyiciler ve mahkemeler, özellikle sporla ilgili bazı olay sözleşmelerinin finansal ürün mü yoksa kumar mı sayılacağına hala karar veriyor. Birçok platform belirli ülkelerdeki kullanıcıları engellemektedir.
 
-## Daha fazla bilgi {#further-reading}
+## Tahmin piyasalarıyla denemeler yapmak {#experimenting-with-prediction-markets}
+
+Tahmin piyasaları kâr amaçlı işlemlerin ötesinde de yararlı olabilir. Futarşi (futarchy) adı verilen bir fikir daha da ileri giderek piyasaları sadece tahmin etmek için değil, karar vermeye yardımcı olmak için de kullanır.
+
+Örneğin, bir [Devcon İyileştirme Teklifi](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP), Devcon organizatörlerinin olası gelecekteki konumlardaki katılımı tahmin etmek için tahmin piyasalarını kullanmasını teklif etti. Bu, hangi şehrin en büyük olayı çekeceği ile hangisinin uluslararası alanda en erişilebilir olacağını tartmalarına yardımcı olabilir. Ayrıca vize politikalarını, havaalanı erişimini ve yaşam maliyetini karşılaştırmak için harcanan zamandan tasarruf sağlarken, olası katılımcıların nereye gitmekten heyecan duyacağını da gösterebilir.
+
+## Daha fazla okuma {#further-reading}
 
 [Tahmin piyasalarından bilgi finansmanına](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin  
-[Ethereum Üzerinde Merkeziyetsiz Tahmin Piyasası Geliştirme](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
-[Augur Projesi Tanıtım Belgesi](https://github.com/AugurProject/whitepaper)
+[Tahmin piyasalarında kim kazanır, kim kaybeder? Polymarket'ten kanıtlar](https://cepr.org/publications/dp21615) - Akey, Grégoire, Harvie ve Martineau  
+[Augur Projesi Tanıtım belgesi](https://github.com/AugurProject/whitepaper)

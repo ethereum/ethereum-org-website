@@ -59,3 +59,110 @@ Scope: new `page-open-source.json` (228 keys) + retranslated `community/research
 **Open (native call needed):**
 
 - `Kein Open Source.` should be `Nicht Open Source.` (predicate-noun negation).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.6/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/de/page-apps.json`, `roadmap/pectra/index.md`. 1 critical, 11 warnings. Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 8/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: de not affected, the clef transcript was already English. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: not affected, zero keys expanded; de and ja were the only two clean locales.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Fixed in this branch (de-specific):**
+
+- whitehat parenthetical: the extra `)` sat after the link rather than after `bezeichnet`
+
+**Notes:**
+
+- `accounts/index.md` is correctly absent: quarantined with a matching `class: gate` entry in `.manifests/quarantine.json` after the jsx-tags check caught `<Pfad>` / `<Passwort>` twice. Quarantine behaved as designed.
+- `.manifests/.../de/roadmap/pectra/index.md/translation.json` was not refreshed alongside its `source.json`; its `englishManifestHash` matches neither the old nor the new source rootHash. Predates this PR.
+
+
+## PR #19351 (intl/pending-dev) -- 2026-09-29 -- Score 8.8/10
+
+Scope: `developers/docs/accounts/index.md` (first successful retranslation after the #19326 quarantine), `consensus-mechanisms/pos/rewards-and-penalties/index.md`, `tutorials/send-token-ethersjs/index.md`. 0 critical, 3 warnings (all fixed on request). Brand 10/10 | Technical 9/10 | Semantic 8/10 | Consistency 8/10 | Tone 9/10.
+
+**Fixed in this branch:**
+
+- Trailing newline stripped at EOF on `accounts` and `send-token-ethersjs`; restored.
+- `rewards-and-penalties:55` "carrots" calqued as `die „Karotten“` -> `das „Zuckerbrot“` (the pre-PR line had it, and `attack-and-defense` uses it).
+- `accounts:31` `ETH/Token-Überweisungen` (bank-transfer register) -> `ETH-/Token-Transfers`, glossary `transfer` = `Transfer`, matching the pre-PR line.
+- `rewards-and-penalties:29` "(as `sqrt(N)`)" -> `(als ...)` read as "in the role of"; now `(proportional zu ...)`, 2 sites.
+
+**Notes:**
+
+- Code-fence protection (#19348) worked: the clef transcript kept `<path>`/`<password>` byte-exact, so the jsx-tags gate passed and the quarantine entry cleared. `Virtuelle Ethereum-Maschine` now matches ETHGlossary (pre-PR used the English name).
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 9.0/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- hegota `Fork-Wahl` vs tree `Fork-Choice` (83:1).
+- privacy-online `No-Logs-Anspruch` (entitlement) should be `-Versprechen`; `Suchanfragen` for DNS lookups; `Weitere Wissenswerte` grammar.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `tokenization` `assets-treasuries-title` `Schatzkammern` -> `Staatsanleihen` (glossary `treasury` entry is the DAO sense; here it means government bonds).
+
+**Open (warnings):**
+
+- `Ethereum für Unternehmen` used for both enterprise and small-business pages; `Privatkredite` for private credit; Onchain capitalization; Kontrahenten-/Gegenparteirisiko split.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.4/10
+
+- Fixed: security line 292 unbalanced backtick around withdraw() (regression; same class as the English backtick fix fe75a81caa).
+- Warning: wagmi line 299 dropped subject `sie` (ungrammatical).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: `Layer 2-Testnetze` -> `Layer-2-Testnetze` (2x, compound hyphenation).
+- Open: colloquial `herumspielen` replaced `ausprobieren`; L174 `anstatt geschützt oder sicher` awkward.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.2/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-mentorship` restored from dev
+- security:292 unbalanced backtick (`withdraw() in `Victim` -> `withdraw()` in `Victim`)
+- app-plasma:121 fabricated links (`[macOS](https://learn.microsoft.com/en-us/windows/` -> `macOS, Linux oder`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: Moves away from ETHGlossary for EOA. The glossary prose form is `externes Konto` and the line before this PR matched it. (`[extern besessenes Konto]` -> `[externes Konto]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA glossary deviation (`[extern besessenen Konto]` -> `[externen Konto]`)
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA glossary deviation (`extern besessene Konten` -> `externe Konten`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA glossary deviation (`extern besessenen Konto` -> `externen Konto`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA glossary deviation (`dieser Besitzer extern besessen ist` -> `dieser Besitzer ein externes Konto ist`)
+- developers/docs/apis/backend/index.md:77: Deviates from ETHGlossary `full node` (= `Full Node`, plural `Full Nodes`, high confidence). English: "Full Nodes and Block Explorers". The line before this PR matched the glossary. (`Vollständige Knoten` -> `Full Nodes`)
+- 18 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** ETHGlossary `/filter` outputs for all 15 English sources and the changed JSON strings are saved in /tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl_de/
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `[Ethereum](/) -Blockchain` stray space removed (mint:18)
+
+**Notes:**
+
+- Warnings: du-imperatives in new code comments inside Sie documents; viem/Viem casing differs between files.

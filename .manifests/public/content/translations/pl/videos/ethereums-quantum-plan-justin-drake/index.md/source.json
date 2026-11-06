@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereums-quantum-plan-justin-drake/index.md",
   "generatedAt": "2026-04-29T05:45:55.639Z",
-  "rootHash": "d1fa9e9ae910",
+  "rootHash": "f9adfbb3beea",
   "tree": {
-    "contentHash": "be73a7cc9e33",
-    "anchorHash": "9ddeecc3eb14",
+    "contentHash": "f6c4c9ca52ab",
+    "anchorHash": "a086586769a0",
     "children": {
       "frontmatter:title": {
-        "contentHash": "f9a222aeb145",
+        "contentHash": "d5312301fa50",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "091e2d9071d2",
+        "contentHash": "bb954cf5b17d",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4c01824e184e"
+        "anchorHash": "5d74fc2034bc"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "fdc4f5031a63"
+        "anchorHash": "ee6a4d2130d3"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d21f85ea3816"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "df571735a772",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "deff42e8113d"
+        "anchorHash": "c398896ff850"
       },
       "prose:1": {
         "contentHash": "31fc0bbfd95a",

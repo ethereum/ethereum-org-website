@@ -130,7 +130,7 @@ Chúng ta sẽ sử dụng [Vite](https://vite.dev/) và [React](https://react.d
 
 #### Thành phần WASM {#wasm}
 
-Mã nguồn biên dịch thành WASM được viết bằng [Rust](https://rust-lang.org/). Bạn có thể xem nó trong [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Mã này chủ yếu là một giao diện giữa mã JavaScript và [Thư viện `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Mã nguồn được biên dịch thành WASM được viết bằng [Rust](https://rust-lang.org/). Bạn có thể xem nó trong [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Mã này chủ yếu là một giao diện giữa mã JavaScript và [thư viện `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
@@ -149,20 +149,20 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-Gói [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) cần tạo các giá trị ngẫu nhiên. Điều đó không thể được thực hiện bằng các phương tiện thuật toán thuần túy; nó yêu cầu quyền truy cập vào một quá trình vật lý như một nguồn entropy. Định nghĩa này chỉ định rằng chúng ta sẽ lấy entropy đó bằng cách yêu cầu trình duyệt mà chúng ta đang chạy.
+Gói [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) cần tạo ra các giá trị ngẫu nhiên. Điều đó không thể được thực hiện bằng các phương tiện thuật toán thuần túy; nó yêu cầu quyền truy cập vào một quá trình vật lý như một nguồn entropy. Định nghĩa này chỉ định rằng chúng ta sẽ lấy entropy đó bằng cách yêu cầu trình duyệt mà chúng ta đang chạy.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-[Thư viện này](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) cung cấp cho chúng ta các thông báo lỗi có ý nghĩa hơn khi mã WASM gặp lỗi nghiêm trọng (panic) và không thể tiếp tục.
+[Thư viện này](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) cung cấp cho chúng ta các thông báo lỗi có ý nghĩa hơn khi mã WASM gặp sự cố (panic) và không thể tiếp tục.
 
 ```toml
 [lib]
 crate-type = ["cdylib", "rlib"]
 ```
 
-Loại đầu ra cần thiết để tạo mã WASM.
+Loại đầu ra được yêu cầu để tạo mã WASM.
 
 **`lib.rs`**
 
@@ -174,7 +174,7 @@ use wasm_bindgen::prelude::*;
 
 Các định nghĩa để tạo một gói WASM từ Rust. Chúng được ghi chép [tại đây](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -182,7 +182,7 @@ use eth_stealth_addresses::{
 };
 ```
 
-Các hàm chúng ta cần từ [Thư viện `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Các hàm chúng ta cần từ [thư viện `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 ```rust
 use hex::{decode,encode};
@@ -207,11 +207,11 @@ Cách dễ nhất để trả về một đối tượng có nhiều trường l
         generate_stealth_meta_address();
 ```
 
-[`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) trả về ba trường:
+Hàm [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) trả về ba trường:
 
 - Địa chỉ meta (*K<sub>pub</sub>* và *V<sub>pub</sub>*)
-- Khóa riêng tư để xem (*V<sub>priv</sub>*)
-- Khóa riêng tư để chi tiêu (*K<sub>priv</sub>*)
+- Khóa riêng tư xem (*V<sub>priv</sub>*)
+- Khóa riêng tư chi tiêu (*K<sub>priv</sub>*)
 
 Cú pháp [tuple](https://doc.rust-lang.org/std/primitive.tuple.html) cho phép chúng ta tách các giá trị đó ra một lần nữa.
 
@@ -234,18 +234,18 @@ Hàm này biến một chuỗi thập lục phân (do JavaScript cung cấp) th�
 
 Biểu thức `<const N: usize>` được gọi là một [generic](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` là một tham số kiểm soát độ dài của mảng được trả về. Hàm thực sự được gọi là `str_to_array::<n>`, trong đó `n` là độ dài mảng.
 
-Giá trị trả về là `Option<[u8; N]>`, có nghĩa là mảng được trả về là [tùy chọn (optional)](https://doc.rust-lang.org/std/option/). Đây là một mô hình điển hình trong Rust cho các hàm có thể thất bại.
+Giá trị trả về là `Option<[u8; N]>`, có nghĩa là mảng được trả về là [tùy chọn](https://doc.rust-lang.org/std/option/). Đây là một mẫu điển hình trong Rust cho các hàm có thể thất bại.
 
-Ví dụ, nếu chúng ta gọi `str_to_array::10("bad060a7")`, hàm được cho là sẽ trả về một mảng mười giá trị, nhưng đầu vào chỉ có bốn byte. Hàm cần phải thất bại, và nó làm như vậy bằng cách trả về `None`. Giá trị trả về cho `str_to_array::4("bad060a7")` sẽ là `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+Ví dụ: nếu chúng ta gọi `str_to_array::10("bad060a7")`, hàm được cho là sẽ trả về một mảng mười giá trị, nhưng đầu vào chỉ có bốn byte. Hàm cần phải thất bại và nó thực hiện điều đó bằng cách trả về `None`. Giá trị trả về cho `str_to_array::4("bad060a7")` sẽ là `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
     // decode trả về Result<Vec<u8>, _>
     let vec = decode(s).ok()?;
 ```
 
-Hàm [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) trả về một `Result<Vec<u8>, FromHexError>`. Loại [`Result`](https://doc.rust-lang.org/std/result/) có thể chứa một kết quả thành công (`Ok(value)`) hoặc một lỗi (`Err(error)`).
+Hàm [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) trả về một `Result<Vec<u8>, FromHexError>`. Kiểu [`Result`](https://doc.rust-lang.org/std/result/) có thể chứa một kết quả thành công (`Ok(value)`) hoặc một lỗi (`Err(error)`).
 
-Phương thức `.ok()` biến `Result` thành một `Option`, có giá trị là giá trị `Ok()` nếu thành công hoặc `None` nếu không. Cuối cùng, [toán tử dấu chấm hỏi](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) hủy bỏ các hàm hiện tại và trả về một `None` nếu `Option` trống. Nếu không, nó sẽ mở gói (unwrap) giá trị và trả về giá trị đó (trong trường hợp này, để gán một giá trị cho `vec`).
+Phương thức `.ok()` biến `Result` thành một `Option`, giá trị của nó là giá trị `Ok()` nếu thành công hoặc `None` nếu không. Cuối cùng, [toán tử dấu chấm hỏi](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) hủy bỏ các hàm hiện tại và trả về `None` nếu `Option` trống. Nếu không, nó sẽ mở gói (unwrap) giá trị và trả về giá trị đó (trong trường hợp này, để gán một giá trị cho `vec`).
 
 Điều này có vẻ giống như một phương pháp phức tạp một cách kỳ lạ để xử lý lỗi, nhưng `Result` và `Option` đảm bảo rằng tất cả các lỗi đều được xử lý, theo cách này hay cách khác.
 
@@ -253,37 +253,37 @@ Phương thức `.ok()` biến `Result` thành một `Option`, có giá trị l�
     if vec.len() != N { return None; }
 ```
 
-Nếu số lượng byte không chính xác, đó là một sự thất bại, và chúng ta trả về `None`.
+Nếu số lượng byte không chính xác, đó là một sự thất bại và chúng ta trả về `None`.
 
 ```rust
     // try_into tiêu thụ vec và cố gắng tạo ra [u8; N]
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust có hai loại mảng. [Mảng](https://doc.rust-lang.org/std/primitive.array.html) có kích thước cố định. [Vector](https://doc.rust-lang.org/std/vec/index.html) có thể tăng và giảm kích thước. `hex::decode` trả về một vector, nhưng thư viện `eth_stealth_addresses` muốn nhận các mảng. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) chuyển đổi một giá trị thành một loại khác, ví dụ, một vector thành một mảng.
+Rust có hai kiểu mảng. [Mảng](https://doc.rust-lang.org/std/primitive.array.html) có kích thước cố định. [Vector](https://doc.rust-lang.org/std/vec/index.html) có thể tăng và giảm kích thước. `hex::decode` trả về một vector, nhưng thư viện `eth_stealth_addresses` muốn nhận các mảng. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) chuyển đổi một giá trị thành một kiểu khác, ví dụ: một vector thành một mảng.
 
 ```rust
     Some(array)
 }
 ```
 
-Rust không yêu cầu bạn sử dụng từ khóa [`return`](https://doc.rust-lang.org/std/keyword.return.html) khi trả về một giá trị ở cuối một hàm.
+Rust không yêu cầu bạn sử dụng từ khóa [`return`](https://doc.rust-lang.org/std/keyword.return.html) khi trả về một giá trị ở cuối hàm.
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-Hàm này nhận một địa chỉ meta công khai, bao gồm cả *V<sub>pub</sub>* và *K<sub>pub</sub>*. Nó trả về địa chỉ ẩn danh, khóa công khai để công bố (*R<sub>pub</sub>*), và một giá trị quét (scan value) một byte giúp tăng tốc độ xác định các địa chỉ đã công bố nào có thể thuộc về Alice.
+Hàm này nhận một địa chỉ meta công khai, bao gồm cả *V<sub>pub</sub>* và *K<sub>pub</sub>*. Nó trả về địa chỉ ẩn danh, khóa công khai để công bố (*R<sub>pub</sub>*) và một giá trị quét một byte giúp tăng tốc độ xác định địa chỉ đã công bố nào có thể thuộc về Alice.
 
-Giá trị quét là một phần của bí mật chung (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Giá trị này có sẵn cho Alice, và việc kiểm tra nó nhanh hơn nhiều so với việc kiểm tra xem *f(K<sub>pub</sub>+G\*hash(S))* có bằng địa chỉ đã công bố hay không.
+Giá trị quét là một phần của bí mật được chia sẻ (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Giá trị này có sẵn cho Alice và việc kiểm tra nó nhanh hơn nhiều so với việc kiểm tra xem *f(K<sub>pub</sub>+G\*hash(S))* có bằng địa chỉ đã công bố hay không.
 
 ```rust
     let (address, r_pub, scan) = 
         generate_stealth_address(&str_to_array::<66>(stealth_address)?);
 ```
 
-Chúng ta sử dụng [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) của thư viện.
+Chúng ta sử dụng hàm [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) của thư viện.
 
 ```rust
     format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",
@@ -310,12 +310,12 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-Hàm này sử dụng [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) của thư viện để tính toán khóa riêng tư nhằm rút tiền từ địa chỉ (*R<sub>priv</sub>*). Tính toán này yêu cầu các giá trị sau:
+Hàm này sử dụng hàm [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) của thư viện để tính toán khóa riêng tư nhằm rút tiền từ địa chỉ (*R<sub>priv</sub>*). Tính toán này yêu cầu các giá trị sau:
 
 - Địa chỉ (*Address=f(P<sub>pub</sub>)*)
 - Khóa công khai do Bill tạo (*R<sub>pub</sub>*)
-- Khóa riêng tư để xem (*V<sub>priv</sub>*)
-- Khóa riêng tư để chi tiêu (*K<sub>priv</sub>*)
+- Khóa riêng tư xem (*V<sub>priv</sub>*)
+- Khóa riêng tư chi tiêu (*K<sub>priv</sub>*)
 
 ```rust
 #[wasm_bindgen(start)]
@@ -329,7 +329,7 @@ pub fn main() {
 }
 ```
 
-Mã này chỉ định rằng đầu ra lỗi nghiêm trọng (panic) sẽ được gửi đến bảng điều khiển (console) JavaScript. Để xem nó hoạt động, hãy sử dụng ứng dụng và cung cấp cho Bill một địa chỉ meta không hợp lệ (chỉ cần thay đổi một chữ số thập lục phân). Bạn sẽ thấy lỗi này trong bảng điều khiển JavaScript:
+Mã này chỉ định rằng đầu ra sự cố (panic) được gửi đến bảng điều khiển JavaScript. Để xem nó hoạt động, hãy sử dụng ứng dụng và cung cấp cho Bill một địa chỉ meta không hợp lệ (chỉ cần thay đổi một chữ số thập lục phân). Bạn sẽ thấy lỗi này trong bảng điều khiển JavaScript:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -338,7 +338,7 @@ assertion `left == right` failed
  right: 1
 ```
 
-Theo sau là một dấu vết ngăn xếp (stack trace). Sau đó, cung cấp cho Bill địa chỉ meta hợp lệ, và cung cấp cho Alice một địa chỉ không hợp lệ hoặc một khóa công khai không hợp lệ. Bạn sẽ thấy lỗi này:
+Theo sau là một dấu vết ngăn xếp (stack trace). Sau đó, cung cấp cho Bill địa chỉ meta hợp lệ và cung cấp cho Alice một địa chỉ không hợp lệ hoặc một khóa công khai không hợp lệ. Bạn sẽ thấy lỗi này:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
@@ -351,7 +351,7 @@ Một lần nữa, theo sau là một dấu vết ngăn xếp.
 
 Giao diện người dùng được viết bằng [React](https://react.dev/) và được phục vụ bởi [Vite](https://vite.dev/). Bạn có thể tìm hiểu về chúng bằng cách sử dụng [hướng dẫn này](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Không cần [Wagmi](https://wagmi.sh/) ở đây vì chúng ta không tương tác trực tiếp với một Chuỗi khối hoặc một Ví.
 
-Phần duy nhất không rõ ràng của giao diện người dùng là kết nối WASM. Đây là cách nó hoạt động.
+Phần duy nhất không rõ ràng của giao diện người dùng là kết nối WASM. Dưới đây là cách nó hoạt động.
 
 **`vite.config.js`**
 
@@ -372,13 +372,13 @@ Chúng ta cần hai plugin Vite: [react](https://www.npmjs.com/package/@vitejs/p
 
 **`App.jsx`**
 
-Tệp này là thành phần chính của ứng dụng. Nó là một vùng chứa (container) bao gồm hai thành phần: `Alice` và `Bill`, giao diện người dùng cho những người dùng đó. Phần liên quan đến WASM là mã khởi tạo.
+Tệp này là thành phần chính của ứng dụng. Nó là một vùng chứa bao gồm hai thành phần: `Alice` và `Bill`, giao diện người dùng cho những người dùng đó. Phần liên quan đến WASM là mã khởi tạo.
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Khi chúng ta sử dụng [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), nó tạo ra hai tệp mà chúng ta sử dụng ở đây: một tệp wasm với mã thực tế (ở đây là `src/rust-wasm/pkg/rust_wasm_bg.wasm`) và một tệp JavaScript với các định nghĩa để sử dụng nó (ở đây là `src/rust_wasm/pkg/rust_wasm.js`). Xuất mặc định (default export) của tệp JavaScript đó là mã cần chạy để khởi tạo WASM.
+Khi chúng ta sử dụng [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), nó tạo ra hai tệp mà chúng ta sử dụng ở đây: một tệp wasm với mã thực tế (ở đây là `src/rust-wasm/pkg/rust_wasm_bg.wasm`) và một tệp JavaScript với các định nghĩa để sử dụng nó (ở đây là `src/rust-wasm/pkg/rust_wasm.js`). Xuất mặc định (default export) của tệp JavaScript đó là mã cần chạy để khởi tạo WASM.
 
 ```jsx
 function App() {
@@ -403,7 +403,7 @@ function App() {
 
 [Hook `useEffect`](https://react.dev/reference/react/useEffect) cho phép bạn chỉ định một hàm được thực thi khi các biến trạng thái thay đổi. Ở đây, danh sách các biến trạng thái trống (`[]`), vì vậy hàm này chỉ được thực thi một lần khi trang tải.
 
-Hàm effect phải trả về ngay lập tức. Để sử dụng mã bất đồng bộ, chẳng hạn như `init` của WASM (phải tải tệp `.wasm` và do đó cần thời gian), chúng ta định nghĩa một hàm [`async`](https://en.wikipedia.org/wiki/Async/await) nội bộ và chạy nó mà không có `await`.
+Hàm effect phải trả về ngay lập tức. Để sử dụng mã bất đồng bộ, chẳng hạn như `init` của WASM (phải tải tệp `.wasm` và do đó mất thời gian), chúng ta định nghĩa một hàm [`async`](https://en.wikipedia.org/wiki/Async/await) nội bộ và chạy nó mà không có `await`.
 
 **`Bill.jsx`**
 
