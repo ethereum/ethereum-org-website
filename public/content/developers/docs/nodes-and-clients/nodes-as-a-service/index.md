@@ -367,6 +367,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Easy access key management
     - Dedicated engineering support via chat, email, and Discord
 
+- [**Tatum**](https://tatum.io/)
+  - [Docs](https://docs.tatum.io/)
+  - Features
+    - RPC Gateway across 130+ networks with one API key
+    - Smart routing based on live node sync state, with caching
+    - Multi-region infrastructure (EU and US)
+    - HTTPS and WebSocket endpoints
+    - Dedicated API keys with guaranteed throughput
+    - Data API for indexed balances, transactions, NFTs and token data
+    - Real-time webhook notifications for on-chain events
+
 - [**Tokenview**](https://services.tokenview.io/)
   - [Docs](https://services.tokenview.io/docs?type=nodeService)
   - Features
