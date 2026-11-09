@@ -77,9 +77,15 @@ function redirectTo(request: NextRequest, pathname: string, status: number) {
 export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
+  // Canonical form is lowercase with a trailing slash. next.config's
+  // `trailingSlash: true` alone doesn't enforce it here: for unprefixed
+  // (English) paths, next-intl rewrites `/foo` to `/en/foo/` before Next's
+  // slash redirect runs, so `/foo` was served as a 200 duplicate of `/foo/`.
+  // Normalize both in one hop so a mixed-case, slash-less URL redirects once.
   const lowerPath = pathname.toLowerCase()
-  if (pathname !== lowerPath) {
-    return redirectTo(request, lowerPath, 301)
+  const canonicalPath = lowerPath.endsWith("/") ? lowerPath : `${lowerPath}/`
+  if (pathname !== canonicalPath) {
+    return redirectTo(request, canonicalPath, 301)
   }
 
   const firstSegment = getFirstSegment(lowerPath)
