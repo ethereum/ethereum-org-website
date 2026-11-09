@@ -4,6 +4,8 @@ import type { ToCItem } from "@/lib/types"
 
 import ToCLink from "@/components/TableOfContents/TableOfContentsLink"
 
+import ItemsTree from "./ItemsTree"
+
 const itemVariants = cva("last:mb-0", {
   variants: {
     variant: {
@@ -44,37 +46,24 @@ const ItemsList = ({
   activeHash,
   variant,
   ...rest
-}: ItemsListProps) => {
-  if (depth > maxDepth) return null
-
-  return (
-    <>
-      {items.map((item, index) => {
-        const { title, items } = item
-        return (
-          <li key={index} className={itemVariants({ variant })} {...rest}>
-            <ToCLink
-              variant={variant}
-              depth={depth}
-              item={item}
-              activeHash={activeHash}
-            />
-            {items && (
-              <ul key={title} className={listVariants({ variant })}>
-                <ItemsList
-                  items={items}
-                  depth={depth + 1}
-                  maxDepth={maxDepth}
-                  activeHash={activeHash}
-                />
-              </ul>
-            )}
-          </li>
-        )
-      })}
-    </>
-  )
-}
+}: ItemsListProps) => (
+  <ItemsTree
+    items={items}
+    depth={depth}
+    maxDepth={maxDepth}
+    renderItem={({ item, depth: itemDepth, children }) => (
+      <li className={itemVariants({ variant })} {...rest}>
+        <ToCLink
+          variant={variant}
+          depth={itemDepth}
+          item={item}
+          activeHash={activeHash}
+        />
+        {children && <ul className={listVariants({ variant })}>{children}</ul>}
+      </li>
+    )}
+  />
+)
 
 ItemsList.displayName = "TocItemsList"
 
