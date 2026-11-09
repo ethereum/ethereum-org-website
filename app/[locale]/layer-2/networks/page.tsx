@@ -10,7 +10,6 @@ import type { ExtendedRollup, Lang, PageParams } from "@/lib/types"
 
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
-import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
@@ -36,6 +35,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { walletsData } from "@/data/wallets/wallet-data"
 
+import Layer2NetworksTable from "./_components/Layer2NetworksTable"
 import PageJsonLD from "./page-jsonld"
 
 import {

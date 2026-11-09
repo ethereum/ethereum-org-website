@@ -3,15 +3,15 @@ import { useTranslations } from "next-intl"
 
 import { ExtendedRollup, FilterOption, Lang } from "@/lib/types"
 
-import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"
-import { useNetworkFilters } from "@/components/Layer2NetworksTable/hooks/useNetworkFilters"
-import NetworksNoResults from "@/components/Layer2NetworksTable/NetworksNoResults"
-import NetworkSubComponent from "@/components/Layer2NetworksTable/NetworksSubComponent"
+import DataTable from "@/components/DataTable"
 import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import DataTable from "../DataTable"
+import { useNetworkColumns } from "./hooks/useNetworkColumns"
+import { useNetworkFilters } from "./hooks/useNetworkFilters"
+import NetworksNoResults from "./NetworksNoResults"
+import NetworkSubComponent from "./NetworksSubComponent"
 
 const Layer2NetworksTable = ({
   layer2Data,

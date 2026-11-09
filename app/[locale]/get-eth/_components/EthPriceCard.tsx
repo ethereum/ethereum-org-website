@@ -4,13 +4,12 @@ import { ArrowUpRight, Info } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import Tooltip from "@/components/Tooltip"
+import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { formatPriceUSD, numberToPercent } from "@/lib/utils/numbers"
-
-import { Flex } from "./ui/flex"
 
 import { useGasEthPrice } from "@/hooks/useGasEthPrice"
 
