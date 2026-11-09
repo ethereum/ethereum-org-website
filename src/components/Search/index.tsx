@@ -12,7 +12,6 @@ import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import SearchButton from "./SearchButton"
-import SearchInputButton from "./SearchInputButton"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
@@ -102,7 +101,11 @@ const Search = ({
             data-testid="search-button"
             className="xl:hidden"
           />
-          <SearchInputButton className="max-xl:hidden" onClick={handleOpen} />
+          <SearchButton
+            withInput
+            className="max-xl:hidden"
+            onClick={handleOpen}
+          />
         </>
       )}
       <Portal.Root>
