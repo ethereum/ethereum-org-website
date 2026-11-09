@@ -38,10 +38,15 @@ export class BasePage {
   }
 
   /**
-   * Wait for page to be fully loaded with all network requests completed
+   * Wait for the document to be parsed and interactive.
+   *
+   * Deliberately not `load`: that waits for every subresource (images,
+   * telemetry, third-party scripts), so slow or blocked requests on a remote
+   * deployment can time out a page whose content is already rendered. Tests
+   * that need a specific element should wait on that element's locator.
    */
   async waitForPageReady(): Promise<void> {
-    await this.page.waitForLoadState()
+    await this.page.waitForLoadState("domcontentloaded")
   }
 
   /**
@@ -74,7 +79,7 @@ export class BasePage {
    * Navigate to a specific URL and wait for load
    */
   async navigateTo(url: string): Promise<void> {
-    await this.page.goto(url)
+    await this.page.goto(url, { waitUntil: "domcontentloaded" })
     await this.waitForPageReady()
   }
 

@@ -15,7 +15,9 @@ function expectLocalized(value: string | undefined) {
 }
 
 async function getJsonLdNode(page: Page, path: string, type: string) {
-  await page.goto(path)
+  // JSON-LD is server-rendered in the document head, so DOMContentLoaded is
+  // enough; waiting for `load` would couple this check to unrelated assets.
+  await page.goto(path, { waitUntil: "domcontentloaded" })
 
   const scripts = await page
     .locator('script[type="application/ld+json"]')
