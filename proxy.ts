@@ -72,7 +72,9 @@ const DEPRECATED_LOCALES = new Set([
 ])
 
 function redirectTo(request: NextRequest, pathname: string, status: number) {
-  const url = request.nextUrl.clone()
+  // A plain URL, not nextUrl.clone(): NextURL re-applies the request's own
+  // trailing-slash state when formatting, which would strip the slash we add.
+  const url = new URL(request.url)
   url.pathname = pathname
   return NextResponse.redirect(url, status)
 }
