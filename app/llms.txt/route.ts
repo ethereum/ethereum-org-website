@@ -8,8 +8,13 @@ import {
   buildFooterDipperLinks,
   buildFooterLinkSections,
 } from "@/lib/nav/footerLinks"
+import { createOptionsResponse } from "@/lib/utils/optionsResponse"
 
 export const dynamic = "force-static"
+
+export function OPTIONS() {
+  return createOptionsResponse(["GET", "HEAD"])
+}
 
 const INTRO = `# Ethereum.org
 

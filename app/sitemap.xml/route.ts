@@ -1,4 +1,5 @@
 import { LOCALES_CODES, SITE_URL } from "@/lib/constants"
+import { createOptionsResponse } from "@/lib/utils/optionsResponse"
 
 // Next's generateSitemaps (app/sitemaps/sitemap.ts) serves one shard per locale
 // at /sitemaps/sitemap/<locale>.xml but never emits an index for them. This
@@ -6,6 +7,10 @@ import { LOCALES_CODES, SITE_URL } from "@/lib/constants"
 // the URL already registered in Google Search Console keeps resolving instead of
 // 404ing, and crawlers discover every shard from one canonical entry point.
 export const dynamic = "force-static"
+
+export function OPTIONS() {
+  return createOptionsResponse(["GET", "HEAD"])
+}
 
 const XML_ESCAPE: Record<string, string> = {
   "&": "&amp;",

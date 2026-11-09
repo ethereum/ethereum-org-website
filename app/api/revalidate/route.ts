@@ -1,7 +1,13 @@
 import { revalidatePath } from "next/cache"
 import { NextRequest, NextResponse } from "next/server"
 
+import { createOptionsResponse } from "@/lib/utils/optionsResponse"
+
 import i18nConfig from "../../../i18n.config.json"
+
+export function OPTIONS() {
+  return createOptionsResponse(["GET", "HEAD"])
+}
 
 export async function GET(req: NextRequest) {
   const searchParams = req.nextUrl.searchParams
