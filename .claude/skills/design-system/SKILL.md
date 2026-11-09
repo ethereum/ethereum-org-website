@@ -12,8 +12,9 @@ Tailwind v4 (CSS-first config, no `tailwind.config.ts`) + React 19 / Next.js App
 The single highest-leverage habit for keeping this codebase consistent: **when you need new UI, look for a primitive or variant first, only invent if nothing fits.** Most "new component" instincts are actually "new variant" instincts in disguise.
 
 Before you write any UI code, ask:
+
 - Is there a primitive that already does this? (`Card`, `Button`, `Alert`, `Tag`, `Hero/*`)
-- Is the difference small enough to express as a *variant* on an existing primitive?
+- Is the difference small enough to express as a _variant_ on an existing primitive?
 - Can I compose existing primitives instead of inlining a long Tailwind class chain?
 
 If you find yourself writing `flex items-center gap-X rounded-Y border bg-... p-Z` for a card-like thing, you're reinventing `<Card>`. If you write `<p className="text-4xl font-bold">N</p>` for a stat, you're reinventing `<BigNumber>`. If you write `<div className="text-5xl font-bold">Title</div>`, you're reinventing `<h1>` (which is already styled by `base.css`). **Compose, don't inline.**
@@ -38,7 +39,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 
 Landmines where the code looks reasonable but the pattern is wrong. One line each; the canonical write-ups live in the named reference.
 
-- **Look-alike imports** -- Tooltip (`@/components/Tooltip`, not `ui/tooltip`), Modal (`ui/dialog-modal` vs `ui/dialog`; don't mix sources within a feature), Card (`ui/card` for app code, not `MarkdownCard`), Heroes (named exports of `@/components/Hero`; `title` is always the `<h1>`, no `header` prop). Decision trees: `references/canonical-imports.md`.
+- **Look-alike imports** -- TrackedTooltip (`@/components/Tooltip`, not `ui/tooltip`), Modal (`ui/dialog-modal` vs `ui/dialog`; don't mix sources within a feature), Card (`ui/card` for app code, not `MarkdownCard`), Heroes (named exports of `@/components/Hero`; `title` is always the `<h1>`, no `header` prop). Decision trees: `references/canonical-imports.md`.
 - **Stale shadcn token names** (`bg-popover`, `bg-muted`, `text-muted-foreground`, ...) linger in a few `ui/` files but don't resolve in this project's tokens. Don't add new uses. List: `references/tokens.md`; replacements: `references/cleanup-playbook.md`.
 - **`useColorModeValue` is a deprecated Chakra leftover** -- use `dark:` + semantic tokens.
 - **`Card` is variant-driven, not `className`-driven.** Padding/spacing/background/radius/text color go through `variant`/`size`; a `className` override means a missing variant case. Full system: `references/card-walkthrough.md`. Surprise behaviors (`isSecondary` no-op on `solid`, `CardBanner fit="contain"` auto-backdrop, `LinkBox` needs `LinkOverlay`, `commonControlClasses` shared with `Switch`): `references/gotchas.md`.
@@ -58,23 +59,23 @@ Old-shadow-token mapping table: `references/cleanup-playbook.md`.
 
 ## Quick "Where Do I Import From?" Cheatsheet
 
-| I need... | Import |
-|---|---|
-| Card | `import { Card, CardBanner, CardContent, CardTitle, CardParagraph } from "@/components/ui/card"` |
-| Modal/Dialog (typical) | `import Modal from "@/components/ui/dialog-modal"` (default export) |
-| Side sheet | `import { Sheet, ... } from "@/components/ui/sheet"` |
-| Tooltip | `import Tooltip from "@/components/Tooltip"` (NOT `@/components/ui/tooltip`) |
-| Button | `import { Button, ButtonLink } from "@/components/ui/buttons/Button"` |
-| Anchor (in prose) | `import InlineLink from "@/components/ui/Link"` (default) |
-| Anchor (CTA with arrow) | `import { LinkWithArrow } from "@/components/ui/Link"` |
-| Page hero | `import { PageHero, HubHero } from "@/components/Hero"` |
-| Inline alert | `import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"` |
-| Top-of-page banner | `import { Alert } from "@/components/ui/alert"` then `<Alert variant="banner">` |
-| Big numeric display | `import BigNumber from "@/components/BigNumber"` |
-| Layout | `import { Stack, HStack, VStack, Flex, Center } from "@/components/ui/flex"` |
-| Number formatting | `import { numberFormat } from "@/lib/utils/numbers"` |
-| Date formatting | `import { formatDateTime } from "@/lib/utils/date"` |
-| RTL flip helper | `import { useRtlFlip } from "@/hooks/useRtlFlip"` |
+| I need...               | Import                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------ |
+| Card                    | `import { Card, CardBanner, CardContent, CardTitle, CardParagraph } from "@/components/ui/card"` |
+| Modal/Dialog (typical)  | `import Modal from "@/components/ui/dialog-modal"` (default export)                              |
+| Side sheet              | `import { Sheet, ... } from "@/components/ui/sheet"`                                             |
+| TrackedTooltip          | `import TrackedTooltip from "@/components/Tooltip"` (NOT `@/components/ui/tooltip`)              |
+| Button                  | `import { Button, ButtonLink } from "@/components/ui/buttons/Button"`                            |
+| Anchor (in prose)       | `import InlineLink from "@/components/ui/Link"` (default)                                        |
+| Anchor (CTA with arrow) | `import { LinkWithArrow } from "@/components/ui/Link"`                                           |
+| Page hero               | `import { PageHero, HubHero } from "@/components/Hero"`                                          |
+| Inline alert            | `import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"`                  |
+| Top-of-page banner      | `import { Alert } from "@/components/ui/alert"` then `<Alert variant="banner">`                  |
+| Big numeric display     | `import BigNumber from "@/components/BigNumber"`                                                 |
+| Layout                  | `import { Stack, HStack, VStack, Flex, Center } from "@/components/ui/flex"`                     |
+| Number formatting       | `import { numberFormat } from "@/lib/utils/numbers"`                                             |
+| Date formatting         | `import { formatDateTime } from "@/lib/utils/date"`                                              |
+| RTL flip helper         | `import { useRtlFlip } from "@/hooks/useRtlFlip"`                                                |
 
 For full decision trees with all the look-alike landmines, see `references/canonical-imports.md`.
 

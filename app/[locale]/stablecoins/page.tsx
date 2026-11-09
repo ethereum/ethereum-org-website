@@ -27,7 +27,7 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinsTable, {
   type StablecoinsTableRow,
 } from "@/components/StablecoinsTable"
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -708,9 +708,9 @@ async function Page(props: { params: Promise<PageParams> }) {
                 <Section id="stablecoin-markets" className="text-start">
                   <h3 className="text-h2">
                     {t("page-stablecoins-top-coins")}&nbsp;
-                    <Tooltip content={tooltipContent}>
+                    <TrackedTooltip content={tooltipContent}>
                       <Info className="inline size-4" />
-                    </Tooltip>
+                    </TrackedTooltip>
                   </h3>
                   <p className="text-body-medium">
                     {t("page-stablecoins-top-coins-intro")}{" "}

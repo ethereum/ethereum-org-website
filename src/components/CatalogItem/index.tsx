@@ -11,7 +11,7 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
@@ -55,9 +55,11 @@ export const CatalogItemInfo = async ({
             <dt className="flex items-center gap-1 text-sm text-body-medium">
               {label}
               {tooltip && (
-                <Tooltip content={<p className="text-body">{tooltip}</p>}>
+                <TrackedTooltip
+                  content={<p className="text-body">{tooltip}</p>}
+                >
                   <Info className="size-3.5 shrink-0" aria-label={tooltip} />
-                </Tooltip>
+                </TrackedTooltip>
               )}
             </dt>
             <dd className="text-sm">{value}</dd>

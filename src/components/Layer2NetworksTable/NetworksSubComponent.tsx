@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from "next-intl"
 import { ExtendedRollup } from "@/lib/types"
 
 import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 
 import { formatCompactNumber } from "@/lib/utils/numbers"
 import { formatDuration } from "@/lib/utils/time"
@@ -30,7 +30,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div>
               <p className="text-sm font-bold text-pretty text-body-medium">
                 {t("page-layer-2-networks-age")}&nbsp;
-                <Tooltip
+                <TrackedTooltip
                   content={
                     <div className="flex flex-col gap-2">
                       <p className="text-lg font-bold">
@@ -53,7 +53,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   }}
                 >
                   <Info className="size-[0.875em] translate-y-0.5" />
-                </Tooltip>
+                </TrackedTooltip>
               </p>
               <p>
                 {network.launchDate
@@ -68,7 +68,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div>
               <p className="text-sm font-bold text-pretty text-body-medium">
                 {t("page-layer-2-networks-wallet-support")}&nbsp;
-                <Tooltip
+                <TrackedTooltip
                   content={
                     <div className="flex flex-col gap-2">
                       <p className="text-lg font-bold">
@@ -86,7 +86,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   }}
                 >
                   <Info className="size-[0.875em] translate-y-0.5" />
-                </Tooltip>
+                </TrackedTooltip>
               </p>
               <p>
                 <InlineLink
@@ -99,7 +99,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div>
               <p className="text-sm font-bold text-pretty text-body-medium">
                 {t("page-layer-2-networks-active-address")}&nbsp;
-                <Tooltip
+                <TrackedTooltip
                   content={
                     <div className="flex flex-col gap-2">
                       <p className="text-lg font-bold">
@@ -122,7 +122,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   }}
                 >
                   <Info className="size-[0.875em] translate-y-0.5" />
-                </Tooltip>
+                </TrackedTooltip>
               </p>
               <p>
                 {network.activeAddresses
@@ -133,7 +133,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div>
               <p className="text-sm font-bold text-pretty text-body-medium">
                 {t("page-layer-2-networks-fee-token")}&nbsp;
-                <Tooltip
+                <TrackedTooltip
                   content={
                     <div className="flex flex-col gap-2">
                       <p className="text-lg font-bold">
@@ -149,7 +149,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   }}
                 >
                   <Info className="size-[0.875em] translate-y-0.5" />
-                </Tooltip>
+                </TrackedTooltip>
               </p>
               <p>{network.feeToken.join(", ")}</p>
             </div>
@@ -162,7 +162,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <CardContent>
               <p className="text-sm font-bold text-pretty text-body-medium">
                 {t("page-layer-2-networks-network-usage")}&nbsp;
-                <Tooltip
+                <TrackedTooltip
                   content={
                     <div className="flex flex-col gap-2">
                       <p className="text-lg font-bold">
@@ -180,7 +180,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   }
                 >
                   <Info className="size-[0.875em] translate-y-0.5" />
-                </Tooltip>
+                </TrackedTooltip>
               </p>
               <NetworkUsageChart usageData={network.blockspaceData} />
             </CardContent>
