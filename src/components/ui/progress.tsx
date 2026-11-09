@@ -1,48 +1,56 @@
 import * as React from "react"
-import { cva, VariantProps } from "class-variance-authority"
+import { tv, type VariantProps } from "tailwind-variants"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 
-import { cn } from "@/lib/utils/cn"
-
-const progressIndicatorVariants = cva(
-  "h-full w-full flex-1 rounded-full transition-all",
-  {
-    variants: {
-      color: {
-        disabled: "bg-disabled",
-        primary: "bg-primary",
-      },
+const progressVariants = tv({
+  slots: {
+    root: "relative h-4 w-full overflow-hidden rounded-full",
+    indicator: "relative h-full rounded-full transition-[width] duration-500",
+  },
+  variants: {
+    color: {
+      disabled: { root: "bg-body-light", indicator: "bg-disabled" },
+      primary: { root: "bg-background", indicator: "bg-primary" },
     },
-    defaultVariants: {
-      color: "disabled",
+    // Chunky game style: a gloss stripe on the fill, and a visible nub at 0
+    shine: {
+      true: { indicator: "min-w-4 ease-out" },
     },
-  }
-)
+  },
+  defaultVariants: {
+    color: "disabled",
+  },
+})
 
-type ProgressProps = React.ComponentPropsWithoutRef<
-  typeof ProgressPrimitive.Root
-> &
-  VariantProps<typeof progressIndicatorVariants>
+type ProgressProps = React.ComponentProps<typeof ProgressPrimitive.Root> &
+  VariantProps<typeof progressVariants>
 
-const Progress = React.forwardRef<
-  React.ComponentRef<typeof ProgressPrimitive.Root>,
-  ProgressProps
->(({ className, value, color, ...props }, ref) => (
-  <ProgressPrimitive.Root
-    ref={ref}
-    className={cn(
-      "relative h-4 w-full overflow-hidden rounded-full bg-body-light",
-      color === "primary" ? "bg-background" : "bg-body-light",
-      className
-    )}
-    {...props}
-  >
-    <ProgressPrimitive.Indicator
-      className={progressIndicatorVariants({ color })}
-      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-    />
-  </ProgressPrimitive.Root>
-))
-Progress.displayName = ProgressPrimitive.Root.displayName
+const Progress = ({
+  className,
+  value,
+  color,
+  shine,
+  ...props
+}: ProgressProps) => {
+  const { root, indicator } = progressVariants({ color, shine })
+  return (
+    <ProgressPrimitive.Root
+      data-slot="progress"
+      className={root({ className })}
+      value={value}
+      {...props}
+    >
+      <ProgressPrimitive.Indicator
+        data-slot="progress-indicator"
+        className={indicator()}
+        style={{ width: `${value || 0}%` }}
+      >
+        {shine && (
+          <span className="absolute inset-x-2 top-1 h-1 rounded-full bg-white/35" />
+        )}
+      </ProgressPrimitive.Indicator>
+    </ProgressPrimitive.Root>
+  )
+}
 
 export { Progress }
