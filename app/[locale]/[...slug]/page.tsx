@@ -10,7 +10,6 @@ import type { SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
-import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
@@ -18,6 +17,8 @@ import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { topics } from "@/data/topics"
+
+import VideoWatch from "../_components/VideoWatch"
 
 import SlugJsonLD from "./page-jsonld"
 

@@ -3,12 +3,12 @@ import { getTranslations } from "next-intl/server"
 
 import type { TranslationKey } from "@/lib/types"
 
-import { cn } from "@/lib/utils/cn"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Card, CardParagraph, CardTitle } from "@/components/ui/card"
+import { Center } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 
-import { ButtonLink } from "./ui/buttons/Button"
-import { Card, CardParagraph, CardTitle } from "./ui/card"
-import { Center } from "./ui/flex"
-import { Grid } from "./ui/grid"
+import { cn } from "@/lib/utils/cn"
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement>
 

@@ -32,12 +32,13 @@ import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
-import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
 import { getIdFromHash } from "@/lib/utils/url"
+
+import VideoWatch from "../_components/VideoWatch"
 
 import PageJsonLD from "./page-jsonld"
 
