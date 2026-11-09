@@ -279,7 +279,7 @@ const CollectiblesCurrentYear = ({
                   address && !developerBadge.owned && "[&_img]:grayscale"
                 )}
                 src={developerBadge.image}
-                alt="Developer badge" // TODO: extract intl
+                alt={t("page-collectibles-developer-badge-alt")}
                 href={developerBadge.link}
               >
                 <h4 className="text-lg">
@@ -315,7 +315,7 @@ const CollectiblesCurrentYear = ({
                   address && !writingBadge.owned && "[&_img]:grayscale"
                 )}
                 src={writingBadge.image}
-                alt="Writer badge" // TODO: extract intl
+                alt={t("page-collectibles-writing-badge-alt")}
                 href={writingBadge.link}
               >
                 <h4 className="text-lg">
@@ -344,7 +344,7 @@ const CollectiblesCurrentYear = ({
                     "[&_img]:grayscale"
                 )}
                 src={designBadge.image}
-                alt="Design / user testing badge" // TODO: extract intl
+                alt={t("page-collectibles-design-badge-alt")}
                 href={designBadge.link}
               >
                 <h4 className="text-lg">
@@ -373,7 +373,7 @@ const CollectiblesCurrentYear = ({
                   address && !gitpoapBadge.owned && "[&_img]:grayscale"
                 )}
                 src={gitpoapBadge.image}
-                alt="GitPOAP badge" // TODO: extract intl
+                alt={t("page-collectibles-gitpoap-badge-alt")}
                 href={gitpoapBadge.link}
               >
                 <h4 className="text-lg">
@@ -411,7 +411,7 @@ const CollectiblesCurrentYear = ({
               <HighlightCardBody
                 href={translationBadge.link}
                 src={translationBadge.image}
-                alt="Translations"
+                alt={t("page-collectibles-translations-badge-alt")}
                 className={cn(
                   address && !translationBadge.owned && "[&_img]:grayscale"
                 )}
