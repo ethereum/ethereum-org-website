@@ -52,6 +52,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
 }
 
 export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
+  ["/courses/", "page-courses"],
   ["/staking/deposit-contract/", "page-staking-deposit-contract"],
   ["/staking/", "page-staking"],
   ["/layer-2/networks/", "page-layer-2-networks"],

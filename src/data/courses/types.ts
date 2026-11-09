@@ -1,0 +1,122 @@
+/**
+ * Course content is pure structure: every user-facing string lives in
+ * `page-courses.json`, keyed by convention (see `stepKey`) so the intl pipeline
+ * translates lessons like any other page namespace.
+ */
+
+export type CourseWidgetId =
+  | "key-pair"
+  | "gas-fee"
+  | "sign-verify"
+  | "block-builder"
+  | "hash-playground"
+  | "chain-tamper"
+  | "stake-vote"
+  | "address-check"
+  | "custody-sort"
+  | "node-network"
+  | "finality-clock"
+  | "gas-limit"
+  | "explorer-labels"
+  | "unit-converter"
+  | "supply-balance"
+  | "wrap-eth"
+  | "vending-machine"
+  | "call-sorter"
+  | "token-ledger"
+  | "approval-scope"
+
+/** Course accent colour; drives the path, buttons and art */
+export type CourseTheme = "purple" | "orange" | "teal" | "blue" | "pink"
+
+/** Decorative isometric illustration */
+export type CourseArtId =
+  | "diamond"
+  | "blocks"
+  | "coins"
+  | "vault"
+  | "tank"
+  | "contract"
+
+/** Icon on a lesson's path node */
+export type LessonIconId =
+  | "key"
+  | "scroll"
+  | "pen"
+  | "send"
+  | "fuel"
+  | "box"
+  | "fingerprint"
+  | "link"
+  | "shield"
+  | "at"
+  | "wallet"
+  | "server"
+  | "badge"
+  | "alert"
+  | "search"
+  | "coins"
+  | "calculator"
+  | "flame"
+  | "gift"
+  | "piggy"
+  | "code"
+  | "pointer"
+  | "eye"
+  | "bug"
+
+interface StepBase {
+  /** Unique within its lesson; forms the translation key prefix */
+  id: string
+}
+
+/** Read-and-continue card. Keys: `-p1` .. `-p{paragraphs}` */
+export interface ConceptStep extends StepBase {
+  type: "concept"
+  paragraphs: number
+  /** Renders as a highlighted takeaway card */
+  takeaway?: boolean
+  /** Illustration above the text */
+  art?: CourseArtId
+}
+
+/**
+ * Multiple choice. Keys: `-prompt`, `-opt-{id}`, `-fb-{id}` for every option,
+ * plus `-explain` when `multi`.
+ */
+export interface ChoiceStep extends StepBase {
+  type: "choice"
+  options: string[]
+  correct: string[]
+  multi?: boolean
+}
+
+/** Tap-to-order. `items` is the correct order. Keys: `-prompt`, `-item-{id}`, `-explain` */
+export interface OrderStep extends StepBase {
+  type: "order"
+  items: string[]
+}
+
+/** Hands-on widget that reports completion. Keys: `-prompt`, `-explain` */
+export interface InteractiveStep extends StepBase {
+  type: "interactive"
+  widget: CourseWidgetId
+}
+
+export type LessonStep = ConceptStep | ChoiceStep | OrderStep | InteractiveStep
+
+/** Keys: `{course}-{lesson}-title`, `{course}-{lesson}-summary` */
+export interface Lesson {
+  id: string
+  icon: LessonIconId
+  steps: LessonStep[]
+}
+
+/** Keys: `{course}-title`, `{course}-description` */
+export interface Course {
+  id: string
+  level: "beginner"
+  theme: CourseTheme
+  art: CourseArtId
+  lessons: Lesson[]
+}
