@@ -126,6 +126,10 @@ module.exports = (phase) => {
     // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
     serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
+    // Give proxy.ts the URL as requested. Netlify's adapter otherwise appends
+    // the trailing slash before the proxy runs, so `/foo` can't be told apart
+    // from `/foo/` and is served as a 200 duplicate instead of redirected.
+    skipProxyUrlNormalize: true,
     images: {
       // Disable Next's on-disk image LRU: its eager mkdir('.next/cache/images')
       // crashes on Netlify's read-only Lambda FS as an unhandled rejection.
