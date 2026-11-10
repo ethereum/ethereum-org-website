@@ -10,12 +10,16 @@ import AccountsDiagram from "@/components/Diagrams/Accounts"
 import AttestationsDiagram from "@/components/Diagrams/Attestations"
 import BlockStateDiagram from "@/components/Diagrams/BlockState"
 import EvmZonesDiagram from "@/components/Diagrams/EvmZones"
+import ExAnteReorgDiagram from "@/components/Diagrams/ExAnteReorg"
 import GasEvmDiagram from "@/components/Diagrams/GasEvm"
 import GasTxDiagram from "@/components/Diagrams/GasTx"
 import NodeClientsDiagram, {
   NodeArchitectureDiagram,
 } from "@/components/Diagrams/NodeClients"
 import TxApplyDiagram from "@/components/Diagrams/TxApply"
+import ValidatorKeysDiagram, {
+  KeyDerivationDiagram,
+} from "@/components/Diagrams/ValidatorKeys"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
 import FileContributors from "@/components/FileContributors"
@@ -49,13 +53,16 @@ export const docsComponents = {
   Divider,
   Emoji,
   EvmZonesDiagram,
+  ExAnteReorgDiagram,
   GasEvmDiagram,
   GasTxDiagram,
   GlossaryTooltip,
+  KeyDerivationDiagram,
   NodeArchitectureDiagram,
   NodeClientsDiagram,
   PieChart,
   TxApplyDiagram,
+  ValidatorKeysDiagram,
   YouTube,
 } as MDXRemoteProps["components"]
 

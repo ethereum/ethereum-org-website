@@ -56,20 +56,20 @@ Losing this key before updating withdrawal credentials to `0x01` type means losi
 
 Separating the validator keys from the Ethereum account keys enables multiple validators to be run by a single user.
 
-![validator key schematic](validator-key-schematic.png)
+<ValidatorKeysDiagram />
 
-**Note**: Exiting from staking duties and withdrawing a validator's balance currently requires signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. However, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) is a proposal that will allow a user to trigger a validator's exit and withdrawals its balance by signing exit messages with the withdrawal key in the future. This will reduce trust assumptions by enabling stakers who delegate ETH to [staking-as-a-service providers](/staking/saas/#what-is-staking-as-a-service) to remain in control of their funds.
+**Note**: A validator can exit by signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. Since the Pectra upgrade, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) also lets the withdrawal address trigger a validator's exit, and partial withdrawals for `0x02` validators. This reduces trust assumptions by letting stakers who delegate ETH to [staking-as-a-service providers](/staking/saas/#what-is-staking-as-a-service) remain in control of their funds.
 
 ## Deriving keys from a seed phrase {#deriving-keys-from-seed}
 
 If every 32 ETH staked required a new set of 2 completely independent keys, key management would quickly become unwieldy, especially for users running multiple validators. Instead, multiple validator keys can be derived from a single common secret and storing that single secret allows access to multiple validator keys.
 
-[Mnemonics](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) and paths are prominent features that users often encounter when [they access](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) their wallets. The mnemonic is a sequence of words that act as an initial seed for a private key. When combined with additional data, the mnemonic generates a hash known as the 'master key'. This can be thought of as the root of a tree. Branches from this root can then be derived using a hierarchical path so that child nodes can exist as combinations of their parent node's hash and their index in the tree. Read about [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) and [BIP-19](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) standards for mnemonic-based key generation.
+[Mnemonics](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) and paths are prominent features that users often encounter when [they access](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) their wallets. The mnemonic is a sequence of words that act as an initial seed for a private key. When combined with additional data, the mnemonic generates a hash known as the 'master key'. This can be thought of as the root of a tree. Branches from this root can then be derived using a hierarchical path so that child nodes can exist as combinations of their parent node's hash and their index in the tree. Read about [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) and [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) standards for mnemonic-based key generation.
 
 These paths have the following structure, which will be familiar to users who have interacted with hardware wallets:
 
 ```
-m/44'/60'/0'/0`
+m/44'/60'/0'/0
 ```
 
 The slashes in this path separate components of the private key as follows:
@@ -90,9 +90,9 @@ This logic enables users to attach as many validators as possible to a single **
       [m / 2]
 ```
 
-Each branch is separated by a `/` so `m/2` means start with the master key and follow branch 2. In the schematic below a single mnemonic phrase is used to store three withdrawal keys, each with two associated validators.
+Each branch is separated by a `/` so `m/2` means start with the master key and follow branch 2. Validator keys follow [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334): validator `i` gets its withdrawal key at `m/12381/3600/i/0` and its signing key at `m/12381/3600/i/0/0` (12381 identifies the BLS12-381 curve, 3600 the coin type for consensus-layer keys).
 
-![validator key logic](multiple-keys.png)
+<KeyDerivationDiagram />
 
 ## Further reading {#further-reading}
 
