@@ -3,6 +3,8 @@
 // redirects or renders a 200 duplicate. Every redirect must land on the final
 // slashed URL in one hop; `null` hands the path to next-intl.
 
+import type { NextConfig } from "next"
+import { PHASE_PRODUCTION_BUILD } from "next/constants"
 import { match } from "next/dist/compiled/path-to-regexp"
 import { expect, test } from "@playwright/test"
 
@@ -12,7 +14,21 @@ import {
   resolvePathRoute,
 } from "@/lib/utils/redirects"
 
+import nextConfig from "../../../next.config.js"
 import legacyRedirects from "../../../redirects.config.js"
+
+test("Netlify hands the proxy the raw, slash-less path", async () => {
+  // Without this, Netlify appends the slash before the proxy runs and the
+  // slash redirect below never fires in production.
+  // withSentryConfig's typings hide that the export is a phase function
+  const loadConfig = nextConfig as unknown as (
+    phase: string,
+    context: object
+  ) => Promise<NextConfig>
+  const config = await loadConfig(PHASE_PRODUCTION_BUILD, {})
+  expect(config.skipProxyUrlNormalize).toBe(true)
+  expect(config.trailingSlash).toBe(true)
+})
 
 const redirect = (pathname: string) => ({ type: "redirect", pathname })
 const rewrite = (pathname: string) => ({ type: "rewrite", pathname })

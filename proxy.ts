@@ -21,7 +21,9 @@ export default async function proxy(request: NextRequest) {
   // Case, deprecated-locale, trailing-slash and legacy-source normalization
   const route = resolvePathRoute(pathname)
   if (route) {
-    const url = request.nextUrl.clone()
+    // Plain URL: a NextURL drops the trailing slash when the request lacked
+    // one. Set pathname rather than resolving it, so `//host` stays a path.
+    const url = new URL(request.url)
     url.pathname = route.pathname
     return route.type === "redirect"
       ? NextResponse.redirect(url, 301)

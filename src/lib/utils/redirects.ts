@@ -100,8 +100,9 @@ export type PathRoute = { type: "redirect" | "rewrite"; pathname: string }
  *
  * On Netlify the proxy runs before Next's own trailingSlash redirect and
  * next-intl rewrites `/foo` to `/en/foo/`, so without the slash redirect here
- * a slash-less English URL renders a 200 duplicate. Locally Next redirects
- * first and the proxy never sees slash-less paths.
+ * a slash-less English URL renders a 200 duplicate. The proxy only sees the
+ * slash-less path because next.config sets `skipProxyUrlNormalize`. Locally
+ * Next redirects first and the proxy never sees slash-less paths.
  */
 export const resolvePathRoute = (pathname: string): PathRoute | null => {
   const lowerPath = pathname.toLowerCase()
