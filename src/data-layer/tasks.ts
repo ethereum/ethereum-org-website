@@ -1,6 +1,7 @@
 /**
  * Trigger.dev scheduled tasks for data fetching.
  *
+ * Monthly tasks run on the 1st at midnight UTC.
  * Weekly tasks run on Sundays at midnight UTC.
  * Daily tasks run at midnight UTC.
  * Hourly tasks run every hour.
@@ -47,10 +48,12 @@ interface TaskOverrides {
 // Task definition: storage key + fetch function + optional runtime overrides
 type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
+// Each run scans ~250GB of BigQuery; monthly stays inside the 1TB free tier
+const MONTHLY: TaskDef[] = [[KEYS.ACCOUNT_HOLDERS, fetchAccountHolders]]
+
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
 const DAILY: TaskDef[] = [
-  [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
   [KEYS.BLOB_STATS, fetchBlobStats],
   [KEYS.COLLECTIBLES, fetchCollectibles],
@@ -103,18 +106,26 @@ function createDataTask([key, fetchFn, overrides]: TaskDef) {
   })
 }
 
+const monthlyFetchTasks = MONTHLY.map(createDataTask)
 const weeklyFetchTasks = WEEKLY.map(createDataTask)
 const dailyFetchTasks = DAILY.map(createDataTask)
 const hourlyFetchTasks = HOURLY.map(createDataTask)
 
 // Must export for trigger.dev to discover
 export const allFetchTasks = [
+  ...monthlyFetchTasks,
   ...weeklyFetchTasks,
   ...dailyFetchTasks,
   ...hourlyFetchTasks,
 ]
 
 // ─── Scheduled orchestrators ───
+export const monthlyTask = schedules.task({
+  id: "monthly-data-fetch",
+  cron: "0 0 1 * *",
+  run: () => Promise.all(monthlyFetchTasks.map((t) => t.trigger())),
+})
+
 export const weeklyTask = schedules.task({
   id: "weekly-data-fetch",
   cron: "0 0 * * 0", // Sundays at midnight UTC
