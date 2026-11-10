@@ -13,10 +13,11 @@ interface LayoutProps {
 const Layout = async ({ children, params }: LayoutProps) => {
   const { locale } = await params
   return (
-    <>
+    // Course tints need more colour to show over the dark background (see theme.ts)
+    <div className="contents dark:[--course-soft-amount:30%] dark:[--course-softer-amount:15%]">
       {children}
       <CourseAppRegistration scope={courseAppScope(locale)} />
-    </>
+    </div>
   )
 }
 

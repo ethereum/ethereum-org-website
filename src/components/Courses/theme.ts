@@ -49,8 +49,9 @@ export const courseThemeStyle = (theme: CourseTheme) => {
     "--course": fill,
     "--course-strong": strong,
     "--course-bright": bright,
-    "--course-soft": `color-mix(in oklab, ${fill} 14%, var(--color-background))`,
-    "--course-softer": `color-mix(in oklab, ${fill} 7%, var(--color-background))`,
+    // Tint amounts come from the courses layout, which raises them in dark mode
+    "--course-soft": `color-mix(in oklab, ${fill} var(--course-soft-amount, 14%), var(--color-background))`,
+    "--course-softer": `color-mix(in oklab, ${fill} var(--course-softer-amount, 7%), var(--color-background))`,
   } as CSSProperties
 }
 

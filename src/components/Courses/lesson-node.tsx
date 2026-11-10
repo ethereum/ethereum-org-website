@@ -69,7 +69,7 @@ export const NodeHalo = () => (
     <path
       d={FACE}
       transform="translate(50 50) scale(1.22) translate(-50 -46)"
-      className="fill-(--course-soft) stroke-(--course-soft) dark:fill-[color-mix(in_oklab,var(--course)_30%,var(--color-background))] dark:stroke-[color-mix(in_oklab,var(--course)_30%,var(--color-background))]"
+      className="fill-(--course-soft) stroke-(--course-soft)"
       strokeWidth={ROUND + 6}
       strokeLinejoin="round"
     />
