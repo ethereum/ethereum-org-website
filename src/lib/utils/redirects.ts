@@ -105,6 +105,16 @@ export type PathRoute = { type: "redirect" | "rewrite"; pathname: string }
  * Next redirects first and the proxy never sees slash-less paths.
  */
 export const resolvePathRoute = (pathname: string): PathRoute | null => {
+  // Collapse `//` first: Netlify relativizes same-origin Locations, so a
+  // target like `//evil.com/x/` would become an open redirect.
+  const collapsed = pathname.replace(/\/{2,}/g, "/")
+  if (pathname !== collapsed) {
+    return {
+      type: "redirect",
+      pathname: withTrailingSlash(collapsed.toLowerCase()),
+    }
+  }
+
   const lowerPath = pathname.toLowerCase()
   if (pathname !== lowerPath) {
     return { type: "redirect", pathname: withTrailingSlash(lowerPath) }

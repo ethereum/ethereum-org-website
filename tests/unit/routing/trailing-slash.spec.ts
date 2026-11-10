@@ -65,6 +65,26 @@ test("mixed case and deprecated locales redirect straight to the slashed URL", (
   expect(resolvePathRoute("/nl/")).toEqual(redirect("/"))
 })
 
+test("no redirect target is protocol-relative", () => {
+  // Netlify strips the origin from same-origin Locations, so `//host/...`
+  // would send the browser off-site
+  for (const path of [
+    "//evil.com/x",
+    "//Evil.com/x/",
+    "///evil.com/x",
+    "/nl//evil.com/x",
+    "/NL//Evil.com/x/",
+    "/de//evil.com/x",
+    "/foo//bar",
+  ]) {
+    const route = resolvePathRoute(path)
+    expect(route, path).not.toBeNull()
+    expect(route!.pathname, path).toMatch(/^\/(?!\/)/)
+    expect(route!.pathname, path).not.toContain("//")
+  }
+  expect(resolvePathRoute("//evil.com/x")).toEqual(redirect("/evil.com/x/"))
+})
+
 test("legacy sources rewrite to the form their next.config redirect matches", () => {
   // No slash redirect first: the config rule fires on the rewritten path and
   // sends the request straight to its destination.
