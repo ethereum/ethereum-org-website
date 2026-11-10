@@ -350,7 +350,7 @@ export function IsoCylinder({
  * A pipe: a thin neutral tube at rest (a stroke with a hairline highlight
  * down its middle). While something flows through it, a one-shot dash flow
  * runs along it (static under reduced motion): orange for gas, or blue with
- * `hue="entity"` for messages and value, whose tube also turns blue when lit.
+ * `hue="entity"` for messages, whose tube also turns blue when lit.
  * Change `flowKey` to restart.
  */
 export function IsoPipe({
