@@ -28,6 +28,7 @@ export const generateMetadata = async ({
   const t = await getTranslations({ locale, namespace: "page-courses" })
   return {
     manifest: courseAppManifestHref(locale),
+    icons: { apple: "/images/courses/app-icon-180.png" },
     appleWebApp: {
       capable: true,
       title: t("page-courses-app-short-name"),

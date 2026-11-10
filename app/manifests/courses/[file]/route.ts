@@ -39,19 +39,16 @@ export const GET = async (
       scope,
       display: "standalone",
       background_color: "#ffffff",
-      theme_color: "#ffffff",
-      icons: [
-        {
-          src: "/images/assets/manifest-app-icon-192.png",
+      theme_color: "#6c24df",
+      // Artwork sits inside the maskable safe zone, so one file serves both
+      icons: [192, 512].flatMap((size) =>
+        (["any", "maskable"] as const).map((purpose) => ({
+          src: `/images/courses/app-icon-${size}.png`,
           type: "image/png",
-          sizes: "192x192",
-        },
-        {
-          src: "/images/assets/manifest-app-icon-512.png",
-          type: "image/png",
-          sizes: "512x512",
-        },
-      ],
+          sizes: `${size}x${size}`,
+          purpose,
+        }))
+      ),
     },
     { headers: { "Content-Type": "application/manifest+json" } }
   )
