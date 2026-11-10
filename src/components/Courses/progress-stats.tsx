@@ -9,11 +9,8 @@ import { Button } from "@/components/ui/buttons/Button"
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import {
-  getActiveStreak,
-  isStreakExtendedToday,
-  useCourseProgress,
-} from "./useCourseProgress"
+import { getActiveStreak, isStreakExtendedToday } from "./streak"
+import { useCourseProgress } from "./useCourseProgress"
 
 const chip =
   "m-0 flex items-center gap-1.5 rounded-full border-2 border-border bg-background px-3 py-1 font-bold tabular-nums"

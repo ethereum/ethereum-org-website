@@ -42,6 +42,7 @@ const Page = async (props: { params: Promise<LessonPageParams> }) => {
           courseId={courseId}
           lesson={found.lesson}
           nextLessonId={found.next?.id}
+          examAfter={found.course.exam.length > 0}
         />
       </main>
     </I18nProvider>

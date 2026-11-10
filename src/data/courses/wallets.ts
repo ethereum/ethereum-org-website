@@ -125,4 +125,67 @@ export const walletsCourse: Course = {
       ],
     },
   ],
+  exam: [
+    {
+      id: "balance",
+      type: "choice",
+      options: ["app", "chain", "maker"],
+      correct: ["chain"],
+    },
+    {
+      id: "public",
+      type: "choice",
+      options: ["send", "move", "key"],
+      correct: ["send"],
+    },
+    {
+      id: "restore",
+      type: "choice",
+      options: ["support", "gone", "phrase"],
+      correct: ["phrase"],
+    },
+    {
+      id: "website",
+      type: "choice",
+      options: ["type", "close", "part"],
+      correct: ["close"],
+    },
+    {
+      id: "signature",
+      type: "choice",
+      options: ["identity", "key", "reveal", "exact"],
+      correct: ["key", "exact"],
+      multi: true,
+    },
+    {
+      id: "unreadable",
+      type: "choice",
+      options: ["reject", "sign", "phrase"],
+      correct: ["reject"],
+    },
+    {
+      id: "lookalike",
+      type: "choice",
+      options: ["recent", "trusted", "ends"],
+      correct: ["trusted"],
+    },
+    {
+      id: "mistake",
+      type: "choice",
+      options: ["holder", "support", "bounce"],
+      correct: ["holder"],
+    },
+    {
+      id: "frozen",
+      type: "choice",
+      options: ["password", "phrase", "exchange"],
+      correct: ["exchange"],
+    },
+    {
+      id: "savings",
+      type: "choice",
+      options: ["phone", "split", "exchange"],
+      correct: ["split"],
+    },
+  ],
 }

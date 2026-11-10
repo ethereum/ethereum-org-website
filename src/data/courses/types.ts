@@ -112,6 +112,13 @@ export interface Lesson {
   steps: LessonStep[]
 }
 
+/**
+ * Final exam question: a repeat or close variant of a lesson question, never
+ * new material. One attempt, so no per-option feedback. Keys under
+ * `{course}-exam-{id}`: `-prompt`, `-opt-{id}`, `-explain`.
+ */
+export type ExamStep = ChoiceStep
+
 /** Keys: `{course}-title`, `{course}-description` */
 export interface Course {
   id: string
@@ -119,4 +126,6 @@ export interface Course {
   theme: CourseTheme
   art: CourseArtId
   lessons: Lesson[]
+  /** Earns the course trophy; see `EXAM_PASS_MARK` */
+  exam: ExamStep[]
 }

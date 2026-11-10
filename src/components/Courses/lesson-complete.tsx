@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import CourseArt from "./art/course-art"
+import Confetti from "./confetti"
 import StreakCelebration from "./streak-celebration"
 import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
@@ -22,29 +23,9 @@ interface LessonCompleteProps {
   accuracy: number
   courseHref: string
   nextHref?: string
+  /** `nextHref` is the course check rather than a lesson */
+  nextIsExam?: boolean
 }
-
-const CONFETTI_COLORS = [
-  "var(--course)",
-  "var(--color-yellow-400)",
-  "var(--color-pink-400)",
-  "var(--color-teal-400)",
-  "var(--color-orange-400)",
-]
-
-// Deterministic spread: no Math.random, so renders are stable
-const PIECES = Array.from({ length: 40 }, (_, i) => {
-  const angle = (i / 40) * Math.PI * 2 + (i % 3) * 0.3
-  const distance = 140 + ((i * 37) % 120)
-  return {
-    x: Math.cos(angle) * distance,
-    y: Math.sin(angle) * distance * 0.7 - 60,
-    rotate: (i * 47) % 360,
-    color: CONFETTI_COLORS[i % CONFETTI_COLORS.length],
-    round: i % 4 === 0,
-    delay: (i % 5) * 0.03,
-  }
-})
 
 // XP sparks fly from the badge down into the total bar
 const SPARKS = Array.from({ length: 10 }, (_, i) => ({
@@ -68,6 +49,7 @@ const LessonComplete = ({
   accuracy,
   courseHref,
   nextHref,
+  nextIsExam,
 }: LessonCompleteProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
@@ -115,39 +97,7 @@ const LessonComplete = ({
             exit={animate ? { opacity: 0, x: -40 } : undefined}
           >
             <div className="relative w-36">
-              {animate && (
-                <div aria-hidden className="absolute top-1/2 left-1/2">
-                  {PIECES.map((piece, i) => (
-                    <motion.span
-                      key={i}
-                      className={cn(
-                        "absolute block size-2.5",
-                        piece.round ? "rounded-full" : "rounded-[2px]"
-                      )}
-                      style={{ backgroundColor: piece.color }}
-                      initial={{
-                        x: 0,
-                        y: 0,
-                        opacity: 1,
-                        scale: 0.4,
-                        rotate: 0,
-                      }}
-                      animate={{
-                        x: piece.x,
-                        y: [0, piece.y, piece.y + 140],
-                        opacity: [1, 1, 0],
-                        scale: 1,
-                        rotate: piece.rotate + 360,
-                      }}
-                      transition={{
-                        duration: 1.6,
-                        delay: piece.delay,
-                        ease: "easeOut",
-                      }}
-                    />
-                  ))}
-                </div>
-              )}
+              {animate && <Confetti />}
               <motion.div
                 initial={animate ? { scale: 0.3, rotate: -20 } : false}
                 animate={{ scale: 1, rotate: 0 }}
@@ -286,7 +236,9 @@ const LessonComplete = ({
               hideArrow
               className={chunkyButton}
             >
-              {t("page-courses-next-lesson")}
+              {nextIsExam
+                ? t("page-courses-next-exam")
+                : t("page-courses-next-lesson")}
             </ButtonLink>
           )}
           <ButtonLink

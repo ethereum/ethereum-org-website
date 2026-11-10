@@ -147,4 +147,68 @@ export const etherCourse: Course = {
       ],
     },
   ],
+  exam: [
+    {
+      id: "own",
+      type: "choice",
+      options: ["eth", "shares", "network"],
+      correct: ["eth"],
+    },
+    {
+      id: "jobs",
+      type: "choice",
+      options: ["fees", "stake", "subscription", "money"],
+      correct: ["fees", "stake", "money"],
+      multi: true,
+    },
+    {
+      id: "smallest",
+      type: "choice",
+      options: ["eth", "gwei", "wei"],
+      correct: ["wei"],
+    },
+    {
+      id: "gwei",
+      type: "choice",
+      options: ["same", "big", "fraction"],
+      correct: ["big"],
+    },
+    {
+      id: "shrink",
+      type: "choice",
+      options: ["busy", "quiet", "fixed"],
+      correct: ["busy"],
+    },
+    {
+      id: "rules",
+      type: "choice",
+      options: ["founders", "bank", "rules"],
+      correct: ["rules"],
+    },
+    {
+      id: "discount",
+      type: "choice",
+      options: ["normal", "backed", "name"],
+      correct: ["backed"],
+    },
+    {
+      id: "keep",
+      type: "choice",
+      options: ["keep", "all", "little"],
+      correct: ["keep"],
+    },
+    {
+      id: "risks",
+      type: "choice",
+      options: ["slashing", "forever", "offline", "trust"],
+      correct: ["slashing", "offline", "trust"],
+      multi: true,
+    },
+    {
+      id: "solo",
+      type: "choice",
+      options: ["exchange", "solo", "pool"],
+      correct: ["solo"],
+    },
+  ],
 }

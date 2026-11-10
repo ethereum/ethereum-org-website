@@ -89,6 +89,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
             theme={course.theme}
             scenery={sceneryFor(courseIndex * 2, course.lessons.length)}
             nextCourseId={nextCourseId}
+            examQuestions={course.exam.length}
             lessons={course.lessons.map(({ id, icon, steps }) => ({
               id,
               icon,

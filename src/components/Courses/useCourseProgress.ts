@@ -2,7 +2,9 @@
 
 import { useCallback } from "react"
 
-import { lessonProgressKey } from "@/data/courses"
+import { EXAM_PASS_MARK, lessonProgressKey } from "@/data/courses"
+
+import { extendStreak, type Streak } from "./streak"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
 
@@ -11,6 +13,7 @@ const COURSE_PROGRESS_KEY = "ethereum-org-course-progress"
 export const XP_LESSON = 10
 export const XP_PERFECT_BONUS = 5
 export const XP_REPLAY = 5
+export const XP_EXAM_PASS = 30
 
 export interface LessonRecord {
   completedAt: string
@@ -18,11 +21,19 @@ export interface LessonRecord {
   accuracy: number
 }
 
+export interface ExamRecord {
+  /** Best score, 0-1 */
+  best: number
+  passedAt: string | null
+}
+
 export interface CourseProgress {
   version: 1
   xp: number
-  streak: { count: number; lastDay: string | null }
+  streak: Streak
   lessons: Record<string, LessonRecord>
+  /** By course id; absent in progress saved before exams existed */
+  exams?: Record<string, ExamRecord>
 }
 
 export interface LessonReward {
@@ -36,38 +47,16 @@ export interface LessonReward {
   totalAfter: number
 }
 
+export interface ExamReward extends LessonReward {
+  passed: boolean
+}
+
 const INITIAL_PROGRESS: CourseProgress = {
   version: 1,
   xp: 0,
   streak: { count: 0, lastDay: null },
   lessons: {},
 }
-
-// Local calendar day: a streak follows the learner's own midnight, not UTC.
-const dayKey = (date: Date) =>
-  [
-    date.getFullYear(),
-    String(date.getMonth() + 1).padStart(2, "0"),
-    String(date.getDate()).padStart(2, "0"),
-  ].join("-")
-
-const yesterdayKey = (now: Date) => {
-  const d = new Date(now)
-  d.setDate(d.getDate() - 1)
-  return dayKey(d)
-}
-
-/** Streak as displayed: a streak not extended today or yesterday has lapsed */
-export const getActiveStreak = (
-  { count, lastDay }: CourseProgress["streak"],
-  now = new Date()
-) => (lastDay === dayKey(now) || lastDay === yesterdayKey(now) ? count : 0)
-
-/** True once a lesson has been completed today, so the streak is safe */
-export const isStreakExtendedToday = (
-  { lastDay }: CourseProgress["streak"],
-  now = new Date()
-) => lastDay === dayKey(now)
 
 export const useCourseProgress = () => {
   const [progress, setProgress] = useLocalStorage<CourseProgress>(
@@ -81,29 +70,50 @@ export const useCourseProgress = () => {
     [progress.lessons]
   )
 
+  const isExamPassed = useCallback(
+    (courseId: string) => !!progress.exams?.[courseId]?.passedAt,
+    [progress.exams]
+  )
+
+  /** XP and streak for finishing a lesson or exam; `update` adds the record */
+  const award = (
+    xp: number,
+    perfect: boolean,
+    update: (now: Date) => Partial<CourseProgress>
+  ): LessonReward => {
+    const now = new Date()
+    const { streak, extended } = extendStreak(progress.streak, now)
+
+    setProgress({
+      ...progress,
+      ...update(now),
+      xp: progress.xp + xp,
+      streak,
+    })
+
+    return {
+      xp,
+      perfect,
+      streak: streak.count,
+      streakExtended: extended,
+      totalBefore: progress.xp,
+      totalAfter: progress.xp + xp,
+    }
+  }
+
   const completeLesson = (
     courseId: string,
     lessonId: string,
     accuracy: number
   ): LessonReward => {
-    const now = new Date()
-    const today = dayKey(now)
     const key = lessonProgressKey(courseId, lessonId)
     const previous = progress.lessons[key]
-
     const perfect = accuracy === 1
     const xp = previous
       ? XP_REPLAY
       : XP_LESSON + (perfect ? XP_PERFECT_BONUS : 0)
 
-    const { count, lastDay } = progress.streak
-    const streak =
-      lastDay === today ? count : lastDay === yesterdayKey(now) ? count + 1 : 1
-
-    setProgress({
-      ...progress,
-      xp: progress.xp + xp,
-      streak: { count: streak, lastDay: today },
+    return award(xp, perfect, (now) => ({
       lessons: {
         ...progress.lessons,
         [key]: {
@@ -111,16 +121,28 @@ export const useCourseProgress = () => {
           accuracy: Math.max(accuracy, previous?.accuracy ?? 0),
         },
       },
-    })
+    }))
+  }
 
-    return {
-      xp,
-      perfect,
-      streak,
-      streakExtended: lastDay !== today,
-      totalBefore: progress.xp,
-      totalAfter: progress.xp + xp,
-    }
+  /** Any attempt counts for the streak; the trophy needs `EXAM_PASS_MARK` */
+  const completeExam = (courseId: string, score: number): ExamReward => {
+    const previous = progress.exams?.[courseId]
+    const passed = score >= EXAM_PASS_MARK
+    const firstPass = passed && !previous?.passedAt
+    const reward = award(
+      firstPass ? XP_EXAM_PASS : XP_REPLAY,
+      score === 1,
+      (now) => ({
+        exams: {
+          ...progress.exams,
+          [courseId]: {
+            best: Math.max(score, previous?.best ?? 0),
+            passedAt: previous?.passedAt ?? (passed ? now.toISOString() : null),
+          },
+        },
+      })
+    )
+    return { ...reward, passed }
   }
 
   const resetProgress = () => setProgress(INITIAL_PROGRESS)
@@ -129,6 +151,8 @@ export const useCourseProgress = () => {
     progress,
     isLessonComplete,
     completeLesson,
+    isExamPassed,
+    completeExam,
     resetProgress,
   }
 }

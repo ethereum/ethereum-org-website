@@ -108,4 +108,67 @@ export const blockchainCourse: Course = {
       ],
     },
   ],
+  exam: [
+    {
+      id: "tiny-change",
+      type: "choice",
+      options: ["one", "all", "none"],
+      correct: ["all"],
+    },
+    {
+      id: "work-back",
+      type: "choice",
+      options: ["reverse", "power", "guess"],
+      correct: ["guess"],
+    },
+    {
+      id: "rewrite",
+      type: "choice",
+      options: ["after", "next", "none"],
+      correct: ["after"],
+    },
+    {
+      id: "spot-edit",
+      type: "choice",
+      options: ["report", "slow", "links"],
+      correct: ["links"],
+    },
+    {
+      id: "stall",
+      type: "choice",
+      options: ["third", "half", "two-thirds"],
+      correct: ["third"],
+    },
+    {
+      id: "double-sign",
+      type: "choice",
+      options: ["penalty", "slashed", "nothing"],
+      correct: ["slashed"],
+    },
+    {
+      id: "back-online",
+      type: "choice",
+      options: ["broken", "trust", "sync"],
+      correct: ["sync"],
+    },
+    {
+      id: "run-node",
+      type: "choice",
+      options: ["anyone", "stake", "check", "earn"],
+      correct: ["anyone", "check"],
+      multi: true,
+    },
+    {
+      id: "wait",
+      type: "choice",
+      options: ["block", "thirteen", "checkpoint"],
+      correct: ["thirteen"],
+    },
+    {
+      id: "undo",
+      type: "choice",
+      options: ["third", "edit", "nodes"],
+      correct: ["third"],
+    },
+  ],
 }

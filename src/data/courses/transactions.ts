@@ -122,4 +122,72 @@ export const transactionsCourse: Course = {
       ],
     },
   ],
+  exam: [
+    // lifecycle
+    {
+      id: "sign",
+      type: "choice",
+      options: ["block", "key", "sign"],
+      correct: ["sign"],
+    },
+    {
+      id: "undo",
+      type: "choice",
+      options: ["final", "support", "window"],
+      correct: ["final"],
+    },
+    // gas
+    {
+      id: "fee",
+      type: "choice",
+      options: ["gas", "fee", "price", "transfer"],
+      correct: ["fee"],
+    },
+    {
+      id: "wait",
+      type: "choice",
+      options: ["currency", "limit", "wait"],
+      correct: ["wait"],
+    },
+    // blocks
+    {
+      id: "tip",
+      type: "choice",
+      options: ["keep", "burn", "limit"],
+      correct: ["keep"],
+    },
+    {
+      id: "final",
+      type: "choice",
+      options: ["instant", "finalized", "never"],
+      correct: ["finalized"],
+    },
+    // failed
+    {
+      id: "outcome",
+      type: "choice",
+      options: ["sent", "fee", "refund", "undone"],
+      correct: ["fee", "undone"],
+      multi: true,
+    },
+    {
+      id: "headroom",
+      type: "choice",
+      options: ["higher", "same", "fails"],
+      correct: ["same"],
+    },
+    // explorer
+    {
+      id: "proof",
+      type: "choice",
+      options: ["hash", "screenshot", "key"],
+      correct: ["hash"],
+    },
+    {
+      id: "status",
+      type: "choice",
+      options: ["block", "fee", "value", "status"],
+      correct: ["status"],
+    },
+  ],
 }

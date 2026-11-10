@@ -30,17 +30,18 @@ const StreakCelebration = ({ streak }: { streak: number }) => {
   })
   const int = numberFormat(locale)
 
-  // The last seven local days, ending today. Formatted at UTC noon of each
-  // local date so the weekday label can't drift across midnight.
+  // A streak week starts on the streak's first day and refills every 7 days.
+  // Labels format at UTC noon of each local date so they can't drift a day.
+  const offset = (streak - 1) % 7
   const days = Array.from({ length: 7 }, (_, i) => {
     const d = new Date()
-    d.setDate(d.getDate() - (6 - i))
+    d.setDate(d.getDate() - offset + i)
     const noon = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), 12)
     return {
       label: formatDateTime(locale, noon, { weekday: "narrow" }),
       name: formatDateTime(locale, noon, { weekday: "long" }),
-      lit: 6 - i < streak,
-      today: i === 6,
+      lit: i <= offset,
+      today: i === offset,
     }
   })
 
@@ -110,7 +111,7 @@ const StreakCelebration = ({ streak }: { streak: number }) => {
               <span className="sr-only">
                 {lit
                   ? t("page-courses-streak-day-done", { day: name })
-                  : t("page-courses-streak-day-missed", { day: name })}
+                  : t("page-courses-streak-day-ahead", { day: name })}
               </span>
             </motion.span>
           </li>

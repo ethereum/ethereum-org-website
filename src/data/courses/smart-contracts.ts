@@ -112,4 +112,68 @@ export const smartContractsCourse: Course = {
       ],
     },
   ],
+  exam: [
+    {
+      id: "underpay",
+      type: "choice",
+      options: ["owe", "reject", "creator"],
+      correct: ["reject"],
+    },
+    {
+      id: "deployed",
+      type: "choice",
+      options: ["anytime", "validators", "published"],
+      correct: ["published"],
+    },
+    {
+      id: "gas",
+      type: "choice",
+      options: ["stock", "buy", "balance", "send"],
+      correct: ["buy", "send"],
+      multi: true,
+    },
+    {
+      id: "price-check",
+      type: "choice",
+      options: ["decline", "always", "once"],
+      correct: ["decline"],
+    },
+    {
+      id: "transfer",
+      type: "choice",
+      options: ["created", "travel", "updated"],
+      correct: ["updated"],
+    },
+    {
+      id: "restore",
+      type: "choice",
+      options: ["list", "gone", "eth"],
+      correct: ["list"],
+    },
+    {
+      id: "source",
+      type: "choice",
+      options: ["hidden", "machine", "change"],
+      correct: ["machine"],
+    },
+    {
+      id: "swap",
+      type: "choice",
+      options: ["three", "two", "one"],
+      correct: ["one"],
+    },
+    {
+      id: "audit",
+      type: "choice",
+      options: ["lowers", "bug-free", "useless"],
+      correct: ["lowers"],
+    },
+    {
+      id: "approval",
+      type: "choice",
+      options: ["still", "disconnect", "revoke", "held"],
+      correct: ["still", "revoke"],
+      multi: true,
+    },
+  ],
 }

@@ -35,6 +35,15 @@ One new idea per lesson. If the takeaway needs "and" twice, split the lesson.
 - Prompts state the task, never the UI: no "then check your answer" or "press Continue". The footer buttons carry that.
 - Prose is second person, present tense, short sentences, with no exclamation marks outside cheers.
 
+## Course check (exam)
+
+Every course ends in a course check: the trophy node on the path, route `/courses/<id>/exam/`, data in the course's `exam` array (`ExamStep`, keys under `{course}-exam-`). Passing at `EXAM_PASS_MARK` (80%) earns the trophy; it can be retaken any time and is open before every lesson is done, like the lessons themselves.
+
+- Ten choice questions, two per lesson, in lesson order.
+- It tests what the course taught and introduces nothing: each question repeats a lesson question, widget puzzle or stated fact with a new scenario or wording. Never copy a lesson string verbatim, and never use a fact the course (or an earlier course on the path) didn't teach.
+- One attempt per question, then the right answer shows. So there are no per-option `fb-` notes, just one `-explain` that works whether the learner was right or wrong (don't open with "Right" or "Wrong"). It shows again in the review screen.
+- `multi` at most twice per check.
+
 ## Checks
 
 ```bash

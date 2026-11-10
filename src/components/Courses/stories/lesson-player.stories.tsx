@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
-import { getLesson } from "@/data/courses"
+import { EXAM_ID, getCourse, getLesson } from "@/data/courses"
 
 import LessonPlayer from "../lesson-player"
 
@@ -111,5 +111,17 @@ export const SmartContractVendingMachine: Story = {
   args: {
     courseId: "smart-contracts",
     lesson: contractWhat.lesson,
+  },
+}
+
+const wallets = getCourse("wallets")!
+
+/** Course check (`exam`): one attempt per question, answer revealed, results and review at the end */
+export const CourseCheck: Story = {
+  args: {
+    courseId: "wallets",
+    lesson: { id: EXAM_ID, icon: "badge", steps: wallets.exam },
+    exam: true,
+    nextCourseId: "blockchain",
   },
 }

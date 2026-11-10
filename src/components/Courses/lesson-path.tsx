@@ -2,16 +2,19 @@
 
 import { Check, Trophy } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import * as PopoverPrimitive from "@radix-ui/react-popover"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import {
   courseHref,
   type CourseTheme,
+  EXAM_PASS_MARK,
+  examHref,
   lessonHref,
   type LessonIconId,
 } from "@/data/courses"
@@ -37,6 +40,8 @@ interface LessonPathProps {
   scenery: SceneryId[]
   /** Next course in the suggested order; the finish popover points to it */
   nextCourseId?: string
+  /** Course check length; 0 leaves the trophy as a plain finish marker */
+  examQuestions?: number
   /** Mock only: pretend the first N lessons are done */
   previewDone?: number
 }
@@ -79,11 +84,14 @@ const LessonPath = ({
   lessons,
   scenery,
   nextCourseId,
+  examQuestions = 0,
   previewDone,
 }: LessonPathProps) => {
   const t = useTranslations("page-courses")
-  const { isLessonComplete } = useCourseProgress()
+  const locale = useLocale()
+  const { progress, isLessonComplete, isExamPassed } = useCourseProgress()
   const animate = !useReducedMotion()
+  const percent = numberFormat(locale, { style: "percent" })
 
   const done = lessons.map((lesson, i) =>
     previewDone === undefined
@@ -92,6 +100,15 @@ const LessonPath = ({
   )
   const nextIndex = done.findIndex((d) => !d)
   const allDone = nextIndex === -1
+  const hasExam = examQuestions > 0
+  // Without a check the trophy is earned by finishing the lessons
+  const earned = hasExam
+    ? previewDone === undefined
+      ? isExamPassed(courseId)
+      : false
+    : allDone
+  const examNext = hasExam && allDone && !earned
+  const best = progress.exams?.[courseId]?.best
   const count = lessons.length
   const height = nodeY(count) + NODE
 
@@ -249,12 +266,12 @@ const LessonPath = ({
         })}
       </ol>
 
-      {/* Finish line: a real action once earned, a quiet placeholder before */}
+      {/* Finish line: the course check earns the trophy */}
       <div
         className="absolute flex flex-col items-center gap-2 text-center"
         style={{ left: nodeX(count) - 70, top: nodeY(count) - 48, width: 140 }}
       >
-        {allDone ? (
+        {earned ? (
           <PopoverPrimitive.Root>
             <motion.div
               animate={animate ? { scale: [1, 1.05, 1] } : undefined}
@@ -277,6 +294,13 @@ const LessonPath = ({
                 {t("page-courses-path-finish")}
               </p>
               <p className="m-0 mt-2">{t("page-courses-path-finish-line")}</p>
+              {best !== undefined && (
+                <p className="m-0 mt-2 text-sm">
+                  {t("page-courses-path-exam-best", {
+                    score: percent.format(best),
+                  })}
+                </p>
+              )}
               {nextCourseId ? (
                 <>
                   <p className="m-0 mt-4 text-sm font-bold tracking-wide uppercase">
@@ -294,6 +318,71 @@ const LessonPath = ({
                   {t("page-courses-path-all-courses")}
                 </PopoverAction>
               )}
+              {hasExam && (
+                <PopoverAction href={examHref(courseId)} secondary>
+                  {t("page-courses-path-exam-retake")}
+                </PopoverAction>
+              )}
+            </PathPopover>
+          </PopoverPrimitive.Root>
+        ) : hasExam ? (
+          <PopoverPrimitive.Root>
+            {examNext && (
+              <span
+                aria-hidden
+                className="pointer-events-none absolute -top-11 left-1/2 z-10 -translate-x-1/2 motion-safe:animate-bounce"
+              >
+                <span className="relative block rounded-xl border-2 border-(--course-soft) bg-background px-3 py-1 text-sm font-bold tracking-wide whitespace-nowrap text-(--course-strong) uppercase dark:text-(--course-bright)">
+                  {t("page-courses-path-start")}
+                </span>
+              </span>
+            )}
+            <motion.div
+              animate={
+                animate && examNext ? { scale: [1, 1.05, 1] } : undefined
+              }
+              transition={BREATHE}
+            >
+              <PopoverPrimitive.Trigger asChild>
+                <Button
+                  variant="ghost"
+                  className={cn(
+                    "size-24 rounded-3xl border-2 border-dashed bg-background p-0 hover:bg-background-highlight [&>svg]:size-12",
+                    examNext
+                      ? "border-(--course) text-(--course-strong) dark:text-(--course-bright) hover-link:!text-(--course-strong) dark:hover-link:!text-(--course-bright)"
+                      : "border-border text-disabled hover-link:!text-body-medium"
+                  )}
+                >
+                  <Trophy aria-hidden />
+                  <span className="sr-only">{t("page-courses-path-exam")}</span>
+                </Button>
+              </PopoverPrimitive.Trigger>
+            </motion.div>
+            <PathPopover theme={theme}>
+              <p className="m-0 text-lg leading-snug font-bold">
+                {t("page-courses-path-exam")}
+              </p>
+              <p className="m-0 mt-2">
+                {t("page-courses-path-exam-line", {
+                  count: examQuestions,
+                  mark: percent.format(EXAM_PASS_MARK),
+                })}
+              </p>
+              {!allDone && (
+                <p className="m-0 mt-2 text-sm">
+                  {t("page-courses-path-exam-early")}
+                </p>
+              )}
+              {best !== undefined && (
+                <p className="m-0 mt-2 text-sm">
+                  {t("page-courses-path-exam-best", {
+                    score: percent.format(best),
+                  })}
+                </p>
+              )}
+              <PopoverAction href={examHref(courseId)}>
+                {t("page-courses-path-start")}
+              </PopoverAction>
             </PathPopover>
           </PopoverPrimitive.Root>
         ) : (
@@ -302,9 +391,11 @@ const LessonPath = ({
           </div>
         )}
         <p className="m-0 text-sm font-bold">
-          {allDone
+          {earned
             ? t("page-courses-path-finish")
-            : t("page-courses-path-finish-locked")}
+            : hasExam
+              ? t("page-courses-path-exam")
+              : t("page-courses-path-finish-locked")}
         </p>
       </div>
     </div>
@@ -334,16 +425,24 @@ const PathPopover = ({
 
 const PopoverAction = ({
   href,
+  secondary,
   children,
 }: {
   href: string
+  /** Outline on the course colour, for a lesser second action */
+  secondary?: boolean
   children: React.ReactNode
 }) => (
   <ButtonLink
     href={href}
     variant="ghost"
     hideArrow
-    className="mt-4 min-h-12 w-full rounded-2xl border-0 border-b-4 border-black/20 bg-white font-bold tracking-wide text-(--course-strong) uppercase active:translate-y-0.5 active:border-b-2 hover-link:!text-(--course-strong)"
+    className={cn(
+      "min-h-12 w-full rounded-2xl font-bold tracking-wide uppercase active:translate-y-0.5",
+      secondary
+        ? "mt-2 border-2 border-white/50 bg-transparent text-white hover-link:bg-white/10 hover-link:!text-white"
+        : "mt-4 border-0 border-b-4 border-black/20 bg-white text-(--course-strong) active:border-b-2 hover-link:!text-(--course-strong)"
+    )}
   >
     {children}
   </ButtonLink>

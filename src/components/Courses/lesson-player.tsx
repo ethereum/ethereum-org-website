@@ -12,6 +12,8 @@ import { cn } from "@/lib/utils/cn"
 
 import {
   courseHref,
+  EXAM_PASS_MARK,
+  examHref,
   type Lesson,
   lessonHref,
   type LessonStep,
@@ -27,15 +29,29 @@ import InteractiveStep, { isGradedWidget } from "./steps/interactive-step"
 import OrderStep, { isOrderComplete, isOrderCorrect } from "./steps/order-step"
 import type { StepStatus } from "./steps/types"
 import type { WidgetAnswer } from "./widgets/types"
+import ExamComplete from "./exam-complete"
 import ExitLessonButton from "./exit-lesson-button"
 import LessonComplete from "./lesson-complete"
 import { chunkyButton, lessonThemeStyle } from "./theme"
-import { type LessonReward, useCourseProgress } from "./useCourseProgress"
+import {
+  type ExamReward,
+  type LessonReward,
+  useCourseProgress,
+} from "./useCourseProgress"
 
 interface LessonPlayerProps {
   courseId: string
   lesson: Lesson
   nextLessonId?: string
+  /**
+   * Final exam: one attempt per question with the answer revealed, scored
+   * against `EXAM_PASS_MARK`. `lesson.id` is `EXAM_ID`.
+   */
+  exam?: boolean
+  /** Exam only: where Continue goes after a pass */
+  nextCourseId?: string
+  /** Last lesson of a course with a check: completion points to it */
+  examAfter?: boolean
 }
 
 /** Answer per step type: picks, placed order, widget done, or puzzle answer */
@@ -88,18 +104,31 @@ const LessonPlayer = ({
   courseId,
   lesson,
   nextLessonId,
+  exam,
+  nextCourseId,
+  examAfter,
 }: LessonPlayerProps) => {
   const t = useTranslations("page-courses")
   const reduceMotion = useReducedMotion()
-  const { completeLesson } = useCourseProgress()
+  const { completeLesson, completeExam } = useCourseProgress()
 
   const [index, setIndex] = useState(0)
   const [values, setValues] = useState<Record<string, StepValue>>({})
   const [status, setStatus] = useState<StepStatus>("answering")
   const [firstTry, setFirstTry] = useState<Record<string, boolean>>({})
   const [combo, setCombo] = useState(0)
-  const [reward, setReward] = useState<LessonReward | null>(null)
+  const [reward, setReward] = useState<LessonReward | ExamReward | null>(null)
   const [accuracy, setAccuracy] = useState(1)
+
+  const restart = () => {
+    setIndex(0)
+    setValues({})
+    setStatus("answering")
+    setFirstTry({})
+    setCombo(0)
+    setReward(null)
+    window.scrollTo({ top: 0 })
+  }
 
   const stepRef = useRef<HTMLDivElement>(null)
 
@@ -116,9 +145,10 @@ const LessonPlayer = ({
   }, [index])
 
   const total = lesson.steps.length
+  const answered = status === "correct" || (exam && status === "incorrect")
   const progressValue = reward
     ? 100
-    : ((index + (status === "correct" ? 1 : 0)) / total) * 100
+    : ((index + (answered ? 1 : 0)) / total) * 100
 
   const recordResult = (correct: boolean) => {
     if (step.id in firstTry) return
@@ -171,12 +201,18 @@ const LessonPlayer = ({
       ? graded.filter(({ id }) => firstTry[id]).length / graded.length
       : 1
     setAccuracy(score)
-    setReward(completeLesson(courseId, lesson.id, score))
+    setReward(
+      exam
+        ? completeExam(courseId, score)
+        : completeLesson(courseId, lesson.id, score)
+    )
   }
 
   const canContinue =
     !reward &&
-    (status === "correct" || (!isGraded(step) && isReady(step, value)))
+    (status === "correct" ||
+      (exam && status === "incorrect") ||
+      (!isGraded(step) && isReady(step, value)))
   const explored =
     step.type === "interactive" && !isGraded(step) && value === true
 
@@ -210,6 +246,7 @@ const LessonPlayer = ({
 
   const feedbackKey = (() => {
     if (status === "answering" || !isGraded(step)) return null
+    if (exam) return keyFor("explain")
     if (step.type === "choice")
       return (
         choiceFeedbackKey(step, value as string[], keyFor) ??
@@ -239,6 +276,7 @@ const LessonPlayer = ({
             value={(value as string[]) ?? []}
             onChange={handleEdit}
             status={status}
+            reveal={exam}
           />
         )
       case "order":
@@ -301,15 +339,43 @@ const LessonPlayer = ({
         </div>
 
         <h1 className="m-0 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
-          {t(`${courseId}-${lesson.id}-title`)}
+          {exam
+            ? `${t(`${courseId}-title`)}: ${t("page-courses-exam-title")}`
+            : t(`${courseId}-${lesson.id}-title`)}
         </h1>
 
-        {reward ? (
+        {reward && exam && "passed" in reward ? (
+          <ExamComplete
+            reward={reward}
+            score={accuracy}
+            passMark={EXAM_PASS_MARK}
+            results={lesson.steps
+              .filter((s) => s.type === "choice")
+              .map((s) => ({
+                step: s,
+                picked: (values[s.id] as string[] | undefined) ?? [],
+                correct: !!firstTry[s.id],
+              }))}
+            keyFor={(stepId, suffix) =>
+              stepKey(courseId, lesson.id, stepId, suffix)
+            }
+            courseHref={courseHref(courseId)}
+            nextCourseId={nextCourseId}
+            onRetake={restart}
+          />
+        ) : reward ? (
           <LessonComplete
             reward={reward}
             accuracy={accuracy}
             courseHref={courseHref(courseId)}
-            nextHref={nextLessonId && lessonHref(courseId, nextLessonId)}
+            nextHref={
+              nextLessonId
+                ? lessonHref(courseId, nextLessonId)
+                : examAfter
+                  ? examHref(courseId)
+                  : undefined
+            }
+            nextIsExam={!nextLessonId && examAfter}
           />
         ) : (
           <AnimatePresence mode="wait" initial={false}>
@@ -413,7 +479,18 @@ const LessonPlayer = ({
             </AnimatePresence>
 
             <div className="flex shrink-0 justify-end md:ms-auto">
-              {status === "incorrect" ? (
+              {status === "incorrect" && exam ? (
+                <Button
+                  variant="ghost"
+                  onClick={handleContinue}
+                  className={cn(
+                    chunkyButton,
+                    "w-full border-red-800 bg-error md:w-auto"
+                  )}
+                >
+                  {t("page-courses-continue")}
+                </Button>
+              ) : status === "incorrect" ? (
                 <Button
                   variant="ghost"
                   onClick={handleRetry}

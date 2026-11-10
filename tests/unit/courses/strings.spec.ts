@@ -8,8 +8,8 @@
 
 import { expect, test } from "@playwright/test"
 
-import type { LessonStep } from "../../../src/data/courses"
-import { COURSES, stepKey } from "../../../src/data/courses"
+import type { ExamStep, LessonStep } from "../../../src/data/courses"
+import { COURSES, EXAM_ID, stepKey } from "../../../src/data/courses"
 import en from "../../../src/intl/en/page-courses.json"
 
 const stepSuffixes = (step: LessonStep): string[] => {
@@ -29,6 +29,13 @@ const stepSuffixes = (step: LessonStep): string[] => {
   }
 }
 
+// One attempt per exam question, so one explanation instead of per-option notes
+const examSuffixes = (step: ExamStep) => [
+  "prompt",
+  ...step.options.map((id) => `opt-${id}`),
+  "explain",
+]
+
 const expected = COURSES.flatMap((course) => [
   `${course.id}-title`,
   `${course.id}-description`,
@@ -41,6 +48,11 @@ const expected = COURSES.flatMap((course) => [
       )
     ),
   ]),
+  ...course.exam.flatMap((step) =>
+    examSuffixes(step).map((suffix) =>
+      stepKey(course.id, EXAM_ID, step.id, suffix)
+    )
+  ),
 ])
 
 const contentKeys = Object.keys(en).filter(
@@ -64,6 +76,8 @@ test.describe("course strings", () => {
     expect(dupes(COURSES.map(({ id }) => id))).toEqual([])
     for (const course of COURSES) {
       expect(dupes(course.lessons.map(({ id }) => id))).toEqual([])
+      expect(course.lessons.map(({ id }) => id)).not.toContain(EXAM_ID)
+      expect(dupes(course.exam.map(({ id }) => id))).toEqual([])
       for (const lesson of course.lessons)
         expect(dupes(lesson.steps.map(({ id }) => id))).toEqual([])
     }
@@ -71,12 +85,14 @@ test.describe("course strings", () => {
 
   test("choice answers are among the options", () => {
     for (const course of COURSES)
-      for (const lesson of course.lessons)
-        for (const step of lesson.steps)
-          if (step.type === "choice") {
-            expect(step.correct.length).toBeGreaterThan(0)
-            for (const id of step.correct) expect(step.options).toContain(id)
-            if (!step.multi) expect(step.correct).toHaveLength(1)
-          }
+      for (const step of [
+        ...course.lessons.flatMap(({ steps }) => steps),
+        ...course.exam,
+      ])
+        if (step.type === "choice") {
+          expect(step.correct.length).toBeGreaterThan(0)
+          for (const id of step.correct) expect(step.options).toContain(id)
+          if (!step.multi) expect(step.correct).toHaveLength(1)
+        }
   })
 })

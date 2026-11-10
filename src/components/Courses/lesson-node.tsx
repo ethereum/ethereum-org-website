@@ -60,12 +60,15 @@ export const NodeBody = ({ lit }: { lit: boolean }) => {
   )
 }
 
-/** Soft halo in the node's silhouette, for the "up next" breathing loop */
+/**
+ * Soft halo in the node's silhouette, for the "up next" breathing loop.
+ * Centred on face plus wall (y 50), not the face alone (y 46).
+ */
 export const NodeHalo = () => (
   <svg aria-hidden viewBox="0 0 100 100" className="size-full overflow-visible">
     <path
       d={FACE}
-      transform="translate(50 50) scale(1.22) translate(-50 -50)"
+      transform="translate(50 50) scale(1.22) translate(-50 -46)"
       className="fill-(--course-soft) stroke-(--course-soft) dark:fill-[color-mix(in_oklab,var(--course)_30%,var(--color-background))] dark:stroke-[color-mix(in_oklab,var(--course)_30%,var(--color-background))]"
       strokeWidth={ROUND + 6}
       strokeLinejoin="round"

@@ -36,6 +36,14 @@ export const courseHref = (courseId: string) => `/courses/${courseId}/`
 export const lessonHref = (courseId: string, lessonId: string) =>
   `/courses/${courseId}/${lessonId}/`
 
+/** Reserved: the exam's route segment and key prefix, so never a lesson id */
+export const EXAM_ID = "exam"
+
+/** Share of exam questions to get right for the trophy */
+export const EXAM_PASS_MARK = 0.8
+
+export const examHref = (courseId: string) => `/courses/${courseId}/${EXAM_ID}/`
+
 /** Progress-map key for a lesson */
 export const lessonProgressKey = (courseId: string, lessonId: string) =>
   `${courseId}/${lessonId}`

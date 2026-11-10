@@ -20,6 +20,8 @@ interface ChoiceStepProps {
   value: string[]
   onChange: (value: string[]) => void
   status: StepStatus
+  /** Exam mode: one attempt, then the right answer shows */
+  reveal?: boolean
 }
 
 export const isChoiceCorrect = (step: ChoiceStepData, value: string[]) =>
@@ -73,16 +75,19 @@ const ChoiceStep = ({
   value,
   onChange,
   status,
+  reveal,
 }: ChoiceStepProps) => {
   const t = useTranslations("page-courses")
-  const locked = status === "correct"
   const graded = status !== "answering"
+  const locked = status === "correct" || (reveal && graded)
 
   // Only the learner's picks are marked, so a wrong answer doesn't reveal the
-  // right one before they try again.
+  // right one before they try again. With `reveal` there is no retry.
   const resultFor = (id: string): PickResult | undefined => {
-    if (!graded || !value.includes(id)) return undefined
-    return step.correct.includes(id) ? "correct" : "incorrect"
+    if (!graded) return undefined
+    if (value.includes(id))
+      return step.correct.includes(id) ? "correct" : "incorrect"
+    return reveal && step.correct.includes(id) ? "correct" : undefined
   }
 
   const prompt = (
