@@ -5,6 +5,7 @@
 const { execFileSync } = require("child_process")
 
 const {
+  SITE_URL,
   changedPageUrls,
   fetchSitemapUrls,
   submitUrls,
@@ -13,10 +14,12 @@ const {
 
 module.exports = {
   async onSuccess({ utils }) {
-    const { CONTEXT, CACHED_COMMIT_REF, COMMIT_REF } = process.env
+    const { CONTEXT, URL, CACHED_COMMIT_REF, COMMIT_REF } = process.env
     const log = (message) => console.log(`[indexnow] ${message}`)
 
     if (CONTEXT !== "production") return log(`skipped (${CONTEXT})`)
+    // Forks or other sites building this repo must not submit under our key
+    if (URL !== SITE_URL) return log(`skipped (site URL ${URL})`)
     if (!CACHED_COMMIT_REF || CACHED_COMMIT_REF === COMMIT_REF) {
       return log("skipped (no previous build to diff against)")
     }

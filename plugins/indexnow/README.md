@@ -11,7 +11,7 @@ A local Netlify build plugin (`index.js`, registered in `netlify.toml`) runs on 
 3. Keeps changed URLs the live sitemap lists, plus removed pages (so engines see the 404 or redirect).
 4. POSTs them in batches of up to 10,000.
 
-It skips every non-production context and never fails a deploy. The result shows in the deploy summary; a rejected submission (e.g. `403`, key file mismatch) or error marks the plugin as failed in the deploy UI while the deploy itself stays live.
+It runs only for production deploys of the site whose Netlify `URL` is `https://ethereum.org`, and never fails a deploy. The result shows in the deploy summary; a rejected submission (e.g. `403`, key file mismatch) or error marks the plugin as failed in the deploy UI while the deploy itself stays live.
 
 It assumes production deploys auto-publish. If auto-publishing is ever locked, `onSuccess` still fires for unpublished deploys, so new pages would be filtered out against the old sitemap and changed URLs submitted before their content is live.
 
