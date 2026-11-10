@@ -22,19 +22,17 @@ import type { WidgetProps } from "./types"
 import WidgetShell from "./widget-shell"
 
 /*
- * Fixed (not generated) so server and client render the same list. Every
- * look-alike keeps the first and last four characters, so the shortened view
- * shows four identical addresses.
+ * Fixed (not generated) so server and client render the same list. Like a
+ * real look-alike, each copies only the four characters a shortened address
+ * shows at each end; matching more takes far more computing to find, so the
+ * middle is unrelated.
  */
 const TARGET = "0x7ae2c4f1b09d3e85a6f2710c9b4e58d3a1f04d1c"
 const OPTIONS = [
-  // Whole middle replaced, as a generated look-alike would be
-  { id: "middle", address: "0x7ae29b03e7d2a8c16f45b2e09d7a3c8f61e54d1c" },
-  // One character changed
-  { id: "one", address: "0x7ae2c4f1b09d3e85a6f2718c9b4e58d3a1f04d1c" },
+  { id: "fake-a", address: "0x7ae24ce43b941818a5e2b3eab49fb795183d4d1c" },
+  { id: "fake-b", address: "0x7ae2f04d4b04bf9b5c62891a93dc87b8d47a4d1c" },
   { id: "exact", address: TARGET },
-  // Two neighbours swapped
-  { id: "swap", address: "0x7ae2c4f1b09d3e58a6f2710c9b4e58d3a1f04d1c" },
+  { id: "fake-c", address: "0x7ae256f4213ff6ee5be35093d2e4f0e9feb44d1c" },
 ] as const
 
 type OptionId = (typeof OPTIONS)[number]["id"]
@@ -78,7 +76,7 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
       hint:
         id === "exact"
           ? undefined
-          : t(`page-courses-widget-address-hint-${id}`),
+          : t("page-courses-widget-address-hint-lookalike"),
     })
   }
 
