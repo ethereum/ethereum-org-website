@@ -73,6 +73,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
               <CourseProgress
                 courseId={courseId}
                 lessonIds={lessonIds}
+                hasExam={course.exam.length > 0}
                 onColor
               />
             </div>

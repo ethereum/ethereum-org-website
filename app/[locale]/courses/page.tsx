@@ -8,6 +8,10 @@ import {
 import type { PageParams } from "@/lib/types"
 
 import CourseArt from "@/components/Courses/art/course-art"
+import {
+  CourseCardAction,
+  CourseCardTrophy,
+} from "@/components/Courses/course-card-status"
 import CourseProgress from "@/components/Courses/course-progress"
 import {
   ProgressChips,
@@ -63,7 +67,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <ProgressChips />
               </div>
               <ul className="ms-0 grid list-none gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {COURSES.map(({ id, level, theme, art, lessons }) => (
+                {COURSES.map(({ id, level, theme, art, lessons, exam }) => (
                   <li key={id} className="m-0" style={courseThemeStyle(theme)}>
                     <Card
                       href={courseHref(id)}
@@ -83,6 +87,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                               count: lessons.length,
                             })}
                           </span>
+                          <CourseCardTrophy courseId={id} />
                           <CourseArt
                             id={art}
                             className="mx-auto max-w-48 transition-transform duration-300 motion-safe:group-hover/link:scale-105"
@@ -95,6 +100,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         <CourseProgress
                           courseId={id}
                           lessonIds={lessons.map((lesson) => lesson.id)}
+                          hasExam={exam.length > 0}
                         />
                       </CardContent>
                       <CardFooter buttons="full">
@@ -104,7 +110,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             "inline-flex items-center justify-center"
                           )}
                         >
-                          {t("page-courses-hub-begin")}
+                          <CourseCardAction
+                            courseId={id}
+                            lessonIds={lessons.map((lesson) => lesson.id)}
+                          />
                         </span>
                       </CardFooter>
                     </Card>
