@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     // Recursive everywhere: a story nested a directory deeper than expected
     // would otherwise never load, with no error to say so.
     "../src/components/**/*.stories.{ts,tsx}",
+    "../src/components/**/*.mdx",
     "../src/layouts/**/*.stories.{ts,tsx}",
     "../src/styles/**/*.stories.{ts,tsx}",
     "../app/**/*.stories.{ts,tsx}",
