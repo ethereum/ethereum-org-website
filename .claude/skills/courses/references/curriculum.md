@@ -27,6 +27,8 @@ A topic can appear several times at increasing depth: a simplified first pass th
 
 A later pass may deepen a term but must not contradict the earlier simplification. Tighten it ("roughly", "usually") rather than leave a wrong mental model.
 
+Simplifications must stay true. An address is "safe to share" only in that nobody can spend from it: anyone who has it can see its balance and history, so never call it safe without that caveat nearby.
+
 ## Term ledger
 
 The terms each lesson introduces, in suggested-path order. A lesson may use anything above it, plus everyday words. When adding or editing a lesson, add its terms here and check its copy against the rows above it.
@@ -36,7 +38,7 @@ The terms each lesson introduces, in suggested-path order. A lesson may use anyt
 | wallets / keys            | blockchain (intro), private key, address, wallet holds keys not coins                                                                                                                                         |
 | wallets / recovery        | recovery phrase, self-custody (described as "holding your own keys")                                                                                                                                          |
 | wallets / signing         | digital signature, signing a message                                                                                                                                                                          |
-| wallets / addresses       | account (many from one recovery phrase), look-alike address (named "address poisoning" once), checking the whole address                                                                                      |
+| wallets / addresses       | account (many from one recovery phrase), look-alike address (named "address poisoning" once), checking the whole address, address privacy (public balance and history; separate accounts)                     |
 | wallets / custody         | exchange (described), custodial ("someone else holds your keys"), hot wallet, hardware wallet, cold wallet (keys offline)                                                                                     |
 | blockchain / hashing      | hash function, hash, one-way                                                                                                                                                                                  |
 | blockchain / chain        | block, chain of hashes (blockchain to core), node                                                                                                                                                             |
