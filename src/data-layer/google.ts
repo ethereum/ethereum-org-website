@@ -12,10 +12,10 @@ interface ServiceAccount {
 export async function getGoogleAccessToken(
   scope: string
 ): Promise<{ token: string; projectId: string }> {
-  const credentials = process.env.GOOGLE_BIGQUERY_CREDENTIALS
+  const credentials = process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS
   if (!credentials) {
     throw new Error(
-      "Google service account not set (GOOGLE_BIGQUERY_CREDENTIALS)"
+      "Google service account not set (GOOGLE_SERVICE_ACCOUNT_CREDENTIALS)"
     )
   }
   const sa: ServiceAccount = JSON.parse(credentials)
