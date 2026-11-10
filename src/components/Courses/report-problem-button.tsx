@@ -6,27 +6,23 @@ import { useTranslations } from "next-intl"
 import * as RadioGroup from "@radix-ui/react-radio-group"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { commonControlClasses } from "@/components/ui/checkbox"
 import {
   Dialog,
   DialogClose,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog-modal"
+import { Label } from "@/components/ui/label"
 
 import { cn } from "@/lib/utils/cn"
 import { isTrackingEnabled, trackCustomEvent } from "@/lib/utils/matomo"
 
 import { NOTE_MAX, type ReportContext, reportEventName } from "./report"
-import {
-  chunkyButton,
-  chunkyTile,
-  lessonThemeStyle,
-  pickedMarker,
-  pickedTile,
-} from "./theme"
 
 const REASONS = ["inaccurate", "question", "answer", "other"] as const
 type Reason = (typeof REASONS)[number]
@@ -39,7 +35,7 @@ const ISSUE_URL = "https://github.com/ethereum/ethereum-org-website/issues/new"
  */
 const ReportProblemButton = (props: ReportContext) => {
   const t = useTranslations("page-courses")
-  const noteId = useId()
+  const baseId = useId()
   const [open, setOpen] = useState(false)
   const [reason, setReason] = useState<Reason | "">("")
   const [note, setNote] = useState("")
@@ -91,113 +87,105 @@ const ReportProblemButton = (props: ReportContext) => {
           <Flag />
         </Button>
       </DialogTrigger>
-      <DialogContent style={lessonThemeStyle()} className="max-w-md p-6 md:p-8">
+      <DialogContent>
         {sent ? (
           <>
             <DialogHeader>
-              <DialogTitle className="m-0 text-h3 font-black">
+              <DialogTitle>
                 {sent === "tracked"
                   ? t("page-courses-report-thanks")
                   : t("page-courses-report-blocked-title")}
               </DialogTitle>
             </DialogHeader>
-            <DialogDescription className="m-0 text-lg text-body-medium">
+            <DialogDescription>
               {sent === "tracked"
                 ? t("page-courses-report-thanks-line")
                 : t("page-courses-report-blocked-line")}
             </DialogDescription>
-            <div className="mt-2 flex flex-col gap-3">
-              {sent === "blocked" && (
-                <ButtonLink
-                  href={issueHref}
-                  variant="ghost"
-                  hideArrow
-                  className={cn(chunkyButton, "w-full")}
-                >
-                  {t("page-courses-report-github")}
-                </ButtonLink>
-              )}
+            <DialogFooter className="flex flex-wrap justify-end gap-2">
               <DialogClose asChild>
                 <Button
-                  variant="ghost"
-                  className={cn(
-                    sent === "tracked" ? chunkyButton : undefined,
-                    "w-full"
-                  )}
+                  variant={sent === "tracked" ? "solid" : "outline"}
+                  isSecondary={sent !== "tracked"}
                 >
                   {t("page-courses-report-close")}
                 </Button>
               </DialogClose>
-            </div>
+              {sent === "blocked" && (
+                <ButtonLink href={issueHref}>
+                  {t("page-courses-report-github")}
+                </ButtonLink>
+              )}
+            </DialogFooter>
           </>
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="m-0 text-h3 font-black">
-                {t("page-courses-report-title")}
-              </DialogTitle>
+              <DialogTitle>{t("page-courses-report-title")}</DialogTitle>
             </DialogHeader>
-            <DialogDescription className="m-0 text-body-medium">
+            <DialogDescription>
               {t("page-courses-report-description")}
             </DialogDescription>
-            <RadioGroup.Root
-              aria-label={t("page-courses-report-reason")}
-              className="flex flex-col gap-2"
-              value={reason}
-              onValueChange={(next) => setReason(next as Reason)}
-            >
-              {REASONS.map((id) => (
-                <RadioGroup.Item
-                  key={id}
-                  value={id}
-                  className={cn(
-                    chunkyTile,
-                    pickedTile,
-                    "group/option flex w-full items-center gap-3 p-3 text-start focus-visible:outline-4 focus-visible:outline-(--course-soft)"
-                  )}
-                >
-                  <span
-                    aria-hidden
-                    className={cn(
-                      "size-5 shrink-0 rounded-full",
-                      pickedMarker()
-                    )}
-                  />
-                  {t(`page-courses-report-reason-${id}`)}
-                </RadioGroup.Item>
-              ))}
-            </RadioGroup.Root>
-            <div className="flex flex-col gap-1">
-              <label htmlFor={noteId} className="font-bold">
+            <div className="flex flex-col gap-3">
+              <p id={`${baseId}-reason`} className="m-0 font-bold">
+                {t("page-courses-report-reason")}
+              </p>
+              <RadioGroup.Root
+                aria-labelledby={`${baseId}-reason`}
+                className="flex flex-col gap-3"
+                value={reason}
+                onValueChange={(next) => setReason(next as Reason)}
+              >
+                {REASONS.map((id) => (
+                  <div key={id} className="flex items-start gap-2">
+                    <RadioGroup.Item
+                      id={`${baseId}-${id}`}
+                      value={id}
+                      className={cn(
+                        commonControlClasses,
+                        "mt-1 shrink-0 rounded-full"
+                      )}
+                    >
+                      <RadioGroup.Indicator className="grid size-full place-items-center after:size-1.5 after:rounded-full after:bg-background" />
+                    </RadioGroup.Item>
+                    <Label
+                      htmlFor={`${baseId}-${id}`}
+                      className="text-md leading-snug font-normal"
+                    >
+                      {t(`page-courses-report-reason-${id}`)}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup.Root>
+            </div>
+            <div className="flex flex-col gap-2">
+              <Label htmlFor={`${baseId}-note`} className="text-md font-bold">
                 {t("page-courses-report-note")}
-              </label>
+              </Label>
+              {/* No ui textarea yet; styled to match ui/input */}
               <textarea
-                id={noteId}
+                id={`${baseId}-note`}
                 value={note}
                 maxLength={NOTE_MAX}
                 rows={3}
+                aria-describedby={`${baseId}-hint`}
                 onChange={(event) => setNote(event.target.value)}
-                className="resize-y rounded-xl border-2 border-border bg-background p-3 placeholder:text-disabled focus-visible:outline-4 focus-visible:outline-(--course-soft)"
+                className="resize-y rounded border border-body bg-background p-2 placeholder:text-disabled hover:not-disabled:border-primary-hover focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-2 focus-visible:outline-primary-hover"
               />
-              <span className="text-sm text-body-medium">
+              <p id={`${baseId}-hint`} className="m-0 text-sm text-body-medium">
                 {t("page-courses-report-note-hint")}
-              </span>
+              </p>
             </div>
-            <div className="mt-2 flex flex-col gap-3">
-              <Button
-                variant="ghost"
-                disabled={!reason}
-                onClick={send}
-                className={cn(chunkyButton, "w-full")}
-              >
-                {t("page-courses-report-send")}
-              </Button>
+            <DialogFooter className="flex flex-wrap justify-end gap-2">
               <DialogClose asChild>
-                <Button variant="ghost" className="w-full">
+                <Button variant="outline" isSecondary>
                   {t("page-courses-report-cancel")}
                 </Button>
               </DialogClose>
-            </div>
+              <Button disabled={!reason} onClick={send}>
+                {t("page-courses-report-send")}
+              </Button>
+            </DialogFooter>
           </>
         )}
       </DialogContent>
