@@ -170,10 +170,10 @@ const formatted = numberFormat(locale, { maximumFractionDigits: 2 }).format(1234
 ### Dates
 
 ```tsx
-import { dateTimeFormat } from "@/lib/utils/date"
+import { formatDateTime } from "@/lib/utils/date"
 
-const formatted = dateTimeFormat(locale, { dateStyle: "medium" }).format(new Date())
-// Handles calendar (Hijri for Arabic), numbering system, locale-correct ordering
+const formatted = formatDateTime(locale, new Date(), { dateStyle: "medium" })
+// Gregorian calendar, Urdu numerals, UTC, and SSR-safe whitespace
 ```
 
 **Never use** `Intl.DateTimeFormat`, `.toLocaleDateString()`, or `.toLocaleTimeString()` directly.
@@ -275,7 +275,7 @@ H1-H4 headings in markdown require a custom `{#lower-kebab-id}`. Enforced by mar
 - Using `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` for layout (use logical equivalents)
 - Hard-coding English in JSX
 - `value.toLocaleString()` -- use `numberFormat()`
-- `new Date().toLocaleDateString()` -- use `dateTimeFormat()`
+- `new Date().toLocaleDateString()` -- use `formatDateTime()`
 - Right-pointing chevrons that don't mirror in RTL (add `rtl:-scale-x-100`, or use `ChevronNext` from `@/components/Chevron`)
 - Reaching for the `useRtlFlip` hook just to flip an element -- use the inline `rtl:-scale-x-100` variant instead; the hook is only for when you need the `isRtl`/`direction` value
 - Manually editing translated markdown files -- let the pipeline propagate

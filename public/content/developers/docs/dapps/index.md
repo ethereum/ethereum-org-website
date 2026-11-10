@@ -1,6 +1,6 @@
 ---
 title: Technical introduction to dapps
-description:
+description: "A technical introduction to dapps: how decentralized applications combine smart contracts on Ethereum with a frontend, and how they differ from web apps."
 lang: en
 ---
 

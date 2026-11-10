@@ -18,16 +18,11 @@ env:
 # master, staging, or test/** branches. Jobs downstream of `build` inherit
 # gating automatically via `needs:` (skipped jobs propagate).
 #
-# Exception: Storybook Chromatic (`visual-tests`) runs on every non-draft PR.
-# TurboSnap (`onlyChanged`) keeps snapshot usage low: a PR with no affected
-# stories is bypassed and billed nothing, and no build is published for it.
-# The merge gate for visual changes is Chromatic's own "UI Tests" check (posted
-# by the Chromatic GitHub App), which updates live as a maintainer
-# accepts/rejects -- so this job itself always exits 0.
+# Storybook Chromatic runs separately in chromatic.yml.
 #
-# `fetch-depth: 0` is set selectively: lint needs it for `git diff`, and the
-# two Chromatic jobs need it for baseline detection. Other jobs use the default
-# shallow clone for speed.
+# `fetch-depth: 0` is set selectively: lint needs it for `git diff`, and
+# page-visual-tests needs it for Chromatic baseline detection. Other jobs use
+# the default shallow clone for speed.
 jobs:
   lint:
     name: Lint, type-check & markdown
@@ -72,42 +67,6 @@ jobs:
       - uses: ./.github/actions/setup-pnpm-node
       - name: Run unit tests
         run: pnpm test:unit
-
-  visual-tests:
-    name: Visual regression (Chromatic)
-    # Runs on every non-draft PR. TurboSnap (`onlyChanged`) means PRs with no
-    # affected stories are bypassed: nothing is snapshotted, billed, or
-    # published. The required merge gate is the Chromatic App's "UI Tests"
-    # check, so the job itself always exits 0.
-    if: github.event.pull_request.draft == false
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - uses: ./.github/actions/setup-pnpm-node
-
-      - name: Publish to Chromatic
-        uses: chromaui/action@v18.5.0
-        with:
-          projectToken: fee8e66c9916
-          # Not named chromatic.config.json: that filename is auto-loaded by
-          # both projects, and untraced without onlyChanged fails the pages job.
-          configFile: chromatic.storybook.json
-          # Emergency stop: set repo variable CHROMATIC_SKIP to "**". Snapshots
-          # stop but the UI Tests check still passes, so PRs stay mergeable.
-          # The value is a branch glob, hence a default no branch can match.
-          skip: ${{ vars.CHROMATIC_SKIP || '__chromatic_skip_disabled__' }}
-          exitZeroOnChanges: true
-          onlyChanged: true
-          # Defaults to on whenever onlyChanged is set; keep it off so debug
-          # logs aren't published next to the public Storybook.
-          uploadMetadata: false
-          # Release-train builds (dev/staging/master head branches) were
-          # already reviewed per-PR on dev; auto-accept them as baselines.
-          autoAcceptChanges: "{dev,staging,master}"
-          zip: true
 
   build:
     name: Build website (mock data)

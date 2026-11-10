@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test"
+import { expect, Page } from "@playwright/test"
 
 import { testData } from "../fixtures/testData"
 
@@ -34,8 +34,14 @@ export class StartPage extends BasePage {
   async openWalletConnectionModal() {
     await this.page.getByRole("checkbox", { name: "I have a wallet." }).click()
     await this.page.getByRole("button", { name: "Continue" }).click()
-    await this.page
-      .getByRole("button", { name: "Sign in with Ethereum" })
-      .click()
+    // RainbowKit hands out a noop openConnectModal until wagmi finishes reconnecting
+    const dialog = this.page.getByRole("dialog")
+    await expect(async () => {
+      if (!(await dialog.isVisible()))
+        await this.page
+          .getByRole("button", { name: "Sign in with Ethereum" })
+          .click()
+      await expect(dialog).toBeVisible({ timeout: 2000 })
+    }).toPass()
   }
 }

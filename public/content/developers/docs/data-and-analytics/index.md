@@ -1,6 +1,6 @@
 ---
 title: Data and analytics
-description: How to get onchain analytics and data for use in your dapps
+description: "How to get onchain data for your dapp: indexers, subgraphs, block explorers, SQL analytics platforms and APIs for querying and analyzing Ethereum data."
 lang: en
 ---
 
@@ -80,7 +80,7 @@ To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/H
 
 - [Exploring Crypto Data I: Data Flow Architectures](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph Network Overview](https://thegraph.com/docs/en/about/)
-- [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Graph Explorer](https://thegraph.com/explorer)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
 - [API documentation on Blockscout](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in Beacon Chain explorer](https://beaconcha.in)

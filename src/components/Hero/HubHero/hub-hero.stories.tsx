@@ -56,7 +56,7 @@ export const HubHero: StoryObj = {
 
     return (
       <HubHeroComponent
-        title={t("common.learn-hub")}
+        breadcrumbs={{ slug: "learn" }}
         header={t("page-learn.hero-header")}
         description={t("page-learn.hero-subtitle")}
         heroImg={learnHubHeroImg}

@@ -93,11 +93,15 @@ test.describe("Global", () => {
 
       const logo = page.getByTestId("nav-logo")
       const searchBtn = await homePage.getSearchButton()
-      const logoBox = await logo.boundingBox()
-      const searchBox = await searchBtn.boundingBox()
-      expect(logoBox).not.toBeNull()
-      expect(searchBox).not.toBeNull()
-      expect(logoBox!.x).toBeGreaterThan(searchBox!.x)
+      await expect
+        .poll(async () => {
+          const [logoBox, searchBox] = await Promise.all([
+            logo.boundingBox(),
+            searchBtn.boundingBox(),
+          ])
+          return logoBox && searchBox ? logoBox.x - searchBox.x : null
+        })
+        .toBeGreaterThan(0)
     })
   })
 })

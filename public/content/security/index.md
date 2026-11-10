@@ -1,6 +1,6 @@
 ---
 title: Ethereum security and scam prevention
-description: Staying safe on Ethereum
+description: "How to stay safe on Ethereum: protect your wallet and recovery phrase, spot common crypto scams and phishing, and know what to do if something goes wrong."
 lang: en
 ---
 

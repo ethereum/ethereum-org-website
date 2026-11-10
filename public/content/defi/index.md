@@ -1,7 +1,7 @@
 ---
 title: Decentralized finance (DeFi)
 metaTitle: What is DeFi? | Benefits and Use of Decentralised Finance
-description: An overview of DeFi on Ethereum
+description: "What is DeFi? Learn how decentralized finance on Ethereum lets anyone lend, borrow, trade and earn interest without banks, and the risks involved."
 lang: en
 template: use-cases
 image: /images/use-cases/defi.png

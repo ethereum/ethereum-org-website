@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/hello-world-smart-contract/index.md",
-  "generatedAt": "2026-10-22T21:15:08.479Z",
-  "rootHash": "c60922f1520f",
+  "generatedAt": "2026-10-23T20:57:25.989Z",
+  "rootHash": "fd4c0d80a41a",
   "tree": {
-    "contentHash": "ecb1cd7b3bf0",
-    "anchorHash": "138d154a240d",
+    "contentHash": "d627d9e33a36",
+    "anchorHash": "a1e295bad31e",
     "children": {
       "frontmatter:title": {
         "contentHash": "1c6c5c2b5d0c",
@@ -337,8 +337,8 @@
         ]
       },
       "step-6": {
-        "contentHash": "109132479e87",
-        "anchorHash": "09ca110e94c1",
+        "contentHash": "9a13aecffc84",
+        "anchorHash": "42d771986964",
         "labelHash": "b1c3d2d5796c",
         "children": {
           "_label": {
@@ -378,8 +378,8 @@
             "anchorHash": "5eb4eec77ac6"
           },
           "code-fence:10": {
-            "contentHash": "b5b808974b5f",
-            "anchorHash": "e3b0c44298fc"
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "4377c3b6321a"
           },
           "code-fence:12": {
             "contentHash": "e3b0c44298fc",
@@ -1334,5 +1334,5 @@
       "step-16-deploy-our-contract"
     ]
   },
-  "sourceCommitSha": "df6cb30a45dc8c96fe4e1ad22e3378ab8abce813"
+  "sourceCommitSha": "5a8108be6191e19fd4685f420735a56cbfa89990"
 }

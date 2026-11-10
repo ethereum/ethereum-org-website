@@ -1,7 +1,7 @@
 ---
 title: How to create an Ethereum account
 metaTitle: How to "create" an Ethereum account
-description: A step-by-step guide on Ethereum account creation using a wallet.
+description: "A step-by-step guide to creating an Ethereum account: choose a wallet, back up your recovery phrase safely and get your first Ethereum address."
 lang: en
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Blockchain bridges
 metaTitle: Introduction to blockchain bridges
-description: Bridges allow users to move their funds across different blockchains
+description: "What is a blockchain bridge? Learn how bridges move tokens between Ethereum, layer 2s and other chains, the types of bridges, and the risks to consider."
 lang: en
 ---
 

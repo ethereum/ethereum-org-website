@@ -49,7 +49,7 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 
 ### Hero "title" vs "header"
 
-**`PageHero` and `HubHero` do NOT share a prop shape.** `PageHero`: `title` is the large heading and **always** the page `<h1>`; there is no `header` prop. `HubHero` reads *backwards*: `title` is the small uppercase eyebrow (rendered `<h1>`), `header` is the large heading. Full prop shapes: `references/page-hero-walkthrough.md`.
+**`PageHero` and `HubHero` do NOT share a prop shape.** `PageHero`: `title` is the large heading and **always** the page `<h1>`; there is no `header` prop. `HubHero` has no `title`: `header` is the large heading and the `<h1>`, with optional `breadcrumbs` above it. Full prop shapes: `references/page-hero-walkthrough.md`.
 
 ### Markdown page titles
 

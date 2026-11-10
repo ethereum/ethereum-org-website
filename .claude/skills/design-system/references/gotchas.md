@@ -142,7 +142,7 @@ Use logical equivalents: `inset-s-`, `inset-e-`, `ms-`, `me-`, `ps-`, `pe-`. The
 
 ### `toLocaleString` / `Intl.NumberFormat` without locale wrappers
 
-Use `numberFormat()` from `@/lib/utils/numbers` and `dateTimeFormat()` from `@/lib/utils/date`. They handle Urdu/Arabic numbering systems and calendar correctly.
+Use `numberFormat()` from `@/lib/utils/numbers` and `formatDateTime()` from `@/lib/utils/date`. They handle Urdu/Arabic numbering systems and calendar correctly.
 
 There's currently exactly one violation, in `ui/chart.tsx`. Don't add more.
 

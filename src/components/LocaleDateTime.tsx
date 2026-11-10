@@ -1,6 +1,6 @@
 import { useLocale } from "next-intl"
 
-import { dateTimeFormat } from "@/lib/utils/date"
+import { formatDateTime } from "@/lib/utils/date"
 
 type LocaleDateTimeProps = {
   utcDateTime: string
@@ -47,7 +47,7 @@ const LocaleDateTime = ({
   }
   return (
     <time dateTime={utcDateTime}>
-      {dateTimeFormat(locale, dateTimeOptions).format(date)}
+      {formatDateTime(locale, date, dateTimeOptions)}
     </time>
   )
 }

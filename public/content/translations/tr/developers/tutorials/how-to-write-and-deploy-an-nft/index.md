@@ -76,7 +76,7 @@ npm init
 
 Kurulum sorularını nasıl yanıtladığınız pek önemli değil; referans olması için biz şu şekilde yaptık:
 
-```text
+```console
 package name: (my-nft)
 version: (1.0.0)
 description: My first NFT!

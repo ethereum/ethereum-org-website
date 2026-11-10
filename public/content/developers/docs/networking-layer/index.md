@@ -1,6 +1,6 @@
 ---
 title: Networking layer
-description: An introduction to Ethereum's networking layer.
+description: "An introduction to Ethereum's networking layer: how nodes find peers and share blocks, transactions and attestations over devp2p and libp2p."
 lang: en
 sidebarDepth: 2
 ---

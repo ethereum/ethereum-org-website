@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Learn about the Glamsterdam protocol upgrade
+description: "Glamsterdam is Ethereum's next upgrade after Fusaka. Learn how it plans to scale layer 1 with parallel processing, ePBS and fairer state pricing."
 lang: en
 template: upgrade
 ---

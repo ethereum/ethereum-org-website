@@ -101,7 +101,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   }))
 
   const heroContent: HubHeroProps = {
-    title: t("hero-title"),
+    breadcrumbs: { slug: "use-cases" },
     header: t("hero-header"),
     description: t("hero-description"),
     heroImg: heroImage,
