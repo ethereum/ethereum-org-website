@@ -90,10 +90,10 @@ const FillStep = ({ step, keyFor, value, onChange, status }: FillStepProps) => {
                 id ? word(id) : t("page-courses-fill-empty")
               }`}
               className={cn(
-                "mx-1 inline-flex min-h-10 min-w-24 items-center justify-center rounded-xl border-2 border-b-4 px-3 align-middle text-lg leading-tight font-semibold transition-colors",
+                "mx-1 inline-flex min-h-10 min-w-24 items-center justify-center rounded-xl border-2 px-3 align-middle text-lg leading-tight font-semibold transition-colors",
                 !id &&
                   "border-dashed border-border bg-background-highlight text-transparent",
-                id && "border-(--course) bg-(--course-softer)",
+                id && "border-b-4 border-(--course) bg-(--course-softer)",
                 wrong &&
                   "border-error bg-error-light motion-safe:animate-[course-shake_0.35s_ease-in-out] dark:border-red-400 dark:bg-error-dark",
                 locked &&
