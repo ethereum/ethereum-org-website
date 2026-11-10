@@ -235,33 +235,59 @@ const LessonPlayer = ({
   const explored =
     step.type === "interactive" && !isGraded(step) && value === true
 
-  // Enter continues from anywhere, except where Enter already means something:
-  // text entry, links, popup triggers and the exit dialog.
-  const continueRef = useRef(handleContinue)
+  // Enter triggers the footer's enabled button, whichever it is
+  const footerKind: "check" | "retry" | "continue" | null = reward
+    ? null
+    : status === "incorrect"
+      ? exam
+        ? "continue"
+        : "retry"
+      : canContinue
+        ? "continue"
+        : isGraded(step) && isReady(step, value)
+          ? "check"
+          : null
+  const footerActionRef = useRef<(() => void) | null>(null)
   useEffect(() => {
-    continueRef.current = handleContinue
+    footerActionRef.current =
+      footerKind === "check"
+        ? handleCheck
+        : footerKind === "retry"
+          ? handleRetry
+          : footerKind === "continue"
+            ? handleContinue
+            : null
   })
 
   useEffect(() => {
-    if (!canContinue) return
+    if (!footerKind) return
     const onEnter = (event: KeyboardEvent) => {
       if (event.key !== "Enter" || event.repeat || event.isComposing) return
       if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
         return
       const target = event.target as HTMLElement | null
+      // Where Enter already means something: text entry, links, popup
+      // triggers, dialogs, and the footer button itself (its native click)
       if (
         target?.closest(
-          "input:not([type=range]), textarea, select, [contenteditable], a, [aria-haspopup], [role=dialog]"
+          "input:not([type=range]), textarea, select, [contenteditable], a, [aria-haspopup], [role=dialog], [data-footer-actions]"
         )
       )
         return
-      // Also stops a still-focused button (Check, a widget control) re-firing
+      // While the answer can still change, a focused control (tile, widget
+      // button) keeps its own Enter; radios and checkboxes don't use Enter
+      if (
+        footerKind !== "continue" &&
+        target?.closest("button:not([role=radio]):not([role=checkbox])")
+      )
+        return
+      // Also stops a still-focused control re-firing after Check
       event.preventDefault()
-      continueRef.current()
+      footerActionRef.current?.()
     }
     window.addEventListener("keydown", onEnter, true)
     return () => window.removeEventListener("keydown", onEnter, true)
-  }, [canContinue])
+  }, [footerKind])
 
   const feedbackKey = (() => {
     if (status === "answering" || !isGraded(step)) return null
@@ -521,7 +547,10 @@ const LessonPlayer = ({
               )}
             </AnimatePresence>
 
-            <div className="flex shrink-0 items-center justify-end gap-3 md:ms-auto">
+            <div
+              data-footer-actions
+              className="flex shrink-0 items-center justify-end gap-3 md:ms-auto"
+            >
               <ReportProblemButton
                 courseId={courseId}
                 lessonId={lesson.id}
