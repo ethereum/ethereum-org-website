@@ -32,8 +32,8 @@ export default async function proxy(request: NextRequest) {
 
   // A/B testing: precompute flag variants and rewrite to the coded route,
   // which serves a statically generated page per variant permutation.
-  // Only exact canonical paths match (non-canonical forms fall through and
-  // get slash-normalized first). Only the default locale is A/B tested:
+  // Only exact canonical paths match (non-canonical forms were redirected
+  // above). Only the default locale is A/B tested:
   // English URLs are unprefixed, so locale-prefixed paths never match.
   // On failure, or with no experiment running, fall through to the real page.
   const routeFlags = abTestRoutes[pathname]
