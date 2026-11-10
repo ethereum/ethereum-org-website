@@ -11,84 +11,21 @@ import {
 import { abTestRoutes, ALLOW_DEBUG_OVERRIDES } from "./src/lib/ab-testing/flags"
 import { getActiveExperimentNames } from "./src/lib/ab-testing/matomo-adapter"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
-import { getFirstSegment } from "./src/lib/utils/url"
+import { resolvePathRoute } from "./src/lib/utils/redirects"
 
 const handleI18nRouting = createMiddleware(routing)
-
-// Locales that have been removed but may have external links pointing to them
-const DEPRECATED_LOCALES = new Set([
-  // Previously deprecated
-  "pcm",
-  "fil",
-  "ph",
-  // Removed in locale reduction (67 → 25)
-  "am",
-  "az",
-  "be",
-  "bg",
-  "bs",
-  "ca",
-  "da",
-  "el",
-  "fa",
-  "fi",
-  "ga",
-  "gl",
-  "gu",
-  "ha",
-  "he",
-  "hr",
-  "hu",
-  "hy-am",
-  "ig",
-  "ka",
-  "kk",
-  "km",
-  "kn",
-  "lt",
-  "ml",
-  "ms",
-  "nb",
-  "ne-np",
-  "nl",
-  "no",
-  "pt",
-  "ro",
-  "se",
-  "sk",
-  "sl",
-  "sn",
-  "sr",
-  "sv",
-  "th",
-  "tk",
-  "tl",
-  "tw",
-  "uz",
-  "yo",
-])
-
-function redirectTo(request: NextRequest, pathname: string, status: number) {
-  const url = request.nextUrl.clone()
-  url.pathname = pathname
-  return NextResponse.redirect(url, status)
-}
 
 export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  const lowerPath = pathname.toLowerCase()
-  if (pathname !== lowerPath) {
-    return redirectTo(request, lowerPath, 301)
-  }
-
-  const firstSegment = getFirstSegment(lowerPath)
-
-  if (firstSegment && DEPRECATED_LOCALES.has(firstSegment)) {
-    // Strip deprecated locale and redirect to default locale version
-    const rest = lowerPath.slice(firstSegment.length + 1)
-    const newPath = !rest ? "/" : rest
-    return redirectTo(request, newPath, 301)
+  // Case, deprecated-locale, trailing-slash and legacy-source normalization
+  const route = resolvePathRoute(pathname)
+  if (route) {
+    const url = request.nextUrl.clone()
+    url.pathname = route.pathname
+    return route.type === "redirect"
+      ? NextResponse.redirect(url, 301)
+      : NextResponse.rewrite(url)
   }
 
   // A/B testing: precompute flag variants and rewrite to the coded route,
