@@ -105,7 +105,7 @@ jobs:
       github.base_ref == 'master'
       || github.base_ref == 'staging'
       || startsWith(github.base_ref, 'test/')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       DEPLOY_PREVIEW_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ethereumorg.netlify.app
     steps:
