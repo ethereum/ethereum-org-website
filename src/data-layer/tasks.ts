@@ -48,7 +48,7 @@ interface TaskOverrides {
 // Task definition: storage key + fetch function + optional runtime overrides
 type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
-// Each run scans ~250GB of BigQuery; monthly stays inside the 1TB free tier
+// Each run scans ~315GiB of BigQuery; monthly stays inside the 1TiB free tier
 const MONTHLY: TaskDef[] = [[KEYS.ACCOUNT_HOLDERS, fetchAccountHolders]]
 
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
