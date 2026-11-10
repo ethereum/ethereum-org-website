@@ -51,6 +51,8 @@ export const SIGNED_A = signedIn("a")
 export const SIGNED_B = signedIn("b")
 export const SIGNED_TOTAL = SIGNED_A + SIGNED_B
 export const AGGREGATE_COUNT = Object.keys(COMMITTEE_BITS).length
+/** Same data across committees, so the proposer merges them into one (EIP-7549). */
+export const BLOCK_ATTESTATION_COUNT = 1
 
 export const ATTESTATIONS_PRESET_IDS = ["on-time", "missed"] as const
 export type AttestationsPresetId = (typeof ATTESTATIONS_PRESET_IDS)[number]
@@ -100,6 +102,7 @@ export interface AttestationsView {
   blockSlot: number | null
   signed: number
   aggregates: number
+  blockAttestations: number
   inclusionDelay: number | null
   litPart: AttestationsPart | null
   /** The step's caption and status keys, minus the `-step-`/`-status-` part. */
@@ -133,6 +136,7 @@ export const getAttestationsView = (
     blockSlot: included ? INCLUSION_DELAY[preset] : null,
     signed: step >= 1 ? SIGNED_TOTAL : 0,
     aggregates: step >= 3 ? AGGREGATE_COUNT : 0,
+    blockAttestations: included ? BLOCK_ATTESTATION_COUNT : 0,
     inclusionDelay: included ? INCLUSION_DELAY[preset] : null,
     litPart: (
       {

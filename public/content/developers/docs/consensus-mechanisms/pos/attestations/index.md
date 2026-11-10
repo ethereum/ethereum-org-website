@@ -8,7 +8,7 @@ A validator is expected to create, sign and broadcast an attestation during ever
 
 ## What is an attestation? {#what-is-an-attestation}
 
-Every [epoch](/glossary/#epoch) (6.4 minutes) a validator proposes an attestation to the network. The attestation is for a specific slot in the epoch. The purpose of the attestation is to vote in favor of the validator's view of the chain, in particular the head of the chain, the most recent justified checkpoint and the checkpoint at the start of the current epoch (known as `source` and `target` checkpoints). This information is combined for all participating validators, enabling the network to reach consensus about the state of the blockchain.
+Every [epoch](/glossary/#epoch) (6.4 minutes) a validator broadcasts an attestation to the network. The attestation is for a specific slot in the epoch. The purpose of the attestation is to vote in favor of the validator's view of the chain, in particular the head of the chain, the most recent justified checkpoint and the checkpoint at the start of the current epoch (known as `source` and `target` checkpoints). This information is combined for all participating validators, enabling the network to reach consensus about the state of the blockchain.
 
 Since the [Pectra upgrade](/roadmap/pectra/) ([EIP-7549](https://eips.ethereum.org/EIPS/eip-7549)), an attestation from a single validator and an aggregated attestation have different formats. A single validator's attestation contains:
 
@@ -20,10 +20,10 @@ Since the [Pectra upgrade](/roadmap/pectra/) ([EIP-7549](https://eips.ethereum.o
 The first task for an attesting validator is to build the `data`. The `data` contains the following information:
 
 - `slot`: The slot number that the attestation refers to
-- `index`: Always `0` since Pectra. The committee is identified outside the `data` (by `committee_index`, or by `committee_bits` in an aggregate) so that votes from different committees have identical `data` and can be aggregated together. Before Pectra, this field identified the committee
+- `index`: Set to `0` since Pectra. The committee is identified outside the `data` (by `committee_index`, or by `committee_bits` in an aggregate) so that votes from different committees have identical `data` and can be aggregated together. Before Pectra, this field identified the committee
 - `beacon_block_root`: Root hash of the block the validator sees at the head of the chain (the result of applying the fork-choice algorithm)
-- `source`: Part of the finality vote indicating what the validators see as the most recent justified block
-- `target`: Part of the finality vote indicating what the validators see as the first block in the current epoch
+- `source`: Part of the finality vote indicating what the validators see as the most recent justified checkpoint
+- `target`: Part of the finality vote indicating what the validators see as the checkpoint at the start of the current epoch (the block at its first slot, or the latest block before it if that slot is empty)
 
 Once the `data` is built, the validator signs it and broadcasts the attestation to the [subnet](#aggregated-attestation) for its committee.
 

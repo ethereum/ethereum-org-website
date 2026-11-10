@@ -167,7 +167,7 @@ const NEW_BLOCK = [1, 2].map((slot) => box(...blockDims(slot)))
 const EMPTY_SLOT = [1, 2].map((slot) =>
   footprint(SLOT_X[slot], BLOCK_Y, BLOCK_W, BLOCK_D)
 )
-// Both aggregates' bits on the new block's top, one row per committee.
+// The merged attestation's bits on the new block's top, one row per committee.
 const BLOCK_CELLS = [1, 2].map((slot) =>
   (["a", "b"] as const).map((id, row) =>
     COMMITTEE_BITS[id].map((_, k) => {

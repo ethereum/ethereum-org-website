@@ -193,6 +193,10 @@ export function AttestationsPlayer({
               value: <DiagramCountUp value={view.aggregates} />,
             },
             {
+              label: t("attestations-readout-block"),
+              value: <DiagramCountUp value={view.blockAttestations} />,
+            },
+            {
               label: t("attestations-readout-bits-a"),
               value: view.bitsShown ? bitsText(COMMITTEE_BITS.a) : none,
             },
