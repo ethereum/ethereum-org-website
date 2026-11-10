@@ -4,12 +4,11 @@ import { useEffect, useId, useRef, useState } from "react"
 import { Check, CornerDownLeft, Landmark, Wifi, WifiOff } from "lucide-react"
 import { useTranslations } from "next-intl"
 
-import { Button } from "@/components/ui/buttons/Button"
-
 import { cn } from "@/lib/utils/cn"
 
 import { chunkyTile, courseText } from "../theme"
 
+import DraggableTile from "./draggable-tile"
 import type { WidgetProps } from "./types"
 import WidgetShell from "./widget-shell"
 
@@ -32,9 +31,14 @@ const ITEMS = [
 ] as const satisfies readonly { id: string; bucket: BucketId }[]
 
 type ItemId = (typeof ITEMS)[number]["id"]
+
+const POOL = "pool"
 type Placement = Partial<Record<ItemId, BucketId>>
 
-/** Tap a situation, then a group. Every control is a native button. */
+/**
+ * Drag a situation onto a group, or tap it and then tap the group. Every
+ * control is a native button, so drag is never required.
+ */
 const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const baseId = useId()
@@ -43,6 +47,7 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
   const [placement, setPlacement] = useState<Placement>({})
   const [selected, setSelected] = useState<ItemId | null>(null)
   const [announcement, setAnnouncement] = useState("")
+  const [hover, setHover] = useState<string | null>(null)
   // Placing or returning a card unmounts the focused button; move focus to
   // the returned card or the next one in the pool so it isn't lost
   const refocus = useRef<ItemId | "first" | null>(null)
@@ -84,13 +89,12 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
     )
   }
 
-  const place = (bucket: BucketId) => {
-    if (!selected) return
+  const place = (id: ItemId, bucket: BucketId) => {
     refocus.current = "first"
-    commit({ ...placement, [selected]: bucket })
+    commit({ ...placement, [id]: bucket })
     setAnnouncement(
       t("page-courses-widget-custody-placed", {
-        item: itemLabel(selected),
+        item: itemLabel(id),
         group: bucketLabel(bucket),
       })
     )
@@ -107,9 +111,16 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
     )
   }
 
+  // Dropping on the pool returns a card; on a group, places or moves it
+  const drop = (id: ItemId, target: string) => {
+    if (target === POOL) return placement[id] && unplace(id)
+    if (placement[id] !== target) place(id, target as BucketId)
+  }
+
   const tileClasses = cn(
     chunkyTile,
-    "h-auto min-h-12 w-full justify-start gap-2 px-3 py-2 text-start text-md font-semibold whitespace-normal text-body disabled:text-body hover-link:!text-body"
+    "flex min-h-12 w-full items-center gap-2 px-3 py-2 text-start text-md font-semibold text-body focus-visible:outline-4 focus-visible:outline-(--course-soft)",
+    "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
   )
 
   return (
@@ -118,7 +129,13 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
         {t("page-courses-widget-custody-instructions")}
       </p>
 
-      <div className="flex flex-col gap-2">
+      <div
+        data-drop-target={POOL}
+        className={cn(
+          "flex flex-col gap-2 rounded-2xl transition-[box-shadow]",
+          hover === POOL && "ring-4 ring-(--course-soft)"
+        )}
+      >
         <p className="m-0 text-sm font-bold tracking-wide text-body-medium uppercase">
           {t("page-courses-widget-custody-pool")}
         </p>
@@ -126,13 +143,14 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
           <ul ref={poolRef} className="m-0 flex list-none flex-col gap-2">
             {pool.map(({ id }) => (
               <li key={id} className="m-0">
-                <Button
-                  variant="ghost"
+                <DraggableTile
                   disabled={locked}
                   data-item={id}
                   aria-pressed={selected === id}
                   aria-describedby={hintId}
                   onClick={() => select(id)}
+                  onPlace={(target) => drop(id, target)}
+                  onHover={setHover}
                   className={cn(
                     tileClasses,
                     selected === id &&
@@ -140,7 +158,7 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
                   )}
                 >
                   {itemLabel(id)}
-                </Button>
+                </DraggableTile>
               </li>
             ))}
           </ul>
@@ -151,21 +169,36 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
         )}
       </div>
 
-      <div className="grid gap-3 md:grid-cols-3">
+      {/* Stacked rows, not columns: the long situation cards need the width */}
+      <div className="flex flex-col gap-3">
         {BUCKETS.map(({ id: bucket, Icon }) => {
           const items = ITEMS.filter(({ id }) => placement[id] === bucket)
+          const target = !locked && (selected || hover === bucket)
           return (
             <section
               key={bucket}
+              data-drop-target={bucket}
               aria-labelledby={`${baseId}-${bucket}`}
               className={cn(
-                "flex flex-col gap-2 rounded-2xl border-2 border-dashed border-border bg-background p-3 transition-colors",
-                selected && "border-(--course)"
+                "relative flex min-h-24 flex-col gap-2 rounded-2xl border-2 border-dashed border-border bg-background p-3 transition-[border-color,box-shadow]",
+                target && "border-(--course)",
+                hover === bucket && "ring-4 ring-(--course-soft)"
               )}
             >
+              {/* The whole group is the tap target once a card is picked */}
+              {selected && !locked && (
+                <button
+                  type="button"
+                  aria-label={t("page-courses-widget-custody-place", {
+                    group: bucketLabel(bucket),
+                  })}
+                  onClick={() => place(selected, bucket)}
+                  className="absolute inset-0 cursor-pointer rounded-2xl hover:bg-(--course-softer) focus-visible:outline-4 focus-visible:outline-(--course-soft)"
+                />
+              )}
               <h3
                 id={`${baseId}-${bucket}`}
-                className="m-0 flex items-start gap-2 text-md font-bold"
+                className="pointer-events-none relative m-0 flex items-start gap-2 text-md font-bold"
               >
                 <Icon
                   className={cn("mt-0.5 size-5 shrink-0", courseText)}
@@ -173,25 +206,15 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
                 />
                 {bucketLabel(bucket)}
               </h3>
-              {selected && !locked && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  aria-describedby={`${baseId}-${bucket}`}
-                  onClick={() => place(bucket)}
-                  className="text-sm"
-                >
-                  {t("page-courses-widget-custody-place")}
-                </Button>
-              )}
-              <ul className="m-0 flex list-none flex-col gap-2">
+              <ul className="pointer-events-none relative m-0 flex list-none flex-col gap-2">
                 {items.map(({ id }) => (
-                  <li key={id} className="m-0">
-                    <Button
-                      variant="ghost"
+                  <li key={id} className="pointer-events-auto m-0">
+                    <DraggableTile
                       disabled={locked}
                       aria-describedby={hintId}
                       onClick={() => unplace(id)}
+                      onPlace={(target) => drop(id, target)}
+                      onHover={setHover}
                       className={cn(
                         tileClasses,
                         "text-sm",
@@ -202,16 +225,16 @@ const CustodySortWidget = ({ onAnswer, locked }: WidgetProps) => {
                       <span className="flex-1">{itemLabel(id)}</span>
                       {locked ? (
                         <Check
-                          className="!size-4 shrink-0 text-green-700 dark:text-green-400"
+                          className="size-4 shrink-0 text-green-700 dark:text-green-400"
                           aria-hidden
                         />
                       ) : (
                         <CornerDownLeft
-                          className="!size-4 shrink-0 text-body-medium"
+                          className="size-4 shrink-0 text-body-medium"
                           aria-hidden
                         />
                       )}
-                    </Button>
+                    </DraggableTile>
                   </li>
                 ))}
               </ul>
