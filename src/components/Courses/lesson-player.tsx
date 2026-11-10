@@ -25,13 +25,16 @@ import ChoiceStep, {
   isChoiceCorrect,
 } from "./steps/choice-step"
 import ConceptStep from "./steps/concept-step"
+import FillStep, { isFillComplete, isFillCorrect } from "./steps/fill-step"
 import InteractiveStep, { isGradedWidget } from "./steps/interactive-step"
+import MatchStep, { isMatchComplete, isMatchCorrect } from "./steps/match-step"
 import OrderStep, { isOrderComplete, isOrderCorrect } from "./steps/order-step"
 import type { StepStatus } from "./steps/types"
 import type { WidgetAnswer } from "./widgets/types"
 import ExamComplete from "./exam-complete"
 import ExitLessonButton from "./exit-lesson-button"
 import LessonComplete from "./lesson-complete"
+import ReportProblemButton from "./report-problem-button"
 import { chunkyButton, lessonThemeStyle } from "./theme"
 import {
   type ExamReward,
@@ -74,6 +77,10 @@ const isReady = (step: LessonStep, value: StepValue | undefined) => {
       return Array.isArray(value) && value.length > 0
     case "order":
       return Array.isArray(value) && isOrderComplete(step, value)
+    case "match":
+      return Array.isArray(value) && isMatchComplete(step, value)
+    case "fill":
+      return Array.isArray(value) && isFillComplete(step, value)
     case "interactive":
       return value === true || isWidgetAnswer(value)
   }
@@ -89,6 +96,10 @@ const grade = (step: LessonStep, value: StepValue | undefined) => {
       return isChoiceCorrect(step, value as string[])
     case "order":
       return isOrderCorrect(step, value as string[])
+    case "match":
+      return isMatchCorrect(step, value as string[])
+    case "fill":
+      return isFillCorrect(step, value as string[])
   }
 }
 
@@ -254,6 +265,8 @@ const LessonPlayer = ({
       )
     if (status === "correct") return keyFor("explain")
     if (step.type === "order") return "page-courses-order-wrong"
+    if (step.type === "match") return "page-courses-match-wrong"
+    if (step.type === "fill") return "page-courses-fill-wrong"
     return null
   })()
   const feedback =
@@ -282,6 +295,26 @@ const LessonPlayer = ({
       case "order":
         return (
           <OrderStep
+            step={step}
+            keyFor={keyFor}
+            value={(value as string[]) ?? []}
+            onChange={handleEdit}
+            status={status}
+          />
+        )
+      case "match":
+        return (
+          <MatchStep
+            step={step}
+            keyFor={keyFor}
+            value={(value as string[]) ?? []}
+            onChange={handleEdit}
+            status={status}
+          />
+        )
+      case "fill":
+        return (
+          <FillStep
             step={step}
             keyFor={keyFor}
             value={(value as string[]) ?? []}
@@ -336,6 +369,14 @@ const LessonPlayer = ({
             <Flame className="size-5" />
             {combo}
           </span>
+          {!reward && (
+            <ReportProblemButton
+              courseId={courseId}
+              lessonId={lesson.id}
+              stepId={step.id}
+              answer={Array.isArray(value) ? value.filter(Boolean) : undefined}
+            />
+          )}
         </div>
 
         <h1 className="m-0 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">

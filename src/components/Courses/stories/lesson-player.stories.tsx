@@ -15,7 +15,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Runs one lesson from `src/data/courses`: concept, choice, order and interactive steps, with Brilliant-style check/feedback and a completion screen. Completing a lesson writes XP and streak to localStorage (`ethereum-org-course-progress`), so playing a story to the end changes the progress shown on `/courses`. All strings come from the `page-courses` namespace by key convention; a missing key renders as its raw key tail.",
+          "Runs one lesson from `src/data/courses`: concept, choice, order, match, fill and interactive steps, with Brilliant-style check/feedback and a completion screen. Completing a lesson writes XP and streak to localStorage (`ethereum-org-course-progress`), so playing a story to the end changes the progress shown on `/courses`. All strings come from the `page-courses` namespace by key convention; a missing key renders as its raw key tail.",
       },
     },
   },
@@ -123,5 +123,29 @@ export const CourseCheck: Story = {
     lesson: { id: EXAM_ID, icon: "badge", steps: wallets.exam },
     exam: true,
     nextCourseId: "blockchain",
+  },
+}
+
+const onlySteps = (courseId: string, lessonId: string, types: string[]) => {
+  const { lesson } = getLesson(courseId, lessonId)!
+  return {
+    ...lesson,
+    steps: lesson.steps.filter(({ type }) => types.includes(type)),
+  }
+}
+
+/** Match step on its own: tap a term, then its match */
+export const MatchPairs: Story = {
+  args: {
+    courseId: "wallets",
+    lesson: onlySteps("wallets", "custody", ["match"]),
+  },
+}
+
+/** Fill step on its own: tap words from the bank into the gaps */
+export const FillTheGaps: Story = {
+  args: {
+    courseId: "ether",
+    lesson: onlySteps("ether", "supply", ["fill"]),
   },
 }

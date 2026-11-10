@@ -14,6 +14,7 @@ import type { OrderStep as OrderStepData } from "@/data/courses"
 
 import { chunkyTile } from "../theme"
 
+import { seededShuffle } from "./shuffle"
 import type { StepStatus } from "./types"
 
 interface OrderStepProps {
@@ -31,21 +32,6 @@ export const isOrderComplete = (step: OrderStepData, value: string[]) =>
 export const isOrderCorrect = (step: OrderStepData, value: string[]) =>
   isOrderComplete(step, value) &&
   value.every((id, idx) => step.items[idx] === id)
-
-// Seeded so server and client render the same pool (no hydration mismatch)
-const seededShuffle = (items: string[], seed: string) => {
-  let h = 0
-  for (const char of seed) h = (h * 31 + char.charCodeAt(0)) >>> 0
-  const result = [...items]
-  for (let i = result.length - 1; i > 0; i--) {
-    h = (h * 1103515245 + 12345) >>> 0
-    const j = h % (i + 1)
-    ;[result[i], result[j]] = [result[j], result[i]]
-  }
-  // Never hand over the answer pre-solved
-  if (result.every((id, idx) => id === items[idx])) result.push(result.shift()!)
-  return result
-}
 
 type DropTarget = number | "pool" | null
 

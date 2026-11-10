@@ -19,7 +19,7 @@ Three to six minutes, roughly five to seven steps:
 1. **Hook**: a concept step (optionally with `art`) that opens with a misconception or a concrete situation, then introduces one or two terms.
 2. **Predict or explore**: a choice step asking for a guess, or a widget. Prediction before play makes the widget land.
 3. **Do**: a widget or order step where the idea is discovered rather than told.
-4. **Apply**: one or two choice steps that transfer the idea to a realistic situation, often a safety one.
+4. **Apply**: one or two choice steps that transfer the idea to a realistic situation, often a safety one. A match or fill step suits the end of a lesson, to consolidate its terms just before the takeaway.
 5. **Takeaway**: a concept step with `takeaway: true`, one sentence the learner could repeat to a friend.
 
 One new idea per lesson. If the takeaway needs "and" twice, split the lesson.
@@ -31,6 +31,8 @@ One new idea per lesson. If the takeaway needs "and" twice, split the lesson.
 - Use `multi` only when the real-world answer is genuinely plural; add an `-explain` for it.
 - Prediction questions may have every answer "accepted" in spirit. The feedback should point to the next step ("Test it in the next step").
 - Order steps: four to six items, each one short line; `items` lists them in the correct order (the pool is shuffled deterministically).
+- Match steps: three or four pairs; terms at most three words, matches at most seven. Each match fits only its own term, and never repeats the term's word (that answers it by overlap).
+- Fill steps: one to three blanks and two or three `extras`, in one plain-text sentence (no tags) with `{b1}`, `{b2}`... where the gaps go. Each gap has exactly one word in the bank that fits, grammatically and factually; extras are tempting to a skimmer, clearly wrong to anyone who followed.
 - Strings are plain text, except concept paragraphs, which may use `<strong>`. ICU placeholders (`{count}`) are fine anywhere.
 - Prompts state the task, never the UI: no "then check your answer" or "press Continue". The footer buttons carry that.
 - Prose is second person, present tense, short sentences, with no exclamation marks outside cheers.

@@ -23,7 +23,7 @@ A topic can appear several times at increasing depth: a simplified first pass th
 
 - **intro**: plain-language idea, no mechanics ("a shared record that thousands of computers keep in sync").
 - **core**: how it works, with the term in play ("blocks linked by hashes").
-- **deep**: edge cases, numbers and trade-offs ("finality after about 13 minutes; a third of stake can stall it").
+- **deep**: edge cases, numbers and trade-offs ("finality after about 13 to 19 minutes; a third of stake can stall it").
 
 A later pass may deepen a term but must not contradict the earlier simplification. Tighten it ("roughly", "usually") rather than leave a wrong mental model.
 
@@ -42,10 +42,10 @@ The terms each lesson introduces, in suggested-path order. A lesson may use anyt
 | blockchain / chain        | block, chain of hashes (blockchain to core), node                                                                                                                                                             |
 | blockchain / consensus    | validator, stake, finality (core), slashing (preview)                                                                                                                                                         |
 | blockchain / nodes        | node (core: own copy, checks every block, anyone can run one), syncing / in sync                                                                                                                              |
-| blockchain / finality     | slot (12 seconds, one chance for a block), checkpoint (every 32 slots, about 6.4 minutes), finality (deep, about 13 minutes), slashing (core)                                                                 |
+| blockchain / finality     | slot (12 seconds, one chance for a block), checkpoint (every 32 slots, about 6.4 minutes), finality (deep, about 13 to 19 minutes, by where the block lands), slashing (core)                                 |
 | transactions / lifecycle  | transaction, broadcast, irreversibility                                                                                                                                                                       |
 | transactions / gas        | gas, gas price, gwei, gas limit, base fee, tip                                                                                                                                                                |
-| transactions / blocks     | block space, burn, nonce, finality (reminder, about 13 minutes)                                                                                                                                               |
+| transactions / blocks     | block space, burn, nonce, finality (reminder, about 13 to 19 minutes)                                                                                                                                         |
 | transactions / failed     | failed transaction, fee still paid, unused gas refunded                                                                                                                                                       |
 | transactions / explorer   | block explorer, transaction hash                                                                                                                                                                              |
 | ether / what              | ether / ETH (native currency), Ethereum the network vs ETH the money, uses of ETH (fees, validator stake, money)                                                                                              |

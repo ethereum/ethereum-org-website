@@ -1,3 +1,5 @@
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import { blockchainCourse } from "./blockchain"
 import { etherCourse } from "./ether"
 import { smartContractsCourse } from "./smart-contracts"
@@ -43,6 +45,14 @@ export const EXAM_ID = "exam"
 export const EXAM_PASS_MARK = 0.8
 
 export const examHref = (courseId: string) => `/courses/${courseId}/${EXAM_ID}/`
+
+/** Installed-app scope: one app per language, as `localePrefix` is "as-needed" */
+export const courseAppScope = (locale: string) =>
+  `${locale === DEFAULT_LOCALE ? "" : `/${locale}`}/courses/`
+
+/** Outside `[locale]`, with an extension, so the proxy leaves it alone */
+export const courseAppManifestHref = (locale: string) =>
+  `/manifests/courses/${locale}.webmanifest`
 
 /** Progress-map key for a lesson */
 export const lessonProgressKey = (courseId: string, lessonId: string) =>

@@ -103,7 +103,34 @@ export interface InteractiveStep extends StepBase {
   widget: CourseWidgetId
 }
 
-export type LessonStep = ConceptStep | ChoiceStep | OrderStep | InteractiveStep
+/**
+ * Pair each term with its match; the same id names both halves of a pair.
+ * Keys: `-prompt`, `-term-{id}`, `-match-{id}`, `-explain`
+ */
+export interface MatchStep extends StepBase {
+  type: "match"
+  pairs: string[]
+}
+
+/**
+ * Fill the blanks in a sentence from a word bank. `blanks` holds the right
+ * word for each blank, in order; `extras` are wrong words in the bank.
+ * Keys: `-prompt`, `-text` (with `{b1}`, `{b2}`... where the blanks go),
+ * `-word-{id}`, `-explain`
+ */
+export interface FillStep extends StepBase {
+  type: "fill"
+  blanks: string[]
+  extras: string[]
+}
+
+export type LessonStep =
+  | ConceptStep
+  | ChoiceStep
+  | OrderStep
+  | MatchStep
+  | FillStep
+  | InteractiveStep
 
 /** Keys: `{course}-{lesson}-title`, `{course}-{lesson}-summary` */
 export interface Lesson {

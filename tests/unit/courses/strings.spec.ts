@@ -24,6 +24,19 @@ const stepSuffixes = (step: LessonStep): string[] => {
       ]
     case "order":
       return ["prompt", ...step.items.map((id) => `item-${id}`), "explain"]
+    case "match":
+      return [
+        "prompt",
+        ...step.pairs.flatMap((id) => [`term-${id}`, `match-${id}`]),
+        "explain",
+      ]
+    case "fill":
+      return [
+        "prompt",
+        "text",
+        ...[...step.blanks, ...step.extras].map((id) => `word-${id}`),
+        "explain",
+      ]
     case "interactive":
       return ["prompt", "explain"]
   }
@@ -81,6 +94,20 @@ test.describe("course strings", () => {
       for (const lesson of course.lessons)
         expect(dupes(lesson.steps.map(({ id }) => id))).toEqual([])
     }
+  })
+
+  test("fill-in sentences have one placeholder per blank", () => {
+    const strings = en as Record<string, string>
+    for (const course of COURSES)
+      for (const lesson of course.lessons)
+        for (const step of lesson.steps)
+          if (step.type === "fill") {
+            const text = strings[stepKey(course.id, lesson.id, step.id, "text")]
+            const found = [...text.matchAll(/\{(b\d+)\}/g)].map((m) => m[1])
+            expect(found).toEqual(step.blanks.map((_, i) => `b${i + 1}`))
+            const words = [...step.blanks, ...step.extras]
+            expect(new Set(words).size).toBe(words.length)
+          }
   })
 
   test("choice answers are among the options", () => {

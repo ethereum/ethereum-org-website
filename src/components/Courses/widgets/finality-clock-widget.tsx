@@ -14,9 +14,9 @@ import WidgetShell from "./widget-shell"
 
 /*
  * The payment sits in the last block before checkpoint 1. Blocks every 12 s,
- * a checkpoint every 32 blocks (about 6.4 min). Each checkpoint collects votes
+ * a checkpoint every 32 slots (about 6.4 min). Each checkpoint collects votes
  * for one round; once checkpoints 1 and 2 are both backed by two-thirds of
- * staked ETH, checkpoint 1 and everything before it is final: 64 blocks,
+ * staked ETH, checkpoint 1 and everything before it is final: 64 slots,
  * about 13 minutes. `votes` is the share of validators that have voted on
  * each checkpoint so far (they vote once per round, spread evenly).
  */
