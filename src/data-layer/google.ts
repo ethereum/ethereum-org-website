@@ -18,7 +18,13 @@ export async function getGoogleAccessToken(
       "Google service account not set (GOOGLE_SERVICE_ACCOUNT_CREDENTIALS)"
     )
   }
-  const sa: ServiceAccount = JSON.parse(credentials)
+  let sa: ServiceAccount
+  try {
+    sa = JSON.parse(credentials)
+  } catch {
+    // JSON.parse errors quote the input, which would leak the key into alerts
+    throw new Error("GOOGLE_SERVICE_ACCOUNT_CREDENTIALS is not valid JSON")
+  }
 
   const now = Math.floor(Date.now() / 1000)
   const encode = (value: object) =>

@@ -43,13 +43,20 @@ import { KEYS, set } from "./storage"
 // Per-task overrides for the config-wide defaults in trigger.config.ts
 interface TaskOverrides {
   maxDuration?: number
+  retry?: { maxAttempts: number }
 }
 
 // Task definition: storage key + fetch function + optional runtime overrides
 type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
-// Each run scans ~315GiB of BigQuery; monthly stays inside the 1TiB free tier
-const MONTHLY: TaskDef[] = [[KEYS.ACCOUNT_HOLDERS, fetchAccountHolders]]
+const MONTHLY: TaskDef[] = [
+  // ~315GiB BigQuery scan: monthly with no retry stays inside the 1TiB free tier
+  [
+    KEYS.ACCOUNT_HOLDERS,
+    fetchAccountHolders,
+    { maxDuration: 900, retry: { maxAttempts: 1 } },
+  ],
+]
 
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 

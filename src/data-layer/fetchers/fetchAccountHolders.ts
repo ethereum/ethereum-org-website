@@ -2,11 +2,11 @@ import type { MetricReturnData } from "@/lib/types"
 
 import { getGoogleAccessToken } from "../google"
 
-import { fetchRetry, sleep } from "./fetchRetry"
+import { fetchRetry } from "./fetchRetry"
 
 export const FETCH_ACCOUNT_HOLDERS_TASK_ID = "fetch-account-holders"
 
-// Same SQL as Dune query 6676254, against Google's free public dataset
+// Port of Dune query 6676254
 const QUERY = `
 SELECT APPROX_COUNT_DISTINCT(address) AS unique_addresses
 FROM (
@@ -15,7 +15,7 @@ FROM (
   SELECT to_address FROM \`bigquery-public-data.crypto_ethereum.transactions\` WHERE to_address IS NOT NULL
 )`
 
-// Hard cost ceiling: a full scan is ~315GiB and the free tier is 1TiB/month
+// Per-query cost ceiling
 const MAX_BYTES_BILLED = String(400 * 1024 ** 3)
 
 interface QueryResponse {
@@ -47,6 +47,7 @@ export async function fetchAccountHolders(): Promise<MetricReturnData> {
       query: QUERY,
       useLegacySql: false,
       maximumBytesBilled: MAX_BYTES_BILLED,
+      requestId: crypto.randomUUID(),
       timeoutMs: 60_000,
     }),
   })
@@ -64,7 +65,6 @@ export async function fetchAccountHolders(): Promise<MetricReturnData> {
       console.log("Successfully fetched account holders data", { value })
       return { value, timestamp: Date.now() }
     }
-    await sleep(5_000)
     const { jobId, location } = json.jobReference
     response = await fetchRetry(
       `${api}/queries/${jobId}?location=${location}&timeoutMs=60000`,
