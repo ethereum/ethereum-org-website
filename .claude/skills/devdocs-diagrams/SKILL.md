@@ -93,7 +93,7 @@ Hover and focus are built in: wrap each part in `<g data-part="id">` with the sa
 ## Stories and checks
 
 - Stories: idle, each step (`initialStep`), each preset, `Dark`, `Rtl` (`globals: { locale: "ar" }`), mobile (`viewport: base`), a hover story with a play function that focuses a label. Chromatic already runs with reduced motion, so no separate reduced-motion story. Open them in `pnpm storybook`; `build-storybook` doesn't execute them.
-- **Snapshots: key states only.** Set `chromatic: { disableSnapshot: true }` on the meta and opt in per story with `disableSnapshot: false`: idle, the final step, the failure end state (e.g. out of gas), dark, RTL and mobile. Step-by-step and hover stories stay unsnapshotted. Don't add a mobile story when the meta's modes already include the `base` viewport.
+- **Snapshots: key states only.** Set `chromatic: { disableSnapshot: true }` on the meta and opt in per story with `disableSnapshot: false`: idle, the final step, the failure end state (e.g. out of gas), dark, RTL and mobile. Step-by-step and hover stories stay unsnapshotted. Don't add a mobile story when the meta's modes already include the `base` viewport. Shared primitive and shell stories (`anatomy`, `interactive-diagram`) don't snapshot at all; the diagram snapshots cover them.
 - No e2e guard for strokes: static token classes and the `var()` fallbacks in `DIAGRAM_SVG_FALLBACKS` prevent vanishing lines, and the snapshots show it if one breaks.
 - Screenshot light and dark at 1440px, 1024px and 390px, RTL, every step: no black paint, no label collisions, no labels on shapes, no leader crossings, nothing clipped.
 - `pnpm lint`, `pnpm type-check`, `pnpm lint:md`, `pnpm build-storybook`.
