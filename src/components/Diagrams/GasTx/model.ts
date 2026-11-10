@@ -2,8 +2,8 @@
  * Plain model for the gas-tx ("Message call") diagram. The drawing, readout,
  * step caption and screen-reader text all read from `getGasTxView`, so they
  * cannot disagree. Values are in gas units; fee pricing is deliberately out of
- * scope. "Refund" here means unused gas (limit - used) returned to the sender,
- * not the storage refund.
+ * scope. Unused gas (limit - used) is "returned" to the sender; never call it
+ * a refund, which means the storage refund.
  */
 
 export const GAS_TX_PRESET_IDS = ["light", "heavy", "out-of-gas"] as const
@@ -162,7 +162,7 @@ export const getGasTxView = (
       enter: isReached("enter"),
       reserve: isReached("reserve"),
       execute: isReached("execute"),
-      // Nothing flows back when out of gas, so the refund lane stays dimmed.
+      // Nothing flows back when out of gas, so the return lane stays dimmed.
       return: idle || (isReached("return") && success),
     },
     reverted: !success && (step === "execute" || step === "return"),
