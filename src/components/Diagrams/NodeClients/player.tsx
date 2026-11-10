@@ -125,6 +125,7 @@ export function NodeClientsPlayer({
               label: t("node-clients-readout-call"),
               // Code, never translated.
               value: view.call ?? none,
+              code: true,
             },
             {
               label: t("node-clients-readout-server"),

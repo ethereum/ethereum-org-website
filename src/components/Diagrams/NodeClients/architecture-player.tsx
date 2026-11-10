@@ -158,6 +158,7 @@ export function NodeArchitecturePlayer({
                 label: t("node-clients-readout-engine"),
                 // Code, never translated.
                 value: view.engineMessage ?? none,
+                code: true,
               },
             ]}
           />

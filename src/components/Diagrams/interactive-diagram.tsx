@@ -412,7 +412,8 @@ export function DiagramReadout({
 }: {
   /** Accessible name for the list; defaults to the gas readout name. */
   label?: string
-  rows: { label: ReactNode; value: ReactNode }[]
+  /** `code`: a long unbroken value (API path, method name) that may wrap anywhere. */
+  rows: { label: ReactNode; value: ReactNode; code?: boolean }[]
 }) {
   const t = useTranslations("component-diagrams")
   return (
@@ -423,8 +424,12 @@ export function DiagramReadout({
       {rows.map((row, i) => (
         <div key={i} className="contents">
           <dt className="text-body-medium">{row.label}</dt>
-          {/* Long code values (API paths, method names) wrap, not the label. */}
-          <dd className="m-0 text-end font-mono [overflow-wrap:anywhere] text-body tabular-nums">
+          <dd
+            className={cn(
+              "m-0 text-end font-mono text-body tabular-nums",
+              row.code && "[overflow-wrap:anywhere]"
+            )}
+          >
             {row.value}
           </dd>
         </div>
