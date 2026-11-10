@@ -120,7 +120,7 @@ const wallets = getCourse("wallets")!
 export const CourseCheck: Story = {
   args: {
     courseId: "wallets",
-    lesson: { id: EXAM_ID, icon: "badge", steps: wallets.exam },
+    lesson: { id: EXAM_ID, steps: wallets.exam },
     exam: true,
     nextCourseId: "blockchain",
   },

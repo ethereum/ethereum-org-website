@@ -17,6 +17,7 @@ import {
   type Lesson,
   lessonHref,
   type LessonStep,
+  type PageLink,
   stepKey,
 } from "@/data/courses"
 
@@ -44,7 +45,12 @@ import {
 
 interface LessonPlayerProps {
   courseId: string
-  lesson: Lesson
+  /** The steps to play; a course check passes its questions as a lesson */
+  lesson: Pick<Lesson, "id" | "steps">
+  /** Lesson only: ethereum.org page offered on the completion screen */
+  learnMore?: PageLink
+  /** Course check only: page backing each question, by question id */
+  sources?: Record<string, PageLink>
   nextLessonId?: string
   /**
    * Final exam: one attempt per question with the answer revealed, scored
@@ -118,6 +124,8 @@ const LessonPlayer = ({
   exam,
   nextCourseId,
   examAfter,
+  learnMore,
+  sources,
 }: LessonPlayerProps) => {
   const t = useTranslations("page-courses")
   const reduceMotion = useReducedMotion()
@@ -402,6 +410,7 @@ const LessonPlayer = ({
             }
             courseHref={courseHref(courseId)}
             nextCourseId={nextCourseId}
+            sources={sources}
             onRetake={restart}
           />
         ) : reward ? (
@@ -417,6 +426,7 @@ const LessonPlayer = ({
                   : undefined
             }
             nextIsExam={!nextLessonId && examAfter}
+            learnMore={learnMore}
           />
         ) : (
           <AnimatePresence mode="wait" initial={false}>

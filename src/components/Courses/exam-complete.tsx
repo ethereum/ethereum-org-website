@@ -6,11 +6,16 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { LinkWithArrow } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import { courseHref as hrefFor, type ExamStep } from "@/data/courses"
+import {
+  type ChoiceStep,
+  courseHref as hrefFor,
+  type PageLink,
+} from "@/data/courses"
 
 import Confetti from "./confetti"
 import StreakCelebration from "./streak-celebration"
@@ -19,7 +24,7 @@ import { useCountUp } from "./use-count-up"
 import type { ExamReward } from "./useCourseProgress"
 
 export interface ExamResult {
-  step: ExamStep
+  step: ChoiceStep
   picked: string[]
   correct: boolean
 }
@@ -34,6 +39,8 @@ interface ExamCompleteProps {
   courseHref: string
   nextCourseId?: string
   onRetake: () => void
+  /** Page backing each question, by question id */
+  sources?: Record<string, PageLink>
 }
 
 type Stage = "summary" | "review" | "streak"
@@ -48,6 +55,7 @@ const ExamComplete = ({
   courseHref,
   nextCourseId,
   onRetake,
+  sources,
 }: ExamCompleteProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
@@ -209,6 +217,7 @@ const ExamComplete = ({
                   number={i + 1}
                   result={result}
                   keyFor={(suffix) => keyFor(result.step.id, suffix)}
+                  source={sources?.[result.step.id]}
                 />
               ))}
             </ol>
@@ -298,10 +307,12 @@ const ReviewItem = ({
   number,
   result: { step, picked, correct },
   keyFor,
+  source,
 }: {
   number: number
   result: ExamResult
   keyFor: (suffix: string) => string
+  source?: PageLink
 }) => {
   const t = useTranslations("page-courses")
   // Only what matters: what the learner picked and what was right
@@ -366,6 +377,14 @@ const ReviewItem = ({
         })}
       </ul>
       <p className="m-0 ps-10 text-body-medium">{t(keyFor("explain"))}</p>
+      {source && (
+        <p className="m-0 flex flex-wrap gap-x-1.5 ps-10 text-sm">
+          <span className="font-bold text-body-medium">
+            {t("page-courses-exam-learn-more")}
+          </span>
+          <LinkWithArrow href={source.href}>{source.title}</LinkWithArrow>
+        </p>
+      )}
     </li>
   )
 }

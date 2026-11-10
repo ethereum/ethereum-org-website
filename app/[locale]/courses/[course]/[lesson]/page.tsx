@@ -16,6 +16,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { COURSES, getLesson } from "@/data/courses"
 
+import { getPageLink } from "@/lib/courses/page-links"
+
 export const revalidate = false
 
 type LessonPageParams = PageParams & { course: string; lesson: string }
@@ -43,6 +45,7 @@ const Page = async (props: { params: Promise<LessonPageParams> }) => {
           lesson={found.lesson}
           nextLessonId={found.next?.id}
           examAfter={found.course.exam.length > 0}
+          learnMore={await getPageLink(locale, found.lesson.learnMore)}
         />
       </main>
     </I18nProvider>

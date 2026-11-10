@@ -9,6 +9,7 @@ export const blockchainCourse: Course = {
     {
       id: "hashing",
       icon: "fingerprint",
+      learnMore: "/glossary/#hash",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "diamond" },
         {
@@ -30,6 +31,7 @@ export const blockchainCourse: Course = {
     {
       id: "chain",
       icon: "link",
+      learnMore: "/developers/docs/blocks/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "blocks" },
         { id: "tamper", type: "interactive", widget: "chain-tamper" },
@@ -45,6 +47,7 @@ export const blockchainCourse: Course = {
     {
       id: "consensus",
       icon: "shield",
+      learnMore: "/developers/docs/consensus-mechanisms/pos/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "diamond" },
         { id: "attack", type: "interactive", widget: "stake-vote" },
@@ -60,6 +63,7 @@ export const blockchainCourse: Course = {
     {
       id: "nodes",
       icon: "server",
+      learnMore: "/run-a-node/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "blocks" },
         {
@@ -93,6 +97,7 @@ export const blockchainCourse: Course = {
     {
       id: "finality",
       icon: "badge",
+      learnMore: "/developers/docs/consensus-mechanisms/pos/#finality",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "diamond" },
         { id: "clock", type: "interactive", widget: "finality-clock" },
@@ -122,48 +127,56 @@ export const blockchainCourse: Course = {
   exam: [
     {
       id: "tiny-change",
+      source: "/glossary/#hash",
       type: "choice",
       options: ["one", "all", "none"],
       correct: ["all"],
     },
     {
       id: "work-back",
+      source: "/glossary/#hash",
       type: "choice",
       options: ["reverse", "power", "guess"],
       correct: ["guess"],
     },
     {
       id: "rewrite",
+      source: "/developers/docs/blocks/",
       type: "choice",
       options: ["after", "next", "none"],
       correct: ["after"],
     },
     {
       id: "spot-edit",
+      source: "/developers/docs/blocks/",
       type: "choice",
       options: ["report", "slow", "links"],
       correct: ["links"],
     },
     {
       id: "stall",
+      source: "/developers/docs/consensus-mechanisms/pos/",
       type: "choice",
       options: ["third", "half", "two-thirds"],
       correct: ["third"],
     },
     {
       id: "double-sign",
+      source: "/developers/docs/consensus-mechanisms/pos/",
       type: "choice",
       options: ["penalty", "slashed", "nothing"],
       correct: ["slashed"],
     },
     {
       id: "back-online",
+      source: "/run-a-node/",
       type: "choice",
       options: ["broken", "trust", "sync"],
       correct: ["sync"],
     },
     {
       id: "run-node",
+      source: "/run-a-node/",
       type: "choice",
       options: ["anyone", "stake", "check", "earn"],
       correct: ["anyone", "check"],
@@ -171,12 +184,14 @@ export const blockchainCourse: Course = {
     },
     {
       id: "wait",
+      source: "/developers/docs/consensus-mechanisms/pos/#finality",
       type: "choice",
       options: ["block", "thirteen", "checkpoint"],
       correct: ["thirteen"],
     },
     {
       id: "undo",
+      source: "/developers/docs/consensus-mechanisms/pos/#finality",
       type: "choice",
       options: ["third", "edit", "nodes"],
       correct: ["third"],

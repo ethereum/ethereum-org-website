@@ -9,6 +9,7 @@ export const smartContractsCourse: Course = {
     {
       id: "what",
       icon: "code",
+      learnMore: "/smart-contracts/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "contract" },
         {
@@ -30,6 +31,7 @@ export const smartContractsCourse: Course = {
     {
       id: "calling",
       icon: "pointer",
+      learnMore: "/developers/docs/smart-contracts/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -57,6 +59,7 @@ export const smartContractsCourse: Course = {
     {
       id: "tokens",
       icon: "coins",
+      learnMore: "/developers/docs/standards/tokens/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "coins" },
         {
@@ -78,6 +81,7 @@ export const smartContractsCourse: Course = {
     {
       id: "public",
       icon: "eye",
+      learnMore: "/developers/docs/smart-contracts/composability/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -98,6 +102,7 @@ export const smartContractsCourse: Course = {
     {
       id: "risks",
       icon: "bug",
+      learnMore: "/guides/how-to-revoke-token-access/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -126,18 +131,21 @@ export const smartContractsCourse: Course = {
   exam: [
     {
       id: "underpay",
+      source: "/smart-contracts/",
       type: "choice",
       options: ["owe", "reject", "creator"],
       correct: ["reject"],
     },
     {
       id: "deployed",
+      source: "/smart-contracts/",
       type: "choice",
       options: ["anytime", "validators", "published"],
       correct: ["published"],
     },
     {
       id: "gas",
+      source: "/developers/docs/smart-contracts/",
       type: "choice",
       options: ["stock", "buy", "balance", "send"],
       correct: ["buy", "send"],
@@ -145,42 +153,49 @@ export const smartContractsCourse: Course = {
     },
     {
       id: "price-check",
+      source: "/developers/docs/smart-contracts/",
       type: "choice",
       options: ["decline", "always", "once"],
       correct: ["decline"],
     },
     {
       id: "transfer",
+      source: "/developers/docs/standards/tokens/",
       type: "choice",
       options: ["created", "travel", "updated"],
       correct: ["updated"],
     },
     {
       id: "restore",
+      source: "/developers/docs/standards/tokens/",
       type: "choice",
       options: ["list", "gone", "eth"],
       correct: ["list"],
     },
     {
       id: "source",
+      source: "/developers/docs/smart-contracts/composability/",
       type: "choice",
       options: ["hidden", "machine", "change"],
       correct: ["machine"],
     },
     {
       id: "swap",
+      source: "/developers/docs/smart-contracts/composability/",
       type: "choice",
       options: ["three", "two", "one"],
       correct: ["one"],
     },
     {
       id: "audit",
+      source: "/guides/how-to-revoke-token-access/",
       type: "choice",
       options: ["lowers", "bug-free", "useless"],
       correct: ["lowers"],
     },
     {
       id: "approval",
+      source: "/guides/how-to-revoke-token-access/",
       type: "choice",
       options: ["still", "disconnect", "revoke", "held"],
       correct: ["still", "revoke"],

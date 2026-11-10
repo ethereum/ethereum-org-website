@@ -1,15 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { Target, Zap } from "lucide-react"
+import { BookOpen, Target, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { LinkWithArrow } from "@/components/ui/Link"
 import { Progress } from "@/components/ui/progress"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
+
+import type { PageLink } from "@/data/courses"
 
 import CourseArt from "./art/course-art"
 import Confetti from "./confetti"
@@ -25,6 +28,8 @@ interface LessonCompleteProps {
   nextHref?: string
   /** `nextHref` is the course check rather than a lesson */
   nextIsExam?: boolean
+  /** ethereum.org page to go deeper, offered once the lesson is done */
+  learnMore?: PageLink
 }
 
 // XP sparks fly from the badge down into the total bar
@@ -50,6 +55,7 @@ const LessonComplete = ({
   courseHref,
   nextHref,
   nextIsExam,
+  learnMore,
 }: LessonCompleteProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
@@ -226,32 +232,54 @@ const LessonComplete = ({
       ) : (
         <motion.div
           key="nav"
-          className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center"
+          className="flex w-full flex-col items-center gap-6"
           {...appear(stage === "streak" ? 2 : 2.4)}
         >
-          {nextHref && (
+          <div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
+            {nextHref && (
+              <ButtonLink
+                href={nextHref}
+                variant="ghost"
+                hideArrow
+                className={chunkyButton}
+              >
+                {nextIsExam
+                  ? t("page-courses-next-exam")
+                  : t("page-courses-next-lesson")}
+              </ButtonLink>
+            )}
             <ButtonLink
-              href={nextHref}
+              href={courseHref}
               variant="ghost"
               hideArrow
-              className={chunkyButton}
+              className={nextHref ? chunkyButtonSecondary : chunkyButton}
             >
-              {nextIsExam
-                ? t("page-courses-next-exam")
-                : t("page-courses-next-lesson")}
+              {t("page-courses-back-to-course")}
             </ButtonLink>
-          )}
-          <ButtonLink
-            href={courseHref}
-            variant="ghost"
-            hideArrow
-            className={nextHref ? chunkyButtonSecondary : chunkyButton}
-          >
-            {t("page-courses-back-to-course")}
-          </ButtonLink>
+          </div>
+          {learnMore && <LearnMoreCard link={learnMore} />}
         </motion.div>
       )}
     </div>
+  )
+}
+
+/** Secondary to the nav: the lesson is done, so leaving costs no momentum */
+const LearnMoreCard = ({ link }: { link: PageLink }) => {
+  const t = useTranslations("page-courses")
+  return (
+    <aside className="flex w-full max-w-sm items-center gap-3 rounded-2xl border-2 border-border p-4 text-start">
+      <BookOpen
+        className="size-6 shrink-0 text-(--course-strong) dark:text-(--course-bright)"
+        aria-hidden
+      />
+      <div className="flex flex-col gap-0.5">
+        <span className="text-sm font-bold tracking-wide text-body-medium uppercase">
+          {t("page-courses-learn-more")}
+        </span>
+        <LinkWithArrow href={link.href}>{link.title}</LinkWithArrow>
+      </div>
+    </aside>
   )
 }
 

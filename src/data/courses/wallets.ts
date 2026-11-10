@@ -9,6 +9,7 @@ export const walletsCourse: Course = {
     {
       id: "keys",
       icon: "key",
+      learnMore: "/wallets/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "vault" },
         {
@@ -30,6 +31,7 @@ export const walletsCourse: Course = {
     {
       id: "recovery",
       icon: "scroll",
+      learnMore: "/guides/how-to-create-an-ethereum-account/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -57,6 +59,7 @@ export const walletsCourse: Course = {
     {
       id: "signing",
       icon: "pen",
+      learnMore: "/guides/how-to-use-a-wallet/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -78,6 +81,7 @@ export const walletsCourse: Course = {
     {
       id: "addresses",
       icon: "at",
+      learnMore: "/security/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -111,6 +115,7 @@ export const walletsCourse: Course = {
     {
       id: "custody",
       icon: "wallet",
+      learnMore: "/wallets/find-wallet/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -139,30 +144,35 @@ export const walletsCourse: Course = {
   exam: [
     {
       id: "balance",
+      source: "/wallets/",
       type: "choice",
       options: ["app", "chain", "maker"],
       correct: ["chain"],
     },
     {
       id: "public",
+      source: "/wallets/",
       type: "choice",
       options: ["send", "move", "key"],
       correct: ["send"],
     },
     {
       id: "restore",
+      source: "/guides/how-to-create-an-ethereum-account/",
       type: "choice",
       options: ["support", "gone", "phrase"],
       correct: ["phrase"],
     },
     {
       id: "website",
+      source: "/guides/how-to-create-an-ethereum-account/",
       type: "choice",
       options: ["type", "close", "part"],
       correct: ["close"],
     },
     {
       id: "signature",
+      source: "/guides/how-to-use-a-wallet/",
       type: "choice",
       options: ["identity", "key", "reveal", "exact"],
       correct: ["key", "exact"],
@@ -170,30 +180,35 @@ export const walletsCourse: Course = {
     },
     {
       id: "unreadable",
+      source: "/guides/how-to-use-a-wallet/",
       type: "choice",
       options: ["reject", "sign", "phrase"],
       correct: ["reject"],
     },
     {
       id: "lookalike",
+      source: "/security/",
       type: "choice",
       options: ["recent", "trusted", "ends"],
       correct: ["trusted"],
     },
     {
       id: "mistake",
+      source: "/security/",
       type: "choice",
       options: ["holder", "support", "bounce"],
       correct: ["holder"],
     },
     {
       id: "frozen",
+      source: "/wallets/find-wallet/",
       type: "choice",
       options: ["password", "phrase", "exchange"],
       correct: ["exchange"],
     },
     {
       id: "savings",
+      source: "/wallets/find-wallet/",
       type: "choice",
       options: ["phone", "split", "exchange"],
       correct: ["split"],

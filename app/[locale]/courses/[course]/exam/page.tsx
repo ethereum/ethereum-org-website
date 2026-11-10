@@ -16,6 +16,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { COURSES, EXAM_ID, getCourse } from "@/data/courses"
 
+import { getPageLink } from "@/lib/courses/page-links"
+
 export const revalidate = false
 
 type ExamPageParams = PageParams & { course: string }
@@ -38,6 +40,14 @@ const Page = async (props: { params: Promise<ExamPageParams> }) => {
     getRequiredNamespacesForPage(`/courses/${courseId}/${EXAM_ID}`)
   )
   const nextCourseId = COURSES[COURSES.indexOf(course) + 1]?.id
+  const sources = Object.fromEntries(
+    await Promise.all(
+      course.exam.map(
+        async ({ id, source }) =>
+          [id, await getPageLink(locale, source)] as const
+      )
+    )
+  )
 
   return (
     <I18nProvider locale={locale} messages={messages}>
@@ -46,8 +56,9 @@ const Page = async (props: { params: Promise<ExamPageParams> }) => {
           key={courseId}
           exam
           courseId={courseId}
-          lesson={{ id: EXAM_ID, icon: "badge", steps: course.exam }}
+          lesson={{ id: EXAM_ID, steps: course.exam }}
           nextCourseId={nextCourseId}
+          sources={sources}
         />
       </main>
     </I18nProvider>

@@ -136,6 +136,11 @@ export type LessonStep =
 export interface Lesson {
   id: string
   icon: LessonIconId
+  /**
+   * ethereum.org page (path, optional `#anchor`) offered once the lesson is
+   * done. Its title comes from the page itself, so it needs no string here.
+   */
+  learnMore: string
   steps: LessonStep[]
 }
 
@@ -144,7 +149,16 @@ export interface Lesson {
  * new material. One attempt, so no per-option feedback. Keys under
  * `{course}-exam-{id}`: `-prompt`, `-opt-{id}`, `-explain`.
  */
-export type ExamStep = ChoiceStep
+export interface ExamStep extends ChoiceStep {
+  /** ethereum.org page (path, optional `#anchor`) that backs the answer */
+  source: string
+}
+
+/** A site page resolved for display: its title in the learner's language */
+export interface PageLink {
+  href: string
+  title: string
+}
 
 /** Keys: `{course}-title`, `{course}-description` */
 export interface Course {

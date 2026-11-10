@@ -9,6 +9,7 @@ export const transactionsCourse: Course = {
     {
       id: "lifecycle",
       icon: "send",
+      learnMore: "/developers/docs/transactions/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "coins" },
         {
@@ -28,6 +29,7 @@ export const transactionsCourse: Course = {
     {
       id: "gas",
       icon: "fuel",
+      learnMore: "/gas/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "tank" },
         { id: "calculator", type: "interactive", widget: "gas-fee" },
@@ -49,6 +51,7 @@ export const transactionsCourse: Course = {
     {
       id: "blocks",
       icon: "box",
+      learnMore: "/developers/docs/blocks/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "blocks" },
         { id: "build", type: "interactive", widget: "block-builder" },
@@ -75,6 +78,7 @@ export const transactionsCourse: Course = {
     {
       id: "failed",
       icon: "alert",
+      learnMore: "/developers/docs/gas/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "tank" },
         {
@@ -108,6 +112,7 @@ export const transactionsCourse: Course = {
     {
       id: "explorer",
       icon: "search",
+      learnMore: "/developers/docs/data-and-analytics/block-explorers/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "blocks" },
         {
@@ -137,12 +142,14 @@ export const transactionsCourse: Course = {
     // lifecycle
     {
       id: "sign",
+      source: "/developers/docs/transactions/",
       type: "choice",
       options: ["block", "key", "sign"],
       correct: ["sign"],
     },
     {
       id: "undo",
+      source: "/developers/docs/transactions/",
       type: "choice",
       options: ["final", "support", "window"],
       correct: ["final"],
@@ -150,12 +157,14 @@ export const transactionsCourse: Course = {
     // gas
     {
       id: "fee",
+      source: "/gas/",
       type: "choice",
       options: ["gas", "fee", "price", "transfer"],
       correct: ["fee"],
     },
     {
       id: "wait",
+      source: "/gas/",
       type: "choice",
       options: ["currency", "limit", "wait"],
       correct: ["wait"],
@@ -163,12 +172,14 @@ export const transactionsCourse: Course = {
     // blocks
     {
       id: "tip",
+      source: "/developers/docs/blocks/",
       type: "choice",
       options: ["keep", "burn", "limit"],
       correct: ["keep"],
     },
     {
       id: "final",
+      source: "/developers/docs/blocks/",
       type: "choice",
       options: ["instant", "finalized", "never"],
       correct: ["finalized"],
@@ -176,6 +187,7 @@ export const transactionsCourse: Course = {
     // failed
     {
       id: "outcome",
+      source: "/developers/docs/gas/",
       type: "choice",
       options: ["sent", "fee", "refund", "undone"],
       correct: ["fee", "undone"],
@@ -183,6 +195,7 @@ export const transactionsCourse: Course = {
     },
     {
       id: "headroom",
+      source: "/developers/docs/gas/",
       type: "choice",
       options: ["higher", "same", "fails"],
       correct: ["same"],
@@ -190,12 +203,14 @@ export const transactionsCourse: Course = {
     // explorer
     {
       id: "proof",
+      source: "/developers/docs/data-and-analytics/block-explorers/",
       type: "choice",
       options: ["hash", "screenshot", "key"],
       correct: ["hash"],
     },
     {
       id: "status",
+      source: "/developers/docs/data-and-analytics/block-explorers/",
       type: "choice",
       options: ["block", "fee", "value", "status"],
       correct: ["status"],

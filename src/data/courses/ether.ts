@@ -9,6 +9,7 @@ export const etherCourse: Course = {
     {
       id: "what",
       icon: "coins",
+      learnMore: "/what-is-ether/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "diamond" },
         {
@@ -36,6 +37,7 @@ export const etherCourse: Course = {
     {
       id: "units",
       icon: "calculator",
+      learnMore: "/developers/docs/intro-to-ether/#denominations",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "coins" },
         {
@@ -68,6 +70,7 @@ export const etherCourse: Course = {
     {
       id: "supply",
       icon: "flame",
+      learnMore: "/roadmap/merge/issuance/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -101,6 +104,7 @@ export const etherCourse: Course = {
     {
       id: "wrapped",
       icon: "gift",
+      learnMore: "/wrapped-eth/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -128,6 +132,7 @@ export const etherCourse: Course = {
     {
       id: "staking",
       icon: "piggy",
+      learnMore: "/staking/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "vault" },
         {
@@ -161,12 +166,14 @@ export const etherCourse: Course = {
   exam: [
     {
       id: "own",
+      source: "/what-is-ether/",
       type: "choice",
       options: ["eth", "shares", "network"],
       correct: ["eth"],
     },
     {
       id: "jobs",
+      source: "/what-is-ether/",
       type: "choice",
       options: ["fees", "stake", "subscription", "money"],
       correct: ["fees", "stake", "money"],
@@ -174,42 +181,49 @@ export const etherCourse: Course = {
     },
     {
       id: "smallest",
+      source: "/developers/docs/intro-to-ether/#denominations",
       type: "choice",
       options: ["eth", "gwei", "wei"],
       correct: ["wei"],
     },
     {
       id: "gwei",
+      source: "/developers/docs/intro-to-ether/#denominations",
       type: "choice",
       options: ["same", "big", "fraction"],
       correct: ["big"],
     },
     {
       id: "shrink",
+      source: "/roadmap/merge/issuance/",
       type: "choice",
       options: ["busy", "quiet", "fixed"],
       correct: ["busy"],
     },
     {
       id: "rules",
+      source: "/roadmap/merge/issuance/",
       type: "choice",
       options: ["founders", "bank", "rules"],
       correct: ["rules"],
     },
     {
       id: "discount",
+      source: "/wrapped-eth/",
       type: "choice",
       options: ["normal", "backed", "name"],
       correct: ["backed"],
     },
     {
       id: "keep",
+      source: "/wrapped-eth/",
       type: "choice",
       options: ["keep", "all", "little"],
       correct: ["keep"],
     },
     {
       id: "risks",
+      source: "/staking/",
       type: "choice",
       options: ["slashing", "forever", "offline", "trust"],
       correct: ["slashing", "offline", "trust"],
@@ -217,6 +231,7 @@ export const etherCourse: Course = {
     },
     {
       id: "solo",
+      source: "/staking/",
       type: "choice",
       options: ["exchange", "solo", "pool"],
       correct: ["solo"],

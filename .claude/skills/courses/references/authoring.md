@@ -24,6 +24,8 @@ Three to six minutes, roughly five to seven steps:
 
 One new idea per lesson. If the takeaway needs "and" twice, split the lesson.
 
+Every lesson sets `learnMore`: one ethereum.org page (path, optional `#anchor`) offered on the completion screen, never mid-lesson, so it costs no momentum. Pick the beginner-level page closest to the lesson's idea. The link text is the page's own title, so it needs no string; `tests/unit/courses/links.spec.ts` checks the page, title and anchor exist.
+
 ## Writing questions
 
 - Three options for single choice, four for multi. Every option teaches a distinct misconception; no joke options.
@@ -45,6 +47,7 @@ Every course ends in a course check: the trophy node on the path, route `/course
 - It tests what the course taught and introduces nothing: each question repeats a lesson question, widget puzzle or stated fact with a new scenario or wording. Never copy a lesson string verbatim, and never use a fact the course (or an earlier course on the path) didn't teach.
 - One attempt per question, then the right answer shows. So there are no per-option `fb-` notes, just one `-explain` that works whether the learner was right or wrong (don't open with "Right" or "Wrong"). It shows again in the review screen.
 - `multi` at most twice per check.
+- Every question sets `source`: the ethereum.org page (and anchor, where one exists) that states the fact it tests. It shows as "Learn more" in the review screen and is what the content review checks the question against.
 
 ## Checks
 
