@@ -7,7 +7,6 @@ import { ExtendedRollup, Lang } from "@/lib/types"
 
 import { TableMeta } from "@/components/DataTable"
 import { Image } from "@/components/Image"
-import NetworkMaturityTooltip from "@/components/Layer2NetworksTable/NetworkMaturityTooltip"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
@@ -17,6 +16,8 @@ import { TableCell, TableHead } from "@/components/ui/table"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { numberFormat } from "@/lib/utils/numbers"
+
+import NetworkMaturityTooltip from "../NetworkMaturityTooltip"
 
 export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
   {

@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"
 import { Skeleton } from "@/components/ui/skeleton"
 
 const CentralizedExchanges = dynamic(
-  () => import("@/components/CentralizedExchanges").then((mod) => mod.default),
+  () => import("./CentralizedExchanges").then((mod) => mod.default),
   {
     ssr: false,
     loading: () => (

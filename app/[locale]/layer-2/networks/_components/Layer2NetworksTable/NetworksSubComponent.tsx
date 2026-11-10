@@ -3,16 +3,16 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { ExtendedRollup } from "@/lib/types"
 
-import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
 import Tooltip from "@/components/Tooltip"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
+import InlineLink from "@/components/ui/Link"
 
 import { formatCompactNumber } from "@/lib/utils/numbers"
 import { formatDuration } from "@/lib/utils/time"
 
-import { ButtonLink } from "../ui/buttons/Button"
-import { Card, CardContent, CardFooter } from "../ui/card"
-import { Grid } from "../ui/grid"
-import InlineLink from "../ui/Link"
+import NetworkUsageChart from "./NetworkUsageChart"
 
 type NetworkSubComponentProps = {
   network: ExtendedRollup

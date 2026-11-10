@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
+import { Button } from "@/components/ui/buttons/Button"
 
-import { Button } from "../ui/buttons/Button"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 const FindWalletsNoResults = ({ resetFilters }) => {
   const t = useTranslations("page-layer-2-networks")

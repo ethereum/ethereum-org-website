@@ -20,7 +20,6 @@ import CardList, {
   type CardProps as CardListCardProps,
 } from "@/components/CardList"
 import ContentFeedback from "@/components/ContentFeedback"
-import EthPriceCard from "@/components/EthPriceCard"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -52,6 +51,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { exchangesByCountryLastUpdated } from "@/data/exchangesByCountry"
 
 import CentralizedExchanges from "./_components/CentralizedExchangesLazy"
+import EthPriceCard from "./_components/EthPriceCard"
 import GetEthPageJsonLD from "./page-jsonld"
 
 import handEth from "@/public/images/developers-eth-blocks.png"

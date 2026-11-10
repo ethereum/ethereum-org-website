@@ -2,13 +2,14 @@ import { useEffect } from "react"
 import { useTranslations } from "next-intl"
 import { useAccount } from "wagmi"
 
-import ConnectToEthereumButton from "@/components/ConnectToEthereumButton"
 import Emoji from "@/components/Emoji"
 import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Tag } from "@/components/ui/tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import ConnectToEthereumButton from "./ConnectToEthereumButton"
 
 import FinanceImage from "@/public/images/finance_transparent.png"
 

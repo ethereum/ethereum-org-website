@@ -8,10 +8,11 @@ import {
   MaturingIcon,
   RobustIcon,
 } from "@/components/icons/layer-2"
-import NetworksWalletSelectInput from "@/components/Layer2NetworksTable/NetworksWalletSelectInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import NetworksWalletSelectInput from "../NetworksWalletSelectInput"
 
 export const useNetworkFilters = (): FilterOption[] => {
   const t = useTranslations("page-layer-2-networks")
