@@ -21,7 +21,9 @@ module.exports = {
       return log("skipped (no previous build to diff against)")
     }
 
-    // Never let a submission problem surface as a failed deploy
+    // failPlugin flags the plugin in the deploy UI without failing the
+    // (already live) deploy. It throws, so it's only called outside the try.
+    let failure
     try {
       const nameStatus = execFileSync(
         "git",
@@ -51,13 +53,19 @@ module.exports = {
       if (!urls.length) return log("no changed pages")
 
       const statuses = await submitUrls(urls, { log })
-      const ok = statuses.every((status) => status === 200 || status === 202)
-      utils.status.show({
-        title: "IndexNow",
-        summary: `${ok ? "Submitted" : "Failed to submit"} ${urls.length} URLs (HTTP ${statuses.join(", ")})`,
-      })
+      const summary = `${urls.length} URLs (HTTP ${statuses.join(", ")})`
+      if (statuses.every((status) => status === 200 || status === 202)) {
+        utils.status.show({
+          title: "IndexNow",
+          summary: `Submitted ${summary}`,
+        })
+      } else {
+        // 403 = key file missing or mismatched
+        failure = `IndexNow rejected ${summary}`
+      }
     } catch (error) {
-      log(`failed: ${error.message}`)
+      failure = `IndexNow failed: ${error.message}`
     }
+    if (failure) utils.build.failPlugin(failure)
   },
 }

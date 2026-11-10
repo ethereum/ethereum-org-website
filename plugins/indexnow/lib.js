@@ -10,6 +10,8 @@ const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
 const SITE_URL = "https://ethereum.org"
 const DEFAULT_LOCALE = "en"
 const MAX_URLS_PER_REQUEST = 10000
+// Node's fetch otherwise waits up to 5 minutes, holding the build open
+const TIMEOUT_MS = 30_000
 
 const LOCALES = new Set(i18nConfig.map(({ code }) => code))
 
@@ -60,7 +62,7 @@ const parseLocs = (xml) =>
   )
 
 const fetchText = async (url) => {
-  const res = await fetch(url)
+  const res = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) })
   if (!res.ok) throw new Error(`${url} returned ${res.status}`)
   return res.text()
 }
@@ -102,6 +104,7 @@ const submitUrls = async (urls, { log = console.log } = {}) => {
       method: "POST",
       headers: { "Content-Type": "application/json; charset=utf-8" },
       body: JSON.stringify({ host, key: INDEXNOW_KEY, urlList }),
+      signal: AbortSignal.timeout(TIMEOUT_MS),
     })
     log(`IndexNow: ${urlList.length} URLs -> ${res.status}`)
     statuses.push(res.status)

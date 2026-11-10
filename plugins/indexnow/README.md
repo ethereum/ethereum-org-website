@@ -11,7 +11,9 @@ A local Netlify build plugin (`index.js`, registered in `netlify.toml`) runs on 
 3. Keeps changed URLs the live sitemap lists, plus removed pages (so engines see the 404 or redirect).
 4. POSTs them in batches of up to 10,000.
 
-It skips every non-production context and never fails a deploy; problems are logged as `[indexnow]` lines in the deploy log, and the result shows in the deploy summary.
+It skips every non-production context and never fails a deploy. The result shows in the deploy summary; a rejected submission (e.g. `403`, key file mismatch) or error marks the plugin as failed in the deploy UI while the deploy itself stays live.
+
+It assumes production deploys auto-publish. If auto-publishing is ever locked, `onSuccess` still fires for unpublished deploys, so new pages would be filtered out against the old sitemap and changed URLs submitted before their content is live.
 
 Known gaps, left to normal recrawling: React pages (`app/`) and UI strings (`src/intl/`) don't map 1:1 to URLs, so their changes aren't submitted. `CACHED_COMMIT_REF` is the last commit Netlify built, not necessarily the last one published, so changes from a failed or cancelled build can be missed; a deploy with no usable previous commit (e.g. after clearing the cache) submits nothing.
 
