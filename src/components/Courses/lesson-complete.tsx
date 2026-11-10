@@ -1,12 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { BookOpen, Target, Zap } from "lucide-react"
+import { Target, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
-import { LinkWithArrow } from "@/components/ui/Link"
 import { Progress } from "@/components/ui/progress"
 
 import { cn } from "@/lib/utils/cn"
@@ -16,6 +15,7 @@ import type { PageLink } from "@/data/courses"
 
 import CourseArt from "./art/course-art"
 import Confetti from "./confetti"
+import { LearnMoreCard } from "./learn-more"
 import StreakCelebration from "./streak-celebration"
 import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
@@ -261,25 +261,6 @@ const LessonComplete = ({
         </motion.div>
       )}
     </div>
-  )
-}
-
-/** Secondary to the nav: the lesson is done, so leaving costs no momentum */
-const LearnMoreCard = ({ link }: { link: PageLink }) => {
-  const t = useTranslations("page-courses")
-  return (
-    <aside className="flex w-full max-w-sm items-center gap-3 rounded-2xl border-2 border-border p-4 text-start">
-      <BookOpen
-        className="size-6 shrink-0 text-(--course-strong) dark:text-(--course-bright)"
-        aria-hidden
-      />
-      <div className="flex flex-col gap-0.5">
-        <span className="text-sm font-bold tracking-wide text-body-medium uppercase">
-          {t("page-courses-learn-more")}
-        </span>
-        <LinkWithArrow href={link.href}>{link.title}</LinkWithArrow>
-      </div>
-    </aside>
   )
 }
 

@@ -377,14 +377,6 @@ const LessonPlayer = ({
             <Flame className="size-5" />
             {combo}
           </span>
-          {!reward && (
-            <ReportProblemButton
-              courseId={courseId}
-              lessonId={lesson.id}
-              stepId={step.id}
-              answer={Array.isArray(value) ? value.filter(Boolean) : undefined}
-            />
-          )}
         </div>
 
         <h1 className="m-0 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
@@ -529,7 +521,15 @@ const LessonPlayer = ({
               )}
             </AnimatePresence>
 
-            <div className="flex shrink-0 justify-end md:ms-auto">
+            <div className="flex shrink-0 items-center justify-end gap-3 md:ms-auto">
+              <ReportProblemButton
+                courseId={courseId}
+                lessonId={lesson.id}
+                stepId={step.id}
+                answer={
+                  Array.isArray(value) ? value.filter(Boolean) : undefined
+                }
+              />
               {status === "incorrect" && exam ? (
                 <Button
                   variant="ghost"

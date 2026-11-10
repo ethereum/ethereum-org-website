@@ -6,7 +6,6 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
-import { LinkWithArrow } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
@@ -18,6 +17,7 @@ import {
 } from "@/data/courses"
 
 import Confetti from "./confetti"
+import { LearnMoreLink } from "./learn-more"
 import StreakCelebration from "./streak-celebration"
 import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
@@ -382,7 +382,7 @@ const ReviewItem = ({
           <span className="font-bold text-body-medium">
             {t("page-courses-exam-learn-more")}
           </span>
-          <LinkWithArrow href={source.href}>{source.title}</LinkWithArrow>
+          <LearnMoreLink link={source} />
         </p>
       )}
     </li>
