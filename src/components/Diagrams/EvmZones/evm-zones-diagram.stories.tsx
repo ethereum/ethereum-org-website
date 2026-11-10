@@ -10,8 +10,7 @@ const meta = {
   args: { fig: 1 },
   parameters: {
     layout: "padded",
-    // Only key states snapshot (opted in per story): idle, final,
-    // dark, RTL and mobile.
+    // No Chromatic snapshots: the anatomy and shell stories cover the visuals.
     chromatic: { disableSnapshot: true, modes: { lg: { viewport: "lg" } } },
     docs: {
       description: {
@@ -26,9 +25,7 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Idle: Story = {
-  parameters: { chromatic: { disableSnapshot: false } },
-}
+export const Idle: Story = {}
 
 export const Step1Load: Story = { args: { initialStep: 1 } }
 
@@ -38,13 +35,11 @@ export const Step3Store: Story = { args: { initialStep: 3 } }
 
 export const Step4End: Story = {
   args: { initialStep: 4 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const Dark: Story = {
   globals: { theme: "dark" },
   args: { initialStep: 3 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const DarkEnd: Story = {
@@ -55,7 +50,6 @@ export const DarkEnd: Story = {
 export const Rtl: Story = {
   globals: { locale: "ar" },
   args: { initialStep: 3 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const Mobile: Story = {
@@ -63,7 +57,6 @@ export const Mobile: Story = {
   args: { initialStep: 3 },
   parameters: {
     chromatic: {
-      disableSnapshot: false,
       modes: { lg: { disable: true }, base: { viewport: "base" } },
     },
   },

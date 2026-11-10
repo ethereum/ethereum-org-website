@@ -10,8 +10,7 @@ const meta = {
   args: { fig: 1 },
   parameters: {
     layout: "padded",
-    // Only key states snapshot (opted in per story): idle, final,
-    // failure end state, dark, RTL and mobile.
+    // No Chromatic snapshots: the anatomy and shell stories cover the visuals.
     chromatic: { disableSnapshot: true, modes: { lg: { viewport: "lg" } } },
     docs: {
       description: {
@@ -26,9 +25,7 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Idle: Story = {
-  parameters: { chromatic: { disableSnapshot: false } },
-}
+export const Idle: Story = {}
 
 export const Step1Address: Story = { args: { initialStep: 1 } }
 
@@ -38,7 +35,6 @@ export const Step3Storage: Story = { args: { initialStep: 3 } }
 
 export const Step4Code: Story = {
   args: { initialStep: 4 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const ContractIdle: Story = { args: { initialPreset: "contract" } }
@@ -54,7 +50,6 @@ export const ContractCode: Story = {
 export const Dark: Story = {
   globals: { theme: "dark" },
   args: { initialPreset: "contract", initialStep: 3 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const DarkEoa: Story = {
@@ -65,7 +60,6 @@ export const DarkEoa: Story = {
 export const Rtl: Story = {
   globals: { locale: "ar" },
   args: { initialPreset: "contract", initialStep: 2 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const Mobile: Story = {
@@ -73,7 +67,6 @@ export const Mobile: Story = {
   args: { initialPreset: "contract", initialStep: 4 },
   parameters: {
     chromatic: {
-      disableSnapshot: false,
       modes: { lg: { disable: true }, base: { viewport: "base" } },
     },
   },
