@@ -15,7 +15,7 @@
   "page-courses-stats-privacy": "Progress is saved in this browser only. Nothing is sent to a server.",
   "page-courses-stats-reset": "Reset progress",
   "page-courses-stats-reset-confirm": "Clear all course progress saved in this browser?",
-  "page-courses-catalog-title": "Beginner courses",
+  "page-courses-catalog-title": "Ethereum essentials",
   "page-courses-level-beginner": "Beginner",
   "page-courses-lesson-count": "{count, plural, one {# lesson} other {# lessons}}",
   "page-courses-lessons-done": "{done} of {total} lessons complete",
