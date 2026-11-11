@@ -633,5 +633,7 @@
   "region-bonaire-netherlands": "Bonaire (Netherlands)",
   "region-saba-netherlands": "Saba (Netherlands)",
   "region-sint-eustatius-netherlands": "Sint Eustatius (Netherlands)",
-  "zkevm": "zkEVM"
+  "zkevm": "zkEVM",
+  "reviewer-smoke-unused": "Smoke test key nobody references",
+  "reviewer-smoke-camelCase": "Smoke test key referenced from code"
 }

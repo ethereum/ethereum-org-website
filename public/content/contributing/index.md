@@ -11,6 +11,8 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 
 ## Ways to contribute {#ways-to-contribute}
 
+See the [smoke test guide](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/does-not-exist-smoke-test.md).
+
 **Translations**
 - [Report a translation error](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – The [Translation Program](/contributing/translation-program/) is winding down and no longer onboarding new translators
 

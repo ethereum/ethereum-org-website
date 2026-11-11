@@ -44,6 +44,8 @@ export const formatLargeUSD = (value: number, locale: string): string => {
   }).format(value)
 }
 
+export const PERCENT_CHANGE_LABEL_KEY = "reviewer-smoke-camelCase"
+
 export const formatPercentChange = (value: number, locale: string): string => {
   const formatted = new Intl.NumberFormat(locale, {
     style: "percent",
