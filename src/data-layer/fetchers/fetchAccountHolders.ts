@@ -1,63 +1,74 @@
 import type { MetricReturnData } from "@/lib/types"
 
-import { DUNE_API_URL } from "@/lib/constants"
+import { getGoogleAccessToken } from "../google"
 
 import { fetchRetry } from "./fetchRetry"
 
 export const FETCH_ACCOUNT_HOLDERS_TASK_ID = "fetch-account-holders"
 
-// Dune query: https://dune.com/queries/6676254
-// "Ethereum Cumulative Unique Addresses" - Total count of unique addresses
-// that have ever sent or received a transaction on Ethereum mainnet.
-const DUNE_QUERY_ID = "6676254"
+// Port of Dune query 6676254
+const QUERY = `
+SELECT APPROX_COUNT_DISTINCT(address) AS unique_addresses
+FROM (
+  SELECT from_address AS address FROM \`bigquery-public-data.crypto_ethereum.transactions\`
+  UNION ALL
+  SELECT to_address FROM \`bigquery-public-data.crypto_ethereum.transactions\` WHERE to_address IS NOT NULL
+)`
 
-type AccountHoldersResponse = {
-  result: {
-    rows: Array<{ unique_addresses: number }>
-  }
+// Per-query cost ceiling
+const MAX_BYTES_BILLED = String(400 * 1024 ** 3)
+
+interface QueryResponse {
+  jobComplete: boolean
+  jobReference: { jobId: string; location: string }
+  rows?: Array<{ f: Array<{ v: string }> }>
 }
 
 /**
- * Fetch cumulative unique Ethereum addresses from Dune Analytics API.
- * Returns the total count of addresses that have ever transacted on mainnet.
+ * Cumulative unique Ethereum mainnet addresses (ever sent or received a tx),
+ * computed on the BigQuery public dataset.
  */
 export async function fetchAccountHolders(): Promise<MetricReturnData> {
-  const duneApiKey = process.env.DUNE_API_KEY
-
-  if (!duneApiKey) {
-    throw new Error("Dune API key not found (DUNE_API_KEY)")
+  const { token, projectId } = await getGoogleAccessToken(
+    "https://www.googleapis.com/auth/bigquery"
+  )
+  const api = `https://bigquery.googleapis.com/bigquery/v2/projects/${projectId}`
+  const headers = {
+    Authorization: `Bearer ${token}`,
+    "Content-Type": "application/json",
   }
 
-  const url = new URL(`api/v1/query/${DUNE_QUERY_ID}/results`, DUNE_API_URL)
+  console.log("Starting account holders query on BigQuery")
 
-  console.log("Starting account holders data fetch from Dune Analytics")
-
-  const response = await fetchRetry(url, {
-    headers: { "X-Dune-API-Key": duneApiKey },
+  let response = await fetchRetry(`${api}/queries`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({
+      query: QUERY,
+      useLegacySql: false,
+      maximumBytesBilled: MAX_BYTES_BILLED,
+      requestId: crypto.randomUUID(),
+      timeoutMs: 60_000,
+    }),
   })
 
-  if (!response.ok) {
-    const status = response.status
-    console.warn("Dune Analytics fetch non-OK", { status, url: url.toString() })
-    throw new Error(`Dune Analytics API responded with status ${status}`)
+  for (;;) {
+    if (!response.ok) {
+      throw new Error(
+        `BigQuery responded with ${response.status}: ${await response.text()}`
+      )
+    }
+    const json: QueryResponse = await response.json()
+    if (json.jobComplete) {
+      const value = Number(json.rows?.[0]?.f[0]?.v)
+      if (!value) throw new Error("No data returned from BigQuery")
+      console.log("Successfully fetched account holders data", { value })
+      return { value, timestamp: Date.now() }
+    }
+    const { jobId, location } = json.jobReference
+    response = await fetchRetry(
+      `${api}/queries/${jobId}?location=${location}&timeoutMs=60000`,
+      { headers }
+    )
   }
-
-  const json: AccountHoldersResponse = await response.json()
-  const {
-    result: { rows = [] },
-  } = json
-
-  if (rows.length === 0) {
-    throw new Error("No data returned from Dune Analytics query")
-  }
-
-  const value = rows[0].unique_addresses
-  const timestamp = Date.now()
-
-  console.log("Successfully fetched account holders data", {
-    value,
-    timestamp,
-  })
-
-  return { value, timestamp }
 }
