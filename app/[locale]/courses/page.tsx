@@ -59,14 +59,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <I18nProvider locale={locale} messages={messages}>
-        <main className="px-page pt-space-3x pb-page">
+        <main className="px-page pt-8 pb-page">
           <MainArticle className="flow">
-            {/* Floats under the site nav; the chips are opaque, the strip isn't */}
-            <div className="pointer-events-none sticky top-19 z-docked flex justify-end py-2">
+            {/* Sticks 16px below the site nav (h-19); the chips are opaque, the strip isn't */}
+            <div className="pointer-events-none sticky top-23 z-docked flex justify-end">
               <ProgressChips className="pointer-events-auto" />
             </div>
 
-            <Section id="courses">
+            <Section id="courses" className="mt-4">
               <h2>{t("page-courses-catalog-title")}</h2>
               <ul className="ms-0 grid list-none gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {COURSES.map(({ id, level, theme, art, lessons, exam }) => (
