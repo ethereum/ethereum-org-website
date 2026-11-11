@@ -70,7 +70,7 @@ export const etherCourse: Course = {
     {
       id: "supply",
       icon: "flame",
-      learnMore: "/roadmap/merge/issuance/",
+      learnMore: "/what-is-ether/supply/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -195,14 +195,14 @@ export const etherCourse: Course = {
     },
     {
       id: "shrink",
-      source: "/roadmap/merge/issuance/",
+      source: "/what-is-ether/supply/#eth-supply-today",
       type: "choice",
       options: ["busy", "quiet", "fixed"],
       correct: ["busy"],
     },
     {
       id: "rules",
-      source: "/roadmap/merge/issuance/",
+      source: "/what-is-ether/supply/#why-eth-supply-matters",
       type: "choice",
       options: ["founders", "bank", "rules"],
       correct: ["rules"],

@@ -36,7 +36,7 @@ import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { courseHref, COURSES } from "@/data/courses"
+import { courseHref, TRACKS } from "@/data/courses"
 
 import heroImg from "@/public/images/courses/learning-path-garden-with-trophy.png"
 
@@ -66,63 +66,78 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <ProgressChips className="pointer-events-auto" />
             </div>
 
-            <Section id="courses" className="mt-4">
-              <h2>{t("page-courses-catalog-title")}</h2>
-              <ul className="ms-0 grid list-none gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {COURSES.map(({ id, level, theme, art, lessons, exam }) => (
-                  <li key={id} className="m-0" style={courseThemeStyle(theme)}>
-                    <Card
-                      href={courseHref(id)}
-                      variant="nested"
-                      border
-                      className="h-full"
-                    >
-                      <CardHeader>
-                        <CardBanner
-                          background="none"
-                          size="full"
-                          className="relative bg-(--course-soft) px-10 pt-12 pb-4"
+            {TRACKS.map((track, index) => (
+              <Section
+                key={track.id}
+                id={track.id}
+                className={cn(index === 0 && "mt-4")}
+              >
+                <h2>{t(`page-courses-track-${track.id}-title`)}</h2>
+                <p>{t(`page-courses-track-${track.id}-description`)}</p>
+                <ul className="ms-0 grid list-none gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {track.courses.map(
+                    ({ id, level, theme, art, lessons, exam }) => (
+                      <li
+                        key={id}
+                        className="m-0"
+                        style={courseThemeStyle(theme)}
+                      >
+                        <Card
+                          href={courseHref(id)}
+                          variant="nested"
+                          border
+                          className="h-full"
                         >
-                          <span className="absolute start-3 top-3 rounded-full bg-background px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
-                            {t(`page-courses-level-${level}`)} ·{" "}
-                            {t("page-courses-lesson-count", {
-                              count: lessons.length,
-                            })}
-                          </span>
-                          <CourseCardTrophy courseId={id} />
-                          <CourseArt
-                            id={art}
-                            className="mx-auto max-w-48 transition-transform duration-300 motion-safe:group-hover/link:scale-105"
-                          />
-                        </CardBanner>
-                      </CardHeader>
-                      <CardContent>
-                        <CardTitle>{t(`${id}-title`)}</CardTitle>
-                        <CardParagraph>{t(`${id}-description`)}</CardParagraph>
-                        <CourseProgress
-                          courseId={id}
-                          lessonIds={lessons.map((lesson) => lesson.id)}
-                          hasExam={exam.length > 0}
-                        />
-                      </CardContent>
-                      <CardFooter buttons="full">
-                        <span
-                          className={cn(
-                            chunkyButton,
-                            "inline-flex items-center justify-center"
-                          )}
-                        >
-                          <CourseCardAction
-                            courseId={id}
-                            lessonIds={lessons.map((lesson) => lesson.id)}
-                          />
-                        </span>
-                      </CardFooter>
-                    </Card>
-                  </li>
-                ))}
-              </ul>
-            </Section>
+                          <CardHeader>
+                            <CardBanner
+                              background="none"
+                              size="full"
+                              className="relative bg-(--course-soft) px-10 pt-12 pb-4"
+                            >
+                              <span className="absolute start-3 top-3 rounded-full bg-background px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
+                                {t(`page-courses-level-${level}`)} ·{" "}
+                                {t("page-courses-lesson-count", {
+                                  count: lessons.length,
+                                })}
+                              </span>
+                              <CourseCardTrophy courseId={id} />
+                              <CourseArt
+                                id={art}
+                                className="mx-auto max-w-48 transition-transform duration-300 motion-safe:group-hover/link:scale-105"
+                              />
+                            </CardBanner>
+                          </CardHeader>
+                          <CardContent>
+                            <CardTitle>{t(`${id}-title`)}</CardTitle>
+                            <CardParagraph>
+                              {t(`${id}-description`)}
+                            </CardParagraph>
+                            <CourseProgress
+                              courseId={id}
+                              lessonIds={lessons.map((lesson) => lesson.id)}
+                              hasExam={exam.length > 0}
+                            />
+                          </CardContent>
+                          <CardFooter buttons="full">
+                            <span
+                              className={cn(
+                                chunkyButton,
+                                "inline-flex items-center justify-center"
+                              )}
+                            >
+                              <CourseCardAction
+                                courseId={id}
+                                lessonIds={lessons.map((lesson) => lesson.id)}
+                              />
+                            </span>
+                          </CardFooter>
+                        </Card>
+                      </li>
+                    )
+                  )}
+                </ul>
+              </Section>
+            ))}
 
             <ProgressNote />
           </MainArticle>

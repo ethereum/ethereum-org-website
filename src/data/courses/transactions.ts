@@ -104,7 +104,7 @@ export const transactionsCourse: Course = {
           id: "recap",
           type: "fill",
           blanks: ["undone", "used", "refunded"],
-          extras: ["retried", "lost", "allowed"],
+          extras: ["retried", "burned", "allowed"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
@@ -142,7 +142,7 @@ export const transactionsCourse: Course = {
     // lifecycle
     {
       id: "sign",
-      source: "/developers/docs/transactions/",
+      source: "/developers/docs/transactions/#transaction-lifecycle",
       type: "choice",
       options: ["block", "key", "sign"],
       correct: ["sign"],
@@ -159,7 +159,7 @@ export const transactionsCourse: Course = {
       id: "fee",
       source: "/gas/",
       type: "choice",
-      options: ["gas", "fee", "price", "transfer"],
+      options: ["gas", "fee", "price"],
       correct: ["fee"],
     },
     {
@@ -172,14 +172,14 @@ export const transactionsCourse: Course = {
     // blocks
     {
       id: "tip",
-      source: "/developers/docs/blocks/",
+      source: "/developers/docs/gas/#priority-fee",
       type: "choice",
       options: ["keep", "burn", "limit"],
       correct: ["keep"],
     },
     {
       id: "final",
-      source: "/developers/docs/blocks/",
+      source: "/developers/docs/consensus-mechanisms/pos/#finality",
       type: "choice",
       options: ["instant", "finalized", "never"],
       correct: ["finalized"],
@@ -187,7 +187,7 @@ export const transactionsCourse: Course = {
     // failed
     {
       id: "outcome",
-      source: "/developers/docs/gas/",
+      source: "/developers/docs/gas/#what-is-gas-limit",
       type: "choice",
       options: ["sent", "fee", "refund", "undone"],
       correct: ["fee", "undone"],
@@ -195,7 +195,7 @@ export const transactionsCourse: Course = {
     },
     {
       id: "headroom",
-      source: "/developers/docs/gas/",
+      source: "/developers/docs/gas/#what-is-gas-limit",
       type: "choice",
       options: ["higher", "same", "fails"],
       correct: ["same"],
@@ -203,16 +203,18 @@ export const transactionsCourse: Course = {
     // explorer
     {
       id: "proof",
-      source: "/developers/docs/data-and-analytics/block-explorers/",
+      source:
+        "/developers/docs/data-and-analytics/block-explorers/#transactions",
       type: "choice",
       options: ["hash", "screenshot", "key"],
       correct: ["hash"],
     },
     {
       id: "status",
-      source: "/developers/docs/data-and-analytics/block-explorers/",
+      source:
+        "/developers/docs/data-and-analytics/block-explorers/#transactions",
       type: "choice",
-      options: ["block", "fee", "value", "status"],
+      options: ["fee", "value", "status"],
       correct: ["status"],
     },
   ],

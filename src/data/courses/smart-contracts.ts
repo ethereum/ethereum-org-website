@@ -31,7 +31,7 @@ export const smartContractsCourse: Course = {
     {
       id: "calling",
       icon: "pointer",
-      learnMore: "/developers/docs/smart-contracts/",
+      learnMore: "/developers/docs/smart-contracts/interacting/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
         {
@@ -59,7 +59,7 @@ export const smartContractsCourse: Course = {
     {
       id: "tokens",
       icon: "coins",
-      learnMore: "/developers/docs/standards/tokens/",
+      learnMore: "/developers/docs/standards/tokens/erc-20/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "coins" },
         {
@@ -131,21 +131,22 @@ export const smartContractsCourse: Course = {
   exam: [
     {
       id: "underpay",
-      source: "/smart-contracts/",
+      source: "/smart-contracts/#vending-machine",
       type: "choice",
       options: ["owe", "reject", "creator"],
       correct: ["reject"],
     },
     {
       id: "deployed",
-      source: "/smart-contracts/",
+      source: "/developers/docs/smart-contracts/upgrading/",
       type: "choice",
       options: ["anytime", "validators", "published"],
       correct: ["published"],
     },
     {
       id: "gas",
-      source: "/developers/docs/smart-contracts/",
+      source:
+        "/developers/docs/smart-contracts/interacting/#writing-to-a-contract",
       type: "choice",
       options: ["stock", "buy", "balance", "send"],
       correct: ["buy", "send"],
@@ -153,28 +154,30 @@ export const smartContractsCourse: Course = {
     },
     {
       id: "price-check",
-      source: "/developers/docs/smart-contracts/",
+      source:
+        "/developers/docs/smart-contracts/interacting/#reading-from-a-contract",
       type: "choice",
       options: ["decline", "always", "once"],
       correct: ["decline"],
     },
     {
       id: "transfer",
-      source: "/developers/docs/standards/tokens/",
+      source: "/developers/docs/standards/tokens/erc-20/#body",
       type: "choice",
       options: ["created", "travel", "updated"],
       correct: ["updated"],
     },
     {
       id: "restore",
-      source: "/developers/docs/standards/tokens/",
+      source: "/wrapped-eth/",
       type: "choice",
       options: ["list", "gone", "eth"],
       correct: ["list"],
     },
     {
       id: "source",
-      source: "/developers/docs/smart-contracts/composability/",
+      source:
+        "/developers/docs/smart-contracts/verifying/#importance-of-source-code-verification",
       type: "choice",
       options: ["hidden", "machine", "change"],
       correct: ["machine"],
@@ -188,7 +191,7 @@ export const smartContractsCourse: Course = {
     },
     {
       id: "audit",
-      source: "/guides/how-to-revoke-token-access/",
+      source: "/developers/docs/smart-contracts/security/#audits",
       type: "choice",
       options: ["lowers", "bug-free", "useless"],
       correct: ["lowers"],

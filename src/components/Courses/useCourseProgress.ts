@@ -2,8 +2,9 @@
 
 import { useCallback } from "react"
 
-import { EXAM_PASS_MARK, lessonProgressKey } from "@/data/courses"
+import { EXAM_ID, EXAM_PASS_MARK, lessonProgressKey } from "@/data/courses"
 
+import { mergeStepResults, type StepRecord } from "./step-history"
 import { extendStreak, type Streak } from "./streak"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
@@ -31,7 +32,11 @@ export interface CourseProgress {
   version: 1
   xp: number
   streak: Streak
+  /** Longest streak reached; absent in progress saved before it was tracked */
+  bestStreak?: number
   lessons: Record<string, LessonRecord>
+  /** First-try results by step; absent in progress saved before it was tracked */
+  steps?: Record<string, StepRecord>
   /** By course id; absent in progress saved before exams existed */
   exams?: Record<string, ExamRecord>
 }
@@ -89,6 +94,10 @@ export const useCourseProgress = () => {
       ...update(now),
       xp: progress.xp + xp,
       streak,
+      bestStreak: Math.max(
+        progress.bestStreak ?? progress.streak.count,
+        streak.count
+      ),
     })
 
     return {
@@ -101,10 +110,12 @@ export const useCourseProgress = () => {
     }
   }
 
+  /** `results`: first try right or wrong, by graded step id */
   const completeLesson = (
     courseId: string,
     lessonId: string,
-    accuracy: number
+    accuracy: number,
+    results: Record<string, boolean>
   ): LessonReward => {
     const key = lessonProgressKey(courseId, lessonId)
     const previous = progress.lessons[key]
@@ -121,11 +132,16 @@ export const useCourseProgress = () => {
           accuracy: Math.max(accuracy, previous?.accuracy ?? 0),
         },
       },
+      steps: mergeStepResults(progress.steps, courseId, lessonId, results, now),
     }))
   }
 
   /** Any attempt counts for the streak; the trophy needs `EXAM_PASS_MARK` */
-  const completeExam = (courseId: string, score: number): ExamReward => {
+  const completeExam = (
+    courseId: string,
+    score: number,
+    results: Record<string, boolean>
+  ): ExamReward => {
     const previous = progress.exams?.[courseId]
     const passed = score >= EXAM_PASS_MARK
     const firstPass = passed && !previous?.passedAt
@@ -140,6 +156,13 @@ export const useCourseProgress = () => {
             passedAt: previous?.passedAt ?? (passed ? now.toISOString() : null),
           },
         },
+        steps: mergeStepResults(
+          progress.steps,
+          courseId,
+          EXAM_ID,
+          results,
+          now
+        ),
       })
     )
     return { ...reward, passed }

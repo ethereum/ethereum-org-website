@@ -216,14 +216,17 @@ const LessonPlayer = ({
       return
     }
     const graded = lesson.steps.filter(isGraded)
+    const results = Object.fromEntries(
+      graded.map(({ id }) => [id, !!firstTry[id]])
+    )
     const score = graded.length
-      ? graded.filter(({ id }) => firstTry[id]).length / graded.length
+      ? graded.filter(({ id }) => results[id]).length / graded.length
       : 1
     setAccuracy(score)
     setReward(
       exam
-        ? completeExam(courseId, score)
-        : completeLesson(courseId, lesson.id, score)
+        ? completeExam(courseId, score, results)
+        : completeLesson(courseId, lesson.id, score, results)
     )
   }
 

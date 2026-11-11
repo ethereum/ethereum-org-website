@@ -13,13 +13,13 @@ Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-
 | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | Course, lesson and step shapes, plus the translation-key convention for each | `src/data/courses/types.ts`                                                         |
 | Course content (structure only, no strings)                                  | `src/data/courses/<course>.ts`                                                      |
-| Suggested course order, lookups, `stepKey`                                   | `src/data/courses/index.ts` (`COURSES`)                                             |
+| Tracks, suggested course order, lookups, `stepKey`                           | `src/data/courses/index.ts` (`TRACKS`, `COURSES`)                                   |
 | Every string (English)                                                       | `src/intl/en/page-courses.json`                                                     |
 | Lesson runtime: steps, grading, footer, XP                                   | `src/components/Courses/lesson-player.tsx`                                          |
 | Widget registry (`graded` flag)                                              | `src/components/Courses/steps/interactive-step.tsx` (`WIDGETS`)                     |
 | Widget contract                                                              | `src/components/Courses/widgets/types.ts`                                           |
 | Course colours and pressable skins                                           | `src/components/Courses/theme.ts`                                                   |
-| Progress, XP and streak storage                                              | `src/components/Courses/useCourseProgress.ts`                                       |
+| Progress, XP, streak and per-step history storage                            | `src/components/Courses/useCourseProgress.ts`, `step-history.ts`                    |
 | Course hero art, path scenery, isometric helpers                             | `src/components/Courses/art/`                                                       |
 | Learner problem reports (anonymous Matomo event, GitHub fallback)            | `src/components/Courses/report-problem-button.tsx`                                  |
 | Installable app: per-language manifest, service worker, registration         | `app/manifests/courses/`, `public/courses-sw.js`, `app/[locale]/courses/layout.tsx` |

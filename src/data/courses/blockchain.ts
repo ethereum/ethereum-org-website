@@ -9,7 +9,7 @@ export const blockchainCourse: Course = {
     {
       id: "hashing",
       icon: "fingerprint",
-      learnMore: "/glossary/#hash",
+      learnMore: "/videos/hash-function-eth-build/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "diamond" },
         {
@@ -127,14 +127,14 @@ export const blockchainCourse: Course = {
   exam: [
     {
       id: "tiny-change",
-      source: "/glossary/#hash",
+      source: "/developers/docs/blocks/",
       type: "choice",
       options: ["one", "all", "none"],
       correct: ["all"],
     },
     {
       id: "work-back",
-      source: "/glossary/#hash",
+      source: "/videos/hash-function-eth-build/#one-directional-property-237",
       type: "choice",
       options: ["reverse", "power", "guess"],
       correct: ["guess"],

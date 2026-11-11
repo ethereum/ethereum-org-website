@@ -72,7 +72,7 @@ export const walletsCourse: Course = {
         {
           id: "blind",
           type: "choice",
-          options: ["sign", "reject", "key"],
+          options: ["sign", "reject", "padlock"],
           correct: ["reject"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
@@ -144,7 +144,8 @@ export const walletsCourse: Course = {
   exam: [
     {
       id: "balance",
-      source: "/wallets/",
+      source:
+        "/guides/how-to-use-a-wallet/#can-i-use-the-same-address-on-multiple-devices",
       type: "choice",
       options: ["app", "chain", "maker"],
       correct: ["chain"],
@@ -165,14 +166,14 @@ export const walletsCourse: Course = {
     },
     {
       id: "website",
-      source: "/guides/how-to-create-an-ethereum-account/",
+      source: "/security/#protect-private-keys",
       type: "choice",
       options: ["type", "close", "part"],
       correct: ["close"],
     },
     {
       id: "signature",
-      source: "/guides/how-to-use-a-wallet/",
+      source: "/glossary/#digital-signatures",
       type: "choice",
       options: ["identity", "key", "reveal", "exact"],
       correct: ["key", "exact"],
@@ -180,9 +181,9 @@ export const walletsCourse: Course = {
     },
     {
       id: "unreadable",
-      source: "/guides/how-to-use-a-wallet/",
+      source: "/security/#double-check-transactions",
       type: "choice",
-      options: ["reject", "sign", "phrase"],
+      options: ["reject", "sign", "padlock"],
       correct: ["reject"],
     },
     {
@@ -201,14 +202,15 @@ export const walletsCourse: Course = {
     },
     {
       id: "frozen",
-      source: "/wallets/find-wallet/",
+      source:
+        "/guides/how-to-create-an-ethereum-account/#is-having-my-own-wallet-safer-than-keeping-my-funds-on-an-exchange",
       type: "choice",
       options: ["password", "phrase", "exchange"],
       correct: ["exchange"],
     },
     {
       id: "savings",
-      source: "/wallets/find-wallet/",
+      source: "/security/#use-hardware-wallet",
       type: "choice",
       options: ["phone", "split", "exchange"],
       correct: ["split"],

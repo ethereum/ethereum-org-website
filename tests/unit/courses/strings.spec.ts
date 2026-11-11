@@ -9,7 +9,7 @@
 import { expect, test } from "@playwright/test"
 
 import type { ExamStep, LessonStep } from "../../../src/data/courses"
-import { COURSES, EXAM_ID, stepKey } from "../../../src/data/courses"
+import { COURSES, EXAM_ID, stepKey, TRACKS } from "../../../src/data/courses"
 import en from "../../../src/intl/en/page-courses.json"
 
 const stepSuffixes = (step: LessonStep): string[] => {
@@ -49,24 +49,32 @@ const examSuffixes = (step: ExamStep) => [
   "explain",
 ]
 
-const expected = COURSES.flatMap((course) => [
-  `${course.id}-title`,
-  `${course.id}-description`,
-  ...course.lessons.flatMap((lesson) => [
-    `${course.id}-${lesson.id}-title`,
-    `${course.id}-${lesson.id}-summary`,
-    ...lesson.steps.flatMap((step) =>
-      stepSuffixes(step).map((suffix) =>
-        stepKey(course.id, lesson.id, step.id, suffix)
+const trackKeys = TRACKS.flatMap(({ id }) => [
+  `page-courses-track-${id}-title`,
+  `page-courses-track-${id}-description`,
+])
+
+const expected = [
+  ...trackKeys,
+  ...COURSES.flatMap((course) => [
+    `${course.id}-title`,
+    `${course.id}-description`,
+    ...course.lessons.flatMap((lesson) => [
+      `${course.id}-${lesson.id}-title`,
+      `${course.id}-${lesson.id}-summary`,
+      ...lesson.steps.flatMap((step) =>
+        stepSuffixes(step).map((suffix) =>
+          stepKey(course.id, lesson.id, step.id, suffix)
+        )
+      ),
+    ]),
+    ...course.exam.flatMap((step) =>
+      examSuffixes(step).map((suffix) =>
+        stepKey(course.id, EXAM_ID, step.id, suffix)
       )
     ),
   ]),
-  ...course.exam.flatMap((step) =>
-    examSuffixes(step).map((suffix) =>
-      stepKey(course.id, EXAM_ID, step.id, suffix)
-    )
-  ),
-])
+]
 
 const contentKeys = Object.keys(en).filter(
   (key) => !key.startsWith("page-courses-")

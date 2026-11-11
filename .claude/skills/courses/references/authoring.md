@@ -4,13 +4,13 @@ How to add courses, lessons and steps, and how to write them. Vocabulary and ord
 
 ## Add a course
 
-1. Pick an `id` (kebab-case, also the route segment) and its place on the suggested path in `COURSES`.
-2. Create `src/data/courses/<id>.ts` exporting a `Course`; register it in `COURSES`. Add a new `CourseTheme`, `CourseArtId` or `LessonIconId` only if no existing one fits (themes need a palette entry in `theme.ts`; icons map in `lesson-icons.ts`).
+1. Pick an `id` (kebab-case, also the route segment), its track in `TRACKS` and its place in that track.
+2. Create `src/data/courses/<id>.ts` exporting a `Course`; add it to its track in `TRACKS` (a new track also needs `page-courses-track-<id>-title` and `-description` strings). Add a new `CourseTheme`, `CourseArtId` or `LessonIconId` only if no existing one fits (themes need a palette entry in `theme.ts`; icons map in `lesson-icons.ts`).
 3. Write the strings in `src/intl/en/page-courses.json` using the key conventions documented on the types in `src/data/courses/types.ts`. English only: other locales come from the intl pipeline.
 4. Add the lesson rows to the ledger in `curriculum.md`.
 5. Run the checks below.
 
-Routes, metadata and static params are generated from `COURSES`, so no page files change.
+Routes, metadata and static params are generated from `COURSES` (all tracks, in order), so no page files change. Course URLs never include the track, so a course can move between tracks.
 
 ## Lesson anatomy
 
@@ -24,11 +24,11 @@ Three to six minutes, roughly five to seven steps:
 
 One new idea per lesson. If the takeaway needs "and" twice, split the lesson.
 
-Every lesson sets `learnMore`: one ethereum.org page (path, optional `#anchor`) offered on the completion screen, never mid-lesson, so it costs no momentum. Pick the beginner-level page closest to the lesson's idea. The link text is the page's own title, so it needs no string; `tests/unit/courses/links.spec.ts` checks the page, title and anchor exist.
+Every lesson sets `learnMore`: one ethereum.org page offered on the completion screen, never mid-lesson, so it costs no momentum. Pick the beginner-level page closest to the lesson's idea. It is further reading, not a citation, so a whole page is fine; an `#anchor` is optional. The link text is the page's own title, so it needs no string; `tests/unit/courses/links.spec.ts` checks the page, title and anchor exist.
 
 ## Writing questions
 
-- Three options for single choice, four for multi. Every option teaches a distinct misconception; no joke options.
+- Three options for single choice, four for multi. Every option teaches a distinct misconception. Distractors get more realistic as the skill level rises: an obviously wrong option is fine in a newcomer course if its feedback makes a teaching point, but never one that is only there to be dismissed.
 - Every option gets its own `fb-` feedback that explains why, not just "Correct"/"Wrong". Wrong-answer feedback must not reveal the right option, because the learner retries.
 - Use `multi` only when the real-world answer is genuinely plural; add an `-explain` for it.
 - Prediction questions may have every answer "accepted" in spirit. The feedback should point to the next step ("Test it in the next step").
@@ -47,7 +47,7 @@ Every course ends in a course check: the trophy node on the path, route `/course
 - It tests what the course taught and introduces nothing: each question repeats a lesson question, widget puzzle or stated fact with a new scenario or wording. Never copy a lesson string verbatim, and never use a fact the course (or an earlier course on the path) didn't teach.
 - One attempt per question, then the right answer shows. So there are no per-option `fb-` notes, just one `-explain` that works whether the learner was right or wrong (don't open with "Right" or "Wrong"). It shows again in the review screen.
 - `multi` at most twice per check.
-- Every question sets `source`: the ethereum.org page (and anchor, where one exists) that states the fact it tests. It shows as "Learn more" in the review screen and is what the content review checks the question against.
+- Every question sets `source`: the ethereum.org page that states the fact it tests, as specific as possible (use the section anchor where one exists), because it is a citation. It shows as "Learn more" in the review screen and is what the content review checks the question against.
 
 ## Checks
 

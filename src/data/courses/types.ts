@@ -161,6 +161,16 @@ export interface PageLink {
 }
 
 /** Keys: `{course}-title`, `{course}-description` */
+/**
+ * A themed group of courses, shown as one hub section. Strings:
+ * `page-courses-track-{id}-title` and `-description`. Course URLs don't
+ * include the track, so a course can move between tracks.
+ */
+export interface Track {
+  id: string
+  courses: Course[]
+}
+
 export interface Course {
   id: string
   level: "beginner"

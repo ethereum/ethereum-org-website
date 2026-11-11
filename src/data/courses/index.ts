@@ -4,19 +4,27 @@ import { blockchainCourse } from "./blockchain"
 import { etherCourse } from "./ether"
 import { smartContractsCourse } from "./smart-contracts"
 import { transactionsCourse } from "./transactions"
-import type { Course, Lesson } from "./types"
+import type { Course, Lesson, Track } from "./types"
 import { walletsCourse } from "./wallets"
 
 export type * from "./types"
 
-/** Suggested path, not a lock: see the courses skill's curriculum reference */
-export const COURSES: Course[] = [
-  walletsCourse,
-  blockchainCourse,
-  transactionsCourse,
-  etherCourse,
-  smartContractsCourse,
+/** Hub sections, in order; each lists its courses in suggested order */
+export const TRACKS: Track[] = [
+  {
+    id: "essentials",
+    courses: [
+      walletsCourse,
+      blockchainCourse,
+      transactionsCourse,
+      etherCourse,
+      smartContractsCourse,
+    ],
+  },
 ]
+
+/** Suggested path, not a lock: see the courses skill's curriculum reference */
+export const COURSES: Course[] = TRACKS.flatMap(({ courses }) => courses)
 
 export const getCourse = (courseId: string) =>
   COURSES.find(({ id }) => id === courseId)
