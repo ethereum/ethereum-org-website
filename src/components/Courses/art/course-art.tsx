@@ -108,15 +108,40 @@ const Vault = () => {
         />
         <circle r={4} fill={RIGHT} />
       </g>
+      {/* Gems float clear of the cube (its corners sit at x 48 and 152) */}
       <g className="course-art-float">
-        <polygon points="150,24 156,34 150,44 144,34" fill={TOP} />
+        <Gem cx={177} cy={30} rx={11} ry={17} />
       </g>
       <g className="course-art-float-late">
-        <polygon points="46,40 50,47 46,54 42,47" fill={LEFT} />
+        <Gem cx={24} cy={60} rx={8} ry={12} />
       </g>
     </>
   )
 }
+
+/** Two-tone floating gem: a light left facet and a darker right one */
+const Gem = ({
+  cx,
+  cy,
+  rx,
+  ry,
+}: {
+  cx: number
+  cy: number
+  rx: number
+  ry: number
+}) => (
+  <>
+    <polygon
+      points={`${cx},${cy - ry} ${cx - rx},${cy} ${cx},${cy + ry}`}
+      fill={TOP}
+    />
+    <polygon
+      points={`${cx},${cy - ry} ${cx + rx},${cy} ${cx},${cy + ry}`}
+      fill={LEFT}
+    />
+  </>
+)
 
 const Tank = () => {
   const body = isoTank.cylinder(20, 20, 0, 36, 76)
