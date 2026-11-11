@@ -50,6 +50,11 @@
     "score": 20000
   },
   {
+    "username": "tristartom",
+    "name": "Bob Conan",
+    "score": 18350
+  },
+  {
     "username": "iam-ned",
     "name": "David Matosse",
     "score": 17250
@@ -72,11 +77,6 @@
   {
     "username": "VulSight",
     "name": "VulSight",
-    "score": 15000
-  },
-  {
-    "username": "tristartom",
-    "name": "Bob Conan",
     "score": 15000
   },
   {
@@ -188,6 +188,11 @@
     "username": "hyunmini",
     "name": "secuholic",
     "score": 4250
+  },
+  {
+    "username": "silverologist",
+    "name": "silverologist",
+    "score": 3750
   },
   {
     "username": "axic",
@@ -424,6 +429,11 @@
     "name": "Smacaud",
     "score": 1000
   }, 
+  {
+    "username": "the-red-ace",
+    "name": "redbaron",
+    "score": 1000
+  },   
   {
     "username": "n0thingness",
     "name": "Daniel Briskin",
