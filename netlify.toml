@@ -59,9 +59,9 @@
     "/*.webmanifest"
   ]
 
-# Previews prerender a locale subset; release (staging) and translation (intl/*) previews keep all.
+# Previews prerender a locale subset. All locales: staging, intl/* or full/* branches, or a "[full build]" commit message.
 [context.deploy-preview]
-  command = 'case "$HEAD" in staging|intl/*) ;; *) export NEXT_PUBLIC_BUILD_LOCALES=en,es,zh,ar,ja ;; esac; pnpm build && rm -rf .next/cache'
+  command = 'case "$HEAD" in staging|intl/*|full/*) ;; *) git log -1 --format=%B | grep -qF "[full build]" || export NEXT_PUBLIC_BUILD_LOCALES=en,es,zh,ar,ja ;; esac; pnpm build && rm -rf .next/cache'
 
 # Override SITE_URL for named branches with custom subdomains so canonical
 # URLs and OG metadata use the custom domain instead of *.netlify.app.
