@@ -5,7 +5,7 @@ description: Use when planning, writing or building anything under /courses — 
 
 # Courses
 
-Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-style progression (path, XP, streak, combo). No accounts yet; progress lives in localStorage. Pages are static and `noIndex`. Read this file on activation, then the reference matching the task.
+Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-style progression (path, XP, streak, combo). No accounts yet; progress lives in localStorage. Pages are static and `noIndex`. Read this file on activation, then the reference matching the task. Learners see each course's final exam as the "mastery check"; code and docs call it the exam or course check.
 
 ## Map
 
@@ -22,6 +22,9 @@ Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-
 | Progress, XP, streak and per-step history storage                            | `src/components/Courses/useCourseProgress.ts`, `step-history.ts`                    |
 | Course hero art, path scenery, isometric helpers                             | `src/components/Courses/art/`                                                       |
 | Learner problem reports (anonymous Matomo event, GitHub fallback)            | `src/components/Courses/report-problem-button.tsx`                                  |
+| XP levels (unit-named tiers) and the level-up card                           | `src/components/Courses/levels.ts`, `level-up.tsx`                                  |
+| Funnel events (user-initiated only; pageviews cover views and starts)        | `src/components/Courses/analytics.ts`                                               |
+| Profile page (reserved `profile` segment, so never a course id)              | `app/[locale]/courses/profile/`, `src/components/Courses/profile-view.tsx`          |
 | Installable app: per-language manifest, service worker, registration         | `app/manifests/courses/`, `public/courses-sw.js`, `app/[locale]/courses/layout.tsx` |
 
 ## Top rules

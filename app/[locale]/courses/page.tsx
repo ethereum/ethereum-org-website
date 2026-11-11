@@ -13,6 +13,7 @@ import {
   CourseCardTrophy,
 } from "@/components/Courses/course-card-status"
 import CourseProgress from "@/components/Courses/course-progress"
+import ProfileLink from "@/components/Courses/profile-link"
 import {
   ProgressChips,
   ProgressNote,
@@ -63,7 +64,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <MainArticle className="flow">
             {/* Sticks 16px below the site nav (h-19); the chips are opaque, the strip isn't */}
             <div className="pointer-events-none sticky top-23 z-docked flex justify-end">
-              <ProgressChips className="pointer-events-auto" />
+              <div className="pointer-events-auto flex items-center gap-2">
+                <ProgressChips />
+                <ProfileLink />
+              </div>
             </div>
 
             {TRACKS.map((track, index) => (

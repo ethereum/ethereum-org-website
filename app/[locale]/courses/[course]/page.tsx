@@ -13,6 +13,7 @@ import CourseArt from "@/components/Courses/art/course-art"
 import { sceneryFor } from "@/components/Courses/art/scenery"
 import CourseProgress from "@/components/Courses/course-progress"
 import LessonPath from "@/components/Courses/lesson-path"
+import ProfileLink from "@/components/Courses/profile-link"
 import { ProgressChips } from "@/components/Courses/progress-stats"
 import { courseThemeStyle } from "@/components/Courses/theme"
 import I18nProvider from "@/components/I18nProvider"
@@ -54,7 +55,10 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
             slug={`/courses/${courseId}`}
             label={t(`${courseId}-title`)}
           />
-          <ProgressChips />
+          <div className="flex items-center gap-2">
+            <ProgressChips />
+            <ProfileLink />
+          </div>
         </div>
 
         <section className="px-page pt-6">

@@ -9,7 +9,13 @@
 import { expect, test } from "@playwright/test"
 
 import type { ExamStep, LessonStep } from "../../../src/data/courses"
-import { COURSES, EXAM_ID, stepKey, TRACKS } from "../../../src/data/courses"
+import {
+  COURSES,
+  EXAM_ID,
+  PROFILE_SEGMENT,
+  stepKey,
+  TRACKS,
+} from "../../../src/data/courses"
 import en from "../../../src/intl/en/page-courses.json"
 
 const stepSuffixes = (step: LessonStep): string[] => {
@@ -95,6 +101,8 @@ test.describe("course strings", () => {
     const dupes = (ids: string[]) =>
       ids.filter((id, i) => ids.indexOf(id) !== i)
     expect(dupes(COURSES.map(({ id }) => id))).toEqual([])
+    // Static routes beside `[course]` would shadow a course with these ids
+    expect(COURSES.map(({ id }) => id)).not.toContain(PROFILE_SEGMENT)
     for (const course of COURSES) {
       expect(dupes(course.lessons.map(({ id }) => id))).toEqual([])
       expect(course.lessons.map(({ id }) => id)).not.toContain(EXAM_ID)

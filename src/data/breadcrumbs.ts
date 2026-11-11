@@ -7,6 +7,7 @@
 export const BREADCRUMB_HUBS = [
   "/community/",
   "/contributing/",
+  "/courses/",
   "/developers/",
   "/learn/",
   "/organizations/",

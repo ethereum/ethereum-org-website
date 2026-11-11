@@ -16,6 +16,8 @@ interface CourseProgressProps {
   hasExam: boolean
   /** Light text and track, for use on a course-coloured surface */
   onColor?: boolean
+  /** Bar and trophy only, where a heading already says the status */
+  hideLabel?: boolean
 }
 
 /** Lessons done, plus the course check as the last step, with its trophy */
@@ -24,6 +26,7 @@ const CourseProgress = ({
   lessonIds,
   hasExam,
   onColor,
+  hideLabel,
 }: CourseProgressProps) => {
   const t = useTranslations("page-courses")
   const { isLessonComplete, isExamPassed } = useCourseProgress()
@@ -70,7 +73,8 @@ const CourseProgress = ({
       <span
         className={cn(
           "text-sm font-bold",
-          onColor ? "text-white" : "text-body-medium"
+          onColor ? "text-white" : "text-body-medium",
+          hideLabel && "sr-only"
         )}
       >
         {label}

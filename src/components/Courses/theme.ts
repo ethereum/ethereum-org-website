@@ -114,3 +114,7 @@ export const chunkyTile = cn(
   "rounded-2xl border-2 border-b-4 border-border bg-background text-body transition-[transform,background-color,border-color] duration-150",
   "hover:bg-background-highlight active:translate-y-0.5 active:border-b-2"
 )
+
+/** Pill for the header stat chips and the profile button beside them */
+export const statChip =
+  "m-0 flex items-center gap-1.5 rounded-full border-2 border-border bg-background px-3 py-1 font-bold tabular-nums"

@@ -18,6 +18,7 @@ import {
 
 import Confetti from "./confetti"
 import { LearnMoreLink } from "./learn-more"
+import LevelUp from "./level-up"
 import StreakCelebration from "./streak-celebration"
 import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
@@ -201,6 +202,10 @@ const ExamComplete = ({
                     : "from-(--course)/20 text-(--course-strong) dark:text-(--course-bright)"
                 }
               />
+            </motion.div>
+
+            <motion.div {...appear(0.8)} className="flex w-full justify-center">
+              <LevelUp before={reward.totalBefore} after={reward.totalAfter} />
             </motion.div>
           </motion.div>
         )}

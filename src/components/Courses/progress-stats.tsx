@@ -5,15 +5,23 @@ import { Flame, Zap } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog-modal"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import { getActiveStreak, isStreakExtendedToday } from "./streak"
+import { statChip as chip } from "./theme"
 import { useCourseProgress } from "./useCourseProgress"
-
-const chip =
-  "m-0 flex items-center gap-1.5 rounded-full border-2 border-border bg-background px-3 py-1 font-bold tabular-nums"
 
 /**
  * Compact streak and XP for page headers. The flame stays grey until today's
@@ -75,25 +83,59 @@ export const ProgressChips = ({ className }: { className?: string }) => {
   )
 }
 
-/** Where progress lives, and a way to clear it */
-export const ProgressNote = () => {
+/** Clears everything in this browser, after a confirm dialog */
+const ResetProgressButton = () => {
   const t = useTranslations("page-courses")
-  const { progress, resetProgress } = useCourseProgress()
-
-  const handleReset = () => {
-    if (window.confirm(t("page-courses-stats-reset-confirm"))) resetProgress()
-  }
-
+  const { resetProgress } = useCourseProgress()
   return (
-    <div className="flex flex-wrap items-center justify-between gap-2">
-      <p className="m-0 text-sm text-body-medium">
-        {t("page-courses-stats-privacy")}
-      </p>
-      {progress.xp > 0 && (
-        <Button variant="link" size="sm" onClick={handleReset}>
+    <Dialog variant="stacked">
+      <DialogTrigger asChild>
+        <Button variant="link" size="sm">
           {t("page-courses-stats-reset")}
         </Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{t("page-courses-stats-reset-title")}</DialogTitle>
+        </DialogHeader>
+        <DialogDescription>
+          {t("page-courses-stats-reset-description")}
+        </DialogDescription>
+        <DialogFooter className="flex flex-wrap justify-end gap-2">
+          <DialogClose asChild>
+            <Button variant="outline" isSecondary>
+              {t("page-courses-stats-reset-cancel")}
+            </Button>
+          </DialogClose>
+          <DialogClose asChild>
+            <Button onClick={resetProgress}>
+              {t("page-courses-stats-reset")}
+            </Button>
+          </DialogClose>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  )
+}
+
+/** Where progress lives, and a way to clear it */
+export const ProgressNote = ({ privacy = true }: { privacy?: boolean }) => {
+  const t = useTranslations("page-courses")
+  const { progress } = useCourseProgress()
+
+  return (
+    <div
+      className={cn(
+        "flex flex-wrap items-center gap-2",
+        privacy ? "justify-between" : "justify-end"
       )}
+    >
+      {privacy && (
+        <p className="m-0 text-sm text-body-medium">
+          {t("page-courses-stats-privacy")}
+        </p>
+      )}
+      {progress.xp > 0 && <ResetProgressButton />}
     </div>
   )
 }

@@ -16,6 +16,8 @@ import type { PageLink } from "@/data/courses"
 import CourseArt from "./art/course-art"
 import Confetti from "./confetti"
 import { LearnMoreCard } from "./learn-more"
+import LevelUp, { useLevelName } from "./level-up"
+import { levelFor } from "./levels"
 import StreakCelebration from "./streak-celebration"
 import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
@@ -77,12 +79,18 @@ const LessonComplete = ({
 
   const int = numberFormat(locale)
   const percent = numberFormat(locale, { style: "percent" })
+  const levelName = useLevelName()
   const tier = tierFor(accuracy, reward.perfect)
 
-  // The bar shows progress through the current 100 XP band
-  const band = Math.floor(reward.totalAfter / 100) * 100
+  // The bar shows progress through the level reached
+  const level = levelFor(reward.totalAfter)
   const fill = (n: number) =>
-    Math.max(0, Math.min(((n - band) / 100) * 100, 100))
+    level.next === null
+      ? 100
+      : Math.max(
+          0,
+          Math.min(((n - level.floor) / (level.next - level.floor)) * 100, 100)
+        )
 
   const appear = (delay: number) =>
     animate
@@ -164,7 +172,7 @@ const LessonComplete = ({
 
               <div className="flex w-full flex-col gap-1">
                 <div className="flex justify-between text-sm font-bold">
-                  <span>{t("page-courses-complete-total-xp")}</span>
+                  <span>{levelName(level)}</span>
                   <span className="tabular-nums">
                     {int.format(Math.round(total))}
                   </span>
@@ -201,6 +209,10 @@ const LessonComplete = ({
                   {t("page-courses-complete-accuracy")}
                 </span>
               </span>
+            </motion.div>
+
+            <motion.div {...appear(2.2)} className="flex w-full justify-center">
+              <LevelUp before={reward.totalBefore} after={reward.totalAfter} />
             </motion.div>
           </motion.div>
         ) : (

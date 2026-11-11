@@ -43,6 +43,11 @@ export const getLesson = (courseId: string, lessonId: string) => {
 
 export const courseHref = (courseId: string) => `/courses/${courseId}/`
 
+/** Reserved: the profile page's route segment, so never a course id */
+export const PROFILE_SEGMENT = "profile"
+
+export const profileHref = `/courses/${PROFILE_SEGMENT}/`
+
 export const lessonHref = (courseId: string, lessonId: string) =>
   `/courses/${courseId}/${lessonId}/`
 
