@@ -10,6 +10,7 @@ export const baseLocales = {
 export const ns = [
   "common",
   "component-catalog-item",
+  "component-diagrams",
   "component-story-card",
   "component-swiper",
   "component-wallet-simulator",
