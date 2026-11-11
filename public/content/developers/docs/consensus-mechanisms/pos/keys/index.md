@@ -10,7 +10,7 @@ Ethereum's keys are generated using [elliptic-curve cryptography](https://en.wik
 
 However, when Ethereum switched from [proof-of-work](/developers/docs/consensus-mechanisms/pow) to [proof-of-stake](/developers/docs/consensus-mechanisms/pos) a new type of key was added to Ethereum. The original keys still work exactly the same as before—there were no changes to the elliptic-curve-based keys securing accounts. However, users needed a new type of key for participating in proof-of-stake by staking ETH and running validators. This need arose from scalability challenges associated with many messages passing between large numbers of validators that required a cryptographic method that could easily be aggregated to reduce the amount of communication required for the network to come to consensus.
 
-This new type of key uses the [**Boneh-Lynn-Shacham (BLS)** signature scheme](https://wikipedia.org/wiki/BLS_digital_signature). BLS enables a very efficient aggregation of signatures but also allows reverse engineering of aggregated individual validator keys and is ideal for managing actions between validators.
+This new type of key uses the [**Boneh-Lynn-Shacham (BLS)** signature scheme](https://wikipedia.org/wiki/BLS_digital_signature). BLS signatures from many validators can be aggregated into one signature that is verified in a single check, which keeps consensus messages small. BLS is not quantum-safe, so the [post-quantum roadmap](/roadmap/security/quantum-resistance/) plans to replace validator BLS keys with hash-based keys.
 
 ## The two types of validator keys {#two-types-of-keys}
 
@@ -37,9 +37,9 @@ The **validator public key** is included in the transaction data when a user dep
 
 ### Withdrawal credentials {#withdrawal-credentials}
 
-Every validator has a property known as _withdrawal credentials_. The first byte of this 32-byte field identifies the account type: `0x00` represents original BLS (pre-Shapella, non-withdrawable) credentials, `0x01` represents legacy credentials that point to an execution address, and `0x02` represents the modern compounding credential type.
+Every validator has a property known as _withdrawal credentials_. The first byte of this 32-byte field identifies the account type: `0x00` represents legacy BLS (pre-Shapella, non-withdrawable) credentials, `0x01` represents legacy credentials that point to an execution address, and `0x02` represents the modern compounding credential type.
 
-Validators with `0x00` BLS keys must update these credentials to point to an execution address in order to activate excess balance payments or full withdrawal from staking. This can be done by providing an execution address in the deposit data during initial key generation, _OR_ by using the withdrawal key at a later time to sign and broadcast a `BLSToExecutionChange` message.
+Validators with `0x00` BLS keys must update these credentials to point to an execution address in order to activate excess balance payments or full withdrawal from staking. This can be done by providing an execution address in the deposit data during initial key generation, _OR_ by using the withdrawal key at a later time to sign and broadcast a `BLSToExecutionChange` message. Proposals to phase out `0x00` credentials ahead of the post-quantum transition are under discussion, so validators still on `0x00` should convert now.
 
 [More on validator withdrawal credentials](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
@@ -54,7 +54,7 @@ Just like the validator keys, the withdrawal keys also consist of two components
 
 Losing this key before updating withdrawal credentials to `0x01` type means losing access to the validator balance. The validator can still sign attestations and blocks since these actions require the validator's private key, however there is little to no incentive if the withdrawal keys are lost.
 
-Separating the validator keys from the Ethereum account keys enables multiple validators to be run by a single user.
+Separating the validator keys from the Ethereum account keys enables multiple validators to be run by a single user. With `0x02` credentials, one validator can hold up to 2,048 ETH, so a larger stake no longer needs to be split across many validators.
 
 <ValidatorKeysDiagram />
 

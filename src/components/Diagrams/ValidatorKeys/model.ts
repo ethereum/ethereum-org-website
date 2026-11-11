@@ -5,8 +5,10 @@
  * withdrawal key) and two figures on it.
  *
  * - `ValidatorKeysDiagram` replaces validator-key-schematic.png: one wallet
- *   funds three validators, each with its own keys, separate from the
- *   wallet's key. Scenarios compare the withdrawal credential types.
+ *   stakes 96 ETH, as three 32 ETH validators (0x00, 0x01) or one 0x02
+ *   validator, each with its own keys, separate from the wallet's key. The
+ *   withdrawal address is its own account: it can be the wallet or any
+ *   other address.
  * - `KeyDerivationDiagram` replaces multiple-keys.png: one mnemonic derives
  *   every validator's withdrawal and signing keys.
  *
@@ -41,8 +43,15 @@ export const VALIDATOR_KEYS_SIZE = { width: 480, height: 300 }
 /** Validators drawn: one deposit, one key pair each. */
 export const VALIDATOR_COUNT = 3
 
+/** Validator rows on the rig: all three, or the middle one alone. */
+export const ALL_ROWS = [0, 1, 2] as const
+const SINGLE_ROW = [1] as const
+
 /** ETH per deposit: the activation balance (MIN_ACTIVATION_BALANCE). */
 export const DEPOSIT_ETH = 32
+
+/** The staker's whole stake: three activation balances. */
+export const STAKE_ETH = VALIDATOR_COUNT * DEPOSIT_ETH
 
 /** Effective balance cap for 0x02 credentials (EIP-7251). */
 export const MAX_EFFECTIVE_BALANCE_ETH = 2048
@@ -84,6 +93,8 @@ export interface ValidatorKeysRigView {
   motion: string
   /** The deposit figure draws the wallet, contract and withdrawal address. */
   source: "wallet" | "mnemonic"
+  /** Validator rows drawn: 0x02 consolidates the stake into one. */
+  rows: readonly number[]
   /** Validators drawn at full strength (dimmed until activated). */
   validatorsActive: boolean
   signingShown: boolean
@@ -126,6 +137,8 @@ export const VALIDATOR_KEYS_LAST_STEP = VALIDATOR_KEYS_STEPS.length - 1
 
 export interface ValidatorKeysView extends ValidatorKeysRigView {
   preset: CredentialPresetId
+  /** Validators (and deposits) in this scenario. */
+  count: number
   deposits: number
   stakedEth: number
   active: number
@@ -142,7 +155,9 @@ export const getValidatorKeysView = (
   const step = Math.min(Math.max(requestedStep, 0), VALIDATOR_KEYS_LAST_STEP)
   const motion = VALIDATOR_KEYS_STEPS[step]
   const withdraw = motion === "withdraw"
-  const deposits = step >= 1 ? VALIDATOR_COUNT : 0
+  // One 0x02 validator holds up to 2048 ETH, so the stake isn't split.
+  const count = preset === "compounding" ? 1 : VALIDATOR_COUNT
+  const deposits = step >= 1 ? count : 0
   const changed = withdraw && preset === "bls"
 
   return {
@@ -151,6 +166,7 @@ export const getValidatorKeysView = (
     step,
     motion,
     source: "wallet",
+    rows: count === 1 ? SINGLE_ROW : ALL_ROWS,
     validatorsActive: step >= 2,
     signingShown: true,
     // Only 0x00 credentials hash a BLS withdrawal key.
@@ -188,13 +204,18 @@ export const getValidatorKeysView = (
             sign: "signing",
           } as const
         )[motion],
+    count,
     deposits,
-    stakedEth: deposits * DEPOSIT_ETH,
-    active: step >= 2 ? VALIDATOR_COUNT : 0,
+    stakedEth: step >= 1 ? STAKE_ETH : 0,
+    active: step >= 2 ? count : 0,
     credentials: changed
       ? CREDENTIAL_PREFIX.address
       : CREDENTIAL_PREFIX[preset],
-    key: withdraw ? `withdraw-${preset}` : motion,
+    key: withdraw
+      ? `withdraw-${preset}`
+      : motion === "deposit" && preset === "compounding"
+        ? "deposit-compounding"
+        : motion,
   }
 }
 
@@ -231,6 +252,7 @@ export const getKeyDerivationView = (
     step,
     motion,
     source: "mnemonic",
+    rows: ALL_ROWS,
     validatorsActive: true,
     signingShown,
     withdrawalShown,

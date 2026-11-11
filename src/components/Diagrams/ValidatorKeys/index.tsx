@@ -15,9 +15,9 @@ export interface ValidatorKeysDiagramProps {
 
 /**
  * Interactive replacement for `validator-key-schematic.png`: one wallet
- * deposits for three validators, each with its own signing key and
- * withdrawal key. Scenarios compare 0x00, 0x01 and 0x02 withdrawal
- * credentials.
+ * stakes for three validators (one with 0x02 credentials), each with its own
+ * signing key, paying out to a separate withdrawal address. Scenarios
+ * compare 0x00, 0x01 and 0x02 withdrawal credentials.
  */
 const ValidatorKeysDiagram = ({
   initialPreset,

@@ -23,6 +23,7 @@ import {
   DEPOSIT_ETH,
   getValidatorKeysView,
   MAX_EFFECTIVE_BALANCE_ETH,
+  STAKE_ETH,
   VALIDATOR_COUNT,
   VALIDATOR_KEYS_LAST_STEP,
   type ValidatorKeysView,
@@ -53,9 +54,10 @@ interface ValidatorKeysPlayerProps {
 }
 
 /**
- * The validator-key-schematic.png replacement: one wallet deposits for three
- * validators, the beacon chain activates them, each signs with its own
- * signing key, and withdrawals follow the withdrawal credentials chosen.
+ * The validator-key-schematic.png replacement: one wallet stakes 96 ETH as
+ * three validators (or one, with 0x02), the beacon chain activates them,
+ * each signs with its own signing key, and withdrawals go to a withdrawal
+ * address per the withdrawal credentials chosen.
  */
 export function ValidatorKeysPlayer({
   initialPreset = "bls",
@@ -79,13 +81,24 @@ export function ValidatorKeysPlayer({
     [presetId, step]
   )
   const { labels, definitions, parts } = useKeyParts(PARTS)
+  // One 0x02 validator: label it in the singular.
+  const rigLabels = useMemo(
+    () =>
+      view.count === 1
+        ? { ...labels, validators: t("validator-keys-label-validator") }
+        : labels,
+    [labels, view.count, t]
+  )
 
   const eth = (amount: number) =>
     t("validator-keys-eth", { amount: format(amount) })
   const valuesFor = (v: ValidatorKeysView) => ({
     step: format(v.step),
-    count: format(VALIDATOR_COUNT),
-    amount: format(DEPOSIT_ETH),
+    // `n` picks the plural form; `count` is the localized figure.
+    n: v.count,
+    count: format(v.count),
+    amount: format(STAKE_ETH / v.count),
+    stake: format(STAKE_ETH),
     max: format(MAX_EFFECTIVE_BALANCE_ETH),
     prefix: CREDENTIAL_PREFIX[v.preset],
     from: CREDENTIAL_PREFIX.bls,
@@ -104,11 +117,11 @@ export function ValidatorKeysPlayer({
   return (
     <InteractiveDiagram
       className={className}
-      caption={t("validator-keys-caption", {
-        count: format(VALIDATOR_COUNT),
-      })}
+      caption={t("validator-keys-caption")}
       description={t("validator-keys-description", {
         ...valuesFor(view),
+        amount: format(DEPOSIT_ETH),
+        three: format(VALIDATOR_COUNT),
         address: CREDENTIAL_PREFIX.address,
         compounding: CREDENTIAL_PREFIX.compounding,
         ...Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)])),
@@ -128,7 +141,7 @@ export function ValidatorKeysPlayer({
         <ValidatorKeysRig
           view={view}
           runKey={`${presetId}-${view.step}`}
-          labels={labels}
+          labels={rigLabels}
           definitions={definitions}
         />
       }

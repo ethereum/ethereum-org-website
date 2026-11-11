@@ -35,8 +35,9 @@ import {
  * contract (deposit figure only). Along the front right, three validators,
  * each carrying its signing key (the cube), with its withdrawal key (the
  * flat slab) on the plate in front of it, off the machine, joined to it by a
- * short pipe. Behind them, the withdrawal address link runs back to the
- * wallet.
+ * short pipe. At the back, the withdrawal address: its own account, which
+ * may or may not be the wallet, linked to the validators round the back of
+ * the plate. A 0x02 staker runs one validator, the middle row.
  */
 
 const { width: W, height: H } = VALIDATOR_KEYS_SIZE
@@ -57,6 +58,8 @@ const LANE_Y = 81
 const WALLET: Dims = [12, 66, 0, 32, 30, 22]
 const MNEMONIC: Dims = [8, 63, 0, 40, 36, 9]
 const CONTRACT: Dims = [88, 69, 0, 26, 24, 28]
+// The withdrawal address: an account of its own along the back edge.
+const ADDRESS: Dims = [96, 4, 0, 26, 18, 14]
 
 const ROW_Y = [24, 70, 116]
 const ROW_D = 22
@@ -93,7 +96,7 @@ const DEPOSIT = path(PIPE_Z, [44, LANE_Y], [88, LANE_Y])
 // Contract out to each validator (the beacon chain picking up deposits).
 const FAN = ROW_CENTRE.map((c) =>
   path(PIPE_Z, [114, LANE_Y], [BUS_X, LANE_Y], [BUS_X, c], [VAL_X, c])
-).join(" ")
+)
 // Derivation: the mnemonic to the master key m, then m's paths to each
 // withdrawal key.
 const MASTER: Dims = [BUS_X - 6, LANE_Y - 6, 0, 12, 12, 10]
@@ -111,21 +114,20 @@ const PATHS = ROW_Y.map((y) =>
 ).join(" ")
 
 // The withdrawal address link: from each validator's end face to a bus on
-// the right, then round the back of the plate (inside its inset line) to the
-// wallet. In two parts so the back run is painted behind the validators and
-// the bus in front.
+// the right, then along the back of the plate to the address's end face. In
+// two parts so the back run is painted behind the validators and the bus in
+// front.
 const LINK_Z = 6
 const LINK_X = 232
-const LINK_BACK_Y = 14
+const LINK_BACK_Y = ADDRESS[1] + ADDRESS[4] / 2
 // Stubs leave near each validator's back edge, behind its withdrawal key.
 const LINK_FRONT = ROW_Y.map((y) =>
   path(LINK_Z, [VAL_X + VAL_W, y + 3], [LINK_X, y + 3], [LINK_X, LINK_BACK_Y])
-).join(" ")
+)
 const LINK_BACK = path(
   LINK_Z,
   [LINK_X, LINK_BACK_Y],
-  [28, LINK_BACK_Y],
-  [28, WALLET[1]]
+  [ADDRESS[0] + ADDRESS[3], LINK_BACK_Y]
 )
 
 /* ---------- Static detail and shadows (built once, never re-rendered) ---------- */
@@ -141,13 +143,12 @@ const SOURCE_SHADOW = {
   mnemonic: contact(MNEMONIC, 4),
 }
 const CONTRACT_SHADOW = contact(CONTRACT, 4)
-const VALIDATOR_SHADOWS = (
-  <g className="pointer-events-none">
-    {ROW_Y.map((y) => (
-      <g key={y}>{contact(validatorDims(y))}</g>
-    ))}
+const ADDRESS_SHADOW = contact(ADDRESS)
+const VALIDATOR_SHADOWS = ROW_Y.map((y) => (
+  <g key={y} className="pointer-events-none">
+    {contact(validatorDims(y))}
   </g>
-)
+))
 const PLATE_DETAIL = D.inset([0, 0, 0, PLATE_W, PLATE_D], 5)
 const WALLET_DETAIL = (
   <>
@@ -163,6 +164,7 @@ const MNEMONIC_DETAIL = (
     ))}
   </>
 )
+const ADDRESS_DETAIL = D.plate(ADDRESS[1] + ADDRESS[4], 102, 116, 5, 10)
 const CONTRACT_DETAIL = (
   <>
     {D.seams(CONTRACT, { end: [0.5], ring: 0.82 })}
@@ -175,18 +177,22 @@ const VALIDATOR_DETAIL = ROW_Y.map((y) => (
 
 /* ---------- Labels: outside the plate, short leaders ---------- */
 
-const SPOT: Record<ValidatorKeysPart, AnatomyLabelSpot> = {
+// Targets on the first or last validator drawn.
+const spotsFor = (
+  first: number,
+  last: number
+): Record<ValidatorKeysPart, AnatomyLabelSpot> => ({
   validators: {
     id: "validators",
     tone: "entity",
-    target: P(178, ROW_Y[2] + ROW_D, 6),
+    target: P(178, ROW_Y[last] + ROW_D, 6),
     anchor: [214, 262],
     placement: "below",
   },
   signing: {
     id: "signing",
     tone: "entity",
-    target: P(186, ROW_Y[0] + 5, VAL_H + 9),
+    target: P(186, ROW_Y[first] + 5, VAL_H + 9),
     anchor: [372, 96],
     placement: "above",
   },
@@ -200,7 +206,7 @@ const SPOT: Record<ValidatorKeysPart, AnatomyLabelSpot> = {
   balance: {
     id: "balance",
     tone: "entity",
-    target: P(169, ROW_Y[0] + 6, VAL_H + 8),
+    target: P(169, ROW_Y[first] + 6, VAL_H + 8),
     anchor: [340, 70],
     placement: "above",
   },
@@ -241,12 +247,14 @@ const SPOT: Record<ValidatorKeysPart, AnatomyLabelSpot> = {
   },
   payout: {
     id: "payout",
-    tone: "neutral",
-    target: P(120, LINK_BACK_Y, LINK_Z),
+    tone: "entity",
+    target: P(ADDRESS[0] + 13, ADDRESS[1] + 9, ADDRESS[5]),
     anchor: [300, 48],
     placement: "above",
   },
-}
+})
+const SPOT = spotsFor(0, 2)
+const SINGLE_SPOT = spotsFor(1, 1)
 
 // The derivation figure runs its paths along the front, so its validators
 // label goes to the back and its withdrawal key label off a slab's end.
@@ -266,18 +274,18 @@ const DERIVE_SPOT = {
 } satisfies Partial<Record<ValidatorKeysPart, AnatomyLabelSpot>>
 
 // In priority order; each figure labels only what it draws.
-const SPOTS: Record<ValidatorKeysFigure, AnatomyLabelSpot[]> = {
-  deposit: (
-    [
-      "validators",
-      "signing",
-      "withdrawal",
-      "balance",
-      "wallet",
-      "contract",
-      "payout",
-    ] as const
-  ).map((id) => SPOT[id]),
+const DEPOSIT_IDS = [
+  "validators",
+  "signing",
+  "withdrawal",
+  "balance",
+  "wallet",
+  "contract",
+  "payout",
+] as const
+const SPOTS: Record<ValidatorKeysFigure | "single", AnatomyLabelSpot[]> = {
+  deposit: DEPOSIT_IDS.map((id) => SPOT[id]),
+  single: DEPOSIT_IDS.map((id) => SINGLE_SPOT[id]),
   derive: (
     [
       "mnemonic",
@@ -325,9 +333,10 @@ function ValidatorKeysRig({
   // Label only what's drawn.
   const { figure, signingShown, withdrawalShown, balanceShown, masterShown } =
     view
+  const single = view.rows.length === 1
   const spots = useMemo(
     () =>
-      SPOTS[figure].filter(
+      SPOTS[single ? "single" : figure].filter(
         ({ id }) =>
           (id !== "signing" || signingShown) &&
           (id !== "withdrawal" || withdrawalShown) &&
@@ -338,6 +347,7 @@ function ValidatorKeysRig({
       ),
     [
       figure,
+      single,
       signingShown,
       withdrawalShown,
       balanceShown,
@@ -347,18 +357,20 @@ function ValidatorKeysRig({
     ]
   )
 
-  const link = (d: string) => (
+  const link = (d: string, back = false) => (
     <g {...part("payout")}>
       <IsoPipe
         hue="gas"
         d={d}
         flowing={view.flow === "payout"}
         flowKey={runKey}
-        flowDelay={d === LINK_BACK ? 500 : undefined}
+        flowDelay={back ? 500 : undefined}
         state={state("payout")}
       />
     </g>
   )
+  const fan = view.rows.map((i) => FAN[i]).join(" ")
+  const linkFront = view.rows.map((i) => LINK_FRONT[i]).join(" ")
 
   return (
     <div className={cn("relative", className)}>
@@ -375,10 +387,23 @@ function ValidatorKeysRig({
         {PLATE_DETAIL}
         {SOURCE_SHADOW[view.source]}
         {deposit && CONTRACT_SHADOW}
-        {VALIDATOR_SHADOWS}
+        {linkShown && ADDRESS_SHADOW}
+        {view.rows.map((i) => (
+          <g key={i}>{VALIDATOR_SHADOWS[i]}</g>
+        ))}
 
-        {/* The withdrawal address link's run behind the validators. */}
-        {linkShown && link(LINK_BACK)}
+        {/* The withdrawal address, and the link's run behind the validators. */}
+        {linkShown && link(LINK_BACK, true)}
+        {linkShown && (
+          <g {...part("payout")}>
+            <IsoSolid
+              box={box(...ADDRESS)}
+              hue="entity"
+              state={state("payout")}
+            />
+            {ADDRESS_DETAIL}
+          </g>
+        )}
 
         {/* The source: wallet or mnemonic. */}
         {deposit ? (
@@ -422,7 +447,7 @@ function ValidatorKeysRig({
           <g {...part("validators")}>
             <IsoPipe
               hue="entity"
-              d={FAN}
+              d={fan}
               flowing={view.flow === "activate"}
               flowKey={runKey}
               state={state("validators")}
@@ -456,8 +481,8 @@ function ValidatorKeysRig({
           </g>
         )}
 
-        {ROW_Y.map((y, i) => (
-          <g key={y}>
+        {view.rows.map((i) => (
+          <g key={i}>
             <g
               data-part="validators"
               className={cn(
@@ -538,7 +563,7 @@ function ValidatorKeysRig({
         ))}
 
         {/* The link's bus, in front of the validators. */}
-        {linkShown && link(LINK_FRONT)}
+        {linkShown && link(linkFront)}
       </svg>
 
       <AnatomyLabels
