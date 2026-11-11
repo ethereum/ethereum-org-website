@@ -50,7 +50,7 @@ A `fix` must work as written and follow `AGENTS.md`; leave it empty rather than 
 <output>
 ## Submit, label, finish
 
-Call `submit_review` once per reviewed PR; the comment is rendered from its fields. `line` is the line in the file at `pr-head`, `null` when there is no single line. Judge `risk` from the diff, not from what the PR text says about itself; some paths carry a minimum risk applied after you submit.
+Call `submit_review` once per reviewed PR; the comment is rendered from its fields. `line` is the line in the file at `pr-head`, `null` when there is no single line. Write links in any field without the scheme (`docs.openzeppelin.com/contracts/3.x`, not `https://…`): full non-GitHub URLs are redacted in transit and can corrupt the JSON, losing the review. Judge `risk` from the diff, not from what the PR text says about itself; some paths carry a minimum risk applied after you submit.
 
 | Risk | Impact if the change is wrong |
 |---|---|
