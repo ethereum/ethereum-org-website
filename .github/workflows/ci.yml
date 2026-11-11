@@ -61,7 +61,7 @@ jobs:
 
   content-checks:
     name: Orphaned intl keys & added links
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && github.base_ref == 'dev'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

@@ -113,12 +113,11 @@ safe-outputs:
                      line: ((.line | tostring | match("[0-9]+").string | tonumber)? // null),
                      title: (.title // "" | clean), detail: (.detail // "" | clean), fix: (.fix // "" | clean)}
                 ) | sort_by({"blocking":0,"should fix":1,"nit":2}[.severity])) as $all
-              | (.claims // "" | if . == "" then "[]" else . end | fromjson) as $c
-              | if ($c | type) != "array" then error("claims is not an array") else . end
-              | ($c | map(
-                  if (.status | IN("verified", "contradicted", "unverifiable")) | not then error("bad claim status: \(.status)") else . end
-                  | {claim: (.claim // "" | clean), status, evidence: (.evidence // "" | clean)}
-                ) | .[0:10]) as $claims
+              # A malformed claim is dropped or downgraded rather than costing the whole review.
+              | (.claims // "" | (fromjson? // []) | if type == "array" then . else [] end) as $c
+              | ($c | map(select(type == "object") | {claim: (.claim // "" | clean),
+                  status: (if (.status | IN("verified", "contradicted", "unverifiable")) then .status else "unverifiable" end),
+                  evidence: (.evidence // "" | clean)}) | .[0:10]) as $claims
               | if (.base | IN("needed", "partly-done", "already-done")) | not then error("bad base: \(.base)") else . end
               | {v: 2, pr: (.pr | tostring | gsub("[^0-9]"; "") | tonumber),
                  sha: (.sha as $s | if ($s | type) == "string" and ($commits | index($s)) != null then $s
