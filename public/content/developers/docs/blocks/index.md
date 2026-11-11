@@ -14,8 +14,7 @@ Blocks are a very beginner-friendly topic. But to help you better understand thi
 
 To ensure that all participants on the [Ethereum](/) network maintain a synchronized state and agree on the precise history of transactions, we batch transactions into blocks. This means dozens (or hundreds) of transactions are committed, agreed on, and synchronized all at once.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
 By spacing out commits, we give all network participants enough time to come to consensus: even though transaction requests occur dozens of times per second, blocks are only created and committed on Ethereum once every twelve seconds.
 

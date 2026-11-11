@@ -29,6 +29,7 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
 - [Suggest a video](/contributing/adding-videos/) – Suggest an educational video for the video gallery
+- [Add a glossary term](/contributing/adding-glossary-terms/) – Add or update a term in the [Ethereum glossary](/glossary/)
 
 **Feature ideas**
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Let us know about any ideas you have for a new feature or design
@@ -100,6 +101,8 @@ If your contribution gets merged into ethereum.org, you will have a chance to cl
 4. Claim your OAT!
 
 You should only use self-custody wallets to claim OATs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your OATs.
+
+<LinkWithArrow href="/collectibles/">View your ethereum.org collectibles</LinkWithArrow>
 
 ## Contributors {#contributors}
 

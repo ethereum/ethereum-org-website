@@ -1,4 +1,6 @@
 ---
+status: historical
+superseded_by: "src/scripts/intl-pipeline/intl-sanitizer.ts (tests in tests/unit/intl-pipeline/); post_import_sanitize.ts no longer exists"
 title: "Sanitizer Regex Bugs: Backtick Parity Cascade and Header Newline Stripping"
 date: 2026-02-27
 category: logic-errors

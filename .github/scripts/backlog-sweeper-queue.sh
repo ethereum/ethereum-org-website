@@ -52,7 +52,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
 for n in $(jq -r '.[]' "$OUT_DIR/candidates.json"); do
   mkdir -p "$OUT_DIR/pr-$n"
   gh pr view "$n" --repo "$REPO" \
-    --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,labels \
+    --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,mergeStateStatus,additions,deletions,changedFiles,labels \
     > "$OUT_DIR/pr-$n/pr-meta.json"
   git fetch -q --no-tags origin "pull/$n/head:pr-$n-head"
 done
