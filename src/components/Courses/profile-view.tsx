@@ -205,8 +205,10 @@ const ProfileView = () => {
         </Card>
       )}
 
-      <Section id="stats">
-        <h2 className="sr-only">{t("page-courses-profile-stats-title")}</h2>
+      <Section id="stats" aria-labelledby="profile-stats-heading">
+        <h2 id="profile-stats-heading" className="sr-only">
+          {t("page-courses-profile-stats-title")}
+        </h2>
         {/* The account card stands two stats tall beside the grid on wide screens */}
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5">
           <Card
@@ -309,63 +311,95 @@ const ProfileView = () => {
         </div>
       </Section>
 
-      {(mastered.length > 0 || inProgress.length > 0) && (
-        <Section id="courses">
-          <h2>{t("page-courses-profile-courses-title")}</h2>
-          {[
-            { id: "mastered", rows: mastered },
-            { id: "in-progress", rows: inProgress },
-          ]
-            .filter(({ rows }) => rows.length)
-            .map(({ id, rows }) => (
-              <div key={id} className="flow">
-                <h3>{t(`page-courses-profile-${id}-title`)}</h3>
-                <ul className="ms-0 flex list-none flex-col gap-3">
-                  {rows.map(({ course, trackId, isMastered }) => {
-                    const bestScore = progress.exams?.[course.id]?.best
-                    return (
-                      <li key={course.id} className="m-0">
-                        <Card
-                          href={courseHref(course.id)}
-                          variant="nested"
-                          size="md"
-                          border
-                          style={courseThemeStyle(course.theme)}
-                        >
-                          <CardContent className="gap-3 md:flex-row md:items-center md:gap-6">
-                            <div className="flex flex-col md:w-2/5">
-                              <span className="text-lg font-bold text-body">
-                                {t(`${course.id}-title`)}
-                              </span>
-                              <span className="text-sm text-body-medium">
-                                {t(`page-courses-track-${trackId}-title`)}
-                              </span>
-                            </div>
-                            <div className="flex flex-1 flex-col gap-1">
-                              <CourseProgress
-                                courseId={course.id}
-                                lessonIds={course.lessons.map(({ id }) => id)}
-                                hasExam={course.exam.length > 0}
-                                hideLabel={isMastered}
-                              />
-                              {bestScore !== undefined && (
-                                <span className="text-sm text-body-medium">
-                                  {t("page-courses-profile-best-check", {
-                                    score: percent(bestScore),
-                                  })}
+      {/* Side by side on wide screens; neither needs the full width */}
+      <div className="mt-space-3x grid items-start gap-x-12 gap-y-space-3x lg:grid-cols-[2fr_1fr]">
+        {(mastered.length > 0 || inProgress.length > 0) && (
+          <Section id="courses">
+            <h2>{t("page-courses-profile-courses-title")}</h2>
+            {[
+              { id: "mastered", rows: mastered },
+              { id: "in-progress", rows: inProgress },
+            ]
+              .filter(({ rows }) => rows.length)
+              .map(({ id, rows }) => (
+                <div key={id} className="flow">
+                  <h3>{t(`page-courses-profile-${id}-title`)}</h3>
+                  <ul className="ms-0 flex list-none flex-col gap-3">
+                    {rows.map(({ course, trackId, isMastered }) => {
+                      const bestScore = progress.exams?.[course.id]?.best
+                      return (
+                        <li key={course.id} className="m-0">
+                          <Card
+                            href={courseHref(course.id)}
+                            variant="nested"
+                            size="md"
+                            border
+                            style={courseThemeStyle(course.theme)}
+                          >
+                            <CardContent className="gap-3">
+                              <div className="flex flex-col">
+                                <span className="text-lg font-bold text-body">
+                                  {t(`${course.id}-title`)}
                                 </span>
-                              )}
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            ))}
-        </Section>
-      )}
+                                <span className="text-sm text-body-medium">
+                                  {t(`page-courses-track-${trackId}-title`)}
+                                </span>
+                              </div>
+                              <div className="flex flex-1 flex-col gap-1">
+                                <CourseProgress
+                                  courseId={course.id}
+                                  lessonIds={course.lessons.map(({ id }) => id)}
+                                  hasExam={course.exam.length > 0}
+                                  hideLabel={isMastered}
+                                />
+                                {bestScore !== undefined && (
+                                  <span className="text-sm text-body-medium">
+                                    {t("page-courses-profile-best-check", {
+                                      score: percent(bestScore),
+                                    })}
+                                  </span>
+                                )}
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              ))}
+          </Section>
+        )}
+        {recent.length > 0 && (
+          <Section id="recent">
+            <h2>{t("page-courses-profile-recent-title")}</h2>
+            <ul className="ms-0 flex list-none flex-col gap-2">
+              {recent.map(({ courseId, lessonId, completedAt, accuracy }) => (
+                <li
+                  key={`${courseId}/${lessonId}`}
+                  className="m-0 flex flex-wrap items-baseline justify-between gap-x-4 border-b border-border pb-2"
+                >
+                  <span>
+                    <InlineLink href={lessonHref(courseId, lessonId)}>
+                      {t(`${courseId}-${lessonId}-title`)}
+                    </InlineLink>
+                    <span className="text-body-medium">
+                      {" "}
+                      · {t(`${courseId}-title`)}
+                    </span>
+                  </span>
+                  <span className="text-sm text-body-medium tabular-nums">
+                    {t("page-courses-profile-recent-detail", {
+                      date: date(completedAt),
+                      accuracy: percent(accuracy),
+                    })}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </Section>
+        )}
+      </div>
 
       {review.length > 0 && (
         <Section id="review">
@@ -405,36 +439,6 @@ const ProfileView = () => {
               )
             })}
           </div>
-        </Section>
-      )}
-
-      {recent.length > 0 && (
-        <Section id="recent">
-          <h2>{t("page-courses-profile-recent-title")}</h2>
-          <ul className="ms-0 flex list-none flex-col gap-2">
-            {recent.map(({ courseId, lessonId, completedAt, accuracy }) => (
-              <li
-                key={`${courseId}/${lessonId}`}
-                className="m-0 flex flex-wrap items-baseline justify-between gap-x-4 border-b border-border pb-2"
-              >
-                <span>
-                  <InlineLink href={lessonHref(courseId, lessonId)}>
-                    {t(`${courseId}-${lessonId}-title`)}
-                  </InlineLink>
-                  <span className="text-body-medium">
-                    {" "}
-                    · {t(`${courseId}-title`)}
-                  </span>
-                </span>
-                <span className="text-sm text-body-medium tabular-nums">
-                  {t("page-courses-profile-recent-detail", {
-                    date: date(completedAt),
-                    accuracy: percent(accuracy),
-                  })}
-                </span>
-              </li>
-            ))}
-          </ul>
         </Section>
       )}
 
