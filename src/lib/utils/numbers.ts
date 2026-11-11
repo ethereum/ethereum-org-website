@@ -44,6 +44,14 @@ export const formatLargeUSD = (value: number, locale: string): string => {
   }).format(value)
 }
 
+export const formatPercentChange = (value: number, locale: string): string => {
+  const formatted = new Intl.NumberFormat(locale, {
+    style: "percent",
+    maximumFractionDigits: 1,
+  }).format(Math.abs(value) / 100)
+  return value > 0 ? `+${formatted}` : `-${formatted}`
+}
+
 export const formatSmallUSD = (value: number, locale: string): string => {
   return numberFormat(locale, {
     style: "currency",
