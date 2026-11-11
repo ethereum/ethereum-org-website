@@ -52,7 +52,7 @@ There are various free [services](/developers/docs/nodes-and-clients/nodes-as-a-
 
 Archive node in this context means data served by user facing execution layer clients as they handle the state database and provide JSON-RPC endpoints. Configuration options, sync time and database size may vary by client. For details, please refer to the documentation provided by your client.
 
-Before starting your own archive node, learn about the differences between the clients and especially the various [hardware requirements](/developers/docs/nodes-and-clients/run-a-node/#requirements). Most clients are not optimized for this feature and their archives require more than 12TB of space. In contrast, implementations like Erigon can store the same data in under 3TB which makes them the most effective way of running an archive node.
+Before starting your own archive node, learn about the differences between the clients and especially the various [hardware requirements](/developers/docs/nodes-and-clients/run-a-node/#requirements). Archive size varies widely with each client's storage design. Erigon, Reth and Geth (with its path-based archive) store a mainnet archive in roughly 2-3TB, while Besu and Nethermind archives need 12TB or more.
 
 ## Recommended practices {#recommended-practices}
 
@@ -61,7 +61,7 @@ Apart from general [recommendations for running a node](/developers/docs/nodes-a
 ### Hardware {#hardware}
 
 Always make sure to verify hardware requirements for a given mode in a client's documentation.
-The biggest requirement for archive nodes is the disk space. Depending on client, it varies from 3TB to 12TB. Even if HDD might be considered a better solution for large amounts of data, syncing it and constantly updating the head of the chain will require SSD drives. [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) drives are good enough but it should be a reliable quality, at least [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disks can be fitted into a desktop computer or a server with enough slots. Such dedicated devices are ideal for running high uptime node. It's totally possible to run it on a laptop but the portability will come at an additional cost.
+The biggest requirement for archive nodes is the disk space. Depending on client, it varies from about 2TB to more than 12TB. Even if HDD might be considered a better solution for large amounts of data, syncing it and constantly updating the head of the chain will require SSD drives. [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) drives are good enough but it should be a reliable quality, at least [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disks can be fitted into a desktop computer or a server with enough slots. Such dedicated devices are ideal for running high uptime node. It's totally possible to run it on a laptop but the portability will come at an additional cost.
 
 All of the data needs to fit in one volume, therefore disks have to be joined, e.g., with [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) or LVM. It might be also worth considering using [ZFS](https://en.wikipedia.org/wiki/ZFS) as it supports "Copy-on-write" which ensures data is correctly written to the disk without any low level errors.
 

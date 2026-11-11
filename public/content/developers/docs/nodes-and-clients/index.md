@@ -22,8 +22,7 @@ A "node" is any instance of Ethereum client software that is connected to other 
 
 These clients work together to keep track of the head of the Ethereum chain and allow users to interact with the Ethereum network. The modular design with multiple pieces of software working together is called [encapsulated complexity](https://vitalik.eth.limo/general/2022/02/28/complexity.html). This approach made it easier to execute [The Merge](/roadmap/merge) seamlessly, makes client software easier to maintain and develop, and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-Simplified diagram of a coupled execution and consensus client.
+<NodeClientsDiagram />
 
 ### Client diversity {#client-diversity}
 
@@ -155,7 +154,7 @@ Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will g
 
 ### Erigon {#erigon}
 
-Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
+Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using under 3TB of disk space, in under 3 days.
 
 ### ethrex {#ethrex}
 
