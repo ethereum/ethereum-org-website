@@ -4,12 +4,11 @@ import { useCallback } from "react"
 
 import { EXAM_ID, EXAM_PASS_MARK, lessonProgressKey } from "@/data/courses"
 
+import { COURSE_PROGRESS_KEY } from "./progress-storage"
 import { mergeStepResults, type StepRecord } from "./step-history"
 import { extendStreak, type Streak } from "./streak"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
-
-const COURSE_PROGRESS_KEY = "ethereum-org-course-progress"
 
 export const XP_LESSON = 10
 export const XP_PERFECT_BONUS = 5
@@ -54,6 +53,24 @@ export interface LessonReward {
 
 export interface ExamReward extends LessonReward {
   passed: boolean
+}
+
+/** Any lesson finished or mastery check taken */
+export const hasAnyProgress = (progress: CourseProgress) =>
+  Object.keys(progress.lessons).length > 0 ||
+  Object.keys(progress.exams ?? {}).length > 0
+
+/**
+ * Saved progress, read straight from storage. `useCourseProgress` only has
+ * it after its first effect, so a decision made on mount reads this instead.
+ */
+export const readStoredProgress = (): CourseProgress | null => {
+  try {
+    const item = window.localStorage.getItem(COURSE_PROGRESS_KEY)
+    return item ? (JSON.parse(item) as CourseProgress) : null
+  } catch {
+    return null
+  }
 }
 
 const INITIAL_PROGRESS: CourseProgress = {

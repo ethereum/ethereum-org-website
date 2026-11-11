@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -13,6 +14,7 @@ import {
   CourseCardTrophy,
 } from "@/components/Courses/course-card-status"
 import CourseProgress from "@/components/Courses/course-progress"
+import NoProfileAlert from "@/components/Courses/no-profile-alert"
 import ProfileLink from "@/components/Courses/profile-link"
 import {
   ProgressChips,
@@ -69,6 +71,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <ProfileLink />
               </div>
             </div>
+
+            <Suspense fallback={null}>
+              <NoProfileAlert />
+            </Suspense>
 
             {TRACKS.map((track, index) => (
               <Section

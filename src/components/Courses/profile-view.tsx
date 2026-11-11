@@ -15,7 +15,6 @@ import {
 } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardContent,
@@ -34,10 +33,12 @@ import { numberFormat } from "@/lib/utils/numbers"
 import {
   courseHref,
   COURSES,
+  COURSES_HUB,
   EXAM_ID,
   examHref,
   getCourse,
   lessonHref,
+  NO_PROFILE_PARAM,
   stepKey,
   TRACKS,
 } from "@/data/courses"
@@ -46,12 +47,17 @@ import CourseProgress from "./course-progress"
 import { useLevelName } from "./level-up"
 import { levelFor, levelProgress } from "./levels"
 import { ProgressNote } from "./progress-stats"
+import { HAS_PROGRESS_ATTR } from "./progress-storage"
 import { getActiveStreak } from "./streak"
 import { courseThemeStyle } from "./theme"
 import {
   type CourseProgress as Progress,
+  hasAnyProgress,
+  readStoredProgress,
   useCourseProgress,
 } from "./useCourseProgress"
+
+import { useRouter } from "@/i18n/navigation"
 
 const REVIEW_LIMIT = 5
 const RECENT_LIMIT = 5
@@ -130,9 +136,23 @@ const ProfileView = () => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const { progress, isLessonComplete, isExamPassed } = useCourseProgress()
+  const router = useRouter()
   // Progress loads from localStorage after mount; hide the initial zeros
   const [ready, setReady] = useState(false)
-  useEffect(() => setReady(true), [])
+  const backHref = `${COURSES_HUB}?${NO_PROFILE_PARAM}`
+  useEffect(() => {
+    // With nothing saved there's no profile yet: back to the hub, which says why
+    const stored = readStoredProgress()
+    if (stored && hasAnyProgress(stored)) setReady(true)
+    else router.replace(backHref)
+  }, [router, backHref])
+
+  // Progress reset from this page: nothing left to show, so leave too
+  useEffect(() => {
+    if (!ready || hasAnyProgress(progress)) return
+    document.documentElement.removeAttribute(HAS_PROGRESS_ATTR)
+    router.replace(backHref)
+  }, [ready, progress, router, backHref])
 
   const count = numberFormat(locale).format
   const percent = numberFormat(locale, {
@@ -188,23 +208,12 @@ const ProfileView = () => {
 
   const review = stepsToReview(progress)
   const recent = recentLessons(progress)
-  const started = lessonRecords.length > 0 || !!progress.exams
+  const started = hasAnyProgress(progress)
+
+  if (!started) return null
 
   return (
     <div className={cn("flow transition-opacity", !ready && "opacity-0")}>
-      {!started && (
-        <Card variant="nested" size="md" border>
-          <CardContent className="items-start gap-4">
-            <CardParagraph className="m-0">
-              {t("page-courses-profile-empty")}
-            </CardParagraph>
-            <ButtonLink href="/courses/">
-              {t("page-courses-profile-empty-cta")}
-            </ButtonLink>
-          </CardContent>
-        </Card>
-      )}
-
       <Section id="stats" aria-labelledby="profile-stats-heading">
         <h2 id="profile-stats-heading" className="sr-only">
           {t("page-courses-profile-stats-title")}

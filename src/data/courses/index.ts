@@ -43,6 +43,11 @@ export const getLesson = (courseId: string, lessonId: string) => {
 
 export const courseHref = (courseId: string) => `/courses/${courseId}/`
 
+export const COURSES_HUB = "/courses/"
+
+/** Query flag on the hub after the profile sends someone with no progress back */
+export const NO_PROFILE_PARAM = "noprofile"
+
 /** Reserved: the profile page's route segment, so never a course id */
 export const PROFILE_SEGMENT = "profile"
 

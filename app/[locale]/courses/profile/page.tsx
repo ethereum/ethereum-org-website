@@ -7,6 +7,7 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
+import ProfileEmptyNotice from "@/components/Courses/profile-empty-notice"
 import ProfileView from "@/components/Courses/profile-view"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -46,6 +47,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
       <main className="px-page pt-space-3x pb-page">
         <MainArticle>
+          <ProfileEmptyNotice />
           <ProfileView />
         </MainArticle>
       </main>
