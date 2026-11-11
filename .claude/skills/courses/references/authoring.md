@@ -28,7 +28,7 @@ Every lesson sets `learnMore`: one ethereum.org page offered on the completion s
 
 ## Writing questions
 
-- Three options for single choice, four for multi. Every option teaches a distinct misconception. Distractors get more realistic as the skill level rises: an obviously wrong option is fine in a newcomer course if its feedback makes a teaching point, but never one that is only there to be dismissed.
+- Three options for single choice (preferred: simpler, and it reads as a teaching moment rather than an exam; an occasional fourth is fine), four for multi. Every option teaches a distinct misconception. Distractors get more realistic as the skill level rises: an obviously wrong option is fine in a newcomer course if its feedback makes a teaching point, but never one that is only there to be dismissed.
 - Every option gets its own `fb-` feedback that explains why, not just "Correct"/"Wrong". Wrong-answer feedback must not reveal the right option, because the learner retries.
 - Use `multi` only when the real-world answer is genuinely plural; add an `-explain` for it.
 - Prediction questions may have every answer "accepted" in spirit. The feedback should point to the next step ("Test it in the next step").
