@@ -10,13 +10,12 @@ const meta = {
   args: { fig: 1 },
   parameters: {
     layout: "padded",
-    // Only key states snapshot (opted in per story): idle, final,
-    // out of gas, dark, RTL and mobile.
+    // No Chromatic snapshots: the anatomy and shell stories cover the visuals.
     chromatic: { disableSnapshot: true, modes: { lg: { viewport: "lg" } } },
     docs: {
       description: {
         component:
-          "Interactive replacement for `gas.png` on `/developers/docs/gas/` and `/developers/docs/evm/`, used in markdown as `<GasEvmDiagram />`. The transaction first pays 21,000 gas of intrinsic cost (step 1), then the program counter steps through seven opcodes: each draws its cost from the gas supply (a pulse along the pipe, stronger for SSTORE) and changes the stack, memory or storage. Stack and memory sit on the EVM's plinth (volatile machine state); storage stands apart on the plate (persistent world state). Built on `InteractiveDiagram` and the shared anatomy primitives; everything reads from `model.ts`. Step stories set `initialStep` so each snapshot is a deterministic end state.",
+          "Interactive replacement for `gas.png` on `/developers/docs/gas/` and `/developers/docs/evm/`, used in markdown as `<GasEvmDiagram />`. The transaction first pays 21,000 gas of intrinsic cost (step 1), then the program counter steps through seven opcodes: each draws its cost from the gas supply (a pulse along the pipe, stronger for SSTORE) and changes the stack, memory or storage. Stack and memory sit on the EVM's plinth (volatile machine state); storage stands apart on the plate (persistent world state). Built on `InteractiveDiagram` and the shared anatomy primitives; everything reads from `model.ts`. Step stories set `initialStep` so each is a deterministic end state.",
       },
     },
   },
@@ -26,9 +25,7 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Idle: Story = {
-  parameters: { chromatic: { disableSnapshot: false } },
-}
+export const Idle: Story = {}
 
 export const Step0Intrinsic: Story = { args: { initialStep: 0 } }
 
@@ -46,7 +43,6 @@ export const Step6Sstore: Story = { args: { initialStep: 6 } }
 
 export const Step7Stop: Story = {
   args: { initialStep: 7 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const OutOfGasIdle: Story = { args: { initialPreset: "out-of-gas" } }
@@ -78,7 +74,6 @@ export const OutOfGasStep5Push1D: Story = {
 export const OutOfGasStep6Reverted: Story = {
   args: { initialPreset: "out-of-gas", initialStep: 6 },
   parameters: {
-    chromatic: { disableSnapshot: false },
     docs: {
       description: {
         story:
@@ -91,7 +86,6 @@ export const OutOfGasStep6Reverted: Story = {
 export const Dark: Story = {
   globals: { theme: "dark" },
   args: { initialStep: 6 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const DarkOutOfGas: Story = {
@@ -102,7 +96,6 @@ export const DarkOutOfGas: Story = {
 export const Rtl: Story = {
   globals: { locale: "ar" },
   args: { initialStep: 3 },
-  parameters: { chromatic: { disableSnapshot: false } },
 }
 
 export const Mobile: Story = {
@@ -110,7 +103,6 @@ export const Mobile: Story = {
   args: { initialStep: 6 },
   parameters: {
     chromatic: {
-      disableSnapshot: false,
       modes: { lg: { disable: true }, base: { viewport: "base" } },
     },
   },

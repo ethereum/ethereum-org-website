@@ -8,15 +8,20 @@ The developer docs explain protocol mechanics with schematic PNGs (adapted from 
 
 Every diagram uses the same shell, **InteractiveDiagram**: the drawing with a figure header, status line and legend, then a panel with example values, playback controls, the step caption and the readout. The isometric parts come from **Anatomy**.
 
-| Story              | What it shows                                                   |
-| ------------------ | --------------------------------------------------------------- |
-| InteractiveDiagram | The shell and its slots, side panel and stacked, German strings |
-| Anatomy            | The shared isometric primitives, labels and colour roles        |
-| GasTx              | Message call (`gas-tx.png`)                                     |
-| GasEvm             | Gas inside the EVM (`gas.png`)                                  |
-| TxApply            | Applying a transaction (`tx.png`)                               |
-| EvmZones           | What survives a call (`evm.png`)                                |
+| Story              | What it shows                                                                      |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| InteractiveDiagram | The shell and its slots, side panel and stacked, German strings                    |
+| Anatomy            | The shared isometric primitives, labels and colour roles                           |
+| GasTx              | Message call (`gas-tx.png`)                                                        |
+| GasEvm             | Gas inside the EVM (`gas.png`)                                                     |
+| TxApply            | Applying a transaction (`tx.png`)                                                  |
+| EvmZones           | What survives a call (`evm.png`)                                                   |
+| Accounts           | An account's address and four fields (`accounts.png`)                              |
+| BlockState         | A block's transactions applied in order (`tx-block.png`)                           |
+| NodeClients        | Execution and consensus clients (`eth1eth2client.png`)                             |
+| NodeArchitecture   | A block and a transaction through a node (`node-architecture-text-background.png`) |
+| Attestations       | The attestation lifecycle (`attestation_schematic.png`)                            |
 
-Colour roles: **blue** for accounts, contracts and the EVM, **orange** for gas only, **neutral** for structure.
+Colour roles: **blue** for accounts, contracts and the EVM, **orange** for gas (and ETH value in TxApply and BlockState), **neutral** for structure.
 
 The rules, file layout, recipe for converting the next PNG, accessibility and performance budget live in one place: [`.claude/skills/devdocs-diagrams/SKILL.md`](https://github.com/ethereum/ethereum-org-website/blob/dev/.claude/skills/devdocs-diagrams/SKILL.md).
