@@ -22,11 +22,17 @@ interface ExitLessonButtonProps {
   href: string
   /** Confirm first when leaving would throw away answers */
   confirm: boolean
+  /** Runs as the learner actually leaves */
+  onLeave?: () => void
 }
 
 const triggerClasses = "shrink-0 rounded-full px-2 text-body-medium"
 
-const ExitLessonButton = ({ href, confirm }: ExitLessonButtonProps) => {
+const ExitLessonButton = ({
+  href,
+  confirm,
+  onLeave,
+}: ExitLessonButtonProps) => {
   const t = useTranslations("page-courses")
   const label = t("page-courses-exit-lesson")
 
@@ -34,6 +40,7 @@ const ExitLessonButton = ({ href, confirm }: ExitLessonButtonProps) => {
     return (
       <ButtonLink
         href={href}
+        onClick={onLeave}
         variant="ghost"
         isSecondary
         hideArrow
@@ -80,6 +87,7 @@ const ExitLessonButton = ({ href, confirm }: ExitLessonButtonProps) => {
           </DialogClose>
           <ButtonLink
             href={href}
+            onClick={onLeave}
             variant="ghost"
             hideArrow
             className="min-h-12 w-full rounded-2xl font-bold tracking-wide text-error uppercase dark:text-red-400 hover-link:bg-error-light hover-link:!text-error dark:hover-link:bg-error-dark dark:hover-link:!text-red-400"

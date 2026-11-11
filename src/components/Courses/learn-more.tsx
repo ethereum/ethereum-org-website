@@ -8,6 +8,8 @@ import InlineLink, { ExternalLinkIcon } from "@/components/ui/Link"
 
 import type { PageLink } from "@/data/courses"
 
+import { trackCourseEvent } from "./analytics"
+
 /*
  * Links out of a course open in a new tab: the completion and review
  * screens live only in memory, so leaving the tab would lose them, and Back
@@ -35,6 +37,7 @@ export const LearnMoreCard = ({ link }: { link: PageLink }) => {
       size="md"
       border
       className="w-full max-w-sm text-start"
+      onClick={() => trackCourseEvent("Learn more", link.href)}
       {...NEW_TAB}
     >
       <CardContent>
@@ -50,7 +53,11 @@ export const LearnMoreCard = ({ link }: { link: PageLink }) => {
 
 /** Inline source link under a course-check explanation */
 export const LearnMoreLink = ({ link }: { link: PageLink }) => (
-  <InlineLink href={link.href} {...NEW_TAB}>
+  <InlineLink
+    href={link.href}
+    onClick={() => trackCourseEvent("Learn more", link.href)}
+    {...NEW_TAB}
+  >
     {link.title}
     <NewTabHint />
   </InlineLink>

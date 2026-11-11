@@ -32,6 +32,7 @@ import MatchStep, { isMatchComplete, isMatchCorrect } from "./steps/match-step"
 import OrderStep, { isOrderComplete, isOrderCorrect } from "./steps/order-step"
 import type { StepStatus } from "./steps/types"
 import type { WidgetAnswer } from "./widgets/types"
+import { toPercent, trackCourseEvent } from "./analytics"
 import ExamComplete from "./exam-complete"
 import ExitLessonButton from "./exit-lesson-button"
 import LessonComplete from "./lesson-complete"
@@ -140,6 +141,7 @@ const LessonPlayer = ({
   const [accuracy, setAccuracy] = useState(1)
 
   const restart = () => {
+    trackCourseEvent("Lesson restart", `${courseId}/${lesson.id}`)
     setIndex(0)
     setValues({})
     setStatus("answering")
@@ -171,6 +173,11 @@ const LessonPlayer = ({
 
   const recordResult = (correct: boolean) => {
     if (step.id in firstTry) return
+    trackCourseEvent(
+      "Step answer",
+      `${courseId}/${lesson.id}/${step.id}`,
+      correct ? 1 : 0
+    )
     setFirstTry((prev) => ({ ...prev, [step.id]: correct }))
     setCombo((c) => (correct ? c + 1 : 0))
   }
@@ -223,6 +230,14 @@ const LessonPlayer = ({
       ? graded.filter(({ id }) => results[id]).length / graded.length
       : 1
     setAccuracy(score)
+    if (exam)
+      trackCourseEvent("Course check complete", courseId, toPercent(score))
+    else
+      trackCourseEvent(
+        "Lesson complete",
+        `${courseId}/${lesson.id}`,
+        toPercent(score)
+      )
     setReward(
       exam
         ? completeExam(courseId, score, results)
@@ -384,6 +399,15 @@ const LessonPlayer = ({
           <ExitLessonButton
             href={courseHref(courseId)}
             confirm={!reward && (index > 0 || Object.keys(values).length > 0)}
+            onLeave={() =>
+              !reward &&
+              trackCourseEvent(
+                "Lesson exit",
+                `${courseId}/${lesson.id}/${step.id}`,
+                undefined,
+                { immediate: true }
+              )
+            }
           />
           <Progress
             shine
