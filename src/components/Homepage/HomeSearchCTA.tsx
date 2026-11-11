@@ -2,7 +2,7 @@
 
 import { Search as SearchIcon, Sparkles } from "lucide-react"
 
-import Search from "@/components/Search"
+import Search from "@/components/Nav/Search"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"

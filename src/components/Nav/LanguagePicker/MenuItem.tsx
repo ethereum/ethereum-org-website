@@ -6,7 +6,7 @@ import type { LocaleDisplayInfo } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
-import { CommandItem } from "../ui/command"
+import { CommandItem } from "../../ui/command"
 
 type ItemProps = ComponentPropsWithoutRef<typeof CommandItem> & {
   displayInfo: LocaleDisplayInfo

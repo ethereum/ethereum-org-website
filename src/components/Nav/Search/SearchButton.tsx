@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Button, type ButtonProps } from "../ui/buttons/Button"
+import { Button, type ButtonProps } from "../../ui/buttons/Button"
 
 const SearchButton = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {

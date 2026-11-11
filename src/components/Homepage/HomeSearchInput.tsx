@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import { Search as SearchIcon, Sparkles } from "lucide-react"
 
-import Search from "@/components/Search"
+import Search from "@/components/Nav/Search"
 import Input from "@/components/ui/input"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -19,7 +19,7 @@ type HomeSearchInputProps = {
   ask: boolean
 }
 
-const preloadModal = () => import("@/components/Search/SearchModal")
+const preloadModal = () => import("@/components/Nav/Search/SearchModal")
 
 /**
  * The hero's search as a field: focusing it does nothing, the first keystroke opens the

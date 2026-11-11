@@ -38,7 +38,7 @@ conditional -- the equivalent of Algolia's `safetyChecks.beforeIndexPublishing`.
 
 ## Query choices
 
-The parameters the modal sends live in `src/components/Search/SearchModal.tsx`. Two are
+The parameters the modal sends live in `src/components/Nav/Search/SearchModal.tsx`. Two are
 worth knowing about because they are not what the library ships.
 
 `group_limit: 1`, against the library's 3. Only one record per page is ever rendered: the

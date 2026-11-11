@@ -6,7 +6,7 @@ import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 import type { Lang } from "@/lib/types"
 
-import LanguagePicker from "@/components/LanguagePicker"
+import LanguagePicker from "@/components/Nav/LanguagePicker"
 import ExpandIcon from "@/components/Nav/MobileMenu/ExpandIcon"
 import LvlAccordion from "@/components/Nav/MobileMenu/LvlAccordion"
 import { useNavigation } from "@/components/Nav/useNavigation"

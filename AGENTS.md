@@ -270,7 +270,7 @@ Search runs on a self-hosted Typesense instance, one collection per locale, craw
 
 Two things bite most often. **Ranking hints reach the index as `docsearch:*` meta tags** from `src/lib/utils/metadata.ts`, so a ranking change does nothing until the site is deployed and re-crawled. And **the networks offered as block explorer results come from `src/data/networks/networks.ts`** -- the same list `/layer-2/networks` renders -- so adding an L2 there is the only edit needed.
 
-Overview: `docs/site-search.md`. Runbook, secrets and recovery: `typesense/README.md`. Code: `src/components/Search/`, `src/scripts/typesense/`, `typesense/`.
+Overview: `docs/site-search.md`. Runbook, secrets and recovery: `typesense/README.md`. Code: `src/components/Nav/Search/`, `src/scripts/typesense/`, `typesense/`.
 
 ## Deployment
 

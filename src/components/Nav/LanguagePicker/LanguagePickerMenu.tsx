@@ -10,7 +10,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandList,
-} from "../ui/command"
+} from "../../ui/command"
 
 import MenuItem from "./MenuItem"
 

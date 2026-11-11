@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/cn"
 
-import Search from "../Search"
+import Search from "./Search"
 
 import MobileMenu from "./MobileMenu"
 
