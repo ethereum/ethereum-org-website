@@ -262,7 +262,7 @@ The site uses a GDPR-compliant, cookie-less A/B testing system built on the Flag
 
 Key gotcha: **variants are matched by array index, not names** — the `variants` array order must match the Matomo experiment order exactly, and the `testKey` must match the Matomo experiment name exactly.
 
-Full guide (architecture, step-by-step recipe, env vars): `docs/ab-testing.md`. Code: `proxy.ts`, `src/lib/ab-testing/`, `src/components/AB/`, `app/[locale]/ab-code/`.
+Full guide (architecture, step-by-step recipe, env vars): `docs/ab-testing.md`. Code: `proxy.ts`, `src/lib/ab-testing/`, `src/components/AB/`, and one `<route>/ab-code/[code]/` page per tested route (none while no test is running).
 
 ## Site Search
 

@@ -16,38 +16,15 @@ import SearchInputButton from "./SearchInputButton"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
-import { useOnHash } from "@/hooks/useOnHash"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
-const noop = () => {}
-
 interface SearchProps {
   asChild?: boolean
-  /** An element to open the modal on click (with `asChild`), or a render function handed the opener. */
-  children?:
-    | React.ReactElement<unknown>
-    | ((open: () => void) => React.ReactNode)
-  /**
-   * Whether this instance answers the global open shortcut. Exactly one mounted instance
-   * may: the hook binds at the document, so a second would open a second modal on the
-   * same keypress. The nav's instance owns it; a trigger elsewhere on the page opts out
-   * and opens on click alone. Escape still closes whichever one is open.
-   */
-  ownsShortcut?: boolean
-  /** Read when the modal mounts, not when it is asked to open, so keystrokes typed while it loads are kept. */
-  getInitialQuery?: () => string
-  /** Opens the modal when the page loads with, or navigates to, this URL fragment. */
-  openOnHash?: string
+  children?: React.ReactElement<unknown>
 }
 
-const Search = ({
-  asChild = false,
-  children,
-  ownsShortcut = true,
-  getInitialQuery,
-  openOnHash,
-}: SearchProps) => {
+const Search = ({ asChild = false, children }: SearchProps) => {
   const disclosure = useDisclosure()
   const { isOpen, onOpen, onClose } = disclosure
 
@@ -63,18 +40,9 @@ const Search = ({
     })
   }
 
-  useOnHash(openOnHash, () => {
-    onOpen()
-    trackCustomEvent({
-      eventCategory: "nav bar",
-      eventAction: "link",
-      eventName: "search open",
-    })
-  })
-
   useDocSearchKeyboardEvents({
     isOpen,
-    onOpen: ownsShortcut ? handleOpen : noop,
+    onOpen: handleOpen,
     onClose,
     // The fork's React 18-era types want a non-null ref; React 19's useRef
     // yields RefObject<T | null>. Safe to narrow — the hook only reads .current.
@@ -84,13 +52,11 @@ const Search = ({
   // DocSearch already opens on these chords, so there is nothing to do here.
   // The registration exists only so the hook counts a keyboard-opened search
   // separately from the button, which share the event above.
-  useKeyboardShortcut("search", () => {}, { enabled: ownsShortcut })
+  useKeyboardShortcut("search", () => {})
 
   return (
     <>
-      {typeof children === "function" ? (
-        children(handleOpen)
-      ) : asChild ? (
+      {asChild ? (
         // No test id here: `search-button` belongs to the nav, and e2e expects one per page.
         <Slot ref={searchButtonRef} onClick={handleOpen}>
           {children}
@@ -132,7 +98,7 @@ const Search = ({
               </div>
             )}
           >
-            <SearchModal onClose={onClose} getInitialQuery={getInitialQuery} />
+            <SearchModal onClose={onClose} />
           </ErrorBoundary>
         )}
       </Portal.Root>
