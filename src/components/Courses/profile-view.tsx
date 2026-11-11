@@ -34,6 +34,7 @@ import {
   courseHref,
   COURSES,
   COURSES_HUB,
+  type CourseTheme,
   EXAM_ID,
   examHref,
   getCourse,
@@ -59,6 +60,12 @@ import {
 
 import { useRouter } from "@/i18n/navigation"
 
+// Course fills carry white text at 4.5:1 or better in both colour modes
+const solidCard = "bg-(--course) text-white"
+const solidMuted = "text-white/85"
+const solidIcon = "fill-white/25 text-white"
+const solidIconOff = "text-white/60"
+
 const REVIEW_LIMIT = 5
 const RECENT_LIMIT = 5
 
@@ -68,6 +75,8 @@ interface StatProps {
   label: string
   value: string
   detail?: string
+  /** Solid course-colour fill with white text, for the headline stats */
+  theme?: CourseTheme
 }
 
 const Stat = ({
@@ -76,16 +85,38 @@ const Stat = ({
   label,
   value,
   detail,
+  theme,
 }: StatProps) => (
-  <Card variant="nested" size="md" border>
+  <Card
+    variant="nested"
+    size="md"
+    border={!theme}
+    className={cn(theme && solidCard)}
+    style={theme && courseThemeStyle(theme)}
+  >
     <CardContent className="flex-row items-center gap-3">
       <Icon aria-hidden className={cn("size-8 shrink-0", iconClassName)} />
       <div className="flex flex-col">
-        <span className="text-sm text-body-medium">{label}</span>
-        <span className="text-2xl font-black text-body tabular-nums">
+        <span
+          className={cn("text-sm", theme ? solidMuted : "text-body-medium")}
+        >
+          {label}
+        </span>
+        <span
+          className={cn(
+            "text-2xl font-black tabular-nums",
+            theme ? "text-white" : "text-body"
+          )}
+        >
           {value}
         </span>
-        {detail && <span className="text-sm text-body-medium">{detail}</span>}
+        {detail && (
+          <span
+            className={cn("text-sm", theme ? solidMuted : "text-body-medium")}
+          >
+            {detail}
+          </span>
+        )}
       </div>
     </CardContent>
   </Card>
@@ -223,19 +254,22 @@ const ProfileView = () => {
           <Card
             variant="nested"
             size="md"
-            border
-            className="col-span-2 md:col-span-4 xl:col-span-1 xl:row-span-2"
+            className={cn(
+              solidCard,
+              "col-span-2 md:col-span-4 xl:col-span-1 xl:row-span-2"
+            )}
+            style={courseThemeStyle("purple")}
           >
             <CardContent className="h-full gap-4 max-xl:flex-row max-xl:items-center xl:justify-between">
-              <span className="grid size-16 shrink-0 place-items-center rounded-full bg-background-highlight">
-                <UserRound aria-hidden className="size-8 text-body-medium" />
+              <span className="grid size-16 shrink-0 place-items-center rounded-full bg-white/15">
+                <UserRound aria-hidden className="size-8 text-white" />
               </span>
               <div className="flex flex-1 flex-col gap-3">
                 <div className="flex flex-col gap-1">
-                  <CardTitle className="m-0">
+                  <CardTitle className="m-0 text-white">
                     {t("page-courses-profile-account-local")}
                   </CardTitle>
-                  <CardParagraph className="m-0" size="sm">
+                  <CardParagraph className={cn("m-0", solidMuted)} size="sm">
                     {t("page-courses-profile-account-soon")}
                   </CardParagraph>
                 </div>
@@ -244,9 +278,9 @@ const ProfileView = () => {
                   <ProgressBar
                     aria-hidden
                     value={levelProgress(progress.xp, level) * 100}
-                    className="h-2 bg-background-highlight *:data-[slot=progress-indicator]:bg-yellow-400"
+                    className="h-2 bg-white/25 *:data-[slot=progress-indicator]:bg-yellow-300"
                   />
-                  <span className="text-sm text-body-medium">
+                  <span className={cn("text-sm", solidMuted)}>
                     {nextLevel
                       ? t("page-courses-xp-level-to-next", {
                           xp: count(level.next! - progress.xp),
@@ -260,31 +294,29 @@ const ProfileView = () => {
           </Card>
           <Stat
             icon={Zap}
-            iconClassName="fill-yellow-400 text-yellow-700 dark:text-yellow-400"
+            iconClassName={solidIcon}
+            theme="blue"
             label={t("page-courses-profile-xp")}
             value={count(progress.xp)}
           />
           <Stat
             icon={Flame}
-            iconClassName={
-              streak > 0
-                ? "fill-orange-500 text-orange-700 dark:text-orange-400"
-                : "text-disabled"
-            }
+            iconClassName={streak > 0 ? solidIcon : solidIconOff}
+            theme="orange"
             label={t("page-courses-profile-streak")}
             value={days(streak)}
           />
           <Stat
             icon={Medal}
-            iconClassName="text-orange-700 dark:text-orange-400"
+            iconClassName={solidIcon}
+            theme="pink"
             label={t("page-courses-profile-best-streak")}
             value={days(best)}
           />
           <Stat
             icon={Trophy}
-            iconClassName={
-              trophies > 0 ? "fill-yellow-400 text-yellow-600" : "text-disabled"
-            }
+            iconClassName={trophies > 0 ? solidIcon : solidIconOff}
+            theme="teal"
             label={t("page-courses-profile-trophies")}
             value={count(trophies)}
           />
