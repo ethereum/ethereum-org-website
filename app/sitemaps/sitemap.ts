@@ -25,7 +25,13 @@ export async function generateSitemaps() {
 // getAllPagesWithTranslations walks the whole content tree; memoize so the
 // per-locale shards share a single traversal instead of repeating it each time.
 // Routable pages that must stay out of the sitemap because they are noindex
-const EXCLUDED_PATHS = new Set(["/community/events/search/"])
+const EXCLUDED_PATHS = new Set([
+  "/community/events/search/",
+  // Courses proof of concept: the hub is noindex until public beta; the
+  // profile only shows progress saved in the visitor's browser
+  "/courses/",
+  "/courses/profile/",
+])
 
 let pagesPromise: ReturnType<typeof getAllPagesWithTranslations> | null = null
 const getPages = () => (pagesPromise ??= getAllPagesWithTranslations())
