@@ -220,13 +220,13 @@ Two different kinds of "key" are involved here, and it helps to keep them apart:
 1. **The storage slot.** This is the 32-byte key a contract reads and writes with the `SLOAD` and `SSTORE` opcodes, and it is what `eth_getStorageAt` takes as its second parameter. The protocol does not care how a contract chooses its slots. That is decided by the compiler's storage layout (see [Solidity's layout in storage](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
 2. **The path in the storage trie.** Like the state trie, the storage trie never uses the slot directly as its path. The path is always `keccak256(slot)`, and the value stored there is the RLP encoding of the slot's value with leading zeros removed. Hashing the key keeps paths uniformly distributed, so nobody can craft keys that make the trie unusually deep. Clients apply this hash themselves, so callers of `eth_getStorageAt` only ever pass the slot.
 
-Simple state variables live in the slots the compiler assigns them in order (`0`, `1`, ...), as in the example above. Values inside a dynamic structure need their slot calculated first. For example, Solidity stores the value for key `k` of a `mapping` declared at slot `p` in slot `keccak256(pad32(k) ++ pad32(p))`. If the contract at `0x295a70b2de5e3953354a6a8344e616ed314d7251` declares a `mapping(address => uint)` at slot 1, the slot holding the entry for the key `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
+Simple state variables live in the slots the compiler assigns them in order (`0`, `1`, ...), with small types sometimes packed together into a single slot, as in the example above. Values inside a dynamic structure need their slot calculated first. For example, Solidity stores the value for key `k` of a `mapping` declared at slot `p` in slot `keccak256(pad32(k) ++ pad32(p))`. If the contract at `0x295a70b2de5e3953354a6a8344e616ed314d7251` declares a `mapping(address => uint)` at slot 1, the slot holding the entry for the key `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-This hashing is done by the Solidity compiler's storage layout, not by the trie. In a Geth console, this can be calculated as follows:
+This hashing comes from Solidity's storage layout (computed by the contract at runtime), not from the trie. In a Geth console, this can be calculated as follows:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
