@@ -2,15 +2,10 @@
 
 Run `/code-review` at **medium** effort.
 
-If the PR fixes a bug, confirm the bug still exists on the base branch: grep config (`next.config.js`), shared getters (`src/lib/data/`) and `docs/solutions/` (which can be stale). If the base already fixes it, report that as blocking, with the commit that fixed it.
+For a bug fix, list every code path that produces the symptom, not only the one the PR names. A path the fix misses is `should fix`. Trust the code over `docs/solutions/` notes, especially ones marked `status: historical`.
 
-Then check these repo rules on the changed lines:
+Load the skill for the area the PR changes and check against it: `design-system` for UI, `data-layer` for `src/data-layer/` and `src/lib/data/`, `performance` for images, caching, rendering mode or bundle size.
 
-- Chain names match a `name` in `src/data/chains.ts` exactly ("OP Mainnet", not "Optimism").
-- No unused variables or params; a bare `_` is the only allowed unused arg. The build fails on them.
-- `numberFormat()` / `dateTimeFormat()` from `src/lib/utils` instead of raw `Intl.*` or `.toLocale*String()`.
-- New component variants use `tailwind-variants` (`tv`).
-- User-facing strings are translatable, not hard-coded English.
-- RTL: logical classes (`text-start`, `ms-*`), not `text-left`, `ml-*`.
+Then check the changed lines against the conventions in `AGENTS.md`. Comment bloat (multi-line explanations, design history) is a `nit`.
 
-Do not report what lint, type-check or Prettier already catch.
+Report bar: `should fix` or higher needs a concrete wrong behaviour. Convention violations are nits unless they break something.
