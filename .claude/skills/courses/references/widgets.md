@@ -6,7 +6,7 @@ The `graded` flag on each `WIDGETS` entry in `interactive-step.tsx` decides whic
 
 |                                  | Sandbox (`graded: false`)                                           | Puzzle (`graded: true`)                                                                                  |
 | -------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Use for                          | Showing a property by playing with it (hashing, signing, tampering) | A target the learner must land on (an exact fee, the minimum stake)                                      |
+| Use for                          | Showing a property by playing with it (hashing, signing, tampering) | A target the learner must land on (an exact fee, the narrowest approval)                                 |
 | Calls                            | `onComplete()` once the key action has happened                     | `onAnswer({ correct, hint })` on every change; `null` when there's no answer                             |
 | Footer                           | Neutral tip with the step's `-explain` text; Continue unlocks       | Check, then Correct or Try again with the `hint`                                                         |
 | Counts toward accuracy and combo | No                                                                  | Yes                                                                                                      |
@@ -14,11 +14,11 @@ The `graded` flag on each `WIDGETS` entry in `interactive-step.tsx` decides whic
 
 Graded picks take the verdict's colours alone: `pickedTile` and `pickedMarker(result)` in `theme.ts` drop the course colour once a pick is marked correct or incorrect. Single-pick puzzles mark only the learner's pick, using the `wrong` prop, so a wrong answer never reveals the right one.
 
-Puzzle inputs snap to a handful of meaningful stops, and the answer is always one of them, so the learner reasons rather than pixel-hunts. For a range input that means roughly 20 positions at most (the stake slider uses sixths, not 1% steps); give it `aria-valuetext` with the human label.
+Puzzle inputs snap to a handful of meaningful stops, and the answer is always one of them, so the learner reasons rather than pixel-hunts. For a range input that means roughly 20 positions at most (the approval slider has five named stops, not 1% steps); give it `aria-valuetext` with the human label.
 
 The widget contract and props are documented in `src/components/Courses/widgets/types.ts`.
 
-A lesson that plays with an idea before naming it can register an everyday skin of an existing widget rather than a new one: `snack-machine` is `vending-machine` with coins and no contract wording (its `-everyday` string variants), used by the Everyday course.
+A lesson that plays with an idea before naming it can use an everyday skin with no crypto words: `snack-machine` (`vending-machine-widget.tsx`) is a coin-operated snack machine, used by the Everyday course before smart contracts are named.
 
 ## Building one
 
@@ -36,7 +36,7 @@ A lesson that plays with an idea before naming it can register an everyday skin 
 - Course-coloured text uses `text-(--course-strong) dark:text-(--course-bright)`; white text sits only on `--course` fills. Success and error text uses `text-green-700 dark:text-green-400` and `text-error dark:text-red-400`; the base `text-success` fails contrast on light tints.
 - Never fade text with opacity on a coloured fill: it drops below 4.5:1.
 - Pressable skins (`chunkyButton`, `chunkyButtonSecondary`, `chunkyTile`) layer on `<Button variant="ghost">`, or on a native `<button>` for answer tiles that Button's own styles would fight (match, fill, draggable tiles); don't hand-roll button styles. Every action button, widget buttons included, uses `chunkyButton` (primary) or `chunkyButtonSecondary`, never a plain solid or outline `Button`. The button skins take ui/Button's radius (`rounded`); answer tiles keep their rounder `rounded-2xl`.
-- Sorting into groups: cards are `DraggableTile` (`widgets/draggable-tile.tsx`), so they can be dragged or tapped. Each group is a `data-drop-target`, and once a card is picked the whole group is the tap target; no separate "Place here" button. Touch drags start from the grip so swipes still scroll.
+- Sorting into groups: cards are `DraggableTile` (`widgets/draggable-tile.tsx`), so they can be dragged or tapped. Each group is a `data-drop-target`, and once a card is picked the whole group is the tap target; no separate "Place here" button. Touch drags start from the grip so swipes still scroll. A new sort is a `SortConfig` skin of `widgets/sort-widget.tsx` (groups, cards and a string prefix; see `sort-skins.tsx`), not a new widget.
 - Streak and XP live in the header chips (`ProgressChips`). The streak gets a full screen only once a day, after the summary of the lesson that extends it (`StreakCelebration`); never add it to the per-lesson summary.
 - Overview cards are `ui/card` (`Card href variant="nested" border`, banner in `CardHeader`); follow the design-system card walkthrough rather than hand-rolling borders. Lists inside a `.flow` region use `ms-0`, never `m-0`, or they lose their flow gap.
 - Art: one hero per course (`art/course-art.tsx`, `CourseArt`) for the hub card and course banner; path decorations come from the shared `art/scenery.tsx` set via `sceneryFor`, never the hero again. New pieces go in `SCENERY` and draw in the shared 200x160 `ArtFrame` with the `TOP`/`LEFT`/`RIGHT` shades from `art/shared.tsx`.

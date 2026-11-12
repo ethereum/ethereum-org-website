@@ -36,7 +36,22 @@ const OPTIONS = [
   { id: "fake-c", address: "0x7ae256f4213ff6ee5be35093d2e4f0e9feb44d1c" },
 ] as const
 
-type OptionId = (typeof OPTIONS)[number]["id"]
+/*
+ * `site` skin: web addresses instead of account addresses. Each look-alike
+ * uses a common trick (swapped letters, the real name as a prefix, a dash);
+ * after solving, each gets a note (`page-courses-widget-site-why-{id}`).
+ */
+const SITE_TARGET = "https://ethereum.org"
+const SITE_OPTIONS = [
+  { id: "swap", address: "https://etheruem.org" },
+  { id: "prefix", address: "https://ethereum.org.claim-now.app" },
+  { id: "exact", address: SITE_TARGET },
+  { id: "dash", address: "https://ethereum-org.app" },
+] as const
+
+type OptionId =
+  | (typeof OPTIONS)[number]["id"]
+  | (typeof SITE_OPTIONS)[number]["id"]
 
 const shorten = (address: string) =>
   `${address.slice(0, 6)}…${address.slice(-4)}`
@@ -56,9 +71,19 @@ const Diff = ({ address }: { address: string }) => (
   </>
 )
 
-const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
+const AddressCheckWidget = ({
+  onAnswer,
+  locked,
+  wrong,
+  site = false,
+}: WidgetProps & { site?: boolean }) => {
   const t = useTranslations("page-courses")
   const [picked, setPicked] = useState<OptionId | "">("")
+  const prefix = site
+    ? "page-courses-widget-site"
+    : "page-courses-widget-address"
+  const target = site ? SITE_TARGET : TARGET
+  const options = site ? SITE_OPTIONS : OPTIONS
 
   const resultFor = (id: OptionId): PickResult | undefined => {
     if (id !== picked) return undefined
@@ -68,16 +93,13 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
   const [full, setFull] = useState(false)
   const listLabelId = useId()
   // Once solved, show every address in full with its differences marked
-  const showFull = full || locked
+  const showFull = site || full || locked
 
   const pick = (id: OptionId) => {
     setPicked(id)
     onAnswer({
       correct: id === "exact",
-      hint:
-        id === "exact"
-          ? undefined
-          : t("page-courses-widget-address-hint-lookalike"),
+      hint: id === "exact" ? undefined : t(`${prefix}-hint-lookalike`),
     })
   }
 
@@ -89,10 +111,10 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
             className={cn("size-5 shrink-0", courseText)}
             aria-hidden
           />
-          {t("page-courses-widget-address-recipient")}
+          {t(`${prefix}-recipient`)}
         </p>
         <p className="m-0 rounded-2xl bg-background p-3 font-mono text-sm break-all">
-          <span dir="ltr">{TARGET}</span>
+          <span dir="ltr">{target}</span>
         </p>
       </div>
 
@@ -102,9 +124,9 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
             id={listLabelId}
             className="m-0 text-sm font-bold tracking-wide text-body-medium uppercase"
           >
-            {t("page-courses-widget-address-candidates")}
+            {t(`${prefix}-candidates`)}
           </p>
-          {!locked && (
+          {!locked && !site && (
             <Button
               variant="ghost"
               onClick={() => setFull((on) => !on)}
@@ -130,7 +152,7 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
           disabled={locked}
           onValueChange={(id) => pick(id as OptionId)}
         >
-          {OPTIONS.map(({ id, address }, idx) => (
+          {options.map(({ id, address }, idx) => (
             <RadioGroup.Item
               key={id}
               value={id}
@@ -151,16 +173,23 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
               >
                 {String.fromCharCode(65 + idx)}
               </Center>
-              <span className="min-w-0 font-mono text-sm break-all">
-                <span dir="ltr">
-                  {!showFull ? (
-                    shorten(address)
-                  ) : locked ? (
-                    <Diff address={address} />
-                  ) : (
-                    address
-                  )}
+              <span className="flex min-w-0 flex-col gap-1">
+                <span className="font-mono text-sm break-all">
+                  <span dir="ltr">
+                    {!showFull ? (
+                      shorten(address)
+                    ) : locked && !site ? (
+                      <Diff address={address} />
+                    ) : (
+                      address
+                    )}
+                  </span>
                 </span>
+                {site && locked && id !== "exact" && (
+                  <span className="text-sm text-body-medium">
+                    {t(`${prefix}-why-${id}`)}
+                  </span>
+                )}
               </span>
             </RadioGroup.Item>
           ))}
@@ -169,11 +198,16 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
 
       {locked && (
         <p role="status" className="m-0 text-green-700 dark:text-green-400">
-          {t("page-courses-widget-address-hit")}
+          {t(`${prefix}-hit`)}
         </p>
       )}
     </WidgetShell>
   )
 }
+
+/** Same puzzle with web addresses: spot the real site among look-alikes */
+export const SiteCheckWidget = (props: WidgetProps) => (
+  <AddressCheckWidget {...props} site />
+)
 
 export default AddressCheckWidget

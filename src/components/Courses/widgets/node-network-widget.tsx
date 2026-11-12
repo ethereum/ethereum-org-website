@@ -51,7 +51,14 @@ const links = Array.from({ length: COUNT }, (_, a) =>
 const tipOf = (nodes: Node[]) =>
   Math.max(0, ...nodes.filter((n) => n.on).map((n) => n.height))
 
-const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
+/**
+ * `world`: the Ethereum skin. Named people's computers stand in for the
+ * thousands more, so the chain keeps growing even with every one shown off.
+ */
+const NodeNetworkWidget = ({
+  onComplete,
+  world,
+}: WidgetProps & { world?: boolean }) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const reduceMotion = useReducedMotion()
@@ -61,9 +68,11 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
     Array.from({ length: COUNT }, () => ({ on: true, height: START }))
   )
   const [event, setEvent] = useState<Event | null>(null)
+  // The rest of the world's tip, for the `world` skin
+  const [chainTip, setChainTip] = useState(START)
   const done = useRef(false)
 
-  const tip = tipOf(nodes)
+  const tip = world ? chainTip : tipOf(nodes)
   const online = nodes.filter((n) => n.on).length
   const lagging = nodes.findIndex((n) => n.on && n.height < tip)
 
@@ -71,7 +80,7 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
   useEffect(() => {
     if (lagging < 0) return
     const step = () => {
-      const target = tipOf(nodes)
+      const target = world ? chainTip : tipOf(nodes)
       const next = nodes.map((n) =>
         n.on && n.height < target
           ? {
@@ -100,7 +109,7 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
     }
     const timer = setTimeout(step, SYNC_TICK_MS)
     return () => clearTimeout(timer)
-  }, [lagging, nodes, reduceMotion, onComplete])
+  }, [lagging, nodes, reduceMotion, onComplete, world, chainTip])
 
   const toggle = (i: number) => {
     const node = nodes[i]
@@ -115,13 +124,14 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
       return
     }
     setEvent({
-      kind: node.height < tipOf(next) ? "syncing" : "back",
+      kind: node.height < (world ? chainTip : tipOf(next)) ? "syncing" : "back",
       node: i,
     })
   }
 
   const addBlock = () => {
     const height = tip + 1
+    setChainTip(height)
     setNodes(
       nodes.map((n) => (n.on && n.height === tip ? { ...n, height } : n))
     )
@@ -129,20 +139,24 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
   }
 
   const nodeName = (i: number) =>
-    t("page-courses-widget-node-name", { number: int.format(i + 1) })
+    world
+      ? t(`page-courses-widget-node-world-name-${i + 1}`)
+      : t("page-courses-widget-node-name", { number: int.format(i + 1) })
+  const skinned = (key: string) =>
+    `page-courses-widget-node-${key}${world ? "-world" : ""}`
 
   const status = (() => {
-    if (!event) return t("page-courses-widget-node-start")
+    if (!event) return t(skinned("start"))
     switch (event.kind) {
       case "block":
         return t(
           online < COUNT
-            ? "page-courses-widget-node-block-partial"
+            ? skinned("block-partial")
             : "page-courses-widget-node-block",
           { number: int.format(event.height) }
         )
       case "all-off":
-        return t("page-courses-widget-node-all-off")
+        return t(skinned("all-off"))
       default:
         return t(`page-courses-widget-node-${event.kind}`, {
           node: nodeName(event.node),
@@ -210,12 +224,17 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
                 fontSize={16}
                 className="fill-body font-bold"
               >
-                {int.format(i + 1)}
+                {world ? [...nodeName(i)][0] : int.format(i + 1)}
               </text>
             </g>
           )
         })}
       </svg>
+      {world && (
+        <p className="-mt-3 mb-0 text-center text-sm text-body-medium">
+          {t("page-courses-widget-node-world-caption")}
+        </p>
+      )}
 
       <ul className="m-0 flex list-none flex-col gap-2">
         {nodes.map(({ on, height }, i) => {
@@ -288,7 +307,7 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
       <Button
         variant="ghost"
         onClick={addBlock}
-        disabled={online === 0}
+        disabled={!world && online === 0}
         className={cn(chunkyButton, "self-center")}
       >
         <Plus aria-hidden />
@@ -297,5 +316,9 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
     </WidgetShell>
   )
 }
+
+export const WorldNodesWidget = (props: WidgetProps) => (
+  <NodeNetworkWidget {...props} world />
+)
 
 export default NodeNetworkWidget

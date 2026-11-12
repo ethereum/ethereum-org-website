@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Gift, Vault, Wallet } from "lucide-react"
+import { Coins, Gift, Layers, Vault, Wallet } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -20,8 +20,28 @@ const COIN = 0.5
 
 type Action = "wrap" | "unwrap"
 
-const WrapEthWidget = ({ onComplete }: WidgetProps) => {
+/** Coin icons in place of figures, for beginner lessons */
+const CoinRow = ({ count, label }: { count: number; label: string }) => (
+  <span className="flex min-h-5 flex-wrap justify-end gap-0.5">
+    {Array.from({ length: count }, (_, i) => (
+      <Coins key={i} className={cn("size-5", courseText)} aria-hidden />
+    ))}
+    <span className="sr-only">{label}</span>
+  </span>
+)
+
+interface WrapEthWidgetProps extends WidgetProps {
+  /**
+   * Bridge skin for beginners: the same lock-and-claim moves between
+   * Ethereum and a layer 2, with coin icons instead of figures
+   */
+  bridge?: boolean
+}
+
+const WrapEthWidget = ({ onComplete, bridge }: WrapEthWidgetProps) => {
   const t = useTranslations("page-courses")
+  const key = (name: string) =>
+    `page-courses-widget-${bridge ? "bridge" : "wrap"}-${name}`
   const locale = useLocale()
   const [wrapped, setWrapped] = useState(0)
   const [done, setDone] = useState<Record<Action, boolean>>({
@@ -49,8 +69,17 @@ const WrapEthWidget = ({ onComplete }: WidgetProps) => {
   }
 
   const coin = amount(1)
-  const ethLabel = t("page-courses-widget-wrap-ticker-eth")
-  const wethLabel = t("page-courses-widget-wrap-ticker-weth")
+  const ethLabel = t(key("ticker-eth"))
+  const wethLabel = t(key("ticker-weth"))
+  const rowLabel = (side: "eth" | "weth") =>
+    bridge ? t(key(`row-${side}`)) : side === "eth" ? ethLabel : wethLabel
+  const show = (coins: number) =>
+    bridge ? (
+      <CoinRow count={coins} label={t(key("count"), { count: coins })} />
+    ) : (
+      num.format(coins * COIN)
+    )
+  const WethIcon = bridge ? Layers : Gift
 
   return (
     <WidgetShell>
@@ -68,7 +97,7 @@ const WrapEthWidget = ({ onComplete }: WidgetProps) => {
                   : "border-(--course-strong) bg-(--course) text-white"
               )}
             >
-              {isWeth && <Gift className="size-4" />}
+              {isWeth && <WethIcon className="size-4" />}
               {isWeth ? wethLabel : ethLabel}
             </span>
           )
@@ -79,32 +108,28 @@ const WrapEthWidget = ({ onComplete }: WidgetProps) => {
         <div className="flex flex-col gap-2 rounded-2xl bg-background p-4">
           <p className="m-0 flex items-center gap-2 font-bold">
             <Wallet className={cn("size-5 shrink-0", courseText)} aria-hidden />
-            {t("page-courses-widget-wrap-wallet")}
+            {t(key("wallet"))}
           </p>
           <dl className="m-0 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
-            <dt className="text-body-medium">{ethLabel}</dt>
+            <dt className="text-body-medium">{rowLabel("eth")}</dt>
+            <dd className="m-0 text-end font-mono font-bold">{show(eth)}</dd>
+            <dt className="text-body-medium">{rowLabel("weth")}</dt>
             <dd className="m-0 text-end font-mono font-bold">
-              {num.format(eth * COIN)}
-            </dd>
-            <dt className="text-body-medium">{wethLabel}</dt>
-            <dd className="m-0 text-end font-mono font-bold">
-              {num.format(wrapped * COIN)}
+              {show(wrapped)}
             </dd>
           </dl>
         </div>
         <div className="flex flex-col gap-2 rounded-2xl bg-background p-4">
           <p className="m-0 flex items-center gap-2 font-bold">
             <Vault className={cn("size-5 shrink-0", courseText)} aria-hidden />
-            {t("page-courses-widget-wrap-program")}
+            {t(key("program"))}
           </p>
           <dl className="m-0 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
-            <dt className="text-body-medium">
-              {t("page-courses-widget-wrap-held")}
-            </dt>
+            <dt className="text-body-medium">{t(key("held"))}</dt>
             <dd className="m-0 text-end font-mono font-bold">
-              {t("page-courses-widget-wrap-eth", {
-                value: num.format(wrapped * COIN),
-              })}
+              {bridge
+                ? show(wrapped)
+                : t(key("eth"), { value: num.format(wrapped * COIN) })}
             </dd>
           </dl>
         </div>
@@ -117,7 +142,7 @@ const WrapEthWidget = ({ onComplete }: WidgetProps) => {
           disabled={eth === 0}
           className={cn(chunkyButton, "flex-1")}
         >
-          {t("page-courses-widget-wrap-wrap", { value: coin })}
+          {t(key("wrap"), { value: coin })}
         </Button>
         <Button
           variant="ghost"
@@ -125,20 +150,22 @@ const WrapEthWidget = ({ onComplete }: WidgetProps) => {
           disabled={wrapped === 0}
           className={cn(chunkyButtonSecondary, "flex-1 disabled:opacity-50")}
         >
-          {t("page-courses-widget-wrap-unwrap", { value: coin })}
+          {t(key("unwrap"), { value: coin })}
         </Button>
       </div>
 
       <p role="status" className="m-0">
         {last
-          ? t(`page-courses-widget-wrap-did-${last}`, {
-              value: coin,
-              total: amount(COINS),
-            })
-          : t("page-courses-widget-wrap-start", { total: amount(COINS) })}
+          ? t(key(`did-${last}`), { value: coin, total: amount(COINS) })
+          : t(key("start"), { total: amount(COINS) })}
       </p>
     </WidgetShell>
   )
 }
+
+/** The same lock-and-claim moves as a bridge to a layer 2, for beginners */
+export const BridgeMoveWidget = (props: WidgetProps) => (
+  <WrapEthWidget {...props} bridge />
+)
 
 export default WrapEthWidget

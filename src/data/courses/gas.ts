@@ -7,8 +7,8 @@ export const gasCourse: Course = {
   art: "tank",
   lessons: [
     {
-      id: "gas",
-      icon: "fuel",
+      id: "units",
+      icon: "calculator",
       learnMore: "/gas/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "tank" },
@@ -20,10 +20,31 @@ export const gasCourse: Course = {
           correct: ["swap"],
         },
         {
-          id: "cheaper",
+          id: "rank",
+          type: "order",
+          items: ["transfer", "token", "trade", "deploy"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "fees",
+      icon: "flame",
+      learnMore: "/developers/docs/gas/#base-fee",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "predict",
           type: "choice",
-          options: ["limit", "currency", "wait"],
-          correct: ["wait"],
+          options: ["climb", "same", "top"],
+          correct: ["climb"],
+        },
+        { id: "meter", type: "interactive", widget: "base-fee" },
+        {
+          id: "split",
+          type: "choice",
+          options: ["all", "tip", "base"],
+          correct: ["tip"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
@@ -36,21 +57,21 @@ export const gasCourse: Course = {
         { id: "intro", type: "concept", paragraphs: 2, art: "blocks" },
         { id: "build", type: "interactive", widget: "block-builder" },
         {
-          id: "priority",
+          id: "per-gas",
           type: "choice",
-          options: ["limit", "tip", "resend"],
-          correct: ["tip"],
+          options: ["a", "b", "same"],
+          correct: ["b"],
         },
         {
-          id: "final",
+          id: "builder",
           type: "choice",
-          options: ["instant", "never", "finalized"],
-          correct: ["finalized"],
+          options: ["big", "tip", "order"],
+          correct: ["tip"],
         },
         {
           id: "match-up",
           type: "match",
-          pairs: ["tip", "base", "space", "final"],
+          pairs: ["tip", "base", "space", "builder"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
@@ -58,14 +79,14 @@ export const gasCourse: Course = {
     {
       id: "failed",
       icon: "alert",
-      learnMore: "/developers/docs/gas/",
+      learnMore: "/developers/docs/gas/#what-is-gas-limit",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "tank" },
         {
-          id: "predict",
+          id: "cost",
           type: "choice",
-          options: ["free", "fee", "later"],
-          correct: ["fee"],
+          options: ["free", "used", "limit"],
+          correct: ["used"],
         },
         { id: "limit", type: "interactive", widget: "gas-limit" },
         {
@@ -73,12 +94,6 @@ export const gasCourse: Course = {
           type: "choice",
           options: ["lower", "exact", "keep"],
           correct: ["keep"],
-        },
-        {
-          id: "undone",
-          type: "choice",
-          options: ["lost", "kept", "retry"],
-          correct: ["kept"],
         },
         {
           id: "recap",
@@ -89,22 +104,64 @@ export const gasCourse: Course = {
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
     },
+    {
+      id: "stuck",
+      icon: "queue",
+      learnMore: "/community/support/faq/#stuck-transaction",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "predict",
+          type: "choice",
+          options: ["first", "waits", "replaces"],
+          correct: ["waits"],
+        },
+        { id: "queue", type: "interactive", widget: "nonce-queue" },
+        {
+          id: "cancel",
+          type: "choice",
+          options: ["self", "again", "wait"],
+          correct: ["self"],
+        },
+        {
+          id: "terms",
+          type: "match",
+          pairs: ["nonce", "speed", "cancel"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
   ],
   exam: [
-    // gas
+    // units
     {
       id: "fee",
-      source: "/gas/",
+      source: "/developers/docs/gas/#how-are-gas-fees-calculated",
       type: "choice",
       options: ["gas", "fee", "price"],
       correct: ["fee"],
     },
     {
-      id: "wait",
-      source: "/gas/",
+      id: "token",
+      source: "/developers/docs/gas/#what-is-gas",
       type: "choice",
-      options: ["currency", "limit", "wait"],
-      correct: ["wait"],
+      options: ["contract", "creator", "value"],
+      correct: ["contract"],
+    },
+    // fees
+    {
+      id: "burn",
+      source: "/developers/docs/gas/#how-are-gas-fees-calculated",
+      type: "choice",
+      options: ["tip", "burned", "total"],
+      correct: ["burned"],
+    },
+    {
+      id: "rise",
+      source: "/developers/docs/gas/#base-fee",
+      type: "choice",
+      options: ["fixed", "drop", "climb"],
+      correct: ["climb"],
     },
     // blocks
     {
@@ -115,11 +172,11 @@ export const gasCourse: Course = {
       correct: ["keep"],
     },
     {
-      id: "final",
-      source: "/developers/docs/consensus-mechanisms/pos/#finality",
+      id: "builder",
+      source: "/developers/docs/mev/#builder-api",
       type: "choice",
-      options: ["instant", "finalized", "never"],
-      correct: ["finalized"],
+      options: ["server", "builder", "sender"],
+      correct: ["builder"],
     },
     // failed
     {
@@ -136,6 +193,21 @@ export const gasCourse: Course = {
       type: "choice",
       options: ["higher", "same", "fails"],
       correct: ["same"],
+    },
+    // stuck
+    {
+      id: "order",
+      source: "/developers/docs/transactions/#whats-a-transaction",
+      type: "choice",
+      options: ["jumps", "replaces", "waits"],
+      correct: ["waits"],
+    },
+    {
+      id: "cancel",
+      source: "/community/support/faq/#stuck-transaction",
+      type: "choice",
+      options: ["delete", "self", "next"],
+      correct: ["self"],
     },
   ],
 }

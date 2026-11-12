@@ -2,60 +2,56 @@
 
 import { useId, useState } from "react"
 import { ShieldAlert, ShieldCheck, TriangleAlert } from "lucide-react"
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
 
 import { courseText } from "../theme"
 
 import type { WidgetProps } from "./types"
 import WidgetShell from "./widget-shell"
 
+/*
+ * Amounts drive the bar only; the learner sees words, never numbers (the
+ * course is beginner level). `null` is an unlimited approval.
+ */
 const BALANCE = 1_000
 const SWAP = 50
-// `null` is an unlimited approval
-const STOPS = [25, 50, 100, 1_000, null] as const
+const STOPS = [
+  { id: "less", amount: 25 },
+  { id: "exact", amount: SWAP },
+  { id: "half", amount: 500 },
+  { id: "all", amount: BALANCE },
+  { id: "unlimited", amount: null },
+] as const
 const TARGET = 1
 const START = 4
 
 const ApprovalScopeWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
-  const int = numberFormat(useLocale())
   const sliderId = useId()
   // Starts on unlimited: the default many apps ask for
   const [stop, setStop] = useState<number>(START)
 
-  const approved = STOPS[stop]
+  const { id: stopId, amount: approved } = STOPS[stop]
   const unlimited = approved === null
   const works = unlimited || approved >= SWAP
   const left = unlimited ? null : works ? approved - SWAP : approved
 
-  const tokens = (amount: number) =>
-    t("page-courses-widget-approval-tokens", { amount: int.format(amount) })
-  const amountLabel = (idx: number) => {
-    const value = STOPS[idx]
-    return value === null
-      ? t("page-courses-widget-approval-unlimited")
-      : tokens(value)
-  }
+  const amountLabel = (idx: number) =>
+    t(`page-courses-widget-approval-stop-${STOPS[idx].id}`)
 
   const handleChange = (next: number) => {
     setStop(next)
-    const value = STOPS[next]
+    const value = STOPS[next].amount
     onAnswer({
       correct: next === TARGET,
       hint:
         value === null
           ? t("page-courses-widget-approval-hint-unlimited")
           : value < SWAP
-            ? t("page-courses-widget-approval-hint-low", {
-                amount: int.format(value),
-                swap: int.format(SWAP),
-              })
-            : t("page-courses-widget-approval-hint-high", {
-                left: int.format(value - SWAP),
-              }),
+            ? t("page-courses-widget-approval-hint-low")
+            : t("page-courses-widget-approval-hint-high"),
     })
   }
 
@@ -95,13 +91,11 @@ const ApprovalScopeWidget = ({ onAnswer, locked }: WidgetProps) => {
             {t("page-courses-widget-approval-spender-value")}
           </dd>
           <dt className="text-body-medium">
-            {t("page-courses-widget-approval-balance")}
-          </dt>
-          <dd className="m-0 font-bold tabular-nums">{tokens(BALANCE)}</dd>
-          <dt className="text-body-medium">
             {t("page-courses-widget-approval-swap")}
           </dt>
-          <dd className="m-0 font-bold tabular-nums">{tokens(SWAP)}</dd>
+          <dd className="m-0 font-bold">
+            {t("page-courses-widget-approval-swap-value")}
+          </dd>
         </dl>
 
         <div className="flex flex-col gap-2">
@@ -125,16 +119,15 @@ const ApprovalScopeWidget = ({ onAnswer, locked }: WidgetProps) => {
           />
           {/* One tick per stop; the native thumb centres on each */}
           <div aria-hidden className="flex justify-between px-2">
-            {STOPS.map((value, idx) => (
+            {STOPS.map(({ id }, idx) => (
               <span
-                key={idx}
+                key={id}
                 className={cn(
-                  "flex w-0 flex-col items-center gap-0.5 text-sm font-bold whitespace-nowrap",
+                  "flex w-0 flex-col items-center",
                   idx === stop ? "text-body" : "text-body-medium"
                 )}
               >
                 <span className="h-2 w-0.5 bg-current" />
-                {value === null ? "∞" : int.format(value)}
               </span>
             ))}
           </div>
@@ -143,9 +136,7 @@ const ApprovalScopeWidget = ({ onAnswer, locked }: WidgetProps) => {
 
       <div className="flex flex-col gap-2">
         <p className="m-0 text-sm font-bold text-body-medium">
-          {t("page-courses-widget-approval-bar", {
-            amount: int.format(BALANCE),
-          })}
+          {t("page-courses-widget-approval-bar")}
         </p>
         {/* Bar is your whole balance; segments are logical so it mirrors in RTL */}
         <div
@@ -197,13 +188,11 @@ const ApprovalScopeWidget = ({ onAnswer, locked }: WidgetProps) => {
         </dt>
         <dd
           className={cn(
-            "m-0 font-bold tabular-nums",
+            "m-0 font-bold",
             works && left !== 0 && "text-error dark:text-red-400"
           )}
         >
-          {left === null
-            ? t("page-courses-widget-approval-unlimited")
-            : tokens(left)}
+          {t(`page-courses-widget-approval-left-${stopId}`)}
         </dd>
       </dl>
 

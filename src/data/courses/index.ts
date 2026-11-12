@@ -2,12 +2,21 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { blockchainsCourse } from "./blockchains"
 import { ethCourse } from "./eth"
+import { ethereumCourse } from "./ethereum"
 import { everydayCourse } from "./everyday"
 import { gasCourse } from "./gas"
+import { layer2Course } from "./layer-2"
+import { nftsCourse } from "./nfts"
 import { proofOfStakeCourse } from "./proof-of-stake"
+import { rollupsCourse } from "./rollups"
+import { scamsCourse } from "./scams"
 import { sendingCourse } from "./sending"
+import { smartAccountsCourse } from "./smart-accounts"
 import { smartContractsCourse } from "./smart-contracts"
+import { tokensCourse } from "./tokens"
+import { tradingAndLendingCourse } from "./trading-and-lending"
 import type { Course, Lesson, Track } from "./types"
+import { upgradesCourse } from "./upgrades"
 import { walletsCourse } from "./wallets"
 
 export type * from "./types"
@@ -23,14 +32,31 @@ export const TRACKS: Track[] = [
       everydayCourse,
       walletsCourse,
       blockchainsCourse,
+      ethereumCourse,
       sendingCourse,
       smartContractsCourse,
     ],
   },
-  { id: "using", courses: [] },
+  {
+    id: "using",
+    courses: [
+      tokensCourse,
+      nftsCourse,
+      layer2Course,
+      tradingAndLendingCourse,
+      scamsCourse,
+    ],
+  },
   {
     id: "deeper",
-    courses: [ethCourse, gasCourse, proofOfStakeCourse],
+    courses: [
+      gasCourse,
+      proofOfStakeCourse,
+      rollupsCourse,
+      ethCourse,
+      upgradesCourse,
+      smartAccountsCourse,
+    ],
   },
   {
     id: "under-the-hood",

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Eye, PenLine } from "lucide-react"
+import { Equal, Eye, type LucideIcon, PenLine, RefreshCw } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -14,43 +14,80 @@ import { chunkyTile, courseText } from "../theme"
 import type { WidgetProps } from "./types"
 import WidgetShell from "./widget-shell"
 
-type Kind = "read" | "write"
+/*
+ * Two-group sorter. `calls` sorts contract calls into reads and writes;
+ * `failed` sorts what a failed payment changed, before contracts are named.
+ * Each set's strings live under `page-courses-widget-{set}-`.
+ */
+const SETS = {
+  calls: {
+    kinds: [
+      { kind: "read", icon: Eye },
+      { kind: "write", icon: PenLine },
+    ],
+    // Mixed so neighbours don't share an answer
+    actions: [
+      { id: "balance", kind: "read" },
+      { id: "send", kind: "write" },
+      { id: "price", kind: "read" },
+      { id: "buy", kind: "write" },
+      { id: "trade", kind: "write" },
+      { id: "stock", kind: "read" },
+    ],
+  },
+  failed: {
+    kinds: [
+      { kind: "changed", icon: RefreshCw },
+      { kind: "same", icon: Equal },
+    ],
+    actions: [
+      { id: "eth", kind: "same" },
+      { id: "fee", kind: "changed" },
+      { id: "spot", kind: "same" },
+      { id: "record", kind: "changed" },
+      { id: "list", kind: "same" },
+    ],
+  },
+} as const satisfies Record<
+  string,
+  {
+    kinds: readonly { kind: string; icon: LucideIcon }[]
+    actions: readonly { id: string; kind: string }[]
+  }
+>
 
-// Mixed so neighbours don't share an answer
-const ACTIONS: { id: string; kind: Kind }[] = [
-  { id: "balance", kind: "read" },
-  { id: "send", kind: "write" },
-  { id: "price", kind: "read" },
-  { id: "buy", kind: "write" },
-  { id: "trade", kind: "write" },
-  { id: "stock", kind: "read" },
-]
+type SetId = keyof typeof SETS
 
-const KINDS = [
-  { kind: "read", icon: Eye },
-  { kind: "write", icon: PenLine },
-] as const
+interface CallSorterWidgetProps extends WidgetProps {
+  set?: SetId
+}
 
-const CallSorterWidget = ({ onAnswer, locked }: WidgetProps) => {
+const CallSorterWidget = ({
+  onAnswer,
+  locked,
+  set = "calls",
+}: CallSorterWidgetProps) => {
   const t = useTranslations("page-courses")
   const int = numberFormat(useLocale())
-  const [sorted, setSorted] = useState<Record<string, Kind>>({})
+  const [sorted, setSorted] = useState<Record<string, string>>({})
+  const { kinds, actions } = SETS[set]
+  const key = (name: string) => `page-courses-widget-${set}-${name}`
 
-  const place = (id: string, kind: Kind) => {
+  const place = (id: string, kind: string) => {
     const next = { ...sorted, [id]: kind }
     setSorted(next)
-    if (Object.keys(next).length < ACTIONS.length) return onAnswer(null)
-    const wrong = ACTIONS.filter((a) => next[a.id] !== a.kind).length
+    if (Object.keys(next).length < actions.length) return onAnswer(null)
+    const wrong = actions.filter((a) => next[a.id] !== a.kind).length
     onAnswer({
       correct: wrong === 0,
-      hint: t("page-courses-widget-calls-wrong", { count: wrong }),
+      hint: t(key("wrong"), { count: wrong }),
     })
   }
 
   return (
     <WidgetShell>
       <dl className="m-0 grid gap-3 sm:grid-cols-2">
-        {KINDS.map(({ kind, icon: Icon }) => (
+        {kinds.map(({ kind, icon: Icon }) => (
           <div
             key={kind}
             className="flex items-start gap-3 rounded-2xl bg-background p-3"
@@ -60,11 +97,9 @@ const CallSorterWidget = ({ onAnswer, locked }: WidgetProps) => {
               aria-hidden
             />
             <div>
-              <dt className="font-bold">
-                {t(`page-courses-widget-calls-${kind}`)}
-              </dt>
+              <dt className="font-bold">{t(key(kind))}</dt>
               <dd className="m-0 text-sm text-body-medium">
-                {t(`page-courses-widget-calls-${kind}-note`)}
+                {t(key(`${kind}-note`))}
               </dd>
             </div>
           </div>
@@ -72,8 +107,8 @@ const CallSorterWidget = ({ onAnswer, locked }: WidgetProps) => {
       </dl>
 
       <ul className="m-0 flex list-none flex-col gap-3">
-        {ACTIONS.map(({ id }) => {
-          const label = t(`page-courses-widget-calls-action-${id}`)
+        {actions.map(({ id }) => {
+          const label = t(key(`action-${id}`))
           return (
             <li
               key={id}
@@ -85,7 +120,7 @@ const CallSorterWidget = ({ onAnswer, locked }: WidgetProps) => {
                 aria-label={label}
                 className="flex shrink-0 gap-2"
               >
-                {KINDS.map(({ kind, icon: Icon }) => {
+                {kinds.map(({ kind, icon: Icon }) => {
                   const active = sorted[id] === kind
                   return (
                     <Button
@@ -102,7 +137,7 @@ const CallSorterWidget = ({ onAnswer, locked }: WidgetProps) => {
                       )}
                     >
                       <Icon aria-hidden />
-                      {t(`page-courses-widget-calls-${kind}`)}
+                      {t(key(kind))}
                     </Button>
                   )
                 })}
@@ -120,14 +155,19 @@ const CallSorterWidget = ({ onAnswer, locked }: WidgetProps) => {
         aria-live="polite"
       >
         {locked
-          ? t("page-courses-widget-calls-hit")
+          ? t(key("hit"))
           : t("page-courses-widget-calls-progress", {
               done: int.format(Object.keys(sorted).length),
-              total: int.format(ACTIONS.length),
+              total: int.format(actions.length),
             })}
       </p>
     </WidgetShell>
   )
 }
+
+/** What a failed payment changed, for the Sending course */
+export const FailedSorterWidget = (props: WidgetProps) => (
+  <CallSorterWidget {...props} set="failed" />
+)
 
 export default CallSorterWidget

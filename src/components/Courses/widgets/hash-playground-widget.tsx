@@ -2,12 +2,11 @@
 
 import { useEffect, useId, useState } from "react"
 import { Fingerprint } from "lucide-react"
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 
 import Input from "@/components/ui/input"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
 
 import type { WidgetProps } from "./types"
 import WidgetShell from "./widget-shell"
@@ -23,7 +22,6 @@ const cellColor = (digit: string) =>
 
 const HashPlaygroundWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
-  const locale = useLocale()
   const inputId = useId()
   const original = t("page-courses-widget-hash-default")
 
@@ -51,9 +49,8 @@ const HashPlaygroundWidget = ({ onComplete }: WidgetProps) => {
     }
   }, [hash, baseline, text, original, done, onComplete])
 
-  const changed =
-    hash && baseline ? [...hash].filter((c, i) => c !== baseline[i]).length : 0
-  const int = numberFormat(locale)
+  // Number-free readout: the beginner course has no counts
+  const changed = !!hash && !!baseline && hash !== baseline
 
   return (
     <WidgetShell>
@@ -109,15 +106,18 @@ const HashPlaygroundWidget = ({ onComplete }: WidgetProps) => {
             role="status"
             className={cn(
               "m-0 font-bold",
-              changed > 0
+              changed
                 ? "text-(--course-strong) dark:text-(--course-bright)"
                 : "text-body-medium"
             )}
           >
-            {t("page-courses-widget-hash-changed", {
-              changed: int.format(changed),
-              total: int.format(64),
-            })}
+            {t(
+              changed
+                ? "page-courses-widget-hash-changed"
+                : done
+                  ? "page-courses-widget-hash-back"
+                  : "page-courses-widget-hash-same"
+            )}
           </p>
         </div>
       </div>

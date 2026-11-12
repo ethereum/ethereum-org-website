@@ -13,10 +13,10 @@ export const walletsCourse: Course = {
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "vault" },
         {
-          id: "where",
+          id: "made",
           type: "choice",
-          options: ["app", "chain", "company"],
-          correct: ["chain"],
+          options: ["address", "key", "separate"],
+          correct: ["address"],
         },
         { id: "generate", type: "interactive", widget: "key-pair" },
         {
@@ -37,21 +37,16 @@ export const walletsCourse: Course = {
         {
           id: "lost",
           type: "choice",
-          options: ["gone", "restore", "support"],
-          correct: ["restore"],
+          options: ["same", "new", "empty"],
+          correct: ["same"],
         },
-        {
-          id: "storage",
-          type: "choice",
-          options: ["paper", "photo", "metal", "email"],
-          correct: ["paper", "metal"],
-          multi: true,
-        },
+        { id: "restore", type: "interactive", widget: "restore-wallet" },
+        { id: "storage", type: "interactive", widget: "phrase-sort" },
         {
           id: "scam",
           type: "choice",
-          options: ["send", "half", "refuse"],
-          correct: ["refuse"],
+          options: ["type", "half", "close"],
+          correct: ["close"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
@@ -84,12 +79,6 @@ export const walletsCourse: Course = {
       learnMore: "/security/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
-        {
-          id: "ends",
-          type: "choice",
-          options: ["enough", "warn", "middle"],
-          correct: ["middle"],
-        },
         { id: "spot", type: "interactive", widget: "address-check" },
         {
           id: "poison",
@@ -132,10 +121,60 @@ export const walletsCourse: Course = {
           options: ["exchange", "hardware", "phone"],
           correct: ["hardware"],
         },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "first-eth",
+      icon: "gift",
+      learnMore: "/get-eth/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
         {
-          id: "match",
-          type: "match",
-          pairs: ["custodial", "hot", "hardware", "phrase"],
+          id: "easiest",
+          type: "choice",
+          options: ["friend", "exchange", "app"],
+          correct: ["friend"],
+        },
+        {
+          id: "steps",
+          type: "order",
+          items: ["copy", "share", "test", "check", "rest"],
+        },
+        {
+          id: "exchange",
+          type: "choice",
+          options: ["signup", "id", "freeze", "phrase"],
+          correct: ["signup", "id", "freeze"],
+          multi: true,
+        },
+        {
+          id: "keep",
+          type: "choice",
+          options: ["fee", "open", "bank"],
+          correct: ["fee"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "connect",
+      icon: "link",
+      learnMore: "/guides/how-to-use-a-wallet/#connecting-to-projects",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "game",
+          type: "choice",
+          options: ["address", "key", "spend"],
+          correct: ["address"],
+        },
+        { id: "sort", type: "interactive", widget: "popup-sort" },
+        {
+          id: "surprise",
+          type: "choice",
+          options: ["approve", "reject", "smaller"],
+          correct: ["reject"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
@@ -143,12 +182,11 @@ export const walletsCourse: Course = {
   ],
   exam: [
     {
-      id: "balance",
-      source:
-        "/guides/how-to-use-a-wallet/#can-i-use-the-same-address-on-multiple-devices",
+      id: "made",
+      source: "/developers/docs/accounts/#account-creation",
       type: "choice",
-      options: ["app", "chain", "maker"],
-      correct: ["chain"],
+      options: ["separate", "address", "key"],
+      correct: ["address"],
     },
     {
       id: "public",
@@ -159,10 +197,11 @@ export const walletsCourse: Course = {
     },
     {
       id: "restore",
-      source: "/guides/how-to-create-an-ethereum-account/",
+      source:
+        "/guides/how-to-use-a-wallet/#can-i-use-the-same-address-on-multiple-devices",
       type: "choice",
-      options: ["support", "gone", "phrase"],
-      correct: ["phrase"],
+      options: ["new", "same", "empty"],
+      correct: ["same"],
     },
     {
       id: "website",
@@ -214,6 +253,34 @@ export const walletsCourse: Course = {
       type: "choice",
       options: ["phone", "split", "exchange"],
       correct: ["split"],
+    },
+    {
+      id: "peer",
+      source: "/get-eth/",
+      type: "choice",
+      options: ["exchange", "app", "friend"],
+      correct: ["friend"],
+    },
+    {
+      id: "signup",
+      source: "/get-eth/",
+      type: "choice",
+      options: ["account", "instant", "phrase"],
+      correct: ["account"],
+    },
+    {
+      id: "connect",
+      source: "/guides/how-to-use-a-wallet/#connecting-to-projects",
+      type: "choice",
+      options: ["key", "address", "spend"],
+      correct: ["address"],
+    },
+    {
+      id: "fee",
+      source: "/guides/how-to-use-a-wallet/#send-cryptocurrency",
+      type: "choice",
+      options: ["connect", "sign", "send"],
+      correct: ["send"],
     },
   ],
 }

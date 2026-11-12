@@ -25,14 +25,12 @@ const FIELDS = [
 type Field = (typeof FIELDS)[number]
 const ANSWER: Field = "status"
 
-// Deterministic mock values; the fee is 120,000 gas at 10 gwei (out of gas)
+// Deterministic mock values. A beginner course, so value and fee are words
 const TX = {
   hash: "0x3f9c2a7e5d1b48c06e2f9a3b7c4d1e8f5a6b2c9d0e7f3a1b4c8d5e2f6a9b0c3d",
   block: 21_543_210,
   from: "0x8e1d4a7c2b9f05e3a6d1c8b4f7e2a9d3c5b0e6f1",
   to: "0x2c7a9e4b1d8f36a05c3e7b9d1f4a6c8e0b2d5f73",
-  value: 0.5,
-  fee: 0.0012,
 }
 
 const Hex = ({ children }: { children: string }) => (
@@ -68,9 +66,6 @@ const ExplorerLabelsWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
   }
 
   const int = numberFormat(locale)
-  const eth = numberFormat(locale, { maximumSignificantDigits: 4 })
-  const ethLabel = (value: number) =>
-    t("page-courses-widget-explorer-eth", { value: eth.format(value) })
 
   const handleChange = (id: Field) => {
     setPicked(id)
@@ -109,8 +104,8 @@ const ExplorerLabelsWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
         <Tag>{t("page-courses-widget-explorer-app")}</Tag>
       </span>
     ),
-    value: ethLabel(TX.value),
-    fee: ethLabel(TX.fee),
+    value: t("page-courses-widget-explorer-value"),
+    fee: t("page-courses-widget-explorer-fee"),
   }
 
   return (
