@@ -35,7 +35,7 @@ A new file or directory placed away from existing files of the same kind is `sho
 
 When lane files ask for `/code-review`, invoke the `code-review` skill once, at the highest effort any of them names, with `pr-head` as the target (for example `medium pr-head`).
 
-A failed check (read them with the GitHub actions tools) is a finding; ignore pending ones. `mergeStateStatus` `DIRTY` is a `should fix` finding. If the PR is too large to review in full, review the riskiest files first and list the rest in `unreviewed`.
+A failed check (read them with the GitHub actions tools) is a finding; ignore pending ones. `mergeStateStatus` `DIRTY` is a `should fix` finding. Search open PRs for the same fix (`search_pull_requests` with `is:open` and the changed path or the link/name being fixed); duplicating an earlier open PR is `should fix` naming it, and an open PR editing the same lines differently is worth noting only when the two would conflict. If the PR is too large to review in full, review the riskiest files first and list the rest in `unreviewed`.
 </review>
 
 <findings>
