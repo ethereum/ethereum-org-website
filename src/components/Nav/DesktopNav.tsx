@@ -3,9 +3,8 @@ import { getLocale, getTranslations } from "next-intl/server"
 import { cn } from "@/lib/utils/cn"
 
 import DesktopLanguagePicker from "./LanguagePicker/Desktop"
-import Search from "./Search"
-
 import Menu from "./Menu"
+import Search from "./Search"
 import { ThemeToggleButton } from "./ThemeToggleButton"
 
 import { getLanguagesDisplayInfo } from "@/lib/nav/links"
