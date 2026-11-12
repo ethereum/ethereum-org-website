@@ -30,6 +30,8 @@ Pick the lanes the PR touches from what the changes do; the paths below are typi
 | `deps` | `package.json`, `pnpm-lock.yaml` | `deps-docs.md` |
 | `docs` | `docs/**`, `README`, `CONTRIBUTING` | `deps-docs.md` |
 
+A new file or directory placed away from existing files of the same kind is `should fix` (find them with `git ls-files`); other `AGENTS.md` violations are nits unless they break something.
+
 When lane files ask for `/code-review`, invoke the `code-review` skill once, at the highest effort any of them names, with `pr-head` as the target (for example `medium pr-head`).
 
 A failed check (read them with the GitHub actions tools) is a finding; ignore pending ones. `mergeStateStatus` `DIRTY` is a `should fix` finding. If the PR is too large to review in full, review the riskiest files first and list the rest in `unreviewed`.
@@ -43,6 +45,8 @@ Look broadly, then post only what clears this bar: you can cite the `file:line` 
 - `blocking` — merging as-is breaks a feature for some users, loses data, disables a check, corrupts analytics or ships broken content, or the base branch already does what the PR does.
 - `should fix` — a real defect with limited impact.
 - `nit` — optional, no behaviour change. At most three; a repeated pattern is one finding listing its places.
+
+When the author owns every changed file in `.github/CODEOWNERS` (read it from the base branch, not `pr-head`), take their description and factual claims (scores, awards, dates) as given: an empty body or an unverifiable claim is not a finding. Their changes still get the full review.
 
 A `fix` must work as written and follow `AGENTS.md`; leave it empty rather than suggest something unchecked. No findings is a normal result.
 </findings>

@@ -6,6 +6,4 @@ For a bug fix, list every code path that produces the symptom, not only the one 
 
 Load the skill for the area the PR changes and check against it: `design-system` for UI, `data-layer` for `src/data-layer/` and `src/lib/data/`, `performance` for images, caching, rendering mode or bundle size.
 
-Then check the changed lines against the conventions in `AGENTS.md`. Comment bloat (multi-line explanations, design history) is a `nit`.
-
-Report bar: `should fix` or higher needs a concrete wrong behaviour. Convention violations are nits unless they break something.
+Report bar: `should fix` or higher needs a concrete wrong behaviour.
