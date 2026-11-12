@@ -115,6 +115,13 @@ pre-agent-steps:
         --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,mergeStateStatus,additions,deletions,changedFiles,labels \
         > /tmp/gh-aw/agent/pr-meta.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
+      listing=no
+      if [ -f .github/scripts/listing-research.mjs ]; then
+        rc=0; err=$(node .github/scripts/listing-research.mjs match "$PR_NUMBER" 2>&1 >/dev/null) || rc=$?
+        if [ "$rc" = 0 ]; then listing=yes
+        elif [ "$rc" != 1 ] || [ -n "$err" ]; then listing=error; echo "$err" >&2; echo "::warning::listing-research match failed for #$PR_NUMBER"; fi
+      fi
+      echo "$listing" > /tmp/gh-aw/agent/listing.txt
 imports:
   - shared/pr-review-core.md
   - shared/submit-review.md
