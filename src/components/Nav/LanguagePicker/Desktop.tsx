@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils/cn"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
-import { Button } from "../../ui/buttons/Button"
-import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover"
+import { Button } from "@/components/ui/buttons/Button"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 
 import LanguagePicker from "."
 
