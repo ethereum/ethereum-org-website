@@ -60,6 +60,7 @@
   ]
 
 # Previews prerender a locale subset. All locales: staging, intl/* or full/* branches, or a "[full build]" commit message.
+# Keep the trailing `pnpm build && rm -rf .next/cache` in sync with [build].command.
 [context.deploy-preview]
   command = 'case "$HEAD" in staging|intl/*|full/*) ;; *) git log -1 --format=%B | grep -qF "[full build]" || export NEXT_PUBLIC_BUILD_LOCALES=en,es,zh,ar,ja ;; esac; pnpm build && rm -rf .next/cache'
 
