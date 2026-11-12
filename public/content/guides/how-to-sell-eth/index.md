@@ -6,7 +6,7 @@ lang: en
 
 "How do I withdraw?" is one of the most common questions new Ethereum users ask. Usually it means: _I have crypto, and I want it as money in my bank account._ This guide shows you how to sell ETH, or tokens like USDC, and cash out.
 
-Ethereum itself has no "withdraw to bank" button. Your [wallet](/glossary/#wallet) holds crypto, and turning that into money in your currency always goes through a service that exchanges one for the other. Usually that is an exchange, or a selling feature built into your wallet.
+Ethereum itself has no "withdraw to bank" button. Your [wallet](/glossary/#wallet) holds crypto, and turning that into money in your currency always goes through a service that exchanges one for the other. Usually that is an exchange, a selling feature built into your wallet, or another person who buys it from you.
 
 ## What do you mean by withdraw? {#what-do-you-mean-by-withdraw}
 
@@ -77,7 +77,26 @@ Always copy and paste addresses, never type them by hand, and check the first an
 </AlertContent>
 </Alert>
 
-## Option 3: Spend crypto with a card {#spend-with-a-card}
+## Option 3: Sell to another person (P2P) {#sell-peer-to-peer}
+
+You can also sell ETH directly to another person and have them pay you by bank transfer, a payment app or cash. This is called peer-to-peer (P2P) trading. P2P apps match you with buyers, and many of them use a [smart contract](/glossary/#smart-contract) as escrow and don't ask you to verify your identity.
+
+1. **Choose a P2P app that works in your country**, or sell to someone you know and trust. [Find P2P apps available where you live](/get-eth/#country-picker).
+2. **Set your price and the payment methods you accept.** Only accept payment methods you already use and can check yourself.
+3. **Lock your ETH in the app's escrow.** The app holds it in a smart contract, not in a company's account.
+4. **Wait until the money is in your account.** Check your bank or payment app yourself. Don't trust a screenshot or a message saying the buyer has paid.
+5. **Release the ETH.** Once you have confirmed the payment, release the ETH to the buyer.
+
+<Alert variant="warning">
+<AlertEmoji text=":shield:"/>
+<AlertContent>
+<AlertDescription>
+Some payment methods can be reversed after you release your ETH, for example card payments and some payment apps. Prefer methods that can't be reversed, start with small amounts, and keep the whole trade inside the app.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+## Option 4: Spend crypto with a card {#spend-with-a-card}
 
 If you want to spend your crypto rather than move it to a bank, some crypto debit cards convert it to your currency when you pay.
 
@@ -89,7 +108,7 @@ If you want to spend your crypto rather than move it to a bank, some crypto debi
 
 ### How do I withdraw money from my Ethereum wallet to my bank account? {#withdraw-from-wallet-to-bank}
 
-A wallet cannot send money to a bank directly, because it only holds crypto. You first need to sell the crypto, either in your wallet ([option 1](#sell-in-your-wallet)) or on an exchange ([option 2](#sell-on-an-exchange)). The service you sell through then pays out to your bank.
+A wallet cannot send money to a bank directly, because it only holds crypto. You first need to sell the crypto, either in your wallet ([option 1](#sell-in-your-wallet)), on an exchange ([option 2](#sell-on-an-exchange)) or to another person ([option 3](#sell-peer-to-peer)). The service or person you sell to then pays you into your bank account.
 
 ### How do I cash out USDC or other tokens? {#cash-out-usdc-or-other-tokens}
 
