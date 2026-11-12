@@ -4,7 +4,8 @@ import { pathToFileURL } from "url"
 import { expect, test } from "@playwright/test"
 
 type Mod = typeof import("../../.github/scripts/listing-research.mjs")
-let esc: Mod["esc"],
+let check: Mod["check"],
+  esc: Mod["esc"],
   LISTING: Mod["LISTING"],
   publicUrl: Mod["publicUrl"],
   quoteFound: Mod["quoteFound"],
@@ -12,7 +13,7 @@ let esc: Mod["esc"],
   toText: Mod["toText"]
 
 test.beforeAll(async () => {
-  ;({ esc, LISTING, publicUrl, quoteFound, registrableDomain, toText } =
+  ;({ check, esc, LISTING, publicUrl, quoteFound, registrableDomain, toText } =
     await import(
       pathToFileURL(
         path.resolve(__dirname, "../../.github/scripts/listing-research.mjs")
@@ -35,6 +36,8 @@ test("publicUrl rejects private, credentialed and literal-IPv6 hosts", () => {
     "https://user:pass@example.com/",
     "http://localhost:3000/",
     "http://metadata.google.internal/",
+    "http://localhost./",
+    "http://metadata.google.internal./",
     "file:///etc/passwd",
   ])
     expect(publicUrl(u), u).toBeNull()
@@ -78,6 +81,8 @@ test("LISTING matches listing pages and data files only", () => {
     "public/content/developers/docs/smart-contracts/security/index.md",
     "public/content/developers/docs/data-and-analytics/block-explorers/index.md",
     "public/content/staking/saas/index.md",
+    "public/content/community/get-involved/index.md",
+    "public/content/security/index.md",
     "src/data/wallets/wallet-data.ts",
     "src/data/networks/networks.ts",
     "src/data/staking-products.json",
@@ -97,4 +102,32 @@ test("registrableDomain keeps the site, not the subdomain", () => {
   expect(registrableDomain("docs.tatum.io")).toBe("tatum.io")
   expect(registrableDomain("www.example.co.uk")).toBe("example.co.uk")
   expect(registrableDomain("tatum.io")).toBe("tatum.io")
+})
+
+test("check re-verifies pass and fail quotes alike", async () => {
+  const quote = (criterion: string, status: string, q: string) => ({
+    criterion,
+    status,
+    quote: q,
+    url: "example.com",
+    source: "author",
+  })
+  const r = await check(
+    {
+      pr: "1",
+      criteria: JSON.stringify([
+        quote("Audited", "fail", "Our smart contracts are not yet audited"),
+        quote("Live", "fail", "Launched in March 2020 on mainnet"),
+        quote("Docs", "pass", "Full documentation for every endpoint"),
+      ]),
+    },
+    async () => ({
+      text: "Our smart contracts are not yet audited by any firm.",
+    })
+  )
+  expect(r.criteria.map((c) => c.status)).toEqual([
+    "fail",
+    "unknown",
+    "unknown",
+  ])
 })

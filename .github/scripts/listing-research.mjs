@@ -19,7 +19,8 @@ export const LISTING = new RegExp(
     "developers/docs/programming-languages(?:/[a-z-]+)?",
     "developers/docs/smart-contracts/security",
     "staking/(?:pools|saas|solo|dvt)",
-    "community/(?:grants|online)",
+    "community/(?:grants|online|get-involved)",
+    "security",
     "bridges",
     "desci",
   ].join("|")})/index\\.md|src/data/(?:${[
@@ -52,7 +53,7 @@ export function publicUrl(u) {
   try {
     const x = new URL(/^[a-z][a-z0-9+.-]*:\/\//i.test(u) ? u : `https://${u}`)
     if (!/^https?:$/.test(x.protocol) || x.username || x.password) return null
-    const h = x.hostname
+    const h = x.hostname.replace(/\.+$/, "")
     if (
       !h.includes(".") ||
       h.startsWith("[") ||
@@ -456,7 +457,7 @@ export async function check(item, fetchPage = fetchText) {
       status: STATUS.includes(c.status) ? c.status : "unknown",
       ...base(c),
     }
-    if (x.status === "pass") {
+    if (x.status !== "unknown") {
       const v = await verify(x, c)
       if (v !== "ok") {
         x.status = "unknown"
@@ -559,7 +560,8 @@ async function main() {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)
+  // Exit 1 means "not a listing" for `match`; any crash exits 2 so callers can tell them apart.
   main().catch((e) => {
     console.error(e)
-    process.exit(1)
+    process.exit(2)
   })

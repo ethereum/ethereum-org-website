@@ -29,7 +29,14 @@ on:
         GH_TOKEN: ${{ github.token }}
         REPO: ${{ github.repository }}
         PR: ${{ github.event.pull_request.number || inputs.pr }}
-      run: node .github/scripts/listing-research.mjs match "$PR"
+        EVENT: ${{ github.event_name }}
+      run: |
+        if [ "$EVENT" = workflow_dispatch ]; then exit 0; fi
+        node .github/scripts/listing-research.mjs match "$PR" || {
+          rc=$?
+          [ "$rc" -eq 1 ] || echo "::warning::Listing gate failed (exit $rc); this PR was not checked"
+          exit "$rc"
+        }
   skip-bots:
     - allcontributors[bot]
     - github-actions[bot]
@@ -239,6 +246,7 @@ If two fit, pick one and say why in `policy_why`. Include the policy's process s
 
 <research>
 - One `criteria` entry per must-have criterion and process step. `pass` needs a quote copied exactly from the page at `url`: at least 20 characters, and if you shorten it with `…`, each piece at least 12 characters, in page order. The submit job re-fetches the page and turns the criterion into ❔ if the quote isn't there or the page can't be fetched. Write `url` without the scheme (`tatum.io/pricing`, not `https://…`): full URLs are redacted in transit.
+- `fail` also needs a quote that shows the contradiction, checked the same way; if something is simply not shown, use `unknown`.
 - An `unknown` criterion needs no quote: leave `quote` and `url` empty rather than quoting something that doesn't settle it.
 - Prefer independent evidence: audits confirmed by the auditor, team activity from GitHub, contract deploy dates from Etherscan, incidents from rekt.news, news coverage and search. Mark a claim only the product's own site makes as `author`. The site's registration date and first Wayback snapshot are added to the comment automatically; don't repeat them.
 - `facts`: at most 5, the ones that most change a maintainer's decision, most important first. Neutral, sourced statements, each with a quote checked the same way (facts that fail the check are dropped). Good facts: "Audit by X published 2024-05 on X's site", "The docs describe forwarding requests to upstream providers". For the comparison, state it as a fact with the edited page as a `repo` source: "This page already lists 30 node providers, including dRPC, Chainstack and GetBlock" (repo facts need no quote).
