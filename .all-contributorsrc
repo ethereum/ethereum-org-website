@@ -14642,6 +14642,15 @@
         "maintenance",
         "content"
       ]
+    },
+    {
+      "login": "rossydefi",
+      "name": "RossyDeFi ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/283284215?v=4",
+      "profile": "https://github.com/rossydefi",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
