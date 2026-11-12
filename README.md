@@ -2270,6 +2270,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/e
       <td align="center" valign="top" width="14.28%"><a href="https://abdqoharr-portfolio.vercel.app"><img src="https://avatars.githubusercontent.com/u/148275637?v=4&size=100" width="100px" height="100px" alt="Prudent"/><br /><sub><b>Prudent</b></sub></a><br /><a href="#maintenance-Prudentdev-xyz" title="Maintenance">🚧</a> <a href="#content-Prudentdev-xyz" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/rossydefi"><img src="https://avatars.githubusercontent.com/u/283284215?v=4&size=100" width="100px" height="100px" alt="RossyDeFi "/><br /><sub><b>RossyDeFi </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rossydefi" title="Code">💻</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Alike001"><img src="https://avatars.githubusercontent.com/u/211592156?v=4&size=100" width="100px" height="100px" alt="Hammed Ali Oyeleye "/><br /><sub><b>Hammed Ali Oyeleye </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAlike001" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
