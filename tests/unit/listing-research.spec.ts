@@ -122,7 +122,10 @@ test("check re-verifies pass and fail quotes alike", async () => {
       ]),
     },
     async () => ({
+      status: 200,
+      url: "https://example.com/",
       text: "Our smart contracts are not yet audited by any firm.",
+      links: [],
     })
   )
   expect(r.criteria.map((c) => c.status)).toEqual([
