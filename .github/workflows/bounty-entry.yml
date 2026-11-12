@@ -23,7 +23,9 @@ jobs:
       # Base branch only: the PR's merge ref is fetched as data and never checked out.
       - uses: actions/checkout@v6
         with:
-          sparse-checkout: .github/scripts/bounty-entry.sh
+          sparse-checkout: |
+            .github/scripts/bounty-entry.sh
+            .github/CODEOWNERS
           sparse-checkout-cone-mode: false
           persist-credentials: false
 

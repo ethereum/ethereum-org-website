@@ -4,43 +4,16 @@ description: Lane-aware, findings-only first-pass review of pull requests, inclu
 on:
   pull_request_target:
     types: [opened, ready_for_review]
+    paths-ignore:
+      - src/data/consensus-bounty-hunters.json
+      - src/data/execution-bounty-hunters.json
   roles: all
-  permissions:
-    contents: read
-    pull-requests: read
-  steps:
-    - uses: actions/checkout@v6
-      with:
-        sparse-checkout: .github/scripts/bounty-entry.sh
-        sparse-checkout-cone-mode: false
-        persist-credentials: false
-    - name: Detect bug bounty leaderboard PR
-      id: bounty
-      if: >-
-        !github.event.pull_request.draft &&
-        (github.event.pull_request.head.repo.full_name != github.repository || (
-          github.event.pull_request.head.ref != 'staging' &&
-          github.event.pull_request.head.ref != 'dev' &&
-          !startsWith(github.event.pull_request.head.ref, 'intl/') &&
-          !startsWith(github.event.pull_request.head.ref, 'automated')))
-      continue-on-error: true
-      env:
-        GH_TOKEN: ${{ github.token }}
-        REPO: ${{ github.repository }}
-        PR: ${{ github.event.pull_request.number }}
-      run: |
-        if ! match=$(bash .github/scripts/bounty-entry.sh match "$PR"); then
-          echo "::warning::Bug bounty PR detection failed; reviewing this PR as usual."
-          exit 1
-        fi
-        [ "$match" = true ]
   skip-bots:
     - allcontributors[bot]
     - github-actions[bot]
     - dependabot[bot]
 if: >-
   !github.event.pull_request.draft &&
-  needs.pre_activation.outputs.bounty_result != 'success' &&
   (github.event.pull_request.head.repo.full_name != github.repository || (
     github.event.pull_request.head.ref != 'staging' &&
     github.event.pull_request.head.ref != 'dev' &&

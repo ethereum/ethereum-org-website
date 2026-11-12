@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 # Bug-bounty leaderboard PRs: bounty-entry.yml validates and approves them; the AI reviewers skip them.
-#   match <pr>              print true if the author is in AUTHORS and the PR changes only FILES, else false;
+#   match <pr>              print true if the author owns FILES in CODEOWNERS and the PR changes only FILES, else false;
 #                           exit non-zero if that can't be determined (needs REPO, GH_TOKEN)
 #   validate <base> <head>  print what is wrong with FILES at git rev <head> compared to <base>; exit 1 if anything is
-# Sourcing it only defines AUTHORS and FILES (JSON arrays).
+# Sourcing it only defines FILES (JSON array).
 set -euo pipefail
 
-AUTHORS='["0xMushow"]'
 FILES='["src/data/consensus-bounty-hunters.json", "src/data/execution-bounty-hunters.json"]'
 
 [[ "${BASH_SOURCE[0]}" == "$0" ]] || return 0
+
+AUTHORS=$(awk '$1 == "/src/data/*-bounty-hunters.json" { for (i = 2; i <= NF; i++) print substr($i, 2) }' \
+  "$(dirname "${BASH_SOURCE[0]}")/../CODEOWNERS" | jq -Rsc 'split("\n") | map(select(. != "") | ascii_downcase)')
 
 case "${1:-}" in
   match)
@@ -17,7 +19,7 @@ case "${1:-}" in
     changed=$(gh api --paginate "repos/$REPO/pulls/$2/files" --jq '.[].filename')
     jq -nr --arg author "$author" --arg changed "$changed" --argjson a "$AUTHORS" --argjson f "$FILES" '
       [$changed | splits("\n") | select(. != "")] as $c
-      | ($author | IN($a[])) and ($c | length > 0) and all($c[]; IN($f[]))'
+      | ($author | ascii_downcase | IN($a[])) and ($c | length > 0) and all($c[]; IN($f[]))'
     ;;
   validate)
     tmp=$(mktemp -d)
