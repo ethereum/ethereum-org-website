@@ -136,20 +136,17 @@ A summary of the control flow is shown below, with the relevant networking stack
 
 ### When consensus client is block producer: {#when-consensus-client-is-block-producer}
 
-- Consensus client receives notice that it is the next block producer (consensus p2p)
-- Consensus layer calls `create block` method in execution client (local RPC)
+- Consensus client works out from its copy of the beacon state that one of its validators proposes the next block (no network needed)
+- Consensus client calls `engine_forkchoiceUpdated` with payload attributes, asking the execution client to start building a block (local RPC)
 - Execution layer accesses the transaction mempool which has been populated by the transaction gossip protocol (execution p2p)
-- Execution client bundles transactions into a block, executes the transactions and generates a block hash
-- Consensus client grabs the transactions and block hash from the execution client and adds them to the beacon block (local RPC)
+- Execution client bundles transactions into an execution payload, executes the transactions and generates a block hash
+- Consensus client fetches the payload with `engine_getPayload` and adds it to the beacon block, which its validator signs (local RPC)
 - Consensus client broadcasts the block over the block gossip protocol (consensus p2p)
 - Other clients receive the proposed block via the block gossip protocol and validate as described above (consensus p2p)
 
 Once the block has been attested by sufficient validators it is added to the head of the chain, justified and eventually finalized.
 
-![Diagram of the Ethereum consensus client networking layer](cons_client_net_layer.png)
-![Diagram of the Ethereum execution client networking layer](exe_client_net_layer.png)
-
-Network layer schematic for consensus and execution clients, from [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+<NodeNetworksDiagram />
 
 ## Further Reading {#further-reading}
 

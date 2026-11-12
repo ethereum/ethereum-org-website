@@ -44,7 +44,9 @@ import {
  *
  * At the `internals` level the execution client also shows its transaction
  * pool and the EVM, and the consensus client a short chain of blocks with a
- * slot for the next head.
+ * slot for the next head. With `validator`, a validator client stands off
+ * the plate's front-left corner, linked to the consensus client; with `jwt`,
+ * a lock sits on the Engine API's arch.
  *
  * Messages are not gas, so links are `IsoPipe hue="entity"`: they flow
  * blue, and the link to watch turns blue with a light dash running along it.
@@ -76,6 +78,19 @@ const EL = box(...EL_BOX)
 // The app, off the plate in front: wide enough for both pipes to meet it.
 const APP_BOX: Box = [40, 170, 0, 130, 24, 16]
 const APP = box(...APP_BOX)
+
+// The validator client, off the plate's front-left corner.
+const VALIDATOR_BOX: Box = [-34, 128, 0, 32, 24, 16]
+const VALIDATOR = box(...VALIDATOR_BOX)
+
+// The Engine API's JWT lock: a small body on the arch with a shackle.
+const LOCK = box(100, 48, 50, 10, 8, 9)
+const LOCK_SHACKLE = line(
+  P(102, 52, 59),
+  P(102, 52, 63),
+  P(108, 52, 63),
+  P(108, 52, 59)
+)
 
 // Peer networks: a pad with three peers each, consensus behind the node,
 // execution in front of it.
@@ -139,6 +154,9 @@ const LINKS: Record<NodeLink, Link> = {
   "el-peer": pathLink(10, [246, 55], [190, 55]),
   "cl-mesh": meshLink(CL_PEER_AT),
   "el-mesh": meshLink(EL_PEER_AT),
+  // Out of the validator client's end face, along the plate, into the
+  // consensus client's start face.
+  vc: pathLink(8, [-2, 140], [30, 140], [30, 80]),
 }
 
 // Internals: the consensus client's chain (three blocks and the slot for the
@@ -164,6 +182,17 @@ const GROUND_SHADOWS = (
     {isoShadow(footprint(240, 15, 50, 80, -14, 4), SHADOW)}
     {isoShadow(footprint(42, 172, 130, 24, 0, 5), SHADOW)}
   </g>
+)
+const VALIDATOR_SHADOW = (
+  <g className="pointer-events-none">
+    {isoShadow(footprint(-32, 130, 32, 24, 0, 5), SHADOW)}
+  </g>
+)
+const VALIDATOR_DETAIL = (
+  <>
+    {D.seams(VALIDATOR_BOX, { end: [0.5] })}
+    {D.vents(152, -29, -17, [7, 11])}
+  </>
 )
 const CONTACT_SHADOWS = (
   <g className="pointer-events-none">
@@ -270,6 +299,22 @@ const SPOTS_CLIENTS: AnatomyLabelSpot[] = [
     anchor: [425, 178],
     placement: "above",
   },
+]
+
+const VALIDATOR_SPOT: AnatomyLabelSpot = {
+  id: "validator",
+  tone: "entity",
+  target: P(-34, 152, 0),
+  anchor: [34, 216],
+  placement: "below",
+}
+
+/** With the validator client: its label takes the corner the Beacon API's
+ * label would use, so the Beacon API is named in the readout instead. */
+const SPOTS_SETUP: AnatomyLabelSpot[] = [
+  ...SPOTS_CLIENTS.filter((spot) => spot.id !== "beacon").slice(0, 3),
+  VALIDATOR_SPOT,
+  ...SPOTS_CLIENTS.filter((spot) => spot.id !== "beacon").slice(3),
 ]
 
 /** With internals: the pool and EVM take the space beside the execution
@@ -460,7 +505,23 @@ function NodeClientsRig({
           </>
         )}
 
-        <g {...part("engine")}>{pipe("engine", "engine")}</g>
+        <g {...part("engine")}>
+          {pipe("engine", "engine")}
+          {view.jwt && (
+            <>
+              <path
+                d={LOCK_SHACKLE}
+                fill="none"
+                className={
+                  state("engine") === "rest"
+                    ? "stroke-diagram-line"
+                    : "stroke-diagram-entity"
+                }
+              />
+              <IsoSolid box={LOCK} hue="entity" state={state("engine")} />
+            </>
+          )}
+        </g>
 
         {/* The app's pipes, from each client's front face. */}
         <g {...part("beacon")}>{pipe("beacon", "beacon")}</g>
@@ -483,6 +544,15 @@ function NodeClientsRig({
           ))}
         </g>
 
+        {view.validator && (
+          <g {...part("validator")}>
+            {VALIDATOR_SHADOW}
+            {pipe("vc", "validator")}
+            <IsoSolid box={VALIDATOR} hue="entity" state={state("validator")} />
+            {VALIDATOR_DETAIL}
+          </g>
+        )}
+
         <g {...part("app")}>
           <IsoSolid box={APP} hue="entity" state={state("app")} />
           {APP_DETAIL}
@@ -492,7 +562,13 @@ function NodeClientsRig({
       <AnatomyLabels
         width={W}
         height={H}
-        spots={internals ? SPOTS_INTERNALS : SPOTS_CLIENTS}
+        spots={
+          internals
+            ? SPOTS_INTERNALS
+            : view.validator
+              ? SPOTS_SETUP
+              : SPOTS_CLIENTS
+        }
         labels={labels}
         definitions={definitions}
         litId={view.litPart}

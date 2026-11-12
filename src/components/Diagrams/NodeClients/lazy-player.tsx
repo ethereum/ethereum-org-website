@@ -14,3 +14,15 @@ export const NodeClientsPlayer = dynamic(() =>
 export const NodeArchitecturePlayer = dynamic(() =>
   import("./architecture-player").then((m) => m.NodeArchitecturePlayer)
 )
+
+export const NodeAccessPlayer = dynamic(() =>
+  import("./access-player").then((m) => m.NodeAccessPlayer)
+)
+
+export const ClientSetupPlayer = dynamic(() =>
+  import("./setup-player").then((m) => m.ClientSetupPlayer)
+)
+
+export const NodeNetworksPlayer = dynamic(() =>
+  import("./networks-player").then((m) => m.NodeNetworksPlayer)
+)

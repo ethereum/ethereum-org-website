@@ -1,7 +1,13 @@
 import { DiagramMessages } from "../diagram-messages"
 
-import { NodeArchitecturePlayer, NodeClientsPlayer } from "./lazy-player"
-import type { NodeArchitecturePreset } from "./model"
+import {
+  ClientSetupPlayer,
+  NodeAccessPlayer,
+  NodeArchitecturePlayer,
+  NodeClientsPlayer,
+  NodeNetworksPlayer,
+} from "./lazy-player"
+import type { NodeArchitecturePreset, NodeNetworksPreset } from "./model"
 
 export interface NodeClientsDiagramProps {
   /** Step to start on (0 = idle, 1-3), for static stories. */
@@ -62,6 +68,55 @@ export const NodeArchitectureDiagram = ({
       fig={fig}
       className={className}
     />
+  </DiagramMessages>
+)
+
+export interface NodeStepDiagramProps {
+  /** Step to start on (0 = idle), for static stories. */
+  initialStep?: number
+  /** Figure number on the page, shown as "Fig. N" in the figure header. */
+  fig?: number
+  className?: string
+}
+
+/**
+ * Interactive replacement for `nodes.png` ("Using Ethereum through your own
+ * node"), on the same drawing: a wallet queries your node, sends a
+ * transaction through it to the node's peers, and your node verifies the
+ * block that includes it.
+ */
+export const NodeAccessDiagram = (props: NodeStepDiagramProps) => (
+  <DiagramMessages prefix="node-clients">
+    <NodeAccessPlayer {...props} />
+  </DiagramMessages>
+)
+
+/**
+ * Interactive replacement for run-a-node's `diagram.png` ("Client setup"),
+ * on the same drawing with a validator client: the Engine API and its JWT
+ * secret, the peer-to-peer port, the validator client's Beacon API link and
+ * JSON-RPC, with their default ports.
+ */
+export const ClientSetupDiagram = (props: NodeStepDiagramProps) => (
+  <DiagramMessages prefix="node-clients">
+    <ClientSetupPlayer {...props} />
+  </DiagramMessages>
+)
+
+export interface NodeNetworksDiagramProps extends NodeStepDiagramProps {
+  /** Scenario to start on, for static stories. */
+  initialPreset?: NodeNetworksPreset
+}
+
+/**
+ * Interactive replacement for `cons_client_net_layer.png` and
+ * `exe_client_net_layer.png` ("Which network carries each step"), on the
+ * same drawing: a node receiving a block, or proposing one, with the network
+ * each step uses.
+ */
+export const NodeNetworksDiagram = (props: NodeNetworksDiagramProps) => (
+  <DiagramMessages prefix="node-clients">
+    <NodeNetworksPlayer {...props} />
   </DiagramMessages>
 )
 

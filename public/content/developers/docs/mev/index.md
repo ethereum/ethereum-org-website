@@ -174,20 +174,21 @@ Below is an overview of how the Builder API works:
 
 2. A validator (running a consensus layer client) requests execution payloads along with bids from the network of builders. Bids from builders will contain the execution payload header—a cryptographic commitment to the payload's contents—and a fee to be paid to the validator.
 
-3. The validator reviews the incoming bids and picks the execution payload with the highest fee. Using the Builder API, the validator creates a "blinded" Beacon block proposal that includes only their signature and the execution payload header and sends it to the builder.
+3. The validator reviews the incoming bids and picks the execution payload with the highest fee. Using the Builder API, the validator signs a "blinded" Beacon block that includes only the execution payload header, not the transactions, and sends it back.
 
-4. The builder running the Builder API is expected to respond with the full execution payload upon seeing the blinded block proposal. This allows the validator to create a "signed" Beacon block, which they propagate throughout the network.
+4. Upon seeing the signed blinded block, the builder, through the relay that carried its bid, reveals the full execution payload and publishes the complete signed Beacon block to the network. (Before the Fusaka upgrade, the payload was instead returned to the validator, who published the block.)
 
 5. A validator using the Builder API is still expected to build a block locally in case the block builder fails to respond promptly, so they don't miss out on block proposal rewards. However, validator cannot create another block using either the now-revealed transactions or another set, as it would amount to _equivocation_ (signing two blocks within the same slot), which is a slashable offense.
 
 An example implementation of the Builder API is [MEV Boost](https://github.com/flashbots/mev-boost), an improvement on the [Flashbots auction mechanism](https://docs.flashbots.net/flashbots-auction/overview) designed to curb the negative externalities of MEV on Ethereum. Flashbots auction allows validators in proof-of-stake to outsource the work of building profitable blocks to specialized parties called **searchers**.
-![A diagram showing the MEV flow in detail](./mev.png)
+
+<MevBoostDiagram />
 
 Searchers look for lucrative MEV opportunities and send transaction bundles to block proposers along with a [sealed-price bid](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) for inclusion in the block. The validator running mev-geth, a forked version of the go-ethereum (Geth) client only has to choose the bundle with the most profit and include it as part of the new block. To protect block proposers (validators) from spam and invalid transactions, transaction bundles pass through **relayers** for validation before getting to the proposer.
 
 MEV Boost retains the same workings of the original Flashbots auction, albeit with new features designed for Ethereum’s switch to proof-of-stake. Searchers still find profitable MEV transactions for inclusion in blocks, but a new class of specialized parties, called **builders**, are responsible for aggregating transactions and bundles into blocks. A builder accepts sealed-price bids from searchers and runs optimizations to find the most profitable ordering.
 
-The relayer is still responsible for validating transaction bundles before passing them to the proposer. However, MEV Boost introduces **escrows** responsible for providing [data availability](/developers/docs/data-availability/) by storing block bodies sent by builders and block headers sent by validators. Here, a validator connected to a relay asks for available execution payloads and uses MEV Boost’s ordering algorithm to select the payload header with the highest bid + MEV tips.
+The relayer is still responsible for validating blocks before passing them to the proposer. Relays also act as escrows: they hold each builder's full block, providing [data availability](/developers/docs/data-availability/), and show the proposer only its header until the proposer has signed it, then publish the full block. Here, a validator connected to one or more relays asks for available execution payloads, and MEV Boost selects the payload header with the highest bid.
 
 #### How does the Builder API mitigate MEV’s impact? {#how-does-builder-api-curb-mev-impact}
 
