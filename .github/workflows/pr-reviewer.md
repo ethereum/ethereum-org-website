@@ -24,12 +24,12 @@ permissions:
 # PR code is only fetched as the `pr-head` ref, never checked out or run.
 checkout:
   repository: ${{ github.repository }}
-  ref: ${{ github.event.pull_request.base.sha }}
+  ref: ${{ github.event.pull_request.base.ref }}
   fetch-depth: 0
 engine:
   id: claude
   model: claude-opus-5-5
-max-ai-credits: 300
+max-ai-credits: 500
 max-daily-ai-credits: 3000
 network: defaults
 strict: true
@@ -37,7 +37,7 @@ timeout-minutes: 20
 tools:
   github:
     toolsets: [default, actions]
-  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "ls", "cat", "grep", "head", "wc"]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "git branch -a", "git branch --list:*", "git branch --contains:*", "ls:*", "cat:*", "grep:*", "head:*", "tail:*", "wc:*"]
 safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
@@ -82,7 +82,7 @@ pre-agent-steps:
       set -euo pipefail
       mkdir -p /tmp/gh-aw/agent
       gh pr view "$PR_NUMBER" --repo "$REPO" \
-        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,labels \
+        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,mergeStateStatus,additions,deletions,changedFiles,labels \
         > /tmp/gh-aw/agent/pr-meta.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
 imports:

@@ -14,6 +14,6 @@ Netlify Edge uses per-node LRU caching; low-traffic entries get evicted regardle
 
 ## DON'T
 
-- Do NOT add `unstable_cache` + `revalidate` on MDX/markdown routes with `generateStaticParams`. Triggers ISR and silently 404s on dynamic segments when `src/data` is not in the serverless bundle. Use `cache: "force-cache"` or `React.cache()` instead (SHA `e4d7a342c`, `bd9732ae0`, `e61afdbe2`).
+- Do NOT give a route that reads `public/content` a finite-`revalidate` getter (`createCachedGetter(..., 86400)`). The route becomes ISR, and `public/content` is not in the Netlify server function, so on-demand renders 404. Use a `revalidate: false` getter or add an `outputFileTracingIncludes` entry (SHA `e4d7a342c`, `bd9732ae0`, `e61afdbe2`; `docs/solutions/integration-issues/netlify-isr-404-async-server-components.md`).
 - Do NOT add root-layout hooks that read request data (Sentry `getTraceData`, cookies, headers). One dynamic hook in `app/layout.tsx` makes every page dynamic and destroys edge caching (PR #16718 diagnosis).
 - Do NOT propose adding `CDN-Cache-Control` headers as a TTFB fix — Netlify strips them (PR #17838 closed).

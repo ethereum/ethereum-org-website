@@ -196,11 +196,6 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 > The Proof of Attendance Protocol is a dapp that distributes badges in the form of ERC-721 tokens to prove you participated in an event. [More on POAPs](https://www.poap.xyz/).
 
-### GitPOAP
-
-- If you've made at least one contribution and that gets merged into ethereum.org, GitPOAP will also auto recognize it and let you mint a unique contributor POAP for the specific year.
-  [More on GitPOAP](https://www.gitpoap.io).
-
 ### What is an OAT?
 
 > An Onchain Achievement Token (OAT) is a special badge on [Galxe](https://app.galxe.com/quest/ethereumorg). It's a proof of your contribution to the ecosystem. [More on OATs](https://medium.com/galxe-news/introducing-galaxy-oat-on-chain-achievement-token-7e89779242b4).
@@ -2272,7 +2267,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/e
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/patrick-star-10"><img src="https://avatars.githubusercontent.com/u/204532789?v=4&size=100" width="100px" height="100px" alt="patrick-star-10"/><br /><sub><b>patrick-star-10</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apatrick-star-10" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SayedZahur786"><img src="https://avatars.githubusercontent.com/u/177766328?v=4&size=100" width="100px" height="100px" alt="Mohd Jahur"/><br /><sub><b>Mohd Jahur</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ASayedZahur786" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.markstudios.com"><img src="https://avatars.githubusercontent.com/u/24554186?v=4&size=100" width="100px" height="100px" alt="Mark Santos"/><br /><sub><b>Mark Santos</b></sub></a><br /><a href="#maintenance-markksantos" title="Maintenance">🚧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://abdqoharr-portfolio.vercel.app"><img src="https://avatars.githubusercontent.com/u/148275637?v=4&size=100" width="100px" height="100px" alt="Prudent"/><br /><sub><b>Prudent</b></sub></a><br /><a href="#maintenance-Prudentdev-xyz" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://abdqoharr-portfolio.vercel.app"><img src="https://avatars.githubusercontent.com/u/148275637?v=4&size=100" width="100px" height="100px" alt="Prudent"/><br /><sub><b>Prudent</b></sub></a><br /><a href="#maintenance-Prudentdev-xyz" title="Maintenance">🚧</a> <a href="#content-Prudentdev-xyz" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rossydefi"><img src="https://avatars.githubusercontent.com/u/283284215?v=4&size=100" width="100px" height="100px" alt="RossyDeFi "/><br /><sub><b>RossyDeFi </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rossydefi" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Alike001"><img src="https://avatars.githubusercontent.com/u/211592156?v=4&size=100" width="100px" height="100px" alt="Hammed Ali Oyeleye "/><br /><sub><b>Hammed Ali Oyeleye </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAlike001" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
