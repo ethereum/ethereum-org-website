@@ -25,16 +25,16 @@ if [ -n "${PR_NUMBER:-}" ]; then
 fi
 
 [ -n "${PR_NUMBER:-}" ] || gh api graphql --paginate \
-  -F owner="${REPO%%/*}" -F name="${REPO##*/}" \
+  -F owner="${REPO%%/*}" -F name="${REPO##*/}" -F bountyFiles="$(jq length <<< "$FILES")" \
   -f query='
-query($owner: String!, $name: String!, $endCursor: String) {
+query($owner: String!, $name: String!, $bountyFiles: Int!, $endCursor: String) {
   repository(owner: $owner, name: $name) {
     pullRequests(states: OPEN, first: 50, after: $endCursor) {
       pageInfo { hasNextPage endCursor }
       nodes {
         number createdAt isDraft headRefName isCrossRepository
         author { login __typename }
-        files(first: 3) { totalCount nodes { path } }
+        files(first: $bountyFiles) { totalCount nodes { path } }
         early: comments(first: 100) { nodes { body author { login } } }
         late: comments(last: 100) { nodes { body author { login } } }
       }
@@ -46,7 +46,7 @@ query($owner: String!, $name: String!, $endCursor: String) {
     select((.isDraft | not)
       and .author.__typename != "Bot"
       and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not))
-      and ((.author.login | IN($authors[])) and .files.totalCount <= 2
+      and ((.author.login | IN($authors[])) and .files.totalCount > 0 and .files.totalCount <= ($bountyFiles | length)
         and all(.files.nodes[]; .path | IN($bountyFiles[])) | not))
     | select([.early.nodes[], .late.nodes[]
         | select(.author.login == "ethorg-agent" and (.body | contains("First-pass review")))] | length == 0)
