@@ -101,7 +101,7 @@ const LINKS: Record<MevBoostLink, Link> = {
   boost: pathLink(10, [44, 165], [62, 165], [62, 148]),
   // MEV-Boost's end face to each relay.
   "relay-1": pathLink(10, [80, 137], [100, 137], [100, 55], [118, 55]),
-  "relay-2": pathLink(10, [80, 137], [128, 137], [128, 99]),
+  "relay-2": pathLink(10, [100, 137], [128, 137], [128, 99]),
   // From the builders into each relay's end face.
   "build-1": pathLink(10, [212, -25], [185, -25], [185, 55], [138, 55]),
   "build-2": pathLink(10, [212, -25], [185, -25], [185, 89], [138, 89]),
@@ -282,6 +282,20 @@ function MevBoostRig({
           ))}
         </g>
 
+        <g {...part("node")}>
+          <IsoPlate box={NODE} state={state("node")} />
+          {NODE_DETAIL}
+        </g>
+        {CONTACT_SHADOWS}
+        <g {...part("proposer")}>
+          <IsoSolid box={PROPOSER} hue="entity" state={state("proposer")} />
+          {PROPOSER_DETAIL}
+        </g>
+        <g {...part("boost")}>
+          <IsoSolid box={BOOST} hue="entity" state={state("boost")} />
+          {BOOST_DETAIL}
+        </g>
+
         <g {...part("relays")}>
           <IsoSolid box={RELAY_PAD} hue="neutral" state={padState("relays")} />
           {RELAY_PAD_DETAIL}
@@ -289,7 +303,7 @@ function MevBoostRig({
 
         {/* Over the relays' pad, under the relays: the builders' links into
             their end faces, and MEV-Boost's into the first one's hidden back
-            face. */}
+            face (it shares its first stretch with the second relay's link). */}
         <g {...part("builders")}>
           {pipe("build-1", "builders")}
           {pipe("build-2", "builders")}
@@ -321,23 +335,9 @@ function MevBoostRig({
           )}
         </g>
 
-        <g {...part("node")}>
-          <IsoPlate box={NODE} state={state("node")} />
-          {NODE_DETAIL}
-        </g>
-        {CONTACT_SHADOWS}
-
-        <g {...part("boost")}>
-          {pipe("relay-2", "boost")}
-          <IsoSolid box={BOOST} hue="entity" state={state("boost")} />
-          {BOOST_DETAIL}
-        </g>
-
-        <g {...part("proposer")}>
-          {pipe("boost", "proposer")}
-          <IsoSolid box={PROPOSER} hue="entity" state={state("proposer")} />
-          {PROPOSER_DETAIL}
-        </g>
+        {/* Links leaving visible faces, drawn after their boxes. */}
+        <g {...part("boost")}>{pipe("relay-2", "boost")}</g>
+        <g {...part("proposer")}>{pipe("boost", "proposer")}</g>
 
         <g {...part("network")}>{pipe("publish", "network")}</g>
       </svg>

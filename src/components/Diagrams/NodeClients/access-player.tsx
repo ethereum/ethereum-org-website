@@ -36,7 +36,7 @@ interface NodeAccessPlayerProps {
 /**
  * The nodes.png replacement, on the shared node drawing: a wallet asks your
  * own node for a balance, sends a transaction through it, and your node
- * verifies the block that includes it.
+ * verifies a new block itself.
  */
 export function NodeAccessPlayer({
   initialStep = IDLE_STEP,

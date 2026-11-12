@@ -12,8 +12,9 @@
  *   getHeader, submitBlindedBlock). Since Fulu the proposer calls
  *   submitBlindedBlockV2: the relay replies 202 and publishes the full block
  *   and blobs itself, instead of returning the payload (apis/builder/
- *   blinded_blocks_v2.yaml; v1 is deprecated). Method names are written
- *   without their version, which changes with network upgrades.
+ *   blinded_blocks_v2.yaml; v1 is deprecated, and both are replaced from
+ *   Gloas). Method names are written without their version, which changes
+ *   with network upgrades.
  * - Builders submit blocks with bids to relays, which simulate them before
  *   offering them (Flashbots relay API, POST /relay/v1/builder/blocks);
  *   builders take registrations from the relays

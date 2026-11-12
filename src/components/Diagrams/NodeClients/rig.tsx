@@ -305,7 +305,7 @@ const VALIDATOR_SPOT: AnatomyLabelSpot = {
   id: "validator",
   tone: "entity",
   target: P(-34, 152, 0),
-  anchor: [34, 216],
+  anchor: [41, 218],
   placement: "below",
 }
 
@@ -509,6 +509,7 @@ function NodeClientsRig({
           {pipe("engine", "engine")}
           {view.jwt && (
             <>
+              <IsoSolid box={LOCK} hue="entity" state={state("engine")} />
               <path
                 d={LOCK_SHACKLE}
                 fill="none"
@@ -518,7 +519,6 @@ function NodeClientsRig({
                     : "stroke-diagram-entity"
                 }
               />
-              <IsoSolid box={LOCK} hue="entity" state={state("engine")} />
             </>
           )}
         </g>
@@ -547,9 +547,9 @@ function NodeClientsRig({
         {view.validator && (
           <g {...part("validator")}>
             {VALIDATOR_SHADOW}
-            {pipe("vc", "validator")}
             <IsoSolid box={VALIDATOR} hue="entity" state={state("validator")} />
             {VALIDATOR_DETAIL}
+            {pipe("vc", "validator")}
           </g>
         )}
 

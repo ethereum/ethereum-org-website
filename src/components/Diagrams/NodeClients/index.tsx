@@ -82,8 +82,8 @@ export interface NodeStepDiagramProps {
 /**
  * Interactive replacement for `nodes.png` ("Using Ethereum through your own
  * node"), on the same drawing: a wallet queries your node, sends a
- * transaction through it to the node's peers, and your node verifies the
- * block that includes it.
+ * transaction through it to the node's peers, and your node verifies a new
+ * block itself.
  */
 export const NodeAccessDiagram = (props: NodeStepDiagramProps) => (
   <DiagramMessages prefix="node-clients">

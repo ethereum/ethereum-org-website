@@ -188,7 +188,7 @@ Searchers look for lucrative MEV opportunities and send transaction bundles to b
 
 MEV Boost retains the same workings of the original Flashbots auction, albeit with new features designed for Ethereum’s switch to proof-of-stake. Searchers still find profitable MEV transactions for inclusion in blocks, but a new class of specialized parties, called **builders**, are responsible for aggregating transactions and bundles into blocks. A builder accepts sealed-price bids from searchers and runs optimizations to find the most profitable ordering.
 
-The relayer is still responsible for validating blocks before passing them to the proposer. Relays also act as escrows: they hold each builder's full block, providing [data availability](/developers/docs/data-availability/), and show the proposer only its header until the proposer has signed it, then publish the full block. Here, a validator connected to one or more relays asks for available execution payloads, and MEV Boost selects the payload header with the highest bid.
+The relayer is still responsible for validating builders' blocks before offering their headers to the proposer. Relays also act as escrows: they hold each builder's full block, providing [data availability](/developers/docs/data-availability/), and show the proposer only its header until the proposer has signed it, then publish the full block. Here, a validator connected to one or more relays asks for available execution payloads, and MEV Boost selects the payload header with the highest bid.
 
 #### How does the Builder API mitigate MEV’s impact? {#how-does-builder-api-curb-mev-impact}
 
