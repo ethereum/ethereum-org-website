@@ -192,6 +192,7 @@ safe-outputs:
             else
               gh api -X POST "repos/$REPO/issues/$pr/comments" -F body=@body.md > /dev/null
             fi
+            gh api -X POST "repos/$REPO/issues/$pr/labels" -f "labels[]=needs product review 🕵️" > /dev/null
 pre-agent-steps:
   - name: Save the PR and the pages it links
     env:
