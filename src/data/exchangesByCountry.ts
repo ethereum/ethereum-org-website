@@ -140,6 +140,7 @@ const exchangesByCountry = {
     "matrixport",
     "localcoinswap",
     "p2pme",
+    "vailox",
   ],
   // Armenia
   AM: [
@@ -218,6 +219,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Azerbaijan
   AZ: [
@@ -334,6 +336,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Belize
   BZ: [
@@ -553,6 +556,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Burkina Faso
   BF: [
@@ -881,6 +885,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Cuba
   CU: [
@@ -917,6 +922,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Czech republic
   CZ: [
@@ -1129,6 +1135,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Eswatini (formerly Swaziland)
   SZ: [
@@ -1216,6 +1223,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // France
   FR: [
@@ -1235,6 +1243,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // French Guiana (France)
   GF: [
@@ -1342,6 +1351,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Ghana
   GH: [
@@ -1401,6 +1411,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Greenland (Denmark)
   GL: [
@@ -1690,6 +1701,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Isle of Man
   IM: [
@@ -1749,6 +1761,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Jamaica
   JM: [
@@ -1968,6 +1981,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Lebanon
   LB: [
@@ -2069,6 +2083,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Luxembourg
   LU: [
@@ -2091,6 +2106,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Madagascar
   MG: [
@@ -2193,6 +2209,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Marshall Islands
   MH: [
@@ -2518,6 +2535,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // New Caledonia (France)
   NC: [
@@ -2904,6 +2922,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Puerto Rico (USA)
   PR: [
@@ -3306,6 +3325,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Slovenia
   SI: [
@@ -3328,6 +3348,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Solomon Islands
   SB: [
@@ -3444,6 +3465,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "vailox",
   ],
   // Sri Lanka
   LK: [
@@ -3848,6 +3870,7 @@ const exchangesByCountry = {
     "bitflyer",
     "okx",
     "localcoinswap",
+    "vailox",
   ],
   // Uruguay
   UY: [
@@ -3912,7 +3935,16 @@ const exchangesByCountry = {
     "localcoinswap",
   ],
   // Venezuela
-  VE: ["coinmama", "kraken", "wazirx", "okx", "bybit", "matrixport", "p2pme"],
+  VE: [
+    "coinmama",
+    "kraken",
+    "wazirx",
+    "okx",
+    "bybit",
+    "matrixport",
+    "p2pme",
+    "vailox",
+  ],
   // Vietnam
   VN: [
     "coinmama",

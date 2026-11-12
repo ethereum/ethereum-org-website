@@ -40,6 +40,7 @@ import p2pme from "@/public/images/exchanges/p2pme.png"
 import peer from "@/public/images/exchanges/peer.png"
 import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
+import vailox from "@/public/images/exchanges/vailox.png"
 import wazirx from "@/public/images/exchanges/wazirx.png"
 import zebpay from "@/public/images/exchanges/zebpay.png"
 
@@ -74,6 +75,7 @@ type ExchangeKey =
   | "p2pme"
   | "rain"
   | "shakepay"
+  | "vailox"
   | "wazirx"
   | "zebpay"
   | "peer"
@@ -326,6 +328,13 @@ const exchanges: ExchangeDetails = {
     name: "P2P.me",
     url: "https://p2p.me/",
     image: p2pme,
+    usaExceptions: [],
+    p2p: true,
+  },
+  vailox: {
+    name: "Vailox",
+    url: "https://vailox.com/",
+    image: vailox,
     usaExceptions: [],
     p2p: true,
   },
