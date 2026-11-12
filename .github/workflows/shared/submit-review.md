@@ -18,7 +18,7 @@ safe-outputs:
           required: true
           type: string
         lanes:
-          description: "Comma-separated lanes the PR touches, from: code, tooling, data, content, translation, deps, docs"
+          description: "Comma-separated lanes the PR touches, from: code, tooling, data, content, listing, translation, deps, docs"
           required: true
           type: string
         risk:
@@ -123,7 +123,7 @@ safe-outputs:
                  sha: (.sha as $s | if ($s | type) == "string" and ($commits | index($s)) != null then $s
                        elif $evsha != "" then $evsha else $commits[-1] end),
                  lanes: (.lanes | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != "")) | unique
-                   | if length == 0 or any(IN("code", "tooling", "data", "content", "translation", "deps", "docs") | not) then error("bad lanes") else . end),
+                   | if length == 0 or any(IN("code", "tooling", "data", "content", "listing", "translation", "deps", "docs") | not) then error("bad lanes") else . end),
                  risk: ([.risk, $paths.floor] | max),
                  reason: (if $paths.floor > .risk then "\($paths.floor) floor for `\($paths.floorReason)`; reviewer said \(.risk): \(.reason | clean)" else (.reason | clean) end),
                  goal: (.goal // "" | clean), base, claims: $claims,
