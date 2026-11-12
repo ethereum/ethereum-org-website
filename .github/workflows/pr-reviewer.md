@@ -4,6 +4,9 @@ description: Lane-aware, findings-only first-pass review of pull requests, inclu
 on:
   pull_request_target:
     types: [opened, ready_for_review]
+    paths-ignore:
+      - src/data/consensus-bounty-hunters.json
+      - src/data/execution-bounty-hunters.json
   roles: all
   skip-bots:
     - allcontributors[bot]

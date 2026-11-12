@@ -1,0 +1,108 @@
+name: Bug bounty leaderboard entry
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - src/data/consensus-bounty-hunters.json
+      - src/data/execution-bounty-hunters.json
+
+concurrency:
+  group: bounty-entry-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Base branch only: the PR's merge ref is fetched as data and never checked out.
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            .github/scripts/bounty-entry.sh
+            .github/CODEOWNERS
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Mint app token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+          private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+          permission-pull-requests: write
+
+      - name: Validate, then approve or report
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          BOT: ${{ steps.app-token.outputs.app-slug }}[bot]
+          EVENT_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          script=.github/scripts/bounty-entry.sh
+
+          bot_approvals() {
+            gh api --paginate "repos/$REPO/pulls/$PR/reviews" | jq -rs --arg bot "$BOT" --arg sha "${1:-}" \
+              'add // [] | .[] | select(.user.login == $bot and .state == "APPROVED" and ($sha == "" or .commit_id == $sha)) | .id'
+          }
+          dismiss() {
+            for id in $1; do
+              gh api -X PUT "repos/$REPO/pulls/$PR/reviews/$id/dismissals" -f event=DISMISS -f message="$2" > /dev/null
+            done
+          }
+          fail() {
+            printf 'The bug bounty leaderboard check did not pass on %s:\n\n```\n%s\n```\n\nPush a fix and it reruns.\n' "$head" "$1" \
+              | gh pr comment "$PR" --repo "$REPO" --body-file -
+            dismiss "$(bot_approvals)" "The bug bounty leaderboard check no longer passes on $head."
+            echo "$1"
+            exit 1
+          }
+
+          match=$(bash "$script" match "$PR")
+          if [ "$match" != true ]; then
+            dismiss "$(bot_approvals)" "$EVENT_HEAD is no longer a bug bounty leaderboard-only change; this approval no longer applies."
+            echo "Not a code owner's bounty-only PR; skipping."
+            exit 0
+          fi
+
+          for _ in 1 2 3 4 5 6; do
+            pr=$(gh api "repos/$REPO/pulls/$PR")
+            mergeable=$(jq -r .mergeable <<< "$pr")
+            [ "$mergeable" = null ] || break
+            sleep 5
+          done
+          head=$(jq -r .head.sha <<< "$pr")
+          if [ "$mergeable" = null ]; then
+            echo "::error::GitHub hasn't computed mergeability yet. Rerun this check."
+            exit 1
+          fi
+          if [ "$mergeable" != true ]; then
+            fail "GitHub reports the PR as not mergeable (mergeable: $mergeable). Resolve the conflicts with the base branch."
+          fi
+          if ! git fetch -q --no-tags --depth=2 origin "pull/$PR/merge"; then
+            fail "Could not fetch refs/pull/$PR/merge."
+          fi
+          merge=$(git rev-parse FETCH_HEAD)
+          if [ "$(git rev-parse "$merge^2")" != "$head" ]; then
+            echo "::error::refs/pull/$PR/merge is not built from the head commit yet. Rerun this check."
+            exit 1
+          fi
+          if ! errors=$(bash "$script" validate "$merge^1" "$merge"); then
+            fail "$errors"
+          fi
+
+          ids=$(bot_approvals "$head")
+          if [ -n "$ids" ]; then
+            echo "Already approved $head."
+            exit 0
+          fi
+          gh api "repos/$REPO/pulls/$PR/reviews" -f commit_id="$head" -f event=APPROVE \
+            -f body="Bug bounty leaderboard entry: data check passed. A code owner still merges."
