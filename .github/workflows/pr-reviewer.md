@@ -85,6 +85,8 @@ pre-agent-steps:
         --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,mergeStateStatus,additions,deletions,changedFiles,labels \
         > /tmp/gh-aw/agent/pr-meta.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
+      if [ -f .github/scripts/listing-research.mjs ] && node .github/scripts/listing-research.mjs match "$PR_NUMBER"; then
+        echo yes; else echo no; fi > /tmp/gh-aw/agent/listing.txt
 imports:
   - shared/pr-review-core.md
   - shared/submit-review.md
