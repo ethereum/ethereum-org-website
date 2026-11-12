@@ -72,8 +72,8 @@ const CourseProgress = ({
       <span
         className={cn(
           "text-sm font-bold",
-          passed
-            ? // Mastered: a gold tag, matching the trophy
+          passed && onColor
+            ? // Mastered, on the course banner: a gold tag matching the trophy
               "w-fit rounded-full bg-yellow-400 px-2.5 py-0.5 tracking-wide text-yellow-950 uppercase"
             : onColor
               ? "text-white"

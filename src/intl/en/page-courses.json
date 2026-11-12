@@ -81,6 +81,8 @@
   "page-courses-profile-recent-detail": "{date} · best first try {accuracy}",
   "page-courses-track-essentials-title": "Ethereum essentials",
   "page-courses-track-essentials-description": "The basics, from what Ethereum is to smart contracts.",
+  "page-courses-up-next": "Up next",
+  "page-courses-start-here": "Start here",
   "page-courses-level-beginner": "Beginner",
   "page-courses-lessons-done": "{done} of {total} lessons complete",
   "page-courses-progress-check-next": "All lessons complete. Mastery check next",

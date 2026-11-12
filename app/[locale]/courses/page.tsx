@@ -11,6 +11,7 @@ import type { PageParams } from "@/lib/types"
 import CourseArt from "@/components/Courses/art/course-art"
 import {
   CourseCardAction,
+  CourseCardNext,
   CourseCardTrophy,
 } from "@/components/Courses/course-card-status"
 import CourseProgress from "@/components/Courses/course-progress"
@@ -22,7 +23,6 @@ import {
   ProgressNote,
 } from "@/components/Courses/progress-stats"
 import { chunkyButton, courseThemeStyle } from "@/components/Courses/theme"
-import TrackConnector from "@/components/Courses/track-connector"
 import HubHero from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -39,9 +39,11 @@ import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
+  type Course,
   courseHref,
   COURSES_INDEXABLE,
   COURSES_OG_IMAGE,
@@ -52,9 +54,18 @@ import CoursesPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/courses/learning-path-garden-with-trophy.jpg"
 
+/** What the client needs to work out a track's mastered and next courses */
+const toTrackCourses = (courses: Course[]) =>
+  courses.map(({ id, lessons, exam }) => ({
+    id,
+    lessonIds: lessons.map((lesson) => lesson.id),
+    hasExam: exam.length > 0,
+  }))
+
 const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
   setRequestLocale(locale)
+  const int = numberFormat(locale)
 
   const t = await getTranslations("page-courses")
 
@@ -105,7 +116,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     ({ id, level, theme, art, lessons, exam }, position) => (
                       <li
                         key={id}
-                        className="relative m-0"
+                        className="m-0"
                         style={courseThemeStyle(theme)}
                       >
                         <Card
@@ -123,7 +134,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                               <span className="absolute start-3 top-3 rounded-full bg-background px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
                                 {t(`page-courses-level-${level}`)}
                               </span>
+                              {/* Place in the track, matching the track map; visual only, as the list is ordered */}
+                              <span
+                                aria-hidden
+                                className="absolute end-3 bottom-3 grid size-8 place-items-center rounded-full bg-background text-sm font-bold text-(--course-strong) tabular-nums dark:text-(--course-bright)"
+                              >
+                                {int.format(position + 1)}
+                              </span>
                               <CourseCardTrophy courseId={id} />
+                              <CourseCardNext
+                                courseId={id}
+                                track={toTrackCourses(track.courses)}
+                              />
                               <CourseArt
                                 id={art}
                                 className="mx-auto max-w-48 transition-transform duration-300 motion-safe:group-hover/link:scale-105"
@@ -158,10 +180,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             </span>
                           </CardFooter>
                         </Card>
-                        <TrackConnector
-                          index={position}
-                          count={track.courses.length}
-                        />
                       </li>
                     )
                   )}
