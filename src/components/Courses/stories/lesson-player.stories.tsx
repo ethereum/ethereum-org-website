@@ -25,14 +25,14 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-const gas = getLesson("transactions", "gas")!
+const gas = getLesson("gas", "gas")!
 const keys = getLesson("wallets", "keys")!
-const lifecycle = getLesson("transactions", "lifecycle")!
+const lifecycle = getLesson("sending", "lifecycle")!
 
 /** Includes the gas-fee slider widget */
 export const GasFees: Story = {
   args: {
-    courseId: "transactions",
+    courseId: "gas",
     lesson: gas.lesson,
   },
 }
@@ -49,17 +49,17 @@ export const WalletKeys: Story = {
 /** Includes the drag-and-drop / tap-to-order step */
 export const TransactionLifecycle: Story = {
   args: {
-    courseId: "transactions",
+    courseId: "sending",
     lesson: lifecycle.lesson,
   },
 }
 
-const chain = getLesson("blockchain", "chain")!
+const chain = getLesson("blockchains", "chain")!
 
 /** Includes the chain-tamper widget */
 export const BreakTheChain: Story = {
   args: {
-    courseId: "blockchain",
+    courseId: "blockchains",
     lesson: chain.lesson,
   },
 }
@@ -74,32 +74,32 @@ export const WhoHoldsTheKeys: Story = {
   },
 }
 
-const failed = getLesson("transactions", "failed")!
+const failed = getLesson("gas", "failed")!
 
 /** Includes the gas-limit widget (snap slider, find the lowest limit that succeeds) */
 export const FailedTransactions: Story = {
   args: {
-    courseId: "transactions",
+    courseId: "gas",
     lesson: failed.lesson,
   },
 }
 
-const nodes = getLesson("blockchain", "nodes")!
+const nodes = getLesson("blockchains", "nodes")!
 
 /** Includes the node-network widget (switch nodes off and on, watch one sync) */
 export const BlockchainNodes: Story = {
   args: {
-    courseId: "blockchain",
+    courseId: "blockchains",
     lesson: nodes.lesson,
   },
 }
 
-const supply = getLesson("ether", "supply")!
+const supply = getLesson("eth", "supply")!
 
 /** Includes the supply-balance widget (snap slider, find where burn matches issuance) */
 export const EtherSupply: Story = {
   args: {
-    courseId: "ether",
+    courseId: "eth",
     lesson: supply.lesson,
   },
 }
@@ -146,7 +146,7 @@ export const CourseCheck: Story = {
     courseId: "wallets",
     lesson: { id: EXAM_ID, steps: wallets.exam },
     exam: true,
-    nextCourseId: "blockchain",
+    nextCourseId: "blockchains",
   },
 }
 
@@ -169,7 +169,7 @@ export const MatchPairs: Story = {
 /** Fill step on its own: tap words from the bank into the gaps */
 export const FillTheGaps: Story = {
   args: {
-    courseId: "ether",
-    lesson: onlySteps("ether", "supply", ["fill"]),
+    courseId: "eth",
+    lesson: onlySteps("eth", "supply", ["fill"]),
   },
 }

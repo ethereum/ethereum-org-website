@@ -1,8 +1,8 @@
 import type { Course } from "./types"
 
-export const etherCourse: Course = {
-  id: "ether",
-  level: "beginner",
+export const ethCourse: Course = {
+  id: "eth",
+  level: "intermediate",
   theme: "blue",
   art: "diamond",
   lessons: [

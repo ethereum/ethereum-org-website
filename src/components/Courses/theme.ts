@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils/cn"
 
 import type { CoursePreset, CourseTheme } from "@/data/courses"
 
-import { generatePalette, toHex } from "./course-palette"
+import { generateMutedPalette, generatePalette, toHex } from "./course-palette"
 
 const hsl = (token: string) => `hsl(var(--${token}))`
 
@@ -41,9 +41,16 @@ const PALETTES: Record<
   },
 }
 
-const paletteFor = (theme: CourseTheme) => {
-  if (typeof theme === "string") return PALETTES[theme]
-  const { fill, strong, bright } = generatePalette(theme.hue)
+/**
+ * A course theme, or `muted`: the low-chroma palette for teaser cards, never
+ * a course's own colour
+ */
+type ThemeStyleInput = CourseTheme | "muted"
+
+const paletteFor = (theme: ThemeStyleInput) => {
+  if (typeof theme === "string" && theme !== "muted") return PALETTES[theme]
+  const { fill, strong, bright } =
+    theme === "muted" ? generateMutedPalette() : generatePalette(theme.hue)
   return { fill: toHex(fill), strong: toHex(strong), bright: toHex(bright) }
 }
 
@@ -55,7 +62,7 @@ export const themeId = (theme: CourseTheme) =>
  * Exploration styling: each course sets `--course*` vars on a wrapper and
  * everything inside (path, buttons, art) reads them.
  */
-export const courseThemeStyle = (theme: CourseTheme) => {
+export const courseThemeStyle = (theme: ThemeStyleInput) => {
   const { fill, strong, bright } = paletteFor(theme)
   return {
     "--course": fill,

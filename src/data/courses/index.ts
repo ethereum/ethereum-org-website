@@ -1,31 +1,55 @@
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { blockchainCourse } from "./blockchain"
-import { etherCourse } from "./ether"
+import { blockchainsCourse } from "./blockchains"
+import { ethCourse } from "./eth"
 import { everydayCourse } from "./everyday"
+import { gasCourse } from "./gas"
+import { proofOfStakeCourse } from "./proof-of-stake"
+import { sendingCourse } from "./sending"
 import { smartContractsCourse } from "./smart-contracts"
-import { transactionsCourse } from "./transactions"
 import type { Course, Lesson, Track } from "./types"
 import { walletsCourse } from "./wallets"
 
 export type * from "./types"
 
-/** Hub sections, in order; each lists its courses in suggested order */
+/**
+ * Hub sections, in order; each lists its courses in suggested order, then
+ * any teasers (`upcoming`)
+ */
 export const TRACKS: Track[] = [
   {
     id: "essentials",
     courses: [
       everydayCourse,
       walletsCourse,
-      blockchainCourse,
-      transactionsCourse,
-      etherCourse,
+      blockchainsCourse,
+      sendingCourse,
       smartContractsCourse,
+    ],
+  },
+  { id: "using", courses: [] },
+  {
+    id: "deeper",
+    courses: [ethCourse, gasCourse, proofOfStakeCourse],
+  },
+  {
+    id: "under-the-hood",
+    courses: [],
+    upcoming: [
+      { id: "nodes", level: "advanced", art: "blocks" },
+      { id: "evm", level: "advanced", art: "vending" },
+      { id: "mev", level: "advanced", art: "coins" },
+      { id: "roadmap", level: "advanced", art: "diamond" },
+      { id: "privacy", level: "advanced", art: "mailbox" },
+      { id: "build", level: "advanced", art: "contract", href: "/developers/" },
     ],
   },
 ]
 
-/** Suggested path, not a lock: see the courses skill's curriculum reference */
+/**
+ * Suggested path, not a lock: see the courses skill's curriculum reference.
+ * Live courses only; teasers never get pages.
+ */
 export const COURSES: Course[] = TRACKS.flatMap(({ courses }) => courses)
 
 export const getCourse = (courseId: string) =>

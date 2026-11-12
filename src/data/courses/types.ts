@@ -174,20 +174,43 @@ export interface PageLink {
   title: string
 }
 
-/** Keys: `{course}-title`, `{course}-description` */
+/**
+ * What a course may assume and use. Beginner: ages 10 to 12, analogies first,
+ * no numbers, units, formulas or timings. Intermediate: numbers and mechanics.
+ * Advanced: internals. Strings: `page-courses-level-{level}`.
+ */
+export type CourseLevel = "beginner" | "intermediate" | "advanced"
+
+/**
+ * A course not built yet, shown as a "coming soon" card at the end of its
+ * track. Not in `COURSES`: no pages, routes, sitemap entry or JSON-LD. Keys:
+ * `{id}-title`, `{id}-description`, so they carry over when the course ships.
+ */
+export interface UpcomingCourse {
+  id: string
+  level: CourseLevel
+  art: CourseArtId
+  /** Turns the teaser into a link card pointing elsewhere on the site */
+  href?: string
+}
+
 /**
  * A themed group of courses, shown as one hub section. Strings:
  * `page-courses-track-{id}-title` and `-description`. Course URLs don't
- * include the track, so a course can move between tracks.
+ * include the track, so a course can move between tracks. A track with no
+ * courses and no teasers is hidden.
  */
 export interface Track {
   id: string
   courses: Course[]
+  /** Teasers after the live courses */
+  upcoming?: UpcomingCourse[]
 }
 
+/** Keys: `{course}-title`, `{course}-description` */
 export interface Course {
   id: string
-  level: "beginner"
+  level: CourseLevel
   theme: CourseTheme
   art: CourseArtId
   lessons: Lesson[]

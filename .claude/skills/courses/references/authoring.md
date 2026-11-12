@@ -4,13 +4,17 @@ How to add courses, lessons and steps, and how to write them. Vocabulary and ord
 
 ## Add a course
 
-1. Pick an `id` (kebab-case, also the route segment), its track in `TRACKS` and its place in that track.
+1. Pick an `id` (kebab-case, also the route segment), its track in `TRACKS` and its place in that track. Its `level` is the track's level (see `SKILL.md`). If the course was announced as a teaser, reuse the teaser's id and strings and move the entry from the track's `upcoming` to its `courses`.
 2. Create `src/data/courses/<id>.ts` exporting a `Course`; add it to its track in `TRACKS` (a new track also needs `page-courses-track-<id>-title` and `-description` strings). Every course needs its own colour: use an unused preset, or `theme: { hue: <0-360> }` for a generated OKLCH palette (`course-palette.ts` solves lightness per hue to meet the contrast targets; avoid hues near green and red, which read as answer verdicts). `tests/unit/courses/palette.spec.ts` fails on a repeated theme. Add a new `CourseArtId` or `LessonIconId` only if no existing one fits (icons map in `lesson-icons.ts`).
 3. Write the strings in `src/intl/en/page-courses.json` using the key conventions documented on the types in `src/data/courses/types.ts`. English only: other locales come from the intl pipeline.
 4. Add the lesson rows to the ledger in `curriculum.md`.
 5. Run the checks below.
 
 Routes, metadata and static params are generated from `COURSES` (all tracks, in order), so no page files change. Course URLs never include the track, so a course can move between tracks.
+
+## Announce a course (teaser)
+
+Add `{ id, level, art }` to the track's `upcoming`, plus `{id}-title` and `{id}-description` strings. It shows as a muted "Coming soon" card after the track's live courses, with no page, route, sitemap entry, JSON-LD or progress. Give it an `href` instead to make a link card to another site page (an "Explore" button, no "Coming soon" tag). Reuse an existing `CourseArtId`; the strings spec requires the keys and treats them as used.
 
 ## Lesson anatomy
 
@@ -26,7 +30,7 @@ One new idea per lesson. If the takeaway needs "and" twice, split the lesson.
 
 For animated explanations, prefer the dev-docs interactive diagrams (`src/components/Diagrams/`, on `dev`) over a new widget when one shows the idea: embed them in concept steps for future lessons. Recolour their objects with the courses' more saturated palette (`theme.ts`), brighter than the dev docs use. Existing lessons need not be retrofitted.
 
-Every lesson sets `learnMore`: one ethereum.org page offered on the completion screen, never mid-lesson, so it costs no momentum. Pick the beginner-level page closest to the lesson's idea. It is further reading, not a citation, so a whole page is fine; an `#anchor` is optional. The link text is the page's own title, so it needs no string; `tests/unit/courses/links.spec.ts` checks the page, title and anchor exist.
+Every lesson sets `learnMore`: one ethereum.org page offered on the completion screen, never mid-lesson, so it costs no momentum. Pick the page closest to the lesson's idea at the course's level. It is further reading, not a citation, so a whole page is fine; an `#anchor` is optional. The link text is the page's own title, so it needs no string; `tests/unit/courses/links.spec.ts` checks the page, title and anchor exist.
 
 ## Writing questions
 

@@ -3,6 +3,7 @@ import { expect, test } from "@playwright/test"
 import {
   BLACK,
   contrast,
+  generateMutedPalette,
   generatePalette,
   PALETTE_TARGETS,
   WHITE,
@@ -16,9 +17,12 @@ test.describe("course palette", () => {
     expect(ids.length).toBe(new Set(ids).size)
   })
 
-  test("generated palettes meet their contrast targets at every hue", () => {
-    for (let hue = 0; hue < 360; hue++) {
-      const { fill, strong, bright } = generatePalette(hue)
+  test("generated palettes meet their contrast targets at every hue, and muted", () => {
+    const palettes = [
+      ...Array.from({ length: 360 }, (_, hue) => generatePalette(hue)),
+      generateMutedPalette(),
+    ]
+    for (const { fill, strong, bright } of palettes) {
       expect(contrast(fill, WHITE)).toBeGreaterThanOrEqual(4.5)
       expect(contrast(strong, WHITE)).toBeGreaterThanOrEqual(
         PALETTE_TARGETS.strong - 0.01

@@ -22,7 +22,11 @@ import {
   ProgressChips,
   ProgressNote,
 } from "@/components/Courses/progress-stats"
-import { chunkyButton, courseThemeStyle } from "@/components/Courses/theme"
+import {
+  chunkyButton,
+  chunkyButtonSecondary,
+  courseThemeStyle,
+} from "@/components/Courses/theme"
 import HubHero from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -103,7 +107,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <NoProfileAlert />
             </Suspense>
 
-            {TRACKS.map((track, index) => (
+            {TRACKS.filter(
+              ({ courses, upcoming = [] }) => courses.length + upcoming.length
+            ).map((track, index) => (
               <Section
                 key={track.id}
                 id={track.id}
@@ -187,6 +193,70 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       </li>
                     )
                   )}
+                  {track.upcoming?.map(({ id, level, art, href }, index) => (
+                    <li
+                      key={id}
+                      className="m-0"
+                      style={courseThemeStyle("muted")}
+                    >
+                      {/* Not a course yet: no link, progress or action, unless it points elsewhere */}
+                      <Card
+                        href={href}
+                        variant="nested"
+                        border
+                        className="h-full"
+                      >
+                        <CardHeader>
+                          <CardBanner
+                            background="none"
+                            size="full"
+                            className="relative bg-(--course-soft) px-10 pt-12 pb-4"
+                          >
+                            <span className="absolute start-3 top-3 rounded-full bg-background px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
+                              {t(`page-courses-level-${level}`)}
+                            </span>
+                            <span
+                              aria-hidden
+                              className="absolute end-3 bottom-3 grid size-8 place-items-center rounded-full bg-background text-sm font-bold text-(--course-strong) tabular-nums dark:text-(--course-bright)"
+                            >
+                              {int.format(track.courses.length + index + 1)}
+                            </span>
+                            {!href && (
+                              <span className="absolute end-3 top-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
+                                {t("page-courses-coming-soon")}
+                              </span>
+                            )}
+                            <CourseArt
+                              id={art}
+                              className={cn(
+                                "mx-auto max-w-48",
+                                href &&
+                                  "transition-transform duration-300 motion-safe:group-hover/link:scale-105"
+                              )}
+                            />
+                          </CardBanner>
+                        </CardHeader>
+                        <CardContent>
+                          <CardTitle>{t(`${id}-title`)}</CardTitle>
+                          <CardParagraph>
+                            {t(`${id}-description`)}
+                          </CardParagraph>
+                        </CardContent>
+                        {href && (
+                          <CardFooter buttons="full">
+                            <span
+                              className={cn(
+                                chunkyButtonSecondary,
+                                "inline-flex items-center justify-center"
+                              )}
+                            >
+                              {t("page-courses-hub-explore")}
+                            </span>
+                          </CardFooter>
+                        )}
+                      </Card>
+                    </li>
+                  ))}
                 </ol>
               </Section>
             ))}

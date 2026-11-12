@@ -1,5 +1,5 @@
 /**
- * XP levels, named after ETH's units (the ether course teaches them): seven
+ * XP levels, named after ETH's units (the eth course teaches them): seven
  * tiers of three levels. Strings: `page-courses-xp-level-{id}` for the name,
  * `-fact` for the namesake card shown on reaching the tier.
  */
