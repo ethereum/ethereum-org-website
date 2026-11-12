@@ -11,9 +11,12 @@ import {
 import { abTestRoutes, ALLOW_DEBUG_OVERRIDES } from "./src/lib/ab-testing/flags"
 import { getActiveExperimentNames } from "./src/lib/ab-testing/matomo-adapter"
 import { DEFAULT_LOCALE } from "./src/lib/constants"
-import { getFirstSegment } from "./src/lib/utils/url"
+import { getCanonicalRedirectPath } from "./src/lib/utils/canonicalPath"
+import legacyRedirects from "./redirects.config"
 
 const handleI18nRouting = createMiddleware(routing)
+
+const LEGACY_REDIRECT_SOURCES = legacyRedirects.map(([source]) => source)
 
 // Locales that have been removed but may have external links pointing to them
 const DEPRECATED_LOCALES = new Set([
@@ -69,7 +72,9 @@ const DEPRECATED_LOCALES = new Set([
 ])
 
 function redirectTo(request: NextRequest, pathname: string, status: number) {
-  const url = request.nextUrl.clone()
+  // A plain URL, not nextUrl.clone(): NextURL re-applies the request's own
+  // trailing-slash state when formatting, which would strip the slash we add.
+  const url = new URL(request.url)
   url.pathname = pathname
   return NextResponse.redirect(url, status)
 }
@@ -77,18 +82,18 @@ function redirectTo(request: NextRequest, pathname: string, status: number) {
 export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  const lowerPath = pathname.toLowerCase()
-  if (pathname !== lowerPath) {
-    return redirectTo(request, lowerPath, 301)
-  }
-
-  const firstSegment = getFirstSegment(lowerPath)
-
-  if (firstSegment && DEPRECATED_LOCALES.has(firstSegment)) {
-    // Strip deprecated locale and redirect to default locale version
-    const rest = lowerPath.slice(firstSegment.length + 1)
-    const newPath = !rest ? "/" : rest
-    return redirectTo(request, newPath, 301)
+  // Normalize case, deprecated/default locale prefixes and the trailing slash
+  // in one hop. `trailingSlash: true` alone doesn't cover English on Netlify:
+  // next-intl rewrites `/foo` to `/en/foo/` before Next's slash redirect runs,
+  // so `/foo` was served as a 200 duplicate of `/foo/`.
+  const canonicalPath = getCanonicalRedirectPath(pathname, {
+    deprecatedLocales: DEPRECATED_LOCALES,
+    locales: routing.locales,
+    defaultLocale: DEFAULT_LOCALE,
+    legacySources: LEGACY_REDIRECT_SOURCES,
+  })
+  if (canonicalPath) {
+    return redirectTo(request, canonicalPath, 301)
   }
 
   // A/B testing: precompute flag variants and rewrite to the coded route,
