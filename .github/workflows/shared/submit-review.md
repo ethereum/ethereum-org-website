@@ -134,7 +134,7 @@ safe-outputs:
                           nit: ($all | map(select(.severity == "nit")) | length)},
                  unreviewed: ((.unreviewed // "") | clean | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != ""))),
                  run: $run}
-              | .fast_track = ((.risk | IN("R0", "R1")) and .counts.blocking == 0 and .counts.should_fix == 0 and .base == "needed" and (.unreviewed | length) == 0)
+              | .fast_track = ((.risk | IN("R0", "R1")) and .counts.blocking == 0 and .counts.should_fix == 0 and .base == "needed" and (.unreviewed | length) == 0 and all(.lanes[]; IN("content", "data", "translation", "docs")))
             ' <<<"$item") || { echo "::error::PR #$pr: invalid review payload"; exit 1; }
 
             # Visible text also gets @-mentions defused so injected text can't ping people or teams.
