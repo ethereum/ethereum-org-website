@@ -304,8 +304,7 @@ module.exports = [
     "/storybook/staging",
     "https://staging--63b7ea99632763723c7f4d6b.chromatic.com/",
   ],
-  // Paths that AI assistants and old links still request (see #19140)
-  ["/developers/apis/json-rpc", "/developers/docs/apis/json-rpc/"],
-  ["/apps/cowswap", "/apps/"],
+  // Former URLs still requested by external links (see #19140)
+  ["/apps/cowswap", "/apps/cow-swap/"],
   ["/apps/scout-game", "/apps/"],
 ]
