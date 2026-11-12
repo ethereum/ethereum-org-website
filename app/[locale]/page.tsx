@@ -33,10 +33,7 @@ import IndexPageJsonLD from "./page-jsonld"
 
 import { getAccountHolders, getGrowThePieData } from "@/lib/data"
 
-const Page = async (props: {
-  params: Promise<PageParams>
-  searchCtaVariant?: number
-}) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
@@ -88,10 +85,7 @@ const Page = async (props: {
       <IndexPageJsonLD locale={locale} />
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-          <HomeHero
-            eventCategory={eventCategory}
-            searchCtaVariant={props.searchCtaVariant}
-          />
+          <HomeHero eventCategory={eventCategory} />
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
             <KPISection

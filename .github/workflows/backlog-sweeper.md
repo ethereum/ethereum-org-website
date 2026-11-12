@@ -100,7 +100,7 @@ The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists t
 
 ## For each selected PR
 
-Review it following the core instructions below and call `submit_review` once for it, with its own `pr` and `sha`. For PR `<n>`, the pre-fetched metadata is `/tmp/gh-aw/agent/pr-<n>/pr-meta.json`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in Step 1.
+Review it following the core instructions below and call `submit_review` once for it, with its own `pr` and `sha`. For PR `<n>`, the pre-fetched metadata is `/tmp/gh-aw/agent/pr-<n>/pr-meta.json`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in the core instructions.
 
 ## Termination
 

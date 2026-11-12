@@ -225,6 +225,3 @@ export const LINE_CLAMP_CLASS_MAPPING = {
   3: "line-clamp-3",
   4: "line-clamp-4",
 } as const
-
-/** `/#ask` sends a reader straight to the homepage hero's search. */
-export const HOME_SEARCH_HASH = "ask"
