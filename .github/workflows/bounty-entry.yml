@@ -1,0 +1,70 @@
+name: Bug bounty leaderboard entry
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - src/data/consensus-bounty-hunters.json
+      - src/data/execution-bounty-hunters.json
+
+concurrency:
+  group: bounty-entry-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Base branch only: the PR head is fetched as data and never checked out.
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            .github/scripts/bounty-entry.sh
+            src/data/consensus-bounty-hunters.json
+            src/data/execution-bounty-hunters.json
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Mint app token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+          private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Validate, then approve and auto-merge
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          script=.github/scripts/bounty-entry.sh
+          git fetch -q --no-tags --depth=1 origin "pull/$PR/head"
+          sha=$(git rev-parse FETCH_HEAD)
+
+          if ! bash "$script" match "$PR"; then
+            echo "Not an allowlisted bounty-only PR; skipping."
+            gh pr merge "$PR" --repo "$REPO" --disable-auto 2>/dev/null || true
+            exit 0
+          fi
+
+          if ! errors=$(bash "$script" validate HEAD "$sha"); then
+            gh pr merge "$PR" --repo "$REPO" --disable-auto 2>/dev/null || true
+            printf 'The bug bounty leaderboard check failed on %s:\n\n```\n%s\n```\n\nPush a fix and it reruns.\n' "$sha" "$errors" \
+              | gh pr comment "$PR" --repo "$REPO" --body-file -
+            echo "$errors"
+            exit 1
+          fi
+
+          gh api "repos/$REPO/pulls/$PR/reviews" -f commit_id="$sha" -f event=APPROVE \
+            -f body="Bug bounty leaderboard entry: data check passed."
+          gh pr merge "$PR" --repo "$REPO" --auto --merge --match-head-commit "$sha"

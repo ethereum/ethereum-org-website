@@ -5,12 +5,30 @@ on:
   pull_request_target:
     types: [opened, ready_for_review]
   roles: all
+  permissions:
+    contents: read
+    pull-requests: read
+  steps:
+    - uses: actions/checkout@v6
+      with:
+        sparse-checkout: .github/scripts/bounty-entry.sh
+        sparse-checkout-cone-mode: false
+        persist-credentials: false
+    - name: Detect bug bounty leaderboard PR
+      id: bounty
+      continue-on-error: true
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPO: ${{ github.repository }}
+        PR: ${{ github.event.pull_request.number }}
+      run: bash .github/scripts/bounty-entry.sh match "$PR"
   skip-bots:
     - allcontributors[bot]
     - github-actions[bot]
     - dependabot[bot]
 if: >-
   !github.event.pull_request.draft &&
+  needs.pre_activation.outputs.bounty_result != 'success' &&
   (github.event.pull_request.head.repo.full_name != github.repository || (
     github.event.pull_request.head.ref != 'staging' &&
     github.event.pull_request.head.ref != 'dev' &&

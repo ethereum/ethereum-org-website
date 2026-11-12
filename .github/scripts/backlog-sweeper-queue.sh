@@ -2,7 +2,7 @@
 # Picks the PRs the Backlog Sweeper reviews this run and pre-fetches their metadata and heads.
 #
 # Eligible: open, non-draft, not bot-authored, not a release/intl/automated
-# branch of this repo, and never reviewed (no "First-pass review" comment from ethorg-agent). Oldest first,
+# branch of this repo, not a bug bounty leaderboard PR (bounty-entry.sh), and never reviewed (no "First-pass review" comment from ethorg-agent). Oldest first,
 # at most $LIMIT. With PR_NUMBER set (a `/review` comment or `pr` dispatch input), only that PR if it is open and not a
 # release/intl/automated branch of this repo; drafts, bot PRs and reviewed PRs are allowed.
 #
@@ -15,6 +15,7 @@ set -euo pipefail
 OUT_DIR="${OUT_DIR:-/tmp/gh-aw/agent}"
 LIMIT="${LIMIT:-5}"
 mkdir -p "$OUT_DIR"
+source "$(dirname "$0")/bounty-entry.sh"
 
 if [ -n "${PR_NUMBER:-}" ]; then
   gh api "repos/$REPO/pulls/$PR_NUMBER" --jq '
@@ -33,17 +34,20 @@ query($owner: String!, $name: String!, $endCursor: String) {
       nodes {
         number createdAt isDraft headRefName isCrossRepository
         author { login __typename }
+        files(first: 3) { totalCount nodes { path } }
         early: comments(first: 100) { nodes { body author { login } } }
         late: comments(last: 100) { nodes { body author { login } } }
       }
     }
   }
 }' --jq '.data.repository.pullRequests.nodes[]' \
-| jq -s --argjson limit "$LIMIT" '
+| jq -s --argjson limit "$LIMIT" --argjson authors "$AUTHORS" --argjson bountyFiles "$FILES" '
   map(
     select((.isDraft | not)
       and .author.__typename != "Bot"
-      and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not)))
+      and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not))
+      and ((.author.login | IN($authors[])) and .files.totalCount <= 2
+        and all(.files.nodes[]; .path | IN($bountyFiles[])) | not))
     | select([.early.nodes[], .late.nodes[]
         | select(.author.login == "ethorg-agent" and (.body | contains("First-pass review")))] | length == 0)
   )
