@@ -139,6 +139,7 @@ const exchangesByCountry = {
     "bitso",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // Armenia
   AM: [
@@ -420,6 +421,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // Bonaire (Netherlands)
   "Bonaire-Netherlands": [
@@ -490,6 +492,7 @@ const exchangesByCountry = {
     "bitso",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // British Virgin Islands (UK)
   VG: [
@@ -722,7 +725,7 @@ const exchangesByCountry = {
     "localcoinswap",
   ],
   // China
-  CN: ["bitfinex"],
+  CN: ["bitfinex", "localcoinswap"],
   // Clipperton Island (France)
   CP: [
     "coinmama",
@@ -763,6 +766,7 @@ const exchangesByCountry = {
     "bitso",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // Comoros
   KM: [
@@ -890,6 +894,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "matrixport",
+    "p2pme",
   ],
   // Cyprus
   CY: [
@@ -1026,6 +1031,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // Egypt
   EG: [
@@ -1661,6 +1667,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // Iran
   IR: ["kraken", "gateio", "matrixport"],
@@ -1851,6 +1858,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // Kiribati
   KI: [
@@ -2599,6 +2607,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // Niue (New Zealand)
   NU: [
@@ -2813,6 +2822,7 @@ const exchangesByCountry = {
     "bybit",
     "matrixport",
     "localcoinswap",
+    "p2pme",
   ],
   // Philippines
   PH: [
@@ -3861,7 +3871,14 @@ const exchangesByCountry = {
     "localcoinswap",
   ],
   // US Virgin Islands (USA)
-  VI: ["coinbase", "kraken", "cryptocom", "huobiglobal", "bybit"],
+  VI: [
+    "coinbase",
+    "kraken",
+    "cryptocom",
+    "huobiglobal",
+    "bybit",
+    "localcoinswap",
+  ],
   // Uzbekistan
   UZ: [
     "coinmama",
@@ -3895,7 +3912,7 @@ const exchangesByCountry = {
     "localcoinswap",
   ],
   // Venezuela
-  VE: ["coinmama", "kraken", "wazirx", "okx", "bybit", "matrixport"],
+  VE: ["coinmama", "kraken", "wazirx", "okx", "bybit", "matrixport", "p2pme"],
   // Vietnam
   VN: [
     "coinmama",

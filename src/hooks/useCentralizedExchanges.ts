@@ -36,6 +36,7 @@ import matrixport from "@/public/images/exchanges/matrixport.png"
 import moonpay from "@/public/images/exchanges/moonpay.png"
 import mtpelerin from "@/public/images/exchanges/mtpelerin.png"
 import okx from "@/public/images/exchanges/okx.png"
+import p2pme from "@/public/images/exchanges/p2pme.png"
 import peer from "@/public/images/exchanges/peer.png"
 import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
@@ -70,6 +71,7 @@ type ExchangeKey =
   | "moonpay"
   | "mtpelerin"
   | "okx"
+  | "p2pme"
   | "rain"
   | "shakepay"
   | "wazirx"
@@ -317,6 +319,13 @@ const exchanges: ExchangeDetails = {
     name: "LocalCoinSwap",
     url: "https://localcoinswap.com/",
     image: localcoinswap,
+    usaExceptions: [],
+    p2p: true,
+  },
+  p2pme: {
+    name: "P2P.me",
+    url: "https://p2p.me/",
+    image: p2pme,
     usaExceptions: [],
     p2p: true,
   },
