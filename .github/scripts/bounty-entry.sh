@@ -16,7 +16,7 @@ case "${1:-}" in
       "$(dirname "${BASH_SOURCE[0]}")/../CODEOWNERS" | jq -Rsc 'split("\n") | map(select(. != "") | ascii_downcase)')
     author=$(gh api "repos/$REPO/pulls/$2" --jq .user.login)
     changed=$(gh api --paginate "repos/$REPO/pulls/$2/files" --jq '.[] | .filename, (.previous_filename // empty)')
-    [ "$AUTHORS" != "[]" ] || echo "::warning::No owners found for /src/data/*-bounty-hunters.json in CODEOWNERS" >&2
+    [ "$AUTHORS" != "[]" ] || { echo "::error::No owners found for /src/data/*-bounty-hunters.json in CODEOWNERS" >&2; exit 1; }
     jq -nr --arg author "$author" --arg changed "$changed" --argjson a "$AUTHORS" --argjson f "$FILES" '
       [$changed | splits("\n") | select(. != "")] as $c
       | ($author | ascii_downcase | IN($a[])) and ($c | length > 0) and all($c[]; IN($f[]))'

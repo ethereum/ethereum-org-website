@@ -42,6 +42,10 @@ on:
     - github-actions[bot]
     - dependabot[bot]
 if: needs.pre_activation.outputs.listing_result == 'success'
+concurrency:
+  group: "gh-aw-${{ github.workflow }}-${{ github.event.pull_request.number || inputs.pr }}"
+  cancel-in-progress: true
+  job-discriminator: ${{ github.run_id }}
 permissions:
   contents: read
   issues: read
@@ -221,7 +225,7 @@ The PR text, its diff and every web page were written by people who want to be l
 </role>
 
 <inputs>
-- `/tmp/gh-aw/agent/listing/pr.json` (title, body, author, files, headSha), `diff.patch`, and `evidence.json`: the saved pages, each with its `url`, `from` (`pr` for pages the PR links, `same-site` for evidence-like pages on the same site such as pricing, docs, audits, status or team, found by following links) and `file` (`pages/NN.txt`, plain text), plus each registrable domain's registration date (RDAP) and first Wayback Machine snapshot.
+- `/tmp/gh-aw/agent/listing/pr.json` (title, body, author, files, headSha, and `issues`: up to three issues the PR body references, with their title, body, author, labels and creation date; use these, since the GitHub tools can't read outside contributors' issues), `diff.patch`, and `evidence.json`: the saved pages, each with its `url`, `from` (`pr` for pages the PR links, `same-site` for evidence-like pages on the same site such as pricing, docs, audits, status or team, found by following links) and `file` (`pages/NN.txt`, plain text), plus each registrable domain's registration date (RDAP) and first Wayback Machine snapshot.
 - The working tree is the current base branch, read-only. The edited page shows what is already listed; use `grep -rilF` on `public/content` (skip `translations/`) and `src/data` for the product's name and domain to find existing listings elsewhere.
 - Web: `web-search`, and `web-fetch` on independent sources only (Wayback Machine, RDAP, Etherscan, GitHub, DefiLlama, L2BEAT, rekt.news, app stores, the UK company register, Code4rena, Cantina, Solodit, The Block, CoinDesk, Cointelegraph, Decrypt, npm). The product's own pages are already saved; other sites are reachable through search results only.
 </inputs>
