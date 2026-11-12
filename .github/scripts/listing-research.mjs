@@ -531,14 +531,14 @@ export function render(r, run) {
       ? `| | Criterion | Evidence | Source |\n|---|---|---|---|\n${rows.join("\n")}`
       : "",
     open.length ? `**❔ Not shown yet:** ${open.join(" · ")}` : "",
-    r.facts.length || age.length
-      ? `**Facts:**\n${[...age.map((a) => `- ${a}`), ...r.facts.map((f) => `- ${esc(f.fact)}${f.quote ? ` — ${quote(f)}` : ""} (${src(f)})`)].join("\n")}`
+    r.askAuthor.length
+      ? `**Questions for the author:**\n${r.askAuthor.map((a) => `- ${esc(a)}`).join("\n")}`
       : "",
     r.existing.length
       ? `**Already on ethereum.org:** ${r.existing.map((e) => esc(e.path)).join(", ")}`
       : "",
-    r.askAuthor.length
-      ? `**Questions for the author:**\n${r.askAuthor.map((a) => `- ${esc(a)}`).join("\n")}`
+    r.facts.length || age.length
+      ? `<details><summary>Facts found (${age.length + r.facts.length})</summary>\n\n${[...age.map((a) => `- ${a}`), ...r.facts.map((f) => `- ${esc(f.fact)}${f.quote ? ` — ${quote(f)}` : ""} (${src(f)})`)].join("\n")}\n\n</details>`
       : "",
     `<!-- ethorg-listing: ${data} -->`,
   ]
