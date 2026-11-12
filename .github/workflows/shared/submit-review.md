@@ -134,6 +134,7 @@ safe-outputs:
                           nit: ($all | map(select(.severity == "nit")) | length)},
                  unreviewed: ((.unreviewed // "") | clean | split(",") | map(gsub("^\\s+|\\s+$"; "")) | map(select(. != ""))),
                  run: $run}
+              | .fast_track = ((.risk | IN("R0", "R1")) and .counts.blocking == 0 and .counts.should_fix == 0 and .base == "needed" and (.unreviewed | length) == 0)
             ' <<<"$item") || { echo "::error::PR #$pr: invalid review payload"; exit 1; }
 
             # Visible text also gets @-mentions defused so injected text can't ping people or teams.
@@ -155,6 +156,7 @@ safe-outputs:
                   + ([.claims[] | "- " + {"verified": "✅", "contradicted": "❌", "unverifiable": "❔"}[.status] + " \(.claim | say)"
                       + (if .evidence != "" then " — \(.evidence | say)" else "" end)] | join("\n"))
                   + "\n\n</details>" else "" end)
+              + (if .fast_track then "\n\n⚡ **Fast track:** low risk and nothing to fix, so one maintainer approval is enough once CI is green." else "" end)
               + (if (.unreviewed | length) > 0 then "\n\n_Not reviewed: " + (.unreviewed | map("`\(.)`") | join(", ")) + "_" else "" end)
               + "\n\n<!-- ethorg-review: " + tojson + " -->"
             ' <<<"$review")
@@ -167,6 +169,13 @@ safe-outputs:
             else
               gh api -X POST "repos/$REPO/issues/$pr/comments" -f body="$body" > /dev/null
               echo "Posted review comment on #$pr"
+            fi
+
+            label="fast-track ⚡"
+            if [ "$(jq -r .fast_track <<<"$review")" = true ]; then
+              gh api -X POST "repos/$REPO/issues/$pr/labels" -f "labels[]=$label" > /dev/null || echo "::warning::Could not add $label to #$pr"
+            else
+              gh api -X DELETE "repos/$REPO/issues/$pr/labels/$(jq -rn --arg l "$label" '$l | @uri')" > /dev/null 2>&1 || true
             fi
             SCRIPT
 

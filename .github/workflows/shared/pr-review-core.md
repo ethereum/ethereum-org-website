@@ -71,7 +71,7 @@ Apply the missing type label for each lane (`content 🖋️`, `translation 🌍
 - `needs product review 🕵️` — product listings, policy questions, new sections
 - `needs technical content review 🧑‍🏫` — technical accuracy of content
 
-Remove an existing type label that contradicts the changed paths; never remove routing or status labels.
+Remove an existing type label that contradicts the changed paths; never remove routing or status labels. The workflow sets `fast-track ⚡` itself from your submitted risk and findings; leave it alone.
 
 Every run ends with at least one safe-output call; if there is nothing to do (for example the PR closed while you ran), call `noop` with a one-line reason.
 </output>
