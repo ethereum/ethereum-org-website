@@ -31,12 +31,14 @@ export const dismissInstall = () => {
   }
 }
 
+/** Running as the installed app (Android/desktop display mode, or iOS) */
+export const isStandalone = () =>
+  window.matchMedia("(display-mode: standalone)").matches ||
+  (navigator as Navigator & { standalone?: boolean }).standalone === true
+
 /** Mobile platform worth offering the install to; null on desktop or inside the installed app */
 export const installPlatform = (): InstallPlatform | null => {
-  const standalone =
-    window.matchMedia("(display-mode: standalone)").matches ||
-    (navigator as Navigator & { standalone?: boolean }).standalone === true
-  if (standalone) return null
+  if (isStandalone()) return null
   const ua = navigator.userAgent
   // iPadOS Safari reports itself as a Mac; touch points give it away
   if (

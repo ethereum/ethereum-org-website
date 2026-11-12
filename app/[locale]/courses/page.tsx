@@ -76,6 +76,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <CoursesPageJsonLD locale={locale} />
 
+      {/* Top-of-page banner, above the hero */}
+      <I18nProvider locale={locale} messages={messages}>
+        <InstallAppNotice />
+      </I18nProvider>
+
       <HubHero
         heroImg={heroImg}
         breadcrumbs={{ slug: "courses" }}
@@ -98,7 +103,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <NoProfileAlert />
             </Suspense>
 
-            <InstallAppNotice />
             {TRACKS.map((track, index) => (
               <Section
                 key={track.id}
