@@ -133,7 +133,7 @@ safe-outputs:
           required: true
           type: string
         facts:
-          description: 'JSON array of {"fact": "neutral, checkable statement", "quote": "exact text from the source that shows it", "url": "source without scheme, or a repo path", "source": "author"|"independent"|"repo"}'
+          description: 'JSON array of at most 5 {"fact": "neutral, checkable statement", "quote": "exact text from the source that shows it", "url": "source without scheme, or a repo path", "source": "author"|"independent"|"repo"}'
           required: false
           type: string
         existing:
@@ -141,7 +141,7 @@ safe-outputs:
           required: false
           type: string
         ask_author:
-          description: "JSON array of strings: neutral, concrete questions for the author"
+          description: "JSON array of at most 3 strings: neutral, concrete questions for the author"
           required: false
           type: string
         injection:
@@ -239,9 +239,10 @@ If two fit, pick one and say why in `policy_why`. Include the policy's process s
 
 <research>
 - One `criteria` entry per must-have criterion and process step. `pass` needs a quote copied exactly from the page at `url`: at least 20 characters, and if you shorten it with `…`, each piece at least 12 characters, in page order. The submit job re-fetches the page and turns the criterion into ❔ if the quote isn't there or the page can't be fetched. Write `url` without the scheme (`tatum.io/pricing`, not `https://…`): full URLs are redacted in transit.
-- Prefer independent evidence: launch date from `evidence.json` or Etherscan, audits confirmed by the auditor, team activity from GitHub, incidents from rekt.news, news coverage and search. Mark a claim only the product's own site makes as `author`.
-- `facts`: neutral, sourced statements a maintainer needs, each with a quote checked the same way (facts that fail the check are dropped). Good facts: "Domain tatum.io registered 2019-02-21 (RDAP)", "First Wayback Machine snapshot 2019-03", "Audit by X published 2024-05 on X's site". For the comparison, state it as a fact with the edited page as a `repo` source: "This page already lists 30 node providers, including dRPC, Chainstack and GetBlock" (repo facts need no quote).
-- `ask_author`: neutral, concrete questions whose answer a maintainer needs, e.g. "Do you run your own Ethereum nodes, or route to upstream providers?", "Is there an independent audit beyond the automated report?", "Was the issue form filed first?".
+- An `unknown` criterion needs no quote: leave `quote` and `url` empty rather than quoting something that doesn't settle it.
+- Prefer independent evidence: audits confirmed by the auditor, team activity from GitHub, contract deploy dates from Etherscan, incidents from rekt.news, news coverage and search. Mark a claim only the product's own site makes as `author`. The site's registration date and first Wayback snapshot are added to the comment automatically; don't repeat them.
+- `facts`: at most 5, the ones that most change a maintainer's decision, most important first. Neutral, sourced statements, each with a quote checked the same way (facts that fail the check are dropped). Good facts: "Audit by X published 2024-05 on X's site", "The docs describe forwarding requests to upstream providers". For the comparison, state it as a fact with the edited page as a `repo` source: "This page already lists 30 node providers, including dRPC, Chainstack and GetBlock" (repo facts need no quote).
+- `ask_author`: at most 3, the questions whose answers a maintainer most needs, e.g. "Do you run your own Ethereum nodes, or route to upstream providers?", "Is there an independent audit beyond the automated report?", "Was the issue form filed first?". Skip questions about funding, investors or company structure unless a listing criterion depends on them.
 
 If the PR turns out not to be a listing request, call `noop` with a one-line reason instead.
 </research>

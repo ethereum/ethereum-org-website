@@ -225,6 +225,44 @@ async function match(pr) {
 
 const norm = (u) => u.replace(/#.*$/, "")
 
+async function domainAge(d) {
+  const json = (url, ms) =>
+    fetch(url, { signal: AbortSignal.timeout(ms) })
+      .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null)
+  const [rdap, wb] = await Promise.all([
+    json(`https://rdap.org/domain/${d}`, 15000),
+    json(
+      `https://web.archive.org/cdx/search/cdx?url=${d}&limit=1&output=json`,
+      20000
+    ),
+  ])
+  const ts = wb?.[1]?.[1]
+  return {
+    domain: d,
+    registered:
+      rdap?.events
+        ?.find((e) => e.eventAction === "registration")
+        ?.eventDate?.slice(0, 10) || null,
+    firstArchived: ts
+      ? `${ts.slice(0, 4)}-${ts.slice(4, 6)}-${ts.slice(6, 8)}`
+      : null,
+  }
+}
+
+// The product's own sites, taken from the author-sourced URLs the agent cited.
+export const productSites = (item) =>
+  [
+    ...new Set(
+      [...arr(item.criteria, 20), ...arr(item.facts, 15)]
+        .filter((c) => c.source === "author")
+        .map((c) => publicUrl(String(c.url || "")))
+        .filter(Boolean)
+        .map((u) => registrableDomain(new URL(u).hostname))
+        .filter((d) => !SOCIAL.test(d))
+    ),
+  ].slice(0, 3)
+
 async function prefetch(pr, dir) {
   mkdirSync(`${dir}/pages`, { recursive: true })
   const p = ghJson(`repos/${REPO}/pulls/${pr}`)
@@ -306,30 +344,7 @@ async function prefetch(pr, dir) {
   }
   await pool(sameSite, 4, (u) => save(u, "same-site"))
 
-  const domains = await pool([...sites], 4, async (d) => {
-    const [rdap, wb] = await Promise.all([
-      fetch(`https://rdap.org/domain/${d}`, {
-        signal: AbortSignal.timeout(15000),
-      })
-        .then((r) => (r.ok ? r.json() : null))
-        .catch(() => null),
-      fetch(
-        `https://web.archive.org/cdx/search/cdx?url=${d}&limit=1&output=json`,
-        { signal: AbortSignal.timeout(20000) }
-      )
-        .then((r) => (r.ok ? r.json() : null))
-        .catch(() => null),
-    ])
-    return {
-      domain: d,
-      registered:
-        rdap?.events?.find((e) => e.eventAction === "registration")
-          ?.eventDate || null,
-      firstArchived: wb?.[1]?.[1]
-        ? `${wb[1][1].slice(0, 4)}-${wb[1][1].slice(4, 6)}-${wb[1][1].slice(6, 8)}`
-        : null,
-    }
-  })
+  const domains = await pool([...sites], 4, domainAge)
   writeFileSync(
     `${dir}/evidence.json`,
     JSON.stringify({ pages, domains }, null, 2)
@@ -456,7 +471,8 @@ export async function check(item, fetchPage = fetchText) {
   const facts = []
   for (const f of arr(item.facts, 15)) {
     const x = { fact: str(f.fact, 300), ...base(f) }
-    if (x.fact && (await verify(x, f)) === "ok") facts.push(x)
+    if (facts.length < 5 && x.fact && (await verify(x, f)) === "ok")
+      facts.push(x)
     else dropped++
   }
 
@@ -475,7 +491,7 @@ export async function check(item, fetchPage = fetchText) {
       path: str(e.path, 200),
       text: str(e.text, 200),
     })),
-    askAuthor: arr(item.ask_author, 6).map((s) => str(s, 300)),
+    askAuthor: arr(item.ask_author, 3).map((s) => str(s, 300)),
     injection: str(item.injection, 300),
     verification: { checked, downgraded, dropped },
   }
@@ -486,10 +502,21 @@ export function render(r, run) {
   const src = (c) =>
     `${c.url ? esc(c.source === "repo" ? c.url : new URL(c.url).hostname) + " " : ""}${c.source}`
   const quote = (c) => (c.quote ? `“${esc(c.quote)}”` : "")
-  const rows = r.criteria.map(
-    (c) =>
-      `| ${icon[c.status]} | ${esc(c.criterion)} | ${quote(c)}${c.note ? ` _(${esc(c.note)})_` : ""} | ${src(c)} |`
-  )
+  const rows = r.criteria
+    .filter((c) => c.status !== "unknown")
+    .map(
+      (c) =>
+        `| ${icon[c.status]} | ${esc(c.criterion)} | ${quote(c)} | ${src(c)} |`
+    )
+  const open = r.criteria
+    .filter((c) => c.status === "unknown")
+    .map((c) => esc(c.criterion) + (c.note ? ` _(${esc(c.note)})_` : ""))
+  const age = (r.siteAge || [])
+    .filter((s) => s.registered || s.firstArchived)
+    .map(
+      (s) =>
+        `${esc(s.domain)}: ${[s.registered && `registered ${s.registered} (RDAP)`, s.firstArchived && `first archived ${s.firstArchived} (Wayback Machine)`].filter(Boolean).join(", ")}`
+    )
   const policy = r.policy.page
     ? `[\`${r.policy.page}\`](https://ethereum.org/contributing/${r.policy.page}/)`
     : "no matching listing policy"
@@ -499,12 +526,13 @@ export function render(r, run) {
   )
   return [
     `## 🧾 Listing check${r.product ? ` — ${esc(r.product)}` : ""}`,
-    `Checked against ${policy}. ✅ confirmed with a quoted source, ❌ contradicted, ❔ not shown yet. A maintainer makes the listing decision.`,
+    `Checked against ${policy}. ✅ confirmed with a quoted source, ❌ contradicted. A maintainer makes the listing decision.`,
     rows.length
       ? `| | Criterion | Evidence | Source |\n|---|---|---|---|\n${rows.join("\n")}`
       : "",
-    r.facts.length
-      ? `**Facts:**\n${r.facts.map((f) => `- ${esc(f.fact)}${f.quote ? ` — ${quote(f)}` : ""} (${src(f)})`).join("\n")}`
+    open.length ? `**❔ Not shown yet:** ${open.join(" · ")}` : "",
+    r.facts.length || age.length
+      ? `**Facts:**\n${[...age.map((a) => `- ${a}`), ...r.facts.map((f) => `- ${esc(f.fact)}${f.quote ? ` — ${quote(f)}` : ""} (${src(f)})`)].join("\n")}`
       : "",
     r.existing.length
       ? `**Already on ethereum.org:** ${r.existing.map((e) => esc(e.path)).join(", ")}`
@@ -522,14 +550,12 @@ async function main() {
   const [cmd, ...args] = process.argv.slice(2)
   if (cmd === "match") await match(args[0])
   else if (cmd === "prefetch") await prefetch(args[0], args[1])
-  else if (cmd === "submit")
-    process.stdout.write(
-      render(
-        await check(JSON.parse(readFileSync(args[0], "utf8"))),
-        process.env.RUN_URL || ""
-      )
-    )
-  else throw new Error(`unknown command: ${cmd}`)
+  else if (cmd === "submit") {
+    const item = JSON.parse(readFileSync(args[0], "utf8"))
+    const r = await check(item)
+    r.siteAge = await pool(productSites(item), 3, domainAge)
+    process.stdout.write(render(r, process.env.RUN_URL || ""))
+  } else throw new Error(`unknown command: ${cmd}`)
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)
