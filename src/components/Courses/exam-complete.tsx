@@ -13,6 +13,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import {
   type ChoiceStep,
   courseHref as hrefFor,
+  COURSES_HUB,
   type PageLink,
 } from "@/data/courses"
 
@@ -99,13 +100,14 @@ const ExamComplete = ({
           {t("page-courses-path-next-course")}
         </ButtonLink>
       )}
+      {/* Course mastered: back to the hub to pick what's next */}
       <ButtonLink
-        href={courseHref}
+        href={COURSES_HUB}
         variant="ghost"
         hideArrow
         className={nextCourseId ? chunkyButtonSecondary : chunkyButton}
       >
-        {t("page-courses-back-to-course")}
+        {t("page-courses-back-to-courses")}
       </ButtonLink>
     </>
   ) : (

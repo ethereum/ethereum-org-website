@@ -31,6 +31,8 @@ test.describe("course links", () => {
   for (const { from, href } of links) {
     test(`${from} -> ${href}`, () => {
       const [path, anchor] = href.split("#")
+      // A glossary entry is a one-line definition, not further reading
+      expect(path).not.toBe("/glossary/")
       expect(path).toBe(toBreadcrumbPath(path))
       const md = `public/content${path}index.md`
       if (existsSync(md)) {

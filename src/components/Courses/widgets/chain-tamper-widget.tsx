@@ -217,7 +217,7 @@ const ChainTamperWidget = ({ onComplete }: WidgetProps) => {
       <p
         role="status"
         className={cn(
-          "m-0 min-h-6 font-bold",
+          "m-0 min-h-6",
           repaired
             ? "text-green-700 dark:text-green-400"
             : "text-error dark:text-red-400"

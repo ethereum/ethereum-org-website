@@ -18,6 +18,8 @@ Puzzle inputs snap to a handful of meaningful stops, and the answer is always on
 
 The widget contract and props are documented in `src/components/Courses/widgets/types.ts`.
 
+A lesson that plays with an idea before naming it can register an everyday skin of an existing widget rather than a new one: `snack-machine` is `vending-machine` with coins and no contract wording (its `-everyday` string variants), used by the Everyday course.
+
 ## Building one
 
 1. Add the id to `CourseWidgetId` in `src/data/courses/types.ts`, the component in `src/components/Courses/widgets/`, and the registry entry.
@@ -30,10 +32,10 @@ The widget contract and props are documented in `src/components/Courses/widgets/
 
 ## Course UI conventions
 
-- Prose (concept paragraphs, options, feedback) is 16px (`text-md`). Prompts are `h2` styled `text-h3`; the lesson title is the page `h1`. Choice prompts put the `h2` inside the `legend`. Nothing in the courses UI is smaller than `text-sm`.
+- Prose (concept paragraphs, options, feedback) is 16px (`text-md`). Prompts are `h2` styled as reading text (`stepPrompt` in `theme.ts`), because they run to full sentences; keep headline styling (large or `font-black`) for short labels only, and give sentence-length status and feedback lines regular weight. The lesson title is the page `h1`: visible only on the first step (under a concept step's art), `sr-only` on later steps. Choice prompts put the `h2` inside the `legend`. Keywords in concept paragraphs (`<strong>`) are plain bold, never coloured, so they don't read as links. Nothing in the courses UI is smaller than `text-sm`.
 - Course-coloured text uses `text-(--course-strong) dark:text-(--course-bright)`; white text sits only on `--course` fills. Success and error text uses `text-green-700 dark:text-green-400` and `text-error dark:text-red-400`; the base `text-success` fails contrast on light tints.
 - Never fade text with opacity on a coloured fill: it drops below 4.5:1.
-- Pressable skins (`chunkyButton`, `chunkyButtonSecondary`, `chunkyTile`) layer on `<Button variant="ghost">`, or on a native `<button>` for answer tiles that Button's own styles would fight (match, fill, draggable tiles); don't hand-roll button styles.
+- Pressable skins (`chunkyButton`, `chunkyButtonSecondary`, `chunkyTile`) layer on `<Button variant="ghost">`, or on a native `<button>` for answer tiles that Button's own styles would fight (match, fill, draggable tiles); don't hand-roll button styles. Every action button, widget buttons included, uses `chunkyButton` (primary) or `chunkyButtonSecondary`, never a plain solid or outline `Button`. The button skins take ui/Button's radius (`rounded`); answer tiles keep their rounder `rounded-2xl`.
 - Sorting into groups: cards are `DraggableTile` (`widgets/draggable-tile.tsx`), so they can be dragged or tapped. Each group is a `data-drop-target`, and once a card is picked the whole group is the tap target; no separate "Place here" button. Touch drags start from the grip so swipes still scroll.
 - Streak and XP live in the header chips (`ProgressChips`). The streak gets a full screen only once a day, after the summary of the lesson that extends it (`StreakCelebration`); never add it to the per-lesson summary.
 - Overview cards are `ui/card` (`Card href variant="nested" border`, banner in `CardHeader`); follow the design-system card walkthrough rather than hand-rolling borders. Lists inside a `.flow` region use `ms-0`, never `m-0`, or they lose their flow gap.

@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils/cn"
 
 import type { MatchStep as MatchStepData } from "@/data/courses"
 
-import { chunkyTile, type PickResult } from "../theme"
+import { chunkyTile, type PickResult, stepPrompt } from "../theme"
 
 import { seededShuffle } from "./shuffle"
 import type { StepStatus } from "./types"
@@ -124,7 +124,7 @@ const MatchStep = ({
 
   return (
     <div>
-      <h2 className="mb-2 text-h3 font-black">{t(keyFor("prompt"))}</h2>
+      <h2 className={cn(stepPrompt, "mb-2")}>{t(keyFor("prompt"))}</h2>
       <p className="mb-6 text-body-medium">{t("page-courses-match-hint")}</p>
 
       <div className="grid grid-cols-2 gap-3">

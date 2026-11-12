@@ -10,7 +10,13 @@ import { cn } from "@/lib/utils/cn"
 
 import type { ChoiceStep as ChoiceStepData } from "@/data/courses"
 
-import { chunkyTile, pickedMarker, pickedTile, type PickResult } from "../theme"
+import {
+  chunkyTile,
+  pickedMarker,
+  pickedTile,
+  type PickResult,
+  stepPrompt,
+} from "../theme"
 
 import type { StepStatus } from "./types"
 
@@ -92,7 +98,7 @@ const ChoiceStep = ({
 
   const prompt = (
     <legend className="mb-6">
-      <h2 className="m-0 text-h3 font-black">{t(keyFor("prompt"))}</h2>
+      <h2 className={stepPrompt}>{t(keyFor("prompt"))}</h2>
       {step.multi && (
         <span className="mt-1 block text-body-medium">
           {t("page-courses-select-all")}

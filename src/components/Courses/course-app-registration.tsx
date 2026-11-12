@@ -4,7 +4,12 @@ import { useEffect } from "react"
 
 import { IS_PROD } from "@/lib/utils/env"
 
-/** Service worker for offline lessons; skipped in dev so it can't cache HMR */
+import { listenForInstallPrompt } from "./install-prompt"
+
+/**
+ * Service worker for offline lessons (skipped in dev so it can't cache HMR),
+ * plus the install-prompt capture for `InstallAppNotice`
+ */
 const CourseAppRegistration = ({ scope }: { scope: string }) => {
   useEffect(() => {
     if (!IS_PROD || !("serviceWorker" in navigator)) return
@@ -12,6 +17,9 @@ const CourseAppRegistration = ({ scope }: { scope: string }) => {
       // Offline support is a bonus; the lessons work without it
     })
   }, [scope])
+
+  // Lives in the layout so a prompt fired on any course page reaches the hub notice
+  useEffect(() => listenForInstallPrompt(), [])
 
   return null
 }

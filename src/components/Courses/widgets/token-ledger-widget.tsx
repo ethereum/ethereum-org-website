@@ -151,7 +151,7 @@ const TokenLedgerWidget = ({ onAnswer, locked }: WidgetProps) => {
       </div>
 
       {locked && (
-        <p className="m-0 font-bold text-green-700 dark:text-green-400">
+        <p className="m-0 text-green-700 dark:text-green-400">
           {t("page-courses-widget-ledger-hit", {
             amount: int.format(AMOUNT),
           })}

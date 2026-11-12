@@ -47,7 +47,6 @@ const CourseProgress = ({
       <div className="flex items-center gap-2">
         <Progress
           aria-hidden
-          shine
           value={percent}
           className={cn(
             "h-3 *:data-[slot=progress-indicator]:duration-700",
@@ -73,7 +72,12 @@ const CourseProgress = ({
       <span
         className={cn(
           "text-sm font-bold",
-          onColor ? "text-white" : "text-body-medium",
+          passed
+            ? // Mastered: a gold tag, matching the trophy
+              "w-fit rounded-full bg-yellow-400 px-2.5 py-0.5 tracking-wide text-yellow-950 uppercase"
+            : onColor
+              ? "text-white"
+              : "text-body-medium",
           hideLabel && "sr-only"
         )}
       >

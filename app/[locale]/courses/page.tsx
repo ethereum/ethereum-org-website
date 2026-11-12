@@ -14,6 +14,7 @@ import {
   CourseCardTrophy,
 } from "@/components/Courses/course-card-status"
 import CourseProgress from "@/components/Courses/course-progress"
+import InstallAppNotice from "@/components/Courses/install-app-notice"
 import NoProfileAlert from "@/components/Courses/no-profile-alert"
 import ProfileLink from "@/components/Courses/profile-link"
 import {
@@ -21,6 +22,7 @@ import {
   ProgressNote,
 } from "@/components/Courses/progress-stats"
 import { chunkyButton, courseThemeStyle } from "@/components/Courses/theme"
+import TrackConnector from "@/components/Courses/track-connector"
 import HubHero from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -39,9 +41,16 @@ import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { courseHref, TRACKS } from "@/data/courses"
+import {
+  courseHref,
+  COURSES_INDEXABLE,
+  COURSES_OG_IMAGE,
+  TRACKS,
+} from "@/data/courses"
 
-import heroImg from "@/public/images/courses/learning-path-garden-with-trophy.png"
+import CoursesPageJsonLD from "./page-jsonld"
+
+import heroImg from "@/public/images/courses/learning-path-garden-with-trophy.jpg"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
@@ -54,6 +63,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <>
+      <CoursesPageJsonLD locale={locale} />
+
       <HubHero
         heroImg={heroImg}
         breadcrumbs={{ slug: "courses" }}
@@ -76,6 +87,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <NoProfileAlert />
             </Suspense>
 
+            <InstallAppNotice />
             {TRACKS.map((track, index) => (
               <Section
                 key={track.id}
@@ -84,12 +96,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               >
                 <h2>{t(`page-courses-track-${track.id}-title`)}</h2>
                 <p>{t(`page-courses-track-${track.id}-description`)}</p>
-                <ul className="ms-0 grid list-none gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {/* Suggested order, not a lock; role keeps list semantics in Safari despite list-none */}
+                <ol
+                  role="list"
+                  className="ms-0 grid list-none gap-6 md:grid-cols-2 xl:grid-cols-3"
+                >
                   {track.courses.map(
-                    ({ id, level, theme, art, lessons, exam }) => (
+                    ({ id, level, theme, art, lessons, exam }, position) => (
                       <li
                         key={id}
-                        className="m-0"
+                        className="relative m-0"
                         style={courseThemeStyle(theme)}
                       >
                         <Card
@@ -105,10 +121,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                               className="relative bg-(--course-soft) px-10 pt-12 pb-4"
                             >
                               <span className="absolute start-3 top-3 rounded-full bg-background px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
-                                {t(`page-courses-level-${level}`)} ·{" "}
-                                {t("page-courses-lesson-count", {
-                                  count: lessons.length,
-                                })}
+                                {t(`page-courses-level-${level}`)}
                               </span>
                               <CourseCardTrophy courseId={id} />
                               <CourseArt
@@ -117,16 +130,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                               />
                             </CardBanner>
                           </CardHeader>
-                          <CardContent>
+                          {/* Progress pinned to the bottom so bars line up across a row */}
+                          <CardContent className="flex flex-col">
                             <CardTitle>{t(`${id}-title`)}</CardTitle>
                             <CardParagraph>
                               {t(`${id}-description`)}
                             </CardParagraph>
-                            <CourseProgress
-                              courseId={id}
-                              lessonIds={lessons.map((lesson) => lesson.id)}
-                              hasExam={exam.length > 0}
-                            />
+                            <div className="mt-auto">
+                              <CourseProgress
+                                courseId={id}
+                                lessonIds={lessons.map((lesson) => lesson.id)}
+                                hasExam={exam.length > 0}
+                              />
+                            </div>
                           </CardContent>
                           <CardFooter buttons="full">
                             <span
@@ -142,10 +158,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             </span>
                           </CardFooter>
                         </Card>
+                        <TrackConnector
+                          index={position}
+                          count={track.courses.length}
+                        />
                       </li>
                     )
                   )}
-                </ul>
+                </ol>
               </Section>
             ))}
 
@@ -168,11 +188,10 @@ export async function generateMetadata(props: {
   return await getMetadata({
     locale,
     slug: ["courses"],
-    title: `${t("page-courses-meta-title")} | ethereum.org`,
+    title: t("page-courses-meta-title"),
     description: t("page-courses-meta-description"),
-    image: "/images/courses/learning-path-garden-with-trophy.png",
-    // Proof of concept: keep out of search until the feature ships
-    noIndex: true,
+    image: COURSES_OG_IMAGE,
+    noIndex: !COURSES_INDEXABLE,
   })
 }
 

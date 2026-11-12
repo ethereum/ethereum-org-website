@@ -8,20 +8,21 @@ import type { ConceptStep as ConceptStepData } from "@/data/courses"
 
 import CourseArt from "../art/course-art"
 
+// Plain bold: coloured keywords read as links
 const rich = {
   strong: (chunks: ReactNode) => (
-    <strong className="font-bold text-(--course-strong) dark:text-(--course-bright)">
-      {chunks}
-    </strong>
+    <strong className="font-bold">{chunks}</strong>
   ),
 }
 
 interface ConceptStepProps {
   step: ConceptStepData
   keyFor: (suffix: string) => string
+  /** The lesson's visible `h1`, shown under the art on a lesson's first step */
+  title?: ReactNode
 }
 
-const ConceptStep = ({ step, keyFor }: ConceptStepProps) => {
+const ConceptStep = ({ step, keyFor, title }: ConceptStepProps) => {
   const t = useTranslations("page-courses")
   const paragraphs = Array.from(
     { length: step.paragraphs },
@@ -57,6 +58,7 @@ const ConceptStep = ({ step, keyFor }: ConceptStepProps) => {
           <CourseArt id={step.art} />
         </div>
       )}
+      {title}
       <div className="flex flex-col gap-4 text-md leading-relaxed">
         {paragraphs.map((p) => (
           <p key={p} className="m-0">

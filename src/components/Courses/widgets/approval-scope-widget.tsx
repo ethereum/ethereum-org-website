@@ -209,7 +209,7 @@ const ApprovalScopeWidget = ({ onAnswer, locked }: WidgetProps) => {
 
       <p
         className={cn(
-          "m-0 flex items-start gap-2 rounded-2xl p-3 font-bold",
+          "m-0 flex items-start gap-2 rounded-2xl p-3",
           locked
             ? "bg-success-light text-green-700 dark:bg-success-dark dark:text-green-400"
             : "bg-background text-body"

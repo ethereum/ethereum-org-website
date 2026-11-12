@@ -2,6 +2,7 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { blockchainCourse } from "./blockchain"
 import { etherCourse } from "./ether"
+import { everydayCourse } from "./everyday"
 import { smartContractsCourse } from "./smart-contracts"
 import { transactionsCourse } from "./transactions"
 import type { Course, Lesson, Track } from "./types"
@@ -14,6 +15,7 @@ export const TRACKS: Track[] = [
   {
     id: "essentials",
     courses: [
+      everydayCourse,
       walletsCourse,
       blockchainCourse,
       transactionsCourse,
@@ -44,6 +46,16 @@ export const getLesson = (courseId: string, lessonId: string) => {
 export const courseHref = (courseId: string) => `/courses/${courseId}/`
 
 export const COURSES_HUB = "/courses/"
+
+/**
+ * Search indexing and sitemap entries for the hub and course overview pages;
+ * off until public beta. Lessons, exams and the profile are never indexed.
+ */
+export const COURSES_INDEXABLE = false
+
+/** Social preview for every courses page: the hub hero */
+export const COURSES_OG_IMAGE =
+  "/images/courses/learning-path-garden-with-trophy.jpg"
 
 /** Query flag on the hub after the profile sends someone with no progress back */
 export const NO_PROFILE_PARAM = "noprofile"

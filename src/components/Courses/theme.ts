@@ -2,7 +2,9 @@ import type { CSSProperties } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
-import type { CourseTheme } from "@/data/courses"
+import type { CoursePreset, CourseTheme } from "@/data/courses"
+
+import { generatePalette, toHex } from "./course-palette"
 
 const hsl = (token: string) => `hsl(var(--${token}))`
 
@@ -13,7 +15,7 @@ const hsl = (token: string) => `hsl(var(--${token}))`
  * The palette has no mid oranges, so those are literal.
  */
 const PALETTES: Record<
-  CourseTheme,
+  CoursePreset,
   { fill: string; strong: string; bright: string }
 > = {
   purple: {
@@ -39,12 +41,22 @@ const PALETTES: Record<
   },
 }
 
+const paletteFor = (theme: CourseTheme) => {
+  if (typeof theme === "string") return PALETTES[theme]
+  const { fill, strong, bright } = generatePalette(theme.hue)
+  return { fill: toHex(fill), strong: toHex(strong), bright: toHex(bright) }
+}
+
+/** Stable id for comparing themes, e.g. `purple` or `hue-220` */
+export const themeId = (theme: CourseTheme) =>
+  typeof theme === "string" ? theme : `hue-${theme.hue}`
+
 /**
  * Exploration styling: each course sets `--course*` vars on a wrapper and
  * everything inside (path, buttons, art) reads them.
  */
 export const courseThemeStyle = (theme: CourseTheme) => {
-  const { fill, strong, bright } = PALETTES[theme]
+  const { fill, strong, bright } = paletteFor(theme)
   return {
     "--course": fill,
     "--course-strong": strong,
@@ -68,9 +80,12 @@ export const courseText = "text-(--course-strong) dark:text-(--course-bright)"
 export const courseMix = (percent: number) =>
   `color-mix(in oklab, var(--course) ${percent}%, var(--color-background))`
 
-/** Pressable "3D" button skin, layered on `<Button variant="ghost">` */
+/**
+ * Pressable "3D" button skin, layered on `<Button variant="ghost">`. Radius
+ * matches ui/Button at size md (`rounded`); use `rounded-lg` beside size lg.
+ */
 export const chunkyButton = cn(
-  "min-h-12 rounded-2xl border-0 border-b-4 px-6 text-base font-bold tracking-wide uppercase",
+  "min-h-12 rounded border-0 border-b-4 px-6 text-base font-bold tracking-wide uppercase",
   "border-(--course-strong) bg-(--course) text-white",
   "hover-link:!text-white hover-link:brightness-110 active:text-white",
   "active:translate-y-0.5 active:border-b-2",
@@ -79,7 +94,7 @@ export const chunkyButton = cn(
 
 /** Neutral pressable skin for secondary actions */
 export const chunkyButtonSecondary = cn(
-  "min-h-12 rounded-2xl border-2 border-b-4 border-border bg-background px-6 text-base font-bold tracking-wide text-body uppercase",
+  "min-h-12 rounded border-2 border-b-4 border-border bg-background px-6 text-base font-bold tracking-wide text-body uppercase",
   "hover-link:!text-body hover-link:bg-background-highlight active:text-body",
   "active:translate-y-0.5 active:border-b-2"
 )
@@ -114,6 +129,12 @@ export const chunkyTile = cn(
   "rounded-2xl border-2 border-b-4 border-border bg-background text-body transition-[transform,background-color,border-color] duration-150",
   "hover:bg-background-highlight active:translate-y-0.5 active:border-b-2"
 )
+
+/**
+ * Step prompt: the step's `h2`, styled as reading text because prompts run
+ * to full sentences. `font-normal` overrides the base heading weight.
+ */
+export const stepPrompt = "m-0 text-lg leading-relaxed font-normal"
 
 /** Pill for the header stat chips and the profile button beside them */
 export const statChip =

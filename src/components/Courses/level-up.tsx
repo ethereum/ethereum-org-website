@@ -3,6 +3,8 @@
 import { ChevronsUp } from "lucide-react"
 import { useTranslations } from "next-intl"
 
+import { cn } from "@/lib/utils/cn"
+
 import { type Level, levelFor, ROMAN } from "./levels"
 
 /** "Shannon II" */
@@ -25,9 +27,16 @@ const LevelUp = ({ before, after }: { before: number; after: number }) => {
   const from = levelFor(before)
   const to = levelFor(after)
   if (to.number === from.number) return null
+  const newTier = to.tier !== from.tier
 
   return (
-    <div className="flex w-full max-w-sm items-start gap-3 rounded-2xl border-2 border-(--course-soft) bg-background p-4 text-start">
+    <div
+      className={cn(
+        "flex w-full max-w-sm gap-3 rounded-2xl border-2 border-(--course-soft) bg-background p-4 text-start",
+        // Centred beside a single line; top-aligned when the tier fact follows
+        newTier ? "items-start" : "items-center"
+      )}
+    >
       <ChevronsUp
         aria-hidden
         className="size-8 shrink-0 text-(--course-strong) dark:text-(--course-bright)"
@@ -36,7 +45,7 @@ const LevelUp = ({ before, after }: { before: number; after: number }) => {
         <p className="m-0 font-black">
           {t("page-courses-xp-level-up", { name: levelName(to) })}
         </p>
-        {to.tier !== from.tier && (
+        {newTier && (
           <p className="m-0 text-sm text-body-medium">
             {t(`page-courses-xp-level-${to.tier}-fact`)}
           </p>

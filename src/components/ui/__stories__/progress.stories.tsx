@@ -12,7 +12,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Determinate progress bar built on Radix Progress. `value` is 0-100. `color: disabled` (default) renders a muted bar; `color: primary` switches the indicator and track to the brand pair. `shine` adds the game-style gloss and a visible nub at 0 (used by /courses). Style the track with `className` and the fill from the same string via `*:data-[slot=progress-indicator]:`, e.g. `*:data-[slot=progress-indicator]:bg-(--course)`.",
+          "Determinate progress bar built on Radix Progress. `value` is 0-100. `color: disabled` (default) renders a muted bar; `color: primary` switches the indicator and track to the brand pair. Style the track with `className` and the fill from the same string via `*:data-[slot=progress-indicator]:`, e.g. `*:data-[slot=progress-indicator]:bg-(--course)`.",
       },
     },
   },
@@ -75,39 +75,6 @@ export const WithLabel: Story = {
         <span>42%</span>
       </div>
       <Progress value={42} color="primary" />
-    </VStack>
-  ),
-}
-
-export const Shine: Story = {
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "Game-style bar for lesson progress. The fill keeps a small nub at 0 so the bar never reads as empty.",
-      },
-    },
-  },
-  render: () => (
-    <VStack className="w-[320px] gap-4">
-      <Progress
-        shine
-        value={0}
-        color="primary"
-        className="bg-background-highlight"
-      />
-      <Progress
-        shine
-        value={40}
-        color="primary"
-        className="bg-background-highlight"
-      />
-      <Progress
-        shine
-        value={100}
-        color="primary"
-        className="bg-background-highlight"
-      />
     </VStack>
   ),
 }

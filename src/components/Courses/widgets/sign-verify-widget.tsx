@@ -177,7 +177,7 @@ const SignVerifyWidget = ({ onComplete }: WidgetProps) => {
               role="status"
               hidden={!recovered}
               className={cn(
-                "m-0 flex items-center gap-2 font-bold",
+                "m-0 flex items-center gap-2",
                 valid
                   ? "text-green-700 dark:text-green-400"
                   : "text-error dark:text-red-400"

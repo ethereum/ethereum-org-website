@@ -8,6 +8,7 @@ import type {
   InteractiveStep as InteractiveStepData,
 } from "@/data/courses"
 
+import { stepPrompt } from "../theme"
 import AddressCheckWidget from "../widgets/address-check-widget"
 import ApprovalScopeWidget from "../widgets/approval-scope-widget"
 import BlockBuilderWidget from "../widgets/block-builder-widget"
@@ -20,14 +21,18 @@ import GasFeeWidget from "../widgets/gas-fee-widget"
 import GasLimitWidget from "../widgets/gas-limit-widget"
 import HashPlaygroundWidget from "../widgets/hash-playground-widget"
 import KeyPairWidget from "../widgets/key-pair-widget"
+import MailboxWidget from "../widgets/mailbox-widget"
 import NodeNetworkWidget from "../widgets/node-network-widget"
+import SharedNotebookWidget from "../widgets/shared-notebook-widget"
 import SignVerifyWidget from "../widgets/sign-verify-widget"
 import StakeVoteWidget from "../widgets/stake-vote-widget"
 import SupplyBalanceWidget from "../widgets/supply-balance-widget"
 import TokenLedgerWidget from "../widgets/token-ledger-widget"
 import type { WidgetAnswer, WidgetProps } from "../widgets/types"
 import UnitConverterWidget from "../widgets/unit-converter-widget"
-import VendingMachineWidget from "../widgets/vending-machine-widget"
+import VendingMachineWidget, {
+  SnackMachineWidget,
+} from "../widgets/vending-machine-widget"
 import WrapEthWidget from "../widgets/wrap-eth-widget"
 
 /**
@@ -58,6 +63,9 @@ const WIDGETS: Record<
   "call-sorter": { component: CallSorterWidget, graded: true },
   "token-ledger": { component: TokenLedgerWidget, graded: true },
   "approval-scope": { component: ApprovalScopeWidget, graded: true },
+  "shared-notebook": { component: SharedNotebookWidget, graded: false },
+  mailbox: { component: MailboxWidget, graded: false },
+  "snack-machine": { component: SnackMachineWidget, graded: false },
 }
 
 export const isGradedWidget = (id: CourseWidgetId) => WIDGETS[id].graded
@@ -84,7 +92,7 @@ const InteractiveStep = ({
 
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="m-0 text-h3 font-black">{t(keyFor("prompt"))}</h2>
+      <h2 className={stepPrompt}>{t(keyFor("prompt"))}</h2>
       <Widget
         onComplete={onComplete}
         onAnswer={onAnswer}

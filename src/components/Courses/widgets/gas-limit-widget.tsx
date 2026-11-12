@@ -146,7 +146,7 @@ const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
 
         <p
           className={cn(
-            "m-0 flex items-start gap-2 rounded-2xl p-3 font-bold",
+            "m-0 flex items-start gap-2 rounded-2xl p-3",
             ok
               ? "bg-success-light text-green-700 dark:bg-success-dark dark:text-green-400"
               : "bg-error-light text-error dark:bg-error-dark dark:text-red-400"
@@ -166,7 +166,7 @@ const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
       </div>
 
       {locked && (
-        <p className="m-0 flex items-center gap-2 font-bold text-green-700 dark:text-green-400">
+        <p className="m-0 flex items-center gap-2 text-green-700 dark:text-green-400">
           <Check className="size-5 shrink-0" aria-hidden />
           {t("page-courses-widget-limit-hit", {
             gas: int.format(GAS_NEEDED),

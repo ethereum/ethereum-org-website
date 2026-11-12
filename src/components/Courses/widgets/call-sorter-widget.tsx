@@ -114,7 +114,7 @@ const CallSorterWidget = ({ onAnswer, locked }: WidgetProps) => {
 
       <p
         className={cn(
-          "m-0 font-bold",
+          "m-0",
           locked ? "text-green-700 dark:text-green-400" : "text-body-medium"
         )}
         aria-live="polite"

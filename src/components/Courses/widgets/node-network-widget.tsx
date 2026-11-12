@@ -281,10 +281,7 @@ const NodeNetworkWidget = ({ onComplete }: WidgetProps) => {
         })}
       </ul>
 
-      <p
-        role="status"
-        className="m-0 min-h-12 rounded-2xl bg-background p-3 font-bold"
-      >
+      <p role="status" className="m-0 min-h-12 rounded-2xl bg-background p-3">
         {status}
       </p>
 

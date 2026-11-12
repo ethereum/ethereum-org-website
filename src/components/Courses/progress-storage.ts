@@ -8,6 +8,13 @@ export const COURSE_PROGRESS_KEY = "ethereum-org-course-progress"
 export const HAS_PROGRESS_ATTR = "data-has-course-progress"
 
 /**
+ * Keeps the flag in step with saves during a visit; the inline script only
+ * runs on a full page load, not on client-side navigation.
+ */
+export const flagProgress = (hasProgress: boolean) =>
+  document.documentElement.toggleAttribute(HAS_PROGRESS_ATTR, hasProgress)
+
+/**
  * Inline, render-blocking check so server HTML can hide "no progress"
  * content before it paints. Mirrors `hasAnyProgress`.
  */

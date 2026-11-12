@@ -16,7 +16,7 @@ import MainArticle from "@/components/MainArticle"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { PROFILE_SEGMENT } from "@/data/courses"
+import { COURSES_OG_IMAGE, PROFILE_SEGMENT } from "@/data/courses"
 
 import heroImg from "@/public/images/courses/learner-trophy-island.png"
 
@@ -66,9 +66,10 @@ export async function generateMetadata(props: {
   return await getMetadata({
     locale,
     slug: ["courses", PROFILE_SEGMENT],
-    title: `${t("page-courses-profile-link")} | ethereum.org`,
+    title: t("page-courses-meta-profile-title"),
     description: t("page-courses-profile-meta-description"),
-    image: "/images/courses/learning-path-garden-with-trophy.png",
+    image: COURSES_OG_IMAGE,
+    // Shows only progress saved in this browser, so nothing to index
     noIndex: true,
   })
 }

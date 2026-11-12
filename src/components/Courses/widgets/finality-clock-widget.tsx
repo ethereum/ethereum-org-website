@@ -193,7 +193,7 @@ const FinalityClockWidget = ({ onAnswer, locked }: WidgetProps) => {
         {t("page-courses-widget-finality-legend")}
       </p>
 
-      <p role="status" className="m-0 rounded-2xl bg-background p-3 font-bold">
+      <p role="status" className="m-0 rounded-2xl bg-background p-3">
         {t(`page-courses-widget-finality-status-${STOPS[stop].id}`)}
         {locked && <> {t("page-courses-widget-finality-hit")}</>}
       </p>

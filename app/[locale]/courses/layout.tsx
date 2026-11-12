@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 
 import CourseAppRegistration from "@/components/Courses/course-app-registration"
+import { HAS_PROGRESS_SCRIPT } from "@/components/Courses/progress-storage"
 
 import { courseAppManifestHref, courseAppScope } from "@/data/courses"
 
@@ -15,6 +16,8 @@ const Layout = async ({ children, params }: LayoutProps) => {
   return (
     // Course tints need more colour to show over the dark background (see theme.ts)
     <div className="contents dark:[--course-soft-amount:30%] dark:[--course-softer-amount:15%]">
+      {/* Flags saved progress on <html> before paint (see progress-storage) */}
+      <script dangerouslySetInnerHTML={{ __html: HAS_PROGRESS_SCRIPT }} />
       {children}
       <CourseAppRegistration scope={courseAppScope(locale)} />
     </div>

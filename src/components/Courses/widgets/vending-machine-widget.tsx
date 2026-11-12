@@ -56,8 +56,32 @@ const initialStock = () =>
     number
   >
 
-const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
+// Strings that name the contract or ETH get a coins version for `everyday`
+const EVERYDAY_KEYS = new Set([
+  "eth",
+  "balance",
+  "held",
+  "pay",
+  "less",
+  "more",
+  "rules",
+  "rule-price",
+  "ok",
+  "reject-price",
+])
+
+interface VendingMachineWidgetProps extends WidgetProps {
+  /** A plain snack machine taking coins, before contracts are named */
+  everyday?: boolean
+}
+
+const VendingMachineWidget = ({
+  onComplete,
+  everyday,
+}: VendingMachineWidgetProps) => {
   const t = useTranslations("page-courses")
+  const key = (name: string) =>
+    `page-courses-widget-vending-${name}${everyday && EVERYDAY_KEYS.has(name) ? "-everyday" : ""}`
   const locale = useLocale()
   const int = numberFormat(locale)
   const payId = useId()
@@ -79,21 +103,25 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
   }, [done, seen, onComplete])
 
   const eth = (amount: number) =>
-    t("page-courses-widget-vending-eth", { amount: int.format(amount) })
+    t(key("eth"), { amount: int.format(amount), count: amount })
   const itemName = (id: ItemId) => t(`page-courses-widget-vending-item-${id}`)
 
-  // Checked in the order the contract's code checks them
+  // A snack machine shows "sold out" before taking coins; the contract
+  // checks the price first, as its code does
+  const rules: readonly Rule[] = everyday ? ["stock", "price"] : RULES
   const buy = () => {
     const item = ITEMS.find(({ id }) => id === selected)!
-    if (pay !== item.price) {
-      setOutcome({ kind: "price", item: item.id, paid: pay })
-      setSeen((s) => ({ ...s, rejected: true }))
-      return
-    }
-    if (stock[item.id] === 0) {
-      setOutcome({ kind: "stock", item: item.id })
-      setSeen((s) => ({ ...s, rejected: true }))
-      return
+    for (const rule of rules) {
+      if (rule === "price" && pay !== item.price) {
+        setOutcome({ kind: "price", item: item.id, paid: pay })
+        setSeen((s) => ({ ...s, rejected: true }))
+        return
+      }
+      if (rule === "stock" && stock[item.id] === 0) {
+        setOutcome({ kind: "stock", item: item.id })
+        setSeen((s) => ({ ...s, rejected: true }))
+        return
+      }
     }
     setBalance(balance - pay)
     setHeld(held + pay)
@@ -114,23 +142,28 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
   const ruleState = (rule: Rule): RuleState | null => {
     if (!outcome) return null
     if (outcome.kind === "ok") return "pass"
-    if (outcome.kind === "price") return rule === "price" ? "fail" : "skipped"
-    return rule === "price" ? "pass" : "fail"
+    const failed = outcome.kind
+    if (rule === failed) return "fail"
+    // Rules before the failed one passed; later ones never ran
+    return rules.indexOf(rule) < rules.indexOf(failed) ? "pass" : "skipped"
   }
 
   const status = (() => {
     if (!outcome) return null
-    const item = itemName(outcome.item)
+    // Lowercase form for use mid-sentence
+    const item = t(`page-courses-widget-vending-item-${outcome.item}-inline`)
     if (outcome.kind === "ok")
-      return t("page-courses-widget-vending-ok", {
+      return t(key("ok"), {
         item,
         amount: int.format(outcome.paid),
+        count: outcome.paid,
       })
     if (outcome.kind === "price") {
       const price = ITEMS.find(({ id }) => id === outcome.item)!.price
-      return t("page-courses-widget-vending-reject-price", {
+      return t(key("reject-price"), {
         item,
         price: int.format(price),
+        priceCount: price,
         amount: int.format(outcome.paid),
       })
     }
@@ -141,15 +174,15 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
     <WidgetShell>
       <dl className="m-0 grid grid-cols-2 gap-3">
         {[
-          { key: "balance", value: balance },
-          { key: "held", value: held },
-        ].map(({ key, value }) => (
+          { name: "balance", value: balance },
+          { name: "held", value: held },
+        ].map(({ name, value }) => (
           <div
-            key={key}
+            key={name}
             className="flex flex-col gap-1 rounded-2xl bg-background p-3"
           >
             <dt className="text-sm font-bold text-body-medium">
-              {t(`page-courses-widget-vending-${key}`)}
+              {t(key(name))}
             </dt>
             <dd className="m-0 text-lg font-black tabular-nums">
               {eth(value)}
@@ -212,14 +245,14 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
           className="flex flex-col gap-2"
         >
           <span id={payId} className="font-bold">
-            {t("page-courses-widget-vending-pay")}
+            {t(key("pay"))}
           </span>
           <div className="flex items-center gap-3">
             <Button
               variant="ghost"
               onClick={() => setPay(pay - 1)}
               disabled={pay <= 0}
-              aria-label={t("page-courses-widget-vending-less")}
+              aria-label={t(key("less"))}
               className={cn(chunkyButtonSecondary, "px-3")}
             >
               <Minus />
@@ -234,7 +267,7 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
               variant="ghost"
               onClick={() => setPay(pay + 1)}
               disabled={pay >= balance}
-              aria-label={t("page-courses-widget-vending-more")}
+              aria-label={t(key("more"))}
               className={cn(chunkyButtonSecondary, "px-3")}
             >
               <Plus />
@@ -248,10 +281,10 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
 
       <div className="flex flex-col gap-2 rounded-2xl border-2 border-(--course-soft) bg-background p-4">
         <p className="m-0 text-sm font-bold tracking-wide text-body-medium uppercase">
-          {t("page-courses-widget-vending-rules")}
+          {t(key("rules"))}
         </p>
         <ol className="m-0 flex list-none flex-col gap-2">
-          {RULES.map((rule) => {
+          {rules.map((rule) => {
             const state = ruleState(rule)
             return (
               <li key={rule} className="m-0 flex items-start gap-2">
@@ -272,7 +305,7 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
                   />
                 )}
                 <span>
-                  {t(`page-courses-widget-vending-rule-${rule}`)}
+                  {t(key(`rule-${rule}`))}
                   {state && (
                     <span className="sr-only">
                       {" "}
@@ -289,7 +322,7 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
       <p
         role="status"
         className={cn(
-          "m-0 min-h-6 font-bold",
+          "m-0 min-h-6",
           outcome?.kind === "ok"
             ? "text-green-700 dark:text-green-400"
             : "text-error dark:text-red-400"
@@ -311,5 +344,10 @@ const VendingMachineWidget = ({ onComplete }: WidgetProps) => {
     </WidgetShell>
   )
 }
+
+/** The same machine taking coins, for lessons before contracts are named */
+export const SnackMachineWidget = (props: WidgetProps) => (
+  <VendingMachineWidget {...props} everyday />
+)
 
 export default VendingMachineWidget

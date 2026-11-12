@@ -14,7 +14,7 @@ import I18nProvider from "@/components/I18nProvider"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { COURSES, EXAM_ID, getCourse } from "@/data/courses"
+import { COURSES, COURSES_OG_IMAGE, EXAM_ID, getCourse } from "@/data/courses"
 
 import { getPageLink } from "@/lib/courses/page-links"
 
@@ -84,9 +84,14 @@ export async function generateMetadata(props: {
   return await getMetadata({
     locale,
     slug: ["courses", courseId, EXAM_ID],
-    title: `${t(`${courseId}-title`)}: ${t("page-courses-exam-title")} | ethereum.org`,
-    description: t(`${courseId}-description`),
-    image: "/images/courses/learning-path-garden-with-trophy.png",
+    title: t("page-courses-meta-exam-title", {
+      course: t(`${courseId}-title`),
+    }),
+    description: t("page-courses-meta-exam-description", {
+      course: t(`${courseId}-title`),
+    }),
+    image: COURSES_OG_IMAGE,
+    // Played, not read: kept from search and crawlers (see robots.txt)
     noIndex: true,
   })
 }

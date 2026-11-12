@@ -1,7 +1,7 @@
 "use client"
 
-import { useState } from "react"
-import { Target, Zap } from "lucide-react"
+import { useEffect, useState } from "react"
+import { Crosshair, Sparkles, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -40,6 +40,7 @@ const SPARKS = Array.from({ length: 10 }, (_, i) => ({
   delay: 1 + i * 0.06,
 }))
 
+const BONUS_AT = 1.25
 const XP_LAND = 1.7
 
 const tierFor = (accuracy: number, perfect: boolean) =>
@@ -66,11 +67,25 @@ const LessonComplete = ({
   // The streak gets its own moment, once a day, after the lesson summary
   const [stage, setStage] = useState<"summary" | "streak">("summary")
 
-  const xp = useCountUp(0, reward.xp, {
+  // The lesson's XP lands first, then a perfect run's bonus tops it up
+  const baseXp = useCountUp(0, reward.xp - reward.bonus, {
     enabled: animate,
     delay: 0.5,
     duration: 600,
   })
+  const bonusXp = useCountUp(0, reward.bonus, {
+    enabled: animate,
+    delay: BONUS_AT,
+    duration: 400,
+  })
+  const xp = baseXp + bonusXp
+  // A perfect run's bonus recolours the badge and adds the perfect mark
+  const [bonusIn, setBonusIn] = useState(false)
+  useEffect(() => {
+    if (reward.bonus <= 0) return
+    const id = setTimeout(() => setBonusIn(true), animate ? BONUS_AT * 1000 : 0)
+    return () => clearTimeout(id)
+  }, [reward.bonus, animate])
   const total = useCountUp(reward.totalBefore, reward.totalAfter, {
     enabled: animate,
     delay: XP_LAND,
@@ -142,7 +157,12 @@ const LessonComplete = ({
                 initial={animate ? { scale: 0, rotate: -12 } : false}
                 animate={{ scale: [0, 1.25, 1], rotate: 0 }}
                 transition={{ delay: 0.5, duration: 0.6, times: [0, 0.6, 1] }}
-                className="relative flex items-center gap-2 rounded-full border-b-[6px] border-yellow-600 bg-yellow-400 px-6 py-3 text-yellow-950"
+                className={cn(
+                  "relative flex items-center gap-2 rounded-full border-b-[6px] px-6 py-3 transition-colors duration-300",
+                  bonusIn
+                    ? "border-(--course-strong) bg-(--course) text-white"
+                    : "border-yellow-600 bg-yellow-400 text-yellow-950"
+                )}
               >
                 <Zap className="size-7 fill-current" aria-hidden />
                 <span className="text-3xl font-black tabular-nums">
@@ -150,6 +170,18 @@ const LessonComplete = ({
                     xp: int.format(Math.round(xp)),
                   })}
                 </span>
+                {bonusIn && (
+                  <motion.span
+                    initial={animate ? { scale: 0, rotate: -45 } : false}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{ type: "spring", stiffness: 420, damping: 12 }}
+                  >
+                    <Sparkles className="size-7 fill-current" aria-hidden />
+                    <span className="sr-only">
+                      {t("page-courses-complete-perfect-bonus")}
+                    </span>
+                  </motion.span>
+                )}
                 {animate &&
                   SPARKS.map(({ x, delay }, i) => (
                     <motion.span
@@ -188,7 +220,6 @@ const LessonComplete = ({
                 >
                   <Progress
                     aria-hidden
-                    shine
                     value={fill(total)}
                     className="bg-transparent *:data-[slot=progress-indicator]:bg-yellow-400 *:data-[slot=progress-indicator]:transition-none"
                   />
@@ -198,14 +229,17 @@ const LessonComplete = ({
 
             <motion.div
               {...appear(2)}
-              className="flex w-full max-w-sm items-center justify-center gap-3 rounded-2xl border-b-[6px] border-(--course-strong) bg-(--course) p-4 text-white"
+              className="flex w-full max-w-sm items-center justify-center gap-3 rounded-2xl border-2 border-border p-4"
             >
-              <Target className="size-8 shrink-0" aria-hidden />
+              <Crosshair
+                className="size-8 shrink-0 text-(--course-strong) dark:text-(--course-bright)"
+                aria-hidden
+              />
               <span className="flex flex-col items-start">
                 <span className="text-2xl leading-none font-black tabular-nums">
                   {percent.format(acc)}
                 </span>
-                <span className="text-sm font-bold tracking-wide uppercase">
+                <span className="text-sm font-bold tracking-wide text-body-medium uppercase">
                   {t("page-courses-complete-accuracy")}
                 </span>
               </span>

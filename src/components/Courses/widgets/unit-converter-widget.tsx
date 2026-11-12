@@ -136,7 +136,7 @@ const UnitConverterWidget = ({ onAnswer, locked }: WidgetProps) => {
       </dl>
 
       {onTarget && (
-        <p className="m-0 font-bold text-green-700 dark:text-green-400">
+        <p className="m-0 text-green-700 dark:text-green-400">
           {t("page-courses-widget-units-hit")}
         </p>
       )}

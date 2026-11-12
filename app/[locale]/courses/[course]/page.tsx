@@ -22,7 +22,14 @@ import MainArticle from "@/components/MainArticle"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { COURSES, getCourse } from "@/data/courses"
+import {
+  COURSES,
+  COURSES_INDEXABLE,
+  COURSES_OG_IMAGE,
+  getCourse,
+} from "@/data/courses"
+
+import CoursePageJsonLD from "./page-jsonld"
 
 export const revalidate = false
 
@@ -49,6 +56,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <CoursePageJsonLD locale={locale} course={course} />
       <MainArticle style={courseThemeStyle(course.theme)}>
         <div className="flex flex-wrap items-center justify-between gap-4 px-page pt-6">
           <Breadcrumbs
@@ -65,10 +73,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
           <div className="relative mx-auto grid max-w-4xl items-center gap-6 overflow-hidden rounded-3xl border-b-8 border-(--course-strong) bg-(--course) p-6 text-white md:grid-cols-[1fr_200px] md:p-10">
             <div className="flex flex-col gap-4">
               <span className="w-fit rounded-full bg-black/20 px-3 py-1 text-sm font-bold tracking-wide uppercase">
-                {t(`page-courses-level-${course.level}`)} ·{" "}
-                {t("page-courses-lesson-count", {
-                  count: course.lessons.length,
-                })}
+                {t(`page-courses-level-${course.level}`)}
               </span>
               <h1 className="m-0 text-white">{t(`${courseId}-title`)}</h1>
               <p className="m-0 text-lg text-white">
@@ -124,10 +129,12 @@ export async function generateMetadata(props: {
   return await getMetadata({
     locale,
     slug: ["courses", courseId],
-    title: `${t(`${courseId}-title`)} | ethereum.org`,
+    title: t("page-courses-meta-course-title", {
+      course: t(`${courseId}-title`),
+    }),
     description: t(`${courseId}-description`),
-    image: "/images/courses/learning-path-garden-with-trophy.png",
-    noIndex: true,
+    image: COURSES_OG_IMAGE,
+    noIndex: !COURSES_INDEXABLE,
   })
 }
 

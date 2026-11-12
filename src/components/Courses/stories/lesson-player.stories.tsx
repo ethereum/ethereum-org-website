@@ -114,6 +114,30 @@ export const SmartContractVendingMachine: Story = {
   },
 }
 
+/** Everyday course: the shared-notebook sandbox (add a line, then edit an old one) */
+export const EverydayNotebook: Story = {
+  args: {
+    courseId: "everyday",
+    lesson: getLesson("everyday", "notebook")!.lesson,
+  },
+}
+
+/** Everyday course: the mailbox sandbox (drop a letter, try a wrong key, open) */
+export const EverydayMailbox: Story = {
+  args: {
+    courseId: "everyday",
+    lesson: getLesson("everyday", "mailbox")!.lesson,
+  },
+}
+
+/** Everyday course: `snack-machine`, the vending machine with coins */
+export const EverydaySnackMachine: Story = {
+  args: {
+    courseId: "everyday",
+    lesson: getLesson("everyday", "machine")!.lesson,
+  },
+}
+
 const wallets = getCourse("wallets")!
 
 /** Course check (`exam`): one attempt per question, answer revealed, results and review at the end */

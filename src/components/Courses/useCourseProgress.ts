@@ -4,7 +4,7 @@ import { useCallback } from "react"
 
 import { EXAM_ID, EXAM_PASS_MARK, lessonProgressKey } from "@/data/courses"
 
-import { COURSE_PROGRESS_KEY } from "./progress-storage"
+import { COURSE_PROGRESS_KEY, flagProgress } from "./progress-storage"
 import { mergeStepResults, type StepRecord } from "./step-history"
 import { extendStreak, type Streak } from "./streak"
 
@@ -42,6 +42,8 @@ export interface CourseProgress {
 
 export interface LessonReward {
   xp: number
+  /** Part of `xp` earned by a perfect first run, shown as its own moment */
+  bonus: number
   perfect: boolean
   streak: number
   /** False when the streak was already extended earlier today */
@@ -101,7 +103,8 @@ export const useCourseProgress = () => {
   const award = (
     xp: number,
     perfect: boolean,
-    update: (now: Date) => Partial<CourseProgress>
+    update: (now: Date) => Partial<CourseProgress>,
+    bonus = 0
   ): LessonReward => {
     const now = new Date()
     const { streak, extended } = extendStreak(progress.streak, now)
@@ -116,9 +119,11 @@ export const useCourseProgress = () => {
         streak.count
       ),
     })
+    flagProgress(true)
 
     return {
       xp,
+      bonus,
       perfect,
       streak: streak.count,
       streakExtended: extended,
@@ -137,20 +142,30 @@ export const useCourseProgress = () => {
     const key = lessonProgressKey(courseId, lessonId)
     const previous = progress.lessons[key]
     const perfect = accuracy === 1
-    const xp = previous
-      ? XP_REPLAY
-      : XP_LESSON + (perfect ? XP_PERFECT_BONUS : 0)
+    const bonus = !previous && perfect ? XP_PERFECT_BONUS : 0
+    const xp = previous ? XP_REPLAY : XP_LESSON + bonus
 
-    return award(xp, perfect, (now) => ({
-      lessons: {
-        ...progress.lessons,
-        [key]: {
-          completedAt: now.toISOString(),
-          accuracy: Math.max(accuracy, previous?.accuracy ?? 0),
+    return award(
+      xp,
+      perfect,
+      (now) => ({
+        lessons: {
+          ...progress.lessons,
+          [key]: {
+            completedAt: now.toISOString(),
+            accuracy: Math.max(accuracy, previous?.accuracy ?? 0),
+          },
         },
-      },
-      steps: mergeStepResults(progress.steps, courseId, lessonId, results, now),
-    }))
+        steps: mergeStepResults(
+          progress.steps,
+          courseId,
+          lessonId,
+          results,
+          now
+        ),
+      }),
+      bonus
+    )
   }
 
   /** Any attempt counts for the streak; the trophy needs `EXAM_PASS_MARK` */
@@ -185,7 +200,10 @@ export const useCourseProgress = () => {
     return { ...reward, passed }
   }
 
-  const resetProgress = () => setProgress(INITIAL_PROGRESS)
+  const resetProgress = () => {
+    setProgress(INITIAL_PROGRESS)
+    flagProgress(false)
+  }
 
   return {
     progress,

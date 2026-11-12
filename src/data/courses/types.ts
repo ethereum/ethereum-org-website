@@ -25,9 +25,19 @@ export type CourseWidgetId =
   | "call-sorter"
   | "token-ledger"
   | "approval-scope"
+  | "shared-notebook"
+  | "mailbox"
+  | "snack-machine"
 
-/** Course accent colour; drives the path, buttons and art */
-export type CourseTheme = "purple" | "orange" | "teal" | "blue" | "pink"
+/** Hand-tuned course colours from the site palette */
+export type CoursePreset = "purple" | "orange" | "teal" | "blue" | "pink"
+
+/**
+ * Course accent colour; drives the path, buttons and art. A preset, or any
+ * OKLCH hue (0-360) for a generated, contrast-checked palette. Each course
+ * needs its own; `tests/unit/courses/palette.spec.ts` enforces that.
+ */
+export type CourseTheme = CoursePreset | { hue: number }
 
 /** Decorative isometric illustration */
 export type CourseArtId =
@@ -37,6 +47,10 @@ export type CourseArtId =
   | "vault"
   | "tank"
   | "contract"
+  | "notebook"
+  | "mailbox"
+  | "stamp"
+  | "vending"
 
 /** Icon on a lesson's path node */
 export type LessonIconId =

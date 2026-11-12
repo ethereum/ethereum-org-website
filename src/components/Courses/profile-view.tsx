@@ -4,23 +4,18 @@ import { useEffect, useState } from "react"
 import {
   CalendarDays,
   CircleCheck,
+  Crosshair,
   Flame,
   type LucideIcon,
   Medal,
   Sparkles,
-  Target,
   Trophy,
   UserRound,
   Zap,
 } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
-import {
-  Card,
-  CardContent,
-  CardParagraph,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import Eyebrow from "@/components/ui/eyebrow"
 import InlineLink from "@/components/ui/Link"
 import { Progress as ProgressBar } from "@/components/ui/progress"
@@ -48,7 +43,7 @@ import CourseProgress from "./course-progress"
 import { useLevelName } from "./level-up"
 import { levelFor, levelProgress } from "./levels"
 import { ProgressNote } from "./progress-stats"
-import { HAS_PROGRESS_ATTR } from "./progress-storage"
+import { flagProgress } from "./progress-storage"
 import { getActiveStreak } from "./streak"
 import { courseThemeStyle } from "./theme"
 import {
@@ -64,7 +59,6 @@ import { useRouter } from "@/i18n/navigation"
 const solidCard = "bg-(--course) text-white"
 const solidMuted = "text-white/85"
 const solidIcon = "fill-white/25 text-white"
-const solidIconOff = "text-white/60"
 
 const REVIEW_LIMIT = 5
 const RECENT_LIMIT = 5
@@ -174,14 +168,15 @@ const ProfileView = () => {
   useEffect(() => {
     // With nothing saved there's no profile yet: back to the hub, which says why
     const stored = readStoredProgress()
-    if (stored && hasAnyProgress(stored)) setReady(true)
-    else router.replace(backHref)
+    if (stored && hasAnyProgress(stored)) {
+      flagProgress(true)
+      setReady(true)
+    } else router.replace(backHref)
   }, [router, backHref])
 
   // Progress reset from this page: nothing left to show, so leave too
   useEffect(() => {
     if (!ready || hasAnyProgress(progress)) return
-    document.documentElement.removeAttribute(HAS_PROGRESS_ATTR)
     router.replace(backHref)
   }, [ready, progress, router, backHref])
 
@@ -260,25 +255,27 @@ const ProfileView = () => {
             )}
             style={courseThemeStyle("purple")}
           >
-            <CardContent className="h-full gap-4 max-xl:flex-row max-xl:items-center xl:justify-between">
+            <CardContent className="h-full gap-4 text-white max-xl:flex-row max-xl:items-center xl:justify-between">
               <span className="grid size-16 shrink-0 place-items-center rounded-full bg-white/15">
                 <UserRound aria-hidden className="size-8 text-white" />
               </span>
               <div className="flex flex-1 flex-col gap-3">
                 <div className="flex flex-col gap-1">
-                  <CardTitle className="m-0 text-white">
+                  <p className="m-0 text-2xl font-bold text-white">
                     {t("page-courses-profile-account-local")}
-                  </CardTitle>
+                  </p>
                   <CardParagraph className={cn("m-0", solidMuted)} size="sm">
                     {t("page-courses-profile-account-soon")}
                   </CardParagraph>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <span className="font-black">{levelName(level)}</span>
+                  <span className="font-black text-white">
+                    {levelName(level)}
+                  </span>
                   <ProgressBar
                     aria-hidden
                     value={levelProgress(progress.xp, level) * 100}
-                    className="h-2 bg-white/25 *:data-[slot=progress-indicator]:bg-yellow-300"
+                    className="h-2 bg-white/25 *:data-[slot=progress-indicator]:bg-white"
                   />
                   <span className={cn("text-sm", solidMuted)}>
                     {nextLevel
@@ -301,7 +298,7 @@ const ProfileView = () => {
           />
           <Stat
             icon={Flame}
-            iconClassName={streak > 0 ? solidIcon : solidIconOff}
+            iconClassName={solidIcon}
             theme="orange"
             label={t("page-courses-profile-streak")}
             value={days(streak)}
@@ -315,7 +312,7 @@ const ProfileView = () => {
           />
           <Stat
             icon={Trophy}
-            iconClassName={trophies > 0 ? solidIcon : solidIconOff}
+            iconClassName={solidIcon}
             theme="teal"
             label={t("page-courses-profile-trophies")}
             value={count(trophies)}
@@ -327,7 +324,7 @@ const ProfileView = () => {
             value={count(lessonsDone)}
           />
           <Stat
-            icon={Target}
+            icon={Crosshair}
             iconClassName="text-primary"
             label={t("page-courses-profile-accuracy")}
             value={percent(seen ? (seen - missed) / seen : 0)}

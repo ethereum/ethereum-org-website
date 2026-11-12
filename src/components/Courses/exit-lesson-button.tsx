@@ -90,7 +90,7 @@ const ExitLessonButton = ({
             onClick={onLeave}
             variant="ghost"
             hideArrow
-            className="min-h-12 w-full rounded-2xl font-bold tracking-wide text-error uppercase dark:text-red-400 hover-link:bg-error-light hover-link:!text-error dark:hover-link:bg-error-dark dark:hover-link:!text-red-400"
+            className="min-h-12 w-full rounded font-bold tracking-wide text-error uppercase dark:text-red-400 hover-link:bg-error-light hover-link:!text-error dark:hover-link:bg-error-dark dark:hover-link:!text-red-400"
           >
             {t("page-courses-exit-leave")}
           </ButtonLink>

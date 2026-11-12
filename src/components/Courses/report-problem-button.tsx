@@ -30,10 +30,13 @@ type Reason = (typeof REASONS)[number]
 const ISSUE_URL = "https://github.com/ethereum/ethereum-org-website/issues/new"
 
 /**
- * Flag beside the footer's main button. A report is an anonymous Matomo event; when
+ * Flag in the lesson footer. A report is an anonymous Matomo event; when
  * tracking is off it can't be sent, so the learner gets a GitHub issue link.
  */
-const ReportProblemButton = (props: ReportContext) => {
+const ReportProblemButton = ({
+  className,
+  ...props
+}: ReportContext & { className?: string }) => {
   const t = useTranslations("page-courses")
   const baseId = useId()
   const [open, setOpen] = useState(false)
@@ -80,8 +83,11 @@ const ReportProblemButton = (props: ReportContext) => {
       <DialogTrigger asChild>
         <Button
           variant="ghost"
-          isSecondary
-          className="shrink-0 rounded-full px-2 text-body-medium"
+          // Not isSecondary: its attribute selector would override the colour
+          className={cn(
+            "shrink-0 rounded-full px-2 text-body-medium",
+            className
+          )}
           aria-label={t("page-courses-report-open")}
         >
           <Flag />

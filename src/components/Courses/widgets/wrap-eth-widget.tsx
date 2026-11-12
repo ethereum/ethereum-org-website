@@ -129,7 +129,7 @@ const WrapEthWidget = ({ onComplete }: WidgetProps) => {
         </Button>
       </div>
 
-      <p role="status" className="m-0 font-bold">
+      <p role="status" className="m-0">
         {last
           ? t(`page-courses-widget-wrap-did-${last}`, {
               value: coin,

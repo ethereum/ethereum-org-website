@@ -37,7 +37,7 @@ import ExamComplete from "./exam-complete"
 import ExitLessonButton from "./exit-lesson-button"
 import LessonComplete from "./lesson-complete"
 import ReportProblemButton from "./report-problem-button"
-import { chunkyButton, lessonThemeStyle } from "./theme"
+import { chunkyButton, courseText, lessonThemeStyle } from "./theme"
 import {
   type ExamReward,
   type LessonReward,
@@ -329,10 +329,53 @@ const LessonPlayer = ({
   const showCombo =
     status === "correct" && combo >= COMBO_MIN && firstTry[step.id]
 
+  // Footer flag: beside the main button from md; on mobile, in the verdict or
+  // explanation row when there is one
+  const verdictText =
+    status === "correct"
+      ? "text-green-700 dark:text-green-400"
+      : "text-error dark:text-red-400"
+  const hasFeedbackRow = explored || (status !== "answering" && isGraded(step))
+  const reportFlag = (className?: string) => (
+    <ReportProblemButton
+      courseId={courseId}
+      lessonId={lesson.id}
+      stepId={step.id}
+      answer={Array.isArray(value) ? value.filter(Boolean) : undefined}
+      className={className}
+    />
+  )
+
+  // One h1 per page: visible on the first step only (under a concept step's
+  // art), screen-reader only after that so later steps keep the outline
+  const titleText = exam
+    ? `${t(`${courseId}-title`)}: ${t("page-courses-exam-title")}`
+    : t(`${courseId}-${lesson.id}-title`)
+  const titleVisible = index === 0 && !reward
+  const titleInStep = titleVisible && step.type === "concept" && !step.takeaway
+  const title = (
+    <h1
+      className={cn(
+        "m-0",
+        titleVisible
+          ? "text-lg text-(--course-strong) dark:text-(--course-bright)"
+          : "sr-only"
+      )}
+    >
+      {titleText}
+    </h1>
+  )
+
   const renderStep = () => {
     switch (step.type) {
       case "concept":
-        return <ConceptStep step={step} keyFor={keyFor} />
+        return (
+          <ConceptStep
+            step={step}
+            keyFor={keyFor}
+            title={titleInStep ? title : undefined}
+          />
+        )
       case "choice":
         return (
           <ChoiceStep
@@ -410,7 +453,6 @@ const LessonPlayer = ({
             }
           />
           <Progress
-            shine
             value={progressValue}
             aria-label={t("page-courses-step-progress", {
               current: index + 1,
@@ -432,11 +474,7 @@ const LessonPlayer = ({
           </span>
         </div>
 
-        <h1 className="m-0 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
-          {exam
-            ? `${t(`${courseId}-title`)}: ${t("page-courses-exam-title")}`
-            : t(`${courseId}-${lesson.id}-title`)}
-        </h1>
+        {!titleInStep && title}
 
         {reward && exam && "passed" in reward ? (
           <ExamComplete
@@ -509,7 +547,7 @@ const LessonPlayer = ({
               "border-transparent bg-error-light dark:bg-error-dark"
           )}
         >
-          <div className="mx-auto flex max-w-2xl flex-col gap-4 px-page py-5 md:flex-row md:items-center md:justify-between">
+          <div className="mx-auto flex max-w-2xl flex-col gap-4 px-page py-5">
             <AnimatePresence mode="wait">
               {explored && (
                 <motion.div
@@ -523,7 +561,8 @@ const LessonPlayer = ({
                     className="size-8 shrink-0 text-(--course-strong) dark:text-(--course-bright)"
                     aria-hidden
                   />
-                  <p className="m-0">{t(keyFor("explain"))}</p>
+                  <p className="m-0 flex-1">{t(keyFor("explain"))}</p>
+                  {reportFlag(cn("-my-1 md:hidden", courseText))}
                 </motion.div>
               )}
               {status !== "answering" && isGraded(step) && (
@@ -545,47 +584,47 @@ const LessonPlayer = ({
                       aria-hidden
                     />
                   )}
-                  <div>
-                    <p
-                      className={cn(
-                        "m-0 flex flex-wrap items-center gap-2 text-xl font-black",
-                        status === "correct"
-                          ? "text-green-700 dark:text-green-400"
-                          : "text-error dark:text-red-400"
-                      )}
-                    >
-                      {status === "correct"
-                        ? t("page-courses-correct")
-                        : t("page-courses-incorrect")}
-                      {showCombo && (
-                        <motion.span
-                          initial={reduceMotion ? false : { scale: 0.4 }}
-                          animate={{ scale: 1 }}
-                          className="inline-flex items-center gap-1 rounded-full bg-orange-700 px-2 py-0.5 text-sm text-white"
-                        >
-                          <Flame className="size-4" aria-hidden />
-                          {t("page-courses-combo", { count: combo })}
-                        </motion.span>
-                      )}
-                    </p>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between gap-2">
+                      <p
+                        className={cn(
+                          "m-0 flex flex-wrap items-center gap-2 text-xl font-black",
+                          verdictText
+                        )}
+                      >
+                        {status === "correct"
+                          ? t("page-courses-correct")
+                          : t("page-courses-incorrect")}
+                        {showCombo && (
+                          <motion.span
+                            initial={reduceMotion ? false : { scale: 0.4 }}
+                            animate={{ scale: 1 }}
+                            className="inline-flex items-center gap-1 rounded-full bg-orange-700 px-2 py-0.5 text-sm text-white"
+                          >
+                            <Flame className="size-4" aria-hidden />
+                            {t("page-courses-combo", { count: combo })}
+                          </motion.span>
+                        )}
+                      </p>
+                      {reportFlag(cn("-my-2 md:hidden", verdictText))}
+                    </div>
                     {feedback && <p className="m-0 mt-1">{feedback}</p>}
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
 
+            {/* Main button: full width on mobile, end-aligned from md */}
             <div
               data-footer-actions
-              className="flex shrink-0 items-center justify-end gap-3 md:ms-auto"
+              className="flex items-center justify-end gap-3"
             >
-              <ReportProblemButton
-                courseId={courseId}
-                lessonId={lesson.id}
-                stepId={step.id}
-                answer={
-                  Array.isArray(value) ? value.filter(Boolean) : undefined
-                }
-              />
+              {reportFlag(
+                cn(
+                  status === "answering" ? courseText : verdictText,
+                  hasFeedbackRow && "max-md:hidden"
+                )
+              )}
               {status === "incorrect" && exam ? (
                 <Button
                   variant="ghost"

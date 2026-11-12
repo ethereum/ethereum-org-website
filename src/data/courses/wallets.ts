@@ -3,7 +3,7 @@ import type { Course } from "./types"
 export const walletsCourse: Course = {
   id: "wallets",
   level: "beginner",
-  theme: "purple",
+  theme: { hue: 225 },
   art: "vault",
   lessons: [
     {
@@ -173,7 +173,7 @@ export const walletsCourse: Course = {
     },
     {
       id: "signature",
-      source: "/glossary/#digital-signatures",
+      source: "/guides/how-to-use-a-wallet/#connecting-to-projects",
       type: "choice",
       options: ["identity", "key", "reveal", "exact"],
       correct: ["key", "exact"],

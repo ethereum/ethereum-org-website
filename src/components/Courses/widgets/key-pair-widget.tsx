@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
 
+import { chunkyButton, chunkyButtonSecondary } from "../theme"
+
 import type { WidgetProps } from "./types"
 
 interface KeyPair {
@@ -49,14 +51,18 @@ const KeyPairWidget = ({ onComplete }: WidgetProps) => {
   return (
     <div className="flex flex-col gap-4 rounded-base bg-background-highlight p-4 md:p-6">
       <div className="flex flex-wrap gap-2">
-        <Button onClick={generate} variant={pair ? "outline" : "solid"}>
+        <Button
+          variant="ghost"
+          onClick={generate}
+          className={pair ? chunkyButtonSecondary : chunkyButton}
+        >
           {pair ? <RefreshCw /> : <KeyRound />}
           {pair
             ? t("page-courses-widget-key-regenerate")
             : t("page-courses-widget-key-generate")}
         </Button>
         {pair && (
-          <Button onClick={tweak}>
+          <Button variant="ghost" onClick={tweak} className={chunkyButton}>
             <Shuffle />
             {t("page-courses-widget-key-tweak")}
           </Button>
@@ -92,7 +98,7 @@ const KeyPairWidget = ({ onComplete }: WidgetProps) => {
       )}
 
       {pair?.changedAt !== undefined && (
-        <p className="m-0 font-bold" role="status">
+        <p className="m-0" role="status">
           {t("page-courses-widget-key-changed")}
         </p>
       )}

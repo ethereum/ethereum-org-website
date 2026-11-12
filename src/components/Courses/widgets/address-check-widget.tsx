@@ -11,6 +11,7 @@ import { Center } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 
 import {
+  chunkyButtonSecondary,
   chunkyTile,
   courseText,
   pickedMarker,
@@ -105,10 +106,9 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
           </p>
           {!locked && (
             <Button
-              variant="outline"
-              size="sm"
+              variant="ghost"
               onClick={() => setFull((on) => !on)}
-              className="text-sm"
+              className={cn(chunkyButtonSecondary, "min-h-10 px-4 text-sm")}
             >
               {full ? <EyeOff aria-hidden /> : <Eye aria-hidden />}
               {full
@@ -168,10 +168,7 @@ const AddressCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
       </div>
 
       {locked && (
-        <p
-          role="status"
-          className="m-0 font-bold text-green-700 dark:text-green-400"
-        >
+        <p role="status" className="m-0 text-green-700 dark:text-green-400">
           {t("page-courses-widget-address-hit")}
         </p>
       )}
