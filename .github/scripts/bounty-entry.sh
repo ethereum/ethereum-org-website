@@ -10,13 +10,13 @@ FILES='["src/data/consensus-bounty-hunters.json", "src/data/execution-bounty-hun
 
 [[ "${BASH_SOURCE[0]}" == "$0" ]] || return 0
 
-AUTHORS=$(awk '$1 == "/src/data/*-bounty-hunters.json" { for (i = 2; i <= NF; i++) print substr($i, 2) }' \
-  "$(dirname "${BASH_SOURCE[0]}")/../CODEOWNERS" | jq -Rsc 'split("\n") | map(select(. != "") | ascii_downcase)')
-
 case "${1:-}" in
   match)
+    AUTHORS=$(awk '$1 == "/src/data/*-bounty-hunters.json" { for (i = 2; i <= NF; i++) print substr($i, 2) }' \
+      "$(dirname "${BASH_SOURCE[0]}")/../CODEOWNERS" | jq -Rsc 'split("\n") | map(select(. != "") | ascii_downcase)')
     author=$(gh api "repos/$REPO/pulls/$2" --jq .user.login)
-    changed=$(gh api --paginate "repos/$REPO/pulls/$2/files" --jq '.[].filename')
+    changed=$(gh api --paginate "repos/$REPO/pulls/$2/files" --jq '.[] | .filename, (.previous_filename // empty)')
+    [ "$AUTHORS" != "[]" ] || echo "::warning::No owners found for /src/data/*-bounty-hunters.json in CODEOWNERS" >&2
     jq -nr --arg author "$author" --arg changed "$changed" --argjson a "$AUTHORS" --argjson f "$FILES" '
       [$changed | splits("\n") | select(. != "")] as $c
       | ($author | ascii_downcase | IN($a[])) and ($c | length > 0) and all($c[]; IN($f[]))'
@@ -44,13 +44,14 @@ case "${1:-}" in
             then "username must be \"\" or a GitHub handle"
           elif (.score | type) != "number" or .score <= 0 or .score != (.score | floor) then "score must be a positive integer"
           else empty end;
-        def dups(f): [.[] | objects | f | strings | ascii_downcase | select(. != "")] | group_by(.) | map(select(length > 1)[0]);
+        def counts(f): [.[] | objects | f | strings | ascii_downcase | select(. != "")] | group_by(.) | map({key: .[0], value: length}) | from_entries;
+        def dups(f): (counts(f)) as $h | ($base | counts(f)) as $b | $h | to_entries[] | select(.value > 1 and .value > ($b[.key] // 0)) | .key;
         def scores($k): [.[] | objects | select([.name, .username] == $k) | .score | numbers] | sort | reverse;
         . as $head
         | (if length == 0 then "\($f): must not be empty" else empty end),
           (.[] | . as $e | problem | "\($f): \($e | tojson): \(.)"),
-          ((dups(.name) - ($base | dups(.name)))[] | "\($f): duplicate name \(tojson)"),
-          ((dups(.username) - ($base | dups(.username)))[] | "\($f): duplicate username \(tojson)"),
+          (dups(.name) | "\($f): duplicate name \(tojson)"),
+          (dups(.username) | "\($f): duplicate username \(tojson)"),
           ($base | group_by([.name, .username])[] | [.[0].name, .[0].username] as $k | (scores($k)) as $b
             | ($head | scores($k)) as $h
             | if ($h | length) < ($b | length) then "\($f): entry removed: \($k[0]) (\($k[1]))"

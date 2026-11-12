@@ -44,29 +44,34 @@ jobs:
           REPO: ${{ github.repository }}
           PR: ${{ github.event.pull_request.number }}
           BOT: ${{ steps.app-token.outputs.app-slug }}[bot]
+          EVENT_HEAD: ${{ github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
           script=.github/scripts/bounty-entry.sh
-          if [ "$(bash "$script" match "$PR")" != true ]; then
-            echo "Not an allowlisted bounty-only PR; skipping."
-            exit 0
-          fi
 
           bot_approvals() {
             gh api --paginate "repos/$REPO/pulls/$PR/reviews" | jq -rs --arg bot "$BOT" --arg sha "${1:-}" \
               'add // [] | .[] | select(.user.login == $bot and .state == "APPROVED" and ($sha == "" or .commit_id == $sha)) | .id'
           }
+          dismiss() {
+            for id in $1; do
+              gh api -X PUT "repos/$REPO/pulls/$PR/reviews/$id/dismissals" -f event=DISMISS -f message="$2" > /dev/null
+            done
+          }
           fail() {
             printf 'The bug bounty leaderboard check did not pass on %s:\n\n```\n%s\n```\n\nPush a fix and it reruns.\n' "$head" "$1" \
               | gh pr comment "$PR" --repo "$REPO" --body-file -
-            ids=$(bot_approvals)
-            for id in $ids; do
-              gh api -X PUT "repos/$REPO/pulls/$PR/reviews/$id/dismissals" \
-                -f event=DISMISS -f message="The bug bounty leaderboard check no longer passes on $head." > /dev/null
-            done
+            dismiss "$(bot_approvals)" "The bug bounty leaderboard check no longer passes on $head."
             echo "$1"
             exit 1
           }
+
+          match=$(bash "$script" match "$PR")
+          if [ "$match" != true ]; then
+            dismiss "$(bot_approvals)" "$EVENT_HEAD is no longer a bug bounty leaderboard-only change; this approval no longer applies."
+            echo "Not a code owner's bounty-only PR; skipping."
+            exit 0
+          fi
 
           for _ in 1 2 3 4 5 6; do
             pr=$(gh api "repos/$REPO/pulls/$PR")
@@ -75,6 +80,10 @@ jobs:
             sleep 5
           done
           head=$(jq -r .head.sha <<< "$pr")
+          if [ "$mergeable" = null ]; then
+            echo "::error::GitHub hasn't computed mergeability yet. Rerun this check."
+            exit 1
+          fi
           if [ "$mergeable" != true ]; then
             fail "GitHub reports the PR as not mergeable (mergeable: $mergeable). Resolve the conflicts with the base branch."
           fi
@@ -83,7 +92,8 @@ jobs:
           fi
           merge=$(git rev-parse FETCH_HEAD)
           if [ "$(git rev-parse "$merge^2")" != "$head" ]; then
-            fail "refs/pull/$PR/merge is not built from the head commit yet. Rerun this check."
+            echo "::error::refs/pull/$PR/merge is not built from the head commit yet. Rerun this check."
+            exit 1
           fi
           if ! errors=$(bash "$script" validate "$merge^1" "$merge"); then
             fail "$errors"
