@@ -53,3 +53,30 @@ Adding new tutorials to [ethereum.org](https://ethereum.org) is currently low-pr
 New tutorials should be placed in `public/content/developers/tutorials/your-tutorial-name/index.md`, with `your-tutorial-name` added to `src/data/internalTutorials.json` for inclusion.
 
 **Timeline:** PRs should be closed or merged within 30 days of opening.
+
+## AI first-pass review and when we trust it
+
+Every PR gets a first-pass review from an AI reviewer (`.github/workflows/pr-reviewer.md`). It assigns a risk level and flags findings by severity, as defined in `.github/workflows/shared/pr-review-core.md`. How much human reading a PR still needs depends on that risk level:
+
+| Risk | Typical PRs                                                                                     | What is needed to merge                                                          |
+| ---- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| R0   | Typos, broken links, code comments                                                              | Clean bot review + green CI, then a one-click maintainer approval (no full read) |
+| R1   | Small, contained, easy-to-revert changes (data corrections, bounty entries)                     | Same as R0                                                                       |
+| R2   | Code, UI or behaviour changes, content whose meaning changes, anything that can break the build | A human sign-off, for now (see below)                                            |
+| R3   | Deploy/security config, new pages or navigation, third-party listings, policy                   | Always a human decision; the bot prepares it                                     |
+
+"Clean" means no blocking or should-fix findings. A `fast-track ⚡` label for clean R0–R1 PRs is coming in a separate change; until it lands, maintainers apply this rule by hand.
+
+### What moves the R2 bar
+
+R2 code and tooling reviews are useful but not yet trustworthy enough to merge on their own. We measure this with a replay eval over a golden set of past PRs (17 cases today). Once the reviewer catches 15 of 17, a clean bot review is enough to merge an R2 PR without a human sign-off.
+
+The open miss classes, which are what to improve next:
+
+- Repo conventions and file placement from `AGENTS.md`
+- Generated files that a sync job will overwrite
+- Runtime-only behaviour (for example, Netlify header and redirect ordering)
+- Technical accuracy of Ethereum content
+- Product and SEO judgement
+
+The eval harness is not part of this repo; it runs locally as a `review-eval` agent skill. Run it before changing the reviewer prompts or review skills.
