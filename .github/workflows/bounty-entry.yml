@@ -59,8 +59,14 @@ jobs:
             done
           }
           fail() {
-            printf 'The bug bounty leaderboard check did not pass on %s:\n\n```\n%s\n```\n\nPush a fix and it reruns.\n' "$head" "$1" \
-              | gh pr comment "$PR" --repo "$REPO" --body-file -
+            printf '<!-- bounty-entry -->\nThe bug bounty leaderboard check did not pass on %s:\n\n```\n%s\n```\n\nPush a fix and it reruns.\n' "$head" "$1" > body.md
+            comment=$(gh api --paginate "repos/$REPO/issues/$PR/comments" \
+              --jq '.[] | select(.user.login == env.BOT and (.body | startswith("<!-- bounty-entry -->"))) | .id' | tail -n 1)
+            if [ -n "$comment" ]; then
+              gh api -X PATCH "repos/$REPO/issues/comments/$comment" -F body=@body.md > /dev/null
+            else
+              gh api "repos/$REPO/issues/$PR/comments" -F body=@body.md > /dev/null
+            fi
             dismiss "$(bot_approvals)" "The bug bounty leaderboard check no longer passes on $head."
             echo "$1"
             exit 1

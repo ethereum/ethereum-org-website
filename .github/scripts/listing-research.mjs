@@ -264,6 +264,37 @@ export const productSites = (item) =>
     ),
   ].slice(0, 3)
 
+// The agent's GitHub tools hide outside contributors' issues (gh-aw integrity filter), so referenced issues are saved here as text.
+function linkedIssues(body, self) {
+  const nums = [
+    ...body.matchAll(
+      /(?:^|[\s(])#(\d+)\b|github\.com\/ethereum\/ethereum-org-website\/issues\/(\d+)/g
+    ),
+  ].map((m) => Number(m[1] || m[2]))
+  return [...new Set(nums)]
+    .filter((n) => n !== self)
+    .slice(0, 3)
+    .flatMap((n) => {
+      try {
+        const i = ghJson(`repos/${REPO}/issues/${n}`)
+        if (i.pull_request) return []
+        return [
+          {
+            number: i.number,
+            title: i.title,
+            body: (i.body || "").slice(0, 6000),
+            author: i.user?.login,
+            labels: i.labels.map((l) => l.name),
+            state: i.state,
+            createdAt: i.created_at,
+          },
+        ]
+      } catch {
+        return []
+      }
+    })
+}
+
 async function prefetch(pr, dir) {
   mkdirSync(`${dir}/pages`, { recursive: true })
   const p = ghJson(`repos/${REPO}/pulls/${pr}`)
@@ -287,6 +318,7 @@ async function prefetch(pr, dir) {
         files: ghJson(`repos/${REPO}/pulls/${pr}/files?per_page=100`).map(
           (f) => f.filename
         ),
+        issues: linkedIssues(p.body || "", p.number),
       },
       null,
       2
