@@ -36,7 +36,7 @@
   "page-find-wallet-buy-sell-crypto": "Buy / sell crypto",
   "page-find-wallet-buy-crypto-desc": "Buy crypto with fiat directly in the wallet \n *Note: buying crypto may be region specific",
   "page-find-wallet-sell-for-fiat": "Sell for cash",
-  "page-find-wallet-sell-for-fiat-desc": "Sell crypto to fiat directly in the wallet \n *Note: withdrawing crypto may be region specific",
+  "page-find-wallet-sell-for-fiat-desc": "Sell crypto for cash directly in the wallet \n *Note: selling crypto may be region specific",
   "page-find-wallet-network-support": "Network support",
   "page-find-wallet-multisig": "Multisig",
   "page-find-wallet-multisig-desc": "Wallets that require multiple signatures to authorize a transaction",

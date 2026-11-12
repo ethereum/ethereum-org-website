@@ -20,6 +20,8 @@ Do you want to start your Ethereum journey? Our practical guides lead you step-b
 
 ## Using Ethereum {#using-ethereum}
 
-1. [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/) - Are Ethereum transactions too costly? Consider moving to Ethereum scaling solutions called layer 2s.
+1. [How to sell ETH and cash out](/guides/how-to-sell-eth/) - Want to turn your crypto into money in your bank account? This guide shows you how to sell ETH or tokens and withdraw the cash.
 
-2. [How to swap tokens](/guides/how-to-swap-tokens/) - Do you want to exchange your tokens for a different one? This simple guide will show you how to do that.
+2. [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/) - Are Ethereum transactions too costly? Consider moving to Ethereum scaling solutions called layer 2s.
+
+3. [How to swap tokens](/guides/how-to-swap-tokens/) - Do you want to exchange your tokens for a different one? This simple guide will show you how to do that.

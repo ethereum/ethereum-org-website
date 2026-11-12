@@ -12,6 +12,8 @@ summaryPoints:
   - Validators who fully exit staking will receive their remaining balance
 ---
 
+_Looking to sell ETH or move money to your bank account? See [how to sell ETH and cash out](/guides/how-to-sell-eth/)._
+
 **Staking withdrawals** refer to transfers of ETH from a validator account on [Ethereum](/)'s consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
 
 > If you are part of a [staking pool](/staking/pools/) or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
