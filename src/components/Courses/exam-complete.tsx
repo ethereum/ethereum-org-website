@@ -81,8 +81,8 @@ const ExamComplete = ({
         }
       : {}
 
-  const slide = (key: Stage) => ({
-    key,
+  // React wants `key` passed directly, not spread, so callers add it
+  const slide = () => ({
     initial: animate ? { opacity: 0, x: 40 } : false,
     animate: { opacity: 1, x: 0 },
     exit: animate ? { opacity: 0, x: -40 } : undefined,
@@ -131,7 +131,8 @@ const ExamComplete = ({
       <AnimatePresence mode="wait" initial={false}>
         {stage === "summary" && (
           <motion.div
-            {...slide("summary")}
+            key="summary"
+            {...slide()}
             className="flex w-full flex-col items-center gap-6"
           >
             <div className="relative grid size-40 place-items-center">
@@ -213,7 +214,7 @@ const ExamComplete = ({
         )}
 
         {stage === "review" && (
-          <motion.div {...slide("review")} className="w-full text-start">
+          <motion.div key="review" {...slide()} className="w-full text-start">
             <h2 className="m-0 mb-4 text-h3 font-black">
               {t("page-courses-exam-review-title")}
             </h2>
@@ -232,7 +233,7 @@ const ExamComplete = ({
         )}
 
         {stage === "streak" && (
-          <motion.div {...slide("streak")} className="w-full">
+          <motion.div key="streak" {...slide()} className="w-full">
             <StreakCelebration streak={reward.streak} />
           </motion.div>
         )}
