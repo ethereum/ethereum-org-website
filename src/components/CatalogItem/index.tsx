@@ -119,10 +119,10 @@ const CatalogItemHero = ({ item }: { item: CatalogItem }) => (
         <div className="flex flex-col gap-2">
           {item.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
-              {item.tags.map(({ label, status, node }) => (
-                <Fragment key={label}>
-                  {node ?? <Tag status={status ?? "tag"}>{label}</Tag>}
-                </Fragment>
+              {item.tags.map(({ label, status }) => (
+                <Tag key={label} status={status ?? "tag"}>
+                  {label}
+                </Tag>
               ))}
             </div>
           )}
