@@ -34,8 +34,8 @@ on:
         if [ "$EVENT" = workflow_dispatch ]; then exit 0; fi
         node .github/scripts/listing-research.mjs match "$PR" || {
           rc=$?
-          [ "$rc" -eq 1 ] || echo "::warning::Listing gate failed (exit $rc); PR Reviewer (team) reviews this PR"
-          exit "$rc"
+          [ "$rc" -eq 1 ] && exit 1
+          echo "::warning::Listing gate failed (exit $rc); reviewing this PR here"
         }
   skip-bots:
     - allcontributors[bot]
@@ -54,6 +54,7 @@ permissions:
 # PR code is only fetched as the `pr-head` ref, never checked out or run.
 checkout:
   repository: ${{ github.repository }}
+  ref: ${{ github.event.pull_request.base.ref }}
   fetch-depth: 0
 engine:
   id: claude
@@ -143,6 +144,12 @@ pre-agent-steps:
         > /tmp/gh-aw/agent/pr-meta.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
       node .github/scripts/listing-research.mjs prefetch "$PR_NUMBER" /tmp/gh-aw/agent/listing
+      # A dispatched run starts on the default branch; review against the PR's own base.
+      base=$(jq -r .baseRefName /tmp/gh-aw/agent/pr-meta.json)
+      if [ "$(git rev-parse --abbrev-ref HEAD)" != "$base" ]; then
+        git fetch -q --no-tags origin "$base"
+        git checkout -q -f --detach FETCH_HEAD
+      fi
 imports:
   - shared/pr-review-core.md
   - shared/submit-review.md

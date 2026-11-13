@@ -173,18 +173,20 @@ safe-outputs:
             existing=$(gh api --paginate "repos/$REPO/issues/$pr/comments?per_page=100" \
               --jq '.[] | select(.user.login == "ethorg-agent[bot]" and (.body | contains("First-pass review"))) | {id, body}' | jq -sc 'last // {}')
 
-            # Listing research is re-checked against its sources; a review without it keeps the previous comment's.
+            # Listing research is re-checked against its sources; without it, or if the check fails, the previous comment's is kept.
             listing=null
-            if jq -e '.criteria // "" | tostring | length > 2' <<<"$item" > /dev/null; then
+            if jq -e '[.product, .criteria, .facts] | map(. // "" | tostring) | any(length > 2)' <<<"$item" > /dev/null; then
               listing=$(node .github/scripts/listing-research.mjs check <<<"$item") || { echo "::warning::PR #$pr: listing research could not be checked"; listing=null; }
-            else
+            fi
+            if [ "$listing" = null ]; then
               listing=$(jq -c '.body // "" | (capture("<!-- ethorg-review: (?<j>.*) -->").j | fromjson | .listing)? // null' <<<"$existing")
             fi
-            review=$(jq -c --argjson l "$listing" '
-              if $l then . + {listing: ($l | walk(if type == "string" then .[0:500] | gsub("<!--"; "&lt;!--") | gsub("-->"; "--&gt;") else . end))} else . end
-            ' <<<"$review")
             section=""
-            if [ "$listing" != null ]; then section=$(jq -c .listing <<<"$review" | node .github/scripts/listing-research.mjs section); fi
+            if [ "$listing" != null ]; then
+              section=$(node .github/scripts/listing-research.mjs section <<<"$listing")
+              review=$(jq -c --argjson l "$listing" '. + {listing: $l}' <<<"$review")
+              gh api -X POST "repos/$REPO/issues/$pr/labels" -f "labels[]=needs product review 🕵️" > /dev/null
+            fi
 
             # Visible text also gets @-mentions defused so injected text can't ping people or teams.
             body=$(jq -r --arg section "$section" '
@@ -207,9 +209,13 @@ safe-outputs:
                       + (if .evidence != "" then " — \(.evidence | say)" else "" end)] | join("\n"))
                   + "\n\n</details>" else "" end)
               + (if (.unreviewed | length) > 0 then "\n\n_Not reviewed: " + (.unreviewed | map("`\(.)`") | join(", ")) + "_" else "" end)
-              + "\n\n<!-- ethorg-review: " + tojson + " -->"
+              + "\n\n<!-- ethorg-review: " + (tojson | gsub("<"; "\\u003c") | gsub(">"; "\\u003e")) + " -->"
             ' <<<"$review")
 
+            # GitHub rejects comments over 65,536 characters; the listing section is the part that can go.
+            if [ ${#body} -gt 65000 ] && [ -n "$section" ]; then
+              body=${body/"$section"/$'### 🧾 Listing check\n\n_Too long to show with this review\'s findings; the data is kept below._'}
+            fi
             existing=$(jq -r '.id // empty' <<<"$existing")
             if [ -n "$existing" ]; then
               gh api -X PATCH "repos/$REPO/issues/comments/$existing" -f body="$body" > /dev/null

@@ -29,8 +29,8 @@ on:
       run: |
         node .github/scripts/listing-research.mjs match "$PR" || {
           rc=$?
-          [ "$rc" -eq 1 ] || echo "::warning::Routing failed (exit $rc); reviewing this PR as usual"
-          exit 1
+          [ "$rc" -eq 1 ] && exit 1
+          echo "::warning::Listing gate failed (exit $rc); PR Reviewer (listing) reviews this PR"
         }
   skip-bots:
     - allcontributors[bot]

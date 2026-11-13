@@ -487,7 +487,7 @@ export async function check(item, fetchPage = fetchText) {
 
   let downgraded = 0
   const criteria = []
-  for (const c of arr(item.criteria, 20)) {
+  for (const c of arr(item.criteria, 32)) {
     const x = {
       criterion: str(c.criterion, 200),
       status: STATUS.includes(c.status) ? c.status : "unknown",
