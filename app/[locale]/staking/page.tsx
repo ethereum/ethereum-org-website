@@ -10,11 +10,7 @@ import {
   ThumbsUp,
   Workflow,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, StakingStatsData } from "@/lib/types"
 
@@ -79,8 +75,6 @@ const Indicator = ({ level }: { level: IndicatorLevel }) => {
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const [totalEthStaked, stakedPercentage] = await Promise.all([
     getTotalEthStakedData(),
@@ -846,8 +840,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-staking")
 

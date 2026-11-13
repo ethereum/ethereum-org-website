@@ -246,6 +246,7 @@ module.exports = (phase) => {
       ...experimental,
       // Restore client-side Router Cache durations to Next 14 defaults
       staleTimes: { dynamic: 30, static: 300 },
+      globalNotFound: true,
     },
   }
 

@@ -1,6 +1,6 @@
 import { Info } from "lucide-react"
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { CatalogItem, ChainName, PageParams } from "@/lib/types"
 
@@ -46,7 +46,6 @@ type WalletPageParams = PageParams & { wallet: string }
 /** Standalone wallet detail: the linkable, crawlable twin of the catalog modal. */
 const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
-  setRequestLocale(locale)
 
   const [t, tItem, walletDescriptions] = await Promise.all([
     getTranslations({ locale, namespace: "page-wallets-find-wallet" }),
@@ -177,7 +176,6 @@ export async function generateMetadata(props: {
   params: Promise<WalletPageParams>
 }) {
   const { locale, wallet: walletSlug } = await props.params
-  setRequestLocale(locale)
 
   const [t, walletDescriptions] = await Promise.all([
     getTranslations({ locale, namespace: "page-wallets-find-wallet" }),

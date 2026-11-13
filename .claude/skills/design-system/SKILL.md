@@ -12,8 +12,9 @@ Tailwind v4 (CSS-first config, no `tailwind.config.ts`) + React 19 / Next.js App
 The single highest-leverage habit for keeping this codebase consistent: **when you need new UI, look for a primitive or variant first, only invent if nothing fits.** Most "new component" instincts are actually "new variant" instincts in disguise.
 
 Before you write any UI code, ask:
+
 - Is there a primitive that already does this? (`Card`, `Button`, `Alert`, `Tag`, `Hero/*`)
-- Is the difference small enough to express as a *variant* on an existing primitive?
+- Is the difference small enough to express as a _variant_ on an existing primitive?
 - Can I compose existing primitives instead of inlining a long Tailwind class chain?
 
 If you find yourself writing `flex items-center gap-X rounded-Y border bg-... p-Z` for a card-like thing, you're reinventing `<Card>`. If you write `<p className="text-4xl font-bold">N</p>` for a stat, you're reinventing `<BigNumber>`. If you write `<div className="text-5xl font-bold">Title</div>`, you're reinventing `<h1>` (which is already styled by `base.css`). **Compose, don't inline.**
@@ -26,7 +27,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 2. **No raw color values.** Use semantic tokens (`text-body`, `bg-background`, `border-border`, `text-primary`). Hex literals and `rgb()` calls bypass dark mode.
 3. **Prefer adding a variant** to an existing primitive over creating a new component. Card, Button, Alert, Tag are the most common targets.
 4. **Server Components by default.** Only `"use client"` when you need state, effects, browser APIs, or inline event handlers.
-5. **All text is translatable.** `getTranslations` from `next-intl/server` (server) or `useTranslations` from `next-intl` (client). One namespace-bound `t` per namespace -- bind a second function (e.g. `const tCommon = useTranslations("common")`) to access another namespace. Never hard-code user-facing English. **In an `app/[locale]/` page or `generateMetadata`, call `setRequestLocale(locale)` before any next-intl API** or on-demand renders throw `static to dynamic ... reason: headers` -- see `references/i18n-rtl.md`.
+5. **All text is translatable.** `getTranslations` from `next-intl/server` (server) or `useTranslations` from `next-intl` (client). One namespace-bound `t` per namespace -- bind a second function (e.g. `const tCommon = useTranslations("common")`) to access another namespace. Never hard-code user-facing English. In Route Handlers and Server Actions, pass the locale explicitly (`getTranslations({ locale, namespace })`) -- `next/root-params` doesn't reach them yet. Everywhere else it resolves on its own -- see `references/i18n-rtl.md`.
 6. **Logical CSS for direction.** Use `ms-`/`me-`/`ps-`/`pe-`/`inset-s-`/`inset-e-`/`border-s`/`border-e`/`text-start`/`text-end`. The site supports Arabic and Urdu (RTL). Hard-coded `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` breaks RTL.
 7. **Locale-aware formatters.** `numberFormat()` from `@/lib/utils/numbers`, `formatDateTime()` / `formatDate()` from `@/lib/utils/date` (UTC + hydration-safe). Never `toLocaleString` / `Intl.NumberFormat` directly.
 8. **`useRtlFlip()` for directional icons** (right-pointing arrows/chevrons). Or use `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
@@ -58,23 +59,23 @@ Old-shadow-token mapping table: `references/cleanup-playbook.md`.
 
 ## Quick "Where Do I Import From?" Cheatsheet
 
-| I need... | Import |
-|---|---|
-| Card | `import { Card, CardBanner, CardContent, CardTitle, CardParagraph } from "@/components/ui/card"` |
-| Modal/Dialog (typical) | `import Modal from "@/components/ui/dialog-modal"` (default export) |
-| Side sheet | `import { Sheet, ... } from "@/components/ui/sheet"` |
-| Tooltip | `import Tooltip from "@/components/Tooltip"` (NOT `@/components/ui/tooltip`) |
-| Button | `import { Button, ButtonLink } from "@/components/ui/buttons/Button"` |
-| Anchor (in prose) | `import InlineLink from "@/components/ui/Link"` (default) |
-| Anchor (CTA with arrow) | `import { LinkWithArrow } from "@/components/ui/Link"` |
-| Page hero | `import { PageHero, HubHero } from "@/components/Hero"` |
-| Inline alert | `import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"` |
-| Top-of-page banner | `import { Alert } from "@/components/ui/alert"` then `<Alert variant="banner">` |
-| Big numeric display | `import BigNumber from "@/components/BigNumber"` |
-| Layout | `import { Stack, HStack, VStack, Flex, Center } from "@/components/ui/flex"` |
-| Number formatting | `import { numberFormat } from "@/lib/utils/numbers"` |
-| Date formatting | `import { formatDateTime } from "@/lib/utils/date"` |
-| RTL flip helper | `import { useRtlFlip } from "@/hooks/useRtlFlip"` |
+| I need...               | Import                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------ |
+| Card                    | `import { Card, CardBanner, CardContent, CardTitle, CardParagraph } from "@/components/ui/card"` |
+| Modal/Dialog (typical)  | `import Modal from "@/components/ui/dialog-modal"` (default export)                              |
+| Side sheet              | `import { Sheet, ... } from "@/components/ui/sheet"`                                             |
+| Tooltip                 | `import Tooltip from "@/components/Tooltip"` (NOT `@/components/ui/tooltip`)                     |
+| Button                  | `import { Button, ButtonLink } from "@/components/ui/buttons/Button"`                            |
+| Anchor (in prose)       | `import InlineLink from "@/components/ui/Link"` (default)                                        |
+| Anchor (CTA with arrow) | `import { LinkWithArrow } from "@/components/ui/Link"`                                           |
+| Page hero               | `import { PageHero, HubHero } from "@/components/Hero"`                                          |
+| Inline alert            | `import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"`                  |
+| Top-of-page banner      | `import { Alert } from "@/components/ui/alert"` then `<Alert variant="banner">`                  |
+| Big numeric display     | `import BigNumber from "@/components/BigNumber"`                                                 |
+| Layout                  | `import { Stack, HStack, VStack, Flex, Center } from "@/components/ui/flex"`                     |
+| Number formatting       | `import { numberFormat } from "@/lib/utils/numbers"`                                             |
+| Date formatting         | `import { formatDateTime } from "@/lib/utils/date"`                                              |
+| RTL flip helper         | `import { useRtlFlip } from "@/hooks/useRtlFlip"`                                                |
 
 For full decision trees with all the look-alike landmines, see `references/canonical-imports.md`.
 
@@ -89,7 +90,7 @@ Pull these in only when the trigger applies. Don't read them all upfront.
 - **`references/gotchas.md`** -- unexpected primitive behavior; the long-tail confusion patterns.
 - **`references/variant-vs-new.md`** -- before creating any new component file.
 - **`references/cleanup-playbook.md`** -- refactoring existing anti-patterns; the "old pattern -> new pattern" map.
-- **`references/i18n-rtl.md`** -- user-facing text, number/date formatting, RTL, translation keys, `setRequestLocale`.
+- **`references/i18n-rtl.md`** -- user-facing text, number/date formatting, RTL, translation keys.
 - **`references/server-vs-client.md`** -- `"use client"` decisions and SSR-boundary structure.
 - **`references/a11y.md`** -- interactive elements, forms, images, heading hierarchy.
 - **`references/card-walkthrough.md`** -- any card-shaped UI work.

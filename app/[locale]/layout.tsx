@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import { getMessages } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -20,6 +20,8 @@ import "@/styles/global.css"
 import { routing } from "@/i18n/routing"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
+export const dynamicParams = false
+
 // Generate static params for all supported locales
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -34,10 +36,6 @@ export default async function LocaleLayout(props: {
   const { locale } = params
 
   const { children } = props
-
-  // Safety net only - pages must still call this themselves. Runs before the
-  // notFound() bail so invalid-locale probes can't fall back to headers().
-  setRequestLocale(locale)
 
   if (!routing.locales.includes(locale)) {
     notFound()
