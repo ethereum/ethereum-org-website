@@ -10,15 +10,24 @@ let check: Mod["check"],
   publicUrl: Mod["publicUrl"],
   quoteFound: Mod["quoteFound"],
   registrableDomain: Mod["registrableDomain"],
+  render: Mod["render"],
   toText: Mod["toText"]
 
 test.beforeAll(async () => {
-  ;({ check, esc, LISTING, publicUrl, quoteFound, registrableDomain, toText } =
-    await import(
-      pathToFileURL(
-        path.resolve(__dirname, "../../.github/scripts/listing-research.mjs")
-      ).href
-    ))
+  ;({
+    check,
+    esc,
+    LISTING,
+    publicUrl,
+    quoteFound,
+    registrableDomain,
+    render,
+    toText,
+  } = await import(
+    pathToFileURL(
+      path.resolve(__dirname, "../../.github/scripts/listing-research.mjs")
+    ).href
+  ))
 })
 
 test("publicUrl rejects private, credentialed and literal-IPv6 hosts", () => {
@@ -133,4 +142,33 @@ test("check re-verifies pass and fail quotes alike", async () => {
     "unknown",
     "unknown",
   ])
+})
+
+test("render marks product-only passes as claimed and nice criteria as preferred", () => {
+  const c = (criterion: string, source: string, weight = "must") => ({
+    criterion,
+    status: "pass",
+    weight,
+    quote: "a quote long enough to count",
+    url: source === "repo" ? "public/content/x.md" : "https://example.com/",
+    source,
+  })
+  const out = render(
+    {
+      product: "X",
+      policy: { page: "adding-developer-tools", why: "" },
+      criteria: [
+        c("Documented", "independent"),
+        c("Widely used", "author"),
+        c("Open source", "independent", "nice"),
+      ],
+      facts: [],
+      existing: [],
+      askAuthor: [],
+    },
+    ""
+  )
+  expect(out).toContain("| ✅ | Documented |")
+  expect(out).toContain("| ☑️ | Widely used |")
+  expect(out).toContain("| ✅ | Open source _(preferred)_ |")
 })

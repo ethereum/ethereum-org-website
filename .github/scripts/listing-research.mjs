@@ -487,6 +487,7 @@ export async function check(item, fetchPage = fetchText) {
     const x = {
       criterion: str(c.criterion, 200),
       status: STATUS.includes(c.status) ? c.status : "unknown",
+      weight: c.weight === "nice" ? "nice" : "must",
       ...base(c),
     }
     if (x.status !== "unknown") {
@@ -535,15 +536,16 @@ export function render(r, run) {
   const src = (c) =>
     `${c.url ? esc(c.source === "repo" ? c.url : new URL(c.url).hostname) + " " : ""}${c.source}`
   const quote = (c) => (c.quote ? `“${esc(c.quote)}”` : "")
+  const mark = (c) =>
+    c.status === "pass" && c.source === "author" ? "☑️" : icon[c.status]
+  const name = (c) =>
+    esc(c.criterion) + (c.weight === "nice" ? " _(preferred)_" : "")
   const rows = r.criteria
     .filter((c) => c.status !== "unknown")
-    .map(
-      (c) =>
-        `| ${icon[c.status]} | ${esc(c.criterion)} | ${quote(c)} | ${src(c)} |`
-    )
+    .map((c) => `| ${mark(c)} | ${name(c)} | ${quote(c)} | ${src(c)} |`)
   const open = r.criteria
     .filter((c) => c.status === "unknown")
-    .map((c) => esc(c.criterion) + (c.note ? ` _(${esc(c.note)})_` : ""))
+    .map((c) => name(c) + (c.note ? ` _(${esc(c.note)})_` : ""))
   const age = (r.siteAge || [])
     .filter((s) => s.registered || s.firstArchived)
     .map(
@@ -559,7 +561,7 @@ export function render(r, run) {
   )
   return [
     `## 🧾 Listing check${r.product ? ` — ${esc(r.product)}` : ""}`,
-    `Checked against ${policy}. ✅ confirmed with a quoted source, ❌ contradicted. A maintainer makes the listing decision.`,
+    `Checked against ${policy}. ✅ confirmed by an independent source or this repo, ☑️ stated only on the product's own site, ❌ contradicted. A maintainer makes the listing decision.`,
     rows.length
       ? `| | Criterion | Evidence | Source |\n|---|---|---|---|\n${rows.join("\n")}`
       : "",

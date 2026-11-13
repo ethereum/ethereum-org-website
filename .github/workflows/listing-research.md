@@ -140,7 +140,7 @@ safe-outputs:
           required: false
           type: string
         criteria:
-          description: 'JSON array of {"criterion": "", "status": "pass"|"fail"|"unknown", "quote": "exact text copied from the source", "url": "source without scheme, e.g. web.archive.org/web/2019/tatum.io, or a repo path", "source": "author"|"independent"|"repo"}'
+          description: 'JSON array of {"criterion": "", "weight": "must"|"nice", "status": "pass"|"fail"|"unknown", "quote": "exact text copied from the source", "url": "source without scheme, e.g. web.archive.org/web/2019/tatum.io, or a repo path", "source": "author"|"independent"|"repo"}'
           required: true
           type: string
         facts:
@@ -249,12 +249,12 @@ If two fit, pick one and say why in `policy_why`. Include the policy's process s
 </policy>
 
 <research>
-- One `criteria` entry per must-have criterion and process step. `pass` needs a quote copied exactly from the page at `url`: at least 20 characters, and if you shorten it with `…`, each piece at least 12 characters, in page order. The submit job re-fetches the page and turns the criterion into ❔ if the quote isn't there or the page can't be fetched. Write `url` without the scheme (`tatum.io/pricing`, not `https://…`): full URLs are redacted in transit.
+- One `criteria` entry per policy criterion and process step. `weight` is `must` for what the policy requires, including process steps, and `nice` for what it only prefers or weighs (e.g. "more likely to list open-source projects"); `nice` is shown as "preferred". `pass` needs a quote copied exactly from the page at `url`: at least 20 characters, and if you shorten it with `…`, each piece at least 12 characters, in page order. The submit job re-fetches the page and turns the criterion into ❔ if the quote isn't there or the page can't be fetched. Write `url` without the scheme (`tatum.io/pricing`, not `https://…`): full URLs are redacted in transit.
 - `fail` also needs a quote that shows the contradiction, checked the same way; if something is simply not shown, use `unknown`.
 - An `unknown` criterion needs no quote: leave `quote` and `url` empty rather than quoting something that doesn't settle it.
-- Prefer independent evidence: audits confirmed by the auditor, team activity from GitHub, contract deploy dates from Etherscan, incidents from rekt.news, news coverage and search. Mark a claim only the product's own site makes as `author`. The site's registration date and first Wayback snapshot are added to the comment automatically; don't repeat them.
+- Prefer independent evidence: audits confirmed by the auditor, team activity from GitHub, contract deploy dates from Etherscan, incidents from rekt.news, news coverage and search. Mark a claim only the product's own site makes as `author`; an `author` pass is shown as ☑️ (stated by the product), not ✅, so for `must` criteria look for an independent source first. The site's registration date and first Wayback snapshot are added to the comment automatically; don't repeat them.
 - `facts`: at most 5, the ones that most change a maintainer's decision, most important first. Neutral, sourced statements, each with a quote checked the same way (facts that fail the check are dropped). Good facts: "Audit by X published 2024-05 on X's site", "The docs describe forwarding requests to upstream providers". For the comparison, state it as a fact with the edited page as a `repo` source: "This page already lists 30 node providers, including dRPC, Chainstack and GetBlock" (repo facts need no quote).
-- `ask_author`: at most 3, the questions whose answers a maintainer most needs, e.g. "Do you run your own Ethereum nodes, or route to upstream providers?", "Is there an independent audit beyond the automated report?", "Was the issue form filed first?". Skip questions about funding, investors or company structure unless a listing criterion depends on them.
+- `ask_author`: at most 3, only about `must` criteria that are still unknown, contradicted or only stated by the product, most decisive first; never about `nice` criteria. These are the questions whose answers a maintainer most needs, e.g. "Do you run your own Ethereum nodes, or route to upstream providers?", "Is there an independent audit beyond the automated report?", "Was the issue form filed first?". Skip questions about funding, investors or company structure unless a listing criterion depends on them.
 
 If the PR turns out not to be a listing request, call `noop` with a one-line reason instead.
 </research>
