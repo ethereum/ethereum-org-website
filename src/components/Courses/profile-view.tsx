@@ -17,7 +17,6 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import Eyebrow from "@/components/ui/eyebrow"
-import InlineLink from "@/components/ui/Link"
 import { Progress as ProgressBar } from "@/components/ui/progress"
 import { Section } from "@/components/ui/section"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -27,6 +26,7 @@ import { formatDateTime } from "@/lib/utils/date"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import {
+  type Course,
   courseHref,
   COURSES,
   COURSES_HUB,
@@ -40,6 +40,7 @@ import {
   TRACKS,
 } from "@/data/courses"
 
+import CourseArt from "./art/course-art"
 import CourseProgress from "./course-progress"
 import { useLevelName } from "./level-up"
 import { levelFor, levelProgress } from "./levels"
@@ -62,7 +63,6 @@ const solidMuted = "text-white/85"
 const solidIcon = "fill-white/25 text-white"
 
 const REVIEW_LIMIT = 5
-const RECENT_LIMIT = 5
 
 interface StatProps {
   icon: LucideIcon
@@ -199,17 +199,63 @@ const stepsToReview = (progress: Progress) =>
     )
     .slice(0, REVIEW_LIMIT)
 
-const recentLessons = (progress: Progress) =>
-  Object.entries(progress.lessons)
-    .map(([key, record]) => {
-      const [courseId, lessonId] = key.split("/")
-      return { courseId, lessonId, ...record }
-    })
-    .filter(({ courseId, lessonId }) =>
-      getCourse(courseId)?.lessons.some(({ id }) => id === lessonId)
-    )
-    .sort((a, b) => b.completedAt.localeCompare(a.completedAt))
-    .slice(0, RECENT_LIMIT)
+/**
+ * The hub's course card, shrunk for the profile: art beside the title, track
+ * and progress
+ */
+const CompactCourseCard = ({
+  course,
+  trackTitle,
+  isMastered,
+  bestScore,
+  formatPercent,
+}: {
+  course: Course
+  trackTitle: string
+  isMastered: boolean
+  bestScore?: number
+  formatPercent: (value: number) => string
+}) => {
+  const t = useTranslations("page-courses")
+  return (
+    <Card
+      href={courseHref(course.id)}
+      variant="nested"
+      size="md"
+      border
+      className="h-full flex-row overflow-hidden"
+      style={courseThemeStyle(course.theme)}
+    >
+      <div className="grid w-24 shrink-0 place-items-center bg-(--course-soft) p-3 sm:w-28">
+        <CourseArt
+          id={course.art}
+          className="w-full transition-transform duration-300 motion-safe:group-hover/link:scale-105"
+        />
+      </div>
+      <CardContent className="flex min-w-0 flex-col gap-3 space-y-0">
+        <div className="flex flex-col">
+          <span className="font-bold text-body">{t(`${course.id}-title`)}</span>
+          <span className="text-sm text-body-medium">{trackTitle}</span>
+        </div>
+        <div className="mt-auto flex flex-col gap-1">
+          <CourseProgress
+            courseId={course.id}
+            lessonIds={course.lessons.map(({ id }) => id)}
+            hasExam={course.exam.length > 0}
+            hideLabel={isMastered}
+          />
+          {bestScore !== undefined && (
+            <span className="text-sm text-body-medium">
+              {t("page-courses-profile-best-check", {
+                score: formatPercent(bestScore),
+              })}
+            </span>
+          )}
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
 
 /**
  * Everything stored about the learner, from this browser only. Account
@@ -291,7 +337,6 @@ const ProfileView = () => {
   const nextLevel = level.next === null ? null : levelFor(level.next)
 
   const review = stepsToReview(progress)
-  const recent = recentLessons(progress)
   const started = hasAnyProgress(progress)
 
   if (!started || !ready) return <ProfileSkeleton />
@@ -407,101 +452,42 @@ const ProfileView = () => {
         </div>
       </Section>
 
-      {/* Side by side on wide screens; neither needs the full width */}
-      <div className="mt-space-3x grid items-start gap-x-12 gap-y-space-3x lg:grid-cols-[2fr_1fr]">
-        {(mastered.length > 0 || inProgress.length > 0) && (
-          <Section id="courses">
-            <h2>{t("page-courses-profile-courses-title")}</h2>
-            {[
-              { id: "mastered", rows: mastered },
-              { id: "in-progress", rows: inProgress },
-            ]
-              .filter(({ rows }) => rows.length)
-              .map(({ id, rows }) => (
-                <div key={id} className="flow">
-                  <h3>{t(`page-courses-profile-${id}-title`)}</h3>
-                  <ul className="ms-0 flex list-none flex-col gap-3">
-                    {rows.map(({ course, trackId, isMastered }) => {
-                      const bestScore = progress.exams?.[course.id]?.best
-                      return (
-                        <li key={course.id} className="m-0">
-                          <Card
-                            href={courseHref(course.id)}
-                            variant="nested"
-                            size="md"
-                            border
-                            style={courseThemeStyle(course.theme)}
-                          >
-                            <CardContent className="gap-3">
-                              <div className="flex flex-col">
-                                <span className="text-lg font-bold text-body">
-                                  {t(`${course.id}-title`)}
-                                </span>
-                                <span className="text-sm text-body-medium">
-                                  {t(`page-courses-track-${trackId}-title`)}
-                                </span>
-                              </div>
-                              <div className="flex flex-1 flex-col gap-1">
-                                <CourseProgress
-                                  courseId={course.id}
-                                  lessonIds={course.lessons.map(({ id }) => id)}
-                                  hasExam={course.exam.length > 0}
-                                  hideLabel={isMastered}
-                                />
-                                {bestScore !== undefined && (
-                                  <span className="text-sm text-body-medium">
-                                    {t("page-courses-profile-best-check", {
-                                      score: percent(bestScore),
-                                    })}
-                                  </span>
-                                )}
-                              </div>
-                            </CardContent>
-                          </Card>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </div>
-              ))}
-          </Section>
-        )}
-        {recent.length > 0 && (
-          <Section id="recent">
-            <h2>{t("page-courses-profile-recent-title")}</h2>
-            <ul className="ms-0 flex list-none flex-col gap-2">
-              {recent.map(({ courseId, lessonId, completedAt, accuracy }) => (
-                <li
-                  key={`${courseId}/${lessonId}`}
-                  className="m-0 flex flex-wrap items-baseline justify-between gap-x-4 border-b border-border pb-2"
-                >
-                  <span>
-                    <InlineLink href={lessonHref(courseId, lessonId)}>
-                      {t(`${courseId}-${lessonId}-title`)}
-                    </InlineLink>
-                    <span className="text-body-medium">
-                      {" "}
-                      · {t(`${courseId}-title`)}
-                    </span>
-                  </span>
-                  <span className="text-sm text-body-medium tabular-nums">
-                    {t("page-courses-profile-recent-detail", {
-                      date: date(completedAt),
-                      accuracy: percent(accuracy),
-                    })}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </Section>
-        )}
-      </div>
+      {(inProgress.length > 0 || mastered.length > 0) && (
+        <Section id="courses">
+          <h2>{t("page-courses-profile-courses-title")}</h2>
+          {[
+            { id: "in-progress", rows: inProgress },
+            { id: "mastered", rows: mastered },
+          ]
+            .filter(({ rows }) => rows.length)
+            .map(({ id, rows }) => (
+              <div key={id} className="flow">
+                <h3>{t(`page-courses-profile-${id}-title`)}</h3>
+                <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
+                  {rows.map(({ course, trackId, isMastered }) => (
+                    <li key={course.id} className="m-0">
+                      <CompactCourseCard
+                        course={course}
+                        trackTitle={t(`page-courses-track-${trackId}-title`)}
+                        isMastered={isMastered}
+                        bestScore={progress.exams?.[course.id]?.best}
+                        formatPercent={percent}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+        </Section>
+      )}
 
       {review.length > 0 && (
         <Section id="review">
           <h2>{t("page-courses-profile-review-title")}</h2>
-          <p>{t("page-courses-profile-review-description")}</p>
-          <div className="flex flex-col gap-3">
+          <p className="max-w-3xl">
+            {t("page-courses-profile-review-description")}
+          </p>
+          <div className="flex max-w-2xl flex-col gap-3">
             {review.map(({ courseId, lessonId, stepId, seen, missed }) => {
               const exam = lessonId === EXAM_ID
               return (

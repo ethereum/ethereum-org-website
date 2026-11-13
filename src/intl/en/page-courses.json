@@ -78,8 +78,6 @@
   "page-courses-profile-review-title": "Worth another look",
   "page-courses-profile-review-description": "The questions you've missed most often. Replaying a lesson counts toward your streak.",
   "page-courses-profile-review-missed": "Missed on the first try {missed} of {seen} times",
-  "page-courses-profile-recent-title": "Recent lessons",
-  "page-courses-profile-recent-detail": "{date} · best first try {accuracy}",
   "page-courses-track-essentials-title": "Ethereum essentials",
   "page-courses-track-essentials-description": "The basics, from what Ethereum is to smart contracts.",
   "page-courses-up-next": "Up next",
