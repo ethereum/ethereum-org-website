@@ -184,3 +184,15 @@ Scope: 25 files (smart-contracts/security + app-plasma retranslations, predictio
 - 14 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The prose is fluent and faithful, and none of tr's historical failure modes recurred: client stays `istemci`, mainnet stays `Ana Ağ`, and there are no ticker transpositions or brand mistranslations. The real problems are three page-founders tags shipped in English and one encode/encrypt error. The EOA term drifting away from the glossary needs a human call.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: decimal separator and betik/komut dosyası differ between files; glossary-driven mid-sentence capitals (known).

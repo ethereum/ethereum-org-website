@@ -151,3 +151,15 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 13 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The new prose (prediction markets, wallet descriptions, founders, SolidRPC/eth.zig entries) is fluent and accurate. The retranslation pass undid several glossary-correct forms (oracle, the availability-bond wording) and spread the known mid-sentence capitalization leak. The criticals are concentrated in common.json breadcrumb acronym expansion and three untranslated founders tags.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: glossary capitals mid-sentence; NFT spelled out too often; chúng tôi/chúng ta mixed.

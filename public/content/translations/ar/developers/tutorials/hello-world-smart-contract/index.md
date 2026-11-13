@@ -76,7 +76,7 @@ npm init
 
 لا يهم حقًا كيف تجيب على أسئلة التثبيت، إليك كيف فعلنا ذلك كمرجع:
 
-```text
+```console
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract

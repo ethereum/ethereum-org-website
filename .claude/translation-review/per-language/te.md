@@ -166,3 +166,14 @@ Scope: 27 files (smart-contracts/security + app-plasma retranslations, predictio
 - 17 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The translation is fluent and mostly faithful. te's known reported-speech negation error (the `-మని` suffix flipping meaning) did not recur. The two te-specific must-fixes are the made-up frontmatter block in the security page and the transliterated Solidity; the founders tag regression affects other locales too.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Retranslated in full (write-deploy correct). Warnings: English alt text; NFT spelled out too often.

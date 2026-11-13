@@ -4,6 +4,9 @@ description: Lane-aware, findings-only first-pass review of pull requests, inclu
 on:
   pull_request_target:
     types: [opened, ready_for_review]
+    paths-ignore:
+      - src/data/consensus-bounty-hunters.json
+      - src/data/execution-bounty-hunters.json
   roles: all
   skip-bots:
     - allcontributors[bot]
@@ -24,12 +27,12 @@ permissions:
 # PR code is only fetched as the `pr-head` ref, never checked out or run.
 checkout:
   repository: ${{ github.repository }}
-  ref: ${{ github.event.pull_request.base.sha }}
+  ref: ${{ github.event.pull_request.base.ref }}
   fetch-depth: 0
 engine:
   id: claude
   model: claude-opus-5-5
-max-ai-credits: 300
+max-ai-credits: 500
 max-daily-ai-credits: 3000
 network: defaults
 strict: true
@@ -37,7 +40,7 @@ timeout-minutes: 20
 tools:
   github:
     toolsets: [default, actions]
-  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "ls", "cat", "grep", "head", "wc"]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "git branch -a", "git branch --list:*", "git branch --contains:*", "ls:*", "cat:*", "grep:*", "head:*", "tail:*", "wc:*"]
 safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
@@ -82,9 +85,16 @@ pre-agent-steps:
       set -euo pipefail
       mkdir -p /tmp/gh-aw/agent
       gh pr view "$PR_NUMBER" --repo "$REPO" \
-        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,additions,deletions,changedFiles,labels \
+        --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,mergeStateStatus,additions,deletions,changedFiles,labels \
         > /tmp/gh-aw/agent/pr-meta.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
+      listing=no
+      if [ -f .github/scripts/listing-research.mjs ]; then
+        rc=0; err=$(node .github/scripts/listing-research.mjs match "$PR_NUMBER" 2>&1 >/dev/null) || rc=$?
+        if [ "$rc" = 0 ]; then listing=yes
+        elif [ "$rc" != 1 ] || [ -n "$err" ]; then listing=error; echo "$err" >&2; echo "::warning::listing-research match failed for #$PR_NUMBER"; fi
+      fi
+      echo "$listing" > /tmp/gh-aw/agent/listing.txt
 imports:
   - shared/pr-review-core.md
   - shared/submit-review.md

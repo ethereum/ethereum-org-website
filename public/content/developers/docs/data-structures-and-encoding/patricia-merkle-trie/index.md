@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Retrieving other elements in storage is slightly more involved because the position in the storage trie must first be calculated. The position is calculated as the `keccak256` hash of the address and the storage position, both left-padded with zeros to a length of 32 bytes. For example, the position for the data in storage slot 1 for address `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
+Two different kinds of "key" are involved here, and it helps to keep them apart:
+
+1. **The storage slot.** This is the 32-byte key a contract reads and writes with the `SLOAD` and `SSTORE` opcodes, and it is what `eth_getStorageAt` takes as its second parameter. The protocol does not care how a contract chooses its slots. That is decided by the compiler's storage layout (see [Solidity's layout in storage](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **The path in the storage trie.** Like the state trie, the storage trie never uses the slot directly as its path. The path is always `keccak256(slot)`, and the value stored there is the RLP encoding of the slot's value with leading zeros removed. Hashing the key keeps paths uniformly distributed, so nobody can craft keys that make the trie unusually deep. Clients apply this hash themselves, so callers of `eth_getStorageAt` only ever pass the slot.
+
+Simple state variables live in the slots the compiler assigns them in order (`0`, `1`, ...), with small types sometimes packed together into a single slot, as in the example above. Values inside a dynamic structure need their slot calculated first. For example, Solidity stores the value for key `k` of a `mapping` declared at slot `p` in slot `keccak256(pad32(k) ++ pad32(p))`. If the contract at `0x295a70b2de5e3953354a6a8344e616ed314d7251` declares a `mapping(address => uint)` at slot 1, the slot holding the entry for the key `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-In a Geth console, this can be calculated as follows:
+This hashing comes from Solidity's storage layout (computed by the contract at runtime), not from the trie. In a Geth console, this can be calculated as follows:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-The `path` is therefore `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. This can now be used to retrieve the data from the storage trie as before:
+So the storage slot is `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`, and its path in the storage trie is `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. The slot can now be passed to `eth_getStorageAt` as before, and the client hashes it to find the value in the trie:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545

@@ -176,3 +176,16 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 11 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The Czech prose is fluent and structurally clean, with no build- or navigation-breaking defects. The main fixes are the self-custody term deviation in the new wallet-descriptions file, three English founders tags, and one misspelled word.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `limit plynu` changed to `limit gasu` (mint, 4x; prose and code comments)
+
+**Notes:**
+
+- Warnings: NFT gender drifts between masculine and neuter across the NFT series.

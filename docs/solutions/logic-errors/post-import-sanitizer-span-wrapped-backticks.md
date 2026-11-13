@@ -1,4 +1,6 @@
 ---
+status: historical
+superseded_by: "src/scripts/intl-pipeline/intl-sanitizer.ts (tests in tests/unit/intl-pipeline/); post_import_sanitize.ts no longer exists"
 title: Fix <span dir="ltr"> wrapping backtick inline code in RTL translations
 date: 2026-03-25
 category: logic-errors

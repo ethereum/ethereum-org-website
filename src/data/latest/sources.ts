@@ -136,7 +136,7 @@ export const LATEST_SOURCES: LatestSource[] = [
     icon: "/images/latest/sources/local-ethereum.png",
   },
   {
-    name: "Ethereal",
+    name: "Ethereal news",
     link: "https://ethereal.news/",
     feed: "https://ethereal.news/rss.xml",
     category: "Newsletters",

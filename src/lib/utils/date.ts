@@ -34,6 +34,19 @@ export function dateTimeFormat(
   return new Intl.DateTimeFormat(locale, finalOptions)
 }
 
+// Use for rendered output: UTC + normalized spaces make SSR and client agree.
+export const formatDateTime = (
+  locale: string,
+  date: Date | number,
+  options?: Intl.DateTimeFormatOptions
+): string =>
+  normalizeIntlSpaces(
+    dateTimeFormat(locale, {
+      ...options,
+      timeZone: options?.timeZone ?? "UTC",
+    }).format(date)
+  )
+
 export const dateToString = (published: Date | string) =>
   new globalThis.Date(published).toISOString().split("T")[0]
 
@@ -66,15 +79,12 @@ export const formatDate = (
   if (!isValidDate(date)) {
     return ""
   }
-  return normalizeIntlSpaces(
-    dateTimeFormat(locale, {
-      timeZone: "UTC",
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-      ...options,
-    }).format(new Date(date))
-  )
+  return formatDateTime(locale, new Date(date), {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    ...options,
+  })
 }
 
 /**
@@ -99,12 +109,11 @@ export const formatPartialDate = (
   if (quarter) return formatQuarter(quarter, year)
 
   const date = new Date(Date.UTC(year, (month ?? 1) - 1, day ?? 1))
-  return dateTimeFormat(locale, {
-    timeZone: "UTC",
+  return formatDateTime(locale, date, {
     year: "numeric",
     ...(month && { month: "long" }),
     ...(day && { day: "numeric" }),
-  }).format(date)
+  })
 }
 
 export const formatDateRange = (
@@ -122,33 +131,13 @@ export const formatDateRange = (
     }).formatRange(new Date(start), new Date(end || start))
   )
 
-/**
- * Date range split into parts so callers can style them individually (e.g. a
- * lighter year), instead of hand-assembling the string -- which would hard-code
- * English part order. Whitespace is normalized as in `formatDateRange`.
- */
-export const formatDateRangeToParts = (
-  start: Date | string,
-  end: Date | string,
-  locale: string = DEFAULT_LOCALE,
-  options?: Intl.DateTimeFormatOptions
-) =>
-  dateTimeFormat(locale, {
-    timeZone: "UTC",
-    month: "short",
-    day: "numeric",
-    ...options,
-  })
-    .formatRangeToParts(new Date(start), new Date(end))
-    .map(({ type, value }) => ({ type, value: normalizeIntlSpaces(value) }))
-
 export const getLocaleYear = (
   locale: string = "en-US",
   date?: ConstructorParameters<DateConstructor>[0]
 ) =>
-  dateTimeFormat(locale, { year: "numeric" }).format(
-    date ? new Date(date) : new Date()
-  )
+  formatDateTime(locale, date ? new Date(date) : new Date(), {
+    year: "numeric",
+  })
 
 /**
  * Get ISO week number for a given date

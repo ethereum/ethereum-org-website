@@ -997,7 +997,7 @@ const chains = [
   },
   {
     name: "Morph",
-    infoURL: "https://morphl2.io",
+    infoURL: "https://morph.network",
     chainId: 2818,
     nativeCurrency: {
       name: "Ether",
@@ -1740,6 +1740,18 @@ const chains = [
     shortName: "memento-mainnet",
   },
   {
+    name: "Regulated Layer One",
+    infoURL: "https://rl1.network",
+    chainId: 53147,
+    nativeCurrency: {
+      name: "RL1 Ether",
+      symbol: "RETH",
+      decimals: 18,
+    },
+    chain: "RL1",
+    shortName: "rl1",
+  },
+  {
     name: "BirdLayer",
     infoURL: "https://www.dodochain.com",
     chainId: 53456,
@@ -2196,6 +2208,18 @@ const chains = [
     shortName: "ats",
   },
   {
+    name: "BrainChain",
+    infoURL: "https://usebrainchain.com",
+    chainId: 274663,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+    shortName: "brainchain",
+  },
+  {
     name: "Athene Parthenon",
     infoURL:
       "https://raas.gelato.network/rollups/details/public/athene-parthenon",
@@ -2591,6 +2615,18 @@ const chains = [
     },
     chain: "DBK Chain",
     shortName: "dbkchain",
+  },
+  {
+    name: "BB84",
+    infoURL: "https://bb84.com",
+    chainId: 42069000,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+    shortName: "bb84",
   },
   {
     name: "Aquachain",

@@ -163,3 +163,17 @@ Scope: 25 files (smart-contracts/security + app-plasma retranslations, predictio
 - 14 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The Korean prose is fluent and complies with ETHGlossary. The main defects come from the pipeline: acronym expansion in descriptions and three untranslated founders tags that hit the whole fleet. There are a few term-level semantic slips (agnostic, mandate) and some cross-file wording inconsistencies.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `비엠`/`알케미` brand tags restored to `viem`/`alchemy` (sending)
+- 2 captions in the mint tutorial that had reverted to English restored from dev
+
+**Notes:**
+
+- `<strong>`/`<em>` instead of `**`/`*` is deliberate. Out of scope: transliterated author `엘란 할펀` in sending.

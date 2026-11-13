@@ -76,7 +76,7 @@ npm init
 
 Nezáleží na tom, jak odpovíte na instalační otázky; zde je pro referenci ukázka, jak jsme to udělali my:
 
-```text
+```console
 package name: (my-nft)
 version: (1.0.0)
 description: My first NFT!

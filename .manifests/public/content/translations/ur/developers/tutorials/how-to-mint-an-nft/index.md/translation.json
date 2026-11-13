@@ -1,90 +1,77 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ur",
-  "translatedAt": "2026-06-19T22:56:16.696Z",
-  "englishManifestHash": "39b7511bd36d",
+  "translatedAt": "2026-10-26T17:19:15.949Z",
+  "englishManifestHash": "568b240d1510",
   "placeholderOrder": [
-    "LINK-68e92f",
-    "LINK-dfaf98",
-    "LINK-0e8b9c",
     "LINK-13a07c",
+    "LINK-2b67ba",
+    "LINK-faa750",
     "LINK-a21a82",
-    "LINK-8a46b4",
-    "CODEBLOCK-a323be",
+    "CODE-8f0a81",
+    "CODE-c52233",
     "CODE-787fe2",
     "CODE-787fe2",
-    "CODEBLOCK-f9d152",
-    "LINK-303596",
-    "CODE-0c6e3b",
-    "CODE-787fe2",
-    "CODEBLOCK-922d47",
-    "CODEBLOCK-5f0178",
-    "CODE-787fe2",
-    "CODEBLOCK-6301d1",
+    "CODEBLOCK-f85a58",
+    "CODE-374543",
+    "CODE-757ac4",
+    "CODE-4e2bf9",
+    "LINK-e7d1d5",
+    "CODE-bf5298",
+    "CODEBLOCK-61d02e",
     "CODE-480e30",
     "LINK-ff7422",
+    "LINK-861517",
+    "LINK-149702",
     "CODE-184f37",
     "LINK-40c923",
-    "IMAGE-8c17ca",
     "CODE-7fc331",
     "CODEBLOCK-7fc59e",
-    "IMAGE-210585",
+    "CODE-1f7adc",
+    "CODE-7fc331",
+    "LINK-f7aa37",
     "LINK-88ed30",
     "IMAGE-5d97c0",
-    "LINK-490ba7",
+    "CODE-7da047",
     "CODE-787fe2",
-    "CODEBLOCK-2c057a",
+    "CODEBLOCK-444dad",
     "CODE-e9cbb0",
     "CODE-e9cbb0",
+    "CODEBLOCK-4a5198",
+    "CODE-cfc55d",
+    "CODE-c50ecc",
     "CODE-e9cbb0",
-    "CODEBLOCK-12d959",
-    "CODE-e35f5a",
-    "CODE-e9cbb0",
-    "LINK-364bc2",
-    "LINK-a4b1de",
-    "CODE-f7a3ce",
-    "CODE-c21161",
-    "CODE-397a62",
-    "CODE-1c4493",
-    "CODE-1c6014",
-    "CODE-787fe2",
-    "CODEBLOCK-a71d89",
-    "CODE-df334a",
-    "CODEBLOCK-6b8a62",
+    "CODE-480e30",
+    "CODE-1db978",
     "CODE-480e30",
     "CODE-787fe2",
-    "CODE-12e598",
+    "CODEBLOCK-9bb42c",
     "CODE-480e30",
-    "CODE-764f39",
-    "IMAGE-3c12db",
-    "CODE-764f39",
+    "CODE-b51117",
+    "CODEBLOCK-911a42",
+    "CODE-480e30",
+    "CODE-787fe2",
+    "CODE-7fc331",
+    "CODE-e2dc06",
+    "CODE-480e30",
+    "CODE-b5df5e",
+    "CODE-ff4c0b",
     "IMAGE-c8abbd",
-    "CODEBLOCK-90c689",
-    "CODE-e56b31",
-    "LINK-3d285e",
+    "CODEBLOCK-641f2b",
+    "CODEBLOCK-d094db",
+    "CODEBLOCK-03b9fd",
+    "LINK-f7aa37",
     "LINK-88ed30",
     "IMAGE-4ded4a",
     "CODE-787fe2",
     "LINK-c18af1"
   ],
   "placeholderMap": {
-    "CODEBLOCK-a323be": {
+    "CODEBLOCK-f85a58": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-f9d152": {
-      "type": "code-fence",
-      "values": {}
-    },
-    "CODEBLOCK-922d47": {
-      "type": "code-fence",
-      "values": {}
-    },
-    "CODEBLOCK-5f0178": {
-      "type": "code-fence",
-      "values": {}
-    },
-    "CODEBLOCK-6301d1": {
+    "CODEBLOCK-61d02e": {
       "type": "code-fence",
       "values": {}
     },
@@ -92,25 +79,45 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-2c057a": {
+    "CODEBLOCK-444dad": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-12d959": {
+    "CODEBLOCK-4a5198": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-a71d89": {
+    "CODEBLOCK-9bb42c": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-6b8a62": {
+    "CODEBLOCK-911a42": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-90c689": {
+    "CODEBLOCK-641f2b": {
       "type": "code-fence",
       "values": {}
+    },
+    "CODEBLOCK-d094db": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-03b9fd": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-8f0a81": {
+      "type": "inline-code",
+      "values": {
+        "content": "API_URL"
+      }
+    },
+    "CODE-c52233": {
+      "type": "inline-code",
+      "values": {
+        "content": "PRIVATE_KEY"
+      }
     },
     "CODE-787fe2": {
       "type": "inline-code",
@@ -118,10 +125,28 @@
         "content": "mint-nft.js"
       }
     },
-    "CODE-0c6e3b": {
+    "CODE-374543": {
       "type": "inline-code",
       "values": {
-        "content": "MyNFT.json"
+        "content": "network.create()"
+      }
+    },
+    "CODE-757ac4": {
+      "type": "inline-code",
+      "values": {
+        "content": "--network"
+      }
+    },
+    "CODE-4e2bf9": {
+      "type": "inline-code",
+      "values": {
+        "content": "ethers"
+      }
+    },
+    "CODE-bf5298": {
+      "type": "inline-code",
+      "values": {
+        "content": "artifacts/contracts/MyNFT.sol/MyNFT.json"
       }
     },
     "CODE-480e30": {
@@ -142,94 +167,70 @@
         "content": "nft-metadata.json"
       }
     },
+    "CODE-1f7adc": {
+      "type": "inline-code",
+      "values": {
+        "content": "ipfs://<image-CID>"
+      }
+    },
+    "CODE-7da047": {
+      "type": "inline-code",
+      "values": {
+        "content": "getContractAt"
+      }
+    },
     "CODE-e9cbb0": {
       "type": "inline-code",
       "values": {
         "content": ".env"
       }
     },
-    "CODE-e35f5a": {
+    "CODE-cfc55d": {
       "type": "inline-code",
       "values": {
-        "content": "mintNFT(tokenData)"
+        "content": "mintNFT(tokenURI)"
       }
     },
-    "CODE-f7a3ce": {
+    "CODE-c50ecc": {
       "type": "inline-code",
       "values": {
-        "content": "'from': PUBLIC_KEY"
+        "content": "ethers.getSigners()"
       }
     },
-    "CODE-c21161": {
+    "CODE-1db978": {
       "type": "inline-code",
       "values": {
-        "content": "'to': contractAddress"
+        "content": "onlyOwner"
       }
     },
-    "CODE-397a62": {
+    "CODE-b51117": {
       "type": "inline-code",
       "values": {
-        "content": "'nonce': nonce"
+        "content": "tx.wait()"
       }
     },
-    "CODE-1c4493": {
+    "CODE-e2dc06": {
       "type": "inline-code",
       "values": {
-        "content": "'gas': estimatedGas"
+        "content": "ipfs://<metadata-CID>"
       }
     },
-    "CODE-1c6014": {
+    "CODE-b5df5e": {
       "type": "inline-code",
       "values": {
-        "content": "'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()"
+        "content": "ipfs://"
       }
     },
-    "CODE-df334a": {
+    "CODE-ff4c0b": {
       "type": "inline-code",
       "values": {
-        "content": "web3.eth.sendSignedTransaction"
-      }
-    },
-    "CODE-12e598": {
-      "type": "inline-code",
-      "values": {
-        "content": "metadata.json"
-      }
-    },
-    "CODE-764f39": {
-      "type": "inline-code",
-      "values": {
-        "content": "https://gateway.pinata.cloud/ipfs/<metadata-hash-code>"
-      }
-    },
-    "CODE-e56b31": {
-      "type": "inline-code",
-      "values": {
-        "content": "node scripts/mint-nft.js"
-      }
-    },
-    "IMAGE-8c17ca": {
-      "type": "image",
-      "values": {
-        "path": "./instructionsPinata.gif"
-      }
-    },
-    "IMAGE-210585": {
-      "type": "image",
-      "values": {
-        "path": "./uploadPinata.gif"
+        "content": "https://gateway.pinata.cloud/ipfs/<metadata-CID>"
       }
     },
     "IMAGE-5d97c0": {
       "type": "image",
       "values": {
         "path": "./view-contract-etherscan.png"
-      }
-    },
-    "IMAGE-3c12db": {
-      "type": "image",
-      "values": {
-        "path": "./metadataPinata.gif"
       }
     },
     "IMAGE-c8abbd": {
@@ -244,28 +245,22 @@
         "path": "./view-nft-etherscan.png"
       }
     },
-    "LINK-68e92f": {
-      "type": "link",
-      "values": {
-        "url": "https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html"
-      }
-    },
-    "LINK-dfaf98": {
-      "type": "link",
-      "values": {
-        "url": "https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b"
-      }
-    },
-    "LINK-0e8b9c": {
-      "type": "link",
-      "values": {
-        "url": "https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens"
-      }
-    },
     "LINK-13a07c": {
       "type": "link",
       "values": {
         "url": "/developers/tutorials/how-to-write-and-deploy-an-nft/"
+      }
+    },
+    "LINK-2b67ba": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs/plugins/hardhat-ethers"
+      }
+    },
+    "LINK-faa750": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethers.org/v6/"
       }
     },
     "LINK-a21a82": {
@@ -274,16 +269,10 @@
         "url": "/"
       }
     },
-    "LINK-8a46b4": {
+    "LINK-e7d1d5": {
       "type": "link",
       "values": {
-        "url": "https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3"
-      }
-    },
-    "LINK-303596": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is"
+        "url": "/glossary/#abi"
       }
     },
     "LINK-ff7422": {
@@ -292,40 +281,34 @@
         "url": "https://app.pinata.cloud"
       }
     },
+    "LINK-861517": {
+      "type": "link",
+      "values": {
+        "url": "https://app.pinata.cloud/ipfs/files"
+      }
+    },
+    "LINK-149702": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.pinata.cloud/files/private-ipfs"
+      }
+    },
     "LINK-40c923": {
       "type": "link",
       "values": {
         "url": "https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5"
       }
     },
+    "LINK-f7aa37": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.etherscan.io/"
+      }
+    },
     "LINK-88ed30": {
       "type": "link",
       "values": {
         "url": "https://eth-sepolia.blockscout.com/"
-      }
-    },
-    "LINK-490ba7": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.web3js.org/api/web3-eth-contract/class/Contract"
-      }
-    },
-    "LINK-364bc2": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce"
-      }
-    },
-    "LINK-a4b1de": {
-      "type": "link",
-      "values": {
-        "url": "https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount"
-      }
-    },
-    "LINK-3d285e": {
-      "type": "link",
-      "values": {
-        "url": "https://dashboard.alchemyapi.io/mempool"
       }
     },
     "LINK-c18af1": {
@@ -337,7 +320,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T22:56:16.695Z",
+      "translatedAt": "2026-10-26T17:19:15.949Z",
       "status": "success"
     }
   }

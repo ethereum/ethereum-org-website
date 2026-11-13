@@ -124,3 +124,16 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 9 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** Glossary filter outputs are saved in /tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-it/
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `log creatati` typo changed to `log creati` (websockets:160)
+
+**Notes:**
+
+- Glossary returns `(weth)` lowercase (#95); left as is in it.

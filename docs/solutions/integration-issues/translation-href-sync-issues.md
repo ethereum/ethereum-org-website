@@ -1,4 +1,6 @@
 ---
+status: historical
+superseded_by: "src/scripts/intl-pipeline/intl-sanitizer.ts (tests in tests/unit/intl-pipeline/); post_import_sanitize.ts no longer exists"
 title: "Translation href Sync Issues - Links Corrupted During Crowdin Translation"
 date: "2026-02-17"
 category: "integration-issues"
