@@ -18,7 +18,7 @@ You will be given the route, the live-page screenshots, and the design region sc
 - **Spacing between sections.** Section rhythm comes from the layout / `<Section>` and the canonical spacing scale — not from ad-hoc `mt-[37px]` arbitrary values or one-off margins sprinkled per region. Flag arbitrary-value spacing (`[…px]`) and margins that fight the layout's own flow.
 - **Text color.** Semantic tokens only (`text-body`, `text-body-medium`, `text-primary`, …). Flag any hex / `rgb()` / `hsl()` literal, and any stale shadcn token (`text-muted-foreground`, `text-accent-foreground`, …) that doesn't resolve in this project.
 - **Custom CSS on primitives.** `className` overrides that re-skin a primitive's *owned* properties — padding / spacing / radius / color on `Card`/`CardContent` (owned by its variants), etc. The fix is a variant, not a `className`. (card-walkthrough.)
-- **Direction & format.** `left-`/`right-`/`ml-`/`pr-` instead of logical `ms-`/`me-`/`ps-`/`pe-`; native `toLocaleString` / `Intl.*` instead of `numberFormat()` / `dateTimeFormat()`.
+- **Direction & format.** `left-`/`right-`/`ml-`/`pr-` instead of logical `ms-`/`me-`/`ps-`/`pe-`; native `toLocaleString` / `Intl.*` instead of `numberFormat()` / `formatDateTime()`.
 
 ## Match, don't mimic — and its limit
 

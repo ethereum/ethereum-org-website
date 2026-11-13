@@ -216,7 +216,7 @@ When this tutorial was first written in May 2021, the average was 5,874 blocks p
 
 ### Gas {#gas}
 
-Blocks are bounded in size. Each block has a gas limit, and since [EIP-1559](/developers/docs/gas/#eip-1559) each block also has a gas target, which is half of the limit. When blocks use more gas than the target, the base fee goes up, and when they use less, it goes down. The gas limit itself is adjusted by validators, and it has been raised several times over the years. Limits are required to prevent arbitrarily large block sizes putting strain on full nodes in terms of disk space and speed requirements ([source](/developers/docs/blocks/)).
+Blocks are bounded in size. Each block has a gas limit, and since [EIP-1559](/developers/docs/gas/#base-fee) each block also has a gas target, which is half of the limit. When blocks use more gas than the target, the base fee goes up, and when they use less, it goes down. The gas limit itself is adjusted by validators, and it has been raised several times over the years. Limits are required to prevent arbitrarily large block sizes putting strain on full nodes in terms of disk space and speed requirements ([source](/developers/docs/blocks/)).
 
 One way to conceptualize block gas limit is to think of it as the **supply** of available block space in which to batch transactions. The block gas limit can be queried and visualized from 2016 to present day:
 

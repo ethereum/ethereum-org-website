@@ -35,7 +35,8 @@ import { buildCommentPrompt } from "./prompt-builder"
 export interface PlannedBatch {
   prompt: string
   bytes: number
-  translateCount: number
+  /** Section ids this batch asks for; the parser requires all of them back. */
+  translateIds: string[]
   /**
    * Carries one section already past the content budget, so no smaller call
    * exists and the per-call ceiling does not apply.
@@ -175,7 +176,7 @@ export function planIncrementalBatches(
       return {
         prompt,
         bytes,
-        translateCount: translate.length,
+        translateIds: translate.map((t) => t.id),
         irreducible,
         overCeiling: !irreducible && bytes > MAX_PLANNED_PROMPT_BYTES,
       }

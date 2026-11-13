@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+import { useCommandState } from "cmdk"
 import { useTranslations } from "next-intl"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
@@ -11,20 +13,32 @@ import {
 } from "../ui/command"
 
 import MenuItem from "./MenuItem"
-import NoResultsCallout from "./NoResultsCallout"
 
 type LanguagePickerMenuProps = {
   className?: string
   languages: LocaleDisplayInfo[]
-  onClose: () => void
   onSelect: (value: string) => void
+  onNoResults: (query: string) => void
+}
+
+// Only mounted inside CommandEmpty, so `search` is always a no-results query
+const NoResultsReporter = ({
+  onNoResults,
+}: Pick<LanguagePickerMenuProps, "onNoResults">) => {
+  const search = useCommandState((state) => state.search)
+
+  useEffect(() => {
+    onNoResults(search)
+  }, [search, onNoResults])
+
+  return null
 }
 
 const LanguagePickerMenu = ({
   className,
   languages,
-  onClose,
   onSelect,
+  onNoResults,
 }: LanguagePickerMenuProps) => {
   const t = useTranslations("common")
 
@@ -65,7 +79,13 @@ const LanguagePickerMenu = ({
 
       <CommandList className="max-h-full">
         <CommandEmpty className="py-0 text-left text-base">
-          <NoResultsCallout onClose={onClose} />
+          <p className="mb-2 font-bold">
+            {t("page-languages-no-results-header")}
+          </p>
+          <p className="text-body-medium">
+            {t("page-languages-no-results-description")}
+          </p>
+          <NoResultsReporter onNoResults={onNoResults} />
         </CommandEmpty>
         <CommandGroup className="p-0">
           {languages.map((displayInfo) => (

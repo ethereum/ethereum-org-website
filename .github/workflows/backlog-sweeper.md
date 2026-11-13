@@ -33,7 +33,7 @@ timeout-minutes: 45
 tools:
   github:
     toolsets: [default, actions]
-  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "ls", "cat", "grep", "head", "wc"]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "git branch -a", "git branch --list:*", "git branch --contains:*", "ls:*", "cat:*", "grep:*", "head:*", "tail:*", "wc:*"]
 safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
@@ -100,7 +100,7 @@ The PRs to review are already chosen: `/tmp/gh-aw/agent/candidates.json` lists t
 
 ## For each selected PR
 
-Review it following the core instructions below and call `submit_review` once for it, with its own `pr` and `sha`. For PR `<n>`, the pre-fetched metadata is `/tmp/gh-aw/agent/pr-<n>/pr-meta.json`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in Step 1.
+Review it following the core instructions below and call `submit_review` once for it, with its own `pr` and `sha`. For PR `<n>`, the pre-fetched metadata is `/tmp/gh-aw/agent/pr-<n>/pr-meta.json`, its listing gate is `/tmp/gh-aw/agent/pr-<n>/listing.txt`, and its head is the local branch `pr-<n>-head` — use them in place of the paths and the `pr-head` branch named in the core instructions.
 
 ## Termination
 

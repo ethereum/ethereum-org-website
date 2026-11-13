@@ -76,7 +76,7 @@ npm init
 
 Es spielt keine große Rolle, wie Sie die Installationsfragen beantworten; hier ist, wie wir es als Referenz gemacht haben:
 
-```text
+```console
 package name: (my-nft)
 version: (1.0.0)
 description: My first NFT!

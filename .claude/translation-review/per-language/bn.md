@@ -165,3 +165,16 @@ Scope: 25 files (smart-contracts/security + app-plasma retranslations, predictio
 - 13 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** Good fluency overall, with the prediction-markets rewrite reading well. The defects are concentrated in the full app-plasma retranslation, which regressed wording that was correct on dev, and in three founders tags that shipped in English after the key rename.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `transactions` concept tag restored to `ট্রানজ্যাকশন`; literal `\n` at the end of the description removed (sending)
+
+**Notes:**
+
+- Warnings: doubled ABI expansion (mint:38); `[Ethers plugin]` left untranslated; native and Western numerals mixed in part references. Glossary returns `(weth)` lowercase (#95).

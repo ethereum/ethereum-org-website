@@ -176,3 +176,16 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 13 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The translation is fluent and structurally clean. The main problem is that the retranslated security page reverted five transliterated brand names to Latin, which are auto-fixable. The rest is terminology drift and mainland vocabulary in the new prediction-markets copy.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `_x_` italics next to CJK characters converted to `<em>` (4 sites)
+
+**Notes:**
+
+- Warnings: MetaMask written in Latin vs `梅塔馬斯克` across files; 你/您 split within the NFT series; redundant ABI expansion (mint:34).

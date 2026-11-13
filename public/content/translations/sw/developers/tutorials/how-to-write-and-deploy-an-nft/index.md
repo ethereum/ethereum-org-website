@@ -76,7 +76,7 @@ npm init
 
 Haijalishi sana jinsi unavyojibu maswali ya usakinishaji; hivi ndivyo tulivyofanya kwa marejeleo:
 
-```text
+```console
 package name: (my-nft)
 version: (1.0.0)
 description: My first NFT!

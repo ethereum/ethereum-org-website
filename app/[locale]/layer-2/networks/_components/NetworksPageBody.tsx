@@ -42,9 +42,6 @@ const NetworksPageBody = async ({
     catalog: {
       searchPlaceholder: t("page-layer-2-networks-search-networks"),
       resultsLabel: t("page-layer-2-networks-networks-showing"),
-      noResults: t("page-layer-2-networks-no-results-title"),
-      noResultsDesc: t("page-layer-2-networks-no-results-description"),
-      resetLabel: t("page-layer-2-networks-reset-filters"),
       filtersToggle: t("page-layer-2-networks-filters"),
       applyLabel: t("page-layer-2-networks-transaction-see-networks"),
       closeLabel: tCommon("close"),

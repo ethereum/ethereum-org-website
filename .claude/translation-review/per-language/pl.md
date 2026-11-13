@@ -168,3 +168,16 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 10 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The Polish output is accurate, idiomatic and consistent with the glossary. The only critical items are three founders tag labels the pipeline left in English across all locales. The rest are word-choice warnings, mainly the false friend `legalny` in scam-token-tricks.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `podpisananą` typo changed to `podpisaną` (sending:202)
+
+**Notes:**
+
+- Warnings: NFT gender drift (mint, neuter vs masculine); MetaMask UI labels given only in Polish.
