@@ -263,11 +263,11 @@ If two fit, pick one and say why in `policy_why`. Include the policy's process s
 - `facts`: at most 5, the ones that most change a maintainer's decision, most important first. Neutral, sourced statements, each with a quote checked the same way (facts that fail the check are dropped). Good facts: "Audit by X published 2024-05 on X's site", "The docs describe forwarding requests to upstream providers". For the comparison, state it as a fact with the edited page as a `repo` source: "This page already lists 30 node providers, including dRPC, Chainstack and GetBlock" (repo facts need no quote).
 - `ask_author`: at most 3, only about `must` criteria that are still unknown, contradicted or only stated by the product, most decisive first; never about `nice` criteria. When the edited page already lists similar products, the first question is what this one offers that they don't. These are the questions whose answers a maintainer most needs, e.g. "Do you run your own Ethereum nodes, or route to upstream providers?", "Is there an independent audit beyond the automated report?", "Was the issue form filed first?". Skip questions about funding, investors or company structure unless a listing criterion depends on them.
 - `copy`: review the text the PR adds, at most 4 notes, most important first. Each `text` is copied exactly from the added lines of `diff.patch`; notes that don't quote it are dropped. Flag only:
-  - claims that don't match a source you saved (numbers, supported networks, features), with that source's `quote`;
+  - claims that don't match a source you saved (numbers, supported networks, features), with that source's `quote`, including claims that other tools or a plain node can't do something;
   - credit: technology described as the product's own that another project created or maintains;
-  - overlap: text that repeats what the edited page or another page already covers, with a `repo` source;
+  - overlap: text that repeats what the edited page or another page already covers, or that belongs under an existing section for the same ecosystem or project family, with a `repo` source;
   - tone: superlatives, feature lists, sign-up instructions or calls to action, "we"/"our", or an entry much longer than its neighbours on the page. ethereum.org listings are short and neutral.
-  Suggest the fix, e.g. a shorter neutral sentence or moving it under an existing section. Don't comment on grammar or wording otherwise.
+  Suggest the fix in plain text, without markdown or links, e.g. a shorter neutral sentence or moving it under an existing section. Don't comment on grammar or wording otherwise.
 </research>
 
 <outcome>
