@@ -4,9 +4,9 @@ import { useLocale } from "next-intl"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
-import { cn } from "@/lib/utils/cn"
-
 import { CommandItem } from "@/components/ui/command"
+
+import { cn } from "@/lib/utils/cn"
 
 type ItemProps = ComponentPropsWithoutRef<typeof CommandItem> & {
   displayInfo: LocaleDisplayInfo
