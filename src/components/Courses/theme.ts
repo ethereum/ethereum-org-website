@@ -138,4 +138,6 @@ export const stepPrompt = "m-0 text-lg leading-relaxed font-normal"
 
 /** Pill for the header stat chips and the profile button beside them */
 export const statChip =
-  "m-0 flex items-center gap-1.5 rounded-full border-2 border-border bg-background px-3 py-1 font-bold tabular-nums"
+  // Start padding about the gap above and below a 24px icon, so a round
+  // avatar sits snugly in the pill's rounded end
+  "m-0 flex items-center gap-2 rounded-full border-2 border-border bg-background py-1 ps-[7px] pe-3.5 text-lg font-bold tabular-nums"
