@@ -122,6 +122,21 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     },
   ]
 
+  const p2pWays = [
+    {
+      title: t("page-get-eth-p2p-escrow-title"),
+      description: t("page-get-eth-p2p-escrow-desc"),
+    },
+    {
+      title: t("page-get-eth-p2p-trusted-title"),
+      description: t("page-get-eth-p2p-trusted-desc"),
+    },
+    {
+      title: t("page-get-eth-p2p-safety-title"),
+      description: t("page-get-eth-p2p-safety-desc"),
+    },
+  ]
+
   const safetyArticles: CardListCardProps[] = [
     {
       title: t("page-get-eth-article-protecting-yourself"),
@@ -229,6 +244,37 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   {t("page-get-eth-whats-eth-link")}
                 </ButtonLink>
               </Callout>
+            </Section>
+
+            <Section id="p2p" className="flex flex-col gap-space-2x">
+              <div className="mx-auto flex max-w-3xl flex-col items-center gap-6">
+                <Eyebrow>{t("page-get-eth-p2p-eyebrow")}</Eyebrow>
+                <h2 className="text-center text-h1">
+                  {t("page-get-eth-p2p-title")}
+                </h2>
+                <p className="text-center text-lg text-body-medium">
+                  {t("page-get-eth-p2p-desc")}
+                </p>
+              </div>
+
+              <Grid columns={3}>
+                {p2pWays.map(({ title, description }) => (
+                  <Card key={title} variant="nested">
+                    <CardContent>
+                      <CardTitle>{title}</CardTitle>
+                      <CardParagraph>{description}</CardParagraph>
+                    </CardContent>
+                  </Card>
+                ))}
+              </Grid>
+
+              <p className="mx-auto max-w-3xl text-center text-body-medium">
+                {t("page-get-eth-p2p-kyc-note")}
+              </p>
+
+              <ButtonLink href="#country-picker" className="mx-auto">
+                {t("page-get-eth-p2p-cta")}
+              </ButtonLink>
             </Section>
 
             <Section
