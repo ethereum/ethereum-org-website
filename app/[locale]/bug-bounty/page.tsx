@@ -2,7 +2,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, Params } from "@/lib/types"
 
-import BugBountyCards from "@/components/BugBountyCards"
 import CardList, { type CardProps } from "@/components/CardList"
 import ContentFeedback from "@/components/ContentFeedback"
 import Emoji from "@/components/Emoji"
@@ -31,6 +30,7 @@ import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
 
 import Leaderboard from "./_components/bug-bounty-leaderboard"
+import BugBountyCards from "./_components/BugBountyCards"
 import BugBountyJsonLD from "./page-jsonld"
 
 import besu from "@/public/images/upgrades/besu.png"
