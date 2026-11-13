@@ -195,11 +195,17 @@ const Page = async (props: { params: Promise<NetworkPageParams> }) => {
           ))}
         </div>
         {network.blockspaceData && (
-          <div className="w-full rounded-2xl bg-background p-4">
-            <h3 className="text-sm font-bold text-body-medium">
-              {t("page-layer-2-networks-network-usage")}
-            </h3>
+          <section className="flex flex-col gap-6 border-t pt-8">
+            <div className="flex flex-col gap-1">
+              <h3 className="text-xl font-bold">
+                {t("page-layer-2-networks-network-usage")}
+              </h3>
+              <p className="text-sm text-body-medium">
+                {t("page-layer-2-networks-network-usage-overview")}
+              </p>
+            </div>
             <NetworkUsageChart
+              locale={locale}
               usageData={network.blockspaceData}
               labels={{
                 nft: t("page-layer-2-networks-usage-nft"),
@@ -211,7 +217,7 @@ const Page = async (props: { params: Promise<NetworkPageParams> }) => {
                 unlabeled: t("page-layer-2-networks-usage-unlabeled"),
               }}
             />
-          </div>
+          </section>
         )}
       </CatalogItemLayout>
     </>

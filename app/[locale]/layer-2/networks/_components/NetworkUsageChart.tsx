@@ -1,90 +1,69 @@
-"use client"
-
-import { Bar, BarChart, LabelList, YAxis } from "recharts"
-
 import type { BlockspaceData } from "@/lib/types"
 
-import { ChartConfig, ChartContainer, ChartLegend } from "@/components/ui/chart"
+import { cn } from "@/lib/utils/cn"
+import { numberToPercent } from "@/lib/utils/numbers"
 
-const COLORS: Record<keyof BlockspaceData, string> = {
+const COLORS: Partial<Record<keyof BlockspaceData, string>> = {
   nft: "#0872FC",
   defi: "#C32E8A",
   social: "#1B9A92",
   token_transfers: "#8E30FF",
-  unlabeled: "hsl(var(--body))",
 }
-const KEYS = Object.keys(COLORS) as (keyof BlockspaceData)[]
 
-const CustomLegend = ({ payload, chartConfig }) => (
-  <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 lg:flex-nowrap">
-    {payload.map((entry, index) => (
-      <div
-        key={`legend-${index}`}
-        className="flex items-center whitespace-nowrap"
-      >
-        <div
-          className="me-2 h-3 w-3 rounded-full"
-          style={{ backgroundColor: entry.color }}
-        />
-        <span className="text-sm">{chartConfig[entry.value].label}</span>
-      </div>
-    ))}
-  </div>
-)
-
-/** Share of transactions per usage category; labels arrive built on the server. */
+/** Share of transactions per usage category, ranked; unlabeled always last. */
 const NetworkUsageChart = ({
   usageData,
   labels,
+  locale,
 }: {
   usageData: BlockspaceData
   labels: Record<keyof BlockspaceData, string>
+  locale: string
 }) => {
-  const total = KEYS.reduce((sum, key) => sum + usageData[key], 0)
-  const percentage = (value: number) => {
-    const share = (value / total) * 100
-    return share < 1 ? Number(share.toFixed(1)) : Math.round(share)
-  }
-  const chartData = [
-    Object.fromEntries(KEYS.map((key) => [key, percentage(usageData[key])])),
-  ]
-  const chartConfig = Object.fromEntries(
-    KEYS.map((key) => [key, { label: labels[key], color: COLORS[key] }])
-  ) satisfies ChartConfig
+  const keys = Object.keys(labels) as (keyof BlockspaceData)[]
+  const total = keys.reduce((sum, key) => sum + usageData[key], 0)
+  const rows = keys
+    .map((key) => ({ key, share: total ? usageData[key] / total : 0 }))
+    .sort(
+      (a, b) =>
+        Number(a.key === "unlabeled") - Number(b.key === "unlabeled") ||
+        b.share - a.share
+    )
 
   return (
-    <ChartContainer config={chartConfig} className="h-[200px] w-full">
-      <BarChart accessibilityLayer data={chartData} barGap={"10%"}>
-        <YAxis
-          domain={[0, (dataMax) => dataMax + 15]}
-          axisLine={false}
-          tickLine={false}
-          fontSize={12}
-          tickFormatter={(value) => `${value}%`}
-          hide
-        />
-        {KEYS.map((key) => (
-          <Bar
-            key={key}
-            dataKey={key}
-            radius={4}
-            fill={COLORS[key]}
-            barSize={18}
-          >
-            <LabelList
-              position="top"
-              offset={12}
-              fill="currentColor"
-              fontSize={12}
-              formatter={(value) => `${value}%`}
-            />
-          </Bar>
-        ))}
-        <ChartLegend
-          content={<CustomLegend payload={[]} chartConfig={chartConfig} />}
-        />
-      </BarChart>
-    </ChartContainer>
+    <ul className="m-0 flex list-none flex-col gap-5 p-0">
+      {rows.map(({ key, share }) => {
+        const muted = key === "unlabeled"
+        return (
+          <li key={key} className="m-0 flex flex-col gap-1.5">
+            <div className="flex items-baseline justify-between gap-4">
+              <span className={cn("text-sm", muted && "text-body-medium")}>
+                {labels[key]}
+              </span>
+              <span
+                className={cn(
+                  "text-lg font-bold tabular-nums",
+                  muted && "font-normal text-body-medium"
+                )}
+              >
+                {numberToPercent(share, locale, {
+                  maximumFractionDigits: share > 0 && share < 0.01 ? 1 : 0,
+                })}
+              </span>
+            </div>
+            <div className="h-1.5 overflow-hidden rounded-full bg-background">
+              <div
+                className="h-full rounded-full bg-body-medium"
+                style={{
+                  width: `${share * 100}%`,
+                  backgroundColor: COLORS[key],
+                }}
+              />
+            </div>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 
