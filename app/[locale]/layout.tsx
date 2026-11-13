@@ -20,6 +20,8 @@ import "@/styles/global.css"
 import { routing } from "@/i18n/routing"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
+export const dynamicParams = false
+
 // Generate static params for all supported locales
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
