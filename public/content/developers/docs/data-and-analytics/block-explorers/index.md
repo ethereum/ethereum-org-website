@@ -16,6 +16,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [3xpl](https://3xpl.com/ethereum) - An ad-free Ethereum explorer that allows downloading its datasets (open-core: core modules are open source)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockscout](https://eth.blockscout.com/)
+- [Ethernal](https://github.com/tryethernal/ethernal) - MIT-licensed block explorer for any EVM chain, from local development networks to L2s. Self-host it or use the hosted version
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 - [Otterscan](https://otterscan.io/)
 
