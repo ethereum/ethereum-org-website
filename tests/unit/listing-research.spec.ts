@@ -10,7 +10,7 @@ let check: Mod["check"],
   publicUrl: Mod["publicUrl"],
   quoteFound: Mod["quoteFound"],
   registrableDomain: Mod["registrableDomain"],
-  render: Mod["render"],
+  section: Mod["section"],
   toText: Mod["toText"]
 
 test.beforeAll(async () => {
@@ -21,7 +21,7 @@ test.beforeAll(async () => {
     publicUrl,
     quoteFound,
     registrableDomain,
-    render,
+    section,
     toText,
   } = await import(
     pathToFileURL(
@@ -144,7 +144,7 @@ test("check re-verifies pass and fail quotes alike", async () => {
   ])
 })
 
-test("render marks product-only passes as claimed and nice criteria as preferred", () => {
+test("section marks product-only passes as claimed and nice criteria as preferred", () => {
   const c = (criterion: string, source: string, weight = "must") => ({
     criterion,
     status: "pass",
@@ -153,50 +153,19 @@ test("render marks product-only passes as claimed and nice criteria as preferred
     url: source === "repo" ? "public/content/x.md" : "https://example.com/",
     source,
   })
-  const out = render(
-    {
-      product: "X",
-      policy: { page: "adding-developer-tools", why: "" },
-      criteria: [
-        c("Documented", "independent"),
-        c("Widely used", "author"),
-        c("Open source", "independent", "nice"),
-      ],
-      facts: [],
-      existing: [],
-      askAuthor: [],
-    },
-    ""
-  )
+  const out = section({
+    product: "X",
+    policy: { page: "adding-developer-tools", why: "" },
+    criteria: [
+      c("Documented", "independent"),
+      c("Widely used", "author"),
+      c("Open source", "independent", "nice"),
+    ],
+    facts: [],
+    existing: [],
+    askAuthor: [],
+  })
   expect(out).toContain("| ✅ | Documented |")
   expect(out).toContain("| ☑️ | Widely used |")
   expect(out).toContain("| ✅ | Open source _(preferred)_ |")
-})
-
-test("check keeps copy notes only when they quote the added text", async () => {
-  const note = (text: string) => ({
-    text,
-    issue: "Repeats the existing section",
-    suggestion: "Move it under The Graph",
-    source: "repo",
-    url: "public/content/x.md",
-  })
-  const run = (added: string | null) =>
-    check(
-      {
-        pr: "1",
-        criteria: "[]",
-        copy: JSON.stringify([
-          note("Firehose streams full blocks over gRPC"),
-          note("text that the pull request never added"),
-        ]),
-      },
-      async () => ({ status: 200, url: "", text: "", links: [] }),
-      added
-    )
-  const added = "Firehose streams full blocks over gRPC, including call traces."
-  expect((await run(added)).copy.map((c) => c.text)).toEqual([
-    "Firehose streams full blocks over gRPC",
-  ])
-  expect((await run(null)).copy).toEqual([])
 })

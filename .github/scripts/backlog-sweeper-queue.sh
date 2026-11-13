@@ -2,14 +2,13 @@
 # Picks the PRs the Backlog Sweeper reviews this run and pre-fetches their metadata and heads.
 #
 # Eligible: open, non-draft, not bot-authored, not a release/intl/automated
-# branch of this repo, not a bug bounty leaderboard-only PR (bounty-entry.sh), and never reviewed (no "First-pass review" or listing check comment from ethorg-agent). Oldest first,
+# branch of this repo, not a bug bounty leaderboard-only PR (bounty-entry.sh), and never reviewed (no "First-pass review" comment from ethorg-agent). Oldest first,
 # at most $LIMIT. With PR_NUMBER set (a `/review` comment or `pr` dispatch input), only that PR if it is open and not a
 # release/intl/automated branch of this repo; drafts, bot PRs and reviewed PRs are allowed.
 #
 # Env: REPO (owner/name), GH_TOKEN, PR_NUMBER (optional). Writes to $OUT_DIR (default /tmp/gh-aw/agent):
 #   candidates.json        selected PR numbers, oldest first
 #   pr-<n>/pr-meta.json    PR metadata
-#   pr-<n>/listing.txt     listing-research match gate: yes, no or error
 # Also fetches each PR's head as the local branch pr-<n>-head (never checked out).
 set -euo pipefail
 
@@ -50,7 +49,7 @@ query($owner: String!, $name: String!, $bountyFiles: Int!, $endCursor: String) {
       and ((.files.totalCount > 0 and .files.totalCount <= ($bountyFiles | length)
         and all(.files.nodes[]; .path | IN($bountyFiles[])) | not))
     | select([.early.nodes[], .late.nodes[]
-        | select(.author.login == "ethorg-agent" and (.body | contains("First-pass review") or contains("ethorg-listing:")))] | length == 0)
+        | select(.author.login == "ethorg-agent" and (.body | contains("First-pass review")))] | length == 0)
   )
   | sort_by(.createdAt) | .[:$limit] | map(.number)' > "$OUT_DIR/candidates.json"
 
@@ -60,13 +59,6 @@ for n in $(jq -r '.[]' "$OUT_DIR/candidates.json"); do
     --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,mergeStateStatus,additions,deletions,changedFiles,labels \
     > "$OUT_DIR/pr-$n/pr-meta.json"
   git fetch -q --no-tags origin "pull/$n/head:pr-$n-head"
-  listing=no
-  if [ -f .github/scripts/listing-research.mjs ]; then
-    rc=0; err=$(node .github/scripts/listing-research.mjs match "$n" 2>&1 >/dev/null) || rc=$?
-    if [ "$rc" = 0 ]; then listing=yes
-    elif [ "$rc" != 1 ] || [ -n "$err" ]; then listing=error; echo "$err" >&2; echo "::warning::listing-research match failed for #$n"; fi
-  fi
-  echo "$listing" > "$OUT_DIR/pr-$n/listing.txt"
 done
 
 echo "Candidates: $(cat "$OUT_DIR/candidates.json")"

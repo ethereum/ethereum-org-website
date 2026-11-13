@@ -1,9 +1,8 @@
-// Listing research for third-party listing PRs (see .github/workflows/listing-research.md).
+// Listing review helpers for third-party listing PRs (see .github/workflows/pr-reviewer-listing.md).
 //   match <pr>              exit 0 if <pr> is an outside contributor's listing request (needs GH_TOKEN, REPO)
-//   owns <pr>               exit 0 if it is one and changes only listing pages, listing data and images, so the
-//                           listing check is its only review
 //   prefetch <pr> <dir>     save the PR, the pages it links and domain-age evidence as plain text for the agent
-//   submit <item.json>      validate one agent result, re-check its quotes, print the comment body
+//   check < item.json       re-check a submit_review item's listing fields and quotes; print the verified listing JSON
+//   section < listing.json  print the "Listing check" section of the review comment
 // Every fetched page is attacker-controlled: it is only ever saved or searched as text, never executed.
 import { execFileSync } from "node:child_process"
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs"
@@ -216,9 +215,7 @@ function codeowners() {
   }
 }
 
-const IMAGE = /\.(png|jpe?g|svg|webp|gif)$/i
-
-async function match(pr, only = false) {
+async function match(pr) {
   const p = ghJson(`repos/${REPO}/pulls/${pr}`)
   if (
     p.draft ||
@@ -231,10 +228,7 @@ async function match(pr, only = false) {
   const files = ghJson(`repos/${REPO}/pulls/${pr}/files?per_page=100`).map(
     (f) => f.filename
   )
-  const hit = only
-    ? files.every((f) => LISTING.test(f) || IMAGE.test(f))
-    : files.some((f) => LISTING.test(f))
-  process.exit(hit ? 0 : 1)
+  process.exit(files.some((f) => LISTING.test(f)) ? 0 : 1)
 }
 
 const norm = (u) => u.replace(/#.*$/, "")
@@ -454,8 +448,7 @@ export const esc = (s) =>
     .replace(/:\/\//g, ":\u200b//")
     .replace(/www\./gi, (m) => `${m.slice(0, 3)}\u200b.`)
 
-/** @param {string | null} [added] the text the PR adds; copy notes must quote it and are dropped without it */
-export async function check(item, fetchPage = fetchText, added = null) {
+export async function check(item, fetchPage = fetchText) {
   const cache = new Map()
   let checked = 0
   const page = (u) => {
@@ -521,20 +514,6 @@ export async function check(item, fetchPage = fetchText, added = null) {
     else dropped++
   }
 
-  const copy = []
-  for (const c of arr(item.copy, 8)) {
-    const x = {
-      text: str(c.text, 300),
-      issue: str(c.issue, 300),
-      suggestion: str(c.suggestion, 300),
-      ...base(c),
-    }
-    const inDiff = added != null && quoteFound(x.text, toText(added))
-    const evidence = !x.quote || (await verify(x, c)) === "ok"
-    if (copy.length < 4 && x.issue && inDiff && evidence) copy.push(x)
-    else dropped++
-  }
-
   return {
     v: 2,
     pr: Number(String(item.pr).replace(/\D/g, "")),
@@ -551,13 +530,12 @@ export async function check(item, fetchPage = fetchText, added = null) {
       text: str(e.text, 200),
     })),
     askAuthor: arr(item.ask_author, 3).map((s) => str(s, 300)),
-    copy,
     injection: str(item.injection, 300),
     verification: { checked, downgraded, dropped },
   }
 }
 
-export function render(r, run) {
+export function section(r) {
   const icon = { pass: "✅", fail: "❌", unknown: "❔" }
   const src = (c) =>
     `${c.url ? esc(c.source === "repo" ? c.url : new URL(c.url).hostname) + " " : ""}${c.source}`
@@ -581,12 +559,8 @@ export function render(r, run) {
   const policy = r.policy.page
     ? `[\`${r.policy.page}\`](https://ethereum.org/contributing/${r.policy.page}/)`
     : "no matching listing policy"
-  const data = JSON.stringify({ ...r, run }).replace(
-    /[<>@]/g,
-    (c) => `\\u${c.charCodeAt(0).toString(16).padStart(4, "0")}`
-  )
   return [
-    `## 🧾 Listing check${r.product ? ` — ${esc(r.product)}` : ""}`,
+    `### 🧾 Listing check${r.product ? ` — ${esc(r.product)}` : ""}`,
     `Checked against ${policy}. ✅ confirmed by an independent source or this repo, ☑️ stated only on the product's own site, ❌ contradicted. A maintainer makes the listing decision.`,
     rows.length
       ? `| | Criterion | Evidence | Source |\n|---|---|---|---|\n${rows.join("\n")}`
@@ -595,16 +569,12 @@ export function render(r, run) {
     r.askAuthor.length
       ? `**Questions for the author:**\n${r.askAuthor.map((a) => `- ${esc(a)}`).join("\n")}`
       : "",
-    r.copy?.length
-      ? `**Suggested edits to the added text:**\n${r.copy.map((c) => `- ${quote({ quote: c.text })}: ${esc(c.issue)}${c.suggestion ? ` Suggestion: ${esc(c.suggestion)}` : ""}${c.quote ? ` (${quote(c)}, ${src(c)})` : ""}`).join("\n")}`
-      : "",
     r.existing.length
       ? `**Already on ethereum.org:** ${r.existing.map((e) => esc(e.path)).join(", ")}`
       : "",
     r.facts.length || age.length
       ? `<details><summary>Facts found (${age.length + r.facts.length})</summary>\n\n${[...age.map((a) => `- ${a}`), ...r.facts.map((f) => `- ${esc(f.fact)}${f.quote ? ` — ${quote(f)}` : ""} (${src(f)})`)].join("\n")}\n\n</details>`
       : "",
-    `<!-- ethorg-listing: ${data} -->`,
   ]
     .filter(Boolean)
     .join("\n\n")
@@ -612,23 +582,16 @@ export function render(r, run) {
 
 async function main() {
   const [cmd, ...args] = process.argv.slice(2)
-  if (cmd === "match" || cmd === "owns") await match(args[0], cmd === "owns")
+  if (cmd === "match") await match(args[0])
   else if (cmd === "prefetch") await prefetch(args[0], args[1])
-  else if (cmd === "submit") {
-    const item = JSON.parse(readFileSync(args[0], "utf8"))
-    let added = null
-    try {
-      added = addedLines(
-        gh(
-          `repos/${REPO}/pulls/${String(item.pr).replace(/\D/g, "")}`,
-          "application/vnd.github.diff"
-        )
-      )
-    } catch {}
-    const r = await check(item, fetchText, added)
+  else if (cmd === "check") {
+    const item = JSON.parse(readFileSync(0, "utf8"))
+    const r = await check(item)
     r.siteAge = await pool(productSites(item), 3, domainAge)
-    process.stdout.write(render(r, process.env.RUN_URL || ""))
-  } else throw new Error(`unknown command: ${cmd}`)
+    process.stdout.write(JSON.stringify(r))
+  } else if (cmd === "section")
+    process.stdout.write(section(JSON.parse(readFileSync(0, "utf8"))))
+  else throw new Error(`unknown command: ${cmd}`)
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)
