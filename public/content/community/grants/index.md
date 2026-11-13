@@ -38,6 +38,7 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 - [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Public Airtable database of grant programs_
 - [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Google spreadsheet of Web3 grant opportunities_
 - [Arbitrum Grants](https://arbitrum.foundation/grants) — Arbitrum DAO and [The Arbitrum Foundation](https://arbitrum.foundation/)
+- [Beldex Grants Program](https://www.beldex.io/grants) - The Beldex Grants Program is a global $1 million initiative supporting developers, startups, and teams building privacy-focused solutions on the Beldex network.
 
 ### For DeFi projects and financial applications {#for-defi-projects}
 
