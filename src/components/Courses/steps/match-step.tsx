@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils/cn"
 
 import type { MatchStep as MatchStepData } from "@/data/courses"
 
-import { chunkyTile, type PickResult, stepPrompt } from "../theme"
+import { chunkyTile, courseText, type PickResult, stepPrompt } from "../theme"
 
 import { seededShuffle } from "./shuffle"
 import type { StepStatus } from "./types"
@@ -45,16 +45,23 @@ const tileClasses = cn(
 const Badge = ({
   number,
   result,
+  outlined,
 }: {
   number?: number
   result?: PickResult
+  /** A paired term: hollow, so the terms still to match stand out */
+  outlined?: boolean
 }) => (
   <Center
     aria-hidden
     className={cn(
       "size-7 shrink-0 rounded-full text-xs font-bold",
       number === undefined && "border-2 border-dashed border-border",
-      number !== undefined && !result && "bg-(--course) text-white",
+      number !== undefined &&
+        !result &&
+        (outlined
+          ? cn("border-2 border-(--course)", courseText)
+          : "bg-(--course) text-white"),
       result === "correct" && "bg-green-700 text-white",
       result === "incorrect" && "bg-error text-white"
     )}
@@ -142,7 +149,11 @@ const MatchStep = ({
                   data-result={result}
                   onClick={() => tap("term", id)}
                 >
-                  <Badge number={i + 1} result={result} />
+                  <Badge
+                    number={i + 1}
+                    result={result}
+                    outlined={!!paired[i]}
+                  />
                   <span>{termLabel(id)}</span>
                   {paired[i] && (
                     <span className="sr-only">
