@@ -26,7 +26,7 @@ Pick the lanes the PR touches from what the changes do; the paths below are typi
 | `tooling` | `.github/**`, config files, `src/scripts/**` | `tooling.md` |
 | `data` | `src/data/**` (wallets, chains, networks, layer-2s...) | `data.md` |
 | `content` | English `public/content/**`, `src/intl/en/**`, or user-facing copy anywhere | `content.md` |
-| `listing` | `/tmp/gh-aw/agent/listing.txt` says `yes` (a strong signal); otherwise, or when it is missing or says `error`, a new entry in a list of third-party products, services or resources in English `public/content/**` or `src/data/` | `listing.md` |
+| `listing` | `/tmp/gh-aw/agent/listing/` exists (saved research for a listing request); otherwise a new entry in a list of third-party products, services or resources in English `public/content/**` or `src/data/` | `listing.md` |
 | `translation` | `public/content/translations/**`, non-English `src/intl/**` | `translation.md` |
 | `deps` | `package.json`, `pnpm-lock.yaml` | `deps-docs.md` |
 | `docs` | `docs/**`, `README`, `CONTRIBUTING` | `deps-docs.md` |
