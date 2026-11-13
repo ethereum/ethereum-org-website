@@ -234,7 +234,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
           </div>
 
-          <TorchHistorySwiper holders={torchHolders} />
+          <I18nProvider locale={locale} messages={messages}>
+            <TorchHistorySwiper holders={torchHolders} />
+          </I18nProvider>
 
           <div className="flex flex-col gap-12 px-8 pt-12 pb-24 text-body-inverse sm:px-16 md:flex-row dark:text-body">
             <div className="flex flex-1 flex-col gap-8">

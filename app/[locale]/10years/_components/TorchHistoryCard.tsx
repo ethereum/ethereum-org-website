@@ -1,4 +1,7 @@
+"use client"
+
 import React from "react"
+import { useLocale, useTranslations } from "next-intl"
 
 import { AvatarBase, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
@@ -38,7 +41,9 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
   to,
   transactionHash,
 }) => {
-  // TODO: Extract intl strings
+  const t = useTranslations("page-10-year-anniversary")
+  const locale = useLocale()
+
   return (
     <Card>
       <CardHeader className="flex flex-col">
@@ -67,13 +72,19 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         </CardTitle>
         <CardParagraph textColor="body">{role}</CardParagraph>
         <CardParagraph size="sm">
-          From {formatTorchDate(from)}
-          {to !== undefined ? ` to ${formatTorchDate(to)}` : " to present"}
+          {to !== undefined
+            ? t("page-10-year-torch-held-range", {
+                from: formatTorchDate(from, locale),
+                to: formatTorchDate(to, locale),
+              })
+            : t("page-10-year-torch-held-since", {
+                from: formatTorchDate(from, locale),
+              })}
         </CardParagraph>
       </CardContent>
       <CardFooter>
         <BaseLink href={getTxEtherscanUrl(transactionHash)} className="text-sm">
-          View on Etherscan
+          {t("page-10-year-torch-view-on-etherscan")}
         </BaseLink>
       </CardFooter>
     </Card>
