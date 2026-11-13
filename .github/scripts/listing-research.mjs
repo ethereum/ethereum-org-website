@@ -1,5 +1,7 @@
 // Listing research for third-party listing PRs (see .github/workflows/listing-research.md).
 //   match <pr>              exit 0 if <pr> is an outside contributor's listing request (needs GH_TOKEN, REPO)
+//   owns <pr>               exit 0 if it is one and changes only listing pages, listing data and images, so the
+//                           listing check is its only review
 //   prefetch <pr> <dir>     save the PR, the pages it links and domain-age evidence as plain text for the agent
 //   submit <item.json>      validate one agent result, re-check its quotes, print the comment body
 // Every fetched page is attacker-controlled: it is only ever saved or searched as text, never executed.
@@ -214,7 +216,9 @@ function codeowners() {
   }
 }
 
-async function match(pr) {
+const IMAGE = /\.(png|jpe?g|svg|webp|gif)$/i
+
+async function match(pr, only = false) {
   const p = ghJson(`repos/${REPO}/pulls/${pr}`)
   if (
     p.draft ||
@@ -227,7 +231,10 @@ async function match(pr) {
   const files = ghJson(`repos/${REPO}/pulls/${pr}/files?per_page=100`).map(
     (f) => f.filename
   )
-  process.exit(files.some((f) => LISTING.test(f)) ? 0 : 1)
+  const hit = only
+    ? files.every((f) => LISTING.test(f) || IMAGE.test(f))
+    : files.some((f) => LISTING.test(f))
+  process.exit(hit ? 0 : 1)
 }
 
 const norm = (u) => u.replace(/#.*$/, "")
@@ -605,7 +612,7 @@ export function render(r, run) {
 
 async function main() {
   const [cmd, ...args] = process.argv.slice(2)
-  if (cmd === "match") await match(args[0])
+  if (cmd === "match" || cmd === "owns") await match(args[0], cmd === "owns")
   else if (cmd === "prefetch") await prefetch(args[0], args[1])
   else if (cmd === "submit") {
     const item = JSON.parse(readFileSync(args[0], "utf8"))

@@ -8,12 +8,37 @@ on:
       - src/data/consensus-bounty-hunters.json
       - src/data/execution-bounty-hunters.json
   roles: all
+  permissions:
+    contents: read
+    pull-requests: read
+  steps:
+    - uses: actions/checkout@v6
+      with:
+        sparse-checkout: |
+          .github/scripts/listing-research.mjs
+          .github/CODEOWNERS
+        sparse-checkout-cone-mode: false
+        persist-credentials: false
+    - name: Leave listing-only PRs to the listing check
+      id: route
+      continue-on-error: true
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPO: ${{ github.repository }}
+        PR: ${{ github.event.pull_request.number }}
+      run: |
+        node .github/scripts/listing-research.mjs owns "$PR" || {
+          rc=$?
+          [ "$rc" -eq 1 ] || echo "::warning::Routing failed (exit $rc); reviewing this PR as usual"
+          exit 1
+        }
   skip-bots:
     - allcontributors[bot]
     - github-actions[bot]
     - dependabot[bot]
 if: >-
   !github.event.pull_request.draft &&
+  needs.pre_activation.outputs.route_result != 'success' &&
   (github.event.pull_request.head.repo.full_name != github.repository || (
     github.event.pull_request.head.ref != 'staging' &&
     github.event.pull_request.head.ref != 'dev' &&

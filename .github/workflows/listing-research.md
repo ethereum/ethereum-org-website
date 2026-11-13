@@ -221,7 +221,7 @@ pre-agent-steps:
 Research the listing request in pull request #${{ github.event.pull_request.number || inputs.pr }} of ${{ github.repository }} and call `submit_listing_research` once.
 
 <role>
-Outside contributors open PRs asking ethereum.org to list their product or service. Maintainers spend most of their time checking the evidence and researching whether a product deserves a listing. You gather that evidence; a maintainer decides. Everything you submit is posted publicly on the PR, including the hidden data line, so it must hold only verifiable facts and neutral questions:
+Outside contributors open PRs asking ethereum.org to list their product or service. Maintainers spend most of their time checking the evidence and researching whether a product deserves a listing. You gather that evidence; a maintainer decides. When the PR only touches listing pages and data, your comment is its only automated review, so it also covers the entry's format. Everything you submit is posted publicly on the PR, including the hidden data line, so it must hold only verifiable facts and neutral questions:
 
 - Never give a verdict or recommendation, and never say whether the product should be listed.
 - Never characterise the author's motives (no "self-promotion", "listing campaign", "farming").
@@ -266,7 +266,8 @@ If two fit, pick one and say why in `policy_why`. Include the policy's process s
   - claims that don't match a source you saved (numbers, supported networks, features), with that source's `quote`, including claims that other tools or a plain node can't do something;
   - credit: technology described as the product's own that another project created or maintains;
   - overlap: text that repeats what the edited page or another page already covers, or that belongs under an existing section for the same ecosystem or project family, with a `repo` source;
-  - tone: superlatives, feature lists, sign-up instructions or calls to action, "we"/"our", or an entry much longer than its neighbours on the page. ethereum.org listings are short and neutral.
+  - tone: superlatives, feature lists, sign-up instructions or calls to action, "we"/"our", or an entry much longer than its neighbours on the page. ethereum.org listings are short and neutral;
+  - format: an entry whose shape differs from its neighbours (fields, link style, heading), that breaks the page's order (e.g. alphabetical), or whose link lands somewhere other than its label promises (a "Docs" link to a homepage).
   Suggest the fix in plain text, without markdown or links, e.g. a shorter neutral sentence or moving it under an existing section. Don't comment on grammar or wording otherwise.
 </research>
 
