@@ -58,6 +58,7 @@
   "page-courses-profile-description": "Your XP, streaks, trophies and progress across every course.",
   "page-courses-profile-meta-description": "Your XP, streaks and progress in ethereum.org courses.",
   "page-courses-profile-account-local": "Not signed in",
+  "page-courses-profile-loading": "Loading your profile",
   "page-courses-profile-account-soon": "Your progress is saved in this browser only. Signing in to sync it across devices is coming.",
   "page-courses-profile-stats-title": "Your account and stats",
   "page-courses-profile-xp": "Total XP",
