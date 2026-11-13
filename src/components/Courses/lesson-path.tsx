@@ -415,10 +415,10 @@ const PathPopover = ({
       sideOffset={12}
       collisionPadding={16}
       style={courseThemeStyle(theme)}
-      className="z-popover w-72 rounded-2xl bg-(--course) p-5 text-white shadow-xl outline-hidden data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95"
+      className="z-popover w-72 rounded-2xl border-2 border-b-6 border-(--course-strong) bg-(--course) p-5 text-white shadow-xl outline-hidden data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95"
     >
       {children}
-      <PopoverPrimitive.Arrow className="fill-(--course)" />
+      <PopoverPrimitive.Arrow className="fill-(--course-strong)" />
     </PopoverPrimitive.Content>
   </PopoverPrimitive.Portal>
 )
