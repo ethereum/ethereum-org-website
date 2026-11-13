@@ -126,3 +126,15 @@ Scope: 26 files (smart-contracts/security + app-plasma retranslations, predictio
 - 8 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The translation is accurate and complies with the glossary across a large rewrite of prediction-markets and the plasma tutorial. The fixes needed are three English tag labels in founders and one L2 casing deviation. The rest are tú/usted and terminology consistency issues for a native reviewer.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: `plugin` vs `complemento` differs between files; tú/usted differs between tutorials (pre-existing).

@@ -36,7 +36,7 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
   // Contributing
   "/collectibles/": "/contributing/",
   "/contributing/translation-program/translatathon/leaderboard/":
-    "/contributing/translation-program/",
+    "/contributing/translation-program/acknowledgements/",
 
   // Learn
   "/bridges/": "/learn/",
@@ -114,6 +114,8 @@ export const BREADCRUMB_PARENTS: Record<string, string> = {
 export const BREADCRUMB_LABEL_KEYS: Record<string, string> = {
   "/contributing/content-resources/": "breadcrumb-adding-content-resources",
   "/contributing/quizzes/": "breadcrumb-adding-quizzes",
+  "/contributing/translation-program/translatathon/leaderboard/":
+    "breadcrumb-2025-leaderboard",
   "/eips/": "breadcrumb-eip",
   "/ethereum-history-founder-and-ownership/": "breadcrumb-history",
   "/layer-2/learn/": "breadcrumb-what-is-layer-2",

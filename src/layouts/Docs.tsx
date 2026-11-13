@@ -6,6 +6,7 @@ import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 import CallToContribute from "@/components/CallToContribute"
 import ContentFeedback from "@/components/ContentFeedback"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
+import { mdxDiagramComponents } from "@/components/Diagrams/mdx-diagram-components"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
 import FileContributors from "@/components/FileContributors"
@@ -29,6 +30,7 @@ import { addSlashes } from "@/lib/utils/url"
 
 export const docsComponents = {
   ...mdxTableComponents,
+  ...mdxDiagramComponents,
   ButtonLink,
   Card: MarkdownCard,
   CallToContribute,

@@ -76,7 +76,7 @@ npm init
 
 Tidak terlalu penting bagaimana Anda menjawab pertanyaan penginstalan, berikut adalah cara kami melakukannya sebagai referensi:
 
-```text
+```console
 package name: (hello-world)
 version: (1.0.0)
 description: hello world smart contract

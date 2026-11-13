@@ -32,7 +32,7 @@ export const CROPS_PROPERTIES: WalletFeature[] = [
   },
   {
     key: "privacy",
-    labelKey: "page-find-wallet-crops-private",
+    labelKey: "page-find-wallet-private-transactions",
     descKey: "page-find-wallet-private-transactions-desc",
   },
   {

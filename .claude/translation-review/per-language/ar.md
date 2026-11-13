@@ -277,3 +277,14 @@ Scope: 25 files (smart-contracts/security + app-plasma retranslations, predictio
 - 16 warnings in the PR review (see the PR #19556 review body).
 
 **Summary:** The glossary handling is solid and none of the old ar failure modes came back (no `الدولة` for state, no Ethereum spelling drift, no garbled brands). The criticals are deterministic regressions: English dates left inside isolates, one split LTR span, and three founders tags left in English. The main warnings are wording choices in the regenerated app-plasma and security pages (code→`رمز`, unsigned, underflow).
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: `حساب` used for "computation" right after the same word for "account" (mint:116); English alt text (write-deploy:32,44); "leave `gas` out" rendered as "leave it empty" (sending:198).
