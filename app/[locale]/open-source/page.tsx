@@ -131,7 +131,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
   const t = await getTranslations("page-open-source")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditLocaleTimestamp, latestCommitDate } =
     await getAppPageContributorInfo("open-source", locale)
 
   // Keyed rather than positional: sections get reordered, and an <h2> rendering
@@ -623,7 +623,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        latestCommitDate={latestCommitDate}
         contributors={contributors}
       />
 
