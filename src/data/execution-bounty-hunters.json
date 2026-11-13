@@ -50,6 +50,11 @@
     "score": 20000
   },
   {
+    "username": "tristartom",
+    "name": "Bob Conan",
+    "score": 18350
+  },
+  {
     "username": "iam-ned",
     "name": "David Matosse",
     "score": 17250
@@ -75,11 +80,6 @@
     "score": 15000
   },
   {
-    "username": "tristartom",
-    "name": "Bob Conan",
-    "score": 15000
-  },
-  {
     "username": "tintinweb",
     "name": "Tin",
     "score": 12500
@@ -92,7 +92,7 @@
   {
     "username": "DELENE-TCHIO-ROMUALD",
     "name": "Delene Tchio Romuald",
-    "score": 12250
+    "score": 12500
   },
   {
     "username": "lukaszmatczak",
@@ -190,6 +190,11 @@
     "score": 4250
   },
   {
+    "username": "silverologist",
+    "name": "silverologist",
+    "score": 3750
+  },
+  {
     "username": "axic",
     "name": "Alex Beregszaszi",
     "score": 3500
@@ -262,6 +267,11 @@
   {
     "username": "lgprbs",
     "name": "quasar",
+    "score": 2000
+  },
+  {
+    "username": "colinlyguo",
+    "name": "colinlyguo (AlphaSec)",
     "score": 2000
   },
   {
@@ -420,10 +430,15 @@
     "score": 1000
   }, 
   {
-    "username": "colinlyguo",
-    "name": "colinlyguo (AlphaSec)",
+    "username": "the-red-ace",
+    "name": "redbaron",
     "score": 1000
-  }, 
+  },
+  {
+    "username": "joohhnnn",
+    "name": "Joohhnnn",
+    "score": 1000
+  },
   {
     "username": "n0thingness",
     "name": "Daniel Briskin",
@@ -477,6 +492,11 @@
   {
     "username": "timmylegodt",
     "name": "Timmy",
+    "score": 500
+  },
+  {
+    "username": "CoMMaNDOX07",
+    "name": "CoMMaNDO",
     "score": 500
   },
   {

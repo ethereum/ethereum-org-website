@@ -328,7 +328,7 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Uses OpenZeppelin's SafeMath library to perform arithmetic operations safely.
-    // Learn more: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Learn more: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
     // Constant state variables in Solidity are similar to other languages
@@ -598,7 +598,7 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // Disable solium check because of
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||

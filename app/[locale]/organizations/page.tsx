@@ -165,6 +165,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <PageJsonLD locale={locale} contributors={contributors} />
 
       <HubHero
+        breadcrumbs={{ slug: "organizations" }}
         heroImg={heroImg}
         header={t("page-organizations-hub-hero-title")}
         description={t("page-organizations-hub-hero-description")}

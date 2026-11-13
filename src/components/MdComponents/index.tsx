@@ -26,6 +26,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Grid } from "@/components/ui/grid"
 import HR, { Divider } from "@/components/ui/hr"
 import KBD from "@/components/ui/kbd"
+import { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import { Tag } from "@/components/ui/tag"
@@ -114,6 +115,7 @@ export const reactComponents = {
   Grid,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
+  LinkWithArrow,
   RestakingList,
   Tag,
   TweetEmbed,

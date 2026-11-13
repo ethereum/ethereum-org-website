@@ -1,4 +1,6 @@
 ---
+status: historical
+superseded_by: "the intl-pipeline (src/scripts/intl-pipeline/); the Crowdin scripts and workflow named here no longer exist"
 title: MDX Compilation Error in Hindi Translation - Nested Quotes in JSX Attributes
 date: 2026-02-11
 problem_type: build_error

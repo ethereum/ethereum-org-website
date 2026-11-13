@@ -2,7 +2,8 @@
 
 No `/code-review`. Check the changed lines for:
 
-- Broken or suspicious links.
+- Links: internal pages and `#anchors` exist, and the destination matches what the link text promises — a "Docs" link should not land on a generic support page. CI already fails added external links that are gone.
 - Images referenced from markdown must be co-located and use `./` relative paths; absolute `/images/` paths break the MDX render.
-- Every h1–h4 heading needs a custom `{#lower-kebab-id}` anchor.
-- Factual errors and ambiguous or contradictory sentences. Do not nitpick style.
+- Factual errors, and sentences that are ambiguous or contradict another page on the site that states the same fact.
+
+Report bar: factual errors, broken or misleading links, and broken rendering. Do not nitpick style or wording.

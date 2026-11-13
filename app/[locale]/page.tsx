@@ -1,13 +1,10 @@
 import { pick } from "lodash"
 import type { Metadata } from "next"
-import Image from "next/image"
 import { notFound } from "next/navigation"
 import { getMessages, getTranslations } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
-import DevconDateLocation from "@/components/DevconIndia/date-location"
-import DevconIndiaLargeCallout from "@/components/DevconIndia/large-callout"
 import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
@@ -15,21 +12,13 @@ import LatestUpdates from "@/components/Homepage/LatestUpdates"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import { Alert } from "@/components/ui/alert"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkWithArrow } from "@/components/ui/Link"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getDevconTicketLink } from "@/lib/utils/url"
 
-import {
-  DEFAULT_LOCALE,
-  DEVCON_INDIA_END_DATE,
-  LOCALES_CODES,
-} from "@/lib/constants"
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import {
   KPISection,
@@ -40,10 +29,7 @@ import IndexPageJsonLD from "./page-jsonld"
 
 import { getAccountHolders, getGrowThePieData } from "@/lib/data"
 
-const Page = async (props: {
-  params: Promise<PageParams>
-  searchCtaVariant?: number
-}) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
@@ -69,7 +55,6 @@ const Page = async (props: {
 
   const { direction: dir } = getDirection(locale)
   const t = await getTranslations("page-index")
-  const tDevcon = await getTranslations("component-devcon-banner")
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
   const messages = {
@@ -89,77 +74,12 @@ const Page = async (props: {
 
   const eventCategory = `Homepage - ${locale}`
 
-  // Auto-expires after Devcon's last day (re-evaluated on build/ISR)
-  const devconEndOfDay = new Date(DEVCON_INDIA_END_DATE)
-  devconEndOfDay.setUTCHours(23, 59, 59, 999)
-  const showHomeBanner = new Date() <= devconEndOfDay
-
   return (
     <>
       <IndexPageJsonLD locale={locale} />
       <I18nProvider locale={locale} messages={messages}>
-        {/* Devon VIII India alert banner */}
-        {showHomeBanner && (
-          <LinkBox asChild>
-            <Alert
-              variant="banner"
-              // Devcon colors: keep hex colors
-              className="relative gap-x-4 overflow-hidden bg-linear-to-b from-[#1A0D33] to-[#45326C] py-3 transition-[--tw-gradient-to-position] duration-300 hover:to-80% max-md:px-4! max-sm:px-8 lg:gap-x-8 **:[img]:transition-transform **:[img]:duration-500 hover:**:[img]:scale-105"
-            >
-              <div className="absolute inset-x-0 grid place-items-center">
-                <Image
-                  src="/images/assets/svgs/devcon-india-glyph.svg"
-                  alt=""
-                  width="93"
-                  height="157"
-                  className="pointer-events-none opacity-10"
-                />
-              </div>
-
-              <div className="flex flex-1 shrink-0 items-center justify-start gap-x-8">
-                <Image
-                  src="/images/assets/svgs/devcon-india-logo.svg"
-                  alt={tDevcon("logo-alt")}
-                  width="139"
-                  height="60"
-                  className="h-9.5 w-22 max-w-none shrink-0"
-                />
-                <DevconDateLocation
-                  longMonthBreakpoint="xl"
-                  className="text-sm max-md:hidden"
-                />
-              </div>
-
-              <div className="min-w-0 text-center text-xs font-black sm:text-sm md:text-md lg:text-xl">
-                {tDevcon("discount-headline")}
-              </div>
-
-              <div className="flex flex-1 shrink-0 justify-end">
-                {/* Overlay stretches the CTA's hit area across the whole banner */}
-                <LinkOverlay asChild>
-                  <ButtonLink
-                    href={getDevconTicketLink(locale)}
-                    customEventOptions={{
-                      eventCategory: "devcon",
-                      eventAction: "get_tickets_home_banner",
-                      eventName: "visit",
-                    }}
-                    hideArrow
-                    className="min-h-0 rounded-full py-1 font-bold text-nowrap max-md:text-xs lg:text-lg"
-                  >
-                    {tDevcon("cta-get-tickets")}
-                  </ButtonLink>
-                </LinkOverlay>
-              </div>
-            </Alert>
-          </LinkBox>
-        )}
-
         <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-          <HomeHero
-            eventCategory={eventCategory}
-            searchCtaVariant={props.searchCtaVariant}
-          />
+          <HomeHero eventCategory={eventCategory} />
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
             <KPISection
@@ -202,9 +122,6 @@ const Page = async (props: {
             />
 
             <FeatureCards eventCategory={eventCategory} />
-
-            {/* Devcon VIII India callout banner */}
-            <DevconIndiaLargeCallout sourcePage="home" />
 
             <LatestUpdates eventCategory={eventCategory} />
 
