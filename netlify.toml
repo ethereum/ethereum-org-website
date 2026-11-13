@@ -27,6 +27,10 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Submits changed pages to IndexNow after production deploys (plugins/indexnow)
+[[plugins]]
+  package = "./plugins/indexnow"
+
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
@@ -68,6 +72,7 @@
     "/code-examples/*",
     "/reports/*",
     "/robots.txt",
+    "/fc6bce24ef26bd1222946b181a2d2197.txt",
     "/*.css",
     "/*.js",
     "/*.map",
