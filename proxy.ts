@@ -18,16 +18,13 @@ const handleI18nRouting = createMiddleware(routing)
 export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Case, deprecated-locale, trailing-slash and legacy-source normalization
+  // Case, deprecated-locale, trailing-slash and legacy-source redirects
   const route = resolvePathRoute(pathname)
   if (route) {
-    // Plain URL: a NextURL drops the trailing slash when the request lacked
-    // one. Set pathname rather than resolving it, so `//host` stays a path.
-    const url = new URL(request.url)
-    url.pathname = route.pathname
-    return route.type === "redirect"
-      ? NextResponse.redirect(url, 301)
-      : NextResponse.rewrite(url)
+    // Plain URL: a NextURL drops the trailing slash when the request lacked one
+    const url = new URL(route.destination, request.url)
+    if (!url.search) url.search = request.nextUrl.search
+    return NextResponse.redirect(url, route.permanent ? 301 : 302)
   }
 
   // A/B testing: precompute flag variants and rewrite to the coded route,

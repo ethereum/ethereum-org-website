@@ -203,10 +203,8 @@ module.exports = (phase) => {
         // English / default-locale: no prefix in source or destination
         const defaultRedirect = { source, destination, permanent }
 
-        // On Netlify the i18n proxy runs first and rewrites `/eth/` to
-        // `/en/eth/` before these rules are matched. Send the prefixed form
-        // straight to the unprefixed destination; mapping it to
-        // `/en/<destination>` adds a hop for the proxy to strip `/en/` again.
+        // On Netlify the proxy issues these redirects itself (resolvePathRoute);
+        // these rules cover environments where Next's redirects run first.
         const defaultLocaleRedirect = {
           source: `/${DEFAULT_LOCALE}${source}`,
           destination,

@@ -1,5 +1,6 @@
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import i18nConfig from "../../../i18n.config.json"
 import legacyRedirects from "../../../redirects.config"
 
 import { getFirstSegment } from "./url"
@@ -57,12 +58,12 @@ const DEPRECATED_LOCALES = new Set([
   "yo",
 ])
 
-const LOCALES = new Set<string>(LOCALES_CODES)
+// Full list, not LOCALES_CODES: subset builds must route like production
+const LOCALES = new Set(i18nConfig.map(({ code }) => code))
 
 /**
- * Compiles a redirects.config.js source to a regex. Supports the subset those
- * sources use: literal (possibly percent-encoded) segments plus `:name` and a trailing `:name*`. Returns
- * null for anything else; a unit test fails if a source ever needs it.
+ * Compiles a redirects.config.js source to a case-insensitive regex. Supports
+ * literal (possibly percent-encoded) segments, `:name` and a trailing `:name*`.
  */
 export const compileRedirectSource = (source: string): RegExp | null => {
   let pattern = ""
@@ -78,74 +79,70 @@ export const compileRedirectSource = (source: string): RegExp | null => {
       return null
     }
   }
-  return new RegExp(`^${pattern}/?$`)
+  return new RegExp(`^${pattern}/?$`, "i")
 }
 
-const LEGACY_SOURCE_PATTERNS = legacyRedirects
-  .map(([source]) => compileRedirectSource(source))
-  .filter((pattern): pattern is RegExp => pattern !== null)
+type LegacyRedirect = { destination: string; permanent: boolean }
 
-/** Whether a locale-less, lowercase pathname is a redirects.config.js source */
-export const isLegacyRedirectSource = (pathname: string): boolean =>
-  LEGACY_SOURCE_PATTERNS.some((pattern) => pattern.test(pathname))
+const LEGACY_LITERALS = new Map<string, LegacyRedirect>()
+const LEGACY_PATTERNS: [RegExp, LegacyRedirect][] = []
+for (const [source, destination, permanent = true] of legacyRedirects) {
+  const redirect = { destination, permanent }
+  if (!source.includes(":")) {
+    LEGACY_LITERALS.set(source.toLowerCase(), redirect)
+    continue
+  }
+  const pattern = compileRedirectSource(source)
+  if (pattern) LEGACY_PATTERNS.push([pattern, redirect])
+}
+
+/** The redirects.config.js entry for a locale-less, lowercase pathname */
+export const findLegacyRedirect = (
+  pathname: string
+): LegacyRedirect | undefined =>
+  LEGACY_LITERALS.get(
+    pathname.length > 1 ? pathname.replace(/\/$/, "") : pathname
+  ) ?? LEGACY_PATTERNS.find(([pattern]) => pattern.test(pathname))?.[1]
 
 const withTrailingSlash = (pathname: string) =>
   pathname.endsWith("/") ? pathname : `${pathname}/`
 
-export type PathRoute = { type: "redirect" | "rewrite"; pathname: string }
+/** `destination` is a path (may carry `?`/`#`) or an absolute URL */
+export type PathRoute = { destination: string; permanent: boolean }
 
 /**
- * URL normalization the proxy applies before i18n routing. Redirect targets
- * always carry the trailing slash, so each case resolves in one 301 hop.
- *
- * On Netlify the proxy runs before Next's own trailingSlash redirect and
- * next-intl rewrites `/foo` to `/en/foo/`, so without the slash redirect here
- * a slash-less English URL renders a 200 duplicate. The proxy only sees the
- * slash-less path because next.config sets `skipProxyUrlNormalize`. Locally
- * Next redirects first and the proxy never sees slash-less paths.
+ * Redirect the proxy issues before i18n routing, resolved in one hop. On
+ * Netlify it runs before Next's own redirects (see next.config.js).
  */
 export const resolvePathRoute = (pathname: string): PathRoute | null => {
   // Collapse `//` first: Netlify relativizes same-origin Locations, so a
   // target like `//evil.com/x/` would become an open redirect.
-  const collapsed = pathname.replace(/\/{2,}/g, "/")
-  if (pathname !== collapsed) {
+  let path = pathname.replace(/\/{2,}/g, "/").toLowerCase()
+
+  const deprecated = getFirstSegment(path)
+  if (DEPRECATED_LOCALES.has(deprecated)) {
+    path = path.slice(deprecated.length + 1) || "/"
+  }
+
+  const segment = getFirstSegment(path)
+  const locale = LOCALES.has(segment) ? segment : null
+  const rest = locale ? path.slice(segment.length + 1) || "/" : path
+
+  const legacy = findLegacyRedirect(rest)
+  if (legacy) {
+    const { destination, permanent } = legacy
+    const prefixed =
+      locale && locale !== DEFAULT_LOCALE && destination.startsWith("/")
     return {
-      type: "redirect",
-      pathname: withTrailingSlash(collapsed.toLowerCase()),
+      destination: prefixed ? `/${locale}${destination}` : destination,
+      permanent,
     }
   }
 
-  const lowerPath = pathname.toLowerCase()
-  if (pathname !== lowerPath) {
-    return { type: "redirect", pathname: withTrailingSlash(lowerPath) }
-  }
+  // Otherwise-canonical default-locale paths are left to next-intl, whose
+  // prefix strip already lands on the slashed URL in one hop.
+  if (locale === DEFAULT_LOCALE && path === pathname) return null
 
-  const firstSegment = getFirstSegment(pathname)
-
-  if (firstSegment && DEPRECATED_LOCALES.has(firstSegment)) {
-    // Strip deprecated locale and redirect to default locale version
-    const rest = pathname.slice(firstSegment.length + 1) || "/"
-    return { type: "redirect", pathname: withTrailingSlash(rest) }
-  }
-
-  const locale = LOCALES.has(firstSegment) ? firstSegment : null
-  const rest = locale ? pathname.slice(locale.length + 1) || "/" : pathname
-
-  // Rewrite legacy sources to the slashed, locale-prefixed form their
-  // next.config rule matches after the proxy, so they reach the destination
-  // in one hop instead of detouring through a slash or `/en` strip redirect.
-  if (isLegacyRedirectSource(rest)) {
-    return {
-      type: "rewrite",
-      pathname: withTrailingSlash(`/${locale ?? DEFAULT_LOCALE}${rest}`),
-    }
-  }
-
-  // Default-locale paths are left to next-intl, whose prefix strip already
-  // lands on the slashed URL in one hop.
-  if (locale !== DEFAULT_LOCALE && !pathname.endsWith("/")) {
-    return { type: "redirect", pathname: `${pathname}/` }
-  }
-
-  return null
+  const destination = withTrailingSlash(locale === DEFAULT_LOCALE ? rest : path)
+  return destination === pathname ? null : { destination, permanent: true }
 }

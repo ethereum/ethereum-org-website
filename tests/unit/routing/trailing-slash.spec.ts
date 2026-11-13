@@ -1,7 +1,7 @@
-// On Netlify the proxy runs before Next's trailingSlash redirect (locally it
-// runs after), so resolvePathRoute alone decides whether a slash-less URL
-// redirects or renders a 200 duplicate. Every redirect must land on the final
-// slashed URL in one hop; `null` hands the path to next-intl.
+// On Netlify the proxy runs before Next's own redirects (locally it runs
+// after), so resolvePathRoute alone decides whether a slash-less URL redirects
+// or renders a 200 duplicate. Every redirect must land on the final URL in one
+// hop; `null` hands the path to next-intl.
 
 import type { NextConfig } from "next"
 import { PHASE_PRODUCTION_BUILD } from "next/constants"
@@ -10,10 +10,11 @@ import { expect, test } from "@playwright/test"
 
 import {
   compileRedirectSource,
-  isLegacyRedirectSource,
+  findLegacyRedirect,
   resolvePathRoute,
 } from "@/lib/utils/redirects"
 
+import i18nConfig from "../../../i18n.config.json"
 import nextConfig from "../../../next.config.js"
 import legacyRedirects from "../../../redirects.config.js"
 
@@ -30,8 +31,10 @@ test("Netlify hands the proxy the raw, slash-less path", async () => {
   expect(config.trailingSlash).toBe(true)
 })
 
-const redirect = (pathname: string) => ({ type: "redirect", pathname })
-const rewrite = (pathname: string) => ({ type: "rewrite", pathname })
+const redirect = (destination: string, permanent = true) => ({
+  destination,
+  permanent,
+})
 
 test("slash-less URLs 301 to the slashed URL", () => {
   expect(resolvePathRoute("/developers/docs/bridges")).toEqual(
@@ -52,6 +55,13 @@ test("slashed URLs pass through to next-intl", () => {
 test("default-locale paths are left to next-intl's single-hop prefix strip", () => {
   expect(resolvePathRoute("/en")).toBeNull()
   expect(resolvePathRoute("/en/developers/docs/bridges")).toBeNull()
+})
+
+test("non-canonical default-locale paths also drop the prefix in one hop", () => {
+  expect(resolvePathRoute("/EN/Developers")).toEqual(redirect("/developers/"))
+  expect(resolvePathRoute("/nl/en/developers")).toEqual(
+    redirect("/developers/")
+  )
 })
 
 test("mixed case and deprecated locales redirect straight to the slashed URL", () => {
@@ -79,27 +89,51 @@ test("no redirect target is protocol-relative", () => {
   ]) {
     const route = resolvePathRoute(path)
     expect(route, path).not.toBeNull()
-    expect(route!.pathname, path).toMatch(/^\/(?!\/)/)
-    expect(route!.pathname, path).not.toContain("//")
+    expect(route!.destination, path).toMatch(/^\/(?!\/)/)
+    expect(route!.destination, path).not.toContain("//")
   }
   expect(resolvePathRoute("//evil.com/x")).toEqual(redirect("/evil.com/x/"))
 })
 
-test("legacy sources rewrite to the form their next.config redirect matches", () => {
-  // No slash redirect first: the config rule fires on the rewritten path and
-  // sends the request straight to its destination.
-  expect(resolvePathRoute("/eth")).toEqual(rewrite("/en/eth/"))
-  expect(resolvePathRoute("/eth/")).toEqual(rewrite("/en/eth/"))
-  expect(resolvePathRoute("/en/eth")).toEqual(rewrite("/en/eth/"))
-  expect(resolvePathRoute("/de/eth")).toEqual(rewrite("/de/eth/"))
-  expect(resolvePathRoute("/discord")).toEqual(rewrite("/en/discord/"))
-  expect(resolvePathRoute("/pdfs/a/b")).toEqual(rewrite("/en/pdfs/a/b/"))
+test("legacy sources redirect straight to their destination", () => {
+  // Not via the next.config rules, whose order relative to the proxy is
+  // Netlify's choice
+  for (const path of ["/eth", "/eth/", "/ETH", "/en/eth", "/nl/eth"]) {
+    expect(resolvePathRoute(path), path).toEqual(redirect("/what-is-ether/"))
+  }
+  expect(resolvePathRoute("/de/eth")).toEqual(redirect("/de/what-is-ether/"))
+  expect(resolvePathRoute("/fr/eth/supply")).toEqual(
+    redirect("/fr/what-is-ether/supply/")
+  )
+  expect(resolvePathRoute("/de/discord")).toEqual(
+    redirect("https://discord.gg/MWpjbnsfNE")
+  )
+  expect(resolvePathRoute("/pdfs/a/b")).toEqual(redirect("/"))
+  expect(resolvePathRoute("/de/developers/docs/rollups")).toEqual(
+    redirect("/de/developers/docs/scaling/#rollups")
+  )
+  expect(resolvePathRoute("/developers/docs/accounts/abstraction")).toEqual(
+    redirect("/roadmap/account-abstraction/", false)
+  )
+})
+
+test("every locale in i18n.config.json is recognized, whatever the build subset", () => {
+  for (const { code } of i18nConfig) {
+    const expected =
+      code === "en" ? "/what-is-ether/" : `/${code}/what-is-ether/`
+    expect(resolvePathRoute(`/${code}/eth`), code).toEqual(redirect(expected))
+  }
 })
 
 test("near-misses of legacy sources are not treated as legacy", () => {
   expect(resolvePathRoute("/ethx")).toEqual(redirect("/ethx/"))
+  expect(resolvePathRoute("/ethx/")).toBeNull()
   expect(resolvePathRoute("/eth/x")).toEqual(redirect("/eth/x/"))
   expect(resolvePathRoute("/x/eth")).toEqual(redirect("/x/eth/"))
+})
+
+test("source matching is case-insensitive", () => {
+  expect(compileRedirectSource("/a%E2%80%99s")!.test("/a%e2%80%99s")).toBe(true)
 })
 
 test("every redirects.config.js source compiles", () => {
@@ -127,7 +161,7 @@ test("the source matcher agrees with path-to-regexp", () => {
       `/de${base}`,
     ]
     for (const path of samples) {
-      expect(isLegacyRedirectSource(path), path).toBe(reference(path))
+      expect(Boolean(findLegacyRedirect(path)), path).toBe(reference(path))
     }
   }
 })
