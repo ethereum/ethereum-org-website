@@ -8,6 +8,16 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  CalloutBanner,
+  CalloutButtons,
+  CalloutContent,
+  CalloutDescription,
+  CalloutMain,
+  CalloutRoot,
+  CalloutTitle,
+} from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
@@ -31,11 +41,15 @@ import SectionIntro from "../_components/section-intro"
 
 import PageJsonLD from "./page-jsonld"
 
+import efLogoDark from "@/public/images/ef-logo.png"
+import efLogoLight from "@/public/images/ef-logo-white.png"
 import fundingImg from "@/public/images/organizations/aid-delivery-transparent-funds.png"
 import financeImg from "@/public/images/organizations/municipal-bond-digital-settlement.png"
 import recordsImg from "@/public/images/organizations/property-deed-registry-with-seal.png"
 import identityImg from "@/public/images/organizations/resident-sharing-digital-credential.png"
 import heroImg from "@/public/images/organizations/town-hall-plaza-public-services.png"
+
+const EF_PUBLIC_SECTOR_URL = "https://publicsector.ethereum.foundation/"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -198,6 +212,48 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </Card>
               ))}
             </Grid>
+          </Section>
+
+          <Section id="ethereum-foundation">
+            <CalloutRoot className="mx-auto max-w-5xl">
+              <CalloutBanner>
+                {/* Decorative: the title names the Ethereum Foundation */}
+                <Image
+                  src={efLogoDark}
+                  alt=""
+                  sizes="256px"
+                  className="w-64 dark:hidden"
+                />
+                <Image
+                  src={efLogoLight}
+                  alt=""
+                  sizes="256px"
+                  className="hidden w-64 dark:block"
+                />
+              </CalloutBanner>
+              <CalloutMain>
+                <CalloutContent>
+                  <CalloutTitle>
+                    {t("page-organizations-public-sector-ef-title")}
+                  </CalloutTitle>
+                  <CalloutDescription>
+                    {t("page-organizations-public-sector-ef-description")}
+                  </CalloutDescription>
+                </CalloutContent>
+                <CalloutButtons>
+                  <ButtonLink href={EF_PUBLIC_SECTOR_URL}>
+                    {t("page-organizations-public-sector-ef-cta")}
+                  </ButtonLink>
+                  <ButtonLink
+                    href={`${EF_PUBLIC_SECTOR_URL}contact/`}
+                    variant="outline"
+                    isSecondary
+                  >
+                    {t("page-organizations-public-sector-ef-contact")}
+                  </ButtonLink>
+                </CalloutButtons>
+              </CalloutMain>
+            </CalloutRoot>
           </Section>
 
           <OrganizationPathways pathways={["enterprise", "small-business"]} />
