@@ -54,6 +54,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { buildStablecoinRows } from "@/lib/utils/stablecoins"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -499,7 +500,10 @@ async function Page(props: { params: Promise<PageParams> }) {
                       className="gap-8 rounded-base bg-background-highlight p-6 text-start md:p-10"
                     >
                       <div>
-                        <h3 className="mb-4 text-2xl font-black">
+                        <h3
+                          id={slugify(type.title, { unicode: true })}
+                          className="mb-4 text-2xl font-black"
+                        >
                           {type.title}
                         </h3>
                         <div className="mb-6 text-body-medium">
