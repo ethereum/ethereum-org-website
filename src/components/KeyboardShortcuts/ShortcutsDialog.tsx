@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils/cn"
 
 import ShortcutKeys from "./ShortcutKeys"
 
+import { usePathname } from "@/i18n/navigation"
 import { getShortcutsByGroup, SHORTCUT_GROUPS } from "@/lib/keyboard-shortcuts"
 
 type ShortcutsDialogProps = {
@@ -15,6 +16,7 @@ type ShortcutsDialogProps = {
 
 const ShortcutsDialog = ({ open, onOpenChange }: ShortcutsDialogProps) => {
   const t = useTranslations("common")
+  const pathname = usePathname()
 
   return (
     <Modal
@@ -25,7 +27,7 @@ const ShortcutsDialog = ({ open, onOpenChange }: ShortcutsDialogProps) => {
     >
       <div className="flex flex-col gap-6">
         {SHORTCUT_GROUPS.map((group) => {
-          const shortcuts = getShortcutsByGroup(group.id)
+          const shortcuts = getShortcutsByGroup(group.id, pathname)
           if (!shortcuts.length) return null
 
           return (

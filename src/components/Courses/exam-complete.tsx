@@ -25,6 +25,7 @@ import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
 import type { ExamReward } from "./useCourseProgress"
 
+/** One question to review: only after a pass, with the right options */
 export interface ExamResult {
   step: ChoiceStep
   picked: string[]
@@ -36,11 +37,14 @@ interface ExamCompleteProps {
   /** Share answered right, 0-1 */
   score: number
   passMark: number
+  /** Empty after a fail: a fail reports the score only */
   results: ExamResult[]
   keyFor: (stepId: string, suffix: string) => string
   courseHref: string
   nextCourseId?: string
   onRetake: () => void
+  /** Why there's no retake right now (today's attempts are used up) */
+  retakeBlocked?: string
   /** Page backing each question, by question id */
   sources?: Record<string, PageLink>
 }
@@ -57,6 +61,7 @@ const ExamComplete = ({
   courseHref,
   nextCourseId,
   onRetake,
+  retakeBlocked,
   sources,
 }: ExamCompleteProps) => {
   const t = useTranslations("page-courses")
@@ -81,8 +86,8 @@ const ExamComplete = ({
         }
       : {}
 
-  const slide = (key: Stage) => ({
-    key,
+  // React wants `key` passed directly, not spread, so callers add it
+  const slide = () => ({
     initial: animate ? { opacity: 0, x: 40 } : false,
     animate: { opacity: 1, x: 0 },
     exit: animate ? { opacity: 0, x: -40 } : undefined,
@@ -112,9 +117,13 @@ const ExamComplete = ({
     </>
   ) : (
     <>
-      <Button variant="ghost" onClick={onRetake} className={chunkyButton}>
-        {t("page-courses-try-again")}
-      </Button>
+      {retakeBlocked ? (
+        <p className="m-0 text-body-medium">{retakeBlocked}</p>
+      ) : (
+        <Button variant="ghost" onClick={onRetake} className={chunkyButton}>
+          {t("page-courses-try-again")}
+        </Button>
+      )}
       <ButtonLink
         href={courseHref}
         variant="ghost"
@@ -131,7 +140,8 @@ const ExamComplete = ({
       <AnimatePresence mode="wait" initial={false}>
         {stage === "summary" && (
           <motion.div
-            {...slide("summary")}
+            key="summary"
+            {...slide()}
             className="flex w-full flex-col items-center gap-6"
           >
             <div className="relative grid size-40 place-items-center">
@@ -213,7 +223,7 @@ const ExamComplete = ({
         )}
 
         {stage === "review" && (
-          <motion.div {...slide("review")} className="w-full text-start">
+          <motion.div key="review" {...slide()} className="w-full text-start">
             <h2 className="m-0 mb-4 text-h3 font-black">
               {t("page-courses-exam-review-title")}
             </h2>
@@ -232,7 +242,7 @@ const ExamComplete = ({
         )}
 
         {stage === "streak" && (
-          <motion.div {...slide("streak")} className="w-full">
+          <motion.div key="streak" {...slide()} className="w-full">
             <StreakCelebration streak={reward.streak} />
           </motion.div>
         )}
@@ -253,13 +263,15 @@ const ExamComplete = ({
           </Button>
         ) : stage === "summary" ? (
           <>
-            <Button
-              variant="ghost"
-              onClick={() => setStage("review")}
-              className={chunkyButtonSecondary}
-            >
-              {t("page-courses-exam-review")}
-            </Button>
+            {results.length > 0 && (
+              <Button
+                variant="ghost"
+                onClick={() => setStage("review")}
+                className={chunkyButtonSecondary}
+              >
+                {t("page-courses-exam-review")}
+              </Button>
+            )}
             {streakSeen ? (
               nav
             ) : (

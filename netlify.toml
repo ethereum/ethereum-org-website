@@ -12,7 +12,9 @@
   # larger than Next.js 14 (.segments trees, RSC payloads), leaving little
   # headroom on the build VM. The cache is only useful for incremental builds
   # which don't apply on Netlify (each build starts fresh).
-  command = "pnpm build && rm -rf .next/cache"
+  # `learner-db:prepare` first: which deploys get the courses database, plus
+  # preview databases and migrations (src/scripts/learner-db/prepare.ts).
+  command = "pnpm learner-db:prepare && pnpm build && rm -rf .next/cache"
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"

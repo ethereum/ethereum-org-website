@@ -1,0 +1,49 @@
+# Drops PR preview databases for the courses accounts (created at build time by
+# src/scripts/learner-db/prepare.ts): the closed PR's at once, plus a daily
+# sweep for any a missed event left behind. Never checks out PR code, so
+# pull_request_target's access to secrets stays safe for fork PRs.
+name: Drop preview learner databases
+
+on:
+  pull_request_target:
+    types: [closed]
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency: learner-db-previews
+
+jobs:
+  drop:
+    runs-on: ubuntu-latest
+    env:
+      DB_URL: ${{ secrets.LEARNER_DB_PROVISIONER_URL }}
+    steps:
+      - name: Drop the closed PR's database
+        if: github.event_name == 'pull_request_target'
+        env:
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          [ -n "$DB_URL" ] || { echo "No LEARNER_DB_PROVISIONER_URL secret"; exit 0; }
+          psql "$DB_URL" -v ON_ERROR_STOP=1 -c "DROP DATABASE IF EXISTS \"preview_${PR}\" WITH (FORCE)"
+
+      - name: Sweep databases of closed PRs
+        if: github.event_name != 'pull_request_target'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          [ -n "$DB_URL" ] || { echo "No LEARNER_DB_PROVISIONER_URL secret"; exit 0; }
+          for db in $(psql "$DB_URL" -tAc "SELECT datname FROM pg_database WHERE datname ~ '^preview_[0-9]+$'"); do
+            pr="${db#preview_}"
+            state=$(gh pr view "$pr" --repo "$GITHUB_REPOSITORY" --json state -q .state 2>/dev/null || echo UNKNOWN)
+            if [ "$state" = "CLOSED" ] || [ "$state" = "MERGED" ]; then
+              echo "Dropping $db (PR $state)"
+              psql "$DB_URL" -v ON_ERROR_STOP=1 -c "DROP DATABASE IF EXISTS \"$db\" WITH (FORCE)"
+            fi
+          done

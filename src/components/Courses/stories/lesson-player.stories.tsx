@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { EXAM_ID, getCourse, getLesson } from "@/data/courses"
 
+import type { ExamSession } from "../exam-session"
 import LessonPlayer from "../lesson-player"
 
 const meta = {
@@ -408,12 +409,26 @@ export const ScamsBait: Story = {
 
 const wallets = getCourse("wallets")!
 
-/** Course check (`exam`): one attempt per question, answer revealed, results and review at the end */
+// The real key is private, so grading is mocked: a fail, which reports the
+// score only
+const mockExamSession: ExamSession = {
+  attemptsLeft: 1,
+  answered: {},
+  submit: async () => true,
+  finish: async () => ({ score: 0.5, passed: false, attemptsLeft: 1 }),
+  restart: () => {},
+}
+
+/** Course check (`exam`): answers saved without a verdict, graded at the end by the server; mocked here */
 export const CourseCheck: Story = {
   args: {
     courseId: "wallets",
-    lesson: { id: EXAM_ID, steps: wallets.exam },
+    lesson: {
+      id: EXAM_ID,
+      steps: wallets.exam.map((q) => ({ ...q, correct: [] })),
+    },
     exam: true,
+    examSession: mockExamSession,
     nextCourseId: "blockchains",
   },
 }

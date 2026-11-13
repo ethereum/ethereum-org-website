@@ -9,11 +9,14 @@ import { mergeStepResults, type StepRecord } from "./step-history"
 import { extendStreak, type Streak } from "./streak"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
+import {
+  XP_EXAM_PASS,
+  XP_LESSON,
+  XP_PERFECT_BONUS,
+  XP_REPLAY,
+} from "@/lib/courses/rules"
 
-export const XP_LESSON = 10
-export const XP_PERFECT_BONUS = 5
-export const XP_REPLAY = 5
-export const XP_EXAM_PASS = 30
+export { XP_EXAM_PASS, XP_LESSON, XP_PERFECT_BONUS, XP_REPLAY }
 
 export interface LessonRecord {
   completedAt: string

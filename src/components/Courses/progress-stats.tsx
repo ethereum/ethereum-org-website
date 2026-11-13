@@ -19,6 +19,8 @@ import {
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
+import { useAccount } from "../Account/use-account"
+
 import { getActiveStreak, isStreakExtendedToday } from "./streak"
 import { statChip as chip } from "./theme"
 import { useCourseProgress } from "./useCourseProgress"
@@ -53,7 +55,7 @@ export const ProgressChips = ({ className }: { className?: string }) => {
         <Flame
           aria-hidden
           className={cn(
-            "size-5",
+            "size-6",
             safe
               ? "fill-orange-500 text-orange-700 dark:text-orange-400"
               : "text-disabled"
@@ -74,7 +76,7 @@ export const ProgressChips = ({ className }: { className?: string }) => {
       <li className={chip}>
         <Zap
           aria-hidden
-          className="size-5 fill-yellow-400 text-yellow-700 dark:text-yellow-400"
+          className="size-6 fill-yellow-400 text-yellow-700 dark:text-yellow-400"
         />
         <span>{format(progress.xp)}</span>
         <span className="sr-only">{t("page-courses-stats-xp")}</span>
@@ -122,6 +124,7 @@ const ResetProgressButton = () => {
 export const ProgressNote = ({ privacy = true }: { privacy?: boolean }) => {
   const t = useTranslations("page-courses")
   const { progress } = useCourseProgress()
+  const { status: account } = useAccount()
 
   return (
     <div
@@ -132,10 +135,16 @@ export const ProgressNote = ({ privacy = true }: { privacy?: boolean }) => {
     >
       {privacy && (
         <p className="m-0 text-sm text-body-medium">
-          {t("page-courses-stats-privacy")}
+          {t(
+            account === "signed-in"
+              ? "page-courses-stats-privacy-account"
+              : "page-courses-stats-privacy"
+          )}
         </p>
       )}
-      {progress.xp > 0 && <ResetProgressButton />}
+      {/* Signed in, the next sync would refill it; deleting the account
+          is the reset there */}
+      {progress.xp > 0 && account !== "signed-in" && <ResetProgressButton />}
     </div>
   )
 }

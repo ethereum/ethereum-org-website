@@ -99,6 +99,7 @@ const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
 }
 
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
+  ["/courses/", ["component-account"]],
   ["/developers/docs/scaling/", ["page-layer-2"]],
   ["/developers/tools/", ["page-developers-tools-descriptions"]],
   ["/gas/", ["page-gas", "page-community"]],

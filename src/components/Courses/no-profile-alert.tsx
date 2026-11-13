@@ -13,8 +13,17 @@ import {
   AlertIcon,
   AlertTitle,
 } from "@/components/ui/alert"
+import { Button } from "@/components/ui/buttons/Button"
 
-import { NO_PROFILE_PARAM } from "@/data/courses"
+import { NO_PROFILE_PARAM, profileHref } from "@/data/courses"
+
+import SignInDialog from "../Account/sign-in-dialog"
+import { useAccount } from "../Account/use-account"
+
+import { syncProgress } from "./account-sync"
+import { readStoredProgress } from "./useCourseProgress"
+
+import { useRouter } from "@/i18n/navigation"
 
 /**
  * On the hub after the profile page sent back someone with no progress yet.
@@ -25,6 +34,14 @@ const NoProfileAlert = () => {
   const params = useSearchParams()
   const flagged = params.has(NO_PROFILE_PARAM)
   const [shown, setShown] = useState(false)
+  const { status } = useAccount()
+  const router = useRouter()
+
+  // Progress kept in an account: bring it here, then show the profile
+  const onSignedIn = async () => {
+    await syncProgress(true)
+    if (readStoredProgress()) router.push(profileHref)
+  }
 
   useEffect(() => {
     if (!flagged) return
@@ -47,6 +64,16 @@ const NoProfileAlert = () => {
         <AlertDescription>
           {t("page-courses-no-profile-description")}
         </AlertDescription>
+        {status === "signed-out" && (
+          <SignInDialog
+            onSignedIn={onSignedIn}
+            trigger={
+              <Button variant="link" className="self-start px-0">
+                {t("page-courses-no-profile-sign-in")}
+              </Button>
+            }
+          />
+        )}
       </AlertContent>
       <AlertCloseButton
         aria-label={t("page-courses-no-profile-dismiss")}

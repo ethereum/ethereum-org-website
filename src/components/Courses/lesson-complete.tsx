@@ -160,8 +160,8 @@ const LessonComplete = ({
                 className={cn(
                   "relative flex items-center gap-2 rounded-full border-b-[6px] px-6 py-3 transition-colors duration-300",
                   bonusIn
-                    ? "border-(--course-strong) bg-(--course) text-white"
-                    : "border-yellow-600 bg-yellow-400 text-yellow-950"
+                    ? "border-yellow-600 bg-yellow-400 text-yellow-950"
+                    : "border-(--course-strong) bg-(--course) text-white"
                 )}
               >
                 <Zap className="size-7 fill-current" aria-hidden />

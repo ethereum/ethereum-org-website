@@ -128,14 +128,12 @@ export const sendingCourse: Course = {
       source: "/developers/docs/transactions/#transaction-lifecycle",
       type: "choice",
       options: ["block", "key", "sign"],
-      correct: ["sign"],
     },
     {
       id: "sent",
       source: "/developers/docs/transactions/#transaction-lifecycle",
       type: "choice",
       options: ["arrived", "waiting", "cancelled"],
-      correct: ["waiting"],
     },
     // fees
     {
@@ -143,14 +141,12 @@ export const sendingCourse: Course = {
       source: "/developers/docs/gas/#why-can-gas-fees-get-so-high",
       type: "choice",
       options: ["send", "same", "trade"],
-      correct: ["trade"],
     },
     {
       id: "offer",
       source: "/developers/docs/gas/#base-fee",
       type: "choice",
       options: ["less", "waits", "fails"],
-      correct: ["waits"],
     },
     // line
     {
@@ -158,14 +154,12 @@ export const sendingCourse: Course = {
       source: "/developers/docs/blocks/#block-size",
       type: "choice",
       options: ["bank", "space", "small"],
-      correct: ["space"],
     },
     {
       id: "tip",
       source: "/developers/docs/gas/#priority-fee",
       type: "choice",
       options: ["first", "amount", "tip"],
-      correct: ["tip"],
     },
     // failed
     {
@@ -173,7 +167,6 @@ export const sendingCourse: Course = {
       source: "/developers/docs/gas/#what-is-gas-limit",
       type: "choice",
       options: ["kept", "item", "fee", "refund"],
-      correct: ["kept", "fee"],
       multi: true,
     },
     {
@@ -181,7 +174,6 @@ export const sendingCourse: Course = {
       source: "/developers/docs/gas/#what-is-gas-limit",
       type: "choice",
       options: ["spam", "nothing", "why"],
-      correct: ["why"],
     },
     // explorer
     {
@@ -190,7 +182,6 @@ export const sendingCourse: Course = {
         "/developers/docs/data-and-analytics/block-explorers/#transactions",
       type: "choice",
       options: ["hash", "screenshot", "key"],
-      correct: ["hash"],
     },
     {
       id: "status",
@@ -198,7 +189,6 @@ export const sendingCourse: Course = {
         "/developers/docs/data-and-analytics/block-explorers/#transactions",
       type: "choice",
       options: ["fee", "value", "status"],
-      correct: ["status"],
     },
   ],
 }

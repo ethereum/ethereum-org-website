@@ -83,3 +83,7 @@ storybook-static-pages
 
 # Claude Code worktrees
 .claude/worktrees/
+
+# Mastery check answer key in plain text: committed only encrypted, see
+# LEARNER_EXAM_KEY_SECRET in .env.example
+.learner-exam-key.json

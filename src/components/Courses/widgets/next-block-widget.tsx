@@ -78,7 +78,7 @@ const NextBlockWidget = ({ onAnswer, locked }: WidgetProps) => {
                   "m-0 flex min-h-12 items-center justify-center rounded-xl px-2 text-center font-bold",
                   id
                     ? "bg-(--course) text-white"
-                    : "border-2 border-dashed border-(--course-soft) text-body-medium"
+                    : "border-2 border-dashed border-border text-body-medium"
                 )}
               >
                 {id ? name(id) : t("page-courses-widget-next-block-empty")}

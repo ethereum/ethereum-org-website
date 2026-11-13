@@ -146,14 +146,20 @@ const OrderStep = ({
 
   const place = (id: string, target: DropTarget) => {
     if (target === null) return
+    const from = slots.indexOf(id)
+    if (from === target) return
     const next = slots.map((s) => (s === id ? "" : s))
     if (target === "pool") return commit(next)
-    // Dropping onto a filled slot swaps when moving between slots, and
-    // bumps the occupant back to the pool when coming from the pool
-    const from = slots.indexOf(id)
-    const occupant = slots[target]
+    if (next[target]) {
+      // Slide the occupants toward the nearest gap to make room: toward the
+      // slot the tile left, or (from the pool) down first, then up
+      const below = next.indexOf("", target)
+      const above = next.lastIndexOf("", target)
+      const gap = from >= 0 ? from : below >= 0 ? below : above
+      if (gap > target) next.copyWithin(target + 1, target, gap)
+      else next.copyWithin(gap, gap + 1, target + 1)
+    }
     next[target] = id
-    if (occupant && occupant !== id && from >= 0) next[from] = occupant
     commit(next)
   }
 
@@ -199,7 +205,10 @@ const OrderStep = ({
           return slotFrame(
             idx,
             id ? (
+              // Keyed so a slot taking a new tile remounts instead of
+              // handing this instance (and its layoutId) to another item
               <Tile
+                key={id}
                 id={id}
                 label={label(id)}
                 disabled={locked}
