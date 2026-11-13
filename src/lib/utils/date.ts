@@ -79,12 +79,15 @@ export const formatDate = (
   if (!isValidDate(date)) {
     return ""
   }
-  return formatDateTime(locale, new Date(date), {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    ...options,
-  })
+  // Intl rejects dateStyle/timeStyle alongside field options like month
+  const styled = options?.dateStyle || options?.timeStyle
+  return formatDateTime(
+    locale,
+    new Date(date),
+    styled
+      ? options
+      : { month: "long", day: "numeric", year: "numeric", ...options }
+  )
 }
 
 /**

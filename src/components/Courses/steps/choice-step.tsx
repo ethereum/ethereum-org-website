@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useRef } from "react"
 import { useTranslations } from "next-intl"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 import * as RadioGroup from "@radix-ui/react-radio-group"
@@ -54,6 +55,19 @@ const optionClasses = cn(
   "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
 )
 
+/**
+ * The option index a key press means: A for the first, as the markers show.
+ * Falls back to the physical key on layouts that don't type Latin letters.
+ */
+const optionIndexFor = (event: KeyboardEvent) => {
+  const letter = /^[a-z]$/i.test(event.key)
+    ? event.key
+    : /^Key[A-Z]$/.test(event.code)
+      ? event.code.slice(3)
+      : null
+  return letter ? letter.toLowerCase().charCodeAt(0) - 97 : -1
+}
+
 const Marker = ({
   index,
   square,
@@ -95,6 +109,39 @@ const ChoiceStep = ({
       return step.correct.includes(id) ? "correct" : "incorrect"
     return reveal && step.correct.includes(id) ? "correct" : undefined
   }
+
+  // A, B, C... pick (or toggle) the matching option from the keyboard
+  const pickRef = useRef<(index: number) => boolean>(() => false)
+  useEffect(() => {
+    pickRef.current = (index) => {
+      const id = step.options[index]
+      if (!id || locked) return false
+      if (!step.multi) {
+        onChange([id])
+        return true
+      }
+      onChange(
+        value.includes(id) ? value.filter((v) => v !== id) : [...value, id]
+      )
+      return true
+    }
+  })
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.repeat || event.isComposing) return
+      if (event.altKey || event.ctrlKey || event.metaKey) return
+      const target = event.target as HTMLElement | null
+      if (
+        target?.closest(
+          "input, textarea, select, [contenteditable], [role=dialog]"
+        )
+      )
+        return
+      if (pickRef.current(optionIndexFor(event))) event.preventDefault()
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [])
 
   const prompt = (
     <legend className="mb-6">
@@ -138,6 +185,9 @@ const ChoiceStep = ({
     <fieldset>
       {prompt}
       <RadioGroup.Root
+        // Up/down move between options; left/right stay free for the
+        // mastery check's question arrows
+        orientation="vertical"
         className="flex flex-col gap-3"
         value={value[0] ?? ""}
         disabled={locked}

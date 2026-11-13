@@ -37,7 +37,7 @@ const ProfileLink = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <UserRound aria-hidden className="size-5" />
+      <UserRound aria-hidden className="size-6" />
     </BaseLink>
   )
 }

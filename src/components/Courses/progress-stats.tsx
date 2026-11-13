@@ -53,7 +53,7 @@ export const ProgressChips = ({ className }: { className?: string }) => {
         <Flame
           aria-hidden
           className={cn(
-            "size-5",
+            "size-6",
             safe
               ? "fill-orange-500 text-orange-700 dark:text-orange-400"
               : "text-disabled"
@@ -74,7 +74,7 @@ export const ProgressChips = ({ className }: { className?: string }) => {
       <li className={chip}>
         <Zap
           aria-hidden
-          className="size-5 fill-yellow-400 text-yellow-700 dark:text-yellow-400"
+          className="size-6 fill-yellow-400 text-yellow-700 dark:text-yellow-400"
         />
         <span>{format(progress.xp)}</span>
         <span className="sr-only">{t("page-courses-stats-xp")}</span>
