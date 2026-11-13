@@ -42,6 +42,19 @@ export const getOgImage = (slug: string[]): string => {
   return result
 }
 
+const MAX_DESCRIPTION_CHARS = 160
+
+export const truncateDescription = (text: string) => {
+  const trimmed = text.trim()
+  if (trimmed.length <= MAX_DESCRIPTION_CHARS) return trimmed
+  const cut = trimmed.slice(0, MAX_DESCRIPTION_CHARS)
+  // Drop a partial last word, unless it's the only one (CJK).
+  const lastSpace = /\s/.test(trimmed[MAX_DESCRIPTION_CHARS])
+    ? -1
+    : cut.lastIndexOf(" ")
+  return `${(lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trimEnd()}...`
+}
+
 export const getMetadata = async ({
   locale,
   slug,

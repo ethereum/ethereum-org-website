@@ -8,7 +8,7 @@ import CatalogItemLayout, {
 } from "@/components/CatalogItem"
 import InlineLink from "@/components/ui/Link"
 
-import { getMetadata } from "@/lib/utils/metadata"
+import { getMetadata, truncateDescription } from "@/lib/utils/metadata"
 import {
   getNetworkHref,
   getNextNetwork,
@@ -242,7 +242,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["layer-2", "networks", slug],
     title: page.network.name,
-    description: page.card.description.slice(0, 160),
+    description: truncateDescription(page.card.description),
     image: "/images/heroes/layer-2-hub-hero.png",
   })
 }
