@@ -1,7 +1,10 @@
 import { getTranslations } from "next-intl/server"
 
+import type { CatalogNetwork, FileContributor } from "@/lib/types"
+
 import PageJsonLD from "@/components/PageJsonLD"
 
+import type { NetworkCardData } from "@/lib/utils/networkData"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
@@ -10,8 +13,15 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function Layer2NetworksPageJsonLD({
   locale,
-  layer2Data,
+  networks,
+  cards,
   contributors,
+}: {
+  locale: string
+  networks: CatalogNetwork[]
+  /** Index-aligned with `networks` */
+  cards: NetworkCardData[]
+  contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-layer-2-networks")
 
@@ -47,16 +57,14 @@ export default async function Layer2NetworksPageJsonLD({
         "@id": `${url}#networks-list`,
         name: t("page-layer-2-networks-meta-title"),
         description: t("page-layer-2-networks-hero-description"),
-        numberOfItems: layer2Data.length,
-        itemListElement: layer2Data.map((network, index) => ({
+        numberOfItems: networks.length,
+        itemListElement: networks.map((network, index) => ({
           "@type": "ListItem",
           position: index + 1,
           item: {
             "@type": "SoftwareApplication",
             name: network.name,
-            description:
-              network.description ||
-              `${network.name} Layer 2 network on Ethereum`,
+            description: cards[index].description,
             url: network.website,
             applicationCategory: "Blockchain Network",
             operatingSystem: "Ethereum",
@@ -69,7 +77,7 @@ export default async function Layer2NetworksPageJsonLD({
               {
                 "@type": "PropertyValue",
                 name: "Network Type",
-                value: network.rollupType || "Layer 2",
+                value: network.networkType,
               },
               {
                 "@type": "PropertyValue",
@@ -91,7 +99,7 @@ export default async function Layer2NetworksPageJsonLD({
               {
                 "@type": "PropertyValue",
                 name: "Supported Wallets",
-                value: network.walletsSupportedCount || "N/A",
+                value: cards[index].walletSupport,
               },
             ],
           },

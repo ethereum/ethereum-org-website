@@ -34,11 +34,12 @@ export type SearchExplorer = {
 } & ({ search: string } | { address: string; tx: string })
 
 export interface Rollup {
+  /** Detail page URL segment; ours, so it never follows an upstream id. */
+  slug: string
   l2beatID: string
   growthepieID: string
   name: string
   chainName: ChainName | NonEVMChainName
-  canExpand?: boolean
   logo: StaticImageData
   networkType: "optimistic" | "zk"
   description: string
@@ -67,12 +68,12 @@ export const ethereumNetworkData = {
   },
   growthepieID: "ethereum",
   logo: EthereumLogo,
-  networkMaturity: "n/a",
-  canExpand: false,
+  feeToken: ["ETH"],
 }
 
 export const layer2Data: Rollups = [
   {
+    slug: "arbitrum",
     l2beatID: "arbitrum",
     growthepieID: "arbitrum",
     name: "Arbitrum One",
@@ -95,6 +96,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    slug: "base",
     l2beatID: "base",
     growthepieID: "base",
     name: "Base",
@@ -117,6 +119,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    slug: "optimism",
     l2beatID: "optimism",
     growthepieID: "optimism",
     name: "Optimism",
@@ -139,6 +142,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    slug: "zksync-era",
     l2beatID: "zksync2",
     growthepieID: "zksync_era",
     name: "ZKSync Era",
@@ -161,6 +165,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    slug: "linea",
     l2beatID: "linea",
     growthepieID: "linea",
     name: "Linea",
@@ -183,6 +188,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    slug: "scroll",
     l2beatID: "scroll",
     growthepieID: "scroll",
     name: "Scroll",
@@ -205,6 +211,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    slug: "starknet",
     l2beatID: "starknet",
     growthepieID: "starknet",
     name: "Starknet",
@@ -229,6 +236,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH", "STRK"],
   },
   {
+    slug: "unichain",
     l2beatID: "unichain",
     growthepieID: "unichain",
     name: "Unichain",
@@ -251,6 +259,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    slug: "ink",
     l2beatID: "ink",
     growthepieID: "ink",
     name: "Ink",
@@ -273,6 +282,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    slug: "zircuit",
     l2beatID: "zircuit",
     growthepieID: "zircuit",
     name: "Zircuit",
