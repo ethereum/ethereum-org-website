@@ -358,7 +358,7 @@ const LessonPlayer = ({
       className={cn(
         "m-0",
         titleVisible
-          ? "text-lg text-(--course-strong) dark:text-(--course-bright)"
+          ? "text-xl text-(--course-strong) dark:text-(--course-bright)"
           : "sr-only"
       )}
     >
