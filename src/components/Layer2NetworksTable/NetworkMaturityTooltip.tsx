@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl"
 
 import { MaturityLevel } from "@/lib/types"
 
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 import { Tag } from "@/components/ui/tag"
 
 const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
@@ -47,7 +47,7 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
   } as const
 
   return (
-    <Tooltip
+    <TrackedTooltip
       content={
         <div className="flex flex-col gap-2">
           <p className="text-lg font-bold">
@@ -63,7 +63,7 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
       <Tag variant="solid" {...maturityDescription[maturity].tag}>
         {t(`page-layer-2-networks-${maturity}-label`).toUpperCase()}
       </Tag>
-    </Tooltip>
+    </TrackedTooltip>
   )
 }
 

@@ -31,7 +31,7 @@ export type TooltipProps = ComponentProps<typeof Popover> & {
   }
 }
 
-const Tooltip = ({
+const TrackedTooltip = ({
   content,
   children,
   onBeforeOpen,
@@ -126,4 +126,4 @@ const Tooltip = ({
   )
 }
 
-export default Tooltip
+export default TrackedTooltip

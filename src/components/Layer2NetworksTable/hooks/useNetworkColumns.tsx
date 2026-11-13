@@ -8,7 +8,7 @@ import { ExtendedRollup, Lang } from "@/lib/types"
 import { TableMeta } from "@/components/DataTable"
 import { Image } from "@/components/Image"
 import NetworkMaturityTooltip from "@/components/Layer2NetworksTable/NetworkMaturityTooltip"
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
@@ -127,7 +127,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
         <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />{" "}
           <span className="whitespace-nowrap">
-            <Tooltip
+            <TrackedTooltip
               content={
                 <div className="flex flex-col gap-2">
                   <p className="text-lg font-bold">
@@ -147,7 +147,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
               }
             >
               <Info className="size-[0.875em] translate-y-0.5" />
-            </Tooltip>
+            </TrackedTooltip>
           </span>
         </p>
       </TableHead>
@@ -184,7 +184,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
         <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />{" "}
           <span className="whitespace-nowrap">
-            <Tooltip
+            <TrackedTooltip
               content={
                 <div className="flex flex-col gap-2">
                   <p className="text-lg font-bold">
@@ -202,7 +202,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
               }
             >
               <Info className="size-[0.875em] translate-y-0.5" />
-            </Tooltip>
+            </TrackedTooltip>
           </span>
         </p>
       </TableHead>
@@ -236,7 +236,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
         <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-network-maturity" />{" "}
           <span className="whitespace-nowrap">
-            <Tooltip
+            <TrackedTooltip
               content={
                 <div className="flex flex-col gap-2">
                   <p className="text-lg font-bold">
@@ -253,7 +253,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
               }
             >
               <Info className="size-[0.875em] translate-y-0.5" />
-            </Tooltip>
+            </TrackedTooltip>
           </span>
         </p>
       </TableHead>

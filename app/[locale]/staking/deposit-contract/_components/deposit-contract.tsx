@@ -10,7 +10,7 @@ import type { TranslationKey } from "@/lib/types"
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import { Image } from "@/components/Image"
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import { CardButtonFake, CardParagraph, CardTitle } from "@/components/ui/card"
@@ -207,11 +207,11 @@ const DepositContract = () => {
           <Emoji text={textToSpeechEmoji} className="text-md" />
         </Flex>
       )}
-      <Tooltip content={t("page-staking-deposit-contract-warning")}>
+      <TrackedTooltip content={t("page-staking-deposit-contract-warning")}>
         <div className="mb-4 font-monospace text-3xl/xs text-balance uppercase">
           {CHUNKED_ADDRESS}
         </div>
-      </Tooltip>
+      </TrackedTooltip>
       <div className="flex flex-col-reverse items-start justify-start gap-4 md:flex-row md:items-center">
         <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
           {(isCopied) => (

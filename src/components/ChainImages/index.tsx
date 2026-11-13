@@ -4,7 +4,7 @@ import { useLocale } from "next-intl"
 import { ChainName } from "@/lib/types"
 
 import { Image } from "@/components/Image"
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 
 import { numberFormat } from "@/lib/utils/numbers"
 
@@ -69,7 +69,7 @@ const ChainImages = ({
               height: `${size}px`,
             }}
           >
-            <Tooltip content={chainData?.name || ""} nested={nested}>
+            <TrackedTooltip content={chainData?.name || ""} nested={nested}>
               {/* Without width/height next/image falls back to the source's
                   intrinsic size and fetches up to w=1920 for these ~24px icons. */}
               <Image
@@ -84,16 +84,16 @@ const ChainImages = ({
                   height: `${size}px`,
                 }}
               />
-            </Tooltip>
+            </TrackedTooltip>
           </div>
         )
       })}
       {hiddenNames.length > 0 && (
-        <Tooltip content={hiddenNames.join(", ")} nested={nested}>
+        <TrackedTooltip content={hiddenNames.join(", ")} nested={nested}>
           <span className="ms-1 text-sm leading-none text-body-medium">
             <bdi>+{numberFormat(locale).format(hiddenNames.length)}</bdi>
           </span>
-        </Tooltip>
+        </TrackedTooltip>
       )}
     </div>
   )

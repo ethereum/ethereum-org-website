@@ -84,23 +84,23 @@ The vanilla shadcn-style primitive. Use only when you need direct Radix Dialog c
 
 `@/components/ui/dialog-modal` also exports named `Dialog`, `DialogContent`, etc. -- but those are the **`tv`-styled** versions, not the same as the ones from `@/components/ui/dialog`. Different file, different styles. **Pick one source and stick with it within a feature.**
 
-## Tooltip
+## TrackedTooltip
 
 Two imports. Almost always the first one is correct.
 
 ### Use `@/components/Tooltip`
 
 ```tsx
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 ```
 
-Mobile-aware (falls back from hover-only Radix Tooltip to click-driven Popover on touch devices), Matomo-tracked, scroll-close behavior. This is the one you want.
+Mobile-aware (falls back from hover-only Radix TrackedTooltip to click-driven Popover on touch devices), Matomo-tracked, scroll-close behavior. This is the one you want.
 
 ### Avoid `@/components/ui/tooltip`
 
 ```tsx
 // Avoid unless you have a specific reason:
-import { Tooltip, TooltipContent } from "@/components/ui/tooltip"
+import { TrackedTooltip, TooltipContent } from "@/components/ui/tooltip"
 ```
 
 The bare Radix primitive. Only used inside `@/components/Tooltip` itself.
@@ -169,11 +169,11 @@ If you use `LinkBox` without `LinkOverlay` somewhere inside, the whole-card-clic
 import { HomeHero, HubHero, PageHero } from "@/components/Hero"
 ```
 
-| Hero | Use case |
-|---|---|
+| Hero       | Use case                                                                                                                                                                                                                                                                                                                                         |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `PageHero` | The workhorse for most internal pages. 2-column with breadcrumbs, an optional `eyebrow`, an aside (`heroImg` **or** `heroComponent`), and up to two buttons -- **or** text-only when you pass neither aside. With `variant="no-divider"` and no aside/`description`, it's the minimal breadcrumb + h1 article hero (the `StaticLayout` default). |
-| `HubHero` | Full-bleed hero image with overlay text card. |
-| `HomeHero` | Homepage only. Async server component. |
+| `HubHero`  | Full-bleed hero image with overlay text card.                                                                                                                                                                                                                                                                                                    |
+| `HomeHero` | Homepage only. Async server component.                                                                                                                                                                                                                                                                                                           |
 
 > The former `MdxHero` (minimal breadcrumb + h1 for long-form articles) was removed. Use `PageHero` text-only with `variant="no-divider"` instead.
 

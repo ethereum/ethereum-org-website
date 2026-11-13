@@ -187,7 +187,7 @@ Chakra leftover, used in 5 places. Don't introduce new uses. Replace with Tailwi
 
 ## Random Footguns
 
-### `Tooltip` has `z-[10000]`
+### `TrackedTooltip` has `z-[10000]`
 
 `@/components/Tooltip` uses `z-[10000]` instead of `z-tooltip` (1800). Should use the named token. Flagged for cleanup; don't replicate.
 
