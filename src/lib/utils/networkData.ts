@@ -26,6 +26,8 @@ export const NETWORK_FILTER_KEYS = [MATURITY_KEY, WALLET_KEY] as const
 /** Card and modal id for Mainnet, which has no slug */
 export const MAINNET_ID = "mainnet"
 
+export const getNetworkHref = (slug: string) => `/layer-2/networks/${slug}/`
+
 /** Display and sort order, most mature first. */
 export const MATURITY_LEVELS = [
   "robust",

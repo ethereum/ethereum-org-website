@@ -5,7 +5,7 @@ import type { ComponentProps } from "react"
 import CatalogDetailModal from "@/components/CatalogDetailModal"
 import DetailRow from "@/components/CatalogDetailModal/DetailRow"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 
 import type { NetworkCardData } from "@/lib/utils/networkData"
 
@@ -27,6 +27,7 @@ export type NetworkModalLabels = {
   txFeeTooltip: string
   bridgeTo: string
   viewApps: string
+  fullDetails: string
 }
 
 const event = (action: string, name: string) => ({
@@ -40,12 +41,15 @@ const NetworkDetailModal = ({
   network,
   maturityLabel,
   labels,
+  fullDetailsHref,
   onClose,
   onCloseAutoFocus,
 }: {
   network: NetworkCardData
   maturityLabel: string
   labels: NetworkModalLabels
+  /** Absent for Mainnet, which has no detail page */
+  fullDetailsHref?: string
   onClose: () => void
   onCloseAutoFocus: ComponentProps<
     typeof CatalogDetailModal
@@ -94,6 +98,14 @@ const NetworkDetailModal = ({
         <DetailRow label={labels.txFee} tooltip={labels.txFeeTooltip}>
           <span className="font-bold text-body">{network.txFee ?? "-"}</span>
         </DetailRow>
+        {fullDetailsHref && (
+          <LinkWithArrow
+            href={fullDetailsHref}
+            className="mt-1 self-end text-sm"
+          >
+            {labels.fullDetails}
+          </LinkWithArrow>
+        )}
       </div>
 
       <div className="flex flex-wrap gap-4">

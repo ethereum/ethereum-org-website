@@ -65,13 +65,17 @@ const CatalogItemLinkButtons = ({
   item,
   labels,
 }: {
-  item: Pick<CatalogItem, "kind" | "name" | "primaryLink" | "socialLinks">
+  item: Pick<
+    CatalogItem,
+    "kind" | "name" | "primaryLink" | "secondaryLinks" | "socialLinks"
+  >
   labels: CatalogItemLinkLabels
 }) => {
   const links = [...item.socialLinks].sort(
     (a, b) => LINK_ORDER.indexOf(a.kind) - LINK_ORDER.indexOf(b.kind)
   )
-  if (!item.primaryLink && links.length === 0) return null
+  const secondaryLinks = item.secondaryLinks ?? []
+  if (!item.primaryLink && !secondaryLinks.length && !links.length) return null
 
   return (
     <div className="flex flex-wrap gap-4">
@@ -85,6 +89,17 @@ const CatalogItemLinkButtons = ({
           {item.primaryLink.label}
         </ButtonLink>
       )}
+      {secondaryLinks.map(({ href, label }) => (
+        <ButtonLink
+          key={href}
+          href={href}
+          variant="outline"
+          className="w-full sm:w-fit"
+          customEventOptions={detailEvent(item, label)}
+        >
+          {label}
+        </ButtonLink>
+      ))}
       {links.map(({ kind, href }) => {
         const { Icon, platform = labels.sourceCode } = LINKS[kind]
         return (
