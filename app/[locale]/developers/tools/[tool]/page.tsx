@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -39,7 +39,6 @@ type ToolPageParams = PageParams & { tool: string }
 
 const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, tool: toolKey } = await props.params
-  setRequestLocale(locale)
 
   const [data, { contributors }, t, tItem, toolDescriptions] =
     await Promise.all([
@@ -155,8 +154,6 @@ export async function generateMetadata(props: {
   params: Promise<ToolPageParams>
 }) {
   const { locale, tool: toolKey } = await props.params
-
-  setRequestLocale(locale)
 
   const [normalized, toolDescriptions] = await Promise.all([
     normalizeDeveloperToolsData(await getDeveloperToolsData()),

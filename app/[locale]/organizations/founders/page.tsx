@@ -1,7 +1,7 @@
 import React from "react"
 import { Banknote, ChartNoAxesCombined, UsersRound, Wrench } from "lucide-react"
 import type { Metadata } from "next"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
@@ -43,8 +43,6 @@ import heroImg from "@/public/images/organizations/startup-warehouse-founders-wo
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-founders")
 
@@ -453,8 +451,6 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-founders")
 

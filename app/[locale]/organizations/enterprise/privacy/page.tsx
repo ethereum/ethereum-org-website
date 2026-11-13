@@ -8,7 +8,7 @@ import {
   ThumbsUp,
 } from "lucide-react"
 import type { Metadata } from "next"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -128,8 +128,6 @@ const VerdictCell = ({
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
   const tOrganizations = await getTranslations("page-organizations")
@@ -473,8 +471,6 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
 

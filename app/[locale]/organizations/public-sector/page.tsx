@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import type { StaticImageData } from "next/image"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -40,8 +40,6 @@ import heroImg from "@/public/images/organizations/town-hall-plaza-public-servic
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-public-sector")
 
@@ -214,8 +212,6 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-public-sector")
 

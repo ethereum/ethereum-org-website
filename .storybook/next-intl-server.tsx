@@ -71,6 +71,3 @@ export async function getNow() {
 export async function getTimeZone() {
   return "UTC"
 }
-
-/** No request scope to set in Storybook -- accepted and ignored. */
-export function setRequestLocale(_locale: string) {}
