@@ -68,7 +68,7 @@ To get started, visit the [documentation](https://docs.mobula.io), explore the [
 
 ## Serialized {#serialized}
 
-[Serialized](https://serialized.xyz/) is a real-time onchain data API built for trading apps, terminals and wallets on Ethereum, Solana and other EVM chains such as Base, BNB Chain, Arbitrum and Avalanche. Developers can access token prices, OHLCV candles, trades, holders, top traders, wallet positions and PnL, and token security signals over REST, or subscribe to live WebSocket streams, without running their own indexing infrastructure. Serialized offers free trial credits, then pay-as-you-go and monthly plans.
+[Serialized](https://serialized.xyz/) is a real-time onchain data API built for trading apps, terminals and wallets on Ethereum, other EVM chains such as Base, BNB Chain, Arbitrum and Avalanche, and Solana. Developers can access token prices, OHLCV candles, trades, holders, top traders, wallet positions and PnL, and token security signals over REST, or subscribe to live WebSocket streams, without running their own indexing infrastructure. Data is computed on Serialized's own indexers, including newly launched tokens and launchpad bonding curves. New accounts get 100,000 free credits once a payment card is added, then pay-as-you-go and monthly plans.
 
 To get started, visit the [documentation](https://docs.serialized.xyz/introduction) or sign up at the [portal](https://serialized.xyz/portal).
 
