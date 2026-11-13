@@ -172,3 +172,31 @@ test("render marks product-only passes as claimed and nice criteria as preferred
   expect(out).toContain("| ☑️ | Widely used |")
   expect(out).toContain("| ✅ | Open source _(preferred)_ |")
 })
+
+test("check keeps copy notes only when they quote the added text", async () => {
+  const note = (text: string) => ({
+    text,
+    issue: "Repeats the existing section",
+    suggestion: "Move it under The Graph",
+    source: "repo",
+    url: "public/content/x.md",
+  })
+  const run = (added: string | null) =>
+    check(
+      {
+        pr: "1",
+        criteria: "[]",
+        copy: JSON.stringify([
+          note("Firehose streams full blocks over gRPC"),
+          note("text that the pull request never added"),
+        ]),
+      },
+      async () => ({ status: 200, url: "", text: "", links: [] }),
+      added
+    )
+  const added = "Firehose streams full blocks over gRPC, including call traces."
+  expect((await run(added)).copy.map((c) => c.text)).toEqual([
+    "Firehose streams full blocks over gRPC",
+  ])
+  expect((await run(null)).copy).toEqual([])
+})

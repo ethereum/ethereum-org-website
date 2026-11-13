@@ -47,6 +47,12 @@ const gh = (path, accept) =>
     { encoding: "utf8", maxBuffer: 1 << 26 }
   )
 const ghJson = (path) => JSON.parse(gh(path))
+const addedLines = (diff) =>
+  diff
+    .split("\n")
+    .filter((l) => l.startsWith("+") && !l.startsWith("+++"))
+    .map((l) => l.slice(1))
+    .join("\n")
 
 // ponytail: hostname check only, no DNS resolution; add resolve-then-check if this ever runs on a runner with an internal network.
 export function publicUrl(u) {
@@ -299,10 +305,7 @@ async function prefetch(pr, dir) {
   mkdirSync(`${dir}/pages`, { recursive: true })
   const p = ghJson(`repos/${REPO}/pulls/${pr}`)
   const diff = gh(`repos/${REPO}/pulls/${pr}`, "application/vnd.github.diff")
-  const added = diff
-    .split("\n")
-    .filter((l) => l.startsWith("+") && !l.startsWith("+++"))
-    .join("\n")
+  const added = addedLines(diff)
   writeFileSync(
     `${dir}/pr.json`,
     JSON.stringify(
@@ -444,7 +447,8 @@ export const esc = (s) =>
     .replace(/:\/\//g, ":\u200b//")
     .replace(/www\./gi, (m) => `${m.slice(0, 3)}\u200b.`)
 
-export async function check(item, fetchPage = fetchText) {
+/** @param {string | null} [added] the text the PR adds; copy notes must quote it and are dropped without it */
+export async function check(item, fetchPage = fetchText, added = null) {
   const cache = new Map()
   let checked = 0
   const page = (u) => {
@@ -510,6 +514,20 @@ export async function check(item, fetchPage = fetchText) {
     else dropped++
   }
 
+  const copy = []
+  for (const c of arr(item.copy, 8)) {
+    const x = {
+      text: str(c.text, 300),
+      issue: str(c.issue, 300),
+      suggestion: str(c.suggestion, 300),
+      ...base(c),
+    }
+    const inDiff = added != null && quoteFound(x.text, toText(added))
+    const evidence = !x.quote || (await verify(x, c)) === "ok"
+    if (copy.length < 4 && x.issue && inDiff && evidence) copy.push(x)
+    else dropped++
+  }
+
   return {
     v: 2,
     pr: Number(String(item.pr).replace(/\D/g, "")),
@@ -526,6 +544,7 @@ export async function check(item, fetchPage = fetchText) {
       text: str(e.text, 200),
     })),
     askAuthor: arr(item.ask_author, 3).map((s) => str(s, 300)),
+    copy,
     injection: str(item.injection, 300),
     verification: { checked, downgraded, dropped },
   }
@@ -569,6 +588,9 @@ export function render(r, run) {
     r.askAuthor.length
       ? `**Questions for the author:**\n${r.askAuthor.map((a) => `- ${esc(a)}`).join("\n")}`
       : "",
+    r.copy?.length
+      ? `**Suggested edits to the added text:**\n${r.copy.map((c) => `- ${quote({ quote: c.text })}: ${esc(c.issue)}${c.suggestion ? ` Suggestion: ${esc(c.suggestion)}` : ""}${c.quote ? ` (${quote(c)}, ${src(c)})` : ""}`).join("\n")}`
+      : "",
     r.existing.length
       ? `**Already on ethereum.org:** ${r.existing.map((e) => esc(e.path)).join(", ")}`
       : "",
@@ -587,7 +609,16 @@ async function main() {
   else if (cmd === "prefetch") await prefetch(args[0], args[1])
   else if (cmd === "submit") {
     const item = JSON.parse(readFileSync(args[0], "utf8"))
-    const r = await check(item)
+    let added = null
+    try {
+      added = addedLines(
+        gh(
+          `repos/${REPO}/pulls/${String(item.pr).replace(/\D/g, "")}`,
+          "application/vnd.github.diff"
+        )
+      )
+    } catch {}
+    const r = await check(item, fetchText, added)
     r.siteAge = await pool(productSites(item), 3, domainAge)
     process.stdout.write(render(r, process.env.RUN_URL || ""))
   } else throw new Error(`unknown command: ${cmd}`)
