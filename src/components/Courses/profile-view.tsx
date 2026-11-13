@@ -20,6 +20,7 @@ import Eyebrow from "@/components/ui/eyebrow"
 import InlineLink from "@/components/ui/Link"
 import { Progress as ProgressBar } from "@/components/ui/progress"
 import { Section } from "@/components/ui/section"
+import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { formatDateTime } from "@/lib/utils/date"
@@ -115,6 +116,63 @@ const Stat = ({
     </CardContent>
   </Card>
 )
+
+/** A stat card's shape, so the grid holds its height while progress loads */
+const StatSkeleton = () => (
+  <Card variant="nested" size="md" border>
+    <CardContent className="flex-row items-center gap-3">
+      <Skeleton className="size-8 shrink-0 rounded-full" />
+      <div className="flex flex-1 flex-col gap-1.5 py-0.5">
+        <Skeleton className="h-4 w-2/3" />
+        <Skeleton className="h-7 w-1/2" />
+      </div>
+    </CardContent>
+  </Card>
+)
+
+/**
+ * Stands in for the profile until saved progress loads after mount, laid out
+ * like it so nothing jumps. Server HTML: hidden by the courses layout's
+ * pre-paint flag when nothing is saved, as the empty notice shows instead.
+ */
+const ProfileSkeleton = () => {
+  const t = useTranslations("page-courses")
+  return (
+    <div
+      role="status"
+      // Literal for Tailwind's scanner; must match HAS_PROGRESS_ATTR
+      className="flow hidden [[data-has-course-progress]_&]:block"
+    >
+      <span className="sr-only">{t("page-courses-profile-loading")}</span>
+      <div
+        aria-hidden
+        className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5"
+      >
+        <Skeleton className="col-span-2 h-44 rounded-2xl md:col-span-4 xl:col-span-1 xl:row-span-2 xl:h-auto" />
+        {Array.from({ length: 8 }, (_, i) => (
+          <StatSkeleton key={i} />
+        ))}
+      </div>
+      <div
+        aria-hidden
+        className="mt-space-3x grid items-start gap-x-12 gap-y-space-3x lg:grid-cols-[2fr_1fr]"
+      >
+        <div className="flex flex-col gap-3">
+          <Skeleton className="mb-3 h-8 w-1/3" />
+          {Array.from({ length: 3 }, (_, i) => (
+            <Skeleton key={i} className="h-28 rounded-2xl" />
+          ))}
+        </div>
+        <div className="flex flex-col gap-3">
+          <Skeleton className="mb-3 h-8 w-1/2" />
+          {Array.from({ length: 4 }, (_, i) => (
+            <Skeleton key={i} className="h-12 rounded-xl" />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 /** Steps missed most often, worst first; only ones still in the catalog */
 const stepsToReview = (progress: Progress) =>
@@ -236,10 +294,10 @@ const ProfileView = () => {
   const recent = recentLessons(progress)
   const started = hasAnyProgress(progress)
 
-  if (!started) return null
+  if (!started || !ready) return <ProfileSkeleton />
 
   return (
-    <div className={cn("flow transition-opacity", !ready && "opacity-0")}>
+    <div className="flow">
       <Section id="stats" aria-labelledby="profile-stats-heading">
         <h2 id="profile-stats-heading" className="sr-only">
           {t("page-courses-profile-stats-title")}
