@@ -2246,6 +2246,7 @@
   "page-courses-widget-fee-meter-offer-very-high": "Very high",
   "page-courses-widget-fee-meter-legend-offer": "Your offer",
   "page-courses-widget-fee-meter-legend-price": "Price right now",
+  "page-courses-widget-fee-meter-legend-quiet": "Price when it's quiet",
   "page-courses-widget-fee-meter-now": "Goes in now",
   "page-courses-widget-fee-meter-now-note": "Your fee reaches the price right now, so a validator can add your payment to the next block.",
   "page-courses-widget-fee-meter-waits": "Waits",

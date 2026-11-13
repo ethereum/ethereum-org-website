@@ -9,6 +9,7 @@ import {
   Hourglass,
   type LucideIcon,
   Send,
+  Triangle,
   User,
   Users,
 } from "lucide-react"
@@ -116,6 +117,8 @@ const FeeMeterWidget = ({ onComplete }: WidgetProps) => {
 
   const outcome = outcomeFor(job, network, offer)
   const need = NEED[job][network]
+  // Below this it's "too low"; same stop as the price when it's quiet
+  const floor = NEED[job].quiet
   const offerLabel = (idx: number) =>
     t(`page-courses-widget-fee-meter-offer-${OFFERS[idx]}`)
 
@@ -174,18 +177,21 @@ const FeeMeterWidget = ({ onComplete }: WidgetProps) => {
         />
       </div>
 
-      {/* Meter: your offer fills the bar; the flag marks today's price */}
+      {/* Meter: your offer fills the bar; markers show today's and the quiet price */}
       <div className="flex flex-col gap-2" aria-hidden>
         <div className="grid grid-cols-5 gap-1">
           {OFFERS.map((id, idx) => (
             <span
               key={id}
-              className={cn(
-                "flex h-6 items-end justify-center",
-                idx === need ? "text-body" : "invisible"
-              )}
+              className="flex h-6 items-end justify-center text-body"
             >
-              <span className="h-0 w-0 border-x-8 border-t-[10px] border-x-transparent border-t-current" />
+              {idx === need ? (
+                <span className="h-0 w-0 border-x-8 border-t-[10px] border-x-transparent border-t-current" />
+              ) : (
+                idx === floor && (
+                  <Triangle className="size-4 rotate-180 stroke-[2.5]" />
+                )
+              )}
             </span>
           ))}
         </div>
@@ -212,6 +218,12 @@ const FeeMeterWidget = ({ onComplete }: WidgetProps) => {
             <span className="h-0 w-0 border-x-[6px] border-t-8 border-x-transparent border-t-body" />
             {t("page-courses-widget-fee-meter-legend-price")}
           </span>
+          {floor !== need && (
+            <span className="flex items-center gap-2">
+              <Triangle className="size-3 rotate-180 stroke-[2.5]" />
+              {t("page-courses-widget-fee-meter-legend-quiet")}
+            </span>
+          )}
         </div>
       </div>
 
@@ -238,8 +250,16 @@ const FeeMeterWidget = ({ onComplete }: WidgetProps) => {
         <ul className="m-0 flex list-none flex-col gap-1">
           {OUTCOMES.map((id) => {
             const found = seen.includes(id)
+            const current = id === outcome
             return (
-              <li key={id} className="m-0 flex items-center gap-2">
+              <li
+                key={id}
+                aria-current={current || undefined}
+                className={cn(
+                  "m-0 -mx-2 flex items-center gap-2 rounded-lg px-2 py-1 transition-colors",
+                  current && "bg-(--course-soft) font-bold"
+                )}
+              >
                 {found ? (
                   <Check
                     className="size-5 shrink-0 text-green-700 dark:text-green-400"
