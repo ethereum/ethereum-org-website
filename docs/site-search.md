@@ -24,7 +24,7 @@ Pinned results live in `typesense/curation.json` as query-to-URL mappings, in th
 
 ## What the modal shows beyond page results
 
-Three behaviors live in the app rather than the index, in `src/components/Search/SearchModal.tsx`.
+Three behaviors live in the app rather than the index, in `src/components/Nav/Search/SearchModal.tsx`.
 
 **A page leads its own sections.** Results are grouped by page, and where the index returns only sections of one, a row for the page itself is synthesized from the heading every record carries. Without it a search can offer three anchors into a page it never offered on its own.
 
