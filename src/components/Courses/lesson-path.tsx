@@ -438,7 +438,7 @@ const PopoverAction = ({
     variant="ghost"
     hideArrow
     className={cn(
-      "min-h-12 w-full rounded-2xl font-bold tracking-wide uppercase active:translate-y-0.5",
+      "min-h-12 w-full justify-center rounded-2xl text-center font-bold tracking-wide uppercase active:translate-y-0.5",
       secondary
         ? "mt-2 border-2 border-white/50 bg-transparent text-white hover-link:bg-white/10 hover-link:!text-white"
         : "mt-4 border-0 border-b-4 border-black/20 bg-white text-(--course-strong) active:border-b-2 hover-link:!text-(--course-strong)"

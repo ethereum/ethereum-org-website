@@ -15,6 +15,8 @@ import {
 } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
+import { ArrowNext } from "@/components/ui/arrow"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import Eyebrow from "@/components/ui/eyebrow"
 import { Progress as ProgressBar } from "@/components/ui/progress"
@@ -439,13 +441,13 @@ const ProfileView = () => {
           />
           <Stat
             icon={Sparkles}
-            iconClassName="text-primary"
+            iconClassName="text-yellow-700 dark:text-yellow-400"
             label={t("page-courses-profile-perfect")}
             value={count(perfect)}
           />
           <Stat
             icon={CalendarDays}
-            iconClassName="text-body-medium"
+            iconClassName="text-blue-600 dark:text-blue-400"
             label={t("page-courses-profile-since")}
             value={firstDone ? date(firstDone) : count(0)}
           />
@@ -478,6 +480,12 @@ const ProfileView = () => {
                 </ul>
               </div>
             ))}
+          <div data-flow="cta">
+            <ButtonLink href={COURSES_HUB} size="lg">
+              {t("page-courses-profile-keep-learning")}
+              <ArrowNext aria-hidden />
+            </ButtonLink>
+          </div>
         </Section>
       )}
 

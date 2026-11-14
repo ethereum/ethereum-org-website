@@ -66,6 +66,10 @@ const LessonComplete = ({
   const animate = !reduceMotion
   // The streak gets its own moment, once a day, after the lesson summary
   const [stage, setStage] = useState<"summary" | "streak">("summary")
+  // Each screen replaces one that may have been scrolled down
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [stage])
 
   // The lesson's XP lands first, then a perfect run's bonus tops it up
   const baseXp = useCountUp(0, reward.xp - reward.bonus, {

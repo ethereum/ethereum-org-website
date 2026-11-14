@@ -58,15 +58,19 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
     <I18nProvider locale={locale} messages={messages}>
       <CoursePageJsonLD locale={locale} course={course} />
       <MainArticle style={courseThemeStyle(course.theme)}>
-        <div className="flex flex-wrap items-center justify-between gap-4 px-page pt-6">
+        {/* Sticks 16px below the site nav (h-19) all the way down, like the
+            hub's; from lg, zero height so it shares the breadcrumbs' row */}
+        <div className="pointer-events-none sticky top-23 z-docked mt-6 flex justify-end px-page lg:h-0">
+          <div className="pointer-events-auto flex h-fit items-center gap-2">
+            <ProgressChips />
+            <ProfileLink />
+          </div>
+        </div>
+        <div className="flex items-center px-page pt-4 lg:min-h-10 lg:pt-0">
           <Breadcrumbs
             slug={`/courses/${courseId}`}
             label={t(`${courseId}-title`)}
           />
-          <div className="flex items-center gap-2">
-            <ProgressChips />
-            <ProfileLink />
-          </div>
         </div>
 
         <section className="px-page pt-6">

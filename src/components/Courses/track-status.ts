@@ -32,7 +32,7 @@ export const useTrackStatus = (courses: TrackCourse[]) => {
   const nextId = isClient
     ? courses.find(({ id }) => !mastered.has(id))?.id
     : undefined
-  // Any lesson finished or mastery check tried anywhere in the track
+  // Any lesson finished or Course Mastery tried anywhere in the track
   const started = courses.some(
     ({ id, lessonIds }) =>
       !!progress.exams?.[id] ||
