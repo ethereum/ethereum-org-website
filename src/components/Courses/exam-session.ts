@@ -1,4 +1,4 @@
-/** Result of a server-graded mastery check attempt */
+/** Result of a server-graded Course Mastery attempt */
 export interface ExamFinish {
   score: number
   passed: boolean
@@ -12,7 +12,7 @@ export interface ExamFinish {
 }
 
 /**
- * A mastery check attempt held by the server, as the lesson player sees it.
+ * A Course Mastery attempt held by the server, as the lesson player sees it.
  * Answers are saved without a verdict; `finish` grades them all at once.
  */
 export interface ExamSession {

@@ -8,6 +8,9 @@ import { withTrailingSlash } from "@/lib/utils/api-path"
 /** Must match `CHALLENGE_HEADER` in `src/lib/auth/challenge.ts` */
 export const CHALLENGE_HEADER = "x-altcha"
 
+/** Must match `TIME_ZONE_HEADER` in `src/lib/courses/server/api.ts` */
+const TIME_ZONE_HEADER = "x-time-zone"
+
 /**
  * Solves the server's proof-of-work challenge (about a second of compute)
  * for a sign-in that may create an account. Returns the header value.
@@ -34,7 +37,12 @@ export const requestJson = async <T>(
   try {
     const response = await fetch(withTrailingSlash(path), {
       method: body === undefined ? "GET" : "POST",
-      headers: { "content-type": "application/json", ...headers },
+      headers: {
+        "content-type": "application/json",
+        // Daily limits follow the learner's own calendar day
+        [TIME_ZONE_HEADER]: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        ...headers,
+      },
       body: body === undefined ? undefined : JSON.stringify(body),
     })
     const data = (await response.json().catch(() => null)) as T | null

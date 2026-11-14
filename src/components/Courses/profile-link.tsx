@@ -42,6 +42,11 @@ const ProfileLink = ({ className }: { className?: string }) => {
   // Progress loads from localStorage after mount
   const [ready, setReady] = useState(false)
   useEffect(() => setReady(true), [])
+  // On every courses page with the header: the account's progress in, this
+  // browser's up, once per page load
+  useEffect(() => {
+    if (status === "signed-in") void syncProgress()
+  }, [status])
 
   if (!ready) return null
 
@@ -66,7 +71,6 @@ const ProfileLink = ({ className }: { className?: string }) => {
   if (status === "signed-out")
     return (
       <SignInDialog
-        title={tAccount("account-sign-in-title-general")}
         onSignedIn={() => void syncProgress(true)}
         trigger={
           <button

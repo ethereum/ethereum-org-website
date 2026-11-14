@@ -17,7 +17,7 @@ import Avatar from "../Account/avatar"
 import SignInDialog from "../Account/sign-in-dialog"
 import { useAccount } from "../Account/use-account"
 
-import { syncProgress } from "./account-sync"
+import { releaseAccountProgress, syncProgress } from "./account-sync"
 
 import { authClient } from "@/lib/auth/client"
 import {
@@ -201,6 +201,7 @@ export const ProfileAccountSummary = ({ muted }: { muted: string }) => {
       </CardParagraph>
       {status === "signed-out" && (
         <SignInDialog
+          view="create"
           onSignedIn={() => void syncProgress(true)}
           trigger={
             <Button
@@ -256,7 +257,13 @@ export const ProfileAccountSections = () => {
       </Section>
       <Section id="account" className="flow">
         <h2>{t("page-courses-profile-account-title")}</h2>
-        <AccountSettings />
+        <AccountSettings
+          onLeave={(deleted) => {
+            releaseAccountProgress(deleted)
+            // The page is shorter now
+            window.scrollTo({ top: 0 })
+          }}
+        />
       </Section>
     </>
   )

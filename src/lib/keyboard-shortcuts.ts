@@ -114,7 +114,7 @@ export const KEYBOARD_SHORTCUTS = {
     group: "display",
     desktopOnly: true,
   },
-  // Lesson and mastery check answers: the letters match the option markers
+  // Lesson and Course Mastery answers: the letters match the option markers
   coursePickAnswer: {
     combos: [["a"], ["b"], ["c"], ["d"]],
     displayCombos: [["a"], ["d"]],

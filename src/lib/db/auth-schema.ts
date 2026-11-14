@@ -20,6 +20,7 @@ export const user = pgTable("user", {
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
   showOnLeaderboard: boolean("show_on_leaderboard").default(true),
+  timeZone: text("time_zone"),
 })
 
 export const session = pgTable(

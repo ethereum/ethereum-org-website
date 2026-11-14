@@ -68,6 +68,9 @@ const createAuth = () =>
           required: false,
           input: true,
         },
+        // The browser's last reported IANA zone, for daily limits; set by
+        // the course API, not by the learner
+        timeZone: { type: "string", required: false, input: false },
       },
       deleteUser: { enabled: true },
     },

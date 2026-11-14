@@ -256,8 +256,6 @@ export interface UpcomingCourse {
   id: string
   level: CourseLevel
   art: CourseArtId
-  /** Turns the teaser into a link card pointing elsewhere on the site */
-  href?: string
 }
 
 /**
@@ -271,6 +269,10 @@ export interface Track {
   courses: Course[]
   /** Teasers after the live courses */
   upcoming?: UpcomingCourse[]
+  /** Where to go after the track, elsewhere on the site: a callout below
+   * it, with the target page's hero image (mapped on the hub page). Keys:
+   * `{id}-title`, `{id}-description` */
+  next?: { id: string; href: string }
 }
 
 /** Keys: `{course}-title`, `{course}-description` */

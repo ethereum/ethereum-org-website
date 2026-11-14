@@ -79,7 +79,7 @@ interface LessonPlayerProps {
   sources?: Record<string, PageLink>
   nextLessonId?: string
   /**
-   * Mastery check: one attempt per question, graded by the server through
+   * Course Mastery: one attempt per question, graded by the server through
    * `examSession` (the right options never reach the browser before a pass).
    * `lesson.id` is `EXAM_ID`; steps arrive in the server's order.
    */
@@ -162,7 +162,7 @@ const LessonPlayer = ({
   const { completeLesson, completeExam } = useCourseProgress()
   const lessonSession = useLessonSession(courseId, lesson.id, !exam)
 
-  // A resumed mastery check picks up after the answers already saved
+  // A resumed Course Mastery attempt picks up after the answers already saved
   const resumed = examSession?.answered ?? {}
   const [index, setIndex] = useState(() =>
     Math.min(Object.keys(resumed).length, lesson.steps.length - 1)
@@ -203,7 +203,6 @@ const LessonPlayer = ({
   useEffect(() => {
     if (index > 0) stepRef.current?.focus()
   }, [index])
-
   const total = lesson.steps.length
   const answered = status === "correct"
   const progressValue = reward
@@ -255,7 +254,7 @@ const LessonPlayer = ({
     }
   }
 
-  // Mastery check answers save in the background, one at a time in question
+  // Course Mastery answers save in the background, one at a time in question
   // order as the server requires, so Next never waits on the network
   const savedRef = useRef<Record<string, string[]>>(resumed)
   const valuesRef = useRef(values)
@@ -322,7 +321,7 @@ const LessonPlayer = ({
     }
   }
 
-  // Mastery check pace: Next unlocks MIN_ANSWER_MS after a question first
+  // Course Mastery pace: Next unlocks MIN_ANSWER_MS after a question first
   // shows, the pace the server accepts. One timer per question, kept across
   // re-renders and visits; answers resumed from the server don't wait
   const isExamSession = !!examSession
@@ -445,7 +444,7 @@ const LessonPlayer = ({
     return () => window.removeEventListener("keydown", onEnter, true)
   }, [footerKind])
 
-  // Mastery check: the arrows step back and forward (Next's rules apply),
+  // Course Mastery: the arrows step back and forward (Next's rules apply),
   // mirrored for right-to-left languages
   const { isRtl } = getDirection(locale as Lang)
   const examBackRef = useRef<(() => void) | null>(null)
@@ -632,7 +631,7 @@ const LessonPlayer = ({
             })}
             className="flex-1 bg-background-highlight *:data-[slot=progress-indicator]:bg-(--course)"
           />
-          {/* No verdicts in a mastery check, so no streak to count */}
+          {/* No verdicts in Course Mastery, so no streak to count */}
           {!exam && (
             <span
               className={cn(

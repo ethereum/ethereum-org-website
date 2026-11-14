@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Check, Trophy, X, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
@@ -68,6 +68,10 @@ const ExamComplete = ({
   const locale = useLocale()
   const animate = !useReducedMotion()
   const [stage, setStage] = useState<Stage>("summary")
+  // Each screen replaces one that may have been scrolled down
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [stage])
   // The streak screen shows once, the first time the learner moves on
   const [streakSeen, setStreakSeen] = useState(!reward.streakExtended)
 
@@ -118,7 +122,7 @@ const ExamComplete = ({
   ) : (
     <>
       {retakeBlocked ? (
-        <p className="m-0 text-body-medium">{retakeBlocked}</p>
+        <p className="m-0 w-full text-body-medium">{retakeBlocked}</p>
       ) : (
         <Button variant="ghost" onClick={onRetake} className={chunkyButton}>
           {t("page-courses-try-again")}
@@ -250,7 +254,7 @@ const ExamComplete = ({
 
       <motion.div
         key={stage}
-        className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center"
+        className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center"
         {...appear(stage === "summary" ? 1 : 0.2)}
       >
         {stage === "review" ? (

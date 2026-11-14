@@ -52,7 +52,7 @@ interface ExamGateProps {
 }
 
 /**
- * The mastery check is graded by the server, so it needs an account: lessons
+ * Course Mastery is graded by the server, so it needs an account: lessons
  * stay open to everyone, the trophy is what an account can vouch for.
  */
 const ExamGate = ({
@@ -153,9 +153,10 @@ const ExamGate = ({
       <CalendarClock className={iconClass} aria-hidden />,
       t("page-courses-exam-limit-title"),
       t("page-courses-exam-limit-description", {
-        time: formatDateTime(locale, new Date(gate.retryAt), {
+        // A date in the learner's zone, which the server counts days in
+        date: formatDateTime(locale, new Date(gate.retryAt), {
           dateStyle: "medium",
-          timeStyle: "short",
+          timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         }),
       })
     )

@@ -14,7 +14,7 @@ export const getExamKey = () => {
         ? decryptExamKey(ENCRYPTED_EXAM_KEY, secret)
         : null
   } catch {
-    console.error("The mastery check key could not be decrypted")
+    console.error("The Course Mastery answer key could not be decrypted")
     cached = null
   }
   return cached

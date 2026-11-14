@@ -1,7 +1,11 @@
+import { eq } from "drizzle-orm"
 import type * as z from "zod"
 
+import { isTimeZone, midnightInZone } from "@/lib/utils/date"
+
 import { getSessionUser } from "@/lib/auth/server"
-import { hasLearnerDb } from "@/lib/db"
+import { getDb, hasLearnerDb } from "@/lib/db"
+import { user as userTable } from "@/lib/db/schema"
 
 export type SessionUser = NonNullable<
   Awaited<ReturnType<typeof getSessionUser>>
@@ -37,5 +41,27 @@ export const readBody = async <T>(request: Request, schema: z.ZodType<T>) => {
   }
 }
 
-/** Today's date in UTC, `YYYY-MM-DD` */
-export const utcDay = (now = new Date()) => now.toISOString().slice(0, 10)
+export const TIME_ZONE_HEADER = "x-time-zone"
+
+/**
+ * The learner's day: when it started and when the next starts, in the zone
+ * their browser reports (kept on the account) or else the last one kept
+ */
+export const learnerDay = async (request: Request, user: SessionUser) => {
+  const sent = request.headers.get(TIME_ZONE_HEADER)
+  let timeZone =
+    user.timeZone && isTimeZone(user.timeZone) ? user.timeZone : "UTC"
+  if (sent && sent !== user.timeZone && isTimeZone(sent)) {
+    timeZone = sent
+    await getDb()
+      .update(userTable)
+      .set({ timeZone })
+      .where(eq(userTable.id, user.id))
+  }
+  const now = new Date()
+  return {
+    timeZone,
+    start: midnightInZone(timeZone, now),
+    next: midnightInZone(timeZone, now, 1),
+  }
+}

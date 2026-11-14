@@ -1,12 +1,14 @@
-import { and, asc, eq, isNull, sql } from "drizzle-orm"
+import { and, asc, eq, gt, gte, isNull, sql } from "drizzle-orm"
 import { randomInt, randomUUID } from "node:crypto"
 import * as z from "zod"
 
+import { dayInZone } from "@/lib/utils/date"
+
 import { EXAM_PASS_MARK, getCourse } from "@/data/courses"
 
-import { EXAM_ATTEMPTS_PER_DAY, MIN_ANSWER_MS, samePicks } from "../rules"
+import { examAttemptsLeft, MIN_ANSWER_MS, samePicks } from "../rules"
 
-import { apiError, json, readBody, type SessionUser, utcDay } from "./api"
+import { apiError, json, learnerDay, readBody, type SessionUser } from "./api"
 import { getExamKey } from "./exam-key"
 
 import { getDb } from "@/lib/db"
@@ -33,11 +35,6 @@ const shuffle = <T>(items: T[]) => {
   return out
 }
 
-const nextUtcMidnight = (now = new Date()) =>
-  new Date(
-    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1)
-  ).toISOString()
-
 const answersFor = (attemptId: string) =>
   getDb()
     .select()
@@ -45,18 +42,43 @@ const answersFor = (attemptId: string) =>
     .where(eq(courseExamAnswer.attemptId, attemptId))
     .orderBy(asc(courseExamAnswer.answeredAt))
 
-const attemptsToday = async (userId: string, courseId: string) => {
-  const [{ count }] = await getDb()
-    .select({ count: sql<number>`count(*)::int` })
+const DAY_MS = 86_400_000
+
+/** When this learner's recent attempts at a course started (last day or so) */
+export const recentAttempts = async (
+  userId: string,
+  since: Date,
+  courseId?: string
+) =>
+  getDb()
+    .select({
+      courseId: courseExamAttempt.courseId,
+      startedAt: courseExamAttempt.startedAt,
+    })
     .from(courseExamAttempt)
     .where(
       and(
         eq(courseExamAttempt.userId, userId),
-        eq(courseExamAttempt.courseId, courseId),
-        eq(courseExamAttempt.day, utcDay())
+        gt(courseExamAttempt.startedAt, since),
+        courseId ? eq(courseExamAttempt.courseId, courseId) : undefined
       )
     )
-  return count
+
+/** Attempts left today and when the next opens, for one course */
+const attemptsFor = async (
+  userId: string,
+  courseId: string,
+  day: Awaited<ReturnType<typeof learnerDay>>
+) => {
+  const now = new Date()
+  const since = new Date(Math.min(day.start.getTime(), now.getTime() - DAY_MS))
+  const rows = await recentAttempts(userId, since, courseId)
+  return examAttemptsLeft(
+    rows.map(({ startedAt }) => startedAt),
+    day.start,
+    day.next,
+    now
+  )
 }
 
 const ownAttempt = async (attemptId: string, userId: string) => {
@@ -85,6 +107,7 @@ export const startExam = async (request: Request, user: SessionUser) => {
   if (!key) return apiError("unavailable", 503)
 
   const db = getDb()
+  const day = await learnerDay(request, user)
   const [open] = await db
     .select()
     .from(courseExamAttempt)
@@ -92,11 +115,11 @@ export const startExam = async (request: Request, user: SessionUser) => {
       and(
         eq(courseExamAttempt.userId, user.id),
         eq(courseExamAttempt.courseId, course.id),
-        eq(courseExamAttempt.day, utcDay()),
+        gte(courseExamAttempt.startedAt, day.start),
         isNull(courseExamAttempt.finishedAt)
       )
     )
-  const used = await attemptsToday(user.id, course.id)
+  const { left, retryAt } = await attemptsFor(user.id, course.id, day)
   if (open) {
     const answers = await answersFor(open.id)
     return json({
@@ -107,17 +130,16 @@ export const startExam = async (request: Request, user: SessionUser) => {
         questionId,
         optionIds,
       })),
-      attemptsLeft: EXAM_ATTEMPTS_PER_DAY - used,
+      attemptsLeft: left,
     })
   }
-  if (used >= EXAM_ATTEMPTS_PER_DAY)
-    return apiError("limit", 429, { retryAt: nextUtcMidnight() })
+  if (!left) return apiError("limit", 429, { retryAt: retryAt?.toISOString() })
 
   const attempt = {
     id: randomUUID(),
     userId: user.id,
     courseId: course.id,
-    day: utcDay(),
+    day: dayInZone(day.timeZone),
     questionIds: shuffle(course.exam.map(({ id }) => id)),
   }
   await db.insert(courseExamAttempt).values(attempt)
@@ -125,7 +147,7 @@ export const startExam = async (request: Request, user: SessionUser) => {
     attemptId: attempt.id,
     questionIds: attempt.questionIds,
     answered: [],
-    attemptsLeft: EXAM_ATTEMPTS_PER_DAY - used - 1,
+    attemptsLeft: left - 1,
   })
 }
 
@@ -218,7 +240,8 @@ export const finishExam = async (request: Request, user: SessionUser) => {
         },
       })
 
-  const used = await attemptsToday(user.id, attempt.courseId)
+  const day = await learnerDay(request, user)
+  const { left, retryAt } = await attemptsFor(user.id, attempt.courseId, day)
   return json({
     score,
     passed,
@@ -226,7 +249,7 @@ export const finishExam = async (request: Request, user: SessionUser) => {
     review: passed
       ? Object.fromEntries(attempt.questionIds.map((id) => [id, key[id]]))
       : undefined,
-    attemptsLeft: Math.max(0, EXAM_ATTEMPTS_PER_DAY - used),
-    retryAt: used >= EXAM_ATTEMPTS_PER_DAY ? nextUtcMidnight() : undefined,
+    attemptsLeft: left,
+    retryAt: retryAt?.toISOString(),
   })
 }

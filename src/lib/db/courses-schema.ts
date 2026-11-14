@@ -2,12 +2,15 @@ import {
   boolean,
   date,
   index,
+  jsonb,
   pgTable,
   primaryKey,
   real,
   text,
   timestamp,
 } from "drizzle-orm/pg-core"
+
+import type { ProgressState } from "../courses/progress"
 
 import { user } from "./auth-schema"
 
@@ -50,14 +53,14 @@ export const courseLessonCompletion = pgTable(
   (t) => [primaryKey({ columns: [t.userId, t.courseId, t.lessonId] })]
 )
 
-/** A mastery check taken while signed in, graded by the server */
+/** A Course Mastery attempt taken while signed in, graded by the server */
 export const courseExamAttempt = pgTable(
   "course_exam_attempt",
   {
     id: text("id").primaryKey(),
     userId: userId(),
     courseId: text("course_id").notNull(),
-    /** UTC calendar day, for the daily attempt limit */
+    /** The learner's calendar day at the start, in their zone then; limits count from `started_at` */
     day: date("day").notNull(),
     /** The questions drawn for this attempt, in the order asked */
     questionIds: text("question_ids").array().notNull(),
@@ -84,7 +87,7 @@ export const courseExamAnswer = pgTable(
   (t) => [primaryKey({ columns: [t.attemptId, t.questionId] })]
 )
 
-/** A passed mastery check: the course trophy */
+/** A passed Course Mastery: the course trophy */
 export const courseMastery = pgTable(
   "course_mastery",
   {
@@ -97,3 +100,17 @@ export const courseMastery = pgTable(
   },
   (t) => [primaryKey({ columns: [t.userId, t.courseId] })]
 )
+
+/**
+ * The browser's whole progress record (streak, answer history, XP), merged
+ * from every device signed in to the account, so a new browser starts where
+ * the last one left off. Unverified: shown to the learner, never ranked.
+ */
+export const courseProgressState = pgTable("course_progress_state", {
+  userId: userId().primaryKey(),
+  state: jsonb("state").$type<ProgressState>().notNull(),
+  updatedAt: timestamp("updated_at")
+    .defaultNow()
+    .$onUpdate(() => new Date())
+    .notNull(),
+})

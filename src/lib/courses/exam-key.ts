@@ -4,7 +4,7 @@ import { gunzipSync, gzipSync } from "node:zlib"
 import type { Course } from "@/data/courses"
 
 /**
- * Right options for every mastery check question, by course then question
+ * Right options for every Course Mastery question, by course then question
  * id. The questions and options are public; this key isn't. It's committed
  * encrypted (`src/data/courses/exam-key.ts`, AES-256-GCM over gzipped JSON)
  * so it ships with the questions it answers, and the server decrypts it

@@ -7,12 +7,26 @@ import { useAccount } from "@/components/Account/use-account"
 
 import { lessonProgressKey } from "@/data/courses"
 
-import { COURSE_PROGRESS_KEY, flagProgress } from "./progress-storage"
-import { type CourseProgress, readStoredProgress } from "./useCourseProgress"
+import {
+  COURSE_ACCOUNT_KEY,
+  COURSE_PROGRESS_KEY,
+  flagProgress,
+  readStoredProgress,
+} from "./progress-storage"
+import type { CourseProgress } from "./useCourseProgress"
 
-import { XP_EXAM_PASS, XP_LESSON } from "@/lib/courses/rules"
+import {
+  EMPTY_PROGRESS,
+  hasAnyProgress,
+  mergeProgress,
+  type ProgressState,
+} from "@/lib/courses/progress"
 
 export interface ServerProgress {
+  /** The signed-in account's id */
+  account: string
+  /** The progress record saved from the account's devices, if any yet */
+  state: ProgressState | null
   lessons: {
     courseId: string
     lessonId: string
@@ -31,66 +45,105 @@ export interface ServerProgress {
   showOnLeaderboard: boolean
 }
 
-const EMPTY: CourseProgress = {
-  version: 1,
-  xp: 0,
-  streak: { count: 0, lastDay: null },
-  lessons: {},
-}
-
-/**
- * Adds what the account holds and this browser doesn't (another device's
- * progress) to local progress, with its XP, and tells every
- * `useCourseProgress` on the page.
- */
-const mergeIntoLocal = (server: ServerProgress) => {
-  const local = readStoredProgress() ?? EMPTY
-  let xp = local.xp
-  const lessons = { ...local.lessons }
-  for (const { courseId, lessonId, accuracy, completedAt } of server.lessons) {
-    const key = lessonProgressKey(courseId, lessonId)
-    if (lessons[key]) continue
-    lessons[key] = { completedAt, accuracy }
-    xp += XP_LESSON
-  }
-  const exams = { ...local.exams }
-  for (const { courseId, score, passedAt } of server.masteries) {
-    if (exams[courseId]?.passedAt) continue
-    exams[courseId] = {
-      best: Math.max(score, exams[courseId]?.best ?? 0),
-      passedAt,
-    }
-    xp += XP_EXAM_PASS
-  }
-  if (xp === local.xp) return
-  window.localStorage.setItem(
-    COURSE_PROGRESS_KEY,
-    JSON.stringify({ ...local, xp, lessons, exams })
-  )
+const writeLocal = (progress: CourseProgress | null) => {
+  if (progress)
+    window.localStorage.setItem(COURSE_PROGRESS_KEY, JSON.stringify(progress))
+  else window.localStorage.removeItem(COURSE_PROGRESS_KEY)
   window.dispatchEvent(new Event("local-storage"))
-  flagProgress(true)
+  flagProgress(!!progress && hasAnyProgress(progress))
 }
 
+/** Lessons and trophies the server recorded (e.g. graded there) as progress */
+const fromRecords = ({
+  lessons,
+  masteries,
+}: ServerProgress): ProgressState => ({
+  ...EMPTY_PROGRESS,
+  lessons: Object.fromEntries(
+    lessons.map(({ courseId, lessonId, accuracy, completedAt }) => [
+      lessonProgressKey(courseId, lessonId),
+      { completedAt, accuracy },
+    ])
+  ),
+  exams: Object.fromEntries(
+    masteries.map(({ courseId, score, passedAt }) => [
+      courseId,
+      { best: score, passedAt },
+    ])
+  ),
+})
+
+/** The account this page synced with; uploads only happen while it's set */
+let syncedAccount: string | null = null
 let syncing: Promise<ServerProgress | null> | null = null
 
+const upload = (progress: CourseProgress) => {
+  const state = { ...progress }
+  delete state.account
+  return requestJson("/api/courses/progress/import", state)
+}
+
 /**
- * Browser progress up (unverified), account progress down. Once per page
- * load unless `force`d, e.g. right after signing in.
+ * Account progress down, browser progress up. This browser's progress joins
+ * the account unless it belongs to another account, which it then replaces.
+ * Once per page load unless `force`d, e.g. right after signing in.
  */
 export const syncProgress = (force = false) => {
   if (syncing && !force) return syncing
   syncing = (async () => {
-    const local = readStoredProgress()
-    if (local)
-      await requestJson("/api/courses/progress/import", {
-        lessons: local.lessons,
-        exams: local.exams ?? {},
-      })
-    const { data } = await requestJson<ServerProgress>("/api/courses/progress")
-    if (data) mergeIntoLocal(data)
+    const { data, status } = await requestJson<ServerProgress>(
+      "/api/courses/progress"
+    )
+    // Signed out (the session ended) or no accounts here: forget the hint
+    if (status === 401 || status === 404)
+      window.localStorage.removeItem(COURSE_ACCOUNT_KEY)
+    if (!data) return null
+    const stored = readStoredProgress()
+    // Another account's progress (its session ended here) isn't this one's
+    const local =
+      stored?.account && stored.account !== data.account ? null : stored
+    const merged: CourseProgress = {
+      ...mergeProgress(
+        mergeProgress(local ?? EMPTY_PROGRESS, data.state ?? EMPTY_PROGRESS),
+        fromRecords(data)
+      ),
+      account: data.account,
+    }
+    writeLocal(merged)
+    window.localStorage.setItem(COURSE_ACCOUNT_KEY, "1")
+    syncedAccount = data.account
+    await upload(merged)
     return data
   })()
   return syncing
+}
+
+/**
+ * After a lesson or exam while signed in: save the new progress to the
+ * account right away, so closing the tab can't lose a streak day
+ */
+export const queueProgressUpload = () => {
+  // A page that hasn't synced yet (a lesson) does it now, upload included
+  if (!syncedAccount) {
+    if (window.localStorage.getItem(COURSE_ACCOUNT_KEY)) void syncProgress(true)
+    return
+  }
+  const progress = readStoredProgress()
+  if (progress?.account === syncedAccount) void upload(progress)
+}
+
+/**
+ * Signing out: the progress here is the account's, so it leaves with it.
+ * Deleting the account keeps it as this browser's own progress instead.
+ */
+export const releaseAccountProgress = (keep: boolean) => {
+  syncedAccount = null
+  syncing = null
+  window.localStorage.removeItem(COURSE_ACCOUNT_KEY)
+  const progress = readStoredProgress()
+  if (!keep || !progress) return writeLocal(null)
+  delete progress.account
+  writeLocal(progress)
 }
 
 /** Account progress for a signed-in visitor, synced on first use */
@@ -110,8 +163,7 @@ export const useServerProgress = () => {
     }
   }, [status])
 
-  const refresh = async () => setProgress(await syncProgress(true))
-  return { progress, refresh }
+  return { progress }
 }
 
 /**

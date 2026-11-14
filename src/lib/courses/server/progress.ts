@@ -1,41 +1,66 @@
-import { and, eq, sql } from "drizzle-orm"
+import { eq } from "drizzle-orm"
 import * as z from "zod"
 
 import { EXAM_PASS_MARK, getCourse, getLesson } from "@/data/courses"
 
-import { EXAM_ATTEMPTS_PER_DAY, XP_EXAM_PASS, XP_LESSON } from "../rules"
+import { mergeProgress, type ProgressState } from "../progress"
+import { examAttemptsLeft, XP_EXAM_PASS, XP_LESSON } from "../rules"
 
-import { apiError, json, readBody, type SessionUser, utcDay } from "./api"
+import { apiError, json, learnerDay, readBody, type SessionUser } from "./api"
+import { recentAttempts } from "./exams"
 
 import { getDb } from "@/lib/db"
 import {
-  courseExamAttempt,
   courseLessonCompletion,
   courseMastery,
+  courseProgressState,
 } from "@/lib/db/schema"
 
 const MAX_IMPORT = 500
+const MAX_STEPS = 5000
 
-const importBody = z.object({
+const isoDate = z.string().max(40)
+
+// The browser's own record, kept as sent within these bounds: it only ever
+// feeds that learner's screens
+const stateBody = z.object({
+  version: z.literal(1),
+  xp: z.number().int().min(0).max(10_000_000),
+  streak: z.object({
+    count: z.number().int().min(0).max(100_000),
+    lastDay: isoDate.nullable(),
+    lastAt: isoDate.optional(),
+    lastOffset: z.number().int().min(-1440).max(1440).optional(),
+  }),
+  bestStreak: z.number().int().min(0).max(100_000).optional(),
   lessons: z
     .record(
-      z.string(),
+      z.string().max(200),
+      z.object({ completedAt: isoDate, accuracy: z.number().min(0).max(1) })
+    )
+    .refine((lessons) => Object.keys(lessons).length <= MAX_IMPORT),
+  steps: z
+    .record(
+      z.string().max(300),
       z.object({
-        completedAt: z.string(),
-        accuracy: z.number().min(0).max(1),
+        seen: z.number().int().min(0),
+        missed: z.number().int().min(0),
+        lastAt: isoDate,
+        lastCorrect: z.boolean(),
       })
     )
-    .default({}),
+    .refine((steps) => Object.keys(steps).length <= MAX_STEPS)
+    .optional(),
   exams: z
     .record(
-      z.string(),
+      z.string().max(200),
       z.object({
         best: z.number().min(0).max(1),
-        passedAt: z.string().nullable(),
+        passedAt: isoDate.nullable(),
       })
     )
-    .default({}),
-})
+    .optional(),
+}) satisfies z.ZodType<ProgressState>
 
 const toDate = (value: string) => {
   const date = new Date(value)
@@ -46,32 +71,37 @@ const toDate = (value: string) => {
  * The account's progress. XP counts verified work only, the figure behind
  * leaderboards; browser-only progress shows in the UI but never here.
  */
-export const getProgress = async (_: Request, user: SessionUser) => {
+export const getProgress = async (request: Request, user: SessionUser) => {
   const db = getDb()
-  const [lessons, masteries, attempts] = await Promise.all([
+  const day = await learnerDay(request, user)
+  const now = new Date()
+  const since = new Date(
+    Math.min(day.start.getTime(), now.getTime() - 86_400_000)
+  )
+  const [lessons, masteries, attempts, saved] = await Promise.all([
     db
       .select()
       .from(courseLessonCompletion)
       .where(eq(courseLessonCompletion.userId, user.id)),
     db.select().from(courseMastery).where(eq(courseMastery.userId, user.id)),
+    recentAttempts(user.id, since),
     db
-      .select({
-        courseId: courseExamAttempt.courseId,
-        count: sql<number>`count(*)::int`,
-      })
-      .from(courseExamAttempt)
-      .where(
-        and(
-          eq(courseExamAttempt.userId, user.id),
-          eq(courseExamAttempt.day, utcDay())
-        )
-      )
-      .groupBy(courseExamAttempt.courseId),
+      .select({ state: courseProgressState.state })
+      .from(courseProgressState)
+      .where(eq(courseProgressState.userId, user.id)),
   ])
+  const startedByCourse = new Map<string, Date[]>()
+  for (const { courseId, startedAt } of attempts)
+    startedByCourse.set(courseId, [
+      ...(startedByCourse.get(courseId) ?? []),
+      startedAt,
+    ])
   const verifiedXp =
     lessons.filter(({ verified }) => verified).length * XP_LESSON +
     masteries.filter(({ verified }) => verified).length * XP_EXAM_PASS
   return json({
+    account: user.id,
+    state: saved[0]?.state ?? null,
     lessons: lessons.map(
       ({ courseId, lessonId, verified, accuracy, completedAt }) => ({
         courseId,
@@ -87,10 +117,11 @@ export const getProgress = async (_: Request, user: SessionUser) => {
       score,
       passedAt,
     })),
+    // Only courses tried lately; any other has the full daily allowance
     attemptsLeft: Object.fromEntries(
-      attempts.map(({ courseId, count }) => [
+      [...startedByCourse].map(([courseId, started]) => [
         courseId,
-        Math.max(0, EXAM_ATTEMPTS_PER_DAY - count),
+        examAttemptsLeft(started, day.start, day.next, now).left,
       ])
     ),
     verifiedXp,
@@ -99,16 +130,16 @@ export const getProgress = async (_: Request, user: SessionUser) => {
 }
 
 /**
- * Browser progress joins the account on sign-in, unverified: it fills gaps
- * and never overwrites what the server already holds.
+ * Browser progress joins the account, unverified: lessons and trophies fill
+ * gaps and never overwrite what the server holds, and the whole record merges
+ * into the account's copy for the learner's other devices.
  */
 export const importProgress = async (request: Request, user: SessionUser) => {
-  const body = await readBody(request, importBody)
+  const body = await readBody(request, stateBody)
   if (!body) return apiError("bad-request", 400)
 
-  const lessons = Object.entries(body.lessons)
-    .slice(0, MAX_IMPORT)
-    .flatMap(([key, { completedAt, accuracy }]) => {
+  const lessons = Object.entries(body.lessons).flatMap(
+    ([key, { completedAt, accuracy }]) => {
       const [courseId, lessonId] = key.split("/")
       return getLesson(courseId, lessonId)
         ? [
@@ -122,8 +153,9 @@ export const importProgress = async (request: Request, user: SessionUser) => {
             },
           ]
         : []
-    })
-  const masteries = Object.entries(body.exams).flatMap(
+    }
+  )
+  const masteries = Object.entries(body.exams ?? {}).flatMap(
     ([courseId, { best, passedAt }]) =>
       getCourse(courseId) && passedAt && best >= EXAM_PASS_MARK
         ? [
@@ -145,5 +177,23 @@ export const importProgress = async (request: Request, user: SessionUser) => {
       .onConflictDoNothing()
   if (masteries.length)
     await db.insert(courseMastery).values(masteries).onConflictDoNothing()
-  return json({ lessons: lessons.length, masteries: masteries.length })
+
+  // Locked while merging, so two devices saving at once don't drop either
+  const state = await db.transaction(async (tx) => {
+    const [saved] = await tx
+      .select({ state: courseProgressState.state })
+      .from(courseProgressState)
+      .where(eq(courseProgressState.userId, user.id))
+      .for("update")
+    const merged = saved ? mergeProgress(saved.state, body) : body
+    await tx
+      .insert(courseProgressState)
+      .values({ userId: user.id, state: merged })
+      .onConflictDoUpdate({
+        target: courseProgressState.userId,
+        set: { state: merged, updatedAt: new Date() },
+      })
+    return merged
+  })
+  return json({ state })
 }

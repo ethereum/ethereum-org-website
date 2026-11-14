@@ -18,12 +18,20 @@ const queryClient = new QueryClient()
 interface WalletSignProps {
   /** Sign in (may create an account), or add a backup wallet to this one */
   mode: "sign-in" | "link"
+  /** Instead of the mode's default label */
+  label?: string
   onDone: () => void
   onError: (message: string) => void
   className?: string
 }
 
-const SignButton = ({ mode, onDone, onError, className }: WalletSignProps) => {
+const SignButton = ({
+  mode,
+  label,
+  onDone,
+  onError,
+  className,
+}: WalletSignProps) => {
   const t = useTranslations("component-account")
   const { address, chainId, isConnected } = useAccount()
   const { openConnectModal } = useConnectModal()
@@ -95,9 +103,10 @@ const SignButton = ({ mode, onDone, onError, className }: WalletSignProps) => {
       }}
     >
       <Wallet aria-hidden />
-      {mode === "sign-in"
-        ? t("account-sign-in-wallet")
-        : t("account-add-wallet")}
+      {label ??
+        (mode === "sign-in"
+          ? t("account-sign-in-wallet")
+          : t("account-add-wallet"))}
     </Button>
   )
 }

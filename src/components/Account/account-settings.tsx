@@ -52,11 +52,17 @@ const row =
 const rowText = "flex flex-col md:flex-row md:items-baseline md:gap-3"
 const PASSKEY_NAME_MAX = 50
 
+interface AccountSettingsProps {
+  /** Before the page learns the visitor signed out (`deleted`: or deleted
+   * the account), e.g. to clear what belonged to the account */
+  onLeave?: (deleted: boolean) => void
+}
+
 /**
  * Sign-in methods (passkeys and wallets: keep a backup), leaderboard
  * visibility, sign out and account deletion. Only for signed-in visitors.
  */
-const AccountSettings = () => {
+const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
   const t = useTranslations("component-account")
   const locale = useLocale()
   const { user, refetch } = useAccount()
@@ -128,9 +134,18 @@ const AccountSettings = () => {
   }
 
   const deleteAccount = async () => {
-    await authClient.deleteUser()
+    const { error } = await authClient.deleteUser()
+    if (error) return setError(t("account-error"))
+    onLeave?.(true)
     refetch()
   }
+
+  const signOut = async () => {
+    await authClient.signOut()
+    onLeave?.(false)
+    refetch()
+  }
+  const showOnLeaderboard = user?.showOnLeaderboard !== false
 
   return (
     // Its own spacing: the sections opt out of the profile page's flow rhythm
@@ -288,27 +303,23 @@ const AccountSettings = () => {
             {t("account-leaderboard-label")}
           </FieldLabel>
           <FieldDescription id={`${leaderboardId}-description`}>
-            {t("account-leaderboard-hint-profile")}
+            {t("account-leaderboard-hint-profile")}{" "}
+            {showOnLeaderboard
+              ? t("account-leaderboard-opt-out")
+              : t("account-leaderboard-opt-in")}
           </FieldDescription>
         </FieldContent>
         <Switch
           id={leaderboardId}
           aria-describedby={`${leaderboardId}-description`}
-          checked={user?.showOnLeaderboard !== false}
+          checked={showOnLeaderboard}
           onCheckedChange={setLeaderboard}
           className="shrink-0"
         />
       </Field>
 
       <section data-flow="skip" className="flex flex-wrap items-center gap-3">
-        <Button
-          variant="outline"
-          isSecondary
-          onClick={async () => {
-            await authClient.signOut()
-            refetch()
-          }}
-        >
+        <Button variant="outline" isSecondary onClick={signOut}>
           {t("account-sign-out")}
         </Button>
         <Dialog variant="stacked">

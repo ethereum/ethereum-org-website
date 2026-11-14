@@ -14,6 +14,8 @@ import {
 } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
+import { ArrowNext } from "@/components/ui/arrow"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import Eyebrow from "@/components/ui/eyebrow"
 import { Progress as ProgressBar } from "@/components/ui/progress"
@@ -277,26 +279,31 @@ const ProfileView = () => {
   const [ready, setReady] = useState(false)
   const backHref = `${COURSES_HUB}?${NO_PROFILE_PARAM}`
   const { status: accountStatus } = useAccount()
+  const signedIn = accountStatus === "signed-in"
   useEffect(() => {
     if (accountStatus === "loading") return
-    // With nothing saved there's no profile yet: back to the hub, which says
-    // why. Signed in, the account's progress (another device's) comes first
-    const check = () => {
-      const stored = readStoredProgress()
-      if (stored && hasAnyProgress(stored)) {
+    // An account always has a profile, once its progress (from other
+    // devices) is in. Otherwise, with nothing saved there's no profile yet:
+    // back to the hub, which says why
+    if (accountStatus === "signed-in") {
+      void syncProgress().finally(() => {
         flagProgress(true)
         setReady(true)
-      } else router.replace(backHref)
+      })
+      return
     }
-    if (accountStatus === "signed-in") void syncProgress().then(check)
-    else check()
+    const stored = readStoredProgress()
+    if (stored && hasAnyProgress(stored)) {
+      flagProgress(true)
+      setReady(true)
+    } else router.replace(backHref)
   }, [accountStatus, router, backHref])
 
-  // Progress reset from this page: nothing left to show, so leave too
+  // Signed out or progress reset from this page: nothing left to show
   useEffect(() => {
-    if (!ready || hasAnyProgress(progress)) return
-    router.replace(backHref)
-  }, [ready, progress, router, backHref])
+    if (!ready || signedIn || hasAnyProgress(progress)) return
+    router.replace(COURSES_HUB)
+  }, [ready, signedIn, progress, router])
 
   const count = numberFormat(locale).format
   const percent = numberFormat(locale, {
@@ -353,7 +360,7 @@ const ProfileView = () => {
   const review = stepsToReview(progress)
   const started = hasAnyProgress(progress)
 
-  if (!started || !ready) return <ProfileSkeleton />
+  if (!ready || (!started && !signedIn)) return <ProfileSkeleton />
 
   return (
     <div className="flow">
@@ -454,47 +461,54 @@ const ProfileView = () => {
           />
           <Stat
             icon={Sparkles}
-            iconClassName="text-primary"
+            iconClassName="text-yellow-700 dark:text-yellow-400"
             label={t("page-courses-profile-perfect")}
             value={count(perfect)}
           />
           <Stat
             icon={CalendarDays}
-            iconClassName="text-body-medium"
+            iconClassName="text-blue-600 dark:text-blue-400"
             label={t("page-courses-profile-since")}
             value={firstDone ? date(firstDone) : count(0)}
           />
         </div>
       </Section>
 
-      {(inProgress.length > 0 || mastered.length > 0) && (
-        <Section id="courses">
-          <h2>{t("page-courses-profile-courses-title")}</h2>
-          {[
-            { id: "in-progress", rows: inProgress },
-            { id: "mastered", rows: mastered },
-          ]
-            .filter(({ rows }) => rows.length)
-            .map(({ id, rows }) => (
-              <div key={id} className="flow">
-                <h3>{t(`page-courses-profile-${id}-title`)}</h3>
-                <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
-                  {rows.map(({ course, trackId, isMastered }) => (
-                    <li key={course.id} className="m-0">
-                      <CompactCourseCard
-                        course={course}
-                        trackTitle={t(`page-courses-track-${trackId}-title`)}
-                        isMastered={isMastered}
-                        bestScore={progress.exams?.[course.id]?.best}
-                        formatPercent={percent}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-        </Section>
-      )}
+      <Section id="courses">
+        <h2>{t("page-courses-profile-courses-title")}</h2>
+        {!started && <p>{t("page-courses-profile-courses-none")}</p>}
+        {[
+          { id: "in-progress", rows: inProgress },
+          { id: "mastered", rows: mastered },
+        ]
+          .filter(({ rows }) => rows.length)
+          .map(({ id, rows }) => (
+            <div key={id} className="flow">
+              <h3>{t(`page-courses-profile-${id}-title`)}</h3>
+              <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {rows.map(({ course, trackId, isMastered }) => (
+                  <li key={course.id} className="m-0">
+                    <CompactCourseCard
+                      course={course}
+                      trackTitle={t(`page-courses-track-${trackId}-title`)}
+                      isMastered={isMastered}
+                      bestScore={progress.exams?.[course.id]?.best}
+                      formatPercent={percent}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        <div data-flow="cta">
+          <ButtonLink href={COURSES_HUB} size="lg">
+            {started
+              ? t("page-courses-profile-keep-learning")
+              : t("page-courses-profile-start-learning")}
+            <ArrowNext aria-hidden />
+          </ButtonLink>
+        </div>
+      </Section>
 
       {review.length > 0 && (
         <Section id="review">

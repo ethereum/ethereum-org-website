@@ -1,5 +1,6 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
+import type { StaticImageData } from "next/image"
 import {
   getMessages,
   getTranslations,
@@ -22,14 +23,12 @@ import {
   ProgressChips,
   ProgressNote,
 } from "@/components/Courses/progress-stats"
-import {
-  chunkyButton,
-  chunkyButtonSecondary,
-  courseThemeStyle,
-} from "@/components/Courses/theme"
+import { chunkyButton, courseThemeStyle } from "@/components/Courses/theme"
 import HubHero from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
@@ -57,6 +56,12 @@ import {
 import CoursesPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/courses/learning-path-garden-with-trophy.jpg"
+import developersHero from "@/public/images/heroes/developers-hub-hero.png"
+
+// A track's closing callout shows its target page's hero image
+const TRACK_NEXT_IMAGES: Record<string, StaticImageData> = {
+  build: developersHero,
+}
 
 /** What the client needs to work out a track's mastered and next courses */
 const toTrackCourses = (courses: Course[]) =>
@@ -193,19 +198,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       </li>
                     )
                   )}
-                  {track.upcoming?.map(({ id, level, art, href }, index) => (
+                  {track.upcoming?.map(({ id, level, art }, index) => (
                     <li
                       key={id}
                       className="m-0"
                       style={courseThemeStyle("muted")}
                     >
-                      {/* Not a course yet: no link, progress or action, unless it points elsewhere */}
-                      <Card
-                        href={href}
-                        variant="nested"
-                        border
-                        className="h-full"
-                      >
+                      {/* Not a course yet: no link, progress or action */}
+                      <Card variant="nested" border className="h-full">
                         <CardHeader>
                           <CardBanner
                             background="none"
@@ -221,19 +221,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             >
                               {int.format(track.courses.length + index + 1)}
                             </span>
-                            {!href && (
-                              <span className="absolute end-3 top-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
-                                {t("page-courses-coming-soon")}
-                              </span>
-                            )}
-                            <CourseArt
-                              id={art}
-                              className={cn(
-                                "mx-auto max-w-48",
-                                href &&
-                                  "transition-transform duration-300 motion-safe:group-hover/link:scale-105"
-                              )}
-                            />
+                            <span className="absolute end-3 top-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
+                              {t("page-courses-coming-soon")}
+                            </span>
+                            <CourseArt id={art} className="mx-auto max-w-48" />
                           </CardBanner>
                         </CardHeader>
                         <CardContent>
@@ -242,22 +233,23 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             {t(`${id}-description`)}
                           </CardParagraph>
                         </CardContent>
-                        {href && (
-                          <CardFooter buttons="full">
-                            <span
-                              className={cn(
-                                chunkyButtonSecondary,
-                                "inline-flex items-center justify-center"
-                              )}
-                            >
-                              {t("page-courses-hub-explore")}
-                            </span>
-                          </CardFooter>
-                        )}
                       </Card>
                     </li>
                   ))}
                 </ol>
+                {track.next && (
+                  <Callout
+                    variant="sm"
+                    as="h3"
+                    image={TRACK_NEXT_IMAGES[track.next.id]}
+                    title={t(`${track.next.id}-title`)}
+                    description={t(`${track.next.id}-description`)}
+                  >
+                    <ButtonLink href={track.next.href}>
+                      {t("page-courses-hub-explore")}
+                    </ButtonLink>
+                  </Callout>
+                )}
               </Section>
             ))}
 

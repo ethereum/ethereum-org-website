@@ -1,5 +1,5 @@
 /**
- * Mastery check answer key: see `src/lib/courses/exam-key.ts`.
+ * Course Mastery answer key: see `src/lib/courses/exam-key.ts`.
  *
  *   pnpm courses:exam-key encrypt [file]  JSON file -> src/data/courses/exam-key.ts
  *   pnpm courses:exam-key decrypt         committed key -> JSON on stdout

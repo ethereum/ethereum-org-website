@@ -20,6 +20,7 @@ import {
 } from "@/data/courses"
 
 import Scenery, { type SceneryId } from "./art/scenery"
+import { useServerProgress } from "./account-sync"
 import { LESSON_ICONS } from "./lesson-icons"
 import { NODE_FACE_CENTRE, NODE_PRESS, NodeBody, NodeHalo } from "./lesson-node"
 import { courseThemeStyle } from "./theme"
@@ -109,6 +110,14 @@ const LessonPath = ({
     : allDone
   const examNext = hasExam && allDone && !earned
   const best = progress.exams?.[courseId]?.best
+  const { progress: account } = useServerProgress()
+  // Today's attempts used up: say when the next opens instead of offering it
+  const outOfAttempts = hasExam && account?.attemptsLeft[courseId] === 0
+  const attemptsNote = outOfAttempts && (
+    <p className="m-0 mt-4 text-sm font-bold">
+      {t("page-courses-path-exam-tomorrow")}
+    </p>
+  )
   const count = lessons.length
   const height = nodeY(count) + NODE
 
@@ -318,16 +327,18 @@ const LessonPath = ({
                   {t("page-courses-path-all-courses")}
                 </PopoverAction>
               )}
-              {hasExam && (
-                <PopoverAction href={examHref(courseId)} secondary>
-                  {t("page-courses-path-exam-retake")}
-                </PopoverAction>
-              )}
+              {outOfAttempts
+                ? attemptsNote
+                : hasExam && (
+                    <PopoverAction href={examHref(courseId)} secondary>
+                      {t("page-courses-path-exam-retake")}
+                    </PopoverAction>
+                  )}
             </PathPopover>
           </PopoverPrimitive.Root>
         ) : hasExam ? (
           <PopoverPrimitive.Root>
-            {examNext && (
+            {examNext && !outOfAttempts && (
               <span
                 aria-hidden
                 className="pointer-events-none absolute -top-11 left-1/2 z-10 -translate-x-1/2 motion-safe:animate-bounce"
@@ -380,9 +391,11 @@ const LessonPath = ({
                   })}
                 </p>
               )}
-              <PopoverAction href={examHref(courseId)}>
-                {t("page-courses-path-start")}
-              </PopoverAction>
+              {attemptsNote || (
+                <PopoverAction href={examHref(courseId)}>
+                  {t("page-courses-path-start")}
+                </PopoverAction>
+              )}
             </PathPopover>
           </PopoverPrimitive.Root>
         ) : (
@@ -438,7 +451,7 @@ const PopoverAction = ({
     variant="ghost"
     hideArrow
     className={cn(
-      "min-h-12 w-full rounded-2xl font-bold tracking-wide uppercase active:translate-y-0.5",
+      "min-h-12 w-full justify-center rounded-2xl text-center font-bold tracking-wide uppercase active:translate-y-0.5",
       secondary
         ? "mt-2 border-2 border-white/50 bg-transparent text-white hover-link:bg-white/10 hover-link:!text-white"
         : "mt-4 border-0 border-b-4 border-black/20 bg-white text-(--course-strong) active:border-b-2 hover-link:!text-(--course-strong)"
