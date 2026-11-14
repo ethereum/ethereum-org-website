@@ -134,6 +134,18 @@ const group = (
   return groups
 }
 
+/**
+ * Whether the whole query is a value to look up rather than a question.
+ *
+ * A bare address or name has no prose to ground an answer in, so asking spends a model
+ * call to be told nothing was found -- while the explorer rows beneath already answer it.
+ * Shapes only, so this needs no network list and stays cheap enough to call per keystroke.
+ */
+export const isExplorerLookup = (query: string): boolean => {
+  const trimmed = query.trim()
+  return HEX_QUERY_RE.test(trimmed) || NAME_QUERY_RE.test(trimmed)
+}
+
 export const parseExplorerQuery = (
   query: string,
   networks: ExplorerNetwork[]

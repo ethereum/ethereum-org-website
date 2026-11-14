@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
-  "generatedAt": "2026-06-16T23:56:52.928Z",
-  "rootHash": "e796c1dcaccc",
+  "generatedAt": "2026-10-14T22:00:42.853Z",
+  "rootHash": "eaa41c518b13",
   "tree": {
-    "contentHash": "db2e8d09457d",
-    "anchorHash": "79a0e43f777e",
+    "contentHash": "55e3f9d96663",
+    "anchorHash": "35b16d66f714",
     "children": {
       "frontmatter:title": {
         "contentHash": "cbe0c894b78e",
@@ -126,8 +126,8 @@
         ]
       },
       "greeter-app": {
-        "contentHash": "05233005bd2d",
-        "anchorHash": "11a02409f8bc",
+        "contentHash": "e79e525e35ec",
+        "anchorHash": "50f39308008c",
         "labelHash": "1e0b85d60dcb",
         "children": {
           "_label": {
@@ -224,8 +224,8 @@
             ]
           },
           "file-walk-through": {
-            "contentHash": "d53bd8ae6874",
-            "anchorHash": "73df16828b0b",
+            "contentHash": "25d2df93bf17",
+            "anchorHash": "61bd32a948c2",
             "labelHash": "f5ae2d95ad78",
             "children": {
               "_label": {
@@ -426,8 +426,8 @@
                 ]
               },
               "app-tsx": {
-                "contentHash": "5b1668bb030d",
-                "anchorHash": "095e870b2c93",
+                "contentHash": "8808f3f57b01",
+                "anchorHash": "8565a21f4012",
                 "labelHash": "4a81c0ae3c7b",
                 "children": {
                   "_label": {
@@ -542,7 +542,7 @@
                     "contentHash": "6442c53f960f",
                     "anchorHash": "e3b0c44298fc"
                   },
-                  "code-fence:53": {
+                  "code-fence:55": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "2465625aa50b"
                   },
@@ -550,15 +550,15 @@
                     "contentHash": "4c94be6e708d",
                     "anchorHash": "e645c71fd394"
                   },
-                  "code-fence:61": {
+                  "code-fence:63": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "638f8031fa8a"
                   },
-                  "code-fence:65": {
+                  "code-fence:67": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "dd0606f19bba"
                   },
-                  "code-fence:67": {
+                  "code-fence:69": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "3e9cf4d84f5b"
                   },
@@ -566,15 +566,15 @@
                     "contentHash": "71d662401df4",
                     "anchorHash": "9131f0b1ad2d"
                   },
-                  "code-fence:73": {
+                  "code-fence:75": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "0999fd88f721"
                   },
-                  "code-fence:75": {
+                  "code-fence:77": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "e0dfc4db5ba7"
                   },
-                  "code-fence:77": {
+                  "code-fence:79": {
                     "contentHash": "e3b0c44298fc",
                     "anchorHash": "a9ea26882c19"
                   },
@@ -632,12 +632,14 @@
                   "inline-code:0",
                   "prose:2",
                   "code-fence:47",
-                  "prose:2",
-                  "inline-code:0",
                   "prose:3",
-                  "inline-code:1",
+                  "inline-code:0",
                   "prose:4",
-                  "code-fence:53",
+                  "inline-code:1",
+                  "prose:5",
+                  "inline-code:2",
+                  "prose:6",
+                  "code-fence:55",
                   "prose:3",
                   "inline-code:0",
                   "prose:4",
@@ -645,23 +647,23 @@
                   "prose:5",
                   "link:2",
                   "prose:6",
-                  "code-fence:61",
+                  "code-fence:63",
                   "prose:1",
                   "inline-code:0",
                   "prose:2",
-                  "code-fence:65",
-                  "prose:0",
                   "code-fence:67",
+                  "prose:0",
+                  "code-fence:69",
                   "prose:2",
                   "inline-code:0",
                   "prose:3",
                   "link:1",
                   "prose:4",
-                  "code-fence:73",
-                  "prose:0",
                   "code-fence:75",
                   "prose:0",
                   "code-fence:77",
+                  "prose:0",
+                  "code-fence:79",
                   "prose:4",
                   "inline-code:0",
                   "prose:5",
@@ -1560,5 +1562,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "0ea6355466d19ecfa05d5436cb9bdb5b5464e5a4"
 }

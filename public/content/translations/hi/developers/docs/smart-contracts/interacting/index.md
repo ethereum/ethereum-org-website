@@ -1,6 +1,6 @@
 ---
-title: स्मार्ट कॉन्ट्रैक्ट के साथ इंटरैक्ट करना
-description: जानें कि इथेरियम पर पहले से तैनात स्मार्ट कॉन्ट्रैक्ट से कैसे पढ़ें और उनमें कैसे लिखें।
+title: "स्मार्ट कॉन्ट्रैक्ट के साथ इंटरैक्ट करना"
+description: "जानें कि इथेरियम पर पहले से तैनात स्मार्ट कॉन्ट्रैक्ट से कैसे पढ़ें और उनमें कैसे लिखें।"
 lang: hi
 ---
 
@@ -82,7 +82,7 @@ ABI को कॉन्ट्रैक्ट के निर्देश मै
 
 - **[Ethers.js](https://docs.ethers.org/)** - सर्वर-साइड स्क्रिप्ट और बॉट के लिए Node.js में भी काम करता है
 - **[Web3.py](https://web3py.readthedocs.io/)** - इथेरियम इंटरैक्शन के लिए Python लाइब्रेरी
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Geth टीम की ओर से आधिकारिक Go लाइब्रेरी
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Geth टीम की ओर से आधिकारिक Go लाइब्रेरी
 
 ### उदाहरण: Viem के साथ टोकन बैलेंस पढ़ना {#example-viem}
 

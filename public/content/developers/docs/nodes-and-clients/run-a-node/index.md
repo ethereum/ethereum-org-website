@@ -79,7 +79,7 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 - CPU with 2+ cores
 - 16 GB RAM (32 GB recommended for stability)
-- 2 TB NVMe SSD (likely exceeded by 2027, read more about [Great and less great SSDs for Ethereum nodes](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- 4 TB NVMe SSD (covers a node with full chain history plus room to grow, see client disk sizes below; read more about [Great and less great SSDs for Ethereum nodes](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - 25+ MBit/s bandwidth
 
 ##### Recommended specifications
@@ -93,17 +93,18 @@ Current hardware guidance for node operators is identified in [EIP-7870](https:/
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
 
-| Client     | Disk size (snap sync) | Disk size (full archive) |
+| Client     | Disk size (full node) | Disk size (full archive) |
 | ---------- | --------------------- | ------------------------ |
-| Besu       | 800GB+                | 12TB+                    |
-| Erigon     | N/A                   | 2.5TB+                   |
-| Geth       | 500GB+                | 12TB+                    |
-| Nethermind | 500GB+                | 12TB+                    |
-| Reth       | N/A                   | 2.2TB+                   |
+| Besu       | 1.8TB+                | 12TB+                    |
+| Erigon     | 1.7TB+                | 2.7TB+                   |
+| Geth       | 1.8TB+                | 2TB+                     |
+| Nethermind | 1.7TB+                | 14TB+                    |
+| Reth       | 2.2TB+                | 2.8TB+                   |
 
-- Note: Erigon and Reth do not offer snap sync, but Full Pruning is possible (~2TB for Erigon, ~1.2TB for Reth)
+- Note: Full node sizes keep the complete chain history and were measured in September 2026 by [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Clients that support history expiry need less: about 1.2-1.4TB with post-merge history only, or about 400-650GB with rolling expiry (not yet supported by Geth).
+- Note: Archive sizes come from each client's documentation ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Geth's figure is for its path-based archive; keeping trie history as well takes around 6.5TB. Nethermind's figure dates from July 2023 and has grown since.
 
-For consensus clients, space requirement also depends on client implementation and enabled features (e.g., validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+For consensus clients, space requirement also depends on client implementation and enabled features (e.g., validator slasher) but generally count with another 15-90GB for beacon data, plus around 500GB of blob data if running a supernode. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Plug-and-play solutions {#plug-and-play}
 

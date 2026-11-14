@@ -34,7 +34,9 @@ Kwa sababu akaunti inachagua sheria zake yenyewe, inaweza pia kuchagua mfumo wa 
 
 ## Nini kingine kipo kwenye Hegotá {#scope}
 
-Bado haijaamuliwa. FOCIL na miamala ya fremu ndiyo mabadiliko mawili yaliyopangwa hadi sasa; makumi zaidi yamependekezwa na hakuna hata moja ambalo limeamuliwa. Ukurasa huu utabaki kuwa mfupi hadi upeo utakapokamilika — kwa hali ya sasa ya majadiliano, tazama rasilimali hapa chini.
+Bado haijaamuliwa. FOCIL na miamala ya fremu ni mabadiliko mawili yaliyopangwa hadi sasa; makumi zaidi yamependekezwa na hakuna hata moja ambalo limeamuliwa. Ukurasa huu utabaki mfupi hadi upeo utakapothibitishwa — kwa hali ya sasa ya majadiliano, tazama rasilimali hapa chini.
+
+Mapendekezo yanayofikiriwa kujumuishwa kwa sasa ni pamoja na EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279, na EIP-8365. Kufikiriwa kunamaanisha timu za wateja zinatathmini pendekezo, sio kwamba litatolewa kwenye Hegotá.
 
 ## Kusoma zaidi {#further-reading}
 

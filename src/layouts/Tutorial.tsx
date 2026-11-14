@@ -67,11 +67,8 @@ export const TutorialLayout = ({
       >
         <MainArticle className="flow">
           <Breadcrumbs
-            slug={[
-              ...slug.split("/").slice(0, -1),
-              frontmatter.breadcrumb || slug.split("/").slice(-1),
-            ].join("/")}
-            startDepth={1}
+            slug={slug}
+            label={frontmatter.breadcrumb || frontmatter.title}
           />
           <h1>{frontmatter.title}</h1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />

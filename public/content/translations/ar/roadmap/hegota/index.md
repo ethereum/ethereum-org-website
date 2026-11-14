@@ -36,6 +36,8 @@ template: upgrade
 
 لم يُقرر بعد. <span dir="ltr">FOCIL</span> ومعاملات الإطار هما التغييران المجدولان حتى الآن؛ تم اقتراح العشرات من التغييرات الأخرى ولم يتم حسم أي منها. ستبقى هذه الصفحة قصيرة حتى يتضح النطاق — لمعرفة الحالة الحالية للنقاش، راجع الموارد أدناه.
 
+تشمل المقترحات التي يُنظر حاليًا في تضمينها <span dir="ltr">EIP-3298</span>، و<span dir="ltr">EIP-7668</span>، و<span dir="ltr">EIP-7906</span>، و<span dir="ltr">EIP-7979</span>، و<span dir="ltr">EIP-8015</span>، و<span dir="ltr">EIP-8131</span>، و<span dir="ltr">EIP-8163</span>، و<span dir="ltr">EIP-8198</span>، و<span dir="ltr">EIP-8250</span>، و<span dir="ltr">EIP-8253</span>، و<span dir="ltr">EIP-8272</span>، و<span dir="ltr">EIP-8279</span>، و<span dir="ltr">EIP-8365</span>. كونها قيد النظر يعني أن فرق العملاء تقوم بتقييم المقترح، وليس أنه سيتم إصداره في هيغوتا.
+
 ## قراءة متعمقة {#further-reading}
 
 - [توقعات التفرع (<span dir="ltr">Forkcast</span>): هيغوتا](https://forkcast.org/upgrade/hegota) — الحالة المباشرة لكل مقترح

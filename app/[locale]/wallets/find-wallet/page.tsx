@@ -29,7 +29,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     namespace: "page-wallets-find-wallet",
   })
 
-  const wallets = getCatalogWallets(locale)
+  const walletDescriptions = await getTranslations({
+    locale,
+    namespace: "page-wallet-descriptions",
+  })
+  const wallets = getCatalogWallets(locale, walletDescriptions)
   const networks = getWalletNetworks(wallets)
   const languages = getWalletLanguageOptions(wallets, locale)
 

@@ -1,6 +1,6 @@
 ---
-title: スマート・コントラクトとのやり取り
-description: イーサリアム上にすでにデプロイされているスマート・コントラクトからデータを読み取ったり、データを書き込んだりする方法を学びます。
+title: "スマート・コントラクトとのやり取り"
+description: "イーサリアム上にすでにデプロイされているスマート・コントラクトからデータを読み取ったり、データを書き込んだりする方法を学びます。"
 lang: ja
 ---
 
@@ -82,7 +82,7 @@ ABIはコントラクトの取扱説明書と考えてください。これが�
 
 - **[ethers.js](https://docs.ethers.org/)** - サーバーサイドスクリプトやボット向けにNode.jsでも動作します。
 - **[Web3.py](https://web3py.readthedocs.io/)** - イーサリアムとやり取りするためのPythonライブラリ
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Gethチームによる公式のGoライブラリ
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Gethチームによる公式のGoライブラリ
 
 ### 例：Viemを使用したトークン残高の読み取り {#example-viem}
 

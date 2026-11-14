@@ -52,13 +52,13 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Prohlížeč bloků a API pro transakce**
+**Etherscan - Prohlížeč bloků a transakční API**
 - [Dokumentace](https://docs.etherscan.io/)
 
 **Blockscout - Open source prohlížeč bloků**
 - [Dokumentace](https://docs.blockscout.com/)
 
-**GetBlock -** **_Blockchain jako služba pro vývoj ve Web3_**
+**GetBlock-** **_Blockchain jako služba pro vývoj ve Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Dokumentace](https://docs.getblock.io/)
@@ -91,6 +91,12 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 - [Dokumentace](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_Infrastruktura EVM JSON-RPC s plným, archivním a veřejným přístupem bez klíče._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Dokumentace](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_Rychlostně orientované uzly Etherea jako API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
@@ -100,13 +106,19 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 
 ### Vývojové nástroje {#development-tools}
 
+**eth.zig -** **_Knihovna v jazyce Zig pro Ethereum s kódováním aplikačního binárního rozhraní (ABI) v době kompilace a vazbami na kontrakty._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Dokumentace](https://ethzig.org)
+- [Příklady](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
 **ethers-kt -** **_Asynchronní, vysoce výkonná knihovna v Kotlin/Java/Android pro blockchainy založené na EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Příklady](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_Open source integrační knihovna .NET pro blockchain._**
+**Nethereum -** **_Open source integrační .NET knihovna pro blockchain._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Dokumentace](https://docs.nethereum.com/docs/getting-started/welcome/)
@@ -115,8 +127,8 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 **Nástroje pro Python -** **_Různé knihovny pro interakci s Ethereem pomocí Pythonu._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [Web3.py GitHub](https://github.com/ethereum/web3.py)
-- [Web3.py Chat](https://gitter.im/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_Ultimátní platforma pro vývoj na blockchainu._**
 
@@ -125,7 +137,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 - [Dokumentace](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_Integrační knihovna v Java/Android/Kotlin/Scala pro Ethereum._**
+**web3j -** **_Integrační knihovna v Java/Android/Kotlin/Scala pro Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Dokumentace](https://docs.web3j.io/)

@@ -1,34 +1,50 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-founders.json",
-  "generatedAt": "2026-07-22T22:38:58.255Z",
-  "rootHash": "56ecdb704281",
+  "generatedAt": "2026-10-21T21:37:51.499Z",
+  "rootHash": "969316148a0b",
   "tree": {
-    "contentHash": "d740529ac9a0",
-    "anchorHash": "0e86922e73d2",
+    "contentHash": "702191d6d30a",
+    "anchorHash": "361bb66ccdeb",
     "children": {
-      "page-founders-accelerators-alliance-description": {
-        "contentHash": "5c40027db5f4",
+      "page-founders-accelerators-alliance-terms-description": {
+        "contentHash": "d694102bd620",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-accelerators-alliance-highlight-1": {
-        "contentHash": "62f4a4862188",
+      "page-founders-accelerators-alliance-terms-highlight-1": {
+        "contentHash": "ba59990de826",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-accelerators-base-description": {
-        "contentHash": "91a52a1972a7",
+      "page-founders-accelerators-alliance-terms-highlight-2": {
+        "contentHash": "e5f7b78fe25b",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-accelerators-base-highlight-1": {
-        "contentHash": "09b7f75bae38",
+      "page-founders-accelerators-arbitrum-open-house-description": {
+        "contentHash": "9aaea3a1dc0e",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-accelerators-growth-label": {
-        "contentHash": "583577bcd3f0",
+      "page-founders-accelerators-arbitrum-open-house-highlight-1": {
+        "contentHash": "5b2eece52ae9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-accelerators-arbitrum-open-house-highlight-2": {
+        "contentHash": "7bfce86c9116",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-accelerators-arbitrum-open-house-subtitle": {
+        "contentHash": "a1b38e71583d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-accelerators-base-batches-description": {
+        "contentHash": "c8bfc877969d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-accelerators-base-batches-highlight-1": {
+        "contentHash": "58d98aca4f3d",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-accelerators-kernel-description": {
-        "contentHash": "0cc0ca611772",
+        "contentHash": "9a48f782fffe",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-accelerators-kernel-highlight-1": {
@@ -39,12 +55,32 @@
         "contentHash": "150160f43efc",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-founders-accelerators-mentorship-label": {
+        "contentHash": "c2b90433873f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-founders-apply-h2": {
         "contentHash": "a7dbfdbcc4be",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-apply-p1": {
         "contentHash": "2e35af5b78fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-community-ethglobal-description": {
+        "contentHash": "4f919279b034",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-community-events-description": {
+        "contentHash": "18f12beb5e8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-community-label": {
+        "contentHash": "98f09e439ad3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-cta-browse-events": {
+        "contentHash": "8d71009f1092",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-cta-explore-name": {
@@ -87,156 +123,148 @@
         "contentHash": "e6b1e6740f13",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-arbitrum-description": {
-        "contentHash": "e44a50e9667c",
+      "page-founders-funding-base-builders-description": {
+        "contentHash": "b3f00352894e",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-arbitrum-highlight-1": {
-        "contentHash": "ac0259a9d1b6",
+      "page-founders-funding-base-builders-highlight-1": {
+        "contentHash": "4d6e438a5125",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-base-description": {
-        "contentHash": "6185db297b4b",
+      "page-founders-funding-base-builders-highlight-2": {
+        "contentHash": "cc8e41a5587e",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-base-highlight-1": {
-        "contentHash": "30375219c9f3",
+      "page-founders-funding-esp-applicants-description": {
+        "contentHash": "d21579f2680b",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-esp-description": {
-        "contentHash": "a83442b7a065",
+      "page-founders-funding-esp-applicants-highlight-1": {
+        "contentHash": "e5ead5524442",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-esp-highlight-1": {
-        "contentHash": "3c067945775c",
+      "page-founders-funding-esp-applicants-highlight-2": {
+        "contentHash": "c86ecf58553c",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-label": {
-        "contentHash": "e93df741ad32",
+      "page-founders-funding-investment-label": {
+        "contentHash": "f317fcac0a06",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-optimism-description": {
-        "contentHash": "1fafa152b56d",
+      "page-founders-funding-uniswap-description": {
+        "contentHash": "8ecae1b8eec5",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-optimism-highlight-1": {
-        "contentHash": "94f7aeed2485",
+      "page-founders-funding-uniswap-highlight-1": {
+        "contentHash": "57b2326d19ba",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-optimism-highlight-2": {
-        "contentHash": "59be7a605f1a",
+      "page-founders-funding-uniswap-highlight-2": {
+        "contentHash": "d162122b4643",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-funding-polygon-description": {
-        "contentHash": "8b126151b60d",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-funding-polygon-highlight-1": {
-        "contentHash": "aa0f30fe7524",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-funding-unichain-description": {
-        "contentHash": "005469a9cbbd",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-funding-unichain-highlight-1": {
-        "contentHash": "7ef22c8ac054",
+      "page-founders-last-checked": {
+        "contentHash": "22da7a6cb930",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-metadata-description": {
-        "contentHash": "e1bdcb41d703",
+        "contentHash": "30f1d356f1b1",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-metadata-title": {
-        "contentHash": "d2b11268deff",
+        "contentHash": "1c841b44954a",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-partnerships-devconnect-description": {
-        "contentHash": "2f4bfa4f543f",
+      "page-founders-rfpsearch-cta": {
+        "contentHash": "f8fe68f391b2",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-partnerships-ens-description": {
-        "contentHash": "7cc6f21aa574",
+      "page-founders-rfpsearch-h3": {
+        "contentHash": "2f65bfebe83f",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-partnerships-ens-highlight-1": {
-        "contentHash": "6ed0d57ad9ce",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-ens-highlight-2": {
-        "contentHash": "4b97e23520c6",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-ethglobal-description": {
-        "contentHash": "648894de1071",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-label": {
-        "contentHash": "563424c54431",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-protocol-guild-description": {
-        "contentHash": "8e906ce122ed",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-protocol-guild-highlight-1": {
-        "contentHash": "c57c588996ae",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-unichain-description": {
-        "contentHash": "005469a9cbbd",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-founders-partnerships-unichain-highlight-1": {
-        "contentHash": "7ef22c8ac054",
+      "page-founders-rfpsearch-p": {
+        "contentHash": "63e822d6f31f",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-succeed-p1": {
         "contentHash": "1cd5bbc9d835",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-accelerator": {
+      "page-founders-tag-accelerator": {
         "contentHash": "418f3fb67e12",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-active": {
-        "contentHash": "92340695899b",
+      "page-founders-tag-audit-subsidies": {
+        "contentHash": "8d51202fecf4",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-audit-grants": {
-        "contentHash": "e849935980af",
+      "page-founders-tag-cohort-closed": {
+        "contentHash": "96636f996162",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-ecosystem-events": {
-        "contentHash": "ffcf5017f8a4",
+      "page-founders-tag-credits": {
+        "contentHash": "39640729fc7c",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-events": {
+      "page-founders-tag-events": {
         "contentHash": "8d14f6e72de8",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-fundraising": {
-        "contentHash": "31f3c84ef050",
+      "page-founders-tag-gas": {
+        "contentHash": "1e0b43a97745",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-grant-program": {
-        "contentHash": "1ac71c529490",
+      "page-founders-tag-grants": {
+        "contentHash": "b3e1c95a4be3",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-mentorship": {
+      "page-founders-tag-investment": {
+        "contentHash": "40754039ee2b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-tag-mentorship": {
         "contentHash": "737250f70bb3",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-networking": {
-        "contentHash": "204de4b6d5a3",
+      "page-founders-tag-ongoing": {
+        "contentHash": "a90620097624",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-public-goods": {
-        "contentHash": "1b417481145e",
+      "page-founders-tag-open": {
+        "contentHash": "15b652ba89e5",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-founders-support-tag-tooling-infra": {
-        "contentHash": "af62cf9dbf20",
+      "page-founders-tag-public-goods": {
+        "contentHash": "0d95d0a891c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-technical-alchemy-description": {
+        "contentHash": "fe67f87139de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-technical-alchemy-highlight-1": {
+        "contentHash": "6d37e9985ee5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-technical-alchemy-highlight-2": {
+        "contentHash": "6683345b0632",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-technical-arbitrum-description": {
+        "contentHash": "6af3a41758aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-technical-arbitrum-highlight-1": {
+        "contentHash": "95d27a78f887",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-technical-arbitrum-highlight-2": {
+        "contentHash": "454c213a2e41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-founders-technical-label": {
+        "contentHash": "d398df6cd98d",
         "anchorHash": "e3b0c44298fc"
       },
       "page-founders-title": {
@@ -245,59 +273,66 @@
       }
     },
     "childrenOrder": [
-      "page-founders-accelerators-alliance-description",
-      "page-founders-accelerators-alliance-highlight-1",
-      "page-founders-accelerators-base-description",
-      "page-founders-accelerators-base-highlight-1",
-      "page-founders-accelerators-growth-label",
+      "page-founders-accelerators-alliance-terms-description",
+      "page-founders-accelerators-alliance-terms-highlight-1",
+      "page-founders-accelerators-alliance-terms-highlight-2",
+      "page-founders-accelerators-arbitrum-open-house-description",
+      "page-founders-accelerators-arbitrum-open-house-highlight-1",
+      "page-founders-accelerators-arbitrum-open-house-highlight-2",
+      "page-founders-accelerators-arbitrum-open-house-subtitle",
+      "page-founders-accelerators-base-batches-description",
+      "page-founders-accelerators-base-batches-highlight-1",
       "page-founders-accelerators-kernel-description",
       "page-founders-accelerators-kernel-highlight-1",
       "page-founders-accelerators-kernel-highlight-2",
+      "page-founders-accelerators-mentorship-label",
       "page-founders-apply-h2",
       "page-founders-apply-p1",
+      "page-founders-community-ethglobal-description",
+      "page-founders-community-events-description",
+      "page-founders-community-label",
+      "page-founders-cta-browse-events",
       "page-founders-cta-explore-name",
       "page-founders-cta-visit-name",
       "page-founders-description",
-      "page-founders-funding-arbitrum-description",
-      "page-founders-funding-arbitrum-highlight-1",
-      "page-founders-funding-base-description",
-      "page-founders-funding-base-highlight-1",
-      "page-founders-funding-esp-description",
-      "page-founders-funding-esp-highlight-1",
-      "page-founders-funding-label",
-      "page-founders-funding-optimism-description",
-      "page-founders-funding-optimism-highlight-1",
-      "page-founders-funding-optimism-highlight-2",
-      "page-founders-funding-polygon-description",
-      "page-founders-funding-polygon-highlight-1",
-      "page-founders-funding-unichain-description",
-      "page-founders-funding-unichain-highlight-1",
+      "page-founders-funding-base-builders-description",
+      "page-founders-funding-base-builders-highlight-1",
+      "page-founders-funding-base-builders-highlight-2",
+      "page-founders-funding-esp-applicants-description",
+      "page-founders-funding-esp-applicants-highlight-1",
+      "page-founders-funding-esp-applicants-highlight-2",
+      "page-founders-funding-investment-label",
+      "page-founders-funding-uniswap-description",
+      "page-founders-funding-uniswap-highlight-1",
+      "page-founders-funding-uniswap-highlight-2",
+      "page-founders-last-checked",
       "page-founders-metadata-description",
       "page-founders-metadata-title",
-      "page-founders-partnerships-devconnect-description",
-      "page-founders-partnerships-ens-description",
-      "page-founders-partnerships-ens-highlight-1",
-      "page-founders-partnerships-ens-highlight-2",
-      "page-founders-partnerships-ethglobal-description",
-      "page-founders-partnerships-label",
-      "page-founders-partnerships-protocol-guild-description",
-      "page-founders-partnerships-protocol-guild-highlight-1",
-      "page-founders-partnerships-unichain-description",
-      "page-founders-partnerships-unichain-highlight-1",
+      "page-founders-rfpsearch-cta",
+      "page-founders-rfpsearch-h3",
+      "page-founders-rfpsearch-p",
       "page-founders-succeed-p1",
-      "page-founders-support-tag-accelerator",
-      "page-founders-support-tag-active",
-      "page-founders-support-tag-audit-grants",
-      "page-founders-support-tag-ecosystem-events",
-      "page-founders-support-tag-events",
-      "page-founders-support-tag-fundraising",
-      "page-founders-support-tag-grant-program",
-      "page-founders-support-tag-mentorship",
-      "page-founders-support-tag-networking",
-      "page-founders-support-tag-public-goods",
-      "page-founders-support-tag-tooling-infra",
+      "page-founders-tag-accelerator",
+      "page-founders-tag-audit-subsidies",
+      "page-founders-tag-cohort-closed",
+      "page-founders-tag-credits",
+      "page-founders-tag-events",
+      "page-founders-tag-gas",
+      "page-founders-tag-grants",
+      "page-founders-tag-investment",
+      "page-founders-tag-mentorship",
+      "page-founders-tag-ongoing",
+      "page-founders-tag-open",
+      "page-founders-tag-public-goods",
+      "page-founders-technical-alchemy-description",
+      "page-founders-technical-alchemy-highlight-1",
+      "page-founders-technical-alchemy-highlight-2",
+      "page-founders-technical-arbitrum-description",
+      "page-founders-technical-arbitrum-highlight-1",
+      "page-founders-technical-arbitrum-highlight-2",
+      "page-founders-technical-label",
       "page-founders-title"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

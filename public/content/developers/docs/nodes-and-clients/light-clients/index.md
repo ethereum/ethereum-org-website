@@ -42,7 +42,7 @@ Light clients could also be used to upgrade Ethereum wallets. Instead of trustin
 
 There are several light clients in development, including execution, consensus and combined execution/consensus light clients. These are the light client implementations we know of at the time of writing this page:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): consensus light client in TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): consensus light client in TypeScript
 - [Helios](https://github.com/a16z/helios): combined execution and consensus light client in Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): light mode for execution client (in development) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): consensus light client in Nim

@@ -1,6 +1,6 @@
 ---
 title: "كيفية سك ⁦NFT⁩ (الجزء 2/3 من سلسلة دروس ⁦NFT⁩)"
-description: "يصف هذا البرنامج التعليمي كيفية سك ⁦NFT⁩ على سلسلة كتل إيثيريوم باستخدام عقدنا الذكي و⁦Web3⁩."
+description: "يصف هذا البرنامج التعليمي كيفية سك رمز غير قابل للاستبدال ⁦(NFT)⁩ على سلسلة كتل إيثيريوم باستخدام عقدنا الذكي، و⁦Hardhat⁩، و⁦Ethers.js⁩."
 author: "سومي مودجيل"
 tags: ["ERC-721", "Alchemy", "Solidity", "العقود الذكية"]
 skill: beginner
@@ -9,79 +9,55 @@ lang: ar
 published: 2021-04-22
 ---
 
-[Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): <span dir="ltr">$69 Million</span>
-[3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): <span dir="ltr">$11 Million</span>
-[Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): <span dir="ltr">$6 Million</span>
+"سك رمز غير قابل للاستبدال (<span dir="ltr">NFT</span>)" هو عملية نشر نسخة فريدة من الرمز المميز <span dir="ltr">ERC-721</span> الخاص بك على سلسلة الكتل. باستخدام عقدنا الذكي من [الجزء 1 من سلسلة دروس الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>)](/developers/tutorials/how-to-write-and-deploy-an-nft/)، دعنا نستعرض مهاراتنا في <span dir="ltr">Web3</span> ونسك رمزًا غير قابل للاستبدال (<span dir="ltr">NFT</span>). في نهاية هذا البرنامج التعليمي، ستتمكن من سك أي عدد تريده من الرموز غير القابلة للاستبدال (<span dir="ltr">NFTs</span>) كما يشتهي قلبك (ومحفظتك)!
 
-جميعهم قاموا بسك رموزهم غير القابلة للاستبدال (NFTs) باستخدام API القوية من Alchemy. في هذا البرنامج التعليمي، سنعلمك كيفية القيام بالشيء نفسه في أقل من 10 دقائق.
+دعنا نبدأ!
 
-"عملية سك NFT" هي عملية نشر نسخة فريدة من رمز <span dir="ltr">ERC-721</span> الخاص بك على سلسلة الكتل. باستخدام عقدنا الذكي من [الجزء الأول من سلسلة دروس NFT هذه](/developers/tutorials/how-to-write-and-deploy-an-nft/)، دعنا نستعرض مهاراتنا في Web3 ونسك NFT. في نهاية هذا البرنامج التعليمي، ستتمكن من سك أي عدد تريده من رموز NFT كما يشتهي قلبك (ومحفظتك)!
+## الخطوة 1: التحقق من إعداداتك {#install-web3}
 
-دعونا نبدأ!
-
-## الخطوة 1: تثبيت Web3 {#install-web3}
-
-إذا اتبعت البرنامج التعليمي الأول حول إنشاء العقد الذكي لـ NFT الخاص بك، فلديك بالفعل خبرة في استخدام Ethers.js. تشبه Web3 مكتبة Ethers، حيث إنها مكتبة تُستخدم لتسهيل إنشاء الطلبات إلى سلسلة كتل [إيثيريوم](/). في هذا البرنامج التعليمي، سنستخدم [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)، وهي مكتبة Web3 محسنة توفر إعادة المحاولة التلقائية ودعمًا قويًا لـ WebSocket.
-
-في الدليل الرئيسي لمشروعك، قم بتشغيل:
-
-```
-npm install @alch/alchemy-web3
-```
+إذا اتبعت البرنامج التعليمي الأول حول إنشاء العقد الذكي للرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك، فلديك بالفعل كل ما تحتاجه: مشروع <span dir="ltr">Hardhat 3</span> مع [مكون <span dir="ltr">Ethers</span> الإضافي](https://hardhat.org/docs/plugins/hardhat-ethers) و[<span dir="ltr">Ethers.js</span>](https://docs.ethers.org/v6/)، وهي مكتبة تُستخدم لجعل إنشاء الطلبات إلى سلسلة كتل [إيثيريوم](/) أسهل. سنكتب كود السك الخاص بنا كبرنامج نصي في <span dir="ltr">Hardhat</span>، بحيث يعيد استخدام إعدادات شبكة <span dir="ltr">Sepolia</span> وقيم `API_URL` و`PRIVATE_KEY` من الجزء 1 — لا يوجد شيء جديد لتثبيته.
 
 ## الخطوة 2: إنشاء ملف `mint-nft.js` {#create-mintnftjs}
 
-داخل دليل البرامج النصية (scripts) الخاص بك، قم بإنشاء ملف `mint-nft.js` وأضف أسطر التعليمات البرمجية التالية:
+داخل دليل البرامج النصية (`scripts`) الخاص بك، قم بإنشاء ملف `mint-nft.js` وأضف أسطر الكود التالية:
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+import { network } from "hardhat"
+
+const { ethers } = await network.create()
 ```
 
-## الخطوة 3: الحصول على ABI للعقد الخاص بك {#contract-abi}
+كما هو الحال في البرنامج النصي للنشر الخاص بنا، يتصل `network.create()` بالشبكة التي تختارها باستخدام `--network` عند تشغيل البرنامج النصي، ويعطينا كائن `ethers` لها.
 
-إن ABI (واجهة التطبيق الثنائية) للعقد الخاص بنا هي الواجهة للتفاعل مع عقدنا الذكي. يمكنك معرفة المزيد حول [ABI للعقود](/glossary/#abi). يقوم Hardhat تلقائيًا بإنشاء ABI لنا ويحفظه في ملف `MyNFT.json`. من أجل استخدام هذا، سنحتاج إلى تحليل المحتويات عن طريق إضافة أسطر التعليمات البرمجية التالية إلى ملف `mint-nft.js` الخاص بنا:
+## الخطوة 3: الحصول على واجهة التطبيق الثنائية (ABI) للعقد الخاص بك {#contract-abi}
 
-```js
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
+واجهة التطبيق الثنائية (<span dir="ltr">ABI</span>) للعقد الخاص بنا هي الواجهة للتفاعل مع عقدنا الذكي. يمكنك معرفة المزيد حول [واجهات التطبيق الثنائية (<span dir="ltr">ABIs</span>) للعقود](/glossary/#abi). يقوم <span dir="ltr">Hardhat</span> تلقائيًا بإنشاء واجهة التطبيق الثنائية (<span dir="ltr">ABI</span>) لنا عندما يقوم بتجميع العقد ويحفظها في ملف `artifacts/contracts/MyNFT.sol/MyNFT.json`. يقرأها مكون <span dir="ltr">Ethers</span> الإضافي في <span dir="ltr">Hardhat</span> من هناك من أجلنا عندما ننشئ مثيل العقد الخاص بنا في الخطوة 5، لذلك لا نحتاج إلى تحميلها بأنفسنا.
+
+إذا كنت ترغب في رؤية واجهة التطبيق الثنائية (<span dir="ltr">ABI</span>)، يمكنك طباعتها في وحدة التحكم الخاصة بك. من الدليل الجذر لمشروعك، قم بتشغيل:
+
+```sh
+node -p "JSON.stringify(require('./artifacts/contracts/MyNFT.sol/MyNFT.json').abi)"
 ```
 
-إذا كنت ترغب في رؤية ABI، يمكنك طباعته في وحدة التحكم الخاصة بك:
+## الخطوة 4: تكوين البيانات الوصفية للرمز غير القابل للاستبدال (NFT) الخاص بك باستخدام IPFS {#config-meta}
 
-```js
-console.log(JSON.stringify(contract.abi))
-```
+إذا كنت تتذكر من برنامجنا التعليمي في الجزء 1، فإن دالة العقد الذكي `mintNFT` الخاصة بنا تأخذ معلمة `tokenURI` التي يجب أن تشير إلى مستند <span dir="ltr">JSON</span> يصف البيانات الوصفية للرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) — وهو ما يبعث الحياة حقًا في الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>)، مما يسمح له بامتلاك خصائص قابلة للتكوين، مثل الاسم والوصف والصورة والسمات الأخرى.
 
-لتشغيل `mint-nft.js` ورؤية ABI الخاص بك مطبوعًا في وحدة التحكم، انتقل إلى جهازك الطرفي وقم بتشغيل:
+> _نظام الملفات بين الكواكب (<span dir="ltr">IPFS</span>) هو بروتوكول لامركزي وشبكة نظير إلى نظير لتخزين ومشاركة البيانات في نظام ملفات موزع._
 
-```js
-node scripts/mint-nft.js
-```
-## الخطوة 4: تكوين البيانات الوصفية لـ NFT الخاص بك باستخدام IPFS {#config-meta}
-
-إذا كنت تتذكر من برنامجنا التعليمي في الجزء الأول، فإن دالة العقد الذكي `mintNFT` الخاصة بنا تأخذ معلمة tokenURI التي يجب أن تشير إلى مستند JSON يصف البيانات الوصفية لـ NFT — وهو ما يبعث الحياة حقًا في NFT، مما يسمح له بامتلاك خصائص قابلة للتكوين، مثل الاسم والوصف والصورة والسمات الأخرى.
-
-> _نظام الملفات بين الكواكب (IPFS) هو بروتوكول لامركزي وشبكة نظير إلى نظير لتخزين ومشاركة البيانات في نظام ملفات موزع._
-
-سنستخدم Pinata، وهي واجهة برمجة تطبيقات (API) ومجموعة أدوات IPFS ملائمة، لتخزين أصل NFT والبيانات الوصفية الخاصة بنا لضمان أن يكون NFT الخاص بنا لامركزيًا حقًا. إذا لم يكن لديك حساب Pinata، فقم بالتسجيل للحصول على حساب مجاني [هنا](https://app.pinata.cloud) وأكمل الخطوات للتحقق من بريدك الإلكتروني.
+سنستخدم <span dir="ltr">Pinata</span>، وهي واجهة برمجة تطبيقات (<span dir="ltr">API</span>) ومجموعة أدوات <span dir="ltr">IPFS</span> ملائمة، لتخزين أصل الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) والبيانات الوصفية الخاصة بنا لضمان أن الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بنا لامركزي حقًا. إذا لم يكن لديك حساب <span dir="ltr">Pinata</span>، فقم بالتسجيل للحصول على حساب مجاني [هنا](https://app.pinata.cloud) وأكمل الخطوات للتحقق من بريدك الإلكتروني.
 
 بمجرد إنشاء حساب:
 
-- انتقل إلى صفحة "الملفات" (Files) وانقر على زر "تحميل" (Upload) الأزرق في أعلى يسار الصفحة.
+- انتقل إلى [صفحة الملفات](https://app.pinata.cloud/ipfs/files) وانقر على زر "Add" (إضافة) في الزاوية العلوية اليمنى من الصفحة.
 
-- قم بتحميل صورة إلى Pinata — ستكون هذه هي صورة الأصل لـ NFT الخاص بك. لا تتردد في تسمية الأصل بأي اسم تريده.
+- قم بتحميل صورة إلى <span dir="ltr">Pinata</span> — ستكون هذه هي أصل الصورة للرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك. لا تتردد في تسمية الأصل بأي اسم تريده. تأكد من تحميله إلى <span dir="ltr">IPFS</span> العام: لا يمكن جلب الملفات الموجودة على [<span dir="ltr">IPFS</span> الخاص](https://docs.pinata.cloud/files/private-ipfs) بواسطة المحافظ والأسواق التي تعرض الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك.
 
-- بعد التحميل، سترى معلومات الملف في الجدول الموجود في صفحة "الملفات". سترى أيضًا عمود CID. يمكنك نسخ CID بالنقر فوق زر النسخ بجواره. يمكنك عرض ما قمت بتحميله على: `https://gateway.pinata.cloud/ipfs/<CID>`. يمكنك العثور على الصورة التي استخدمناها على IPFS [هنا](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5)، على سبيل المثال.
+- بعد التحميل، سترى الملف مدرجًا في صفحة الملفات مع معرف المحتوى (<span dir="ltr">CID</span>) الخاص به. انسخ معرف المحتوى (<span dir="ltr">CID</span>). يمكنك عرض ما قمت بتحميله على: `https://gateway.pinata.cloud/ipfs/<CID>`، أو من خلال البوابة المخصصة المدرجة ضمن "Gateways" (البوابات) في الشريط الجانبي لـ <span dir="ltr">Pinata</span>. يمكنك العثور على الصورة التي استخدمناها على <span dir="ltr">IPFS</span> [هنا](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5)، على سبيل المثال.
 
-للمتعلمين البصريين، تم تلخيص الخطوات المذكورة أعلاه هنا:
+الآن، سنرغب في تحميل مستند آخر إلى <span dir="ltr">Pinata</span>. ولكن قبل أن نفعل ذلك، نحتاج إلى إنشائه!
 
-![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
-
-الآن، سنرغب في تحميل مستند آخر إلى Pinata. ولكن قبل أن نفعل ذلك، نحتاج إلى إنشائه!
-
-في الدليل الجذري الخاص بك، قم بإنشاء ملف جديد يسمى `nft-metadata.json` وأضف كود json التالي:
+في الدليل الجذر الخاص بك، قم بإنشاء ملف جديد يسمى `nft-metadata.json` وأضف كود <span dir="ltr">JSON</span> التالي:
 
 ```json
 {
@@ -101,226 +77,151 @@ node scripts/mint-nft.js
 }
 ```
 
-لا تتردد في تغيير البيانات في ملف json. يمكنك إزالة أو إضافة إلى قسم السمات (attributes). والأهم من ذلك، تأكد من أن حقل الصورة (image) يشير إلى موقع صورة IPFS الخاصة بك — وإلا، سيتضمن NFT الخاص بك صورة لكلب (لطيف جدًا!).
+لا تتردد في تغيير البيانات في ملف <span dir="ltr">JSON</span>. يمكنك الإزالة أو الإضافة إلى قسم السمات (attributes). والأهم من ذلك، تأكد من أن حقل الصورة يشير إلى موقع صورة <span dir="ltr">IPFS</span> الخاصة بك، بالتنسيق `ipfs://<image-CID>` — وإلا، سيتضمن الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك صورة لكلب (لطيف جدًا!).
 
-بمجرد الانتهاء من تحرير ملف JSON، احفظه وقم بتحميله إلى Pinata، باتباع نفس الخطوات التي قمنا بها لتحميل الصورة.
+بمجرد الانتهاء من تحرير ملف <span dir="ltr">JSON</span>، احفظه وقم بتحميله إلى <span dir="ltr">Pinata</span>، باتباع نفس الخطوات التي قمنا بها لتحميل الصورة. انسخ معرف المحتوى (<span dir="ltr">CID</span>) لملف `nft-metadata.json` أيضًا؛ سنحتاجه في الخطوة 9.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
+## الخطوة 5: إنشاء مثيل للعقد الخاص بك {#instance-contract}
 
-## الخطوة 5: إنشاء نسخة من العقد الخاص بك {#instance-contract}
+الآن، للتفاعل مع عقدنا، نحتاج إلى إنشاء مثيل له في الكود الخاص بنا. للقيام بذلك، سنحتاج إلى عنوان العقد الخاص بنا، والذي طبعه البرنامج النصي للنشر الخاص بنا في الجزء 1. يمكنك أيضًا العثور عليه على [<span dir="ltr">Etherscan</span>](https://sepolia.etherscan.io/) أو [<span dir="ltr">Blockscout</span>](https://eth-sepolia.blockscout.com/) من خلال البحث عن العنوان الذي استخدمته لنشر العقد.
 
-الآن، للتفاعل مع عقدنا، نحتاج إلى إنشاء نسخة منه في الكود الخاص بنا. للقيام بذلك، سنحتاج إلى عنوان العقد الخاص بنا والذي يمكننا الحصول عليه من النشر أو [Blockscout](https://eth-sepolia.blockscout.com/) من خلال البحث عن العنوان الذي استخدمته لنشر العقد.
-
-![View your contract address on Etherscan](./view-contract-etherscan.png)
+![عرض عنوان العقد الخاص بك على Etherscan](./view-contract-etherscan.png)
 
 في المثال أعلاه، عنوان العقد الخاص بنا هو <span dir="ltr">0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778</span>.
 
-بعد ذلك سنستخدم [طريقة العقد](https://docs.web3js.org/api/web3-eth-contract/class/Contract) في Web3 لإنشاء عقدنا باستخدام ABI والعنوان. في ملف `mint-nft.js` الخاص بك، أضف ما يلي:
+بعد ذلك، سنستخدم طريقة `getContractAt` الخاصة بمكون <span dir="ltr">Ethers</span> الإضافي في <span dir="ltr">Hardhat</span> لإنشاء عقدنا باستخدام اسمه (والذي يخبره بواجهة التطبيق الثنائية (<span dir="ltr">ABI</span>) التي يجب استخدامها) وعنوانه. في ملف `mint-nft.js` الخاص بك، أضف ما يلي، مع استبدال العنوان بعنوانك الخاص:
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 ```
 
-## الخطوة 6: تحديث ملف `.env` {#update-env}
+## الخطوة 6: التحقق من ملف `.env` {#update-env}
 
-الآن، من أجل إنشاء وإرسال المعاملات إلى سلسلة إيثيريوم، سنستخدم عنوان حساب إيثيريوم العام الخاص بك للحصول على الرقم الفريد (nonce) للحساب (سنشرح ذلك أدناه).
+يجب توقيع كل معاملة نرسلها باستخدام المفتاح الخاص لحسابك. إذا أكملت الجزء 1 من البرنامج التعليمي، فيجب أن يبدو ملف `.env` الخاص بنا بالفعل هكذا:
 
-أضف مفتاحك العام إلى ملف `.env` الخاص بك — إذا أكملت الجزء الأول من البرنامج التعليمي، فيجب أن يبدو ملف `.env` الخاص بنا الآن هكذا:
-
-```js
-API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-PRIVATE_KEY = "your-private-account-address"
-PUBLIC_KEY = "your-public-account-address"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
 ```
+
+ليست هناك حاجة لإضافة عنوانك العام: يستنتجه `ethers` من المفتاح الخاص.
 
 ## الخطوة 7: إنشاء معاملتك {#create-txn}
 
-أولاً، دعنا نحدد دالة باسم `mintNFT(tokenData)` وننشئ معاملتنا عن طريق القيام بما يلي:
+أولاً، دعنا نحدد دالة تسمى `mintNFT(tokenURI)` وننشئ معاملتنا عن طريق القيام بما يلي:
 
-1. احصل على _PRIVATE_KEY_ و _PUBLIC_KEY_ من ملف `.env`.
+1. الحصول على الحساب الذي نرسل المعاملة منه. تُرجع `ethers.getSigners()` الحسابات المكونة للشبكة، والتي تكون على <span dir="ltr">Sepolia</span> هي الحساب الذي يوجد مفتاحه الخاص في `.env`. نظرًا لأن `mintNFT` هي `onlyOwner`، يجب أن يكون هذا هو نفس الحساب الذي نشر العقد.
 
-1. بعد ذلك، سنحتاج إلى معرفة الرقم الفريد (nonce) للحساب. تُستخدم مواصفات الرقم الفريد لتتبع عدد المعاملات المرسلة من عنوانك — وهو ما نحتاجه لأغراض أمنية ولمنع هجمات إعادة الإرسال. للحصول على عدد المعاملات المرسلة من عنوانك، نستخدم [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
+1. استدعاء دالة `mintNFT` على مثيل العقد الخاص بنا، مع عنواننا الخاص كمتلقي ومعرف الموارد المنتظم (<span dir="ltr">URI</span>) للبيانات الوصفية. هذا هو الحساب الذي نرغب في إجرائه في هذه المعاملة — والذي يتمثل في هذه الحالة في سك رمز غير قابل للاستبدال (<span dir="ltr">NFT</span>).
 
-1. أخيرًا، سنقوم بإعداد معاملتنا بالمعلومات التالية:
-
-- `'from': PUBLIC_KEY` — مصدر معاملتنا هو عنواننا العام
-
-- `'to': contractAddress` — العقد الذي نرغب في التفاعل معه وإرسال المعاملة إليه
-
-- `'nonce': nonce` — الرقم الفريد للحساب مع عدد المعاملات المرسلة من عنواننا
-
-- `'gas': estimatedGas` — الغاز المقدر اللازم لإكمال المعاملة
-
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — العملية الحسابية التي نرغب في إجرائها في هذه المعاملة — والتي تتمثل في هذه الحالة في سك NFT
+لا تحتاج إلى حساب الرقم الفريد (عدد المعاملات المرسلة من عنوانك، والذي يمنع هجمات إعادة التشغيل)، أو حد الغاز، أو الرسوم بنفسك: يقوم `ethers` بجلبها أو تقديرها قبل إرسال المعاملة.
 
 يجب أن يبدو ملف `mint-nft.js` الخاص بك هكذا الآن:
 
 ```js
-   require('dotenv').config();
-   const API_URL = process.env.API_URL;
-   const PUBLIC_KEY = process.env.PUBLIC_KEY;
-   const PRIVATE_KEY = process.env.PRIVATE_KEY;
+import { network } from "hardhat"
 
-   const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-   const web3 = createAlchemyWeb3(API_URL);
+const { ethers } = await network.create()
 
-   const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-   const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778";
-   const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
-   async function mintNFT(tokenURI) {
-     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //الحصول على أحدث رقم فريد
+async function mintNFT(tokenURI) {
+  const [signer] = await ethers.getSigners()
 
-   //المعاملة
-     const tx = {
-       'from': PUBLIC_KEY,
-       'to': contractAddress,
-       'nonce': nonce,
-       'gas': 500000,
-       'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
-     };
-   }​
+  // أرسل المعاملة. تقوم ethers بملء الـ nonce وحد الغاز والرسوم نيابة عنا.
+  const tx = await nftContract.mintNFT(signer.address, tokenURI)
+}
 ```
+
 ## الخطوة 8: توقيع المعاملة {#sign-txn}
 
-الآن بعد أن أنشأنا معاملتنا، نحتاج إلى توقيعها من أجل إرسالها. هنا سنستخدم مفتاحنا الخاص.
+نظرًا لأن الشبكة مكونة بمفتاحنا الخاص، يقوم `ethers` بتوقيع المعاملة به تلقائيًا قبل إرسالها.
 
-سيعطينا `web3.eth.sendSignedTransaction` تجزئة المعاملة، والتي يمكننا استخدامها للتأكد من أنه تم تعدين معاملتنا ولم يتم إسقاطها بواسطة الشبكة. ستلاحظ في قسم توقيع المعاملة، أننا أضفنا بعض التحقق من الأخطاء حتى نعرف ما إذا كانت معاملتنا قد تمت بنجاح.
+يعود استدعاء `mintNFT` بمجرد إرسال المعاملة، ويعطينا تجزئة المعاملة، والتي يمكننا استخدامها للتأكد من أنه تم تعدين معاملتنا ولم يتم إسقاطها بواسطة الشبكة. ثم ينتظر `tx.wait()` حتى يتم تضمين المعاملة في كتلة. لقد أضفنا أيضًا بعض التحقق من الأخطاء حتى نعرف ما إذا كانت معاملتنا قد تمت بنجاح.
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
+import { network } from "hardhat"
 
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+const { ethers } = await network.create()
 
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //الحصول على أحدث رقم فريد
+  const [signer] = await ethers.getSigners()
 
-  //المعاملة
-  const tx = {
-    from: PUBLIC_KEY,
-    to: contractAddress,
-    nonce: nonce,
-    gas: 500000,
-    data: nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
+  try {
+    // أرسل المعاملة. تقوم ethers بملء الـ nonce وحد الغاز والرسوم نيابة عنا.
+    const tx = await nftContract.mintNFT(signer.address, tokenURI)
+    console.log("The hash of your transaction is:", tx.hash)
+
+    // انتظر حتى يتم تضمين المعاملة في كتلة
+    const receipt = await tx.wait()
+    console.log("Your NFT was minted in block", receipt.blockNumber)
+  } catch (err) {
+    console.log("Something went wrong when submitting your transaction:", err)
   }
-
-  const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
-  signPromise
-    .then((signedTx) => {
-      web3.eth.sendSignedTransaction(
-        signedTx.rawTransaction,
-        function (err, hash) {
-          if (!err) {
-            console.log(
-              "The hash of your transaction is: ",
-              hash,
-              "\nCheck Alchemy's Mempool to view the status of your transaction!"
-            )
-          } else {
-            console.log(
-              "Something went wrong when submitting your transaction:",
-              err
-            )
-          }
-        }
-      )
-    })
-    .catch((err) => {
-      console.log(" Promise failed:", err)
-    })
 }
 ```
 
-## الخطوة 9: استدعاء `mintNFT` وتشغيل عقدة `mint-nft.js` {#call-mintnft-fn}
+## الخطوة 9: استدعاء `mintNFT` وتشغيل `mint-nft.js` {#call-mintnft-fn}
 
-هل تتذكر `metadata.json` الذي قمت بتحميله إلى Pinata؟ احصل على رمز التجزئة الخاص به من Pinata وقم بتمرير ما يلي كمعلمة إلى الدالة `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
+هل تتذكر ملف `nft-metadata.json` الذي قمت بتحميله إلى <span dir="ltr">Pinata</span>؟ احصل على معرف المحتوى (<span dir="ltr">CID</span>) الخاص به من <span dir="ltr">Pinata</span> وقم بتمرير `ipfs://<metadata-CID>` كمعلمة للدالة `mintNFT`. تقوم المحافظ والأسواق بتحليل معرفات الموارد المنتظمة (<span dir="ltr">URIs</span>) التي تبدأ بـ `ipfs://` من خلال بوابة <span dir="ltr">IPFS</span> من اختيارهم، لذلك لا يعتمد الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك على أي بوابة واحدة.
 
-إليك كيفية الحصول على رمز التجزئة:
+> تحقق مرة أخرى من أن معرف المحتوى (<span dir="ltr">CID</span>) الذي نسخته يرتبط بملف **nft-metadata.json** الخاص بك عن طريق تحميل `https://gateway.pinata.cloud/ipfs/<metadata-CID>` في نافذة منفصلة. يجب أن تبدو الصفحة مشابهة للقطة الشاشة أدناه:
 
-![How to get your nft metadata hashcode on Pinata](./metadataPinata.gif)_كيفية الحصول على رمز تجزئة البيانات الوصفية لـ NFT الخاص بك على Pinata_
+![يجب أن تعرض صفحتك البيانات الوصفية بتنسيق json](./metadataJSON.png)_يجب أن تعرض صفحتك البيانات الوصفية بتنسيق <span dir="ltr">json</span>_
 
-> تحقق مرة أخرى من أن رمز التجزئة الذي نسخته يرتبط بـ **metadata.json** الخاص بك عن طريق تحميل `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` في نافذة منفصلة. يجب أن تبدو الصفحة مشابهة للقطة الشاشة أدناه:
-
-![Your page should display the json metadata](./metadataJSON.png)_يجب أن تعرض صفحتك البيانات الوصفية بتنسيق json_
-
-بشكل عام، يجب أن يبدو الكود الخاص بك هكذا:
+إجمالاً، يجب أن يبدو الكود الخاص بك هكذا تقريبًا:
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
+import { network } from "hardhat"
 
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+const { ethers } = await network.create()
 
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //الحصول على أحدث رقم فريد
+  const [signer] = await ethers.getSigners()
 
-  //المعاملة
-  const tx = {
-    from: PUBLIC_KEY,
-    to: contractAddress,
-    nonce: nonce,
-    gas: 500000,
-    data: nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
+  try {
+    // أرسل المعاملة. تقوم ethers بملء الـ nonce وحد الغاز والرسوم نيابة عنا.
+    const tx = await nftContract.mintNFT(signer.address, tokenURI)
+    console.log("The hash of your transaction is:", tx.hash)
+
+    // انتظر حتى يتم تضمين المعاملة في كتلة
+    const receipt = await tx.wait()
+    console.log("Your NFT was minted in block", receipt.blockNumber)
+  } catch (err) {
+    console.log("Something went wrong when submitting your transaction:", err)
   }
-
-  const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
-  signPromise
-    .then((signedTx) => {
-      web3.eth.sendSignedTransaction(
-        signedTx.rawTransaction,
-        function (err, hash) {
-          if (!err) {
-            console.log(
-              "The hash of your transaction is: ",
-              hash,
-              "\nCheck Alchemy's Mempool to view the status of your transaction!"
-            )
-          } else {
-            console.log(
-              "Something went wrong when submitting your transaction:",
-              err
-            )
-          }
-        }
-      )
-    })
-    .catch((err) => {
-      console.log("Promise failed:", err)
-    })
 }
 
-mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
+await mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
-الآن، قم بتشغيل `node scripts/mint-nft.js` لنشر NFT الخاص بك. بعد بضع ثوانٍ، يجب أن ترى استجابة مثل هذه في جهازك الطرفي:
+الآن، قم بتشغيل البرنامج النصي على <span dir="ltr">Sepolia</span> لسك الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك:
 
-    تجزئة المعاملة الخاصة بك هي: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+```sh
+npx hardhat run scripts/mint-nft.js --network sepolia
+```
 
-    تحقق من مجمع الذاكرة (Mempool) الخاص بـ Alchemy لعرض حالة معاملتك!
+بعد بضع ثوانٍ، يجب أن ترى استجابة مثل هذه في جهازك الطرفي:
 
-بعد ذلك، قم بزيارة [مجمع الذاكرة في Alchemy](https://dashboard.alchemy.com/mempool) لمعرفة حالة معاملتك (سواء كانت معلقة أو تم تعدينها أو تم إسقاطها بواسطة الشبكة). إذا تم إسقاط معاملتك، فمن المفيد أيضًا التحقق من [Blockscout](https://eth-sepolia.blockscout.com/) والبحث عن تجزئة المعاملة الخاصة بك.
+```text
+The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+Your NFT was minted in block <block number>
+```
 
-![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_عرض تجزئة معاملة NFT الخاصة بك على Etherscan_
+لرؤية تفاصيل معاملتك، ابحث عن التجزئة الخاصة بها على [<span dir="ltr">Etherscan</span>](https://sepolia.etherscan.io/) أو [<span dir="ltr">Blockscout</span>](https://eth-sepolia.blockscout.com/).
 
-وهذا كل شيء! لقد قمت الآن بنشر وسك NFT على سلسلة كتل إيثيريوم <Emoji text=":money_mouth_face:" size={1} />
+![عرض تجزئة معاملة الرمز غير القابل للاستبدال (NFT) الخاص بك على Etherscan](./view-nft-etherscan.png)_عرض تجزئة معاملة الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك على <span dir="ltr">Etherscan</span>_
 
-باستخدام `mint-nft.js` يمكنك سك أي عدد تريده من رموز NFT كما يشتهي قلبك (ومحفظتك)! فقط تأكد من تمرير tokenURI جديد يصف البيانات الوصفية لـ NFT (وإلا، سينتهي بك الأمر بصنع مجموعة من الرموز المتطابقة بمعرفات مختلفة).
+وهذا كل شيء! لقد قمت الآن بنشر وسك رمز غير قابل للاستبدال (<span dir="ltr">NFT</span>) على سلسلة كتل إيثيريوم <Emoji text=":money_mouth_face:" size={1} />
 
-من المفترض أنك ترغب في التباهي بـ NFT الخاص بك في محفظتك — لذا تأكد من الاطلاع على [الجزء 3: كيفية عرض NFT الخاص بك في محفظتك](/developers/tutorials/how-to-view-nft-in-metamask/)!
+باستخدام `mint-nft.js`، يمكنك سك أي عدد تريده من الرموز غير القابلة للاستبدال (<span dir="ltr">NFTs</span>) كما يشتهي قلبك (ومحفظتك)! فقط تأكد من تمرير `tokenURI` جديد يصف البيانات الوصفية للرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) (وإلا، سينتهي بك الأمر بصنع مجموعة من الرموز المتطابقة بمعرفات مختلفة).
+
+من المفترض أنك ترغب في التباهي بالرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك في محفظتك — لذا تأكد من مراجعة [الجزء 3: كيفية عرض الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك في محفظتك](/developers/tutorials/how-to-view-nft-in-metamask/)!

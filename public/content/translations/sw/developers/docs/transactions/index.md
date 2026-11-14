@@ -178,7 +178,7 @@ Gesi yoyote ambayo haijatumika katika muamala inarejeshwa kwenye akaunti ya mtum
 
 Gesi inahitajika kwa muamala wowote unaohusisha mkataba mahiri.
 
-Mikataba mahiri inaweza pia kuwa na vipengele vinavyojulikana kama vipengele vya [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) au [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), ambavyo havibadilishi hali ya mkataba. Kwa hivyo, kuita vipengele hivi kutoka kwa EOA hakutahitaji gesi yoyote. Mwito wa msingi wa RPC kwa hali hii ni [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Mikataba mahiri inaweza pia kuwa na vipengele vinavyojulikana kama vipengele vya [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) au [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), ambavyo havibadilishi hali ya mkataba. Kwa hivyo, kuita vipengele hivi kutoka kwa EOA hakutahitaji gesi yoyote. Mwito wa msingi wa RPC kwa hali hii ni [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 Tofauti na inavyofikiwa kwa kutumia `eth_call`, vipengele hivi vya `view` au `pure` pia huitwa kwa kawaida kwa ndani (yaani, kutoka kwa mkataba wenyewe au kutoka kwa mkataba mwingine) jambo ambalo linagharimu gesi.
 

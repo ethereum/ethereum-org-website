@@ -209,7 +209,7 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
     - 50'den fazla blokzincir düğümüne erişim
 
 - [**Infura**](https://infura.io/)
-  - [Belgeler](https://infura.io/docs)
+  - [Belgeler](https://docs.infura.io/)
   - Özellikler
     - Ücretsiz katman seçeneği
     - Kullandıkça ölçeklendirin

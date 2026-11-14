@@ -230,5 +230,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`：CFG 的進入點
 - `variables_read (list(Variable))`：讀取的變數清單
 - `variables_written (list(Variable))`：寫入的變數清單
-- `state_variables_read (list(StateVariable))`：讀取的狀態變數清單 (variables`read 的子集)
-- `state_variables_written (list(StateVariable))`：寫入的狀態變數清單 (variables`written 的子集)
+- `state_variables_read (list(StateVariable))`：讀取的狀態變數清單 (`variables_read` 的子集)
+- `state_variables_written (list(StateVariable))`：寫入的狀態變數清單 (`variables_written` 的子集)

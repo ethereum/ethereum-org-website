@@ -165,7 +165,7 @@ Sepolia 鏈 ID。
 function App() {
 ```
 
-這是建立 React 元件的標準方法：定義一個在需要渲染時被呼叫的函式。此函式通常包含 TypeScript 或 JavaScript 程式碼，接著是一個回傳 JSX 程式碼的 `return` 敘述。
+這是建立 React 元件的標準方式：定義一個在需要渲染時會被呼叫的函式。此函式通常包含 TypeScript 或 JavaScript 程式碼，接著是一個回傳 JSX 程式碼的 `return` 敘述。
 
 ```tsx
   const connection = useConnection()
@@ -173,7 +173,7 @@ function App() {
 
 使用 [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) 來取得與目前連線相關的資訊，例如地址和 `chainId`。
 
-按照慣例，在 React 中名為 `use...` 的函式是 [hooks](https://www.w3schools.com/react/react_hooks.asp)。這些函式不僅會將資料回傳給元件；它們還能確保當資料變更時，元件會重新渲染（再次執行元件函式，並將其輸出替換 HTML 中先前的輸出）。
+按照慣例，在 React 中名為 `use...` 的函式是 [Hook](https://www.w3schools.com/react/react_hooks.asp)。這些函式不僅會將資料回傳給元件，還會確保當資料變更時重新渲染元件（再次執行元件函式，並將其輸出替換 HTML 中先前的輸出）。
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -185,19 +185,19 @@ function App() {
   const { disconnect } = useDisconnect()
 ```
 
-[這個 hook](https://wagmi.sh/react/api/hooks/useDisconnect) 提供了我們中斷錢包連線的函式。
+[這個 Hook](https://wagmi.sh/react/api/hooks/useDisconnect) 為我們提供了中斷錢包連線的函式。
 
 ```tsx
   const { switchChain } = useSwitchChain()
 ```
 
-[這個 hook](https://wagmi.sh/react/api/hooks/useSwitchChain) 讓我們可以切換鏈。
+[這個 Hook](https://wagmi.sh/react/api/hooks/useSwitchChain) 讓我們可以切換鏈。
 
 ```tsx
   useEffect(() => {
 ```
 
-React hook [`useEffect`](https://react.dev/reference/react/useEffect) 讓你在變數值變更時執行一個函式，以同步外部系統。
+React Hook [`useEffect`](https://react.dev/reference/react/useEffect) 讓你可以每當變數的值變更時執行一個函式，以同步外部系統。
 
 ```tsx
     if (connection.status === 'connected' &&
@@ -207,20 +207,20 @@ React hook [`useEffect`](https://react.dev/reference/react/useEffect) 讓你在�
     }
 ```
 
-如果我們已連線，但不是連線到 Sepolia 區塊鏈，則切換到 Sepolia。
+如果我們已連線，但不是連線到 Sepolia 區塊鏈，請切換到 Sepolia。
 
 ```tsx
   }, [connection.status, connection.chainId])
 ```
 
-每次連線狀態或連線 chainId 變更時，重新執行該函式。
+每當連線狀態或連線 chainId 變更時，重新執行該函式。
 
 ```tsx
   return (
     <>
 ```
 
-React 元件的 JSX <em>必須</em>回傳單一 HTML 元件。當我們有多個元件且不需要容器來包裝它們時，我們使用一個空元件 (`<> ... </>`) 將它們組合成單一元件。
+React 元件的 JSX <em>必須</em>回傳單一 HTML 元件。當我們有多個元件且不需要容器來包裝它們時，我們會使用空元件 (`<> ... </>`) 將它們組合成單一元件。
 
 ```tsx
       <h2>Connection</h2>
@@ -240,9 +240,9 @@ React 元件的 JSX <em>必須</em>回傳單一 HTML 元件。當我們有多個
       {connection.status === 'connected' && (
 ```
 
-語法 `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`」。
+語法 `{<condition> && <value>}` 的意思是「如果條件為 `true`，則求值為該值；如果不是，則求值為 `false`」。
 
-這是將 if 敘述放入 JSX 中的標準方法。
+這是將 if 敘述放入 JSX 中的標準方式。
 
 ```tsx
         <div>
@@ -250,9 +250,9 @@ React 元件的 JSX <em>必須</em>回傳單一 HTML 元件。當我們有多個
           <hr />
 ```
 
-JSX 遵循 XML 標準，這比 HTML 更嚴格。如果標籤沒有對應的結束標籤，它_必須_在末尾加上斜線 (`/`) 來終止它。
+JSX 遵循 XML 標準，該標準比 HTML 更嚴格。如果標籤沒有對應的結束標籤，則_必須_在結尾處加上斜線 (`/`) 來終止它。
 
-這裡我們有兩個這樣的標籤，`<Greeter />`（它實際上包含與合約通訊的 HTML 程式碼）和[代表水平線的 `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)。
+這裡我們有兩個這樣的標籤：`<Greeter />`（實際上包含與合約通訊的 HTML 程式碼）和[代表水平線的 `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)。
 
 ```tsx
           <button type="button" onClick={disconnect}>
@@ -269,7 +269,7 @@ JSX 遵循 XML 標準，這比 HTML 更嚴格。如果標籤沒有對應的結�
       {connection.status !== 'connected' && (
 ```
 
-如果我們_尚未_連線，則顯示連接到錢包的必要選項。
+如果我們_未_連線，則顯示連線到錢包的必要選項。
 
 ```tsx
         <div>
@@ -284,7 +284,7 @@ JSX 遵循 XML 標準，這比 HTML 更嚴格。如果標籤沒有對應的結�
               key={connector.uid}
 ```
 
-在 JSX 中，「兄弟」標籤（來自同一個父層的標籤）必須具有不同的識別碼。
+在 JSX 中，「同層」標籤（來自同一個父層的標籤）必須具有不同的識別碼。
 
 ```tsx
               onClick={() => connect({ connector })}

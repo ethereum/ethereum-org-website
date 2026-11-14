@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "{name} பற்றி",
+  "catalog-item-gallery-modal-title": "{name} திரைப்பிடிப்புகள்",
+  "catalog-item-gallery-screenshot-alt": "{name} இன் திரைப்பிடிப்பு {index}",
+  "catalog-item-gallery-title": "காட்சியகம்",
+  "catalog-item-info-title": "தகவல்",
+  "catalog-item-link-label": "{platform} இல் {name}",
+  "catalog-item-see-next": "அடுத்துப் பார்க்க",
+  "catalog-item-source-code": "மூலக் குறியீடு",
+  "catalog-item-view-on-github": "GitHub இல் பார்க்க",
+  "catalog-item-visit-website": "இணையதளத்தைப் பார்வையிடவும்"
+}

@@ -58,18 +58,11 @@
   "page-apps-filter-by": "ফিল্টার করুন",
   "page-apps-filter-all": "সব",
   "page-apps-showing": "দেখাচ্ছে",
-  "page-apps-visit-app": "{appName} ভিজিট করুন",
-  "page-apps-see-next": "পরবর্তী দেখুন",
-  "page-apps-info-title": "তথ্য",
   "page-apps-info-founded": "প্রতিষ্ঠিত",
   "page-apps-info-creator": "নির্মাতা",
-  "page-apps-info-last-updated": "সর্বশেষ আপডেট",
-  "page-apps-gallery-title": "গ্যালারি",
-  "page-apps-gallery-screenshot-alt": "অ্যাপ্লিকেশন ইন্টারফেস দেখানো {appName}-এর স্ক্রিনশট {index}",
-  "page-apps-gallery-modal-title": "{appName} স্ক্রিনশট",
+  "page-apps-info-languages": "ভাষা",
+  "page-apps-info-listing-reviewed": "লিস্টিং পর্যালোচনা করা হয়েছে",
+  "page-apps-info-listing-reviewed-tooltip": "ethereum.org-এ এই অ্যাপটির বিবরণ সর্বশেষ কবে পর্যালোচনা করা হয়েছিল। অ্যাপটি নিজে সর্বশেষ কবে পরিবর্তিত হয়েছিল তা এটি দেখায় না।",
   "page-apps-more-apps-like-this": "এরকম আরও অ্যাপ",
-  "page-apps-by-company": "{company} দ্বারা",
-  "page-apps-today": "আজ",
-  "page-apps-one-day-ago": "1 দিন আগে",
-  "page-apps-days-ago": "{days} দিন আগে"
+  "page-apps-detail-meta-title": "ইথেরিয়াম অ্যাপস - {name}"
 }

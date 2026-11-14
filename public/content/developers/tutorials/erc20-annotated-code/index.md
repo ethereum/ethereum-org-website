@@ -14,11 +14,19 @@ published: 2021-03-09
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard,
 [ERC-20](/developers/docs/standards/tokens/erc-20/). This standard makes it possible to write tools, such as liquidity pools and wallets, that work with all ERC-20
 tokens. In this article we will analyze the
-[OpenZeppelin Solidity ERC20 implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), as well as the
-[interface definition](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+[OpenZeppelin Solidity ERC20 implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol), as well as the
+[interface definition](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol).
 
 This is annotated source code. If you want to implement ERC-20,
-[read this tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+[read this tutorial](https://docs.openzeppelin.com/contracts/5.x/erc20-supply).
+
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+This walk-through covers OpenZeppelin Contracts v3.3 (Solidity 0.6/0.7). If you install `@openzeppelin/contracts` today you get v5.x, which differs from the code below: it uses Solidity's built-in checked arithmetic instead of `SafeMath`, replaces `_beforeTokenTransfer` and `_afterTokenTransfer` with a single `_update` function, drops `increaseAllowance`, `decreaseAllowance` and `_setupDecimals`, and reports failures with custom errors instead of revert strings. The concepts explained here still apply. See the [OpenZeppelin v5 ERC-20 documentation](https://docs.openzeppelin.com/contracts/5.x/erc20) for the current API.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## The Interface {#the-interface}
 
@@ -32,7 +40,7 @@ MetaMask, a dapp such as etherscan.io, or a different contract such as liquidity
 If you are an experienced programmer, you probably remember seeing similar constructs in [Java](https://www.w3schools.com/java/java_interface.asp)
 or even in [C header files](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html).
 
-This is a definition of the [ERC-20 Interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)
+This is a definition of the [ERC-20 Interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/IERC20.sol)
 from OpenZeppelin. It is a translation of the [human readable standard](https://eips.ethereum.org/EIPS/eip-20) into Solidity code. Of course, the
 interface itself does not define _how_ to do anything. That is explained in the contract source code below.
 
@@ -227,7 +235,7 @@ These events are emitted when the state of the ERC-20 contract changes.
 ## The Actual Contract {#the-actual-contract}
 
 This is the actual contract that implements the ERC-20 standard,
-[taken from here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
+[taken from here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/token/ERC20/ERC20.sol).
 It is not meant to be used as-is, but you can
 [inherit](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) from it to extend it to something usable.
 
@@ -252,7 +260,7 @@ import "../../math/SafeMath.sol";
 - `GSN/Context.sol` is the definitions required to use [OpenGSN](https://opengsn.org/), a system that allows users without ether
   to use the blockchain. Note that this is an old version, if you want to integrate with OpenGSN
   [use this tutorial](https://docs.opengsn.org/javascript-client/tutorial.html).
-- [The SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/), which prevents
+- [The SafeMath library](https://docs.openzeppelin.com/contracts/3.x/api/math#SafeMath), which prevents
   arithmetic overflows/underflows for Solidity versions **&lt;0.8.0**. In Solidity ≥0.8.0, arithmetic operations automatically
   revert on overflow/underflow, making SafeMath unnecessary. This contract uses SafeMath for backward compatibility with
   older compiler versions.
@@ -306,7 +314,7 @@ This line specifies the inheritance, in this case from `IERC20` from above and `
 ```
 
 This line attaches the `SafeMath` library to the `uint256` type. You can find this library
-[here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
+[here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/SafeMath.sol).
 
 ### Variable Definitions {#variable-definitions}
 
@@ -362,7 +370,7 @@ it was hard to make change when somebody wanted to buy a duck's worth of cow.
 
 The solution is to keep track of integers, but count instead of the real token a fractional token that is
 nearly worthless. In the case of ether, the fractional token is called wei, and 10^18 wei is equal to one
-ETH. At writing, 10,000,000,000,000 wei is approximately one US or Euro cent.
+ETH.
 
 Applications need to know how to display the token balance. If a user has 3,141,000,000,000,000,000 wei, is that
 3.14 ETH? 31.41 ETH? 3,141 ETH? In the case of ether it is defined 10^18 wei to the ETH, but for your
@@ -382,8 +390,6 @@ token you can select a different value. If dividing the token doesn't make sense
      * construction.
      */
     constructor (string memory name_, string memory symbol_) public {
-        // In Solidity ≥0.7.0, 'public' is implicit and can be omitted.
-
         _name = name_;
         _symbol = symbol_;
         _decimals = 18;
@@ -391,6 +397,7 @@ token you can select a different value. If dividing the token doesn't make sense
 ```
 
 The constructor is called when the contract is first created. By convention, function parameters are named `<something>_`.
+Starting with Solidity 0.7.0, visibility (`public` or `internal`) on constructors is ignored and deprecated, so newer code omits it.
 
 ### User Interface Functions {#user-interface-functions}
 
@@ -437,7 +444,7 @@ strings, can be stored in three locations:
 | -------- | ------------- | --------------- | -------------------------------------------------------------- |
 | Memory   | Function call | Read/Write      | Tens or hundreds (higher for higher locations)                 |
 | Calldata | Function call | Read Only       | Can't be used as a return type, only a function parameter type |
-| Storage  | Until changed | Read/Write      | High (800 for read, 20k for write)                             |
+| Storage  | Until changed | Read/Write      | High (2,100 for a cold read, 20,000 for a new write)           |
 
 In this case, `memory` is the best choice.
 
@@ -730,7 +737,7 @@ fail if the zero address is used as the sender or the recipient.
 There are two ways to use this contract:
 
 1. Use it as a template for your own code
-1. [Inherit from it](https://www.bitdegree.org/learn/solidity-inheritance), and override only those functions that you need to modify
+1. [Inherit from it](https://docs.soliditylang.org/en/latest/contracts.html#inheritance), and override only those functions that you need to modify
 
 The second method is much better because the OpenZeppelin ERC-20 code has already been audited and shown to be secure. When you use inheritance
 it is clear what are the functions you modify, and to trust your contract people only need to audit those specific functions.

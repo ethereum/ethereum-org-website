@@ -12,7 +12,6 @@ import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import SearchButton from "./SearchButton"
-import SearchInputButton from "./SearchInputButton"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
@@ -57,11 +56,8 @@ const Search = ({ asChild = false, children }: SearchProps) => {
   return (
     <>
       {asChild ? (
-        <Slot
-          ref={searchButtonRef}
-          onClick={handleOpen}
-          data-testid="search-button"
-        >
+        // No test id here: `search-button` belongs to the nav, and e2e expects one per page.
+        <Slot ref={searchButtonRef} onClick={handleOpen}>
           {children}
         </Slot>
       ) : (
@@ -71,7 +67,11 @@ const Search = ({ asChild = false, children }: SearchProps) => {
             data-testid="search-button"
             className="xl:hidden"
           />
-          <SearchInputButton className="max-xl:hidden" onClick={handleOpen} />
+          <SearchButton
+            withInput
+            className="max-xl:hidden"
+            onClick={handleOpen}
+          />
         </>
       )}
       <Portal.Root>

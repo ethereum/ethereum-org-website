@@ -32,9 +32,11 @@ Une transaction Frame déplace la vérification dans le compte lui-même. Le com
 
 Puisque le compte choisit ses propres règles, il peut également choisir un schéma de signature qu'un ordinateur quantique ne pourrait pas casser. Cela en fait une étape vers la [résistance quantique](/roadmap/security/#quantum-resistance) ainsi que vers de meilleurs portefeuilles.
 
-## Quoi d'autre dans Hegotá {#scope}
+## Qu'y a-t-il d'autre dans Hegotá ? {#scope}
 
-Ce n'est pas encore décidé. FOCIL et les transactions Frame sont les deux changements programmés jusqu'à présent ; des dizaines d'autres ont été proposés et aucun d'entre eux n'est arrêté. Cette page restera courte jusqu'à ce que la portée se précise — pour l'état actuel de la discussion, consultez les ressources ci-dessous.
+Rien n'est encore décidé. FOCIL et les transactions Frame sont les deux changements programmés jusqu'à présent ; des dizaines d'autres ont été proposés et aucun n'est encore arrêté. Cette page restera courte jusqu'à ce que la portée se précise — pour l'état actuel de la discussion, consultez les ressources ci-dessous.
+
+Les propositions actuellement envisagées pour être incluses comprennent les EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279 et EIP-8365. Le fait d'être envisagée signifie que les équipes clientes évaluent une proposition, et non qu'elle sera intégrée à Hegotá.
 
 ## Complément d'information {#further-reading}
 

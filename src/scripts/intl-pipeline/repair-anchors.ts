@@ -26,6 +26,7 @@
 import * as fs from "fs"
 import * as path from "path"
 
+import { proseLineMask } from "./lib/shared-patterns"
 import {
   englishCounterpart,
   type Finding,
@@ -37,15 +38,10 @@ const dryRun = process.argv.includes("--dry-run")
 /** Heading lines outside fenced code, with their anchor if they carry one. */
 function headings(src: string) {
   const out: { line: number; level: number; anchor: string | null }[] = []
-  let fence: string | null = null
-  src.split("\n").forEach((line, i) => {
-    const f = line.match(/^\s*(`{3,}|~{3,})/)
-    if (f) {
-      if (!fence) fence = f[1][0]
-      else if (line.trim().startsWith(fence)) fence = null
-      return
-    }
-    if (fence) return
+  const lines = src.split("\n")
+  const prose = proseLineMask(lines)
+  lines.forEach((line, i) => {
+    if (!prose[i]) return
     const h = line.match(/^(#{1,6})\s+(.*)$/)
     if (!h) return
     const anchor = h[2].match(/\{#[^}]*\}/)

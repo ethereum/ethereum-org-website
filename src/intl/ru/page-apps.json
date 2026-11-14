@@ -58,18 +58,11 @@
   "page-apps-filter-by": "Фильтровать по",
   "page-apps-filter-all": "Все",
   "page-apps-showing": "Показано",
-  "page-apps-visit-app": "Посетить {appName}",
-  "page-apps-see-next": "Смотреть далее",
-  "page-apps-info-title": "Информация",
   "page-apps-info-founded": "Основано",
   "page-apps-info-creator": "Создатель",
-  "page-apps-info-last-updated": "Последнее обновление",
-  "page-apps-gallery-title": "Галерея",
-  "page-apps-gallery-screenshot-alt": "Скриншот {index} приложения {appName}, показывающий интерфейс",
-  "page-apps-gallery-modal-title": "Скриншоты {appName}",
+  "page-apps-info-languages": "Языки",
+  "page-apps-info-listing-reviewed": "Информация проверена",
+  "page-apps-info-listing-reviewed-tooltip": "Когда информация об этом приложении на ethereum.org проверялась в последний раз. Это не показывает, когда в последний раз менялось само приложение.",
   "page-apps-more-apps-like-this": "Больше похожих приложений",
-  "page-apps-by-company": "от {company}",
-  "page-apps-today": "Сегодня",
-  "page-apps-one-day-ago": "1 день назад",
-  "page-apps-days-ago": "{days} дн. назад"
+  "page-apps-detail-meta-title": "Приложения Эфириума - {name}"
 }

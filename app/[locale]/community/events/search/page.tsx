@@ -15,7 +15,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import EventCard from "../_components/event-card"
 import NoResultsAlert from "../_components/no-results-alert"
 import OrganizerCTA from "../_components/organizer-cta"
-import { getMeetupGroups, mapEventTranslations, sanitize } from "../utils"
+import { getMeetupGroups } from "../meetup-groups"
+import { mapEventTranslations, sanitize } from "../utils"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -45,7 +46,7 @@ const Page = async (props: {
   const tCommon = await getTranslations("common")
 
   const apiEvents = mapEventTranslations(_events, t, locale)
-  const meetupGroups = getMeetupGroups(locale)
+  const meetupGroups = await getMeetupGroups(locale)
   const events = [...apiEvents, ...meetupGroups]
 
   const filteredEvents = ((): EventItem[] => {

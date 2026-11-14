@@ -232,10 +232,11 @@ const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
 
       {/* Static links for SEO — these URLs are only reachable via the JS
           dialog modal above, so we render them visually-hidden to ensure
-          crawlers can discover them. */}
-      <nav aria-label="Quick links" className="sr-only select-none">
+          crawlers can discover them. Kept out of the tab order and a11y tree:
+          the dialog already exposes them to keyboard and screen-reader users. */}
+      <nav aria-hidden="true" className="sr-only select-none">
         {crawlerOnlyLinks.map(({ label, href }) => (
-          <BaseLink key={href} href={href}>
+          <BaseLink key={href} href={href} tabIndex={-1}>
             {label}
           </BaseLink>
         ))}

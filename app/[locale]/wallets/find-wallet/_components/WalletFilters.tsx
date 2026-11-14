@@ -1,7 +1,6 @@
 "use client"
 
 import { useCallback, useMemo } from "react"
-import { RotateCcw } from "lucide-react"
 
 import CatalogCheckboxGroup from "@/components/FilterableCatalog/CatalogCheckboxGroup"
 import type {
@@ -35,6 +34,9 @@ const trackFilterToggle = (action: string, name: string) =>
     eventAction: action,
     eventName: name,
   })
+
+export const trackFiltersReset = () =>
+  trackFilterToggle("Reset button", "reset_click")
 
 type WalletFiltersLabels = {
   device: string
@@ -204,46 +206,6 @@ export default function WalletFilters({
         selectedIds={selectedAdvanced}
         onToggle={onToggleAdvanced}
       />
-    </div>
-  )
-}
-
-/** Rendered via FilterableCatalog's `renderSidebarHeader` slot. */
-export function WalletFiltersHeader({
-  state,
-  setFilter,
-  labels,
-}: {
-  state: CatalogFilterState
-  setFilter: CatalogSetFilter
-  labels: { filters: string; reset: string }
-}) {
-  const activeCount = ALL_FILTER_KEYS.reduce(
-    (total, key) => total + asArray(state[key]).length,
-    0
-  )
-
-  const reset = useCallback(() => {
-    for (const key of ALL_FILTER_KEYS) {
-      setFilter(key, undefined, { scroll: false })
-    }
-    trackFilterToggle("Reset button", "reset_click")
-  }, [setFilter])
-
-  return (
-    <div className="flex items-center justify-between px-1">
-      <p className="text-sm font-bold">
-        {labels.filters} ({activeCount})
-      </p>
-      <button
-        type="button"
-        onClick={reset}
-        disabled={activeCount === 0}
-        className="flex items-center gap-1.5 text-sm text-primary transition-opacity hover:underline disabled:pointer-events-none disabled:opacity-40"
-      >
-        <RotateCcw className="size-4" />
-        {labels.reset}
-      </button>
     </div>
   )
 }

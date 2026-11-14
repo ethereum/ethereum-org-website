@@ -87,7 +87,6 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   const { locale } = params
   setRequestLocale(locale)
   const t = await getTranslations("page-developers-index")
-  const tCommon = await getTranslations("common")
 
   // client messages for the swipers (the page has no root I18nProvider)
   const allMessages = await getMessages({ locale })
@@ -141,11 +140,11 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
       />
 
       <HubHero
+        breadcrumbs={{ slug: "developers" }}
         heroImg={heroImage}
         header={`${t("page-developers-title-1")} ${t(
           "page-developers-title-2"
         )} ${t("page-developers-title-3")}`}
-        title={tCommon("developers")}
         description={t("page-developers-subtitle")}
       />
 
@@ -432,6 +431,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardFooter>
               </Card>
             </Grid>
+
+            <div className="mt-space-2x flex justify-center max-sm:*:w-full">
+              <ButtonLink href="/developers/tools/" className="max-md:w-full">
+                {t("page-developers-view-tools")}
+              </ButtonLink>
+            </div>
           </Section>
 
           {/* Video courses */}
@@ -678,6 +683,15 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 ]}
               />
             </Grid>
+
+            <div
+              data-flow="cta"
+              className="flex justify-center max-sm:*:w-full"
+            >
+              <ButtonLink href="/developers/docs/" className="max-md:w-full">
+                {t("page-developers-docs-overview")}
+              </ButtonLink>
+            </div>
           </Section>
 
           {/* Hackathons */}

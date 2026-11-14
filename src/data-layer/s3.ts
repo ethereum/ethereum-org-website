@@ -163,6 +163,26 @@ async function headContentType(sourceUrl: string): Promise<string | null> {
 }
 
 /**
+ * Why an object on our own host is unusable, or null to keep it. Only a 404 or
+ * a non-image type counts; 403, 5xx and network errors are not proof it's bad.
+ */
+async function checkExistingObject(url: string): Promise<string | null> {
+  try {
+    const response = await fetch(url, {
+      method: "HEAD",
+      signal: AbortSignal.timeout(5_000),
+      headers: { "User-Agent": "ethereum.org-image-sync/1.0" },
+    })
+    if (response.status === 404) return "404"
+    if (!response.ok) return null
+    const type = response.headers.get("content-type")
+    return type && !type.startsWith("image/") ? type : null
+  } catch {
+    return null
+  }
+}
+
+/**
  * Upload an image from an external URL to S3.
  *
  * @param sourceUrl - The external image URL to fetch and upload
@@ -181,8 +201,17 @@ export async function uploadToS3(
     return null
   }
 
-  // Already hosted by us: pass through untouched
-  if (isAlreadyOnS3(sourceUrl)) return sourceUrl
+  // Already hosted by us: pass through untouched, unless the object is missing
+  // (404) or isn't an image (e.g. an HTML page uploaded under a .png key).
+  // Any other failure keeps the URL (fail open).
+  if (isAlreadyOnS3(sourceUrl)) {
+    const problem = await checkExistingObject(sourceUrl)
+    if (problem) {
+      console.warn(`[S3] Dropping existing object (${problem}): ${sourceUrl}`)
+      return null
+    }
+    return sourceUrl
+  }
 
   const bucket = getBucket()
   const s3 = getS3Client()

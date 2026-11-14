@@ -74,6 +74,15 @@ export const MIN_CONTENT_BUDGET_BYTES = 4_096
 // worst case on learn-quizzes.json is 49KB, so this leaves ~30% headroom.
 export const MAX_PROMPT_BYTES = 65_536
 
+// Headroom kept inside MAX_PROMPT_BYTES for the re-parse note (see
+// translateBatchWithParseRetry): a batch planned flush against the ceiling
+// could not be re-sent, and the refusal would mask the parse error.
+export const RETRY_NOTE_RESERVE_BYTES = 1_024
+
+// What the planner targets, so every batch it emits leaves room for that note.
+export const MAX_PLANNED_PROMPT_BYTES =
+  MAX_PROMPT_BYTES - RETRY_NOTE_RESERVE_BYTES
+
 // Maximum recursion depth when splitting a failed batch into sub-batches.
 // On retry exhaustion (validation failure or timeout), translateJsonFile
 // will split the batch in half and retry each half, up to this many levels.

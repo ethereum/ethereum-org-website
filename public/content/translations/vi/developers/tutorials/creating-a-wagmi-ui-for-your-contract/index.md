@@ -159,13 +159,13 @@ Nhập các Thư viện chúng ta cần, cũng như [thành phần `Greeter`](#g
 const SEPOLIA_CHAIN_ID = 11155111
 ```
 
-ID Chuỗi của Sepolia.
+ID Chuỗi Sepolia.
 
 ```
 function App() {
 ```
 
-Đây là cách tiêu chuẩn để tạo một thành phần React: định nghĩa một hàm được gọi bất cứ khi nào nó cần được hiển thị. Hàm này thường chứa mã TypeScript hoặc JavaScript, theo sau là một câu lệnh `return` trả về mã JSX.
+Đây là cách tiêu chuẩn để tạo một thành phần React: định nghĩa một hàm được gọi bất cứ khi nào nó cần được hiển thị. Hàm này thường chứa mã TypeScript hoặc JavaScript, theo sau là câu lệnh `return` trả về mã JSX.
 
 ```tsx
   const connection = useConnection()
@@ -173,7 +173,7 @@ function App() {
 
 Sử dụng [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) để lấy thông tin liên quan đến kết nối hiện tại, chẳng hạn như Địa chỉ và `chainId`.
 
-Theo quy ước, trong React các hàm được gọi là `use...` là các [hook](https://www.w3schools.com/react/react_hooks.asp). Các hàm này không chỉ trả về dữ liệu cho thành phần; chúng còn đảm bảo nó được hiển thị lại (hàm thành phần được thực thi lại và đầu ra của nó thay thế đầu ra trước đó trong HTML) khi dữ liệu đó thay đổi.
+Theo quy ước, trong React các hàm có tên `use...` là các [hook](https://www.w3schools.com/react/react_hooks.asp). Các hàm này không chỉ trả về dữ liệu cho thành phần; chúng còn đảm bảo thành phần được hiển thị lại (hàm thành phần được thực thi lại và đầu ra của nó thay thế đầu ra trước đó trong HTML) khi dữ liệu đó thay đổi.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -191,7 +191,7 @@ Sử dụng [`useConnect`](https://wagmi.sh/react/api/hooks/useConnect) để l�
   const { switchChain } = useSwitchChain()
 ```
 
-[Hook này](https://wagmi.sh/react/api/hooks/useSwitchChain) cho phép chúng ta chuyển đổi Chuỗi.
+[Hook này](https://wagmi.sh/react/api/hooks/useSwitchChain) cho phép chúng ta chuyển đổi các Chuỗi.
 
 ```tsx
   useEffect(() => {
@@ -240,7 +240,7 @@ Cung cấp thông tin về kết nối hiện tại. Trong JSX, `{<expression>}`
       {connection.status === 'connected' && (
 ```
 
-Cú pháp `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
+Cú pháp `{<condition> && <value>}` có nghĩa là "nếu điều kiện là `true`, đánh giá thành giá trị đó; nếu không, đánh giá thành `false`".
 
 Đây là cách tiêu chuẩn để đặt các câu lệnh if bên trong JSX.
 
@@ -250,7 +250,7 @@ Cú pháp `{<condition> && <value>} means "if the condition is `true`, evaluate 
           <hr />
 ```
 
-JSX tuân theo tiêu chuẩn XML, nghiêm ngặt hơn HTML. Nếu một thẻ không có thẻ đóng tương ứng, nó _phải_ có một dấu gạch chéo (`/`) ở cuối để kết thúc nó.
+JSX tuân theo tiêu chuẩn XML, nghiêm ngặt hơn HTML. Nếu một thẻ không có thẻ đóng tương ứng, nó _phải_ có dấu gạch chéo (`/`) ở cuối để kết thúc.
 
 Ở đây chúng ta có hai thẻ như vậy, `<Greeter />` (thực sự chứa mã HTML giao tiếp với hợp đồng) và [`<hr />` cho một đường ngang](https://www.w3schools.com/tags/tag_hr.asp).
 
@@ -277,14 +277,14 @@ Nếu chúng ta _chưa_ kết nối, hãy hiển thị các tùy chọn cần th
           {connectors.map((connector) => (
 ```
 
-Trong `connectors` chúng ta có một danh sách các trình kết nối. Chúng ta sử dụng [`map`](https://www.w3schools.com/jsref/jsref_map.asp) để biến nó thành một danh sách các nút JSX để hiển thị.
+Trong `connectors`, chúng ta có một danh sách các trình kết nối. Chúng ta sử dụng [`map`](https://www.w3schools.com/jsref/jsref_map.asp) để biến nó thành một danh sách các nút JSX để hiển thị.
 
 ```tsx
             <button
               key={connector.uid}
 ```
 
-Trong JSX, các thẻ "anh em" (các thẻ có cùng một thẻ cha) cần phải có các định danh khác nhau.
+Trong JSX, các thẻ "anh em" (các thẻ bắt nguồn từ cùng một thẻ cha) cần phải có các định danh khác nhau.
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -305,9 +305,9 @@ Các nút trình kết nối.
       )}
 ```
 
-Cung cấp thông tin bổ sung. Cú pháp biểu thức `<variable>?.<field>` cho JavaScript biết rằng nếu biến được định nghĩa, hãy đánh giá trường đó. Nếu biến không được định nghĩa, thì biểu thức này đánh giá thành `undefined`.
+Cung cấp thông tin bổ sung. Cú pháp biểu thức `<variable>?.<field>` cho JavaScript biết rằng nếu biến được định nghĩa, hãy đánh giá thành trường đó. Nếu biến không được định nghĩa, thì biểu thức này đánh giá thành `undefined`.
 
-Biểu thức `error.message`, khi không có lỗi, sẽ gây ra một ngoại lệ. Sử dụng `error?.message` cho phép chúng ta tránh được vấn đề này.
+Biểu thức `error.message`, khi không có lỗi, sẽ gây ra ngoại lệ. Sử dụng `error?.message` cho phép chúng ta tránh được vấn đề này.
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 

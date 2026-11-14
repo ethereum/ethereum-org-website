@@ -6,6 +6,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -42,29 +43,10 @@ export default async function TutorialsPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Developers",
-              item: normalizeUrlForJsonLd(locale, "/developers/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: t("page-tutorial-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          "developers/tutorials"
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#tutorials` },

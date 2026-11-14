@@ -1,6 +1,6 @@
 ---
 title: Decentralized social networks
-description: An overview of decentralized social networks on Ethereum
+description: "What are decentralized social networks? Learn how Ethereum-based social apps let you own your identity, content and audience instead of a platform."
 lang: en
 template: use-cases
 sidebarDepth: 2

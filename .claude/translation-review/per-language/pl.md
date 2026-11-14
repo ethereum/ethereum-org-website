@@ -134,3 +134,50 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - privacy-online `vpn-table-3-not` `już nie` negation shift; "among the weakest" -> "the weakest"; F-Droid `darmowego` (#83).
 - hegota:21 committee referent (each member proposes).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `enterprise-privacy` `swapy` -> `wymiany` (glossary).
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- audited -> `zbadanych`; policy -> `polityczną`; twoj/Twoj capitalization mixed.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+- Warning: enterprise JSON compare-row-auditability `Publiczne i weryfikowalne` should agree with feminine row label (`Publiczna i weryfikowalna`).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.2/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 10 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Polish output is accurate, idiomatic and consistent with the glossary. The only critical items are three founders tag labels the pipeline left in English across all locales. The rest are word-choice warnings, mainly the false friend `legalny` in scam-token-tricks.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `podpisananą` typo changed to `podpisaną` (sending:202)
+
+**Notes:**
+
+- Warnings: NFT gender drift (mint, neuter vs masculine); MetaMask UI labels given only in Polish.

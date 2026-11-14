@@ -58,18 +58,11 @@
   "page-apps-filter-by": "దీని ద్వారా ఫిల్టర్ చేయండి",
   "page-apps-filter-all": "అన్నీ",
   "page-apps-showing": "చూపుతోంది",
-  "page-apps-visit-app": "{appName}ని సందర్శించండి",
-  "page-apps-see-next": "తర్వాత చూడండి",
-  "page-apps-info-title": "సమాచారం",
   "page-apps-info-founded": "స్థాపించబడింది",
   "page-apps-info-creator": "సృష్టికర్త",
-  "page-apps-info-last-updated": "చివరిగా అప్‌డేట్ చేయబడింది",
-  "page-apps-gallery-title": "గ్యాలరీ",
-  "page-apps-gallery-screenshot-alt": "అప్లికేషన్ ఇంటర్‌ఫేస్‌ను చూపుతున్న {appName} యొక్క స్క్రీన్‌షాట్ {index}",
-  "page-apps-gallery-modal-title": "{appName} స్క్రీన్‌షాట్‌లు",
+  "page-apps-info-languages": "భాషలు",
+  "page-apps-info-listing-reviewed": "జాబితా సమీక్షించబడింది",
+  "page-apps-info-listing-reviewed-tooltip": "ethereum.org లో ఈ యాప్ గురించిన వివరాలు చివరిగా ఎప్పుడు సమీక్షించబడ్డాయో ఇది సూచిస్తుంది. యాప్ స్వయంగా చివరిగా ఎప్పుడు మార్చబడిందో ఇది చూపదు.",
   "page-apps-more-apps-like-this": "ఇలాంటి మరిన్ని యాప్‌లు",
-  "page-apps-by-company": "{company} ద్వారా",
-  "page-apps-today": "ఈరోజు",
-  "page-apps-one-day-ago": "1 రోజు క్రితం",
-  "page-apps-days-ago": "{days} రోజుల క్రితం"
+  "page-apps-detail-meta-title": "ఎథీరియం యాప్‌లు - {name}"
 }

@@ -13,7 +13,6 @@ import {
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import DevconIndiaLargeCallout from "@/components/DevconIndia/large-callout"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -42,8 +41,9 @@ import ContinentTabs from "./_components/continent-tabs"
 import EventCard from "./_components/event-card"
 import FilterEvents from "./_components/filter-events"
 import { SECTION_IDS } from "./constants"
+import { getMeetupGroups } from "./meetup-groups"
 import PageJsonLD from "./page-jsonld"
-import { getMeetupGroups, mapEventTranslations } from "./utils"
+import { mapEventTranslations } from "./utils"
 
 import { getEventsData } from "@/lib/data"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
@@ -90,7 +90,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups(locale)
+  const meetupGroups = await getMeetupGroups(locale)
   const meetups = [...apiMeetups, ...meetupGroups]
 
   // Continent labels for tabs
@@ -139,9 +139,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         title={t("page-events-hero-title", { year: getLocaleYear(locale) })}
         description={t("page-events-hero-subtitle")}
       />
-
-      {/* Devcon VIII India callout banner */}
-      <DevconIndiaLargeCallout sourcePage="events" preload />
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">

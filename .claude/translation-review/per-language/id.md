@@ -109,3 +109,42 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - privacy-fixes video L42 `melakukan Log` (glossary casing leaked into a verb) -> `mencatat`.
 - zk-rollups:43 `diwajibkan` over-applied for "required"; API/ENS over-expansion.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.4/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Open (warnings):**
+
+- l2/L2 casing split; `Perbendaharaan` for treasuries; Auditabilitas/Kemampuan audit split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.0/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:440-456 `oracle` -> `orakel` restored (16 sites; `masalah oracle`/`oracle blockchain` kept)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:33: ETHGlossary `blockchain` (translate, high) is `rantai blok` (`dari banyak blockchain di` -> `dari banyak rantai blok di`)
+- page-wallet-descriptions.json:35: Same `blockchain` deviation (`untuk banyak blockchain,` -> `untuk banyak rantai blok,`)
+- page-wallet-descriptions.json:42: Same `blockchain` deviation (`di seluruh blockchain` -> `di seluruh rantai blok`)
+- common.json:149: ETHGlossary `fork` (translate, high) is `percabangan`. English: "History of forks". (`"Riwayat fork"` -> `"Riwayat percabangan"`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Fluent, structurally clean Indonesian. The main problem is that the security page went back from `orakel` to `oracle`, against the high-confidence glossary entry, plus a few meaning shifts in the new founders and prediction-markets copy.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: exclusive `kami` mixed with inclusive `kita` in the mint tutorial; `peristiwa` vs glossary `kejadian` (websockets:79).

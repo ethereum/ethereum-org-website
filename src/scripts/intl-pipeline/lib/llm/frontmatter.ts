@@ -115,12 +115,36 @@ function copyStyle(from: unknown, to: Scalar): void {
  * items, otherwise the field is left untouched and false is returned -- a
  * model that dropped or merged a line must not change the list's shape.
  */
+/**
+ * Drop a `key: ` prefix the model echoed back into the value.
+ *
+ * `frontmatter:<key>` sections ask for plain text and say so, but a model
+ * sometimes returns the YAML line instead of the value -- PR #19474 got
+ * `title: "..."` for te/videos/ai-agents-interview-luna, which nested a second
+ * `title:` inside the value and failed the MDX parse. Only the exact key
+ * followed by a colon is stripped, and the quotes that came with it, so a
+ * translation that merely happens to contain a colon is untouched.
+ */
+export function stripEmittedKeyPrefix(key: string, text: string): string {
+  const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const prefix = new RegExp(`^${escaped}:[ \\t]+`)
+  if (!prefix.test(text)) return text
+  let out = text.replace(prefix, "")
+  // Only when the quotes genuinely wrap the value: `"foo" and "bar"` starts and
+  // ends with a quote without being a quoted string, and unwrapping it would
+  // hand back `foo" and "bar`.
+  const quoted = out.match(/^(["'])([\s\S]*)\1$/)
+  if (quoted && !quoted[2].includes(quoted[1])) out = quoted[2]
+  return out.trim() === "" ? text : out
+}
+
 export function setFrontmatterFieldText(
   doc: Document,
   key: string,
-  text: string,
+  rawText: string,
   template?: Document
 ): boolean {
+  const text = stripEmittedKeyPrefix(key, rawText)
   const existing = doc.get(key, true)
   const templateNode = template?.get(key, true)
   const wantsSeq = isSeq(existing) || (!existing && isSeq(templateNode))

@@ -2,7 +2,7 @@
 title: "Některé triky používané podvodnými tokeny a jak je odhalit"
 description: "V tomto tutoriálu rozebereme podvodný token, abychom viděli některé triky, které podvodníci používají, jak je implementují a jak je můžeme odhalit."
 author: Ori Pomerantz
-tags: ["podvod", "Solidity", "ERC-20", "JavaScript", "TypeScript"]
+tags: ["podvod", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
 breadcrumb: "Triky podvodných tokenů"
 published: 2023-09-15
@@ -13,23 +13,23 @@ V tomto tutoriálu rozebereme [podvodný token](https://etherscan.io/token/0xb04
 
 ## Podvodné tokeny – co to je, proč je lidé vytvářejí a jak se jim vyhnout {#scam-tokens}
 
-Jedním z nejčastějších způsobů využití Etherea je vytvoření obchodovatelného tokenu určitou skupinou, v jistém smyslu jejich vlastní měny. Nicméně všude tam, kde existují legitimní případy užití přinášející hodnotu, se najdou i zločinci, kteří se tuto hodnotu snaží ukrást pro sebe.
+Jedním z nejčastějších způsobů využití Etherea je vytvoření obchodovatelného tokenu určitou skupinou, v jistém smyslu jejich vlastní měny. Nicméně všude tam, kde existují legitimní případy užití, které přinášejí hodnotu, se najdou i zločinci, kteří se snaží tuto hodnotu ukrást pro sebe.
 
-Více si o tomto tématu z pohledu uživatele můžete přečíst [jinde na ethereum.org](/guides/how-to-id-scam-tokens/). Tento tutoriál se zaměřuje na rozebrání podvodného tokenu, abychom viděli, jak to funguje uvnitř a jak jej lze odhalit.
+Více si o tomto tématu z pohledu uživatele můžete přečíst [jinde na ethereum.org](/guides/how-to-id-scam-tokens/). Tento tutoriál se zaměřuje na rozebrání podvodného tokenu, abychom viděli, jak se to dělá a jak jej lze odhalit.
 
 ### Jak poznám, že je wARB podvod? {#warb-scam}
 
 Token, který budeme rozebírat, je [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code), jenž předstírá, že je ekvivalentem legitimního [tokenu ARB](https://etherscan.io/token/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
-Nejjednodušší způsob, jak poznat, který token je legitimní, je podívat se na původní organizaci, [Arbitrum](https://arbitrum.foundation/). Legitimní adresy jsou uvedeny [v jejich dokumentaci](https://docs.arbitrum.foundation/deployment-addresses#token).
+Nejsnazší způsob, jak poznat, který token je legitimní, je podívat se na původní organizaci, [Arbitrum](https://arbitrum.foundation/). Legitimní adresy jsou uvedeny [v jejich dokumentaci](https://docs.arbitrum.foundation/deployment-addresses#token).
 
 ### Proč je zdrojový kód dostupný? {#why-source}
 
-Normálně bychom očekávali, že lidé, kteří se snaží podvést ostatní, budou tajnůstkářští, a skutečně mnoho podvodných tokenů svůj kód nezveřejňuje (například [tento](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452#code) a [tento](https://optimistic.etherscan.io/token/0x026b623eb4aada7de37ef25256854f9235207178#code)).
+Normálně bychom očekávali, že lidé, kteří se snaží podvést ostatní, budou tajnůstkářští, a skutečně mnoho podvodných tokenů nemá svůj kód k dispozici (například [tento](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452#code) a [tento](https://optimistic.etherscan.io/token/0x026b623eb4aada7de37ef25256854f9235207178#code)).
 
-Legitimní tokeny však obvykle svůj zdrojový kód zveřejňují, takže aby autoři podvodných tokenů působili legitimně, někdy dělají totéž. [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) je jedním z těch tokenů, které mají zdrojový kód dostupný, což usnadňuje jeho pochopení.
+Nicméně legitimní tokeny obvykle svůj zdrojový kód zveřejňují, takže aby autoři podvodných tokenů působili legitimně, někdy dělají totéž. [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) je jedním z těch tokenů, které mají zdrojový kód dostupný, což usnadňuje jeho pochopení.
 
-Ačkoli si ti, kdo nasazují kontrakt, mohou vybrat, zda zdrojový kód zveřejní, nebo ne, _nemohou_ zveřejnit nesprávný zdrojový kód. Prohlížeč bloků nezávisle zkompiluje poskytnutý zdrojový kód, a pokud nezíská naprosto stejný bajtkód, tento zdrojový kód odmítne. [Více si o tom můžete přečíst na webu Etherscan](https://etherscan.io/verifyContract).
+Ačkoli si ti, kdo nasazují kontrakt, mohou vybrat, zda zdrojový kód zveřejní, nebo ne, _nemohou_ zveřejnit nesprávný zdrojový kód. Prohlížeč bloků nezávisle zkompiluje poskytnutý zdrojový kód, a pokud nezíská naprosto stejný bajtkód, tento zdrojový kód odmítne. [Více si o tom můžete přečíst na stránkách Etherscan](https://etherscan.io/verifyContract).
 
 ## Srovnání s legitimními tokeny ERC-20 {#compare-legit-erc20}
 
@@ -37,9 +37,9 @@ Tento token porovnáme s legitimními tokeny ERC-20. Pokud nejste obeznámeni s 
 
 ### Konstanty pro privilegované adresy {#constants-for-privileged-addresses}
 
-Kontrakty někdy potřebují privilegované adresy. Kontrakty, které jsou navrženy pro dlouhodobé používání, umožňují nějaké privilegované adrese tyto adresy změnit, například pro umožnění použití nového kontraktu multisig. Existuje několik způsobů, jak to udělat.
+Kontrakty někdy potřebují privilegované adresy. Kontrakty, které jsou navrženy pro dlouhodobé používání, umožňují nějaké privilegované adrese tyto adresy změnit, například aby bylo možné použít nový multisig kontrakt. Existuje několik způsobů, jak to udělat.
 
-Kontrakt tokenu [`HOP`](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) používá vzor [`Ownable`](https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable). Privilegovaná adresa je uchovávána v úložišti, v poli zvaném `_owner` (viz třetí soubor, `Ownable.sol`).
+Kontrakt tokenu [`HOP`](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) používá vzor [`Ownable`](https://docs.openzeppelin.com/contracts/3.x/access-control#ownership-and-ownable). Privilegovaná adresa je uchovávána v úložišti, v poli zvaném `_owner` (viz třetí soubor, `Ownable.sol`).
 
 ```solidity
 abstract contract Ownable is Context {
@@ -54,7 +54,7 @@ Kontrakt tokenu [`ARB`](https://etherscan.io/address/0xad0c361ef902a7d9851ca7dcc
 
 ```solidity
     /**
-     * @dev Ukládá novou adresu do EIP1967 admin slotu.
+     * @dev Ukládá novou adresu do admin slotu EIP1967.
      */
     function _setAdmin(address newAdmin) private {
         require(newAdmin != address(0), "ERC1967: new admin is the zero address");
@@ -191,13 +191,13 @@ Toto omezení dává naprostý smysl, protože bychom nechtěli, aby tokeny dist
 }
 ```
 
-Funkce pro převod z účtu fondu na pole příjemců s polem částek dává naprostý smysl. Existuje mnoho případů užití, kdy budete chtít distribuovat tokeny z jednoho zdroje do více cílů, jako jsou výplaty, airdropy atd. Je levnější (na gas) to provést v jediné transakci namísto vydávání více transakcí, nebo dokonce vícenásobného volání ERC-20 z jiného kontraktu v rámci stejné transakce.
+Funkce pro převod z účtu fondu (pool) na pole příjemců a pole částek dává naprostý smysl. Existuje mnoho případů užití, kdy budete chtít distribuovat tokeny z jednoho zdroje do více cílů, jako jsou výplaty, airdropy atd. Je levnější (na gas) to provést v jediné transakci namísto vydávání více transakcí, nebo dokonce vícenásobného volání ERC-20 z jiného kontraktu v rámci stejné transakce.
 
-Nicméně `dropNewTokens` to nedělá. Vysílá [události `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1), ale ve skutečnosti žádné tokeny nepřevádí. Neexistuje žádný legitimní důvod mást offchain aplikace tím, že jim budeme hlásit převod, ke kterému ve skutečnosti nedošlo.
+Nicméně `dropNewTokens` to nedělá. Vysílá události [`Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1), ale ve skutečnosti žádné tokeny nepřevádí. Neexistuje žádný legitimní důvod mást offchain aplikace tím, že jim budeme hlásit převod, ke kterému ve skutečnosti nedošlo.
 
 ### Spalovací funkce `Approve` {#the-burning-approve-function}
 
-Kontrakty ERC-20 by měly mít [funkci `approve`](/developers/tutorials/erc20-annotated-code/#approve) pro povolené limity, a náš podvodný token takovou funkci skutečně má, a je dokonce správná. Protože však Solidity vychází z jazyka C, rozlišuje velká a malá písmena. „Approve“ a „approve“ jsou různé řetězce.
+Kontrakty ERC-20 by měly mít [funkci `approve`](/developers/tutorials/erc20-annotated-code/#approve) pro povolené limity, a náš podvodný token takovou funkci skutečně má, a je dokonce správná. Nicméně, protože Solidity vychází z jazyka C, rozlišuje velká a malá písmena. „Approve“ a „approve“ jsou různé řetězce.
 
 Navíc tato funkcionalita nesouvisí s `approve`.
 
@@ -231,11 +231,11 @@ Pro každou adresu držitele funkce přesune celý jeho zůstatek na adresu `0x0
 
 ### Problémy s kvalitou kódu {#code-quality-issues}
 
-Tyto problémy s kvalitou kódu _nedokazují_, že je tento kód podvod, ale působí kvůli nim podezřele. Organizované společnosti jako Arbitrum obvykle nevydávají takto špatný kód.
+Tyto problémy s kvalitou kódu _nedokazují_, že je tento kód podvod, ale dělají ho podezřelým. Organizované společnosti jako Arbitrum obvykle nevydávají takto špatný kód.
 
 #### Funkce `mount` {#the-mount-function}
 
-Ačkoli to není specifikováno ve [standardu](https://eips.ethereum.org/EIPS/eip-20), obecně se funkce, která vytváří nové tokeny, nazývá [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+Ačkoli to není specifikováno ve [standardu](https://eips.ethereum.org/EIPS/eip-20), obecně řečeno se funkce, která vytváří nové tokeny, nazývá [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
 Pokud se podíváme do konstruktoru `wARB`, uvidíme, že funkce pro ražení byla z nějakého důvodu přejmenována na `mount` a je volána pětkrát s pětinou počáteční zásoby, namísto toho, aby byla pro vyšší efektivitu zavolána jednou pro celou částku.
 
@@ -305,20 +305,20 @@ Tento kontrakt obsahuje tři modifikátory: `_mod_`, `auth` a `approver`.
 
 ## Co můžeme odhalit automaticky? {#what-can-we-detect-automatically}
 
-Že je `wARB` podvodný token, můžeme zjistit pohledem na Etherscan. To je však centralizované řešení. Teoreticky by mohl být Etherscan kompromitován nebo hacknut. Je lepší umět nezávisle zjistit, zda je token legitimní, či nikoli.
+Že je `wARB` podvodný token, můžeme vidět při pohledu na Etherscan. To je však centralizované řešení. Teoreticky by mohl být Etherscan podvržen nebo hacknut. Je lepší být schopen nezávisle zjistit, zda je token legitimní, či nikoli.
 
-Existují určité triky, které můžeme použít k identifikaci, že je token ERC-20 podezřelý (buď jde o podvod, nebo je velmi špatně napsaný), a to sledováním událostí, které vysílá.
+Existují určité triky, které můžeme použít k identifikaci, že je token ERC-20 podezřelý (buď podvod, nebo velmi špatně napsaný), a to na základě událostí, které vysílá.
 
 ## Podezřelé události `Approval` {#suspicious-approval-events}
 
-[Události `Approval`](https://eips.ethereum.org/EIPS/eip-20#approval) by měly nastat pouze při přímém požadavku (na rozdíl od [událostí `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1), které mohou nastat v důsledku povoleného limitu). [Podívejte se do dokumentace Solidity](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) pro podrobné vysvětlení tohoto problému a proč musí být požadavky přímé, a nikoli zprostředkované kontraktem.
+K [událostem `Approval`](https://eips.ethereum.org/EIPS/eip-20#approval) by mělo docházet pouze při přímém požadavku (na rozdíl od [událostí `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1), ke kterým může dojít v důsledku povoleného limitu). [Podívejte se do dokumentace Solidity](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) pro podrobné vysvětlení tohoto problému a proč musí být požadavky přímé, a nikoli zprostředkované kontraktem.
 
-To znamená, že události `Approval`, které schvalují útratu z [externě vlastněného účtu](/developers/docs/accounts/#types-of-account), musí pocházet z transakcí, které z tohoto účtu vycházejí a jejichž cílem je kontrakt ERC-20. Jakýkoli jiný druh schválení z externě vlastněného účtu je podezřelý.
+To znamená, že události `Approval`, které schvalují útratu z [externě vlastněného účtu](/developers/docs/accounts/#types-of-account), musí pocházet z transakcí, které mají původ na tomto účtu a jejichž cílem je kontrakt ERC-20. Jakýkoli jiný druh schválení z externě vlastněného účtu je podezřelý.
 
-Zde je [program, který tento druh události identifikuje](https://github.com/qbzzt/20230915-scam-token-detection), s využitím [Viem](https://viem.sh/) a [TypeScript](https://www.typescriptlang.org/docs/), varianty JavaScript s typovou bezpečností. Pro jeho spuštění:
+Zde je [program, který identifikuje tento druh události](https://github.com/qbzzt/20230915-scam-token-detection), pomocí [Viem](https://viem.sh/) a [TypeScript](https://www.typescriptlang.org/docs/), varianty JavaScript s typovou bezpečností. Chcete-li jej spustit:
 
 1. Zkopírujte `.env.example` do `.env`.
-2. Upravte `.env` tak, aby poskytoval URL k uzlu Ethereum Mainnet.
+2. Upravte `.env` tak, aby poskytoval URL adresu uzlu Ethereum Mainnet.
 3. Spusťte `pnpm install` pro instalaci potřebných balíčků.
 4. Spusťte `pnpm susApproval` pro vyhledání podezřelých schválení.
 
@@ -335,14 +335,14 @@ import {
 import { mainnet } from "viem/chains"
 ```
 
-Import definic typů, funkcí a definice řetězce z `viem`.
+Importujte definice typů, funkce a definici řetězce z `viem`.
 
 ```typescript
 import { config } from "dotenv"
 config()
 ```
 
-Přečtení `.env` pro získání URL.
+Přečtěte `.env` pro získání URL.
 
 ```typescript
 const client = createPublicClient({
@@ -351,7 +351,7 @@ const client = createPublicClient({
 })
 ```
 
-Vytvoření klienta Viem. Potřebujeme pouze číst z blockchainu, takže tento klient nepotřebuje soukromý klíč.
+Vytvořte klienta Viem. Potřebujeme pouze číst z blockchainu, takže tento klient nepotřebuje soukromý klíč.
 
 ```typescript
 const testedAddress = "0xb047c8032b99841713b8e3872f06cf32beb27b82"
@@ -372,23 +372,23 @@ const approvalEvents = await client.getLogs({
 })
 ```
 
-Toto je způsob, jak požádat Viem o informace o události. Když mu poskytneme přesný podpis události, včetně názvů polí, událost pro nás analyzuje.
+Toto je způsob, jak požádat Viem o informace o události. Když mu poskytneme přesný podpis události, včetně názvů polí, událost za nás analyzuje.
 
 ```typescript
 const isContract = async (addr: Address): boolean =>
   await client.getBytecode({ address: addr })
 ```
 
-Náš algoritmus je použitelný pouze pro externě vlastněné účty. Pokud `client.getBytecode` vrátí nějaký bajtkód, znamená to, že se jedná o kontrakt a měli bychom jej jednoduše přeskočit.
+Náš algoritmus je použitelný pouze pro externě vlastněné účty. Pokud `client.getBytecode` vrátí jakýkoli bajtkód, znamená to, že se jedná o kontrakt a měli bychom jej jednoduše přeskočit.
 
-Pokud jste TypeScript ještě nepoužívali, definice funkce může vypadat trochu zvláštně. Neříkáme mu jen to, že první (a jediný) parametr se jmenuje `addr`, ale také to, že je typu `Address`. Podobně část `: boolean` říká TypeScriptu, že návratová hodnota funkce je boolean.
+Pokud jste TypeScript ještě nepoužívali, definice funkce může vypadat trochu zvláštně. Neříkáme mu jen, že první (a jediný) parametr se jmenuje `addr`, ale také, že je typu `Address`. Podobně část `: boolean` říká TypeScriptu, že návratová hodnota funkce je boolean.
 
 ```typescript
 const getEventTxn = async (ev: Event): TransactionReceipt =>
   await client.getTransactionReceipt({ hash: ev.transactionHash })
 ```
 
-Tato funkce získá stvrzenku transakce z události. Stvrzenku potřebujeme, abychom měli jistotu, že víme, jaký byl cíl transakce.
+Tato funkce získá stvrzenku transakce z události. Stvrzenku potřebujeme, abychom si byli jisti, že víme, jaký byl cíl transakce.
 
 ```typescript
 const suspiciousApprovalEvent = async (ev : Event) : (Event | null) => {
@@ -400,29 +400,29 @@ Toto je nejdůležitější funkce, ta, která ve skutečnosti rozhoduje, zda je
 const owner = ev.args._owner
 ```
 
-Viem má názvy polí, takže událost pro nás analyzoval. `_owner` je vlastník tokenů, které mají být utraceny.
+Viem má názvy polí, takže událost za nás analyzoval. `_owner` je vlastník tokenů, které mají být utraceny.
 
 ```typescript
 // Schválení kontrakty nejsou podezřelá
 if (await isContract(owner)) return null
 ```
 
-Pokud je vlastníkem kontrakt, předpokládáme, že toto schválení není podezřelé. Abychom zkontrolovali, zda je schválení kontraktu podezřelé, či nikoli, museli bychom sledovat celé provedení transakce, abychom zjistili, zda se vůbec dostala ke kontraktu vlastníka a zda tento kontrakt zavolal kontrakt ERC-20 přímo. To je mnohem náročnější na zdroje, než bychom chtěli.
+Pokud je vlastníkem kontrakt, předpokládejte, že toto schválení není podezřelé. Abychom zkontrolovali, zda je schválení kontraktu podezřelé, či nikoli, museli bychom sledovat celé provedení transakce, abychom zjistili, zda se vůbec dostala ke kontraktu vlastníka a zda tento kontrakt zavolal kontrakt ERC-20 přímo. To je mnohem náročnější na zdroje, než bychom chtěli.
 
 ```typescript
 const txn = await getEventTxn(ev)
 ```
 
-Pokud schválení pochází z externě vlastněného účtu, získáme transakci, která jej způsobila.
+Pokud schválení pochází z externě vlastněného účtu, získejte transakci, která jej způsobila.
 
 ```typescript
 // Schválení je podezřelé, pokud pochází od vlastníka EOA, který není `from` transakce
 if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 ```
 
-Nemůžeme jednoduše kontrolovat shodu řetězců, protože adresy jsou hexadecimální, takže obsahují písmena. Někdy, například v `txn.from`, jsou tato písmena všechna malá. V jiných případech, jako je `ev.args._owner`, je adresa ve [smíšené velikosti písmen pro identifikaci chyb](https://eips.ethereum.org/EIPS/eip-55).
+Nemůžeme jednoduše kontrolovat rovnost řetězců, protože adresy jsou hexadecimální, takže obsahují písmena. Někdy, například v `txn.from`, jsou tato písmena všechna malá. V jiných případech, jako je `ev.args._owner`, je adresa ve [smíšené velikosti písmen pro identifikaci chyb](https://eips.ethereum.org/EIPS/eip-55).
 
-Pokud ale transakce nepochází od vlastníka a tento vlastník je externě vlastněný, pak máme podezřelou transakci.
+Ale pokud transakce nepochází od vlastníka a tento vlastník je externě vlastněný, pak máme podezřelou transakci.
 
 ```typescript
 // Je také podezřelé, pokud cíl transakce není ERC-20 kontrakt, který
@@ -447,9 +447,9 @@ const testResults = (await Promise.all(testPromises)).filter((x) => x != null)
 console.log(testResults)
 ```
 
-[Funkce `async`](https://www.w3schools.com/js/js_async.asp) vrací objekt `Promise`. S běžnou syntaxí, `await x()`, čekáme na splnění tohoto `Promise`, než budeme pokračovat ve zpracování. To je jednoduché na naprogramování a sledování, ale je to také neefektivní. Zatímco čekáme na splnění `Promise` pro konkrétní událost, můžeme už začít pracovat na další události.
+[Funkce `async`](https://www.w3schools.com/js/js_async.asp) vrací objekt `Promise`. S běžnou syntaxí, `await x()`, čekáme na splnění tohoto `Promise`, než budeme pokračovat ve zpracování. To je jednoduché na naprogramování a sledování, ale je to také neefektivní. Zatímco čekáme na splnění `Promise` pro konkrétní událost, můžeme již začít pracovat na další události.
 
-Zde používáme [`map`](https://www.w3schools.com/jsref/jsref_map.asp) k vytvoření pole objektů `Promise`. Poté použijeme [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/), abychom počkali na vyřešení všech těchto příslibů (promises). Následně tyto výsledky [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp) (vyfiltrujeme), abychom odstranili nepodezřelé události.
+Zde používáme [`map`](https://www.w3schools.com/jsref/jsref_map.asp) k vytvoření pole objektů `Promise`. Poté použijeme [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/), abychom počkali na vyřešení všech těchto příslibů (promises). Následně na tyto výsledky použijeme [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp), abychom odstranili nepodezřelé události.
 
 ### Podezřelé události `Transfer` {#suspicious-transfer-events}
 
@@ -457,8 +457,8 @@ Dalším možným způsobem, jak identifikovat podvodné tokeny, je zjistit, zda
 
 ## Závěr {#conclusion}
 
-Automatická detekce podvodů ERC-20 trpí [falešně negativními výsledky](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), protože podvod může používat naprosto normální kontrakt tokenu ERC-20, který jen nepředstavuje nic skutečného. Proto byste se měli vždy snažit _získat adresu tokenu z důvěryhodného zdroje_.
+Automatická detekce podvodů s ERC-20 trpí [falešně negativními výsledky](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), protože podvod může používat naprosto normální kontrakt tokenu ERC-20, který jen nepředstavuje nic skutečného. Proto byste se měli vždy snažit _získat adresu tokenu z důvěryhodného zdroje_.
 
-Automatická detekce může pomoci v určitých případech, jako jsou součásti decentralizovaných financí (DeFi), kde je mnoho tokenů a je třeba s nimi zacházet automaticky. Ale jako vždy platí [caveat emptor](https://www.investopedia.com/terms/c/caveatemptor.asp) (kupující, měj se na pozoru), udělejte si vlastní průzkum a povzbuďte své uživatele, aby udělali totéž.
+Automatická detekce může pomoci v určitých případech, jako jsou součásti decentralizovaných financí (DeFi), kde je mnoho tokenů a je třeba s nimi zacházet automaticky. Ale jako vždy [caveat emptor](https://www.investopedia.com/terms/c/caveatemptor.asp) (kupující, měj se na pozoru), udělejte si vlastní průzkum a povzbuďte své uživatele, aby udělali totéž.
 
 [Zde najdete více z mé práce](https://cryptodocguy.pro/).

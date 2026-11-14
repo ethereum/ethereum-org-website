@@ -1,11 +1,12 @@
 import { expect, test } from "@playwright/test"
 
-import type { Lang } from "@/lib/types"
+import type { IExternalTutorial, Lang } from "@/lib/types"
 
-import { formatDate, formatDateRange } from "@/lib/utils/date"
+import { formatDate, formatDateRange, formatDateTime } from "@/lib/utils/date"
 import { normalizeIntlSpaces } from "@/lib/utils/intl"
 import { formatCompactNumber } from "@/lib/utils/numbers"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { filterTutorialsByLang } from "@/lib/utils/tutorial"
 
 const EXOTIC_SPACE = /[\u00a0\u2009\u205f\u202f\u3000\u2000-\u200a]/
 
@@ -37,6 +38,15 @@ const formatters: Array<[name: string, produce: () => string]> = [
     "formatDateRange",
     () => formatDateRange("2026-09-02", "2026-09-05", "en-US"),
   ],
+  [
+    "formatDateTime",
+    () =>
+      formatDateTime("en-US", new Date("2026-09-02T12:00:00Z"), {
+        hour: "numeric",
+        minute: "2-digit",
+        timeZone: "UTC",
+      }),
+  ],
   ["formatCompactNumber", () => formatCompactNumber(123_000_000, "en-US")],
   ["formatCompactNumber (ur)", () => formatCompactNumber(123_000_000, "ur")],
   [
@@ -52,3 +62,53 @@ for (const [name, produce] of formatters) {
     expect(out).toBe(normalizeIntlSpaces(out))
   })
 }
+
+// CI runs in UTC, so force non-UTC zones or these pass without the UTC default.
+const withTimeZone = (tz: string, run: () => void) => {
+  const original = process.env.TZ
+  process.env.TZ = tz
+  try {
+    run()
+  } finally {
+    process.env.TZ = original
+  }
+}
+
+test("date formatters default to UTC", () => {
+  withTimeZone("America/Los_Angeles", () => {
+    expect(getLocaleTimestamp("en" as Lang, "2026-09-02")).toBe(
+      "September 2, 2026"
+    )
+    expect(
+      formatDateTime("en-US", new Date("2026-09-02T23:30:00Z"), {
+        hour: "numeric",
+        minute: "2-digit",
+      })
+    ).toBe("11:30 PM")
+  })
+})
+
+test("external tutorial dates keep their day east of UTC", () => {
+  withTimeZone("Asia/Tokyo", () => {
+    const [tutorial] = filterTutorialsByLang(
+      [],
+      [
+        {
+          url: "https://example.com",
+          title: "t",
+          description: "d",
+          author: "a",
+          tags: [],
+          skillLevel: "beginner",
+          timeToRead: "1",
+          publishDate: "07/21/2026",
+          lang: "en",
+        } as unknown as IExternalTutorial,
+      ],
+      "en" as Lang
+    )
+    expect(getLocaleTimestamp("en" as Lang, tutorial.published!)).toBe(
+      "July 21, 2026"
+    )
+  })
+})

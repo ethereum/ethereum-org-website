@@ -1,0 +1,388 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-organizations-enterprise.json",
+  "generatedAt": "2026-10-14T17:37:46.954Z",
+  "rootHash": "7067fb1aa602",
+  "tree": {
+    "contentHash": "7dfd4d193d2d",
+    "anchorHash": "dc3f33909756",
+    "children": {
+      "page-organizations-enterprise-compare-col-ethereum": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-col-l1": {
+        "contentHash": "ec44089f0f56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-col-private-dlt": {
+        "contentHash": "1b9ae57f13e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-col-traditional": {
+        "contentHash": "0aaf46f3e161",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-description": {
+        "contentHash": "990234276063",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-auditability": {
+        "contentHash": "2e072926f8b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-auditability-ethereum": {
+        "contentHash": "330503fdbc65",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-auditability-l1": {
+        "contentHash": "330503fdbc65",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-auditability-private-dlt": {
+        "contentHash": "e5125d9f63d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-auditability-traditional": {
+        "contentHash": "4e8f5d1878b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-composability": {
+        "contentHash": "b35f4f23f2af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-composability-ethereum": {
+        "contentHash": "c4ebc6d4a583",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-composability-l1": {
+        "contentHash": "e5125d9f63d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-composability-private-dlt": {
+        "contentHash": "f793de205ead",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-composability-traditional": {
+        "contentHash": "3090c619f6f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-finality": {
+        "contentHash": "08abd8747f9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-finality-ethereum": {
+        "contentHash": "fe2d3ff6ee31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-finality-l1": {
+        "contentHash": "b1fcf68228f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-finality-private-dlt": {
+        "contentHash": "d3d4eccd72ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-finality-traditional": {
+        "contentHash": "dade8d3011b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-neutrality": {
+        "contentHash": "7d5951bb4679",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-neutrality-ethereum": {
+        "contentHash": "4a89cc6f8471",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-neutrality-l1": {
+        "contentHash": "1a9ccf901560",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-neutrality-private-dlt": {
+        "contentHash": "f8dddc24242c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-row-neutrality-traditional": {
+        "contentHash": "874803078620",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-compare-title": {
+        "contentHash": "2277d5b55252",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-hero-description-1": {
+        "contentHash": "d4f64dd28c27",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-hero-description-2": {
+        "contentHash": "dba7a8202b05",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-hero-title": {
+        "contentHash": "8bd337bb70ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-meta-description": {
+        "contentHash": "2f4c87653aa1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-meta-title": {
+        "contentHash": "f5488f3bdb80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-stat-defi-tvl": {
+        "contentHash": "3fd3949e0a31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-stat-stablecoin-tvl": {
+        "contentHash": "90c5db4a935d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-stat-uptime": {
+        "contentHash": "4fa15f7ef4a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-stat-uptime-value": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "5463b772a617",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7bba5d0aad59"
+          }
+        }
+      },
+      "page-organizations-enterprise-use-cases-defi-cta": {
+        "contentHash": "425246bec3ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-defi-description": {
+        "contentHash": "90dcd4061206",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-defi-title": {
+        "contentHash": "327acc663a40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-description": {
+        "contentHash": "d93c746e3a87",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-l2s-cta": {
+        "contentHash": "4adc7e89f0f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-l2s-description": {
+        "contentHash": "1216b6673f03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-l2s-title": {
+        "contentHash": "55e3ac605241",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-privacy-cta": {
+        "contentHash": "09f091889f3c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-privacy-description": {
+        "contentHash": "6bb742e11156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-privacy-title": {
+        "contentHash": "fb70a35100dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-title": {
+        "contentHash": "df04395f9ead",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-tokenization-cta": {
+        "contentHash": "bad9bafd6014",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-tokenization-description": {
+        "contentHash": "07ddb43ce216",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-use-cases-tokenization-title": {
+        "contentHash": "efa97c915ed6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-why-composable-description": {
+        "contentHash": "0aa6816fbc62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-why-composable-title": {
+        "contentHash": "865ede817e37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-why-description": {
+        "contentHash": "e7475bec1afc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-why-liquidity-description": {
+        "contentHash": "c8605281a72c",
+        "anchorHash": "ab970aa2be95",
+        "children": {
+          "prose:1": {
+            "contentHash": "fc55bd623655",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7bba5d0aad59"
+          },
+          "prose:2": {
+            "contentHash": "c45d93644ae9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-organizations-enterprise-why-liquidity-description-multiplier": {
+        "contentHash": "38ff38282c37",
+        "anchorHash": "e61076664fb7",
+        "children": {
+          "prose:2": {
+            "contentHash": "fc55bd623655",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7bba5d0aad59"
+          },
+          "prose:3": {
+            "contentHash": "ec48c9026890",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "076e059e89f3"
+          },
+          "prose:4": {
+            "contentHash": "75fcfab44f27",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1",
+          "prose:4"
+        ]
+      },
+      "page-organizations-enterprise-why-liquidity-title": {
+        "contentHash": "17a34bb02d0c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-why-neutrality-description": {
+        "contentHash": "a252eac94569",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-why-neutrality-title": {
+        "contentHash": "7d5951bb4679",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-why-resilience-description": {
+        "contentHash": "c6bb87e96058",
+        "anchorHash": "ab970aa2be95",
+        "children": {
+          "prose:1": {
+            "contentHash": "699757ac5e03",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7bba5d0aad59"
+          },
+          "prose:2": {
+            "contentHash": "dd5b1bdb194b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-organizations-enterprise-why-resilience-title": {
+        "contentHash": "562ad6699fab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-why-title": {
+        "contentHash": "1df0b839864e",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-organizations-enterprise-compare-col-ethereum",
+      "page-organizations-enterprise-compare-col-l1",
+      "page-organizations-enterprise-compare-col-private-dlt",
+      "page-organizations-enterprise-compare-col-traditional",
+      "page-organizations-enterprise-compare-description",
+      "page-organizations-enterprise-compare-row-auditability",
+      "page-organizations-enterprise-compare-row-auditability-ethereum",
+      "page-organizations-enterprise-compare-row-auditability-l1",
+      "page-organizations-enterprise-compare-row-auditability-private-dlt",
+      "page-organizations-enterprise-compare-row-auditability-traditional",
+      "page-organizations-enterprise-compare-row-composability",
+      "page-organizations-enterprise-compare-row-composability-ethereum",
+      "page-organizations-enterprise-compare-row-composability-l1",
+      "page-organizations-enterprise-compare-row-composability-private-dlt",
+      "page-organizations-enterprise-compare-row-composability-traditional",
+      "page-organizations-enterprise-compare-row-finality",
+      "page-organizations-enterprise-compare-row-finality-ethereum",
+      "page-organizations-enterprise-compare-row-finality-l1",
+      "page-organizations-enterprise-compare-row-finality-private-dlt",
+      "page-organizations-enterprise-compare-row-finality-traditional",
+      "page-organizations-enterprise-compare-row-neutrality",
+      "page-organizations-enterprise-compare-row-neutrality-ethereum",
+      "page-organizations-enterprise-compare-row-neutrality-l1",
+      "page-organizations-enterprise-compare-row-neutrality-private-dlt",
+      "page-organizations-enterprise-compare-row-neutrality-traditional",
+      "page-organizations-enterprise-compare-title",
+      "page-organizations-enterprise-hero-description-1",
+      "page-organizations-enterprise-hero-description-2",
+      "page-organizations-enterprise-hero-title",
+      "page-organizations-enterprise-meta-description",
+      "page-organizations-enterprise-meta-title",
+      "page-organizations-enterprise-stat-defi-tvl",
+      "page-organizations-enterprise-stat-stablecoin-tvl",
+      "page-organizations-enterprise-stat-uptime",
+      "page-organizations-enterprise-stat-uptime-value",
+      "page-organizations-enterprise-use-cases-defi-cta",
+      "page-organizations-enterprise-use-cases-defi-description",
+      "page-organizations-enterprise-use-cases-defi-title",
+      "page-organizations-enterprise-use-cases-description",
+      "page-organizations-enterprise-use-cases-l2s-cta",
+      "page-organizations-enterprise-use-cases-l2s-description",
+      "page-organizations-enterprise-use-cases-l2s-title",
+      "page-organizations-enterprise-use-cases-privacy-cta",
+      "page-organizations-enterprise-use-cases-privacy-description",
+      "page-organizations-enterprise-use-cases-privacy-title",
+      "page-organizations-enterprise-use-cases-title",
+      "page-organizations-enterprise-use-cases-tokenization-cta",
+      "page-organizations-enterprise-use-cases-tokenization-description",
+      "page-organizations-enterprise-use-cases-tokenization-title",
+      "page-organizations-enterprise-why-composable-description",
+      "page-organizations-enterprise-why-composable-title",
+      "page-organizations-enterprise-why-description",
+      "page-organizations-enterprise-why-liquidity-description",
+      "page-organizations-enterprise-why-liquidity-description-multiplier",
+      "page-organizations-enterprise-why-liquidity-title",
+      "page-organizations-enterprise-why-neutrality-description",
+      "page-organizations-enterprise-why-neutrality-title",
+      "page-organizations-enterprise-why-resilience-description",
+      "page-organizations-enterprise-why-resilience-title",
+      "page-organizations-enterprise-why-title"
+    ]
+  },
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+}

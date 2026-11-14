@@ -13,7 +13,7 @@ published: 2021-03-09
 
 Jedním z nejčastějších způsobů využití Etherea je vytvoření obchodovatelného tokenu skupinou lidí, v jistém smyslu jejich vlastní měny. Tyto tokeny obvykle dodržují standard [ERC-20](/developers/docs/standards/tokens/erc-20/). Tento standard umožňuje psát nástroje, jako jsou fondy likvidity a peněženky, které fungují se všemi tokeny ERC-20. V tomto článku budeme analyzovat [implementaci ERC20 v Solidity od OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol) a také [definici rozhraní](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-Toto je anotovaný zdrojový kód. Pokud chcete implementovat ERC-20, [přečtěte si tento tutoriál](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+Toto je anotovaný zdrojový kód. Pokud chcete implementovat ERC-20, [přečtěte si tento tutoriál](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Rozhraní {#the-interface}
 

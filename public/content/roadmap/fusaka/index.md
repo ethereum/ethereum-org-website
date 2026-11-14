@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Learn about the Fusaka protocol upgrade
+description: "Fusaka went live on December 3, 2025. Learn what this Ethereum upgrade changed, including PeerDAS, which scales blobs for cheaper layer 2 transactions."
 lang: en
 template: upgrade
 authors: ["Nixo", "Mario Havel"]

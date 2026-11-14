@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/index.md",
-  "generatedAt": "2026-09-30T18:20:59.421Z",
-  "rootHash": "fd1a210854ea",
+  "generatedAt": "2026-10-14T17:44:44.240Z",
+  "rootHash": "9f48c9a15dbb",
   "tree": {
     "contentHash": "c709497c55ce",
-    "anchorHash": "490b154f4178",
+    "anchorHash": "ef4916d7f177",
     "children": {
       "frontmatter:title": {
         "contentHash": "6ed157982b1b",
@@ -118,7 +118,7 @@
       },
       "transaction-execution-ethereum-pos": {
         "contentHash": "d91702c921e8",
-        "anchorHash": "be0bf2f4a525",
+        "anchorHash": "195e846609a6",
         "labelHash": "98b8d5d59b02",
         "children": {
           "_label": {
@@ -187,7 +187,7 @@
           },
           "link:7": {
             "contentHash": "2bea1858bbc7",
-            "anchorHash": "e9236bd5c28d"
+            "anchorHash": "3ab99cde7d1e"
           },
           "prose:20": {
             "contentHash": "eae9af3223ff",
@@ -592,5 +592,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

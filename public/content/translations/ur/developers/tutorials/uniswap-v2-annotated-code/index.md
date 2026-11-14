@@ -105,19 +105,6 @@ _ٹریڈرز_ پول میں ایک قسم کا ٹوکن بھیجتے ہیں ا�
 5. سیالیت کے ٹوکنز کو جلائیں
 6. ریزرو رقوم کو اپ ڈیٹ کرنے کے لیے `_update` کو کال کریں
 
-```yaml
-title: یونی سویپ V2 کے بنیادی کنٹریکٹس
-description: یونی سویپ V2 کے اسمارٹ کنٹریکٹس کی گہرائی سے وضاحت
-breadcrumb: یونی سویپ V2 کے بنیادی کنٹریکٹس
-lang: ur
-tags:
-  - اسمارٹ کنٹریکٹس
-  - یونی سویپ
-  - Solidity
-author: اوری پومیرانٹز
-sidebar: true
-```
-
 ## بنیادی کنٹریکٹس {#core-contracts}
 
 یہ وہ محفوظ کنٹریکٹس ہیں جو سیالیت کو برقرار رکھتے ہیں۔
@@ -150,7 +137,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-[SafeMath لائبریری](https://docs.openzeppelin.com/contracts/2.x/api/math) کا استعمال اوور فلوز اور انڈر فلوز سے بچنے کے لیے کیا جاتا ہے۔ یہ اہم ہے کیونکہ بصورت دیگر ہم ایسی صورتحال کا شکار ہو سکتے ہیں جہاں ایک قدر کو `-1` ہونا چاہیے، لیکن اس کے بجائے وہ `2^256-1` ہوتی ہے۔
+[SafeMath لائبریری](https://docs.openzeppelin.com/contracts/3.x/api/math) کا استعمال اوور فلوز اور انڈر فلوز سے بچنے کے لیے کیا جاتا ہے۔ یہ اہم ہے کیونکہ بصورت دیگر ہم ایسی صورتحال کا شکار ہو سکتے ہیں جہاں ایک قدر کو `-1` ہونا چاہیے، لیکن اس کے بجائے وہ `2^256-1` ہوتی ہے۔
 
 ```solidity
     using UQ112x112 for uint224;
@@ -912,7 +899,6 @@ contract UniswapV2Factory is IUniswapV2Factory {
 ```
 
 اگر سب کچھ ٹھیک ہے، تو اسے [ایک <span dir="ltr">ERC-20</span> منظور کرنا](https://eips.ethereum.org/EIPS/eip-20#approve) سمجھیں۔
-```
 
 ## پیریفیری کنٹریکٹس {#periphery-contracts}
 
@@ -1245,7 +1231,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountBMin,
         address to,
         uint deadline,
-        bool approveMax, uint8 v, bytes32 r, bytes<span dir="ltr">32 s</span>
+        bool approveMax, uint8 v, bytes32 r, bytes32 s
     ) external virtual override returns (uint amountA, uint amountB) {
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
         uint value = approveMax ? uint(-1) : liquidity;
@@ -1261,7 +1247,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountETHMin,
         address to,
         uint deadline,
-        bool approveMax, uint8 v, bytes32 r, bytes<span dir="ltr">32 s</span>
+        bool approveMax, uint8 v, bytes32 r, bytes32 s
     ) external virtual override returns (uint amountToken, uint amountETH) {
         address pair = UniswapV2Library.pairFor(factory, token, WETH);
         uint value = approveMax ? uint(-1) : liquidity;
@@ -1311,7 +1297,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
         uint amountETHMin,
         address to,
         uint deadline,
-        bool approveMax, uint8 v, bytes32 r, bytes<span dir="ltr">32 s</span>
+        bool approveMax, uint8 v, bytes32 r, bytes32 s
     ) external virtual override returns (uint amountETH) {
         address pair = UniswapV2Library.pairFor(factory, token, WETH);
         uint value = approveMax ? uint(-1) : liquidity;
@@ -1688,7 +1674,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 ## لائبریریاں {#libraries}
 
-[SafeMath لائبریری](https://docs.openzeppelin.com/contracts/2.x/api/math) کی دستاویزات بہت اچھی طرح سے موجود ہیں، اس لیے اسے یہاں دستاویزی شکل دینے کی ضرورت نہیں ہے۔
+[SafeMath لائبریری](https://docs.openzeppelin.com/contracts/3.x/api/math) کی دستاویزات بہت اچھی طرح سے موجود ہیں، اس لیے اسے یہاں دستاویزی شکل دینے کی ضرورت نہیں ہے۔
 
 ### Math {#math}
 
@@ -1764,7 +1750,7 @@ library UQ112x112 {
 
 ```solidity
     // UQ112x112 کو uint112 سے تقسیم کریں، جو UQ112x112 واپس کرتا ہے
-    function uqdiv(uint<span dir="ltr">224 x</span>, uint112 y) internal pure returns (uint224 z) {
+    function uqdiv(uint224 x, uint112 y) internal pure returns (uint224 z) {
         z = x / uint224(y);
     }
 }
@@ -1896,14 +1882,14 @@ Solidity کسروں کو مقامی طور پر ہینڈل نہیں کرتی، �
 
 ### ٹرانسفر ہیلپر (Transfer Helper) {#transfer-helper}
 
-[یہ لائبریری](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) ERC-20 اور ایتھیریم کی منتقلیوں کے گرد کامیابی کی جانچ کا اضافہ کرتی ہے تاکہ ایک ریورٹ اور `false` ویلیو کی واپسی کو ایک ہی طرح سے ٹریٹ کیا جا سکے۔
+[یہ لائبریری](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) <span dir="ltr">ERC-20</span> اور ایتھیریم کی منتقلیوں کے گرد کامیابی کی جانچ کا اضافہ کرتی ہے تاکہ ایک ریورٹ اور `false` ویلیو کی واپسی کو ایک ہی طرح سے ٹریٹ کیا جا سکے۔
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma solidity >=0.6.0;
 
-// <span dir="ltr">ERC-20</span> ٹوکنز کے ساتھ تعامل کرنے اور ETH بھیجنے کے لیے ہیلپر میتھڈز جو مستقل طور پر true/false واپس نہیں کرتے ہیں
+// ERC-20 ٹوکنز کے ساتھ تعامل کرنے اور ETH بھیجنے کے لیے ہیلپر میتھڈز جو مستقل طور پر true/false واپس نہیں کرتے ہیں
 library TransferHelper {
     function safeApprove(
         address token,
@@ -1928,7 +1914,7 @@ library TransferHelper {
     }
 ```
 
-ERC-20 معیار سے پہلے بنائے گئے ٹوکنز کے ساتھ بیک ورڈ کمپیٹیبلٹی (backwards compatibility) کی خاطر، ایک ERC-20 کال یا تو ریورٹ ہو کر ناکام ہو سکتی ہے (جس صورت میں `success` `false` ہوتا ہے) یا کامیاب ہو کر `false` ویلیو واپس کر سکتی ہے (جس صورت میں آؤٹ پٹ ڈیٹا ہوتا ہے، اور اگر آپ اسے بولین (boolean) کے طور پر ڈی کوڈ کرتے ہیں تو آپ کو `false` ملتا ہے)۔
+<span dir="ltr">ERC-20</span> معیار سے پہلے بنائے گئے ٹوکنز کے ساتھ بیک ورڈ کمپیٹیبلٹی (backwards compatibility) کی خاطر، ایک <span dir="ltr">ERC-20</span> کال یا تو ریورٹ ہو کر ناکام ہو سکتی ہے (جس صورت میں `success` `false` ہوتا ہے) یا کامیاب ہو کر `false` ویلیو واپس کر سکتی ہے (جس صورت میں آؤٹ پٹ ڈیٹا ہوتا ہے، اور اگر آپ اسے بولین (boolean) کے طور پر ڈی کوڈ کرتے ہیں تو آپ کو `false` ملتا ہے)۔
 
 ```solidity
 
@@ -1947,7 +1933,7 @@ ERC-20 معیار سے پہلے بنائے گئے ٹوکنز کے ساتھ بی�
     }
 ```
 
-یہ فنکشن [ERC-20 کی منتقلی کی فعالیت](https://eips.ethereum.org/EIPS/eip-20#transfer) کو نافذ کرتا ہے، جو ایک اکاؤنٹ کو کسی دوسرے اکاؤنٹ کی طرف سے فراہم کردہ الاؤنس خرچ کرنے کی اجازت دیتا ہے۔
+یہ فنکشن [<span dir="ltr">ERC-20</span> کی منتقلی کی فعالیت](https://eips.ethereum.org/EIPS/eip-20#transfer) کو نافذ کرتا ہے، جو ایک اکاؤنٹ کو کسی دوسرے اکاؤنٹ کی طرف سے فراہم کردہ الاؤنس خرچ کرنے کی اجازت دیتا ہے۔
 
 ```solidity
 
@@ -1966,7 +1952,7 @@ ERC-20 معیار سے پہلے بنائے گئے ٹوکنز کے ساتھ بی�
     }
 ```
 
-یہ فنکشن [ERC-20 کی transferFrom فعالیت](https://eips.ethereum.org/EIPS/eip-20#transferfrom) کو نافذ کرتا ہے، جو ایک اکاؤنٹ کو کسی دوسرے اکاؤنٹ کی طرف سے فراہم کردہ الاؤنس خرچ کرنے کی اجازت دیتا ہے۔
+یہ فنکشن [<span dir="ltr">ERC-20</span> کی transferFrom فعالیت](https://eips.ethereum.org/EIPS/eip-20#transferfrom) کو نافذ کرتا ہے، جو ایک اکاؤنٹ کو کسی دوسرے اکاؤنٹ کی طرف سے فراہم کردہ الاؤنس خرچ کرنے کی اجازت دیتا ہے۔
 
 ```solidity
 

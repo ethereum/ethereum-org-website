@@ -28,20 +28,20 @@ Questi miglioramenti assicurano che Ethereum rimanga veloce, conveniente e decen
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Nota: questo articolo evidenzia una selezione di Proposte di Miglioramento di Ethereum (EIP) programmate per l'inclusione in Glamsterdam. Ulteriori proposte programmate in fase di test nelle devnet includono EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246 ed EIP-8282. L'ambito è congelato ma può ancora cambiare prima della Mainnet, poiché la EIP meta rimane in bozza. Per gli ultimi aggiornamenti sullo stato, visualizza l'[aggiornamento Glamsterdam su Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Nota: questo articolo evidenzia una selezione di Proposte di Miglioramento di Ethereum (EIP) programmate per l'inclusione in Glamsterdam. Ulteriori proposte programmate in fase di test nelle devnet includono EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246 ed EIP-8282. L'ambito è congelato ma può ancora cambiare prima della Mainnet, poiché la meta EIP rimane in bozza. Per gli ultimi aggiornamenti sullo stato, visualizza l'[aggiornamento Glamsterdam su Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Se desideri aggiungere una EIP in fase di valutazione per Glamsterdam, ma che non è ancora stata aggiunta a questa pagina, [scopri come contribuire a ethereum.org qui](/contributing/).
+Se desideri aggiungere una EIP in fase di considerazione per Glamsterdam, ma che non è ancora stata aggiunta a questa pagina, [scopri come contribuire a ethereum.org qui](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 L'aggiornamento Glamsterdam si concentra su tre obiettivi principali:
 
-- Velocizzare l'elaborazione (parallelizzazione): riorganizzare il modo in cui la rete registra le dipendenze dei dati, in modo che possa elaborare in sicurezza molte transazioni contemporaneamente invece che in una lenta sequenza una per una.
-- Espandere la capacità: suddividere il lavoro pesante di creazione e verifica dei blocchi, dando alla rete più tempo per propagare quantità maggiori di dati senza rallentare.
-- Prevenire il gonfiamento del database (sostenibilità): adeguare le commissioni di rete per riflettere accuratamente il costo hardware a lungo termine dell'archiviazione di nuovi dati, sbloccando futuri aumenti del limite di gas e prevenendo al contempo il degrado delle prestazioni hardware.
+- Velocizzare l'elaborazione (parallelizzazione): riorganizzare il modo in cui la rete registra le dipendenze dei dati, in modo da poter elaborare in sicurezza molte transazioni contemporaneamente invece che in una lenta sequenza una alla volta.
+- Espandere la capacità: suddividere il lavoro pesante di creazione e verifica dei blocchi, dando alla rete più tempo per propagare quantità maggiori di dati senza rallentamenti.
+- Prevenire l'appesantimento del database (sostenibilità): adeguare le commissioni di rete per riflettere accuratamente il costo hardware a lungo termine dell'archiviazione di nuovi dati, sbloccando futuri aumenti del limite di gas e prevenendo al contempo il degrado delle prestazioni hardware.
 
-In breve, Glamsterdam introdurrà cambiamenti strutturali per garantire che, man mano che la rete aumenta la capacità, rimanga sostenibile e le prestazioni restino elevate.
+In breve, Glamsterdam introdurrà cambiamenti strutturali per garantire che, man mano che la rete aumenta la propria capacità, essa rimanga sostenibile e le prestazioni restino elevate.
 
 ## Scalare il layer 1 (l1) e l'elaborazione parallela {#scale-l1}
 

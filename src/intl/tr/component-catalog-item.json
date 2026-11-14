@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "{name} Hakkında",
+  "catalog-item-gallery-modal-title": "{name} Ekran Görüntüleri",
+  "catalog-item-gallery-screenshot-alt": "{name} Ekran Görüntüsü {index}",
+  "catalog-item-gallery-title": "Galeri",
+  "catalog-item-info-title": "Bilgi",
+  "catalog-item-link-label": "{platform} üzerinde {name}",
+  "catalog-item-see-next": "Sonrakini gör",
+  "catalog-item-source-code": "Kaynak kodu",
+  "catalog-item-view-on-github": "GitHub'da görüntüle",
+  "catalog-item-visit-website": "Web sitesini ziyaret et"
+}

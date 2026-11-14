@@ -1,6 +1,6 @@
 ---
-title: Interakce s chytrými kontrakty
-description: Naučte se, jak číst z chytrých kontraktů a zapisovat do nich, pokud už jsou nasazené na Ethereu.
+title: "Interakce s chytrými kontrakty"
+description: "Naučte se, jak číst z chytrých kontraktů a zapisovat do nich, pokud už jsou nasazené na Ethereu."
 lang: cs
 ---
 
@@ -82,7 +82,7 @@ Vývojáři obvykle používají JavaScript/TypeScript knihovnu pro interakci s 
 
 - **[ethers.js](https://docs.ethers.org/)** - Funguje také v Node.js pro serverové skripty a boty
 - **[Web3.py](https://web3py.readthedocs.io/)** - Python knihovna pro interakci s Ethereem
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Oficiální Go knihovna od týmu Geth
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Oficiální Go knihovna od týmu Geth
 
 ### Příklad: čtení zůstatku tokenu pomocí Viem {#example-viem}
 

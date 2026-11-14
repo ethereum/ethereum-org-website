@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "Acerca de {name}",
+  "catalog-item-gallery-modal-title": "Capturas de pantalla de {name}",
+  "catalog-item-gallery-screenshot-alt": "Captura de pantalla {index} de {name}",
+  "catalog-item-gallery-title": "Galería",
+  "catalog-item-info-title": "Información",
+  "catalog-item-link-label": "{name} en {platform}",
+  "catalog-item-see-next": "Ver siguiente",
+  "catalog-item-source-code": "Código fuente",
+  "catalog-item-view-on-github": "Ver en GitHub",
+  "catalog-item-visit-website": "Visitar sitio web"
+}

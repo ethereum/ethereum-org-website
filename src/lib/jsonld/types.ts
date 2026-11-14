@@ -6,3 +6,7 @@ export type KnownEntity =
   | (typeof KNOWN_ORGANIZATIONS)[keyof typeof KNOWN_ORGANIZATIONS]
   | (typeof KNOWN_ORGANIZATIONS)["ethereum-foundation"]
   | (typeof KNOWN_ORGANIZATIONS)["ethereum-community"]
+
+export type AuthorReference =
+  | { "@id": string }
+  | { "@type": "Person"; name: string }

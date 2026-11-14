@@ -54,7 +54,7 @@ The aggregation property that makes BLS efficient (combining hundreds of thousan
 
 ### 2. Data availability: KZG commitments {#data-availability-kzg}
 
-**What it does**: KZG polynomial commitments ensure that data (particularly [blob](/glossary/#blob) data from rollups) is available on the network without requiring every node to download all of it.
+**What it does**: KZG polynomial commitments ensure that data (particularly [blob](/glossary/#proto-danksharding) data from rollups) is available on the network without requiring every node to download all of it.
 
 **Why it is vulnerable**: KZG commitments rely on elliptic curve pairings, the same mathematical structure that quantum computers can attack.
 

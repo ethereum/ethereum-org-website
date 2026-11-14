@@ -1,6 +1,6 @@
 ---
-title: Tương tác với hợp đồng thông minh
-description: Tìm hiểu cách đọc và ghi vào các hợp đồng thông minh đã được triển khai trên Ethereum.
+title: "Tương tác với hợp đồng thông minh"
+description: "Tìm hiểu cách đọc và ghi vào các hợp đồng thông minh đã được triển khai trên Ethereum."
 lang: vi
 ---
 
@@ -82,7 +82,7 @@ Các nhà phát triển thường sử dụng một Thư viện JavaScript/TypeS
 
 - **[ethers.js](https://docs.ethers.org/)** - Cũng hoạt động trong Node.js cho các tập lệnh phía máy chủ và bot
 - **[Web3.py](https://web3py.readthedocs.io/)** - Thư viện Python để tương tác với Ethereum
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Thư viện Go chính thức từ đội ngũ Geth
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Thư viện Go chính thức từ đội ngũ Geth
 
 ### Ví dụ: đọc số dư token bằng Viem {#example-viem}
 

@@ -34,7 +34,9 @@ Hesap kendi kurallarını seçtiği için, kuantum bilgisayarın kıramayacağı
 
 ## Hegotá'da başka neler var {#scope}
 
-Henüz karar verilmedi. FOCIL ve çerçeve işlemleri şu ana kadar planlanan iki değişikliktir; düzinelerce daha fazlası teklif edildi ve hiçbiri henüz kesinleşmedi. Kapsam netleşene kadar bu sayfa kısa kalacaktır — tartışmanın mevcut durumu için aşağıdaki kaynaklara bakın.
+Henüz karar verilmedi. FOCIL ve çerçeve işlemleri şu ana kadar planlanan iki değişikliktir; düzinelerce daha teklif edildi ve hiçbiri henüz kesinleşmedi. Kapsam netleşene kadar bu sayfa kısa kalacaktır — tartışmanın mevcut durumu için aşağıdaki kaynaklara bakın.
+
+Şu anda dahil edilmesi düşünülen teklifler arasında EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279 ve EIP-8365 bulunmaktadır. Düşünülüyor olması, istemci ekiplerinin bir teklifi değerlendirdiği anlamına gelir, Hegotá'da yayınlanacağı anlamına gelmez.
 
 ## Daha fazla bilgi {#further-reading}
 

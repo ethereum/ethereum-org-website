@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/hegota/index.md",
-  "generatedAt": "2026-09-30T18:31:42.239Z",
-  "rootHash": "bedc0d9626b3",
+  "generatedAt": "2026-10-14T17:50:58.066Z",
+  "rootHash": "9c8950fdea08",
   "tree": {
-    "contentHash": "8444fa4f582d",
+    "contentHash": "7e292e170136",
     "anchorHash": "2cc7f5cfcc36",
     "children": {
       "frontmatter:title": {
@@ -174,7 +174,7 @@
         ]
       },
       "scope": {
-        "contentHash": "bc2a7916dc29",
+        "contentHash": "773ced96129c",
         "anchorHash": "4b9f7d802648",
         "labelHash": "6ceac1c37680",
         "children": {
@@ -183,7 +183,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "17f747d05b83",
+            "contentHash": "88256d549eca",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -274,5 +274,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

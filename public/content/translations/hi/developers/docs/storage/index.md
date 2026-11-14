@@ -142,7 +142,7 @@ KYC के बिना विकेंद्रीकृत टूल:
 **Arweave - _Arweave डेटा स्टोर करने के लिए एक dStorage प्लेटफ़ॉर्म है।_**
 
 - [Arweave.org](https://www.arweave.org/)
-- [दस्तावेज़ीकरण](https://docs.arweave.org/info/)
+- [दस्तावेज़ीकरण](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs शार्डिंग और ब्लॉबर्स के साथ एक प्रूफ-ऑफ़-स्टेक dStorage प्लेटफ़ॉर्म है।_**

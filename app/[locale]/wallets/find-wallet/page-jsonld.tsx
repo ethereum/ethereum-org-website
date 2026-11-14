@@ -8,6 +8,7 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import type { CatalogWallet } from "@/lib/utils/walletData"
 import { getWalletPlatforms } from "@/lib/utils/walletData"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 import { WALLET_APPLICATION_CATEGORY } from "@/lib/jsonld/software"
@@ -52,29 +53,10 @@ export default async function FindWalletPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Wallets",
-              item: normalizeUrlForJsonLd(locale, "/wallets/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: t("page-find-wallet-meta-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          "wallets/find-wallet"
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#wallet-list` },
@@ -85,6 +67,8 @@ export default async function FindWalletPageJsonLD({
         name: t("page-find-wallet-title"),
         description: t("page-find-wallet-meta-description"),
         numberOfItems: wallets.length,
+        // Wallets are shuffled within locale groups, so positions are not a ranking.
+        itemListOrder: "https://schema.org/ItemListUnordered",
         itemListElement: wallets.map((wallet, index) => {
           const os = getWalletPlatforms(wallet)
           const detailUrl = normalizeUrlForJsonLd(

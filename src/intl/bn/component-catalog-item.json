@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "{name} সম্পর্কে",
+  "catalog-item-gallery-modal-title": "{name}-এর স্ক্রিনশট",
+  "catalog-item-gallery-screenshot-alt": "{name}-এর স্ক্রিনশট {index}",
+  "catalog-item-gallery-title": "গ্যালারি",
+  "catalog-item-info-title": "তথ্য",
+  "catalog-item-link-label": "{platform}-এ {name}",
+  "catalog-item-see-next": "পরবর্তীটি দেখুন",
+  "catalog-item-source-code": "সোর্স কোড",
+  "catalog-item-view-on-github": "GitHub-এ দেখুন",
+  "catalog-item-visit-website": "ওয়েবসাইটে যান"
+}

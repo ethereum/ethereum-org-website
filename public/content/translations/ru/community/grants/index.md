@@ -10,7 +10,7 @@ lang: ru
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Основатели, нужна помощь в ускорении вашего бизнеса? [Перейдите в раздел поддержки основателей](/founders/)</div>
+<div>Основатели, нужна помощь в ускорении вашего бизнеса? [Перейдите в раздел поддержки основателей](/organizations/founders/)</div>
 </Alert>
 
 ## Широкая экосистема Эфириума {#broad-ethereum-ecosystem}
