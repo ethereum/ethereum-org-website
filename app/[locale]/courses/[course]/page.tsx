@@ -18,12 +18,15 @@ import { ProgressChips } from "@/components/Courses/progress-stats"
 import { courseThemeStyle } from "@/components/Courses/theme"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import { ArrowPrev } from "@/components/ui/arrow"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
   COURSES,
+  COURSES_HUB,
   COURSES_INDEXABLE,
   COURSES_OG_IMAGE,
   getCourse,
@@ -111,6 +114,13 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
             }))}
           />
         </section>
+
+        <div className="flex justify-center px-page pb-16">
+          <ButtonLink href={COURSES_HUB} variant="outline" size="lg">
+            <ArrowPrev aria-hidden />
+            {t("page-courses-back-to-courses")}
+          </ButtonLink>
+        </div>
       </MainArticle>
     </I18nProvider>
   )

@@ -155,7 +155,7 @@ const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
         <p className="m-0 max-w-3xl text-body-medium">
           {t("account-methods-hint")}
         </p>
-        <ul className="m-0 flex max-w-2xl list-none flex-col gap-2">
+        <ul className="m-0 flex max-w-3xl list-none flex-col gap-2">
           {passkeys.map(({ id, name, createdAt }) => (
             <li key={id} className={row}>
               {renaming?.id === id ? (
@@ -293,7 +293,7 @@ const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
       {/* Label and description stacked; the switch centred beside both */}
       <Field
         orientation="horizontal"
-        className="max-w-2xl justify-between gap-4 rounded-lg border border-border px-4 py-3 has-[>[data-slot=field-content]]:items-center"
+        className="max-w-3xl justify-between gap-4 rounded-lg border border-border px-4 py-3 has-[>[data-slot=field-content]]:items-center"
       >
         <FieldContent>
           <FieldLabel

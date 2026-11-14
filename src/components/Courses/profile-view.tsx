@@ -516,7 +516,7 @@ const ProfileView = () => {
           <p className="max-w-3xl">
             {t("page-courses-profile-review-description")}
           </p>
-          <div className="flex max-w-2xl flex-col gap-3">
+          <div className="flex max-w-3xl flex-col gap-3">
             {review.map(({ courseId, lessonId, stepId, seen, missed }) => {
               const exam = lessonId === EXAM_ID
               return (
