@@ -186,7 +186,7 @@ const ChoiceStep = ({
       {prompt}
       <RadioGroup.Root
         // Up/down move between options; left/right stay free for the
-        // mastery check's question arrows
+        // Course Mastery's question arrows
         orientation="vertical"
         className="flex flex-col gap-3"
         value={value[0] ?? ""}

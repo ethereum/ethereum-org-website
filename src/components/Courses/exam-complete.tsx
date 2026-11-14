@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Check, Trophy, X, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
@@ -63,6 +63,10 @@ const ExamComplete = ({
   const locale = useLocale()
   const animate = !useReducedMotion()
   const [stage, setStage] = useState<Stage>("summary")
+  // Each screen replaces one that may have been scrolled down
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  }, [stage])
   // The streak screen shows once, the first time the learner moves on
   const [streakSeen, setStreakSeen] = useState(!reward.streakExtended)
 

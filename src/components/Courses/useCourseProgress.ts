@@ -57,7 +57,7 @@ export interface ExamReward extends LessonReward {
   passed: boolean
 }
 
-/** Any lesson finished or mastery check taken */
+/** Any lesson finished or Course Mastery taken */
 export const hasAnyProgress = (progress: CourseProgress) =>
   Object.keys(progress.lessons).length > 0 ||
   Object.keys(progress.exams ?? {}).length > 0

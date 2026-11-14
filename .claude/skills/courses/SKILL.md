@@ -5,7 +5,7 @@ description: Use when planning, writing or building anything under /courses — 
 
 # Courses
 
-Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-style progression (path, XP, streak, combo). No accounts yet; progress lives in localStorage. Pages are static and `noIndex`: lessons, exams and the profile always (and robots.txt keeps crawlers off them), the hub and course pages until `COURSES_INDEXABLE` flips at beta, which also adds them to the sitemap. Only the hub (`ItemList`) and course pages (`Course`) carry JSON-LD, in their `page-jsonld.tsx`. Read this file on activation, then the reference matching the task. Learners see each course's final exam as the "mastery check"; code and docs call it the exam or course check.
+Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-style progression (path, XP, streak, combo). No accounts yet; progress lives in localStorage. Pages are static and `noIndex`: lessons, exams and the profile always (and robots.txt keeps crawlers off them), the hub and course pages until `COURSES_INDEXABLE` flips at beta, which also adds them to the sitemap. Only the hub (`ItemList`) and course pages (`Course`) carry JSON-LD, in their `page-jsonld.tsx`. Read this file on activation, then the reference matching the task. Learners see each course's final exam as "Course Mastery"; code and docs call it the exam.
 
 ## Map
 
