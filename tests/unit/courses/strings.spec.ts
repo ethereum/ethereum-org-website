@@ -60,10 +60,12 @@ const trackKeys = TRACKS.flatMap(({ id }) => [
   `page-courses-track-${id}-description`,
 ])
 
-// Teasers aren't courses yet, but use course keys so the strings carry over
-const teaserIds = TRACKS.flatMap(({ upcoming = [] }) =>
-  upcoming.map(({ id }) => id)
-)
+// Teasers aren't courses yet, but use course keys so the strings carry over;
+// so do the callouts after a track
+const teaserIds = TRACKS.flatMap(({ upcoming = [], next }) => [
+  ...upcoming.map(({ id }) => id),
+  ...(next ? [next.id] : []),
+])
 
 const expected = [
   ...trackKeys,
