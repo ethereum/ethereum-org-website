@@ -194,3 +194,61 @@ export const getDayOfYear = (date: Date): number => {
   const current = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
   return Math.round((current - start) / 86400000)
 }
+
+/** True for an IANA time zone this runtime knows, e.g. "Europe/Berlin" */
+export const isTimeZone = (timeZone: string) => {
+  try {
+    dateTimeFormat("en", { timeZone })
+    return true
+  } catch {
+    return false
+  }
+}
+
+/** Calendar day (`YYYY-MM-DD`) at `at` in `timeZone`: a key, not display text */
+export const dayInZone = (timeZone: string, at = new Date()) =>
+  dateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(at)
+
+/** How far `timeZone`'s wall clock is ahead of UTC at `at`, in ms */
+const zoneOffsetMs = (timeZone: string, at: number) => {
+  const parts = Object.fromEntries(
+    dateTimeFormat("en-US", {
+      timeZone,
+      hourCycle: "h23",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    })
+      .formatToParts(at)
+      .map(({ type, value }) => [type, Number(value)])
+  )
+  const wall = Date.UTC(
+    parts.year,
+    parts.month - 1,
+    parts.day,
+    parts.hour,
+    parts.minute,
+    parts.second
+  )
+  return wall - Math.floor(at / 1000) * 1000
+}
+
+/**
+ * Midnight in `timeZone` that starts the day `days` after the one at `at`
+ * (0: today's, 1: tomorrow's). Corrected twice for a DST change in between.
+ */
+export const midnightInZone = (timeZone: string, at = new Date(), days = 0) => {
+  const [year, month, day] = dayInZone(timeZone, at).split("-").map(Number)
+  const wall = Date.UTC(year, month - 1, day + days)
+  let utc = wall - zoneOffsetMs(timeZone, wall)
+  utc = wall - zoneOffsetMs(timeZone, utc)
+  return new Date(utc)
+}

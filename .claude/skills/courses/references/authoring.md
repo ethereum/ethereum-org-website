@@ -51,7 +51,8 @@ Every course ends in a course check: the trophy node on the path, route `/course
 
 - Ten choice questions, two per lesson, in lesson order.
 - It tests what the course taught and introduces nothing: each question repeats a lesson question, widget puzzle or stated fact with a new scenario or wording. Never copy a lesson string verbatim, and never use a fact the course (or an earlier course on the path) didn't teach.
-- One attempt per question, then the right answer shows. So there are no per-option `fb-` notes, just one `-explain` that works whether the learner was right or wrong (don't open with "Right" or "Wrong"). It shows again in the review screen.
+- One attempt per question, graded by the server: the right option and the `-explain` show only after a pass (see `accounts.md`). So there are no per-option `fb-` notes, just one `-explain` that works whether the learner was right or wrong (don't open with "Right" or "Wrong"), shown again in the review screen.
+- Which option is right goes in the encrypted answer key, not the course file: update `.learner-exam-key.json`, run `pnpm courses:exam-key check` and `encrypt`, and commit `src/data/courses/exam-key.ts` with the question (`accounts.md`).
 - `multi` at most twice per check.
 - Every question sets `source`: the ethereum.org page that states the fact it tests, as specific as possible (use the section anchor where one exists), because it is a citation. It shows as "Learn more" in the review screen and is what the content review checks the question against. Never the glossary (for `learnMore` either): a one-line definition is a poor "Learn more" destination, so cite the page that explains the idea; the links spec rejects `/glossary/`.
 

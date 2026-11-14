@@ -140,14 +140,12 @@ export const proofOfStakeCourse: Course = {
       source: "/developers/docs/consensus-mechanisms/pos/#validators",
       type: "choice",
       options: ["approval", "stake", "mining"],
-      correct: ["stake"],
     },
     {
       id: "weight",
       source: "/developers/docs/consensus-mechanisms/pos/#validators",
       type: "choice",
       options: ["limit", "ignored", "stake"],
-      correct: ["stake"],
     },
     // voting
     {
@@ -156,7 +154,6 @@ export const proofOfStakeCourse: Course = {
         "/developers/docs/consensus-mechanisms/pos/block-proposal/#random-selection",
       type: "choice",
       options: ["random", "fastest", "rota"],
-      correct: ["random"],
     },
     {
       id: "attest",
@@ -164,7 +161,6 @@ export const proofOfStakeCourse: Course = {
         "/developers/docs/consensus-mechanisms/pos/attestations/#what-is-an-attestation",
       type: "choice",
       options: ["receipt", "fee", "vote"],
-      correct: ["vote"],
     },
     // slots
     {
@@ -173,7 +169,6 @@ export const proofOfStakeCourse: Course = {
         "/developers/docs/consensus-mechanisms/pos/block-proposal/#who-produces-blocks",
       type: "choice",
       options: ["seconds", "minutes", "hour"],
-      correct: ["minutes"],
     },
     {
       id: "missed",
@@ -181,7 +176,6 @@ export const proofOfStakeCourse: Course = {
         "/developers/docs/consensus-mechanisms/pos/attestations/#missing-block-proposer",
       type: "choice",
       options: ["empty", "pause", "repeat"],
-      correct: ["empty"],
     },
     // finality
     {
@@ -189,14 +183,12 @@ export const proofOfStakeCourse: Course = {
       source: "/developers/docs/consensus-mechanisms/pos/#finality",
       type: "choice",
       options: ["block", "thirteen", "checkpoint"],
-      correct: ["thirteen"],
     },
     {
       id: "undo",
       source: "/developers/docs/consensus-mechanisms/pos/#finality",
       type: "choice",
       options: ["third", "edit", "nodes"],
-      correct: ["third"],
     },
     // penalties
     {
@@ -205,7 +197,6 @@ export const proofOfStakeCourse: Course = {
         "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#penalties",
       type: "choice",
       options: ["slash", "small", "nothing"],
-      correct: ["small"],
     },
     {
       id: "correlated",
@@ -213,7 +204,6 @@ export const proofOfStakeCourse: Course = {
         "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#slashing",
       type: "choice",
       options: ["same", "less", "more"],
-      correct: ["more"],
     },
   ],
 }

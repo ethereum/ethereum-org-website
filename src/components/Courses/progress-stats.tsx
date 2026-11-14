@@ -19,6 +19,8 @@ import {
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
+import { useAccount } from "../Account/use-account"
+
 import { getActiveStreak, isStreakExtendedToday } from "./streak"
 import { statChip as chip } from "./theme"
 import { useCourseProgress } from "./useCourseProgress"
@@ -122,6 +124,7 @@ const ResetProgressButton = () => {
 export const ProgressNote = ({ privacy = true }: { privacy?: boolean }) => {
   const t = useTranslations("page-courses")
   const { progress } = useCourseProgress()
+  const { status: account } = useAccount()
 
   return (
     <div
@@ -132,10 +135,16 @@ export const ProgressNote = ({ privacy = true }: { privacy?: boolean }) => {
     >
       {privacy && (
         <p className="m-0 text-sm text-body-medium">
-          {t("page-courses-stats-privacy")}
+          {t(
+            account === "signed-in"
+              ? "page-courses-stats-privacy-account"
+              : "page-courses-stats-privacy"
+          )}
         </p>
       )}
-      {progress.xp > 0 && <ResetProgressButton />}
+      {/* Signed in, the next sync would refill it; deleting the account
+          is the reset there */}
+      {progress.xp > 0 && account !== "signed-in" && <ResetProgressButton />}
     </div>
   )
 }

@@ -25,6 +25,7 @@ import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
 import type { ExamReward } from "./useCourseProgress"
 
+/** One question to review: only after a pass, with the right options */
 export interface ExamResult {
   step: ChoiceStep
   picked: string[]
@@ -36,11 +37,14 @@ interface ExamCompleteProps {
   /** Share answered right, 0-1 */
   score: number
   passMark: number
+  /** Empty after a fail: a fail reports the score only */
   results: ExamResult[]
   keyFor: (stepId: string, suffix: string) => string
   courseHref: string
   nextCourseId?: string
   onRetake: () => void
+  /** Why there's no retake right now (today's attempts are used up) */
+  retakeBlocked?: string
   /** Page backing each question, by question id */
   sources?: Record<string, PageLink>
 }
@@ -57,6 +61,7 @@ const ExamComplete = ({
   courseHref,
   nextCourseId,
   onRetake,
+  retakeBlocked,
   sources,
 }: ExamCompleteProps) => {
   const t = useTranslations("page-courses")
@@ -116,9 +121,13 @@ const ExamComplete = ({
     </>
   ) : (
     <>
-      <Button variant="ghost" onClick={onRetake} className={chunkyButton}>
-        {t("page-courses-try-again")}
-      </Button>
+      {retakeBlocked ? (
+        <p className="m-0 w-full text-body-medium">{retakeBlocked}</p>
+      ) : (
+        <Button variant="ghost" onClick={onRetake} className={chunkyButton}>
+          {t("page-courses-try-again")}
+        </Button>
+      )}
       <ButtonLink
         href={courseHref}
         variant="ghost"
@@ -245,7 +254,7 @@ const ExamComplete = ({
 
       <motion.div
         key={stage}
-        className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center"
+        className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center"
         {...appear(stage === "summary" ? 1 : 0.2)}
       >
         {stage === "review" ? (
@@ -258,13 +267,15 @@ const ExamComplete = ({
           </Button>
         ) : stage === "summary" ? (
           <>
-            <Button
-              variant="ghost"
-              onClick={() => setStage("review")}
-              className={chunkyButtonSecondary}
-            >
-              {t("page-courses-exam-review")}
-            </Button>
+            {results.length > 0 && (
+              <Button
+                variant="ghost"
+                onClick={() => setStage("review")}
+                className={chunkyButtonSecondary}
+              >
+                {t("page-courses-exam-review")}
+              </Button>
+            )}
             {streakSeen ? (
               nav
             ) : (

@@ -8,7 +8,7 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
-import LessonPlayer from "@/components/Courses/lesson-player"
+import ExamGate from "@/components/Courses/exam-gate"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getMetadata } from "@/lib/utils/metadata"
@@ -51,16 +51,13 @@ const Page = async (props: { params: Promise<ExamPageParams> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <main>
-        <LessonPlayer
-          key={courseId}
-          exam
-          courseId={courseId}
-          lesson={{ id: EXAM_ID, steps: course.exam }}
-          nextCourseId={nextCourseId}
-          sources={sources}
-        />
-      </main>
+      <ExamGate
+        key={courseId}
+        courseId={courseId}
+        questions={course.exam}
+        nextCourseId={nextCourseId}
+        sources={sources}
+      />
     </I18nProvider>
   )
 }

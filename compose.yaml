@@ -1,0 +1,21 @@
+# Local Postgres for learner accounts (courses). Optional: without
+# LEARNER_DB_URL the app keeps progress in the browser. See .env.example.
+services:
+  learner-db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: learner
+      POSTGRES_PASSWORD: learner
+      POSTGRES_DB: learner
+    ports:
+      - "127.0.0.1:${LEARNER_DB_PORT:-5433}:5432"
+    volumes:
+      - learner-db:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U learner -d learner"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  learner-db:

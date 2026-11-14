@@ -4,16 +4,32 @@ import { useCallback } from "react"
 
 import { EXAM_ID, EXAM_PASS_MARK, lessonProgressKey } from "@/data/courses"
 
-import { COURSE_PROGRESS_KEY, flagProgress } from "./progress-storage"
+import { queueProgressUpload } from "./account-sync"
+import {
+  COURSE_PROGRESS_KEY,
+  flagProgress,
+  readStoredProgress,
+} from "./progress-storage"
 import { mergeStepResults, type StepRecord } from "./step-history"
 import { extendStreak, type Streak } from "./streak"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
+import { hasAnyProgress } from "@/lib/courses/progress"
+import {
+  XP_EXAM_PASS,
+  XP_LESSON,
+  XP_PERFECT_BONUS,
+  XP_REPLAY,
+} from "@/lib/courses/rules"
 
-export const XP_LESSON = 10
-export const XP_PERFECT_BONUS = 5
-export const XP_REPLAY = 5
-export const XP_EXAM_PASS = 30
+export {
+  hasAnyProgress,
+  readStoredProgress,
+  XP_EXAM_PASS,
+  XP_LESSON,
+  XP_PERFECT_BONUS,
+  XP_REPLAY,
+}
 
 export interface LessonRecord {
   completedAt: string
@@ -38,6 +54,9 @@ export interface CourseProgress {
   steps?: Record<string, StepRecord>
   /** By course id; absent in progress saved before exams existed */
   exams?: Record<string, ExamRecord>
+  /** The account this progress was synced with, if any: it belongs to that
+   * account, so signing in to another one replaces it instead of merging */
+  account?: string
 }
 
 export interface LessonReward {
@@ -55,24 +74,6 @@ export interface LessonReward {
 
 export interface ExamReward extends LessonReward {
   passed: boolean
-}
-
-/** Any lesson finished or Course Mastery taken */
-export const hasAnyProgress = (progress: CourseProgress) =>
-  Object.keys(progress.lessons).length > 0 ||
-  Object.keys(progress.exams ?? {}).length > 0
-
-/**
- * Saved progress, read straight from storage. `useCourseProgress` only has
- * it after its first effect, so a decision made on mount reads this instead.
- */
-export const readStoredProgress = (): CourseProgress | null => {
-  try {
-    const item = window.localStorage.getItem(COURSE_PROGRESS_KEY)
-    return item ? (JSON.parse(item) as CourseProgress) : null
-  } catch {
-    return null
-  }
 }
 
 const INITIAL_PROGRESS: CourseProgress = {
@@ -120,6 +121,7 @@ export const useCourseProgress = () => {
       ),
     })
     flagProgress(true)
+    queueProgressUpload()
 
     return {
       xp,

@@ -10,7 +10,6 @@ import {
   Medal,
   Sparkles,
   Trophy,
-  UserRound,
   Zap,
 } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
@@ -42,10 +41,18 @@ import {
   TRACKS,
 } from "@/data/courses"
 
+import { useAccount } from "../Account/use-account"
+
 import CourseArt from "./art/course-art"
+import { syncProgress } from "./account-sync"
 import CourseProgress from "./course-progress"
 import { useLevelName } from "./level-up"
 import { levelFor, levelProgress } from "./levels"
+import {
+  ProfileAccountSections,
+  ProfileAccountSummary,
+  ProfileAvatar,
+} from "./profile-account"
 import { ProgressNote } from "./progress-stats"
 import { flagProgress } from "./progress-storage"
 import { getActiveStreak } from "./streak"
@@ -150,7 +157,7 @@ const ProfileSkeleton = () => {
         aria-hidden
         className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5"
       >
-        <Skeleton className="col-span-2 h-44 rounded-2xl md:col-span-4 xl:col-span-1 xl:row-span-2 xl:h-auto" />
+        <Skeleton className="col-span-2 h-80 rounded-2xl sm:h-64 md:col-span-4 md:h-56 xl:col-span-1 xl:row-span-2 xl:h-auto" />
         {Array.from({ length: 8 }, (_, i) => (
           <StatSkeleton key={i} />
         ))}
@@ -271,20 +278,32 @@ const ProfileView = () => {
   // Progress loads from localStorage after mount; hide the initial zeros
   const [ready, setReady] = useState(false)
   const backHref = `${COURSES_HUB}?${NO_PROFILE_PARAM}`
+  const { status: accountStatus } = useAccount()
+  const signedIn = accountStatus === "signed-in"
   useEffect(() => {
-    // With nothing saved there's no profile yet: back to the hub, which says why
+    if (accountStatus === "loading") return
+    // An account always has a profile, once its progress (from other
+    // devices) is in. Otherwise, with nothing saved there's no profile yet:
+    // back to the hub, which says why
+    if (accountStatus === "signed-in") {
+      void syncProgress().finally(() => {
+        flagProgress(true)
+        setReady(true)
+      })
+      return
+    }
     const stored = readStoredProgress()
     if (stored && hasAnyProgress(stored)) {
       flagProgress(true)
       setReady(true)
     } else router.replace(backHref)
-  }, [router, backHref])
+  }, [accountStatus, router, backHref])
 
-  // Progress reset from this page: nothing left to show, so leave too
+  // Signed out or progress reset from this page: nothing left to show
   useEffect(() => {
-    if (!ready || hasAnyProgress(progress)) return
-    router.replace(backHref)
-  }, [ready, progress, router, backHref])
+    if (!ready || signedIn || hasAnyProgress(progress)) return
+    router.replace(COURSES_HUB)
+  }, [ready, signedIn, progress, router])
 
   const count = numberFormat(locale).format
   const percent = numberFormat(locale, {
@@ -341,7 +360,7 @@ const ProfileView = () => {
   const review = stepsToReview(progress)
   const started = hasAnyProgress(progress)
 
-  if (!started || !ready) return <ProfileSkeleton />
+  if (!ready || (!started && !signedIn)) return <ProfileSkeleton />
 
   return (
     <div className="flow">
@@ -360,18 +379,19 @@ const ProfileView = () => {
             )}
             style={courseThemeStyle("purple")}
           >
-            <CardContent className="h-full gap-4 text-white max-xl:flex-row max-xl:items-center xl:justify-between">
-              <span className="grid size-16 shrink-0 place-items-center rounded-full bg-white/15">
-                <UserRound aria-hidden className="size-8 text-white" />
-              </span>
-              <div className="flex flex-1 flex-col gap-3">
-                <div className="flex flex-col gap-1">
-                  <p className="m-0 text-2xl font-bold text-white">
-                    {t("page-courses-profile-account-local")}
-                  </p>
-                  <CardParagraph className={cn("m-0", solidMuted)} size="sm">
-                    {t("page-courses-profile-account-soon")}
-                  </CardParagraph>
+            {/* Container query: wide, the avatar sits on the right as tall
+                as the account text beside it (stretched, kept square);
+                narrow (the tall card on wide screens, phones), everything
+                stacks. The level bar always spans the card */}
+            <CardContent className="@container h-full text-white">
+              <div className="grid h-full content-between gap-4">
+                <div className="flex flex-col gap-4 @md:flex-row-reverse @md:gap-8">
+                  <span className="relative size-16 shrink-0 rounded-full bg-white/15 @md:aspect-square @md:size-auto @md:self-stretch">
+                    <ProfileAvatar />
+                  </span>
+                  <div className="flex-1">
+                    <ProfileAccountSummary muted={solidMuted} />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="font-black text-white">
@@ -454,40 +474,41 @@ const ProfileView = () => {
         </div>
       </Section>
 
-      {(inProgress.length > 0 || mastered.length > 0) && (
-        <Section id="courses">
-          <h2>{t("page-courses-profile-courses-title")}</h2>
-          {[
-            { id: "in-progress", rows: inProgress },
-            { id: "mastered", rows: mastered },
-          ]
-            .filter(({ rows }) => rows.length)
-            .map(({ id, rows }) => (
-              <div key={id} className="flow">
-                <h3>{t(`page-courses-profile-${id}-title`)}</h3>
-                <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
-                  {rows.map(({ course, trackId, isMastered }) => (
-                    <li key={course.id} className="m-0">
-                      <CompactCourseCard
-                        course={course}
-                        trackTitle={t(`page-courses-track-${trackId}-title`)}
-                        isMastered={isMastered}
-                        bestScore={progress.exams?.[course.id]?.best}
-                        formatPercent={percent}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          <div data-flow="cta">
-            <ButtonLink href={COURSES_HUB} size="lg">
-              {t("page-courses-profile-keep-learning")}
-              <ArrowNext aria-hidden />
-            </ButtonLink>
-          </div>
-        </Section>
-      )}
+      <Section id="courses">
+        <h2>{t("page-courses-profile-courses-title")}</h2>
+        {!started && <p>{t("page-courses-profile-courses-none")}</p>}
+        {[
+          { id: "in-progress", rows: inProgress },
+          { id: "mastered", rows: mastered },
+        ]
+          .filter(({ rows }) => rows.length)
+          .map(({ id, rows }) => (
+            <div key={id} className="flow">
+              <h3>{t(`page-courses-profile-${id}-title`)}</h3>
+              <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {rows.map(({ course, trackId, isMastered }) => (
+                  <li key={course.id} className="m-0">
+                    <CompactCourseCard
+                      course={course}
+                      trackTitle={t(`page-courses-track-${trackId}-title`)}
+                      isMastered={isMastered}
+                      bestScore={progress.exams?.[course.id]?.best}
+                      formatPercent={percent}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        <div data-flow="cta">
+          <ButtonLink href={COURSES_HUB} size="lg">
+            {started
+              ? t("page-courses-profile-keep-learning")
+              : t("page-courses-profile-start-learning")}
+            <ArrowNext aria-hidden />
+          </ButtonLink>
+        </div>
+      </Section>
 
       {review.length > 0 && (
         <Section id="review">
@@ -531,6 +552,8 @@ const ProfileView = () => {
           </div>
         </Section>
       )}
+
+      <ProfileAccountSections />
 
       <ProgressNote privacy={false} />
     </div>

@@ -3,12 +3,24 @@
 import { useEffect, useRef, useState } from "react"
 import { CheckCircle2, Flame, Lightbulb, XCircle } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+
+import type { Lang } from "@/lib/types"
 
 import { Button } from "@/components/ui/buttons/Button"
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog-modal"
 import { Progress } from "@/components/ui/progress"
 
 import { cn } from "@/lib/utils/cn"
+import { getDirection } from "@/lib/utils/direction"
 
 import {
   courseHref,
@@ -32,17 +44,30 @@ import MatchStep, { isMatchComplete, isMatchCorrect } from "./steps/match-step"
 import OrderStep, { isOrderComplete, isOrderCorrect } from "./steps/order-step"
 import type { StepStatus } from "./steps/types"
 import type { WidgetAnswer } from "./widgets/types"
+import { useLessonSession } from "./account-sync"
 import { toPercent, trackCourseEvent } from "./analytics"
 import ExamComplete from "./exam-complete"
+import type { ExamFinish, ExamSession } from "./exam-session"
 import ExitLessonButton from "./exit-lesson-button"
 import LessonComplete from "./lesson-complete"
 import ReportProblemButton from "./report-problem-button"
-import { chunkyButton, courseText, lessonThemeStyle } from "./theme"
+import {
+  chunkyButton,
+  chunkyButtonSecondary,
+  courseText,
+  lessonThemeStyle,
+} from "./theme"
 import {
   type ExamReward,
   type LessonReward,
   useCourseProgress,
 } from "./useCourseProgress"
+
+import {
+  EXAM_ATTEMPTS_PER_DAY,
+  MIN_ANSWER_MS,
+  samePicks,
+} from "@/lib/courses/rules"
 
 interface LessonPlayerProps {
   courseId: string
@@ -54,10 +79,12 @@ interface LessonPlayerProps {
   sources?: Record<string, PageLink>
   nextLessonId?: string
   /**
-   * Final exam: one attempt per question with the answer revealed, scored
-   * against `EXAM_PASS_MARK`. `lesson.id` is `EXAM_ID`.
+   * Course Mastery: one attempt per question, graded by the server through
+   * `examSession` (the right options never reach the browser before a pass).
+   * `lesson.id` is `EXAM_ID`; steps arrive in the server's order.
    */
   exam?: boolean
+  examSession?: ExamSession
   /** Exam only: where Continue goes after a pass */
   nextCourseId?: string
   /** Last lesson of a course with a check: completion points to it */
@@ -127,21 +154,33 @@ const LessonPlayer = ({
   examAfter,
   learnMore,
   sources,
+  examSession,
 }: LessonPlayerProps) => {
   const t = useTranslations("page-courses")
+  const locale = useLocale()
   const reduceMotion = useReducedMotion()
   const { completeLesson, completeExam } = useCourseProgress()
+  const lessonSession = useLessonSession(courseId, lesson.id, !exam)
 
-  const [index, setIndex] = useState(0)
-  const [values, setValues] = useState<Record<string, StepValue>>({})
+  // A resumed Course Mastery attempt picks up after the answers already saved
+  const resumed = examSession?.answered ?? {}
+  const [index, setIndex] = useState(() =>
+    Math.min(Object.keys(resumed).length, lesson.steps.length - 1)
+  )
+  const [values, setValues] = useState<Record<string, StepValue>>(resumed)
   const [status, setStatus] = useState<StepStatus>("answering")
   const [firstTry, setFirstTry] = useState<Record<string, boolean>>({})
+  const [pending, setPending] = useState(false)
+  const [failed, setFailed] = useState(false)
+  const [examFinish, setExamFinish] = useState<ExamFinish | null>(null)
   const [combo, setCombo] = useState(0)
   const [reward, setReward] = useState<LessonReward | ExamReward | null>(null)
   const [accuracy, setAccuracy] = useState(1)
 
   const restart = () => {
     trackCourseEvent("Lesson restart", `${courseId}/${lesson.id}`)
+    if (examSession) return examSession.restart()
+    void lessonSession.restart()
     setIndex(0)
     setValues({})
     setStatus("answering")
@@ -164,9 +203,8 @@ const LessonPlayer = ({
   useEffect(() => {
     if (index > 0) stepRef.current?.focus()
   }, [index])
-
   const total = lesson.steps.length
-  const answered = status === "correct" || (exam && status === "incorrect")
+  const answered = status === "correct"
   const progressValue = reward
     ? 100
     : ((index + (answered ? 1 : 0)) / total) * 100
@@ -216,6 +254,102 @@ const LessonPlayer = ({
     }
   }
 
+  // Course Mastery answers save in the background, one at a time in question
+  // order as the server requires, so Next never waits on the network
+  const savedRef = useRef<Record<string, string[]>>(resumed)
+  const valuesRef = useRef(values)
+  useEffect(() => {
+    valuesRef.current = values
+  }, [values])
+  const savingRef = useRef<Promise<boolean>>(Promise.resolve(true))
+
+  /** Queue a save of every answer that differs from what the server holds */
+  const saveAnswers = () => {
+    savingRef.current = savingRef.current.then(async () => {
+      if (!examSession) return true
+      for (const { id } of lesson.steps) {
+        const picks = valuesRef.current[id] as string[] | undefined
+        // Saves go in order: nothing past an unanswered question yet
+        if (!picks?.length) break
+        const prev = savedRef.current[id]
+        if (prev && samePicks(prev, picks)) continue
+        if (!(await examSession.submit(id, picks))) return false
+        savedRef.current = { ...savedRef.current, [id]: picks }
+      }
+      return true
+    })
+    return savingRef.current
+  }
+
+  const [confirming, setConfirming] = useState(false)
+  const submitRef = useRef<HTMLButtonElement>(null)
+
+  const handleExamNext = async () => {
+    if (!examSession || pending) return
+    setFailed(false)
+    const saving = saveAnswers()
+    if (index < total - 1) {
+      setIndex(index + 1)
+      // A failed save is retried with the next one; meanwhile, say so
+      if (!(await saving)) setFailed(true)
+      return
+    }
+    // Submitting can't be undone and uses up an attempt: confirm first
+    setConfirming(true)
+  }
+
+  const handleExamSubmit = async () => {
+    if (!examSession || pending) return
+    setConfirming(false)
+    setFailed(false)
+    // Grading waits for the last saves, then covers the whole check
+    setPending(true)
+    try {
+      if (!(await saveAnswers())) return setFailed(true)
+      const result = await examSession.finish()
+      if (!result) return setFailed(true)
+      trackCourseEvent(
+        "Course check complete",
+        courseId,
+        toPercent(result.score)
+      )
+      setAccuracy(result.score)
+      setExamFinish(result)
+      setReward(completeExam(courseId, result.score, result.results ?? {}))
+    } finally {
+      setPending(false)
+    }
+  }
+
+  // Course Mastery pace: Next unlocks MIN_ANSWER_MS after a question first
+  // shows, the pace the server accepts. One timer per question, kept across
+  // re-renders and visits; answers resumed from the server don't wait
+  const isExamSession = !!examSession
+  const shownAtRef = useRef<Record<string, number>>({})
+  const [pace, setPace] = useState<{
+    id: string
+    elapsed: number
+    remaining: number
+  } | null>(null)
+  useEffect(() => {
+    if (!isExamSession) return
+    const id = step.id
+    if (!(id in shownAtRef.current) && valuesRef.current[id]) return
+    const shownAt = (shownAtRef.current[id] ??= Date.now())
+    const elapsed = Date.now() - shownAt
+    const remaining = MIN_ANSWER_MS - elapsed
+    if (remaining <= 0) return
+    setPace({ id, elapsed, remaining })
+    const timer = setTimeout(() => setPace(null), remaining)
+    return () => clearTimeout(timer)
+  }, [isExamSession, step.id])
+  const waiting = pace?.id === step.id
+
+  const handleExamBack = () => {
+    setFailed(false)
+    setIndex(index - 1)
+  }
+
   const handleContinue = () => {
     if (index < total - 1) {
       setIndex(index + 1)
@@ -230,6 +364,7 @@ const LessonPlayer = ({
       ? graded.filter(({ id }) => results[id]).length / graded.length
       : 1
     setAccuracy(score)
+    if (!exam) lessonSession.complete(score)
     if (exam)
       trackCourseEvent("Course check complete", courseId, toPercent(score))
     else
@@ -247,34 +382,36 @@ const LessonPlayer = ({
 
   const canContinue =
     !reward &&
-    (status === "correct" ||
-      (exam && status === "incorrect") ||
-      (!isGraded(step) && isReady(step, value)))
+    (status === "correct" || (!isGraded(step) && isReady(step, value)))
   const explored =
     step.type === "interactive" && !isGraded(step) && value === true
 
   // Enter triggers the footer's enabled button, whichever it is
-  const footerKind: "check" | "retry" | "continue" | null = reward
+  const footerKind: "next" | "check" | "retry" | "continue" | null = reward
     ? null
-    : status === "incorrect"
-      ? exam
-        ? "continue"
-        : "retry"
-      : canContinue
-        ? "continue"
-        : isGraded(step) && isReady(step, value)
-          ? "check"
-          : null
+    : examSession
+      ? isReady(step, value) && !waiting
+        ? "next"
+        : null
+      : status === "incorrect"
+        ? "retry"
+        : canContinue
+          ? "continue"
+          : isGraded(step) && isReady(step, value)
+            ? "check"
+            : null
   const footerActionRef = useRef<(() => void) | null>(null)
   useEffect(() => {
     footerActionRef.current =
-      footerKind === "check"
-        ? handleCheck
-        : footerKind === "retry"
-          ? handleRetry
-          : footerKind === "continue"
-            ? handleContinue
-            : null
+      footerKind === "next"
+        ? handleExamNext
+        : footerKind === "check"
+          ? handleCheck
+          : footerKind === "retry"
+            ? handleRetry
+            : footerKind === "continue"
+              ? handleContinue
+              : null
   })
 
   useEffect(() => {
@@ -307,9 +444,43 @@ const LessonPlayer = ({
     return () => window.removeEventListener("keydown", onEnter, true)
   }, [footerKind])
 
+  // Course Mastery: the arrows step back and forward (Next's rules apply),
+  // mirrored for right-to-left languages
+  const { isRtl } = getDirection(locale as Lang)
+  const examBackRef = useRef<(() => void) | null>(null)
+  useEffect(() => {
+    examBackRef.current =
+      isExamSession && index > 0 && !pending ? handleExamBack : null
+  })
+  useEffect(() => {
+    if (!isExamSession || reward) return
+    const onArrow = (event: KeyboardEvent) => {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return
+      if (event.repeat || event.altKey || event.ctrlKey || event.metaKey) return
+      if (event.shiftKey) return
+      const target = event.target as HTMLElement | null
+      if (
+        target?.closest(
+          "input, textarea, select, [contenteditable], [role=dialog]"
+        )
+      )
+        return
+      const forward = (event.key === "ArrowRight") !== isRtl
+      const action = forward
+        ? footerKind === "next"
+          ? footerActionRef.current
+          : null
+        : examBackRef.current
+      if (!action) return
+      event.preventDefault()
+      action()
+    }
+    window.addEventListener("keydown", onArrow)
+    return () => window.removeEventListener("keydown", onArrow)
+  }, [isExamSession, reward, footerKind, isRtl])
+
   const feedbackKey = (() => {
     if (status === "answering" || !isGraded(step)) return null
-    if (exam) return keyFor("explain")
     if (step.type === "choice")
       return (
         choiceFeedbackKey(step, value as string[], keyFor) ??
@@ -460,18 +631,21 @@ const LessonPlayer = ({
             })}
             className="flex-1 bg-background-highlight *:data-[slot=progress-indicator]:bg-(--course)"
           />
-          <span
-            className={cn(
-              "flex shrink-0 items-center gap-1 font-bold tabular-nums transition-colors",
-              combo > 0
-                ? "text-orange-700 dark:text-orange-400"
-                : "text-disabled"
-            )}
-            aria-hidden
-          >
-            <Flame className="size-5" />
-            {combo}
-          </span>
+          {/* No verdicts in Course Mastery, so no streak to count */}
+          {!exam && (
+            <span
+              className={cn(
+                "flex shrink-0 items-center gap-1 font-bold tabular-nums transition-colors",
+                combo > 0
+                  ? "text-orange-700 dark:text-orange-400"
+                  : "text-disabled"
+              )}
+              aria-hidden
+            >
+              <Flame className="size-5" />
+              {combo}
+            </span>
+          )}
         </div>
 
         {!titleInStep && title}
@@ -481,13 +655,23 @@ const LessonPlayer = ({
             reward={reward}
             score={accuracy}
             passMark={EXAM_PASS_MARK}
-            results={lesson.steps
-              .filter((s) => s.type === "choice")
-              .map((s) => ({
-                step: s,
-                picked: (values[s.id] as string[] | undefined) ?? [],
-                correct: !!firstTry[s.id],
-              }))}
+            // Only a pass comes back with results to review
+            results={
+              examFinish?.review
+                ? lesson.steps
+                    .filter((s) => s.type === "choice")
+                    .map((s) => ({
+                      step: { ...s, correct: examFinish.review?.[s.id] ?? [] },
+                      picked: (values[s.id] as string[] | undefined) ?? [],
+                      correct: !!examFinish.results?.[s.id],
+                    }))
+                : []
+            }
+            retakeBlocked={
+              examFinish && examFinish.attemptsLeft === 0
+                ? t("page-courses-exam-limit-reached")
+                : undefined
+            }
             keyFor={(stepId, suffix) =>
               stepKey(courseId, lesson.id, stepId, suffix)
             }
@@ -614,6 +798,12 @@ const LessonPlayer = ({
               )}
             </AnimatePresence>
 
+            {failed && (
+              <p role="alert" className="m-0 text-error dark:text-red-400">
+                {t("page-courses-exam-request-failed")}
+              </p>
+            )}
+
             {/* Main button: full width on mobile, end-aligned from md */}
             <div
               data-footer-actions
@@ -625,17 +815,54 @@ const LessonPlayer = ({
                   hasFeedbackRow && "max-md:hidden"
                 )
               )}
-              {status === "incorrect" && exam ? (
-                <Button
-                  variant="ghost"
-                  onClick={handleContinue}
-                  className={cn(
-                    chunkyButton,
-                    "w-full border-red-800 bg-error md:w-auto"
+              {examSession ? (
+                <>
+                  {index > 0 && (
+                    <Button
+                      variant="ghost"
+                      onClick={handleExamBack}
+                      disabled={pending}
+                      className={cn(chunkyButtonSecondary, "w-full md:w-auto")}
+                    >
+                      {t("page-courses-exam-previous")}
+                    </Button>
                   )}
-                >
-                  {t("page-courses-continue")}
-                </Button>
+                  <Button
+                    variant="ghost"
+                    onClick={handleExamNext}
+                    disabled={!isReady(step, value) || pending || waiting}
+                    className={cn(
+                      chunkyButton,
+                      "relative w-full overflow-hidden md:w-auto"
+                    )}
+                  >
+                    {/* Runs with the timer but shows only once an answer is
+                        picked early, filling up to when Next unlocks */}
+                    {waiting && pace && !reduceMotion && (
+                      <motion.span
+                        key={pace.id}
+                        aria-hidden
+                        className={cn(
+                          "absolute inset-0 origin-left bg-(--course) transition-opacity rtl:origin-right",
+                          isReady(step, value) ? "opacity-60" : "opacity-0"
+                        )}
+                        initial={{ scaleX: pace.elapsed / MIN_ANSWER_MS }}
+                        animate={{ scaleX: 1 }}
+                        transition={{
+                          duration: pace.remaining / 1000,
+                          ease: "linear",
+                        }}
+                      />
+                    )}
+                    <span className="relative">
+                      {index < total - 1
+                        ? t("page-courses-exam-next")
+                        : pending
+                          ? t("page-courses-checking")
+                          : t("page-courses-exam-submit")}
+                    </span>
+                  </Button>
+                </>
               ) : status === "incorrect" ? (
                 <Button
                   variant="ghost"
@@ -680,6 +907,39 @@ const LessonPlayer = ({
             </div>
           </div>
         </div>
+      )}
+
+      {examSession && (
+        <Dialog open={confirming} onOpenChange={setConfirming}>
+          <DialogContent
+            // Enter confirms: the second deliberate press after Submit
+            onOpenAutoFocus={(event) => {
+              event.preventDefault()
+              submitRef.current?.focus()
+            }}
+          >
+            <DialogHeader>
+              <DialogTitle>{t("page-courses-exam-confirm-title")}</DialogTitle>
+            </DialogHeader>
+            <DialogDescription>
+              {examSession.attemptsLeft > 0
+                ? t("page-courses-exam-confirm-description", {
+                    count: EXAM_ATTEMPTS_PER_DAY,
+                  })
+                : t("page-courses-exam-confirm-last")}
+            </DialogDescription>
+            <DialogFooter className="flex flex-wrap justify-end gap-2">
+              <DialogClose asChild>
+                <Button variant="outline" isSecondary>
+                  {t("page-courses-exam-keep-reviewing")}
+                </Button>
+              </DialogClose>
+              <Button ref={submitRef} onClick={handleExamSubmit}>
+                {t("page-courses-exam-submit")}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       )}
     </div>
   )

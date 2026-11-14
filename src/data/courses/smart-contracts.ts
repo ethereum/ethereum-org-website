@@ -130,14 +130,12 @@ export const smartContractsCourse: Course = {
       source: "/developers/docs/accounts/#key-differences",
       type: "choice",
       options: ["anytime", "rule", "validators"],
-      correct: ["rule"],
     },
     {
       id: "deployed",
       source: "/developers/docs/smart-contracts/upgrading/",
       type: "choice",
       options: ["anytime", "validators", "published"],
-      correct: ["published"],
     },
     // calling
     {
@@ -146,7 +144,6 @@ export const smartContractsCourse: Course = {
         "/developers/docs/smart-contracts/interacting/#writing-to-a-contract",
       type: "choice",
       options: ["stock", "add", "balance", "send"],
-      correct: ["add", "send"],
       multi: true,
     },
     {
@@ -155,7 +152,6 @@ export const smartContractsCourse: Course = {
         "/developers/docs/smart-contracts/interacting/#reading-from-a-contract",
       type: "choice",
       options: ["decline", "always", "once"],
-      correct: ["decline"],
     },
     // tokens
     {
@@ -163,14 +159,12 @@ export const smartContractsCourse: Course = {
       source: "/developers/docs/standards/tokens/erc-20/#body",
       type: "choice",
       options: ["created", "travel", "updated"],
-      correct: ["updated"],
     },
     {
       id: "restore",
       source: "/wrapped-eth/",
       type: "choice",
       options: ["list", "gone", "eth"],
-      correct: ["list"],
     },
     // public
     {
@@ -179,14 +173,12 @@ export const smartContractsCourse: Course = {
         "/developers/docs/smart-contracts/verifying/#importance-of-source-code-verification",
       type: "choice",
       options: ["hidden", "machine", "change"],
-      correct: ["machine"],
     },
     {
       id: "swap",
       source: "/developers/docs/smart-contracts/composability/",
       type: "choice",
       options: ["three", "two", "one"],
-      correct: ["one"],
     },
     // risks
     {
@@ -194,14 +186,12 @@ export const smartContractsCourse: Course = {
       source: "/developers/docs/smart-contracts/security/#audits",
       type: "choice",
       options: ["lowers", "bug-free", "useless"],
-      correct: ["lowers"],
     },
     {
       id: "approval",
       source: "/guides/how-to-revoke-token-access/",
       type: "choice",
       options: ["still", "disconnect", "revoke", "held"],
-      correct: ["still", "revoke"],
       multi: true,
     },
   ],

@@ -226,9 +226,10 @@ export interface Lesson {
 /**
  * Final exam question: a repeat or close variant of a lesson question, never
  * new material. One attempt, so no per-option feedback. Keys under
- * `{course}-exam-{id}`: `-prompt`, `-opt-{id}`, `-explain`.
+ * `{course}-exam-{id}`: `-prompt`, `-opt-{id}`, `-explain`. Which options are
+ * right is in the encrypted key the server grades with (`exam-key.ts`).
  */
-export interface ExamStep extends ChoiceStep {
+export interface ExamStep extends Omit<ChoiceStep, "correct"> {
   /** ethereum.org page (path, optional `#anchor`) that backs the answer */
   source: string
 }

@@ -124,6 +124,13 @@ export const KEYBOARD_SHORTCUTS = {
     documentedOnly: true,
     path: "/courses/",
   },
+  courseCheckNavigate: {
+    combos: [["ArrowLeft"], ["ArrowRight"]],
+    labelKey: "shortcut-course-check-navigate",
+    group: "courses",
+    documentedOnly: true,
+    path: "/courses/",
+  },
   courseContinue: {
     combos: [["Enter"]],
     labelKey: "shortcut-course-continue",

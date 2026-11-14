@@ -139,14 +139,12 @@ export const gasCourse: Course = {
       source: "/developers/docs/gas/#how-are-gas-fees-calculated",
       type: "choice",
       options: ["gas", "fee", "price"],
-      correct: ["fee"],
     },
     {
       id: "token",
       source: "/developers/docs/gas/#what-is-gas",
       type: "choice",
       options: ["contract", "creator", "value"],
-      correct: ["contract"],
     },
     // fees
     {
@@ -154,14 +152,12 @@ export const gasCourse: Course = {
       source: "/developers/docs/gas/#how-are-gas-fees-calculated",
       type: "choice",
       options: ["tip", "burned", "total"],
-      correct: ["burned"],
     },
     {
       id: "rise",
       source: "/developers/docs/gas/#base-fee",
       type: "choice",
       options: ["fixed", "drop", "climb"],
-      correct: ["climb"],
     },
     // blocks
     {
@@ -169,14 +165,12 @@ export const gasCourse: Course = {
       source: "/developers/docs/gas/#priority-fee",
       type: "choice",
       options: ["keep", "burn", "limit"],
-      correct: ["keep"],
     },
     {
       id: "builder",
       source: "/developers/docs/mev/#builder-api",
       type: "choice",
       options: ["server", "builder", "sender"],
-      correct: ["builder"],
     },
     // failed
     {
@@ -184,7 +178,6 @@ export const gasCourse: Course = {
       source: "/developers/docs/gas/#what-is-gas-limit",
       type: "choice",
       options: ["sent", "fee", "refund", "undone"],
-      correct: ["fee", "undone"],
       multi: true,
     },
     {
@@ -192,7 +185,6 @@ export const gasCourse: Course = {
       source: "/developers/docs/gas/#what-is-gas-limit",
       type: "choice",
       options: ["higher", "same", "fails"],
-      correct: ["same"],
     },
     // stuck
     {
@@ -200,14 +192,12 @@ export const gasCourse: Course = {
       source: "/developers/docs/transactions/#whats-a-transaction",
       type: "choice",
       options: ["jumps", "replaces", "waits"],
-      correct: ["waits"],
     },
     {
       id: "cancel",
       source: "/community/support/faq/#stuck-transaction",
       type: "choice",
       options: ["delete", "self", "next"],
-      correct: ["self"],
     },
   ],
 }

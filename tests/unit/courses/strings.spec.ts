@@ -6,6 +6,7 @@
  * are checked. UI chrome (`page-courses-*`) is out of scope.
  */
 
+import { existsSync, readFileSync } from "node:fs"
 import { expect, test } from "@playwright/test"
 
 import type { ExamStep, LessonStep } from "../../../src/data/courses"
@@ -16,7 +17,11 @@ import {
   stepKey,
   TRACKS,
 } from "../../../src/data/courses"
+import { ENCRYPTED_EXAM_KEY } from "../../../src/data/courses/exam-key"
 import en from "../../../src/intl/en/page-courses.json"
+import { checkExamKey, decryptExamKey } from "../../../src/lib/courses/exam-key"
+
+const EXAM_KEY_FILE = ".learner-exam-key.json"
 
 const stepSuffixes = (step: LessonStep): string[] => {
   switch (step.type) {
@@ -138,14 +143,27 @@ test.describe("course strings", () => {
 
   test("choice answers are among the options", () => {
     for (const course of COURSES)
-      for (const step of [
-        ...course.lessons.flatMap(({ steps }) => steps),
-        ...course.exam,
-      ])
+      for (const step of course.lessons.flatMap(({ steps }) => steps))
         if (step.type === "choice") {
           expect(step.correct.length).toBeGreaterThan(0)
           for (const id of step.correct) expect(step.options).toContain(id)
           if (!step.multi) expect(step.correct).toHaveLength(1)
         }
+  })
+
+  // The key is encrypted, so this runs only where the secret (or the
+  // plaintext file) is available: question changes must update the key
+  test("the mastery check key fits the questions", () => {
+    const secret = process.env.LEARNER_EXAM_KEY_SECRET
+    const committed = !!secret && !!ENCRYPTED_EXAM_KEY
+    const file = existsSync(EXAM_KEY_FILE)
+    test.skip(
+      !committed && !file,
+      "no LEARNER_EXAM_KEY_SECRET or .learner-exam-key.json"
+    )
+    const key = committed
+      ? decryptExamKey(ENCRYPTED_EXAM_KEY, secret)
+      : JSON.parse(readFileSync(EXAM_KEY_FILE, "utf8"))
+    expect(checkExamKey(key, COURSES)).toEqual([])
   })
 })

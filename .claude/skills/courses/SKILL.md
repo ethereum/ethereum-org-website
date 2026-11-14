@@ -5,7 +5,7 @@ description: Use when planning, writing or building anything under /courses — 
 
 # Courses
 
-Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-style progression (path, XP, streak, combo). No accounts yet; progress lives in localStorage. Pages are static and `noIndex`: lessons, exams and the profile always (and robots.txt keeps crawlers off them), the hub and course pages until `COURSES_INDEXABLE` flips at beta, which also adds them to the sitemap. Only the hub (`ItemList`) and course pages (`Course`) carry JSON-LD, in their `page-jsonld.tsx`. Read this file on activation, then the reference matching the task. Learners see each course's final exam as "Course Mastery"; code and docs call it the exam.
+Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-style progression (path, XP, streak, combo). Progress lives in localStorage, plus optional accounts that verify it and gate Course Mastery (`references/accounts.md`). Pages are static and `noIndex`: lessons, exams and the profile always (and robots.txt keeps crawlers off them), the hub and course pages until `COURSES_INDEXABLE` flips at beta, which also adds them to the sitemap. Only the hub (`ItemList`) and course pages (`Course`) carry JSON-LD, in their `page-jsonld.tsx`. Read this file on activation, then the reference matching the task. Learners see each course's final exam as "Course Mastery"; code and docs call it the exam.
 
 ## Map
 
@@ -52,8 +52,9 @@ Every course has a `level`, which limits what its copy may use:
 
 ## References
 
-| Read when                                                            | File                       |
-| -------------------------------------------------------------------- | -------------------------- |
-| Planning a course or lesson, or writing or reviewing any lesson copy | `references/curriculum.md` |
-| Adding a course, lesson or step, or writing questions                | `references/authoring.md`  |
-| Building or changing a widget, or any course UI                      | `references/widgets.md`    |
+| Read when                                                                          | File                       |
+| ---------------------------------------------------------------------------------- | -------------------------- |
+| Planning a course or lesson, or writing or reviewing any lesson copy               | `references/curriculum.md` |
+| Adding a course, lesson or step, or writing questions                              | `references/authoring.md`  |
+| Building or changing a widget, or any course UI                                    | `references/widgets.md`    |
+| Accounts, verified progress, the answer key, planned completion records, databases | `references/accounts.md`   |
