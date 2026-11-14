@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next"
 
 import { getFullUrl, toLanguageTag } from "@/lib/utils/url"
 
+import { COURSES_HUB, COURSES_INDEXABLE, profileHref } from "@/data/courses"
+
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
@@ -25,7 +27,16 @@ export async function generateSitemaps() {
 // getAllPagesWithTranslations walks the whole content tree; memoize so the
 // per-locale shards share a single traversal instead of repeating it each time.
 // Routable pages that must stay out of the sitemap because they are noindex
-const EXCLUDED_PATHS = new Set(["/community/events/search/"])
+const EXCLUDED_PATHS = new Set([
+  "/community/events/search/",
+  // Only shows progress saved in the visitor's browser
+  profileHref,
+])
+
+// Hub and course overview pages stay out until they are indexable
+const isExcluded = (slug: string) =>
+  EXCLUDED_PATHS.has(slug) ||
+  (!COURSES_INDEXABLE && slug.startsWith(COURSES_HUB))
 
 let pagesPromise: ReturnType<typeof getAllPagesWithTranslations> | null = null
 const getPages = () => (pagesPromise ??= getAllPagesWithTranslations())
@@ -48,7 +59,7 @@ export default async function sitemap({
     if (!translatedLocales.includes(locale)) continue
 
     const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`
-    if (EXCLUDED_PATHS.has(normalizedSlug)) continue
+    if (isExcluded(normalizedSlug)) continue
     const alternates =
       translatedLocales.length > 0
         ? {

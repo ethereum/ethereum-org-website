@@ -59,7 +59,7 @@ Three import paths. Pick by use case.
 import Modal from "@/components/ui/dialog-modal"
 ```
 
-The high-level convenience: title + content + optional action button, with `size: "md" | "lg" | "xl"` and `variant: "simulator" | "unstyled"`. This is what you want 90% of the time.
+The high-level convenience: title + content + optional action button, with `size: "md" | "lg" | "xl"` and `variant: "simulator" | "unstyled" | "stacked"` (`stacked` puts the close button on its own top row so a long or translated title gets the full width). This is what you want 90% of the time.
 
 ```tsx
 <Modal

@@ -12,7 +12,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Determinate progress bar built on Radix Progress. `value` is 0-100. `color: disabled` (default) renders a muted bar; `color: primary` switches the indicator and track to the brand pair.",
+          "Determinate progress bar built on Radix Progress. `value` is 0-100. `color: disabled` (default) renders a muted bar; `color: primary` switches the indicator and track to the brand pair. Style the track with `className` and the fill from the same string via `*:data-[slot=progress-indicator]:`, e.g. `*:data-[slot=progress-indicator]:bg-(--course)`.",
       },
     },
   },
@@ -52,7 +52,7 @@ export const Values: Story = {
     docs: {
       description: {
         story:
-          "`value` is 0-100. The indicator translates with a CSS transition.",
+          "`value` is 0-100. The indicator width animates with a CSS transition.",
       },
     },
   },
