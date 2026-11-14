@@ -13,7 +13,7 @@ Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-
 | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | Course, lesson and step shapes, plus the translation-key convention for each | `src/data/courses/types.ts`                                                         |
 | Course content (structure only, no strings)                                  | `src/data/courses/<course>.ts`                                                      |
-| Tracks, suggested course order, lookups, `stepKey`                           | `src/data/courses/index.ts` (`TRACKS`, `COURSES`)                                   |
+| Tracks, suggested course order, teasers, lookups, `stepKey`                  | `src/data/courses/index.ts` (`TRACKS`, `COURSES`)                                   |
 | Every string (English)                                                       | `src/intl/en/page-courses.json`                                                     |
 | Lesson runtime: steps, grading, footer, XP                                   | `src/components/Courses/lesson-player.tsx`                                          |
 | Widget registry (`graded` flag)                                              | `src/components/Courses/steps/interactive-step.tsx` (`WIDGETS`)                     |
@@ -26,6 +26,20 @@ Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-
 | Funnel events (user-initiated only; pageviews cover views and starts)        | `src/components/Courses/analytics.ts`                                               |
 | Profile page (reserved `profile` segment, so never a course id)              | `app/[locale]/courses/profile/`, `src/components/Courses/profile-view.tsx`          |
 | Installable app: per-language manifest, service worker, registration         | `app/manifests/courses/`, `public/courses-sw.js`, `app/[locale]/courses/layout.tsx` |
+
+## Levels and tracks
+
+Every course has a `level`, which limits what its copy may use:
+
+| Level          | Allows                                                                                                          |
+| -------------- | --------------------------------------------------------------------------------------------------------------- |
+| `beginner`     | Readers aged 10 to 12. Analogies first; no numbers, units, formulas, proofs or timings.                         |
+| `intermediate` | Numbers and mechanics welcome: working out fees, units, timings, thresholds.                                    |
+| `advanced`     | Internals: how nodes, the EVM and protocol upgrades work inside. Assumes the beginner and intermediate courses. |
+
+`TRACKS` are the hub sections, in order, and set the level of their courses: `essentials` (beginner: everyday, wallets, blockchains, ethereum, sending, smart-contracts), `using` (beginner, putting the essentials to work: tokens, nfts, layer-2, trading-and-lending, scams), `deeper` (intermediate: gas, proof-of-stake, rollups, eth, upgrades, smart-accounts) and `under-the-hood` (advanced, teasers only for now: nodes, evm, mev, roadmap, privacy, and build as a link card to `/developers/`). A track with no courses and no teasers doesn't render.
+
+**Teasers.** `Track.upcoming` announces courses that aren't built: a muted "Coming soon" card after the live ones, or a link card with `href`. Teasers are not in `COURSES`, so they get no routes, sitemap entry, JSON-LD, progress or "Up next". Their strings are the course keys (`{id}-title`, `-description`), so they carry over when the course ships. How-to: `references/authoring.md`.
 
 ## Top rules
 

@@ -13,12 +13,12 @@ export const smartContractsCourse: Course = {
       steps: [
         { id: "intro", type: "concept", paragraphs: 2, art: "contract" },
         {
-          id: "decides",
+          id: "holds",
           type: "choice",
-          options: ["owner", "code", "validators"],
+          options: ["creator", "code", "validators"],
           correct: ["code"],
         },
-        { id: "machine", type: "interactive", widget: "vending-machine" },
+        { id: "jar", type: "interactive", widget: "jar-contract" },
         {
           id: "change",
           type: "choice",
@@ -119,22 +119,18 @@ export const smartContractsCourse: Course = {
           options: ["disconnect", "revoke", "wait"],
           correct: ["revoke"],
         },
-        {
-          id: "terms",
-          type: "match",
-          pairs: ["audit", "approval", "unlimited", "revoke"],
-        },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
     },
   ],
   exam: [
+    // what
     {
-      id: "underpay",
-      source: "/smart-contracts/#vending-machine",
+      id: "creator",
+      source: "/developers/docs/accounts/#key-differences",
       type: "choice",
-      options: ["owe", "reject", "creator"],
-      correct: ["reject"],
+      options: ["anytime", "rule", "validators"],
+      correct: ["rule"],
     },
     {
       id: "deployed",
@@ -143,13 +139,14 @@ export const smartContractsCourse: Course = {
       options: ["anytime", "validators", "published"],
       correct: ["published"],
     },
+    // calling
     {
       id: "gas",
       source:
         "/developers/docs/smart-contracts/interacting/#writing-to-a-contract",
       type: "choice",
-      options: ["stock", "buy", "balance", "send"],
-      correct: ["buy", "send"],
+      options: ["stock", "add", "balance", "send"],
+      correct: ["add", "send"],
       multi: true,
     },
     {
@@ -160,6 +157,7 @@ export const smartContractsCourse: Course = {
       options: ["decline", "always", "once"],
       correct: ["decline"],
     },
+    // tokens
     {
       id: "transfer",
       source: "/developers/docs/standards/tokens/erc-20/#body",
@@ -174,6 +172,7 @@ export const smartContractsCourse: Course = {
       options: ["list", "gone", "eth"],
       correct: ["list"],
     },
+    // public
     {
       id: "source",
       source:
@@ -189,6 +188,7 @@ export const smartContractsCourse: Course = {
       options: ["three", "two", "one"],
       correct: ["one"],
     },
+    // risks
     {
       id: "audit",
       source: "/developers/docs/smart-contracts/security/#audits",

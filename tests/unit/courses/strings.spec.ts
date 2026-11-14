@@ -60,8 +60,16 @@ const trackKeys = TRACKS.flatMap(({ id }) => [
   `page-courses-track-${id}-description`,
 ])
 
+// Teasers aren't courses yet, but use course keys so the strings carry over;
+// so do the callouts after a track
+const teaserIds = TRACKS.flatMap(({ upcoming = [], next }) => [
+  ...upcoming.map(({ id }) => id),
+  ...(next ? [next.id] : []),
+])
+
 const expected = [
   ...trackKeys,
+  ...teaserIds.flatMap((id) => [`${id}-title`, `${id}-description`]),
   ...COURSES.flatMap((course) => [
     `${course.id}-title`,
     `${course.id}-description`,
@@ -100,9 +108,11 @@ test.describe("course strings", () => {
   test("ids are unique where they form keys", () => {
     const dupes = (ids: string[]) =>
       ids.filter((id, i) => ids.indexOf(id) !== i)
-    expect(dupes(COURSES.map(({ id }) => id))).toEqual([])
+    // A teaser shares its key space with the course it becomes
+    const ids = [...COURSES.map(({ id }) => id), ...teaserIds]
+    expect(dupes(ids)).toEqual([])
     // Static routes beside `[course]` would shadow a course with these ids
-    expect(COURSES.map(({ id }) => id)).not.toContain(PROFILE_SEGMENT)
+    expect(ids).not.toContain(PROFILE_SEGMENT)
     for (const course of COURSES) {
       expect(dupes(course.lessons.map(({ id }) => id))).toEqual([])
       expect(course.lessons.map(({ id }) => id)).not.toContain(EXAM_ID)

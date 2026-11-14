@@ -1,5 +1,6 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
+import type { StaticImageData } from "next/image"
 import {
   getMessages,
   getTranslations,
@@ -26,6 +27,8 @@ import { chunkyButton, courseThemeStyle } from "@/components/Courses/theme"
 import HubHero from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
@@ -53,6 +56,12 @@ import {
 import CoursesPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/courses/learning-path-garden-with-trophy.jpg"
+import developersHero from "@/public/images/heroes/developers-hub-hero.png"
+
+// A track's closing callout shows its target page's hero image
+const TRACK_NEXT_IMAGES: Record<string, StaticImageData> = {
+  build: developersHero,
+}
 
 /** What the client needs to work out a track's mastered and next courses */
 const toTrackCourses = (courses: Course[]) =>
@@ -103,7 +112,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <NoProfileAlert />
             </Suspense>
 
-            {TRACKS.map((track, index) => (
+            {TRACKS.filter(
+              ({ courses, upcoming = [] }) => courses.length + upcoming.length
+            ).map((track, index) => (
               <Section
                 key={track.id}
                 id={track.id}
@@ -187,7 +198,58 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       </li>
                     )
                   )}
+                  {track.upcoming?.map(({ id, level, art }, index) => (
+                    <li
+                      key={id}
+                      className="m-0"
+                      style={courseThemeStyle("muted")}
+                    >
+                      {/* Not a course yet: no link, progress or action */}
+                      <Card variant="nested" border className="h-full">
+                        <CardHeader>
+                          <CardBanner
+                            background="none"
+                            size="full"
+                            className="relative bg-(--course-soft) px-10 pt-12 pb-4"
+                          >
+                            <span className="absolute start-3 top-3 rounded-full bg-background px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
+                              {t(`page-courses-level-${level}`)}
+                            </span>
+                            <span
+                              aria-hidden
+                              className="absolute end-3 bottom-3 grid size-8 place-items-center rounded-full bg-background text-sm font-bold text-(--course-strong) tabular-nums dark:text-(--course-bright)"
+                            >
+                              {int.format(track.courses.length + index + 1)}
+                            </span>
+                            <span className="absolute end-3 top-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
+                              {t("page-courses-coming-soon")}
+                            </span>
+                            <CourseArt id={art} className="mx-auto max-w-48" />
+                          </CardBanner>
+                        </CardHeader>
+                        <CardContent>
+                          <CardTitle>{t(`${id}-title`)}</CardTitle>
+                          <CardParagraph>
+                            {t(`${id}-description`)}
+                          </CardParagraph>
+                        </CardContent>
+                      </Card>
+                    </li>
+                  ))}
                 </ol>
+                {track.next && (
+                  <Callout
+                    variant="sm"
+                    as="h3"
+                    image={TRACK_NEXT_IMAGES[track.next.id]}
+                    title={t(`${track.next.id}-title`)}
+                    description={t(`${track.next.id}-description`)}
+                  >
+                    <ButtonLink href={track.next.href}>
+                      {t("page-courses-hub-explore")}
+                    </ButtonLink>
+                  </Callout>
+                )}
               </Section>
             ))}
 

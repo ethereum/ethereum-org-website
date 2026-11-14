@@ -4,6 +4,7 @@ import {
   Box,
   Bug,
   Calculator,
+  Clock,
   Code,
   Coins,
   Eye,
@@ -11,8 +12,12 @@ import {
   Flame,
   Fuel,
   Gift,
+  GitFork,
+  Globe,
   KeyRound,
+  Layers,
   Link2,
+  ListOrdered,
   type LucideIcon,
   MousePointerClick,
   PenLine,
@@ -22,13 +27,17 @@ import {
   Send,
   Server,
   ShieldCheck,
+  Ticket,
   TriangleAlert,
+  Users,
   Wallet,
 } from "lucide-react"
 
 import type { LessonIconId } from "@/data/courses"
 
 export const LESSON_ICONS: Record<LessonIconId, LucideIcon> = {
+  users: Users,
+  fork: GitFork,
   key: KeyRound,
   scroll: ScrollText,
   pen: PenLine,
@@ -46,6 +55,8 @@ export const LESSON_ICONS: Record<LessonIconId, LucideIcon> = {
   search: Search,
   coins: Coins,
   calculator: Calculator,
+  queue: ListOrdered,
+  clock: Clock,
   flame: Flame,
   gift: Gift,
   piggy: PiggyBank,
@@ -53,4 +64,7 @@ export const LESSON_ICONS: Record<LessonIconId, LucideIcon> = {
   pointer: MousePointerClick,
   eye: Eye,
   bug: Bug,
+  layers: Layers,
+  ticket: Ticket,
+  globe: Globe,
 }

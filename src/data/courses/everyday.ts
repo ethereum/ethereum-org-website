@@ -33,12 +33,7 @@ export const everydayCourse: Course = {
       learnMore: "/what-is-ether/",
       steps: [
         { id: "picture", type: "concept", paragraphs: 1, art: "coins" },
-        {
-          id: "try",
-          type: "choice",
-          options: ["cash", "transfer", "wait"],
-          correct: ["cash"],
-        },
+        { id: "try", type: "interactive", widget: "cash-sort" },
         { id: "reveal", type: "concept", paragraphs: 1 },
         {
           id: "approve",
@@ -72,12 +67,7 @@ export const everydayCourse: Course = {
       learnMore: "/gas/",
       steps: [
         { id: "picture", type: "concept", paragraphs: 1, art: "stamp" },
-        {
-          id: "try",
-          type: "choice",
-          options: ["same", "more", "none"],
-          correct: ["more"],
-        },
+        { id: "try", type: "interactive", widget: "postage" },
         { id: "reveal", type: "concept", paragraphs: 2 },
         {
           id: "amount",
@@ -123,6 +113,7 @@ export const everydayCourse: Course = {
           options: ["spare", "stranger", "maker"],
           correct: ["spare"],
         },
+        { id: "hide", type: "interactive", widget: "spare-key-sort" },
         { id: "reveal", type: "concept", paragraphs: 1 },
         {
           id: "support",

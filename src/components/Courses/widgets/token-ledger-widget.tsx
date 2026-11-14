@@ -14,17 +14,16 @@ import { chunkyButtonSecondary, courseText } from "../theme"
 import type { WidgetProps } from "./types"
 import WidgetShell from "./widget-shell"
 
-// Alice sends Bob 30; Carol is a bystander whose balance must not move
+// Small counts for a beginner course: Alice sends Bob 3, Carol must not move
 const HOLDERS = [
-  { id: "alice", before: 50, after: 20 },
-  { id: "bob", before: 20, after: 50 },
-  { id: "carol", before: 10, after: 10 },
+  { id: "alice", before: 5, after: 2 },
+  { id: "bob", before: 2, after: 5 },
+  { id: "carol", before: 3, after: 3 },
 ] as const
 type HolderId = (typeof HOLDERS)[number]["id"]
 
-const AMOUNT = 30
-const STEP = 10
-const MAX = 100
+const AMOUNT = 3
+const MAX = 10
 const TOTAL = HOLDERS.reduce((sum, h) => sum + h.before, 0)
 
 const initial = () =>
@@ -47,15 +46,11 @@ const TokenLedgerWidget = ({ onAnswer, locked }: WidgetProps) => {
     const nextTotal = HOLDERS.reduce((sum, h) => sum + next[h.id], 0)
     onAnswer({
       correct: HOLDERS.every((h) => next[h.id] === h.after),
-      hint:
+      hint: t(
         nextTotal !== TOTAL
-          ? t("page-courses-widget-ledger-hint-total", {
-              total: int.format(nextTotal),
-              expected: int.format(TOTAL),
-            })
-          : t("page-courses-widget-ledger-hint-wrong", {
-              amount: int.format(AMOUNT),
-            }),
+          ? "page-courses-widget-ledger-hint-total"
+          : "page-courses-widget-ledger-hint-wrong"
+      ),
     })
   }
 
@@ -70,6 +65,7 @@ const TokenLedgerWidget = ({ onAnswer, locked }: WidgetProps) => {
           from: name("alice"),
           to: name("bob"),
           amount: int.format(AMOUNT),
+          count: AMOUNT,
         })}
       </p>
 
@@ -101,7 +97,7 @@ const TokenLedgerWidget = ({ onAnswer, locked }: WidgetProps) => {
               >
                 <Button
                   variant="ghost"
-                  onClick={() => adjust(id, -STEP)}
+                  onClick={() => adjust(id, -1)}
                   disabled={locked || balances[id] <= 0}
                   aria-label={t("page-courses-widget-ledger-less", {
                     name: name(id),
@@ -121,7 +117,7 @@ const TokenLedgerWidget = ({ onAnswer, locked }: WidgetProps) => {
                 </output>
                 <Button
                   variant="ghost"
-                  onClick={() => adjust(id, STEP)}
+                  onClick={() => adjust(id, 1)}
                   disabled={locked || balances[id] >= MAX}
                   aria-label={t("page-courses-widget-ledger-more", {
                     name: name(id),
@@ -152,9 +148,7 @@ const TokenLedgerWidget = ({ onAnswer, locked }: WidgetProps) => {
 
       {locked && (
         <p className="m-0 text-green-700 dark:text-green-400">
-          {t("page-courses-widget-ledger-hit", {
-            amount: int.format(AMOUNT),
-          })}
+          {t("page-courses-widget-ledger-hit")}
         </p>
       )}
     </WidgetShell>

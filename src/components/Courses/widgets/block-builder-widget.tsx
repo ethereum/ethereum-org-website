@@ -168,10 +168,10 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
             ))}
           </svg>
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1" aria-live="polite">
             <div className="flex justify-between text-sm font-bold">
               <span>{t("page-courses-widget-block-gas")}</span>
-              <span dir="ltr" className="font-mono tabular-nums">
+              <span className="font-mono tabular-nums">
                 {t("page-courses-widget-block-limit", {
                   used: int.format(gasUsed),
                   limit: int.format(GAS_LIMIT),
@@ -231,7 +231,7 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
                     )}
                   >
                     <span className="flex w-full items-center justify-between gap-2">
-                      <span className="text-sm font-bold" dir="ltr">
+                      <span className="text-sm font-bold">
                         {t("page-courses-widget-block-tx-gas", {
                           gas: int.format(tx.gas),
                         })}

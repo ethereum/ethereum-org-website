@@ -5,29 +5,77 @@
  */
 
 export type CourseWidgetId =
+  | "eip-sort"
+  | "client-bug"
+  | "account-sort"
+  | "account-rules"
+  | "delegation-check"
   | "key-pair"
   | "gas-fee"
   | "sign-verify"
   | "block-builder"
   | "hash-playground"
   | "chain-tamper"
-  | "stake-vote"
   | "address-check"
   | "custody-sort"
   | "node-network"
   | "finality-clock"
+  | "base-fee"
+  | "nonce-queue"
+  | "ether-sort"
+  | "validator-sort"
   | "gas-limit"
   | "explorer-labels"
   | "unit-converter"
   | "supply-balance"
   | "wrap-eth"
-  | "vending-machine"
+  | "fee-lanes"
+  | "parcel-pack"
+  | "network-match"
+  | "bridge-move"
+  | "wallet-network"
+  | "rollup-replay"
+  | "fraud-challenge"
+  | "proof-check"
+  | "exit-race"
+  | "bridge-backing"
   | "call-sorter"
   | "token-ledger"
   | "approval-scope"
+  | "token-check"
+  | "backing-sort"
+  | "backing-vaults"
+  | "token-lure"
+  | "nft-ledger"
+  | "nft-host"
+  | "nft-proof"
+  | "name-check"
+  | "nft-approval"
+  | "pool-swap"
+  | "swap-limit"
+  | "collateral"
+  | "reward-sort"
+  | "red-flag-sort"
+  | "site-check"
+  | "sign-request"
+  | "claim-site"
+  | "next-page"
+  | "chain-sort"
+  | "track-sort"
+  | "node-world"
+  | "fee-meter"
+  | "next-block"
+  | "failed-sorter"
+  | "jar-contract"
   | "shared-notebook"
   | "mailbox"
   | "snack-machine"
+  | "cash-sort"
+  | "postage"
+  | "spare-key-sort"
+  | "restore-wallet"
+  | "phrase-sort"
+  | "popup-sort"
 
 /** Hand-tuned course colours from the site palette */
 export type CoursePreset = "purple" | "orange" | "teal" | "blue" | "pink"
@@ -41,19 +89,31 @@ export type CourseTheme = CoursePreset | { hue: number }
 
 /** Decorative isometric illustration */
 export type CourseArtId =
+  | "upgrade"
+  | "smart-account"
   | "diamond"
   | "blocks"
   | "coins"
   | "vault"
   | "tank"
+  | "validators"
   | "contract"
   | "notebook"
   | "mailbox"
   | "stamp"
   | "vending"
+  | "scale"
+  | "frame"
+  | "crate"
+  | "rollup"
+  | "tanks"
+  | "lure"
+  | "platform"
 
 /** Icon on a lesson's path node */
 export type LessonIconId =
+  | "users"
+  | "fork"
   | "key"
   | "scroll"
   | "pen"
@@ -71,6 +131,8 @@ export type LessonIconId =
   | "search"
   | "coins"
   | "calculator"
+  | "queue"
+  | "clock"
   | "flame"
   | "gift"
   | "piggy"
@@ -78,6 +140,9 @@ export type LessonIconId =
   | "pointer"
   | "eye"
   | "bug"
+  | "layers"
+  | "ticket"
+  | "globe"
 
 interface StepBase {
   /** Unique within its lesson; forms the translation key prefix */
@@ -174,20 +239,45 @@ export interface PageLink {
   title: string
 }
 
-/** Keys: `{course}-title`, `{course}-description` */
+/**
+ * What a course may assume and use. Beginner: ages 10 to 12, analogies first,
+ * no numbers, units, formulas or timings. Intermediate: numbers and mechanics.
+ * Advanced: internals. Strings: `page-courses-level-{level}`.
+ */
+export type CourseLevel = "beginner" | "intermediate" | "advanced"
+
+/**
+ * A course not built yet, shown as a "coming soon" card at the end of its
+ * track. Not in `COURSES`: no pages, routes, sitemap entry or JSON-LD. Keys:
+ * `{id}-title`, `{id}-description`, so they carry over when the course ships.
+ */
+export interface UpcomingCourse {
+  id: string
+  level: CourseLevel
+  art: CourseArtId
+}
+
 /**
  * A themed group of courses, shown as one hub section. Strings:
  * `page-courses-track-{id}-title` and `-description`. Course URLs don't
- * include the track, so a course can move between tracks.
+ * include the track, so a course can move between tracks. A track with no
+ * courses and no teasers is hidden.
  */
 export interface Track {
   id: string
   courses: Course[]
+  /** Teasers after the live courses */
+  upcoming?: UpcomingCourse[]
+  /** Where to go after the track, elsewhere on the site: a callout below
+   * it, with the target page's hero image (mapped on the hub page). Keys:
+   * `{id}-title`, `{id}-description` */
+  next?: { id: string; href: string }
 }
 
+/** Keys: `{course}-title`, `{course}-description` */
 export interface Course {
   id: string
-  level: "beginner"
+  level: CourseLevel
   theme: CourseTheme
   art: CourseArtId
   lessons: Lesson[]

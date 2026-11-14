@@ -65,11 +65,15 @@ const solve = (
 /** Contrast targets, with a margin over WCAG AA (4.5:1) */
 export const PALETTE_TARGETS = { fill: 4.7, strong: 7.5, bright: 10 }
 
-export const generatePalette = (hue: number) => ({
+/** `chroma` scales saturation; 1 for course colours */
+export const generatePalette = (hue: number, chroma = 1) => ({
   // White text on the fill
-  fill: solve(hue, 0.17, PALETTE_TARGETS.fill, WHITE),
+  fill: solve(hue, 0.17 * chroma, PALETTE_TARGETS.fill, WHITE),
   // Course-coloured text on the light background
-  strong: solve(hue, 0.13, PALETTE_TARGETS.strong, WHITE),
+  strong: solve(hue, 0.13 * chroma, PALETTE_TARGETS.strong, WHITE),
   // Course-coloured text on the dark background
-  bright: solve(hue, 0.12, PALETTE_TARGETS.bright, BLACK, true),
+  bright: solve(hue, 0.12 * chroma, PALETTE_TARGETS.bright, BLACK, true),
 })
+
+/** Near-grey palette for "coming soon" cards, held to the same targets */
+export const generateMutedPalette = () => generatePalette(265, 0.15)

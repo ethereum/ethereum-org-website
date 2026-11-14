@@ -41,7 +41,8 @@ const ITEMS: { id: ItemId; price: number; stock: number; icon: LucideIcon }[] =
   ]
 type ItemId = "cupcake" | "cookie" | "donut"
 
-const RULES = ["price", "stock"] as const
+// A snack machine shows "sold out" before it takes any coins
+const RULES = ["stock", "price"] as const
 type Rule = (typeof RULES)[number]
 type RuleState = "pass" | "fail" | "skipped"
 
@@ -56,32 +57,10 @@ const initialStock = () =>
     number
   >
 
-// Strings that name the contract or ETH get a coins version for `everyday`
-const EVERYDAY_KEYS = new Set([
-  "eth",
-  "balance",
-  "held",
-  "pay",
-  "less",
-  "more",
-  "rules",
-  "rule-price",
-  "ok",
-  "reject-price",
-])
-
-interface VendingMachineWidgetProps extends WidgetProps {
-  /** A plain snack machine taking coins, before contracts are named */
-  everyday?: boolean
-}
-
-const VendingMachineWidget = ({
-  onComplete,
-  everyday,
-}: VendingMachineWidgetProps) => {
+/** A snack machine taking coins: the Everyday course's smart contract, unnamed */
+const SnackMachineWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
-  const key = (name: string) =>
-    `page-courses-widget-vending-${name}${everyday && EVERYDAY_KEYS.has(name) ? "-everyday" : ""}`
+  const key = (name: string) => `page-courses-widget-vending-${name}`
   const locale = useLocale()
   const int = numberFormat(locale)
   const payId = useId()
@@ -106,12 +85,9 @@ const VendingMachineWidget = ({
     t(key("eth"), { amount: int.format(amount), count: amount })
   const itemName = (id: ItemId) => t(`page-courses-widget-vending-item-${id}`)
 
-  // A snack machine shows "sold out" before taking coins; the contract
-  // checks the price first, as its code does
-  const rules: readonly Rule[] = everyday ? ["stock", "price"] : RULES
   const buy = () => {
     const item = ITEMS.find(({ id }) => id === selected)!
-    for (const rule of rules) {
+    for (const rule of RULES) {
       if (rule === "price" && pay !== item.price) {
         setOutcome({ kind: "price", item: item.id, paid: pay })
         setSeen((s) => ({ ...s, rejected: true }))
@@ -145,7 +121,7 @@ const VendingMachineWidget = ({
     const failed = outcome.kind
     if (rule === failed) return "fail"
     // Rules before the failed one passed; later ones never ran
-    return rules.indexOf(rule) < rules.indexOf(failed) ? "pass" : "skipped"
+    return RULES.indexOf(rule) < RULES.indexOf(failed) ? "pass" : "skipped"
   }
 
   const status = (() => {
@@ -284,7 +260,7 @@ const VendingMachineWidget = ({
           {t(key("rules"))}
         </p>
         <ol className="m-0 flex list-none flex-col gap-2">
-          {rules.map((rule) => {
+          {RULES.map((rule) => {
             const state = ruleState(rule)
             return (
               <li key={rule} className="m-0 flex items-start gap-2">
@@ -345,9 +321,4 @@ const VendingMachineWidget = ({
   )
 }
 
-/** The same machine taking coins, for lessons before contracts are named */
-export const SnackMachineWidget = (props: WidgetProps) => (
-  <VendingMachineWidget {...props} everyday />
-)
-
-export default VendingMachineWidget
+export default SnackMachineWidget
