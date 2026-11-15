@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { Check, ListChecks } from "lucide-react"
 import { useTranslations } from "next-intl"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 import * as RadioGroup from "@radix-ui/react-radio-group"
@@ -143,14 +144,16 @@ const ChoiceStep = ({
     return () => window.removeEventListener("keydown", onKey)
   }, [])
 
+  // Multiple answers are easy to miss: say so before the question, not after
   const prompt = (
     <legend className="mb-6">
-      <h2 className={stepPrompt}>{t(keyFor("prompt"))}</h2>
       {step.multi && (
-        <span className="mt-1 block text-body-medium">
+        <span className="mb-3 flex w-fit items-center gap-1.5 rounded-full bg-(--course-softer) px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
+          <ListChecks aria-hidden className="size-4" />
           {t("page-courses-select-all")}
         </span>
       )}
+      <h2 className={stepPrompt}>{t(keyFor("prompt"))}</h2>
     </legend>
   )
 
@@ -174,6 +177,18 @@ const ChoiceStep = ({
             >
               <Marker index={idx} square result={resultFor(id)} />
               <span>{t(keyFor(`opt-${id}`))}</span>
+              {/* A checkbox look, so each tile reads as one of several picks */}
+              <Center
+                aria-hidden
+                className={cn(
+                  "ms-auto size-6 shrink-0 rounded-md",
+                  pickedMarker(resultFor(id))
+                )}
+              >
+                {value.includes(id) && (
+                  <Check className="size-4" strokeWidth={3} />
+                )}
+              </Center>
             </CheckboxPrimitive.Root>
           ))}
         </div>
