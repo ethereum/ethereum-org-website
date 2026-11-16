@@ -1,4 +1,4 @@
-import { normalizeIntlSpaces } from "./intl"
+import { normalizeIntlSpaces, safeLocale } from "./intl"
 
 /**
  * A wrapper for Intl.NumberFormat that enforces Web3 numeral standards.
@@ -31,7 +31,7 @@ export function numberFormat(
     ...(numberingSystem && { numberingSystem }),
   }
 
-  return new Intl.NumberFormat(locale, finalOptions)
+  return new Intl.NumberFormat(safeLocale(locale), finalOptions)
 }
 
 export const formatLargeUSD = (value: number, locale: string): string => {
