@@ -411,11 +411,11 @@ export function diffEnglishMessages(baseRoot: string, headRoot: string) {
         const [a, b] = [placeholders(old[key]), placeholders(value)]
         if (old[key] !== value && a !== null && b !== null && a !== b)
           warnings.push(
-            `${ns} ${key}: placeholders changed (${a || "none"} -> ${b || "none"}); translations keep the old ones until the intl pipeline reruns`
+            `${ns} ${key} changed its placeholders (${a || "none"} -> ${b || "none"}); translations keep the old ones until the intl pipeline reruns, so pass both until then`
           )
       } else if (removed.has(value))
         warnings.push(
-          `${ns} ${key}: renamed from "${removed.get(value)}" with the same text; the rename drops its translations in 24 locales until the intl pipeline reruns`
+          `${ns} ${key} renames "${removed.get(value)}" without changing its text, which drops its translations in 24 locales until the intl pipeline reruns; keep the old key`
         )
     }
   }

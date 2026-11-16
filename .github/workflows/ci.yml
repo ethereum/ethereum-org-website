@@ -67,9 +67,11 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - name: Check intl keys and links
+      - uses: ./.github/actions/setup-pnpm-node
+      - name: Check intl keys, translations, images and links
         env:
           BASE_REF: origin/${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
         run: bash .github/scripts/pr-content-checks.sh "$BASE_REF"
 
   unit-tests:
