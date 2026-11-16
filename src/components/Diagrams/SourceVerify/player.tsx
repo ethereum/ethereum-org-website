@@ -112,6 +112,9 @@ export function SourceVerifyPlayer({
           runKey={`${presetId}-${view.step}`}
           labels={labels}
           definitions={definitions}
+          resultLabel={
+            view.result ? t(`source-verify-result-${view.result}`) : null
+          }
         />
       }
       presets={

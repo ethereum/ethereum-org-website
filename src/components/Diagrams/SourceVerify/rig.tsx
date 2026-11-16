@@ -1,5 +1,4 @@
 import { memo, type ReactNode } from "react"
-import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -32,8 +31,8 @@ import {
  *
  * The verifier's bench, back lane: source files and the compiler settings
  * feed the compiler, which lays down the recompiled bytecode. Front lane, on
- * its own pad: a short chain of blocks holding the deployed contract, whose
- * code is read into a second bytecode strip. Each strip ends in a short
+ * the same bench: a short chain of blocks holding the deployed contract,
+ * whose code is read into a second bytecode strip. Each strip ends in a short
  * segment, the metadata hash. Both strips run into the verifier at the back
  * end of the bench, which compares them.
  */
@@ -204,20 +203,33 @@ interface SourceVerifyRigProps {
   runKey: string
   labels: Record<SourceVerifyPart, ReactNode>
   definitions: Record<SourceVerifyPart, ReactNode>
+  /** The result badge's text, once the code has been compared. */
+  resultLabel: string | null
   className?: string
 }
 
 const pct = (value: number, of: number) => `${(value / of) * 100}%`
 const BADGE_AT = P(219, 42, 10)
+// An invisible box where the result badge sits, so labels keep off it.
+const BADGE_KEEP_OUT = (
+  <rect
+    x={BADGE_AT[0] - 36}
+    y={BADGE_AT[1] - 9}
+    width={72}
+    height={18}
+    stroke="none"
+    style={{ fill: "transparent" }}
+  />
+)
 
 function SourceVerifyRig({
   view,
   runKey,
   labels,
   definitions,
+  resultLabel,
   className,
 }: SourceVerifyRigProps) {
-  const t = useTranslations("component-diagrams")
   const { state, dimmed } = usePartState(view.litPart)
   const part = (name: SourceVerifyPart) => ({
     "data-part": name,
@@ -312,7 +324,7 @@ function SourceVerifyRig({
           ))}
         </g>
 
-        <g {...part("chain")}>{pipe("get-code", "deployed")}</g>
+        <g {...part("deployed")}>{pipe("get-code", "deployed")}</g>
 
         <g {...part("deployed")} strokeDasharray={pending(view.fetched)}>
           <IsoSolid box={DEPLOYED} hue="entity" state={state("deployed")} />
@@ -332,9 +344,10 @@ function SourceVerifyRig({
           <IsoSolid box={VERIFIER} hue="entity" state={state("verifier")} />
           {VERIFIER_DETAIL}
         </g>
+        {BADGE_KEEP_OUT}
       </svg>
 
-      {view.result && (
+      {view.result && resultLabel && (
         <span
           key={view.result}
           className={cn(
@@ -348,7 +361,7 @@ function SourceVerifyRig({
             top: pct(BADGE_AT[1], H),
           }}
         >
-          {t(`source-verify-result-${view.result}`)}
+          {resultLabel}
         </span>
       )}
 

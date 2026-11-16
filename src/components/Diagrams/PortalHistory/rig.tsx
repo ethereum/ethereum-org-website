@@ -87,12 +87,11 @@ const nodeAt = (deg: number) => {
 const PEER_DEG = 275
 const HOLDER_DEG = 70
 const CONTENT_DEG = 52
-// Back to front, so nearer nodes are drawn over farther ones. None stands
-// under the closest node's arch.
+// Back to front, so nearer nodes are drawn over farther ones.
 const NODES: { deg: number; part: PortalHistoryPart }[] = [
   { deg: 225, part: "network" },
   { deg: PEER_DEG, part: "peer" },
-  { deg: 175, part: "network" },
+  { deg: 150, part: "network" },
   { deg: 325, part: "network" },
   { deg: 20, part: "network" },
   { deg: HOLDER_DEG, part: "holder" },
@@ -170,9 +169,10 @@ const SPOTS: AnatomyLabelSpot[] = [
   {
     id: "headers",
     tone: "entity",
-    target: P(54, 70, 18),
-    anchor: [P(54, 70, 18)[0], 28],
-    placement: "above",
+    // Below the pad, clear of the request arches above the client.
+    target: P(54, 92, 0),
+    anchor: [176, 150],
+    placement: "below",
   },
   {
     id: "holder",
@@ -189,8 +189,7 @@ const SPOTS: AnatomyLabelSpot[] = [
     id: "content",
     tone: "entity",
     target: P(...CONTENT_AT, 0),
-    anchor: [P(...CONTENT_AT, 0)[0] + 50, 200],
-    elbow: [P(...CONTENT_AT, 0)[0] + 50, P(...CONTENT_AT, 0)[1]],
+    anchor: [P(...CONTENT_AT, 0)[0] + 30, 200],
     placement: "below",
   },
   {
@@ -233,16 +232,33 @@ function PortalHistoryRig({
     className: ISO_DIM_CLASS,
     style: { opacity: dimmed(name) ? 0.7 : 1 },
   })
-  const pipe = (name: PortalHistoryLink, owner: PortalHistoryPart) => (
-    <IsoPipe
-      d={LINKS[name].d}
-      hue="entity"
-      flowing={!!view.flows[name]}
-      flowD={view.flows[name] === "back" ? LINKS[name].back : undefined}
-      flowKey={runKey}
-      state={state(owner)}
-    />
-  )
+  const pipe = (name: PortalHistoryLink, owner: PortalHistoryPart) => {
+    const flow = view.flows[name]
+    return (
+      <>
+        <IsoPipe
+          d={LINKS[name].d}
+          hue="entity"
+          flowing={!!flow}
+          flowD={flow === "back" ? LINKS[name].back : undefined}
+          flowKey={runKey}
+          state={state(owner)}
+        />
+        {flow === "both" && (
+          // The answer, once the request has arrived.
+          <IsoPipe
+            d={LINKS[name].d}
+            hue="entity"
+            flowing
+            flowD={LINKS[name].back}
+            flowKey={runKey}
+            flowDelay={700}
+            state={state(owner)}
+          />
+        )}
+      </>
+    )
+  }
   // Pads are structure: they show hover, but never light.
   const padState = (name: PortalHistoryPart) =>
     state(name) === "hover" ? "hover" : "rest"

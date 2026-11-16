@@ -16,7 +16,7 @@ export interface SourceVerifyDiagramProps {
 /**
  * Interactive replacement for `source-code-verification.png`: recompile the
  * published sources, read the deployed code, compare the code, then the
- * metadata hashes, for a full, partial or no match.
+ * metadata hashes, for an exact match, a match or no verification.
  */
 const SourceVerifyDiagram = ({
   initialPreset,

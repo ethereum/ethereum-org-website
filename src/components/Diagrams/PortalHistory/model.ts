@@ -42,7 +42,8 @@ export type PortalHistoryPart = (typeof PORTAL_HISTORY_PARTS)[number]
 /** The client's two requests; forward is away from the client. */
 export const PORTAL_HISTORY_LINKS = ["peer", "holder"] as const
 export type PortalHistoryLink = (typeof PORTAL_HISTORY_LINKS)[number]
-export type LinkFlow = "forward" | "back"
+/** "both": a request out, then its answer back. */
+export type LinkFlow = "forward" | "back" | "both"
 
 export const PORTAL_HISTORY_STEPS = [
   "idle",
@@ -83,7 +84,7 @@ const FLOWS: Record<PortalHistoryStep, PortalHistoryView["flows"]> = {
   idle: {},
   locate: {},
   // The peer doesn't store it and answers with closer nodes.
-  ask: { peer: "forward" },
+  ask: { peer: "both" },
   // The closest node sends the content back.
   fetch: { holder: "back" },
   verify: {},

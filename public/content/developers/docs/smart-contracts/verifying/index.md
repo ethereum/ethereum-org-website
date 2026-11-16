@@ -62,7 +62,7 @@ Verifying a smart contract basically involves the following steps:
 
 5. Additionally, if the metadata hashes at the end of the bytecode match, it will be an exact match.
 
-Verifiers can also compare the contract's creation bytecode: the input of the transaction that deployed it, which is the compiled bytecode followed by the encoded [constructor arguments](https://docs.soliditylang.org/en/latest/contracts.html#constructor).
+Verifiers can also compare the contract's creation bytecode: the code that deployed it (for a contract deployed directly from an account, the deploy transaction's input), which is the compiled bytecode followed by the encoded [constructor arguments](https://docs.soliditylang.org/en/latest/contracts.html#constructor).
 
 Note that this is a simplistic description of verification and there are many exceptions that would not work with this such as having [immutable variables](https://docs.sourcify.dev/docs/immutables/).
 
@@ -78,7 +78,7 @@ Etherscan allows you to recompile contract bytecode from the original data paylo
 
 Once verified, your contract’s source code receives a "Verified" label and is published on Etherscan for others to audit. It also gets added to the [Verified Contracts](https://etherscan.io/contractsVerified/) section—a repository of smart contracts with verified source codes.
 
-Etherscan is the most used tool for verifying contracts. It labels each verified contract by [how it matched](https://info.etherscan.com/types-of-contract-verification/): an exact match of the contract's creation bytecode and constructor arguments, a runtime match of its deployed bytecode only, or a similar match, given automatically when a contract's bytecode matches that of a contract already verified.
+Etherscan is the most used tool for verifying contracts. It labels each verified contract by [how it matched](https://info.etherscan.com/types-of-contract-verification/): an exact match of the contract's creation bytecode and constructor arguments, a runtime match of its deployed bytecode only, or a similar match, given automatically when a contract's bytecode matches that of a contract already verified. Etherscan's exact match is about the creation bytecode and constructor arguments; it is not the same distinction as the exact match and match described above.
 
 [More on verifying contracts on Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
@@ -94,7 +94,7 @@ Similar to other verification services, Blockscout allows you to verify your con
 
 Sourcify reports whether a contract is an exact match, with the metadata hash, or a match without it, for both its creation and its deployed bytecode. Its verified contracts are public: they can be queried through its API and downloaded as a [dataset](https://docs.sourcify.dev/docs/repository/). Sourcify passes its verifications on to block explorers including Blockscout, Routescan and Etherscan, and shares a database of verified contracts with Blockscout and Routescan through the [Verifier Alliance](https://verifieralliance.org/).
 
-The metadata file also holds the IPFS hashes of the source files, and the metadata hash appended to the bytecode is itself an IPFS hash. If a developer publishes the metadata and source files on [IPFS](https://docs.ipfs.tech/concepts/what-is-ipfs/), anyone can fetch the exact sources of a contract from its bytecode alone. A contract can be verified by providing the metadata file and source files over its API or the [UI](https://verify.sourcify.dev), or using plugins for development tools such as Hardhat and Foundry. Sourcify's monitor also watches for new contracts on the chains it follows and verifies them automatically when their metadata and source files are published on IPFS.
+The metadata file also holds the IPFS hashes of the source files, and the metadata hash appended to the bytecode is itself an IPFS hash. If a developer publishes the metadata and source files on [IPFS](https://docs.ipfs.tech/concepts/what-is-ipfs/), anyone can fetch the exact sources of a contract from its bytecode alone, as long as the files stay available on IPFS. A contract can be verified by providing the metadata file and source files over its API or the [UI](https://verify.sourcify.dev), or using plugins for development tools such as Hardhat and Foundry. Sourcify's [monitor](https://docs.sourcify.dev/docs/monitoring/) also watches for new contracts on the chains it follows and verifies them automatically when their metadata and source files are published on IPFS.
 
 [More on verifying contracts on Sourcify](https://soliditylang.org/blog/2020/06/25/sourcify-faq/).
 

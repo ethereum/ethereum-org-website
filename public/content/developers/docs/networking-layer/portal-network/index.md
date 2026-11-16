@@ -20,13 +20,13 @@ This local copy of the blockchain and associated state and receipt data takes up
 
 This means running nodes can be expensive, because a large amount of disk space has to be dedicated to Ethereum. [History expiry](/roadmap/statelessness/#history-expiry) reduces it by letting clients delete old block data they don't need to follow the chain: since [partial history expiry](https://blog.ethereum.org/2025/07/08/partial-history-exp) in July 2025, execution clients can drop the bodies and receipts of every block before The Merge. [State expiry](/roadmap/statelessness/#state-expiry) and [statelessness](/roadmap/statelessness/) are further solutions that are still being researched.
 
-Once nodes stop storing old history, they can no longer serve it to others. The Portal Network gives that history a home spread across many nodes, instead of relying on a few large archives or centralized providers.
+Once nodes stop storing old history, they can no longer serve it to others. Archives, torrents and providers keep copies of it; the Portal Network spreads it across many nodes, so it stays available without relying on any one of them.
 
 ## How does the Portal Network work? {#how-does-portal-network-work}
 
 Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](/developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](/developers/docs/networking-layer/#libp2p). DevP2P lets a node request block bodies and receipts from its peers, but a peer that has dropped old history can't serve it. Apps and wallets can also get data from a node through the [JSON-RPC API](/developers/docs/apis/json-rpc/), but that relies on one node or provider storing the data and on trusting it to be honest.
 
-The Portal Network is a separate peer-to-peer network built for sharing history. It runs on [discv5](https://github.com/ethereum/devp2p/blob/master/discv5/discv5.md), the node discovery protocol that Ethereum's clients also use, and organizes its nodes as a [distributed hash table (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table), similar to BitTorrent's. Every node has a node ID, and every piece of content, such as the receipts of one block, has a content ID in the same ID space, derived from its block number. Each node stores the content whose IDs are closest to its own ID, up to a distance it chooses, called its radius. To fetch a piece of content, a node asks the peers it knows that are closest to the content ID. Peers that don't have it answer with nodes that are closer still, until the request reaches a node that stores it.
+The Portal Network is a separate peer-to-peer network built for sharing history. It runs on [discv5](https://github.com/ethereum/devp2p/blob/master/discv5/discv5.md), the node discovery protocol that consensus clients also use for finding peers, and organizes its nodes as a [distributed hash table (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table), similar to BitTorrent's. Every node has a node ID, and every piece of content, such as the receipts of one block, has a content ID in the same ID space, derived from its block number. Each node stores the content whose IDs are closest to its own ID, up to a distance it chooses, called its radius. To fetch a piece of content, a node asks the peers it knows that are closest to the content ID. Peers that don't have it answer with nodes that are closer still, until the request reaches a node that stores it.
 
 <PortalHistoryDiagram />
 
@@ -34,7 +34,7 @@ A node never has to trust the data it receives. It keeps every block header, and
 
 ### The Portal Networks {#the-portal-networks}
 
-The Portal Network was first designed as several subnetworks that would let lightweight clients follow the chain without trusting a full node: a beacon chain light client network, a state network, a transaction gossip network and a history network. In 2025, work on all but one of them stopped. Development now focuses on the **History network**, which stores the bodies and receipts of past blocks for execution clients that keep every block header but have dropped the rest of the history.
+The Portal Network was first designed as several subnetworks that would let lightweight clients follow the chain without trusting a full node: a beacon chain light client network, a state network, a transaction gossip network and a history network. In 2025, the specifications of all but one of them were moved to legacy, and development now focuses on the **History network**, which stores the bodies and receipts of past blocks for execution clients that keep every block header but have dropped the rest of the history.
 
 ## Portal Network clients {#client-diversity-as-default}
 
