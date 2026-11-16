@@ -5,7 +5,13 @@ import EvmZonesDiagram from "./EvmZones"
 import ExAnteReorgDiagram from "./ExAnteReorg"
 import GasEvmDiagram from "./GasEvm"
 import GasTxDiagram from "./GasTx"
-import NodeClientsDiagram, { NodeArchitectureDiagram } from "./NodeClients"
+import MevBoostDiagram from "./MevBoost"
+import NodeClientsDiagram, {
+  ClientSetupDiagram,
+  NodeAccessDiagram,
+  NodeArchitectureDiagram,
+  NodeNetworksDiagram,
+} from "./NodeClients"
 import TxApplyDiagram from "./TxApply"
 import ValidatorKeysDiagram, { KeyDerivationDiagram } from "./ValidatorKeys"
 
@@ -14,13 +20,17 @@ export const mdxDiagramComponents = {
   AccountsDiagram,
   AttestationsDiagram,
   BlockStateDiagram,
+  ClientSetupDiagram,
   EvmZonesDiagram,
   ExAnteReorgDiagram,
   GasEvmDiagram,
   GasTxDiagram,
   KeyDerivationDiagram,
+  MevBoostDiagram,
+  NodeAccessDiagram,
   NodeArchitectureDiagram,
   NodeClientsDiagram,
+  NodeNetworksDiagram,
   TxApplyDiagram,
   ValidatorKeysDiagram,
 }
