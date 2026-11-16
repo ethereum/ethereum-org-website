@@ -8,7 +8,7 @@ The per-file pipeline is a deterministic pure function from English changes to a
 - **english-B**: current English content on disk
 - **locale-A**: existing translation on disk, corresponding to english-A
 - **source manifest** (`.manifests/{destPath}/source.json`): Merkle tree of english-A's content, including `sourceCommitSha`
-- **translation manifest** (`.manifests/{destPath}/translation.json`): the `englishManifestHash` it was translated against, the placeholder order/values Gemini returned, and per-section status (no locale hashes)
+- **translation manifest** (`.manifests/{destPath}/translation.json`): Merkle tree mirroring the English tree structure but with per-section locale hashes + structural element mapping
 
 ## Output
 
