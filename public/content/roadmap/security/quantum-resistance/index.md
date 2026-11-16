@@ -102,12 +102,13 @@ These standards provide a foundation for the broader industry's post-quantum tra
 
 The Ethereum Foundation formed a dedicated Post-Quantum Security team in January 2026, led by Thomas Coratger. The team's work is tracked publicly at [pq.ethereum.org](https://pq.ethereum.org).
 
-### Current activity (as of April 2026) {#current-activity}
+### Current activity (as of November 2026) {#current-activity}
 
 - **Weekly interop devnets**: More than 10 client teams participate in regular post-quantum interoperability testing, including Lighthouse, Grandine, Zeam, Ream Labs, and PierTwo.
 - **Poseidon Prize**: A $1 million research prize targeting improvements in hash-based cryptographic primitives.
 - **Open-source implementations**: leanXMSS, leanVM, leanSpec (Python), leanSig (Rust), and leanMultisig are all available under the [leanEthereum GitHub organization](https://github.com/leanEthereum).
-- **2nd Annual PQ Research Retreat**: Planned for 9-Oct-2026 to 12-Oct-2026 in Cambridge, UK.
+- **2nd Annual PQ Research Retreat**: Was scheduled for 9-Oct-2026 to 12-Oct-2026 in Cambridge, UK.
+- **Post-quantum key registration**: [EIP-8483](https://github.com/ethereum/EIPs/pull/12609) (draft) would let validators commit to a future post-quantum key through their withdrawal address, before a quantum computer could forge BLS signatures. It was proposed for inclusion in the Hegotá upgrade in [November 2026](https://github.com/ethereum/pm/issues/2291).
 - **NIST Alignment**: Ethereum's work builds upon the post-quantum cryptography standards finalized by NIST in August 2024 (such as ML-KEM, ML-DSA, and SLH-DSA).
 
 ### Migration milestones {#migration-milestones}
@@ -121,7 +122,7 @@ The team has outlined a series of protocol upgrades to incrementally introduce p
 | L* | PQ attestations and real-time consensus-layer proofs via leanVM. Validators begin using PQ signatures for consensus. |
 | M* | Full PQ signature aggregation and PQ-safe blob commitments. |
 
-**Target**: The structured fork milestones target the completion of core post-quantum infrastructure by approximately 2029. Full execution-layer and ecosystem migration extends beyond that.
+**Target**: The structured fork milestones target the completion of core post-quantum infrastructure by approximately 2029. In September 2026, the Ethereum Foundation [set a goal](https://blog.ethereum.org/2026/09/07/protocol-priorities) of making L1 quantum-resistant across the execution, consensus and data layers by December 2029, to be reviewed with outside experts in January 2027. Full execution-layer and ecosystem migration extends beyond that.
 
 ## What do users need to do? {#what-users-need-to-do}
 
