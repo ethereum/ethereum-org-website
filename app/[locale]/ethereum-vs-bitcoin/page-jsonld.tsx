@@ -6,17 +6,19 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function EthereumVsBitcoinPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-ethereum-vs-bitcoin")
@@ -60,8 +62,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-ethereum-vs-bitcoin-title"),
         description: t("page-ethereum-vs-bitcoin-meta-description"),
-        image:
-          "https://ethereum.org/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png",
+        image: `${SITE_URL}/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
@@ -79,7 +80,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
               "A peer-to-peer digital currency system and the first decentralized cryptocurrency",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
     ],
   }
