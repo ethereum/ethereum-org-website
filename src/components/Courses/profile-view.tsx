@@ -36,6 +36,7 @@ import {
   examHref,
   getCourse,
   lessonHref,
+  lessonProgressKey,
   NO_PROFILE_PARAM,
   stepKey,
   TRACKS,
@@ -320,7 +321,12 @@ const ProfileView = () => {
   )
   const trophies = COURSES.filter(({ id }) => isExamPassed(id)).length
 
-  const lessonRecords = Object.values(progress.lessons)
+  // Catalog lessons only, like lessonsDone: records outlive renamed lessons
+  const lessonRecords = COURSES.flatMap((c) =>
+    c.lessons.flatMap(
+      ({ id }) => progress.lessons[lessonProgressKey(c.id, id)] ?? []
+    )
+  )
   const perfect = lessonRecords.filter(({ accuracy }) => accuracy === 1).length
   const firstDone = lessonRecords
     .map(({ completedAt }) => completedAt)
