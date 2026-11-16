@@ -144,3 +144,49 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - open-access bank `アカウント` -> `口座`; hybrid `ユニスワップLabs`; `ノーログの証明` overstates claim.
 - `鍵ペア` held -- no `キーペア` regression.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `スマートコントラクト` -> `スマート・コントラクト` x3 (glossary middle dot; tree 1741 vs 149).
+
+**Open (warnings):**
+
+- onchain finance rendered 3 ways; 機関/機関投資家; `アービトラム One` hybrid; glamsterdam `devnets` -> `開発ネット` regressed from #19357's `デブネット`.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.0/10
+
+- Fixed: `[EVM-based Chains]` -> `[EVMベースのチェーン]`; `Optimistic Sepolia` heading -> `オプティミスティック Sepolia` (dev form).
+- Open: L124 `Arbitrum Sepolia` heading Latin while body uses `アービトラム` (Latin is a glossary alias, not a deviation).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:19 heading reverted to English (`## Guidelines for building secure Ethereum smart c` -> `## 安全なイーサリアムのスマート・コントラクトを構築するためのガイドライン`)
+
+**Open (native call needed):**
+
+- developers/tutorials/app-plasma/index.md:1190: ETHGlossary `revert` (scriptRule `translate`) is リバート. Dev had リバート. Flag for human. (`このステップはトランザクションを元に戻します` -> `このステップはトランザクションをリバートします`)
+- 9 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The ja translation is fluent and faithful, and the new prediction-markets, founders and wallet-description content reads well. The main defect is that the security-page retranslation reverted all 24 guideline headings to English (the same failure as #19115). That fix and the three founders tag labels are deterministic.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `_x_` italics next to CJK characters converted to `<em>` (3 sites; known-patterns #89)
+
+**Notes:**
+
+- Warnings: double を at write-deploy:12; ナンス/ノンス and ガス・リミット/ガスリミット differ between prose and code comments.

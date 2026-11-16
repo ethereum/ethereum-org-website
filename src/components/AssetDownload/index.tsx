@@ -60,7 +60,8 @@ const AssetDownload = ({
 }: AssetDownloadProps) => {
   const t = useTranslations("page-assets")
 
-  const fileExtension = extname(image.src).slice(1)
+  // Strip the query string: deployed builds append ?dpl=<deployment id>
+  const fileExtension = extname(image.src.split(/[?#]/)[0]).slice(1)
   const downloadName = title.replace(/\s+/g, "-").toLowerCase()
   const matomoEvent = {
     eventCategory: "asset download button",

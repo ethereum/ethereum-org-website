@@ -115,3 +115,69 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Not fixed (unchanged lines): `server-components` `वेब3` (always_latin Web3), `डेंकुन` x10 vs `डेन्कन्`.
 - useroperation `वापरकर्ता ऑपरेशन्स` vs `वापरकर्ता कार्य`; DAS half-translated; mainnet `मुख्यनेट`/`मेननेट` split.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.0/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `चार्जॅक` -> `चार्जबॅक` x4; scalable rendered measurable `मोजण्यायोग्य` x3 -> `स्केलेबल`/`स्केल`; high-volume rendered high-noise `उच्च-आवाजाचे` -> `उच्च-प्रमाणातील`; deployment `उपयोजन` -> glossary `प्रस्थापना` x3.
+
+**Open (warnings):**
+
+- Three L2 forms; `उद्योग` (industry) for enterprise; परिसंस्था/इकोसिस्टम split.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 8.6/10
+
+- Warning: retranslation regressed neighbors -- `संकेतांनुसार` for "by convention" (L171), हूक/हुक split, L303 evaluate-to drift.
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.6/10
+
+- Fixed: glossary `staker` -> `स्टेकर्स` (3x), `peer` -> `पीअर्स` (`सहकाऱ्यांमधील` = among coworkers); "deprecated" `नाकारलेले` (rejected) -> dev `कालबाह्य` (10 sites).
+- Open: glossary `Ethereum Mainnet` uses `इथरियम` vs `Ethereum` entry `इथेरियम` (upstream).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.8/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- developers/docs/apis/backend/index.md:38: The glossary term "decentralized" (scriptRule: translate) was changed from the glossary form to a transliteration. This is a regression: dev had विकेंद्रित. (`डिसेंट्रलाइज्ड APIs` -> `विकेंद्रित APIs`)
+- wrapped-eth/index.md:34: The glossary term "validator" (scriptRule: translate, confidence high) is `प्रमाणक`. The locale uses that form 1774 times and `व्हॅलिडेटर` 79 times. This wording was already there before the PR, which (`इथेरियम व्हॅलिडेटर्सद्वारे` -> `इथेरियम प्रमाणकांद्वारे`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Marathi is fluent and closely follows the glossary, including the large new JSON sets (founders, wallet descriptions, stories map). There are no build- or navigation-breaking defects. The two criticals are glossary "translate" deviations that need a person to fix. The rest are small regressions from the retranslation and inconsistencies between files.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- `(weth)` changed to `(WETH)` (websockets:175; #95)
+
+**Notes:**
+
+- hello-world quarantined (JSON parse error). Warnings: Latin `MetaMask` link label, English alt text, `तोच खाते` should be `तेच खाते`.
+
+## PR #19608 (intl/pending-dev, run 1023-1817) -- 2026-10-23 -- Score 9.2/10
+Scope: hello-world-smart-contract (released from quarantine and fully reworked for Hardhat 3) and how-to-write-and-deploy-an-nft (small edit). Changed lines only.
+
+**Fixed in this branch:**
+
+- None (0 critical)
+
+**Notes:**
+
+- Glossary is followed in full. Code, fence tags, hrefs and IDs match English exactly.
+
+**Open (warnings):**
+
+- hello-world:219 "compromising your secrets" is rendered as `तडजोड` (compromise in the sense of a concession; same polyseme as #19115). Prefer `सिक्रेट्स धोक्यात आणत आहात`
+- hello-world:344 "under the hood" is `तांत्रिकदृष्ट्या` here but `अंतर्गतपणे` at L346
+- nft:66-75 the PR's `इनिशियलाईज`/`टाईप` disagrees with `टाइप` elsewhere in the file and with the hello-world spelling

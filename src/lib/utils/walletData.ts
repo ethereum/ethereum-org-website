@@ -1,6 +1,7 @@
 import { union } from "lodash"
 
 import type {
+  CatalogItemLink,
   ChainName,
   NonEVMChainName,
   Wallet,
@@ -8,12 +9,13 @@ import type {
 } from "@/lib/types"
 
 import { formatDate } from "@/lib/utils/date"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { stripMarkdown } from "@/lib/utils/md"
 import { numberFormat } from "@/lib/utils/numbers"
 import { seededShuffle } from "@/lib/utils/random"
 import { capitalize } from "@/lib/utils/string"
-import { slugify } from "@/lib/utils/url"
+import { slugify, toCatalogItemLink } from "@/lib/utils/url"
 import {
   formatWalletFees,
   getNonSupportedLocaleWallets,
@@ -147,9 +149,8 @@ export type CatalogWalletCard = Pick<
   | "buy_crypto"
   | "withdraw_crypto"
   | "url"
-  | "discord"
-  | "twitter"
 > & {
+  socialLinks: CatalogItemLink[]
   /** Already formatted, e.g. "Swap fee: 0.3%" — see `toCatalogCard`. */
   fees?: string
   /** The viewer's own language, when this wallet speaks it. */
@@ -173,8 +174,7 @@ export const toCatalogCard = (
   buy_crypto: wallet.buy_crypto,
   withdraw_crypto: wallet.withdraw_crypto,
   url: wallet.url,
-  discord: wallet.discord,
-  twitter: wallet.twitter,
+  socialLinks: getWalletSocialLinks(wallet),
   // Omit the key rather than serialize a null.
   ...(wallet.descriptionStripped && {
     descriptionStripped: wallet.descriptionStripped,
@@ -193,11 +193,25 @@ type WalletTranslator = (
   values?: Record<string, string | number>
 ) => string
 
+/** Translator bound to `page-wallet-descriptions`. */
+export type WalletDescriptions = {
+  has: (key: string) => boolean
+  (key: string): string
+}
+
+export const getWalletSocialLinks = (wallet: WalletData): CatalogItemLink[] =>
+  [
+    toCatalogItemLink("x", wallet.twitter),
+    toCatalogItemLink("discord", wallet.discord),
+    toCatalogItemLink("telegram", wallet.telegram),
+    toCatalogItemLink("reddit", wallet.reddit),
+    toCatalogItemLink("github", wallet.repo_url),
+  ].filter((link) => link !== undefined)
+
 /**
- * No wallet carries a `description` today, so without this the meta
- * description and JSON-LD of all 49 detail pages would be the bare wallet
- * name. Returns undefined when the data can't fill the sentence; a real
- * description always wins over this.
+ * Fallback for a wallet with no entry in `page-wallet-descriptions`, so its meta
+ * description and JSON-LD are never just the bare wallet name. Returns undefined
+ * when the data cannot fill the sentence; a real description always wins.
  */
 export function buildWalletMetaDescription(
   wallet: CatalogWallet,
@@ -227,8 +241,15 @@ export function buildWalletMetaDescription(
 
 export function enrichWallet(
   wallet: WalletData,
-  locale: string
+  locale: string,
+  descriptions: WalletDescriptions
 ): CatalogWallet {
+  const description = getLocalizedDescription(
+    descriptions,
+    "wallet",
+    getWalletSlug(wallet),
+    ""
+  )
   return {
     ...wallet,
     slug: getWalletSlug(wallet),
@@ -240,39 +261,50 @@ export function enrichWallet(
     devices: getWalletDevices(wallet),
     personas: getWalletPersonaIds(wallet),
     advancedFlags: getWalletAdvancedFlags(wallet),
-    descriptionStripped: wallet.description
-      ? stripMarkdown(wallet.description)
-      : undefined,
+    descriptionStripped: description ? stripMarkdown(description) : undefined,
   }
 }
 
 /** Wallets supporting `locale` first, then the rest. */
-export function getCatalogWallets(locale: string): CatalogWallet[] {
+export function getCatalogWallets(
+  locale: string,
+  descriptions: WalletDescriptions
+): CatalogWallet[] {
   const ordered = [
     ...getSupportedLocaleWallets(locale),
     ...getNonSupportedLocaleWallets(locale),
   ]
-  return ordered.map((wallet) => enrichWallet(wallet, locale))
+  return ordered.map((wallet) => enrichWallet(wallet, locale, descriptions))
 }
 
 export function getWalletBySlug(
   slug: string,
-  locale: string
+  locale: string,
+  descriptions: WalletDescriptions
 ): CatalogWallet | undefined {
   const wallet = walletsData.find((entry) => getWalletSlug(entry) === slug)
-  return wallet ? enrichWallet(wallet, locale) : undefined
+  return wallet ? enrichWallet(wallet, locale, descriptions) : undefined
+}
+
+/** The following wallet in file order, wrapping; fixed across locales. */
+export function getNextWallet(wallet: CatalogWallet): WalletData {
+  const index = walletsData.findIndex(
+    (entry) => getWalletSlug(entry) === wallet.slug
+  )
+  return walletsData[(index + 1) % walletsData.length]
 }
 
 /**
  * Wallets sharing this one's personas, most personas in common first. Most
  * wallets tie on persona overlap, so the tie order is a shuffle seeded from the
  * host wallet's slug: stable across prerender and revalidation, but a different
- * six per detail page instead of the same alphabetical head everywhere.
+ * set per detail page instead of the same alphabetical head everywhere.
  */
 export function getRelatedWallets(
   wallet: CatalogWallet,
   locale: string,
-  limit = 6
+  descriptions: WalletDescriptions,
+  { limit = 3, exclude }: { limit?: number; exclude?: string } = {}
 ): CatalogWallet[] {
   const personas = new Set(wallet.personas)
   if (personas.size === 0) return []
@@ -283,7 +315,10 @@ export function getRelatedWallets(
   )
 
   const scored = walletsData
-    .filter((entry) => getWalletSlug(entry) !== wallet.slug)
+    .filter(
+      (entry) =>
+        getWalletSlug(entry) !== wallet.slug && getWalletSlug(entry) !== exclude
+    )
     .map((entry) => ({
       entry,
       shared: getWalletPersonaIds(entry).filter((id) => personas.has(id))
@@ -294,7 +329,7 @@ export function getRelatedWallets(
   return seededShuffle(scored, seed)
     .sort((a, b) => b.shared - a.shared)
     .slice(0, limit)
-    .map(({ entry }) => enrichWallet(entry, locale))
+    .map(({ entry }) => enrichWallet(entry, locale, descriptions))
 }
 
 export function getWalletsByPersona(

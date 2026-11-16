@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/glamsterdam/index.md",
-  "generatedAt": "2026-09-30T18:30:30.321Z",
-  "rootHash": "fd9151c1e013",
+  "generatedAt": "2026-10-14T17:49:58.570Z",
+  "rootHash": "acc9df21014e",
   "tree": {
-    "contentHash": "4fdcbda7f7a6",
+    "contentHash": "d3f98cb8e125",
     "anchorHash": "84eb10562e61",
     "children": {
       "frontmatter:title": {
@@ -119,7 +119,7 @@
         }
       },
       "improvements-in-glamsterdam": {
-        "contentHash": "b9d29c7dd000",
+        "contentHash": "94454f51f2f0",
         "anchorHash": "89622158d50c",
         "labelHash": "bdda2cd5d59b",
         "children": {
@@ -128,7 +128,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "component:1": {
-            "contentHash": "8ff940197c33",
+            "contentHash": "34d358f7c513",
             "anchorHash": "23cebcd0ac3d",
             "children": {
               "attr:variant": {
@@ -136,15 +136,15 @@
                 "anchorHash": "06271baf4953"
               },
               "component:0": {
-                "contentHash": "df5d94b29cc0",
+                "contentHash": "5ec3fb50f0f0",
                 "anchorHash": "1024db4ed843",
                 "children": {
                   "component:0": {
-                    "contentHash": "5acedd4bce33",
+                    "contentHash": "040562854ae9",
                     "anchorHash": "83625f34f396",
                     "children": {
                       "prose:2": {
-                        "contentHash": "97ef805ed575",
+                        "contentHash": "b5406978392f",
                         "anchorHash": "e3b0c44298fc"
                       },
                       "link:0": {
@@ -1152,5 +1152,5 @@
       "faq"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

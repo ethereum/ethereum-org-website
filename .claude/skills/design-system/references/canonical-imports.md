@@ -301,7 +301,7 @@ Domain-specific tables (`DataTable`, `Layer2NetworksTable`, `StablecoinsTable`, 
 
 For locale-aware number/date formatting, RTL helpers, and directional-icon imports, see `references/i18n-rtl.md`. Quick pointers:
 
-- `numberFormat` / `dateTimeFormat` from `@/lib/utils/numbers` and `@/lib/utils/date`
+- `numberFormat` / `formatDateTime` from `@/lib/utils/numbers` and `@/lib/utils/date`
 - `useRtlFlip` from `@/hooks/useRtlFlip`
 - `ChevronNext` / `ChevronPrev` from `@/components/Chevron` (RTL-aware)
 

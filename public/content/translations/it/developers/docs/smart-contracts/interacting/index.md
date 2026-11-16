@@ -1,6 +1,6 @@
 ---
 title: Interagire con gli smart contract
-description: Scopri come leggere e scrivere sugli smart contract che sono già stati distribuiti su Ethereum.
+description: "Scopri come leggere e scrivere sugli smart contract che sono già stati distribuiti su Ethereum."
 lang: it
 ---
 
@@ -82,7 +82,7 @@ Gli sviluppatori in genere utilizzano una libreria JavaScript/TypeScript per int
 
 - **[Ethers.js](https://docs.ethers.org/)** - Funziona anche in Node.js per script lato server e bot
 - **[Web3.py](https://web3py.readthedocs.io/)** - Libreria Python per l'interazione con Ethereum
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Libreria Go ufficiale del team di Geth
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Libreria Go ufficiale del team di Geth
 
 ### Esempio: leggere il saldo di un token con Viem {#example-viem}
 

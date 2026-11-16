@@ -142,7 +142,7 @@ KYC ছাড়া বিকেন্দ্রীকৃত টুলগুল�
 **Arweave - _Arweave হলো ডেটা সংরক্ষণের জন্য একটি dStorage প্ল্যাটফর্ম।_**
 
 - [Arweave.org](https://www.arweave.org/)
-- [ডকুমেন্টেশন](https://docs.arweave.org/info/)
+- [ডকুমেন্টেশন](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs হলো শার্ডিং এবং ব্লবার (blobber) সহ একটি প্রুফ-অফ-স্টেক dStorage প্ল্যাটফর্ম।_**

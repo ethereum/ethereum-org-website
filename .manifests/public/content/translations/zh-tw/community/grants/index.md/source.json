@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/community/grants/index.md",
-  "generatedAt": "2026-06-08T07:18:16.943Z",
-  "rootHash": "c9db79411f0b",
+  "generatedAt": "2026-10-14T17:44:39.223Z",
+  "rootHash": "e52277e46a96",
   "tree": {
     "contentHash": "dad6c47c5325",
-    "anchorHash": "e7451073d4b2",
+    "anchorHash": "45680f9344cd",
     "children": {
       "frontmatter:title": {
         "contentHash": "3a7bd1478abf",
@@ -37,7 +37,7 @@
       },
       "component:7": {
         "contentHash": "dd4be64babf8",
-        "anchorHash": "ef4ba1f3573e",
+        "anchorHash": "c4b05fe27565",
         "children": {
           "attr:variant": {
             "contentHash": "e3b0c44298fc",
@@ -59,7 +59,7 @@
           },
           "link:0": {
             "contentHash": "3434816d51f0",
-            "anchorHash": "c1fe85e21c28"
+            "anchorHash": "94c8637bf3c2"
           },
           "prose:2": {
             "contentHash": "aac32651b10f",
@@ -436,5 +436,5 @@
       "work-in-ethereum"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

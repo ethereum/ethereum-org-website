@@ -171,14 +171,20 @@ export function getCountryTranslation(country: string, locale: string): string {
   const code = countries.getAlpha2Code(normalized, "en")
   if (!code) return country
 
-  if (ICU_LOCALES.has(locale)) {
-    return getRegionName(code, locale) ?? country
-  }
+  return getCountryNameByCode(code, locale) ?? country
+}
+
+/** Localized name for an ISO 3166-1 alpha-2 code. */
+export function getCountryNameByCode(
+  code: string,
+  locale: string
+): string | undefined {
+  if (ICU_LOCALES.has(locale)) return getRegionName(code, locale)
 
   // Strip region suffix: "pt-br" -> "pt"
   // (i18n-iso-countries uses base language codes)
   const baseLocale = locale.split("-")[0]
-  return countries.getName(code, baseLocale) ?? country
+  return countries.getName(code, baseLocale) ?? getRegionName(code, locale)
 }
 
 /**

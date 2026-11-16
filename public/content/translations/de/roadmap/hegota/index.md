@@ -34,7 +34,9 @@ Da das Konto seine eigenen Regeln wählt, kann es auch ein Signaturschema wähle
 
 ## Was sonst noch in Hegotá enthalten ist {#scope}
 
-Noch nicht entschieden. FOCIL und Frame-Transaktionen sind die beiden bisher geplanten Änderungen; Dutzende weitere wurden als Vorschlag eingereicht und keine davon ist endgültig beschlossen. Diese Seite wird kurz bleiben, bis der Umfang feststeht – für den aktuellen Stand der Diskussion siehe die unten stehenden Ressourcen.
+Das ist noch nicht entschieden. FOCIL und Frame-Transaktionen sind die beiden bisher geplanten Änderungen; Dutzende weitere wurden vorgeschlagen, aber noch ist nichts davon endgültig beschlossen. Diese Seite wird kurz bleiben, bis der Umfang feststeht – den aktuellen Stand der Diskussion finden Sie in den unten stehenden Ressourcen.
+
+Zu den Vorschlägen, deren Aufnahme derzeit in Betracht gezogen wird, gehören EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279 und EIP-8365. In Betracht gezogen zu werden bedeutet, dass Client-Teams einen Vorschlag evaluieren, und nicht, dass er definitiv in Hegotá ausgeliefert wird.
 
 ## Weiterführende Literatur {#further-reading}
 

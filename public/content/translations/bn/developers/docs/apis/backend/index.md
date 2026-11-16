@@ -35,7 +35,7 @@ lang: bn
 - [ডকুমেন্টেশন](https://docs.allthatnode.com)
 - [ডিসকর্ড](https://discord.gg/GmcdVEUbJM)
 
-**Blast by Bware Labs -** **_ইথেরিয়াম মেইননেট এবং টেস্টনেটগুলির জন্য ডিসেন্ট্রালাইজড API।_**
+**Blast by Bware Labs -** **_ইথেরিয়াম মেইননেট এবং টেস্টনেটগুলির জন্য ডিসেন্ট্রালাইজড অ্যাপ্লিকেশন প্রোগ্রামিং ইন্টারফেস (এপিআই)।_**
 
 - [blastapi.io](https://blastapi.io/)
 - [ডকুমেন্টেশন](https://docs.blastapi.io)
@@ -52,7 +52,7 @@ lang: bn
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - ব্লক এক্সপ্লোরার এবং ট্রানজ্যাকশন API**
+**Etherscan - ব্লক এক্সপ্লোরার এবং ট্রানজ্যাকশন এপিআই**
 - [ডকুমেন্টেশন](https://docs.etherscan.io/)
 
 **Blockscout - ওপেন সোর্স ব্লক এক্সপ্লোরার**
@@ -63,13 +63,13 @@ lang: bn
 - [GetBlock.io](https://getblock.io/)
 - [ডকুমেন্টেশন](https://docs.getblock.io/)
 
-**Infura -** **_একটি পরিষেবা হিসাবে ইথেরিয়াম API।_**
+**Infura -** **_একটি পরিষেবা হিসাবে ইথেরিয়াম এপিআই।_**
 
 - [infura.io](https://infura.io)
 - [ডকুমেন্টেশন](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _সাশ্রয়ী EVM জেসন-আরপিসি প্রোভাইডার_**
+**Node RPC - _সাশ্রয়ী ইথেরিয়াম ভার্চুয়াল মেশিন (EVM) জেসন-আরপিসি প্রোভাইডার_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [ডকুমেন্টেশন](https://docs.noderpc.xyz/node-rpc)
@@ -85,13 +85,19 @@ lang: bn
 - [ডকুমেন্টেশন](https://www.quicknode.com/docs/welcome)
 - [ডিসকর্ড](https://discord.gg/quicknode)
 
-**Rivet -** **_ওপেন সোর্স সফ্টওয়্যার দ্বারা চালিত একটি পরিষেবা হিসাবে ইথেরিয়াম এবং ইথেরিয়াম ক্লাসিক API।_**
+**Rivet -** **_ওপেন সোর্স সফ্টওয়্যার দ্বারা চালিত একটি পরিষেবা হিসাবে ইথেরিয়াম এবং ইথেরিয়াম ক্লাসিক এপিআই।_**
 
 - [rivet.cloud](https://rivet.cloud)
 - [ডকুমেন্টেশন](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_জেসন-আরপিসি/WebSockets API হিসাবে গতি-ভিত্তিক ইথেরিয়াম নোড।_**
+**SolidRPC -** **_ফুল, আর্কাইভ এবং চাবিহীন পাবলিক অ্যাক্সেস সহ EVM জেসন-আরপিসি পরিকাঠামো।_**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [ডকুমেন্টেশন](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
+**Zmok -** **_জেসন-আরপিসি/WebSockets এপিআই হিসাবে গতি-ভিত্তিক ইথেরিয়াম নোড।_**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -100,7 +106,13 @@ lang: bn
 
 ### ডেভেলপমেন্ট টুল {#development-tools}
 
-**ethers-kt -** **_EVM-ভিত্তিক ব্লকচেইনগুলির জন্য অ্যাসিঙ্ক, উচ্চ-পারফরম্যান্স Kotlin/Java/Android লাইব্রেরি।_**
+**eth.zig -** **_ইথেরিয়ামের জন্য একটি Zig লাইব্রেরি, যেখানে কম্পাইল-টাইম অ্যাপ্লিকেশন বাইনারি ইন্টারফেস (এবিআই) এনকোডিং এবং কন্ট্রাক্ট বাইন্ডিং রয়েছে।_**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [ডকুমেন্টেশন](https://ethzig.org)
+- [উদাহরণ](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_ইথেরিয়াম ভার্চুয়াল মেশিন (EVM)-ভিত্তিক ব্লকচেইনগুলির জন্য অ্যাসিঙ্ক, উচ্চ-পারফরম্যান্স Kotlin/Java/Android লাইব্রেরি।_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [উদাহরণ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)

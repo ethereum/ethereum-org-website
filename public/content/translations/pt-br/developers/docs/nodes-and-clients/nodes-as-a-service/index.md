@@ -209,7 +209,7 @@ Aqui está uma lista de alguns dos provedores de nó do Ethereum mais populares,
     - Acesso a mais de 50 nós de blockchain
 
 - [**Infura**](https://infura.io/)
-  - [Documentação](https://infura.io/docs)
+  - [Documentação](https://docs.infura.io/)
   - Recursos
     - Opção de nível gratuito
     - Escale conforme o uso

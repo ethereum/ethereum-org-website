@@ -165,7 +165,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 {numberFormat(locale, options).format(value)}
 ```
 
-## Native date methods -> `dateTimeFormat()`
+## Native date methods -> `formatDateTime()`
 
 ```tsx
 // Before:
@@ -174,8 +174,8 @@ date.toLocaleTimeString()
 new Intl.DateTimeFormat(locale).format(date)
 
 // After:
-import { dateTimeFormat } from "@/lib/utils/date"
-dateTimeFormat(locale, options).format(date)
+import { formatDateTime } from "@/lib/utils/date"
+formatDateTime(locale, date, options)
 ```
 
 ## Hard-coded `left-`/`right-` -> logical equivalents

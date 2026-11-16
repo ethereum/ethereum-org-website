@@ -1,7 +1,7 @@
 ---
 title: Introduction to smart contracts
 metaTitle: "Smart contracts: What are they and their benefits"
-description: A non-technical introduction to smart contracts
+description: "What are smart contracts? A non-technical introduction to the programs that run on Ethereum and power apps like DeFi, NFTs and DAOs without middlemen."
 lang: en
 ---
 

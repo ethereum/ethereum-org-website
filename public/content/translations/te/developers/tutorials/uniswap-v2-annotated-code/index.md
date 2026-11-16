@@ -137,7 +137,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
     using SafeMath  for uint;
 ```
 
-ఓవర్‌ఫ్లోలు మరియు అండర్‌ఫ్లోలను నివారించడానికి [SafeMath లైబ్రరీ](https://docs.openzeppelin.com/contracts/2.x/api/math) ఉపయోగించబడుతుంది. ఇది చాలా ముఖ్యం ఎందుకంటే లేకపోతే మనం ఒక విలువ `-1` ఉండాల్సిన చోట, దానికి బదులుగా `2^256-1` ఉండే పరిస్థితిని ఎదుర్కోవచ్చు.
+ఓవర్‌ఫ్లోలు మరియు అండర్‌ఫ్లోలను నివారించడానికి [SafeMath లైబ్రరీ](https://docs.openzeppelin.com/contracts/3.x/api/math) ఉపయోగించబడుతుంది. ఇది చాలా ముఖ్యం ఎందుకంటే లేకపోతే మనం ఒక విలువ `-1` ఉండాల్సిన చోట, దానికి బదులుగా `2^256-1` ఉండే పరిస్థితిని ఎదుర్కోవచ్చు.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1674,7 +1674,7 @@ Solidityలో ఫంక్షన్ పరామితిని `memory` లే
 
 ## లైబ్రరీలు {#libraries}
 
-[SafeMath లైబ్రరీ](https://docs.openzeppelin.com/contracts/2.x/api/math) బాగా డాక్యుమెంట్ చేయబడింది, కాబట్టి దాన్ని ఇక్కడ డాక్యుమెంట్ చేయాల్సిన అవసరం లేదు.
+[SafeMath లైబ్రరీ](https://docs.openzeppelin.com/contracts/3.x/api/math) బాగా డాక్యుమెంట్ చేయబడింది, కాబట్టి దాన్ని ఇక్కడ డాక్యుమెంట్ చేయాల్సిన అవసరం లేదు.
 
 ### Math {#math}
 

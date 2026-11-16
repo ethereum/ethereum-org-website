@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/security/index.md",
-  "generatedAt": "2026-06-19T19:20:38.588Z",
-  "rootHash": "28d8e4a08705",
+  "generatedAt": "2026-10-21T21:52:56.922Z",
+  "rootHash": "26d9305a621c",
   "tree": {
     "contentHash": "07c19dfd6f04",
-    "anchorHash": "81fd2955a88d",
+    "anchorHash": "fcd525acb5ba",
     "children": {
       "frontmatter:title": {
         "contentHash": "ed145638d4ff",
@@ -86,7 +86,7 @@
       },
       "smart-contract-security-guidelines": {
         "contentHash": "56cea14a9c81",
-        "anchorHash": "79d10dc2ff7d",
+        "anchorHash": "647af36a8d12",
         "labelHash": "5642ed2a3ca9",
         "children": {
           "_label": {
@@ -383,7 +383,7 @@
           },
           "test-smart-contracts-and-verify-code-correctness": {
             "contentHash": "e029425127cc",
-            "anchorHash": "a2a21078e701",
+            "anchorHash": "a4fd61a75d11",
             "labelHash": "18f4f0fcb2e5",
             "children": {
               "_label": {
@@ -404,7 +404,7 @@
               },
               "link:1": {
                 "contentHash": "36ec71fee0ee",
-                "anchorHash": "7de412322861"
+                "anchorHash": "d9e5dde9825c"
               },
               "prose:9": {
                 "contentHash": "bccea5792e18",
@@ -1050,7 +1050,7 @@
           },
           "mitigate-common-smart-contract-vulnerabilities": {
             "contentHash": "f9e7d1221242",
-            "anchorHash": "19f5197d862d",
+            "anchorHash": "c228767828a7",
             "labelHash": "259ef8ccf19c",
             "children": {
               "_label": {
@@ -1357,7 +1357,7 @@
               },
               "integer-underflows-and-overflows": {
                 "contentHash": "37e601f4997d",
-                "anchorHash": "bc5760f44555",
+                "anchorHash": "39edb0b85767",
                 "labelHash": "f0c9f278b279",
                 "children": {
                   "_label": {
@@ -1442,7 +1442,7 @@
                   },
                   "_auto:how-to-prevent-integer-underflows-and-overflows": {
                     "contentHash": "ec50c831c6ec",
-                    "anchorHash": "466efe7015bb",
+                    "anchorHash": "b8d9a3f7d51b",
                     "labelHash": "1631f8ceb8c1",
                     "children": {
                       "_label": {
@@ -1455,7 +1455,7 @@
                       },
                       "link:0": {
                         "contentHash": "6c9790d19e98",
-                        "anchorHash": "3f3baf8ecc7d"
+                        "anchorHash": "e85d30fb7cfc"
                       },
                       "prose:2": {
                         "contentHash": "7a90f57f824a",
@@ -2308,5 +2308,5 @@
       "smart-contract-security-resources-for-developers"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

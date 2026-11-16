@@ -211,6 +211,19 @@
   --color-staking-red: hsla(var(--staking-red));
   --color-staking-red-fill: hsla(var(--staking-red-fill));
 
+  /* Colors: diagrams */
+  --color-diagram-entity-fill: hsla(var(--diagram-entity-fill));
+  --color-diagram-revert: hsla(var(--diagram-revert));
+  --color-diagram-bg: hsla(var(--diagram-bg));
+  --color-diagram-plate: hsla(var(--diagram-plate));
+  --color-diagram-edge: hsla(var(--diagram-edge));
+  --color-diagram-pipe: hsla(var(--diagram-pipe));
+  --color-diagram-entity: hsla(var(--diagram-entity));
+  --color-diagram-gas: hsla(var(--diagram-gas));
+  --color-diagram-line-faint: hsla(var(--diagram-line-faint));
+  --color-diagram-line: hsla(var(--diagram-line));
+  --color-diagram-line-strong: hsla(var(--diagram-line-strong));
+
   /* Border radius */
   --radius-base: var(--radius-2xl);
 
@@ -230,6 +243,10 @@
   --animate-counter-spin-9: spin 18s linear infinite reverse;
   --animate-pulse-light: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-fade-in: fade-in 150ms ease-in-out;
+  /* Diagrams: one-shot, never looping (see .claude/skills/devdocs-diagrams) */
+  --animate-diagram-flow: diagram-flow 700ms ease-out both;
+  --animate-diagram-travel-y: diagram-travel-y 700ms ease-out both;
+  --animate-diagram-pop: diagram-pop 500ms ease-out both;
   --animate-blink: blink 1.06s step-end infinite;
 
   @keyframes scroll-left {
@@ -254,6 +271,21 @@
   @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
+  }
+
+  @keyframes diagram-flow {
+    from { stroke-dashoffset: 48; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes diagram-travel-y {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes diagram-pop {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   @keyframes blink {

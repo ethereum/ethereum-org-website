@@ -135,7 +135,7 @@ Hợp đồng này kế thừa từ `UniswapV2ERC20`, cung cấp các hàm ERC-2
     using SafeMath  for uint;
 ```
 
-[Thư viện SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) được sử dụng để tránh tràn số trên (overflow) và tràn số dưới (underflow). Điều này rất quan trọng vì nếu không, chúng ta có thể gặp phải tình huống mà một giá trị đáng lẽ phải là `-1`, nhưng thay vào đó lại là `2^256-1`.
+[Thư viện SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) được sử dụng để tránh tràn số trên (overflow) và tràn số dưới (underflow). Điều này rất quan trọng vì nếu không, chúng ta có thể gặp phải tình huống mà một giá trị đáng lẽ phải là `-1`, nhưng thay vào đó lại là `2^256-1`.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1672,7 +1672,7 @@ Hợp đồng này đã được sử dụng để di chuyển các hoán đổi
 
 ## Các Thư viện {#libraries}
 
-[Thư viện SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) đã được ghi chép tài liệu đầy đủ, vì vậy không cần phải ghi chép lại ở đây.
+[Thư viện SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math) đã được ghi chép tài liệu đầy đủ, vì vậy không cần phải ghi chép lại ở đây.
 
 ### Math {#math}
 

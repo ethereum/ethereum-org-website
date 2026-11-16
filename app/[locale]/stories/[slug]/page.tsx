@@ -71,6 +71,7 @@ const StoryPage = async (props: {
         slug={fullSlug}
         frontmatter={frontmatter}
         contributors={contributors}
+        layout="tutorial"
       />
       <I18nProvider locale={locale} messages={messages}>
         <TutorialLayout

@@ -29,13 +29,13 @@ lang: zh
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_节点即服务 (Node-as-a-Service)。_**
+**All That Node -** **_节点即服务。_**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [文档](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs 提供的 Blast -** **_用于以太坊主网和测试网的去中心化 API。_**
+**Bware Labs 提供的 Blast -** **_用于以太坊主网和测试网的去中心化应用程序编程接口 (API)。_**
 
 - [blastapi.io](https://blastapi.io/)
 - [文档](https://docs.blastapi.io)
@@ -58,7 +58,7 @@ lang: zh
 **Blockscout - 开源区块浏览器**
 - [文档](https://docs.blockscout.com/)
 
-**GetBlock -** **_用于 Web3 开发的区块链即服务 (Blockchain-as-a-service)_**
+**GetBlock-** **_用于 Web3 开发的区块链即服务_**
 
 - [GetBlock.io](https://getblock.io/)
 - [文档](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ lang: zh
 - [文档](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _高性价比的 EVM JSON-RPC 提供商_**
+**Node RPC - _高性价比的以太坊虚拟机 (EVM) JSON-RPC 提供商_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [文档](https://docs.noderpc.xyz/node-rpc)
@@ -91,7 +91,13 @@ lang: zh
 - [文档](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_以速度为导向的以太坊节点，提供 JSON-RPC/WebSockets API。_**
+**SolidRPC -** **_具有全节点、归档节点和无密钥公共访问权限的 EVM JSON-RPC 基础设施。_**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [文档](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
+**Zmok -** **_以速度为导向的以太坊节点，作为 JSON-RPC/WebSockets API。_**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -100,7 +106,13 @@ lang: zh
 
 ### 开发工具 {#development-tools}
 
-**ethers-kt -** **_用于基于 EVM 的区块链的异步、高性能 Kotlin/Java/Android 库。_**
+**eth.zig -** **_用于以太坊的 Zig 库，具有编译时应用程序二进制接口 (ABI) 编码和合约绑定。_**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [文档](https://ethzig.org)
+- [示例](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_用于基于以太坊虚拟机 (EVM) 的区块链的异步、高性能 Kotlin/Java/Android 库。_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [示例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -112,11 +124,11 @@ lang: zh
 - [文档](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-**Python 工具 -** **_通过 Python 进行以太坊交互的各种库。_**
+**Python 工具 -** **_通过 Python 与以太坊交互的各种库。_**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [Web3.py GitHub](https://github.com/ethereum/web3.py)
-- [Web3.py 聊天](https://gitter.im/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.py 聊天](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_终极区块链开发平台。_**
 
@@ -125,7 +137,7 @@ lang: zh
 - [文档](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_用于以太坊的 Java/Android/Kotlin/Scala 集成库。_**
+**web3j -** **_用于以太坊的 Java/Android/Kotlin/Scala 集成库。_**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [文档](https://docs.web3j.io/)

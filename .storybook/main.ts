@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     // Recursive everywhere: a story nested a directory deeper than expected
     // would otherwise never load, with no error to say so.
     "../src/components/**/*.stories.{ts,tsx}",
+    "../src/components/**/*.mdx",
     "../src/layouts/**/*.stories.{ts,tsx}",
     "../src/styles/**/*.stories.{ts,tsx}",
     "../app/**/*.stories.{ts,tsx}",
@@ -32,6 +33,10 @@ const config: StorybookConfig = {
     { from: "../public/content", to: "/content" },
     { from: "../public/audio", to: "/audio" },
   ],
+
+  // next >=16.4 picocolors reads globalThis.process.env unguarded at import time.
+  previewHead: (head) =>
+    `${head}<script>globalThis.process ??= { env: {} }</script>`,
 
   framework: {
     name: "@storybook/nextjs",
@@ -88,6 +93,20 @@ const config: StorybookConfig = {
       test: /\.all-contributorsrc$/,
       type: "json",
     })
+
+    // The next/cache mock reaches next's render-result, which lazily requires node:stream.
+    config.plugins = [
+      ...(config.plugins || []),
+      {
+        apply: (compiler) =>
+          new compiler.webpack.NormalModuleReplacementPlugin(
+            /^node:stream$/,
+            (resource) => {
+              resource.request = "stream"
+            }
+          ).apply(compiler),
+      },
+    ]
 
     return config
   },

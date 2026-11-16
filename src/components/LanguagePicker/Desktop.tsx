@@ -58,7 +58,6 @@ const DesktopLanguagePicker = ({
           className="max-h-[calc(100vh-12rem)]"
           languages={languages}
           onSelect={onClose}
-          onNoResultsClose={onClose}
         />
       </PopoverContent>
     </Popover>

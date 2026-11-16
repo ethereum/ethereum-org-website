@@ -703,8 +703,7 @@ Im Allgemeinen ist es besser, wenn die Verarbeitung entweder in TypeScript oder 
 
 Dennoch [flachen wir die Karte in Zokrates ab](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), obwohl wir es in TypeScript hätten tun können. Der Grund dafür ist, dass die anderen Optionen meiner Meinung nach schlechter sind.
 
-- Dem Zokrates-Code ein eindimensionales Array von Booleschen Werten zur Verfügung stellen und einen Ausdruck wie `x*(height+2)
-+y` verwenden, um die zweidimensionale Karte zu erhalten. Dies würde [den Code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) etwas komplizierter machen, also habe ich entschieden, dass der Leistungsgewinn für ein Tutorial nicht lohnenswert ist.
+- Dem Zokrates-Code ein eindimensionales Array von Booleschen Werten zur Verfügung stellen und einen Ausdruck wie `x*(height+2)+y` verwenden, um die zweidimensionale Karte zu erhalten. Dies würde [den Code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) etwas komplizierter machen, also habe ich entschieden, dass der Leistungsgewinn für ein Tutorial nicht lohnenswert ist.
 
 - Zokrates sowohl das eindimensionale als auch das zweidimensionale Array senden. Diese Lösung bringt uns jedoch nichts. Der Zokrates-Code müsste überprüfen, ob das bereitgestellte eindimensionale Array wirklich die korrekte Darstellung des zweidimensionalen Arrays ist. Es gäbe also keinen Leistungsgewinn.
 

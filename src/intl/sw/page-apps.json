@@ -58,18 +58,11 @@
   "page-apps-filter-by": "Chuja kwa",
   "page-apps-filter-all": "Zote",
   "page-apps-showing": "Inaonyesha",
-  "page-apps-visit-app": "Tembelea {appName}",
-  "page-apps-see-next": "Tazama inayofuata",
-  "page-apps-info-title": "Maelezo",
   "page-apps-info-founded": "Ilianzishwa",
   "page-apps-info-creator": "Muundaji",
-  "page-apps-info-last-updated": "Ilisasishwa mwisho",
-  "page-apps-gallery-title": "Matunzio",
-  "page-apps-gallery-screenshot-alt": "Picha ya skrini {index} ya {appName} inayoonyesha kiolesura cha programu tumizi",
-  "page-apps-gallery-modal-title": "Picha za Skrini za {appName}",
+  "page-apps-info-languages": "Lugha",
+  "page-apps-info-listing-reviewed": "Uorodheshaji umekaguliwa",
+  "page-apps-info-listing-reviewed-tooltip": "Wakati maelezo kuhusu programu tumizi hii kwenye ethereum.org yalipokaguliwa mara ya mwisho. Haionyeshi ni lini programu tumizi yenyewe ilibadilishwa mara ya mwisho.",
   "page-apps-more-apps-like-this": "Programu tumizi zaidi kama hii",
-  "page-apps-by-company": "na {company}",
-  "page-apps-today": "Leo",
-  "page-apps-one-day-ago": "Siku 1 iliyopita",
-  "page-apps-days-ago": "Siku {days} zilizopita"
+  "page-apps-detail-meta-title": "Programu Tumizi za Ethereum - {name}"
 }

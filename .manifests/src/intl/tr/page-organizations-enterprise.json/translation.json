@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "locale": "tr",
+  "translatedAt": "2026-10-14T17:37:35.590Z",
+  "englishManifestHash": "7067fb1aa602",
+  "placeholderOrder": [
+    "ICU-VARIABLE-0",
+    "ICU-VARIABLE-1",
+    "ICU-VARIABLE-2",
+    "ICU-VARIABLE-3",
+    "ICU-VARIABLE-4"
+  ],
+  "placeholderMap": {
+    "ICU-VARIABLE-0": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{years, plural, one {{count} year} other {{count} years}}"
+      }
+    },
+    "ICU-VARIABLE-1": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{years, plural, one {{count} year} other {{count} years}}"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{years, plural, one {{count} year} other {{count} years}}"
+      }
+    },
+    "ICU-VARIABLE-3": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{multiplier}"
+      }
+    },
+    "ICU-VARIABLE-4": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{years, plural, one {{count} year} other {{count} years}}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-10-14T17:37:35.590Z",
+      "status": "success"
+    }
+  }
+}

@@ -14,7 +14,7 @@ lang: zh
 
 ## 公共网络 {#public-networks}
 
-世界上任何有互联网连接的人都可以访问公共网络。任何人都可以在公共区块链上读取或创建交易，并验证正在执行的交易。对等节点之间的共识决定了交易的包含和网络的状态。
+世界上任何有互联网连接的人都可以访问公共网络。任何人都可以在公共区块链上读取或创建交易，并验证正在执行的交易。节点之间的共识决定了交易的包含以及网络的状态。
 
 ### 以太坊主网 {#ethereum-mainnet}
 
@@ -24,13 +24,13 @@ lang: zh
 
 ### 以太坊测试网 {#ethereum-testnets}
 
-除了主网之外，还有公共测试网。这些是协议开发者或智能合约开发者使用的网络，用于在部署到主网之前，在类似生产的环境中测试协议升级以及潜在的智能合约。可以将其视为生产服务器与预发布服务器的类比。
+除了主网之外，还有公共测试网。这些网络由协议开发者或智能合约开发者使用，在部署到主网之前，在类似生产的环境中测试协议升级以及潜在的智能合约。可以将其视为生产服务器与预发布服务器的类比。
 
 在部署到主网之前，你应该在测试网上测试你编写的任何合约代码。在与现有智能合约集成的去中心化应用 (dapp) 中，大多数项目都在测试网上部署了副本。
 
 大多数测试网最初使用的是许可型权威证明共识机制。这意味着选择少数节点来验证交易并创建新区块——在此过程中质押它们的身份。或者，一些测试网采用开放的权益证明 (PoS) 共识机制，每个人都可以像在以太坊主网一样测试运行验证者。
 
-测试网上的 ETH 本应没有实际价值；然而，对于某些变得稀缺或难以获得的测试网 ETH，已经出现了市场。由于你需要 ETH 才能真正与以太坊交互（即使在测试网上），大多数人从水龙头免费获取测试网 ETH。大多数水龙头都是 Web 应用，你可以在其中输入一个地址，请求将 ETH 发送到该地址。
+测试网上的 ETH 本应没有实际价值；然而，对于某些变得稀缺或难以获得的测试网 ETH，已经出现了市场。由于你需要 ETH 才能实际与以太坊交互（即使在测试网上），大多数人从水龙头免费获取测试网 ETH。大多数水龙头都是 Web 应用，你可以在其中输入一个地址，请求将 ETH 发送到该地址。
 
 #### 我应该使用哪个测试网？ {#which-testnet-should-i-use}
 
@@ -41,6 +41,7 @@ lang: zh
 **Sepolia 是推荐用于应用开发的默认测试网**。Sepolia 网络使用由客户端和测试团队控制的许可型验证者集。
 
 ##### 资源
+
 - [网站](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -48,14 +49,15 @@ lang: zh
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### 水龙头
+
 - [Alchemy Sepolia 水龙头](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Chain Platform Sepolia 水龙头](https://faucet.chainplatform.co/faucets/ethereum-sepolia/)
 - [Chainstack Sepolia 水龙头](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- [以太坊生态系统水龙头](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 - [ethfaucet.com Sepolia 水龙头](https://ethfaucet.com/networks/ethereum)
 - [Google Cloud Web3 Sepolia 水龙头](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Infura Sepolia 水龙头](https://www.infura.io/faucet)
+- [OpenFaucet.org Sepolia 水龙头](https://openfaucet.org/ethereum-sepolia)
 - [PoW 水龙头](https://sepolia-faucet.pk910.de/)
 - [QuickNode Sepolia 水龙头](https://faucet.quicknode.com/ethereum/sepolia)
 
@@ -80,11 +82,12 @@ Hoodi 是一个用于测试验证和质押的测试网。Hoodi 网络向希望�
 
 - [Chain Platform Hoodi 水龙头](https://faucet.chainplatform.co/faucets/ethereum-hoodi/)
 - [Hoodi 水龙头](https://hoodi.ethpandaops.io/)
+- [OpenFaucet.org Hoodi 水龙头](https://openfaucet.org/ethereum-hoodi)
 - [PoW 水龙头](https://hoodi-faucet.pk910.de/)
 
 #### Ephemery {#ephemery}
 
-Ephemery 是一种独特的测试网，每个月都会完全重置。执行和共识状态每 28 天恢复到创世状态，这意味着在测试网上发生的任何事情都是短暂的。这使其成为短期测试、快速节点引导和不需要持久性的“hello world”类应用的理想选择。
+Ephemery 是一种独特的测试网，每个月都会完全重置。执行和共识状态每 28 天恢复到创世状态，这意味着测试网上发生的任何事情都是短暂的。这使其成为短期测试、快速节点引导和不需要持久性的“hello world”类应用的理想选择。
 
 - 始终保持全新状态，适合验证者和应用的短期测试
 - 仅包含基本合约集
@@ -132,6 +135,7 @@ Holesky 测试网已于 2025 年 9 月弃用。质押运营商和基础设施提
 - [Alchemy Arbitrum Sepolia 水龙头](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [切恩林克 Arbitrum Sepolia 水龙头](https://faucets.chain.link/arbitrum-sepolia)
 - [ethfaucet.com Arbitrum Sepolia 水龙头](https://ethfaucet.com/networks/arbitrum)
+- [OpenFaucet.org Arbitrum Sepolia 水龙头](https://openfaucet.org/arbitrum-sepolia)
 - [QuickNode Arbitrum Sepolia 水龙头](https://faucet.quicknode.com/arbitrum/sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
@@ -148,7 +152,8 @@ Holesky 测试网已于 2025 年 9 月弃用。质押运营商和基础设施提
 - [Alchemy 水龙头](https://www.alchemy.com/faucets/optimism-sepolia)
 - [切恩林克水龙头](https://faucets.chain.link/optimism-sepolia)
 - [ethfaucet.com Optimism Sepolia 水龙头](https://ethfaucet.com/networks/optimism)
-- [测试网水龙头](https://docs.optimism.io/builders/tools/build/faucets)
+- [OpenFaucet.org Optimism Sepolia 水龙头](https://openfaucet.org/optimism-sepolia)
+- [测试网水龙头](https://docs.optimism.io/app-developers/tools/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
@@ -170,7 +175,7 @@ Holesky 测试网已于 2025 年 9 月弃用。质押运营商和基础设施提
 
 ### 开发网络 {#development-networks}
 
-要开发以太坊应用，你会希望在部署之前在私有网络上运行它，以查看其工作情况。类似于你在计算机上为 Web 开发创建本地服务器，你可以创建一个本地区块链实例来测试你的去中心化应用 (dapp)。这允许比公共测试网更快的迭代。
+要开发以太坊应用，你会希望在部署之前在私有网络上运行它，以查看其工作情况。类似于你在计算机上创建本地服务器进行 Web 开发，你可以创建一个本地区块链实例来测试你的去中心化应用 (dapp)。这允许比公共测试网快得多的迭代。
 
 有专门的项目和工具来协助完成这项工作。了解有关[开发网络](/developers/docs/development-networks/)的更多信息。
 
@@ -178,7 +183,7 @@ Holesky 测试网已于 2025 年 9 月弃用。质押运营商和基础设施提
 
 共识过程由一组预定义的受信任节点控制。例如，由已知学术机构组成的私有网络，每个机构管理一个节点，并且区块由网络内达到阈值数量的签名者进行验证。
 
-如果公共以太坊网络就像公共互联网，那么联盟网络就像私有内联网。
+如果公共以太坊网络就像公共互联网，那么联盟网络就像私有内网。
 
 ## <Emoji text="🚉" /> 为什么以太坊测试网以地铁站命名？ {#why-naming}
 
@@ -201,11 +206,11 @@ Holesky 测试网已于 2025 年 9 月弃用。质押运营商和基础设施提
 - **Holesky** _（已弃用）_ - 以布拉格的 Holešovice 站命名。用于验证者测试；于 2025 年弃用。
 - **Kiln**、**Zhejiang**、**Shandong**、**Prater**、**Pyrmont**、**Olympic** _（均已弃用）_ 和 **Ephemery** - 专为合并、上海等升级模拟或验证者实验而构建。有些名称是区域性或主题性的，而不是基于地铁的。
 
-使用地铁站名称有助于开发者快速识别和记住测试网，而无需依赖数字链 ID。这也反映了以太坊的文化：实用、全球化和以人为本。
+使用地铁站名称有助于开发者快速识别和记住测试网，而无需依赖数字链 ID。这也反映了以太坊的文化：务实、全球化和以人为本。
 
 ## 相关工具 {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _EVM 网络列表，用于将钱包和提供商连接到适当的链 ID 和网络 ID_
+- [Chainlist](https://chainlist.org/) _以太坊虚拟机 (EVM) 网络列表，用于将钱包和提供商连接到适当的链 ID 和网络 ID_
 - [基于 EVM 的链](https://github.com/ethereum-lists/chains) _为 Chainlist 提供支持的链元数据的 GitHub 仓库_
 
 ## 延伸阅读 {#further-reading}

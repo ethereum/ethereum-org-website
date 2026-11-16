@@ -1,6 +1,6 @@
 ---
 title: Interagindo com contratos inteligentes
-description: Aprenda como ler e escrever em contratos inteligentes que já estão implantados na Ethereum.
+description: "Aprenda como ler e escrever em contratos inteligentes que já estão implantados na Ethereum."
 lang: pt-br
 ---
 
@@ -82,7 +82,7 @@ Os desenvolvedores geralmente usam uma biblioteca JavaScript/TypeScript para int
 
 - **[ethers.js](https://docs.ethers.org/)** - Também funciona em Node.js para scripts do lado do servidor e bots
 - **[Web3.py](https://web3py.readthedocs.io/)** - Biblioteca Python para interação com a Ethereum
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Biblioteca oficial em Go da equipe do Geth
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Biblioteca oficial em Go da equipe do Geth
 
 ### Exemplo: lendo o saldo de um token com Viem {#example-viem}
 

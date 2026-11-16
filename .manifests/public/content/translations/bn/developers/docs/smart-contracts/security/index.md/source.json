@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/security/index.md",
-  "generatedAt": "2026-06-19T19:19:49.763Z",
-  "rootHash": "28d8e4a08705",
+  "generatedAt": "2026-10-14T17:47:33.153Z",
+  "rootHash": "b217db3738e7",
   "tree": {
     "contentHash": "07c19dfd6f04",
-    "anchorHash": "81fd2955a88d",
+    "anchorHash": "2b60bcfd8bfb",
     "children": {
       "frontmatter:title": {
         "contentHash": "ed145638d4ff",
@@ -86,7 +86,7 @@
       },
       "smart-contract-security-guidelines": {
         "contentHash": "56cea14a9c81",
-        "anchorHash": "79d10dc2ff7d",
+        "anchorHash": "a2fda03a54c1",
         "labelHash": "5642ed2a3ca9",
         "children": {
           "_label": {
@@ -383,7 +383,7 @@
           },
           "test-smart-contracts-and-verify-code-correctness": {
             "contentHash": "e029425127cc",
-            "anchorHash": "a2a21078e701",
+            "anchorHash": "a4fd61a75d11",
             "labelHash": "18f4f0fcb2e5",
             "children": {
               "_label": {
@@ -404,7 +404,7 @@
               },
               "link:1": {
                 "contentHash": "36ec71fee0ee",
-                "anchorHash": "7de412322861"
+                "anchorHash": "d9e5dde9825c"
               },
               "prose:9": {
                 "contentHash": "bccea5792e18",
@@ -2308,5 +2308,5 @@
       "smart-contract-security-resources-for-developers"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
 }

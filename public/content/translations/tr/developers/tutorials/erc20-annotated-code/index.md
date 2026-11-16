@@ -18,7 +18,7 @@ Token'ları ile çalışan likidite havuzları ve cüzdanlar gibi araçlar yazma
 [arayüz tanımını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) analiz edeceğiz.
 
 Bu, açıklamalı bir kaynak kodudur. Eğer ERC-20 uygulamak istiyorsanız,
-[bu öğreticiyi okuyun](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+[bu öğreticiyi okuyun](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## Arayüz {#the-interface}
 

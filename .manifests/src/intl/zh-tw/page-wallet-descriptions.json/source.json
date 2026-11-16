@@ -1,0 +1,245 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-wallet-descriptions.json",
+  "generatedAt": "2026-10-21T21:41:53.425Z",
+  "rootHash": "82d8c91776b6",
+  "tree": {
+    "contentHash": "ad0b0e6624c9",
+    "anchorHash": "a9ad421fb0b2",
+    "children": {
+      "wallet-keystone-description": {
+        "contentHash": "ef8f4a70fe39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-railway-wallet-description": {
+        "contentHash": "910a6dd061a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-ready-wallet-description": {
+        "contentHash": "bc7c8a18c1fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-coinbase-wallet-description": {
+        "contentHash": "726df3c0c508",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-frame-description": {
+        "contentHash": "5b4cf0955dc0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-metamask-description": {
+        "contentHash": "32b3c944c21e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-safe-description": {
+        "contentHash": "3c5aa9fa6053",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-coin-wallet-description": {
+        "contentHash": "6d2ff2486cb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-ambire-description": {
+        "contentHash": "cbaccf4472ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-imtoken-description": {
+        "contentHash": "918ed68213d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-iofinnet-mpc-wallet-for-business-description": {
+        "contentHash": "3b1aca20327f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-1inch-wallet-description": {
+        "contentHash": "788bd63302a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-foxwallet-description": {
+        "contentHash": "ff1041174ae0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-pillarx-description": {
+        "contentHash": "18c6ea9bb974",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-mew-wallet-description": {
+        "contentHash": "be798c7e8e39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-unstoppable-wallet-description": {
+        "contentHash": "2b710e6a5c24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-alphawallet-description": {
+        "contentHash": "8ee1836a2dac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-bridge-wallet-description": {
+        "contentHash": "7021fa15358f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-tokenpocket-description": {
+        "contentHash": "943a5d16daa0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-rainbow-description": {
+        "contentHash": "f7df00a893ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-trezor-description": {
+        "contentHash": "53a56f8aec2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-ledger-description": {
+        "contentHash": "49411af37b20",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-exodus-description": {
+        "contentHash": "1ae21e7ccb57",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-rabby-wallet-description": {
+        "contentHash": "3d5f0f64626c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-zerion-wallet-description": {
+        "contentHash": "86d0e29a733f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-enkrypt-description": {
+        "contentHash": "941103a26d1f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-gridplus-lattice1-description": {
+        "contentHash": "cbb64ff897fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-bitget-wallet-description": {
+        "contentHash": "c7ada606982b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-onekey-description": {
+        "contentHash": "1b2e9f6f4424",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-taho-description": {
+        "contentHash": "909dc7d581a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-phantom-description": {
+        "contentHash": "651bcdf143ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-trust-wallet-description": {
+        "contentHash": "a22216f10ce9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-shapeshift-description": {
+        "contentHash": "093729e45c9f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-gem-wallet-description": {
+        "contentHash": "bfa1a21102c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-cypherock-x1-description": {
+        "contentHash": "a4739cf4860e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-cake-wallet-description": {
+        "contentHash": "85116129fe1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-clear-wallet-description": {
+        "contentHash": "999af30524d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-braavos-description": {
+        "contentHash": "8ee5ba84faa0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-coin98-super-wallet-description": {
+        "contentHash": "3d1864ded34f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-burner-description": {
+        "contentHash": "671c42fdfa01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-edge-wallet-description": {
+        "contentHash": "58afb1d25b1e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-nufi-description": {
+        "contentHash": "fa6f72472af6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-clave-description": {
+        "contentHash": "d8ee3264db30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-uniswap-wallet-description": {
+        "contentHash": "2d903620ff13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-imkey-pro-hardware-wallet-description": {
+        "contentHash": "3a53bd79dd44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallet-infinex-wallet-crypto-superapp-description": {
+        "contentHash": "1a70483039ed",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "wallet-keystone-description",
+      "wallet-railway-wallet-description",
+      "wallet-ready-wallet-description",
+      "wallet-coinbase-wallet-description",
+      "wallet-frame-description",
+      "wallet-metamask-description",
+      "wallet-safe-description",
+      "wallet-coin-wallet-description",
+      "wallet-ambire-description",
+      "wallet-imtoken-description",
+      "wallet-iofinnet-mpc-wallet-for-business-description",
+      "wallet-1inch-wallet-description",
+      "wallet-foxwallet-description",
+      "wallet-pillarx-description",
+      "wallet-mew-wallet-description",
+      "wallet-unstoppable-wallet-description",
+      "wallet-alphawallet-description",
+      "wallet-bridge-wallet-description",
+      "wallet-tokenpocket-description",
+      "wallet-rainbow-description",
+      "wallet-trezor-description",
+      "wallet-ledger-description",
+      "wallet-exodus-description",
+      "wallet-rabby-wallet-description",
+      "wallet-zerion-wallet-description",
+      "wallet-enkrypt-description",
+      "wallet-gridplus-lattice1-description",
+      "wallet-bitget-wallet-description",
+      "wallet-onekey-description",
+      "wallet-taho-description",
+      "wallet-phantom-description",
+      "wallet-trust-wallet-description",
+      "wallet-shapeshift-description",
+      "wallet-gem-wallet-description",
+      "wallet-cypherock-x1-description",
+      "wallet-cake-wallet-description",
+      "wallet-clear-wallet-description",
+      "wallet-braavos-description",
+      "wallet-coin98-super-wallet-description",
+      "wallet-burner-description",
+      "wallet-edge-wallet-description",
+      "wallet-nufi-description",
+      "wallet-clave-description",
+      "wallet-uniswap-wallet-description",
+      "wallet-imkey-pro-hardware-wallet-description",
+      "wallet-infinex-wallet-crypto-superapp-description"
+    ]
+  },
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
+}

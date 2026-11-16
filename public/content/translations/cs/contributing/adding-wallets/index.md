@@ -1,6 +1,6 @@
 ---
-title: Přidávání peněženek
-description: Zásady, kterými se řídíme při přidávání peněženky na ethereum.org
+title: "Přidávání peněženek"
+description: "Zásady, kterými se řídíme při přidávání peněženky na ethereum.org"
 lang: cs
 ---
 
@@ -58,7 +58,7 @@ Peněženky se v Ethereu rychle mění. Snažili jsme se vytvořit spravedlivý 
 
 ## Přidání peněženky {#adding-a-wallet}
 
-Pokud chcete přidat peněženku na ethereum.org, vytvořte issue na GitHubu.
+Pokud chcete přidat peněženku na ethereum.org, vytvořte issue na GitHubu. Popis peněženky, který v issue uvedete, se zobrazí na stránce peněženky, proto jej omezte na jednu nebo dvě věcné věty.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Vytvořit issue

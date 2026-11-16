@@ -99,3 +99,42 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - Acronym over-expansion (#80) regressed correct pre-PR text: API, DAO, DeSci, ENS, L2 `(l2)`, dapp, L1 across open-access, privacy, contributing, zk-rollups, glamsterdam, quantum-resistance.
 - "both" dropped (#82); `reclamo` for no-logs claim; `en absoluto` misuse; tú/ustedes mix in privacy-fixes video L24/26.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `small-business` `compare-privacy` `direcciones ocultas` -> `direcciones sigilosas` (glossary).
+
+**Open (warnings):**
+
+- `Desarrollado por Ethereum` for Powered by; `Tesorerías` for treasuries; public-sector use-cases on tú vs usted elsewhere.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.8/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:102: ETHGlossary deviation. The `layer-2-l2` entry (high confidence, no script_rule) is `capa 2 (l2)`, with a note to keep it lowercase in body text. This PR changed the old `(l2)` to `(L2)`. The rule is " (`[capa 2 (L2)](/layer-2/)` -> `[capa 2 (l2)](/layer-2/)`)
+- 8 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is accurate and complies with the glossary across a large rewrite of prediction-markets and the plasma tutorial. The fixes needed are three English tag labels in founders and one L2 casing deviation. The rest are tú/usted and terminology consistency issues for a native reviewer.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: `plugin` vs `complemento` differs between files; tú/usted differs between tutorials (pre-existing).

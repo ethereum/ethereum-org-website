@@ -173,7 +173,7 @@ function App() {
 
 使用 [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) 获取与当前连接相关的信息，例如地址和 `chainId`。
 
-按照惯例，在 React 中名为 `use...` 的函数是[钩子 (hooks)](https://www.w3schools.com/react/react_hooks.asp)。这些函数不仅向组件返回数据；它们还确保在数据更改时重新渲染组件（再次执行组件函数，其输出替换 HTML 中的前一个输出）。
+按照惯例，在 React 中，名为 `use...` 的函数是 [Hook](https://www.w3schools.com/react/react_hooks.asp)。这些函数不仅向组件返回数据；它们还确保在数据更改时重新渲染组件（再次执行组件函数，其输出将替换 HTML 中的前一个输出）。
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -185,19 +185,19 @@ function App() {
   const { disconnect } = useDisconnect()
 ```
 
-[这个钩子](https://wagmi.sh/react/api/hooks/useDisconnect)为我们提供了断开钱包连接的函数。
+[这个 Hook](https://wagmi.sh/react/api/hooks/useDisconnect) 为我们提供了断开钱包连接的函数。
 
 ```tsx
   const { switchChain } = useSwitchChain()
 ```
 
-[这个钩子](https://wagmi.sh/react/api/hooks/useSwitchChain)让我们能够切换链。
+[这个 Hook](https://wagmi.sh/react/api/hooks/useSwitchChain) 让我们能够切换链。
 
 ```tsx
   useEffect(() => {
 ```
 
-React 钩子 [`useEffect`](https://react.dev/reference/react/useEffect) 允许你在变量值更改时运行一个函数，以同步外部系统。
+React Hook [`useEffect`](https://react.dev/reference/react/useEffect) 让你可以在变量值更改时运行函数，以同步外部系统。
 
 ```tsx
     if (connection.status === 'connected' &&
@@ -207,20 +207,20 @@ React 钩子 [`useEffect`](https://react.dev/reference/react/useEffect) 允许�
     }
 ```
 
-如果我们已连接，但未连接到 Sepolia 区块链，则切换到 Sepolia。
+如果我们已连接，但未连接到 Sepolia 区块链，请切换到 Sepolia。
 
 ```tsx
   }, [connection.status, connection.chainId])
 ```
 
-每次连接状态或连接 chainId 更改时，重新运行该函数。
+每次连接状态或连接的 chainId 更改时，重新运行该函数。
 
 ```tsx
   return (
     <>
 ```
 
-React 组件的 JSX <strong>必须</strong>返回单个 HTML 组件。当我们有多个组件并且不需要容器来包装它们时，我们使用一个空组件 (`<> ... </>`) 将它们组合成一个组件。
+React 组件的 JSX <em>必须</em>返回单个 HTML 组件。当我们有多个组件并且不需要容器来包装它们时，我们使用一个空组件（`<> ... </>`）将它们组合成一个组件。
 
 ```tsx
       <h2>Connection</h2>
@@ -234,13 +234,13 @@ React 组件的 JSX <strong>必须</strong>返回单个 HTML 组件。当我们�
 </div>
 ```
 
-提供有关当前连接的信息。在 JSX 中，`{<expression>}` 表示将表达式作为 JavaScript 进行求值。
+提供有关当前连接的信息。在 JSX 中，`{<expression>}` 表示将表达式作为 JavaScript 进行计算。
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-语法 `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`”。
+语法 `{<condition> && <value>}` 的意思是“如果条件为 `true`，则计算为该值；如果不是，则计算为 `false`”。
 
 这是在 JSX 中放置 if 语句的标准方法。
 
@@ -250,7 +250,7 @@ React 组件的 JSX <strong>必须</strong>返回单个 HTML 组件。当我们�
           <hr />
 ```
 
-JSX 遵循 XML 标准，该标准比 HTML 更严格。如果标签没有相应的结束标签，它**必须**在末尾有一个斜杠 (`/`) 来终止它。
+JSX 遵循 XML 标准，该标准比 HTML 更严格。如果标签没有相应的结束标签，则它**必须**在末尾有一个斜杠（`/`）来终止它。
 
 这里我们有两个这样的标签，`<Greeter />`（它实际上包含与合约通信的 HTML 代码）和[表示水平线的 `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)。
 
@@ -269,7 +269,7 @@ JSX 遵循 XML 标准，该标准比 HTML 更严格。如果标签没有相应�
       {connection.status !== 'connected' && (
 ```
 
-如果我们**未**连接，则显示连接到钱包的必要选项。
+如果我们**未**连接，则显示连接到钱包所需的选项。
 
 ```tsx
         <div>
@@ -284,7 +284,7 @@ JSX 遵循 XML 标准，该标准比 HTML 更严格。如果标签没有相应�
               key={connector.uid}
 ```
 
-在 JSX 中，“兄弟”标签（从同一个父级派生的标签）必须具有不同的标识符。
+在 JSX 中，“兄弟”标签（源自同一父级的标签）必须具有不同的标识符。
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -305,7 +305,7 @@ JSX 遵循 XML 标准，该标准比 HTML 更严格。如果标签没有相应�
       )}
 ```
 
-提供其他信息。表达式语法 `<variable>?.<field>` 告诉 JavaScript，如果定义了该变量，则求值为该字段。如果未定义该变量，则此表达式的求值结果为 `undefined`。
+提供其他信息。表达式语法 `<variable>?.<field>` 告诉 JavaScript，如果定义了该变量，则计算为该字段。如果未定义该变量，则此表达式的计算结果为 `undefined`。
 
 当没有错误时，表达式 `error.message` 会引发异常。使用 `error?.message` 可以让我们避免这个问题。
 

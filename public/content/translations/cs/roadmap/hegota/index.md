@@ -34,7 +34,9 @@ Protože si účet volí svá vlastní pravidla, může si také zvolit schéma 
 
 ## Co dalšího je v Hegotá {#scope}
 
-Zatím nebylo rozhodnuto. FOCIL a rámcové transakce jsou dvě dosud naplánované změny; byly navrženy desítky dalších a žádná z nich není definitivně schválena. Tato stránka zůstane stručná, dokud se rozsah neustálí – pro aktuální stav diskuse se podívejte na zdroje níže.
+Zatím nebylo rozhodnuto. FOCIL a rámcové transakce jsou zatím jediné dvě naplánované změny; byly navrženy desítky dalších a žádná z nich není definitivně schválena. Tato stránka zůstane stručná, dokud se rozsah neustálí — pro aktuální stav diskuse se podívejte na zdroje níže.
+
+Mezi návrhy, o kterých se v současnosti uvažuje, že budou zahrnuty, patří EIP-3298, EIP-7668, EIP-7906, EIP-7979, EIP-8015, EIP-8131, EIP-8163, EIP-8198, EIP-8250, EIP-8253, EIP-8272, EIP-8279 a EIP-8365. To, že se o nich uvažuje, znamená, že klientské týmy návrh vyhodnocují, nikoli že bude v Hegotá nasazen.
 
 ## Další čtení {#further-reading}
 

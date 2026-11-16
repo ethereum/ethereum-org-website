@@ -60,6 +60,10 @@ const WalletsPageBody = async ({
     namespace: "page-wallets-find-wallet",
   })
   const tCommon = await getTranslations({ locale, namespace: "common" })
+  const tItem = await getTranslations({
+    locale,
+    namespace: "component-catalog-item",
+  })
 
   const catalogLabels: WalletCatalogLabels = {
     catalog: {
@@ -97,7 +101,11 @@ const WalletsPageBody = async ({
       fees: t("page-find-wallet-fee-row-label"),
       feesTooltip: t("page-find-wallet-fee-row-tooltip"),
       fullDetails: t("page-find-wallet-full-details"),
-      getWallet: t.raw("page-find-wallet-get-wallet"),
+      visitWebsite: tItem("catalog-item-visit-website"),
+      links: {
+        link: tItem.raw("catalog-item-link-label"),
+        sourceCode: tItem("catalog-item-source-code"),
+      },
       crops: CROPS_PROPERTIES.map(({ key, labelKey, descKey }) => ({
         key,
         label: t(labelKey),

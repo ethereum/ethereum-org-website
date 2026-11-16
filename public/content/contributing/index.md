@@ -29,6 +29,7 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
 - [Suggest a video](/contributing/adding-videos/) – Suggest an educational video for the video gallery
+- [Add a glossary term](/contributing/adding-glossary-terms/) – Add or update a term in the [Ethereum glossary](/glossary/)
 
 **Feature ideas**
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Let us know about any ideas you have for a new feature or design
@@ -101,17 +102,7 @@ If your contribution gets merged into ethereum.org, you will have a chance to cl
 
 You should only use self-custody wallets to claim OATs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your OATs.
 
-## Claim your GitPOAP {#claim-gitpoap}
-
-GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
-
-
-### How to claim {#how-to-claim-2}
-
-1. Visit [GitPOAP](https://www.gitpoap.io).
-2. Connect with your wallet or even with your email through sign in option.
-3. Search for your GitHub username, ETH address, ENS names or any GitPOAP to check if you're eligible.
-4. If your GitHub account is eligible, then you would be able to mint a GitPOAP!
+<LinkWithArrow href="/collectibles/">View your ethereum.org collectibles</LinkWithArrow>
 
 ## Contributors {#contributors}
 

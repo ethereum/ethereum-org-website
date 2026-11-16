@@ -28,20 +28,20 @@ Maboresho haya yanahakikisha Ethereum inasalia kuwa ya haraka, nafuu, na iliyoga
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Kumbuka: Makala haya yanaangazia uteuzi wa Mapendekezo ya Kuboresha Ethereum (EIPs) yaliyopangwa kujumuishwa katika Glamsterdam. Mapendekezo ya ziada yaliyopangwa ambayo yanajaribiwa katika mitandao ya majaribio ya wasanidi (devnets) yanajumuisha EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, na EIP-8282. Upeo umesitishwa lakini bado unaweza kubadilika kabla ya Mtandao Mkuu, kwani EIP kuu bado iko kwenye rasimu. Kwa masasisho ya hivi punde ya hali, tazama [uboreshaji wa Glamsterdam kwenye Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Kumbuka: Makala haya yanaangazia uteuzi wa Mapendekezo ya Kuboresha Ethereum (EIPs) yaliyopangwa kujumuishwa katika Glamsterdam. Mapendekezo ya ziada yaliyopangwa ambayo yanajaribiwa katika mitandao ya majaribio ya wasanidi (devnets) yanajumuisha EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246, na EIP-8282. Upeo umesitishwa lakini bado unaweza kubadilika kabla ya Mtandao Mkuu, kwa kuwa EIP kuu bado iko katika rasimu. Kwa masasisho ya hivi punde ya hali, tazama [uboreshaji wa Glamsterdam kwenye Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Ikiwa unataka kuongeza EIP ambayo inafikiriwa kwa Glamsterdam, lakini haijaongezwa kwenye ukurasa huu bado, [jifunze jinsi ya kuchangia kwenye ethereum.org hapa](/contributing/).
+Ikiwa unataka kuongeza Pendekezo la Kuboresha Ethereum (EIP) ambalo linazingatiwa kwa Glamsterdam, lakini halijaongezwa kwenye ukurasa huu bado, [jifunze jinsi ya kuchangia kwenye ethereum.org hapa](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Uboreshaji wa Glamsterdam unajikita katika malengo makuu matatu:
+Uboreshaji wa Glamsterdam unalenga katika malengo makuu matatu:
 
 - Kuharakisha uchakataji (uchakataji sambamba): Kupanga upya jinsi mtandao unavyorekodi utegemezi wa data, ili uweze kuchakata kwa usalama miamala mingi kwa wakati mmoja badala ya mfululizo wa polepole, wa moja baada ya nyingine.
-- Kupanua uwezo: Kugawanya kazi nzito ya kuunda na kuthibitisha vitalu, kutoa mtandao muda zaidi wa kueneza kiasi kikubwa cha data bila kupunguza kasi.
-- Kuzuia uvimbe wa hifadhidata (uendelevu): Kurekebisha ada za mtandao ili kuonyesha kwa usahihi gharama ya muda mrefu ya maunzi ya kuhifadhi data mpya, kufungulia ongezeko la kikomo cha gesi la baadaye huku kuzuia kushuka kwa utendaji wa maunzi.
+- Kupanua uwezo: Kugawanya kazi nzito ya kuunda na kuthibitisha vitalu, kumpa mtandao muda zaidi wa kueneza kiasi kikubwa cha data bila kupunguza kasi.
+- Kuzuia kujaa kwa hifadhidata (uendelevu): Kurekebisha ada za mtandao ili kuonyesha kwa usahihi gharama ya muda mrefu ya maunzi ya kuhifadhi data mpya, kuondoa vizuizi vya ongezeko la kikomo cha gesi la siku zijazo huku ukizuia kushuka kwa utendaji wa maunzi.
 
-Kwa ufupi, Glamsterdam italeta mabadiliko ya kimuundo ili kuhakikisha kwamba kadiri mtandao unavyoongeza uwezo, unasalia kuwa endelevu na utendaji unabaki kuwa wa juu.
+Kwa ufupi, Glamsterdam italeta mabadiliko ya kimuundo ili kuhakikisha kwamba kadiri mtandao unavyoongeza uwezo, unasalia kuwa endelevu na utendaji unabaki juu.
 
 ## Kuongeza uwezo wa tabaka la 1 (l1) na uchakataji sambamba {#scale-l1}
 

@@ -20,7 +20,7 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 
 ## Các thư viện có sẵn {#available-libraries}
 
-### Cơ sở hạ tầng và dịch vụ nút {#infrastructure-and-node-services}
+### Cơ sở hạ tầng và các dịch vụ nút {#infrastructure-and-node-services}
 
 **Alchemy -** **_Nền tảng phát triển Ethereum._**
 
@@ -29,19 +29,19 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Nút dưới dạng Dịch vụ (Node-as-a-Service)._**
+**All That Node -** **_Nút dưới dạng dịch vụ._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Tài liệu](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Blast bởi Bware Labs -** **_Các API phi tập trung cho Mạng chính Ethereum và các Testnet._**
+**Blast bởi Bware Labs -** **_Các Giao diện Lập trình Ứng dụng (API) phi tập trung cho Mạng chính Ethereum và các testnet._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Tài liệu](https://docs.blastapi.io)
 - [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_Cung cấp các dịch vụ RPC hiệu quả và nhanh chóng hơn_**
+**BlockPi -** **_Cung cấp các dịch vụ RPC nhanh và hiệu quả hơn_**
 
 - [blockpi.io](https://blockpi.io/)
 - [Tài liệu](https://docs.blockpi.io/)
@@ -52,13 +52,13 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Trình khám phá khối và API giao dịch**
+**Etherscan - Trình khám phá khối và các API giao dịch**
 - [Tài liệu](https://docs.etherscan.io/)
 
 **Blockscout - Trình khám phá khối mã nguồn mở**
 - [Tài liệu](https://docs.blockscout.com/)
 
-**GetBlock-** **_Chuỗi khối dưới dạng dịch vụ (Blockchain-as-a-service) cho phát triển Web3_**
+**GetBlock-** **_Chuỗi khối dưới dạng dịch vụ cho phát triển Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Tài liệu](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 - [Tài liệu](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Nhà cung cấp EVM JSON-RPC tiết kiệm chi phí_**
+**Node RPC - _Nhà cung cấp JSON-RPC của Máy ảo Ethereum (EVM) tiết kiệm chi phí_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Tài liệu](https://docs.noderpc.xyz/node-rpc)
@@ -79,7 +79,7 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 - [NOWNodes.io](https://nownodes.io/)
 - [Tài liệu](https://nownodes.gitbook.io/documentation)
 
-**QuickNode -** **_Cơ sở hạ tầng chuỗi khối dưới dạng Dịch vụ._**
+**QuickNode -** **_Cơ sở hạ tầng chuỗi khối dưới dạng dịch vụ._**
 
 - [quicknode.com](https://quicknode.com)
 - [Tài liệu](https://www.quicknode.com/docs/welcome)
@@ -91,6 +91,12 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 - [Tài liệu](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_Cơ sở hạ tầng JSON-RPC của EVM với quyền truy cập công khai không cần khóa, lưu trữ và đầy đủ._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Tài liệu](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_Các nút Ethereum định hướng tốc độ dưới dạng API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
@@ -98,12 +104,18 @@ Các thư viện này trừu tượng hóa phần lớn sự phức tạp khi t�
 - [Tài liệu](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
-### Công cụ phát triển {#development-tools}
+### Các công cụ phát triển {#development-tools}
 
-**ethers-kt -** **_Thư viện Kotlin/Java/Android bất đồng bộ, hiệu suất cao cho các chuỗi khối dựa trên EVM._**
+**eth.zig -** **_Một thư viện Zig cho Ethereum, với mã hóa Giao diện nhị phân ứng dụng (ABI) tại thời điểm biên dịch và các ràng buộc hợp đồng._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Tài liệu](https://ethzig.org)
+- [Các ví dụ](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_Thư viện Kotlin/Java/Android bất đồng bộ, hiệu suất cao cho các chuỗi khối dựa trên Máy ảo Ethereum (EVM)._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
-- [Ví dụ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Các ví dụ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
 **Nethereum -** **_Một thư viện tích hợp .NET mã nguồn mở cho chuỗi khối._**

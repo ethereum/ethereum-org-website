@@ -178,7 +178,7 @@ Wszelki gaz niewykorzystany w transakcji jest zwracany na konto użytkownika.
 
 Gaz jest wymagany dla każdej transakcji, która obejmuje inteligentny kontrakt.
 
-Inteligentne kontrakty mogą również zawierać funkcje znane jako funkcje [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) lub [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), które nie zmieniają stanu kontraktu. W związku z tym wywoływanie tych funkcji z EOA nie będzie wymagało żadnego gazu. Podstawowym wywołaniem RPC dla tego scenariusza jest [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Inteligentne kontrakty mogą również zawierać funkcje znane jako funkcje [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) lub [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), które nie zmieniają stanu kontraktu. W związku z tym wywoływanie tych funkcji z EOA nie będzie wymagało żadnego gazu. Podstawowym wywołaniem RPC dla tego scenariusza jest [`eth_call`](/developers/docs/apis/json-rpc/#eth-call).
 
 W przeciwieństwie do dostępu za pomocą `eth_call`, te funkcje `view` lub `pure` są również powszechnie wywoływane wewnętrznie (tj. z samego kontraktu lub z innego kontraktu), co kosztuje gaz.
 

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-bug-bounty.json",
-  "generatedAt": "2026-09-30T18:06:55.068Z",
-  "rootHash": "5868fd53479c",
+  "generatedAt": "2026-10-21T21:35:43.373Z",
+  "rootHash": "290fab27f6fd",
   "tree": {
-    "contentHash": "17d760889267",
-    "anchorHash": "721e24bc6176",
+    "contentHash": "4f8fbc717e76",
+    "anchorHash": "5427f291b811",
     "children": {
       "fcr-scope": {
         "contentHash": "a0146c54c371",
@@ -110,7 +110,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-client-bugs-desc-2": {
-        "contentHash": "d724b87aaa86",
+        "contentHash": "038ec9150f74",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-clients": {
@@ -713,6 +713,16 @@
         "contentHash": "44eb5559f4e0",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-upgrades-bug-bounty-severity-qualifications-hardware": {
+        "contentHash": "c4e1b5930841",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "37eec3ce0c3e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
       "page-upgrades-bug-bounty-severity-low-title": {
         "contentHash": "8c8b92aefebd",
         "anchorHash": "e3b0c44298fc"
@@ -1060,6 +1070,7 @@
       "bug-bounty-faq-q8-PGP-key",
       "page-upgrades-bug-bounty-severity-qualifications-title",
       "page-upgrades-bug-bounty-severity-qualifications-desc",
+      "page-upgrades-bug-bounty-severity-qualifications-hardware",
       "page-upgrades-bug-bounty-severity-low-title",
       "page-upgrades-bug-bounty-severity-low-li-1",
       "page-upgrades-bug-bounty-severity-low-li-2",
@@ -1091,5 +1102,5 @@
       "page-upgrades-bug-bounty-not-included-li-10"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

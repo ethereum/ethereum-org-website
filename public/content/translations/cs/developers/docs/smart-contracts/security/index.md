@@ -4,17 +4,17 @@ description: "Přehled pokynů pro tvorbu bezpečných chytrých kontraktů na E
 lang: cs
 ---
 
-Chytré kontrakty jsou extrémně flexibilní a schopné ovládat velké množství hodnoty a dat, přičemž spouštějí neměnnou logiku založenou na kódu nasazeném na blockchainu. To vytvořilo živý ekosystém decentralizovaných aplikací nevyžadujících důvěru, které poskytují mnoho výhod oproti starším systémům. Představují také příležitosti pro útočníky, kteří se snaží profitovat zneužitím zranitelností v chytrých kontraktech.
+Chytré kontrakty jsou extrémně flexibilní a dokážou spravovat obrovské množství hodnoty a dat, přičemž spouštějí neměnnou logiku založenou na kódu nasazeném na blockchainu. To vytvořilo živý ekosystém decentralizovaných aplikací nevyžadujících důvěru, které poskytují mnoho výhod oproti starším systémům. Představují však také příležitosti pro útočníky, kteří se snaží profitovat ze zneužití zranitelností v chytrých kontraktech.
 
-Veřejné blockchainy, jako je [Ethereum](/), dále komplikují problematiku zabezpečení chytrých kontraktů. Nasazený kód kontraktu _obvykle_ nelze změnit za účelem opravy bezpečnostních chyb, zatímco aktiva ukradená z chytrých kontraktů je extrémně obtížné sledovat a kvůli neměnnosti jsou většinou nenávratná.
+Veřejné blockchainy, jako je [Ethereum](/), problematiku zabezpečení chytrých kontraktů dále komplikují. Nasazený kód kontraktu _obvykle_ nelze změnit za účelem opravy bezpečnostních chyb, zatímco aktiva ukradená z chytrých kontraktů je extrémně obtížné sledovat a kvůli neměnnosti jsou většinou nenávratně ztracena.
 
-Ačkoli se údaje liší, odhaduje se, že celková hodnota ukradená nebo ztracená kvůli bezpečnostním chybám v chytrých kontraktech snadno přesahuje 1 miliardu dolarů. To zahrnuje ostře sledované incidenty, jako je [hacknutí DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (ukradeno 3,6 milionu ETH v hodnotě přes 1 miliardu dolarů v dnešních cenách), [hacknutí multisig peněženky Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (ztráta 30 milionů dolarů ve prospěch hackerů) a [problém se zmrazenou peněženkou Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (přes 300 milionů dolarů v ETH navždy uzamčeno).
+Ačkoli se údaje liší, odhaduje se, že celková hodnota ukradená nebo ztracená kvůli bezpečnostním chybám v chytrých kontraktech snadno přesahuje 1 miliardu dolarů. To zahrnuje velmi známé incidenty, jako je [hack decentralizované autonomní organizace (DAO)](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (ukradeno 3,6 milionu ETH v hodnotě přes 1 miliardu dolarů v dnešních cenách), [hack multisig peněženky Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (ztráta 30 milionů dolarů ve prospěch hackerů) a [problém se zmrazenou peněženkou Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (více než 300 milionů dolarů v ETH navždy uzamčeno).
 
-Výše zmíněné problémy činí pro vývojáře nezbytným investovat úsilí do budování bezpečných, robustních a odolných chytrých kontraktů. Bezpečnost chytrých kontraktů je vážná věc a každý vývojář udělá dobře, když se o ní poučí. Tento průvodce se bude zabývat bezpečnostními aspekty pro vývojáře na Ethereu a prozkoumá zdroje pro zlepšení bezpečnosti chytrých kontraktů.
+Výše zmíněné problémy činí pro vývojáře naprostou nutností investovat úsilí do budování bezpečných, robustních a odolných chytrých kontraktů. Bezpečnost chytrých kontraktů je vážná věc a každý vývojář udělá dobře, když se o ní něco naučí. Tento průvodce se bude zabývat bezpečnostními aspekty pro vývojáře na Ethereu a prozkoumá zdroje pro zlepšení bezpečnosti chytrých kontraktů.
 
 ## Předpoklady {#prerequisites}
 
-Ujistěte se, že znáte [základy vývoje chytrých kontraktů](/developers/docs/smart-contracts/), než se pustíte do bezpečnosti.
+Než se začnete zabývat bezpečností, ujistěte se, že jste se seznámili se [základy vývoje chytrých kontraktů](/developers/docs/smart-contracts/).
 
 ## Pokyny pro tvorbu bezpečných chytrých kontraktů na Ethereu {#smart-contract-security-guidelines}
 
@@ -22,19 +22,20 @@ Ujistěte se, že znáte [základy vývoje chytrých kontraktů](/developers/doc
 
 V chytrých kontraktech mohou být funkce označené jako `public` nebo `external` volány jakýmikoli externě vlastněnými účty (EOA) nebo účty kontraktů. Specifikace veřejné viditelnosti (public) pro funkce je nezbytná, pokud chcete, aby s vaším kontraktem mohli interagovat ostatní. Funkce označené jako `private` však mohou být volány pouze funkcemi uvnitř samotného chytrého kontraktu, nikoli externími účty. Poskytnutí přístupu k funkcím kontraktu každému účastníkovi sítě může způsobit problémy, zejména pokud to znamená, že kdokoli může provádět citlivé operace (např. ražení nových tokenů).
 
-Aby se zabránilo neoprávněnému použití funkcí chytrého kontraktu, je nutné implementovat bezpečné řízení přístupu. Mechanismy řízení přístupu omezují možnost používat určité funkce v chytrém kontraktu pouze na schválené subjekty, jako jsou účty odpovědné za správu kontraktu. **Vzor Ownable** a **řízení přístupu na základě rolí (role-based control)** jsou dva vzory užitečné pro implementaci řízení přístupu v chytrých kontraktech:
+Aby se zabránilo neoprávněnému použití funkcí chytrého kontraktu, je nutné implementovat bezpečné řízení přístupu. Mechanismy řízení přístupu omezují možnost používat určité funkce v chytrém kontraktu pouze na schválené subjekty, jako jsou účty odpovědné za správu kontraktu. **Vzor Ownable** a **řízení na základě rolí (role-based control)** jsou dva užitečné vzory pro implementaci řízení přístupu v chytrých kontraktech:
 
 #### Vzor Ownable {#ownable-pattern}
 
-Ve vzoru Ownable je během procesu vytváření kontraktu nastavena adresa jako „vlastník“ (owner) kontraktu. Chráněným funkcím je přiřazen modifikátor `OnlyOwner`, který zajišťuje, že kontrakt před spuštěním funkce ověří identitu volající adresy. Volání chráněných funkcí z jiných adres než od vlastníka kontraktu se vždy zvrátí, což zabraňuje nechtěnému přístupu.
+Ve vzoru Ownable je během procesu vytváření kontraktu nastavena adresa jako „vlastník“ (owner) kontraktu. Chráněným funkcím je přiřazen modifikátor `OnlyOwner`, který zajišťuje, že kontrakt před provedením funkce ověří identitu volající adresy. Volání chráněných funkcí z jiných adres než od vlastníka kontraktu se vždy zvrátí, což zabraňuje nechtěnému přístupu.
 
 #### Řízení přístupu na základě rolí {#role-based-access-control}
 
-Registrace jediné adresy jako `Owner` v chytrém kontraktu přináší riziko centralizace a představuje jediný bod selhání (single point-of-failure). Pokud jsou klíče k účtu vlastníka kompromitovány, útočníci mohou napadnout vlastněný kontrakt. Proto může být lepší volbou použití vzoru řízení přístupu na základě rolí s více administrátorskými účty.
+Registrace jediné adresy jako `Owner` v chytrém kontraktu přináší riziko centralizace a představuje jediný bod selhání (single point of failure). Pokud jsou klíče k účtu vlastníka kompromitovány, útočníci mohou napadnout vlastněný kontrakt. Proto může být lepší volbou použití vzoru řízení přístupu na základě rolí s více účty správců.
 
 Při řízení přístupu na základě rolí je přístup k citlivým funkcím rozdělen mezi skupinu důvěryhodných účastníků. Například jeden účet může být zodpovědný za ražení tokenů, zatímco jiný účet provádí upgrady nebo pozastavuje kontrakt. Decentralizace řízení přístupu tímto způsobem eliminuje jediné body selhání a snižuje předpoklady důvěry pro uživatele.
 
 ##### Použití peněženek s vícenásobným podpisem
+
 Dalším přístupem k implementaci bezpečného řízení přístupu je použití [účtu s vícenásobným podpisem](/developers/docs/smart-contracts/#multisig) ke správě kontraktu. Na rozdíl od běžného EOA jsou účty s vícenásobným podpisem vlastněny více subjekty a k provedení transakcí vyžadují podpisy od minimálního počtu účtů – řekněme 3 z 5.
 
 Použití multisig pro řízení přístupu přináší další vrstvu zabezpečení, protože akce na cílovém kontraktu vyžadují souhlas více stran. To je obzvláště užitečné, pokud je nutné použít vzor Ownable, protože to ztěžuje útočníkovi nebo zlomyslnému insiderovi manipulaci s citlivými funkcemi kontraktu pro škodlivé účely.
@@ -43,11 +44,11 @@ Použití multisig pro řízení přístupu přináší další vrstvu zabezpeč
 
 Jak již bylo zmíněno, kdokoli může volat veřejné funkce ve vašem chytrém kontraktu, jakmile je nasazen na blockchain. Vzhledem k tomu, že nemůžete předem vědět, jak budou externí účty s kontraktem interagovat, je ideální před nasazením implementovat interní ochranná opatření proti problematickým operacím. Správné chování v chytrých kontraktech můžete vynutit pomocí příkazů `require()`, `assert()` a `revert()`, které vyvolají výjimky a zvrátí změny stavu, pokud provádění nesplní určité požadavky.
 
-**`require()`**: Příkazy `require` jsou definovány na začátku funkcí a zajišťují, že před spuštěním volané funkce jsou splněny předem definované podmínky. Příkaz `require` lze použít k ověření uživatelských vstupů, kontrole stavových proměnných nebo ověření identity volajícího účtu před pokračováním ve funkci.
+**`require()`**: Příkazy `require` jsou definovány na začátku funkcí a zajišťují, že před provedením volané funkce jsou splněny předem definované podmínky. Příkaz `require` lze použít k ověření uživatelských vstupů, kontrole stavových proměnných nebo ověření identity volajícího účtu před pokračováním ve funkci.
 
-**`assert()`**: Příkaz `assert()` se používá k detekci interních chyb a kontrole porušení „invariantů“ ve vašem kódu. Invariant je logické tvrzení o stavu kontraktu, které by mělo platit pro všechna spuštění funkcí. Příkladem invariantu je maximální celková nabídka nebo zůstatek tokenového kontraktu. Použití `assert()` zajišťuje, že se váš kontrakt nikdy nedostane do zranitelného stavu, a pokud ano, všechny změny stavových proměnných se vrátí zpět.
+**`assert()`**: `assert()` se používá k detekci interních chyb a kontrole porušení „invariantů“ ve vašem kódu. Invariant je logické tvrzení o stavu kontraktu, které by mělo platit pro všechna provádění funkcí. Příkladem invariantu je maximální celková nabídka nebo zůstatek tokenového kontraktu. Použití `assert()` zajišťuje, že se váš kontrakt nikdy nedostane do zranitelného stavu, a pokud ano, všechny změny stavových proměnných se vrátí zpět.
 
-**`revert()`**: Příkaz `revert()` lze použít v příkazu if-else, který vyvolá výjimku, pokud není splněna požadovaná podmínka. Ukázkový kontrakt níže používá `revert()` k ochraně provádění funkcí:
+**`revert()`**: `revert()` lze použít v příkazu if-else, který vyvolá výjimku, pokud není splněna požadovaná podmínka. Níže uvedený ukázkový kontrakt používá `revert()` k ochraně provádění funkcí:
 
 ```
 pragma solidity ^0.8.4;
@@ -58,7 +59,7 @@ contract VendingMachine {
     function buy(uint amount) public payable {
         if (amount > msg.value / 2 ether)
             revert("Not enough Ether provided.");
-        // Provést nákup.
+        // Proveďte nákup.
     }
     function withdraw() public {
         if (msg.sender != owner)
@@ -71,13 +72,13 @@ contract VendingMachine {
 
 ### 3. Testujte chytré kontrakty a ověřujte správnost kódu {#test-smart-contracts-and-verify-code-correctness}
 
-Neměnnost kódu běžícího v [Ethereum Virtual Machine](/developers/docs/evm/) znamená, že chytré kontrakty vyžadují vyšší úroveň hodnocení kvality během fáze vývoje. Rozsáhlé testování vašeho kontraktu a jeho sledování z hlediska jakýchkoli neočekávaných výsledků výrazně zlepší bezpečnost a z dlouhodobého hlediska ochrání vaše uživatele.
+Neměnnost kódu běžícího ve [virtuálním stroji Etherea (EVM)](/developers/docs/evm/) znamená, že chytré kontrakty vyžadují vyšší úroveň hodnocení kvality během fáze vývoje. Rozsáhlé testování vašeho kontraktu a jeho sledování z hlediska jakýchkoli neočekávaných výsledků výrazně zlepší bezpečnost a z dlouhodobého hlediska ochrání vaše uživatele.
 
-Obvyklou metodou je psaní malých jednotkových testů (unit tests) pomocí mock dat, která se očekává, že kontrakt obdrží od uživatelů. [Jednotkové testování](/developers/docs/smart-contracts/testing/#unit-testing) je dobré pro testování funkčnosti určitých funkcí a zajištění toho, že chytrý kontrakt funguje podle očekávání.
+Obvyklou metodou je psaní malých jednotkových testů (unit tests) pomocí simulovaných dat (mock data), která se očekává, že kontrakt obdrží od uživatelů. [Jednotkové testování](/developers/docs/smart-contracts/testing/#unit-testing-for-smart-contracts) je dobré pro testování funkčnosti určitých funkcí a zajištění toho, že chytrý kontrakt funguje podle očekávání.
 
-Bohužel, jednotkové testování je při izolovaném použití minimálně efektivní pro zlepšení bezpečnosti chytrých kontraktů. Jednotkový test může prokázat, že se funkce správně provádí pro mock data, ale jednotkové testy jsou jen tak efektivní, jak dobře jsou napsány. To ztěžuje detekci opomenutých okrajových případů a zranitelností, které by mohly narušit bezpečnost vašeho chytrého kontraktu.
+Bohužel, jednotkové testování je při izolovaném použití minimálně efektivní pro zlepšení bezpečnosti chytrých kontraktů. Jednotkový test může prokázat, že se funkce správně provede pro simulovaná data, ale jednotkové testy jsou jen tak efektivní, jak dobře jsou napsány. To ztěžuje detekci opomenutých okrajových případů (edge cases) a zranitelností, které by mohly narušit bezpečnost vašeho chytrého kontraktu.
 
-Lepším přístupem je kombinovat jednotkové testování s testováním založeným na vlastnostech (property-based testing) prováděným pomocí [statické a dynamické analýzy](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Statická analýza se spoléhá na nízkoúrovňové reprezentace, jako jsou [grafy toku řízení (control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) a [abstraktní syntaktické stromy (abstract syntax trees)](https://deepsource.io/glossary/ast/), k analýze dosažitelných stavů programu a cest provádění. Mezitím techniky dynamické analýzy, jako je [fuzzing chytrých kontraktů](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), spouštějí kód kontraktu s náhodnými vstupními hodnotami, aby detekovaly operace, které porušují bezpečnostní vlastnosti.
+Lepším přístupem je kombinovat jednotkové testování s testováním založeným na vlastnostech (property-based testing) prováděným pomocí [statické a dynamické analýzy](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Statická analýza se spoléhá na nízkoúrovňové reprezentace, jako jsou [grafy toku řízení (control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) a [abstraktní syntaktické stromy](https://deepsource.io/glossary/ast/), k analýze dosažitelných stavů programu a cest provádění. Techniky dynamické analýzy, jako je [fuzzing chytrých kontraktů](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), mezitím spouštějí kód kontraktu s náhodnými vstupními hodnotami, aby detekovaly operace, které porušují bezpečnostní vlastnosti.
 
 [Formální verifikace](/developers/docs/smart-contracts/formal-verification) je další technikou pro ověřování bezpečnostních vlastností v chytrých kontraktech. Na rozdíl od běžného testování může formální verifikace průkazně dokázat absenci chyb v chytrém kontraktu. Toho je dosaženo vytvořením formální specifikace, která zachycuje požadované bezpečnostní vlastnosti, a dokázáním, že formální model kontraktů tuto specifikaci dodržuje.
 
@@ -94,19 +95,19 @@ Přesto byste se měli vyvarovat toho, abyste audity považovali za všelék. Au
 - [Tipy a triky pro auditování chytrých kontraktů](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Vytěžte ze svého auditu maximum](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
-#### Bug bounty programy {#bug-bounties}
+#### Programy odměn za nalezení chyb (Bug bounties) {#bug-bounties}
 
-Založení bug bounty programu je dalším přístupem k implementaci externích kontrol kódu. Bug bounty je finanční odměna udělovaná jednotlivcům (obvykle whitehat hackerům), kteří objeví zranitelnosti v aplikaci.
+Zavedení programu odměn za nalezení chyb (bug bounty) je dalším přístupem k implementaci externích kontrol kódu. Bug bounty je finanční odměna udělovaná jednotlivcům (obvykle etickým hackerům - whitehats), kteří objeví zranitelnosti v aplikaci.
 
-Při správném použití dávají bug bounty programy členům hackerské komunity motivaci zkoumat váš kód na kritické chyby. Příkladem z reálného života je „chyba nekonečných peněz“ (infinite money bug), která by útočníkovi umožnila vytvořit neomezené množství etheru na [Optimism](https://www.optimism.io/), protokolu [vrstvy 2 (l2)](/layer-2/) běžícím na Ethereu. Naštěstí whitehat hacker [tuto chybu objevil](https://www.saurik.com/optimism.html) a upozornil tým, [čímž si v procesu vydělal velkou odměnu](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Při správném použití dávají programy bug bounty členům hackerské komunity motivaci zkoumat váš kód a hledat kritické chyby. Příkladem z reálného života je „chyba nekonečných peněz“ (infinite money bug), která by útočníkovi umožnila vytvořit neomezené množství etheru na [Optimism](https://www.optimism.io/), protokolu [vrstvy 2 (l2)](/layer-2/) běžícím na Ethereu. Naštěstí etický hacker [tuto chybu objevil](https://www.saurik.com/optimism.html) a upozornil tým, [čímž si vysloužil velkou odměnu](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
-Užitečnou strategií je nastavit výplatu bug bounty programu úměrně k množství ohrožených prostředků. Tento přístup, označovaný jako „[škálující bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)“, poskytuje jednotlivcům finanční pobídky k zodpovědnému zveřejnění zranitelností namísto jejich zneužití.
+Užitečnou strategií je nastavit výplatu programu bug bounty úměrně k množství ohrožených prostředků. Tento přístup, označovaný jako „[škálující se bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)“, poskytuje jednotlivcům finanční pobídky k zodpovědnému odhalení zranitelností namísto jejich zneužití.
 
 ### 5. Dodržujte osvědčené postupy během vývoje chytrých kontraktů {#follow-smart-contract-development-best-practices}
 
-Existence auditů a bug bounty programů vás nezbavuje odpovědnosti za psaní vysoce kvalitního kódu. Dobrá bezpečnost chytrých kontraktů začíná dodržováním správných procesů návrhu a vývoje:
+Existence auditů a programů bug bounty vás nezbavuje odpovědnosti za psaní vysoce kvalitního kódu. Dobrá bezpečnost chytrých kontraktů začíná dodržováním správných procesů návrhu a vývoje:
 
-- Ukládejte veškerý kód v systému pro správu verzí, jako je git
+- Ukládejte veškerý kód do systému pro správu verzí, jako je git
 
 - Provádějte všechny úpravy kódu prostřednictvím pull requestů
 
@@ -122,36 +123,36 @@ Existence auditů a bug bounty programů vás nezbavuje odpovědnosti za psaní 
 
 ### 6. Implementujte robustní plány obnovy po havárii {#implement-disaster-recovery-plans}
 
-Navrhování bezpečného řízení přístupu, implementace modifikátorů funkcí a další návrhy mohou zlepšit bezpečnost chytrých kontraktů, ale nemohou vyloučit možnost škodlivých exploitů. Budování bezpečných chytrých kontraktů vyžaduje „přípravu na selhání“ a záložní plán pro efektivní reakci na útoky. Správný plán obnovy po havárii bude zahrnovat některé nebo všechny z následujících komponent:
+Návrh bezpečného řízení přístupu, implementace modifikátorů funkcí a další návrhy mohou zlepšit bezpečnost chytrých kontraktů, ale nemohou vyloučit možnost škodlivých exploitů. Budování bezpečných chytrých kontraktů vyžaduje „přípravu na selhání“ a záložní plán pro efektivní reakci na útoky. Správný plán obnovy po havárii bude zahrnovat některé nebo všechny z následujících součástí:
 
 #### Upgrady kontraktů {#contract-upgrades}
 
-Ačkoli jsou chytré kontrakty na Ethereu ve výchozím nastavení neměnné, je možné dosáhnout určité míry měnitelnosti pomocí vzorů pro upgrade. Upgradování kontraktů je nezbytné v případech, kdy kritická chyba činí váš starý kontrakt nepoužitelným a nasazení nové logiky je nejschůdnější možností.
+Ačkoli jsou chytré kontrakty na Ethereu ve výchozím nastavení neměnné, je možné dosáhnout určité míry měnitelnosti pomocí vzorů pro upgrade. Upgrady kontraktů jsou nezbytné v případech, kdy kritická chyba činí váš starý kontrakt nepoužitelným a nasazení nové logiky je nejschůdnější možností.
 
-Mechanismy upgradu kontraktů fungují různě, ale „proxy vzor“ (proxy pattern) je jedním z populárnějších přístupů k upgradování chytrých kontraktů. [Proxy vzory](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) rozdělují stav a logiku aplikace mezi _dva_ kontrakty. První kontrakt (nazývaný ‚proxy kontrakt‘) ukládá stavové proměnné (např. zůstatky uživatelů), zatímco druhý kontrakt (nazývaný ‚logický kontrakt‘) obsahuje kód pro provádění funkcí kontraktu.
+Mechanismy upgradu kontraktů fungují různě, ale „vzor proxy“ je jedním z populárnějších přístupů k upgradu chytrých kontraktů. [Vzory proxy](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) rozdělují stav a logiku aplikace mezi _dva_ kontrakty. První kontrakt (nazývaný ‚proxy kontrakt‘) ukládá stavové proměnné (např. zůstatky uživatelů), zatímco druhý kontrakt (nazývaný ‚logický kontrakt‘) obsahuje kód pro provádění funkcí kontraktu.
 
 Účty interagují s proxy kontraktem, který odesílá všechna volání funkcí do logického kontraktu pomocí nízkoúrovňového volání [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries). Na rozdíl od běžného volání zprávy zajišťuje `delegatecall()`, že kód běžící na adrese logického kontraktu je spuštěn v kontextu volajícího kontraktu. To znamená, že logický kontrakt bude vždy zapisovat do úložiště proxy (místo do svého vlastního úložiště) a původní hodnoty `msg.sender` a `msg.value` zůstanou zachovány.
 
-Delegování volání na logický kontrakt vyžaduje uložení jeho adresy v úložišti proxy kontraktu. Upgradování logiky kontraktu je tedy pouze otázkou nasazení dalšího logického kontraktu a uložení nové adresy v proxy kontraktu. Vzhledem k tomu, že následná volání proxy kontraktu jsou automaticky směrována na nový logický kontrakt, „upgradovali“ byste kontrakt, aniž byste skutečně upravili kód.
+Delegování volání na logický kontrakt vyžaduje uložení jeho adresy v úložišti proxy kontraktu. Upgrade logiky kontraktu je tedy pouze otázkou nasazení dalšího logického kontraktu a uložení nové adresy do proxy kontraktu. Vzhledem k tomu, že následná volání proxy kontraktu jsou automaticky směrována na nový logický kontrakt, „upgradovali“ byste kontrakt, aniž byste skutečně upravili kód.
 
-[Více o upgradování kontraktů](/developers/docs/smart-contracts/upgrading/).
+[Více o upgradu kontraktů](/developers/docs/smart-contracts/upgrading/).
 
 #### Nouzová zastavení {#emergency-stops}
 
-Jak již bylo zmíněno, rozsáhlé auditování a testování nemůže odhalit všechny chyby v chytrém kontraktu. Pokud se ve vašem kódu po nasazení objeví zranitelnost, její oprava je nemožná, protože nemůžete změnit kód běžící na adrese kontraktu. Také implementace mechanismů upgradu (např. proxy vzorů) může nějakou dobu trvat (často vyžadují schválení od různých stran), což útočníkům dává pouze více času na způsobení větších škod.
+Jak již bylo zmíněno, rozsáhlé auditování a testování nemůže odhalit všechny chyby v chytrém kontraktu. Pokud se ve vašem kódu po nasazení objeví zranitelnost, její oprava je nemožná, protože nemůžete změnit kód běžící na adrese kontraktu. Také implementace mechanismů upgradu (např. vzorů proxy) může nějakou dobu trvat (často vyžadují schválení od různých stran), což útočníkům dává jen více času na způsobení větších škod.
 
-Krajním řešením je implementovat funkci „nouzového zastavení“ (emergency stop), která blokuje volání zranitelných funkcí v kontraktu. Nouzová zastavení obvykle zahrnují následující komponenty:
+Krajním řešením je implementovat funkci „nouzového zastavení“ (emergency stop), která blokuje volání zranitelných funkcí v kontraktu. Nouzová zastavení obvykle zahrnují následující součásti:
 
-1. Globální booleovská proměnná indikující, zda je chytrý kontrakt v zastaveném stavu, či nikoli. Tato proměnná je při nastavování kontraktu nastavena na `false`, ale jakmile je kontrakt zastaven, změní se na `true`.
+1. Globální booleovská proměnná indikující, zda je chytrý kontrakt v zastaveném stavu či nikoli. Tato proměnná je při nastavování kontraktu nastavena na `false`, ale jakmile je kontrakt zastaven, změní se na `true`.
 
 2. Funkce, které při svém provádění odkazují na booleovskou proměnnou. Takové funkce jsou přístupné, když chytrý kontrakt není zastaven, a stanou se nepřístupnými, když je spuštěna funkce nouzového zastavení.
 
-3. Subjekt, který má přístup k funkci nouzového zastavení, která nastaví booleovskou proměnnou na `true`. Aby se zabránilo škodlivým akcím, může být volání této funkce omezeno na důvěryhodnou adresu (např. vlastníka kontraktu).
+3. Subjekt, který má přístup k funkci nouzového zastavení, která nastaví booleovskou proměnnou na `true`. Aby se zabránilo škodlivým akcím, volání této funkce může být omezeno na důvěryhodnou adresu (např. vlastníka kontraktu).
 
 Jakmile kontrakt aktivuje nouzové zastavení, určité funkce nebudou volatelné. Toho je dosaženo zabalením vybraných funkcí do modifikátoru, který odkazuje na globální proměnnou. Níže je [příklad](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol) popisující implementaci tohoto vzoru v kontraktech:
 
 ```solidity
-// Tento kód nebyl profesionálně auditován a neposkytuje žádné záruky ohledně bezpečnosti nebo správnosti. Používejte na vlastní nebezpečí.
+// Tento kód nebyl profesionálně auditován a neposkytuje žádné záruky ohledně bezpečnosti nebo správnosti. Použití je na vlastní nebezpečí.
 
 contract EmergencyStop {
 
@@ -196,33 +197,33 @@ Tento příklad ukazuje základní vlastnosti nouzových zastavení:
 
 - Modifikátory funkcí `onlyWhenStopped` a `stoppedInEmergency` kontrolují proměnnou `isStopped`. `stoppedInEmergency` se používá k řízení funkcí, které by měly být nepřístupné, když je kontrakt zranitelný (např. `deposit()`). Volání těchto funkcí se jednoduše zvrátí.
 
-`onlyWhenStopped` se používá pro funkce, které by měly být volatelné během nouze (např. `emergencyWithdraw()`). Takové funkce mohou pomoci vyřešit situaci, a proto jsou vyloučeny ze seznamu „omezených funkcí“.
+`onlyWhenStopped` se používá pro funkce, které by měly být volatelné během nouzové situace (např. `emergencyWithdraw()`). Takové funkce mohou pomoci vyřešit situaci, a proto jsou vyloučeny ze seznamu „omezených funkcí“.
 
 Použití funkce nouzového zastavení poskytuje efektivní provizorní řešení pro řešení vážných zranitelností ve vašem chytrém kontraktu. Zvyšuje to však potřebu uživatelů důvěřovat vývojářům, že ji neaktivují ze zištných důvodů. Za tímto účelem jsou možnými řešeními decentralizace kontroly nad nouzovým zastavením, a to buď jejím podřízením onchain hlasovacímu mechanismu, časovému zámku (timelock), nebo schválení z multisig peněženky.
 
 #### Monitorování událostí {#event-monitoring}
 
-[Události](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) vám umožňují sledovat volání funkcí chytrého kontraktu a monitorovat změny stavových proměnných. Je ideální naprogramovat váš chytrý kontrakt tak, aby emitoval událost, kdykoli nějaká strana provede akci kritickou z hlediska bezpečnosti (např. výběr prostředků).
+[Události](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) vám umožňují sledovat volání funkcí chytrého kontraktu a monitorovat změny stavových proměnných. Je ideální naprogramovat váš chytrý kontrakt tak, aby emitoval událost, kdykoli některá strana provede akci kritickou z hlediska bezpečnosti (např. výběr prostředků).
 
-Zaznamenávání událostí a jejich monitorování offchain poskytuje přehled o operacích kontraktu a napomáhá rychlejšímu objevování škodlivých akcí. To znamená, že váš tým může rychleji reagovat na hacky a podniknout kroky ke zmírnění dopadu na uživatele, jako je pozastavení funkcí nebo provedení upgradu.
+Logování událostí a jejich offchain monitorování poskytuje přehled o operacích kontraktu a napomáhá rychlejšímu objevování škodlivých akcí. To znamená, že váš tým může rychleji reagovat na hacky a podniknout kroky ke zmírnění dopadu na uživatele, jako je pozastavení funkcí nebo provedení upgradu.
 
 Můžete se také rozhodnout pro hotový monitorovací nástroj, který automaticky přeposílá upozornění, kdykoli někdo interaguje s vašimi kontrakty. Tyto nástroje vám umožní vytvářet vlastní upozornění na základě různých spouštěčů, jako je objem transakcí, frekvence volání funkcí nebo konkrétní zapojené funkce. Můžete například naprogramovat upozornění, které přijde, když částka vybraná v jedné transakci překročí určitou prahovou hodnotu.
 
 ### 7. Navrhněte bezpečné systémy správy {#design-secure-governance-systems}
 
-Možná budete chtít decentralizovat svou aplikaci předáním kontroly nad hlavními chytrými kontrakty členům komunity. V tomto případě bude systém chytrých kontraktů zahrnovat modul správy – mechanismus, který umožňuje členům komunity schvalovat administrativní akce prostřednictvím onchain systému správy. Například o návrhu na upgrade proxy kontraktu na novou implementaci mohou hlasovat držitelé tokenů.
+Možná budete chtít decentralizovat svou aplikaci předáním kontroly nad hlavními chytrými kontrakty členům komunity. V tomto případě bude systém chytrých kontraktů obsahovat modul správy – mechanismus, který umožňuje členům komunity schvalovat administrativní akce prostřednictvím onchain systému správy. Například o návrhu na upgrade proxy kontraktu na novou implementaci mohou hlasovat držitelé tokenů.
 
-Decentralizovaná správa může být prospěšná, zejména proto, že slaďuje zájmy vývojářů a koncových uživatelů. Nicméně mechanismy správy chytrých kontraktů mohou při nesprávné implementaci přinést nová rizika. Pravděpodobným scénářem je, že útočník získá obrovskou hlasovací sílu (měřenou počtem držených tokenů) tím, že si vezme [bleskovou půjčku](/defi/#flash-loans), a prosadí škodlivý návrh.
+Decentralizovaná správa může být prospěšná, zejména proto, že slaďuje zájmy vývojářů a koncových uživatelů. Mechanismy správy chytrých kontraktů však mohou při nesprávné implementaci přinést nová rizika. Pravděpodobným scénářem je, že útočník získá obrovskou hlasovací sílu (měřenou počtem držených tokenů) tím, že si vezme [bleskovou půjčku](/defi/#flash-loans), a prosadí škodlivý návrh.
 
 Jedním ze způsobů, jak předcházet problémům souvisejícím s onchain správou, je [použití časového zámku (timelock)](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Časový zámek brání chytrému kontraktu v provádění určitých akcí, dokud neuplyne určitá doba. Další strategie zahrnují přiřazení „váhy hlasu“ každému tokenu na základě toho, jak dlouho byl uzamčen, nebo měření hlasovací síly adresy v historickém období (například 2-3 bloky v minulosti) namísto aktuálního bloku. Obě metody snižují možnost rychlého nahromadění hlasovací síly ke zvrácení onchain hlasování.
 
-Více o [navrhování bezpečných systémů správy](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [různých hlasovacích mechanismech v DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos) a [běžných vektorech útoků na DAO využívajících DeFi](https://dacian.me/dao-governance-defi-attacks) najdete ve sdílených odkazech.
+Více o [navrhování bezpečných systémů správy](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [různých hlasovacích mechanismech v DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos) a [běžných vektorech útoků na decentralizované autonomní organizace (DAO) využívajících DeFi](https://dacian.me/dao-governance-defi-attacks) najdete ve sdílených odkazech.
 
 ### 8. Snižte složitost kódu na minimum {#reduce-code-complexity}
 
 Tradiční vývojáři softwaru znají princip KISS („keep it simple, stupid“), který nedoporučuje vnášet do návrhu softwaru zbytečnou složitost. To vychází z dlouholetého přesvědčení, že „složité systémy selhávají složitými způsoby“ a jsou náchylnější k nákladným chybám.
 
-Udržování věcí v jednoduchosti je obzvláště důležité při psaní chytrých kontraktů, vzhledem k tomu, že chytré kontrakty potenciálně kontrolují velké množství hodnoty. Tipem pro dosažení jednoduchosti při psaní chytrých kontraktů je opětovné použití existujících knihoven, jako jsou [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), kde je to možné. Protože tyto knihovny byly vývojáři rozsáhle auditovány a testovány, jejich použití snižuje pravděpodobnost zanesení chyb psaním nové funkcionality od nuly.
+Udržování věcí v jednoduchosti je obzvláště důležité při psaní chytrých kontraktů, vzhledem k tomu, že chytré kontrakty potenciálně kontrolují velké množství hodnoty. Tipem pro dosažení jednoduchosti při psaní chytrých kontraktů je opětovné použití existujících knihoven, jako jsou [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/), kde je to možné. Protože tyto knihovny byly vývojáři rozsáhle auditovány a testovány, jejich použití snižuje pravděpodobnost zanesení chyb psaním nových funkcí od nuly.
 
 Další běžnou radou je psát malé funkce a udržovat kontrakty modulární rozdělením obchodní logiky do více kontraktů. Psaní jednoduššího kódu nejen snižuje plochu pro útok v chytrém kontraktu, ale také usnadňuje uvažování o správnosti celého systému a včasné odhalení možných chyb v návrhu.
 
@@ -234,7 +235,7 @@ EVM neumožňuje souběžnost, což znamená, že dva kontrakty zapojené do vol
 
 Ačkoli je přenos toku řízení na nedůvěryhodné kontrakty většinou neškodný, může způsobit problémy, jako je reentrance. Útok reentrance nastane, když škodlivý kontrakt zavolá zpět do zranitelného kontraktu před dokončením původního vyvolání funkce. Tento typ útoku lze nejlépe vysvětlit na příkladu.
 
-Zvažte jednoduchý chytrý kontrakt (‚Oběť‘), který komukoli umožňuje vkládat a vybírat ether:
+Zvažte jednoduchý chytrý kontrakt (‚Oběť‘), který umožňuje komukoli vložit a vybrat ether:
 
 ```solidity
 // Tento kontrakt je zranitelný. Nepoužívejte v produkci
@@ -261,7 +262,7 @@ Tento kontrakt vystavuje funkci `withdraw()`, která uživatelům umožňuje vyb
 2. Odešle prostředky na volající adresu
 3. Vynuluje jejich zůstatek na 0, čímž zabrání dalším výběrům od uživatele
 
-Funkce `withdraw()` v kontraktu `Victim` se řídí vzorem „checks-interactions-effects“ (kontroly-interakce-efekty). _Zkontroluje_ (checks), zda jsou splněny podmínky nezbytné pro provedení (tj. uživatel má kladný zůstatek ETH), a provede _interakci_ (interaction) odesláním ETH na adresu volajícího, před aplikací _efektů_ (effects) transakce (tj. snížením zůstatku uživatele).
+Funkce `withdraw()` v kontraktu `Victim` se řídí vzorem „kontroly-interakce-efekty“ (checks-interactions-effects). _Zkontroluje_ (checks), zda jsou splněny podmínky nezbytné pro provedení (tj. uživatel má kladný zůstatek ETH), a provede _interakci_ (interaction) odesláním ETH na adresu volajícího, než aplikuje _efekty_ (effects) transakce (tj. snížení zůstatku uživatele).
 
 Pokud je `withdraw()` volána z externě vlastněného účtu (EOA), funkce se provede podle očekávání: `msg.sender.call.value()` odešle ETH volajícímu. Pokud je však `msg.sender` účet chytrého kontraktu, který volá `withdraw()`, odeslání prostředků pomocí `msg.sender.call.value()` také spustí kód uložený na této adrese.
 
@@ -286,9 +287,9 @@ Tento kontrakt je navržen tak, aby dělal tři věci:
 
 1. Přijmout vklad z jiného účtu (pravděpodobně EOA útočníka)
 2. Vložit 1 ETH do kontraktu Oběti
-3. Vybrat 1 ETH uložené v chytrém kontraktu
+3. Vybrat 1 ETH uložený v chytrém kontraktu
 
-Na tom není nic špatného, kromě toho, že `Attacker` má další funkci, která znovu volá `withdraw()` v `Victim`, pokud je zbývající gas z příchozího `msg.sender.call.value` větší než 40 000. To dává `Attacker` možnost znovu vstoupit do `Victim` a vybrat další prostředky _před_ dokončením prvního vyvolání `withdraw`. Cyklus vypadá takto:
+Není na tom nic špatného, kromě toho, že `Attacker` má další funkci, která znovu volá `withdraw()` v `Victim`, pokud je gas zbývající z příchozího `msg.sender.call.value` větší než 40 000. To dává `Attacker` možnost znovu vstoupit do `Victim` a vybrat další prostředky _předtím_, než se dokončí první vyvolání `withdraw`. Cyklus vypadá takto:
 
 ```solidity
 - Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
@@ -303,12 +304,13 @@ Na tom není nic špatného, kromě toho, že `Attacker` má další funkci, kte
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Shrnutí je takové, že protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provádění funkce, následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát. Tento druh útoku lze použít k vysátí prostředků z chytrého kontraktu, jako se to stalo při [hacku DAO v roce 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Útoky reentrance jsou pro chytré kontrakty dodnes kritickým problémem, jak ukazují [veřejné seznamy exploitů reentrance](https://github.com/pcaversaccio/reentrancy-attacks).
+Shrnutí je takové, že protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provádění funkce, následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát. Tento druh útoku lze použít k vysátí prostředků z chytrého kontraktu, jako se to stalo při [hacku DAO v roce 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Útoky reentrance jsou pro chytré kontrakty i dnes kritickým problémem, jak ukazují [veřejné seznamy exploitů reentrance](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Jak zabránit útokům reentrance
-Jedním z přístupů k řešení reentrance je dodržování [vzoru checks-effects-interactions](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Tento vzor řadí provádění funkcí tak, že kód, který provádí nezbytné kontroly před pokračováním v provádění, je na prvním místě, následován kódem, který manipuluje se stavem kontraktu, a kód, který interaguje s jinými kontrakty nebo EOA, přichází na řadu jako poslední.
 
-Vzor checks-effect-interaction je použit v revidované verzi kontraktu `Victim` zobrazené níže:
+Jedním z přístupů k řešení reentrance je dodržování [vzoru kontroly-efekty-interakce (checks-effects-interactions)](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). Tento vzor řadí provádění funkcí tak, že kód, který provádí nezbytné kontroly před pokračováním v provádění, je na prvním místě, následován kódem, který manipuluje se stavem kontraktu, a kód, který interaguje s jinými kontrakty nebo EOA, přichází na řadu jako poslední.
+
+Vzor kontroly-efekty-interakce je použit v revidované verzi kontraktu `Victim` zobrazené níže:
 
 ```solidity
 contract NoLongerAVictim {
@@ -321,9 +323,9 @@ contract NoLongerAVictim {
 }
 ```
 
-Tento kontrakt provede _kontrolu_ (check) zůstatku uživatele, aplikuje _efekty_ (effects) funkce `withdraw()` (vynulováním zůstatku uživatele na 0) a přistoupí k provedení _interakce_ (interaction) (odeslání ETH na adresu uživatele). To zajišťuje, že kontrakt aktualizuje své úložiště před externím voláním, čímž se eliminuje podmínka reentrance, která umožnila první útok. Kontrakt `Attacker` by stále mohl zavolat zpět do `NoLongerAVictim`, ale protože `balances[msg.sender]` byl nastaven na 0, další výběry vyvolají chybu.
+Tento kontrakt provede _kontrolu_ (check) zůstatku uživatele, aplikuje _efekty_ (effects) funkce `withdraw()` (vynulováním zůstatku uživatele na 0) a přistoupí k provedení _interakce_ (interaction) (odeslání ETH na adresu uživatele). To zajišťuje, že kontrakt aktualizuje své úložiště před externím voláním, čímž se eliminuje podmínka reentrance, která umožnila první útok. Kontrakt `Attacker` by stále mohl zavolat zpět do `NoLongerAVictim`, ale protože `balances[msg.sender]` byl nastaven na 0, další výběry vyhodí chybu.
 
-Další možností je použít zámek vzájemného vyloučení (běžně označovaný jako „mutex“), který uzamkne část stavu kontraktu, dokud se nedokončí vyvolání funkce. To je implementováno pomocí booleovské proměnné, která je před spuštěním funkce nastavena na `true` a po dokončení vyvolání se vrátí na `false`. Jak je vidět na příkladu níže, použití mutexu chrání funkci před rekurzivními voláními, zatímco se původní vyvolání stále zpracovává, čímž se efektivně zastaví reentrance.
+Další možností je použít zámek vzájemného vyloučení (běžně označovaný jako „mutex“), který uzamkne část stavu kontraktu, dokud se nedokončí vyvolání funkce. To je implementováno pomocí booleovské proměnné, která je před provedením funkce nastavena na `true` a po dokončení vyvolání se vrátí na `false`. Jak je vidět v příkladu níže, použití mutexu chrání funkci před rekurzivními voláními, zatímco se původní vyvolání stále zpracovává, čímž se efektivně zastaví reentrance.
 
 ```solidity
 pragma solidity ^0.7.0;
@@ -360,24 +362,24 @@ K přetečení celého čísla (integer overflow) dochází, když výsledek ari
 
 K podtečení celého čísla (integer underflow) dochází z podobných důvodů: výsledek aritmetické operace klesne pod přijatelný rozsah. Řekněme, že byste se pokusili dekrementovat `0` v `uint8`, výsledek by se jednoduše přetočil na maximální reprezentovatelnou hodnotu (`255`).
 
-Jak přetečení, tak podtečení celých čísel může vést k neočekávaným změnám stavových proměnných kontraktu a mít za následek neplánované provádění. Níže je příklad ukazující, jak může útočník zneužít aritmetické přetečení v chytrém kontraktu k provedení neplatné operace:
+Jak přetečení, tak podtečení celých čísel může vést k neočekávaným změnám stavových proměnných kontraktu a mít za následek neplánované provedení. Níže je příklad ukazující, jak může útočník zneužít aritmetické přetečení v chytrém kontraktu k provedení neplatné operace:
 
 ```
 pragma solidity ^0.7.6;
 
 // Tento kontrakt je navržen tak, aby fungoval jako časový trezor.
-// Uživatel může do tohoto kontraktu vložit prostředky, ale nemůže je vybrat po dobu alespoň jednoho týdne.
-// Uživatel může také prodloužit dobu čekání nad rámec 1 týdne.
+// Uživatel může vložit do tohoto kontraktu, ale nemůže vybírat po dobu alespoň jednoho týdne.
+// Uživatel může také prodloužit dobu čekání nad rámec 1 týdne čekací doby.
 
 /*
-1. Nasadit TimeLock
-2. Nasadit Attack s adresou TimeLock
-3. Zavolat Attack.attack s odesláním 1 etheru. Okamžitě budete moci
+1. Nasaďte TimeLock
+2. Nasaďte Attack s adresou TimeLock
+3. Zavolejte Attack.attack s odesláním 1 etheru. Okamžitě budete moci
    vybrat svůj ether.
 
 Co se stalo?
-Attack způsobil přetečení TimeLock.lockTime a mohl vybrat prostředky
-před uplynutím 1týdenní čekací doby.
+Attack způsobil přetečení TimeLock.lockTime a mohl vybrat
+před uplynutím 1 týdne čekací doby.
 */
 
 contract TimeLock {
@@ -432,24 +434,26 @@ contract Attack {
 ```
 
 ##### Jak zabránit podtečení a přetečení celých čísel
-Od verze 0.8.0 kompilátor Solidity odmítá kód, který vede k podtečení a přetečení celých čísel. Kontrakty kompilované s nižší verzí kompilátoru by však měly buď provádět kontroly funkcí zahrnujících aritmetické operace, nebo používat knihovnu (např. [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)), která kontroluje podtečení/přetečení.
+
+Od verze 0.8.0 kompilátor Solidity odmítá kód, který vede k podtečení a přetečení celých čísel. Kontrakty kompilované s nižší verzí kompilátoru by však měly buď provádět kontroly funkcí zahrnujících aritmetické operace, nebo používat knihovnu (např. [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math)), která kontroluje podtečení/přetečení.
 
 #### Manipulace s orákulem {#oracle-manipulation}
 
-[Orákula](/developers/docs/oracles/) získávají offchain informace a odesílají je onchain pro použití chytrými kontrakty. S orákuly můžete navrhovat chytré kontrakty, které spolupracují s offchain systémy, jako jsou kapitálové trhy, což výrazně rozšiřuje jejich uplatnění.
+[Orákula](/developers/docs/oracles/) získávají offchain informace a odesílají je onchain, aby je mohly využívat chytré kontrakty. S orákuly můžete navrhovat chytré kontrakty, které spolupracují s offchain systémy, jako jsou kapitálové trhy, což značně rozšiřuje jejich uplatnění.
 
-Pokud je však orákulum poškozeno a odesílá nesprávné informace onchain, chytré kontrakty se provedou na základě chybných vstupů, což může způsobit problémy. To je základem „problému orákula“ (oracle problem), který se týká úkolu zajistit, aby informace z blockchainového orákula byly přesné, aktuální a včasné.
+Pokud je však orákulum poškozeno a odesílá onchain nesprávné informace, chytré kontrakty se provedou na základě chybných vstupů, což může způsobit problémy. To je základem „problému orákula“, který se týká úkolu zajistit, aby informace z blockchainového orákula byly přesné, aktuální a včasné.
 
-Souvisejícím bezpečnostním problémem je použití onchain orákula, jako je decentralizovaná burza, k získání spotové ceny aktiva. Platformy pro půjčování v odvětví [decentralizovaných financí (DeFi)](/defi/) to často dělají, aby určily hodnotu zajištění uživatele a stanovily, kolik si může půjčit.
+Souvisejícím bezpečnostním problémem je použití onchain orákula, jako je decentralizovaná burza (DEX), k získání spotové ceny aktiva. Platformy pro půjčování v odvětví [decentralizovaných financí (DeFi)](/defi/) to často dělají, aby určily hodnotu zajištění uživatele a stanovily, kolik si může půjčit.
 
 Ceny na DEX jsou často přesné, a to z velké části díky arbitrážérům, kteří obnovují paritu na trzích. Jsou však otevřené manipulaci, zejména pokud onchain orákulum vypočítává ceny aktiv na základě historických obchodních vzorců (jak tomu obvykle bývá).
 
-Útočník by například mohl uměle napumpovat spotovou cenu aktiva tím, že si vezme bleskovou půjčku těsně před interakcí s vaším kontraktem pro půjčování. Dotaz na DEX ohledně ceny aktiva by vrátil vyšší než normální hodnotu (kvůli velké „nákupní objednávce“ útočníka, která zkresluje poptávku po aktivu), což by mu umožnilo půjčit si více, než by měl. Takové „útoky pomocí bleskových půjček“ (flash loan attacks) byly použity ke zneužití spoléhání se na cenová orákula mezi DeFi aplikacemi, což protokoly stálo miliony ve ztracených prostředcích.
+Útočník by například mohl uměle napumpovat spotovou cenu aktiva tím, že si vezme bleskovou půjčku těsně před interakcí s vaším kontraktem pro půjčování. Dotaz na DEX ohledně ceny aktiva by vrátil vyšší než normální hodnotu (kvůli velkému „nákupnímu příkazu“ útočníka, který zkresluje poptávku po aktivu), což by mu umožnilo půjčit si více, než by měl. Takové „útoky pomocí bleskových půjček“ byly použity ke zneužití spoléhání se na cenová orákula mezi DeFi aplikacemi, což protokoly stálo miliony ve ztracených prostředcích.
 
 ##### Jak zabránit manipulaci s orákulem
-Minimálním požadavkem pro [zabránění manipulaci s orákulem](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) je použití decentralizované sítě orákul, která získává informace z více zdrojů, aby se zabránilo jediným bodům selhání. Ve většině případů mají decentralizovaná orákula zabudované kryptoekonomické pobídky, které povzbuzují uzly orákula k hlášení správných informací, což je činí bezpečnějšími než centralizovaná orákula.
 
-Pokud plánujete dotazovat onchain orákulum na ceny aktiv, zvažte použití takového, které implementuje mechanismus časově vážené průměrné ceny (TWAP). [TWAP orákulum](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) dotazuje cenu aktiva ve dvou různých časových okamžicích (které můžete upravit) a vypočítá spotovou cenu na základě získaného průměru. Výběr delších časových období chrání váš protokol před manipulací s cenami, protože velké objednávky provedené v nedávné době nemohou ovlivnit ceny aktiv.
+Minimálním požadavkem, jak se [vyhnout manipulaci s orákulem](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples), je použití decentralizované sítě orákul, která získává informace z více zdrojů, aby se zabránilo jediným bodům selhání. Ve většině případů mají decentralizovaná orákula zabudované kryptoekonomické pobídky, které povzbuzují uzly orákula k hlášení správných informací, což je činí bezpečnějšími než centralizovaná orákula.
+
+Pokud plánujete dotazovat onchain orákulum na ceny aktiv, zvažte použití takového, které implementuje mechanismus časově vážené průměrné ceny (TWAP). [Orákulum TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) se dotazuje na cenu aktiva ve dvou různých časových okamžicích (které můžete upravit) a vypočítá spotovou cenu na základě získaného průměru. Výběr delších časových období chrání váš protokol před manipulací s cenami, protože velké příkazy provedené v nedávné době nemohou ovlivnit ceny aktiv.
 
 ## Zdroje o bezpečnosti chytrých kontraktů pro vývojáře {#smart-contract-security-resources-for-developers}
 
@@ -457,35 +461,35 @@ Pokud plánujete dotazovat onchain orákulum na ceny aktiv, zvažte použití ta
 
 - **[Testovací nástroje a knihovny](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _Sbírka standardních oborových nástrojů a knihoven pro provádění jednotkových testů, statické analýzy a dynamické analýzy chytrých kontraktů._
 
-- **[Nástroje pro formální verifikaci](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Nástroje pro ověřování funkční správnosti chytrých kontraktů a kontrolu invariantů._
+- **[Nástroje pro formální verifikaci](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Nástroje pro ověřování funkční správnosti v chytrých kontraktech a kontrolu invariantů._
 
 - **[Služby auditu chytrých kontraktů](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Seznam organizací poskytujících služby auditu chytrých kontraktů pro vývojové projekty na Ethereu._
 
-- **[Bug bounty platformy](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Platformy pro koordinaci programů odměn za nalezení chyb (bug bounty) a odměňování zodpovědného odhalení kritických zranitelností v chytrých kontraktech._
+- **[Platformy pro bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Platformy pro koordinaci odměn za nalezení chyb (bug bounty) a odměňování zodpovědného odhalení kritických zranitelností v chytrých kontraktech._
 
-- **[Fork Checker](https://forkchecker.hashex.org/)** - _Bezplatný online nástroj pro kontrolu všech dostupných informací o forknutém kontraktu._
+- **[Fork Checker](https://forkchecker.hashex.org/)** - _Bezplatný online nástroj pro kontrolu všech dostupných informací týkajících se forknutého kontraktu._
 
-- **[ABI Encoder](https://abi.hashex.org/)** - _Bezplatná online služba pro kódování funkcí vašeho Solidity kontraktu a argumentů konstruktoru._
+- **[ABI Encoder](https://abi.hashex.org/)** - _Bezplatná online služba pro kódování funkcí vašeho kontraktu v Solidity a argumentů konstruktoru._
 
 - **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Statický analyzátor pro Solidity, který prochází abstraktní syntaktické stromy (AST), aby přesně určil podezřelé zranitelnosti a vypsal problémy ve snadno čitelném formátu markdown._
 
 ### Nástroje pro monitorování chytrých kontraktů {#smart-contract-monitoring-tools}
 
-- **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _Nástroj pro získávání upozornění v reálném čase, když se ve vašich chytrých kontraktech nebo peněženkách stanou neobvyklé nebo neočekávané události._
+- **[Tenderly Real-Time Alerting](https://tenderly.co/monitoring)** - _Nástroj pro získávání upozornění v reálném čase, když se na vašich chytrých kontraktech nebo peněženkách stanou neobvyklé nebo neočekávané události._
 
 ### Nástroje pro bezpečnou správu chytrých kontraktů {#smart-contract-administration-tools}
 
 - **[Safe](https://safe.global/)** - _Peněženka ve formě chytrého kontraktu běžící na Ethereu, která vyžaduje, aby transakci před jejím provedením schválil minimální počet lidí (M z N)._
 
-- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Knihovny kontraktů pro implementaci administrativních funkcí, včetně vlastnictví kontraktů, aktualizací, řízení přístupu, správy, možnosti pozastavení a dalších._
+- **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/5.x/)** - _Knihovny kontraktů pro implementaci administrativních funkcí, včetně vlastnictví kontraktu, upgradů, řízení přístupu, správy, možnosti pozastavení a dalších._
 
 ### Služby auditu chytrých kontraktů {#smart-contract-auditing-services}
 
-- **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Služba auditu chytrých kontraktů, která pomáhá projektům napříč blockchainovým ekosystémem zajistit, že jsou jejich protokoly připraveny ke spuštění a vytvořeny tak, aby chránily uživatele._
+- **[ConsenSys Diligence](https://diligence.consensys.io/)** - _Služba auditu chytrých kontraktů, která pomáhá projektům napříč blockchainovým ekosystémem zajistit, že jejich protokoly jsou připraveny ke spuštění a vytvořeny tak, aby chránily uživatele._
 
-- **[CertiK](https://www.certik.com/)** - _Firma zabývající se bezpečností blockchainu, která je průkopníkem ve využívání špičkové technologie formální verifikace u chytrých kontraktů a blockchainových sítí._
+- **[CertiK](https://www.certik.com/)** - _Firma zabývající se bezpečností blockchainu, která je průkopníkem ve využívání špičkové technologie formální verifikace na chytrých kontraktech a blockchainových sítích._
 
-- **[Trail of Bits](https://www.trailofbits.com/)** - _Společnost zabývající se kybernetickou bezpečností, která kombinuje bezpečnostní výzkum s mentalitou útočníka za účelem snížení rizik a posílení kódu._
+- **[Trail of Bits](https://www.trailofbits.com/)** - _Společnost zabývající se kybernetickou bezpečností, která kombinuje bezpečnostní výzkum s mentalitou útočníka za účelem snížení rizika a posílení kódu._
 
 - **[PeckShield](https://peckshield.com/)** - _Společnost zabývající se bezpečností blockchainu, která nabízí produkty a služby pro bezpečnost, soukromí a použitelnost celého blockchainového ekosystému._
 
@@ -495,59 +499,59 @@ Pokud plánujete dotazovat onchain orákulum na ceny aktiv, zvažte použití ta
 
 - **[Runtime Verification](https://runtimeverification.com/)** - _Bezpečnostní společnost specializující se na formální modelování a verifikaci chytrých kontraktů._
 
-- **[Hacken](https://hacken.io)** - _Auditor kybernetické bezpečnosti ve Web3, který přináší komplexní přístup k bezpečnosti blockchainu._
+- **[Hacken](https://hacken.io)** - _Auditor kybernetické bezpečnosti ve Web3, který přináší 360stupňový přístup k bezpečnosti blockchainu._
 
-- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Služby auditu pro Solidity a Cairo, které zajišťují integritu chytrých kontraktů a bezpečnost uživatelů napříč sítěmi Ethereum a Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Služby auditu pro Solidity a Cairo, zajišťující integritu chytrých kontraktů a bezpečnost uživatelů napříč Ethereem a Starknetem._
 
-- **[HashEx](https://hashex.org/)** - _HashEx se zaměřuje na audit blockchainu a chytrých kontraktů pro zajištění bezpečnosti kryptoměn a poskytuje služby jako vývoj chytrých kontraktů, penetrační testování a blockchainové poradenství._
+- **[HashEx](https://hashex.org/)** - _HashEx se zaměřuje na audit blockchainu a chytrých kontraktů k zajištění bezpečnosti kryptoměn a poskytuje služby jako vývoj chytrých kontraktů, penetrační testování a blockchainové poradenství._
 
-- **[Code4rena](https://code4rena.com/)** - _Platforma pro kompetitivní audity, která motivuje odborníky na bezpečnost chytrých kontraktů k hledání zranitelností a pomáhá tak zvyšovat bezpečnost Web3._
+- **[Code4rena](https://code4rena.com/)** - _Platforma pro kompetitivní audity, která motivuje odborníky na bezpečnost chytrých kontraktů k hledání zranitelností a pomáhá tak učinit Web3 bezpečnějším._
 
 - **[CodeHawks](https://codehawks.com/)** - _Platforma pro kompetitivní audity, která pořádá soutěže v auditu chytrých kontraktů pro bezpečnostní výzkumníky._
 
-- **[Cyfrin](https://cyfrin.io)** - _Špička v oblasti bezpečnosti Web3, která podporuje krypto bezpečnost prostřednictvím produktů a služeb auditu chytrých kontraktů._
+- **[Cyfrin](https://cyfrin.io)** - _Špička v oblasti bezpečnosti Web3, která rozvíjí krypto bezpečnost prostřednictvím produktů a služeb auditu chytrých kontraktů._
 
-- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Firma zabývající se bezpečností Web3, která nabízí bezpečnostní audity blockchainových systémů prostřednictvím týmu zkušených auditorů a nejlepších nástrojů ve své třídě._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Bezpečnostní firma ve Web3 nabízející bezpečnostní audity pro blockchainové systémy prostřednictvím týmu zkušených auditorů a nejlepších nástrojů ve své třídě._
 
-- **[Oxorio](https://oxor.io/)** - _Audity chytrých kontraktů a služby bezpečnosti blockchainu s odbornými znalostmi v oblasti EVM, Solidity, ZK a meziřetězcových technologií pro krypto firmy a DeFi projekty._
+- **[Oxorio](https://oxor.io/)** - _Audity chytrých kontraktů a služby bezpečnosti blockchainu s odbornými znalostmi v oblasti EVM, Solidity, ZK a meziřetězcových technologií pro krypto firmy a projekty decentralizovaných financí (DeFi)._
 
-- **[Inference](https://inference.ag/)** - _Společnost zabývající se bezpečnostními audity, specializující se na audit chytrých kontraktů pro blockchainy založené na EVM. Díky svým zkušeným auditorům identifikují potenciální problémy a navrhují praktická řešení k jejich opravě před nasazením._
+- **[Inference](https://inference.ag/)** - _Společnost zabývající se bezpečnostním auditem, specializovaná na audit chytrých kontraktů pro blockchainy založené na EVM. Díky svým odborným auditorům identifikují potenciální problémy a navrhují praktická řešení k jejich opravě před nasazením._
 
-### Bug bounty platformy {#bug-bounty-platforms}
+### Platformy pro bug bounty {#bug-bounty-platforms}
 
-- **[Immunefi](https://immunefi.com/)** - _Bug bounty platforma pro chytré kontrakty a DeFi projekty, kde bezpečnostní výzkumníci kontrolují kód, odhalují zranitelnosti, dostávají zaplaceno a činí krypto bezpečnějším._
+- **[Immunefi](https://immunefi.com/)** - _Platforma pro bug bounty pro chytré kontrakty a projekty decentralizovaných financí (DeFi), kde bezpečnostní výzkumníci kontrolují kód, odhalují zranitelnosti, dostávají zaplaceno a činí krypto bezpečnějším._
 
 - **[HackerOne](https://www.hackerone.com/)** - _Platforma pro koordinaci zranitelností a bug bounty, která propojuje podniky s penetračními testery a výzkumníky v oblasti kybernetické bezpečnosti._
 
-- **[HackenProof](https://hackenproof.com/)** - _Expertní bug bounty platforma pro krypto projekty (DeFi, chytré kontrakty, peněženky, CEX a další), kde bezpečnostní profesionálové poskytují služby třídění a výzkumníci dostávají zaplaceno za relevantní, ověřená hlášení o chybách._
+- **[HackenProof](https://hackenproof.com/)** - _Expertní platforma pro bug bounty pro krypto projekty (DeFi, chytré kontrakty, peněženky, CEX a další), kde bezpečnostní profesionálové poskytují služby třídění (triage) a výzkumníci dostávají zaplaceno za relevantní, ověřená hlášení o chybách._
 
--  **[Sherlock](https://www.sherlock.xyz/)** - _Pojistitel ve Web3 pro bezpečnost chytrých kontraktů, s výplatami pro auditory spravovanými prostřednictvím chytrých kontraktů, aby bylo zajištěno spravedlivé proplacení relevantních chyb._
+-  **[Sherlock](https://www.sherlock.xyz/)** - _Upisovatel (underwriter) ve Web3 pro bezpečnost chytrých kontraktů, s výplatami pro auditory spravovanými prostřednictvím chytrých kontraktů, aby bylo zajištěno spravedlivé proplacení relevantních chyb._
 
--  **[CodeHawks](https://www.codehawks.com/)** - _Kompetitivní bug bounty platforma, kde se auditoři účastní bezpečnostních soutěží a výzev a (brzy) i vlastních soukromých auditů._
+-  **[CodeHawks](https://www.codehawks.com/)** - _Platforma pro kompetitivní bug bounty, kde se auditoři účastní bezpečnostních soutěží a výzev a (brzy) i vlastních soukromých auditů._
 
-### Publikace o známých zranitelnostech a exploitech chytrých kontraktů {#common-smart-contract-vulnerabilities-and-exploits}
+### Publikace známých zranitelností a exploitů chytrých kontraktů {#common-smart-contract-vulnerabilities-and-exploits}
 
-- **[ConsenSys: Známé útoky na chytré kontrakty](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Vysvětlení nejvýznamnějších zranitelností kontraktů srozumitelné pro začátečníky, s ukázkovým kódem pro většinu případů._
+- **[ConsenSys: Známé útoky na chytré kontrakty](https://consensysdiligence.github.io/smart-contract-best-practices/attacks/)** - _Vysvětlení nejvýznamnějších zranitelností kontraktů přátelské pro začátečníky, s ukázkovým kódem pro většinu případů._
 
 - **[SWC Registry](https://swcregistry.io/)** - _Spravovaný seznam položek Common Weakness Enumeration (CWE), které se vztahují na chytré kontrakty na Ethereu._
 
-- **[Rekt](https://rekt.news/)** - _Pravidelně aktualizovaná publikace o významných krypto hacích a exploitech, spolu s podrobnými post-mortem zprávami._
+- **[Rekt](https://rekt.news/)** - _Pravidelně aktualizovaná publikace o významných krypto hackech a exploitech, spolu s podrobnými post-mortem zprávami._
 
 ### Výzvy pro výuku bezpečnosti chytrých kontraktů {#challenges-for-learning-smart-contract-security}
 
 - **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Spravovaný seznam blockchainových bezpečnostních wargames, výzev a soutěží [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) a popisů jejich řešení._
 
-- **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _Wargame pro výuku ofenzivní bezpečnosti chytrých kontraktů v DeFi a budování dovedností v hledání chyb a bezpečnostním auditu._
+- **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _Wargame pro výuku ofenzivní bezpečnosti chytrých kontraktů v decentralizovaných financích (DeFi) a budování dovedností v hledání chyb a bezpečnostním auditu._
 
-- **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Wargame založená na Web3/Solidity, kde každá úroveň představuje chytrý kontrakt, který je třeba „hacknout“._
+- **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Wargame založená na Web3/Solidity, kde každá úroveň je chytrý kontrakt, který je třeba „hacknout“._
 
-- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Výzva v hackování chytrých kontraktů, zasazená do fantasy dobrodružství. Úspěšné dokončení výzvy také poskytuje přístup k soukromému bug bounty programu._
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Výzva v hackování chytrých kontraktů, zasazená do fantasy dobrodružství. Úspěšné dokončení výzvy také poskytuje přístup k soukromému programu bug bounty._
 
 ### Osvědčené postupy pro zabezpečení chytrých kontraktů {#smart-contract-security-best-practices}
 
 - **[ConsenSys: Osvědčené postupy pro bezpečnost chytrých kontraktů na Ethereu](https://consensys.github.io/smart-contract-best-practices/)** - _Komplexní seznam pokynů pro zabezpečení chytrých kontraktů na Ethereu._
 
-- **[Nascent: Simple Security Toolkit](https://github.com/nascentxyz/simple-security-toolkit)** - _Sbírka praktických průvodců a kontrolních seznamů zaměřených na bezpečnost při vývoji chytrých kontraktů._
+- **[Nascent: Simple Security Toolkit](https://github.com/nascentxyz/simple-security-toolkit)** - _Sbírka praktických průvodců a kontrolních seznamů zaměřených na bezpečnost pro vývoj chytrých kontraktů._
 
 - **[Solidity Patterns](https://fravoll.github.io/solidity-patterns/)** - _Užitečná kompilace bezpečných vzorů a osvědčených postupů pro programovací jazyk chytrých kontraktů Solidity._
 
@@ -555,7 +559,7 @@ Pokud plánujete dotazovat onchain orákulum na ceny aktiv, zvažte použití ta
 
 - **[Standard pro ověřování bezpečnosti chytrých kontraktů](https://github.com/securing/SCSVS)** - _Čtrnáctidílný kontrolní seznam vytvořený za účelem standardizace bezpečnosti chytrých kontraktů pro vývojáře, architekty, bezpečnostní auditory a dodavatele._
 
-- **[Výuka bezpečnosti a auditu chytrých kontraktů](https://updraft.cyfrin.io/courses/security)** - _Ultimátní kurz bezpečnosti a auditu chytrých kontraktů, vytvořený pro vývojáře chytrých kontraktů, kteří chtějí zlepšit své osvědčené bezpečnostní postupy a stát se bezpečnostními výzkumníky._
+- **[Naučte se bezpečnost a audit chytrých kontraktů](https://updraft.cyfrin.io/courses/security)** - _Ultimátní kurz bezpečnosti a auditu chytrých kontraktů, vytvořený pro vývojáře chytrých kontraktů, kteří chtějí zlepšit své osvědčené bezpečnostní postupy a stát se bezpečnostními výzkumníky._
 
 ### Návody na bezpečnost chytrých kontraktů {#tutorials-on-smart-contract-security}
 

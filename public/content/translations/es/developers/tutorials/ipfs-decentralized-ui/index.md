@@ -12,7 +12,7 @@ lang: es
 published: 2024-06-29
 ---
 
-Escribiste una nueva e increíble aplicación descentralizada (dapp). Incluso has escrito una [interfaz de usuario](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) para ella. Pero ahora temes que alguien intente censurarla derribando tu interfaz de usuario, que no es más que un servidor en la nube. En este tutorial aprenderás cómo evitar la censura subiendo tu interfaz de usuario al **[sistema de archivos interplanetario (IPFS)](https://ipfs.tech/developers/)** para que cualquier persona interesada pueda fijarla en un servidor para acceder a ella en el futuro.
+Escribiste una nueva e increíble aplicación descentralizada (dapp). Incluso has escrito una [interfaz de usuario](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) para ella. Pero ahora temes que alguien intente censurarla derribando tu interfaz de usuario, que no es más que un servidor en la nube. En este tutorial aprenderás cómo evitar la censura subiendo tu interfaz de usuario al **[sistema de archivos interplanetario (IPFS)](https://docs.ipfs.tech/)** para que cualquier persona interesada pueda fijarla en un servidor para acceder a ella en el futuro.
 
 Podrías usar un servicio de terceros como [Fleek](https://resources.fleek.xyz/docs/) para que haga todo el trabajo. Este tutorial es para personas que quieren hacer lo suficiente para entender lo que están haciendo, incluso si supone más trabajo.
 

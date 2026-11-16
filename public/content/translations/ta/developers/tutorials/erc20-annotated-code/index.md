@@ -13,7 +13,7 @@ published: 2021-03-09
 
 எத்திரியம் பயன்பாடுகளில் மிகவும் பொதுவான ஒன்று, ஒரு குழு வர்த்தகம் செய்யக்கூடிய ஒரு வில்லையை (token), அதாவது அவர்களின் சொந்த நாணயத்தை உருவாக்குவதாகும். இந்த வில்லைகள் பொதுவாக [ERC-20](/developers/docs/standards/tokens/erc-20/) என்ற தரநிலையைப் பின்பற்றுகின்றன. இந்தத் தரநிலையானது, அனைத்து ERC-20 வில்லைகளுடனும் வேலை செய்யும் நீர்மைத் தொகுப்புகள் (liquidity pools) மற்றும் பணப்பைகள் (wallets) போன்ற கருவிகளை எழுதச் சாத்தியமாக்குகிறது. இந்தக் கட்டுரையில், [ஓப்பன்செப்பெலின் Solidity ERC20 செயலாக்கம்](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol) மற்றும் [இடைமுக வரையறை](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) ஆகியவற்றை நாம் பகுப்பாய்வு செய்வோம்.
 
-இது குறிப்புகளுடன் கூடிய மூலக் குறியீடாகும். நீங்கள் ERC-20 ஐச் செயல்படுத்த விரும்பினால், [இந்த வழிகாட்டுதலைப் படிக்கவும்](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+இது குறிப்புகளுடன் கூடிய மூலக் குறியீடாகும். நீங்கள் ERC-20 ஐச் செயல்படுத்த விரும்பினால், [இந்த வழிகாட்டுதலைப் படிக்கவும்](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## இடைமுகம் {#the-interface}
 

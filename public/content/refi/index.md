@@ -1,6 +1,6 @@
 ---
 title: Regenerative Finance (ReFi)
-description: An overview of ReFi and its current use cases.
+description: "What is regenerative finance (ReFi)? Learn how Ethereum tools fund public goods, climate action and community projects that create lasting positive impact."
 lang: en
 template: use-cases
 sidebarDepth: 2

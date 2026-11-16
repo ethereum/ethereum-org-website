@@ -1,6 +1,6 @@
 ---
 title: How to revoke smart contract access to your crypto funds
-description: A how to guide on revoking exploitative smart contract token access
+description: "A step-by-step guide to revoking token approvals: find which smart contracts can spend your crypto and remove access to protect your funds."
 lang: en
 ---
 

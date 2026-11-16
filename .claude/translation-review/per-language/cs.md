@@ -137,3 +137,55 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - `plyn` persists on unchanged lines (fusaka 140/142, page-roadmap 104, zk-rollups 183) -- whole-file cleanup owed.
 - shielded pool split `stíněné`/`chráněný fond`; `updatu` vs `upgrade`; `Odsloužená doba` prison-sense calque.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 8.8/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `roadmap/glamsterdam:42` `limitu plynu` -> `limitu gasu` (third recurrence; glossary compound `gas limit` = `limit plynu` contradicts `gas` = `gas`, normalization queue 13).
+
+**Open (warnings):**
+
+- `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
+- `přístup s řízeným přístupem` (permissioned glossary phrase bolted onto access); `zajištěná` read as collateralized; `reklamace` for card disputes.
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
+
+- Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 9.4/10
+
+- Fixed: `[EVM-based Chains]` -> `[Řetězce založené na EVM]` (regression to English).
+- Open: `[Testnet Faucet]` label English (glossary `testnetový faucet`).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- scam-token-tricks:441 typo (`není podezřelná` -> `není podezřelá`)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:4,5,7,9,10,12,13,14,17,18,26,27,32,34,35: Differs from ETHGlossary `self-custody` = `vlastní správa` (a translate term, high confidence). The phrase appears 18 times, only in this new file. Elsewhere cs uses `s vlastní správou` 14 times (`s vlastním držením` -> `s vlastní správou`)
+- developers/tutorials/app-plasma/index.md:970: Differs from ETHGlossary `verifier` = `ověřovatel` (translate term). The same file uses `ověřovatel` at lines 1158, 1177 and 1190
+- 11 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Czech prose is fluent and structurally clean, with no build- or navigation-breaking defects. The main fixes are the self-custody term deviation in the new wallet-descriptions file, three English founders tags, and one misspelled word.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `limit plynu` changed to `limit gasu` (mint, 4x; prose and code comments)
+
+**Notes:**
+
+- Warnings: NFT gender drifts between masculine and neuter across the NFT series.

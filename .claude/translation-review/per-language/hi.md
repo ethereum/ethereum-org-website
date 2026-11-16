@@ -128,3 +128,58 @@ Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; gloss
 
 - EIP/API/DeFi/NFT over-expansion (#80), incl. duplicated `(EIP) (EIP-8081)` in hegota:42.
 - `खाता` oblique-case errors in open-access (4 keys); Geth back to Latin in bug-bounty.
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 7.6/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `smart-contracts/security/index.md` full MT retranslation regressed 143 `कॉन्ट्रैक्ट` + 11 `ओरेकल` -> restored `अनुबंध`/`अनुबंधों` and `ऑरेकल` (anchors/fences/links verified unchanged).
+- `small-business` `compare-description` 120-day dispute window inverted (after -> for 120 days).
+- `enterprise-privacy` database corruption `भ्रष्टाचार` -> `दूषित होने`; relational against `के खिलाफ` -> `के साथ`.
+- `enterprise-l2s` `deployment-cta` left as English `Go` -> `जाएं`.
+- `लेनदेन` -> `लेन-देन` (x7), smart contract glossary fixes in org JSON.
+
+**Open (warnings):**
+
+- Security file retranslation itself was legit (dev copy had 6 missing anchors + stray fence).
+
+## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14 -- Score 9.0/10
+
+- Warning (pre-existing, unfixed): wagmi uses `कॉन्ट्रैक्ट` 22x vs glossary `अनुबंध`; "evaluate to" rendered as "evaluate X" (L238, L303).
+
+## PR #19486 (intl/pending-dev, networks quarantine release) -- 2026-10-15 -- Score 8.6/10
+
+- Fixed: glossary `staker` -> `स्टेकर/स्टेकरों` (3x), `peer` -> `पीयरों` (L17).
+- Open: nukta `फ़ॉसेट` (32x) vs glossary `faucet` = `फॉसेट`; `फ़ॉसेट` is an alias of `testnet faucet`, upstream inconsistency. L122 ब्लॉकचेन gender `करता` -> `करती`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security: `कॉन्ट्रैक्ट` -> `अनुबंध` restored (141 sites; `ओपनजेपेलिन कॉन्ट्रैक्ट्स` kept)
+- app-plasma: `लेनदेन` -> `लेन-देन` restored (56 sites; `लेनदेन हैश` kept)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:442: `oracle` is spelled two ways in one paragraph. The glossary form is `ऑरेकल` (16 other sites use it). (`"ओरेकल समस्या"` -> `"ऑरेकल समस्या"`)
+- developers/docs/smart-contracts/security/index.md:442: Second instance of the same oracle spelling (`ब्लॉकचेन ओरेकल` -> `ब्लॉकचेन ऑरेकल`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and structurally clean, and the new prediction-markets and wallet copy is accurate. The score is pulled down by two retranslations that went back to non-glossary forms: the security page's contract term (the third time this has happened) and app-plasma's transaction term.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Glossary itself splits एथेरियम (Foundation) and इथेरियम.

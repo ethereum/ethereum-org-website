@@ -28,17 +28,17 @@ Peningkatan ini memastikan Ethereum tetap cepat, terjangkau, dan terdesentralisa
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Catatan: Artikel ini menyoroti pilihan Proposal Peningkatan Ethereum (EIP) yang dijadwalkan untuk disertakan dalam Glamsterdam. Proposal terjadwal tambahan yang sedang diuji di devnet meliputi EIP-7610, EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, EIP-8246, dan EIP-8282. Cakupan telah dibekukan tetapi masih dapat berubah sebelum Mainnet, karena meta EIP masih dalam bentuk draf. Untuk pembaruan status terbaru, lihat [peningkatan Glamsterdam di Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Catatan: Artikel ini menyoroti pilihan Proposal Peningkatan Ethereum (EIP) yang dijadwalkan untuk disertakan dalam Glamsterdam. Proposal terjadwal tambahan yang sedang diuji di devnet meliputi EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246, dan EIP-8282. Ruang lingkupnya telah dibekukan tetapi masih dapat berubah sebelum Mainnet, karena EIP meta masih dalam bentuk draf. Untuk pembaruan status terbaru, lihat [peningkatan Glamsterdam di Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Jika Anda ingin menambahkan EIP yang sedang dipertimbangkan untuk Glamsterdam, tetapi belum ditambahkan ke halaman ini, [pelajari cara berkontribusi ke ethereum.org di sini](/contributing/).
+Jika Anda ingin menambahkan EIP yang sedang dipertimbangkan untuk Glamsterdam, tetapi belum ditambahkan ke halaman ini, [pelajari cara berkontribusi pada ethereum.org di sini](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 Peningkatan Glamsterdam berpusat pada tiga tujuan utama:
 
-- Mempercepat pemrosesan (paralelisasi): Mengatur ulang cara jaringan mencatat dependensi data, sehingga dapat memproses banyak transaksi dengan aman pada saat yang sama alih-alih dalam urutan satu per satu yang lambat.
-- Memperluas kapasitas: Membagi tugas berat dalam membuat dan memverifikasi blok, memberi jaringan lebih banyak waktu untuk menyebarkan jumlah data yang lebih besar tanpa melambat.
+- Mempercepat pemrosesan (paralelisasi): Mengatur ulang cara jaringan mencatat dependensi data, sehingga dapat memproses banyak transaksi secara bersamaan dengan aman alih-alih dalam urutan satu per satu yang lambat.
+- Memperluas kapasitas: Membagi beban kerja berat dalam membuat dan memverifikasi blok, memberi jaringan lebih banyak waktu untuk menyebarkan jumlah data yang lebih besar tanpa melambat.
 - Mencegah pembengkakan basis data (keberlanjutan): Menyesuaikan biaya jaringan untuk secara akurat mencerminkan biaya perangkat keras jangka panjang dari penyimpanan data baru, membuka jalan bagi peningkatan batas gas di masa mendatang sambil mencegah penurunan kinerja perangkat keras.
 
 Singkatnya, Glamsterdam akan memperkenalkan perubahan struktural untuk memastikan bahwa seiring dengan peningkatan kapasitas jaringan, jaringan tersebut tetap berkelanjutan dan kinerjanya tetap tinggi.

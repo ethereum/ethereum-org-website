@@ -11,7 +11,14 @@ import { getToolKey } from "@/lib/utils/getToolKey"
  * standalone page's related-tools grid so the card styling lives in one place.
  * Memoized so a filter/search re-render only re-renders cards whose tool changed.
  */
-const ToolCard = memo(function ToolCard({ tool }: { tool: ToolCardData }) {
+const ToolCard = memo(function ToolCard({
+  tool,
+  cropsNativeLabel,
+}: {
+  tool: ToolCardData
+  /** Translated badge text; the badge renders only when `tool.crops_native` is set */
+  cropsNativeLabel?: string
+}) {
   return (
     // content-visibility lets the browser skip layout/paint of off-screen
     // cards while keeping them in the server HTML for crawlers
@@ -23,6 +30,8 @@ const ToolCard = memo(function ToolCard({ tool }: { tool: ToolCardData }) {
         descriptionClassName="text-sm [&>p]:text-body-medium"
         descriptionMaxLines={2}
         descriptionExpandable={false}
+        category={tool.crops_native ? cropsNativeLabel : undefined}
+        categoryTagStatus="success"
         thumbnail={tool.thumbnail_url ?? undefined}
         fallbackIcon={
           <AppWindowMac className="size-12 text-body-medium group-hover/appcard:text-primary-hover" />

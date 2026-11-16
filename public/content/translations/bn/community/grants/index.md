@@ -10,7 +10,7 @@ lang: bn
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>ফাউন্ডাররা, আপনাদের ব্যবসাকে ত্বরান্বিত করতে সাহায্য প্রয়োজন? [ফাউন্ডার সাপোর্টে যান](/founders/)</div>
+<div>ফাউন্ডাররা, আপনাদের ব্যবসাকে ত্বরান্বিত করতে সাহায্য প্রয়োজন? [ফাউন্ডার সাপোর্টে যান](/organizations/founders/)</div>
 </Alert>
 
 ## বিস্তৃত ইথেরিয়াম ইকোসিস্টেম {#broad-ethereum-ecosystem}

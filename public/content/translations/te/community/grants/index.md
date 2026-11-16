@@ -10,7 +10,7 @@ lang: te
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>వ్యవస్థాపకులారా, మీ వ్యాపారాన్ని వేగవంతం చేయడంలో సహాయం కావాలా? [ఫౌండర్స్ సపోర్ట్‌కి వెళ్లండి](/founders/)</div>
+<div>వ్యవస్థాపకులారా, మీ వ్యాపారాన్ని వేగవంతం చేయడంలో సహాయం కావాలా? [ఫౌండర్స్ సపోర్ట్‌కి వెళ్లండి](/organizations/founders/)</div>
 </Alert>
 
 ## విస్తృత ఎథీరియం ఎకోసిస్టమ్ {#broad-ethereum-ecosystem}

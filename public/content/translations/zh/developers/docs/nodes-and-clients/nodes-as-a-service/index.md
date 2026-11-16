@@ -209,7 +209,7 @@ sidebarDepth: 2
     - 访问 50 多条区块链节点
 
 - [**Infura**](https://infura.io/)
-  - [文档](https://infura.io/docs)
+  - [文档](https://docs.infura.io/)
   - 功能
     - 免费层级选项
     - 随用随扩展

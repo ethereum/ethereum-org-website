@@ -104,10 +104,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "what-is-ether",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "what-is-ether" }}
             heroImg={heroImg}
             title={t("page-what-is-ether-title")}
             description={t("page-what-is-ether-hero-description-1")}
@@ -450,6 +447,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               ),
             })}
           </p>
+          <LinkWithArrow href="/what-is-ether/supply/">
+            {t("page-what-is-ether-what-is-the-eth-supply-learn-more")}
+          </LinkWithArrow>
         </Section>
 
         <Section id={getIdFromHash(tocItems[6].url)}>

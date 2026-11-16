@@ -4,46 +4,66 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
+
+const getUrlBreadcrumbItems = (locale: string, slug: string) => {
+  const items = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "ethereum.org",
+      item: normalizeUrlForJsonLd(locale, "/"),
+    },
+  ]
+  let currentPath = ""
+  slug
+    .split("/")
+    .filter(Boolean)
+    .forEach((part, index) => {
+      currentPath += "/" + part
+      items.push({
+        "@type": "ListItem",
+        position: index + 2,
+        name: part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " "),
+        item: normalizeUrlForJsonLd(locale, `${currentPath}/`),
+      })
+    })
+  return items
+}
 
 export default async function SlugJsonLD({
   locale,
   slug,
   frontmatter,
   contributors,
+  layout,
 }: {
   locale: string
   slug: string
+  layout: string
   frontmatter: Frontmatter
   contributors: FileContributor[]
 }) {
-  const url = normalizeUrlForJsonLd(locale, `/${slug}`)
+  const url = normalizeUrlForJsonLd(locale, `/${slug}/`)
 
-  // Generate breadcrumb items for the slug path
-  const breadcrumbItems = [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: normalizeUrlForJsonLd(locale, "/"),
-    },
-  ]
-
-  // Add breadcrumb items for each part of the slug path
-  const slugParts = slug.split("/").filter(Boolean)
-  let currentPath = ""
-
-  slugParts.forEach((part, index) => {
-    currentPath += "/" + part
-    breadcrumbItems.push({
-      "@type": "ListItem",
-      position: index + 2,
-      name: part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " "),
-      item: normalizeUrlForJsonLd(locale, currentPath),
-    })
-  })
+  // Docs pages render a sidebar instead of breadcrumbs, so their trail
+  // follows the URL
+  const breadcrumb =
+    layout === "docs"
+      ? {
+          "@type": "BreadcrumbList",
+          itemListElement: getUrlBreadcrumbItems(locale, slug),
+        }
+      : await getBreadcrumbListJsonLd(
+          locale,
+          slug,
+          layout === "tutorial"
+            ? frontmatter.breadcrumb || frontmatter.title
+            : undefined
+        )
 
   // Map contributors to schema.org format
   const contributorList = contributors.map((contributor) => ({
@@ -52,7 +72,7 @@ export default async function SlugJsonLD({
     url: contributor.html_url,
   }))
 
-  const { authorGraphNodes, authorIds } = resolveAuthorsFromFrontmatter(
+  const { authorGraphNodes, authorReferences } = resolveAuthorsFromFrontmatter(
     frontmatter.authors ?? frontmatter.author
   )
 
@@ -71,13 +91,10 @@ export default async function SlugJsonLD({
         description: frontmatter.description,
         url,
         inLanguage: locale,
-        author: authorIds,
+        author: authorReferences,
         contributor: contributorList,
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: breadcrumbItems,
-        },
+        breadcrumb,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: articleId,
@@ -91,7 +108,7 @@ export default async function SlugJsonLD({
         image: frontmatter.image
           ? `https://ethereum.org${frontmatter.image}`
           : undefined,
-        author: authorIds,
+        author: authorReferences,
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: frontmatter.published,

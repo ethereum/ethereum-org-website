@@ -1,6 +1,6 @@
 ---
-title: Akıllı sözleşmelerle etkileşim kurma
-description: Ethereum'da halihazırda dağıtılmış olan akıllı sözleşmelerden nasıl veri okunacağını ve onlara nasıl veri yazılacağını öğrenin.
+title: "Akıllı sözleşmelerle etkileşim kurma"
+description: "Ethereum'da halihazırda dağıtılmış olan akıllı sözleşmelerden nasıl veri okunacağını ve onlara nasıl veri yazılacağını öğrenin."
 lang: tr
 ---
 
@@ -82,7 +82,7 @@ Geliştiriciler genellikle bir web uygulamasından, arka uçtan veya betikten s�
 
 - **[ethers.js](https://docs.ethers.org/)** - Sunucu tarafı betikleri ve botlar için Node.js'de de çalışır
 - **[web3.py](https://web3py.readthedocs.io/)** - Ethereum etkileşimi için Python kütüphanesi
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Geth ekibinden resmi Go kütüphanesi
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Geth ekibinden resmi Go kütüphanesi
 
 ### Örnek: Viem ile bir token bakiyesini okuma {#example-viem}
 

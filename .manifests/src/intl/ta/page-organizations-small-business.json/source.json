@@ -1,0 +1,615 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-organizations-small-business.json",
+  "generatedAt": "2026-10-14T17:41:31.531Z",
+  "rootHash": "4596fb028ce7",
+  "tree": {
+    "contentHash": "78bbaf30ca4d",
+    "anchorHash": "10a043606a79",
+    "children": {
+      "page-organizations-small-business-adoption-description": {
+        "contentHash": "eed51b5da638",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-adoption-title": {
+        "contentHash": "5038e0ea3320",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-caption": {
+        "contentHash": "c966d0a93f20",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-col-card": {
+        "contentHash": "be3702e3f1af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-col-cash": {
+        "contentHash": "e2da108f6300",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-col-stablecoins": {
+        "contentHash": "6835a4ffbfda",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-description": {
+        "contentHash": "51b5c0cedae1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8cce64eb8363",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-small-business-compare-privacy": {
+        "contentHash": "a430920ffc3c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2607a0ddde6f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-small-business-compare-row-access": {
+        "contentHash": "365c7e5705e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-access-card": {
+        "contentHash": "fcd80656e8b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-access-cash": {
+        "contentHash": "0fe556b25edd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-access-stablecoins": {
+        "contentHash": "f69dd21b4fae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-fees": {
+        "contentHash": "0661406b7fce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-fees-card": {
+        "contentHash": "c4d93b9aa1f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-fees-cash": {
+        "contentHash": "dc937b598926",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-fees-stablecoins": {
+        "contentHash": "8947669d0a48",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-final": {
+        "contentHash": "2da73eafa4e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-final-card": {
+        "contentHash": "eaa43759021c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-final-cash": {
+        "contentHash": "0fe556b25edd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-final-stablecoins": {
+        "contentHash": "a73592a80dae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-moving": {
+        "contentHash": "a7be0f4ab38c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-moving-card": {
+        "contentHash": "076834358a0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-moving-cash": {
+        "contentHash": "3597e64a61d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-moving-stablecoins": {
+        "contentHash": "55dc8fc0cca9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-reach": {
+        "contentHash": "0e82bd01ec28",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-reach-card": {
+        "contentHash": "7ab0d08f19d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-reach-cash": {
+        "contentHash": "36b727bd848c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-reach-stablecoins": {
+        "contentHash": "392881804e43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-refunds": {
+        "contentHash": "0942c1799b5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-refunds-card": {
+        "contentHash": "d62c65c04fbe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-refunds-cash": {
+        "contentHash": "f4d18e706d36",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-refunds-stablecoins": {
+        "contentHash": "f4d18e706d36",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-theft": {
+        "contentHash": "4344c600e961",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-theft-card": {
+        "contentHash": "f793de205ead",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-theft-cash": {
+        "contentHash": "338cb48c50ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-row-theft-stablecoins": {
+        "contentHash": "fb175e9e9956",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-compare-title": {
+        "contentHash": "25d8494ea78f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-card-final": {
+        "contentHash": "2b785976f067",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-card-title": {
+        "contentHash": "c0b64214200f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-discount-tip": {
+        "contentHash": "e366ab0c2f07",
+        "anchorHash": "67213d7607f6",
+        "children": {
+          "prose:2": {
+            "contentHash": "9166a138ff43",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "13d73fc60090"
+          },
+          "prose:3": {
+            "contentHash": "d366e2c087c0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "f4a64966d77e"
+          },
+          "prose:4": {
+            "contentHash": "6706b14c5d77",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1",
+          "prose:4"
+        ]
+      },
+      "page-organizations-small-business-example-fee": {
+        "contentHash": "887f6b62b841",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-final": {
+        "contentHash": "f4ed8fa656b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-net": {
+        "contentHash": "0e5467ac4333",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-note": {
+        "contentHash": "70569c79d85f",
+        "anchorHash": "28e40cd98768",
+        "children": {
+          "prose:2": {
+            "contentHash": "945ea5b38b40",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "13d73fc60090"
+          },
+          "prose:3": {
+            "contentHash": "a318c24216de",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "efe3208183fa"
+          },
+          "prose:4": {
+            "contentHash": "6ec682d827ff",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1",
+          "prose:4"
+        ]
+      },
+      "page-organizations-small-business-example-price": {
+        "contentHash": "742bc6ee58b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-stablecoin-final": {
+        "contentHash": "a73592a80dae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-stablecoin-title": {
+        "contentHash": "1b2d8eae85a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-example-title": {
+        "contentHash": "c1351ff01256",
+        "anchorHash": "9f083777a56f",
+        "children": {
+          "prose:1": {
+            "contentHash": "559aead08264",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "cf2e7523c2fc"
+          },
+          "prose:2": {
+            "contentHash": "339075231639",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-organizations-small-business-hero-description-1": {
+        "contentHash": "22006b97d0b5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-hero-description-2": {
+        "contentHash": "47d1f8aa1a56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-hero-title": {
+        "contentHash": "44178baf81be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-holders-description": {
+        "contentHash": "974a634f1632",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-holders-expected-label": {
+        "contentHash": "59d0b76a6ae9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-holders-now-label": {
+        "contentHash": "5ea1f27bfcdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-holders-title": {
+        "contentHash": "4336d5ed3f3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-meta-description": {
+        "contentHash": "06df86a44ed7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-meta-title": {
+        "contentHash": "10531296497f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-payments-description": {
+        "contentHash": "73c3246773bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-payments-shopify-cta": {
+        "contentHash": "92fc4fcdf641",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-payments-title": {
+        "contentHash": "bf366d881d47",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-payments-wordpress-cta": {
+        "contentHash": "e389b98aaadb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-apparel": {
+        "contentHash": "78d9b7366b7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-cafes": {
+        "contentHash": "14104102bc05",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-chart-caption": {
+        "contentHash": "0b107650baa8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-convenience": {
+        "contentHash": "d74f1876096f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-description": {
+        "contentHash": "e7e941305fa4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-grocery": {
+        "contentHash": "3caeed40875c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-retailers": {
+        "contentHash": "ae77c4fe704b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-title": {
+        "contentHash": "7bec6e31cc74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-purchases-travel": {
+        "contentHash": "0e130e3148a4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-reference-a16z": {
+        "contentHash": "ca04fbeaa5b5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ff86fed53881",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-small-business-reference-disputes": {
+        "contentHash": "27287b4786d7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9190990c7ed3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-small-business-reference-nca": {
+        "contentHash": "8ed62af03990",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "bc4f8bbcfe4d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-small-business-reference-nilson": {
+        "contentHash": "dcca800855aa",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "40693c2d068b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-small-business-reference-stripe": {
+        "contentHash": "c2f5bf8fc491",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "fbace3fdb9c7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-small-business-settlement-description": {
+        "contentHash": "187aae8a7b6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-settlement-final-description": {
+        "contentHash": "2c7bdcae7d10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-settlement-final-title": {
+        "contentHash": "8ba5e0e6b0ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-settlement-flat-fees-description": {
+        "contentHash": "b3924606a72a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-settlement-flat-fees-title": {
+        "contentHash": "f7d900306269",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-settlement-keep-more-description": {
+        "contentHash": "689f7b6bfe36",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-settlement-keep-more-title": {
+        "contentHash": "89bf7e0fd83c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-settlement-no-till-description": {
+        "contentHash": "cc3aa3e216a5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "23dad9b92b1e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-small-business-settlement-no-till-title": {
+        "contentHash": "607858ebf108",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-settlement-title": {
+        "contentHash": "0839cb0bfb2a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-description": {
+        "contentHash": "2db27b9f867b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-payments-description": {
+        "contentHash": "84e979693f3c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-payments-title": {
+        "contentHash": "e94b067b78a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-payroll-description": {
+        "contentHash": "c5d86a464c6f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-payroll-title": {
+        "contentHash": "53fe8dfb6d9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-sell-description": {
+        "contentHash": "a259d0f60ac5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-sell-title": {
+        "contentHash": "d3231cf800fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-suppliers-description": {
+        "contentHash": "08e03518c928",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-suppliers-title": {
+        "contentHash": "5e4faea1e61e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-small-business-use-cases-title": {
+        "contentHash": "25e9a15e20bc",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-organizations-small-business-adoption-description",
+      "page-organizations-small-business-adoption-title",
+      "page-organizations-small-business-compare-caption",
+      "page-organizations-small-business-compare-col-card",
+      "page-organizations-small-business-compare-col-cash",
+      "page-organizations-small-business-compare-col-stablecoins",
+      "page-organizations-small-business-compare-description",
+      "page-organizations-small-business-compare-privacy",
+      "page-organizations-small-business-compare-row-access",
+      "page-organizations-small-business-compare-row-access-card",
+      "page-organizations-small-business-compare-row-access-cash",
+      "page-organizations-small-business-compare-row-access-stablecoins",
+      "page-organizations-small-business-compare-row-fees",
+      "page-organizations-small-business-compare-row-fees-card",
+      "page-organizations-small-business-compare-row-fees-cash",
+      "page-organizations-small-business-compare-row-fees-stablecoins",
+      "page-organizations-small-business-compare-row-final",
+      "page-organizations-small-business-compare-row-final-card",
+      "page-organizations-small-business-compare-row-final-cash",
+      "page-organizations-small-business-compare-row-final-stablecoins",
+      "page-organizations-small-business-compare-row-moving",
+      "page-organizations-small-business-compare-row-moving-card",
+      "page-organizations-small-business-compare-row-moving-cash",
+      "page-organizations-small-business-compare-row-moving-stablecoins",
+      "page-organizations-small-business-compare-row-reach",
+      "page-organizations-small-business-compare-row-reach-card",
+      "page-organizations-small-business-compare-row-reach-cash",
+      "page-organizations-small-business-compare-row-reach-stablecoins",
+      "page-organizations-small-business-compare-row-refunds",
+      "page-organizations-small-business-compare-row-refunds-card",
+      "page-organizations-small-business-compare-row-refunds-cash",
+      "page-organizations-small-business-compare-row-refunds-stablecoins",
+      "page-organizations-small-business-compare-row-theft",
+      "page-organizations-small-business-compare-row-theft-card",
+      "page-organizations-small-business-compare-row-theft-cash",
+      "page-organizations-small-business-compare-row-theft-stablecoins",
+      "page-organizations-small-business-compare-title",
+      "page-organizations-small-business-example-card-final",
+      "page-organizations-small-business-example-card-title",
+      "page-organizations-small-business-example-discount-tip",
+      "page-organizations-small-business-example-fee",
+      "page-organizations-small-business-example-final",
+      "page-organizations-small-business-example-net",
+      "page-organizations-small-business-example-note",
+      "page-organizations-small-business-example-price",
+      "page-organizations-small-business-example-stablecoin-final",
+      "page-organizations-small-business-example-stablecoin-title",
+      "page-organizations-small-business-example-title",
+      "page-organizations-small-business-hero-description-1",
+      "page-organizations-small-business-hero-description-2",
+      "page-organizations-small-business-hero-title",
+      "page-organizations-small-business-holders-description",
+      "page-organizations-small-business-holders-expected-label",
+      "page-organizations-small-business-holders-now-label",
+      "page-organizations-small-business-holders-title",
+      "page-organizations-small-business-meta-description",
+      "page-organizations-small-business-meta-title",
+      "page-organizations-small-business-payments-description",
+      "page-organizations-small-business-payments-shopify-cta",
+      "page-organizations-small-business-payments-title",
+      "page-organizations-small-business-payments-wordpress-cta",
+      "page-organizations-small-business-purchases-apparel",
+      "page-organizations-small-business-purchases-cafes",
+      "page-organizations-small-business-purchases-chart-caption",
+      "page-organizations-small-business-purchases-convenience",
+      "page-organizations-small-business-purchases-description",
+      "page-organizations-small-business-purchases-grocery",
+      "page-organizations-small-business-purchases-retailers",
+      "page-organizations-small-business-purchases-title",
+      "page-organizations-small-business-purchases-travel",
+      "page-organizations-small-business-reference-a16z",
+      "page-organizations-small-business-reference-disputes",
+      "page-organizations-small-business-reference-nca",
+      "page-organizations-small-business-reference-nilson",
+      "page-organizations-small-business-reference-stripe",
+      "page-organizations-small-business-settlement-description",
+      "page-organizations-small-business-settlement-final-description",
+      "page-organizations-small-business-settlement-final-title",
+      "page-organizations-small-business-settlement-flat-fees-description",
+      "page-organizations-small-business-settlement-flat-fees-title",
+      "page-organizations-small-business-settlement-keep-more-description",
+      "page-organizations-small-business-settlement-keep-more-title",
+      "page-organizations-small-business-settlement-no-till-description",
+      "page-organizations-small-business-settlement-no-till-title",
+      "page-organizations-small-business-settlement-title",
+      "page-organizations-small-business-use-cases-description",
+      "page-organizations-small-business-use-cases-payments-description",
+      "page-organizations-small-business-use-cases-payments-title",
+      "page-organizations-small-business-use-cases-payroll-description",
+      "page-organizations-small-business-use-cases-payroll-title",
+      "page-organizations-small-business-use-cases-sell-description",
+      "page-organizations-small-business-use-cases-sell-title",
+      "page-organizations-small-business-use-cases-suppliers-description",
+      "page-organizations-small-business-use-cases-suppliers-title",
+      "page-organizations-small-business-use-cases-title"
+    ]
+  },
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+}

@@ -16,6 +16,7 @@ type GraphQLRepoResult = {
   isFork: boolean
   pushedAt: string | null
   lastCommitDate: string | null
+  license: string | null
 }
 
 function parseGitHubUrl(href: string): RepoInfo | null {
@@ -61,6 +62,9 @@ function buildGraphQLQuery(repos: RepoInfo[]): string {
       isArchived
       isFork
       pushedAt
+      licenseInfo {
+        spdxId
+      }
       defaultBranchRef {
         target {
           ... on Commit {
@@ -179,6 +183,10 @@ async function fetchReposBatch(
         isFork: data.isFork ?? false,
         pushedAt: data.pushedAt ?? null,
         lastCommitDate: data.defaultBranchRef?.target?.committedDate ?? null,
+        license:
+          data.licenseInfo?.spdxId && data.licenseInfo.spdxId !== "NOASSERTION"
+            ? data.licenseInfo.spdxId
+            : null,
       })
     }
   })
@@ -202,6 +210,7 @@ type ToolWithGitHubData<T extends ToolWithRepoUrls> = Omit<T, "repos"> & {
     isFork?: boolean
     daysSincePush?: number
     lastUpdated?: string | null
+    license?: string | null
   }[]
 }
 
@@ -294,6 +303,7 @@ export async function fetchGitHub<T extends ToolWithRepoUrls>(
         isFork: data?.isFork,
         daysSincePush: daysSince(data?.pushedAt ?? null),
         lastUpdated: data?.lastCommitDate,
+        license: data?.license,
       }
     }),
   }))

@@ -148,19 +148,19 @@ import { useEffect } from 'react'
 import { Greeter } from './Greeter'
 ```
 
-ہمیں جن لائبریریوں کی ضرورت ہے انہیں امپورٹ کریں، اور ساتھ ہی [`Greeter` جزو](#greeter-tsx) کو بھی۔
+ہمیں درکار لائبریریز کے ساتھ ساتھ [`Greeter` جزو (component) کو](#greeter-tsx) امپورٹ کریں۔
 
 ```tsx
 const SEPOLIA_CHAIN_ID = 11155111
 ```
 
-Sepolia چین کی <span dir="ltr">ID</span>۔
+Sepolia چین کی آئی ڈی (ID)۔
 
 ```
 function App() {
 ```
 
-React جزو بنانے کا یہ معیاری طریقہ ہے: ایک فنکشن کی وضاحت کریں جسے جب بھی رینڈر کرنے کی ضرورت ہو کال کیا جائے۔ اس فنکشن میں عام طور پر TypeScript یا JavaScript کوڈ ہوتا ہے، جس کے بعد ایک `return` سٹیٹمنٹ ہوتی ہے جو JSX کوڈ واپس کرتی ہے۔
+React جزو بنانے کا یہ معیاری طریقہ ہے: ایک فنکشن کی وضاحت کریں جسے جب بھی رینڈر کرنے کی ضرورت ہو کال کیا جائے۔ اس فنکشن میں عام طور پر TypeScript یا JavaScript کوڈ ہوتا ہے، جس کے بعد ایک `return` اسٹیٹمنٹ ہوتی ہے جو <span dir="ltr">JSX</span> کوڈ واپس کرتی ہے۔
 
 ```tsx
   const connection = useConnection()
@@ -168,7 +168,7 @@ React جزو بنانے کا یہ معیاری طریقہ ہے: ایک فنکش�
 
 موجودہ کنکشن سے متعلق معلومات حاصل کرنے کے لیے [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) کا استعمال کریں، جیسے کہ پتہ اور `chainId`۔
 
-روایت کے مطابق، React میں `use...` کہلانے والے فنکشنز [ہکس (hooks)](https://www.w3schools.com/react/react_hooks.asp) ہوتے ہیں۔ یہ فنکشنز نہ صرف جزو کو ڈیٹا واپس کرتے ہیں؛ بلکہ وہ یہ بھی یقینی بناتے ہیں کہ جب وہ ڈیٹا تبدیل ہو تو اسے دوبارہ رینڈر کیا جائے (جزو کا فنکشن دوبارہ چلایا جاتا ہے، اور اس کا آؤٹ پٹ <span dir="ltr">HTML</span> میں پچھلے والے کی جگہ لے لیتا ہے)۔
+روایت کے مطابق، React میں `use...` کہلانے والے فنکشنز [ہکس (hooks)](https://www.w3schools.com/react/react_hooks.asp) ہوتے ہیں۔ یہ فنکشنز نہ صرف جزو کو ڈیٹا واپس کرتے ہیں؛ بلکہ یہ اس بات کو بھی یقینی بناتے ہیں کہ جب وہ ڈیٹا تبدیل ہو تو اسے دوبارہ رینڈر کیا جائے (جزو کا فنکشن دوبارہ چلایا جاتا ہے، اور اس کا آؤٹ پٹ <span dir="ltr">HTML</span> میں پچھلے والے کی جگہ لے لیتا ہے)۔
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -180,7 +180,7 @@ React جزو بنانے کا یہ معیاری طریقہ ہے: ایک فنکش�
   const { disconnect } = useDisconnect()
 ```
 
-[یہ ہک](https://wagmi.sh/react/api/hooks/useDisconnect) ہمیں والیٹ سے منقطع ہونے کا فنکشن دیتا ہے۔
+[یہ ہک](https://wagmi.sh/react/api/hooks/useDisconnect) ہمیں والیٹ سے منقطع (disconnect) ہونے کا فنکشن دیتا ہے۔
 
 ```tsx
   const { switchChain } = useSwitchChain()
@@ -192,7 +192,7 @@ React جزو بنانے کا یہ معیاری طریقہ ہے: ایک فنکش�
   useEffect(() => {
 ```
 
-React ہک [`useEffect`](https://react.dev/reference/react/useEffect) آپ کو کسی بیرونی سسٹم کو ہم آہنگ کرنے کے لیے متغیر (variable) کی قدر تبدیل ہونے پر فنکشن چلانے کی سہولت دیتا ہے۔
+React ہک [`useEffect`](https://react.dev/reference/react/useEffect) آپ کو کسی بیرونی سسٹم کو ہم آہنگ (synchronize) کرنے کے لیے متغیر (variable) کی قدر تبدیل ہونے پر فنکشن چلانے کی سہولت دیتا ہے۔
 
 ```tsx
     if (connection.status === 'connected' &&
@@ -208,14 +208,14 @@ React ہک [`useEffect`](https://react.dev/reference/react/useEffect) آپ کو 
   }, [connection.status, connection.chainId])
 ```
 
-جب بھی کنکشن کی حالت یا کنکشن کی <span dir="ltr">chainId</span> تبدیل ہو تو فنکشن کو دوبارہ چلائیں۔
+ہر بار جب کنکشن کی حالت یا کنکشن کی `chainId` تبدیل ہو تو فنکشن کو دوبارہ چلائیں۔
 
 ```tsx
   return (
     <>
 ```
 
-React جزو کا JSX _لازمی_ طور پر ایک واحد <span dir="ltr">HTML</span> جزو واپس کرے۔ جب ہمارے پاس متعدد اجزاء ہوں اور ہمیں ان سب کو لپیٹنے کے لیے کسی کنٹینر کی ضرورت نہ ہو، تو ہم انہیں ایک واحد جزو میں ملانے کے لیے ایک خالی جزو (`<> ... </>`) استعمال کرتے ہیں۔
+کسی React جزو کا <span dir="ltr">JSX</span> _لازمی_ طور پر ایک واحد <span dir="ltr">HTML</span> جزو واپس کرے۔ جب ہمارے پاس متعدد اجزاء ہوں اور ہمیں ان سب کو لپیٹنے کے لیے کسی کنٹینر کی ضرورت نہ ہو، تو ہم انہیں ایک واحد جزو میں ملانے کے لیے ایک خالی جزو (`<> ... </>`) کا استعمال کرتے ہیں۔
 
 ```tsx
       <h2>Connection</h2>
@@ -229,15 +229,15 @@ React جزو کا JSX _لازمی_ طور پر ایک واحد <span dir="ltr">H
 </div>
 ```
 
-موجودہ کنکشن کے بارے میں معلومات فراہم کریں۔ JSX کے اندر، `{<expression>}` کا مطلب ہے کہ ایکسپریشن کا JavaScript کے طور پر جائزہ لیا جائے۔
+موجودہ کنکشن کے بارے میں معلومات فراہم کریں۔ <span dir="ltr">JSX</span> کے اندر، `{<expression>}` کا مطلب ہے کہ ایکسپریشن کا JavaScript کے طور پر جائزہ لیا جائے۔
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-سنٹیکس `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`"۔
+سنٹیکس `{<condition> && <value>}` کا مطلب ہے "اگر شرط `true` ہے، تو قدر کا جائزہ لیں؛ اگر ایسا نہیں ہے، تو `false` کا جائزہ لیں"۔
 
-JSX کے اندر if سٹیٹمنٹس رکھنے کا یہ معیاری طریقہ ہے۔
+<span dir="ltr">JSX</span> کے اندر if اسٹیٹمنٹس رکھنے کا یہ معیاری طریقہ ہے۔
 
 ```tsx
         <div>
@@ -245,7 +245,7 @@ JSX کے اندر if سٹیٹمنٹس رکھنے کا یہ معیاری طریق
           <hr />
 ```
 
-JSX <span dir="ltr">XML</span> معیار کی پیروی کرتا ہے، جو <span dir="ltr">HTML</span> سے زیادہ سخت ہے۔ اگر کسی ٹیگ کا متعلقہ اختتامی ٹیگ نہیں ہے، تو اسے ختم کرنے کے لیے اس کے آخر میں سلیش (`/`) _لازمی_ ہونا چاہیے۔
+<span dir="ltr">JSX</span>، <span dir="ltr">XML</span> معیار کی پیروی کرتا ہے، جو <span dir="ltr">HTML</span> سے زیادہ سخت ہے۔ اگر کسی ٹیگ کا متعلقہ اختتامی ٹیگ نہیں ہے، تو اسے ختم کرنے کے لیے اس کے آخر میں سلیش (`/`) کا ہونا _لازمی_ ہے۔
 
 یہاں ہمارے پاس ایسے دو ٹیگز ہیں، `<Greeter />` (جس میں دراصل وہ <span dir="ltr">HTML</span> کوڈ ہوتا ہے جو کنٹریکٹ سے بات کرتا ہے) اور [افقی لائن کے لیے `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)۔
 
@@ -272,14 +272,14 @@ JSX <span dir="ltr">XML</span> معیار کی پیروی کرتا ہے، جو <
           {connectors.map((connector) => (
 ```
 
-`connectors` میں ہمارے پاس کنیکٹرز کی ایک فہرست ہے۔ ہم اسے دکھانے کے لیے JSX بٹنوں کی فہرست میں تبدیل کرنے کے لیے [`map`](https://www.w3schools.com/jsref/jsref_map.asp) کا استعمال کرتے ہیں۔
+`connectors` میں ہمارے پاس کنیکٹرز کی ایک فہرست ہے۔ ہم اسے دکھانے کے لیے <span dir="ltr">JSX</span> بٹنز کی فہرست میں تبدیل کرنے کے لیے [`map`](https://www.w3schools.com/jsref/jsref_map.asp) کا استعمال کرتے ہیں۔
 
 ```tsx
             <button
               key={connector.uid}
 ```
 
-JSX میں "بہن بھائی (sibling)" ٹیگز (وہ ٹیگز جو ایک ہی پیرنٹ سے نکلتے ہیں) کے لیے مختلف شناخت کنندگان (identifiers) کا ہونا ضروری ہے۔
+<span dir="ltr">JSX</span> میں یہ ضروری ہے کہ "بہن بھائی (sibling)" ٹیگز (وہ ٹیگز جو ایک ہی پیرنٹ سے نکلتے ہیں) کے شناخت کنندگان (identifiers) مختلف ہوں۔
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -300,9 +300,9 @@ JSX میں "بہن بھائی (sibling)" ٹیگز (وہ ٹیگز جو ایک ہ�
       )}
 ```
 
-اضافی معلومات فراہم کریں۔ ایکسپریشن سنٹیکس `<variable>?.<field>` JavaScript کو بتاتا ہے کہ اگر متغیر کی تعریف کی گئی ہے، تو اس فیلڈ کا جائزہ لیں۔ اگر متغیر کی تعریف نہیں کی گئی ہے، تو اس ایکسپریشن کا نتیجہ `undefined` نکلتا ہے۔
+اضافی معلومات فراہم کریں۔ ایکسپریشن سنٹیکس `<variable>?.<field>`، JavaScript کو بتاتا ہے کہ اگر متغیر کی وضاحت کی گئی ہے، تو اس فیلڈ کا جائزہ لیں۔ اگر متغیر کی وضاحت نہیں کی گئی ہے، تو اس ایکسپریشن کا جائزہ `undefined` کے طور پر لیا جاتا ہے۔
 
-ایکسپریشن `error.message`، جب کوئی خرابی نہ ہو، تو ایک ایکسیپشن (exception) پیدا کرے گا۔ `error?.message` کا استعمال ہمیں اس مسئلے سے بچنے دیتا ہے۔
+ایکسپریشن `error.message`، جب کوئی خرابی نہ ہو، تو ایک استثنیٰ (exception) پیدا کرے گا۔ `error?.message` کا استعمال ہمیں اس مسئلے سے بچنے کی سہولت دیتا ہے۔
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 
