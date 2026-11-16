@@ -65,9 +65,12 @@
         "varsIgnorePattern": "^_$"
       }
     ],
-    "unused-imports/no-unused-imports": "warn"
+    "unused-imports/no-unused-imports": "error"
   },
   "overrides": [
+    {
+      "files": ["**/*.mjs"]
+    },
     {
       "files": ["**/*.{ts,tsx}"],
       "extends": ["plugin:@typescript-eslint/recommended"],
@@ -77,7 +80,8 @@
           {
             "fixToUnknown": true
           }
-        ]
+        ],
+        "@typescript-eslint/no-unused-vars": "off"
       }
     },
     {
@@ -113,6 +117,9 @@
     "storybook-static/",
     "**/*.d.ts",
     "src/intl/",
-    "public/code-examples/"
+    "public/code-examples/",
+    "!.storybook",
+    "!.github",
+    "!.eslint-rules"
   ]
 }

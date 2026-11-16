@@ -73,4 +73,4 @@ export async function getTimeZone() {
 }
 
 /** No request scope to set in Storybook -- accepted and ignored. */
-export function setRequestLocale(_locale: string) {}
+export function setRequestLocale(_: string) {}

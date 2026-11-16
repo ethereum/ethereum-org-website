@@ -9,7 +9,7 @@
     "build": "next build",
     "build:webpack": "next build --webpack",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings 0 --ignore-path .gitignore",
     "lint:fix": "eslint . --fix",
     "type-check": "next typegen && tsc --noEmit && tsc --noEmit -p netlify/edge-functions",
     "format": "prettier \"**/*.{js,jsx,ts,tsx}\" --write",
