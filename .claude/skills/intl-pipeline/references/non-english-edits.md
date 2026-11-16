@@ -22,8 +22,9 @@ Are you editing a translated file?
 │       └── NOT allowed by hand. Options:
 │           - Trigger the pipeline -- it'll merge the English change into the locale via
 │             incremental translation, preserving the locale parts unaffected by the change.
-│           - If urgent (build-breaking): make the locale edit, THEN trigger
-│             intl-pipeline.yml with stamp_only: true.
+│           - If urgent (build-breaking) and the pipeline can't run: make the edit
+│             in EVERY affected locale, THEN trigger intl-pipeline.yml with
+│             stamp_only: true for exactly those locales.
 │             Safe only if no intl/pending-{base} branch exists.
 ```
 
@@ -71,8 +72,8 @@ Sometimes you legitimately need to hand-edit a locale to reflect an English chan
 **Procedure:**
 
 1. Confirm no `intl/pending-{base}` branch exists for the base you're working against. If one exists, merge or close it first. (Hand-edits + an open pending PR = merge conflict roulette.)
-2. Make the English-driven edit on the locale by hand.
-3. Trigger `intl-pipeline.yml` with `stamp_only: true`:
+2. Make the English-driven edit by hand in every locale you will stamp.
+3. Trigger `intl-pipeline.yml` with `stamp_only: true`, limited to that file and those locales:
 
 ```bash
 gh workflow run intl-pipeline.yml \
@@ -81,7 +82,7 @@ gh workflow run intl-pipeline.yml \
   -f stamp_only=true
 ```
 
-This regenerates manifests without translation. The pipeline reads the current locale state, computes new manifests, commits them. Next incremental run starts from the new stamped state.
+For each pair whose English differs from its `source.json`, this rewrites `source.json` from the current English and commits it. It reads no locale file, writes no locale content and leaves `translation.json` alone; pairs whose English didn't change are skipped. The stamp asserts the locale already matches the new English, so a locale you didn't fix is stranded: nothing is left to detect its drift, and later runs never translate the change.
 
 ## Detecting drift without running the pipeline
 

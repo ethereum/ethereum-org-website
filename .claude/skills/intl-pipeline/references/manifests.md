@@ -22,7 +22,9 @@ Shape:
 ```json
 {
   "version": 2,
+  "sourceFile": "public/content/some-page/index.md",
   "sourceCommitSha": "abc123def456...",
+  "generatedAt": "2026-06-08T07:02:11.397Z",
   "rootHash": "sha256...",
   "tree": { ... merkle tree of English content ... }
 }
@@ -38,41 +40,38 @@ Frontmatter is parsed as YAML: sequences (`tags`, `summaryPoints`, `topic`) and 
 
 ## Translation manifest (`translation.json`)
 
-Mirrors the source manifest's structure, but with per-section hashes of the **locale** content plus a structural map between English and locale elements. Used to:
-
-- Detect drift in the locale itself (rare, but possible if hand-edited)
-- Find the right element in the locale file when its English counterpart changes (especially for SOV languages where inline order differs)
-
-Shape (high level):
+Records what the last translation of the pair was made against: the English source manifest's hash, the inert placeholders (links, code) Gemini returned and their values, and per-section status. It holds no hashes of the locale content. Shape (`LocaleTranslationManifest` in `lib/llm/manifest-adapter.ts`):
 
 ```json
 {
-  "version": "1",
-  "language": "ja",
-  "rootHash": "sha256...",
-  "tree": { ... merkle tree of locale content ... },
-  "elementMap": { ... english-element-path -> locale-element-path ... }
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-08T07:02:11.397Z",
+  "englishManifestHash": "25691cc45f42",
+  "placeholderOrder": ["LINK-a21a82", "..."],
+  "placeholderMap": { "LINK-a21a82": { "type": "...", "values": { ... } } },
+  "sections": { "_all": { "translatedAt": "...", "status": "success" } }
 }
 ```
 
 ## Manifest lifecycle
 
-| Event                                            | Effect                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| First translation of a file (no manifests exist) | Pipeline runs full translation, stamps both manifests after success                                                                                                                                                                                                                                                 |
-| Incremental run on an existing file              | Pipeline reads source manifest, fetches english-A via `git show`, computes delta, translates only changed sections, re-stamps both manifests after success                                                                                                                                                          |
-| Phase 4 failure (LLM error)                      | Manifests are NOT stamped. Next run re-detects the changes.                                                                                                                                                                                                                                                         |
-| Hand-edit to the locale (English unchanged)      | Manifest map remains valid. Next pipeline run sees corrected locale as new baseline.                                                                                                                                                                                                                                |
-| Hand-edit reflecting English change              | Manifest now lies about the locale's relationship to English. Next run will misclassify. See `references/non-english-edits.md`.                                                                                                                                                                                     |
-| `stamp_only: true` workflow run                  | Manifests regenerated from current file state, no LLM calls. Useful for "the locale is correct, the manifest is wrong" scenarios. It asserts the locale is current -- stamping a file whose English moved strands the locale behind English with no drift left to detect (9 files were in that state in Sept 2026). |
-| Hashing scheme change (`MANIFEST_VERSION` bump)  | One-off `pnpm exec tsx src/scripts/intl-pipeline/migrate-manifests.ts` rewrites every manifest from its own recorded English. See "Schema version 2".                                                                                                                                                               |
+| Event                                            | Effect                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| First translation of a file (no manifests exist) | Pipeline runs full translation, stamps both manifests after success                                                                                                                                                                                                                                           |
+| Incremental run on an existing file              | Pipeline reads source manifest, fetches english-A via `git show`, computes delta, translates only changed sections, re-stamps both manifests after success                                                                                                                                                    |
+| Phase 4 failure (LLM error)                      | Manifests are NOT stamped. Next run re-detects the changes.                                                                                                                                                                                                                                                   |
+| Hand-edit to the locale (English unchanged)      | Manifest map remains valid. Next pipeline run sees corrected locale as new baseline.                                                                                                                                                                                                                          |
+| Hand-edit reflecting English change              | Manifest now lies about the locale's relationship to English. Next run will misclassify. See `references/non-english-edits.md`.                                                                                                                                                                               |
+| `stamp_only: true` workflow run                  | `source.json` rewritten from current English for pairs whose English changed; no LLM calls, no locale or `translation.json` writes. It asserts the locale is current -- stamping a locale nobody hand-fixed strands it behind English with no drift left to detect (9 files were in that state in Sept 2026). |
+| Hashing scheme change (`MANIFEST_VERSION` bump)  | One-off `pnpm exec tsx src/scripts/intl-pipeline/migrate-manifests.ts` rewrites every manifest from its own recorded English. See "Schema version 2".                                                                                                                                                         |
 
 ## Manifest invariants
 
 - Both manifests must exist together. Delete one → must delete the other → pipeline auto-runs full translation on next run for that file+locale.
 - `sourceCommitSha` in source manifest must point to a real, reachable commit. If history has been rewritten (e.g., main rebased), the manifest is invalidated.
 - `rootHash` in source manifest must match the hash of the English file at `sourceCommitSha`. If not, something corrupted the manifest after stamping.
-- `language` in translation manifest must match the locale directory.
+- `locale` in translation manifest must match the locale directory.
 
 ## Debug commands
 
@@ -101,9 +100,9 @@ jq '.tree' .manifests/.../translation.json
 
 ## Common manifest issues
 
-| Issue                                               | Cause                                                                    | Fix                                                                                    |
-| --------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| Manifest references a SHA that no longer exists     | Force-push or branch deletion                                            | Delete both manifests, re-run pipeline (will full-translate)                           |
-| Translation has changed but manifest hasn't         | Hand-edit; or a previous run's Phase 6 was skipped                       | `stamp_only: true` to refresh from current state, OR re-run to overwrite the hand-edit |
-| Manifest's element map mismatches the locale file   | Locale was hand-edited to add/remove structural elements                 | Delete both manifests, re-run for that file+locale                                     |
-| `rootHash` mismatch on supposedly-unchanged English | English file has BOM, line-ending change, or invisible whitespace change | Inspect the file with `xxd`; clean up the offending characters                         |
+| Issue                                               | Cause                                                                    | Fix                                                                             |
+| --------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| Manifest references a SHA that no longer exists     | Force-push or branch deletion                                            | Delete both manifests, re-run pipeline (will full-translate)                    |
+| Translation has changed but manifest hasn't         | Hand-edit; or a previous run's Phase 6 was skipped                       | English unchanged: nothing to do. To discard the edit, re-run with `mode: full` |
+| Locale structure no longer matches English          | Locale was hand-edited to add/remove structural elements                 | Re-run with `mode: full` for that file+locale                                   |
+| `rootHash` mismatch on supposedly-unchanged English | English file has BOM, line-ending change, or invisible whitespace change | Inspect the file with `xxd`; clean up the offending characters                  |
