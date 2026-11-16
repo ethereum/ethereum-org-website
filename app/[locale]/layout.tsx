@@ -24,11 +24,6 @@ import { BaseLayout } from "@/layouts/BaseLayout"
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
 }
-
-// Unknown locales 404 at routing, before any page renders with them. Unlike
-// `dynamicParams = false`, child params (e.g. [application]) stay on-demand.
-export const unstable_paramMatching = { locale: "not-found" }
-
 export default async function LocaleLayout(props: {
   children: React.ReactNode
   params: Promise<{ locale: string }>

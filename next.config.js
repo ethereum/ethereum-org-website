@@ -238,6 +238,23 @@ module.exports = (phase) => {
         ...mdRedirects,
       ]
     },
+    async rewrites() {
+      // 404 unknown first segments before [locale] renders with them; the proxy
+      // skips dotted and /api paths. `sitemaps` is the only dynamic route outside [locale].
+      const locales =
+        process.env.NEXT_PUBLIC_BUILD_LOCALES?.split(",") ??
+        i18nConfigJson.map(({ code }) => code)
+      const allowed = [...locales, "sitemaps"].join("|")
+
+      return {
+        afterFiles: [
+          {
+            source: `/:segment((?!(?:${allowed})(?:/|$))[^/]+)/:rest*`,
+            destination: "/_not-found",
+          },
+        ],
+      }
+    },
   }
 
   nextConfig = {
