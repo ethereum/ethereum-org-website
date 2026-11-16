@@ -372,11 +372,7 @@ function placeholders(message: string) {
       if (el.type === TYPE.tag) {
         names.add(`<${el.value}>`)
         collect(el.children)
-      } else if (
-        "value" in el &&
-        el.type !== TYPE.literal &&
-        el.type !== TYPE.pound
-      )
+      } else if ("value" in el && el.type !== TYPE.literal)
         names.add(`{${el.value}}`)
       if (el.type === TYPE.plural || el.type === TYPE.select)
         for (const o of Object.values(el.options)) collect(o.value)
