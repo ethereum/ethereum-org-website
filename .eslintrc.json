@@ -85,6 +85,30 @@
       }
     },
     {
+      "files": ["app/**", "src/components/**"],
+      "rules": {
+        "@typescript-eslint/no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": ["@/data-layer", "@/data-layer/*"],
+                "allowTypeImports": true,
+                "message": "Read data through the cached getters in @/lib/data."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      // Pure helper import, no fetch.
+      "files": ["app/[[]locale]/community/events/utils.ts"],
+      "rules": {
+        "@typescript-eslint/no-restricted-imports": "off"
+      }
+    },
+    {
       "files": ["**/*.stories.@(js|jsx|ts|tsx|mdx)"],
       "extends": ["plugin:storybook/recommended"]
     },
