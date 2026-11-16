@@ -12,6 +12,8 @@ import NodeClientsDiagram, {
   NodeArchitectureDiagram,
   NodeNetworksDiagram,
 } from "./NodeClients"
+import PortalHistoryDiagram from "./PortalHistory"
+import SourceVerifyDiagram from "./SourceVerify"
 import TxApplyDiagram from "./TxApply"
 import ValidatorKeysDiagram, { KeyDerivationDiagram } from "./ValidatorKeys"
 
@@ -31,6 +33,8 @@ export const mdxDiagramComponents = {
   NodeArchitectureDiagram,
   NodeClientsDiagram,
   NodeNetworksDiagram,
+  PortalHistoryDiagram,
+  SourceVerifyDiagram,
   TxApplyDiagram,
   ValidatorKeysDiagram,
 }

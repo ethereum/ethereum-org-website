@@ -1,11 +1,11 @@
 ---
 name: devdocs-diagrams
-description: Use when converting a developer-docs schematic PNG (gas.png, evm.png, tx.png, accounts.png, nodes.png, mev.png, attestation_schematic.png, ...) into an interactive React diagram, or when editing src/components/Diagrams/ (InteractiveDiagram, the anatomy primitives, GasTx, GasEvm, TxApply, EvmZones, Accounts, BlockState, NodeClients, Attestations, MevBoost, or any diagram folder), or reviewing a diagram's content for accuracy. One PR per diagram, or per page when diagrams share one.
+description: Use when converting a developer-docs schematic PNG (gas.png, evm.png, tx.png, accounts.png, nodes.png, mev.png, source-code-verification.png, attestation_schematic.png, ...) into an interactive React diagram, or when editing src/components/Diagrams/ (InteractiveDiagram, the anatomy primitives, GasTx, GasEvm, TxApply, EvmZones, Accounts, BlockState, NodeClients, Attestations, MevBoost, SourceVerify, PortalHistory, or any diagram folder), or reviewing a diagram's content for accuracy. One PR per diagram, or per page when diagrams share one.
 ---
 
 # Devdocs diagrams
 
-Developer-docs schematics are being replaced, one PR per PNG, by theme-aware, translatable, accessible interactive figures. Each is a small isometric "anatomy" drawing on shared primitives, inside one shared shell (`InteractiveDiagram`). Done so far: `gas-tx.png` (`GasTx`), `gas.png` (`GasEvm`), `tx.png` (`TxApply`), `evm.png` (`EvmZones`), `accounts.png` (`Accounts`), `tx-block.png` (`BlockState`), `eth1eth2client.png`, `node-architecture-text-background.png`, `nodes.png`, run-a-node's `diagram.png` and the networking-layer `cons_client_net_layer.png` / `exe_client_net_layer.png` (`NodeClients`: `NodeClientsDiagram`, `NodeArchitectureDiagram`, `NodeAccessDiagram`, `ClientSetupDiagram` and `NodeNetworksDiagram`, the last replacing both networking PNGs), `attestation_schematic.png` (`Attestations`), `validator-key-schematic.png` and `multiple-keys.png` (`ValidatorKeys`: `ValidatorKeysDiagram` and `KeyDerivationDiagram`) `reorg-schematic.png` (`ExAnteReorg`) and `mev.png` (`MevBoost`). Also load the `design-system` skill.
+Developer-docs schematics are being replaced, one PR per PNG, by theme-aware, translatable, accessible interactive figures. Each is a small isometric "anatomy" drawing on shared primitives, inside one shared shell (`InteractiveDiagram`). Done so far: `gas-tx.png` (`GasTx`), `gas.png` (`GasEvm`), `tx.png` (`TxApply`), `evm.png` (`EvmZones`), `accounts.png` (`Accounts`), `tx-block.png` (`BlockState`), `eth1eth2client.png`, `node-architecture-text-background.png`, `nodes.png`, run-a-node's `diagram.png` and the networking-layer `cons_client_net_layer.png` / `exe_client_net_layer.png` (`NodeClients`: `NodeClientsDiagram`, `NodeArchitectureDiagram`, `NodeAccessDiagram`, `ClientSetupDiagram` and `NodeNetworksDiagram`, the last replacing both networking PNGs), `attestation_schematic.png` (`Attestations`), `validator-key-schematic.png` and `multiple-keys.png` (`ValidatorKeys`: `ValidatorKeysDiagram` and `KeyDerivationDiagram`) `reorg-schematic.png` (`ExAnteReorg`), `mev.png` (`MevBoost`), `source-code-verification.png` (`SourceVerify`) and `portal-network-devp2p-libp2p.png` (`PortalHistory`). Also load the `design-system` skill.
 
 This file is the canonical reference. The Storybook page **Components / Data Viz / Diagrams / Overview** is a short visual intro that links here; don't duplicate rules there.
 
@@ -40,7 +40,7 @@ Shared pieces in `src/components/Diagrams/`:
 | `anatomy/stage.tsx`       | `DiagramStage`: the single card, illustration plus panel                                                                                        |
 | `anatomy/tokens.ts`       | `DIAGRAM_COLOR`, `anatomyFill`, stroke classes, `DIAGRAM_SVG_FALLBACKS`                                                                         |
 
-Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` per diagram (`gas-tx-`, `gas-evm-`, `tx-apply-`, `evm-zones-`, `accounts-`, `block-state-`, `node-clients-`, `attestations-`, `validator-keys-`, `ex-ante-reorg-`, `mev-boost-`), shared ones `diagram-` (counter, previous/next/reset, presets label, readout label, reverted, legend, figure number, parts group). Tokens: `--diagram-*` in `src/styles/semantic-tokens.css`, registered in `theme.css`. Keyframes: `--animate-diagram-{flow,travel-y,pop}` in `theme.css`.
+Strings: `src/intl/en/component-diagrams.json`, keys prefixed `<key-prefix>-` per diagram (`gas-tx-`, `gas-evm-`, `tx-apply-`, `evm-zones-`, `accounts-`, `block-state-`, `node-clients-`, `attestations-`, `validator-keys-`, `ex-ante-reorg-`, `mev-boost-`, `source-verify-`, `portal-history-`), shared ones `diagram-` (counter, previous/next/reset, presets label, readout label, reverted, legend, figure number, parts group). Tokens: `--diagram-*` in `src/styles/semantic-tokens.css`, registered in `theme.css`. Keyframes: `--animate-diagram-{flow,travel-y,pop}` in `theme.css`.
 
 ## Recipe
 
@@ -121,4 +121,4 @@ Hover and focus are built in: wrap each part in `<g data-part="id">` with the sa
 
 ## Remaining PNGs
 
-Every PNG on the original list is converted. Other schematics in the English dev docs, not yet planned: `portal-network-devp2p-libp2p.png` (`networking-layer/portal-network/`), `source-code-verification.png` (`smart-contracts/verifying/`). `map-of-erc-4626.png` is a reference map rather than a mechanism to step through, and the ERC-7540 flows are already SVG.
+Every schematic PNG in the English dev docs is converted. `map-of-erc-4626.png` is a reference map rather than a mechanism to step through, the ERC-7540 flows are already SVG, and the `design-and-ux/` images are screenshots, not schematics.
