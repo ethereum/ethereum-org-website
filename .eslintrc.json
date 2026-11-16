@@ -92,7 +92,12 @@
           {
             "patterns": [
               {
-                "group": ["@/data-layer", "@/data-layer/*"],
+                "group": [
+                  "@/data-layer",
+                  "@/data-layer/*",
+                  "../**/data-layer",
+                  "../**/data-layer/*"
+                ],
                 "allowTypeImports": true,
                 "message": "Read data through the cached getters in @/lib/data."
               }
