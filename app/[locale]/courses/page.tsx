@@ -16,10 +16,7 @@ import {
   CourseCardTrophy,
 } from "@/components/Courses/course-card-status"
 import CourseProgress from "@/components/Courses/course-progress"
-import {
-  HubHeroScroll,
-  HubNextUp,
-} from "@/components/Courses/hub-hero-actions"
+import { HubHeroScroll, HubNextUp } from "@/components/Courses/hub-hero-actions"
 import InstallAppNotice from "@/components/Courses/install-app-notice"
 import NoProfileAlert from "@/components/Courses/no-profile-alert"
 import ProfileLink from "@/components/Courses/profile-link"
