@@ -31,13 +31,16 @@ import itezcom from "@/public/images/exchanges/itezcom.png"
 import korbit from "@/public/images/exchanges/korbit.png"
 import kraken from "@/public/images/exchanges/kraken.png"
 import kucoin from "@/public/images/exchanges/kucoin.png"
+import localcoinswap from "@/public/images/exchanges/localcoinswap.png"
 import matrixport from "@/public/images/exchanges/matrixport.png"
 import moonpay from "@/public/images/exchanges/moonpay.png"
 import mtpelerin from "@/public/images/exchanges/mtpelerin.png"
 import okx from "@/public/images/exchanges/okx.png"
+import p2pme from "@/public/images/exchanges/p2pme.png"
 import peer from "@/public/images/exchanges/peer.png"
 import rain from "@/public/images/exchanges/rain.png"
 import shakepay from "@/public/images/exchanges/shakepay.png"
+import vailox from "@/public/images/exchanges/vailox.png"
 import wazirx from "@/public/images/exchanges/wazirx.png"
 import zebpay from "@/public/images/exchanges/zebpay.png"
 
@@ -64,12 +67,15 @@ type ExchangeKey =
   | "korbit"
   | "kraken"
   | "kucoin"
+  | "localcoinswap"
   | "matrixport"
   | "moonpay"
   | "mtpelerin"
   | "okx"
+  | "p2pme"
   | "rain"
   | "shakepay"
+  | "vailox"
   | "wazirx"
   | "zebpay"
   | "peer"
@@ -79,6 +85,8 @@ type ExchangeDetail = {
   url: string
   image: ImageProps["src"]
   usaExceptions: string[]
+  // Non-custodial apps where people trade with each other; listed apart from exchanges
+  p2p?: boolean
 }
 
 type ExchangeDetails = Record<ExchangeKey, ExchangeDetail>
@@ -307,6 +315,28 @@ const exchanges: ExchangeDetails = {
     url: "https://peer.xyz",
     image: peer,
     usaExceptions: [],
+    p2p: true,
+  },
+  localcoinswap: {
+    name: "LocalCoinSwap",
+    url: "https://localcoinswap.com/",
+    image: localcoinswap,
+    usaExceptions: [],
+    p2p: true,
+  },
+  p2pme: {
+    name: "P2P.me",
+    url: "https://p2p.me/",
+    image: p2pme,
+    usaExceptions: [],
+    p2p: true,
+  },
+  vailox: {
+    name: "Vailox",
+    url: "https://vailox.com/",
+    image: vailox,
+    usaExceptions: [],
+    p2p: true,
   },
 }
 
@@ -363,37 +393,47 @@ export const useCentralizedExchanges = () => {
 
   // Construct arrays for CardList
   let filteredExchanges: FilteredData[] = []
+  let filteredP2p: FilteredData[] = []
 
   const hasSelectedCountry = !!selectedCountry?.value
   if (hasSelectedCountry) {
+    // Format an exchange for <CardList/>
+    const toCard = (exchange: ExchangeKey): FilteredData => {
+      // Add state exceptions if the selected country is the United States
+      let description: string | undefined
+      if (selectedCountry.countryCode === "US") {
+        const { usaExceptions } = exchanges[exchange]
+        if (usaExceptions.length > 0) {
+          description = `${t("page-get-eth-exchanges-except")} ${formatList(
+            usaExceptions
+          )}`
+        }
+      }
+      return {
+        title: exchanges[exchange].name,
+        description,
+        link: exchanges[exchange].url,
+        image: exchanges[exchange].image,
+        alt: "", // Decorative icon with text label, keep alt blank
+      }
+    }
+
     // Filter to exchanges that serve selected Country
-    filteredExchanges = shuffle(
-      exchangesArray
-        .filter((exchange) => selectedCountry?.exchanges.includes(exchange))
-        // Format array for <CardList/>
-        .map((exchange) => {
-          // Add state exceptions if the selected country is the United States
-          let description: string | undefined
-          if (selectedCountry.countryCode === "US") {
-            const { usaExceptions } = exchanges[exchange]
-            if (usaExceptions.length > 0) {
-              description = `${t("page-get-eth-exchanges-except")} ${formatList(
-                usaExceptions
-              )}`
-            }
-          }
-          return {
-            title: exchanges[exchange].name,
-            description,
-            link: exchanges[exchange].url,
-            image: exchanges[exchange].image,
-            alt: "", // Decorative icon with text label, keep alt blank
-          }
-        })
+    const available = shuffle(
+      exchangesArray.filter((exchange) =>
+        selectedCountry?.exchanges.includes(exchange)
+      )
     )
+    filteredExchanges = available
+      .filter((exchange) => !exchanges[exchange].p2p)
+      .map(toCard)
+    filteredP2p = available
+      .filter((exchange) => exchanges[exchange].p2p)
+      .map(toCard)
   }
 
   const hasExchangeResults = filteredExchanges.length > 0
+  const hasP2pResults = filteredP2p.length > 0
 
   return {
     selectOptions,
@@ -401,6 +441,8 @@ export const useCentralizedExchanges = () => {
     placeholderString,
     hasSelectedCountry,
     hasExchangeResults,
+    hasP2pResults,
     filteredExchanges,
+    filteredP2p,
   }
 }
