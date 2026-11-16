@@ -12,6 +12,7 @@ import exchangeData from "@/data/exchangesByCountry"
 
 import binance from "@/public/images/exchanges/binance.png"
 import bitbuy from "@/public/images/exchanges/bitbuy.png"
+import bitdelta from "@/public/images/exchanges/bitdelta.png"
 import bitfinex from "@/public/images/exchanges/bitfinex.png"
 import bitflyer from "@/public/images/exchanges/bitflyer.png"
 import bitkub from "@/public/images/exchanges/bitkub.png"
@@ -45,6 +46,7 @@ type ExchangeKey =
   | "binance"
   | "binanceus"
   | "bitbuy"
+  | "bitdelta"
   | "bitfinex"
   | "bitflyer"
   | "bitkub"
@@ -137,6 +139,12 @@ const exchanges: ExchangeDetails = {
     name: "Bitbuy",
     url: "https://bitbuy.ca/en-ca",
     image: bitbuy,
+    usaExceptions: [],
+  },
+  bitdelta: {
+    name: "BitDelta India",
+    url: "https://bitdelta.in/",
+    image: bitdelta,
     usaExceptions: [],
   },
   bitfinex: {
