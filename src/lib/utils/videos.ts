@@ -128,7 +128,7 @@ export async function getVideoSlugs(): Promise<string[]> {
     slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
   } catch (error) {
     // Directory absent in the serverless runtime (public/content excluded from
-    // the function bundle). Match getPostSlugs: warn and return an empty list.
+    // the function bundle): warn and return an empty list.
     if (error instanceof Error && "code" in error && error.code === "ENOENT") {
       console.warn(
         `Content directory ${videosDir} not found, returning empty slug list`
