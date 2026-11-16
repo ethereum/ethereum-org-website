@@ -80,7 +80,7 @@ export default async function Page(props: { params: Promise<Params> }) {
   setRequestLocale(locale)
 
   const t = await getTranslations("page-bug-bounty")
-  const tCommon = await getTranslations("common")
+  const tEvents = await getTranslations("page-community-events")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("bug-bounty", locale as Lang)
@@ -332,84 +332,84 @@ export default async function Page(props: { params: Promise<Params> }) {
             <div>
               <Image
                 src={besu}
-                alt={tCommon("item-logo", { item: "Besu" })}
+                alt={tEvents("item-logo", { item: "Besu" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={erigon}
-                alt={tCommon("item-logo", { item: "Erigon" })}
+                alt={tEvents("item-logo", { item: "Erigon" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={ethrex}
-                alt={tCommon("item-logo", { item: "ethrex" })}
+                alt={tEvents("item-logo", { item: "ethrex" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={geth}
-                alt={tCommon("item-logo", { item: "Geth" })}
+                alt={tEvents("item-logo", { item: "Geth" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={nethermind}
-                alt={tCommon("item-logo", { item: "Nethermind" })}
+                alt={tEvents("item-logo", { item: "Nethermind" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={reth}
-                alt={tCommon("item-logo", { item: "Reth" })}
+                alt={tEvents("item-logo", { item: "Reth" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={lighthouseLight}
-                alt={tCommon("item-logo", { item: "Lighthouse" })}
+                alt={tEvents("item-logo", { item: "Lighthouse" })}
                 {...iconImageProps(true)}
               />
             </div>
             <div>
               <Image
                 src={lodestar}
-                alt={tCommon("item-logo", { item: "Lodestar" })}
+                alt={tEvents("item-logo", { item: "Lodestar" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={nimbus}
-                alt={tCommon("item-logo", { item: "Nimbus" })}
+                alt={tEvents("item-logo", { item: "Nimbus" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={prysm}
-                alt={tCommon("item-logo", { item: "Prysm" })}
+                alt={tEvents("item-logo", { item: "Prysm" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={tekuLight}
-                alt={tCommon("item-logo", { item: "Teku" })}
+                alt={tEvents("item-logo", { item: "Teku" })}
                 {...iconImageProps(true)}
               />
             </div>
             <div>
               <Image
                 src={grandine}
-                alt={tCommon("item-logo", { item: "Grandine" })}
+                alt={tEvents("item-logo", { item: "Grandine" })}
                 {...iconImageProps()}
               />
             </div>
