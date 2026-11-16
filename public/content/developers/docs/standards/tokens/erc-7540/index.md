@@ -25,21 +25,21 @@ To better understand this page, we recommend you first read about [token standar
 
 In ERC-4626, a deposit settles atomically: the investor sends assets and receives shares back in a single transaction.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 splits this into two steps. The investor first calls `requestDeposit()` to lock assets, then waits for the vault manager to process the request. Once fulfilled, the investor calls `deposit()` to claim their shares. Exchange rates are determined at fulfillment time, not request time.
+ERC-7540 splits this into two steps. The investor first calls `requestDeposit()`, which transfers their assets into the vault, then waits for the vault to process the request. How and when that happens is up to the vault, for example when an offchain settlement completes. Once fulfilled, the investor calls `deposit()` to claim their shares. The exchange rate is not fixed at request time: the vault sets it, typically when it fulfills the request, so the shares received can differ from what `convertToShares()` returned when the request was made.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-The redemption flow works the same way: `requestRedeem()` locks shares, and once fulfilled the investor calls `redeem()` to claim assets.
+The redemption flow works the same way: `requestRedeem()` takes the shares from the investor, and once fulfilled the investor calls `redeem()` to claim assets.
 
 ## ERC-7540 Functions and Features {#body}
 
 ERC-7540 inherits the full ERC-4626 interface but repurposes `deposit`/`mint`/`withdraw`/`redeem` as claim functions. The new `requestDeposit` and `requestRedeem` functions handle the initial request step.
 
-Each request moves through three states: pending (submitted, waiting for processing), claimable (fulfilled and priced), and claimed (investor has collected their shares or assets).
+Each request moves through three states: pending (submitted, waiting for processing), claimable (fulfilled and priced), and claimed (investor has collected their shares or assets). A vault may make a request claimable immediately, skipping pending, but claiming is always a separate call. No event is emitted when a request becomes claimable.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Deposit request flow {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Once a deposit request becomes claimable, the user calls the standard ERC-4626 [
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Locks `shares` from `owner` and submits a request to redeem. The `controller` address receives control of the request.
+Takes control of `shares` from `owner` and submits a request to redeem. The vault may hold the shares until the request is claimed or burn them right away. The `controller` address receives control of the request.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 
