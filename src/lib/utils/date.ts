@@ -2,21 +2,7 @@ import type { PartialDate } from "@/data/upgrades/types"
 
 import { DEFAULT_LOCALE } from "../constants"
 
-import { normalizeIntlSpaces } from "./intl"
-
-/**
- * Intl constructors throw a RangeError on structurally invalid BCP 47 tags
- * ("undefined", "en_US", ""), so any locale that isn't route-validated falls
- * back to DEFAULT_LOCALE here rather than 500ing the render (#18013).
- */
-export function safeLocale(locale: string): string {
-  try {
-    Intl.getCanonicalLocales(locale)
-    return locale
-  } catch {
-    return DEFAULT_LOCALE
-  }
-}
+import { normalizeIntlSpaces, safeLocale } from "./intl"
 
 /**
  * A wrapper for Intl.DateTimeFormat that enforces Web3 date standards.

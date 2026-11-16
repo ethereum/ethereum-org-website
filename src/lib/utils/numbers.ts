@@ -1,5 +1,4 @@
-import { safeLocale } from "./date"
-import { normalizeIntlSpaces } from "./intl"
+import { normalizeIntlSpaces, safeLocale } from "./intl"
 
 /**
  * A wrapper for Intl.NumberFormat that enforces Web3 numeral standards.

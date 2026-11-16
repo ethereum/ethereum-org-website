@@ -1,6 +1,11 @@
 import { expect, test } from "@playwright/test"
 
-import { dateTimeFormat, safeLocale } from "@/lib/utils/date"
+import { dateTimeFormat } from "@/lib/utils/date"
+import {
+  getCountryCodeName,
+  getLanguageCodeName,
+  safeLocale,
+} from "@/lib/utils/intl"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
@@ -41,6 +46,15 @@ test.describe("malformed locale fallback", () => {
       )
     })
   }
+
+  test("falls back in DisplayNames helpers for a scanner-style tag", () => {
+    expect(getLanguageCodeName("de", "a.b\nc")).toBe(
+      getLanguageCodeName("de", DEFAULT_LOCALE)
+    )
+    expect(getCountryCodeName("DE", "a.b\nc")).toBe(
+      getCountryCodeName("DE", DEFAULT_LOCALE)
+    )
+  })
 })
 
 test.describe("valid locale preservation", () => {
