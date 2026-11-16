@@ -334,6 +334,14 @@ module.exports = (phase) => {
           "./public/content/latest/**/*.md",
           "./public/content/translations/*/latest/**/*.md",
         ],
+        "\\[locale\\]/community": [
+          "./public/content/stories/**/*.md",
+          "./public/content/translations/*/stories/**/*.md",
+        ],
+        "\\[locale\\]/stories": [
+          "./public/content/stories/**/*.md",
+          "./public/content/translations/*/stories/**/*.md",
+        ],
       },
     }
   }
