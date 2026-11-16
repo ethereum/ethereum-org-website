@@ -3,11 +3,7 @@
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
-import {
-  Card,
-  CardContent,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
@@ -64,7 +60,9 @@ export const HubHeroScroll = () => {
   return (
     <>
       {pending && (
-        <Skeleton className={cn("h-10.5 w-full rounded md:w-56", whilePending)} />
+        <Skeleton
+          className={cn("h-10.5 w-full rounded md:w-56", whilePending)}
+        />
       )}
       <Button
         className={cn(heroButton, pending && oncePending)}
@@ -142,7 +140,9 @@ export const HubNextUp = () => {
         <CardContent className="flex min-w-0 flex-col gap-3 space-y-0">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-(--course) px-2.5 py-0.5 text-xs font-bold tracking-wide text-white uppercase">
-              {t(returning ? "page-courses-up-next" : "page-courses-start-here")}
+              {t(
+                returning ? "page-courses-up-next" : "page-courses-start-here"
+              )}
             </span>
             <span className="text-xs font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
               {t(`page-courses-level-${level}`)}
@@ -174,4 +174,3 @@ export const HubNextUp = () => {
     </div>
   )
 }
-
