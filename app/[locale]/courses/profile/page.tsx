@@ -7,18 +7,15 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import ProfileEmptyNotice from "@/components/Courses/profile-empty-notice"
 import ProfileView from "@/components/Courses/profile-view"
-import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
-import MainArticle from "@/components/MainArticle"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { COURSES_OG_IMAGE, PROFILE_SEGMENT } from "@/data/courses"
-
-import heroImg from "@/public/images/courses/learner-trophy-island.png"
 
 export const revalidate = false
 
@@ -36,21 +33,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <PageHero
-        breadcrumbs={{
-          slug: `/courses/${PROFILE_SEGMENT}`,
-          label: t("page-courses-profile-breadcrumb"),
-        }}
-        heroImg={heroImg}
-        title={t("page-courses-profile-title")}
-        description={t("page-courses-profile-description")}
+      <ProfileView
+        breadcrumbs={
+          <Breadcrumbs
+            slug={`/courses/${PROFILE_SEGMENT}`}
+            label={t("page-courses-profile-breadcrumb")}
+          />
+        }
+        notice={<ProfileEmptyNotice />}
       />
-      <main className="px-page pt-space-3x pb-page">
-        <MainArticle>
-          <ProfileEmptyNotice />
-          <ProfileView />
-        </MainArticle>
-      </main>
     </I18nProvider>
   )
 }

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react"
 
 import { requestJson } from "@/components/Account/api"
 import { useAccount } from "@/components/Account/use-account"
@@ -8,7 +8,9 @@ import { useAccount } from "@/components/Account/use-account"
 import { lessonProgressKey } from "@/data/courses"
 
 import {
+  clearAccountHint,
   COURSE_ACCOUNT_KEY,
+  COURSE_ACCOUNT_USER_KEY,
   COURSE_PROGRESS_KEY,
   flagProgress,
   readStoredProgress,
@@ -95,8 +97,7 @@ export const syncProgress = (force = false) => {
       "/api/courses/progress"
     )
     // Signed out (the session ended) or no accounts here: forget the hint
-    if (status === 401 || status === 404)
-      window.localStorage.removeItem(COURSE_ACCOUNT_KEY)
+    if (status === 401 || status === 404) clearAccountHint()
     if (!data) return null
     const stored = readStoredProgress()
     // Another account's progress (its session ended here) isn't this one's
@@ -139,7 +140,7 @@ export const queueProgressUpload = () => {
 export const releaseAccountProgress = (keep: boolean) => {
   syncedAccount = null
   syncing = null
-  window.localStorage.removeItem(COURSE_ACCOUNT_KEY)
+  clearAccountHint()
   const progress = readStoredProgress()
   if (!keep || !progress) return writeLocal(null)
   delete progress.account
@@ -208,4 +209,52 @@ export const useLessonSession = (
   }
 
   return { complete, restart }
+}
+
+interface AccountHint {
+  id: string
+  name: string
+}
+
+const readAccountHint = () => {
+  try {
+    return window.localStorage.getItem(COURSE_ACCOUNT_USER_KEY)
+  } catch {
+    return null
+  }
+}
+const noSubscribe = () => () => {}
+
+/**
+ * The account, plus who was signed in here last while the session check is
+ * still out, so account UI shows the learner at once instead of a stand-in
+ */
+export const useCourseAccount = () => {
+  const { status, user } = useAccount()
+  const raw = useSyncExternalStore(noSubscribe, readAccountHint, () => null)
+  const hint = useMemo(() => {
+    try {
+      return raw ? (JSON.parse(raw) as AccountHint) : null
+    } catch {
+      return null
+    }
+  }, [raw])
+
+  useEffect(() => {
+    if (status === "signed-in" && user)
+      window.localStorage.setItem(
+        COURSE_ACCOUNT_USER_KEY,
+        JSON.stringify({ id: user.id, name: user.name } satisfies AccountHint)
+      )
+    else if (status === "signed-out" || status === "unavailable")
+      window.localStorage.removeItem(COURSE_ACCOUNT_USER_KEY)
+  }, [status, user])
+
+  const shown: AccountHint | null =
+    status === "signed-in" && user
+      ? { id: user.id, name: user.name }
+      : status === "loading"
+        ? hint
+        : null
+  return { status, user: shown }
 }

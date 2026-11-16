@@ -1,11 +1,13 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { type ReactNode, useEffect, useState } from "react"
 import {
   CalendarDays,
+  ChevronDown,
   CircleCheck,
   Crosshair,
   Flame,
+  ListChecks,
   type LucideIcon,
   Medal,
   Sparkles,
@@ -14,10 +16,16 @@ import {
 } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
+import MainArticle from "@/components/MainArticle"
 import { ArrowNext } from "@/components/ui/arrow"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import Eyebrow from "@/components/ui/eyebrow"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 import { Progress as ProgressBar } from "@/components/ui/progress"
 import { Section } from "@/components/ui/section"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -31,7 +39,6 @@ import {
   courseHref,
   COURSES,
   COURSES_HUB,
-  type CourseTheme,
   EXAM_ID,
   examHref,
   getCourse,
@@ -50,8 +57,8 @@ import CourseProgress from "./course-progress"
 import { useLevelName } from "./level-up"
 import { levelFor, levelProgress } from "./levels"
 import {
+  ProfileAccountLine,
   ProfileAccountSections,
-  ProfileAccountSummary,
   ProfileAvatar,
 } from "./profile-account"
 import { ProgressNote } from "./progress-stats"
@@ -67,122 +74,12 @@ import {
 
 import { useRouter } from "@/i18n/navigation"
 
-// Course fills carry white text at 4.5:1 or better in both colour modes
-const solidCard = "bg-(--course) text-white"
-const solidMuted = "text-white/85"
-const solidIcon = "fill-white/25 text-white"
-
 const REVIEW_LIMIT = 5
 
-interface StatProps {
-  icon: LucideIcon
-  iconClassName: string
-  label: string
-  value: string
-  detail?: string
-  /** Solid course-colour fill with white text, for the headline stats */
-  theme?: CourseTheme
-}
-
-const Stat = ({
-  icon: Icon,
-  iconClassName,
-  label,
-  value,
-  detail,
-  theme,
-}: StatProps) => (
-  <Card
-    variant="nested"
-    size="md"
-    border={!theme}
-    className={cn(theme && solidCard)}
-    style={theme && courseThemeStyle(theme)}
-  >
-    <CardContent className="flex-row items-center gap-3">
-      <Icon aria-hidden className={cn("size-8 shrink-0", iconClassName)} />
-      <div className="flex flex-col">
-        <span
-          className={cn("text-sm", theme ? solidMuted : "text-body-medium")}
-        >
-          {label}
-        </span>
-        <span
-          className={cn(
-            "text-2xl font-black tabular-nums",
-            theme ? "text-white" : "text-body"
-          )}
-        >
-          {value}
-        </span>
-        {detail && (
-          <span
-            className={cn("text-sm", theme ? solidMuted : "text-body-medium")}
-          >
-            {detail}
-          </span>
-        )}
-      </div>
-    </CardContent>
-  </Card>
-)
-
-/** A stat card's shape, so the grid holds its height while progress loads */
-const StatSkeleton = () => (
-  <Card variant="nested" size="md" border>
-    <CardContent className="flex-row items-center gap-3">
-      <Skeleton className="size-8 shrink-0 rounded-full" />
-      <div className="flex flex-1 flex-col gap-1.5 py-0.5">
-        <Skeleton className="h-4 w-2/3" />
-        <Skeleton className="h-7 w-1/2" />
-      </div>
-    </CardContent>
-  </Card>
-)
-
-/**
- * Stands in for the profile until saved progress loads after mount, laid out
- * like it so nothing jumps. Server HTML: hidden by the courses layout's
- * pre-paint flag when nothing is saved, as the empty notice shows instead.
- */
-const ProfileSkeleton = () => {
-  const t = useTranslations("page-courses")
-  return (
-    <div
-      role="status"
-      // Literal for Tailwind's scanner; must match HAS_PROGRESS_ATTR
-      className="flow hidden [[data-has-course-progress]_&]:block"
-    >
-      <span className="sr-only">{t("page-courses-profile-loading")}</span>
-      <div
-        aria-hidden
-        className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5"
-      >
-        <Skeleton className="col-span-2 h-80 rounded-2xl sm:h-64 md:col-span-4 md:h-56 xl:col-span-1 xl:row-span-2 xl:h-auto" />
-        {Array.from({ length: 8 }, (_, i) => (
-          <StatSkeleton key={i} />
-        ))}
-      </div>
-      <div
-        aria-hidden
-        className="mt-space-3x grid items-start gap-x-12 gap-y-space-3x lg:grid-cols-[2fr_1fr]"
-      >
-        <div className="flex flex-col gap-3">
-          <Skeleton className="mb-3 h-8 w-1/3" />
-          {Array.from({ length: 3 }, (_, i) => (
-            <Skeleton key={i} className="h-28 rounded-2xl" />
-          ))}
-        </div>
-        <div className="flex flex-col gap-3">
-          <Skeleton className="mb-3 h-8 w-1/2" />
-          {Array.from({ length: 4 }, (_, i) => (
-            <Skeleton key={i} className="h-12 rounded-xl" />
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
+// Server HTML: skeletons only where the courses layout's pre-paint flag says
+// there's a profile to load. Literal for Tailwind's scanner; must match
+// HAS_PROGRESS_ATTR
+const whileLoading = "hidden [[data-has-course-progress]_&]:flex"
 
 /** Steps missed most often, worst first; only ones still in the catalog */
 const stepsToReview = (progress: Progress) =>
@@ -267,11 +164,173 @@ const CompactCourseCard = ({
   )
 }
 
+const StatTile = ({
+  icon: Icon,
+  iconClassName,
+  label,
+  value,
+}: {
+  icon: LucideIcon
+  iconClassName: string
+  label: string
+  value: string
+}) => (
+  <li className="m-0 flex items-center gap-3 rounded-2xl border bg-background p-4">
+    <Icon aria-hidden className={cn("size-8 shrink-0", iconClassName)} />
+    <div className="flex min-w-0 flex-col">
+      <span className="text-sm text-body-medium">{label}</span>
+      <span className="text-2xl font-black text-body tabular-nums">
+        {value}
+      </span>
+    </div>
+  </li>
+)
+
+interface DetailRow {
+  icon: LucideIcon
+  iconClassName: string
+  label: string
+  value: string
+}
+
+/** The secondary numbers, in the level card's popover */
+const DetailRows = ({ rows }: { rows: DetailRow[] }) => (
+  <ul className="m-0 flex list-none flex-col gap-3">
+    {rows.map(({ icon: Icon, iconClassName, label, value }) => (
+      <li key={label} className="m-0 flex items-center gap-3">
+        <Icon aria-hidden className={cn("size-5 shrink-0", iconClassName)} />
+        <span className="flex-1 text-sm text-body-medium">{label}</span>
+        <span className="font-bold text-body tabular-nums">{value}</span>
+      </li>
+    ))}
+  </ul>
+)
+
 /**
- * Everything stored about the learner, from this browser only. Account
- * details join once sign-in exists.
+ * A shelf for each track the learner has started, every course in it as a
+ * trophy, mastered ones in colour. Untouched and coming-soon tracks stay off
  */
-const ProfileView = () => {
+const TrophyShelf = ({
+  mastered,
+  started,
+}: {
+  mastered: Set<string>
+  started: Set<string>
+}) => {
+  const t = useTranslations("page-courses")
+  const locale = useLocale()
+  const count = numberFormat(locale).format
+  const active = TRACKS.filter(({ courses }) =>
+    courses.some(({ id }) => started.has(id))
+  )
+
+  return (
+    <div className="mt-10 flex flex-col gap-6">
+      <h2 className="text-xl">{t("page-courses-profile-shelf-title")}</h2>
+      {active.length ? (
+        <div className="grid gap-x-8 gap-y-6 md:grid-cols-2 xl:grid-cols-3">
+          {active.map(({ id, courses }) => {
+            const won = courses.filter((c) => mastered.has(c.id)).length
+            return (
+              <div key={id} className="flex flex-col gap-2">
+                <div className="flex items-baseline justify-between gap-2">
+                  <span className="font-bold">
+                    {t(`page-courses-track-${id}-title`)}
+                  </span>
+                  <span className="text-sm text-body-medium tabular-nums">
+                    {count(won)}/{count(courses.length)}
+                  </span>
+                </div>
+                <ul className="m-0 flex list-none flex-wrap items-end gap-1.5 border-b-4 border-border pb-1">
+                  {courses.map((course) => {
+                    const isMastered = mastered.has(course.id)
+                    return (
+                      <li
+                        key={course.id}
+                        title={t(`${course.id}-title`)}
+                        className={cn(
+                          "m-0 size-12",
+                          !isMastered && "opacity-40"
+                        )}
+                        style={courseThemeStyle(
+                          isMastered ? course.theme : "muted"
+                        )}
+                      >
+                        <CourseArt id={course.art} className="size-full" />
+                        <span className="sr-only">
+                          {t(`${course.id}-title`)}:{" "}
+                          {t(
+                            isMastered
+                              ? "page-courses-profile-mastered-title"
+                              : "page-courses-profile-shelf-not-mastered"
+                          )}
+                        </span>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
+      ) : (
+        <p className="m-0 text-body-medium">
+          {t("page-courses-profile-shelf-empty")}
+        </p>
+      )}
+    </div>
+  )
+}
+
+/** The hero's stats and shelf, laid out like them while progress loads */
+const HeroSkeleton = ({ className }: { className?: string }) => (
+  <div aria-hidden className={cn("mt-8 flex-col gap-10", className)}>
+    <div className="grid gap-4 sm:grid-cols-3 xl:grid-cols-5">
+      <Skeleton className="h-24 rounded-2xl sm:col-span-3 xl:col-span-2" />
+      {Array.from({ length: 3 }, (_, i) => (
+        <Skeleton key={i} className="h-24 rounded-2xl" />
+      ))}
+    </div>
+    <div className="flex flex-col gap-6">
+      <Skeleton className="h-6 w-40" />
+      <div className="grid gap-x-8 gap-y-6 md:grid-cols-2 xl:grid-cols-3">
+        {Array.from({ length: 2 }, (_, i) => (
+          <Skeleton key={i} className="h-20 rounded-xl" />
+        ))}
+      </div>
+    </div>
+  </div>
+)
+
+/** The courses section's shape while progress loads */
+const BodySkeleton = ({ className }: { className?: string }) => {
+  const t = useTranslations("page-courses")
+  return (
+    <div role="status" className={cn("flex-col gap-3", className)}>
+      <span className="sr-only">{t("page-courses-profile-loading")}</span>
+      <Skeleton aria-hidden className="mb-3 h-10 w-1/4" />
+      <div aria-hidden className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {Array.from({ length: 3 }, (_, i) => (
+          <Skeleton key={i} className="h-32 rounded-2xl" />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+/**
+ * The learner's profile: who they are, their level and headline numbers
+ * (the rest in the level card's popover) and a trophy shelf, then their
+ * courses, the questions worth another look and, once signed in, account
+ * details.
+ */
+const ProfileView = ({
+  breadcrumbs,
+  notice,
+}: {
+  breadcrumbs: ReactNode
+  notice: ReactNode
+}) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const { progress, isLessonComplete, isExamPassed } = useCourseProgress()
@@ -306,22 +365,15 @@ const ProfileView = () => {
     router.replace(COURSES_HUB)
   }, [ready, signedIn, progress, router])
 
+  const levelName = useLevelName()
   const count = numberFormat(locale).format
   const percent = numberFormat(locale, {
     style: "percent",
     maximumFractionDigits: 0,
   }).format
-  const date = (iso: string) =>
-    formatDateTime(locale, new Date(iso), { dateStyle: "medium" })
+  const days = (n: number) => t("page-courses-profile-days", { count: n })
 
-  const lessonsDone = COURSES.reduce(
-    (n, c) =>
-      n + c.lessons.filter(({ id }) => isLessonComplete(c.id, id)).length,
-    0
-  )
-  const trophies = COURSES.filter(({ id }) => isExamPassed(id)).length
-
-  // Catalog lessons only, like lessonsDone: records outlive renamed lessons
+  // Catalog lessons only: records outlive renamed or removed lessons
   const lessonRecords = COURSES.flatMap((c) =>
     c.lessons.flatMap(
       ({ id }) => progress.lessons[lessonProgressKey(c.id, id)] ?? []
@@ -331,24 +383,20 @@ const ProfileView = () => {
   const firstDone = lessonRecords
     .map(({ completedAt }) => completedAt)
     .sort()[0]
-
   const history = Object.values(progress.steps ?? {})
   const seen = history.reduce((n, { seen }) => n + seen, 0)
   const missed = history.reduce((n, { missed }) => n + missed, 0)
 
   const streak = getActiveStreak(progress.streak)
   const best = Math.max(progress.bestStreak ?? 0, progress.streak.count)
-  const days = (n: number) => t("page-courses-profile-days", { count: n })
 
   const courseRows = TRACKS.flatMap(({ id: trackId, courses }) =>
     courses.map((course) => {
-      const lessonsLeft = course.lessons.some(
-        ({ id }) => !isLessonComplete(course.id, id)
-      )
       const isMastered = course.exam.length
         ? isExamPassed(course.id)
-        : !lessonsLeft
+        : course.lessons.every(({ id }) => isLessonComplete(course.id, id))
       const isStarted =
+        isMastered ||
         course.lessons.some(({ id }) => isLessonComplete(course.id, id)) ||
         !!progress.exams?.[course.id]
       return { course, trackId, isMastered, isStarted }
@@ -358,211 +406,243 @@ const ProfileView = () => {
   const inProgress = courseRows.filter(
     ({ isMastered, isStarted }) => isStarted && !isMastered
   )
+  const masteredIds = new Set(mastered.map(({ course }) => course.id))
+  const startedIds = new Set(
+    courseRows.filter((row) => row.isStarted).map(({ course }) => course.id)
+  )
 
-  const levelName = useLevelName()
   const level = levelFor(progress.xp)
   const nextLevel = level.next === null ? null : levelFor(level.next)
 
   const review = stepsToReview(progress)
   const started = hasAnyProgress(progress)
+  const show = ready && (started || signedIn)
 
-  if (!ready || (!started && !signedIn)) return <ProfileSkeleton />
+  const details: DetailRow[] = [
+    {
+      icon: Medal,
+      iconClassName: "text-pink-700 dark:text-pink-400",
+      label: t("page-courses-profile-best-streak"),
+      value: days(best),
+    },
+    {
+      icon: CircleCheck,
+      iconClassName: "text-green-700 dark:text-green-400",
+      label: t("page-courses-profile-lessons"),
+      value: count(lessonRecords.length),
+    },
+    {
+      icon: Sparkles,
+      iconClassName: "text-yellow-700 dark:text-yellow-400",
+      label: t("page-courses-profile-perfect"),
+      value: count(perfect),
+    },
+    {
+      icon: Crosshair,
+      iconClassName: "text-primary",
+      label: t("page-courses-profile-accuracy"),
+      value: percent(seen ? (seen - missed) / seen : 0),
+    },
+    {
+      icon: ListChecks,
+      iconClassName: "text-teal-700 dark:text-teal-400",
+      label: t("page-courses-profile-questions"),
+      value: count(seen),
+    },
+    {
+      icon: CalendarDays,
+      iconClassName: "text-blue-600 dark:text-blue-400",
+      label: t("page-courses-profile-since"),
+      value: firstDone
+        ? formatDateTime(locale, new Date(firstDone), { dateStyle: "medium" })
+        : count(0),
+    },
+  ]
 
   return (
-    <div className="flow">
-      <Section id="stats" aria-labelledby="profile-stats-heading">
-        <h2 id="profile-stats-heading" className="sr-only">
-          {t("page-courses-profile-stats-title")}
-        </h2>
-        {/* The account card stands two stats tall beside the grid on wide screens */}
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5">
-          <Card
-            variant="nested"
-            size="md"
-            className={cn(
-              solidCard,
-              "col-span-2 md:col-span-4 xl:col-span-1 xl:row-span-2"
-            )}
-            style={courseThemeStyle("purple")}
-          >
-            {/* Container query: wide, the avatar sits on the right as tall
-                as the account text beside it (stretched, kept square);
-                narrow (the tall card on wide screens, phones), everything
-                stacks. The level bar always spans the card */}
-            <CardContent className="@container h-full text-white">
-              <div className="grid h-full content-between gap-4">
-                <div className="flex flex-col gap-4 @md:flex-row-reverse @md:gap-8">
-                  <span className="relative size-16 shrink-0 rounded-full bg-white/15 @md:aspect-square @md:size-auto @md:self-stretch">
-                    <ProfileAvatar />
-                  </span>
-                  <div className="flex-1">
-                    <ProfileAccountSummary muted={solidMuted} />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <span className="font-black text-white">
-                    {levelName(level)}
-                  </span>
-                  <ProgressBar
-                    aria-hidden
-                    value={levelProgress(progress.xp, level) * 100}
-                    className="h-2 bg-white/25 *:data-[slot=progress-indicator]:bg-white"
-                  />
-                  <span className={cn("text-sm", solidMuted)}>
-                    {nextLevel
-                      ? t("page-courses-xp-level-to-next", {
-                          xp: count(level.next! - progress.xp),
-                          name: levelName(nextLevel),
-                        })
-                      : t("page-courses-xp-level-top")}
-                  </span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          <Stat
-            icon={Zap}
-            iconClassName={solidIcon}
-            theme="blue"
-            label={t("page-courses-profile-xp")}
-            value={count(progress.xp)}
-          />
-          <Stat
-            icon={Flame}
-            iconClassName={solidIcon}
-            theme="orange"
-            label={t("page-courses-profile-streak")}
-            value={days(streak)}
-          />
-          <Stat
-            icon={Medal}
-            iconClassName={solidIcon}
-            theme="pink"
-            label={t("page-courses-profile-best-streak")}
-            value={days(best)}
-          />
-          <Stat
-            icon={Trophy}
-            iconClassName={solidIcon}
-            theme="teal"
-            label={t("page-courses-profile-trophies")}
-            value={count(trophies)}
-          />
-          <Stat
-            icon={CircleCheck}
-            iconClassName="text-green-700 dark:text-green-400"
-            label={t("page-courses-profile-lessons")}
-            value={count(lessonsDone)}
-          />
-          <Stat
-            icon={Crosshair}
-            iconClassName="text-primary"
-            label={t("page-courses-profile-accuracy")}
-            value={percent(seen ? (seen - missed) / seen : 0)}
-            detail={
-              seen
-                ? t("page-courses-profile-answers", { count: seen })
-                : undefined
-            }
-          />
-          <Stat
-            icon={Sparkles}
-            iconClassName="text-yellow-700 dark:text-yellow-400"
-            label={t("page-courses-profile-perfect")}
-            value={count(perfect)}
-          />
-          <Stat
-            icon={CalendarDays}
-            iconClassName="text-blue-600 dark:text-blue-400"
-            label={t("page-courses-profile-since")}
-            value={firstDone ? date(firstDone) : count(0)}
-          />
-        </div>
-      </Section>
-
-      <Section id="courses">
-        <h2>{t("page-courses-profile-courses-title")}</h2>
-        {!started && <p>{t("page-courses-profile-courses-none")}</p>}
-        {[
-          { id: "in-progress", rows: inProgress },
-          { id: "mastered", rows: mastered },
-        ]
-          .filter(({ rows }) => rows.length)
-          .map(({ id, rows }) => (
-            <div key={id} className="flow">
-              <h3>{t(`page-courses-profile-${id}-title`)}</h3>
-              <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {rows.map(({ course, trackId, isMastered }) => (
-                  <li key={course.id} className="m-0">
-                    <CompactCourseCard
-                      course={course}
-                      trackTitle={t(`page-courses-track-${trackId}-title`)}
-                      isMastered={isMastered}
-                      bestScore={progress.exams?.[course.id]?.best}
-                      formatPercent={percent}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        <div data-flow="cta">
-          <ButtonLink href={COURSES_HUB} size="lg">
-            {started
-              ? t("page-courses-profile-keep-learning")
-              : t("page-courses-profile-start-learning")}
-            <ArrowNext aria-hidden />
-          </ButtonLink>
-        </div>
-      </Section>
-
-      {review.length > 0 && (
-        <Section id="review">
-          <h2>{t("page-courses-profile-review-title")}</h2>
-          <p className="max-w-3xl">
-            {t("page-courses-profile-review-description")}
-          </p>
-          <div className="flex max-w-3xl flex-col gap-3">
-            {review.map(({ courseId, lessonId, stepId, seen, missed }) => {
-              const exam = lessonId === EXAM_ID
-              return (
-                <Card
-                  key={`${courseId}/${lessonId}/${stepId}`}
-                  href={
-                    exam ? examHref(courseId) : lessonHref(courseId, lessonId)
-                  }
-                  variant="nested"
-                  size="md"
-                  border
-                >
-                  <CardContent>
-                    <Eyebrow className="m-0">
-                      {t(`${courseId}-title`)} ·{" "}
-                      {exam
-                        ? t("page-courses-exam-title")
-                        : t(`${courseId}-${lessonId}-title`)}
-                    </Eyebrow>
-                    <CardParagraph className="m-0">
-                      {t(stepKey(courseId, lessonId, stepId, "prompt"))}
-                    </CardParagraph>
-                    <CardParagraph className="m-0" size="sm">
-                      {t("page-courses-profile-review-missed", {
-                        missed: count(missed),
-                        seen: count(seen),
-                      })}
-                    </CardParagraph>
-                  </CardContent>
-                </Card>
-              )
-            })}
+    <>
+      <div
+        className="border-b bg-(--course-softer) px-page py-hero lg:py-hero-2x"
+        style={courseThemeStyle("purple")}
+      >
+        <div className="mb-space-2x">{breadcrumbs}</div>
+        <div className="flex items-center gap-5 lg:gap-6">
+          <span className="relative size-20 shrink-0 rounded-full bg-(--course) lg:size-28">
+            <ProfileAvatar />
+          </span>
+          <div className="flex min-w-0 flex-col gap-1">
+            <h1 className="text-4xl font-black lg:text-5xl">
+              {t("page-courses-profile-title")}
+            </h1>
+            <ProfileAccountLine />
           </div>
-        </Section>
-      )}
+        </div>
 
-      <ProfileAccountSections />
+        {show ? (
+          <>
+            <ul className="m-0 mt-8 grid list-none gap-4 sm:grid-cols-3 xl:grid-cols-5">
+              <li className="m-0 sm:col-span-3 xl:col-span-2">
+                <Popover>
+                  <PopoverTrigger className="group flex size-full flex-col justify-center gap-1.5 rounded-2xl bg-(--course) p-4 text-start text-white transition-colors hover:bg-(--course-strong) focus-visible:outline-(--course-strong)">
+                    <span className="flex items-center justify-between gap-2">
+                      <span className="text-xl font-black">
+                        {levelName(level)}
+                      </span>
+                      <span className="flex items-center gap-1 text-sm text-white/85">
+                        {t("page-courses-profile-more-stats")}
+                        <ChevronDown
+                          aria-hidden
+                          className="size-4 transition-transform group-data-[state=open]:rotate-180"
+                        />
+                      </span>
+                    </span>
+                    <ProgressBar
+                      aria-hidden
+                      value={levelProgress(progress.xp, level) * 100}
+                      className="h-2 bg-white/25 *:data-[slot=progress-indicator]:bg-white"
+                    />
+                    <span className="text-sm text-white/85">
+                      {nextLevel
+                        ? t("page-courses-xp-level-to-next", {
+                            xp: count(level.next! - progress.xp),
+                            name: levelName(nextLevel),
+                          })
+                        : t("page-courses-xp-level-top")}
+                    </span>
+                  </PopoverTrigger>
+                  <PopoverContent align="start" className="w-80">
+                    <DetailRows rows={details} />
+                  </PopoverContent>
+                </Popover>
+              </li>
+              <StatTile
+                icon={Zap}
+                iconClassName="fill-yellow-400 text-yellow-700 dark:text-yellow-400"
+                label={t("page-courses-profile-xp")}
+                value={count(progress.xp)}
+              />
+              <StatTile
+                icon={Flame}
+                iconClassName="fill-orange-500 text-orange-700 dark:text-orange-400"
+                label={t("page-courses-profile-streak")}
+                value={days(streak)}
+              />
+              <StatTile
+                icon={Trophy}
+                iconClassName="text-teal-700 dark:text-teal-400"
+                label={t("page-courses-profile-trophies")}
+                value={count(mastered.length)}
+              />
+            </ul>
+            <TrophyShelf mastered={masteredIds} started={startedIds} />
+          </>
+        ) : (
+          <HeroSkeleton className={ready ? "flex" : whileLoading} />
+        )}
+      </div>
 
-      <ProgressNote privacy={false} />
-    </div>
+      <main className="px-page pt-space-3x pb-page">
+        <MainArticle>
+          {notice}
+          {show ? (
+            <div className="flow">
+              <Section id="courses">
+                <h2>{t("page-courses-profile-courses-title")}</h2>
+                {!started && <p>{t("page-courses-profile-courses-none")}</p>}
+                {[
+                  { id: "in-progress", rows: inProgress },
+                  { id: "mastered", rows: mastered },
+                ]
+                  .filter(({ rows }) => rows.length)
+                  .map(({ id, rows }) => (
+                    <div key={id} className="flow">
+                      <h3>{t(`page-courses-profile-${id}-title`)}</h3>
+                      <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
+                        {rows.map(({ course, trackId, isMastered }) => (
+                          <li key={course.id} className="m-0">
+                            <CompactCourseCard
+                              course={course}
+                              trackTitle={t(
+                                `page-courses-track-${trackId}-title`
+                              )}
+                              isMastered={isMastered}
+                              bestScore={progress.exams?.[course.id]?.best}
+                              formatPercent={percent}
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                <div data-flow="cta">
+                  <ButtonLink href={COURSES_HUB} size="lg">
+                    {started
+                      ? t("page-courses-profile-keep-learning")
+                      : t("page-courses-profile-start-learning")}
+                    <ArrowNext aria-hidden />
+                  </ButtonLink>
+                </div>
+              </Section>
+
+              {review.length > 0 && (
+                <Section id="review">
+                  <h2>{t("page-courses-profile-review-title")}</h2>
+                  <p className="max-w-3xl">
+                    {t("page-courses-profile-review-description")}
+                  </p>
+                  <div className="flex max-w-3xl flex-col gap-3">
+                    {review.map(
+                      ({ courseId, lessonId, stepId, seen, missed }) => {
+                        const exam = lessonId === EXAM_ID
+                        return (
+                          <Card
+                            key={`${courseId}/${lessonId}/${stepId}`}
+                            href={
+                              exam
+                                ? examHref(courseId)
+                                : lessonHref(courseId, lessonId)
+                            }
+                            variant="nested"
+                            size="md"
+                            border
+                          >
+                            <CardContent>
+                              <Eyebrow className="m-0">
+                                {t(`${courseId}-title`)} ·{" "}
+                                {exam
+                                  ? t("page-courses-exam-title")
+                                  : t(`${courseId}-${lessonId}-title`)}
+                              </Eyebrow>
+                              <CardParagraph className="m-0">
+                                {t(
+                                  stepKey(courseId, lessonId, stepId, "prompt")
+                                )}
+                              </CardParagraph>
+                              <CardParagraph className="m-0" size="sm">
+                                {t("page-courses-profile-review-missed", {
+                                  missed: count(missed),
+                                  seen: count(seen),
+                                })}
+                              </CardParagraph>
+                            </CardContent>
+                          </Card>
+                        )
+                      }
+                    )}
+                  </div>
+                </Section>
+              )}
+
+              <ProfileAccountSections />
+
+              <ProgressNote privacy={false} />
+            </div>
+          ) : (
+            <BodySkeleton className={ready ? "flex" : whileLoading} />
+          )}
+        </MainArticle>
+      </main>
+    </>
   )
 }
 

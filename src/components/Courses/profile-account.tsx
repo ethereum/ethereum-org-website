@@ -5,19 +5,21 @@ import { SquarePen, UserRound } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
-import { CardParagraph } from "@/components/ui/card"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/section"
+import { Skeleton } from "@/components/ui/skeleton"
 import { Tag } from "@/components/ui/tag"
-
-import { cn } from "@/lib/utils/cn"
 
 import AccountSettings from "../Account/account-settings"
 import Avatar from "../Account/avatar"
 import SignInDialog from "../Account/sign-in-dialog"
 import { useAccount } from "../Account/use-account"
 
-import { releaseAccountProgress, syncProgress } from "./account-sync"
+import {
+  releaseAccountProgress,
+  syncProgress,
+  useCourseAccount,
+} from "./account-sync"
 
 import { authClient } from "@/lib/auth/client"
 import {
@@ -37,16 +39,9 @@ const NAME_PROBLEMS: DisplayNameProblem[] = [
   "language",
 ]
 
-// White on the card's solid course colour, which is the same hex in both
-// modes; ghost has no hover shadow or primary text to undo
-const whiteButton =
-  "justify-center bg-white font-bold text-(--course-strong) focus-visible:outline-white active:text-(--course-strong) hover-link:bg-white/90 hover-link:!text-(--course-strong)"
-const clearButton =
-  "text-white focus-visible:outline-white active:text-white hover-link:bg-white/15 hover-link:!text-white"
-
 /**
- * The learner's display name as the card's title, with an edit button that
- * swaps it for a field. The server checks the name again (and filters words)
+ * The learner's display name, with an edit button that swaps it for a field.
+ * The server checks the name again (and filters words)
  */
 const DisplayName = () => {
   const t = useTranslations("component-account")
@@ -92,7 +87,7 @@ const DisplayName = () => {
   if (draft === null)
     return (
       <div className="flex min-w-0 items-center gap-2">
-        <p className="m-0 min-w-0 text-2xl font-bold break-words text-white">
+        <p className="m-0 min-w-0 text-xl font-bold break-words text-body">
           {current}
         </p>
         <Button
@@ -101,7 +96,7 @@ const DisplayName = () => {
           size="sm"
           aria-label={t("account-name-edit")}
           onClick={() => setDraft(current)}
-          className={cn("shrink-0 px-2", clearButton)}
+          className="shrink-0 px-2"
         >
           <SquarePen aria-hidden />
         </Button>
@@ -134,25 +129,15 @@ const DisplayName = () => {
       <p
         id={`${id}-error`}
         role="status"
-        className="m-0 text-sm font-bold text-white empty:hidden"
+        className="m-0 text-sm font-bold text-error empty:hidden"
       >
         {error}
       </p>
       <div className="flex flex-wrap gap-2">
-        <Button
-          type="submit"
-          variant="ghost"
-          disabled={busy}
-          className={whiteButton}
-        >
+        <Button type="submit" disabled={busy}>
           {t("account-save")}
         </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          onClick={close}
-          className={clearButton}
-        >
+        <Button type="button" variant="ghost" onClick={close}>
           {t("account-cancel")}
         </Button>
       </div>
@@ -160,10 +145,10 @@ const DisplayName = () => {
   )
 }
 
-/** The account card's picture: the learner's blockie once signed in */
+/** The profile's picture: the learner's blockie once signed in */
 export const ProfileAvatar = () => {
-  const { status, user } = useAccount()
-  return status === "signed-in" && user ? (
+  const { user } = useCourseAccount()
+  return user ? (
     <Avatar
       accountId={user.id}
       className="absolute inset-0 size-full ring-4 ring-white/25"
@@ -173,46 +158,42 @@ export const ProfileAvatar = () => {
   )
 }
 
-/** The profile's account card text: the learner's name, or an offer to sign in */
-export const ProfileAccountSummary = ({ muted }: { muted: string }) => {
+/**
+ * Under the profile's title: the learner's name with its edit button, the
+ * last signed-in name while the session check is out, or an offer to sign in
+ */
+export const ProfileAccountLine = () => {
   const t = useTranslations("page-courses")
-  const { status } = useAccount()
+  const { status, user } = useCourseAccount()
 
-  if (status === "signed-in")
-    return (
-      <div className="flex flex-col gap-1">
-        <DisplayName />
-        <CardParagraph className={cn("m-0", muted)} size="sm">
-          {t("page-courses-profile-account-signed-in-detail")}
-        </CardParagraph>
-      </div>
+  if (status === "signed-in") return <DisplayName />
+
+  if (status === "loading")
+    return user ? (
+      // The edit button's height, so nothing moves when it arrives
+      <p className="m-0 flex min-h-[31px] items-center text-xl font-bold break-words text-body">
+        {displayName(user.name)}
+      </p>
+    ) : (
+      <Skeleton className="h-7 w-40" />
     )
 
+  if (status !== "signed-out") return null
+
   return (
-    // Container query: in a narrow card the button takes the full width
-    <div className="@container flex w-full flex-col items-start gap-2">
-      <p className="m-0 text-2xl font-bold text-white">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <p className="m-0 text-xl font-bold text-body">
         {t("page-courses-profile-account-local")}
       </p>
-      <CardParagraph className={cn("m-0", muted)} size="sm">
-        {status === "signed-out"
-          ? t("page-courses-profile-account-save")
-          : t("page-courses-profile-account-soon")}
-      </CardParagraph>
-      {status === "signed-out" && (
-        <SignInDialog
-          view="create"
-          onSignedIn={() => void syncProgress(true)}
-          trigger={
-            <Button
-              variant="ghost"
-              className={cn(whiteButton, "w-full @xs:w-auto")}
-            >
-              {t("page-courses-profile-account-sign-in")}
-            </Button>
-          }
-        />
-      )}
+      <SignInDialog
+        view="create"
+        onSignedIn={() => void syncProgress(true)}
+        trigger={
+          <Button size="sm" variant="outline">
+            {t("page-courses-profile-account-sign-in")}
+          </Button>
+        }
+      />
     </div>
   )
 }
@@ -234,7 +215,7 @@ export const ProfileAccountSections = () => {
       <Section id="records" className="flow">
         <h2 className="flex flex-wrap items-center gap-3">
           {t("page-courses-profile-records-title")}
-          <Tag asChild status="tag">
+          <Tag asChild status="tag" className="font-normal">
             <span>{t("page-courses-coming-soon")}</span>
           </Tag>
         </h2>
@@ -247,7 +228,7 @@ export const ProfileAccountSections = () => {
       <Section id="leaderboard" className="flow">
         <h2 className="flex flex-wrap items-center gap-3">
           {t("page-courses-profile-leaderboard-title")}
-          <Tag asChild status="tag">
+          <Tag asChild status="tag" className="font-normal">
             <span>{t("page-courses-coming-soon")}</span>
           </Tag>
         </h2>
