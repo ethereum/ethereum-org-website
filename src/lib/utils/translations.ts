@@ -45,6 +45,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
   "/quizzes/": "learn-quizzes",
   "/reports/": "page-reports",
   "/reports/trillion-dollar-security/": "page-trillion-dollar-security",
+  "/use-cases/": "page-use-cases",
   "/wallets/find-wallet/": "page-wallets-find-wallet",
   "/wallets/": "page-wallets",
   "/what-is-ether/": "page-what-is-ether",
