@@ -2,7 +2,6 @@ name: CI
 
 on:
   pull_request:
-    branches: [dev, master, staging, "test/**"]
     types: [opened, synchronize, ready_for_review]
   workflow_dispatch:
 
@@ -37,6 +36,9 @@ jobs:
       - name: ESLint
         run: pnpm lint
 
+      - name: Prettier
+        run: pnpm prettier --check "**/*.{js,jsx,ts,tsx}"
+
       - name: TypeScript
         run: pnpm type-check
 
@@ -61,7 +63,7 @@ jobs:
 
   content-checks:
     name: Orphaned intl keys & added links
-    if: github.event_name == 'pull_request' && github.base_ref == 'dev'
+    if: github.event_name == 'pull_request' && github.base_ref != 'master' && github.base_ref != 'staging'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
