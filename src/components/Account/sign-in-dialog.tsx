@@ -6,7 +6,6 @@ import dynamic from "next/dynamic"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
-import Checkbox from "@/components/ui/checkbox"
 import {
   Dialog,
   DialogContent,
@@ -15,7 +14,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog-modal"
-import { Label } from "@/components/ui/label"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { CHALLENGE_HEADER, isCancelled, solveAccountChallenge } from "./api"
@@ -32,69 +30,46 @@ const WalletSign = dynamic(loadWalletSign, {
   loading: () => <Skeleton className="h-10.5 w-full rounded" />,
 })
 
-/** Accounts this new count as just created, for the sign-up-only choices */
-const NEW_ACCOUNT_MS = 2 * 60_000
-
-type View = "sign-in" | "create"
-
 interface SignInDialogProps {
   trigger: React.ReactNode
-  /** Which view opens first; the other is a link away */
-  view?: View
   /** After sign-in, before the dialog closes: e.g. move local progress over */
   onSignedIn?: () => void | Promise<void>
 }
 
 /**
- * Passkey or wallet: no email, no password. Opens on signing in, with
- * creating an account (and its leaderboard choice) one link away. A wallet
- * that has no account yet gets one either way. Site-wide, so any feature can
- * ask someone to sign in.
+ * Passkey or wallet: no email, no password, and one screen for signing in or
+ * up. A wallet with no account gets one. Browsers report "no passkey here"
+ * the same as a cancel, so a passkey that doesn't sign in offers to create
+ * one. Site-wide, so any feature can ask someone to sign in.
  */
-const SignInDialog = ({
-  trigger,
-  view: initialView = "sign-in",
-  onSignedIn,
-}: SignInDialogProps) => {
+const SignInDialog = ({ trigger, onSignedIn }: SignInDialogProps) => {
   const t = useTranslations("component-account")
   const { refetch } = useAccount()
   const [open, setOpen] = useState(false)
-  const [view, setView] = useState<View>(initialView)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [leaderboard, setLeaderboard] = useState(true)
-  const creating = view === "create"
+  const [offerCreate, setOfferCreate] = useState(false)
 
   // Fetch the wallet chunk ahead of the first open
   useEffect(() => {
     void loadWalletSign()
   }, [])
 
-  const switchView = (next: View) => {
-    setView(next)
-    setError(null)
-  }
-
   const finish = async () => {
-    if (creating && !leaderboard) {
-      const { data } = await authClient.getSession()
-      const created = data?.user.createdAt
-        ? new Date(data.user.createdAt).getTime()
-        : 0
-      if (Date.now() - created < NEW_ACCOUNT_MS)
-        await authClient.updateUser({ showOnLeaderboard: false })
-    }
     refetch()
     await onSignedIn?.()
     setOpen(false)
   }
 
-  const run = async (action: () => Promise<{ error: unknown } | void>) => {
+  const run = async (
+    action: () => Promise<{ error: unknown } | void>,
+    onFailed = () => setError(t("account-error"))
+  ) => {
     setBusy(true)
     setError(null)
     try {
       const result = await action()
-      if (result?.error) setError(t("account-error"))
+      if (result?.error) onFailed()
       else await finish()
     } catch (caught) {
       if (!isCancelled(caught)) setError(t("account-error"))
@@ -102,6 +77,12 @@ const SignInDialog = ({
       setBusy(false)
     }
   }
+
+  const signInWithPasskey = () =>
+    run(
+      () => authClient.signIn.passkey(),
+      () => setOfferCreate(true)
+    )
 
   const createWithPasskey = () =>
     run(async () =>
@@ -114,69 +95,53 @@ const SignInDialog = ({
       })
     )
 
-  const signInWithPasskey = () => run(() => authClient.signIn.passkey())
-
   return (
     <Dialog
       variant="stacked"
       open={open}
       onOpenChange={(next) => {
         setOpen(next)
-        if (next) switchView(initialView)
+        if (next) {
+          setError(null)
+          setOfferCreate(false)
+        }
       }}
     >
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       {/* Flow rhythm instead of the dialog's grid gap */}
       <DialogContent className="flow block max-w-md">
         <DialogHeader>
-          <DialogTitle>
-            {creating ? t("account-create-title") : t("account-sign-in")}
-          </DialogTitle>
+          <DialogTitle>{t("account-continue-title")}</DialogTitle>
         </DialogHeader>
         <DialogDescription>
-          {creating
-            ? t("account-create-description")
-            : t("account-sign-in-description")}
+          {t("account-continue-description")}
         </DialogDescription>
         <div className="flex flex-col gap-3">
-          <Button
-            disabled={busy}
-            onClick={creating ? createWithPasskey : signInWithPasskey}
-          >
+          <Button disabled={busy} onClick={signInWithPasskey}>
             <KeyRound aria-hidden />
-            {creating
-              ? t("account-create-passkey")
-              : t("account-sign-in-passkey")}
+            {t("account-continue-passkey")}
           </Button>
           <WalletSign
             mode="sign-in"
-            label={
-              creating
-                ? t("account-create-wallet")
-                : t("account-sign-in-wallet")
-            }
             className="w-full"
             onDone={() => run(async () => {})}
             onError={setError}
           />
         </div>
-        {creating && (
-          <div className="flex items-start gap-3">
-            <Checkbox
-              id="account-leaderboard"
-              checked={leaderboard}
-              onCheckedChange={(checked) => setLeaderboard(checked === true)}
-              className="mt-1"
-            />
-            <Label
-              htmlFor="account-leaderboard"
-              className="flex flex-col gap-1"
+        {offerCreate && (
+          <div
+            role="status"
+            className="flex flex-col gap-3 rounded-lg border bg-background-highlight p-4"
+          >
+            <p className="m-0">{t("account-passkey-missing")}</p>
+            <Button
+              variant="outline"
+              disabled={busy}
+              onClick={createWithPasskey}
             >
-              <span>{t("account-leaderboard-label")}</span>
-              <span className="text-sm text-body-medium">
-                {t("account-leaderboard-hint")}
-              </span>
-            </Label>
+              <KeyRound aria-hidden />
+              {t("account-create-passkey")}
+            </Button>
           </div>
         )}
         {error && (
@@ -184,16 +149,6 @@ const SignInDialog = ({
             {error}
           </p>
         )}
-        <p className="text-sm text-body-medium">
-          {creating ? t("account-have-account") : t("account-new-here")}{" "}
-          <Button
-            variant="link"
-            className="min-h-0 p-0 text-sm"
-            onClick={() => switchView(creating ? "sign-in" : "create")}
-          >
-            {creating ? t("account-sign-in") : t("account-create-title")}
-          </Button>
-        </p>
       </DialogContent>
     </Dialog>
   )

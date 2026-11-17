@@ -186,7 +186,6 @@ export const ProfileAccountLine = () => {
         {t("page-courses-profile-account-local")}
       </p>
       <SignInDialog
-        view="create"
         onSignedIn={() => void syncProgress(true)}
         trigger={
           <Button size="sm" variant="outline">
