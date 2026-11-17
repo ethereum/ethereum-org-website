@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { CatalogItem, PageParams } from "@/lib/types"
 
@@ -45,7 +45,6 @@ const getNetworkPage = async (locale: string, slug: string) => {
 /** Standalone network detail: the linkable, crawlable twin of the catalog modal. */
 const Page = async (props: { params: Promise<NetworkPageParams> }) => {
   const { locale, network: slug } = await props.params
-  setRequestLocale(locale)
 
   const page = await getNetworkPage(locale, slug)
   if (!page) notFound()
@@ -227,7 +226,6 @@ export async function generateMetadata(props: {
   params: Promise<NetworkPageParams>
 }) {
   const { locale, network: slug } = await props.params
-  setRequestLocale(locale)
 
   const page = await getNetworkPage(locale, slug)
   if (!page) return {}

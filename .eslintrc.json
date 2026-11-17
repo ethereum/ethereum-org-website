@@ -9,8 +9,7 @@
   "plugins": [
     "simple-import-sort",
     "@typescript-eslint",
-    "unused-imports",
-    "local"
+    "unused-imports"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -83,22 +82,6 @@
     {
       "files": ["**/*.stories.@(js|jsx|ts|tsx|mdx)"],
       "extends": ["plugin:storybook/recommended"]
-    },
-    {
-      // Next.js route entry points only. Descendants (page-jsonld, _components)
-      // inherit the locale the entry primes, so the rule must not apply there.
-      "files": [
-        "app/**/page.tsx",
-        "app/**/layout.tsx",
-        "app/**/template.tsx",
-        "app/**/default.tsx",
-        "app/**/loading.tsx",
-        "app/**/not-found.tsx",
-        "app/**/opengraph-image.tsx"
-      ],
-      "rules": {
-        "local/set-request-locale-first": "error"
-      }
     }
   ],
   "ignorePatterns": [
