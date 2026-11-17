@@ -1,13 +1,15 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "te",
-  "translatedAt": "2026-06-17T00:01:42.119Z",
-  "englishManifestHash": "0f01b37dcb34",
+  "translatedAt": "2026-11-17T03:14:06.562Z",
+  "englishManifestHash": "17db0b310f06",
   "placeholderOrder": [
     "LINK-414550",
-    "LINK-c80d64",
-    "CODE-d19b08",
+    "LINK-e08146",
+    "CODE-5d062b",
     "LINK-414550",
+    "LINK-671301",
+    "CODE-5d062b",
     "LINK-459cf1",
     "CODE-11a913",
     "LINK-e7bab7",
@@ -16,24 +18,29 @@
     "CODE-b370de",
     "LINK-f4a3e7",
     "CODE-210c02",
-    "LINK-87b2b3",
     "LINK-b0b193",
     "LINK-2c960e",
     "LINK-0ce682",
-    "LINK-50a9b8",
-    "LINK-76dfbb",
-    "CODEBLOCK-e34c9f",
+    "CODEBLOCK-cf7969",
     "CODE-3f0d33",
-    "CODEBLOCK-4233c9",
+    "CODE-cf1a34",
+    "CODE-11a913",
+    "CODE-9fd34a",
+    "CODE-b370de",
+    "CODE-48ef84",
+    "CODE-b370de",
+    "CODE-cf1a34",
+    "CODE-8e1941",
+    "CODEBLOCK-2e1773",
     "CODE-b370de",
     "CODE-11a913",
     "LINK-cd95aa",
-    "LINK-bc168b",
-    "CODE-d19b08",
-    "LINK-9cd522",
-    "LINK-b40325",
-    "CODE-56cf76",
-    "CODEBLOCK-3637ff",
+    "LINK-b057f8",
+    "CODE-5d062b",
+    "LINK-c794dc",
+    "LINK-d77217",
+    "CODEBLOCK-6f5abc",
+    "CODE-e7300e",
     "LINK-8227ce",
     "LINK-e4be84",
     "LINK-ce869a",
@@ -44,105 +51,117 @@
     "CODE-a963ec",
     "LINK-d3341b",
     "CODE-57cf53",
+    "CODEBLOCK-6cad78",
+    "CODE-abd01a",
     "CODE-57cf53",
     "CODE-822406",
-    "CODE-0da3ef",
-    "CODE-5ffcf1",
-    "CODE-bb607d",
+    "CODE-8fd957",
     "CODE-57cf53",
-    "CODEBLOCK-947650",
-    "CODEBLOCK-1cb361",
-    "CODEBLOCK-b3a1d6",
-    "CODE-d19b08",
+    "CODEBLOCK-801802",
+    "CODEBLOCK-9fdee2",
+    "CODEBLOCK-0e889c",
+    "CODE-5d062b",
     "CODE-9bbbec",
-    "CODEBLOCK-13d706",
-    "CODEBLOCK-7c8371",
-    "CODE-bb6bf4",
-    "CODEBLOCK-202348",
-    "CODEBLOCK-3182ae",
-    "CODE-d19b08",
+    "CODEBLOCK-9780aa",
+    "CODEBLOCK-3e5bff",
+    "CODE-1a3521",
+    "CODE-ef59a1",
+    "CODE-e8160b",
+    "CODEBLOCK-ffcdfe",
+    "CODEBLOCK-b3e935",
+    "CODEBLOCK-94027c",
+    "LINK-eba986",
+    "CODE-5d062b",
+    "CODE-5d062b",
+    "CODE-d9f0f8",
     "CODE-11a913",
     "CODE-b370de",
     "CODE-11a913",
     "CODE-210c02",
     "CODE-11a913",
     "CODE-1563fc",
-    "CODEBLOCK-1e3eae",
-    "CODE-34ef94",
+    "CODEBLOCK-d5f74c",
     "CODE-34ef94",
     "CODE-34ef94",
     "CODE-c7a75c",
-    "CODEBLOCK-5d97dc",
+    "CODEBLOCK-b8bdd9",
     "CODE-a23da1",
-    "CODEBLOCK-f08a5f",
-    "CODE-5ffcf1",
+    "CODE-cf1a34",
+    "CODE-330328",
+    "CODE-2a7763",
     "CODE-57cf53",
     "CODE-822406",
-    "CODE-0da3ef",
+    "CODE-8fd957",
+    "CODE-87cbfd",
+    "CODE-8e1941",
     "LINK-c13fab",
-    "LINK-b236fe",
     "LINK-aadbc1",
     "LINK-598c03",
-    "LINK-ef29cf",
-    "LINK-1d381e"
+    "CODE-5d062b",
+    "LINK-656a48",
+    "CODE-38ff25"
   ],
   "placeholderMap": {
-    "CODEBLOCK-e34c9f": {
+    "CODEBLOCK-cf7969": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-4233c9": {
+    "CODEBLOCK-2e1773": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-3637ff": {
+    "CODEBLOCK-6f5abc": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-947650": {
+    "CODEBLOCK-6cad78": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-1cb361": {
+    "CODEBLOCK-801802": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-b3a1d6": {
+    "CODEBLOCK-9fdee2": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-13d706": {
+    "CODEBLOCK-0e889c": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-7c8371": {
+    "CODEBLOCK-9780aa": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-202348": {
+    "CODEBLOCK-3e5bff": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-3182ae": {
+    "CODEBLOCK-ffcdfe": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-1e3eae": {
+    "CODEBLOCK-b3e935": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-5d97dc": {
+    "CODEBLOCK-94027c": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-f08a5f": {
+    "CODEBLOCK-d5f74c": {
       "type": "code-fence",
       "values": {}
     },
-    "CODE-d19b08": {
+    "CODEBLOCK-b8bdd9": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-5d062b": {
       "type": "inline-code",
       "values": {
-        "content": "eth-network-package"
+        "content": "ethereum-package"
       }
     },
     "CODE-11a913": {
@@ -175,10 +194,34 @@
         "content": "--enclave"
       }
     },
-    "CODE-56cf76": {
+    "CODE-cf1a34": {
       "type": "inline-code",
       "values": {
-        "content": "prelaunch-data-generator"
+        "content": "el-1-geth-lighthouse"
+      }
+    },
+    "CODE-9fd34a": {
+      "type": "inline-code",
+      "values": {
+        "content": "cl-1-lighthouse-geth"
+      }
+    },
+    "CODE-48ef84": {
+      "type": "inline-code",
+      "values": {
+        "content": "vc-1-geth-lighthouse"
+      }
+    },
+    "CODE-8e1941": {
+      "type": "inline-code",
+      "values": {
+        "content": "rpc"
+      }
+    },
+    "CODE-e7300e": {
+      "type": "inline-code",
+      "values": {
+        "content": "--legacy-peer-deps"
       }
     },
     "CODE-9cc6f2": {
@@ -205,10 +248,16 @@
         "content": "hardhat.config.ts"
       }
     },
-    "CODE-0da3ef": {
+    "CODE-abd01a": {
       "type": "inline-code",
       "values": {
-        "content": "<$YOUR_PORT>"
+        "content": "http://127.0.0.1:32769"
+      }
+    },
+    "CODE-8fd957": {
+      "type": "inline-code",
+      "values": {
+        "content": "<PORT>"
       }
     },
     "CODE-822406": {
@@ -217,28 +266,34 @@
         "content": "localnet"
       }
     },
-    "CODE-5ffcf1": {
-      "type": "inline-code",
-      "values": {
-        "content": "el-client-<num>"
-      }
-    },
-    "CODE-bb607d": {
-      "type": "inline-code",
-      "values": {
-        "content": "64248"
-      }
-    },
     "CODE-9bbbec": {
       "type": "inline-code",
       "values": {
         "content": "ChipToken.sol"
       }
     },
-    "CODE-bb6bf4": {
+    "CODE-1a3521": {
       "type": "inline-code",
       "values": {
-        "content": "simple.js"
+        "content": "ChipToken.js"
+      }
+    },
+    "CODE-ef59a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "deployed()"
+      }
+    },
+    "CODE-e8160b": {
+      "type": "inline-code",
+      "values": {
+        "content": "waitForDeployment()"
+      }
+    },
+    "CODE-d9f0f8": {
+      "type": "inline-code",
+      "values": {
+        "content": "network_params.yaml"
       }
     },
     "CODE-34ef94": {
@@ -259,16 +314,46 @@
         "content": "kurtosis clean -a"
       }
     },
-    "LINK-c80d64": {
+    "CODE-330328": {
+      "type": "inline-code",
+      "values": {
+        "content": "el-2-geth-lodestar"
+      }
+    },
+    "CODE-2a7763": {
+      "type": "inline-code",
+      "values": {
+        "content": "el-3-geth-teku"
+      }
+    },
+    "CODE-87cbfd": {
+      "type": "inline-code",
+      "values": {
+        "content": "el-<num>-..."
+      }
+    },
+    "CODE-38ff25": {
+      "type": "inline-code",
+      "values": {
+        "content": "additional_services"
+      }
+    },
+    "LINK-e08146": {
       "type": "link",
       "values": {
-        "url": "https://github.com/kurtosis-tech/eth-network-package"
+        "url": "https://github.com/ethpandaops/ethereum-package"
       }
     },
     "LINK-414550": {
       "type": "link",
       "values": {
         "url": "https://www.kurtosis.com/"
+      }
+    },
+    "LINK-671301": {
+      "type": "link",
+      "values": {
+        "url": "https://ethpandaops.io/"
       }
     },
     "LINK-459cf1": {
@@ -295,12 +380,6 @@
         "url": "https://lodestar.chainsafe.io/"
       }
     },
-    "LINK-87b2b3": {
-      "type": "link",
-      "values": {
-        "url": "https://www.kurtosis.com/blog/testing-the-ethereum-merge"
-      }
-    },
     "LINK-b0b193": {
       "type": "link",
       "values": {
@@ -319,22 +398,10 @@
         "url": "https://nodejs.org/en"
       }
     },
-    "LINK-50a9b8": {
+    "LINK-b057f8": {
       "type": "link",
       "values": {
-        "url": "https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable"
-      }
-    },
-    "LINK-76dfbb": {
-      "type": "link",
-      "values": {
-        "url": "https://www.npmjs.com/package/npx"
-      }
-    },
-    "LINK-bc168b": {
-      "type": "link",
-      "values": {
-        "url": "https://github.com/kurtosis-tech/eth-network-package"
+        "url": "https://github.com/ethpandaops/ethereum-package"
       }
     },
     "LINK-cd95aa": {
@@ -343,13 +410,13 @@
         "url": "https://docs.kurtosis.com/advanced-concepts/enclaves/"
       }
     },
-    "LINK-9cd522": {
+    "LINK-c794dc": {
       "type": "link",
       "values": {
         "url": "https://docs.kurtosis.com/advanced-concepts/files-artifacts/"
       }
     },
-    "LINK-b40325": {
+    "LINK-d77217": {
       "type": "link",
       "values": {
         "url": "https://github.com/ethpandaops/ethereum-genesis-generator"
@@ -391,16 +458,16 @@
         "url": "https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts"
       }
     },
+    "LINK-eba986": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethpandaops/ethereum-package#configuration"
+      }
+    },
     "LINK-c13fab": {
       "type": "link",
       "values": {
         "url": "https://github.com/kurtosis-tech/kurtosis/issues/new/choose"
-      }
-    },
-    "LINK-b236fe": {
-      "type": "link",
-      "values": {
-        "url": "mailto:feedback@kurtosistech.com"
       }
     },
     "LINK-aadbc1": {
@@ -415,22 +482,16 @@
         "url": "https://github.com/kurtosis-tech/awesome-kurtosis"
       }
     },
-    "LINK-ef29cf": {
+    "LINK-656a48": {
       "type": "link",
       "values": {
-        "url": "https://github.com/kurtosis-tech/eth2-package"
-      }
-    },
-    "LINK-1d381e": {
-      "type": "link",
-      "values": {
-        "url": "https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test"
+        "url": "https://github.com/ethpandaops/ethereum-package#configuration"
       }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T00:01:42.119Z",
+      "translatedAt": "2026-11-17T03:14:06.562Z",
       "status": "success"
     }
   }
