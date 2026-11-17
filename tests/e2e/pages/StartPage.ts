@@ -29,11 +29,9 @@ export class StartPage extends BasePage {
   }
 
   /**
-   * Navigate through the start flow and open the wallet connection modal.
+   * Open the wallet connection modal from the "Connect" step.
    */
   async openWalletConnectionModal() {
-    await this.page.getByRole("checkbox", { name: "I have a wallet." }).click()
-    await this.page.getByRole("button", { name: "Continue" }).click()
     // RainbowKit hands out a noop openConnectModal until wagmi finishes reconnecting
     const dialog = this.page.getByRole("dialog")
     await expect(async () => {

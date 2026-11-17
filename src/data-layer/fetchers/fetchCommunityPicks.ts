@@ -1,5 +1,6 @@
 import type { CommunityPick } from "@/lib/types"
 
+import { getSheetsHeaders } from "../google"
 import { uploadToS3 } from "../s3"
 import { get } from "../storage"
 
@@ -40,21 +41,19 @@ async function withMirroredAvatars(
  * Returns the fetched community picks data.
  */
 export async function fetchCommunityPicks(): Promise<CommunityPick[]> {
-  const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = process.env.GOOGLE_SHEET_ID_DAPPS
 
   if (!sheetId) {
     throw new Error("Google Sheets ID not set")
   }
 
-  if (!googleApiKey) {
-    throw new Error("Google API key not set")
-  }
+  const headers = await getSheetsHeaders()
 
   console.log("Starting community picks data fetch from Google Sheets")
 
   const response = await fetchRetry(
-    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/community_picks!A:Z?majorDimension=ROWS&key=${googleApiKey}`
+    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/community_picks!A:Z?majorDimension=ROWS`,
+    { headers }
   )
 
   if (!response.ok) {

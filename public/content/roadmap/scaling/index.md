@@ -47,6 +47,12 @@ This second step is known as ["Danksharding"](/roadmap/danksharding/). Implement
 
 <ButtonLink variant="outline" href="/developers/docs/scaling/">More on rollups</ButtonLink>
 
+## Scaling Ethereum Mainnet with zkEVMs {#zkevm}
+
+Rollups are not the only path to scale. Today every [validator](/glossary/#validator) re-executes every transaction in every block, which limits how much Ethereum Mainnet can process without raising hardware requirements. With a zkEVM, a single prover executes the block and generates a [zero-knowledge proof](/zero-knowledge-proofs/) that the execution was correct, and validators check that proof instead. Checking a proof is far cheaper than re-executing, so Mainnet can process more transactions without pushing validators onto expensive hardware.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">More on zkEVM</ButtonLink>
+
 ## Current progress {#current-progress}
 
 Proto-Danksharding was successfully implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March 2024. Since its implementation, rollups have begun utilizing blob storage, resulting in reduced transaction costs for users and millions of transactions processed in blobs.

@@ -71,6 +71,7 @@ import ghoLargeImg from "@/public/images/stablecoins/gho-large.png"
 import gloLargeImg from "@/public/images/stablecoins/glo-large.png"
 import heroImg from "@/public/images/stablecoins/gold-rollup-spaceship-with-coins.png"
 import duneImg from "@/public/images/stablecoins/tools/dune.png"
+import pharosImg from "@/public/images/stablecoins/tools/pharos.png"
 import stablePulseImg from "@/public/images/stablecoins/tools/stable-pulse.png"
 import stablecoinsWtfImg from "@/public/images/stablecoins/tools/stablecoinswtf.png"
 import stablesInfoImg from "@/public/images/stablecoins/tools/stables-info.png"
@@ -390,6 +391,16 @@ async function Page(props: { params: Promise<PageParams> }) {
       className: "[&_img]:p-1",
       ctaLabel: t("page-stablecoins-tools-visit-brand", {
         brand: t("page-stablecoins-tools-stablewars-title"),
+      }),
+    },
+    {
+      title: t("page-stablecoins-tools-pharos-title"),
+      description: t("page-stablecoins-tools-pharos-description"),
+      href: "https://pharos.watch/",
+      image: pharosImg,
+      className: "dark:[&_img]:invert",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-pharos-title"),
       }),
     },
   ]
