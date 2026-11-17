@@ -67,7 +67,9 @@ The leaderboard is planned too ("Coming soon" on the profile): it opens once eno
 | Deploy previews                             | `preview_<PR>`, created and migrated at build, when the PR touches learner code or has the `preview-db` label |
 | Fork previews                               | none: the untrusted deploys policy strips the secrets                                                         |
 
-`.github/workflows/learner-db-previews.yml` drops a preview's database when its PR closes, and sweeps daily for any left behind. Env vars and scopes: `.env.example`.
+The provisioner role behind a preview's `LEARNER_DB_MIGRATE_URL` owns every preview database, so it is build-only and marked secret, and the untrusted deploys policy must stay on "Require approval" or "Build without sensitive variables", never "Build without restrictions". The build also creates a `preview_<PR>_app` login that can only read and write its own database, and the runtime connects as it. Its password is an HMAC of the role name with `LEARNER_PREVIEW_DB_SECRET`, since Netlify env vars can't differ per PR. `CREATEDB` isn't limited by name, so only ever create `preview_<PR>` databases.
+
+`.github/workflows/learner-db-previews.yml` drops a preview's database and login when its PR closes, and sweeps daily for any left behind. Env vars and scopes: `.env.example`.
 
 ## Local
 

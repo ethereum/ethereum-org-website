@@ -11,12 +11,17 @@
  *                                  learner code or has the `preview-db` label
  *   no LEARNER_DB_MIGRATE_URL      none, e.g. a fork PR's preview
  *
- * Drop a preview's database with `.github/workflows/learner-db-previews.yml`.
+ * In previews LEARNER_DB_MIGRATE_URL is the provisioner, which owns every
+ * preview database, so it stays build-only. The runtime logs in as the
+ * preview's own `preview_<PR>_app` role, which can only use its database.
+ * `.github/workflows/learner-db-previews.yml` drops both when the PR closes.
  */
 import { drizzle } from "drizzle-orm/postgres-js"
 import { migrate } from "drizzle-orm/postgres-js/migrator"
 import { mkdirSync, writeFileSync } from "node:fs"
 import postgres from "postgres"
+
+import { previewCredentials } from "../../lib/db"
 
 const DATABASE_BRANCHES = ["dev", "staging"]
 const PREVIEW_DB_LABEL = "preview-db"
@@ -87,6 +92,51 @@ const withDatabase = (url: string, database: string) => {
   return parsed.toString()
 }
 
+const runSql = async (url: string, statements: string[]) => {
+  const client = postgres(url, { max: 1, onnotice: () => {} })
+  try {
+    for (const statement of statements) await client.unsafe(statement)
+  } finally {
+    await client.end()
+  }
+}
+
+/** Creates the preview's database and login, then migrates it */
+const provisionPreview = async (adminUrl: string, database: string) => {
+  const secret = process.env.LEARNER_PREVIEW_DB_SECRET
+  // The runtime derives the login's password from it too
+  if (!secret) throw new Error("LEARNER_PREVIEW_DB_SECRET is not set")
+  const { user, password } = previewCredentials(database, secret)
+  // Names are built from digits only and the password is hex: safe to interpolate
+  const admin = postgres(adminUrl, { max: 1, onnotice: () => {} })
+  try {
+    const [role] = await admin`select 1 from pg_roles where rolname = ${user}`
+    await admin.unsafe(
+      `${role ? "alter" : "create"} role "${user}" login nocreatedb nocreaterole password '${password}'`
+    )
+    const [exists] =
+      await admin`select 1 from pg_database where datname = ${database}`
+    if (!exists) await admin.unsafe(`create database "${database}"`)
+    await admin.unsafe(`revoke connect on database "${database}" from public`)
+    await admin.unsafe(`grant connect on database "${database}" to "${user}"`)
+  } finally {
+    await admin.end()
+  }
+
+  const url = withDatabase(adminUrl, database)
+  await runSql(url, [
+    `alter default privileges in schema public grant select, insert, update, delete on tables to "${user}"`,
+    `alter default privileges in schema public grant usage, select, update on sequences to "${user}"`,
+  ])
+  await runMigrations(url)
+  // Default privileges skip tables that already existed, e.g. in a preview made before its login
+  await runSql(url, [
+    `grant usage on schema public to "${user}"`,
+    `grant select, insert, update, delete on all tables in schema public to "${user}"`,
+    `grant usage, select, update on all sequences in schema public to "${user}"`,
+  ])
+}
+
 const runMigrations = async (url: string) => {
   const client = postgres(url, { max: 1, onnotice: () => {} })
   try {
@@ -109,16 +159,7 @@ const main = async () => {
     })
     if (!wanted) return write(false)
     const database = `preview_${REVIEW_ID}`
-    const admin = postgres(migrateUrl, { max: 1, onnotice: () => {} })
-    try {
-      const [exists] =
-        await admin`select 1 from pg_database where datname = ${database}`
-      // Identifier from digits only, so safe to interpolate
-      if (!exists) await admin.unsafe(`create database "${database}"`)
-    } finally {
-      await admin.end()
-    }
-    await runMigrations(withDatabase(migrateUrl, database))
+    await provisionPreview(migrateUrl, database)
     return write(true, database)
   }
 
