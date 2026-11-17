@@ -94,7 +94,7 @@ npm install --legacy-peer-deps
 
 - [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) 包含用于二十一点 dapp 的几个简单智能合约
 - [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) 包含将代币合约部署到本地以太坊网络的脚本
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) 包含针对你的代币合约的简单 .js 测试，以确认我们二十一点 dapp 中的每个玩家都铸造了 1000 个代币
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) 包含针对你的代币合约的简单 .js 测试，以确认已为我们二十一点 dapp 中的每个玩家铸造了 1000 个代币
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) 配置你的 Hardhat 设置
 
 ### 配置 Hardhat 以使用本地测试网 {#configure-hardhat}
@@ -158,7 +158,7 @@ npx hardhat run scripts/deploy.ts --network localnet
 ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-现在尝试针对你的本地 dapp 运行 `ChipToken.js` 测试，以确认我们二十一点 dapp 中的每个玩家都铸造了 1000 个代币。示例测试仍使用 ethers v5 的 `deployed()` 函数，而 ethers v6 已将其替换为 `waitForDeployment()`，因此请先更新它：
+现在尝试针对你的本地 dapp 运行 `ChipToken.js` 测试，以确认已为我们二十一点 dapp 中的每个玩家铸造了 1000 个代币。示例测试仍使用 ethers v5 的 `deployed()` 函数，而 ethers v6 已将其替换为 `waitForDeployment()`，因此请先更新它：
 
 ```sh
 sed -i.bak 's/\.deployed()/.waitForDeployment()/' test/ChipToken.js

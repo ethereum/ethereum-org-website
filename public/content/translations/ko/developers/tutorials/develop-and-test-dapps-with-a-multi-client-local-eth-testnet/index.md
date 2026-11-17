@@ -241,7 +241,7 @@ kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/ethpand
 - 로컬 이더리움 네트워크에 dApp을 배포하고 간단한 테스트 실행
 - 기본 이더리움 네트워크가 3개의 노드를 갖도록 구성
 
-어떤 점이 좋았는지, 어떤 점을 개선할 수 있는지, 또는 질문에 대한 답변을 듣고 싶습니다. 주저하지 말고 [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose)를 통해 연락해 주세요!
+어떤 점이 좋았는지, 어떤 점을 개선할 수 있는지에 대한 의견을 듣고 싶으며, 궁금한 점이 있으면 답변해 드리겠습니다. 주저하지 말고 [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose)를 통해 연락해 주세요!
 
 ### 기타 예제 및 가이드 {#other-examples-guides}
 

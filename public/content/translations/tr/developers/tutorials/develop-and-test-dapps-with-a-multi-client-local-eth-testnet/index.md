@@ -32,7 +32,7 @@ Bu kılavuzda şunları yapacaksınız:
 
 [Kurtosis](https://www.kurtosis.com/), çoklu kapsayıcı test ortamlarını yapılandırmak için tasarlanmış birleştirilebilir bir derleme sistemidir. Özellikle geliştiricilerin, blokzincir test ağları gibi dinamik kurulum mantığı gerektiren tekrarlanabilir ortamlar oluşturmasına olanak tanır.
 
-Bu kılavuzda, [ethPandaOps](https://ethpandaops.io/) tarafından sürdürülen Kurtosis `ethereum-package`, yerel bir Ethereum test ağı başlatır. [`geth`](https://geth.ethereum.org/) gibi tüm büyük yürütme katmanı (EL) istemcilerini ve [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) ve [`lodestar`](https://lodestar.chainsafe.io/) gibi mutabakat katmanı (CL) istemcilerini destekler. Bu paket, Hardhat Network ve Anvil gibi çerçevelerdeki ağlara yapılandırılabilir ve birleştirilebilir bir alternatif olarak hizmet eder. Kurtosis, geliştiricilere kullandıkları test ağları üzerinde daha fazla kontrol ve esneklik sunar; bu da Ethereum istemci ekiplerinin ağ yükseltmelerini test etmek için onu kullanmasının başlıca nedenidir.
+Bu kılavuzda, [ethPandaOps](https://ethpandaops.io/) tarafından sürdürülen Kurtosis `ethereum-package`, yerel bir Ethereum test ağı başlatır. [`geth`](https://geth.ethereum.org/) gibi tüm büyük yürütme katmanı (EL) istemcilerini ve [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) ve [`lodestar`](https://lodestar.chainsafe.io/) gibi mutabakat katmanı (CL) istemcilerini destekler. Bu paket, Hardhat Network ve Anvil gibi çerçevelerdeki ağlara yapılandırılabilir ve birleştirilebilir bir alternatif olarak hizmet eder. Kurtosis, geliştiricilere kullandıkları test ağları üzerinde daha fazla kontrol ve esneklik sunar; bu da Ethereum istemci ekiplerinin ağ yükseltmelerini test etmek için onu kullanmasının başlıca nedenlerinden biridir.
 
 ## Kurtosis'i kurma {#setting-up-kurtosis}
 
@@ -52,7 +52,7 @@ kurtosis run --enclave local-eth-testnet github.com/ethpandaops/ethereum-package
 
 Not: Bu komut, `--enclave` bayrağını kullanarak ağınızı "local-eth-testnet" olarak adlandırır.
 
-Kurtosis, talimatları yorumlamak, doğrulamak ve ardından yürütmek için çalışırken arka planda attığı adımları yazdıracaktır. Sonunda, oluşturduğu yerleşim bölgesinin (enclave) bir özetini yazdırır. Özet, bir **dosya eserleri (files artifacts)** listesi ve bir **kullanıcı hizmetleri (user services)** listesi içerir. Varsayılan yapılandırmayla, kullanıcı hizmetleri tek bir düğüm içerir:
+Kurtosis, talimatları yorumlamak, doğrulamak ve ardından yürütmek için çalışırken arka planda attığı adımları yazdıracaktır. Sonunda, oluşturduğu enclave'in bir özetini yazdırır. Özet, bir **dosya eserleri (files artifacts)** listesi ve bir **kullanıcı hizmetleri (user services)** listesi içerir. Varsayılan yapılandırmayla, kullanıcı hizmetleri tek bir düğüm içerir:
 
 - `el-1-geth-lighthouse`, `geth` yürütme istemcisi
 - `cl-1-lighthouse-geth`, `lighthouse` işaret düğümü
@@ -70,11 +70,11 @@ Tebrikler! Docker üzerinden bir CL (`lighthouse`) ve EL istemcisi (`geth`) ile 
 
 ### İnceleme {#review-instantiate-testnet}
 
-Bu bölümde, Kurtosis'i bir Kurtosis [Yerleşim Bölgesi (Enclave)](https://docs.kurtosis.com/advanced-concepts/enclaves/) içinde yerel bir Ethereum test ağı başlatmak üzere [GitHub'da uzaktan barındırılan `ethereum-package`](https://github.com/ethpandaops/ethereum-package) paketini kullanmaya yönlendiren bir komut yürüttünüz. Yerleşim bölgenizin içinde hem "dosya eserleri" hem de "kullanıcı hizmetleri" bulacaksınız.
+Bu bölümde, Kurtosis'i bir Kurtosis [enclave'i](https://docs.kurtosis.com/advanced-concepts/enclaves/) içinde yerel bir Ethereum test ağı başlatmak üzere [GitHub'da uzaktan barındırılan `ethereum-package`](https://github.com/ethpandaops/ethereum-package) paketini kullanmaya yönlendiren bir komut yürüttünüz. Enclave'inizin içinde hem "dosya eserleri" hem de "kullanıcı hizmetleri" bulacaksınız.
 
-Yerleşim bölgenizdeki [Dosya Eserleri](https://docs.kurtosis.com/advanced-concepts/files-artifacts/), başlangıç (genesis) dosyaları ve doğrulayıcı anahtarları gibi EL ve CL istemcilerini başlatmak için oluşturulan ve kullanılan tüm verileri içerir. Başlangıç verileri [ethereum-genesis-generator](https://github.com/ethpandaops/ethereum-genesis-generator) kullanılarak oluşturulmuştur.
+Enclave'inizdeki [Dosya Eserleri](https://docs.kurtosis.com/advanced-concepts/files-artifacts/), başlangıç (genesis) dosyaları ve doğrulayıcı anahtarları gibi EL ve CL istemcilerini başlatmak için oluşturulan ve kullanılan tüm verileri içerir. Başlangıç verileri [ethereum-genesis-generator](https://github.com/ethpandaops/ethereum-genesis-generator) kullanılarak oluşturulmuştur.
 
-Kullanıcı hizmetleri, yerleşim bölgenizde çalışan tüm kapsayıcıya alınmış hizmetleri görüntüler. Hem bir EL istemcisi hem de bir CL istemcisi içeren tek bir düğümün oluşturulduğunu fark edeceksiniz.
+Kullanıcı hizmetleri, enclave'inizde çalışan tüm kapsayıcıya alınmış hizmetleri görüntüler. Hem bir EL istemcisi hem de bir CL istemcisi içeren tek bir düğümün oluşturulduğunu fark edeceksiniz.
 
 ## Dapp geliştirme ortamınızı yerel Ethereum test ağına bağlayın {#connect-your-dapp}
 
@@ -228,7 +228,7 @@ kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/ethpand
 
 Not: `kurtosis clean -a` komutu burada Kurtosis'e yeni bir tane başlatmadan önce eski test ağını ve içeriğini yok etmesi talimatını vermek için kullanılır.
 
-Yine, Kurtosis bir süre çalışacak ve gerçekleşen bireysel adımları yazdıracaktır. Sonunda, yerleşim bölgesi özetini yazdırır. Bu kez, kullanıcı hizmetleri, eşleşen mutabakat ve doğrulayıcı istemcileriyle birlikte yürütme istemcileri için örneğin `el-1-geth-lighthouse`, `el-2-geth-lodestar` ve `el-3-geth-teku` olmak üzere üç düğüm içerir.
+Yine, Kurtosis bir süre çalışacak ve gerçekleşen bireysel adımları yazdıracaktır. Sonunda, enclave özetini yazdırır. Bu kez, kullanıcı hizmetleri, eşleşen mutabakat ve doğrulayıcı istemcileriyle birlikte yürütme istemcileri için örneğin `el-1-geth-lighthouse`, `el-2-geth-lodestar` ve `el-3-geth-teku` olmak üzere üç düğüm içerir.
 
 Tebrikler! Yerel test ağınızı 1 yerine 3 düğüme sahip olacak şekilde başarıyla yapılandırdınız. Dapp'inize karşı daha önce yaptığınız aynı iş akışlarını (dağıtma ve test etme) çalıştırmak için, `hardhat.config.ts` yapılandırma dosyanızdaki `localnet` yapısında bulunan `<PORT>` değerini yeni, 3 düğümlü yerel test ağınızdaki herhangi bir `el-<num>-...` hizmetinin `rpc` bağlantı noktasıyla değiştirerek daha önce yaptığımız aynı işlemleri gerçekleştirin.
 

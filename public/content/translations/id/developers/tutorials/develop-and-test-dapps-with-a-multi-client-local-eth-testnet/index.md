@@ -52,7 +52,7 @@ kurtosis run --enclave local-eth-testnet github.com/ethpandaops/ethereum-package
 
 Catatan: Perintah ini menamai jaringan Anda "local-eth-testnet" menggunakan tanda `--enclave`.
 
-Kurtosis akan mencetak langkah-langkah yang diambilnya secara internal saat ia bekerja untuk menafsirkan, memvalidasi, dan kemudian mengeksekusi instruksi. Pada akhirnya, ia mencetak ringkasan dari enklaf yang dibuatnya. Ringkasan tersebut mencakup daftar **artefak file** dan daftar **layanan pengguna**. Dengan konfigurasi default, layanan pengguna mencakup satu node:
+Kurtosis akan mencetak langkah-langkah yang diambilnya secara internal saat ia bekerja untuk menafsirkan, memvalidasi, dan kemudian mengeksekusi instruksi. Pada akhirnya, ia mencetak ringkasan dari enklave yang dibuatnya. Ringkasan tersebut mencakup daftar **artefak file** dan daftar **layanan pengguna**. Dengan konfigurasi default, layanan pengguna mencakup satu node:
 
 - `el-1-geth-lighthouse`, klien eksekusi `geth`
 - `cl-1-lighthouse-geth`, simpul suar `lighthouse`
@@ -70,11 +70,11 @@ Selamat! Anda menggunakan Kurtosis untuk menginisiasi testnet Ethereum lokal, de
 
 ### Tinjauan {#review-instantiate-testnet}
 
-Di bagian ini, Anda mengeksekusi perintah yang mengarahkan Kurtosis untuk menggunakan [`ethereum-package` yang dihosting dari jarak jauh di GitHub](https://github.com/ethpandaops/ethereum-package) untuk menjalankan testnet Ethereum lokal di dalam [Enklaf](https://docs.kurtosis.com/advanced-concepts/enclaves/) Kurtosis. Di dalam enklaf Anda, Anda akan menemukan "artefak file" dan "layanan pengguna".
+Di bagian ini, Anda mengeksekusi perintah yang mengarahkan Kurtosis untuk menggunakan [`ethereum-package` yang dihosting dari jarak jauh di GitHub](https://github.com/ethpandaops/ethereum-package) untuk menjalankan testnet Ethereum lokal di dalam [Enklave](https://docs.kurtosis.com/advanced-concepts/enclaves/) Kurtosis. Di dalam enklave Anda, Anda akan menemukan "artefak file" dan "layanan pengguna".
 
-[Artefak File](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) di enklaf Anda mencakup semua data yang dihasilkan dan digunakan untuk mem-bootstrap klien EL dan CL, seperti file genesis dan kunci validator. Data genesis dibuat menggunakan [ethereum-genesis-generator](https://github.com/ethpandaops/ethereum-genesis-generator).
+[Artefak File](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) di enklave Anda mencakup semua data yang dihasilkan dan digunakan untuk mem-bootstrap klien EL dan CL, seperti file genesis dan kunci validator. Data genesis dibuat menggunakan [ethereum-genesis-generator](https://github.com/ethpandaops/ethereum-genesis-generator).
 
-Layanan pengguna menampilkan semua layanan dalam kontainer yang beroperasi di enklaf Anda. Anda akan melihat bahwa satu node, yang menampilkan klien EL dan klien CL, telah dibuat.
+Layanan pengguna menampilkan semua layanan dalam kontainer yang beroperasi di enklave Anda. Anda akan melihat bahwa satu node, yang menampilkan klien EL dan klien CL, telah dibuat.
 
 ## Hubungkan lingkungan pengembangan dapp Anda ke testnet Ethereum lokal {#connect-your-dapp}
 
@@ -228,7 +228,7 @@ kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/ethpand
 
 Catatan: perintah `kurtosis clean -a` digunakan di sini untuk menginstruksikan Kurtosis agar menghancurkan testnet lama dan isinya sebelum memulai yang baru.
 
-Sekali lagi, Kurtosis akan bekerja sebentar dan mencetak langkah-langkah individual yang sedang berlangsung. Pada akhirnya, ia mencetak ringkasan enklaf. Kali ini, layanan pengguna mencakup tiga node, misalnya `el-1-geth-lighthouse`, `el-2-geth-lodestar`, dan `el-3-geth-teku` untuk klien eksekusi, bersama dengan klien konsensus dan validator yang cocok.
+Sekali lagi, Kurtosis akan bekerja sebentar dan mencetak langkah-langkah individual yang sedang berlangsung. Pada akhirnya, ia mencetak ringkasan enklave. Kali ini, layanan pengguna mencakup tiga node, misalnya `el-1-geth-lighthouse`, `el-2-geth-lodestar`, dan `el-3-geth-teku` untuk klien eksekusi, bersama dengan klien konsensus dan validator yang cocok.
 
 Selamat! Anda telah berhasil mengonfigurasi testnet lokal Anda untuk memiliki 3 node alih-alih 1. Untuk menjalankan alur kerja yang sama seperti yang Anda lakukan sebelumnya terhadap dapp Anda (menyebarkan & menguji), lakukan operasi yang sama seperti yang kita lakukan sebelumnya dengan mengganti `<PORT>` di struktur `localnet` dalam file konfigurasi `hardhat.config.ts` Anda dengan port `rpc` dari layanan `el-<num>-...` mana pun di testnet lokal 3 node Anda yang baru.
 

@@ -602,7 +602,7 @@ Tentokrát zjistila, že vlastnost je porušena okamžitě.
 
 ## Hledání transakcí s vysokou spotřebou gasu {#finding-transactions-with-high-gas-consumption}
 
-Ukážeme si, jak pomocí Echidny najít transakce s vysokou spotřebou gasu. Starší verze Echidny pro to měly volbu `estimateGas`; ta byla ve verzi Echidna 2.3.0 odstranena. Místo toho měříme gas pomocí `gasleft()` a necháme [optimalizační režim](https://secure-contracts.com/program-analysis/echidna/advanced/optimization_mode.html) Echidny, aby jej maximalizoval. Cílem je následující chytrý kontrakt:
+Ukážeme si, jak pomocí Echidny najít transakce s vysokou spotřebou gasu. Starší verze Echidny pro to měly volbu `estimateGas`; ta byla ve verzi Echidna 2.3.0 odstraněna. Místo toho měříme gas pomocí `gasleft()` a necháme [optimalizační režim](https://secure-contracts.com/program-analysis/echidna/advanced/optimization_mode.html) Echidny, aby jej maximalizoval. Cílem je následující chytrý kontrakt:
 
 ```solidity
 // SPDX-License-Identifier: AGPL-3.0

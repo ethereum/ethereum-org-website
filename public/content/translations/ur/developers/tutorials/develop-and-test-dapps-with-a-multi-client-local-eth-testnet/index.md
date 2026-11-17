@@ -96,7 +96,7 @@ npm install --legacy-peer-deps
 
 - [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) میں بلیک جیک dapp کے لیے چند سادہ سمارٹ کنٹریکٹس شامل ہیں
 - [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) میں آپ کے مقامی ایتھیریم نیٹ ورک پر ٹوکن کنٹریکٹ تعینات کرنے کے لیے ایک اسکرپٹ شامل ہے
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) میں آپ کے ٹوکن کنٹریکٹ کے لیے ایک سادہ .js ٹیسٹ شامل ہے تاکہ اس بات کی تصدیق کی جا سکے کہ ہماری بلیک جیک dapp میں ہر کھلاڑی کے لیے <span dir="ltr">1000</span> منٹ کیے گئے ہیں
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) میں آپ کے ٹوکن کنٹریکٹ کے لیے ایک سادہ .js ٹیسٹ شامل ہے تاکہ اس بات کی تصدیق کی جا سکے کہ ہماری بلیک جیک dapp میں ہر کھلاڑی کے لیے <span dir="ltr">1000</span> ٹوکن منٹ کیے گئے ہیں
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) آپ کے Hardhat سیٹ اپ کو کنفیگر کرتا ہے
 
 ### مقامی آزمائشی نیٹ ورک استعمال کرنے کے لیے Hardhat کو کنفیگر کریں {#configure-hardhat}
@@ -160,7 +160,7 @@ npx hardhat run scripts/deploy.ts --network localnet
 ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-اب اپنی مقامی dapp کے خلاف `ChipToken.js` ٹیسٹ چلانے کی کوشش کریں تاکہ اس بات کی تصدیق کی جا سکے کہ ہماری بلیک جیک dapp میں ہر کھلاڑی کے لیے <span dir="ltr">1000</span> منٹ کیے گئے ہیں۔ نمونہ ٹیسٹ اب بھی ethers v5 `deployed()` فنکشن استعمال کرتا ہے، جسے ethers v6 نے `waitForDeployment()` سے بدل دیا ہے، لہذا پہلے اسے اپ ڈیٹ کریں:
+اب اپنی مقامی dapp کے خلاف `ChipToken.js` ٹیسٹ چلانے کی کوشش کریں تاکہ اس بات کی تصدیق کی جا سکے کہ ہماری بلیک جیک dapp میں ہر کھلاڑی کے لیے <span dir="ltr">1000</span> ٹوکن منٹ کیے گئے ہیں۔ نمونہ ٹیسٹ اب بھی ethers v5 `deployed()` فنکشن استعمال کرتا ہے، جسے ethers v6 نے `waitForDeployment()` سے بدل دیا ہے، لہذا پہلے اسے اپ ڈیٹ کریں:
 
 ```sh
 sed -i.bak 's/\.deployed()/.waitForDeployment()/' test/ChipToken.js

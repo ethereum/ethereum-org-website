@@ -1,6 +1,6 @@
 ---
-title: "Comment développer et tester une application décentralisée (dapp) sur un réseau de test local multi-clients"
-description: "Ce guide vous expliquera d'abord comment instancier et configurer un réseau de test Ethereum local multi-clients avant d'utiliser le réseau de test pour déployer et tester une application décentralisée (dapp)."
+title: "Comment développer et tester une dapp sur un réseau de test local multi-clients"
+description: "Ce guide vous expliquera d'abord comment instancier et configurer un réseau de test Ethereum local multi-clients avant d'utiliser le réseau de test pour déployer et tester une dapp."
 author: "Tedi Mitiku"
 tags:
   [
@@ -90,7 +90,7 @@ cd awesome-kurtosis/smart-contract-example
 npm install --legacy-peer-deps
 ```
 
-L'indicateur `--legacy-peer-deps` est nécessaire car certains des plugins Hardhat du projet d'exemple déclarent des versions de dépendances paires conflictuelles.
+L'indicateur `--legacy-peer-deps` est nécessaire car certains des plugins Hardhat du projet d'exemple déclarent des versions conflictuelles de dépendances pairs (peer dependencies).
 
 Le dossier [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) utilisé ici contient la configuration typique pour un développeur de dapp utilisant le framework [Hardhat](https://hardhat.org/) :
 

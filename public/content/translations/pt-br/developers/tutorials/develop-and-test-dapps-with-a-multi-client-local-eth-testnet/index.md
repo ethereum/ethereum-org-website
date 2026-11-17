@@ -96,7 +96,7 @@ A pasta [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtos
 
 - [`contracts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/contracts) contém alguns contratos inteligentes simples para um dApp de Blackjack
 - [`scripts/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/scripts) contém um script para implantar um contrato de token em sua rede local do Ethereum
-- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) contém um teste .js simples para o seu contrato de token para confirmar que cada jogador em nosso dApp de Blackjack tem 1000 cunhados para eles
+- [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) contém um teste .js simples para o seu contrato de token para confirmar que cada jogador em nosso dApp de Blackjack tem 1000 fichas cunhadas para si
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) configura sua instalação do Hardhat
 
 ### Configure o Hardhat para usar a rede de teste local {#configure-hardhat}
@@ -160,7 +160,7 @@ A saída deve ser algo como:
 ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-Agora tente executar o teste `ChipToken.js` em seu dApp local para confirmar que cada jogador em nosso dApp de Blackjack tem 1000 cunhados para eles. O teste de exemplo ainda usa a função `deployed()` do ethers v5, que o ethers v6 substituiu por `waitForDeployment()`, então atualize-o primeiro:
+Agora tente executar o teste `ChipToken.js` em seu dApp local para confirmar que cada jogador em nosso dApp de Blackjack tem 1000 fichas cunhadas para si. O teste de exemplo ainda usa a função `deployed()` do ethers v5, que o ethers v6 substituiu por `waitForDeployment()`, então atualize-o primeiro:
 
 ```sh
 sed -i.bak 's/\.deployed()/.waitForDeployment()/' test/ChipToken.js

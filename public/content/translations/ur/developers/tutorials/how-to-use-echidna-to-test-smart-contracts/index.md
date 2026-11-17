@@ -13,7 +13,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 ## انسٹالیشن {#installation}
 
-ایکڈنا کو Docker، <span dir="ltr">Homebrew</span> یا پہلے سے مرتب شدہ بائنری کا استعمال کرتے ہوئے انسٹال کیا جا سکتا ہے۔ اس ٹیوٹوریل کی مثالوں کو <span dir="ltr">Echidna 2.3.3</span> اور <span dir="ltr">solc 0.8.37</span> کے ساتھ ٹیسٹ کیا گیا تھا۔
+ایکڈنا کو Docker، <span dir="ltr">Homebrew</span> یا پہلے سے مرتب شدہ بائنری کا استعمال کرتے ہوئے انسٹال کیا جا سکتا ہے۔ اس ٹیوٹوریل کی مثالوں کو ایکڈنا <span dir="ltr">2.3.3</span> اور <span dir="ltr">solc 0.8.37</span> کے ساتھ ٹیسٹ کیا گیا تھا۔
 
 ### Docker کے ذریعے ایکڈنا {#echidna-through-docker}
 
@@ -314,7 +314,7 @@ echidna contract.sol --config config.yaml
 
 ایکڈنا `filterBlacklist` بولین (boolean) کی قدر کے مطابق، یا تو `C.f1()`، `C.f2()` اور `C.f3()` کو بلیک لسٹ کر کے یا صرف انہیں کال کر کے فزنگ مہم شروع کرتا ہے۔
 
-## Solidity کے تصدیق کرنے کے عمل کو ایکڈنا کے ساتھ کیسے ٹیسٹ کریں {#how-to-test-soliditys-assert-with-echidna}
+## Solidity کے تصدیق کرنے (assert) کے عمل کو ایکڈنا کے ساتھ کیسے ٹیسٹ کریں {#how-to-test-soliditys-assert-with-echidna}
 
 اس مختصر ٹیوٹوریل میں، ہم یہ دکھانے جا رہے ہیں کہ کنٹریکٹس میں تصدیق کی جانچ پڑتال (assertion checking) کے لیے ایکڈنا کا استعمال کیسے کیا جائے۔ فرض کریں کہ ہمارے پاس اس طرح کا ایک کنٹریکٹ ہے:
 
@@ -599,7 +599,7 @@ echidna_magic_values: failed!💥
 
 ## زیادہ گیس کی کھپت والی ٹرانزیکشنز تلاش کرنا {#finding-transactions-with-high-gas-consumption}
 
-ہم دیکھیں گے کہ ایکڈنا کے ساتھ زیادہ گیس کی کھپت والی ٹرانزیکشنز کیسے تلاش کی جائیں۔ ایکڈنا کے پرانے ورژنز میں اس کے لیے ایک `estimateGas` آپشن تھا؛ اسے <span dir="ltr">Echidna 2.3.0</span> میں ہٹا دیا گیا تھا۔ اس کے بجائے، ہم `gasleft()` کے ساتھ گیس کی پیمائش کرتے ہیں اور ایکڈنا کے [آپٹیمائزیشن موڈ](https://secure-contracts.com/program-analysis/echidna/advanced/optimization_mode.html) کو اسے زیادہ سے زیادہ کرنے دیتے ہیں۔ ہدف درج ذیل سمارٹ کنٹریکٹ ہے:
+ہم دیکھیں گے کہ ایکڈنا کے ساتھ زیادہ گیس کی کھپت والی ٹرانزیکشنز کیسے تلاش کی جائیں۔ ایکڈنا کے پرانے ورژنز میں اس کے لیے ایک `estimateGas` آپشن تھا؛ اسے ایکڈنا <span dir="ltr">2.3.0</span> میں ہٹا دیا گیا تھا۔ اس کے بجائے، ہم `gasleft()` کے ساتھ گیس کی پیمائش کرتے ہیں اور ایکڈنا کے [آپٹیمائزیشن موڈ](https://secure-contracts.com/program-analysis/echidna/advanced/optimization_mode.html) کو اسے زیادہ سے زیادہ کرنے دیتے ہیں۔ ہدف درج ذیل سمارٹ کنٹریکٹ ہے:
 
 ```solidity
 // SPDX-License-Identifier: AGPL-3.0

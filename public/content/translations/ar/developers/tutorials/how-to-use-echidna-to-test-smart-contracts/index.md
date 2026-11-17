@@ -411,7 +411,7 @@ function echidna_assert_after_f() public returns (bool) {
 - من غير الواضح ما هي الوسائط التي يجب استخدامها لاستدعاء `f`.
 - إذا تراجعت `f`، فستفشل الخاصية.
 
-بشكل عام، نوصي باتباع [توصية John Regehr](https://blog.regehr.org/archives/1091) حول كيفية استخدام التأكيدات:
+بشكل عام، نوصي باتباع [توصية جون ريجر (John Regehr)](https://blog.regehr.org/archives/1091) حول كيفية استخدام التأكيدات:
 
 - لا تفرض أي أثر جانبي أثناء التحقق من التأكيد. على سبيل المثال: `assert(ChangeStateAndReturn() == 1)`
 - لا تؤكد العبارات الواضحة. على سبيل المثال `assert(var >= 0)` حيث يتم الإعلان عن `var` كـ `uint`.

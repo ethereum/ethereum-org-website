@@ -107,7 +107,7 @@ Ukiwa na mazingira yako ya uundaji wa dapp yaliyosanidiwa, sasa utaunganisha Har
 kurtosis port print local-eth-testnet el-1-geth-lighthouse rpc
 ```
 
-Toleo ni URL kama vile `http://127.0.0.1:32769`. Mlango wako utakuwa tofauti. Badilisha `<PORT>` katika muundo wa `localnet` katika faili yako ya usanidi ya `hardhat.config.ts` na mlango huu.
+Matokeo ni URL kama vile `http://127.0.0.1:32769`. Mlango wako utakuwa tofauti. Badilisha `<PORT>` katika muundo wa `localnet` katika faili yako ya usanidi ya `hardhat.config.ts` na mlango huu.
 
 Mfano katika `hardhat.config.ts`:
 
@@ -135,7 +135,7 @@ Mara tu unapohifadhi faili yako, mazingira yako ya uundaji wa dapp ya Hardhat sa
 npx hardhat balances --network localnet
 ```
 
-Toleo linaorodhesha anwani na salio la kila moja ya akaunti zilizo hapo juu. Kwa mfano, mstari wa kwanza unapaswa kuonekana hivi:
+Matokeo yanaorodhesha anwani na salio la kila moja ya akaunti zilizo hapo juu. Kwa mfano, mstari wa kwanza unapaswa kuonekana hivi:
 
 ```
 0x8943545177806ED17B9F23F0a21ee5948eCaa776 has balance <a large balance>
@@ -154,7 +154,7 @@ npx hardhat compile
 npx hardhat run scripts/deploy.ts --network localnet
 ```
 
-Toleo linapaswa kuonekana kama hivi:
+Matokeo yanapaswa kuonekana kama hivi:
 
 ```
 ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
@@ -172,7 +172,7 @@ Kisha endesha jaribio:
 npx hardhat test --network localnet
 ```
 
-Toleo linapaswa kuonekana kama hivi:
+Matokeo yanapaswa kuonekana kama hivi:
 
 ```
 ChipToken

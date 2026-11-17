@@ -142,7 +142,7 @@ Ada beberapa alamat khusus di Echidna:
 
 - `0x30000` yang memanggil konstruktor.
 - `0x10000`, `0x20000`, dan `0x30000` yang secara acak memanggil fungsi lainnya.
-- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` tempat kontrak yang sedang diuji di-deploy.
+- `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` tempat kontrak yang sedang diuji disebarkan.
 
 Kita tidak memerlukan inisialisasi khusus dalam contoh kita saat ini, sehingga konstruktor kita kosong.
 
@@ -410,14 +410,14 @@ Namun, ada beberapa masalah:
 
 - Ini gagal jika `f` dideklarasikan sebagai `internal` atau `external`.
 - Tidak jelas argumen mana yang harus digunakan untuk memanggil `f`.
-- Jika `f` dikembalikan, properti akan gagal.
+- Jika `f` mengembalikan (revert), properti akan gagal.
 
 Secara umum, kami menyarankan untuk mengikuti [rekomendasi John Regehr](https://blog.regehr.org/archives/1091) tentang cara menggunakan asersi:
 
 - Jangan memaksakan efek samping apa pun selama pemeriksaan asersi. Misalnya: `assert(ChangeStateAndReturn() == 1)`
 - Jangan mengasersi pernyataan yang sudah jelas. Misalnya `assert(var >= 0)` di mana `var` dideklarasikan sebagai `uint`.
 
-Terakhir, mohon **jangan gunakan** `require` sebagai pengganti `assert`, karena Echidna tidak akan dapat mendeteksinya (tetapi kontrak akan tetap dikembalikan).
+Terakhir, mohon **jangan gunakan** `require` sebagai pengganti `assert`, karena Echidna tidak akan dapat mendeteksinya (tetapi kontrak akan tetap mengembalikan (revert)).
 
 ### Ringkasan: Pemeriksaan Asersi {#summary-assertion-checking}
 
@@ -520,7 +520,7 @@ Echidna masih tidak dapat menemukan nilai ajaib yang benar. Untuk melihat di man
  12 |     |         return;
 ```
 
-Label `r` berarti Echidna mencapai baris tersebut tetapi eksekusi dikembalikan di sana, dan baris setelah `require` terakhir tidak pernah dieksekusi.
+Label `r` berarti Echidna mencapai baris tersebut tetapi eksekusi dikembalikan (revert) di sana, dan baris setelah `require` terakhir tidak pernah dieksekusi.
 
 Urutan transaksi yang dikumpulkan Echidna disimpan sebagai file JSON di `corpus-magic/coverage/`. Misalnya, transaksi pertama dari salah satu file ini adalah:
 

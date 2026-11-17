@@ -20,7 +20,7 @@ published: 2023-04-11
 
 ## Úvod {#introduction}
 
-Tento průvodce vás provede procesem vytvoření konfigurovatelného lokálního testnetu Etherea, nasazení chytrého kontraktu do něj a použitím testnetu ke spouštění testů vaší decentralizované aplikace (dapp). Tento průvodce je určen pro vývojáře dapp, kteří chtějí vyvíjet a testovat své dapp lokálně v různých konfiguracích sítě před nasazením na živý testnet nebo Mainnet.
+Tento průvodce vás provede procesem vytvoření konfigurovatelného lokálního testnetu Etherea, nasazení chytrého kontraktu do něj a použití testnetu ke spouštění testů vaší decentralizované aplikace (dapp). Tento průvodce je určen pro vývojáře dapp, kteří chtějí vyvíjet a testovat své dapp lokálně v různých konfiguracích sítě před nasazením na živý testnet nebo Mainnet.
 
 V tomto průvodci budete:
 
@@ -32,7 +32,7 @@ V tomto průvodci budete:
 
 [Kurtosis](https://www.kurtosis.com/) je komponovatelný sestavovací systém navržený pro konfiguraci testovacích prostředí s více kontejnery. Konkrétně umožňuje vývojářům vytvářet reprodukovatelná prostředí, která vyžadují dynamickou logiku nastavení, jako jsou testnety blockchainu.
 
-V tomto průvodci balíček Kurtosis `ethereum-package`, spravovaný týmem [ethPandaOps](https://ethpandaops.io/), spouští lokální testnet Etherea. Podporuje všechny hlavní klienty exekuční vrstvy (EL), jako je [`geth`](https://geth.ethereum.org/), a klienty vrstvy konsensu (CL), jako jsou [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) a [`lodestar`](https://lodestar.chainsafe.io/). Tento balíček slouží jako konfigurovatelná a komponovatelná alternativa k sítím v frameworcích jako Hardhat Network a Anvil. Kurtosis nabízí vývojářům větší kontrolu a flexibilitu nad testnety, které používají, což je hlavní důvod, proč jej týmy klientů Etherea používají k testování aktualizací sítě.
+V tomto průvodci balíček Kurtosis `ethereum-package`, spravovaný týmem [ethPandaOps](https://ethpandaops.io/), spouští lokální testnet Etherea. Podporuje všechny hlavní klienty exekuční vrstvy (EL), jako je [`geth`](https://geth.ethereum.org/), a klienty vrstvy konsensu (CL), jako jsou [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/) a [`lodestar`](https://lodestar.chainsafe.io/). Tento balíček slouží jako konfigurovatelná a komponovatelná alternativa k sítím ve frameworcích jako Hardhat Network a Anvil. Kurtosis nabízí vývojářům větší kontrolu a flexibilitu nad testnety, které používají, což je jeden z hlavních důvodů, proč jej týmy klientů Etherea používají k testování aktualizací sítě.
 
 ## Nastavení Kurtosis {#setting-up-kurtosis}
 

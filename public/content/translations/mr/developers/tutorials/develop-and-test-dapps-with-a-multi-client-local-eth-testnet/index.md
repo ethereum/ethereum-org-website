@@ -10,7 +10,7 @@ tags:
     "संयोज्यता",
     "सहमती स्तर",
     "अंमलबजावणी स्तर",
-    "टेस्टिंग",
+    "चाचणी",
   ]
 skill: intermediate
 breadcrumb: "मल्टी-क्लायंट टेस्टनेट"
@@ -247,4 +247,4 @@ kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/ethpand
 
 आम्ही तुम्हाला आमचे [क्विकस्टार्ट](https://docs.kurtosis.com/quickstart) आणि आमच्या [awesome-kurtosis रिपॉझिटरी](https://github.com/kurtosis-tech/awesome-kurtosis) मधील आमची इतर उदाहरणे तपासण्यासाठी प्रोत्साहित करतो.
 
-`ethereum-package` तुमच्या नेटवर्कसोबत अतिरिक्त सर्व्हिसेस देखील सुरू करू शकते, जसे की ट्रान्झॅक्शन स्पॅमर (व्यवहारांचे अनुकरण करण्यासाठी), ब्लॉक एक्सप्लोरर, आणि कनेक्ट केलेले Grafana आणि Prometheus इन्स्टन्सेस. त्यांना सक्षम करण्यासाठी, [पॅकेज दस्तऐवजीकरणामध्ये](https://github.com/ethpandaops/ethereum-package#configuration) वर्णन केल्याप्रमाणे, त्यांना तुमच्या पॅरामीटर्स फाइलमध्ये `additional_services` अंतर्गत सूचीबद्ध करा.
+`ethereum-package` तुमच्या नेटवर्कसोबत अतिरिक्त सर्व्हिसेस देखील सुरू करू शकते, जसे की व्यवहार स्पॅमर (व्यवहारांचे अनुकरण करण्यासाठी), ब्लॉक एक्सप्लोरर, आणि कनेक्ट केलेले Grafana आणि Prometheus इन्स्टन्सेस. त्यांना सक्षम करण्यासाठी, [पॅकेज दस्तऐवजीकरणामध्ये](https://github.com/ethpandaops/ethereum-package#configuration) वर्णन केल्याप्रमाणे, त्यांना तुमच्या पॅरामीटर्स फाइलमध्ये `additional_services` अंतर्गत सूचीबद्ध करा.

@@ -279,7 +279,7 @@ filterFunctions: ["C.f(uint256)", "C.g(uint256)", "C.h(uint256)", "C.i()"]
 ```
 
 - `filterBlacklist` ni `true` kwa chaguo-msingi.
-- Uchujaji unafanywa kwenye jina kamili la kipengele: jina la mkataba, `.`, na sahihi ya kiolesura cha jozi cha programu (ABI) (kwa mfano `C.f(uint256)`). Ikiwa una `f()` na `f(uint256)`, unaweza kuchagua haswa ni ipi ya kuchuja. Jina tupu kama vile `"reset1"` halilingani na chochote.
+- Uchujaji unafanywa kwenye jina kamili la kipengele: jina la mkataba, `.`, na sahihi ya kiolesura cha jozi cha programu (ABI) (kwa mfano `C.f(uint256)`). Ikiwa una `f()` na `f(uint256)`, unaweza kuchagua haswa ni ipi ya kuchuja. Jina pekee kama vile `"reset1"` halilingani na chochote.
 
 ### Endesha Echidna {#run-echidna-1}
 
@@ -385,9 +385,9 @@ inc(uint256): failed!💥
 
 Kama unavyoona, Echidna inaripoti kufeli kwa uthibitisho katika kipengele cha `inc`. Kuongeza zaidi ya uthibitisho mmoja kwa kila kipengele kunawezekana, lakini Echidna haiwezi kusema ni uthibitisho upi uliofeli.
 
-### Lini na jinsi ya kutumia thibitisha {#when-and-how-use-assertions}
+### Lini na jinsi ya kutumia uthibitisho {#when-and-how-use-assertions}
 
-Thibitisha zinaweza kutumika kama mbadala wa sifa za wazi, haswa ikiwa masharti ya kukagua yanahusiana moja kwa moja na matumizi sahihi ya operesheni fulani `f`. Kuongeza thibitisha baada ya msimbo fulani kutalazimisha kuwa ukaguzi utafanyika mara tu baada ya kutekelezwa:
+Uthibitisho unaweza kutumika kama mbadala wa sifa za wazi, haswa ikiwa masharti ya kukagua yanahusiana moja kwa moja na matumizi sahihi ya operesheni fulani `f`. Kuongeza uthibitisho baada ya msimbo fulani kutalazimisha kuwa ukaguzi utafanyika mara tu baada ya kutekelezwa:
 
 ```solidity
 function f(..) public {
@@ -414,14 +414,14 @@ Hata hivyo, kuna baadhi ya masuala:
 - Haijulikani ni hoja zipi zinapaswa kutumika kuita `f`.
 - Ikiwa `f` inatengua, sifa itafeli.
 
-Kwa ujumla, tunapendekeza kufuata [pendekezo la John Regehr](https://blog.regehr.org/archives/1091) kuhusu jinsi ya kutumia thibitisha:
+Kwa ujumla, tunapendekeza kufuata [pendekezo la John Regehr](https://blog.regehr.org/archives/1091) kuhusu jinsi ya kutumia uthibitisho:
 
-- Usilazimishe athari yoyote ya kando wakati wa ukaguzi wa thibitisha. Kwa mfano: `assert(ChangeStateAndReturn() == 1)`
+- Usilazimishe athari yoyote ya kando wakati wa ukaguzi wa uthibitisho. Kwa mfano: `assert(ChangeStateAndReturn() == 1)`
 - Usithibitishe kauli zilizo wazi. Kwa mfano `assert(var >= 0)` ambapo `var` imetangazwa kama `uint`.
 
 Hatimaye, tafadhali **usitumie** `require` badala ya `assert`, kwa kuwa Echidna haitaweza kuitambua (lakini mkataba utatengua hata hivyo).
 
-### Muhtasari: Ukaguzi wa Thibitisha {#summary-assertion-checking}
+### Muhtasari: Ukaguzi wa Uthibitisho {#summary-assertion-checking}
 
 Ifuatayo inatoa muhtasari wa uendeshaji wa Echidna kwenye mfano wetu:
 
@@ -451,7 +451,7 @@ inc(uint256): failed!💥
 ...
 ```
 
-Echidna iligundua kuwa thibitisha katika `inc` inaweza kufeli ikiwa kipengele hiki kitaitwa mara nyingi na hoja kubwa.
+Echidna iligundua kuwa uthibitisho katika `inc` unaweza kufeli ikiwa kipengele hiki kitaitwa mara nyingi na hoja kubwa.
 
 ## Kukusanya na kurekebisha korpasi ya Echidna {#collecting-and-modifying-an-echidna-corpus}
 
