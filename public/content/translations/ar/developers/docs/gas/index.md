@@ -15,18 +15,17 @@ lang: ar
 
 يشير الغاز إلى الوحدة التي تقيس مقدار الجهد الحسابي المطلوب لتنفيذ عمليات محددة على شبكة إيثيريوم.
 
-نظرًا لأن كل معاملة إيثيريوم تتطلب موارد حسابية لتنفيذها، يجب دفع ثمن هذه الموارد لضمان عدم تعرض إيثيريوم للبريد العشوائي وعدم تعثرها في حلقات حسابية لا نهائية. يتم الدفع مقابل الحوسبة في شكل رسوم الغاز.
+نظرًا لأن كل معاملة إيثيريوم تتطلب موارد حسابية لتنفيذها، يجب دفع ثمن هذه الموارد لضمان عدم تعرض إيثيريوم للإغراق بالمعاملات العشوائية وعدم تعثرها في حلقات حسابية لا نهائية. يتم الدفع مقابل الحوسبة في شكل رسوم الغاز.
 
 رسوم الغاز هي **كمية الغاز المستخدمة للقيام بعملية ما، مضروبة في التكلفة لكل وحدة غاز**. يتم دفع الرسوم بغض النظر عما إذا كانت المعاملة ناجحة أم فاشلة.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_مخطط مقتبس من [توضيح EVM لإيثيريوم](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-يجب دفع رسوم الغاز بالعملة الأصلية لإيثيريوم، إيثر (<span dir="ltr">ETH</span>). عادة ما يتم تسعير الغاز بوحدة <span dir="ltr">Gwei</span>، وهي فئة من <span dir="ltr">ETH</span>. كل <span dir="ltr">Gwei</span> يساوي واحد على مليار من <span dir="ltr">ETH</span> (<span dir="ltr">0.000000001 ETH</span> أو <span dir="ltr">10<sup>-9</sup> ETH</span>).
+يجب دفع رسوم الغاز بالعملة الأصلية لإيثيريوم، وهي إيثر (<span dir="ltr">ETH</span>). عادة ما يتم تسعير الغاز بـ <span dir="ltr">Gwei</span>، وهي فئة من <span dir="ltr">ETH</span>. كل <span dir="ltr">Gwei</span> يساوي جزءًا من المليار من <span dir="ltr">ETH</span> (<span dir="ltr">0.000000001 ETH</span> أو <span dir="ltr">10<sup>-9</sup> ETH</span>).
 
-على سبيل المثال، بدلاً من القول إن تكلفة الغاز الخاصة بك هي <span dir="ltr">0.000000001</span> إيثر، يمكنك القول إن تكلفة الغاز هي <span dir="ltr">1 Gwei</span>.
+على سبيل المثال، بدلاً من القول إن تكلفة الغاز الخاصة بك هي <span dir="ltr">0.000000001</span> إيثر، يمكنك القول إن تكلفة الغاز الخاصة بك هي <span dir="ltr">1 Gwei</span>.
 
-كلمة '<span dir="ltr">Gwei</span>' هي اختصار لـ '<span dir="ltr">giga-wei</span>'، وتعني 'مليار <span dir="ltr">Wei</span>'. واحد <span dir="ltr">Gwei</span> يساوي مليار <span dir="ltr">Wei</span>. وحدة <span dir="ltr">Wei</span> نفسها (سميت على اسم [وي داي](https://wikipedia.org/wiki/Wei_Dai)، مبتكر [<span dir="ltr">b-money</span>](https://www.investopedia.com/terms/b/bmoney.asp)) هي أصغر وحدة من <span dir="ltr">ETH</span>.
+كلمة '<span dir="ltr">Gwei</span>' هي اختصار لـ '<span dir="ltr">giga-wei</span>'، وتعني 'مليار <span dir="ltr">Wei</span>'. واحد <span dir="ltr">Gwei</span> يساوي مليار <span dir="ltr">Wei</span>. <span dir="ltr">Wei</span> نفسه (سمي على اسم [وي داي](https://wikipedia.org/wiki/Wei_Dai)، مبتكر [<span dir="ltr">b-money</span>](https://www.investopedia.com/terms/b/bmoney.asp)) هو أصغر وحدة من <span dir="ltr">ETH</span>.
 
 ## كيف يتم حساب رسوم الغاز؟ {#how-are-gas-fees-calculated}
 
@@ -101,12 +100,11 @@ _مخطط مقتبس من [توضيح EVM لإيثيريوم](https://takenobu-h
 
 ## لماذا توجد رسوم الغاز؟ {#why-do-gas-fees-exist}
 
-باختصار، تساعد رسوم الغاز في الحفاظ على أمان شبكة إيثيريوم. من خلال اشتراط رسوم لكل عملية حسابية يتم تنفيذها على الشبكة، نمنع الجهات الفاعلة السيئة من إرسال بريد عشوائي إلى الشبكة. من أجل تجنب الحلقات اللانهائية العرضية أو العدائية أو غيرها من الهدر الحسابي في التعليمات البرمجية، يُطلب من كل معاملة وضع حد لعدد الخطوات الحسابية لتنفيذ التعليمات البرمجية التي يمكنها استخدامها. الوحدة الأساسية للحوسبة هي "الغاز".
+باختصار، تساعد رسوم الغاز في الحفاظ على أمان شبكة إيثيريوم. من خلال اشتراط رسوم لكل عملية حسابية يتم تنفيذها على الشبكة، نمنع الجهات الفاعلة السيئة من إغراق الشبكة بالمعاملات العشوائية. من أجل تجنب الحلقات اللانهائية العرضية أو العدائية أو غيرها من الهدر الحسابي في الكود، يُطلب من كل معاملة وضع حد لعدد الخطوات الحسابية لتنفيذ الكود التي يمكنها استخدامها. الوحدة الأساسية للحوسبة هي "الغاز".
 
-على الرغم من أن المعاملة تتضمن حدًا، فإن أي غاز غير مستخدم في المعاملة يتم إرجاعه إلى المستخدم (على سبيل المثال، يتم إرجاع `max fee - (base fee + tip)`).
+على الرغم من أن المعاملة تتضمن حدًا، إلا أن أي غاز غير مستخدم في المعاملة يتم إرجاعه إلى المستخدم (على سبيل المثال، يتم إرجاع `max fee - (base fee + tip)`).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_مخطط مقتبس من [توضيح EVM لإيثيريوم](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## ما هو حد الغاز؟ {#what-is-gas-limit}
 
@@ -132,14 +130,8 @@ _مخطط مقتبس من [توضيح EVM لإيثيريوم](https://takenobu-h
 
 - [Etherscan](https://etherscan.io/gastracker) _مُقدِّر سعر غاز المعاملة_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _مُقدِّر سعر غاز المعاملة مفتوح المصدر_
-- [متتبع غاز ETH](https://www.ethgastracker.com/) _مراقبة وتتبع أسعار الغاز في إيثيريوم وطبقة 2 (L2) لتقليل رسوم المعاملة وتوفير المال_
-- [مُقدِّر غاز ETH من Blocknative](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _إضافة كروم لتقدير الغاز تدعم كلاً من المعاملات القديمة من النوع 0 ومعاملات <span dir="ltr">EIP-1559</span> من النوع 2._
-- [حاسبة رسوم الغاز من Cryptoneur](https://cryptoneur.xyz/en/gas-fees-calculator) _احسب رسوم الغاز بعملتك المحلية لأنواع المعاملات المختلفة على الشبكة الرئيسية، وأربيتروم، وبوليغون._
-
-## أدوات ذات صلة {#related-tools}
-
-- [منصة الغاز من Blocknative](https://www.blocknative.com/gas) _<span dir="ltr">API</span> لتقدير الغاز مدعوم بمنصة بيانات مجمع الذاكرة العالمية من Blocknative_
-- [شبكة الغاز](https://gas.network) أوراكل الغاز على السلسلة. دعم لأكثر من <span dir="ltr">35</span> سلسلة. 
+- [<span dir="ltr">ETH Gas Tracker</span>](https://www.ethgastracker.com/) _مراقبة وتتبع أسعار غاز إيثيريوم وطبقة 2 (L2) لتقليل رسوم المعاملات وتوفير المال_
+- [حاسبة رسوم الغاز <span dir="ltr">Cryptoneur</span>](https://cryptoneur.xyz/en/gas-fees-calculator) _حساب رسوم الغاز بعملتك المحلية لأنواع المعاملات المختلفة على الشبكة الرئيسية، وأربيتروم، وبوليغون._
 
 ## قراءة إضافية {#further-reading}
 
