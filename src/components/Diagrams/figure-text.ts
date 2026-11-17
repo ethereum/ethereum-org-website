@@ -2,7 +2,7 @@ import type { DiagramFigureText } from "@/lib/types"
 
 import { getAccountsValues } from "./Accounts/model"
 import { getAttestationsValues } from "./Attestations/model"
-import { getBlockStateValues } from "./BlockState/model"
+import { BLOCK_STATE_PRESET_IDS, getBlockStateValues } from "./BlockState/model"
 import { getEvmZonesValues } from "./EvmZones/model"
 import { getExAnteReorgValues } from "./ExAnteReorg/model"
 import { getGasEvmValues } from "./GasEvm/model"
@@ -18,6 +18,7 @@ import {
 import { getPortalHistoryValues } from "./PortalHistory/model"
 import { getSourceVerifyValues } from "./SourceVerify/model"
 import {
+  ASYNC_PRESET_IDS,
   getAsyncVaultValues,
   getVaultDepositValues,
   getVaultInterfaceValues,
@@ -31,13 +32,18 @@ import {
 /**
  * Every markdown diagram tag as text, for the agent-facing markdown
  * (`src/scripts/agent-markdown.ts`). Values come from the same model
- * functions the players fill their strings with, at their initial preset.
+ * functions the players fill their strings with. A figure whose description
+ * changes with its scenario lists every preset, labelled as in its controls.
  */
 export const DIAGRAM_FIGURE_TEXT = {
   AccountsDiagram: { prefix: "accounts", values: getAccountsValues },
   AsyncVaultDiagram: {
     prefix: "token-vault-async",
     values: (text) => getAsyncVaultValues(text, "async"),
+    presets: ASYNC_PRESET_IDS.map((id) => ({
+      label: `token-vault-preset-${id}`,
+      values: (text) => getAsyncVaultValues(text, "async", id),
+    })),
   },
   AttestationsDiagram: {
     prefix: "attestations",
@@ -46,6 +52,10 @@ export const DIAGRAM_FIGURE_TEXT = {
   BlockStateDiagram: {
     prefix: "block-state",
     values: (text) => getBlockStateValues(text),
+    presets: BLOCK_STATE_PRESET_IDS.map((id) => ({
+      label: `block-state-preset-${id}`,
+      values: (text) => getBlockStateValues(text, id),
+    })),
   },
   ClientSetupDiagram: {
     prefix: "node-clients-setup",
@@ -97,5 +107,9 @@ export const DIAGRAM_FIGURE_TEXT = {
   VaultRequestDiagram: {
     prefix: "token-vault-lifecycle",
     values: (text) => getAsyncVaultValues(text, "lifecycle"),
+    presets: ASYNC_PRESET_IDS.map((id) => ({
+      label: `token-vault-preset-${id}`,
+      values: (text) => getAsyncVaultValues(text, "lifecycle", id),
+    })),
   },
 } satisfies Record<string, DiagramFigureText>

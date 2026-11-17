@@ -24,9 +24,31 @@ const resolve = (markdown: string) =>
 test("every diagram tag reads in full, with every value filled", () => {
   for (const [tag, figure] of Object.entries(DIAGRAM_FIGURE_TEXT)) {
     const out = diagramFigureText(figure, 1, text)
-    expect(out, tag).toMatch(/^\*\*Figure 1: .+\.\*\*\n\n.+\n\n.+$/)
+    expect(out, tag).toMatch(/^\*\*Figure 1: .+\.\*\*\n\n.+\n\n.+/)
     expect(out, tag).not.toMatch(/[{}]/)
   }
+})
+
+test("every preset's description reads in full", () => {
+  for (const [tag, figure] of Object.entries(DIAGRAM_FIGURE_TEXT)) {
+    for (const preset of "presets" in figure ? figure.presets : []) {
+      const out = text.t(`${figure.prefix}-description`, preset.values(text))
+      expect(text.t(preset.label), tag).toBeTruthy()
+      expect(out, `${tag} ${preset.label}`).not.toMatch(/[{}]/)
+    }
+  }
+})
+
+test("presets with different descriptions each get a labelled block", () => {
+  const out = resolve("<AsyncVaultDiagram />")
+  expect(out).toMatch(
+    /\n\n\*\*Deposit:\*\* .+requestDeposit.+\n\n\*\*Redeem:\*\* .+requestRedeem/
+  )
+  expect(out.match(/\*\*Figure/g)).toHaveLength(1)
+  // The block figure's description reads the same in both scenarios.
+  const block = resolve("<BlockStateDiagram />")
+  expect(block.split("\n\n")).toHaveLength(3)
+  expect(block).not.toContain("All succeed")
 })
 
 test("figures are numbered in page order, and a written fig wins", () => {
@@ -96,4 +118,19 @@ test("an unknown tag, an unsupported form or a missing value fails", () => {
       text,
     })
   ).toThrow(/intrinsic/)
+  expect(() =>
+    toAgentMarkdown("<AsyncVaultDiagram />", {
+      dir: "/content/",
+      figures: {
+        AsyncVaultDiagram: {
+          ...DIAGRAM_FIGURE_TEXT.AsyncVaultDiagram,
+          presets: [
+            ...DIAGRAM_FIGURE_TEXT.AsyncVaultDiagram.presets,
+            { label: "token-vault-preset-mint", values: () => ({}) },
+          ],
+        },
+      },
+      text,
+    })
+  ).toThrow(/step1|requestFn/)
 })

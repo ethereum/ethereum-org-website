@@ -1629,4 +1629,6 @@ export interface DiagramFigureText {
   prefix: string
   /** Every value its title, caption and description quote. */
   values: (text: DiagramText) => DiagramValues
+  /** Scenarios whose description values differ: each preset's label key and values. */
+  presets?: { label: string; values: (text: DiagramText) => DiagramValues }[]
 }

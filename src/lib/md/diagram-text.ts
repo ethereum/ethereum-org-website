@@ -45,17 +45,32 @@ export const diagramTextFromMessages = (
   )
 }
 
-/** A figure as text: "**Figure N: Title.**", its caption and description. */
+/**
+ * A figure as text: "**Figure N: Title.**", its caption and description. With
+ * presets whose descriptions differ, one description per preset, each led by
+ * its label.
+ */
 export const diagramFigureText = (
-  { prefix, values }: DiagramFigureText,
+  { prefix, values, presets }: DiagramFigureText,
   fig: number,
   text: DiagramText
 ) => {
   const v = values(text)
+  const descriptions = (presets ?? [{ label: "", values }]).map((preset) => ({
+    label: preset.label,
+    description: text.t(`${prefix}-description`, preset.values(text)),
+  }))
+  const shared = descriptions.every(
+    ({ description }) => description === descriptions[0].description
+  )
   return [
     `**Figure ${text.number(fig)}: ${text.t(`${prefix}-title`, v)}.**`,
     text.t(`${prefix}-caption`, v),
-    text.t(`${prefix}-description`, v),
+    ...(shared
+      ? [descriptions[0].description]
+      : descriptions.map(
+          ({ label, description }) => `**${text.t(label)}:** ${description}`
+        )),
   ].join("\n\n")
 }
 
