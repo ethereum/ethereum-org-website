@@ -53,6 +53,7 @@ import { useAccount } from "../Account/use-account"
 
 import CourseArt from "./art/course-art"
 import { syncProgress } from "./account-sync"
+import { CourseCard, courseGrid } from "./course-card"
 import CourseProgress from "./course-progress"
 import { useLevelName } from "./level-up"
 import { levelFor, levelProgress } from "./levels"
@@ -80,6 +81,7 @@ const REVIEW_LIMIT = 5
 // there's a profile to load. Literal for Tailwind's scanner; must match
 // HAS_PROGRESS_ATTR
 const whileLoading = "hidden [[data-has-course-progress]_&]:flex"
+const whileGridLoading = "hidden [[data-has-course-progress]_&]:grid"
 
 /** Steps missed most often, worst first; only ones still in the catalog */
 const stepsToReview = (progress: Progress) =>
@@ -107,19 +109,17 @@ const stepsToReview = (progress: Progress) =>
     .slice(0, REVIEW_LIMIT)
 
 /**
- * The hub's course card, shrunk for the profile: art beside the title, track
- * and progress
+ * The hub's course card, shrunk for courses in progress: art beside the
+ * title, track and progress
  */
 const CompactCourseCard = ({
   course,
   trackTitle,
-  isMastered,
   bestScore,
   formatPercent,
 }: {
   course: Course
   trackTitle: string
-  isMastered: boolean
   bestScore?: number
   formatPercent: (value: number) => string
 }) => {
@@ -149,7 +149,6 @@ const CompactCourseCard = ({
             courseId={course.id}
             lessonIds={course.lessons.map(({ id }) => id)}
             hasExam={course.exam.length > 0}
-            hideLabel={isMastered}
           />
           {bestScore !== undefined && (
             <span className="text-sm text-body-medium">
@@ -167,16 +166,30 @@ const CompactCourseCard = ({
 const StatTile = ({
   icon: Icon,
   iconClassName,
+  badge,
   label,
   value,
 }: {
   icon: LucideIcon
   iconClassName: string
+  /** Sits the icon on a filled tile, like the course page's trophy */
+  badge?: string
   label: string
   value: string
 }) => (
   <li className="m-0 flex items-center gap-3 rounded-2xl border bg-background p-4">
-    <Icon aria-hidden className={cn("size-8 shrink-0", iconClassName)} />
+    {badge ? (
+      <span
+        className={cn(
+          "grid size-11 shrink-0 place-items-center rounded-xl",
+          badge
+        )}
+      >
+        <Icon aria-hidden className={cn("size-6", iconClassName)} />
+      </span>
+    ) : (
+      <Icon aria-hidden className={cn("size-8 shrink-0", iconClassName)} />
+    )}
     <div className="flex min-w-0 flex-col">
       <span className="text-sm text-body-medium">{label}</span>
       <span className="text-2xl font-black text-body tabular-nums">
@@ -206,100 +219,16 @@ const DetailRows = ({ rows }: { rows: DetailRow[] }) => (
   </ul>
 )
 
-/**
- * A shelf for each track the learner has started, every course in it as a
- * trophy, mastered ones in colour. Untouched and coming-soon tracks stay off
- */
-const TrophyShelf = ({
-  mastered,
-  started,
-}: {
-  mastered: Set<string>
-  started: Set<string>
-}) => {
-  const t = useTranslations("page-courses")
-  const locale = useLocale()
-  const count = numberFormat(locale).format
-  const active = TRACKS.filter(({ courses }) =>
-    courses.some(({ id }) => started.has(id))
-  )
-
-  return (
-    <div className="mt-10 flex flex-col gap-6">
-      <h2 className="text-xl">{t("page-courses-profile-shelf-title")}</h2>
-      {active.length ? (
-        <div className="flex flex-wrap items-start gap-x-12 gap-y-6">
-          {active.map(({ id, courses }) => {
-            const won = courses.filter((c) => mastered.has(c.id)).length
-            return (
-              // Sized by its trophies; the heading row adds no width of its own
-              <div key={id} className="flex w-fit max-w-full flex-col gap-2">
-                <div className="flex w-0 min-w-full items-baseline justify-between gap-2">
-                  <span className="font-bold">
-                    {t(`page-courses-track-${id}-title`)}
-                  </span>
-                  <span className="text-sm text-body-medium tabular-nums">
-                    {count(won)}/{count(courses.length)}
-                  </span>
-                </div>
-                <ul className="m-0 flex list-none flex-wrap items-end gap-1.5 border-b-4 border-border pb-1">
-                  {courses.map((course) => {
-                    const isMastered = mastered.has(course.id)
-                    return (
-                      <li
-                        key={course.id}
-                        title={t(`${course.id}-title`)}
-                        className={cn(
-                          "m-0 size-12",
-                          !isMastered && "opacity-40"
-                        )}
-                        style={courseThemeStyle(
-                          isMastered ? course.theme : "muted"
-                        )}
-                      >
-                        <CourseArt id={course.art} className="size-full" />
-                        <span className="sr-only">
-                          {t(`${course.id}-title`)}:{" "}
-                          {t(
-                            isMastered
-                              ? "page-courses-profile-mastered-title"
-                              : "page-courses-profile-shelf-not-mastered"
-                          )}
-                        </span>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            )
-          })}
-        </div>
-      ) : (
-        <p className="m-0 text-body-medium">
-          {t("page-courses-profile-shelf-empty")}
-        </p>
-      )}
-    </div>
-  )
-}
-
-/** The hero's stats and shelf, laid out like them while progress loads */
+/** The hero's stats, laid out like them while progress loads */
 const HeroSkeleton = ({ className }: { className?: string }) => (
-  <div aria-hidden className={cn("mt-8 flex-col gap-10", className)}>
-    <div className="grid gap-4 sm:grid-cols-3 xl:grid-cols-5">
-      <Skeleton className="h-24 rounded-2xl sm:col-span-3 xl:col-span-2" />
-      {Array.from({ length: 3 }, (_, i) => (
-        <Skeleton key={i} className="h-24 rounded-2xl" />
-      ))}
-    </div>
-    <div className="flex flex-col gap-6">
-      <Skeleton className="h-6 w-40" />
-      <div className="grid gap-x-8 gap-y-6 md:grid-cols-2 xl:grid-cols-3">
-        {Array.from({ length: 2 }, (_, i) => (
-          <Skeleton key={i} className="h-20 rounded-xl" />
-        ))}
-      </div>
-    </div>
+  <div
+    aria-hidden
+    className={cn("mt-8 grid gap-4 sm:grid-cols-3 xl:grid-cols-5", className)}
+  >
+    <Skeleton className="h-24 rounded-2xl sm:col-span-3 xl:col-span-2" />
+    {Array.from({ length: 3 }, (_, i) => (
+      <Skeleton key={i} className="h-24 rounded-2xl" />
+    ))}
   </div>
 )
 
@@ -321,8 +250,7 @@ const BodySkeleton = ({ className }: { className?: string }) => {
 
 /**
  * The learner's profile: who they are, their level and headline numbers
- * (the rest in the level card's popover) and a trophy shelf, then their
- * courses, the questions worth another look and, once signed in, account
+ * (the rest in the level card's popover), then their courses, the questions worth another look and, once signed in, account
  * details.
  */
 const ProfileView = ({
@@ -406,10 +334,6 @@ const ProfileView = ({
   const mastered = courseRows.filter(({ isMastered }) => isMastered)
   const inProgress = courseRows.filter(
     ({ isMastered, isStarted }) => isStarted && !isMastered
-  )
-  const masteredIds = new Set(mastered.map(({ course }) => course.id))
-  const startedIds = new Set(
-    courseRows.filter((row) => row.isStarted).map(({ course }) => course.id)
   )
 
   const level = levelFor(progress.xp)
@@ -530,15 +454,15 @@ const ProfileView = ({
               />
               <StatTile
                 icon={Trophy}
-                iconClassName="text-teal-700 dark:text-teal-400"
+                iconClassName="text-yellow-900"
+                badge="border-b-4 border-yellow-600 bg-yellow-400"
                 label={t("page-courses-profile-trophies")}
                 value={count(mastered.length)}
               />
             </ul>
-            <TrophyShelf mastered={masteredIds} started={startedIds} />
           </>
         ) : (
-          <HeroSkeleton className={ready ? "flex" : whileLoading} />
+          <HeroSkeleton className={ready ? undefined : whileGridLoading} />
         )}
       </div>
 
@@ -549,40 +473,70 @@ const ProfileView = ({
             <div className="flow">
               <Section id="courses">
                 <h2>{t("page-courses-profile-courses-title")}</h2>
-                {!started && <p>{t("page-courses-profile-courses-none")}</p>}
-                {[
-                  { id: "in-progress", rows: inProgress },
-                  { id: "mastered", rows: mastered },
-                ]
-                  .filter(({ rows }) => rows.length)
-                  .map(({ id, rows }) => (
-                    <div key={id} className="flow">
-                      <h3>{t(`page-courses-profile-${id}-title`)}</h3>
-                      <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
-                        {rows.map(({ course, trackId, isMastered }) => (
-                          <li key={course.id} className="m-0">
-                            <CompactCourseCard
-                              course={course}
-                              trackTitle={t(
-                                `page-courses-track-${trackId}-title`
-                              )}
-                              isMastered={isMastered}
-                              bestScore={progress.exams?.[course.id]?.best}
-                              formatPercent={percent}
-                            />
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                <div data-flow="cta">
-                  <ButtonLink href={COURSES_HUB} size="lg">
-                    {started
-                      ? t("page-courses-profile-keep-learning")
-                      : t("page-courses-profile-start-learning")}
-                    <ArrowNext aria-hidden />
-                  </ButtonLink>
+                <div className="flow">
+                  <h3>{t("page-courses-profile-in-progress-title")}</h3>
+                  {inProgress.length ? (
+                    <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
+                      {inProgress.map(({ course, trackId }) => (
+                        <li key={course.id} className="m-0">
+                          <CompactCourseCard
+                            course={course}
+                            trackTitle={t(
+                              `page-courses-track-${trackId}-title`
+                            )}
+                            bestScore={progress.exams?.[course.id]?.best}
+                            formatPercent={percent}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>
+                      {started
+                        ? t("page-courses-profile-in-progress-none")
+                        : t("page-courses-profile-courses-none")}
+                    </p>
+                  )}
+                  <div data-flow="cta">
+                    <ButtonLink href={COURSES_HUB} size="lg">
+                      {started
+                        ? t("page-courses-profile-keep-learning")
+                        : t("page-courses-profile-start-learning")}
+                      <ArrowNext aria-hidden />
+                    </ButtonLink>
+                  </div>
                 </div>
+                {mastered.length > 0 && (
+                  <div className="flow">
+                    <h3>{t("page-courses-profile-mastered-title")}</h3>
+                    {TRACKS.map((track) => {
+                      const won = mastered.filter(
+                        ({ trackId }) => trackId === track.id
+                      )
+                      if (!won.length) return null
+                      return (
+                        <div key={track.id} className="flow">
+                          <h4>{t(`page-courses-track-${track.id}-title`)}</h4>
+                          <ul role="list" className={courseGrid}>
+                            {won.map(({ course }) => (
+                              <li
+                                key={course.id}
+                                className="m-0"
+                                style={courseThemeStyle(course.theme)}
+                              >
+                                <CourseCard
+                                  course={course}
+                                  position={track.courses.indexOf(course)}
+                                  track={track.courses}
+                                />
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
               </Section>
 
               {review.length > 0 && (
