@@ -231,3 +231,16 @@ Scope: how-to-write-and-deploy-an-nft (released from quarantine and fully rework
 - nft:342 `مثالیں` (examples) is used for object instances; prefer `انسٹینسز`
 - nft:226, 290 `ماحولیاتی` (ecological) is used for env file/variable; prefer `انوائرنمنٹ`
 - The step-6 heading and the word for installation differ between hello-world and the NFT tutorial
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.0/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:16/602 `Echidna 2.3.3` / `Echidna 2.3.0` left Latin inside the ltr span; glossary transliterates -> `ایکڈنا <span dir="ltr">2.3.3</span>` (critical)
+- multi-client:99/163 dropped token noun made `1000 منٹ` read as "1000 minutes" -> `1000 ٹوکن منٹ`
+- echidna:317 heading lost its `(assert)` clarifier vs dev -> restored
+
+**Open / notes:**
+
+- echidna:66 `نامانوس` (unfamiliar) for invalid; multi-client:205 `متضاد` (contradictory) for heterogeneous -- both pre-existing wording on changed lines, native call

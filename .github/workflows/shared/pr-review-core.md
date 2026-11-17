@@ -26,7 +26,7 @@ Pick the lanes the PR touches from what the changes do; the paths below are typi
 | `tooling` | `.github/**`, config files, `src/scripts/**` | `tooling.md` |
 | `data` | `src/data/**` (wallets, chains, networks, layer-2s...) | `data.md` |
 | `content` | English `public/content/**`, `src/intl/en/**`, or user-facing copy anywhere | `content.md` |
-| `listing` | `/tmp/gh-aw/agent/listing.txt` says `yes` (a strong signal); otherwise, or when it is missing or says `error`, a new entry in a list of third-party products, services or resources in English `public/content/**` or `src/data/` | `listing.md` |
+| `listing` | `/tmp/gh-aw/agent/listing/` exists (saved research for a listing request); otherwise a new entry in a list of third-party products, services or resources in English `public/content/**` or `src/data/` | `listing.md` |
 | `translation` | `public/content/translations/**`, non-English `src/intl/**` | `translation.md` |
 | `deps` | `package.json`, `pnpm-lock.yaml` | `deps-docs.md` |
 | `docs` | `docs/**`, `README`, `CONTRIBUTING` | `deps-docs.md` |
@@ -41,7 +41,9 @@ A failed check (read them with the GitHub actions tools) is a finding; ignore pe
 <findings>
 ## What counts as a finding
 
-Look broadly, then post only what clears this bar: you can cite the `file:line` at `pr-head` (or the commit) and the input or state that triggers it; this PR introduced it or made it worse; CI would not catch it (lint, type-check, Prettier, markdownlint, and the orphaned-intl-key and added-link checks); and it meets the lane's report bar.
+Look broadly, then post only what clears this bar: you can cite the `file:line` at `pr-head` (or the commit) and the input or state that triggers it; this PR introduced it or made it worse; CI would not catch it (below); and it meets the lane's report bar.
+
+CI fails on ESLint, Prettier, type-check, markdownlint, unit tests (missing translation keys, `t("ns:key")`, unregistered routes and namespaces, missing tracing includes) and English intl keys the PR orphans. Skip those only when that check finished on this PR's `headRefOid`; if it is pending, skipped or ran on an older commit, report what it would catch. The content checks only warn on dead added links, hand-edited translations, `utm_` parameters, duplicate images and changed ICU placeholders: read those annotations and report each one that matters as a finding.
 
 - `blocking` — merging as-is breaks a feature for some users, loses data, disables a check, corrupts analytics or ships broken content, or the base branch already does what the PR does.
 - `should fix` — a real defect with limited impact.

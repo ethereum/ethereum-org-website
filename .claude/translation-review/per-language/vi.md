@@ -163,3 +163,15 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: glossary capitals mid-sentence; NFT spelled out too often; chúng tôi/chúng ta mixed.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- Glossary capitals mid-sentence (`Chuỗi khối`, `Địa chỉ`) at multi-client 33/104/138 -- known vi pattern, left as is
+- `dApp` in title/description vs `dapp` in body -- informational

@@ -41,6 +41,7 @@ import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { safeLocale } from "@/lib/utils/intl"
 import { getMetadata } from "@/lib/utils/metadata"
 import { metricStat, SOURCES } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
@@ -305,7 +306,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             "page-organizations-enterprise-privacy-solutions-examples-label"
                           )}
                         </span>
-                        {new Intl.ListFormat(locale, { type: "unit" })
+                        {new Intl.ListFormat(safeLocale(locale), {
+                          type: "unit",
+                        })
                           .formatToParts(examples.map(({ name }) => name))
                           .map(({ type, value }, idx) => {
                             const example = examples.find(

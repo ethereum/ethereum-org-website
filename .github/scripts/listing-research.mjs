@@ -1,7 +1,8 @@
-// Listing research for third-party listing PRs (see .github/workflows/listing-research.md).
+// Listing review helpers for third-party listing PRs (see .github/workflows/pr-reviewer-listing.md).
 //   match <pr>              exit 0 if <pr> is an outside contributor's listing request (needs GH_TOKEN, REPO)
 //   prefetch <pr> <dir>     save the PR, the pages it links and domain-age evidence as plain text for the agent
-//   submit <item.json>      validate one agent result, re-check its quotes, print the comment body
+//   check < item.json       re-check a submit_review item's listing fields and quotes; print the verified listing JSON
+//   section < listing.json  print the "Listing check" section of the review comment
 // Every fetched page is attacker-controlled: it is only ever saved or searched as text, never executed.
 import { execFileSync } from "node:child_process"
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs"
@@ -47,6 +48,12 @@ const gh = (path, accept) =>
     { encoding: "utf8", maxBuffer: 1 << 26 }
   )
 const ghJson = (path) => JSON.parse(gh(path))
+const addedLines = (diff) =>
+  diff
+    .split("\n")
+    .filter((l) => l.startsWith("+") && !l.startsWith("+++"))
+    .map((l) => l.slice(1))
+    .join("\n")
 
 // ponytail: hostname check only, no DNS resolution; add resolve-then-check if this ever runs on a runner with an internal network.
 export function publicUrl(u) {
@@ -299,10 +306,7 @@ async function prefetch(pr, dir) {
   mkdirSync(`${dir}/pages`, { recursive: true })
   const p = ghJson(`repos/${REPO}/pulls/${pr}`)
   const diff = gh(`repos/${REPO}/pulls/${pr}`, "application/vnd.github.diff")
-  const added = diff
-    .split("\n")
-    .filter((l) => l.startsWith("+") && !l.startsWith("+++"))
-    .join("\n")
+  const added = addedLines(diff)
   writeFileSync(
     `${dir}/pr.json`,
     JSON.stringify(
@@ -483,10 +487,11 @@ export async function check(item, fetchPage = fetchText) {
 
   let downgraded = 0
   const criteria = []
-  for (const c of arr(item.criteria, 20)) {
+  for (const c of arr(item.criteria, 32)) {
     const x = {
       criterion: str(c.criterion, 200),
       status: STATUS.includes(c.status) ? c.status : "unknown",
+      weight: c.weight === "nice" ? "nice" : "must",
       ...base(c),
     }
     if (x.status !== "unknown") {
@@ -530,20 +535,21 @@ export async function check(item, fetchPage = fetchText) {
   }
 }
 
-export function render(r, run) {
+export function section(r) {
   const icon = { pass: "✅", fail: "❌", unknown: "❔" }
   const src = (c) =>
     `${c.url ? esc(c.source === "repo" ? c.url : new URL(c.url).hostname) + " " : ""}${c.source}`
   const quote = (c) => (c.quote ? `“${esc(c.quote)}”` : "")
+  const mark = (c) =>
+    c.status === "pass" && c.source === "author" ? "☑️" : icon[c.status]
+  const name = (c) =>
+    esc(c.criterion) + (c.weight === "nice" ? " _(preferred)_" : "")
   const rows = r.criteria
     .filter((c) => c.status !== "unknown")
-    .map(
-      (c) =>
-        `| ${icon[c.status]} | ${esc(c.criterion)} | ${quote(c)} | ${src(c)} |`
-    )
+    .map((c) => `| ${mark(c)} | ${name(c)} | ${quote(c)} | ${src(c)} |`)
   const open = r.criteria
     .filter((c) => c.status === "unknown")
-    .map((c) => esc(c.criterion) + (c.note ? ` _(${esc(c.note)})_` : ""))
+    .map((c) => name(c) + (c.note ? ` _(${esc(c.note)})_` : ""))
   const age = (r.siteAge || [])
     .filter((s) => s.registered || s.firstArchived)
     .map(
@@ -553,13 +559,9 @@ export function render(r, run) {
   const policy = r.policy.page
     ? `[\`${r.policy.page}\`](https://ethereum.org/contributing/${r.policy.page}/)`
     : "no matching listing policy"
-  const data = JSON.stringify({ ...r, run }).replace(
-    /[<>@]/g,
-    (c) => `\\u${c.charCodeAt(0).toString(16).padStart(4, "0")}`
-  )
   return [
-    `## 🧾 Listing check${r.product ? ` — ${esc(r.product)}` : ""}`,
-    `Checked against ${policy}. ✅ confirmed with a quoted source, ❌ contradicted. A maintainer makes the listing decision.`,
+    `### 🧾 Listing check${r.product ? ` — ${esc(r.product)}` : ""}`,
+    `Checked against ${policy}. ✅ confirmed by an independent source or this repo, ☑️ stated only on the product's own site, ❌ contradicted. A maintainer makes the listing decision.`,
     rows.length
       ? `| | Criterion | Evidence | Source |\n|---|---|---|---|\n${rows.join("\n")}`
       : "",
@@ -573,7 +575,6 @@ export function render(r, run) {
     r.facts.length || age.length
       ? `<details><summary>Facts found (${age.length + r.facts.length})</summary>\n\n${[...age.map((a) => `- ${a}`), ...r.facts.map((f) => `- ${esc(f.fact)}${f.quote ? ` — ${quote(f)}` : ""} (${src(f)})`)].join("\n")}\n\n</details>`
       : "",
-    `<!-- ethorg-listing: ${data} -->`,
   ]
     .filter(Boolean)
     .join("\n\n")
@@ -583,12 +584,14 @@ async function main() {
   const [cmd, ...args] = process.argv.slice(2)
   if (cmd === "match") await match(args[0])
   else if (cmd === "prefetch") await prefetch(args[0], args[1])
-  else if (cmd === "submit") {
-    const item = JSON.parse(readFileSync(args[0], "utf8"))
+  else if (cmd === "check") {
+    const item = JSON.parse(readFileSync(0, "utf8"))
     const r = await check(item)
     r.siteAge = await pool(productSites(item), 3, domainAge)
-    process.stdout.write(render(r, process.env.RUN_URL || ""))
-  } else throw new Error(`unknown command: ${cmd}`)
+    process.stdout.write(JSON.stringify(r))
+  } else if (cmd === "section")
+    process.stdout.write(section(JSON.parse(readFileSync(0, "utf8"))))
+  else throw new Error(`unknown command: ${cmd}`)
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href)

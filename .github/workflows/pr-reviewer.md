@@ -8,12 +8,37 @@ on:
       - src/data/consensus-bounty-hunters.json
       - src/data/execution-bounty-hunters.json
   roles: all
+  permissions:
+    contents: read
+    pull-requests: read
+  steps:
+    - uses: actions/checkout@v6
+      with:
+        sparse-checkout: |
+          .github/scripts/listing-research.mjs
+          .github/CODEOWNERS
+        sparse-checkout-cone-mode: false
+        persist-credentials: false
+    - name: Leave listing requests to PR Reviewer (listing)
+      id: route
+      continue-on-error: true
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPO: ${{ github.repository }}
+        PR: ${{ github.event.pull_request.number }}
+      run: |
+        node .github/scripts/listing-research.mjs match "$PR" || {
+          rc=$?
+          [ "$rc" -eq 1 ] && exit 1
+          echo "::warning::Listing gate failed (exit $rc); PR Reviewer (listing) reviews this PR"
+        }
   skip-bots:
     - allcontributors[bot]
     - github-actions[bot]
     - dependabot[bot]
 if: >-
   !github.event.pull_request.draft &&
+  needs.pre_activation.outputs.route_result != 'success' &&
   (github.event.pull_request.head.repo.full_name != github.repository || (
     github.event.pull_request.head.ref != 'staging' &&
     github.event.pull_request.head.ref != 'dev' &&
@@ -88,13 +113,6 @@ pre-agent-steps:
         --json number,title,body,author,isDraft,baseRefName,headRefName,headRefOid,mergeStateStatus,additions,deletions,changedFiles,labels \
         > /tmp/gh-aw/agent/pr-meta.json
       git fetch --no-tags origin "pull/$PR_NUMBER/head:pr-head"
-      listing=no
-      if [ -f .github/scripts/listing-research.mjs ]; then
-        rc=0; err=$(node .github/scripts/listing-research.mjs match "$PR_NUMBER" 2>&1 >/dev/null) || rc=$?
-        if [ "$rc" = 0 ]; then listing=yes
-        elif [ "$rc" != 1 ] || [ -n "$err" ]; then listing=error; echo "$err" >&2; echo "::warning::listing-research match failed for #$PR_NUMBER"; fi
-      fi
-      echo "$listing" > /tmp/gh-aw/agent/listing.txt
 imports:
   - shared/pr-review-core.md
   - shared/submit-review.md

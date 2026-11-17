@@ -49,7 +49,6 @@ _Historical_ blob data may be desired for a variety of reasons and can be stored
 
 - **Third-party indexing protocols**, such as The Graph, store this data through a decentralized network of node operators incentivized by crypto-economic mechanisms.
 - **BitTorrent** is a decentralized protocol where volunteers can hold and distribute this data to others.
-- **[Ethereum portal network](/developers/docs/networking-layer/portal-network/)** aims to provide access to all Ethereum data through a decentralized network of node operators by distributing data among participants akin to BitTorrent.
 - **Individual users** are always free to store their own copies of any data they wish for historical reference.
 - **Rollup providers** are incentivized to store this data to enhance the user experience of their rollup.
 - **Block explorers** typically run archival nodes that index and store all this information for easy historical reference, accessible to users via a web interface.
