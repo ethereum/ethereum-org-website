@@ -21,6 +21,31 @@ const read = (rel: string) => readFileSync(path.join(REPO_ROOT, rel), "utf8")
 const stripComments = (src: string) =>
   src.replace(/\/\*[\s\S]*?\*\/|(^|[^:])\/\/.*$/gm, "$1")
 
+const sources = new Map<string, string>()
+const source = (file: string) => {
+  if (!sources.has(file))
+    sources.set(file, stripComments(readFileSync(file, "utf8")))
+  return sources.get(file)!
+}
+
+const resolveImport = (from: string, spec: string) => {
+  const base = spec.startsWith("@/")
+    ? path.join(REPO_ROOT, "src", spec.slice(2))
+    : spec.startsWith(".")
+      ? path.resolve(path.dirname(from), spec)
+      : null
+  if (!base) return
+  return ["", ".ts", ".tsx", "/index.ts", "/index.tsx"]
+    .map((ext) => base + ext)
+    .find((f) => existsSync(f) && statSync(f).isFile())
+}
+
+/** Local modules a file imports, statically or via `import()`. */
+const importsOf = (file: string): string[] =>
+  [...source(file).matchAll(/(?:from|import\()\s*["']([^"']+)["']/g)]
+    .map(([, spec]) => resolveImport(file, spec))
+    .filter((dep): dep is string => !!dep)
+
 /** Every route dir under app/[locale] (relative to app/) that holds page.tsx or route.ts. */
 const findRoutes = (dir = LOCALE_DIR): string[] => {
   const out: string[] = []
@@ -58,7 +83,14 @@ test.describe("dynamic routes are in getDynamicIntlPagePaths()", () => {
     "/ab-code/[code]",
   ]
 
-  const registry = stripComments(read("src/lib/i18n/translationRegistry.ts"))
+  // Paths may be built by an imported helper, e.g. getNetworkHref().
+  const registryFile = path.join(
+    REPO_ROOT,
+    "src/lib/i18n/translationRegistry.ts"
+  )
+  const registry = [registryFile, ...importsOf(registryFile)]
+    .map(source)
+    .join("\n")
   const dynamic = routes
     .filter(
       (r) =>
@@ -154,25 +186,6 @@ test.describe("routes rendered at runtime that read public/content are traced", 
     .filter(([, , revalidate]) => revalidate !== "false")
     .map(([, name]) => name)
 
-  const sources = new Map<string, string>()
-  const source = (file: string) => {
-    if (!sources.has(file))
-      sources.set(file, stripComments(readFileSync(file, "utf8")))
-    return sources.get(file)!
-  }
-
-  const resolveImport = (from: string, spec: string) => {
-    const base = spec.startsWith("@/")
-      ? path.join(REPO_ROOT, "src", spec.slice(2))
-      : spec.startsWith(".")
-        ? path.resolve(path.dirname(from), spec)
-        : null
-    if (!base) return
-    return ["", ".ts", ".tsx", "/index.ts", "/index.tsx"]
-      .map((ext) => base + ext)
-      .find((f) => existsSync(f) && statSync(f).isFile())
-  }
-
   /** The route's own files, its private `_folders`, and everything they import. */
   const routeModules = (route: string): string[] => {
     const dir = path.join(REPO_ROOT, APP_DIR, route)
@@ -187,11 +200,8 @@ test.describe("routes rendered at runtime that read public/content are traced", 
       .map((e) => path.join(e.parentPath, e.name))
     const seen = new Set(queue)
     for (const file of queue) {
-      for (const [, spec] of source(file).matchAll(
-        /(?:from|import\()\s*["']([^"']+)["']/g
-      )) {
-        const dep = resolveImport(file, spec)
-        if (dep && dep !== BUILD_ONLY && !seen.has(dep)) {
+      for (const dep of importsOf(file)) {
+        if (dep !== BUILD_ONLY && !seen.has(dep)) {
           seen.add(dep)
           queue.push(dep)
         }
