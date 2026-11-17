@@ -1489,7 +1489,7 @@ export interface BuilderResourcesTaxonomy {
   tags: string[]
 }
 
-export type CatalogItemKind = "app" | "tool" | "wallet"
+export type CatalogItemKind = "app" | "tool" | "wallet" | "network"
 
 export type CatalogItemLinkKind =
   | "x"
@@ -1519,6 +1519,8 @@ export interface CatalogItem {
   /** Localized; rendered as markdown. */
   description?: string
   primaryLink?: { href: string; label: string }
+  /** Labelled outline buttons after the primary one */
+  secondaryLinks?: { href: string; label: string }[]
   socialLinks: CatalogItemLink[]
   infoRows: { label: string; value: ReactNode; tooltip?: string }[]
   /** Page path; the trail comes from the breadcrumb IA map, closed by `name` */
