@@ -12,11 +12,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function RunANodePageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  latestCommitDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  latestCommitDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-run-a-node")
@@ -67,7 +67,7 @@ export default async function RunANodePageJsonLD({
           description:
             "Guide to running your own Ethereum node, benefits, and requirements",
         },
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: latestCommitDate,
       },
     ],
   }

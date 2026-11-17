@@ -12,11 +12,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function OpenAccessPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  latestCommitDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  latestCommitDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-open-access")
@@ -75,7 +75,7 @@ export default async function OpenAccessPageJsonLD({
               "A decentralized platform for applications and digital economies powered by smart contracts",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: latestCommitDate,
       },
     ],
   }

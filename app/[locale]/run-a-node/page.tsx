@@ -83,7 +83,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditLocaleTimestamp, latestCommitDate } =
     await getAppPageContributorInfo("run-a-node", locale as Lang)
 
   const t = await getTranslations("page-run-a-node")
@@ -158,7 +158,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <RunANodePageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        latestCommitDate={latestCommitDate}
         contributors={contributors}
       />
 
