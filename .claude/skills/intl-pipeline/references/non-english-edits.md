@@ -96,7 +96,7 @@ jq -r '.sourceCommitSha' .manifests/public/content/translations/ja/some-page/ind
 git log <stamped-sha>..HEAD -- public/content/some-page/index.md
 ```
 
-If there are commits, the English side has moved. Hand-editing the locale will cause drift unless you also `stamp_only`.
+If there are commits, the English side has moved. Hand-editing the locale will cause drift: run the pipeline instead, or follow the `stamp_only` procedure above.
 
 ## What about `.claude/translation-review/per-language/{lang}.md`?
 

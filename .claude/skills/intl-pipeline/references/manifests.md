@@ -61,7 +61,7 @@ Records what the last translation of the pair was made against: the English sour
 | First translation of a file (no manifests exist) | Pipeline runs full translation, stamps both manifests after success                                                                                                                                                                                                                                           |
 | Incremental run on an existing file              | Pipeline reads source manifest, fetches english-A via `git show`, computes delta, translates only changed sections, re-stamps both manifests after success                                                                                                                                                    |
 | Phase 4 failure (LLM error)                      | Manifests are NOT stamped. Next run re-detects the changes.                                                                                                                                                                                                                                                   |
-| Hand-edit to the locale (English unchanged)      | Manifest map remains valid. Next pipeline run sees corrected locale as new baseline.                                                                                                                                                                                                                          |
+| Hand-edit to the locale (English unchanged)      | Manifests stay valid (they record English, not the locale). Next pipeline run sees corrected locale as new baseline.                                                                                                                                                                                          |
 | Hand-edit reflecting English change              | Manifest now lies about the locale's relationship to English. Next run will misclassify. See `references/non-english-edits.md`.                                                                                                                                                                               |
 | `stamp_only: true` workflow run                  | `source.json` rewritten from current English for pairs whose English changed; no LLM calls, no locale or `translation.json` writes. It asserts the locale is current -- stamping a locale nobody hand-fixed strands it behind English with no drift left to detect (9 files were in that state in Sept 2026). |
 | Hashing scheme change (`MANIFEST_VERSION` bump)  | One-off `pnpm exec tsx src/scripts/intl-pipeline/migrate-manifests.ts` rewrites every manifest from its own recorded English. See "Schema version 2".                                                                                                                                                         |
@@ -94,8 +94,11 @@ const tree = parseMarkdown(readFileSync('public/content/some-page/index.md', 'ut
 console.log(tree.rootHash);
 "
 
-# Pretty-print the manifest's structure
-jq '.tree' .manifests/.../translation.json
+# Pretty-print the English structure the pair was last synced to
+jq '.tree' .manifests/.../source.json
+
+# What the last translation was made against, and per-section status
+jq '{englishManifestHash, sections}' .manifests/.../translation.json
 ```
 
 ## Common manifest issues
