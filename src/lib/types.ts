@@ -3,7 +3,6 @@ import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
 import type { ReactElement, ReactNode } from "react"
-import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
   BlogFrontmatter,
@@ -20,7 +19,7 @@ import type { SimulatorNav } from "@/components/Simulator/interfaces"
 import type { TagProps } from "@/components/ui/tag"
 
 import chains from "@/data/chains"
-import { Rollup, Rollups } from "@/data/networks/networks"
+import type { Rollup } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
@@ -742,21 +741,28 @@ export type NonEVMChainName = "Starknet"
 
 export type AppOnlyChainName = "Immutable zkEVM" | "Ronin"
 
-export type ExtendedRollup = Rollup & {
-  networkMaturity: MaturityLevel
-  txCosts: number | undefined
+export type NetworkMetrics = {
   tvl: number
-  walletsSupported: string[]
-  activeAddresses: number | undefined
+  txCosts: number | null
+  activeAddresses: number | null
   launchDate: string | null
-  walletsSupportedCount: string
-  blockspaceData: {
-    nft: number
-    defi: number
-    social: number
-    token_transfers: number
-    unlabeled: number
-  } | null
+  /** Slugs of the listed wallets that support the network */
+  walletSlugs: string[]
+}
+
+/** A layer 2 listed in the networks catalog, with its live metrics */
+export type CatalogNetwork = Rollup &
+  NetworkMetrics & {
+    networkMaturity: MaturityLevel
+    blockspaceData: BlockspaceData | null
+  }
+
+/** Ethereum itself: the catalog's pinned reference, never a listed network */
+export type MainnetNetwork = NetworkMetrics & {
+  name: string
+  chainName: ChainName
+  logo: StaticImageData
+  feeToken: string[]
 }
 
 // Wallets
@@ -880,96 +886,6 @@ export type WalletData = {
 export type Wallet = WalletData & {
   supportedLanguages: string[]
 }
-
-export type FilterInputState = boolean | Lang | string | string[] | null
-
-export type FilterOption = {
-  title: string
-  showFilterOption: boolean
-  items: Array<FilterItem>
-}
-
-type FilterItem = {
-  filterKey: string
-  filterLabel: string
-  description: string
-  inputState: FilterInputState
-  ignoreFilterReset?: boolean
-  input: FilterInput
-  options: Array<FilterOptionItem>
-  optionsLegend?: string // sr-only legend for the nested fieldset wrapping `options` (when present)
-}
-
-type FilterInput = (
-  filterIndex: number,
-  itemIndex: number,
-  state: FilterInputState,
-  updateFilterState: UpdateFilterState
-) => ReactElement<unknown>
-
-type FilterOptionItem = {
-  filterKey: string
-  filterLabel: string
-  description: string
-  ignoreFilterReset?: boolean
-  inputState: FilterInputState
-  input: FilterOptionInput
-}
-
-type FilterOptionInput = (
-  filterIndex: number,
-  itemIndex: number,
-  optionIndex: number,
-  state: FilterInputState,
-  updateFilterState: UpdateFilterState
-) => ReactElement<unknown>
-
-type UpdateFilterState = (
-  filterIndex: number,
-  itemIndex: number,
-  inputState: FilterInputState,
-  optionIndex?: number
-) => void
-
-export interface WalletPersonas {
-  title: string
-  description: string
-  presetFilters: {
-    android: boolean
-    ios: boolean
-    linux: boolean
-    windows: boolean
-    macOS: boolean
-    firefox: boolean
-    chromium: boolean
-    hardware: boolean
-    open_source: boolean
-    non_custodial: boolean
-    hardware_support: boolean
-    rpc_importing: boolean
-    nft_support: boolean
-    connect_to_dapps: boolean
-    staking: boolean
-    swaps: boolean
-    layer_2: boolean
-    gas_fee_customization: boolean
-    ens_support: boolean
-    erc_20_support: boolean
-    buy_crypto: boolean
-    withdraw_crypto: boolean
-    multisig: boolean
-    social_recovery: boolean
-    new_to_crypto?: boolean
-  }
-}
-
-export type TPresetFilters = WalletPersonas[]
-
-export type ProductTablePresetFilters = WalletPersonas[]
-
-export type ProductTableColumnDefs = ColumnDef<Wallet | Rollups>
-
-export type ProductTableRow = Wallet | Rollup
 
 export interface DropdownOption {
   label: string
