@@ -48,6 +48,13 @@ export const getMarkdownFileContributorInfo = async (
   return { contributors, lastUpdatedDate }
 }
 
+export const getAppPageDateInfo = (locale: Lang, latestCommitDate: string) => ({
+  lastEditLocaleTimestamp: latestCommitDate
+    ? getLocaleTimestamp(locale, latestCommitDate)
+    : "",
+  lastEditIsoTimestamp: latestCommitDate,
+})
+
 export const getAppPageContributorInfo = async (
   pagePath: string,
   locale: Lang
@@ -63,14 +70,10 @@ export const getAppPageContributorInfo = async (
   )
 
   const latestCommitDate = getAppPageLastCommitDate(gitHubContributors)
-  // Guard the empty sentinel: getLocaleTimestamp(locale, "") would format an
-  // Invalid Date, so keep the timestamp empty when there is no commit date.
-  const lastEditLocaleTimestamp = latestCommitDate
-    ? getLocaleTimestamp(locale, latestCommitDate)
-    : ""
+  const dateInfo = getAppPageDateInfo(locale, latestCommitDate)
 
   // if (
-  //   (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) &&
+  //   (!uniqueGitHubContributors.length || !dateInfo.lastEditLocaleTimestamp) &&
   //   process.env.NODE_ENV === "production"
   // ) {
   //   throw new Error(
@@ -80,6 +83,6 @@ export const getAppPageContributorInfo = async (
 
   return {
     contributors: sortTeamToEnd(uniqueGitHubContributors),
-    lastEditLocaleTimestamp,
+    ...dateInfo,
   }
 }

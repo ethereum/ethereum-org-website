@@ -12,11 +12,11 @@ import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function GetEthPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditIsoTimestamp,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditIsoTimestamp: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-get-eth")
@@ -61,7 +61,7 @@ export default async function GetEthPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditIsoTimestamp || undefined,
       },
     ],
   }

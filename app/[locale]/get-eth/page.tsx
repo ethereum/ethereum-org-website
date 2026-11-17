@@ -140,14 +140,14 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/get-eth")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditLocaleTimestamp, lastEditIsoTimestamp } =
     await getAppPageContributorInfo("get-eth", locale as Lang)
 
   return (
     <>
       <GetEthPageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditIsoTimestamp={lastEditIsoTimestamp}
         contributors={contributors}
       />
 

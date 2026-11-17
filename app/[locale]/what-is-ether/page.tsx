@@ -46,7 +46,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const t = await getTranslations("page-what-is-ether")
 
   const [
-    { contributors, lastEditLocaleTimestamp },
+    { contributors, lastEditLocaleTimestamp, lastEditIsoTimestamp },
     gasPriceData,
     ethPriceData,
   ] = await Promise.all([
@@ -97,7 +97,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditIsoTimestamp={lastEditIsoTimestamp}
         contributors={contributors}
       />
 
