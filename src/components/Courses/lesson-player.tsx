@@ -177,12 +177,15 @@ const LessonPlayer = ({
   const [reward, setReward] = useState<LessonReward | ExamReward | null>(null)
   const [accuracy, setAccuracy] = useState(1)
   const [firstTryCount, setFirstTryCount] = useState({ right: 0, total: 0 })
+  // Furthest step reached: steps before it were passed and can be revisited
+  const [furthest, setFurthest] = useState(0)
 
   const restart = () => {
     trackCourseEvent("Lesson restart", `${courseId}/${lesson.id}`)
     if (examSession) return examSession.restart()
     void lessonSession.restart()
     setIndex(0)
+    setFurthest(0)
     setValues({})
     setStatus("answering")
     setFirstTry({})
@@ -351,10 +354,21 @@ const LessonPlayer = ({
     setIndex(index - 1)
   }
 
+  // A passed graded step comes back answered and locked; first-try results
+  // are already recorded, so revisiting never changes XP or accuracy
+  const goTo = (next: number) => {
+    setIndex(next)
+    setFurthest((f) => Math.max(f, next))
+    setStatus(
+      next < furthest && isGraded(lesson.steps[next]) ? "correct" : "answering"
+    )
+  }
+
+  const handleBack = () => goTo(index - 1)
+
   const handleContinue = () => {
     if (index < total - 1) {
-      setIndex(index + 1)
-      setStatus("answering")
+      goTo(index + 1)
       return
     }
     const graded = lesson.steps.filter(isGraded)
@@ -445,20 +459,25 @@ const LessonPlayer = ({
     return () => window.removeEventListener("keydown", onEnter, true)
   }, [footerKind])
 
-  // Course Mastery: the arrows step back and forward (Next's rules apply),
-  // mirrored for right-to-left languages
+  // The arrows step back and forward (the footer's rules apply), mirrored for
+  // right-to-left languages
   const { isRtl } = getDirection(locale as Lang)
-  const examBackRef = useRef<(() => void) | null>(null)
+  const backRef = useRef<(() => void) | null>(null)
   useEffect(() => {
-    examBackRef.current =
-      isExamSession && index > 0 && !pending ? handleExamBack : null
+    backRef.current =
+      index === 0 || pending
+        ? null
+        : isExamSession
+          ? handleExamBack
+          : handleBack
   })
   useEffect(() => {
-    if (!isExamSession || reward) return
+    if (reward) return
     const onArrow = (event: KeyboardEvent) => {
       if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return
       if (event.repeat || event.altKey || event.ctrlKey || event.metaKey) return
-      if (event.shiftKey) return
+      // A focused control already used the arrow (radio group, slider)
+      if (event.shiftKey || event.defaultPrevented) return
       const target = event.target as HTMLElement | null
       if (
         target?.closest(
@@ -468,17 +487,17 @@ const LessonPlayer = ({
         return
       const forward = (event.key === "ArrowRight") !== isRtl
       const action = forward
-        ? footerKind === "next"
+        ? footerKind === "next" || footerKind === "continue"
           ? footerActionRef.current
           : null
-        : examBackRef.current
+        : backRef.current
       if (!action) return
       event.preventDefault()
       action()
     }
     window.addEventListener("keydown", onArrow)
     return () => window.removeEventListener("keydown", onArrow)
-  }, [isExamSession, reward, footerKind, isRtl])
+  }, [reward, footerKind, isRtl])
 
   const feedbackKey = (() => {
     if (status === "answering" || !isGraded(step)) return null
@@ -498,8 +517,12 @@ const LessonPlayer = ({
       ? value.hint
       : feedbackKey && t(feedbackKey)
 
+  const reviewing = index < furthest
   const showCombo =
-    status === "correct" && combo >= COMBO_MIN && firstTry[step.id]
+    !reviewing &&
+    status === "correct" &&
+    combo >= COMBO_MIN &&
+    firstTry[step.id]
 
   // Footer flag: beside the main button from md; on mobile, in the verdict or
   // explanation row when there is one
@@ -603,6 +626,46 @@ const LessonPlayer = ({
     }
   }
 
+  const lessonAction =
+    status === "incorrect" ? (
+      <Button
+        variant="ghost"
+        onClick={handleRetry}
+        className={cn(chunkyButton, "w-full border-red-800 bg-error md:w-auto")}
+      >
+        {t("page-courses-try-again")}
+      </Button>
+    ) : canContinue ? (
+      <Button
+        variant="ghost"
+        onClick={handleContinue}
+        className={cn(
+          chunkyButton,
+          "w-full md:w-auto",
+          status === "correct" && "border-green-800 bg-green-700"
+        )}
+      >
+        {t("page-courses-continue")}
+      </Button>
+    ) : !isGraded(step) ? (
+      <Button
+        variant="ghost"
+        disabled
+        className={cn(chunkyButton, "w-full md:w-auto")}
+      >
+        {t("page-courses-continue")}
+      </Button>
+    ) : (
+      <Button
+        variant="ghost"
+        onClick={handleCheck}
+        disabled={!isReady(step, value)}
+        className={cn(chunkyButton, "w-full md:w-auto")}
+      >
+        {t("page-courses-check")}
+      </Button>
+    )
+
   return (
     <div
       style={lessonThemeStyle()}
@@ -611,19 +674,6 @@ const LessonPlayer = ({
       <style>{LESSON_CSS}</style>
       <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-page pt-6 pb-10">
         <div className="flex items-center gap-3">
-          <ExitLessonButton
-            href={courseHref(courseId)}
-            confirm={!reward && (index > 0 || Object.keys(values).length > 0)}
-            onLeave={() =>
-              !reward &&
-              trackCourseEvent(
-                "Lesson exit",
-                `${courseId}/${lesson.id}/${step.id}`,
-                undefined,
-                { immediate: true }
-              )
-            }
-          />
           <Progress
             value={progressValue}
             aria-label={t("page-courses-step-progress", {
@@ -647,6 +697,19 @@ const LessonPlayer = ({
               {combo}
             </span>
           )}
+          <ExitLessonButton
+            href={courseHref(courseId)}
+            confirm={!reward && (index > 0 || Object.keys(values).length > 0)}
+            onLeave={() =>
+              !reward &&
+              trackCourseEvent(
+                "Lesson exit",
+                `${courseId}/${lesson.id}/${step.id}`,
+                undefined,
+                { immediate: true }
+              )
+            }
+          />
         </div>
 
         {!titleInStep && title}
@@ -693,6 +756,9 @@ const LessonPlayer = ({
                 : examAfter
                   ? examHref(courseId)
                   : undefined
+            }
+            nextTitle={
+              nextLessonId ? t(`${courseId}-${nextLessonId}-title`) : undefined
             }
             nextIsExam={!nextLessonId && examAfter}
             learnMore={learnMore}
@@ -865,46 +931,19 @@ const LessonPlayer = ({
                     </span>
                   </Button>
                 </>
-              ) : status === "incorrect" ? (
-                <Button
-                  variant="ghost"
-                  onClick={handleRetry}
-                  className={cn(
-                    chunkyButton,
-                    "w-full border-red-800 bg-error md:w-auto"
-                  )}
-                >
-                  {t("page-courses-try-again")}
-                </Button>
-              ) : canContinue ? (
-                <Button
-                  variant="ghost"
-                  onClick={handleContinue}
-                  className={cn(
-                    chunkyButton,
-                    "w-full md:w-auto",
-                    status === "correct" && "border-green-800 bg-green-700"
-                  )}
-                >
-                  {t("page-courses-continue")}
-                </Button>
-              ) : !isGraded(step) ? (
-                <Button
-                  variant="ghost"
-                  disabled
-                  className={cn(chunkyButton, "w-full md:w-auto")}
-                >
-                  {t("page-courses-continue")}
-                </Button>
               ) : (
-                <Button
-                  variant="ghost"
-                  onClick={handleCheck}
-                  disabled={!isReady(step, value)}
-                  className={cn(chunkyButton, "w-full md:w-auto")}
-                >
-                  {t("page-courses-check")}
-                </Button>
+                <>
+                  {index > 0 && (
+                    <Button
+                      variant="ghost"
+                      onClick={handleBack}
+                      className={cn(chunkyButtonSecondary, "w-full md:w-auto")}
+                    >
+                      {t("page-courses-exam-previous")}
+                    </Button>
+                  )}
+                  {lessonAction}
+                </>
               )}
             </div>
           </div>
