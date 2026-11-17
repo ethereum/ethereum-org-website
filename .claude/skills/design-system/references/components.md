@@ -495,7 +495,7 @@ import {
 } from "@/components/ui/accordion"
 ```
 
-Custom chevron rotation, RTL `dir(rtl)` variant included.
+Custom chevron rotation, RTL `dir(rtl)` variant included. `AccordionTrigger` renders the heading around its button: `headingLevel` (`h2`/`h3`/`h4`, default `h3`) and `headingId` (stable anchor). Only the title goes inside -- see `a11y.md`.
 
 ### `Breadcrumb`
 

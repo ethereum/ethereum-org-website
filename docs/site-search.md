@@ -14,6 +14,7 @@ Indexing runs from `.github/workflows/typesense-index.yml`: on a Netlify `deploy
 
 - Translated pages are separated by collection, and additionally carry a `language` field, so a search never mixes locales.
 - `aside`, `nav`, `footer` and `style` elements are stripped before indexing. Semantic markup therefore doubles as a way to keep content out of search -- wrapping a callout, banner or quiz in `aside` excludes it.
+- A record's anchor is its heading's own `id`, else the last `id` inside the heading, else the nearest sibling or ancestor `id`; text records inherit the anchor of the heading above them. Radix generates its ids (`radix-…`) per build, so a heading rendered inside an Accordion, Tabs or similar primitive needs an explicit id -- `headingId` on `AccordionTrigger`, or `slugify(text, { unicode: true })` -- or its search results link to an anchor that breaks on the next deploy. `ExpandableCard` derives one from its `title` automatically.
 - Ranking hints reach the index as `docsearch:*` meta tags emitted by `src/lib/utils/metadata.ts`. The scraper copies any tag with that prefix onto every record it extracts from the page, which is how `pagerank` and `category` get in.
 
 ## Publishing is gated

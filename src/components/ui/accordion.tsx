@@ -28,28 +28,45 @@ const AccordionTrigger = React.forwardRef<
   React.ComponentRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & {
     hideIcon?: boolean
+    /** Stable anchor for deep links and search; Radix's generated ids change every build */
+    headingId?: string
+    headingLevel?: "h2" | "h3" | "h4"
   }
->(({ className, children, hideIcon = false, ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex [font-size:inherit]">
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={cn(
-        "flex flex-1 items-center justify-between gap-2 px-2 py-2 text-start font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
-        className
-      )}
-      {...props}
-    >
-      <>
-        {children}
-        {!hideIcon && (
-          <div data-label="icon-container">
-            <ChevronNext className="size-[1em] shrink-0 text-2xl transition-transform duration-200" />
-          </div>
-        )}
-      </>
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-))
+>(
+  (
+    {
+      className,
+      children,
+      hideIcon = false,
+      headingId,
+      headingLevel: Heading = "h3",
+      ...props
+    },
+    ref
+  ) => (
+    <AccordionPrimitive.Header asChild>
+      <Heading id={headingId} className="flex [font-size:inherit]">
+        <AccordionPrimitive.Trigger
+          ref={ref}
+          className={cn(
+            "flex flex-1 items-center justify-between gap-2 px-2 py-2 text-start font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
+            className
+          )}
+          {...props}
+        >
+          <>
+            {children}
+            {!hideIcon && (
+              <div data-label="icon-container">
+                <ChevronNext className="size-[1em] shrink-0 text-2xl transition-transform duration-200" />
+              </div>
+            )}
+          </>
+        </AccordionPrimitive.Trigger>
+      </Heading>
+    </AccordionPrimitive.Header>
+  )
+)
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
