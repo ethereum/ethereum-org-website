@@ -19,8 +19,7 @@ Since each Ethereum transaction requires computational resources to execute, tho
 
 The gas fee is **the amount of gas used to do some operation, multiplied by the cost per unit gas**. The fee is paid regardless of whether a transaction succeeds or fails.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 Gas fees have to be paid in Ethereum's native currency, ether (ETH). Gas prices are usually quoted in gwei, which is a denomination of ETH. Each gwei is equal to one-billionth of an ETH (0.000000001 ETH or 10<sup>-9</sup> ETH).
 
@@ -105,8 +104,7 @@ In short, gas fees help keep the Ethereum network secure. By requiring a fee for
 
 Although a transaction includes a limit, any gas not used in a transaction is returned to the user (e.g., `max fee - (base fee + tip)` is returned).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## What is the gas limit? {#what-is-gas-limit}
 
@@ -133,12 +131,7 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [Etherscan](https://etherscan.io/gastracker) _Transaction gas price estimator_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Open source transaction gas price estimator_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitor and track the Ethereum, and L2 gas prices to reduce transaction fees and save money_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
-
-## Related tools {#related-tools}
-
-- [Gas Network](https://gas.network) Onchain Gas Oracles. Support for 35+ chains. 
 
 ## Further reading {#further-reading}
 

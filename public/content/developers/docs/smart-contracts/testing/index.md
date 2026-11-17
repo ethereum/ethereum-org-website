@@ -238,7 +238,7 @@ Unlike testing, formal verification can be used to verify a smart contracts exec
 
 As mentioned, rigorous testing can rarely guarantee the absence of bugs in a contract; formal verification approaches can provide stronger assurances of correctness but are currently difficult to use and incur considerable costs.
 
-Still, you can further increase the possibility of catching contract vulnerabilities by getting an independent code review. [Smart contract audits](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) and [bug bounties](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) are two ways of getting others to analyze your contracts.
+Still, you can further increase the possibility of catching contract vulnerabilities by getting an independent code review. [Smart contract audits](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) and [bug bounties](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) are two ways of getting others to analyze your contracts.
 
 Audits are performed by auditors experienced at finding cases of security flaws and poor development practices in smart contracts. An audit will usually include testing (and possibly formal verification) as well as a manual review of the entire codebase.
 

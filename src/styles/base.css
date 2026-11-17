@@ -39,6 +39,7 @@
   h5,
   h6,
   section,
+  figure,
   li[id] {
     @apply scroll-mt-32;
   }

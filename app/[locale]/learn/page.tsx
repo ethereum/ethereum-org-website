@@ -21,7 +21,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -32,14 +32,17 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
+import dogeComputer from "@/public/images/doge-computer.png"
 import eth from "@/public/images/eth.png"
 import financeTransparent from "@/public/images/finance_transparent.png"
 import futureTransparent from "@/public/images/future_transparent.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
+import guidesHubHero from "@/public/images/heroes/guides-hub-hero.jpg"
 import heroImage from "@/public/images/heroes/learn-hub-hero.png"
 import storiesHero from "@/public/images/heroes/stories-hero.png"
 import impact from "@/public/images/impact_transparent.png"
 import networkColumn from "@/public/images/network-column-rooftop-piping-construction.png"
+import peopleLearning from "@/public/images/people-learning.png"
 import merge from "@/public/images/upgrades/merge.png"
 import upgradeRhino from "@/public/images/upgrades/upgrade_rhino.png"
 import wallet from "@/public/images/wallet.png"
@@ -125,6 +128,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     {
       id: "go-deeper",
       title: t("toc-go-deeper"),
+    },
+    {
+      id: "reference-and-resources",
+      title: t("toc-reference-and-resources"),
     },
     {
       id: "books-and-podcasts",
@@ -351,6 +358,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ctaLabel={t("get-eth-cta")}
             />
           </Grid>
+          <LinkWithArrow href="/start/">{t("get-started-link")}</LinkWithArrow>
 
           <h3>{t("keep-learning-title")}</h3>
           <Grid>
@@ -362,7 +370,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ctaLabel={t("staking-cta")}
             />
             <LearnCard
-              href="/layer-2/learn/"
+              href="/layer-2/"
               image={networkColumn}
               title={t("layer-2-learn-card-title")}
               description={t("layer-2-learn-card-description")}
@@ -395,6 +403,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 children: t("additional-reading-security"),
               },
               { href: "/gas/", children: t("additional-reading-gas") },
+              { href: "/bridges/", children: t("additional-reading-bridges") },
               {
                 href: "/community/support/",
                 children: t("additional-reading-support"),
@@ -473,16 +482,50 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 children: t("more-on-ethereum-protocol-evm"),
               },
               {
-                href: "/developers/docs/nodes-and-clients/",
-                children: t("more-on-ethereum-protocol-nodes-and-clients"),
+                href: "/zero-knowledge-proofs/",
+                children: t("more-on-ethereum-protocol-zero-knowledge-proofs"),
+              },
+              {
+                href: "/run-a-node/",
+                children: t("more-on-ethereum-protocol-run-a-node"),
               },
             ]}
           />
         </Section>
 
-        {/* Section 5: Books and podcasts */}
+        {/* Section 5: Reference and resources */}
         <Section id={tocItems[4].id}>
           <h2>{tocItems[4].title}</h2>
+          <p>{t("reference-and-resources-description")}</p>
+
+          <Grid>
+            <LearnCard
+              href="/what-are-apps/"
+              image={dogeComputer}
+              title={t("what-are-apps-card-title")}
+              description={t("what-are-apps-card-description")}
+              ctaLabel={t("what-are-apps-cta")}
+            />
+            <LearnCard
+              href="/glossary/"
+              image={peopleLearning}
+              title={t("glossary-card-title")}
+              description={t("glossary-card-description")}
+              ctaLabel={t("glossary-cta")}
+            />
+            <LearnCard
+              href="/resources/"
+              image={guidesHubHero}
+              title={t("resources-card-title")}
+              description={t("resources-card-description")}
+              ctaLabel={t("resources-cta")}
+            />
+          </Grid>
+        </Section>
+
+        {/* Section 6: Books and podcasts */}
+        <Section id={tocItems[5].id}>
+          <h2>{tocItems[5].title}</h2>
 
           {furtherReading.map(({ heading, items }) => (
             <Fragment key={heading}>

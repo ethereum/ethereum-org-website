@@ -38,7 +38,7 @@ The cost of L2 transactions is composed of two components:
 1. L2 processing, which is usually extremely cheap
 2. L1 storage, which is tied to Mainnet gas costs
 
-When I wrote this article in 2022, on Optimism the cost of L2 gas was 0.001 [Gwei](/developers/docs/gas/#pre-london).
+When I wrote this article in 2022, on Optimism the cost of L2 gas was 0.001 [Gwei](/developers/docs/gas/#what-is-gas).
 The cost of L1 gas, on the other hand, was approximately 40 gwei.
 
 A byte of calldata costs either 4 gas (if it is zero) or 16 gas (if it is any other value).
