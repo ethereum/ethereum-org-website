@@ -8,33 +8,39 @@ Oczekuje się, że walidator utworzy, podpisze i rozgłosi poświadczenie podcza
 
 ## Czym jest poświadczenie? {#what-is-an-attestation}
 
-Co [epokę](/glossary/#epoch) (6,4 minuty) walidator proponuje poświadczenie dla sieci. Poświadczenie dotyczy konkretnego slotu w epoce. Celem poświadczenia jest oddanie głosu na wizję łańcucha według walidatora, w szczególności na najnowszy uzasadniony blok i pierwszy blok w bieżącej epoce (znane jako punkty kontrolne `source` i `target`). Informacje te są łączone dla wszystkich uczestniczących walidatorów, umożliwiając sieci osiągnięcie konsensusu co do stanu blockchaina.
+W każdej [epoce](/glossary/#epoch) (6,4 minuty) walidator rozgłasza poświadczenie do sieci. Poświadczenie dotyczy konkretnego slotu w epoce. Celem poświadczenia jest oddanie głosu popierającego wizję łańcucha według walidatora, w szczególności szczyt łańcucha, najnowszy uzasadniony punkt kontrolny oraz punkt kontrolny na początku bieżącej epoki (znane jako punkty kontrolne `source` i `target`). Informacje te są łączone dla wszystkich uczestniczących walidatorów, co pozwala sieci osiągnąć konsensus co do stanu blockchaina.
 
-Poświadczenie zawiera następujące elementy:
+Od czasu [aktualizacji Pectra](/roadmap/pectra/) ([EIP-7549](https://eips.ethereum.org/EIPS/eip-7549)), poświadczenie od pojedynczego walidatora i zagregowane poświadczenie mają różne formaty. Poświadczenie pojedynczego walidatora zawiera:
 
-- `aggregation_bits`: lista bitów walidatorów, gdzie pozycja odpowiada indeksowi walidatora w jego komitecie; wartość (0/1) wskazuje, czy walidator podpisał `data` (tj. czy jest aktywny i zgadza się z proponującym blok)
+- `committee_index`: komitet, do którego należy walidator w danym slocie
+- `attester_index`: indeks walidatora
 - `data`: szczegóły dotyczące poświadczenia, jak zdefiniowano poniżej
-- `signature`: podpis BLS, który agreguje podpisy poszczególnych walidatorów
+- `signature`: podpis BLS walidatora dla `data`
 
 Pierwszym zadaniem dla poświadczającego walidatora jest zbudowanie `data`. `data` zawiera następujące informacje:
 
 - `slot`: Numer slotu, do którego odnosi się poświadczenie
-- `index`: Numer identyfikujący, do którego komitetu należy walidator w danym slocie
-- `beacon_block_root`: Hash korzenia bloku, który walidator widzi na czele łańcucha (wynik zastosowania algorytmu wyboru rozwidlenia)
-- `source`: Część głosu ostateczności wskazująca, co walidatory widzą jako najnowszy uzasadniony blok
-- `target`: Część głosu ostateczności wskazująca, co walidatory widzą jako pierwszy blok w bieżącej epoce
+- `index`: Ustawione na `0` od czasu Pectra. Komitet jest identyfikowany poza `data` (przez `committee_index` lub przez `committee_bits` w agregacie), dzięki czemu głosy z różnych komitetów mają identyczne `data` i mogą być agregowane razem. Przed Pectra to pole identyfikowało komitet
+- `beacon_block_root`: Hash główny bloku, który walidator widzi na szczycie łańcucha (wynik zastosowania algorytmu wyboru rozwidlenia)
+- `source`: Część głosu ostateczności wskazująca, co walidatory widzą jako najnowszy uzasadniony punkt kontrolny
+- `target`: Część głosu ostateczności wskazująca, co walidatory widzą jako punkt kontrolny na początku bieżącej epoki (blok w jej pierwszym slocie lub najnowszy blok przed nim, jeśli ten slot jest pusty)
 
-Po zbudowaniu `data`, walidator może zmienić bit w `aggregation_bits` odpowiadający jego własnemu indeksowi walidatora z 0 na 1, aby pokazać, że wziął udział.
-
-Na koniec walidator podpisuje poświadczenie i rozgłasza je w sieci.
+Po zbudowaniu `data`, walidator podpisuje je i rozgłasza poświadczenie do [podsieci](#aggregated-attestation) dla swojego komitetu.
 
 ### Zagregowane poświadczenie {#aggregated-attestation}
 
-Przesyłanie tych danych w sieci dla każdego walidatora wiąże się ze znacznym narzutem. Dlatego poświadczenia od poszczególnych walidatorów są agregowane w podsieciach przed szerszym rozgłoszeniem. Obejmuje to agregację podpisów, tak aby rozgłaszane poświadczenie zawierało `data` konsensusu i pojedynczy podpis utworzony przez połączenie podpisów wszystkich walidatorów, którzy zgadzają się z tym `data`. Można to sprawdzić za pomocą `aggregation_bits`, ponieważ dostarcza on indeks każdego walidatora w jego komitecie (którego ID jest podane w `data`), co można wykorzystać do zapytania o poszczególne podpisy.
+Przekazywanie tych danych w sieci dla każdego walidatora wiąże się ze znacznym obciążeniem. Dlatego poświadczenia od poszczególnych walidatorów są agregowane w podsieciach przed szerszym rozgłoszeniem. Obejmuje to wspólne agregowanie podpisów, tak aby rozgłaszane poświadczenie zawierało konsensusowe `data` oraz pojedynczy podpis utworzony przez połączenie podpisów wszystkich walidatorów, którzy zgadzają się z tym `data`. Zagregowane poświadczenie zawiera:
 
-W każdej epoce 16 walidatorów w każdej podsieci jest wybieranych jako `aggregators` (agregatory). Agregatory zbierają wszystkie poświadczenia, o których słyszą w sieci plotek (gossip network), które mają `data` równoważne z ich własnymi. Nadawca każdego pasującego poświadczenia jest zapisywany w `aggregation_bits`. Następnie agregatory rozgłaszają zagregowane poświadczenie do szerszej sieci.
+- `aggregation_bits`: listę bitów z jednym bitem na członka każdego uwzględnionego komitetu, gdzie pozycja odpowiada pozycji walidatora w jego komitecie; wartość (0/1) wskazuje, czy podpis tego walidatora jest uwzględniony
+- `data`: dane poświadczenia, które podpisał każdy uwzględniony walidator
+- `signature`: podpis BLS, który agreguje podpisy uwzględnionych walidatorów
+- `committee_bits`: członkowie których komitetów są objęci przez `aggregation_bits`
 
-Kiedy walidator zostaje wybrany jako proponujący blok, pakuje zagregowane poświadczenia z podsieci aż do najnowszego slotu w nowym bloku.
+Każdy może sprawdzić zagregowany podpis w odniesieniu do połączonych kluczy publicznych walidatorów, których bity są ustawione.
+
+W każdym slocie około 16 członków każdego komitetu jest wybieranych na jego `aggregators` (`TARGET_AGGREGATORS_PER_COMMITTEE`). Walidator dowiaduje się, czy został wybrany, na podstawie własnego podpisu dla numeru slotu. Agregatorzy zbierają wszystkie poświadczenia, które słyszą w podsieci swojego komitetu, mające to samo `data` co ich własne, i łączą je, zapisując nadawcę każdego z nich w `aggregation_bits`. Następnie agregatorzy rozgłaszają agregat do szerszej sieci.
+
+Kiedy walidator zostaje wybrany na proponującego blok, dołącza zagregowane poświadczenia z ostatnich slotów do nowego bloku. Od czasu Pectra, proponujący może łączyć agregaty z różnych komitetów, które współdzielą to samo `data`, w jedno poświadczenie, a blok może pomieścić do 8 z nich.
 
 ### Cykl życia włączenia poświadczenia {#attestation-inclusion-lifecycle}
 
@@ -46,13 +52,13 @@ Kiedy walidator zostaje wybrany jako proponujący blok, pakuje zagregowane pośw
 
 Cykl życia poświadczenia przedstawiono na poniższym schemacie:
 
-![attestation lifecycle](./attestation_schematic.png)
+<AttestationsDiagram />
 
 ## Nagrody {#rewards}
 
-Walidatory otrzymują nagrody za przesyłanie poświadczeń. Nagroda za poświadczenie zależy od flag uczestnictwa (źródło, cel i głowa), nagrody bazowej oraz wskaźnika uczestnictwa.
+Walidatory są nagradzane za przesyłanie poświadczeń. Nagroda za poświadczenie zależy od flag uczestnictwa (źródło, cel i szczyt), nagrody podstawowej oraz wskaźnika uczestnictwa.
 
-Każda z flag uczestnictwa może być prawdziwa (true) lub fałszywa (false), w zależności od przesłanego poświadczenia i jego opóźnienia włączenia.
+Każda z flag uczestnictwa może być prawdziwa lub fałszywa, w zależności od przesłanego poświadczenia i jego opóźnienia włączenia.
 
 Najlepszy scenariusz ma miejsce, gdy wszystkie trzy flagi są prawdziwe, w którym to przypadku walidator zarobiłby (za każdą poprawną flagę):
 
@@ -60,33 +66,40 @@ Najlepszy scenariusz ma miejsce, gdy wszystkie trzy flagi są prawdziwe, w któr
 
 Wskaźnik poświadczania flagi jest mierzony przy użyciu sumy sald efektywnych wszystkich poświadczających walidatorów dla danej flagi w porównaniu do całkowitego aktywnego salda efektywnego.
 
-### Nagroda bazowa {#base-reward}
+### Nagroda podstawowa {#base-reward}
 
-Nagroda bazowa jest obliczana na podstawie liczby poświadczających walidatorów i ich efektywnych sald stakowanego etheru:
+Nagroda podstawowa jest obliczana na podstawie liczby poświadczających walidatorów i ich efektywnych sald stakowanego etheru:
 
 `base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)`
 
 #### Opóźnienie włączenia {#inclusion-delay}
 
-W momencie, gdy walidatory głosowały na głowę łańcucha (`block n`), `block n+1` nie był jeszcze zaproponowany. Dlatego poświadczenia naturalnie zostają włączone **jeden blok później**, więc wszystkie poświadczenia, które głosowały na `block n` jako głowę łańcucha, zostały włączone w `block n+1`, a **opóźnienie włączenia** wynosi 1. Jeśli opóźnienie włączenia podwoi się do dwóch slotów, nagroda za poświadczenie zmniejszy się o połowę, ponieważ do obliczenia nagrody za poświadczenie nagroda bazowa jest mnożona przez odwrotność opóźnienia włączenia.
+W momencie, gdy walidatory głosowały na szczyt łańcucha (`block n`), `block n+1` nie został jeszcze zaproponowany. Dlatego poświadczenia naturalnie zostają włączone **jeden blok później**, więc wszystkie poświadczenia, które głosowały na to, że `block n` jest szczytem łańcucha, zostały włączone w `block n+1`, a **opóźnienie włączenia** wynosi 1. Opóźnienie włączenia decyduje o tym, jakie flagi uczestnictwa zdobywa poświadczenie:
+
+- `head`: tylko jeśli opóźnienie włączenia wynosi dokładnie 1 slot
+- `source`: jeśli opóźnienie włączenia wynosi co najwyżej 5 slotów (całkowity pierwiastek kwadratowy z 32 slotów w epoce)
+- `target`: zawsze, gdy poświadczenie jest włączone (od czasu aktualizacji Deneb, [EIP-7045](https://eips.ethereum.org/EIPS/eip-7045))
+
+Zatem poświadczenie włączone z opóźnieniem dwóch slotów traci nagrodę za szczyt, ale nadal zdobywa nagrody za źródło i cel.
 
 ### Scenariusze poświadczeń {#attestation-scenarios}
 
 #### Brakujący głosujący walidator {#missing-voting-validator}
 
-Walidatory mają maksymalnie 1 epokę na przesłanie swojego poświadczenia. Jeśli poświadczenie zostało pominięte w epoce 0, mogą je przesłać z opóźnieniem włączenia w epoce 1.
+Poświadczenie może zostać włączone do dowolnego bloku od slotu po jego utworzeniu aż do końca następnej epoki. Jeśli poświadczenie z epoki 0 nie zostanie włączone do bloku podczas epoki 0, nadal może zostać włączone w epoce 1, z dłuższym opóźnieniem włączenia.
 
 #### Brakujący agregator {#missing-aggregator}
 
-W sumie przypada 16 agregatorów na epokę. Ponadto losowe walidatory subskrybują **dwie podsieci na 256 epok** i służą jako kopia zapasowa w przypadku braku agregatorów.
+Każdy komitet dąży do posiadania około 16 agregatorów w każdym slocie, więc jeden brakujący agregator rzadko powstrzymuje poświadczenia komitetu przed zagregowaniem. Niezależnie od tego, każdy węzeł Beacon pozostaje subskrybentem **dwóch podsieci przez 256 epok** naraz, wybranych na podstawie jego identyfikatora węzła, co zapewnia dobre połączenie każdej podsieci.
 
 #### Brakujący proponujący blok {#missing-block-proposer}
 
-Należy pamiętać, że w niektórych przypadkach szczęśliwy agregator może również zostać proponującym blok. Jeśli poświadczenie nie zostało włączone, ponieważ proponujący blok zniknął, następny proponujący blok odbierze zagregowane poświadczenie i włączy je do następnego bloku. Jednak **opóźnienie włączenia** wzrośnie o jeden.
+Należy zauważyć, że w niektórych przypadkach szczęśliwy agregator może również zostać proponującym blok. Jeśli poświadczenie nie zostało włączone, ponieważ proponujący blok zniknął, następny proponujący blok pobierze zagregowane poświadczenie i włączy je do następnego bloku. Jednakże **opóźnienie włączenia** wzrośnie o jeden.
 
 ## Dalsza lektura {#further-reading}
 
-- [Poświadczenia w opatrzonej komentarzami specyfikacji konsensusu Vitalika](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
+- [Poświadczenia w opatrzonej adnotacjami specyfikacji konsensusu Vitalika](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Poświadczenia na eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
+- [Poświadczenia w specyfikacji konsensusu Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md#attestation)
 
 _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!_
