@@ -10,7 +10,7 @@ import type {
 
 import { formatDate } from "@/lib/utils/date"
 import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
-import { getLanguageCodeName } from "@/lib/utils/intl"
+import { getLanguageCodeName, safeLocale } from "@/lib/utils/intl"
 import { stripMarkdown } from "@/lib/utils/md"
 import { numberFormat } from "@/lib/utils/numbers"
 import { seededShuffle } from "@/lib/utils/random"
@@ -117,7 +117,7 @@ export function getWalletLanguageOptions(
         (wallet.languages_supported as string[]).includes(code)
       ).length,
     }))
-    .sort((a, b) => a.name.localeCompare(b.name, locale))
+    .sort((a, b) => a.name.localeCompare(b.name, safeLocale(locale)))
 }
 
 export type CatalogWallet = Wallet & {
@@ -226,7 +226,7 @@ export function buildWalletMetaDescription(
   const nf = numberFormat(locale)
   return t("page-find-wallet-meta-description-fallback", {
     wallet: wallet.name,
-    devices: new Intl.ListFormat(locale, {
+    devices: new Intl.ListFormat(safeLocale(locale), {
       style: "long",
       type: "conjunction",
     }).format(devices),

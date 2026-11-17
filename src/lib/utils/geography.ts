@@ -2,6 +2,8 @@ import countries from "i18n-iso-countries"
 
 import type { Continent } from "@/lib/types"
 
+import { safeLocale } from "@/lib/utils/intl"
+
 // Continent → countries mapping for location parsing
 export const CONTINENT_COUNTRIES: Record<Continent, string[]> = {
   europe: [
@@ -148,7 +150,10 @@ function getRegionName(code: string, locale: string): string | undefined {
 
   let displayNames = regionNamesCache.get(cacheKey)
   if (!displayNames) {
-    displayNames = new Intl.DisplayNames([locale], { type: "region", style })
+    displayNames = new Intl.DisplayNames([safeLocale(locale)], {
+      type: "region",
+      style,
+    })
     regionNamesCache.set(cacheKey, displayNames)
   }
   return displayNames.of(code)

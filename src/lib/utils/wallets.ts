@@ -1,4 +1,4 @@
-import { getLanguageCodeName } from "@/lib/utils/intl"
+import { getLanguageCodeName, safeLocale } from "@/lib/utils/intl"
 import {
   formatPriceUSD,
   numberFormat,
@@ -148,5 +148,7 @@ export const formatWalletFees = (
     })
   })
 
-  return new Intl.ListFormat(locale, { style: "narrow" }).format(items)
+  return new Intl.ListFormat(safeLocale(locale), { style: "narrow" }).format(
+    items
+  )
 }

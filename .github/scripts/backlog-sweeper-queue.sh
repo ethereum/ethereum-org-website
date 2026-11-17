@@ -46,7 +46,7 @@ query($owner: String!, $name: String!, $bountyFiles: Int!, $endCursor: String) {
     select((.isDraft | not)
       and .author.__typename != "Bot"
       and (.isCrossRepository or (.headRefName | test("^(staging|dev)$|^intl/|^automated") | not))
-      and ((.files.totalCount > 0 and .files.totalCount <= ($bountyFiles | length)
+      and (.files.totalCount > 0 and .files.totalCount <= ($bountyFiles | length)
         and all(.files.nodes[]; .path | IN($bountyFiles[])) | not))
     | select([.early.nodes[], .late.nodes[]
         | select(.author.login == "ethorg-agent" and (.body | contains("First-pass review")))] | length == 0)

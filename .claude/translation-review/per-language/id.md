@@ -148,3 +148,12 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: exclusive `kami` mixed with inclusive `kita` in the mint tutorial; `peristiwa` vs glossary `kejadian` (websockets:79).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna: revert rendered passive `dikembalikan` ("is returned") at 3 sites, regressing dev's `mengembalikan (revert)` -> restored with the `(revert)` gloss (#96)
+- echidna:145 `di-deploy` -> glossary `disebarkan`
+- multi-client: non-standard `enklaf` -> `enklave` (6 sites)

@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type {
   AppData,
@@ -52,8 +48,6 @@ const Page = async (props: {
   params: Promise<PageParams & { application: string }>
 }) => {
   const { locale, application } = await props.params
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-apps")
   const tItem = await getTranslations("component-catalog-item")
   const appDescriptions = await getTranslations("page-app-descriptions")
@@ -202,8 +196,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string; application: string }>
 }) {
   const { locale, application } = await props.params
-  setRequestLocale(locale)
-
   try {
     const appsData = await getAppsData()
     if (!appsData) {

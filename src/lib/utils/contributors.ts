@@ -80,6 +80,7 @@ export const getAppPageContributorInfo = async (
 
   return {
     contributors: sortTeamToEnd(uniqueGitHubContributors),
+    lastEditDate: latestCommitDate,
     lastEditLocaleTimestamp,
   }
 }

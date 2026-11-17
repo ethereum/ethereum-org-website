@@ -19,10 +19,21 @@ tags:
   - i18n
   - netlify
 discovered_in: "PRs #18785, #18797, #18798, #18800 (recovery); #18811 (systemic); #19016 (full AST sweep, 14 pages)"
-status: resolved
+status: superseded
+superseded_by: "next/root-params (Next.js 16.3); see src/i18n/request.ts"
 ---
 
 # `setRequestLocale` must run before locale-resolving next-intl APIs
+
+> **Superseded.** `src/i18n/request.ts` now reads the `[locale]` segment via
+> [`next/root-params`](https://nextjs.org/blog/next-16-3#root-params) instead of
+> `requestLocale`. That never touches request headers, so the static-to-dynamic
+> failure below cannot occur and `setRequestLocale` has been removed from the
+> codebase. Kept for the history of the incident.
+>
+> The one case that still needs an explicit locale is Route Handlers and Server
+> Actions, which `next/root-params` doesn't reach yet: pass it at the call site,
+> e.g. `getTranslations({ locale, namespace })`.
 
 ## Problem
 
@@ -120,7 +131,7 @@ When authoring any route under `app/[locale]/`:
 1. **Prime each entry independently.** Put a top-level `setRequestLocale(locale)` before any implicit-locale next-intl call in the default export, exported `generateMetadata`, and exported `generateViewport`. Conditional and no-argument calls do not count.
 2. **Prefer explicit locale where it fits.** `getMetadata` and `getMdMetadata` are safe because they forward their required locale. The direct server APIs are safe only when their options object has an explicit normal or quoted `locale` property; an arbitrary spread is not enough. `getLocale()` always needs a prior prime.
 3. **Test an on-demand URL**, not just a valid page. A bogus slug or invalid-locale path (`/api/<anything>`) is what exercises the header-read path; valid prerendered routes hide the bug. `/api/<real-page-slug>` is the sharpest probe: `proxy.ts`'s matcher excludes `api`, `_next`, `_vercel`, `.well-known` and any dotted path, so next-intl's middleware never normalizes the segment and it lands in `[locale]`.
-4. **The `local/set-request-locale-first` ESLint rule enforces this** (`.eslint-rules/`), scoped to `page`, `layout`, `template`, `default`, `loading`, `not-found`, and `opengraph-image` TSX route files. It analyzes the default export and exported metadata/viewport functions separately. It follows direct same-file helper calls and known eager callbacks/IIFEs, but it is deliberately not a cross-module call graph. Don't audit by grep: a file-level `grep setRequestLocale` gives false negatives when one entry is primed and another is not.
+4. **The `local/set-request-locale-first` ESLint rule enforced this** (`.eslint-rules/`) until `next/root-params` made it unnecessary; it was removed together with the `setRequestLocale` calls.
 
 ## Related
 

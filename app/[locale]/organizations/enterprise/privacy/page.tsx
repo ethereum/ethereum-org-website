@@ -8,7 +8,7 @@ import {
   ThumbsUp,
 } from "lucide-react"
 import type { Metadata } from "next"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -41,6 +41,7 @@ import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { safeLocale } from "@/lib/utils/intl"
 import { getMetadata } from "@/lib/utils/metadata"
 import { metricStat, SOURCES } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
@@ -128,8 +129,6 @@ const VerdictCell = ({
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
   const tOrganizations = await getTranslations("page-organizations")
@@ -307,7 +306,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             "page-organizations-enterprise-privacy-solutions-examples-label"
                           )}
                         </span>
-                        {new Intl.ListFormat(locale, { type: "unit" })
+                        {new Intl.ListFormat(safeLocale(locale), {
+                          type: "unit",
+                        })
                           .formatToParts(examples.map(({ name }) => name))
                           .map(({ type, value }, idx) => {
                             const example = examples.find(
@@ -473,8 +474,6 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
 
