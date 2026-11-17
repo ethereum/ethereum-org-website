@@ -4,13 +4,13 @@ description: Una spiegazione delle chiavi utilizzate nel meccanismo di consenso 
 lang: it
 ---
 
-Ethereum protegge gli asset degli utenti utilizzando la crittografia a chiave pubblica-privata. La chiave pubblica è utilizzata come base per un indirizzo Ethereum, ovvero è visibile al pubblico in generale e utilizzata come identificatore univoco. La chiave privata (o 'segreta') dovrebbe essere accessibile solo al proprietario di un account. La chiave privata viene utilizzata per 'firmare' transazioni e dati in modo che la crittografia possa dimostrare che il titolare approva una determinata azione di una specifica chiave privata.
+Ethereum protegge gli asset degli utenti utilizzando la crittografia a chiave pubblica-privata. La chiave pubblica è utilizzata come base per un indirizzo Ethereum, ovvero è visibile al pubblico in generale e utilizzata come identificatore univoco. La chiave privata (o "segreta") dovrebbe essere accessibile solo al proprietario di un account. La chiave privata è utilizzata per "firmare" transazioni e dati in modo che la crittografia possa dimostrare che il titolare approva una determinata azione di una specifica chiave privata.
 
 Le chiavi di Ethereum sono generate utilizzando la [crittografia a curva ellittica](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
-Tuttavia, quando Ethereum è passato dalla [Prova di lavoro (PoW)](/developers/docs/consensus-mechanisms/pow) alla [Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos), è stato aggiunto un nuovo tipo di chiave a Ethereum. Le chiavi originali funzionano ancora esattamente come prima: non ci sono state modifiche alle chiavi basate su curve ellittiche che proteggono gli account. Tuttavia, gli utenti avevano bisogno di un nuovo tipo di chiave per partecipare alla Proof-of-Stake mettendo in staking ETH ed eseguendo validatori. Questa necessità è nata dalle sfide di scalabilità associate ai molti messaggi scambiati tra un gran numero di validatori, che richiedevano un metodo crittografico facilmente aggregabile per ridurre la quantità di comunicazioni necessarie affinché la rete raggiungesse il consenso.
+Tuttavia, quando Ethereum è passato dalla [Prova di lavoro (PoW)](/developers/docs/consensus-mechanisms/pow) alla [Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos), è stato aggiunto un nuovo tipo di chiave a Ethereum. Le chiavi originali funzionano ancora esattamente come prima: non ci sono state modifiche alle chiavi basate su curva ellittica che proteggono gli account. Tuttavia, gli utenti avevano bisogno di un nuovo tipo di chiave per partecipare alla Proof-of-Stake mettendo in staking ETH ed eseguendo validatori. Questa necessità è nata dalle sfide di scalabilità associate ai molti messaggi scambiati tra un gran numero di validatori, che richiedevano un metodo crittografico facilmente aggregabile per ridurre la quantità di comunicazione necessaria affinché la rete raggiungesse il consenso.
 
-Questo nuovo tipo di chiave utilizza lo [schema di firma **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS consente un'aggregazione molto efficiente delle firme, ma permette anche il reverse engineering delle chiavi dei singoli validatori aggregate ed è ideale per gestire le azioni tra i validatori.
+Questo nuovo tipo di chiave utilizza lo [schema di firma **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). Le firme BLS di molti validatori possono essere aggregate in un'unica firma che viene verificata in un singolo controllo, il che mantiene piccoli i messaggi di consenso. BLS non è a prova di quantum, quindi la [roadmap post-quantistica](/roadmap/security/quantum-resistance/) prevede di sostituire le chiavi BLS dei validatori con chiavi basate su hash.
 
 ## I due tipi di chiavi del validatore {#two-types-of-keys}
 
@@ -37,39 +37,39 @@ La **chiave pubblica del validatore** è inclusa nei dati della transazione quan
 
 ### Credenziali di prelievo {#withdrawal-credentials}
 
-Ogni validatore ha una proprietà nota come _credenziali di prelievo_. Il primo byte di questo campo a 32 byte identifica il tipo di account: `0x00` rappresenta le credenziali BLS originali (pre-Shapella, non prelevabili), `0x01` rappresenta le credenziali legacy che puntano a un indirizzo di esecuzione e `0x02` rappresenta il moderno tipo di credenziale composta (compounding).
+Ogni validatore ha una proprietà nota come _credenziali di prelievo_. Il primo byte di questo campo a 32 byte identifica il tipo di account: `0x00` rappresenta le credenziali BLS legacy (pre-Shapella, non prelevabili), `0x01` rappresenta le credenziali legacy che puntano a un indirizzo di esecuzione e `0x02` rappresenta il moderno tipo di credenziale composta (compounding).
 
-I validatori con chiavi BLS `0x00` devono aggiornare queste credenziali per puntare a un indirizzo di esecuzione al fine di attivare i pagamenti del saldo in eccesso o il prelievo completo dallo staking. Questo può essere fatto fornendo un indirizzo di esecuzione nei dati di deposito durante la generazione iniziale della chiave, _OPPURE_ utilizzando la chiave di prelievo in un secondo momento per firmare e trasmettere un messaggio `BLSToExecutionChange`.
+I validatori con chiavi BLS `0x00` devono aggiornare queste credenziali per puntare a un indirizzo di esecuzione al fine di attivare i pagamenti del saldo in eccesso o il prelievo completo dallo staking. Questo può essere fatto fornendo un indirizzo di esecuzione nei dati di deposito durante la generazione iniziale della chiave, _OPPURE_ utilizzando la chiave di prelievo in un secondo momento per firmare e trasmettere un messaggio `BLSToExecutionChange`. Sono in discussione proposte per eliminare gradualmente le credenziali `0x00` prima della transizione post-quantistica, quindi i validatori ancora su `0x00` dovrebbero convertirle ora.
 
 [Maggiori informazioni sulle credenziali di prelievo del validatore](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
 ### La chiave di prelievo {#withdrawal-key}
 
-La chiave di prelievo sarà richiesta per aggiornare le credenziali di prelievo in modo che puntino a un indirizzo di esecuzione, se non impostato durante il deposito iniziale. Ciò consentirà di iniziare a elaborare i pagamenti del saldo in eccesso e permetterà inoltre agli utenti di prelevare completamente i propri ETH in staking.
+La chiave di prelievo sarà richiesta per aggiornare le credenziali di prelievo affinché puntino a un indirizzo di esecuzione, se non impostato durante il deposito iniziale. Ciò consentirà di iniziare a elaborare i pagamenti del saldo in eccesso e permetterà inoltre agli utenti di prelevare completamente i propri ETH messi in staking.
 
-Proprio come le chiavi del validatore, anche le chiavi di prelievo sono composte da due componenti:
+Proprio come le chiavi del validatore, anche le chiavi di prelievo sono composte da due elementi:
 
 - Chiave **privata** di prelievo
 - Chiave **pubblica** di prelievo
 
 Perdere questa chiave prima di aggiornare le credenziali di prelievo al tipo `0x01` significa perdere l'accesso al saldo del validatore. Il validatore può ancora firmare attestazioni e blocchi poiché queste azioni richiedono la chiave privata del validatore, tuttavia c'è poco o nessun incentivo se le chiavi di prelievo vengono perse.
 
-Separare le chiavi del validatore dalle chiavi dell'account Ethereum consente a un singolo utente di eseguire più validatori.
+Separare le chiavi del validatore dalle chiavi dell'account Ethereum consente a un singolo utente di eseguire più validatori. Con le credenziali `0x02`, un validatore può detenere fino a 2.048 ETH, quindi uno stake più grande non deve più essere diviso tra molti validatori.
 
-![validator key schematic](validator-key-schematic.png)
+<ValidatorKeysDiagram />
 
-**Nota**: L'uscita dai compiti di staking e il prelievo del saldo di un validatore attualmente richiedono la firma di un [messaggio di uscita volontaria (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) con la chiave del validatore. Tuttavia, l'[EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) è una proposta che in futuro consentirà a un utente di innescare l'uscita di un validatore e prelevare il suo saldo firmando i messaggi di uscita con la chiave di prelievo. Ciò ridurrà le assunzioni di fiducia consentendo agli staker che delegano ETH ai [fornitori di staking-as-a-service](/staking/saas/#what-is-staking-as-a-service) di mantenere il controllo dei propri fondi.
+**Nota**: Un validatore può uscire firmando un [messaggio di uscita volontaria (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) con la chiave del validatore. Dall'aggiornamento Pectra, la [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) consente anche all'indirizzo di prelievo di innescare l'uscita di un validatore e prelievi parziali per i validatori `0x02`. Questo riduce le assunzioni di fiducia permettendo agli staker che delegano ETH ai [fornitori di staking come servizio](/staking/saas/#what-is-staking-as-a-service) di mantenere il controllo dei propri fondi.
 
 ## Derivare le chiavi da una frase seme {#deriving-keys-from-seed}
 
 Se ogni 32 ETH messi in staking richiedesse un nuovo set di 2 chiavi completamente indipendenti, la gestione delle chiavi diventerebbe rapidamente ingestibile, specialmente per gli utenti che eseguono più validatori. Invece, più chiavi del validatore possono essere derivate da un singolo segreto comune e la memorizzazione di quel singolo segreto consente l'accesso a più chiavi del validatore.
 
-Le [frasi mnemoniche](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) e i percorsi sono funzionalità importanti che gli utenti incontrano spesso quando [accedono](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) ai propri portafogli. La frase mnemonica è una sequenza di parole che funge da seme iniziale per una chiave privata. Se combinata con dati aggiuntivi, la frase mnemonica genera un hash noto come 'chiave master'. Questa può essere pensata come la radice di un albero. I rami da questa radice possono quindi essere derivati utilizzando un percorso gerarchico in modo che i nodi figli possano esistere come combinazioni dell'hash del loro nodo padre e del loro indice nell'albero. Leggi gli standard [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) e [BIP-19](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) per la generazione di chiavi basata su frasi mnemoniche.
+Le [frasi mnemoniche](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) e i percorsi sono funzionalità importanti che gli utenti incontrano spesso quando [accedono](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) ai propri portafogli. La frase mnemonica è una sequenza di parole che funge da seme iniziale per una chiave privata. Se combinata con dati aggiuntivi, la frase mnemonica genera un hash noto come "chiave master". Questa può essere pensata come la radice di un albero. I rami da questa radice possono quindi essere derivati utilizzando un percorso gerarchico in modo che i nodi figli possano esistere come combinazioni dell'hash del loro nodo genitore e del loro indice nell'albero. Leggi gli standard [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) e [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) per la generazione di chiavi basata su frasi mnemoniche.
 
-Questi percorsi hanno la seguente struttura, che sarà familiare agli utenti che hanno interagito con i portafogli hardware:
+Questi percorsi hanno la seguente struttura, che sarà familiare agli utenti che hanno interagito con portafogli hardware:
 
 ```
-m/44'/60'/0'/0`
+m/44'/60'/0'/0
 ```
 
 Le barre in questo percorso separano i componenti della chiave privata come segue:
@@ -81,7 +81,7 @@ master_key / purpose / coin_type / account / change / address_index
 Questa logica consente agli utenti di collegare il maggior numero possibile di validatori a una singola **frase mnemonica** perché la radice dell'albero può essere comune e la differenziazione può avvenire nei rami. L'utente può **derivare un numero qualsiasi di chiavi** dalla frase mnemonica.
 
 ```
-[m / 0]
+      [m / 0]
      /
     /
 [m] - [m / 1]
@@ -90,9 +90,9 @@ Questa logica consente agli utenti di collegare il maggior numero possibile di v
       [m / 2]
 ```
 
-Ogni ramo è separato da un `/` quindi `m/2` significa iniziare con la chiave master e seguire il ramo 2. Nello schema sottostante viene utilizzata una singola frase mnemonica per memorizzare tre chiavi di prelievo, ciascuna con due validatori associati.
+Ogni ramo è separato da un `/`, quindi `m/2` significa iniziare con la chiave master e seguire il ramo 2. Le chiavi del validatore seguono la [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334): il validatore `i` ottiene la sua chiave di prelievo in `m/12381/3600/i/0` e la sua chiave di firma in `m/12381/3600/i/0/0` (12381 identifica la curva BLS12-381, 3600 il tipo di moneta per le chiavi del livello di consenso).
 
-![validator key logic](multiple-keys.png)
+<KeyDerivationDiagram />
 
 ## Letture consigliate {#further-reading}
 
