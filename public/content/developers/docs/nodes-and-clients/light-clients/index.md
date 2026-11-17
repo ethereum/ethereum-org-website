@@ -47,6 +47,8 @@ There are several light clients in development, including execution, consensus a
 - [colibri.stateless](https://corpuscore.tech/colibri): production ready stateless lightclient (execution and consensus), in C with bindings to other languages
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): light mode for execution client (in development) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): consensus light client in Nim
+- [Myotis](https://github.com/biafra23/myotis): experimental light client using p2p and SNAP, originally built for Android
+- [Nethermind](https://www.nethermind.io/): light client using p2p and SNAP
 
 To our knowledge none of these are considered production-ready yet.
 
