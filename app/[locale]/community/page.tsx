@@ -12,6 +12,7 @@ import ChecklistGrid, {
   type ChecklistGridItem,
 } from "@/components/ChecklistGrid"
 import ContentFeedback from "@/components/ContentFeedback"
+import DocLink from "@/components/DocLink"
 import { HubHero } from "@/components/Hero"
 import FloatingCard from "@/components/Homepage/FloatingCard"
 import I18nProvider from "@/components/I18nProvider"
@@ -400,6 +401,28 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </ButtonLink>
               </div>
             </SectionContent>
+          </Section>
+
+          {/* More from the community */}
+          <Section id="more-from-the-community">
+            <h2 className="md:text-center">{t("page-community-more-title")}</h2>
+            <div className="flow max-w-3xl md:mx-auto">
+              <DocLink href="/community/support/">
+                {t("page-community-more-support")}
+              </DocLink>
+              <DocLink href="/community/research/">
+                {t("page-community-more-research")}
+              </DocLink>
+              <DocLink href="/community/language-resources/">
+                {t("page-community-more-language-resources")}
+              </DocLink>
+              <DocLink href="/community/code-of-conduct/">
+                {t("page-community-more-code-of-conduct")}
+              </DocLink>
+              <DocLink href="/10years/">
+                {t("page-community-more-10-years")}
+              </DocLink>
+            </div>
           </Section>
 
           {/* Try Ethereum */}

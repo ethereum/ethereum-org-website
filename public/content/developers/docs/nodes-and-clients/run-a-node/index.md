@@ -29,7 +29,7 @@ After preparing the environment, install the chosen clients either with [beginne
 
 When the node is running and syncing, you are ready to [use it](#using-the-node), but make sure to keep an eye on its [maintenance](#operating-the-node).
 
-![Client setup](./diagram.png)
+<ClientSetupDiagram />
 
 ### Environment and hardware {#environment-and-hardware}
 

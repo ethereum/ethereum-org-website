@@ -54,7 +54,7 @@ This function returns the address of the underlying token used for the vault for
 function totalAssets() public view returns (uint256)
 ```
 
-This function returns the total amount of underlying assets held by the vault.
+This function returns the total amount of underlying assets managed by the vault, including any it has put to work elsewhere and after any fees.
 
 #### convertToShares {#convertoshares}
 
@@ -142,7 +142,7 @@ This function allows users to simulate the effects of their withdrawal at the cu
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-This function burns `shares` from `owner` and send exactly `assets` token from the vault to `receiver`.
+This function burns `shares` from `owner` and sends exactly `assets` tokens from the vault to `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -186,7 +186,7 @@ Returns the total amount of vault shares the `owner` currently has.
 
 ### Map of the interface {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Events {#events}
 

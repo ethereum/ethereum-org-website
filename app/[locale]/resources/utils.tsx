@@ -18,7 +18,6 @@ import type { DashboardBox, DashboardSection } from "./types"
 import { getEthPrice } from "@/lib/data"
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
-import IconBlocknative from "@/public/images/resources/blocknative.png"
 import IconBlockscout from "@/public/images/resources/blockscout.webp"
 import IconBundleBear from "@/public/images/resources/bundlebear.png"
 import IconCryptwerk from "@/public/images/resources/cryptowerk.png"
@@ -223,12 +222,6 @@ export const getResources = async ({
           description: t("page-resources-gas-ethgastracker-description"),
           href: "https://www.ethgastracker.com/",
           imgSrc: IconGasTracker,
-        },
-        {
-          title: "Blocknative Gas Estimator",
-          description: t("page-resources-gas-blocknative-description"),
-          href: "https://www.blocknative.com/gas-estimator",
-          imgSrc: IconBlocknative,
         },
         {
           title: "L2 Fees",
