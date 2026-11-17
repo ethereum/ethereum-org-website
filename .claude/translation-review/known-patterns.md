@@ -1161,3 +1161,11 @@ PR #19608: on the second attempt, 3 ur tasks failed again with the same error (m
 ### 95. ETHGlossary `/filter` returns lowercase tickers (INFORMATIONAL -- glossary)
 
 PR #19568: `/filter` returned `Wrapped Ether (WETH) -> ... (weth)` for mr, pt-br, bn and it, while the glossary website pages show `WETH`. Agents following the API flagged correct uppercase as a deviation, and in mr the translation itself copied `(weth)`. Tickers stay uppercase whatever the API returns. Report the casing discrepancy to ETHGlossary.
+
+### 96. Glossary citation form inserted without inflection (WARNING -- grammar)
+
+PR #19803: the Echidna tutorial uses "revert" and "assertion" as verbs and nouns in running prose, and several locales pasted the glossary headword in unchanged: mr `पूर्ववत करणे होतात` (infinitive used as a predicate, 4 sites), ko `되돌리기됩니다` (noun verbalized, 4 sites), sw imperative `thibitisha` for the noun "assertion" (7 sites, incl. 2 headings), id passive `dikembalikan` that reads "is returned". de `rückgängig gemacht` and fr `annulés` are glossary-literal but make overflows "undone/cancelled". Each was a regression of dev wording that inflected correctly or kept a `(revert)` gloss. Fix by restoring the dev form or inflecting the glossary stem (mr `पूर्ववत होतात`, sw `uthibitisho`); ko and de/fr wording are native calls. The glossary term is right; its grammatical slot is wrong, so a glossary-match check passes these.
+
+### 97. Whole-file gate quarantine from a short JSX fence after inline `{<expr>}` prose (INFORMATIONAL -- pipeline)
+
+PR #19803: `developers/tutorials/creating-a-wagmi-ui-for-your-contract` failed the gate in all 24 locales with the identical reason `jsx-tags: HTML (en=0 tr=1)` plus `code-fence-content` on fences 25 and 28. Both are one-line `tsx` fences (`{connection.status === 'connected' && (`) whose surrounding prose has inline code `` `{<expression>}` `` and `` `{<condition> && <value>}` ``. A failure identical across every locale points at a deterministic pipeline transform (fence lift/restore or prose placeholder handling) rather than the model. The stale translations stay live until it clears, which here means a removed contract address (`0x7143d5c1...3BF0`) keeps showing in all 24 locales. The run also metered $33.30 (289 calls) against an $11.25 estimate, so the gate retries are not cheap.

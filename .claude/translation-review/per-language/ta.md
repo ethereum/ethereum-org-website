@@ -224,3 +224,17 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: constructor term drift; எமது/நமது mixed; "call out" mistranslated (write-deploy:374).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.0/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:145 deploy rendered `பயன்படுத்தப்படுகிறது` (used) -> glossary `நிலைநிறுத்தப்படுகிறது` (recurring ta pattern)
+- multi-client:75/130 private/validator keys `திறப்புகள்` -> locale-standard `திறவுகோல்கள்`
+- echidna:506 inclusive/exclusive we mix `நாம் எங்கள்` -> `நாம் நமது`
+
+**Open / notes:**
+
+- echidna:64 invariants as `மாறிலிகள்` (constants), same word used for constants on L46 -- native call
+- multi-client: `கட்டமைப்பு` used for both framework and struct -- native call
