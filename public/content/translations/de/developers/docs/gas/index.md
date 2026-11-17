@@ -13,14 +13,13 @@ Um diese Seite besser zu verstehen, empfehlen wir dir, dich zunächst über [Tra
 
 ## Was ist Gas? {#what-is-gas}
 
-Gas bezeichnet die Einheit, die den Rechenaufwand misst, der zur Ausführung bestimmter Operationen im Ethereum-Netzwerk erforderlich ist.
+Gas bezieht sich auf die Einheit, die den Rechenaufwand misst, der erforderlich ist, um bestimmte Operationen im Ethereum-Netzwerk auszuführen.
 
-Da jede Ethereum-Transaktion zur Ausführung Rechenressourcen benötigt, müssen diese Ressourcen bezahlt werden, um sicherzustellen, dass Ethereum nicht anfällig für Spam ist und nicht in Endlosschleifen stecken bleiben kann. Die Bezahlung für die Rechenleistung erfolgt in Form einer Gasgebühr.
+Da jede Ethereum-Transaktion Rechenressourcen zur Ausführung benötigt, müssen diese Ressourcen bezahlt werden, um sicherzustellen, dass Ethereum nicht anfällig für Spam ist und nicht in endlosen Rechenschleifen stecken bleiben kann. Die Bezahlung für die Rechenleistung erfolgt in Form einer Gasgebühr.
 
-Die Gasgebühr ist **die Menge an Gas, die für eine Operation verbraucht wird, multipliziert mit den Kosten pro Gaseinheit**. Die Gebühr wird unabhängig davon gezahlt, ob eine Transaktion erfolgreich ist oder fehlschlägt.
+Die Gasgebühr ist **die Menge an Gas, die für die Ausführung einer Operation verwendet wird, multipliziert mit den Kosten pro Gaseinheit**. Die Gebühr wird unabhängig davon gezahlt, ob eine Transaktion erfolgreich ist oder fehlschlägt.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 Gasgebühren müssen in Ethereums nativer Währung, Ether (ETH), bezahlt werden. Gaspreise werden normalerweise in Gwei angegeben, was eine Stückelung von ETH ist. Ein Gwei entspricht einem Milliardstel ETH (0,000000001 ETH oder 10<sup>-9</sup> ETH).
 
@@ -103,10 +102,9 @@ Du kannst explizit angeben, wie viel du bereit bist zu zahlen, um deine Transakt
 
 Kurz gesagt, Gasgebühren tragen dazu bei, das Ethereum-Netzwerk sicher zu halten. Indem wir für jede im Netzwerk ausgeführte Berechnung eine Gebühr verlangen, verhindern wir, dass böswillige Akteure das Netzwerk mit Spam überfluten. Um versehentliche oder feindselige Endlosschleifen oder andere Rechenverschwendung im Code zu vermeiden, muss jede Transaktion ein Limit dafür festlegen, wie viele Rechenschritte der Codeausführung sie verwenden darf. Die grundlegende Recheneinheit ist „Gas“.
 
-Obwohl eine Transaktion ein Limit enthält, wird jegliches Gas, das in einer Transaktion nicht verbraucht wird, an den Benutzer zurückgegeben (z. B. wird `max fee - (base fee + tip)` zurückgegeben).
+Obwohl eine Transaktion ein Limit enthält, wird jegliches Gas, das nicht in einer Transaktion verwendet wird, an den Benutzer zurückgegeben (z. B. wird `Maximalgebühr - (Grundgebühr + Prioritätsgebühr)` zurückgegeben).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Was ist das Gaslimit? {#what-is-gas-limit}
 
@@ -130,16 +128,10 @@ Die Skalierung über Layer 2 (L2) ist eine Hauptinitiative, um Gaskosten, Benutz
 
 Wenn du die Gaspreise überwachen möchtest, um deine ETH günstiger zu versenden, kannst du viele verschiedene Tools verwenden, wie zum Beispiel:
 
-- [Etherscan](https://etherscan.io/gastracker) _Schätzer für Transaktionsgaspreise_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _Open-Source-Schätzer für Transaktionsgaspreise_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Überwache und verfolge die Gaspreise von Ethereum und L2, um Transaktionsgebühren zu senken und Geld zu sparen_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Chrome-Erweiterung zur Gasschätzung, die sowohl ältere Typ-0-Transaktionen als auch Typ-2-EIP-1559-Transaktionen unterstützt._
+- [Etherscan](https://etherscan.io/gastracker) _Gaspreis-Schätzer für Transaktionen_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Open-Source-Gaspreis-Schätzer für Transaktionen_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Überwache und verfolge die Gaspreise von Ethereum und Layer 2 (L2), um Transaktionsgebühren zu senken und Geld zu sparen_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Berechne Gasgebühren in deiner lokalen Währung für verschiedene Transaktionstypen auf dem Mainnet, Arbitrum und Polygon._
-
-## Verwandte Tools {#related-tools}
-
-- [Blocknatives Gas-Plattform](https://www.blocknative.com/gas) _API zur Gasschätzung, angetrieben von Blocknatives globaler Mempool-Datenplattform_
-- [Gas Network](https://gas.network) Onchain-Gas-Orakel. Unterstützung für über 35 Chains. 
 
 ## Weiterführende Literatur {#further-reading}
 

@@ -24,11 +24,11 @@ Ambos os tipos de conta têm a capacidade de:
 
 ### Principais diferenças {#key-differences}
 
-**Propriedade externa**
+**De propriedade externa**
 
 - Criar uma conta não custa nada
 - Pode iniciar transações
-- Transações entre contas de propriedade externa só podem ser transferências de ETH/token
+- Transações entre contas de propriedade externa só podem ser transferências de ETH, a menos que o destinatário tenha delegado para o código do contrato (veja `codeHash` abaixo)
 - Composta por um par de chaves criptográficas: chaves públicas e privadas que controlam as atividades da conta
 
 **Contrato**
@@ -42,13 +42,12 @@ Ambos os tipos de conta têm a capacidade de:
 
 As contas Ethereum têm quatro campos:
 
-- `nonce` – Um contador que indica o número de transações enviadas de uma conta de propriedade externa ou o número de contratos criados por uma conta de contrato. Apenas uma transação com um determinado nonce pode ser executada para cada conta, protegendo contra ataques de repetição (replay attacks) onde transações assinadas são repetidamente transmitidas e reexecutadas.
+- `nonce` – Um contador que indica o número de transações enviadas de uma conta de propriedade externa ou, para uma conta de contrato, um a mais que o número de contratos que ela criou (os nonces de contrato começam em 1, de acordo com a [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Cada autorização da [EIP-7702](/roadmap/pectra/7702/) que é aplicada também incrementa o nonce da conta autorizadora. Apenas uma transação com um determinado nonce pode ser executada para cada conta, protegendo contra ataques de repetição onde transações assinadas são repetidamente transmitidas e reexecutadas.
 - `balance` – O número de Wei de propriedade deste endereço. Wei é uma denominação de ETH e há 1e+18 Wei por ETH.
-- `codeHash` – Este hash se refere ao _código_ de uma conta na Máquina Virtual Ethereum (EVM). Contas de contrato têm fragmentos de código programados que podem realizar diferentes operações. Este código da EVM é executado se a conta receber uma chamada de mensagem. Ele não pode ser alterado, ao contrário dos outros campos da conta. Todos esses fragmentos de código estão contidos no banco de dados de estado sob seus hashes correspondentes para recuperação posterior. Este valor de hash é conhecido como codeHash. Para contas de propriedade externa, o campo codeHash é o hash de uma string vazia.
-- `storageRoot` – Às vezes conhecido como hash de armazenamento. Um hash de 256 bits do nó raiz de uma [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) que codifica o conteúdo de armazenamento da conta (um mapeamento entre valores inteiros de 256 bits), codificado na trie como um mapeamento do hash Keccak-256 das chaves inteiras de 256 bits para os valores inteiros de 256 bits codificados em RLP. Esta trie codifica o hash do conteúdo de armazenamento desta conta e é vazia por padrão.
+- `codeHash` – Este hash se refere ao _código_ de uma conta na Máquina Virtual Ethereum (EVM). As contas de contrato têm fragmentos de código programados que podem realizar diferentes operações. Este código da EVM é executado se a conta receber uma chamada de mensagem. O código de um contrato não pode ser alterado depois de implantado, ao contrário dos outros campos da conta. Todos esses fragmentos de código estão contidos no banco de dados de estado sob seus hashes correspondentes para recuperação posterior. Esse valor de hash é conhecido como codeHash. Para contas de propriedade externa, o campo codeHash é o hash de uma string vazia, a menos que a conta tenha delegado para um contrato inteligente com a [EIP-7702](/roadmap/pectra/7702/). O código da conta é então um indicador de delegação (`0xef0100` seguido pelo endereço do contrato), que a conta pode alterar ou limpar com uma nova autorização.
+- `storageRoot` – Às vezes conhecido como hash de armazenamento. Um hash de 256 bits do nó raiz de uma [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) que codifica o conteúdo de armazenamento da conta (um mapeamento entre valores inteiros de 256 bits), codificado na trie como um mapeamento do hash Keccak-256 das chaves inteiras de 256 bits para os valores inteiros de 256 bits codificados em Prefixo de Comprimento Recursivo (RLP). Esta trie codifica o hash do conteúdo de armazenamento desta conta e está vazia por padrão.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Contas de propriedade externa e pares de chaves {#externally-owned-accounts-and-key-pairs}
 

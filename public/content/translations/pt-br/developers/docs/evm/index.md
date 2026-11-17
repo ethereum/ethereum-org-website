@@ -10,14 +10,13 @@ A Máquina Virtual Ethereum (EVM) é um ambiente virtual descentralizado que exe
 
 Alguma familiaridade básica com a terminologia comum em ciência da computação, como [bytes](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory) e uma [pilha (stack)](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) é necessária para entender a EVM. Também seria útil estar confortável com conceitos de criptografia/blockchain, como [funções de hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e a [árvore de Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
-## Do livro-razão à máquina de estado {#from-ledger-to-state-machine}
+## De livro-razão para máquina de estado {#from-ledger-to-state-machine}
 
-A analogia de um 'livro-razão distribuído' é frequentemente usada para descrever blockchains como o Bitcoin, que permitem uma moeda descentralizada usando ferramentas fundamentais de criptografia. O livro-razão mantém um registro de atividades que deve aderir a um conjunto de regras que governam o que alguém pode e não pode fazer para modificar o livro-razão. Por exemplo, um endereço Bitcoin não pode gastar mais Bitcoin do que recebeu anteriormente. Essas regras sustentam todas as transações no Bitcoin e em muitas outras blockchains.
+A analogia de um "livro-razão distribuído" é frequentemente usada para descrever blockchains como o Bitcoin, que permitem uma moeda descentralizada usando ferramentas fundamentais de criptografia. O livro-razão mantém um registro de atividades que deve aderir a um conjunto de regras que governam o que alguém pode e não pode fazer para modificar o livro-razão. Por exemplo, um endereço Bitcoin não pode gastar mais Bitcoin do que recebeu anteriormente. Essas regras sustentam todas as transações no Bitcoin e em muitas outras blockchains.
 
-Embora a Ethereum tenha sua própria criptomoeda nativa (ether) que segue quase exatamente as mesmas regras intuitivas, ela também permite uma função muito mais poderosa: [contratos inteligentes](/developers/docs/smart-contracts/). Para esse recurso mais complexo, é necessária uma analogia mais sofisticada. Em vez de um livro-razão distribuído, a Ethereum é uma [máquina de estado](https://wikipedia.org/wiki/Finite-state_machine) distribuída. O estado da Ethereum é uma grande estrutura de dados que contém não apenas todas as contas e saldos, mas um _estado de máquina_, que pode mudar de bloco para bloco de acordo com um conjunto de regras predefinidas, e que pode executar código de máquina arbitrário. As regras específicas de mudança de estado de bloco para bloco são definidas pela EVM.
+Embora a Ethereum tenha sua própria criptomoeda nativa (ether) que segue quase exatamente as mesmas regras intuitivas, ela também permite uma função muito mais poderosa: [contratos inteligentes](/developers/docs/smart-contracts/). Para esse recurso mais complexo, é necessária uma analogia mais sofisticada. Em vez de um livro-razão distribuído, a Ethereum é uma [máquina de estado](https://wikipedia.org/wiki/Finite-state_machine) distribuída. O estado da Ethereum é uma grande estrutura de dados que mantém não apenas todas as contas e saldos, mas um _estado de máquina_, que pode mudar de bloco a bloco de acordo com um conjunto predefinido de regras, e que pode executar código de máquina arbitrário. As regras específicas de mudança de estado de bloco a bloco são definidas pela EVM.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## A função de transição de estado da Ethereum {#the-ethereum-state-transition-function}
 
@@ -55,22 +54,21 @@ Os contratos contêm uma trie de _armazenamento_ Merkle Patricia (como uma matri
 
 ### Códigos de operação {#opcodes}
 
-O bytecode compilado do contrato inteligente é executado como uma série de [códigos de operação](/developers/docs/evm/opcodes) da EVM, que executam operações de pilha padrão como `XOR`, `AND`, `ADD`, `SUB`, etc. A EVM também implementa várias operações de pilha específicas de blockchain, como `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc. O conjunto de códigos de operação também inclui `TSTORE` e `TLOAD`, que fornecem acesso ao armazenamento transitório.
+O bytecode de contrato inteligente compilado é executado como uma série de [códigos de operação](/developers/docs/evm/opcodes) da EVM, que realizam operações padrão de pilha como `XOR`, `AND`, `ADD`, `SUB`, etc. A EVM também implementa uma série de operações de pilha específicas de blockchain, como `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc. O conjunto de códigos de operação também inclui `TSTORE` e `TLOAD`, que fornecem acesso ao armazenamento transitório.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Diagramas adaptados de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## Implementações da EVM {#evm-implementations}
 
 Todas as implementações da EVM devem aderir à especificação descrita no yellow paper da Ethereum.
 
-Ao longo dos dez anos de história da Ethereum, a EVM passou por várias revisões e existem várias implementações da EVM em várias linguagens de programação.
+Ao longo dos dez anos de história da Ethereum, a EVM passou por várias revisões, e existem várias implementações da EVM em várias linguagens de programação.
 
 Os [clientes de execução da Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluem uma implementação da EVM. Além disso, existem várias implementações independentes, incluindo:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Leitura adicional {#further-reading}

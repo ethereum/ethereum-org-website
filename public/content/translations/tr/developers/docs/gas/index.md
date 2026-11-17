@@ -13,20 +13,19 @@ Bu sayfayı daha iyi anlamak için öncelikle [işlemler](/developers/docs/trans
 
 ## Gaz nedir? {#what-is-gas}
 
-Gaz, Ethereum ağında belirli operasyonları yürütmek için gereken hesaplama çabası miktarını ölçen birimi ifade eder.
+Gaz, Ethereum ağında belirli işlemleri yürütmek için gereken hesaplama çabası miktarını ölçen birimi ifade eder.
 
-Her Ethereum işlemi yürütülmek için hesaplama kaynakları gerektirdiğinden, Ethereum'un spamlara karşı savunmasız olmamasını ve sonsuz hesaplama döngülerinde sıkışıp kalmamasını sağlamak için bu kaynakların ödenmesi gerekir. Hesaplama için ödeme, bir gaz ücreti şeklinde yapılır.
+Her Ethereum işlemi yürütülmek için hesaplama kaynakları gerektirdiğinden, Ethereum'un spamlara karşı savunmasız olmamasını ve sonsuz hesaplama döngülerinde sıkışıp kalmamasını sağlamak için bu kaynakların ödenmesi gerekir. Hesaplama için ödeme, gaz ücreti şeklinde yapılır.
 
-Gaz ücreti, **bir işlemi yapmak için kullanılan gaz miktarının birim gaz başına maliyetle çarpımıdır**. Ücret, bir işlemin başarılı veya başarısız olmasından bağımsız olarak ödenir.
+Gaz ücreti, **bazı işlemleri yapmak için kullanılan gaz miktarının, birim gaz başına maliyetle çarpımıdır**. Ücret, bir işlemin başarılı veya başarısız olmasından bağımsız olarak ödenir.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+<GasEvmDiagram />
 
-Gaz ücretleri, Ethereum'un yerel para birimi olan Ether (ETH) cinsinden ödenmelidir. Gas fiyatları genellikle ETH'nin bir alt birimi olan Gwei cinsinden belirtilir. Her bir Gwei, bir ETH'nin milyarda birine (0,000000001 ETH veya 10<sup>-9</sup> ETH) eşittir.
+Gaz ücretleri, Ethereum'un yerel para birimi olan Ether (ETH) cinsinden ödenmelidir. Gas fiyatları genellikle ETH'nin bir alt birimi olan Gwei cinsinden belirtilir. Her Gwei, bir ETH'nin milyarda birine eşittir (0,000000001 ETH veya 10<sup>-9</sup> ETH).
 
-Örneğin, gazınızın 0,000000001 Ether tuttuğunu söylemek yerine, gazınızın 1 Gwei tuttuğunu söyleyebilirsiniz.
+Örneğin, gazınızın 0,000000001 Ether'e mal olduğunu söylemek yerine, gazınızın 1 Gwei'ye mal olduğunu söyleyebilirsiniz.
 
-'Gwei' kelimesi, 'milyar Wei' anlamına gelen 'giga-wei' kelimesinin kısaltmasıdır. Bir Gwei, bir milyar Wei'ye eşittir. Wei'nin kendisi ([b-money](https://www.investopedia.com/terms/b/bmoney.asp) yaratıcısı [Wei Dai](https://wikipedia.org/wiki/Wei_Dai)'nin adını almıştır) ETH'nin en küçük birimidir.
+'Gwei' kelimesi, 'milyar Wei' anlamına gelen 'giga-wei'nin kısaltmasıdır. Bir Gwei, bir milyar Wei'ye eşittir. Wei'nin kendisi ([b-money](https://www.investopedia.com/terms/b/bmoney.asp) yaratıcısı [Wei Dai](https://wikipedia.org/wiki/Wei_Dai)'den adını almıştır) ETH'nin en küçük birimidir.
 
 ## Gaz ücretleri nasıl hesaplanır? {#how-are-gas-fees-calculated}
 
@@ -101,12 +100,11 @@ Taban ücretin ayarlanma miktarı, mevcut blok boyutunun hedeften ne kadar uzak 
 
 ## Gaz ücretleri neden var? {#why-do-gas-fees-exist}
 
-Kısacası, gaz ücretleri Ethereum ağını güvende tutmaya yardımcı olur. Ağda yürütülen her hesaplama için bir ücret talep ederek, kötü niyetli kişilerin ağa spam göndermesini engelliyoruz. Kodda kazara veya düşmanca sonsuz döngülerden veya diğer hesaplama israflarından kaçınmak için, her işlemin kullanabileceği kod yürütme hesaplama adımlarının sayısına bir sınır koyması gerekir. Temel hesaplama birimi "gaz"dır.
+Kısacası, gaz ücretleri Ethereum ağının güvenli kalmasına yardımcı olur. Ağda yürütülen her hesaplama için bir ücret talep ederek, kötü niyetli kişilerin ağa spam göndermesini engelleriz. Kodda kazara veya kasıtlı sonsuz döngülerden veya diğer hesaplama israflarından kaçınmak için, her işlemin kod yürütmede ne kadar hesaplama adımı kullanabileceğine dair bir sınır belirlemesi gerekir. Temel hesaplama birimi "gaz"dır.
 
-Bir işlem bir limit içerse de, bir işlemde kullanılmayan herhangi bir gaz kullanıcıya iade edilir (örn., `max fee - (base fee + tip)` iade edilir).
+Bir işlem bir sınır içerse de, bir işlemde kullanılmayan gaz kullanıcıya iade edilir (örn., `maksimum ücret - (taban ücret + öncelik ücreti)` iade edilir).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+<GasTxDiagram />
 
 ## Gaz limiti nedir? {#what-is-gas-limit}
 
@@ -133,13 +131,7 @@ ETH'nizi daha ucuza gönderebilmek için gas fiyatlarını izlemek istiyorsanız
 - [Etherscan](https://etherscan.io/gastracker) _İşlem gas fiyatı tahmincisi_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Açık kaynaklı işlem gas fiyatı tahmincisi_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _İşlem ücretlerini azaltmak ve tasarruf etmek için Ethereum ve L2 gas fiyatlarını izleyin ve takip edin_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Hem Tip 0 eski işlemleri hem de Tip 2 EIP-1559 işlemlerini destekleyen gas tahmin eden Chrome uzantısı._
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Ana Ağ, Arbitrum ve Polygon üzerindeki farklı işlem türleri için gaz ücretlerini yerel para biriminizde hesaplayın._
-
-## İlgili araçlar {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Blocknative'in küresel bellek havuzu veri platformu tarafından desteklenen gas tahmini API'si_
-- [Gas Network](https://gas.network) Zincir içi Gas Kâhinleri. 35'ten fazla zincir için destek. 
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Ana Ağ, Arbitrum ve Polygon'daki farklı işlem türleri için gaz ücretlerini yerel para biriminizde hesaplayın._
 
 ## Daha fazla okuma {#further-reading}
 

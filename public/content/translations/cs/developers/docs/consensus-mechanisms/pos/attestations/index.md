@@ -1,6 +1,6 @@
 ---
 title: Atestace
-description: "Popis atestací v síti Ethereum s mechanismem proof-of-stake."
+description: "Popis atestací v proof-of-stake Ethereu."
 lang: cs
 ---
 
@@ -8,51 +8,57 @@ Očekává se, že validátor vytvoří, podepíše a odvysílá atestaci během
 
 ## Co je to atestace? {#what-is-an-attestation}
 
-Každou [epochu](/glossary/#epoch) (6,4 minuty) navrhuje validátor síti atestaci. Atestace je pro konkrétní slot v epoše. Účelem atestace je hlasovat ve prospěch pohledu validátoru na řetězec, zejména na nejnovější ospravedlněný blok a první blok v aktuální epoše (známé jako kontrolní body `source` a `target`). Tyto informace se kombinují pro všechny zúčastněné validátory, což umožňuje síti dosáhnout konsensu o stavu blockchainu.
+Každou [epochu](/glossary/#epoch) (6,4 minuty) validátor odvysílá atestaci do sítě. Atestace je pro konkrétní slot v epoše. Účelem atestace je hlasovat ve prospěch pohledu validátoru na řetězec, zejména na hlavu řetězce, nejnovější ospravedlněný kontrolní bod a kontrolní bod na začátku aktuální epochy (známé jako kontrolní body `source` a `target`). Tyto informace jsou kombinovány pro všechny zúčastněné validátory, což umožňuje síti dosáhnout konsensu o stavu blockchainu.
 
-Atestace obsahuje následující komponenty:
+Od [upgradu Pectra](/roadmap/pectra/) ([EIP-7549](https://eips.ethereum.org/EIPS/eip-7549)) mají atestace od jednoho validátoru a agregovaná atestace různé formáty. Atestace jednoho validátoru obsahuje:
 
-- `aggregation_bits`: bitový seznam validátorů, kde pozice odpovídá indexu validátoru v jejich výboru; hodnota (0/1) označuje, zda validátor podepsal `data` (tj. zda je aktivní a souhlasí s navrhovatelem bloku)
+- `committee_index`: výbor, do kterého validátor v daném slotu patří
+- `attester_index`: index validátoru
 - `data`: podrobnosti týkající se atestace, jak je definováno níže
-- `signature`: podpis BLS, který agreguje podpisy jednotlivých validátorů
+- `signature`: podpis BLS validátoru nad `data`
 
 Prvním úkolem pro atestujícího validátora je sestavit `data`. `data` obsahuje následující informace:
 
-- `slot`: Číslo slotu, na který se atestace vztahuje
-- `index`: Číslo, které identifikuje, do kterého výboru validátor v daném slotu patří
-- `beacon_block_root`: Kořenový hash bloku, který validátor vidí na vrcholu řetězce (výsledek použití algoritmu pro výběr forku)
-- `source`: Část hlasu o finalitě, která ukazuje, co validátoři považují za nejnovější ospravedlněný blok
-- `target`: Část hlasu o finalitě, která ukazuje, co validátoři považují za první blok v aktuální epoše
+- `slot`: Číslo slotu, na které se atestace vztahuje
+- `index`: Od upgradu Pectra nastaveno na `0`. Výbor je identifikován mimo `data` (pomocí `committee_index` nebo pomocí `committee_bits` v agregátu), takže hlasy z různých výborů mají identická `data` a mohou být agregovány dohromady. Před upgradem Pectra toto pole identifikovalo výbor
+- `beacon_block_root`: Kořenový hash bloku, který validátor vidí na hlavě řetězce (výsledek použití algoritmu fork-choice)
+- `source`: Část hlasu o finalitě označující, co validátory vidí jako nejnovější ospravedlněný kontrolní bod
+- `target`: Část hlasu o finalitě označující, co validátory vidí jako kontrolní bod na začátku aktuální epochy (blok v jejím prvním slotu, nebo nejnovější blok před ním, pokud je tento slot prázdný)
 
-Jakmile je `data` sestaven, může validátor přepnout bit v `aggregation_bits`, který odpovídá jeho vlastnímu indexu validátoru, z 0 na 1, aby ukázal, že se zúčastnil.
-
-Nakonec validátor atestaci podepíše a odvysílá ji do sítě.
+Jakmile je `data` sestaveno, validátor jej podepíše a odvysílá atestaci do [podsítě](#aggregated-attestation) pro svůj výbor.
 
 ### Agregovaná atestace {#aggregated-attestation}
 
-S předáváním těchto dat po síti pro každého validátora je spojena značná režie. Proto jsou atestace od jednotlivých validátorů agregovány v rámci podsítí předtím, než jsou odvysílány šířeji. To zahrnuje společnou agregaci podpisů tak, aby atestace, která se vysílá, obsahovala konsensus `data` a jediný podpis vytvořený kombinací podpisů všech validátorů, kteří s tímto `data` souhlasí. To lze zkontrolovat pomocí `aggregation_bits`, protože to poskytuje index každého validátoru v jeho výboru (jehož ID je uvedeno v `data`), což lze použít k dotazování na jednotlivé podpisy.
+S předáváním těchto dat po síti pro každého validátora je spojena značná režie. Proto jsou atestace od jednotlivých validátorů agregovány v rámci podsítí předtím, než jsou odvysílány šířeji. To zahrnuje agregaci podpisů dohromady, takže atestace, která je odvysílána, obsahuje konsensuální `data` a jediný podpis vytvořený kombinací podpisů všech validátorů, kteří s tímto `data` souhlasí. Agregovaná atestace obsahuje:
 
-V každé epoše je v každé podsíti vybráno 16 validátorů, kteří se stanou `aggregators`. Agregátoři shromažďují všechny atestace, o kterých se dozvědí prostřednictvím sítě gossip, které mají ekvivalentní `data` k jejich vlastnímu. Odesílatel každé odpovídající atestace je zaznamenán v `aggregation_bits`. Agregátoři pak odvysílají agregát atestací do širší sítě.
+- `aggregation_bits`: bitlist s jedním bitem na člena každého zahrnutého výboru, kde pozice mapuje pozici validátoru v jeho výboru; hodnota (0/1) označuje, zda je podpis tohoto validátoru zahrnut
+- `data`: data atestace, která podepsal každý zahrnutý validátor
+- `signature`: podpis BLS, který agreguje podpisy zahrnutých validátorů
+- `committee_bits`: členové kterých výborů jsou pokryti pomocí `aggregation_bits`
 
-Když je validátor vybrán jako navrhovatel bloku, zabalí agregované atestace z podsítí až do nejnovějšího slotu v novém bloku.
+Kdokoli může zkontrolovat agregovaný podpis proti kombinovaným veřejným klíčům validátorů, jejichž bity jsou nastaveny.
+
+V každém slotu je vybráno asi 16 členů každého výboru, aby se stali jeho `aggregators` (`TARGET_AGGREGATORS_PER_COMMITTEE`). Validátor zjistí, zda byl vybrán, ze svého vlastního podpisu nad číslem slotu. Agregátoři shromažďují všechny atestace, které slyší v podsíti svého výboru a které mají stejné `data` jako jejich vlastní, a kombinují je, přičemž odesílatele každé z nich zaznamenají do `aggregation_bits`. Agregátoři pak odvysílají agregát do širší sítě.
+
+Když je validátor vybrán jako navrhovatel bloku, zahrne do nového bloku agregované atestace z nedávných slotů. Od upgradu Pectra může navrhovatel sloučit agregáty z různých výborů, které sdílejí stejné `data`, do jedné atestace a blok jich může obsahovat až 8.
 
 ### Životní cyklus zahrnutí atestace {#attestation-inclusion-lifecycle}
 
 1. Generování
-2. Šíření
+2. Propagace
 3. Agregace
-4. Šíření
+4. Propagace
 5. Zahrnutí
 
 Životní cyklus atestace je nastíněn ve schématu níže:
 
-![attestation lifecycle](./attestation_schematic.png)
+<AttestationsDiagram />
 
 ## Odměny {#rewards}
 
-Validátoři jsou odměňováni za předkládání atestací. Odměna za atestaci závisí na příznacích účasti (zdroj, cíl a vrchol), základní odměně a míře účasti.
+Validátoři jsou odměňováni za odesílání atestací. Odměna za atestaci závisí na příznacích účasti (zdroj, cíl a hlava), základní odměně a míře účasti.
 
-Každý z příznaků účasti může být buď pravdivý (true), nebo nepravdivý (false), v závislosti na předložené atestaci a jejím zpoždění zahrnutí.
+Každý z příznaků účasti může být buď pravdivý (true), nebo nepravdivý (false), v závislosti na odeslané atestaci a jejím zpoždění zahrnutí.
 
 Nejlepší scénář nastává, když jsou všechny tři příznaky pravdivé, v takovém případě by validátor získal (za každý správný příznak):
 
@@ -68,25 +74,32 @@ Základní odměna se vypočítává podle počtu atestujících validátorů a 
 
 #### Zpoždění zahrnutí {#inclusion-delay}
 
-V době, kdy validátoři hlasovali o vrcholu řetězce (`block n`), `block n+1` ještě nebyl navržen. Proto jsou atestace přirozeně zahrnuty **o jeden blok později**, takže všechny atestace, které hlasovaly pro to, že `block n` je vrcholem řetězce, byly zahrnuty do `block n+1` a **zpoždění zahrnutí** je 1. Pokud se zpoždění zahrnutí zdvojnásobí na dva sloty, odměna za atestaci se sníží na polovinu, protože pro výpočet odměny za atestaci se základní odměna vynásobí převrácenou hodnotou zpoždění zahrnutí.
+V době, kdy validátoři hlasovali o hlavě řetězce (`block n`), `block n+1` ještě nebyl navržen. Proto jsou atestace přirozeně zahrnuty **o jeden blok později**, takže všechny atestace, které hlasovaly pro to, že `block n` je hlava řetězce, byly zahrnuty do `block n+1` a **zpoždění zahrnutí** je 1. Zpoždění zahrnutí rozhoduje o tom, jaké příznaky účasti atestace získá:
 
-### Scénáře atestace {#attestation-scenarios}
+- `head`: pouze pokud je zpoždění zahrnutí přesně 1 slot
+- `source`: pokud je zpoždění zahrnutí maximálně 5 slotů (celočíselná druhá odmocnina z 32 slotů v epoše)
+- `target`: kdykoli je atestace zahrnuta (od upgradu Deneb, [EIP-7045](https://eips.ethereum.org/EIPS/eip-7045))
+
+Takže atestace zahrnutá o dva sloty později ztrácí svou odměnu za hlavu, ale stále získává odměny za zdroj a cíl.
+
+### Scénáře atestací {#attestation-scenarios}
 
 #### Chybějící hlasující validátor {#missing-voting-validator}
 
-Validátoři mají na předložení své atestace maximálně 1 epochu. Pokud byla atestace zmeškána v epoše 0, mohou ji předložit se zpožděním zahrnutí v epoše 1.
+Atestace může být zahrnuta do jakéhokoli bloku od slotu poté, co byla vytvořena, až do konce následující epochy. Pokud atestace z epochy 0 není zahrnuta do bloku během epochy 0, může být stále zahrnuta v epoše 1 s delším zpožděním zahrnutí.
 
 #### Chybějící agregátor {#missing-aggregator}
 
-Celkem je 16 agregátorů na epochu. Kromě toho se náhodní validátoři přihlašují k odběru **dvou podsítí na 256 epoch** a slouží jako záloha pro případ, že by agregátoři chyběli.
+Každý výbor usiluje o přibližně 16 agregátorů v každém slotu, takže jeden chybějící agregátor zřídkakdy zabrání agregaci atestací výboru. Odděleně zůstává každý uzel Beacon přihlášen k odběru **dvou podsítí po dobu 256 epoch** najednou, vybraných z jeho ID uzlu, což udržuje každou podsíť dobře propojenou.
 
 #### Chybějící navrhovatel bloku {#missing-block-proposer}
 
-Všimněte si, že v některých případech se šťastný agregátor může stát také navrhovatelem bloku. Pokud atestace nebyla zahrnuta, protože navrhovatel bloku chyběl, další navrhovatel bloku by agregovanou atestaci převzal a zahrnul ji do dalšího bloku. **Zpoždění zahrnutí** se však zvýší o jedna.
+Všimněte si, že v některých případech se šťastný agregátor může stát také navrhovatelem bloku. Pokud atestace nebyla zahrnuta, protože navrhovatel bloku chybí, další navrhovatel bloku by agregovanou atestaci převzal a zahrnul ji do dalšího bloku. Nicméně **zpoždění zahrnutí** se zvýší o jedna.
 
 ## Další čtení {#further-reading}
 
 - [Atestace ve Vitalikově anotované specifikaci konsensu](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Atestace na eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
+- [Atestace ve specifikaci konsensu Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md#attestation)
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_

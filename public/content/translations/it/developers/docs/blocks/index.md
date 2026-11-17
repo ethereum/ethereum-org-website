@@ -14,10 +14,9 @@ I blocchi sono un argomento molto accessibile ai principianti. Ma per aiutarti a
 
 Per garantire che tutti i partecipanti sulla rete [Ethereum](/) mantengano uno stato sincronizzato e concordino sulla cronologia precisa delle transazioni, raggruppiamo le transazioni in blocchi. Ciò significa che dozzine (o centinaia) di transazioni vengono confermate, concordate e sincronizzate tutte in una volta.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Distanziando i commitment, diamo a tutti i partecipanti della rete abbastanza tempo per raggiungere il consenso: anche se le richieste di transazione si verificano dozzine di volte al secondo, i blocchi vengono creati e sottoposti a commitment su Ethereum solo una volta ogni dodici secondi.
+Distanziando i commitment, diamo a tutti i partecipanti della rete abbastanza tempo per raggiungere il consenso: anche se le richieste di transazione si verificano dozzine di volte al secondo, i blocchi vengono creati e confermati su Ethereum solo una volta ogni dodici secondi.
 
 ## Come funzionano i blocchi {#how-blocks-work}
 

@@ -12,12 +12,11 @@ Vitalu ni mada rahisi sana kwa wanaoanza. Lakini ili kukusaidia kuelewa ukurasa 
 
 ## Kwa nini vitalu? {#why-blocks}
 
-Ili kuhakikisha kwamba washiriki wote kwenye mtandao wa [Ethereum](/) wanadumisha hali iliyosawazishwa na kukubaliana juu ya historia sahihi ya miamala, tunaweka miamala katika makundi kwenye vitalu. Hii inamaanisha makumi (au mamia) ya miamala inafungamanishwa, inakubaliwa, na kusawazishwa kwa wakati mmoja.
+Ili kuhakikisha kwamba washiriki wote kwenye mtandao wa [Ethereum](/) wanadumisha hali iliyosawazishwa na kukubaliana juu ya historia sahihi ya miamala, tunaweka miamala katika makundi kwenye vitalu. Hii inamaanisha makumi (au mamia) ya miamala inafungamanishwa, kukubaliwa, na kusawazishwa kwa wakati mmoja.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Kwa kuweka nafasi kati ya ufungamanisho, tunawapa washiriki wote wa mtandao muda wa kutosha kufikia mwafaka: ingawa maombi ya miamala hutokea mara nyingi kwa sekunde, vitalu huundwa na kufungamanishwa kwenye Ethereum mara moja tu kila baada ya sekunde kumi na mbili.
+Kwa kutenganisha ufungamanisho, tunawapa washiriki wote wa mtandao muda wa kutosha kufikia mwafaka: ingawa maombi ya miamala hutokea mara nyingi kwa sekunde, vitalu huundwa na kufungamanishwa kwenye Ethereum mara moja tu kila baada ya sekunde kumi na mbili.
 
 ## Jinsi vitalu vinavyofanya kazi {#how-blocks-work}
 
