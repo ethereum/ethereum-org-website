@@ -71,7 +71,7 @@ export const ProgressChips = ({ className }: { className?: string }) => {
           {!safe && `. ${pending}`}
         </span>
       </li>
-      <li className={chip}>
+      <li data-slot="xp" className={chip}>
         <Zap
           aria-hidden
           className="size-6 fill-yellow-400 text-yellow-700 dark:text-yellow-400"

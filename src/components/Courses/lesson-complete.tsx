@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Crosshair, Sparkles, Zap } from "lucide-react"
+import { ArrowLeft, Crosshair, Sparkles, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -32,6 +32,8 @@ interface LessonCompleteProps {
   firstTry: { right: number; total: number }
   courseHref: string
   nextHref?: string
+  /** Next lesson's title, shown under the button label */
+  nextTitle?: string
   /** `nextHref` is the course check rather than a lesson */
   nextIsExam?: boolean
   /** ethereum.org page to go deeper, offered once the lesson is done */
@@ -62,6 +64,7 @@ const LessonComplete = ({
   firstTry,
   courseHref,
   nextHref,
+  nextTitle,
   nextIsExam,
   learnMore,
 }: LessonCompleteProps) => {
@@ -124,6 +127,14 @@ const LessonComplete = ({
     delay: XP_LAND,
   })
   const right = useCountUp(0, firstTry.right, { enabled: animate, delay: 2 })
+  const share = firstTry.total ? firstTry.right / firstTry.total : 1
+  // Same thresholds as the cheer tiers
+  const accuracyFill =
+    share >= 0.75
+      ? "*:data-[slot=progress-indicator]:bg-success"
+      : share >= 0.5
+        ? "*:data-[slot=progress-indicator]:bg-warning"
+        : "*:data-[slot=progress-indicator]:bg-error"
 
   const int = numberFormat(locale)
   const levelName = useLevelName()
@@ -259,25 +270,34 @@ const LessonComplete = ({
               </div>
             </div>
 
+            {/* First-try accuracy: a bar coloured by how well it went */}
             <motion.div
               {...appear(2)}
-              className="flex w-full max-w-sm items-center justify-center gap-3 rounded-2xl border-2 border-border p-4"
+              className="flex w-full max-w-sm flex-col gap-1"
             >
-              <Crosshair
-                className="size-8 shrink-0 text-(--course-strong) dark:text-(--course-bright)"
-                aria-hidden
-              />
-              <span className="flex flex-col items-start">
-                <span className="text-2xl leading-none font-black tabular-nums">
+              <div className="flex items-center justify-between gap-2 text-sm font-bold">
+                <span className="flex items-center gap-1.5">
+                  <Crosshair
+                    className="size-5 shrink-0 text-(--course-strong) dark:text-(--course-bright)"
+                    aria-hidden
+                  />
+                  {t("page-courses-complete-accuracy")}
+                </span>
+                <span className="tabular-nums">
                   {t("page-courses-complete-accuracy-count", {
                     right: int.format(Math.round(right)),
                     total: int.format(firstTry.total),
                   })}
                 </span>
-                <span className="text-sm font-bold tracking-wide text-body-medium uppercase">
-                  {t("page-courses-complete-accuracy")}
-                </span>
-              </span>
+              </div>
+              <Progress
+                aria-hidden
+                value={firstTry.total ? (right / firstTry.total) * 100 : 100}
+                className={cn(
+                  "bg-background-highlight *:data-[slot=progress-indicator]:transition-none",
+                  accuracyFill
+                )}
+              />
             </motion.div>
 
             <motion.div {...appear(2.2)} className="flex w-full justify-center">
@@ -316,25 +336,35 @@ const LessonComplete = ({
           className="flex w-full flex-col items-center gap-6"
           {...appear(stage === "streak" ? 2 : 2.4)}
         >
-          <div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
+          {/* Same width as the bars above */}
+          <div className="flex w-full max-w-sm flex-col gap-3">
             {nextHref && (
               <ButtonLink
                 href={nextHref}
                 variant="ghost"
                 hideArrow
-                className={chunkyButton}
+                className={cn(chunkyButton, "w-full flex-col gap-0 py-2")}
               >
                 {nextIsExam
                   ? t("page-courses-next-exam")
                   : t("page-courses-next-lesson")}
+                {nextTitle && (
+                  <span className="text-sm font-semibold tracking-normal normal-case opacity-90">
+                    {nextTitle}
+                  </span>
+                )}
               </ButtonLink>
             )}
             <ButtonLink
               href={courseHref}
               variant="ghost"
               hideArrow
-              className={nextHref ? chunkyButtonSecondary : chunkyButton}
+              className={cn(
+                nextHref ? chunkyButtonSecondary : chunkyButton,
+                "w-full"
+              )}
             >
+              <ArrowLeft aria-hidden className="size-5 rtl:-scale-x-100" />
               {t("page-courses-back-to-course")}
             </ButtonLink>
           </div>
