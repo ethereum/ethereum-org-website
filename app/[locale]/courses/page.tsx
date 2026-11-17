@@ -1,6 +1,5 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
-import type { StaticImageData } from "next/image"
 import {
   getMessages,
   getTranslations,
@@ -9,14 +8,12 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
-import CourseArt from "@/components/Courses/art/course-art"
 import {
-  CourseCardAction,
-  CourseCardNext,
-  CourseCardTrophy,
-} from "@/components/Courses/course-card-status"
-import CourseProgress from "@/components/Courses/course-progress"
-import { HubHeroScroll, HubNextUp } from "@/components/Courses/hub-hero-actions"
+  CourseCard,
+  courseGrid,
+  UpcomingCourseCard,
+} from "@/components/Courses/course-card"
+import { HubNextUp } from "@/components/Courses/hub-hero-actions"
 import InstallAppNotice from "@/components/Courses/install-app-notice"
 import NoProfileAlert from "@/components/Courses/no-profile-alert"
 import ProfileLink from "@/components/Courses/profile-link"
@@ -24,58 +21,24 @@ import {
   ProgressChips,
   ProgressNote,
 } from "@/components/Courses/progress-stats"
-import { chunkyButton, courseThemeStyle } from "@/components/Courses/theme"
+import StickyBar from "@/components/Courses/sticky-bar"
+import { courseThemeStyle } from "@/components/Courses/theme"
 import TrackNav from "@/components/Courses/track-nav"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import Callout from "@/components/ui/callout"
-import {
-  Card,
-  CardBanner,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardParagraph,
-  CardTitle,
-} from "@/components/ui/card"
 import { Section } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
-import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import {
-  type Course,
-  courseHref,
-  COURSES_INDEXABLE,
-  COURSES_OG_IMAGE,
-  TRACKS,
-} from "@/data/courses"
+import { COURSES_INDEXABLE, COURSES_OG_IMAGE, TRACKS } from "@/data/courses"
 
 import CoursesPageJsonLD from "./page-jsonld"
-
-import developersHero from "@/public/images/heroes/developers-hub-hero.png"
-
-// A track's closing callout shows its target page's hero image
-const TRACK_NEXT_IMAGES: Record<string, StaticImageData> = {
-  build: developersHero,
-}
-
-/** What the client needs to work out a track's mastered and next courses */
-const toTrackCourses = (courses: Course[]) =>
-  courses.map(({ id, lessons, exam }) => ({
-    id,
-    lessonIds: lessons.map((lesson) => lesson.id),
-    hasExam: exam.length > 0,
-  }))
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
   setRequestLocale(locale)
-  const int = numberFormat(locale)
 
   const t = await getTranslations("page-courses")
 
@@ -96,20 +59,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           breadcrumbs={{ slug: "courses" }}
           title={t("page-courses-hero-title")}
           description={t("page-courses-hero-description")}
-          buttons={[<HubHeroScroll key="scroll" />]}
         />
 
         <main className="px-page pt-8 pb-page">
           <MainArticle className="flow">
-            {/* Sticks 16px below the site nav (h-19); the chips are opaque, the strip isn't.
-                Below md the track dropdown takes its own row under the chips */}
-            <div className="pointer-events-none sticky top-23 z-docked flex flex-col-reverse items-start gap-2 md:flex-row md:items-center md:justify-between md:gap-8">
-              <TrackNav className="pointer-events-auto max-md:max-w-full" />
-              <div className="pointer-events-auto flex shrink-0 items-center gap-2">
-                <ProgressChips />
+            {/* Full bleed so cards pass out of sight beneath it; below md
+                one end-aligned row */}
+            <StickyBar className="-mx-page justify-end gap-2 px-page md:justify-between md:gap-8">
+              <TrackNav className="md:flex-1" />
+              <div className="flex shrink-0 items-center gap-2">
+                <ProgressChips className="max-sm:*:data-[slot=xp]:hidden" />
                 <ProfileLink />
               </div>
-            </div>
+            </StickyBar>
 
             <Suspense fallback={null}>
               <NoProfileAlert />
@@ -121,135 +83,31 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <Section key={track.id} id={track.id} scrollMargin="tabNav">
                 <h2>{t(`page-courses-track-${track.id}-title`)}</h2>
                 <p>{t(`page-courses-track-${track.id}-description`)}</p>
-                {/* Suggested order, not a lock; role keeps list semantics in Safari despite list-none */}
-                <ol
-                  role="list"
-                  className="ms-0 grid list-none gap-6 md:grid-cols-2 xl:grid-cols-3"
-                >
-                  {track.courses.map(
-                    ({ id, level, theme, art, lessons, exam }, position) => (
-                      <li
-                        key={id}
-                        id={id}
-                        className="m-0"
-                        style={courseThemeStyle(theme)}
-                      >
-                        <Card
-                          href={courseHref(id)}
-                          variant="nested"
-                          border
-                          className="h-full"
-                        >
-                          <CardHeader>
-                            <CardBanner
-                              background="none"
-                              size="full"
-                              className="relative bg-(--course-soft) px-10 pt-12 pb-4"
-                            >
-                              <span className="absolute start-3 top-3 rounded-full bg-background px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
-                                {t(`page-courses-level-${level}`)}
-                              </span>
-                              {/* Place in the track, matching the track map; visual only, as the list is ordered */}
-                              <span
-                                aria-hidden
-                                className="absolute end-3 bottom-3 grid size-8 place-items-center rounded-full bg-background text-sm font-bold text-(--course-strong) tabular-nums dark:text-(--course-bright)"
-                              >
-                                {int.format(position + 1)}
-                              </span>
-                              <CourseCardTrophy courseId={id} />
-                              <CourseCardNext
-                                courseId={id}
-                                track={toTrackCourses(track.courses)}
-                              />
-                              <CourseArt
-                                id={art}
-                                className="mx-auto max-w-48 transition-transform duration-300 motion-safe:group-hover/link:scale-105"
-                              />
-                            </CardBanner>
-                          </CardHeader>
-                          {/* Progress pinned to the bottom so bars line up across a row */}
-                          <CardContent className="flex flex-col">
-                            <CardTitle>{t(`${id}-title`)}</CardTitle>
-                            <CardParagraph>
-                              {t(`${id}-description`)}
-                            </CardParagraph>
-                            <div className="mt-auto">
-                              <CourseProgress
-                                courseId={id}
-                                lessonIds={lessons.map((lesson) => lesson.id)}
-                                hasExam={exam.length > 0}
-                              />
-                            </div>
-                          </CardContent>
-                          <CardFooter buttons="full">
-                            <span
-                              className={cn(
-                                chunkyButton,
-                                "inline-flex items-center justify-center"
-                              )}
-                            >
-                              <CourseCardAction
-                                courseId={id}
-                                lessonIds={lessons.map((lesson) => lesson.id)}
-                              />
-                            </span>
-                          </CardFooter>
-                        </Card>
-                      </li>
-                    )
-                  )}
-                  {track.upcoming?.map(({ id, level, art }, index) => (
+                {/* Suggested order, not a lock */}
+                <ol role="list" className={courseGrid}>
+                  {track.courses.map((course, position) => (
                     <li
-                      key={id}
+                      key={course.id}
+                      id={course.id}
                       className="m-0"
-                      style={courseThemeStyle("muted")}
+                      style={courseThemeStyle(course.theme)}
                     >
-                      {/* Not a course yet: no link, progress or action */}
-                      <Card variant="nested" border className="h-full">
-                        <CardHeader>
-                          <CardBanner
-                            background="none"
-                            size="full"
-                            className="relative bg-(--course-soft) px-10 pt-12 pb-4"
-                          >
-                            <span className="absolute start-3 top-3 rounded-full bg-background px-3 py-1 text-sm font-bold tracking-wide text-(--course-strong) uppercase dark:text-(--course-bright)">
-                              {t(`page-courses-level-${level}`)}
-                            </span>
-                            <span
-                              aria-hidden
-                              className="absolute end-3 bottom-3 grid size-8 place-items-center rounded-full bg-background text-sm font-bold text-(--course-strong) tabular-nums dark:text-(--course-bright)"
-                            >
-                              {int.format(track.courses.length + index + 1)}
-                            </span>
-                            <span className="absolute end-3 top-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
-                              {t("page-courses-coming-soon")}
-                            </span>
-                            <CourseArt id={art} className="mx-auto max-w-48" />
-                          </CardBanner>
-                        </CardHeader>
-                        <CardContent>
-                          <CardTitle>{t(`${id}-title`)}</CardTitle>
-                          <CardParagraph>
-                            {t(`${id}-description`)}
-                          </CardParagraph>
-                        </CardContent>
-                      </Card>
+                      <CourseCard
+                        course={course}
+                        position={position}
+                        track={track.courses}
+                      />
+                    </li>
+                  ))}
+                  {track.upcoming?.map((course, index) => (
+                    <li key={course.id} className="m-0">
+                      <UpcomingCourseCard
+                        course={course}
+                        position={track.courses.length + index}
+                      />
                     </li>
                   ))}
                 </ol>
-                {track.next && (
-                  <Callout
-                    variant="sm"
-                    as="h3"
-                    image={TRACK_NEXT_IMAGES[track.next.id]}
-                    title={t(`${track.next.id}-title`)}
-                    description={t(`${track.next.id}-description`)}
-                  >
-                    <ButtonLink href={track.next.href}>
-                      {t("page-courses-hub-explore")}
-                    </ButtonLink>
-                  </Callout>
-                )}
               </Section>
             ))}
 

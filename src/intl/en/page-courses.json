@@ -94,7 +94,6 @@
   "page-courses-level-intermediate": "Intermediate",
   "page-courses-level-advanced": "Advanced",
   "page-courses-coming-soon": "Coming soon",
-  "page-courses-hub-explore": "Explore",
   "page-courses-lessons-done": "{done} of {total} lessons complete",
   "page-courses-progress-check-next": "All lessons complete. Course Mastery next",
   "page-courses-path-title": "Lessons",
@@ -440,7 +439,7 @@
   "upgrades-forks-recap-word-merges": "merges",
   "upgrades-forks-recap-word-owner": "owner",
   "upgrades-forks-recap-explain": "An upgrade only binds nodes that install it. A node left behind is simply stuck, but a large group staying behind on purpose keeps a second chain alive, sharing everything before the split.",
-  "upgrades-forks-takeaway-p1": "An upgrade only binds the nodes that install it. Usually everyone does; when a large group refuses, the chain splits in two.",
+  "upgrades-forks-takeaway-p1": "An upgrade only binds the nodes that install it. Usually everyone does. When a large group refuses, the chain splits in two.",
   "upgrades-exam-alone-prompt": "Who can change Ethereum's rules on their own?",
   "upgrades-exam-alone-opt-developers": "The core developers, by releasing a new version",
   "upgrades-exam-alone-opt-nobody": "Nobody: a change needs wide agreement and node runners installing it",
@@ -2758,8 +2757,6 @@
   "page-courses-hub-begin": "Begin",
   "page-courses-hub-continue": "Continue",
   "page-courses-hub-review": "Review",
-  "page-courses-hub-hero-start": "Start learning",
-  "page-courses-hub-hero-next": "Show my next course",
   "page-courses-widget-sign-device": "Your device",
   "page-courses-widget-sign-offline": "Offline",
   "page-courses-widget-sign-key": "Private key",
@@ -3407,7 +3404,7 @@
   "gas-fees-split-fb-tip": "Right. 21,000 × 2 = 42,000 gwei goes to the validator. The other 210,000 gwei, the base fee, is burned.",
   "gas-fees-split-opt-base": "210,000 gwei, the base fee",
   "gas-fees-split-fb-base": "That's the part nobody receives. Work out the part that's paid to the validator instead.",
-  "gas-fees-takeaway-p1": "Gas price = base fee + tip. The base fee is burned and follows how full blocks are; the tip goes to the validator who adds your transaction.",
+  "gas-fees-takeaway-p1": "Gas price = base fee + tip. The base fee is burned and follows how full blocks are. The tip goes to the validator who adds your transaction.",
   "gas-blocks-title": "Packing a block",
   "gas-blocks-summary": "Play block builder and decide which transactions make the cut.",
   "gas-blocks-intro-p1": "Transactions don't land on the blockchain one at a time. Validators, who stake ETH to run the network, take turns adding blocks, with a chance for a new block every 12 seconds today.",
@@ -4305,7 +4302,5 @@
   "roadmap-title": "Where Ethereum is headed",
   "roadmap-description": "Learn the plans for lower fees and lighter nodes, and the problem each upgrade is meant to solve.",
   "privacy-title": "Privacy on a public blockchain",
-  "privacy-description": "Everything on Ethereum is public by default. Learn what that reveals about you and how tools like zero-knowledge proofs can help.",
-  "build-title": "Building on Ethereum?",
-  "build-description": "Ready to write your own smart contract? Tutorials, developer docs and hands-on challenges are waiting for you."
+  "privacy-description": "Everything on Ethereum is public by default. Learn what that reveals about you and how tools like zero-knowledge proofs can help."
 }

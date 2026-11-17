@@ -17,7 +17,7 @@ import { chunkyTile, courseText } from "../theme"
 
 import DraggableTile from "./draggable-tile"
 import type { WidgetProps } from "./types"
-import WidgetShell from "./widget-shell"
+import WidgetShell, { StepHint } from "./widget-shell"
 
 /**
  * One skin of the sort puzzle. Strings: `page-courses-widget-{name}-pool`,
@@ -131,9 +131,9 @@ const SortWidget = ({
 
   return (
     <WidgetShell>
-      <p id={hintId} className="m-0 text-body-medium">
+      <StepHint id={hintId}>
         {t("page-courses-widget-sort-instructions")}
-      </p>
+      </StepHint>
 
       <div
         data-drop-target={POOL}

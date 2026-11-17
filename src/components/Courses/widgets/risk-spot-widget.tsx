@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils/cn"
 import { chunkyTile, courseText } from "../theme"
 
 import type { WidgetProps } from "./types"
-import WidgetShell from "./widget-shell"
+import WidgetShell, { StepHint } from "./widget-shell"
 
 /**
  * One skin of the spot-the-risk puzzle: a mock screen whose rows the learner
@@ -54,11 +54,11 @@ const RiskSpotWidget = ({
 
   return (
     <WidgetShell>
-      <p className="m-0 text-body-medium">
+      <StepHint>
         {t("page-courses-widget-risk-instructions", {
           count: rows.filter(({ risky }) => risky).length,
         })}
-      </p>
+      </StepHint>
       <section
         aria-labelledby={titleId}
         className="flex flex-col gap-3 rounded-2xl border-2 border-border bg-background p-3 md:p-4"
