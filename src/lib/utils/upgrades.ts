@@ -112,11 +112,13 @@ export const getUpgradeEipCount = (upgrade: UpgradeData) =>
       ).length
     : 0
 
+/** The one definition of "shipped" for every surface. */
 export const isUpgradeShipped = (upgrade: UpgradeData) =>
   getUpgradeStage(upgrade) === "live"
 
 /**
- * The next milestone a reader has not seen yet, excluding mainnet activation.
+ * The one definition of "next milestone" for every surface: the next milestone
+ * a reader has not seen yet, excluding mainnet activation.
  *
  * `live` is happening now rather than next, so a running devnet is not the
  * answer to "what comes next". Mainnet is excluded because both surfaces state

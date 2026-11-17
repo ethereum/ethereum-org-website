@@ -22,6 +22,7 @@ import {
   getNextMilestoneBeforeMainnet,
   getUpgradeEipCount,
   getUpgradeStage,
+  isUpgradeShipped,
   UPGRADE_STAGE_LABEL_KEYS,
   UPGRADE_STAGE_TONES,
   type UpgradeStageTone,
@@ -71,6 +72,7 @@ const ReleaseCarousel = () => {
           release,
           upgrade,
           stage,
+          shipped: isUpgradeShipped(upgrade),
           tone: UPGRADE_STAGE_TONES[stage],
           stageLabel: t(UPGRADE_STAGE_LABEL_KEYS[stage]),
           targetDate: upgrade.mainnetTarget.when
@@ -98,7 +100,7 @@ const ReleaseCarousel = () => {
    * rather than a date in `releases.tsx` having gone past.
    */
   const startIndex = useMemo(() => {
-    const shippedCount = releases.filter(({ stage }) => stage === "live").length
+    const shippedCount = releases.filter(({ shipped }) => shipped).length
 
     // A fork whose mainnet date can no longer move is the most useful thing to
     // land on, however far off it is.
@@ -124,7 +126,7 @@ const ReleaseCarousel = () => {
   // releases. Everything before it reads as shipped (primary); the connecting
   // line into this node fades shipped -> upcoming.
   const boundaryIndex = useMemo(
-    () => releases.filter(({ stage }) => stage === "live").length,
+    () => releases.filter(({ shipped }) => shipped).length,
     [releases]
   )
 
@@ -240,7 +242,7 @@ const ReleaseCarousel = () => {
             ({
               release,
               upgrade,
-              stage,
+              shipped,
               targetDate,
               targetConfirmed,
               nextMilestone,
@@ -267,7 +269,7 @@ const ReleaseCarousel = () => {
                         <div className="grid gap-1">
                           <dt className="text-xs font-bold text-body-medium uppercase">
                             {t(
-                              stage === "live"
+                              shipped
                                 ? "page-roadmap-upgrade-status-activated"
                                 : "page-roadmap-upgrade-status-target"
                             )}
@@ -302,7 +304,7 @@ const ReleaseCarousel = () => {
                     {eipCount ? (
                       <p className="mt-3 text-sm text-body-medium">
                         {t(
-                          stage === "live"
+                          shipped
                             ? "page-roadmap-upgrade-eips-included"
                             : "page-roadmap-upgrade-eips-scheduled",
                           { count: eipCount }

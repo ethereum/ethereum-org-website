@@ -14,6 +14,7 @@ import {
   formatUpgradeDate,
   getNextMilestoneBeforeMainnet,
   getUpgradeStage,
+  isUpgradeShipped,
   UPGRADE_STAGE_LABEL_KEYS,
 } from "@/lib/utils/upgrades"
 
@@ -43,11 +44,9 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
   const t = await getTranslations("page-roadmap")
   const locale = await getLocale()
 
+  if (isUpgradeShipped(upgrade)) return null
+
   const target = upgrade.mainnetTarget
-  const mainnet = upgrade.milestones.find(
-    (milestone) => milestone.kind === "mainnet"
-  )
-  if (mainnet?.status === "complete") return null
 
   const targetLabelKey = "page-roadmap-upgrade-status-target"
 
