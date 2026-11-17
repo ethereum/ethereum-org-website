@@ -1,6 +1,6 @@
 "use client"
 
-import { Landmark, LockKeyhole, Scale } from "lucide-react"
+import { Landmark, LockKeyhole } from "lucide-react"
 
 import SortWidget, { type SortConfig } from "./sort-widget"
 import type { WidgetProps } from "./types"
@@ -10,14 +10,12 @@ const BACKING: SortConfig = {
   buckets: [
     { id: "company", Icon: Landmark },
     { id: "crypto", Icon: LockKeyhole },
-    { id: "rules", Icon: Scale },
   ],
   items: [
     { id: "bank", bucket: "company" },
     { id: "eth", bucket: "crypto" },
-    { id: "program", bucket: "rules" },
     { id: "gold", bucket: "company" },
-    { id: "trust", bucket: "rules" },
+    { id: "bonds", bucket: "company" },
     { id: "tokens", bucket: "crypto" },
   ],
 }

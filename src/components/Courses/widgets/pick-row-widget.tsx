@@ -153,15 +153,15 @@ const iconClass = cn("size-5 shrink-0", courseText)
 
 /*
  * Tokens: four tokens with one name and picture; only the contract address
- * tells them apart. One fake copies the address's start and end, as a
- * reminder to check all of it. Fixed so server and client render the same.
+ * tells them apart. One fake copies the address's start, as a reminder to
+ * check all of it, without making the comparison a chore. Fixed so server and client render the same.
  */
 const TOKEN_ADDRESS = "0x5c1e8a3f72b94d06e1a7c3b58f2d9e04a6b1c7d2"
 const TOKENS: Record<string, string> = {
   name: "0x9f03b6d1e7c24a58b0e3f1a96c7d2b45e8a0f13c",
   official: "0x2d7ae0c94b1f68d3a5e2c07b91f4d6a8e3c5b290",
   real: TOKEN_ADDRESS,
-  lookalike: "0x5c1e4b90d2a7f3e18c6b05d7a2e9f1c3b84dc7d2",
+  lookalike: "0x5c1e27d94b0ae6f3812c5d9b7e04a3f6c1d09e83",
 }
 
 /** Tokens course: pick the real token by its contract address */

@@ -102,9 +102,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <main className="px-page pt-8 pb-page">
           <MainArticle className="flow">
-            {/* Sticks 16px below the site nav (h-19); the chips are opaque, the strip isn't */}
-            <div className="pointer-events-none sticky top-23 z-docked flex items-center justify-between gap-8">
-              <TrackNav className="pointer-events-auto" />
+            {/* Sticks 16px below the site nav (h-19); the chips are opaque, the strip isn't.
+                Below md the track dropdown takes its own row under the chips */}
+            <div className="pointer-events-none sticky top-23 z-docked flex flex-col-reverse items-start gap-2 md:flex-row md:items-center md:justify-between md:gap-8">
+              <TrackNav className="pointer-events-auto max-md:max-w-full" />
               <div className="pointer-events-auto flex shrink-0 items-center gap-2">
                 <ProgressChips />
                 <ProfileLink />

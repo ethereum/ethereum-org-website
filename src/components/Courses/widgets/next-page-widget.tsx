@@ -28,19 +28,21 @@ const START_PAGES = 3
 const RACE_MS = 1400
 // How far the losers get before the winner solves it
 const LOSER_PROGRESS = [55, 72, 86]
+const PICK_MS = 900
+const FLICKER_MS = 110
 
 type Mode = "work" | "stake"
 
 type Event =
   | { kind: "start" }
   | { kind: "racing" }
+  | { kind: "picking"; who: number }
   | { kind: "solved"; who: number }
   | { kind: "picked"; who: number }
   | { kind: "cheated"; who: number }
 
-/** Each racer's progress in a round; the winner rotates so nobody always wins */
-const raceProgress = (round: number) => {
-  const winner = round % PEOPLE.length
+/** Each racer's progress in a round; the winner is whoever solves it first */
+const raceProgress = (round: number, winner: number) => {
   let loser = 0
   return PEOPLE.map((i) =>
     i === winner ? 100 : LOSER_PROGRESS[(loser++ + round) % 3]
@@ -50,7 +52,8 @@ const raceProgress = (round: number) => {
 /**
  * Two ways a blockchain picks who writes the next page: a puzzle race
  * (proof of work) or a pick among people who locked up ETH (proof of
- * stake), where a fake page is turned down and costs the cheater. No
+ * stake), picked at random, where a fake page is turned down and the
+ * cheater loses ETH and is removed. No
  * numbers, thirds or timings: those belong to the proof-of-stake course.
  */
 const NextPageWidget = ({ onComplete }: WidgetProps) => {
@@ -61,14 +64,25 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
   const [event, setEvent] = useState<Event>({ kind: "start" })
   const [pages, setPages] = useState(START_PAGES)
   const [round, setRound] = useState(-1)
+  const [winner, setWinner] = useState(0)
   const [go, setGo] = useState(false)
-  const [turn, setTurn] = useState(0)
+  const [lastPick, setLastPick] = useState<number | null>(null)
   const [locked, setLocked] = useState(() => PEOPLE.map(() => LOCKED))
+  const [removed, setRemoved] = useState(() => PEOPLE.map(() => false))
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([])
   const [seen, setSeen] = useState({ race: false, cheat: false })
   const done = useRef(false)
 
   const name = (i: number) => t(`page-courses-widget-next-page-name-${i + 1}`)
   const racing = event.kind === "racing"
+  const picking = event.kind === "picking"
+  const busy = racing || picking
+  const eligible = PEOPLE.filter((i) => !removed[i])
+
+  useEffect(() => () => timers.current.forEach(clearTimeout), [])
+
+  const randomOf = (pool: number[]) =>
+    pool[Math.floor(Math.random() * pool.length)]
 
   useEffect(() => {
     if (!done.current && seen.race && seen.cheat) {
@@ -80,7 +94,6 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
   // Bars mount empty, then fill on the next frame so the width transitions
   useEffect(() => {
     if (round < 0 || !racing) return
-    const winner = round % PEOPLE.length
     const finish = () => {
       setEvent({ kind: "solved", who: winner })
       setPages((n) => n + 1)
@@ -97,33 +110,50 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
       cancelAnimationFrame(frame)
       clearTimeout(timer)
     }
-  }, [round, racing, reduceMotion])
+  }, [round, racing, reduceMotion, winner])
 
   const switchMode = (next: Mode) => {
-    if (next === mode || racing) return
+    if (next === mode || busy) return
     setMode(next)
     setEvent({ kind: "start" })
   }
 
   const race = () => {
+    const others = PEOPLE.filter((i) => i !== winner)
+    setWinner(round < 0 ? randomOf(PEOPLE) : randomOf(others))
     setGo(false)
     setRound((r) => r + 1)
     setEvent({ kind: "racing" })
   }
 
-  const pick = () => {
-    const who = turn % PEOPLE.length
-    setTurn(turn + 1)
-    setPages(pages + 1)
-    setEvent({ kind: "picked", who })
-  }
-
-  const cheat = () => {
-    const who = turn % PEOPLE.length
-    setTurn(turn + 1)
-    setLocked(locked.map((n, i) => (i === who ? Math.max(0, n - 1) : n)))
-    setEvent({ kind: "cheated", who })
-    setSeen((s) => ({ ...s, cheat: true }))
+  // A random pick, never the same person twice in a row, with a brief
+  // shuffle so it reads as a draw rather than taking turns
+  const pick = (cheating: boolean) => {
+    const pool = eligible.filter((i) => i !== lastPick)
+    const who = randomOf(pool.length ? pool : eligible)
+    const resolve = () => {
+      setLastPick(who)
+      if (cheating) {
+        setLocked((l) => l.map((n, i) => (i === who ? Math.max(0, n - 1) : n)))
+        setRemoved((r) => r.map((out, i) => out || i === who))
+        setEvent({ kind: "cheated", who })
+        setSeen((s) => ({ ...s, cheat: true }))
+      } else {
+        setPages((n) => n + 1)
+        setEvent({ kind: "picked", who })
+      }
+    }
+    if (reduceMotion) return resolve()
+    timers.current.forEach(clearTimeout)
+    timers.current = Array.from(
+      { length: Math.floor(PICK_MS / FLICKER_MS) },
+      (_, n) =>
+        setTimeout(
+          () => setEvent({ kind: "picking", who: randomOf(eligible) }),
+          n * FLICKER_MS
+        )
+    )
+    timers.current.push(setTimeout(resolve, PICK_MS))
   }
 
   const status = (() => {
@@ -132,6 +162,8 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
         return t(`page-courses-widget-next-page-start-${mode}`)
       case "racing":
         return t("page-courses-widget-next-page-racing")
+      case "picking":
+        return t("page-courses-widget-next-page-picking")
       default:
         return t(`page-courses-widget-next-page-${event.kind}`, {
           name: name(event.who),
@@ -139,10 +171,12 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
     }
   })()
 
-  const progress = round >= 0 ? raceProgress(round) : PEOPLE.map(() => 0)
+  const progress =
+    round >= 0 ? raceProgress(round, winner) : PEOPLE.map(() => 0)
   const highlighted =
     event.kind === "solved" ||
     event.kind === "picked" ||
+    event.kind === "picking" ||
     event.kind === "cheated"
       ? event.who
       : null
@@ -159,7 +193,7 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
             key={m}
             variant="ghost"
             aria-pressed={mode === m}
-            disabled={racing && mode !== m}
+            disabled={busy && mode !== m}
             onClick={() => switchMode(m)}
             className={cn(
               mode === m ? chunkyButton : chunkyButtonSecondary,
@@ -192,6 +226,14 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
         {PEOPLE.map((i) => {
           const active = highlighted === i
           const cheater = active && event.kind === "cheated"
+          const out = mode === "stake" && removed[i]
+          const badge = cheater
+            ? "badge-fake"
+            : out
+              ? "badge-removed"
+              : active && !picking
+                ? "badge-writer"
+                : null
           return (
             <li
               key={i}
@@ -201,7 +243,8 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
                   ? cheater
                     ? "border-error"
                     : "border-(--course)"
-                  : "border-(--course-soft)"
+                  : "border-(--course-soft)",
+                out && !cheater && "border-dashed opacity-60"
               )}
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
@@ -223,20 +266,16 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
                       })
                     : name(i)}
                 </span>
-                {active && (
+                {badge && (
                   <span
                     className={cn(
                       "rounded-full px-2 py-0.5 text-sm font-bold",
-                      cheater
-                        ? "bg-error-light text-error dark:bg-error-dark dark:text-red-400"
-                        : "bg-success-light text-green-700 dark:bg-success-dark dark:text-green-400"
+                      badge === "badge-writer"
+                        ? "bg-success-light text-green-700 dark:bg-success-dark dark:text-green-400"
+                        : "bg-error-light text-error dark:bg-error-dark dark:text-red-400"
                     )}
                   >
-                    {t(
-                      cheater
-                        ? "page-courses-widget-next-page-badge-fake"
-                        : "page-courses-widget-next-page-badge-writer"
-                    )}
+                    {t(`page-courses-widget-next-page-${badge}`)}
                   </span>
                 )}
               </div>
@@ -301,13 +340,19 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
           </Button>
         ) : (
           <>
-            <Button variant="ghost" onClick={pick} className={chunkyButton}>
+            <Button
+              variant="ghost"
+              onClick={() => pick(false)}
+              disabled={picking}
+              className={chunkyButton}
+            >
               <Shuffle aria-hidden />
               {t("page-courses-widget-next-page-pick")}
             </Button>
             <Button
               variant="ghost"
-              onClick={cheat}
+              onClick={() => pick(true)}
+              disabled={picking || eligible.length < 2}
               className={chunkyButtonSecondary}
             >
               <X aria-hidden />

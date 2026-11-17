@@ -55,7 +55,9 @@ const RiskSpotWidget = ({
   return (
     <WidgetShell>
       <p className="m-0 text-body-medium">
-        {t("page-courses-widget-risk-instructions")}
+        {t("page-courses-widget-risk-instructions", {
+          count: rows.filter(({ risky }) => risky).length,
+        })}
       </p>
       <section
         aria-labelledby={titleId}
@@ -159,7 +161,6 @@ export const ClaimSiteWidget = skin({
     { id: "address", risky: true },
     { id: "menu", risky: false },
     { id: "banner", risky: true },
-    { id: "badge", risky: true },
     { id: "connect", risky: false },
     { id: "sign", risky: true },
   ],

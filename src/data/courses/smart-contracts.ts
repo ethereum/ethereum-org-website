@@ -50,7 +50,7 @@ export const smartContractsCourse: Course = {
         {
           id: "recap",
           type: "fill",
-          blanks: ["nothing", "transaction", "validator"],
+          blanks: ["nothing", "transaction", "block"],
           extras: ["something", "message", "wallet"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
@@ -69,6 +69,33 @@ export const smartContractsCourse: Course = {
           correct: ["list"],
         },
         { id: "ledger", type: "interactive", widget: "token-ledger" },
+        {
+          id: "usdt",
+          type: "choice",
+          options: ["wallet", "list", "eth"],
+          correct: ["list"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "approvals",
+      icon: "key",
+      learnMore: "/wrapped-eth/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "who",
+          type: "choice",
+          options: ["app", "anyone", "all"],
+          correct: ["app"],
+        },
+        {
+          id: "why",
+          type: "choice",
+          options: ["approve", "worth", "fee"],
+          correct: ["approve"],
+        },
         {
           id: "wrapped",
           type: "choice",
@@ -111,7 +138,7 @@ export const smartContractsCourse: Course = {
           options: ["safe", "sign", "pointless"],
           correct: ["sign"],
         },
-        { id: "approvals", type: "concept", paragraphs: 3 },
+        { id: "approvals", type: "concept", paragraphs: 2 },
         { id: "scope", type: "interactive", widget: "approval-scope" },
         {
           id: "revoke",

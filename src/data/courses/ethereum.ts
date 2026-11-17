@@ -2,7 +2,7 @@ import type { Course } from "./types"
 
 /**
  * How Ethereum uses a blockchain, in lay terms: what it keeps track of, the
- * programs anyone can add, ETH's jobs, who runs it and what it's used for.
+ * programs anyone can add, what ETH is for, who runs it and what it's used for.
  */
 export const ethereumCourse: Course = {
   id: "ethereum",
@@ -53,17 +53,23 @@ export const ethereumCourse: Course = {
       ],
     },
     {
-      id: "jobs",
+      id: "roles",
       icon: "coins",
       learnMore: "/what-is-ether/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2, art: "coins" },
+        {
+          id: "intro",
+          type: "concept",
+          paragraphs: 3,
+          art: "coins",
+          list: { after: 2, items: 3 },
+        },
         { id: "match", type: "match", pairs: ["fee", "send", "lock"] },
         {
           id: "miss",
           type: "choice",
-          options: ["jobs", "nothing", "share"],
-          correct: ["jobs"],
+          options: ["roles", "nothing", "share"],
+          correct: ["roles"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],

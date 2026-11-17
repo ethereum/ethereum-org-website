@@ -145,7 +145,7 @@ const Tank = () => {
   return (
     <>
       <Shadow cx={body.base.cx} cy={body.base.cy + 4} rx={62} />
-      <path d={body.body} fill={TOP} opacity={0.45} />
+      <path d={body.silhouette} fill={TOP} opacity={0.45} />
       <path d={level.body} fill={LEFT} />
       <ellipse {...level.top} fill={TOP} />
       <ellipse
@@ -878,7 +878,7 @@ const GlassTank = ({
   const water = isoTanks.cylinder(x, y, 0, 24, level)
   return (
     <g>
-      <path d={body.body} fill={TOP} opacity={0.45} />
+      <path d={body.silhouette} fill={TOP} opacity={0.45} />
       <path d={water.body} fill={LEFT} />
       <ellipse {...water.top} fill={TOP} />
       <ellipse

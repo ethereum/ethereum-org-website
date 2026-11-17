@@ -27,7 +27,8 @@ const TAKE: Record<(typeof STOPS)[number], number> = {
 const pay = (take: number) => (START * take) / (START - take)
 const price = (take: number) => pay(take) / take
 
-// Shared scales so every stop compares against the same bar lengths
+// Shared scales so every stop compares against the same bar lengths. Apples
+// share the crate's scale, so what you get matches what left the crate
 const MAX_COINS = pay(TAKE.most)
 const MAX_PRICE = price(TAKE.most)
 
@@ -121,7 +122,7 @@ const PoolSwapWidget = ({ onComplete }: WidgetProps) => {
         />
         <Bar
           label={t(key("get"))}
-          share={take / MAX_COINS}
+          share={take / START}
           className="bg-yellow-400"
         />
         <Bar

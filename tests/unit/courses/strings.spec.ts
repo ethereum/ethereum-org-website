@@ -26,7 +26,13 @@ const EXAM_KEY_FILE = ".learner-exam-key.json"
 const stepSuffixes = (step: LessonStep): string[] => {
   switch (step.type) {
     case "concept":
-      return Array.from({ length: step.paragraphs }, (_, i) => `p${i + 1}`)
+      return [
+        ...Array.from({ length: step.paragraphs }, (_, i) => `p${i + 1}`),
+        ...Array.from(
+          { length: step.list?.items ?? 0 },
+          (_, i) => `li${i + 1}`
+        ),
+      ]
     case "choice":
       return [
         "prompt",

@@ -23,9 +23,13 @@ import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
 import type { LessonReward } from "./useCourseProgress"
 
+import { useRouter } from "@/i18n/navigation"
+
 interface LessonCompleteProps {
   reward: LessonReward
   accuracy: number
+  /** Graded steps answered right on the first try, out of all of them */
+  firstTry: { right: number; total: number }
   courseHref: string
   nextHref?: string
   /** `nextHref` is the course check rather than a lesson */
@@ -55,6 +59,7 @@ const tierFor = (accuracy: number, perfect: boolean) =>
 const LessonComplete = ({
   reward,
   accuracy,
+  firstTry,
   courseHref,
   nextHref,
   nextIsExam,
@@ -70,6 +75,30 @@ const LessonComplete = ({
   useEffect(() => {
     window.scrollTo({ top: 0 })
   }, [stage])
+
+  // Enter takes the primary action, as it does through the lesson
+  const router = useRouter()
+  const showStreak = stage === "summary" && reward.streakExtended
+  useEffect(() => {
+    const onEnter = (event: KeyboardEvent) => {
+      if (event.key !== "Enter" || event.repeat || event.isComposing) return
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+        return
+      const target = event.target as HTMLElement | null
+      // A focused control keeps its own Enter
+      if (
+        target?.closest(
+          "a, button, input, textarea, select, [contenteditable], [role=dialog]"
+        )
+      )
+        return
+      event.preventDefault()
+      if (showStreak) setStage("streak")
+      else router.push(nextHref ?? courseHref)
+    }
+    window.addEventListener("keydown", onEnter)
+    return () => window.removeEventListener("keydown", onEnter)
+  }, [showStreak, nextHref, courseHref, router])
 
   // The lesson's XP lands first, then a perfect run's bonus tops it up
   const baseXp = useCountUp(0, reward.xp - reward.bonus, {
@@ -94,10 +123,9 @@ const LessonComplete = ({
     enabled: animate,
     delay: XP_LAND,
   })
-  const acc = useCountUp(0, accuracy, { enabled: animate, delay: 2 })
+  const right = useCountUp(0, firstTry.right, { enabled: animate, delay: 2 })
 
   const int = numberFormat(locale)
-  const percent = numberFormat(locale, { style: "percent" })
   const levelName = useLevelName()
   const tier = tierFor(accuracy, reward.perfect)
 
@@ -241,7 +269,10 @@ const LessonComplete = ({
               />
               <span className="flex flex-col items-start">
                 <span className="text-2xl leading-none font-black tabular-nums">
-                  {percent.format(acc)}
+                  {t("page-courses-complete-accuracy-count", {
+                    right: int.format(Math.round(right)),
+                    total: int.format(firstTry.total),
+                  })}
                 </span>
                 <span className="text-sm font-bold tracking-wide text-body-medium uppercase">
                   {t("page-courses-complete-accuracy")}
@@ -265,7 +296,7 @@ const LessonComplete = ({
         )}
       </AnimatePresence>
 
-      {stage === "summary" && reward.streakExtended ? (
+      {showStreak ? (
         <motion.div
           key="continue"
           className="flex w-full justify-center"

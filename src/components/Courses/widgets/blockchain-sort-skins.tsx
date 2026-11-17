@@ -1,6 +1,8 @@
 "use client"
 
-import { Bitcoin, Diamond, EyeOff, Link2, NotebookPen } from "lucide-react"
+import { Bitcoin, EyeOff, Link2, NotebookPen } from "lucide-react"
+
+import EthGlyph from "@/components/icons/eth-glyph-solid.svg"
 
 import SortWidget, { type SortConfig } from "./sort-widget"
 import type { WidgetProps } from "./types"
@@ -15,7 +17,7 @@ export const ChainSortWidget = skin({
   name: "chain-sort",
   buckets: [
     { id: "bitcoin", Icon: Bitcoin },
-    { id: "ethereum", Icon: Diamond },
+    { id: "ethereum", Icon: EthGlyph },
     { id: "both", Icon: Link2 },
   ],
   items: [

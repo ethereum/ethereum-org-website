@@ -89,16 +89,19 @@ const NextUpSkeleton = () => (
     border
     className={cn(nextUpCard, whilePending)}
   >
-    <Skeleton className="w-28 shrink-0 self-stretch rounded-none sm:w-44" />
+    <Skeleton className="h-auto w-28 shrink-0 self-stretch rounded-none sm:w-44" />
     <CardContent className="flex min-w-0 flex-1 flex-col gap-3 space-y-0">
       <Skeleton className="h-5 w-36 rounded-full" />
-      <div className="flex flex-col gap-1.5">
-        <Skeleton className="h-7 w-3/4" />
-        <Skeleton className="h-4 w-1/3" />
+      <div className="flex flex-col">
+        <Skeleton className="my-1 h-6 w-3/4" />
+        <Skeleton className="my-0.5 h-4 w-1/3" />
       </div>
       <div className="flex flex-col gap-2">
-        <Skeleton className="h-3 w-full rounded-full" />
-        <Skeleton className="h-4 w-2/5" />
+        <div className="flex items-center gap-2">
+          <Skeleton className="h-3 flex-1 rounded-full" />
+          <Skeleton className="size-6 shrink-0 rounded-full" />
+        </div>
+        <Skeleton className="my-0.5 h-4 w-2/5" />
       </div>
       <Skeleton className="h-12 w-36 rounded max-sm:w-full" />
     </CardContent>
