@@ -786,3 +786,30 @@ test("the disabled flag parses as a boolean, not a string", () => {
   expect(fusaka.disabled).toBe(true)
   expect(parseUpgrades(upgradesLiteral)[0].disabled).toBe(false)
 })
+
+test("a TBD activation date parses as no date", () => {
+  const tbd = upgradesLiteral.replace(
+    "activationDate: 'Dec 3, 2025'",
+    "activationDate: 'TBD'"
+  )
+  expect(parseUpgrades(tbd)[0].activationDate).toBeNull()
+})
+
+test("records after the networkUpgrades array are not read as upgrades", () => {
+  // Upstream added `bpoUpgrades` below `networkUpgrades` with the same record
+  // shape; reading to end of file broke every weekly sync from Oct 16, 2026.
+  const withBpo = `${upgradesLiteral}
+export const bpoUpgrades: BpoUpgrade[] = [
+  {
+    id: 'bpo1',
+    name: 'BPO1',
+    metaEipId: 8134,
+    activationDate: 'Dec 9, 2025',
+  },
+];
+`
+  expect(parseUpgrades(withBpo).map((upgrade) => upgrade.id)).toEqual([
+    "fusaka",
+    "genesis",
+  ])
+})

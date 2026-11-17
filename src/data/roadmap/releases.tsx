@@ -40,8 +40,8 @@ export interface Release {
 export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
     image: BeaconChainImage,
+    upgradeSlug: "beacon-chain",
     releaseName: "Beacon Chain",
-    releaseDate: "2020-12-01T12:00:23.000Z",
     content: (
       <>
         <p>

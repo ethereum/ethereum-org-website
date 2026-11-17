@@ -329,10 +329,7 @@ export const generated = {
     name: "Glamsterdam",
     status: "upcoming",
     mainnetTarget: {
-      when: {
-        year: 2026,
-        quarter: 4,
-      },
+      when: null,
       confirmed: false,
     },
     milestones: [
@@ -465,24 +462,6 @@ export const generated = {
           day: 6,
         },
         status: "complete",
-      },
-      {
-        kind: "testnet",
-        network: "Hoodi",
-        when: {
-          year: 2026,
-          month: 10,
-          day: 27,
-        },
-        status: "anticipated",
-      },
-      {
-        kind: "mainnet",
-        when: {
-          year: 2026,
-          quarter: 4,
-        },
-        status: "projected",
       },
     ],
     eips: [
@@ -787,11 +766,11 @@ export const generated = {
       },
       {
         id: 8015,
-        status: "considered",
+        status: "scheduled",
         networking: false,
         decidedAt: {
-          call: "acdc/187",
-          date: "2026-09-17",
+          call: "acdc/190",
+          date: "2026-10-29",
         },
       },
       {
@@ -831,6 +810,15 @@ export const generated = {
         },
       },
       {
+        id: 8148,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
+        },
+      },
+      {
         id: 8151,
         status: "considered",
         networking: false,
@@ -846,15 +834,6 @@ export const generated = {
         decidedAt: {
           call: "acde/246",
           date: "2026-09-24",
-        },
-      },
-      {
-        id: 8198,
-        status: "considered",
-        networking: false,
-        decidedAt: {
-          call: "acdc/188",
-          date: "2026-10-01",
         },
       },
       {
@@ -903,6 +882,15 @@ export const generated = {
         },
       },
       {
+        id: 8334,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
+        },
+      },
+      {
         id: 8360,
         status: "considered",
         networking: false,
@@ -918,6 +906,24 @@ export const generated = {
         decidedAt: {
           call: "acdc/188",
           date: "2026-10-01",
+        },
+      },
+      {
+        id: 8383,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
+        },
+      },
+      {
+        id: 8411,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
         },
       },
     ],

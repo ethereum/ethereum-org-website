@@ -186,8 +186,17 @@ export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
     )
   }
 
+  // Stop at the array's close: later exports (e.g. `bpoUpgrades`) use the same
+  // record shape and would otherwise be read as network upgrades.
+  const close = source.slice(start).search(/\n\];?\s*(\n|$)/)
+  if (close === -1) {
+    throw new ForkcastSyncError(
+      "networkUpgrades array end not found in upgrades.ts"
+    )
+  }
+
   const blocks = source
-    .slice(start)
+    .slice(start, start + close)
     .split(/\n {2}\{\n/)
     .slice(1)
   if (!blocks.length) {
@@ -250,7 +259,10 @@ export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
       id,
       name,
       status,
-      activationDate: str("activationDate"),
+      // Upstream writes "TBD" for an unannounced date; that is no date, not a
+      // parse failure.
+      activationDate:
+        str("activationDate") === "TBD" ? null : str("activationDate"),
       activationDetails:
         blockNumber !== null && epochNumber !== null && slotNumber !== null
           ? { blockNumber, epochNumber, slotNumber }

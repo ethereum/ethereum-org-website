@@ -133,6 +133,7 @@
   "page-roadmap-upgrade-status-activated": "Activated on mainnet",
   "page-roadmap-upgrade-status-not-confirmed": "Date not yet confirmed",
   "page-roadmap-upgrade-status-next": "Next milestone",
+  "page-roadmap-upgrade-next-milestone": "{milestone}, {date}",
   "page-roadmap-upgrade-status-track": "Track live progress on Forkcast",
   "page-roadmap-upgrade-status-phase-planning": "In planning",
   "page-roadmap-upgrade-status-phase-testnet": "Testing on testnets",

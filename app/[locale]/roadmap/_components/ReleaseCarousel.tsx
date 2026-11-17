@@ -78,7 +78,10 @@ const ReleaseCarousel = () => {
             : null,
           targetConfirmed: upgrade.mainnetTarget.confirmed,
           nextMilestone: next
-            ? `${formatMilestoneLabel(next, t)}, ${formatUpgradeDate(next.when, locale, t)}`
+            ? t("page-roadmap-upgrade-next-milestone", {
+                milestone: formatMilestoneLabel(next, t),
+                date: formatUpgradeDate(next.when, locale, t),
+              })
             : null,
           eipCount: getUpgradeEipCount(upgrade),
         }
@@ -108,7 +111,7 @@ const ReleaseCarousel = () => {
       lastShipped?.upgrade && getMainnetActivationDate(lastShipped.upgrade)
     if (activatedAt) {
       const graceEnd = new Date(activatedAt)
-      graceEnd.setMonth(graceEnd.getMonth() + 2)
+      graceEnd.setUTCMonth(graceEnd.getUTCMonth() + 2)
       if (new Date() <= graceEnd) return shippedCount - 1
     }
 
