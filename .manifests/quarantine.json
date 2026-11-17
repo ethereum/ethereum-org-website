@@ -2,6 +2,28 @@
   "version": 1,
   "entries": [
     {
+      "file": "public/content/developers/docs/consensus-mechanisms/pos/attestations/index.md",
+      "locale": "ko",
+      "englishHash": "81e43bc1d3db",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ko/developers/docs/consensus-mechanisms/pos/attestations/index.md: 1 check(s) failed -- structure jsx-tags: AttestationsDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-17T08:33:43.981Z",
+      "lastSeen": "2026-11-17T08:33:43.981Z",
+      "expiresAt": "2026-12-01T08:33:43.981Z"
+    },
+    {
+      "file": "public/content/developers/docs/consensus-mechanisms/pos/attestations/index.md",
+      "locale": "tr",
+      "englishHash": "81e43bc1d3db",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/tr/developers/docs/consensus-mechanisms/pos/attestations/index.md: 1 check(s) failed -- structure jsx-tags: AttestationsDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-17T08:35:08.572Z",
+      "lastSeen": "2026-11-17T08:35:08.572Z",
+      "expiresAt": "2026-12-01T08:35:08.572Z"
+    },
+    {
       "file": "public/content/developers/docs/frameworks/index.md",
       "locale": "ar",
       "englishHash": "54f5aaea285c",
@@ -341,6 +363,17 @@
       "firstSeen": "2026-11-17T03:22:52.974Z",
       "lastSeen": "2026-11-17T03:22:52.974Z",
       "expiresAt": "2026-12-01T03:22:52.974Z"
+    },
+    {
+      "file": "src/intl/en/component-diagrams.json",
+      "locale": "ja",
+      "englishHash": "5379d9feab09",
+      "class": "gate",
+      "reason": "[gate] src/intl/ja/component-diagrams.json: 6 check(s) failed -- structure json-placeholder: attestations-delay: en={count,delay} tr={delay}; structure json-placeholder: validator-keys-step-deposit: en={amount,count,n,prefix,step} tr={amount,count,prefix,step}; structure json-placeholder: validator-",
+      "attempts": 1,
+      "firstSeen": "2026-11-17T08:20:42.459Z",
+      "lastSeen": "2026-11-17T08:20:42.459Z",
+      "expiresAt": "2026-12-01T08:20:42.459Z"
     },
     {
       "file": "src/intl/en/page-developers-tools-descriptions.json",
