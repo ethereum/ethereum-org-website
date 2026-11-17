@@ -274,7 +274,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 - [**NodeFlare**](https://nodeflare.app/)
   - [Docs](https://nodeflare.app/docs/quick-start)
   - Features
-    - 17 EVM chains including Ethereum, Base, Arbitrum One, Optimism, BNB Chain, and Polygon
+    - 17 EVM chains including Ethereum, Base, Arbitrum One, Optimism, and Unichain
     - Own bare-metal nodes, with gateways in Frankfurt, London, Ashburn, Chicago, Los Angeles, and Singapore
     - Free public endpoint (no API key, 1 request per 10 seconds per IP)
     - Free API key with 3M compute units/month and 10 requests/second, no credit card
