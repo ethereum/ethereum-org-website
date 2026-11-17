@@ -12,16 +12,15 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
+  getKeyDerivationValues,
   getKeyDerivationView,
   KEY_DERIVATION_LAST_STEP,
   KEY_DERIVATION_STEPS,
-  SIGNING_PATH,
-  VALIDATOR_COUNT,
-  WITHDRAWAL_PATH,
 } from "./model"
 import ValidatorKeysRig from "./rig"
 import { useKeyParts } from "./use-key-parts"
@@ -71,6 +70,7 @@ export function KeyDerivationPlayer({
 }: KeyDerivationPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
@@ -81,11 +81,7 @@ export function KeyDerivationPlayer({
   const view = useMemo(() => getKeyDerivationView(step), [step])
   const { labels, definitions, parts } = useKeyParts(PARTS)
 
-  const values = {
-    count: format(VALIDATOR_COUNT),
-    withdrawalPath: WITHDRAWAL_PATH,
-    signingPath: SIGNING_PATH,
-  }
+  const values = getKeyDerivationValues(text)
   const captionFor = (index: number) =>
     t(`validator-keys-derive-step-${KEY_DERIVATION_STEPS[index]}`, {
       ...values,
@@ -97,10 +93,7 @@ export function KeyDerivationPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("validator-keys-derive-caption")}
-      description={t("validator-keys-derive-description", {
-        ...values,
-        ...Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)])),
-      })}
+      description={t("validator-keys-derive-description", values)}
       fig={fig}
       title={t("validator-keys-derive-title")}
       status={t(`validator-keys-derive-status-${view.key}`)}

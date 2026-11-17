@@ -11,10 +11,12 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
+  getNodeClientsValues,
   getNodeClientsView,
   NODE_CLIENTS_LAST_STEP,
   NODE_CLIENTS_STEPS,
@@ -46,6 +48,7 @@ export function NodeClientsPlayer({
 }: NodeClientsPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
@@ -66,10 +69,7 @@ export function NodeClientsPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("node-clients-caption")}
-      description={t(
-        "node-clients-description",
-        Object.fromEntries([1, 2, 3].map((n) => [`step${n}`, format(n)]))
-      )}
+      description={t("node-clients-description", getNodeClientsValues(text))}
       fig={fig}
       title={t("node-clients-title")}
       status={t(`node-clients-status-${view.motion}`)}

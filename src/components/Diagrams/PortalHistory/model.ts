@@ -25,6 +25,8 @@
  *   block is pre-Merge, so clients that prune don't store it.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const PORTAL_HISTORY_SIZE = { width: 490, height: 250 }
 
@@ -116,3 +118,9 @@ export const getPortalHistoryView = (
     verified: step >= at("verify"),
   }
 }
+
+/** Values the figure's strings quote. */
+export const getPortalHistoryValues = ({ number, steps }: DiagramText) => ({
+  block: number(EXAMPLE_BLOCK),
+  ...steps(PORTAL_HISTORY_LAST_STEP),
+})

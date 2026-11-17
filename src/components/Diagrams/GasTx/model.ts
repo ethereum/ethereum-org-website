@@ -173,3 +173,6 @@ export const getGasTxView = (
     captionKey: step ? captionKeys[step] : "gas-tx-step-idle",
   }
 }
+
+/** Values the figure's description quotes: none. */
+export const getGasTxValues = () => ({})

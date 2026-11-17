@@ -13,6 +13,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
@@ -25,10 +26,8 @@ import {
   type AttestationsPresetId,
   type AttestationsView,
   COMMITTEE_BITS,
-  COMMITTEE_MEMBERS,
+  getAttestationsValues,
   getAttestationsView,
-  SIGNED_A,
-  SIGNED_B,
 } from "./model"
 import AttestationsRig from "./rig"
 
@@ -58,6 +57,7 @@ export function AttestationsPlayer({
 }: AttestationsPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<AttestationsPresetId>(initialPreset)
@@ -115,14 +115,7 @@ export function AttestationsPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("attestations-caption")}
-      description={t("attestations-description", {
-        members: format(COMMITTEE_MEMBERS),
-        signedA: format(SIGNED_A),
-        signedB: format(SIGNED_B),
-        ...Object.fromEntries(
-          [1, 2, 3, 4, 5].map((n) => [`step${n}`, format(n)])
-        ),
-      })}
+      description={t("attestations-description", getAttestationsValues(text))}
       fig={fig}
       title={t("attestations-title")}
       status={t(`attestations-status-${view.key}`)}

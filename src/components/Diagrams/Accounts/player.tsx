@@ -13,6 +13,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
@@ -29,6 +30,7 @@ import {
   ADDRESS_BYTES,
   ADDRESS_HEX_CHARS,
   CONTRACT_START_NONCE,
+  getAccountsValues,
   getAccountsView,
   GWEI_PER_ETH,
   STORAGE_BITS,
@@ -64,6 +66,7 @@ export function AccountsPlayer({
   const t = useTranslations("component-diagrams")
   const locale = useLocale()
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const [presetId, setPresetId] = useState<AccountsPresetId>(initialPreset)
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
@@ -135,10 +138,7 @@ export function AccountsPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("accounts-caption")}
-      description={t(
-        "accounts-description",
-        Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)]))
-      )}
+      description={t("accounts-description", getAccountsValues(text))}
       fig={fig}
       title={t("accounts-title")}
       status={t(statusKey, values)}

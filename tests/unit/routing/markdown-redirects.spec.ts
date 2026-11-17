@@ -16,10 +16,15 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import mdRedirects from "../../../md-redirects.config.js"
 
+const AGENT_PAGES = [
+  "developers/docs/gas",
+  "translations/es/developers/docs/gas",
+]
+
 // First match wins and the destination compiles through path-to-regexp,
 // mirroring Next's own resolution (an empty :path* drops its segment).
-const resolve = (pathname: string) => {
-  for (const rule of mdRedirects) {
+const resolve = (pathname: string, agentPages: string[] = []) => {
+  for (const rule of mdRedirects(agentPages)) {
     const result = match(rule.source, { decode: decodeURIComponent })(pathname)
     if (!result) continue
     return compile(rule.destination, { validate: false })(result.params)
@@ -64,6 +69,26 @@ test("real files under /content never match (redirect loop guard)", () => {
   expect(resolve("/contents/foo.md")).toBe("/content/contents/foo/index.md")
 })
 
+test("pages with an agent copy resolve to it, in every form", () => {
+  const gas = "/agent-md/developers/docs/gas/index.md"
+  expect(resolve("/developers/docs/gas.md", AGENT_PAGES)).toBe(gas)
+  expect(
+    resolve(`/${DEFAULT_LOCALE}/developers/docs/gas.md`, AGENT_PAGES)
+  ).toBe(gas)
+  expect(resolve("/es/developers/docs/gas.md", AGENT_PAGES)).toBe(
+    "/agent-md/translations/es/developers/docs/gas/index.md"
+  )
+  // A locale without its own copy keeps its raw translation.
+  expect(resolve("/fr/developers/docs/gas.md", AGENT_PAGES)).toBe(
+    "/content/translations/fr/developers/docs/gas/index.md"
+  )
+  expect(resolve("/developers/docs/evm.md", AGENT_PAGES)).toBe(
+    "/content/developers/docs/evm/index.md"
+  )
+  // The copies are real files too, so they must not loop.
+  expect(resolve(gas, AGENT_PAGES)).toBeNull()
+})
+
 test("non-markdown and unconfigured-locale paths are left alone", () => {
   expect(resolve("/smart-contracts.mdx")).toBeNull()
   expect(resolve("/smart-contracts/")).toBeNull()
@@ -86,7 +111,7 @@ test("the rules register as 307 redirects and no rewrites remain", async () => {
   expect(routes.rewrites.afterFiles).toHaveLength(0)
   expect(routes.rewrites.fallback).toHaveLength(0)
 
-  for (const rule of mdRedirects) {
+  for (const rule of mdRedirects()) {
     const registered = routes.redirects.find((r) => r.source === rule.source)
     expect(registered, rule.source).toBeDefined()
     expect(registered, rule.source).toMatchObject({

@@ -235,7 +235,7 @@ module.exports = (phase) => {
           createRedirect(source, destination, permanent)
         ),
         // Agent-facing markdown source redirects (see md-redirects.config.js)
-        ...mdRedirects,
+        ...mdRedirects(),
       ]
     },
   }

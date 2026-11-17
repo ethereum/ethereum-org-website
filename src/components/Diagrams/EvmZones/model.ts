@@ -8,6 +8,8 @@
  * `getEvmZonesView`.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const EVM_ZONES_SIZE = { width: 400, height: 330 }
 
@@ -102,3 +104,7 @@ export const getEvmZonesView = (requestedStep: number): EvmZonesView => {
     captionKey: `evm-zones-step-${motion}`,
   }
 }
+
+/** Values the figure's description quotes. */
+export const getEvmZonesValues = ({ steps }: DiagramText) =>
+  steps(EVM_ZONES_LAST_STEP)

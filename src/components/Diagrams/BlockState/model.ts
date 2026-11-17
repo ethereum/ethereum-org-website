@@ -24,6 +24,8 @@
  * reverts: Alice 2.2479 + Bob 1.2444 + contract 0 + fees 0.0077 = 3.5.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const BLOCK_STATE_SIZE = { width: 460, height: 330 }
 
@@ -189,5 +191,36 @@ export const getBlockStateView = (
         seal: "deck",
       } as const
     )[motion],
+  }
+}
+
+/** An ETH amount from whole gwei. */
+export const blockStateEth = ({ number, t }: DiagramText, gwei: number) =>
+  t("block-state-eth", {
+    amount: number(gwei / GWEI_PER_ETH, { maximumFractionDigits: 4 }),
+  })
+
+/** Values the figure's strings quote, for a scenario (the first by default). */
+export const getBlockStateValues = (
+  text: DiagramText,
+  presetId: BlockStatePresetId = BLOCK_STATE_PRESET_IDS[0]
+) => {
+  const eth = (gwei: number) => blockStateEth(text, gwei)
+  const [t1, t2, t3] = BLOCK_STATE_TXS
+  return {
+    tx1: text.number(1),
+    tx2: text.number(2),
+    tx3: text.number(3),
+    aliceStart: eth(BLOCK_STATE_START.alice),
+    bobStart: eth(BLOCK_STATE_START.bob),
+    contractStart: eth(BLOCK_STATE_START.contract),
+    t1Value: eth(t1.valueGwei),
+    t1Fee: eth(txFeeGwei(presetId, 0)),
+    t2Value: eth(t2.valueGwei),
+    t2Fee: eth(txFeeGwei("success", 1)),
+    t2RevertFee: eth(txFeeGwei("revert", 1)),
+    t3Value: eth(t3.valueGwei),
+    t3Fee: eth(txFeeGwei(presetId, 2)),
+    ...text.steps(BLOCK_STATE_LAST_STEP),
   }
 }

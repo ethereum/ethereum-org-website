@@ -11,6 +11,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
@@ -18,6 +19,7 @@ import {
   CLIENT_SETUP_LAST_STEP,
   CLIENT_SETUP_STEPS,
   DEFAULT_PORT,
+  getClientSetupValues,
   getClientSetupView,
 } from "./model"
 import NodeClientsRig from "./rig"
@@ -46,6 +48,7 @@ export function ClientSetupPlayer({
 }: ClientSetupPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
@@ -69,10 +72,10 @@ export function ClientSetupPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("node-clients-setup-caption")}
-      description={t("node-clients-setup-description", {
-        ...Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)])),
-        ...values,
-      })}
+      description={t(
+        "node-clients-setup-description",
+        getClientSetupValues(text)
+      )}
       fig={fig}
       title={t("node-clients-setup-title")}
       status={t(`node-clients-setup-status-${view.motion}`, values)}

@@ -11,6 +11,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
@@ -20,6 +21,7 @@ import {
   EVM_ZONES_PARTS,
   EVM_ZONES_STEPS,
   type EvmZonesPart,
+  getEvmZonesValues,
   getEvmZonesView,
   STACK_DEPTH,
 } from "./model"
@@ -48,6 +50,7 @@ export function EvmZonesPlayer({
 }: EvmZonesPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
@@ -86,10 +89,7 @@ export function EvmZonesPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("evm-zones-caption")}
-      description={t(
-        "evm-zones-description",
-        Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)]))
-      )}
+      description={t("evm-zones-description", getEvmZonesValues(text))}
       fig={fig}
       title={t("evm-zones-title")}
       status={t(`evm-zones-status-${view.motion}`)}
