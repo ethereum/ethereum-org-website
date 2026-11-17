@@ -24,3 +24,13 @@ for (const file of files) {
     )
   })
 }
+
+const sharedDir = path.join(REPO_ROOT, "src/lib/jsonld")
+for (const file of readdirSync(sharedDir).filter((f) => f.endsWith(".ts"))) {
+  test(`src/lib/jsonld/${file}`, () => {
+    const src = readFileSync(path.join(sharedDir, file), "utf8")
+    expect(src, "build image URLs from SITE_URL").not.toContain(
+      "https://ethereum.org/images"
+    )
+  })
+}
