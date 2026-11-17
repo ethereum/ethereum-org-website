@@ -15,18 +15,17 @@ Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [tra
 
 Gas označuje jednotku, která měří množství výpočetního úsilí potřebného k provedení konkrétních operací v síti Ethereum.
 
-Vzhledem k tomu, že každá transakce na Ethereu vyžaduje k provedení výpočetní prostředky, musí být tyto prostředky zaplaceny, aby se zajistilo, že Ethereum nebude zranitelné vůči spamu a nemůže uvíznout v nekonečných výpočetních smyčkách. Platba za výpočet se provádí ve formě poplatku za plyn (gas fee).
+Vzhledem k tomu, že každá transakce na Ethereu vyžaduje k provedení výpočetní zdroje, musí být tyto zdroje zaplaceny, aby se zajistilo, že Ethereum nebude zranitelné vůči spamu a nemůže uvíznout v nekonečných výpočetních smyčkách. Platba za výpočet se provádí ve formě poplatku za plyn.
 
-Poplatek za plyn je **množství gasu použitého k provedení nějaké operace vynásobené cenou za jednotku gasu**. Poplatek se platí bez ohledu na to, zda je transakce úspěšná nebo ne.
+Poplatek za plyn je **množství gasu použitého k provedení nějaké operace vynásobené cenou za jednotku gasu**. Poplatek se platí bez ohledu na to, zda je transakce úspěšná nebo selže.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagram upraven z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-Poplatky za plyn se musí platit v nativní měně Etherea, etheru (ETH). Ceny plynu se obvykle uvádějí v Gwei, což je nominální hodnota ETH. Každé Gwei se rovná jedné miliardtině ETH (0,000000001 ETH nebo 10<sup>-9</sup> ETH).
+Poplatky za plyn musí být placeny v nativní měně Etherea, etheru (ETH). Ceny plynu se obvykle uvádějí v Gwei, což je nominální hodnota ETH. Každý Gwei se rovná jedné miliardtině ETH (0,000000001 ETH nebo 10<sup>-9</sup> ETH).
 
-Například místo toho, abyste řekli, že váš gas stojí 0,000000001 etheru, můžete říct, že váš gas stojí 1 Gwei.
+Například místo toho, abyste řekli, že váš gas stojí 0,000000001 etheru, můžete říci, že váš gas stojí 1 Gwei.
 
-Slovo „Gwei“ je zkratka pro „giga-wei“, což znamená „miliarda Wei“. Jedno Gwei se rovná jedné miliardě Wei. Samotné Wei (pojmenované po [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), tvůrci [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) je nejmenší jednotkou ETH.
+Slovo „Gwei“ je zkratka pro „giga-wei“, což znamená „miliarda Wei“. Jeden Gwei se rovná jedné miliardě Wei. Samotný Wei (pojmenovaný po [Wei Daiovi](https://wikipedia.org/wiki/Wei_Dai), tvůrci [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) je nejmenší jednotkou ETH.
 
 ## Jak se počítají poplatky za plyn? {#how-are-gas-fees-calculated}
 
@@ -101,12 +100,11 @@ Můžete explicitně uvést, kolik jste ochotni zaplatit za provedení vaší tr
 
 ## Proč existují poplatky za plyn? {#why-do-gas-fees-exist}
 
-Stručně řečeno, poplatky za plyn pomáhají udržovat síť Ethereum v bezpečí. Požadováním poplatku za každý výpočet provedený v síti bráníme škodlivým aktérům ve spamování sítě. Aby se zabránilo náhodným nebo nepřátelským nekonečným smyčkám nebo jinému plýtvání výpočetním výkonem v kódu, musí každá transakce nastavit limit, kolik výpočetních kroků provádění kódu může použít. Základní jednotkou výpočtu je „gas“.
+Stručně řečeno, poplatky za plyn pomáhají udržovat síť Ethereum v bezpečí. Požadováním poplatku za každý výpočet provedený v síti bráníme škodlivým aktérům ve spamování sítě. Aby se zabránilo náhodným nebo nepřátelským nekonečným smyčkám nebo jinému plýtvání výpočetním výkonem v kódu, každá transakce musí nastavit limit, kolik výpočetních kroků provádění kódu může použít. Základní jednotkou výpočtu je „gas“.
 
-Ačkoli transakce obsahuje limit, jakýkoli gas, který není v transakci použit, se vrací uživateli (např. `max fee - (base fee + tip)` se vrátí).
+Ačkoli transakce obsahuje limit, jakýkoli gas, který není v transakci použit, se uživateli vrátí (např. vrátí se `maximální poplatek - (základní poplatek + prioritní poplatek)`).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagram upraven z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Co je to limit plynu? {#what-is-gas-limit}
 
@@ -130,16 +128,10 @@ Vysoké poplatky za plyn jsou dány popularitou Etherea. Pokud je příliš velk
 
 Pokud chcete sledovat ceny plynu, abyste mohli posílat své ETH levněji, můžete použít mnoho různých nástrojů, jako jsou:
 
-- [Etherscan](https://etherscan.io/gastracker) _Odhadce ceny plynu pro transakce_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _Open source odhadce ceny plynu pro transakce_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Sledujte ceny plynu na Ethereu a L2, abyste snížili transakční poplatky a ušetřili peníze_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Rozšíření pro Chrome pro odhad gasu podporující jak starší transakce typu 0, tak transakce typu 2 EIP-1559._
+- [Etherscan](https://etherscan.io/gastracker) _Odhadce ceny plynu za transakci_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Open source odhadce ceny plynu za transakci_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Sledujte a monitorujte ceny plynu na Ethereu a vrstvě 2 (l2), abyste snížili transakční poplatky a ušetřili peníze_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Vypočítejte si poplatky za plyn ve vaší místní měně pro různé typy transakcí na sítích Mainnet, Arbitrum a Polygon._
-
-## Související nástroje {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API pro odhad gasu poháněné globální datovou platformou mempool od Blocknative_
-- [Gas Network](https://gas.network) Onchain orákula pro gas. Podpora pro více než 35 sítí. 
 
 ## Další čtení {#further-reading}
 
