@@ -22,7 +22,7 @@ const hashBlock = async (n: number, data: string, prev: string) => {
   return keccak256(stringToHex(`${n}|${data}|${prev}`))
 }
 
-const short = (hex: string) => `${hex.slice(0, 8)}…${hex.slice(-4)}`
+const short = (hex: string) => `${hex.slice(0, 6)}…${hex.slice(-4)}`
 
 const ChainTamperWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
@@ -159,45 +159,55 @@ const ChainTamperWidget = ({ onComplete }: WidgetProps) => {
                   </span>
                 </div>
 
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="flex flex-col gap-1">
-                    <label
-                      htmlFor={`${baseId}-${i}`}
-                      className="text-sm font-bold text-body-medium"
-                    >
-                      {t("page-courses-widget-chain-data")}
-                    </label>
-                    <Input
-                      id={`${baseId}-${i}`}
-                      value={value}
-                      onChange={(e) =>
-                        setData(
-                          data.map((d, idx) => (idx === i ? e.target.value : d))
-                        )
-                      }
-                    />
-                  </div>
-                  <dl className="m-0 grid grid-cols-[auto_1fr] content-center gap-x-3 gap-y-1 text-sm">
+                <div className="flex flex-col gap-1">
+                  <label
+                    htmlFor={`${baseId}-${i}`}
+                    className="text-sm font-bold text-body-medium"
+                  >
+                    {t("page-courses-widget-chain-data")}
+                  </label>
+                  <Input
+                    id={`${baseId}-${i}`}
+                    value={value}
+                    onChange={(e) =>
+                      setData(
+                        data.map((d, idx) => (idx === i ? e.target.value : d))
+                      )
+                    }
+                  />
+                </div>
+                <dl className="m-0 grid grid-cols-2 gap-3 text-sm">
+                  <div
+                    className={cn(
+                      "flex flex-col gap-0.5 rounded-lg bg-background-highlight px-3 py-2",
+                      !ok && "bg-error/10"
+                    )}
+                  >
                     <dt className="font-bold text-body-medium">
                       {t("page-courses-widget-chain-prev")}
                     </dt>
                     <dd
                       dir="ltr"
                       className={cn(
-                        "m-0 text-start font-mono",
+                        "m-0 text-start font-mono whitespace-nowrap",
                         !ok && "text-error line-through dark:text-red-400"
                       )}
                     >
                       {prev ? short(prev[i]) : "…"}
                     </dd>
+                  </div>
+                  <div className="flex flex-col gap-0.5 rounded-lg bg-background-highlight px-3 py-2">
                     <dt className="font-bold text-body-medium">
                       {t("page-courses-widget-chain-hash")}
                     </dt>
-                    <dd dir="ltr" className="m-0 text-start font-mono">
+                    <dd
+                      dir="ltr"
+                      className="m-0 text-start font-mono whitespace-nowrap"
+                    >
                       {shownHashes ? short(shownHashes[i]) : "…"}
                     </dd>
-                  </dl>
-                </div>
+                  </div>
+                </dl>
 
                 {!ok && (
                   <Button

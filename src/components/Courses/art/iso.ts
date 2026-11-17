@@ -52,8 +52,12 @@ export const isoProjection = (originX: number, originY: number) => {
     const top = disc(x, y, z + h, r)
     const l = r1(base.cx - base.rx)
     const rt = r1(base.cx + base.rx)
+    const front = `M${l},${top.cy} L${l},${base.cy} A${base.rx},${base.ry} 0 0 0 ${rt},${base.cy} L${rt},${top.cy}`
     return {
-      body: `M${l},${top.cy} L${l},${base.cy} A${base.rx},${base.ry} 0 0 0 ${rt},${base.cy} L${rt},${top.cy} Z`,
+      body: `${front} Z`,
+      // Body plus the back half of the top, for see-through shapes whose
+      // top isn't filled separately
+      silhouette: `${front} A${top.rx},${top.ry} 0 0 0 ${l},${top.cy} Z`,
       top,
       base,
     }

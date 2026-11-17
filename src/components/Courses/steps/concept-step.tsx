@@ -1,8 +1,8 @@
 "use client"
 
+import { Fragment, type ReactNode } from "react"
 import { Lightbulb } from "lucide-react"
 import { useTranslations } from "next-intl"
-import type { ReactNode } from "react"
 
 import type { ConceptStep as ConceptStepData } from "@/data/courses"
 
@@ -27,6 +27,17 @@ const ConceptStep = ({ step, keyFor, title }: ConceptStepProps) => {
   const paragraphs = Array.from(
     { length: step.paragraphs },
     (_, i) => `p${i + 1}`
+  )
+
+  const { list } = step
+  const bullets = list && (
+    <ul className="m-0 flex list-disc flex-col gap-2 ps-6 marker:text-(--course)">
+      {Array.from({ length: list.items }, (_, i) => (
+        <li key={i} className="m-0 ps-1">
+          {t.rich(keyFor(`li${i + 1}`), rich)}
+        </li>
+      ))}
+    </ul>
   )
 
   if (step.takeaway) {
@@ -60,10 +71,12 @@ const ConceptStep = ({ step, keyFor, title }: ConceptStepProps) => {
       )}
       {title}
       <div className="flex flex-col gap-4 text-md leading-relaxed">
-        {paragraphs.map((p) => (
-          <p key={p} className="m-0">
-            {t.rich(keyFor(p), rich)}
-          </p>
+        {list?.after === 0 && bullets}
+        {paragraphs.map((p, i) => (
+          <Fragment key={p}>
+            <p className="m-0">{t.rich(keyFor(p), rich)}</p>
+            {list?.after === i + 1 && bullets}
+          </Fragment>
         ))}
       </div>
     </div>

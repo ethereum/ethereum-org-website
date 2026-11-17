@@ -139,6 +139,7 @@ const LessonPlayer = ({
   const [combo, setCombo] = useState(0)
   const [reward, setReward] = useState<LessonReward | ExamReward | null>(null)
   const [accuracy, setAccuracy] = useState(1)
+  const [firstTryCount, setFirstTryCount] = useState({ right: 0, total: 0 })
 
   const restart = () => {
     trackCourseEvent("Lesson restart", `${courseId}/${lesson.id}`)
@@ -226,10 +227,10 @@ const LessonPlayer = ({
     const results = Object.fromEntries(
       graded.map(({ id }) => [id, !!firstTry[id]])
     )
-    const score = graded.length
-      ? graded.filter(({ id }) => results[id]).length / graded.length
-      : 1
+    const right = graded.filter(({ id }) => results[id]).length
+    const score = graded.length ? right / graded.length : 1
     setAccuracy(score)
+    setFirstTryCount({ right, total: graded.length })
     if (exam)
       trackCourseEvent("Course check complete", courseId, toPercent(score))
     else
@@ -500,6 +501,7 @@ const LessonPlayer = ({
           <LessonComplete
             reward={reward}
             accuracy={accuracy}
+            firstTry={firstTryCount}
             courseHref={courseHref(courseId)}
             nextHref={
               nextLessonId
