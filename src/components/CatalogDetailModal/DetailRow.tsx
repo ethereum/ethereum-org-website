@@ -1,7 +1,7 @@
 import { Info } from "lucide-react"
 import type { ReactNode } from "react"
 
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -43,9 +43,9 @@ const DetailRow = ({
     >
       <span>{label}</span>
       {tooltip && (
-        <Tooltip nested content={<p className="text-body">{tooltip}</p>}>
+        <TrackedTooltip nested content={<p className="text-body">{tooltip}</p>}>
           <Info className="size-4 shrink-0" />
-        </Tooltip>
+        </TrackedTooltip>
       )}
     </div>
     <div className="min-w-0 text-end text-sm">{children}</div>

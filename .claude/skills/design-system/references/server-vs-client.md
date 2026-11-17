@@ -29,7 +29,7 @@ Primitives that handle their own client boundary:
 - `Button` / `ButtonLink` (click tracking + scrollIntoView)
 - `InlineLink` / `BaseLink` (`usePathname` + tracking)
 - `Avatar` (image-error state)
-- `Tooltip` (mobile detection, scroll-close)
+- `TrackedTooltip` (mobile detection, scroll-close)
 - `Modal` / `Dialog` / `Sheet` / `Popover` / `DropdownMenu` / `Select` (open state)
 - `Tabs`, `Accordion`, `TabNav` (active-state)
 - `Carousel`, `Swiper`, `TerminalTypewriter`, `TruncatedText` (animation/state)
@@ -39,9 +39,9 @@ Primitives that handle their own client boundary:
 
 `useTranslations` (client) and `getTranslations` (server) serve the same purpose for content. **Don't mark a file `"use client"` just to use `useTranslations`.** Restructure: keep the parent server, let it call `getTranslations`, pass the translated strings down as props.
 
-The `t()` functions returned by these are *similar but not strictly equivalent* -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths. If a change touches both, test both. Don't assume swapping `useTranslations` for `getTranslations` (or vice versa) is a no-op.
+The `t()` functions returned by these are _similar but not strictly equivalent_ -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths. If a change touches both, test both. Don't assume swapping `useTranslations` for `getTranslations` (or vice versa) is a no-op.
 
-### `<Translation>` is server-renderable -- *except* with a glossary link
+### `<Translation>` is server-renderable -- _except_ with a glossary link
 
 `@/components/Translation` renders fine in a Server Component and needs no `I18nProvider`, with one catch: it maps `<a>` tags in the string to `TooltipLink`, and when an href matches `/glossary/#term` that becomes `GlossaryTooltip` -- a `"use client"` component that reads the `glossary-tooltip` namespace from the **client** context. So a `<Translation>` whose string contains a glossary link (e.g. `...keeps Ethereum <a href="/glossary/#anti-sybil">Sybil-resistant</a>...`) must sit inside an `I18nProvider` carrying that namespace. A plain link (`href="/foo"`) does not trigger this -- `TooltipLink` only swaps to the glossary tooltip for `/glossary/#`. Rule of thumb when deciding whether a page needs a provider: grep its `<Translation>` strings for `/glossary/#` (and account for genuine client widgets like quiz/exchange tables); `common`-only client components such as `ContentFeedback` are already covered by the layout-level provider.
 
@@ -65,7 +65,7 @@ export default async function Page() {
     <main>
       <h1>{t("title")}</h1>
       <p>{t("description")}</p>
-      <ClientWidget />  {/* Only this becomes client */}
+      <ClientWidget /> {/* Only this becomes client */}
     </main>
   )
 }
@@ -75,7 +75,9 @@ export default async function Page() {
 // app/[locale]/client-widget.tsx
 "use client"
 import { useState } from "react"
-export function ClientWidget() { /* ... */ }
+export function ClientWidget() {
+  /* ... */
+}
 ```
 
 ### Server Components can be `async`

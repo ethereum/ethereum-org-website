@@ -10,7 +10,7 @@ import {
 } from "lucide-react"
 
 import AutoplayIcon from "@/components/icons/listen-to/autoplay.svg"
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
 import { isMobile } from "@/lib/utils/isMobile"
@@ -26,9 +26,9 @@ const PlayerButton = ({
   return isMobile() ? (
     children
   ) : (
-    <Tooltip content={tooltipContent} asChild>
+    <TrackedTooltip content={tooltipContent} asChild>
       {children}
-    </Tooltip>
+    </TrackedTooltip>
   )
 }
 
@@ -149,7 +149,7 @@ const PlayerWidget = ({
       >
         <div className="flex justify-between">
           <p className="text-sm leading-base font-bold">{title}</p>
-          <Tooltip content={"Collapse"} asChild>
+          <TrackedTooltip content={"Collapse"} asChild>
             <button
               className="cursor-pointer text-body-medium hover:text-body"
               aria-label={"Collapse"}
@@ -164,7 +164,7 @@ const PlayerWidget = ({
             >
               <Minimize2 className="-m-1 stroke-1" />
             </button>
-          </Tooltip>
+          </TrackedTooltip>
         </div>
         <div className="flex items-center justify-between">
           <div

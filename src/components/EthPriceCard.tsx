@@ -3,7 +3,7 @@
 import { ArrowUpRight, Info } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
 import { Skeleton } from "@/components/ui/skeleton"
 
@@ -45,9 +45,9 @@ const EthPriceCard = ({
     >
       <h4 className="m-0 flex items-center text-sm leading-xs font-medium tracking-wider uppercase">
         {t("eth-current-price")}&nbsp;
-        <Tooltip content={tooltipContent}>
+        <TrackedTooltip content={tooltipContent}>
           <Info className="size-[0.875em] text-sm" />
-        </Tooltip>
+        </TrackedTooltip>
       </h4>
 
       <div className="flex w-full items-center justify-center text-4xl leading-xs">

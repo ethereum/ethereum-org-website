@@ -10,7 +10,7 @@ import CatalogItemLayout, {
 } from "@/components/CatalogItem"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { XCircle } from "@/components/icons/XCircle"
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 
 import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -116,12 +116,12 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
         )}
         <p className={supported ? "text-body" : "text-disabled"}>
           {t(feature.labelKey)}
-          <Tooltip
+          <TrackedTooltip
             nested
             content={<p className="text-body">{t(feature.descKey)}</p>}
           >
             <Info className="ms-1 inline size-[0.875em] translate-y-0.5" />
-          </Tooltip>
+          </TrackedTooltip>
         </p>
       </li>
     )

@@ -2,7 +2,7 @@
 
 import React, { ReactNode } from "react"
 
-import Tooltip, { type TooltipProps } from "@/components/Tooltip"
+import TrackedTooltip, { type TooltipProps } from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import InlineLink from "@/components/ui/Link"
 
@@ -25,7 +25,7 @@ const GlossaryTooltip = ({
 
   return (
     <span className="inline-block">
-      <Tooltip
+      <TrackedTooltip
         {...props}
         content={
           <div className="flex flex-col items-stretch gap-2 text-start">
@@ -66,7 +66,7 @@ const GlossaryTooltip = ({
         <u className="cursor-help decoration-dotted underline-offset-3 hover:text-primary-hover hover:decoration-primary-hover">
           {children}
         </u>
-      </Tooltip>
+      </TrackedTooltip>
     </span>
   )
 }

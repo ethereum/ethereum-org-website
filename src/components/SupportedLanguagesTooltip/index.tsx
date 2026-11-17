@@ -1,4 +1,4 @@
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 
 import { formatStringList } from "@/lib/utils/wallets"
 
@@ -24,8 +24,8 @@ export const SupportedLanguagesTooltip = ({
   const tooltipContent = formatStringList(supportedLanguages.slice(shown))
 
   return (
-    <Tooltip content={tooltipContent}>
+    <TrackedTooltip content={tooltipContent}>
       <span className="text-md font-normal text-primary">+ {rest}</span>
-    </Tooltip>
+    </TrackedTooltip>
   )
 }

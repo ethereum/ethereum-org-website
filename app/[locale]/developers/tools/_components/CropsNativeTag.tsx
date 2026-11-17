@@ -1,6 +1,6 @@
 import { Info } from "lucide-react"
 
-import Tooltip from "@/components/Tooltip"
+import TrackedTooltip from "@/components/Tooltip"
 import { BaseLink } from "@/components/ui/Link"
 import { Tag, type TagProps } from "@/components/ui/tag"
 
@@ -28,11 +28,14 @@ const CropsNativeTag = ({
     >
       {label}
     </BaseLink>
-    <Tooltip asChild content={<p className="text-body">{description}</p>}>
+    <TrackedTooltip
+      asChild
+      content={<p className="text-body">{description}</p>}
+    >
       <button type="button" aria-label={infoLabel} className="rounded-full">
         <Info aria-hidden className="size-3 shrink-0" />
       </button>
-    </Tooltip>
+    </TrackedTooltip>
   </Tag>
 )
 
