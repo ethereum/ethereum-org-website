@@ -4,13 +4,13 @@ description: Maelezo ya funguo zinazotumika katika utaratibu wa mwafaka wa Uthib
 lang: sw
 ---
 
-Ethereum hulinda rasilimali za watumiaji ikitumia kriptografia ya ufunguo wa umma na ufunguo wa siri. Ufunguo wa umma hutumika kama msingi wa anwani ya Ethereum—yaani, unaonekana kwa umma kwa ujumla na hutumika kama kitambulisho cha kipekee. Ufunguo wa siri (au 'wa faragha') unapaswa kufikiwa tu na mmiliki wa akaunti. Ufunguo wa siri hutumika 'kusaini' miamala na data ili kriptografia iweze kuthibitisha kuwa mmiliki anaidhinisha kitendo fulani cha ufunguo wa siri mahususi.
+Ethereum inalinda mali za watumiaji ikitumia kriptografia ya ufunguo wa umma na ufunguo wa siri. Ufunguo wa umma unatumika kama msingi wa anwani ya Ethereum—yaani, unaonekana kwa umma kwa ujumla na unatumika kama kitambulisho cha kipekee. Ufunguo wa siri (au 'wa faragha') unapaswa kufikiwa tu na mmiliki wa akaunti. Ufunguo wa siri unatumika 'kusaini' miamala na data ili kriptografia iweze kuthibitisha kuwa mmiliki anaidhinisha kitendo fulani cha ufunguo wa siri mahususi.
 
-Funguo za Ethereum huzalishwa kwa kutumia [kriptografia ya elliptic-curve](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
+Funguo za Ethereum zinazalishwa kwa kutumia [kriptografia ya tao la duaradufu](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
-Hata hivyo, wakati Ethereum ilipobadilika kutoka [Uthibitisho wa Kazi (PoW)](/developers/docs/consensus-mechanisms/pow) kwenda [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos) aina mpya ya ufunguo iliongezwa kwenye Ethereum. Funguo za asili bado zinafanya kazi sawa na hapo awali—hakukuwa na mabadiliko kwenye funguo zinazotegemea elliptic-curve zinazolinda akaunti. Hata hivyo, watumiaji walihitaji aina mpya ya ufunguo kwa ajili ya kushiriki katika Uthibitisho wa Dau (PoS) kwa kuweka dhamana ya ETH na kuendesha wathibitishaji. Uhitaji huu ulitokana na changamoto za uwezo wa kupanuka zinazohusiana na jumbe nyingi zinazopita kati ya idadi kubwa ya wathibitishaji ambazo zilihitaji mbinu ya kriptografia inayoweza kujumlishwa kwa urahisi ili kupunguza kiasi cha mawasiliano kinachohitajika kwa mtandao kufikia mwafaka.
+Hata hivyo, wakati Ethereum ilipobadilika kutoka kwenye [Uthibitisho wa Kazi (PoW)](/developers/docs/consensus-mechanisms/pow) kwenda kwenye [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos) aina mpya ya ufunguo iliongezwa kwenye Ethereum. Funguo za asili bado zinafanya kazi sawa na hapo awali—hakukuwa na mabadiliko kwenye funguo zinazotegemea tao la duaradufu zinazolinda akaunti. Hata hivyo, watumiaji walihitaji aina mpya ya ufunguo kwa ajili ya kushiriki katika Uthibitisho wa Dau (PoS) kwa kuweka dhamana ya ETH na kuendesha wathibitishaji. Uhitaji huu ulitokana na changamoto za upanuzi zinazohusiana na jumbe nyingi zinazopita kati ya idadi kubwa ya wathibitishaji ambazo zilihitaji mbinu ya kriptografia ambayo ingeweza kujumuishwa kwa urahisi ili kupunguza kiasi cha mawasiliano kinachohitajika kwa mtandao kufikia mwafaka.
 
-Aina hii mpya ya ufunguo inatumia [mpango wa sahihi wa **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS inawezesha ujumuishaji mzuri sana wa sahihi lakini pia inaruhusu uhandisi wa kinyume wa funguo za wathibitishaji binafsi zilizojumuishwa na ni bora kwa kusimamia vitendo kati ya wathibitishaji.
+Aina hii mpya ya ufunguo inatumia [mpango wa sahihi wa **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). Sahihi za BLS kutoka kwa wathibitishaji wengi zinaweza kujumuishwa kuwa sahihi moja ambayo inathibitishwa katika ukaguzi mmoja, jambo ambalo linafanya jumbe za mwafaka kuwa ndogo. BLS si salama dhidi ya kompyuta za kwanta (quantum-safe), kwa hivyo [ramani ya njia ya baada ya kwanta](/roadmap/security/quantum-resistance/) inapanga kubadilisha funguo za BLS za mthibitishaji na funguo zinazotegemea heshi.
 
 ## Aina mbili za funguo za mthibitishaji {#two-types-of-keys}
 
@@ -37,39 +37,39 @@ Unyumbufu huu una faida ya kuhamisha funguo za kusaini za mthibitishaji haraka s
 
 ### Vitambulisho vya uondoaji {#withdrawal-credentials}
 
-Kila mthibitishaji ana sifa inayojulikana kama _vitambulisho vya uondoaji_. Baiti ya kwanza ya uwanja huu wa baiti 32 inatambulisha aina ya akaunti: `0x00` inawakilisha vitambulisho asili vya BLS (kabla ya Shapella, visivyoweza kutolewa), `0x01` inawakilisha vitambulisho vya zamani vinavyoelekeza kwenye anwani ya tabaka la utekelezaji, na `0x02` inawakilisha aina ya kisasa ya kitambulisho cha kujumuisha.
+Kila mthibitishaji ana sifa inayojulikana kama _vitambulisho vya uondoaji_. Baiti ya kwanza ya uwanja huu wa baiti 32 inatambulisha aina ya akaunti: `0x00` inawakilisha vitambulisho vya zamani vya BLS (kabla ya Shapella, visivyoweza kutolewa), `0x01` inawakilisha vitambulisho vya zamani vinavyoelekeza kwenye anwani ya utekelezaji, na `0x02` inawakilisha aina ya kisasa ya vitambulisho vya kujumuisha.
 
-Wathibitishaji wenye funguo za BLS za `0x00` lazima wasasishe vitambulisho hivi ili kuelekeza kwenye anwani ya tabaka la utekelezaji ili kuwezesha malipo ya salio la ziada au utoaji kamili kutoka kwenye uwekaji dhamana. Hili linaweza kufanywa kwa kutoa anwani ya tabaka la utekelezaji katika data ya amana wakati wa uzalishaji wa awali wa ufunguo, _AU_ kwa kutumia ufunguo wa utoaji baadaye kusaini na kutangaza ujumbe wa `BLSToExecutionChange`.
+Wathibitishaji wenye funguo za BLS za `0x00` lazima wasasishe vitambulisho hivi ili kuelekeza kwenye anwani ya utekelezaji ili kuwezesha malipo ya salio la ziada au utoaji kamili kutoka kwenye uwekaji dhamana. Hili linaweza kufanywa kwa kutoa anwani ya utekelezaji katika data ya amana wakati wa uzalishaji wa awali wa ufunguo, _AU_ kwa kutumia ufunguo wa utoaji baadaye kusaini na kutangaza ujumbe wa `BLSToExecutionChange`. Mapendekezo ya kuondoa taratibu vitambulisho vya `0x00` kabla ya mpito wa baada ya kwanta yanajadiliwa, kwa hivyo wathibitishaji ambao bado wanatumia `0x00` wanapaswa kubadilisha sasa.
 
 [Zaidi kuhusu vitambulisho vya uondoaji vya mthibitishaji](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
 ### Ufunguo wa utoaji {#withdrawal-key}
 
-Ufunguo wa utoaji utahitajika ili kusasisha vitambulisho vya uondoaji kuelekeza kwenye anwani ya tabaka la utekelezaji, ikiwa haikuwekwa wakati wa amana ya awali. Hii itawezesha malipo ya salio la ziada kuanza kushughulikiwa, na pia itaruhusu watumiaji kufanya utoaji kamili wa ETH zao walizoweka dhamana.
+Ufunguo wa utoaji utahitajika ili kusasisha vitambulisho vya uondoaji kuelekeza kwenye anwani ya utekelezaji, ikiwa haikuwekwa wakati wa amana ya awali. Hii itawezesha malipo ya salio la ziada kuanza kuchakatwa, na pia itaruhusu watumiaji kutoa kikamilifu ETH zao walizoweka dhamana.
 
 Kama tu funguo za mthibitishaji, funguo za utoaji pia zinajumuisha vipengele viwili:
 
 - Ufunguo wa **siri** wa utoaji
 - Ufunguo wa **umma** wa utoaji
 
-Kupoteza ufunguo huu kabla ya kusasisha vitambulisho vya uondoaji kuwa aina ya `0x01` inamaanisha kupoteza ufikiaji wa salio la mthibitishaji. Mthibitishaji bado anaweza kusaini uthibitisho na vitalu kwa kuwa vitendo hivi vinahitaji ufunguo wa siri wa mthibitishaji, hata hivyo kuna motisha ndogo au hakuna kabisa ikiwa funguo za utoaji zimepotea.
+Kupoteza ufunguo huu kabla ya kusasisha vitambulisho vya uondoaji kuwa aina ya `0x01` inamaanisha kupoteza ufikiaji wa salio la mthibitishaji. Mthibitishaji bado anaweza kusaini thibitisho na vitalu kwa kuwa vitendo hivi vinahitaji ufunguo wa siri wa mthibitishaji, hata hivyo kuna motisha ndogo au hakuna kabisa ikiwa funguo za utoaji zimepotea.
 
-Kutenganisha funguo za mthibitishaji na funguo za akaunti ya Ethereum kunawezesha wathibitishaji wengi kuendeshwa na mtumiaji mmoja.
+Kutenganisha funguo za mthibitishaji na funguo za akaunti ya Ethereum kunawezesha wathibitishaji wengi kuendeshwa na mtumiaji mmoja. Kwa vitambulisho vya `0x02`, mthibitishaji mmoja anaweza kushikilia hadi ETH 2,048, kwa hivyo dhamana kubwa haihitaji tena kugawanywa kwa wathibitishaji wengi.
 
-![validator key schematic](validator-key-schematic.png)
+<ValidatorKeysDiagram />
 
-**Kumbuka**: Kujitoa kwenye majukumu ya uwekaji dhamana na kufanya utoaji wa salio la mthibitishaji kwa sasa kunahitaji kusaini [ujumbe wa kujitoa kwa hiari (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) kwa kutumia ufunguo wa mthibitishaji. Hata hivyo, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) ni pendekezo ambalo litaruhusu mtumiaji kuanzisha kujitoa kwa mthibitishaji na kufanya utoaji wa salio lake kwa kusaini jumbe za kujitoa kwa kutumia ufunguo wa utoaji katika siku zijazo. Hii itapunguza dhana za uaminifu kwa kuwezesha waweka dhamana wanaokaimisha ETH kwa [watoa huduma za uwekaji dhamana](/staking/saas/#what-is-staking-as-a-service) kuendelea kudhibiti fedha zao.
+**Kumbuka**: Mthibitishaji anaweza kujitoa kwa kusaini [ujumbe wa kujitoa kwa hiari (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) kwa kutumia ufunguo wa mthibitishaji. Tangu sasisho la Pectra, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) pia inaruhusu anwani ya utoaji kuanzisha kujitoa kwa mthibitishaji, na utoaji wa kiasi kwa wathibitishaji wa `0x02`. Hii inapunguza dhana za uaminifu kwa kuruhusu waweka dhamana wanaokaimisha ETH kwa [watoa huduma za kuweka hisa kama huduma](/staking/saas/#what-is-staking-as-a-service) kubaki na udhibiti wa fedha zao.
 
 ## Kuzalisha funguo kutoka kwenye kirai cha mbegu {#deriving-keys-from-seed}
 
-Ikiwa kila ETH 32 zilizowekwa dhamana zingehitaji seti mpya ya funguo 2 zinazojitegemea kabisa, usimamizi wa funguo ungekuwa mgumu haraka, hasa kwa watumiaji wanaoendesha wathibitishaji wengi. Badala yake, funguo nyingi za mthibitishaji zinaweza kuzalishwa kutoka kwenye siri moja ya kawaida na kuhifadhi siri hiyo moja kunaruhusu ufikiaji wa funguo nyingi za mthibitishaji.
+Ikiwa kila ETH 32 zilizowekwa dhamana zingehitaji seti mpya ya funguo 2 zinazojitegemea kabisa, usimamizi wa ufunguo ungekuwa mgumu haraka, hasa kwa watumiaji wanaoendesha wathibitishaji wengi. Badala yake, funguo nyingi za mthibitishaji zinaweza kuzalishwa kutoka kwenye siri moja ya kawaida na kuhifadhi siri hiyo moja kunaruhusu ufikiaji wa funguo nyingi za mthibitishaji.
 
-[Nemoniki (Mnemonics)](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) na njia ni vipengele muhimu ambavyo watumiaji mara nyingi hukutana navyo wakati [wanafikia](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) mikoba yao. Nemoniki ni mfuatano wa maneno ambayo hufanya kazi kama mbegu ya awali kwa ufunguo wa siri. Inapounganishwa na data ya ziada, nemoniki inazalisha heshi inayojulikana kama 'ufunguo mkuu'. Hii inaweza kufikiriwa kama mzizi wa mti. Matawi kutoka kwenye mzizi huu yanaweza kuzalishwa kwa kutumia njia ya kihierarkia ili nodi tanzu ziweze kuwepo kama michanganyiko ya heshi ya nodi mzazi wao na faharisi yao kwenye mti. Soma kuhusu viwango vya [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) na [BIP-19](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) kwa ajili ya uzalishaji wa ufunguo unaotegemea nemoniki.
+[Nemoniki (Mnemonics)](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) na njia ni vipengele muhimu ambavyo watumiaji mara nyingi hukutana navyo wakati [wanafikia](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) mikoba yao. Nemoniki ni mfuatano wa maneno ambayo hufanya kazi kama mbegu ya awali kwa ufunguo wa siri. Inapounganishwa na data ya ziada, nemoniki inazalisha heshi inayojulikana kama 'ufunguo mkuu'. Hii inaweza kufikiriwa kama mzizi wa mti. Matawi kutoka kwenye mzizi huu yanaweza kisha kuzalishwa kwa kutumia njia ya kimuundo ili nodi tanzu ziweze kuwepo kama michanganyiko ya heshi ya nodi mzazi wao na faharisi yao kwenye mti. Soma kuhusu viwango vya [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) na [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) kwa uzalishaji wa ufunguo unaotegemea nemoniki.
 
-Njia hizi zina muundo ufuatao, ambao utakuwa unafahamika kwa watumiaji ambao wametumia mikoba ya maunzi:
+Njia hizi zina muundo ufuatao, ambao utafahamika kwa watumiaji ambao wametumia mikoba ya maunzi:
 
 ```
-m/44'/60'/0'/0`
+m/44'/60'/0'/0
 ```
 
 Mikwaju katika njia hii inatenganisha vipengele vya ufunguo wa siri kama ifuatavyo:
@@ -81,7 +81,7 @@ master_key / purpose / coin_type / account / change / address_index
 Mantiki hii inawezesha watumiaji kuunganisha wathibitishaji wengi iwezekanavyo kwenye **kirai cha nemoniki** kimoja kwa sababu mzizi wa mti unaweza kuwa wa kawaida, na utofautishaji unaweza kutokea kwenye matawi. Mtumiaji anaweza **kuzalisha idadi yoyote ya funguo** kutoka kwenye kirai cha nemoniki.
 
 ```
-[m / 0]
+      [m / 0]
      /
     /
 [m] - [m / 1]
@@ -90,9 +90,9 @@ Mantiki hii inawezesha watumiaji kuunganisha wathibitishaji wengi iwezekanavyo k
       [m / 2]
 ```
 
-Kila tawi linatenganishwa na `/` kwa hivyo `m/2` inamaanisha anza na ufunguo mkuu na ufuate tawi la 2. Katika mchoro hapa chini kirai kimoja cha nemoniki kinatumika kuhifadhi funguo tatu za utoaji, kila moja ikiwa na wathibitishaji wawili wanaohusishwa.
+Kila tawi linatenganishwa na `/` kwa hivyo `m/2` inamaanisha anza na ufunguo mkuu na ufuate tawi la 2. Funguo za mthibitishaji zinafuata [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334): mthibitishaji `i` anapata ufunguo wake wa utoaji kwenye `m/12381/3600/i/0` na ufunguo wake wa kusaini kwenye `m/12381/3600/i/0/0` (12381 inatambulisha tao la BLS12-381, 3600 aina ya sarafu kwa funguo za tabaka la mwafaka).
 
-![validator key logic](multiple-keys.png)
+<KeyDerivationDiagram />
 
 ## Kusoma zaidi {#further-reading}
 

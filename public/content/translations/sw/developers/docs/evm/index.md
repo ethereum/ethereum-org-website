@@ -10,14 +10,13 @@ Mashine Pepe ya Ethereum (EVM) ni mazingira pepe yaliyogatuliwa ambayo hutekelez
 
 Uelewa wa kimsingi wa istilahi za kawaida katika sayansi ya kompyuta kama vile [baiti](https://wikipedia.org/wiki/Byte), [kumbukumbu](https://wikipedia.org/wiki/Computer_memory), na [staki](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) ni muhimu ili kuelewa EVM. Pia itakuwa na manufaa kuwa na uelewa mzuri wa dhana za kriptografia/mnyororo wa vitalu kama vile [fomula za heshi](https://wikipedia.org/wiki/Cryptographic_hash_function) na [mti wa Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
-## Kutoka leja hadi mashine ya hali {#from-ledger-to-state-machine}
+## Kutoka kwenye leja hadi kwenye mashine ya hali {#from-ledger-to-state-machine}
 
-Mfano wa 'leja iliyosambazwa' mara nyingi hutumika kuelezea minyororo ya vitalu kama Bitcoin, ambayo huwezesha sarafu-fiche iliyogatuliwa kwa kutumia zana za kimsingi za kriptografia. Leja hutunza rekodi ya shughuli ambayo lazima ifuate seti ya sheria zinazosimamia kile ambacho mtu anaweza na hawezi kufanya ili kurekebisha leja. Kwa mfano, anwani ya Bitcoin haiwezi kutumia Bitcoin nyingi zaidi ya ilivyopokea hapo awali. Sheria hizi ndizo msingi wa miamala yote kwenye Bitcoin na minyororo mingine mingi ya vitalu.
+Mlinganisho wa 'leja iliyosambazwa' mara nyingi hutumika kuelezea minyororo ya vitalu kama vile Bitcoin, ambayo huwezesha sarafu-fiche iliyogatuliwa kwa kutumia zana za kimsingi za kriptografia. Leja hudumisha rekodi ya shughuli ambayo lazima ifuate seti ya sheria zinazotawala kile ambacho mtu anaweza na hawezi kufanya ili kurekebisha leja. Kwa mfano, anwani ya Bitcoin haiwezi kutumia Bitcoin nyingi zaidi ya zile ilizopokea hapo awali. Sheria hizi ndizo msingi wa miamala yote kwenye Bitcoin na minyororo mingine mingi ya vitalu.
 
-Ingawa Ethereum ina sarafu-fiche yake asili (Etha) ambayo inafuata karibu sheria zilezile zinazoeleweka, pia inawezesha utendaji wenye nguvu zaidi: [mikataba mahiri](/developers/docs/smart-contracts/). Kwa kipengele hiki changamano zaidi, mfano wa hali ya juu zaidi unahitajika. Badala ya leja iliyosambazwa, Ethereum ni [mashine ya hali](https://wikipedia.org/wiki/Finite-state_machine) iliyosambazwa. Hali ya Ethereum ni muundo mkubwa wa data ambao haushikilii tu akaunti na salio zote, bali _hali ya mashine_, ambayo inaweza kubadilika kutoka kitalu hadi kitalu kulingana na seti ya sheria zilizobainishwa mapema, na ambayo inaweza kutekeleza msimbo wowote wa mashine. Sheria mahususi za kubadilisha hali kutoka kitalu hadi kitalu hufafanuliwa na EVM.
+Ingawa Ethereum ina sarafu-fiche yake asili (Etha) ambayo inafuata karibu sheria zilezile zinazoeleweka kwa urahisi, pia inawezesha utendaji wenye nguvu zaidi: [mikataba mahiri](/developers/docs/smart-contracts/). Kwa kipengele hiki changamano zaidi, mlinganisho wa kisasa zaidi unahitajika. Badala ya leja iliyosambazwa, Ethereum ni [mashine ya hali](https://wikipedia.org/wiki/Finite-state_machine) iliyosambazwa. Hali ya Ethereum ni muundo mkubwa wa data ambao haushikilii tu akaunti na salio zote, bali pia _hali ya mashine_, ambayo inaweza kubadilika kutoka kitalu hadi kitalu kulingana na seti ya sheria zilizobainishwa mapema, na ambayo inaweza kutekeleza msimbo wowote wa mashine. Sheria mahususi za kubadilisha hali kutoka kitalu hadi kitalu hufafanuliwa na EVM.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## Fomula ya mpito wa hali ya Ethereum {#the-ethereum-state-transition-function}
 
@@ -55,22 +54,21 @@ Mikataba ina trie ya _hifadhi_ ya Merkle Patricia (kama safu ya maneno inayoelek
 
 ### Misimbo ya operesheni {#opcodes}
 
-Msimbo wa baiti wa mkataba mahiri uliokusanywa hutekelezwa kama idadi ya [misimbo ya operesheni](/developers/docs/evm/opcodes) ya EVM, ambayo hufanya operesheni za kawaida za staki kama vile `XOR`, `AND`, `ADD`, `SUB`, n.k. EVM pia hutekeleza idadi ya operesheni za staki mahususi kwa mnyororo wa vitalu, kama vile `ADDRESS`, `BALANCE`, `BLOCKHASH`, n.k. Seti ya msimbo wa operesheni pia inajumuisha `TSTORE` na `TLOAD`, ambayo hutoa ufikiaji wa hifadhi ya muda.
+Msimbo wa baiti wa mkataba mahiri uliokusanywa hutekelezwa kama idadi ya [misimbo ya operesheni](/developers/docs/evm/opcodes) ya EVM, ambayo hufanya operesheni za kawaida za staki kama vile `XOR`, `AND`, `ADD`, `SUB`, n.k. EVM pia hutekeleza idadi ya operesheni za staki mahususi kwa mnyororo wa vitalu, kama vile `ADDRESS`, `BALANCE`, `BLOCKHASH`, n.k. Seti ya misimbo ya operesheni pia inajumuisha `TSTORE` na `TLOAD`, ambazo hutoa ufikiaji wa hifadhi ya muda.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Michoro imechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## Utekelezaji wa EVM {#evm-implementations}
 
-Utekelezaji wote wa EVM lazima ufuate vipimo vilivyoelezwa katika Waraka wa Manjano wa Ethereum.
+Utekelezaji wote wa EVM lazima ufuate vipimo vilivyoelezwa kwenye Waraka wa Manjano wa Ethereum.
 
-Katika historia ya miaka kumi ya Ethereum, EVM imepitia marekebisho kadhaa, na kuna utekelezaji kadhaa wa EVM katika lugha mbalimbali za programu.
+Katika historia ya miaka kumi ya Ethereum, EVM imepitia masahihisho kadhaa, na kuna utekelezaji kadhaa wa EVM katika lugha mbalimbali za programu.
 
-[Viteja vya utekelezaji wa Ethereum](/developers/docs/nodes-and-clients/#execution-clients) vinajumuisha utekelezaji wa EVM. Zaidi ya hayo, kuna utekelezaji mwingi wa kujitegemea, ikiwa ni pamoja na:
+[Wateja wa utekelezaji wa Ethereum](/developers/docs/nodes-and-clients/#execution-clients) hujumuisha utekelezaji wa EVM. Zaidi ya hayo, kuna utekelezaji mwingi unaojitegemea, ikiwa ni pamoja na:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Usomaji Zaidi {#further-reading}
