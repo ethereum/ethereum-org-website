@@ -94,6 +94,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             {t("page-gas-hero-subtitle-1")}
             <br />
             {t("page-gas-hero-subtitle-2")}
+            {t("page-gas-qa-missing-key")}
+            {t("common:learn-more")}
           </>
         }
         buttons={[

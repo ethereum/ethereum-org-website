@@ -1,3 +1,4 @@
+// https://ethereum.org/images/qa.png
 import { getTranslations } from "next-intl/server"
 
 import { FileContributor, Lang } from "@/lib/types"
