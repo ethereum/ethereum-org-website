@@ -16,10 +16,10 @@
  * - EIP-7540: https://eips.ethereum.org/EIPS/eip-7540. requestDeposit
  *   transfers the assets in; requestRedeem takes control of the shares.
  *   Pending to Claimable is up to the vault (it MAY skip Pending, MUST NOT
- *   skip Claimable) and emits no event. The claim is a separate call to
- *   deposit/mint or redeem/withdraw, which no longer move the assets or
- *   shares the request already moved. The exchange rate is up to the
- *   vault; the figures price at fulfillment, the usual choice.
+ *   skip Claimable) and the spec defines no event for it. The claim is a
+ *   separate call to deposit/mint or redeem/withdraw, which no longer move
+ *   the assets or shares the request already moved. The exchange rate is
+ *   up to the vault; the figures price at fulfillment, the usual choice.
  *
  * The example is a vault with no fees holding 1,050 assets for 1,000 shares
  * (1.05 assets a share, after some yield), capped at 5,000 assets; the

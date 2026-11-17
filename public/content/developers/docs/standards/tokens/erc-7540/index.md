@@ -6,7 +6,7 @@ lang: en
 
 ## Introduction {#introduction}
 
-ERC-7540 extends the [ERC-4626 Tokenized Vault Standard](/developers/docs/standards/tokens/erc-4626/) by adding support for asynchronous deposit and redemption flows. It introduces a request-then-claim pattern: users first submit a request (locking their assets or shares), then claim the result after the vault has processed it.
+ERC-7540 extends the [ERC-4626 Tokenized Vault Standard](/developers/docs/standards/tokens/erc-4626/) by adding support for asynchronous deposit and redemption flows. It introduces a request-then-claim pattern: users first submit a request (handing their assets or shares to the vault), then claim the result after the vault has processed it.
 
 This is needed when a vault cannot settle instantly in one transaction, for example:
 
@@ -37,7 +37,7 @@ The redemption flow works the same way: `requestRedeem()` takes the shares from 
 
 ERC-7540 inherits the full ERC-4626 interface but repurposes `deposit`/`mint`/`withdraw`/`redeem` as claim functions. The new `requestDeposit` and `requestRedeem` functions handle the initial request step.
 
-Each request moves through three states: pending (submitted, waiting for processing), claimable (fulfilled and priced), and claimed (investor has collected their shares or assets). A vault may make a request claimable immediately, skipping pending, but claiming is always a separate call. No event is emitted when a request becomes claimable.
+Each request moves through three states: pending (submitted, waiting for processing), claimable (fulfilled and priced), and claimed (investor has collected their shares or assets). A vault may make a request claimable immediately, skipping pending, but claiming is always a separate call. The standard defines no event for when a request becomes claimable.
 
 <VaultRequestDiagram />
 
