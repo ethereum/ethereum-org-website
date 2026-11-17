@@ -24,95 +24,73 @@ Panduan ini memandu Anda melalui proses menginisiasi testnet Ethereum lokal yang
 
 Dalam panduan ini, Anda akan:
 
-- Menginisiasi testnet Ethereum lokal dengan [`eth-network-package`](https://github.com/kurtosis-tech/eth-network-package) menggunakan [Kurtosis](https://www.kurtosis.com/),
+- Menginisiasi testnet Ethereum lokal dengan [`ethereum-package`](https://github.com/ethpandaops/ethereum-package) menggunakan [Kurtosis](https://www.kurtosis.com/),
 - Menghubungkan lingkungan pengembangan dapp Hardhat Anda ke testnet lokal untuk mengompilasi, menyebarkan, dan menguji dapp, dan
 - Mengonfigurasi testnet lokal, termasuk parameter seperti jumlah node dan pasangan klien EL/CL tertentu, untuk memungkinkan alur kerja pengembangan dan pengujian terhadap berbagai konfigurasi jaringan.
 
 ### Apa itu Kurtosis? {#what-is-kurtosis}
 
-[Kurtosis](https://www.kurtosis.com/) adalah sistem pembangunan yang dapat disusun yang dirancang untuk mengonfigurasi lingkungan pengujian multikontainer. Ini secara khusus memungkinkan pengembang untuk membuat lingkungan yang dapat direproduksi yang memerlukan logika penyiapan dinamis, seperti testnet rantai blok.
+[Kurtosis](https://www.kurtosis.com/) adalah sistem pembangunan yang dapat disusun yang dirancang untuk mengonfigurasi lingkungan pengujian multi-kontainer. Ini secara khusus memungkinkan pengembang untuk membuat lingkungan yang dapat direproduksi yang memerlukan logika penyiapan dinamis, seperti testnet rantai blok.
 
-Dalam panduan ini, paket eth-network Kurtosis menjalankan testnet Ethereum lokal dengan dukungan untuk klien Lapisan Eksekusi (EL) [`geth`](https://geth.ethereum.org/), serta klien Lapisan Konsensus (CL) [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/), dan [`lodestar`](https://lodestar.chainsafe.io/). Paket ini berfungsi sebagai alternatif yang dapat dikonfigurasi dan dapat disusun untuk jaringan dalam kerangka kerja seperti Hardhat Network, Ganache, dan Anvil. Kurtosis menawarkan pengembang kontrol dan fleksibilitas yang lebih besar atas testnet yang mereka gunakan, yang merupakan alasan utama mengapa [Yayasan Ethereum menggunakan Kurtosis untuk menguji The Merge](https://www.kurtosis.com/blog/testing-the-ethereum-merge) dan terus menggunakannya untuk menguji peningkatan jaringan.
+Dalam panduan ini, `ethereum-package` Kurtosis, yang dikelola oleh [ethPandaOps](https://ethpandaops.io/), menjalankan testnet Ethereum lokal. Ini mendukung semua klien Lapisan Eksekusi (EL) utama, seperti [`geth`](https://geth.ethereum.org/), dan klien Lapisan Konsensus (CL), seperti [`teku`](https://consensys.io/teku), [`lighthouse`](https://lighthouse.sigmaprime.io/), dan [`lodestar`](https://lodestar.chainsafe.io/). Paket ini berfungsi sebagai alternatif yang dapat dikonfigurasi dan dapat disusun untuk jaringan dalam kerangka kerja seperti Hardhat Network dan Anvil. Kurtosis menawarkan pengembang kontrol dan fleksibilitas yang lebih besar atas testnet yang mereka gunakan, yang merupakan alasan utama mengapa tim klien Ethereum menggunakannya untuk menguji peningkatan jaringan.
 
 ## Menyiapkan Kurtosis {#setting-up-kurtosis}
 
 Sebelum Anda melanjutkan, pastikan Anda telah:
 
 - [Menginstal dan memulai mesin Docker](https://docs.kurtosis.com/install/#i-install--start-docker) di mesin lokal Anda
-- [Menginstal CLI Kurtosis](https://docs.kurtosis.com/install#ii-install-the-cli) (atau memutakhirkannya ke rilis terbaru, jika Anda sudah menginstal CLI tersebut)
-- Menginstal [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable), dan [npx](https://www.npmjs.com/package/npx) (untuk lingkungan dapp Anda)
+- [Menginstal CLI Kurtosis](https://docs.kurtosis.com/install#ii-install-the-cli) (atau memutakhirkannya ke rilis terbaru, jika Anda sudah menginstal CLI)
+- Menginstal [Node.js](https://nodejs.org/en) (untuk lingkungan dapp Anda)
 
 ## Menginisiasi testnet Ethereum lokal {#instantiate-testnet}
 
 Untuk menjalankan testnet Ethereum lokal, jalankan:
 
-```python
-kurtosis --enclave local-eth-testnet run github.com/kurtosis-tech/eth-network-package
+```sh
+kurtosis run --enclave local-eth-testnet github.com/ethpandaops/ethereum-package
 ```
 
-Catatan: Perintah ini menamai jaringan Anda: "local-eth-testnet” menggunakan tanda `--enclave`.
+Catatan: Perintah ini menamai jaringan Anda "local-eth-testnet" menggunakan tanda `--enclave`.
 
-Kurtosis akan mencetak langkah-langkah yang diambilnya secara internal saat ia bekerja untuk menafsirkan, memvalidasi, dan kemudian mengeksekusi instruksi tersebut. Pada akhirnya, Anda akan melihat keluaran yang menyerupai berikut ini:
+Kurtosis akan mencetak langkah-langkah yang diambilnya secara internal saat ia bekerja untuk menafsirkan, memvalidasi, dan kemudian mengeksekusi instruksi. Pada akhirnya, ia mencetak ringkasan dari enklave yang dibuatnya. Ringkasan tersebut mencakup daftar **artefak file** dan daftar **layanan pengguna**. Dengan konfigurasi default, layanan pengguna mencakup satu node:
 
-```python
-INFO[2023-04-04T18:09:44-04:00] ======================================================
-INFO[2023-04-04T18:09:44-04:00] ||          Created enclave: local-eth-testnet      ||
-INFO[2023-04-04T18:09:44-04:00] ======================================================
-Name:            local-eth-testnet
-UUID:            39372d756ae8
-Status:          RUNNING
-Creation Time:   Tue, 04 Apr 2023 18:09:03 EDT
+- `el-1-geth-lighthouse`, klien eksekusi `geth`
+- `cl-1-lighthouse-geth`, simpul suar `lighthouse`
+- `vc-1-geth-lighthouse`, klien validator `lighthouse`
 
-========================================= Files Artifacts =========================================
-UUID           Name
-d4085a064230   cl-genesis-data
-1c62cb792e4c   el-genesis-data
-bd60489b73a7   genesis-generation-config-cl
-b2e593fe5228   genesis-generation-config-el
-d552a54acf78   geth-prefunded-keys
-5f7e661eb838   prysm-password
-054e7338bb59   validator-keystore-0
+Setiap layanan dicantumkan dengan port yang dieksposnya dan port lokal tempat masing-masing dipetakan. Misalnya, port `rpc` dari layanan `el-1-geth-lighthouse` adalah titik akhir JSON-RPC yang akan digunakan oleh alat dapp Anda. Layanan dan nomor port yang tepat akan berbeda di mesin Anda.
 
-========================================== User Services ==========================================
-UUID           Name                                           Ports                                         Status
-e20f129ee0c5   cl-client-0-beacon                             http: 4000/tcp -> <http://127.0.0.1:54261>    RUNNING
-                                                              metrics: 5054/tcp -> <http://127.0.0.1:54262>
-                                                              tcp-discovery: 9000/tcp -> 127.0.0.1:54263
-                                                              udp-discovery: 9000/udp -> 127.0.0.1:60470
-a8b6c926cdb4   cl-client-0-validator                          http: 5042/tcp -> 127.0.0.1:54267             RUNNING
-                                                              metrics: 5064/tcp -> <http://127.0.0.1:54268>
-d7b802f623e8   el-client-0                                    engine-rpc: 8551/tcp -> 127.0.0.1:54253       RUNNING
-                                                              rpc: 8545/tcp -> 127.0.0.1:54251
-                                                              tcp-discovery: 30303/tcp -> 127.0.0.1:54254
-                                                              udp-discovery: 30303/udp -> 127.0.0.1:53834
-                                                              ws: 8546/tcp -> 127.0.0.1:54252
-514a829c0a84   prelaunch-data-generator-1680646157905431468   <none>                                        STOPPED
-62bd62d0aa7a   prelaunch-data-generator-1680646157915424301   <none>                                        STOPPED
-05e9619e0e90   prelaunch-data-generator-1680646157922872635   <none>                                        STOPPED
+Anda dapat melihat ringkasan ini lagi kapan saja dengan menjalankan:
 
+```sh
+kurtosis enclave inspect local-eth-testnet
 ```
 
 Selamat! Anda menggunakan Kurtosis untuk menginisiasi testnet Ethereum lokal, dengan klien CL (`lighthouse`) dan EL (`geth`), melalui Docker.
 
 ### Tinjauan {#review-instantiate-testnet}
 
-Di bagian ini, Anda mengeksekusi perintah yang mengarahkan Kurtosis untuk menggunakan [`eth-network-package` yang dihosting dari jarak jauh di GitHub](https://github.com/kurtosis-tech/eth-network-package) untuk menjalankan testnet Ethereum lokal di dalam [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/) Kurtosis. Di dalam enclave Anda, Anda akan menemukan "artefak file" dan "layanan pengguna".
+Di bagian ini, Anda mengeksekusi perintah yang mengarahkan Kurtosis untuk menggunakan [`ethereum-package` yang dihosting dari jarak jauh di GitHub](https://github.com/ethpandaops/ethereum-package) untuk menjalankan testnet Ethereum lokal di dalam [Enklave](https://docs.kurtosis.com/advanced-concepts/enclaves/) Kurtosis. Di dalam enklave Anda, Anda akan menemukan "artefak file" dan "layanan pengguna".
 
-[Artefak File](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) di enclave Anda mencakup semua data yang dihasilkan dan digunakan untuk mem-bootstrap klien EL dan CL. Data tersebut dibuat menggunakan layanan `prelaunch-data-generator` yang dibangun dari [citra Docker](https://github.com/ethpandaops/ethereum-genesis-generator) ini
+[Artefak File](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) di enklave Anda mencakup semua data yang dihasilkan dan digunakan untuk mem-bootstrap klien EL dan CL, seperti file genesis dan kunci validator. Data genesis dibuat menggunakan [ethereum-genesis-generator](https://github.com/ethpandaops/ethereum-genesis-generator).
 
-Layanan pengguna menampilkan semua layanan dalam kontainer yang beroperasi di enclave Anda. Anda akan melihat bahwa satu node, yang menampilkan klien EL dan klien CL, telah dibuat.
+Layanan pengguna menampilkan semua layanan dalam kontainer yang beroperasi di enklave Anda. Anda akan melihat bahwa satu node, yang menampilkan klien EL dan klien CL, telah dibuat.
 
-## Menghubungkan lingkungan pengembangan dapp Anda ke testnet Ethereum lokal {#connect-your-dapp}
+## Hubungkan lingkungan pengembangan dapp Anda ke testnet Ethereum lokal {#connect-your-dapp}
 
-### Menyiapkan lingkungan pengembangan dapp {#set-up-dapp-env}
+### Siapkan lingkungan pengembangan dapp {#set-up-dapp-env}
 
-Sekarang setelah Anda memiliki testnet lokal yang berjalan, Anda dapat menghubungkan lingkungan pengembangan dapp Anda untuk menggunakan testnet lokal Anda. Kerangka kerja Hardhat akan digunakan dalam panduan ini untuk menyebarkan dapp blackjack ke testnet lokal Anda.
+Sekarang setelah Anda memiliki testnet lokal yang berjalan, Anda dapat menghubungkan lingkungan pengembangan aplikasi terdesentralisasi (dapp) Anda untuk menggunakan testnet lokal Anda. Kerangka kerja Hardhat akan digunakan dalam panduan ini untuk menyebarkan dapp blackjack ke testnet lokal Anda.
 
 Untuk menyiapkan lingkungan pengembangan dapp Anda, kloning repositori yang berisi contoh dapp kami dan instal dependensinya, jalankan:
 
-```python
-git clone https://github.com/kurtosis-tech/awesome-kurtosis.git && cd awesome-kurtosis/smart-contract-example && yarn
+```sh
+git clone https://github.com/kurtosis-tech/awesome-kurtosis.git
+cd awesome-kurtosis/smart-contract-example
+npm install --legacy-peer-deps
 ```
+
+Tanda `--legacy-peer-deps` diperlukan karena beberapa plugin Hardhat dari proyek sampel mendeklarasikan versi dependensi peer yang bertentangan.
 
 Folder [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example) yang digunakan di sini berisi penyiapan umum untuk pengembang dapp yang menggunakan kerangka kerja [Hardhat](https://hardhat.org/):
 
@@ -121,76 +99,82 @@ Folder [smart-contract-example](https://github.com/kurtosis-tech/awesome-kurtosi
 - [`test/`](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/smart-contract-example/test) berisi pengujian .js sederhana untuk kontrak token Anda guna mengonfirmasi bahwa setiap pemain di dapp Blackjack kami memiliki 1000 yang dicetak untuk mereka
 - [`hardhat.config.ts`](https://github.com/kurtosis-tech/awesome-kurtosis/blob/main/smart-contract-example/hardhat.config.ts) mengonfigurasi penyiapan Hardhat Anda
 
-### Mengonfigurasi Hardhat untuk menggunakan testnet lokal {#configure-hardhat}
+### Konfigurasikan Hardhat untuk menggunakan testnet lokal {#configure-hardhat}
 
-Dengan lingkungan pengembangan dapp Anda yang telah disiapkan, Anda sekarang akan menghubungkan Hardhat untuk menggunakan testnet Ethereum lokal yang dihasilkan menggunakan Kurtosis. Untuk mencapai hal ini, ganti `<$YOUR_PORT>` dalam struktur `localnet` di file konfigurasi `hardhat.config.ts` Anda dengan port dari keluaran rpc uri dari layanan `el-client-<num>` mana pun. Dalam contoh kasus ini, portnya adalah `64248`. Port Anda akan berbeda.
+Dengan lingkungan pengembangan dapp Anda yang telah disiapkan, Anda sekarang akan menghubungkan Hardhat untuk menggunakan testnet Ethereum lokal yang dihasilkan menggunakan Kurtosis. Pertama, temukan alamat lokal dari titik akhir JSON-RPC dari klien eksekusi:
+
+```sh
+kurtosis port print local-eth-testnet el-1-geth-lighthouse rpc
+```
+
+Outputnya adalah URL seperti `http://127.0.0.1:32769`. Port Anda akan berbeda. Ganti `<PORT>` di struktur `localnet` dalam file konfigurasi `hardhat.config.ts` Anda dengan port ini.
 
 Contoh di `hardhat.config.ts`:
 
 ```js
 localnet: {
-url: 'http://127.0.0.1:<$YOUR_PORT>',// TODO: GANTI $YOUR_PORT DENGAN PORT DARI URI NODE YANG DIHASILKAN OLEH PAKET KURTOSIS JARINGAN ETH
-
-// Ini adalah kunci privat yang terkait dengan akun pengujian yang telah didanai sebelumnya yang dibuat oleh eth-network-package
-// <https://github.com/kurtosis-tech/eth-network-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star>
-accounts: [
-    "ef5177cd0b6b21c87db5a0bf35d4084a8a57a9d6a064f86d51ac85f2b873a4e2",
-    "48fcc39ae27a0e8bf0274021ae6ebd8fe4a0e12623d61464c498900b28feb567",
-    "7988b3a148716ff800414935b305436493e1f25237a2a03e5eebc343735e2f31",
-    "b3c409b6b0b3aa5e65ab2dc1930534608239a478106acf6f3d9178e9f9b00b35",
-    "df9bb6de5d3dc59595bcaa676397d837ff49441d211878c024eabda2cd067c9f",
-    "7da08f856b5956d40a72968f93396f6acff17193f013e8053f6fbb6c08c194d6",
+  url: 'http://127.0.0.1:<PORT>',//TODO: GANTI <PORT> DENGAN PORT DARI URI NODE YANG DIHASILKAN OLEH PAKET KURTOSIS JARINGAN ETH
+  // Ini adalah kunci privat yang terkait dengan akun pengujian yang telah didanai sebelumnya yang dibuat oleh eth-network-package
+  //https://github.com/ethpandaops/ethereum-package/blob/main/src/prelaunch_data_generator/genesis_constants/genesis_constants.star
+  accounts: [
+    "bcdf20249abf0ed6d944c0288fad489e33f66b3960d9e6229c1cd214ed3bbe31",
+    "53321db7c1e331d93a11a41d16f004d7ff63972ec8ec7c25db329728ceeb1710",
+    "ab63b23eb7941c1251757e24b3d2350d2bc05c3c388d06f8fe6feafefb1e8c70",
+    "5d2344259f42259f82d2c140aa66102ba89b57b4883ee441a8b312622bd42491",
+    "27515f805127bebad2fb9b183508bdacb8c763da16f54e0678b16e8f28ef3fff",
+    "7ff1a4c1d57e5e784d327c4c7651e952350bc271f156afb3d00d20f5ef924856",
   ],
 },
 ```
 
+Kunci privat ini adalah kunci pengujian yang diketahui publik. Jangan pernah menggunakannya di Mainnet atau jaringan publik mana pun.
+
 Setelah Anda menyimpan file Anda, lingkungan pengembangan dapp Hardhat Anda sekarang terhubung ke testnet Ethereum lokal Anda! Anda dapat memverifikasi bahwa testnet Anda berfungsi dengan menjalankan:
 
-```python
+```sh
 npx hardhat balances --network localnet
 ```
 
-Keluarannya akan terlihat seperti ini:
+Output mencantumkan alamat dan saldo dari masing-masing akun di atas. Misalnya, baris pertama akan terlihat seperti ini:
 
-```python
-0x878705ba3f8Bc32FCf7F4CAa1A35E72AF65CF766 has balance 10000000000000000000000000
-0x4E9A3d9D1cd2A2b2371b8b3F489aE72259886f1A has balance 10000000000000000000000000
-0xdF8466f277964Bb7a0FFD819403302C34DCD530A has balance 10000000000000000000000000
-0x5c613e39Fc0Ad91AfDA24587e6f52192d75FBA50 has balance 10000000000000000000000000
-0x375ae6107f8cC4cF34842B71C6F746a362Ad8EAc has balance 10000000000000000000000000
-0x1F6298457C5d76270325B724Da5d1953923a6B88 has balance 10000000000000000000000000
+```
+0x8943545177806ED17B9F23F0a21ee5948eCaa776 has balance <a large balance>
 ```
 
-Ini mengonfirmasi bahwa Hardhat menggunakan testnet lokal Anda dan mendeteksi akun yang didanai sebelumnya yang dibuat oleh `eth-network-package`.
+Ini mengonfirmasi bahwa Hardhat menggunakan testnet lokal Anda dan mendeteksi akun yang didanai sebelumnya yang dibuat oleh `ethereum-package`.
 
-### Menyebarkan dan menguji dapp Anda secara lokal {#deploy-and-test-dapp}
+### Sebarkan dan uji dapp Anda secara lokal {#deploy-and-test-dapp}
 
 Dengan lingkungan pengembangan dapp yang sepenuhnya terhubung ke testnet Ethereum lokal, Anda sekarang dapat menjalankan alur kerja pengembangan dan pengujian terhadap dapp Anda menggunakan testnet lokal.
 
 Untuk mengompilasi dan menyebarkan kontrak pintar `ChipToken.sol` untuk pembuatan prototipe dan pengembangan lokal, jalankan:
 
-```python
+```sh
 npx hardhat compile
 npx hardhat run scripts/deploy.ts --network localnet
 ```
 
-Keluarannya akan terlihat seperti:
+Outputnya akan terlihat seperti:
 
-```python
+```
 ChipToken deployed to: 0xAb2A01BC351770D09611Ac80f1DE076D56E0487d
 ```
 
-Sekarang coba jalankan pengujian `simple.js` terhadap dapp lokal Anda untuk mengonfirmasi bahwa setiap pemain di dapp Blackjack kami memiliki 1000 yang dicetak untuk mereka:
+Sekarang coba jalankan pengujian `ChipToken.js` terhadap dapp lokal Anda untuk mengonfirmasi bahwa setiap pemain di dapp Blackjack kami memiliki 1000 yang dicetak untuk mereka. Pengujian sampel masih menggunakan fungsi `deployed()` ethers v5, yang digantikan oleh ethers v6 dengan `waitForDeployment()`, jadi perbarui terlebih dahulu:
 
-Keluarannya akan terlihat seperti ini:
+```sh
+sed -i.bak 's/\.deployed()/.waitForDeployment()/' test/ChipToken.js
+```
 
-```python
+Kemudian jalankan pengujian:
+
+```sh
 npx hardhat test --network localnet
 ```
 
-Keluarannya akan terlihat seperti ini:
+Outputnya akan terlihat seperti ini:
 
-```python
+```
 ChipToken
     mint
       ✔ should mint 1000 chips for PLAYER ONE
@@ -208,151 +192,45 @@ Sekarang mari kita jelajahi bagaimana Anda dapat mengonfigurasi jaringan yang me
 
 ### Mengubah konfigurasi klien dan jumlah node {#configure-client-config-and-num-nodes}
 
-Testnet Ethereum lokal Anda dapat dikonfigurasi untuk menggunakan pasangan klien EL dan CL yang berbeda, serta jumlah node yang bervariasi, bergantung pada skenario dan konfigurasi jaringan tertentu yang ingin Anda kembangkan atau uji. Ini berarti bahwa, setelah disiapkan, Anda dapat menjalankan testnet lokal yang disesuaikan dan menggunakannya untuk menjalankan alur kerja yang sama (penyebaran, pengujian, dll.) di bawah berbagai konfigurasi jaringan untuk memastikan semuanya berfungsi seperti yang diharapkan. Untuk mempelajari lebih lanjut tentang parameter lain yang dapat Anda modifikasi, kunjungi tautan ini.
+Testnet Ethereum lokal Anda dapat dikonfigurasi untuk menggunakan pasangan klien EL dan CL yang berbeda, serta jumlah node yang bervariasi, tergantung pada skenario dan konfigurasi jaringan tertentu yang ingin Anda kembangkan atau uji. Ini berarti bahwa, setelah disiapkan, Anda dapat menjalankan testnet lokal yang disesuaikan dan menggunakannya untuk menjalankan alur kerja yang sama (penyebaran, pengujian, dll.) di bawah berbagai konfigurasi jaringan untuk memastikan semuanya berfungsi seperti yang diharapkan. Untuk mempelajari lebih lanjut tentang parameter lain yang dapat Anda modifikasi, lihat [dokumentasi konfigurasi `ethereum-package`](https://github.com/ethpandaops/ethereum-package#configuration).
 
-Cobalah! Anda dapat meneruskan berbagai opsi konfigurasi ke `eth-network-package` melalui file JSON. File JSON parameter jaringan ini menyediakan konfigurasi spesifik yang akan digunakan Kurtosis untuk menyiapkan jaringan Ethereum lokal.
+Cobalah! Anda dapat meneruskan berbagai opsi konfigurasi ke `ethereum-package` melalui file YAML. File parameter jaringan ini menyediakan konfigurasi spesifik yang akan digunakan Kurtosis untuk menyiapkan jaringan Ethereum lokal.
 
-Ambil file konfigurasi bawaan dan edit untuk menjalankan dua node dengan pasangan EL/CL yang berbeda:
+Buat file bernama `network_params.yaml` yang menjalankan tiga node dengan pasangan EL/CL yang berbeda:
 
 - Node 1 dengan `geth`/`lighthouse`
 - Node 2 dengan `geth`/`lodestar`
 - Node 3 dengan `geth`/`teku`
 
-Konfigurasi ini membuat jaringan heterogen dari implementasi node Ethereum untuk menguji dapp Anda. File konfigurasi Anda sekarang akan terlihat seperti:
+Konfigurasi ini membuat jaringan heterogen dari implementasi node Ethereum untuk menguji dapp Anda. File konfigurasi Anda akan terlihat seperti:
 
 ```yaml
-{
-  "participants":
-    [
-      {
-        "el_client_type": "geth",
-        "el_client_image": "",
-        "el_client_log_level": "",
-        "cl_client_type": "lighthouse",
-        "cl_client_image": "",
-        "cl_client_log_level": "",
-        "beacon_extra_params": [],
-        "el_extra_params": [],
-        "validator_extra_params": [],
-        "builder_network_params": null,
-      },
-      {
-        "el_client_type": "geth",
-        "el_client_image": "",
-        "el_client_log_level": "",
-        "cl_client_type": "lodestar",
-        "cl_client_image": "",
-        "cl_client_log_level": "",
-        "beacon_extra_params": [],
-        "el_extra_params": [],
-        "validator_extra_params": [],
-        "builder_network_params": null,
-      },
-      {
-        "el_client_type": "geth",
-        "el_client_image": "",
-        "el_client_log_level": "",
-        "cl_client_type": "teku",
-        "cl_client_image": "",
-        "cl_client_log_level": "",
-        "beacon_extra_params": [],
-        "el_extra_params": [],
-        "validator_extra_params": [],
-        "builder_network_params": null,
-      },
-    ],
-  "network_params":
-    {
-      "preregistered_validator_keys_mnemonic": "giant issue aisle success illegal bike spike question tent bar rely arctic volcano long crawl hungry vocal artwork sniff fantasy very lucky have athlete",
-      "num_validator_keys_per_node": 64,
-      "network_id": "3151908",
-      "deposit_contract_address": "0x4242424242424242424242424242424242424242",
-      "seconds_per_slot": 12,
-      "genesis_delay": 120,
-      "capella_fork_epoch": 5,
-    },
-}
+participants:
+  - el_type: geth
+    cl_type: lighthouse
+  - el_type: geth
+    cl_type: lodestar
+  - el_type: geth
+    cl_type: teku
+network_params:
+  seconds_per_slot: 12
 ```
 
-Setiap struktur `participants` memetakan ke sebuah node di jaringan, jadi 3 struktur `participants` akan memberi tahu Kurtosis untuk menjalankan 3 node di jaringan Anda. Setiap struktur `participants` akan memungkinkan Anda untuk menentukan pasangan EL dan CL yang digunakan untuk node spesifik tersebut.
+Setiap entri di `participants` memetakan ke sebuah node di jaringan, jadi 3 entri `participants` akan memberi tahu Kurtosis untuk menjalankan 3 node di jaringan Anda. Setiap entri memungkinkan Anda untuk menentukan pasangan EL dan CL yang digunakan untuk node spesifik tersebut. Parameter apa pun yang tidak Anda tentukan akan mempertahankan nilai defaultnya.
 
 Struktur `network_params` mengonfigurasi pengaturan jaringan yang digunakan untuk membuat file genesis untuk setiap node serta pengaturan lain seperti detik per slot dari jaringan.
 
-Simpan file parameter yang telah Anda edit di direktori mana pun yang Anda inginkan (dalam contoh di bawah, file tersebut disimpan ke desktop) dan kemudian gunakan untuk menjalankan paket Kurtosis Anda dengan menjalankan:
+Simpan file parameter Anda dan kemudian gunakan untuk menjalankan paket Kurtosis Anda dengan menjalankan:
 
-```python
-kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/kurtosis-tech/eth-network-package "$(cat ~/eth-network-params.json)"
+```sh
+kurtosis clean -a && kurtosis run --enclave local-eth-testnet github.com/ethpandaops/ethereum-package --args-file ./network_params.yaml
 ```
 
 Catatan: perintah `kurtosis clean -a` digunakan di sini untuk menginstruksikan Kurtosis agar menghancurkan testnet lama dan isinya sebelum memulai yang baru.
 
-Sekali lagi, Kurtosis akan bekerja sebentar dan mencetak langkah-langkah individual yang sedang berlangsung. Pada akhirnya, keluarannya akan terlihat seperti:
+Sekali lagi, Kurtosis akan bekerja sebentar dan mencetak langkah-langkah individual yang sedang berlangsung. Pada akhirnya, ia mencetak ringkasan enklave. Kali ini, layanan pengguna mencakup tiga node, misalnya `el-1-geth-lighthouse`, `el-2-geth-lodestar`, dan `el-3-geth-teku` untuk klien eksekusi, bersama dengan klien konsensus dan validator yang cocok.
 
-```python
-Starlark code successfully run. No output was returned.
-INFO[2023-04-07T11:43:16-04:00] ==========================================================
-INFO[2023-04-07T11:43:16-04:00] ||          Created enclave: local-eth-testnet          ||
-INFO[2023-04-07T11:43:16-04:00] ==========================================================
-Name:            local-eth-testnet
-UUID:            bef8c192008e
-Status:          RUNNING
-Creation Time:   Fri, 07 Apr 2023 11:41:58 EDT
-
-========================================= Files Artifacts =========================================
-UUID           Name
-cc495a8e364a   cl-genesis-data
-7033fcdb5471   el-genesis-data
-a3aef43fc738   genesis-generation-config-cl
-8e968005fc9d   genesis-generation-config-el
-3182cca9d3cd   geth-prefunded-keys
-8421166e234f   prysm-password
-d9e6e8d44d99   validator-keystore-0
-23f5ba517394   validator-keystore-1
-4d28dea40b5c   validator-keystore-2
-
-========================================== User Services ==========================================
-UUID           Name                                           Ports                                            Status
-485e6fde55ae   cl-client-0-beacon                             http: 4000/tcp -> http://127.0.0.1:65010         RUNNING
-                                                              metrics: 5054/tcp -> http://127.0.0.1:65011
-                                                              tcp-discovery: 9000/tcp -> 127.0.0.1:65012
-                                                              udp-discovery: 9000/udp -> 127.0.0.1:54455
-73739bd158b2   cl-client-0-validator                          http: 5042/tcp -> 127.0.0.1:65016                RUNNING
-                                                              metrics: 5064/tcp -> http://127.0.0.1:65017
-1b0a233cd011   cl-client-1-beacon                             http: 4000/tcp -> 127.0.0.1:65021                RUNNING
-                                                              metrics: 8008/tcp -> 127.0.0.1:65023
-                                                              tcp-discovery: 9000/tcp -> 127.0.0.1:65024
-                                                              udp-discovery: 9000/udp -> 127.0.0.1:56031
-                                                              validator-metrics: 5064/tcp -> 127.0.0.1:65022
-949b8220cd53   cl-client-1-validator                          http: 4000/tcp -> 127.0.0.1:65028                RUNNING
-                                                              metrics: 8008/tcp -> 127.0.0.1:65030
-                                                              tcp-discovery: 9000/tcp -> 127.0.0.1:65031
-                                                              udp-discovery: 9000/udp -> 127.0.0.1:60784
-                                                              validator-metrics: 5064/tcp -> 127.0.0.1:65029
-c34417bea5fa   cl-client-2                                    http: 4000/tcp -> 127.0.0.1:65037                RUNNING
-                                                              metrics: 8008/tcp -> 127.0.0.1:65035
-                                                              tcp-discovery: 9000/tcp -> 127.0.0.1:65036
-                                                              udp-discovery: 9000/udp -> 127.0.0.1:63581
-e19738e6329d   el-client-0                                    engine-rpc: 8551/tcp -> 127.0.0.1:64986          RUNNING
-                                                              rpc: 8545/tcp -> 127.0.0.1:64988
-                                                              tcp-discovery: 30303/tcp -> 127.0.0.1:64987
-                                                              udp-discovery: 30303/udp -> 127.0.0.1:55706
-                                                              ws: 8546/tcp -> 127.0.0.1:64989
-e904687449d9   el-client-1                                    engine-rpc: 8551/tcp -> 127.0.0.1:64993          RUNNING
-                                                              rpc: 8545/tcp -> 127.0.0.1:64995
-                                                              tcp-discovery: 30303/tcp -> 127.0.0.1:64994
-                                                              udp-discovery: 30303/udp -> 127.0.0.1:58096
-                                                              ws: 8546/tcp -> 127.0.0.1:64996
-ad6f401126fa   el-client-2                                    engine-rpc: 8551/tcp -> 127.0.0.1:65003          RUNNING
-                                                              rpc: 8545/tcp -> 127.0.0.1:65001
-                                                              tcp-discovery: 30303/tcp -> 127.0.0.1:65000
-                                                              udp-discovery: 30303/udp -> 127.0.0.1:57269
-                                                              ws: 8546/tcp -> 127.0.0.1:65002
-12d04a9dbb69   prelaunch-data-generator-1680882122181135513   <none>                                           STOPPED
-5b45f9c0504b   prelaunch-data-generator-1680882122192182847   <none>                                           STOPPED
-3d4aaa75e218   prelaunch-data-generator-1680882122201668972   <none>                                           STOPPED
-```
-
-Selamat! Anda telah berhasil mengonfigurasi testnet lokal Anda untuk memiliki 3 node alih-alih 1. Untuk menjalankan alur kerja yang sama seperti yang Anda lakukan sebelumnya terhadap dapp Anda (menyebarkan & menguji), lakukan operasi yang sama seperti yang kita lakukan sebelumnya dengan mengganti `<$YOUR_PORT>` dalam struktur `localnet` di file konfigurasi `hardhat.config.ts` Anda dengan port dari keluaran rpc uri dari layanan `el-client-<num>` mana pun di testnet lokal 3-node Anda yang baru.
+Selamat! Anda telah berhasil mengonfigurasi testnet lokal Anda untuk memiliki 3 node alih-alih 1. Untuk menjalankan alur kerja yang sama seperti yang Anda lakukan sebelumnya terhadap dapp Anda (menyebarkan & menguji), lakukan operasi yang sama seperti yang kita lakukan sebelumnya dengan mengganti `<PORT>` di struktur `localnet` dalam file konfigurasi `hardhat.config.ts` Anda dengan port `rpc` dari layanan `el-<num>-...` mana pun di testnet lokal 3 node Anda yang baru.
 
 ## Kesimpulan {#conclusion}
 
@@ -363,11 +241,10 @@ Dan itu saja! Untuk merangkum panduan singkat ini, Anda:
 - Menyebarkan dapp dan menjalankan pengujian sederhana terhadapnya di jaringan Ethereum lokal
 - Mengonfigurasi jaringan Ethereum yang mendasarinya untuk memiliki 3 node
 
-Kami ingin mendengar dari Anda tentang apa yang berjalan baik bagi Anda, apa yang dapat ditingkatkan, atau untuk menjawab pertanyaan Anda. Jangan ragu untuk menghubungi kami melalui [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose) atau [email kami](mailto:feedback@kurtosistech.com)!
+Kami ingin mendengar dari Anda tentang apa yang berjalan baik bagi Anda, apa yang dapat ditingkatkan, atau untuk menjawab pertanyaan Anda. Jangan ragu untuk menghubungi melalui [GitHub](https://github.com/kurtosis-tech/kurtosis/issues/new/choose)!
 
 ### Contoh dan panduan lainnya {#other-examples-guides}
 
-Kami mendorong Anda untuk memeriksa [mulai cepat](https://docs.kurtosis.com/quickstart) kami (di mana Anda akan membangun basis data Postgres dan API di atasnya) dan contoh kami yang lain di [repositori awesome-kurtosis](https://github.com/kurtosis-tech/awesome-kurtosis) kami di mana Anda akan menemukan beberapa contoh yang bagus, termasuk paket untuk:
+Kami mendorong Anda untuk memeriksa [mulai cepat](https://docs.kurtosis.com/quickstart) kami dan contoh kami yang lain di [repositori awesome-kurtosis](https://github.com/kurtosis-tech/awesome-kurtosis) kami.
 
-- [Menjalankan testnet Ethereum lokal yang sama](https://github.com/kurtosis-tech/eth2-package), tetapi dengan layanan tambahan yang terhubung seperti pengirim spam transaksi (untuk menyimulasikan transaksi), pemantau percabangan, serta instans Grafana dan Prometheus yang terhubung
-- Melakukan [pengujian subjaringan](https://github.com/kurtosis-tech/awesome-kurtosis/tree/main/ethereum-network-partition-test) terhadap jaringan Ethereum lokal yang sama
+`ethereum-package` juga dapat memulai layanan tambahan di samping jaringan Anda, seperti spammer transaksi (untuk menyimulasikan transaksi), penjelajah blok, dan instans Grafana serta Prometheus yang terhubung. Untuk mengaktifkannya, cantumkan di bawah `additional_services` dalam file parameter Anda, seperti yang dijelaskan dalam [dokumentasi paket](https://github.com/ethpandaops/ethereum-package#configuration).
