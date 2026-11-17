@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils/cn"
 import type { FillStep as FillStepData } from "@/data/courses"
 
 import { chunkyTile, stepPrompt } from "../theme"
+import { StepHint } from "../widgets/widget-shell"
 
 import { seededShuffle } from "./shuffle"
 import type { StepStatus } from "./types"
@@ -71,8 +72,8 @@ const FillStep = ({ step, keyFor, value, onChange, status }: FillStepProps) => {
 
   return (
     <div>
-      <h2 className={cn(stepPrompt, "mb-2")}>{t(keyFor("prompt"))}</h2>
-      <p className="mb-6 text-body-medium">{t("page-courses-fill-hint")}</p>
+      <h2 className={cn(stepPrompt, "mb-4")}>{t(keyFor("prompt"))}</h2>
+      <StepHint className="mb-6">{t("page-courses-fill-hint")}</StepHint>
 
       <p className="mb-8 text-xl leading-[2.75]">
         {parts.map((part, k) => {

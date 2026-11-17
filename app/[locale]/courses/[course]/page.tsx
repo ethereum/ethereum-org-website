@@ -15,6 +15,7 @@ import CourseProgress from "@/components/Courses/course-progress"
 import LessonPath from "@/components/Courses/lesson-path"
 import ProfileLink from "@/components/Courses/profile-link"
 import { ProgressChips } from "@/components/Courses/progress-stats"
+import StickyBar from "@/components/Courses/sticky-bar"
 import { courseThemeStyle } from "@/components/Courses/theme"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -61,22 +62,19 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
     <I18nProvider locale={locale} messages={messages}>
       <CoursePageJsonLD locale={locale} course={course} />
       <MainArticle style={courseThemeStyle(course.theme)}>
-        {/* Sticks 16px below the site nav (h-19) all the way down, like the
-            hub's; from lg, zero height so it shares the breadcrumbs' row */}
-        <div className="pointer-events-none sticky top-23 z-docked mt-6 flex justify-end px-page lg:h-0">
-          <div className="pointer-events-auto flex h-fit items-center gap-2">
-            <ProgressChips />
-            <ProfileLink />
-          </div>
-        </div>
-        <div className="flex items-center px-page pt-4 lg:min-h-10 lg:pt-0">
+        <div className="px-page pt-6">
           <Breadcrumbs
             slug={`/courses/${courseId}`}
             label={t(`${courseId}-title`)}
           />
         </div>
+        {/* Below the breadcrumbs, so they always sit in the same place */}
+        <StickyBar className="justify-end gap-2 px-page">
+          <ProgressChips className="max-sm:*:data-[slot=xp]:hidden" />
+          <ProfileLink />
+        </StickyBar>
 
-        <section className="px-page pt-6">
+        <section className="px-page pt-4">
           <div className="relative mx-auto grid max-w-4xl items-center gap-6 overflow-hidden rounded-3xl border-b-8 border-(--course-strong) bg-(--course) p-6 text-white md:grid-cols-[1fr_200px] md:p-10">
             <div className="flex flex-col gap-4">
               <span className="w-fit rounded-full bg-black/20 px-3 py-1 text-sm font-bold tracking-wide uppercase">

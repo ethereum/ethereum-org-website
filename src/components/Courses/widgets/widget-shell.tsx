@@ -1,6 +1,9 @@
+import { Pointer } from "lucide-react"
 import type { ReactNode } from "react"
 
 import { cn } from "@/lib/utils/cn"
+
+import { courseText } from "../theme"
 
 /** Common frame for lesson widgets */
 const WidgetShell = ({
@@ -18,6 +21,28 @@ const WidgetShell = ({
   >
     {children}
   </div>
+)
+
+/** How to work a step's controls, set apart from the prompt above it */
+export const StepHint = ({
+  children,
+  id,
+  className,
+}: {
+  children: ReactNode
+  id?: string
+  className?: string
+}) => (
+  <p
+    id={id}
+    className={cn(
+      "m-0 flex items-start gap-2 border-s-4 border-(--course) ps-3 text-body-medium",
+      className
+    )}
+  >
+    <Pointer aria-hidden className={cn("mt-0.5 size-5 shrink-0", courseText)} />
+    <span>{children}</span>
+  </p>
 )
 
 export default WidgetShell
