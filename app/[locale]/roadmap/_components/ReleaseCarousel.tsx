@@ -264,6 +264,14 @@ const ReleaseCarousel = () => {
                   <div>
                     <h2 className="text-h1">{release.releaseName}</h2>
 
+                    {/* Outside the <dl>: a label with no value is not a term
+                        and description pair. */}
+                    {upgrade && !shipped && !targetDate && (
+                      <p className="mt-2 text-xs font-bold text-body-medium uppercase">
+                        {t("page-roadmap-upgrade-status-target-not-set")}
+                      </p>
+                    )}
+
                     <dl className="mt-2 grid gap-x-6 gap-y-3 sm:grid-cols-2">
                       {targetDate && (
                         <div className="grid gap-1">

@@ -68,6 +68,11 @@ const UpgradeSummary = async ({ slug }: UpgradeSummaryProps) => {
         </div>
 
         <AlertDescription className="text-base">
+          {!target.when && (
+            <p className="m-0 text-xs font-bold text-body-medium uppercase">
+              {t("page-roadmap-upgrade-status-target-not-set")}
+            </p>
+          )}
           <dl className="grid gap-4">
             {target.when && (
               <div className="grid gap-1">

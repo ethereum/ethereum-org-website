@@ -130,6 +130,7 @@
   "page-roadmap-upgrade-status-heading": "Upgrade status",
   "page-roadmap-upgrade-status-phase-devnet": "Testing on devnets",
   "page-roadmap-upgrade-status-target": "Expected on mainnet",
+  "page-roadmap-upgrade-status-target-not-set": "Mainnet date not yet set",
   "page-roadmap-upgrade-status-activated": "Activated on mainnet",
   "page-roadmap-upgrade-status-not-confirmed": "Date not yet confirmed",
   "page-roadmap-upgrade-status-next": "Next milestone",
