@@ -177,3 +177,15 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Retranslated in full (write-deploy correct). Warnings: English alt text; NFT spelled out too often.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:136 personal pronoun for accounts `ప్రతి ఒక్కరి` -> `ప్రతి ఒక్కదాని`
+
+**Open / notes:**
+
+- ABI/EVM spelled out (#80); `ఈథీరియం` vs locale `ఎథీరియం` in the EVM expansion (known glossary inconsistency)
+- Unchanged echidna:317 glossary verb pasted into heading; echidna:507 we/our mix -- out of scope

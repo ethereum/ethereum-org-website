@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -34,8 +34,6 @@ const EVENT_CATEGORY = "dashboard"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-resources")
 
@@ -238,9 +236,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-resources")
 

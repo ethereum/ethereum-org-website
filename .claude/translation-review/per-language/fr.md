@@ -144,3 +144,16 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Clean otherwise.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.2/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client title and description: retranslation spelled out `dapp` as `application décentralisée (dapp)` in both meta slots although the English did not change (#80, #91) -> restored dev's `une dapp`
+- multi-client:93 `dépendances paires` (paired) -> `dépendances pairs (peer dependencies)`
+
+**Open / notes:**
+
+- echidna:340 glossary `annuler` for revert reads as overflows being "cancelled" (L415/L422 unchanged, same issue) -- native call (#96)
+- ABI/EVM spelled out (#80)

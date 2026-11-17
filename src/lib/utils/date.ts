@@ -2,7 +2,7 @@ import type { PartialDate } from "@/data/upgrades/types"
 
 import { DEFAULT_LOCALE } from "../constants"
 
-import { normalizeIntlSpaces } from "./intl"
+import { normalizeIntlSpaces, safeLocale } from "./intl"
 
 /**
  * A wrapper for Intl.DateTimeFormat that enforces Web3 date standards.
@@ -31,7 +31,7 @@ export function dateTimeFormat(
     ...(numberingSystem && { numberingSystem }),
   }
 
-  return new Intl.DateTimeFormat(locale, finalOptions)
+  return new Intl.DateTimeFormat(safeLocale(locale), finalOptions)
 }
 
 // Use for rendered output: UTC + normalized spaces make SSR and client agree.

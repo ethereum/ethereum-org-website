@@ -183,3 +183,14 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Glossary itself splits एथेरियम (Foundation) and इथेरियम.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna frontmatter `author` transliterated `ट्रेलऑफ़बिट्स`; dev and all other hi Trailofbits tutorials use Latin -> `Trailofbits`
+
+**Open / notes:**
+
+- echidna:747 relative clause attaches "returns int256" to transactions instead of the function -- native call
