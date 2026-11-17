@@ -228,12 +228,13 @@ const TrophyShelf = ({
     <div className="mt-10 flex flex-col gap-6">
       <h2 className="text-xl">{t("page-courses-profile-shelf-title")}</h2>
       {active.length ? (
-        <div className="grid gap-x-8 gap-y-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="flex flex-wrap items-start gap-x-12 gap-y-6">
           {active.map(({ id, courses }) => {
             const won = courses.filter((c) => mastered.has(c.id)).length
             return (
-              <div key={id} className="flex flex-col gap-2">
-                <div className="flex items-baseline justify-between gap-2">
+              // Sized by its trophies; the heading row adds no width of its own
+              <div key={id} className="flex w-fit max-w-full flex-col gap-2">
+                <div className="flex w-0 min-w-full items-baseline justify-between gap-2">
                   <span className="font-bold">
                     {t(`page-courses-track-${id}-title`)}
                   </span>

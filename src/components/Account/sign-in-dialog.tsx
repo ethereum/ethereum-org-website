@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { KeyRound } from "lucide-react"
 import dynamic from "next/dynamic"
 import { useTranslations } from "next-intl"
@@ -16,13 +16,21 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog-modal"
 import { Label } from "@/components/ui/label"
+import { Skeleton } from "@/components/ui/skeleton"
 
 import { CHALLENGE_HEADER, isCancelled, solveAccountChallenge } from "./api"
 import { useAccount } from "./use-account"
 
 import { authClient } from "@/lib/auth/client"
 
-const WalletSign = dynamic(() => import("./wallet-sign"), { ssr: false })
+const loadWalletSign = () => import("./wallet-sign")
+
+// Holds the wallet button's place while its chunk loads, so the dialog never
+// opens looking passkey-only
+const WalletSign = dynamic(loadWalletSign, {
+  ssr: false,
+  loading: () => <Skeleton className="h-10.5 w-full rounded" />,
+})
 
 /** Accounts this new count as just created, for the sign-up-only choices */
 const NEW_ACCOUNT_MS = 2 * 60_000
@@ -56,6 +64,11 @@ const SignInDialog = ({
   const [error, setError] = useState<string | null>(null)
   const [leaderboard, setLeaderboard] = useState(true)
   const creating = view === "create"
+
+  // Fetch the wallet chunk ahead of the first open
+  useEffect(() => {
+    void loadWalletSign()
+  }, [])
 
   const switchView = (next: View) => {
     setView(next)

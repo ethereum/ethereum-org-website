@@ -108,7 +108,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <TrackNav className="pointer-events-auto max-md:max-w-full" />
               <div className="pointer-events-auto flex shrink-0 items-center gap-2">
                 <ProgressChips />
-                <ProfileLink />
+                <ProfileLink compact />
               </div>
             </div>
 

@@ -64,7 +64,7 @@
   "page-courses-exam-previous": "Back",
   "page-courses-exam-submit": "Submit",
   "page-courses-exam-confirm-title": "Submit your answers?",
-  "page-courses-exam-confirm-description": "You can't change them after this. It uses one of today's {count} attempts.",
+  "page-courses-exam-confirm-description": "You can't change them after this. It uses one of today's {count, plural, =1 {one} =2 {two} =3 {three} other {#}} {count, plural, one {attempt} other {attempts}}.",
   "page-courses-exam-confirm-last": "You can't change them after this, and it's your last attempt today.",
   "page-courses-exam-keep-reviewing": "Keep reviewing",
   "page-courses-exam-limit-reached": "That's today's two attempts. Come back tomorrow for another go.",

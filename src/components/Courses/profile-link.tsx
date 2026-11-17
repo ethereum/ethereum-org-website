@@ -54,12 +54,21 @@ const SignInChip = ({ className }: { className?: string }) => {
 }
 
 /** A signed-in chip's shape, until the session check names the learner */
-const PendingChip = ({ className }: { className?: string }) => (
-  <span aria-hidden className={cn(statChip, className)}>
+const PendingChip = ({
+  className,
+  compact,
+}: {
+  className?: string
+  compact?: boolean
+}) => (
+  <span aria-hidden className={cn(statChip, compact && compactChip, className)}>
     <Skeleton className="size-6 shrink-0 rounded-full" />
-    <Skeleton className="h-5 w-28" />
+    <Skeleton className={cn("h-5 w-28", compact && "max-md:hidden")} />
   </span>
 )
+
+// Below md the name drops out, leaving the blockie in a round chip
+const compactChip = "max-md:pe-[7px]"
 
 /**
  * Signed in: the learner's blockie and display name, linking to their
@@ -67,9 +76,16 @@ const PendingChip = ({ className }: { className?: string }) => (
  * this deploy: the profile, once there's progress to show. The courses
  * layout's pre-paint flag picks the server HTML's shape, and the last
  * signed-in learner fills it while the session check is out, so it doesn't
- * jump between states
+ * jump between states. `compact` shows only the blockie below md, where the
+ * strip is tight
  */
-const ProfileLink = ({ className }: { className?: string }) => {
+const ProfileLink = ({
+  className,
+  compact,
+}: {
+  className?: string
+  compact?: boolean
+}) => {
   const t = useTranslations("page-courses")
   const tAccount = useTranslations("component-account")
   const { progress } = useCourseProgress()
@@ -88,6 +104,7 @@ const ProfileLink = ({ className }: { className?: string }) => {
       <>
         {/* Literals for Tailwind's scanner; must match HAS_ACCOUNT_ATTR */}
         <PendingChip
+          compact={compact}
           className={cn("hidden [[data-course-account]_&]:flex", className)}
         />
         <SignInChip
@@ -100,11 +117,22 @@ const ProfileLink = ({ className }: { className?: string }) => {
     return (
       <BaseLink
         href={profileHref}
-        className={cn(statChip, chipHover, "text-body no-underline", className)}
+        className={cn(
+          statChip,
+          chipHover,
+          "text-body no-underline",
+          compact && compactChip,
+          className
+        )}
       >
         <Avatar accountId={user.id} className="size-6" />
         <span className="sr-only">{t("page-courses-profile-link")}: </span>
-        <span className="max-w-32 truncate sm:max-w-48">
+        <span
+          className={cn(
+            "max-w-32 truncate sm:max-w-48",
+            compact && "max-md:sr-only"
+          )}
+        >
           {user.name ? displayName(user.name) : tAccount("account-signed-in")}
         </span>
       </BaseLink>
@@ -115,7 +143,7 @@ const ProfileLink = ({ className }: { className?: string }) => {
   if (status === "loading")
     // Signed in here before: hold the shape until the session answers
     return document.documentElement.hasAttribute(HAS_ACCOUNT_ATTR) ? (
-      <PendingChip className={className} />
+      <PendingChip compact={compact} className={className} />
     ) : (
       <SignInChip className={className} />
     )
