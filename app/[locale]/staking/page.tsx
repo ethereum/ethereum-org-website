@@ -96,7 +96,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     apr: computeStakingApr(totalEthStaked.value),
   }
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("staking", locale as Lang)
 
   const t = await getTranslations("page-staking")
@@ -468,7 +468,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <StakingPageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 

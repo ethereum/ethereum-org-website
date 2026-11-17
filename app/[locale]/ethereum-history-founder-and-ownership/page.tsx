@@ -25,7 +25,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const t = await getTranslations("page-ethereum-history-founder-and-ownership")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(
       "ethereum-history-founder-and-ownership",
       locale as Lang
@@ -64,7 +64,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 

@@ -117,7 +117,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = params
   const t = await getTranslations("page-privacy-online")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("privacy/online", locale)
 
   // Keyed rather than positional: sections get reordered, and an <h2> rendering
@@ -604,7 +604,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
