@@ -1,6 +1,6 @@
 "use client"
 
-import { Trophy } from "lucide-react"
+import { Check } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { type TrackCourse, useTrackStatus } from "./track-status"
@@ -11,14 +11,14 @@ interface CourseCardStatusProps {
   lessonIds: string[]
 }
 
-/** Hub card banner badge: the trophy, once the course check is passed */
-export const CourseCardTrophy = ({ courseId }: { courseId: string }) => {
+/** Hub card banner badge: a check, once the course check is passed */
+export const CourseCardDone = ({ courseId }: { courseId: string }) => {
   const t = useTranslations("page-courses")
   const { isExamPassed } = useCourseProgress()
   if (!isExamPassed(courseId)) return null
   return (
-    <span className="absolute end-3 top-3 grid size-10 place-items-center rounded-full border-b-4 border-yellow-600 bg-yellow-400 text-yellow-900">
-      <Trophy className="size-5" aria-hidden />
+    <span className="absolute end-3 top-3 grid size-9 place-items-center rounded-full bg-green-700 text-white">
+      <Check className="size-5" strokeWidth={3} aria-hidden />
       <span className="sr-only">{t("page-courses-path-finish")}</span>
     </span>
   )
@@ -51,7 +51,7 @@ export const CourseCardNext = ({
   const { nextId, started } = useTrackStatus(track)
   if (nextId !== courseId) return null
   return (
-    <span className="absolute end-3 top-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
+    <span className="absolute end-3 bottom-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
       {t(started ? "page-courses-up-next" : "page-courses-start-here")}
     </span>
   )

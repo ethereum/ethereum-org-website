@@ -68,7 +68,6 @@ export const TRACKS: Track[] = [
       { id: "roadmap", level: "advanced", art: "diamond" },
       { id: "privacy", level: "advanced", art: "mailbox" },
     ],
-    next: { id: "build", href: "/developers/" },
   },
 ]
 

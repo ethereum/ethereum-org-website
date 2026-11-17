@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Check, ChevronDown } from "lucide-react"
+import { Check, ChevronDown, LayoutList } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import type { Lang } from "@/lib/types"
@@ -207,14 +207,20 @@ const TrackNav = ({ className }: { className?: string }) => {
       </ul>
 
       <DropdownMenu>
+        {/* Below sm, an icon in place of the track's name keeps one row
+            with the stat chips */}
         <DropdownMenuTrigger
-          className={cn(chip, "max-w-full text-body md:hidden")}
+          aria-label={`${t("page-courses-track-nav")}: ${current.title}`}
+          className={cn(chip, "max-w-full text-body max-sm:gap-1 md:hidden")}
         >
-          <TrackRing share={current.share} />
-          <span className="truncate">{current.title}</span>
+          <LayoutList aria-hidden className="size-6 shrink-0 sm:hidden" />
+          <span className="contents max-sm:hidden">
+            <TrackRing share={current.share} />
+            <span className="truncate">{current.title}</span>
+          </span>
           <ChevronDown aria-hidden className="size-4 shrink-0" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="start" className="min-w-64">
+        <DropdownMenuContent align="end" className="min-w-64">
           {tracks.map(({ id, title, share, count }) => (
             <DropdownMenuItem
               key={id}

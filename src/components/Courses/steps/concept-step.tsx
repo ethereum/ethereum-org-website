@@ -2,7 +2,7 @@
 
 import { Fragment, type ReactNode } from "react"
 import { Lightbulb } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { ConceptStep as ConceptStepData } from "@/data/courses"
 
@@ -24,6 +24,7 @@ interface ConceptStepProps {
 
 const ConceptStep = ({ step, keyFor, title }: ConceptStepProps) => {
   const t = useTranslations("page-courses")
+  const locale = useLocale()
   const paragraphs = Array.from(
     { length: step.paragraphs },
     (_, i) => `p${i + 1}`
@@ -41,23 +42,30 @@ const ConceptStep = ({ step, keyFor, title }: ConceptStepProps) => {
   )
 
   if (step.takeaway) {
+    // One paragraph per sentence, so each idea stands on its own
+    const segmenter = new Intl.Segmenter(locale, { granularity: "sentence" })
+    const sentences = paragraphs.flatMap((p) =>
+      Array.from(segmenter.segment(t(keyFor(p))), ({ segment }) =>
+        segment.trim()
+      ).filter(Boolean)
+    )
     return (
       <div className="relative overflow-hidden rounded-3xl border-b-8 border-(--course-strong) bg-(--course) p-8 text-white">
         <Lightbulb
           aria-hidden
           className="absolute -end-6 -top-6 size-36 rotate-12 opacity-15"
         />
-        <p className="m-0 mb-3 flex items-center gap-2 text-sm font-black tracking-widest uppercase">
+        <p className="m-0 mb-4 flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-black tracking-widest text-(--course-strong) uppercase">
           <Lightbulb className="size-5" aria-hidden />
           {t("page-courses-takeaway")}
         </p>
-        {paragraphs.map((p) => (
-          <p key={p} className="m-0 text-xl leading-snug font-bold">
-            {t.rich(keyFor(p), {
-              strong: (chunks: ReactNode) => <strong>{chunks}</strong>,
-            })}
-          </p>
-        ))}
+        <div className="flex flex-col gap-4">
+          {sentences.map((sentence, i) => (
+            <p key={i} className="m-0 text-2xl leading-snug font-bold">
+              {sentence}
+            </p>
+          ))}
+        </div>
       </div>
     )
   }

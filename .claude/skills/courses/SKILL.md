@@ -24,6 +24,7 @@ Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-
 | Learner problem reports (anonymous Matomo event, GitHub fallback)            | `src/components/Courses/report-problem-button.tsx`                                  |
 | XP levels (unit-named tiers) and the level-up card                           | `src/components/Courses/levels.ts`, `level-up.tsx`                                  |
 | Funnel events (user-initiated only; pageviews cover views and starts)        | `src/components/Courses/analytics.ts`                                               |
+| Course cards (hub and profile's Mastered), the sticky stats bar              | `src/components/Courses/course-card.tsx`, `sticky-bar.tsx`                          |
 | Profile page (reserved `profile` segment, so never a course id)              | `app/[locale]/courses/profile/`, `src/components/Courses/profile-view.tsx`          |
 | Installable app: per-language manifest, service worker, registration         | `app/manifests/courses/`, `public/courses-sw.js`, `app/[locale]/courses/layout.tsx` |
 
@@ -37,7 +38,7 @@ Every course has a `level`, which limits what its copy may use:
 | `intermediate` | Numbers and mechanics welcome: working out fees, units, timings, thresholds.                                    |
 | `advanced`     | Internals: how nodes, the EVM and protocol upgrades work inside. Assumes the beginner and intermediate courses. |
 
-`TRACKS` are the hub sections, in order, and set the level of their courses: `essentials` (beginner: everyday, wallets, blockchains, ethereum, sending, smart-contracts), `using` (beginner, putting the essentials to work: tokens, nfts, layer-2, trading-and-lending, scams), `deeper` (intermediate: gas, proof-of-stake, rollups, eth, upgrades, smart-accounts) and `under-the-hood` (advanced, teasers only for now: nodes, evm, mev, roadmap, privacy, and build as a link card to `/developers/`). A track with no courses and no teasers doesn't render.
+`TRACKS` are the hub sections, in order, and set the level of their courses: `essentials` (beginner: everyday, wallets, blockchains, ethereum, sending, smart-contracts), `using` (beginner, putting the essentials to work: tokens, nfts, layer-2, trading-and-lending, scams), `deeper` (intermediate: gas, proof-of-stake, rollups, eth, upgrades, smart-accounts) and `under-the-hood` (advanced, teasers only for now: nodes, evm, mev, roadmap, privacy). A track with no courses and no teasers doesn't render.
 
 **Teasers.** `Track.upcoming` announces courses that aren't built: a muted "Coming soon" card after the live ones, or a link card with `href`. Teasers are not in `COURSES`, so they get no routes, sitemap entry, JSON-LD, progress or "Up next". Their strings are the course keys (`{id}-title`, `-description`), so they carry over when the course ships. How-to: `references/authoring.md`.
 

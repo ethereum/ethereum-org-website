@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl"
 
-import { Button } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 
@@ -18,65 +17,11 @@ import { useResumeCourse } from "./track-status"
 
 import { useIsClient } from "@/hooks/useIsClient"
 
-// Matches the hero's own call-to-action sizing
-const heroButton = "w-full md:w-auto"
-
 // Until saved progress loads, when there is some, a skeleton stands in so
 // labels don't swap. Literals for Tailwind's scanner; must match
 // HAS_PROGRESS_ATTR
 const whilePending = "hidden [[data-has-course-progress]_&]:flex"
 const oncePending = "[[data-has-course-progress]_&]:hidden"
-
-/** Brings a hub card into view and pulses its outline once it's there */
-const revealCard = (id: string) => {
-  const item = document.getElementById(id)
-  const card = item?.firstElementChild
-  if (!(card instanceof HTMLElement)) return
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  item!.scrollIntoView({
-    block: "center",
-    behavior: reduce ? "auto" : "smooth",
-  })
-  card.focus({ preventScroll: true })
-
-  let done = false
-  const pulse = () => {
-    if (done) return
-    done = true
-    const ring = "0 0 0 6px var(--course)"
-    const none = "0 0 0 0 transparent"
-    card.animate({ boxShadow: [none, ring, none, ring, none] }, 1600)
-  }
-  // Already in view means no scroll, so no scrollend
-  window.addEventListener("scrollend", pulse, { once: true })
-  setTimeout(pulse, 900)
-}
-
-/** Primary hero action: scroll to the learner's course on this page */
-export const HubHeroScroll = () => {
-  const t = useTranslations("page-courses")
-  const { course, returning } = useResumeCourse()
-  const pending = !useIsClient()
-  return (
-    <>
-      {pending && (
-        <Skeleton
-          className={cn("h-10.5 w-full rounded md:w-56", whilePending)}
-        />
-      )}
-      <Button
-        className={cn(heroButton, pending && oncePending)}
-        onClick={() => revealCard(course.id)}
-      >
-        {t(
-          returning
-            ? "page-courses-hub-hero-next"
-            : "page-courses-hub-hero-start"
-        )}
-      </Button>
-    </>
-  )
-}
 
 const nextUpCard = "w-full max-w-xl flex-row overflow-hidden bg-background"
 

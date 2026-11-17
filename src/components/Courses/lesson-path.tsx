@@ -289,9 +289,13 @@ const LessonPath = ({
               <PopoverPrimitive.Trigger asChild>
                 <Button
                   variant="ghost"
-                  className="size-24 rounded-3xl border-0 border-b-[6px] border-yellow-600 bg-yellow-400 p-0 text-yellow-900 transition-transform active:translate-y-1 active:border-b-2 hover-link:!text-yellow-900 [&>svg]:size-12"
+                  className="relative size-24 rounded-3xl border-0 border-b-[6px] border-yellow-600 bg-yellow-400 p-0 text-yellow-900 transition-transform active:translate-y-1 active:border-b-2 hover-link:!text-yellow-900 [&>svg]:size-12"
                 >
                   <Trophy aria-hidden />
+                  {/* Same earned mark as a finished lesson */}
+                  <span className="absolute -end-2 -top-2 grid size-8 place-items-center rounded-full border-2 border-background bg-green-700 text-white">
+                    <Check className="size-5" strokeWidth={3} />
+                  </span>
                   <span className="sr-only">
                     {t("page-courses-path-finish")}
                   </span>

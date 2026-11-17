@@ -24,7 +24,7 @@ Three to six minutes, roughly five to seven steps:
 2. **Predict or explore**: a choice step asking for a guess, or a widget. Prediction before play makes the widget land.
 3. **Do**: a widget or order step where the idea is discovered rather than told.
 4. **Apply**: one or two choice steps that transfer the idea to a realistic situation, often a safety one. A match or fill step suits the end of a lesson, to consolidate its terms just before the takeaway.
-5. **Takeaway**: a concept step with `takeaway: true`, one sentence the learner could repeat to a friend.
+5. **Takeaway**: a concept step with `takeaway: true`, one sentence the learner could repeat to a friend. Each sentence renders as its own paragraph, so use two sentences rather than a semicolon. The card takes plain text (no `<strong>`).
 
 One new idea per lesson. If the takeaway needs "and" twice, split the lesson.
 

@@ -141,7 +141,7 @@ export const chunkyTile = cn(
  * Step prompt: the step's `h2`, styled as reading text because prompts run
  * to full sentences. `font-normal` overrides the base heading weight.
  */
-export const stepPrompt = "m-0 text-lg leading-relaxed font-normal"
+export const stepPrompt = "m-0 text-xl leading-relaxed font-normal"
 
 /** Pill for the header stat chips and the profile button beside them */
 export const statChip =
