@@ -92,6 +92,8 @@ export interface ConceptStep extends StepBase {
   takeaway?: boolean
   /** Illustration above the text */
   art?: CourseArtId
+  /** Bullets (`-li1`...) placed after paragraph `after`; 0 puts them first */
+  list?: { after: number; items: number }
 }
 
 /**

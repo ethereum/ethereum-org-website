@@ -132,6 +132,7 @@
   "page-courses-complete-xp": "+{xp} XP",
   "page-courses-complete-perfect-bonus": "Perfect bonus included",
   "page-courses-complete-accuracy": "First-try accuracy",
+  "page-courses-complete-accuracy-count": "{right} / {total}",
   "page-courses-next-lesson": "Next lesson",
   "page-courses-next-exam": "Start Course Mastery",
   "page-courses-back-to-course": "Back to course",
