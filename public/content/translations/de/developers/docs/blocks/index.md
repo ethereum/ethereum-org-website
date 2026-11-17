@@ -12,12 +12,11 @@ Blöcke sind ein sehr anfängerfreundliches Thema. Damit Sie diese Seite jedoch 
 
 ## Warum Blöcke? {#why-blocks}
 
-Um sicherzustellen, dass alle Teilnehmer im [Ethereum](/)-Netzwerk einen synchronisierten Zustand beibehalten und sich auf die genaue Historie der Transaktionen einigen, bündeln wir Transaktionen in Blöcken. Das bedeutet, dass Dutzende (oder Hunderte) von Transaktionen auf einmal festgeschrieben (committed), vereinbart und synchronisiert werden.
+Um sicherzustellen, dass alle Teilnehmer im [Ethereum](/)-Netzwerk einen synchronisierten Zustand beibehalten und sich über die genaue Historie der Transaktionen einig sind, bündeln wir Transaktionen in Blöcke. Das bedeutet, dass Dutzende (oder Hunderte) von Transaktionen auf einmal committet, abgestimmt und synchronisiert werden.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Indem wir die Commits zeitlich verteilen, geben wir allen Netzwerkteilnehmern genügend Zeit, um einen Konsens zu finden: Auch wenn Transaktionsanfragen dutzende Male pro Sekunde auftreten, werden Blöcke auf Ethereum nur alle zwölf Sekunden erstellt und festgeschrieben.
+Indem wir zeitliche Abstände zwischen den Commits lassen, geben wir allen Netzwerkteilnehmern genügend Zeit, um zu einem Konsens zu gelangen: Auch wenn Transaktionsanfragen dutzende Male pro Sekunde eingehen, werden Blöcke auf Ethereum nur alle zwölf Sekunden erstellt und committet.
 
 ## Wie Blöcke funktionieren {#how-blocks-work}
 

@@ -28,27 +28,26 @@ Beide Kontotypen haben die Fähigkeit:
 
 - Die Erstellung eines Kontos kostet nichts
 - Kann Transaktionen initiieren
-- Transaktionen zwischen externen Konten können nur ETH-/Token-Transfers sein
+- Transaktionen zwischen externen Konten können nur ETH-Überweisungen sein, es sei denn, der Empfänger hat an Vertrags-Code delegiert (siehe `codeHash` unten)
 - Besteht aus einem kryptographischen Schlüsselpaar: öffentliche und private Schlüssel, die die Kontoaktivitäten steuern
 
-**Contract**
+**Contract-Konto**
 
-- Die Erstellung eines Vertrags ist mit Kosten verbunden, da Sie Netzwerkspeicher nutzen
+- Die Erstellung eines Vertrags ist mit Kosten verbunden, da Sie Netzwerkspeicherplatz nutzen
 - Kann Nachrichten nur als Reaktion auf den Empfang einer Transaktion senden
-- Transaktionen von einem externen Konto an ein Contract-Konto können Code auslösen, der viele verschiedene Aktionen ausführen kann, wie z. B. das Überweisen von Token oder sogar das Erstellen eines neuen Vertrags
+- Transaktionen von einem externen Konto an ein Contract-Konto können Code auslösen, der viele verschiedene Aktionen ausführen kann, wie z. B. das Übertragen von Token oder sogar das Erstellen eines neuen Vertrags
 - Contract-Konten haben keine privaten Schlüssel. Stattdessen werden sie durch die Logik des Smart-Contract-Codes gesteuert
 
 ## Ein Konto im Detail {#an-account-examined}
 
 Ethereum-Konten haben vier Felder:
 
-- `nonce` – Ein Zähler, der die Anzahl der von einem externen Konto gesendeten Transaktionen oder die Anzahl der von einem Contract-Konto erstellten Verträge angibt. Für jedes Konto kann nur eine Transaktion mit einer bestimmten Nonce ausgeführt werden, was vor Replay-Angriffen schützt, bei denen signierte Transaktionen wiederholt gesendet und erneut ausgeführt werden.
-- `balance` – Die Anzahl der Wei, die dieser Adresse gehören. Wei ist eine Stückelung von ETH und es gibt 1e+18 Wei pro ETH.
-- `codeHash` – Dieser Hash bezieht sich auf den _Code_ eines Kontos auf der Virtuellen Ethereum-Maschine (EVM). In Contract-Konten sind Codefragmente einprogrammiert, die verschiedene Operationen ausführen können. Dieser EVM-Code wird ausgeführt, wenn das Konto einen Nachrichtenaufruf erhält. Er kann im Gegensatz zu den anderen Kontofeldern nicht geändert werden. Alle derartigen Codefragmente sind in der Zustandsdatenbank unter ihren entsprechenden Hashes zum späteren Abruf enthalten. Dieser Hash-Wert ist als codeHash bekannt. Bei externen Konten ist das codeHash-Feld der Hash einer leeren Zeichenfolge.
-- `storageRoot` – Manchmal auch als Speicher-Hash bekannt. Ein 256-Bit-Hash des Wurzelknotens eines [Merkle-Patricia-Tries](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), der den Speicherinhalt des Kontos kodiert (eine Zuordnung zwischen 256-Bit-Ganzzahlwerten), kodiert in den Trie als Zuordnung vom Keccak-256-Bit-Hash der 256-Bit-Ganzzahlschlüssel zu den RLP-kodierten 256-Bit-Ganzzahlwerten. Dieser Trie kodiert den Hash des Speicherinhalts dieses Kontos und ist standardmäßig leer.
+- `nonce` – Ein Zähler, der die Anzahl der von einem externen Konto gesendeten Transaktionen angibt oder, bei einem Contract-Konto, eins mehr als die Anzahl der von ihm erstellten Verträge (Contract-Nonces beginnen bei 1, gemäß [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Jede angewendete [EIP-7702](/roadmap/pectra/7702/)-Autorisierung erhöht ebenfalls die Nonce des autorisierenden Kontos. Für jedes Konto kann nur eine Transaktion mit einer bestimmten Nonce ausgeführt werden, was vor Replay-Angriffen schützt, bei denen signierte Transaktionen wiederholt gesendet und erneut ausgeführt werden.
+- `balance` – Die Anzahl der Wei, die diese Adresse besitzt. Wei ist eine Stückelung von ETH und es gibt 1e+18 Wei pro ETH.
+- `codeHash` – Dieser Hash bezieht sich auf den _Code_ eines Kontos auf der Virtuellen Ethereum-Maschine (EVM). In Contract-Konten sind Codefragmente einprogrammiert, die verschiedene Operationen ausführen können. Dieser EVM-Code wird ausgeführt, wenn das Konto einen Nachrichtenaufruf erhält. Der Code eines Vertrags kann nach seiner Bereitstellung nicht mehr geändert werden, im Gegensatz zu den anderen Kontofeldern. Alle derartigen Codefragmente sind in der Zustandsdatenbank unter ihren entsprechenden Hashes für den späteren Abruf enthalten. Dieser Hash-Wert ist als codeHash bekannt. Für externe Konten ist das codeHash-Feld der Hash einer leeren Zeichenfolge, es sei denn, das Konto hat mit [EIP-7702](/roadmap/pectra/7702/) an einen Smart Contract delegiert. Der Code des Kontos ist dann ein Delegationsindikator (`0xef0100` gefolgt von der Adresse des Vertrags), den das Konto mit einer neuen Autorisierung ändern oder löschen kann.
+- `storageRoot` – Manchmal auch als Speicher-Hash bekannt. Ein 256-Bit-Hash des Wurzelknotens eines [Merkle-Patricia-Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), der den Speicherinhalt des Kontos kodiert (eine Zuordnung zwischen 256-Bit-Ganzzahlwerten), kodiert in den Trie als Zuordnung vom Keccak-256-Bit-Hash der 256-Bit-Ganzzahlschlüssel zu den RLP-kodierten 256-Bit-Ganzzahlwerten. Dieser Trie kodiert den Hash des Speicherinhalts dieses Kontos und ist standardmäßig leer.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Externe Konten und Schlüsselpaare {#externally-owned-accounts-and-key-pairs}
 
