@@ -288,3 +288,15 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: `حساب` used for "computation" right after the same word for "account" (mint:116); English alt text (write-deploy:32,44); "leave `gas` out" rendered as "leave it empty" (sending:198).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:25 dangling `سوف:` before a list of verbal nouns -> `ستقوم بما يلي:`
+- echidna:414 `John Regehr` reverted to bare Latin -> `جون ريجر (John Regehr)` (dev form)
+
+**Open / notes:**
+
+- echidna:298 "falsify the property" -> `تزييف` (forge); suggested `لإثبات بطلان الخاصية` -- native call
