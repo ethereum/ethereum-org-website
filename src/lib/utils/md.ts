@@ -30,34 +30,25 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
   const contentRoot = getContentRoot()
   const _dir = join(contentRoot, dir)
 
-  // Get an array of all files and directories in the passed directory using `fs.readdirSync`
   const dirContents = await fsp.readdir(_dir)
 
   const files: string[] = []
 
-  // Create the full path of the file/directory by concatenating the passed directory and file/directory name
   for (const fileOrDir of dirContents) {
-    // file = "about", "bridges".... "translations" (<-- skip that one)...
     const path = join(_dir, fileOrDir)
 
     const stats = await fsp.stat(path)
     if (stats.isDirectory()) {
-      // Skip nested translations directory
       if (fileOrDir === "translations") continue
-      // Skip videos directory — video pages have their own dedicated route
+      // Video pages have their own dedicated route
       if (fileOrDir === "videos") continue
-      // If it is a directory, recursively call the `getPostSlugs` function with the
-      // directory path and the files array
-      const nestedDir = join(dir, fileOrDir)
 
-      const nestedFiles = await getPostSlugs(nestedDir, filterRegex)
+      const nestedFiles = await getPostSlugs(join(dir, fileOrDir), filterRegex)
       files.push(...nestedFiles)
       continue
     }
 
     if (filterRegex?.test(path)) continue
-
-    // If the current file is not a markdown file, skip it
     if (extname(path) !== ".md") continue
 
     const sanitizedPath = toPosixPath(

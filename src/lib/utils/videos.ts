@@ -123,21 +123,8 @@ export async function getVideoSlugs(): Promise<string[]> {
   if (slugsCache) return slugsCache
 
   const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
-  try {
-    const entries = await readdir(videosDir, { withFileTypes: true })
-    slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
-  } catch (error) {
-    // Directory absent in the serverless runtime (public/content excluded from
-    // the function bundle): warn and return an empty list.
-    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
-      console.warn(
-        `Content directory ${videosDir} not found, returning empty slug list`
-      )
-      slugsCache = []
-    } else {
-      throw error
-    }
-  }
+  const entries = await readdir(videosDir, { withFileTypes: true })
+  slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
   return slugsCache
 }
 

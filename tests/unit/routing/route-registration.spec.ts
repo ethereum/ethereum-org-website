@@ -1,19 +1,25 @@
-// Routes are discovered from the filesystem, so a new page has to be wired
-// into the registries below or it silently ships English-only, drops out of
-// the sitemap, or renders empty after an ISR regeneration on Netlify.
+// A new route must be registered below or it ships English-only, leaves the
+// sitemap, or renders empty after an ISR regeneration on Netlify.
 
-import { existsSync, readdirSync, readFileSync } from "node:fs"
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs"
+import { createRequire } from "node:module"
 import path from "node:path"
 import { expect, test } from "@playwright/test"
 
 import { discoverStaticPages } from "@/lib/utils/staticPages"
-import { getPrimaryNamespaceForPath } from "@/lib/utils/translations"
+import {
+  EXACT_PATH_NAMESPACE_MAP,
+  getPrimaryNamespaceForPath,
+  PREFIX_PATH_NAMESPACE_MAP,
+} from "@/lib/utils/translations"
 
 const REPO_ROOT = path.resolve(__dirname, "../../..")
 const APP_DIR = "app"
 const LOCALE_DIR = "app/[locale]"
 
 const read = (rel: string) => readFileSync(path.join(REPO_ROOT, rel), "utf8")
+const stripComments = (src: string) =>
+  src.replace(/\/\*[\s\S]*?\*\/|(^|[^:])\/\/.*$/gm, "$1")
 
 /** Every route dir under app/[locale] (relative to app/) that holds page.tsx or route.ts. */
 const findRoutes = (dir = LOCALE_DIR): string[] => {
@@ -44,8 +50,7 @@ test("routes are discovered", () => {
 })
 
 test.describe("dynamic routes are in getDynamicIntlPagePaths()", () => {
-  // Slugs for these come from markdown via getPostSlugs()/getVideoSlugs(),
-  // or the route is never meant to be indexed.
+  // Slugs come from markdown via getPostSlugs()/getVideoSlugs(), or never indexed.
   const EXEMPT = [
     "/[...slug]",
     "/stories/[slug]",
@@ -53,7 +58,7 @@ test.describe("dynamic routes are in getDynamicIntlPagePaths()", () => {
     "/ab-code/[code]",
   ]
 
-  const registry = read("src/lib/i18n/translationRegistry.ts")
+  const registry = stripComments(read("src/lib/i18n/translationRegistry.ts"))
   const dynamic = routes
     .filter(
       (r) =>
@@ -78,10 +83,12 @@ test.describe("dynamic routes are in getDynamicIntlPagePaths()", () => {
   }
 })
 
-test.describe("UI pages map to a primary namespace", () => {
+test.describe("UI pages map to their own namespace", () => {
   const ENGLISH_ONLY = [
     "/contributing/translation-program/translatathon/leaderboard/",
   ]
+  // Prefixes whose subpages intentionally share the section namespace.
+  const SHARED_PREFIXES = ["/community/events/"]
 
   const uiPages = discoverStaticPages()
     .map((p) => (p === "/" ? "/" : `${p}/`))
@@ -96,8 +103,12 @@ test.describe("UI pages map to a primary namespace", () => {
 
   for (const page of uiPages) {
     test(page, () => {
+      const ownEntry =
+        page in EXACT_PATH_NAMESPACE_MAP ||
+        PREFIX_PATH_NAMESPACE_MAP.some(([prefix]) => prefix === page) ||
+        SHARED_PREFIXES.some((prefix) => page.startsWith(prefix))
+      expect(ownEntry, `map ${page} in translations.ts`).toBe(true)
       const ns = getPrimaryNamespaceForPath(page)
-      expect(ns, `map ${page} in translations.ts`).toBeTruthy()
       expect(existsSync(path.join(REPO_ROOT, `src/intl/en/${ns}.json`))).toBe(
         true
       )
@@ -105,7 +116,7 @@ test.describe("UI pages map to a primary namespace", () => {
   }
 })
 
-test.describe("ISR routes reading public/content are traced", () => {
+test.describe("routes rendered at runtime that read public/content are traced", () => {
   // Reader -> the public/content collection it needs. `null` = per-page
   // markdown, which only a route-specific include can cover.
   const READERS: Record<string, string | null> = {
@@ -114,35 +125,58 @@ test.describe("ISR routes reading public/content are traced", () => {
     getBlogPostsData: "latest",
     getLatestArticles: "latest",
     getTutorialsData: "developers/tutorials",
+    getVideoData: "videos",
+    getVideos: "videos",
+    getVideoSlugs: "videos",
     getPostSlugs: null,
     getPageData: null,
     importMd: null,
-    getVideoData: null,
-    getVideos: null,
-    getVideoSlugs: null,
   }
-  // Routes that read public/content but are prerendered once, never regenerated.
-  const STATIC: string[] = []
+  const EXEMPT = [
+    // Renders every markdown page; tracing all of public/content is out of budget.
+    "[locale]/[...slug]",
+    // Known slugs are prerendered; on-demand misses 404 via getVideoData's catch.
+    "[locale]/videos/[slug]",
+  ]
+  // Only reached from the force-static sitemap.
+  const BUILD_ONLY = path.join(REPO_ROOT, "src/lib/i18n/translationRegistry.ts")
 
-  // next.config.js pulls in Sentry and next-intl, so read the literal instead.
-  const config = read("next.config.js")
-  const start = config.indexOf(
-    "{",
-    config.indexOf("outputFileTracingIncludes:")
-  )
-  let end = start
-  for (let depth = 0; ; end++) {
-    if (config[end] === "{") depth++
-    if (config[end] === "}" && --depth === 0) break
+  const config = createRequire(__filename)(
+    path.join(REPO_ROOT, "next.config.js")
+  )("phase-production-build")
+  const includes: Record<string, string[]> = config.outputFileTracingIncludes
+
+  const revalidatingGetters = [
+    ...read("src/lib/data/index.ts").matchAll(
+      /export const (\w+) = createCachedGetter\([^)]*,\s*(\w+)\s*\)/g
+    ),
+  ]
+    .filter(([, , revalidate]) => revalidate !== "false")
+    .map(([, name]) => name)
+
+  const sources = new Map<string, string>()
+  const source = (file: string) => {
+    if (!sources.has(file))
+      sources.set(file, stripComments(readFileSync(file, "utf8")))
+    return sources.get(file)!
   }
-  const includes: Record<string, string[]> = new Function(
-    `return ${config.slice(start, end + 1)}`
-  )()
 
-  // A route's own files plus its private `_folders`.
-  const routeSource = (route: string): string => {
+  const resolveImport = (from: string, spec: string) => {
+    const base = spec.startsWith("@/")
+      ? path.join(REPO_ROOT, "src", spec.slice(2))
+      : spec.startsWith(".")
+        ? path.resolve(path.dirname(from), spec)
+        : null
+    if (!base) return
+    return ["", ".ts", ".tsx", "/index.ts", "/index.tsx"]
+      .map((ext) => base + ext)
+      .find((f) => existsSync(f) && statSync(f).isFile())
+  }
+
+  /** The route's own files, its private `_folders`, and everything they import. */
+  const routeModules = (route: string): string[] => {
     const dir = path.join(REPO_ROOT, APP_DIR, route)
-    return readdirSync(dir, { withFileTypes: true, recursive: true })
+    const queue = readdirSync(dir, { withFileTypes: true, recursive: true })
       .filter(
         (e) =>
           e.isFile() &&
@@ -150,26 +184,62 @@ test.describe("ISR routes reading public/content are traced", () => {
           (e.parentPath === dir ||
             path.relative(dir, e.parentPath).startsWith("_"))
       )
-      .map((e) => readFileSync(path.join(e.parentPath, e.name), "utf8"))
-      .join("\n")
+      .map((e) => path.join(e.parentPath, e.name))
+    const seen = new Set(queue)
+    for (const file of queue) {
+      for (const [, spec] of source(file).matchAll(
+        /(?:from|import\()\s*["']([^"']+)["']/g
+      )) {
+        const dep = resolveImport(file, spec)
+        if (dep && dep !== BUILD_ONLY && !seen.has(dep)) {
+          seen.add(dep)
+          queue.push(dep)
+        }
+      }
+    }
+    return queue
   }
 
-  const isr = routes
-    .map((route) => {
-      const src = routeSource(route)
-      const readers = Object.keys(READERS).filter((r) =>
-        new RegExp(`\\b${r}\\b`).test(src)
-      )
-      return { route, readers, revalidates: src.includes('"@/lib/data"') }
-    })
-    .filter((r) => r.readers.length && r.revalidates)
-    .filter((r) => !STATIC.includes(r.route))
+  const segmentConfig = (route: string) =>
+    ["page.tsx", "route.ts", "layout.tsx"]
+      .map((f) => path.join(REPO_ROOT, APP_DIR, route, f))
+      .filter(existsSync)
+      .map(source)
+      .join("\n")
 
-  test("ISR content routes are discovered", () => {
-    expect(isr.length).toBeGreaterThan(1)
+  const calls = (src: string, name: string) =>
+    new RegExp(`\\b${name}\\b`).test(src) &&
+    !new RegExp(`(?:function|const)\\s+${name}\\b`).test(src)
+
+  const runtime = routes
+    .map((route) => {
+      const modules = routeModules(route).map(source)
+      const readers = Object.keys(READERS).filter((r) =>
+        modules.some((src) => calls(src, r))
+      )
+      const config = segmentConfig(route)
+      const revalidates =
+        /export const revalidate = [1-9]/.test(config) ||
+        modules.some(
+          (src) =>
+            src.includes('"@/lib/data"') &&
+            revalidatingGetters.some((g) => calls(src, g))
+        )
+      const onDemand =
+        urlOf(route).includes("[") &&
+        !/export const dynamicParams = false/.test(config)
+      return { route, readers, runtime: revalidates || onDemand }
+    })
+    .filter((r) => r.readers.length && r.runtime)
+    .filter((r) => !EXEMPT.includes(r.route))
+
+  test("runtime content routes are discovered", () => {
+    expect(runtime.map((r) => r.route)).toEqual(
+      expect.arrayContaining(["[locale]", "[locale]/stories/[slug]"])
+    )
   })
 
-  for (const { route, readers } of isr) {
+  for (const { route, readers } of runtime) {
     test(route, () => {
       const keys = Object.keys(includes).filter((key) => {
         const k = key.replaceAll("\\", "")

@@ -132,11 +132,9 @@ export async function generateStaticParams() {
       slug: slug.split("/").slice(1),
     }))
   } catch (error) {
-    // If content directory doesn't exist (e.g., in Netlify serverless environment),
-    // return empty array to allow ISR to handle all routes dynamically
+    // public/content isn't in the Netlify function bundle.
     console.warn(
-      "Content directory not found, enabling full dynamic routing:",
-      error
+      `generateStaticParams: no markdown slugs (${error instanceof Error ? error.message : error})`
     )
     return []
   }
