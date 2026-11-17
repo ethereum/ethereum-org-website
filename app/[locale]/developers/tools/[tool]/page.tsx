@@ -20,7 +20,7 @@ import {
   toToolCard,
   withCategories,
 } from "@/lib/utils/developerToolsData"
-import { getMetadata } from "@/lib/utils/metadata"
+import { getMetadata, truncateDescription } from "@/lib/utils/metadata"
 
 import CropsNativeTag from "../_components/CropsNativeTag"
 import ToolCard from "../_components/ToolCard"
@@ -177,7 +177,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["developers", "tools", toolKey],
     title: tool.name,
-    description: (tool.descriptionStripped ?? "").slice(0, 160),
+    description: truncateDescription(tool.descriptionStripped ?? ""),
   })
 }
 

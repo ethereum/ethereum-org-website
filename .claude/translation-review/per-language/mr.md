@@ -181,3 +181,17 @@ Scope: hello-world-smart-contract (released from quarantine and fully reworked f
 - hello-world:219 "compromising your secrets" is rendered as `तडजोड` (compromise in the sense of a concession; same polyseme as #19115). Prefer `सिक्रेट्स धोक्यात आणत आहात`
 - hello-world:344 "under the hood" is `तांत्रिकदृष्ट्या` here but `अंतर्गतपणे` at L346
 - nft:66-75 the PR's `इनिशियलाईज`/`टाईप` disagrees with `टाइप` elsewhere in the file and with the hello-world spelling
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 8.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna: glossary infinitive `पूर्ववत करणे` pasted as a predicate (`पूर्ववत करणे होतात`) at 4 sites -> `पूर्ववत होतात/झाले/होईल/झाली` (#96)
+- multi-client concept tag `टेस्टिंग` diverged from the locale tag `चाचणी` (splits the tag filter) -> `चाचणी`
+- multi-client:250 `ट्रान्झॅक्शन स्पॅमर` -> glossary `व्यवहार स्पॅमर`
+
+**Open / notes:**
+
+- multi-client fully re-registered toward English loanwords (`लोकल`, `टेस्ट करावे`) although only sections changed -- native call
+- ABI/EVM spelled out (#80); echidna:747 same relative-clause issue as hi

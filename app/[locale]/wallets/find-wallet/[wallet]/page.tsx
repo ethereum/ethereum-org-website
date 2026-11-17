@@ -13,7 +13,7 @@ import { XCircle } from "@/components/icons/XCircle"
 import Tooltip from "@/components/Tooltip"
 
 import { formatDate } from "@/lib/utils/date"
-import { getMetadata } from "@/lib/utils/metadata"
+import { getMetadata, truncateDescription } from "@/lib/utils/metadata"
 import {
   buildWalletMetaDescription,
   type CatalogWallet,
@@ -196,7 +196,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["wallets", "find-wallet", walletSlug],
     title: wallet.name,
-    description: description.slice(0, 160),
+    description: truncateDescription(description),
     image: "/images/wallets/wallet-hero.png",
   })
 }
