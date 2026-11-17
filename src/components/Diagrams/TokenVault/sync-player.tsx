@@ -15,7 +15,7 @@ import {
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
-import { getSyncView, SYNC_LAST_STEP } from "./model"
+import { getSyncView, SYNC_LAST_STEP, VAULT_EXAMPLE } from "./model"
 import TokenVaultRig from "./rig"
 import { useVaultAmount, useVaultParts } from "./use-vault-parts"
 
@@ -53,13 +53,17 @@ export function VaultDepositPlayer({
   })
   const view = useMemo(() => getSyncView(step), [step])
 
+  const example = {
+    deposit: amount({ value: view.deposit, unit: "assets" }, format),
+    shares: amount({ value: view.shares, unit: "shares" }, format),
+    rate: format(VAULT_EXAMPLE.rate),
+  }
   const captionFor = (i: number) => {
     const v = getSyncView(i)
     return t(`token-vault-sync-step-${v.stepId}`, {
+      ...example,
       step: format(v.step),
       fn: DEPOSIT_FN,
-      deposit: amount({ value: v.deposit, unit: "assets" }, format),
-      shares: amount({ value: v.shares, unit: "shares" }, format),
     })
   }
   const none = t("token-vault-readout-none")
@@ -68,10 +72,12 @@ export function VaultDepositPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("token-vault-sync-caption")}
-      description={t(
-        "token-vault-sync-description",
-        Object.fromEntries([1, 2, 3].map((n) => [`step${n}`, format(n)]))
-      )}
+      description={t("token-vault-sync-description", {
+        ...example,
+        totalAssets: format(VAULT_EXAMPLE.totalAssets),
+        totalSupply: format(VAULT_EXAMPLE.totalSupply),
+        ...Object.fromEntries([1, 2, 3].map((n) => [`step${n}`, format(n)])),
+      })}
       fig={fig}
       title={t("token-vault-sync-title")}
       status={t(`token-vault-sync-status-${view.stepId}`)}
