@@ -146,7 +146,7 @@ export const scamsCourse: Course = {
       id: "marks",
       source: "/security/#giveaway",
       type: "choice",
-      options: ["hurry", "secret", "good", "ask"],
+      options: ["hurry", "fear", "good", "ask"],
       correct: ["hurry", "good", "ask"],
       multi: true,
     },

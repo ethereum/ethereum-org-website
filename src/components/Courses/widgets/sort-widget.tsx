@@ -1,7 +1,14 @@
 "use client"
 
-import { useEffect, useId, useRef, useState } from "react"
-import { Check, CornerDownLeft, type LucideIcon } from "lucide-react"
+import {
+  type ComponentType,
+  type SVGProps,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+} from "react"
+import { Check, CornerDownLeft } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
@@ -19,7 +26,10 @@ import WidgetShell from "./widget-shell"
  */
 export interface SortConfig {
   name: string
-  buckets: readonly { id: string; Icon: LucideIcon }[]
+  buckets: readonly {
+    id: string
+    Icon: ComponentType<SVGProps<SVGSVGElement>>
+  }[]
   /** Fixed, mixed order, so server and client render the same pool */
   items: readonly { id: string; bucket: string }[]
 }

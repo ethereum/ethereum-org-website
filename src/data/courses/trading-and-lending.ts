@@ -2,7 +2,7 @@ import type { Course } from "./types"
 
 /**
  * Using Ethereum: how trading and lending apps work as smart contracts,
- * taught through everyday stand-ins (a fruit stand, a pawn shop)
+ * taught through everyday stand-ins (a fruit stand, borrowing against savings)
  */
 export const tradingAndLendingCourse: Course = {
   id: "trading-and-lending",
@@ -26,13 +26,6 @@ export const tradingAndLendingCourse: Course = {
           type: "choice",
           options: ["clerk", "code", "bank"],
           correct: ["code"],
-        },
-        { id: "admin", type: "concept", paragraphs: 1 },
-        {
-          id: "controls",
-          type: "choice",
-          options: ["never", "both", "safer"],
-          correct: ["both"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
@@ -90,7 +83,7 @@ export const tradingAndLendingCourse: Course = {
         {
           id: "less",
           type: "choice",
-          options: ["fee", "cushion", "trust"],
+          options: ["fee", "cushion", "interest"],
           correct: ["cushion"],
         },
         { id: "cushion", type: "interactive", widget: "collateral" },
@@ -104,11 +97,37 @@ export const tradingAndLendingCourse: Course = {
       ],
     },
     {
+      id: "control",
+      icon: "shield",
+      learnMore: "/defi/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "controls",
+          type: "choice",
+          options: ["never", "both", "safer"],
+          correct: ["both"],
+        },
+        {
+          id: "check",
+          type: "choice",
+          options: ["docs", "chart", "chat"],
+          correct: ["docs"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
       id: "rewards",
       icon: "gift",
       learnMore: "/defi/#saving",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "intro",
+          type: "concept",
+          paragraphs: 3,
+          list: { after: 2, items: 3 },
+        },
         { id: "sort", type: "interactive", widget: "reward-sort" },
         {
           id: "secret",
@@ -127,14 +146,6 @@ export const tradingAndLendingCourse: Course = {
       type: "choice",
       options: ["app", "wallet", "pool"],
       correct: ["wallet"],
-    },
-    {
-      id: "admin",
-      source:
-        "/developers/docs/smart-contracts/upgrading/#pros-and-cons-of-upgrading-smart-contracts",
-      type: "choice",
-      options: ["code", "nothing", "both"],
-      correct: ["both"],
     },
     {
       id: "big",
@@ -177,6 +188,14 @@ export const tradingAndLendingCourse: Course = {
       type: "choice",
       options: ["reminder", "sold", "nothing"],
       correct: ["sold"],
+    },
+    {
+      id: "admin",
+      source:
+        "/developers/docs/smart-contracts/upgrading/#pros-and-cons-of-upgrading-smart-contracts",
+      type: "choice",
+      options: ["code", "nothing", "both"],
+      correct: ["both"],
     },
     {
       id: "interest",

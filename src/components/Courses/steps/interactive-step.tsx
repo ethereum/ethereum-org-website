@@ -152,7 +152,7 @@ const WIDGETS: Record<
   "name-check": { component: NameCheckWidget, graded: true },
   "nft-approval": { component: NftApprovalWidget, graded: true },
   "pool-swap": { component: PoolSwapWidget, graded: false },
-  "swap-limit": { component: SwapLimitWidget, graded: true },
+  "swap-limit": { component: SwapLimitWidget, graded: false },
   collateral: { component: CollateralWidget, graded: false },
   "reward-sort": { component: RewardSortWidget, graded: true },
   "red-flag-sort": { component: RedFlagSortWidget, graded: true },

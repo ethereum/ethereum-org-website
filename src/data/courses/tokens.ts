@@ -1,8 +1,9 @@
 import type { Course } from "./types"
 
 /**
- * Using Ethereum: what a token's name can't prove, what keeps a stablecoin
- * steady, and how to send and receive tokens without slipping up.
+ * Using Ethereum: what keeps a stablecoin steady, how to send tokens without
+ * slipping up, what a token's name can't prove, and, once the basics are in,
+ * what each kind of stablecoin backing does well and where it fails.
  */
 export const tokensCourse: Course = {
   id: "tokens",
@@ -10,28 +11,6 @@ export const tokensCourse: Course = {
   theme: { hue: 70 },
   art: "scale",
   lessons: [
-    {
-      id: "name",
-      icon: "search",
-      learnMore: "/guides/how-to-id-scam-tokens/",
-      steps: [
-        { id: "intro", type: "concept", paragraphs: 2, art: "coins" },
-        {
-          id: "predict",
-          type: "choice",
-          options: ["same", "unknown", "wallet"],
-          correct: ["unknown"],
-        },
-        { id: "check", type: "interactive", widget: "token-check" },
-        {
-          id: "source",
-          type: "choice",
-          options: ["chat", "project", "search"],
-          correct: ["project"],
-        },
-        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
-      ],
-    },
     {
       id: "stable",
       icon: "coins",
@@ -46,34 +25,6 @@ export const tokensCourse: Course = {
         },
         { id: "backing", type: "concept", paragraphs: 1 },
         { id: "sort", type: "interactive", widget: "backing-sort" },
-        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
-      ],
-    },
-    {
-      id: "steady",
-      icon: "piggy",
-      learnMore: "/stablecoins/",
-      steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
-        {
-          id: "predict",
-          type: "choice",
-          options: ["short", "fine", "more"],
-          correct: ["short"],
-        },
-        { id: "vaults", type: "interactive", widget: "backing-vaults" },
-        {
-          id: "freeze",
-          type: "choice",
-          options: ["freeze", "undo", "eth"],
-          correct: ["freeze"],
-        },
-        {
-          id: "nothing",
-          type: "choice",
-          options: ["trust", "company", "rises"],
-          correct: ["trust"],
-        },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
     },
@@ -104,6 +55,28 @@ export const tokensCourse: Course = {
       ],
     },
     {
+      id: "name",
+      icon: "search",
+      learnMore: "/guides/how-to-id-scam-tokens/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2, art: "coins" },
+        {
+          id: "predict",
+          type: "choice",
+          options: ["same", "unknown", "wallet"],
+          correct: ["unknown"],
+        },
+        { id: "check", type: "interactive", widget: "token-check" },
+        {
+          id: "source",
+          type: "choice",
+          options: ["chat", "project", "search"],
+          correct: ["project"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
       id: "free",
       icon: "gift",
       learnMore: "/security/#airdrop-scams",
@@ -119,22 +92,36 @@ export const tokensCourse: Course = {
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
     },
+    {
+      id: "steady",
+      icon: "piggy",
+      learnMore: "/stablecoins/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 3 },
+        {
+          id: "predict",
+          type: "choice",
+          options: ["short", "fine", "more"],
+          correct: ["short"],
+        },
+        { id: "vaults", type: "interactive", widget: "backing-vaults" },
+        {
+          id: "freeze",
+          type: "choice",
+          options: ["freeze", "undo", "eth"],
+          correct: ["freeze"],
+        },
+        {
+          id: "nothing",
+          type: "choice",
+          options: ["trust", "company", "rises"],
+          correct: ["trust"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
   ],
   exam: [
-    {
-      id: "copy",
-      source: "/guides/how-to-id-scam-tokens/#appearing-legitimate",
-      type: "choice",
-      options: ["picture", "address", "official"],
-      correct: ["address"],
-    },
-    {
-      id: "source",
-      source: "/guides/how-to-id-scam-tokens/#protect-yourself",
-      type: "choice",
-      options: ["ad", "chat", "project"],
-      correct: ["project"],
-    },
     {
       id: "stable",
       source: "/stablecoins/",
@@ -147,20 +134,6 @@ export const tokensCourse: Course = {
       source: "/stablecoins/",
       type: "choice",
       options: ["crypto", "company", "rules"],
-      correct: ["company"],
-    },
-    {
-      id: "extra",
-      source: "/stablecoins/",
-      type: "choice",
-      options: ["fees", "cushion", "grow"],
-      correct: ["cushion"],
-    },
-    {
-      id: "freeze",
-      source: "/open-access/",
-      type: "choice",
-      options: ["company", "anyone", "wallet"],
       correct: ["company"],
     },
     {
@@ -178,6 +151,20 @@ export const tokensCourse: Course = {
       correct: ["same"],
     },
     {
+      id: "copy",
+      source: "/guides/how-to-id-scam-tokens/#appearing-legitimate",
+      type: "choice",
+      options: ["picture", "address", "official"],
+      correct: ["address"],
+    },
+    {
+      id: "source",
+      source: "/guides/how-to-id-scam-tokens/#protect-yourself",
+      type: "choice",
+      options: ["ad", "chat", "project"],
+      correct: ["project"],
+    },
+    {
       id: "public",
       source: "/security/#airdrop-scams",
       type: "choice",
@@ -190,6 +177,20 @@ export const tokensCourse: Course = {
       type: "choice",
       options: ["connect", "ignore", "visit"],
       correct: ["ignore"],
+    },
+    {
+      id: "extra",
+      source: "/stablecoins/",
+      type: "choice",
+      options: ["fees", "cushion", "grow"],
+      correct: ["cushion"],
+    },
+    {
+      id: "freeze",
+      source: "/open-access/",
+      type: "choice",
+      options: ["company", "anyone", "wallet"],
+      correct: ["company"],
     },
   ],
 }

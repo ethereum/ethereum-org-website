@@ -3,10 +3,10 @@
 import {
   ArrowLeftRight,
   CircleHelp,
-  EyeOff,
   HandCoins,
   Landmark,
   PenLine,
+  ShieldAlert,
   Sparkles,
   Timer,
 } from "lucide-react"
@@ -45,18 +45,18 @@ export const RedFlagSortWidget = skin({
   name: "red-flag-sort",
   buckets: [
     { id: "hurry", Icon: Timer },
-    { id: "secret", Icon: EyeOff },
+    { id: "fear", Icon: ShieldAlert },
     { id: "good", Icon: Sparkles },
     { id: "ask", Icon: PenLine },
   ],
   items: [
     { id: "spots", bucket: "hurry" },
-    { id: "tell", bucket: "secret" },
+    { id: "alert", bucket: "fear" },
     { id: "sure", bucket: "good" },
     { id: "verify", bucket: "ask" },
-    { id: "locked", bucket: "hurry" },
+    { id: "ends", bucket: "hurry" },
     { id: "free", bucket: "good" },
-    { id: "private", bucket: "secret" },
+    { id: "risk", bucket: "fear" },
     { id: "activate", bucket: "ask" },
   ],
 })

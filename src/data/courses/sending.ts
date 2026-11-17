@@ -31,7 +31,7 @@ export const sendingCourse: Course = {
       icon: "fuel",
       learnMore: "/gas/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2, art: "stamp" },
+        { id: "intro", type: "concept", paragraphs: 3, art: "stamp" },
         {
           id: "predict",
           type: "choice",

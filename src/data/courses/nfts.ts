@@ -1,8 +1,9 @@
 import type { Course } from "./types"
 
 /**
- * Using Ethereum: one-of-a-kind tokens, what owning one means, telling an
- * original from a copy, readable names for addresses, and NFT permissions.
+ * Using Ethereum: one-of-a-kind tokens, what they're used for, what owning
+ * one means, telling an original from a copy, readable names for addresses,
+ * and NFT permissions.
  */
 export const nftsCourse: Course = {
   id: "nfts",
@@ -33,11 +34,37 @@ export const nftsCourse: Course = {
       ],
     },
     {
+      id: "uses",
+      icon: "badge",
+      learnMore: "/nft/#nft-use-cases",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "match",
+          type: "match",
+          pairs: ["ticket", "badge", "card", "tag"],
+        },
+        {
+          id: "gate",
+          type: "choice",
+          options: ["blurry", "owner", "secret"],
+          correct: ["owner"],
+        },
+        {
+          id: "helpers",
+          type: "choice",
+          options: ["bought", "staff", "helped"],
+          correct: ["helped"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
       id: "own",
       icon: "box",
       learnMore: "/nft/#how-nfts-work",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
+        { id: "intro", type: "concept", paragraphs: 3 },
         {
           id: "predict",
           type: "choice",
@@ -81,7 +108,7 @@ export const nftsCourse: Course = {
       icon: "at",
       learnMore: "/developers/docs/smart-contracts/naming/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
+        { id: "intro", type: "concept", paragraphs: 3 },
         {
           id: "why",
           type: "choice",
@@ -121,32 +148,6 @@ export const nftsCourse: Course = {
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
     },
-    {
-      id: "uses",
-      icon: "badge",
-      learnMore: "/nft/#nft-use-cases",
-      steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
-        {
-          id: "match",
-          type: "match",
-          pairs: ["ticket", "badge", "card", "tag"],
-        },
-        {
-          id: "gate",
-          type: "choice",
-          options: ["blurry", "owner", "secret"],
-          correct: ["owner"],
-        },
-        {
-          id: "helpers",
-          type: "choice",
-          options: ["bought", "staff", "helped"],
-          correct: ["helped"],
-        },
-        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
-      ],
-    },
   ],
   exam: [
     {
@@ -162,6 +163,20 @@ export const nftsCourse: Course = {
       type: "choice",
       options: ["one", "savers", "none"],
       correct: ["one"],
+    },
+    {
+      id: "gate",
+      source: "/nft/#nft-use-cases",
+      type: "choice",
+      options: ["code", "list", "call"],
+      correct: ["list"],
+    },
+    {
+      id: "badge",
+      source: "/nft/#nft-use-cases",
+      type: "choice",
+      options: ["finished", "paid", "teaches"],
+      correct: ["finished"],
     },
     {
       id: "picture",
@@ -219,20 +234,6 @@ export const nftsCourse: Course = {
       type: "choice",
       options: ["revoke", "wait", "disconnect"],
       correct: ["revoke"],
-    },
-    {
-      id: "gate",
-      source: "/nft/#nft-use-cases",
-      type: "choice",
-      options: ["code", "list", "call"],
-      correct: ["list"],
-    },
-    {
-      id: "badge",
-      source: "/nft/#nft-use-cases",
-      type: "choice",
-      options: ["finished", "paid", "teaches"],
-      correct: ["finished"],
     },
   ],
 }
