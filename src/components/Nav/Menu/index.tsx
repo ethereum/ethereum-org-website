@@ -42,8 +42,6 @@ const triggerClasses = (isCurrent: boolean) =>
   cn(
     "group relative gap-1 px-3 py-2 whitespace-nowrap lg:px-4 group-data-[density=compact]/navbar:px-2!",
     isCurrent ? "text-primary" : "text-body",
-    // Hover bridge down to the panel, so a diagonal path keeps the trigger hovered
-    "after:absolute after:inset-x-0 after:top-full after:h-4 after:content-['']",
     // "You are here" marker for the section holding the current page
     isCurrent &&
       "before:absolute before:inset-x-0 before:bottom-0.5 before:mx-auto before:size-1 before:rounded-full before:bg-primary before:content-['']"
@@ -61,7 +59,7 @@ const Menu = (props: NavMenuProps) => {
     value,
     onValueChange,
     triggerProps,
-    rootProps,
+    listProps,
     linkProps,
     viewportProps,
   } = useNavMenu()
@@ -79,9 +77,9 @@ const Menu = (props: NavMenuProps) => {
         value={value}
         onValueChange={onValueChange}
         className="h-full"
-        {...rootProps}
       >
         <List
+          {...listProps}
           id={MAIN_NAV_ID}
           className="m-0 flex h-full list-none items-center"
         >

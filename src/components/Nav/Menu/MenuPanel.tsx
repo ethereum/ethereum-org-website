@@ -96,8 +96,9 @@ export const FeaturedCard = ({
   </Card>
 )
 
+// Block-level flex for both variants: an inline-flex link would sit on the parent's taller line box
 const headingClasses =
-  "text-xs font-bold tracking-wider text-body-medium uppercase"
+  "flex w-fit items-center gap-1 text-xs font-bold tracking-wider text-body-medium uppercase"
 
 type GroupHeadingProps = {
   group: NavGroup
@@ -121,7 +122,7 @@ export const GroupHeading = ({
       customEventOptions={track(group.href)}
       className={cn(
         headingClasses,
-        "group/heading inline-flex items-center gap-1 no-underline hover:text-primary focus-visible:text-primary"
+        "group/heading no-underline hover:text-primary focus-visible:text-primary"
       )}
       {...props}
     >
