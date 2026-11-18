@@ -5,6 +5,7 @@ import { Check, Crosshair, Trophy, X, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
+import { ArrowPrev } from "@/components/ui/arrow"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -127,6 +128,7 @@ const ExamComplete = ({
       hideArrow
       className={nextCourseId ? chunkyButtonSecondary : chunkyButton}
     >
+      <ArrowPrev aria-hidden className="size-5" />
       {t("page-courses-back-to-courses")}
     </ButtonLink>
   ) : (
@@ -136,6 +138,7 @@ const ExamComplete = ({
       hideArrow
       className={chunkyButtonSecondary}
     >
+      <ArrowPrev aria-hidden className="size-5" />
       {t("page-courses-back-to-course")}
     </ButtonLink>
   )
@@ -182,7 +185,7 @@ const ExamComplete = ({
                   : t("page-courses-exam-failed")}
               </motion.h2>
               <motion.p
-                className="m-0 text-lg text-body-medium"
+                className="m-0 text-lg text-balance text-body-medium"
                 {...appear(0.35)}
               >
                 {passed
@@ -202,9 +205,13 @@ const ExamComplete = ({
                   xp: int.format(Math.round(xp)),
                 })}
                 label={t("page-courses-exam-xp")}
-                icon={<Zap className="fill-current" aria-hidden />}
-                // Not gold: that's the trophy's
-                className="border-(--course-strong) bg-(--course) text-white"
+                icon={
+                  <Zap
+                    className="fill-yellow-400 text-yellow-600 dark:text-yellow-400"
+                    aria-hidden
+                  />
+                }
+                className="border-yellow-500"
               />
               <StatCard
                 value={percent.format(shown)}
@@ -216,11 +223,10 @@ const ExamComplete = ({
                     <Crosshair aria-hidden />
                   )
                 }
-                // A fail gets a red outline rather than a harsh red fill
                 className={
                   passed
-                    ? "border-green-800 bg-green-700 text-white"
-                    : "border-2 border-b-[6px] border-error bg-background text-body [&>svg]:text-error"
+                    ? "border-green-700 dark:border-green-400 [&>svg]:text-green-700 dark:[&>svg]:text-green-400"
+                    : "border-error [&>svg]:text-error"
                 }
               />
             </motion.div>
@@ -267,7 +273,10 @@ const ExamComplete = ({
       {/* One column, as wide as the stat cards; the main action on top */}
       <motion.div
         key={stage}
-        className="flex w-full max-w-md flex-col gap-3 *:w-full"
+        className={cn(
+          "flex w-full max-w-md flex-col gap-3 *:w-full",
+          stage === "summary" && "mt-6"
+        )}
         {...appear(stage === "summary" ? 1 : 0.2)}
       >
         {stage === "review" ? (
@@ -327,11 +336,11 @@ const StatCard = ({
   icon: React.ReactNode
   className?: string
 }) => (
-  // Solid with a deeper bottom edge, like the lesson summary's XP badge.
+  // Outline only, so the cards don't compete with the solid button below.
   // Icon above the value so both cards' values and labels line up
   <div
     className={cn(
-      "flex flex-col items-center gap-2 rounded-2xl border-b-[6px] px-3 py-5 [&>svg]:size-7",
+      "flex flex-col items-center gap-2 rounded-2xl border-2 border-b-[6px] bg-background px-3 py-5 [&>svg]:size-7",
       className
     )}
   >
@@ -339,7 +348,7 @@ const StatCard = ({
     <span className="text-3xl leading-none font-black whitespace-nowrap tabular-nums sm:text-4xl">
       {value}
     </span>
-    <span className="text-sm font-bold tracking-wide uppercase opacity-85">
+    <span className="text-sm font-bold tracking-wide text-body-medium uppercase">
       {label}
     </span>
   </div>
