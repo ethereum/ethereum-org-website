@@ -372,7 +372,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                           </p>
                         </div>
                         <CardButtonFake variant="outline" size="sm">
-                          {t("page-organizations-enterprise-l2s-deployment-cta")}
+                          {t(
+                            "page-organizations-enterprise-l2s-deployment-cta"
+                          )}
                         </CardButtonFake>
                       </CardContent>
                     </Card>
