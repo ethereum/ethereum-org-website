@@ -335,7 +335,7 @@ const VendingMachineWidget = ({
         <Button
           variant="ghost"
           onClick={reset}
-          className={cn(chunkyButtonSecondary, "self-start")}
+          className={chunkyButtonSecondary}
         >
           <RotateCcw />
           {t("page-courses-widget-vending-reset")}

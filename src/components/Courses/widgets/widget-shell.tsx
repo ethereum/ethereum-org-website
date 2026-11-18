@@ -23,6 +23,12 @@ const WidgetShell = ({
   </div>
 )
 
+/**
+ * A widget's action buttons span its width: equal shares side by side,
+ * stacked on phones
+ */
+export const widgetActions = "flex flex-col gap-3 sm:flex-row sm:*:flex-1"
+
 /** How to work a step's controls, set apart from the prompt above it */
 export const StepHint = ({
   children,

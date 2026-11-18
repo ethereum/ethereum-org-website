@@ -21,7 +21,16 @@ export const useLevelName = () => {
  * Shown on a completion screen when the XP just earned crossed a level. A new
  * tier also brings the card about the unit's namesake.
  */
-const LevelUp = ({ before, after }: { before: number; after: number }) => {
+const LevelUp = ({
+  before,
+  after,
+  className,
+}: {
+  before: number
+  after: number
+  /** Width, to match the summary's other blocks */
+  className?: string
+}) => {
   const t = useTranslations("page-courses")
   const levelName = useLevelName()
   const from = levelFor(before)
@@ -32,9 +41,11 @@ const LevelUp = ({ before, after }: { before: number; after: number }) => {
   return (
     <div
       className={cn(
-        "flex w-full max-w-sm gap-3 rounded-2xl border-2 border-(--course-soft) bg-background p-4 text-start",
+        // Extra room above and below sets it apart from the stats
+        "my-6 flex w-full max-w-sm gap-3 rounded-2xl border-2 border-(--course-soft) bg-background p-4 text-start",
         // Centred beside a single line; top-aligned when the tier fact follows
-        newTier ? "items-start" : "items-center"
+        newTier ? "items-start" : "items-center",
+        className
       )}
     >
       <ChevronsUp
