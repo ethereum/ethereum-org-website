@@ -62,13 +62,17 @@ const PendingChip = ({
   compact?: boolean
 }) => (
   <span aria-hidden className={cn(statChip, compact && compactChip, className)}>
-    <Skeleton className="size-6 shrink-0 rounded-full" />
+    <Skeleton
+      className={cn("size-6 shrink-0 rounded-full", compact && compactAvatar)}
+    />
     <Skeleton className={cn("h-5 w-28", compact && "max-md:hidden")} />
   </span>
 )
 
-// Below md the name drops out, leaving the blockie in a round chip
-const compactChip = "max-md:pe-[7px]"
+// Below md the name drops out and the blockie fills the round chip
+const compactChip =
+  "max-md:size-[calc(1lh+0.5rem+4px)] max-md:justify-center max-md:p-0"
+const compactAvatar = "max-md:size-full"
 
 /**
  * Signed in: the learner's blockie and display name, linking to their
@@ -125,7 +129,10 @@ const ProfileLink = ({
           className
         )}
       >
-        <Avatar accountId={user.id} className="size-6" />
+        <Avatar
+          accountId={user.id}
+          className={cn("size-6", compact && compactAvatar)}
+        />
         <span className="sr-only">{t("page-courses-profile-link")}: </span>
         <span
           className={cn(

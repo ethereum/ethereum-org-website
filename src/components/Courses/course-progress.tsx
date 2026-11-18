@@ -16,6 +16,45 @@ interface CourseProgressProps {
   hasExam: boolean
   /** Light text and track, for use on a course-coloured surface */
   onColor?: boolean
+  /** Bar and trophy only, where a heading already says the status */
+  hideLabel?: boolean
+  /** The `LessonsRemain` pill beside the label */
+  lessonsRemain?: boolean
+}
+
+/**
+ * Mastered with lessons still open: one added after mastery, or skipped by
+ * taking Course Mastery early
+ */
+export const LessonsRemain = ({
+  courseId,
+  lessonIds,
+  hasExam,
+  onColor,
+}: Pick<
+  CourseProgressProps,
+  "courseId" | "lessonIds" | "hasExam" | "onColor"
+>) => {
+  const t = useTranslations("page-courses")
+  const { isLessonComplete, isExamPassed } = useCourseProgress()
+  if (
+    !hasExam ||
+    !isExamPassed(courseId) ||
+    lessonIds.every((id) => isLessonComplete(courseId, id))
+  )
+    return null
+  return (
+    <span
+      className={cn(
+        "w-fit rounded-full px-2.5 py-0.5 text-sm font-bold",
+        onColor
+          ? "bg-black/20 text-white"
+          : "bg-(--course-soft) text-(--course-strong) dark:text-(--course-bright)"
+      )}
+    >
+      {t("page-courses-lessons-remain")}
+    </span>
+  )
 }
 
 /** Lessons done, plus the course check as the last step, with its trophy */
@@ -24,6 +63,8 @@ const CourseProgress = ({
   lessonIds,
   hasExam,
   onColor,
+  hideLabel,
+  lessonsRemain,
 }: CourseProgressProps) => {
   const t = useTranslations("page-courses")
   const { isLessonComplete, isExamPassed } = useCourseProgress()
@@ -66,19 +107,30 @@ const CourseProgress = ({
           />
         )}
       </div>
-      <span
-        className={cn(
-          "text-sm font-bold",
-          passed && onColor
-            ? // Mastered, on the course banner: a gold tag matching the trophy
-              "w-fit rounded-full bg-yellow-400 px-2.5 py-0.5 tracking-wide text-yellow-950 uppercase"
-            : onColor
-              ? "text-white"
-              : "text-body-medium"
+      <div className="flex flex-wrap items-center gap-2">
+        <span
+          className={cn(
+            "text-sm font-bold",
+            passed && onColor
+              ? // Mastered, on the course banner: a gold tag matching the trophy
+                "w-fit rounded-full bg-yellow-400 px-2.5 py-0.5 tracking-wide text-yellow-950 uppercase"
+              : onColor
+                ? "text-white"
+                : "text-body-medium",
+            hideLabel && "sr-only"
+          )}
+        >
+          {label}
+        </span>
+        {lessonsRemain && (
+          <LessonsRemain
+            courseId={courseId}
+            lessonIds={lessonIds}
+            hasExam={hasExam}
+            onColor={onColor}
+          />
         )}
-      >
-        {label}
-      </span>
+      </div>
     </div>
   )
 }

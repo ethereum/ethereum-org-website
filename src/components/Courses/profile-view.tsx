@@ -1,6 +1,6 @@
 "use client"
 
-import { type ReactNode, useEffect, useState } from "react"
+import { Fragment, type ReactNode, useEffect, useState } from "react"
 import {
   CalendarDays,
   ChevronDown,
@@ -53,8 +53,7 @@ import { useAccount } from "../Account/use-account"
 
 import CourseArt from "./art/course-art"
 import { syncProgress } from "./account-sync"
-import { CourseCard, courseGrid } from "./course-card"
-import CourseProgress from "./course-progress"
+import CourseProgress, { LessonsRemain } from "./course-progress"
 import { useLevelName } from "./level-up"
 import { levelFor, levelProgress } from "./levels"
 import {
@@ -81,6 +80,7 @@ const REVIEW_LIMIT = 5
 // there's a profile to load. Literal for Tailwind's scanner; must match
 // HAS_PROGRESS_ATTR
 const whileLoading = "hidden [[data-has-course-progress]_&]:flex"
+const compactGrid = "ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3"
 const whileGridLoading = "hidden [[data-has-course-progress]_&]:grid"
 
 /** Steps missed most often, worst first; only ones still in the catalog */
@@ -109,17 +109,20 @@ const stepsToReview = (progress: Progress) =>
     .slice(0, REVIEW_LIMIT)
 
 /**
- * The hub's course card, shrunk for courses in progress: art beside the
- * title, track and progress
+ * The hub's course card, shrunk for the profile: art beside the title, track
+ * and progress
  */
 const CompactCourseCard = ({
   course,
   trackTitle,
+  isMastered,
   bestScore,
   formatPercent,
 }: {
   course: Course
-  trackTitle: string
+  /** Omitted under a track heading */
+  trackTitle?: string
+  isMastered?: boolean
   bestScore?: number
   formatPercent: (value: number) => string
 }) => {
@@ -142,13 +145,24 @@ const CompactCourseCard = ({
       <CardContent className="flex min-w-0 flex-col gap-3 space-y-0">
         <div className="flex flex-col">
           <span className="font-bold text-body">{t(`${course.id}-title`)}</span>
-          <span className="text-sm text-body-medium">{trackTitle}</span>
+          {trackTitle && (
+            <span className="text-sm text-body-medium">{trackTitle}</span>
+          )}
         </div>
         <div className="mt-auto flex flex-col gap-1">
+          {/* Above the bar, so bars stay level across a row */}
+          {isMastered && (
+            <LessonsRemain
+              courseId={course.id}
+              lessonIds={course.lessons.map(({ id }) => id)}
+              hasExam={course.exam.length > 0}
+            />
+          )}
           <CourseProgress
             courseId={course.id}
             lessonIds={course.lessons.map(({ id }) => id)}
             hasExam={course.exam.length > 0}
+            hideLabel={isMastered}
           />
           {bestScore !== undefined && (
             <span className="text-sm text-body-medium">
@@ -473,41 +487,37 @@ const ProfileView = ({
             <div className="flow">
               <Section id="courses">
                 <h2>{t("page-courses-profile-courses-title")}</h2>
-                <div className="flow">
-                  <h3>{t("page-courses-profile-in-progress-title")}</h3>
-                  {inProgress.length ? (
-                    <ul className="ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3">
-                      {inProgress.map(({ course, trackId }) => (
-                        <li key={course.id} className="m-0">
-                          <CompactCourseCard
-                            course={course}
-                            trackTitle={t(
-                              `page-courses-track-${trackId}-title`
-                            )}
-                            bestScore={progress.exams?.[course.id]?.best}
-                            formatPercent={percent}
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p>
-                      {started
-                        ? t("page-courses-profile-in-progress-none")
-                        : t("page-courses-profile-courses-none")}
-                    </p>
-                  )}
-                  <div data-flow="cta">
-                    <ButtonLink href={COURSES_HUB} size="lg">
-                      {started
-                        ? t("page-courses-profile-keep-learning")
-                        : t("page-courses-profile-start-learning")}
-                      <ArrowNext aria-hidden />
-                    </ButtonLink>
-                  </div>
+                <h3>{t("page-courses-profile-in-progress-title")}</h3>
+                {inProgress.length ? (
+                  <ul className={compactGrid}>
+                    {inProgress.map(({ course, trackId }) => (
+                      <li key={course.id} className="m-0">
+                        <CompactCourseCard
+                          course={course}
+                          trackTitle={t(`page-courses-track-${trackId}-title`)}
+                          bestScore={progress.exams?.[course.id]?.best}
+                          formatPercent={percent}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>
+                    {started
+                      ? t("page-courses-profile-in-progress-none")
+                      : t("page-courses-profile-courses-none")}
+                  </p>
+                )}
+                <div data-flow="cta">
+                  <ButtonLink href={COURSES_HUB} size="lg">
+                    {started
+                      ? t("page-courses-profile-keep-learning")
+                      : t("page-courses-profile-start-learning")}
+                    <ArrowNext aria-hidden />
+                  </ButtonLink>
                 </div>
                 {mastered.length > 0 && (
-                  <div className="flow">
+                  <>
                     <h3>{t("page-courses-profile-mastered-title")}</h3>
                     {TRACKS.map((track) => {
                       const won = mastered.filter(
@@ -515,27 +525,27 @@ const ProfileView = ({
                       )
                       if (!won.length) return null
                       return (
-                        <div key={track.id} className="flow">
-                          <h4>{t(`page-courses-track-${track.id}-title`)}</h4>
-                          <ul role="list" className={courseGrid}>
+                        <Fragment key={track.id}>
+                          {/* Tight under "Mastered" so the heading leads its first track */}
+                          <h4 className="[h3+&]:mt-space">
+                            {t(`page-courses-track-${track.id}-title`)}
+                          </h4>
+                          <ul className={compactGrid}>
                             {won.map(({ course }) => (
-                              <li
-                                key={course.id}
-                                className="m-0"
-                                style={courseThemeStyle(course.theme)}
-                              >
-                                <CourseCard
+                              <li key={course.id} className="m-0">
+                                <CompactCourseCard
                                   course={course}
-                                  position={track.courses.indexOf(course)}
-                                  track={track.courses}
+                                  isMastered
+                                  bestScore={progress.exams?.[course.id]?.best}
+                                  formatPercent={percent}
                                 />
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </Fragment>
                       )
                     })}
-                  </div>
+                  </>
                 )}
               </Section>
 

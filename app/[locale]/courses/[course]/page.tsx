@@ -83,6 +83,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
                 lessonIds={lessonIds}
                 hasExam={course.exam.length > 0}
                 onColor
+                lessonsRemain
               />
             </div>
             <div className="max-md:hidden">
@@ -94,7 +95,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
         <StickyBar className="mt-2 px-page">
           <div className="mx-auto flex w-full max-w-4xl justify-end gap-2">
             <ProgressChips />
-            <ProfileLink />
+            <ProfileLink compact />
           </div>
         </StickyBar>
 
