@@ -174,7 +174,7 @@ const RestoreWalletWidget = ({ onComplete }: WidgetProps) => {
           variant="ghost"
           onClick={setUp}
           disabled={busy}
-          className={cn(chunkyButton, "self-start")}
+          className={chunkyButton}
         >
           <Wallet />
           {t("page-courses-widget-restore-setup")}
@@ -230,11 +230,7 @@ const RestoreWalletWidget = ({ onComplete }: WidgetProps) => {
               </span>
               <Address value={wallet.address} />
             </p>
-            <Button
-              variant="ghost"
-              onClick={lose}
-              className={cn(chunkyButton, "self-start")}
-            >
+            <Button variant="ghost" onClick={lose} className={chunkyButton}>
               <Waves />
               {t("page-courses-widget-restore-lose")}
             </Button>
@@ -330,7 +326,7 @@ const RestoreWalletWidget = ({ onComplete }: WidgetProps) => {
               variant="ghost"
               onClick={restore}
               disabled={busy}
-              className={cn(chunkyButton, "self-start")}
+              className={chunkyButton}
             >
               <RotateCcw />
               {t("page-courses-widget-restore-go")}
@@ -374,7 +370,10 @@ const RestoreWalletWidget = ({ onComplete }: WidgetProps) => {
                   variant="ghost"
                   onClick={fix}
                   disabled={busy}
-                  className={cn(chunkyButtonSecondary, "self-start")}
+                  className={cn(
+                    chunkyButtonSecondary,
+                    "max-sm:w-full sm:self-start"
+                  )}
                 >
                   <RotateCcw />
                   {t("page-courses-widget-restore-fix")}

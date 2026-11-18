@@ -73,6 +73,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </div>
             </StickyBar>
 
+            <p className="max-w-3xl text-lg">{t("page-courses-hub-intro")}</p>
+
             <Suspense fallback={null}>
               <NoProfileAlert />
             </Suspense>
@@ -85,26 +87,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <p>{t(`page-courses-track-${track.id}-description`)}</p>
                 {/* Suggested order, not a lock */}
                 <ol role="list" className={courseGrid}>
-                  {track.courses.map((course, position) => (
+                  {track.courses.map((course) => (
                     <li
                       key={course.id}
                       id={course.id}
                       className="m-0"
                       style={courseThemeStyle(course.theme)}
                     >
-                      <CourseCard
-                        course={course}
-                        position={position}
-                        track={track.courses}
-                      />
+                      <CourseCard course={course} track={track.courses} />
                     </li>
                   ))}
-                  {track.upcoming?.map((course, index) => (
+                  {track.upcoming?.map((course) => (
                     <li key={course.id} className="m-0">
-                      <UpcomingCourseCard
-                        course={course}
-                        position={track.courses.length + index}
-                      />
+                      <UpcomingCourseCard course={course} />
                     </li>
                   ))}
                 </ol>

@@ -12,7 +12,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { chunkyButton, chunkyButtonSecondary, courseText } from "../theme"
 
 import type { WidgetProps } from "./types"
-import WidgetShell from "./widget-shell"
+import WidgetShell, { widgetActions } from "./widget-shell"
 
 type Person = "ana" | "ben" | "operator"
 
@@ -106,19 +106,15 @@ const ProofCheckWidget = ({ onComplete }: WidgetProps) => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row">
-        <Button
-          variant="ghost"
-          onClick={verify}
-          className={cn(chunkyButton, "flex-1")}
-        >
+      <div className={widgetActions}>
+        <Button variant="ghost" onClick={verify} className={chunkyButton}>
           {t("page-courses-widget-proof-verify")}
         </Button>
         <Button
           variant="ghost"
           onClick={toggleTamper}
           aria-pressed={tampered}
-          className={cn(chunkyButtonSecondary, "flex-1")}
+          className={chunkyButtonSecondary}
         >
           {tampered ? (
             <Undo2 className="rtl:-scale-x-100" aria-hidden />

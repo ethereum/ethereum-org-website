@@ -41,6 +41,7 @@ const FADE = "2rem"
 const TrackRing = ({ share }: { share: number }) => {
   const r = 9
   const length = 2 * Math.PI * r
+  if (share <= 0) return null
   if (share >= 1)
     return (
       <span className="grid size-6 shrink-0 place-items-center rounded-full bg-success text-white">
@@ -195,6 +196,8 @@ const TrackNav = ({ className }: { className?: string }) => {
               className={cn(
                 chip,
                 "text-body no-underline hover:border-primary hover:text-primary",
+                // No ring before any progress: even padding around the name
+                share <= 0 && "ps-3.5",
                 id === active && "border-primary text-primary"
               )}
             >
@@ -211,7 +214,11 @@ const TrackNav = ({ className }: { className?: string }) => {
             with the stat chips */}
         <DropdownMenuTrigger
           aria-label={`${t("page-courses-track-nav")}: ${current.title}`}
-          className={cn(chip, "max-w-full text-body max-sm:gap-1 md:hidden")}
+          className={cn(
+            chip,
+            "max-w-full text-body max-sm:gap-1 md:hidden",
+            current.share <= 0 && "sm:ps-3.5"
+          )}
         >
           <LayoutList aria-hidden className="size-6 shrink-0 sm:hidden" />
           <span className="contents max-sm:hidden">
@@ -227,7 +234,10 @@ const TrackNav = ({ className }: { className?: string }) => {
               onSelect={() => scrollToTrack(id)}
               className={cn("gap-3", id === active && "text-primary")}
             >
-              <TrackRing share={share} />
+              {/* Holds the ring's place so the names line up */}
+              <span className="grid size-6 shrink-0 place-items-center">
+                <TrackRing share={share} />
+              </span>
               <span className="flex-1">{title}</span>
               <span className="text-sm text-body-medium tabular-nums">
                 {count}

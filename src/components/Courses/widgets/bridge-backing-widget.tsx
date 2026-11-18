@@ -12,7 +12,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { chunkyButton, chunkyButtonSecondary, courseText } from "../theme"
 
 import type { WidgetProps } from "./types"
-import WidgetShell from "./widget-shell"
+import WidgetShell, { widgetActions } from "./widget-shell"
 
 const LOCKED = 100
 const YOURS = 20
@@ -148,13 +148,13 @@ const BridgeBackingWidget = ({ onComplete }: WidgetProps) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row">
+      <div className={widgetActions}>
         <Button
           variant="ghost"
           onClick={redeem}
           // Keep one redemption back so there's one to try after the exploit
           disabled={!state.exploited && state.yours <= REDEEM}
-          className={cn(chunkyButton, "flex-1")}
+          className={chunkyButton}
         >
           {t("page-courses-widget-backing-redeem", { amount: eth(REDEEM) })}
         </Button>
@@ -162,7 +162,7 @@ const BridgeBackingWidget = ({ onComplete }: WidgetProps) => {
           variant="ghost"
           onClick={exploit}
           disabled={state.exploited}
-          className={cn(chunkyButtonSecondary, "flex-1 disabled:opacity-50")}
+          className={cn(chunkyButtonSecondary, "disabled:opacity-50")}
         >
           <Skull aria-hidden />
           {t("page-courses-widget-backing-exploit")}
@@ -187,7 +187,7 @@ const BridgeBackingWidget = ({ onComplete }: WidgetProps) => {
         <Button
           variant="ghost"
           onClick={reset}
-          className={cn(chunkyButtonSecondary, "self-start")}
+          className={chunkyButtonSecondary}
         >
           <RotateCcw aria-hidden />
           {t("page-courses-widget-backing-reset")}

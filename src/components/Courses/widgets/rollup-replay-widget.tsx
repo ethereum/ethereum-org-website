@@ -12,7 +12,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { chunkyButton, chunkyButtonSecondary, courseText } from "../theme"
 
 import type { WidgetProps } from "./types"
-import WidgetShell from "./widget-shell"
+import WidgetShell, { widgetActions } from "./widget-shell"
 
 const PEOPLE = ["ana", "ben", "cai"] as const
 type Person = (typeof PEOPLE)[number]
@@ -130,12 +130,12 @@ const RollupReplayWidget = ({ onComplete }: WidgetProps) => {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-3">
+      <div className={widgetActions}>
         <Button
           variant="ghost"
           onClick={() => setReplayed((n) => n + 1)}
           disabled={finished}
-          className={cn(chunkyButton, "flex-1")}
+          className={chunkyButton}
         >
           <Play aria-hidden />
           {t("page-courses-widget-replay-next")}

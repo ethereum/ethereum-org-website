@@ -8,7 +8,7 @@ import type { Course } from "./types"
 export const tokensCourse: Course = {
   id: "tokens",
   level: "beginner",
-  theme: { hue: 70 },
+  theme: { hue: 280 },
   art: "scale",
   lessons: [
     {
