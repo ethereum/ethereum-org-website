@@ -62,7 +62,9 @@ export interface DocsFrontmatter extends SharedFrontmatter {
 }
 
 export interface VideoFrontmatter extends SharedFrontmatter {
-  youtubeId: string
+  youtubeId?: string
+  /** X post ID, for videos not on YouTube; also set customThumbnailUrl */
+  tweetId?: string
   uploadDate: string
   duration: string
   educationLevel: "beginner" | "intermediate" | "advanced"

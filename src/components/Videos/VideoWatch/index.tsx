@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server"
 
 import type { VideoData } from "@/lib/types"
 
+import TweetEmbed from "@/components/TweetEmbed"
 import {
   Card,
   CardBanner,
@@ -47,11 +48,20 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
     <Card className={cn("mx-auto my-8 max-w-xl border", className)}>
       <CardHeader>
         <CardBanner background="none" size="full">
-          <YouTube
-            id={frontmatter.youtubeId}
-            title={frontmatter.title}
-            start={startTime}
-          />
+          {frontmatter.youtubeId ? (
+            <YouTube
+              id={frontmatter.youtubeId}
+              title={frontmatter.title}
+              start={startTime}
+            />
+          ) : (
+            frontmatter.tweetId && (
+              <TweetEmbed
+                id={frontmatter.tweetId}
+                className="my-0 w-full [&_.react-tweet-theme]:m-0! [&_.react-tweet-theme]:max-w-none!"
+              />
+            )
+          )}
         </CardBanner>
       </CardHeader>
 
