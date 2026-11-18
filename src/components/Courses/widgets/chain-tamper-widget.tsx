@@ -213,7 +213,7 @@ const ChainTamperWidget = ({ onComplete }: WidgetProps) => {
                   <Button
                     variant="ghost"
                     onClick={() => relink(i)}
-                    className={cn(chunkyButton, "self-start")}
+                    className={cn(chunkyButton, "max-sm:w-full sm:self-start")}
                   >
                     <Wrench />
                     {t("page-courses-widget-chain-relink")}

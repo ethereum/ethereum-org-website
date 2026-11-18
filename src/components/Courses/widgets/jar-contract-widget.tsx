@@ -141,7 +141,8 @@ const JarContractWidget = ({ onComplete }: WidgetProps) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+      {/* Three long labels: wrap, each filling its row */}
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:*:grow">
         <Button variant="ghost" onClick={add} className={chunkyButton}>
           <Coins aria-hidden />
           {t(key("add"))}

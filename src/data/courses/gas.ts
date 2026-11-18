@@ -3,7 +3,7 @@ import type { Course } from "./types"
 export const gasCourse: Course = {
   id: "gas",
   level: "intermediate",
-  theme: { hue: 85 },
+  theme: { hue: 40 },
   art: "tank",
   lessons: [
     {

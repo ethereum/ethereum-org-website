@@ -1,4 +1,4 @@
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 
 import {
   Card,
@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
 
 import {
   type Course,
@@ -29,46 +28,38 @@ import {
 import CourseProgress from "./course-progress"
 import { chunkyButton, courseThemeStyle } from "./theme"
 
-/** Card grid for the hub and the profile; role keeps list semantics in Safari */
+/**
+ * Up to four columns, one fewer whenever a card would drop below the ui/grid
+ * min width; role keeps list semantics in Safari
+ */
 export const courseGrid =
-  "ms-0 grid list-none gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+  "ms-0 grid list-none grid-cols-auto-4 gap-6 [--grid-gap:1.5rem]"
 
 const cardPill =
   "grid h-8 place-items-center rounded-full bg-background text-sm font-bold text-(--course-strong) dark:text-(--course-bright)"
 
 const banner = "relative bg-(--course-soft) px-8 pt-12 pb-3"
 
-/** Place in the track (visual only, as lists are ordered), then level */
-const CardPills = ({
-  position,
-  level,
-}: {
-  position: number
-  level: CourseLevel
-}) => {
+const LevelPill = ({ level }: { level: CourseLevel }) => {
   const t = useTranslations("page-courses")
-  const locale = useLocale()
   return (
-    <div className="absolute start-3 top-3 flex items-center gap-1.5">
-      <span aria-hidden className={cn(cardPill, "min-w-8 px-2 tabular-nums")}>
-        {numberFormat(locale).format(position + 1)}
-      </span>
-      <span className={cn(cardPill, "px-3 tracking-wide uppercase")}>
-        {t(`page-courses-level-${level}`)}
-      </span>
-    </div>
+    <span
+      className={cn(
+        cardPill,
+        "absolute start-3 top-3 px-3 tracking-wide uppercase"
+      )}
+    >
+      {t(`page-courses-level-${level}`)}
+    </span>
   )
 }
 
 /** A course as a hub card: art, progress and the next action */
 export const CourseCard = ({
   course: { id, level, art, lessons, exam },
-  position,
   track,
 }: {
   course: Course
-  /** Index in its track */
-  position: number
   /** Its track's courses, to tag the next one */
   track: Course[]
 }) => {
@@ -78,7 +69,7 @@ export const CourseCard = ({
     <Card href={courseHref(id)} variant="nested" border className="h-full">
       <CardHeader>
         <CardBanner background="none" size="full" className={banner}>
-          <CardPills position={position} level={level} />
+          <LevelPill level={level} />
           <CourseCardDone courseId={id} />
           <CourseCardNext
             courseId={id}
@@ -97,7 +88,9 @@ export const CourseCard = ({
       {/* Progress pinned to the bottom so bars line up across a row */}
       <CardContent className="flex flex-col">
         <CardTitle>{t(`${id}-title`)}</CardTitle>
-        <CardParagraph>{t(`${id}-description`)}</CardParagraph>
+        <CardParagraph className="line-clamp-3">
+          {t(`${id}-description`)}
+        </CardParagraph>
         <div className="mt-auto">
           <CourseProgress
             courseId={id}
@@ -123,10 +116,8 @@ export const CourseCard = ({
 /** A teaser: not a course yet, so no link, progress or action */
 export const UpcomingCourseCard = ({
   course: { id, level, art },
-  position,
 }: {
   course: UpcomingCourse
-  position: number
 }) => {
   const t = useTranslations("page-courses")
   return (
@@ -138,7 +129,7 @@ export const UpcomingCourseCard = ({
     >
       <CardHeader>
         <CardBanner background="none" size="full" className={banner}>
-          <CardPills position={position} level={level} />
+          <LevelPill level={level} />
           <span className="absolute end-3 bottom-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
             {t("page-courses-coming-soon")}
           </span>
@@ -147,7 +138,9 @@ export const UpcomingCourseCard = ({
       </CardHeader>
       <CardContent>
         <CardTitle>{t(`${id}-title`)}</CardTitle>
-        <CardParagraph>{t(`${id}-description`)}</CardParagraph>
+        <CardParagraph className="line-clamp-3">
+          {t(`${id}-description`)}
+        </CardParagraph>
       </CardContent>
     </Card>
   )

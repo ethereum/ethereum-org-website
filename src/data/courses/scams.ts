@@ -8,7 +8,7 @@ import type { Course } from "./types"
 export const scamsCourse: Course = {
   id: "scams",
   level: "beginner",
-  theme: { hue: 105 },
+  theme: { hue: 50 },
   art: "lure",
   lessons: [
     {

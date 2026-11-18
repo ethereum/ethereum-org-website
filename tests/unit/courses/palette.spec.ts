@@ -17,6 +17,14 @@ test.describe("course palette", () => {
     expect(ids.length).toBe(new Set(ids).size)
   })
 
+  test("no course uses a hue that solves to brown or olive", () => {
+    const muddy = COURSES.filter(
+      ({ theme }) =>
+        typeof theme !== "string" && theme.hue >= 60 && theme.hue <= 125
+    ).map(({ id }) => id)
+    expect(muddy).toEqual([])
+  })
+
   test("generated palettes meet their contrast targets at every hue, and muted", () => {
     const palettes = [
       ...Array.from({ length: 360 }, (_, hue) => generatePalette(hue)),

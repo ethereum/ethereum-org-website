@@ -241,7 +241,9 @@ const LessonPath = ({
                 <span
                   aria-hidden
                   className={cn(
-                    "absolute top-1/2 w-36 -translate-y-1/2 text-sm leading-tight font-bold max-sm:hidden",
+                    "absolute top-1/2 w-36 -translate-y-1/2 text-sm leading-tight font-bold",
+                    // A centred node's label would run past a phone's edge
+                    sway(i) === 0 && "max-sm:w-24",
                     labelOnLeft
                       ? "right-full mr-5 text-end"
                       : "left-full ml-5 text-start"

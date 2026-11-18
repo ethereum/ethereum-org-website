@@ -308,7 +308,7 @@ const NodeNetworkWidget = ({
         variant="ghost"
         onClick={addBlock}
         disabled={!world && online === 0}
-        className={cn(chunkyButton, "self-center")}
+        className={chunkyButton}
       >
         <Plus aria-hidden />
         {t("page-courses-widget-node-add")}

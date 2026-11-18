@@ -396,7 +396,7 @@ const SignVerifyWidget = ({ onComplete }: WidgetProps) => {
             <p className="m-0 text-sm font-bold">
               {t("page-courses-widget-sign-attack")}
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Button
                 variant="ghost"
                 onClick={() => edit({ signature: tamper(received.signature) })}

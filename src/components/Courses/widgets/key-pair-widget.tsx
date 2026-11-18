@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/buttons/Button"
 import { chunkyButton, chunkyButtonSecondary } from "../theme"
 
 import type { WidgetProps } from "./types"
+import { widgetActions } from "./widget-shell"
 
 interface KeyPair {
   privateKey: `0x${string}`
@@ -50,7 +51,7 @@ const KeyPairWidget = ({ onComplete }: WidgetProps) => {
 
   return (
     <div className="flex flex-col gap-4 rounded-base bg-background-highlight p-4 md:p-6">
-      <div className="flex flex-wrap gap-2">
+      <div className={widgetActions}>
         <Button
           variant="ghost"
           onClick={generate}

@@ -12,7 +12,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { chunkyButton, chunkyButtonSecondary, courseText } from "../theme"
 
 import type { WidgetProps } from "./types"
-import WidgetShell from "./widget-shell"
+import WidgetShell, { widgetActions } from "./widget-shell"
 
 /* Balances are counted in half-ETH coins so every move is exact */
 const COINS = 4
@@ -135,12 +135,12 @@ const WrapEthWidget = ({ onComplete, bridge }: WrapEthWidgetProps) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row">
+      <div className={widgetActions}>
         <Button
           variant="ghost"
           onClick={() => act("wrap")}
           disabled={eth === 0}
-          className={cn(chunkyButton, "flex-1")}
+          className={chunkyButton}
         >
           {t(key("wrap"), { value: coin })}
         </Button>
@@ -148,7 +148,7 @@ const WrapEthWidget = ({ onComplete, bridge }: WrapEthWidgetProps) => {
           variant="ghost"
           onClick={() => act("unwrap")}
           disabled={wrapped === 0}
-          className={cn(chunkyButtonSecondary, "flex-1 disabled:opacity-50")}
+          className={cn(chunkyButtonSecondary, "disabled:opacity-50")}
         >
           {t(key("unwrap"), { value: coin })}
         </Button>

@@ -151,7 +151,7 @@ const FeeLanesWidget = ({ onComplete }: WidgetProps) => {
               <Button
                 variant="ghost"
                 onClick={() => send(lane)}
-                className={cn(chunkyButton, "self-start")}
+                className={cn(chunkyButton, "max-sm:w-full sm:self-start")}
               >
                 <Send aria-hidden />
                 {t(`page-courses-widget-lanes-send-${lane}`)}
