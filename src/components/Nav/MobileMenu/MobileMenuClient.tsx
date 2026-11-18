@@ -3,6 +3,8 @@
 import * as React from "react"
 import { useLocale, useTranslations } from "next-intl"
 
+import type { Lang } from "@/lib/types"
+
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
 import { Sheet, SheetTrigger } from "@/components/ui/sheet"
@@ -10,6 +12,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { SECTION_LABELS, SITE_TITLE } from "@/lib/constants"
 
@@ -62,12 +65,12 @@ function MobileMenuContentSkeleton() {
 
 type MobileMenuClientProps = {
   className?: string
-  side: "left" | "right"
 }
 
-const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
+const MobileMenuClient = ({ className }: MobileMenuClientProps) => {
   const t = useTranslations("common")
   const locale = useLocale()
+  const side = isLangRightToLeft(locale as Lang) ? "right" : "left"
   const [open, setOpen] = useCloseOnNavigate()
   const triggerRef = React.useRef<HTMLButtonElement>(null)
   // Track if menu has ever been opened to keep content loaded after first open

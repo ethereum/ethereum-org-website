@@ -131,8 +131,8 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "learn",
   "use",
   "build",
-  "participate",
-  "research",
+  "roadmap",
+  "community",
   "organizations",
 ]
 
