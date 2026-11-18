@@ -517,7 +517,7 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 - **[Inference](https://inference.ag/)** - _Security auditing company, specialized in smart contract auditing for EVM-based blockchains. Thanks to its expert auditors they identify potential issues and suggest actionable solutions to fix them before deployment._
 
-- **[Guardian](https://guardian.security/)** - _Blockchain security firm providing smart contract audits, pentests, and onchain monitoring._
+- **[Guardian](https://guardian.security/)** - _Blockchain security firm providing smart contract audits, penetration testing, and managed security._
 
 ### Bug bounty platforms {#bug-bounty-platforms}
 
