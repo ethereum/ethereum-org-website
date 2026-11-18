@@ -1,10 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowLeft, Crosshair, Sparkles, Zap } from "lucide-react"
+import { Crosshair, Sparkles, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
+import { ArrowPrev } from "@/components/ui/arrow"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Progress } from "@/components/ui/progress"
 
@@ -363,7 +364,7 @@ const LessonComplete = ({
                 "w-full"
               )}
             >
-              <ArrowLeft aria-hidden className="size-5 rtl:-scale-x-100" />
+              <ArrowPrev aria-hidden className="size-5" />
               {t("page-courses-back-to-course")}
             </ButtonLink>
           </div>

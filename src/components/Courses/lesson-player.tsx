@@ -170,7 +170,7 @@ const LessonPlayer = ({
   const answered = status === "correct" || (exam && status === "incorrect")
   const progressValue = reward
     ? 100
-    : ((index + (answered ? 1 : 0)) / total) * 100
+    : ((index + 1 + (answered ? 1 : 0)) / (total + 1)) * 100
 
   const recordResult = (correct: boolean) => {
     if (step.id in firstTry) return

@@ -419,7 +419,7 @@ const SignVerifyWidget = ({ onComplete }: WidgetProps) => {
                   onClick={() => setReceived(signed)}
                   className={chunkyButtonSecondary}
                 >
-                  <Undo2 />
+                  <Undo2 className="rtl:-scale-x-100" aria-hidden />
                   {t("page-courses-widget-sign-reset")}
                 </Button>
               )}
