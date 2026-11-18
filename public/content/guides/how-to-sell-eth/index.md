@@ -23,7 +23,7 @@ Ethereum itself has no "withdraw to bank" button. Your [wallet](/glossary/#walle
 
 ## Before you start: four quick checks {#before-you-start}
 
-Most money lost while cashing out is lost through one of these four mistakes. Check them first.
+Most money lost while cashing out is lost through one of the first three mistakes below. The fourth won't lose you money, but it can stop you from sending anything. Check them first.
 
 1. **Which token do you hold?**
 
@@ -39,7 +39,7 @@ Most money lost while cashing out is lost through one of these four mistakes. Ch
 
 4. **Do you have a little ETH for fees?**
 
-   Every transfer costs a small [gas fee](/glossary/#gas), paid in ETH on Ethereum and on most layer 2s. Even sending USDC needs some ETH on the same network.
+   Every transfer costs a small [gas fee](/glossary/#gas), usually paid in ETH on Ethereum and on most layer 2s. Even sending USDC usually needs some ETH on the same network. Some wallets cover the fee for you on certain transfers, but most don't.
 
 ## Option 1: Sell directly in your wallet {#sell-in-your-wallet}
 
@@ -62,14 +62,14 @@ Selling inside a wallet is usually handled by a third-party payment provider, an
 This is the most common way to cash out, and it works with almost any wallet.
 
 1. **Open an account at an exchange that operates in your country.** You will need to verify your identity, which can take a few days. [Find exchanges available where you live](/get-eth/#country-picker), then check that the one you choose lets you withdraw to a bank in your country.
-2. **Find your deposit address.** In the exchange, go to "Deposit", choose the token, and choose the **same network** your tokens are on. Copy the address it shows you.
-3. **Send a small test amount first.** From your wallet, send a small amount to that address. Wait until it shows up in your exchange balance. ([How to send crypto](/guides/how-to-use-a-wallet/#send-cryptocurrency))
+2. **Find your deposit address.** In the exchange, go to "Deposit" and pick the option for depositing **crypto**, not the one for depositing money from a bank. Choose the token, and choose the **same network** your tokens are on. Copy the address it shows you.
+3. **Send a small test amount first.** From your wallet, send a small amount to that address. Wait until it shows up in your exchange balance. This usually takes a few minutes, but some exchanges wait for extra network confirmations before crediting a deposit. ([How to send crypto](/guides/how-to-use-a-wallet/#send-cryptocurrency), [what to do if it doesn't arrive](#frequently-asked-questions))
 4. **Send the rest.** Once the test arrives, send the remaining amount the same way.
-5. **Sell for your currency.** In the exchange, sell the token for your local currency, such as USD or EUR.
+5. **Sell for your currency.** In the exchange, sell the token for your local currency, such as USD or EUR. A simple "Sell" or "Convert" button is the easiest way, but it often costs more than selling on the exchange's trading screen.
 6. **Withdraw to your bank.** Use the exchange's "Withdraw" option and choose your bank account. Bank transfers usually take from a few minutes to a few business days.
 
 <Alert variant="warning">
-<AlertEmoji text=":shield:"/>
+<AlertIcon size="lg"><ShieldCheck /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 Always copy and paste addresses, never type them by hand, and check the first and last few characters before you confirm. Transactions on Ethereum cannot be reversed.
@@ -88,7 +88,7 @@ You can also sell ETH directly to another person and have them pay you by bank t
 5. **Release the ETH.** Once you have confirmed the payment, release the ETH to the buyer.
 
 <Alert variant="warning">
-<AlertEmoji text=":shield:"/>
+<AlertIcon size="lg"><ShieldCheck /></AlertIcon>
 <AlertContent>
 <AlertDescription>
 Some payment methods can be reversed after you release your ETH, for example card payments and some payment apps. Prefer methods that can't be reversed, start with small amounts, and keep the whole trade inside the app.
@@ -100,42 +100,67 @@ Some payment methods can be reversed after you release your ETH, for example car
 
 If you want to spend your crypto rather than move it to a bank, some crypto debit cards convert it to your currency when you pay.
 
-<ButtonLink href="/payments/">
+<ButtonLink href="/payments/#pay-with-self-custodial-crypto-cards">
   Explore crypto cards
 </ButtonLink>
 
 ## Frequently asked questions {#frequently-asked-questions}
 
-### How do I withdraw money from my Ethereum wallet to my bank account? {#withdraw-from-wallet-to-bank}
+<ExpandableCard title="How do I withdraw money from my Ethereum wallet to my bank account?" visible>
 
-A wallet cannot send money to a bank directly, because it only holds crypto. You first need to sell the crypto, either in your wallet ([option 1](#sell-in-your-wallet)), on an exchange ([option 2](#sell-on-an-exchange)) or to another person ([option 3](#sell-peer-to-peer)). The service or person you sell to then pays you into your bank account.
+Most banks don't accept crypto directly, and a wallet only holds crypto, so you first need to sell it: in your wallet ([option 1](#sell-in-your-wallet)), on an exchange ([option 2](#sell-on-an-exchange)) or to another person ([option 3](#sell-peer-to-peer)). The service or person you sell to then pays you into your bank account.
 
-### How do I cash out USDC or other tokens? {#cash-out-usdc-or-other-tokens}
+</ExpandableCard>
 
-The steps are the same as for ETH. Check that the exchange accepts your token on the network it is on. Remember that you still need a little ETH on that network to pay the fee for sending it. [USDC](/stablecoins/) is a stablecoin, so its value should stay close to one US dollar.
+<ExpandableCard title="How do I cash out USDC or other tokens?" visible>
 
-### I have WETH. Can I sell it? {#i-have-weth}
+The steps are the same as for ETH. Check that the exchange accepts your token on the network it is on. You will usually also need a little ETH on that network to pay the fee for sending it, unless your wallet covers the fee for you. [USDC](/stablecoins/) is a stablecoin, so its value should stay close to one US dollar.
 
-WETH is "[wrapped](/glossary/#wrapped-token)" ETH: a token version of ETH, worth the same amount. Some exchanges accept WETH deposits and some do not. If yours does not, swap or unwrap your WETH back to ETH in your wallet first. ([How to swap tokens](/guides/how-to-swap-tokens/))
+</ExpandableCard>
 
-### My exchange doesn't support the network my tokens are on {#exchange-does-not-support-network}
+<ExpandableCard title="I have WETH. Can I sell it?" visible>
+
+WETH is wrapped ether: a token version of ETH, worth the same amount. Some exchanges accept WETH deposits and some do not. If yours does not, unwrap your WETH back to ETH in your wallet first. [Learn about wrapped ether and how to unwrap it](/wrapped-eth/)
+
+</ExpandableCard>
+
+<ExpandableCard title="My exchange doesn't support the network my tokens are on" visible>
 
 You have two choices. Move your tokens to a network the exchange does support using a [bridge](/bridges/), or find an exchange that supports your current network. Do not send tokens on a network the exchange does not list.
 
-### How long does it take? {#how-long-does-it-take}
+</ExpandableCard>
 
-Sending crypto to an exchange usually takes seconds to minutes. Selling is instant. Bank withdrawals usually take from a few minutes to a few business days, depending on the exchange and your bank. Setting up a new exchange account can take longer, because of identity checks.
+<ExpandableCard title="My deposit hasn't shown up at the exchange" visible>
 
-### Do I have to pay tax when I sell crypto? {#tax}
+Deposits usually arrive within minutes, but some exchanges wait for extra network confirmations first. If yours is taking much longer:
+
+- Find the transaction in your wallet's activity list and check that it went through.
+- Check that the "to" address in the transaction matches the deposit address the exchange gave you.
+- Check that the exchange supports that token on the network you sent it on.
+- Contact the exchange's support before you send any more funds.
+
+</ExpandableCard>
+
+<ExpandableCard title="How long does it take?" visible>
+
+Sending crypto to an exchange usually takes seconds to minutes. Selling at the current market price is almost instant. Bank withdrawals usually take from a few minutes to a few business days, depending on the exchange and your bank. Setting up a new exchange account can take longer, because of identity checks.
+
+</ExpandableCard>
+
+<ExpandableCard title="Do I have to pay tax when I sell crypto?" visible>
 
 In many countries, selling crypto can count as a taxable event. Rules differ from country to country, so check the rules where you live.
 
-### Someone offered to help me withdraw my funds {#someone-offered-to-help}
+</ExpandableCard>
+
+<ExpandableCard title="Someone offered to help me withdraw my funds" visible>
 
 This is very likely a scam. Real support staff will never message you first, and will never ask for your recovery phrase or ask you to send them crypto. [Learn how to spot scams](/community/support/scams/)
 
+</ExpandableCard>
+
 <Alert variant="update">
-<AlertEmoji text=":eyes:"/>
+<AlertIcon size="lg"><BookOpenText /></AlertIcon>
 <AlertContent className="justify-between flex-row items-center">
   <div>Want to learn more?</div>
   <ButtonLink href="/guides/">

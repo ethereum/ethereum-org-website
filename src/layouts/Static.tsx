@@ -1,3 +1,5 @@
+import { BookOpenText, ShieldCheck } from "lucide-react"
+
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
@@ -29,8 +31,10 @@ import { getEditPath } from "@/lib/utils/editPath"
 import guideHeroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 // Static layout components
+// Icons are listed here so markdown can use them inside `<AlertIcon>`.
 export const staticComponents = {
   Alert,
+  BookOpenText,
   Callout,
   Contributors,
   EnergyConsumptionChart,
@@ -40,6 +44,7 @@ export const staticComponents = {
   Logo,
   MatomoOptOut,
   NetworkUpgradeSummary,
+  ShieldCheck,
   SocialListItem,
   TranslationChartImage,
   ListenToPlayer,
