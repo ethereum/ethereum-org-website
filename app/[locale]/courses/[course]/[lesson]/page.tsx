@@ -19,6 +19,8 @@ import { COURSES, COURSES_OG_IMAGE, getLesson } from "@/data/courses"
 import { getPageLink } from "@/lib/courses/page-links"
 
 export const revalidate = false
+// Unknown params 404: getPageLink reads public/content, which isn't traced
+export const dynamicParams = false
 
 type LessonPageParams = PageParams & { course: string; lesson: string }
 

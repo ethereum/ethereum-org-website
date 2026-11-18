@@ -2,6 +2,8 @@ export type CatalogSelectOption = {
   id: string
   label: string
   count?: number
+  /** Supporting line under the label */
+  description?: string
   /** Renders as a link, not a filter toggle: for options whose items are out of
    * this catalog's scope, so filtering can't reach them. */
   href?: string
