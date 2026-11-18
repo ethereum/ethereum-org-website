@@ -14,7 +14,7 @@ author: Ethereum Foundation
 breadcrumb: "Devcon 8"
 ---
 
-A recap of the four days of **Devcon 8**, the Ethereum Foundation's flagship conference for developers and builders, held November 3-6, 2026, in Mumbai, India. The next Devcon will take place in Lisbon.
+A recap of the four days of **Devcon 8**, the Ethereum Foundation's flagship conference for developers and builders, held November 3-6, 2026, in Mumbai, India.
 
 Watch the [announcement trailer](/videos/devcon-mumbai-coming-2026/) released before the event.
 

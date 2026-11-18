@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server"
 
 import type { VideoData } from "@/lib/types"
 
-import TweetEmbed from "@/components/TweetEmbed"
+import { Image } from "@/components/Image"
 import {
   Card,
   CardBanner,
@@ -11,7 +11,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { LinkWithArrow } from "@/components/ui/Link"
+import { BaseLink, LinkWithArrow } from "@/components/ui/Link"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
@@ -41,6 +41,7 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
 
   const { frontmatter, content } = data
   const hasTranscript = content.trim().length > 0
+  const videoHref = `/videos/${slug}/`
 
   const t = await getTranslations("page-videos")
 
@@ -55,11 +56,18 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
               start={startTime}
             />
           ) : (
-            frontmatter.tweetId && (
-              <TweetEmbed
-                id={frontmatter.tweetId}
-                className="my-0 w-full [&_.react-tweet-theme]:m-0! [&_.react-tweet-theme]:max-w-none!"
-              />
+            // X videos can't play inline (video.twimg.com 403s the host
+            // page's Referer), so link to the video page, which sends none
+            frontmatter.customThumbnailUrl && (
+              <BaseLink href={videoHref} className="block">
+                <Image
+                  src={frontmatter.customThumbnailUrl}
+                  alt={frontmatter.title}
+                  width={1280}
+                  height={720}
+                  className="aspect-video w-full object-cover"
+                />
+              </BaseLink>
             )
           )}
         </CardBanner>
@@ -70,10 +78,16 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
         <CardParagraph>
           {frontmatter.description.split(/(?<=\.)\s/)[0]}
         </CardParagraph>
-        {hasTranscript && (
-          <LinkWithArrow href={`/videos/${slug}/`}>
-            {t("page-videos-watch-with-transcript")}
+        {!frontmatter.youtubeId ? (
+          <LinkWithArrow href={videoHref}>
+            {t("page-videos-watch-video")}
           </LinkWithArrow>
+        ) : (
+          hasTranscript && (
+            <LinkWithArrow href={videoHref}>
+              {t("page-videos-watch-with-transcript")}
+            </LinkWithArrow>
+          )
         )}
       </CardContent>
     </Card>

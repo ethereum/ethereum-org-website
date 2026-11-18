@@ -52,10 +52,11 @@ over 100 MB, and video pages embed hosted videos rather than serving files.
 
 - **Frontmatter**: `VideoFrontmatter.youtubeId` is now optional, and the new
   optional `tweetId` field holds the X post ID.
-- **Player**: the video page and the inline `VideoWatch` card render
-  `TweetEmbed` (server-rendered `react-tweet`) when there is no `youtubeId`.
-  react-tweet caps its card at 550px, so the embed overrides `max-width` to
-  fill the column the way YouTube videos do.
+- **Player**: the video page renders `TweetEmbed` (server-rendered
+  `react-tweet`) when there is no `youtubeId`. react-tweet caps its card at
+  550px, so the embed overrides `max-width` to fill the column the way YouTube
+  videos do. The inline `VideoWatch` card shows the thumbnail and a "Watch the
+  video" link to the video page instead (see the 403 gotcha below).
 - **JSON-LD**: `embedUrl` / `contentUrl` point to the X post for X videos.
 - **Translations**: `tweetId` is copied from English and never translated (the
   sanitizer's protected fields and the LLM prompts).
@@ -71,7 +72,8 @@ element can't set its own referrer policy, so X-hosted video pages set
 `referrer: "no-referrer"` in `generateMetadata`. Only those pages are affected.
 
 The inline `VideoWatch` card is rendered inside other pages, which keep their
-referrer, so it can't play X videos yet. Use the full video page for them.
+referrer, so it can't play X videos. It shows the thumbnail linked to the
+video page instead.
 
 ## Gotcha: thumbnails are empty until the task runs
 
