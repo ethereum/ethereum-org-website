@@ -300,7 +300,10 @@ const LessonComplete = ({
               />
             </motion.div>
 
-            <motion.div {...appear(2.2)} className="flex w-full justify-center">
+            <motion.div
+              {...appear(2.2)}
+              className="flex w-full justify-center empty:hidden"
+            >
               <LevelUp before={reward.totalBefore} after={reward.totalAfter} />
             </motion.div>
           </motion.div>
@@ -317,15 +320,11 @@ const LessonComplete = ({
       </AnimatePresence>
 
       {showStreak ? (
-        <motion.div
-          key="continue"
-          className="flex w-full justify-center"
-          {...appear(2.4)}
-        >
+        <motion.div key="continue" className="w-full max-w-sm" {...appear(2.4)}>
           <Button
             variant="ghost"
             onClick={() => setStage("streak")}
-            className={cn(chunkyButton, "w-full sm:w-auto")}
+            className={cn(chunkyButton, "w-full")}
           >
             {t("page-courses-continue")}
           </Button>

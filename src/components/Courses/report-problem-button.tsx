@@ -85,12 +85,15 @@ const ReportProblemButton = ({
           variant="ghost"
           // Not isSecondary: its attribute selector would override the colour
           className={cn(
-            "shrink-0 rounded-full px-2 text-body-medium",
+            "shrink-0 rounded-full px-2 text-sm font-bold tracking-wide text-body-medium uppercase md:px-3",
             className
           )}
           aria-label={t("page-courses-report-open")}
         >
           <Flag />
+          <span className="max-md:hidden">
+            {t("page-courses-report-label")}
+          </span>
         </Button>
       </DialogTrigger>
       <DialogContent>

@@ -55,7 +55,7 @@ const ConceptStep = ({ step, keyFor, title }: ConceptStepProps) => {
           aria-hidden
           className="absolute -end-6 -top-6 size-36 rotate-12 opacity-15"
         />
-        <p className="m-0 mb-4 flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-black tracking-widest text-(--course-strong) uppercase">
+        <p className="m-0 mb-5 flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-black tracking-widest text-(--course-strong) uppercase">
           <Lightbulb className="size-5" aria-hidden />
           {t("page-courses-takeaway")}
         </p>
@@ -73,8 +73,8 @@ const ConceptStep = ({ step, keyFor, title }: ConceptStepProps) => {
   return (
     <div className="flex flex-col gap-6">
       {step.art && (
-        <div className="mx-auto w-full max-w-60 rounded-3xl bg-(--course-softer) px-8 pt-6 pb-4">
-          <CourseArt id={step.art} />
+        <div className="rounded-3xl bg-(--course-softer) px-8 pt-6 pb-4">
+          <CourseArt id={step.art} className="mx-auto max-w-44" />
         </div>
       )}
       {title}

@@ -13,7 +13,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { chunkyButton, chunkyButtonSecondary, courseText } from "../theme"
 
 import type { WidgetProps } from "./types"
-import WidgetShell from "./widget-shell"
+import WidgetShell, { widgetActions } from "./widget-shell"
 
 const START = 3
 const TOTAL = 5
@@ -134,13 +134,19 @@ const SharedNotebookWidget = ({ onComplete }: WidgetProps) => {
                 <li
                   key={i}
                   className={cn(
-                    "m-0 flex items-start gap-1.5 rounded-lg px-1.5 py-0.5",
+                    "relative m-0 rounded-lg px-1.5 py-0.5",
                     isChanged(i) &&
                       "bg-success-light text-green-700 dark:bg-success-dark dark:text-green-400"
                   )}
                 >
+                  {/* Centred on the corner, so the line's text doesn't move */}
                   {isChanged(i) && (
-                    <Check className="mt-0.5 size-4 shrink-0" aria-hidden />
+                    <span
+                      aria-hidden
+                      className="absolute -end-2.5 -top-2.5 grid size-5 place-items-center rounded-full border-2 border-background bg-green-700 text-white"
+                    >
+                      <Check className="size-3" strokeWidth={3} />
+                    </span>
                   )}
                   <span>
                     {line}
@@ -158,7 +164,7 @@ const SharedNotebookWidget = ({ onComplete }: WidgetProps) => {
         ))}
       </ul>
 
-      <div className="flex flex-wrap gap-3">
+      <div className={widgetActions}>
         <Button
           variant="ghost"
           onClick={add}

@@ -68,13 +68,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
             label={t(`${courseId}-title`)}
           />
         </div>
-        {/* Below the breadcrumbs, so they always sit in the same place */}
-        <StickyBar className="justify-end gap-2 px-page">
-          <ProgressChips className="max-sm:*:data-[slot=xp]:hidden" />
-          <ProfileLink />
-        </StickyBar>
-
-        <section className="px-page pt-4">
+        <section className="px-page pt-6">
           <div className="relative mx-auto grid max-w-4xl items-center gap-6 overflow-hidden rounded-3xl border-b-8 border-(--course-strong) bg-(--course) p-6 text-white md:grid-cols-[1fr_200px] md:p-10">
             <div className="flex flex-col gap-4">
               <span className="w-fit rounded-full bg-black/20 px-3 py-1 text-sm font-bold tracking-wide uppercase">
@@ -96,6 +90,13 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
             </div>
           </div>
         </section>
+        {/* Chips end-aligned with the banner's end edge */}
+        <StickyBar className="mt-2 px-page">
+          <div className="mx-auto flex w-full max-w-4xl justify-end gap-2">
+            <ProgressChips />
+            <ProfileLink />
+          </div>
+        </StickyBar>
 
         <section id="lessons" className="overflow-x-clip px-page py-16">
           <h2 className="sr-only">{t("page-courses-path-title")}</h2>
