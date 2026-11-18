@@ -218,7 +218,10 @@ const SortWidget = ({
                     <DraggableTile
                       disabled={locked}
                       aria-describedby={hintId}
-                      onClick={() => unplace(id)}
+                      // With a card picked, a tap anywhere in the group drops it here
+                      onClick={() =>
+                        selected ? place(selected, bucket) : unplace(id)
+                      }
                       onPlace={(target) => drop(id, target)}
                       onHover={setHover}
                       className={cn(
