@@ -61,7 +61,17 @@ This code does two things:
 1. Write 0x80 as a 32 byte value to memory locations 0x40-0x5F (0x80 is stored in 0x5F, and 0x40-0x5E are all zeroes).
 2. Read the calldata size. Normally the call data for an Ethereum contract follows [the ABI (application binary interface)](https://docs.soliditylang.org/en/v0.8.10/abi-spec.html), which at a minimum requires four bytes for the function selector. If the call data size is less than four, jump to 0x5E.
 
-![Flowchart for this portion](flowchart-entry.png)
+<Flowchart>
+
+- Entry point (0x00)
+  - Is the call data shorter than four bytes?
+    - **Yes** Non-ABI calls (0x5E)
+      - Is there any call data?
+        - **Yes** 0x7C (purpose unknown so far)
+        - **No** ETH transfer (0x64): revert on overflow, otherwise add the call value to Storage[6] (Value\*) and stop
+    - **No** ABI calls (0x0D)
+
+</Flowchart>
 
 ### The Handler at 0x5E (for non-ABI call data) {#the-handler-at-0x5e-for-non-abi-call-data}
 
@@ -155,7 +165,17 @@ Finally, clear the stack (which isn't necessary) and signal the successful end o
 
 To sum it all up, here's a flowchart for the initial code.
 
-![Entry point flowchart](flowchart-entry.png)
+<Flowchart>
+
+- Entry point (0x00)
+  - Is the call data shorter than four bytes?
+    - **Yes** Non-ABI calls (0x5E)
+      - Is there any call data?
+        - **Yes** 0x7C (purpose unknown so far)
+        - **No** ETH transfer (0x64): revert on overflow, otherwise add the call value to Storage[6] (Value\*) and stop
+    - **No** ABI calls (0x0D)
+
+</Flowchart>
 
 ## The Handler at 0x7C {#the-handler-at-0x7c}
 
@@ -262,7 +282,19 @@ If we get here, to 0xC0, it means that the contract we called reverted. As we ar
 
 So we `REVERT` with the same buffer we used for `RETURN` earlier: 0x80 - 0x80+RETURNDATASIZE
 
-![Call to proxy flowchart](flowchart-proxy.png)
+<Flowchart>
+
+- Call data one to three bytes long, or an unknown method
+  - Proxy handler (0x7C)
+    - Read Storage[3], the proxy address
+      - Copy the call data to memory
+        - `DELEGATECALL` the proxy address
+          - Copy the return data to memory
+            - Did the call fail?
+              - **Yes** `REVERT` with the return data (0xC0)
+              - **No** `RETURN` the return data (0xBD)
+
+</Flowchart>
 
 ## ABI calls {#abi-calls}
 
@@ -297,7 +329,26 @@ By dividing the method signature matching tests in two like this saves half the 
 
 If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler-at-0x7c), in the hope that the contract to which we are a proxy has a match.
 
-![ABI calls flowchart](flowchart-abi.png)
+<Flowchart>
+
+- Read the method selector, the first four bytes of the call data (0x0D)
+  - Is the selector below 0x3CD8045E?
+    - **Yes** Low selectors (0x43)
+      - Is it 0x1f135823?
+        - **Yes** Function at 0xC4
+        - **No** Is it 0x2eb4a7ab?
+          - **Yes** `merkleRoot()` at 0xED
+          - **No** [Proxy handler (0x7C)](#the-handler-at-0x7c)
+    - **No** High selectors (0x1E)
+      - Is it 0x3cd8045e?
+        - **Yes** `splitter()` at 0x0103
+        - **No** Is it 0x81e580d3?
+          - **Yes** Function at 0x0138
+          - **No** Is it 0xba0bafb4?
+            - **Yes** `currentWindow()` at 0x0158
+            - **No** [Proxy handler (0x7C)](#the-handler-at-0x7c)
+
+</Flowchart>
 
 ## splitter() {#splitter}
 

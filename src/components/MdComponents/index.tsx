@@ -11,6 +11,7 @@ import ExpandableCard, {
   type ExpandableCardProps,
 } from "@/components/ExpandableCard"
 import FeaturedText from "@/components/FeaturedText"
+import Flowchart from "@/components/Flowchart"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import IdAnchor from "@/components/IdAnchor"
 import MarkdownImage from "@/components/Image/MarkdownImage" // TODO: Pull into MdComponents
@@ -111,6 +112,7 @@ export const reactComponents = {
   Emoji,
   ExpandableCard: ExpandableCardWithMargin,
   FeaturedText,
+  Flowchart,
   GlossaryTooltip,
   Grid,
   QuizWidget: StandaloneQuizWidget,

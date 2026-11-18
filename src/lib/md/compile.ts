@@ -13,6 +13,7 @@ import { Frontmatter, Layout, TocNodeType } from "../types"
 import { escapeHeadingIds } from "@/lib/md/escapeHeadingIds"
 import rehypeImg from "@/lib/md/rehypeImg"
 import { remarkFigureNumbers } from "@/lib/md/remarkFigureNumbers"
+import { remarkFlowchart } from "@/lib/md/remarkFlowchart"
 import remarkInferToc from "@/lib/md/remarkInferToc"
 import { remarkPreserveJsx } from "@/lib/md/remarkPreserveJsx"
 
@@ -45,6 +46,7 @@ export const compile = async ({
       [remarkInferToc, { callback: tocCallback }],
       remarkPreserveJsx,
       remarkFigureNumbers,
+      remarkFlowchart,
     ],
     rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
   } satisfies SerializeOptions["mdxOptions"]
