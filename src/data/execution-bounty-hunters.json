@@ -448,7 +448,12 @@
     "username": "mardgez",
     "name": "mardgez",
     "score": 1000
-  },  
+  },
+  {
+    "username": "alepacheco",
+    "name": "alepacheco",
+    "score": 1000
+  },
   {
     "username": "n0thingness",
     "name": "Daniel Briskin",
@@ -522,6 +527,11 @@
   {
     "username": "VanZ27",
     "name": "VanSecQA",
+    "score": 250
+  },
+  {
+    "username": "kaslovdmitri",
+    "name": "Dmitri Kaslov",
     "score": 250
   },
   {
