@@ -6,6 +6,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
@@ -55,7 +57,7 @@ export default async function Layer2PageJsonLD({
         isPartOf: webPageId,
         headline: t("page-layer-2-hero-title"),
         description: t("page-layer-2-meta-description"),
-        image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+        image: `${SITE_URL}/images/layer-2/learn-hero.png`, // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,

@@ -12,15 +12,9 @@ import { ibmPlexMono, inter } from "./fonts"
 
 import "@/styles/global.css"
 
-// This root not-found boundary must stay self-contained and use only
-// explicit-locale next-intl APIs. In dev, Next.js renders it alongside every
-// page request within the same request-scoped cache, so calling
-// `setRequestLocale` (directly or by reusing `LocaleLayout`) or any implicit
-// API (`getTranslations()`, `getLocale()`, ...) here poisons the locale of the
-// actual page being rendered. It is only reached for locale-less paths the
-// proxy matcher excludes; localized 404s render via app/[locale]/not-found.tsx
-// with the full site chrome.
-export default async function GlobalNotFound() {
+// Catches `notFound()` from `[locale]/layout.tsx` for invalid locales (e.g. `/foo.bar`), which `global-not-found` doesn't (vercel/next.js#85446).
+// `next/root-params` still returns the invalid segment here, so the locale is passed explicitly.
+export default async function NotFound() {
   const allMessages = await getMessages({ locale: DEFAULT_LOCALE })
   const messages = pick(allMessages, "common")
 

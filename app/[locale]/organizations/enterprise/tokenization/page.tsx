@@ -1,11 +1,7 @@
 import { pick } from "lodash"
 import { Banknote, Coins, Move, ScanEye } from "lucide-react"
 import type { Metadata } from "next"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -55,8 +51,6 @@ import heroImg from "@/public/images/organizations/tokenization-workshop-assets-
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-tokenization")
 
@@ -332,8 +326,6 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-tokenization")
 
