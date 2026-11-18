@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 import { CheckCircle2, Flame, Lightbulb, XCircle } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
@@ -63,11 +63,16 @@ import {
   useCourseProgress,
 } from "./useCourseProgress"
 
+import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
 import {
   EXAM_ATTEMPTS_PER_DAY,
   MIN_ANSWER_MS,
   samePicks,
 } from "@/lib/courses/rules"
+
+/** A max-w-3xl content column, plus page padding */
+const lessonColumn =
+  "mx-auto max-w-[calc(var(--container-3xl)+var(--spacing-page-2x))] px-page"
 
 interface LessonPlayerProps {
   courseId: string
@@ -161,6 +166,13 @@ const LessonPlayer = ({
   const reduceMotion = useReducedMotion()
   const { completeLesson, completeExam } = useCourseProgress()
   const lessonSession = useLessonSession(courseId, lesson.id, !exam)
+
+  // The floating widget covers the footer buttons; steps have their own report flag
+  const { setShowFeedbackWidget } = useContext(FeedbackWidgetContext)
+  useEffect(() => {
+    setShowFeedbackWidget(false)
+    return () => setShowFeedbackWidget(true)
+  }, [setShowFeedbackWidget])
 
   // A resumed Course Mastery attempt picks up after the answers already saved
   const resumed = examSession?.answered ?? {}
@@ -672,7 +684,12 @@ const LessonPlayer = ({
       className="flex min-h-[calc(100dvh-5rem)] flex-col"
     >
       <style>{LESSON_CSS}</style>
-      <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 px-page pt-6 pb-10">
+      <div
+        className={cn(
+          lessonColumn,
+          "flex w-full flex-1 flex-col gap-6 pt-6 pb-10"
+        )}
+      >
         <div className="flex items-center gap-3">
           <Progress
             value={progressValue}
@@ -758,7 +775,11 @@ const LessonPlayer = ({
                   : undefined
             }
             nextTitle={
-              nextLessonId ? t(`${courseId}-${nextLessonId}-title`) : undefined
+              nextLessonId
+                ? t(`${courseId}-${nextLessonId}-title`)
+                : examAfter
+                  ? t(`${courseId}-title`)
+                  : undefined
             }
             nextIsExam={!nextLessonId && examAfter}
             learnMore={learnMore}
@@ -799,7 +820,7 @@ const LessonPlayer = ({
               "border-transparent bg-error-light dark:bg-error-dark"
           )}
         >
-          <div className="mx-auto flex max-w-2xl flex-col gap-4 px-page py-5">
+          <div className={cn(lessonColumn, "flex flex-col gap-4 py-5")}>
             <AnimatePresence mode="wait">
               {explored && (
                 <motion.div

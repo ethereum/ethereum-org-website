@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Check, Trophy, X, Zap } from "lucide-react"
+import { Check, Crosshair, Trophy, X, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -97,46 +97,47 @@ const ExamComplete = ({
     exit: animate ? { opacity: 0, x: -40 } : undefined,
   })
 
-  const nav = passed ? (
-    <>
-      {nextCourseId && (
-        <ButtonLink
-          href={hrefFor(nextCourseId)}
-          variant="ghost"
-          hideArrow
-          className={chunkyButton}
-        >
-          {t("page-courses-path-next-course")}
-        </ButtonLink>
-      )}
-      {/* Course mastered: back to the hub to pick what's next */}
+  const primaryNav = passed ? (
+    nextCourseId && (
       <ButtonLink
-        href={COURSES_HUB}
+        href={hrefFor(nextCourseId)}
         variant="ghost"
         hideArrow
-        className={nextCourseId ? chunkyButtonSecondary : chunkyButton}
+        className={cn(chunkyButton, "flex-col gap-0 py-2")}
       >
-        {t("page-courses-back-to-courses")}
+        {t("page-courses-path-next-course")}
+        <span className="text-sm font-semibold tracking-normal normal-case opacity-90">
+          {t(`${nextCourseId}-title`)}
+        </span>
       </ButtonLink>
-    </>
+    )
+  ) : retakeBlocked ? (
+    <p className="m-0 text-body-medium">{retakeBlocked}</p>
   ) : (
-    <>
-      {retakeBlocked ? (
-        <p className="m-0 w-full text-body-medium">{retakeBlocked}</p>
-      ) : (
-        <Button variant="ghost" onClick={onRetake} className={chunkyButton}>
-          {t("page-courses-try-again")}
-        </Button>
-      )}
-      <ButtonLink
-        href={courseHref}
-        variant="ghost"
-        hideArrow
-        className={chunkyButtonSecondary}
-      >
-        {t("page-courses-back-to-course")}
-      </ButtonLink>
-    </>
+    <Button variant="ghost" onClick={onRetake} className={chunkyButton}>
+      {t("page-courses-try-again")}
+    </Button>
+  )
+
+  const backNav = passed ? (
+    // Course mastered: back to the hub to pick what's next
+    <ButtonLink
+      href={COURSES_HUB}
+      variant="ghost"
+      hideArrow
+      className={nextCourseId ? chunkyButtonSecondary : chunkyButton}
+    >
+      {t("page-courses-back-to-courses")}
+    </ButtonLink>
+  ) : (
+    <ButtonLink
+      href={courseHref}
+      variant="ghost"
+      hideArrow
+      className={chunkyButtonSecondary}
+    >
+      {t("page-courses-back-to-course")}
+    </ButtonLink>
   )
 
   return (
@@ -201,27 +202,38 @@ const ExamComplete = ({
                   xp: int.format(Math.round(xp)),
                 })}
                 label={t("page-courses-exam-xp")}
-                icon={<Zap className="size-6 fill-current" aria-hidden />}
-                className="from-yellow-400/25 text-yellow-700 dark:text-yellow-400"
+                icon={<Zap className="fill-current" aria-hidden />}
+                // Not gold: that's the trophy's
+                className="border-(--course-strong) bg-(--course) text-white"
               />
               <StatCard
                 value={percent.format(shown)}
                 label={t("page-courses-exam-score")}
                 icon={
                   passed ? (
-                    <Check className="size-6" strokeWidth={3} aria-hidden />
-                  ) : undefined
+                    <Check strokeWidth={3} aria-hidden />
+                  ) : (
+                    <Crosshair aria-hidden />
+                  )
                 }
+                // A fail gets a red outline rather than a harsh red fill
                 className={
                   passed
-                    ? "from-success/25 text-green-700 dark:text-green-400"
-                    : "from-(--course)/20 text-(--course-strong) dark:text-(--course-bright)"
+                    ? "border-green-800 bg-green-700 text-white"
+                    : "border-2 border-b-[6px] border-error bg-background text-body [&>svg]:text-error"
                 }
               />
             </motion.div>
 
-            <motion.div {...appear(0.8)} className="flex w-full justify-center">
-              <LevelUp before={reward.totalBefore} after={reward.totalAfter} />
+            <motion.div
+              {...appear(0.8)}
+              className="flex w-full justify-center empty:hidden"
+            >
+              <LevelUp
+                before={reward.totalBefore}
+                after={reward.totalAfter}
+                className="max-w-md"
+              />
             </motion.div>
           </motion.div>
         )}
@@ -252,9 +264,10 @@ const ExamComplete = ({
         )}
       </AnimatePresence>
 
+      {/* One column, as wide as the stat cards; the main action on top */}
       <motion.div
         key={stage}
-        className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center"
+        className="flex w-full max-w-md flex-col gap-3 *:w-full"
         {...appear(stage === "summary" ? 1 : 0.2)}
       >
         {stage === "review" ? (
@@ -267,17 +280,8 @@ const ExamComplete = ({
           </Button>
         ) : stage === "summary" ? (
           <>
-            {results.length > 0 && (
-              <Button
-                variant="ghost"
-                onClick={() => setStage("review")}
-                className={chunkyButtonSecondary}
-              >
-                {t("page-courses-exam-review")}
-              </Button>
-            )}
             {streakSeen ? (
-              nav
+              primaryNav || backNav
             ) : (
               <Button
                 variant="ghost"
@@ -290,9 +294,22 @@ const ExamComplete = ({
                 {t("page-courses-continue")}
               </Button>
             )}
+            {results.length > 0 && (
+              <Button
+                variant="ghost"
+                onClick={() => setStage("review")}
+                className={chunkyButtonSecondary}
+              >
+                {t("page-courses-exam-review")}
+              </Button>
+            )}
+            {streakSeen && primaryNav && backNav}
           </>
         ) : (
-          nav
+          <>
+            {primaryNav}
+            {backNav}
+          </>
         )}
       </motion.div>
     </div>
@@ -307,20 +324,22 @@ const StatCard = ({
 }: {
   value: string
   label: string
-  icon?: React.ReactNode
+  icon: React.ReactNode
   className?: string
 }) => (
+  // Solid with a deeper bottom edge, like the lesson summary's XP badge.
+  // Icon above the value so both cards' values and labels line up
   <div
     className={cn(
-      "flex flex-col items-center gap-3 rounded-2xl border-2 border-b-4 border-border bg-linear-to-t to-transparent px-4 py-6",
+      "flex flex-col items-center gap-2 rounded-2xl border-b-[6px] px-3 py-5 [&>svg]:size-7",
       className
     )}
   >
-    <span className="flex items-center gap-1.5 text-4xl leading-none font-black tabular-nums">
-      <span className="text-body">{value}</span>
-      {icon}
+    {icon}
+    <span className="text-3xl leading-none font-black whitespace-nowrap tabular-nums sm:text-4xl">
+      {value}
     </span>
-    <span className="text-sm font-bold tracking-wide text-body-medium uppercase">
+    <span className="text-sm font-bold tracking-wide uppercase opacity-85">
       {label}
     </span>
   </div>
