@@ -34,6 +34,8 @@ With The Graph, developers can benefit from:
 
 Follow this [quick-start](https://thegraph.com/docs/en/quick-start/) guide to create, deploy, and query a subgraph within 5 minutes.
 
+[Pinax](https://pinax.network/) operates hosted [Firehose](https://firehose.streamingfast.io/) and [Substreams](https://docs.substreams.dev/) endpoints alongside [StreamingFast](https://streamingfast.io/).
+
 ## Client diversity {#client-diversity}
 
 [Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is important for the overall health of the Ethereum network because it provides resilience to bugs and exploits. There are now several client diversity dashboards including [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) and [Ethernodes](https://ethernodes.org/).
@@ -75,12 +77,6 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 [Envio](https://envio.dev/) is an indexing framework that turns onchain events into a queryable GraphQL API. It supports Ethereum and any EVM-compatible chain. Developers write event handlers in TypeScript, JavaScript, or ReScript to serve real-time and historical data, with reorg support, multichain indexing, and managed hosting on Envio Cloud or self-hosting.
 
 To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart) to create, deploy, and query an indexer.
-
-## Pinax {#pinax}
-
-[Pinax](https://pinax.network/) provides streaming access to Ethereum data through Firehose and Substreams, two open-source projects it maintains alongside StreamingFast. Firehose streams full blocks over gRPC, including call traces, balance changes and storage changes that a JSON-RPC node does not return. Substreams runs Rust modules in parallel on top of those blocks, writing the result to PostgreSQL or ClickHouse, streaming it to a consumer, or feeding a Graph Node as a subgraph data source.
-
-Pinax also serves a Token API for balances, transfers, holders, NFTs and DEX activity, and archive JSON-RPC endpoints. To get started, create a key at [app.pinax.network](https://app.pinax.network/) and follow the [Substreams quickstart](https://docs.substreams.dev/).
 
 ## Further Reading {#further-reading}
 

@@ -296,7 +296,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Archive nodes with full historical state
     - Firehose and Substreams alongside JSON-RPC
     - Free and paid plans
-    - 37 networks, including Ethereum mainnet, Sepolia and Hoodi
+    - Ethereum mainnet, Sepolia and Hoodi
 
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/)
