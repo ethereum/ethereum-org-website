@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react"
 import { Layers } from "lucide-react"
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 
 import { useDiagramInView } from "@/components/Diagrams/diagram-hover"
 import {
@@ -13,22 +13,21 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
-
-import { numberFormat } from "@/lib/utils/numbers"
 
 import {
   BLOCK_STATE_LAST_STEP,
   BLOCK_STATE_PARTS,
   BLOCK_STATE_PRESET_IDS,
-  BLOCK_STATE_START,
   BLOCK_STATE_STEPS,
   BLOCK_STATE_TXS,
+  blockStateEth,
   type BlockStatePart,
   type BlockStatePresetId,
+  getBlockStateValues,
   getBlockStateView,
-  GWEI_PER_ETH,
   txFeeGwei,
 } from "./model"
 import BlockStateRig from "./rig"
@@ -54,14 +53,14 @@ interface BlockStatePlayerProps {
  * but its fee is paid and the sender's nonce goes up.
  */
 export function BlockStatePlayer({
-  initialPreset = "success",
+  initialPreset = BLOCK_STATE_PRESET_IDS[0],
   initialStep = IDLE_STEP,
   fig,
   className,
 }: BlockStatePlayerProps) {
   const t = useTranslations("component-diagrams")
-  const locale = useLocale()
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const [presetId, setPresetId] = useState<BlockStatePresetId>(initialPreset)
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
@@ -75,41 +74,19 @@ export function BlockStatePlayer({
     [presetId, step]
   )
 
-  // ETH amounts, from whole gwei.
-  const { eth, signed } = useMemo(() => {
-    const ethFormat = numberFormat(locale, { maximumFractionDigits: 4 })
-    const signedInt = numberFormat(locale, { signDisplay: "exceptZero" })
-    return {
-      eth: (gwei: number) =>
-        t("block-state-eth", {
-          amount: ethFormat.format(gwei / GWEI_PER_ETH),
-        }),
-      signed: (value: number) => signedInt.format(value),
-    }
-  }, [locale, t])
+  const { eth, signed } = useMemo(
+    () => ({
+      eth: (gwei: number) => blockStateEth(text, gwei),
+      signed: (value: number) =>
+        text.number(value, { signDisplay: "exceptZero" }),
+    }),
+    [text]
+  )
 
-  // Every number the strings quote, for the current scenario.
-  const amounts = useMemo(() => {
-    const [t1, t2, t3] = BLOCK_STATE_TXS
-    return {
-      tx1: format(1),
-      tx2: format(2),
-      tx3: format(3),
-      aliceStart: eth(BLOCK_STATE_START.alice),
-      bobStart: eth(BLOCK_STATE_START.bob),
-      contractStart: eth(BLOCK_STATE_START.contract),
-      t1Value: eth(t1.valueGwei),
-      t1Fee: eth(txFeeGwei(presetId, 0)),
-      t2Value: eth(t2.valueGwei),
-      t2Fee: eth(txFeeGwei("success", 1)),
-      t2RevertFee: eth(txFeeGwei("revert", 1)),
-      t3Value: eth(t3.valueGwei),
-      t3Fee: eth(txFeeGwei(presetId, 2)),
-      ...Object.fromEntries(
-        [1, 2, 3, 4].map((n) => [`step${n}`, format(n)] as const)
-      ),
-    }
-  }, [eth, format, presetId])
+  const amounts = useMemo(
+    () => getBlockStateValues(text, presetId),
+    [text, presetId]
+  )
 
   const { labels, definitions, parts } = useMemo(() => {
     const labels = {} as Record<BlockStatePart, string>

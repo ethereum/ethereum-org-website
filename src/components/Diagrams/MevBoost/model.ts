@@ -26,6 +26,8 @@
  *   Gloas; not on Mainnet as of November 2026.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const MEV_BOOST_SIZE = { width: 490, height: 250 }
 
@@ -128,3 +130,9 @@ export const getMevBoostView = (requestedStep: number): MevBoostView => {
     signed: step >= MEV_BOOST_STEPS.indexOf("sign"),
   }
 }
+
+/** Values the figure's strings quote. */
+export const getMevBoostValues = ({ number, steps }: DiagramText) => ({
+  bid: number(WINNING_BID),
+  ...steps(MEV_BOOST_LAST_STEP),
+})

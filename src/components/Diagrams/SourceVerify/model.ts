@@ -22,6 +22,8 @@
  *   arguments); the figure shows the runtime comparison only.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const SOURCE_VERIFY_SIZE = { width: 490, height: 250 }
 
@@ -163,3 +165,7 @@ export const getSourceVerifyView = (
     result,
   }
 }
+
+/** Values the figure's description quotes. */
+export const getSourceVerifyValues = ({ steps }: DiagramText) =>
+  steps(SOURCE_VERIFY_LAST_STEP)

@@ -13,22 +13,19 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
-  ATTACKER_VOTES,
-  COMMITTEE_VOTES,
   EX_ANTE_REORG_LAST_STEP,
   EX_ANTE_REORG_PARTS,
   EX_ANTE_REORG_PRESET_IDS,
   type ExAnteReorgPart,
   type ExAnteReorgPresetId,
   type ExAnteReorgView,
+  getExAnteReorgValues,
   getExAnteReorgView,
-  HONEST_VOTES,
-  PROPOSER_BOOST_VOTES,
-  SLOT_NAMES,
 } from "./model"
 import ExAnteReorgRig from "./rig"
 
@@ -57,6 +54,7 @@ export function ExAnteReorgPlayer({
 }: ExAnteReorgPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<ExAnteReorgPresetId>(initialPreset)
@@ -71,13 +69,7 @@ export function ExAnteReorgPlayer({
     [presetId, step]
   )
 
-  const shared = {
-    ...SLOT_NAMES,
-    committee: format(COMMITTEE_VOTES),
-    attacker: format(ATTACKER_VOTES),
-    honest: format(HONEST_VOTES),
-    boost: format(PROPOSER_BOOST_VOTES),
-  }
+  const shared = useMemo(() => getExAnteReorgValues(text), [text])
   const valuesFor = (v: ExAnteReorgView) => ({
     ...shared,
     step: format(v.step),
@@ -102,12 +94,7 @@ export function ExAnteReorgPlayer({
         : `ex-ante-reorg-definition-${part}`
     for (const part of EX_ANTE_REORG_PARTS) {
       labels[part] = t(labelKey(part))
-      definitions[part] = t(definitionKey(part), {
-        ...SLOT_NAMES,
-        committee: format(COMMITTEE_VOTES),
-        attacker: format(ATTACKER_VOTES),
-        boost: format(PROPOSER_BOOST_VOTES),
-      })
+      definitions[part] = t(definitionKey(part), shared)
     }
     const parts = Object.fromEntries(
       EX_ANTE_REORG_PARTS.map((part) => [
@@ -116,7 +103,7 @@ export function ExAnteReorgPlayer({
       ])
     )
     return { labels, definitions, parts }
-  }, [t, format])
+  }, [t, shared])
 
   // Every caption this preset can show, so the caption area keeps the height
   // of the longest one.
@@ -129,12 +116,7 @@ export function ExAnteReorgPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("ex-ante-reorg-caption")}
-      description={t("ex-ante-reorg-description", {
-        ...shared,
-        ...Object.fromEntries(
-          [1, 2, 3, 4, 5].map((n) => [`step${n}`, format(n)])
-        ),
-      })}
+      description={t("ex-ante-reorg-description", shared)}
       fig={fig}
       title={t("ex-ante-reorg-title")}
       status={t(`ex-ante-reorg-status-${view.key}`)}

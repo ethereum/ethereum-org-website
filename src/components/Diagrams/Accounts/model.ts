@@ -18,6 +18,8 @@
  *   account creates.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const ACCOUNTS_SIZE = { width: 420, height: 300 }
 
@@ -169,3 +171,7 @@ export const getAccountsView = (
     captionKey: accountsCaptionKey(presetId, motion),
   }
 }
+
+/** Values the figure's description quotes. */
+export const getAccountsValues = ({ steps }: DiagramText) =>
+  steps(ACCOUNTS_LAST_STEP)

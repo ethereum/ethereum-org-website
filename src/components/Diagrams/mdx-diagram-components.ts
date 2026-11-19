@@ -3,6 +3,7 @@ import AttestationsDiagram from "./Attestations"
 import BlockStateDiagram from "./BlockState"
 import EvmZonesDiagram from "./EvmZones"
 import ExAnteReorgDiagram from "./ExAnteReorg"
+import type { DIAGRAM_FIGURE_TEXT } from "./figure-text"
 import GasEvmDiagram from "./GasEvm"
 import GasTxDiagram from "./GasTx"
 import MevBoostDiagram from "./MevBoost"
@@ -46,4 +47,5 @@ export const mdxDiagramComponents = {
   VaultDepositDiagram,
   VaultInterfaceDiagram,
   VaultRequestDiagram,
-}
+  // Each tag also reads as text in the agent-facing markdown.
+} satisfies Record<keyof typeof DIAGRAM_FIGURE_TEXT, unknown>

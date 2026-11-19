@@ -37,6 +37,8 @@
  * here, not a new drawing.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const VALIDATOR_KEYS_SIZE = { width: 480, height: 300 }
 
@@ -279,3 +281,24 @@ export const getKeyDerivationView = (
     key: motion,
   }
 }
+
+/* ---------- Values each figure's strings quote ---------- */
+
+export const getValidatorKeysValues = ({ number, steps }: DiagramText) => ({
+  amount: number(DEPOSIT_ETH),
+  three: number(VALIDATOR_COUNT),
+  stake: number(STAKE_ETH),
+  max: number(MAX_EFFECTIVE_BALANCE_ETH),
+  from: CREDENTIAL_PREFIX.bls,
+  to: CREDENTIAL_PREFIX.address,
+  address: CREDENTIAL_PREFIX.address,
+  compounding: CREDENTIAL_PREFIX.compounding,
+  ...steps(VALIDATOR_KEYS_LAST_STEP),
+})
+
+export const getKeyDerivationValues = ({ number, steps }: DiagramText) => ({
+  count: number(VALIDATOR_COUNT),
+  withdrawalPath: WITHDRAWAL_PATH,
+  signingPath: SIGNING_PATH,
+  ...steps(KEY_DERIVATION_LAST_STEP),
+})

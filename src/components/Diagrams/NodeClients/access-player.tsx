@@ -11,10 +11,12 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
+  getNodeAccessValues,
   getNodeAccessView,
   NODE_ACCESS_LAST_STEP,
   NODE_ACCESS_STEPS,
@@ -45,6 +47,7 @@ export function NodeAccessPlayer({
 }: NodeAccessPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
@@ -67,7 +70,7 @@ export function NodeAccessPlayer({
       caption={t("node-clients-access-caption")}
       description={t(
         "node-clients-access-description",
-        Object.fromEntries([1, 2, 3, 4, 5].map((n) => [`step${n}`, format(n)]))
+        getNodeAccessValues(text)
       )}
       fig={fig}
       title={t("node-clients-access-title")}

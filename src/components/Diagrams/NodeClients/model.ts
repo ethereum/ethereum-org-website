@@ -58,6 +58,8 @@
  *   are drafted), so the figures name the method families without it.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const NODE_CLIENTS_SIZE = { width: 490, height: 320 }
 
@@ -594,3 +596,23 @@ export const getNodeNetworksView = (
     return { ...base, litPart: null, network: null, message: null }
   return { ...base, ...NETWORKS[motion] }
 }
+
+/* ---------- Values each figure's description quotes ---------- */
+
+export const getNodeClientsValues = ({ steps }: DiagramText) =>
+  steps(NODE_CLIENTS_LAST_STEP)
+
+/** The description walks every scenario, so it numbers the longest. */
+export const getNodeArchitectureValues = ({ steps }: DiagramText) =>
+  steps(Math.max(...NODE_ARCHITECTURE_PRESETS.map(nodeArchitectureLastStep)))
+
+export const getNodeAccessValues = ({ steps }: DiagramText) =>
+  steps(NODE_ACCESS_LAST_STEP)
+
+export const getClientSetupValues = ({ steps }: DiagramText) => ({
+  ...steps(CLIENT_SETUP_LAST_STEP),
+  ...DEFAULT_PORT,
+})
+
+export const getNodeNetworksValues = ({ steps }: DiagramText) =>
+  steps(Math.max(...NODE_NETWORKS_PRESETS.map(nodeNetworksLastStep)))

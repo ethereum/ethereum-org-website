@@ -23,6 +23,7 @@ import {
 } from "./diagram-hover"
 
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
+import { createDiagramText } from "@/lib/md/diagram-text"
 
 /*
  * The shell every interactive diagram uses, so controls and framing sit in
@@ -447,6 +448,13 @@ export function useDiagramFormat() {
     const formatter = numberFormat(locale)
     return (value: number) => formatter.format(value)
   }, [locale])
+}
+
+/** What a model's `get<Name>Values` formats with, in the page's locale. */
+export function useDiagramText() {
+  const locale = useLocale()
+  const t = useTranslations("component-diagrams")
+  return useMemo(() => createDiagramText(locale, t), [locale, t])
 }
 
 /**

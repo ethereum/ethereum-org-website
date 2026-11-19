@@ -12,12 +12,18 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
-import { getSyncView, SYNC_LAST_STEP, VAULT_EXAMPLE } from "./model"
+import {
+  getSyncView,
+  getVaultDepositValues,
+  SYNC_LAST_STEP,
+  vaultAmountText,
+} from "./model"
 import TokenVaultRig from "./rig"
-import { useVaultAmount, useVaultParts } from "./use-vault-parts"
+import { useVaultParts } from "./use-vault-parts"
 
 const IDLE_STEP = 0
 /** The function the investor calls: code, never translated. */
@@ -41,7 +47,7 @@ export function VaultDepositPlayer({
 }: VaultDepositPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
-  const amount = useVaultAmount()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { labels, definitions, parts } = useVaultParts("sync")
 
@@ -53,15 +59,11 @@ export function VaultDepositPlayer({
   })
   const view = useMemo(() => getSyncView(step), [step])
 
-  const example = {
-    deposit: amount({ value: view.deposit, unit: "assets" }, format),
-    shares: amount({ value: view.shares, unit: "shares" }, format),
-    rate: format(VAULT_EXAMPLE.rate),
-  }
+  const values = getVaultDepositValues(text)
   const captionFor = (i: number) => {
     const v = getSyncView(i)
     return t(`token-vault-sync-step-${v.stepId}`, {
-      ...example,
+      ...values,
       step: format(v.step),
       fn: DEPOSIT_FN,
     })
@@ -72,12 +74,7 @@ export function VaultDepositPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("token-vault-sync-caption")}
-      description={t("token-vault-sync-description", {
-        ...example,
-        totalAssets: format(VAULT_EXAMPLE.totalAssets),
-        totalSupply: format(VAULT_EXAMPLE.totalSupply),
-        ...Object.fromEntries([1, 2, 3].map((n) => [`step${n}`, format(n)])),
-      })}
+      description={t("token-vault-sync-description", values)}
       fig={fig}
       title={t("token-vault-sync-title")}
       status={t(`token-vault-sync-status-${view.stepId}`)}
@@ -142,7 +139,10 @@ export function VaultDepositPlayer({
                     value={view.received}
                     delay={700}
                     format={(n) =>
-                      amount({ value: Math.round(n), unit: "shares" }, format)
+                      vaultAmountText(text, {
+                        value: Math.round(n),
+                        unit: "shares",
+                      })
                     }
                   />
                 ),

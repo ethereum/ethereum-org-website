@@ -13,6 +13,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
@@ -20,11 +21,9 @@ import {
   CREDENTIAL_PREFIX,
   CREDENTIAL_PRESET_IDS,
   type CredentialPresetId,
-  DEPOSIT_ETH,
+  getValidatorKeysValues,
   getValidatorKeysView,
-  MAX_EFFECTIVE_BALANCE_ETH,
   STAKE_ETH,
-  VALIDATOR_COUNT,
   VALIDATOR_KEYS_LAST_STEP,
   type ValidatorKeysView,
 } from "./model"
@@ -67,6 +66,7 @@ export function ValidatorKeysPlayer({
 }: ValidatorKeysPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<CredentialPresetId>(initialPreset)
@@ -92,17 +92,15 @@ export function ValidatorKeysPlayer({
 
   const eth = (amount: number) =>
     t("validator-keys-eth", { amount: format(amount) })
+  const values = getValidatorKeysValues(text)
   const valuesFor = (v: ValidatorKeysView) => ({
+    ...values,
     step: format(v.step),
     // `n` picks the plural form; `count` is the localized figure.
     n: v.count,
     count: format(v.count),
     amount: format(STAKE_ETH / v.count),
-    stake: format(STAKE_ETH),
-    max: format(MAX_EFFECTIVE_BALANCE_ETH),
     prefix: CREDENTIAL_PREFIX[v.preset],
-    from: CREDENTIAL_PREFIX.bls,
-    to: CREDENTIAL_PREFIX.address,
   })
   const captionFor = (v: ValidatorKeysView) =>
     t(`validator-keys-step-${v.key}`, valuesFor(v))
@@ -118,14 +116,7 @@ export function ValidatorKeysPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("validator-keys-caption")}
-      description={t("validator-keys-description", {
-        ...valuesFor(view),
-        amount: format(DEPOSIT_ETH),
-        three: format(VALIDATOR_COUNT),
-        address: CREDENTIAL_PREFIX.address,
-        compounding: CREDENTIAL_PREFIX.compounding,
-        ...Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)])),
-      })}
+      description={t("validator-keys-description", values)}
       fig={fig}
       title={t("validator-keys-title")}
       status={t(`validator-keys-status-${view.key}`, valuesFor(view))}

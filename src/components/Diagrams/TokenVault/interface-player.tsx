@@ -13,18 +13,20 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
   getInterfaceView,
+  getVaultInterfaceValues,
   INTERFACE_LAST_STEP,
   INTERFACE_PRESET_IDS,
   type InterfacePresetId,
-  VAULT_EXAMPLE,
+  vaultAmountText,
 } from "./model"
 import TokenVaultRig from "./rig"
-import { useVaultAmount, useVaultParts } from "./use-vault-parts"
+import { useVaultParts } from "./use-vault-parts"
 
 const IDLE_STEP = 0
 
@@ -49,7 +51,7 @@ export function VaultInterfacePlayer({
 }: VaultInterfacePlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
-  const amount = useVaultAmount()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const { labels, definitions, parts } = useVaultParts("interface")
 
@@ -68,8 +70,8 @@ export function VaultInterfacePlayer({
       step: format(v.step),
       fn: v.fn ?? "",
       event: v.event,
-      input: amount(v.input, format),
-      returns: v.returns ? amount(v.returns, format) : "",
+      input: vaultAmountText(text, v.input),
+      returns: v.returns ? vaultAmountText(text, v.returns) : "",
     })
   }
   const none = t("token-vault-readout-none")
@@ -78,12 +80,10 @@ export function VaultInterfacePlayer({
     <InteractiveDiagram
       className={className}
       caption={t("token-vault-interface-caption")}
-      description={t("token-vault-interface-description", {
-        totalAssets: format(VAULT_EXAMPLE.totalAssets),
-        totalSupply: format(VAULT_EXAMPLE.totalSupply),
-        rate: format(VAULT_EXAMPLE.rate),
-        ...Object.fromEntries([1, 2, 3, 4].map((n) => [`step${n}`, format(n)])),
-      })}
+      description={t(
+        "token-vault-interface-description",
+        getVaultInterfaceValues(text)
+      )}
       fig={fig}
       title={t("token-vault-interface-title")}
       status={t(`token-vault-interface-status-${view.stepId}`)}
@@ -161,7 +161,7 @@ export function VaultInterfacePlayer({
             },
             {
               label: t("token-vault-readout-returns"),
-              value: view.returns ? amount(view.returns, format) : none,
+              value: view.returns ? vaultAmountText(text, view.returns) : none,
             },
             {
               label: t("token-vault-readout-total-assets"),

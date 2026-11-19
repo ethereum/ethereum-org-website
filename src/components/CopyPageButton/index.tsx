@@ -105,9 +105,11 @@ const CopyPageButton = ({
 
   const cleanSlug = slug.replace(/^\/+|\/+$/g, "")
   const useTranslatedPath = locale !== DEFAULT_LOCALE && isTranslated
+  // The page's .md URL, not the source file: its redirect serves the agent
+  // copy (diagrams written out as text) where one exists.
   const mdPath = useTranslatedPath
-    ? `/content/translations/${locale}/${cleanSlug}/index.md`
-    : `/content/${cleanSlug}/index.md`
+    ? `/${locale}/${cleanSlug}.md`
+    : `/${cleanSlug}.md`
   // `localePrefix: "as-needed"` -> English canonical URL has no locale prefix.
   // Feeding the canonical URL avoids redirects that some LLM fetchers don't follow.
   const pagePath =
