@@ -91,3 +91,5 @@ _مخططات مقتبسة من [آلة إيثيريوم الافتراضية ا
 
 - [فهم مواصفات EVM في الورقة الصفراء](/developers/tutorials/yellow-paper-evm/) _– جولة إرشادية لمواصفات <span dir="ltr">EVM</span> الرسمية من الورقة الصفراء لإيثيريوم._
 - [الهندسة العكسية لعقد](/developers/tutorials/reverse-engineering-a-contract/) _– كيفية إجراء هندسة عكسية لعقد ذكي مترجم باستخدام رموز تشغيل <span dir="ltr">EVM</span>._
+
+<QuizWidget quizKey="evm" />

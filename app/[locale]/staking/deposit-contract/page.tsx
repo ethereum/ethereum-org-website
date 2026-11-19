@@ -1,9 +1,5 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
@@ -38,8 +34,6 @@ import ef from "@/public/images/staking/ef-blog-logo.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-staking-deposit-contract")
 
@@ -76,7 +70,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <DepositContractJsonLD locale={locale} />
 
       <main className="flow px-page pt-space-2x pb-page">
-        <Breadcrumbs slug="/staking/deposit-contract" startDepth={1} />
+        <Breadcrumbs slug="/staking/deposit-contract" />
 
         <MainArticle className="flex gap-x-16 gap-y-8 border-b pb-space-2x *:flex-1 max-lg:flex-col">
           <div className="flow">
@@ -153,15 +147,13 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-staking-deposit-contract")
 
   return await getMetadata({
     locale,
     slug: ["staking", "deposit-contract"],
     title: t("page-staking-deposit-contract-meta-title"),
-    description: t("page-staking-deposit-contract-meta-description"),
+    description: t("page-staking-deposit-contract-meta-desc"),
   })
 }
 

@@ -151,3 +151,5 @@ _क्या आप किसी ऐसे सामुदायिक सं�
 - [लेन-देन](/developers/docs/transactions/)
 - [गैस](/developers/docs/gas/)
 - [प्रूफ-ऑफ़-स्टेक (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

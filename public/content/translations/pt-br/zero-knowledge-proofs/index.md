@@ -239,3 +239,7 @@ O ZK-STARK é considerado imune à ameaça da computação quântica, pois depen
 - [Por que as Provas de Conhecimento Zero (ZKPs) são um Divisor de Águas para a Identidade Autossuficiente](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 Explicada: Habilitando Transferências Privadas no Ethereum com Provas ZK](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Jogo de Cartas ZK: jogo para aprender os fundamentos de ZK e casos de uso da vida real](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

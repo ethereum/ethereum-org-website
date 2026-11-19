@@ -1,40 +1,36 @@
 ---
-title: Kuongeza Video
+title: Kuongeza video
 description: Sera ya kuongeza video kwenye ethereum.org
 lang: sw
 ---
 
-# Kuongeza Video {#adding-videos}
-
-[Matunzio ya video ya ethereum.org](/videos/) yana video kuhusu Ethereum na mfumo wa ikolojia wa Ethereum kutoka kwa waundaji wa jamii na vyanzo vinavyoaminika. Mtu yeyote anaweza kupendekeza video iongezwe.
+[Matunzio ya video ya ethereum.org](/videos/) yanaangazia video kuhusu Ethereum na mfumo wa ikolojia wa Ethereum kutoka kwa waundaji wa jamii na vyanzo vinavyoaminika. Mtu yeyote anaweza kupendekeza video iongezwe.
 
 ## Sera ya kuorodhesha {#listing-policy}
 
 Ethereum.org ni rasilimali ya elimu isiyopendelea upande wowote. Matunzio ya video yanaratibiwa ili:
 
 - **Kuelimisha** watumiaji kuhusu teknolojia ya Ethereum, mfumo wa ikolojia, na jamii
-- **Kusalia sahihi** katika maudhui yake ya kiufundi
+- **Kubaki sahihi** katika maudhui yake ya kiufundi
 - **Kusalia muhimu** kwa jamii ya Ethereum
 
 Tovuti haiorodheshi video ambazo kimsingi zinatangaza bidhaa mahususi, tokeni, au huduma ya kibiashara.
 
-
 ## Vigezo vya kujumuishwa {#criteria-for-inclusion}
 
-### Lazima iwe nazo {#must-haves}
+### Vitu vya lazima {#must-haves}
 
 - **Inayolenga Ethereum** – Video lazima iwe kimsingi kuhusu Ethereum, teknolojia yake, mfumo wa ikolojia, au jamii. Video kuhusu mada za jumla za mnyororo wa vitalu zinakubalika tu ikiwa zinasaidia kwa kiasi kikubwa au zinahusiana na ukurasa wa elimu kwenye tovuti, au zinarejelea Ethereum.
-- **Thamani ya elimu** – Video inapaswa kuwafundisha watazamaji jambo kuhusu Ethereum, au kusherehekea jamii ya kimataifa ya Ethereum. Maudhui ya matangazo au masoko hayatakubaliwa.
-- **Taarifa sahihi** – Maudhui ya kiufundi lazima yawe sahihi kulingana na ukweli na yawe ya kisasa. Video zilizopitwa na wakati kuhusu vipengele vilivyoachwa zinaweza kuondolewa.
+- **Thamani ya elimu** – Video inapaswa kuwafundisha watazamaji jambo kuhusu Ethereum, au kusherehekea jamii ya kimataifa ya Ethereum. Maudhui ya utangazaji au masoko hayatakubaliwa.
+- **Taarifa sahihi** – Maudhui ya kiufundi lazima yawe sahihi kiukweli na ya kisasa. Video zilizopitwa na wakati kuhusu vipengele vilivyoachwa zinaweza kuondolewa.
 - **Uzalishaji bora** – Video inapaswa kuwa na ubora wa sauti na video unaoeleweka vizuri.
-- **Inapatikana kwa umma** – Video lazima iwekwe kwenye rasilimali wazi au jukwaa linalofikika kama YouTube, na ipatikane kwa uhuru bila malipo au hitaji la kujisajili.
+- **Inapatikana kwa umma** – Video lazima iwe kwenye rasilimali wazi au jukwaa linalofikika kama YouTube, na ipatikane kwa uhuru bila malipo au hitaji la kujisajili.
 
-### Nzuri kuwa nazo {#nice-to-haves}
+### Vitu vizuri kuwa navyo {#nice-to-haves}
 
-- **Ina nakala ya maandishi** – Video zilizo na nakala za maandishi huboresha ufikiaji na SEO. Ikiwa huna, timu ya ethereum.org inaweza kusaidia kutengeneza moja.
-- **Kutoka kwa chanzo cha kuaminika** – Maudhui kutoka kwa waelimishaji, watafiti, na vyanzo vilivyoimarishwa hupewa kipaumbele.
+- **Ina nakala ya maandishi** – Video zilizo na nakala za maandishi huboresha ufikivu na SEO. Ikiwa huna, timu ya ethereum.org inaweza kusaidia kutengeneza moja.
+- **Kutoka chanzo cha kuaminika** – Maudhui kutoka kwa waelimishaji, watafiti, na vyanzo vilivyoimarishwa hupewa kipaumbele.
 - **Kwa wakati na ya kudumu** – Maudhui ambayo yanasalia kuwa muhimu kwa muda mrefu hupendelewa zaidi ya nyenzo zinazotegemea wakati.
-
 
 ## Jinsi ya kuongeza video {#how-to-add-a-video}
 
@@ -50,9 +46,9 @@ Ikiwa ungependa kupendekeza video lakini hutaki kuunda faili wewe mwenyewe, fung
 
 Ikiwa ungependa kuongeza video wewe mwenyewe, fuata hatua hizi:
 
-#### Hatua ya 1: Unda faili ya video {#step-1}
+#### Hatua ya 1: Unda faili la video {#step-1}
 
-Unda saraka mpya na faili ya `index.md` kwenye:
+Unda saraka mpya na faili la `index.md` kwenye:
 
 ```
 public/content/videos/{slagi-ya-video-yako}/index.md
@@ -95,7 +91,7 @@ author: Channel Name
 | `topic` | Ndiyo | Orodha ya lebo za mada kwa ajili ya kuchuja matunzio |
 | `format` | Ndiyo | `explainer`, `presentation`, `interview`, `tutorial`, au `panel` |
 | `author` | Ndiyo | Jina la muundaji au chaneli |
-| `breadcrumb` | Hapana | Lebo fupi maalum kwa ajili ya urambazaji wa breadcrumb |
+| `breadcrumb` | Hapana | Lebo fupi maalum kwa ajili ya urambazaji wa makombo (breadcrumb) |
 | `customThumbnailUrl` | Hapana | URL maalum ya kijipicha (chaguo-msingi ni kijipicha cha YouTube) |
 
 #### Hatua ya 3: Ongeza nakala ya maandishi (inapendekezwa) {#step-3}
@@ -119,25 +115,45 @@ Maandishi ya nakala kwa sehemu hii...
 Maandishi zaidi ya nakala...
 ```
 
-Tumia vichwa vya `###` vilivyo na mihuri ya muda ili kuweka alama kwenye sehemu kuu. Hii inafanya nakala ya maandishi iweze kusomeka kwa haraka na inaboresha SEO.
+Tumia vichwa vya `###` vilivyo na mihuri ya muda ili kuweka alama kwenye sehemu kuu. Hii hufanya nakala ya maandishi iweze kuchanganuliwa kwa urahisi na kuboresha SEO.
 
-Ikiwa huna nakala ya maandishi, unaweza kuacha mwili wazi na timu itatengeneza moja.
+Ikiwa huna nakala ya maandishi, unaweza kuacha sehemu ya mwili wazi na timu itatengeneza moja.
+
+#### Hatua ya 4: Chagua lebo za mada {#step-4}
+
+Chagua lebo za mada kutoka kwenye orodha iliyo hapa chini. Kila lebo inalingana moja kwa moja na kategoria ya kichujio katika matunzio ya video — tumia jina la lebo kama inavyoonyeshwa.
+
+Video inaweza kuwa na lebo nyingi ili kuonekana katika vichujio vingi vya matunzio:
+
+| Lebo | Kichujio cha matunzio |
+|---|---|
+| `how-ethereum-works` | Jinsi Ethereum inavyofanya kazi |
+| `network-upgrades` | Maboresho ya mtandao |
+| `roadmap-and-priorities` | Ramani ya njia na vipaumbele |
+| `scaling-and-layer-2` | Kuongeza uwezo na tabaka la 2 |
+| `use-cases` | Mifano ya matumizi |
+| `privacy` | Faragha |
+| `security` | Usalama |
+| `community-stories` | Hadithi za jamii |
+| `events` | Matukio |
+
+Kila video inapaswa kuwa na angalau lebo moja kutoka kwenye orodha hii. Video zisizo na lebo inayotambulika zitaonekana tu katika mwonekano wa "Zote" na matokeo ya utafutaji.
+
+Lebo ya `community-stories` pia husababisha video kuonekana kwenye [ukurasa wa Hadithi](/stories/).
 
 #### Hatua ya 5: Wasilisha PR yako {#step-5}
 
 Fungua ombi la kuvuta (pull request) na mabadiliko yako kwenye tawi la `dev`. Timu itakagua wasilisho lako na kutoa maoni.
 
-
 ## Matengenezo {#maintenance}
 
-Video zilizoorodheshwa hukaguliwa mara kwa mara ili kuhakikisha:
+Video zilizoorodheshwa hukaguliwa mara kwa mara ili kuhakikisha kuwa:
 
 - Bado zinakidhi vigezo vya kuorodheshwa
 - Zina taarifa sahihi na za kisasa
-- Zina viungo vya kupangisha/YouTube vinavyofanya kazi
+- Zina viungo vinavyofanya kazi vya upangishaji/YouTube
 
 Ukigundua tatizo na video iliyoorodheshwa, [unda suala](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) au tuma barua pepe kwa [website@ethereum.org](mailto:website@ethereum.org).
-
 
 ## Masharti ya matumizi {#terms-of-use}
 

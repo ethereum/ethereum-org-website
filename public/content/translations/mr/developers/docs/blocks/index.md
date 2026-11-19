@@ -151,3 +151,5 @@ _तुम्हाला मदत करणाऱ्या एखाद्य�
 - [व्यवहार](/developers/docs/transactions/)
 - [गॅस](/developers/docs/gas/)
 - [प्रूफ-ऑफ-स्टेक](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

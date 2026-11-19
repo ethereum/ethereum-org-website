@@ -89,4 +89,4 @@ Du kannst unsere Designprinzipien [auf unserer gesamten Website](/) in Aktion se
 
 Während sich diese Prinzipien auf die Website ethereum.org konzentrieren, hoffen wir, dass viele von ihnen repräsentativ für die Werte des gesamten Ethereum-Ökosystems sind. Vielleicht möchtest du sogar einige davon in dein eigenes Projekt integrieren!
 
-Teile uns deine Gedanken auf unserem [Discord-Server](https://discord.gg/ethereum-org) mit oder indem du [ein Issue erstellst](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Teile uns deine Gedanken auf unserem [Discord-Server](/discord/) mit oder indem du [ein Issue erstellst](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

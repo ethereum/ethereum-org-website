@@ -2,7 +2,7 @@
 title: Nos principes de conception
 metaTitle: Principes de conception
 lang: fr
-description: Les principes qui sous-tendent les décisions de conception et de contenu d'ethereum.org
+description: "Les principes qui sous-tendent les décisions de conception et de contenu d'ethereum.org"
 ---
 
 <Emoji text=":wave:" size={1} /> Bonjour et bienvenue dans les principes de conception d'ethereum.org. Cela fait partie d'un processus continu visant à faire évoluer et à améliorer ethereum.org.
@@ -89,4 +89,4 @@ Vous pouvez voir nos principes de conception en action [sur l'ensemble de notre 
 
 Bien que ces principes soient axés sur le site Web ethereum.org, nous espérons que beaucoup d'entre eux sont représentatifs des valeurs de l'écosystème Ethereum dans son ensemble. Peut-être même voudrez-vous en intégrer certains dans votre propre projet !
 
-Faites-nous part de vos réflexions sur notre [serveur Discord](https://discord.gg/ethereum-org) ou en [créant un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Faites-nous part de vos réflexions sur notre [serveur Discord](/discord/) ou en [créant un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

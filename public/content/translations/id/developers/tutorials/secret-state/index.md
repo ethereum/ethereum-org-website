@@ -703,8 +703,7 @@ Secara umum, ketika pemrosesan dapat dilakukan baik di TypeScript atau Zokrates,
 
 Namun, kami masih [meratakan peta di Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), padahal kami bisa melakukannya di TypeScript. Alasannya adalah opsi lain, menurut pendapat saya, lebih buruk.
 
-- Memberikan array boolean satu dimensi ke kode Zokrates, dan menggunakan ekspresi seperti `x*(height+2)
-+y` untuk mendapatkan peta dua dimensi. Ini akan membuat [kode](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) menjadi agak lebih rumit, jadi saya memutuskan peningkatan kinerjanya tidak sepadan untuk sebuah tutorial.
+- Memberikan array boolean satu dimensi ke kode Zokrates, dan menggunakan ekspresi seperti `x*(height+2)+y` untuk mendapatkan peta dua dimensi. Ini akan membuat [kode](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) menjadi agak lebih rumit, jadi saya memutuskan peningkatan kinerjanya tidak sepadan untuk sebuah tutorial.
 
 - Mengirimkan array satu dimensi dan array dua dimensi ke Zokrates. Namun, solusi ini tidak memberikan keuntungan apa pun bagi kita. Kode Zokrates harus memverifikasi bahwa array satu dimensi yang diberikannya benar-benar merupakan representasi yang tepat dari array dua dimensi. Jadi tidak akan ada peningkatan kinerja.
 

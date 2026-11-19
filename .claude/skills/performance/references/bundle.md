@@ -1,4 +1,4 @@
-# Bundle size / code splitting
+# Bundle size / code splitting / RSC payload
 
 ## Lazy-load heavy below-fold deps
 
@@ -22,6 +22,18 @@ Examples shipped:
 
 - **SVG: optimize + provide dark variants** rather than filter hacks (SHA `33132d2f8`).
 
+## RSC / translation payload
+
+Targets: HTML < 500KB, RSC push calls < 70 (preferably < 40).
+
+- **Server Component conversion** (PR #17650 — Footer). If a component has `useTranslation` and one trivial `onClick`, split out the interactive piece (e.g., `GoToTopButton.tsx`) and make the parent a server component using `getTranslations` from `next-intl/server`. ~95% less hydration.
+
+Before/after examples from closed PR #17633: `/en/` 843 → 537KB, `/en/staking/` 595 → 282KB.
+
 ## Verify
 
-Run `pnpm build` and check the route-level First Load JS deltas. For RSC payload, use Chrome DevTools Network → filter `?_rsc=` or measure raw HTML size with `curl -s URL | wc -c`.
+Run `pnpm build` and check the route-level First Load JS deltas. For RSC payload, use Chrome DevTools Network → filter `?_rsc=`, measure raw HTML size with `curl -s URL | wc -c`, or fetch the stream directly:
+
+```bash
+curl -s -H "RSC: 1" "https://localhost:3000/en/?_rsc=1" | wc -c   # raw bytes
+```

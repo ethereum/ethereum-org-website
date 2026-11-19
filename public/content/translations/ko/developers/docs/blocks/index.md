@@ -151,3 +151,5 @@ _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 �
 - [트랜잭션](/developers/docs/transactions/)
 - [가스](/developers/docs/gas/)
 - [지분 증명](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

@@ -1,7 +1,7 @@
 ---
 title: Ethereum Payments
 metaTitle: Payments on Ethereum
-description: An overview of payments on Ethereum
+description: "How do payments work on Ethereum? Learn how to send money globally with ETH and stablecoins, often in seconds and at low cost, without a bank in between."
 lang: en
 template: use-cases
 sidebarDepth: 2
@@ -206,3 +206,7 @@ From facilitating rapid disaster relief to empowering global workers, Ethereum p
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

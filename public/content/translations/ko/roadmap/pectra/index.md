@@ -43,9 +43,9 @@ MaxEB에 대한 자세한 내용은 [여기](/roadmap/pectra/maxeb/)에서 확�
 
 ### 블롭 처리량 증가 {#7691}
 
-블롭은 L2를 위한 [데이터 가용성](/developers/docs/data-availability/#data-availability-and-layer-2-rollups)을 제공합니다. 이는 [이전 네트워크 업그레이드](/roadmap/dencun/)에서 도입되었습니다. 
+블롭은 L2를 위한 [데이터 가용성](/developers/docs/data-availability/#data-availability-and-layer-2-rollups)을 제공합니다. 블롭은 [이전 네트워크 업그레이드](/roadmap/dencun/)에서 도입되었습니다. 
 
-현재 네트워크는 블록당 평균 3개의 블롭을 목표로 하며 최대 6개의 블롭을 허용합니다. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691)을 통해 평균 블롭 수가 6개로 증가하고 블록당 최대 9개까지 허용되어 이더리움 롤업의 용량이 증가합니다. 이 EIP는 [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594)가 훨씬 더 많은 블롭 수를 가능하게 할 때까지 그 간극을 메우는 데 도움이 됩니다.
+펙트라 이전에는 네트워크가 블록당 평균 3개의 블롭을 목표로 했으며 최대 6개까지 허용했습니다. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691)은 이 목표를 6개로, 최대치를 블록당 9개로 늘려 이더리움 롤업의 용량을 늘렸습니다. 이는 [푸사카](/roadmap/fusaka/)에서 출시되어 더 많은 블롭 수를 허용하는 [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594)가 도입될 때까지의 간극을 메웠습니다.
 
 ### 콜 데이터 비용 증가 {#7623}
 

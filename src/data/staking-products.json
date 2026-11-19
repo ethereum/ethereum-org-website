@@ -990,16 +990,98 @@
       "url": "https://lido.fi/",
       "audits": [
         {
-          "name": "Quantstamp",
-          "url": "https://github.com/lidofinance/audits/blob/main/QSP%20Lido%20Report%2012-2020.pdf"
+          "name": "All Audits",
+          "url": "https://docs.lido.fi/security/audits/"
         },
         {
-          "name": "MixBytes()",
-          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20ETH2%20Oracle%20Security%20Audit%20Report%2004-2021.pdf"
+          "name": "Cyfrin Lido CircuitBreaker Security Audit",
+          "date": "2026-04-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Cyfrin%20CircuitBreaker%20Audit%20Report%2004-2026.pdf"
         },
         {
-          "name": "Sigma Prime",
-          "url": "https://github.com/lidofinance/audits/blob/main/Sigma%20Prime%20-%20Lido%20Finance%20Security%20Assessment%20Report%20v2.1.pdf"
+          "name": "MixBytes Lido CircuitBreaker Security Audit",
+          "date": "2026-04-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20CircuitBreaker%20Audit%20Report%2004-2026.pdf"
+        },
+        {
+          "name": "Composable Security Lido Oracle v7.1 Security Audit",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Composable%20Security%20Lido%20Oracle%20V7_1%20Audit%20Report.pdf"
+        },
+        {
+          "name": "MixBytes Lido DeFi Wrapper MellowStrategyAdapter Security Audit",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20DeFi%20Wrapper%20MellowStrategyAdapter%20Security%20Audit%20Report%2003-2026.pdf"
+        },
+        {
+          "name": "MixBytes Triggerable Withdrawals Easy Track Security Audit",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20Easy%20Track%20Security%20Audit%20Report%2003-26.pdf"
+        },
+        {
+          "name": "Certora Lido V3 Security Assessment Fix Review",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Certora%20Lido%20V3%20Smart%20Contracts%20Security%20Assessment%20Report%20fix%20review%2003-26.pdf"
+        },
+        {
+          "name": "MixBytes Lido V3 Security Audit (fix review)",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20v3%20Security%20Audit%20Report%2003-26.pdf"
+        },
+        {
+          "name": "MixBytes Lido EasyTrack stVaults Security Audit",
+          "date": "2026-03-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20Easy%20Track%20stVaults%20Security%20Audit%20Report%2003-26.pdf"
+        },
+        {
+          "name": "Sigma Prime Lido BLS Library Security Audit",
+          "date": "2026-01-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Sigma%20Prime%20-%20Lido%20BLS%20Library%20Security%20Assessment%20Report%20v2.0%20-%2001-2026.pdf"
+        },
+        {
+          "name": "MixBytes CSM Performance Oracle Security Audit",
+          "date": "2026-01-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20CSM%20Performance%20Oracle%20Security%20Audit%20Report%2001-26.pdf"
+        },
+        {
+          "name": "MixBytes Lido DeFi Wrapper Security Audit",
+          "date": "2026-01-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20DeFi%20Wrapper%20Security%20Audit%20Report%2001-2026.pdf"
+        },
+        {
+          "name": "Ackee Blockchain Vault Wrapper Audit",
+          "date": "2026-01-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Ackee%20Blockchain%20Vault%20Wrapper%20Report%2001-2026.pdf"
+        },
+        {
+          "name": "Certora Lido V3 Audit",
+          "date": "2025-12-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Certora%20Lido%20V3%20Audit%20Report%20-%2012-2025.pdf"
+        },
+        {
+          "name": "MixBytes Lido V3 Security Audit",
+          "date": "2025-12-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20V3%20Security%20Audit%20Report%20-%2012-2025.pdf"
+        },
+        {
+          "name": "Consensys Diligence Lido V3 Security Audit",
+          "date": "2025-11-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Consensys%20Diligence%20Lido%20V3%20Security%20Audit%20-%2011-2025.pdf"
+        },
+        {
+          "name": "Ackee Blockchain Community Staking Module v2 Audit",
+          "date": "2025-09-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Ackee%20Blockchain%20Community%20Staking%20Module%20v2%20Audit%20Report%2009-2025.pdf"
+        },
+        {
+          "name": "Code4rena Community Staking Module v2 Audit",
+          "date": "2025-08-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/Code4rena%20CSM%20V2%20Audit%20Report%2008-2025.pdf"
+        },
+        {
+          "name": "OpenZeppelin Dual Governance Audit",
+          "date": "2024-11-01",
+          "url": "https://github.com/lidofinance/audits/blob/main/OpenZeppelin%20Dual%20Governance%20Audit%20Report%2011-2024.pdf"
         }
       ],
       "minEth": 0,
@@ -1015,16 +1097,14 @@
       "hasBugBounty": true,
       "isTrustless": true,
       "hasPermissionlessNodes": true,
-      "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": 42.83,
+      "pctMajorityExecutionClient": 40.13,
+      "pctMajorityConsensusClient": 37.66,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/vgdPfhZ",
         "twitter": "https://twitter.com/lidofinance",
-        "telegram": "https://t.me/lidofinance",
-        "reddit": "https://www.reddit.com/r/lidofinance/",
-        "github": "https://github.com/lidofinance/lido-dao"
+        "github": "https://github.com/lidofinance/core"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
@@ -1310,6 +1390,70 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked Everstake (pool) go to link"
+      }
+    },
+    {
+      "name": "ether.fi",
+      "imageName": "EtherFi",
+      "hue": 265,
+      "launchDate": "2023-11-15",
+      "url": "https://ether.fi/",
+      "audits": [
+        {
+          "name": "Nethermind - July 2023",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2023.07.05%20-%20Nethermind.pdf"
+        },
+        {
+          "name": "Solidified - October 2023",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2023.10.26%20-%20Solidified.pdf"
+        },
+        {
+          "name": "Hats Finance (competitive audit) - December 2023",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2023.12.20%20-%20Hats%20Finance.md"
+        },
+        {
+          "name": "Zellic - March 2024",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2024.03.13%20-%20Zellic.pdf"
+        },
+        {
+          "name": "Certora - core contracts re-audit, January 2026",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2026.01.29%20-%20Certora%20-%20Reaudit%20Core%20Contracts.pdf"
+        },
+        {
+          "name": "Certora - Q2 2026 security upgrade, June 2026",
+          "url": "https://github.com/etherfi-protocol/smart-contracts/blob/master/audits/2026.06.28%20-%20Certora%20-%2026Q2%20Security%20Upgrade.pdf"
+        }
+      ],
+      "feePercentage": 10,
+      "tokens": [
+        {
+          "name": "ether.fi Staked ETH",
+          "symbol": "eETH",
+          "address": "0x35fA164735182de50811E8e2E824cFb9B6118ac2"
+        },
+        {
+          "name": "Wrapped eETH",
+          "symbol": "weETH",
+          "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee"
+        }
+      ],
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "hasPermissionlessNodes": false,
+      "pctMajorityExecutionClient": 36.3,
+      "pctMajorityConsensusClient": 58.6,
+      "platforms": ["Browser", "Wallet"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.com/invite/etherfi",
+        "twitter": "https://x.com/ether_fi",
+        "github": "https://github.com/etherfi-protocol"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked ether.fi go to link"
       }
     }
   ]

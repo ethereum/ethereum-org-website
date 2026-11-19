@@ -3,6 +3,7 @@ import {
   formatMatomoDateTime,
   getContentLength,
   isUserAgentAllowed,
+  normalizeTrackedUrl,
 } from "./utils.ts"
 
 export function buildMatomoPayload(
@@ -25,7 +26,7 @@ export function buildMatomoPayload(
     return null
   }
 
-  const url = request.url
+  const url = normalizeTrackedUrl(request.url)
   if (config.urlExcludeRegex && config.urlExcludeRegex.test(url)) {
     return null
   }

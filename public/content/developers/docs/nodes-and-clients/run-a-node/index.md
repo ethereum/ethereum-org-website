@@ -29,7 +29,7 @@ After preparing the environment, install the chosen clients either with [beginne
 
 When the node is running and syncing, you are ready to [use it](#using-the-node), but make sure to keep an eye on its [maintenance](#operating-the-node).
 
-![Client setup](./diagram.png)
+<ClientSetupDiagram />
 
 ### Environment and hardware {#environment-and-hardware}
 
@@ -78,30 +78,33 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 ##### Minimum requirements
 
 - CPU with 2+ cores
-- 8 GB RAM
-- 2TB SSD
-- 10+ MBit/s bandwidth
+- 16 GB RAM (32 GB recommended for stability)
+- 4 TB NVMe SSD (covers a node with full chain history plus room to grow, see client disk sizes below; read more about [Great and less great SSDs for Ethereum nodes](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- 25+ MBit/s bandwidth
 
 ##### Recommended specifications
 
-- Fast CPU with 4+ cores
-- 16 GB+ RAM
-- Fast SSD with 2+TB
-- 25+ MBit/s bandwidth
+Current hardware guidance for node operators is identified in [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). For a full node it recommends:
+
+- Fast CPU with 4+ cores (8+ cores if validating)
+- 32 GB RAM (64 GB recommended if validating to ensure stability)
+- 4 TB NVMe SSD (DRAM-less and QLC drives are discouraged)
+- 50 MBit/s down / 15+ MBit/s up bandwidth (25+ MBit/s up if validating)
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
 
-| Client     | Disk size (snap sync) | Disk size (full archive) |
+| Client     | Disk size (full node) | Disk size (full archive) |
 | ---------- | --------------------- | ------------------------ |
-| Besu       | 800GB+                | 12TB+                    |
-| Erigon     | N/A                   | 2.5TB+                   |
-| Geth       | 500GB+                | 12TB+                    |
-| Nethermind | 500GB+                | 12TB+                    |
-| Reth       | N/A                   | 2.2TB+                   |
+| Besu       | 1.8TB+                | 12TB+                    |
+| Erigon     | 1.7TB+                | 2.7TB+                   |
+| Geth       | 1.8TB+                | 2TB+                     |
+| Nethermind | 1.7TB+                | 14TB+                    |
+| Reth       | 2.2TB+                | 2.8TB+                   |
 
-- Note: Erigon and Reth do not offer snap sync, but Full Pruning is possible (~2TB for Erigon, ~1.2TB for Reth)
+- Note: Full node sizes keep the complete chain history and were measured in September 2026 by [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Clients that support history expiry need less: about 1.2-1.4TB with post-merge history only, or about 400-650GB with rolling expiry (not yet supported by Geth).
+- Note: Archive sizes come from each client's documentation ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Geth's figure is for its path-based archive; keeping trie history as well takes around 6.5TB. Nethermind's figure dates from July 2023 and has grown since.
 
-For consensus clients, space requirement also depends on client implementation and enabled features (e.g., validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+For consensus clients, space requirement also depends on client implementation and enabled features (e.g., validator slasher) but generally count with another 15-90GB for beacon data, plus around 500GB of blob data if running a supernode. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Plug-and-play solutions {#plug-and-play}
 

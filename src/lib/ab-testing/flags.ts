@@ -7,7 +7,7 @@ import { FLAG_OVERRIDE_COOKIE_PREFIX } from "./constants"
 import { createMatomoAdapter, type MatomoEntities } from "./matomo-adapter"
 
 /** Debug overrides are only honored in dev and preview deploys */
-const ALLOW_DEBUG_OVERRIDES = !IS_PROD || IS_PREVIEW_DEPLOY
+export const ALLOW_DEBUG_OVERRIDES = !IS_PROD || IS_PREVIEW_DEPLOY
 
 /**
  * Deduplicated identify function - runs once per request.
@@ -93,7 +93,7 @@ export const defineABFlag = (
  * per trailingSlash: true. Only the default locale is A/B tested.
  *
  * Each route gets its own flag group so permutations don't multiply across
- * pages. Every route registered here needs a matching coded page under
- * app/[locale]/ab-code/[code]/<path> - see docs/ab-testing.md for the recipe.
+ * pages. Every route registered here needs a matching coded page at
+ * <path>/ab-code/[code]/ - see docs/ab-testing.md for the recipe.
  */
 export const abTestRoutes: Record<string, readonly ABFlag[]> = {}

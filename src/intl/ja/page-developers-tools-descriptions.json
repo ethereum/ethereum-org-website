@@ -71,6 +71,7 @@
   "tool-ens-description": "Ethereum Name Service (ENS) は、イーサリアム向けの分散型ネーミングプロトコルです。人間が読める名前をアドレス、アバター、およびその他のレコードにマッピングします。開発者向けドキュメントでは、CCIP Read、コントラクト、および統合について説明しています。解決と管理のためのENSJS SDKが含まれています。",
   "tool-ens-mcp-server-description": "Ethereum Name Service (ENS) 用のMCPサーバー。エージェントが名前の解決、アドレスの逆引き、可用性の確認、およびENSレコードの取得を行えるようにします。",
   "tool-enso-build-description": "Ensoはブロックチェーンのショートカットです。オンチェーンで構築して立ち上げるための最速の方法です。\nすべてのオンチェーンインタラクションを共有エンジンにマッピングすることで、Ensoはあなたが製品に集中できるようにします。",
+  "tool-envio-description": "Envioは、複数のEVMチェーンにまたがるPostgresベースのGraphQL APIが1つ必要な場合に、RPCではなくHyperSync経由で同期を行う、TypeScript、JavaScript、またはReScriptハンドラーを備えたマルチチェーンのインデックス作成フレームワークです。",
   "tool-erc-4337-documentation-description": "ERC-4337アカウント抽象化 (Account Abstraction) の完全ガイド - スマートアカウント、バンドラー (Bundler)、ペイマスター (Paymaster) など",
   "tool-ercx-token-test-library-description": "ERCxは、ERCトークン標準向けの包括的なオープンソーステストライブラリであり、ERC-20、ERC-721、ERC-1155、およびERC-4626の実装全体で500を超える個別のテストを備えています。",
   "tool-erpc-description": "eRPCはRPCプロバイダーの前に配置され、ダッシュボード、インデクサー、マルチテナントバックエンドなどの読み取りの多いワークロード向けに調整されたキャッシュ、フェイルオーバー、およびルーティングを追加します。",

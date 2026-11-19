@@ -160,15 +160,15 @@ ID rantai Sepolia.
 function App() {
 ```
 
-Ini adalah cara standar untuk membuat komponen React: mendefinisikan fungsi yang dipanggil setiap kali perlu dirender. Fungsi ini biasanya berisi kode TypeScript atau JavaScript, diikuti oleh pernyataan `return` yang mengembalikan kode JSX.
+Ini adalah cara standar untuk membuat komponen React: tentukan fungsi yang dipanggil setiap kali perlu dirender. Fungsi ini biasanya berisi kode TypeScript atau JavaScript, diikuti oleh pernyataan `return` yang mengembalikan kode JSX.
 
 ```tsx
   const connection = useConnection()
 ```
 
-Gunakan [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) untuk mendapatkan informasi terkait koneksi saat ini, seperti alamat dan `chainId`.
+Gunakan [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection) untuk mendapatkan informasi yang terkait dengan koneksi saat ini, seperti alamat dan `chainId`.
 
-Berdasarkan konvensi, dalam React fungsi yang dipanggil `use...` adalah [hooks](https://www.w3schools.com/react/react_hooks.asp). Fungsi-fungsi ini tidak hanya mengembalikan data ke komponen; mereka juga memastikan komponen tersebut dirender ulang (fungsi komponen dieksekusi lagi, dan outputnya menggantikan yang sebelumnya di HTML) ketika data tersebut berubah.
+Berdasarkan konvensi, dalam React fungsi yang dipanggil `use...` adalah [hook](https://www.w3schools.com/react/react_hooks.asp). Fungsi-fungsi ini tidak hanya mengembalikan data ke komponen; mereka juga memastikan komponen tersebut dirender ulang (fungsi komponen dieksekusi lagi, dan outputnya menggantikan yang sebelumnya di HTML) ketika data tersebut berubah.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -215,7 +215,7 @@ Jalankan ulang fungsi setiap kali status koneksi atau chainId koneksi berubah.
     <>
 ```
 
-JSX dari komponen React _harus_ mengembalikan satu komponen HTML. Ketika kita memiliki beberapa komponen dan tidak memerlukan wadah untuk membungkus semuanya, kita menggunakan komponen kosong (`<> ... </>`) untuk menggabungkannya menjadi satu komponen.
+JSX dari komponen React _wajib_ mengembalikan satu komponen HTML. Ketika kita memiliki beberapa komponen dan tidak memerlukan wadah untuk membungkus semuanya, kita menggunakan komponen kosong (`<> ... </>`) untuk menggabungkannya menjadi satu komponen.
 
 ```tsx
       <h2>Connection</h2>
@@ -235,7 +235,7 @@ Berikan informasi tentang koneksi saat ini. Di dalam JSX, `{<expression>}` berar
       {connection.status === 'connected' && (
 ```
 
-Sintaks `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`".
+Sintaks `{<condition> && <value>}` berarti "jika kondisinya `true`, evaluasi ke nilai tersebut; jika tidak, evaluasi ke `false`".
 
 Ini adalah cara standar untuk meletakkan pernyataan if di dalam JSX.
 
@@ -245,9 +245,9 @@ Ini adalah cara standar untuk meletakkan pernyataan if di dalam JSX.
           <hr />
 ```
 
-JSX mengikuti standar XML, yang lebih ketat daripada HTML. Jika sebuah tag tidak memiliki tag penutup yang sesuai, tag tersebut _harus_ memiliki garis miring (`/`) di bagian akhir untuk mengakhirinya.
+JSX mengikuti standar XML, yang lebih ketat daripada HTML. Jika sebuah tag tidak memiliki tag penutup yang sesuai, tag tersebut _wajib_ memiliki garis miring (`/`) di bagian akhir untuk mengakhirinya.
 
-Di sini kita memiliki dua tag semacam itu, `<Greeter />` (yang sebenarnya berisi kode HTML yang berkomunikasi dengan kontrak) dan [`<hr />` untuk garis horizontal](https://www.w3schools.com/tags/tag_hr.asp).
+Di sini kita memiliki dua tag semacam itu, `<Greeter />` (yang sebenarnya berisi kode HTML yang berbicara dengan kontrak) dan [`<hr />` untuk garis horizontal](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
           <button type="button" onClick={disconnect}>
@@ -279,7 +279,7 @@ Di `connectors` kita memiliki daftar konektor. Kita menggunakan [`map`](https://
               key={connector.uid}
 ```
 
-Dalam JSX, tag "saudara" (tag yang diturunkan dari induk yang sama) perlu memiliki pengidentifikasi yang berbeda.
+Dalam JSX, tag "saudara" (tag yang turun dari induk yang sama) perlu memiliki pengidentifikasi yang berbeda.
 
 ```tsx
               onClick={() => connect({ connector })}
@@ -290,7 +290,7 @@ Dalam JSX, tag "saudara" (tag yang diturunkan dari induk yang sama) perlu memili
           ))}
 ```
 
-Tombol konektor.
+Tombol-tombol konektor.
 
 ```tsx
           <div>{status}</div>
@@ -300,7 +300,7 @@ Tombol konektor.
       )}
 ```
 
-Berikan informasi tambahan. Sintaks ekspresi `<variable>?.<field>` memberi tahu JavaScript bahwa jika variabel didefinisikan, evaluasi ke bidang tersebut. Jika variabel tidak didefinisikan, maka ekspresi ini dievaluasi menjadi `undefined`.
+Berikan informasi tambahan. Sintaks ekspresi `<variable>?.<field>` memberi tahu JavaScript bahwa jika variabel ditentukan, evaluasi ke bidang tersebut. Jika variabel tidak ditentukan, maka ekspresi ini dievaluasi menjadi `undefined`.
 
 Ekspresi `error.message`, ketika tidak ada kesalahan, akan memunculkan pengecualian. Menggunakan `error?.message` memungkinkan kita menghindari masalah ini.
 

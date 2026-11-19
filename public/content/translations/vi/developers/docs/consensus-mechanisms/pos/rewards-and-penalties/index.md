@@ -18,7 +18,7 @@ Tất cả các phần thưởng và hình phạt được áp dụng một lầ
 
 ### Phần thưởng {#rewards-2}
 
-Các trình xác thực nhận được phần thưởng khi họ bỏ phiếu nhất quán với đa số các trình xác thực khác, khi họ đề xuất khối và khi họ tham gia vào các ủy ban đồng bộ. Giá trị của các phần thưởng trong mỗi kỷ nguyên được tính toán từ một `base_reward`. Đây là đơn vị cơ sở mà từ đó các phần thưởng khác được tính toán. `base_reward` đại diện cho phần thưởng trung bình mà một trình xác thực nhận được trong các điều kiện tối ưu mỗi kỷ nguyên. Điều này được tính toán từ số dư hiệu dụng của trình xác thực và tổng số trình xác thực đang hoạt động như sau:
+Các trình xác thực nhận được phần thưởng khi họ bỏ phiếu nhất quán với đa số các trình xác thực khác, khi họ đề xuất khối và khi họ tham gia vào các ủy ban đồng bộ. Giá trị của các phần thưởng trong mỗi kỷ nguyên được tính toán từ một `base_reward`. Đây là đơn vị cơ sở mà các phần thưởng khác được tính toán từ đó. `base_reward` đại diện cho phần thưởng trung bình mà một trình xác thực nhận được trong các điều kiện tối ưu mỗi kỷ nguyên. Giá trị này được tính toán từ số dư hiệu dụng của trình xác thực và tổng số lượng trình xác thực đang hoạt động như sau:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -26,16 +26,16 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 trong đó `base_reward_factor` là 64, `base_rewards_per_epoch` là 4 và `sum(active balance)` là tổng số ether được đặt cọc trên tất cả các trình xác thực đang hoạt động.
 
-Điều này có nghĩa là phần thưởng cơ sở tỷ lệ thuận với số dư hiệu dụng của trình xác thực và tỷ lệ nghịch với số lượng trình xác thực trên mạng lưới. Càng có nhiều trình xác thực, tổng lượng phát hành càng lớn (vì `sqrt(N)` nhưng `base_reward` cho mỗi trình xác thực càng nhỏ (vì `1/sqrt(N)`). Những yếu tố này ảnh hưởng đến APR cho một nút đặt cọc. Đọc lý do cho điều này trong [ghi chú của Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+Điều này có nghĩa là phần thưởng cơ sở tỷ lệ thuận với số dư hiệu dụng của trình xác thực và tỷ lệ nghịch với số lượng trình xác thực trên mạng lưới. Càng có nhiều trình xác thực, tổng lượng phát hành càng lớn (dưới dạng `sqrt(N)`) nhưng `base_reward` cho mỗi trình xác thực càng nhỏ (dưới dạng `1/sqrt(N)`). Những yếu tố này ảnh hưởng đến APR cho một nút đặt cọc. Đọc lý do cho điều này trong [ghi chú của Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
 Tổng phần thưởng sau đó được tính bằng tổng của năm thành phần, mỗi thành phần có một trọng số xác định mức độ đóng góp của mỗi thành phần vào tổng phần thưởng. Các thành phần đó là:
 
-```
-1. source vote: trình xác thực đã bỏ phiếu kịp thời cho điểm kiểm tra nguồn (source checkpoint) chính xác
-2. target vote: trình xác thực đã bỏ phiếu kịp thời cho điểm kiểm tra đích (target checkpoint) chính xác
-3. head vote: trình xác thực đã bỏ phiếu kịp thời cho khối đầu (head block) chính xác
-4. sync committee reward: trình xác thực đã tham gia vào một ủy ban đồng bộ
-5. proposer reward: trình xác thực đã đề xuất một khối trong khe chính xác
+```text
+1. phiếu bầu nguồn: trình xác thực đã bỏ phiếu kịp thời cho điểm kiểm tra nguồn chính xác
+2. phiếu bầu đích: trình xác thực đã bỏ phiếu kịp thời cho điểm kiểm tra đích chính xác
+3. phiếu bầu đầu: trình xác thực đã bỏ phiếu kịp thời cho khối đầu chính xác
+4. phần thưởng ủy ban đồng bộ: trình xác thực đã tham gia vào một ủy ban đồng bộ
+5. phần thưởng người đề xuất: trình xác thực đã đề xuất một khối trong khe chính xác
 ```
 
 Trọng số cho mỗi thành phần như sau:
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-Tổng các trọng số này là 64. Phần thưởng được tính bằng tổng các trọng số áp dụng chia cho 64. Một trình xác thực đã bỏ phiếu kịp thời cho nguồn, đích và đầu, đề xuất một khối và tham gia vào một ủy ban đồng bộ có thể nhận được `64/64 * base_reward == base_reward`. Tuy nhiên, một trình xác thực thường không phải là người đề xuất khối, vì vậy phần thưởng tối đa của họ là `64-8 /64 * base_reward == 7/8 * base_reward`. Các trình xác thực không phải là người đề xuất khối cũng không nằm trong ủy ban đồng bộ có thể nhận được `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+Tổng các trọng số này là 64. Phần thưởng được tính bằng tổng các trọng số áp dụng chia cho 64. Một trình xác thực đã thực hiện các phiếu bầu nguồn, đích và đầu kịp thời, đề xuất một khối và tham gia vào một ủy ban đồng bộ có thể nhận được `64/64 * base_reward == base_reward`. Tuy nhiên, một trình xác thực thường không phải là người đề xuất khối, vì vậy phần thưởng tối đa của họ là `64-8 /64 * base_reward == 7/8 * base_reward`. Các trình xác thực không phải là người đề xuất khối cũng không nằm trong ủy ban đồng bộ có thể nhận được `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-Một phần thưởng bổ sung được thêm vào để khuyến khích các chứng thực nhanh chóng. Đây là `inclusion_delay_reward`. Phần thưởng này có giá trị bằng `base_reward` nhân với `1/delay` trong đó `delay` là số lượng khe phân tách giữa đề xuất khối và chứng thực. Ví dụ: nếu chứng thực được gửi trong vòng một khe kể từ khi đề xuất khối, người chứng thực sẽ nhận được `base_reward * 1/1 == base_reward`. Nếu chứng thực đến trong khe tiếp theo, người chứng thực sẽ nhận được `base_reward * 1/2` và cứ tiếp tục như vậy.
+Một phần thưởng bổ sung được thêm vào để khuyến khích việc chứng thực nhanh chóng. Đây là `inclusion_delay_reward`. Phần thưởng này có giá trị bằng `base_reward` nhân với `1/delay`, trong đó `delay` là số lượng khe phân tách giữa đề xuất khối và chứng thực. Ví dụ: nếu chứng thực được gửi trong vòng một khe kể từ đề xuất khối, người chứng thực sẽ nhận được `base_reward * 1/1 == base_reward`. Nếu chứng thực đến trong khe tiếp theo, người chứng thực sẽ nhận được `base_reward * 1/2` và cứ tiếp tục như vậy.
 
-Người đề xuất khối nhận được `8 / 64 * base_reward` cho **mỗi chứng thực hợp lệ** được bao gồm trong khối, vì vậy giá trị thực tế của phần thưởng tăng theo tỷ lệ với số lượng trình xác thực chứng thực. Người đề xuất khối cũng có thể tăng phần thưởng của họ bằng cách đưa bằng chứng về hành vi sai trái của các trình xác thực khác vào khối được đề xuất của họ. Những phần thưởng này là "củ cà rốt" khuyến khích sự trung thực của trình xác thực. Một người đề xuất khối bao gồm việc phạt cắt giảm sẽ được thưởng bằng `slashed_validators_effective_balance / 512`.
+Người đề xuất khối nhận được `8 / 64 * base_reward` cho **mỗi chứng thực hợp lệ** được đưa vào khối, vì vậy giá trị thực tế của phần thưởng tăng theo tỷ lệ với số lượng trình xác thực chứng thực. Người đề xuất khối cũng có thể tăng phần thưởng của họ bằng cách đưa bằng chứng về hành vi sai trái của các trình xác thực khác vào khối được đề xuất của họ. Những phần thưởng này là động lực khuyến khích sự trung thực của trình xác thực. Một người đề xuất khối đưa vào một khoản phạt cắt giảm sẽ được thưởng `slashed_validators_effective_balance / 512`.
 
 ### Hình phạt {#penalties}
 

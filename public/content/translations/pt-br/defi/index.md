@@ -102,9 +102,9 @@ Como uma blockchain, o Ethereum é projetado para enviar transações de forma s
 
 #### Fazer streaming de dinheiro para todo o mundo... {#stream-money}
 
-Você também pode fazer streaming de dinheiro no Ethereum. Isso permite que você pague a alguém seu salário por segundo, dando a eles acesso ao dinheiro sempre que precisarem. Ou alugar algo por segundo, como um armário ou patinete elétrico.
+Você também pode fazer streaming de dinheiro no Ethereum. Em vez de enviar um único pagamento grande, os pagamentos por streaming transferem pequenas quantias continuamente ao longo do tempo. Isso permite que você pague o salário de alguém por segundo, dando-lhe acesso ao seu dinheiro sempre que precisar. Também pode ser usado para pagar por serviços que são cobrados continuamente, como o aluguel de um guarda-volumes ou de um patinete elétrico.
 
-E se você não quiser enviar ou fazer streaming de [ETH](/glossary/#ether) devido a quanto seu valor pode mudar, existem moedas alternativas no Ethereum: [stablecoins](/glossary/#stablecoin).
+E se você não quiser enviar ou fazer streaming de [ETH](/glossary/#ether) devido ao quanto seu valor pode mudar, existem moedas alternativas no Ethereum: as [stablecoins](/glossary/#stablecoin).
 
 <Divider />
 

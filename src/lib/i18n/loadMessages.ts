@@ -29,7 +29,11 @@ export async function loadMessages(locale: string) {
   const localePath = path.join(intlPath, locale)
   const messages: Record<string, IntlMessages> = {}
 
-  if (fs.statSync(localePath).isDirectory()) {
+  // `throwIfNoEntry: false` returns undefined instead of throwing ENOENT: the
+  // `[locale]` segment acts as a catch-all, so bot probes like `/api/...` reach
+  // here with an unknown locale and must fall through to an empty message set
+  // (letting the layout's `notFound()` win) rather than crashing the render.
+  if (fs.statSync(localePath, { throwIfNoEntry: false })?.isDirectory()) {
     const namespaces = getNamespaces(localePath)
 
     await Promise.all(

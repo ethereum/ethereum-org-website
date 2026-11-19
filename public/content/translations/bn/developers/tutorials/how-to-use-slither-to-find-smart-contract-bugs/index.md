@@ -234,5 +234,5 @@ slither = Slither('/path/to/project')
 - `entry_point (Node)`: CFG-এর এন্ট্রি পয়েন্ট
 - `variables_read (list(Variable))`: রিড করা ভেরিয়েবলগুলোর তালিকা
 - `variables_written (list(Variable))`: রাইট করা ভেরিয়েবলগুলোর তালিকা
-- `state_variables_read (list(StateVariable))`: রিড করা স্টেট ভেরিয়েবলগুলোর তালিকা (variables`read-এর সাবসেট)
-- `state_variables_written (list(StateVariable))`: রাইট করা স্টেট ভেরিয়েবলগুলোর তালিকা (variables`written-এর সাবসেট)
+- `state_variables_read (list(StateVariable))`: রিড করা স্টেট ভেরিয়েবলগুলোর তালিকা (`variables_read`-এর সাবসেট)
+- `state_variables_written (list(StateVariable))`: রাইট করা স্টেট ভেরিয়েবলগুলোর তালিকা (`variables_written`-এর সাবসেট)

@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/pow-vs-pos/index.md",
-  "generatedAt": "2026-04-28T23:59:11.431Z",
-  "rootHash": "470fe2e66970",
+  "generatedAt": "2026-09-30T19:13:21.086Z",
+  "rootHash": "9abb5b9d1431",
   "tree": {
-    "contentHash": "a948ad299dbb",
-    "anchorHash": "027733d5a9e4",
+    "contentHash": "86d75a8bce0f",
+    "anchorHash": "195d3e1afffd",
     "children": {
       "frontmatter:title": {
-        "contentHash": "a5a6d33b334c",
+        "contentHash": "1cb67b51059e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "51d98474c9b2",
+        "contentHash": "f482c6bfe578",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "81c86e20ed28"
+        "anchorHash": "e10b90a0ccaf"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4b86efe300a6"
+        "anchorHash": "4ebdf0ff2784"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "97a433a3f3b8",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5d2d3ceb7abe"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "a352d2081c09"
+        "anchorHash": "70150a5c83b9"
       },
       "prose:1": {
         "contentHash": "6bc9081c072f",
@@ -361,5 +375,5 @@
       "wrap-up-14014"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

@@ -12,7 +12,7 @@ lang: zh-tw
 published: 2024-06-29
 ---
 
-你寫了一個超棒的全新去中心化應用程式 (dapp)。你甚至為它寫了一個[使用者介面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。但現在你擔心有人會試圖審查它，方法是關閉你的使用者介面（它只不過是雲端中的一台伺服器）。在本教學中，你將學習如何透過將使用者介面放上**[星際檔案系統 (IPFS)](https://ipfs.tech/developers/)** 來避免審查，這樣任何有興趣的人都能將其固定 (pin) 在伺服器上，以便未來存取。
+你寫了一個超棒的全新去中心化應用程式 (dapp)。你甚至為它寫了一個[使用者介面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)。但現在你擔心有人會試圖審查它，方法是關閉你的使用者介面（它只不過是雲端中的一台伺服器）。在本教學中，你將學習如何透過將使用者介面放上**[星際檔案系統 (IPFS)](https://docs.ipfs.tech/)** 來避免審查，這樣任何有興趣的人都能將其固定 (pin) 在伺服器上，以便未來存取。
 
 你可以使用像 [Fleek](https://resources.fleek.xyz/docs/) 這樣的第三方服務來完成所有工作。本教學是為那些想要深入了解自己在做什麼的人準備的，即使這需要花費更多心力。
 

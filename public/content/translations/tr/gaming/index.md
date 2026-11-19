@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## Ethereum'da Oyun
+## Ethereum'da Oyun {#gaming-on-ethereum}
 Ethereum'da oyun, blokzinciri belirli özellikler için kullanan oyunlardan tüm oyun dünyasının zincir içi yaşadığı oyunlara kadar çeşitli şekillerde karşımıza çıkar. Ethereum blokzinciri, oyunlarla çeşitli kapasitelerde kullanılabilir. Oyunlar, para birimlerini transfer edilebilir token'lar olarak veya diğer oyun içi varlıkları (karakterler, ekipmanlar, evcil hayvanlar vb.) [değiştirilemez token'lar (NFT'ler)](/nft/) biçiminde saklayabilir. Oyunlar ayrıca mantıklarını, kurallarını ve durumlarını zincir içi barındırmak için akıllı sözleşmelerden yararlanabilir. Bu tür oyunlar genellikle "tamamen zincir içi oyunlar" olarak adlandırılır.
 
 Ethereum ekosistemi ayrıca, Ethereum'un ölçeğini genişletirken ve özel kullanım durumlarını desteklerken Ethereum Ana Ağı'nın güvenlik garantilerini devralan [katman 2 (L2) blokzincirlerini](/layer-2/learn/) de içerir. L2 ağları, daha hızlı onay süreleri ve daha düşük ücretleri sayesinde zincir içi oyunlar ve toplulukları için ek faydalar sağlayarak oynanışı daha erişilebilir hale getirebilir.
@@ -31,7 +31,7 @@ Ethereum piyasaya sürüldüğünde, **oyun tasarımcıları kapatılamayacak d�
 
 Ethereum blokzinciri, kuralların keyfi olarak değiştirilemediği, durumun silinemediği ve herkesin ağ var olduğu sürece yaşayan eklentiler geliştirebileceği dünyalara olanak tanıdı. Bu, Ethereum'un yerel olarak sağladığı bir şeydir.
 
-## Ethereum'un oyun ekosistemine genel bakış
+## Ethereum'un oyun ekosistemine genel bakış {#ethereums-gaming-ecosystem-overview}
 - **Katman 2'ler:** Daha ucuz ücretler ve kısa işlem süreleri ile Ethereum L2'leri, oyunların piyasaya sürülmesi için yaygın bir yer haline geldi. L2 ortamı gelişmeye devam ediyor; Ronin (başlangıçta Axie Infinity için bir yan zincir) gibi önde gelen Web3 oyun ekosistemleri, oyun için optimize edilmiş altyapısını korurken Ethereum'un güvenlik garantilerini devralan Ethereum katman 2 mimarisine yakın zamanda geçiş yaptı. Oyun için mevcut önde gelen L2'ler şunları içerir: [Ronin](https://www.roninchain.com/), [Starknet](https://www.starknet.io/), [Abstract](https://abs.xyz/) ve [Base](https://www.base.org/).
 - **Altyapı:** Zincir içi oyunlar geliştirmeyi kolaylaştırmak için bir dizi araç yığını mevcuttur; [Cartridge](https://cartridge.gg/) (oturum anahtarları, Ödemeci aracılığıyla gazsız işlemler ve Cartridge Controller aracılığıyla WebAuthn tabanlı kimlik doğrulama sunar), [Dojo](https://dojoengine.org/) (yerel hesap soyutlama desteğine sahip kanıtlanabilir bir oyun çerçevesi), [MUD](https://mud.dev/) (EVM tabanlı bir zincir içi oyun motoru). [Proof of Play](https://proofofplay.com/) ve [Thirdweb](https://thirdweb.com/) gibi diğerleri, geliştiricilerin Web2 benzeri kullanıcı deneyimlerine sahip oyunlar oluşturmasına olanak tanır.
 - **Oyun toplulukları:** Ethereum'un oyun ekosistemi, oyuncu iş birliği için oyun loncaları ([YGG](https://x.com/YieldGuild), [MANA Gaming](https://x.com/ManaGamingBR), [WASD](https://x.com/WASD_0x), [LegacyGG](https://x.com/Lgc_GG), [Gaming Grid](https://x.com/GamingGridx) ve [OLAGG](https://x.com/OLAGuildGames) dahil), [GAM3S.GG](https://games.gg/) gibi keşif platformları ve oyun analitiği ile ekosistem kapsamı için [Gaming Daily](https://x.com/GamingDailyx) gibi medya kuruluşları tarafından desteklenmektedir. [FOCGERS](https://x.com/FOCGERS) gibi bazıları bunların tümünü kapsar.

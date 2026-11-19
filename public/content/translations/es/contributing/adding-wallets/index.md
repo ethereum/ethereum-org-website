@@ -1,6 +1,6 @@
 ---
-title: Añadir billeteras
-description: La política que utilizamos al añadir una billetera a ethereum.org
+title: "Añadir billeteras"
+description: "La política que utilizamos al añadir una billetera a ethereum.org"
 lang: es
 ---
 
@@ -58,10 +58,10 @@ Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco 
 
 ## Añadir una billetera {#adding-a-wallet}
 
-Si deseas añadir una billetera a ethereum.org, crea un problema (issue) en GitHub.
+Si quieres añadir una billetera a ethereum.org, crea un problema (issue) en GitHub. La descripción de la billetera que proporciones en el problema (issue) se muestra en la página de la billetera, así que limítala a una o dos oraciones objetivas.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
-  Crear un problema
+  Crear un problema (issue)
 </ButtonLink>
 
 ## Mantenimiento {#maintenance}

@@ -79,3 +79,7 @@ When apps are all built on Ethereum, they are all compatible. A token for one ap
 <ExpandableCard title="What is the best crypto wallet?" visible>
   <p>Crypto wallet lets you hold your tokens and manage your Ethereum account. There many great wallets, each serving a different purpose. To find out which wallet is best for you, visit our [list of wallets](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

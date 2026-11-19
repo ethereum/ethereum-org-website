@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
@@ -9,8 +9,9 @@ import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { SITE_TITLE } from "@/lib/constants"
+import { SECTION_LABELS, SITE_TITLE } from "@/lib/constants"
 
 import HamburgerButton from "./HamburgerButton"
 
@@ -30,9 +31,9 @@ function MobileMenuContentSkeleton() {
         <Skeleton className="h-5 w-12" />
       </div>
 
-      {/* Nav sections (5 collapsible rows) */}
+      {/* Nav sections (one collapsible row per section) */}
       <div className="flex-1">
-        {Array.from({ length: 5 }).map((_, i) => (
+        {Array.from({ length: SECTION_LABELS.length }).map((_, i) => (
           <div
             key={i}
             className="flex items-center gap-2 border-b border-body-light px-4 py-4 first:border-t"
@@ -66,6 +67,7 @@ type MobileMenuClientProps = {
 
 const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
   const t = useTranslations("common")
+  const locale = useLocale()
   const [open, setOpen] = useCloseOnNavigate()
   const triggerRef = React.useRef<HTMLButtonElement>(null)
   // Track if menu has ever been opened to keep content loaded after first open
@@ -86,6 +88,12 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
       setHasBeenOpened(true)
     }
     setOpen(nextOpen)
+
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Menu toggled",
+      eventName: `${nextOpen ? "Open" : "Close"} menu: ${locale}`,
+    })
   }
 
   return (

@@ -1,6 +1,6 @@
 ---
-title: Взаємодія зі смарт-контрактами
-description: Дізнайтеся, як зчитувати та записувати дані у смарт-контракти, які вже розгорнуті в Етеріумі.
+title: "Взаємодія зі смарт-контрактами"
+description: "Дізнайтеся, як зчитувати та записувати дані у смарт-контракти, які вже розгорнуті в Етеріумі."
 lang: uk
 ---
 
@@ -82,7 +82,7 @@ ABI — це JSON-документ, який описує:
 
 - **[Ethers.js](https://docs.ethers.org/)** — також працює в Node.js для серверних скриптів і ботів
 - **[Web3.py](https://web3py.readthedocs.io/)** — бібліотека Python для взаємодії з Етеріумом
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** — офіційна бібліотека Go від команди Geth
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** — офіційна бібліотека Go від команди Geth
 
 ### Приклад: зчитування балансу токенів за допомогою Viem {#example-viem}
 

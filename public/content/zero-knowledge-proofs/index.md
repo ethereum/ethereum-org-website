@@ -1,7 +1,7 @@
 ---
 title: What are zero-knowledge proofs?
 metaTitle: Zero-knowledge proofs
-description: A non-technical introduction to zero-knowledge proofs for beginners.
+description: "What are zero-knowledge proofs? A beginner-friendly introduction to how ZK proofs verify a claim without revealing the data, and how Ethereum uses them."
 lang: en
 ---
 
@@ -237,3 +237,7 @@ ZK-STARK is considered immune to the threat of quantum computing, as it only rel
 - [Why Zero Knowledge Proofs (ZKPs) is a Game Changer for Self-Sovereign Identity](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 Explained: Enabling Private Transfers On Ethereum With ZK Proofs](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK Card Game: game to learn ZK fundamentals and real-life use cases](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

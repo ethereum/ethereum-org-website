@@ -91,3 +91,5 @@ _یہ خاکے [Ethereum EVM illustrated](https://takenobu-hs.github.io/download
 
 - [یلو پیپر کی EVM تصریحات کو سمجھنا](/developers/tutorials/yellow-paper-evm/) _– ایتھیریم یلو پیپر سے رسمی <span dir="ltr">EVM</span> تصریحات کا ایک رہنمائی شدہ جائزہ۔_
 - [ایک کنٹریکٹ کی ریورس انجینئرنگ](/developers/tutorials/reverse-engineering-a-contract/) _– <span dir="ltr">EVM</span> آپ کوڈز کا استعمال کرتے ہوئے مرتب شدہ سمارٹ کنٹریکٹ کو ریورس انجینئر کرنے کا طریقہ۔_
+
+<QuizWidget quizKey="evm" />

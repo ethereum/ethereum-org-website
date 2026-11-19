@@ -1,0 +1,447 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/page-organizations-enterprise-l2s.json",
+  "generatedAt": "2026-10-14T17:28:43.612Z",
+  "rootHash": "a0fe5efb34a4",
+  "tree": {
+    "contentHash": "15ab23082306",
+    "anchorHash": "f87c98a42fff",
+    "children": {
+      "page-organizations-enterprise-l2s-approach-col-custom": {
+        "contentHash": "36dcdbb1ccc8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-col-existing": {
+        "contentHash": "0fd1487f3607",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-description": {
+        "contentHash": "17f8533d40af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-compliance": {
+        "contentHash": "4a109cc49467",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-compliance-custom-description": {
+        "contentHash": "1780d328ac40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-compliance-custom-title": {
+        "contentHash": "e8e07e5f44d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-compliance-existing-description": {
+        "contentHash": "a6f04cbd6bf7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-compliance-existing-title": {
+        "contentHash": "7ba5967268d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-integration": {
+        "contentHash": "9a42d40a3f31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-integration-custom-description": {
+        "contentHash": "e93e84ded2d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-integration-custom-title": {
+        "contentHash": "2f504967c60e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-integration-existing-description": {
+        "contentHash": "0a9eaebb8cfc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-integration-existing-title": {
+        "contentHash": "7e3ee20e6463",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-security": {
+        "contentHash": "8f6fb4eb7f42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-security-custom-description": {
+        "contentHash": "cbf06b5b3b76",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-security-custom-title": {
+        "contentHash": "ebb15a9bb89d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-security-existing-description": {
+        "contentHash": "ea1a934b5aab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-security-existing-title": {
+        "contentHash": "2f16e44dd5a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-time-to-market": {
+        "contentHash": "8bd08d17ffeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-time-to-market-custom-description": {
+        "contentHash": "9bc2daa43f5b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-time-to-market-custom-title": {
+        "contentHash": "d29e3b0f2142",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-time-to-market-existing-description": {
+        "contentHash": "d38e63492bd3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-row-time-to-market-existing-title": {
+        "contentHash": "9e59a3cc9b42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-approach-title": {
+        "contentHash": "626530b2a545",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-customizable-description": {
+        "contentHash": "21bc4ea672e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-customizable-title": {
+        "contentHash": "d1cbe98648b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-description": {
+        "contentHash": "5f49a2d4731f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-ecosystem-cta": {
+        "contentHash": "9a7b1d0f02f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-ecosystem-description": {
+        "contentHash": "8d6cbc8db869",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-ecosystem-title": {
+        "contentHash": "548c42e32368",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-interoperability-description": {
+        "contentHash": "9c305fcee75e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-interoperability-title": {
+        "contentHash": "07d034e7c48f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-scalable-description": {
+        "contentHash": "7173c80b91e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-scalable-title": {
+        "contentHash": "01b56fe732f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-security-description": {
+        "contentHash": "7b1f8cefaa21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-security-title": {
+        "contentHash": "8fd7dbe3cd68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-benefits-title": {
+        "contentHash": "579e6ea14ecd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-consumer-description": {
+        "contentHash": "9a66dfa13981",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-consumer-title": {
+        "contentHash": "398ef5e58cd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-description": {
+        "contentHash": "e6cf6e35e288",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-finance-cta": {
+        "contentHash": "a4cad5d3ea6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-finance-description": {
+        "contentHash": "8ae21a0d7ad1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-finance-title": {
+        "contentHash": "b08b732c9464",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-infrastructure-cta": {
+        "contentHash": "f764e2f35d07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-infrastructure-description": {
+        "contentHash": "25d728bda5ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-infrastructure-title": {
+        "contentHash": "3bc148286539",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-title": {
+        "contentHash": "6b1df2ba950c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-tokenization-cta": {
+        "contentHash": "bad9bafd6014",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-tokenization-description": {
+        "contentHash": "2f9f7e6708c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-case-studies-tokenization-title": {
+        "contentHash": "ad1caafa8188",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-arbitrum-description": {
+        "contentHash": "9bc7dd691db0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-arbitrum-name": {
+        "contentHash": "3684de0e12df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-cta": {
+        "contentHash": "6cc8519b9158",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-description": {
+        "contentHash": "d22334300e39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-optimism-description": {
+        "contentHash": "56b84cea97e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-optimism-name": {
+        "contentHash": "2b5edf516693",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-powered-by": {
+        "contentHash": "09fb3a83d220",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-title": {
+        "contentHash": "19b135ff513b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-zksync-description": {
+        "contentHash": "716a5bb44f39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-deployment-zksync-name": {
+        "contentHash": "dcf03ce8a447",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-hero-description-1": {
+        "contentHash": "e58ec2f43cdc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-hero-description-2": {
+        "contentHash": "916eee3d8ada",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-hero-title": {
+        "contentHash": "b9af2a065e45",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-issuance-bullet-1": {
+        "contentHash": "643fbd8de653",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-issuance-bullet-2": {
+        "contentHash": "afa190c9d3b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-issuance-bullet-3": {
+        "contentHash": "64dbf3db4d48",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-issuance-lead": {
+        "contentHash": "4f0459494c37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-issuance-recoverability": {
+        "contentHash": "9f21d97d20c4",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "53510928dd9d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-enterprise-l2s-issuance-title": {
+        "contentHash": "31e1c6bedfda",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-issuance-transparency": {
+        "contentHash": "27c91a20228f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7c3ae443486f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-organizations-enterprise-l2s-meta-description": {
+        "contentHash": "de2ade64218a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-meta-title": {
+        "contentHash": "202cb7f6cfde",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-stat-l2-tvl": {
+        "contentHash": "345b32169d11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-stat-uops": {
+        "contentHash": "2801b26f08c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-battle-tested-description": {
+        "contentHash": "8e7b03a3b779",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-battle-tested-title": {
+        "contentHash": "7b8440286c6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-description": {
+        "contentHash": "d541675c7f3d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-elegance-description": {
+        "contentHash": "ba2a56e36ba2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-elegance-title": {
+        "contentHash": "a4c3dc52d00e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-future-proof-description": {
+        "contentHash": "916e3fceb474",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-future-proof-title": {
+        "contentHash": "377993d7f633",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-reduced-risk-description": {
+        "contentHash": "6c047d079ea1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-reduced-risk-title": {
+        "contentHash": "6a2f37a527d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-organizations-enterprise-l2s-trust-title": {
+        "contentHash": "cecd0fcb2dad",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-organizations-enterprise-l2s-approach-col-custom",
+      "page-organizations-enterprise-l2s-approach-col-existing",
+      "page-organizations-enterprise-l2s-approach-description",
+      "page-organizations-enterprise-l2s-approach-row-compliance",
+      "page-organizations-enterprise-l2s-approach-row-compliance-custom-description",
+      "page-organizations-enterprise-l2s-approach-row-compliance-custom-title",
+      "page-organizations-enterprise-l2s-approach-row-compliance-existing-description",
+      "page-organizations-enterprise-l2s-approach-row-compliance-existing-title",
+      "page-organizations-enterprise-l2s-approach-row-integration",
+      "page-organizations-enterprise-l2s-approach-row-integration-custom-description",
+      "page-organizations-enterprise-l2s-approach-row-integration-custom-title",
+      "page-organizations-enterprise-l2s-approach-row-integration-existing-description",
+      "page-organizations-enterprise-l2s-approach-row-integration-existing-title",
+      "page-organizations-enterprise-l2s-approach-row-security",
+      "page-organizations-enterprise-l2s-approach-row-security-custom-description",
+      "page-organizations-enterprise-l2s-approach-row-security-custom-title",
+      "page-organizations-enterprise-l2s-approach-row-security-existing-description",
+      "page-organizations-enterprise-l2s-approach-row-security-existing-title",
+      "page-organizations-enterprise-l2s-approach-row-time-to-market",
+      "page-organizations-enterprise-l2s-approach-row-time-to-market-custom-description",
+      "page-organizations-enterprise-l2s-approach-row-time-to-market-custom-title",
+      "page-organizations-enterprise-l2s-approach-row-time-to-market-existing-description",
+      "page-organizations-enterprise-l2s-approach-row-time-to-market-existing-title",
+      "page-organizations-enterprise-l2s-approach-title",
+      "page-organizations-enterprise-l2s-benefits-customizable-description",
+      "page-organizations-enterprise-l2s-benefits-customizable-title",
+      "page-organizations-enterprise-l2s-benefits-description",
+      "page-organizations-enterprise-l2s-benefits-ecosystem-cta",
+      "page-organizations-enterprise-l2s-benefits-ecosystem-description",
+      "page-organizations-enterprise-l2s-benefits-ecosystem-title",
+      "page-organizations-enterprise-l2s-benefits-interoperability-description",
+      "page-organizations-enterprise-l2s-benefits-interoperability-title",
+      "page-organizations-enterprise-l2s-benefits-scalable-description",
+      "page-organizations-enterprise-l2s-benefits-scalable-title",
+      "page-organizations-enterprise-l2s-benefits-security-description",
+      "page-organizations-enterprise-l2s-benefits-security-title",
+      "page-organizations-enterprise-l2s-benefits-title",
+      "page-organizations-enterprise-l2s-case-studies-consumer-description",
+      "page-organizations-enterprise-l2s-case-studies-consumer-title",
+      "page-organizations-enterprise-l2s-case-studies-description",
+      "page-organizations-enterprise-l2s-case-studies-finance-cta",
+      "page-organizations-enterprise-l2s-case-studies-finance-description",
+      "page-organizations-enterprise-l2s-case-studies-finance-title",
+      "page-organizations-enterprise-l2s-case-studies-infrastructure-cta",
+      "page-organizations-enterprise-l2s-case-studies-infrastructure-description",
+      "page-organizations-enterprise-l2s-case-studies-infrastructure-title",
+      "page-organizations-enterprise-l2s-case-studies-title",
+      "page-organizations-enterprise-l2s-case-studies-tokenization-cta",
+      "page-organizations-enterprise-l2s-case-studies-tokenization-description",
+      "page-organizations-enterprise-l2s-case-studies-tokenization-title",
+      "page-organizations-enterprise-l2s-deployment-arbitrum-description",
+      "page-organizations-enterprise-l2s-deployment-arbitrum-name",
+      "page-organizations-enterprise-l2s-deployment-cta",
+      "page-organizations-enterprise-l2s-deployment-description",
+      "page-organizations-enterprise-l2s-deployment-optimism-description",
+      "page-organizations-enterprise-l2s-deployment-optimism-name",
+      "page-organizations-enterprise-l2s-deployment-powered-by",
+      "page-organizations-enterprise-l2s-deployment-title",
+      "page-organizations-enterprise-l2s-deployment-zksync-description",
+      "page-organizations-enterprise-l2s-deployment-zksync-name",
+      "page-organizations-enterprise-l2s-hero-description-1",
+      "page-organizations-enterprise-l2s-hero-description-2",
+      "page-organizations-enterprise-l2s-hero-title",
+      "page-organizations-enterprise-l2s-issuance-bullet-1",
+      "page-organizations-enterprise-l2s-issuance-bullet-2",
+      "page-organizations-enterprise-l2s-issuance-bullet-3",
+      "page-organizations-enterprise-l2s-issuance-lead",
+      "page-organizations-enterprise-l2s-issuance-recoverability",
+      "page-organizations-enterprise-l2s-issuance-title",
+      "page-organizations-enterprise-l2s-issuance-transparency",
+      "page-organizations-enterprise-l2s-meta-description",
+      "page-organizations-enterprise-l2s-meta-title",
+      "page-organizations-enterprise-l2s-stat-l2-tvl",
+      "page-organizations-enterprise-l2s-stat-uops",
+      "page-organizations-enterprise-l2s-trust-battle-tested-description",
+      "page-organizations-enterprise-l2s-trust-battle-tested-title",
+      "page-organizations-enterprise-l2s-trust-description",
+      "page-organizations-enterprise-l2s-trust-elegance-description",
+      "page-organizations-enterprise-l2s-trust-elegance-title",
+      "page-organizations-enterprise-l2s-trust-future-proof-description",
+      "page-organizations-enterprise-l2s-trust-future-proof-title",
+      "page-organizations-enterprise-l2s-trust-reduced-risk-description",
+      "page-organizations-enterprise-l2s-trust-reduced-risk-title",
+      "page-organizations-enterprise-l2s-trust-title"
+    ]
+  },
+  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+}

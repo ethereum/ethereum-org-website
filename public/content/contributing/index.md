@@ -29,6 +29,7 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
 - [Suggest a video](/contributing/adding-videos/) – Suggest an educational video for the video gallery
+- [Add a glossary term](/contributing/adding-glossary-terms/) – Add or update a term in the [Ethereum glossary](/glossary/)
 
 **Feature ideas**
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Let us know about any ideas you have for a new feature or design
@@ -43,7 +44,7 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 - [Suggest a project for our DeSci page](/contributing/adding-desci-projects/) – Add a project built on Ethereum that contributes to decentralized science
 - [Add a resource](/contributing/adding-resources/) – Add a useful resource to any relevant page
 
-Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
+Any questions? 🤔 Join our [Discord server](/discord/)
 
 ## Good first tasks to start contributing {#good-first-tasks-to-start-contributing}
 
@@ -62,7 +63,7 @@ All updates are made via the GitHub PR process. This means you create a local co
 You don't need permission to work on anything, but it's always best to let us know what you're planning to do. You can do this by:
 
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Messaging on our [Discord server](https://discord.gg/ethereum-org)
+- Messaging on our [Discord server](/discord/)
 
 Before contributing, make sure you're familiar with:
 
@@ -77,7 +78,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord server](https://discord.gg/ethereum-org)
+- [Discord server](/discord/)
 
 ### A note on plagiarism {#plagiarism}
 
@@ -94,24 +95,14 @@ If your contribution gets merged into ethereum.org, you will have a chance to cl
 [More on OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### How to claim {#how-to-claim}
-1. Join our [Discord server](https://discord.gg/ethereum-org).
+1. Join our [Discord server](/discord/).
 2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel.
 3. Wait for a member of our team to send you a link to your OAT.
 4. Claim your OAT!
 
 You should only use self-custody wallets to claim OATs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your OATs.
 
-## Claim your GitPOAP {#claim-gitpoap}
-
-GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
-
-
-### How to claim {#how-to-claim-2}
-
-1. Visit [GitPOAP](https://www.gitpoap.io).
-2. Connect with your wallet or even with your email through sign in option.
-3. Search for your GitHub username, ETH address, ENS names or any GitPOAP to check if you're eligible.
-4. If your GitHub account is eligible, then you would be able to mint a GitPOAP!
+<LinkWithArrow href="/collectibles/">View your ethereum.org collectibles</LinkWithArrow>
 
 ## Contributors {#contributors}
 

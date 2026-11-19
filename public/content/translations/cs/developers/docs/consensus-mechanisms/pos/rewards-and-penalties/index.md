@@ -18,7 +18,7 @@ Všechny odměny a penalizace se uplatňují jednou za epochu.
 
 ### Odměny {#rewards-2}
 
-Validátoři dostávají odměny, když odevzdají hlasy, které jsou v souladu s většinou ostatních validátorů, když navrhují bloky a když se účastní synchronizačních komisí. Hodnota odměn v každé epoše se vypočítává z `base_reward`. To je základní jednotka, ze které se počítají ostatní odměny. `base_reward` představuje průměrnou odměnu, kterou validátor obdrží za optimálních podmínek za epochu. Vypočítá se z efektivního zůstatku validátoru a celkového počtu aktivních validátorů takto:
+Validátoři dostávají odměny, když odevzdají hlasy, které jsou v souladu s většinou ostatních validátorů, když navrhují bloky a když se účastní synchronizačních komisí. Hodnota odměn v každé epoše se vypočítává z `base_reward` (základní odměny). To je základní jednotka, ze které se počítají ostatní odměny. `base_reward` představuje průměrnou odměnu, kterou validátor obdrží za epochu za optimálních podmínek. Vypočítává se z efektivního zůstatku validátoru a celkového počtu aktivních validátorů následovně:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -26,16 +26,16 @@ base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch 
 
 kde `base_reward_factor` je 64, `base_rewards_per_epoch` je 4 a `sum(active balance)` je celkový ether ve staku napříč všemi aktivními validátory.
 
-To znamená, že základní odměna je úměrná efektivnímu zůstatku validátoru a nepřímo úměrná počtu validátorů v síti. Čím více validátorů, tím větší je celková emise (jako `sqrt(N)`), ale tím menší je `base_reward` na validátora (jako `1/sqrt(N)`). Tyto faktory ovlivňují APR pro staking uzel. Přečtěte si zdůvodnění v [poznámkách od Vitalika](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+To znamená, že základní odměna je úměrná efektivnímu zůstatku validátoru a nepřímo úměrná počtu validátorů v síti. Čím více je validátorů, tím větší je celková emise (jako `sqrt(N)`), ale tím menší je `base_reward` na validátoru (jako `1/sqrt(N)`). Tyto faktory ovlivňují APR pro staking uzel. Přečtěte si zdůvodnění v [poznámkách od Vitalika](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
-Celková odměna se pak vypočítá jako součet pěti složek, z nichž každá má váhu, která určuje, jak moc každá složka přispívá k celkové odměně. Tyto složky jsou:
+Celková odměna se pak vypočítá jako součet pěti složek, z nichž každá má váhu, která určuje, kolik každá složka přidává k celkové odměně. Složky jsou:
 
-```
-1. source vote: validátor včas odevzdal hlas pro správný zdrojový checkpoint
-2. target vote: validátor včas odevzdal hlas pro správný cílový checkpoint
-3. head vote: validátor včas odevzdal hlas pro správný blok hlavy
-4. sync committee reward: validátor se zúčastnil synchronizační komise
-5. proposer reward: validátor navrhl blok ve správném slotu
+```text
+1. hlas pro zdroj (source vote): validátor včas odevzdal hlas pro správný zdrojový checkpoint
+2. hlas pro cíl (target vote): validátor včas odevzdal hlas pro správný cílový checkpoint
+3. hlas pro hlavu (head vote): validátor včas odevzdal hlas pro správný blok hlavy
+4. odměna synchronizační komise (sync committee reward): validátor se účastnil synchronizační komise
+5. odměna navrhovatele (proposer reward): validátor navrhl blok ve správném slotu
 ```
 
 Váhy pro každou složku jsou následující:
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-Součet těchto vah je 64. Odměna se vypočítá jako součet příslušných vah vydělený 64. Validátor, který včas odevzdal hlasy pro zdroj, cíl a hlavu, navrhl blok a zúčastnil se synchronizační komise, by mohl obdržet `64/64 * base_reward == base_reward`. Validátor však obvykle není navrhovatelem bloku, takže jeho maximální odměna je `64-8 /64 * base_reward == 7/8 * base_reward`. Validátoři, kteří nejsou navrhovateli bloků ani nejsou v synchronizační komisi, mohou obdržet `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+Součet těchto vah je 64. Odměna se vypočítá jako součet příslušných vah vydělený 64. Validátor, který včas odevzdal hlasy pro zdroj, cíl a hlavu, navrhl blok a účastnil se synchronizační komise, by mohl obdržet `64/64 * base_reward == base_reward`. Validátor však obvykle není navrhovatelem bloku, takže jeho maximální odměna je `64-8 /64 * base_reward == 7/8 * base_reward`. Validátoři, kteří nejsou ani navrhovateli bloku, ani v synchronizační komisi, mohou obdržet `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
 K motivaci k rychlým atestacím se přidává další odměna. Tou je `inclusion_delay_reward`. Její hodnota se rovná `base_reward` vynásobené `1/delay`, kde `delay` je počet slotů oddělujících návrh bloku a atestaci. Pokud je například atestace odeslána do jednoho slotu od návrhu bloku, atestující obdrží `base_reward * 1/1 == base_reward`. Pokud atestace dorazí v dalším slotu, atestující obdrží `base_reward * 1/2` a tak dále.
 
-Navrhovatelé bloků obdrží `8 / 64 * base_reward` za **každou platnou atestaci** zahrnutou v bloku, takže skutečná hodnota odměny se úměrně zvyšuje s počtem atestujících validátorů. Navrhovatelé bloků mohou také zvýšit svou odměnu tím, že do svého navrhovaného bloku zahrnou důkazy o špatném chování jiných validátorů. Tyto odměny jsou „cukrem“, který podporuje poctivost validátorů. Navrhovatel bloku, který zahrne penalizaci (slashing), bude odměněn pomocí `slashed_validators_effective_balance / 512`.
+Navrhovatelé bloku obdrží `8 / 64 * base_reward` za **každou platnou atestaci** zahrnutou v bloku, takže skutečná hodnota odměny se škáluje s počtem atestujících validátorů. Navrhovatelé bloku mohou také zvýšit svou odměnu tím, že do svého navrženého bloku zahrnou důkazy o špatném chování jiných validátorů. Tyto odměny jsou „cukrem“, který povzbuzuje poctivost validátorů. Navrhovatel bloku, který zahrne penalizaci (slashing), bude odměněn hodnotou `slashed_validators_effective_balance / 512`.
 
 ### Penalizace {#penalties}
 

@@ -54,7 +54,7 @@ The aggregation property that makes BLS efficient (combining hundreds of thousan
 
 ### 2. Data availability: KZG commitments {#data-availability-kzg}
 
-**What it does**: KZG polynomial commitments ensure that data (particularly [blob](/glossary/#blob) data from rollups) is available on the network without requiring every node to download all of it.
+**What it does**: KZG polynomial commitments ensure that data (particularly [blob](/glossary/#proto-danksharding) data from rollups) is available on the network without requiring every node to download all of it.
 
 **Why it is vulnerable**: KZG commitments rely on elliptic curve pairings, the same mathematical structure that quantum computers can attack.
 
@@ -80,7 +80,7 @@ This is a pragmatic approach. Users and wallets that want post-quantum protectio
 
 ### 4. Application-layer ZK-proofs {#zk-proofs}
 
-**What it does**: Zero-knowledge proof systems are used by L2 rollups and other applications to verify computations without revealing underlying data.
+**What it does**: Proof systems are used by L2 rollups to verify computations without re-executing them, and, where an application implements the zero-knowledge property, to prove statements without revealing the private inputs behind them.
 
 **Why it is vulnerable**: Many popular ZK-proof systems (SNARKs using elliptic curve pairings) rely on quantum-vulnerable assumptions.
 

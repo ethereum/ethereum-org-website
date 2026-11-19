@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/run-node-raspberry-pi/index.md",
   "generatedAt": "2026-06-19T23:14:15.524Z",
-  "rootHash": "2e208c15468b",
+  "rootHash": "6e28c8da2cc3",
   "tree": {
-    "contentHash": "4b50d3c4a400",
-    "anchorHash": "0b3a4e397c18",
+    "contentHash": "5800c58d8399",
+    "anchorHash": "bfc12dd56a86",
     "children": {
       "frontmatter:title": {
         "contentHash": "4c1c024c7b45",
@@ -17,11 +17,35 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "04b900ede5cb"
+        "anchorHash": "bbcf30103386"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e7ca5f587ecb"
+        "contentHash": "f8c734b079d3",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "8f4d9088121a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "a9d90830a1e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "db60a8c7c89a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "45978ecb2996",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",

@@ -1,6 +1,7 @@
 import { AppCategoryEnum, AppData } from "@/lib/types"
 
-import { uploadToS3 } from "@/data-layer/s3"
+import { getSheetsHeaders } from "@/data-layer/google"
+import { uploadManyToS3, uploadToS3 } from "@/data-layer/s3"
 
 import { fetchRetry } from "./fetchRetry"
 
@@ -11,23 +12,20 @@ export const FETCH_APPS_TASK_ID = "fetch-apps"
  * Returns the fetched apps data organized by category.
  */
 export async function fetchApps(): Promise<Record<string, AppData[]>> {
-  const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = process.env.GOOGLE_SHEET_ID_DAPPS
 
   if (!sheetId) {
     throw new Error("Google Sheets ID not set")
   }
 
-  if (!googleApiKey) {
-    throw new Error("Google API key not set")
-  }
+  const headers = await getSheetsHeaders()
 
   console.log("Starting apps data fetch from Google Sheets")
 
   // First, get the spreadsheet metadata to see what sheets exist
-  const metadataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}?key=${googleApiKey}`
+  const metadataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}`
 
-  const metadataResponse = await fetchRetry(metadataUrl)
+  const metadataResponse = await fetchRetry(metadataUrl, { headers })
 
   if (!metadataResponse.ok) {
     const errorText = await metadataResponse.text()
@@ -55,7 +53,8 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
   console.log(`Found ${appCategorySheetNames.length} app category sheets`)
 
   const appsOfTheWeek = await fetchRetry(
-    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/App%20of%20the%20day!A2:C?majorDimension=ROWS&key=${googleApiKey}`
+    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/App%20of%20the%20day!A2:C?majorDimension=ROWS`,
+    { headers }
   )
 
   if (!appsOfTheWeek.ok) {
@@ -70,8 +69,8 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
 
   // Fetch and process data from each sheet
   for (const sheetName of appCategorySheetNames) {
-    const dataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A:Z?majorDimension=ROWS&key=${googleApiKey}`
-    const dataResponse = await fetchRetry(dataUrl)
+    const dataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A:Z?majorDimension=ROWS`
+    const dataResponse = await fetchRetry(dataUrl, { headers })
 
     if (!dataResponse.ok) {
       console.warn(
@@ -152,14 +151,22 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
 async function uploadAppImages(apps: AppData[]): Promise<AppData[]> {
   return Promise.all(
     apps.map(async (app) => {
+      // Collapse to "" rather than passing the source value through: the sheet
+      // API is cast to AppData unchecked, so a missing image arrives as null
+      // despite the declared `string`.
       const image = app.image
         ? ((await uploadToS3(app.image, "apps/logos")) ?? "")
-        : app.image
+        : ""
       const bannerImage = app.bannerImage
         ? ((await uploadToS3(app.bannerImage, "apps/banners")) ?? "")
-        : app.bannerImage
+        : ""
+      // Drop failed uploads: an external URL would 400 in next/image, since only
+      // the S3 host is in remotePatterns.
+      const screenshots = (
+        await uploadManyToS3(app.screenshots, "apps/screenshots")
+      ).filter((url): url is string => Boolean(url))
 
-      return { ...app, image, bannerImage }
+      return { ...app, image, bannerImage, screenshots }
     })
   )
 }

@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { SlugPageParams } from "@/lib/types"
 
@@ -18,8 +14,6 @@ import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { topics } from "@/data/topics"
-
-import StakingCommunityCallout from "../staking/_components/StakingCommunityCallout"
 
 import SlugJsonLD from "./page-jsonld"
 
@@ -36,9 +30,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const isValidPath = checkPathValidity(validPaths, params)
 
   if (!isValidPath) notFound()
-
-  // Enable static rendering
-  setRequestLocale(locale)
 
   const slug = slugArray.join("/")
 
@@ -72,11 +63,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const messages = pick(allMessages, requiredNamespaces)
 
   if (topicConfig) {
-    const afterContent =
-      layout === "staking" ? (
-        <StakingCommunityCallout className="my-16" />
-      ) : undefined
-
     return (
       <>
         <SlugJsonLD
@@ -84,6 +70,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
           slug={slug}
           frontmatter={frontmatter}
           contributors={contributors}
+          layout={layout}
         />
         <I18nProvider locale={locale} messages={messages}>
           <TopicLayout
@@ -96,7 +83,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
             config={topicConfig}
           >
             {content}
-            {afterContent}
           </TopicLayout>
         </I18nProvider>
       </>
@@ -112,6 +98,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
         slug={slug}
         frontmatter={frontmatter}
         contributors={contributors}
+        layout={layout}
       />
       <I18nProvider locale={locale} messages={messages}>
         <Layout
@@ -138,11 +125,9 @@ export async function generateStaticParams() {
       slug: slug.split("/").slice(1),
     }))
   } catch (error) {
-    // If content directory doesn't exist (e.g., in Netlify serverless environment),
-    // return empty array to allow ISR to handle all routes dynamically
+    // public/content isn't in the Netlify function bundle.
     console.warn(
-      "Content directory not found, enabling full dynamic routing:",
-      error
+      `generateStaticParams: no markdown slugs (${error instanceof Error ? error.message : error})`
     )
     return []
   }
@@ -153,9 +138,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, slug } = params
-
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   try {
     return await getMdMetadata({

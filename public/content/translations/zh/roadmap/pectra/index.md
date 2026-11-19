@@ -43,9 +43,9 @@ authors: ["Nixo", "马里奥·哈维尔"]
 
 ### 斑点吞吐量增加 {#7691}
 
-斑点为二层网络 (L2) 提供[数据可用性](/developers/docs/data-availability/#data-availability-and-layer-2-rollups)。它们是在[上一次网络升级](/roadmap/dencun/)中引入的。 
+斑点为二层网络 (L2) 提供[数据可用性](/developers/docs/data-availability/#data-availability-and-layer-2-rollups)。它们是在[上一次网络升级](/roadmap/dencun/)中引入的。
 
-目前，网络的目标是每个区块平均 3 个斑点，最多 6 个斑点。通过 [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691)，平均斑点数量将增加到 6 个，每个区块最多 9 个，从而增加以太坊汇总的容量。该 EIP 有助于在 [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) 实现更高的斑点数量之前起到过渡作用。
+在佩克特拉升级之前，网络的目标是每个区块平均包含 3 个斑点，最多 6 个。[EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) 将目标提高到 6 个，每个区块最多 9 个，从而增加了以太坊汇总的容量。它填补了 [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) 推出之前的空白，后者在[弗萨卡](/roadmap/fusaka/)升级中发布，并允许更高的斑点数量。
 
 ### 增加调用数据成本 {#7623}
 

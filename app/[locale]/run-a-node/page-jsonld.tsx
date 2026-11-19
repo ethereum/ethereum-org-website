@@ -6,16 +6,19 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function RunANodePageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-run-a-node")
@@ -45,23 +48,7 @@ export default async function RunANodePageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: t("page-run-a-node-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "run-a-node"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: articleId,
@@ -72,7 +59,7 @@ export default async function RunANodePageJsonLD({
         isPartOf: webPageId,
         headline: t("page-run-a-node-title"),
         description: t("page-run-a-node-hero-subtitle"),
-        image: "https://ethereum.org/images/run-a-node/ethereum-inside.png",
+        image: `${SITE_URL}/images/run-a-node/ethereum-inside.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
@@ -82,7 +69,7 @@ export default async function RunANodePageJsonLD({
           description:
             "Guide to running your own Ethereum node, benefits, and requirements",
         },
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
     ],
   }

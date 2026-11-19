@@ -151,3 +151,5 @@ _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہی�
 - [ٹرانزیکشنز](/developers/docs/transactions/)
 - [گیس](/developers/docs/gas/)
 - [حصہ داری کا ثبوت (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

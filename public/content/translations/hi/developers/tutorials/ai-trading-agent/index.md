@@ -219,7 +219,7 @@ Python में फ़ंक्शन को परिभाषित करन
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Web3 से EVM पर फ़ंक्शन कॉल करने का सिंटैक्स यह है: `<contract object>.functions.<function name>().call(<parameters>)`। पैरामीटर EVM फ़ंक्शन के पैरामीटर (यदि कोई हो; यहाँ कोई नहीं हैं) या ब्लॉकचेन व्यवहार को संशोधित करने के लिए [नामित पैरामीटर (named parameters)](https://en.wikipedia.org/wiki/Named_parameter) हो सकते हैं। यहाँ हम एक का उपयोग करते हैं, `block_identifier`, उस [ब्लॉक नंबर](/developers/docs/apis/json-rpc/#default-block) को निर्दिष्ट करने के लिए जिसमें हम चलाना चाहते हैं।
+Web3 से EVM पर फ़ंक्शन कॉल करने का सिंटैक्स यह है: `<contract object>.functions.<function name>().call(<parameters>)`। पैरामीटर EVM फ़ंक्शन के पैरामीटर (यदि कोई हो; यहाँ कोई नहीं हैं) या ब्लॉकचेन व्यवहार को संशोधित करने के लिए [नामित पैरामीटर (named parameters)](https://en.wikipedia.org/wiki/Named_parameter) हो सकते हैं। यहाँ हम एक का उपयोग करते हैं, `block_identifier`, उस [ब्लॉक नंबर](/developers/docs/apis/json-rpc/#block-parameter) को निर्दिष्ट करने के लिए जिसमें हम चलाना चाहते हैं।
 
 परिणाम [यह स्ट्रक्ट (struct) है, ऐरे (array) रूप में](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72)। पहला मान दो टोकन के बीच विनिमय दर का एक फ़ंक्शन है।
 

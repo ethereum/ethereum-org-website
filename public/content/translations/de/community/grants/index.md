@@ -4,15 +4,13 @@ description: "Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosyst
 lang: de
 ---
 
-# Ethereum-Förderprogramme {#ethereum-grants}
-
 Die unten aufgeführten Programme bieten eine Vielzahl von Fördergeldern für Projekte, die den Erfolg und das Wachstum des [Ethereum](/)-Ökosystems fördern. Nutzen Sie dies als Leitfaden, um Gelder zu finden und zu beantragen, die dazu beitragen, Ihr nächstes Ethereum-Projekt zu einem Erfolg zu machen.
 
 Diese Liste wird von unserer Community gepflegt. Wenn etwas fehlt oder falsch ist, bearbeiten Sie bitte diese Seite!
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Gründer, benötigen Sie Hilfe bei der Beschleunigung Ihres Unternehmens? [Besuchen Sie den Founders Support](/founders/)</div>
+<div>Gründer, benötigen Sie Hilfe bei der Beschleunigung Ihres Unternehmens? [Besuchen Sie den Founders Support](/organizations/founders/)</div>
 </Alert>
 
 ## Breites Ethereum-Ökosystem {#broad-ethereum-ecosystem}

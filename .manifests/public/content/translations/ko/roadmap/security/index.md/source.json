@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/security/index.md",
   "generatedAt": "2026-07-29T16:21:51.252Z",
-  "rootHash": "dc1fdad59379",
+  "rootHash": "c7390a32b400",
   "tree": {
-    "contentHash": "1b6a9716f3a5",
-    "anchorHash": "132d6f6edb12",
+    "contentHash": "c87e312e21b3",
+    "anchorHash": "f051dbfdc880",
     "children": {
       "frontmatter:title": {
         "contentHash": "9edb4b0e87b0",
@@ -24,7 +24,7 @@
         "anchorHash": "adfcffd146ec"
       },
       "frontmatter:alt": {
-        "contentHash": "65171c25554c",
+        "contentHash": "be50ffa0fc02",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:template": {
@@ -32,8 +32,27 @@
         "anchorHash": "3de1580490d2"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "0ac9ee49c044",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "98031b33dd38",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "b5ac44ccb752",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "c46819cd7e9e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "prose:3": {
         "contentHash": "27e086089693",

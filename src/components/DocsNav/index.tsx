@@ -107,15 +107,11 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   getDocs(docLinks)
 
   // Find index that matches current page
-  let currentIndex = 0
-  for (let i = 0; i < docsArray.length; i++) {
-    if (
-      pathname.indexOf(docsArray[i].href) >= 0 &&
-      pathname.length === docsArray[i].href.length
-    ) {
-      currentIndex = i
-    }
-  }
+  const slashedPathname = pathname.endsWith("/") ? pathname : `${pathname}/`
+  const currentIndex = Math.max(
+    docsArray.findIndex(({ href }) => href === slashedPathname),
+    0
+  )
 
   // Extract previous and next doc based on current index +/- 1
   const previousDoc = currentIndex - 1 >= 0 ? docsArray[currentIndex - 1] : null

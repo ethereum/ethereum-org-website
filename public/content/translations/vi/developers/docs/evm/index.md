@@ -91,3 +91,5 @@ Trong suốt lịch sử mười năm của Ethereum, EVM đã trải qua một 
 
 - [Hiểu về các đặc tả EVM của Sách vàng](/developers/tutorials/yellow-paper-evm/) _– Hướng dẫn chi tiết về đặc tả EVM chính thức từ Sách vàng Ethereum._
 - [Dịch ngược một hợp đồng](/developers/tutorials/reverse-engineering-a-contract/) _– Cách dịch ngược một hợp đồng thông minh đã biên dịch bằng cách sử dụng các mã lệnh EVM._
+
+<QuizWidget quizKey="evm" />

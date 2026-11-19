@@ -160,15 +160,15 @@ Sepolia 체인 ID입니다.
 function App() {
 ```
 
-이것이 React 컴포넌트를 생성하는 표준 방법입니다. 렌더링이 필요할 때마다 호출되는 함수를 정의합니다. 이 함수는 일반적으로 TypeScript 또는 JavaScript 코드를 포함하며, 그 뒤에 JSX 코드를 반환하는 `return` 문이 옵니다.
+이것은 React 컴포넌트를 생성하는 표준 방법입니다. 렌더링이 필요할 때마다 호출되는 함수를 정의합니다. 이 함수는 일반적으로 TypeScript 또는 JavaScript 코드를 포함하며, 그 뒤에 JSX 코드를 반환하는 `return` 문이 옵니다.
 
 ```tsx
   const connection = useConnection()
 ```
 
-[`useConnection`](https://wagmi.sh/react/api/hooks/useConnection)를 사용하여 주소 및 `chainId`와 같은 현재 연결과 관련된 정보를 가져옵니다.
+[`useConnection`](https://wagmi.sh/react/api/hooks/useConnection)을 사용하여 주소 및 `chainId`와 같은 현재 연결과 관련된 정보를 가져옵니다.
 
-관례상 React에서 `use...`로 시작하는 함수는 [훅(hooks)](https://www.w3schools.com/react/react_hooks.asp)입니다. 이러한 함수는 컴포넌트에 데이터를 반환할 뿐만 아니라, 해당 데이터가 변경될 때 컴포넌트가 다시 렌더링되도록(컴포넌트 함수가 다시 실행되고 그 출력이 HTML의 이전 출력을 대체하도록) 보장합니다.
+관례상 React에서 `use...`로 불리는 함수는 [훅(hook)](https://www.w3schools.com/react/react_hooks.asp)입니다. 이러한 함수는 단순히 컴포넌트에 데이터를 반환하는 것뿐만 아니라, 해당 데이터가 변경될 때 컴포넌트가 다시 렌더링되도록(컴포넌트 함수가 다시 실행되고 그 출력이 HTML의 이전 출력을 대체하도록) 보장합니다.
 
 ```tsx
   const { connectors, connect, status, error } = useConnect()
@@ -202,7 +202,7 @@ React 훅인 [`useEffect`](https://react.dev/reference/react/useEffect)를 사�
     }
 ```
 
-연결되어 있지만 Sepolia 블록체인에 연결되어 있지 않은 경우 Sepolia로 전환합니다.
+연결되어 있지만 Sepolia 블록체인에 연결되어 있지 않은 경우, Sepolia로 전환합니다.
 
 ```tsx
   }, [connection.status, connection.chainId])
@@ -229,15 +229,15 @@ React 컴포넌트의 JSX는 _반드시_ 단일 HTML 컴포넌트를 반환해�
 </div>
 ```
 
-현재 연결에 대한 정보를 제공합니다. JSX 내에서 `{<expression>}`는 표현식을 JavaScript로 평가함을 의미합니다.
+현재 연결에 대한 정보를 제공합니다. JSX 내에서 `{<expression>}`은 표현식을 JavaScript로 평가하라는 의미입니다.
 
 ```tsx
       {connection.status === 'connected' && (
 ```
 
-구문 `{<condition> && <value>} means "if the condition is `true`, evaluate to the value; if it isn't, evaluate to `false`"입니다.
+`{<condition> && <value>}` 구문은 "조건이 `true`이면 값으로 평가하고, 그렇지 않으면 `false`로 평가하라"는 의미입니다.
 
-이것이 JSX 내부에 if 문을 넣는 표준 방법입니다.
+이것은 JSX 내부에 if 문을 넣는 표준 방법입니다.
 
 ```tsx
         <div>
@@ -245,9 +245,9 @@ React 컴포넌트의 JSX는 _반드시_ 단일 HTML 컴포넌트를 반환해�
           <hr />
 ```
 
-JSX는 HTML보다 엄격한 XML 표준을 따릅니다. 태그에 해당하는 종료 태그가 없는 경우, 태그를 종료하기 위해 끝에 슬래시(`/`)가 _반드시_ 있어야 합니다.
+JSX는 HTML보다 엄격한 XML 표준을 따릅니다. 태그에 해당하는 종료 태그가 없는 경우, 태그를 종료하기 위해 끝에 _반드시_ 슬래시(`/`)가 있어야 합니다.
 
-여기에는 두 개의 이러한 태그가 있습니다. 하나는 `<Greeter />`(실제로 컨트랙트와 통신하는 HTML 코드를 포함함)이고, 다른 하나는 [수평선을 위한 `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)입니다.
+여기에는 두 개의 이러한 태그가 있습니다. (실제로 컨트랙트와 통신하는 HTML 코드를 포함하는) `<Greeter />`와 [수평선을 위한 `<hr />`](https://www.w3schools.com/tags/tag_hr.asp)입니다.
 
 ```tsx
           <button type="button" onClick={disconnect}>
@@ -272,7 +272,7 @@ JSX는 HTML보다 엄격한 XML 표준을 따릅니다. 태그에 해당하는 �
           {connectors.map((connector) => (
 ```
 
-`connectors`에는 커넥터 목록이 있습니다. [`map`](https://www.w3schools.com/jsref/jsref_map.asp)를 사용하여 이를 표시할 JSX 버튼 목록으로 변환합니다.
+`connectors`에는 커넥터 목록이 있습니다. [`map`](https://www.w3schools.com/jsref/jsref_map.asp)을 사용하여 이를 표시할 JSX 버튼 목록으로 변환합니다.
 
 ```tsx
             <button
@@ -300,9 +300,9 @@ JSX에서는 "형제" 태그(동일한 부모에서 파생된 태그)가 서로 
       )}
 ```
 
-추가 정보를 제공합니다. 표현식 구문 `<variable>?.<field>`는 변수가 정의된 경우 해당 필드로 평가하도록 JavaScript에 지시합니다. 변수가 정의되지 않은 경우 이 표현식은 `undefined`로 평가됩니다.
+추가 정보를 제공합니다. `<variable>?.<field>` 표현식 구문은 JavaScript에게 변수가 정의되어 있으면 해당 필드로 평가하라고 지시합니다. 변수가 정의되어 있지 않으면 이 표현식은 `undefined`로 평가됩니다.
 
-표현식 `error.message`는 오류가 없을 때 예외를 발생시킵니다. `error?.message`를 사용하면 이 문제를 피할 수 있습니다.
+오류가 없을 때 `error.message` 표현식은 예외를 발생시킵니다. `error?.message`를 사용하면 이 문제를 피할 수 있습니다.
 
 #### `src/Greeter.tsx` {#greeter-tsx}
 

@@ -206,3 +206,7 @@ Od ułatwiania szybkiej pomocy w przypadku katastrof po wzmacnianie pozycji glob
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

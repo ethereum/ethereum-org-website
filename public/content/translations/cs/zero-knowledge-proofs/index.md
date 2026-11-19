@@ -239,3 +239,7 @@ ZK-STARK je považován za imunní vůči hrozbě kvantových počítačů, prot
 - [Proč jsou důkazy s nulovou znalostí (ZKP) přelomové pro sebeurčující identitu](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [Vysvětlení EIP-7503: Umožnění soukromých převodů na Ethereu pomocí ZK důkazů](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [Karetní hra ZK: hra pro naučení základů ZK a případů užití v reálném životě](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

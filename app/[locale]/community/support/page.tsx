@@ -1,5 +1,5 @@
 import { Shield } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -33,8 +33,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-community-support")
 
   const { contributors } = await getAppPageContributorInfo(
@@ -47,7 +45,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       <PageJsonLD locale={locale} contributors={contributors} />
 
       <PageHero
-        breadcrumbs={{ slug: "/community/support", startDepth: 1 }}
+        breadcrumbs={{ slug: "/community/support" }}
         title={t("page-community-support-hero-title")}
         description={
           <>
@@ -170,7 +168,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             id="still-need-help"
             header={t("page-community-support-still-need-help")}
             paragraph={t("page-community-support-still-need-help-description")}
-            href="https://discord.gg/ethereum-org"
+            href="/discord/"
             customEventOptions={{
               eventCategory: EVENT_CATEGORY,
               eventAction: "Still need help?",
@@ -191,8 +189,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-community-support")
 

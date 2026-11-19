@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/stealth-addr/index.md",
-  "generatedAt": "2026-06-18T00:26:01.130Z",
-  "rootHash": "ca835cf2ebac",
+  "generatedAt": "2026-09-30T18:28:28.802Z",
+  "rootHash": "b762f07d00fa",
   "tree": {
-    "contentHash": "34b9b3d91fa1",
-    "anchorHash": "f8a8686b199a",
+    "contentHash": "4ed390574401",
+    "anchorHash": "4d277bc0b744",
     "children": {
       "frontmatter:title": {
-        "contentHash": "3bbb45094583",
+        "contentHash": "b107179d24eb",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "d63e655e30dc",
+        "contentHash": "6401aaf382c9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
@@ -20,8 +20,37 @@
         "anchorHash": "db965b80c20c"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "460bb426cd82"
+        "contentHash": "eacd0772591c",
+        "anchorHash": "58df6e0693de",
+        "children": {
+          "0": {
+            "contentHash": "cdd83c28e867",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "a4cc6bc01a92",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "e06554818e90",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "521fe5c9ece1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "4": {
+            "contentHash": "336154bf67f7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -200,8 +229,8 @@
         ]
       },
       "write-app": {
-        "contentHash": "8778df6fac96",
-        "anchorHash": "c98785c45459",
+        "contentHash": "7cff2d1fdf13",
+        "anchorHash": "4e9a7bfc0074",
         "labelHash": "36de9c6ce2ed",
         "children": {
           "_label": {
@@ -365,8 +394,8 @@
             ]
           },
           "how-the-program-works": {
-            "contentHash": "344269b89d84",
-            "anchorHash": "e540b358e2ea",
+            "contentHash": "31bc7bc470e4",
+            "anchorHash": "93a6c7ed147f",
             "labelHash": "ba79ca19a35f",
             "children": {
               "_label": {
@@ -374,7 +403,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "wasm": {
-                "contentHash": "2b990d7a838c",
+                "contentHash": "2414b53d3a19",
                 "anchorHash": "ba80087bea46",
                 "labelHash": "c26a61372052",
                 "children": {
@@ -890,8 +919,8 @@
                 ]
               },
               "ui": {
-                "contentHash": "425eee24d1fb",
-                "anchorHash": "ad9fe99479c9",
+                "contentHash": "d6396136d306",
+                "anchorHash": "5c5ceb5cc05e",
                 "labelHash": "e8b54c409814",
                 "children": {
                   "_label": {
@@ -1178,5 +1207,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

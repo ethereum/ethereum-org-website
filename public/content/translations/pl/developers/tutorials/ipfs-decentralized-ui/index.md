@@ -12,7 +12,7 @@ lang: pl
 published: 2024-06-29
 ---
 
-Napisałeś niesamowitą nową zdecentralizowaną aplikację (dapp). Napisałeś dla niej nawet [interfejs użytkownika](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Ale teraz obawiasz się, że ktoś spróbuje ją ocenzurować, wyłączając Twój interfejs użytkownika, który znajduje się na pojedynczym serwerze w chmurze. W tym samouczku dowiesz się, jak uniknąć cenzury, umieszczając swój interfejs użytkownika w **[międzyplanetarnym systemie plików (IPFS)](https://ipfs.tech/developers/)**, dzięki czemu każdy zainteresowany będzie mógł przypiąć go do serwera w celu uzyskania dostępu w przyszłości.
+Napisałeś niesamowitą nową zdecentralizowaną aplikację (dapp). Napisałeś dla niej nawet [interfejs użytkownika](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Ale teraz obawiasz się, że ktoś spróbuje ją ocenzurować, wyłączając Twój interfejs użytkownika, który znajduje się na pojedynczym serwerze w chmurze. W tym samouczku dowiesz się, jak uniknąć cenzury, umieszczając swój interfejs użytkownika w **[międzyplanetarnym systemie plików (IPFS)](https://docs.ipfs.tech/)**, dzięki czemu każdy zainteresowany będzie mógł przypiąć go do serwera w celu uzyskania dostępu w przyszłości.
 
 Mógłbyś użyć usługi innej firmy, takiej jak [Fleek](https://resources.fleek.xyz/docs/), aby wykonała całą pracę. Ten samouczek jest dla osób, które chcą zrobić wystarczająco dużo, aby zrozumieć, co robią, nawet jeśli wymaga to więcej pracy.
 

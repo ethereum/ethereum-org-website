@@ -1,9 +1,5 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -27,8 +23,6 @@ import heroImg from "@/public/images/doge-computer.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-developers-tutorials")
 
@@ -59,7 +53,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <I18nProvider locale={locale} messages={messages}>
         <PageHero
-          breadcrumbs={{ slug: "developers/tutorials", startDepth: 1 }}
+          breadcrumbs={{ slug: "developers/tutorials" }}
           heroImg={heroImg}
           title={t("page-tutorial-title")}
           description={t("page-tutorial-subtitle")}
@@ -91,8 +85,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-developers-tutorials")
 

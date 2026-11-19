@@ -1,5 +1,5 @@
 import { Handshake, Lightbulb } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -30,8 +30,8 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import heroImg from "@/public/images/infrastructure_transparent.png"
+import privacyOnlineHeroImg from "@/public/images/privacy-curtains-woman-cat-computer.png"
 import privacyWhyImg from "@/public/images/three-people-cat-butterflies-petting-dog.png"
-import walletHeroImg from "@/public/images/wallets/wallet-hero.png"
 
 // Recommended-reading external links (title href pulled from the Figma).
 const READING_LINKS: { key: string; href: string }[] = [
@@ -104,11 +104,10 @@ const READING_LINKS: { key: string; href: string }[] = [
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
   const { locale } = params
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-privacy-ethereum")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("privacy/ethereum", locale)
 
   const tocItems: ToCItem[] = [
@@ -142,7 +141,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
@@ -207,7 +206,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-privacy-ethereum-data-terms-description-2")}</p>
           <p>{t("page-privacy-ethereum-data-terms-description-3")}</p>
           <Alert variant="warning">
-            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+            <AlertIcon size="lg" className="[&>svg]:text-body!">
               <Lightbulb />
             </AlertIcon>
             <AlertContent>
@@ -318,7 +317,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           {/* // TODO: QuarkID video -- transcript to be added separately */}
           <VideoWatch slug="quarkid-south-america-ssi" />
           <Alert variant="update">
-            <AlertIcon className="[&>svg]:size-12">
+            <AlertIcon size="xl">
               <Handshake />
             </AlertIcon>
             <AlertContent>
@@ -388,7 +387,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           <h3>{t("page-privacy-ethereum-communication-title")}</h3>
           <p>{t("page-privacy-ethereum-communication-description-1")}</p>
           <Alert variant="warning">
-            <AlertIcon className="[&>svg]:size-10 [&>svg]:text-body!">
+            <AlertIcon size="lg" className="[&>svg]:text-body!">
               <Lightbulb />
             </AlertIcon>
             <AlertContent>
@@ -560,11 +559,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
         <Section>
           <PathwayCard
-            href="/apps/categories/privacy/"
+            href="/privacy/online/"
             title={t("page-privacy-ethereum-pathway-1-title")}
             description={t("page-privacy-ethereum-pathway-1-description")}
             badge={{ label: t("page-privacy-ethereum-pathway-1-badge") }}
-            banner={<Image src={walletHeroImg} alt="" sizes="160px" />}
+            banner={<Image src={privacyOnlineHeroImg} alt="" sizes="160px" />}
           />
           <PathwayCard
             href="/privacy/"
@@ -584,8 +583,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-privacy-ethereum")
 

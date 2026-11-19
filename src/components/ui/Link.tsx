@@ -12,7 +12,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
 import * as url from "@/lib/utils/url"
 
-import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
+import { DISCORD_URL } from "@/lib/constants"
 
 import { ArrowNext } from "./arrow"
 
@@ -34,6 +34,8 @@ type BaseProps = {
   isPartiallyActive?: boolean
   activeClassName?: string
   customEventOptions?: MatomoEventOptions
+  /** Opt out of `noreferrer` on external links so the destination gets attribution */
+  sendReferrer?: boolean
 }
 
 export type LinkProps = BaseProps &
@@ -61,6 +63,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     isPartiallyActive = true,
     activeClassName = "text-primary",
     customEventOptions,
+    sendReferrer,
     onClick,
     ...props
   }: LinkProps,
@@ -91,7 +94,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   if (isDiscordInvite) {
-    href = new URL(DISCORD_PATH, SITE_URL).href
+    href = DISCORD_URL
   }
 
   const commonProps = {
@@ -120,7 +123,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return (
       <a
         target="_blank"
-        rel="noopener noreferrer"
+        rel={sendReferrer ? "noopener" : "noopener noreferrer"}
         {...rest}
         onClick={createClickHandler("Clicked on external link")}
         className={cn("relative", className)}

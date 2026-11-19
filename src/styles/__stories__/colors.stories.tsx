@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils/cn"
 
 const meta = {
   title: "Design System / Colors",
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     layout: "padded",

@@ -91,3 +91,5 @@ W ciągu dziesięcioletniej historii Ethereum, EVM przeszła kilka rewizji i ist
 
 - [Zrozumienie specyfikacji EVM z żółtej księgi](/developers/tutorials/yellow-paper-evm/) _– Przewodnik po formalnej specyfikacji EVM z żółtej księgi Ethereum._
 - [Inżynieria wsteczna kontraktu](/developers/tutorials/reverse-engineering-a-contract/) _– Jak przeprowadzić inżynierię wsteczną skompilowanego inteligentnego kontraktu przy użyciu kodów operacji EVM._
+
+<QuizWidget quizKey="evm" />

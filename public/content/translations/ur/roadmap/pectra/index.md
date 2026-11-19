@@ -41,11 +41,11 @@ authors: ["نکسو", "ماریو ہیول"]
 
 <span dir="ltr">MaxEB</span> پر تفصیلی جائزہ [یہاں](/roadmap/pectra/maxeb/) پڑھیں
 
-### بلاب تھرو پٹ میں اضافہ {#7691}
+### بلاب کے تھرو پٹ میں اضافہ {#7691}
 
 بلابز <span dir="ltr">L2s</span> کے لیے [ڈیٹا کی دستیابی](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) فراہم کرتے ہیں۔ انہیں [پچھلے نیٹ ورک اپ گریڈ](/roadmap/dencun/) میں متعارف کرایا گیا تھا۔ 
 
-فی الحال، نیٹ ورک فی بلاک اوسطاً <span dir="ltr">3</span> بلابز کو ہدف بناتا ہے جس میں زیادہ سے زیادہ <span dir="ltr">6</span> بلابز ہوتے ہیں۔ [<span dir="ltr">EIP-7691</span>](https://eips.ethereum.org/EIPS/eip-7691) کے ساتھ، اوسط بلاب کی تعداد بڑھا کر <span dir="ltr">6</span> کر دی جائے گی، جس میں فی بلاک زیادہ سے زیادہ <span dir="ltr">9</span> ہوں گے، جس کے نتیجے میں ایتھیریم رول اپس کی گنجائش میں اضافہ ہوگا۔ یہ <span dir="ltr">EIP</span> اس وقت تک خلا کو پر کرنے میں مدد کرتا ہے جب تک کہ [<span dir="ltr">PeerDAS</span>](https://eips.ethereum.org/EIPS/eip-7594) اس سے بھی زیادہ بلاب کی تعداد کو فعال نہ کر دے۔
+پیکٹرا سے پہلے، نیٹ ورک کا ہدف فی بلاک اوسطاً <span dir="ltr">3</span> بلابز تھا جس کی زیادہ سے زیادہ حد <span dir="ltr">6</span> تھی۔ [<span dir="ltr">EIP-7691</span>](https://eips.ethereum.org/EIPS/eip-7691) نے ہدف کو بڑھا کر <span dir="ltr">6</span> اور زیادہ سے زیادہ حد کو فی بلاک <span dir="ltr">9</span> کر دیا، جس سے ایتھیریم رول اپس کی گنجائش میں اضافہ ہوا۔ اس نے [<span dir="ltr">PeerDAS</span>](https://eips.ethereum.org/EIPS/eip-7594) تک کے خلا کو پُر کیا، جسے [فوساکا](/roadmap/fusaka/) میں جاری کیا گیا تھا اور یہ اس سے بھی زیادہ بلابز کی تعداد کی اجازت دیتا ہے۔
 
 ### کال ڈیٹا کی لاگت میں اضافہ {#7623}
 

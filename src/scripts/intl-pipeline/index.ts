@@ -1,2 +1,7 @@
-export type { LlmTranslator } from "./pipeline"
-export { pipeline, PIPELINE_CONFIG } from "./pipeline"
+export type { LlmTranslator, StructuralRegression } from "./pipeline"
+export {
+  findStructuralRegressions,
+  getLlmSectionIds,
+  pipeline,
+  PIPELINE_CONFIG,
+} from "./pipeline"

@@ -17,7 +17,7 @@ Episode pertama dari seri *Community.eth* karya **Optimist**. Untuk merayakan ul
 
 *Transkrip ini adalah salinan yang dapat diakses dari [video asli](https://www.youtube.com/watch?v=onCwaj1FM-4) yang dipublikasikan oleh Optimist. Transkrip ini telah diedit sedikit agar lebih mudah dibaca. Para pembicara adalah anggota komunitas Ethereum dan tidak semuanya diidentifikasi secara individu di dalam video.*
 
-#### Apa itu Ethereum? (0:00) {#what-is-ethereum-000}
+### Apa itu Ethereum? (0:00) {#what-is-ethereum-000}
 
 **Orang 1:** Apa itu Ethereum?
 
@@ -29,7 +29,7 @@ Episode pertama dari seri *Community.eth* karya **Optimist**. Untuk merayakan ul
 
 **Orang 4:** Ethereum adalah banyak hal bagi banyak orang.
 
-#### Apa yang membuatnya kuat (0:40) {#what-makes-it-powerful-040}
+### Apa yang membuatnya kuat (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** Potensi yang dimiliki Ethereum sangat besar karena kita bahkan tidak bisa mendefinisikannya. Dan menurut saya itu sangat kuat.
 
@@ -43,7 +43,7 @@ Episode pertama dari seri *Community.eth* karya **Optimist**. Untuk merayakan ul
 
 **Simona Pop:** Ethereum, bagi saya, adalah tahap selanjutnya dalam evolusi internet.
 
-#### Mengapa kita membangun (2:00) {#why-we-build-200}
+### Mengapa kita membangun (2:00) {#why-we-build-200}
 
 **Simona Pop:** Ya, tentu saja ada kehebohan saat harganya naik, tetapi orang-orang dan mereka yang benar-benar percaya akan tetap ada saat harganya turun, saat harganya naik—itu tidak terlalu penting. Kami melakukannya karena kami benar-benar percaya pada apa yang sedang kami bangun.
 
@@ -51,7 +51,7 @@ Episode pertama dari seri *Community.eth* karya **Optimist**. Untuk merayakan ul
 
 **Alexis Ohanian:** Kita memiliki kesempatan untuk menata ulang begitu banyak institusi masyarakat dengan kepemilikan nyata, dengan kemampuan nyata untuk mengumpulkan nilai selama sisa hidup Anda, untuk generasi-generasi—pada dasarnya untuk selamanya. Saya sangat ingin melihat hal itu terwujud.
 
-#### Komunitas (3:00) {#the-community-300}
+### Komunitas (3:00) {#the-community-300}
 
 **Amber Baldet:** Satu hal yang benar-benar membedakan komunitas Ethereum sejak awal adalah bahwa mereka tidak takut untuk menjadi sedikit konyol. Anda melihatnya pada unikorn dan warna-warni pelangi yang konyol serta tarian dan lagu-lagunya—dan kekonyolan itulah yang memberikan rasa harapan bagi seluruh ekosistem. Dan satu hal yang sangat dibutuhkan orang-orang saat ini adalah harapan.
 

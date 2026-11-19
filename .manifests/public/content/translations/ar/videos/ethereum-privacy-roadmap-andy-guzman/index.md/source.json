@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-privacy-roadmap-andy-guzman/index.md",
   "generatedAt": "2026-07-29T05:53:09.084Z",
-  "rootHash": "9f822d152d64",
+  "rootHash": "134e96a5be58",
   "tree": {
-    "contentHash": "666574c2309a",
-    "anchorHash": "f7e3a5e78eaa",
+    "contentHash": "44253323383a",
+    "anchorHash": "7069fac5b1d7",
     "children": {
       "frontmatter:title": {
-        "contentHash": "5ae8a4353115",
+        "contentHash": "f8141813f04c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "730a28c175b8",
+        "contentHash": "23e79bb402a6",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "c05a4d1b4c0e"
+        "anchorHash": "9c7684e8ed9a"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,29 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "bb16ebddc0e6"
+        "anchorHash": "581789059e57"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "f5818652a990",
+        "anchorHash": "95d0be1e23cc",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +63,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "bebaab1c750e"
+        "anchorHash": "1be642127f4d"
       }
     },
     "childrenOrder": [

@@ -151,3 +151,5 @@ _మీకు సహాయపడిన కమ్యూనిటీ వనరు 
 - [లావాదేవీలు](/developers/docs/transactions/)
 - [గ్యాస్](/developers/docs/gas/)
 - [ప్రూఫ్-ఆఫ్-స్టేక్](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

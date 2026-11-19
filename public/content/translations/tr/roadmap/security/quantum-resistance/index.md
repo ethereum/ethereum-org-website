@@ -80,9 +80,9 @@ Bu pragmatik bir yaklaşımdır. Kuantum sonrası korumayı erkenden isteyen kul
 
 ### 4. Uygulama katmanı ZK-ispatları {#zk-proofs}
 
-**Ne işe yarar**: Sıfır bilgi ispatı sistemleri, katman 2 (l2) toplamaları ve diğer uygulamalar tarafından temel verileri açığa çıkarmadan hesaplamaları doğrulamak için kullanılır.
+**Ne işe yarar**: İspat sistemleri, katman 2 (L2) toplamaları tarafından hesaplamaları yeniden yürütmeden doğrulamak ve bir uygulamanın sıfır bilgi özelliğini uyguladığı durumlarda, arkalarındaki özel girdileri ifşa etmeden ifadeleri ispatlamak için kullanılır.
 
-**Neden savunmasızdır**: Birçok popüler ZK-ispatı sistemi (eliptik eğri eşleşmeleri kullanan SNARK'lar) kuantum savunmasız varsayımlara dayanır.
+**Neden savunmasızdır**: Birçok popüler sıfır bilgi ispatı sistemi (eliptik eğri eşleşmelerini kullanan SNARK'lar) kuantuma karşı savunmasız varsayımlara dayanır.
 
 **Yaklaşım**: Eliptik eğriler yerine hash işlevlerine dayanan STARK'lar zaten kuantum dirençlidir ve çeşitli toplamalar tarafından kullanılmaktadır. STARK tabanlı sistemlerin ekosistem tarafından doğal olarak benimsenmesi, uygulama katmanında halihazırda kuantum sonrası güvenlik sağlamaktadır.
 

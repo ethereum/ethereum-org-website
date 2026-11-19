@@ -91,3 +91,5 @@ EVM के सभी कार्यान्वयनों को इथेर
 
 - [येलो पेपर के EVM विनिर्देशों को समझना](/developers/tutorials/yellow-paper-evm/) _– इथेरियम येलो पेपर से औपचारिक EVM विनिर्देश का एक निर्देशित वॉकथ्रू।_
 - [एक अनुबंध की रिवर्स इंजीनियरिंग](/developers/tutorials/reverse-engineering-a-contract/) _– EVM ऑपकोड का उपयोग करके संकलित स्मार्ट अनुबंध को रिवर्स-इंजीनियर कैसे करें।_
+
+<QuizWidget quizKey="evm" />

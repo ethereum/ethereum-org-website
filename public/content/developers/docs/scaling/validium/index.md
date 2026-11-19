@@ -105,7 +105,7 @@ Validiums offer many benefits but come with trade-offs (most notably, data avail
 
 Volitions combine a ZK-rollup and validium chain and allow users to switch between the two scaling solutions. With volitions, users can take advantage of validium's offchain data availability for certain transactions, while retaining the freedom to switch to an onchain data availability solution (ZK-rollup) if needed. This essentially gives users the freedom to choose trade-offs as dictated by their unique circumstances.
 
-A decentralized exchange (DEX) may prefer using a validium’s scalable and private infrastructure for high-value trades. It can also use a ZK-rollup for users who want a ZK-rollup's higher security guarantees and trustlessness.
+A decentralized exchange (DEX) may prefer a validium’s scalability, and its ability to restrict public access to transaction data, for high-value trades. Keeping data offchain limits who can see it, but it does not by itself make transactions cryptographically private: confidentiality depends on the deployment’s access controls and privacy mechanisms, and the data remains visible to the operator and to whoever holds it. A DEX can also use a ZK-rollup for users who want a ZK-rollup's higher security guarantees and trustlessness.
 
 ## Validiums and EVM compatibility {#validiums-and-evm-compatibility}
 
@@ -139,7 +139,7 @@ Typically, each validity proof the validium operator submits to Ethereum for ver
 | Increases capital efficiency for users (no delays in withdrawing funds back to Ethereum)                                 | Limited support for general computation/smart contracts; specialized languages required for development.                                             |
 | Not vulnerable to certain economic attacks faced by fraud-proof based systems in high-value applications.                | High computational power required to generate ZK proofs; not cost-effective for low throughput applications.                                         |
 | Reduces gas fees for users by not posting calldata to Ethereum Mainnet.                                                  | Slower subjective finality time (10-30 min to generate a ZK proof) but faster to full finality because there is no dispute time delay.               |
-| Suitable for specific use-cases, like trading or blockchain gaming that prioritize transaction privacy and scalability.  | Users can be prevented from withdrawing funds since generating Merkle proofs of ownership requires offchain data to be available at all times.      |
+| Suitable for specific use-cases, like trading or blockchain gaming that prioritize scalability and restricting public access to transaction data. | Users can be prevented from withdrawing funds since generating Merkle proofs of ownership requires offchain data to be available at all times.      |
 | Offchain data availability provides higher levels of throughput and increases scalability.                              | Security model relies on trust assumptions and cryptoeconomic incentives, unlike ZK-rollups, which purely rely on cryptographic security mechanisms. |
 
 ### Use Validium/Volitions {#use-validium-and-volitions}

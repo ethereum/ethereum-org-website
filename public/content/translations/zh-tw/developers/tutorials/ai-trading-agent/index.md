@@ -219,7 +219,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-從 Web3 呼叫 EVM 上函式的語法如下：`<contract object>.functions.<function name>().call(<parameters>)`。參數可以是 EVM 函式的參數（如果有的話；這裡沒有），或者是用於修改區塊鏈行為的[具名參數](https://en.wikipedia.org/wiki/Named_parameter)。這裡我們使用了一個 `block_identifier`，來指定我們希望在哪個[區塊號碼](/developers/docs/apis/json-rpc/#default-block)中執行。
+從 Web3 呼叫 EVM 上函式的語法如下：`<contract object>.functions.<function name>().call(<parameters>)`。參數可以是 EVM 函式的參數（如果有的話；這裡沒有），或者是用於修改區塊鏈行為的[具名參數](https://en.wikipedia.org/wiki/Named_parameter)。這裡我們使用了一個 `block_identifier`，來指定我們希望在哪個[區塊號碼](/developers/docs/apis/json-rpc/#block-parameter)中執行。
 
 結果是[這個結構 (struct) 的陣列形式](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72)。第一個值是兩種代幣之間匯率的函數。
 

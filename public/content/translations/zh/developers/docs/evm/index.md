@@ -91,3 +91,5 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 
 - [理解黄皮书的 EVM 规范](/developers/tutorials/yellow-paper-evm/) _– 以太坊黄皮书中正式 EVM 规范的引导式演练。_
 - [逆向工程合约](/developers/tutorials/reverse-engineering-a-contract/) _– 如何使用 EVM 操作码对已编译的智能合约进行逆向工程。_
+
+<QuizWidget quizKey="evm" />

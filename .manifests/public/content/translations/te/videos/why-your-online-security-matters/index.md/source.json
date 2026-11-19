@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/why-your-online-security-matters/index.md",
   "generatedAt": "2026-07-23T00:42:17.904Z",
-  "rootHash": "5333840ffe8b",
+  "rootHash": "66f8a6f7362a",
   "tree": {
-    "contentHash": "5000639aee26",
-    "anchorHash": "9ff7a0954a62",
+    "contentHash": "dfae2cbee95d",
+    "anchorHash": "27a9615203cf",
     "children": {
       "frontmatter:title": {
-        "contentHash": "d0ae56dbb8d8",
+        "contentHash": "33191fb439de",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "713c2fd4298c",
+        "contentHash": "b45f258fc9e0",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "79094821b992"
+        "anchorHash": "720bf4985b4c"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d18aaabaf086"
+        "anchorHash": "da9659ab2659"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "d0c2ebfa3490"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "727a3c9707e5",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a4cc6bc01a92"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "d4e11841abf2"
+        "anchorHash": "54a57c3147c4"
       },
       "prose:1": {
         "contentHash": "ebe4973a11f7",

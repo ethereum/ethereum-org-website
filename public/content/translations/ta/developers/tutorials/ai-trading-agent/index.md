@@ -215,7 +215,7 @@ Python-இல் ஒரு செயல்பாட்டை வரையறு�
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Web3-இலிருந்து EVM-இல் ஒரு செயல்பாட்டை அழைப்பதற்கான தொடரியல் (syntax) இதுதான்: `<contract object>.functions.<function name>().call(<parameters>)`. அளவுருக்கள் EVM செயல்பாட்டின் அளவுருக்களாக (ஏதேனும் இருந்தால்; இங்கே எதுவும் இல்லை) அல்லது தொகுதிச்சங்கிலி நடத்தையை மாற்றுவதற்கான [பெயரிடப்பட்ட அளவுருக்களாக](https://en.wikipedia.org/wiki/Named_parameter) இருக்கலாம். நாம் இயக்க விரும்பும் [தொகுதி எண்ணைக்](/developers/docs/apis/json-rpc/#default-block) குறிப்பிட, இங்கே `block_identifier` என்ற ஒன்றைப் பயன்படுத்துகிறோம்.
+Web3-இலிருந்து EVM-இல் ஒரு செயல்பாட்டை அழைப்பதற்கான தொடரியல் (syntax) இதுதான்: `<contract object>.functions.<function name>().call(<parameters>)`. அளவுருக்கள் EVM செயல்பாட்டின் அளவுருக்களாக (ஏதேனும் இருந்தால்; இங்கே எதுவும் இல்லை) அல்லது தொகுதிச்சங்கிலி நடத்தையை மாற்றுவதற்கான [பெயரிடப்பட்ட அளவுருக்களாக](https://en.wikipedia.org/wiki/Named_parameter) இருக்கலாம். நாம் இயக்க விரும்பும் [தொகுதி எண்ணைக்](/developers/docs/apis/json-rpc/#block-parameter) குறிப்பிட, இங்கே `block_identifier` என்ற ஒன்றைப் பயன்படுத்துகிறோம்.
 
 இதன் முடிவு [இந்தக் கட்டமைப்பு (struct), அணி (array) வடிவத்தில்](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72) இருக்கும். முதல் மதிப்பு இரண்டு வில்லைகளுக்கு இடையிலான பரிமாற்ற விகிதத்தின் செயல்பாடாகும்.
 

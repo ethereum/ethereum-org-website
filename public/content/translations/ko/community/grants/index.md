@@ -4,15 +4,13 @@ description: "이더리움 생태계 전반의 보조금 프로그램 목록입�
 lang: ko
 ---
 
-# 이더리움 보조금 {#ethereum-grants}
-
 아래 나열된 프로그램은 [이더리움](/) 생태계의 성공과 성장을 촉진하기 위해 노력하는 프로젝트에 다양한 자금 지원 보조금을 제공합니다. 다음 이더리움 프로젝트를 성공으로 이끄는 데 도움이 될 자금을 찾고 지원하기 위한 가이드로 활용하세요.
 
 이 목록은 커뮤니티에서 큐레이션합니다. 누락되거나 잘못된 내용이 있다면 이 페이지를 수정해 주세요!
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>창업자 여러분, 비즈니스 성장에 도움이 필요하신가요? [창업자 지원(Founders Support)으로 이동하세요](/founders/)</div>
+<div>창업자 여러분, 비즈니스 성장에 도움이 필요하신가요? [창업자 지원(Founders Support)으로 이동하세요](/organizations/founders/)</div>
 </Alert>
 
 ## 광범위한 이더리움 생태계 {#broad-ethereum-ecosystem}

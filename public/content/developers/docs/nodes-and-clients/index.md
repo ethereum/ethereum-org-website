@@ -22,8 +22,7 @@ A "node" is any instance of Ethereum client software that is connected to other 
 
 These clients work together to keep track of the head of the Ethereum chain and allow users to interact with the Ethereum network. The modular design with multiple pieces of software working together is called [encapsulated complexity](https://vitalik.eth.limo/general/2022/02/28/complexity.html). This approach made it easier to execute [The Merge](/roadmap/merge) seamlessly, makes client software easier to maintain and develop, and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-Simplified diagram of a coupled execution and consensus client.
+<NodeClientsDiagram />
 
 ### Client diversity {#client-diversity}
 
@@ -99,7 +98,7 @@ Running your own node enables you to use Ethereum in a private, self-sufficient 
 - You can connect to your node using **Inter-process Communications (IPC)** or rewrite the node to load your program as a plugin. This grants low latency, which helps a lot, e.g., when processing a lot of data using web3 libraries or when you need to replace your transactions as fast as possible (i.e., frontrunning).
 - You can directly stake ETH to secure the network and earn rewards. See [solo staking](/staking/solo/) to get started.
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### Network benefits {#network-benefits}
 
@@ -142,7 +141,6 @@ This table summarizes the different clients. All of them pass [client tests](htt
 | [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
 | [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Pruned          |
 | [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Full](#full-sync)                                         | Pruned          |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -156,7 +154,7 @@ Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will g
 
 ### Erigon {#erigon}
 
-Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
+Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using under 3TB of disk space, in under 3 days.
 
 ### ethrex {#ethrex}
 
@@ -188,16 +186,6 @@ Reth is production ready, and suitable for usage in mission-critical environment
 
 Learn more by checking out the [Reth Book](https://reth.rs/), or the [Reth GitHub repo](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
-### In development {#execution-in-development}
-
-These clients are still in earlier stages of development and are not yet recommended for production use.
-
-#### EthereumJS {#ethereumjs}
-
-The EthereumJS Execution Client (EthereumJS) is written in TypeScript and composed of a number of packages, including core Ethereum primitives represented by the Block, Transaction, and Merkle-Patricia Trie classes and core client components including an implementation of the Ethereum Virtual Machine (EVM), a blockchain class, and the DevP2P networking stack.
-
-Learn more about it by reading its [documentation](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
-
 ## Consensus clients {#consensus-clients}
 
 There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are responsible for all consensus-related logic including the fork-choice algorithm, processing attestations and managing [proof-of-stake](/developers/docs/consensus-mechanisms/pos) rewards and penalties.
@@ -219,7 +207,7 @@ Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmapri
 
 ### Lodestar {#lodestar}
 
-Lodestar is a production-ready consensus client implementation written in Typescript under the LGPL-3.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. Lodestar aims to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
+Lodestar is a production-ready consensus client implementation written in TypeScript under the Apache-2.0 license. It is maintained by ChainSafe Systems and is the newest of the consensus clients for solo-stakers, developers and researchers. Lodestar consists of a beacon node and validator client powered by JavaScript implementations of Ethereum protocols. Lodestar aims to improve Ethereum usability with light clients, expand accessibility to a larger group of developers and further contribute to ecosystem diversity.
 
 More information can be found on the [Lodestar website](https://lodestar.chainsafe.io/)
 
@@ -301,7 +289,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 Optimistic sync is a post-merge synchronization strategy designed to be opt-in and backwards compatible, allowing execution nodes to sync via established methods. The execution engine can _optimistically_ import beacon blocks without fully verifying them, find the latest head, and then start syncing the chain with the above methods. Then, after the execution client has caught up, it will inform the consensus client of the validity of the transactions in the Beacon Chain.
 
-[More on optimistic sync](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[More on optimistic sync](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### Checkpoint sync {#checkpoint-sync}
 
@@ -323,4 +311,4 @@ More on [checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice
 
 ## Related tutorials {#related-tutorials}
 
-- [Turn your Raspberry Pi 4 into a validator node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer (Mainnet) and / or the consensus layer (Beacon Chain / validator)._
+- [Turn your Raspberry Pi 5 into a validator node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 5, plug in an ethernet cable, connect the NVMe disk and power up the device to turn the Raspberry Pi 5 into a full Ethereum node running the execution layer (Mainnet) and / or the consensus layer (Beacon Chain / validator)._

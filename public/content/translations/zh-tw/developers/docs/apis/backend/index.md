@@ -29,7 +29,7 @@ lang: zh-tw
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_節點即服務 (Node-as-a-Service)。_**
+**All That Node -** **_節點即服務。_**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [文件](https://docs.allthatnode.com)
@@ -41,7 +41,7 @@ lang: zh-tw
 - [文件](https://docs.blastapi.io)
 - [Discord](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_提供更高效、快速的 RPC 服務_**
+**BlockPi -** **_提供更有效率且快速的 RPC 服務_**
 
 - [blockpi.io](https://blockpi.io/)
 - [文件](https://docs.blockpi.io/)
@@ -58,7 +58,7 @@ lang: zh-tw
 **Blockscout - 開源區塊鏈瀏覽器**
 - [文件](https://docs.blockscout.com/)
 
-**GetBlock -** **_用於 Web3 開發的區塊鏈即服務 (Blockchain-as-a-service)_**
+**GetBlock -** **_適用於 Web3 開發的區塊鏈即服務_**
 
 - [GetBlock.io](https://getblock.io/)
 - [文件](https://docs.getblock.io/)
@@ -91,6 +91,12 @@ lang: zh-tw
 - [文件](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_具備全節點、歸檔節點與免金鑰公開存取權限的 EVM JSON-RPC 基礎設施。_**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [文件](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_以速度為導向的以太坊節點，提供 JSON-RPC/WebSockets API。_**
 
 - [zmok.io](https://zmok.io/)
@@ -100,13 +106,19 @@ lang: zh-tw
 
 ### 開發工具 {#development-tools}
 
+**eth.zig -** **_適用於以太坊的 Zig 函式庫，具備編譯期 ABI 編碼與合約綁定功能。_**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [文件](https://ethzig.org)
+- [範例](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
 **ethers-kt -** **_適用於基於 EVM 區塊鏈的非同步、高效能 Kotlin/Java/Android 函式庫。_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [範例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_開源的區塊鏈 .NET 整合函式庫。_**
+**Nethereum -** **_適用於區塊鏈的開源 .NET 整合函式庫。_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [文件](https://docs.nethereum.com/docs/getting-started/welcome/)
@@ -115,17 +127,17 @@ lang: zh-tw
 **Python 工具 -** **_透過 Python 與以太坊互動的各種函式庫。_**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [Web3.py GitHub](https://github.com/ethereum/web3.py)
-- [Web3.py 聊天室](https://gitter.im/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.py 聊天室](https://gitter.im/ethereum/web3.py)
 
-**Tatum -** **_終極的區塊鏈開發平台。_**
+**Tatum -** **_終極區塊鏈開發平台。_**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
 - [文件](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_適用於以太坊的 Java/Android/Kotlin/Scala 整合函式庫。_**
+**web3j -** **_適用於以太坊的 Java/Android/Kotlin/Scala 整合函式庫。_**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [文件](https://docs.web3j.io/)

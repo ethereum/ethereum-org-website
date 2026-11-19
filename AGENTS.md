@@ -1,254 +1,66 @@
-# CLAUDE.md - Ethereum.org Website
-
-## Project Overview
-
-This is the official Ethereum.org website - a Next.js application that serves as the primary educational and community hub for Ethereum. The site is built with modern web technologies and focuses on accessibility, internationalization, and performance.
-
-## Technology Stack
-
-### Core Framework
-
-- **Next.js 16+** - React framework with App Router (Turbopack is the default bundler; webpack available via `pnpm dev:webpack` / `pnpm build:webpack`)
-- **React 19** - UI library
-- **TypeScript 5.5+** - Type safety and development experience
-- **Tailwind CSS 4+** - Utility-first CSS framework (CSS-first config in `src/styles/global.css`)
-
-### Key Dependencies
-
-- **next-intl 4+** - Internationalization (i18n) with 25 languages
-- **next-mdx-remote 5.0+** - MDX content processing
-- **Motion 12+** (`motion` package, formerly Framer Motion) - Animations and transitions; import from `motion/react`
-- **Radix UI** - Accessible component primitives
-- **shadcn/ui** - Component library built on Radix UI
-- **Recharts** - Data visualization
-- **Viem/Wagmi** - Ethereum blockchain integration
-
-### Development & Testing
-
-- **Storybook 10+** - Component development and testing
-- **Chromatic** - Visual regression testing
-- **ESLint** - Code linting with custom rules
-- **Prettier** - Code formatting
-- **Husky** - Git hooks
-- **PNPM** - Package manager
-
-## Project Structure
-
-- **app/** - Next.js App Router pages
-  - **[locale]/** - Internationalized routes
-- **src/**
-  - **components/** - React components
-    - **ui/** - Design system components
-    - **icons/** - SVG icon components
-  - **data/** - Static data and configurations
-  - **hooks/** - Custom React hooks
-  - **i18n/** - Internationalization config
-  - **intl/** - Translation files (25 languages)
-  - **layouts/** - Page layout components
-  - **lib/** - Utility functions and types
-    - **constants.ts** - App constants
-    - **types.ts** - TypeScript type definitions
-    - **utils/** - Utility functions
-  - **styles/** - Global styles and design tokens
-- **public/** - Static assets
-  - **content/** - Markdown content files
-  - **images/** - Image assets
-- **docs/** - Development documentation
-  - **solutions/** - Documented solutions to past problems, organized by category with YAML frontmatter (module, tags, problem_type)
-
-## Code Conventions
-
-### File Naming
-
-- **Components**: kebab-case (e.g., `button-group.tsx`)
-- **Utilities**: camelCase (e.g., `cn.ts`, `relativePath.ts`)
-- **Pages**: kebab-case following Next.js conventions
-- **Assets**: kebab-case (e.g., `eth-logo.png`)
-
-### TypeScript Patterns
-
-- Use `interface` for object shapes, `type` for unions/intersections
-- Prefer explicit typing over `any` (ESLint enforces `fixToUnknown`)
-- **NEVER leave unused variables or parameters** - ESLint `unused-imports/no-unused-vars` will fail the Netlify build. The only allowed unused arg pattern is a single underscore `_`. Do NOT use `_prefixedNames` (e.g., `_foo`) - either use the variable or remove it from the signature entirely.
-- Use generic constraints for reusable components
-- Export types from dedicated files in `@/lib/types`
-
-### Styling Conventions
-
-- **Primary approach**: Tailwind CSS utility classes
-- **Component variants**: Use `tailwind-variants` (`tv`) for new and refactored work. Existing `class-variance-authority` (`cva`) components don't need bulk migration -- swap to `tv` opportunistically when you're already touching the component for another reason.
-- **Dynamic classes**: Use `cn()` utility (clsx + tailwind-merge)
-- **Custom properties**: CSS variables in `src/styles/` for theme values
-- **Responsive design**: Mobile-first approach
-
-For UI work, see the **`design-system` skill** at `.claude/skills/design-system/`. It's the canonical knowledge base for component choices, design tokens, RTL/i18n, server/client boundaries, and the "use a variant, not a new component" pattern.
-
-## Development Workflows
-
-### Available Scripts
-
-```bash
-# Development
-pnpm dev                    # Start development server (Turbopack)
-pnpm dev:webpack            # Start development server with webpack
-pnpm build                  # Build for production (Turbopack)
-pnpm build:webpack          # Build for production with webpack
-pnpm start                  # Start production server
+# AGENTS.md - Ethereum.org Website
 
-# Code Quality
-pnpm lint                   # Run ESLint
-pnpm lint:fix              # Fix ESLint issues
-pnpm type-check            # TypeScript type checking
-pnpm format                # Format with Prettier
+The ethereum.org website: a Next.js 16 App Router site (React 19, TypeScript, Tailwind 4, next-intl with 25 locales) that is Ethereum's main educational and community hub. Stack and scripts are in `package.json`; deeper guides are in `docs/` and the skills under `.claude/skills/`. This file holds the conventions and gotchas you can't see from the code. `docs/solutions/` records past problems and fixes; where a note and the code disagree, trust the code.
 
-# Testing
-pnpm test:unit             # Playwright unit tests (unit project)
-pnpm test:e2e              # Playwright end-to-end tests
-pnpm test:visual           # Playwright + Chromatic full-page visual tests
+## Code
 
-# Storybook
-pnpm storybook             # Start Storybook dev server
-pnpm build-storybook       # Build Storybook
-pnpm chromatic             # Storybook Chromatic (needs CHROMATIC_STORYBOOK_TOKEN)
+- **Unused variables or parameters fail the CI lint job** (`unused-imports/no-unused-vars`). The only allowed unused arg is a bare `_`; never `_prefixed` names.
+- Types shared across modules go in `@/lib/types`; a type used by one module stays beside it. No explicit `any` (ESLint fixes it to `unknown`).
+- **Comments**: default to none. Add one only for a non-obvious "why" or a hidden constraint, in one or two lines.
+- **Shared code** goes in an existing related module (`src/lib/constants.ts`, a file in `src/lib/utils/`), never a new file for one function or constant.
+- **Bug fixes** cover every code path that produces the symptom; fix it once in the shared function rather than in each caller.
+- **New files go where files of the same kind already live** (e.g. Netlify plugins next to `netlify/edge-functions/`). A new top-level or sibling directory needs a reason no existing one covers.
+- File names: `src/components/ui/` and story files are kebab-case; elsewhere, follow the neighbouring components (mostly a PascalCase folder with `index.tsx`).
+- Server Components by default. React 19: take `ref` as a prop; `forwardRef` only survives in legacy components.
 
-# Content Management
-pnpm lint:md               # Lint English markdown content
-pnpm lint:md:fix           # Auto-fix header IDs and duplicates
-```
+## UI
 
-### Testing Strategy
+The **`design-system` skill** is the canonical guide for components, tokens, RTL and server/client boundaries; load it for any UI change. The rules people trip on most:
 
-- **Unit Testing**: Playwright `unit` project (`pnpm test:unit`) — heaviest coverage is the intl-pipeline sanitizer
-- **E2E Testing**: Playwright (`pnpm test:e2e`), see `docs/e2e-testing.md`
-- **Visual Testing**: Storybook + Chromatic for component regression; Playwright + Chromatic for full pages (see the `page-visual-tests` skill)
-- **Type Safety**: TypeScript strict mode enabled
-- **Linting**: ESLint with custom rules for imports and TypeScript
+- New variant definitions use `tailwind-variants` (`tv`); add variants to an existing `cva` component in place. Merge classes with `cn()`.
+- RTL: logical classes only (`text-start`, `ms-*`, `ps-*`), never `text-left`, `ml-*`, `pl-*`.
+- Numbers and dates: `numberFormat()` (`src/lib/utils/numbers.ts`) and `dateTimeFormat()` / `formatDate()` (`src/lib/utils/date.ts`) instead of `new Intl.NumberFormat` / `Intl.DateTimeFormat` or `.toLocale*String()`; they set Urdu/Arabic numbering. For rendered dates use `formatDateTime()`, whose UTC and space normalization keep SSR and client equal. Other `Intl` APIs (`ListFormat`, `DisplayNames`) are fine directly.
 
-## Content Management
+## Adding a page
 
-### Internationalization
+Specs in `tests/unit/routing/` catch missed registration, namespace and tracing entries; the rest is on you.
 
-- **25 languages** supported (canonical list: `i18n.config.json`); **RTL support** for Arabic, Urdu
-- JSON UI strings in `src/intl/[locale]/`; translated markdown content in `public/content/translations/[locale]/`
-- Non-English markdown is propagated by the **intl-pipeline** (`src/scripts/intl-pipeline/`, entry `main.ts`). **Do not hand-propagate English changes into non-English files** -- let the pipeline run, or trigger `intl-pipeline.yml` with `stamp_only: true` if manifests must catch up urgently (e.g. unblocking a build). Hand-fixing a translation error is fine when the English side hasn't moved, since the manifest mapping stays valid. Spec: `tests/specs/PIPELINE-SPEC.md`.
-- Glossary: base URL from `GLOSSARY_API_URL` env var; default in `src/scripts/intl-pipeline/config.ts`. ETHGlossary is authoritative for Ethereum term translations.
+- `generateMetadata` calls `getMetadata` with `slug` = the route path; JSON-LD goes in a colocated `page-jsonld.tsx`.
+- A UI-only page maps its primary namespace in `src/lib/utils/translations.ts`; a `[param]` route is listed in `getDynamicIntlPagePaths()` (`src/lib/i18n/translationRegistry.ts`). Both feed canonical, hreflang and the sitemap.
+- `getAppPageContributorInfo` takes the folder path under `app/[locale]/` (`"wallets/find-wallet"`).
+- A `noIndex` page also goes in `EXCLUDED_PATHS` (`app/sitemaps/sitemap.ts`). Every new page gets an inbound link (nav, footer or a related page).
 
-For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `intl/pending-{base}` orchestration model, see the **`intl-pipeline` skill** at `.claude/skills/intl-pipeline/`. For translation-quality review (scoring rubric, language-group rules, ETHGlossary-as-authority policy, multi-agent role split), see the **`intl-review` skill** at `.claude/skills/intl-review/`.
+## i18n and content
 
-### Markdown Content
+- All user-facing text goes through `t()`, including JSON-LD strings, `alt`, `aria-*`, sr-only text and API error messages. Server: `getTranslations` / `getLocale` from `next-intl/server`. Client: `useTranslations` from `next-intl`, one bound function per namespace (`const tCommon = useTranslations("common")`), never `t("ns:key")`.
+- A key built from data needs a fallback for ids without a key: a missing key renders its last segment as text.
+- Editing English strings: reuse an existing translated key before adding one; leave keys you aren't changing byte-identical (any value edit, even quoting, re-translates it in 24 locales). Rename a key or ICU argument only alongside an Intl Pipeline run: a renamed argument renders the raw key in every locale. English copy changes reach locales only when someone runs the Intl Pipeline workflow after merge.
+- New keys go only in `src/intl/en/`. `common`'s `language-*` and `region-*` keys are looked up dynamically; never delete them as unused.
+- **Never hand-propagate English changes into non-English files**: the intl-pipeline (`src/scripts/intl-pipeline/`) does it and its manifests break otherwise. Fixing a translation error is fine when the English hasn't moved. Details: the `intl-pipeline` skill; translation review: the `intl-review` skill.
+- Markdown in `public/content/`: every h1–h4 needs a `{#lower-kebab-id}` (`pnpm lint:md:fix` adds them; markdownlint enforces in CI). Images are co-located with the markdown and referenced with `./` paths; `/images/` paths break the MDX render. `public/images/` is for component imagery. A new MDX component prop with visible text must be in `TRANSLATABLE_ATTRIBUTES` (`src/scripts/intl-pipeline/lib/shared-patterns.ts`) or it stays English in every locale.
 
-- Educational content stored in `public/content/`
-- Processed with `next-mdx-remote`
-- Custom MDX components for rich content
-- Automatic table of contents generation
-- **All h1-h4 headings require a custom `{#lower-kebab-id}`** -- enforced by markdownlint via pre-commit hook. Run `pnpm lint:md:fix` to auto-add missing IDs. Config: `.markdownlint-cli2.jsonc`, custom rules: `.markdownlint-rules/`
+## Data
 
-### Asset Management
+- `chainName` / `supported_chains` take the exact `name` from `src/data/chains.ts` (case-sensitive: `"OP Mainnet"`, not `"Optimism"`), or `NonEVMChainName` / `AppOnlyChainName` from `src/lib/types.ts`. `pnpm type-check` verifies them.
+- Data-layer work: the `data-layer` skill. Pages and components read data through `@/lib/data` getters, never `@/data-layer` (lint enforces). `@/lib/data` is server-side: importing it from a module a client component imports breaks the build. A new fetched field must also be added to `src/data-layer/mocks/*.json`, because previews run with `USE_MOCK_DATA=true`.
+- Fetchers throw on failure so the last good blob survives; returning `[]` or `{ error }` overwrites it. A Trigger task's schedule in `src/data-layer/tasks.ts` matches its getter's `revalidate`, and a new task needs one manual run before the release that ships it (its getter returns `null` until then).
 
-- Images optimized with Next.js Image component
-- SVGs loaded as React components via `@svgr/webpack`
-- Static assets served from `public/`
-- Placeholder generation for images
+## Runtime and deploy (Netlify)
 
-## SEO & Meta
+- **`public/content` is not in the Netlify server function.** A page that reads it at render time must stay static (`revalidate: false` getters like `getStaticAppsData`) or get an `outputFileTracingIncludes` entry in `next.config.js`. A finite-`revalidate` getter (e.g. `getEventsData`) turns the whole route into ISR, even with route-level `revalidate = false` or `force-static`. Details: `docs/solutions/integration-issues/netlify-isr-404-async-server-components.md`.
+- A build or deploy step that expected work and found none fails loudly (non-zero exit), never logs and goes green.
+- Edge functions read env through `Netlify.env`, not `process.env`. Request-time code never writes to disk.
+- `s3-dcl1.ethquokkaops.io` (app, event and logo images) and Netlify Blobs (`src/data-layer/storage.ts`, cached API responses) are team-run services, not third parties.
 
-- Sitemap generation in `app/sitemap.ts`
-- Meta tags and Open Graph optimization
-- Structured data for search engines
-- Security headers (X-Frame-Options: DENY)
+## Tests and Storybook
 
-## Development Guidelines
+- Unit tests (`pnpm test:unit`) can only import plain modules (`src/lib/**`, data files): components fail to load under the runner and `@/` doesn't cover `app/`. Move logic a test needs into `src/lib/`. Tests import the real function; a test that re-implements the logic it checks stays green when the site breaks.
+- E2E: `docs/e2e-testing.md`. Full-page visual tests: the `page-visual-tests` skill.
+- Stories live in `__stories__/` for flat directories (`ui/`, `styles/`) and next to foldered components. Titles are `Section / Group / Name`, with the section set by path: `src/styles` → `Design System`, `src/components/ui` → `UI`, other `src/components` → `Components`, `src/layouts` → `Layouts`, `app` → `Pages`. Use an existing group (Actions, Forms, Layout, Navigation, Overlays, Data Display, Cards, Heroes, Site Chrome, Content, Data Viz, Features, Typography) or none; never invent one for a single component. `tests/unit/storybook/story-titles.spec.ts` enforces prefixes, explicit titles and uniqueness.
+- No stories for deprecated components or variants. Add `tags: ["autodocs"]` and a `docs.description.component` blurb aimed at someone deciding whether to use it.
+- A green Storybook build doesn't mean a story renders, and `UI /` stories skip Chromatic snapshots: open new stories in `pnpm storybook`. Namespaces a storied component uses go in the `ns` array in `.storybook/next-intl.ts`; components using `usePathname` need `parameters.nextjs.navigation.pathname`.
 
-### When Working on Features
+## A/B testing and search
 
-1. **Check existing patterns** - Look at similar components first
-2. **Prioritize Server Components** - Use App Router and Server Components when possible
-3. **Follow import order** - ESLint will enforce, but be proactive
-4. **Use TypeScript strictly** - No `any` types, prefer `unknown`
-5. **Test in Storybook** - Create stories for new components (filename pattern: `.stories.tsx`)
-6. **Consider i18n** - All user-facing text should be translatable. Server components: `getTranslations` and `getLocale` from `next-intl/server`. Client components: `useTranslations` from `next-intl`, one namespace-bound function per namespace - to access a second namespace, bind another function (e.g. `const tCommon = useTranslations("common")`) rather than reaching across namespaces
-7. **Mobile-first** - Design for mobile, enhance for desktop
-8. **Accessibility** - Use Radix primitives, semantic HTML
-9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
-
-### Component Development
-
-1. Create component in appropriate `src/components/` subdirectory
-   - Use `src/components/ui` for shadcn components or pure UI components
-2. Add TypeScript types and proper props interface
-3. Accept `ref` as a regular prop when needed (React 19); `forwardRef` only survives in legacy components
-4. Add Storybook story in same directory
-5. Export from appropriate index file
-6. Update documentation if adding new patterns
-
-### Content Updates
-
-1. Markdown files go in `public/content/`
-2. Images in `public/images/` with descriptive names
-3. Translation strings in appropriate `src/intl/` JSON files
-4. Data files in `src/data/` with TypeScript types
-
-### Type-Safe Chain Names
-
-This project enforces type-safe chain names via TypeScript. When working with layer 2 networks or wallet data:
-
-**Critical Files:**
-
-- `src/data/chains.ts` - Canonical source of all chain names (auto-updated weekly)
-- `src/lib/types.ts` - Defines `ChainName` type derived from chains.ts
-- `src/data/networks/networks.ts` - Uses `chainName: ChainName`
-- `src/data/wallets/wallet-data.ts` - Uses `supported_chains: ChainName[]`
-
-**Rules:**
-
-1. **Always look up exact names** - Before adding `chainName` or `supported_chains`, search `chains.ts` for the exact `name` value
-2. **Names are case-sensitive and exact** - e.g., use `"Zircuit Mainnet"` not `"Zircuit"`, use `"OP Mainnet"` not `"Optimism"`
-3. **Run type checking** - Use `pnpm type-check` to verify chain names are valid before committing
-4. **Non-EVM chains** - For Starknet and other non-EVM chains, use `NonEVMChainName` type
-
-**Common Mistakes:**
-
-- Using informal names: `"Optimism"` should be `"OP Mainnet"`
-- Missing "Mainnet" suffix: `"Zircuit"` should be `"Zircuit Mainnet"`
-- Wrong casing: `"zksync Mainnet"` should be `"zkSync Mainnet"`
-
-## Key Dependencies to Know
-
-### UI & Styling
-
-- `@radix-ui/*` - Accessible component primitives
-- `tailwind-variants` - Component variant patterns
-- `motion` - Animation library (formerly framer-motion; import from `motion/react`)
-- `lucide-react` - Icon library
-
-### Content & Data
-
-- `gray-matter` - Frontmatter parsing
-- `recharts` - Data visualization
-
-### Ethereum Integration
-
-- `viem` - Ethereum library
-- `wagmi` - React hooks for Ethereum
-- `@rainbow-me/rainbowkit` - Wallet connection
-
-## A/B Testing
-
-The site uses a GDPR-compliant, cookie-less A/B testing system built on the Flags SDK precompute pattern, integrated with Matomo. The proxy assigns variants at the edge (header fingerprinting) and rewrites to signed, statically prerendered variant pages under `ab-code/[code]/` — experiments never force dynamic rendering. Experiment status, weights, and scheduling live in the Matomo dashboard (no deploys needed). Only the default locale is tested; other locales always get the original.
-
-Key gotcha: **variants are matched by array index, not names** — the `variants` array order must match the Matomo experiment order exactly, and the `testKey` must match the Matomo experiment name exactly.
-
-Full guide (architecture, step-by-step recipe, env vars): `docs/ab-testing.md`. Code: `proxy.ts`, `src/lib/ab-testing/`, `src/components/AB/`, `app/[locale]/ab-code/`.
-
-## Deployment
-
-- **Platform**: Netlify (config in `netlify.toml`)
-- **Next.js Integration**: Uses `@netlify/plugin-nextjs` for seamless Netlify and Next.js compatibility
-- **Monitoring**: Matomo analytics integration
-
-## Internal Infrastructure
-
-The following external-looking services are managed by the ethereum.org team:
-
-- **`s3-dcl1.ethquokkaops.io`** — S3-compatible object storage for app screenshots and media. Used by the data layer to serve images for the `/dapps` and app listing pages. Downtime here means broken images on the live site.
-- **Netlify Blobs** (`@netlify/blobs`) — Key-value store used by the data layer to cache API responses. Accessed via `src/data-layer/storage.ts`.
+- A/B tests (`docs/ab-testing.md`): variants match Matomo **by array index**, so the `variants` order and the `testKey` must match the Matomo experiment exactly. Only the default locale is tested.
+- Site search (`docs/site-search.md`, `typesense/README.md`): ranking hints reach the index as `docsearch:*` meta tags from `src/lib/utils/metadata.ts`, so a change only takes effect after deploy and re-crawl. Block-explorer results come from `src/data/networks/networks.ts`.

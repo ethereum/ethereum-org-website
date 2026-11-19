@@ -58,7 +58,6 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
               thumbnail={app.image}
               tags={app.subCategory}
               href={`/apps/${slugify(app.name)}`}
-              layout="horizontal"
               imageSize="thumbnail"
               customEventOptions={{
                 eventCategory: "category_page",

@@ -7,6 +7,7 @@ import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 import GlamsterdamImage from "@/public/images/roadmap/roadmap-glamsterdam.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
+import BeaconChainImage from "@/public/images/upgrades/core.png"
 
 type TranslationFunction = (key: string) => string
 
@@ -43,6 +44,30 @@ interface ReleaseUnscheduled extends BaseRelease {
 export type Release = ReleaseWithDate | ReleaseWithYear | ReleaseUnscheduled
 
 export const getReleasesData = (t: TranslationFunction): Release[] => [
+  {
+    image: BeaconChainImage,
+    releaseName: "Beacon Chain",
+    releaseDate: "2020-12-01T12:00:23.000Z",
+    content: (
+      <>
+        <p>
+          <strong>{t("page-roadmap-beacon-chain-pos-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-beacon-chain-pos-item-1")}</li>
+          <li>{t("page-roadmap-beacon-chain-pos-item-2")}</li>
+        </ul>
+        <p>
+          <strong>{t("page-roadmap-beacon-chain-merge-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-beacon-chain-merge-item-1")}</li>
+          <li>{t("page-roadmap-beacon-chain-merge-item-2")}</li>
+        </ul>
+      </>
+    ),
+    href: "/roadmap/beacon-chain/",
+  },
   {
     image: DevelopersHubHeroImage,
     releaseName: "Paris (The Merge)",
@@ -201,7 +226,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     image: GlamsterdamImage,
     releaseName: "Glamsterdam",
     plannedReleaseYear: "2026",
-    displayDate: "H2 2026",
+    displayDate: "Q4 2026",
     href: "/roadmap/glamsterdam/",
     content: (
       <>
@@ -229,14 +254,28 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     releaseName: "Hegotá",
     plannedReleaseYear: "2027",
     displayDate: "2027",
+    href: "/roadmap/hegota/",
     content: (
       <>
         <p>
-          <strong>{t("page-roadmap-hegota-discussed-title")}</strong>
+          <strong>{t("page-roadmap-hegota-focil-title")}</strong>
         </p>
         <ul>
-          <li>{t("page-roadmap-hegota-discussed-item-1")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-1")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-2")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-3")}</li>
         </ul>
+        <p>
+          <strong>{t("page-roadmap-hegota-frame-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-hegota-frame-item-1")}</li>
+          <li>{t("page-roadmap-hegota-frame-item-2")}</li>
+          <li>{t("page-roadmap-hegota-frame-item-3")}</li>
+        </ul>
+        {/* Hegotá is still `planning` upstream, so the slide must not read as a
+            settled feature list the way a scheduled fork's does. */}
+        <p>{t("page-roadmap-hegota-scope-note")}</p>
       </>
     ),
     forkcast_href: "https://forkcast.org/upgrade/hegota",

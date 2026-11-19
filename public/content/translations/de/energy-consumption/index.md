@@ -1,11 +1,11 @@
 ---
 title: Ethereums Energieverbrauch
 metaTitle: Ethereum-Energieverbrauch
-description: Die grundlegenden Informationen, die du benötigst, um den Energieverbrauch von Ethereum zu verstehen.
+description: "Die grundlegenden Informationen, die du benötigst, um den Energieverbrauch von Ethereum zu verstehen."
 lang: de
 ---
 
-[Ethereum](/) ist eine grüne Blockchain. Ethereums [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Konsensmechanismus verwendet ETH anstelle von [Energie, um das Netzwerk zu sichern](/developers/docs/consensus-mechanisms/pow). Der Energieverbrauch von Ethereum beträgt im gesamten globalen Netzwerk ungefähr [~0,0026 TWh/Jahr](https://carbon-ratings.com/eth-report-2022).
+[Ethereum](/) ist eine grüne Blockchain. Ethereums [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Konsensmechanismus verwendet ETH anstelle von [Energie, um das Netzwerk zu sichern](/developers/docs/consensus-mechanisms/pow). Der Energieverbrauch von Ethereum beträgt im gesamten globalen Netzwerk ungefähr [\~0,0026 TWh/Jahr](https://carbon-ratings.com/eth-report-2022).
 
 Die Schätzung des Energieverbrauchs für Ethereum stammt aus einer Studie des [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Sie erstellten Bottom-up-Schätzungen des Stromverbrauchs und des CO2-Fußabdrucks des Ethereum-Netzwerks ([siehe Bericht](https://carbon-ratings.com/eth-report-2022)). Sie maßen den Stromverbrauch verschiedener Nodes mit unterschiedlichen Hardware- und Client-Software-Konfigurationen. Die geschätzten **2.601 MWh** (0,0026 TWh) für den jährlichen Stromverbrauch des Netzwerks entsprechen jährlichen CO2-Emissionen von **870 Tonnen CO2e** unter Anwendung regionalspezifischer CO2-Intensitätsfaktoren. Dieser Wert ändert sich, wenn Nodes dem Netzwerk beitreten oder es verlassen – du kannst dies anhand eines gleitenden 7-Tage-Durchschnitts des [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) verfolgen (beachte, dass sie für ihre Schätzungen eine leicht abweichende Methode verwenden – Details dazu auf ihrer Website).
 
@@ -83,3 +83,5 @@ Web3-native Finanzierungsplattformen für Öffentliche Güter wie [Gitcoin](http
 
 - [Die Beacon Chain](/roadmap/beacon-chain)
 - [Der Merge](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

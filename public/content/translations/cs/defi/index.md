@@ -102,7 +102,7 @@ Jako blockchain je Ethereum navrženo pro bezpečné a globální odesílání t
 
 #### Streamování peněz po celém světě... {#stream-money}
 
-Přes Ethereum můžete peníze také streamovat. To vám umožňuje platit někomu mzdu po vteřinách, což mu dává přístup k penězům, kdykoli je potřebuje. Nebo si pronajmout něco na vteřiny, jako je úložná skříňka nebo elektrická koloběžka.
+Přes Ethereum můžete peníze také streamovat. Místo odeslání jedné velké platby převádějí streamované platby malé částky nepřetržitě v průběhu času. To vám umožňuje platit někomu výplatu po sekundách, což mu dává přístup k jeho penězům, kdykoli je potřebuje. Lze to také použít k platbě za služby, které jsou účtovány průběžně, jako je pronájem úložné skříňky nebo elektrické koloběžky.
 
 A pokud nechcete posílat nebo streamovat [ETH](/glossary/#ether) kvůli tomu, jak moc se může měnit jeho hodnota, existují na Ethereu alternativní měny: [stablecoiny](/glossary/#stablecoin).
 

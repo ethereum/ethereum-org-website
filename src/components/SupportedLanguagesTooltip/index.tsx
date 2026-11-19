@@ -6,21 +6,22 @@ import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
 
 type SupportedLanguagesTooltipProps = {
   supportedLanguages: string[]
+  /** How many languages are shown before the "+ N" chip (must match the caller). */
+  shown?: number
 }
 
 export const SupportedLanguagesTooltip = ({
   supportedLanguages,
+  shown = NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN,
 }: SupportedLanguagesTooltipProps) => {
   const numberOfSupportedLanguages = supportedLanguages.length
-  const rest = numberOfSupportedLanguages - NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+  const rest = numberOfSupportedLanguages - shown
 
   if (rest <= 0) {
     return null
   }
 
-  const tooltipContent = formatStringList(
-    supportedLanguages.slice(NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
-  )
+  const tooltipContent = formatStringList(supportedLanguages.slice(shown))
 
   return (
     <Tooltip content={tooltipContent}>

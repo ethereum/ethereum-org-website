@@ -1,7 +1,7 @@
 ---
 title: Non-fungible tokens (NFT)
 metaTitle: What are NFTs? | Benefits and use
-description: An overview of NFTs on Ethereum
+description: "What are NFTs? Learn how non-fungible tokens prove ownership of digital art, collectibles, tickets and more on Ethereum, and how to stay safe using them."
 lang: en
 template: use-cases
 sidebarDepth: 2

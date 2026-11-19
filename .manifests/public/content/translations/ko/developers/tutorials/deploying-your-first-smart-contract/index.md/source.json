@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/deploying-your-first-smart-contract/index.md",
   "generatedAt": "2026-06-19T22:41:33.652Z",
-  "rootHash": "cd4f49c47963",
+  "rootHash": "d88df295a4ee",
   "tree": {
-    "contentHash": "f42a93fd8714",
-    "anchorHash": "ef3004f42364",
+    "contentHash": "d84cf3fbf195",
+    "anchorHash": "15ff51437f9a",
     "children": {
       "frontmatter:title": {
         "contentHash": "297498d17581",
@@ -17,11 +17,35 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "32c02afec79d"
+        "anchorHash": "d28104c20376"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "93fe7ecc4a46"
+        "contentHash": "4c73c094f3ee",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "0c5d9661b4fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "430895907c1c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +73,7 @@
       },
       "frontmatter:address": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "875b7ef46ba2"
+        "anchorHash": "9ef597f45aba"
       },
       "prose:3": {
         "contentHash": "09bbdd555adc",

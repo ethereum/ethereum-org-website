@@ -17,7 +17,7 @@ Krótki animowany film wyjaśniający od **Amnesty International** o tym, dlacze
 
 *Ten transkrypt jest dostępną kopią [oryginalnego transkryptu wideo](https://www.youtube.com/watch?v=5GTD14irFvQ) opublikowanego przez Amnesty International. Został on lekko zredagowany w celu poprawy czytelności, a także dodano etykiety mówców.*
 
-#### „Nie masz nic do ukrycia, prawda?” (0:00) {#youve-got-nothing-to-hide-right-000}
+### „Nie masz nic do ukrycia, prawda?” (0:00) {#youve-got-nothing-to-hide-right-000}
 
 **Agent:** Nie dbasz o bezpieczeństwo cyfrowe, prawda?
 
@@ -79,7 +79,7 @@ Krótki animowany film wyjaśniający od **Amnesty International** o tym, dlacze
 
 **Obywatel:** Wspieram.
 
-#### Prawo do prywatności (1:30) {#the-right-to-privacy-130}
+### Prawo do prywatności (1:30) {#the-right-to-privacy-130}
 
 **Obywatel:** A mój kraj składa się z ludzi. Ludzi mających prawo do własnej prywatności. Jeśli rządy chcą bezkrytycznie gromadzić wszystkie twoje dane – e-maile, rozmowy telefoniczne, obrazy z kamer internetowych i wyszukiwania w internecie – to nie jest w porządku.
 

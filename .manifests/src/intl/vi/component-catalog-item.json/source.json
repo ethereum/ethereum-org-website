@@ -1,0 +1,136 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/component-catalog-item.json",
+  "generatedAt": "2026-10-21T21:34:34.054Z",
+  "rootHash": "344d19cc6756",
+  "tree": {
+    "contentHash": "ff00e0194678",
+    "anchorHash": "fe4b46ec4632",
+    "children": {
+      "catalog-item-about-title": {
+        "contentHash": "1e1026734fde",
+        "anchorHash": "1bb7a6278a9b",
+        "children": {
+          "prose:1": {
+            "contentHash": "4efca0d10c5f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5e291d7bcb2d"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "catalog-item-gallery-modal-title": {
+        "contentHash": "27841eec1a10",
+        "anchorHash": "6c7ccc3ea27b",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5e291d7bcb2d"
+          },
+          "prose:1": {
+            "contentHash": "067348ce6894",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "catalog-item-gallery-screenshot-alt": {
+        "contentHash": "97732674497a",
+        "anchorHash": "9f2623656ef4",
+        "children": {
+          "prose:2": {
+            "contentHash": "029320ad166c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5a27b480c481"
+          },
+          "prose:3": {
+            "contentHash": "28391d3bc64e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5e291d7bcb2d"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1"
+        ]
+      },
+      "catalog-item-gallery-title": {
+        "contentHash": "352cfc749e55",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "catalog-item-info-title": {
+        "contentHash": "170322a32f3c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "catalog-item-link-label": {
+        "contentHash": "78ccbadcd54c",
+        "anchorHash": "026ae0a0f87c",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5e291d7bcb2d"
+          },
+          "prose:2": {
+            "contentHash": "b8d31e852725",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "168dcb700851"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:2",
+          "icu:1"
+        ]
+      },
+      "catalog-item-see-next": {
+        "contentHash": "6e4135961a36",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "catalog-item-source-code": {
+        "contentHash": "bf046c7395cb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "catalog-item-view-on-github": {
+        "contentHash": "20672423d716",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "catalog-item-visit-website": {
+        "contentHash": "15bf74726c6b",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "catalog-item-about-title",
+      "catalog-item-gallery-modal-title",
+      "catalog-item-gallery-screenshot-alt",
+      "catalog-item-gallery-title",
+      "catalog-item-info-title",
+      "catalog-item-link-label",
+      "catalog-item-see-next",
+      "catalog-item-source-code",
+      "catalog-item-view-on-github",
+      "catalog-item-visit-website"
+    ]
+  },
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
+}

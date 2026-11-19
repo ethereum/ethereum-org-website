@@ -90,7 +90,7 @@ Wykonanie transakcji w `execution_payload` aktualizuje globalny stan. Wszyscy kl
 | `parent_hash` | hash bloku nadrzędnego |
 | `fee_recipient` | adres konta, na które uiszczane są opłaty transakcyjne |
 | `state_root` | hash główny dla globalnego stanu po zastosowaniu zmian w tym bloku |
-| `receipts_root` | hash drzewa (trie) paragonów transakcji |
+| `receipts_root` | hash drzewa (trie) pokwitowań transakcji |
 | `logs_bloom` | struktura danych zawierająca logi zdarzeń |
 | `prev_randao` | wartość używana w losowym wyborze walidatora |
 | `block_number` | numer bieżącego bloku |
@@ -110,7 +110,7 @@ Sam `execution_payload` zawiera następujące elementy (zauważ, że jest to ide
 | `parent_hash` | hash bloku nadrzędnego |
 | `fee_recipient` | adres konta, na które uiszczane są opłaty transakcyjne |
 | `state_root` | hash główny dla globalnego stanu po zastosowaniu zmian w tym bloku |
-| `receipts_root` | hash drzewa (trie) paragonów transakcji |
+| `receipts_root` | hash drzewa (trie) pokwitowań transakcji |
 | `logs_bloom` | struktura danych zawierająca logi zdarzeń |
 | `prev_randao` | wartość używana w losowym wyborze walidatora |
 | `block_number` | numer bieżącego bloku |
@@ -151,3 +151,5 @@ _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!
 - [Transakcje](/developers/docs/transactions/)
 - [Gaz](/developers/docs/gas/)
 - [Dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

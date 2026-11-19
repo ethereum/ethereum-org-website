@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/guide-to-smart-contract-security-tools/index.md",
   "generatedAt": "2026-06-17T23:46:39.215Z",
-  "rootHash": "63bc968aec48",
+  "rootHash": "d8705db05822",
   "tree": {
-    "contentHash": "de61e187f574",
-    "anchorHash": "adba9d767c97",
+    "contentHash": "d12fa1c59f55",
+    "anchorHash": "4dc8e1a6efa4",
     "children": {
       "frontmatter:title": {
         "contentHash": "0f21c10073ba",
@@ -17,15 +17,34 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f10cc36124c6"
+        "anchorHash": "d78efb663a1b"
       },
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "552d8183fdba"
+        "contentHash": "742c3eddde57",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "5d2d3ceb7abe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

@@ -29,7 +29,7 @@ Sasisho la Fusaka ni hatua moja tu katika malengo ya maendeleo ya muda mrefu ya 
 
 Hiki ndicho _kivutio kikuu_ cha mchepuo wa Fusaka, kipengele kikuu kilichoongezwa katika sasisho hili. Matabaka ya 2 (l2) kwa sasa huchapisha data zao kwenye Ethereum katika mablobu, aina ya data ya muda mfupi iliyoundwa mahususi kwa ajili ya matabaka ya 2 (l2). Kabla ya Fusaka, kila nodi kamili inapaswa kuhifadhi kila blobu ili kuhakikisha kuwa data ipo. Kadiri uwezo wa upitishaji wa blobu unavyoongezeka, kulazimika kupakua data hii yote kunakuwa na matumizi makubwa ya rasilimali yasiyoweza kuvumilika.
 
-Pamoja na [uchukuaji sampuli wa upatikanaji wa data](https://notes.ethereum.org/@fradamt/das-fork-choice) , badala ya kulazimika kuhifadhi data zote za blobu, kila nodi itawajibika kwa sehemu ndogo ya data ya blobu. Mablobu yanasambazwa kwa usawa na kwa nasibu kwenye nodi katika mtandao huku kila nodi kamili ikishikilia 1/8 tu ya data, hivyo kuwezesha uwezo wa kuongezeka kinadharia hadi mara 8. Ili kuhakikisha upatikanaji wa data, sehemu yoyote ya data inaweza kujengwa upya kutoka kwa 50% yoyote iliyopo ya jumla kwa mbinu zinazopunguza uwezekano wa data isiyo sahihi au inayokosekana hadi kiwango kidogo sana cha kifumbaji (~moja katika 10<sup>20</sup> hadi moja katika 10<sup>24</sup>).
+Pamoja na [uchukuaji sampuli wa upatikanaji wa data](https://notes.ethereum.org/@fradamt/das-fork-choice) , badala ya kulazimika kuhifadhi data zote za blobu, kila nodi itawajibika kwa sehemu ndogo ya data ya blobu. Mablobu yanasambazwa kwa usawa na kwa nasibu kwenye nodi katika mtandao huku kila nodi kamili ikishikilia 1/8 tu ya data, hivyo kuwezesha uwezo wa kuongezeka kinadharia hadi mara 8. Ili kuhakikisha upatikanaji wa data, sehemu yoyote ya data inaweza kujengwa upya kutoka kwa 50% yoyote iliyopo ya jumla kwa mbinu zinazopunguza uwezekano wa data isiyo sahihi au inayokosekana hadi kiwango kidogo sana cha kifumbaji (\~moja katika 10<sup>20</sup> hadi moja katika 10<sup>24</sup>).
 
 Hii huweka mahitaji ya maunzi na kipimo data kwa nodi kuwa yanayowezekana huku ikiwezesha kuongezeka kwa blobu na kusababisha uwezo zaidi wa kuongezeka kwa ada ndogo kwa matabaka ya 2 (l2).
 
@@ -135,11 +135,11 @@ Lengo ni kufunga muda wa usambazaji/uthibitishaji wa hali mbaya zaidi na kuoanis
 
 #### Weka kikomo cha gesi cha msingi kuwa milioni 60 {#set-default-gas-limit-to-60-million}
 
-Kabla ya kuongeza kikomo cha gesi kutoka 30M hadi 36M mnamo Februari 2025 (na baadaye hadi 45M), thamani hii haikuwa imebadilika tangu Unganisho (Septemba 2022). EIP hii inalenga kufanya uwezo wa kuongezeka thabiti kuwa kipaumbele.
+Kabla ya kuongeza kikomo cha gesi kutoka 30M hadi 36M mnamo Februari 2025 (na baadaye hadi 45M), thamani hii haikuwa imebadilika tangu Unganisho (Septemba 2022). EIP hii inalenga kufanya uongezaji thabiti kuwa kipaumbele.
 
-EIP-7935 inaratibu timu za wateja wa EL ili kuongeza kikomo cha gesi cha msingi juu ya 45M ya leo kwa Fusaka. Ni EIP ya Taarifa, lakini inauliza waziwazi wateja kujaribu vikomo vya juu kwenye mitandao ya wasanidi, kukubaliana juu ya thamani salama, na kusafirisha nambari hiyo katika matoleo yao ya Fusaka.
+EIP-7935 iliratibu timu za wateja wa EL kuongeza kikomo cha gesi cha msingi juu ya 45M iliyotangulia Fusaka. Ni EIP ya Taarifa, lakini iliomba waziwazi wateja kujaribu vikomo vya juu zaidi kwenye mitandao ya wasanidi, kukubaliana juu ya thamani salama, na kusambaza nambari hiyo katika matoleo yao ya Fusaka.
 
-Upangaji wa mtandao wa wasanidi unalenga mkazo wa ~60M (vitalu kamili vilivyo na mzigo wa kutengenezwa) na ongezeko la mara kwa mara; utafiti unasema matatizo ya ukubwa wa kitalu ya hali mbaya zaidi hayapaswi kufunga chini ya ~150M. Usambazaji unapaswa kuoanishwa na ukomo wa kikomo cha gesi cha muamala (EIP-7825) ili hakuna muamala mmoja unaoweza kutawala kadiri vikomo vinavyoongezeka.
+Majaribio ya mtandao wa wasanidi yalilenga ~60M chini ya shinikizo (vitalu kamili vyenye mzigo wa kutengenezwa) kwa nyongeza za mara kwa mara; utafiti unasema matatizo ya ukubwa wa kitalu katika hali mbaya zaidi hayapaswi kufunga chini ya ~150M. Usambazaji uliambatana na ukomo wa kikomo cha gesi cha muamala (EIP-7825) ili hakuna muamala mmoja unaoweza kutawala kadiri vikomo vinavyoongezeka. Wateja walisambaza 60M kama msingi wa Fusaka.
 
 **Rasilimali**: [Ufafanuzi wa kiufundi wa EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -249,11 +249,11 @@ Mahitaji ya nodi bado yako ndani ya [ukingo uliopendekezwa](https://eips.ethereu
 
 Nodi za kawaida zisizo na wathibitishaji wowote zitajiandikisha kwa vijitandao 4 tu, zikitoa hifadhi kwa 1/8 ya data asili. Hii inamaanisha kuwa kwa kiasi sawa cha data ya blobu, kipimo data cha nodi cha kuzipakua kitakuwa kidogo kwa sababu ya nane (8). Matumizi ya diski na kipimo data cha kupakua cha mablobu kwa nodi kamili ya kawaida kinaweza kupungua karibu 80%, hadi Mb chache tu.
 
-#### Waweka dhamana wa pekee {#solo-stakers}
+#### Waweka dhamana binafsi {#solo-stakers}
 
-Ikiwa nodi inatumika kwa mteja wa mthibitishaji, inapaswa kuhifadhi safu wima zaidi na kwa hivyo kuchakata data zaidi. Pamoja na mthibitishaji kuongezwa, nodi hujiandikisha kwa angalau vijitandao 8 vya safu wima na kwa hivyo huchakata data mara mbili zaidi ya nodi ya kawaida lakini bado ni chini ya kabla ya Fusaka. Ikiwa salio la mthibitishaji liko juu ya ETH 287, vijitandao zaidi na zaidi vitajiandikishwa.
+Ikiwa nodi inatumiwa kwa mteja wa mthibitishaji, inabidi ihifadhi safu wima zaidi na hivyo kuchakata data zaidi. Pamoja na mthibitishaji kuongezwa, nodi hujiandikisha kwa angalau vijitandao 8 vya safu wima na hivyo kuchakata data mara mbili zaidi ya nodi ya kawaida lakini bado ni chini ya kabla ya Fusaka. Ikiwa salio la mthibitishaji liko juu ya ETH 287, vijitandao zaidi na zaidi vitajiandikishwa.
 
-Kwa mweka dhamana wa pekee, hii inamaanisha matumizi yao ya diski na kipimo data cha kupakua kitapungua karibu 50%. Hata hivyo ili kujenga vitalu ndani ya nchi na kupakia mablobu yote kwenye mtandao, kipimo data zaidi cha kupakia kinahitajika. Wajenzi wa ndani watahitaji kipimo data cha kupakia mara 2-3 zaidi kuliko hapo awali wakati wa Fusaka na kwa lengo la BPO2 la mablobu 15/21, kipimo data cha mwisho cha kupakia kinachohitajika kitapaswa kuwa karibu mara 5 zaidi, kwa 100Mpbs.
+Kwa mweka dhamana binafsi, hii inamaanisha matumizi yao ya diski na kipimo data cha kupakua kitapungua kwa karibu 50%. Hata hivyo ili kuunda vitalu kwenye mashine ya ndani na kupakia mablobu yote kwenye mtandao, kipimo data zaidi cha kupakia kinahitajika. Wajenzi wa ndani watahitaji kipimo data cha kupakia cha juu mara 2-3 kuliko hapo awali wakati wa Fusaka na kwa lengo la BPO2 la mablobu 15/21, kipimo data cha mwisho cha kupakia kinachohitajika kitapaswa kuwa juu mara 5 zaidi, kwa 100Mbps.
 
 #### Wathibitishaji wakubwa {#large-validators}
 

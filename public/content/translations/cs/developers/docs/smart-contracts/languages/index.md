@@ -4,27 +4,27 @@ description: "Přehled a srovnání dvou hlavních jazyků pro chytré kontrakty
 lang: cs
 ---
 
-Skvělou vlastností [Etherea](/) je, že chytré kontrakty lze programovat pomocí jazyků, které jsou pro vývojáře poměrně přívětivé. Pokud máte zkušenosti s Pythonem nebo jakýmkoli [jazykem se složenými závorkami](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), najdete zde jazyk se známou syntaxí.
+Skvělou vlastností [Etherea](/) je, že chytré kontrakty lze programovat pomocí jazyků, které jsou k vývojářům poměrně přívětivé. Pokud máte zkušenosti s jazykem Python nebo jakýmkoli [jazykem používajícím složené závorky](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), najdete zde jazyk se známou syntaxí.
 
 Dva nejaktivnější a nejudržovanější jazyky jsou:
 
 - Solidity
 - Vyper
 
-Remix IDE poskytuje komplexní vývojové prostředí pro vytváření a testování kontraktů v Solidity i Vyperu. [Vyzkoušejte Remix IDE v prohlížeči](https://remix.ethereum.org) a začněte programovat.
+Integrované vývojové prostředí (IDE) Remix poskytuje komplexní vývojové prostředí pro vytváření a testování kontraktů v Solidity i Vyperu. [Vyzkoušejte Remix IDE v prohlížeči](https://remix.ethereum.org) a začněte programovat.
 
-Zkušenější vývojáři mohou také chtít použít Yul, mezijazyk pro [Ethereum Virtual Machine](/developers/docs/evm/), nebo Yul+, což je rozšíření jazyka Yul.
+Zkušenější vývojáři mohou také chtít použít Yul, zprostředkující jazyk pro [virtuální stroj Etherea (EVM)](/developers/docs/evm/), nebo Yul+, což je rozšíření jazyka Yul.
 
 Pokud jste zvědaví a rádi pomáháte testovat nové jazyky, které jsou stále ve fázi intenzivního vývoje, můžete experimentovat s Fe, nově vznikajícím jazykem pro chytré kontrakty, který je v současné době stále v plenkách.
 
 ## Předpoklady {#prerequisites}
 
-Předchozí znalost programovacích jazyků, zejména JavaScriptu nebo Pythonu, vám může pomoci pochopit rozdíly v jazycích pro chytré kontrakty. Než se ponoříte příliš hluboko do srovnávání jazyků, doporučujeme vám také porozumět chytrým kontraktům jako konceptu. [Úvod do chytrých kontraktů](/developers/docs/smart-contracts/).
+Předchozí znalost programovacích jazyků, zejména JavaScriptu nebo Pythonu, vám může pomoci pochopit rozdíly v jazycích pro chytré kontrakty. Doporučujeme také, abyste porozuměli chytrým kontraktům jako konceptu, než se příliš ponoříte do srovnávání jazyků. [Úvod do chytrých kontraktů](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
-- Objektově orientovaný vysokoúrovňový jazyk pro implementaci chytrých kontraktů.
-- Jazyk se složenými závorkami, který byl nejvíce ovlivněn jazykem C++.
+- Objektově orientovaný, vysokoúrovňový jazyk pro implementaci chytrých kontraktů.
+- Jazyk používající složené závorky, který byl nejvíce ovlivněn jazykem C++.
 - Staticky typovaný (typ proměnné je znám v době kompilace).
 - Podporuje:
   - Dědičnost (můžete rozšiřovat jiné kontrakty).
@@ -73,7 +73,7 @@ contract Coin {
     }
 
     // Odešle množství existujících mincí
-    // od jakéhokoli volajícího na adresu
+    // od jakéhokoliv volajícího na adresu
     function send(address receiver, uint amount) public {
         require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
@@ -101,6 +101,8 @@ Tento příklad by vám měl poskytnout představu o tom, jak vypadá syntaxe ko
   - Smyčky nekonečné délky
   - Binární pevnou řádovou čárku
 
+Od verze 0.4.0 podporuje Vyper [systém modulů](https://docs.vyperlang.org/en/stable/using-modules.html). Opětovného použití kódu je dosaženo spíše prostřednictvím kompozice než dědičností tříd.
+
 Pro více informací si [přečtěte zdůvodnění návrhu jazyka Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Důležité odkazy {#important-links-1}
@@ -115,7 +117,7 @@ Pro více informací si [přečtěte zdůvodnění návrhu jazyka Vyper](https:/
 - [VyperPunk - naučte se zabezpečit a hackovat chytré kontrakty ve Vyperu](https://github.com/SupremacyTeam/VyperPunk)
 - [Vyper Hub pro vývoj](https://github.com/zcor/vyper-dev)
 - [Nejlepší příklady chytrých kontraktů ve Vyperu](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
-- [Awesome Vyper – kurátorované zdroje](https://github.com/spadebuilders/awesome-vyper)
+- [Awesome Vyper - kurátorované zdroje](https://github.com/spadebuilders/awesome-vyper)
 
 ### Příklad {#example}
 
@@ -132,7 +134,7 @@ auctionEnd: public(uint256)
 highestBidder: public(address)
 highestBid: public(uint256)
 
-# Na konci nastaveno na true, znemožní jakoukoli změnu
+# Na konci nastaveno na true, znemožní jakoukoliv změnu
 ended: public(bool)
 
 # Udržuje přehled o vrácených nabídkách, abychom mohli následovat vzor výběru
@@ -141,7 +143,7 @@ pendingReturns: public(HashMap[address, uint256])
 # Vytvoří jednoduchou aukci s dobou pro podávání nabídek `_bidding_time`
 # sekund ve prospěch
 # adresy příjemce `_beneficiary`.
-@external
+@deploy
 def __init__(_beneficiary: address, _bidding_time: uint256):
     self.beneficiary = _beneficiary
     self.auctionStart = block.timestamp
@@ -164,9 +166,9 @@ def bid():
     self.highestBidder = msg.sender
     self.highestBid = msg.value
 
-# Vybere dříve vrácenou nabídku. Vzor výběru se
-# zde používá k zamezení bezpečnostnímu problému. Pokud by se vrácení peněz posílalo přímo
-# jako součást bid(), škodlivý přihazující kontrakt by mohl zablokovat
+# Vybere dříve vrácenou nabídku. Vzor výběru je
+# zde použit k zamezení bezpečnostnímu problému. Pokud by vrácení peněz bylo přímo
+# odesláno jako součást bid(), škodlivý přihazující kontrakt by mohl zablokovat
 # tato vrácení peněz a tím zablokovat příchod nových vyšších nabídek.
 @external
 def withdraw():
@@ -212,7 +214,7 @@ Pokud jste v Ethereu nováčkem a ještě jste neprogramovali v žádném jazyce
 
 **Yul**
 
-- Mezijazyk pro Ethereum.
+- Zprostředkující jazyk pro Ethereum.
 - Podporuje [EVM](/developers/docs/evm) a [Ewasm](https://github.com/ewasm), což je WebAssembly přizpůsobené pro Ethereum, a je navržen tak, aby byl použitelným společným jmenovatelem obou platforem.
 - Dobrý cíl pro vysokoúrovňové fáze optimalizace, ze kterých mohou těžit platformy EVM i Ewasm stejnou měrou.
 
@@ -251,14 +253,14 @@ Následující jednoduchý příklad implementuje funkci mocniny. Lze jej zkompi
 }
 ```
 
-Pokud již máte s chytrými kontrakty bohaté zkušenosti, plnou implementaci ERC-20 v jazyce Yul najdete [zde](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Pokud již máte s chytrými kontrakty bohaté zkušenosti, plnou implementaci ERC-20 v Yul najdete [zde](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Fe {#fe}
 
-- Staticky typovaný jazyk pro Ethereum Virtual Machine (EVM).
+- Staticky typovaný jazyk pro virtuální stroj Etherea (EVM).
 - Inspirováno jazyky Python a Rust.
 - Klade si za cíl být snadno naučitelný – a to i pro vývojáře, kteří jsou v ekosystému Etherea nováčky.
-- Vývoj jazyka Fe je stále v rané fázi, jazyk měl svou alfa verzi v lednu 2021.
+- Vývoj Fe je stále v rané fázi, jazyk měl svou alfa verzi v lednu 2021.
 
 ### Důležité odkazy {#important-links-3}
 
@@ -270,7 +272,7 @@ Pokud již máte s chytrými kontrakty bohaté zkušenosti, plnou implementaci E
 
 ### Příklad kontraktu {#example-contract-3}
 
-Následuje jednoduchý kontrakt implementovaný v jazyce Fe.
+Následuje jednoduchý kontrakt implementovaný ve Fe.
 
 ```
 type BookMsg = bytes[100]
@@ -294,7 +296,7 @@ contract GuestBook:
 
 Stejně jako u jakéhokoli jiného programovacího jazyka jde především o výběr správného nástroje pro danou práci a také o osobní preference.
 
-Zde je několik věcí, které byste měli zvážit, pokud jste ještě žádný z těchto jazyků nevyzkoušeli:
+Zde je několik věcí, které byste měli zvážit, pokud jste ještě žádný z jazyků nevyzkoušeli:
 
 ### Co je skvělé na Solidity? {#solidity-advantages}
 
@@ -311,13 +313,13 @@ Zde je několik věcí, které byste měli zvážit, pokud jste ještě žádný
 ### Co je skvělé na Yul a Yul+? {#yul-advantages}
 
 - Zjednodušený a funkční nízkoúrovňový jazyk.
-- Umožňuje dostat se mnohem blíže k samotnému EVM, což může pomoci optimalizovat spotřebu gasu vašich kontraktů.
+- Umožňuje dostat se mnohem blíže k surovému EVM, což může pomoci optimalizovat spotřebu gasu vašich kontraktů.
 
 ## Srovnání jazyků {#language-comparisons}
 
-Pro srovnání základní syntaxe, životního cyklu kontraktu, rozhraní, operátorů, datových struktur, funkcí, řízení toku a dalších věcí se podívejte na tento [tahák od Auditless](https://reference.auditless.com/cheatsheet/)
+Pro srovnání základní syntaxe, životního cyklu kontraktu, rozhraní, operátorů, datových struktur, funkcí, toku řízení a dalších věcí se podívejte na tento [tahák od Auditless](https://reference.auditless.com/cheatsheet/)
 
 ## Další čtení {#further-reading}
 
-- [Knihovna kontraktů v Solidity od OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
+- [Knihovna kontraktů Solidity od OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/)
 - [Solidity na příkladech](https://solidity-by-example.org)

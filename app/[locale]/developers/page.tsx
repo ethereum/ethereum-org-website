@@ -1,9 +1,5 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -14,7 +10,7 @@ import { CopyButton } from "@/components/CopyToClipboard"
 import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
-import CardImage from "@/components/Image/CardImage"
+import { ImageWithFallback } from "@/components/Image/ImageWithFallback"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -85,9 +81,7 @@ const DocsColumn = ({
 const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  setRequestLocale(locale)
   const t = await getTranslations("page-developers-index")
-  const tCommon = await getTranslations("common")
 
   // client messages for the swipers (the page has no root I18nProvider)
   const allMessages = await getMessages({ locale })
@@ -141,11 +135,11 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
       />
 
       <HubHero
+        breadcrumbs={{ slug: "developers" }}
         heroImg={heroImage}
         header={`${t("page-developers-title-1")} ${t(
           "page-developers-title-2"
         )} ${t("page-developers-title-3")}`}
-        title={tCommon("developers")}
         description={t("page-developers-subtitle")}
       />
 
@@ -291,7 +285,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: "scaffold-docs",
                       }}
-                      rel="noopener"
+                      sendReferrer
                     >
                       {t("page-developers-quickstart-scaffold-docs")}
                     </InlineLink>
@@ -432,6 +426,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardFooter>
               </Card>
             </Grid>
+
+            <div className="mt-space-2x flex justify-center max-sm:*:w-full">
+              <ButtonLink href="/developers/tools/" className="max-md:w-full">
+                {t("page-developers-view-tools")}
+              </ButtonLink>
+            </div>
           </Section>
 
           {/* Video courses */}
@@ -678,6 +678,15 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 ]}
               />
             </Grid>
+
+            <div
+              data-flow="cta"
+              className="flex justify-center max-sm:*:w-full"
+            >
+              <ButtonLink href="/developers/docs/" className="max-md:w-full">
+                {t("page-developers-docs-overview")}
+              </ButtonLink>
+            </div>
           </Section>
 
           {/* Hackathons */}
@@ -717,15 +726,20 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                     >
                       <CardHeader>
                         <CardBanner size="sm" zoom>
-                          {bannerImage ? (
-                            <CardImage src={bannerImage} />
-                          ) : (
-                            <Image
-                              src={fallbackThumbnail}
-                              alt=""
-                              sizes="276px"
-                            />
-                          )}
+                          <ImageWithFallback
+                            src={bannerImage}
+                            alt=""
+                            width={448}
+                            height={144}
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            fallback={
+                              <Image
+                                src={fallbackThumbnail}
+                                alt=""
+                                sizes="276px"
+                              />
+                            }
+                          />
                         </CardBanner>
                       </CardHeader>
                       <CardContent>
@@ -811,8 +825,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-developers-index")
 

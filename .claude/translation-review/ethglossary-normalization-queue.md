@@ -1,0 +1,216 @@
+# ETHGlossary normalization queue
+
+Defects in ETHGlossary's own term data, found while reviewing translation imports.
+
+These matter more than per-file fixes: the pipeline treats ETHGlossary as authoritative, so a
+defective entry is **re-injected on every future run**. Fixing the file is whack-a-mole; fixing the
+entry stops it. Per the authority policy, translators and reviewers must follow the glossary even
+when an entry looks wrong — so the only place these can be corrected is upstream.
+
+Source: PR #19115 review + fix pass (24 locales, staking redesign). Earlier instances of the
+casing/acronym class were logged as known-pattern #53 in PR #19076 and remain open.
+
+## 1. Lowercased Latin acronyms inside translated compounds
+
+The entry ships the acronym in lowercase, so it renders lowercase mid-sentence in shipped content.
+
+| Locale | Entry | Ships | Should be |
+| --- | --- | --- | --- |
+| hi | `distributed validator technology (DVT)` | `वितरित सत्यापनकर्ता तकनीक (dvt)` | `(DVT)` |
+| hi | `Go Ethereum (Geth)` | `गो इथेरियम (geth)` | `(Geth)` |
+| bn, cs, es, fr, hi, id, it, ko, mr, pt-br, ru, sw, ta, te, tr, uk, ur, vi, zh (19 of 24) | `layer 2 (L2)` | `... (l2)` | `(L2)` |
+| id, ur | `liquid staking token (LST)` | `token staking likuid (lst)` | `(LST)` |
+| bn | `distributed validator technology (DVT)` | `... (dvt)` | `(DVT)` |
+| ur | `Go Ethereum (Geth)` | `... (geth)` | `(Geth)` |
+
+`layer 2 (L2)` alone accounts for thousands of shipped occurrences across the tree (see #53) —
+worth fixing once rather than sweeping repeatedly.
+
+## 2. Capitalized common nouns leaking mid-sentence
+
+The entry is capitalized, so every MT pass inserts a capital in the middle of a sentence. Neither
+language capitalizes common nouns.
+
+| Locale | Entries shipping capitalized |
+| --- | --- |
+| vi | `address` -> `Địa chỉ`, `protocol` -> `Giao thức`, `account` -> `Tài khoản`, `chain` -> `Chuỗi`, `wallet` -> `Ví`, `liquidity` -> `Thanh khoản`, `governance` -> `Quản trị`, `epoch` -> `Kỷ nguyên`, `fork` -> `Phân nhánh`, `hash` -> `Mã băm`, `hash function` -> `Hàm băm` |
+| id | `liquidity` -> `Likuiditas`, `epoch` -> `Epok` |
+| ru | `address` -> `Адрес` |
+
+This single vi cluster produced 15 mid-sentence capitals in one file in PR #19115.
+
+## 3. Wrong script or spelling in the entry itself
+
+| Locale | Entry | Problem |
+| --- | --- | --- |
+| te | `staking as a service` -> `ఒక సేవగా స్టాకింగ్` | `స్టాకింగ్` means *stacking*. Contradicts the locale's own `staking` -> `స్టేకింగ్` entry. Propagated into a page title and a nav label. |
+| ur | `decentralized` -> `لامركزی` | Uses Arabic kaf U+0643 instead of Urdu keheh U+06A9 (`لامرکزی`). The adjacent `لامرکزیت` entry uses the correct character. |
+| ur | `layer 2 (L2)`, `eth2` | Mandate Eastern-Arabic numerals (`۲`), which conflicts with the Western-numeral policy applied everywhere else and produces mixed digits in one phrase. |
+| mr | `distributed validator technology (DVT)` | Uses `सत्यापनकर्ता` where the locale's `validator` entry is `सत्यापक`. |
+| hi | `delegate` -> `प्रतिनिधि` | Noun ("representative"); the verb sense these pages need is `प्रत्यायोजित करना`. Sits inconsistently beside `delegation` -> `प्रत्यायोजन`. |
+| hi | `eth2` -> `ईटीएच2` | Ticker-derived identifier; should stay Latin per the script rule. |
+
+## 4. Missing entries that caused real translation errors
+
+No entry means the model invents one, and it invented badly in these cases.
+
+| Term | What happened |
+| --- | --- |
+| `cold storage` | it produced `celle frigorifere` — refrigerated cold rooms — in a key-custody sentence. |
+| `externally owned account (EOA)` | fr produced `compte détenu par un tiers` ("held by a third party"), inverting the custody model. Also already live on `dev` in `developers/docs/accounts/index.md`. |
+| `auth token` / JWT token | ta, zh, zh-tw all applied the crypto-`token` entry to the `jwtsecret` auth token (`வில்லை` / `代币` / `代幣`). Needs a distinct sense. |
+| `slot` | zh has no entry, so `epoch` -> `时段` absorbed it and both units appear identically in one sentence. |
+| `delegated staking` | The redesign makes this a primary nav label; no entry, so locales split (hi `डेलिगेटेड`/`प्रत्यायोजित`, ja `委任型`/`デリゲート`, uk, ta, bn, id all two-way). |
+| `stablecoin` (tr) | Open since #18772; the `sabit coin` regression has now recurred three times because nothing upstream pins it. |
+| `production` (deployment sense) | ru, uk, dvt pages rendered it as manufacturing (`производство`, `виробництво`). |
+| `compromise` (security sense) | tr, zh, zh-tw, ur, mr, ta all reached for the negotiation sense (`uzlaşma`, `妥协`, `سمجھوتہ`, `तडजोड`, `சமரசம்`). A distinct entry would fix six locales at once. |
+
+## 5. Internally inconsistent pairs
+
+| Locale | Conflict |
+| --- | --- |
+| ar | `staking` -> `التخزين` vs `staking as a service` -> `التحصيص كخدمة`. Both surface on the same page. |
+| mr | `mainnet` -> `मुख्यनेट` vs `Ethereum Mainnet` -> `इथरियम मेननेट`. |
+| ta | `Ethereum` -> `எத்திரியம்` vs the `Ethereum Mainnet` compound -> `எத்தேரியம்`. |
+| tr | `consensus client` -> `fikir birliği istemcisi` vs `consensus layer` -> `mutabakat katmanı`; the entry's own note concedes `mutabakat` is more common in technical docs. |
+| sw | `client` -> `kiteja` (ki-/vi- class) but `consensus client` -> `mteja wa mwafaka` and `client diversity` -> `anuwai ya wateja` (m-/wa- animate class) | **The single worst entry conflict found.** Swahili noun class governs agreement on verbs, relatives, demonstratives and possessives, so these entries make the locale *impossible* to render consistently: any sentence naming both an execution and a consensus client must use mixed concord. The `consensus client` entry's own note concedes `mteja` means a human. Recommend `kiteja cha mwafaka` and `anuwai ya viteja`. Until then this defect will recur on every run -- it was already fixed once at 31 sites in #19015 and came back at ~85. |
+| sw | `liquid staking token (LST)` -> `tokani ya uwekaji amana wenye ukwasi (lst)` | `tokani` conflicts with `token` -> `tokeni`; `amana` conflicts with `stake` -> `dhamana`; acronym lowercased. |
+| sw | `staking as a service` -> `kuweka hisa kama huduma` | `hisa` (shares) conflicts with `stake` -> `dhamana` used everywhere else. |
+
+## 6. Non-NFC term data (added from PR #19034)
+
+| Locale | Entry | Defect |
+| --- | --- | --- |
+| ar | `validator` -> `مُدَقِّق` | SHADDA U+0651 stored **before** KASRA U+0650. Canonical order is kasra (ccc 32) then shadda (ccc 33). Renders identically, but it is the only non-NFC entry of the 165 ar terms and it denormalized `ar/community/research/index.md` (NFC on `origin/dev`, not NFC after the run). Breaks byte-level search, diff and dedup. |
+| ur | `decentralized` -> `لامركزی` | Arabic kaf U+0643 where Urdu keheh U+06A9 belongs. **Do not sweep the tree from this entry alone** -- the defective form is already dominant 646:186 in the ur tree, so the fix must be: normalize the entry, then one tree-wide codepoint sweep in its own commit. See known-patterns #70. |
+
+Assert `text == NFC(text)` on glossary responses as part of the fetch, so an entry like this cannot enter the pipeline silently.
+
+## 7. Bare-vs-compound rows that contradict their own note (added from PR #19034)
+
+| Locale | Entry | Defect |
+| --- | --- | --- |
+| de | `contract` -> `Vertrag` | The row's own note reads "Smart contract -- code deployed on the blockchain. NOT a legal agreement." `Vertrag` **is** the German legal-contract word. The `smart contract` row is correctly `Smart Contract`. The bare row contradicts its note. |
+| it | `contract` -> `contratto` | Same shape (note says NOT a legal agreement; `contratto` is the legal word). |
+| ta | `contract` -> `ஒப்பந்தம்` | Same shape. |
+| tr | `contract` -> `Sözleşme` | Same shape, plus a capitalized common noun. |
+
+Locales whose `contract` row *does* carry the code sense (`কন্ট্রাক্ট`, `컨트랙트`, `کنٹریکٹ`) have notes explicitly forbidding the legal word -- and **bn, ko and ur all deviated to the legal word anyway** on the same key in PR #19034. So the entries that are right are being ignored and the entries that are wrong are being followed. Recommend making every `contract` row the code sense and adding the legal sense as a separate `legal contract` term. This is known-patterns #30 (compound wins, bare loses) in a new place.
+
+## 8. Missing entries that caused real errors in PR #19034
+
+| Term | Evidence |
+| --- | --- |
+| `soundness` (proof-system property) | Rendered as "reliability"/"validity" in de, id, pl, ta, vi. Distinct from validity; needs its own row. |
+| `test harness` | tr "hardware", ta "saddle", es/fr "horse harness", sw "apparatus". The physical sense dominates in most target languages. |
+| `custodial` / `custody` | ta rendered custodial bridges as *archive* bridges, turning a risk into a safety claim -- the second ta custody inversion in two PRs (#19115). fr `ponts de garde` = "on-duty bridges". |
+| `recourse` | "no way out" instead of redress in ru, id, pl, uk. |
+| `capture` (takeover sense) | Flattened to "monopoly" in ko, ja, mr, it. |
+| `locally` (on your own machine) | sw `ndani ya nchi` = "domestically, within the country". |
+| `derivatives` (financial) | sw `viingilio` = "entrance fees" -- tree-established but semantically wrong. |
+| `gatekeeper`, `lock-in` | Held valence in every locale this time, but only because the surrounding prose carried it. Worth entries before the next values-register page. |
+
+## Priority
+
+Sections 1 and 2 are mechanical and affect the most shipped text. Section 4's `compromise` and
+`auth token` entries would each prevent errors in five or more locales. Section 3's te `స్టాకింగ్`
+typo is the most visible single defect — it reached a page title.
+
+Section 6 is a correctness bug in the data itself and should go first: it is two entries and it
+silently denormalizes every file that uses them. Section 7 is the highest-leverage linguistic fix --
+one row per locale removes a recurring critical on every page that says "contracts". Section 8's
+`soundness` and `test harness` each broke five locales in a single PR.
+
+
+## 9. Missing entries: `Devcon` and `Devconnect` (PR #19142)
+
+Neither name is in ETHGlossary (`/filter` matched only `claim` against the banner source), and neither is in `PROTECTED_BRAND_NAMES` in `intl-sanitizer.ts`. With no entry and no sanitizer rule, every run re-decides an event name that now ships in UI strings. On PR #19142 the fleet split 12-1 and nine locales were hand-corrected -- which holds only until the English source moves.
+
+**Requested entry -- `Devcon`** (sibling entry for `Devconnect`):
+
+| Field | Value |
+| --- | --- |
+| `term_role` | `brand-or-project` |
+| `script_rule` | `transliterate` (group rules), with Latin-pinned `contexts` for the title lockup and image `alt` text |
+
+| Locale | Requested `translation.term` | Confidence | Basis |
+| --- | --- | --- | --- |
+| hi, mr | `डेवकॉन` | high | devcon.org's own hi/mr sites. Note `blog.ethereum.org/hi` disagrees (`देवकॉन`); prefer devcon.org, and see known-patterns #76 for why the blog does not count |
+| ko | `데브콘` | high | tree precedent, human-authored |
+| ja | `Devcon` (`keep_latin` override) | high | independent JP crypto press is uniformly Latin; no katakana usage found |
+| ar | `ديفكون` **or** `ديڤكون` | **low -- needs native decision** | 6.3 allows either ف or ڤ for "v" and demands consistency. Shipped ف, but the evidence that decided it was pipeline output, so the tie is open |
+| bn | `ডেভকন` | low -- derived | LLM-derived; no Bengali press usage found |
+| ta | `டெவ்கான்` | low -- derived | LLM-derived |
+| te | `డెవ్కాన్` | low -- derived | LLM-derived, halant per 6.1 te rule |
+| ur | `ڈیوکان` | low -- derived | LLM-derived |
+| ru | `Девкон` + case guidance | **blocked** | Qualifies for a 6.2 consumer-tier override, but the usage `на Devcon 8` needs prepositional case (`на Девконе 8`) or 7.3 apposition (`на конференции Девкон 8`). Needs a native call on which |
+| uk | none | **blocked** | No EF uk localization exists, and 6.2 forbids deriving Ukrainian from Russian |
+| zh, zh-tw | `Devcon` (`keep_latin`) | high | 6.5 default; do not auto-generate phonetic Hanzi |
+
+This is a clean section-9.3-shaped addition rather than a conflict -- `Devcon` is not an existing entry, so there is no `keep_latin` flag to reconcile.
+
+Two pre-existing items the new entry will eventually correct, both out of scope for #19142: `src/intl/*/common.json` ships `"devcon": "Devcon"` and `"nav-devcon-label": "Devcon"` in **24/24** locales, and `public/content/translations/` has zero native-script renderings outside ko (hi 66 Latin, zh 74, ja 71, zh-tw 71, ru 70, uk 70, ta 69, ur 66, ar 64, te 62, mr 55, bn 48).
+
+## 10. Missing entry: `General Admission` (PR #19228)
+
+Same gap as section 9, one campaign later. `General Admission` is a named Devcon ticket tier that now ships in a UI string, and it is in neither ETHGlossary nor `PROTECTED_BRAND_NAMES`. PR #19228 split four ways across 24 locales (known-patterns #77). Unlike `Devcon`, no locale is the reference: the correct treatment depends on what devcon.org's checkout actually labels the tier per language.
+
+**Requested entry -- `General Admission`:**
+
+| Field | Value |
+| --- | --- |
+| `term_role` | `product-tier` (or `brand-or-project` if no tier role exists) |
+| `script_rule` | **blocked on a product answer** -- see below |
+
+The blocking question is not linguistic. If devcon.org's hi and mr ticket pages label the tier in native script, the entry should be `transliterate`/translated to match them; if every localized checkout page shows Latin `General Admission`, the entry should be `keep_latin` so the banner names what the buyer will actually click. Resolve by reading devcon.org/{hi,mr}/tickets -- the two locales this campaign routes to -- then set one rule for all 24.
+
+Until then the shipped forms stand. Two worth noting as furthest from a tier name if the answer comes back "keep Latin": ru `стандартный входной билет` and zh `普通门票` describe a generic ticket class rather than naming the tier.
+
+**Related:** this entry and section 9's `Devcon` are the same request shape and should land together -- both are Devcon-campaign proper nouns that the pipeline re-decides on every run.
+
+## 11. `zk-rollup` compound entries that conflict with their own parts or with shipped content (PR #19291)
+
+The `zk-rollup` entry (English head `zero-knowledge rollup`) is the compound the pipeline correctly applies for "zero-knowledge rollups", and all 24 locales currently match it. Three of those entries conflict with something else the glossary or the site already says.
+
+| Locale | `zk-rollup` entry | Conflicts with | Consequence |
+| --- | --- | --- | --- |
+| zh-tw | `零知識卷疊` (confidence **medium**) | `rollups` -> `匯總` (high), and the zh-tw page the `<zkrollups>` link points at is titled `零知識匯總` (59 uses of `匯總`, 0 of `卷疊`) | Reader clicks `零知識卷疊` and lands on a page called `零知識匯總`. `卷疊` is 11 occurrences repo-wide against 666 for `匯總`; it looks like a Simplified-to-Traditional carryover of zh's legitimate `卷叠` |
+| ta | `பூஜ்ஜிய அறிவு சுருக்கம்` (confidence **medium**, translated, unhyphenated) | `rollups` -> `ரோலப்கள்` (high), whose note says direct transliteration is preferred; the bare `zero-knowledge` entry is hyphenated `பூஜ்ய-அறிவு` | The compound translates what the base entry says to transliterate, and drops the hyphen the bare entry carries. Within one page, `சுருக்கம்` then does double duty for "rollup" and for "succinct" (`சுருக்கமான சான்று`) |
+| te | `జీరో-నాలెడ్జ్ రోలప్` | `rollups` -> `రోల్అప్‌లు`, i.e. a different base spelling (`రోలప్` vs `రోల్అప్`) | The glossary ships two spellings of the same base noun, so singular and plural of one term disagree depending on which entry the pipeline hits |
+
+zh is the control case and needs no change: its `零知识卷叠` matches the zh page title, `src/intl/zh/glossary.json`, and 67 repo-wide uses.
+
+Resolving these upstream is what stops a reviewer re-litigating them: because `/filter` returns only the single-word parts, a compound that disagrees with its parts reads at review time like a pipeline defect. See `intl-review/references/ethglossary-usage.md` step 0.
+
+## 12. Gaps and conflicts surfaced by PR #19326
+
+Five items, all found reviewing the same four source files across 24 locales.
+
+**a. Missing short forms block an otherwise mechanical fix.** Collapsing an over-expanded acronym back to the bare form (known-patterns #80) depends on the term's `ui`/`tag` context holding the acronym. Six locale/term pairs have no short form, so 21 keys had to ship expanded: `DAO` in ar/hi/mr, `DEX` in ar/hi/mr/ur/zh-tw, `DeFi` in ko. Every other locale has them. Adding a bare-acronym `ui`/`tag` context to these entries closes the gap without touching the prose form.
+
+**b. Missing entries: `Python`, `Rust`, `Foundation`, `salt`.** Each caused a real defect this run that had to be argued from the general always-Latin rule rather than from an entry:
+
+| Term | Defect | Locale |
+| --- | --- | --- |
+| `Python` | `पायथन-आधारित` at 4 sites, while the same file kept `Python` Latin elsewhere | mr |
+| `Rust` | `रस्ट-आधारित` | mr |
+| `Foundation` (the foundation.app marketplace) | transliterated to `파운데이션`; 21/24 locales keep it Latin | ko |
+| `salt` (cryptographic) | rendered `chumvi`, the edible kind | sw |
+
+`salt` is the instructive one: English scare-quotes it as a coinage, and PR #18942's sw review had already established English `"salt"` as the correct sw rendering. Without an entry that decision gets re-litigated every run.
+
+**c. `Keccak-256` numerals contradict the cross-cutting rule.** bn `কেক্যাক-২৫৬` and mr `केकाक-256` disagree with each other and with the always-Latin treatment applied to hash-function names elsewhere; ar's entry notes "Western Arabic numerals are retained as per instructions" while bn's uses Bengali digits. This is the long-standing issue #53 and it stays deliberately unfixed in the locale files until the entries agree.
+
+**d. hi `contract` / `smart contract` notes invite the deviation they should prevent.** The entries are `अनुबंध` and `स्मार्ट अनुबंध`, but both carry notes pointing at the other form: "'कॉन्ट्रैक्ट' is very frequently used in developer communities" and "स्मार्ट कॉन्ट्रैक्ट is widely accepted in conversational Hindi tech discussions". PR #19326 flipped `languages/index.md` wholesale to the note's form (25 sites) while its sibling `testing/index.md` kept the entry's form, splitting one page pair two ways. Either demote the note to an `accepted` alias or change the entry; as written it reads as permission.
+
+**e. fr `mainnet` vs `Ethereum Mainnet` is correct but trap-shaped.** `mainnet` -> `Réseau principal` (capitalized) and `Ethereum Mainnet` -> `réseau principal Ethereum` (lowercase). Both are right, and a reviewer who sweeps one form across a file will corrupt the other: `testing/index.md` holds four of the first and one of the second. Worth a cross-reference note on each entry rather than a data change.
+
+## 13. Gaps and conflicts surfaced by PR #19474
+
+**a. `layer 1 (l1)` / `layer 2 (l2)` `ui` context is the expanded lowercase phrase in ~20 locales** (es `Capa 2 (l2)`, vi `Lớp 2 (l2)`, ta `அடுக்கு 2 (l2)`, ur `لیئر ۲ (l2)`, uk `Мережі рівня 2`). The English note means lowercase *layer*, not the acronym. Every stat caption and table header in the /organizations pages had to be hand-trimmed to bare `L1`/`L2` (known-patterns #86). Set `ui`/`tag` to the bare uppercase acronym and uppercase the parenthetical in `prose`/`heading`.
+
+**b. `decentralized exchange (dex)` `ui` has no acronym** in es (`Exchange descentralizado`), ja (`分散型取引所`) and the #19326 set. Add bare `DEX`.
+
+**c. cs `gas limit` = `limit plynu` contradicts cs `gas` = `gas`** (loanword, community standard). The compound keeps reintroducing `plynu` (glamsterdam:42 fixed three times). Change to `limit gasu`.
+
+**d. sw client split:** `execution client` = `kiteja` but `consensus client` = `mteja` (customer). Bare "client" in comparison tables keeps landing on `mteja`/`wateja`. Needs one ruling.

@@ -151,3 +151,5 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 - [İşlemler](/developers/docs/transactions/)
 - [Gaz](/developers/docs/gas/)
 - [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

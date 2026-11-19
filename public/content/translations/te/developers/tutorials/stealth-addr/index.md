@@ -135,11 +135,11 @@ sidebarDepth: 3
 
 #### WASM కాంపోనెంట్ {#wasm}
 
-WASM లోకి కంపైల్ అయ్యే సోర్స్ కోడ్ [Rust](https://rust-lang.org/) లో వ్రాయబడింది. మీరు దానిని [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) లో చూడవచ్చు. ఈ కోడ్ ప్రధానంగా JavaScript కోడ్ మరియు [`eth-stealth-addresses` లైబ్రరీ](https://github.com/kassandraoftroy/eth-stealth-addresses) మధ్య ఇంటర్‌ఫేస్‌గా పనిచేస్తుంది.
+WASM లోకి కంపైల్ అయ్యే సోర్స్ కోడ్ [Rust](https://rust-lang.org/) లో రాయబడింది. మీరు దానిని [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) లో చూడవచ్చు. ఈ కోడ్ ప్రధానంగా JavaScript కోడ్ మరియు [`eth-stealth-addresses` లైబ్రరీ](https://github.com/kassandraoftroy/eth-stealth-addresses) మధ్య ఇంటర్‌ఫేస్‌గా పనిచేస్తుంది.
 
 **`Cargo.toml`**
 
-Rust లోని [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html) అనేది JavaScript లోని [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) కి సమానం. ఇది ప్యాకేజీ సమాచారం, డిపెండెన్సీ డిక్లరేషన్‌లు మొదలైనవాటిని కలిగి ఉంటుంది.
+Rust లోని [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html), JavaScript లోని [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json) కి సమానమైనది. ఇది ప్యాకేజీ సమాచారం, డిపెండెన్సీ డిక్లరేషన్లు మొదలైన వాటిని కలిగి ఉంటుంది.
 
 ```toml
 [package]
@@ -154,7 +154,7 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) ప్యాకేజీ యాదృచ్ఛిక విలువలను రూపొందించాలి. అది కేవలం అల్గారిథమిక్ మార్గాల ద్వారా చేయబడదు; దానికి ఎంట్రోపీ మూలంగా భౌతిక ప్రక్రియకు యాక్సెస్ అవసరం. మనం రన్ చేస్తున్న బ్రౌజర్‌ను అడగడం ద్వారా ఆ ఎంట్రోపీని పొందుతామని ఈ నిర్వచనం నిర్దేశిస్తుంది.
+యాదృచ్ఛిక విలువలను రూపొందించడానికి [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) ప్యాకేజీ అవసరం. అది కేవలం అల్గారిథమిక్ మార్గాల ద్వారా చేయబడదు; దానికి ఎంట్రోపీ మూలంగా భౌతిక ప్రక్రియకు యాక్సెస్ అవసరం. మనం రన్ చేస్తున్న బ్రౌజర్‌ను అడగడం ద్వారా ఆ ఎంట్రోపీని పొందుతామని ఈ నిర్వచనం నిర్దేశిస్తుంది.
 
 ```toml
 console_error_panic_hook = "0.1.7"
@@ -179,7 +179,7 @@ use wasm_bindgen::prelude::*;
 
 Rust నుండి WASM ప్యాకేజీని సృష్టించడానికి నిర్వచనాలు. అవి [ఇక్కడ](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) డాక్యుమెంట్ చేయబడ్డాయి.
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -187,13 +187,13 @@ use eth_stealth_addresses::{
 };
 ```
 
-[`eth-stealth-addresses` లైబ్రరీ](https://github.com/kassandraoftroy/eth-stealth-addresses) నుండి మనకు అవసరమైన ఫంక్షన్‌లు.
+[`eth-stealth-addresses` లైబ్రరీ](https://github.com/kassandraoftroy/eth-stealth-addresses) నుండి మనకు అవసరమైన ఫంక్షన్లు.
 
 ```rust
 use hex::{decode,encode};
 ```
 
-Rust సాధారణంగా విలువల కోసం బైట్ [అరేలను](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) ఉపయోగిస్తుంది. కానీ JavaScript లో, మనం సాధారణంగా హెక్సాడెసిమల్ స్ట్రింగ్‌లను ఉపయోగిస్తాము. [`hex` లైబ్రరీ](https://docs.rs/hex/latest/hex/) మన కోసం ఒక ప్రాతినిధ్యం నుండి మరొక దానికి అనువదిస్తుంది.
+Rust సాధారణంగా విలువల కోసం బైట్ [అరేలను (arrays)](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) ఉపయోగిస్తుంది. కానీ JavaScript లో, మనం సాధారణంగా హెక్సాడెసిమల్ స్ట్రింగ్‌లను ఉపయోగిస్తాము. [`hex` లైబ్రరీ](https://docs.rs/hex/latest/hex/) మన కోసం ఒక ప్రాతినిధ్యం నుండి మరొక దానికి అనువదిస్తుంది.
 
 ```rust
 #[wasm_bindgen]
@@ -229,30 +229,30 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-JSON-ఎన్‌కోడ్ చేయబడిన స్ట్రింగ్‌ను రూపొందించడానికి [`format!`](https://doc.rust-lang.org/std/fmt/index.html) మ్యాక్రోను ఉపయోగించండి. అరేలను హెక్స్ స్ట్రింగ్‌లుగా మార్చడానికి [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) ని ఉపయోగించండి.
+JSON-ఎన్‌కోడ్ చేయబడిన స్ట్రింగ్‌ను రూపొందించడానికి [`format!`](https://doc.rust-lang.org/std/fmt/index.html) మాక్రోను ఉపయోగించండి. అరేలను హెక్స్ స్ట్రింగ్‌లుగా మార్చడానికి [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) ని ఉపయోగించండి.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-ఈ ఫంక్షన్ (JavaScript ద్వారా అందించబడిన) హెక్స్ స్ట్రింగ్‌ను బైట్ అరేగా మారుస్తుంది. JavaScript కోడ్ ద్వారా అందించబడిన విలువలను పార్స్ చేయడానికి మనం దీనిని ఉపయోగిస్తాము. Rust అరేలు మరియు వెక్టర్‌లను ఎలా నిర్వహిస్తుందనే దాని కారణంగా ఈ ఫంక్షన్ సంక్లిష్టంగా ఉంటుంది.
+ఈ ఫంక్షన్ (JavaScript ద్వారా అందించబడిన) హెక్స్ స్ట్రింగ్‌ను బైట్ అరేగా మారుస్తుంది. JavaScript కోడ్ అందించిన విలువలను పార్స్ చేయడానికి మనం దీనిని ఉపయోగిస్తాము. Rust అరేలు మరియు వెక్టార్‌లను ఎలా నిర్వహిస్తుందనే దాని కారణంగా ఈ ఫంక్షన్ సంక్లిష్టంగా ఉంటుంది.
 
 `<const N: usize>` ఎక్స్‌ప్రెషన్‌ను [జెనరిక్ (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) అని పిలుస్తారు. `N` అనేది తిరిగి ఇవ్వబడిన అరే పొడవును నియంత్రించే పారామితి. ఫంక్షన్ వాస్తవానికి `str_to_array::<n>` అని పిలువబడుతుంది, ఇక్కడ `n` అనేది అరే పొడవు.
 
-రిటర్న్ విలువ `Option<[u8; N]>`, అంటే తిరిగి ఇవ్వబడిన అరే [ఆప్షనల్ (optional)](https://doc.rust-lang.org/std/option/) అని అర్థం. విఫలమయ్యే అవకాశం ఉన్న ఫంక్షన్‌ల కోసం Rust లో ఇది ఒక సాధారణ నమూనా.
+తిరిగి ఇచ్చే విలువ `Option<[u8; N]>`, అంటే తిరిగి ఇవ్వబడిన అరే [ఆప్షనల్ (optional)](https://doc.rust-lang.org/std/option/). విఫలమయ్యే అవకాశం ఉన్న ఫంక్షన్ల కోసం Rust లో ఇది ఒక సాధారణ ప్యాటర్న్.
 
-ఉదాహరణకు, మనం `str_to_array::10("bad060a7")` ని కాల్ చేస్తే, ఫంక్షన్ పది-విలువల అరేను తిరిగి ఇవ్వాలి, కానీ ఇన్‌పుట్ కేవలం నాలుగు బైట్‌లు మాత్రమే. ఫంక్షన్ విఫలం కావాలి, మరియు అది `None` ని తిరిగి ఇవ్వడం ద్వారా అలా చేస్తుంది. `str_to_array::4("bad060a7")` కోసం రిటర్న్ విలువ `Some<[0xba, 0xd0, 0x60, 0xa7]>` అవుతుంది.
+ఉదాహరణకు, మనం `str_to_array::10("bad060a7")` ని కాల్ చేస్తే, ఫంక్షన్ పది-విలువల అరేను తిరిగి ఇవ్వాలి, కానీ ఇన్‌పుట్ కేవలం నాలుగు బైట్‌లు మాత్రమే. ఫంక్షన్ విఫలం కావాలి, మరియు అది `None` ని తిరిగి ఇవ్వడం ద్వారా అలా చేస్తుంది. `str_to_array::4("bad060a7")` కోసం తిరిగి ఇచ్చే విలువ `Some<[0xba, 0xd0, 0x60, 0xa7]>` అవుతుంది.
 
 ```rust
     // decode Result<Vec<u8>, _> ను తిరిగి ఇస్తుంది
     let vec = decode(s).ok()?;
 ```
 
-[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) ఫంక్షన్ `Result<Vec<u8>, FromHexError>` ని తిరిగి ఇస్తుంది. [`Result`](https://doc.rust-lang.org/std/result/) రకం విజయవంతమైన ఫలితాన్ని (`Ok(value)`) లేదా ఎర్రర్‌ను (`Err(error)`) కలిగి ఉంటుంది.
+[`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) ఫంక్షన్ `Result<Vec<u8>, FromHexError>` ని తిరిగి ఇస్తుంది. [`Result`](https://doc.rust-lang.org/std/result/) రకం విజయవంతమైన ఫలితాన్ని (`Ok(value)`) లేదా ఎర్రర్‌ను (`Err(error)`) కలిగి ఉండవచ్చు.
 
-`.ok()` పద్ధతి `Result` ని `Option` గా మారుస్తుంది, దీని విలువ విజయవంతమైతే `Ok()` విలువ లేదా కాకపోతే `None` అవుతుంది. చివరగా, `Option` ఖాళీగా ఉంటే [ప్రశ్నార్థక ఆపరేటర్](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) ప్రస్తుత ఫంక్షన్‌లను నిలిపివేసి `None` ని తిరిగి ఇస్తుంది. లేకపోతే, అది విలువను అన్‌రాప్ చేసి దానిని తిరిగి ఇస్తుంది (ఈ సందర్భంలో, `vec` కి విలువను కేటాయించడానికి).
+`.ok()` పద్ధతి `Result` ని `Option` గా మారుస్తుంది, దీని విలువ విజయవంతమైతే `Ok()` విలువ లేదా కాకపోతే `None` అవుతుంది. చివరగా, [ప్రశ్నార్థక గుర్తు ఆపరేటర్](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) ప్రస్తుత ఫంక్షన్లను నిలిపివేస్తుంది మరియు `Option` ఖాళీగా ఉంటే `None` ని తిరిగి ఇస్తుంది. లేకపోతే, అది విలువను అన్‌రాప్ చేస్తుంది మరియు దానిని తిరిగి ఇస్తుంది (ఈ సందర్భంలో, `vec` కి విలువను కేటాయించడానికి).
 
-ఎర్రర్‌లను నిర్వహించడానికి ఇది వింతగా సంక్లిష్టమైన పద్ధతిగా కనిపిస్తుంది, కానీ `Result` మరియు `Option` అన్ని ఎర్రర్‌లు ఏదో ఒక విధంగా నిర్వహించబడేలా చూస్తాయి.
+ఇది ఎర్రర్‌లను నిర్వహించడానికి వింతగా సంక్లిష్టమైన పద్ధతిగా కనిపిస్తుంది, కానీ `Result` మరియు `Option` అన్ని ఎర్రర్‌లు ఏదో ఒక విధంగా నిర్వహించబడతాయని నిర్ధారిస్తాయి.
 
 ```rust
     if vec.len() != N { return None; }
@@ -261,11 +261,11 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 బైట్‌ల సంఖ్య తప్పుగా ఉంటే, అది వైఫల్యం, మరియు మనం `None` ని తిరిగి ఇస్తాము.
 
 ```rust
-    // try_into vec ను వినియోగిస్తుంది మరియు [u8; N] చేయడానికి ప్రయత్నిస్తుంది
+    // try_into vec ను వినియోగించుకుని [u8; N] చేయడానికి ప్రయత్నిస్తుంది
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust లో రెండు అరే రకాలు ఉన్నాయి. [అరేలు](https://doc.rust-lang.org/std/primitive.array.html) స్థిరమైన పరిమాణాన్ని కలిగి ఉంటాయి. [వెక్టర్లు](https://doc.rust-lang.org/std/vec/index.html) పెరగగలవు మరియు తగ్గగలవు. `hex::decode` ఒక వెక్టర్‌ను తిరిగి ఇస్తుంది, కానీ `eth_stealth_addresses` లైబ్రరీ అరేలను స్వీకరించాలనుకుంటుంది. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) ఒక విలువను మరొక రకంగా మారుస్తుంది, ఉదాహరణకు, వెక్టర్‌ను అరేగా.
+Rust లో రెండు అరే రకాలు ఉన్నాయి. [అరేలు (Arrays)](https://doc.rust-lang.org/std/primitive.array.html) స్థిరమైన పరిమాణాన్ని కలిగి ఉంటాయి. [వెక్టార్‌లు (Vectors)](https://doc.rust-lang.org/std/vec/index.html) పెరగగలవు మరియు తగ్గగలవు. `hex::decode` వెక్టార్‌ను తిరిగి ఇస్తుంది, కానీ `eth_stealth_addresses` లైబ్రరీ అరేలను స్వీకరించాలనుకుంటుంది. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) ఒక విలువను మరొక రకంగా మారుస్తుంది, ఉదాహరణకు, వెక్టార్‌ను అరేగా.
 
 ```rust
     Some(array)
@@ -281,7 +281,7 @@ pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 
 ఈ ఫంక్షన్ పబ్లిక్ మెటా-చిరునామాను స్వీకరిస్తుంది, ఇందులో *V<sub>pub</sub>* మరియు *K<sub>pub</sub>* రెండూ ఉంటాయి. ఇది రహస్య చిరునామాను, ప్రచురించాల్సిన పబ్లిక్ కీని (*R<sub>pub</sub>*), మరియు ప్రచురించబడిన చిరునామాలలో ఏవి ఆలిస్‌కు చెందినవి కావచ్చో గుర్తించడాన్ని వేగవంతం చేసే ఒక-బైట్ స్కాన్ విలువను తిరిగి ఇస్తుంది.
 
-స్కాన్ విలువ అనేది భాగస్వామ్య రహస్యంలో (*S = GR<sub>priv</sub>V<sub>priv</sub>*) ఒక భాగం. ఈ విలువ ఆలిస్‌కు అందుబాటులో ఉంటుంది, మరియు *f(K<sub>pub</sub>+G\*hash(S))* ప్రచురించబడిన చిరునామాకు సమానంగా ఉందో లేదో తనిఖీ చేయడం కంటే దీనిని తనిఖీ చేయడం చాలా వేగంగా ఉంటుంది.
+స్కాన్ విలువ షేర్డ్ సీక్రెట్‌లో (*S = GR<sub>priv</sub>V<sub>priv</sub>*) భాగం. ఈ విలువ ఆలిస్‌కు అందుబాటులో ఉంటుంది, మరియు *f(K<sub>pub</sub>+G\*hash(S))* ప్రచురించబడిన చిరునామాకు సమానంగా ఉందో లేదో తనిఖీ చేయడం కంటే దీనిని తనిఖీ చేయడం చాలా వేగంగా ఉంటుంది.
 
 ```rust
     let (address, r_pub, scan) = 
@@ -343,18 +343,18 @@ assertion `left == right` failed
  right: 1
 ```
 
-దీని తర్వాత స్టాక్ ట్రేస్ వస్తుంది. ఆపై బిల్‌కు చెల్లుబాటు అయ్యే మెటా-చిరునామాను ఇవ్వండి, మరియు ఆలిస్‌కు చెల్లని చిరునామాను లేదా చెల్లని పబ్లిక్ కీని ఇవ్వండి. మీరు ఈ ఎర్రర్‌ను చూస్తారు:
+దాని తర్వాత స్టాక్ ట్రేస్ ఉంటుంది. ఆపై బిల్‌కు చెల్లుబాటు అయ్యే మెటా-చిరునామాను ఇవ్వండి, మరియు ఆలిస్‌కు చెల్లని చిరునామాను లేదా చెల్లని పబ్లిక్ కీని ఇవ్వండి. మీరు ఈ ఎర్రర్‌ను చూస్తారు:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-మళ్లీ, దీని తర్వాత స్టాక్ ట్రేస్ వస్తుంది.
+మళ్లీ, దాని తర్వాత స్టాక్ ట్రేస్ ఉంటుంది.
 
 #### యూజర్ ఇంటర్‌ఫేస్ {#ui}
 
-యూజర్ ఇంటర్‌ఫేస్ [React](https://react.dev/) ని ఉపయోగించి వ్రాయబడింది మరియు [Vite](https://vite.dev/) ద్వారా అందించబడుతుంది. మీరు [ఈ ట్యుటోరియల్‌ని](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) ఉపయోగించి వాటి గురించి తెలుసుకోవచ్చు. మనం నేరుగా బ్లాక్‌చైన్ లేదా వాలెట్‌తో ఇంటరాక్ట్ అవ్వము కాబట్టి ఇక్కడ [Wagmi](https://wagmi.sh/) అవసరం లేదు.
+యూజర్ ఇంటర్‌ఫేస్ [React](https://react.dev/) ని ఉపయోగించి రాయబడింది మరియు [Vite](https://vite.dev/) ద్వారా అందించబడుతుంది. మీరు [ఈ ట్యుటోరియల్‌ని](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) ఉపయోగించి వాటి గురించి తెలుసుకోవచ్చు. మనం నేరుగా బ్లాక్‌చైన్ లేదా వాలెట్‌తో ఇంటరాక్ట్ అవ్వము కాబట్టి ఇక్కడ [Wagmi](https://wagmi.sh/) అవసరం లేదు.
 
 యూజర్ ఇంటర్‌ఫేస్‌లో స్పష్టంగా తెలియని ఏకైక భాగం WASM కనెక్టివిటీ. ఇది ఎలా పనిచేస్తుందో ఇక్కడ ఉంది.
 
@@ -377,13 +377,13 @@ export default defineConfig({
 
 **`App.jsx`**
 
-ఈ ఫైల్ అప్లికేషన్ యొక్క ప్రధాన కాంపోనెంట్. ఇది రెండు కాంపోనెంట్‌లను కలిగి ఉన్న కంటైనర్: `Alice` మరియు `Bill`, ఆ వినియోగదారుల కోసం యూజర్ ఇంటర్‌ఫేస్‌లు. WASM కి సంబంధించిన భాగం ఇనిషియలైజేషన్ కోడ్.
+ఈ ఫైల్ అప్లికేషన్ యొక్క ప్రధాన కాంపోనెంట్. ఇది రెండు కాంపోనెంట్‌లను కలిగి ఉన్న కంటైనర్: `Alice` మరియు `Bill`, ఆ యూజర్ల కోసం యూజర్ ఇంటర్‌ఫేస్‌లు. WASM కి సంబంధించిన భాగం ఇనిషియలైజేషన్ కోడ్.
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-మనం [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) ని ఉపయోగించినప్పుడు, అది మనం ఇక్కడ ఉపయోగించే రెండు ఫైల్‌లను సృష్టిస్తుంది: అసలు కోడ్‌తో కూడిన wasm ఫైల్ (ఇక్కడ, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) మరియు దానిని ఉపయోగించడానికి నిర్వచనాలతో కూడిన JavaScript ఫైల్ (ఇక్కడ, `src/rust_wasm/pkg/rust_wasm.js`). ఆ JavaScript ఫైల్ యొక్క డిఫాల్ట్ ఎక్స్‌పోర్ట్ అనేది WASM ని ప్రారంభించడానికి రన్ చేయాల్సిన కోడ్.
+మనం [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) ని ఉపయోగించినప్పుడు, అది మనం ఇక్కడ ఉపయోగించే రెండు ఫైల్‌లను సృష్టిస్తుంది: అసలు కోడ్‌తో కూడిన wasm ఫైల్ (ఇక్కడ, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) మరియు దానిని ఉపయోగించడానికి నిర్వచనాలతో కూడిన JavaScript ఫైల్ (ఇక్కడ, `src/rust-wasm/pkg/rust_wasm.js`). ఆ JavaScript ఫైల్ యొక్క డిఫాల్ట్ ఎక్స్‌పోర్ట్ అనేది WASM ని ప్రారంభించడానికి రన్ చేయాల్సిన కోడ్.
 
 ```jsx
 function App() {
@@ -406,9 +406,9 @@ function App() {
   )
 ```
 
-[`useEffect` హుక్](https://react.dev/reference/react/useEffect) స్థితి (state) వేరియబుల్స్ మారినప్పుడు అమలు చేయబడే ఫంక్షన్‌ను పేర్కొనడానికి మిమ్మల్ని అనుమతిస్తుంది. ఇక్కడ, స్థితి వేరియబుల్స్ జాబితా ఖాళీగా ఉంది (`[]`), కాబట్టి పేజీ లోడ్ అయినప్పుడు ఈ ఫంక్షన్ ఒక్కసారి మాత్రమే అమలు చేయబడుతుంది.
+స్థితి వేరియబుల్స్ మారినప్పుడు అమలు చేయబడే ఫంక్షన్‌ను పేర్కొనడానికి [`useEffect` హుక్](https://react.dev/reference/react/useEffect) మిమ్మల్ని అనుమతిస్తుంది. ఇక్కడ, స్థితి వేరియబుల్స్ జాబితా ఖాళీగా ఉంది (`[]`), కాబట్టి పేజీ లోడ్ అయినప్పుడు ఈ ఫంక్షన్ ఒక్కసారి మాత్రమే అమలు చేయబడుతుంది.
 
-ఎఫెక్ట్ ఫంక్షన్ వెంటనే తిరిగి రావాలి. WASM `init` వంటి అసమకాలిక (asynchronous) కోడ్‌ను ఉపయోగించడానికి (ఇది `.wasm` ఫైల్‌ను లోడ్ చేయాలి కాబట్టి సమయం పడుతుంది) మనం అంతర్గత [`async`](https://en.wikipedia.org/wiki/Async/await) ఫంక్షన్‌ను నిర్వచిస్తాము మరియు దానిని `await` లేకుండా రన్ చేస్తాము.
+ఎఫెక్ట్ ఫంక్షన్ వెంటనే తిరిగి రావాలి. WASM `init` (ఇది `.wasm` ఫైల్‌ను లోడ్ చేయాలి కాబట్టి సమయం పడుతుంది) వంటి అసమకాలిక (asynchronous) కోడ్‌ను ఉపయోగించడానికి, మనం అంతర్గత [`async`](https://en.wikipedia.org/wiki/Async/await) ఫంక్షన్‌ను నిర్వచిస్తాము మరియు దానిని `await` లేకుండా రన్ చేస్తాము.
 
 **`Bill.jsx`**
 
@@ -430,7 +430,7 @@ WASM ఫంక్షన్‌లను కాల్ చేయడానికి,
 
 **`Alice.jsx`**
 
-`Alice.jsx` లోని కోడ్ కూడా ఇలాగే ఉంటుంది, కాకపోతే ఆలిస్‌కు రెండు చర్యలు ఉంటాయి:
+`Alice.jsx` లోని కోడ్ కూడా ఇలాగే ఉంటుంది, అయితే ఆలిస్‌కు రెండు చర్యలు ఉంటాయి:
 
 - మెటా-చిరునామాను రూపొందించడం
 - బిల్ ప్రచురించిన చిరునామా కోసం ప్రైవేట్ కీని పొందడం

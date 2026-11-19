@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-core-governance-explained/index.md",
-  "generatedAt": "2026-04-28T23:22:51.371Z",
-  "rootHash": "8c5736a77f52",
+  "generatedAt": "2026-09-30T18:38:50.847Z",
+  "rootHash": "6647a31d3b36",
   "tree": {
-    "contentHash": "ddc5b892f409",
-    "anchorHash": "68cd9dc7f4bb",
+    "contentHash": "44744042713d",
+    "anchorHash": "5c45cc8dc58f",
     "children": {
       "frontmatter:title": {
-        "contentHash": "4a076898593e",
+        "contentHash": "7ba44d4dab89",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "6704cadce10f",
+        "contentHash": "dec2de7d0242",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "e0a00492f611"
+        "anchorHash": "aba816d5f5f9"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,34 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "5cc4f5f1157d"
+        "anchorHash": "6254fe3465a4"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "918e1f78a588",
+        "anchorHash": "b2aa1074fa9d",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          },
+          "1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "6a4444a31955"
+          },
+          "2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "dd2026a793e9"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +68,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "84c2b4cfd004"
+        "anchorHash": "0c00f778d680"
       },
       "prose:1": {
         "contentHash": "39801b63b541",
@@ -261,5 +280,5 @@
       "how-to-participate-2440"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

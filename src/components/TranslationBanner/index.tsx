@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils/cn"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { usePathname } from "@/i18n/navigation"
-import { DO_NOT_TRANSLATE_PATHS } from "@/scripts/intl-pipeline/constants"
+import { DO_NOT_TRANSLATE_PATHS } from "@/scripts/intl-pipeline/do-not-translate-paths"
 
 const TranslationBanner = () => {
   const locale = useLocale()
@@ -28,9 +28,10 @@ const TranslationBanner = () => {
   )
 
   useEffect(() => {
-    if (localStorage.getItem(lsKey) === "true") {
-      setIsOpen(false)
-    } else {
+    try {
+      setIsOpen(localStorage.getItem(lsKey) !== "true")
+    } catch {
+      // localStorage access can be denied (e.g. browser privacy settings)
       setIsOpen(true)
     }
   }, [lsKey])
@@ -46,7 +47,11 @@ const TranslationBanner = () => {
   if (!isOpen || locale === DEFAULT_LOCALE || !isDNTPath) return
 
   const handleDontShow = () => {
-    localStorage.setItem(lsKey, "true")
+    try {
+      localStorage.setItem(lsKey, "true")
+    } catch {
+      // localStorage access can be denied (e.g. browser privacy settings)
+    }
     setIsOpen(false)
   }
 

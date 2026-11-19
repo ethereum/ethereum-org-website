@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "hi",
-  "translatedAt": "2026-06-17T00:42:24.237Z",
-  "englishManifestHash": "917539f8bba3",
+  "translatedAt": "2026-10-21T22:13:14.751Z",
+  "englishManifestHash": "74115b9b5481",
   "placeholderOrder": [
     "LINK-6b8ed4",
     "LINK-8afc64",
@@ -17,7 +17,7 @@
     "LINK-541f65",
     "LINK-362447",
     "CODE-c84c0c",
-    "LINK-ac889c",
+    "LINK-b9cda3",
     "CODE-238c19",
     "CODE-a0bcfd",
     "CODE-fc05e9",
@@ -718,10 +718,10 @@
         "url": "https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code"
       }
     },
-    "LINK-ac889c": {
+    "LINK-b9cda3": {
       "type": "link",
       "values": {
-        "url": "https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable"
+        "url": "https://docs.openzeppelin.com/contracts/3.x/access-control#ownership-and-ownable"
       }
     },
     "LINK-daa40d": {
@@ -895,7 +895,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T00:42:24.237Z",
+      "translatedAt": "2026-10-21T22:13:14.751Z",
       "status": "success"
     }
   }

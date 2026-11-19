@@ -21,7 +21,7 @@ _Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/dow
 
 ## La fonction de transition d'état d'Ethereum {#the-ethereum-state-transition-function}
 
-L'EVM se comporte comme le ferait une fonction mathématique : étant donné une entrée, elle produit une sortie déterministe. Il est donc très utile de décrire plus formelnellement Ethereum comme ayant une **fonction de transition d'état** :
+L'EVM se comporte comme le ferait une fonction mathématique : étant donné une entrée, elle produit une sortie déterministe. Il est donc très utile de décrire plus formellement Ethereum comme ayant une **fonction de transition d'état** :
 
 ```
 Y(S, T)= S'
@@ -91,3 +91,5 @@ Les [clients d'exécution Ethereum](/developers/docs/nodes-and-clients/#executio
 
 - [Comprendre les spécifications de l'EVM du livre jaune](/developers/tutorials/yellow-paper-evm/) _– Une visite guidée des spécifications formelles de l'EVM issues du livre jaune d'Ethereum._
 - [Rétro-ingénierie d'un contrat](/developers/tutorials/reverse-engineering-a-contract/) _– Comment faire de la rétro-ingénierie sur un contrat intelligent compilé en utilisant les codes d'opération de l'EVM._
+
+<QuizWidget quizKey="evm" />

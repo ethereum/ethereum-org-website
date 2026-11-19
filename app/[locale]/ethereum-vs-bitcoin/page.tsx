@@ -1,10 +1,11 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
 import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { LinkWithArrow } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
@@ -27,11 +28,9 @@ import layer2HeroImg from "@/public/images/heroes/layer-2-hub-hero.png"
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-ethereum-vs-bitcoin")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("ethereum-vs-bitcoin", locale as Lang)
 
   const tocItems: ToCItem[] = [
@@ -93,14 +92,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{ slug: "learn/ethereum-vs-bitcoin", startDepth: 1 }}
+            breadcrumbs={{ slug: "ethereum-vs-bitcoin" }}
             heroImg={heroImg}
             title={t("page-ethereum-vs-bitcoin-title")}
             description={t("page-ethereum-vs-bitcoin-description-1")}
@@ -370,6 +369,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             {t("page-ethereum-vs-bitcoin-future-outlook-4")}
           </LinkWithArrow>
         </Section>
+
+        <Section id="quiz-section">
+          <StandaloneQuizWidget quizKey="ethereum-vs-bitcoin" />
+        </Section>
       </ContentLayout>
     </>
   )
@@ -381,8 +384,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-ethereum-vs-bitcoin")
 

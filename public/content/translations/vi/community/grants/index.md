@@ -4,15 +4,13 @@ description: "Danh sách các chương trình tài trợ trong toàn bộ hệ s
 lang: vi
 ---
 
-# Các khoản tài trợ Ethereum {#ethereum-grants}
-
 Các chương trình được liệt kê dưới đây cung cấp nhiều khoản tài trợ khác nhau cho các dự án đang nỗ lực thúc đẩy sự thành công và phát triển của hệ sinh thái [Ethereum](/). Hãy sử dụng danh sách này như một hướng dẫn để tìm kiếm và nộp đơn xin tài trợ nhằm giúp dự án Ethereum tiếp theo của bạn thành công.
 
 Danh sách này được tuyển chọn bởi cộng đồng của chúng tôi. Nếu có thông tin nào bị thiếu hoặc không chính xác, vui lòng chỉnh sửa trang này!
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Các nhà sáng lập, bạn cần trợ giúp để tăng tốc doanh nghiệp của mình? [Hãy truy cập Hỗ trợ Nhà sáng lập (Founders Support)](/founders/)</div>
+<div>Các nhà sáng lập, bạn cần trợ giúp để tăng tốc doanh nghiệp của mình? [Hãy truy cập Hỗ trợ Nhà sáng lập (Founders Support)](/organizations/founders/)</div>
 </Alert>
 
 ## Hệ sinh thái Ethereum rộng lớn {#broad-ethereum-ecosystem}

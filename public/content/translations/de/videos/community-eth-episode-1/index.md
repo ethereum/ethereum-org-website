@@ -17,7 +17,7 @@ Die erste Episode der *Community.eth*-Serie von **Optimist**. Zur Feier des 9. G
 
 *Dieses Transkript ist eine barrierefreie Kopie des [Originalvideos](https://www.youtube.com/watch?v=onCwaj1FM-4), das von Optimist veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet. Die Sprecher sind Mitglieder der Ethereum-Community und nicht alle wurden im Video namentlich genannt.*
 
-#### Was ist Ethereum? (0:00) {#what-is-ethereum-000}
+### Was ist Ethereum? (0:00) {#what-is-ethereum-000}
 
 **Person 1:** Was ist Ethereum?
 
@@ -29,7 +29,7 @@ Die erste Episode der *Community.eth*-Serie von **Optimist**. Zur Feier des 9. G
 
 **Person 4:** Ethereum ist für viele Menschen viele verschiedene Dinge.
 
-#### Was es so mächtig macht (0:40) {#what-makes-it-powerful-040}
+### Was es so mächtig macht (0:40) {#what-makes-it-powerful-040}
 
 **Aya Miyaguchi:** Das Potenzial, das Ethereum hat, ist großartig, weil wir es nicht einmal definieren können. Und ich denke, das ist sehr mächtig.
 
@@ -43,7 +43,7 @@ Die erste Episode der *Community.eth*-Serie von **Optimist**. Zur Feier des 9. G
 
 **Simona Pop:** Ethereum ist für mich die nächste Stufe in der Evolution des Internets.
 
-#### Warum wir aufbauen (2:00) {#why-we-build-200}
+### Warum wir aufbauen (2:00) {#why-we-build-200}
 
 **Simona Pop:** Ja, natürlich gibt es einen Hype, wenn der Preis steigt, aber die Leute und die wahren Gläubigen sind da, wenn er fällt, wenn er steigt – das spielt eigentlich keine Rolle. Wir tun es, weil wir wirklich an das glauben, was wir aufbauen.
 
@@ -51,7 +51,7 @@ Die erste Episode der *Community.eth*-Serie von **Optimist**. Zur Feier des 9. G
 
 **Alexis Ohanian:** Wir haben die Chance, so viele gesellschaftliche Institutionen mit echtem Eigentum neu zu denken, mit der echten Fähigkeit, für den Rest des Lebens, für Generationen – im Grunde für die Ewigkeit – Werte zu schaffen. Ich möchte wirklich unbedingt sehen, wie das freigesetzt wird.
 
-#### Die Community (3:00) {#the-community-300}
+### Die Community (3:00) {#the-community-300}
 
 **Amber Baldet:** Eine Sache, die die Ethereum-Community wirklich auszeichnet, war von Anfang an, dass sie keine Angst davor hat, ein bisschen albern zu sein. Man sieht das an den Einhörnern und den albernen Regenbogenfarben und den Tänzen und den Liedern – und diese Albernheit verleiht dem gesamten Ökosystem ein Gefühl der Hoffnung. Und eine Sache, die die Menschen heutzutage wirklich brauchen, ist Hoffnung.
 

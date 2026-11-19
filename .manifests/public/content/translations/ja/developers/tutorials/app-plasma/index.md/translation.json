@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ja",
-  "translatedAt": "2026-06-17T23:25:50.349Z",
-  "englishManifestHash": "6436e17a2450",
+  "translatedAt": "2026-10-21T22:08:46.593Z",
+  "englishManifestHash": "52b486a8d9a4",
   "placeholderOrder": [
     "LINK-21b137",
     "LINK-9ad53a",
@@ -20,12 +20,12 @@
     "CODE-e2ecd8",
     "LINK-02dddf",
     "CODEBLOCK-0df7bf",
-    "CODE-50bc66",
     "LINK-9883d5",
+    "CODE-50bc66",
     "CODE-9a7c46",
     "LINK-0ace3b",
     "LINK-b668e5",
-    "LINK-327769",
+    "LINK-ff53a1",
     "LINK-f32b65",
     "CODEBLOCK-66edb3",
     "CODE-f79cd6",
@@ -107,8 +107,8 @@
     "CODEBLOCK-7faef8",
     "CODEBLOCK-63a703",
     "CODE-7e1b0d",
-    "CODE-f45fc1",
     "CODE-ac636b",
+    "CODE-f45fc1",
     "CODEBLOCK-2f6561",
     "CODE-4e45bb",
     "CODE-fcdff7",
@@ -116,6 +116,7 @@
     "CODE-fcd03a",
     "CODE-6fb701",
     "CODE-fcd03a",
+    "CODE-4e45bb",
     "CODE-4e45bb",
     "CODE-fcd03a",
     "CODE-f45fc1",
@@ -131,7 +132,7 @@
     "CODE-935f68",
     "CODE-935f68",
     "CODEBLOCK-79ee66",
-    "LINK-c19928",
+    "LINK-42b1ed",
     "CODE-254506",
     "LINK-065833",
     "CODEBLOCK-7c3ff4",
@@ -1113,10 +1114,10 @@
         "url": "https://nodejs.org/en/download"
       }
     },
-    "LINK-327769": {
+    "LINK-ff53a1": {
       "type": "link",
       "values": {
-        "url": "https://noir-lang.org/install"
+        "url": "https://noir-lang.org/docs/installation"
       }
     },
     "LINK-f32b65": {
@@ -1251,10 +1252,10 @@
         "url": "https://rareskills.io/post/arithmetic-circuit"
       }
     },
-    "LINK-c19928": {
+    "LINK-42b1ed": {
       "type": "link",
       "values": {
-        "url": "https://noir-lang.org/docs/dev/noir/concepts/assert"
+        "url": "https://noir-lang.org/docs/language/assert"
       }
     },
     "LINK-065833": {
@@ -1380,7 +1381,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T23:25:50.349Z",
+      "translatedAt": "2026-10-21T22:08:46.593Z",
       "status": "success"
     }
   }

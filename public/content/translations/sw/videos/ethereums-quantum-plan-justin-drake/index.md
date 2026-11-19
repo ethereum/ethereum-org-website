@@ -17,7 +17,7 @@ Mahojiano na **Justin Drake**, mtafiti wa Taasisi ya Ethereum, yanayohusu ramani
 
 *Nakala hii ni nakala inayofikika ya [nakala asili ya video](https://www.youtube.com/watch?v=wURmzLKhJco) iliyochapishwa na Bankless. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi na tishio la kwanta (0:00) {#introduction-and-the-quantum-threat-000}
+### Utangulizi na tishio la kwanta (0:00) {#introduction-and-the-quantum-threat-000}
 
 **Justin Drake:** Badiliko moja la kuvutia la mtazamo kwangu katika miezi michache iliyopita ni kwamba nimeacha kufikiria kuhusu baada ya kwanta kama kikwazo ambacho tunapaswa kukishinda na ninaifikiria zaidi kama fursa. Ni fursa kwa Ethereum kujitokeza kama mfumo wa kwanza kabisa wa kifedha wa kimataifa ambao ni salama baada ya kwanta, si tu ikilinganishwa na washindani wake kama Bitcoin na mengineyo, bali pia ikilinganishwa na sarafu za serikali (fiat) na fedha za jadi (TradFi). Na nadhani itatuma ujumbe mzito sana na kuwa kama hoja ya asili ya kiusalama ya kuishawishi dunia kuhamia kwenye Ethereum.
 
@@ -35,7 +35,7 @@ Kwa hivyo malengo yanazidi kukaribia, na una ukuaji huu maradufu kwa namna fulan
 
 Sasa nikiangalia siku zijazo, Siku yangu ya Q binafsi ni mwaka 2032. Huu ni mtazamo wenye matumaini kidogo kwa maana kwamba inawezekana watafika baadaye kidogo, lakini tunahitaji kuwa tayari kwa hali mbaya zaidi. Kwa hivyo ningesema kuna angalau asilimia 1 ya uwezekano kwamba Siku ya Q ni mwaka 2032, na kuna uwezekano mkubwa wa kuwa asilimia ya tarakimu mbili. Wataalamu mbalimbali watakuambia mahali fulani kati ya 2031 na 2038. Mmoja wa marafiki zangu katika tasnia, Steve Bryley, mwanzilishi na Mkurugenzi Mtendaji wa mojawapo ya kampuni kubwa zaidi za usahihishaji wa makosa ya kwanta duniani, ambaye kwa bahati yuko Cambridge nilipo mimi — Siku yake ya Q binafsi ilikuwa 2032, lakini amekuwa na tarehe hii kwa miaka 15
 
-#### Siku ya Q ni lini na tunajiandaaje? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
+### Siku ya Q ni lini na tunajiandaaje? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
 
 na imekuwa hivyo siku zote.
 
@@ -51,7 +51,7 @@ na imekuwa hivyo siku zote.
 
 **Justin Drake:** Siwezi kumsemea, lakini jambo moja tunalopaswa kutambua ni kwamba Scott kimsingi ni mwananadharia. Kwa muda mrefu sana alikuwa akifanya kazi kwenye nadharia, si sana kwenye shughuli za kila siku za kompyuta za quantum, na nadhani hiyo ilikuwa sehemu ya sababu iliyomfanya asitasite sana. Kinachotokea zaidi na zaidi ni kwamba kuna kampuni halisi, wajasiriamali halisi wanaojenga vitu hivi na ana mtazamo wa ndani. Kimsingi anachukua taarifa hizi zote. Moja ya mambo aliyosema hivi karibuni ni kwamba serikali ya Marekani inaanza kuingilia kati uchapishaji wa mawazo. Kwa hivyo tuna kampuni na wasomi ambao wanaweza kuja na maboresho kwenye Shor's algorithm, na hayo hayafichuliwi kikamilifu, labda kwa sababu za usalama wa taifa.
 
-#### Qubiti za kimaumbile, qubiti za kimantiki, na kuvunja ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
+### Qubiti za kimaumbile, qubiti za kimantiki, na kuvunja ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
 
 **David Hoffman:** Wow. Sawa. Kwa hivyo inaonekana serikali zinajihusisha na hili. Hatuna uhakika hasa na kazi yote inayoendelea faraghani — tunafahamu tu kazi inayofaa kibiashara kwa sasa. Kuhusu sehemu ya qubiti za kimantiki, ulisema tuna qubiti moja ya kimantiki sasa hivi. Kuna qubiti za kimaumbile na qubiti za kimantiki, na kitu cha kuongeza uwezo ni qubiti za kimantiki. Ili kuvunja ECDSA, tunahitaji qubiti ngapi za kimantiki hasa? Hicho ni kipimo ninachokiangalia, lakini je, hiyo ndiyo nambari sahihi? Nimesikia watu wakizungumza kuhusu kuhitaji elfu moja, au labda 1,500. Je, hii ni nambari tunayopaswa kuizingatia?
 
@@ -69,7 +69,7 @@ Sasa kuhusu muda wa kuendesha (runtimes), hii inavutia kwa sababu kuna aina mbil
 
 **Justin Drake:** Ndiyo. Na ikiwa kweli itakuwa ni taifa ambalo lina ufikiaji wa kompyuta hizi za kwanta kwanza, isipokuwa kama kripto inachukua jukumu kubwa la kimfumo ulimwenguni, kuna uwezekano mkubwa watatumia nguvu zao kushambulia vitu kwa njia ya siri — kwa mfano, kupeleleza maadui zao. Kwa hivyo hiyo inatunufaisha. Lakini ikiwa unashughulika na chombo chenye mantiki tupu ambacho kinasukumwa na dola, wanaweza kweli kulenga Bitcoin au Ethereum.
 
-#### Vituo vya data vya kwanta na hali ya shambulio la Siku ya Q (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
+### Vituo vya data vya kwanta na hali ya shambulio la Siku ya Q (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
 
 **David Hoffman:** Swali la mwisho kuhusu kwabiti (qubits). Je, vituo vya data vya kompyuta za kwanta vinajengwa hivi sasa? Tuna ujenzi huu mkubwa wa vituo vya data kwa ajili ya AI. Je, kuna kitu kama hicho kinaanza kutokea kwa kompyuta za kwanta?
 
@@ -93,7 +93,7 @@ Sasa kuhusu muda wa kuendesha (runtimes), hii inavutia kwa sababu kuna aina mbil
 
 **Justin Drake:** Hasa. Ndiyo. Na kisha labda ungeenda na kushambulia samaki mkubwa zaidi, ambaye anaweza kuwa soko la kubadilishia fedha (exchange) ambalo halijaweka miundombinu sahihi ya kujilinda. Inatokea kwamba kuna njia rahisi sana ya kupunguza athari za kompyuta za kwanta, angalau zile za kwanza kabisa — usitumie tena anwani zako. Unapotumia tena anwani yako, unatumia tena ufunguo wa umma, na hiyo inamaanisha mshambuliaji ana muda wa kuvunja ufunguo wa siri unaohusika na kisha kuiba fedha zako mara ya pili unapotumia anwani hiyo. Kwa hivyo utaratibu bora unapaswa kuwa kwamba ikiwa unashikilia fedha zozote katika hifadhi baridi ya muda mrefu, inapaswa kuwa anwani safi ambayo ufunguo wa umma unaohusika haujawahi kufichuliwa. Ili kuweka hili wazi kabisa: kile ambacho kompyuta ya kwanta inakuruhusu kufanya
 
-#### Anwani za Bitcoin zilizo hatarini na sarafu za Satoshi (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
+### Anwani za Bitcoin zilizo hatarini na sarafu za Satoshi (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
 
 kufanya ni kutoka kwenye ufunguo wa umma kurudi kwenye ufunguo wa siri. Kwa hivyo inahatarisha kweli misingi ya mali.
 
@@ -119,7 +119,7 @@ Utakuwa mchakato ulioongezwa kwa muda. Na matokeo moja ya kuvutia ni kwamba ikiw
 
 **Justin Drake:** Ndiyo, kwa hivyo namba ya makadirio niliyo nayo akilini inaendana na hizo. Ni takriban Bitcoin milioni 2, tuseme asilimia 10. Tuna milioni 1 kutoka kwa Satoshi na kisha takriban milioni nyingine ambayo haijasogezwa kwa muda mrefu sana. Tunahitaji kupunguza baadhi ya hizo kwa sababu baadhi ya anwani za zombi ni halali na zitafufuliwa, lakini tunapaswa pia kuiongeza kwa sababu kunaweza kuwa na baadhi ya anwani zilizotumiwa hivi karibuni ambazo zitapotea. Kwa hivyo asilimia 5 hadi 15 ndio masafa sahihi. Ningeweka dau karibu asilimia 10–12, ambayo ni kubwa sana — hakika katika mamia ya mabilioni ya dola.
 
-#### Mjadala wa kuteketeza dhidi ya kuokoa kwa Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
+### Mjadala wa kuteketeza dhidi ya kuokoa kwa Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
 
 Mtu anaweza kufikiria kupitia nadharia ya mchezo hapa. Chaguo A ni kujaribu na kuteketeza sarafu. Faida ni kwamba huna shinikizo la kuuza la mamia ya mabilioni ya dola. Ikiwa utachambua hili kwa mtazamo wa muda mfupi, hiyo ni hatua ya kimantiki. Lakini hadithi nzima ya Bitcoin ni haki dhabiti za mali, kwa hivyo ikiwa una mtazamo wa muda mrefu, hupaswi kutaka kuteketeza sarafu. Ni vigumu sana kujua jamii itafuata njia gani. Inawezekana kwamba hatimaye uamuzi utafanywa na wamiliki wakubwa — kwa mfano, Michael Saylor na MicroStrategy. Kwa sababu wamiliki hawa wakubwa watapokea nakala ya matoleo yote mawili ya Bitcoin — lile lenye kuteketeza na lile lisilo na kuteketeza — na wanaweza kuchagua kutupa lile wasilolipenda. Na tunajua kwamba Saylor anaunga mkono kuteketeza, kwa hivyo anaweza peke yake kuhadaa soko na kupata matokeo anayotaka.
 
@@ -131,7 +131,7 @@ Chaguo jingine ni kwamba wanaacha tu hiyo asilimia 10 kwa yeyote anayeweza kuund
 
 **Justin Drake:** Ndiyo, hilo limesemwa vizuri sana. Lakini marekebisho madogo: hili halipaswi kutokea Siku ya Q au baada ya Siku ya Q. Inaweza kutokea kabla. Wakati wowote, jamii ya Bitcoin au sehemu yake inaweza kupendekeza kufanya mchepuo. Kwenye nambari ya kitalu cha mchepuo kutakuwa na matoleo mawili ya rasilimali ya Bitcoin — kama tu mchepuo wa Bitcoin Cash. Na hatimaye hili linaamuliwa na soko. Mabadilishano yataweka matoleo mawili ya rasilimali na soko litaamua ipi ni Bitcoin ya kweli. Na inawezekana kwamba kwa sababu tu ya mienendo ya ukwasi wa muda mfupi, toleo ambalo linateketeza sarafu, labda kabla ya Siku ya Q, ndilo litakaloshinda.
 
-#### Hali ya Michael Saylor na nukta za Schelling (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
+### Hali ya Michael Saylor na nukta za Schelling (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
 
 **Ryan Sean Adams:** Sawa. Kwa hivyo mimi ni Michael Saylor, ninamiliki 2-3% ya usambazaji wa Bitcoin, hasa usambazaji wa ukwasi. Ninapata nakala zote mbili. Tunachepua mnyororo wa vitalu wa Bitcoin kama tu vita vya mchepuo vya Bitcoin vya 2017. Ninataka kuhifadhi thamani yangu, kwa hivyo ninauza bitcoin zote ambazo ziko hatarini kwa kwanta na kuweka bitcoin zote kwenye toleo ambalo liliteketeza sarafu zilizo hatarini kwa kwanta. Bei ya mnyororo wa vitalu ambao haujaguswa inashuka. Bei ya toleo la kuteketeza inabaki juu kwa sababu hakuna anayeiuza — Saylor hauzi, BlackRock hauzi. Kwa hivyo unasema bei ya Bitcoin iliyotatuliwa kwa kwanta itakuwa juu na kwa nguvu za soko itakuwa Bitcoin rasmi.
 
@@ -155,7 +155,7 @@ Chaguo jingine ni kwamba wanaacha tu hiyo asilimia 10 kwa yeyote anayeweza kuund
 
 Hakika inashangaza kwamba hili litakuwa limetokea kwa mtandao wa matrilioni ya dola wenye zawadi kubwa kiasi hicho. Haijawahi kutokea. Lakini hilo pia linaweza kutokea, na labda hayo ni matokeo bora zaidi kwa Bitcoin.
 
-#### Uthibitisho wa kirai cha mbegu na tatizo la ukubwa wa sahihi baada ya kwanta (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
+### Uthibitisho wa kirai cha mbegu na tatizo la ukubwa wa sahihi baada ya kwanta (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
 
 **Justin Drake:** Ndiyo. Kwa hivyo nina mawazo kadhaa. La kwanza ni kwamba kuna njia ya kisasa kabisa ya kuthibitisha umiliki wa Bitcoin bila kupitia ufunguo wa siri. Hii inajulikana kama uthibitisho wa kirai cha mbegu. Njia unayopata anwani ya Bitcoin ni katika hatua tatu: hatua ya kwanza, unazalisha kirai cha mbegu chako; hatua ya pili, unafanya mabadiliko kadhaa kwenye kirai cha mbegu ikiwa ni pamoja na uheshiji ili kupata ufunguo wa siri wako; kisha kutoka kwenye ufunguo wa siri unapata ufunguo wa umma, ambayo ni anwani inayoenda mnyororoni. Sasa kwa bahati mbaya ufunguo wa siri si kitu tena kinachoweza kuthibitisha umiliki. Lakini kwa sababu ya hatua ya uheshiji, ikiwa unajua kirai cha mbegu chako, huo bado ni uthibitisho wa umiliki. Kwa hivyo jambo moja ambalo linaweza kutokea — na kiufundi ndiyo njia bora zaidi ya kusonga mbele — ni kufungia Bitcoin lakini kuruhusu mtu yeyote kufufua Bitcoin yao kwa uthibitisho wa kirai cha mbegu.
 
@@ -177,7 +177,7 @@ Kile tunachojenga kwa ajili ya Ethereum ni teknolojia hii nzuri ya ujumuishaji w
 
 Lakini kwa kweli kuna njia ya kujikinga na mabadiliko ya bei ya Bitcoin, ambayo ni rahisi sana — unaenda tu short kwenye BTC. Tuseme unajua kwa hakika kwamba umefumbua ufunguo wa siri wa mkoba ambao una BTC 100,000. Una-short BTC 100,000. Hiyo inahakikisha faida yako. Na kisha haijalishi bei ya Bitcoin inafanya nini, umehakikisha faida yako, ambayo inaweza kuwa makumi ya mabilioni ya dola.
 
-#### Changamoto ya tabaka la kijamii la Bitcoin na faida ya Ethereum (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
+### Changamoto ya tabaka la kijamii la Bitcoin na faida ya Ethereum (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
 
 **David Hoffman:** Sasa, ninataka kuweka wazi kuwa Justin, unafikiri kwa namna fulani, na jinsi unavyofikiri ndiyo sababu uko kwenye Ethereum. Kama ungekuwa mfuasi wa Bitcoin, ungekuwa unafikiri kwa njia tofauti. Njia ya kufikiri ya mfuasi wa Bitcoin ni ya kipekee sana, tofauti sana — kama mtu anayesimamia haki za mali kwa kiasi kikubwa. Nadhani kile ambacho Justin angefanya kama angekuwa anasimamia Bitcoin ni tofauti sana na kile ambacho kundi la jumla la wafuasi wa Bitcoin wangefanya. Sina swali la kujibiwa hapa, lakini nataka tu kusisitiza hilo.
 
@@ -205,7 +205,7 @@ Nilipokuwa na mradi wa Ultrasound, moja ya mambo tuliyokuwa tunajaribu kufanya i
 
 **Justin Drake:** Kabisa. Ndiyo. Ikiwa ningetoa utabiri thabiti, ningesema karibu asilimia 2, ambayo ni takriban kiwango cha chini sana kuliko Bitcoin. Na tofauti hii ya kiasi ina matokeo ya ubora: katika kesi ya Ethereum, ningetetea kwa dhati kutofanya chochote na kuheshimu kweli haki za mali, kwa sababu mwisho wa siku, asilimia 2 si jambo kubwa. Katika kesi ya Bitcoin, asilimia 15 ni jambo kubwa sana.
 
-#### Uboreshaji wa tabaka tatu wa Ethereum wa baada ya kwanta (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
+### Uboreshaji wa tabaka tatu wa Ethereum wa baada ya kwanta (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
 
 **David Hoffman:** Kwa hivyo Ethereum italazimika kufanya uamuzi huu huu. Tuseme 3% — iwe ni kufanya usitishaji na kuteketeza au kuiacha tu iwe uwindaji wa hazina. Matumaini yako ni kwamba tutachagua chaguo la uwindaji wa hazina, ikimaanisha mshambuliaji fulani wa kwanta atachukua hiyo 1-3% ya Etha. Na ukiangalia picha kamili, kimsingi tunaelekea kwenye Etha kuwa pesa bora zaidi kuliko BTC. Haitakuwa ya kuingiliwa, itaheshimu haki za mali, itakuwa salama dhidi ya kwanta, na haitakuwa na suala la bajeti ya usalama ambalo litaisumbua Bitcoin katika matukio machache ya nusu. Kwa hivyo nadhani hii ni fursa kubwa kwa rasilimali hii.
 
@@ -225,7 +225,7 @@ Lakini ukiangalia picha kamili, ningesema suala kubwa zaidi — labda 80% yake �
 
 *(50:00)*
 
-#### Kuboresha tabaka la utekelezaji: ujumuishaji wa sahihi (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
+### Kuboresha tabaka la utekelezaji: ujumuishaji wa sahihi (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
 
 kwa kweli inafafanua baadhi ya hatua muhimu za kufanya maboresho haya.
 
@@ -243,7 +243,7 @@ Taasisi ya Ethereum imeweka juhudi kubwa kuanza na sahihi zinazotegemea heshi na
 
 Na moja ya mambo ya kushangaza kuhusu mbinu hii ni kwamba kwa kweli ni ongezeko la uwezo wa kupanuka ikilinganishwa na kile tulicho nacho leo. Sababu ni kwamba huna gharama isiyobadilika ya baiti 64 kwa kila muamala. Miamala ina baiti sifuri za data ya sahihi, na kisha unakuwa na sahihi hii moja kuu ambayo inagawanywa kwenye miamala yote katika kitalu.
 
-#### Kuweka kiwango cha tasnia kupitia ushirikiano na Bitcoin (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
+### Kuweka kiwango cha tasnia kupitia ushirikiano na Bitcoin (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
 
 **David Hoffman:** Sawa. Kwa hivyo huu ni uboreshaji kwa minyororo ya vitalu mingine mingi ya mkataba mahiri inayofuata Ethereum, haswa ile inayoboresha kasi—
 
@@ -263,7 +263,7 @@ Tukirudi kwenye jambo lingine nililosema — inategemea tu kazi za heshi. Mfumo 
 
 Sasa kuna tahadhari mbili ninazotaka kuangazia. Tahadhari namba moja ni kwamba tunashughulika na vitu ngumu zaidi, na suluhisho tulilonalo hapa ni kile tunachokiita uthibitishaji rasmi wa kina kutoka mwanzo hadi mwisho.
 
-#### Uthibitishaji rasmi, Poseidon, na tabaka la mwafaka (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
+### Uthibitishaji rasmi, Poseidon, na tabaka la mwafaka (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
 
 Tuna kipengee chetu cha kriptografia na tunataka kuthibitisha kihisabati kwamba ni imara — kwamba haiwezekani kughushi sahihi. Na sio tu kwamba tunataka kufanya hivi kwa hisabati, bali pia kwa msimbo. Kama ungeniuliza miaka 2–3 iliyopita ikiwa hili linawezekana, ningesema ndiyo, lakini ilikuwa kazi ngumu sana na ghali. Tunachokiona na ujio wa AI ni kwamba kazi hii ngumu na ghali inaweza kufanywa haraka mara 100 na kwa bei nafuu mara 100.
 
@@ -279,7 +279,7 @@ Kwa bahati mbaya, jinsi unavyounda kazi za heshi ni kwamba huwezi kuthibitisha k
 
 Ili kufungua uboreshaji fulani wa utendaji unaopatikana tu kwenye tabaka la mwafaka, tuna dhana hii ya sahihi yenye hali — ujumbe unaosaini una kihesabio kinachoongezeka kila wakati. Je, hiyo haikukumbushi kitu? Nambari ya sloti. Katika Ethereum kwenye tabaka la mwafaka, utawahi kusaini ujumbe mmoja tu kwa kila sloti. Ukisaini mbili, unakatwa. Tunatumia kizuizi hiki kuwa na sahihi ambazo ni bora mara 10 zaidi kujumuisha.
 
-#### Lean VM, mkakati wa Lean Consensus, na ratiba ya 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
+### Lean VM, mkakati wa Lean Consensus, na ratiba ya 2029 (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
 
 Hii ndiyo tofauti kuu — kazi za heshi zisizo na hali kwenye tabaka la utekelezaji dhidi ya sahihi zenye hali kwenye tabaka la mwafaka ambapo nambari ya sloti inaongezeka. Teknolojia ya ujumuishaji ina jina: Lean VM, zkVM ndogo kwa ajili ya kriptografia inayotegemea heshi. Kimsingi, Lean VM itakuwa inathibitisha kuwa huu ni mzizi wa Merkle sahihi. Jambo kuu ambalo hatuna uhakika nalo kabisa bado ni kama mbinu hii inaweza kufungua kile ninachokiita "Eneo Jipya la tera gesi" — gigagesi 1 kwa sekunde kwenye tabaka la 1 (l1), TPS 10,000, lakini kwa malengo makubwa zaidi, teragesi 1, miamala milioni 10 kwa sekunde kwenye tabaka la 2 (l2) kwa kutumia upatikanaji wa data.
 
@@ -297,7 +297,7 @@ Sasa hivi tuna mitandao ya wasanidi kwa ajili ya Lean Consensus. Na vipimo ni ra
 
 Nadhani hili litakuwa na matokeo ya kuvutia kwa uendelevu pamoja na utawala. Kuhusu utawala, jinsi tunavyofanya leo kwa ujumla ni
 
-#### Utawala wa Ethereum na tarehe ya kukamilika ya 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
+### Utawala wa Ethereum na tarehe ya kukamilika ya 2029 (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
 
 kwamba tuna wateja watano wa tabaka la mwafaka na wote wanahitaji kutekeleza uboreshaji ili kusonga mbele. Katika siku zijazo, tutakapokuwa na wateja 10 au 15, tunaweza tu kuhitaji asilimia 80 ya juu au asilimia 80 ya haraka zaidi ili kusonga mbele. Huo ni ushindani zaidi wa Kidarwini unaoturuhusu kusonga haraka zaidi bila kumsubiri mteja wa polepole zaidi.
 
@@ -325,7 +325,7 @@ Habari nyingine njema ni kwamba hatuna chaguo. Tunapaswa kubadilisha kriptografi
 
 Hiyo inafanya uratibu na kufikia mwafaka kuwa rahisi zaidi.
 
-#### Quantum sio tu tatizo la kripto (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
+### Quantum sio tu tatizo la kripto (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
 
 **David Hoffman:** Nadhani tunapaswa kusisitiza kuwa sio tu Ethereum ambayo haina chaguo — hakuna mtu katika kripto aliye na mbadala wa hili. Kila mtu katika kripto lazima aandike upya. Kwa Bitcoin ni ECDSA tu, lakini hiyo yenyewe inatosha.
 
@@ -341,7 +341,7 @@ Ninapokubaliana nawe ni kwamba lazima kuwe na mabadiliko makubwa sana kwa minyor
 
 **Justin Drake:** Sikubaliani. Unaweza tu kuangalia uchambuzi wa kihistoria — makombe ya bahari yalichukuliwa nafasi na chumvi, kisha fedha, kisha dhahabu, na sasa kuna uwezekano wa Bitcoin kuchukua nafasi ya dhahabu. Kwa sababu tu dhahabu inashindwa haimaanishi kitu kinachofuata pia kinapaswa kushindwa. Ningesema Ethereum ni mrithi wa asili kabisa wa Bitcoin kama pesa ya mtandaoni. Na kwa sababu tu Bitcoin inashindwa haimaanishi Ethereum inapaswa kushindwa. Ninakubali kunaweza kuwa na maumivu ya muda mfupi, lakini pia tunazungumzia faida ya muda mrefu.
 
-#### Fursa ya baada ya kwanta na tathmini ya bajeti ya usalama (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
+### Fursa ya baada ya kwanta na tathmini ya bajeti ya usalama (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
 
 **David Hoffman:** Kwa hivyo tunapata nini mwishoni mwa haya yote? 2030, Ethereum itakuwa salama dhidi ya kwanta (post-quantum secure) kwa sababu Justin aliahidi. Ethereum inakuwa nini? Je, itakuwa pekee katika daraja lake, au unatarajia minyororo ya vitalu mingine ifuate na pia kufikia usalama wa baada ya kwanta? Unaweza kuelezea mfumo tutakaokuwa nao mwaka wa 2030 ikiwa haya yote yatatimia?
 
@@ -357,7 +357,7 @@ Jambo moja la kuvutia la data: Mnyororo wa Beacon wa asili (OG) ulizinduliwa mwa
 
 Tayari tunaanza kuona — jana tu, Dario Amodei, mmoja wa waasisi (OGs) wa AI, akianza kufanya AI ijiboreshe yenyewe kwa kujirudia na kujitegemea, jambo ambalo linatisha sana. Hiki kimsingi ndicho kinachopaswa kuanzisha ukuaji wa kasi kuelekea kwenye akili kuu.
 
-#### Mgogoro wa bajeti ya usalama ya Bitcoin na hesabu ya 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
+### Mgogoro wa bajeti ya usalama ya Bitcoin na hesabu ya 2032 (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
 
 Tuna 2032 kama Siku ya Q (Q-Day) inayowezekana, na pia tuna 2032 ambapo Bitcoin itakuwa na kile ninachoamini ni ugawaji wake wa nusu wa mwisho. Unaweza kuiita Siku ya B (B-Day) — siku ya Bitcoin ambapo kuna aina fulani ya hesabu, kwa sababu utoaji utakuwa chini sana kuweza kuilinda.
 
@@ -379,7 +379,7 @@ Kuna uwezekano kwamba rasilimali ya BTC inaweza kujitenga na mnyororo wa Bitcoin
 
 **Justin Drake:** Na kama ningesema maneno tofauti kama, "Tutaondoa tu kikomo cha milioni 21 kwa sababu bajeti ya usalama haitoshi" — wafuasi wa Bitcoin pia hawafikirii hivyo. Wanaelekea kwa kasi sana ukutani, na 2032 ni siku ya hesabu.
 
-#### Kusanya sasa, simbuwa baadaye — hatari za kwanta nje ya kripto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
+### Kusanya sasa, simbuwa baadaye — hatari za kwanta nje ya kripto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
 
 **Ryan Sean Adams:** Vipi kuhusu kwanta inavyohusiana na jamii nzima? Hili si tatizo la kripto pekee. Minyororo ya vitalu iko hatarini kwa namna ya kipekee, lakini sehemu nyingine za jamii pia ziko hatarini. Kwa kiasi gani Ethereum ya baada ya kwanta inawakilisha zana kwa jamii kutatua na kuzuia mambo katika ulimwengu wa baada ya kwanta, na baada ya AI?
 
@@ -387,7 +387,7 @@ Kuna uwezekano kwamba rasilimali ya BTC inaweza kujitenga na mnyororo wa Bitcoin
 
 Kisha kuna tatizo jingine na usimbaji fiche: kama nyenzo imesimbwa fiche leo na hutumii usimbaji fiche salama wa baada ya kwanta, data hiyo inaweza kusimbuliwa katika siku zijazo. Kuna kundi hili zima la mashambulizi linaloitwa "kusanya sasa, simbuwa baadaye." Nadhani ni uhalisia kwamba tutakuwa na usimbuaji mkubwa katika jamii — jumbe nyingi za Signal, jumbe za Telegram, au makusanyo ya jumbe za Gmail zote zikisimbuwa kwa wakati mmoja. Hiyo inaweza kuwa na athari kubwa sana kwa jamii.
 
-#### Ethereum kama uharakishaji wa kujihami na hatari ya kuwepo kwa AI (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
+### Ethereum kama uharakishaji wa kujihami na hatari ya kuwepo kwa AI (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
 
 **Ryan Sean Adams:** Justin, tulipokuwa tukizungumza kuhusu teknolojia hizi tatu za kompyuta, inahisi kama ile inayojitokeza zaidi ni AI. Ulikuwa ukizungumza kuhusu 2032 kuwa kama wakati wa aina ya AGI. Swali moja la jumla: kama mtaalamu wa kriptografia mwenye kipaji kikubwa, wewe si AGI. Wasiwasi ni kwamba tunapoingia kwenye upekee wa kompyuta, mambo yote yanaweza kubadilika. Mipango yote mizuri tunayofanya mwaka wa 2026 ili minyororo ya vitalu yetu iweze kustahimili kompyuta za kwanta — vipi ikiwa AGI itagundua jinsi ya kuvunja kriptografia yetu inayostahimili kwanta kwa njia nyingine? Kama mtaalamu wa kriptografia, je, una wasiwasi kuhusu mambo yasiyojulikana kabisa ya akili bandia ya jumla na mambo ambayo inaweza kuvunja? Vipi ikiwa tumejitayarisha kwa ulimwengu wa baada ya kwanta lakini hatujajitayarisha kwa ulimwengu wa baada ya AGI?
 
@@ -401,7 +401,7 @@ Nadhani inawezekana kwamba ikiwa binadamu wataokoka, Ethereum itachukua jukumu m
 
 Kufanya kazi kwenye Ethereum kumekuwa na maana mpya kabisa kwangu katika miezi michache iliyopita. Nilikuwa nikipuuza AI kwa kiasi kikubwa, kwa kiasi fulani kwa sababu nilikuwa nimevutiwa sana na mambo ya mnyororo wa vitalu, lakini pia kwa sababu ilikuwa kama kichezeo si muda mrefu uliopita. Lakini kupitia kazi yangu, hasa na uthibitishaji rasmi na maendeleo
 
-#### Maana ya kufanya kazi kwenye Ethereum katika enzi ya AI (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
+### Maana ya kufanya kazi kwenye Ethereum katika enzi ya AI (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
 
 na kuandika kodi, ninaona jinsi mambo haya yalivyo na nguvu. Katika wiki na miezi michache iliyopita nimekuwa nikivutiwa sana na AI, nikijifunza kadiri niwezavyo. Mimi si mtaalamu hata kidogo, na labda hii ni hatua tu ambayo watu hupitia wanapofungua sanduku la Pandora. Lakini kwangu mimi, kufanya kazi kwenye Ethereum sasa kunahusu uongezaji kasi wa kiulinzi.
 
@@ -417,7 +417,7 @@ Nadhani inawezekana kwamba katika miezi na miaka ijayo tutakuwa na aina fulani y
 
 **Justin Drake:** Nina utulivu kiasi kuhusu hilo. Nimefikia hatua ambayo niko tayari kufa. Nimeishi maisha yenye furaha sana.
 
-#### Mawazo ya mwisho kuhusu uwezekano wa maangamizi (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
+### Mawazo ya mwisho kuhusu uwezekano wa maangamizi (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
 
 **Ryan Sean Adams:** Nini?
 

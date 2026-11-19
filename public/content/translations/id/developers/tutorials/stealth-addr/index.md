@@ -135,7 +135,7 @@ Kita akan menggunakan [Vite](https://vite.dev/) dan [React](https://react.dev/).
 
 #### Komponen WASM {#wasm}
 
-Kode sumber yang dikompilasi ke dalam WASM ditulis dalam [Rust](https://rust-lang.org/). Anda dapat melihatnya di [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Kode ini pada dasarnya adalah antarmuka antara kode JavaScript dan [pustaka `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Kode sumber yang dikompilasi menjadi WASM ditulis dalam [Rust](https://rust-lang.org/). Anda dapat melihatnya di [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Kode ini utamanya adalah antarmuka antara kode JavaScript dan [pustaka `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
@@ -154,20 +154,20 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-Paket [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) perlu menghasilkan nilai acak. Hal itu tidak dapat dilakukan dengan cara algoritmik murni; ini memerlukan akses ke proses fisik sebagai sumber Entropi. Definisi ini menentukan bahwa kita akan mendapatkan Entropi tersebut dengan meminta peramban tempat kita menjalankannya.
+Paket [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) perlu menghasilkan nilai acak. Hal itu tidak dapat dilakukan dengan cara algoritmik murni; ini memerlukan akses ke proses fisik sebagai sumber entropi. Definisi ini menentukan bahwa kita akan mendapatkan entropi tersebut dengan meminta peramban tempat kita menjalankannya.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-[Pustaka ini](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) memberi kita pesan kesalahan yang lebih bermakna ketika kode WASM mengalami panic dan tidak dapat dilanjutkan.
+[Pustaka ini](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) memberi kita pesan kesalahan yang lebih bermakna ketika kode WASM mengalami *panic* dan tidak dapat melanjutkan.
 
 ```toml
 [lib]
 crate-type = ["cdylib", "rlib"]
 ```
 
-Jenis keluaran yang diperlukan untuk menghasilkan kode WASM.
+Tipe keluaran yang diperlukan untuk menghasilkan kode WASM.
 
 **`lib.rs`**
 
@@ -177,9 +177,9 @@ Ini adalah kode Rust yang sebenarnya.
 use wasm_bindgen::prelude::*;
 ```
 
-Definisi untuk membuat paket WASM dari Rust. Semuanya didokumentasikan [di sini](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
+Definisi untuk membuat paket WASM dari Rust. Definisi tersebut didokumentasikan [di sini](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -187,19 +187,19 @@ use eth_stealth_addresses::{
 };
 ```
 
-Fungsi yang kita butuhkan dari [pustaka `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Fungsi-fungsi yang kita butuhkan dari [pustaka `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 ```rust
 use hex::{decode,encode};
 ```
 
-Rust biasanya menggunakan [larik (array)](https://doc.rust-lang.org/std/primitive.array.html) bita (`[u8; <size>]`) untuk nilai. Tetapi di JavaScript, kita biasanya menggunakan string heksadesimal. [Pustaka `hex`](https://docs.rs/hex/latest/hex/) menerjemahkannya untuk kita dari satu representasi ke representasi lainnya.
+Rust biasanya menggunakan [*array*](https://doc.rust-lang.org/std/primitive.array.html) bita (`[u8; <size>]`) untuk nilai. Namun di JavaScript, kita biasanya menggunakan string heksadesimal. [Pustaka `hex`](https://docs.rs/hex/latest/hex/) menerjemahkan untuk kita dari satu representasi ke representasi lainnya.
 
 ```rust
 #[wasm_bindgen]
 ```
 
-Hasilkan pengikatan (bindings) WASM agar dapat memanggil fungsi ini dari JavaScript.
+Hasilkan *binding* WASM agar dapat memanggil fungsi ini dari JavaScript.
 
 ```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
@@ -215,10 +215,10 @@ Cara termudah untuk mengembalikan objek dengan beberapa bidang adalah dengan men
 [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) mengembalikan tiga bidang:
 
 - Alamat meta (*K<sub>pub</sub>* dan *V<sub>pub</sub>*)
-- Kunci privat peninjauan (*V<sub>priv</sub>*)
-- Kunci privat pembelanjaan (*K<sub>priv</sub>*)
+- Kunci privat untuk melihat (*V<sub>priv</sub>*)
+- Kunci privat untuk membelanjakan (*K<sub>priv</sub>*)
 
-Sintaks [tupel](https://doc.rust-lang.org/std/primitive.tuple.html) memungkinkan kita memisahkan nilai-nilai tersebut lagi.
+Sintaks [*tuple*](https://doc.rust-lang.org/std/primitive.tuple.html) memungkinkan kita memisahkan nilai-nilai tersebut lagi.
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -229,19 +229,19 @@ Sintaks [tupel](https://doc.rust-lang.org/std/primitive.tuple.html) memungkinkan
 }
 ```
 
-Gunakan makro [`format!`](https://doc.rust-lang.org/std/fmt/index.html) untuk menghasilkan string yang dienkode JSON. Gunakan [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) untuk mengubah larik menjadi string hex.
+Gunakan makro [`format!`](https://doc.rust-lang.org/std/fmt/index.html) untuk menghasilkan string yang dienkode JSON. Gunakan [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) untuk mengubah *array* menjadi string heksadesimal.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-Fungsi ini mengubah string hex (yang disediakan oleh JavaScript) menjadi larik bita. Kita menggunakannya untuk mengurai nilai yang disediakan oleh kode JavaScript. Fungsi ini rumit karena cara Rust menangani larik dan vektor.
+Fungsi ini mengubah string heksadesimal (yang disediakan oleh JavaScript) menjadi *array* bita. Kita menggunakannya untuk mengurai nilai yang disediakan oleh kode JavaScript. Fungsi ini rumit karena cara Rust menangani *array* dan vektor.
 
-Ekspresi `<const N: usize>` disebut [generik](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` adalah parameter yang mengontrol panjang larik yang dikembalikan. Fungsi ini sebenarnya dipanggil `str_to_array::<n>`, di mana `n` adalah panjang larik.
+Ekspresi `<const N: usize>` disebut [*generic*](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` adalah parameter yang mengontrol panjang *array* yang dikembalikan. Fungsi ini sebenarnya dipanggil `str_to_array::<n>`, di mana `n` adalah panjang *array*.
 
-Nilai kembaliannya adalah `Option<[u8; N]>`, yang berarti larik yang dikembalikan bersifat [opsional](https://doc.rust-lang.org/std/option/). Ini adalah pola khas di Rust untuk fungsi yang mungkin gagal.
+Nilai kembaliannya adalah `Option<[u8; N]>`, yang berarti *array* yang dikembalikan bersifat [opsional](https://doc.rust-lang.org/std/option/). Ini adalah pola khas di Rust untuk fungsi yang mungkin gagal.
 
-Misalnya, jika kita memanggil `str_to_array::10("bad060a7")`, fungsi tersebut seharusnya mengembalikan larik sepuluh nilai, tetapi masukannya hanya empat bita. Fungsi tersebut harus gagal, dan ia melakukannya dengan mengembalikan `None`. Nilai kembalian untuk `str_to_array::4("bad060a7")` akan menjadi `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+Misalnya, jika kita memanggil `str_to_array::10("bad060a7")`, fungsi tersebut seharusnya mengembalikan *array* sepuluh nilai, tetapi masukannya hanya empat bita. Fungsi tersebut harus gagal, dan ia melakukannya dengan mengembalikan `None`. Nilai kembalian untuk `str_to_array::4("bad060a7")` akan menjadi `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
     // decode mengembalikan Result<Vec<u8>, _>
@@ -250,9 +250,9 @@ Misalnya, jika kita memanggil `str_to_array::10("bad060a7")`, fungsi tersebut se
 
 Fungsi [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) mengembalikan `Result<Vec<u8>, FromHexError>`. Tipe [`Result`](https://doc.rust-lang.org/std/result/) dapat berisi hasil yang berhasil (`Ok(value)`) atau kesalahan (`Err(error)`).
 
-Metode `.ok()` mengubah `Result` menjadi `Option`, yang nilainya adalah nilai `Ok()` jika berhasil atau `None` jika tidak. Terakhir, [operator tanda tanya](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) membatalkan fungsi saat ini dan mengembalikan `None` jika `Option` kosong. Jika tidak, ia akan membuka (unwrap) nilai tersebut dan mengembalikannya (dalam hal ini, untuk menetapkan nilai ke `vec`).
+Metode `.ok()` mengubah `Result` menjadi `Option`, yang nilainya adalah nilai `Ok()` jika berhasil atau `None` jika tidak. Terakhir, [operator tanda tanya](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) membatalkan fungsi saat ini dan mengembalikan `None` jika `Option` kosong. Jika tidak, ia membuka (*unwrap*) nilai tersebut dan mengembalikannya (dalam hal ini, untuk menetapkan nilai ke `vec`).
 
-Ini terlihat seperti metode yang sangat berbelit-belit untuk menangani kesalahan, tetapi `Result` dan `Option` memastikan bahwa semua kesalahan ditangani, dengan satu atau lain cara.
+Ini terlihat seperti metode yang sangat rumit untuk menangani kesalahan, tetapi `Result` dan `Option` memastikan bahwa semua kesalahan ditangani, dengan satu atau lain cara.
 
 ```rust
     if vec.len() != N { return None; }
@@ -265,7 +265,7 @@ Jika jumlah bita tidak benar, itu adalah kegagalan, dan kita mengembalikan `None
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust memiliki dua tipe larik. [Larik](https://doc.rust-lang.org/std/primitive.array.html) memiliki ukuran tetap. [Vektor](https://doc.rust-lang.org/std/vec/index.html) dapat membesar dan mengecil. `hex::decode` mengembalikan vektor, tetapi pustaka `eth_stealth_addresses` ingin menerima larik. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) mengonversi nilai ke tipe lain, misalnya, vektor menjadi larik.
+Rust memiliki dua tipe *array*. [*Array*](https://doc.rust-lang.org/std/primitive.array.html) memiliki ukuran tetap. [Vektor](https://doc.rust-lang.org/std/vec/index.html) dapat membesar dan menyusut. `hex::decode` mengembalikan vektor, tetapi pustaka `eth_stealth_addresses` ingin menerima *array*. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) mengonversi nilai menjadi tipe lain, misalnya, vektor menjadi *array*.
 
 ```rust
     Some(array)
@@ -315,12 +315,12 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-Fungsi ini menggunakan [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) dari pustaka untuk menghitung kunci privat guna menarik dana dari alamat tersebut (*R<sub>priv</sub>*). Perhitungan ini memerlukan nilai-nilai berikut:
+Fungsi ini menggunakan [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) dari pustaka tersebut untuk menghitung kunci privat guna menarik dana dari alamat tersebut (*R<sub>priv</sub>*). Perhitungan ini memerlukan nilai-nilai berikut:
 
-- Alamat (*Alamat=f(P<sub>pub</sub>)*)
+- Alamat (*Address=f(P<sub>pub</sub>)*)
 - Kunci publik yang dihasilkan oleh Bill (*R<sub>pub</sub>*)
-- Kunci privat peninjauan (*V<sub>priv</sub>*)
-- Kunci privat pembelanjaan (*K<sub>priv</sub>*)
+- Kunci privat untuk melihat (*V<sub>priv</sub>*)
+- Kunci privat untuk membelanjakan (*K<sub>priv</sub>*)
 
 ```rust
 #[wasm_bindgen(start)]
@@ -334,7 +334,7 @@ pub fn main() {
 }
 ```
 
-Kode ini menentukan bahwa keluaran panic dikirim ke konsol JavaScript. Untuk melihatnya beraksi, gunakan aplikasi dan berikan Bill alamat meta yang tidak valid (cukup ubah satu digit heksadesimal). Anda akan melihat kesalahan ini di konsol JavaScript:
+Kode ini menentukan bahwa keluaran *panic* dikirim ke konsol JavaScript. Untuk melihatnya beraksi, gunakan aplikasi dan berikan Bill alamat meta yang tidak valid (cukup ubah satu digit heksadesimal). Anda akan melihat kesalahan ini di konsol JavaScript:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -343,20 +343,20 @@ assertion `left == right` failed
  right: 1
 ```
 
-Diikuti oleh jejak tumpukan (stack trace). Kemudian berikan Bill alamat meta yang valid, dan berikan Alice alamat yang tidak valid atau kunci publik yang tidak valid. Anda akan melihat kesalahan ini:
+Diikuti oleh pelacakan tumpukan (*stack trace*). Kemudian berikan Bill alamat meta yang valid, dan berikan Alice alamat yang tidak valid atau kunci publik yang tidak valid. Anda akan melihat kesalahan ini:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
 keys do not generate stealth address
 ```
 
-Sekali lagi, diikuti oleh jejak tumpukan.
+Sekali lagi, diikuti oleh pelacakan tumpukan.
 
 #### Antarmuka Pengguna {#ui}
 
 Antarmuka pengguna ditulis menggunakan [React](https://react.dev/) dan disajikan oleh [Vite](https://vite.dev/). Anda dapat mempelajarinya menggunakan [tutorial ini](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Tidak perlu [Wagmi](https://wagmi.sh/) di sini karena kita tidak berinteraksi langsung dengan rantai blok atau dompet.
 
-Satu-satunya bagian yang tidak jelas dari antarmuka pengguna adalah konektivitas WASM. Berikut adalah cara kerjanya.
+Satu-satunya bagian yang tidak terlalu jelas dari antarmuka pengguna adalah konektivitas WASM. Berikut adalah cara kerjanya.
 
 **`vite.config.js`**
 
@@ -383,7 +383,7 @@ Berkas ini adalah komponen utama aplikasi. Ini adalah wadah yang mencakup dua ko
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Saat kita menggunakan [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), ia membuat dua berkas yang kita gunakan di sini: berkas wasm dengan kode sebenarnya (di sini, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) dan berkas JavaScript dengan definisi untuk menggunakannya (di sini, `src/rust_wasm/pkg/rust_wasm.js`). Ekspor bawaan dari berkas JavaScript tersebut adalah kode yang perlu dijalankan untuk memulai WASM.
+Saat kita menggunakan [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), ia membuat dua berkas yang kita gunakan di sini: berkas wasm dengan kode sebenarnya (di sini, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) dan berkas JavaScript dengan definisi untuk menggunakannya (di sini, `src/rust-wasm/pkg/rust_wasm.js`). Ekspor bawaan dari berkas JavaScript tersebut adalah kode yang perlu dijalankan untuk menginisiasi WASM.
 
 ```jsx
 function App() {
@@ -406,9 +406,9 @@ function App() {
   )
 ```
 
-Hook [`useEffect`](https://react.dev/reference/react/useEffect) memungkinkan Anda menentukan fungsi yang dieksekusi saat variabel state berubah. Di sini, daftar variabel state kosong (`[]`), jadi fungsi ini hanya dieksekusi sekali saat halaman dimuat.
+[*Hook* `useEffect`](https://react.dev/reference/react/useEffect) memungkinkan Anda menentukan fungsi yang dieksekusi saat variabel *state* berubah. Di sini, daftar variabel *state* kosong (`[]`), sehingga fungsi ini hanya dieksekusi sekali saat halaman dimuat.
 
-Fungsi efek harus segera dikembalikan. Untuk menggunakan kode asinkron, seperti `init` WASM (yang harus memuat berkas `.wasm` dan karenanya membutuhkan waktu) kita mendefinisikan fungsi [`async`](https://en.wikipedia.org/wiki/Async/await) internal dan menjalankannya tanpa `await`.
+Fungsi efek harus segera kembali. Untuk menggunakan kode asinkron, seperti `init` WASM (yang harus memuat berkas `.wasm` dan karenanya membutuhkan waktu) kita mendefinisikan fungsi [`async`](https://en.wikipedia.org/wiki/Async/await) internal dan menjalankannya tanpa `await`.
 
 **`Bill.jsx`**
 
@@ -430,7 +430,7 @@ Untuk memanggil fungsi WASM, kita cukup memanggil fungsi yang diekspor oleh berk
 
 **`Alice.jsx`**
 
-Kode di `Alice.jsx` adalah analog, kecuali bahwa Alice memiliki dua tindakan:
+Kode dalam `Alice.jsx` adalah analog, kecuali bahwa Alice memiliki dua tindakan:
 
 - Menghasilkan alamat meta
 - Mendapatkan kunci privat untuk alamat yang dipublikasikan oleh Bill

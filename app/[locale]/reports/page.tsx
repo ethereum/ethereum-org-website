@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -35,8 +35,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-reports")
 
   const { contributors } = await getAppPageContributorInfo(
@@ -59,7 +57,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <PageHero
-        breadcrumbs={{ slug: "research/reports", startDepth: 1 }}
+        breadcrumbs={{ slug: "reports" }}
         heroImg={heroImg}
         title={t("page-reports-title")}
         description={t("page-reports-description")}
@@ -163,8 +161,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-reports")
 

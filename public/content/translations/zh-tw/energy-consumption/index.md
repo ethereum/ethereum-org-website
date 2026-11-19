@@ -1,11 +1,11 @@
 ---
-title: 以太坊的能源消耗
-metaTitle: 以太坊能源消耗
-description: 了解以太坊能源消耗所需的基本資訊。
+title: "以太坊的能源消耗"
+metaTitle: "以太坊能源消耗"
+description: "了解以太坊能源消耗所需的基本資訊。"
 lang: zh-tw
 ---
 
-[以太坊](/)是一個環保的區塊鏈。以太坊的[權益證明 (PoS)](/developers/docs/consensus-mechanisms/pos)共識機制使用 ETH 而不是[能源來保護網路安全](/developers/docs/consensus-mechanisms/pow)。以太坊在全球網路的能源消耗約為 [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022)。
+[以太坊](/)是一個環保的區塊鏈。以太坊的[權益證明 (PoS)](/developers/docs/consensus-mechanisms/pos)共識機制使用 ETH 而不是[能源來保護網路安全](/developers/docs/consensus-mechanisms/pow)。以太坊在全球網路的能源消耗約為 [\~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022)。
 
 以太坊的能源消耗估算來自 [CCRI（加密貨幣碳評級機構）](https://carbon-ratings.com)的一項研究。他們由下而上估算了以太坊網路的電力消耗和碳足跡（[查看報告](https://carbon-ratings.com/eth-report-2022)）。他們測量了具有各種硬體和客戶端軟體配置的不同節點的電力消耗。應用特定地區的碳強度係數，該網路預估的年度電力消耗 **2,601 MWh**（0.0026 TWh）相當於每年 **870 噸二氧化碳當量 (CO2e)** 的碳排放量。這個數值會隨著節點加入和離開網路而改變——你可以使用[劍橋區塊鏈網路永續性指數](https://ccaf.io/cbnsi/ethereum)的 7 天滾動平均估算值來追蹤（請注意，他們使用的估算方法略有不同——詳情請見其網站）。
 
@@ -83,3 +83,5 @@ Web3 原生的公共財資助平台（如 [Gitcoin](https://gitcoin.co)）舉辦
 
 - [信標鏈](/roadmap/beacon-chain)
 - [合併](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

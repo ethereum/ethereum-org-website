@@ -60,7 +60,7 @@ Kitalu `body` kina sehemu zake kadhaa:
 | `attestations`       | orodha ya uthibitisho uliotolewa dhidi ya sloti zilizopita |
 | `deposits`           | orodha ya amana mpya kwenye mkataba wa amana     |
 | `voluntary_exits`    | orodha ya wathibitishaji wanaoondoka kwenye mtandao           |
-| `sync_aggregate`     | kikundi kidogo cha wathibitishaji kinachotumika kuhudumia wateja wepesi |
+| `sync_aggregate`     | kikundi kidogo cha wathibitishaji kinachotumika kuhudumia viteja vyepesi |
 | `execution_payload`  | miamala iliyopitishwa kutoka kwa kiteja cha utekelezaji    |
 
 Sehemu ya `attestations` ina orodha ya uthibitisho wote katika kitalu. Uthibitisho una aina yake ya data ambayo ina vipande kadhaa vya data. Kila uthibitisho una:
@@ -81,7 +81,7 @@ Sehemu ya `data` katika `attestation` ina yafuatayo:
 | `source`            | kituo cha ukaguzi cha mwisho kilichohalalishwa                                   |
 | `target`            | kitalu cha hivi punde cha mpaka wa kipindi                                 |
 
-Kutekeleza miamala katika `execution_payload` kunasasisha hali ya kimataifa. Wateja wote hutekeleza tena miamala katika `execution_payload` ili kuhakikisha hali mpya inalingana na ile iliyo katika sehemu ya `state_root` ya kitalu kipya. Hivi ndivyo wateja wanaweza kujua kwamba kitalu kipya ni halali na salama kuongezwa kwenye mnyororo wao wa vitalu. `execution payload` yenyewe ni kipengee chenye sehemu kadhaa. Pia kuna `execution_payload_header` ambayo ina taarifa muhimu za muhtasari kuhusu data ya utekelezaji. Miundo hii ya data imepangwa kama ifuatavyo:
+Kutekeleza miamala katika `execution_payload` kunasasisha hali ya kimataifa. Viteja vyote hutekeleza tena miamala katika `execution_payload` ili kuhakikisha hali mpya inalingana na ile iliyo katika sehemu ya `state_root` ya kitalu kipya. Hivi ndivyo viteja vinaweza kujua kwamba kitalu kipya ni halali na salama kuongezwa kwenye mnyororo wao wa vitalu. `execution payload` yenyewe ni kipengee chenye sehemu kadhaa. Pia kuna `execution_payload_header` ambayo ina taarifa muhimu za muhtasari kuhusu data ya utekelezaji. Miundo hii ya data imepangwa kama ifuatavyo:
 
 `execution_payload_header` ina sehemu zifuatazo:
 
@@ -151,3 +151,5 @@ _Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 - [Miamala](/developers/docs/transactions/)
 - [Gesi](/developers/docs/gas/)
 - [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

@@ -5,7 +5,7 @@ description: Le informazioni di base necessarie per comprendere il consumo energ
 lang: it
 ---
 
-[Ethereum](/) è una blockchain ecologica. Il meccanismo di consenso [Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos) di Ethereum utilizza ETH invece di [energia per proteggere la rete](/developers/docs/consensus-mechanisms/pow). Il consumo energetico di Ethereum è di circa [~0,0026 TWh/anno](https://carbon-ratings.com/eth-report-2022) sull'intera rete globale.
+[Ethereum](/) è una blockchain ecologica. Il meccanismo di consenso [Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos) di Ethereum utilizza ETH invece di [energia per proteggere la rete](/developers/docs/consensus-mechanisms/pow). Il consumo energetico di Ethereum è di circa [\~0,0026 TWh/anno](https://carbon-ratings.com/eth-report-2022) sull'intera rete globale.
 
 La stima del consumo energetico per Ethereum proviene da uno studio del [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Hanno generato stime dal basso verso l'alto (bottom-up) del consumo di elettricità e dell'impronta di carbonio della rete Ethereum ([vedi il rapporto](https://carbon-ratings.com/eth-report-2022)). Hanno misurato il consumo di elettricità di diversi nodi con varie configurazioni hardware e software dei client. I **2.601 MWh** (0,0026 TWh) stimati per il consumo annuo di elettricità della rete corrispondono a emissioni annuali di carbonio pari a **870 tonnellate di CO2e** applicando fattori di intensità di carbonio specifici per regione. Questo valore cambia man mano che i nodi entrano ed escono dalla rete: puoi tenerne traccia utilizzando una stima della media mobile a 7 giorni fornita dal [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) (nota che utilizzano un metodo leggermente diverso per le loro stime; i dettagli sono disponibili sul loro sito).
 
@@ -83,3 +83,5 @@ Le piattaforme di finanziamento dei beni pubblici native del Web3 come [Gitcoin]
 
 - [La Beacon Chain](/roadmap/beacon-chain)
 - [The Merge](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

@@ -1,6 +1,6 @@
 ---
 title: Kutumia WebSockets
-description: Mwongozo wa kutumia WebSockets na Alchemy kufanya maombi ya JSON-RPC na kujiandikisha kwa matukio.
+description: Mwongozo wa kutumia WebSockets kufanya maombi ya JSON-RPC na kujiandikisha kwenye matukio, na mtoa huduma yeyote wa nodi ya Ethereum.
 author: "Elan Halpern"
 lang: sw
 tags: ["Alchemy", "websockets", "kudadisi", "JavaScript"]
@@ -11,46 +11,63 @@ sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-webso
 published: 2020-12-01
 ---
 
-Huu ni mwongozo wa kiwango cha kuanzia wa kutumia WebSockets na Alchemy kufanya maombi kwenye mnyororo wa vitalu wa Ethereum.
+Huu ni mwongozo wa kiwango cha kuanzia wa kutumia WebSockets kufanya maombi kwenye mnyororo wa vitalu wa Ethereum. Mifano inatumia mbinu za kawaida za JSON-RPC, kwa hivyo zinafanya kazi na nodi yoyote au mtoa huduma wa nodi anayetoa kituo cha mwisho cha WebSocket, ikiwa ni pamoja na Alchemy.
 
 ## WebSockets dhidi ya HTTP {#websockets-vs-http}
 
-Tofauti na HTTP, ukiwa na WebSockets, huhitaji kufanya maombi mfululizo unapohitaji taarifa maalum. WebSockets hudumisha muunganisho wa mtandao kwa ajili yako (kama ikifanywa kwa usahihi) na kusikiliza mabadiliko.
+Tofauti na HTTP, ukiwa na WebSockets, huhitaji kufanya maombi mfululizo unapotaka taarifa mahususi. WebSockets hudumisha muunganisho wa mtandao kwa ajili yako (kama ikifanywa kwa usahihi) na kusikiliza mabadiliko.
 
-Kama ilivyo kwa muunganisho wowote wa mtandao, hupaswi kudhani kuwa WebSocket itabaki wazi milele bila kukatizwa, lakini kushughulikia kwa usahihi miunganisho iliyokatika na kuunganisha tena kwa mikono inaweza kuwa changamoto kupata usahihi. Hasara nyingine ya WebSockets ni kwamba hupati misimbo ya hali ya HTTP katika majibu, bali unapata tu ujumbe wa hitilafu.
+Kama ilivyo kwa muunganisho wowote wa mtandao, hupaswi kudhani kuwa WebSocket itasalia wazi milele bila kukatizwa, lakini kushughulikia kwa usahihi miunganisho iliyokatika na kuunganisha upya kwa mikono kunaweza kuwa changamoto kupata usahihi. Hasara nyingine ya WebSockets ni kwamba hupati misimbo ya hali ya HTTP katika majibu, bali unapata tu ujumbe wa hitilafu.
 
-​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) huongeza kiotomatiki ushughulikiaji wa hitilafu za WebSocket na kujaribu tena bila usanidi wowote unaohitajika.
+Maktaba za mteja zinaweza kukushughulikia hili. Kwa mfano, [usafirishaji wa WebSocket wa Viem](https://viem.sh/docs/clients/transports/websocket) huunganisha upya soketi inaposhindwa na kutuma ping za kuweka hai kwa chaguomsingi.
 
 ## Ijaribu {#try-it-out}
 
-Njia rahisi zaidi ya kujaribu WebSockets ni kusakinisha zana ya mstari wa amri kwa ajili ya kufanya maombi ya WebSocket kama vile [wscat](https://github.com/websockets/wscat). Kwa kutumia wscat, unaweza kutuma maombi kama ifuatavyo:
+Unahitaji URL ya WebSocket kwa ajili ya nodi ya Ethereum. Watoa huduma wa nodi hukupa moja unapotengeneza ufunguo wa Kiolesura cha Kupanga Programu Tumizi (API), kwa kawaida katika muundo wa `wss://<provider-host>/<your-api-key>`. Kwa mfano, URL ya Mtandao Mkuu wa Ethereum ya Alchemy inaonekana kama `wss://eth-mainnet.g.alchemy.com/v2/<your-api-key>` ([jisajili kwa akaunti ya bure ya Alchemy](https://auth.alchemy.com/signup)). Tazama [nodi kama huduma](/developers/docs/nodes-and-clients/nodes-as-a-service/) kwa watoa huduma wengine, au tumia kituo cha mwisho cha WebSocket cha [nodi yako mwenyewe](/developers/docs/nodes-and-clients/run-a-node/). Vituo vya mwisho vya umma kama vile `wss://ethereum-rpc.publicnode.com` pia hufanya kazi kwa majaribio ya haraka, lakini vimewekewa kikomo cha kasi na huenda visiauni kila aina ya usajili.
 
-_Kumbuka: ikiwa una akaunti ya Alchemy unaweza kubadilisha `demo` na ufunguo wako wa API. [Jisajili kwa akaunti ya bure ya Alchemy hapa!](https://auth.alchemy.com/signup)_
+Njia rahisi zaidi ya kujaribu WebSockets ni kusakinisha zana ya mstari wa amri ya kufanya maombi ya WebSocket kama vile [wscat](https://github.com/websockets/wscat). Kwa kutumia wscat, unaweza kutuma maombi kama ifuatavyo:
 
+```sh
+npx wscat -c wss://<provider-host>/<your-api-key>
+
+> {"jsonrpc": "2.0", "id": 0, "method": "eth_gasPrice"}
+
+< {"jsonrpc": "2.0", "result": "0x41f9de2", "id": 0}
 ```
-wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
->  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
-
-<  {"jsonrpc":  "2.0", "result":  "0xb2d05e00", "id": 0}
-```
+Mistari inayoanza na `>` ndiyo unayoandika, na mistari inayoanza na `<` ndiyo ambayo nodi hutuma nyuma.
 
 ## Jinsi ya kutumia WebSockets {#how-to-use-websockets}
 
-Ili kuanza, fungua WebSocket ukitumia URL ya WebSocket kwa programu yako. Unaweza kupata URL ya WebSocket ya programu yako kwa kufungua ukurasa wa programu katika [dashibodi yako](https://dashboard.alchemy.com/) na kubofya "View Key". Kumbuka kwamba URL ya programu yako kwa WebSockets ni tofauti na URL yake kwa maombi ya HTTP, lakini zote zinaweza kupatikana kwa kubofya "View Key".
+Ili kuanza, fungua WebSocket ukitumia URL ya WebSocket ya mtoa huduma wako. Ukiwa na Alchemy, unaweza kuipata kwa kufungua programu yako katika [dashibodi](https://dashboard.alchemy.com/) na kutazama ufunguo wake wa Kiolesura cha Kupanga Programu Tumizi (API). Kumbuka kwamba URL ya WebSockets (`wss://`) ni tofauti na URL ya maombi ya HTTP (`https://`), ingawa watoa huduma wengi hutumia ufunguo sawa wa API kwa zote mbili.
 
-![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.mp4#602x280)
+![Mahali pa kupata URL yako ya WebSocket katika dashibodi yako ya Alchemy](./use-websockets.mp4#602x280)
 
-API yoyote iliyoorodheshwa katika [Rejeleo la API ya Alchemy](https://www.alchemy.com/docs/reference/api-overview) inaweza kutumika kupitia WebSocket. Ili kufanya hivyo, tumia mzigo (payload) uleule ambao ungetumwa kama kiini cha ombi la HTTP POST, lakini badala yake tuma mzigo huo kupitia WebSocket.
+Mbinu yoyote ya [JSON-RPC](/developers/docs/apis/json-rpc/) inayoungwa mkono na mtoa huduma wako inaweza kutumika kupitia WebSocket. Ili kufanya hivyo, tumia mzigo uleule ambao ungetumwa kama kiini cha ombi la HTTP POST, lakini badala yake tuma mzigo huo kupitia WebSocket.
 
-## Pamoja na Web3 {#with-web3}
+## Ukiwa na Web3 {#with-web3}
 
-Kubadilika kwenda kwenye WebSockets unapotumia maktaba ya mteja kama Web3 ni rahisi. Pitisha tu URL ya WebSocket badala ya ile ya HTTP unapounda mteja wako wa Web3. Kwa mfano:
+Kubadilika kwenda kwenye WebSockets unapotumia maktaba ya mteja kama [Viem](https://viem.sh/) ni rahisi. Tumia usafirishaji wa `webSocket` na URL yako ya WebSocket badala ya usafirishaji wa `http`. Kwa mfano, baada ya `npm install viem`, hifadhi hii kama `index.mjs` na uendeshe `node index.mjs`:
 
 ```js
-const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
+import { createPublicClient, webSocket } from "viem"
+import { mainnet } from "viem/chains"
 
-web3.eth.getBlockNumber().then(console.log) // -> 7946893
+const client = createPublicClient({
+  chain: mainnet,
+  transport: webSocket("wss://<provider-host>/<your-api-key>"),
+})
+
+console.log(await client.getBlockNumber()) // -> 26243602n
+
+// Jisajili kupata vitalu vipya kupitia WebSocket hiyo hiyo
+const unwatch = client.watchBlocks({
+  onBlock: (block) => {
+    console.log(block.number, block.hash)
+    unwatch()
+    process.exit(0)
+  },
+})
 ```
 
 ## API ya Usajili {#subscription-api}
@@ -59,7 +76,7 @@ Unapounganishwa kupitia WebSocket, unaweza kutumia mbinu mbili za ziada: `eth_su
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Hutengeneza usajili mpya kwa matukio yaliyobainishwa. [Jifunze zaidi kuhusu `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
+Hutengeneza usajili mpya kwa matukio yaliyobainishwa. [Jifunze zaidi kuhusu `eth_subscribe`](https://geth.ethereum.org/docs/interacting-with-geth/rpc/pubsub).
 
 #### Vigezo {#parameters}
 
@@ -84,126 +101,121 @@ Wakati usajili unaendelea, utapokea matukio ambayo ni vipengee (objects) vyenye 
 
 #### Aina za usajili {#subscription-types}
 
-1. `alchemy_newFullPendingTransactions`
+1. `newHeads`
 
-Hurejesha taarifa za muamala kwa miamala yote inayoongezwa kwenye hali inayosubiri. Aina hii ya usajili hujiandikisha kwa miamala inayosubiri, sawa na wito wa kawaida wa Web3 `web3.eth.subscribe("pendingTransactions")`, lakini inatofautiana kwa kuwa inatoa _taarifa kamili za muamala_ badala ya heshi za muamala pekee.
+Hutoa tukio kila wakati kichwa kipya kinapoongezwa kwenye mnyororo, ikiwa ni pamoja na wakati wa mpangilio upya wa mnyororo.
 
-Mfano:
-
-```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["alchemy_newFullPendingTransactions"]}
-
-<  {"id":1,"result":"0x9a52eeddc2b289f985c0e23a7d8427c8","jsonrpc":"2.0"}
-<  {
-      "jsonrpc":"2.0",
-      "method":"eth_subscription",
-      "params":{
-          "result":{
-          "blockHash":null,
-          "blockNumber":null,
-          "from":"0xa36452fc31f6f482ad823cd1cf5515177d57667f",
-          "gas":"0x1adb0",
-          "gasPrice":"0x7735c4d40",
-          "hash":"0x50bff0736c713458c92dd1848d12f3354149be1363123dae35e94e0f2a9d56bf",
-"input":"0xa9059cbb0000000000000000000000000d0707963952f2fba59dd06f2b425ace40b492fe0000000000000000000000000000000000000000000015b1111266cfca100000",
-          "nonce":"0x0",
-          "to":"0xea38eaa3c86c8f9b751533ba2e562deb9acded40",
-          "transactionIndex":null,
-          "value":"0x0",
-          "v":"0x26",
-          "r":"0x195c2c1ed126088e12d290aa93541677d3e3b1d10f137e11f86b1b9227f01e3b",
-          "s":"0x60fc4edbf1527832a2a36dbc1e63ed6193a6eee654472fbebbf88ef1750b5344"},
-          "subscription":"0x9a52eeddc2b289f985c0e23a7d8427c8"
-      }
-  }
-
-```
-
-2. `newHeads`
-
-Hutoa tukio wakati wowote kichwa kipya kinapoongezwa kwenye mnyororo, ikiwa ni pamoja na wakati wa upangaji upya wa mnyororo.
-
-Wakati upangaji upya wa mnyororo unapotokea, usajili huu utatoa tukio lenye vichwa vyote vipya kwa mnyororo mpya. Hasa, hii inamaanisha kuwa unaweza kuona vichwa vingi vikitolewa vikiwa na urefu sawa, na hili linapotokea kichwa cha baadaye kinapaswa kuchukuliwa kama kile sahihi baada ya upangaji upya.
+Wakati mpangilio upya wa mnyororo unapotokea, usajili huu utatoa tukio lenye vichwa vyote vipya kwa ajili ya mnyororo mpya. Hasa, hii inamaanisha kuwa unaweza kuona vichwa vingi vikitolewa vikiwa na urefu sawa, na hili linapotokea kichwa cha baadaye kinapaswa kuchukuliwa kama kile sahihi baada ya mpangilio upya.
 
 Mfano:
 
 ```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["newHeads"]}
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 
-<  {"jsonrpc":"2.0","id":2,"result":"0x9ce59a13059e417087c02d3236a0b1cc"}
-<  {
-  "jsonrpc":  "2.0",
-  "method":  "eth_subscription",
-  "params":  {
-      "result":  {
-          "extraData":  "0xd983010305844765746887676f312e342e328777696e646f7773",
-          "gasLimit":  "0x47e7c4",
-          "gasUsed":  "0x38658",
-          "logsBloom":
-"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-          "nonce":  "0x084149998194cc5f",
-          "number":  "0x1348c9",
-          "parentHash":  "0x7736fab79e05dc611604d22470dadad26f56fe494421b5b333de816ce1f25701",
-          "receiptRoot":  "0x2fab35823ad00c7bb388595cb46652fe7886e00660a01e867824d3dceb1c8d36",
-          "sha3Uncles":  "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
-          "stateRoot":  "0xb3346685172db67de536d8765c43c31009d0eb3bd9c501c9be3229203f15f378",
-          "timestamp":  "0x56ffeff8",
-          "transactionsRoot":  "0x0167ffa60e3ebc0b080cdb95f7c0087dd6c0e61413140e39d94d3468d7c9689f"
-      },
-  "subscription":  "0x9ce59a13059e417087c02d3236a0b1cc"
+< {"jsonrpc":"2.0","result":"0xe0d4abf5caf333fbf94c5f02182e6469","id":1}
+< {
+  "jsonrpc": "2.0",
+  "method": "eth_subscription",
+  "params": {
+    "result": {
+      "baseFeePerGas": "0x41f9de2",
+      "blobGasUsed": "0xc0000",
+      "difficulty": "0x0",
+      "excessBlobGas": "0xa88af38",
+      "extraData": "0xe29ca82051756173617220287175617361722e77696e2920e29ca8",
+      "gasLimit": "0x3938700",
+      "gasUsed": "0x1a17224",
+      "hash": "0xedc43a71b7ff13880bdbe7b748a225b91a11a91e79173fe28011363c10acaea5",
+      "logsBloom": "0x4beaef4e7dbb1bfdb3df673fab6cdf1cf9fc0e7f743d672c761551767b7dad953d79cf86e56e6195ae1b57dff20a0fd46e57c545af166ff49394df3839e269a6ff877b6baf9d899fd9666c58b7dfa7add4febf78b466e7f71af2dcbad53fdcfa3f7277d2fbfffcff953f9ef37b3af8fffb296a3adb94dc463ff0d6d5173f1beda0fd662d77eaedb34ff99f3eeed38a77e7d0cd63e917d4efbdfcb7d0d19437f98ff60773d0effbfbdfdbef9ebbf6a2c35efedd677a795d3ccd777e127eeb657f6a8dffaf64f3b8d998b516c78e661ef77fded57fb66d687fab17739b3ef5aa2765777d8cce0ef59a9ceebeceabbb7f76ed7fc65df7e8bccf7938eb3fb7de57f7",
+      "miner": "0x396343362be2a4da1ce0c1c210945346fb82aa49",
+      "mixHash": "0xa72c9201f502df607d0d7551ccc171ce37a5146747f04c6c495b0aebecb045c7",
+      "nonce": "0x0000000000000000",
+      "number": "0x1907212",
+      "parentBeaconBlockRoot": "0x34f3f289459913dd80ec9c20aa535866cd2bd310ac26e47570601e263d593735",
+      "parentHash": "0xe62c150ffbbd04e95343f945b70fa53756aba6c0bf96c0440d1ae354fa007a7c",
+      "receiptsRoot": "0x94951d882544da76e30b145b26a39b126e8acfba9db929351b84b2f4c847e3ed",
+      "requestsHash": "0xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+      "size": "0x1f4bc",
+      "stateRoot": "0x12771ea73858277034cf6604aee0abbf889c15091ab8ef9be81bf7258458a036",
+      "timestamp": "0x6ad92b47",
+      "transactionsRoot": "0xbd58ebe5c8c5519e458266a7db3ad049a7bffa106dc9a14f2fe6edb3f8ad5d70",
+      "withdrawalsRoot": "0x56a083b6140663c9e98c30167ee90a1ffb157505ba89cb584583b71cba100d2a"
+    },
+    "subscription": "0xe0d4abf5caf333fbf94c5f02182e6469"
   }
 }
-
 ```
 
-3. `logs`
+2. `logs`
 
-Hutoa kumbukumbu (logs) ambazo ni sehemu ya vitalu vilivyoongezwa hivi karibuni vinavyolingana na vigezo maalum vya kuchuja.
+Hutoa kumbukumbu ambazo ni sehemu ya vitalu vilivyoongezwa hivi karibuni vinavyolingana na vigezo maalum vya kichujio.
 
-Wakati upangaji upya wa mnyororo unapotokea, kumbukumbu ambazo ni sehemu ya vitalu kwenye mnyororo wa zamani zitatolewa tena huku sifa ya `removed` ikiwekwa kuwa `true`. Zaidi ya hayo, kumbukumbu ambazo ni sehemu ya vitalu kwenye mnyororo mpya hutolewa, ikimaanisha kuwa inawezekana kuona kumbukumbu za muamala uleule mara nyingi katika hali ya upangaji upya.
+Wakati mpangilio upya wa mnyororo unapotokea, kumbukumbu ambazo ni sehemu ya vitalu kwenye mnyororo wa zamani zitatolewa tena huku sifa ya `removed` ikiwekwa kuwa `true`. Zaidi ya hayo, kumbukumbu ambazo ni sehemu ya vitalu kwenye mnyororo mpya hutolewa, ikimaanisha kuwa inawezekana kuona kumbukumbu za muamala uleule mara nyingi katika hali ya mpangilio upya.
 
 Vigezo
 
 1. Kipengee chenye nyanja zifuatazo:
-   - `address` (hiari): ama mfuatano (string) unaowakilisha anwani au safu (array) ya mifuatano kama hiyo.
+   - `address` (hiari): ama mfuatano unaowakilisha anwani au safu ya mifuatano kama hiyo.
      - Ni kumbukumbu tu zilizoundwa kutoka kwa mojawapo ya anwani hizi ndizo zitatolewa.
    - `topics`: safu ya vibainishi vya mada.
      - Kila kibainishi cha mada ni ama `null`, mfuatano unaowakilisha mada, au safu ya mifuatano.
-     - Kila nafasi katika safu ambayo si `null` huzuia kumbukumbu zinazotolewa kwa zile tu zilizo na mojawapo ya mada zilizotolewa katika nafasi hiyo.
+     - Kila nafasi katika safu ambayo si `null` huzuia kumbukumbu zinazotolewa kwa zile tu ambazo zina mojawapo ya mada zilizotolewa katika nafasi hiyo.
 
 Baadhi ya mifano ya vipimo vya mada:
 
 - `[]`: Mada zozote zinaruhusiwa.
-- `[A]`: A katika nafasi ya kwanza (na chochote kinachofuata).
-- `[null, B]`: Chochote katika nafasi ya kwanza na B katika nafasi ya pili (na chochote kinachofuata).
-- `[A, B]`: A katika nafasi ya kwanza na B katika nafasi ya pili (na chochote kinachofuata).
-- `[[A, B], [A, B]]`: (A au B) katika nafasi ya kwanza na (A au B) katika nafasi ya pili (na chochote kinachofuata).
+- `[A]`: A katika nafasi ya kwanza (na chochote baada ya hapo).
+- `[null, B]`: Chochote katika nafasi ya kwanza na B katika nafasi ya pili (na chochote baada ya hapo).
+- `[A, B]`: A katika nafasi ya kwanza na B katika nafasi ya pili (na chochote baada ya hapo).
+- `[[A, B], [A, B]]`: (A au B) katika nafasi ya kwanza na (A au B) katika nafasi ya pili (na chochote baada ya hapo).
+
+Mfano:
+
+Mfano huu husikiliza matukio ya `Deposit` kutoka kwenye [mkataba wa ether iliyofungwa (weth)](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) kwenye Mtandao Mkuu wa Ethereum:
+
+```json
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["logs", {"address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "topics": ["0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c"]}]}
+
+< {"jsonrpc":"2.0","result":"0x69a0e61ae8e3d61a93479858e8f1b43a","id":1}
+< {
+  "jsonrpc": "2.0",
+  "method": "eth_subscription",
+  "params": {
+    "result": {
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "blockHash": "0x168e06e5733df993078bb635cb9925f80ff39d12a36bd301052c44d7bf6b6068",
+      "blockNumber": "0x190720e",
+      "blockTimestamp": "0x6ad92b17",
+      "data": "0x000000000000000000000000000000000000000000000000039ed0c3d7848a1c",
+      "logIndex": "0x11",
+      "removed": false,
+      "topics": [
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c",
+        "0x00000000000000000000000023617e59a5925b2a4bf75d73ff6711cd0b29de85"
+      ],
+      "transactionHash": "0xc956e7012c2af8ff87db88e059336842ee872bfc93de1eac9760510d0bd801be",
+      "transactionIndex": "0xb"
+    },
+    "subscription": "0x69a0e61ae8e3d61a93479858e8f1b43a"
+  }
+}
+```
+
+3. `newPendingTransactions`
+
+Hutoa heshi ya kila muamala unaoongezwa kwenye hali inayosubiri ya nodi (mempool yake).
 
 Mfano:
 
 ```json
->  {"jsonrpc":  "2.0",  "id":  1,  "method":  "eth_subscribe",  "params":  ["logs",  {"address":  "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd",  "topics":  ["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"]}]}
+> {"jsonrpc": "2.0", "id": 1, "method": "eth_subscribe", "params": ["newPendingTransactions"]}
 
-<  {"jsonrpc":"2.0","id":2,"result":"0x4a8a4c0517381924f9838102c5a4dcb7"}
-<  {
-  "jsonrpc":  "2.0",
-  "method":  "eth_subscription",
-  "params":  {
-      "subscription":  "0x4a8a4c0517381924f9838102c5a4dcb7",
-      "result":  {
-          "address":  "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd",
-          "blockHash":  "0x61cdb2a09ab99abf791d474f20c2ea89bf8de2923a2d42bb49944c8c993cbf04",
-          "blockNumber":  "0x29e87",
-          "data": "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000003",
-          "logIndex":"0x0",
-          "topics":["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"],
-          "transactionHash":  "0xe044554a0a55067caafd07f8020ab9f2af60bdfe337e395ecd84b4877a3d1ab4",
-          "transactionIndex":  "0x0"
-      }
-  }
-}
-
+< {"jsonrpc":"2.0","result":"0x1c2365b029179adf1e84b9e327315249","id":1}
+< {"jsonrpc":"2.0","method":"eth_subscription","params":{"result":"0x4a62d0ad7c8868fbbfa10604e68638e637c6fc6f64fd1fb4ca042dcd0158c992","subscription":"0x1c2365b029179adf1e84b9e327315249"}}
 ```
+
+Baadhi ya watoa huduma pia hutoa aina zao wenyewe za usajili. Kwa mfano, [`alchemy_pendingTransactions`](https://www.alchemy.com/docs/reference/alchemy-pendingtransactions) ya Alchemy hutoa _vipengee kamili vya muamala_ badala ya heshi pekee, na inakubali vichujio vya hiari vya `fromAddress`, `toAddress` na `hashesOnly`. Hizi si sehemu ya Kiolesura cha Kupanga Programu Tumizi (API) cha kawaida cha JSON-RPC, kwa hivyo zinafanya kazi na mtoa huduma huyo pekee.
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
@@ -215,29 +227,18 @@ Vigezo
 
 Hurejesha
 
-`true` ikiwa usajili ulighairiwa kwa ufanisi, au `false` ikiwa hakuna usajili uliokuwepo wenye kitambulisho kilichotolewa.
+`true` ikiwa usajili ulifutwa kwa ufanisi, au `false` ikiwa hakuna usajili uliokuwepo wenye kitambulisho kilichotolewa.
+
+Usajili upo tu kwenye muunganisho wa WebSocket uliouunda, kwa hivyo `eth_unsubscribe` lazima itumwe kupitia muunganisho huohuo. Haiwezi kutumwa kama ombi tofauti la HTTP. Kufunga muunganisho pia hufuta usajili wake wote.
 
 Mfano:
 
-**Ombi**
-
-```
-curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
--X POST
--H "Content-Type: application/json"
--d '{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}'
-```
-
-**Matokeo**
-
 ```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": true
-}
+> {"jsonrpc": "2.0", "id": 2, "method": "eth_unsubscribe", "params": ["0xe0d4abf5caf333fbf94c5f02182e6469"]}
+
+< {"jsonrpc":"2.0","result":true,"id":2}
 ```
 
 ---
 
-[Jisajili na Alchemy](https://auth.alchemy.com) bila malipo, angalia [nyaraka zetu](https://www.alchemy.com/docs/), na kwa habari za hivi punde, tufuate kwenye [Twitter](https://x.com/AlchemyPlatform).
+[Jisajili na Alchemy](https://auth.alchemy.com) bila malipo, angalia [nyaraka za Alchemy](https://www.alchemy.com/docs/), na kwa habari za hivi punde, fuatilia Alchemy kwenye [Twitter](https://x.com/Alchemy).

@@ -1,5 +1,5 @@
 import { Landmark, SquareCode, User } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -11,6 +11,7 @@ import {
 } from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import {
   Alert,
   AlertContent,
@@ -40,12 +41,11 @@ import infrastructureTransparent from "@/public/images/infrastructure_transparen
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
   const { locale } = params
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-ether")
 
   const [
-    { contributors, lastEditLocaleTimestamp },
+    { contributors, lastEditDate, lastEditLocaleTimestamp },
     gasPriceData,
     ethPriceData,
   ] = await Promise.all([
@@ -96,17 +96,14 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "what-is-ether",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "what-is-ether" }}
             heroImg={heroImg}
             title={t("page-what-is-ether-title")}
             description={t("page-what-is-ether-hero-description-1")}
@@ -115,6 +112,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         tocItems={tocItems}
         contributors={contributors}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        listenSlug="what-is-ether"
         variant="narrow"
       >
         <Section id={getIdFromHash(tocItems[0].url)}>
@@ -448,6 +446,9 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               ),
             })}
           </p>
+          <LinkWithArrow href="/what-is-ether/supply/">
+            {t("page-what-is-ether-what-is-the-eth-supply-learn-more")}
+          </LinkWithArrow>
         </Section>
 
         <Section id={getIdFromHash(tocItems[6].url)}>
@@ -619,6 +620,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             {t("page-what-is-ether-what-is-wrapping-eth-description-7")}
           </LinkWithArrow>
         </Section>
+
+        <StandaloneQuizWidget quizKey="what-is-ether" />
       </ContentLayout>
     </>
   )
@@ -630,8 +633,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-ether")
 

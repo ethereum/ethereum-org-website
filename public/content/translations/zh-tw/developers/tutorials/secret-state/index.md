@@ -710,8 +710,7 @@ proof.proof = {
 
 然而，我們仍然[在 Zokrates 中攤平地圖](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20)，儘管我們本可以在 TypeScript 中完成。原因在於，我認為其他選項更糟。
 
-- 提供一個一維布林陣列給 Zokrates 程式碼，並使用像是 `x*(height+2)
-+y` 的表達式來取得二維地圖。這會讓[程式碼](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)變得有些複雜，所以我認為對於一篇教學文章來說，效能的提升並不值得。
+- 提供一個一維布林陣列給 Zokrates 程式碼，並使用像是 `x*(height+2)+y` 的表達式來取得二維地圖。這會讓[程式碼](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47)變得有些複雜，所以我認為對於一篇教學文章來說，效能的提升並不值得。
 
 - 將一維陣列和二維陣列都傳送給 Zokrates。然而，這個解決方案對我們沒有任何好處。Zokrates 程式碼必須驗證提供給它的一維陣列確實是二維陣列的正確表示。因此不會有任何效能提升。
 

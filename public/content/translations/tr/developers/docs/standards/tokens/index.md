@@ -29,7 +29,7 @@ Token standartları, token'ların Ethereum ekosistemi genelinde nasıl davrandı
 
 [ERC](https://eips.ethereum.org/erc) tekliflerinin tam listesi.
 
-## Daha fazla bilgi
+## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 

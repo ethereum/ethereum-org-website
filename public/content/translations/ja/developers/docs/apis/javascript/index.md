@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3jsのユーティリティ関数](https://docs.web3js.org/api/web3-utils)
 - [Ethersのユーティリティ関数](https://docs.ethers.org/v6/api/utils/)
 
-## 利用可能なライブラリ
+## 利用可能なライブラリ {#available-libraries}
 
 **Web3.js -** **_イーサリアムのJavaScript API。_**
 

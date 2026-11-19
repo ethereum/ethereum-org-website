@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/ethereum-staking-withdrawals/index.md",
-  "generatedAt": "2026-04-28T23:30:33.521Z",
-  "rootHash": "b5cf246fa9f3",
+  "generatedAt": "2026-09-30T18:40:00.727Z",
+  "rootHash": "5f9de27256fd",
   "tree": {
-    "contentHash": "b367030d075e",
-    "anchorHash": "2960d04a5ebe",
+    "contentHash": "bec284f015a6",
+    "anchorHash": "6a32431e6078",
     "children": {
       "frontmatter:title": {
-        "contentHash": "47d6b26100d8",
+        "contentHash": "b80dadf6e016",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "24ec7cfcba7b",
+        "contentHash": "c1773ea5a837",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7f8236b8803e"
+        "anchorHash": "0f569684b8ee"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "64a601e752dd"
+        "anchorHash": "8cd066beca62"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "b89edaaeebe5"
+        "anchorHash": "953c39159e4c"
       },
       "prose:1": {
         "contentHash": "0dd0373bfa55",
@@ -271,5 +277,5 @@
       "summary-1001"
     ]
   },
-  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

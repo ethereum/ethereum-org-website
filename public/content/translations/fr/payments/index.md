@@ -206,3 +206,7 @@ Qu'il s'agisse de faciliter les secours rapides en cas de catastrophe ou de donn
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

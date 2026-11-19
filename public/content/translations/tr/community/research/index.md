@@ -1,220 +1,285 @@
 ---
-title: Aktif Ethereum araştırması alanları
-description: Farklı açık araştırma alanlarını keşfedin ve nasıl dahil olabileceğinizi öğrenin.
+title: "Ethereum araştırmalarının aktif alanları"
+description: "Açık araştırmaların farklı alanlarını keşfedin ve nasıl dahil olabileceğinizi öğrenin."
 lang: tr
 ---
 
-Ethereum'un temel güçlerinden biri, aktif bir araştırma ve mühendislik topluluğunun onu sürekli olarak geliştirmesidir. Dünya çapında birçok hevesli ve yetenekli insan, kendilerini Ethereum'daki bekleyen sorunlara adamak istiyor, ancak bu sorunların ne olduğunu bulmak her zaman kolay olmuyor. Bu sayfa, Ethereum'un en ileri teknolojisine kaba bir rehber olarak temel aktif araştırma alanlarını özetlemektedir.
+Ethereum'un temel güçlerinden biri, aktif bir araştırma ve mühendislik topluluğunun onu sürekli olarak geliştirmesidir. Dünya çapında birçok hevesli ve yetenekli insan, kendilerini Ethereum'daki öne çıkan sorunlara adamak istiyor, ancak bu sorunların ne olduğunu bulmak her zaman kolay olmuyor. Bu sayfa, Ethereum'un en ileri teknolojisine kaba bir rehber olarak temel aktif araştırma alanlarını özetlemektedir.
 
-## Ethereum araştırması nasıl çalışır? {#how-ethereum-research-works}
+## Ethereum araştırmaları nasıl yürütülür {#how-ethereum-research-works}
 
-Ethereum araştırması açık ve şeffaftır ve [merkeziyetsiz bilim (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science) ilkelerini somutlaştırır. Kültür, araştırma araçlarını ve çıktılarını, örneğin çalıştırılabilir not defterleri aracılığıyla, mümkün olduğunca açık ve etkileşimli hale getirmektir. Ethereum araştırması hızlı ilerler; yeni bulgular, akran değerlendirmesi turlarından sonra geleneksel yayınlar aracılığıyla topluluğa ulaşmak yerine [ethresear.ch](https://ethresear.ch/) gibi forumlarda açıkça yayınlanır ve tartışılır.
+Ethereum araştırmaları açık ve şeffaftır. Kültür, araştırma araçlarını ve çıktılarını, örneğin çalıştırılabilir not defterleri aracılığıyla, mümkün olduğunca açık ve etkileşimli hale getirmektir. Ethereum araştırmaları hızlı ilerler; yeni bulgular, akran değerlendirmesi turlarından sonra geleneksel yayınlar aracılığıyla topluluğa ulaşmak yerine [ethresear.ch](https://ethresear.ch/) gibi forumlarda açıkça yayınlanır ve tartışılır. Ethereum Vakfı ayrıca neye öncelik verdiğini ve nedenini de yayınlar, böylece herkes şu anda hangi sorunların acil kabul edildiğini görebilir.
 
 ## Genel araştırma kaynakları {#general-research-resources}
 
-Belirli bir konudan bağımsız olarak, [ethresear.ch](https://ethresear.ch) adresinde ve [Eth R&D Discord kanalında](https://discord.gg/qGpsxSA) Ethereum araştırmaları hakkında zengin bir bilgi birikimi bulunabilir. Bunlar, Ethereum araştırmacılarının en son fikirleri ve geliştirme fırsatlarını tartıştığı başlıca yerlerdir.
+Belirli bir konudan bağımsız olarak, Ethereum araştırmaları hakkında [ethresear.ch](https://ethresear.ch) ve [Eth R&D Discord kanalında](https://discord.gg/qGpsxSA) bulunabilecek zengin bir bilgi birikimi vardır. Buralar, Ethereum araştırmacılarının en son fikirleri ve geliştirme fırsatlarını tartıştığı başlıca yerlerdir.
 
-Mayıs 2022'de [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) tarafından yayınlanan bu rapor, Ethereum yol haritasına iyi bir genel bakış sunmaktadır.
+Protokolün nereye gittiğine dair genel bir bakış için [Ethereum yol haritası](/roadmap/) ile başlayın, ardından Ethereum Vakfı'nın [2026 Protokol Öncelikleri Güncellemesi](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)'ni ve buna karşı kaydedilen ilerlemeyi bildiren [protokol kümesi güncellemelerini](https://blog.ethereum.org/2026/05/11/protocol-update-may-26) okuyun. [Ethereum Protokol Çalışmaları](https://blog.ethereum.org/2026/02/17/ethereum-protocol-studies-26), protokolün kendisi üzerinde çalışmak isteyen kişiler için yapılandırılmış bir giriş noktasıdır.
 
 ## Fon Kaynakları {#sources-of-funding}
 
-Ethereum araştırmalarına dahil olabilir ve bunun için ödeme alabilirsiniz! Örneğin, [Ethereum Vakfı](/foundation/) yakın zamanda bir [Akademik Hibeler fonlama turu](https://esp.ethereum.foundation/academic-grants) düzenledi. Aktif ve yaklaşan fonlama fırsatları hakkında bilgiyi [Ethereum hibeler sayfasında](/community/grants/) bulabilirsiniz.
+Ethereum araştırmalarına dahil olabilir ve bunun için ödeme alabilirsiniz. [Ethereum Vakfı](/foundation/), çözülmesini istediği sorunları açıklayan istek listesi öğeleri ve teklif çağrıları yayınlayan [Ekosistem Destek Programı](https://esp.ethereum.foundation/applicants) aracılığıyla araştırmaları ve kamusal malları finanse eder. Aktif ve yaklaşan fon fırsatları hakkında bilgiyi [Ethereum hibe sayfasında](/community/grants/) bulabilirsiniz.
 
 ## Protokol araştırması {#protocol-research}
 
-Protokol araştırması, Ethereum'un temel katmanıyla ilgilenir; bu, düğümlerin nasıl bağlandığını, iletişim kurduğunu, Ethereum verilerini nasıl alıp verdiğini ve depoladığını ve Blokzincir'in durumu hakkında nasıl mutabakata vardığını tanımlayan kurallar dizisidir. Protokol araştırması iki üst düzey kategoriye ayrılır: mutabakat ve yürütme.
+Protokol araştırması, Ethereum'un temel katmanıyla ilgilenir: düğümlerin nasıl bağlandığını, iletişim kurduğunu, Ethereum verilerini nasıl alıp verdiğini ve depoladığını ve blokzincirin durumu hakkında nasıl mutabakata vardığını tanımlayan kurallar bütünü. Uzun süredir devam eden iki kategorisi mutabakat ve yürütmedir ve artık çeşitli araştırma konuları her ikisini de kesmektedir.
 
 ### Mutabakat {#consensus}
 
-Mutabakat araştırması, [Ethereum'un Hisse Kanıtı (PoS) mekanizması](/developers/docs/consensus-mechanisms/pos/) ile ilgilenir. Bazı örnek mutabakat araştırma konuları şunlardır:
+Mutabakat araştırması, [Ethereum'un Hisse Kanıtı (PoS) mekanizması](/developers/docs/consensus-mechanisms/pos/) ile ilgilenir: çatal seçimi kuralının ve kesinlik aracının güvenliği, staking'in kriptoekonomisi, blokları, onayları ve blob verilerini taşıyan eşler arası ağ ve doğrulayıcıların imza attığı kriptografi. Bazı örnek mutabakat araştırma konuları şunlardır:
 
 - güvenlik açıklarını belirleme ve yamalama;
 - kriptoekonomik güvenliği ölçme;
-- istemci uygulamalarının güvenliğini veya performansını artırma;
-- ve hafif istemciler geliştirme.
+- bir bloğun kesinliğe ulaşması için geçen süreyi azaltma;
+- ve fikir birliği istemcileri arasındaki eşler arası ağın verimliliğini, güvenliğini ve izlenmesini iyileştirme.
 
-İleriye dönük araştırmaların yanı sıra, Ethereum'da önemli iyileştirmelere olanak sağlamak için tek slot kesinliği gibi protokolün bazı temel yeniden tasarımları da araştırılmaktadır. Ayrıca, fikir birliği istemcileri arasındaki eşler arası ağ iletişiminin verimliliği, güvenliği ve izlenmesi de önemli araştırma konularıdır.
+Bu çalışmaların çoğu kağıt üzerinden spesifikasyona taşındı. Veri kullanılabilirliği örneklemesi (DAS) [Fusaka](/roadmap/fusaka/) yükseltmesinde kullanıma sunuldu, blokların nasıl oluşturulduğuna ve işlemlerin dahil edilmesinin nasıl garanti altına alındığına dair değişiklikler yaklaşan yükseltmeler için belirlendi ve yalın mutabakat (lean consensus) olarak bilinen daha uzun ufuklu bir yeniden tasarım, kuantum sonrası imzalarla birlikte daha hızlı kesinliği araştırıyor.
 
 #### Arka plan okuması {#background-reading}
 
-- [Hisse Kanıtı'na (PoS) giriş](/developers/docs/consensus-mechanisms/pos/)
+- [Hisse kanıtına giriş](/developers/docs/consensus-mechanisms/pos/)
+- [Tek slot kesinliği](/roadmap/single-slot-finality/)
 - [Casper FFG makalesi](https://arxiv.org/abs/1710.09437)
-- [Casper FFG açıklayıcısı](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper makalesi](https://arxiv.org/abs/2003.03052)
+- [yalın Ethereum](https://blog.ethereum.org/2025/07/31/lean-ethereum)
 
 #### Son araştırmalar {#recent-research}
 
-- [Ethresear.ch Mutabakatı](https://ethresear.ch/c/consensus/29)
+- [Ethresear.ch Mutabakat](https://ethresear.ch/c/consensus/29)
 - [Kullanılabilirlik/Kesinlik ikilemi](https://arxiv.org/abs/2009.04987)
-- [Tek slot kesinliği](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
-- [Teklifçi-oluşturucu ayrımı (PBS)](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+- [3-slot kesinliği: SSF "tek" slot ile ilgili değildir](https://ethresear.ch/t/3-slot-finality-ssf-is-not-about-single-slot/20927)
 
 ### Yürütme {#execution}
 
-Yürütme katmanı, işlemleri yürütmek, [Ethereum sanal makinesini (EVM)](/developers/docs/evm/) çalıştırmak ve mutabakat katmanına iletilecek yürütme yüklerini oluşturmakla ilgilenir. Aşağıdakiler de dahil olmak üzere birçok aktif araştırma alanı vardır:
+Yürütme katmanı, işlemleri yürütmek, [Ethereum sanal makinesini (EVM)](/developers/docs/evm/) çalıştırmak ve mutabakat katmanına iletilecek yürütme yüklerini oluşturmakla ilgilenir. Buradaki araştırmalar iki kola ayrılır: durumu tutmayı ve kanıtlamayı ucuz hale getirmek ve düğümleri çalıştıran kişilere daha fazla maliyet yüklemeden işlem kapasitesini artırmak. Aşağıdakiler de dahil olmak üzere birçok aktif araştırma alanı vardır:
 
-- hafif istemci desteği oluşturmak;
-- Gaz limitlerini araştırmak;
-- ve yeni veri yapılarını (ör. Verkle Ağaçları) dahil etmek.
+- durum oluşturan işlemlerin gaz maliyetini yeniden fiyatlandırmak;
+- düğümlerin artık sunmasına gerek kalmayan geçmiş sonlanması;
+- işlemlerin paralel olarak doğrulanmasına olanak tanıyan blok düzeyinde erişim listeleri;
+- durum, veri ve hesaplamayı ayrı ayrı fiyatlandıran çok boyutlu ücret piyasaları;
+- ve katman 1 (l1) bloklarının yürütülmesini bir zkEVM ile kanıtlamak.
 
 #### Arka plan okuması {#background-reading-1}
 
-- [EVM'ye giriş](/developers/docs/evm)
+- [EVM'ye giriş](/developers/docs/evm/)
 - [Ethresear.ch yürütme katmanı](https://ethresear.ch/c/execution-layer-research/37)
+- [Ethereum yürütme katmanı spesifikasyonları](https://github.com/ethereum/execution-specs)
+- [Veritabanı optimizasyonları](https://github.com/erigontech/erigon/blob/main/docs/programmers_guide/db_faq.md)
 
 #### Son araştırmalar {#recent-research-1}
 
-- [Veritabanı optimizasyonları](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [Durum zaman aşımı](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
-- [Durum zaman aşımına giden yollar](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Verkle ve durum zaman aşımı teklifi](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
-- [Geçmiş yönetimi](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle Ağaçları](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
-- [Veri kullanılabilirliği örneklemesi (DAS)](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
+- [EIP-7928: Blok düzeyinde erişim listeleri](https://eips.ethereum.org/EIPS/eip-7928)
+- [EIP-8037: Durum oluşturma gaz maliyeti artışı](https://eips.ethereum.org/EIPS/eip-8037)
+- [EIP-7999: Birleşik çok boyutlu ücret piyasası](https://eips.ethereum.org/EIPS/eip-7999)
+- [EIP-7642: eth/69, geçmiş sonlanması ve daha basit makbuzlar](https://eips.ethereum.org/EIPS/eip-7642)
+- [Bir L1 zkEVM sunmak: gerçek zamanlı kanıtlama](https://blog.ethereum.org/2025/07/10/realtime-proving)
+
+### Sansür direnci ve blok oluşturma {#censorship-resistance-and-block-building}
+
+Çoğu Ethereum bloğu şu anda az sayıda uzmanlaşmış oluşturucu tarafından bir araya getirilmektedir, bu da hangi işlemlerin dahil edileceğine karar verme gücünü yoğunlaştırmaktadır. Bu alandaki araştırmalar, oluşturucu piyasasını protokolün kendisine dahil etmeyi kapsar; böylece bir bloğu teklif etme ve oluşturma rolleri, protokol dışı yazılımlar yerine mutabakat kuralları ile ayrılır ve doğrulayıcılara, oluşturucuların dışarıda bıraktığı işlemlerin dahil edilmesini zorlama yolu verilir.
+
+#### Arka plan okuması {#background-reading-21}
+
+- [Teklifçi-oluşturucu ayrımı (PBS)](/roadmap/pbs/)
+- [Tek gizli lider seçimi](/roadmap/secret-leader-election/)
+
+#### Son araştırmalar {#recent-research-21}
+
+- [EIP-7732: Protokole dahil edilmiş teklifçi-oluşturucu ayrımı](https://eips.ethereum.org/EIPS/eip-7732)
+- [EIP-7805: Çatal seçimi zorunlu dahil etme listeleri](https://eips.ethereum.org/EIPS/eip-7805)
+- [Teklifçi/oluşturucu ayrımı altında işlemlerin sansür direncini artırma](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
+
+### Durum büyümesi ve durumsuzluk {#state-growth-and-statelessness}
+
+Her tam düğüm Ethereum'un durumunu depolar, bu nedenle bu durumun büyüme hızı, bir düğüm çalıştırmanın maliyeti için bir taban belirler. Kısa vadede araştırmalar, durum oluşturan işlemleri yeniden fiyatlandırmaya ve düğümlerin artık tutmasına gerek kalmayan geçmiş sonlanmasına odaklanmaktadır. Daha uzun vadede plan, Ethereum'un on altılı Merkle-Patricia ağacını çok daha küçük ispatlar üreten ikili bir ağaçla değiştirmek ve bir düğümün tüm durumu tutmadan blokları doğrulayabilmesi için durumsuzluğa doğru ilerlemektir. Bu alandaki önceki çalışmalar Verkle Ağaçları'nı varsayıyordu; mevcut teklif, bu önceki çalışma çizgisi için belirlenen tanık gaz programını taşıyan birleşik bir ikili ağaçtır.
+
+#### Arka plan okuması {#background-reading-22}
+
+- [Durumsuzluk ve durum zaman aşımı](/roadmap/statelessness/)
+- [Ethereum durumsuzluk kitabı](https://stateless.fyi/)
+
+#### Son araştırmalar {#recent-research-22}
+
+- [EIP-7864: Birleşik ikili ağaç kullanan Ethereum durumu](https://eips.ethereum.org/EIPS/eip-7864)
+- [EIP-4762: Durumsuzluk gaz maliyeti değişiklikleri](https://eips.ethereum.org/EIPS/eip-4762)
+- [Merkeziyetsiz durum Ethereum için neden önemlidir?](https://ethresear.ch/t/why-decentralized-state-is-important-for-ethereum/25622)
+
+### Kuantum sonrası kriptografi {#post-quantum-cryptography}
+
+Ethereum'un doğrulayıcı imzaları ve uygulama katmanının çoğu, yeterince yetenekli bir kuantum bilgisayarın kırabileceği eliptik eğri kriptografisine dayanır. Ethereum'u kuantum dirençli hale getirmek, bu imzaları hash tabanlı veya kafes tabanlı alternatiflerle değiştirmek, imza toplamayı büyük bir doğrulayıcı seti için yeterince verimli tutmak ve mevcut hesaplara bir geçiş yolu sağlamak anlamına gelir. Ethereum Vakfı özel bir kuantum sonrası ekip yönetmektedir ve bu, yol haritasındaki en uzun ufuklu programlardan biridir.
+
+#### Arka plan okuması {#background-reading-23}
+
+- [Kuantum direnci](/roadmap/security/quantum-resistance/)
+- [Kuantum sonrası Ethereum](https://pq.ethereum.org/)
+
+#### Son araştırmalar {#recent-research-23}
+
+- [yalın Ethereum](https://blog.ethereum.org/2025/07/31/lean-ethereum)
+- [Ethresear.ch kriptografi](https://ethresear.ch/c/cryptography/28)
+- [yalın Ethereum uygulamaları](https://github.com/leanEthereum)
 
 ## İstemci Geliştirme {#client-development}
 
-Ethereum istemcileri, Ethereum protokolünün uygulamalarıdır. İstemci geliştirme, protokol araştırmasından elde edilen sonuçları bu istemcilere entegre ederek gerçeğe dönüştürür. İstemci geliştirme, istemci spesifikasyonlarını güncellemeyi ve belirli uygulamalar oluşturmayı içerir.
+Ethereum istemcileri, Ethereum protokolünün uygulamalarıdır. İstemci geliştirme, protokol araştırmalarından elde edilen sonuçları bu istemcilere entegre ederek gerçeğe dönüştürür. İstemci geliştirme, istemci spesifikasyonlarını güncellemeyi ve belirli uygulamalar oluşturmayı içerir.
 
 Bir Ethereum düğümünün iki yazılım parçasını çalıştırması gerekir:
 
-1. Blokzincir'in başını takip etmek, blokları yaymak (gossip) ve mutabakat mantığını işlemek için bir fikir birliği istemcisi
+1. blokzincirin başını takip etmek, blokları yaymak ve mutabakat mantığını işlemek için bir fikir birliği istemcisi
 2. Ethereum Sanal Makinesi'ni desteklemek ve işlemleri ve akıllı sözleşmeleri yürütmek için bir yürütme istemcisi
 
-Düğümler ve istemciler hakkında daha fazla ayrıntı ve mevcut tüm istemci uygulamalarının bir listesi için [düğümler ve istemciler sayfasına](/developers/docs/nodes-and-clients/) bakın. Ayrıca tüm Ethereum güncellemelerinin geçmişini [geçmiş sayfasında](/ethereum-forks/) bulabilirsiniz.
+Bu ikisinin yanı sıra, katman 1 (l1) bloklarının yürütülmesini kanıtlayan istemciler ve kuantum sonrası imzalar etrafında oluşturulmuş yalın fikir birliği istemcileri de dahil olmak üzere yeni istemci sınıflarının prototipleri oluşturulmaktadır.
+
+Düğümler ve istemciler hakkında daha fazla ayrıntı ve mevcut tüm istemci uygulamalarının bir listesi için [düğümler ve istemciler sayfasına](/developers/docs/nodes-and-clients/) bakın. Ayrıca tüm Ethereum yükseltmelerinin geçmişini [geçmiş sayfasında](/ethereum-forks/) bulabilirsiniz.
 
 ### Yürütme İstemcileri {#execution-clients}
 
 - [Yürütme istemcisi spesifikasyonu](https://github.com/ethereum/execution-specs)
-- [Yürütme API'si spesifikasyonu](https://github.com/ethereum/execution-apis)
+- [Yürütme API spesifikasyonu](https://github.com/ethereum/execution-apis)
 
 ### Fikir Birliği İstemcileri {#consensus-clients}
 
 - [Fikir birliği istemcisi spesifikasyonu](https://github.com/ethereum/consensus-specs)
-- [İşaret (Beacon) API'si spesifikasyonu](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+- [İşaret (Beacon) API spesifikasyonu](https://ethereum.github.io/beacon-APIs/)
+
+### zkEVM istemcileri {#zkevm-clients}
+
+- [zkEVM](/roadmap/zkevm/)
+- [Ethproofs](https://ethproofs.org/)
+- [Bir L1 zkEVM sunmak: güvenlik temelleri](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## Ölçeklendirme ve performans {#scaling-and-performance}
 
-Ethereum'u ölçeklendirmek, Ethereum araştırmacıları için büyük bir odak alanıdır. Mevcut yaklaşımlar, işlemleri toplamalara (rollups) aktarmayı ve veri blobları kullanarak bunları mümkün olduğunca ucuz hale getirmeyi içerir. Ethereum'u ölçeklendirme hakkında giriş niteliğindeki bilgiler [ölçeklendirme sayfamızda](/developers/docs/scaling) mevcuttur.
+Ethereum'u ölçeklendirmek, Ethereum araştırmacıları için büyük bir odak alanıdır ve aynı anda iki yolda ilerler: katman 1'in (l1) kendi işlem kapasitesini artırmak ve yürütmeyi verilerini Ethereum'a gönderen toplamalar (rollups) üzerine taşımak. Mevcut çalışmalar arasında blok gaz limitini artırmak, durum büyümesini yeniden fiyatlandırmak, Rollup verileri için blob kapasitesini genişletmek ve bir düğümün depolaması ve doğrulaması gerekenleri azaltmak yer alıyor. Ethereum'u ölçeklendirme hakkında giriş niteliğindeki bilgiler [ölçeklendirme sayfamızda](/developers/docs/scaling/) ve [ölçeklendirme yol haritasında](/roadmap/scaling/) mevcuttur.
 
-### Katman 2 (L2) {#layer-2}
+### Katman 2 {#layer-2}
 
-Şu anda işlemleri toplu işleme (batching) ve bunları Ethereum katman 1 (L1) üzerinde güvence altına alma konusunda farklı teknikler kullanarak Ethereum'u ölçeklendiren çeşitli katman 2 (L2) protokolleri bulunmaktadır. Bu, çok fazla araştırma ve geliştirme potansiyeline sahip, çok hızlı büyüyen bir konudur.
+Artık işlemleri toplu işleme (batching) ve bunları Ethereum katman 1 (l1) üzerinde güvence altına alma konusunda farklı teknikler kullanarak Ethereum'u ölçeklendiren çeşitli katman 2 (l2) protokolleri bulunmaktadır. Açık araştırmalar, kanıtlamanın gecikmesini ve maliyetini azaltmayı, bir işlemin güven gerektirmeyen kesinliğe ulaşması için geçen süreyi kısaltmayı ve kullanıcılara birçok Rollup genelinde tek bir tutarlı deneyim sunmayı içerir.
 
 #### Arka plan okuması {#background-reading-2}
 
-- [Katman 2'ye (L2) giriş](/layer-2/)
-- [Polynya: Toplamalar, DA ve modüler zincirler](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
+- [Katman 2'ye giriş](/layer-2/)
+- [L2BEAT: ölçeklendirme özeti](https://l2beat.com/scaling/summary)
+- [Rollup merkezli bir ethereum yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Son araştırmalar {#recent-research-2}
 
-- [Sıralayıcılar için Arbitrum'un adil sıralaması](https://eprint.iacr.org/2021/1465)
 - [Ethresear.ch Katman 2](https://ethresear.ch/c/layer-2/32)
-- [Toplama odaklı yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
-- [L2BEAT](https://l2beat.com/)
+- [L2BEAT: zincir içi maliyetler](https://l2beat.com/scaling/costs)
+- [2026'da Ethereum üzerinde inşa etmek: neler değişti](/latest/building-on-ethereum-in-2026/)
 
-### Köprüler {#bridges}
+### Birlikte çalışabilirlik {#interoperability}
 
-Katman 2'nin daha fazla araştırma ve geliştirme gerektiren belirli bir alanı, güvenli ve performanslı köprülerdir. Bu, çeşitli Katman 2'ler arasındaki köprüleri ve Katman 1 ile Katman 2 arasındaki köprüleri içerir. Bu, özellikle önemli bir araştırma alanıdır çünkü köprüler genellikle bilgisayar korsanları tarafından hedef alınır.
+Kullanıcılar ve varlıklar Ethereum katman 1 (l1) ve birçok katman 2 (l2) üzerine yayılmıştır ve araştırma problemi, bir aracıya güvenmeden bu zincirler arası hareket etmelerine ve işlem yapmalarına izin vermektir. Buradaki çalışmalar, niyet odaklı transferleri, standartlaştırılmış zincirler arası adresleme ve isimlendirmeyi, genel mesaj iletimini ve cüzdan düzeyinde zincir soyutlamasını kapsar. Bu, emanetçi köprülerin varlıkları tuttuğu bir modelin yerini alır ve köprüler tarihsel olarak ekosistemdeki en büyük kayıp kaynaklarından biri olmuştur, bu nedenle herhangi bir zincirler arası mekanizmanın güvenliği merkezi bir endişe olmaya devam etmektedir.
 
 #### Arka plan okuması {#background-reading-3}
 
 - [Blokzincir köprülerine giriş](/bridges/)
-- [Vitalik'in köprüler hakkındaki görüşleri](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
-- [Blokzincir köprüleri makalesi](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Köprülerde kilitlenen değer](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Ethereum'u yeniden tek bir zincir gibi hissettirmek](https://blog.ethereum.org/2025/11/18/eil)
+- [Açık Niyetler Çerçevesi](https://openintents.xyz/)
+- [Köprüleri doğrulama](https://stonecoldpat.github.io/images/validatingbridges.pdf)
 
 #### Son araştırmalar {#recent-research-3}
 
-- [Köprüleri doğrulama](https://stonecoldpat.github.io/images/validatingbridges.pdf)
+- [ERC-7683: Zincirler arası niyetler](https://eips.ethereum.org/EIPS/eip-7683)
+- [ERC-7930: Birlikte çalışabilir adresler](https://eips.ethereum.org/EIPS/eip-7930)
+- [ERC-7828: Birlikte çalışabilir isimler](https://eips.ethereum.org/EIPS/eip-7828)
 
-### Parçalama (Sharding) {#sharding}
+### Veri kullanılabilirliği ve blob ölçeklendirmesi {#data-availability-and-blob-scaling}
 
-Ethereum'un Blokzincir'ini parçalara ayırmak (sharding) uzun zamandır geliştirme yol haritasının bir parçası olmuştur. Ancak, "danksharding" gibi yeni ölçeklendirme çözümleri şu anda merkezde yer almaktadır.
-
-Tam danksharding'in öncüsü olan Proto-Danksharding, Cancun-Deneb ("Dencun") ağ güncellemesi ile yayına girdi.
-
-[Dencun güncellemesi hakkında daha fazla bilgi](/roadmap/dencun/)
+Toplamalar (Rollup'lar) verilerini Ethereum'a blob'lar halinde gönderir ve bu veri katmanını ölçeklendirmek, yürütmeyi ölçeklendirmekten ayrı, başlı başına bir araştırma problemidir. Ethereum artık veri kullanılabilirliği örneklemesi (DAS) kullanıyor, böylece doğrulayıcılar blob verilerinin tamamını indirmek yerine parçalarını örnekleyerek yayınlandığını doğrulayabilir ve blob kapasitesi, yalnızca blob parametrelerine ayrılmış çatallanmalar yoluyla kademeli olarak artırılır. Açık sorular arasında örneklemenin ne kadar ileri götürülebileceği, evde staking yapan kişiler için bant genişliği gereksinimlerinin nasıl yönetilebilir tutulacağı ve blob fiyatlandırmasının talebe nasıl yanıt vermesi gerektiği yer alıyor.
 
 #### Arka plan okuması {#background-reading-4}
 
+- [PeerDAS](/roadmap/fusaka/peerdas/)
+- [Fusaka yükseltmesi](/roadmap/fusaka/)
+- [danksharding](/roadmap/danksharding/)
+- [Veri kullanılabilirliği](/developers/docs/data-availability/)
+- [EIP-4844: Parça blob işlemleri](https://eips.ethereum.org/EIPS/eip-4844)
 - [Proto-Danksharding notları](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
-- [Bankless Danksharding videosu](https://www.youtube.com/watch?v=N5p0TB77flM)
-- [Ethereum Parçalama (Sharding) Araştırma Özeti](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
-- [Danksharding (Polynya)](https://polynya.medium.com/danksharding-36dc0c8067fe)
 
 #### Son araştırmalar {#recent-research-4}
 
-- [EIP-4844: Proto-Danksharding](https://eips.ethereum.org/EIPS/eip-4844)
-- [Vitalik'in parçalama ve veri kullanılabilirliği örneklemesi (DAS) hakkındaki görüşleri](https://hackmd.io/@vbuterin/sharding_proposal)
+- [EIP-7594: PeerDAS](https://eips.ethereum.org/EIPS/eip-7594)
+- [EIP-7892: Yalnızca blob parametreli sert çatallanmalar](https://eips.ethereum.org/EIPS/eip-7892)
+- [Ethresear.ch Parçalama (Sharding)](https://ethresear.ch/c/sharding/6)
 
 ### Donanım {#hardware}
 
-Mütevazı donanımlarda [düğümleri çalıştırmak](/developers/docs/nodes-and-clients/run-a-node/), Ethereum'u merkeziyetsiz tutmak için temeldir. Bu nedenle, düğümleri çalıştırmak için donanım gereksinimlerini en aza indirmeye yönelik aktif araştırmalar önemli bir araştırma alanıdır.
+Mütevazı donanımlarda [düğümler çalıştırmak](/developers/docs/nodes-and-clients/run-a-node/), Ethereum'u merkeziyetsiz tutmanın temelidir, bu nedenle işlem kapasitesindeki her artış, bir düğüm operatörüne maliyetiyle tartılmalıdır. Blok gaz limitinin artması ve daha fazla artışın planlanmasıyla birlikte aktif araştırmalar; durum büyümesini ve bunun nasıl fiyatlandırılacağını, daha büyük durumlarda eşzamanlama ve veritabanı performansını, geçmiş sonlanmasından elde edilebilecek disk tasarruflarını ve nihayetinde durumsuzluğu kapsamaktadır.
 
 #### Arka plan okuması {#background-reading-5}
 
+- [Kendi Ethereum düğümünüzü kurun](/developers/docs/nodes-and-clients/run-a-node/)
+- [Durumsuzluk ve durum zaman aşımı](/roadmap/statelessness/)
 - [ARM üzerinde Ethereum](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
 #### Son araştırmalar {#recent-research-5}
 
-- [FPGA'lerde ECDSA](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [Ethereum'u Ölçeklendirme: daha yüksek bir gaz limitine ve ötesine giden yol](https://ethpandaops.io/posts/gaslimit-scaling/)
+- [EIP-8261: Gaz limiti programı](https://eips.ethereum.org/EIPS/eip-8261)
+- [EIP-8037: Durum oluşturma gaz maliyeti artışı](https://eips.ethereum.org/EIPS/eip-8037)
 
 ## Güvenlik {#security}
 
-Güvenlik; spam/dolandırıcılık önleme, Cüzdan güvenliği, donanım güvenliği, kriptoekonomik güvenlik, hata avcılığı ve uygulamaların ve istemci yazılımlarının test edilmesi ile anahtar yönetimini içerebilen geniş bir konudur. Bu alanlardaki bilgi birikimine katkıda bulunmak, ana akım benimsenmeyi teşvik etmeye yardımcı olacaktır.
+Güvenlik; spam ve dolandırıcılığı önleme, cüzdan güvenliği, donanım güvenliği, kriptoekonomik güvenlik, sansür direnci, kuantum sonrası hazırlık, hata avcılığı ve uygulamaların ve istemci yazılımlarının test edilmesi ve doğrulanmasını içerebilecek geniş bir konudur. Ethereum'un [güvenlik yol haritası](/roadmap/security/) protokol düzeyindeki çalışmaları kapsar.
 
 ### Kriptografi ve ZKP {#cryptography--zkp}
 
-Sıfır bilgi ispatları (ZKP) ve kriptografi, Ethereum ve uygulamalarına gizlilik ve güvenlik oluşturmak için kritik öneme sahiptir. Sıfır bilgi, birçok açık araştırma ve geliştirme fırsatına sahip, nispeten genç ancak hızlı ilerleyen bir alandır. Bazı olasılıklar arasında [Keccak hashleme algoritmasının](https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview) daha verimli uygulamalarını geliştirmek, şu anda var olanlardan daha iyi polinom taahhütleri bulmak veya ECDSA açık anahtar üretimi ve imza doğrulama devrelerinin maliyetini azaltmak yer alır.
+Sıfır bilgi ispatı (ZKP) ve kriptografi, Ethereum ve uygulamalarına gizlilik ve güvenlik inşa etmek için kritik öneme sahiptir. Sıfır bilgi kanıtlama, araştırmadan üretim altyapısına geçmiştir: gerçek Ethereum bloklarını kanıtlayan kanıtlayıcılar artık gecikme, maliyet ve sağlamlık açısından halka açık olarak kıyaslanmaktadır. Açık problemler de buna bağlı olarak, katman 1 (l1) bloklarını gerçek zamanlı yapacak kadar hızlı kanıtlamaya, kullanımda olan ispat sistemlerinin güvenliğini titizlikle hesaba katmaya ve kuantum sonrası kriptografiye hazırlanmaya doğru kaymıştır.
 
 #### Arka plan okuması {#background-reading-6}
 
-- [0xparc blogu](https://0xparc.org/blog)
-- [zkp.science](https://zkp.science/)
-- [Zero Knowledge podcast'i](https://zeroknowledge.fm/)
+- [zkEVM](/roadmap/zkevm/)
+- [Gizlilik](/roadmap/privacy/)
+- [Sıfır Bilgi (Zero Knowledge) podcast'i](https://zeroknowledge.fm/)
 
 #### Son araştırmalar {#recent-research-6}
 
-- [Eliptik eğri kriptografisindeki son gelişmeler](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
 - [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
+- [Ethresear.ch kriptografi](https://ethresear.ch/c/cryptography/28)
+- [Hash tabanlı zkEVM ispat sistemleri için sağlamlık hesaplayıcısı](https://github.com/ethereum/soundcalc)
+- [Bir L1 zkEVM sunmak: güvenlik temelleri](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Cüzdanlar {#wallets}
 
-Ethereum cüzdanları tarayıcı eklentileri, masaüstü ve mobil uygulamalar veya Ethereum üzerindeki akıllı sözleşmeler olabilir. Bireysel kullanıcı anahtar yönetimiyle ilişkili bazı riskleri azaltan sosyal kurtarma cüzdanları üzerine aktif araştırmalar bulunmaktadır. Cüzdanların geliştirilmesiyle bağlantılı olarak, yeni gelişen önemli bir araştırma alanı olan hesap soyutlamanın alternatif biçimlerine yönelik araştırmalar da mevcuttur.
+Ethereum cüzdanları tarayıcı eklentileri, masaüstü ve mobil uygulamalar veya Ethereum üzerindeki akıllı sözleşmeler olabilir. Hesap soyutlama artık deneysel değildir: ERC-4337, protokol değişiklikleri olmadan akıllı hesaplar sağlar ve EIP-7702, sıradan bir hesabın kod ayarlamasına izin verir, böylece toplu işleme, gaz sponsorluğu ve sosyal kurtarma, kullanıcının zaten sahip olduğu adresle çalışır. Açık araştırmalar artık protokolün kendisinde yerel hesap soyutlamaya, modüler ve denetlenebilir hesap mimarilerine ve sıradan insanların güvenle çalıştırabileceği anahtar yönetimi ve kurtarmaya odaklanmaktadır.
 
 #### Arka plan okuması {#background-reading-7}
 
 - [Cüzdanlara giriş](/wallets/)
 - [Cüzdan güvenliğine giriş](/security/)
-- [Ethresear.ch Güvenliği](https://ethresear.ch/tag/security)
-- [EIP-2938 Hesap Soyutlama](https://eips.ethereum.org/EIPS/eip-2938)
-- [EIP-4337 Hesap Soyutlama](https://eips.ethereum.org/EIPS/eip-4337)
+- [Hesap soyutlama](/roadmap/account-abstraction/)
+- [EIP-7702](/roadmap/pectra/7702/)
+- [Ethresear.ch Güvenlik](https://ethresear.ch/c/security/25)
 
 #### Son araştırmalar {#recent-research-7}
 
+- [EIP-8141: Çerçeve işlemi](https://eips.ethereum.org/EIPS/eip-8141)
+- [ERC-5792: Cüzdan çağrı API'si](https://eips.ethereum.org/EIPS/eip-5792)
+- [ERC-6963: Çoklu enjekte edilmiş sağlayıcı keşfi](https://eips.ethereum.org/EIPS/eip-6963)
 - [Doğrulama odaklı akıllı sözleşme cüzdanları](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [Hesapların geleceği](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
-- [EIP-3074 AUTH ve AUTHCALL İşlem Kodları (Opcodes)](https://eips.ethereum.org/EIPS/eip-3074)
-- [Bir EOA adresinde kod yayınlama](https://eips.ethereum.org/EIPS/eip-5003)
 
-## Topluluk, eğitim ve sosyal yardım {#community-education-and-outreach}
+## Topluluk, eğitim ve erişim {#community-education-and-outreach}
 
-Yeni kullanıcıların Ethereum sistemine katılımı (onboarding), yeni eğitim kaynakları ve sosyal yardım yaklaşımları gerektirir. Bu; blog yazıları ve makaleler, kitaplar, podcast'ler, memler, öğretim kaynakları, olaylar ve topluluklar oluşturan, yeni başlayanları karşılayan ve insanları Ethereum hakkında eğiten diğer her şeyi içerebilir.
+Yeni kullanıcıların Ethereum'a sisteme katılımı, yeni eğitim kaynakları ve erişim yaklaşımları gerektirir. Bu; blog yazıları ve makaleler, kitaplar, podcast'ler, memler, öğretim kaynakları, etkinlikler ve topluluklar oluşturan, yeni başlayanları karşılayan ve insanları Ethereum hakkında eğiten diğer her şeyi içerebilir.
 
-### UX/UI {#uxui}
+### Tasarım ve Kullanıcı Deneyimi (UX) {#design-and-ux}
 
-Daha fazla insanı Ethereum sistemine katmak için ekosistemin UX/UI'ı iyileştirmesi gerekir. Bu, tasarımcıların ve ürün uzmanlarının cüzdanların ve uygulamaların tasarımını yeniden incelemesini gerektirecektir.
+Daha fazla insanı Ethereum'a dahil etmek için ekosistemin tasarımını ve kullanıcı deneyimini geliştirmesi gerekir. Bu, tasarımcıların ve ürün uzmanlarının cüzdanların ve uygulamaların nasıl çalıştığını yeniden incelemesini gerektirir ve giderek artan bir şekilde halihazırda var olan standartlara göre tasarım yapmak anlamına gelir: toplu cüzdan çağrıları, gaz sponsorluğu, kurtarılabilen hesaplar ve ait oldukları zinciri taşıyan insan tarafından okunabilir adresler. Web3 UX araştırmaları için nispeten az sayıda kurallı mekan vardır, bu nedenle yayınlanmış çalışmalar ve tasarım rehberliği genellikle dağınıktır.
 
 #### Arka plan okuması {#background-reading-8}
 
-- [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
+- [Web3'te Tasarım ve UX](/developers/docs/design-and-ux/)
+- [Ethereum kullanıcı deneyimi yol haritası](/roadmap/user-experience/)
+- [Web3 Tasarım Başucu Kitabı](https://learnweb3.design/)
+- [Web3 UX Tasarım El Kitabı](https://web3ux.design/)
 
 #### Son araştırmalar {#recent-research-8}
 
-- [Web3 Design Discord'u](https://discord.gg/FsCFPMTSm9)
-- [Web3 Tasarım İlkeleri](https://www.web3designprinciples.com/)
-- [Ethereum Magicians UX tartışması](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
+- [Ethresear.ch UX/UI](https://ethresear.ch/c/ui-ux/24)
+- [ERC-5792: Cüzdan çağrı API'si](https://eips.ethereum.org/EIPS/eip-5792)
+- [ERC-7828: Birlikte çalışabilir isimler](https://eips.ethereum.org/EIPS/eip-7828)
 
 ### Ekonomi {#economics}
 
@@ -223,97 +288,114 @@ Ethereum'daki ekonomi araştırmaları genel olarak iki yaklaşımı izler: ekon
 #### Arka plan okuması {#background-reading-9}
 
 - [Sağlam Teşvikler Grubu (Robust Incentives Group)](https://rig.ethereum.org/)
-- [Devconnect'te ETHconomics atölyesi](https://www.youtube.com/playlist?list=PLTLjFJ0OQOj5PHRvA2snoOKt2udVsyXEm)
+- [Ethereum ekonomisi ustalık sınıfı ve ekonomik model](https://github.com/CADLabs/ethereum-economic-model)
 
 #### Son araştırmalar {#recent-research-9}
 
-- [EIP-1559'un ampirik analizi](https://arxiv.org/abs/2201.05574)
+- [Ethresear.ch Ekonomi](https://ethresear.ch/c/economics/16)
 - [Dolaşımdaki arz dengesi](https://ethresear.ch/t/circulating-supply-equilibrium-for-ethereum-and-minimum-viable-issuance-during-the-proof-of-stake-era/10954)
 - [MEV'i Ölçmek: Orman ne kadar karanlık?](https://arxiv.org/abs/2101.05511)
 
 ### Blok alanı ve ücret piyasaları {#blockspace-fee-markets}
 
-Blok alanı piyasaları, son kullanıcı işlemlerinin doğrudan Ethereum'a (Katman 1) veya köprülenmiş ağlara, ör. toplamalara (Katman 2) dahil edilmesini yönetir. Ethereum'da işlemler, zinciri spam'den koruyan ve tıkanıklığı fiyatlandıran EIP-1559 olarak protokol içinde dağıtılan ücret piyasasına sunulur. Her iki katmanda da işlemler, bu dışsallıkları yakalamak veya yönetmek için yeni piyasa yapılarını teşvik eden Maksimum Çıkarılabilir Değer (MEV) olarak bilinen dışsallıklar üretebilir.
+Blok alanı piyasaları, son kullanıcı işlemlerinin doğrudan Ethereum'a (Katman 1) veya köprülenmiş ağlara, örn. toplamalara (Katman 2) dahil edilmesini yönetir. Ethereum'da işlemler, zinciri spam'den koruyan ve tıkanıklığı fiyatlandıran EIP-1559 olarak protokol içinde dağıtılan ücret piyasasına sunulur. Her iki katmanda da işlemler, bu dışsallıkları yakalamak veya yönetmek için yeni piyasa yapılarını teşvik eden Maksimum Çıkarılabilir Değer (MEV) olarak bilinen dışsallıklar üretebilir. Mevcut çalışmalar, durum, veri ve hesaplama bağımsız olarak tıkandığından, bunu aynı anda birkaç kaynağı fiyatlandırmaya ve blokları kimin ve hangi koşullarda bir araya getirdiğini değiştirmeye kadar genişletmektedir.
 
 #### Arka plan okuması {#background-reading-10}
 
-- [Ethereum Blokzinciri İçin İşlem Ücreti Mekanizması Tasarımı: EIP-1559'un Ekonomik Analizi (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
+- [Ethereum Blokzinciri için İşlem Ücreti Mekanizması Tasarımı: EIP-1559'un Ekonomik Analizi (Tim Roughgarden, 2020)](https://timroughgarden.org/papers/eip1559.pdf)
 - [EIP-1559 Simülasyonları (Sağlam Teşvikler Grubu)](https://ethereum.github.io/abm1559)
-- [Temel ilkelerden Toplama (Rollup) ekonomisi](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
+- [Temel ilkelerden Rollup ekonomisi](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
 - [Flash Boys 2.0: Merkeziyetsiz Borsalarda Önden Koşma (Frontrunning), İşlem Yeniden Sıralama ve Mutabakat İstikrarsızlığı](https://arxiv.org/abs/1904.05234)
 
 #### Son araştırmalar {#recent-research-10}
 
-- [Çok boyutlu EIP-1559 video sunumu](https://youtu.be/QbR4MTgnCko)
-- [Etki alanları arası MEV](https://arxiv.org/abs/2112.01472)
-- [MEV müzayedeleri](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
+- [EIP-7999: Birleşik çok boyutlu ücret piyasası](https://eips.ethereum.org/EIPS/eip-7999)
+- [EIP-7928: Blok düzeyinde erişim listeleri](https://eips.ethereum.org/EIPS/eip-7928)
+- [Alanlar arası MEV](https://arxiv.org/abs/2112.01472)
 
-### Hisse Kanıtı (PoS) teşvikleri {#proof-of-stake-incentives}
+### Hisse kanıtı teşvikleri {#proof-of-stake-incentives}
 
-Doğrulayıcılar, dürüst olmayan davranışlara karşı teminat olarak Ethereum'un yerel varlığını (Ether) kullanırlar. Bunun kriptoekonomisi ağın güvenliğini belirler. Gelişmiş doğrulayıcılar, açık saldırılar başlatmak için teşvik katmanının nüanslarından yararlanabilirler.
+Doğrulayıcılar, dürüst olmayan davranışlara karşı teminat olarak Ethereum'un yerel varlığını (Ether) kullanırlar. Bunun kriptoekonomisi ağın güvenliğini belirler. Gelişmiş doğrulayıcılar, açık saldırılar başlatmak için teşvik katmanının nüanslarından yararlanabilirler. Pectra yükseltmesinden bu yana, doğrulayıcılar çok daha büyük bir etkin bakiye tutabilir ve bundan kazanç sağlayabilir ve birkaç doğrulayıcıyı tek bir doğrulayıcıda birleştirebilir, bu da onları çalıştırmanın ekonomisini değiştirir.
 
 #### Arka plan okuması {#background-reading-11}
 
+- [Maksimum etkin bakiye](/roadmap/pectra/maxeb/)
 - [Ethereum ekonomisi ustalık sınıfı ve ekonomik model](https://github.com/CADLabs/ethereum-economic-model)
 - [PoS teşviklerinin simülasyonları (Sağlam Teşvikler Grubu)](https://ethereum.github.io/beaconrunner/)
 
 #### Son araştırmalar {#recent-research-11}
 
-- [Teklifçi-oluşturucu ayrımı (PBS) altında işlemlerin sansür direncini artırma](https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ)
-- [PoS Ethereum'a Yönelik Üç Saldırı](https://arxiv.org/abs/2110.10086)
+- [Sağlam Teşvikler Grubu](https://rig.ethereum.org/)
+- [PoS Ethereum'a Üç Saldırı](https://arxiv.org/abs/2110.10086)
 
-### Likit staking ve türevler {#liquid-staking-and-derivatives}
+### Likit staking ve türevleri {#liquid-staking-and-derivatives}
 
-Likit staking, 32 ETH'den daha azına sahip kullanıcıların, Ether'i DeFi'de kullanılabilecek stake edilmiş Ether'i temsil eden bir token ile değiştirerek staking getirileri elde etmelerini sağlar. Ancak, likit staking ile ilişkili teşvikler ve piyasa dinamiklerinin yanı sıra bunun Ethereum'un güvenliği üzerindeki etkisi (ör. merkezileşme riskleri) hala keşfedilmektedir.
+Likit staking, 32 ETH'den daha azına sahip kullanıcıların, Ether'i merkeziyetsiz finansta (DeFi) kullanılabilecek stake edilmiş Ether'i temsil eden bir token ile değiştirerek staking getirileri elde etmelerini sağlar. Bununla birlikte, likit staking ile ilişkili teşvikler ve piyasa dinamiklerinin yanı sıra Ethereum'un güvenliği üzerindeki etkisi (örneğin, merkezileşme riskleri) hala keşfedilmektedir.
 
 #### Arka plan okuması {#background-reading-12}
 
 - [Ethresear.ch likit staking](https://ethresear.ch/search?q=liquid%20staking)
 - [Lido: Güven gerektirmeyen Ethereum staking'ine giden yol](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
-- [Rocket Pool: Staking protokolüne giriş](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
 
 #### Son araştırmalar {#recent-research-12}
 
-- [Lido'dan çekim işlemlerini yönetme](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
-- [Çekim kimlik bilgileri](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
 - [Likit Staking Türevlerinin riskleri](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [Lido'dan para çekme işlemlerini yönetme](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 
 ## Test Etme {#testing}
 
+### İstemci ve ağ testi {#client-and-network-testing}
+
+Ethereum'un spesifikasyonları çalıştırılabilirdir ve bunlardan üretilen test fikstürleri, istemci ekiplerinin uygulamalarını kontrol ettikleri şeylerdir. Bunların yanı sıra, paylaşılan test koşum ortamları istemcileri birbirlerine ve kasıtlı olarak düşmanca ağ koşullarına karşı çalıştırır ve halka açık test ağları (testnet), yükseltmeleri Ana Ağ'a (mainnet) ulaşmadan önce dener. Bu altyapıyı geliştirmek, mevcut en yüksek kaldıraçlı çalışmalardan bazılarıdır, çünkü hatalar kullanıcılara ulaşmadan önce bu şekilde yakalanır.
+
+#### Arka plan okuması {#background-reading-24}
+
+- [Ethereum yürütme katmanı spesifikasyonları](https://github.com/ethereum/execution-specs)
+- [Fikir birliği istemcisi spesifikasyonu](https://github.com/ethereum/consensus-specs)
+
+#### Son araştırmalar {#recent-research-24}
+
+- [hive, uçtan uca bir istemci test koşum ortamı](https://github.com/ethereum/hive)
+- [Assertoor, bir test ağı test aracı](https://github.com/ethpandaops/assertoor)
+
 ### Biçimsel doğrulama {#formal-verification}
 
-Biçimsel doğrulama, Ethereum'un mutabakat spesifikasyonlarının doğru ve hatasız olduğunu doğrulamak için kod yazmaktır. Spesifikasyonun Python ile yazılmış, bakım ve geliştirme gerektiren çalıştırılabilir bir sürümü vardır. Daha fazla araştırma, spesifikasyonun Python uygulamasını iyileştirmeye ve doğruluğu daha sağlam bir şekilde doğrulayabilen ve sorunları belirleyebilen araçlar eklemeye yardımcı olabilir.
+Biçimsel doğrulama, bir spesifikasyonun veya uygulamanın amaçlandığı gibi davrandığını belirlemek için makine kontrollü matematiksel ispat kullanır. Ethereum'da bu, EVM uygulamalarının biçimsel bir anlambilimle eşleştiğini kanıtlamayı, sıfır bilgi kanıtlayıcılarının dayandığı devrelerin ve ispat sistemlerinin sağlamlığını kanıtlamayı ve bunların altındaki kriptografik ilkelleri doğrulamayı kapsar. Daha fazla araştırma bu ispatları güçlendirebilir ve yığının daha büyük bir kısmına genişletebilir.
 
 #### Arka plan okuması {#background-reading-13}
 
-- [Biçimsel doğrulamaya giriş](https://ptolemy.berkeley.edu/projects/embedded/research/vis/doc/VisUser/vis_user/node4.html)
+- [Doğrulanmış zkEVM'ler](https://verified-zkevm.org/)
 - [Biçimsel Doğrulama (Intel)](https://www.cl.cam.ac.uk/~jrh13/papers/mark10.pdf)
 
 #### Son araştırmalar {#recent-research-13}
 
+- [Doğrulanmış zkEVM projesine genel bakış](https://github.com/Verified-zkEVM/Overview)
+- [KEVM: K'de EVM'nin anlambilimi](https://github.com/runtimeverification/evm-semantics)
 - [Yatırma sözleşmesinin biçimsel doğrulaması](https://github.com/runtimeverification/deposit-contract-verification)
-- [İşaret Zinciri spesifikasyonunun biçimsel doğrulaması](https://github.com/runtimeverification/deposit-contract-verification)
 
 ## Veri bilimi ve analitik {#data-science-and-analytics}
 
-Ethereum'daki etkinlik ve ağın sağlığı hakkında ayrıntılı bilgi veren daha fazla veri analizi aracına ve kontrol paneline ihtiyaç vardır.
+Ethereum'daki etkinlik ve ağın sağlığı hakkında ayrıntılı bilgi veren daha fazla veri analizi aracına ve kontrol paneline ihtiyaç vardır. Temel verilerin çoğu halka açık ve sorgulanabilirdir, bu nedenle boşluk genellikle erişimden ziyade analiz ve sunumdadır.
 
 ### Arka plan okuması {#background-reading-14}
 
 - [Dune Analytics](https://dune.com/browse/dashboards)
 - [İstemci çeşitliliği kontrol paneli](https://clientdiversity.org/)
+- [Ethereum JSON-RPC yürütme API spesifikasyonu](https://ethereum.github.io/execution-apis/)
 
 #### Son araştırmalar {#recent-research-14}
 
 - [Sağlam Teşvikler Grubu Veri Analizi](https://rig.ethereum.org/)
+- [ethPandaOps açık verileri](https://ethpandaops.io/data/)
+- [L2BEAT: ölçeklendirme özeti](https://l2beat.com/scaling/summary)
 
 ## Uygulamalar ve araçlar {#apps-and-tooling}
 
-Uygulama katmanı, işlemleri Ethereum'un temel katmanında sonuçlandıran çeşitli bir program ekosistemini destekler. Geliştirme ekipleri, önemli Web2 uygulamalarının birleştirilebilir, izinsiz ve sansüre dirençli sürümlerini oluşturmak veya tamamen yeni Web3'e özgü kavramlar yaratmak için Ethereum'dan yararlanmanın yeni yollarını sürekli olarak buluyor. Aynı zamanda, Ethereum üzerinde merkeziyetsiz uygulamalar (dapp'ler) oluşturmayı daha az karmaşık hale getiren yeni araçlar geliştirilmektedir.
+Uygulama katmanı, işlemleri Ethereum'un temel katmanında sonuçlandıran çeşitli bir program ekosistemini destekler. Geliştirme ekipleri, önemli Web2 uygulamalarının birleştirilebilir, izinsiz ve sansüre dirençli sürümlerini oluşturmak veya tamamen yeni Web3'e özgü kavramlar yaratmak için Ethereum'dan yararlanmanın yeni yollarını sürekli olarak buluyor. Aynı zamanda, Ethereum üzerinde merkeziyetsiz uygulama (dapp) oluşturmayı daha az karmaşık hale getiren yeni araçlar geliştiriliyor.
 
 ### DeFi {#defi}
 
-Merkeziyetsiz finans (DeFi), Ethereum üzerine inşa edilen birincil uygulama sınıflarından biridir. DeFi, kullanıcıların akıllı sözleşmeler kullanarak kripto varlıkları depolamasına, transfer etmesine, borç vermesine, borç almasına ve yatırım yapmasına olanak tanıyan birleştirilebilir "para legoları" oluşturmayı amaçlar. DeFi, sürekli güncellenen, hızlı ilerleyen bir alandır. Güvenli, verimli ve erişilebilir protokollere yönelik araştırmalara sürekli ihtiyaç duyulmaktadır.
+Merkeziyetsiz finans (DeFi), Ethereum üzerine inşa edilen birincil uygulama sınıflarından biridir. DeFi, kullanıcıların akıllı sözleşmeler kullanarak kripto varlıkları depolamasına, transfer etmesine, ödünç vermesine, ödünç almasına ve yatırım yapmasına olanak tanıyan birleştirilebilir "para legoları" oluşturmayı amaçlar. DeFi, sürekli güncellenen hızlı hareket eden bir alandır. Güvenli, verimli ve erişilebilir protokoller üzerine araştırmalara sürekli ihtiyaç duyulmaktadır.
 
 #### Arka plan okuması {#background-reading-15}
 
@@ -323,20 +405,19 @@ Merkeziyetsiz finans (DeFi), Ethereum üzerine inşa edilen birincil uygulama s�
 #### Son araştırmalar {#recent-research-15}
 
 - [Merkeziyetsiz finans, merkezi mülkiyet mi?](https://arxiv.org/pdf/2012.09306.pdf)
-- [Optimism: Dolar altı işlemlere giden yol](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)
+- [Ethresear.ch Uygulamalar](https://ethresear.ch/c/applications/18)
 
 ### DAO'lar {#daos}
 
-Ethereum için etkili bir kullanım durumu, DAO'ların kullanımı yoluyla merkeziyetsiz bir şekilde organize olma yeteneğidir. İnsanların seçeneklerini geleneksel şirketlerin ve organizasyonların ötesine büyük ölçüde genişleterek, güveni minimize edilmiş bir koordinasyon aracı olarak gelişmiş yönetişim biçimlerini yürütmek için Ethereum'daki DAO'ların nasıl geliştirilebileceği ve kullanılabileceği konusunda çok sayıda aktif araştırma bulunmaktadır.
+Ethereum için etkili bir kullanım durumu, DAO'ların kullanımı yoluyla merkeziyetsiz bir şekilde organize olma yeteneğidir. Ethereum'daki DAO'ların, insanların seçeneklerini geleneksel şirketlerin ve kuruluşların ötesine büyük ölçüde genişleten, güveni minimize edilmiş bir koordinasyon aracı olarak gelişmiş yönetişim biçimlerini yürütmek için nasıl geliştirilebileceği ve kullanılabileceği konusunda birçok aktif araştırma bulunmaktadır.
 
 #### Arka plan okuması {#background-reading-16}
 
 - [DAO'lara giriş](/dao/)
-- [DAO Collective](https://daocollective.xyz/)
 
 #### Son araştırmalar {#recent-research-16}
 
-- [DAO ekosisteminin haritasını çıkarma](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
+- [DAO ekosisteminin haritasını çıkarmak](https://www.researchgate.net/publication/358694594_Mapping_out_the_DAO_Ecosystem_and_Assessing_DAO_Autonomy)
 
 ### Geliştirici araçları {#developer-tools}
 
@@ -346,52 +427,53 @@ Ethereum geliştiricileri için araçlar hızla gelişiyor. Bu genel alanda yap�
 
 - [Programlama diline göre araçlar](/developers/docs/programming-languages/)
 - [Geliştirici Çerçeveleri](/developers/docs/frameworks/)
-- [Fikir birliği geliştirici araçları listesi](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Dapp'lere giriş](/developers/docs/dapps/)
 - [Token standartları](/developers/docs/standards/tokens/)
-- [CryptoDevHub: EVM Araçları](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Son araştırmalar {#recent-research-17}
 
-- [Eth R&D Discord Fikir Birliği Araçları kanalı](https://discordapp.com/channels/595666850260713488/746343380900118528)
+- [Eth R&D Discord](https://discord.gg/qGpsxSA)
+- [Ethereum yürütme API spesifikasyonları](https://github.com/ethereum/execution-apis)
 
-### Kâhinler (Oracles) {#oracles}
+### Oracle'lar {#oracles}
 
-Kâhinler (Oracles), zincir dışı verileri izinsiz ve merkeziyetsiz bir şekilde Blokzincir'e aktarır. Bu verileri zincir içine almak, dapp'lerin gerçek dünyadaki varlıklardaki fiyat dalgalanmaları, zincir dışı uygulamalardaki olaylar veya hatta hava durumundaki değişiklikler gibi gerçek dünya olaylarına tepki vermesini sağlar.
+Oracle'lar, zincir dışı verileri izinsiz ve merkeziyetsiz bir şekilde blokzincire aktarır. Bu verileri zincir içine almak, dapp'lerin gerçek dünya varlıklarındaki fiyat dalgalanmaları, zincir dışı uygulamalardaki olaylar veya hatta hava durumundaki değişiklikler gibi gerçek dünya olaylarına tepki vermesini sağlar.
 
 #### Arka plan okuması {#background-reading-18}
 
-- [Kâhinlere (Oracles) Giriş](/developers/docs/oracles/)
+- [Oracle'lara giriş](/developers/docs/oracles/)
 
 #### Son araştırmalar {#recent-research-18}
 
-- [Blokzincir kâhinleri anketi](https://arxiv.org/pdf/2004.07140.pdf)
-- [Chainlink teknik incelemesi (white paper)](https://chain.link/whitepaper)
+- [Blokzincir oracle'ları anketi](https://arxiv.org/pdf/2004.07140.pdf)
 
 ### Uygulama güvenliği {#app-security}
 
-Ethereum'daki hack'ler genellikle protokolün kendisinden ziyade bireysel uygulamalardaki güvenlik açıklarından yararlanır. Bilgisayar korsanları ve uygulama geliştiricileri, yeni saldırılar ve savunmalar geliştirmek için bir silahlanma yarışına kilitlenmiş durumdadır. Bu, uygulamaları hack'lerden korumak için her zaman önemli araştırma ve geliştirmelerin gerektiği anlamına gelir.
+Ethereum'daki hack'ler genellikle protokolün kendisinden ziyade bireysel uygulamalardaki güvenlik açıklarından yararlanır. Hacker'lar ve uygulama geliştiricileri, yeni saldırılar ve savunmalar geliştirmek için bir silahlanma yarışına kilitlenmiş durumdalar. Bu, uygulamaları hack'lerden korumak için her zaman önemli araştırma ve geliştirmelerin gerektiği anlamına gelir.
 
 #### Arka plan okuması {#background-reading-19}
 
-- [Wormhole istismar raporu](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
+- [Akıllı sözleşme güvenliği](/developers/docs/smart-contracts/security/)
+- [Wormhole istismar raporu](https://www.chainalysis.com/blog/wormhole-hack-february-2022/)
 - [Ethereum sözleşme hack'i otopsileri listesi](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://rekt.news/)
 
 #### Son araştırmalar {#recent-research-19}
 
-- [Ethresear.ch Uygulamaları](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch Uygulamalar](https://ethresear.ch/c/applications/18)
 
 ### Teknoloji yığını {#technology-stack}
 
-Tüm Ethereum teknoloji yığınını merkeziyetsizleştirmek önemli bir araştırma alanıdır. Şu anda, Ethereum üzerindeki dapp'ler genellikle merkezi araçlara veya altyapıya dayandıkları için bazı merkezileşme noktalarına sahiptir.
+Tüm Ethereum teknoloji yığınını merkeziyetsizleştirmek önemli bir araştırma alanıdır. Şu anda, Ethereum'daki dapp'ler genellikle merkezi araçlara veya altyapıya dayandıkları için bazı merkezileşme noktalarına sahiptir. Bu bağımlılığı azaltmak, uygulamaların tek bir sağlayıcıya güvenmeden Ethereum'u okumasını pratik hale getirmek anlamına gelir; işte burada hafif istemciler ve düğüm verilerine güven gerektirmeyen erişim devreye girer.
 
 #### Arka plan okuması {#background-reading-20}
 
 - [Ethereum yığını](/developers/docs/ethereum-stack/)
-- [Coinbase: Web3 Yığınına Giriş](https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0)
+- [Hafif istemciler](/developers/docs/nodes-and-clients/light-clients/)
 - [Akıllı sözleşmelere giriş](/developers/docs/smart-contracts/)
 - [Merkeziyetsiz depolamaya giriş](/developers/docs/storage/)
 
 #### Son araştırmalar {#recent-research-20}
 
 - [Akıllı sözleşme birleştirilebilirliği](/developers/docs/smart-contracts/composability/)
+- [Coinbase: Web3 Yığınına Giriş](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)

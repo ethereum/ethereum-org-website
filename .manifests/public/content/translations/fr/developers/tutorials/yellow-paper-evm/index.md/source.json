@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/yellow-paper-evm/index.md",
   "generatedAt": "2026-07-22T23:58:01.808Z",
-  "rootHash": "596389cda58e",
+  "rootHash": "2c7fef9adf42",
   "tree": {
-    "contentHash": "bb7bacf188c7",
-    "anchorHash": "2146ce8c6e72",
+    "contentHash": "077ddd9c13ff",
+    "anchorHash": "49c491a6a627",
     "children": {
       "frontmatter:title": {
         "contentHash": "0f93a34886f3",
@@ -17,11 +17,17 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "4496acc2b0b4"
+        "anchorHash": "2ac00175cd08"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "ae4dd2e11e34"
+        "contentHash": "eddd663455df",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "0": {
+            "contentHash": "603871c2ddd4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

@@ -30,7 +30,7 @@ Für Millionen von Menschen, die im Ausland arbeiten, ist es eine regelmäßige 
 <Grid>
   <Card title="Günstigere Gebühren" emoji=":money_with_wings:" description="Geldtransferdienste verlangen im Durchschnitt bis zu 14 $ Gebühren. Ethereum-Transaktionen können oft für unter 0,01 $ abgeschlossen werden."/>
   <Card title="Schnellere Transfers" emoji="📶" description="Internationale Banküberweisungen benötigen mehrere Tage zur Bearbeitung. Ethereum-Transaktionen werden in Minuten abgewickelt." />
-  <Card title="Offen für alle" emoji="🌎" description="Du benötigst nur eine Internetverbindung und eine Wallet-App, um Ether zu senden oder zu empfangen." />
+  <Card title="Offen für alle" emoji="🌎" description="Sie benötigen nur eine Internetverbindung und eine Wallet-App, um Ether zu senden oder zu empfangen." />
 </Grid>
 
 ## Zugang zu globalen Währungen {#access-to-global-currencies}
@@ -206,3 +206,7 @@ Von der Erleichterung schneller Katastrophenhilfe bis hin zur Stärkung globaler
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />
