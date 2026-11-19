@@ -1,0 +1,53 @@
+name: Bot merge
+
+# Merges PRs that pr-gate.yml approved once the waiting period is over. Logs only while BOT_MERGE_DRY_RUN isn't "false".
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: bot-merge
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  checks: read
+  issues: read
+  pull-requests: read
+  statuses: read
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            .github/scripts/pr-gate.mjs
+            .github/CODEOWNERS
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Mint merge token
+        id: merge-token
+        if: vars.BOT_MERGE_DRY_RUN == 'false'
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CODE_CLIENT_ID }}
+          private-key: ${{ secrets.ETHORG_AGENT_CODE_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Merge what is due
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MERGE_TOKEN: ${{ steps.merge-token.outputs.token }}
+          DRY_RUN: ${{ vars.BOT_MERGE_DRY_RUN != 'false' }}
+          REPO: ${{ github.repository }}
+          BOT_MERGE_LANES: ${{ vars.BOT_MERGE_LANES }}
+          BOT_MERGE_AUTHORS: ${{ vars.BOT_MERGE_AUTHORS }}
+          BOT_MERGE_DELAY_HOURS: ${{ vars.BOT_MERGE_DELAY_HOURS }}
+        run: node .github/scripts/pr-gate.mjs sweep
