@@ -48,11 +48,11 @@ There are several light clients in development, including execution, consensus a
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): light mode for execution client (in development) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): consensus light client in Nim
 - [Myotis](https://github.com/biafra23/myotis): experimental light client using p2p and SNAP, originally built for Android
-- [Nethermind](https://www.nethermind.io/): light client using p2p and SNAP
+- [Nethermind](https://www.nethermind.io/): experimental light client using p2p and SNAP
 
-To our knowledge none of these are considered production-ready yet.
+To our knowledge, only colibri and helios are considered production-ready yet.
 
-There is also a lot of work being done to improve the ways that light clients can access Ethereum data. Currently, light clients rely on RPC requests to full nodes using a client/server model, but in the future the data could be requested in a more decentralized way using a dedicated network such as the [Portal Network](https://www.ethportal.net/) that could serve the data to light clients using a peer-to-peer gossip protocol.
+There is also a lot of work being done to improve the ways that light clients can access Ethereum data. Currently, some light clients rely on RPC requests to full nodes using a client/server model, others are utilizing the SNAP protocol for purposes other than its intended use but in the future the data could be requested in a more decentralized way using a dedicated network such as the [Portal Network](https://www.ethportal.net/) that could serve the data to light clients using a peer-to-peer gossip protocol.
 
 Other [roadmap](/roadmap/) items such as [Verkle trees](/roadmap/verkle-trees/) and [statelessness](/roadmap/statelessness/) will eventually bring the security guarantees of light clients equal to those of full clients.
 
