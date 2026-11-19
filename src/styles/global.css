@@ -15,7 +15,6 @@
 @import "./utilities.css";
 @import "./docsearch.css";
 @import "./codeblock.css";
-@import "./flowchart.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
