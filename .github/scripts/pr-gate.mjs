@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-// Bot approve-and-merge lanes. pr-gate.yml approves, bot-merge.yml merges, and the Maintenance Desk mirrors prType.
-//   approve <pr>   approve the head commit as ethorg-agent when a lane matches and is on; otherwise withdraw that approval
-//   sweep          merge PRs whose approval is BOT_MERGE_DELAY_HOURS old and still passes (needs MERGE_TOKEN unless DRY_RUN)
-// Env: REPO, GH_TOKEN, BOT_MERGE_LANES (comma list), BOT_MERGE_AUTHORS ({"team": [...], "ef": [...]}).
+// Bot-merge lanes: `approve <pr>` (pr-gate.yml) approves qualifying PRs as ethorg-agent; `sweep` (bot-merge.yml) merges what is due.
+// Env: REPO, GH_TOKEN, BOT_MERGE_LANES, BOT_MERGE_AUTHORS ({team, ef}), BOT_MERGE_DELAY_HOURS; sweep also APPROVE_TOKEN, MERGE_TOKEN, DRY_RUN.
 import { execFileSync } from "node:child_process"
 import { appendFileSync, readFileSync } from "node:fs"
 import path from "node:path"
@@ -23,21 +21,22 @@ const AUTOMATION = new Set([
   "crowdin-bot",
 ])
 const ASSET = /^public\/(?!content\/).*\.(png|jpe?g|gif|svg|webp|avif|ico)$/i
+export const PREVIEW_CHECK = "netlify/ethereumorg/deploy-preview"
 
 // Lane A: each sync job may only change its own data.
 export const SYNCS = [
   {
-    author: "ethorg-agent-code",
+    author: "github-actions",
     head: /^automated-update-\d+$/,
     files: /^src\/data\/chains\.ts$/,
   },
   {
-    author: "ethorg-agent-code",
+    author: "github-actions",
     head: /^automated\/sync-upgrades$/,
     files: /^src\/data\/upgrades\//,
   },
   {
-    author: "ethorg-agent-code",
+    author: "github-actions",
     head: /^i18n\/external-descriptions-\d+$/,
     files: /^src\/intl\/en\/page-(app|developers-tools)-descriptions\.json$/,
   },
@@ -47,11 +46,11 @@ export const SYNCS = [
     files: /^(README\.md|\.all-contributorsrc)$/,
   },
 ]
-// Lane C: PR type → author tiers.
+// Lane C: PR type → who may send it, and which file lanes every changed file must fall in.
 export const TEAM_TYPES = {
-  "code-small": ["team", "ef"],
-  "content-fix": ["team", "ef"],
-  data: ["team"],
+  "code-small": { tiers: ["team", "ef"], lanes: ["code"] },
+  "content-fix": { tiers: ["team", "ef"], lanes: ["content", "translation"] },
+  data: { tiers: ["team"], lanes: ["data"] },
 }
 // Never bot-merged in lane C whatever the type: root files, dot-folders and non-content public files (redirects, headers).
 const DENY = /^[^/]+$|^\.|^public\/(?!content\/|images\/)/
@@ -81,15 +80,11 @@ const isListingReq = (x) =>
   x.files.length > 0 &&
   x.files.filter((f) => LISTING.test(f)).length * 2 >= x.files.length
 
-// x: { title, base, head, author, tier, files, additions, deletions, aiLanes? }
+// Same buckets as the Maintenance Desk. x: { title, base, author, tier, files, additions, deletions, aiLanes? }
 export function prType(x) {
   if (/^deploy v/i.test(x.title) || ["master", "staging"].includes(x.base))
     return "release"
-  if (
-    x.author === "ethorg-agent-code" &&
-    !SYNCS.some((s) => s.author === x.author && s.head.test(x.head))
-  )
-    return "recovery"
+  if (x.author === "ethorg-agent-code") return "recovery"
   if (/dependabot|renovate/.test(x.author)) return "deps"
   if (x.tier === "bot") return "botsync"
   if (/\bintl[ -]import\b|translation import/i.test(x.title)) return "intl"
@@ -132,27 +127,31 @@ export function evaluate(pr, ctx) {
       : res(null, "author is not a bounty code owner")
   }
 
-  const tiers = TEAM_TYPES[type]
-  if (!tiers) return res(null, `${type} PRs are never bot-merged`)
-  if (!tiers.includes(tier))
+  const rule = TEAM_TYPES[type]
+  if (!rule) return res(null, `${type} PRs are never bot-merged`)
+  if (!rule.tiers.includes(tier))
     return res(
       null,
       tier === "other"
         ? "author is not on the trusted list"
-        : `${type} is for ${tiers.join(" and ")} only`
+        : `${type} is for ${rule.tiers.join(" and ")} only`
     )
   const denied = pr.files.find((f) => DENY.test(f))
   if (denied) return res(null, `touches ${denied}`)
+  const stray = pr.files.find(
+    (f) => !ASSET.test(f) && !rule.lanes.includes(laneOfPath(f))
+  )
+  if (stray) return res(null, `${stray} is outside a ${type} change`)
   const r = ctx.review
   if (!r) return res(null, "no AI review")
   if (r.sha !== pr.sha)
     return res(null, "AI review is not of the newest commit")
   if (!["R0", "R1"].includes(r.risk)) return res(null, `AI risk ${r.risk}`)
-  if (r.counts?.blocking || r.counts?.should_fix)
+  if (r.counts?.blocking !== 0 || r.counts?.should_fix !== 0)
     return res(null, "AI review has blocking or should-fix findings")
-  if ((r.base ?? "needed") !== "needed")
-    return res(null, `base branch is ${r.base}`)
-  if (r.unreviewed?.length) return res(null, "AI review skipped files")
+  if (r.base !== "needed") return res(null, `base branch is ${r.base}`)
+  if (!Array.isArray(r.unreviewed) || r.unreviewed.length)
+    return res(null, "AI review skipped files")
   return res("team")
 }
 
@@ -187,10 +186,26 @@ export function changesRequested(reviews) {
   return [...last.values()].includes("CHANGES_REQUESTED")
 }
 
+// Every check must have finished without failing, and the deploy preview (a full build) must have passed.
+export function checksProblem(checks) {
+  const bad = checks.find((c) =>
+    ["fail", "pending", "cancel"].includes(c.bucket)
+  )
+  if (bad) return `${bad.name} is ${bad.bucket}`
+  if (!checks.some((c) => c.name === PREVIEW_CHECK && c.bucket === "pass"))
+    return "deploy preview has not passed"
+  return ""
+}
+
+export function delayHours(raw) {
+  const d = Number(raw || 24)
+  return Number.isFinite(d) && d >= 0 ? d : 24
+}
+
 // ---------- GitHub I/O ----------
 const BOT = "ethorg-agent[bot]"
 const MARK = "<!-- pr-gate -->"
-const DELAY = Number(process.env.BOT_MERGE_DELAY_HOURS || 24)
+const DELAY = delayHours(process.env.BOT_MERGE_DELAY_HOURS)
 
 const gh = (args, env = {}) =>
   execFileSync("gh", args, {
@@ -200,6 +215,10 @@ const gh = (args, env = {}) =>
   })
 const api = (p) => JSON.parse(gh(["api", p]))
 const list = (p) => JSON.parse(gh(["api", "--paginate", "--slurp", p])).flat()
+const write = (args) =>
+  gh(["api", ...args], {
+    GH_TOKEN: process.env.APPROVE_TOKEN || process.env.GH_TOKEN,
+  })
 const log = (line) => {
   console.log(line)
   if (process.env.GITHUB_STEP_SUMMARY)
@@ -255,47 +274,49 @@ const lanesOn = () =>
       .map((s) => s.trim())
       .filter(Boolean)
   )
+// bounty-entry.yml approves bounty PRs; these lanes are approved here.
+const GATED = new Set(["sync", "team"])
+const isGateApproval = (r) =>
+  r.user.login === BOT && r.state === "APPROVED" && r.body?.startsWith(MARK)
+
+function postApproval(repo, n, sha) {
+  write([
+    "-X",
+    "POST",
+    `repos/${repo}/pulls/${n}/reviews`,
+    "-f",
+    `commit_id=${sha}`,
+    "-f",
+    "event=APPROVE",
+    "-f",
+    `body=${MARK}\nApproved for an automatic merge after a ${DELAY}-hour waiting period. Request changes to stop it.`,
+  ])
+  log(`#${n} approved ${sha.slice(0, 7)}`)
+}
 
 function approve(repo, n) {
   const { pr, result } = context(repo, n)
-  const on =
-    result.lane === "sync" || result.lane === "team"
-      ? lanesOn().has(result.lane)
-      : false
+  const on = !!result.lane && lanesOn().has(result.lane)
+  const gated = on && GATED.has(result.lane)
   const mine = list(`repos/${repo}/pulls/${n}/reviews?per_page=100`).filter(
-    (r) =>
-      r.user.login === BOT && r.state === "APPROVED" && r.body?.startsWith(MARK)
+    isGateApproval
   )
   log(
     `#${n} ${result.type}: ${result.lane ? `lane ${result.lane}${on ? "" : " (off)"}` : result.reason}`
   )
-  for (const r of mine.filter((r) => !on || r.commit_id !== pr.sha)) {
-    gh([
-      "api",
+  for (const r of mine.filter((r) => !gated || r.commit_id !== pr.sha)) {
+    write([
       "-X",
       "PUT",
       `repos/${repo}/pulls/${n}/reviews/${r.id}/dismissals`,
       "-f",
       "event=DISMISS",
       "-f",
-      `message=${on ? "A newer commit needs its own approval." : `No longer qualifies for an automatic merge: ${result.reason || "lane is off"}.`}`,
+      `message=${gated ? "A newer commit needs its own approval." : `No longer qualifies for an automatic merge: ${result.reason || "lane is off"}.`}`,
     ])
   }
-  if (on && !mine.some((r) => r.commit_id === pr.sha)) {
-    gh([
-      "api",
-      "-X",
-      "POST",
-      `repos/${repo}/pulls/${n}/reviews`,
-      "-f",
-      `commit_id=${pr.sha}`,
-      "-f",
-      "event=APPROVE",
-      "-f",
-      `body=${MARK}\nApproved for an automatic merge after a ${DELAY}-hour waiting period. Request changes to stop it.`,
-    ])
-    log(`#${n} approved ${pr.sha.slice(0, 7)}`)
-  }
+  if (gated && !mine.some((r) => r.commit_id === pr.sha))
+    postApproval(repo, n, pr.sha)
 }
 
 function sweep(repo) {
@@ -321,35 +342,48 @@ function sweep(repo) {
 }
 
 function sweepOne(repo, p) {
-  const dry = process.env.DRY_RUN !== "false"
-  const on = lanesOn()
   const n = p.number
   const reviews = list(`repos/${repo}/pulls/${n}/reviews?per_page=100`)
-  const approvedAt = reviews
-    .filter(
-      (r) =>
-        r.user.login === BOT &&
-        r.state === "APPROVED" &&
-        r.commit_id === p.head.sha
-    )
-    .map((r) => Date.parse(r.submitted_at))
-    .sort()[0]
-  if (!approvedAt) return
+  const onHead = reviews.filter(
+    (r) =>
+      r.user.login === BOT &&
+      r.state === "APPROVED" &&
+      r.commit_id === p.head.sha
+  )
+  // Sync PRs opened with GITHUB_TOKEN never trigger pr-gate.yml, so the sweep approves them.
+  const syncPr = p.user.login === "github-actions[bot]"
+  if (!onHead.length && !syncPr) return
   const { pr, result } = context(repo, n)
   if (pr.sha !== p.head.sha) return
   if (!result.lane) return log(`#${n} skip: ${result.reason}`)
-  if (!on.has(result.lane)) return log(`#${n} skip: lane ${result.lane} is off`)
+  if (!lanesOn().has(result.lane))
+    return log(`#${n} skip: lane ${result.lane} is off`)
+  const approvals = GATED.has(result.lane)
+    ? onHead.filter(isGateApproval)
+    : onHead
+  if (!approvals.length) {
+    if (result.lane === "sync") postApproval(repo, n, pr.sha)
+    return
+  }
+  const approvedAt = Math.min(
+    ...approvals.map((r) => Date.parse(r.submitted_at))
+  )
   const left = DELAY - (Date.now() - approvedAt) / 36e5
   if (left > 0) return log(`#${n} merges in ${Math.ceil(left)}h`)
   if (changesRequested(reviews)) return log(`#${n} skip: changes requested`)
   if (pr.mergeable !== true)
     return log(`#${n} skip: not mergeable (${pr.mergeable})`)
+  let out
   try {
-    gh(["pr", "checks", String(n), "--required", "-R", repo])
-  } catch {
-    return log(`#${n} skip: required checks are not green`)
+    out = gh(["pr", "checks", String(n), "-R", repo, "--json", "name,bucket"])
+  } catch (e) {
+    // gh exits non-zero while checks fail or run, but still prints them.
+    out = e.stdout
   }
-  if (dry) return log(`#${n} would merge ${pr.sha.slice(0, 7)} (dry run)`)
+  const problem = checksProblem(JSON.parse(out || "[]"))
+  if (problem) return log(`#${n} skip: ${problem}`)
+  if (process.env.DRY_RUN !== "false")
+    return log(`#${n} would merge ${pr.sha.slice(0, 7)} (dry run)`)
   gh(
     [
       "pr",

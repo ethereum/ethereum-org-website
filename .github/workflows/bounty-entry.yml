@@ -111,4 +111,4 @@ jobs:
             exit 0
           fi
           gh api "repos/$REPO/pulls/$PR/reviews" -f commit_id="$head" -f event=APPROVE \
-            -f body="Bug bounty leaderboard entry: data check passed. A code owner still merges."
+            -f body="Bug bounty leaderboard entry: data check passed."

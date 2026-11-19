@@ -7,10 +7,6 @@ on:
   issue_comment:
     types: [created, edited]
 
-concurrency:
-  group: pr-gate-${{ github.event.pull_request.number || github.event.issue.number }}
-  cancel-in-progress: true
-
 permissions:
   contents: read
 
@@ -20,6 +16,10 @@ jobs:
       github.event_name == 'pull_request_target' ||
       (github.event.issue.pull_request && github.event.comment.user.login == 'ethorg-agent[bot]' &&
         contains(github.event.comment.body, '<!-- ethorg-review:'))
+    # On the job, so skipped comment events never cancel a run that is approving.
+    concurrency:
+      group: pr-gate-${{ github.event.pull_request.number || github.event.issue.number }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

@@ -8,15 +8,23 @@ let evaluate: Mod["evaluate"],
   prType: Mod["prType"],
   parseReview: Mod["parseReview"],
   bountyOwners: Mod["bountyOwners"],
-  changesRequested: Mod["changesRequested"]
+  changesRequested: Mod["changesRequested"],
+  checksProblem: Mod["checksProblem"],
+  delayHours: Mod["delayHours"]
 
 test.beforeAll(async () => {
-  ;({ evaluate, prType, parseReview, bountyOwners, changesRequested } =
-    await import(
-      pathToFileURL(
-        path.resolve(__dirname, "../../.github/scripts/pr-gate.mjs")
-      ).href
-    ))
+  ;({
+    evaluate,
+    prType,
+    parseReview,
+    bountyOwners,
+    changesRequested,
+    checksProblem,
+    delayHours,
+  } = await import(
+    pathToFileURL(path.resolve(__dirname, "../../.github/scripts/pr-gate.mjs"))
+      .href
+  ))
 })
 
 const SHA = "a".repeat(40)
@@ -74,7 +82,7 @@ test("prType matches the Maintenance Desk buckets", () => {
   )
   expect(
     t({
-      author: "ethorg-agent-code",
+      author: "github-actions",
       head: "automated-update-20261120",
       tier: "bot",
     })
@@ -128,6 +136,29 @@ test("lane C refuses everything else", () => {
   expect(no({}, { review: review({ unreviewed: ["a.md"] }) })).toContain(
     "skipped"
   )
+  expect(
+    no({ files: ["src/data/chains.ts", "src/scripts/intl-pipeline/main.ts"] })
+  ).toContain("src/scripts/intl-pipeline/main.ts")
+  expect(
+    no({
+      author: "minimalsm",
+      files: ["src/data/chains.ts", "src/components/Foo.tsx"],
+      additions: 5,
+    })
+  ).toContain("src/data/chains.ts")
+  expect(
+    no({
+      files: ["src/components/Foo.tsx", "src/intl/en/common.json"],
+      additions: 5,
+    })
+  ).toContain("src/intl/en/common.json")
+  expect(no({}, { review: review({ counts: undefined }) })).toContain(
+    "should-fix"
+  )
+  expect(no({}, { review: review({ base: undefined }) })).toContain("base")
+  expect(no({}, { review: review({ unreviewed: undefined }) })).toContain(
+    "skipped"
+  )
   expect(no({ draft: true })).toContain("ready")
   expect(no({ base: "staging" })).toContain("dev")
 })
@@ -135,7 +166,7 @@ test("lane C refuses everything else", () => {
 test("lane A: only our sync jobs, only their own files", () => {
   const sync = (o: Record<string, unknown>) =>
     evaluate(
-      pr({ author: "ethorg-agent-code", isBot: true, ...o }),
+      pr({ author: "github-actions", isBot: true, ...o }),
       ctx({ review: null })
     )
   expect(
@@ -170,7 +201,18 @@ test("lane A: only our sync jobs, only their own files", () => {
     }).lane
   ).toBeNull()
   expect(
-    sync({ head: "fix/something", files: ["src/data/chains.ts"] }).type
+    sync({ head: "fix/something", files: ["src/data/chains.ts"] }).lane
+  ).toBeNull()
+  expect(
+    evaluate(
+      pr({
+        author: "ethorg-agent-code",
+        isBot: true,
+        head: "automated-update-20261120162000",
+        files: ["src/data/chains.ts"],
+      }),
+      ctx({ review: null })
+    ).type
   ).toBe("recovery")
   const ac = (files: string[]) =>
     evaluate(
@@ -223,4 +265,18 @@ test("helpers", () => {
   expect(
     changesRequested([r("a", "CHANGES_REQUESTED"), r("a", "DISMISSED")])
   ).toBe(false)
+  const c = (name: string, bucket: string) => ({ name, bucket })
+  const preview = c("netlify/ethereumorg/deploy-preview", "pass")
+  expect(
+    checksProblem([preview, c("Lint", "pass"), c("E2E", "skipping")])
+  ).toBe("")
+  expect(checksProblem([preview, c("Lint", "fail")])).toBe("Lint is fail")
+  expect(checksProblem([preview, c("Unit tests", "pending")])).toContain(
+    "pending"
+  )
+  expect(checksProblem([c("Lint", "pass")])).toContain("deploy preview")
+  expect(delayHours(undefined)).toBe(24)
+  expect(delayHours("6")).toBe(6)
+  expect(delayHours("24h")).toBe(24)
+  expect(delayHours("-1")).toBe(24)
 })

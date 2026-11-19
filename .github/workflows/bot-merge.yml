@@ -30,6 +30,15 @@ jobs:
           sparse-checkout-cone-mode: false
           persist-credentials: false
 
+      - name: Mint approve token
+        id: approve-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+          private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+          permission-pull-requests: write
+
       - name: Mint merge token
         id: merge-token
         if: vars.BOT_MERGE_DRY_RUN == 'false'
@@ -44,6 +53,7 @@ jobs:
       - name: Merge what is due
         env:
           GH_TOKEN: ${{ github.token }}
+          APPROVE_TOKEN: ${{ steps.approve-token.outputs.token }}
           MERGE_TOKEN: ${{ steps.merge-token.outputs.token }}
           DRY_RUN: ${{ vars.BOT_MERGE_DRY_RUN != 'false' }}
           REPO: ${{ github.repository }}
