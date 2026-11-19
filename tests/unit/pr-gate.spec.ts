@@ -96,7 +96,7 @@ test("lane C: small, clean PRs from trusted authors", () => {
 })
 
 test("lane C refuses everything else", () => {
-  const no = (p: object, c: object = {}) => {
+  const no = (p: Record<string, unknown>, c: Record<string, unknown> = {}) => {
     const r = evaluate(pr(p), ctx(c))
     expect(r.lane, r.reason).toBeNull()
     return r.reason
@@ -133,7 +133,7 @@ test("lane C refuses everything else", () => {
 })
 
 test("lane A: only our sync jobs, only their own files", () => {
-  const sync = (o: object) =>
+  const sync = (o: Record<string, unknown>) =>
     evaluate(
       pr({ author: "ethorg-agent-code", isBot: true, ...o }),
       ctx({ review: null })
