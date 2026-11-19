@@ -26,9 +26,21 @@ jobs:
     name: Regenerate the upgrade store
     runs-on: ubuntu-latest
     steps:
+      # The PR comes from the app, not GITHUB_TOKEN, so CI and the bot-merge gate run on it.
+      - name: Mint app token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CODE_CLIENT_ID }}
+          private-key: ${{ secrets.ETHORG_AGENT_CODE_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+          permission-pull-requests: write
+
       - uses: actions/checkout@v6
         with:
           ref: dev
+          token: ${{ steps.app-token.outputs.token }}
 
       - uses: ./.github/actions/setup-pnpm-node
 
@@ -65,8 +77,7 @@ jobs:
             git diff "$REF" -- src/data/upgrades/ > store.diff
           fi
 
-      # PRs opened with GITHUB_TOKEN do not trigger the CI workflow, so the
-      # checks that would guard the store run here, before it opens one.
+      # Guards the store before it reaches the PR.
       - name: Type-check and test the regenerated store
         if: steps.diff.outputs.changed == 'true'
         run: |
@@ -157,7 +168,7 @@ jobs:
       - name: Open or update the PR
         if: steps.diff.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
           NUM: ${{ steps.base.outputs.pr }}
         run: |
           printf '%s\n\n%s\n' \

@@ -11,8 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # The PR comes from the app, not GITHUB_TOKEN, so CI and the bot-merge gate run on it.
+      - name: Mint app token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CODE_CLIENT_ID }}
+          private-key: ${{ secrets.ETHORG_AGENT_CODE_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+          permission-pull-requests: write
+
       - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Set up git
         run: |
@@ -56,6 +69,8 @@ jobs:
 
       - name: Create branch, commit, push, and open PR
         if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           BRANCH="i18n/external-descriptions-${{ env.TIMESTAMP }}"
 
@@ -64,7 +79,6 @@ jobs:
           git commit -m "i18n: sync external app and tool descriptions"
           git push origin "$BRANCH"
 
-          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           gh pr create \
             --base dev \
             --head "$BRANCH" \

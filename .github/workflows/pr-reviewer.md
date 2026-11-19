@@ -43,6 +43,7 @@ if: >-
     github.event.pull_request.head.ref != 'staging' &&
     github.event.pull_request.head.ref != 'dev' &&
     !startsWith(github.event.pull_request.head.ref, 'intl/') &&
+    !startsWith(github.event.pull_request.head.ref, 'i18n/') &&
     !startsWith(github.event.pull_request.head.ref, 'automated')))
 permissions:
   contents: read

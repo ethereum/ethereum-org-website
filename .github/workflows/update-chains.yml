@@ -10,8 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # The PR comes from the app, not GITHUB_TOKEN, so CI and the bot-merge gate run on it.
+      - name: Mint app token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CODE_CLIENT_ID }}
+          private-key: ${{ secrets.ETHORG_AGENT_CODE_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+          permission-pull-requests: write
+
       - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -56,6 +69,7 @@ jobs:
           echo "This workflow runs every Friday at 16:20 (UTC)." >> pr_body.txt
 
       - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           gh pr create --base dev --head "automated-update-${{ env.TIMESTAMP }}" --title "Update chains data - ${{ env.READABLE_DATE }}" --body-file pr_body.txt --label "update 🔄"
