@@ -274,12 +274,64 @@ const lanesOn = () =>
       .map((s) => s.trim())
       .filter(Boolean)
   )
-// bounty-entry.yml approves bounty PRs; these lanes are approved here.
-const GATED = new Set(["sync", "team"])
 const isGateApproval = (r) =>
   r.user.login === BOT && r.state === "APPROVED" && r.body?.startsWith(MARK)
 
-function postApproval(repo, n, sha) {
+// Per-lane extras. `check` returns what is wrong ("" = pass) and throws when it can't tell yet;
+// `alwaysApprove` lanes are approved even while their merge lane is off; `note` opens the approval.
+const LANES = {
+  bounty: {
+    label: "bug bounty leaderboard",
+    note: "Bug bounty leaderboard entry: data check passed.",
+    alwaysApprove: true,
+    check: bountyCheck,
+  },
+}
+
+// Validates the PR's merge commit with bounty-entry.sh; the PR is fetched as git data and never run.
+export function bountyCheck(repo, pr) {
+  let mergeable = pr.mergeable
+  for (let i = 0; mergeable == null && i < 6; i++) {
+    execFileSync("sleep", ["5"])
+    mergeable = api(`repos/${repo}/pulls/${pr.number}`).mergeable
+  }
+  if (mergeable == null)
+    throw new Error("GitHub hasn't computed mergeability yet; rerun")
+  if (!mergeable)
+    return "GitHub reports the PR as not mergeable. Resolve the conflicts with the base branch."
+  const git = (...a) => execFileSync("git", a, { encoding: "utf8" }).trim()
+  git(
+    "fetch",
+    "-q",
+    "--no-tags",
+    "--depth=2",
+    "origin",
+    `pull/${pr.number}/merge`
+  )
+  const merge = git("rev-parse", "FETCH_HEAD")
+  if (git("rev-parse", `${merge}^2`) !== pr.sha)
+    throw new Error(
+      `refs/pull/${pr.number}/merge is not built from the head commit yet; rerun`
+    )
+  const here = path.dirname(fileURLToPath(import.meta.url))
+  try {
+    execFileSync(
+      "bash",
+      [path.join(here, "bounty-entry.sh"), "validate", `${merge}^1`, merge],
+      { encoding: "utf8" }
+    )
+    return ""
+  } catch (e) {
+    if (e.status === 1) return String(e.stdout).trim()
+    throw e
+  }
+}
+
+function postApproval(repo, n, sha, lane, on) {
+  const note = LANES[lane]?.note
+  const merge = on
+    ? `Approved for an automatic merge after a ${DELAY}-hour waiting period. Request changes to stop it.`
+    : ""
   write([
     "-X",
     "POST",
@@ -289,22 +341,52 @@ function postApproval(repo, n, sha) {
     "-f",
     "event=APPROVE",
     "-f",
-    `body=${MARK}\nApproved for an automatic merge after a ${DELAY}-hour waiting period. Request changes to stop it.`,
+    `body=${MARK}\n${[note, merge].filter(Boolean).join(" ")}`,
   ])
   log(`#${n} approved ${sha.slice(0, 7)}`)
 }
 
+// One comment per lane check, updated in place, so contributors see what to fix.
+function reportProblem(repo, n, lane, sha, problem) {
+  const tag = `<!-- pr-gate:${lane} -->`
+  const body = `${tag}\nThe ${LANES[lane].label} check did not pass on ${sha}:\n\n\`\`\`\n${problem}\n\`\`\`\n\nPush a fix and it reruns.`
+  const old = list(`repos/${repo}/issues/${n}/comments?per_page=100`)
+    .filter((c) => c.user.login === BOT && c.body?.startsWith(tag))
+    .pop()
+  if (old)
+    write([
+      "-X",
+      "PATCH",
+      `repos/${repo}/issues/comments/${old.id}`,
+      "-f",
+      `body=${body}`,
+    ])
+  else
+    write([
+      "-X",
+      "POST",
+      `repos/${repo}/issues/${n}/comments`,
+      "-f",
+      `body=${body}`,
+    ])
+}
+
 function approve(repo, n) {
   const { pr, result } = context(repo, n)
-  const on = !!result.lane && lanesOn().has(result.lane)
-  const gated = on && GATED.has(result.lane)
+  const { lane } = result
+  const on = !!lane && lanesOn().has(lane)
+  const wanted = !!lane && (on || !!LANES[lane]?.alwaysApprove)
+  const problem =
+    wanted && LANES[lane]?.check ? LANES[lane].check(repo, pr) : ""
+  const ok = wanted && !problem
   const mine = list(`repos/${repo}/pulls/${n}/reviews?per_page=100`).filter(
     isGateApproval
   )
   log(
-    `#${n} ${result.type}: ${result.lane ? `lane ${result.lane}${on ? "" : " (off)"}` : result.reason}`
+    `#${n} ${result.type}: ${lane ? `lane ${lane}${on ? "" : " (off)"}${problem ? ", check failed" : ""}` : result.reason}`
   )
-  for (const r of mine.filter((r) => !gated || r.commit_id !== pr.sha)) {
+  if (problem) reportProblem(repo, n, lane, pr.sha, problem)
+  for (const r of mine.filter((r) => !ok || r.commit_id !== pr.sha)) {
     write([
       "-X",
       "PUT",
@@ -312,11 +394,12 @@ function approve(repo, n) {
       "-f",
       "event=DISMISS",
       "-f",
-      `message=${gated ? "A newer commit needs its own approval." : `No longer qualifies for an automatic merge: ${result.reason || "lane is off"}.`}`,
+      `message=${ok ? "A newer commit needs its own approval." : `No longer qualifies: ${problem ? `the ${LANES[lane].label} check failed` : result.reason || "lane is off"}.`}`,
     ])
   }
-  if (gated && !mine.some((r) => r.commit_id === pr.sha))
-    postApproval(repo, n, pr.sha)
+  if (ok && !mine.some((r) => r.commit_id === pr.sha))
+    postApproval(repo, n, pr.sha, lane, on)
+  if (problem) process.exitCode = 1
 }
 
 function sweep(repo) {
@@ -350,7 +433,7 @@ function sweepOne(repo, p) {
       r.state === "APPROVED" &&
       r.commit_id === p.head.sha
   )
-  // Sync PRs opened with GITHUB_TOKEN never trigger pr-gate.yml, so the sweep approves them.
+  // Sync PRs opened with GITHUB_TOKEN never trigger pr-gate.yml, so the sweep runs the gate for them.
   const syncPr = p.user.login === "github-actions[bot]"
   if (!onHead.length && !syncPr) return
   const { pr, result } = context(repo, n)
@@ -358,13 +441,9 @@ function sweepOne(repo, p) {
   if (!result.lane) return log(`#${n} skip: ${result.reason}`)
   if (!lanesOn().has(result.lane))
     return log(`#${n} skip: lane ${result.lane} is off`)
-  const approvals = GATED.has(result.lane)
-    ? onHead.filter(isGateApproval)
-    : onHead
-  if (!approvals.length) {
-    if (result.lane === "sync") postApproval(repo, n, pr.sha)
-    return
-  }
+  const approvals = onHead.filter(isGateApproval)
+  // No gate approval yet (missed event, or approved before the gate existed): run the gate; the clock starts then.
+  if (!approvals.length) return approve(repo, n)
   const approvedAt = Math.min(
     ...approvals.map((r) => Date.parse(r.submitted_at))
   )

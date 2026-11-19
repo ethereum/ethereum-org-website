@@ -1,6 +1,6 @@
 name: PR gate
 
-# Approves PRs that qualify for an automatic merge (bot-merge.yml merges them) and withdraws approvals that no longer do.
+# Approves PRs that qualify for a bot lane (incl. the bug-bounty data check) and withdraws approvals that no longer do; bot-merge.yml merges.
 on:
   pull_request_target:
     types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
@@ -23,11 +23,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      # Base branch only: the PR is read through the API and never checked out.
+      # Base branch only: the PR is read through the API or fetched as git data, never checked out or run.
       - uses: actions/checkout@v6
         with:
           sparse-checkout: |
             .github/scripts/pr-gate.mjs
+            .github/scripts/bounty-entry.sh
             .github/CODEOWNERS
           sparse-checkout-cone-mode: false
           persist-credentials: false
@@ -39,7 +40,7 @@ jobs:
           client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
           private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
           repositories: ${{ github.event.repository.name }}
-          permission-issues: read
+          permission-issues: write
           permission-pull-requests: write
 
       - name: Approve or withdraw

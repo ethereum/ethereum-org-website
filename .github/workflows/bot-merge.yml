@@ -26,6 +26,7 @@ jobs:
         with:
           sparse-checkout: |
             .github/scripts/pr-gate.mjs
+            .github/scripts/bounty-entry.sh
             .github/CODEOWNERS
           sparse-checkout-cone-mode: false
           persist-credentials: false
@@ -37,6 +38,7 @@ jobs:
           client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
           private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
           repositories: ${{ github.event.repository.name }}
+          permission-issues: write
           permission-pull-requests: write
 
       - name: Mint merge token
