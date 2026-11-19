@@ -6,17 +6,19 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function StakingPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-staking")
@@ -57,7 +59,7 @@ export default async function StakingPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-staking-hero-title"),
         description: t("page-staking-meta-description"),
-        image: "https://ethereum.org/images/upgrades/upgrade_rhino.png",
+        image: `${SITE_URL}/images/upgrades/upgrade_rhino.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
@@ -67,7 +69,7 @@ export default async function StakingPageJsonLD({
           description:
             "Guide to staking ETH, earning rewards, and securing the Ethereum network",
         },
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
       {
         "@type": "FAQPage",

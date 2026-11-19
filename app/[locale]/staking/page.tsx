@@ -10,11 +10,7 @@ import {
   ThumbsUp,
   Workflow,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, StakingStatsData } from "@/lib/types"
 
@@ -80,8 +76,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const [totalEthStaked, stakedPercentage] = await Promise.all([
     getTotalEthStakedData(),
     getStakedPercentageData(),
@@ -102,7 +96,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     apr: computeStakingApr(totalEthStaked.value),
   }
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("staking", locale as Lang)
 
   const t = await getTranslations("page-staking")
@@ -474,7 +468,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <StakingPageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
@@ -846,8 +840,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-staking")
 

@@ -4,6 +4,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
@@ -106,7 +108,7 @@ export default async function SlugJsonLD({
         headline: frontmatter.title,
         description: frontmatter.description,
         image: frontmatter.image
-          ? `https://ethereum.org${frontmatter.image}`
+          ? `${SITE_URL}${frontmatter.image}`
           : undefined,
         author: authorReferences,
         contributor: contributorList,

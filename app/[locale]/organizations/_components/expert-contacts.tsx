@@ -34,6 +34,35 @@ const EXPERTS = {
 
 type ExpertKey = keyof typeof EXPERTS
 
+export const ExpertCard = async ({
+  id,
+  sizes = "(max-width: 768px) calc(100vw - 2rem), 300px",
+}: {
+  id: ExpertKey
+  sizes?: string
+}) => {
+  const t = await getTranslations("page-organizations")
+  const { href, banner } = EXPERTS[id]
+
+  return (
+    <Card href={href} variant="ghost" size="sm">
+      <CardHeader>
+        <CardBanner size="sm">
+          <Image src={banner} alt="" sizes={sizes} />
+        </CardBanner>
+      </CardHeader>
+      <CardContent>
+        <CardTitle size="sm" asChild>
+          <h3>{t(`page-organizations-experts-${id}-name`)}</h3>
+        </CardTitle>
+        <CardParagraph size="sm">
+          {t(`page-organizations-experts-${id}-description`)}
+        </CardParagraph>
+      </CardContent>
+    </Card>
+  )
+}
+
 const ExpertContacts = async () => {
   const t = await getTranslations("page-organizations")
 
@@ -44,30 +73,9 @@ const ExpertContacts = async () => {
         description={t("page-organizations-experts-description")}
       />
       <Grid balanced={4} data-flow="cta" className="text-start">
-        {(Object.keys(EXPERTS) as ExpertKey[]).map((key) => {
-          const { href, banner } = EXPERTS[key]
-          return (
-            <Card key={key} href={href} variant="ghost" size="sm">
-              <CardHeader>
-                <CardBanner size="sm">
-                  <Image
-                    src={banner}
-                    alt=""
-                    sizes="(max-width: 768px) calc(100vw - 2rem), 300px"
-                  />
-                </CardBanner>
-              </CardHeader>
-              <CardContent>
-                <CardTitle size="sm" asChild>
-                  <h3>{t(`page-organizations-experts-${key}-name`)}</h3>
-                </CardTitle>
-                <CardParagraph size="sm">
-                  {t(`page-organizations-experts-${key}-description`)}
-                </CardParagraph>
-              </CardContent>
-            </Card>
-          )
-        })}
+        {(Object.keys(EXPERTS) as ExpertKey[]).map((key) => (
+          <ExpertCard key={key} id={key} />
+        ))}
       </Grid>
     </Section>
   )
