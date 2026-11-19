@@ -48,7 +48,7 @@ There are several light clients in development, including execution, consensus a
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): light mode for execution client (in development) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): consensus light client in Nim
 - [Myotis](https://github.com/biafra23/myotis): experimental light client using p2p and SNAP, originally built for Android
-- [Nethermind](https://www.nethermind.io/): experimental light client using p2p and SNAP
+- [Nethermind](https://github.com/NethermindEth/nethermind/pull/14457): experimental light client using p2p and SNAP
 
 To our knowledge, only colibri and helios are considered production-ready yet.
 
