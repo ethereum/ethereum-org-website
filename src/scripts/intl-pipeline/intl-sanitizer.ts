@@ -2276,7 +2276,7 @@ function normalizeFrontmatterDates(content: string): {
  * frontmatter spec:
  *   TRANSLATE: title, description, breadcrumb
  *   COPY FROM ENGLISH: uploadDate, duration, educationLevel, youtubeId,
- *     format, topic
+ *     tweetId, format, topic
  *   FROM PATH: lang (handled by fixFrontmatterLang)
  *   author follows the existing per-locale rule (transliterated for
  *     non-Latin locales, copied from English otherwise).
@@ -2318,6 +2318,7 @@ function syncProtectedFrontmatterFields(
     "duration",
     "educationLevel",
     "youtubeId",
+    "tweetId",
     "format",
   ]
   let fixCount = 0

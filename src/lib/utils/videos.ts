@@ -97,7 +97,8 @@ export async function getVideoData(
 /**
  * Convert VideoData to a flat VideoCardData suitable for client components.
  * Thumbnails are served from S3 (populated by the fetchVideoThumbnails task,
- * which handles both YouTube and customThumbnailUrl sources).
+ * which handles both YouTube and customThumbnailUrl sources), falling back to
+ * the source URL until the task has picked up a new video.
  */
 function toVideoCardData(
   data: VideoData,
@@ -111,7 +112,12 @@ function toVideoCardData(
     uploadDate: fm.uploadDate,
     duration: fm.duration,
     topic: fm.topic,
-    thumbnailUrl: thumbnailMap?.[slug] || "",
+    thumbnailUrl:
+      thumbnailMap?.[slug] ||
+      fm.customThumbnailUrl ||
+      (fm.youtubeId
+        ? `https://img.youtube.com/vi/${fm.youtubeId}/hqdefault.jpg`
+        : ""),
   }
 }
 

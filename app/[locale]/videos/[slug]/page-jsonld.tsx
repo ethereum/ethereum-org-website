@@ -33,6 +33,19 @@ export default async function VideoPageJsonLD({
 
   const videoObjectId = { "@id": `${url}#video` }
 
+  const { youtubeId, tweetId } = frontmatter
+  const videoUrls = youtubeId
+    ? {
+        embedUrl: `https://www.youtube.com/embed/${youtubeId}`,
+        contentUrl: `https://www.youtube.com/watch?v=${youtubeId}`,
+      }
+    : tweetId
+      ? {
+          embedUrl: `https://platform.twitter.com/embed/Tweet.html?id=${tweetId}`,
+          contentUrl: `https://x.com/i/status/${tweetId}`,
+        }
+      : {}
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -68,9 +81,8 @@ export default async function VideoPageJsonLD({
         isPartOf: { "@id": videoGalleryUrl },
         thumbnailUrl:
           frontmatter.customThumbnailUrl ||
-          `https://img.youtube.com/vi/${frontmatter.youtubeId}/hqdefault.jpg`,
-        embedUrl: `https://www.youtube.com/embed/${frontmatter.youtubeId}`,
-        contentUrl: `https://www.youtube.com/watch?v=${frontmatter.youtubeId}`,
+          `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`,
+        ...videoUrls,
         educationalLevel: frontmatter.educationLevel,
         inLanguage: frontmatter.lang,
         creator,
