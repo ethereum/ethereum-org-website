@@ -30,56 +30,35 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
   const contentRoot = getContentRoot()
   const _dir = join(contentRoot, dir)
 
-  try {
-    // Get an array of all files and directories in the passed directory using `fs.readdirSync`
-    const dirContents = await fsp.readdir(_dir)
+  const dirContents = await fsp.readdir(_dir)
 
-    const files: string[] = []
+  const files: string[] = []
 
-    // Create the full path of the file/directory by concatenating the passed directory and file/directory name
-    for (const fileOrDir of dirContents) {
-      // file = "about", "bridges".... "translations" (<-- skip that one)...
-      const path = join(_dir, fileOrDir)
+  for (const fileOrDir of dirContents) {
+    const path = join(_dir, fileOrDir)
 
-      const stats = await fsp.stat(path)
-      if (stats.isDirectory()) {
-        // Skip nested translations directory
-        if (fileOrDir === "translations") continue
-        // Skip videos directory — video pages have their own dedicated route
-        if (fileOrDir === "videos") continue
-        // If it is a directory, recursively call the `getPostSlugs` function with the
-        // directory path and the files array
-        const nestedDir = join(dir, fileOrDir)
+    const stats = await fsp.stat(path)
+    if (stats.isDirectory()) {
+      if (fileOrDir === "translations") continue
+      // Video pages have their own dedicated route
+      if (fileOrDir === "videos") continue
 
-        const nestedFiles = await getPostSlugs(nestedDir, filterRegex)
-        files.push(...nestedFiles)
-        continue
-      }
-
-      if (filterRegex?.test(path)) continue
-
-      // If the current file is not a markdown file, skip it
-      if (extname(path) !== ".md") continue
-
-      const sanitizedPath = toPosixPath(
-        path.replace(contentRoot, "").replace("/index.md", "")
-      )
-
-      files.push(sanitizedPath)
+      const nestedFiles = await getPostSlugs(join(dir, fileOrDir), filterRegex)
+      files.push(...nestedFiles)
+      continue
     }
 
-    return files
-  } catch (error) {
-    // If directory doesn't exist (e.g., in Netlify serverless environment), return empty array
-    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
-      console.warn(
-        `Content directory ${_dir} not found, returning empty slug list`
-      )
-      return []
-    }
-    // Re-throw other errors
-    throw error
+    if (filterRegex?.test(path)) continue
+    if (extname(path) !== ".md") continue
+
+    const sanitizedPath = toPosixPath(
+      path.replace(contentRoot, "").replace("/index.md", "")
+    )
+
+    files.push(sanitizedPath)
   }
+
+  return files
 }
 
 /**
@@ -101,7 +80,10 @@ const getContentListData = async <T>(
   ) => T,
   label: string
 ): Promise<T[]> => {
-  const contentRoot = join(process.cwd(), "public/content")
+  const contentRoot = getContentRoot()
+  // Throw rather than return [] when the collection wasn't traced into the
+  // server function, so a broken ISR regeneration keeps the last good page.
+  await fsp.access(join(contentRoot, contentDir))
 
   const promises = slugs.map(async (slug) => {
     try {
@@ -237,26 +219,15 @@ export const getBlogPostsData = async (locale: string): Promise<BlogPost[]> => {
 
 /**
  * Lists the story slugs under public/content/stories/, skipping the
- * `translations` directory the intl pipeline writes into. Returns an empty
- * array when the directory doesn't exist yet.
+ * `translations` directory the intl pipeline writes into.
  */
 export const getStorySlugs = async (): Promise<string[]> => {
   const storiesRoot = join(getContentRoot(), "stories")
 
-  try {
-    const entries = await fsp.readdir(storiesRoot, { withFileTypes: true })
-    return entries
-      .filter((entry) => entry.isDirectory() && entry.name !== "translations")
-      .map((entry) => entry.name)
-  } catch (error) {
-    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
-      console.warn(
-        `Content directory ${storiesRoot} not found, returning empty story list`
-      )
-      return []
-    }
-    throw error
-  }
+  const entries = await fsp.readdir(storiesRoot, { withFileTypes: true })
+  return entries
+    .filter((entry) => entry.isDirectory() && entry.name !== "translations")
+    .map((entry) => entry.name)
 }
 
 /**

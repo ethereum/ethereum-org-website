@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -20,7 +20,7 @@ import {
   toToolCard,
   withCategories,
 } from "@/lib/utils/developerToolsData"
-import { getMetadata } from "@/lib/utils/metadata"
+import { getMetadata, truncateDescription } from "@/lib/utils/metadata"
 
 import CropsNativeTag from "../_components/CropsNativeTag"
 import ToolCard from "../_components/ToolCard"
@@ -39,7 +39,6 @@ type ToolPageParams = PageParams & { tool: string }
 
 const Page = async (props: { params: Promise<ToolPageParams> }) => {
   const { locale, tool: toolKey } = await props.params
-  setRequestLocale(locale)
 
   const [data, { contributors }, t, tItem, toolDescriptions] =
     await Promise.all([
@@ -156,8 +155,6 @@ export async function generateMetadata(props: {
 }) {
   const { locale, tool: toolKey } = await props.params
 
-  setRequestLocale(locale)
-
   const [normalized, toolDescriptions] = await Promise.all([
     normalizeDeveloperToolsData(await getDeveloperToolsData()),
     getTranslations({
@@ -177,7 +174,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["developers", "tools", toolKey],
     title: tool.name,
-    description: (tool.descriptionStripped ?? "").slice(0, 160),
+    description: truncateDescription(tool.descriptionStripped ?? ""),
   })
 }
 

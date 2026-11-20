@@ -14,6 +14,26 @@ function expectLocalized(value: string | undefined) {
   expect(value).not.toMatch(I18N_KEY)
 }
 
+async function expectNoRawKeysOnPage(page: Page) {
+  const strings = await page.evaluate(() => {
+    const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT
+    )
+    const out: string[] = []
+    while (walker.nextNode()) {
+      const node = walker.currentNode
+      if (!node.parentElement?.closest("script, style, code, pre"))
+        out.push(node.textContent?.trim() ?? "")
+    }
+    document
+      .querySelectorAll("[aria-label]")
+      .forEach((el) => out.push(el.getAttribute("aria-label")!.trim()))
+    return out
+  })
+  expect(strings.filter((s) => I18N_KEY.test(s))).toEqual([])
+}
+
 async function getJsonLdNode(page: Page, path: string, type: string) {
   await page.goto(path)
 
@@ -27,6 +47,7 @@ async function getJsonLdNode(page: Page, path: string, type: string) {
 
   const node = nodes.find(({ "@type": nodeType }) => nodeType === type)
   expect(node, `${type} JSON-LD node on ${path}`).toBeDefined()
+  await expectNoRawKeysOnPage(page)
 
   return node!
 }

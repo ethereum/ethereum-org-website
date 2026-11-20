@@ -35,7 +35,8 @@ const SEARCH_TRACKING_DEBOUNCE_MS = 1200
 export type FilterableCatalogLabels = {
   searchPlaceholder: string
   resultsLabel: string
-  noResults: string
+  /** Empty-state title; the empty state renders only when this is provided. */
+  noResults?: string
   /** Second line of the empty state. */
   noResultsDesc?: string
   /** Empty-state reset button; the button renders only when this is provided. */
@@ -389,7 +390,7 @@ export default function FilterableCatalog<TItem>({
           >
             {renderResults(filteredItems)}
           </div>
-          {filteredItems.length === 0 && (
+          {filteredItems.length === 0 && labels.noResults && (
             <div className="flex flex-col items-center gap-3 rounded-xl border p-8 text-center text-body-medium">
               <p className="m-0 font-bold text-body">{labels.noResults}</p>
               {labels.noResultsDesc && (
