@@ -7,7 +7,7 @@ import * as TabsPrimitive from "@radix-ui/react-tabs"
 import type { Lang } from "@/lib/types"
 
 import LanguagePicker from "@/components/LanguagePicker"
-import { SheetFooter, SheetHeader } from "@/components/ui/sheet"
+import { SheetFooter } from "@/components/ui/sheet"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
@@ -31,60 +31,56 @@ export default function MobileMenuContent() {
   const isRtl = isLangRightToLeft(locale as Lang)
   const dir = isRtl ? "rtl" : "ltr"
 
+  // Each tab renders the header: the navigation tab swaps in Back and the section title
   return (
-    <>
-      <SheetHeader>
-        <MenuHeader />
-      </SheetHeader>
-
-      <TabsPrimitive.Root
-        dir={dir}
-        defaultValue="navigation"
-        className="flex min-h-0 flex-1 flex-col"
+    <TabsPrimitive.Root
+      dir={dir}
+      defaultValue="navigation"
+      className="flex min-h-0 flex-1 flex-col"
+    >
+      <TabsPrimitive.Content
+        value="navigation"
+        className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
       >
-        <TabsPrimitive.Content
-          value="navigation"
-          className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
-        >
-          <DrillDownNav className="min-h-0 flex-1 overflow-y-auto" />
-        </TabsPrimitive.Content>
-        <TabsPrimitive.Content
-          value="languages"
-          className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
-        >
-          <LanguageContent className="flex min-h-0 flex-1 flex-col" />
-        </TabsPrimitive.Content>
+        <DrillDownNav className="min-h-0 flex-1 overflow-y-auto" />
+      </TabsPrimitive.Content>
+      <TabsPrimitive.Content
+        value="languages"
+        className="mt-0 hidden min-h-0 flex-1 flex-col border-none p-0 data-[state=active]:flex"
+      >
+        <MenuHeader />
+        <LanguageContent className="flex min-h-0 flex-1 flex-col" />
+      </TabsPrimitive.Content>
 
-        <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
-          <TabsPrimitive.List className="grid h-auto w-full grid-cols-3">
-            <div className="flex flex-col items-center gap-1 py-2">
-              <TabsPrimitive.Trigger value="languages" asChild>
-                <FooterButton
-                  icon={Languages}
-                  name={MOBILE_LANGUAGE_BUTTON_NAME}
-                  data-testid="mobile-menu-language-picker"
-                >
-                  <FooterItemText>{t("languages")}</FooterItemText>
-                </FooterButton>
-              </TabsPrimitive.Trigger>
-            </div>
-            <div className="flex flex-col items-center gap-1 py-2">
-              <ThemeToggleFooterButton />
-            </div>
-            <div className="flex flex-col items-center gap-1 py-2">
-              <TabsPrimitive.Trigger value="navigation" asChild>
-                <FooterButton
-                  icon={Menu}
-                  data-testid="mobile-menu-navigation-picker"
-                >
-                  <FooterItemText>{t("menu")}</FooterItemText>
-                </FooterButton>
-              </TabsPrimitive.Trigger>
-            </div>
-          </TabsPrimitive.List>
-        </SheetFooter>
-      </TabsPrimitive.Root>
-    </>
+      <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
+        <TabsPrimitive.List className="grid h-auto w-full grid-cols-3">
+          <div className="flex flex-col items-center gap-1 py-2">
+            <TabsPrimitive.Trigger value="languages" asChild>
+              <FooterButton
+                icon={Languages}
+                name={MOBILE_LANGUAGE_BUTTON_NAME}
+                data-testid="mobile-menu-language-picker"
+              >
+                <FooterItemText>{t("languages")}</FooterItemText>
+              </FooterButton>
+            </TabsPrimitive.Trigger>
+          </div>
+          <div className="flex flex-col items-center gap-1 py-2">
+            <ThemeToggleFooterButton />
+          </div>
+          <div className="flex flex-col items-center gap-1 py-2">
+            <TabsPrimitive.Trigger value="navigation" asChild>
+              <FooterButton
+                icon={Menu}
+                data-testid="mobile-menu-navigation-picker"
+              >
+                <FooterItemText>{t("menu")}</FooterItemText>
+              </FooterButton>
+            </TabsPrimitive.Trigger>
+          </div>
+        </TabsPrimitive.List>
+      </SheetFooter>
+    </TabsPrimitive.Root>
   )
 }
 

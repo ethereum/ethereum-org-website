@@ -4,7 +4,7 @@ import { useRef, useState } from "react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
-import { ChevronNext, ChevronPrev } from "@/components/Chevron"
+import { ChevronNext } from "@/components/Chevron"
 import { ArrowNext } from "@/components/ui/arrow"
 import { Button } from "@/components/ui/buttons/Button"
 import { BaseLink } from "@/components/ui/Link"
@@ -18,6 +18,8 @@ import { SECTION_LABELS } from "@/lib/constants"
 import { FeaturedCard, GroupHeading, HubCard } from "../Menu/MenuPanel"
 import type { NavSectionKey } from "../types"
 import { NAV_SECTION_ICONS, useNavigation } from "../useNavigation"
+
+import MenuHeader from "./MenuHeader"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { usePathname } from "@/i18n/navigation"
@@ -86,43 +88,36 @@ const DrillDownNav = ({ className }: { className?: string }) => {
   const section = activeKey ? linkSections[activeKey] : null
 
   return (
-    <nav
-      ref={scrollRef}
-      aria-label={t("nav-primary")}
-      className={cn("relative overflow-x-hidden", className)}
-    >
-      <AnimatePresence initial={false} mode="popLayout" custom={view.direction}>
-        <motion.div
-          key={activeKey ?? "root"}
+    <>
+      {activeKey && section ? (
+        <MenuHeader title={section.label} onBack={() => go(null)} />
+      ) : (
+        <MenuHeader />
+      )}
+      <nav
+        ref={scrollRef}
+        aria-label={t("nav-primary")}
+        className={cn("relative overflow-x-hidden", className)}
+      >
+        <AnimatePresence
+          initial={false}
+          mode="popLayout"
           custom={view.direction}
-          variants={slide}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={
-            reduceMotion
-              ? { duration: 0 }
-              : { type: "tween", ease: "easeOut", duration: 0.25 }
-          }
         >
-          {activeKey && section ? (
-            <div>
-              <div className="sticky top-0 z-10 flex items-center border-b border-body-light bg-background px-2 py-2">
-                <Button
-                  variant="ghost"
-                  className="gap-1 px-3"
-                  onClick={() => go(null)}
-                  data-testid="mobile-menu-back"
-                  autoFocus
-                >
-                  <ChevronPrev className="size-5" aria-hidden />
-                  {t("nav-back")}
-                </Button>
-                <p className="ms-auto pe-4 text-sm font-bold tracking-wider text-body-medium uppercase">
-                  {section.label}
-                </p>
-              </div>
-
+          <motion.div
+            key={activeKey ?? "root"}
+            custom={view.direction}
+            variants={slide}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={
+              reduceMotion
+                ? { duration: 0 }
+                : { type: "tween", ease: "easeOut", duration: 0.25 }
+            }
+          >
+            {activeKey && section ? (
               <div className="space-y-8 px-6 py-6">
                 <div className="grid gap-3">
                   <HubCard
@@ -177,82 +172,76 @@ const DrillDownNav = ({ className }: { className?: string }) => {
                   )
                 })}
               </div>
-            </div>
-          ) : (
-            <ul className="m-0 list-none border-b border-body-light">
-              {SECTION_LABELS.map((key) => {
-                const { label, hub, linkOnly } = linkSections[key]
-                const Icon = NAV_SECTION_ICONS[key]
-                const isCurrent = currentSection === key
-                const content = (
-                  <>
-                    <span
-                      className={cn(
-                        "flex size-10 shrink-0 items-center justify-center rounded-lg",
-                        isCurrent
-                          ? "bg-primary text-background"
-                          : "bg-primary-low-contrast text-primary"
+            ) : (
+              <ul className="m-0 list-none">
+                {SECTION_LABELS.map((key) => {
+                  const { label, hub, linkOnly } = linkSections[key]
+                  const Icon = NAV_SECTION_ICONS[key]
+                  const isCurrent = currentSection === key
+                  const content = (
+                    <>
+                      <Icon
+                        className="size-6 shrink-0 text-primary"
+                        aria-hidden
+                      />
+                      <span className="flex-1">
+                        <span
+                          className={cn(
+                            "block text-lg leading-snug font-bold",
+                            isCurrent && "text-primary"
+                          )}
+                        >
+                          {label}
+                        </span>
+                        <span className="block text-sm leading-snug font-normal text-body-medium">
+                          {hub.description}
+                        </span>
+                      </span>
+                      {linkOnly ? (
+                        <ArrowNext
+                          className="size-5 shrink-0 text-body-medium"
+                          aria-hidden
+                        />
+                      ) : (
+                        <ChevronNext
+                          className="size-5 shrink-0 text-body-medium"
+                          aria-hidden
+                        />
                       )}
-                    >
-                      <Icon className="size-5" aria-hidden />
-                    </span>
-                    <span className="flex-1">
-                      <span
-                        className={cn(
-                          "block text-lg leading-snug font-bold",
-                          isCurrent && "text-primary"
-                        )}
-                      >
-                        {label}
-                      </span>
-                      <span className="block text-sm leading-snug font-normal text-body-medium">
-                        {hub.description}
-                      </span>
-                    </span>
-                    {linkOnly ? (
-                      <ArrowNext
-                        className="size-5 shrink-0 text-body-medium"
-                        aria-hidden
-                      />
-                    ) : (
-                      <ChevronNext
-                        className="size-5 shrink-0 text-body-medium"
-                        aria-hidden
-                      />
-                    )}
-                  </>
-                )
+                    </>
+                  )
 
-                return (
-                  <li key={key} className="mb-0 border-t border-body-light">
-                    {linkOnly ? (
-                      <BaseLink
-                        href={hub.href}
-                        activeClassName=""
-                        customEventOptions={track(key)(hub.href)}
-                        className={rowClasses}
-                      >
-                        {content}
-                      </BaseLink>
-                    ) : (
-                      <Button
-                        variant="ghost"
-                        className={rowClasses}
-                        onClick={() => go(key)}
-                        autoFocus={view.from === key}
-                        data-testid={`mobile-menu-section-${key}`}
-                      >
-                        {content}
-                      </Button>
-                    )}
-                  </li>
-                )
-              })}
-            </ul>
-          )}
-        </motion.div>
-      </AnimatePresence>
-    </nav>
+                  return (
+                    <li key={key} className="mb-0 border-b border-body-light">
+                      {linkOnly ? (
+                        <BaseLink
+                          href={hub.href}
+                          activeClassName=""
+                          customEventOptions={track(key)(hub.href)}
+                          className={rowClasses}
+                        >
+                          {content}
+                        </BaseLink>
+                      ) : (
+                        <Button
+                          variant="ghost"
+                          className={rowClasses}
+                          onClick={() => go(key)}
+                          autoFocus={view.from === key}
+                          data-testid={`mobile-menu-section-${key}`}
+                        >
+                          {content}
+                        </Button>
+                      )}
+                    </li>
+                  )
+                })}
+              </ul>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </nav>
+    </>
   )
 }
 

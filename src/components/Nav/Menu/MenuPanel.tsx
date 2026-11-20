@@ -87,7 +87,7 @@ export const FeaturedCard = ({
     {...props}
   >
     <CardContent className="space-y-1">
-      <Eyebrow className="text-xs">{featured.eyebrow}</Eyebrow>
+      <Eyebrow>{featured.eyebrow}</Eyebrow>
       <CardTitle asChild size="sm" spacing="none">
         <span className="font-bold">{featured.label}</span>
       </CardTitle>
@@ -98,7 +98,7 @@ export const FeaturedCard = ({
 
 // Block-level flex for both variants: an inline-flex link would sit on the parent's taller line box
 const headingClasses =
-  "flex w-fit items-center gap-1 text-xs font-bold tracking-wider text-body-medium uppercase"
+  "flex w-fit items-center gap-1 text-sm font-bold tracking-wider text-body-medium uppercase"
 
 type GroupHeadingProps = {
   group: NavGroup
@@ -184,11 +184,15 @@ const MenuPanel = ({
         )}
       </div>
 
-      <div className="grid flex-1 grid-cols-2 gap-x-8 gap-y-6 lg:auto-cols-fr lg:grid-flow-col lg:grid-cols-none">
+      {/* Headings share a subgrid row, so one that wraps doesn't push its list below the others */}
+      <div className="grid flex-1 grid-cols-2 gap-x-8 gap-y-6 lg:auto-cols-fr lg:grid-flow-col lg:grid-cols-none lg:grid-rows-[auto_1fr] lg:gap-y-3">
         {section.groups.map((group) => {
           const headingId = `nav-${group.id.replace("/", "-")}`
           return (
-            <div key={group.id} className="min-w-0">
+            <div
+              key={group.id}
+              className="min-w-0 lg:row-span-2 lg:grid lg:grid-rows-subgrid lg:items-start"
+            >
               {group.href ? (
                 <NavigationMenuLink asChild active={isActive(group.href)}>
                   <GroupHeading
@@ -206,7 +210,7 @@ const MenuPanel = ({
               )}
               <ul
                 aria-labelledby={headingId}
-                className="m-0 mt-3 list-none space-y-0.5"
+                className="m-0 mt-3 list-none space-y-0.5 lg:mt-0"
               >
                 {group.items.map(renderLink)}
               </ul>

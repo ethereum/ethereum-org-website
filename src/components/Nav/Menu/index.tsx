@@ -153,12 +153,13 @@ const Menu = (props: NavMenuProps) => {
           })}
         </List>
 
-        {/* Positioned against the sticky nav bar, aligned with its padding */}
-        <div className="pointer-events-none absolute inset-x-0 top-full px-4 pt-2 xl:px-8">
+        {/* Positioned against the sticky nav bar, aligned with its padding. The gap
+            is the viewport's margin: an empty padded box here showed as a white strip. */}
+        <div className="pointer-events-none absolute inset-x-0 top-full px-4 xl:px-8">
           <Viewport
             {...viewportProps}
             className={cn(
-              "pointer-events-auto relative h-(--radix-navigation-menu-viewport-height) w-full max-w-6xl origin-top overflow-hidden",
+              "pointer-events-auto relative mt-2 h-(--radix-navigation-menu-viewport-height) w-full max-w-6xl origin-top overflow-hidden",
               "rounded-base border bg-background text-body shadow-lg",
               "transition-[height] duration-300 ease-out motion-reduce:transition-none",
               "motion-safe:data-[state=closed]:animate-nav-panel-out motion-safe:data-[state=open]:animate-nav-panel-in"

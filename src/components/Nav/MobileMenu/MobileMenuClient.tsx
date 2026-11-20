@@ -28,21 +28,26 @@ const MobileMenuContent = React.lazy(lazyImport)
 function MobileMenuContentSkeleton() {
   return (
     <div className="flex flex-1 flex-col">
-      {/* Header */}
-      <div className="flex items-center justify-between p-6">
+      {/* Header: site title and Close */}
+      <div className="flex h-19 shrink-0 items-center justify-between border-b border-body-light px-6">
         <Skeleton className="h-5 w-32" />
         <Skeleton className="h-5 w-12" />
       </div>
 
-      {/* Nav sections (one collapsible row per section) */}
+      {/* Sections: icon, label and description, chevron */}
       <div className="flex-1">
         {Array.from({ length: SECTION_LABELS.length }).map((_, i) => (
           <div
             key={i}
-            className="flex items-center gap-2 border-b border-body-light px-4 py-4 first:border-t"
+            className="flex items-center gap-4 border-b border-body-light px-6 py-4"
           >
-            <Skeleton className="h-4 w-4" />
-            <Skeleton className="h-5 w-36" />
+            <Skeleton className="size-6 shrink-0" />
+            <div className="flex-1 space-y-2">
+              <Skeleton className="h-5 w-28" />
+              <Skeleton className="h-3.5 w-full" />
+              <Skeleton className="h-3.5 w-2/3" />
+            </div>
+            <Skeleton className="size-5 shrink-0" />
           </div>
         ))}
       </div>

@@ -1,10 +1,13 @@
 import type {
+  NavFeatured,
   NavLink,
   NavSectionKey,
   NavSections,
 } from "@/components/Nav/types"
 
 import { getBreadcrumbTrail } from "@/lib/utils/breadcrumbs"
+
+import { getUpgrade, hasActivated } from "@/data/upgrades"
 
 type TranslateFn = (key: string) => string
 
@@ -33,17 +36,68 @@ export const getNavSectionForPath = (path: string): NavSectionKey | null => {
   return entry ? (entry[0] as NavSectionKey) : null
 }
 
-/** Every link a section renders: hub, featured slot, group headings, items */
+/** Every destination a section links to: hub, featured slot, group headings, items */
 export const getNavSectionLinks = (
   section: NavSections[NavSectionKey]
-): NavLink[] => [
-  section.hub,
-  ...(section.featured ? [section.featured] : []),
-  ...section.groups.flatMap((group) => [
+): NavLink[] => {
+  const groupLinks = section.groups.flatMap((group) => [
     ...(group.href ? [{ label: group.label, href: group.href }] : []),
     ...group.items,
-  ]),
+  ])
+  // The featured card may spotlight a page its groups already list
+  const { featured } = section
+  const isListed = groupLinks.some(({ href }) => href === featured?.href)
+  return [
+    section.hub,
+    ...(featured && !isListed ? [featured] : []),
+    ...groupLinks,
+  ]
+}
+
+/**
+ * Upgrade pages, oldest first. The first one Forkcast doesn't show as live becomes
+ * the next-upgrade card, so a fork shipping needs no edit; upcoming ones need a description.
+ */
+export const NAV_UPGRADES: {
+  labelKey: string
+  href: string
+  slug?: string
+  descriptionKey?: string
+}[] = [
+  { labelKey: "beacon-chain", href: "/roadmap/beacon-chain/" },
+  { labelKey: "merge", href: "/roadmap/merge/", slug: "the-merge" },
+  { labelKey: "dencun", href: "/roadmap/dencun/", slug: "dencun" },
+  { labelKey: "pectra", href: "/roadmap/pectra/", slug: "pectra" },
+  { labelKey: "fusaka", href: "/roadmap/fusaka/", slug: "fusaka" },
+  {
+    labelKey: "glamsterdam",
+    href: "/roadmap/glamsterdam/",
+    slug: "glamsterdam",
+    descriptionKey: "nav-glamsterdam-description",
+  },
+  {
+    labelKey: "hegota",
+    href: "/roadmap/hegota/",
+    slug: "hegota",
+    descriptionKey: "nav-hegota-description",
+  },
 ]
+
+const isUpcoming = (slug?: string) => {
+  const upgrade = slug ? getUpgrade(slug) : null
+  return !!upgrade && !hasActivated(upgrade)
+}
+
+const nextUpgradeCard = (t: TranslateFn): NavFeatured | undefined => {
+  const next = NAV_UPGRADES.find(({ slug }) => isUpcoming(slug))
+  if (!next?.descriptionKey) return undefined
+  return {
+    eyebrow: t("nav-eyebrow-next-upgrade"),
+    label: t(next.labelKey),
+    description: t(next.descriptionKey),
+    href: next.href,
+  }
+}
 
 // Item order within a group follows 90-day pageviews unless a reading order
 // (basics, upgrades by date) reads better.
@@ -266,12 +320,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => ({
       description: t("nav-roadmap-description"),
       href: "/roadmap/",
     },
-    featured: {
-      eyebrow: t("nav-eyebrow-next-upgrade"),
-      label: t("glamsterdam"),
-      description: t("nav-glamsterdam-description"),
-      href: "/roadmap/glamsterdam/",
-    },
+    featured: nextUpgradeCard(t),
     groups: [
       {
         id: "roadmap/goals",
@@ -303,12 +352,9 @@ export const buildNavigation = (t: TranslateFn): NavSections => ({
         id: "roadmap/upgrades",
         label: t("nav-upgrades-label"),
         items: [
-          { label: t("hegota"), href: "/roadmap/hegota/" },
-          { label: t("fusaka"), href: "/roadmap/fusaka/" },
-          { label: t("pectra"), href: "/roadmap/pectra/" },
-          { label: t("dencun"), href: "/roadmap/dencun/" },
-          { label: t("merge"), href: "/roadmap/merge/" },
-          { label: t("beacon-chain"), href: "/roadmap/beacon-chain/" },
+          ...[...NAV_UPGRADES]
+            .reverse()
+            .map(({ labelKey, href }) => ({ label: t(labelKey), href })),
           { label: t("ethereum-forks"), href: "/ethereum-forks/" },
         ],
       },
@@ -368,12 +414,8 @@ export const buildNavigation = (t: TranslateFn): NavSections => ({
       {
         id: "community/contributing",
         label: t("nav-join-ethereum-org-label"),
-        href: "/contributing/",
         items: [
-          {
-            label: t("translation-program"),
-            href: "/contributing/translation-program/",
-          },
+          { label: t("contributing"), href: "/contributing/" },
           { label: t("nav-collectibles-label"), href: "/collectibles/" },
         ],
       },

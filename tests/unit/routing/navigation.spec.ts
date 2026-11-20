@@ -3,11 +3,14 @@ import path from "path"
 
 import { expect, test } from "@playwright/test"
 
+import { getUpgrade, hasActivated } from "@/data/upgrades"
+
 import common from "@/intl/en/common.json"
 import {
   buildNavigation,
   getNavSectionForPath,
   getNavSectionLinks,
+  NAV_UPGRADES,
 } from "@/lib/nav/buildNavigation"
 
 const messages = common as Record<string, string>
@@ -58,6 +61,17 @@ test.describe("main navigation", () => {
       .flatMap(getNavSectionLinks)
       .map(({ href }) => href)
     expect(hrefs.filter((href, i) => hrefs.indexOf(href) !== i)).toEqual([])
+  })
+
+  // The card moves on when Forkcast's sync marks a fork live, with no edit here
+  test("each upcoming upgrade can fill the next-upgrade card", () => {
+    for (const { slug, descriptionKey } of NAV_UPGRADES) {
+      if (!slug) continue
+      const upgrade = getUpgrade(slug)
+      expect(upgrade, `${slug} is in the Forkcast store`).not.toBeNull()
+      if (upgrade && !hasActivated(upgrade))
+        expect(!!descriptionKey && descriptionKey in messages, slug).toBe(true)
+    }
   })
 
   test("each internal link resolves to a page", () => {
