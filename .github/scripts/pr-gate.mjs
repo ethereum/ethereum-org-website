@@ -474,12 +474,14 @@ function sweepOne(repo, p) {
   if (problem) return log(`#${n} skip: ${problem}`)
   if (process.env.DRY_RUN !== "false")
     return log(`#${n} would merge ${pr.sha.slice(0, 7)} (dry run)`)
+  // --admin skips gh's own "blocked" check so the merge reaches GitHub, where the ruleset bypass applies.
   gh(
     [
       "pr",
       "merge",
       String(n),
       "--merge",
+      "--admin",
       "--match-head-commit",
       pr.sha,
       "-R",
