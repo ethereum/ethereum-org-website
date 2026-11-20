@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 530" font-family="monospace" font-size="12">
+  <style>
+    text { fill: #1a1a2e; }
+    .title { font-weight: bold; font-size: 16px; }
+    .head { font-weight: bold; font-size: 13px; }
+    .note { font-size: 11px; fill: #5a5a6a; }
+    .err { fill: #b42318; }
+    .ok { fill: #0f6b38; font-weight: bold; }
+    .box { fill: #ffffff; stroke: #1a1a2e; stroke-width: 1.5; }
+    .group { fill: #eef3fd; stroke: #1a1a2e; stroke-width: 1.5; }
+    .row { fill: #ffffff; stroke: #8a8aa0; stroke-width: 1; }
+    .pass { fill: #e3f4e9; stroke: #0f6b38; stroke-width: 1.5; }
+    .flow { stroke: #1a1a2e; stroke-width: 1.5; fill: none; }
+    .fail { stroke: #b42318; stroke-width: 1.2; fill: none; stroke-dasharray: 4,3; }
+  </style>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1a1a2e"/>
+    </marker>
+    <marker id="arrow-fail" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#b42318"/>
+    </marker>
+  </defs>
+
+  <!-- Opaque background so the diagram is legible in both light and dark mode -->
+  <rect x="0" y="0" width="760" height="530" rx="8" fill="#ffffff"/>
+
+  <text x="380" y="32" text-anchor="middle" class="title">What an ERC-7943 token checks on a transfer</text>
+  <text x="380" y="52" text-anchor="middle" class="note">A public transfer MUST NOT succeed if any of these checks fails</text>
+
+  <!-- Entry point -->
+  <rect class="box" x="40" y="72" width="380" height="40" rx="4"/>
+  <text x="230" y="97" text-anchor="middle">transfer / transferFrom / safeTransferFrom</text>
+  <line class="flow" x1="230" y1="112" x2="230" y2="138" marker-end="url(#arrow)"/>
+
+  <!-- canTransfer group -->
+  <rect class="group" x="40" y="140" width="380" height="204" rx="6"/>
+  <text x="230" y="163" text-anchor="middle" class="head">canTransfer(from, to, amount)</text>
+  <text x="230" y="180" text-anchor="middle" class="note">MUST cover all of the following</text>
+
+  <text x="482" y="163" class="head">if false: revert *</text>
+
+  <rect class="row" x="56" y="192" width="348" height="30" rx="3"/>
+  <text x="68" y="212">canSend(from)</text>
+  <line class="fail" x1="404" y1="207" x2="472" y2="207" marker-end="url(#arrow-fail)"/>
+  <text x="482" y="211" class="err">ERC7943CannotSend</text>
+
+  <rect class="row" x="56" y="230" width="348" height="30" rx="3"/>
+  <text x="68" y="250">canReceive(to)</text>
+  <line class="fail" x1="404" y1="245" x2="472" y2="245" marker-end="url(#arrow-fail)"/>
+  <text x="482" y="249" class="err">ERC7943CannotReceive</text>
+
+  <rect class="row" x="56" y="268" width="348" height="30" rx="3"/>
+  <text x="68" y="288">amount ≤ balanceOf − getFrozenTokens</text>
+  <line class="fail" x1="404" y1="283" x2="472" y2="283" marker-end="url(#arrow-fail)"/>
+  <text x="482" y="287" class="err">ERC7943InsufficientUnfrozenBalance</text>
+
+  <rect class="row" x="56" y="306" width="348" height="30" rx="3"/>
+  <text x="68" y="326">other rules (pause, limits, …)</text>
+  <line class="fail" x1="404" y1="321" x2="472" y2="321" marker-end="url(#arrow-fail)"/>
+  <text x="482" y="325" class="err">ERC7943CannotTransfer</text>
+
+  <line class="flow" x1="230" y1="344" x2="230" y2="370" marker-end="url(#arrow)"/>
+  <text x="240" y="362" class="note">true</text>
+
+  <!-- Base token checks -->
+  <rect class="box" x="40" y="372" width="380" height="50" rx="4"/>
+  <text x="230" y="393" text-anchor="middle">base token checks: balance, allowance</text>
+  <text x="230" y="410" text-anchor="middle" class="note">not part of canTransfer</text>
+  <line class="fail" x1="420" y1="397" x2="472" y2="397" marker-end="url(#arrow-fail)"/>
+  <text x="482" y="401" class="err">base standard error</text>
+  <text x="482" y="417" class="note">e.g. ERC20InsufficientBalance</text>
+
+  <line class="flow" x1="230" y1="422" x2="230" y2="448" marker-end="url(#arrow)"/>
+
+  <!-- Success -->
+  <rect class="pass" x="40" y="450" width="380" height="36" rx="4"/>
+  <text x="230" y="473" text-anchor="middle" class="ok">Transfer event, balances move</text>
+
+  <text x="40" y="514" class="note">* Suggested errors. Implementations MAY use more specific errors instead.</text>
+</svg>
