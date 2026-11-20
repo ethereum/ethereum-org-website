@@ -5,7 +5,9 @@ import { getTranslations } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 
 import CatalogDetailModal from "@/components/CatalogDetailModal"
-import DetailRow from "@/components/CatalogDetailModal/DetailRow"
+import DetailRow, {
+  SupportedValue,
+} from "@/components/CatalogDetailModal/DetailRow"
 import FullDetailsLink from "@/components/CatalogDetailModal/FullDetailsLink"
 import { CatalogItemLinks } from "@/components/CatalogItem"
 import CatalogItemDescription from "@/components/CatalogItem/Description"
@@ -22,7 +24,6 @@ import {
   withCategories,
 } from "@/lib/utils/developerToolsData"
 
-import CropsNativeTag from "./CropsNativeTag"
 import ToolLinkRows from "./ToolLinkRows"
 
 import { getPathname } from "@/i18n/navigation"
@@ -94,21 +95,9 @@ const InterceptedToolDetail = async ({
 
         <div className="flex flex-col gap-2">
           <DetailRow label={t("page-developers-tools-modal-category")}>
-            <div className="flex flex-wrap gap-2">
-              <Tag size="small" status="tag">
-                {labels.categoryLabels[tool.categoryId] || tool.categoryId}
-              </Tag>
-              {tool.crops_native && (
-                <CropsNativeTag
-                  size="small"
-                  label={t("page-developers-tools-crops-native")}
-                  description={t(
-                    "page-developers-tools-crops-native-description"
-                  )}
-                  infoLabel={t("page-developers-tools-crops-native-info-label")}
-                />
-              )}
-            </div>
+            <Tag size="small" status="tag">
+              {labels.categoryLabels[tool.categoryId] || tool.categoryId}
+            </Tag>
           </DetailRow>
 
           {item.infoRows.map(({ label, value }) => (
@@ -116,6 +105,15 @@ const InterceptedToolDetail = async ({
               <span className="font-bold text-body">{value}</span>
             </DetailRow>
           ))}
+
+          {tool.crops_native && (
+            <DetailRow
+              label={t("page-developers-tools-crops-native")}
+              tooltip={t("page-developers-tools-crops-native-description")}
+            >
+              <SupportedValue supported label={tCommon("yes")} />
+            </DetailRow>
+          )}
 
           {tool.tags.length > 0 && (
             <DetailRow label={t("page-developers-tools-modal-tags")} roomyLabel>
