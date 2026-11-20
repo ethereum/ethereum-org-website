@@ -517,6 +517,8 @@ If you plan on querying an onchain oracle for asset prices, consider using one t
 
 - **[Inference](https://inference.ag/)** - _Security auditing company, specialized in smart contract auditing for EVM-based blockchains. Thanks to its expert auditors they identify potential issues and suggest actionable solutions to fix them before deployment._
 
+- **[Zealynx Security](https://www.zealynx.io/)** - _Smart contract security firm with [public audit reports](https://www.zealynx.io/audits)._
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
