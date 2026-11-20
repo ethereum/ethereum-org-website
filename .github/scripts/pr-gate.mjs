@@ -52,8 +52,8 @@ export const TEAM_TYPES = {
   "content-fix": { tiers: ["team", "ef"], lanes: ["content", "translation"] },
   data: { tiers: ["team"], lanes: ["data"] },
 }
-// Never bot-merged in lane C whatever the type: root files, dot-folders and non-content public files (redirects, headers).
-const DENY = /^[^/]+$|^\.|^public\/(?!content\/|images\/)/
+// Never bot-merged in lane C whatever the type: root files, dot-folders, Netlify functions and non-content public files.
+const DENY = /^[^/]+$|^\.|^netlify\/|^public\/(?!content\/|images\/)/
 
 export function laneOfPath(f) {
   if (/^public\/content\/translations\/|^src\/intl\/(?!en\/)/.test(f))
@@ -68,9 +68,11 @@ export function laneOfPath(f) {
 }
 
 export function tierOf(login, isBot, authors) {
+  const has = (list) =>
+    list?.some((l) => l.toLowerCase() === login.toLowerCase())
   if (isBot || AUTOMATION.has(login)) return "bot"
-  if (authors.team?.includes(login)) return "team"
-  if (authors.ef?.includes(login)) return "ef"
+  if (has(authors.team)) return "team"
+  if (has(authors.ef)) return "ef"
   return "other"
 }
 
@@ -168,13 +170,20 @@ export function parseReview(bodies) {
   return null
 }
 
+// Throws rather than returning [], so a reworded CODEOWNERS line can't silently switch the bounty lane off.
 export function bountyOwners(codeowners) {
-  const line = codeowners
+  const fields = codeowners
     .split("\n")
-    .find((l) => l.startsWith("/src/data/*-bounty-hunters.json "))
-  return (line?.split(/\s+/).slice(1) ?? [])
+    .map((l) => l.trim().split(/\s+/))
+    .find(([pattern]) => pattern === "/src/data/*-bounty-hunters.json")
+  const owners = (fields?.slice(1) ?? [])
     .filter((o) => o.startsWith("@"))
     .map((o) => o.slice(1).toLowerCase())
+  if (!owners.length)
+    throw new Error(
+      "No owners for /src/data/*-bounty-hunters.json in CODEOWNERS"
+    )
+  return owners
 }
 
 // A reviewer's latest decisive review counts; comments don't change it.
@@ -329,9 +338,11 @@ export function bountyCheck(repo, pr) {
 
 function postApproval(repo, n, sha, lane, on) {
   const note = LANES[lane]?.note
-  const merge = on
-    ? `Approved for an automatic merge after a ${DELAY}-hour waiting period. Request changes to stop it.`
-    : ""
+  const merge = !on
+    ? ""
+    : process.env.DRY_RUN === "false"
+      ? `Approved for an automatic merge after a ${DELAY}-hour waiting period. Request changes to stop it.`
+      : "Automatic merging is in a trial run, so a person still merges this."
   write([
     "-X",
     "POST",

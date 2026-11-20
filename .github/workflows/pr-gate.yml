@@ -51,4 +51,5 @@ jobs:
           BOT_MERGE_LANES: ${{ vars.BOT_MERGE_LANES }}
           BOT_MERGE_AUTHORS: ${{ vars.BOT_MERGE_AUTHORS }}
           BOT_MERGE_DELAY_HOURS: ${{ vars.BOT_MERGE_DELAY_HOURS }}
+          DRY_RUN: ${{ vars.BOT_MERGE_DRY_RUN != 'false' }}
         run: node .github/scripts/pr-gate.mjs approve "$PR"

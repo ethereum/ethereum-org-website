@@ -93,6 +93,7 @@ test("prType matches the Maintenance Desk buckets", () => {
 test("lane C: small, clean PRs from trusted authors", () => {
   expect(evaluate(pr(), ctx()).lane).toBe("team")
   expect(evaluate(pr({ author: "minimalsm" }), ctx()).lane).toBe("team")
+  expect(evaluate(pr({ author: "KonopkJA" }), ctx()).lane).toBe("team")
   const code = {
     files: ["src/components/Foo.tsx"],
     additions: 50,
@@ -119,6 +120,9 @@ test("lane C refuses everything else", () => {
   )
   expect(no({ files: ["public/_redirects"] })).toContain("public/_redirects")
   expect(no({ files: ["redirects.config.js"] })).toBeTruthy()
+  expect(
+    no({ files: ["netlify/edge-functions/matomo-ai-tracker/index.ts"] })
+  ).toContain("netlify/edge-functions")
   expect(no({}, { review: null })).toBe("no AI review")
   expect(no({}, { review: review({ sha: "b".repeat(40) }) })).toContain(
     "newest commit"
@@ -255,6 +259,10 @@ test("helpers", () => {
   expect(
     bountyOwners("* @a\n/src/data/*-bounty-hunters.json @Fred @0xMushow\n")
   ).toEqual(["fred", "0xmushow"])
+  expect(
+    bountyOwners("/src/data/*-bounty-hunters.json\t@Fred  @0xMushow\n")
+  ).toEqual(["fred", "0xmushow"])
+  expect(() => bountyOwners("* @a\n")).toThrow("No owners")
   const r = (login: string, state: string) => ({ user: { login }, state })
   expect(
     changesRequested([r("a", "CHANGES_REQUESTED"), r("a", "COMMENTED")])
