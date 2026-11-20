@@ -147,6 +147,16 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Pay in crypto
     - Direct support & Technical support
 
+- [**BlockVectra**](https://blockvectra.com/)
+  - [Docs](https://docs.blockvectra.com/)
+  - Features
+    - Multichain JSON-RPC and an indexed Data API
+    - Ethereum mainnet, Sepolia, Arbitrum One and Base
+    - Free public endpoints with no API key, rate limited per IP ([list](https://docs.blockvectra.com/en/chains/))
+    - Public per-method pricing ([pricing](https://blockvectra.com/en/pricing/))
+    - Free credits on sign-up
+    - Pay as you go in USDT / USDC
+
 - [**Chainbase**](https://www.chainbase.com/)
   - [Docs](https://docs.chainbase.com)
   - Features
