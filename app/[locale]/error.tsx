@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import * as Sentry from "@sentry/nextjs"
 
 import RefreshCW from "@/components/icons/refresh-cw.svg"
 import MainArticle from "@/components/MainArticle"
@@ -10,6 +9,8 @@ import { Button } from "@/components/ui/buttons/Button"
 import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+
+import { captureException } from "@/lib/sentry/client"
 
 export default function Error({ error }: { error: Error; reset: () => void }) {
   const [refreshing, setRefreshing] = useState(false)
@@ -24,7 +25,7 @@ export default function Error({ error }: { error: Error; reset: () => void }) {
   }, [])
 
   useEffect(() => {
-    Sentry.captureException(error)
+    captureException(error)
   }, [error])
 
   return (
