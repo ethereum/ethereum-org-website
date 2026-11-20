@@ -330,6 +330,14 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Free tier option
     - Scale as you go
 
+- [**RouteMesh**](https://routeme.sh/)
+  - [Docs](https://routeme.sh/docs/intro/quick-start)
+  - Features
+    - Managed JSON-RPC routing across multiple Ethereum upstream providers, with [automatic failover](https://routeme.sh/docs/intro/ethereum-rpc-failover)
+    - [Pay-as-you-go Ethereum Mainnet access](https://routeme.sh/chain/evm/1-ethereum-mainnet) priced per request in USD by RPC method, with no compute units or minimum commitment
+    - [Economy and Performance routing](https://routeme.sh/docs/intro/routing-strategies) for lower cost or lower latency over the same endpoint
+    - [WebSocket subscriptions](https://routeme.sh/docs/intro/websockets) with upstream failover while the client connection remains open
+
 - [**SenseiNode**](https://senseinode.com)
   - [Docs](https://docs.senseinode.com/)
   - Features
