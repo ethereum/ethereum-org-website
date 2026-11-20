@@ -76,6 +76,12 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 
 To get started, follow the [HyperIndex quickstart](https://docs.envio.dev/docs/HyperIndex/quickstart) to create, deploy, and query an indexer.
 
+## ClearTrace {#cleartrace}
+
+[ClearTrace](https://cleartracedata.com) is a free, independent benchmark of DEX aggregator execution quality measured from onchain data. It publishes realized slippage, user-only revert rates (bot retries filtered out), MEV sandwich exposure, and cross-frontend attribution of unlabeled DEX volume across Ethereum, Base, Arbitrum, and Optimism, with a published methodology. Developers can use the REST API (no key required, CORS enabled) or the open dataset (CSV, citable DOI).
+
+To get started, visit the [documentation](https://cleartracedata.com/docs) or explore the [live dashboard](https://cleartracedata.com/app).
+
 ## Further Reading {#further-reading}
 
 - [Exploring Crypto Data I: Data Flow Architectures](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
