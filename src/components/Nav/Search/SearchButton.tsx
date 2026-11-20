@@ -3,9 +3,9 @@ import { Search } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { DocSearchButton } from "typesense-docsearch-react"
 
-import { cn } from "@/lib/utils/cn"
+import { Button, type ButtonProps } from "@/components/ui/buttons/Button"
 
-import { Button, type ButtonProps } from "../ui/buttons/Button"
+import { cn } from "@/lib/utils/cn"
 
 export type SearchButtonProps = ButtonProps & {
   /**
