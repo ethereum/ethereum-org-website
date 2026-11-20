@@ -10,7 +10,8 @@ let evaluate: Mod["evaluate"],
   bountyOwners: Mod["bountyOwners"],
   changesRequested: Mod["changesRequested"],
   checksProblem: Mod["checksProblem"],
-  delayHours: Mod["delayHours"]
+  delayHours: Mod["delayHours"],
+  failureComment: Mod["failureComment"]
 
 test.beforeAll(async () => {
   ;({
@@ -21,6 +22,7 @@ test.beforeAll(async () => {
     changesRequested,
     checksProblem,
     delayHours,
+    failureComment,
   } = await import(
     pathToFileURL(path.resolve(__dirname, "../../.github/scripts/pr-gate.mjs"))
       .href
@@ -287,4 +289,22 @@ test("helpers", () => {
   expect(delayHours("6")).toBe(6)
   expect(delayHours("24h")).toBe(24)
   expect(delayHours("-1")).toBe(24)
+})
+
+test("bounty failure comment explains removals need a person", () => {
+  const removed = failureComment(
+    "bounty",
+    SHA,
+    "src/data/consensus-bounty-hunters.json: entry removed: Evgeny Legerov (quasar)"
+  )
+  expect(removed.startsWith("<!-- pr-gate:bounty -->")).toBe(true)
+  expect(removed).toContain("a maintainer will review and merge it by hand")
+  expect(removed).toContain("If it wasn't intended, push a fix")
+  const format = failureComment(
+    "bounty",
+    SHA,
+    'src/data/consensus-bounty-hunters.json: {"name":"x"}: needs exactly the keys name, username, score'
+  )
+  expect(format).not.toContain("by hand")
+  expect(format).toContain("Push a fix and it reruns.")
 })

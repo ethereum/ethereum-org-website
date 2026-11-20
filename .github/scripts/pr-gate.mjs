@@ -287,14 +287,33 @@ const isGateApproval = (r) =>
   r.user.login === BOT && r.state === "APPROVED" && r.body?.startsWith(MARK)
 
 // Per-lane extras. `check` returns what is wrong ("" = pass) and throws when it can't tell yet;
-// `alwaysApprove` lanes are approved even while their merge lane is off; `note` opens the approval.
+// `alwaysApprove` lanes are approved even while their merge lane is off; `note` opens the approval;
+// `hint` adds guidance to the failure comment.
 const LANES = {
   bounty: {
     label: "bug bounty leaderboard",
     note: "Bug bounty leaderboard entry: data check passed.",
     alwaysApprove: true,
     check: bountyCheck,
+    hint: (problem) =>
+      /: (entry removed|score lowered):/.test(problem)
+        ? "Removing an entry or lowering a score never passes this check, even when it's intended (for example, a hunter moving to a new GitHub account). If that's the case, say so in the PR description and a maintainer will review and merge it by hand."
+        : "",
   },
+}
+
+export function failureComment(lane, sha, problem) {
+  const hint = LANES[lane]?.hint?.(problem) || ""
+  return [
+    `<!-- pr-gate:${lane} -->`,
+    `The ${LANES[lane].label} check did not pass on ${sha}:\n\n\`\`\`\n${problem}\n\`\`\``,
+    hint,
+    hint
+      ? "If it wasn't intended, push a fix and it reruns."
+      : "Push a fix and it reruns.",
+  ]
+    .filter(Boolean)
+    .join("\n\n")
 }
 
 // Validates the PR's merge commit with bounty-entry.sh; the PR is fetched as git data and never run.
@@ -360,7 +379,7 @@ function postApproval(repo, n, sha, lane, on) {
 // One comment per lane check, updated in place, so contributors see what to fix.
 function reportProblem(repo, n, lane, sha, problem) {
   const tag = `<!-- pr-gate:${lane} -->`
-  const body = `${tag}\nThe ${LANES[lane].label} check did not pass on ${sha}:\n\n\`\`\`\n${problem}\n\`\`\`\n\nPush a fix and it reruns.`
+  const body = failureComment(lane, sha, problem)
   const old = list(`repos/${repo}/issues/${n}/comments?per_page=100`)
     .filter((c) => c.user.login === BOT && c.body?.startsWith(tag))
     .pop()
