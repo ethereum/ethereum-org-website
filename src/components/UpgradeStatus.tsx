@@ -2,6 +2,8 @@ import { getTranslations } from "next-intl/server"
 
 import type { TranslationKey } from "@/lib/types"
 
+import { Alert } from "@/components/ui/alert"
+
 import { cn } from "@/lib/utils/cn"
 
 export type UpgradeStatusProps = {
@@ -23,10 +25,16 @@ const UpgradeStatus = async ({
   const whenKey = split[split.length - 1]
 
   return (
-    <aside
+    <Alert
+      role="complementary"
+      variant={isShipped ? "success" : "update"}
+      // The card keeps its own look: a flat tinted panel with no border,
+      // not the alert's bordered row. Overrides go last so they win.
       className={cn(
-        "flow w-full rounded-base p-6 shadow-2xl",
-        isShipped ? "bg-tint-success" : "bg-tint-accent-a"
+        "flow w-full flex-col items-stretch gap-0 rounded-base border-0 p-6 text-body shadow-2xl",
+        isShipped
+          ? "!bg-transparent !bg-tint-success"
+          : "!bg-transparent !bg-tint-accent-a"
       )}
     >
       <h2 className="text-sm font-normal uppercase">
@@ -34,7 +42,7 @@ const UpgradeStatus = async ({
       </h2>
       <p className="text-h2 font-bold">{t(whenKey)}</p>
       <p>{children}</p>
-    </aside>
+    </Alert>
   )
 }
 
