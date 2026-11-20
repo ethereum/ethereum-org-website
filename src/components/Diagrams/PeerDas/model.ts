@@ -15,8 +15,8 @@
  * - p2p-interface.md: DATA_COLUMN_SIDECAR_SUBNET_COUNT = 128, subnet =
  *   column_index % 128 (so column n is gossiped on subnet n, 0-127);
  *   supernodes custody every column.
- * - validator.md: VALIDATOR_CUSTODY_REQUIREMENT = 8, plus one group per
- *   BALANCE_PER_ADDITIONAL_CUSTODY_GROUP (32 ETH), so 4096 ETH means all 128.
+ * - validator.md: one group per BALANCE_PER_ADDITIONAL_CUSTODY_GROUP (32 ETH),
+ *   min VALIDATOR_CUSTODY_REQUIREMENT = 8, max 128, so 4096 ETH means all 128.
  * Peer sampling (asking random peers for random columns) was removed from
  * Fulu in consensus-specs #4393; sampling is custody sampling.
  */

@@ -1,6 +1,6 @@
 "use client"
 
-import { memo, type PointerEvent, type ReactNode, useMemo } from "react"
+import { memo, type PointerEvent, type ReactNode, useMemo, useRef } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -75,8 +75,9 @@ function ErasureRig({
 }: ErasureRigProps) {
   const { state, dimmed } = usePartState(view.litPart)
   const format = useDiagramFormat()
-  const { yMin, yMax } = view
   const yOf = yIn(view)
+  // The axis rescales as values change; a drag keeps the scale it started on.
+  const dragScale = useRef(view)
   const zeroY = yOf(0)
 
   const part = (name: ErasurePart) => ({
@@ -132,6 +133,7 @@ function ErasureRig({
     if (!svg) return
     const rect = svg.getBoundingClientRect()
     const y = ((event.clientY - rect.top) / rect.height) * H
+    const { yMin, yMax } = dragScale.current
     const value =
       yMin + ((PLOT_BOTTOM - y) / (PLOT_BOTTOM - PLOT_TOP)) * (yMax - yMin)
     const next = Math.min(VALUE_MAX, Math.max(VALUE_MIN, Math.round(value)))
@@ -287,6 +289,7 @@ function ErasureRig({
                 style={{ fill: "transparent" }}
                 className="cursor-ns-resize touch-none"
                 onPointerDown={(event) => {
+                  dragScale.current = view
                   event.currentTarget.setPointerCapture(event.pointerId)
                 }}
                 onPointerMove={(event) => {
