@@ -365,17 +365,6 @@
       "expiresAt": "2026-12-01T03:22:52.974Z"
     },
     {
-      "file": "src/intl/en/component-diagrams.json",
-      "locale": "ja",
-      "englishHash": "5379d9feab09",
-      "class": "gate",
-      "reason": "[gate] src/intl/ja/component-diagrams.json: 6 check(s) failed -- structure json-placeholder: attestations-delay: en={count,delay} tr={delay}; structure json-placeholder: validator-keys-step-deposit: en={amount,count,n,prefix,step} tr={amount,count,prefix,step}; structure json-placeholder: validator-",
-      "attempts": 1,
-      "firstSeen": "2026-11-17T08:20:42.459Z",
-      "lastSeen": "2026-11-17T08:20:42.459Z",
-      "expiresAt": "2026-12-01T08:20:42.459Z"
-    },
-    {
       "file": "src/intl/en/page-developers-tools-descriptions.json",
       "locale": "ar",
       "englishHash": "be5bf65b8dc0",

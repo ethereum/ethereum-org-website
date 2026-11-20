@@ -38,9 +38,9 @@ Ukuran saksi bervariasi tergantung pada jumlah daun yang disertakannya. Dengan a
 
 ## Apa struktur dari pohon Verkle? {#what-is-the-structure-of-a-verkle-tree}
 
-Pohon Verkle adalah pasangan `(key,value)` di mana kuncinya adalah elemen 32-byte yang terdiri dari _batang_ 31-byte dan _akhiran_ byte tunggal. Kunci-kunci ini diatur ke dalam node _ekstensi_ dan node _dalam_. Node ekstensi mewakili satu batang untuk 256 anak dengan akhiran yang berbeda. Node dalam juga memiliki 256 anak, tetapi mereka bisa berupa node ekstensi lainnya. Perbedaan utama antara struktur pohon Verkle dan pohon Merkle adalah bahwa pohon Verkle jauh lebih datar, yang berarti ada lebih sedikit node perantara yang menghubungkan daun ke akar, dan oleh karena itu lebih sedikit data yang diperlukan untuk menghasilkan bukti.
+Pohon Verkle adalah pasangan `(key,value)` di mana kuncinya adalah elemen 32-byte yang terdiri dari _stem_ 31-byte dan _suffix_ satu byte. Kunci-kunci ini diatur ke dalam node _extension_ dan node _inner_. Node _extension_ mewakili satu _stem_ untuk 256 anak dengan _suffix_ yang berbeda. Node _inner_ juga memiliki 256 anak, tetapi mereka bisa berupa node _extension_ lainnya. Perbedaan utama antara struktur pohon Verkle dan pohon Merkle adalah bahwa pohon Verkle jauh lebih datar, yang berarti ada lebih sedikit node perantara yang menghubungkan daun ke akar, dan oleh karena itu lebih sedikit data yang diperlukan untuk menghasilkan bukti.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Baca lebih lanjut tentang struktur pohon Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

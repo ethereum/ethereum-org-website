@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Přečtěte si o PeerDAS jako součásti aktualizace protokolu Ethereum Fusaka
+description: "Přečtěte si o PeerDAS jako součásti aktualizace protokolu Ethereum Fusaka"
 lang: cs
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -41,29 +41,29 @@ DAS je mechanismus, který na tom staví a zajišťuje, že data jsou správná 
 
 ## PeerDAS {#peer-das-2}
 
-[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) je konkrétní návrh, který implementuje mechanismus DAS v Ethereu, což představuje pravděpodobně největší aktualizaci od Merge. PeerDAS je navržen tak, aby rozšířil data blobů, rozdělil je do sloupců a distribuoval jejich podmnožinu uzlům.
+[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) je konkrétní návrh, který implementuje mechanismus vzorkování dostupnosti dat (DAS) v Ethereu, což představuje pravděpodobně největší aktualizaci od Merge. PeerDAS je navržen tak, aby rozšiřoval data blobů, rozděloval je do sloupců a distribuoval jejich podmnožinu uzlům.
 
-Ethereum si k dosažení tohoto cíle vypůjčuje chytrou matematiku: aplikuje na data blobů výmazové kódování ve stylu Reed-Solomon. Data blobů jsou reprezentována jako polynom, jehož koeficienty kódují data, a poté se tento polynom vyhodnotí v dalších bodech, čímž se vytvoří rozšířený blob a zdvojnásobí se počet vyhodnocení. Tato přidaná redundance umožňuje obnovu po výmazu: i když některá vyhodnocení chybí, původní blob lze zrekonstruovat, pokud je k dispozici alespoň polovina celkových dat, včetně rozšířených částí.
+Ethereum si k dosažení tohoto cíle vypůjčuje chytrou matematiku: aplikuje na data blobů výmazové kódování ve stylu Reed-Solomon. Data blobů jsou reprezentována jako polynom, jehož koeficienty kódují data, a následně se tento polynom vyhodnotí v dalších bodech, čímž se vytvoří rozšířený blob a zdvojnásobí se počet vyhodnocení. Tato přidaná redundance umožňuje obnovu po výmazu: i když některá vyhodnocení chybí, původní blob lze zrekonstruovat, pokud je k dispozici alespoň polovina celkových dat, včetně rozšířených částí.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
-Ve skutečnosti má tento polynom tisíce koeficientů. Závazky KZG jsou hodnoty o velikosti několika bajtů, něco jako hash, známé všem uzlům. Každý uzel, který drží dostatek datových bodů, může [efektivně zrekonstruovat celou sadu dat blobů](https://arxiv.org/abs/2207.11079). 
+Ve skutečnosti má tento polynom tisíce koeficientů. Závazky KZG jsou hodnoty o velikosti několika bajtů, něco jako hash, které znají všechny uzly. Každý uzel, který drží dostatek datových bodů, může [efektivně zrekonstruovat celou sadu dat blobů](https://arxiv.org/abs/2207.11079). 
 
-> Zajímavost: stejnou techniku kódování používala DVD. Pokud jste poškrábali DVD, přehrávač jej byl stále schopen přečíst díky kódování Reed-Solomon, které doplňuje chybějící části polynomu. 
+> Zajímavost: stejná technika kódování se používala u DVD. Pokud jste DVD poškrábali, přehrávač jej stále dokázal přečíst díky kódování Reed-Solomon, které doplňuje chybějící části polynomu. 
 
-Historicky byla data v blockchainech, ať už bloky nebo bloby, vysílána všem uzlům. S přístupem rozdělení a vzorkování v PeerDAS již není nutné vysílat všechno všem. Po aktualizaci Fusaka je síťování vrstvy konsensu organizováno do témat/podsítí gossip protokolu: sloupce blobů jsou přiřazeny konkrétním podsítím a každý uzel se přihlásí k odběru předem určených podmnožin a uchovává pouze tyto části.
+Historicky se data v blockchainech, ať už bloky nebo bloby, vysílala všem uzlům. S přístupem rozdělení a vzorkování (split-and-sample) v PeerDAS již není nutné vysílat všechno všem. Po aktualizaci Fusaka je síťování vrstvy konsensu organizováno do gossip témat/podsítí: sloupce blobů jsou přiřazeny konkrétním podsítím a každý uzel se přihlásí k odběru předem určených podmnožin a uchovává pouze tyto části.
 
-S PeerDAS jsou rozšířená data blobů rozdělena na 128 částí zvaných sloupce. Data jsou těmto uzlům distribuována prostřednictvím vyhrazeného gossip protokolu na konkrétních podsítích, k jejichž odběru jsou přihlášeny. Každý běžný uzel v síti se účastní alespoň 8 náhodně vybraných sloupcových podsítí. Příjem dat pouze z 8 ze 128 podsítí znamená, že tento výchozí uzel přijímá pouze 1/16 všech dat, ale protože data byla rozšířena, jedná se o 1/8 původních dat. 
+S PeerDAS jsou rozšířená data blobů rozdělena na 128 částí zvaných sloupce. Data jsou těmto uzlům distribuována prostřednictvím vyhrazeného gossip protokolu ve specifických podsítích, k jejichž odběru jsou přihlášeny. Každý běžný uzel v síti se účastní alespoň 8 náhodně vybraných sloupcových podsítí. Přijímání dat pouze z 8 ze 128 podsítí znamená, že tento výchozí uzel přijímá pouze 1/16 všech dat, ale protože data byla rozšířena, jedná se o 1/8 původních dat. 
 
-To umožňuje nový teoretický limit škálování, který je 8x vyšší než současné schéma „každý stahuje všechno“. Vzhledem k tomu, že se uzly přihlašují k různým náhodným podsítím obsluhujícím sloupce blobů, je velmi vysoká pravděpodobnost, že jsou rovnoměrně rozloženy, a proto každá část dat někde v síti existuje. Uzly provozující validátory se musí přihlásit k odběru více podsítí s každým validátorem, kterého provozují.
+To umožňuje nový teoretický limit škálování, který je 8x vyšší než současné schéma „všichni stahují všechno“. Vzhledem k tomu, že se uzly přihlašují k odběru různých náhodných podsítí obsluhujících sloupce blobů, je velmi vysoká pravděpodobnost, že jsou rovnoměrně distribuovány, a proto každá část dat existuje někde v síti. Uzly provozující validátory se musí přihlásit k odběru více podsítí s každým validátorem, kterého provozují.
 
-> Každý uzel má jedinečné náhodně vygenerované ID, které normálně slouží jako jeho veřejná identita pro připojení. V PeerDAS se toto číslo používá k určení náhodné sady podsítí, k jejichž odběru se musí přihlásit, což vede k rovnoměrnému náhodnému rozdělení všech dat blobů.
+> Každý uzel má jedinečné náhodně vygenerované ID, které normálně slouží jako jeho veřejná identita pro připojení. V PeerDAS se toto číslo používá k určení náhodné sady podsítí, k jejichž odběru se musí přihlásit, což vede k rovnoměrné náhodné distribuci všech dat blobů.
 
 Jakmile uzel úspěšně zrekonstruuje původní data, redistribuuje obnovené sloupce zpět do sítě, čímž aktivně zaceluje jakékoli mezery v datech a zvyšuje celkovou odolnost systému. Uzly připojené k validátorům s kombinovaným zůstatkem ≥ 4096 ETH musí být superuzlem, a proto se musí přihlásit k odběru všech podsítí datových sloupců a uchovávat všechny sloupce. Tyto superuzly budou neustále zacelovat mezery v datech. Pravděpodobnostní samoopravná povaha protokolu umožňuje silné záruky dostupnosti, aniž by omezovala domácí provozovatele, kteří drží pouze části dat. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-Dostupnost dat může potvrdit jakýkoli uzel, který drží pouze malou podmnožinu dat blobů, díky výše popsanému mechanismu vzorkování. Tato dostupnost je vynucována: validátory se musí řídit novými pravidly pro výběr forku (fork-choice rules), což znamená, že budou přijímat a dávat hlas blokům až poté, co ověří dostupnost dat.
+Dostupnost dat může potvrdit jakýkoli uzel, který drží pouze malou podmnožinu dat blobů, a to díky výše popsanému mechanismu vzorkování. Tato dostupnost je vynucována: validátory se musí řídit novými pravidly pro výběr forku, což znamená, že budou přijímat bloky a hlasovat pro ně až poté, co ověří dostupnost dat.
 
 Přímým dopadem na uživatele (zejména uživatele vrstvy 2 (l2)) jsou nižší poplatky. S 8x větším prostorem pro data rollupů se uživatelské operace na jejich řetězci postupem času stávají ještě levnějšími. Nižší poplatky po aktualizaci Fusaka však budou vyžadovat čas a budou záviset na BPO.
 
