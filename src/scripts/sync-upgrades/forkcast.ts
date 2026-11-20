@@ -180,8 +180,15 @@ export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
     )
   }
 
+  // Stop at the array's closing bracket: upgrades.ts declares other record arrays (bpoUpgrades) after it.
+  const end = source.indexOf("\n]", start)
+  if (end === -1) {
+    throw new ForkcastSyncError(
+      "networkUpgrades array end not found in upgrades.ts"
+    )
+  }
   const blocks = source
-    .slice(start)
+    .slice(start, end)
     .split(/\n {2}\{\n/)
     .slice(1)
   if (!blocks.length) {
