@@ -58,7 +58,15 @@ const quizzes = {
   },
   merge: {
     title: "learn-quizzes:page-assets-merge",
-    questions: ["merge-1", "merge-2", "merge-3", "merge-4", "merge-5"],
+    questions: [
+      "merge-1",
+      "merge-2",
+      "merge-3",
+      "merge-4",
+      "merge-5",
+      "merge-6",
+      "merge-7",
+    ],
   },
   gas: {
     title: "gas",
