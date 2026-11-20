@@ -57,12 +57,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { createPageTracking } from "@/lib/utils/pageTracking"
+
+import VideoWatch from "../../_components/VideoWatch"
 
 import PageJsonLD from "./page-jsonld"
 

@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import WindowBox from "."
 
 const meta = {
-  title: "Components / WindowBox",
+  title: "Pages / Community Support / WindowBox",
   component: WindowBox,
   tags: ["autodocs"],
   parameters: {

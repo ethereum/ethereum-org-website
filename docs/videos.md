@@ -25,17 +25,17 @@ Every video `index.md` requires the following YAML frontmatter:
 title: "Video Title"
 description: "A brief summary of the video content."
 lang: en
-youtubeId: "dQw4w9WgXcQ"        # YouTube video ID
-uploadDate: 2025-01-15           # YYYY-MM-DD format
-duration: "1:08:42"              # H:MM:SS or M:SS format
-educationLevel: intermediate     # beginner | intermediate | advanced
-topic:                           # Array of tags (used for gallery filtering)
+youtubeId: "dQw4w9WgXcQ" # YouTube video ID
+uploadDate: 2025-01-15 # YYYY-MM-DD format
+duration: "1:08:42" # H:MM:SS or M:SS format
+educationLevel: intermediate # beginner | intermediate | advanced
+topic: # Array of tags (used for gallery filtering)
   - "scaling"
   - "layer-2"
-format: interview                # presentation | explainer | interview | tutorial | panel
-author: Channel Name             # Creator/channel attribution
-breadcrumb: "Short Label"        # Optional — custom breadcrumb label
-customThumbnailUrl: "https://..."  # Optional — falls back to YouTube default
+format: interview # presentation | explainer | interview | tutorial | panel
+author: Channel Name # Creator/channel attribution
+breadcrumb: "Short Label" # Optional — custom breadcrumb label
+customThumbnailUrl: "https://..." # Optional — falls back to YouTube default
 ---
 ```
 
@@ -43,12 +43,12 @@ The markdown body below the frontmatter is the **transcript**. It is rendered in
 
 ### Type Definitions
 
-| Type | File | Purpose |
-|---|---|---|
-| `VideoFrontmatter` | `src/lib/interfaces.ts` | Frontmatter shape (extends `SharedFrontmatter`) |
-| `VideoData` | `src/lib/types.ts` | Full parsed video: `{ slug, content, frontmatter }` |
-| `VideoCardData` | `src/lib/types.ts` | Flat serializable data for client gallery component |
-| `VideoFormat` | `src/lib/types.ts` | Union: `"presentation" \| "explainer" \| "interview" \| "tutorial" \| "panel"` |
+| Type               | File                    | Purpose                                                                        |
+| ------------------ | ----------------------- | ------------------------------------------------------------------------------ |
+| `VideoFrontmatter` | `src/lib/interfaces.ts` | Frontmatter shape (extends `SharedFrontmatter`)                                |
+| `VideoData`        | `src/lib/types.ts`      | Full parsed video: `{ slug, content, frontmatter }`                            |
+| `VideoCardData`    | `src/lib/types.ts`      | Flat serializable data for client gallery component                            |
+| `VideoFormat`      | `src/lib/types.ts`      | Union: `"presentation" \| "explainer" \| "interview" \| "tutorial" \| "panel"` |
 
 ## Pages
 
@@ -96,7 +96,7 @@ Each category's `labelKey` must have a corresponding entry in `src/intl/en/page-
 
 ## VideoWatch Embed Component
 
-The `VideoWatch` server component (`src/components/Videos/VideoWatch/index.tsx`) enables embedding videos inline within MDX content pages (e.g., topic pages under `public/content/`).
+The `VideoWatch` server component (`app/[locale]/_components/VideoWatch/index.tsx`) enables embedding videos inline within MDX content pages (e.g., topic pages under `public/content/`).
 
 ### Usage in MDX
 
@@ -111,6 +111,7 @@ Optional `startTime` prop:
 ```
 
 The component renders:
+
 - YouTube embed
 - Video title and first sentence of description
 - Link to full transcript on the video landing page
@@ -123,12 +124,12 @@ For general guidance on editing markdown content pages, see [Editing Pages](./ed
 
 All data access functions live in `src/lib/utils/videos.ts`:
 
-| Function | Returns | Purpose |
-|---|---|---|
-| `getVideoSlugs()` | `string[]` | Scans `public/content/videos/` for directory names |
-| `getVideoData(slug, locale?)` | `VideoData` | Parses `index.md` frontmatter + body, with i18n override support |
-| `getVideos(locale?)` | `VideoCardData[]` | Returns all videos as flat card data for the gallery |
-| `getDefaultThumbnailUrl(youtubeId)` | `string` | Returns YouTube `sddefault.jpg` thumbnail URL |
+| Function                            | Returns           | Purpose                                                          |
+| ----------------------------------- | ----------------- | ---------------------------------------------------------------- |
+| `getVideoSlugs()`                   | `string[]`        | Scans `public/content/videos/` for directory names               |
+| `getVideoData(slug, locale?)`       | `VideoData`       | Parses `index.md` frontmatter + body, with i18n override support |
+| `getVideos(locale?)`                | `VideoCardData[]` | Returns all videos as flat card data for the gallery             |
+| `getDefaultThumbnailUrl(youtubeId)` | `string`          | Returns YouTube `sddefault.jpg` thumbnail URL                    |
 
 All functions use **module-scoped `Map` caches** that persist for the duration of a build to avoid redundant filesystem reads.
 
