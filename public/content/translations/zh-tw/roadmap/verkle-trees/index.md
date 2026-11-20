@@ -1,6 +1,6 @@
 ---
-title: 沃克爾樹
-description: 沃克爾樹的高階描述，以及它們將如何用於升級以太坊
+title: "沃克爾樹"
+description: "沃克爾樹的高階描述，以及它們將如何用於升級以太坊"
 lang: zh-tw
 template: roadmap
 summaryPoints:
@@ -38,9 +38,9 @@ summaryPoints:
 
 ## 沃克爾樹的結構是什麼？ {#what-is-the-structure-of-a-verkle-tree}
 
-沃克爾樹是 `(key,value)` 鍵值對，其中鍵是由 31 位元組的_主幹 (stem)_ 和單一位元組的_後綴 (suffix)_ 組成的 32 位元組元素。這些鍵被組織成_擴展 (extension)_ 節點和_內部 (inner)_ 節點。擴展節點代表具有不同後綴的 256 個子節點的單一主幹。內部節點也有 256 個子節點，但它們可以是其他擴展節點。沃克爾樹和默克爾樹結構之間的主要區別在於沃克爾樹要平坦得多，這意味著連接葉節點到根的中間節點更少，因此產生證明所需的資料也更少。
+沃克爾樹是 `(key,value)` 鍵值對，其中鍵是 32 位元組的元素，由 31 位元組的_主幹_和單一位元組的_後綴_組成。這些鍵被組織成_擴展_節點和_內部_節點。擴展節點代表具有不同後綴的 256 個子節點的單一主幹。內部節點也有 256 個子節點，但它們可以是其他擴展節點。沃克爾樹和默克爾樹結構之間的主要區別在於，沃克爾樹要平坦得多，這意味著連接葉節點到根的中間節點更少，因此產生證明所需的資料也更少。
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [閱讀更多關於沃克爾樹結構的資訊](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
