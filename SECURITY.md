@@ -6,4 +6,6 @@ Generally only the latest version of this software is in production, and risks a
 
 ## Reporting a Vulnerability
 
-It is recommended that any potential critical vulnerabilities be reported through the security@ethereum.org email address using the PGP outlined in https://ethereum.org/.well-known/security.txt
+Please submit vulnerabilities and bugs found directly on the [Bug Bounty Program Form](https://bbp-form.ethereum.org/).
+
+For other security concerns, please use security@ethereum.org email address using the PGP outlined in https://ethereum.org/.well-known/security.txt
