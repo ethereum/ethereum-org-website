@@ -1,6 +1,6 @@
 ---
 title: Verkle stromy
-description: Obecný popis Verkle stromů a toho, jak budou použity k aktualizaci Etherea
+description: "Obecný popis Verkle stromů a toho, jak budou použity k aktualizaci Etherea"
 lang: cs
 template: roadmap
 summaryPoints:
@@ -38,9 +38,9 @@ Velikost svědka se liší v závislosti na počtu listů, které obsahuje. Za p
 
 ## Jaká je struktura Verkle stromu? {#what-is-the-structure-of-a-verkle-tree}
 
-Verkle stromy jsou páry `(key,value)`, kde klíče jsou 32bajtové prvky složené z 31bajtového _kmene_ (stem) a jednobajtové _přípony_ (suffix). Tyto klíče jsou organizovány do _rozšiřujících_ (extension) uzlů a _vnitřních_ (inner) uzlů. Rozšiřující uzly představují jeden kmen pro 256 potomků s různými příponami. Vnitřní uzly mají také 256 potomků, ale mohou to být další rozšiřující uzly. Hlavní rozdíl mezi strukturou Verkle stromu a Merkleova stromu spočívá v tom, že Verkle strom je mnohem plošší, což znamená, že existuje méně mezilehlých uzlů spojujících list s kořenem, a proto je ke generování důkazu potřeba méně dat.
+Verkle stromy jsou páry `(klíč, hodnota)`, kde klíče jsou 32bajtové prvky složené z 31bajtového _kmene_ a jednobajtové _přípony_. Tyto klíče jsou uspořádány do _rozšiřujících_ uzlů a _vnitřních_ uzlů. Rozšiřující uzly představují jeden kmen pro 256 potomků s různými příponami. Vnitřní uzly mají také 256 potomků, ale mohou to být další rozšiřující uzly. Hlavní rozdíl mezi strukturou Verkle stromu a Merkleova stromu spočívá v tom, že Verkle strom je mnohem plošší, což znamená, že existuje méně mezilehlých uzlů spojujících list s kořenem, a proto je ke generování důkazu potřeba méně dat.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Přečtěte si více o struktuře Verkle stromů](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
