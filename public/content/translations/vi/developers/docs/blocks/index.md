@@ -10,14 +10,13 @@ Các khối là các lô giao dịch với một mã băm của khối trước 
 
 Khối là một chủ đề rất thân thiện với người mới bắt đầu. Nhưng để giúp bạn hiểu rõ hơn về trang này, chúng tôi khuyên bạn trước tiên nên đọc về [Tài khoản](/developers/docs/accounts/), [Giao dịch](/developers/docs/transactions/) và [giới thiệu về Ethereum](/developers/docs/intro-to-ethereum/) của chúng tôi.
 
-## Tại sao lại cần các khối? {#why-blocks}
+## Tại sao cần khối? {#why-blocks}
 
-Để đảm bảo rằng tất cả những người tham gia trên mạng lưới [Ethereum](/) duy trì một trạng thái đồng bộ và đồng thuận về lịch sử chính xác của các giao dịch, chúng tôi gộp các giao dịch thành các khối. Điều này có nghĩa là hàng chục (hoặc hàng trăm) giao dịch được cam kết, đồng thuận và đồng bộ hóa cùng một lúc.
+Để đảm bảo rằng tất cả những người tham gia trên mạng lưới [Ethereum](/) duy trì một trạng thái đồng bộ và đồng ý về lịch sử chính xác của các giao dịch, chúng tôi gộp các giao dịch thành các khối. Điều này có nghĩa là hàng chục (hoặc hàng trăm) giao dịch được cam kết, thống nhất và đồng bộ hóa cùng một lúc.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Sơ đồ được phỏng theo [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Bằng cách giãn cách các cam kết, chúng tôi cung cấp cho tất cả những người tham gia mạng lưới đủ thời gian để đạt được đồng thuận: mặc dù các yêu cầu giao dịch xảy ra hàng chục lần mỗi giây, các khối chỉ được tạo và cam kết trên Ethereum mười hai giây một lần.
+Bằng cách giãn cách các lần cam kết, chúng tôi cho tất cả những người tham gia mạng lưới đủ thời gian để đạt được đồng thuận: mặc dù các yêu cầu giao dịch xảy ra hàng chục lần mỗi giây, các khối chỉ được tạo và cam kết trên Ethereum mười hai giây một lần.
 
 ## Cách các khối hoạt động {#how-blocks-work}
 

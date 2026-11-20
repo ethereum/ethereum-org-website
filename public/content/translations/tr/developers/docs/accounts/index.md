@@ -26,29 +26,28 @@ Her iki hesap türü de şu yeteneklere sahiptir:
 
 **Harici sahipli**
 
-- Bir hesap oluşturmanın hiçbir maliyeti yoktur
+- Bir hesap oluşturmanın maliyeti yoktur
 - İşlemleri başlatabilir
-- Harici sahipli hesaplar arasındaki işlemler yalnızca ETH/Token transferleri olabilir
-- Hesap etkinliklerini kontrol eden kriptografik bir anahtar çiftinden oluşur: açık ve özel anahtarlar
+- Harici sahipli hesaplar arasındaki işlemler, alıcı kontrat koduna yetki devri yapmadığı sürece (aşağıdaki `codeHash` bölümüne bakın) yalnızca ETH transferleri olabilir
+- Hesap etkinliklerini kontrol eden açık ve özel anahtarlardan oluşan kriptografik bir anahtar çiftinden oluşur
 
-**Sözleşme**
+**Kontrat**
 
 - Ağ depolama alanını kullandığınız için bir sözleşme oluşturmanın bir maliyeti vardır
 - Yalnızca bir işlem almaya yanıt olarak mesaj gönderebilir
-- Harici bir hesaptan bir kontrat hesabına yapılan işlemler, Token transferi veya hatta yeni bir sözleşme oluşturma gibi birçok farklı eylemi yürütebilen kodu tetikleyebilir
+- Harici bir hesaptan bir kontrat hesabına yapılan işlemler, token transferi veya hatta yeni bir sözleşme oluşturma gibi birçok farklı eylemi yürütebilen kodu tetikleyebilir
 - Kontrat hesaplarının özel anahtarları yoktur. Bunun yerine, akıllı sözleşme kodunun mantığı tarafından kontrol edilirler
 
 ## Bir hesabın incelenmesi {#an-account-examined}
 
 Ethereum hesaplarının dört alanı vardır:
 
-- `nonce` – Harici sahipli bir hesaptan gönderilen işlem sayısını veya bir kontrat hesabı tarafından oluşturulan sözleşme sayısını gösteren bir sayaç. İmzalanmış işlemlerin tekrar tekrar yayınlandığı ve yeniden yürütüldüğü tekrarlama (replay) saldırılarına karşı koruma sağlamak için her hesap için belirli bir nonce ile yalnızca bir işlem yürütülebilir.
+- `nonce` – Harici sahipli bir hesaptan gönderilen işlem sayısını veya bir kontrat hesabı için oluşturduğu sözleşme sayısından bir fazlasını gösteren bir sayaç (kontrat nonce'ları [EIP-161](https://eips.ethereum.org/EIPS/eip-161) uyarınca 1'den başlar). Uygulanan her [EIP-7702](/roadmap/pectra/7702/) yetkilendirmesi de yetki veren hesabın nonce değerini artırır. İmzalı işlemlerin tekrar tekrar yayınlandığı ve yeniden yürütüldüğü tekrarlama saldırılarına (replay attacks) karşı koruma sağlamak için her hesap için belirli bir nonce ile yalnızca bir işlem yürütülebilir.
 - `balance` – Bu adresin sahip olduğu Wei miktarı. Wei, ETH'nin bir alt birimidir ve her ETH için 1e+18 Wei bulunur.
-- `codeHash` – Bu hash, Ethereum Sanal Makinesi (EVM) üzerindeki bir hesabın _kodunu_ ifade eder. Kontrat hesapları, farklı işlemleri gerçekleştirebilen programlanmış kod parçalarına sahiptir. Bu EVM kodu, hesap bir mesaj çağrısı alırsa yürütülür. Diğer hesap alanlarının aksine değiştirilemez. Tüm bu tür kod parçaları, daha sonra alınmak üzere ilgili hash'leri altında durum veritabanında bulunur. Bu hash değeri codeHash olarak bilinir. Harici sahipli hesaplar için codeHash alanı boş bir dizenin hash'idir.
-- `storageRoot` – Bazen depolama hash'i olarak da bilinir. Hesabın depolama içeriğini (256 bitlik tamsayı değerleri arasındaki bir eşleme) kodlayan bir [Merkle Patricia Ağacı](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) kök düğümünün 256 bitlik hash'idir; bu, 256 bitlik tamsayı anahtarlarının Keccak 256 bitlik hash'inden Özyineli Uzunluk Öneki (RLP) ile kodlanmış 256 bitlik tamsayı değerlerine bir eşleme olarak ağaca kodlanır. Bu ağaç, bu hesabın depolama içeriğinin hash'ini kodlar ve varsayılan olarak boştur.
+- `codeHash` – Bu hash, Ethereum Sanal Makinesi (EVM) üzerindeki bir hesabın _kodunu_ ifade eder. Kontrat hesapları, farklı işlemleri gerçekleştirebilen programlanmış kod parçalarına sahiptir. Bu EVM kodu, hesap bir mesaj çağrısı alırsa yürütülür. Bir sözleşmenin kodu, diğer hesap alanlarının aksine dağıtıldıktan sonra değiştirilemez. Tüm bu kod parçaları, daha sonra alınmak üzere ilgili hash'leri altında durum veritabanında bulunur. Bu hash değeri codeHash olarak bilinir. Harici sahipli hesaplar için, hesap [EIP-7702](/roadmap/pectra/7702/) ile bir akıllı sözleşmeye yetki devri yapmadığı sürece codeHash alanı boş bir dizenin hash'idir. Hesabın kodu daha sonra, hesabın yeni bir yetkilendirme ile değiştirebileceği veya temizleyebileceği bir yetki devri göstergesi (`0xef0100` ve ardından sözleşmenin adresi) olur.
+- `storageRoot` – Bazen depolama hash'i (storage hash) olarak da bilinir. Hesabın depolama içeriğini (256 bitlik tam sayı değerleri arasındaki bir eşleme) kodlayan bir [Merkle Patricia Ağacı](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)'nın kök düğümünün 256 bitlik bir hash'idir ve ağaca 256 bitlik tam sayı anahtarlarının Keccak 256 bitlik hash'inden Özyineli Uzunluk Öneki (RLP) ile kodlanmış 256 bitlik tam sayı değerlerine bir eşleme olarak kodlanır. Bu ağaç, bu hesabın depolama içeriğinin hash'ini kodlar ve varsayılan olarak boştur.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+<AccountsDiagram />
 
 ## Harici sahipli hesaplar ve anahtar çiftleri {#externally-owned-accounts-and-key-pairs}
 

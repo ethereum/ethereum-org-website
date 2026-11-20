@@ -4,13 +4,13 @@ description: "解释以太坊权益证明共识机制中使用的密钥"
 lang: zh
 ---
 
-以太坊使用公钥-私钥密码学来保护用户资产。公钥被用作以太坊地址的基础——也就是说，它对公众可见，并被用作唯一标识符。私钥（或“秘钥”）应该只能由账户所有者访问。私钥用于对交易和数据进行“签名”，以便密码学能够证明持有者批准了特定私钥的某项操作。
+以太坊使用公钥-私钥密码学来保护用户资产。公钥被用作以太坊地址的基础——也就是说，它对公众可见，并用作唯一标识符。私钥（或“保密”密钥）应该只能由账户所有者访问。私钥用于对交易和数据进行“签名”，以便密码学可以证明持有者批准了特定私钥的某些操作。
 
 以太坊的密钥是使用[椭圆曲线密码学](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography)生成的。
 
-然而，当以太坊从[工作量证明 (PoW)](/developers/docs/consensus-mechanisms/pow)切换到[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)时，以太坊中添加了一种新型密钥。原始密钥的工作方式与以前完全相同——保护账户的基于椭圆曲线的密钥没有任何变化。但是，用户需要一种新型密钥，以便通过质押 ETH 和运行验证者来参与权益证明。这种需求源于大量验证者之间传递许多消息所带来的可扩展性挑战，这要求一种易于聚合的密码学方法，以减少网络达成共识所需的通信量。
+然而，当以太坊从[工作量证明 (PoW)](/developers/docs/consensus-mechanisms/pow)切换到[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos)时，以太坊中添加了一种新类型的密钥。原始密钥的工作方式与以前完全相同——保护账户的基于椭圆曲线的密钥没有任何变化。然而，用户需要一种新类型的密钥，以便通过质押 ETH 和运行验证者来参与权益证明。这种需求源于大量验证者之间传递许多消息所带来的可扩展性挑战，这需要一种易于聚合的密码学方法，以减少网络达成共识所需的通信量。
 
-这种新型密钥使用 [**Boneh-Lynn-Shacham (BLS)** 签名方案](https://wikipedia.org/wiki/BLS_digital_signature)。BLS 能够非常高效地聚合签名，同时也允许对聚合的单个验证者密钥进行逆向工程，非常适合管理验证者之间的操作。
+这种新类型的密钥使用 [**Boneh-Lynn-Shacham (BLS)** 签名方案](https://wikipedia.org/wiki/BLS_digital_signature)。来自许多验证者的 BLS 签名可以聚合成一个签名，并在一次检查中进行验证，这使得共识消息保持较小。BLS 不是抗量子的，因此[后量子路线图](/roadmap/security/quantum-resistance/)计划用基于哈希的密钥替换验证者 BLS 密钥。
 
 ## 两种类型的验证者密钥 {#two-types-of-keys}
 
@@ -37,9 +37,9 @@ lang: zh
 
 ### 提款凭证 {#withdrawal-credentials}
 
-每个验证者都有一个称为*提款凭证*的属性。这个 32 字节字段的第一个字节标识账户类型：`0x00` 代表原始 BLS（沙佩拉升级前，不可提款）凭证，`0x01` 代表指向执行地址的旧版凭证，而 `0x02` 代表现代复利凭证类型。
+每个验证者都有一个称为*提款凭证*的属性。这个 32 字节字段的第一个字节标识了账户类型：`0x00` 代表传统的 BLS（沙佩拉升级前，不可提款）凭证，`0x01` 代表指向执行地址的传统凭证，`0x02` 代表现代的复利凭证类型。
 
-拥有 `0x00` BLS 密钥的验证者必须更新这些凭证以指向执行地址，以便激活超额余额支付或从质押中全额提款。这可以通过在初始密钥生成期间在存款数据中提供执行地址来完成，*或者*在以后使用提款密钥签名并广播 `BLSToExecutionChange` 消息来完成。
+拥有 `0x00` BLS 密钥的验证者必须更新这些凭证以指向执行地址，以便激活超额余额支付或从质押中全额提款。这可以通过在初始密钥生成期间在存款数据中提供执行地址来完成，*或者*在以后使用提款密钥签名并广播 `BLSToExecutionChange` 消息来完成。在后量子过渡之前逐步淘汰 `0x00` 凭证的提案正在讨论中，因此仍在使用 `0x00` 的验证者现在应该进行转换。
 
 [关于验证者提款凭证的更多信息](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
@@ -54,22 +54,22 @@ lang: zh
 
 在将提款凭证更新为 `0x01` 类型之前丢失此密钥意味着失去对验证者余额的访问权限。验证者仍然可以对证明和区块进行签名，因为这些操作需要验证者的私钥，但是如果提款密钥丢失，则几乎没有或根本没有激励。
 
-将验证者密钥与以太坊账户密钥分开，使得单个用户可以运行多个验证者。
+将验证者密钥与以太坊账户密钥分开，使得单个用户可以运行多个验证者。使用 `0x02` 凭证，一个验证者最多可以持有 2,048 个 ETH，因此较大的质押不再需要拆分到许多验证者中。
 
-![validator key schematic](validator-key-schematic.png)
+<ValidatorKeysDiagram />
 
-**注意**：退出质押职责并提取验证者余额目前需要使用验证者密钥签名[自愿退出消息 (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1)。然而，[EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) 是一项提案，未来将允许用户通过使用提款密钥签名退出消息来触发验证者退出并提取其余额。这将通过使将 ETH 委托给[质押即服务提供商](/staking/saas/#what-is-staking-as-a-service)的质押者能够保持对其资金的控制，从而减少信任假设。
+**注意**：验证者可以通过使用验证者密钥签名[自愿退出消息 (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) 来退出。自佩克特拉升级以来，[EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) 还允许提款地址触发验证者的退出，以及对 `0x02` 验证者进行部分提款。这通过让将 ETH 委托给[质押即服务提供商](/staking/saas/#what-is-staking-as-a-service)的质押者保持对其资金的控制，从而减少了信任假设。
 
 ## 从助记词派生密钥 {#deriving-keys-from-seed}
 
-如果每质押 32 个 ETH 都需要一组 2 个完全独立的新密钥，那么密钥管理将很快变得难以处理，特别是对于运行多个验证者的用户而言。相反，可以从单个公共秘密中派生出多个验证者密钥，并且存储该单个秘密允许访问多个验证者密钥。
+如果每质押 32 个 ETH 都需要一组 2 个完全独立的新密钥，那么密钥管理将很快变得难以控制，特别是对于运行多个验证者的用户而言。相反，可以从单个公共秘密派生多个验证者密钥，并且存储该单个秘密允许访问多个验证者密钥。
 
-[助记词](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase)和路径是用户在[访问](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0)其钱包时经常遇到的显著特征。助记词是作为私钥初始种子的单词序列。当与附加数据结合时，助记词会生成一个称为“主密钥”的哈希。这可以被认为是一棵树的根。然后可以使用分层路径从该根派生出分支，以便子节点可以作为其父节点哈希及其在树中的索引的组合而存在。阅读有关基于助记词生成密钥的 [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) 和 [BIP-19](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) 标准。
+[助记词](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase)和路径是用户在[访问](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0)其钱包时经常遇到的显著特征。助记词是一系列单词，充当私钥的初始种子。当与附加数据结合时，助记词会生成一个称为“主密钥”的哈希。这可以被认为是一棵树的根。然后可以使用分层路径从该根派生分支，以便子节点可以作为其父节点哈希及其在树中的索引的组合而存在。阅读有关基于助记词生成密钥的 [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) 和 [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) 标准。
 
-这些路径具有以下结构，与硬件钱包交互过的用户会对此很熟悉：
+这些路径具有以下结构，与硬件钱包交互过的用户会很熟悉：
 
 ```
-m/44'/60'/0'/0`
+m/44'/60'/0'/0
 ```
 
 此路径中的斜杠分隔私钥的组件，如下所示：
@@ -78,10 +78,10 @@ m/44'/60'/0'/0`
 master_key / purpose / coin_type / account / change / address_index
 ```
 
-这种逻辑使用户能够将尽可能多的验证者附加到单个**助记词**上，因为树根可以是公共的，并且可以在分支处进行区分。用户可以从助记词中**派生任意数量的密钥**。
+这种逻辑使用户能够将尽可能多的验证者附加到单个**助记词**，因为树根可以是公共的，并且可以在分支处进行区分。用户可以从助记词中**派生任意数量的密钥**。
 
 ```
-[m / 0]
+      [m / 0]
      /
     /
 [m] - [m / 1]
@@ -90,9 +90,9 @@ master_key / purpose / coin_type / account / change / address_index
       [m / 2]
 ```
 
-每个分支由 `/` 分隔，因此 `m/2` 意味着从主密钥开始并遵循分支 2。在下面的示意图中，单个助记词用于存储三个提款密钥，每个提款密钥有两个关联的验证者。
+每个分支由 `/` 分隔，因此 `m/2` 意味着从主密钥开始并遵循分支 2。验证者密钥遵循 [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334)：验证者 `i` 在 `m/12381/3600/i/0` 处获取其提款密钥，在 `m/12381/3600/i/0/0` 处获取其签名密钥（12381 标识 BLS12-381 曲线，3600 标识共识层密钥的代币类型）。
 
-![validator key logic](multiple-keys.png)
+<KeyDerivationDiagram />
 
 ## 延伸阅读 {#further-reading}
 

@@ -19,8 +19,7 @@ Dado que cada transacción de Ethereum requiere recursos computacionales para ej
 
 La tarifa de gas es **la cantidad de gas utilizada para realizar alguna operación, multiplicada por el costo por unidad de gas**. La tarifa se paga independientemente de si una transacción tiene éxito o falla.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 Las tarifas de gas deben pagarse en la moneda nativa de Ethereum, el ether (ETH). Los precios del gas generalmente se cotizan en Gwei, que es una denominación de ETH. Cada Gwei es igual a una milmillonésima parte de un ETH (0.000000001 ETH o 10<sup>-9</sup> ETH).
 
@@ -101,12 +100,11 @@ Puede indicar explícitamente cuánto está dispuesto a pagar para que se ejecut
 
 ## ¿Por qué existen las tarifas de gas? {#why-do-gas-fees-exist}
 
-En resumen, las tarifas de gas ayudan a mantener segura la red Ethereum. Al requerir una tarifa por cada computación ejecutada en la red, evitamos que los malos actores envíen spam a la red. Para evitar bucles infinitos accidentales u hostiles u otro desperdicio computacional en el código, se requiere que cada transacción establezca un límite de cuántos pasos computacionales de ejecución de código puede usar. La unidad fundamental de computación es el "gas".
+En resumen, las tarifas de gas ayudan a mantener segura la red Ethereum. Al requerir una tarifa por cada cálculo ejecutado en la red, evitamos que actores malintencionados envíen spam a la red. Para evitar bucles infinitos accidentales u hostiles u otro desperdicio computacional en el código, se requiere que cada transacción establezca un límite en la cantidad de pasos computacionales de ejecución de código que puede usar. La unidad fundamental de computación es el "gas".
 
-Aunque una transacción incluye un límite, cualquier gas no utilizado en una transacción se devuelve al usuario (p. ej., se devuelve `max fee - (base fee + tip)`).
+Aunque una transacción incluye un límite, cualquier gas no utilizado en una transacción se devuelve al usuario (p. ej., se devuelve `tarifa máxima - (tarifa base + tarifa de prioridad)`).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## ¿Qué es el límite de gas? {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ El escalado de capa 2 (l2) es una iniciativa principal para mejorar en gran medi
 
 ## Monitoreo de las tarifas de gas {#monitoring-gas-fees}
 
-Si desea monitorear los precios del gas, para poder enviar su ETH por menos, puede usar muchas herramientas diferentes, como:
+Si desea monitorear los precios del gas para poder enviar su ETH por menos, puede usar muchas herramientas diferentes, como:
 
 - [Etherscan](https://etherscan.io/gastracker) _Estimador del precio del gas de transacciones_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimador de código abierto del precio del gas de transacciones_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitoree y rastree los precios del gas de Ethereum y la capa 2 (l2) para reducir las tarifas de transacción y ahorrar dinero_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extensión de Chrome para la estimación de gas que admite tanto transacciones heredadas de Tipo 0 como transacciones EIP-1559 de Tipo 2._
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitoree y rastree los precios del gas de Ethereum y de la capa 2 (l2) para reducir las tarifas de transacción y ahorrar dinero_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcule las tarifas de gas en su moneda local para diferentes tipos de transacciones en la Red principal, Arbitrum y Polygon._
-
-## Herramientas relacionadas {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API de estimación de gas impulsada por la plataforma global de datos de mempool de Blocknative_
-- [Gas Network](https://gas.network) Oráculos de gas en cadena. Soporte para más de 35 cadenas. 
 
 ## Lecturas adicionales {#further-reading}
 

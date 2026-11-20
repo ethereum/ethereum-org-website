@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Aprende sobre PeerDAS como parte de la actualización Fusaka del protocolo Ethereum
+description: "Aprende sobre PeerDAS como parte de la actualización Fusaka del protocolo Ethereum"
 lang: es
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -43,29 +43,29 @@ DAS es un mecanismo que se basa en esto y asegura que los datos sean correctos y
 
 [PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) es una propuesta específica que implementa el mecanismo DAS en Ethereum, marcando probablemente la mayor actualización desde La Fusión. PeerDAS está diseñado para extender los datos de los blobs, dividiéndolos en columnas y distribuyendo un subconjunto a los nodos.
 
-Ethereum toma prestadas algunas matemáticas ingeniosas para lograr esto: aplica la codificación de borrado al estilo Reed-Solomon a los datos de los blobs. Los datos de los blobs se representan como un polinomio cuyos coeficientes codifican los datos, luego evalúan ese polinomio en puntos adicionales para crear un blob extendido, duplicando el número de evaluaciones. Esta redundancia añadida permite la recuperación de borrado: incluso si faltan algunas evaluaciones, el blob original se puede reconstruir siempre que al menos la mitad de los datos totales, incluidas las piezas extendidas, estén disponibles.
+Ethereum toma prestadas algunas matemáticas ingeniosas para lograr esto: aplica la codificación de borrado al estilo Reed-Solomon a los datos de los blobs. Los datos de los blobs se representan como un polinomio cuyos coeficientes codifican los datos, luego se evalúa ese polinomio en puntos adicionales para crear un blob extendido, duplicando el número de evaluaciones. Esta redundancia añadida permite la recuperación de borrado: incluso si faltan algunas evaluaciones, el blob original se puede reconstruir siempre que al menos la mitad de los datos totales, incluidas las piezas extendidas, estén disponibles.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
-En realidad, este polinomio tiene miles de coeficientes. Los compromisos KZG son valores de unos pocos bytes, algo así como un hash, conocidos por todos los nodos. Cada nodo que tenga suficientes puntos de datos puede [reconstruir eficientemente un conjunto completo de datos de blobs](https://arxiv.org/abs/2207.11079). 
+En realidad, este polinomio tiene miles de coeficientes. Los compromisos KZG son valores de unos pocos bytes, algo así como un hash, conocidos por todos los nodos. Cada nodo que posea suficientes puntos de datos puede [reconstruir eficientemente un conjunto completo de datos de blobs](https://arxiv.org/abs/2207.11079). 
 
-> Dato curioso: la misma técnica de codificación fue utilizada por los DVD. Si rayabas un DVD, el reproductor aún podía leerlo gracias a la codificación Reed-Solomon que agrega las piezas faltantes del polinomio. 
+> Dato curioso: la misma técnica de codificación era utilizada por los DVD. Si rayabas un DVD, el reproductor aún podía leerlo gracias a la codificación Reed-Solomon que añade las piezas faltantes del polinomio. 
 
 Históricamente, los datos en las cadenas de bloques, ya sean bloques o blobs, se transmitían a todos los nodos. Con el enfoque de división y muestreo de PeerDAS, ya no es necesario transmitir todo a todos. Después de Fusaka, la red de la capa de consenso se organiza en temas/subredes del protocolo gossip: las columnas de blobs se asignan a subredes específicas, y cada nodo se suscribe a subconjuntos predeterminados y custodia solo esas piezas.
 
 Con PeerDAS, los datos extendidos de los blobs se dividen en 128 piezas llamadas columnas. Los datos se distribuyen a estos nodos a través de un protocolo gossip dedicado en subredes específicas a las que se suscriben. Cada nodo regular en la red participa en al menos 8 subredes de columnas elegidas al azar. Recibir datos de solo 8 de 128 subredes significa que este nodo predeterminado recibe solo 1/16 de todos los datos, pero debido a que los datos se extendieron, esto es 1/8 de los datos originales. 
 
-Esto permite un nuevo límite teórico de escalabilidad de 8 veces el esquema actual de "todos descargan todo". Con los nodos suscribiéndose a diferentes subredes aleatorias que sirven columnas de blobs, la probabilidad es muy alta de que estén distribuidos uniformemente y, por lo tanto, cada pieza de datos exista en algún lugar de la red. A los nodos que ejecutan validadores se les requiere suscribirse a más subredes con cada validador que ejecutan.
+Esto permite un nuevo límite de escalabilidad teórico de 8 veces el esquema actual de «todos descargan todo». Con los nodos suscribiéndose a diferentes subredes aleatorias que sirven columnas de blobs, la probabilidad es muy alta de que estén distribuidos uniformemente y, por lo tanto, cada pieza de datos exista en algún lugar de la red. A los nodos que ejecutan validadores se les exige suscribirse a más subredes con cada validador que ejecutan.
 
 > Cada nodo tiene un ID único generado aleatoriamente, que normalmente sirve como su identidad pública para las conexiones. En PeerDAS, este número se utiliza para determinar el conjunto aleatorio de subredes a las que tiene que suscribirse, lo que resulta en una distribución aleatoria uniforme de todos los datos de los blobs.
 
-Una vez que un nodo reconstruye con éxito los datos originales, redistribuye las columnas recuperadas de vuelta a la red, curando activamente cualquier brecha de datos y mejorando la resiliencia general del sistema. Los nodos conectados a validadores con un saldo combinado ≥4096 ETH deben ser un supernodo y, por lo tanto, deben suscribirse a todas las subredes de columnas de datos y custodiar todas las columnas. Estos supernodos curarán continuamente las brechas de datos. La naturaleza probabilísticamente autocurativa del protocolo permite fuertes garantías de disponibilidad sin limitar a los operadores domésticos que solo tienen porciones de los datos. 
+Una vez que un nodo reconstruye con éxito los datos originales, redistribuye las columnas recuperadas de vuelta a la red, reparando activamente cualquier brecha de datos y mejorando la resiliencia general del sistema. Los nodos conectados a validadores con un saldo combinado ≥4096 ETH deben ser un supernodo y, por lo tanto, deben suscribirse a todas las subredes de columnas de datos y custodiar todas las columnas. Estos supernodos repararán continuamente las brechas de datos. La naturaleza probabilísticamente autorreparadora del protocolo permite fuertes garantías de disponibilidad sin limitar a los operadores domésticos que solo poseen porciones de los datos. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-La disponibilidad de datos puede ser confirmada por cualquier nodo que tenga solo un pequeño subconjunto de los datos de los blobs gracias al mecanismo de muestreo descrito anteriormente. Esta disponibilidad se hace cumplir: los validadores deben seguir nuevas reglas de elección de bifurcación, lo que significa que solo aceptarán y votarán por bloques después de haber verificado la disponibilidad de los datos.
+La disponibilidad de datos puede ser confirmada por cualquier nodo que posea solo un pequeño subconjunto de los datos de los blobs gracias al mecanismo de muestreo descrito anteriormente. Esta disponibilidad se hace cumplir: los validadores deben seguir nuevas reglas de elección de bifurcación, lo que significa que solo aceptarán y votarán por bloques después de haber verificado la disponibilidad de los datos.
 
-El impacto directo en los usuarios (particularmente los usuarios de l2) son tarifas más bajas. Con 8 veces más espacio para los datos de los rollup, las operaciones de los usuarios en su cadena se vuelven aún más baratas con el tiempo. Pero las tarifas más bajas después de Fusaka tomarán tiempo y dependerán de los BPO.
+El impacto directo en los usuarios (particularmente los usuarios de las l2) son tarifas más bajas. Con 8 veces más espacio para los datos de los rollup, las operaciones de los usuarios en su cadena se vuelven aún más baratas con el tiempo. Pero las tarifas más bajas después de Fusaka tomarán tiempo y dependerán de los BPO.
 
 ## Solo parámetros de blob (BPO) {#bpo}
 

@@ -1,6 +1,6 @@
 ---
-title: Verkle Ağaçları
-description: Verkle Ağaçlarının üst düzey bir açıklaması ve Ethereum'u güncellemek için nasıl kullanılacakları
+title: "Verkle Ağaçları"
+description: "Verkle Ağaçlarının üst düzey bir açıklaması ve Ethereum'u güncellemek için nasıl kullanılacakları"
 lang: tr
 template: roadmap
 summaryPoints:
@@ -36,11 +36,11 @@ Tanık boyutu, içerdiği yaprak sayısına bağlı olarak değişir. Tanığın
 
 </ExpandableCard>
 
-## Bir Verkle Ağacının yapısı nedir? {#what-is-the-structure-of-a-verkle-tree}
+## Bir Verkle ağacının yapısı nasıldır? {#what-is-the-structure-of-a-verkle-tree}
 
-Verkle Ağaçları, anahtarların 31 baytlık bir _gövde_ ve tek baytlık bir _sonek_ten oluşan 32 baytlık öğeler olduğu `(key,value)` çiftleridir. Bu anahtarlar _uzantı_ düğümleri ve _iç_ düğümler olarak düzenlenmiştir. Uzantı düğümleri, farklı soneklere sahip 256 çocuk için tek bir gövdeyi temsil eder. İç düğümlerin de 256 çocuğu vardır, ancak bunlar başka uzantı düğümleri olabilir. Verkle Ağacı ile Merkle ağacı yapısı arasındaki temel fark, Verkle Ağacının çok daha düz olmasıdır; bu, bir yaprağı köke bağlayan daha az ara düğüm olduğu ve dolayısıyla bir kanıt oluşturmak için daha az veri gerektiği anlamına gelir.
+Verkle Ağaçları, anahtarların 31 baytlık bir _gövde_ ve tek baytlık bir _sonek_ten oluşan 32 baytlık öğeler olduğu `(anahtar,değer)` çiftleridir. Bu anahtarlar _uzantı_ düğümleri ve _iç_ düğümler olarak düzenlenir. Uzantı düğümleri, farklı soneklere sahip 256 alt öğe için tek bir gövdeyi temsil eder. İç düğümlerin de 256 alt öğesi vardır, ancak bunlar başka uzantı düğümleri olabilir. Verkle ağacı ile Merkle ağacı yapısı arasındaki temel fark, Verkle ağacının çok daha düz olmasıdır; yani bir yaprağı köke bağlayan daha az ara düğüm vardır ve bu nedenle bir kanıt oluşturmak için daha az veri gerekir.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Verkle Ağaçlarının yapısı hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

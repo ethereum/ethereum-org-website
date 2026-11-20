@@ -12,12 +12,11 @@ lang: zh-tw
 
 ## 從帳本到狀態機 {#from-ledger-to-state-machine}
 
-「分散式帳本」的比喻經常被用來描述像比特幣這樣的區塊鏈，它們利用密碼學的基本工具來實現去中心化的貨幣。該帳本維護著活動紀錄，這些紀錄必須遵守一套規則，這套規則規範了人們在修改帳本時能做與不能做的事。例如，一個比特幣地址花費的比特幣不能超過它之前收到的數量。這些規則是比特幣及許多其他區塊鏈上所有交易的基礎。
+「分散式帳本」的比喻經常被用來描述像比特幣這樣的區塊鏈，它們使用密碼學的基本工具來實現去中心化貨幣。帳本維護著活動紀錄，這些紀錄必須遵守一組規則，這些規則規範了人們可以和不可以做什麼來修改帳本。例如，一個比特幣地址花費的比特幣不能超過它之前收到的數量。這些規則是比特幣和許多其他區塊鏈上所有交易的基礎。
 
-雖然以太坊擁有自己的原生加密貨幣（以太幣），且遵循幾乎完全相同且直觀的規則，但它還實現了一個更強大的功能：[智能合約](/developers/docs/smart-contracts/)。對於這個更複雜的功能，我們需要一個更精確的比喻。以太坊與其說是分散式帳本，不如說是一個分散式[狀態機](https://wikipedia.org/wiki/Finite-state_machine)。以太坊的狀態是一個大型資料結構，不僅保存所有帳戶和餘額，還包含一個_機器狀態_，該狀態可以根據預先定義的一套規則在區塊之間發生變化，並且可以執行任意的機器碼。在區塊之間改變狀態的具體規則就是由 EVM 所定義的。
+雖然以太坊擁有自己的原生加密貨幣（以太幣），且遵循幾乎完全相同的直觀規則，但它還實現了一個更強大的功能：[智能合約](/developers/docs/smart-contracts/)。對於這個更複雜的功能，需要一個更複雜的比喻。以太坊不是一個分散式帳本，而是一個分散式[狀態機](https://wikipedia.org/wiki/Finite-state_machine)。以太坊的狀態是一個巨大的資料結構，它不僅保存所有帳戶和餘額，還保存一個_機器狀態_，該狀態可以根據預先定義的一組規則在區塊之間發生變化，並且可以執行任意的機器碼。在區塊之間改變狀態的具體規則是由以太坊虛擬機 (EVM) 定義的。
 
-![A diagram showing the make up of the EVM](./evm.png)
-_圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## 以太坊狀態轉換函式 {#the-ethereum-state-transition-function}
 
@@ -55,22 +54,21 @@ EVM 作為一個深度為 1024 個項目的[堆疊機](https://wikipedia.org/wik
 
 ### 操作碼 {#opcodes}
 
-已編譯的智能合約位元組碼會作為多個 EVM [操作碼](/developers/docs/evm/opcodes)來執行，這些操作碼執行標準的堆疊操作，例如 `XOR`、`AND`、`ADD`、`SUB` 等。EVM 還實作了許多區塊鏈特定的堆疊操作，例如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。操作碼集還包含 `TSTORE` 和 `TLOAD`，它們提供對暫時儲存的存取。
+已編譯的智能合約位元組碼會作為多個以太坊虛擬機 (EVM) [操作碼](/developers/docs/evm/opcodes)來執行，這些操作碼執行標準的堆疊操作，例如 `XOR`、`AND`、`ADD`、`SUB` 等。EVM 還實作了許多區塊鏈特定的堆疊操作，例如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。操作碼集還包含 `TSTORE` 和 `TLOAD`，它們提供對暫時儲存的存取。
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## EVM 實作 {#evm-implementations}
 
-所有 EVM 的實作都必須遵守以太坊黃皮書中描述的規範。
+所有以太坊虛擬機 (EVM) 的實作都必須遵守以太坊黃皮書中描述的規範。
 
-在以太坊十年的歷史中，EVM 經歷了多次修訂，並且有使用各種程式語言編寫的多種 EVM 實作。
+在以太坊十年的歷史中，EVM 經歷了多次修訂，並且有多種不同程式語言的 EVM 實作。
 
-[以太坊執行客戶端](/developers/docs/nodes-and-clients/#execution-clients)包含了一個 EVM 實作。此外，還有多個獨立的實作，包括：
+[以太坊執行用戶端](/developers/docs/nodes-and-clients/#execution-clients)包含一個 EVM 實作。此外，還有多個獨立的實作，包括：
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## 延伸閱讀 {#further-reading}

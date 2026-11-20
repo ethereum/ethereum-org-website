@@ -13,20 +13,19 @@ Ili kuelewa vyema ukurasa huu, tunapendekeza usome kwanza kuhusu [miamala](/deve
 
 ## Gesi ni nini? {#what-is-gas}
 
-Gesi inarejelea kipimo kinachopima kiasi cha juhudi za kikokotozi kinachohitajika kutekeleza shughuli mahususi kwenye mtandao wa Ethereum.
+Gesi inarejelea uniti inayopima kiasi cha juhudi za kikokotozi zinazohitajika kutekeleza shughuli mahususi kwenye mtandao wa Ethereum.
 
-Kwa kuwa kila muamala wa Ethereum unahitaji rasilimali za kikokotozi ili kutekelezwa, rasilimali hizo lazima zilipiwe ili kuhakikisha Ethereum haishambuliwi na taka na haiwezi kukwama katika mizunguko isiyo na kikomo ya kikokotozi. Malipo ya ukokotoaji hufanywa kwa njia ya ada ya gesi.
+Kwa kuwa kila muamala wa Ethereum unahitaji rasilimali za kikokotozi ili kutekelezwa, rasilimali hizo lazima zilipiwe ili kuhakikisha Ethereum haiko hatarini kwa barua taka na haiwezi kukwama katika mizunguko isiyo na kikomo ya kikokotozi. Malipo ya ukokotoaji yanafanywa kwa njia ya ada ya gesi.
 
-Ada ya gesi ni **kiasi cha gesi kinachotumika kufanya operesheni fulani, kikizidishwa na gharama kwa kila uniti ya gesi**. Ada hulipwa bila kujali kama muamala umefaulu au umeshindwa.
+Ada ya gesi ni **kiasi cha gesi kinachotumika kufanya shughuli fulani, kikizidishwa na gharama kwa kila uniti ya gesi**. Ada inalipwa bila kujali kama muamala umefaulu au umeshindwa.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-Ada za gesi lazima zilipwe kwa sarafu ya asili ya Ethereum, Etha (ETH). Bei za gesi kwa kawaida hunukuliwa kwa Gwei, ambayo ni kigawanyo cha ETH. Kila Gwei ni sawa na sehemu moja ya bilioni ya ETH (0.000000001 ETH au 10<sup>-9</sup> ETH).
+Ada za gesi lazima zilipwe kwa sarafu asili ya Ethereum, Etha (ETH). Bei za gesi kwa kawaida hunukuliwa kwa Gwei, ambayo ni kigawanyo cha ETH. Kila Gwei ni sawa na sehemu moja ya bilioni ya ETH (ETH 0.000000001 au ETH 10<sup>-9</sup>).
 
 Kwa mfano, badala ya kusema kwamba gesi yako inagharimu Etha 0.000000001, unaweza kusema gesi yako inagharimu Gwei 1.
 
-Neno 'Gwei' ni ufupisho wa 'giga-wei', ikimaanisha 'Wei bilioni'. Gwei moja ni sawa na Wei bilioni moja. Wei yenyewe (iliyopewa jina la [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), muundaji wa [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) ni uniti ndogo zaidi ya ETH.
+Neno 'Gwei' ni ufupisho wa 'giga-wei', ikimaanisha 'bilioni Wei'. Gwei moja ni sawa na Wei bilioni moja. Wei yenyewe (iliyopewa jina la [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), muundaji wa [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) ni uniti ndogo zaidi ya ETH.
 
 ## Ada za gesi zinakokotolewa vipi? {#how-are-gas-fees-calculated}
 
@@ -101,12 +100,11 @@ Unaweza kueleza waziwazi kiasi ambacho uko tayari kulipa ili muamala wako utekel
 
 ## Kwa nini ada za gesi zipo? {#why-do-gas-fees-exist}
 
-Kwa ufupi, ada za gesi husaidia kuweka mtandao wa Ethereum salama. Kwa kuhitaji ada kwa kila ukokotoaji unaotekelezwa kwenye mtandao, tunazuia watendaji wabaya kutuma taka kwenye mtandao. Ili kuepuka mizunguko isiyo na kikomo ya bahati mbaya au ya uhasama au upotevu mwingine wa kikokotozi katika msimbo, kila muamala unahitajika kuweka kikomo cha hatua ngapi za kikokotozi za utekelezaji wa msimbo unaweza kutumia. Uniti ya msingi ya ukokotoaji ni "gesi".
+Kwa ufupi, ada za gesi husaidia kuweka mtandao wa Ethereum salama. Kwa kuhitaji ada kwa kila ukokotoaji unaotekelezwa kwenye mtandao, tunazuia wahalifu kutuma barua taka kwenye mtandao. Ili kuepuka mizunguko isiyo na kikomo ya bahati mbaya au ya uhasama au upotevu mwingine wa kikokotozi katika msimbo, kila muamala unahitajika kuweka kikomo cha hatua ngapi za kikokotozi za utekelezaji wa msimbo unaweza kutumia. Uniti ya msingi ya ukokotoaji ni "gesi".
 
 Ingawa muamala unajumuisha kikomo, gesi yoyote ambayo haijatumika katika muamala inarejeshwa kwa mtumiaji (k.m., `max fee - (base fee + tip)` inarejeshwa).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Kikomo cha gesi ni nini? {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ Uongezaji wa tabaka la 2 (l2) ni mpango wa msingi wa kuboresha sana gharama za g
 
 ## Kufuatilia ada za gesi {#monitoring-gas-fees}
 
-Ikiwa unataka kufuatilia bei za gesi, ili uweze kutuma ETH yako kwa bei nafuu, unaweza kutumia zana nyingi tofauti kama vile:
+Ikiwa unataka kufuatilia bei za gesi, ili uweze kutuma ETH yako kwa gharama nafuu, unaweza kutumia zana nyingi tofauti kama vile:
 
 - [Etherscan](https://etherscan.io/gastracker) _Kikadiriaji cha bei ya gesi ya muamala_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Kikadiriaji cha bei ya gesi ya muamala cha chanzo wazi_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Fuatilia na ufuatilie bei za gesi za Ethereum, na L2 ili kupunguza ada za muamala na kuokoa pesa_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Kiendelezi cha Chrome cha kukadiria gesi kinachoauni miamala ya urithi ya Aina ya 0 na miamala ya Aina ya 2 ya EIP-1559._
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Fuatilia bei za gesi za Ethereum na tabaka la 2 (l2) ili kupunguza ada za muamala na kuokoa pesa_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Kokotoa ada za gesi katika sarafu yako ya ndani kwa aina tofauti za miamala kwenye Mtandao Mkuu, Arbitrum, na Polygon._
-
-## Zana zinazohusiana {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API ya ukadiriaji wa gesi inayoendeshwa na jukwaa la data la mempool la kimataifa la Blocknative_
-- [Gas Network](https://gas.network) Oracles za Gesi za Mnyororoni. Usaidizi kwa misururu 35+. 
 
 ## Usomaji zaidi {#further-reading}
 
