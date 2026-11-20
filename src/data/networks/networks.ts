@@ -1,3 +1,4 @@
+// Test fixture for the bot-merge gate (mixed-files PR). Do not merge.
 import { StaticImageData } from "next/image"
 
 import { ChainName, NonEVMChainName } from "@/lib/types"

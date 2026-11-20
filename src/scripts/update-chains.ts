@@ -1,3 +1,4 @@
+// Test fixture for the bot-merge gate (mixed-files PR). Do not merge.
 import { execSync } from "child_process"
 import fs from "fs"
 import path from "path"
