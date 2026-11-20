@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server"
 
 import { getHourlyEthPrice, getHourlyGasPriceData } from "@/lib/data"
+import { createOptionsResponse } from "@/lib/utils/optionsResponse"
 
 export const revalidate = 3600
+
+export function OPTIONS() {
+  return createOptionsResponse(["GET", "HEAD"])
+}
 
 export async function GET() {
   const [gasPriceData, ethPriceData] = await Promise.all([
