@@ -2,7 +2,11 @@
 // limit: the provider's cap on the key is the backstop, and an environment without a
 // key answers 503. The per-browser limit in the UI is a courtesy, not a defence.
 
-import { type AskErrorCode, SITE_ORIGIN } from "@/lib/utils/ask"
+import {
+  type AskErrorCode,
+  type AskNoMatchCode,
+  SITE_ORIGIN,
+} from "@/lib/utils/ask"
 import { SORT_BY, TEXT_MATCH_TYPE } from "@/lib/utils/searchParams"
 
 import { ASK_FOLLOWUPS } from "@/data/ask-followups"
@@ -16,6 +20,7 @@ import {
   citedSources,
   groupExcerpts,
   keywordQuery,
+  matchBuyQuery,
   matchReferral,
   type RetrievedRecord,
   sitePath,
@@ -174,8 +179,12 @@ export async function POST(request: Request) {
   const records = await retrieve(question, locale)
   const grouped = groupExcerpts(records, { maxPages: MAX_PAGES })
   if (!grouped.length) {
+    // A local payment app or exchange: the country picker helps, "English only" does not.
+    const code: AskNoMatchCode = matchBuyQuery(question)
+      ? "buy-route"
+      : "no-match"
     return Response.json(
-      { error: "Nothing to ground an answer in", code: "no-match" },
+      { error: "Nothing to ground an answer in", code },
       { status: 422 }
     )
   }

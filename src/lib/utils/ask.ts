@@ -16,6 +16,12 @@ export interface Source {
 export type AskErrorCode = "address" | "empty" | "truncated"
 
 /**
+ * Codes on the route's 422 when nothing grounds an answer. `buy-route` means the query
+ * named a local payment app or exchange, so the panel points to the country picker.
+ */
+export type AskNoMatchCode = "no-match" | "buy-route"
+
+/**
  * A link the model wrote renders only if it is on this site or is the referral this
  * answer was given; anything else is likely injected. Resolved, not prefix-matched,
  * since `//evil.example` looks relative.

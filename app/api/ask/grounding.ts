@@ -4,6 +4,7 @@
 import { type Source } from "@/lib/utils/ask"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 
+import { ASK_BUY_TERMS, ASK_BUY_WHOLE_QUERY_TERMS } from "@/data/ask-buy-terms"
 import { type Referral, SEARCH_REFERRALS } from "@/data/search-referrals"
 
 export const SYSTEM_PROMPT = `You are the ethereum.org search assistant. Answer using ONLY the numbered excerpts provided.
@@ -138,15 +139,19 @@ export const withLeads = (
       : excerpt
   })
 
+/** Lowercased words separated by single spaces, so triggers match whole words only. */
+const normaliseQuery = (query: string) =>
+  query
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim()
+
 /** The sibling site that owns the question, by word-bounded trigger; longest wins. */
 export const matchReferral = (
   query: string,
   referrals: Referral[] = SEARCH_REFERRALS
 ): Referral | undefined => {
-  const haystack = ` ${query
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, " ")
-    .trim()} `
+  const haystack = ` ${normaliseQuery(query)} `
   let best: Referral | undefined
   let bestLength = 0
   for (const referral of referrals) {
@@ -159,6 +164,23 @@ export const matchReferral = (
     }
   }
   return best
+}
+
+/**
+ * Whether a query that grounded nothing names a local payment app or exchange, so the
+ * reader is better served by the get-ETH country picker than by the "English only"
+ * notice. Generic words count only as the whole query.
+ */
+export const matchBuyQuery = (
+  query: string,
+  terms: string[] = ASK_BUY_TERMS,
+  wholeQueryTerms: string[] = ASK_BUY_WHOLE_QUERY_TERMS
+): boolean => {
+  const words = normaliseQuery(query)
+  if (!words) return false
+  if (wholeQueryTerms.includes(words)) return true
+  const haystack = ` ${words} `
+  return terms.some((term) => haystack.includes(` ${term} `))
 }
 
 export const buildMessages = (
