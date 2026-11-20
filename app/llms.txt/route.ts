@@ -37,8 +37,9 @@ export const GET = async () => {
     renderNavSection(nav.learn, findFooter(nav.learn.label)),
     renderNavSection(nav.use, findFooter(nav.use.label)),
     renderNavSection(nav.build, findFooter(nav.build.label)),
-    renderNavSection(nav.participate, findFooter(nav.participate.label)),
-    renderNavSection(nav.research, findFooter(nav.research.label)),
+    // Footer columns still carry the previous menu's titles
+    renderNavSection(nav.roadmap, findFooter(t("research"))),
+    renderNavSection(nav.community, findFooter(t("participate"))),
     renderNavSection(nav.organizations, findFooter(nav.organizations.label)),
     SECURITY,
     renderLegalSection(dipperLinks),

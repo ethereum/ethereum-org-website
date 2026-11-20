@@ -248,6 +248,13 @@
   --animate-diagram-travel-y: diagram-travel-y 700ms ease-out both;
   --animate-diagram-pop: diagram-pop 500ms ease-out both;
   --animate-blink: blink 1.06s step-end infinite;
+  /* Nav menu: panel open/close, and content sliding between sections */
+  --animate-nav-panel-in: nav-panel-in 200ms ease-out;
+  --animate-nav-panel-out: nav-panel-out 150ms ease-in;
+  --animate-nav-enter-from-left: nav-enter-from-left 250ms ease-out;
+  --animate-nav-enter-from-right: nav-enter-from-right 250ms ease-out;
+  --animate-nav-exit-to-left: nav-exit-to-left 250ms ease-out;
+  --animate-nav-exit-to-right: nav-exit-to-right 250ms ease-out;
 
   @keyframes scroll-left {
     0% { transform: translateX(0%); }
@@ -291,6 +298,36 @@
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+  }
+
+  @keyframes nav-panel-in {
+    from { opacity: 0; transform: translateY(-0.5rem) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes nav-panel-out {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(-0.5rem) scale(0.98); }
+  }
+
+  @keyframes nav-enter-from-left {
+    from { opacity: 0; transform: translateX(-3rem); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes nav-enter-from-right {
+    from { opacity: 0; transform: translateX(3rem); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes nav-exit-to-left {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(-3rem); }
+  }
+
+  @keyframes nav-exit-to-right {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(3rem); }
   }
 }
 

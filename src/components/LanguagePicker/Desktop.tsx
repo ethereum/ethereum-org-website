@@ -43,7 +43,9 @@ const DesktopLanguagePicker = ({
         >
           <Languages className="align-middle text-2xl" />
           &nbsp;
-          <span className="max-lg:hidden">{languageLabel}&nbsp;</span>
+          <span className="group-data-[density=compact]/navbar:hidden! max-lg:hidden">
+            {languageLabel}&nbsp;
+          </span>
           {locale.toUpperCase()}
         </Button>
       </PopoverTrigger>
