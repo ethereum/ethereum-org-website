@@ -513,6 +513,22 @@ export const networkUpgrades: NetworkUpgrade[] = [
 ]
 `
 
+test("records in arrays after networkUpgrades are ignored", () => {
+  const ids = parseUpgrades(
+    upgradesLiteral +
+      `
+export const bpoUpgrades: BpoUpgrade[] = [
+  {
+    id: 'bpo1',
+    name: 'BPO1',
+    metaEipId: 8134,
+  },
+];
+`
+  ).map((u) => u.id)
+  expect(ids).toEqual(["fusaka", "genesis"])
+})
+
 test("activation details survive a legitimate zero", () => {
   const [fusaka, genesis] = parseUpgrades(upgradesLiteral)
   expect(fusaka.activationDetails).toEqual({
