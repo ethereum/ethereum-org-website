@@ -33,6 +33,12 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           href: "/smart-contracts/",
         },
         {
+          id: "learn/courses",
+          label: t("nav-courses-label"),
+          description: t("nav-courses-description"),
+          href: "/courses/",
+        },
+        {
           id: "learn/quizzes",
           label: t("nav-quizzes-label"),
           description: t("nav-quizzes-description"),

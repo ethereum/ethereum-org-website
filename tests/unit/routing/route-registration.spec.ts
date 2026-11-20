@@ -120,7 +120,7 @@ test.describe("UI pages map to their own namespace", () => {
     "/contributing/translation-program/translatathon/leaderboard/",
   ]
   // Prefixes whose subpages intentionally share the section namespace.
-  const SHARED_PREFIXES = ["/community/events/"]
+  const SHARED_PREFIXES = ["/community/events/", "/courses/"]
 
   const uiPages = discoverStaticPages()
     .map((p) => (p === "/" ? "/" : `${p}/`))

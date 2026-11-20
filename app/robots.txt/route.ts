@@ -16,6 +16,12 @@ const PRODUCTION = `# Content Signals (https://contentsignals.org). Site content
 User-Agent: *
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
+# Courses are meant to be played by people: keep crawlers off lessons, mastery
+# checks and the profile. Hub and course overview pages stay crawlable.
+Disallow: /courses/*/*/
+Disallow: /*/courses/*/*/
+Disallow: /courses/profile/
+Disallow: /*/courses/profile/
 
 Host: ${SITE_URL}
 Sitemap: ${SITE_URL}/sitemap.xml

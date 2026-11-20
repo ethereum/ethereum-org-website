@@ -1,0 +1,211 @@
+import type { Course } from "./types"
+
+export const ethCourse: Course = {
+  id: "eth",
+  level: "intermediate",
+  theme: "blue",
+  art: "diamond",
+  lessons: [
+    {
+      id: "what",
+      icon: "coins",
+      learnMore: "/what-is-ether/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2, art: "diamond" },
+        {
+          id: "price",
+          type: "choice",
+          options: ["network", "company", "eth"],
+          correct: ["eth"],
+        },
+        { id: "sort", type: "interactive", widget: "ether-sort" },
+        {
+          id: "native",
+          type: "choice",
+          options: ["account", "contract", "wallet"],
+          correct: ["account"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "units",
+      icon: "calculator",
+      learnMore: "/developers/docs/intro-to-ether/#denominations",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2, art: "coins" },
+        {
+          id: "biggest",
+          type: "choice",
+          options: ["wei", "gwei", "eth"],
+          correct: ["eth"],
+        },
+        { id: "convert", type: "interactive", widget: "unit-converter" },
+        {
+          id: "price",
+          type: "choice",
+          options: ["same", "billion", "fraction"],
+          correct: ["billion"],
+        },
+        {
+          id: "equal",
+          type: "match",
+          pairs: ["wei", "gwei", "eth", "million"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "supply",
+      icon: "flame",
+      learnMore: "/what-is-ether/supply/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "predict",
+          type: "choice",
+          options: ["more", "less", "same"],
+          correct: ["more"],
+        },
+        { id: "balance", type: "interactive", widget: "supply-balance" },
+        {
+          id: "who",
+          type: "choice",
+          options: ["stake", "activity", "price"],
+          correct: ["stake"],
+        },
+        {
+          id: "recap",
+          type: "fill",
+          blanks: ["validators", "base", "shrinks"],
+          extras: ["founders", "grows", "fixed"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "wrapped",
+      icon: "gift",
+      learnMore: "/wrapped-eth/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "predict",
+          type: "choice",
+          options: ["both", "one", "less"],
+          correct: ["one"],
+        },
+        { id: "wrap", type: "interactive", widget: "wrap-eth" },
+        {
+          id: "gas",
+          type: "choice",
+          options: ["value", "fee", "send"],
+          correct: ["fee"],
+        },
+        {
+          id: "peg",
+          type: "choice",
+          options: ["unwrap", "company", "fixed"],
+          correct: ["unwrap"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "staking",
+      icon: "piggy",
+      learnMore: "/staking/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2, art: "vault" },
+        {
+          id: "small",
+          type: "choice",
+          options: ["no", "own", "pool"],
+          correct: ["pool"],
+        },
+        {
+          id: "control",
+          type: "order",
+          items: ["solo", "operator", "pool", "exchange"],
+        },
+        {
+          id: "risks",
+          type: "choice",
+          options: ["slashing", "offline", "trust", "guaranteed"],
+          correct: ["slashing", "offline", "trust"],
+          multi: true,
+        },
+        {
+          id: "exchange",
+          type: "choice",
+          options: ["nothing", "control", "forever"],
+          correct: ["control"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+  ],
+  exam: [
+    {
+      id: "own",
+      source: "/what-is-ether/",
+      type: "choice",
+      options: ["eth", "shares", "network"],
+    },
+    {
+      id: "native",
+      source: "/developers/docs/accounts/#an-account-examined",
+      type: "choice",
+      options: ["network", "same", "app"],
+    },
+    {
+      id: "smallest",
+      source: "/developers/docs/intro-to-ether/#denominations",
+      type: "choice",
+      options: ["eth", "gwei", "wei"],
+    },
+    {
+      id: "gwei",
+      source: "/developers/docs/intro-to-ether/#denominations",
+      type: "choice",
+      options: ["same", "big", "fraction"],
+    },
+    {
+      id: "shrink",
+      source: "/what-is-ether/supply/#eth-supply-today",
+      type: "choice",
+      options: ["busy", "quiet", "fixed"],
+    },
+    {
+      id: "rules",
+      source: "/what-is-ether/supply/#why-eth-supply-matters",
+      type: "choice",
+      options: ["founders", "bank", "rules"],
+    },
+    {
+      id: "discount",
+      source: "/wrapped-eth/",
+      type: "choice",
+      options: ["normal", "backed", "name"],
+    },
+    {
+      id: "keep",
+      source: "/wrapped-eth/",
+      type: "choice",
+      options: ["keep", "all", "little"],
+    },
+    {
+      id: "risks",
+      source: "/staking/",
+      type: "choice",
+      options: ["slashing", "forever", "offline", "trust"],
+      multi: true,
+    },
+    {
+      id: "solo",
+      source: "/staking/",
+      type: "choice",
+      options: ["exchange", "solo", "pool"],
+    },
+  ],
+}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="0.3" cy="0.25" r="0.9">
+      <stop offset="0" stop-color="#8B4DF0"/>
+      <stop offset="1" stop-color="#4E16B0"/>
+    </radialGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A1260"/>
+      <stop offset="1" stop-color="#170838"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <!-- Sparkles -->
+  <path d="M386 286 l7 19 19 7 -19 7 -7 19 -7 -19 -19 -7 19 -7z" fill="#FCD34D"/>
+  <path d="M128 296 l5 13 13 5 -13 5 -5 13 -5 -13 -13 -5 13 -5z" fill="#FFFFFF" opacity="0.7"/>
+  <path d="M150 182 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#FFFFFF" opacity="0.5"/>
+  <!-- ETH glyph -->
+  <g transform="translate(175 168) scale(13.5)">
+    <path d="M0.015625 9.67755L5.98891 0.0166016L5.98892 13.0997L0.015625 9.67755Z" fill="#FFFFFF"/>
+    <path d="M5.98369 14.2877V19.0674L0.0780397 10.8301L5.98369 14.2877Z" fill="#F1EAFE"/>
+    <path d="M6.00773 14.2877V19.0674L11.9133 10.8301L6.00773 14.2877Z" fill="#C4A8F7"/>
+    <path d="M6.00773 13.0997L11.9809 9.67761L6.00773 0.0166016V13.0997Z" fill="#DCCBFC"/>
+  </g>
+  <!-- Graduation cap, tipped at a jaunty angle -->
+  <g transform="rotate(-10 256 170)">
+    <path d="M200 162 L312 162 L304 214 Q256 232 208 214 Z" fill="#1E0B4A"/>
+    <path d="M256 104 L384 156 L256 208 L128 156 Z" fill="url(#board)"/>
+    <path d="M256 104 L384 156 L256 166 L128 156 Z" fill="#FFFFFF" opacity="0.08"/>
+    <circle cx="256" cy="156" r="9" fill="#FCD34D"/>
+    <path d="M256 156 L356 176 L356 236" fill="none" stroke="#FCD34D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M346 232 L366 232 L372 268 L340 268 Z" fill="#F59E0B"/>
+    <rect x="344" y="226" width="24" height="10" rx="4" fill="#FCD34D"/>
+  </g>
+</svg>

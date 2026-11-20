@@ -14,6 +14,7 @@ const messages = common as Record<string, string>
 // Pages whose crumb text comes from a `label` prop (frontmatter or data), or
 // that render no crumbs at all
 const LABEL_FROM_PROPS = [
+  "courses/",
   "developers/tutorials/",
   "latest/",
   "stories/",
