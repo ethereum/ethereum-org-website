@@ -69,3 +69,7 @@ You might be able to withdraw to some layer 2s directly from an exchange. Check 
 ### Can I go back to Ethereum mainnet after I bridge my tokens to L2? {#can-i-go-back-to-ethereum-mainnet-after-i-bridge-my-tokens-to-l2}
 
 Yes, you can always move your funds back to the mainnet using the same bridge.
+
+Withdrawals can take longer than deposits. With the official bridge of an [optimistic rollup](/glossary/#optimistic-rollup), moving funds back to Ethereum takes about seven days. Third-party bridges are usually faster, for a fee.
+
+If you are moving funds back only to sell them, you may not need to: some exchanges accept deposits directly on layer 2 networks. See [how to sell ETH and cash out](/guides/how-to-sell-eth/).
