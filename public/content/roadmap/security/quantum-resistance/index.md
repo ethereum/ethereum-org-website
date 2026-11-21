@@ -104,10 +104,10 @@ The Ethereum Foundation formed a dedicated Post-Quantum Security team in January
 
 ### Current activity (as of November 2026) {#current-activity}
 
-- **Weekly interop devnets**: More than 10 client teams participate in regular post-quantum interoperability testing, including Lighthouse, Grandine, Zeam, Ream Labs, and PierTwo.
-- **Poseidon Prize**: A $1 million research prize targeting improvements in hash-based cryptographic primitives.
+- **Interop devnets**: About ten client teams are building post-quantum consensus clients against leanSpec and test them together in regular interoperability devnets.
+- **Poseidon Prize**: A $1 million research prize targeting improvements in hash-based cryptographic primitives. The [Poseidon1 collision prize](https://www.poseidon-initiative.info/) has been paused since 1 August 2026.
 - **Open-source implementations**: leanXMSS, leanVM, leanSpec (Python), leanSig (Rust), and leanMultisig are all available under the [leanEthereum GitHub organization](https://github.com/leanEthereum).
-- **2nd Annual PQ Research Retreat**: Was scheduled for 9-Oct-2026 to 12-Oct-2026 in Cambridge, UK.
+- **2nd Annual Post-Quantum Research Workshop**: Held from 10 to 12 October 2026 in Cambridge, UK. [Session recordings](https://pq.ethereum.org/cambridge/) are available.
 - **Post-quantum key registration**: [EIP-8483](https://github.com/ethereum/EIPs/pull/12609) (draft) would let validators commit to a future post-quantum key through their withdrawal address, before a quantum computer could forge BLS signatures. It was proposed for inclusion in the Hegotá upgrade in [November 2026](https://github.com/ethereum/pm/issues/2291).
 - **NIST Alignment**: Ethereum's work builds upon the post-quantum cryptography standards finalized by NIST in August 2024 (such as ML-KEM, ML-DSA, and SLH-DSA).
 
