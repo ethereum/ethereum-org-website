@@ -110,7 +110,7 @@
     "remark-gfm": "^4.0.1",
     "sharp": "0.35.5",
     "shiki": "^4.0.2",
-    "swiper": "^12.1.2",
+    "swiper": "^12.2.0",
     "tailwind-merge": "^3.5.0",
     "tailwind-variants": "^3.2.2",
     "topojson-client": "^3.1.0",
