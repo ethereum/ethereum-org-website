@@ -295,11 +295,11 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Decentralized RPC network served by independent suppliers
     - Free, keyless public endpoints with published rate limits
-    - 50+ mainnet networks across EVM, Cosmos, Solana, NEAR, Sui, and Tron
+    - Ethereum Mainnet, Sepolia, and layer 2s including Arbitrum, Base, Optimism, Linea, Scroll, and zkSync Era
     - Testnet endpoints available
-    - PATH excludes non-archival endpoints from requests requiring historical data
+    - Archival data support
     - Requests route around problems automatically
-    - Ethereum endpoint: [https://eth.api.pocket.network](https://eth.api.pocket.network)
+    - Ethereum endpoint: `https://eth.api.pocket.network`
     - [Public API portal](https://api.pocket.network/)
 
 - [**QuickNode**](https://www.quicknode.com)
