@@ -290,25 +290,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Personal Account Manager
     - Shared, archive, backup and dedicated nodes
 
-- [**Pocket Network**](https://www.pokt.network/)
-  - [Docs](https://docs.pokt.network/)
+- [**Pocket Network**](https://pocket.network/)
+  - [Docs](https://docs.pocket.network/)
   - Features
-    - Decentralized RPC Protocol and Marketplace
-    - 1M Requests Per Day Free Tier (per endpoint, max 2)
-    - Pre-Stake+ Program (if you need more than 1M requests per day)
-    - 15+ Blockchains Supported
-    - 6400+ Nodes earning POKT for serving applications
-    - Archival Node, Archival Node w/ Tracing, & Testnet Node Support
-    - Ethereum Mainnet Node Client Diversity
-    - No Single Point of Failure
-    - Zero Downtime
-    - Cost-Effective Near-Zero Tokenomics (stake POKT once for network bandwidth)
-    - No monthly sunk costs, turn your infrastructure into an asset
-    - Load-Balancing built into the Protocol
-    - Infinitely scale the number of requests per day and nodes per hour as you go
-    - The most private, censorship-resistant option
-    - Hands-on developer support
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) dashboard and analytics
+    - Decentralized RPC network served by independent suppliers
+    - Free, keyless public endpoints with published rate limits
+    - Ethereum Mainnet, Sepolia, and layer 2s including Arbitrum, Base, Optimism, Linea, Scroll, and zkSync Era
+    - Testnet endpoints available
+    - Archival data support
+    - Requests route around problems automatically
+    - Ethereum endpoint: `https://eth.api.pocket.network`
+    - [Public API portal](https://api.pocket.network/)
 
 - [**QuickNode**](https://www.quicknode.com)
   - [Docs](https://www.quicknode.com/docs/)
