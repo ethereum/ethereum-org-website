@@ -16,6 +16,8 @@ import {
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
+import { safeLocale } from "@/lib/utils/intl"
+
 import {
   BLOB_ROWS,
   COLUMNS_PER_DRAWN,
@@ -102,7 +104,7 @@ export function ColumnSubnetsPlayer({
   }, [t, format])
 
   const list = useMemo(
-    () => new Intl.ListFormat(locale, { type: "conjunction" }),
+    () => new Intl.ListFormat(safeLocale(locale), { type: "conjunction" }),
     [locale]
   )
   const node = t(`peer-das-label-node-${nodeId}`)

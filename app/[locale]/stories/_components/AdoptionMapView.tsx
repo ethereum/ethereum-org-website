@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { safeLocale } from "@/lib/utils/intl"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import type { WorldMapShape } from "@/lib/world-map"
@@ -148,7 +149,7 @@ const AdoptionMapView = ({
   source,
 }: AdoptionMapViewProps) => {
   const t = useTranslations("page-stories")
-  const locale = useLocale()
+  const locale = safeLocale(useLocale())
   const [selected, setSelected] = useState<string>()
   const [hovered, setHovered] = useState<string>()
   const [shapes, setShapes] = useState<WorldMapShape[]>([])
