@@ -71,11 +71,18 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 
 [Farcaster](https://farcaster.xyz/) is a "sufficiently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
 
+### Hey {#hey}
+
+[Hey](https://hey.xyz/) (formerly Lenster) is an open-source, decentralized social app built on [Lens Protocol](https://lens.xyz/). It feels familiar to anyone who has used X: you can post, comment, quote, follow people, and join groups. The difference is that your profile, followers, and posts belong to you rather than to the app.
+
+Because your account and social graph live on Lens rather than inside Hey's own servers, you can take your identity and audience to any other Lens-compatible app without starting over. Users sign in by connecting their [wallet](/glossary/#wallet), and creators can earn directly from their community through onchain features like collectible posts and tips. Hey's [source code](https://github.com/heyxyz/hey) is publicly available under the AGPL-3.0 license.
+
 ## Use decentralized social networks {#use-decentralized-social-networks}
 
 - **[Status.app](https://status.app/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
+- **[Hey](https://hey.xyz/)** - _Hey is an open-source, decentralized social app built on Lens Protocol where you own your profile, posts, and followers._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
 - **[Ethereum Follow Protocol](https://efp.app/)** - _Ethereum Follow Protocol is a fully decentralized onchain social graph for Ethereum accounts, advancing the vision of a modular Ethereum identity stack, complementing ENS and SIWE._
 - **[Ethereum Comments Protocol](https://www.ethcomments.xyz/)** - _A new, programmable social content primitive on Ethereum to put your thoughts onchain._
