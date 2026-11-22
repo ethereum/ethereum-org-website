@@ -73,9 +73,7 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 
 ### Hey {#hey}
 
-[Hey](https://hey.xyz/) (formerly Lenster) is an open-source, decentralized social app built on [Lens Protocol](https://lens.xyz/). It feels familiar to anyone who has used X: you can post, comment, quote, follow people, and join groups. The difference is that your profile, followers, and posts belong to you rather than to the app.
-
-Because your account and social graph live on Lens rather than inside Hey's own servers, you can take your identity and audience to any other Lens-compatible app without starting over. Users sign in by connecting their [wallet](/glossary/#wallet), and creators can earn directly from their community through onchain features like collectible posts and tips. Hey's [source code](https://github.com/heyxyz/hey) is publicly available under the AGPL-3.0 license.
+[Hey](https://hey.xyz/) (formerly Lenster) is an open-source social app built on [Lens Protocol](https://lens.xyz/), where profiles and social graphs live onchain and can be used across other Lens apps.
 
 ## Use decentralized social networks {#use-decentralized-social-networks}
 
