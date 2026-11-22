@@ -128,6 +128,8 @@ The challenger will then choose what assertion it wants to challenge. The dividi
 
 The asserter is required to provide a “one-step proof” verifying the validity of the disputed single-step computation. If the asserter fails to provide the one-step proof, or the L1 verifier deems the proof invalid, they lose the challenge.
 
+<OptimisticRollupDiagram />
+
 Some notes about this type of fraud proof:
 
 1. Multi-round interactive fraud proving is considered efficient because it minimizes the work the L1 chain must do in dispute arbitration. Instead of replaying the entire transaction, the L1 chain only needs to re-execute one step in the rollup's execution.
