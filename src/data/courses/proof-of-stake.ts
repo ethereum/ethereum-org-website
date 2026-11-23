@@ -66,12 +66,7 @@ export const proofOfStakeCourse: Course = {
       learnMore: "/developers/docs/consensus-mechanisms/pos/block-proposal/",
       steps: [
         { id: "intro", type: "concept", paragraphs: 2 },
-        {
-          id: "hour",
-          type: "choice",
-          options: ["minute", "slots", "second"],
-          correct: ["slots"],
-        },
+        { id: "hour", type: "interactive", widget: "slot-calc" },
         {
           id: "missed",
           type: "choice",
@@ -92,7 +87,7 @@ export const proofOfStakeCourse: Course = {
       icon: "badge",
       learnMore: "/developers/docs/consensus-mechanisms/pos/#finality",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2, art: "diamond" },
+        { id: "intro", type: "concept", paragraphs: 3, art: "diamond" },
         { id: "clock", type: "interactive", widget: "finality-clock" },
         {
           id: "reverse",
@@ -115,7 +110,13 @@ export const proofOfStakeCourse: Course = {
       learnMore:
         "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
+        { id: "intro", type: "concept", paragraphs: 4 },
+        {
+          id: "rules",
+          type: "concept",
+          paragraphs: 4,
+          list: { after: 3, items: 3 },
+        },
         { id: "sort", type: "interactive", widget: "validator-sort" },
         {
           id: "day",
@@ -123,6 +124,7 @@ export const proofOfStakeCourse: Course = {
           options: ["stake", "nothing", "rewards"],
           correct: ["rewards"],
         },
+        { id: "safe", type: "concept", paragraphs: 4 },
         {
           id: "together",
           type: "choice",

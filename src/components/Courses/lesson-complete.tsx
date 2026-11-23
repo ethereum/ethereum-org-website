@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Crosshair, Sparkles, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
@@ -14,7 +14,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import type { PageLink } from "@/data/courses"
 
-import CourseArt from "./art/course-art"
+import CourseArt from "./art/lazy-course-art"
 import Confetti from "./confetti"
 import { LearnMoreCard } from "./learn-more"
 import LevelUp, { useLevelName } from "./level-up"
@@ -24,6 +24,7 @@ import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
 import type { LessonReward } from "./useCourseProgress"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useRouter } from "@/i18n/navigation"
 
 interface LessonCompleteProps {
@@ -49,6 +50,46 @@ const SPARKS = Array.from({ length: 10 }, (_, i) => ({
 
 const BONUS_AT = 1.25
 const XP_LAND = 1.7
+/** When each stage's buttons appear */
+const ACTIONS_AT = { summary: 2.4, streak: 2 }
+
+/**
+ * Enter takes a completion screen's main action, as it does through the
+ * lesson, once `armAfter` seconds have passed (when its buttons appear). The
+ * press that finished can reach this listener too, so only a later press
+ * counts: no skipped screens. `stage` re-arms it for each screen
+ */
+export const useEnterAction = (
+  action: () => void,
+  stage: string,
+  armAfter: number
+) => {
+  const actionRef = useRef(action)
+  useEffect(() => {
+    actionRef.current = action
+  })
+  useEffect(() => {
+    const armedAt = performance.now() + armAfter * 1000
+    const onEnter = (event: KeyboardEvent) => {
+      if (event.key !== "Enter" || event.repeat || event.isComposing) return
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+        return
+      if (event.defaultPrevented || event.timeStamp < armedAt) return
+      const target = event.target as HTMLElement | null
+      // A focused control keeps its own Enter
+      if (
+        target?.closest(
+          "a, button, input, textarea, select, [contenteditable], [role=dialog]"
+        )
+      )
+        return
+      event.preventDefault()
+      actionRef.current()
+    }
+    window.addEventListener("keydown", onEnter)
+    return () => window.removeEventListener("keydown", onEnter)
+  }, [stage, armAfter])
+}
 
 const tierFor = (accuracy: number, perfect: boolean) =>
   perfect
@@ -71,38 +112,24 @@ const LessonComplete = ({
 }: LessonCompleteProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
+  const { isRtl } = useRtlFlip()
   const reduceMotion = !!useReducedMotion()
   const animate = !reduceMotion
   // The streak gets its own moment, once a day, after the lesson summary
   const [stage, setStage] = useState<"summary" | "streak">("summary")
   // Each screen replaces one that may have been scrolled down
   useEffect(() => {
-    window.scrollTo({ top: 0 })
-  }, [stage])
+    window.scrollTo({ top: 0, behavior: animate ? "smooth" : "instant" })
+  }, [stage, animate])
 
-  // Enter takes the primary action, as it does through the lesson
   const router = useRouter()
   const showStreak = stage === "summary" && reward.streakExtended
-  useEffect(() => {
-    const onEnter = (event: KeyboardEvent) => {
-      if (event.key !== "Enter" || event.repeat || event.isComposing) return
-      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
-        return
-      const target = event.target as HTMLElement | null
-      // A focused control keeps its own Enter
-      if (
-        target?.closest(
-          "a, button, input, textarea, select, [contenteditable], [role=dialog]"
-        )
-      )
-        return
-      event.preventDefault()
-      if (showStreak) setStage("streak")
-      else router.push(nextHref ?? courseHref)
-    }
-    window.addEventListener("keydown", onEnter)
-    return () => window.removeEventListener("keydown", onEnter)
-  }, [showStreak, nextHref, courseHref, router])
+  useEnterAction(
+    () =>
+      showStreak ? setStage("streak") : router.push(nextHref ?? courseHref),
+    stage,
+    animate ? ACTIONS_AT[stage] : 0
+  )
 
   // The lesson's XP lands first, then a perfect run's bonus tops it up
   const baseXp = useCountUp(0, reward.xp - reward.bonus, {
@@ -167,7 +194,7 @@ const LessonComplete = ({
           <motion.div
             key="summary"
             className="flex w-full flex-col items-center gap-6"
-            exit={animate ? { opacity: 0, x: -40 } : undefined}
+            exit={animate ? { opacity: 0, x: isRtl ? 40 : -40 } : undefined}
           >
             <div className="relative w-36">
               {animate && <Confetti />}
@@ -312,7 +339,7 @@ const LessonComplete = ({
           <motion.div
             key="streak"
             className="w-full"
-            initial={animate ? { opacity: 0, x: 40 } : false}
+            initial={animate ? { opacity: 0, x: isRtl ? -40 : 40 } : false}
             animate={{ opacity: 1, x: 0 }}
           >
             <StreakCelebration streak={reward.streak} />
@@ -321,7 +348,11 @@ const LessonComplete = ({
       </AnimatePresence>
 
       {showStreak ? (
-        <motion.div key="continue" className="w-full max-w-sm" {...appear(2.4)}>
+        <motion.div
+          key="continue"
+          className="mt-6 w-full max-w-sm"
+          {...appear(ACTIONS_AT.summary)}
+        >
           <Button
             variant="ghost"
             onClick={() => setStage("streak")}
@@ -333,8 +364,11 @@ const LessonComplete = ({
       ) : (
         <motion.div
           key="nav"
-          className="flex w-full flex-col items-center gap-6"
-          {...appear(stage === "streak" ? 2 : 2.4)}
+          className={cn(
+            "flex w-full flex-col items-center gap-6",
+            stage === "summary" && "mt-6"
+          )}
+          {...appear(ACTIONS_AT[stage])}
         >
           {/* Same width as the bars above */}
           <div className="flex w-full max-w-sm flex-col gap-3">

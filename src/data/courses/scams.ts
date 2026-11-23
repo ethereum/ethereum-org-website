@@ -119,7 +119,12 @@ export const scamsCourse: Course = {
       icon: "shield",
       learnMore: "/community/support/scams/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "intro",
+          type: "concept",
+          paragraphs: 2,
+          list: { after: 1, items: 2 },
+        },
         {
           id: "phrase",
           type: "choice",

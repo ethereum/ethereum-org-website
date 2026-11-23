@@ -51,26 +51,37 @@ export const decryptExamKey = (value: string, secret: string): ExamKey => {
   return JSON.parse(gunzipSync(zipped).toString("utf8"))
 }
 
+/** Questions of the course the key can't grade: unanswered, or wrong ids */
+const coverageProblems = (key: ExamKey, course: Course) => {
+  const problems: string[] = []
+  const answers = key[course.id] ?? {}
+  for (const question of course.exam) {
+    const where = `${course.id}/${question.id}`
+    const right = answers[question.id]
+    if (!right?.length) {
+      problems.push(`${where}: no answer`)
+      continue
+    }
+    for (const id of right)
+      if (!question.options.includes(id))
+        problems.push(`${where}: "${id}" is not an option`)
+    if (!question.multi && right.length !== 1)
+      problems.push(`${where}: single choice with ${right.length} answers`)
+  }
+  return problems
+}
+
+/** Whether the key grades every question of the course */
+export const examKeyCovers = (key: ExamKey, course: Course) =>
+  coverageProblems(key, course).length === 0
+
 /** Problems with a key against the courses' questions; empty when it fits */
 export const checkExamKey = (key: ExamKey, courses: Course[]) => {
   const problems: string[] = []
   for (const course of courses) {
-    const answers = key[course.id] ?? {}
-    for (const question of course.exam) {
-      const where = `${course.id}/${question.id}`
-      const right = answers[question.id]
-      if (!right?.length) {
-        problems.push(`${where}: no answer`)
-        continue
-      }
-      for (const id of right)
-        if (!question.options.includes(id))
-          problems.push(`${where}: "${id}" is not an option`)
-      if (!question.multi && right.length !== 1)
-        problems.push(`${where}: single choice with ${right.length} answers`)
-    }
+    problems.push(...coverageProblems(key, course))
     const known = new Set(course.exam.map(({ id }) => id))
-    for (const id of Object.keys(answers))
+    for (const id of Object.keys(key[course.id] ?? {}))
       if (!known.has(id)) problems.push(`${course.id}/${id}: no such question`)
   }
   return problems

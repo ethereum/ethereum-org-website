@@ -1,8 +1,7 @@
 import { createChallenge, verifySolution } from "altcha-lib"
 import { deriveKey } from "altcha-lib/algorithms/sha"
 import type { Payload } from "altcha-lib/types"
-import { and, eq, gt } from "drizzle-orm"
-import { createHmac, randomUUID } from "node:crypto"
+import { createHmac } from "node:crypto"
 
 import { getDb } from "@/lib/db"
 import { verification } from "@/lib/db/schema"
@@ -53,24 +52,18 @@ export const redeemChallenge = async (header: string | null) => {
   }).catch(() => null)
   if (!result?.verified || !payload.challenge.signature) return false
 
-  const identifier = `altcha:${payload.challenge.signature}`
-  const db = getDb()
-  const [used] = await db
-    .select({ id: verification.id })
-    .from(verification)
-    .where(
-      and(
-        eq(verification.identifier, identifier),
-        gt(verification.expiresAt, new Date())
-      )
-    )
-    .limit(1)
-  if (used) return false
-  await db.insert(verification).values({
-    id: randomUUID(),
-    identifier,
-    value: "used",
-    expiresAt: new Date(Date.now() + EXPIRES_MS),
-  })
-  return true
+  // The row's id comes from the challenge, so a second use conflicts, even
+  // when both arrive at once. It outlives the challenge's own expiry
+  const id = `altcha:${payload.challenge.signature}`
+  const inserted = await getDb()
+    .insert(verification)
+    .values({
+      id,
+      identifier: id,
+      value: "used",
+      expiresAt: new Date(Date.now() + EXPIRES_MS),
+    })
+    .onConflictDoNothing({ target: verification.id })
+    .returning({ id: verification.id })
+  return inserted.length > 0
 }

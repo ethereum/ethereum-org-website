@@ -1,4 +1,4 @@
-import { Pointer } from "lucide-react"
+import { Info } from "lucide-react"
 import type { ReactNode } from "react"
 
 import { cn } from "@/lib/utils/cn"
@@ -46,7 +46,7 @@ export const StepHint = ({
       className
     )}
   >
-    <Pointer aria-hidden className={cn("mt-0.5 size-5 shrink-0", courseText)} />
+    <Info aria-hidden className={cn("mt-0.5 size-5 shrink-0", courseText)} />
     <span>{children}</span>
   </p>
 )

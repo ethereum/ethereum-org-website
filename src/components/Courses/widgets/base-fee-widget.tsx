@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef, useState } from "react"
-import { Flame } from "lucide-react"
+import { Flame, RotateCcw } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -12,7 +12,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 import { chunkyButtonSecondary, courseText } from "../theme"
 
 import type { WidgetProps } from "./types"
-import WidgetShell from "./widget-shell"
+import WidgetShell, { widgetActions } from "./widget-shell"
 
 const START_FEE = 10
 // Blocks aim for half full; a full or empty one moves the next fee 12.5%
@@ -67,6 +67,12 @@ const BaseFeeWidget = ({ onComplete }: WidgetProps) => {
     }
   }
 
+  const reset = () => {
+    setBlocks([])
+    setFee(START_FEE)
+    setLast(null)
+  }
+
   const value = (n: number) =>
     t("page-courses-widget-base-fee-gwei", { value: gwei.format(n) })
 
@@ -82,32 +88,34 @@ const BaseFeeWidget = ({ onComplete }: WidgetProps) => {
         </p>
       </div>
 
-      {/* Recent blocks: fill level against the half-full target */}
+      {/* Recent blocks: one fixed-width column each, against the half-full line */}
       <div aria-hidden className="flex flex-col gap-1">
-        <div className="relative flex h-32 items-end gap-2 rounded-2xl bg-background p-2">
+        <div className="relative h-32 rounded-2xl bg-background p-2">
+          <div className="grid h-full grid-cols-5 gap-2">
+            {blocks.map(({ key, fill }) => (
+              <div
+                key={key}
+                className="flex h-full items-end overflow-hidden rounded-lg border-2 border-(--course-soft)"
+              >
+                <div
+                  className="w-full bg-(--course) transition-[height] duration-300 motion-reduce:transition-none"
+                  style={{ height: `${fill * 100}%` }}
+                />
+              </div>
+            ))}
+          </div>
           <div className="pointer-events-none absolute inset-x-2 top-1/2 border-t-2 border-dashed border-body-medium" />
           {blocks.length === 0 && (
-            <p className="m-auto text-sm text-body-medium">
+            <p className="absolute inset-x-2 bottom-3 m-0 text-center text-sm text-body-medium">
               {t("page-courses-widget-base-fee-empty-chart")}
             </p>
           )}
-          {blocks.map(({ key, fill }) => (
-            <div
-              key={key}
-              className="flex h-full flex-1 items-end overflow-hidden rounded-lg border-2 border-(--course-soft)"
-            >
-              <div
-                className="w-full bg-(--course) transition-[height] duration-300 motion-reduce:transition-none"
-                style={{ height: `${fill * 100}%` }}
-              />
-            </div>
-          ))}
         </div>
-        <div className="flex gap-2 px-2">
+        <div className="grid grid-cols-5 gap-2 px-2">
           {blocks.map(({ key, fee: charged }) => (
             <span
               key={key}
-              className="flex-1 text-center text-sm font-bold whitespace-nowrap tabular-nums"
+              className="text-center text-sm font-bold whitespace-nowrap tabular-nums"
             >
               {short.format(charged)}
             </span>
@@ -118,7 +126,7 @@ const BaseFeeWidget = ({ onComplete }: WidgetProps) => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row">
+      <div className={widgetActions}>
         {FILLS.map(({ id, fill }) => (
           <Button
             key={id}
@@ -126,7 +134,7 @@ const BaseFeeWidget = ({ onComplete }: WidgetProps) => {
             onClick={() => add(id, fill)}
             className={cn(
               chunkyButtonSecondary,
-              "h-auto flex-1 px-4 py-2 whitespace-normal"
+              "h-auto px-4 py-2 whitespace-normal"
             )}
           >
             {t(`page-courses-widget-base-fee-add-${id}`)}
@@ -139,9 +147,17 @@ const BaseFeeWidget = ({ onComplete }: WidgetProps) => {
           ? t(`page-courses-widget-base-fee-did-${last}`, { value: value(fee) })
           : t("page-courses-widget-base-fee-start", { value: value(fee) })}
       </p>
-      <p className="m-0 text-sm text-body-medium">
-        {t("page-courses-widget-base-fee-example")}
-      </p>
+
+      {blocks.length > 0 && (
+        <Button
+          variant="ghost"
+          onClick={reset}
+          className={chunkyButtonSecondary}
+        >
+          <RotateCcw aria-hidden />
+          {t("page-courses-widget-base-fee-reset")}
+        </Button>
+      )}
     </WidgetShell>
   )
 }

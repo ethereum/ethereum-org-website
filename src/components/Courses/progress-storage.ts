@@ -13,6 +13,9 @@ export const COURSE_ACCOUNT_KEY = "ethereum-org-course-account"
  * who's signed in before the session check answers */
 export const COURSE_ACCOUNT_USER_KEY = "ethereum-org-course-account-user"
 
+/** Set while this browser has progress its account hasn't saved yet */
+export const COURSE_SYNC_PENDING_KEY = "ethereum-org-course-sync-pending"
+
 /** Set on <html> before first paint while this browser is signed in */
 export const HAS_ACCOUNT_ATTR = "data-course-account"
 
@@ -41,15 +44,55 @@ export const clearAccountHint = () => {
  */
 export const HAS_PROGRESS_SCRIPT = `try{var d=document.documentElement,a=localStorage.getItem(${JSON.stringify(COURSE_ACCOUNT_KEY)}),p=JSON.parse(localStorage.getItem(${JSON.stringify(COURSE_PROGRESS_KEY)})||"null");if(a)d.setAttribute(${JSON.stringify(HAS_ACCOUNT_ATTR)},"");if(a||p&&(Object.keys(p.lessons||{}).length||Object.keys(p.exams||{}).length))d.setAttribute(${JSON.stringify(HAS_PROGRESS_ATTR)},"")}catch(e){}`
 
-/**
- * Saved progress, read straight from storage. `useCourseProgress` only has
- * it after its first effect, so a decision made on mount reads this instead.
- */
+// Parsed once and shared: every progress hook on a page reads this copy,
+// replaced on each save here and on each change from another tab
+let stored: CourseProgress | null | undefined
+let storedJson: string | null = null
+const listeners = new Set<() => void>()
+
+const notify = () => listeners.forEach((listener) => listener())
+
+if (typeof window !== "undefined")
+  window.addEventListener("storage", ({ key }) => {
+    if (key !== null && key !== COURSE_PROGRESS_KEY) return
+    stored = undefined
+    notify()
+  })
+
+/** Saved progress (the same object until it changes: never mutate it) */
 export const readStoredProgress = (): CourseProgress | null => {
+  if (stored !== undefined) return stored
   try {
-    const item = window.localStorage.getItem(COURSE_PROGRESS_KEY)
-    return item ? (JSON.parse(item) as CourseProgress) : null
+    storedJson = window.localStorage.getItem(COURSE_PROGRESS_KEY)
+    stored = storedJson ? (JSON.parse(storedJson) as CourseProgress) : null
   } catch {
-    return null
+    stored = null
+  }
+  return stored
+}
+
+/**
+ * Saves progress (`null` clears it) and tells every reader on the page. The
+ * same progress again (a sync that brought nothing new) re-renders nothing.
+ */
+export const writeStoredProgress = (progress: CourseProgress | null) => {
+  const json = progress && JSON.stringify(progress)
+  if (stored !== undefined && json === storedJson) return
+  try {
+    if (json) window.localStorage.setItem(COURSE_PROGRESS_KEY, json)
+    else window.localStorage.removeItem(COURSE_PROGRESS_KEY)
+  } catch {
+    // Storage full or blocked: this visit still shows it, and a signed-in
+    // learner's account still gets it
+  }
+  stored = progress
+  storedJson = json
+  notify()
+}
+
+export const subscribeStoredProgress = (listener: () => void) => {
+  listeners.add(listener)
+  return () => {
+    listeners.delete(listener)
   }
 }

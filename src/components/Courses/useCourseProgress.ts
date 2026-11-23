@@ -1,26 +1,29 @@
 "use client"
 
-import { useCallback } from "react"
+import { useCallback, useSyncExternalStore } from "react"
 
-import { EXAM_ID, EXAM_PASS_MARK, lessonProgressKey } from "@/data/courses"
-
-import { queueProgressUpload } from "./account-sync"
+import { clearPendingUpload, queueProgressUpload } from "./account-sync"
 import {
-  COURSE_PROGRESS_KEY,
   flagProgress,
   readStoredProgress,
+  subscribeStoredProgress,
+  writeStoredProgress,
 } from "./progress-storage"
 import { mergeStepResults, type StepRecord } from "./step-history"
-import { extendStreak, type Streak } from "./streak"
 
-import { useLocalStorage } from "@/hooks/useLocalStorage"
-import { hasAnyProgress } from "@/lib/courses/progress"
+import {
+  EXAM_ID,
+  EXAM_PASS_MARK,
+  lessonProgressKey,
+} from "@/lib/courses/constants"
+import { EMPTY_PROGRESS, hasAnyProgress } from "@/lib/courses/progress"
 import {
   XP_EXAM_PASS,
   XP_LESSON,
   XP_PERFECT_BONUS,
   XP_REPLAY,
 } from "@/lib/courses/rules"
+import { recordFinish, type Streak, type StreakDay } from "@/lib/courses/streak"
 
 export {
   hasAnyProgress,
@@ -49,6 +52,9 @@ export interface CourseProgress {
   streak: Streak
   /** Longest streak reached; absent in progress saved before it was tracked */
   bestStreak?: number
+  /** Days with a finish the account hasn't confirmed yet; signed out, all of
+   * them, for an account to take on later */
+  days?: StreakDay[]
   lessons: Record<string, LessonRecord>
   /** First-try results by step; absent in progress saved before it was tracked */
   steps?: Record<string, StepRecord>
@@ -76,17 +82,17 @@ export interface ExamReward extends LessonReward {
   passed: boolean
 }
 
-const INITIAL_PROGRESS: CourseProgress = {
-  version: 1,
-  xp: 0,
-  streak: { count: 0, lastDay: null },
-  lessons: {},
-}
+const INITIAL_PROGRESS: CourseProgress = EMPTY_PROGRESS
+
+const currentProgress = () => readStoredProgress() ?? INITIAL_PROGRESS
+const serverProgress = () => INITIAL_PROGRESS
 
 export const useCourseProgress = () => {
-  const [progress, setProgress] = useLocalStorage<CourseProgress>(
-    COURSE_PROGRESS_KEY,
-    INITIAL_PROGRESS
+  // One parsed copy for every caller on the page, kept in step with saves
+  const progress = useSyncExternalStore(
+    subscribeStoredProgress,
+    currentProgress,
+    serverProgress
   )
 
   const isLessonComplete = useCallback(
@@ -100,26 +106,21 @@ export const useCourseProgress = () => {
     [progress.exams]
   )
 
-  /** XP and streak for finishing a lesson or exam; `update` adds the record */
+  /**
+   * XP and streak for finishing a lesson or exam; `update` adds the record.
+   * Builds on the latest save (another tab's, or a sync's), not the render's
+   */
   const award = (
+    current: CourseProgress,
     xp: number,
     perfect: boolean,
     update: (now: Date) => Partial<CourseProgress>,
     bonus = 0
   ): LessonReward => {
     const now = new Date()
-    const { streak, extended } = extendStreak(progress.streak, now)
+    const { progress: next, extended } = recordFinish(current, now)
 
-    setProgress({
-      ...progress,
-      ...update(now),
-      xp: progress.xp + xp,
-      streak,
-      bestStreak: Math.max(
-        progress.bestStreak ?? progress.streak.count,
-        streak.count
-      ),
-    })
+    writeStoredProgress({ ...next, ...update(now), xp: current.xp + xp })
     flagProgress(true)
     queueProgressUpload()
 
@@ -127,10 +128,10 @@ export const useCourseProgress = () => {
       xp,
       bonus,
       perfect,
-      streak: streak.count,
+      streak: next.streak.count,
       streakExtended: extended,
-      totalBefore: progress.xp,
-      totalAfter: progress.xp + xp,
+      totalBefore: current.xp,
+      totalAfter: current.xp + xp,
     }
   }
 
@@ -141,25 +142,27 @@ export const useCourseProgress = () => {
     accuracy: number,
     results: Record<string, boolean>
   ): LessonReward => {
+    const current = currentProgress()
     const key = lessonProgressKey(courseId, lessonId)
-    const previous = progress.lessons[key]
+    const previous = current.lessons[key]
     const perfect = accuracy === 1
     const bonus = !previous && perfect ? XP_PERFECT_BONUS : 0
     const xp = previous ? XP_REPLAY : XP_LESSON + bonus
 
     return award(
+      current,
       xp,
       perfect,
       (now) => ({
         lessons: {
-          ...progress.lessons,
+          ...current.lessons,
           [key]: {
             completedAt: now.toISOString(),
             accuracy: Math.max(accuracy, previous?.accuracy ?? 0),
           },
         },
         steps: mergeStepResults(
-          progress.steps,
+          current.steps,
           courseId,
           lessonId,
           results,
@@ -176,34 +179,32 @@ export const useCourseProgress = () => {
     score: number,
     results: Record<string, boolean>
   ): ExamReward => {
-    const previous = progress.exams?.[courseId]
+    const current = currentProgress()
+    const previous = current.exams?.[courseId]
     const passed = score >= EXAM_PASS_MARK
     const firstPass = passed && !previous?.passedAt
     const reward = award(
+      current,
       firstPass ? XP_EXAM_PASS : XP_REPLAY,
       score === 1,
       (now) => ({
         exams: {
-          ...progress.exams,
+          ...current.exams,
           [courseId]: {
             best: Math.max(score, previous?.best ?? 0),
             passedAt: previous?.passedAt ?? (passed ? now.toISOString() : null),
           },
         },
-        steps: mergeStepResults(
-          progress.steps,
-          courseId,
-          EXAM_ID,
-          results,
-          now
-        ),
+        steps: mergeStepResults(current.steps, courseId, EXAM_ID, results, now),
       })
     )
     return { ...reward, passed }
   }
 
+  /** Signed out only: signed in, the account holds the progress */
   const resetProgress = () => {
-    setProgress(INITIAL_PROGRESS)
+    writeStoredProgress(INITIAL_PROGRESS)
+    clearPendingUpload()
     flagProgress(false)
   }
 

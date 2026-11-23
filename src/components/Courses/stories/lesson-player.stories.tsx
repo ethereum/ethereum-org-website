@@ -77,7 +77,7 @@ export const WhoHoldsTheKeys: Story = {
 
 const failed = getLesson("gas", "failed")!
 
-/** Includes the gas-limit widget (snap slider, find the lowest limit that succeeds) */
+/** Includes the gas-limit sandbox (lower or raise the suggested limit, see what you pay) */
 export const FailedTransactions: Story = {
   args: {
     courseId: "gas",
@@ -132,6 +132,16 @@ export const StuckTransaction: Story = {
   args: {
     courseId: "gas",
     lesson: stuck.lesson,
+  },
+}
+
+const slots = getLesson("proof-of-stake", "slots")!
+
+/** Includes the slot-calc widget (blocks per hour from selectable key values) */
+export const SlotsAndEpochs: Story = {
+  args: {
+    courseId: "proof-of-stake",
+    lesson: slots.lesson,
   },
 }
 

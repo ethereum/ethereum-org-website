@@ -8,14 +8,22 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
+import { PreloadCourseArt } from "@/components/Courses/art/lazy-course-art"
 import LessonPlayer from "@/components/Courses/lesson-player"
+import { PreloadWidgets } from "@/components/Courses/steps/interactive-step"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { COURSES, COURSES_OG_IMAGE, getLesson } from "@/data/courses"
+import {
+  type CourseArtId,
+  COURSES,
+  COURSES_OG_IMAGE,
+  getLesson,
+} from "@/data/courses"
 
+import { pickCourseMessages } from "@/lib/courses/messages"
 import { getPageLink } from "@/lib/courses/page-links"
 
 export const revalidate = false
@@ -32,10 +40,24 @@ const Page = async (props: { params: Promise<LessonPageParams> }) => {
   if (!found) notFound()
 
   const allMessages = await getMessages({ locale })
-  const messages = pick(
-    allMessages,
-    getRequiredNamespacesForPage(`/courses/${courseId}/${lessonId}`)
+  const messages = pickCourseMessages(
+    pick(
+      allMessages,
+      getRequiredNamespacesForPage(`/courses/${courseId}/${lessonId}`)
+    ),
+    { page: "lesson", courseId, lessonId }
   )
+  const { steps } = found.lesson
+  const widgets = steps.flatMap((step) =>
+    step.type === "interactive" ? [step.widget] : []
+  )
+  // Plus the completion screen's diamond
+  const art: CourseArtId[] = [
+    ...steps.flatMap((step) =>
+      step.type === "concept" && step.art ? [step.art] : []
+    ),
+    "diamond",
+  ]
 
   return (
     <I18nProvider locale={locale} messages={messages}>
@@ -50,6 +72,9 @@ const Page = async (props: { params: Promise<LessonPageParams> }) => {
           learnMore={await getPageLink(locale, found.lesson.learnMore)}
         />
       </main>
+      {/* Later steps' chunks, fetched while the first one is read */}
+      <PreloadWidgets ids={widgets} />
+      <PreloadCourseArt ids={art} />
     </I18nProvider>
   )
 }

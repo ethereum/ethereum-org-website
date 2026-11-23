@@ -10,14 +10,7 @@ import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import {
-  courseHref,
-  type CourseTheme,
-  EXAM_PASS_MARK,
-  examHref,
-  lessonHref,
-  type LessonIconId,
-} from "@/data/courses"
+import type { CourseTheme, LessonIconId } from "@/data/courses"
 
 import Scenery, { type SceneryId } from "./art/scenery"
 import { useServerProgress } from "./account-sync"
@@ -25,6 +18,14 @@ import { LESSON_ICONS } from "./lesson-icons"
 import { NODE_FACE_CENTRE, NODE_PRESS, NodeBody, NodeHalo } from "./lesson-node"
 import { courseThemeStyle } from "./theme"
 import { useCourseProgress } from "./useCourseProgress"
+
+import { useIsClient } from "@/hooks/useIsClient"
+import {
+  courseHref,
+  EXAM_PASS_MARK,
+  examHref,
+  lessonHref,
+} from "@/lib/courses/constants"
 
 interface PathLesson {
   id: string
@@ -101,6 +102,10 @@ const LessonPath = ({
   )
   const nextIndex = done.findIndex((d) => !d)
   const allDone = nextIndex === -1
+  // "Up next" waits for saved progress, so a returning learner's path doesn't
+  // flash it on the first lesson
+  const isClient = useIsClient()
+  const upNext = isClient ? nextIndex : -1
   const hasExam = examQuestions > 0
   // Without a check the trophy is earned by finishing the lessons
   const earned = hasExam
@@ -171,7 +176,7 @@ const LessonPath = ({
         {lessons.map(({ id, icon, steps, courseId: own }, i) => {
           const lessonCourse = own ?? courseId
           const Icon = LESSON_ICONS[icon]
-          const isNext = i === nextIndex
+          const isNext = i === upNext
           const labelOnLeft = sway(i) > 0
           const title = t(`${lessonCourse}-${id}-title`)
           return (
@@ -244,9 +249,10 @@ const LessonPath = ({
                     "absolute top-1/2 w-36 -translate-y-1/2 text-sm leading-tight font-bold",
                     // A centred node's label would run past a phone's edge
                     sway(i) === 0 && "max-sm:w-24",
+                    // Physical like the path, so the text hugs its node in RTL
                     labelOnLeft
-                      ? "right-full mr-5 text-end"
-                      : "left-full ml-5 text-start"
+                      ? "right-full mr-5 text-right"
+                      : "left-full ml-5 text-left"
                   )}
                 >
                   {title}

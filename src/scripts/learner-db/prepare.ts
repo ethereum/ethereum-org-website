@@ -21,7 +21,7 @@ import { migrate } from "drizzle-orm/postgres-js/migrator"
 import { mkdirSync, writeFileSync } from "node:fs"
 import postgres from "postgres"
 
-import { previewCredentials } from "../../lib/db"
+import { LEARNER_DB_CONNECTION, previewCredentials } from "../../lib/db"
 
 const DATABASE_BRANCHES = ["dev", "staging"]
 const PREVIEW_DB_LABEL = "preview-db"
@@ -93,7 +93,11 @@ const withDatabase = (url: string, database: string) => {
 }
 
 const runSql = async (url: string, statements: string[]) => {
-  const client = postgres(url, { max: 1, onnotice: () => {} })
+  const client = postgres(url, {
+    max: 1,
+    onnotice: () => {},
+    connection: LEARNER_DB_CONNECTION,
+  })
   try {
     for (const statement of statements) await client.unsafe(statement)
   } finally {
@@ -138,7 +142,11 @@ const provisionPreview = async (adminUrl: string, database: string) => {
 }
 
 const runMigrations = async (url: string) => {
-  const client = postgres(url, { max: 1, onnotice: () => {} })
+  const client = postgres(url, {
+    max: 1,
+    onnotice: () => {},
+    connection: LEARNER_DB_CONNECTION,
+  })
   try {
     await migrate(drizzle(client), {
       migrationsFolder: "src/lib/db/migrations",

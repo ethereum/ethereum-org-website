@@ -5,17 +5,58 @@ import * as z from "zod"
 import { getLesson } from "@/data/courses"
 
 import { MIN_STEP_MS } from "../rules"
+import { type StreakDay, streakDayInZone } from "../streak"
 
-import { apiError, json, readBody, type SessionUser } from "./api"
+import { apiError, json, learnerDay, readBody, type SessionUser } from "./api"
 
 import { getDb } from "@/lib/db"
-import { courseLessonCompletion, courseLessonSession } from "@/lib/db/schema"
+import {
+  courseLessonCompletion,
+  courseLessonSession,
+  courseStreakDay,
+} from "@/lib/db/schema"
 
 const startBody = z.object({ courseId: z.string(), lessonId: z.string() })
 const completeBody = z.object({
   token: z.string(),
   accuracy: z.number().min(0).max(1),
 })
+
+/**
+ * Adds days to the account's streak: a day already there keeps its earliest
+ * and latest finish, and stays verified once the server has seen it. Fed by
+ * verified finishes and by the days browsers upload.
+ */
+export const recordStreakDays = async (
+  userId: string,
+  days: StreakDay[],
+  verified: boolean,
+  // A transaction to join: the pool's one connection is busy inside it
+  db: Pick<ReturnType<typeof getDb>, "insert"> = getDb()
+) => {
+  if (!days.length) return
+  await db
+    .insert(courseStreakDay)
+    .values(
+      days.map(({ day, offset, first, last }) => ({
+        userId,
+        day,
+        utcOffset: offset,
+        firstAt: new Date(first),
+        lastAt: new Date(last),
+        verified,
+      }))
+    )
+    .onConflictDoUpdate({
+      target: [courseStreakDay.userId, courseStreakDay.day],
+      set: {
+        utcOffset: sql`case when excluded.first_at < ${courseStreakDay.firstAt} then excluded.utc_offset else ${courseStreakDay.utcOffset} end`,
+        firstAt: sql`least(${courseStreakDay.firstAt}, excluded.first_at)`,
+        lastAt: sql`greatest(${courseStreakDay.lastAt}, excluded.last_at)`,
+        verified: sql`${courseStreakDay.verified} or excluded.verified`,
+      },
+    })
+}
 
 /** Starting a lesson hands out the token its completion has to show */
 export const startLesson = async (request: Request, user: SessionUser) => {
@@ -31,7 +72,8 @@ export const startLesson = async (request: Request, user: SessionUser) => {
 
 /**
  * Verified completion: the token from this learner's own start, used once,
- * after at least `MIN_STEP_MS` per step. Accuracy is the browser's word.
+ * after at least `MIN_STEP_MS` per step. Accuracy is the browser's word. The
+ * day counts for the streak, in the zone the browser reports.
  */
 export const completeLesson = async (request: Request, user: SessionUser) => {
   const body = await readBody(request, completeBody)
@@ -82,5 +124,7 @@ export const completeLesson = async (request: Request, user: SessionUser) => {
         completedAt: sql`case when ${courseLessonCompletion.verified} then ${courseLessonCompletion.completedAt} else excluded.completed_at end`,
       },
     })
+  const { timeZone } = await learnerDay(request, user)
+  await recordStreakDays(user.id, [streakDayInZone(timeZone, now)], true)
   return json({ verified: true })
 }

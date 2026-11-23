@@ -43,12 +43,16 @@ export type Shortcut = {
   documentedOnly?: boolean
   /** Only bound on viewports that render the desktop nav. */
   desktopOnly?: boolean
-  /** Only bound on pages under this locale-free path, so only listed there. */
-  path?: string
+  /** Only bound on pages whose locale-free path matches, so only listed there. */
+  path?: RegExp
 }
 
 // One digit per top-level nav section, so the range tracks the menu itself.
 const NAV_SECTION_COMBOS = SECTION_LABELS.map((_, index) => [String(index + 1)])
+
+// A lesson or Course Mastery (`/courses/<course>/<lesson or exam>/`): the
+// hub, course and profile pages don't bind the course keys
+const COURSE_PLAYER_PATH = /^\/courses\/(?!profile\/)[^/]+\/[^/]+\/?$/
 
 export const KEYBOARD_SHORTCUTS = {
   help: {
@@ -122,21 +126,21 @@ export const KEYBOARD_SHORTCUTS = {
     labelKey: "shortcut-course-pick-answer",
     group: "courses",
     documentedOnly: true,
-    path: "/courses/",
+    path: COURSE_PLAYER_PATH,
   },
   courseCheckNavigate: {
     combos: [["ArrowLeft"], ["ArrowRight"]],
     labelKey: "shortcut-course-check-navigate",
     group: "courses",
     documentedOnly: true,
-    path: "/courses/",
+    path: COURSE_PLAYER_PATH,
   },
   courseContinue: {
     combos: [["Enter"]],
     labelKey: "shortcut-course-continue",
     group: "courses",
     documentedOnly: true,
-    path: "/courses/",
+    path: COURSE_PLAYER_PATH,
   },
 } satisfies Record<string, Shortcut>
 
@@ -159,5 +163,5 @@ export const getShortcutsByGroup = (
   Object.values(KEYBOARD_SHORTCUTS).filter(
     (shortcut: Shortcut) =>
       shortcut.group === group &&
-      (!shortcut.path || pathname.startsWith(shortcut.path))
+      (!shortcut.path || shortcut.path.test(pathname))
   )

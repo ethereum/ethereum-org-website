@@ -1,10 +1,9 @@
 "use client"
 
-import { type Course, TRACKS } from "@/data/courses"
-
 import { useCourseProgress } from "./useCourseProgress"
 
 import { useIsClient } from "@/hooks/useIsClient"
+import type { CatalogCourse, CatalogTrack } from "@/lib/courses/catalog"
 
 /** What a track's progress needs to know about each of its courses */
 export interface TrackCourse {
@@ -43,14 +42,13 @@ export const useTrackStatus = (courses: TrackCourse[]) => {
   return { mastered, nextId, started }
 }
 
-const ALL_COURSES = TRACKS.flatMap(({ courses }) => courses)
-
 /**
  * Where the hub sends a learner: the course they last worked on, or the next
  * one not yet mastered once it is (on through later tracks). With no
  * progress, the first course. `returning` waits for saved progress.
  */
-export const useResumeCourse = () => {
+export const useResumeCourse = (tracks: CatalogTrack[]) => {
+  const ALL_COURSES = tracks.flatMap(({ courses }) => courses)
   const isClient = useIsClient()
   const { progress, isLessonComplete, isExamPassed } = useCourseProgress()
   const first = { course: ALL_COURSES[0], returning: false }
@@ -74,7 +72,7 @@ export const useResumeCourse = () => {
   )[0]
   if (!latest) return first
 
-  const isMastered = ({ id, lessons, exam }: Course) =>
+  const isMastered = ({ id, lessons, exam }: CatalogCourse) =>
     exam.length
       ? isExamPassed(id)
       : lessons.every((lesson) => isLessonComplete(id, lesson.id))

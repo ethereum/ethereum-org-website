@@ -7,9 +7,12 @@ import { expect, test } from "@playwright/test"
 
 import {
   extendStreak,
+  mergeStreaks,
+  NO_STREAK,
   type Streak,
+  streakDayInZone,
   streakStatus,
-} from "../../../src/components/Courses/streak"
+} from "../../../src/lib/courses/streak"
 
 // `getTimezoneOffset` values: minutes behind UTC
 const NEW_YORK = 300
@@ -93,5 +96,64 @@ test.describe("extendStreak", () => {
 
     const lapsed = extendStreak(next.streak, at("2026-11-06T09:00:00Z"), UTC)
     expect(lapsed).toMatchObject({ extended: true, streak: { count: 1 } })
+  })
+})
+
+test.describe("mergeStreaks", () => {
+  /** A `count`-day streak whose last lesson was at `iso` */
+  const run = (iso: string, count: number): Streak => ({
+    ...extendStreak(NO_STREAK, at(iso), NEW_YORK).streak,
+    count,
+  })
+  // Three days ending Thursday 12 November, 19:00 in New York
+  const phone = run("2026-11-13T00:00:00Z", 3)
+
+  test("a run that meets the other's end joins it", () => {
+    // The next evening, from a browser whose own streak had lapsed
+    const laptop = run("2026-11-14T00:00:00Z", 1)
+    expect(mergeStreaks(phone, laptop)).toMatchObject({
+      count: 4,
+      lastDay: "2026-11-13",
+    })
+    expect(mergeStreaks(laptop, phone).count).toBe(4)
+  })
+
+  test("a run inside the other adds nothing", () => {
+    const sameDay = run("2026-11-12T23:00:00Z", 2)
+    expect(mergeStreaks(phone, sameDay).count).toBe(3)
+    expect(mergeStreaks(sameDay, phone).count).toBe(3)
+  })
+
+  test("a later run after a missed day stands alone", () => {
+    const later = run("2026-11-15T00:00:00Z", 1)
+    expect(mergeStreaks(phone, later)).toEqual(later)
+    expect(mergeStreaks(later, phone)).toEqual(later)
+  })
+
+  test("joining again changes nothing", () => {
+    const laptop = run("2026-11-14T00:00:00Z", 1)
+    const merged = mergeStreaks(phone, laptop)
+    expect(mergeStreaks(merged, phone)).toEqual(merged)
+    expect(mergeStreaks(merged, laptop)).toEqual(merged)
+    expect(mergeStreaks(laptop, merged)).toEqual(merged)
+    expect(mergeStreaks(merged, NO_STREAK)).toEqual(merged)
+  })
+})
+
+test.describe("streakDayInZone", () => {
+  test("the learner's day and that day's offset", () => {
+    // 23:30 on Thursday in New York is already Friday in UTC
+    expect(
+      streakDayInZone("America/New_York", at("2026-11-13T04:30:00Z"))
+    ).toMatchObject({ day: "2026-11-12", offset: NEW_YORK })
+    expect(
+      streakDayInZone("Asia/Tokyo", at("2026-11-12T16:00:00Z"))
+    ).toMatchObject({ day: "2026-11-13", offset: TOKYO })
+  })
+
+  test("the clocks going back doesn't move the day", () => {
+    // Sunday 1 November 2026: New York leaves daylight time at 02:00
+    const late = streakDayInZone("America/New_York", at("2026-11-02T04:30:00Z"))
+    expect(late.day).toBe("2026-11-01")
   })
 })

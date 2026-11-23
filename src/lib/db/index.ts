@@ -40,11 +40,23 @@ const url = resolveUrl()
 /** Without a learner database, accounts are off and progress stays in the browser */
 export const hasLearnerDb = !!url
 
+/**
+ * Session settings for every connection, the app's and migrations'. Columns
+ * are `timestamp without time zone` and Drizzle reads them as UTC, so
+ * `defaultNow()` must write UTC too, whatever the server's default zone.
+ */
+export const LEARNER_DB_CONNECTION = { TimeZone: "UTC" }
+
 const connect = (connection: string) =>
   drizzle(
     // PgBouncer runs in transaction mode (no prepared statements), and the
     // non-production cluster has few connections to spare
-    postgres(connection, { prepare: false, max: 1, idle_timeout: 20 }),
+    postgres(connection, {
+      prepare: false,
+      max: 1,
+      idle_timeout: 20,
+      connection: LEARNER_DB_CONNECTION,
+    }),
     { schema }
   )
 

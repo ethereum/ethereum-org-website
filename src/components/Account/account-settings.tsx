@@ -1,7 +1,16 @@
 "use client"
 
-import { useCallback, useEffect, useId, useState } from "react"
-import { Check, KeyRound, Pencil, Trash2, Wallet, X } from "lucide-react"
+import { useCallback, useEffect, useState } from "react"
+import {
+  Check,
+  KeyRound,
+  LogOut,
+  MonitorSmartphone,
+  Pencil,
+  Trash2,
+  Wallet,
+  X,
+} from "lucide-react"
 import dynamic from "next/dynamic"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -16,18 +25,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog-modal"
-import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldLabel,
-} from "@/components/ui/field"
 import Input from "@/components/ui/input"
-import Switch from "@/components/ui/switch"
 
 import { formatDate } from "@/lib/utils/date"
 
+import { useSignOutGuard } from "../Courses/sign-out-guard"
+
 import { isCancelled, requestJson } from "./api"
+import { useConfirmIdentity } from "./confirm-identity"
 import { useAccount } from "./use-account"
 
 import { authClient } from "@/lib/auth/client"
@@ -46,6 +51,12 @@ interface WalletItem {
   createdAt: string
 }
 
+interface SessionItem {
+  id: string
+  createdAt: string
+  current: boolean
+}
+
 const row =
   "flex items-center justify-between gap-3 rounded-lg border border-border px-4 py-3"
 // Name and date stack on phones and share a line from md
@@ -59,29 +70,34 @@ interface AccountSettingsProps {
 }
 
 /**
- * Sign-in methods (passkeys and wallets: keep a backup), leaderboard
- * visibility, sign out and account deletion. Only for signed-in visitors.
+ * Sign-in methods (passkeys and wallets: keep a backup), signed-in devices,
+ * sign out and account deletion. Only for signed-in visitors.
  */
 const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
   const t = useTranslations("component-account")
   const locale = useLocale()
-  const { user, refetch } = useAccount()
+  const { refetch } = useAccount()
   const [passkeys, setPasskeys] = useState<PasskeyItem[]>([])
   const [wallets, setWallets] = useState<WalletItem[]>([])
+  const [sessions, setSessions] = useState<SessionItem[]>([])
   const [error, setError] = useState<string | null>(null)
+  const [sessionsError, setSessionsError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [renaming, setRenaming] = useState<{ id: string; name: string } | null>(
     null
   )
-  const leaderboardId = useId()
+  const [linkStart, setLinkStart] = useState(0)
+  const [linking, setLinking] = useState(false)
 
   const load = useCallback(async () => {
-    const [p, w] = await Promise.all([
+    const [p, w, s] = await Promise.all([
       requestJson<PasskeyItem[]>("/api/auth/passkey/list-user-passkeys"),
       requestJson<WalletItem[]>("/api/auth/wallet/list"),
+      requestJson<SessionItem[]>("/api/auth/sessions/list"),
     ])
     setPasskeys(p.data ?? [])
     setWallets(w.data ?? [])
+    setSessions(s.data ?? [])
   }, [])
 
   useEffect(() => {
@@ -91,18 +107,27 @@ const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
   const methods = passkeys.length + wallets.length
   const date = (value?: string | null) =>
     value ? formatDate(value, locale, { dateStyle: "medium" }) : ""
+  const signOutGuard = useSignOutGuard()
+  const { withFreshSession, confirmDialog } = useConfirmIdentity({
+    passkey: passkeys.length > 0,
+    wallet: wallets.length > 0,
+  })
 
   const act = async (
-    action: () => Promise<{ ok?: boolean; error?: unknown }>
+    // null: the learner backed out of confirming it's them
+    action: () => Promise<{ ok?: boolean; error?: unknown } | null>,
+    // The section whose message shows the outcome
+    report: (message: string | null) => void = setError
   ) => {
     setBusy(true)
-    setError(null)
+    report(null)
     try {
       const result = await action()
-      if (result.error || result.ok === false) setError(t("account-error"))
+      if (result && (result.error || result.ok === false))
+        report(t("account-error"))
       await load()
     } catch (caught) {
-      if (!isCancelled(caught)) setError(t("account-error"))
+      if (!isCancelled(caught)) report(t("account-error"))
     } finally {
       setBusy(false)
     }
@@ -110,7 +135,11 @@ const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
 
   const addPasskey = () =>
     act(() =>
-      authClient.passkey.addPasskey({ name: t("account-passkey-default-name") })
+      withFreshSession(() =>
+        authClient.passkey.addPasskey({
+          name: t("account-passkey-default-name"),
+        })
+      )
     )
   const renamePasskey = async () => {
     if (!renaming?.name.trim()) return setRenaming(null)
@@ -124,28 +153,41 @@ const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
     )
   }
   const removePasskey = (id: string) =>
-    act(() => requestJson("/api/auth/passkey/delete-passkey", { id }))
+    act(() =>
+      withFreshSession(() =>
+        requestJson("/api/auth/passkey/delete-passkey", { id })
+      )
+    )
   const removeWallet = (address: string) =>
-    act(() => requestJson("/api/auth/wallet/unlink", { address }))
+    act(() =>
+      withFreshSession(() =>
+        requestJson("/api/auth/wallet/unlink", { address })
+      )
+    )
 
-  const setLeaderboard = async (showOnLeaderboard: boolean) => {
-    await authClient.updateUser({ showOnLeaderboard })
-    refetch()
-  }
+  const signOutOthers = () =>
+    act(
+      () => withFreshSession(() => authClient.revokeOtherSessions()),
+      setSessionsError
+    )
 
   const deleteAccount = async () => {
-    const { error } = await authClient.deleteUser()
-    if (error) return setError(t("account-error"))
+    const result = await withFreshSession(() => authClient.deleteUser())
+    if (!result) return
+    if (result.error) return setError(t("account-error"))
     onLeave?.(true)
     refetch()
   }
 
   const signOut = async () => {
-    await authClient.signOut()
+    // Course progress the account hasn't saved yet goes up first, or the
+    // learner chooses to leave it on this device
+    if (!(await signOutGuard.confirmSignOut())) return
+    const { error } = await authClient.signOut()
+    if (error) return setError(t("account-error"))
     onLeave?.(false)
     refetch()
   }
-  const showOnLeaderboard = user?.showOnLeaderboard !== false
 
   return (
     // Its own spacing: the sections opt out of the profile page's flow rhythm
@@ -277,12 +319,28 @@ const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
             <KeyRound aria-hidden />
             {t("account-add-passkey")}
           </Button>
+          <Button
+            variant="outline"
+            isSecondary
+            disabled={busy || linking}
+            onClick={() => {
+              setError(null)
+              setLinkStart((count) => count + 1)
+            }}
+          >
+            <Wallet aria-hidden />
+            {t("account-add-wallet")}
+          </Button>
           <WalletSign
             mode="link"
+            start={linkStart}
+            send={withFreshSession}
+            onPending={setLinking}
             onDone={() => void load()}
             onError={setError}
           />
         </div>
+        {confirmDialog}
         {error && (
           <p role="alert" className="m-0 text-error dark:text-red-400">
             {error}
@@ -290,38 +348,59 @@ const AccountSettings = ({ onLeave }: AccountSettingsProps) => {
         )}
       </section>
 
-      {/* Label and description stacked; the switch centred beside both */}
-      <Field
-        orientation="horizontal"
-        className="max-w-3xl justify-between gap-4 rounded-lg border border-border px-4 py-3 has-[>[data-slot=field-content]]:items-center"
-      >
-        <FieldContent>
-          <FieldLabel
-            htmlFor={leaderboardId}
-            className="cursor-pointer text-base font-normal"
-          >
-            {t("account-leaderboard-label")}
-          </FieldLabel>
-          <FieldDescription id={`${leaderboardId}-description`}>
-            {t("account-leaderboard-hint-profile")}{" "}
-            {showOnLeaderboard
-              ? t("account-leaderboard-opt-out")
-              : t("account-leaderboard-opt-in")}
-          </FieldDescription>
-        </FieldContent>
-        <Switch
-          id={leaderboardId}
-          aria-describedby={`${leaderboardId}-description`}
-          checked={showOnLeaderboard}
-          onCheckedChange={setLeaderboard}
-          className="shrink-0"
-        />
-      </Field>
+      {sessions.length > 0 && (
+        <section data-flow="skip" className="flex flex-col gap-4">
+          <h3 className="m-0 text-lg">{t("account-sessions-title")}</h3>
+          <p className="m-0 max-w-3xl text-body-medium">
+            {t("account-sessions-hint")}
+          </p>
+          <ul className="m-0 flex max-w-3xl list-none flex-col gap-2">
+            {sessions.map(({ id, createdAt, current }) => (
+              <li key={id} className={row}>
+                <span className="flex items-center gap-3">
+                  <MonitorSmartphone className="size-5 shrink-0" aria-hidden />
+                  <span className={rowText}>
+                    <span>
+                      {current
+                        ? t("account-session-current")
+                        : t("account-session-other")}
+                    </span>
+                    <span className="text-sm text-body-medium">
+                      {t("account-session-signed-in", {
+                        date: date(createdAt),
+                      })}
+                    </span>
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
+          {sessions.length > 1 && (
+            <div className="flex flex-wrap gap-3">
+              <Button
+                variant="outline"
+                isSecondary
+                disabled={busy}
+                onClick={signOutOthers}
+              >
+                <LogOut aria-hidden />
+                {t("account-sign-out-others")}
+              </Button>
+            </div>
+          )}
+          {sessionsError && (
+            <p role="alert" className="m-0 text-error dark:text-red-400">
+              {sessionsError}
+            </p>
+          )}
+        </section>
+      )}
 
       <section data-flow="skip" className="flex flex-wrap items-center gap-3">
         <Button variant="outline" isSecondary onClick={signOut}>
           {t("account-sign-out")}
         </Button>
+        {signOutGuard.dialog}
         <Dialog variant="stacked">
           <DialogTrigger asChild>
             <Button variant="link" className="text-error dark:text-red-400">

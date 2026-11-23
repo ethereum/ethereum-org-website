@@ -30,28 +30,14 @@ import { Progress as ProgressBar } from "@/components/ui/progress"
 import { Section } from "@/components/ui/section"
 import { Skeleton } from "@/components/ui/skeleton"
 
+import { withTrailingSlash } from "@/lib/utils/api-path"
 import { cn } from "@/lib/utils/cn"
 import { formatDateTime } from "@/lib/utils/date"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import {
-  type Course,
-  courseHref,
-  COURSES,
-  COURSES_HUB,
-  EXAM_ID,
-  examHref,
-  getCourse,
-  lessonHref,
-  lessonProgressKey,
-  NO_PROFILE_PARAM,
-  stepKey,
-  TRACKS,
-} from "@/data/courses"
-
 import { useAccount } from "../Account/use-account"
 
-import CourseArt from "./art/course-art"
+import CourseArt from "./art/lazy-course-art"
 import { syncProgress } from "./account-sync"
 import CourseProgress, { LessonsRemain } from "./course-progress"
 import { useLevelName } from "./level-up"
@@ -73,6 +59,17 @@ import {
 } from "./useCourseProgress"
 
 import { useRouter } from "@/i18n/navigation"
+import type { CatalogCourse, CatalogTrack } from "@/lib/courses/catalog"
+import {
+  courseHref,
+  COURSES_HUB,
+  EXAM_ID,
+  examHref,
+  lessonHref,
+  lessonProgressKey,
+  NO_PROFILE_PARAM,
+  stepKey,
+} from "@/lib/courses/constants"
 
 const REVIEW_LIMIT = 5
 
@@ -84,7 +81,7 @@ const compactGrid = "ms-0 grid list-none gap-4 md:grid-cols-2 xl:grid-cols-3"
 const whileGridLoading = "hidden [[data-has-course-progress]_&]:grid"
 
 /** Steps missed most often, worst first; only ones still in the catalog */
-const stepsToReview = (progress: Progress) =>
+const stepsToReview = (progress: Progress, courses: CatalogCourse[]) =>
   Object.entries(progress.steps ?? {})
     .filter(([, record]) => record.missed > 0)
     .map(([key, record]) => {
@@ -92,7 +89,7 @@ const stepsToReview = (progress: Progress) =>
       return { courseId, lessonId, stepId, ...record }
     })
     .filter(({ courseId, lessonId, stepId }) => {
-      const course = getCourse(courseId)
+      const course = courses.find(({ id }) => id === courseId)
       if (!course) return false
       const steps =
         lessonId === EXAM_ID
@@ -119,7 +116,7 @@ const CompactCourseCard = ({
   bestScore,
   formatPercent,
 }: {
-  course: Course
+  course: CatalogCourse
   /** Omitted under a track heading */
   trackTitle?: string
   isMastered?: boolean
@@ -270,9 +267,12 @@ const BodySkeleton = ({ className }: { className?: string }) => {
 const ProfileView = ({
   breadcrumbs,
   notice,
+  tracks,
 }: {
   breadcrumbs: ReactNode
   notice: ReactNode
+  /** Every track, with step ids for the missed-questions list */
+  tracks: CatalogTrack[]
 }) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
@@ -317,7 +317,8 @@ const ProfileView = ({
   const days = (n: number) => t("page-courses-profile-days", { count: n })
 
   // Catalog lessons only: records outlive renamed or removed lessons
-  const lessonRecords = COURSES.flatMap((c) =>
+  const allCourses = tracks.flatMap(({ courses }) => courses)
+  const lessonRecords = allCourses.flatMap((c) =>
     c.lessons.flatMap(
       ({ id }) => progress.lessons[lessonProgressKey(c.id, id)] ?? []
     )
@@ -333,7 +334,7 @@ const ProfileView = ({
   const streak = getActiveStreak(progress.streak)
   const best = Math.max(progress.bestStreak ?? 0, progress.streak.count)
 
-  const courseRows = TRACKS.flatMap(({ id: trackId, courses }) =>
+  const courseRows = tracks.flatMap(({ id: trackId, courses }) =>
     courses.map((course) => {
       const isMastered = course.exam.length
         ? isExamPassed(course.id)
@@ -353,7 +354,36 @@ const ProfileView = ({
   const level = levelFor(progress.xp)
   const nextLevel = level.next === null ? null : levelFor(level.next)
 
-  const review = stepsToReview(progress)
+  const review = stepsToReview(progress, allCourses)
+  // Prompts come per course, only for the courses with questions to review
+  const reviewCourses = [...new Set(review.map(({ courseId }) => courseId))]
+    .sort()
+    .join(" ")
+  const [prompts, setPrompts] = useState({
+    courses: "",
+    strings: {} as Record<string, string>,
+  })
+  useEffect(() => {
+    if (!reviewCourses) return
+    let live = true
+    void Promise.all(
+      reviewCourses.split(" ").map((courseId) =>
+        fetch(withTrailingSlash(`/api/courses/prompts/${locale}/${courseId}`))
+          .then((response) => (response.ok ? response.json() : {}))
+          .catch(() => ({}))
+      )
+    ).then((parts: Record<string, string>[]) => {
+      if (live)
+        setPrompts({
+          courses: reviewCourses,
+          strings: Object.assign({}, ...parts),
+        })
+    })
+    return () => {
+      live = false
+    }
+  }, [reviewCourses, locale])
+  const promptsLoaded = prompts.courses === reviewCourses
   const started = hasAnyProgress(progress)
   const show = ready && (started || signedIn)
 
@@ -519,7 +549,7 @@ const ProfileView = ({
                 {mastered.length > 0 && (
                   <>
                     <h3>{t("page-courses-profile-mastered-title")}</h3>
-                    {TRACKS.map((track) => {
+                    {tracks.map((track) => {
                       const won = mastered.filter(
                         ({ trackId }) => trackId === track.id
                       )
@@ -559,6 +589,10 @@ const ProfileView = ({
                     {review.map(
                       ({ courseId, lessonId, stepId, seen, missed }) => {
                         const exam = lessonId === EXAM_ID
+                        const prompt =
+                          prompts.strings[
+                            stepKey(courseId, lessonId, stepId, "prompt")
+                          ]
                         return (
                           <Card
                             key={`${courseId}/${lessonId}/${stepId}`}
@@ -578,11 +612,15 @@ const ProfileView = ({
                                   ? t("page-courses-exam-title")
                                   : t(`${courseId}-${lessonId}-title`)}
                               </Eyebrow>
-                              <CardParagraph className="m-0">
-                                {t(
-                                  stepKey(courseId, lessonId, stepId, "prompt")
-                                )}
-                              </CardParagraph>
+                              {prompt ? (
+                                <CardParagraph className="m-0">
+                                  {prompt}
+                                </CardParagraph>
+                              ) : (
+                                !promptsLoaded && (
+                                  <Skeleton className="h-5 w-3/4" />
+                                )
+                              )}
                               <CardParagraph className="m-0" size="sm">
                                 {t("page-courses-profile-review-missed", {
                                   missed: count(missed),

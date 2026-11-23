@@ -19,7 +19,7 @@ export const tradingAndLendingCourse: Course = {
         {
           id: "swap",
           type: "order",
-          items: ["connect", "pick", "approve", "swap", "check"],
+          items: ["connect", "approve", "swap", "check"],
         },
         {
           id: "trust",
@@ -147,6 +147,13 @@ export const tradingAndLendingCourse: Course = {
       options: ["app", "wallet", "pool"],
     },
     {
+      id: "approve",
+      source:
+        "/guides/how-to-revoke-token-access/#why-do-projects-set-unlimited-token-allowance",
+      type: "choice",
+      options: ["id", "move", "hold"],
+    },
+    {
       id: "big",
       source: "/guides/how-to-id-scam-tokens/#protect-yourself",
       type: "choice",
@@ -188,6 +195,13 @@ export const tradingAndLendingCourse: Course = {
         "/developers/docs/smart-contracts/upgrading/#pros-and-cons-of-upgrading-smart-contracts",
       type: "choice",
       options: ["code", "nothing", "both"],
+    },
+    {
+      id: "fix",
+      source:
+        "/developers/docs/smart-contracts/upgrading/#pros-and-cons-of-upgrading-smart-contracts",
+      type: "choice",
+      options: ["run", "fast", "fee"],
     },
     {
       id: "interest",

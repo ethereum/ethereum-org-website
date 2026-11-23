@@ -23,7 +23,8 @@ const GasFeeWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const sliderId = useId()
-  const [price, setPrice] = useState(PRICE_STEP)
+  // A passed step comes back locked: show its answer
+  const [price, setPrice] = useState(locked ? TARGET_PRICE : PRICE_STEP)
 
   const int = numberFormat(locale)
   const eth = numberFormat(locale, { maximumSignificantDigits: 4 })

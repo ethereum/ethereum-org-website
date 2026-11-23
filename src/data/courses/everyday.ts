@@ -165,6 +165,12 @@ export const everydayCourse: Course = {
       options: ["cash", "card", "check"],
     },
     {
+      id: "holiday",
+      source: "/what-is-ether/",
+      type: "choice",
+      options: ["banks", "anytime", "support"],
+    },
+    {
       id: "slot",
       source: "/guides/how-to-use-a-wallet/#receive-cryptocurrency",
       type: "choice",
@@ -184,10 +190,22 @@ export const everydayCourse: Course = {
       options: ["key", "fee", "contract"],
     },
     {
+      id: "junk",
+      source: "/what-is-the-ethereum-network/",
+      type: "choice",
+      options: ["edit", "flood", "undo"],
+    },
+    {
       id: "machine",
       source: "/smart-contracts/#vending-machine",
       type: "choice",
       options: ["wallet", "contract", "address"],
+    },
+    {
+      id: "app",
+      source: "/smart-contracts/",
+      type: "choice",
+      options: ["staff", "contracts", "bank"],
     },
     {
       id: "undo",
@@ -207,6 +225,18 @@ export const everydayCourse: Course = {
       source: "/security/#support-scams",
       type: "choice",
       options: ["send", "scam", "half"],
+    },
+    {
+      id: "trip",
+      source: "/guides/how-to-use-a-wallet/#send-cryptocurrency",
+      type: "choice",
+      options: ["contract", "transaction", "phrase"],
+    },
+    {
+      id: "public",
+      source: "/what-is-ether/",
+      type: "choice",
+      options: ["two", "bank", "anyone"],
     },
   ],
 }

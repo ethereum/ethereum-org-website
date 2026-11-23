@@ -18,7 +18,7 @@ Add `{ id, level, art }` to the track's `upcoming`, plus `{id}-title` and `{id}-
 
 ## Lesson anatomy
 
-Three to six minutes, roughly five to seven steps:
+Three to six minutes, usually five to seven steps; more is fine when the idea needs them:
 
 1. **Hook**: a concept step (optionally with `art`) that opens with a misconception or a concrete situation, then introduces one or two terms.
 2. **Predict or explore**: a choice step asking for a guess, or a widget. Prediction before play makes the widget land.
@@ -35,7 +35,8 @@ Every lesson sets `learnMore`: one ethereum.org page offered on the completion s
 ## Writing questions
 
 - Three options for single choice (preferred: simpler, and it reads as a teaching moment rather than an exam; an occasional fourth is fine), four for multi. Every option teaches a distinct misconception. Distractors get more realistic as the skill level rises: an obviously wrong option is fine in a newcomer course if its feedback makes a teaching point, but never one that is only there to be dismissed.
-- Every option gets its own `fb-` feedback that explains why, not just "Correct"/"Wrong". Wrong-answer feedback must not reveal the right option, because the learner retries.
+- Every option gets its own `fb-` feedback that explains why, not just "Correct"/"Wrong". Wrong-answer feedback must not reveal the right option, because the learner retries: say why the pick fails, then nudge ("Think about who holds the keys").
+- Put the word a prompt turns on in capitals when misreading it would change the answer: superlatives, negations and counts such as BEST, MOST, SAFEST, FIRST, NOT, CAN'T, EXCEPT or TWO ("Which setup fits BEST?"). It's a standard test-writing guard, so a learner who knows the material isn't tripped by one word. Capitalize only those words, and only where they decide the answer.
 - Use `multi` only when the real-world answer is genuinely plural; add an `-explain` for it.
 - Prediction questions may have every answer "accepted" in spirit. The feedback should point to the next step ("Test it in the next step").
 - Order steps: four to six items, each one short line; `items` lists them in the correct order (the pool is shuffled deterministically).
@@ -49,7 +50,7 @@ Every lesson sets `learnMore`: one ethereum.org page offered on the completion s
 
 Every course ends in a course check: the trophy node on the path, route `/courses/<id>/exam/`, data in the course's `exam` array (`ExamStep`, keys under `{course}-exam-`). Passing at `EXAM_PASS_MARK` (80%) earns the trophy; it can be retaken any time and is open before every lesson is done, like the lessons themselves.
 
-- Ten choice questions, two per lesson, in lesson order.
+- Two choice questions per lesson, in lesson order (ten for a five-lesson course).
 - It tests what the course taught and introduces nothing: each question repeats a lesson question, widget puzzle or stated fact with a new scenario or wording. Never copy a lesson string verbatim, and never use a fact the course (or an earlier course on the path) didn't teach.
 - One attempt per question, graded by the server: the right option and the `-explain` show only after a pass (see `accounts.md`). So there are no per-option `fb-` notes, just one `-explain` that works whether the learner was right or wrong (don't open with "Right" or "Wrong"), shown again in the review screen.
 - Which option is right goes in the encrypted answer key, not the course file: update `.learner-exam-key.json`, run `pnpm courses:exam-key check` and `encrypt`, and commit `src/data/courses/exam-key.ts` with the question (`accounts.md`).

@@ -6,6 +6,7 @@ import {
   pgTable,
   text,
   timestamp,
+  uniqueIndex,
 } from "drizzle-orm/pg-core"
 
 export const user = pgTable("user", {
@@ -19,7 +20,6 @@ export const user = pgTable("user", {
     .defaultNow()
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
-  showOnLeaderboard: boolean("show_on_leaderboard").default(true),
   timeZone: text("time_zone"),
 })
 
@@ -94,7 +94,12 @@ export const walletAddress = pgTable(
     isPrimary: boolean("is_primary").default(false).notNull(),
     createdAt: timestamp("created_at").notNull(),
   },
-  (table) => [index("walletAddress_userId_idx").on(table.userId)]
+  (table) => [
+    index("walletAddress_userId_idx").on(table.userId),
+    // Hand-added (keep when regenerating): one account per wallet. Mainnet
+    // only, so one row per address, always checksummed
+    uniqueIndex("walletAddress_address_idx").on(table.address),
+  ]
 )
 
 export const passkey = pgTable(
@@ -116,7 +121,8 @@ export const passkey = pgTable(
   },
   (table) => [
     index("passkey_userId_idx").on(table.userId),
-    index("passkey_credentialID_idx").on(table.credentialID),
+    // Hand-added (keep when regenerating): a credential is one passkey
+    uniqueIndex("passkey_credentialID_idx").on(table.credentialID),
   ]
 )
 

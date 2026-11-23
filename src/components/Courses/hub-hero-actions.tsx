@@ -7,15 +7,15 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 
-import { courseHref, TRACKS } from "@/data/courses"
-
-import CourseArt from "./art/course-art"
+import CourseArt from "./art/lazy-course-art"
 import { CourseCardAction } from "./course-card-status"
 import CourseProgress from "./course-progress"
 import { chunkyButton, courseThemeStyle } from "./theme"
 import { useResumeCourse } from "./track-status"
 
 import { useIsClient } from "@/hooks/useIsClient"
+import type { CatalogTrack } from "@/lib/courses/catalog"
+import { courseHref } from "@/lib/courses/constants"
 
 // Until saved progress loads, when there is some, a skeleton stands in so
 // labels don't swap. Literals for Tailwind's scanner; must match
@@ -57,12 +57,12 @@ const NextUpSkeleton = () => (
  * Hero aside: the learner's next course as a card, or the first course for
  * someone new; the card itself is the way in
  */
-export const HubNextUp = () => {
+export const HubNextUp = ({ tracks }: { tracks: CatalogTrack[] }) => {
   const t = useTranslations("page-courses")
-  const { course, returning } = useResumeCourse()
+  const { course, returning } = useResumeCourse(tracks)
   const pending = !useIsClient()
   const { id, theme, art, level, lessons, exam } = course
-  const track = TRACKS.find(({ courses }) => courses.includes(course))
+  const track = tracks.find(({ courses }) => courses.includes(course))
   const lessonIds = lessons.map((lesson) => lesson.id)
 
   return (

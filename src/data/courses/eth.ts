@@ -116,7 +116,7 @@ export const ethCourse: Course = {
       icon: "piggy",
       learnMore: "/staking/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2, art: "vault" },
+        { id: "intro", type: "concept", paragraphs: 3, art: "vault" },
         {
           id: "small",
           type: "choice",
@@ -127,6 +127,12 @@ export const ethCourse: Course = {
           id: "control",
           type: "order",
           items: ["solo", "operator", "pool", "exchange"],
+        },
+        {
+          id: "trust",
+          type: "concept",
+          paragraphs: 2,
+          list: { after: 1, items: 3 },
         },
         {
           id: "risks",
@@ -141,6 +147,7 @@ export const ethCourse: Course = {
           options: ["nothing", "control", "forever"],
           correct: ["control"],
         },
+        { id: "history", type: "concept", paragraphs: 2 },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
     },

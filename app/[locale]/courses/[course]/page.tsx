@@ -35,6 +35,8 @@ import {
 
 import CoursePageJsonLD from "./page-jsonld"
 
+import { pickCourseMessages } from "@/lib/courses/messages"
+
 export const revalidate = false
 
 type CoursePageParams = PageParams & { course: string }
@@ -49,9 +51,9 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
   const t = await getTranslations("page-courses")
 
   const allMessages = await getMessages({ locale })
-  const messages = pick(
-    allMessages,
-    getRequiredNamespacesForPage(`/courses/${courseId}`)
+  const messages = pickCourseMessages(
+    pick(allMessages, getRequiredNamespacesForPage(`/courses/${courseId}`)),
+    { page: "course", courseId }
   )
 
   const lessonIds = course.lessons.map(({ id }) => id)
@@ -61,7 +63,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
   return (
     <I18nProvider locale={locale} messages={messages}>
       <CoursePageJsonLD locale={locale} course={course} />
-      <MainArticle style={courseThemeStyle(course.theme)}>
+      <MainArticle role="main" style={courseThemeStyle(course.theme)}>
         <div className="px-page pt-6">
           <Breadcrumbs
             slug={`/courses/${courseId}`}

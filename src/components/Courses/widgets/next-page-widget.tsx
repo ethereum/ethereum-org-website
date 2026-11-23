@@ -5,6 +5,7 @@ import {
   Coins,
   Cpu,
   FileText,
+  FileX2,
   Puzzle,
   Shuffle,
   UserRound,
@@ -40,6 +41,10 @@ type Event =
   | { kind: "solved"; who: number }
   | { kind: "picked"; who: number }
   | { kind: "cheated"; who: number }
+  | { kind: "rejected"; who: number }
+
+/** What the picked writer does with their turn */
+type Turn = "honest" | "bad" | "cheat"
 
 /** Each racer's progress in a round; the winner is whoever solves it first */
 const raceProgress = (round: number, winner: number) => {
@@ -51,10 +56,11 @@ const raceProgress = (round: number, winner: number) => {
 
 /**
  * Two ways a blockchain picks who writes the next page: a puzzle race
- * (proof of work) or a pick among people who locked up ETH (proof of
- * stake), picked at random, where a fake page is turned down and the
- * cheater loses ETH and is removed. No
- * numbers, thirds or timings: those belong to the proof-of-stake course.
+ * (proof of work) or a random pick among people who locked up ETH (proof
+ * of stake). There, a page that breaks the rules is just turned down, at no
+ * cost; cheating means writing two pages for one turn: the copies keep one,
+ * and the cheater loses ETH and is removed. No numbers, thirds or timings:
+ * those belong to the proof-of-stake course.
  */
 const NextPageWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
@@ -70,7 +76,7 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
   const [locked, setLocked] = useState(() => PEOPLE.map(() => LOCKED))
   const [removed, setRemoved] = useState(() => PEOPLE.map(() => false))
   const timers = useRef<ReturnType<typeof setTimeout>[]>([])
-  const [seen, setSeen] = useState({ race: false, cheat: false })
+  const [seen, setSeen] = useState({ race: false, bad: false, cheat: false })
   const done = useRef(false)
 
   const name = (i: number) => t(`page-courses-widget-next-page-name-${i + 1}`)
@@ -85,7 +91,7 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
     pool[Math.floor(Math.random() * pool.length)]
 
   useEffect(() => {
-    if (!done.current && seen.race && seen.cheat) {
+    if (!done.current && seen.race && seen.bad && seen.cheat) {
       done.current = true
       onComplete()
     }
@@ -128,12 +134,17 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
 
   // A random pick, never the same person twice in a row, with a brief
   // shuffle so it reads as a draw rather than taking turns
-  const pick = (cheating: boolean) => {
+  const pick = (turn: Turn) => {
     const pool = eligible.filter((i) => i !== lastPick)
     const who = randomOf(pool.length ? pool : eligible)
     const resolve = () => {
       setLastPick(who)
-      if (cheating) {
+      if (turn === "bad") {
+        // Everyone checks it and turns it down: no page, and nothing lost
+        setEvent({ kind: "rejected", who })
+        setSeen((s) => ({ ...s, bad: true }))
+      } else if (turn === "cheat") {
+        setPages((n) => n + 1)
         setLocked((l) => l.map((n, i) => (i === who ? Math.max(0, n - 1) : n)))
         setRemoved((r) => r.map((out, i) => out || i === who))
         setEvent({ kind: "cheated", who })
@@ -177,7 +188,8 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
     event.kind === "solved" ||
     event.kind === "picked" ||
     event.kind === "picking" ||
-    event.kind === "cheated"
+    event.kind === "cheated" ||
+    event.kind === "rejected"
       ? event.who
       : null
 
@@ -226,14 +238,17 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
         {PEOPLE.map((i) => {
           const active = highlighted === i
           const cheater = active && event.kind === "cheated"
+          const turnedDown = active && event.kind === "rejected"
           const out = mode === "stake" && removed[i]
           const badge = cheater
-            ? "badge-fake"
-            : out
-              ? "badge-removed"
-              : active && !picking
-                ? "badge-writer"
-                : null
+            ? "badge-cheat"
+            : turnedDown
+              ? "badge-rejected"
+              : out
+                ? "badge-removed"
+                : active && !picking
+                  ? "badge-writer"
+                  : null
           return (
             <li
               key={i}
@@ -242,7 +257,9 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
                 active
                   ? cheater
                     ? "border-error"
-                    : "border-(--course)"
+                    : turnedDown
+                      ? "border-warning"
+                      : "border-(--course)"
                   : "border-(--course-soft)",
                 out && !cheater && "border-dashed opacity-60"
               )}
@@ -272,7 +289,9 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
                       "rounded-full px-2 py-0.5 text-sm font-bold",
                       badge === "badge-writer"
                         ? "bg-success-light text-green-700 dark:bg-success-dark dark:text-green-400"
-                        : "bg-error-light text-error dark:bg-error-dark dark:text-red-400"
+                        : badge === "badge-rejected"
+                          ? "bg-warning/25 text-warning-dark dark:bg-warning-light/20 dark:text-yellow-500"
+                          : "bg-error-light text-error dark:bg-error-dark dark:text-red-400"
                     )}
                   >
                     {t(`page-courses-widget-next-page-${badge}`)}
@@ -342,7 +361,7 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
           <>
             <Button
               variant="ghost"
-              onClick={() => pick(false)}
+              onClick={() => pick("honest")}
               disabled={picking}
               className={chunkyButton}
             >
@@ -351,7 +370,16 @@ const NextPageWidget = ({ onComplete }: WidgetProps) => {
             </Button>
             <Button
               variant="ghost"
-              onClick={() => pick(true)}
+              onClick={() => pick("bad")}
+              disabled={picking}
+              className={chunkyButtonSecondary}
+            >
+              <FileX2 aria-hidden />
+              {t("page-courses-widget-next-page-bad")}
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => pick("cheat")}
               disabled={picking || eligible.length < 2}
               className={chunkyButtonSecondary}
             >

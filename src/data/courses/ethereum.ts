@@ -62,7 +62,7 @@ export const ethereumCourse: Course = {
           type: "concept",
           paragraphs: 3,
           art: "coins",
-          list: { after: 2, items: 3 },
+          list: { after: 1, items: 3 },
         },
         { id: "match", type: "match", pairs: ["fee", "send", "lock"] },
         {

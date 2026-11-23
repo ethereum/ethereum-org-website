@@ -5,6 +5,8 @@ import { deriveKey } from "altcha-lib/algorithms/web/sha"
 
 import { withTrailingSlash } from "@/lib/utils/api-path"
 
+import { authClient } from "@/lib/auth/client"
+
 /** Must match `CHALLENGE_HEADER` in `src/lib/auth/challenge.ts` */
 export const CHALLENGE_HEADER = "x-altcha"
 
@@ -45,11 +47,28 @@ export const requestJson = async <T>(
       },
       body: body === undefined ? undefined : JSON.stringify(body),
     })
+    // The session ended (expired, or revoked elsewhere): have the page
+    // re-read it, so account UI shows signed out instead of failing quietly
+    if (response.status === 401) authClient.$store.notify("$sessionSignal")
     const data = (await response.json().catch(() => null)) as T | null
     return { ok: response.ok, status: response.status, data }
   } catch {
     return { ok: false, status: 0, data: null }
   }
+}
+
+/**
+ * A refusal because the session is too old for a sensitive change (Better
+ * Auth's `freshAge`): confirming it's you, then trying again, gets through.
+ * Takes a Better Auth client result or an `ApiResult`.
+ */
+export const needsFreshSession = (result: unknown) => {
+  const { error, data } = (result ?? {}) as {
+    error?: { code?: unknown } | null
+    data?: { code?: unknown } | null
+  }
+  const code = error?.code ?? data?.code
+  return code === "SESSION_NOT_FRESH" || code === "SESSION_EXPIRED"
 }
 
 /** A passkey prompt the person closed or let time out: not an error to show */

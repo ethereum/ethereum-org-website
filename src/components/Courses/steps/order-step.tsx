@@ -1,8 +1,7 @@
 "use client"
 
-import { type ReactNode, useMemo, useRef, useState } from "react"
-import { GripVertical } from "lucide-react"
-import { motion, type PanInfo, useReducedMotion } from "motion/react"
+import { type ReactNode, useMemo, useState } from "react"
+import { useReducedMotion } from "motion/react"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -12,7 +11,8 @@ import { cn } from "@/lib/utils/cn"
 
 import type { OrderStep as OrderStepData } from "@/data/courses"
 
-import { chunkyTile, stepPrompt } from "../theme"
+import { stepPrompt } from "../theme"
+import DraggableTile, { draggableTileClasses } from "../widgets/draggable-tile"
 import { StepHint } from "../widgets/widget-shell"
 
 import { seededShuffle } from "./shuffle"
@@ -36,94 +36,11 @@ export const isOrderCorrect = (step: OrderStepData, value: string[]) =>
 
 type DropTarget = number | "pool" | null
 
-/**
- * The slot index or pool under a page point. Skips the dragged tile: it sits
- * under the pointer and its own ancestor would otherwise match first.
- */
-const dropTargetAt = (
-  { x, y }: PanInfo["point"],
-  dragged: HTMLElement | null
-): DropTarget => {
-  const hits = document.elementsFromPoint(
-    x - window.scrollX,
-    y - window.scrollY
-  )
-  for (const el of hits) {
-    if (dragged?.contains(el)) continue
-    const slot = (el as HTMLElement).closest<HTMLElement>("[data-order-slot]")
-    if (slot) return Number(slot.dataset.orderSlot)
-    if ((el as HTMLElement).closest("[data-order-pool]")) return "pool"
-  }
-  return null
-}
+const POOL = "pool"
 
-interface TileProps {
-  id: string
-  label: string
-  disabled: boolean
-  className?: string
-  onClick: () => void
-  onDrop: (target: DropTarget) => void
-  onHover: (target: DropTarget) => void
-}
-
-/** Click to move, or drag onto a slot (pointer + touch via motion's drag) */
-const Tile = ({
-  id,
-  label,
-  disabled,
-  className,
-  onClick,
-  onDrop,
-  onHover,
-}: TileProps) => {
-  const reduceMotion = useReducedMotion()
-  // A drag ends with a click event; swallow it so a drop isn't also a click
-  const dragged = useRef(false)
-  const tileRef = useRef<HTMLDivElement>(null)
-
-  return (
-    <motion.div
-      ref={tileRef}
-      layoutId={reduceMotion ? undefined : `order-${id}`}
-      drag={!disabled}
-      dragSnapToOrigin
-      dragElastic={1}
-      dragMomentum={false}
-      whileDrag={{ scale: 1.04, zIndex: 50 }}
-      onDragStart={() => (dragged.current = true)}
-      onDrag={(_, info) => onHover(dropTargetAt(info.point, tileRef.current))}
-      onDragEnd={(_, info) => {
-        onHover(null)
-        onDrop(dropTargetAt(info.point, tileRef.current))
-        // The trailing click (if any) fires before this timeout
-        setTimeout(() => (dragged.current = false), 0)
-      }}
-      className={cn(
-        "relative touch-none",
-        !disabled && "cursor-grab active:cursor-grabbing"
-      )}
-    >
-      <Button
-        variant="ghost"
-        disabled={disabled}
-        onClick={() => {
-          if (!dragged.current) onClick()
-        }}
-        className={cn(
-          chunkyTile,
-          "min-h-12 w-full justify-start gap-2 px-3 text-start font-semibold text-body disabled:text-body hover-link:!text-body",
-          className
-        )}
-      >
-        {!disabled && (
-          <GripVertical className="!size-4 text-body-medium" aria-hidden />
-        )}
-        {label}
-      </Button>
-    </motion.div>
-  )
-}
+/** A slot index or the pool, from a tile's `data-drop-target` value */
+const toTarget = (value: string | null): DropTarget =>
+  value === null ? null : value === POOL ? POOL : Number(value)
 
 const OrderStep = ({
   step,
@@ -133,6 +50,7 @@ const OrderStep = ({
   status,
 }: OrderStepProps) => {
   const t = useTranslations("page-courses")
+  const reduceMotion = useReducedMotion()
   const pool = useMemo(
     () => seededShuffle(step.items, step.id),
     [step.items, step.id]
@@ -171,6 +89,24 @@ const OrderStep = ({
 
   const label = (id: string) => t(keyFor(`item-${id}`))
 
+  // Select to move, or drag onto a slot or back to the pool. Touch drags
+  // start from the grip, so a swipe across a tile still scrolls the page
+  const tile = (id: string, onClick: () => void, className?: string) => (
+    <DraggableTile
+      // Keyed so a slot taking a new tile remounts instead of handing this
+      // instance (and its layoutId) to another item
+      key={id}
+      layoutId={reduceMotion ? undefined : `order-${id}`}
+      disabled={locked}
+      onClick={onClick}
+      onPlace={(target) => place(id, toTarget(target))}
+      onHover={(target) => setHover(toTarget(target))}
+      className={cn(draggableTileClasses, className)}
+    >
+      {label(id)}
+    </DraggableTile>
+  )
+
   const slotFrame = (idx: number, children: ReactNode) => (
     <li key={idx} className="m-0 flex items-center gap-3">
       <Center
@@ -183,7 +119,7 @@ const OrderStep = ({
         {idx + 1}
       </Center>
       <div
-        data-order-slot={idx}
+        data-drop-target={idx}
         className={cn(
           "min-h-12 flex-1 rounded-2xl transition-[box-shadow]",
           hover === idx && "ring-4 ring-(--course-soft)"
@@ -206,23 +142,16 @@ const OrderStep = ({
           return slotFrame(
             idx,
             id ? (
-              // Keyed so a slot taking a new tile remounts instead of
-              // handing this instance (and its layoutId) to another item
-              <Tile
-                key={id}
-                id={id}
-                label={label(id)}
-                disabled={locked}
-                onClick={() => place(id, "pool")}
-                onDrop={(target) => place(id, target)}
-                onHover={setHover}
-                className={cn(
+              tile(
+                id,
+                () => place(id, POOL),
+                cn(
                   misplaced &&
                     "border-error bg-error-light motion-safe:animate-[course-shake_0.35s_ease-in-out] dark:bg-error-dark",
                   locked &&
                     "border-success bg-success-light dark:bg-success-dark"
-                )}
-              />
+                )
+              )
             ) : (
               <div className="min-h-12 w-full rounded-2xl border-2 border-dashed border-border bg-background-highlight/50" />
             )
@@ -231,24 +160,15 @@ const OrderStep = ({
       </ol>
 
       <div
-        data-order-pool
+        data-drop-target={POOL}
         className={cn(
           "flex min-h-16 flex-wrap gap-2 rounded-2xl p-2 transition-[box-shadow]",
-          hover === "pool" && "ring-4 ring-(--course-soft)"
+          hover === POOL && "ring-4 ring-(--course-soft)"
         )}
       >
-        {remaining.map((id) => (
-          <Tile
-            key={id}
-            id={id}
-            label={label(id)}
-            disabled={locked}
-            onClick={() => placeFirstEmpty(id)}
-            onDrop={(target) => place(id, target)}
-            onHover={setHover}
-            className="border-(--course-soft)"
-          />
-        ))}
+        {remaining.map((id) =>
+          tile(id, () => placeFirstEmpty(id), "border-(--course-soft)")
+        )}
       </div>
 
       {slots.some(Boolean) && !locked && (

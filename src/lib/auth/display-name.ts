@@ -1,7 +1,7 @@
 /**
- * Display names: what a learner is called in the header, on their profile and
- * on the leaderboard. Shared by the browser (instant feedback) and the server
- * (which enforces them, plus a word filter: `server.ts`).
+ * Display names: what a learner is called in the header and on their profile.
+ * Shared by the browser (instant feedback) and the server (which enforces
+ * them, plus a word filter: `server.ts`).
  */
 
 export const DISPLAY_NAME_MIN = 2
@@ -41,7 +41,7 @@ export const normalizeDisplayName = (raw: string) =>
 
 // Letters, marks and numbers in any script, plus a little punctuation
 const ALLOWED = /^[\p{L}\p{M}\p{N} ._'-]+$/u
-// Anything that reads as a site: a leaderboard is a scammer's billboard
+// Anything that reads as a site, should names ever be shown to others
 const LINK = /(https?:|www\.|\.[a-z]{2,}(\s|$)|@)/i
 // Names that would pass for the site or its team: whole words, so
 // "badminton" is fine

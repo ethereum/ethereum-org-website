@@ -17,9 +17,40 @@ export const MIN_ANSWER_MS = 3000
 /** Course Mastery attempts per course per calendar day */
 export const EXAM_ATTEMPTS_PER_DAY = 2
 
-/** The same picks, in any order */
-export const samePicks = (a: string[], b: string[]) =>
-  a.length === b.length && a.every((id) => b.includes(id))
+/**
+ * How long a Course Mastery attempt stays open. Past it, an unfinished
+ * attempt can't be answered, finished or resumed, and still counts for its
+ * day, so attempts can't be stockpiled and graded later.
+ */
+export const EXAM_ATTEMPT_TTL_MS = 2 * 60 * 60_000
+
+/** The same picks, in any order: equal as sets */
+export const samePicks = (a: string[], b: string[]) => {
+  const picked = new Set(a)
+  const other = new Set(b)
+  return picked.size === other.size && [...picked].every((id) => other.has(id))
+}
+
+export const examAttemptExpired = (startedAt: Date, now = new Date()) =>
+  now.getTime() - startedAt.getTime() >= EXAM_ATTEMPT_TTL_MS
+
+/** The attempt to resume: the latest one still open, the same one every time */
+export const resumableAttempt = <
+  T extends { id: string; startedAt: Date; finishedAt: Date | null },
+>(
+  attempts: T[],
+  now = new Date()
+) =>
+  attempts
+    .filter(
+      ({ startedAt, finishedAt }) =>
+        !finishedAt && !examAttemptExpired(startedAt, now)
+    )
+    .sort(
+      (a, b) =>
+        b.startedAt.getTime() - a.startedAt.getTime() ||
+        (a.id < b.id ? 1 : a.id > b.id ? -1 : 0)
+    )[0]
 
 /**
  * The daily limit counts the learner's own calendar day (the time zone their

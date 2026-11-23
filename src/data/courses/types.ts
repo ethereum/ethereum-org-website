@@ -20,6 +20,7 @@ export type CourseWidgetId =
   | "custody-sort"
   | "node-network"
   | "finality-clock"
+  | "slot-calc"
   | "base-fee"
   | "nonce-queue"
   | "ether-sort"

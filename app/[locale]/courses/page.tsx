@@ -36,6 +36,9 @@ import { COURSES_INDEXABLE, COURSES_OG_IMAGE, TRACKS } from "@/data/courses"
 
 import CoursesPageJsonLD from "./page-jsonld"
 
+import { toCatalog } from "@/lib/courses/catalog"
+import { pickCourseMessages } from "@/lib/courses/messages"
+
 const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
   setRequestLocale(locale)
@@ -43,7 +46,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-courses")
 
   const allMessages = await getMessages({ locale })
-  const messages = pick(allMessages, getRequiredNamespacesForPage("/courses"))
+  const messages = pickCourseMessages(
+    pick(allMessages, getRequiredNamespacesForPage("/courses")),
+    { page: "hub" }
+  )
+  const shown = TRACKS.filter(
+    ({ courses, upcoming = [] }) => courses.length + upcoming.length
+  )
+  // Client components get ids and looks only, not lesson content
+  const catalog = toCatalog(shown)
 
   return (
     <>
@@ -55,7 +66,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <InstallAppNotice />
 
         <PageHero
-          heroComponent={<HubNextUp />}
+          heroComponent={<HubNextUp tracks={catalog} />}
           breadcrumbs={{ slug: "courses" }}
           title={t("page-courses-hero-title")}
           description={t("page-courses-hero-description")}
@@ -66,7 +77,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             {/* Full bleed so cards pass out of sight beneath it; below md
                 one end-aligned row */}
             <StickyBar className="-mx-page justify-end gap-2 px-page md:justify-between md:gap-8">
-              <TrackNav className="md:flex-1" />
+              <TrackNav className="md:flex-1" shown={catalog} />
               <div className="flex shrink-0 items-center gap-2">
                 <ProgressChips className="max-sm:*:data-[slot=xp]:hidden" />
                 <ProfileLink compact />
@@ -79,9 +90,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <NoProfileAlert />
             </Suspense>
 
-            {TRACKS.filter(
-              ({ courses, upcoming = [] }) => courses.length + upcoming.length
-            ).map((track) => (
+            {shown.map((track) => (
               <Section key={track.id} id={track.id} scrollMargin="tabNav">
                 <h2>{t(`page-courses-track-${track.id}-title`)}</h2>
                 <p>{t(`page-courses-track-${track.id}-description`)}</p>

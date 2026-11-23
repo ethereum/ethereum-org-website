@@ -33,7 +33,8 @@ const SupplyBalanceWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const sliderId = useId()
-  const [stop, setStop] = useState(0)
+  // A passed step comes back locked: show its answer
+  const [stop, setStop] = useState(locked ? TARGET : 0)
 
   const int = numberFormat(locale)
   const { burned } = STOPS[stop]

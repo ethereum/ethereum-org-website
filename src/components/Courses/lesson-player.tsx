@@ -1,7 +1,7 @@
 "use client"
 
-import { useContext, useEffect, useRef, useState } from "react"
-import { CheckCircle2, Flame, Lightbulb, XCircle } from "lucide-react"
+import { useCallback, useContext, useEffect, useRef, useState } from "react"
+import { CheckCheck, CheckCircle2, Lightbulb, XCircle } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -22,16 +22,9 @@ import { Progress } from "@/components/ui/progress"
 import { cn } from "@/lib/utils/cn"
 import { getDirection } from "@/lib/utils/direction"
 
-import {
-  courseHref,
-  EXAM_PASS_MARK,
-  examHref,
-  type Lesson,
-  lessonHref,
-  type LessonStep,
-  type PageLink,
-  stepKey,
-} from "@/data/courses"
+import type { Lesson, LessonStep, PageLink } from "@/data/courses"
+
+import { MAIN_CONTENT_ID } from "@/lib/constants"
 
 import ChoiceStep, {
   choiceFeedbackKey,
@@ -64,6 +57,13 @@ import {
 } from "./useCourseProgress"
 
 import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
+import {
+  courseHref,
+  EXAM_PASS_MARK,
+  examHref,
+  lessonHref,
+  stepKey,
+} from "@/lib/courses/constants"
 import {
   EXAM_ATTEMPTS_PER_DAY,
   MIN_ANSWER_MS,
@@ -206,7 +206,20 @@ const LessonPlayer = ({
     window.scrollTo({ top: 0 })
   }
 
-  const stepRef = useRef<HTMLDivElement>(null)
+  // A new step opens at the top (one scrolled down to Continue would hide the
+  // next prompt) and takes focus so screen readers announce it. It mounts
+  // only once the old step has animated out, hence the ref callback
+  const focusStep = useRef(index > 0)
+  const stepRef = useCallback((node: HTMLDivElement | null) => {
+    if (!node || !focusStep.current) return
+    focusStep.current = false
+    node.focus({ preventScroll: true })
+  }, [])
+  const showStep = (next: number) => {
+    focusStep.current = true
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "instant" : "smooth" })
+    setIndex(next)
+  }
 
   const step = lesson.steps[index]
   const keyFor = (suffix: string) =>
@@ -214,11 +227,13 @@ const LessonPlayer = ({
   const value = values[step.id]
   const setValue = (next: StepValue) =>
     setValues((prev) => ({ ...prev, [step.id]: next }))
+  const clearValue = (id: string) =>
+    setValues((prev) => {
+      const next = { ...prev }
+      delete next[id]
+      return next
+    })
 
-  // Move focus with the step so screen readers announce the new content
-  useEffect(() => {
-    if (index > 0) stepRef.current?.focus()
-  }, [index])
   const total = lesson.steps.length
   const answered = status === "correct"
   const progressValue = reward
@@ -261,11 +276,7 @@ const LessonPlayer = ({
   const handleWidgetAnswer = (answer: WidgetAnswer | null) => {
     if (answer) handleEdit(answer)
     else {
-      setValues((prev) => {
-        const next = { ...prev }
-        delete next[step.id]
-        return next
-      })
+      clearValue(step.id)
       if (status === "incorrect") setStatus("answering")
     }
   }
@@ -305,7 +316,7 @@ const LessonPlayer = ({
     setFailed(false)
     const saving = saveAnswers()
     if (index < total - 1) {
-      setIndex(index + 1)
+      showStep(index + 1)
       // A failed save is retried with the next one; meanwhile, say so
       if (!(await saving)) setFailed(true)
       return
@@ -357,23 +368,32 @@ const LessonPlayer = ({
     if (remaining <= 0) return
     setPace({ id, elapsed, remaining })
     const timer = setTimeout(() => setPace(null), remaining)
-    return () => clearTimeout(timer)
+    return () => {
+      clearTimeout(timer)
+      // Leaving early cancels the timeout that ends this wait, which would
+      // leave Next locked on return; coming back works out what's left
+      setPace(null)
+    }
   }, [isExamSession, step.id])
   const waiting = pace?.id === step.id
 
   const handleExamBack = () => {
     setFailed(false)
-    setIndex(index - 1)
+    showStep(index - 1)
   }
 
   // A passed graded step comes back answered and locked; first-try results
   // are already recorded, so revisiting never changes XP or accuracy
   const goTo = (next: number) => {
-    setIndex(next)
+    const target = lesson.steps[next]
+    const passed = next < furthest && isGraded(target)
+    showStep(next)
     setFurthest((f) => Math.max(f, next))
-    setStatus(
-      next < furthest && isGraded(lesson.steps[next]) ? "correct" : "answering"
-    )
+    setStatus(passed ? "correct" : "answering")
+    // A puzzle widget keeps its answer in its own state and comes back
+    // blank, so drop the saved answer: Check can't grade what isn't shown
+    if (!passed && target.type === "interactive" && isGraded(target))
+      clearValue(target.id)
   }
 
   const handleBack = () => goTo(index - 1)
@@ -449,21 +469,15 @@ const LessonPlayer = ({
         return
       const target = event.target as HTMLElement | null
       // Where Enter already means something: text entry, links, popup
-      // triggers, dialogs, and the footer button itself (its native click)
+      // triggers, dialogs, the footer buttons (their native click) and any
+      // enabled control, such as a tile or widget button, even once the
+      // answer is in. Radios and checkboxes don't use Enter
       if (
         target?.closest(
-          "input:not([type=range]), textarea, select, [contenteditable], a, [aria-haspopup], [role=dialog], [data-footer-actions]"
+          "input:not([type=range]), textarea, select, [contenteditable], a, [aria-haspopup], [role=dialog], [data-footer-actions], button:not([role=radio]):not([role=checkbox]):not(:disabled), [role=button]"
         )
       )
         return
-      // While the answer can still change, a focused control (tile, widget
-      // button) keeps its own Enter; radios and checkboxes don't use Enter
-      if (
-        footerKind !== "continue" &&
-        target?.closest("button:not([role=radio]):not([role=checkbox])")
-      )
-        return
-      // Also stops a still-focused control re-firing after Check
       event.preventDefault()
       footerActionRef.current?.()
     }
@@ -680,8 +694,10 @@ const LessonPlayer = ({
 
   return (
     <div
+      id={MAIN_CONTENT_ID}
+      tabIndex={-1}
       style={lessonThemeStyle()}
-      className="flex min-h-[calc(100dvh-5rem)] flex-col"
+      className="flex min-h-[calc(100dvh-5rem)] scroll-mt-24 flex-col outline-none"
     >
       <style>{LESSON_CSS}</style>
       <div
@@ -699,18 +715,17 @@ const LessonPlayer = ({
             })}
             className="flex-1 bg-background-highlight *:data-[slot=progress-indicator]:bg-(--course)"
           />
-          {/* No verdicts in Course Mastery, so no streak to count */}
+          {/* Right answers in a row (none in Course Mastery: no verdicts).
+              The flame and orange belong to the day streak */}
           {!exam && (
             <span
               className={cn(
                 "flex shrink-0 items-center gap-1 font-bold tabular-nums transition-colors",
-                combo > 0
-                  ? "text-orange-700 dark:text-orange-400"
-                  : "text-disabled"
+                combo > 0 ? courseText : "text-disabled"
               )}
               aria-hidden
             >
-              <Flame className="size-5" />
+              <CheckCheck className="size-5" />
               {combo}
             </span>
           )}
@@ -753,6 +768,7 @@ const LessonPlayer = ({
                 ? t("page-courses-exam-limit-reached")
                 : undefined
             }
+            attemptsLeft={examFinish?.attemptsLeft}
             keyFor={(stepId, suffix) =>
               stepKey(courseId, lesson.id, stepId, suffix)
             }
@@ -791,9 +807,14 @@ const LessonPlayer = ({
               ref={stepRef}
               tabIndex={-1}
               className="outline-none"
-              initial={reduceMotion ? false : { opacity: 0, x: 40 }}
+              // In from the end side, out to the start, mirrored for RTL
+              initial={
+                reduceMotion ? false : { opacity: 0, x: isRtl ? -40 : 40 }
+              }
               animate={{ opacity: 1, x: 0 }}
-              exit={reduceMotion ? undefined : { opacity: 0, x: -40 }}
+              exit={
+                reduceMotion ? undefined : { opacity: 0, x: isRtl ? 40 : -40 }
+              }
               transition={{ type: "spring", stiffness: 380, damping: 32 }}
             >
               <span className="sr-only">
@@ -872,9 +893,9 @@ const LessonPlayer = ({
                           <motion.span
                             initial={reduceMotion ? false : { scale: 0.4 }}
                             animate={{ scale: 1 }}
-                            className="inline-flex items-center gap-1 rounded-full bg-orange-700 px-2 py-0.5 text-sm text-white"
+                            className="inline-flex items-center gap-1 rounded-full bg-(--course) px-2 py-0.5 text-sm text-white"
                           >
-                            <Flame className="size-4" aria-hidden />
+                            <CheckCheck className="size-4" aria-hidden />
                             {t("page-courses-combo", { count: combo })}
                           </motion.span>
                         )}
@@ -972,7 +993,11 @@ const LessonPlayer = ({
       )}
 
       {examSession && (
-        <Dialog open={confirming} onOpenChange={setConfirming}>
+        <Dialog
+          variant="stacked"
+          open={confirming}
+          onOpenChange={setConfirming}
+        >
           <DialogContent
             // Enter confirms: the second deliberate press after Submit
             onOpenAutoFocus={(event) => {

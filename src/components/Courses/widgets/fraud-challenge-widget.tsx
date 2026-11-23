@@ -74,7 +74,8 @@ const FraudChallengeWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const labelId = useId()
-  const [picked, setPicked] = useState("")
+  // A passed step comes back locked: show its answer
+  const [picked, setPicked] = useState(locked ? ANSWER : "")
 
   const num = numberFormat(locale, { maximumFractionDigits: 1 })
   const int = numberFormat(locale)

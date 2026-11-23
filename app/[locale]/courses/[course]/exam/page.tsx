@@ -16,6 +16,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { COURSES, COURSES_OG_IMAGE, EXAM_ID, getCourse } from "@/data/courses"
 
+import { pickCourseMessages } from "@/lib/courses/messages"
 import { getPageLink } from "@/lib/courses/page-links"
 
 export const revalidate = false
@@ -37,9 +38,12 @@ const Page = async (props: { params: Promise<ExamPageParams> }) => {
   if (!course) notFound()
 
   const allMessages = await getMessages({ locale })
-  const messages = pick(
-    allMessages,
-    getRequiredNamespacesForPage(`/courses/${courseId}/${EXAM_ID}`)
+  const messages = pickCourseMessages(
+    pick(
+      allMessages,
+      getRequiredNamespacesForPage(`/courses/${courseId}/${EXAM_ID}`)
+    ),
+    { page: "exam", courseId }
   )
   const nextCourseId = COURSES[COURSES.indexOf(course) + 1]?.id
   const sources = Object.fromEntries(

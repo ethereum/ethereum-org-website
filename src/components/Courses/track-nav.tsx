@@ -17,17 +17,11 @@ import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { type Course, TRACKS } from "@/data/courses"
-
 import { statChip } from "./theme"
 import { useCourseProgress } from "./useCourseProgress"
 
 import { useIsClient } from "@/hooks/useIsClient"
-
-// Same tracks the hub renders
-const SHOWN = TRACKS.filter(
-  ({ courses, upcoming = [] }) => courses.length + upcoming.length
-)
+import type { CatalogCourse, CatalogTrack } from "@/lib/courses/catalog"
 
 // A section counts as current once its top passes under the sticky strip
 const ACTIVE_LINE = 180
@@ -89,7 +83,14 @@ const scrollToTrack = (id: string) => {
  * scrolls sideways (faded where more is hidden, the current track kept in
  * view) from md up; a menu showing the current track below that.
  */
-const TrackNav = ({ className }: { className?: string }) => {
+const TrackNav = ({
+  className,
+  shown,
+}: {
+  className?: string
+  /** The tracks the hub renders, in order */
+  shown: CatalogTrack[]
+}) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const format = numberFormat(locale).format
@@ -104,10 +105,12 @@ const TrackNav = ({ className }: { className?: string }) => {
     let frame = 0
     const update = () => {
       frame = 0
-      const current = SHOWN.filter(({ id }) => {
-        const top = document.getElementById(id)?.getBoundingClientRect().top
-        return top !== undefined && top <= ACTIVE_LINE
-      }).at(-1)
+      const current = shown
+        .filter(({ id }) => {
+          const top = document.getElementById(id)?.getBoundingClientRect().top
+          return top !== undefined && top <= ACTIVE_LINE
+        })
+        .at(-1)
       setActive(current?.id ?? null)
     }
     const onScroll = () => {
@@ -119,7 +122,7 @@ const TrackNav = ({ className }: { className?: string }) => {
       window.removeEventListener("scroll", onScroll)
       cancelAnimationFrame(frame)
     }
-  }, [])
+  }, [shown])
 
   // RTL scrollLeft runs from 0 down to negative, hence abs
   useEffect(() => {
@@ -157,11 +160,11 @@ const TrackNav = ({ className }: { className?: string }) => {
   const endStop = fade.end ? `#000 calc(100% - ${FADE}), transparent` : "#000"
   const mask = `linear-gradient(to ${rtl ? "left" : "right"}, ${startStop}, ${endStop})`
 
-  const isMastered = ({ id, lessons, exam }: Course) =>
+  const isMastered = ({ id, lessons, exam }: CatalogCourse) =>
     exam.length
       ? isExamPassed(id)
       : lessons.every((lesson) => isLessonComplete(id, lesson.id))
-  const tracks = SHOWN.map(({ id, courses }) => {
+  const tracks = shown.map(({ id, courses }) => {
     const done = isClient ? courses.filter(isMastered).length : 0
     return {
       id,

@@ -198,8 +198,8 @@ export const ProfileAccountLine = () => {
 }
 
 /**
- * Once signed in: completion records and the leaderboard (both still to
- * come) and, last, account settings
+ * Once signed in: completion records (still to come) and, last, account
+ * settings
  */
 export const ProfileAccountSections = () => {
   const t = useTranslations("page-courses")
@@ -220,19 +220,6 @@ export const ProfileAccountSections = () => {
         </h2>
         <p className="max-w-3xl text-body-medium">
           {t("page-courses-profile-records-soon")}
-        </p>
-      </Section>
-      {/* Opens once enough learners have joined for a ranking to mean
-            something; the opt-out switch in the settings is ready for it */}
-      <Section id="leaderboard" className="flow">
-        <h2 className="flex flex-wrap items-center gap-3">
-          {t("page-courses-profile-leaderboard-title")}
-          <Tag asChild status="tag" className="font-normal">
-            <span>{t("page-courses-coming-soon")}</span>
-          </Tag>
-        </h2>
-        <p className="max-w-3xl text-body-medium">
-          {t("page-courses-profile-leaderboard-soon")}
         </p>
       </Section>
       <Section id="account" className="flow">

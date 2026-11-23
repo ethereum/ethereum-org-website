@@ -9,6 +9,7 @@ import {
   EMPTY_PROGRESS,
   mergeProgress,
   type ProgressState,
+  withAccountProgress,
 } from "../../../src/lib/courses/progress"
 import { XP_EXAM_PASS, XP_LESSON } from "../../../src/lib/courses/rules"
 
@@ -72,10 +73,27 @@ test.describe("mergeProgress", () => {
     expect(merged.steps?.["wallets/keys/a"].seen).toBe(2)
   })
 
-  test("keeps the streak extended last and the longest one reached", () => {
+  test("joins streak runs that meet, never just the one extended last", () => {
+    // The phone's three days to the 12th, then the laptop's lesson on the 13th
     const merged = mergeProgress(phone, laptop)
-    expect(merged.streak.lastDay).toBe("2026-11-13")
-    expect(merged.bestStreak).toBe(3)
+    expect(merged.streak).toMatchObject({ count: 4, lastDay: "2026-11-13" })
+    expect(merged.bestStreak).toBe(4)
+    expect(mergeProgress(laptop, phone).streak.count).toBe(4)
+  })
+
+  test("joins the days waiting for the account", () => {
+    const day = (date: string) => ({
+      day: date,
+      offset: 0,
+      first: `${date}T09:00:00.000Z`,
+      last: `${date}T18:00:00.000Z`,
+    })
+    const merged = mergeProgress(
+      { ...phone, days: [day("2026-11-12")] },
+      { ...laptop, days: [day("2026-11-12"), day("2026-11-13")] }
+    )
+    expect(merged.days).toEqual([day("2026-11-12"), day("2026-11-13")])
+    expect(mergeProgress(phone, laptop).days).toBeUndefined()
   })
 
   test("adds XP only for lessons and trophies the higher total lacks", () => {
@@ -95,5 +113,37 @@ test.describe("mergeProgress", () => {
     expect(mergeProgress(merged, phone)).toEqual(merged)
     expect(mergeProgress(merged, laptop)).toEqual(merged)
     expect(mergeProgress(phone, merged)).toEqual(merged)
+  })
+})
+
+test.describe("withAccountProgress", () => {
+  const account = {
+    state: phone,
+    streak: { ...phone.streak, lastOffset: 0 },
+    bestStreak: 3,
+  }
+
+  test("shows the account's streak over this browser's own", () => {
+    // A browser whose copy says more than the account worked out
+    const local = { ...laptop, streak: { ...laptop.streak, count: 40 } }
+    const synced = withAccountProgress(local, account, [])
+    expect(synced.streak).toEqual(account.streak)
+    expect(synced.lessons["wallets/seed"]).toBeDefined()
+    expect(synced.exams?.wallets.passedAt).toBe("2026-11-13T09:30:00.000Z")
+  })
+
+  test("extends it by days still on their way to the account", () => {
+    const pending = [
+      {
+        day: "2026-11-13",
+        offset: 0,
+        first: "2026-11-13T09:00:00.000Z",
+        last: "2026-11-13T09:00:00.000Z",
+      },
+    ]
+    const synced = withAccountProgress(laptop, account, pending)
+    expect(synced.streak).toMatchObject({ count: 4, lastDay: "2026-11-13" })
+    expect(synced.bestStreak).toBe(4)
+    expect(synced.days).toEqual(pending)
   })
 })

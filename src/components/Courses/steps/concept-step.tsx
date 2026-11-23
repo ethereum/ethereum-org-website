@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from "next-intl"
 
 import type { ConceptStep as ConceptStepData } from "@/data/courses"
 
-import CourseArt from "../art/course-art"
+import CourseArt from "../art/lazy-course-art"
 
 // Plain bold: coloured keywords read as links
 const rich = {

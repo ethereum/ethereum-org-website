@@ -11,7 +11,7 @@ export const gasCourse: Course = {
       icon: "calculator",
       learnMore: "/gas/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2, art: "tank" },
+        { id: "intro", type: "concept", paragraphs: 3, art: "tank" },
         { id: "calculator", type: "interactive", widget: "gas-fee" },
         {
           id: "compare",
@@ -109,7 +109,7 @@ export const gasCourse: Course = {
       icon: "queue",
       learnMore: "/community/support/faq/#stuck-transaction",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
+        { id: "intro", type: "concept", paragraphs: 3 },
         {
           id: "predict",
           type: "choice",

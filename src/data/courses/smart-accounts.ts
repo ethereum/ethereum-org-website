@@ -33,7 +33,12 @@ export const smartAccountsCourse: Course = {
       icon: "shield",
       learnMore: "/roadmap/account-abstraction/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "intro",
+          type: "concept",
+          paragraphs: 2,
+          list: { after: 1, items: 3 },
+        },
         { id: "setup", type: "interactive", widget: "account-rules" },
         {
           id: "contacts",
@@ -81,7 +86,18 @@ export const smartAccountsCourse: Course = {
       icon: "link",
       learnMore: "/roadmap/pectra/7702/",
       steps: [
-        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "intro",
+          type: "concept",
+          paragraphs: 3,
+          list: { after: 2, items: 3 },
+        },
+        {
+          id: "batch",
+          type: "choice",
+          options: ["one", "new", "free"],
+          correct: ["one"],
+        },
         {
           id: "key",
           type: "choice",
@@ -119,8 +135,8 @@ export const smartAccountsCourse: Course = {
         {
           id: "signed",
           type: "choice",
-          options: ["wait", "revoke", "move"],
-          correct: ["move"],
+          options: ["wait", "revoke", "clear", "move"],
+          correct: ["clear"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],

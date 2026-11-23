@@ -2,6 +2,7 @@ import {
   boolean,
   date,
   index,
+  integer,
   jsonb,
   pgTable,
   primaryKey,
@@ -17,7 +18,7 @@ import { user } from "./auth-schema"
 /**
  * Course progress the server can vouch for. `verified` rows were earned
  * through the API while signed in; unverified ones were imported from the
- * browser and never count toward leaderboards or completion records.
+ * browser and never count toward completion records.
  */
 
 const userId = () =>
@@ -102,9 +103,11 @@ export const courseMastery = pgTable(
 )
 
 /**
- * The browser's whole progress record (streak, answer history, XP), merged
- * from every device signed in to the account, so a new browser starts where
- * the last one left off. Unverified: shown to the learner, never ranked.
+ * The browser's whole progress record (answer history, XP), merged from
+ * every device signed in to the account, so a new browser starts where the
+ * last one left off. Its streak is the one worked out from
+ * `course_streak_day` when it was saved. Unverified: shown to the learner,
+ * never ranked.
  */
 export const courseProgressState = pgTable("course_progress_state", {
   userId: userId().primaryKey(),
@@ -114,3 +117,24 @@ export const courseProgressState = pgTable("course_progress_state", {
     .$onUpdate(() => new Date())
     .notNull(),
 })
+
+/**
+ * Each calendar day the learner finished a lesson or Course Mastery, in
+ * their zone then. The streak is worked out from these days, so devices add
+ * to it and can't overwrite each other's (`src/lib/courses/streak.ts`).
+ * `verified` days were recorded by the server; the others came from a
+ * browser (played signed out or offline), shown to the learner, never ranked.
+ */
+export const courseStreakDay = pgTable(
+  "course_streak_day",
+  {
+    userId: userId(),
+    day: date("day").notNull(),
+    /** That zone's UTC offset in minutes, as `getTimezoneOffset` */
+    utcOffset: integer("utc_offset").notNull(),
+    firstAt: timestamp("first_at").notNull(),
+    lastAt: timestamp("last_at").notNull(),
+    verified: boolean("verified").notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.day] })]
+)

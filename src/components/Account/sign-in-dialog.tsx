@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { KeyRound } from "lucide-react"
+import { KeyRound, Wallet } from "lucide-react"
 import dynamic from "next/dynamic"
 import { useTranslations } from "next-intl"
 
@@ -14,7 +14,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog-modal"
-import { Skeleton } from "@/components/ui/skeleton"
 
 import { CHALLENGE_HEADER, isCancelled, solveAccountChallenge } from "./api"
 import { useAccount } from "./use-account"
@@ -23,12 +22,7 @@ import { authClient } from "@/lib/auth/client"
 
 const loadWalletSign = () => import("./wallet-sign")
 
-// Holds the wallet button's place while its chunk loads, so the dialog never
-// opens looking passkey-only
-const WalletSign = dynamic(loadWalletSign, {
-  ssr: false,
-  loading: () => <Skeleton className="h-10.5 w-full rounded" />,
-})
+const WalletSign = dynamic(loadWalletSign, { ssr: false })
 
 interface SignInDialogProps {
   trigger: React.ReactNode
@@ -38,15 +32,20 @@ interface SignInDialogProps {
 
 /**
  * Passkey or wallet: no email, no password, and one screen for signing in or
- * up. A wallet with no account gets one. Browsers report "no passkey here"
- * the same as a cancel, so a passkey that doesn't sign in offers to create
- * one. Site-wide, so any feature can ask someone to sign in.
+ * up. A wallet with no account gets one; without a wallet, the wallet's
+ * connect modal offers to get one. Browsers report "no passkey here" the
+ * same as a cancel, so a passkey that doesn't sign in offers to create one.
+ * Site-wide, so any feature can ask someone to sign in.
  */
 const SignInDialog = ({ trigger, onSignedIn }: SignInDialogProps) => {
   const t = useTranslations("component-account")
   const { refetch } = useAccount()
   const [open, setOpen] = useState(false)
+  // Stepped aside, still open, while the wallet's connect modal is up
+  const [hidden, setHidden] = useState(false)
   const [busy, setBusy] = useState(false)
+  const [walletBusy, setWalletBusy] = useState(false)
+  const [walletStart, setWalletStart] = useState(0)
   const [error, setError] = useState<string | null>(null)
   const [offerCreate, setOfferCreate] = useState(false)
 
@@ -59,6 +58,7 @@ const SignInDialog = ({ trigger, onSignedIn }: SignInDialogProps) => {
     refetch()
     await onSignedIn?.()
     setOpen(false)
+    setHidden(false)
   }
 
   const run = async (
@@ -98,12 +98,13 @@ const SignInDialog = ({ trigger, onSignedIn }: SignInDialogProps) => {
   return (
     <Dialog
       variant="stacked"
-      open={open}
+      open={open && !hidden}
       onOpenChange={(next) => {
         setOpen(next)
         if (next) {
           setError(null)
           setOfferCreate(false)
+          setWalletStart(0)
         }
       }}
     >
@@ -117,16 +118,22 @@ const SignInDialog = ({ trigger, onSignedIn }: SignInDialogProps) => {
           {t("account-continue-description")}
         </DialogDescription>
         <div className="flex flex-col gap-3">
-          <Button disabled={busy} onClick={signInWithPasskey}>
+          <Button disabled={busy || walletBusy} onClick={signInWithPasskey}>
             <KeyRound aria-hidden />
             {t("account-continue-passkey")}
           </Button>
-          <WalletSign
-            mode="sign-in"
-            className="w-full"
-            onDone={() => run(async () => {})}
-            onError={setError}
-          />
+          <Button
+            variant="outline"
+            isSecondary
+            disabled={busy || walletBusy}
+            onClick={() => {
+              setError(null)
+              setWalletStart((count) => count + 1)
+            }}
+          >
+            <Wallet aria-hidden />
+            {t("account-sign-in-wallet")}
+          </Button>
         </div>
         {offerCreate && (
           <div
@@ -150,6 +157,20 @@ const SignInDialog = ({ trigger, onSignedIn }: SignInDialogProps) => {
           </p>
         )}
       </DialogContent>
+      {open && (
+        <WalletSign
+          mode="sign-in"
+          start={walletStart}
+          onConnect={() => setHidden(true)}
+          onCancel={() => setHidden(false)}
+          onPending={setWalletBusy}
+          onDone={() => run(async () => {})}
+          onError={(message) => {
+            setHidden(false)
+            setError(message)
+          }}
+        />
+      )}
     </Dialog>
   )
 }

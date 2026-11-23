@@ -13,9 +13,9 @@ import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 
-import { chunkyTile, courseText } from "../theme"
+import { courseText } from "../theme"
 
-import DraggableTile from "./draggable-tile"
+import DraggableTile, { draggableTileClasses } from "./draggable-tile"
 import type { WidgetProps } from "./types"
 import WidgetShell, { StepHint } from "./widget-shell"
 
@@ -50,12 +50,15 @@ const SortWidget = ({
   const baseId = useId()
   const hintId = `${baseId}-hint`
   const poolRef = useRef<HTMLUListElement>(null)
+  const sortedRef = useRef<HTMLParagraphElement>(null)
   const [placement, setPlacement] = useState<Placement>({})
   const [selected, setSelected] = useState<string | null>(null)
   const [announcement, setAnnouncement] = useState("")
   const [hover, setHover] = useState<string | null>(null)
   // Placing or returning a card unmounts the focused button; move focus to
-  // the returned card or the next one in the pool so it isn't lost
+  // the returned card or the next one in the pool so it isn't lost. Once
+  // the pool is empty, the "all sorted" note takes it, so Enter still
+  // reaches the footer's Check
   const refocus = useRef<string | null>(null)
 
   const itemLabel = (id: string) => t(`page-courses-widget-${name}-item-${id}`)
@@ -67,11 +70,12 @@ const SortWidget = ({
     const target = refocus.current
     if (!target) return
     refocus.current = null
-    poolRef.current
-      ?.querySelector<HTMLButtonElement>(
-        target === POOL ? "button" : `[data-item="${target}"]`
-      )
-      ?.focus()
+    const next = poolRef.current
+      ? poolRef.current.querySelector<HTMLButtonElement>(
+          target === POOL ? "button" : `[data-item="${target}"]`
+        )
+      : sortedRef.current
+    next?.focus()
   }, [placement])
 
   const commit = (next: Placement) => {
@@ -123,12 +127,6 @@ const SortWidget = ({
     if (placement[id] !== target) place(id, target)
   }
 
-  const tileClasses = cn(
-    chunkyTile,
-    "flex min-h-12 w-full items-center gap-2 px-3 py-2 text-start text-md font-semibold text-body focus-visible:outline-4 focus-visible:outline-(--course-soft)",
-    "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
-  )
-
   return (
     <WidgetShell>
       <StepHint id={hintId}>
@@ -158,7 +156,7 @@ const SortWidget = ({
                   onPlace={(target) => drop(id, target)}
                   onHover={setHover}
                   className={cn(
-                    tileClasses,
+                    draggableTileClasses,
                     selected === id &&
                       "border-(--course) bg-(--course-soft) hover:bg-(--course-soft)"
                   )}
@@ -169,7 +167,11 @@ const SortWidget = ({
             ))}
           </ul>
         ) : (
-          <p className="m-0 rounded-2xl border-2 border-dashed border-border p-3 text-body-medium">
+          <p
+            ref={sortedRef}
+            tabIndex={-1}
+            className="m-0 rounded-2xl border-2 border-dashed border-border p-3 text-body-medium outline-none"
+          >
             {t("page-courses-widget-sort-pool-empty")}
           </p>
         )}
@@ -225,7 +227,7 @@ const SortWidget = ({
                       onPlace={(target) => drop(id, target)}
                       onHover={setHover}
                       className={cn(
-                        tileClasses,
+                        draggableTileClasses,
                         "text-sm",
                         locked &&
                           "border-success bg-success-light dark:bg-success-dark"

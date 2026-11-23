@@ -1,6 +1,6 @@
 "use client"
 
-import { inferAdditionalFields, siweClient } from "better-auth/client/plugins"
+import { siweClient } from "better-auth/client/plugins"
 import { createAuthClient } from "better-auth/react"
 import { passkeyClient } from "@better-auth/passkey/client"
 
@@ -18,11 +18,5 @@ export const authClient = createAuthClient({
         init
       ),
   },
-  plugins: [
-    siweClient(),
-    passkeyClient(),
-    inferAdditionalFields({
-      user: { showOnLeaderboard: { type: "boolean", required: false } },
-    }),
-  ],
+  plugins: [siweClient(), passkeyClient()],
 })

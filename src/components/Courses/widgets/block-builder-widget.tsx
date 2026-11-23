@@ -34,6 +34,7 @@ const POOL = [
 ] as const
 
 type TxId = (typeof POOL)[number]["id"]
+const BEST: TxId[] = ["f", "c", "d", "a"]
 
 const tipOf = (tx: (typeof POOL)[number]) => tx.gas * tx.tipPerGas
 
@@ -50,7 +51,8 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
   const reduceMotion = useReducedMotion()
   const int = numberFormat(locale)
 
-  const [picked, setPicked] = useState<TxId[]>([])
+  // A passed step comes back locked: show its answer
+  const [picked, setPicked] = useState<TxId[]>(locked ? BEST : [])
 
   const included = picked.map((id) => POOL.find((tx) => tx.id === id)!)
   const gasUsed = included.reduce((sum, tx) => sum + tx.gas, 0)

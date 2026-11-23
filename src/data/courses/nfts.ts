@@ -176,7 +176,7 @@ export const nftsCourse: Course = {
     },
     {
       id: "picture",
-      source: "/nft/#nft-use-cases",
+      source: "/nft/#how-nfts-work",
       type: "choice",
       options: ["chain", "elsewhere", "wallet"],
     },
@@ -188,7 +188,7 @@ export const nftsCourse: Course = {
     },
     {
       id: "copier",
-      source: "/nft/#nft-use-cases",
+      source: "/guides/how-to-id-scam-tokens/#how-do-scam-tokens-work",
       type: "choice",
       options: ["yes", "blocked", "pay"],
     },

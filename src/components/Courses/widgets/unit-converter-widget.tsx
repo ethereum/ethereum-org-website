@@ -28,7 +28,8 @@ const UnitConverterWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const sliderId = useId()
-  const [stop, setStop] = useState(STOPS.length - 1)
+  // A passed step comes back locked: show its answer
+  const [stop, setStop] = useState(locked ? TARGET : STOPS.length - 1)
 
   const int = numberFormat(locale)
   const eth = numberFormat(locale, { maximumSignificantDigits: 2 })

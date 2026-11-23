@@ -13,10 +13,12 @@ Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-
 | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | Course, lesson and step shapes, plus the translation-key convention for each | `src/data/courses/types.ts`                                                         |
 | Course content (structure only, no strings)                                  | `src/data/courses/<course>.ts`                                                      |
-| Tracks, suggested course order, teasers, lookups, `stepKey`                  | `src/data/courses/index.ts` (`TRACKS`, `COURSES`)                                   |
+| Tracks, suggested course order, teasers, lookups                             | `src/data/courses/index.ts` (`TRACKS`, `COURSES`)                                   |
+| Routes, reserved ids, `stepKey`; no course data, so safe in client code      | `src/lib/courses/constants.ts` (re-exported by `@/data/courses`)                    |
 | Every string (English)                                                       | `src/intl/en/page-courses.json`                                                     |
 | Lesson runtime: steps, grading, footer, XP                                   | `src/components/Courses/lesson-player.tsx`                                          |
-| Widget registry (`graded` flag)                                              | `src/components/Courses/steps/interactive-step.tsx` (`WIDGETS`)                     |
+| Widget registry (`graded` flag; each widget its own chunk)                   | `src/components/Courses/steps/interactive-step.tsx` (`WIDGETS`)                     |
+| The `page-courses` strings each page sends; each widget's string names       | `src/lib/courses/messages.ts`, `src/lib/courses/widgets.ts`                         |
 | Widget contract                                                              | `src/components/Courses/widgets/types.ts`                                           |
 | Course colours and pressable skins                                           | `src/components/Courses/theme.ts`                                                   |
 | Progress, XP, streak and per-step history storage                            | `src/components/Courses/useCourseProgress.ts`, `step-history.ts`                    |

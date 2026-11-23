@@ -6,6 +6,15 @@ import { motion, type PanInfo, useDragControls } from "motion/react"
 
 import { cn } from "@/lib/utils/cn"
 
+import { chunkyTile } from "../theme"
+
+/** The tile's skin: a chunky answer tile with the grip at its start */
+export const draggableTileClasses = cn(
+  chunkyTile,
+  "flex min-h-12 w-full items-center gap-2 px-3 py-2 text-start text-md font-semibold text-body focus-visible:outline-4 focus-visible:outline-(--course-soft)",
+  "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
+)
+
 /**
  * The `data-drop-target` value under a page point. Skips the dragged tile:
  * it sits under the pointer and would otherwise match first.
@@ -32,6 +41,8 @@ interface DraggableTileProps extends ComponentProps<"button"> {
   onPlace: (target: string) => void
   /** The target under the pointer while dragging, for highlighting */
   onHover: (target: string | null) => void
+  /** Animates the tile between places that render the same id */
+  layoutId?: string
 }
 
 /**
@@ -42,6 +53,7 @@ interface DraggableTileProps extends ComponentProps<"button"> {
 const DraggableTile = ({
   onPlace,
   onHover,
+  layoutId,
   onClick,
   disabled,
   className,
@@ -56,6 +68,7 @@ const DraggableTile = ({
   return (
     <motion.div
       ref={ref}
+      layoutId={layoutId}
       drag={!disabled}
       dragControls={controls}
       dragListener={false}

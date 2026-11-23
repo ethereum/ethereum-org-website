@@ -71,12 +71,12 @@ const KeyPairWidget = ({ onComplete }: WidgetProps) => {
       </div>
 
       {pair && (
-        <dl className="m-0 flex flex-col gap-3 font-mono text-sm" dir="ltr">
+        <dl className="m-0 flex flex-col gap-3 font-mono text-sm">
           <div>
             <dt className="font-sans font-bold text-error dark:text-red-400">
               {t("page-courses-widget-key-private")}
             </dt>
-            <dd className="m-0 break-all">
+            <dd className="m-0 break-all" dir="ltr">
               {pair.changedAt === undefined ? (
                 pair.privateKey
               ) : (
@@ -93,7 +93,9 @@ const KeyPairWidget = ({ onComplete }: WidgetProps) => {
             <dt className="font-sans font-bold text-green-700 dark:text-green-400">
               {t("page-courses-widget-key-address")}
             </dt>
-            <dd className="m-0 break-all">{pair.address}</dd>
+            <dd className="m-0 break-all" dir="ltr">
+              {pair.address}
+            </dd>
           </div>
         </dl>
       )}

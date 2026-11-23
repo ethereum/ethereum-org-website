@@ -1,7 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
-import { CalendarClock, LockKeyhole, ServerOff } from "lucide-react"
+import { CalendarClock, LockKeyhole, ServerOff, TimerOff } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
@@ -10,13 +10,7 @@ import { Spinner } from "@/components/ui/spinner"
 import { cn } from "@/lib/utils/cn"
 import { formatDateTime } from "@/lib/utils/date"
 
-import {
-  courseHref,
-  EXAM_ID,
-  type ExamStep,
-  type LessonStep,
-  type PageLink,
-} from "@/data/courses"
+import type { ExamStep, LessonStep, PageLink } from "@/data/courses"
 
 import { requestJson } from "../Account/api"
 import SignInDialog from "../Account/sign-in-dialog"
@@ -27,7 +21,8 @@ import type { ExamFinish, ExamSession } from "./exam-session"
 import LessonPlayer from "./lesson-player"
 import { chunkyButton, chunkyButtonSecondary, lessonThemeStyle } from "./theme"
 
-import { MIN_ANSWER_MS } from "@/lib/courses/rules"
+import { courseHref, EXAM_ID } from "@/lib/courses/constants"
+import { EXAM_ATTEMPT_TTL_MS, MIN_ANSWER_MS } from "@/lib/courses/rules"
 
 interface Attempt {
   attemptId: string
@@ -40,7 +35,14 @@ type Gate =
   | { kind: "loading" }
   | { kind: "ready"; attempt: Attempt }
   | { kind: "limit"; retryAt: string }
+  | { kind: "expired" }
   | { kind: "unavailable" }
+
+/** What the server says when an attempt ran out of time */
+interface Expired {
+  attemptsLeft?: number
+  retryAt?: string
+}
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
@@ -63,7 +65,7 @@ const ExamGate = ({
 }: ExamGateProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
-  const { status } = useAccount()
+  const { status, ended } = useAccount()
   const [gate, setGate] = useState<Gate>({ kind: "loading" })
   const lastAnswerAt = useRef(0)
 
@@ -84,6 +86,14 @@ const ExamGate = ({
   useEffect(() => {
     if (status === "signed-in") void start()
   }, [status, start])
+
+  // Ungraded and still counted: another go if today allows, else tomorrow
+  const expire = (data: Expired | null) =>
+    setGate(
+      data?.retryAt && !data.attemptsLeft
+        ? { kind: "limit", retryAt: data.retryAt }
+        : { kind: "expired" }
+    )
 
   const frame = (
     icon: React.ReactNode,
@@ -136,8 +146,13 @@ const ExamGate = ({
   if (status === "signed-out")
     return frame(
       <LockKeyhole className={iconClass} aria-hidden />,
-      t("page-courses-exam-sign-in-title"),
-      t("page-courses-exam-sign-in-description"),
+      // Signed out mid-visit (the session ended): say so
+      ended
+        ? t("page-courses-exam-signed-out-title")
+        : t("page-courses-exam-sign-in-title"),
+      ended
+        ? t("page-courses-exam-signed-out-description")
+        : t("page-courses-exam-sign-in-description"),
       <SignInDialog
         onSignedIn={() => void syncProgress(true)}
         trigger={
@@ -159,6 +174,22 @@ const ExamGate = ({
           timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         }),
       })
+    )
+
+  if (gate.kind === "expired")
+    return frame(
+      <TimerOff className={iconClass} aria-hidden />,
+      t("page-courses-exam-expired-title"),
+      t("page-courses-exam-expired-description", {
+        hours: EXAM_ATTEMPT_TTL_MS / 3_600_000,
+      }),
+      <Button
+        variant="ghost"
+        className={cn(chunkyButton, "w-full")}
+        onClick={() => void start()}
+      >
+        {t("page-courses-try-again")}
+      </Button>
     )
 
   if (gate.kind !== "ready") return null
@@ -183,7 +214,7 @@ const ExamGate = ({
       const wait = MIN_ANSWER_MS + 150 - (Date.now() - lastAnswerAt.current)
       if (wait > 0) await sleep(wait)
       for (let tries = 0; tries < 3; tries++) {
-        const result = await requestJson<{ retryAfterMs?: number }>(
+        const result = await requestJson<{ retryAfterMs?: number } & Expired>(
           "/api/courses/exams/answer",
           {
             attemptId: attempt.attemptId,
@@ -194,6 +225,10 @@ const ExamGate = ({
         if (result.status === 425) {
           await sleep((result.data?.retryAfterMs ?? 500) + 100)
           continue
+        }
+        if (result.status === 410) {
+          expire(result.data)
+          return false
         }
         if (!result.ok) return false
         lastAnswerAt.current = Date.now()
@@ -206,7 +241,12 @@ const ExamGate = ({
         "/api/courses/exams/finish",
         { attemptId: attempt.attemptId }
       )
-      if (result.ok) void syncProgress(true)
+      if (result.status === 410) {
+        expire(result.data)
+        return null
+      }
+      if (!result.ok) return null
+      void syncProgress(true)
       return result.data
     },
     restart: () => void start(),

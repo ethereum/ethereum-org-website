@@ -9,8 +9,6 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 
-import { profileHref } from "@/data/courses"
-
 import Avatar from "../Account/avatar"
 import SignInDialog from "../Account/sign-in-dialog"
 
@@ -20,6 +18,7 @@ import { statChip } from "./theme"
 import { hasAnyProgress, useCourseProgress } from "./useCourseProgress"
 
 import { displayName } from "@/lib/auth/display-name"
+import { profileHref } from "@/lib/courses/constants"
 
 const chipHover = "hover:border-primary-hover hover:text-primary-hover"
 
@@ -45,7 +44,10 @@ const SignInChip = ({ className }: { className?: string }) => {
             className
           )}
         >
-          <SquareArrowRightEnter aria-hidden className="size-6" />
+          <SquareArrowRightEnter
+            aria-hidden
+            className="size-6 rtl:-scale-x-100"
+          />
           {tAccount("account-sign-in")}
         </button>
       }

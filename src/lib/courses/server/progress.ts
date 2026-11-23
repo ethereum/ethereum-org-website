@@ -5,15 +5,23 @@ import { EXAM_PASS_MARK, getCourse, getLesson } from "@/data/courses"
 
 import { mergeProgress, type ProgressState } from "../progress"
 import { examAttemptsLeft, XP_EXAM_PASS, XP_LESSON } from "../rules"
+import {
+  type AccountStreak,
+  MAX_STREAK_DAYS,
+  sentStreakDays,
+  streakFromDays,
+} from "../streak"
 
 import { apiError, json, learnerDay, readBody, type SessionUser } from "./api"
 import { recentAttempts } from "./exams"
+import { recordStreakDays } from "./lessons"
 
 import { getDb } from "@/lib/db"
 import {
   courseLessonCompletion,
   courseMastery,
   courseProgressState,
+  courseStreakDay,
 } from "@/lib/db/schema"
 
 const MAX_IMPORT = 500
@@ -60,7 +68,46 @@ const stateBody = z.object({
       })
     )
     .optional(),
+  days: z
+    .array(
+      z.object({
+        day: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+        offset: z.number().int().min(-840).max(840),
+        first: isoDate,
+        last: isoDate,
+      })
+    )
+    .max(MAX_STREAK_DAYS)
+    .optional(),
 }) satisfies z.ZodType<ProgressState>
+
+/**
+ * The streak every device's days add up to. The best also counts what the
+ * saved record reached, from before days were kept.
+ */
+const accountStreak = async (
+  userId: string,
+  saved?: ProgressState | null
+): Promise<AccountStreak> => {
+  const rows = await getDb()
+    .select({
+      day: courseStreakDay.day,
+      offset: courseStreakDay.utcOffset,
+      first: courseStreakDay.firstAt,
+      last: courseStreakDay.lastAt,
+    })
+    .from(courseStreakDay)
+    .where(eq(courseStreakDay.userId, userId))
+  const { streak, best } = streakFromDays(
+    rows.map(({ day, offset, first, last }) => ({
+      day,
+      offset,
+      first: first.toISOString(),
+      last: last.toISOString(),
+    }))
+  )
+  return { streak, bestStreak: Math.max(best, saved?.bestStreak ?? 0) }
+}
 
 const toDate = (value: string) => {
   const date = new Date(value)
@@ -68,8 +115,9 @@ const toDate = (value: string) => {
 }
 
 /**
- * The account's progress. XP counts verified work only, the figure behind
- * leaderboards; browser-only progress shows in the UI but never here.
+ * The account's progress. XP counts verified work only; browser-only
+ * progress shows in the UI but never here. The streak is worked out afresh
+ * from the days every device recorded.
  */
 export const getProgress = async (request: Request, user: SessionUser) => {
   const db = getDb()
@@ -90,6 +138,8 @@ export const getProgress = async (request: Request, user: SessionUser) => {
       .from(courseProgressState)
       .where(eq(courseProgressState.userId, user.id)),
   ])
+  const state = saved[0]?.state ?? null
+  const streak = await accountStreak(user.id, state)
   const startedByCourse = new Map<string, Date[]>()
   for (const { courseId, startedAt } of attempts)
     startedByCourse.set(courseId, [
@@ -101,7 +151,8 @@ export const getProgress = async (request: Request, user: SessionUser) => {
     masteries.filter(({ verified }) => verified).length * XP_EXAM_PASS
   return json({
     account: user.id,
-    state: saved[0]?.state ?? null,
+    state: state && { ...state, ...streak },
+    ...streak,
     lessons: lessons.map(
       ({ courseId, lessonId, verified, accuracy, completedAt }) => ({
         courseId,
@@ -125,20 +176,22 @@ export const getProgress = async (request: Request, user: SessionUser) => {
       ])
     ),
     verifiedXp,
-    showOnLeaderboard: user.showOnLeaderboard ?? true,
   })
 }
 
 /**
  * Browser progress joins the account, unverified: lessons and trophies fill
- * gaps and never overwrite what the server holds, and the whole record merges
- * into the account's copy for the learner's other devices.
+ * gaps and never overwrite what the server holds, its days join the
+ * account's, and the whole record merges into the account's copy for the
+ * learner's other devices. Sending the same progress twice changes nothing.
+ * Answers with the merged record and the streak it now adds up to.
  */
 export const importProgress = async (request: Request, user: SessionUser) => {
   const body = await readBody(request, stateBody)
   if (!body) return apiError("bad-request", 400)
+  const { days, ...record } = body
 
-  const lessons = Object.entries(body.lessons).flatMap(
+  const lessons = Object.entries(record.lessons).flatMap(
     ([key, { completedAt, accuracy }]) => {
       const [courseId, lessonId] = key.split("/")
       return getLesson(courseId, lessonId)
@@ -155,7 +208,7 @@ export const importProgress = async (request: Request, user: SessionUser) => {
         : []
     }
   )
-  const masteries = Object.entries(body.exams ?? {}).flatMap(
+  const masteries = Object.entries(record.exams ?? {}).flatMap(
     ([courseId, { best, passedAt }]) =>
       getCourse(courseId) && passedAt && best >= EXAM_PASS_MARK
         ? [
@@ -177,6 +230,9 @@ export const importProgress = async (request: Request, user: SessionUser) => {
       .onConflictDoNothing()
   if (masteries.length)
     await db.insert(courseMastery).values(masteries).onConflictDoNothing()
+  await recordStreakDays(user.id, sentStreakDays(days), false)
+  // Outside the transaction: the pool has one connection, which it holds
+  const streak = await accountStreak(user.id, record)
 
   // Locked while merging, so two devices saving at once don't drop either
   const state = await db.transaction(async (tx) => {
@@ -185,15 +241,20 @@ export const importProgress = async (request: Request, user: SessionUser) => {
       .from(courseProgressState)
       .where(eq(courseProgressState.userId, user.id))
       .for("update")
-    const merged = saved ? mergeProgress(saved.state, body) : body
+    const merged = saved ? mergeProgress(saved.state, record) : record
+    const next: ProgressState = {
+      ...merged,
+      streak: streak.streak,
+      bestStreak: Math.max(streak.bestStreak, merged.bestStreak ?? 0),
+    }
     await tx
       .insert(courseProgressState)
-      .values({ userId: user.id, state: merged })
+      .values({ userId: user.id, state: next })
       .onConflictDoUpdate({
         target: courseProgressState.userId,
-        set: { state: merged, updatedAt: new Date() },
+        set: { state: next, updatedAt: new Date() },
       })
-    return merged
+    return next
   })
-  return json({ state })
+  return json({ state, streak: state.streak, bestStreak: state.bestStreak })
 }

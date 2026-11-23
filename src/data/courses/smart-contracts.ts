@@ -97,10 +97,10 @@ export const smartContractsCourse: Course = {
           correct: ["approve"],
         },
         {
-          id: "wrapped",
+          id: "where",
           type: "choice",
-          options: ["wallet", "list", "eth"],
-          correct: ["list"],
+          options: ["wallet", "contract", "site"],
+          correct: ["contract"],
         },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
@@ -192,6 +192,20 @@ export const smartContractsCourse: Course = {
       source: "/wrapped-eth/",
       type: "choice",
       options: ["list", "gone", "eth"],
+    },
+    // approvals
+    {
+      id: "scope",
+      source:
+        "/guides/how-to-revoke-token-access/#why-do-projects-set-unlimited-token-allowance",
+      type: "choice",
+      options: ["players", "set", "all"],
+    },
+    {
+      id: "eth",
+      source: "/wrapped-eth/#why-do-we-need-to-wrap-eth",
+      type: "choice",
+      options: ["banned", "validators", "token"],
     },
     // public
     {

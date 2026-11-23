@@ -15,12 +15,12 @@ import {
 } from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
 
-import { NO_PROFILE_PARAM } from "@/data/courses"
-
 import SignInDialog from "../Account/sign-in-dialog"
 import { useAccount } from "../Account/use-account"
 
 import { syncProgress } from "./account-sync"
+
+import { NO_PROFILE_PARAM } from "@/lib/courses/constants"
 
 /**
  * On the hub after the profile page sent back someone with no progress yet.

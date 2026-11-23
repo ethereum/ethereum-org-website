@@ -15,7 +15,10 @@ import I18nProvider from "@/components/I18nProvider"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { COURSES_OG_IMAGE, PROFILE_SEGMENT } from "@/data/courses"
+import { COURSES_OG_IMAGE, PROFILE_SEGMENT, TRACKS } from "@/data/courses"
+
+import { toCatalog } from "@/lib/courses/catalog"
+import { pickCourseMessages } from "@/lib/courses/messages"
 
 export const revalidate = false
 
@@ -26,9 +29,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-courses")
 
   const allMessages = await getMessages({ locale })
-  const messages = pick(
-    allMessages,
-    getRequiredNamespacesForPage(`/courses/${PROFILE_SEGMENT}`)
+  const messages = pickCourseMessages(
+    pick(
+      allMessages,
+      getRequiredNamespacesForPage(`/courses/${PROFILE_SEGMENT}`)
+    ),
+    { page: "profile" }
   )
 
   return (
@@ -41,6 +47,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           />
         }
         notice={<ProfileEmptyNotice />}
+        tracks={toCatalog(TRACKS, { steps: true })}
       />
     </I18nProvider>
   )

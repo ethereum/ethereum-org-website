@@ -1,7 +1,7 @@
 "use client"
 
-import { useId, useState } from "react"
-import { Check, CircleCheck, CircleX, Gauge } from "lucide-react"
+import { useId, useRef, useState } from "react"
+import { CircleCheck, CircleX, Gauge } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
@@ -20,8 +20,9 @@ const GAS_PRICE = 10
  * limit; succeeding charges only the gas used.
  */
 const STOPS = [70_000, 90_000, 110_000, 130_000, 150_000, 170_000, 190_000]
+// The wallet's estimate plus headroom, where the slider starts
+const SUGGESTED = 5
 const MAX = STOPS[STOPS.length - 1]
-const TARGET = STOPS.indexOf(GAS_NEEDED)
 
 const outcome = (limit: number) => {
   const ok = limit >= GAS_NEEDED
@@ -29,32 +30,40 @@ const outcome = (limit: number) => {
   return { ok, used, unused: limit - used, fee: used * GAS_PRICE }
 }
 
-const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
+/**
+ * Sandbox: start from the wallet's suggested limit, then see that lowering it
+ * never cuts the fee, and that too low a limit fails and still costs
+ */
+const GasLimitWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
   const sliderId = useId()
-  const [stop, setStop] = useState(0)
+  const [stop, setStop] = useState(SUGGESTED)
+  const done = useRef(false)
 
   const int = numberFormat(locale)
   const compact = numberFormat(locale, { notation: "compact" })
   const limit = STOPS[stop]
   const { ok, used, unused, fee } = outcome(limit)
+  const state = !ok
+    ? "low"
+    : stop === SUGGESTED
+      ? "suggested"
+      : stop < SUGGESTED
+        ? "lower"
+        : "higher"
   const gasLabel = (value: number) =>
     t("page-courses-widget-limit-unit", { value: int.format(value) })
+  const gwei = (value: number) =>
+    t("page-courses-widget-limit-gwei", { value: int.format(value) })
 
   const handleChange = (next: number) => {
     setStop(next)
-    const nextLimit = STOPS[next]
-    const result = outcome(nextLimit)
-    onAnswer({
-      correct: next === TARGET,
-      hint: result.ok
-        ? t("page-courses-widget-limit-high", { limit: int.format(nextLimit) })
-        : t("page-courses-widget-limit-low", {
-            limit: int.format(nextLimit),
-            fee: int.format(result.fee),
-          }),
-    })
+    // Done once a too-low limit has failed: the cost of guessing low
+    if (!done.current && !outcome(STOPS[next]).ok) {
+      done.current = true
+      onComplete()
+    }
   }
 
   return (
@@ -62,7 +71,9 @@ const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
       <div className="flex flex-col gap-1">
         <p className="m-0 flex items-center gap-2 font-bold">
           <Gauge className={cn("size-5 shrink-0", courseText)} aria-hidden />
-          {t("page-courses-widget-limit-goal")}
+          {t("page-courses-widget-limit-wallet", {
+            value: int.format(STOPS[SUGGESTED]),
+          })}
         </p>
         <p className="m-0 text-body-medium">
           {t("page-courses-widget-limit-price", {
@@ -74,10 +85,17 @@ const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label
           htmlFor={sliderId}
-          className="flex flex-wrap justify-between gap-x-4 font-bold"
+          className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 font-bold"
         >
           <span>{t("page-courses-widget-limit-label")}</span>
-          <span className={courseText}>{gasLabel(limit)}</span>
+          <span className="flex items-center gap-2">
+            {stop === SUGGESTED && (
+              <span className="rounded-full bg-background px-2 py-0.5 text-sm whitespace-nowrap">
+                {t("page-courses-widget-limit-suggested")}
+              </span>
+            )}
+            <span className={courseText}>{gasLabel(limit)}</span>
+          </span>
         </label>
         <input
           id={sliderId}
@@ -87,7 +105,6 @@ const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
           step={1}
           value={stop}
           aria-valuetext={gasLabel(limit)}
-          disabled={locked}
           onChange={(e) => handleChange(Number(e.target.value))}
           className="w-full accent-(--course)"
         />
@@ -131,6 +148,12 @@ const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
       <div aria-live="polite" className="flex flex-col gap-4">
         <dl className="m-0 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
           <dt className="text-body-medium">
+            {t("page-courses-widget-limit-max")}
+          </dt>
+          <dd className="m-0 font-mono tabular-nums">
+            {gwei(limit * GAS_PRICE)}
+          </dd>
+          <dt className="text-body-medium">
             {t("page-courses-widget-limit-used")}
           </dt>
           <dd className="m-0 font-mono tabular-nums">{int.format(used)}</dd>
@@ -139,9 +162,7 @@ const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
           </dt>
           <dd className="m-0 font-mono tabular-nums">{int.format(unused)}</dd>
           <dt className="font-bold">{t("page-courses-widget-limit-fee")}</dt>
-          <dd className="m-0 font-mono font-bold tabular-nums">
-            {t("page-courses-widget-limit-gwei", { value: int.format(fee) })}
-          </dd>
+          <dd className="m-0 font-mono font-bold tabular-nums">{gwei(fee)}</dd>
         </dl>
 
         <p
@@ -157,22 +178,11 @@ const GasLimitWidget = ({ onAnswer, locked }: WidgetProps) => {
           ) : (
             <CircleX className="size-5 shrink-0" aria-hidden />
           )}
-          {t(
-            ok
-              ? "page-courses-widget-limit-success"
-              : "page-courses-widget-limit-failed"
-          )}
-        </p>
-      </div>
-
-      {locked && (
-        <p className="m-0 flex items-center gap-2 text-green-700 dark:text-green-400">
-          <Check className="size-5 shrink-0" aria-hidden />
-          {t("page-courses-widget-limit-hit", {
-            gas: int.format(GAS_NEEDED),
+          {t(`page-courses-widget-limit-status-${state}`, {
+            fee: int.format(fee),
           })}
         </p>
-      )}
+      </div>
     </WidgetShell>
   )
 }

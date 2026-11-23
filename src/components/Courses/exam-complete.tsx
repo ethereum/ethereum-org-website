@@ -1,30 +1,42 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Check, Crosshair, Trophy, X, Zap } from "lucide-react"
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { ArrowPrev } from "@/components/ui/arrow"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog-modal"
 
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import {
-  type ChoiceStep,
-  courseHref as hrefFor,
-  COURSES_HUB,
-  type PageLink,
-} from "@/data/courses"
+import type { ChoiceStep, PageLink } from "@/data/courses"
 
 import Confetti from "./confetti"
 import { LearnMoreLink } from "./learn-more"
+import { useEnterAction } from "./lesson-complete"
 import LevelUp from "./level-up"
 import StreakCelebration from "./streak-celebration"
 import { chunkyButton, chunkyButtonSecondary } from "./theme"
 import { useCountUp } from "./use-count-up"
 import type { ExamReward } from "./useCourseProgress"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useRouter } from "@/i18n/navigation"
+import { courseHref as hrefFor, COURSES_HUB } from "@/lib/courses/constants"
+
+// A passed trophy floats, and its glow breathes, for as long as it shows
+const LOOP = { duration: 3, repeat: Infinity, ease: "easeInOut" } as const
 
 /** One question to review: only after a pass, with the right options */
 export interface ExamResult {
@@ -46,6 +58,8 @@ interface ExamCompleteProps {
   onRetake: () => void
   /** Why there's no retake right now (today's attempts are used up) */
   retakeBlocked?: string
+  /** Attempts left today, for the retake prompt */
+  attemptsLeft?: number
   /** Page backing each question, by question id */
   sources?: Record<string, PageLink>
 }
@@ -63,20 +77,42 @@ const ExamComplete = ({
   nextCourseId,
   onRetake,
   retakeBlocked,
+  attemptsLeft = 1,
   sources,
 }: ExamCompleteProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
+  const { isRtl } = useRtlFlip()
   const animate = !useReducedMotion()
   const [stage, setStage] = useState<Stage>("summary")
   // Each screen replaces one that may have been scrolled down
   useEffect(() => {
-    window.scrollTo({ top: 0 })
-  }, [stage])
+    window.scrollTo({ top: 0, behavior: animate ? "smooth" : "instant" })
+  }, [stage, animate])
   // The streak screen shows once, the first time the learner moves on
   const [streakSeen, setStreakSeen] = useState(!reward.streakExtended)
 
   const { passed } = reward
+  // A retake starts an attempt at once, so it asks first
+  const [retakeAsked, setRetakeAsked] = useState(false)
+  const retakeRef = useRef<HTMLButtonElement>(null)
+  // Enter follows the screen's main button, once the buttons are in
+  const router = useRouter()
+  useEnterAction(
+    () => {
+      if (stage === "review") return setStage("summary")
+      if (stage === "summary" && !streakSeen) {
+        setStreakSeen(true)
+        return setStage("streak")
+      }
+      if (passed)
+        return router.push(nextCourseId ? hrefFor(nextCourseId) : COURSES_HUB)
+      if (retakeBlocked) return router.push(courseHref)
+      setRetakeAsked(true)
+    },
+    stage,
+    animate ? (stage === "summary" ? 1 : 0.2) : 0
+  )
   const xp = useCountUp(0, reward.xp, { enabled: animate, delay: 0.6 })
   const shown = useCountUp(0, score, { enabled: animate, delay: 0.8 })
   const int = numberFormat(locale)
@@ -91,11 +127,12 @@ const ExamComplete = ({
         }
       : {}
 
-  // React wants `key` passed directly, not spread, so callers add it
+  // React wants `key` passed directly, not spread, so callers add it.
+  // In from the end side, out to the start, mirrored for RTL
   const slide = () => ({
-    initial: animate ? { opacity: 0, x: 40 } : false,
+    initial: animate ? { opacity: 0, x: isRtl ? -40 : 40 } : false,
     animate: { opacity: 1, x: 0 },
-    exit: animate ? { opacity: 0, x: -40 } : undefined,
+    exit: animate ? { opacity: 0, x: isRtl ? 40 : -40 } : undefined,
   })
 
   const primaryNav = passed ? (
@@ -115,7 +152,11 @@ const ExamComplete = ({
   ) : retakeBlocked ? (
     <p className="m-0 text-body-medium">{retakeBlocked}</p>
   ) : (
-    <Button variant="ghost" onClick={onRetake} className={chunkyButton}>
+    <Button
+      variant="ghost"
+      onClick={() => setRetakeAsked(true)}
+      className={chunkyButton}
+    >
       {t("page-courses-try-again")}
     </Button>
   )
@@ -154,24 +195,31 @@ const ExamComplete = ({
           >
             <div className="relative grid size-40 place-items-center">
               {passed && (
-                <span
+                <motion.span
                   aria-hidden
                   className="absolute inset-0 rounded-full bg-[radial-gradient(circle,var(--color-yellow-300)_0%,transparent_70%)] opacity-60"
+                  animate={animate ? { scale: [1, 1.2, 1] } : undefined}
+                  transition={LOOP}
                 />
               )}
               {passed && animate && <Confetti />}
               <motion.div
-                initial={animate ? { scale: 0.3, rotate: -20 } : false}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ type: "spring", stiffness: 260, damping: 14 }}
-                className={cn(
-                  "relative grid size-28 place-items-center rounded-3xl [&>svg]:size-14",
-                  passed
-                    ? "border-b-[6px] border-yellow-600 bg-yellow-400 text-yellow-900"
-                    : "border-2 border-dashed border-border bg-background text-disabled"
-                )}
+                animate={passed && animate ? { y: [0, -8, 0] } : undefined}
+                transition={{ ...LOOP, delay: 0.8 }}
               >
-                <Trophy aria-hidden />
+                <motion.div
+                  initial={animate ? { scale: 0.3, rotate: -20 } : false}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ type: "spring", stiffness: 260, damping: 14 }}
+                  className={cn(
+                    "relative grid size-28 place-items-center rounded-3xl [&>svg]:size-14",
+                    passed
+                      ? "border-b-[6px] border-yellow-600 bg-yellow-400 text-yellow-900"
+                      : "border-2 border-dashed border-border bg-background text-disabled"
+                  )}
+                >
+                  <Trophy aria-hidden />
+                </motion.div>
               </motion.div>
             </div>
 
@@ -321,6 +369,45 @@ const ExamComplete = ({
           </>
         )}
       </motion.div>
+
+      <Dialog
+        variant="stacked"
+        open={retakeAsked}
+        onOpenChange={setRetakeAsked}
+      >
+        <DialogContent
+          // Enter confirms: the second deliberate press after Try again
+          onOpenAutoFocus={(event) => {
+            event.preventDefault()
+            retakeRef.current?.focus()
+          }}
+        >
+          <DialogHeader>
+            <DialogTitle>{t("page-courses-exam-retake-title")}</DialogTitle>
+          </DialogHeader>
+          <DialogDescription>
+            {t("page-courses-exam-retake-description", {
+              count: attemptsLeft,
+            })}
+          </DialogDescription>
+          <DialogFooter className="flex flex-wrap justify-end gap-2">
+            <DialogClose asChild>
+              <Button variant="outline" isSecondary>
+                {t("page-courses-exam-retake-cancel")}
+              </Button>
+            </DialogClose>
+            <Button
+              ref={retakeRef}
+              onClick={() => {
+                setRetakeAsked(false)
+                onRetake()
+              }}
+            >
+              {t("page-courses-try-again")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }

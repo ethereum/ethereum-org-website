@@ -13,6 +13,7 @@ import { useCountUp } from "./use-count-up"
 
 const COUNT_DELAY = 0.5
 const DAY_DELAY = 1.3
+const LOOP = { duration: 2.4, repeat: Infinity, ease: "easeInOut" } as const
 
 /** Shown once per day: after the first lesson that extends the streak */
 const StreakCelebration = ({ streak }: { streak: number }) => {
@@ -54,15 +55,32 @@ const StreakCelebration = ({ streak }: { streak: number }) => {
         animate={{ scale: 1, rotate: 0 }}
         transition={{ type: "spring", stiffness: 240, damping: 12 }}
       >
-        <Flame className="size-36 fill-orange-500 text-orange-700 dark:fill-orange-400 dark:text-orange-500" />
-        {animate && (
+        {/* Glow behind the flame: lights up with the count, then breathes
+            while the screen shows. Stronger in dark mode to stay visible */}
+        <motion.span
+          className="absolute -inset-8"
+          initial={animate ? { scale: 0.6, opacity: 0 } : false}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: COUNT_DELAY, duration: 0.8 }}
+        >
           <motion.span
-            className="absolute inset-0 rounded-full bg-orange-400/30 blur-2xl"
-            initial={{ scale: 0.6, opacity: 0 }}
-            animate={{ scale: [0.6, 1.3, 1], opacity: [0, 1, 0.6] }}
-            transition={{ delay: COUNT_DELAY, duration: 0.8 }}
+            className="block size-full rounded-full bg-orange-400/40 blur-2xl dark:bg-orange-500/55"
+            animate={animate ? { scale: [1, 1.15, 1] } : undefined}
+            transition={{ ...LOOP, delay: COUNT_DELAY + 0.8 }}
           />
-        )}
+        </motion.span>
+        {/* A gentle flicker, rooted at the base */}
+        <motion.span
+          className="relative block origin-bottom"
+          animate={
+            animate
+              ? { scaleY: [1, 1.06, 0.98, 1], rotate: [0, -2, 2, 0] }
+              : undefined
+          }
+          transition={{ ...LOOP, delay: COUNT_DELAY + 0.8 }}
+        >
+          <Flame className="size-36 fill-orange-500 text-orange-700 dark:fill-orange-400 dark:text-orange-500" />
+        </motion.span>
       </motion.div>
 
       <div role="status" className="flex flex-col items-center gap-1">
