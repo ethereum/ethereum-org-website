@@ -1270,6 +1270,18 @@ test.describe("English Comparison Fixes", () => {
   })
 
   test.describe("fixCrowdinSplitBackticks", () => {
+    test("does not merge two adjacent correct spans", () => {
+      const english =
+        "calls `withdraw()` in `Victim` again if the gas left over is high"
+      const translated = "ruft `withdraw()` in `Victim` erneut auf"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
     test("repairs premature backtick close splitting inline code", () => {
       const english = "we use an empty component (`<> ... </>`) to combine them"
       const translated =

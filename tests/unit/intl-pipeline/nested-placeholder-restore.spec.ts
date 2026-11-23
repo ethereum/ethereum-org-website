@@ -1,9 +1,6 @@
 /**
- * Regression: normalizeContent extracts HTML tags before inline code, so
- * `` `<hr />` `` stores an HTMLTAG token inside its CODE extraction. Restoring
- * in insertion order expanded the HTMLTAG key before the CODE key revealed it,
- * leaking `<HTML-PLACEHOLDER-HTMLTAG-... />` and failing the gate for the wagmi
- * tutorial in every locale.
+ * normalizeContent -> reconstructFromPlaceholders must round-trip English
+ * byte-for-byte; each case here once failed the gate in all 24 locales.
  */
 
 import { expect, test } from "@playwright/test"
@@ -34,4 +31,32 @@ test.describe("Nested placeholder restore", () => {
       expect(result).toBe(markdown)
     })
   }
+})
+
+test.describe("Wrapper restore closes with the element's own tag", () => {
+  for (const markdown of [
+    '<p className="mt-0"><strong>Good to know</strong></p>\n',
+    "<ul style={{ marginBottom: 0 }}>\n  <li>Fees <strong>~5x</strong> lower</li>\n</ul>\n",
+    '<ExpandableCard title="Rewards">\n\nText.\n\n<ButtonLink href="/staking/">Stake</ButtonLink>\n\n</ExpandableCard>\n',
+    'Jump <a id="top"></a> here.\n',
+    "```md\n  indented first line\nsecond\n```\n",
+  ]) {
+    test(`round-trips ${JSON.stringify(markdown)}`, () => {
+      expect(roundTrip(markdown)).toBe(markdown)
+    })
+  }
+})
+
+test("positional recovery still fires when another token is nested", () => {
+  // `x` sits inside the image extraction, so it never reaches the model; it
+  // must not count against recovering the corrupted `y` token.
+  const markdown = "![a `x` b](./p.png) and `y` text.\n"
+  const { normalized, extractions } = normalizeContent(markdown)
+  const tokens = normalized.match(/<HTML-PLACEHOLDER-CODE-[a-f0-9]+ \/>/g)
+  expect(tokens).toHaveLength(1)
+  const corrupted = normalized.replace(
+    tokens![0],
+    "<HTML-PLACEHOLDER-CODE-000000 />"
+  )
+  expect(reconstructFromPlaceholders(corrupted, extractions)).toBe(markdown)
 })
