@@ -307,11 +307,13 @@ async function translateNormalizedMarkdown(
   // Step 6: Build placeholderMap from the normalizer tree
   const placeholderMap = buildPlaceholderMap(tree)
 
-  // Step 7: Reconstruct
-  let finalContent = reconstructFromPlaceholders(translatedProse, extractions)
-
-  // Step 8: Restore heading anchor IDs from English source.
-  finalContent = restoreHeadingIds(finalContent, fileContent)
+  // Steps 7-8: Reconstruct, then restore heading anchor IDs from English.
+  let finalContent = restoreNormalizedMarkdown(
+    translatedProse,
+    extractions,
+    normalized,
+    fileContent
+  )
 
   // Step 9: Translate code comments (from normalizer tree)
   const commentNodes = collectCommentNodes(tree)
@@ -573,9 +575,8 @@ function rebuildWrapper(
     case "CODEBLOCK": {
       const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
       if (!fenceMatch) return null
-      const body = translatedText
-        .replace(/^[ \t]*\n/, "")
-        .replace(/\n[ \t]*$/, "")
+      // Drop the blank lines around the body but keep its first line's indent.
+      const body = translatedText.replace(/^(?:[ \t]*\r?\n)+/, "").trimEnd()
       return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${body}\n${fenceMatch[1]}${fenceMatch[2]}`
     }
   }
@@ -599,7 +600,8 @@ function rebuildWrapper(
 function recoverPlaceholdersByPosition(
   result: string,
   originalTranslated: string,
-  extractions: Map<string, string>
+  extractions: Map<string, string>,
+  sent?: string
 ): string {
   const wrapperTypes: WrapperType[] = [
     "LINK",
@@ -616,15 +618,11 @@ function recoverPlaceholdersByPosition(
   ]
   let recovered = 0
 
-  // Tokens captured inside another extraction (`<hr />` in inline code) never
-  // reach the model; counting them as unconsumed would block every recovery.
-  const nested = new Set<string>()
-  extractions.forEach((original) => {
-    for (const m of original.matchAll(
-      /<HTML-PLACEHOLDER-[A-Z]+-[A-Za-z0-9]+(?: \/)?>/g
-    ))
-      nested.add(m[0])
-  })
+  // Only tokens the model was sent can be missing from its output; one held
+  // inside another extraction (`<hr />` in inline code) never reached it.
+  const missing = (token: string) =>
+    (sent === undefined || sent.includes(token)) &&
+    !originalTranslated.includes(token)
 
   // --- Wrapper recovery (open/close tag pairs) ---
   for (const type of wrapperTypes) {
@@ -637,8 +635,7 @@ function recoverPlaceholdersByPosition(
       if (!key.startsWith(prefix)) return
       const hash = key.slice(prefix.length)
       const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
-      if (nested.has(openTag)) return
-      if (!originalTranslated.includes(openTag)) unconsumed.push(original)
+      if (missing(openTag)) unconsumed.push(original)
     })
     if (unconsumed.length === 0) continue
 
@@ -693,8 +690,7 @@ function recoverPlaceholdersByPosition(
       const selfCloseRe = new RegExp(
         `^<HTML-PLACEHOLDER-${type}-([A-Za-z0-9]+) />$`
       )
-      if (!selfCloseRe.test(key) || nested.has(key)) return
-      if (!originalTranslated.includes(key)) unconsumed.push(original)
+      if (selfCloseRe.test(key) && missing(key)) unconsumed.push(original)
     })
     if (unconsumed.length === 0) continue
 
@@ -724,9 +720,26 @@ function recoverPlaceholdersByPosition(
   return result
 }
 
+/**
+ * Model output for normalized prose -> final markdown: placeholders restored
+ * and English heading IDs reattached. The identity sweep runs this exact path.
+ */
+export function restoreNormalizedMarkdown(
+  translatedProse: string,
+  extractions: Map<string, string>,
+  normalized: string,
+  english: string
+): string {
+  return restoreHeadingIds(
+    reconstructFromPlaceholders(translatedProse, extractions, normalized),
+    english
+  )
+}
+
 function reconstructFromPlaceholders(
   translated: string,
-  extractions: Map<string, string>
+  extractions: Map<string, string>,
+  sent?: string
 ): string {
   let result = translated
 
@@ -777,7 +790,7 @@ function reconstructFromPlaceholders(
   // Final pass: positional fallback for tokens the exact-hash passes could not
   // restore because Gemini corrupted the hash (e.g. -> 000000). Only fires when
   // residual/unconsumed counts match per type; otherwise leaves residuals as-is.
-  result = recoverPlaceholdersByPosition(result, translated, extractions)
+  result = recoverPlaceholdersByPosition(result, translated, extractions, sent)
 
   return result
 }
@@ -1599,5 +1612,4 @@ function stripCodeBlockWrapping(
 /** Test-only exports for internal helpers (not part of the public API). */
 export const _testOnly = {
   reconstructFromPlaceholders,
-  restoreHeadingIds,
 }

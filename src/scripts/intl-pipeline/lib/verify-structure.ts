@@ -58,17 +58,19 @@ export type Finding = {
  * exactly that, and throws when the list is gone.
  */
 function flowchartShapes(src: string): string[] {
-  return [...src.matchAll(/<Flowchart>([\s\S]*?)<\/Flowchart>/g)].map((m) => {
-    const items = [
-      ...m[1].matchAll(/^([ \t]*)(?:[-*+]|\d+[.)])[ \t]+(\*\*)?/gm),
-    ]
-    const indents = [...new Set(items.map((i) => i[1].length))].sort(
-      (a, b) => a - b
-    )
-    return items
-      .map((i) => `${indents.indexOf(i[1].length)}${i[2] ? "b" : ""}`)
-      .join(" ")
-  })
+  return [...src.matchAll(/<Flowchart\b[^>]*>([\s\S]*?)<\/Flowchart>/g)].map(
+    (m) => {
+      const items = [
+        ...m[1].matchAll(/^([ \t]*)(?:[-*+]|\d+[.)])[ \t]+(\*\*|__)?/gm),
+      ]
+      const indents = [...new Set(items.map((i) => i[1].length))].sort(
+        (a, b) => a - b
+      )
+      return items
+        .map((i) => `${indents.indexOf(i[1].length)}${i[2] ? "b" : ""}`)
+        .join(" ")
+    }
+  )
 }
 
 /** Heading scan that ignores fenced code (a shell `# comment` is not a heading). */
@@ -209,11 +211,10 @@ export function verifyMarkdown(
   const tagDiff = diffMultiset(tags(enSrc), tags(trSrc))
   if (tagDiff.length) add("jsx-tags", tagDiff.join(", "))
 
+  // A differing <Flowchart> count is already a jsx-tags finding.
   const efc = flowchartShapes(enSrc)
   const tfc = flowchartShapes(trSrc)
-  if (efc.length !== tfc.length)
-    add("flowchart-count", `en=${efc.length} tr=${tfc.length}`)
-  else
+  if (efc.length === tfc.length)
     efc.forEach((shape, i) => {
       if (shape !== tfc[i])
         add(

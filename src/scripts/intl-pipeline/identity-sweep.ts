@@ -6,8 +6,10 @@
  * code we own, so English in must come out passing. A page that fails here
  * fails in all 24 locales on every full translation, whatever the model does:
  * that is how the wagmi tutorial failed in every locale on two runs in a row.
- * Also runs sanitize -> gates on English alone, which is what an incremental
- * merge of unchanged sections looks like. No API calls, no cost.
+ * Also sanitizes English alone, which is what an incremental merge of
+ * unchanged sections looks like, and requires its links and code to come back
+ * untouched: the gates don't compare external URLs or inline code. No API
+ * calls, no cost.
  *
  *   pnpm intl:identity-sweep [path-substring ...]
  *
@@ -32,6 +34,26 @@ function englishPages(dir: string, out: string[] = []): string[] {
   return out
 }
 
+/** Link targets and code spans, which no sanitizer fix may alter in English. */
+function literals(md: string): string[] {
+  const out: string[] = []
+  for (const m of md.matchAll(/\]\((<[^>\n]*>|[^)\s]*)/g)) out.push(m[1])
+  for (const m of md.matchAll(/`[^`\n]+`/g)) out.push(m[0])
+  return out
+}
+
+function literalDrift(english: string, output: string): string[] {
+  const left = new Map<string, number>()
+  for (const l of literals(english)) left.set(l, (left.get(l) ?? 0) + 1)
+  const extra: string[] = []
+  for (const l of literals(output)) {
+    const n = left.get(l) ?? 0
+    if (n) left.set(l, n - 1)
+    else extra.push(l)
+  }
+  return extra.slice(0, 3).map((l) => `link or code altered: ${l}`)
+}
+
 async function quiet<T>(fn: () => Promise<T>): Promise<T> {
   const { log, warn } = console
   console.log = console.warn = () => {}
@@ -46,7 +68,7 @@ async function quiet<T>(fn: () => Promise<T>): Promise<T> {
 async function main() {
   const [
     { normalizeContent },
-    { _testOnly },
+    { restoreNormalizedMarkdown },
     { chunkProse, PROSE_SIZE_THRESHOLD },
     { matchTrailingNewline },
     { runSanitizer },
@@ -65,7 +87,10 @@ async function main() {
     (p) => !filters.length || filters.some((f) => p.includes(f))
   )
 
-  const gate = async (rel: string, english: string, output: string) => {
+  if (!pages.length)
+    throw new Error(`No English pages match ${filters.join(", ")}`)
+
+  const sanitize = async (rel: string, english: string, output: string) => {
     const dest = rel.replace(
       "public/content/",
       "public/content/translations/de/"
@@ -78,32 +103,35 @@ async function main() {
       )
     )
     const fixed = sanitized?.changedFiles?.find((f) => f.path === dest)
-    const content = matchTrailingNewline(
-      fixed ? fixed.content : output,
-      english
-    )
-    const { failures } = await runGates({
-      destPath: dest,
-      fileType: "markdown",
-      english,
-      output: content,
-      mode: "full",
-    })
-    return failures
+    return matchTrailingNewline(fixed ? fixed.content : output, english)
   }
+  const gate = async (english: string, output: string) =>
+    (
+      await runGates({
+        destPath: "identity-sweep.md",
+        fileType: "markdown",
+        english,
+        output,
+        mode: "full",
+      })
+    ).failures
 
   let failed = 0
   for (const rel of pages) {
     const english = fs.readFileSync(rel, "utf8")
     const { normalized, extractions } = normalizeContent(english)
     const prose = chunkProse(normalized, PROSE_SIZE_THRESHOLD).join("\n\n")
-    const full = _testOnly.restoreHeadingIds(
-      _testOnly.reconstructFromPlaceholders(prose, extractions),
-      english
+    const full = await sanitize(
+      rel,
+      english,
+      restoreNormalizedMarkdown(prose, extractions, normalized, english)
     )
+    const sanitized = await sanitize(rel, english, english)
     const findings = [
-      ...(await gate(rel, english, full)).map((f) => `full: ${f}`),
-      ...(await gate(rel, english, english)).map((f) => `sanitize: ${f}`),
+      ...(await gate(english, full)).map((f) => `full: ${f}`),
+      ...(await gate(english, sanitized)).map((f) => `sanitize: ${f}`),
+      ...literalDrift(english, full).map((f) => `full: ${f}`),
+      ...literalDrift(english, sanitized).map((f) => `sanitize: ${f}`),
     ]
     if (!findings.length) continue
     failed++

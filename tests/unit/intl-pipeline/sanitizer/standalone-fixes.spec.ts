@@ -583,6 +583,13 @@ test.describe("Standalone Fixes", () => {
   })
 
   test.describe("fixBlockComponentLineBreaks", () => {
+    test("splits a closer that follows inline code", () => {
+      const { content } = fixBlockComponentLineBreaks(
+        "<Alert>\n\nRun `npm i`</Alert>"
+      )
+      expect(content).toBe("<Alert>\n\nRun `npm i`\n</Alert>")
+    })
+
     test("leaves JSX attribute values and indented closers alone", () => {
       const input = [
         '  <Card title="Low barrier" icon={<Fish />} description="Stake any amount." />',
@@ -3291,6 +3298,13 @@ author: Ori Pomerantz
   })
 
   test.describe("fixDroppedAutolinkClose", () => {
+    test("leaves a URL whose file name follows the parentheses", () => {
+      const input = "[source](<https://x.example/files/PayPal-(1).pdf>)"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
     test("leaves a URL whose path continues after the parentheses", () => {
       const input =
         "- [Web3j Cheat Sheet](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)"

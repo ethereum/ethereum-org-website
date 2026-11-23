@@ -47,16 +47,27 @@ test.describe("Wrapper restore closes with the element's own tag", () => {
   }
 })
 
-test("positional recovery still fires when another token is nested", () => {
-  // `x` sits inside the image extraction, so it never reaches the model; it
-  // must not count against recovering the corrupted `y` token.
-  const markdown = "![a `x` b](./p.png) and `y` text.\n"
-  const { normalized, extractions } = normalizeContent(markdown)
-  const tokens = normalized.match(/<HTML-PLACEHOLDER-CODE-[a-f0-9]+ \/>/g)
-  expect(tokens).toHaveLength(1)
-  const corrupted = normalized.replace(
-    tokens![0],
-    "<HTML-PLACEHOLDER-CODE-000000 />"
-  )
-  expect(reconstructFromPlaceholders(corrupted, extractions)).toBe(markdown)
+test.describe("Positional recovery of a corrupted CODE hash", () => {
+  for (const markdown of [
+    // `x` is held inside the image, so it never reaches the model and must
+    // not count against recovering `y`.
+    "![a `x` b](./p.png) and `y` text.\n",
+    // Link text is sent to the model, so code inside it stays recoverable.
+    "Call [`eth_call`](/developers/docs/apis/json-rpc/#eth_call) to read state.\n",
+    // The same token both nested and sent.
+    "![a `x` b](./p.png) and `x` text.\n",
+  ]) {
+    test(JSON.stringify(markdown), () => {
+      const { normalized, extractions } = normalizeContent(markdown)
+      const tokens = normalized.match(/<HTML-PLACEHOLDER-CODE-[a-f0-9]+ \/>/g)
+      expect(tokens).toHaveLength(1)
+      const corrupted = normalized.replace(
+        tokens![0],
+        "<HTML-PLACEHOLDER-CODE-000000 />"
+      )
+      expect(
+        reconstructFromPlaceholders(corrupted, extractions, normalized)
+      ).toBe(markdown)
+    })
+  }
 })
