@@ -15,7 +15,7 @@ const { reconstructFromPlaceholders } = _testOnly
 
 const roundTrip = (markdown: string) => {
   const { normalized, extractions } = normalizeContent(markdown)
-  return reconstructFromPlaceholders(normalized, extractions)
+  return reconstructFromPlaceholders(normalized, extractions, normalized)
 }
 
 test.describe("Nested placeholder restore", () => {
@@ -40,6 +40,7 @@ test.describe("Wrapper restore closes with the element's own tag", () => {
     '<ExpandableCard title="Rewards">\n\nText.\n\n<ButtonLink href="/staking/">Stake</ButtonLink>\n\n</ExpandableCard>\n',
     'Jump <a id="top"></a> here.\n',
     "```md\n  indented first line\nsecond\n```\n",
+    "```md\r\nline one\r\nline two\r\n```\r\n",
   ]) {
     test(`round-trips ${JSON.stringify(markdown)}`, () => {
       expect(roundTrip(markdown)).toBe(markdown)

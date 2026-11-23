@@ -576,7 +576,9 @@ function rebuildWrapper(
       const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
       if (!fenceMatch) return null
       // Drop the blank lines around the body but keep its first line's indent.
-      const body = translatedText.replace(/^(?:[ \t]*\r?\n)+/, "").trimEnd()
+      const body = translatedText
+        .replace(/^(?:[ \t]*\r?\n)+/, "")
+        .replace(/(?:\n[ \t\r]*)+$/, "")
       return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${body}\n${fenceMatch[1]}${fenceMatch[2]}`
     }
   }
@@ -601,7 +603,7 @@ function recoverPlaceholdersByPosition(
   result: string,
   originalTranslated: string,
   extractions: Map<string, string>,
-  sent?: string
+  sent: string
 ): string {
   const wrapperTypes: WrapperType[] = [
     "LINK",
@@ -621,8 +623,7 @@ function recoverPlaceholdersByPosition(
   // Only tokens the model was sent can be missing from its output; one held
   // inside another extraction (`<hr />` in inline code) never reached it.
   const missing = (token: string) =>
-    (sent === undefined || sent.includes(token)) &&
-    !originalTranslated.includes(token)
+    sent.includes(token) && !originalTranslated.includes(token)
 
   // --- Wrapper recovery (open/close tag pairs) ---
   for (const type of wrapperTypes) {
@@ -739,7 +740,7 @@ export function restoreNormalizedMarkdown(
 function reconstructFromPlaceholders(
   translated: string,
   extractions: Map<string, string>,
-  sent?: string
+  sent: string
 ): string {
   let result = translated
 
