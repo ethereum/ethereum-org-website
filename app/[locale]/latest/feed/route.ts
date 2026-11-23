@@ -3,11 +3,16 @@ import { getTranslations } from "next-intl/server"
 
 import { getBlogFallbackHero } from "@/lib/utils/blog"
 import { getBlogPostsData } from "@/lib/utils/md"
+import { createOptionsResponse } from "@/lib/utils/optionsResponse"
 import { getFullUrl } from "@/lib/utils/url"
 
 import { SITE_URL } from "@/lib/constants"
 
 export const dynamic = "force-static"
+
+export function OPTIONS() {
+  return createOptionsResponse(["GET", "HEAD"])
+}
 
 const XML_ESCAPE: Record<string, string> = {
   "&": "&amp;",

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 
+import { createOptionsResponse } from "@/lib/utils/optionsResponse"
 import { normalizeLabels } from "@/lib/utils/gh"
 
 const LABELS_TO_EMOJI = {
@@ -12,6 +13,10 @@ const LABELS_TO_EMOJI = {
 }
 
 const GFI_LABEL = "good first issue"
+
+export function OPTIONS() {
+  return createOptionsResponse(["POST"])
+}
 
 export async function POST(req: Request) {
   const { action, label, issue } = await req.json()

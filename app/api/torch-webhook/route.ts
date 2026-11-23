@@ -1,6 +1,12 @@
 import { revalidatePath } from "next/cache"
 import { NextRequest, NextResponse } from "next/server"
 
+import { createOptionsResponse } from "@/lib/utils/optionsResponse"
+
+export function OPTIONS() {
+  return createOptionsResponse(["POST"])
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.json()
   const webhookId = body.webhookId
