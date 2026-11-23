@@ -12,6 +12,7 @@ import NodeClientsDiagram, {
   NodeArchitectureDiagram,
   NodeNetworksDiagram,
 } from "./NodeClients"
+import ErasureCodingDiagram, { ColumnSubnetsDiagram } from "./PeerDas"
 import PortalHistoryDiagram from "./PortalHistory"
 import SourceVerifyDiagram from "./SourceVerify"
 import VaultInterfaceDiagram, {
@@ -21,6 +22,7 @@ import VaultInterfaceDiagram, {
 } from "./TokenVault"
 import TxApplyDiagram from "./TxApply"
 import ValidatorKeysDiagram, { KeyDerivationDiagram } from "./ValidatorKeys"
+import VerkleTreeDiagram from "./VerkleTree"
 
 /** Every interactive diagram, keyed by its markdown tag; spread into a layout's MDX components. */
 export const mdxDiagramComponents = {
@@ -29,6 +31,8 @@ export const mdxDiagramComponents = {
   AttestationsDiagram,
   BlockStateDiagram,
   ClientSetupDiagram,
+  ColumnSubnetsDiagram,
+  ErasureCodingDiagram,
   EvmZonesDiagram,
   ExAnteReorgDiagram,
   GasEvmDiagram,
@@ -46,4 +50,5 @@ export const mdxDiagramComponents = {
   VaultDepositDiagram,
   VaultInterfaceDiagram,
   VaultRequestDiagram,
+  VerkleTreeDiagram,
 }

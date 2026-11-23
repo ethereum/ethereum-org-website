@@ -334,6 +334,15 @@ module.exports = (phase) => {
           "./public/content/latest/**/*.md",
           "./public/content/translations/*/latest/**/*.md",
         ],
+        "\\[locale\\]/community": [
+          "./public/content/stories/**/*.md",
+          "./public/content/translations/*/stories/**/*.md",
+        ],
+        // Story pages also read co-located and hero images from disk.
+        "\\[locale\\]/stories": [
+          "./public/content/stories/**/*",
+          "./public/content/translations/*/stories/**/*.md",
+        ],
       },
     }
   }

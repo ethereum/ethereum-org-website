@@ -722,7 +722,9 @@ function reconstructFromPlaceholders(
   // Block placeholders: replace ALL occurrences with originals.
   // Content-addressed placeholders can appear multiple times when the
   // same inline code/image appears repeatedly (e.g., `base fee` x5).
-  extractions.forEach((original, placeholder) => {
+  // Reverse insertion order: a later pass can capture an earlier placeholder
+  // (inline code `<hr />` holds an HTMLTAG token), so outer expands first.
+  ;[...extractions].reverse().forEach(([placeholder, original]) => {
     if (
       placeholder.startsWith("LINK:") ||
       placeholder.startsWith("HTMLTAG:") ||
