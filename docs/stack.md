@@ -13,7 +13,7 @@
 - [shadcn/ui](https://ui.shadcn.com/) - Component library built on Radix UI and Tailwind CSS
 - [Radix UI](https://www.radix-ui.com/) - Accessible component primitives
 - [Typesense](https://typesense.org/) - Self-hosted site search, one index per locale. [Learn more on how we implement site search](./site-search.md).
-  - Primary implementation: `/src/components/Search/index.tsx`
+  - Primary implementation: `/src/components/Nav/Search/index.tsx`
 - [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
 - [Netlify](https://www.netlify.com/) - DNS management and primary host for `master` build.

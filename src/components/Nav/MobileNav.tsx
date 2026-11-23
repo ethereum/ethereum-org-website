@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils/cn"
 
-import Search from "../Search"
-
 import MobileMenu from "./MobileMenu"
+import Search from "./Search"
 
 const MobileNav = ({ className }: { className?: string }) => {
   return (
