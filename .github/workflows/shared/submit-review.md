@@ -178,14 +178,15 @@ safe-outputs:
             if jq -e '[.product, .criteria, .facts] | map(. // "" | tostring) | any(length > 2)' <<<"$item" > /dev/null; then
               listing=$(node .github/scripts/listing-research.mjs check <<<"$item") || { echo "::warning::PR #$pr: listing research could not be checked"; listing=null; }
             fi
-            if [ "$listing" = null ]; then
-              listing=$(jq -c '.body // "" | (capture("<!-- ethorg-review: (?<j>.*) -->").j | fromjson | .listing)? // null' <<<"$existing")
-            fi
+            prev=$(jq -c '.body // "" | (capture("<!-- ethorg-review: (?<j>.*) -->").j | fromjson | .listing)? // null' <<<"$existing")
+            [ "$listing" != null ] || listing=$prev
             section=""
             if [ "$listing" != null ]; then
               section=$(node .github/scripts/listing-research.mjs section <<<"$listing")
               review=$(jq -c --argjson l "$listing" '. + {listing: $l}' <<<"$review")
               gh api -X POST "repos/$REPO/issues/$pr/labels" -f "labels[]=needs product review 🕵️" > /dev/null
+              jq -nc --argjson r "$listing" --argjson p "$prev" '{record: $r, prev: $p}' \
+                | node .github/scripts/listing-research.mjs signal "$pr" || echo "::warning::PR #$pr: listing blocker signals failed"
             fi
 
             # Visible text also gets @-mentions defused so injected text can't ping people or teams.

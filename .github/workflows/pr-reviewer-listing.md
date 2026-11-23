@@ -63,36 +63,11 @@ max-ai-credits: 600
 max-daily-ai-credits: 2000
 strict: true
 timeout-minutes: 25
-# Only this reviewer reads the web: listing research needs independent sources, other reviews don't.
 network:
   allowed:
     - defaults
     - github
-    - web.archive.org
-    - rdap.org
-    - etherscan.io
-    - defillama.com
-    - api.llama.fi
-    - l2beat.com
-    - rekt.news
-    - apps.apple.com
-    - play.google.com
-    - find-and-update.company-information.service.gov.uk
-    - code4rena.com
-    - cantina.xyz
-    - solodit.cyfrin.io
-    - theblock.co
-    - www.theblock.co
-    - coindesk.com
-    - www.coindesk.com
-    - cointelegraph.com
-    - decrypt.co
-    - npmjs.com
-    - www.npmjs.com
-    - registry.npmjs.org
 tools:
-  web-fetch:
-  web-search:
   github:
     toolsets: [default, actions]
   bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "git branch -a", "git branch --list:*", "git branch --contains:*", "ls:*", "cat:*", "grep:*", "head:*", "tail:*", "wc:*"]
@@ -152,6 +127,7 @@ pre-agent-steps:
       fi
 imports:
   - shared/pr-review-core.md
+  - shared/listing-research.md
   - shared/submit-review.md
 ---
 
