@@ -38,6 +38,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog-modal"
+import { EdgeScrollContainer } from "@/components/ui/edge-scroll-container"
 import { Grid } from "@/components/ui/grid"
 import { Tag, type TagProps } from "@/components/ui/tag"
 
@@ -368,83 +369,95 @@ const HistoryChapters = ({
 
   return (
     <>
-      <Grid columns={3} size="slim" className="my-space-2x">
-        {chapters.map((chapter) => {
-          const seen = progress[chapter.slug] ?? 0
-          const isRead = seen >= chapter.steps.length
-          const isPartial = seen > 0 && !isRead
-          return (
-            <Card key={chapter.slug} hoverLift className="relative">
-              <CardContent className="flex flex-col">
-                <CardBanner size="sm" className="relative">
-                  <Image
-                    src={chapter.image}
-                    alt=""
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-                  />
-                  {/* Same finished badge as the /courses hub cards. */}
-                  {isRead && (
-                    <span className="absolute end-3 top-3 grid size-9 place-items-center rounded-full bg-green-700 text-white">
-                      <Check className="size-5" strokeWidth={3} aria-hidden />
-                      <span className="sr-only">{labels.read}</span>
-                    </span>
-                  )}
-                </CardBanner>
-                <Tag status="tag" className="self-start">
-                  {chapter.chapterLabel}
-                </Tag>
-                <CardTitle asChild>
-                  <h3>{chapter.title}</h3>
-                </CardTitle>
-                <CardParagraph className="hidden md:block">
-                  {chapter.hook}
-                </CardParagraph>
-                {/* Pinned to the bottom so strips and links line up across a row. */}
-                <div className="mt-auto flex flex-col gap-2">
-                  <div className="flex items-center gap-3">
-                    <span aria-hidden className="flex flex-1 gap-1">
-                      {chapter.steps.map(({ id }, i) => (
-                        <span
-                          key={id}
-                          className={cn(
-                            "h-1.5 flex-1 rounded-full",
-                            i < seen ? "bg-primary" : "bg-body-light"
-                          )}
-                        />
-                      ))}
-                    </span>
-                    <span className="text-sm text-body-medium">
-                      {chapter.stepsCountLabel}
-                    </span>
+      {/* Below md the cards scroll sideways with the next one peeking in; the
+          Grid steps aside (display: contents) so they become scroll items. */}
+      <EdgeScrollContainer className="my-space-2x">
+        <Grid
+          columns={3}
+          size="slim"
+          className="max-md:contents md:mx-(--edge-spacing) md:flex-1"
+        >
+          {chapters.map((chapter) => {
+            const seen = progress[chapter.slug] ?? 0
+            const isRead = seen >= chapter.steps.length
+            const isPartial = seen > 0 && !isRead
+            return (
+              <Card
+                key={chapter.slug}
+                hoverLift
+                className="relative max-md:ms-4 max-md:w-[calc(100%-4rem)] max-md:max-w-md max-md:shrink-0 max-md:snap-start max-md:first:ms-(--edge-spacing) max-md:last:me-(--edge-spacing)"
+              >
+                <CardContent className="flex flex-col">
+                  <CardBanner size="sm" className="relative">
+                    <Image
+                      src={chapter.image}
+                      alt=""
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                    />
+                    {/* Same finished badge as the /courses hub cards. */}
+                    {isRead && (
+                      <span className="absolute end-3 top-3 grid size-9 place-items-center rounded-full bg-green-700 text-white">
+                        <Check className="size-5" strokeWidth={3} aria-hidden />
+                        <span className="sr-only">{labels.read}</span>
+                      </span>
+                    )}
+                  </CardBanner>
+                  <Tag status="tag" className="self-start">
+                    {chapter.chapterLabel}
+                  </Tag>
+                  <CardTitle asChild>
+                    <h3>{chapter.title}</h3>
+                  </CardTitle>
+                  <CardParagraph className="hidden md:block">
+                    {chapter.hook}
+                  </CardParagraph>
+                  {/* Pinned to the bottom so strips and links line up across a row. */}
+                  <div className="mt-auto flex flex-col gap-2">
+                    <div className="flex items-center gap-3">
+                      <span aria-hidden className="flex flex-1 gap-1">
+                        {chapter.steps.map(({ id }, i) => (
+                          <span
+                            key={id}
+                            className={cn(
+                              "h-1.5 flex-1 rounded-full",
+                              i < seen ? "bg-primary" : "bg-body-light"
+                            )}
+                          />
+                        ))}
+                      </span>
+                      <span className="text-sm text-body-medium">
+                        {chapter.stepsCountLabel}
+                      </span>
+                    </div>
+                    {/* Stretched over the card: the whole tile is the hit area. */}
+                    <Button
+                      ref={(node) => {
+                        triggerRefs.current[chapter.slug] = node
+                      }}
+                      variant="link"
+                      aria-haspopup="dialog"
+                      customEventOptions={
+                        isPartial ? chapter.events.resume : chapter.events.open
+                      }
+                      onClick={() =>
+                        openChapter(chapter.slug, isPartial ? seen - 1 : 0)
+                      }
+                      className="w-fit after:absolute after:inset-0 after:content-['']"
+                    >
+                      {isRead
+                        ? labels.readAgain
+                        : isPartial
+                          ? labels.resume
+                          : labels.openChapter}
+                      <ChevronNext className="size-4" />
+                    </Button>
                   </div>
-                  {/* Stretched over the card: the whole tile is the hit area. */}
-                  <Button
-                    ref={(node) => {
-                      triggerRefs.current[chapter.slug] = node
-                    }}
-                    variant="link"
-                    aria-haspopup="dialog"
-                    customEventOptions={
-                      isPartial ? chapter.events.resume : chapter.events.open
-                    }
-                    onClick={() =>
-                      openChapter(chapter.slug, isPartial ? seen - 1 : 0)
-                    }
-                    className="w-fit after:absolute after:inset-0 after:content-['']"
-                  >
-                    {isRead
-                      ? labels.readAgain
-                      : isPartial
-                        ? labels.resume
-                        : labels.openChapter}
-                    <ChevronNext className="size-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          )
-        })}
-      </Grid>
+                </CardContent>
+              </Card>
+            )
+          })}
+        </Grid>
+      </EdgeScrollContainer>
 
       <div className="flex flex-wrap items-center gap-4">
         <Button

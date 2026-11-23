@@ -55,7 +55,7 @@
   "page-open-source-history-description-2": "Each card is one era. Open it to step through what happened, how you paid, and what you were really buying. Finish a chapter and it hands you the next.",
   "page-open-source-history-start": "Start from the beginning",
   "page-open-source-history-start-hint": "Each chapter also stands on its own, so you can start anywhere.",
-  "page-open-source-history-chapter-label": "<strong>Chapter <number></number>.</strong> {years}",
+  "page-open-source-history-chapter-label": "<strong>Chapter <number></number>:</strong> {years}",
   "page-open-source-history-step-position": "Step {current} of {total}",
   "page-open-source-history-steps-count": "{count, plural, one {# step} other {# steps}}",
   "page-open-source-history-go-to-step": "Go to step {number}",

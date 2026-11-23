@@ -66,7 +66,7 @@ export interface HistoryChapter {
   slug: string
   /** Decorative era banner on the card. */
   image: StaticImageData
-  /** "Chapter 2. 1980–1991" */
+  /** "Chapter 2: 1980–1991" */
   chapterLabel: ReactNode
   years: string
   title: string
