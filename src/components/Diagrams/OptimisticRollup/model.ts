@@ -99,6 +99,7 @@ export type RootStatus = "none" | "pending" | "final" | "disputed" | "reverted"
 export type BondStatus = "none" | "staked" | "released" | "slashed"
 
 export interface OptimisticRollupView {
+  kind: "optimistic"
   preset: OptimisticRollupPresetId
   step: number
   motion: Motion
@@ -158,6 +159,7 @@ export const getOptimisticRollupView = (
   const range = rounds === null ? null : BISECTION_RANGES[rounds]
 
   return {
+    kind: "optimistic",
     preset,
     step,
     motion,
@@ -185,3 +187,155 @@ export const getOptimisticRollupView = (
     key: motion,
   }
 }
+
+/*
+ * The companion figure for /developers/docs/scaling/zk-rollups/, drawn on
+ * the same rig: the sequencer executes the batch, a prover generates a
+ * validity proof, the operator posts the batch data, the new state root and
+ * the proof to L1, and a verifier contract checks the proof. Valid batch:
+ * the root is recorded and final at once, so withdrawals can complete.
+ * Invalid state transition: no valid proof exists for a wrong root, the
+ * verifier rejects the one posted, and the call reverts.
+ *
+ * Simplifications: one call posts and verifies the batch, where some rollups
+ * commit, prove and execute in separate transactions; withdrawals wait for
+ * proving (which can be slow and costly) rather than a challenge window,
+ * and some rollups add a delay of their own before executing them.
+ */
+
+/** viewBox of the ZK figure: no challenge window, so a shallower L1. */
+export const ZK_ROLLUP_SIZE = { width: 500, height: 290 }
+
+export const ZK_ROLLUP_PRESET_IDS = ["valid", "invalid"] as const
+export type ZkRollupPresetId = (typeof ZK_ROLLUP_PRESET_IDS)[number]
+
+export const ZK_ROLLUP_LAST_STEP = 5
+
+export const ZK_ROLLUP_PARTS = [
+  "txs",
+  "sequencer",
+  "prover",
+  "proof",
+  "batch",
+  "contracts",
+  "state-root",
+  "verifier",
+  "account",
+  "l2",
+  "l1",
+] as const
+export type ZkRollupPart = (typeof ZK_ROLLUP_PARTS)[number]
+
+type ZkMotion =
+  | "idle"
+  | "execute"
+  | "prove"
+  | "post"
+  | "verify"
+  | "finalize"
+  | "execute-bad"
+  | "prove-bad"
+  | "post-bad"
+  | "reject"
+  | "revert"
+
+const ZK_MOTIONS: Record<ZkRollupPresetId, ZkMotion[]> = {
+  valid: ["idle", "execute", "prove", "post", "verify", "finalize"],
+  invalid: ["idle", "execute-bad", "prove-bad", "post-bad", "reject", "revert"],
+}
+
+export type ZkRootStatus = "none" | "pending" | "recorded" | "reverted"
+export type ZkProofStatus =
+  | "none"
+  | "generated"
+  | "invalid"
+  | "posted"
+  | "verified"
+  | "rejected"
+export type ZkFinality = "none" | "pending" | "final" | "not-final"
+export type ZkWithdrawal = "none" | "complete" | "blocked"
+
+export interface ZkRollupView {
+  kind: "zk"
+  preset: ZkRollupPresetId
+  step: number
+  motion: ZkMotion
+  /** Batch data and state root sit on the rollup contract. */
+  posted: boolean
+  /** The proof sits on the prover (before posting) or the verifier. */
+  proofAt: "none" | "prover" | "verifier"
+  root: ZkRootStatus
+  proof: ZkProofStatus
+  finality: ZkFinality
+  withdrawal: ZkWithdrawal
+  litPart: ZkRollupPart | null
+  /** The step's caption and status keys, minus the `-step-`/`-status-` part. */
+  key: string
+}
+
+export const getZkRollupView = (
+  preset: ZkRollupPresetId,
+  requestedStep: number
+): ZkRollupView => {
+  const step = Math.min(Math.max(requestedStep, 0), ZK_ROLLUP_LAST_STEP)
+  const motion = ZK_MOTIONS[preset][step]
+  const invalid = preset === "invalid"
+  const posted = step >= 3
+  const done = step === 5
+
+  const proof: ZkProofStatus =
+    step < 2
+      ? "none"
+      : invalid
+        ? step >= 4
+          ? "rejected"
+          : "invalid"
+        : step === 2
+          ? "generated"
+          : step === 3
+            ? "posted"
+            : "verified"
+
+  return {
+    kind: "zk",
+    preset,
+    step,
+    motion,
+    posted,
+    proofAt: step < 2 ? "none" : posted ? "verifier" : "prover",
+    root: !posted
+      ? "none"
+      : done
+        ? invalid
+          ? "reverted"
+          : "recorded"
+        : "pending",
+    proof,
+    finality: !posted
+      ? "none"
+      : done
+        ? invalid
+          ? "not-final"
+          : "final"
+        : "pending",
+    withdrawal: !done ? "none" : invalid ? "blocked" : "complete",
+    litPart: (
+      {
+        idle: null,
+        execute: "sequencer",
+        prove: "prover",
+        post: "batch",
+        verify: "verifier",
+        finalize: "state-root",
+        "execute-bad": "sequencer",
+        "prove-bad": "prover",
+        "post-bad": "batch",
+        reject: "verifier",
+        revert: "state-root",
+      } as const
+    )[motion],
+    key: motion,
+  }
+}
+
+export type RollupView = OptimisticRollupView | ZkRollupView

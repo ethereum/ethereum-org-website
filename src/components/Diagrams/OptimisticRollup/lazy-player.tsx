@@ -10,3 +10,7 @@ import dynamic from "next/dynamic"
 export const OptimisticRollupPlayer = dynamic(() =>
   import("./player").then((m) => m.OptimisticRollupPlayer)
 )
+
+export const ZkRollupPlayer = dynamic(() =>
+  import("./zk-player").then((m) => m.ZkRollupPlayer)
+)

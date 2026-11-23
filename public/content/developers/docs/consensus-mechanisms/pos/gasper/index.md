@@ -32,7 +32,7 @@ Because finality requires a two-thirds agreement that a block is canonical, an a
 1. Owning or manipulating two-thirds of the total staked ether.
 2. Destroying at least one-third of the total staked ether.
 
-The first condition arises because two-thirds of the staked ether is required to finalize a chain. The second condition arises because if two-thirds of the total stake has voted in favor of both forks, then one-third must have voted on both. Double-voting is a slashing condition that would be maximally punished, and one-third of the total stake would be destroyed. As of May 2022, this requires an attacker to burn around $10 billion worth of ether. The algorithm that justifies and finalizes blocks in Gasper is a slightly modified form of [Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437.pdf).
+The first condition arises because two-thirds of the staked ether is required to finalize a chain. The second condition arises because if two-thirds of the total stake has voted in favor of both forks, then one-third must have voted on both. Double-voting is a slashing condition that would be maximally punished, and one-third of the total stake would be destroyed. As of November 2026, with about 44.4 million ETH staked, this means an attacker would lose about 14.8 million ETH, around 25 billion USD at an ETH price of about 1,700 USD. The algorithm that justifies and finalizes blocks in Gasper is a slightly modified form of [Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437.pdf).
 
 ### Incentives and Slashing {#incentives-and-slashing}
 

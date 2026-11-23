@@ -25,22 +25,23 @@ import {
   BAD_STEP,
   BISECTION_ROUNDS,
   OPTIMISTIC_ROLLUP_SIZE,
-  type OptimisticRollupPart,
-  type OptimisticRollupView,
+  type RollupView,
   roundRuledOut,
   TRACE_STEPS,
   WINDOW_DAYS,
+  ZK_ROLLUP_SIZE,
 } from "./model"
 
 /*
  * Two plates: L2 at the back left (transactions and the sequencer), L1 in
  * front right (the rollup contracts with the batch and state root on top,
- * the bond tank, the L1 account withdrawals go to). The challenger sits on
- * L1's front right, the disputed trace in front of the contracts, and the
- * challenge window runs as a row of day cells along L1's front edge.
+ * the L1 account withdrawals go to). Optimistic: the bond tank, the
+ * challenger on L1's front right, the disputed trace in front of the
+ * contracts, and the challenge window as day cells along L1's front edge.
+ * ZK: a prover in front of the sequencer and the verifier contract in front
+ * of the rollup contract, on a shallower L1.
  */
 
-const { width: W, height: H } = OPTIMISTIC_ROLLUP_SIZE
 const PROJECTION = isoProjection(194, 66)
 const { P, path, box, cylinder, footprint } = PROJECTION
 const D = isoDetail(PROJECTION)
@@ -101,6 +102,15 @@ const DAY_CELL: (i: number) => Dims = (i) => [
   3,
 ]
 
+const L1_PLATE_ZK: Dims = [108, 0, -8, 112, 104, 8]
+const PROVER: Dims = [60, 58, 0, 28, 24, 18]
+const PROVER_PROOF: Dims = [66, 64, 18, 16, 12, 3]
+const PROVER_PIPE = path(6, [70, 42], [70, 58])
+const VERIFIER: Dims = [118, 66, 0, 32, 24, 16]
+const VERIFIER_PROOF: Dims = [126, 72, 16, 16, 12, 3]
+const PROOF_PIPE_ZK = path(6, [88, 74], [118, 74])
+const VERDICT_PIPE = path(6, [134, 66], [134, 44])
+
 const boxOf = (d: Dims) => box(...d)
 const SEQUENCER_BOX = boxOf(SEQUENCER)
 const TX_BOXES = TX_SLABS.map(boxOf)
@@ -115,6 +125,10 @@ const TRACE_BOXES = Array.from({ length: TRACE_STEPS }, (_, i) =>
 const DAY_BOXES = Array.from({ length: WINDOW_DAYS }, (_, i) =>
   boxOf(DAY_CELL(i))
 )
+const PROVER_BOX = boxOf(PROVER)
+const PROVER_PROOF_BOX = boxOf(PROVER_PROOF)
+const VERIFIER_BOX = boxOf(VERIFIER)
+const VERIFIER_PROOF_BOX = boxOf(VERIFIER_PROOF)
 
 // Day ticks under the window's first and last cell edges, on L1's front edge.
 const TICK_DROP = 5
@@ -126,30 +140,60 @@ const TICK_MARKS = TICKS.map(([x, y]) => `M${x},${y} L${x},${y + TICK_DROP}`)
 
 /* ---------- Static detail and shadows ---------- */
 
+const L2_SHADOW = isoShadow(footprint(-4, 4, 104, 104, -22, 6), SHADOW)
 const GROUND_SHADOW = (
   <g className="pointer-events-none">
-    {isoShadow(footprint(-4, 4, 104, 104, -22, 6), SHADOW)}
+    {L2_SHADOW}
     {isoShadow(footprint(104, 4, 150, 144, -22, 6), SHADOW)}
+  </g>
+)
+const GROUND_SHADOW_ZK = (
+  <g className="pointer-events-none">
+    {L2_SHADOW}
+    {isoShadow(footprint(104, 4, 120, 108, -22, 6), SHADOW)}
   </g>
 )
 const contact = ([x, y, , w, d]: Dims, pad = 3) =>
   isoShadow(footprint(x, y, w, d, 0, pad), SHADOW)
-const CONTACT_SHADOWS = (
-  <g className="pointer-events-none">
+const SHARED_CONTACTS = (
+  <>
     {contact(SEQUENCER)}
     {contact(TX_SLABS[0])}
     {contact(CONTRACTS)}
     {contact(ACCOUNT)}
+  </>
+)
+const CONTACT_SHADOWS = (
+  <g className="pointer-events-none">
+    {SHARED_CONTACTS}
     {contact(CHALLENGER)}
     {isoShadow(footprint(187, 15, 18, 18), SHADOW)}
   </g>
 )
+const CONTACT_SHADOWS_ZK = (
+  <g className="pointer-events-none">
+    {SHARED_CONTACTS}
+    {contact(PROVER)}
+    {contact(VERIFIER)}
+  </g>
+)
+const plateInset = ([x, y, , w, d]: Dims) => D.inset([x, y, 0, w, d], 5)
+const L2_DETAIL = plateInset(L2_PLATE)
 const PLATE_DETAIL = (
   <>
-    {D.inset([L2_PLATE[0], L2_PLATE[1], 0, L2_PLATE[3], L2_PLATE[4]], 5)}
-    {D.inset([L1_PLATE[0], L1_PLATE[1], 0, L1_PLATE[3], L1_PLATE[4]], 5)}
+    {L2_DETAIL}
+    {plateInset(L1_PLATE)}
   </>
 )
+const PLATE_DETAIL_ZK = (
+  <>
+    {L2_DETAIL}
+    {plateInset(L1_PLATE_ZK)}
+  </>
+)
+const L1_BOX = boxOf(L1_PLATE)
+const L1_BOX_ZK = boxOf(L1_PLATE_ZK)
+const L2_BOX = boxOf(L2_PLATE)
 const SEQUENCER_DETAIL = (
   <>
     {D.seams(SEQUENCER, { start: [1 / 3, 2 / 3], ring: 0.75 })}
@@ -161,6 +205,13 @@ const ACCOUNT_DETAIL = D.seams(ACCOUNT, { start: [0.5] })
 const CHALLENGER_DETAIL = D.seams(CHALLENGER, { start: [1 / 3, 2 / 3] })
 const ROOT_DETAIL = D.inset([ROOT_SLAB[0], ROOT_SLAB[1], 25, 18, 26], 4)
 const BOND_DETAIL = D.cylinderMarks(BOND)
+const PROVER_DETAIL = (
+  <>
+    {D.seams(PROVER, { start: [0.5] })}
+    {D.vents(PROVER[1] + PROVER[4], 64, 74, [5, 8, 11])}
+  </>
+)
+const VERIFIER_DETAIL = D.seams(VERIFIER, { start: [0.5], end: [0.5] })
 
 // Invisible boxes where the day names sit, so labels keep off them.
 const TICK_KEEP_OUT = TICKS.map(([x, y]) => (
@@ -267,14 +318,58 @@ const SPOTS: AnatomyLabelSpot[] = [
   },
 ]
 
+const spot = (id: string) => SPOTS.find((s) => s.id === id)!
+
+const ZK_SPOTS: AnatomyLabelSpot[] = [
+  spot("sequencer"),
+  {
+    id: "verifier",
+    tone: "entity",
+    target: P(VERIFIER[0] + 26, VERIFIER[1] + VERIFIER[4], 8),
+    anchor: [262, 250],
+    placement: "below",
+  },
+  spot("state-root"),
+  {
+    id: "prover",
+    tone: "entity",
+    target: P(PROVER[0] + 10, PROVER[1] + PROVER[4], 9),
+    anchor: [140, 196],
+    placement: "start",
+  },
+  spot("contracts"),
+  spot("batch"),
+  // On the pipe to the verifier: every leader from the proof on the prover
+  // or the verifier would cross a part, so it is labelled once posted.
+  {
+    id: "proof",
+    tone: "entity",
+    target: P(102, 74, 6),
+    anchor: [170, 230],
+    placement: "below",
+  },
+  {
+    ...spot("account"),
+    anchor: [370, 236],
+  },
+  spot("txs"),
+  spot("l2"),
+  {
+    ...spot("l1"),
+    target: P(L1_PLATE_ZK[0] + L1_PLATE_ZK[3], 10, -4),
+    anchor: [430, 200],
+  },
+]
+
 interface OptimisticRollupRigProps {
-  view: OptimisticRollupView
+  /** An optimistic or a ZK rollup batch. */
+  view: RollupView
   /** Changes on every step, to restart one-shot animations. */
   runKey: string
-  labels: Record<OptimisticRollupPart, ReactNode>
-  definitions: Record<OptimisticRollupPart, ReactNode>
-  /** "Day {day}" for the window's ticks. */
-  dayLabel: (day: number) => string
+  labels: Record<string, ReactNode>
+  definitions: Record<string, ReactNode>
+  /** "Day {day}" for the challenge window's ticks (optimistic only). */
+  dayLabel?: (day: number) => string
   className?: string
 }
 
@@ -302,27 +397,50 @@ function OptimisticRollupRig({
 }: OptimisticRollupRigProps) {
   const t = useTranslations("component-diagrams")
   const { state, dimmed } = usePartState(view.litPart)
-  const part = (name: OptimisticRollupPart) => ({
+  const part = (name: string) => ({
     "data-part": name,
     className: ISO_DIM_CLASS,
     style: { opacity: dimmed(name) ? 0.7 : 1 },
   })
-  const { motion, posted, traceShown } = view
-  const proving = motion === "prove"
+  const opt = view.kind === "optimistic" ? view : null
+  const zk = view.kind === "zk" ? view : null
+  const { motion, posted } = view
+  const { width: W, height: H } = zk ? ZK_ROLLUP_SIZE : OPTIMISTIC_ROLLUP_SIZE
+  const traceShown = opt?.traceShown ?? false
+  const proofAt = zk?.proofAt ?? "none"
+  const proving = motion === "prove" && !!opt
+  const rejected = zk?.proof === "rejected"
   const reverted = view.root === "reverted"
-  const daysLit = view.day ?? 0
+  // Optimistic: the one-step proof's flow; ZK: the outcome right away.
+  const outcomeDelay = proving ? OUTCOME_MS : 0
+  const daysLit = opt?.day ?? 0
+  const pctX = (n: number) => pct(n, W)
+  const pctY = (n: number) => pct(n, H)
 
   const labelSpots = useMemo(
     () =>
-      SPOTS.filter(
-        ({ id }) =>
-          (id !== "trace" || traceShown) &&
-          (id !== "state-root" || posted) &&
-          (id !== "batch" || posted) &&
-          (id !== "bond" || posted)
-      ),
-    [posted, traceShown]
+      zk
+        ? ZK_SPOTS.filter(
+            (s) =>
+              (s.id !== "state-root" || posted) &&
+              (s.id !== "batch" || posted) &&
+              (s.id !== "proof" || posted)
+          )
+        : SPOTS.filter(
+            ({ id }) =>
+              (id !== "trace" || traceShown) &&
+              (id !== "state-root" || posted) &&
+              (id !== "batch" || posted) &&
+              (id !== "bond" || posted)
+          ),
+    [zk, posted, traceShown]
   )
+
+  const popAt = (when: boolean, key: string, delay: number) => ({
+    key: when ? runKey : key,
+    className: cn(when && POP),
+    style: when ? { animationDelay: `${delay}ms` } : undefined,
+  })
 
   return (
     <div className={cn("relative", className)}>
@@ -334,21 +452,25 @@ function OptimisticRollupRig({
         className={ISO_SVG_CLASS}
       >
         <IsoDefs id={SHADOW} />
-        {GROUND_SHADOW}
+        {zk ? GROUND_SHADOW_ZK : GROUND_SHADOW}
         <g {...part("l2")}>
-          <IsoPlate box={boxOf(L2_PLATE)} state={state("l2")} />
+          <IsoPlate box={L2_BOX} state={state("l2")} />
         </g>
         <g {...part("l1")}>
-          <IsoPlate box={boxOf(L1_PLATE)} state={state("l1")} />
+          <IsoPlate box={zk ? L1_BOX_ZK : L1_BOX} state={state("l1")} />
         </g>
-        {PLATE_DETAIL}
-        {CONTACT_SHADOWS}
-        <path
-          d={TICK_MARKS.join(" ")}
-          className="stroke-diagram-line"
-          style={{ fill: "none" }}
-        />
-        {TICK_KEEP_OUT}
+        {zk ? PLATE_DETAIL_ZK : PLATE_DETAIL}
+        {zk ? CONTACT_SHADOWS_ZK : CONTACT_SHADOWS}
+        {opt && (
+          <>
+            <path
+              d={TICK_MARKS.join(" ")}
+              className="stroke-diagram-line"
+              style={{ fill: "none" }}
+            />
+            {TICK_KEEP_OUT}
+          </>
+        )}
 
         <g {...part("sequencer")}>
           <IsoSolid
@@ -366,17 +488,42 @@ function OptimisticRollupRig({
           <IsoPipe
             hue="entity"
             d={TXS_PIPE}
-            flowing={motion === "execute"}
+            flowing={motion === "execute" || motion === "execute-bad"}
             flowKey={runKey}
             state={state("txs")}
           />
         </g>
 
+        {zk && (
+          <g {...part("prover")}>
+            <IsoPipe
+              hue="entity"
+              d={PROVER_PIPE}
+              flowing={motion === "prove" || motion === "prove-bad"}
+              flowKey={runKey}
+              state={state("prover")}
+            />
+            <IsoSolid box={PROVER_BOX} hue="entity" state={state("prover")} />
+            {PROVER_DETAIL}
+          </g>
+        )}
+        {proofAt === "prover" && (
+          <g {...part("proof")}>
+            <g {...popAt(true, "proof", 600)}>
+              <IsoSolid
+                box={PROVER_PROOF_BOX}
+                hue="entity"
+                state={state("proof")}
+              />
+            </g>
+          </g>
+        )}
+
         <g {...part("batch")}>
           <IsoPipe
             hue="entity"
             d={BATCH_PIPE}
-            flowing={motion === "post"}
+            flowing={motion === "post" || motion === "post-bad"}
             flowKey={runKey}
             state={state("batch")}
           />
@@ -394,11 +541,11 @@ function OptimisticRollupRig({
         {posted && (
           <g {...part("batch")}>
             <g
-              key={motion === "post" ? runKey : "batch"}
-              className={cn(motion === "post" && POP)}
-              style={
-                motion === "post" ? { animationDelay: "600ms" } : undefined
-              }
+              {...popAt(
+                motion === "post" || motion === "post-bad",
+                "batch",
+                600
+              )}
             >
               <IsoSolid box={BATCH_BOX} hue="entity" state={state("batch")} />
             </g>
@@ -407,17 +554,17 @@ function OptimisticRollupRig({
         {posted && (
           <g {...part("state-root")}>
             <g
-              key={motion === "post" ? runKey : "root"}
-              className={cn(motion === "post" && POP)}
-              style={
-                motion === "post" ? { animationDelay: "800ms" } : undefined
-              }
+              {...popAt(
+                motion === "post" || motion === "post-bad",
+                "root",
+                800
+              )}
             >
               <g
                 className={FADE}
                 style={{
                   ...(reverted ? FADED : {}),
-                  transitionDelay: proving ? `${OUTCOME_MS}ms` : "0ms",
+                  transitionDelay: `${outcomeDelay}ms`,
                 }}
               >
                 <IsoSolid
@@ -440,60 +587,126 @@ function OptimisticRollupRig({
           <IsoPipe
             d={ACCOUNT_PIPE}
             flowing={motion === "finalize"}
+            flowDelay={zk ? 400 : undefined}
             flowKey={runKey}
             state={state("account")}
           />
         </g>
 
-        <g {...part("bond")}>
-          <IsoCylinder
-            geometry={BOND}
-            hue="gas"
-            clipId={`${SHADOW}-bond`}
-            level={posted && view.bond !== "slashed" ? 1 : 0}
-            levelDelay={motion === "post" ? 600 : proving ? OUTCOME_MS : 0}
-            state={state("bond")}
-          />
-          {BOND_DETAIL}
-          <IsoPipe
-            d={REWARD_PIPE}
-            flowing={proving}
-            flowDelay={OUTCOME_MS}
-            flowKey={runKey}
-            state={state("bond")}
-          />
-        </g>
+        {zk && (
+          <>
+            <g {...part("verifier")}>
+              <IsoPipe
+                hue="entity"
+                d={VERDICT_PIPE}
+                flowing={motion === "verify"}
+                flowDelay={400}
+                flowKey={runKey}
+                state={state("verifier")}
+              />
+            </g>
+            <g {...part("proof")}>
+              <IsoPipe
+                hue="entity"
+                d={PROOF_PIPE_ZK}
+                flowing={motion === "post" || motion === "post-bad"}
+                flowKey={runKey}
+                state={state("proof")}
+              />
+            </g>
+            <g {...part("verifier")}>
+              <IsoSolid
+                box={VERIFIER_BOX}
+                hue="entity"
+                state={state("verifier")}
+                className={cn(
+                  rejected &&
+                    state("verifier") !== "hover" &&
+                    "stroke-diagram-revert"
+                )}
+              />
+              {VERIFIER_DETAIL}
+            </g>
+            {proofAt === "verifier" && (
+              <g {...part("proof")}>
+                <g
+                  {...popAt(
+                    motion === "post" || motion === "post-bad",
+                    "proof",
+                    600
+                  )}
+                >
+                  <g className={FADE} style={rejected ? FADED : undefined}>
+                    <IsoSolid
+                      box={VERIFIER_PROOF_BOX}
+                      hue="entity"
+                      state={state("proof")}
+                      className={cn(
+                        rejected &&
+                          state("proof") !== "hover" &&
+                          "stroke-diagram-revert"
+                      )}
+                    />
+                  </g>
+                </g>
+              </g>
+            )}
+          </>
+        )}
 
-        <g {...part("challenger")}>
-          <IsoPipe
-            hue="entity"
-            d={CHALLENGE_PIPE}
-            flowing={
-              motion === "check" ||
-              motion === "challenge" ||
-              motion === "bisect"
-            }
-            // Checking reads the batch from L1; disputing writes to it.
-            flowD={motion === "check" ? CHALLENGE_PIPE_BACK : undefined}
-            flowKey={runKey}
-            state={state("challenger")}
-          />
-          <IsoSolid
-            box={CHALLENGER_BOX}
-            hue="entity"
-            state={state("challenger")}
-          />
-          {CHALLENGER_DETAIL}
-        </g>
+        {opt && (
+          <>
+            <g {...part("bond")}>
+              <IsoCylinder
+                geometry={BOND}
+                hue="gas"
+                clipId={`${SHADOW}-bond`}
+                level={posted && opt.bond !== "slashed" ? 1 : 0}
+                levelDelay={motion === "post" ? 600 : outcomeDelay}
+                state={state("bond")}
+              />
+              {BOND_DETAIL}
+              <IsoPipe
+                d={REWARD_PIPE}
+                flowing={proving}
+                flowDelay={OUTCOME_MS}
+                flowKey={runKey}
+                state={state("bond")}
+              />
+            </g>
+
+            <g {...part("challenger")}>
+              <IsoPipe
+                hue="entity"
+                d={CHALLENGE_PIPE}
+                flowing={
+                  motion === "check" ||
+                  motion === "challenge" ||
+                  motion === "bisect"
+                }
+                // Checking reads the batch from L1; disputing writes to it.
+                flowD={motion === "check" ? CHALLENGE_PIPE_BACK : undefined}
+                flowKey={runKey}
+                state={state("challenger")}
+              />
+              <IsoSolid
+                box={CHALLENGER_BOX}
+                hue="entity"
+                state={state("challenger")}
+              />
+              {CHALLENGER_DETAIL}
+            </g>
+          </>
+        )}
 
         <g {...part("account")}>
           <IsoSolid box={ACCOUNT_BOX} hue="entity" state={state("account")} />
           {ACCOUNT_DETAIL}
         </g>
 
-        {traceShown && (
+        {opt && traceShown && (
           <g {...part("trace")}>
-            {view.rounds === BISECTION_ROUNDS && (
+            {opt.rounds === BISECTION_ROUNDS && (
               <IsoPipe
                 hue="entity"
                 d={PROOF_PIPE}
@@ -502,17 +715,11 @@ function OptimisticRollupRig({
                 state={state("trace")}
               />
             )}
-            <g
-              key={motion === "challenge" ? runKey : "trace"}
-              className={cn(motion === "challenge" && POP)}
-              style={
-                motion === "challenge" ? { animationDelay: "700ms" } : undefined
-              }
-            >
+            <g {...popAt(motion === "challenge", "trace", 700)}>
               {TRACE_BOXES.map((b, i) => {
                 const out = roundRuledOut(i)
                 const ruledOut =
-                  view.rounds !== null && out > 0 && out <= view.rounds
+                  opt.rounds !== null && out > 0 && out <= opt.rounds
                 return (
                   <g
                     key={i}
@@ -529,7 +736,7 @@ function OptimisticRollupRig({
                       box={b}
                       hue="entity"
                       state={
-                        i === BAD_STEP && view.rounds === BISECTION_ROUNDS
+                        i === BAD_STEP && opt.rounds === BISECTION_ROUNDS
                           ? "lit"
                           : state("trace")
                       }
@@ -541,50 +748,54 @@ function OptimisticRollupRig({
           </g>
         )}
 
-        <g {...part("window")}>
-          {DAY_BOXES.map((b, i) => {
-            const lit = i < daysLit
-            const fresh = lit && i >= view.prevDay
-            return (
-              <g key={i}>
-                <IsoSolid box={b} hue="neutral" state={state("window")} />
-                <g
-                  className={FADE}
-                  style={{
-                    opacity: lit ? 1 : 0,
-                    transitionDelay: fresh
-                      ? `${(i - view.prevDay) * DAY_MS}ms`
-                      : "0ms",
-                  }}
-                >
-                  <IsoSolid
-                    box={b}
-                    hue="entity"
-                    state={state("window") === "hover" ? "hover" : "lit"}
-                  />
+        {opt && (
+          <g {...part("window")}>
+            {DAY_BOXES.map((b, i) => {
+              const lit = i < daysLit
+              const fresh = lit && i >= opt.prevDay
+              return (
+                <g key={i}>
+                  <IsoSolid box={b} hue="neutral" state={state("window")} />
+                  <g
+                    className={FADE}
+                    style={{
+                      opacity: lit ? 1 : 0,
+                      transitionDelay: fresh
+                        ? `${(i - opt.prevDay) * DAY_MS}ms`
+                        : "0ms",
+                    }}
+                  >
+                    <IsoSolid
+                      box={b}
+                      hue="entity"
+                      state={state("window") === "hover" ? "hover" : "lit"}
+                    />
+                  </g>
                 </g>
-              </g>
-            )
-          })}
-        </g>
+              )
+            })}
+          </g>
+        )}
       </svg>
 
       {/* Day names under the ticks. HTML, so they read the right way round
           in RTL. */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        {TICKS.map(([x, y], i) => (
-          <span
-            key={x}
-            className="absolute -translate-x-1/2 -translate-y-1/2 text-sm whitespace-nowrap text-body-medium rtl:translate-x-1/2"
-            style={{
-              insetInlineStart: pct(x, W),
-              top: pct(y + TICK_TEXT_DROP, H),
-            }}
-          >
-            {dayLabel(i === 0 ? 0 : WINDOW_DAYS)}
-          </span>
-        ))}
-      </div>
+      {opt && dayLabel && (
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          {TICKS.map(([x, y], i) => (
+            <span
+              key={x}
+              className="absolute -translate-x-1/2 -translate-y-1/2 text-sm whitespace-nowrap text-body-medium rtl:translate-x-1/2"
+              style={{
+                insetInlineStart: pctX(x),
+                top: pctY(y + TICK_TEXT_DROP),
+              }}
+            >
+              {dayLabel(i === 0 ? 0 : WINDOW_DAYS)}
+            </span>
+          ))}
+        </div>
+      )}
 
       <AnatomyLabels
         width={W}
@@ -595,14 +806,15 @@ function OptimisticRollupRig({
         litId={view.litPart}
       />
 
-      {/* The state root L1 deleted, once the proof's flow arrives. */}
+      {/* The state root L1 deleted (optimistic) or never recorded (ZK), once
+          the outcome arrives. */}
       {reverted && (
         <span
           className="absolute -translate-x-1/2 -translate-y-1/2 animate-diagram-pop rounded-base border border-diagram-revert bg-diagram-entity-fill px-2 py-0.5 text-sm font-bold whitespace-nowrap text-diagram-revert motion-reduce:animate-none rtl:translate-x-1/2"
           style={{
-            insetInlineStart: pct(REVERTED_AT[0], W),
-            top: pct(REVERTED_AT[1], H),
-            animationDelay: proving ? `${OUTCOME_MS}ms` : "0ms",
+            insetInlineStart: pctX(REVERTED_AT[0]),
+            top: pctY(REVERTED_AT[1]),
+            animationDelay: `${outcomeDelay}ms`,
           }}
         >
           {t("diagram-reverted")}

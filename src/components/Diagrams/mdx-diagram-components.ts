@@ -15,7 +15,7 @@ import NodeClientsDiagram, {
   NodeArchitectureDiagram,
   NodeNetworksDiagram,
 } from "./NodeClients"
-import OptimisticRollupDiagram from "./OptimisticRollup"
+import OptimisticRollupDiagram, { ZkRollupDiagram } from "./OptimisticRollup"
 import ErasureCodingDiagram, { ColumnSubnetsDiagram } from "./PeerDas"
 import PortalHistoryDiagram from "./PortalHistory"
 import SourceVerifyDiagram from "./SourceVerify"
@@ -59,4 +59,5 @@ export const mdxDiagramComponents = {
   VaultInterfaceDiagram,
   VaultRequestDiagram,
   VerkleTreeDiagram,
+  ZkRollupDiagram,
 }

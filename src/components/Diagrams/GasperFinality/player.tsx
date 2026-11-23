@@ -81,6 +81,9 @@ export function GasperFinalityPlayer({
     idle: IDLE_STEP,
     last: GASPER_FINALITY_LAST_STEP,
     initial: initialStep,
+    // Long enough for the epoch to fill and its end boundary to resolve.
+    dwellMs: 3200,
+    dwellReducedMs: 3200,
     paused: !inView.visible,
   })
   const view = useMemo(

@@ -1,9 +1,9 @@
 /**
  * Plain model for the justification and finality figure on
  * /developers/docs/consensus-mechanisms/pos/gasper/: Casper FFG, one epoch
- * per step. Each epoch's first block is its checkpoint; validators attest to
- * a link from the last justified checkpoint (source) to the new one
- * (target). With at least two-thirds of the stake behind it, the link is a
+ * per step. Each epoch's first block is its checkpoint; throughout the epoch,
+ * validators attest to a link from the last justified checkpoint (source)
+ * to that checkpoint (target), and the votes are counted at the epoch's end. With at least two-thirds of the stake behind it, the link is a
  * supermajority link: the target is justified, and a justified source right
  * before it is finalized.
  *
@@ -27,7 +27,7 @@
  */
 
 /** viewBox of the drawing. */
-export const GASPER_FINALITY_SIZE = { width: 480, height: 300 }
+export const GASPER_FINALITY_SIZE = { width: 480, height: 256 }
 
 export const SLOTS_PER_EPOCH = 32
 export const SECONDS_PER_SLOT = 12
@@ -69,6 +69,7 @@ export const GASPER_FINALITY_PARTS = [
   "link",
   "meter",
   "threshold",
+  "boundary",
   "justified",
   "finalized",
   "proposed",

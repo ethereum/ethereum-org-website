@@ -136,7 +136,7 @@ Some notes about this type of fraud proof:
 
 2. Bisection protocols reduce the amount of data posted onchain (no need to publish state commits for every transaction). Also, optimistic rollup transactions are not constrained by Ethereum's gas limit. Conversely, optimistic rollups re-executing transactions must make sure an L2 transaction has a lower gas limit to emulate its execution within a single Ethereum transaction.
 
-3. Part of the malicious asserter's bond is awarded to the challenger, while the other part is burned. The burning prevents collusion among validators; if two validators collude to initiate bogus challenges, they will still forfeit a considerable chunk of the entire stake.
+3. In some designs, part of the malicious asserter's bond is awarded to the challenger, while the other part is burned. The burning prevents collusion among validators; if two validators collude to initiate bogus challenges, they will still forfeit a considerable chunk of the entire stake.
 
 4. Multi-round interactive proving requires both parties (the asserter and the challenger) to make moves within the specified time window. Failure to act before the deadline expires causes the defaulting party to forfeit the challenge.
 

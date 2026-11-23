@@ -15,7 +15,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Interactive replacement for `tree.png` and `proof-c.png` on the Merkle proofs tutorial, used in markdown as `<MerkleProofDiagram />`. A flat drawing of the article's eight-leaf tree in the shared diagram shell: the value to prove and its proof (1), combined with one sibling hash per level (2-4), then the computed root compared with the stored `merkleRoot` (5). Hashes are real keccak256 values computed with the article's `pairHash`; the \"Changed C\" preset shows the check failing.",
+          "Interactive replacement for `tree.png` and `proof-c.png` on the Merkle proofs tutorial, used in markdown as `<MerkleProofDiagram />`. A flat drawing of the article's eight-leaf tree in the shared diagram shell: the value to prove and its proof (1), combined with one sibling hash per level (2-4), then the computed root compared with the stored `merkleRoot` (5). Hashes are real keccak256 values precomputed with the article's `pairHash`; the \"Changed C\" preset shows the check failing.",
       },
     },
   },

@@ -15,7 +15,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Casper FFG on `/developers/docs/consensus-mechanisms/pos/gasper/`, used in markdown as `<GasperFinalityDiagram />`. Epochs `n` to `n+4` along the plate; each starts with its checkpoint, and each played epoch has a meter of attesting stake ringed at two-thirds. One epoch per step (1-4): with a supermajority the new checkpoint is justified and the one before it finalized (locked). Scenarios: healthy, just enough (about 67%), and too few (about 60%), where finality stalls. Draws only the consecutive-epoch finality rule; the spec's 2-4 epoch rules are noted in `model.ts`.",
+          "Casper FFG on `/developers/docs/consensus-mechanisms/pos/gasper/`, used in markdown as `<GasperFinalityDiagram />`. A timeline of epochs `n` to `n+4`; each starts with its checkpoint, and under each played epoch a bar spanning the epoch fills with the attesting stake, ticked at two-thirds, with an arrow to the checkpoint the votes target. One epoch per step (1-4): at the epoch's end boundary, with a supermajority, the link arches from source to target, the checkpoint is justified and the one before it finalized (locked). Scenarios: healthy, just enough (about 67%), and too few (about 60%), where finality stalls. Draws only the consecutive-epoch finality rule; the spec's 2-4 epoch rules are noted in `model.ts`.",
       },
     },
   },

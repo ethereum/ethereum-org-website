@@ -24,6 +24,7 @@ import {
   BASE_FEE_PARTS,
   BASE_FEE_PRESET_IDS,
   BASE_FEE_PRESETS,
+  BASE_FEE_START_WEI,
   type BaseFeePart,
   type BaseFeePresetId,
   type BaseFeeView,
@@ -32,7 +33,6 @@ import {
   GAS_TARGET,
   getBaseFeeView,
   MAX_CHANGE,
-  START_BASE_FEE_WEI,
   UNITS,
 } from "./model"
 import BaseFeeRig from "./rig"
@@ -41,8 +41,8 @@ const IDLE_STEP = 0
 const STEP_DWELL_MS = 1600
 const STEP_DWELL_REDUCED_MS = 2200
 // Count-ups tween whole numbers, so they count in the readouts' last digit.
-const GWEI_STEPS = 10
-const ETH_STEPS = 10_000
+const GWEI_STEPS = 10_000
+const ETH_STEPS = 1_000_000
 const STEP_BUTTON = "size-8 min-h-8 shrink-0 p-0"
 
 interface BaseFeePlayerProps {
@@ -70,8 +70,8 @@ export function BaseFeePlayer({
   const editLabelId = useId()
 
   const fmt = useMemo(() => {
-    const gwei = numberFormat(locale, { maximumFractionDigits: 1 })
-    const eth = numberFormat(locale, { maximumFractionDigits: 4 })
+    const gwei = numberFormat(locale, { maximumSignificantDigits: 4 })
+    const eth = numberFormat(locale, { maximumSignificantDigits: 3 })
     const percent = numberFormat(locale, {
       style: "percent",
       maximumFractionDigits: 3,
@@ -99,7 +99,11 @@ export function BaseFeePlayer({
     dwellReducedMs: STEP_DWELL_REDUCED_MS,
     paused: !inView.visible,
   })
-  const view = useMemo(() => getBaseFeeView(units, step), [units, step])
+  const startWei = BASE_FEE_START_WEI[presetId]
+  const view = useMemo(
+    () => getBaseFeeView(units, step, startWei),
+    [units, step, startWei]
+  )
 
   const setBlockUnits = useCallback((index: number, value: number) => {
     setUnits((current) =>
@@ -141,7 +145,7 @@ export function BaseFeePlayer({
     }
   }
   const captionFor = (i: number) => {
-    const v = getBaseFeeView(units, i)
+    const v = getBaseFeeView(units, i, startWei)
     return t(`base-fee-step-${v.key}`, valuesFor(v))
   }
 
@@ -156,7 +160,8 @@ export function BaseFeePlayer({
         blocks: format(BLOCK_COUNT),
         limit: format(GAS_LIMIT),
         target: format(GAS_TARGET),
-        start: fmt.gwei(START_BASE_FEE_WEI / 1e9),
+        start: fmt.gwei(BASE_FEE_START_WEI.spike / 1e9),
+        coolingStart: fmt.gwei(BASE_FEE_START_WEI.cooling / 1e9),
         max: fmt.percent(MAX_CHANGE),
       })}
       fig={fig}

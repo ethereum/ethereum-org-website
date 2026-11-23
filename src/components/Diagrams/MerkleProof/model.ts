@@ -8,24 +8,17 @@
  * `dataArray` (the article uses nine, padded with empty branches; eight keeps
  * the tree of its figures, A to H), `hash(x)` is keccak256 of `x` as a 32-byte
  * uint (`abi.encode`), and `pairHash(a, b) = hash(hash(a) ^ hash(b))`. The
- * proof for C is D, H(A-B), H(E-H), as in the article.
+ * proof for C is D, H(A-B), H(E-H), as in the article. The hashes are
+ * precomputed (no inputs are user-editable), so no keccak ships to the page.
  */
-
-import { hexToBigInt, keccak256, numberToHex } from "viem"
 
 /** viewBox of the drawing. */
 export const MERKLE_PROOF_SIZE = { width: 460, height: 300 }
 
 /** The tutorial's `dataArray`, first eight entries: A to H. */
 export const LEAF_VALUES = [
-  BigInt(0x0bad0010),
-  BigInt(0x60a70020),
-  BigInt(0xbeef0030),
-  BigInt(0xdead0040),
-  BigInt(0xca110050),
-  BigInt(0x0e660060),
-  BigInt(0xface0070),
-  BigInt(0xbad00080),
+  0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
+  0xface0070, 0xbad00080,
 ] as const
 export const LEAF_NAMES = ["A", "B", "C", "D", "E", "F", "G", "H"] as const
 export const LEAVES = LEAF_VALUES.length
@@ -36,27 +29,29 @@ export const BIG_LEAVES = 1024
 export const BIG_PROOF_SIZE = Math.log2(BIG_LEAVES)
 
 /** C with its token amount changed (the last two bytes, 0x0030 to 0x0300). */
-const TAMPERED_C = BigInt(0xbeef0300)
+const TAMPERED_C = 0xbeef0300
 
-const hash = (x: bigint) => hexToBigInt(keccak256(numberToHex(x, { size: 32 })))
-const pairHash = (a: bigint, b: bigint) => hash(hash(a) ^ hash(b))
-
-/** levels[0] = leaves, levels[3] = [root]. */
-const buildLevels = (leaves: readonly bigint[]) => {
-  const levels: bigint[][] = [[...leaves]]
-  while (levels[levels.length - 1].length > 1) {
-    const below = levels[levels.length - 1]
-    levels.push(
-      Array.from({ length: below.length / 2 }, (_, i) =>
-        pairHash(below[2 * i], below[2 * i + 1])
-      )
-    )
-  }
-  return levels
-}
-
-const LEVELS = buildLevels(LEAF_VALUES)
-const STORED_ROOT = LEVELS[PROOF_SIZE][0]
+// keccak256 with the article's pairHash (viem `keccak256`); [0] = level 1, [2] = [root].
+const NODE_HASHES: readonly (readonly string[])[] = [
+  [
+    "0xb116a110e149cb410d07eb45fa33994c001bbb85a4e7378772c7af0c9cc5a39d",
+    "0x6f905bafdf4805086f3e791dd9bd41ea274324b7c33f44ae9cc209ff13b7f76e",
+    "0x66920f2fe7325f23934b6c0bd0af5aa12cf16d0a35e53e45b1637126579a2afc",
+    "0x5594f35a4b9ae5bb7f14bdae21c665c693ab17fcb81ceb3f540ee90338b0efdc",
+  ],
+  [
+    "0xb34b08e10ca63006768fed01e100d11dac2a451096d2dce006f7aa2890a5e747",
+    "0xebc27b9f4e84fa4add592b4785b3795371db565c5c68df42a5738cc70b1a0a6e",
+  ],
+  ["0x17db7293c7d184c4c7990cbc4fdac9d43af34c53befca7565c456b106ef13be8"],
+]
+// The hashes computed from the changed C, levels 1 to 3.
+const TAMPERED_PATH = [
+  "0x15dd9a2f450fe42e918b96b4113abf2c0b87b26cacf47b7f253bb41185ce78d4",
+  "0xdc2d20df0f15384078992d34a7f6c53e223f0ab8b96a87106c2031a93d7b8f3d",
+  "0xeede9b80d60fa7acc7de1f796df284b77db11f1102bf1219717cfcc11da0fc9a",
+]
+const STORED_ROOT = NODE_HASHES[PROOF_SIZE - 1][0]
 
 /** Name of node `index` on `level`, in the article's notation: C, H(A-B), H(A-H). */
 export const nodeName = (level: number, index: number) => {
@@ -66,18 +61,15 @@ export const nodeName = (level: number, index: number) => {
 }
 
 /** Short hex for display: hashes are code, never number-formatted. */
-export const shortHex = (x: bigint) => {
-  const hex = numberToHex(x, { size: 32 })
-  return `0x${hex.slice(2, 6)}…${hex.slice(-4)}`
-}
-export const fullHex = (x: bigint) => `0x${x.toString(16).padStart(8, "0")}`
+export const shortHex = (hex: string) => `0x${hex.slice(2, 6)}…${hex.slice(-4)}`
+export const fullHex = (x: number) => `0x${x.toString(16).padStart(8, "0")}`
 
 export const MERKLE_PROOF_PRESET_IDS = ["c", "f", "tampered"] as const
 export type MerkleProofPresetId = (typeof MERKLE_PROOF_PRESET_IDS)[number]
 
 const PRESETS: Record<
   MerkleProofPresetId,
-  { leaf: number; value: bigint; tampered: boolean }
+  { leaf: number; value: number; tampered: boolean }
 > = {
   c: { leaf: 2, value: LEAF_VALUES[2], tampered: false },
   f: { leaf: 5, value: LEAF_VALUES[5], tampered: false },
@@ -131,11 +123,14 @@ export interface MerkleProofPresetData {
 
 const buildPreset = (id: MerkleProofPresetId): MerkleProofPresetData => {
   const { leaf, value, tampered } = PRESETS[id]
-  const roles: MerkleNodeRole[][] = LEVELS.map((row) => row.map(() => "other"))
+  const roles: MerkleNodeRole[][] = Array.from(
+    { length: PROOF_SIZE + 1 },
+    (_, l) =>
+      Array.from({ length: LEAVES / 2 ** l }, (): MerkleNodeRole => "other")
+  )
   const proofNames: string[] = []
   const pathNames: string[] = []
   const computedHex: string[] = []
-  let current = value
   let index = leaf
   roles[0][leaf] = "value"
   for (let level = 0; level < PROOF_SIZE; level++) {
@@ -143,11 +138,12 @@ const buildPreset = (id: MerkleProofPresetId): MerkleProofPresetData => {
     const sibling = index % 2 ? index - 1 : index + 1
     roles[level][sibling] = "proof"
     proofNames.push(nodeName(level, sibling))
-    current = pairHash(current, LEVELS[level][sibling])
     index = Math.floor(index / 2)
     roles[level + 1][index] = "path"
     pathNames.push(nodeName(level + 1, index))
-    computedHex.push(shortHex(current))
+    computedHex.push(
+      shortHex(tampered ? TAMPERED_PATH[level] : NODE_HASHES[level][index])
+    )
   }
   return {
     leaf,
@@ -158,7 +154,7 @@ const buildPreset = (id: MerkleProofPresetId): MerkleProofPresetData => {
     pathNames,
     computedHex,
     storedRootHex: shortHex(STORED_ROOT),
-    matches: current === STORED_ROOT,
+    matches: !tampered,
     roles,
   }
 }

@@ -12,7 +12,6 @@ import {
   DIAGRAM_COLOR,
   DIAGRAM_SVG_FALLBACKS,
   ISO_DIM_CLASS,
-  ISO_LEVEL_CLASS,
   ISO_SVG_CLASS,
   IsoPipe,
   r1,
@@ -32,10 +31,12 @@ import {
 /*
  * Flat drawing for Casper FFG: a timeline reads more directly than an
  * isometric plate here. Epochs n to n+4 run left to right (mirrored in RTL),
- * named under the chain. Each epoch starts with its checkpoint (the large
- * block) followed by a few of its other blocks; supermajority links arch
- * from one checkpoint to the next. Below, a meter per played epoch shows the
- * attesting stake, and one dashed line across them marks two-thirds.
+ * each from its checkpoint (the large block) through its other blocks to a
+ * dashed boundary. Under each epoch from n+1, a bar spans the epoch: the
+ * stake attesting during it, filling as its slots pass, with a tick at
+ * two-thirds and an arrow up to the checkpoint the votes target. At the
+ * epoch's end boundary the votes are counted: the link arches from source
+ * to target and the checkpoints change state.
  */
 
 const { width: W, height: H } = GASPER_FINALITY_SIZE
@@ -49,6 +50,7 @@ const EPOCHS = EPOCH_NAMES.map((_, i) => i)
 
 const CP = 28
 const CP_TOP = 114
+const CP_BOTTOM = CP_TOP + CP
 const CHAIN_Y = CP_TOP + CP / 2
 const cpX = (i: number) => epochX(i) + 6
 const cpMid = (i: number) => cpX(i) + CP / 2
@@ -58,11 +60,16 @@ const BLOCK_X = [41, 52, 63]
 const BLOCK_TOP = CHAIN_Y - BLOCK / 2
 const CHAIN = `M${cpMid(0)},${CHAIN_Y} L${epochX(EPOCHS.length - 1) + BLOCK_X[2] + BLOCK},${CHAIN_Y}`
 
+// Epoch boundaries, the end of n to the end of n+4.
 const BOUNDARY_TOP = 96
-const BOUNDARY_BOTTOM = 256
-const BOUNDARIES = EPOCHS.slice(1)
+const BOUNDARY_BOTTOM = 170
+const BOUNDARIES = [...EPOCHS.slice(1), EPOCHS.length]
   .map((i) => `M${epochX(i)},${BOUNDARY_TOP} L${epochX(i)},${BOUNDARY_BOTTOM}`)
   .join(" ")
+// The boundary where this step's votes are counted runs down to its label.
+const END_LABEL_Y = 240
+const endBoundary = (i: number) =>
+  `M${epochX(i + 1)},${BOUNDARY_TOP} L${epochX(i + 1)},${END_LABEL_Y}`
 
 // Link into epoch j: from checkpoint j-1's top right to j's top left.
 const LINK_PEAK = 78
@@ -83,16 +90,25 @@ const lockAt = (i: number) => {
 }
 const LOCKS = EPOCHS.map(lockAt)
 
-// Meters, one per epoch from n+1, under its checkpoint.
-const METER_W = 22
-const METER_TOP = 172
-const METER_H = 76
-const METER_BOTTOM = METER_TOP + METER_H
-const meterX = (i: number) => cpMid(i) - METER_W / 2
-const THRESHOLD_Y = r1(METER_BOTTOM - METER_H * THRESHOLD)
-const THRESHOLD_LINE = `M${meterX(1) - 8},${THRESHOLD_Y} L${meterX(EPOCHS.length - 1) + METER_W + 8},${THRESHOLD_Y}`
+// Meters: one bar per epoch from n+1, from its checkpoint to its end.
+const BAR_TOP = 152
+const BAR_H = 12
+const BAR_BOTTOM = BAR_TOP + BAR_H
+const BAR_MID = BAR_TOP + BAR_H / 2
+const BAR_W = EPOCH_W - 10
+const barX = cpX
+const tickX = (i: number) => r1(barX(i) + BAR_W * THRESHOLD)
+const TICKS = EPOCHS.slice(1)
+  .map((i) => `M${tickX(i)},${BAR_TOP - 4} L${tickX(i)},${BAR_BOTTOM + 4}`)
+  .join(" ")
+// Votes point up at the checkpoint they target.
+const targetArrow = (i: number) => {
+  const x = cpMid(i)
+  const tip = CP_BOTTOM + 1.5
+  return `M${x},${BAR_TOP} L${x},${tip} M${x - 2.5},${tip + 3} L${x},${tip} L${x + 2.5},${tip + 3}`
+}
 
-const NAME_Y = 157
+const NAME_Y = 182
 // Invisible boxes where the epoch names sit, so labels keep off them.
 const NAME_KEEP_OUT = EPOCHS.map((i) => (
   <rect
@@ -144,21 +160,31 @@ const buildSpots = ({ epoch, checkpoints, links }: SpotInput) => {
     })
   }
   checkpointSpot("justified", "entity", checkpoints.lastIndexOf("justified"))
-  const meter = Math.max(epoch, 1)
+  // In epoch n's empty bar slot, pointing at n+1's bar.
   spots.push({
     id: "meter",
     tone: "entity",
-    target: [cpMid(meter), METER_BOTTOM],
-    anchor: [cpMid(meter), METER_BOTTOM + 14],
-    placement: "below",
+    target: [barX(1), BAR_MID],
+    anchor: [barX(1) - 7, BAR_MID],
+    placement: "start",
   })
+  if (epoch > 0) {
+    const x = epochX(epoch + 1)
+    spots.push({
+      id: "boundary",
+      tone: "neutral",
+      target: [x, END_LABEL_Y],
+      anchor: [x - 5, END_LABEL_Y],
+      placement: "start",
+    })
+  }
   checkpointSpot("finalized", "entity", checkpoints.lastIndexOf("finalized"))
   spots.push({
     id: "threshold",
     tone: "neutral",
-    target: [meterX(1) - 8, THRESHOLD_Y],
-    anchor: [meterX(1) - 14, THRESHOLD_Y],
-    placement: "start",
+    target: [tickX(1), BAR_BOTTOM + 4],
+    anchor: [tickX(1), 196],
+    placement: "below",
   })
   checkpointSpot("proposed", "neutral", checkpoints.lastIndexOf("proposed"))
   checkpointSpot("upcoming", "neutral", checkpoints.indexOf("upcoming"))
@@ -178,13 +204,18 @@ const pct = (n: number, of: number) => `${r1((n / of) * 100)}%`
 
 const POP =
   "animate-diagram-pop [transform-box:fill-box] [transform-origin:center] motion-reduce:animate-none"
+// The bar fills at an even pace, like slots passing.
+const FILL_CLASS =
+  "origin-left [transform-box:fill-box] transition-transform duration-1200 ease-linear motion-reduce:transition-none"
 
-// One step's choreography (ms): the meter fills, then the link forms, the
-// checkpoint is justified and the one before it locks.
-const LEVEL_DELAY = 200
-const LINK_DELAY = 800
-const JUSTIFY_DELAY = 1100
-const LOCK_DELAY = 1400
+// One step's choreography (ms): the epoch's slots pass and the bar fills;
+// at the end boundary the votes are counted, the link forms, the checkpoint
+// is justified and the one before it is finalized.
+const FILL_DELAY = 200
+const BOUNDARY_DELAY = 1400
+const LINK_DELAY = 1500
+const JUSTIFY_DELAY = 1800
+const LOCK_DELAY = 2100
 
 interface GasperFinalityRigProps {
   view: GasperFinalityView
@@ -306,11 +337,24 @@ function GasperFinalityRig({
             y={CP_TOP}
             size={CP}
             hue="entity"
-            state={
-              cp === "finalized" && state(cp) === "rest" ? "lit" : state(cp)
-            }
+            state={lockNow ? state("justified") : state(cp)}
           />
         </g>
+        {cp === "finalized" && (
+          <g
+            key={lockNow ? `${runKey}-final` : "final"}
+            className={cn(lockNow && POP)}
+            style={delayed(lockNow, LOCK_DELAY)}
+          >
+            <Block
+              x={cpX(i)}
+              y={CP_TOP}
+              size={CP}
+              hue="entity"
+              state={state(cp) === "rest" ? "lit" : state(cp)}
+            />
+          </g>
+        )}
         {cp === "finalized" && (
           <g
             key={lockNow ? `${runKey}-lock` : "lock"}
@@ -379,10 +423,10 @@ function GasperFinalityRig({
     return (
       <g key={`m-${i}`} {...part("meter")}>
         <rect
-          x={meterX(i)}
-          y={METER_TOP}
-          width={METER_W}
-          height={METER_H}
+          x={barX(i)}
+          y={BAR_TOP}
+          width={BAR_W}
+          height={BAR_H}
           rx={2}
           className={
             short && meterState === "rest"
@@ -392,21 +436,54 @@ function GasperFinalityRig({
           style={{ fill: anatomyFill("entity", "top", meterState) }}
         />
         <rect
-          x={meterX(i) + 2}
-          y={METER_TOP}
-          width={METER_W - 4}
-          height={METER_H}
+          x={barX(i) + 2}
+          y={BAR_TOP + 2}
+          width={BAR_W - 4}
+          height={BAR_H - 4}
+          rx={1}
           stroke="none"
-          className={ISO_LEVEL_CLASS}
+          className={FILL_CLASS}
           style={{
             fill: anatomyStrong("entity"),
-            transform: `scaleY(${share === null ? 0 : r1((share / 100) * 1000) / 1000})`,
-            transitionDelay: isNew(i) ? `${LEVEL_DELAY}ms` : undefined,
+            transform: `scaleX(${share === null ? 0 : r1((share / 100) * 1000) / 1000})`,
+            transitionDelay: isNew(i) ? `${FILL_DELAY}ms` : undefined,
           }}
         />
+        {share !== null && (
+          <path
+            d={targetArrow(i)}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="stroke-diagram-entity"
+            style={{ fill: "none" }}
+          />
+        )}
       </g>
     )
   }
+
+  // Where this step's votes are counted.
+  const boundary = epoch > 0 && (
+    <g {...part("boundary")}>
+      <g
+        key={`${runKey}-end`}
+        className={POP}
+        style={{ animationDelay: `${BOUNDARY_DELAY}ms` }}
+      >
+        <path
+          d={endBoundary(epoch)}
+          className={
+            state("boundary") !== "rest"
+              ? "stroke-diagram-line-strong"
+              : linkFormed
+                ? "stroke-diagram-entity"
+                : "stroke-diagram-revert"
+          }
+          style={{ fill: "none" }}
+        />
+      </g>
+    </g>
+  )
 
   return (
     <div className={cn("relative", className)}>
@@ -436,8 +513,7 @@ function GasperFinalityRig({
         {EPOCHS.slice(1).map(meter)}
         <g {...part("threshold")}>
           <path
-            d={THRESHOLD_LINE}
-            strokeDasharray="4 3"
+            d={TICKS}
             className={
               state("threshold") === "rest"
                 ? "stroke-diagram-line-strong"
@@ -446,6 +522,7 @@ function GasperFinalityRig({
             style={{ fill: "none" }}
           />
         </g>
+        {boundary}
       </svg>
 
       {/* Epoch names: notation, never translated. HTML, so they read the

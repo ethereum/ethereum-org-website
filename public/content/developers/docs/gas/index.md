@@ -57,16 +57,16 @@ The base fee is calculated by a formula that compares the size of the previous b
 
 | Block Number | Included Gas | Fee Increase | Current Base Fee |
 | ------------ | -----------: | -----------: | ---------------: |
-| 1            |          18M |           0% |         100 gwei |
-| 2            |          36M |           0% |         100 gwei |
-| 3            |          36M |        12.5% |       112.5 gwei |
-| 4            |          36M |        12.5% |       126.6 gwei |
-| 5            |          36M |        12.5% |       142.4 gwei |
-| 6            |          36M |        12.5% |       160.2 gwei |
-| 7            |          36M |        12.5% |       180.2 gwei |
-| 8            |          36M |        12.5% |       202.7 gwei |
+| 1            |          30M |           0% |         0.1 gwei |
+| 2            |          60M |           0% |         0.1 gwei |
+| 3            |          60M |        12.5% |      0.1125 gwei |
+| 4            |          60M |        12.5% |      0.1266 gwei |
+| 5            |          60M |        12.5% |      0.1424 gwei |
+| 6            |          60M |        12.5% |      0.1602 gwei |
+| 7            |          60M |        12.5% |      0.1802 gwei |
+| 8            |          60M |        12.5% |      0.2027 gwei |
 
-In the table above, an example is demonstrated using 36 million as the gas limit. Following this example, to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.7 gwei * 112.5% = 228.1 gwei`.
+In the table above, an example is demonstrated using 60 million as the gas limit. Following this example, to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 
@@ -74,11 +74,11 @@ It's also important to note it is unlikely we will see extended spikes of full b
 
 | Block Number | Included Gas | Fee Increase | Current Base Fee |
 | ------------ | -----------: | -----------: | ---------------: |
-| 30           |          36M |        12.5% |      2705.6 gwei |
+| 30           |          60M |        12.5% |      2.7056 gwei |
 | ...          |          ... |        12.5% |              ... |
-| 50           |          36M |        12.5% |     28531.3 gwei |
+| 50           |          60M |        12.5% |     28.5313 gwei |
 | ...          |          ... |        12.5% |              ... |
-| 100          |          36M |        12.5% |  10302608.6 gwei |
+| 100          |          60M |        12.5% |  10302.6083 gwei |
 
 ### Priority fee (tips) {#priority-fee}
 

@@ -16,7 +16,7 @@ You should have read and understood our page on [Ethereum scaling](/developers/d
 
 The ZK-rollup's state is maintained by a smart contract deployed on the Ethereum network. To update this state, ZK-rollup nodes must submit a validity proof for verification. As mentioned, the validity proof is a cryptographic assurance that the state-change proposed by the rollup is really the result of executing the given batch of transactions. This means that ZK-rollups do not need to post all transaction data onchain the way [optimistic rollups](/developers/docs/scaling/optimistic-rollups/) do, since the validity proof is what finalizes the state transition. They still publish the data required to reconstruct the rollup’s state, as described below.
 
-There are no delays when moving funds from a ZK-rollup to Ethereum because exit transactions are executed once the ZK-rollup contract verifies the validity proof. Conversely, withdrawing funds from optimistic rollups is subject to a delay to allow anyone to challenge the exit transaction with a [fraud proof](/glossary/#fraud-proof).
+There is no challenge period when moving funds from a ZK-rollup to Ethereum: exit transactions are executed once the ZK-rollup contract verifies the validity proof that covers them, so the wait is only as long as it takes to generate and verify that proof (some ZK-rollups add a short delay of their own). Conversely, withdrawing funds from optimistic rollups is subject to a delay to allow anyone to challenge the exit transaction with a [fraud proof](/glossary/#fraud-proof).
 
 ZK-rollups write transactions to Ethereum as `calldata` or in [blobs](/roadmap/danksharding/). `calldata` is where data that is included in external calls to smart contract functions gets stored. Either way, the data is published on the blockchain, allowing anyone to reconstruct the rollup’s state independently. ZK-rollups use compression techniques to reduce transaction data—for example, accounts are represented by an index rather than an address, which saves 28 bytes of data. Onchain data publication is a significant cost for rollups, so data compression can reduce fees for users.
 
@@ -104,7 +104,7 @@ Like ZK-SNARKs, ZK-STARKs let a verifier confirm the validity of offchain comput
 
 ZK-STARKs are 'transparent', as they can work without the trusted setup of a Common Reference String (CRS). Instead, ZK-STARKs rely on publicly verifiable randomness to set up parameters for generating and verifying proofs.
 
-ZK-STARKs also provide more scalability because the time needed to prove and verify validity proofs increases _quasilinearly_ in relation to the complexity of the underlying computation. With ZK-SNARKs, proving and verification times scale _linearly_ in relation to the size of the underlying computation. This means ZK-STARKs require less time than ZK-SNARKs for proving and verifying when large datasets are involved, making them useful for high-volume applications.
+ZK-STARKs also scale well: the time needed to generate a proof grows _quasilinearly_ with the size of the underlying computation, while the time needed to verify it grows only _polylogarithmically_. ZK-STARK provers are typically faster than ZK-SNARK provers for large computations, making them useful for high-volume applications. The tradeoff is that STARK proofs are larger and cost more to verify on L1, whereas ZK-SNARK verification takes constant time regardless of the size of the computation.
 
 ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cryptography (ECC) used in ZK-SNARKs is widely believed to be susceptible to quantum computing attacks. The downside to ZK-STARKs is that they produce larger proof sizes, which are more expensive to verify on Ethereum.
 
@@ -150,6 +150,8 @@ After the proving circuit verifies the correctness of state updates, the L2 oper
 
 If the proof satisfies the circuit (i.e., it is valid), it means that there exists a sequence of valid transactions that transition the rollup from the previous state (cryptographically fingerprinted by the pre-state root) to a new state (cryptographically fingerprinted by the post-state root). If the pre-state root matches the root stored in the rollup contract, and the proof is valid, the rollup contract takes the post-state root from the proof and updates its state tree to reflect the rollup's changed state.
 
+<ZkRollupDiagram />
+
 ### Entries and exits {#entries-and-exits}
 
 Users enter the ZK-rollup by depositing tokens in the rollup's contract deployed on the L1 chain. This transaction is queued up since only operators can submit transactions to the rollup contract.
@@ -188,7 +190,7 @@ How much users pay for transactions on ZK-rollups is dependent on the gas fee, j
 
 3. **L2 operator fees**: This is the amount paid to the rollup operator as compensation for computational costs incurred in processing transactions, much like [transaction "priority fees (tips)"](/developers/docs/gas/#how-are-gas-fees-calculated) on Ethereum Mainnet.
 
-4. **Proof generation and verification**: ZK-rollup operators must produce validity proofs for transaction batches, which is resource-intensive. Verifying zero-knowledge proofs on Mainnet also costs gas (~ 500,000 gas).
+4. **Proof generation and verification**: ZK-rollup operators must produce validity proofs for transaction batches, which is resource-intensive. Verifying zero-knowledge proofs on Mainnet also costs gas, from a few hundred thousand gas for a ZK-SNARK to several million for a ZK-STARK, depending on the proof system.
 
 Apart from batching transactions, ZK-rollups reduce fees for users by compressing transaction data. You can [see a real-time overview](https://l2fees.info/) of how it costs to use Ethereum ZK-rollups.
 
