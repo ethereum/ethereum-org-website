@@ -37,6 +37,8 @@ A simple metaphor for a smart contract is a vending machine, which works somewha
 
 The vending machine will only dispense your desired product after all requirements are met. If you don't select a product or insert enough money, the vending machine won't give out your product.
 
+<VendingMachineDiagram />
+
 ## Automatic execution {#automation}
 
 The main benefit of a smart contract is that it deterministically executes unambiguous code when certain conditions are met. There is no need to wait for a human to interpret or negotiate the result. This removes the need for trusted intermediaries.

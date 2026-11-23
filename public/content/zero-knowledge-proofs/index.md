@@ -158,7 +158,9 @@ In basic form, a zero-knowledge proof is made up of three elements: **witness**,
 
 The above describes the structure of an ‘interactive zero-knowledge proof’. Early zero-knowledge protocols used interactive proving, where verifying the validity of a statement required back-and-forth communication between provers and verifiers.
 
-A good example that illustrates how interactive proofs work is Jean-Jacques Quisquater’s famous [Ali Baba cave story](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave). In the story, Peggy (the prover) wants to prove to Victor (the verifier) that she knows the secret phrase to open a magic door without revealing the phrase.
+A good example that illustrates how interactive proofs work is Jean-Jacques Quisquater’s famous [Ali Baba cave story](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave). In the story, Peggy (the prover) wants to prove to Victor (the verifier) that she knows the secret phrase to open a magic door without revealing the phrase. The cave is a ring with the door at the back. Peggy walks in by either side while Victor waits outside, then Victor calls out which side she should come back from. If she knows the phrase, she can always do it; if she doesn't, she has only a 50% chance each round, so after many rounds Victor is convinced without ever hearing the phrase.
+
+<ZkProofGameDiagram />
 
 ### Non-interactive zero-knowledge proofs {#non-interactive-zero-knowledge-proofs}
 

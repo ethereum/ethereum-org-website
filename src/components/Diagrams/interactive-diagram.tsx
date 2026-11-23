@@ -419,7 +419,7 @@ export function DiagramReadout({
   return (
     <dl
       aria-label={label ?? t("diagram-readout-label")}
-      className="m-0 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 border-t border-border pt-3 text-sm"
+      className="m-0 grid grid-cols-[fit-content(60%)_minmax(0,1fr)] gap-x-3 gap-y-1 border-t border-border pt-3 text-sm"
     >
       {rows.map((row, i) => (
         <div key={i} className="contents">
