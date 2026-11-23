@@ -50,6 +50,12 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { createPageTracking } from "@/lib/utils/pageTracking"
 import { seededShuffle } from "@/lib/utils/random"
 
+import {
+  getHistoryChapters,
+  getHistoryLabels,
+} from "@/data/open-source/history"
+
+import HistoryChapters from "./_components/history-chapters"
 import PromptCard from "./_components/prompt-card"
 import PageJsonLD from "./page-jsonld"
 
@@ -147,6 +153,10 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       id: "benefits-of-open-source",
       title: t("page-open-source-possible-title"),
     },
+    history: {
+      id: "history",
+      title: t("page-open-source-history-title"),
+    },
     switching: {
       id: "how-to-switch-to-open-source-apps",
       title: t("page-open-source-switch-title"),
@@ -182,6 +192,111 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   // stable English name for the element. Section titles and most element titles
   // are translated -- ids and slugs keep a locale from splitting its own row.
   const { track, footnote, linkTo } = createPageTracking("open-source")
+
+  // Every history string resolves here; the dialog island is presentation only.
+  const historyChapters = getHistoryChapters(
+    t,
+    (name) => track(sections.history.id, name),
+    locale
+  )
+
+  // Further reading [4]-[19], cited per step in the history dialog. Numbers
+  // continue the page's own [1]-[3]; history.ts holds the step mapping.
+  const historyReferences = [
+    {
+      key: "unbundling",
+      href: "https://ethw.org/Software_Industry",
+      name: "Software Industry",
+    },
+    {
+      key: "unix-price",
+      href: "https://www.tuhs.org/Usenet/comp.unix/1985-August/005626.html",
+      name: "Unix source license price",
+    },
+    {
+      key: "gnu",
+      href: "https://www.gnu.org/gnu/initial-announcement.html",
+      name: "GNU announcement",
+    },
+    {
+      key: "osi",
+      href: "https://opensource.org/about/history-of-the-open-source-initiative",
+      name: "History of the OSI",
+    },
+    {
+      key: "dmca",
+      href: "https://www.eff.org/wp/unintended-consequences-under-dmca",
+      name: "Unintended Consequences",
+    },
+    {
+      key: "agpl",
+      href: "https://www.gnu.org/licenses/why-affero-gpl.html",
+      name: "Why the Affero GPL",
+    },
+    {
+      key: "libreoffice",
+      href: "https://lwn.net/Articles/407383/",
+      name: "Document Foundation launch",
+    },
+    {
+      key: "opentofu",
+      href: "https://opentofu.org/manifesto/",
+      name: "OpenTofu Manifesto",
+    },
+    {
+      key: "elastic",
+      href: "https://www.elastic.co/blog/elasticsearch-is-open-source-again",
+      name: "Elasticsearch open source again",
+    },
+    {
+      key: "redis",
+      href: "https://redis.io/blog/agplv3/",
+      name: "Redis AGPLv3",
+    },
+    {
+      key: "valkey",
+      href: "https://linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community",
+      name: "Valkey launch",
+    },
+    {
+      key: "vmware",
+      href: "https://siliconangle.com/2023/12/12/broadcom-accelerates-vmware-transformation-killing-off-perpetual-software-licenses/",
+      name: "VMware perpetual licenses",
+    },
+    {
+      key: "product",
+      href: "https://www.metafilter.com/95152/Userdriven-discontent#3256046",
+      name: "You're the product",
+    },
+    {
+      key: "value",
+      href: "https://papers.ssrn.com/abstract=4693148",
+      name: "The Value of Open Source Software",
+    },
+    {
+      key: "log4j",
+      href: "https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance",
+      name: "Log4j guidance",
+    },
+    {
+      key: "xz",
+      href: "https://www.openwall.com/lists/oss-security/2024/03/29/4",
+      name: "xz backdoor disclosure",
+    },
+  ]
+  const historyReferenceText = (
+    { key, href, name }: (typeof historyReferences)[number],
+    section: string
+  ) =>
+    t.rich(`page-open-source-reference-history-${key}`, {
+      link: linkTo(href, section, name),
+    })
+  const historyCitations = Object.fromEntries(
+    historyReferences.map((reference, i) => [
+      i + 4,
+      historyReferenceText(reference, sections.history.id),
+    ])
+  )
 
   // The four freedoms, in the order the design lists them.
   const freedoms = [
@@ -807,6 +922,30 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
           </p>
         </Section>
 
+        <Section id={sections.history.id}>
+          <h2>{sections.history.title}</h2>
+          <p>{t("page-open-source-history-description-1")}</p>
+          <p>{t("page-open-source-history-description-2")}</p>
+          <HistoryChapters
+            chapters={historyChapters}
+            labels={getHistoryLabels(t)}
+            startLabel={t("page-open-source-history-start")}
+            startHint={t("page-open-source-history-start-hint")}
+            startEvent={track(sections.history.id, "Start from beginning")}
+            finalCtas={[
+              {
+                label: t("page-open-source-history-cta-switch"),
+                href: `#${sections.switching.id}`,
+              },
+              {
+                label: t("page-open-source-history-cta-orgs"),
+                href: `#${sections.movement.id}`,
+              },
+            ]}
+            citations={historyCitations}
+          />
+        </Section>
+
         <Section id={sections.switching.id}>
           <h2>{sections.switching.title}</h2>
           <p>{t("page-open-source-switch-description-1")}</p>
@@ -1185,7 +1324,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         <Section id={sections.resources.id}>
           <h2>{sections.resources.title}</h2>
 
-          {/* Numbered: the targets of the [1]-[4] markers in the body.
+          {/* Numbered: targets of the [n] markers in the body and history dialog.
               Uncited reading stays bulleted below. */}
           <OrderedList>
             <ListItem>
@@ -1215,6 +1354,11 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                 ),
               })}
             </ListItem>
+            {historyReferences.map((reference) => (
+              <ListItem key={reference.key}>
+                {historyReferenceText(reference, sections.resources.id)}
+              </ListItem>
+            ))}
           </OrderedList>
 
           <UnorderedList>
