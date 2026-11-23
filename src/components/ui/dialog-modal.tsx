@@ -42,6 +42,14 @@ const dialogVariant = tv({
         content: "block p-0 rounded-none bg-none gap",
       },
     },
+    // Full-bleed below md: a centered dialog at phone width is a worse page.
+    fullscreenMobile: {
+      true: {
+        overlay: "max-md:p-0",
+        content:
+          "max-md:min-h-dvh max-md:max-w-none max-md:rounded-none max-md:p-6",
+      },
+    },
   },
   defaultVariants: {
     size: "md",
@@ -56,8 +64,8 @@ const useDialogStyles = () => React.useContext(DialogStylesContext)
 
 type DialogProps = DialogPrimitive.DialogProps & DialogVariants
 
-const Dialog = ({ size, variant, ...props }: DialogProps) => {
-  const styles = dialogVariant({ size, variant })
+const Dialog = ({ size, variant, fullscreenMobile, ...props }: DialogProps) => {
+  const styles = dialogVariant({ size, variant, fullscreenMobile })
   return (
     <DialogStylesContext.Provider value={styles}>
       <DialogPrimitive.Root {...props} />

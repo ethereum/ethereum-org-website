@@ -69,6 +69,19 @@ export const VariantUnstyled: Story = {
   },
 }
 
+export const FullscreenMobile: Story = {
+  args: { fullscreenMobile: true, size: "lg" },
+  globals: { viewport: { value: "base" } },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "`fullscreenMobile` drops the overlay padding and the content's max-width, radius, and large padding below `md`, so the dialog fills a phone screen instead of floating as a cramped card. Above `md` it renders exactly like the default. Used by the stepped history dialog on `/open-source`.",
+      },
+    },
+  },
+}
+
 export const WithoutActionButton: Story = {
   args: {
     actionButton: undefined,
