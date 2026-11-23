@@ -136,7 +136,7 @@ ${htmlRule}
 - Frontmatter -- per-field policy:
   TRANSLATE the values of: title, description, breadcrumb.
   TRANSLATE concept tags inside \`tags:\` arrays, but keep brand-name tags in Latin (per site rules above).
-  KEEP UNCHANGED (must match the English value byte-for-byte): topic, uploadDate, duration, educationLevel, youtubeId, format, skill, published, sidebarDepth, template, sidebar, source, sourceUrl, address, emoji, image, blurDataURL. \`topic\` is a taxonomy-slug array -- never translate, transliterate, or reformat its values.
+  KEEP UNCHANGED (must match the English value byte-for-byte): topic, uploadDate, duration, educationLevel, youtubeId, tweetId, format, skill, published, sidebarDepth, template, sidebar, source, sourceUrl, address, emoji, image, blurDataURL. \`topic\` is a taxonomy-slug array -- never translate, transliterate, or reformat its values.
   ${authorRule}
   Set the \`lang\` field to \`${targetLanguage}\`.
   Preserve YAML structure exactly. NEVER use \`<span dir="ltr">\` inside any frontmatter value -- the inner double-quote on the dir attribute breaks YAML. For LTR fragments inside frontmatter values use Unicode bidi isolates U+2066 (LRI) and U+2069 (PDI) instead.
@@ -181,7 +181,7 @@ function getNormalizedFormatRules(
 - Frontmatter -- per-field policy:
   TRANSLATE the values of: title, description, breadcrumb.
   TRANSLATE concept tags inside \`tags:\` arrays, but keep brand-name tags in Latin (per site rules above).
-  KEEP UNCHANGED (must match the English value byte-for-byte): topic, uploadDate, duration, educationLevel, youtubeId, format, skill, published, sidebarDepth, template, sidebar, source, sourceUrl, address, emoji, image, blurDataURL. \`topic\` is a taxonomy-slug array -- never translate, transliterate, or reformat its values.
+  KEEP UNCHANGED (must match the English value byte-for-byte): topic, uploadDate, duration, educationLevel, youtubeId, tweetId, format, skill, published, sidebarDepth, template, sidebar, source, sourceUrl, address, emoji, image, blurDataURL. \`topic\` is a taxonomy-slug array -- never translate, transliterate, or reformat its values.
   ${authorRule}
   Set the \`lang\` field to \`${targetLanguage}\`.
   Preserve YAML structure exactly. NEVER use \`<span dir="ltr">\` inside any frontmatter value -- the inner double-quote on the dir attribute breaks YAML. For LTR fragments inside frontmatter values use Unicode bidi isolates U+2066 (LRI) and U+2069 (PDI) instead.

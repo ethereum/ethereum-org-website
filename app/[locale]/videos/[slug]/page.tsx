@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import ContentFeedback from "@/components/ContentFeedback"
 import MainArticle from "@/components/MainArticle"
 import { htmlElements } from "@/components/MdComponents"
+import TweetEmbed from "@/components/TweetEmbed"
 import {
   Accordion,
   AccordionContent,
@@ -52,13 +53,24 @@ const VideoLandingPage = async (props: {
             label={frontmatter.breadcrumb || slug.replaceAll("-", " ")}
           />
 
-          <div className="sticky top-24 z-10 md:static">
-            <YouTube
-              id={frontmatter.youtubeId}
-              title={frontmatter.title}
-              className="max-w-full"
-            />
-          </div>
+          {frontmatter.youtubeId ? (
+            <div className="sticky top-24 z-10 md:static">
+              <YouTube
+                id={frontmatter.youtubeId}
+                title={frontmatter.title}
+                className="max-w-full"
+              />
+            </div>
+          ) : (
+            frontmatter.tweetId && (
+              <div>
+                <TweetEmbed
+                  id={frontmatter.tweetId}
+                  className="my-0 [&_.react-tweet-theme]:m-0! [&_.react-tweet-theme]:max-w-none!"
+                />
+              </div>
+            )
+          )}
 
           <h1 className="mt-space text-h4">{frontmatter.title}</h1>
 
@@ -115,12 +127,17 @@ export async function generateMetadata(props: {
     }
   }
 
-  return await getMetadata({
+  const metadata = await getMetadata({
     locale,
     slug: ["videos", slug],
     title: `${data.frontmatter.title} | ethereum.org`,
     description: data.frontmatter.description,
   })
+
+  // video.twimg.com returns 403 to requests with a third-party Referer
+  return data.frontmatter.tweetId
+    ? { ...metadata, referrer: "no-referrer" }
+    : metadata
 }
 
 export default VideoLandingPage
