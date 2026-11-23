@@ -15,8 +15,10 @@ export const user = pgTable("user", {
   email: text("email").notNull().unique(),
   emailVerified: boolean("email_verified").default(false).notNull(),
   image: text("image"),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-  updatedAt: timestamp("updated_at")
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+  updatedAt: timestamp("updated_at", { withTimezone: true })
     .defaultNow()
     .$onUpdate(() => /* @__PURE__ */ new Date())
     .notNull(),
@@ -27,10 +29,12 @@ export const session = pgTable(
   "session",
   {
     id: text("id").primaryKey(),
-    expiresAt: timestamp("expires_at").notNull(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
     token: text("token").notNull().unique(),
-    createdAt: timestamp("created_at").defaultNow().notNull(),
-    updatedAt: timestamp("updated_at")
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
       .$onUpdate(() => /* @__PURE__ */ new Date())
       .notNull(),
     ipAddress: text("ip_address"),
@@ -54,12 +58,18 @@ export const account = pgTable(
     accessToken: text("access_token"),
     refreshToken: text("refresh_token"),
     idToken: text("id_token"),
-    accessTokenExpiresAt: timestamp("access_token_expires_at"),
-    refreshTokenExpiresAt: timestamp("refresh_token_expires_at"),
+    accessTokenExpiresAt: timestamp("access_token_expires_at", {
+      withTimezone: true,
+    }),
+    refreshTokenExpiresAt: timestamp("refresh_token_expires_at", {
+      withTimezone: true,
+    }),
     scope: text("scope"),
     password: text("password"),
-    createdAt: timestamp("created_at").defaultNow().notNull(),
-    updatedAt: timestamp("updated_at")
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
       .$onUpdate(() => /* @__PURE__ */ new Date())
       .notNull(),
   },
@@ -72,9 +82,11 @@ export const verification = pgTable(
     id: text("id").primaryKey(),
     identifier: text("identifier").notNull(),
     value: text("value").notNull(),
-    expiresAt: timestamp("expires_at").notNull(),
-    createdAt: timestamp("created_at").defaultNow().notNull(),
-    updatedAt: timestamp("updated_at")
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true })
       .defaultNow()
       .$onUpdate(() => /* @__PURE__ */ new Date())
       .notNull(),
@@ -92,7 +104,7 @@ export const walletAddress = pgTable(
     address: text("address").notNull(),
     chainId: integer("chain_id").notNull(),
     isPrimary: boolean("is_primary").default(false).notNull(),
-    createdAt: timestamp("created_at").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull(),
   },
   (table) => [
     index("walletAddress_userId_idx").on(table.userId),
@@ -116,7 +128,7 @@ export const passkey = pgTable(
     deviceType: text("device_type").notNull(),
     backedUp: boolean("backed_up").notNull(),
     transports: text("transports"),
-    createdAt: timestamp("created_at"),
+    createdAt: timestamp("created_at", { withTimezone: true }),
     aaguid: text("aaguid"),
   },
   (table) => [
@@ -160,3 +172,16 @@ export const passkeyRelations = relations(passkey, ({ one }) => ({
     references: [user.id],
   }),
 }))
+
+// Hand-added (keep when regenerating): the auth rate limiter's buckets,
+// `rateLimitStorage` in src/lib/auth/server.ts. Rows go once their window ends
+export const authRateLimit = pgTable(
+  "auth_rate_limit",
+  {
+    // An HMAC of the client address and path, never the address itself
+    key: text("key").primaryKey(),
+    count: integer("count").notNull(),
+    resetsAt: timestamp("resets_at", { withTimezone: true }).notNull(),
+  },
+  (table) => [index("auth_rate_limit_resets_at_idx").on(table.resetsAt)]
+)

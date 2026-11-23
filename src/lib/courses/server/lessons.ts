@@ -1,10 +1,10 @@
-import { and, eq, isNull, sql } from "drizzle-orm"
+import { and, eq, gt, lt, sql } from "drizzle-orm"
 import { randomUUID } from "node:crypto"
 import * as z from "zod"
 
 import { getLesson } from "@/data/courses"
 
-import { MIN_STEP_MS } from "../rules"
+import { LESSON_TOKEN_TTL_MS, MIN_STEP_MS } from "../rules"
 import { type StreakDay, streakDayInZone } from "../streak"
 
 import { apiError, json, learnerDay, readBody, type SessionUser } from "./api"
@@ -58,35 +58,45 @@ export const recordStreakDays = async (
     })
 }
 
-/** Starting a lesson hands out the token its completion has to show */
+const tokenCutoff = () => new Date(Date.now() - LESSON_TOKEN_TTL_MS)
+
+/**
+ * Starting a lesson hands out the token its completion has to show. Every
+ * start also clears out everyone's expired tokens, so the table only holds
+ * lessons started in the last day and not yet finished
+ */
 export const startLesson = async (request: Request, user: SessionUser) => {
   const body = await readBody(request, startBody)
   if (!body || !getLesson(body.courseId, body.lessonId))
     return apiError("bad-request", 400)
   const token = randomUUID()
-  await getDb()
+  const db = getDb()
+  await db
     .insert(courseLessonSession)
     .values({ id: token, userId: user.id, ...body })
+  await db
+    .delete(courseLessonSession)
+    .where(lt(courseLessonSession.startedAt, tokenCutoff()))
   return json({ token })
 }
 
 /**
- * Verified completion: the token from this learner's own start, used once,
- * after at least `MIN_STEP_MS` per step. Accuracy is the browser's word. The
- * day counts for the streak, in the zone the browser reports.
+ * Verified completion: the token from this learner's own start, under a day
+ * old, after at least `MIN_STEP_MS` per step. Completing deletes the token,
+ * so it works once even when two requests race. Accuracy is the browser's
+ * word. The day counts for the streak, in the zone the browser reports.
  */
 export const completeLesson = async (request: Request, user: SessionUser) => {
   const body = await readBody(request, completeBody)
   if (!body) return apiError("bad-request", 400)
-  const db = getDb()
-  const [session] = await db
+  const [session] = await getDb()
     .select()
     .from(courseLessonSession)
     .where(
       and(
         eq(courseLessonSession.id, body.token),
         eq(courseLessonSession.userId, user.id),
-        isNull(courseLessonSession.completedAt)
+        gt(courseLessonSession.startedAt, tokenCutoff())
       )
     )
   const found = session && getLesson(session.courseId, session.lessonId)
@@ -97,34 +107,39 @@ export const completeLesson = async (request: Request, user: SessionUser) => {
   if (now.getTime() - session.startedAt.getTime() < minimum)
     return apiError("too-fast", 422)
 
-  await db
-    .update(courseLessonSession)
-    .set({ completedAt: now })
-    .where(eq(courseLessonSession.id, session.id))
-  await db
-    .insert(courseLessonCompletion)
-    .values({
-      userId: user.id,
-      courseId: session.courseId,
-      lessonId: session.lessonId,
-      verified: true,
-      accuracy: body.accuracy,
-      completedAt: now,
-    })
-    .onConflictDoUpdate({
-      target: [
-        courseLessonCompletion.userId,
-        courseLessonCompletion.courseId,
-        courseLessonCompletion.lessonId,
-      ],
-      set: {
-        verified: true,
-        accuracy: sql`greatest(${courseLessonCompletion.accuracy}, excluded.accuracy)`,
-        // An imported (unverified) date isn't one the server saw
-        completedAt: sql`case when ${courseLessonCompletion.verified} then ${courseLessonCompletion.completedAt} else excluded.completed_at end`,
-      },
-    })
   const { timeZone } = await learnerDay(request, user)
-  await recordStreakDays(user.id, [streakDayInZone(timeZone, now)], true)
+  const completed = await getDb().transaction(async (tx) => {
+    const [used] = await tx
+      .delete(courseLessonSession)
+      .where(eq(courseLessonSession.id, session.id))
+      .returning({ id: courseLessonSession.id })
+    if (!used) return false
+    await tx
+      .insert(courseLessonCompletion)
+      .values({
+        userId: user.id,
+        courseId: session.courseId,
+        lessonId: session.lessonId,
+        verified: true,
+        accuracy: body.accuracy,
+        completedAt: now,
+      })
+      .onConflictDoUpdate({
+        target: [
+          courseLessonCompletion.userId,
+          courseLessonCompletion.courseId,
+          courseLessonCompletion.lessonId,
+        ],
+        set: {
+          verified: true,
+          accuracy: sql`greatest(${courseLessonCompletion.accuracy}, excluded.accuracy)`,
+          // An imported (unverified) date isn't one the server saw
+          completedAt: sql`case when ${courseLessonCompletion.verified} then ${courseLessonCompletion.completedAt} else excluded.completed_at end`,
+        },
+      })
+    await recordStreakDays(user.id, [streakDayInZone(timeZone, now)], true, tx)
+    return true
+  })
+  if (!completed) return apiError("invalid-token", 400)
   return json({ verified: true })
 }

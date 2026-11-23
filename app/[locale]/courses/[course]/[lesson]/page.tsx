@@ -10,6 +10,7 @@ import type { PageParams } from "@/lib/types"
 
 import { PreloadCourseArt } from "@/components/Courses/art/lazy-course-art"
 import LessonPlayer from "@/components/Courses/lesson-player"
+import ProgressOutdated from "@/components/Courses/progress-outdated"
 import { PreloadWidgets } from "@/components/Courses/steps/interactive-step"
 import I18nProvider from "@/components/I18nProvider"
 
@@ -75,6 +76,7 @@ const Page = async (props: { params: Promise<LessonPageParams> }) => {
       {/* Later steps' chunks, fetched while the first one is read */}
       <PreloadWidgets ids={widgets} />
       <PreloadCourseArt ids={art} />
+      <ProgressOutdated />
     </I18nProvider>
   )
 }

@@ -1,7 +1,13 @@
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
-import { CalendarClock, LockKeyhole, ServerOff, TimerOff } from "lucide-react"
+import {
+  CalendarClock,
+  LockKeyhole,
+  ServerOff,
+  TimerOff,
+  Trophy,
+} from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
@@ -9,6 +15,7 @@ import { Spinner } from "@/components/ui/spinner"
 
 import { cn } from "@/lib/utils/cn"
 import { formatDateTime } from "@/lib/utils/date"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import type { ExamStep, LessonStep, PageLink } from "@/data/courses"
 
@@ -21,7 +28,7 @@ import type { ExamFinish, ExamSession } from "./exam-session"
 import LessonPlayer from "./lesson-player"
 import { chunkyButton, chunkyButtonSecondary, lessonThemeStyle } from "./theme"
 
-import { courseHref, EXAM_ID } from "@/lib/courses/constants"
+import { courseHref, EXAM_ID, EXAM_PASS_MARK } from "@/lib/courses/constants"
 import { EXAM_ATTEMPT_TTL_MS, MIN_ANSWER_MS } from "@/lib/courses/rules"
 
 interface Attempt {
@@ -33,6 +40,7 @@ interface Attempt {
 
 type Gate =
   | { kind: "loading" }
+  | { kind: "intro"; attemptsLeft: number }
   | { kind: "ready"; attempt: Attempt }
   | { kind: "limit"; retryAt: string }
   | { kind: "expired" }
@@ -69,22 +77,31 @@ const ExamGate = ({
   const [gate, setGate] = useState<Gate>({ kind: "loading" })
   const lastAnswerAt = useRef(0)
 
-  const start = useCallback(async () => {
-    setGate({ kind: "loading" })
-    const result = await requestJson<Attempt & { retryAt?: string }>(
-      "/api/courses/exams/start",
-      { courseId }
-    )
-    if (result.ok && result.data) {
-      lastAnswerAt.current = Date.now()
-      setGate({ kind: "ready", attempt: result.data })
-    } else if (result.status === 429 && result.data?.retryAt)
-      setGate({ kind: "limit", retryAt: result.data.retryAt })
-    else setGate({ kind: "unavailable" })
-  }, [courseId])
+  // Opening the page only resumes an unfinished attempt: a new one starts,
+  // and counts toward the day's, from the intro's button
+  const start = useCallback(
+    async (resumeOnly = false) => {
+      setGate({ kind: "loading" })
+      const result = await requestJson<
+        (Attempt | { attemptId?: never; attemptsLeft: number }) & {
+          retryAt?: string
+        }
+      >("/api/courses/exams/start", { courseId, resumeOnly })
+      const data = result.data
+      if (result.ok && data?.attemptId) {
+        lastAnswerAt.current = Date.now()
+        setGate({ kind: "ready", attempt: data })
+      } else if (result.ok && data)
+        setGate({ kind: "intro", attemptsLeft: data.attemptsLeft })
+      else if (result.status === 429 && data?.retryAt)
+        setGate({ kind: "limit", retryAt: data.retryAt })
+      else setGate({ kind: "unavailable" })
+    },
+    [courseId]
+  )
 
   useEffect(() => {
-    if (status === "signed-in") void start()
+    if (status === "signed-in") void start(true)
   }, [status, start])
 
   // Ungraded and still counted: another go if today allows, else tomorrow
@@ -174,6 +191,25 @@ const ExamGate = ({
           timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         }),
       })
+    )
+
+  if (gate.kind === "intro")
+    return frame(
+      <Trophy className={iconClass} aria-hidden />,
+      t("page-courses-exam-start-title"),
+      t("page-courses-exam-start-description", {
+        questions: questions.length,
+        mark: numberFormat(locale, { style: "percent" }).format(EXAM_PASS_MARK),
+        hours: EXAM_ATTEMPT_TTL_MS / 3_600_000,
+        left: gate.attemptsLeft,
+      }),
+      <Button
+        variant="ghost"
+        className={cn(chunkyButton, "w-full")}
+        onClick={() => void start()}
+      >
+        {t("page-courses-exam-start")}
+      </Button>
     )
 
   if (gate.kind === "expired")

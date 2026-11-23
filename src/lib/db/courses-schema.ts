@@ -34,10 +34,14 @@ export const courseLessonSession = pgTable(
     userId: userId(),
     courseId: text("course_id").notNull(),
     lessonId: text("lesson_id").notNull(),
-    startedAt: timestamp("started_at").defaultNow().notNull(),
-    completedAt: timestamp("completed_at"),
+    startedAt: timestamp("started_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
   },
-  (t) => [index("course_lesson_session_user_idx").on(t.userId)]
+  (t) => [
+    index("course_lesson_session_user_idx").on(t.userId),
+    index("course_lesson_session_started_idx").on(t.startedAt),
+  ]
 )
 
 export const courseLessonCompletion = pgTable(
@@ -49,7 +53,7 @@ export const courseLessonCompletion = pgTable(
     verified: boolean("verified").notNull(),
     /** Best first-try accuracy, 0-1, as the browser reported it */
     accuracy: real("accuracy").notNull(),
-    completedAt: timestamp("completed_at").notNull(),
+    completedAt: timestamp("completed_at", { withTimezone: true }).notNull(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.courseId, t.lessonId] })]
 )
@@ -65,8 +69,10 @@ export const courseExamAttempt = pgTable(
     day: date("day").notNull(),
     /** The questions drawn for this attempt, in the order asked */
     questionIds: text("question_ids").array().notNull(),
-    startedAt: timestamp("started_at").defaultNow().notNull(),
-    finishedAt: timestamp("finished_at"),
+    startedAt: timestamp("started_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
+    finishedAt: timestamp("finished_at", { withTimezone: true }),
     /** 0-1, set when finished */
     score: real("score"),
     passed: boolean("passed"),
@@ -83,7 +89,9 @@ export const courseExamAnswer = pgTable(
     questionId: text("question_id").notNull(),
     optionIds: text("option_ids").array().notNull(),
     correct: boolean("correct").notNull(),
-    answeredAt: timestamp("answered_at").defaultNow().notNull(),
+    answeredAt: timestamp("answered_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
   },
   (t) => [primaryKey({ columns: [t.attemptId, t.questionId] })]
 )
@@ -97,7 +105,7 @@ export const courseMastery = pgTable(
     verified: boolean("verified").notNull(),
     /** Best score, 0-1 */
     score: real("score").notNull(),
-    passedAt: timestamp("passed_at").notNull(),
+    passedAt: timestamp("passed_at", { withTimezone: true }).notNull(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.courseId] })]
 )
@@ -112,7 +120,7 @@ export const courseMastery = pgTable(
 export const courseProgressState = pgTable("course_progress_state", {
   userId: userId().primaryKey(),
   state: jsonb("state").$type<ProgressState>().notNull(),
-  updatedAt: timestamp("updated_at")
+  updatedAt: timestamp("updated_at", { withTimezone: true })
     .defaultNow()
     .$onUpdate(() => new Date())
     .notNull(),
@@ -132,8 +140,8 @@ export const courseStreakDay = pgTable(
     day: date("day").notNull(),
     /** That zone's UTC offset in minutes, as `getTimezoneOffset` */
     utcOffset: integer("utc_offset").notNull(),
-    firstAt: timestamp("first_at").notNull(),
-    lastAt: timestamp("last_at").notNull(),
+    firstAt: timestamp("first_at", { withTimezone: true }).notNull(),
+    lastAt: timestamp("last_at", { withTimezone: true }).notNull(),
     verified: boolean("verified").notNull(),
   },
   (t) => [primaryKey({ columns: [t.userId, t.day] })]

@@ -9,6 +9,7 @@ import {
 import type { PageParams } from "@/lib/types"
 
 import ExamGate from "@/components/Courses/exam-gate"
+import ProgressOutdated from "@/components/Courses/progress-outdated"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getMetadata } from "@/lib/utils/metadata"
@@ -64,6 +65,7 @@ const Page = async (props: { params: Promise<ExamPageParams> }) => {
         nextCourseId={nextCourseId}
         sources={sources}
       />
+      <ProgressOutdated />
     </I18nProvider>
   )
 }

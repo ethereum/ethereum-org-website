@@ -13,6 +13,8 @@ import {
   COURSE_ACCOUNT_USER_KEY,
   COURSE_SYNC_PENDING_KEY,
   flagProgress,
+  isProgressOutdated,
+  markProgressOutdated,
   readStoredProgress,
   writeStoredProgress,
 } from "./progress-storage"
@@ -22,6 +24,7 @@ import { lessonProgressKey } from "@/lib/courses/constants"
 import {
   EMPTY_PROGRESS,
   hasAnyProgress,
+  isNewerProgress,
   mergeProgress,
   type ProgressState,
   withAccountProgress,
@@ -199,6 +202,7 @@ const pushOnce = () =>
   exclusive(async () => {
     const account = syncedAccount
     const pending = readPending()
+    if (isProgressOutdated()) return true
     if (!account || !pending) return !pending
     const progress = readStoredProgress()
     // Left by another account, or replaced since: nothing of this one's to save
@@ -250,6 +254,7 @@ const push = (): Promise<boolean> => {
 const beaconPending = () => {
   const account = syncedAccount
   const progress = readStoredProgress()
+  if (isProgressOutdated()) return
   if (!account || readPending()?.account !== account) return
   if (progress?.account !== account || !navigator.sendBeacon) return
   const { account: _, ...state } = progress
@@ -323,6 +328,11 @@ const merge = async () => {
     clearAccountHint()
   }
   if (!data) return { data, owed: false }
+  // Saved by a later release: leave it be, and this page asks for a reload
+  if (isNewerProgress(data.state) || isProgressOutdated()) {
+    markProgressOutdated()
+    return { data: null, owed: false }
+  }
   const stored = readStoredProgress()
   // Another account's progress (its session ended here) isn't this one's
   const local =

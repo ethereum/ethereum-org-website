@@ -148,6 +148,8 @@ const runMigrations = async (url: string) => {
     connection: LEARNER_DB_CONNECTION,
   })
   try {
+    // Overlapping builds wait their turn; the lock ends with the connection
+    await client`select pg_advisory_lock(hashtextextended('learner-db:migrate', 0))`
     await migrate(drizzle(client), {
       migrationsFolder: "src/lib/db/migrations",
     })

@@ -8,8 +8,12 @@ import {
   sessionMiddleware,
 } from "better-auth/api"
 import { siwe } from "better-auth/plugins/siwe"
-import type { BetterAuthPlugin } from "better-auth/types"
-import { randomBytes } from "node:crypto"
+import type {
+  BetterAuthPlugin,
+  BetterAuthRateLimitOptions,
+} from "better-auth/types"
+import { lt, sql } from "drizzle-orm"
+import { createHmac, randomBytes } from "node:crypto"
 import {
   englishDataset,
   englishRecommendedTransformers,
@@ -55,6 +59,61 @@ const FRESH_SESSION_PATHS = [
 const DAY_SECONDS = 24 * 60 * 60
 
 let profanity: RegExpMatcher | undefined
+
+/**
+ * Per-address request buckets in Postgres, so the limit holds across
+ * serverless instances. Keys are HMACs, and a bucket is deleted once its
+ * window ends: nothing about who asked outlives the limit
+ */
+const rateLimitStorage: NonNullable<
+  BetterAuthRateLimitOptions["customStorage"]
+> = {
+  consume: async (key, { window, max }) => {
+    // No trusted address (missing proxy header): don't pool everyone together
+    if (key.startsWith("no-trusted-ip|"))
+      return { allowed: true, retryAfter: null }
+    const { authRateLimit } = schema
+    const expired = sql`${authRateLimit.resetsAt} <= now()`
+    const [bucket] = await getDb()
+      .insert(authRateLimit)
+      .values({
+        key: createHmac("sha256", process.env.LEARNER_AUTH_SECRET ?? "")
+          .update(key)
+          .digest("hex"),
+        count: 1,
+        resetsAt: sql`now() + make_interval(secs => ${window})`,
+      })
+      .onConflictDoUpdate({
+        target: authRateLimit.key,
+        set: {
+          count: sql`case when ${expired} then 1 else ${authRateLimit.count} + 1 end`,
+          resetsAt: sql`case when ${expired} then excluded.resets_at else ${authRateLimit.resetsAt} end`,
+        },
+      })
+      .returning({
+        count: authRateLimit.count,
+        resetsAt: authRateLimit.resetsAt,
+      })
+    // A window just began: sweep out every bucket whose window is over
+    if (bucket.count === 1)
+      await getDb()
+        .delete(authRateLimit)
+        .where(lt(authRateLimit.resetsAt, sql`now()`))
+    return bucket.count <= max
+      ? { allowed: true, retryAfter: null }
+      : {
+          allowed: false,
+          retryAfter: Math.max(
+            1,
+            Math.ceil((bucket.resetsAt.getTime() - Date.now()) / 1000)
+          ),
+        }
+  },
+}
+
+/** Requests a minute from one address: roomy enough for a classroom behind
+ * one school address, tight enough to stop a script */
+const SIGN_IN_PER_MINUTE = 120
 
 /**
  * The account's sessions for its settings page, with dates only. Better
@@ -121,9 +180,28 @@ const createAuth = () =>
     secret: process.env.LEARNER_AUTH_SECRET,
     database: drizzleAdapter(getDb(), { provider: "pg", schema }),
     telemetry: { enabled: false },
-    // No per-IP limits: a school or office shares one address. Account
-    // creation is gated by the proof-of-work challenge instead
-    rateLimit: { enabled: false },
+    // Generous per-address limits (a school or office shares one address);
+    // account creation also needs the proof-of-work challenge
+    rateLimit: {
+      enabled: true,
+      window: 60,
+      max: 600,
+      customStorage: rateLimitStorage,
+      customRules: {
+        // Every page load asks; it writes nothing
+        "/get-session": false,
+        // Unauthenticated, and each writes a row
+        "/siwe/nonce": { window: 60, max: SIGN_IN_PER_MINUTE },
+        "/siwe/verify": { window: 60, max: SIGN_IN_PER_MINUTE },
+        "/passkey/*": { window: 60, max: SIGN_IN_PER_MINUTE },
+        // Better Auth's default here is 3 per 10 seconds
+        "/sign-in/*": { window: 60, max: SIGN_IN_PER_MINUTE },
+      },
+    },
+    advanced: {
+      // Netlify's own client address header, which a client can't set
+      ipAddress: { ipAddressHeaders: ["x-nf-client-connection-ip"] },
+    },
     // Rolling: a day of use pushes expiry 60 days out again, so active
     // learners stay signed in. Sensitive actions want a sign-in within
     // `freshAge` (a day) and ask to confirm otherwise

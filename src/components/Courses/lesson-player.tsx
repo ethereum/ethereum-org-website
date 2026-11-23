@@ -64,11 +64,7 @@ import {
   lessonHref,
   stepKey,
 } from "@/lib/courses/constants"
-import {
-  EXAM_ATTEMPTS_PER_DAY,
-  MIN_ANSWER_MS,
-  samePicks,
-} from "@/lib/courses/rules"
+import { MIN_ANSWER_MS, samePicks } from "@/lib/courses/rules"
 
 /** A max-w-3xl content column, plus page padding */
 const lessonColumn =
@@ -753,14 +749,11 @@ const LessonPlayer = ({
             passMark={EXAM_PASS_MARK}
             // Only a pass comes back with results to review
             results={
-              examFinish?.review
-                ? lesson.steps
-                    .filter((s) => s.type === "choice")
-                    .map((s) => ({
-                      step: { ...s, correct: examFinish.review?.[s.id] ?? [] },
-                      picked: (values[s.id] as string[] | undefined) ?? [],
-                      correct: !!examFinish.results?.[s.id],
-                    }))
+              examFinish?.results
+                ? lesson.steps.map((s) => ({
+                    stepId: s.id,
+                    correct: !!examFinish.results?.[s.id],
+                  }))
                 : []
             }
             retakeBlocked={
@@ -1010,9 +1003,7 @@ const LessonPlayer = ({
             </DialogHeader>
             <DialogDescription>
               {examSession.attemptsLeft > 0
-                ? t("page-courses-exam-confirm-description", {
-                    count: EXAM_ATTEMPTS_PER_DAY,
-                  })
+                ? t("page-courses-exam-confirm-description")
                 : t("page-courses-exam-confirm-last")}
             </DialogDescription>
             <DialogFooter className="flex flex-wrap justify-end gap-2">

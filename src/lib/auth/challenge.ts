@@ -1,5 +1,5 @@
 import { createChallenge, verifySolution } from "altcha-lib"
-import { deriveKey } from "altcha-lib/algorithms/sha"
+import { deriveKey } from "altcha-lib/algorithms/pbkdf2"
 import type { Payload } from "altcha-lib/types"
 import { createHmac } from "node:crypto"
 
@@ -8,14 +8,16 @@ import { verification } from "@/lib/db/schema"
 
 /**
  * Proof-of-work challenge (ALTCHA, self-hosted) in front of account creation:
- * the browser spends about a second of compute, which costs a person nothing
- * and a bot farm a lot. Used instead of per-IP limits, which would also catch
- * everyone behind a shared school or office address.
+ * the browser spends under a second of compute, which costs a person nothing
+ * and a bot farm a lot. Per-address limits stay generous, since a whole school
+ * or office can share one address.
  */
 
 export const CHALLENGE_HEADER = "x-altcha"
 
-const ALGORITHM = "SHA-256"
+// PBKDF2 runs natively in the browser too (WebCrypto), so a bot gains little
+// over a person; per-hash SHA-256 in browser JS is several times slower
+const ALGORITHM = "PBKDF2/SHA-256"
 const EXPIRES_MS = 5 * 60_000
 
 const hmacSecret = () =>
@@ -26,9 +28,9 @@ const hmacSecret = () =>
 export const issueChallenge = () =>
   createChallenge({
     algorithm: ALGORITHM,
-    // Four hex zeros: about 65,000 hashes on average
-    keyPrefix: "0000",
-    cost: 1,
+    // About 256 tries of 5,000 rounds: under a second on a laptop
+    keyPrefix: "00",
+    cost: 5_000,
     deriveKey,
     expiresAt: new Date(Date.now() + EXPIRES_MS),
     hmacSignatureSecret: hmacSecret(),

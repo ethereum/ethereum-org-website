@@ -15,8 +15,22 @@ import {
   withAccountStreak,
 } from "./streak"
 
+/**
+ * The progress format this code reads and writes. A newer one was saved by a
+ * later release of the site: this page leaves it untouched and asks for a
+ * reload, and the server upgrades older ones as they arrive
+ */
+export const PROGRESS_VERSION = 1
+
+export const isNewerProgress = (value: unknown) =>
+  typeof value === "object" &&
+  value !== null &&
+  "version" in value &&
+  typeof value.version === "number" &&
+  value.version > PROGRESS_VERSION
+
 export interface ProgressState {
-  version: 1
+  version: typeof PROGRESS_VERSION
   xp: number
   streak: Streak
   bestStreak?: number
@@ -31,7 +45,7 @@ export interface ProgressState {
 }
 
 export const EMPTY_PROGRESS: ProgressState = {
-  version: 1,
+  version: PROGRESS_VERSION,
   xp: 0,
   streak: NO_STREAK,
   lessons: {},

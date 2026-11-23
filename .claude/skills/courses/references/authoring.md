@@ -2,6 +2,8 @@
 
 How to add courses, lessons and steps, and how to write them. Vocabulary and ordering rules are in `curriculum.md`.
 
+Course, lesson and step ids are permanent once shipped: progress is keyed by them, so copy, new steps and new lessons are safe, but a renamed or removed id loses learners' progress on it. `src/data/courses/shipped-ids.json` records every id; `tests/unit/courses/shipped-ids.spec.ts` fails when one disappears, unless it moves to `retired` (its completions stay on accounts). Record new ids with `UPDATE_COURSE_IDS=1 npx playwright test --project=unit tests/unit/courses/shipped-ids.spec.ts`.
+
 ## Add a course
 
 1. Pick an `id` (kebab-case, also the route segment), its track in `TRACKS` and its place in that track. Its `level` is the track's level (see `SKILL.md`). If the course was announced as a teaser, reuse the teaser's id and strings and move the entry from the track's `upcoming` to its `courses`.
@@ -52,7 +54,7 @@ Every course ends in a course check: the trophy node on the path, route `/course
 
 - Two choice questions per lesson, in lesson order (ten for a five-lesson course).
 - It tests what the course taught and introduces nothing: each question repeats a lesson question, widget puzzle or stated fact with a new scenario or wording. Never copy a lesson string verbatim, and never use a fact the course (or an earlier course on the path) didn't teach.
-- One attempt per question, graded by the server: the right option and the `-explain` show only after a pass (see `accounts.md`). So there are no per-option `fb-` notes, just one `-explain` that works whether the learner was right or wrong (don't open with "Right" or "Wrong"), shown again in the review screen.
+- One attempt per question, graded by the server: after a pass the review screen shows whether each was right, its `-explain` and its source, never the right option (see `accounts.md`). So there are no per-option `fb-` notes, just one `-explain` that teaches the point on its own and works whether the learner was right or wrong (don't open with "Right" or "Wrong").
 - Which option is right goes in the encrypted answer key, not the course file: update `.learner-exam-key.json`, run `pnpm courses:exam-key check` and `encrypt`, and commit `src/data/courses/exam-key.ts` with the question (`accounts.md`).
 - `multi` at most twice per check.
 - Every question sets `source`: the ethereum.org page that states the fact it tests, as specific as possible (use the section anchor where one exists), because it is a citation. It shows as "Learn more" in the review screen and is what the content review checks the question against. Never the glossary (for `learnMore` either): a one-line definition is a poor "Learn more" destination, so cite the page that explains the idea; the links spec rejects `/glossary/`.

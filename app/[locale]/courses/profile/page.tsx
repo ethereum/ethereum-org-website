@@ -10,6 +10,7 @@ import type { PageParams } from "@/lib/types"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import ProfileEmptyNotice from "@/components/Courses/profile-empty-notice"
 import ProfileView from "@/components/Courses/profile-view"
+import ProgressOutdated from "@/components/Courses/progress-outdated"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getMetadata } from "@/lib/utils/metadata"
@@ -49,6 +50,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         notice={<ProfileEmptyNotice />}
         tracks={toCatalog(TRACKS, { steps: true })}
       />
+      <ProgressOutdated />
     </I18nProvider>
   )
 }

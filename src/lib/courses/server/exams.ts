@@ -27,7 +27,11 @@ import {
   courseMastery,
 } from "@/lib/db/schema"
 
-const startBody = z.object({ courseId: z.string() })
+const startBody = z.object({
+  courseId: z.string(),
+  // Only reopen an unfinished attempt; otherwise just say how many are left
+  resumeOnly: z.boolean().optional(),
+})
 const answerBody = z.object({
   attemptId: z.string(),
   questionId: z.string(),
@@ -135,7 +139,8 @@ const expiredAttempt = async (
 /**
  * Starts (or resumes the open) attempt: the questions in a fresh order,
  * without answers. Starting counts toward the daily limit, so walking away
- * mid-check doesn't buy a free look.
+ * mid-check doesn't buy a free look. `resumeOnly` (opening the page) never
+ * starts one: it answers `{ attemptsLeft }` instead.
  */
 export const startExam = async (request: Request, user: SessionUser) => {
   const body = await readBody(request, startBody)
@@ -191,6 +196,7 @@ export const startExam = async (request: Request, user: SessionUser) => {
     }
     if (!left)
       return apiError("limit", 429, { retryAt: retryAt?.toISOString() })
+    if (body?.resumeOnly) return json({ attemptsLeft: left })
 
     const attempt = {
       id: randomUUID(),
@@ -332,10 +338,8 @@ export const finishExam = async (request: Request, user: SessionUser) => {
   return json({
     score,
     passed,
+    // Which were right, never the right options: the review teaches instead
     results: passed ? results : undefined,
-    review: passed
-      ? Object.fromEntries(attempt.questionIds.map((id) => [id, key[id]]))
-      : undefined,
     attemptsLeft: left,
     retryAt: retryAt?.toISOString(),
   })

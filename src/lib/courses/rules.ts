@@ -11,6 +11,10 @@ export const XP_EXAM_PASS = 30
 /** Shortest believable time per lesson step */
 export const MIN_STEP_MS = 2000
 
+/** How long a lesson's start token stays good: lessons take minutes, and
+ * a completion after this saves to the browser only, unverified */
+export const LESSON_TOKEN_TTL_MS = 24 * 60 * 60_000
+
 /** Shortest believable time between Course Mastery answers */
 export const MIN_ANSWER_MS = 3000
 

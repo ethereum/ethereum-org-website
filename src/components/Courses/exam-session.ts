@@ -4,8 +4,6 @@ export interface ExamFinish {
   passed: boolean
   /** Right or wrong, by question id: only after a pass */
   results?: Record<string, boolean>
-  /** Right options by question id: only after a pass */
-  review?: Record<string, string[]>
   attemptsLeft: number
   /** When the daily limit resets, once it's used up */
   retryAt?: string

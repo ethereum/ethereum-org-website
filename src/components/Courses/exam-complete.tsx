@@ -20,7 +20,7 @@ import {
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
-import type { ChoiceStep, PageLink } from "@/data/courses"
+import type { PageLink } from "@/data/courses"
 
 import Confetti from "./confetti"
 import { LearnMoreLink } from "./learn-more"
@@ -38,10 +38,10 @@ import { courseHref as hrefFor, COURSES_HUB } from "@/lib/courses/constants"
 // A passed trophy floats, and its glow breathes, for as long as it shows
 const LOOP = { duration: 3, repeat: Infinity, ease: "easeInOut" } as const
 
-/** One question to review: only after a pass, with the right options */
+/** One question to review, only after a pass: whether it was right, never
+ * the right options */
 export interface ExamResult {
-  step: ChoiceStep
-  picked: string[]
+  stepId: string
   correct: boolean
 }
 
@@ -300,11 +300,11 @@ const ExamComplete = ({
             <ol className="m-0 flex list-none flex-col gap-4">
               {results.map((result, i) => (
                 <ReviewItem
-                  key={result.step.id}
+                  key={result.stepId}
                   number={i + 1}
-                  result={result}
-                  keyFor={(suffix) => keyFor(result.step.id, suffix)}
-                  source={sources?.[result.step.id]}
+                  correct={result.correct}
+                  keyFor={(suffix) => keyFor(result.stepId, suffix)}
+                  source={sources?.[result.stepId]}
                 />
               ))}
             </ol>
@@ -443,20 +443,16 @@ const StatCard = ({
 
 const ReviewItem = ({
   number,
-  result: { step, picked, correct },
+  correct,
   keyFor,
   source,
 }: {
   number: number
-  result: ExamResult
+  correct: boolean
   keyFor: (suffix: string) => string
   source?: PageLink
 }) => {
   const t = useTranslations("page-courses")
-  // Only what matters: what the learner picked and what was right
-  const shown = step.options.filter(
-    (id) => picked.includes(id) || step.correct.includes(id)
-  )
 
   return (
     <li
@@ -490,30 +486,6 @@ const ReviewItem = ({
           {t(keyFor("prompt"))}
         </span>
       </p>
-      <ul className="m-0 flex list-none flex-col gap-2 ps-10">
-        {shown.map((id) => {
-          const right = step.correct.includes(id)
-          const mine = picked.includes(id)
-          return (
-            <li
-              key={id}
-              className={cn(
-                "m-0 rounded-xl px-3 py-2",
-                right
-                  ? "bg-success-light dark:bg-success-dark"
-                  : "bg-error-light dark:bg-error-dark"
-              )}
-            >
-              <span className="block text-xs font-bold tracking-wide text-body-medium uppercase">
-                {mine
-                  ? t("page-courses-exam-your-answer")
-                  : t("page-courses-exam-right-answer")}
-              </span>
-              {t(keyFor(`opt-${id}`))}
-            </li>
-          )
-        })}
-      </ul>
       <p className="m-0 ps-10 text-body-medium">{t(keyFor("explain"))}</p>
       {source && (
         <p className="m-0 flex flex-wrap gap-x-1.5 ps-10 text-sm">

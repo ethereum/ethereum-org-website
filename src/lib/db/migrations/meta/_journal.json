@@ -29,6 +29,27 @@
       "when": 1795162978299,
       "tag": "0003_streak_days_and_unique_sign_in",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1795408469705,
+      "tag": "0004_timestamps_with_time_zone",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795408816176,
+      "tag": "0005_auth_rate_limit",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1795410921929,
+      "tag": "0006_lesson_token_cleanup",
+      "breakpoints": true
     }
   ]
 }

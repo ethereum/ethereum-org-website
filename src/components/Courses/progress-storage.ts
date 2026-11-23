@@ -1,5 +1,7 @@
 import type { CourseProgress } from "./useCourseProgress"
 
+import { isNewerProgress } from "@/lib/courses/progress"
+
 /**
  * Where course progress is saved, shared by the client hook and server pages
  * (a "use client" module can't hand a plain value to a server component).
@@ -48,6 +50,9 @@ export const HAS_PROGRESS_SCRIPT = `try{var d=document.documentElement,a=localSt
 // replaced on each save here and on each change from another tab
 let stored: CourseProgress | null | undefined
 let storedJson: string | null = null
+// Progress in a newer format (a later release, in another tab or on the
+// account) was found: this page stops saving until it's reloaded
+let outdated = false
 const listeners = new Set<() => void>()
 
 const notify = () => listeners.forEach((listener) => listener())
@@ -64,11 +69,28 @@ export const readStoredProgress = (): CourseProgress | null => {
   if (stored !== undefined) return stored
   try {
     storedJson = window.localStorage.getItem(COURSE_PROGRESS_KEY)
-    stored = storedJson ? (JSON.parse(storedJson) as CourseProgress) : null
+    const parsed: unknown = storedJson ? JSON.parse(storedJson) : null
+    if (isNewerProgress(parsed)) {
+      outdated = true
+      stored = null
+    } else stored = parsed as CourseProgress | null
   } catch {
     stored = null
   }
   return stored
+}
+
+/** True once newer progress turned up: nothing here saves any more */
+export const isProgressOutdated = () => {
+  readStoredProgress()
+  return outdated
+}
+
+/** The account holds progress in a newer format than this page knows */
+export const markProgressOutdated = () => {
+  if (outdated) return
+  outdated = true
+  notify()
 }
 
 /**
@@ -77,7 +99,8 @@ export const readStoredProgress = (): CourseProgress | null => {
  */
 export const writeStoredProgress = (progress: CourseProgress | null) => {
   const json = progress && JSON.stringify(progress)
-  if (stored !== undefined && json === storedJson) return
+  if (isProgressOutdated() || (stored !== undefined && json === storedJson))
+    return
   try {
     if (json) window.localStorage.setItem(COURSE_PROGRESS_KEY, json)
     else window.localStorage.removeItem(COURSE_PROGRESS_KEY)

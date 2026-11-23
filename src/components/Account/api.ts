@@ -1,7 +1,7 @@
 "use client"
 
 import { solveChallenge } from "altcha-lib"
-import { deriveKey } from "altcha-lib/algorithms/web/sha"
+import { deriveKey } from "altcha-lib/algorithms/web/pbkdf2"
 
 import { withTrailingSlash } from "@/lib/utils/api-path"
 

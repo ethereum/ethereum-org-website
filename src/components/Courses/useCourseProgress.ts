@@ -16,7 +16,11 @@ import {
   EXAM_PASS_MARK,
   lessonProgressKey,
 } from "@/lib/courses/constants"
-import { EMPTY_PROGRESS, hasAnyProgress } from "@/lib/courses/progress"
+import {
+  EMPTY_PROGRESS,
+  hasAnyProgress,
+  PROGRESS_VERSION,
+} from "@/lib/courses/progress"
 import {
   XP_EXAM_PASS,
   XP_LESSON,
@@ -47,7 +51,7 @@ export interface ExamRecord {
 }
 
 export interface CourseProgress {
-  version: 1
+  version: typeof PROGRESS_VERSION
   xp: number
   streak: Streak
   /** Longest streak reached; absent in progress saved before it was tracked */

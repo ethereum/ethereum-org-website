@@ -41,9 +41,8 @@ const url = resolveUrl()
 export const hasLearnerDb = !!url
 
 /**
- * Session settings for every connection, the app's and migrations'. Columns
- * are `timestamp without time zone` and Drizzle reads them as UTC, so
- * `defaultNow()` must write UTC too, whatever the server's default zone.
+ * Session settings for every connection, the app's and migrations': SQL
+ * date math and text output stay in UTC, whatever the server's default zone.
  */
 export const LEARNER_DB_CONNECTION = { TimeZone: "UTC" }
 

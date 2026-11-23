@@ -14,6 +14,7 @@ import { sceneryFor } from "@/components/Courses/art/scenery"
 import CourseProgress from "@/components/Courses/course-progress"
 import LessonPath from "@/components/Courses/lesson-path"
 import ProfileLink from "@/components/Courses/profile-link"
+import ProgressOutdated from "@/components/Courses/progress-outdated"
 import { ProgressChips } from "@/components/Courses/progress-stats"
 import StickyBar from "@/components/Courses/sticky-bar"
 import { courseThemeStyle } from "@/components/Courses/theme"
@@ -124,6 +125,7 @@ const Page = async (props: { params: Promise<CoursePageParams> }) => {
           </ButtonLink>
         </div>
       </MainArticle>
+      <ProgressOutdated />
     </I18nProvider>
   )
 }

@@ -17,6 +17,7 @@ import { HubNextUp } from "@/components/Courses/hub-hero-actions"
 import InstallAppNotice from "@/components/Courses/install-app-notice"
 import NoProfileAlert from "@/components/Courses/no-profile-alert"
 import ProfileLink from "@/components/Courses/profile-link"
+import ProgressOutdated from "@/components/Courses/progress-outdated"
 import {
   ProgressChips,
   ProgressNote,
@@ -118,6 +119,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <ProgressNote />
           </MainArticle>
         </main>
+        <ProgressOutdated />
       </I18nProvider>
     </>
   )
