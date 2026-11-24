@@ -351,3 +351,49 @@ test("check keeps an existing listing only when its text is in the file", async 
   expect(r.pr).toBeUndefined()
   expect(r.existing.map((e) => e.text)).toEqual(["Foo   is a node provider"])
 })
+
+test("a blocker stays until its criterion passes", () => {
+  const prev = rec({ Audited: "fail" })
+  expect(blockers(rec({ Audited: "unknown" }), prev)).toEqual(["Audited"])
+  expect(blockers(rec({ Audited: "pass" }), prev)).toEqual([])
+  expect(
+    blockers(rec({ Audited: "unknown" }), { ...rec({}), blocking: ["Audited"] })
+  ).toEqual(["Audited"])
+  const out = followupComment(rec({ Audited: "unknown" }), prev, {
+    author: "alice",
+    followups: 0,
+  })
+  expect(out).toContain("**Still blocking:**")
+  expect(out).not.toContain("resolved")
+})
+
+test("latest counts an edited review from its last edit", () => {
+  const review = {
+    ...bot(
+      `<!-- ethorg-review: ${JSON.stringify({ listing: rec({ A: "pass" }) })} -->`,
+      1
+    ),
+    updated_at: "2026-11-29T00:00:00Z",
+  }
+  const followup = bot(
+    dataLine({ ...rec({ A: "unknown" }), kind: "followup" }),
+    2
+  )
+  expect(latest([review, followup]).record.criteria[0].status).toBe("pass")
+})
+
+test("isListingIssue skips quiz and glossary suggestions whatever the title", () => {
+  expect(
+    isListingIssue(
+      outsider({
+        title: "Add/Update/Delete quiz question",
+        body: "Source: https://foo.xyz",
+      })
+    )
+  ).toBe(false)
+  expect(
+    isListingIssue(
+      outsider({ title: "Whatever", labels: [{ name: "quiz 📚" }] })
+    )
+  ).toBe(false)
+})
