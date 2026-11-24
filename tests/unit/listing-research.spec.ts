@@ -13,6 +13,7 @@ let blockers: Mod["blockers"],
   latest: Mod["latest"],
   MAX_FOLLOWUPS: Mod["MAX_FOLLOWUPS"],
   productSites: Mod["productSites"],
+  coveringPr: Mod["coveringPr"],
   researchComment: Mod["researchComment"],
   esc: Mod["esc"],
   LISTING: Mod["LISTING"],
@@ -33,6 +34,7 @@ test.beforeAll(async () => {
     latest,
     MAX_FOLLOWUPS,
     productSites,
+    coveringPr,
     researchComment,
     esc,
     LISTING,
@@ -455,4 +457,27 @@ test("productSites falls back to the request's own links", () => {
   expect(
     productSites(item, "https://www.ethereum.org/developers/ https://foo.xyz")
   ).toEqual(["foo.xyz"])
+})
+
+test("registrableDomain keeps the subdomain on shared hosting", () => {
+  expect(registrableDomain("agentforge-taupe.vercel.app")).toBe(
+    "agentforge-taupe.vercel.app"
+  )
+  expect(registrableDomain("docs.foo.github.io")).toBe("foo.github.io")
+  expect(registrableDomain("www.dwellir.com")).toBe("dwellir.com")
+})
+
+test("coveringPr finds the requester's own open PR for the same site", () => {
+  const issue = { number: 19848, user: { login: "benjichat" } }
+  const pr = (o: object) => ({
+    number: 19540,
+    kind: "pr",
+    state: "open",
+    author: "benjichat",
+    ...o,
+  })
+  expect(coveringPr(issue, [pr({})])).toBe(19540)
+  expect(coveringPr(issue, [pr({ author: "someone" })])).toBeUndefined()
+  expect(coveringPr(issue, [pr({ state: "closed" })])).toBeUndefined()
+  expect(coveringPr(issue, [pr({ kind: "issue" })])).toBeUndefined()
 })

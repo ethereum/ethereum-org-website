@@ -103,12 +103,20 @@ export function publicUrl(u) {
   }
 }
 
-// ponytail: last two labels, three under common two-level suffixes; use the Public Suffix List if lookups miss.
+// ponytail: last two labels, three under two-level suffixes and shared hosting (foo.vercel.app); use the Public Suffix List if lookups miss.
+const SHARED_HOSTS =
+  /\.(vercel\.app|netlify\.app|github\.io|gitlab\.io|pages\.dev|workers\.dev|web\.app|firebaseapp\.com|herokuapp\.com|onrender\.com|fly\.dev|railway\.app|gitbook\.io|notion\.site|substack\.com|framer\.website|webflow\.io|wixsite\.com)$/
+
 export const registrableDomain = (host) => {
   const h = host.toLowerCase().replace(/\.$/, "")
   return h
     .split(".")
-    .slice(/\.(co|com|net|org|gov|edu|ac|ne|or)\.[a-z]{2}$/.test(h) ? -3 : -2)
+    .slice(
+      SHARED_HOSTS.test(h) ||
+        /\.(co|com|net|org|gov|edu|ac|ne|or)\.[a-z]{2}$/.test(h)
+        ? -3
+        : -2
+    )
     .join(".")
 }
 
@@ -274,6 +282,16 @@ export function isListingIssue(i, owners = []) {
   return TITLE.test(i.title) && externalUrls(i.body || "").length > 0
 }
 
+// The requester's own open PR for the same site, where the listing is already being reviewed.
+export const coveringPr = (issue, rel) =>
+  rel.find(
+    (x) =>
+      x.kind === "pr" &&
+      x.state === "open" &&
+      x.number !== issue.number &&
+      x.author === issue.user?.login
+  )?.number
+
 const RECORD = /<!-- ethorg-(listing|review): (.*?) -->/
 
 // The bot's listing checks on an item, oldest first: a review's `listing` block or a standalone `ethorg-listing` line.
@@ -405,6 +423,7 @@ export function related(domains, self) {
           kind: i.pull_request ? "pr" : "issue",
           state: i.pull_request?.merged_at ? "merged" : i.state,
           title: String(i.title).slice(0, 120),
+          author: i.user?.login,
         })
       }
     } catch {
@@ -941,13 +960,19 @@ async function main() {
   const [cmd, ...args] = process.argv.slice(2)
   const stdin = () => JSON.parse(readFileSync(0, "utf8"))
   if (cmd === "match") await match(args[0])
-  else if (cmd === "match-issue")
-    process.exit(
-      isListingIssue(ghJson(`repos/${REPO}/issues/${args[0]}`), codeowners())
-        ? 0
-        : 1
-    )
-  else if (cmd === "match-reply")
+  else if (cmd === "match-issue") {
+    const i = ghJson(`repos/${REPO}/issues/${args[0]}`)
+    if (!isListingIssue(i, codeowners())) process.exit(1)
+    const sites = productSites({}, i.body || "")
+    const pr = coveringPr(i, related(sites, i.number))
+    if (pr) {
+      console.log(
+        `#${i.number} is already being reviewed in its author's PR #${pr}`
+      )
+      process.exit(1)
+    }
+    process.exit(0)
+  } else if (cmd === "match-reply")
     process.exit(
       isListingReply(
         ghJson(`repos/${REPO}/issues/${args[0]}`),
