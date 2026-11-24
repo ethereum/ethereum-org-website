@@ -28,6 +28,7 @@ import {
 import IndexPageJsonLD from "./page-jsonld"
 
 import { getAccountHolders, getGrowThePieData } from "@/lib/data"
+import { loadEthereumNames } from "@/lib/i18n/loadMessages"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -35,10 +36,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   if (!LOCALES_CODES.includes(locale)) return notFound()
 
-  const [accountHoldersData, growThePieData] = await Promise.all([
-    getAccountHolders(),
-    getGrowThePieData(),
-  ])
+  const [accountHoldersData, growThePieData, ethereumNames] = await Promise.all(
+    [getAccountHolders(), getGrowThePieData(), loadEthereumNames()]
+  )
 
   if (!accountHoldersData) {
     throw new Error("Failed to fetch account holders data")
@@ -79,7 +79,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <IndexPageJsonLD locale={locale} />
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-          <HomeHero eventCategory={eventCategory} />
+          <HomeHero
+            eventCategory={eventCategory}
+            ethereumNames={ethereumNames}
+          />
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
             <KPISection

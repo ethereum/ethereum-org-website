@@ -35,6 +35,11 @@
     "score": 9000
   },
   {
+    "username": "gzeoneth",
+    "name": "gzeon",
+    "score": 9000
+  },
+  {
     "username": "therealgregoai",
     "name": "Grego AI",
     "score": 8500
@@ -42,11 +47,6 @@
   {
     "username": "hyunmini",
     "name": "secuholic",
-    "score": 8000
-  },
-  {
-    "username": "gzeoneth",
-    "name": "gzeon",
     "score": 8000
   },
   {
@@ -98,11 +98,6 @@
     "username": "lgprbs",
     "name": "quasar",
     "score": 3500
-  },
-  {
-    "username": "quasar",
-    "name": "Evgeny Legerov",
-    "score": 3250
   },
   {
     "username": "karalabe",
@@ -164,6 +159,11 @@
     "name": "Jie Ma (UTUX Labs)",
     "score": 1500
   },
+  {
+    "username": "x15-eth",
+    "name": "0x15",
+    "score": 1250
+  },  
   {
     "username": "nerolation",
     "name": "Toni Wahrstätter",
@@ -234,11 +234,6 @@
     "name": "d4r3d3v1l",
     "score": 1000
   },
-  {
-    "username": "x15-eth",
-    "name": "0x15",
-    "score": 1000
-  },  
   {
     "username": "srobins1205-sys",
     "name": "Greenbean17",
