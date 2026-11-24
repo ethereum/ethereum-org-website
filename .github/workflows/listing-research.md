@@ -72,7 +72,7 @@ network:
 tools:
   github:
     toolsets: [default]
-  bash: ["git ls-files:*", "git log:*", "git show:*", "ls:*", "cat:*", "grep:*", "head:*", "tail:*", "wc:*"]
+  bash: ["git ls-files:*", "git log:*", "git show:*", "git grep:*", "ls:*", "cat:*", "grep:*", "head:*", "tail:*", "wc:*"]
 safe-outputs:
   noop:
     report-as-issue: false
@@ -176,5 +176,7 @@ Research listing request #${{ github.event.issue.number || inputs.item }} in ${{
 
 - If `prior` is set in the saved `issue.json` or `pr.json`, a listing check was already posted and the author has replied since (the last entries of `thread`). Start from `prior.record`: re-check only what the reply changes or adds, fetching any sources it gives, keep the rest as it was, and ask only what is still open.
 - On a pull request, don't review the code or the entry's wording; the PR review does that.
+- The shell only runs the read-only commands `git ls-files|log|show|grep`, `ls`, `cat`, `grep`, `head`, `tail` and `wc`, with pipes allowed. You start in the repo: never `cd`, and use absolute paths for the saved research. Run one command per call: `;`, `&&`, loops, variables, `echo`, `cd`, `git -C` and `$(...)` are denied. A denial means rewrite the command, not that the shell is unavailable.
+- The product's own pages are already saved in `pages/`; `web-fetch` reaches only the allowlisted independent sources.
 - Set `target_path` to the file the entry would go in (the policy's "Applies to" and `git ls-files`), or leave it empty if unsure.
 - Call `submit_listing` exactly once. If the request is not a listing request after all (for example a feature request that mentions wallets), call `noop` with a one-line reason instead.

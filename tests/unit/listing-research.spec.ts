@@ -217,6 +217,11 @@ test("isListingIssue takes outside listing requests, with or without the form", 
   expect(isListingIssue(outsider({ title: "Suggest a glossary term" }))).toBe(
     false
   )
+  expect(
+    isListingIssue(
+      outsider({ title: "Event listing", body: "https://conf.xyz" })
+    )
+  ).toBe(false)
   expect(isListingIssue(outsider({ author_association: "MEMBER" }))).toBe(false)
   expect(isListingIssue(outsider(), ["alice"])).toBe(false)
   expect(isListingIssue(outsider({ pull_request: {} }))).toBe(false)

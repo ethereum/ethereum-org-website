@@ -264,6 +264,9 @@ export function isListingIssue(i, owners = []) {
   const labels = (i.labels || []).map((l) =>
     typeof l === "string" ? l : l.name
   )
+  // Events have their own template and no listing policy.
+  if (labels.includes("event 📅") || /^event listing/i.test(i.title))
+    return false
   if (labels.some((l) => LISTING_LABELS.includes(l))) return true
   if (/^suggest\b/i.test(i.title)) return !/glossary|quiz/i.test(i.title)
   return TITLE.test(i.title) && externalUrls(i.body || "").length > 0
