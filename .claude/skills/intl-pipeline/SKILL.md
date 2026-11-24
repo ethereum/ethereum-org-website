@@ -126,6 +126,7 @@ Before opening a PR that touches the pipeline:
 
 - [ ] Sanitizer test suite passes (`npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/`)
 - [ ] Pipeline test suite passes (`npx playwright test --project=unit tests/unit/intl-pipeline/`)
+- [ ] `pnpm intl:identity-sweep` reports 0 failing pages (normalizer, reconstruction, sanitizer or gate changes: English through the pipeline with an echo model must pass every gate)
 - [ ] No hand-edits to `public/content/translations/` or `src/intl/{non-en}/` files
 - [ ] No manual changes to manifest files under `.manifests/`
 - [ ] If renaming workflow / config paths, all doc references updated (search for old names)

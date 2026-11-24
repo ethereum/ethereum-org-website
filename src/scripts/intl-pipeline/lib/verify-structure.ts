@@ -52,6 +52,27 @@ export type Finding = {
 
 // --- helpers ---------------------------------------------------------------
 
+/**
+ * Each `<Flowchart>`'s list as nesting level plus whether the item opens with a
+ * **bold** edge label: `remarkFlowchart` draws boxes, arrows and decisions from
+ * exactly that, and throws when the list is gone.
+ */
+function flowchartShapes(src: string): string[] {
+  return [...src.matchAll(/<Flowchart\b[^>]*>([\s\S]*?)<\/Flowchart>/g)].map(
+    (m) => {
+      const items = [
+        ...m[1].matchAll(/^([ \t]*)(?:[-*+]|\d+[.)])[ \t]+(\*\*|__)?/gm),
+      ]
+      const indents = [...new Set(items.map((i) => i[1].length))].sort(
+        (a, b) => a - b
+      )
+      return items
+        .map((i) => `${indents.indexOf(i[1].length)}${i[2] ? "b" : ""}`)
+        .join(" ")
+    }
+  )
+}
+
 /** Heading scan that ignores fenced code (a shell `# comment` is not a heading). */
 function headings(src: string) {
   const out: {
@@ -189,6 +210,18 @@ export function verifyMarkdown(
   // and any orphaned or duplicated closer.
   const tagDiff = diffMultiset(tags(enSrc), tags(trSrc))
   if (tagDiff.length) add("jsx-tags", tagDiff.join(", "))
+
+  // A differing <Flowchart> count is already a jsx-tags finding.
+  const efc = flowchartShapes(enSrc)
+  const tfc = flowchartShapes(trSrc)
+  if (efc.length === tfc.length)
+    efc.forEach((shape, i) => {
+      if (shape !== tfc[i])
+        add(
+          "flowchart-shape",
+          `flowchart ${i + 1}: list nesting or **bold** edge labels differ from English`
+        )
+    })
 
   // Internal links must be byte-identical.
   const hrefDiff = diffMultiset(hrefs(enSrc), hrefs(trSrc))
