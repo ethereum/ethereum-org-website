@@ -50,6 +50,13 @@
       "when": 1795410921929,
       "tag": "0006_lesson_token_cleanup",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1795492597939,
+      "tag": "0007_course_report",
+      "breakpoints": true
     }
   ]
 }

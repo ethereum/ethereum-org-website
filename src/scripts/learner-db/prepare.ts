@@ -148,8 +148,11 @@ const runMigrations = async (url: string) => {
     connection: LEARNER_DB_CONNECTION,
   })
   try {
-    // Overlapping builds wait their turn; the lock ends with the connection
+    // Overlapping builds wait their turn, but not forever behind a stuck
+    // one; the lock ends with the connection
+    await client`set lock_timeout = '10min'`
     await client`select pg_advisory_lock(hashtextextended('learner-db:migrate', 0))`
+    await client`reset lock_timeout`
     await migrate(drizzle(client), {
       migrationsFolder: "src/lib/db/migrations",
     })

@@ -13,9 +13,11 @@ import { smartAccountsCourse } from "./smart-accounts"
 import { smartContractsCourse } from "./smart-contracts"
 import { tokensCourse } from "./tokens"
 import { tradingAndLendingCourse } from "./trading-and-lending"
-import type { Course, Lesson, Track } from "./types"
+import type { Course, ExamStep, Lesson, LessonStep, Track } from "./types"
 import { upgradesCourse } from "./upgrades"
 import { walletsCourse } from "./wallets"
+
+import { EXAM_ID } from "@/lib/courses/constants"
 
 export type * from "./types"
 export * from "@/lib/courses/constants"
@@ -89,4 +91,22 @@ export const getLesson = (courseId: string, lessonId: string) => {
     index,
     next: course.lessons[index + 1] as Lesson | undefined,
   }
+}
+
+/** A lesson's step, or with `EXAM_ID` a Course Mastery question */
+export const getStep = (courseId: string, lessonId: string, stepId: string) => {
+  const steps =
+    lessonId === EXAM_ID
+      ? getCourse(courseId)?.exam
+      : getLesson(courseId, lessonId)?.lesson.steps
+  return steps?.find(({ id }) => id === stepId)
+}
+
+/** Ids a learner can pick on a step, for checking a report's answer; none for widgets */
+export const stepAnswerIds = (step: LessonStep | ExamStep) => {
+  if ("options" in step) return step.options
+  if ("items" in step) return step.items
+  if ("pairs" in step) return step.pairs
+  if ("blanks" in step) return [...step.blanks, ...step.extras]
+  return []
 }

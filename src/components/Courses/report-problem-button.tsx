@@ -2,7 +2,7 @@
 
 import { useId, useState } from "react"
 import { Flag } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import * as RadioGroup from "@radix-ui/react-radio-group"
 
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
@@ -22,27 +22,35 @@ import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils/cn"
 import { isTrackingEnabled, trackCustomEvent } from "@/lib/utils/matomo"
 
-import { NOTE_MAX, type ReportContext, reportEventName } from "./report"
+import { requestJson } from "../Account/api"
 
-const REASONS = ["inaccurate", "question", "answer", "other"] as const
-type Reason = (typeof REASONS)[number]
+import {
+  NOTE_MAX,
+  REPORT_REASONS,
+  type ReportContext,
+  reportEventName,
+  type ReportReason,
+} from "@/lib/courses/report"
 
 const ISSUE_URL = "https://github.com/ethereum/ethereum-org-website/issues/new"
 
 /**
- * Flag in the lesson footer. A report is an anonymous Matomo event; when
- * tracking is off it can't be sent, so the learner gets a GitHub issue link.
+ * Flag in the lesson footer. A report is saved, anonymously, to the learner
+ * database (and counted in Matomo when tracking is on); if saving fails, the
+ * learner gets a GitHub issue link with the details filled in.
  */
 const ReportProblemButton = ({
   className,
   ...props
 }: ReportContext & { className?: string }) => {
   const t = useTranslations("page-courses")
+  const locale = useLocale()
   const baseId = useId()
   const [open, setOpen] = useState(false)
-  const [reason, setReason] = useState<Reason | "">("")
+  const [reason, setReason] = useState<ReportReason | "">("")
   const [note, setNote] = useState("")
-  const [sent, setSent] = useState<"tracked" | "blocked" | null>(null)
+  const [sending, setSending] = useState(false)
+  const [sent, setSent] = useState<"saved" | "failed" | null>(null)
 
   const reset = () => {
     setReason("")
@@ -52,18 +60,26 @@ const ReportProblemButton = ({
 
   const eventName = reportEventName({ ...props, note })
 
-  const send = () => {
-    if (!reason) return
-    if (!isTrackingEnabled()) return setSent("blocked")
-    trackCustomEvent(
-      {
-        eventCategory: "Courses problem report",
-        eventAction: reason,
-        eventName,
-      },
-      { immediate: true }
-    )
-    setSent("tracked")
+  const send = async () => {
+    if (!reason || sending) return
+    setSending(true)
+    if (isTrackingEnabled())
+      trackCustomEvent(
+        {
+          eventCategory: "Courses problem report",
+          eventAction: reason,
+          eventName,
+        },
+        { immediate: true }
+      )
+    const { ok } = await requestJson("/api/courses/report", {
+      ...props,
+      locale,
+      reason,
+      note,
+    })
+    setSending(false)
+    setSent(ok ? "saved" : "failed")
   }
 
   const issueHref = `${ISSUE_URL}?${new URLSearchParams({
@@ -101,26 +117,26 @@ const ReportProblemButton = ({
           <>
             <DialogHeader>
               <DialogTitle>
-                {sent === "tracked"
+                {sent === "saved"
                   ? t("page-courses-report-thanks")
-                  : t("page-courses-report-blocked-title")}
+                  : t("page-courses-report-failed-title")}
               </DialogTitle>
             </DialogHeader>
             <DialogDescription>
-              {sent === "tracked"
+              {sent === "saved"
                 ? t("page-courses-report-thanks-line")
-                : t("page-courses-report-blocked-line")}
+                : t("page-courses-report-failed-line")}
             </DialogDescription>
             <DialogFooter className="flex flex-wrap justify-end gap-2">
               <DialogClose asChild>
                 <Button
-                  variant={sent === "tracked" ? "solid" : "outline"}
-                  isSecondary={sent !== "tracked"}
+                  variant={sent === "saved" ? "solid" : "outline"}
+                  isSecondary={sent !== "saved"}
                 >
                   {t("page-courses-report-close")}
                 </Button>
               </DialogClose>
-              {sent === "blocked" && (
+              {sent === "failed" && (
                 <ButtonLink href={issueHref}>
                   {t("page-courses-report-github")}
                 </ButtonLink>
@@ -143,9 +159,9 @@ const ReportProblemButton = ({
                 aria-labelledby={`${baseId}-reason`}
                 className="flex flex-col gap-3"
                 value={reason}
-                onValueChange={(next) => setReason(next as Reason)}
+                onValueChange={(next) => setReason(next as ReportReason)}
               >
-                {REASONS.map((id) => (
+                {REPORT_REASONS.map((id) => (
                   <div key={id} className="flex items-start gap-2">
                     <RadioGroup.Item
                       id={`${baseId}-${id}`}
@@ -191,7 +207,7 @@ const ReportProblemButton = ({
                   {t("page-courses-report-cancel")}
                 </Button>
               </DialogClose>
-              <Button disabled={!reason} onClick={send}>
+              <Button disabled={!reason || sending} onClick={send}>
                 {t("page-courses-report-send")}
               </Button>
             </DialogFooter>

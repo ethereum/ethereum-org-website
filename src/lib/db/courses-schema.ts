@@ -146,3 +146,28 @@ export const courseStreakDay = pgTable(
   },
   (t) => [primaryKey({ columns: [t.userId, t.day] })]
 )
+
+/**
+ * A learner's report of a problem with a step, read and triaged by hand
+ * (`status`: new, then whatever the team uses). Anonymous: no user or address.
+ */
+export const courseReport = pgTable(
+  "course_report",
+  {
+    id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+    courseId: text("course_id").notNull(),
+    lessonId: text("lesson_id").notNull(),
+    stepId: text("step_id").notNull(),
+    /** The page's language, for reports about a translation */
+    locale: text("locale").notNull(),
+    reason: text("reason").notNull(),
+    /** The learner's picks when they reported, comma-separated */
+    answer: text("answer"),
+    note: text("note"),
+    status: text("status").default("new").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .defaultNow()
+      .notNull(),
+  },
+  (t) => [index("course_report_created_idx").on(t.createdAt)]
+)

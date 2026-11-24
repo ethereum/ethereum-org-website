@@ -4,6 +4,7 @@ import {
   APIError,
   createAuthEndpoint,
   createAuthMiddleware,
+  getIP,
   getSessionFromCtx,
   sessionMiddleware,
 } from "better-auth/api"
@@ -111,6 +112,23 @@ const rateLimitStorage: NonNullable<
   },
 }
 
+/** Netlify's own client address header, which a client can't set */
+const IP_OPTIONS = {
+  advanced: { ipAddress: { ipAddressHeaders: ["x-nf-client-connection-ip"] } },
+}
+
+/** The same per-address limit, for course routes outside Better Auth */
+export const withinRateLimit = async (
+  request: Request,
+  path: string,
+  rule: { window: number; max: number }
+) => {
+  // As Better Auth's own limiter keys it: an IPv6 address by its /64
+  const ip = getIP(request, IP_OPTIONS) ?? "no-trusted-ip"
+  const { allowed } = await rateLimitStorage.consume(`${ip}|${path}`, rule)
+  return allowed
+}
+
 /** Requests a minute from one address: roomy enough for a classroom behind
  * one school address, tight enough to stop a script */
 const SIGN_IN_PER_MINUTE = 120
@@ -199,8 +217,7 @@ const createAuth = () =>
       },
     },
     advanced: {
-      // Netlify's own client address header, which a client can't set
-      ipAddress: { ipAddressHeaders: ["x-nf-client-connection-ip"] },
+      ipAddress: IP_OPTIONS.advanced.ipAddress,
     },
     // Rolling: a day of use pushes expiry 60 days out again, so active
     // learners stay signed in. Sensitive actions want a sign-in within

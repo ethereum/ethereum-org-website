@@ -56,6 +56,10 @@ Not built; the profile shows "Coming soon". The idea: a downloadable, signed rec
 
 There is no leaderboard. Any future ranking counts verified work only (`verified` rows), never browser imports.
 
+## Problem reports
+
+The lesson footer's Report flag saves to `course_report` (`src/lib/courses/server/reports.ts`), signed in or not, with no user or address: the step, the page's locale, the reason, the learner's picks and a one-line note of up to 300 characters. The answer keeps only the step's own ids, so free text fits only in the capped note. The endpoint takes JSON only, and refuses cross-site requests, so other sites can't file reports through visitors' browsers. Each address (an IPv6 one by its /64) can send 20 an hour, in the auth rate limiter's buckets; a bucket outlives its report by up to an hour, so someone holding both the database and `LEARNER_AUTH_SECRET` could tie a recent report to an address. A Matomo event goes out too when tracking is on, for counts, but ad blockers drop those silently, so the table is the record. If saving fails, the dialog offers a prefilled GitHub issue. Browse with a read-only connection (DBeaver's "Read-only connection") and triage on a writable one: `select * from course_report where status = 'new' order by created_at`, then set `status` to whatever the team settles on.
+
 ## Databases per deploy
 
 `pnpm learner-db:prepare` runs before `next build` on Netlify (`src/scripts/learner-db/prepare.ts`) and writes its decision to `.netlify/learner-db.json`, which `next.config.js` inlines:
@@ -77,6 +81,7 @@ Migrations run at build while the previous deploy is still live and reading the 
 
 ```bash
 pnpm db:up && pnpm db:migrate   # Postgres 18 on port 5433 (LEARNER_DB_PORT)
+pnpm db:migrate                 # after pulling new migrations: `pnpm dev` doesn't run them
 pnpm db:reset                   # wipe and re-migrate
 pnpm db:generate                # migration from a schema change
 ```

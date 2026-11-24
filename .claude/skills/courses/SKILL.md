@@ -9,26 +9,26 @@ Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-
 
 ## Map
 
-| What                                                                         | Where                                                                               |
-| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Course, lesson and step shapes, plus the translation-key convention for each | `src/data/courses/types.ts`                                                         |
-| Course content (structure only, no strings)                                  | `src/data/courses/<course>.ts`                                                      |
-| Tracks, suggested course order, teasers, lookups                             | `src/data/courses/index.ts` (`TRACKS`, `COURSES`)                                   |
-| Routes, reserved ids, `stepKey`; no course data, so safe in client code      | `src/lib/courses/constants.ts` (re-exported by `@/data/courses`)                    |
-| Every string (English)                                                       | `src/intl/en/page-courses.json`                                                     |
-| Lesson runtime: steps, grading, footer, XP                                   | `src/components/Courses/lesson-player.tsx`                                          |
-| Widget registry (`graded` flag; each widget its own chunk)                   | `src/components/Courses/steps/interactive-step.tsx` (`WIDGETS`)                     |
-| The `page-courses` strings each page sends; each widget's string names       | `src/lib/courses/messages.ts`, `src/lib/courses/widgets.ts`                         |
-| Widget contract                                                              | `src/components/Courses/widgets/types.ts`                                           |
-| Course colours and pressable skins                                           | `src/components/Courses/theme.ts`                                                   |
-| Progress, XP, streak and per-step history storage                            | `src/components/Courses/useCourseProgress.ts`, `step-history.ts`                    |
-| Course hero art, path scenery, isometric helpers                             | `src/components/Courses/art/`                                                       |
-| Learner problem reports (anonymous Matomo event, GitHub fallback)            | `src/components/Courses/report-problem-button.tsx`                                  |
-| XP levels (unit-named tiers) and the level-up card                           | `src/components/Courses/levels.ts`, `level-up.tsx`                                  |
-| Funnel events (user-initiated only; pageviews cover views and starts)        | `src/components/Courses/analytics.ts`                                               |
-| Course cards (hub and profile's Mastered), the sticky stats bar              | `src/components/Courses/course-card.tsx`, `sticky-bar.tsx`                          |
-| Profile page (reserved `profile` segment, so never a course id)              | `app/[locale]/courses/profile/`, `src/components/Courses/profile-view.tsx`          |
-| Installable app: per-language manifest, service worker, registration         | `app/manifests/courses/`, `public/courses-sw.js`, `app/[locale]/courses/layout.tsx` |
+| What                                                                           | Where                                                                                   |
+| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| Course, lesson and step shapes, plus the translation-key convention for each   | `src/data/courses/types.ts`                                                             |
+| Course content (structure only, no strings)                                    | `src/data/courses/<course>.ts`                                                          |
+| Tracks, suggested course order, teasers, lookups                               | `src/data/courses/index.ts` (`TRACKS`, `COURSES`)                                       |
+| Routes, reserved ids, `stepKey`; no course data, so safe in client code        | `src/lib/courses/constants.ts` (re-exported by `@/data/courses`)                        |
+| Every string (English)                                                         | `src/intl/en/page-courses.json`                                                         |
+| Lesson runtime: steps, grading, footer, XP                                     | `src/components/Courses/lesson-player.tsx`                                              |
+| Widget registry (`graded` flag; each widget its own chunk)                     | `src/components/Courses/steps/interactive-step.tsx` (`WIDGETS`)                         |
+| The `page-courses` strings each page sends; each widget's string names         | `src/lib/courses/messages.ts`, `src/lib/courses/widgets.ts`                             |
+| Widget contract                                                                | `src/components/Courses/widgets/types.ts`                                               |
+| Course colours and pressable skins                                             | `src/components/Courses/theme.ts`                                                       |
+| Progress, XP, streak and per-step history storage                              | `src/components/Courses/useCourseProgress.ts`, `step-history.ts`                        |
+| Course hero art, path scenery, isometric helpers                               | `src/components/Courses/art/`                                                           |
+| Learner problem reports (`course_report` table, Matomo count, GitHub fallback) | `src/components/Courses/report-problem-button.tsx`, `src/lib/courses/server/reports.ts` |
+| XP levels (unit-named tiers) and the level-up card                             | `src/components/Courses/levels.ts`, `level-up.tsx`                                      |
+| Funnel events (user-initiated only; pageviews cover views and starts)          | `src/components/Courses/analytics.ts`                                                   |
+| Course cards (hub and profile's Mastered), the sticky stats bar                | `src/components/Courses/course-card.tsx`, `sticky-bar.tsx`                              |
+| Profile page (reserved `profile` segment, so never a course id)                | `app/[locale]/courses/profile/`, `src/components/Courses/profile-view.tsx`              |
+| Installable app: per-language manifest, service worker, registration           | `app/manifests/courses/`, `public/courses-sw.js`, `app/[locale]/courses/layout.tsx`     |
 
 ## Levels and tracks
 

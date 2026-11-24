@@ -558,7 +558,7 @@ const LessonPlayer = ({
       courseId={courseId}
       lessonId={lesson.id}
       stepId={step.id}
-      answer={Array.isArray(value) ? value.filter(Boolean) : undefined}
+      answer={Array.isArray(value) ? value : undefined}
       className={className}
     />
   )
