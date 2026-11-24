@@ -13,7 +13,7 @@ const Lure = () => {
   const sparkle = (x: number, y: number, s: number) =>
     `M${x},${y - s} Q${x},${y} ${x + s},${y} Q${x},${y} ${x},${y + s} Q${x},${y} ${x - s},${y} Q${x},${y} ${x},${y - s}Z`
   return (
-    <>
+    <g transform="translate(0 4)">
       <Shadow cx={132} cy={130} rx={44} />
       <Shadow cx={62} cy={140} rx={20} />
       <Box iso={isoLure} x={-4} y={-4} z={0} w={8} d={8} h={z} />
@@ -62,7 +62,7 @@ const Lure = () => {
         <path d={sparkle(34, 108, 4)} fill={TOP} />
         <path d={sparkle(70, 116, 3.5)} fill={LEFT} />
       </g>
-    </>
+    </g>
   )
 }
 

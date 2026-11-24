@@ -143,6 +143,13 @@ export const chunkyTile = cn(
  */
 export const stepPrompt = "m-0 text-xl leading-relaxed font-normal"
 
+/**
+ * Tag on a hub card's banner ("Start here", "Coming soon"). The dark rim keeps
+ * it apart from art in the same hue; z-10 holds it above the art's hover scale.
+ */
+export const bannerTag =
+  "absolute end-3 bottom-3 z-10 rounded-full border-2 border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase"
+
 /** Pill for the header stat chips and the profile button beside them */
 export const statChip =
   // Start padding about the gap above and below a 24px icon, so a round

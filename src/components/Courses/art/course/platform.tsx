@@ -31,7 +31,7 @@ const Platform = () => {
   ]
   return (
     <>
-      <Shadow cx={100} cy={146} rx={72} />
+      <Shadow cx={100} cy={126} rx={72} />
       <Box iso={isoPlatform} x={-40} y={-40} z={0} w={80} d={80} h={top} />
       <g className="course-art-float">
         <EthGlyph cx={100} y={0} h={46} />

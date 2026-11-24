@@ -27,7 +27,8 @@ import { useCourseProgress } from "./useCourseProgress"
 
 /**
  * Compact streak and XP for page headers. The flame stays grey until today's
- * lesson is done; the big streak moment lives on the lesson-complete screen.
+ * lesson is done, the bolt until there's XP; the big streak moment lives on
+ * the lesson-complete screen.
  */
 export const ProgressChips = ({ className }: { className?: string }) => {
   const t = useTranslations("page-courses")
@@ -76,9 +77,16 @@ export const ProgressChips = ({ className }: { className?: string }) => {
       <li data-slot="xp" className={chip}>
         <Zap
           aria-hidden
-          className="size-6 fill-yellow-400 text-yellow-700 dark:text-yellow-400"
+          className={cn(
+            "size-6",
+            progress.xp
+              ? "fill-yellow-400 text-yellow-700 dark:text-yellow-400"
+              : "text-disabled"
+          )}
         />
-        <span>{format(progress.xp)}</span>
+        <span className={cn(!progress.xp && "text-body-medium")}>
+          {format(progress.xp)}
+        </span>
         <span className="sr-only">{t("page-courses-stats-xp")}</span>
       </li>
     </ul>

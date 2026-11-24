@@ -49,7 +49,7 @@ const Scale = () => {
   const crateCorner = isoRightPan.P(-w / 2, w / 2, h)
   const [beamY, panY] = [30, 90]
   return (
-    <>
+    <g transform="translate(0 -3)">
       <Shadow cx={100} cy={134} rx={58} />
       <Box iso={isoScale} x={-16} y={-16} z={0} w={32} d={32} h={8} />
       <Box iso={isoScale} x={-4} y={-4} z={8} w={8} d={8} h={86} />
@@ -112,7 +112,7 @@ const Scale = () => {
           />
         </g>
       </g>
-    </>
+    </g>
   )
 }
 

@@ -16,8 +16,8 @@ const Upgrade = () => {
     <Box iso={isoUpgrade} x={x + s} y={-3} z={8} w={gap} d={6} h={6} />
   )
   return (
-    <>
-      <Shadow cx={96} cy={122} rx={74} />
+    <g transform="translate(0 7)">
+      <Shadow cx={102} cy={114} rx={84} angle={30} />
       {/* the old-rules branch: one block, then nothing */}
       <g opacity={0.35}>
         {cube(-6, -53)}
@@ -33,7 +33,7 @@ const Upgrade = () => {
       {cube(36, -11)}
       {linkX(36, 20)}
       {cube(78, -11)}
-    </>
+    </g>
   )
 }
 

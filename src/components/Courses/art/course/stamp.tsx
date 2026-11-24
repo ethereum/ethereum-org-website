@@ -41,8 +41,8 @@ const Stamp = () => {
   const env = isoStamp.box(-w / 2, -d / 2, 0, w, d, h)
   const corner = isoStamp.P(-w / 2, d / 2, h)
   return (
-    <>
-      <Shadow cx={100} cy={128} rx={60} />
+    <g transform="translate(-6 15)">
+      <Shadow cx={110} cy={116} rx={60} />
       <polygon points={env.right} fill={RIGHT} />
       <polygon points={env.top} fill={LEFT} />
       <polygon points={env.left} fill={TOP} />
@@ -74,7 +74,7 @@ const Stamp = () => {
           <PostageStamp x={150} y={18} s={24} />
         </g>
       </g>
-    </>
+    </g>
   )
 }
 

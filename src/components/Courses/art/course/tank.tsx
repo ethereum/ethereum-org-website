@@ -6,8 +6,8 @@ const Tank = () => {
   const body = isoTank.cylinder(20, 20, 0, 36, 76)
   const level = isoTank.cylinder(20, 20, 0, 36, 44)
   return (
-    <>
-      <Shadow cx={body.base.cx} cy={body.base.cy + 4} rx={62} />
+    <g transform="translate(0 -8)">
+      <Shadow cx={body.base.cx} cy={body.base.cy + 18} rx={62} />
       <path d={body.silhouette} fill={TOP} opacity={0.45} />
       <path d={level.body} fill={LEFT} />
       <ellipse {...level.top} fill={TOP} />
@@ -24,7 +24,7 @@ const Tank = () => {
           fill={LEFT}
         />
       </g>
-    </>
+    </g>
   )
 }
 

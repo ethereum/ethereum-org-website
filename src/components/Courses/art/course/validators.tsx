@@ -23,7 +23,7 @@ const ValidatorTower = ({ x, y }: { x: number; y: number }) => {
 /** Three validators behind a block they've voted for, with its check mark */
 const Validators = () => (
   <>
-    <Shadow cx={98} cy={138} rx={72} />
+    <Shadow cx={98} cy={125} rx={72} />
     {[-58, -22, 14].map((x) => (
       <ValidatorTower key={x} x={x} y={-6} />
     ))}

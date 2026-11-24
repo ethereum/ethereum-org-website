@@ -25,7 +25,7 @@ const MailboxArt = () => {
     P(x0, front, zBottom)
   )
   return (
-    <>
+    <g transform="translate(0 6)">
       <Shadow cx={100} cy={128} rx={50} />
       <Box iso={isoMailbox} x={-4} y={-4} z={0} w={8} d={8} h={z} />
       <Box iso={isoMailbox} x={-w / 2} y={-d / 2} z={z} w={w} d={d} h={h} />
@@ -98,7 +98,7 @@ const MailboxArt = () => {
       <g className="course-art-float-late">
         <SmallKey x={146} y={44} />
       </g>
-    </>
+    </g>
   )
 }
 

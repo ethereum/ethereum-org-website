@@ -49,15 +49,27 @@ export const Box = ({
   )
 }
 
+/** Ground shadow; `angle` lays it along a long, diagonal footprint */
 export const Shadow = ({
   cx,
   cy,
   rx,
+  angle,
 }: {
   cx: number
   cy: number
   rx: number
-}) => <ellipse cx={cx} cy={cy} rx={rx} ry={rx * 0.32} fill={SHADOW} />
+  angle?: number
+}) => (
+  <ellipse
+    cx={cx}
+    cy={cy}
+    rx={rx}
+    ry={rx * 0.32}
+    transform={angle ? `rotate(${angle} ${cx} ${cy})` : undefined}
+    fill={SHADOW}
+  />
+)
 
 export type ArtTone = keyof typeof TONES
 

@@ -11,7 +11,7 @@ const Vending = () => {
   const snacks = [0, 1, 2].flatMap((row) => [0, 1].map((col) => ({ row, col })))
   return (
     <>
-      <Shadow cx={100} cy={140} rx={58} />
+      <Shadow cx={100} cy={132} rx={58} />
       <Box iso={isoVending} x={-w / 2} y={-d / 2} z={0} w={w} d={d} h={h} />
       <g transform={onLeftFace(corner)}>
         {/* glass front with three shelves */}

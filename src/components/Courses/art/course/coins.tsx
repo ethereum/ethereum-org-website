@@ -22,7 +22,7 @@ const Coin = ({ x, y, z }: { x: number; y: number; z: number }) => {
 }
 
 const Coins = () => (
-  <>
+  <g transform="translate(0 5)">
     <Shadow cx={100} cy={124} rx={64} />
     {[
       { x: -20, y: 20, n: 3 },
@@ -38,7 +38,7 @@ const Coins = () => (
     <g className="course-art-float">
       <Coin x={-10} y={-30} z={40} />
     </g>
-  </>
+  </g>
 )
 
 export default Coins

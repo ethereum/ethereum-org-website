@@ -24,7 +24,7 @@ const Frame = () => {
   const [ax, ay] = P(tile.x + tile.w, tile.y + tile.d, tz + tile.h - 4)
   return (
     <>
-      <Shadow cx={96} cy={136} rx={76} />
+      <Shadow cx={96} cy={127} rx={76} />
       <Box iso={isoFrame} {...plinth} z={0} />
       <polygon points={t.right} fill={RIGHT} />
       <polygon points={t.top} fill={LEFT} />

@@ -14,7 +14,7 @@ const RollupArt = () => {
   const seal = isoRollup.cylinder(0, 0, 12 + sheets.length * sheet, 12, 5)
   const incoming = isoRollup.box(12, -58, 50, 26, 20, 3)
   return (
-    <>
+    <g transform="translate(0 9)">
       <Shadow cx={100} cy={114} rx={84} />
       <BaseSlab iso={isoRollup} s={88} h={12} />
       {sheets.map((i) => {
@@ -53,7 +53,7 @@ const RollupArt = () => {
         <polygon points={incoming.right} fill={RIGHT} />
         <polygon points={incoming.top} fill={TOP} />
       </g>
-    </>
+    </g>
   )
 }
 

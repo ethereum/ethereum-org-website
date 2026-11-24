@@ -32,8 +32,8 @@ const Contract = () => {
   const behind = sheet(back, 4)
   const [fx, fy] = isoContract.P(page.x, page.y + page.d, page.h)
   return (
-    <>
-      <Shadow cx={104} cy={138} rx={68} />
+    <g transform="translate(-6 -6)">
+      <Shadow cx={104} cy={134} rx={68} />
       <g className="course-art-float">
         <polygon points={behind.left} fill={LEFT} />
         <polygon points={behind.right} fill={RIGHT} />
@@ -75,7 +75,7 @@ const Contract = () => {
         <Gear cx={140} cy={96} r={20} />
         <Gear cx={164} cy={64} r={12} />
       </g>
-    </>
+    </g>
   )
 }
 

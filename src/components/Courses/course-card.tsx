@@ -26,7 +26,7 @@ import {
   CourseCardNext,
 } from "./course-card-status"
 import CourseProgress from "./course-progress"
-import { chunkyButton, courseThemeStyle } from "./theme"
+import { bannerTag, chunkyButton, courseThemeStyle } from "./theme"
 
 /**
  * Up to four columns, one fewer whenever a card would drop below the ui/grid
@@ -46,7 +46,7 @@ const LevelPill = ({ level }: { level: CourseLevel }) => {
     <span
       className={cn(
         cardPill,
-        "absolute start-3 top-3 px-3 tracking-wide uppercase"
+        "absolute start-3 top-3 z-10 px-3 tracking-wide uppercase"
       )}
     >
       {t(`page-courses-level-${level}`)}
@@ -130,9 +130,7 @@ export const UpcomingCourseCard = ({
       <CardHeader>
         <CardBanner background="none" size="full" className={banner}>
           <LevelPill level={level} />
-          <span className="absolute end-3 bottom-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
-            {t("page-courses-coming-soon")}
-          </span>
+          <span className={bannerTag}>{t("page-courses-coming-soon")}</span>
           <CourseArt id={art} className="mx-auto max-w-40" />
         </CardBanner>
       </CardHeader>

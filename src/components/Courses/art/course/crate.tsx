@@ -50,7 +50,7 @@ const Crate = () => {
   // Planks across the crate's two visible sides
   const planks = [cz + ch / 3, cz + (2 * ch) / 3]
   return (
-    <>
+    <g transform="translate(0 9)">
       <Shadow cx={100} cy={114} rx={84} />
       <BaseSlab iso={isoCrate} s={88} h={12} />
       {/* inside of the crate, then the parcels, then its front walls */}
@@ -98,7 +98,7 @@ const Crate = () => {
       <g className="course-art-float-late">
         <Parcel iso={isoCrate} x={14} y={-66} z={34} s={15} h={13} />
       </g>
-    </>
+    </g>
   )
 }
 

@@ -95,7 +95,7 @@ const OpenNotebook = ({ x, y }: { x: number; y: number }) => {
 
 /** Identical copies of one notebook, floating at different heights */
 const Notebook = () => (
-  <>
+  <g transform="translate(0 -9)">
     <Shadow cx={100} cy={137} rx={68} />
     <g className="course-art-float-late">
       <OpenNotebook x={45} y={34} />
@@ -106,7 +106,7 @@ const Notebook = () => (
     <g className="course-art-float-late">
       <OpenNotebook x={93} y={80} />
     </g>
-  </>
+  </g>
 )
 
 export default Notebook

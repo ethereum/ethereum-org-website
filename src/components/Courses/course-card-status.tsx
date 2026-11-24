@@ -3,6 +3,7 @@
 import { Check } from "lucide-react"
 import { useTranslations } from "next-intl"
 
+import { bannerTag } from "./theme"
 import { type TrackCourse, useTrackStatus } from "./track-status"
 import { useCourseProgress } from "./useCourseProgress"
 
@@ -17,7 +18,7 @@ export const CourseCardDone = ({ courseId }: { courseId: string }) => {
   const { isExamPassed } = useCourseProgress()
   if (!isExamPassed(courseId)) return null
   return (
-    <span className="absolute end-3 top-3 grid size-9 place-items-center rounded-full bg-green-700 text-white">
+    <span className="absolute end-3 top-3 z-10 grid size-9 place-items-center rounded-full bg-green-700 text-white">
       <Check className="size-5" strokeWidth={3} aria-hidden />
       <span className="sr-only">{t("page-courses-path-finish")}</span>
     </span>
@@ -51,7 +52,7 @@ export const CourseCardNext = ({
   const { nextId, started } = useTrackStatus(track)
   if (nextId !== courseId) return null
   return (
-    <span className="absolute end-3 bottom-3 rounded-full border-b-4 border-(--course-strong) bg-(--course) px-3 py-1 text-sm font-bold tracking-wide text-white uppercase">
+    <span className={bannerTag}>
       {t(started ? "page-courses-up-next" : "page-courses-start-here")}
     </span>
   )
