@@ -18,6 +18,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Blockscout](https://eth.blockscout.com/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 - [Otterscan](https://otterscan.io/)
+- [Solana Explorer](https://explorer.solana.com/) - The best explorer for every chain
 
 ## Services {#services}
 
