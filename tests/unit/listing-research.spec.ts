@@ -446,4 +446,13 @@ test("productSites falls back to the request's own links", () => {
   expect(
     productSites(item, "URL: https://explorer.solana.com and https://x.com/foo")
   ).toEqual(["solana.com"])
+  const cited = {
+    criteria: JSON.stringify([{ url: "foo.xyz/docs", source: "author" }]),
+  }
+  expect(
+    productSites(cited, "https://etherscan.io/address/0x1 https://certik.com/x")
+  ).toEqual(["foo.xyz"])
+  expect(
+    productSites(item, "https://www.ethereum.org/developers/ https://foo.xyz")
+  ).toEqual(["foo.xyz"])
 })
