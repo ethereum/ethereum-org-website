@@ -1,11 +1,13 @@
 ---
 title: Single slot finality
-description: "Single slot finality could cut Ethereum's time to finality from about 15 minutes to a single slot. Learn how it works and the tradeoffs involved."
+description: "Single slot finality was the first proposal to cut Ethereum's time to finality from about 15 minutes to a single slot. Learn how it works, its tradeoffs, and where faster finality research stands now."
 lang: en
 template: roadmap
 ---
 
 It takes about 15 minutes for an [Ethereum](/) block to finalize. However, we can make Ethereum's consensus mechanism validate blocks more efficiently and decrease time-to-finality dramatically. Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This concept is known as **single slot finality (SSF)**.
+
+Research has since moved on from SSF. It evolved into three-slot finality (3SF) and now continues with Minimmit, a protocol in which a block can be finalized after a single round of voting. This page explains the SSF ideas that started this line of work; [Current progress](#current-progress) covers where it stands today.
 
 ## What is finality? {#what-is-finality}
 
@@ -36,7 +38,7 @@ With the current mechanism design, in order to reduce the time to finality, it i
 
 The current consensus mechanism combines attestations from multiple validators, known as committees, to reduce the number of messages each validator has to process to validate a block. Every validator has an opportunity to attest in each epoch (32 slots) but in each slot, only a subset of validators, known as a 'committee' attest. They do so by dividing up into subnets in which a few validators are selected to be 'aggregators'. Those aggregators each combine all the signatures they see from other validators in their subnet into a single aggregate signature. The aggregator that includes the greatest number of individual contributions passes their aggregate signature to the block proposer, who includes it in the block along with the aggregate signature from the other committees.
 
-This process provides sufficient capacity for every validator to vote in each epoch, because `32 slots * 64 committees * 256 validators per committee = 524,288 validators per epoch`. At the time of writing (February 2023) there are ~513,000 active validators.
+This process provides sufficient capacity for every validator to vote in each epoch, because `32 slots * 64 committees * 256 validators per committee = 524,288 validators per epoch`. In February 2023, when this was first written, there were ~513,000 active validators, and the number has grown since.
 
 In this scheme, it is only possible for every validator to vote on a block by distributing their attestations across the whole epoch. However, there are potentially ways to improve the mechanism so that _every validator has the chance to attest in every slot_.
 </ExpandableCard>
@@ -53,13 +55,18 @@ Today's consensus mechanism relies on a tight coupling between the finality gadg
 
 ## Outstanding issues {#outstanding-issues}
 
-The problem with scaling aggregation by growing the number of validators per subnet is that it leads to greater load on the peer-to-peer network. The problem with adding layers of aggregations is that it is quite complex to engineer and adds latency (i.e., it could take longer for the block proposer to hear from all the subnet aggregators). It is also not clear how to deal with the scenario that there are more active validators on the network than can feasibly be processed in each slot, even with BLS signature aggregation. One potential solution is that, because all validators attest in every slot and there are no committees under SSF, the 32 ETH cap on the effective balance could be removed entirely, meaning operators managing multiple validators could consolidate their stake and run fewer, reducing the number of messages that validating nodes have to process to account for the entire validator set. This relies on large stakers agreeing to consolidate their validators. It is also possible to impose a fixed cap on the number of validators or the amount of staked ETH at any time. However, this requires some mechanism for deciding which validators are allowed to participate and which are not, which is liable to create unwanted secondary effects.
+The problem with scaling aggregation by growing the number of validators per subnet is that it leads to greater load on the peer-to-peer network. The problem with adding layers of aggregations is that it is quite complex to engineer and adds latency (i.e., it could take longer for the block proposer to hear from all the subnet aggregators). It is also not clear how to deal with the scenario that there are more active validators on the network than can feasibly be processed in each slot, even with BLS signature aggregation. One potential solution is that, because all validators attest in every slot and there are no committees under SSF, the 32 ETH cap on the effective balance could be removed entirely, meaning operators managing multiple validators could consolidate their stake and run fewer, reducing the number of messages that validating nodes have to process to account for the entire validator set. This relies on large stakers agreeing to consolidate their validators. The [Pectra upgrade](/roadmap/pectra/maxeb/) took a first step in this direction in May 2025 by raising the maximum effective balance to 2048 ETH, so operators can consolidate several validators into one, which reduces the number of validators and the attestations nodes have to process. It is also possible to impose a fixed cap on the number of validators or the amount of staked ETH at any time. However, this requires some mechanism for deciding which validators are allowed to participate and which are not, which is liable to create unwanted secondary effects.
 
 ## Current progress {#current-progress}
 
-SSF is in the research phase. It is not expected to ship for several years, likely after other substantial upgrades such as a new state tree (currently proposed as a partitioned binary tree in [EIP-8297](https://eips.ethereum.org/EIPS/eip-8297)) and [Danksharding](/roadmap/danksharding/).
+SSF itself is no longer the plan. Research moved first to three-slot finality (3SF), which the [Lean Ethereum roadmap](https://leanroadmap.org/) lists under faster finality, and now continues with [Minimmit](https://arxiv.org/abs/2508.10862), a protocol in which a block can be finalized after a single round of voting. Finality in seconds is a long-range goal on the [strawmap](https://strawmap.org/), the draft roadmap that sketches Ethereum's forks through 2029.
+
+This is still research, and no finality upgrade has been assigned to a fork. It is likely to come after other substantial upgrades such as a new state tree (currently proposed as a partitioned binary tree in [EIP-8297](https://eips.ethereum.org/EIPS/eip-8297)) and [Danksharding](/roadmap/danksharding/).
 
 ## Further reading {#further-reading}
 
 - [Vitalik on SSF at EDCON 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
 - [Vitalik's notes: Paths to single slot finality](https://notes.ethereum.org/@vbuterin/single_slot_finality)
+- [Lean Ethereum roadmap](https://leanroadmap.org/)
+- [Minimmit: Fast Finality with Even Faster Blocks](https://arxiv.org/abs/2508.10862)
+- [strawmap.org](https://strawmap.org/) - _EF Architecture_

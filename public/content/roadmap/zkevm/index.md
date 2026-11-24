@@ -66,7 +66,7 @@ Proof verification operates in constant time regardless of block complexity. Thi
 
 The main challenge for zkEVM L1 verification is speed. Ethereum blocks are produced every 12 seconds, meaning proofs need to be generated within a similar timeframe to be useful for consensus.
 
-Current zkEVM implementations can take minutes to hours to prove a single block. Research focuses on closing this gap through:
+Proving has become much faster. At the time of writing (November 2026), [Ethproofs](https://ethproofs.org/) reports that most Mainnet blocks are proven in under 10 seconds, within a single slot. Research now focuses on making real-time proving reliable for every block and affordable to run, through:
 
 - **Parallelization**: Distributing proving work across multiple machines
 - **Specialized hardware**: Designing circuits and hardware optimized for ZK proving
@@ -75,25 +75,29 @@ Current zkEVM implementations can take minutes to hours to prove a single block.
 
 ## Current research and implementations {#current-research}
 
-The Ethereum Foundation funds zkEVM research through the [Privacy Stewards of Ethereum (PSE)](https://pse.dev/) team. Key research tracks include:
+The Ethereum Foundation's [zkEVM team](https://zkevm.ethereum.foundation/) leads this work. Key research tracks include:
 
 - **Real-time proving**: Generating full block proofs within 12-second slots
 - **Client integration**: Standardizing interfaces between execution clients and provers
 - **Economic incentives**: Designing sustainable prover markets and fee structures
 
+### Optional execution proofs {#optional-execution-proofs}
+
+The zkEVM team's first proposed protocol change is [EIP-8025](https://eips.ethereum.org/EIPS/eip-8025) (Optional Execution Proofs). Provers that choose to take part generate proofs of each block's execution and share them on the network, and validators that opt in can check those proofs instead of re-executing the block. The proofs are a supplementary check: EIP-8025 does not change consensus validity rules, and a validator that hasn't received enough valid proofs in time attests as it does today.
+
+EIP-8025 was proposed for the Hegotá upgrade, but the Hegotá planning EIP ([EIP-8081](https://eips.ethereum.org/EIPS/eip-8081)) lists it as declined for inclusion. It remains a draft.
+
 ### Implementation status {#implementations}
 
-Several zkVM implementations are being developed and tested for Ethereum block proving:
+The [Ethereum Foundation's zkVM tracker](https://zkevm.ethereum.foundation/track) lists the zkVMs that meet its readiness criteria, which include being open source and being a 64-bit RISC-V machine that passes its ISA compliance tests. At the time of writing (November 2026), it lists:
 
 | Implementation | Architecture |
 |----------------|--------------|
-| [OpenVM](https://github.com/openvm-org/openvm) | rv32im |
-| [RISC Zero](https://github.com/risc0/risc0) | rv32im |
-| [Airbender](https://github.com/matter-labs/zksync-airbender) | rv32im |
-| [Jolt](https://github.com/a16z/jolt) | rv32im |
-| [Zisk](https://github.com/0xPolygonHermez/zisk) | rv64ima |
+| [LambdaVM](https://github.com/yetanotherco/lambda_vm) | RV64IM_Zicclsm |
+| [OpenVM](https://github.com/openvm-org/openvm) | RV64IM_Zicclsm |
+| [ZisK](https://github.com/0xPolygonHermez/zisk) | RV64IMFDAC_Zicclsm |
 
-These use RISC-V based virtual machines to execute EVM bytecode, then generate ZK proofs of correct execution. Up-to-date test results and progress are tracked at the [Ethereum Foundation's zkVM tracker](https://zkevm.ethereum.foundation/zkvm-tracker).
+These use RISC-V based virtual machines to execute EVM bytecode, then generate ZK proofs of correct execution. Up-to-date test results are on the tracker, and proving performance for these and other zkVMs is tracked on [Ethproofs](https://ethproofs.org/).
 
 ## How zkEVM fits with other upgrades {#related-upgrades}
 
@@ -101,14 +105,14 @@ zkEVM L1 verification connects with several other Ethereum roadmap items:
 
 - **New state tree**: A partitioned binary tree ([EIP-8297](https://eips.ethereum.org/EIPS/eip-8297)), proposed in place of the earlier [Verkle tree](/roadmap/verkle-trees/) design, would enable smaller witnesses for stateless verification and is designed to be easier to prove
 - **[Statelessness](/roadmap/statelessness/)**: zkEVM is a key enabler—with ZK proofs of execution, nodes don't need full state to verify blocks
-- **[PBS](/roadmap/pbs/)**: Block builders could potentially integrate proof generation, or a separate prover market could emerge
-- **[Single Slot Finality](/roadmap/single-slot-finality/)**: Faster proof generation could enable single-slot finality with cryptographic guarantees
+- **[PBS](/roadmap/pbs/)**: Enshrined PBS ([ePBS](/roadmap/glamsterdam/#epbs)), scheduled for the Glamsterdam upgrade, restructures the slot so that provers get more time between a block becoming available and the attestation deadline. Block builders could also integrate proof generation, or a separate prover market could emerge
+- **[Faster finality](/roadmap/single-slot-finality/)**: Faster proof generation could support faster finality with cryptographic guarantees
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-zkEVM L1 verification is in active research and not yet integrated into production Ethereum clients.
+zkEVM L1 verification is in active research and not yet integrated into production Ethereum clients. Optional execution proofs (EIP-8025) have been proposed as a first step, but they are not scheduled for a network upgrade.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -117,6 +121,8 @@ zkEVM L1 verification is in active research and not yet integrated into producti
 
 - [zkEVM Foundation](https://zkevm.ethereum.foundation) - Official Ethereum Foundation zkEVM research hub
 - [Ethproofs](https://ethproofs.org/) - Track the race to prove Ethereum in real-time
+- [EIP-8025: Optional Execution Proofs](https://eips.ethereum.org/EIPS/eip-8025) - Technical specification
+- [EIP-8025: bringing optional execution proofs to Hegotá](https://zkevm.ethereum.foundation/blog/eip-8025-optional-execution-proofs-hegota) - EF zkEVM team
 - [zkevm.fyi](https://zkevm.fyi) - Technical book on zkEVM for L1
 - [PSE zkEVM Specs](https://github.com/privacy-scaling-explorations/zkevm-specs) - Technical specifications
 - [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html) - Vitalik's overview of verification improvements
