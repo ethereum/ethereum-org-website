@@ -7,7 +7,7 @@ alt: "Ethereum roadmap"
 template: roadmap
 summaryPoints:
   - Quantum computers will eventually threaten the cryptography Ethereum uses today
-  - The Ethereum Foundation has a dedicated post-quantum research team, and a structured "Lean Ethereum" roadmap targeting 2029 for full post-quantum protection
+  - The Ethereum Foundation has a dedicated post-quantum research team, and a structured "Lean Ethereum" roadmap targeting December 2029 for a quantum-resistant Ethereum L1
   - Your funds are safe today and wallet software will guide you through future migration
 ---
 
@@ -74,7 +74,7 @@ Both approaches are still being researched for efficiency and practicality at Et
 
 **Important nuance**: Accounts that have only received ether and never sent a transaction have not exposed their public key. Only the address (a hash of the public key) is visible, which provides some additional protection.
 
-**The approach**: Rather than a single protocol-wide migration, Ethereum plans to use [account abstraction](/roadmap/account-abstraction/) (specifically EIP-8141, being considered for Hegotá in second half of 2026) to give users **signature agility**. Individual accounts could switch to a post-quantum signature scheme without waiting for the entire protocol to change.
+**The approach**: Rather than a single protocol-wide migration, Ethereum plans to use [account abstraction](/roadmap/account-abstraction/) (specifically EIP-8141, scheduled for the Hegotá upgrade) to give users **signature agility**. Individual accounts could switch to a post-quantum signature scheme without waiting for the entire protocol to change.
 
 This is a pragmatic approach. Users and wallets that want post-quantum protection early can adopt it voluntarily, while the broader migration happens over time.
 
@@ -107,7 +107,6 @@ The Ethereum Foundation formed a dedicated Post-Quantum Security team in January
 - **Weekly interop devnets**: More than 10 client teams participate in regular post-quantum interoperability testing, including Lighthouse, Grandine, Zeam, Ream Labs, and PierTwo.
 - **Poseidon Prize**: A $1 million research prize targeting improvements in hash-based cryptographic primitives.
 - **Open-source implementations**: leanXMSS, leanVM, leanSpec (Python), leanSig (Rust), and leanMultisig are all available under the [leanEthereum GitHub organization](https://github.com/leanEthereum).
-- **2nd Annual PQ Research Retreat**: Planned for 9-Oct-2026 to 12-Oct-2026 in Cambridge, UK.
 - **NIST Alignment**: Ethereum's work builds upon the post-quantum cryptography standards finalized by NIST in August 2024 (such as ML-KEM, ML-DSA, and SLH-DSA).
 
 ### Migration milestones {#migration-milestones}
@@ -121,13 +120,13 @@ The team has outlined a series of protocol upgrades to incrementally introduce p
 | L* | PQ attestations and real-time consensus-layer proofs via leanVM. Validators begin using PQ signatures for consensus. |
 | M* | Full PQ signature aggregation and PQ-safe blob commitments. |
 
-**Target**: The structured fork milestones target the completion of core post-quantum infrastructure by approximately 2029. Full execution-layer and ecosystem migration extends beyond that.
+**Target**: The EF Protocol cluster is [aiming](https://blog.ethereum.org/2026/09/07/protocol-priorities) for Ethereum L1 to be quantum-resistant across execution, consensus and data by December 2029. It treats this deadline as non-negotiable at least until January 2027, when quantum progress will be reassessed with outside experts. As a contingency, a minimum viable post-quantum (MV-PQ) L1 milestone has been added at J\*. Full execution-layer and ecosystem migration extends beyond that.
 
 ## What do users need to do? {#what-users-need-to-do}
 
 **Right now: nothing.** Your funds are safe. No quantum computer today can threaten Ethereum's cryptography.
 
-**In the future**: Once post-quantum signature schemes are widely supported on Ethereum (expected following the Hegotá hard fork and implementation of EIP-8141), you will want to migrate your account to quantum-safe signatures. Wallet software will guide you through this transition.
+**In the future**: Once post-quantum signature schemes are widely supported on Ethereum (expected after EIP-8141 ships in the Hegotá hard fork), you will want to migrate your account to quantum-safe signatures. Wallet software will guide you through this transition.
 
 If your account has never sent a transaction (meaning your public key has not been exposed onchain), it has an additional layer of protection. But all accounts should eventually migrate.
 
@@ -174,6 +173,7 @@ No. Ethereum has one of the most structured post-quantum programs of any blockch
 ## Further reading {#further-reading}
 
 - [pq.ethereum.org](https://pq.ethereum.org) - _Ethereum Foundation_
+- [EF Protocol: Current and Emerging Priorities](https://blog.ethereum.org/2026/09/07/protocol-priorities) - _Ethereum Foundation_
 - [Post-Quantum Cryptography Project](https://pse.dev/projects/post-quantum-cryptography) - _Privacy Stewards of Ethereum (PSE)_
 - [NIST Post-Quantum Cryptography standards](https://csrc.nist.gov/projects/post-quantum-cryptography) - _NIST_
 - [Safeguarding cryptocurrency by disclosing quantum vulnerabilities responsibly](https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/) - _Google Quantum AI_

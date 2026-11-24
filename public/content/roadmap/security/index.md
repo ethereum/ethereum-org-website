@@ -23,7 +23,7 @@ Yes. Ethereum has run continuously since 2015 without downtime. The improvements
 
 Most Ethereum blocks today are assembled through a division of labor: specialized builders construct the most valuable block they can, and the [validator](/glossary/#validator) whose turn it is proposes the best offer. This keeps professional block building from concentrating [stake](/glossary/#staking) among the largest operators, but since 2022 it has relied on off-protocol software the network cannot verify.
 
-**Enshrined proposer-builder separation (ePBS, or EIP-7732)** moves this split into the protocol, removing the need to trust relays, the third-party middlemen that currently pass blocks between builders and validators. ePBS is a headliner of the upcoming [Glamsterdam](/roadmap/glamsterdam/) upgrade, targeted for 2026. No Mainnet date has been set; client teams are testing it on devnets (temporary test networks).
+**Enshrined proposer-builder separation (ePBS, or EIP-7732)** moves this split into the protocol, removing the need to trust relays, the third-party middlemen that currently pass blocks between builders and validators. ePBS is a headliner of the upcoming [Glamsterdam](/roadmap/glamsterdam/) upgrade, which has been live on the Sepolia testnet since October 6, 2026. Its activation on the Hoodi testnet was [postponed](https://blog.ethereum.org/2026/10/22/glamsterdam-hoodi-delay) to investigate how EIP-8037 interacts with Mainnet smart contracts, and Mainnet is not yet scheduled.
 
 <ButtonLink variant="outline" href="/roadmap/pbs/">More on proposer-builder separation</ButtonLink>
 
@@ -31,7 +31,7 @@ Most Ethereum blocks today are assembled through a division of labor: specialize
 
 A censorship-resistant network means nobody can stop a valid transaction from reaching the chain. **Fork-choice enforced inclusion lists (FOCIL, or EIP-7805)** give many validators a say in what a block must include: they publish lists of pending transactions that the block builder is required to include. No single actor can quietly leave your transaction out.
 
-FOCIL is the consensus-layer headliner of Hegotá, the upgrade that follows Glamsterdam and is targeted for 2027. It was deliberately scheduled after Glamsterdam so that ePBS and FOCIL never ship as one untested combination. Research into encrypted mempools, which would hide the contents of waiting transactions until they are safely included in a block, continues.
+FOCIL is the consensus-layer headliner of Hegotá, the upgrade that follows Glamsterdam. No date has been set for Hegotá. It was deliberately scheduled after Glamsterdam so that ePBS and FOCIL never ship as one untested combination. Research into encrypted mempools, which would hide the contents of waiting transactions until they are safely included in a block, continues.
 
 ## Faster finality {#faster-finality}
 
@@ -59,7 +59,7 @@ Cryptographic transitions take years to plan and execute safely, so preparation 
 
 The Ethereum Foundation formed a dedicated **Post-Quantum Security team** in January 2026, and its work is tracked publicly at [pq.ethereum.org](https://pq.ethereum.org). Active work includes hash-based validator signatures (leanXMSS) paired with a minimal zkVM (leanVM) that aggregates the larger quantum-safe signatures efficiently, and weekly interop devnets with more than 10 client teams.
 
-A key part of the transition strategy is **EIP-8141**, which introduces native [account abstraction](/roadmap/account-abstraction/). This allows individual accounts to choose their own signature verification, meaning users could switch to quantum-safe signatures without waiting for a single protocol-wide migration. EIP-8141 is being considered for the Hegotá upgrade. Core post-quantum infrastructure milestones target completion by approximately 2029. These are planning targets and may shift.
+A key part of the transition strategy is **EIP-8141**, which introduces native [account abstraction](/roadmap/account-abstraction/). This allows individual accounts to choose their own signature verification, meaning users could switch to quantum-safe signatures without waiting for a single protocol-wide migration. EIP-8141 is scheduled for inclusion in the Hegotá upgrade. The EF Protocol cluster is [aiming](https://blog.ethereum.org/2026/09/07/protocol-priorities) for Ethereum L1 to be quantum-resistant across execution, consensus and data by December 2029, a deadline it treats as non-negotiable at least until a reassessment in January 2027. These are planning targets and may shift.
 
 <ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/security" eventName="clicked can quantum computers steal my ETH today?">
 
@@ -83,17 +83,17 @@ Delivered so far:
 
 In progress:
 
-- **Glamsterdam (targeted for 2026)**: The headliners are ePBS (EIP-7732) and block-level access lists (EIP-7928), with gas repricing also being considered.
-- **Hegotá (targeted for 2027)**: FOCIL (EIP-7805) is the consensus-layer headliner. Being considered for inclusion: EIP-8141 (native account abstraction).
+- **Glamsterdam (live on Sepolia; Mainnet not yet scheduled)**: The headliners are ePBS (EIP-7732) and block-level access lists (EIP-7928). Gas repricing changes, including EIP-8037 and EIP-8038, are also scheduled. The Hoodi testnet upgrade was postponed to review EIP-8037.
+- **Hegotá (no date set)**: FOCIL (EIP-7805) is the consensus-layer headliner. EIP-8141 (native account abstraction) is scheduled for inclusion.
 - **Ongoing**: Efforts to simplify the [EVM](/developers/docs/evm/), harmonize client implementations, and phase out deprecated features continue across client teams. Work on [statelessness](/roadmap/statelessness/) (letting participants verify the chain without storing all of its data) is being redesigned around quantum-safe binary hash trees, which would replace the earlier [Verkle tree](/roadmap/verkle-trees/) design. The final approach is yet to be confirmed.
 
 ## Current progress {#current-progress}
 
-As of mid 2026:
+As of November 2026:
 
-- **Block building and censorship resistance**: ePBS and block-level access lists are running on Glamsterdam devnets. FOCIL is planned for Hegotá, targeted for 2027.
+- **Block building and censorship resistance**: ePBS and block-level access lists are live on the Sepolia testnet as part of Glamsterdam; Mainnet is not yet scheduled. FOCIL is scheduled for Hegotá.
 - **Finality**: Minimmit and the wider Lean Ethereum consensus work remain in active research with no fork assignment yet.
-- **Quantum resistance**: Weekly post-quantum interop devnets are running, and core infrastructure milestones target approximately 2029.
+- **Quantum resistance**: Weekly post-quantum interop devnets are running, and the EF Protocol cluster targets a quantum-resistant L1 by December 2029.
 - **Simplification**: Pectra and Fusaka shipped; Glamsterdam and Hegotá carry the next round of cleanups.
 
 No part of this work is finished, and all timelines are estimates that may shift.
