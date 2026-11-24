@@ -170,8 +170,6 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="eoa" />
 
-<GlossaryDefinition term="escrow" />
-
 <GlossaryDefinition term="erc" />
 
 <GlossaryDefinition term="erc-20" />
@@ -179,6 +177,8 @@ authors: ["Andreas Antonopoulos"]
 <GlossaryDefinition term="erc-721" />
 
 <GlossaryDefinition term="erc-1155" />
+
+<GlossaryDefinition term="escrow" />
 
 <GlossaryDefinition term="ethash" />
 
