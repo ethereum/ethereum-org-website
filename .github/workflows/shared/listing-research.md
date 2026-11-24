@@ -53,7 +53,7 @@ A request to list a third-party product, service or resource on ethereum.org. A 
 - The submit job enforces:
   - `pass`/`fail` quotes are re-fetched from `url` (20+ characters, `…` joins pieces of 12+) or become ❔;
   - a pass only the product's own site supports (`source: author`) shows as ☑️, not ✅;
-  - a `must` criterion that stays `fail` is a public blocker: it labels the request `awaiting changes` and, on a PR, requests changes. Use `fail` only when a quote shows the product contradicts the criterion;
+  - a `must` criterion that stays `fail` with a re-fetched quote (not `source: repo`) is a public blocker: it labels the request `awaiting changes` and, on a PR, requests changes. Use `fail` only when a quote shows the product contradicts the criterion;
   - `url` is written without the scheme.
 
 **Reusing an earlier check.** When `prior`, or a referenced issue's `research` from the last 30 days for the same site, exists, start from it: keep its criteria and facts (same quotes, URLs and sources) unless the new input changes them, and research only what is new.

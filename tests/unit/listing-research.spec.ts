@@ -397,3 +397,23 @@ test("isListingIssue skips quiz and glossary suggestions whatever the title", ()
     )
   ).toBe(false)
 })
+
+test("only a quoted, non-repo fail blocks, and unweighted criteria are preferred", async () => {
+  const r = rec({ Audited: "fail", Differentiated: "fail", Docs: "fail" })
+  r.criteria[1] = { ...r.criteria[1], source: "repo", url: "public/x.md" }
+  r.criteria[2] = { ...r.criteria[2], quote: "" }
+  expect(blockers(r)).toEqual(["Audited"])
+  const checked = await check(
+    { criteria: JSON.stringify([{ criterion: "X", status: "unknown" }]) },
+    async () => ({ status: 0, text: null, error: "offline" })
+  )
+  expect(checked.criteria[0].weight).toBe("nice")
+})
+
+test("follow-up marks an author-only pass as claimed", () => {
+  const prev = rec({ Used: "unknown" })
+  const next = rec({ Used: "pass" })
+  next.criteria[0].source = "author"
+  const out = followupComment(next, prev, { author: "alice", followups: 0 })
+  expect(out).toContain("- ☑️ Used")
+})

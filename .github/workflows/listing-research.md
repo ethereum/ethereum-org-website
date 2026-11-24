@@ -32,11 +32,14 @@ on:
         GH_TOKEN: ${{ github.token }}
         REPO: ${{ github.repository }}
         EVENT: ${{ github.event_name }}
-        ITEM: ${{ github.event.issue.number }}
+        ITEM: ${{ github.event.issue.number || inputs.item }}
         COMMENT: ${{ github.event.comment.id }}
         LIVE: ${{ vars.LISTING_RESEARCH_LIVE }}
       run: |
-        if [ "$EVENT" = workflow_dispatch ]; then exit 0; fi
+        if [ "$EVENT" = workflow_dispatch ]; then
+          [ "$(gh api "repos/$REPO/issues/$ITEM" --jq .state)" = open ] || { echo "::error::#$ITEM is closed; nothing to research"; exit 1; }
+          exit 0
+        fi
         [ "$LIVE" = true ] || { echo "Set the LISTING_RESEARCH_LIVE variable to true to run on new issues and replies"; exit 1; }
         if [ "$EVENT" = issues ]; then
           node .github/scripts/listing-research.mjs match-issue "$ITEM"

@@ -644,7 +644,7 @@ export async function check(item, fetchPage = fetchText, readFile = repoFile) {
     const x = {
       criterion: str(c.criterion, 200),
       status: STATUS.includes(c.status) ? c.status : "unknown",
-      weight: c.weight === "nice" ? "nice" : "must",
+      weight: c.weight === "must" ? "must" : "nice",
       ...base(c),
     }
     if (x.status !== "unknown") {
@@ -697,13 +697,14 @@ export async function check(item, fetchPage = fetchText, readFile = repoFile) {
   }
 }
 
+const ICON = { pass: "✅", fail: "❌", unknown: "❔" }
+const mark = (c) =>
+  c.status === "pass" && c.source === "author" ? "☑️" : ICON[c.status]
+
 export function section(r) {
-  const icon = { pass: "✅", fail: "❌", unknown: "❔" }
   const src = (c) =>
     `${c.url ? esc(c.source === "repo" ? c.url : new URL(c.url).hostname) + " " : ""}${c.source}`
   const quote = (c) => (c.quote ? `“${esc(c.quote)}”` : "")
-  const mark = (c) =>
-    c.status === "pass" && c.source === "author" ? "☑️" : icon[c.status]
   const name = (c) =>
     esc(c.criterion) + (c.weight === "nice" ? " _(preferred)_" : "")
   const rows = r.criteria
@@ -750,7 +751,13 @@ const blockingOf = (r) => r?.blocking ?? blockers(r)
 // A blocker stays until its criterion passes, so an unreachable source never reads as resolved.
 export function blockers(r, prev) {
   const now = (r?.criteria || [])
-    .filter((c) => c.weight === "must" && c.status === "fail")
+    .filter(
+      (c) =>
+        c.weight === "must" &&
+        c.status === "fail" &&
+        c.source !== "repo" &&
+        c.quote
+    )
     .map((c) => c.criterion)
   if (!prev) return now
   const status = new Map(
@@ -786,7 +793,6 @@ export function researchComment(r, { author, isPr }) {
 
 // A reply to the author: only what changed since the previous check, the full check folded away.
 export function followupComment(r, prev, { author, followups }) {
-  const icon = { pass: "✅", fail: "❌", unknown: "❔" }
   const before = new Map(
     (prev?.criteria || []).map((c) => [squash(c.criterion), c.status])
   )
@@ -805,7 +811,7 @@ export function followupComment(r, prev, { author, followups }) {
     changed
       .map(
         (c) =>
-          `- ${icon[c.status]} ${esc(c.criterion)}${c.quote ? ` — “${esc(c.quote)}”` : ""}${c.url ? ` (${esc(c.source === "repo" ? c.url : new URL(c.url).hostname)})` : ""}`
+          `- ${mark(c)} ${esc(c.criterion)}${c.quote ? ` — “${esc(c.quote)}”` : ""}${c.url ? ` (${esc(c.source === "repo" ? c.url : new URL(c.url).hostname)})` : ""}`
       )
       .join("\n"),
     open.length
@@ -879,8 +885,10 @@ function signal(n, isPr, record, prev) {
 
 async function submit(n, item) {
   const i = ghJson(`repos/${REPO}/issues/${n}`)
-  if (i.state !== "open")
-    return console.log(`#${n} closed before the check finished`)
+  if (i.state !== "open") {
+    console.error(`::error::#${n} is closed; nothing was posted`)
+    process.exit(1)
+  }
   const isPr = !!i.pull_request
   const cs = itemComments(n)
   const prior = latest(cs)
