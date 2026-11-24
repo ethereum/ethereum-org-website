@@ -43,19 +43,32 @@ jobs:
       - name: Update chains data
         run: pnpm exec tsx ./src/scripts/update-chains.ts
 
-      - name: Commit and push
+      - name: Check for changes
+        id: diff
         run: |
-          git add -A
+          if git diff --quiet -- src/data/chains.ts; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Chains data is current — nothing to do."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git add src/data/chains.ts
           git commit -m "Update chains data"
           git push origin "automated-update-${{ env.TIMESTAMP }}"
 
       - name: Create PR body
+        if: steps.diff.outputs.changed == 'true'
         run: |
           echo "Automated update of chains data from https://chainid.network/chains.json" > pr_body.txt
           echo "" >> pr_body.txt
           echo "This workflow runs every Friday at 16:20 (UTC)." >> pr_body.txt
 
       - name: Create Pull Request
+        if: steps.diff.outputs.changed == 'true'
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
           gh pr create --base dev --head "automated-update-${{ env.TIMESTAMP }}" --title "Update chains data - ${{ env.READABLE_DATE }}" --body-file pr_body.txt --label "update 🔄"

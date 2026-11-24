@@ -1,22 +1,24 @@
 ---
 title: Verkle trees
-description: A high level description of Verkle trees and how they will be used to upgrade Ethereum
+description: A high level description of Verkle trees and why Ethereum's state tree plans moved to a binary tree
 lang: en
 template: roadmap
 summaryPoints:
   - Discover what Verkle trees are
-  - Read why Verkle Trees are a useful upgrade for Ethereum
+  - Read why Verkle trees were set aside in favor of a binary tree
 ---
 
 Verkle trees (a portmanteau of "Vector commitment" and "Merkle Trees") are a data structure that can be used to upgrade [Ethereum](/) nodes so that they can stop storing large amounts of state data without losing the ability to validate blocks.
 
+Verkle trees were proposed as Ethereum's next state tree in [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), but that proposal is now stagnant and has been set aside in favor of a unified binary tree ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)). The binary tree pursues the same goal of small witnesses for stateless clients. This page explains how Verkle trees work and why research moved to a binary tree.
+
 ## Statelessness {#statelessness}
 
-Verkle trees are a critical step on the path to stateless Ethereum clients. Stateless clients are ones that do not have to store the entire state database in order to validate incoming blocks. Instead of using their own local copy of Ethereum's state to verify blocks, stateless clients use a "witness" to the state data that arrives with the block. A witness is a collection of individual pieces of the state data that are required to execute a particular set of transactions, and a cryptographic proof that the witness is really part of the full data. The witness is used _instead_ of the state database. For this to work, the witnesses need to be very small, so that they can be safely broadcast across the network in time for validators to process them within a 12 second slot. The current state data structure is not suitable because witnesses are too large. Verkle trees solve this problem by enabling small witnesses, removing one of the main barriers to stateless clients.
+Verkle trees were designed as a step on the path to stateless Ethereum clients. Stateless clients are ones that do not have to store the entire state database in order to validate incoming blocks. Instead of using their own local copy of Ethereum's state to verify blocks, stateless clients use a "witness" to the state data that arrives with the block. A witness is a collection of individual pieces of the state data that are required to execute a particular set of transactions, and a cryptographic proof that the witness is really part of the full data. The witness is used _instead_ of the state database. For this to work, the witnesses need to be very small, so that they can be safely broadcast across the network in time for validators to process them within a 12 second slot. The current state data structure is not suitable because witnesses are too large. Verkle trees solve this problem by enabling small witnesses, removing one of the main barriers to stateless clients.
 
 <ExpandableCard title="Why do we want stateless clients?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
-Ethereum clients currently use a data structure known as a Patricia Merkle Trie to store its state data. Information about individual accounts are stored as leaves on the trie and pairs of leaves are hashed repeatedly until only a single hash remains. This final hash is known as the "root". To verify blocks, Ethereum clients execute all the transactions in a block and update their local state trie. The block is considered valid if the root of the local tree is identical to the one provided by the block proposer, because any differences in the computation done by the block proposer and the validating node would cause the root hash to be completely different. The problem with this is that verifying the blockchain requires each client to store the whole state trie for the head block and several historical blocks (the default in Geth is to keep state data for 128 blocks behind the head). This requires clients to have access to a large amount of disk space, which is a barrier to running full nodes on cheap, low power hardware. A solution to this is to update the state trie to a more efficient structure (Verkle tree) that can be summarized using a small "witness" to the data that can be shared instead of the full state data. Reformatting the state data into a Verkle tree is a stepping stone for moving to stateless clients.
+Ethereum clients currently use a data structure known as a Patricia Merkle Trie to store its state data. Information about individual accounts is stored in leaves on the trie, and each branch node, which can have up to 16 children, is hashed together with its children's hashes, level by level, until only a single hash remains. This final hash is known as the "root". To verify blocks, Ethereum clients execute all the transactions in a block and update their local state trie. The block is considered valid if the root of the local tree is identical to the one provided by the block proposer, because any differences in the computation done by the block proposer and the validating node would cause the root hash to be completely different. The problem with this is that verifying the blockchain requires each client to store the whole state trie for the head block and several historical blocks (the default in Geth is to keep state data for 128 blocks behind the head). This requires clients to have access to a large amount of disk space, which is a barrier to running full nodes on cheap, low power hardware. A solution to this is to update the state trie to a more efficient structure (such as a Verkle tree or a binary tree) that can be summarized using a small "witness" to the data that can be shared instead of the full state data. Reformatting the state data into a new tree structure is a stepping stone for moving to stateless clients.
 
 </ExpandableCard>
 
@@ -40,15 +42,15 @@ The witness size varies depending on the number of leaves it includes. Assuming 
 
 Verkle trees are `(key,value)` pairs where the keys are 32-byte elements composed of a 31-byte _stem_ and a single byte _suffix_. These keys are organized into _extension_ nodes and _inner_ nodes. Extension nodes represent a single stem for 256 children with different suffixes. Inner nodes also have 256 children, but they can be other extension nodes. The main difference between the Verkle tree and the Merkle tree structure is that the Verkle tree is much flatter, meaning there are fewer intermediate nodes linking a leaf to the root, and therefore less data required to generate a proof.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Read more about the structure of Verkle trees](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
 ## Current progress {#current-progress}
 
-Verkle tree testnets are already up and running, but there are still substantial outstanding updates to clients that are required to support Verkle trees. You can help accelerate progress by deploying contracts to the testnets or running testnet clients.
+[EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), the proposal to move Ethereum's state into a unified Verkle tree, is now stagnant. Research has moved to [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864), which proposes a unified binary tree instead. EIP-7864 is a draft, and no network upgrade has been scheduled for it.
 
-[Watch Guillaume Ballet explain the Condrieu Verkle testnet](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (note that the Condrieu testnet was proof-of-work and has now been superseded by the Verkle Gen Devnet 6 testnet).
+EIP-7864 gives two main reasons for the change. Verkle trees rely on elliptic-curve cryptography that is not secure against quantum computers, so they would eventually need to be replaced, while a binary tree relies only on hash functions. Progress in proving systems also reduces the need for the small, fast-to-generate proofs that were the main advantage of Verkle trees. Because each node in a binary tree has only two children, its proofs are also much smaller than proofs from today's hexary trie.
 
 ## Further reading {#further-reading}
 
@@ -63,3 +65,5 @@ Verkle tree testnets are already up and running, but there are still substantial
 - [Vitalik Buterin on Verkle trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist on Verkle trees](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Verkle tree EIP documentation](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [EIP-6800: Ethereum state using a unified verkle tree](https://eips.ethereum.org/EIPS/eip-6800)
+- [EIP-7864: Ethereum state using a unified binary tree](https://eips.ethereum.org/EIPS/eip-7864)

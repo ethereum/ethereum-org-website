@@ -4,13 +4,41 @@ description: Lane-aware, findings-only first-pass review of pull requests, inclu
 on:
   pull_request_target:
     types: [opened, ready_for_review]
+    paths-ignore:
+      - src/data/consensus-bounty-hunters.json
+      - src/data/execution-bounty-hunters.json
   roles: all
+  permissions:
+    contents: read
+    pull-requests: read
+  steps:
+    - uses: actions/checkout@v6
+      with:
+        sparse-checkout: |
+          .github/scripts/listing-research.mjs
+          .github/CODEOWNERS
+        sparse-checkout-cone-mode: false
+        persist-credentials: false
+    - name: Leave listing requests to PR Reviewer (listing)
+      id: route
+      continue-on-error: true
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REPO: ${{ github.repository }}
+        PR: ${{ github.event.pull_request.number }}
+      run: |
+        node .github/scripts/listing-research.mjs match "$PR" || {
+          rc=$?
+          [ "$rc" -eq 1 ] && exit 1
+          echo "::warning::Listing gate failed (exit $rc); PR Reviewer (listing) reviews this PR"
+        }
   skip-bots:
     - allcontributors[bot]
     - github-actions[bot]
     - dependabot[bot]
 if: >-
   !github.event.pull_request.draft &&
+  needs.pre_activation.outputs.route_result != 'success' &&
   (github.event.pull_request.head.repo.full_name != github.repository || (
     github.event.pull_request.head.ref != 'staging' &&
     github.event.pull_request.head.ref != 'dev' &&
@@ -37,7 +65,7 @@ timeout-minutes: 20
 tools:
   github:
     toolsets: [default, actions]
-  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "ls", "cat", "grep", "head", "wc"]
+  bash: ["git diff:*", "git show:*", "git log:*", "git merge-base:*", "git rev-parse:*", "git ls-files:*", "git branch -a", "git branch --list:*", "git branch --contains:*", "ls:*", "cat:*", "grep:*", "head:*", "tail:*", "wc:*"]
 safe-outputs:
   github-app:
     client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}

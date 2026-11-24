@@ -6,6 +6,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
@@ -55,7 +57,7 @@ export default async function ValuesPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-values-hero-header"),
         description: t("page-values-meta-description"),
-        image: "https://ethereum.org/images/heroes/layer-2-hub-hero.png",
+        image: `${SITE_URL}/images/heroes/layer-2-hub-hero.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,

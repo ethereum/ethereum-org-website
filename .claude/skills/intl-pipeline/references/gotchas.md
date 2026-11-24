@@ -7,7 +7,7 @@ Patterns that aren't in the SKILL.md's inline gotchas section but come up when y
 Gemini's output token limit is ~65K. Per-section calls keep this manageable. Bulk calls (rare in current pipeline; JSON batching exists) can hit it.
 
 - Markdown is translated section-by-section in Phase 4 — output budget is per-section, not per-file
-- JSON files use chunked translation via `src/scripts/intl-pipeline/lib/llm/json-batcher.ts` — chunks are size-limited (64KB by default), preferring more smaller calls over fewer larger ones
+- JSON files use chunked translation via `src/scripts/intl-pipeline/lib/llm/json-batcher.ts` — chunks are size-limited (`MAX_CHUNK_BYTES`, 32KB, in `constants.ts`), preferring more smaller calls over fewer larger ones
 - If a section's output is truncated, the manifest does NOT stamp (Phase 6 only stamps on success). Next run retries.
 
 ## `intl-content-tree` is a separate npm package
@@ -31,7 +31,7 @@ Known past failures: Gemini leaving raw `"` inside `title="..."` attributes, bre
 - `public/content/translations/{lang}/path/to/file.md` mirrors `public/content/path/to/file.md`
 - `src/intl/{lang}/page-foo.json` mirrors `src/intl/en/page-foo.json`
 
-Don't deviate. Renaming a content file means renaming six files per locale (file + 2 manifests, times English source). The pipeline doesn't track renames cleanly across languages; if you need to rename, consider running `stamp_only` after.
+Don't deviate. Renaming a content file means renaming six files per locale (file + 2 manifests, times English source). The pipeline doesn't track renames across languages: move each locale file and its `.manifests/` directory together, or the pair at the new path is fully re-translated.
 
 ## 24 vs 25 language confusion
 

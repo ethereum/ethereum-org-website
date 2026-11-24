@@ -137,3 +137,14 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Glossary returns `(weth)` lowercase (#95); left as is in it.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- ABI/EVM spelled out (#80). Uses `causano un revert`, avoiding the de/fr undo/cancel problem

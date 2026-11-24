@@ -1,11 +1,7 @@
 import { type ReactNode } from "react"
 import { pick } from "lodash"
 import { TriangleAlert } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -77,13 +73,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("run-a-node", locale as Lang)
 
   const t = await getTranslations("page-run-a-node")
@@ -158,7 +152,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <RunANodePageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
@@ -670,8 +664,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-run-a-node")
 

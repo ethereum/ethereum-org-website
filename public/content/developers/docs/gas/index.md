@@ -31,7 +31,7 @@ The word 'gwei' is a contraction of 'giga-wei', meaning 'billion wei'. One gwei 
 
 You can set the amount of gas you are willing to pay when you submit a transaction. By offering a certain amount of gas, you are bidding for your transaction to be included in the next block. If you offer too little, validators are less likely to choose your transaction for inclusion, meaning your transaction may execute late or not at all. If you offer too much, you might waste some ETH. So, how can you tell how much to pay?
 
-The total gas you pay is divided into two components: the `base fee` and the `priority fee` (tip).
+The price you pay per unit of gas is divided into two components: the `base fee` and the `priority fee` (tip).
 
 The `base fee` is set by the protocol—you have to pay at least this amount for your transaction to be considered valid. The `priority fee` is a tip that you add to the base fee to make your transaction attractive to validators so that they choose it for inclusion in the next block.
 
@@ -53,30 +53,32 @@ When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account
 
 Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it, making transaction fees more predictable for users. When the block is created this **base fee is "burned"**, removing it from circulation.
 
-The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size (half of the gas limit). The base fee will increase or decrease by a maximum of 12.5% per block if the target block size is above or below the target, respectively. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
+The base fee is calculated by a formula that compares the size of the previous block (the amount of gas used for all the transactions) with the target size (half of the gas limit). The base fee will increase or decrease by a maximum of 12.5% per block if the block size is above or below the target, respectively. This exponential growth makes it economically non-viable for block size to remain high indefinitely.
 
 | Block Number | Included Gas | Fee Increase | Current Base Fee |
 | ------------ | -----------: | -----------: | ---------------: |
-| 1            |          18M |           0% |         100 gwei |
-| 2            |          36M |           0% |         100 gwei |
-| 3            |          36M |        12.5% |       112.5 gwei |
-| 4            |          36M |        12.5% |       126.6 gwei |
-| 5            |          36M |        12.5% |       142.4 gwei |
-| 6            |          36M |        12.5% |       160.2 gwei |
-| 7            |          36M |        12.5% |       180.2 gwei |
-| 8            |          36M |        12.5% |       202.7 gwei |
+| 1            |          30M |           0% |         0.1 gwei |
+| 2            |          60M |           0% |         0.1 gwei |
+| 3            |          60M |        12.5% |      0.1125 gwei |
+| 4            |          60M |        12.5% |      0.1266 gwei |
+| 5            |          60M |        12.5% |      0.1424 gwei |
+| 6            |          60M |        12.5% |      0.1602 gwei |
+| 7            |          60M |        12.5% |      0.1802 gwei |
+| 8            |          60M |        12.5% |      0.2027 gwei |
 
-In the table above, an example is demonstrated using 36 million as the gas limit. Following this example, to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.7 gwei * 112.5% = 228.1 gwei`.
+In the table above, an example is demonstrated using 60 million as the gas limit. Following this example, to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `0.2027 gwei * 112.5% = 0.2281 gwei`.
+
+<BaseFeeDiagram />
 
 It's also important to note it is unlikely we will see extended spikes of full blocks because of the speed at which the base fee increases preceding a full block.
 
 | Block Number | Included Gas | Fee Increase | Current Base Fee |
 | ------------ | -----------: | -----------: | ---------------: |
-| 30           |          36M |        12.5% |      2705.6 gwei |
+| 30           |          60M |        12.5% |      2.7056 gwei |
 | ...          |          ... |        12.5% |              ... |
-| 50           |          36M |        12.5% |     28531.3 gwei |
+| 50           |          60M |        12.5% |     28.5313 gwei |
 | ...          |          ... |        12.5% |              ... |
-| 100          |          36M |        12.5% |  10302608.6 gwei |
+| 100          |          60M |        12.5% |  10302.6083 gwei |
 
 ### Priority fee (tips) {#priority-fee}
 
@@ -84,7 +86,7 @@ The priority fee (tip) incentivizes validators to maximize the number of transac
 
 ### Max fee {#maxfee}
 
-To execute a transaction on the network, users can specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. For a transaction to be executed, the max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
+To execute a transaction on the network, users can specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. For a transaction to be executed, the max fee must be at least the base fee, and the tip paid is capped so that the base fee plus the tip never exceeds the max fee. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
 
 ### Block size {#block-size}
 
@@ -131,12 +133,7 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [Etherscan](https://etherscan.io/gastracker) _Transaction gas price estimator_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Open source transaction gas price estimator_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitor and track the Ethereum, and L2 gas prices to reduce transaction fees and save money_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
-
-## Related tools {#related-tools}
-
-- [Gas Network](https://gas.network) Onchain Gas Oracles. Support for 35+ chains. 
 
 ## Further reading {#further-reading}
 

@@ -92,7 +92,7 @@
   {
     "username": "DELENE-TCHIO-ROMUALD",
     "name": "Delene Tchio Romuald",
-    "score": 12250
+    "score": 12500
   },
   {
     "username": "lukaszmatczak",
@@ -210,6 +210,11 @@
     "score": 3000
   },
   {
+    "username": "Giulio2002",
+    "name": "Giulio2002",
+    "score": 3000
+  },
+  {
     "username": "SergioDemianLerner",
     "name": "Sergio Demian Lerner",
     "score": 2500
@@ -272,6 +277,11 @@
   {
     "username": "colinlyguo",
     "name": "colinlyguo (AlphaSec)",
+    "score": 2000
+  },
+  {
+    "username": "lgandx",
+    "name": "Laurent Gaffie",
     "score": 2000
   },
   {
@@ -385,11 +395,6 @@
     "score": 1000
   },
   {
-    "username": "lgandx",
-    "name": "Laurent Gaffie",
-    "score": 1000
-  },
-  {
     "username": "aydarkhusaenov",
     "name": "Legat",
     "score": 1000
@@ -433,7 +438,22 @@
     "username": "the-red-ace",
     "name": "redbaron",
     "score": 1000
-  },   
+  },
+  {
+    "username": "joohhnnn",
+    "name": "Joohhnnn",
+    "score": 1000
+  },
+  {
+    "username": "mardgez",
+    "name": "mardgez",
+    "score": 1000
+  },
+  {
+    "username": "alepacheco",
+    "name": "alepacheco",
+    "score": 1000
+  },
   {
     "username": "n0thingness",
     "name": "Daniel Briskin",
@@ -490,6 +510,11 @@
     "score": 500
   },
   {
+    "username": "CoMMaNDOX07",
+    "name": "CoMMaNDO",
+    "score": 500
+  },
+  {
     "username": "rholterhus",
     "name": "Riley Holterhus",
     "score": 250
@@ -497,6 +522,16 @@
   {
     "username": "howydev",
     "name": "Howy",
+    "score": 250
+  },
+  {
+    "username": "VanZ27",
+    "name": "VanSecQA",
+    "score": 250
+  },
+  {
+    "username": "kaslovdmitri",
+    "name": "Dmitri Kaslov",
     "score": 250
   },
   {

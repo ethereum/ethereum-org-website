@@ -1,6 +1,6 @@
 // ⚠️ IMPORTANT: When modifying exchange data below, update this date to the current timestamp.
 // This replaced a dynamic `git log` call — there is no automated mechanism to keep it in sync.
-export const exchangesByCountryLastUpdated = "2026-11-12T00:00:00.000Z"
+export const exchangesByCountryLastUpdated = "2026-11-24T00:00:00.000Z"
 
 const exchangesByCountry = {
   // Afghanistan
@@ -1660,6 +1660,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "matrixport",
+    "bitdelta",
   ],
   // Indonesia
   ID: [

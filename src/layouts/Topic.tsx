@@ -15,7 +15,7 @@ import { getEditPath } from "@/lib/utils/editPath"
 import { buildTopicDropdown } from "@/lib/utils/topicDropdown"
 
 import type { TopicConfig } from "@/data/topics"
-import { upgrades } from "@/data/upgrades"
+import { isForkcastUpgrade } from "@/data/upgrades"
 
 import { ContentLayout } from "./ContentLayout"
 
@@ -56,7 +56,8 @@ export const TopicLayout = async ({
   // `slug` is locale-independent ("roadmap/glamsterdam"), so its last segment
   // is a stable key into the upgrade data on every locale.
   const upgradeKey = slug.split("/").filter(Boolean).pop()
-  const upgradeSlug = upgradeKey && upgrades[upgradeKey] ? upgradeKey : null
+  const upgradeSlug =
+    upgradeKey && isForkcastUpgrade(upgradeKey) ? upgradeKey : null
 
   const t = await getTranslations(config.translationNs)
 
