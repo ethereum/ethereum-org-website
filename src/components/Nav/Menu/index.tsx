@@ -42,10 +42,7 @@ const contentMotion = cn(
 const triggerClasses = (isCurrent: boolean) =>
   cn(
     "group relative gap-1 px-3 py-2 whitespace-nowrap lg:px-4 group-data-[density=compact]/navbar:px-2!",
-    isCurrent ? "text-primary" : "text-body",
-    // "You are here" marker for the section holding the current page
-    isCurrent &&
-      "before:absolute before:inset-x-0 before:bottom-0.5 before:mx-auto before:size-1 before:rounded-full before:bg-primary before:content-['']"
+    isCurrent ? "text-primary" : "text-body"
   )
 
 type NavMenuProps = BaseHTMLAttributes<HTMLDivElement>
