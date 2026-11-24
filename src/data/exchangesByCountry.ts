@@ -890,7 +890,6 @@ const exchangesByCountry = {
   // Cuba
   CU: [
     "moonpay",
-    "peer",
     "kraken",
     "itezcom",
     "bitflyer",
@@ -2663,7 +2662,6 @@ const exchangesByCountry = {
   // North Korea
   KP: [
     "moonpay",
-    "peer",
     "kraken",
     "itezcom",
     "mtpelerin",
@@ -3549,7 +3547,6 @@ const exchangesByCountry = {
   // Syria
   SY: [
     "moonpay",
-    "peer",
     "coinbase",
     "kraken",
     "gemini",

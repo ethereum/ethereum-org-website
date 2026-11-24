@@ -59,7 +59,7 @@
   "page-get-eth-get-wallet-btn": "Get a wallet",
   "page-get-eth-hero-image-alt": "Get ETH hero image",
   "page-get-eth-keep-it-safe": "Keeping your ETH safe",
-  "page-get-eth-meta-description": "Ways to get ETH: buy on an exchange, buy peer-to-peer without KYC, swap on a DEX, earn from DAOs, receive from peers, or earn staking rewards. Find the best option based on where you live.",
+  "page-get-eth-meta-description": "Ways to get ETH: buy on an exchange, buy peer-to-peer, swap on a DEX, earn from DAOs, receive from peers, or earn staking rewards. Find the best option based on where you live.",
   "page-get-eth-meta-title": "How to get Ethereum (ETH) | ethereum.org",
   "page-get-eth-need-wallet": "You will need a wallet to use a DEX.",
   "page-get-eth-new-to-eth": "New to ETH? Here's an overview to get you started.",
@@ -93,10 +93,10 @@
   "page-find-wallet-last-updated": "Last updated",
   "listing-policy-disclaimer": "All products listed on this page are not official endorsements, and are provided for informational purposes only. If you want to add a product or provide feedback on the policy raise an issue in GitHub.",
   "page-get-eth-p2p-eyebrow": "Buy from people",
-  "page-get-eth-p2p-title": "Buy ETH peer-to-peer, without KYC",
+  "page-get-eth-p2p-title": "Buy ETH peer-to-peer",
   "page-get-eth-p2p-desc": "You don't need an exchange to get ETH. With peer-to-peer (P2P) trading, you buy directly from another person and pay them with a bank transfer, a payment app or cash. Because no company holds your money, many P2P apps don't ask you to upload an ID.",
   "page-get-eth-p2p-escrow-title": "Use a P2P app with escrow",
-  "page-get-eth-p2p-escrow-desc": "A smart contract holds the seller's ETH and releases it to you once your payment is confirmed. Neither of you has to trust the other, and the app never touches your funds.",
+  "page-get-eth-p2p-escrow-desc": "A smart contract holds the seller's crypto and releases it to you once your payment is confirmed, so neither of you has to trust the other. Many apps trade a stablecoin like USDC, which you then swap for ETH.",
   "page-get-eth-p2p-trusted-title": "Buy from someone you know",
   "page-get-eth-p2p-trusted-desc": "Friends, family or a local Ethereum meetup. Agree on a price, share your wallet address, and pay once the ETH arrives. Start with a small amount.",
   "page-get-eth-p2p-safety-title": "Stay safe",
@@ -104,5 +104,5 @@
   "page-get-eth-p2p-kyc-note": "No KYC on the app doesn't mean anonymous: your bank or payment app still knows who sent the money. Check the rules for buying and selling crypto where you live.",
   "page-get-eth-p2p-cta": "See P2P apps in your country",
   "page-get-eth-exchanges-header-p2p": "P2P apps",
-  "page-get-eth-exchanges-success-p2p": "Trade directly with other people. These apps don't hold your funds."
+  "page-get-eth-exchanges-success-p2p": "Trade directly with other people. A smart contract holds the crypto until your payment is confirmed."
 }
