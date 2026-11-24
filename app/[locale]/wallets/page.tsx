@@ -6,6 +6,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import CardList from "@/components/CardList"
 import ContentFeedback from "@/components/ContentFeedback"
+import WalletKeysDiagram from "@/components/Diagrams/WalletKeys"
 import FileContributors from "@/components/FileContributors"
 import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
@@ -250,6 +251,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </div>
                 </div>
               </Grid>
+              <WalletKeysDiagram />
             </Section>
 
             <Suspense>
