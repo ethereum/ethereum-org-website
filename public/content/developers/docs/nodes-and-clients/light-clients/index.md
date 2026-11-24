@@ -51,7 +51,7 @@ To our knowledge none of these are considered production-ready yet.
 
 There is also a lot of work being done to improve the ways that light clients can access Ethereum data. Currently, light clients rely on RPC requests to full nodes using a client/server model. The [Portal Network](/developers/docs/networking-layer/portal-network/) was first designed to serve this data to light clients over a peer-to-peer network, but its development now focuses on serving the history of past blocks.
 
-Other [roadmap](/roadmap/) items such as [Verkle trees](/roadmap/verkle-trees/) and [statelessness](/roadmap/statelessness/) will eventually bring the security guarantees of light clients equal to those of full clients.
+Other [roadmap](/roadmap/) items such as a new state tree (currently proposed as a binary tree in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) and [statelessness](/roadmap/statelessness/) will eventually bring the security guarantees of light clients equal to those of full clients.
 
 ## Further reading {#further-reading}
 

@@ -30,7 +30,7 @@ export const testData = {
       },
       {
         name: en["build"],
-        subsections: [en["nav-builders-home-label"]],
+        subsections: [en["developers"]],
       },
     ],
   },

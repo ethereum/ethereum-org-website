@@ -28,11 +28,9 @@ In theory we could just store the hash of the data onchain, and send all the dat
 
 The solution is to repeatedly hash different subsets of the data, so for the data that you don't need to send you can just send a hash. You do this using a Merkle tree, a tree data structure where each node is a hash of the nodes below it:
 
-![Merkle Tree](tree.png)
+<MerkleProofDiagram />
 
 The root hash is the only part that needs to be stored onchain. To prove a certain value, you provide all the hashes that need to be combined with it to obtain the root. For example, to prove `C` you provide `D`, `H(A-B)`, and `H(E-H)`.
-
-![Proof of the value of C](proof-c.png)
 
 ## Implementation {#implementation}
 

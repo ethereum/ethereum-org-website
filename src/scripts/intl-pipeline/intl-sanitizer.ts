@@ -1785,13 +1785,33 @@ function syncHeaderIdsWithEnglish(
   return result
 }
 
+/** Predicate: does an offset of `md` fall inside a code fence or inline code? */
+function codeOffsets(md: string): (offset: number) => boolean {
+  const spans = [...md.matchAll(CODE_SPLIT_RE)].map(
+    (m) => [m.index, m.index + m[0].length] as const
+  )
+  return (offset) => {
+    let lo = 0
+    let hi = spans.length - 1
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1
+      if (offset < spans[mid][0]) hi = mid - 1
+      else if (offset >= spans[mid][1]) lo = mid + 1
+      else return true
+    }
+    return false
+  }
+}
+
 function normalizeBlockHtmlLines(md: string): string {
   for (const tag of BLOCK_HTML_TAGS) {
-    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
-    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${tag}>`, "g")
+    // `\S` before the closer: an indented closer is already on its own line.
+    const inlineCloseRe = new RegExp(`(\\S)[ \\t]*</${tag}>`, "g")
+    const inCode = codeOffsets(md)
     md = md.replace(
       inlineCloseRe,
       (match: string, before: string, offset: number) => {
+        if (inCode(offset + match.lastIndexOf("</"))) return match
         // Find start of current line
         const lineStart = md.lastIndexOf("\n", offset) + 1
         const lineContent = md.slice(lineStart, offset + match.length)
@@ -1958,9 +1978,11 @@ function fixBlockComponentLineBreaks(md: string): {
 
   for (const component of BLOCK_MDX_COMPONENTS) {
     // Fix inline closing tags: content</Component> → content\n</Component>
-    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
-    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${component}>`, "g")
-    content = content.replace(inlineCloseRe, (_, before) => {
+    // `\S` before the closer: an indented closer is already on its own line.
+    const inlineCloseRe = new RegExp(`(\\S)[ \\t]*</${component}>`, "g")
+    let inCode = codeOffsets(content)
+    content = content.replace(inlineCloseRe, (match, before, offset) => {
+      if (inCode(offset + match.lastIndexOf("</"))) return match
       fixCount++
       return `${before}\n</${component}>`
     })
@@ -1968,11 +1990,15 @@ function fixBlockComponentLineBreaks(md: string): {
     // Fix inline opening tags: <Component>content → <Component>\ncontent
     // Match any non-newline character after the tag (including other tags)
     // Use (?![A-Za-z]) after component name to prevent "Alert" matching "AlertTitle"
+    // Attribute values may hold JSX (`icon={<Fish />}`), so `>` inside `{}`
+    // does not end the tag; a self-closing tag has no content to split off.
     const inlineOpenRe = new RegExp(
-      `(<${component}(?![A-Za-z])[^>]*>)([^\\n])`,
+      `(<${component}(?![A-Za-z])(?:[^>{]|\\{[^}]*\\})*>)([^\\n])`,
       "g"
     )
-    content = content.replace(inlineOpenRe, (_, tag, after) => {
+    inCode = codeOffsets(content)
+    content = content.replace(inlineOpenRe, (match, tag, after, offset) => {
+      if (tag.endsWith("/>") || inCode(offset)) return match
       fixCount++
       return `${tag}\n${after}`
     })
@@ -2204,6 +2230,9 @@ function fixCrowdinSplitBackticks(
   for (let i = 0; i < translatedLines.length; i++) {
     const line = translatedLines[i]
     if (line.startsWith("```") || line.startsWith("~~~")) continue
+    // A premature close leaves an odd backtick count; on an even line the gap
+    // between two correct spans would otherwise read as a split span.
+    if ((line.match(/`/g) ?? []).length % 2 === 0) continue
 
     for (const engCode of engCodeSpans) {
       // Build a pattern that matches the English code content split by
@@ -3987,9 +4016,10 @@ function fixDroppedAutolinkClose(content: string): {
     // (a) Dropped `>`: autolink open `](<`, a URL containing a parenthesised
     // segment, optionally followed by a stray duplicate `)`, and NOT already
     // followed by the closing `>`. The negative lookahead leaves correct
-    // `](<URL>)` untouched.
+    // `](<URL>)` untouched, and a URL that continues past the parenthesised
+    // segment (`...-(java-ethereum)/5dfa...>)`, `...-(1).pdf>)`).
     parts[i] = parts[i].replace(
-      /\]\(<(https?:\/\/[^\s<>]*\([^\s<>()]*\))\)?(?!>)/g,
+      /\]\(<(https?:\/\/[^\s<>]*\([^\s<>()]*\))\)?(?![^\s<>]*>)/g,
       (_, url) => {
         fixCount++
         return `](<${url}>)`

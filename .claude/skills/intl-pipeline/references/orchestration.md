@@ -26,6 +26,6 @@ If a hot fix translation is genuinely urgent, the pipeline can be manually dispa
 
 ## `stamp_only: true` and orchestration
 
-The `stamp_only: true` workflow input regenerates manifests without translation. It only operates on the current file state — useful for "the locale is correct, but the manifest is wrong" scenarios.
+The `stamp_only: true` workflow input rewrites `source.json` from current English for pairs whose English changed, with no translation and no locale writes. It is only correct when the locale already matches the new English ("the locale is correct, but the manifest is wrong"); otherwise it strands the locale behind English.
 
 **Constraint:** safe only when no `intl/pending-{base}` branch exists for the base being stamped. If pending exists, the stamped manifests on base would conflict with pending's state. Procedure: merge or close pending first, then stamp.

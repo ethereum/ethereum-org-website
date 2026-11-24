@@ -1,22 +1,6 @@
-import { getTranslations } from "next-intl/server"
-
-import type { NavItem } from "./types"
-
 import { Link } from "@/i18n/navigation"
-import { buildNavigation } from "@/lib/nav/buildNavigation"
-
-function collectLinks(items: NavItem[]): { label: string; href: string }[] {
-  const links: { label: string; href: string }[] = []
-  for (const item of items) {
-    if (item.href) {
-      links.push({ label: item.label, href: item.href })
-    }
-    if (item.items) {
-      links.push(...collectLinks(item.items))
-    }
-  }
-  return links
-}
+import { getNavSectionLinks } from "@/lib/nav/buildNavigation"
+import { getNavigation } from "@/lib/nav/links"
 
 /**
  * Server-rendered hidden nav for search engine crawlability.
@@ -29,12 +13,9 @@ function collectLinks(items: NavItem[]): { label: string; href: string }[] {
  * response so crawlers can discover and follow them.
  */
 const CrawlableNav = async () => {
-  const t = await getTranslations("common")
-  const sections = buildNavigation(t)
+  const sections = await getNavigation()
 
-  const allLinks = Object.values(sections).flatMap((section) =>
-    collectLinks(section.items)
-  )
+  const allLinks = Object.values(sections).flatMap(getNavSectionLinks)
 
   return (
     <nav inert className="sr-only">

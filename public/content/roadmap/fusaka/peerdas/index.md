@@ -45,7 +45,7 @@ DAS is a mechanism that builds on top of this and ensures the data is both corre
 
 Ethereum borrows some clever math to achieve this: it applies Reed-Solomon style erasure coding to blob data. Blob data are represented as a polynomial whose coefficients encode the data, then evaluate that polynomial at additional points to create an extended blob, doubling the number of evaluations. This added redundancy enables erasure recovery: even if some evaluations are missing, the original blob can be reconstructed as long as at least half of the total data, including extended pieces are available.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
 In reality, this polynomial has thousands of coefficients. KZG commits are values of few bytes, something like a hash, known to all nodes. Every node holding enough data points can [efficiently reconstruct a full set of blob data](https://arxiv.org/abs/2207.11079). 
 
@@ -61,7 +61,7 @@ This allows for a new theoretical scaling limit of 8x the current “everyone do
 
 Once a node successfully reconstructs the original data, it then redistributes the recovered columns back into the network, actively healing any data gaps and enhancing overall system resilience. Nodes connected to validators with a combined balance ≥4096 ETH must be a supernode and therefore must subscribe to all data column subnets and custody all columns. These supernodes will continuously heal data gaps. The probabilistically self-healing nature of the protocol allows for strong availability guarantees while not limiting home operators holding only portions of the data. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
 Data availability can be confirmed by any node holding only small subset of the blob data thanks to the sampling mechanism described above. This availability is enforced: validators must follow new fork-choice rules, meaning they will only accept and vote for blocks after they have verified the availability of the data.
 
