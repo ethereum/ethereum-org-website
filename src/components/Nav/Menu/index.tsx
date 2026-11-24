@@ -1,7 +1,6 @@
 "use client"
 
 import { BaseHTMLAttributes } from "react"
-import { ChevronDown } from "lucide-react"
 import { motion } from "motion/react"
 import { useLocale } from "next-intl"
 import {
@@ -13,6 +12,8 @@ import {
   Trigger,
   Viewport,
 } from "@radix-ui/react-navigation-menu"
+
+import { ChevronNext } from "@/components/Chevron"
 
 import { cn } from "@/lib/utils/cn"
 import { isHrefActive } from "@/lib/utils/url"
@@ -98,7 +99,11 @@ const Menu = (props: NavMenuProps) => {
                     <Button
                       asChild
                       variant="ghost"
-                      className={cn(triggerClasses(isCurrent), "no-underline")}
+                      className={cn(
+                        triggerClasses(isCurrent),
+                        // Chevron scaled to the label, as on the group headings
+                        "no-underline [&>svg]:size-4"
+                      )}
                     >
                       <BaseLink
                         href={section.hub.href}
@@ -107,6 +112,10 @@ const Menu = (props: NavMenuProps) => {
                         {...linkProps}
                       >
                         {section.label}
+                        <ChevronNext
+                          aria-hidden
+                          className="opacity-60 transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none rtl:group-hover:-translate-x-0.5"
+                        />
                       </BaseLink>
                     </Button>
                   </NavigationMenuLink>
@@ -129,10 +138,6 @@ const Menu = (props: NavMenuProps) => {
                     >
                       {section.label}
                     </span>
-                    <ChevronDown
-                      aria-hidden
-                      className="relative z-10 size-3.5 opacity-60 transition-transform group-data-[state=open]:rotate-180 motion-reduce:transition-none"
-                    />
                   </Button>
                 </Trigger>
                 <Content
