@@ -15,7 +15,7 @@ The rule is NOT "never edit locales." It IS "don't hand-propagate English update
 
 - **Allowed:** Fixing a translation error when the English side hasn't moved (review-time corrections, sanitizer follow-ups). The manifest's English-to-locale map stays valid.
 - **Not allowed:** Editing a locale to reflect a new English value (URL change, attribute change, restructured paragraph). The manifest map becomes wrong.
-- **If English-to-locale sync is genuinely urgent** (build-breaking structural change with no pending PR open): make the English edit, then trigger `intl-pipeline.yml` with `stamp_only: true` to refresh manifests without translation. Safe only when no `intl/pending-{base}` branch exists for that base.
+- **If English-to-locale sync is genuinely urgent**: run the pipeline on just that file (`target_path`). `stamp_only: true` is not a sync: it rewrites `source.json` from current English for pairs whose English changed and touches no locale file, so any locale you didn't fix by hand stays stale while its manifest claims it is current. Use it only after hand-fixing every affected locale, with no `intl/pending-{base}` branch open; procedure in `references/non-english-edits.md`.
 
 **Deletions go through English too.** To remove a string — including an orphaned key code no longer references — delete it from the English source only; the pipeline propagates the removal on its next run. Hand-deleting the locale copies is hand-propagation.
 
