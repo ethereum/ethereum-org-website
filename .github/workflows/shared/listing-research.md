@@ -47,7 +47,7 @@ A request to list a third-party product, service or resource on ethereum.org. A 
 **Listing fields.**
 - `criteria`: one per criterion in the table below, with its weight.
 - `facts`: at most 5 that most change the decision, each with an exact `quote` checked like criteria (a `repo` fact needs none); facts that fail the check are dropped.
-- `ask_author`: at most 3, about `must` criteria that remain open.
+- `ask_author`: at most 3, about `must` criteria that remain open. Plain questions: no greeting or thanks, since the comment already opens with one.
 - `existing`: where the site already lists the product, with `text` copied exactly from that file on `dev` (it is re-checked and dropped otherwise).
 - `product`, `policy_page`, `policy_why`.
 - The submit job enforces:

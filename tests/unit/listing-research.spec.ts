@@ -12,6 +12,7 @@ let blockers: Mod["blockers"],
   isListingReply: Mod["isListingReply"],
   latest: Mod["latest"],
   MAX_FOLLOWUPS: Mod["MAX_FOLLOWUPS"],
+  productSites: Mod["productSites"],
   researchComment: Mod["researchComment"],
   esc: Mod["esc"],
   LISTING: Mod["LISTING"],
@@ -31,6 +32,7 @@ test.beforeAll(async () => {
     isListingReply,
     latest,
     MAX_FOLLOWUPS,
+    productSites,
     researchComment,
     esc,
     LISTING,
@@ -432,4 +434,16 @@ test("latest dates a reply against when a check was posted, not edited", () => {
     updated_at: "2026-11-29T00:00:00Z",
   }
   expect(latest([review]).posted).toBe("2026-11-21T00:00:00Z")
+})
+
+test("productSites falls back to the request's own links", () => {
+  const item = {
+    criteria: JSON.stringify([
+      { url: "github.com/solana-foundation/explorer", source: "author" },
+    ]),
+  }
+  expect(productSites(item)).toEqual([])
+  expect(
+    productSites(item, "URL: https://explorer.solana.com and https://x.com/foo")
+  ).toEqual(["solana.com"])
 })
