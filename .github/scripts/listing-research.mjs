@@ -352,18 +352,25 @@ async function domainAge(d) {
   }
 }
 
-// The product's own sites, taken from the author-sourced URLs the agent cited.
-export const productSites = (item) =>
+const sitesOf = (urls) =>
   [
     ...new Set(
-      [...arr(item.criteria, 20), ...arr(item.facts, 15)]
-        .filter((c) => c.source === "author")
-        .map((c) => publicUrl(String(c.url || "")))
+      urls
         .filter(Boolean)
         .map((u) => registrableDomain(new URL(u).hostname))
         .filter((d) => !SOCIAL.test(d))
     ),
   ].slice(0, 3)
+
+// The product's own sites, from the author-sourced URLs the agent cited; the request's links only when those give none.
+export function productSites(item, request = "") {
+  const cited = sitesOf(
+    [...arr(item.criteria, 20), ...arr(item.facts, 15)]
+      .filter((c) => c.source === "author")
+      .map((c) => publicUrl(String(c.url || "")))
+  )
+  return cited.length ? cited : sitesOf(externalUrls(request))
+}
 
 export const externalUrls = (text) =>
   [
@@ -375,7 +382,7 @@ export const externalUrls = (text) =>
     ),
   ].filter(
     (u) =>
-      !/^https:\/\/(github\.com\/ethereum\/ethereum-org-website|ethereum\.org)\b/.test(
+      !/^https:\/\/(github\.com\/ethereum\/ethereum-org-website|(www\.)?ethereum\.org)\b/.test(
         u
       )
   )
@@ -907,7 +914,7 @@ async function submit(n, item) {
   if (replied && prior.followups >= MAX_FOLLOWUPS)
     return console.log(`#${n} reached ${MAX_FOLLOWUPS} follow-ups`)
   const r = await check({ ...item, pr: isPr ? n : "", issue: isPr ? "" : n })
-  r.domains = productSites(item)
+  r.domains = productSites(item, i.body || "")
   r.siteAge = await pool(r.domains, 3, domainAge)
   r.related = related(r.domains, n)
   r.kind = replied ? "followup" : "research"
@@ -960,7 +967,13 @@ async function main() {
   else if (cmd === "check") {
     const item = JSON.parse(readFileSync(0, "utf8"))
     const r = await check(item)
-    r.domains = productSites(item)
+    let body = ""
+    try {
+      body = ghJson(`repos/${REPO}/issues/${num(item.pr)}`).body || ""
+    } catch {
+      // Without the PR body, the sites come from the agent's citations alone.
+    }
+    r.domains = productSites(item, body)
     r.siteAge = await pool(r.domains, 3, domainAge)
     r.related = related(r.domains, num(item.pr))
     process.stdout.write(JSON.stringify(r))
