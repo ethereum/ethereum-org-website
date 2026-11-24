@@ -6,22 +6,17 @@ import { useLocale } from "next-intl"
 import {
   Content,
   Item,
-  Link as NavigationMenuLink,
   List,
   Root,
   Trigger,
   Viewport,
 } from "@radix-ui/react-navigation-menu"
 
-import { ChevronNext } from "@/components/Chevron"
-
 import { cn } from "@/lib/utils/cn"
-import { isHrefActive } from "@/lib/utils/url"
 
 import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 
 import { Button } from "../../ui/buttons/Button"
-import { BaseLink } from "../../ui/Link"
 import type { NavSectionKey } from "../types"
 import { useNavigation } from "../useNavigation"
 
@@ -58,7 +53,6 @@ const Menu = (props: NavMenuProps) => {
     onValueChange,
     triggerProps,
     listProps,
-    linkProps,
     viewportProps,
   } = useNavMenu()
 
@@ -85,39 +79,6 @@ const Menu = (props: NavMenuProps) => {
             const section = linkSections[sectionKey]
             const isOpen = value === sectionKey
             const isCurrent = currentSection === sectionKey
-
-            if (section.linkOnly)
-              return (
-                <Item key={sectionKey} value={sectionKey}>
-                  <NavigationMenuLink
-                    asChild
-                    active={isHrefActive(section.hub.href, pathname, false)}
-                  >
-                    <Button
-                      asChild
-                      variant="ghost"
-                      className={cn(
-                        triggerClasses(isCurrent),
-                        // Chevron scaled to the label, as on the group headings
-                        "no-underline [&>svg]:size-4"
-                      )}
-                    >
-                      <BaseLink
-                        href={section.hub.href}
-                        activeClassName=""
-                        customEventOptions={track(sectionKey)(section.hub.href)}
-                        {...linkProps}
-                      >
-                        {section.label}
-                        <ChevronNext
-                          aria-hidden
-                          className="opacity-60 transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none rtl:group-hover:-translate-x-0.5"
-                        />
-                      </BaseLink>
-                    </Button>
-                  </NavigationMenuLink>
-                </Item>
-              )
 
             return (
               <Item key={sectionKey} value={sectionKey}>

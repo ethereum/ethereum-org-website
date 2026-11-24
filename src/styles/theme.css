@@ -144,10 +144,6 @@
   --color-body-medium: hsla(var(--body-medium));
   --color-body-light: hsla(var(--body-light));
   --color-body-inverse: hsla(var(--body-inverse));
-  --color-body-menu: hsla(var(--body-menu));
-  --color-body-menu-low: hsla(var(--body-menu-low));
-  --color-body-menu-medium: hsla(var(--body-menu-medium));
-  --color-body-menu-high: hsla(var(--body-menu-high));
 
   /* Colors: disabled */
   --color-disabled: hsla(var(--disabled));

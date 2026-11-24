@@ -30,8 +30,6 @@ export type NavSectionDetail = {
   hub: NavLink & { description: string }
   featured?: NavFeatured
   groups: NavGroup[]
-  /** Renders as a plain link to the hub; its groups still feed crawlers and llms.txt */
-  linkOnly?: boolean
 }
 
 export type NavSections = Record<NavSectionKey, NavSectionDetail>

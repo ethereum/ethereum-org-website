@@ -26,6 +26,12 @@ import { NAV_SECTION_ICONS } from "../useNavigation"
 
 export type TrackLink = (href: string) => MatomoEventOptions
 
+// Cards are named apart from list links, which may share their destination
+const trackCard = (track: TrackLink, card: string, href: string) => ({
+  ...track(href),
+  eventName: `${card} - ${href}`,
+})
+
 type HubCardProps = {
   sectionKey: NavSectionKey
   hub: NavSectionDetail["hub"]
@@ -46,7 +52,7 @@ export const HubCard = ({
       href={hub.href}
       size="md"
       hoverLift={false}
-      customEventOptions={track(hub.href)}
+      customEventOptions={trackCard(track, "Hub card", hub.href)}
       className={cn("bg-tint-primary", className)}
       {...props}
     >
@@ -82,7 +88,7 @@ export const FeaturedCard = ({
     size="md"
     border
     hoverLift={false}
-    customEventOptions={track(featured.href)}
+    customEventOptions={trackCard(track, "Featured card", featured.href)}
     className={className}
     {...props}
   >

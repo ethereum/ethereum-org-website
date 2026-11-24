@@ -4,7 +4,6 @@ import { useRef, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
 
 import { ChevronNext } from "@/components/Chevron"
-import { ArrowNext } from "@/components/ui/arrow"
 import { Button } from "@/components/ui/buttons/Button"
 import { BaseLink } from "@/components/ui/Link"
 
@@ -161,7 +160,7 @@ const DrillDownNav = ({ className }: { className?: string }) => {
           ) : (
             <ul className="m-0 list-none">
               {SECTION_LABELS.map((key) => {
-                const { label, hub, linkOnly } = linkSections[key]
+                const { label, hub } = linkSections[key]
                 const Icon = NAV_SECTION_ICONS[key]
                 const isCurrent = currentSection === key
                 const content = (
@@ -183,42 +182,24 @@ const DrillDownNav = ({ className }: { className?: string }) => {
                         {hub.description}
                       </span>
                     </span>
-                    {linkOnly ? (
-                      <ArrowNext
-                        className="size-5 shrink-0 text-body-medium"
-                        aria-hidden
-                      />
-                    ) : (
-                      <ChevronNext
-                        className="size-5 shrink-0 text-body-medium"
-                        aria-hidden
-                      />
-                    )}
+                    <ChevronNext
+                      className="size-5 shrink-0 text-body-medium"
+                      aria-hidden
+                    />
                   </>
                 )
 
                 return (
                   <li key={key} className="mb-0 border-b border-body-light">
-                    {linkOnly ? (
-                      <BaseLink
-                        href={hub.href}
-                        activeClassName=""
-                        customEventOptions={track(key)(hub.href)}
-                        className={rowClasses}
-                      >
-                        {content}
-                      </BaseLink>
-                    ) : (
-                      <Button
-                        variant="ghost"
-                        className={rowClasses}
-                        onClick={() => go(key)}
-                        autoFocus={view.from === key}
-                        data-testid={`mobile-menu-section-${key}`}
-                      >
-                        {content}
-                      </Button>
-                    )}
+                    <Button
+                      variant="ghost"
+                      className={rowClasses}
+                      onClick={() => go(key)}
+                      autoFocus={view.from === key}
+                      data-testid={`mobile-menu-section-${key}`}
+                    >
+                      {content}
+                    </Button>
                   </li>
                 )
               })}

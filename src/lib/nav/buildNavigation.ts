@@ -125,25 +125,25 @@ export const buildNavigation = (
         label: t("nav-basics-label"),
         items: [
           { label: t("what-is-ethereum"), href: "/what-is-ethereum/" },
-          { label: t("breadcrumb-what-is-ether"), href: "/what-is-ether/" },
-          { label: t("web3"), href: "/web3/" },
-          { label: t("smart-contracts"), href: "/smart-contracts/" },
+          { label: t("nav-ether-label"), href: "/what-is-ether/" },
+          { label: t("nav-web3-label"), href: "/web3/" },
+          { label: t("ethereum-wallets"), href: "/wallets/" },
           { label: t("ethereum-vs-bitcoin"), href: "/ethereum-vs-bitcoin/" },
-          {
-            label: t("what-is-the-ethereum-network"),
-            href: "/what-is-the-ethereum-network/",
-          },
-          { label: t("what-are-apps"), href: "/what-are-apps/" },
+          { label: t("nav-ethereum-apps-label"), href: "/what-are-apps/" },
         ],
       },
       {
         id: "learn/how-it-works",
         label: t("nav-how-ethereum-works-label"),
         items: [
+          { label: t("smart-contracts"), href: "/smart-contracts/" },
+          {
+            label: t("nav-ethereum-network-label"),
+            href: "/what-is-the-ethereum-network/",
+          },
           { label: t("layer-2"), href: "/layer-2/" },
-          { label: t("nav-l2-networks-label"), href: "/layer-2/networks/" },
           { label: t("bridges"), href: "/bridges/" },
-          { label: t("gas"), href: "/gas/" },
+          { label: t("nav-network-fees-label"), href: "/gas/" },
           { label: t("run-a-node"), href: "/run-a-node/" },
           {
             label: t("zero-knowledge-proofs"),
@@ -170,13 +170,13 @@ export const buildNavigation = (
         id: "learn/library",
         label: t("nav-library-label"),
         items: [
+          { label: t("nav-stories-label"), href: "/stories/" },
           {
             label: t("nav-history-founders-label"),
             href: "/ethereum-history-founder-and-ownership/",
           },
           { label: t("glossary"), href: "/glossary/" },
           { label: t("quizzes"), href: "/quizzes/" },
-          { label: t("stories"), href: "/stories/" },
           { label: t("videos"), href: "/videos/" },
           { label: t("nav-reports-label"), href: "/reports/" },
           { label: t("breadcrumb-resources"), href: "/resources/" },
@@ -202,7 +202,7 @@ export const buildNavigation = (
         id: "use/essentials",
         label: t("nav-essentials-label"),
         items: [
-          { label: t("wallets"), href: "/wallets/" },
+          { label: t("nav-get-a-wallet-label"), href: "/wallets/find-wallet/" },
           { label: t("get-eth"), href: "/get-eth/" },
           { label: t("nav-explore-apps-label"), href: "/apps/" },
           { label: t("guides"), href: "/guides/" },
@@ -215,13 +215,10 @@ export const buildNavigation = (
         items: [
           { label: t("nft"), href: "/nft/" },
           { label: t("defi"), href: "/defi/" },
-          { label: t("dao"), href: "/dao/" },
-          { label: t("nav-rwa-label"), href: "/real-world-assets/" },
           { label: t("stablecoins"), href: "/stablecoins/" },
-          {
-            label: t("decentralized-identity"),
-            href: "/decentralized-identity/",
-          },
+          { label: t("nav-rwa-label"), href: "/real-world-assets/" },
+          { label: t("dao"), href: "/dao/" },
+          { label: t("gaming"), href: "/gaming/" },
           { label: t("payments"), href: "/payments/" },
         ],
       },
@@ -232,9 +229,9 @@ export const buildNavigation = (
         items: [
           { label: t("breadcrumb-home-staking"), href: "/staking/solo/" },
           { label: t("nav-staking-pool-label"), href: "/staking/pools/" },
-          { label: t("withdrawals"), href: "/staking/withdrawals/" },
           { label: t("breadcrumb-delegated-staking"), href: "/staking/saas/" },
           { label: t("nav-dvt-label"), href: "/staking/dvt/" },
+          { label: t("withdrawals"), href: "/staking/withdrawals/" },
         ],
       },
     ],
@@ -385,8 +382,8 @@ export const buildNavigation = (
       href: "/community/",
     },
     featured: {
-      eyebrow: t("nav-eyebrow-meet-up"),
-      label: t("nav-events-calendar-label"),
+      eyebrow: t("nav-eyebrow-calendar"),
+      label: t("nav-conferences-meetups-label"),
       description: t("nav-events-calendar-description"),
       href: "/community/events/",
     },
@@ -401,10 +398,6 @@ export const buildNavigation = (
           },
           { label: t("support"), href: "/community/support/" },
           { label: t("nav-devcon-label"), href: "https://devcon.org/" },
-          {
-            label: t("nav-code-of-conduct"),
-            href: "/community/code-of-conduct/",
-          },
         ],
       },
       {
@@ -438,7 +431,6 @@ export const buildNavigation = (
   },
   organizations: {
     label: t("organizations"),
-    linkOnly: true,
     hub: {
       label: t("organizations"),
       description: t("nav-organizations-overview-description"),
@@ -446,9 +438,24 @@ export const buildNavigation = (
     },
     groups: [
       {
+        id: "organizations/audiences",
+        label: t("nav-organizations-audiences-label"),
+        items: [
+          {
+            label: t("public-sector"),
+            href: "/organizations/public-sector/",
+          },
+          { label: t("enterprise"), href: "/organizations/enterprise/" },
+          {
+            label: t("small-business"),
+            href: "/organizations/small-business/",
+          },
+          { label: t("founders"), href: "/organizations/founders/" },
+        ],
+      },
+      {
         id: "organizations/enterprise",
-        label: t("enterprise"),
-        href: "/organizations/enterprise/",
+        label: t("nav-enterprise-use-cases-label"),
         items: [
           {
             label: t("tokenization"),
@@ -466,21 +473,6 @@ export const buildNavigation = (
             label: t("enterprise-l2s"),
             href: "/organizations/enterprise/enterprise-l2s/",
           },
-        ],
-      },
-      {
-        id: "organizations/sectors",
-        label: t("organizations"),
-        items: [
-          {
-            label: t("public-sector"),
-            href: "/organizations/public-sector/",
-          },
-          {
-            label: t("small-business"),
-            href: "/organizations/small-business/",
-          },
-          { label: t("founders"), href: "/organizations/founders/" },
         ],
       },
     ],

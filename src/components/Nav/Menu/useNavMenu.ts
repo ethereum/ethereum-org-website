@@ -188,14 +188,13 @@ export const useNavMenu = () => {
   }
 
   /** Hover handling for a bar item; `key` is "" for plain links, which close the panel */
-  const hoverProps = (key: string) => ({
+  const hoverProps = (key: NavSectionKey) => ({
     onPointerEnter: (event: PointerEvent) => {
       if (!isMouse(event)) return
       clearTimeout(openTimer.current)
       if (value === key) return
       if (isOpen) switchTo(key, event)
-      else if (key)
-        openTimer.current = setTimeout(() => show(key), OPEN_DELAY_MS)
+      else openTimer.current = setTimeout(() => show(key), OPEN_DELAY_MS)
     },
     // Re-checked while a switch waits, so stopping on the item or turning along the bar commits it
     onPointerMove: (event: PointerEvent) => {
@@ -228,8 +227,6 @@ export const useNavMenu = () => {
     },
     triggerProps,
     listProps: { ref: listRef },
-    /** For plain links in the bar: pointing at one dismisses an open panel */
-    linkProps: hoverProps(""),
     viewportProps: {
       ref: viewportRef,
       onPointerEnter: (event: PointerEvent) => event.preventDefault(),

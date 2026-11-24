@@ -49,10 +49,14 @@ const pageExists = (href: string) => {
   return matchAppRoute(path.join(process.cwd(), "app/[locale]"), segments)
 }
 
+// Listed outside their breadcrumb root's menu on purpose; the root still decides the highlight
+const CROSS_LISTED: Record<string, string> = { "/wallets/": "learn" }
+
 test.describe("main navigation", () => {
   test("each link sits in the menu its breadcrumb root belongs to", () => {
     for (const [key, section] of Object.entries(sections)) {
       for (const { href } of internalLinks(getNavSectionLinks(section))) {
+        if (CROSS_LISTED[href] === key) continue
         expect(getNavSectionForPath(href), href).toBe(key)
       }
     }
