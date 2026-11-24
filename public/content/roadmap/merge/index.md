@@ -222,7 +222,7 @@ For those curious, learn more about [What Happens After The Merge](https://youtu
 
 Originally, the plan was to work on sharding before The Merge to address scalability. However, with the boom of [layer 2 scaling solutions](/layer-2/), the priority shifted to swapping proof-of-work to proof-of-stake first.
 
-Plans for sharding are rapidly evolving, but given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing compressed calldata from rollup contracts, allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
+Given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing rollup data, first with blobs ([Proto-Danksharding](/roadmap/danksharding/)) and then with data availability sampling ([PeerDAS](/roadmap/fusaka/peerdas/)), allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
 
 <ButtonLink href="/roadmap/danksharding/">
   Sharding

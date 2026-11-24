@@ -53,17 +53,20 @@ Currently, smart contract wallets are challenging to implement as they rely on c
 
 ### EIP-4337: Account abstraction without protocol changes {#eip-4337-account-abstraction-without-protocol-changes}
 
-EIP-4337 enables native smart contract wallet support without modifying Ethereum's core protocol. It introduces `UserOperation` objects collected into transaction bundles by validators, simplifying wallet development. The EIP-4337 EntryPoint contract was deployed to Ethereum Mainnet on 1st March 2023 and has facilitated the creation of over 26 million smart wallets and 170 million UserOperations.
+EIP-4337 enables native smart contract wallet support without modifying Ethereum's core protocol. It introduces `UserOperation` objects collected into transaction bundles by validators, simplifying wallet development. The EIP-4337 EntryPoint contract was deployed to Ethereum Mainnet on 1st March 2023.
 
 ## Current progress {#current-progress}
 
-As part of Ethereum's Pectra upgrade, EIP-7702 is scheduled for May 7, 2025. EIP-4337 has been widely adopted, [with over 26 million smart accounts deployed and more than 170 million UserOperations processed](https://www.bundlebear.com/erc4337-overview/all).
+[EIP-7702](/roadmap/pectra/7702/) went live with the Pectra upgrade on May 7, 2025, letting existing EOAs use smart contract code. EIP-4337 has been widely adopted; the [ERC-4337 adoption dashboard](https://www.bundlebear.com/erc4337-overview/all) tracks current usage.
+
+The next step is [frame transactions](/roadmap/hegota/#frame-transactions) ([EIP-8141](https://eips.ethereum.org/EIPS/eip-8141)), which let an account decide for itself what counts as a valid transaction and how its gas is paid. Frame transactions are scheduled for the Hegotá upgrade, which has no date yet.
 
 ## Further reading {#further-reading}
 
 - [erc4337.io](https://docs.erc4337.io/)
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 - [EIP-7702 documentation](https://eips.ethereum.org/EIPS/eip-7702)
+- [EIP-8141 documentation](https://eips.ethereum.org/EIPS/eip-8141)
 - [ERC-4337 adoption dashboard](https://www.bundlebear.com/erc4337-overview/all)
 - [Vitalik's "Road to Account Abstraction"](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
 - [Vitalik's blog on social recovery wallets](https://vitalik.eth.limo/general/2021/01/11/recovery.html)

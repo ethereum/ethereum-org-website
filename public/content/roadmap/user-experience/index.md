@@ -29,7 +29,7 @@ With these upgrades, the barriers to running a node are reduced to effectively z
 
 ## Current progress {#current-progress}
 
-Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol. The main smart contract required for EIP-4337 was **deployed in March 2023**.
+Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol. The main smart contract required for EIP-4337 was **deployed in March 2023**. [EIP-7702](/roadmap/pectra/7702/), which lets existing EOAs use smart contract code, went live with the Pectra upgrade on May 7, 2025. [Frame transactions](/roadmap/hegota/#frame-transactions) ([EIP-8141](https://eips.ethereum.org/EIPS/eip-8141)), which let an account decide for itself what counts as a valid transaction, are scheduled for the Hegotá upgrade.
 
 **Full statelessness is still in the research phase** and is likely several years away from being implemented. There are several milestones on the road to full statelessness, including data expiry, that may be implemented sooner. Other roadmap items, such as a new state tree (currently proposed as a binary tree in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) and [Proposer-builder separation](/roadmap/pbs/) need to be completed first.
 

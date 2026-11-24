@@ -33,7 +33,7 @@ Read a deeper dive on 7702 [here](/roadmap/pectra/7702/)
 
 ### Increase the max effective balance {#7251}
 
-The current effective balance of the validator is exactly 32 ETH. It's the minimum necessary amount to participate in the consensus but at the same time the maximum a single validator can stake.
+Before Pectra, the effective balance of a validator was exactly 32 ETH. It was the minimum necessary amount to participate in the consensus but at the same time the maximum a single validator could stake.
 
 [EIP-7251](https://eips.ethereum.org/EIPS/eip-7251) raises the maximum possible effective balance to 2048 ETH, meaning that a single validator can now stake between 32 and 2048 ETH. Instead of multiples of 32, stakers can now choose an arbitrary amount of ETH to stake and receive rewards on every 1 ETH above the minimum. For example, if a validator's balance grows with their rewards to 33 ETH, the extra 1 ETH is also considered part of the effective balance and receives rewards.
 
@@ -55,13 +55,13 @@ To address this, [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) increases c
 
 ### Execution layer triggerable exits {#7002}
 
-Currently, exiting a validator and [withdrawing staked ETH](/staking/withdrawals/) is a consensus layer operation that requires an active validator key, the same BLS key used by the validator to perform active duties like attestations. Withdrawal credentials is a separate cold key that receives the exited stake but cannot trigger the exit. The only way for stakers to exit is to send a special message to the Beacon Chain network signed using the active validator key. This is limiting in scenarios where the withdrawal credentials and validator key are held by different entities or when the validator key gets lost.
+Before Pectra, exiting a validator and [withdrawing staked ETH](/staking/withdrawals/) was a consensus layer operation that required an active validator key, the same BLS key used by the validator to perform active duties like attestations. Withdrawal credentials is a separate cold key that receives the exited stake but cannot trigger the exit. The only way for stakers to exit was to send a special message to the Beacon Chain network signed using the active validator key. This was limiting in scenarios where the withdrawal credentials and validator key are held by different entities or when the validator key gets lost.
 
-[EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) introduces a new contract that can be used to trigger the exit using execution layer withdrawal credentials. Stakers will be able to exit their validator by calling a function in this special contract without the need for their validator signing key or access to Beacon Chain at all. Importantly, enabling validator withdrawals onchain allows for staking protocols with reduced trust assumptions over node operators.
+[EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) introduces a new contract that can be used to trigger the exit using execution layer withdrawal credentials. Stakers can exit their validator by calling a function in this special contract without the need for their validator signing key or access to Beacon Chain at all. Importantly, enabling validator withdrawals onchain allows for staking protocols with reduced trust assumptions over node operators.
 
 ### Validator deposits on chain {#6110}
 
-Validator deposits are currently processed by [eth1data poll](https://eth2book.info/capella/part2/deposits-withdrawals/deposit-processing/) which is a function on the Beacon Chain that fetches data from the execution layer. It's sort of a technical debt from times before The Merge when Beacon Chain was a separate network and had to concern itself with proof-of-work re-orgs. 
+Before Pectra, validator deposits were processed by [eth1data poll](https://eth2book.info/capella/part2/deposits-withdrawals/deposit-processing/) which is a function on the Beacon Chain that fetches data from the execution layer. It was sort of a technical debt from times before The Merge when Beacon Chain was a separate network and had to concern itself with proof-of-work re-orgs. 
 
 [EIP-6110](https://eips.ethereum.org/EIPS/eip-6110) is a new way of delivering deposits from execution to the consensus layer, which allows for instant processing with less implementation complexity. It's a more secure way of handling deposits native to merged Ethereum. It also helps to future-proof the protocol because it doesn't require historical deposits to bootstrap the node, which is necessary for history expiry.
 

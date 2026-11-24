@@ -69,11 +69,11 @@ The direct impact on users (particularly L2 users) is lower fees. With 8x more s
 
 ## Blob-Parameter-Only (BPOs) {#bpo}
 
-The network will theoretically be able to process 8x more blobs, but blob increases are a change that need to be properly tested and executed safely in a stepwise manner. Testnets provide enough confidence to deploy the features on Mainnet but we need to ensure stability of the p2p network before enabling a significantly higher number of blobs. 
+The network can theoretically process 8x more blobs, but blob increases are a change that need to be properly tested and executed safely in a stepwise manner. Testnets provide enough confidence to deploy the features on Mainnet but we need to ensure stability of the p2p network before enabling a significantly higher number of blobs. 
 
 To gradually raise the target number of blobs per block without overwhelming the network, Fusaka introduces **[Blob-Parameter-Only (BPO)](https://ethereum-magicians.org/t/blob-parameter-only-bpo-forks/22623)** forks. Unlike regular forks that need broad ecosystem coordination, agreement, and software updates, [BPOs (EIP-7892)](https://eips.ethereum.org/EIPS/eip-7892) are pre-programmed upgrades that increase the maximum number of blobs over time without intervention.
 
-This means that immediately after Fusaka activates and PeerDAS goes live, the number of blobs will remain unchanged. The number of blobs will begin doubling every few weeks until it reaches a maximum of 48, while developers monitor to ensure the mechanism is working as expected and isn’t having adverse effects on the nodes running the network.
+When Fusaka activated on December 3, 2025 and PeerDAS went live, the number of blobs stayed unchanged. Two BPO forks then raised it: BPO1 on December 9, 2025 (target 10, max 15) and BPO2 on January 7, 2026 (target 14, max 21). Developers monitor the network to make sure each increase isn't having adverse effects on the nodes running it. Further increases need new BPO forks, and none is scheduled at the time of writing.
 
 ## Future directions {#future-directions}
 

@@ -74,13 +74,13 @@ Execution layer issuance since The Merge is zero. Proof-of-work is no longer a v
 
 Consensus layer issuance continues today as before The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. Unlike the current accounts ("execution" accounts), which can transact on Mainnet, these are separate Ethereum accounts cannot transact freely with other Ethereum accounts. Funds in these accounts can only be withdrawn to a single specified execution address.
 
-Since the Shanghai/Capella upgrade that took place in April 2023, these withdraws have been enabled for stakers. Stakers are incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes at 32).
+Since the Shanghai/Capella upgrade that took place in April 2023, these withdraws have been enabled for stakers. Stakers are incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes at 32 ETH for validators with `0x01` withdrawal credentials). Since the [Pectra upgrade](/roadmap/pectra/maxeb/), validators with `0x02` compounding credentials can have an effective balance of up to 2048 ETH, so their rewards keep adding to their stake weight up to that limit.
 
 Stakers may also choose to exit and withdraw their entire validator balance. To ensure Ethereum is stable, the number of validators leaving simultaneously is capped.
 
-Approximately 0.33% of the total validator count may exit in a given day. By default, four (4) validators may exit per epoch (every 6.4 minutes, or 900 per day). An additional one (1) validator is permitted to exit for every 65,536 (2<sup>16</sup>) additional validators over 262,144 (2<sup>18</sup>). For example, with over 327,680 validators, five (5) may leave per epoch (1,125 per day). Six (6) will be permitted with a total active validator count over 393,216, and so forth.
+Since the Pectra upgrade, this limit (the "churn") is measured in staked ETH per epoch (every 6.4 minutes) rather than in number of validators. The churn is 1/65,536 (2<sup>16</sup>) of the total active stake per epoch, with a minimum of 128 ETH. Activations and exits share up to 256 ETH of it per epoch, and any churn above that goes to consolidations, where validators merge their balances. The limit intentionally prevents large destabilizing amounts of staked ETH from being withdrawn concurrently.
 
-As more validators withdraw, the maximum number of exiting validators will gradually be reduced to a minimum of four to intentionally prevent large destabilizing amounts of staked ETH from being withdrawn concurrently.
+The Glamsterdam upgrade is scheduled to change this again with [EIP-8061](/roadmap/glamsterdam/#increase-exit-and-consolidation-churn), which gives exits and consolidations separate, larger churn limits.
 
 ### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
 
