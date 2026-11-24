@@ -1,7 +1,6 @@
-import { getTranslations } from "next-intl/server"
-
 import { Link } from "@/i18n/navigation"
-import { buildNavigation, getNavSectionLinks } from "@/lib/nav/buildNavigation"
+import { getNavSectionLinks } from "@/lib/nav/buildNavigation"
+import { getNavigation } from "@/lib/nav/links"
 
 /**
  * Server-rendered hidden nav for search engine crawlability.
@@ -14,8 +13,7 @@ import { buildNavigation, getNavSectionLinks } from "@/lib/nav/buildNavigation"
  * response so crawlers can discover and follow them.
  */
 const CrawlableNav = async () => {
-  const t = await getTranslations("common")
-  const sections = buildNavigation(t)
+  const sections = await getNavigation()
 
   const allLinks = Object.values(sections).flatMap(getNavSectionLinks)
 

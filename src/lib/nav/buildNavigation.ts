@@ -6,9 +6,6 @@ import type {
 } from "@/components/Nav/types"
 
 import { getBreadcrumbTrail } from "@/lib/utils/breadcrumbs"
-import { isUpgradeShipped } from "@/lib/utils/upgrades"
-
-import { upgrades } from "@/data/upgrades"
 
 type TranslateFn = (key: string) => string
 
@@ -57,7 +54,8 @@ export const getNavSectionLinks = (
 
 /**
  * Upgrade pages, oldest first. The first one Forkcast doesn't show as live becomes
- * the next-upgrade card, so a fork shipping needs no edit; upcoming ones need a description.
+ * the next-upgrade card (`getNextUpgradeSlug`, run on the server), so a fork
+ * shipping needs no edit; upcoming ones need a description.
  */
 export const NAV_UPGRADES: {
   labelKey: string
@@ -84,14 +82,12 @@ export const NAV_UPGRADES: {
   },
 ]
 
-const isUpcoming = (slug?: string) => {
-  const upgrade = slug ? upgrades[slug] : undefined
-  return !!upgrade && !isUpgradeShipped(upgrade)
-}
-
-const nextUpgradeCard = (t: TranslateFn): NavFeatured | undefined => {
-  const next = NAV_UPGRADES.find(({ slug }) => isUpcoming(slug))
-  if (!next?.descriptionKey) return undefined
+const nextUpgradeCard = (
+  t: TranslateFn,
+  slug?: string
+): NavFeatured | undefined => {
+  const next = slug && NAV_UPGRADES.find((upgrade) => upgrade.slug === slug)
+  if (!next || !next.descriptionKey) return undefined
   return {
     eyebrow: t("nav-eyebrow-next-upgrade"),
     label: t(next.labelKey),
@@ -100,9 +96,16 @@ const nextUpgradeCard = (t: TranslateFn): NavFeatured | undefined => {
   }
 }
 
-// Item order within a group follows 90-day pageviews unless a reading order
-// (basics, upgrades by date) reads better.
-export const buildNavigation = (t: TranslateFn): NavSections => ({
+/**
+ * Item order within a group follows 90-day pageviews unless a reading order
+ * (basics, upgrades by date) reads better. `nextUpgradeSlug` picks the Roadmap
+ * card; client callers get it from the server, keeping the upgrade data out of
+ * their bundle.
+ */
+export const buildNavigation = (
+  t: TranslateFn,
+  nextUpgradeSlug?: string
+): NavSections => ({
   learn: {
     label: t("learn"),
     hub: {
@@ -123,7 +126,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => ({
         items: [
           { label: t("what-is-ethereum"), href: "/what-is-ethereum/" },
           { label: t("breadcrumb-what-is-ether"), href: "/what-is-ether/" },
-          { label: t("nav-what-is-web3-label"), href: "/web3/" },
+          { label: t("web3"), href: "/web3/" },
           { label: t("smart-contracts"), href: "/smart-contracts/" },
           { label: t("ethereum-vs-bitcoin"), href: "/ethereum-vs-bitcoin/" },
           {
@@ -138,6 +141,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => ({
         label: t("nav-how-ethereum-works-label"),
         items: [
           { label: t("layer-2"), href: "/layer-2/" },
+          { label: t("nav-l2-networks-label"), href: "/layer-2/networks/" },
           { label: t("bridges"), href: "/bridges/" },
           { label: t("gas"), href: "/gas/" },
           { label: t("run-a-node"), href: "/run-a-node/" },
@@ -188,7 +192,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => ({
       href: "/start/",
     },
     featured: {
-      eyebrow: t("nav-start-with-crypto-title"),
+      eyebrow: t("nav-eyebrow-most-popular"),
       label: t("nav-find-wallet-label"),
       description: t("nav-find-wallet-description"),
       href: "/wallets/find-wallet/",
@@ -321,7 +325,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => ({
       description: t("nav-roadmap-description"),
       href: "/roadmap/",
     },
-    featured: nextUpgradeCard(t),
+    featured: nextUpgradeCard(t, nextUpgradeSlug),
     groups: [
       {
         id: "roadmap/goals",

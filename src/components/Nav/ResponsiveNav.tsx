@@ -41,8 +41,11 @@ const ResponsiveNav = ({
   useIsomorphicLayoutEffect(() => {
     const container = containerRef.current
     if (!container) return
+    // A late callback from an earlier run would record this bar's width under the mode it captured
+    let cancelled = false
 
     const update = () => {
+      if (cancelled) return
       const measured = (widths.current[locale] ??= {})
       const bar = container.querySelector<HTMLElement>("[data-nav-bar]")
       if (bar && mode !== "mobile") {
@@ -67,7 +70,10 @@ const ResponsiveNav = ({
     const observer = new ResizeObserver(update)
     observer.observe(container)
     document.fonts?.ready.then(update)
-    return () => observer.disconnect()
+    return () => {
+      cancelled = true
+      observer.disconnect()
+    }
   }, [isLg, mode, locale])
 
   if (!isLg) return <div className="flex w-full justify-end">{mobile}</div>

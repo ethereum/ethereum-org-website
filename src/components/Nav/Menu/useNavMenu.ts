@@ -26,6 +26,9 @@ const CLOSE_DELAY_MS = 50
 const AIM_DELAY_MS = 120
 // A click landing just after a hover-open confirms the open instead of toggling it shut
 const HOVER_CLICK_GRACE_MS = 600
+// A section is reported once it has stayed open this long, so a sweep across an open menu
+// reports only the section the pointer settles on
+const OPEN_DWELL_MS = 300
 // Heading is judged over the last few pixels of travel
 const AIM_SAMPLE_PX = 12
 const TRAIL_MAX_POINTS = 64
@@ -77,9 +80,11 @@ export const useNavMenu = () => {
   const { direction } = useRtlFlip()
   const locale = useLocale()
   const pathname = usePathname() || ""
-  // Tied to the path it opened on, so navigating closes the menu
+  // Navigating closes the menu. The key is cleared, not just hidden for the new
+  // path, or Back/Forward to the page it opened on would reopen it.
   const [open, setOpen] = useState({ key: "", path: pathname })
-  const value = open.path === pathname ? open.key : ""
+  if (open.path !== pathname) setOpen({ key: "", path: pathname })
+  const value = open.key
   const isOpen = value !== ""
   const listRef = useRef<HTMLUListElement>(null)
   const viewportRef = useRef<HTMLDivElement>(null)
@@ -98,11 +103,16 @@ export const useNavMenu = () => {
 
   useEffect(() => {
     if (!value) return
-    trackCustomEvent({
-      eventCategory: "Desktop navigation menu",
-      eventAction: "Section changed",
-      eventName: `Open section: ${locale} - ${value}`,
-    })
+    const timer = setTimeout(
+      () =>
+        trackCustomEvent({
+          eventCategory: "Desktop navigation menu",
+          eventAction: "Section changed",
+          eventName: `Open section: ${locale} - ${value}`,
+        }),
+      OPEN_DWELL_MS
+    )
+    return () => clearTimeout(timer)
   }, [value, locale])
 
   useEffect(() => {

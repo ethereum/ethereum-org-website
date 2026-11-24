@@ -3,11 +3,12 @@ import { getTranslations } from "next-intl/server"
 import { SITE_URL } from "@/lib/constants"
 
 import { renderLegalSection, renderNavSection } from "@/lib/llms-txt/render"
-import { buildNavigation } from "@/lib/nav/buildNavigation"
+import { buildNavigation, getNavSectionLinks } from "@/lib/nav/buildNavigation"
 import {
   buildFooterDipperLinks,
   buildFooterLinkSections,
 } from "@/lib/nav/footerLinks"
+import { getNextUpgradeSlug } from "@/lib/nav/links"
 
 export const dynamic = "force-static"
 
@@ -25,22 +26,32 @@ const SECURITY = `## Security & Bug Bounty
 export const GET = async () => {
   const t = await getTranslations({ locale: "en", namespace: "common" })
 
-  const nav = buildNavigation(t)
+  const nav = buildNavigation(t, getNextUpgradeSlug())
   const footerSections = buildFooterLinkSections(t)
   const dipperLinks = buildFooterDipperLinks(t)
+  // A footer link any menu lists stays out of every section's "More"
+  const listed = new Set(
+    Object.values(nav)
+      .flatMap(getNavSectionLinks)
+      .map(({ href }) => href)
+  )
 
   const findFooter = (title: string) =>
     footerSections.find((s) => s.title === title)
 
   const body = [
     INTRO,
-    renderNavSection(nav.learn, findFooter(nav.learn.label)),
-    renderNavSection(nav.use, findFooter(nav.use.label)),
-    renderNavSection(nav.build, findFooter(nav.build.label)),
+    renderNavSection(nav.learn, findFooter(nav.learn.label), listed),
+    renderNavSection(nav.use, findFooter(nav.use.label), listed),
+    renderNavSection(nav.build, findFooter(nav.build.label), listed),
     // Footer columns still carry the previous menu's titles
-    renderNavSection(nav.roadmap, findFooter(t("research"))),
-    renderNavSection(nav.community, findFooter(t("participate"))),
-    renderNavSection(nav.organizations, findFooter(nav.organizations.label)),
+    renderNavSection(nav.roadmap, findFooter(t("research")), listed),
+    renderNavSection(nav.community, findFooter(t("participate")), listed),
+    renderNavSection(
+      nav.organizations,
+      findFooter(nav.organizations.label),
+      listed
+    ),
     SECURITY,
     renderLegalSection(dipperLinks),
     "",

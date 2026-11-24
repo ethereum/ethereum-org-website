@@ -10,6 +10,9 @@ import DesktopNav from "./DesktopNav"
 import { DesktopNavLoading, MobileNavLoading } from "./loading"
 import MobileNav from "./MobileNav"
 import ResponsiveNav from "./ResponsiveNav"
+import { NavigationProvider } from "./useNavigation"
+
+import { getNextUpgradeSlug } from "@/lib/nav/links"
 
 const Nav = async () => {
   const t = await getTranslations("common")
@@ -30,16 +33,18 @@ const Nav = async () => {
         </BaseLink>
 
         <div className="ms-3 flex w-full min-w-0 justify-end xl:ms-8">
-          <ClientOnly
-            fallback={
-              <>
-                <DesktopNavLoading />
-                <MobileNavLoading />
-              </>
-            }
-          >
-            <ResponsiveNav desktop={<DesktopNav />} mobile={<MobileNav />} />
-          </ClientOnly>
+          <NavigationProvider nextUpgradeSlug={getNextUpgradeSlug()}>
+            <ClientOnly
+              fallback={
+                <>
+                  <DesktopNavLoading />
+                  <MobileNavLoading />
+                </>
+              }
+            >
+              <ResponsiveNav desktop={<DesktopNav />} mobile={<MobileNav />} />
+            </ClientOnly>
+          </NavigationProvider>
         </div>
       </nav>
 

@@ -8,8 +8,6 @@ import { getFullUrl } from "@/lib/utils/url"
 
 import { readFrontmatterDescription } from "./frontmatter"
 
-import { getNavSectionLinks } from "@/lib/nav/buildNavigation"
-
 export type DocLink = {
   id: string
   href?: string
@@ -49,16 +47,21 @@ export const renderBullet = (
  *   - {group hub page, group items}
  *
  *   ### More
- *   - {footer items not already covered}
+ *   - {footer items no menu section lists}
  */
 export const renderNavSection = (
   section: NavSectionDetail,
-  footerSection: FooterLinkSection | undefined
+  footerSection: FooterLinkSection | undefined,
+  listedHrefs: Set<string>
 ): string => {
   const lines: string[] = [`## ${section.label}`, ""]
+  // The featured card may spotlight a page a group lists; list it once, in its group
+  const groupHrefs = new Set(
+    section.groups.flatMap(({ items }) => items.map(({ href }) => href))
+  )
 
   for (const leaf of [section.hub, section.featured]) {
-    if (!leaf) continue
+    if (!leaf || (leaf !== section.hub && groupHrefs.has(leaf.href))) continue
     lines.push(renderBullet(leaf.label, leaf.href, leaf.description, 0))
   }
   lines.push("")
@@ -75,10 +78,9 @@ export const renderNavSection = (
   }
 
   if (footerSection) {
-    const navHrefs = new Set(
-      getNavSectionLinks(section).map(({ href }) => href)
+    const extra = footerSection.links.filter(
+      (link) => !listedHrefs.has(link.href)
     )
-    const extra = footerSection.links.filter((link) => !navHrefs.has(link.href))
     if (extra.length > 0) {
       lines.push("### More", "")
       for (const link of extra) {
