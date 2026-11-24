@@ -35,6 +35,12 @@ export interface ForkcastUpgrade {
   activationDate: string | null
   activationDetails: ForkcastActivationDetails | null
   path: string | null
+  /**
+   * Upstream's own flag for "Forkcast renders no page for this fork". Its
+   * `path` is populated regardless, so this is the only thing separating a
+   * live page from a 404.
+   */
+  disabled: boolean
 }
 
 export interface ForkcastStatusEntry {
@@ -180,8 +186,17 @@ export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
     )
   }
 
+  // Stop at the array's close: later exports (e.g. `bpoUpgrades`) use the same
+  // record shape and would otherwise be read as network upgrades.
+  const close = source.slice(start).search(/\n\];?\s*(\n|$)/)
+  if (close === -1) {
+    throw new ForkcastSyncError(
+      "networkUpgrades array end not found in upgrades.ts"
+    )
+  }
+
   const blocks = source
-    .slice(start)
+    .slice(start, start + close)
     .split(/\n {2}\{\n/)
     .slice(1)
   if (!blocks.length) {
@@ -193,12 +208,17 @@ export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
       const m = block.match(new RegExp(`\\b${key}: '((?:[^'\\\\]|\\\\.)*)'`))
       return m ? m[1].replace(/\\'/g, "'") : null
     }
+    const bool = (key: string) =>
+      block.match(new RegExp(`\\b${key}: (true|false)`))?.[1] ?? null
+
     const id = str("id")
     const name = str("name")
     const status = str("status")
-    if (!id || !name || !status) {
+    // `disabled` is required upstream, so a missing one is drift, not a default.
+    const disabled = bool("disabled")
+    if (!id || !name || !status || disabled === null) {
       throw new ForkcastSyncError(
-        `Upgrade record missing id/name/status near: ${block.slice(0, 80)}`
+        `Upgrade record missing id/name/status/disabled near: ${block.slice(0, 80)}`
       )
     }
 
@@ -239,12 +259,16 @@ export const parseUpgrades = (source: string): ForkcastUpgrade[] => {
       id,
       name,
       status,
-      activationDate: str("activationDate"),
+      // Upstream writes "TBD" for an unannounced date; that is no date, not a
+      // parse failure.
+      activationDate:
+        str("activationDate") === "TBD" ? null : str("activationDate"),
       activationDetails:
         blockNumber !== null && epochNumber !== null && slotNumber !== null
           ? { blockNumber, epochNumber, slotNumber }
           : null,
       path: str("path"),
+      disabled: disabled === "true",
     } satisfies ForkcastUpgrade
   })
 }

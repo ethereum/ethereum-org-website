@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Bug-bounty leaderboard PRs: bounty-entry.yml validates and approves them; the AI reviewers skip them.
-#   match <pr>              print true if the author owns FILES in CODEOWNERS and the PR changes only FILES, else false;
-#                           exit non-zero if that can't be determined (needs REPO, GH_TOKEN)
+# Bug-bounty leaderboard PRs: pr-gate.mjs (lane bounty) validates and approves them; the AI reviewers skip them.
 #   validate <base> <head>  print what is wrong with FILES at git rev <head> compared to <base>; exit 1 if anything is
 # Sourcing it only defines FILES (JSON array).
 set -euo pipefail
@@ -11,16 +9,6 @@ FILES='["src/data/consensus-bounty-hunters.json", "src/data/execution-bounty-hun
 [[ "${BASH_SOURCE[0]}" == "$0" ]] || return 0
 
 case "${1:-}" in
-  match)
-    AUTHORS=$(awk '$1 == "/src/data/*-bounty-hunters.json" { for (i = 2; i <= NF; i++) print substr($i, 2) }' \
-      "$(dirname "${BASH_SOURCE[0]}")/../CODEOWNERS" | jq -Rsc 'split("\n") | map(select(. != "") | ascii_downcase)')
-    author=$(gh api "repos/$REPO/pulls/$2" --jq .user.login)
-    changed=$(gh api --paginate "repos/$REPO/pulls/$2/files" --jq '.[] | .filename, (.previous_filename // empty)')
-    [ "$AUTHORS" != "[]" ] || { echo "::error::No owners found for /src/data/*-bounty-hunters.json in CODEOWNERS" >&2; exit 1; }
-    jq -nr --arg author "$author" --arg changed "$changed" --argjson a "$AUTHORS" --argjson f "$FILES" '
-      [$changed | splits("\n") | select(. != "")] as $c
-      | ($author | ascii_downcase | IN($a[])) and ($c | length > 0) and all($c[]; IN($f[]))'
-    ;;
   validate)
     tmp=$(mktemp -d)
     trap 'rm -rf "$tmp"' EXIT
@@ -63,5 +51,5 @@ case "${1:-}" in
     done
     [ ${#errors[@]} -eq 0 ] || { printf '%s\n' "${errors[@]}"; exit 1; }
     ;;
-  *) echo "usage: $0 match <pr> | validate <base> <head>" >&2; exit 2 ;;
+  *) echo "usage: $0 validate <base> <head>" >&2; exit 2 ;;
 esac

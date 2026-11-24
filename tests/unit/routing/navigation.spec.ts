@@ -3,7 +3,9 @@ import path from "path"
 
 import { expect, test } from "@playwright/test"
 
-import { getUpgrade, hasActivated } from "@/data/upgrades"
+import { isUpgradeShipped } from "@/lib/utils/upgrades"
+
+import { upgrades } from "@/data/upgrades"
 
 import common from "@/intl/en/common.json"
 import {
@@ -67,9 +69,9 @@ test.describe("main navigation", () => {
   test("each upcoming upgrade can fill the next-upgrade card", () => {
     for (const { slug, descriptionKey } of NAV_UPGRADES) {
       if (!slug) continue
-      const upgrade = getUpgrade(slug)
-      expect(upgrade, `${slug} is in the Forkcast store`).not.toBeNull()
-      if (upgrade && !hasActivated(upgrade))
+      const upgrade = upgrades[slug]
+      expect(upgrade, `${slug} is in the Forkcast store`).toBeDefined()
+      if (upgrade && !isUpgradeShipped(upgrade))
         expect(!!descriptionKey && descriptionKey in messages, slug).toBe(true)
     }
   })

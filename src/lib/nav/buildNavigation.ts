@@ -6,8 +6,9 @@ import type {
 } from "@/components/Nav/types"
 
 import { getBreadcrumbTrail } from "@/lib/utils/breadcrumbs"
+import { isUpgradeShipped } from "@/lib/utils/upgrades"
 
-import { getUpgrade, hasActivated } from "@/data/upgrades"
+import { upgrades } from "@/data/upgrades"
 
 type TranslateFn = (key: string) => string
 
@@ -84,8 +85,8 @@ export const NAV_UPGRADES: {
 ]
 
 const isUpcoming = (slug?: string) => {
-  const upgrade = slug ? getUpgrade(slug) : null
-  return !!upgrade && !hasActivated(upgrade)
+  const upgrade = slug ? upgrades[slug] : undefined
+  return !!upgrade && !isUpgradeShipped(upgrade)
 }
 
 const nextUpgradeCard = (t: TranslateFn): NavFeatured | undefined => {

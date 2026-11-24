@@ -99,7 +99,7 @@ These use RISC-V based virtual machines to execute EVM bytecode, then generate Z
 
 zkEVM L1 verification connects with several other Ethereum roadmap items:
 
-- **[Verkle Trees](/roadmap/verkle-trees/)**: Enable smaller witnesses for stateless verification, reducing the data provers need to work with
+- **New state tree**: A unified binary tree ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), proposed in place of the earlier [Verkle tree](/roadmap/verkle-trees/) design, would enable smaller witnesses for stateless verification and is designed to be easier to prove
 - **[Statelessness](/roadmap/statelessness/)**: zkEVM is a key enabler—with ZK proofs of execution, nodes don't need full state to verify blocks
 - **[PBS](/roadmap/pbs/)**: Block builders could potentially integrate proof generation, or a separate prover market could emerge
 - **[Single Slot Finality](/roadmap/single-slot-finality/)**: Faster proof generation could enable single-slot finality with cryptographic guarantees
