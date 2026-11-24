@@ -417,3 +417,19 @@ test("follow-up marks an author-only pass as claimed", () => {
   const out = followupComment(next, prev, { author: "alice", followups: 0 })
   expect(out).toContain("- ☑️ Used")
 })
+
+test("a blocker whose criterion was reworded is dropped", () => {
+  const prev = rec({ "Open source code": "fail" })
+  expect(blockers(rec({ "Source code is public": "pass" }), prev)).toEqual([])
+})
+
+test("latest dates a reply against when a check was posted, not edited", () => {
+  const review = {
+    ...bot(
+      `<!-- ethorg-review: ${JSON.stringify({ listing: rec({ A: "pass" }) })} -->`,
+      1
+    ),
+    updated_at: "2026-11-29T00:00:00Z",
+  }
+  expect(latest([review]).posted).toBe("2026-11-21T00:00:00Z")
+})

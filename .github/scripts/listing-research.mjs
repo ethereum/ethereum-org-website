@@ -287,7 +287,7 @@ export function records(comments) {
       if (!record) return []
       const kind = m[1] === "review" ? "review" : record.kind || "research"
       const at = kind === "review" ? c.updated_at || c.created_at : c.created_at
-      return [{ id: c.id, at, kind, record }]
+      return [{ id: c.id, at, posted: c.created_at, kind, record }]
     } catch {
       return []
     }
@@ -301,6 +301,12 @@ export function latest(comments) {
   return {
     record: r.at(-1)?.record ?? null,
     at: r.at(-1)?.at ?? null,
+    // When the bot last posted a check; edits to the review comment don't count, so a reply before a re-review still gets a follow-up.
+    posted:
+      r
+        .map((x) => x.posted)
+        .sort()
+        .at(-1) ?? null,
     followups: r.filter((x) => x.kind === "followup").length,
   }
 }
@@ -766,6 +772,7 @@ export function blockers(r, prev) {
   const kept = blockingOf(prev).filter(
     (b) =>
       !now.some((x) => squash(x) === squash(b)) &&
+      status.has(squash(b)) &&
       status.get(squash(b)) !== "pass"
   )
   return [...now, ...kept]
@@ -894,7 +901,9 @@ async function submit(n, item) {
   const prior = latest(cs)
   const replied =
     prior.record &&
-    cs.some((c) => c.user?.login === i.user.login && c.created_at > prior.at)
+    cs.some(
+      (c) => c.user?.login === i.user.login && c.created_at > prior.posted
+    )
   if (replied && prior.followups >= MAX_FOLLOWUPS)
     return console.log(`#${n} reached ${MAX_FOLLOWUPS} follow-ups`)
   const r = await check({ ...item, pr: isPr ? n : "", issue: isPr ? "" : n })

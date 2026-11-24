@@ -54,7 +54,7 @@ on:
 if: needs.pre_activation.outputs.listing_result == 'success'
 # Only the author's replies share a group, so a newer reply replaces an older one and nobody else's comment cancels a run.
 concurrency:
-  group: "gh-aw-${{ github.workflow }}-${{ github.event.issue.number || inputs.item }}-${{ github.event.comment.user.login == github.event.issue.user.login && 'author' || github.run_id }}"
+  group: "gh-aw-${{ github.workflow }}-${{ github.event.issue.number || inputs.item }}-${{ github.event_name == 'issue_comment' && github.event.comment.user.login == github.event.issue.user.login && 'author' || github.run_id }}"
   cancel-in-progress: true
   job-discriminator: ${{ github.run_id }}
 permissions:
