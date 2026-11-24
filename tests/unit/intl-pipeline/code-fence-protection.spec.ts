@@ -289,6 +289,7 @@ test("gate flags a translated untagged fence", () => {
       check: "code-fence-content",
       detail: "fence 1 (`untagged`) body differs from English",
       severity: "error",
+      key: expect.any(String),
     },
   ])
 })

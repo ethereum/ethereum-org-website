@@ -53,6 +53,8 @@ The pipeline creates `intl/pending-{base}` on first run, commits translations to
 
 Do NOT rebase, squash, or force-push `intl/pending-{base}`. The pipeline depends on its history.
 
+Before dispatching a run over many files, dry-run it: check out `{base}` with `intl/pending-{base}` merged in (what the run itself starts from) and run `pnpm intl:identity-sweep --pairs`. It merges every pair whose English moved with the model replaced by the planner's own section bodies, then runs the sanitizer and gates, so a failure it lists fails on the real run whatever the model returns. It also lists the pairs that will fall back to full translation, the expensive part of a run, with the reason.
+
 ### SOV-language inline element reordering
 
 For Korean, Urdu, and other SOV (subject-object-verb) languages, inline elements (links, inline code, JSX components) often appear in REVERSE order vs. English. The pipeline's inert-propagation pass matches elements by **value**, not by position. Any logic that assumes positional order will silently corrupt those languages.
@@ -127,6 +129,7 @@ Before opening a PR that touches the pipeline:
 - [ ] Sanitizer test suite passes (`npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/`)
 - [ ] Pipeline test suite passes (`npx playwright test --project=unit tests/unit/intl-pipeline/`)
 - [ ] `pnpm intl:identity-sweep` reports 0 failing pages (normalizer, reconstruction, sanitizer or gate changes: English through the pipeline with an echo model must pass every gate)
+- [ ] `pnpm intl:identity-sweep --pairs` reports 0 failing pairs (incremental merge, routing or gate changes; run with `intl/pending-dev` merged in)
 - [ ] No hand-edits to `public/content/translations/` or `src/intl/{non-en}/` files
 - [ ] No manual changes to manifest files under `.manifests/`
 - [ ] If renaming workflow / config paths, all doc references updated (search for old names)

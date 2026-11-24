@@ -523,6 +523,21 @@ test.describe("buildSectionList", () => {
     )
   })
 
+  test("a section the locale lacks sends its heading for translation", () => {
+    // Nothing else translates a new section's heading: the reply carries body
+    // text only, so it used to land in the locale in English
+    const result = buildSectionList(
+      englishSections,
+      localeSections.slice(0, 2),
+      ["conclusion"]
+    )
+    const conclusion = result.find((s) => s.id === "conclusion")!
+    expect(conclusion.content).toBe(
+      "## Conclusion {#conclusion}\n\nEnglish conclusion."
+    )
+    expect(conclusion.headingText).toBeUndefined()
+  })
+
   test("CONTEXT sections use locale content", () => {
     const result = buildSectionList(englishSections, localeSections, [
       "details",

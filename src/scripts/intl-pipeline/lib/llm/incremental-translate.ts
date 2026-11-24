@@ -575,12 +575,17 @@ export function buildSectionList(
 
   for (const section of englishSections) {
     if (translateSet.has(section.id)) {
-      // Changed section: send English content for translation
+      // Changed section: send English content for translation. A section the
+      // locale doesn't have yet sends its heading as content too, so the reply
+      // carries a translated heading; nothing else would translate it.
+      const isNew = section.level > 0 && !localeMap.has(section.id)
       result.push({
         id: section.id,
         action: "TRANSLATE",
-        content: section.body,
-        headingText: section.headingText,
+        content: isNew
+          ? `${"#".repeat(section.level)} ${section.headingText} {#${section.id}}\n\n${section.body}`.trimEnd()
+          : section.body,
+        headingText: isNew ? undefined : section.headingText,
         level: section.level,
       })
     } else {
