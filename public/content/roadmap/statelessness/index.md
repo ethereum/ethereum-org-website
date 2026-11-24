@@ -65,7 +65,7 @@ Weak statelessness does involve changes to the way Ethereum nodes verify state c
 
 **In weak statelessness proposing blocks requires access to full state data but verifying blocks requires no state data**
 
-For this to happen, Ethereum clients must first adopt a new data structure for storing Ethereum state data that allows small "witnesses" to the data to be passed between peers and used to verify blocks instead of verifying blocks against local databases. The current proposal is a unified binary tree ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), which replaced an earlier [Verkle tree](/roadmap/verkle-trees/) design. [Proposer-builder separation](/roadmap/pbs/) is also required because this allows block builders to be specialized nodes with more powerful hardware, and those are the ones that require access to the full state data.
+For this to happen, Ethereum clients must first adopt a new data structure for storing Ethereum state data that allows small "witnesses" to the data to be passed between peers and used to verify blocks instead of verifying blocks against local databases. The current proposal is a partitioned binary tree ([EIP-8297](https://eips.ethereum.org/EIPS/eip-8297)), which replaced an earlier [Verkle tree](/roadmap/verkle-trees/) design. [Proposer-builder separation](/roadmap/pbs/) is also required because this allows block builders to be specialized nodes with more powerful hardware, and those are the ones that require access to the full state data.
 
 <ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
@@ -88,7 +88,7 @@ Strong statelessness has been investigated by researchers but is not currently e
 
 ## Current progress {#current-progress}
 
-Partial history expiry shipped in July 2025, letting execution clients drop the history from before The Merge. Weak statelessness, rolling history expiry and state expiry are still in the research phase and are expected to ship several years from now. There is no guarantee that all of these proposals will be implemented, for example, if state expiry is implemented first there may be no need to also implement history expiry. There are also other roadmap items, such as a new state tree (currently proposed as a binary tree in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) and [Proposer-builder separation](/roadmap/pbs) that need to be completed first.
+Partial history expiry shipped in July 2025, letting execution clients drop the history from before The Merge. Weak statelessness, rolling history expiry and state expiry are still in the research phase and are expected to ship several years from now. There is no guarantee that all of these proposals will be implemented, for example, if state expiry is implemented first there may be no need to also implement history expiry. There are also other roadmap items, such as a new state tree (currently proposed as a partitioned binary tree in [EIP-8297](https://eips.ethereum.org/EIPS/eip-8297)) and [Proposer-builder separation](/roadmap/pbs) that need to be completed first.
 
 ## Further reading {#further-reading}
 
