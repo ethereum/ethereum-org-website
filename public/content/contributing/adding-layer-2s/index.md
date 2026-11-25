@@ -20,10 +20,10 @@ Layer 2 is a relatively new and exciting paradigm for Ethereum. We've tried to c
 
 ### Criteria for inclusion: the must-haves {#criteria-for-inclusion-the-must-haves}
 
-**Listing on L2BEAT**
+**Listing on ETHBEAT**
 
-- In order to be considered, this project must be listed on [L2BEAT](https://l2beat.com). L2BEAT provides a robust risk assessment of layer 2 projects that we lean on for evaluating L2 projects. **If the project is not featured on L2BEAT, we will not list them as an L2 on ethereum.org.**
-- [Learn how to add your L2 project to L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- In order to be considered, this project must be listed on [ETHBEAT](https://ethbeat.org). ETHBEAT provides a robust risk assessment of layer 2 projects that we lean on for evaluating L2 projects. **If the project is not featured on ETHBEAT, we will not list them as an L2 on ethereum.org.**
+- [Learn how to add your L2 project to ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open source**
 

@@ -7,6 +7,7 @@ network:
     - etherscan.io
     - defillama.com
     - api.llama.fi
+    - ethbeat.org
     - l2beat.com
     - rekt.news
     - apps.apple.com
@@ -71,7 +72,7 @@ A request to list a third-party product, service or resource on ethereum.org. A 
 | Policy | Applies to | `must` | `nice` |
 |---|---|---|---|
 | adding-wallets | `src/data/wallets/**` | security-tested; live 6+ months or a reputable team; active team; honest, accurate listing; point of contact; EIP-1559 (type 2) transactions; good user experience; Ethereum-focused | globally accessible; multiple languages; open source; non-custodial; hardware wallets; WalletConnect; custom RPC; NFTs; dapp connection; staking; swaps; multichain; layer 2s; custom gas; ENS; ERC-20; buy crypto; sell for fiat; multisig; social recovery; support team; educational resources |
-| adding-layer-2s | `src/data/networks/**` | listed on L2BEAT; open source; optimistic or ZK rollup; Ethereum for data availability; bridges to onboard; live on Mainnet 6+ months; security tested; sustained user base; active team; working block explorer | exchange support; links to dapps; token contract lists; native wallet support |
+| adding-layer-2s | `src/data/networks/**` | listed on ETHBEAT; open source; optimistic or ZK rollup; Ethereum for data availability; bridges to onboard; live on Mainnet 6+ months; security tested; sustained user base; active team; working block explorer | exchange support; links to dapps; token contract lists; native wallet support |
 | adding-products | dapps | security-tested; live 6+ months; active team; honest, accurate listing | works with most listed wallets; users can try it; onboarding; non-custodial; globally accessible; open source; community |
 | adding-desci-projects | DeSci | open source code and data; demonstrably decentralized; honest, accurate listing; widens access to science; globally accessible; informative website and docs; part of the Ethereum ecosystem; fairly well established | multiple languages; educational resources; third-party audits; point of contact |
 | adding-resources | the `/resources` dashboard | honest, accurate listing; active project | — |

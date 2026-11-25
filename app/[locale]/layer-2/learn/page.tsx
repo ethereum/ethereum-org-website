@@ -308,7 +308,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-layer-2-learn-dyor-2")}</p>
             <ButtonLink
               data-flow="cta"
-              href="https://l2beat.com"
+              href="https://ethbeat.org"
               customEventOptions={{
                 eventCategory: "l2_learn",
                 eventAction: "button_click",

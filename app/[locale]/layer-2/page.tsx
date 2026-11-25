@@ -43,7 +43,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   ])
 
   if (!l2beatData) {
-    throw new Error("Failed to fetch L2beat data")
+    throw new Error("Failed to fetch ETHBEAT data")
   }
 
   if (!growThePieData) {

@@ -159,13 +159,13 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 #### Background reading {#background-reading-2}
 
 - [Introduction to layer 2](/layer-2/)
-- [L2BEAT: scaling summary](https://l2beat.com/scaling/summary)
+- [ETHBEAT: scaling summary](https://ethbeat.org/layer2s/summary)
 - [A rollup-centric ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Recent research {#recent-research-2}
 
 - [Ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: onchain costs](https://l2beat.com/scaling/costs)
+- [ETHBEAT: onchain costs](https://ethbeat.org/layer2s/costs)
 - [Building on Ethereum in 2026: what has changed](/latest/building-on-ethereum-in-2026/)
 
 ### Interoperability {#interoperability}
@@ -387,7 +387,7 @@ There is a need for more data analysis tools and dashboards that give detailed i
 
 - [Robust Incentives Group Data Analysis](https://rig.ethereum.org/)
 - [ethPandaOps open data](https://ethpandaops.io/data/)
-- [L2BEAT: scaling summary](https://l2beat.com/scaling/summary)
+- [ETHBEAT: scaling summary](https://ethbeat.org/layer2s/summary)
 
 ## Apps and tooling {#apps-and-tooling}
 

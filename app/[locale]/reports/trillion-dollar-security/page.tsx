@@ -569,7 +569,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     "page-trillion-dollar-security-section-3-1-paragraph-2",
                     {
                       a: (chunks) => (
-                        <Link href="https://l2beat.com/">{chunks}</Link>
+                        <Link href="https://ethbeat.org/">{chunks}</Link>
                       ),
                     }
                   )}
