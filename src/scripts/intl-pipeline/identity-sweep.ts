@@ -127,7 +127,7 @@ async function main() {
       { getDestinationFromPath },
       { MANIFESTS_DIR },
       { config, getExcludedReason },
-      { buildSectionList, extractSections },
+      { buildSectionList, extractJsonSections, extractSections },
       { extractCodeFencesOnly, restoreCodeBlocksStrict },
     ] = await Promise.all([
       import("./pipeline"),
@@ -139,19 +139,31 @@ async function main() {
       import("./lib/llm/code-block-extractor"),
     ])
 
-    // main.ts's markdown translator with the model taken out: the planner's
-    // section bodies, fences lifted and restored, so the sweep sees the section
-    // boundaries the real prompt uses rather than the merge's own.
-    const echo = (englishA: string, englishB: string, localeA: string) => {
+    // main.ts's translator with the model taken out: what the planner sends
+    // for each section (markdown fences lifted and restored), so the sweep sees
+    // the real prompt's sections and content rather than the merge's own.
+    const echo = (
+      englishA: string,
+      englishB: string,
+      localeA: string,
+      type: "markdown" | "json"
+    ) => {
+      const extract = type === "json" ? extractJsonSections : extractSections
       const lifted = new Map<string, ReturnType<typeof extractCodeFencesOnly>>()
-      const ids = getLlmSectionIds(englishA, englishB, "markdown")
+      const ids = getLlmSectionIds(englishA, englishB, type)
       for (const s of buildSectionList(
-        extractSections(englishB),
-        extractSections(localeA),
-        ids
+        extract(englishB),
+        extract(localeA),
+        ids,
+        type
       ))
         if (s.action === "TRANSLATE")
-          lifted.set(s.id, extractCodeFencesOnly(s.content || ""))
+          lifted.set(
+            s.id,
+            type === "json"
+              ? { prose: s.content || "", blocks: [] }
+              : extractCodeFencesOnly(s.content || "")
+          )
       return (id: string, fallback: string) => {
         const l = lifted.get(id)
         if (!l?.prose) return fallback
@@ -232,9 +244,7 @@ async function main() {
               englishB,
               localeA,
               type,
-              type === "markdown"
-                ? echo(englishA, englishB, localeA)
-                : (_, en) => en
+              echo(englishA, englishB, localeA, type)
             )
           )
         } catch (e) {
