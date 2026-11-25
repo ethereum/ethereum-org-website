@@ -5,10 +5,18 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 import type { CompletedQuizzes } from "@/lib/types"
 
 import { quizzesSections } from "@/data/quizzes"
-import quizStatsMock from "@/data-layer/mocks/fetch-quiz-stats.json"
 
 import QuizzesListComponent from "../QuizzesList"
-import { getPopularQuizIds } from "../utils"
+import { getPopularQuizIds, type QuizStatsByQuiz } from "../utils"
+
+// ethereum-vs-bitcoin is left out to show a row with no figures yet
+const quizStats: QuizStatsByQuiz = {
+  "what-is-ethereum": { averageScore: 72.5, timesTaken: 18369 },
+  "what-is-ether": { averageScore: 83.3, timesTaken: 9927 },
+  wallets: { averageScore: 75.3, timesTaken: 15461 },
+  "what-are-apps": { averageScore: 71.8, timesTaken: 407 },
+  web3: { averageScore: 73.3, timesTaken: 12900 },
+}
 
 /**
  * This story also renders the `QuizItem` component.
@@ -32,8 +40,8 @@ const meta = {
     },
     quizHandler: fn(),
     modalHandler: fn(),
-    quizStats: quizStatsMock.byQuiz,
-    popularQuizIds: getPopularQuizIds(quizStatsMock.byQuiz),
+    quizStats,
+    popularQuizIds: getPopularQuizIds(quizStats),
   },
 } satisfies Meta<typeof QuizzesListComponent>
 

@@ -5,7 +5,7 @@ import { fetchRetry } from "./fetchRetry"
 export interface QuizStatsEntry {
   /** Mean of the correct/incorrect event values, as a percentage */
   averageScore: number
-  /** Estimated runs over the trailing year; see PER_QUIZ_WINDOW_DAYS */
+  /** Estimated lifetime runs; see the median note in fetchQuizStats */
   timesTaken: number
 }
 
@@ -24,6 +24,8 @@ export interface QuizStatsData {
 /** Matomo Events API row (only the fields we read) */
 type MatomoEventRow = {
   label: string
+  /** Set on flattened secondaryDimension=eventName rows */
+  Events_EventName?: string
   nb_events: number
   sum_event_value?: number
 }
@@ -42,13 +44,6 @@ const RETRY_NAME = "Retry question"
 // from each quiz's question list. Questions shared by two quizzes -- currently
 // only wallets-3 -- count toward both.
 const QID_PREFIX = "QID: "
-
-// Matomo truncates the Event Names report to the top N names at archive time,
-// and the longer the window the harder it bites: over a lifetime range only the
-// busiest handful of QID rows survive, the rest fold into "Others". A trailing
-// year keeps every quiz. The site-wide figures above are unaffected -- they come
-// from Events.getAction, a small report that survives any range.
-const PER_QUIZ_WINDOW_DAYS = 365
 
 const median = (values: number[]): number => {
   const sorted = [...values].sort((a, b) => a - b)
@@ -72,28 +67,21 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
 
   console.log("Starting quiz stats fetch")
 
-  // Lifetime, so the site-wide figures read as "since the quizzes launched"
-  const LIFETIME = "2019-01-01,today"
-
-  const trailingYear = new Date(
-    Date.now() - PER_QUIZ_WINDOW_DAYS * 24 * 60 * 60 * 1000
-  )
-    .toISOString()
-    .slice(0, 10)
-
   const report = async (
     method: string,
-    date: string
+    extraParams: Record<string, string> = {}
   ): Promise<MatomoEventRow[]> => {
     const params = new URLSearchParams({
       module: "API",
       method,
       idSite: siteId,
       period: "range",
-      date,
+      // Lifetime totals, so the figures read as "since the quizzes launched"
+      date: "2019-01-01,today",
       filter_limit: "-1",
       format: "JSON",
       token_auth: apiToken,
+      ...extraParams,
     })
 
     const response = await fetchRetry(`${matomoUrl}/index.php?${params}`)
@@ -113,10 +101,18 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
     return rows
   }
 
-  const [actionRows, nameRows, recentNameRows] = await Promise.all([
-    report("Events.getAction", LIFETIME),
-    report("Events.getName", LIFETIME),
-    report("Events.getName", `${trailingYear},today`),
+  const [actionRows, nameRows, questionRowList] = await Promise.all([
+    report("Events.getAction"),
+    report("Events.getName"),
+    // Events.getName folds all but the top 500 names into "Others", which drops
+    // most QID rows. The "Question answered" action's name subtable is not
+    // truncated, so read it flattened and filtered to that action server-side.
+    report("Events.getAction", {
+      secondaryDimension: "eventName",
+      flat: "1",
+      filter_column: "label",
+      filter_pattern: `^${ANSWERED_ACTION} - ${QID_PREFIX}`,
+    }),
   ])
 
   const answered = actionRows.find((row) => row.label === ANSWERED_ACTION)
@@ -145,10 +141,16 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
   const retryRate = (retried.nb_events / questionsAnswered) * 100
 
   const questionRows = new Map(
-    recentNameRows
-      .filter((row) => row.label.startsWith(QID_PREFIX))
-      .map((row) => [row.label.slice(QID_PREFIX.length), row])
+    questionRowList.flatMap((row) =>
+      row.Events_EventName?.startsWith(QID_PREFIX)
+        ? [[row.Events_EventName.slice(QID_PREFIX.length), row] as const]
+        : []
+    )
   )
+
+  if (!questionRows.size) {
+    throw new Error(`No "${QID_PREFIX}" rows returned by Matomo`)
+  }
 
   const byQuiz: Record<string, QuizStatsEntry> = {}
 
@@ -174,8 +176,8 @@ export async function fetchQuizStats(): Promise<QuizStatsData> {
       // and any single question's count approximates the number of runs.
       // Median rather than sum (which just scales with question count), max (a
       // question borrowed by another quiz carries its traffic too -- security
-      // borrows wallets-3) or mean (dragged down by questions added part-way
-      // through the window).
+      // borrows wallets-3) or mean (dragged down by questions added after the
+      // quiz launched).
       timesTaken: median(rows.map((row) => row.nb_events)),
     }
   }

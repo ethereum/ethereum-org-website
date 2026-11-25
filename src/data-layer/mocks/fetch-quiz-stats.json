@@ -1,112 +1,36 @@
 {
-  "averageScore": 69.97565025808545,
-  "questionsAnswered": 1100217,
-  "retryRate": 24.691583569423123,
+  "averageScore": 70.09,
+  "questionsAnswered": 1153598,
+  "retryRate": 24.67,
   "byQuiz": {
     "what-is-ethereum": {
-      "averageScore": 72.5007,
-      "timesTaken": 13438
-    },
-    "what-is-ether": {
-      "averageScore": 78.1314,
-      "timesTaken": 7363
+      "averageScore": 72.5,
+      "timesTaken": 18369
     },
     "wallets": {
-      "averageScore": 72.7651,
-      "timesTaken": 10416
-    },
-    "what-are-apps": {
-      "averageScore": 61.3432,
-      "timesTaken": 165
+      "averageScore": 75.3,
+      "timesTaken": 15461
     },
     "web3": {
-      "averageScore": 74.833,
-      "timesTaken": 8722
+      "averageScore": 73.3,
+      "timesTaken": 12900
     },
-    "energy-consumption": {
-      "averageScore": 76.189,
-      "timesTaken": 724
-    },
-    "security": {
-      "averageScore": 77.5672,
-      "timesTaken": 3704
-    },
-    "privacy": {
-      "averageScore": 71.7565,
-      "timesTaken": 607
-    },
-    "zero-knowledge-proofs": {
-      "averageScore": 56.928,
-      "timesTaken": 590
-    },
-    "nfts": {
-      "averageScore": 82.4503,
-      "timesTaken": 2956
+    "what-is-ether": {
+      "averageScore": 83.3,
+      "timesTaken": 9927
     },
     "stablecoins": {
-      "averageScore": 69.2597,
-      "timesTaken": 4194
-    },
-    "defi": {
-      "averageScore": 81.6257,
-      "timesTaken": 1715
-    },
-    "daos": {
-      "averageScore": 70.3081,
-      "timesTaken": 1633
-    },
-    "payments": {
-      "averageScore": 72.2009,
-      "timesTaken": 979
-    },
-    "accounts": {
-      "averageScore": 69.8797,
-      "timesTaken": 651
+      "averageScore": 66.7,
+      "timesTaken": 5932
     },
     "smart-contracts": {
-      "averageScore": 61.2702,
-      "timesTaken": 2034
+      "averageScore": 62.6,
+      "timesTaken": 5025
     },
-    "transactions": {
-      "averageScore": 64.5463,
-      "timesTaken": 962
-    },
-    "blocks": {
-      "averageScore": 78.5873,
-      "timesTaken": 428
-    },
-    "gas": {
-      "averageScore": 58.8501,
-      "timesTaken": 939
-    },
-    "evm": {
-      "averageScore": 55.7895,
-      "timesTaken": 985
-    },
-    "bridges": {
-      "averageScore": 64.8568,
-      "timesTaken": 165
-    },
-    "layer-2": {
-      "averageScore": 61.8046,
-      "timesTaken": 1715
-    },
-    "run-a-node": {
-      "averageScore": 68.3845,
-      "timesTaken": 3144
-    },
-    "merge": {
-      "averageScore": 70.6717,
-      "timesTaken": 608
-    },
-    "staking-solo": {
-      "averageScore": 65.0356,
-      "timesTaken": 628
-    },
-    "scaling": {
-      "averageScore": 65.9098,
-      "timesTaken": 356
+    "zero-knowledge-proofs": {
+      "averageScore": 61.6,
+      "timesTaken": 124
     }
   },
-  "timestamp": 1786496764331
+  "timestamp": 1795595245513
 }
