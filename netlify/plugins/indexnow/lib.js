@@ -69,12 +69,19 @@ const fetchText = async (url) => {
 
 /**
  * URLs in the live sitemap, read through the sitemap index. Pass locales to
- * fetch only their shards (each is ~2MB).
+ * fetch only their shards (each is ~2MB); throws if one has no shard.
  */
 const fetchSitemapUrls = async (locales) => {
-  const shards = parseLocs(await fetchText(`${SITE_URL}/sitemap.xml`)).filter(
-    (shard) => !locales || locales.some((l) => shard.endsWith(`/${l}.xml`))
-  )
+  let shards = parseLocs(await fetchText(`${SITE_URL}/sitemap.xml`))
+  if (locales) {
+    const shardOf = (locale) =>
+      shards.find((shard) => shard.endsWith(`/${locale}.xml`))
+    const missing = locales.filter((locale) => !shardOf(locale))
+    if (missing.length) {
+      throw new Error(`sitemap index has no shard for ${missing.join(", ")}`)
+    }
+    shards = locales.map(shardOf)
+  }
   const urls = await Promise.all(
     shards.map(async (shard) => parseLocs(await fetchText(shard)))
   )

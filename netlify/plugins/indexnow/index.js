@@ -2,7 +2,7 @@
 // engines (Bing, Yandex, Naver, Seznam) which markdown pages changed.
 // onSuccess runs once the deploy is published, so engines fetch new content.
 
-const { execFileSync } = require("child_process")
+const childProcess = require("child_process")
 
 const {
   SITE_URL,
@@ -28,7 +28,7 @@ module.exports = {
     // (already live) deploy. It throws, so it's only called outside the try.
     let failure
     try {
-      const nameStatus = execFileSync(
+      const nameStatus = childProcess.execFileSync(
         "git",
         [
           "diff",
@@ -53,21 +53,29 @@ module.exports = {
       }
 
       const urls = [...live, ...removed]
-      if (!urls.length) return log("no changed pages")
-
-      const statuses = await submitUrls(urls, { log })
-      const summary = `${urls.length} URLs (HTTP ${statuses.join(", ")})`
-      if (statuses.every((status) => status === 200 || status === 202)) {
+      if (urls.length) {
+        const statuses = await submitUrls(urls, { log })
+        const summary = `${urls.length} URLs (HTTP ${statuses.join(", ")})`
+        // 403 = key file missing or mismatched
+        if (!statuses.every((status) => status === 200 || status === 202)) {
+          throw new Error(`rejected ${summary}`)
+        }
         utils.status.show({
           title: "IndexNow",
           summary: `Submitted ${summary}`,
         })
-      } else {
-        // 403 = key file missing or mismatched
-        failure = `IndexNow rejected ${summary}`
       }
+
+      // fileToUrl's URLs no longer match the sitemap's (renamed shards, slash
+      // format); without this every deploy would submit nothing, silently
+      if (changed.length && !live.length) {
+        throw new Error(
+          `none of ${changed.length} changed pages is in the sitemap, e.g. ${changed[0]}`
+        )
+      }
+      if (!urls.length) log("no changed pages")
     } catch (error) {
-      failure = `IndexNow failed: ${error.message}`
+      failure = `IndexNow: ${error.message}`
     }
     if (failure) utils.build.failPlugin(failure)
   },
