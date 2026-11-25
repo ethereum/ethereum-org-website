@@ -62,9 +62,9 @@
   ]
 
 # Previews build only a locale subset (other locales 404). All locales: staging, intl/* or full/* branches, or a "[full build]" commit message.
-# Keep the trailing `pnpm build && rm -rf .next/cache` in sync with [build].command.
+# Keep the trailing `pnpm learner-db:prepare && pnpm build && rm -rf .next/cache` in sync with [build].command.
 [context.deploy-preview]
-  command = 'case "$HEAD" in staging|intl/*|full/*) ;; *) git log -1 --format=%B | grep -qF "[full build]" || export NEXT_PUBLIC_BUILD_LOCALES=en,es,zh,ar,ja ;; esac; pnpm build && rm -rf .next/cache'
+  command = 'case "$HEAD" in staging|intl/*|full/*) ;; *) git log -1 --format=%B | grep -qF "[full build]" || export NEXT_PUBLIC_BUILD_LOCALES=en,es,zh,ar,ja ;; esac; pnpm learner-db:prepare && pnpm build && rm -rf .next/cache'
 
 # Override SITE_URL for named branches with custom subdomains so canonical
 # URLs and OG metadata use the custom domain instead of *.netlify.app.
