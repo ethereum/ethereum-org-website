@@ -2,11 +2,14 @@ import type { DiagramFigureText } from "@/lib/types"
 
 import { getAccountsValues } from "./Accounts/model"
 import { getAttestationsValues } from "./Attestations/model"
+import { getBaseFeeValues } from "./BaseFee/model"
 import { BLOCK_STATE_PRESET_IDS, getBlockStateValues } from "./BlockState/model"
 import { getEvmZonesValues } from "./EvmZones/model"
 import { getExAnteReorgValues } from "./ExAnteReorg/model"
 import { getGasEvmValues } from "./GasEvm/model"
+import { getGasperFinalityValues } from "./GasperFinality/model"
 import { getGasTxValues } from "./GasTx/model"
+import { getMerkleProofValues } from "./MerkleProof/model"
 import { getMevBoostValues } from "./MevBoost/model"
 import {
   getClientSetupValues,
@@ -15,6 +18,16 @@ import {
   getNodeClientsValues,
   getNodeNetworksValues,
 } from "./NodeClients/model"
+import {
+  getOptimisticRollupValues,
+  getZkRollupValues,
+} from "./OptimisticRollup/model"
+import {
+  getErasureCaptionValues,
+  getErasureValues,
+  getSubnetsValues,
+  LOSS_PRESET_IDS,
+} from "./PeerDas/model"
 import { getPortalHistoryValues } from "./PortalHistory/model"
 import { getSourceVerifyValues } from "./SourceVerify/model"
 import {
@@ -28,6 +41,7 @@ import {
   getKeyDerivationValues,
   getValidatorKeysValues,
 } from "./ValidatorKeys/model"
+import { getVerkleTreeValues } from "./VerkleTree/model"
 
 /**
  * Every markdown diagram tag as text, for the agent-facing markdown
@@ -49,6 +63,7 @@ export const DIAGRAM_FIGURE_TEXT = {
     prefix: "attestations",
     values: getAttestationsValues,
   },
+  BaseFeeDiagram: { prefix: "base-fee", values: getBaseFeeValues },
   BlockStateDiagram: {
     prefix: "block-state",
     values: (text) => getBlockStateValues(text),
@@ -61,14 +76,32 @@ export const DIAGRAM_FIGURE_TEXT = {
     prefix: "node-clients-setup",
     values: getClientSetupValues,
   },
+  ColumnSubnetsDiagram: {
+    prefix: "peer-das-subnets",
+    values: getSubnetsValues,
+  },
+  ErasureCodingDiagram: {
+    prefix: "peer-das-erasure",
+    values: (text) => getErasureValues(text),
+    captionValues: getErasureCaptionValues,
+    presets: LOSS_PRESET_IDS.map((id) => ({
+      label: `peer-das-erasure-preset-${id}`,
+      values: (text) => getErasureValues(text, id),
+    })),
+  },
   EvmZonesDiagram: { prefix: "evm-zones", values: getEvmZonesValues },
   ExAnteReorgDiagram: { prefix: "ex-ante-reorg", values: getExAnteReorgValues },
   GasEvmDiagram: { prefix: "gas-evm", values: getGasEvmValues },
   GasTxDiagram: { prefix: "gas-tx", values: getGasTxValues },
+  GasperFinalityDiagram: {
+    prefix: "gasper-finality",
+    values: getGasperFinalityValues,
+  },
   KeyDerivationDiagram: {
     prefix: "validator-keys-derive",
     values: getKeyDerivationValues,
   },
+  MerkleProofDiagram: { prefix: "merkle-proof", values: getMerkleProofValues },
   MevBoostDiagram: { prefix: "mev-boost", values: getMevBoostValues },
   NodeAccessDiagram: {
     prefix: "node-clients-access",
@@ -82,6 +115,10 @@ export const DIAGRAM_FIGURE_TEXT = {
   NodeNetworksDiagram: {
     prefix: "node-clients-networks",
     values: getNodeNetworksValues,
+  },
+  OptimisticRollupDiagram: {
+    prefix: "optimistic-rollup",
+    values: getOptimisticRollupValues,
   },
   PortalHistoryDiagram: {
     prefix: "portal-history",
@@ -112,4 +149,6 @@ export const DIAGRAM_FIGURE_TEXT = {
       values: (text) => getAsyncVaultValues(text, "lifecycle", id),
     })),
   },
+  VerkleTreeDiagram: { prefix: "verkle-tree", values: getVerkleTreeValues },
+  ZkRollupDiagram: { prefix: "zk-rollup", values: getZkRollupValues },
 } satisfies Record<string, DiagramFigureText>

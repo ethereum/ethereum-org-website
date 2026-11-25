@@ -12,6 +12,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
@@ -20,6 +21,7 @@ import { cn } from "@/lib/utils/cn"
 import {
   BIG_LEAVES,
   BIG_PROOF_SIZE,
+  getMerkleProofValues,
   getMerkleProofView,
   LEAVES,
   MERKLE_PROOF_LAST_STEP,
@@ -55,6 +57,7 @@ export function MerkleProofPlayer({
 }: MerkleProofPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<MerkleProofPresetId>(initialPreset)
@@ -114,12 +117,7 @@ export function MerkleProofPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("merkle-proof-caption")}
-      description={t("merkle-proof-description", {
-        ...params,
-        ...Object.fromEntries(
-          [1, 2, 3, 4, 5].map((n) => [`step${n}`, format(n)])
-        ),
-      })}
+      description={t("merkle-proof-description", getMerkleProofValues(text))}
       fig={fig}
       title={t("merkle-proof-title")}
       status={t(`merkle-proof-status-${view.key}`)}

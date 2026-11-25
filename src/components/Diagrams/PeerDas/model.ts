@@ -21,6 +21,8 @@
  * Fulu in consensus-specs #4393; sampling is custody sampling.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /* ---------- Erasure coding (polynomial) ---------- */
 
 /** viewBox of the erasure-coding drawing. */
@@ -355,3 +357,45 @@ export const getSubnetsView = (
     samplingSize,
   }
 }
+
+/** Values the erasure figure's caption and description quote. */
+export const getErasureValues = (
+  { number, steps }: DiagramText,
+  presetId: LossPresetId = "data"
+) => ({
+  total: number(SLOT_COUNT),
+  original: number(NEEDED_POINTS),
+  extra: number(SLOT_COUNT - NEEDED_POINTS),
+  needed: number(NEEDED_POINTS),
+  lost: number(LOSSES[presetId].length),
+  blob: number(BLOB_VALUES),
+  extended: number(EXTENDED_BLOB_VALUES),
+  ...steps(ERASURE_LAST_STEP),
+})
+
+/** Values the subnets figure's caption and description quote. */
+export const getSubnetsValues = ({ number, steps }: DiagramText) => ({
+  drawn: number(DRAWN_COLUMNS),
+  columns: number(NUMBER_OF_COLUMNS),
+  perDrawn: number(COLUMNS_PER_DRAWN),
+  blobs: number(BLOB_ROWS),
+  subnets: number(SUBNET_COUNT),
+  // Subnet ids, not quantities: left unformatted.
+  first: "0",
+  last: String(SUBNET_COUNT - 1),
+  custody: number(CUSTODY_REQUIREMENT),
+  validatorCustody: number(VALIDATOR_CUSTODY_REQUIREMENT),
+  perGroup: number(ETH_PER_CUSTODY_GROUP),
+  balance: number(SUPERNODE_BALANCE_ETH),
+  minimum: number(SAMPLES_PER_SLOT),
+  half: number(RECONSTRUCT_COLUMNS),
+  ...steps(SUBNETS_LAST_STEP),
+})
+
+/** The erasure caption's values: its `{original}` is the real blob's count. */
+export const getErasureCaptionValues = ({ number }: DiagramText) => ({
+  needed: number(NEEDED_POINTS),
+  total: number(SLOT_COUNT),
+  original: number(BLOB_VALUES),
+  extended: number(EXTENDED_BLOB_VALUES),
+})

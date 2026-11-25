@@ -26,6 +26,8 @@
  *   which the page states; the figure only mentions it.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const GASPER_FINALITY_SIZE = { width: 480, height: 256 }
 
@@ -162,3 +164,13 @@ export const getGasperFinalityView = (
     key: step === 0 ? "idle" : `${linkFormed ? "justify" : "stall"}-${phase}`,
   }
 }
+
+/** Values the figure's description quotes; epoch names are notation. */
+export const getGasperFinalityValues = ({ number }: DiagramText) => ({
+  first: EPOCH_NAMES[0],
+  last: EPOCH_NAMES[GASPER_FINALITY_LAST_STEP],
+  earlier: EARLIER_EPOCH,
+  slots: number(SLOTS_PER_EPOCH),
+  seconds: number(SECONDS_PER_SLOT),
+  leak: number(LEAK_EPOCHS),
+})

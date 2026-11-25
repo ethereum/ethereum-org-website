@@ -12,10 +12,12 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
+  getZkRollupValues,
   getZkRollupView,
   ZK_ROLLUP_LAST_STEP,
   ZK_ROLLUP_PARTS,
@@ -50,6 +52,7 @@ export function ZkRollupPlayer({
 }: ZkRollupPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<ZkRollupPresetId>(initialPreset)
@@ -94,10 +97,7 @@ export function ZkRollupPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("zk-rollup-caption")}
-      description={t(
-        "zk-rollup-description",
-        Object.fromEntries([1, 2, 3, 4, 5].map((n) => [`step${n}`, format(n)]))
-      )}
+      description={t("zk-rollup-description", getZkRollupValues(text))}
       fig={fig}
       title={t("zk-rollup-title")}
       status={t(`zk-rollup-status-${view.key}`)}

@@ -13,6 +13,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 import { Button } from "@/components/ui/buttons/Button"
@@ -29,8 +30,7 @@ import {
   type BaseFeePresetId,
   type BaseFeeView,
   BLOCK_COUNT,
-  GAS_LIMIT,
-  GAS_TARGET,
+  getBaseFeeValues,
   getBaseFeeView,
   MAX_CHANGE,
   UNITS,
@@ -66,6 +66,7 @@ export function BaseFeePlayer({
   const t = useTranslations("component-diagrams")
   const locale = useLocale()
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
   const editLabelId = useId()
 
@@ -155,15 +156,8 @@ export function BaseFeePlayer({
   return (
     <InteractiveDiagram
       className={className}
-      caption={t("base-fee-caption", { max: fmt.percent(MAX_CHANGE) })}
-      description={t("base-fee-description", {
-        blocks: format(BLOCK_COUNT),
-        limit: format(GAS_LIMIT),
-        target: format(GAS_TARGET),
-        start: fmt.gwei(BASE_FEE_START_WEI.spike / 1e9),
-        coolingStart: fmt.gwei(BASE_FEE_START_WEI.cooling / 1e9),
-        max: fmt.percent(MAX_CHANGE),
-      })}
+      caption={t("base-fee-caption", getBaseFeeValues(text))}
+      description={t("base-fee-description", getBaseFeeValues(text))}
       fig={fig}
       title={t("base-fee-title")}
       status={t(`base-fee-status-${view.key}`, valuesFor(view))}

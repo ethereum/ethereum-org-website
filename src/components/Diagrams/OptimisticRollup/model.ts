@@ -24,6 +24,8 @@
  *   honest side's.
  */
 
+import type { DiagramText } from "@/lib/types"
+
 /** viewBox of the drawing. */
 export const OPTIMISTIC_ROLLUP_SIZE = { width: 500, height: 320 }
 
@@ -339,3 +341,16 @@ export const getZkRollupView = (
 }
 
 export type RollupView = OptimisticRollupView | ZkRollupView
+
+/** Values the optimistic figure's description quotes. */
+export const getOptimisticRollupValues = ({ number, steps }: DiagramText) => ({
+  days: number(WINDOW_DAYS),
+  challengeDay: number(CHALLENGE_DAY),
+  steps: number(TRACE_STEPS),
+  rounds: number(BISECTION_ROUNDS),
+  ...steps(OPTIMISTIC_ROLLUP_LAST_STEP),
+})
+
+/** Values the ZK figure's description quotes. */
+export const getZkRollupValues = ({ steps }: DiagramText) =>
+  steps(ZK_ROLLUP_LAST_STEP)

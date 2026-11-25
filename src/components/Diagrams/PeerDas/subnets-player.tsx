@@ -13,15 +13,15 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
-  BLOB_ROWS,
   COLUMNS_PER_DRAWN,
   CUSTODY_REQUIREMENT,
-  DRAWN_COLUMNS,
   ETH_PER_CUSTODY_GROUP,
+  getSubnetsValues,
   getSubnetsView,
   MISSING_DRAWN,
   NODE_IDS,
@@ -63,6 +63,7 @@ export function ColumnSubnetsPlayer({
   const t = useTranslations("component-diagrams")
   const locale = useLocale()
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [nodeId, setNodeId] = useState<NodeId>(initialPreset)
@@ -129,28 +130,8 @@ export function ColumnSubnetsPlayer({
   return (
     <InteractiveDiagram
       className={className}
-      caption={t("peer-das-subnets-caption", {
-        drawn: format(DRAWN_COLUMNS),
-        columns: format(NUMBER_OF_COLUMNS),
-      })}
-      description={t("peer-das-subnets-description", {
-        drawn: format(DRAWN_COLUMNS),
-        columns: format(NUMBER_OF_COLUMNS),
-        perDrawn: format(COLUMNS_PER_DRAWN),
-        blobs: format(BLOB_ROWS),
-        subnets: format(SUBNET_COUNT),
-        first: "0",
-        last: String(SUBNET_COUNT - 1),
-        custody: format(CUSTODY_REQUIREMENT),
-        validatorCustody: format(VALIDATOR_CUSTODY_REQUIREMENT),
-        perGroup: format(ETH_PER_CUSTODY_GROUP),
-        balance: format(SUPERNODE_BALANCE_ETH),
-        minimum: format(SAMPLES_PER_SLOT),
-        half: format(RECONSTRUCT_COLUMNS),
-        step1: format(1),
-        step2: format(2),
-        step3: format(3),
-      })}
+      caption={t("peer-das-subnets-caption", getSubnetsValues(text))}
+      description={t("peer-das-subnets-description", getSubnetsValues(text))}
       fig={fig}
       title={t("peer-das-subnets-title")}
       status={t(`peer-das-subnets-status-${view.motion}`, {

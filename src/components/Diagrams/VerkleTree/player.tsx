@@ -13,34 +13,20 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
 import {
-  C1_RANGE,
-  C2_RANGE,
-  EXAMPLE_SUFFIX,
-  EXTENSION_MARKER,
+  getVerkleTreeValues,
   getVerkleTreeView,
-  HALF_BYTES,
-  MERKLE_LEVELS,
-  MERKLE_SIBLINGS,
-  MERKLE_SIBLINGS_PER_LEVEL,
   MERKLE_WIDTH,
-  NIBBLE_BITS,
-  SAFE_BITS,
-  STEM_BYTES,
-  VALUE_BITS,
-  VALUE_BYTES,
-  VERKLE_COMMITMENTS,
-  VERKLE_LEVELS,
   VERKLE_TREE_PARTS,
   VERKLE_TREE_PRESET_IDS,
   VERKLE_WIDTH,
   verkleTreeLastStep,
   type VerkleTreePart,
   type VerkleTreePresetId,
-  WITNESS_BYTES,
 } from "./model"
 import VerkleTreeRig from "./rig"
 
@@ -69,6 +55,7 @@ export function VerkleTreePlayer({
 }: VerkleTreePlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState<VerkleTreePresetId>(initialPreset)
@@ -85,32 +72,7 @@ export function VerkleTreePlayer({
   )
 
   // Every number the strings show, formatted for the locale.
-  const params = useMemo(
-    () => ({
-      width: format(VERKLE_WIDTH),
-      merkleWidth: format(MERKLE_WIDTH),
-      nibbleBits: format(NIBBLE_BITS),
-      marker: format(EXTENSION_MARKER),
-      stemBytes: format(STEM_BYTES),
-      suffix: format(EXAMPLE_SUFFIX),
-      c1From: format(C1_RANGE[0]),
-      c1To: format(C1_RANGE[1]),
-      c2From: format(C2_RANGE[0]),
-      c2To: format(C2_RANGE[1]),
-      valueBytes: format(VALUE_BYTES),
-      halfBytes: format(HALF_BYTES),
-      valueBits: format(VALUE_BITS),
-      safeBits: format(SAFE_BITS),
-      levels: format(VERKLE_LEVELS),
-      merkleLevels: format(MERKLE_LEVELS),
-      commitments: format(VERKLE_COMMITMENTS),
-      siblings: format(MERKLE_SIBLINGS_PER_LEVEL),
-      total: format(MERKLE_SIBLINGS),
-      verkleBytes: format(WITNESS_BYTES.verkle),
-      merkleKb: format(WITNESS_BYTES.merkle),
-    }),
-    [format]
-  )
+  const params = useMemo(() => getVerkleTreeValues(text), [text])
 
   const { labels, definitions, parts } = useMemo(() => {
     const labels: Partial<Record<VerkleTreePart, string>> = {}
@@ -141,12 +103,7 @@ export function VerkleTreePlayer({
     <InteractiveDiagram
       className={className}
       caption={t("verkle-tree-caption")}
-      description={t("verkle-tree-description", {
-        ...params,
-        ...Object.fromEntries(
-          [1, 2, 3, 4, 5].map((n) => [`step${n}`, format(n)])
-        ),
-      })}
+      description={t("verkle-tree-description", params)}
       fig={fig}
       title={t("verkle-tree-title")}
       status={t(`verkle-tree-status-${view.key}`)}

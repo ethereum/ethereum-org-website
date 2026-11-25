@@ -13,6 +13,7 @@ import {
   DiagramTransport,
   InteractiveDiagram,
   useDiagramFormat,
+  useDiagramText,
 } from "@/components/Diagrams/interactive-diagram"
 import { useStepPlayer } from "@/components/Diagrams/use-step-player"
 
@@ -28,6 +29,7 @@ import {
   type GasperFinalityPart,
   type GasperFinalityPresetId,
   type GasperFinalityView,
+  getGasperFinalityValues,
   getGasperFinalityView,
   LEAK_EPOCHS,
   SECONDS_PER_SLOT,
@@ -72,6 +74,7 @@ export function GasperFinalityPlayer({
 }: GasperFinalityPlayerProps) {
   const t = useTranslations("component-diagrams")
   const format = useDiagramFormat()
+  const text = useDiagramText()
   const percent = usePercentFormat()
   const inView = useDiagramInView<HTMLDivElement>()
 
@@ -143,10 +146,10 @@ export function GasperFinalityPlayer({
     <InteractiveDiagram
       className={className}
       caption={t("gasper-finality-caption")}
-      description={t("gasper-finality-description", {
-        ...shared,
-        last: EPOCH_NAMES[GASPER_FINALITY_LAST_STEP],
-      })}
+      description={t(
+        "gasper-finality-description",
+        getGasperFinalityValues(text)
+      )}
       fig={fig}
       title={t("gasper-finality-title")}
       status={t(`gasper-finality-status-${statusKey}`, valuesFor(view))}
