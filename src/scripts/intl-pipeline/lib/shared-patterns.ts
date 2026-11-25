@@ -136,6 +136,18 @@ export function fenceLanguage(infoString: string): string {
 // ---------------------------------------------------------------------------
 
 /**
+ * Opening and closing tag of an extracted `<Tag ...>children</Tag>`. The closer
+ * is the element's own trailing tag, never the first one among its children.
+ */
+export function wrapperTags(
+  original: string
+): { open: string; close: string } | null {
+  const open = original.match(/^<[A-Za-z][\w.-]*(?:\s[^>]*)?>/)
+  const close = original.match(/<\/[A-Za-z][\w.-]*>(?=\s*$)/)
+  return open && close ? { open: open[0], close: close[0] } : null
+}
+
+/**
  * Matches JSX/HTML-style attributes with quoted values.
  * Handles both double and single quotes, with escape sequences.
  *
