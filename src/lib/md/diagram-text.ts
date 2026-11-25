@@ -1,6 +1,6 @@
 import { createTranslator } from "next-intl"
 
-import type { DiagramFigureText, DiagramText } from "@/lib/types"
+import type { AgentTagText, DiagramFigureText, DiagramText } from "@/lib/types"
 
 import { numberFormat } from "@/lib/utils/numbers"
 
@@ -51,7 +51,7 @@ export const diagramTextFromMessages = (
  * its label.
  */
 export const diagramFigureText = (
-  { prefix, values, presets }: DiagramFigureText,
+  { prefix, values, captionValues, presets }: DiagramFigureText,
   fig: number,
   text: DiagramText
 ) => {
@@ -65,7 +65,7 @@ export const diagramFigureText = (
   )
   return [
     `**Figure ${text.number(fig)}: ${text.t(`${prefix}-title`, v)}.**`,
-    text.t(`${prefix}-caption`, v),
+    text.t(`${prefix}-caption`, captionValues?.(text) ?? v),
     ...(shared
       ? [descriptions[0].description]
       : descriptions.map(
@@ -74,72 +74,30 @@ export const diagramFigureText = (
   ].join("\n\n")
 }
 
-const FENCE = /^\s*(`{3,}|~{3,})/
-const INLINE_CODE = /(`+).*?\1/g
-const DIAGRAM_TAG = /<[A-Z]\w*Diagram\b/
-// Same tags `remarkFigureNumbers` numbers: flow elements named `*Diagram`.
-const FIGURE_LINE =
-  /^(\s*)<([A-Z]\w*Diagram)(?:\s+fig=(?:\{(\d+)\}|"(\d+)"))?\s*\/>\s*$/
-const RELATIVE_URL = /(\]\(<?|^\s*\[[^\]]+\]:\s*<?|\bsrc=["'])(\.\.?\/)/g
-
 /**
- * The markdown an agent reads in place of `markdown`: each diagram tag
- * becomes its figure as text, numbered like the page, and relative links
- * point into `dir` (the source's public directory, e.g.
- * `/content/developers/docs/gas/`), since the copy is served from elsewhere.
- * Throws on a tag it can't resolve, so a build never ships one.
+ * Each diagram tag as agent text in one locale. With `fallback`, a figure
+ * whose strings fail in this locale (a stale argument, a broken plural) is
+ * written from the fallback text instead, and `onFallback` hears why.
  */
-export const toAgentMarkdown = (
-  markdown: string,
-  {
-    dir,
-    figures,
-    text,
-  }: {
-    dir: string
-    figures: Record<string, DiagramFigureText>
+export const diagramAgentTags = (
+  figures: Record<string, DiagramFigureText>,
+  text: DiagramText,
+  fallback?: {
     text: DiagramText
+    onFallback: (tag: string, error: Error) => void
   }
-) => {
-  let fence = ""
-  let n = 0
-  return markdown
-    .split("\n")
-    .map((line, i) => {
-      const marker = line.match(FENCE)?.[1]
-      if (fence) {
-        if (marker?.[0] === fence[0] && marker.length >= fence.length)
-          fence = ""
-        return line
-      }
-      if (marker) {
-        fence = marker
-        return line
-      }
-      const rebased = line.replace(
-        RELATIVE_URL,
-        (_, lead: string, rel: string) =>
-          lead + new URL(rel, `https://x${dir}`).pathname
-      )
-      if (!DIAGRAM_TAG.test(line.replace(INLINE_CODE, ""))) return rebased
-
-      const match = line.match(FIGURE_LINE)
-      if (!match)
-        throw new Error(
-          `line ${i + 1}: a diagram tag must stand alone on its line, with no props but fig: ${line.trim()}`
-        )
-      const [, indent, name, figExpr, figString] = match
-      n += 1
-      const figure = figures[name]
-      if (!figure)
-        throw new Error(
-          `line ${i + 1}: <${name} /> has no entry in DIAGRAM_FIGURE_TEXT`
-        )
-      const fig = Number(figExpr ?? figString ?? n)
-      return diagramFigureText(figure, fig, text)
-        .split("\n")
-        .map((out) => (out ? indent + out : out))
-        .join("\n")
-    })
-    .join("\n")
-}
+): Record<string, AgentTagText> =>
+  Object.fromEntries(
+    Object.entries(figures).map(([tag, figure]) => [
+      tag,
+      (fig: number) => {
+        try {
+          return diagramFigureText(figure, fig, text)
+        } catch (error) {
+          if (!fallback) throw error
+          fallback.onFallback(tag, error as Error)
+          return diagramFigureText(figure, fig, fallback.text)
+        }
+      },
+    ])
+  )

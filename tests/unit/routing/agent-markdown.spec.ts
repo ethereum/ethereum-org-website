@@ -7,18 +7,18 @@ import { expect, test } from "@playwright/test"
 import { DIAGRAM_FIGURE_TEXT } from "@/components/Diagrams/figure-text"
 
 import en from "@/intl/en/component-diagrams.json"
+import { toAgentMarkdown } from "@/lib/md/agent-markdown"
 import {
+  diagramAgentTags,
   diagramFigureText,
   diagramTextFromMessages,
-  toAgentMarkdown,
 } from "@/lib/md/diagram-text"
 
 const text = diagramTextFromMessages("en", en)
 const resolve = (markdown: string) =>
   toAgentMarkdown(markdown, {
     dir: "/content/developers/docs/gas/",
-    figures: DIAGRAM_FIGURE_TEXT,
-    text,
+    tags: diagramAgentTags(DIAGRAM_FIGURE_TEXT, text),
   })
 
 test("every diagram tag reads in full, with every value filled", () => {
@@ -72,8 +72,7 @@ test("numbers follow the locale", () => {
   const ur = diagramTextFromMessages("ur", en)
   const out = toAgentMarkdown("<GasEvmDiagram fig={2} />", {
     dir: "/content/translations/ur/developers/docs/gas/",
-    figures: DIAGRAM_FIGURE_TEXT,
-    text: ur,
+    tags: diagramAgentTags(DIAGRAM_FIGURE_TEXT, ur),
   })
   expect(out).toContain("**Figure ۲:")
   expect(out).toContain("۲۱٬۰۰۰")
@@ -106,7 +105,7 @@ test("relative links point back at the source's directory", () => {
 })
 
 test("an unknown tag, an unsupported form or a missing value fails", () => {
-  expect(() => resolve("<NewDiagram />")).toThrow(/no entry/)
+  expect(() => resolve("<NewDiagram />")).toThrow(/no agent text entry/)
   expect(() => resolve("<GasTxDiagram initialPreset='x' />")).toThrow(
     /stand alone/
   )
@@ -114,23 +113,69 @@ test("an unknown tag, an unsupported form or a missing value fails", () => {
   expect(() =>
     toAgentMarkdown("<GasEvmDiagram />", {
       dir: "/content/",
-      figures: { GasEvmDiagram: { prefix: "gas-evm", values: () => ({}) } },
-      text,
+      tags: diagramAgentTags(
+        { GasEvmDiagram: { prefix: "gas-evm", values: () => ({}) } },
+        text
+      ),
     })
   ).toThrow(/intrinsic/)
   expect(() =>
     toAgentMarkdown("<AsyncVaultDiagram />", {
       dir: "/content/",
-      figures: {
-        AsyncVaultDiagram: {
-          ...DIAGRAM_FIGURE_TEXT.AsyncVaultDiagram,
-          presets: [
-            ...DIAGRAM_FIGURE_TEXT.AsyncVaultDiagram.presets,
-            { label: "token-vault-preset-mint", values: () => ({}) },
-          ],
+      tags: diagramAgentTags(
+        {
+          AsyncVaultDiagram: {
+            ...DIAGRAM_FIGURE_TEXT.AsyncVaultDiagram,
+            presets: [
+              ...DIAGRAM_FIGURE_TEXT.AsyncVaultDiagram.presets,
+              { label: "token-vault-preset-mint", values: () => ({}) },
+            ],
+          },
         },
-      },
-      text,
+        text
+      ),
     })
   ).toThrow(/step1|requestFn/)
+})
+
+test("a figure whose translation fails falls back to English, with a warning", () => {
+  const de = diagramTextFromMessages("de", {
+    ...en,
+    "gas-evm-description": "Vorher {renamed} Gas.",
+    "gas-tx-caption": "{broken, plural, one {x}",
+  })
+  const warned: string[] = []
+  const out = toAgentMarkdown(
+    [
+      "<GasEvmDiagram />",
+      "",
+      "<GasTxDiagram />",
+      "",
+      "<AccountsDiagram />",
+    ].join("\n"),
+    {
+      dir: "/content/translations/de/developers/docs/gas/",
+      tags: diagramAgentTags(DIAGRAM_FIGURE_TEXT, de, {
+        text,
+        onFallback: (tag) => warned.push(tag),
+      }),
+    }
+  )
+  expect(warned).toEqual(["GasEvmDiagram", "GasTxDiagram"])
+  expect(out).toContain("intrinsic cost of 21,000 gas")
+  expect(out).toContain("**Figure 3:")
+  expect(() =>
+    toAgentMarkdown("<GasEvmDiagram />", {
+      dir: "/content/",
+      tags: diagramAgentTags(DIAGRAM_FIGURE_TEXT, de),
+    })
+  ).toThrow()
+})
+
+test("a caption can take its own values", () => {
+  const out = resolve("<ErasureCodingDiagram />")
+  expect(out).toContain(
+    "Real blobs do the same with 4,096 values extended to 8,192"
+  )
+  expect(out).toContain("one of the 4 data values")
 })

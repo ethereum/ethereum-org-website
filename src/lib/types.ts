@@ -1547,6 +1547,14 @@ export interface DiagramFigureText {
   prefix: string
   /** Every value its title, caption and description quote. */
   values: (text: DiagramText) => DiagramValues
+  /** The caption's values, when an argument means something else there. */
+  captionValues?: (text: DiagramText) => DiagramValues
   /** Scenarios whose description values differ: each preset's label key and values. */
   presets?: { label: string; values: (text: DiagramText) => DiagramValues }[]
 }
+
+/**
+ * How an MDX tag reads in the agent-facing markdown, given its figure number
+ * on the page (diagrams only). Throws when it can't be written.
+ */
+export type AgentTagText = (fig: number) => string
