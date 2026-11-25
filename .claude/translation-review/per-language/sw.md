@@ -1,5 +1,10 @@
 # Swahili (sw) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: `angalau` (at least) for at-most in attestations inclusion delay, ada za kipaumbele, wathibitishaji plural, minyororo ya vitalu, ukataji, mchepuko. Open: relay Rilei vs wapeanaji, honest as halali.
+
 ## PR #18772 (community-stories.json, 2026-07-10) -- 9.1/10
 - CRIT fixed: passive-voice agency reversal in story-casio: "benki zote zilikataliwa maombi yangu" (banks WERE denied) -> "benki zote zilikataa maombi yangu" (banks denied my applications). Passive constructions are an inversion vector -- check polarity of passive renderings on every sw import.
 - WARN: "took for granted" -> "tulivichukulia poa" (considered them cool) weakens the idiom (story-yamille).

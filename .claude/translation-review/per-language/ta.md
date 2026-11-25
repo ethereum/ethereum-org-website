@@ -1,5 +1,10 @@
 # Tamil (ta) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.5/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: attestation description, tip, equivocation, slash, checkpoint, deploy (nilainirutthu) in 7 JSON keys, plus placeholder swaps missed by the review agent (peer-das caption, verkle). Open: 25 mev headings reverted to English (needs pipeline re-run), key terminology vicai/thiravukol.
+
 > **PR:** #18353 (stablecoins-2026-redesign, page-stablecoins.json)
 > **Date:** 2026-06-05
 > **Quality Score:** 9.4/10

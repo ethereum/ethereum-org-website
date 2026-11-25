@@ -1,5 +1,10 @@
 # Traditional Chinese (zh-tw) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: zhixing kehuduan, shicao, lie/lan inversion on peerdas page (7 lines), peer-das caption swap, gossip as liuyan xieding. Open: mainland vocabulary (yunxing, miyao), nin/ni split, head touwu vs dingduan.
+
 > **PR:** #18344 (latest/ builder blog, 3 posts)
 > **Date:** 2026-06-03
 > **Quality Score:** 9.5/10

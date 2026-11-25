@@ -1,6 +1,6 @@
 ---
 title: Drzewa Verkle
-description: Opis wysokiego poziomu drzew Verkle i tego, jak zostaną wykorzystane do aktualizacji Ethereum
+description: "Opis wysokiego poziomu drzew Verkle i tego, jak zostaną wykorzystane do aktualizacji Ethereum"
 lang: pl
 template: roadmap
 summaryPoints:
@@ -38,9 +38,9 @@ Rozmiar świadka różni się w zależności od liczby liści, które obejmuje. 
 
 ## Jaka jest struktura drzewa Verkle? {#what-is-the-structure-of-a-verkle-tree}
 
-Drzewa Verkle to pary `(key,value)`, w których klucze są 32-bajtowymi elementami złożonymi z 31-bajtowego _rdzenia_ (stem) i jednobajtowego _sufiksu_. Klucze te są zorganizowane w węzły _rozszerzeń_ (extension nodes) i węzły _wewnętrzne_ (inner nodes). Węzły rozszerzeń reprezentują pojedynczy rdzeń dla 256 dzieci z różnymi sufiksami. Węzły wewnętrzne również mają 256 dzieci, ale mogą to być inne węzły rozszerzeń. Główną różnicą między strukturą drzewa Verkle a drzewa Merklego jest to, że drzewo Verkle jest znacznie bardziej płaskie, co oznacza, że istnieje mniej węzłów pośrednich łączących liść z korzeniem, a zatem potrzeba mniej danych do wygenerowania dowodu.
+Drzewa Verkle to pary `(key,value)`, w których klucze są 32-bajtowymi elementami składającymi się z 31-bajtowego _rdzenia_ i jednobajtowego _sufiksu_. Klucze te są zorganizowane w węzły _rozszerzeń_ i węzły _wewnętrzne_. Węzły rozszerzeń reprezentują pojedynczy rdzeń dla 256 dzieci z różnymi sufiksami. Węzły wewnętrzne również mają 256 dzieci, ale mogą to być inne węzły rozszerzeń. Główną różnicą między strukturą drzewa Verkle a strukturą drzewa Merklego jest to, że drzewo Verkle jest znacznie bardziej płaskie, co oznacza, że istnieje mniej węzłów pośrednich łączących liść z korzeniem, a zatem potrzeba mniej danych do wygenerowania dowodu.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Przeczytaj więcej o strukturze drzew Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

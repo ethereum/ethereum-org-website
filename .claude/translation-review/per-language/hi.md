@@ -1,5 +1,10 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.3/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, checkpoint, builder, deploy (tainat), accounts contract regression (anubandh). Open: kadam vs charan, dashed rendered as dharashayi, derive rendered as prapt karen.
+
 (Earlier findings from PR #17101 live in known-patterns.md.)
 
 ## PR #18772 (community-stories.json, 2026-07-10) -- 8.2/10

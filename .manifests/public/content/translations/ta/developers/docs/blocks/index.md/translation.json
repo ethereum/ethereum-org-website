@@ -1,15 +1,13 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ta",
-  "translatedAt": "2026-06-16T21:52:04.100Z",
-  "englishManifestHash": "1ab3ddd23cb7",
+  "translatedAt": "2026-11-17T08:26:40.611Z",
+  "englishManifestHash": "0265e80377b5",
   "placeholderOrder": [
     "LINK-60076a",
     "LINK-8efafa",
     "LINK-cd977e",
     "LINK-a21a82",
-    "IMAGE-0ffab3",
-    "LINK-fb70b4",
     "LINK-cf2e5c",
     "CODE-655883",
     "CODE-c156a0",
@@ -358,12 +356,6 @@
         "content": "validatorIndex"
       }
     },
-    "IMAGE-0ffab3": {
-      "type": "image",
-      "values": {
-        "path": "./tx-block.png"
-      }
-    },
     "LINK-60076a": {
       "type": "link",
       "values": {
@@ -386,12 +378,6 @@
       "type": "link",
       "values": {
         "url": "/"
-      }
-    },
-    "LINK-fb70b4": {
-      "type": "link",
-      "values": {
-        "url": "https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"
       }
     },
     "LINK-cf2e5c": {
@@ -421,7 +407,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-16T21:52:04.100Z",
+      "translatedAt": "2026-11-17T08:26:40.611Z",
       "status": "success"
     }
   }

@@ -1,5 +1,10 @@
 # Russian (ru) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: ekvivokaciya, sleshing. Open: seed rendered as seed-phrase and derive as vyvesti in key-derivation diagram, head four ways, decimal comma.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 8.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values` + full `scaling/plasma/index.md` retranslation.
 

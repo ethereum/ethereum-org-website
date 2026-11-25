@@ -1,5 +1,10 @@
 # Simplified Chinese (zh) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.7/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, shuangqian for equivocation, youxianfei. Open: di N bu vs buzhou N, plate three ways, custody tuoguan vs baoguan.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10

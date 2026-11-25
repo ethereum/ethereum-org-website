@@ -1,5 +1,10 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption placeholder swap, gas inline code, attestation/equivocation/fork-choice/consensus-client forms, withdrawal/signing/builder across the diagram JSON. Open: stray BiDi isolates in networking-layer and peerdas frontmatter, detached postpositions.
+
 ## PR #18772 (community-stories.json, 2026-07-10) -- 9.4/10
 - CRIT fixed: "Web2" left Latin in story-sebastian -> ওয়েব২ per ETHGlossary (web2 => ওয়েব২). Watch web2/web3 script split: glossary transliterates web2 but keeps Web3 Latin.
 - WARN: "transfer" rendered both ট্রান্সফার and হস্তান্তর within story-nico-bolivia (glossary: হস্তান্তর; ট্রান্সফার common in speech).

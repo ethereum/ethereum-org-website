@@ -13,16 +13,15 @@ Gas là yếu tố thiết yếu đối với mạng lưới [Ethereum](/). Nó 
 
 ## Gas là gì? {#what-is-gas}
 
-Gas là đơn vị đo lường lượng nỗ lực tính toán cần thiết để thực thi các hoạt động cụ thể trên mạng lưới Ethereum.
+Gas đề cập đến đơn vị đo lường lượng nỗ lực tính toán cần thiết để thực thi các hoạt động cụ thể trên mạng lưới Ethereum.
 
-Vì mỗi giao dịch Ethereum yêu cầu tài nguyên tính toán để thực thi, những tài nguyên đó phải được trả phí để đảm bảo Ethereum không dễ bị spam và không bị mắc kẹt trong các vòng lặp tính toán vô hạn. Việc thanh toán cho tính toán được thực hiện dưới dạng phí gas.
+Vì mỗi giao dịch Ethereum yêu cầu tài nguyên tính toán để thực thi, những tài nguyên đó phải được trả phí để đảm bảo Ethereum không dễ bị spam và không thể bị mắc kẹt trong các vòng lặp tính toán vô hạn. Việc thanh toán cho tính toán được thực hiện dưới dạng phí gas.
 
-Phí gas là **lượng gas được sử dụng để thực hiện một số hoạt động, nhân với chi phí cho mỗi đơn vị gas**. Phí này được thanh toán bất kể giao dịch thành công hay thất bại.
+Phí gas là **lượng gas được sử dụng để thực hiện một số hoạt động, nhân với chi phí cho mỗi đơn vị gas**. Phí này được trả bất kể giao dịch thành công hay thất bại.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Sơ đồ được phỏng theo [Minh họa EVM của Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-Phí gas phải được thanh toán bằng tiền tệ gốc của Ethereum, ether (ETH). Giá gas thường được báo giá bằng Gwei, là một mệnh giá của ETH. Mỗi Gwei bằng một phần tỷ của một ETH (0.000000001 ETH hoặc 10<sup>-9</sup> ETH).
+Phí gas phải được trả bằng tiền tệ gốc của Ethereum, ether (ETH). Giá gas thường được báo giá bằng Gwei, là một mệnh giá của ETH. Mỗi Gwei bằng một phần tỷ của một ETH (0.000000001 ETH hoặc 10<sup>-9</sup> ETH).
 
 Ví dụ, thay vì nói rằng gas của bạn có giá 0.000000001 ether, bạn có thể nói gas của bạn có giá 1 Gwei.
 
@@ -101,12 +100,11 @@ Bạn có thể nêu rõ số tiền bạn sẵn sàng trả để giao dịch c
 
 ## Tại sao phí gas lại tồn tại? {#why-do-gas-fees-exist}
 
-Tóm lại, phí gas giúp giữ cho mạng lưới Ethereum an toàn. Bằng cách yêu cầu một khoản phí cho mỗi tính toán được thực thi trên mạng lưới, chúng tôi ngăn chặn những kẻ xấu spam mạng lưới. Để tránh các vòng lặp vô hạn do vô tình hoặc cố ý hoặc các sự lãng phí tính toán khác trong mã, mỗi giao dịch được yêu cầu thiết lập một giới hạn về số lượng bước tính toán của việc thực thi mã mà nó có thể sử dụng. Đơn vị tính toán cơ bản là "Gas".
+Nói ngắn gọn, phí gas giúp giữ cho mạng lưới Ethereum an toàn. Bằng cách yêu cầu một khoản phí cho mỗi tính toán được thực thi trên mạng lưới, chúng tôi ngăn chặn những kẻ xấu spam mạng lưới. Để tránh các vòng lặp vô hạn do vô tình hoặc cố ý hoặc các lãng phí tính toán khác trong mã, mỗi giao dịch được yêu cầu thiết lập một giới hạn về số bước tính toán của việc thực thi mã mà nó có thể sử dụng. Đơn vị tính toán cơ bản là "Gas".
 
-Mặc dù một giao dịch bao gồm một giới hạn, bất kỳ lượng gas nào không được sử dụng trong một giao dịch đều được trả lại cho người dùng (ví dụ: `max fee - (base fee + tip)` được trả lại).
+Mặc dù một giao dịch bao gồm một giới hạn, bất kỳ lượng gas nào không được sử dụng trong một giao dịch sẽ được trả lại cho người dùng (ví dụ: `max fee - (base fee + tip)` được trả lại).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Sơ đồ được phỏng theo [Minh họa EVM của Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Giới hạn gas là gì? {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ Mở rộng quy mô lớp 2 (l2) là một sáng kiến chính để cải thi�
 
 ## Theo dõi phí gas {#monitoring-gas-fees}
 
-Nếu bạn muốn theo dõi giá gas để có thể gửi ETH của mình với chi phí thấp hơn, bạn có thể sử dụng nhiều công cụ khác nhau như:
+Nếu bạn muốn theo dõi giá gas, để bạn có thể gửi ETH của mình với chi phí thấp hơn, bạn có thể sử dụng nhiều công cụ khác nhau như:
 
 - [Etherscan](https://etherscan.io/gastracker) _Công cụ ước tính giá gas giao dịch_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Công cụ ước tính giá gas giao dịch mã nguồn mở_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Theo dõi giá gas Ethereum và L2 để giảm phí giao dịch và tiết kiệm tiền_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Tiện ích mở rộng Chrome ước tính gas hỗ trợ cả giao dịch cũ Loại 0 và giao dịch Loại 2 EIP-1559._
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Theo dõi và giám sát giá gas Ethereum và lớp 2 (l2) để giảm phí giao dịch và tiết kiệm tiền_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Tính toán phí gas bằng nội tệ của bạn cho các loại giao dịch khác nhau trên Mạng chính, Arbitrum và Polygon._
-
-## Các công cụ liên quan {#related-tools}
-
-- [Nền tảng Gas của Blocknative](https://www.blocknative.com/gas) _API ước tính gas được cung cấp bởi nền tảng dữ liệu mempool toàn cầu của Blocknative_
-- [Gas Network](https://gas.network) Oracle Gas trên chuỗi. Hỗ trợ hơn 35 chuỗi. 
 
 ## Đọc thêm {#further-reading}
 

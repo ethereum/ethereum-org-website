@@ -4,13 +4,13 @@ description: "Uma explicação das chaves usadas no mecanismo de consenso de Pro
 lang: pt-br
 ---
 
-O Ethereum protege os ativos dos usuários usando criptografia de chave pública e privada. A chave pública é usada como base para um endereço Ethereum — ou seja, é visível para o público em geral e usada como um identificador único. A chave privada (ou 'secreta') deve ser acessível apenas ao proprietário da conta. A chave privada é usada para 'assinar' transações e dados para que a criptografia possa provar que o titular aprova alguma ação de uma chave privada específica.
+O Ethereum protege os ativos dos usuários usando criptografia de chave pública e privada. A chave pública é usada como base para um endereço Ethereum — ou seja, é visível para o público em geral e usada como um identificador exclusivo. A chave privada (ou 'secreta') deve ser acessível apenas ao proprietário da conta. A chave privada é usada para 'assinar' transações e dados para que a criptografia possa provar que o titular aprova alguma ação de uma chave privada específica.
 
 As chaves do Ethereum são geradas usando [criptografia de curva elíptica](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
-No entanto, quando o Ethereum mudou da [Prova de Trabalho (PoW)](/developers/docs/consensus-mechanisms/pow) para a [Prova de Participação (PoS)](/developers/docs/consensus-mechanisms/pos), um novo tipo de chave foi adicionado ao Ethereum. As chaves originais ainda funcionam exatamente como antes — não houve alterações nas chaves baseadas em curva elíptica que protegem as contas. No entanto, os usuários precisavam de um novo tipo de chave para participar da Prova de Participação (PoS) fazendo staking de ETH e executando validadores. Essa necessidade surgiu de desafios de escalabilidade associados a muitas mensagens passando entre um grande número de validadores, o que exigia um método criptográfico que pudesse ser facilmente agregado para reduzir a quantidade de comunicação necessária para que a rede chegasse a um consenso.
+No entanto, quando o Ethereum mudou da [Prova de Trabalho (PoW)](/developers/docs/consensus-mechanisms/pow) para a [Prova de Participação (PoS)](/developers/docs/consensus-mechanisms/pos), um novo tipo de chave foi adicionado ao Ethereum. As chaves originais ainda funcionam exatamente da mesma forma que antes — não houve alterações nas chaves baseadas em curva elíptica que protegem as contas. No entanto, os usuários precisavam de um novo tipo de chave para participar da Prova de Participação (PoS) fazendo staking de ETH e executando validadores. Essa necessidade surgiu de desafios de escalabilidade associados a muitas mensagens passando entre um grande número de validadores, o que exigia um método criptográfico que pudesse ser facilmente agregado para reduzir a quantidade de comunicação necessária para que a rede chegasse a um consenso.
 
-Esse novo tipo de chave usa o [esquema de assinatura **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). O BLS permite uma agregação muito eficiente de assinaturas, mas também permite a engenharia reversa de chaves de validadores individuais agregadas e é ideal para gerenciar ações entre validadores.
+Esse novo tipo de chave usa o [esquema de assinatura **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). As assinaturas BLS de muitos validadores podem ser agregadas em uma única assinatura que é verificada em uma única verificação, o que mantém as mensagens de consenso pequenas. O BLS não é seguro contra computadores quânticos, portanto, o [roteiro pós-quântico](/roadmap/security/quantum-resistance/) planeja substituir as chaves BLS do validador por chaves baseadas em hash.
 
 ## Os dois tipos de chaves de validador {#two-types-of-keys}
 
@@ -37,39 +37,39 @@ A **chave pública do validador** é incluída nos dados da transação quando u
 
 ### Credenciais de saque {#withdrawal-credentials}
 
-Todo validador tem uma propriedade conhecida como _credenciais de saque_. O primeiro byte deste campo de 32 bytes identifica o tipo de conta: `0x00` representa as credenciais BLS originais (pré-Shapella, não sacáveis), `0x01` representa credenciais legadas que apontam para um endereço de execução e `0x02` representa o tipo moderno de credencial composta.
+Todo validador tem uma propriedade conhecida como _credenciais de saque_. O primeiro byte deste campo de 32 bytes identifica o tipo de conta: `0x00` representa credenciais BLS legadas (pré-Shapella, não sacáveis), `0x01` representa credenciais legadas que apontam para um endereço de execução e `0x02` representa o tipo moderno de credencial de composição.
 
-Validadores com chaves BLS `0x00` devem atualizar essas credenciais para apontar para um endereço de execução a fim de ativar pagamentos de saldo excedente ou o saque total do staking. Isso pode ser feito fornecendo um endereço de execução nos dados de depósito durante a geração inicial da chave, _OU_ usando a chave de saque posteriormente para assinar e transmitir uma mensagem `BLSToExecutionChange`.
+Validadores com chaves BLS `0x00` devem atualizar essas credenciais para apontar para um endereço de execução a fim de ativar pagamentos de saldo excedente ou o saque total do staking. Isso pode ser feito fornecendo um endereço de execução nos dados de depósito durante a geração inicial da chave, _OU_ usando a chave de saque posteriormente para assinar e transmitir uma mensagem `BLSToExecutionChange`. Propostas para eliminar gradualmente as credenciais `0x00` antes da transição pós-quântica estão em discussão, portanto, os validadores que ainda usam `0x00` devem fazer a conversão agora.
 
-[Mais sobre credenciais de saque de validador](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
+[Mais sobre credenciais de saque do validador](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
 ### A chave de saque {#withdrawal-key}
 
-A chave de saque será exigida para atualizar as credenciais de saque para apontar para um endereço de execução, se não for definida durante o depósito inicial. Isso permitirá que os pagamentos de saldo excedente comecem a ser processados e também permitirá que os usuários saquem totalmente seu ETH em staking.
+A chave de saque será exigida para atualizar as credenciais de saque para apontar para um endereço de execução, caso não tenha sido definida durante o depósito inicial. Isso permitirá que os pagamentos de saldo excedente comecem a ser processados e também permitirá que os usuários saquem totalmente seu ETH em staking.
 
 Assim como as chaves de validador, as chaves de saque também consistem em dois componentes:
 
 - Chave **privada** de saque
 - Chave **pública** de saque
 
-Perder esta chave antes de atualizar as credenciais de saque para o tipo `0x01` significa perder o acesso ao saldo do validador. O validador ainda pode assinar atestações e blocos, pois essas ações exigem a chave privada do validador, no entanto, há pouco ou nenhum incentivo se as chaves de saque forem perdidas.
+Perder essa chave antes de atualizar as credenciais de saque para o tipo `0x01` significa perder o acesso ao saldo do validador. O validador ainda pode assinar atestações e blocos, pois essas ações exigem a chave privada do validador, no entanto, há pouco ou nenhum incentivo se as chaves de saque forem perdidas.
 
-Separar as chaves de validador das chaves da conta Ethereum permite que vários validadores sejam executados por um único usuário.
+Separar as chaves de validador das chaves da conta Ethereum permite que vários validadores sejam executados por um único usuário. Com credenciais `0x02`, um validador pode reter até 2.048 ETH, de modo que um stake maior não precisa mais ser dividido entre muitos validadores.
 
-![validator key schematic](validator-key-schematic.png)
+<ValidatorKeysDiagram />
 
-**Nota**: Sair das funções de staking e sacar o saldo de um validador atualmente exige a assinatura de uma [mensagem de saída voluntária (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) com a chave do validador. No entanto, a [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) é uma proposta que permitirá que um usuário acione a saída de um validador e saque seu saldo assinando mensagens de saída com a chave de saque no futuro. Isso reduzirá as premissas de confiança ao permitir que os stakers que delegam ETH para [provedores de staking como serviço](/staking/saas/#what-is-staking-as-a-service) permaneçam no controle de seus fundos.
+**Nota**: Um validador pode sair assinando uma [mensagem de saída voluntária (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) com a chave de validador. Desde a atualização Pectra, a [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) também permite que o endereço de saque acione a saída de um validador e saques parciais para validadores `0x02`. Isso reduz as premissas de confiança ao permitir que os stakers que delegam ETH para [provedores de staking como serviço](/staking/saas/#what-is-staking-as-a-service) permaneçam no controle de seus fundos.
 
 ## Derivando chaves de uma frase semente {#deriving-keys-from-seed}
 
-Se cada 32 ETH em staking exigisse um novo conjunto de 2 chaves completamente independentes, o gerenciamento de chaves rapidamente se tornaria inviável, especialmente para usuários que executam vários validadores. Em vez disso, várias chaves de validador podem ser derivadas de um único segredo comum e armazenar esse único segredo permite o acesso a várias chaves de validador.
+Se cada 32 ETH em staking exigisse um novo conjunto de 2 chaves completamente independentes, o gerenciamento de chaves rapidamente se tornaria inviável, especialmente para usuários que executam vários validadores. Em vez disso, várias chaves de validador podem ser derivadas de um único segredo comum e o armazenamento desse único segredo permite o acesso a várias chaves de validador.
 
-[Mnemônicos](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) e caminhos são recursos proeminentes que os usuários frequentemente encontram quando [acessam](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) suas carteiras. O mnemônico é uma sequência de palavras que atua como uma semente inicial para uma chave privada. Quando combinado com dados adicionais, o mnemônico gera um hash conhecido como 'chave mestra'. Isso pode ser pensado como a raiz de uma árvore. Os ramos dessa raiz podem então ser derivados usando um caminho hierárquico para que os nós filhos possam existir como combinações do hash de seu nó pai e seu índice na árvore. Leia sobre os padrões [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) e [BIP-19](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) para geração de chaves baseada em mnemônicos.
+[Mnemônicos](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) e caminhos são recursos proeminentes que os usuários frequentemente encontram quando [acessam](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) suas carteiras. O mnemônico é uma sequência de palavras que atua como uma semente inicial para uma chave privada. Quando combinado com dados adicionais, o mnemônico gera um hash conhecido como 'chave mestra'. Isso pode ser pensado como a raiz de uma árvore. Os ramos dessa raiz podem então ser derivados usando um caminho hierárquico para que os nós filhos possam existir como combinações do hash de seu nó pai e seu índice na árvore. Leia sobre os padrões [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) e [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) para geração de chaves baseadas em mnemônicos.
 
-Esses caminhos têm a seguinte estrutura, que será familiar aos usuários que interagiram com carteiras de hardware:
+Esses caminhos têm a seguinte estrutura, que será familiar para usuários que interagiram com carteiras de hardware:
 
 ```
-m/44'/60'/0'/0`
+m/44'/60'/0'/0
 ```
 
 As barras neste caminho separam os componentes da chave privada da seguinte forma:
@@ -81,7 +81,7 @@ master_key / purpose / coin_type / account / change / address_index
 Essa lógica permite que os usuários anexem o maior número possível de validadores a uma única **frase mnemônica** porque a raiz da árvore pode ser comum e a diferenciação pode acontecer nos ramos. O usuário pode **derivar qualquer número de chaves** da frase mnemônica.
 
 ```
-[m / 0]
+      [m / 0]
      /
     /
 [m] - [m / 1]
@@ -90,9 +90,9 @@ Essa lógica permite que os usuários anexem o maior número possível de valida
       [m / 2]
 ```
 
-Cada ramo é separado por uma `/` então `m/2` significa começar com a chave mestra e seguir o ramo 2. No esquema abaixo, uma única frase mnemônica é usada para armazenar três chaves de saque, cada uma com dois validadores associados.
+Cada ramo é separado por um `/`, então `m/2` significa começar com a chave mestra e seguir o ramo 2. As chaves de validador seguem a [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334): o validador `i` obtém sua chave de saque em `m/12381/3600/i/0` e sua chave de assinatura em `m/12381/3600/i/0/0` (12381 identifica a curva BLS12-381, 3600 o tipo de moeda para chaves da camada de consenso).
 
-![validator key logic](multiple-keys.png)
+<KeyDerivationDiagram />
 
 ## Leitura adicional {#further-reading}
 

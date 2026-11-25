@@ -1,5 +1,10 @@
 # Japanese (ja) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in 5 JSON keys (validator-keys, peer-das caption/subnets, verkle), consensus client, fork choice, equivocation. Open: BLS key pair wording, colon style, head vs sentou.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10

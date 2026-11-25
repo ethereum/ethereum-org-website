@@ -12,12 +12,11 @@ Los bloques son un tema muy accesible para principiantes. Pero para ayudarle a c
 
 ## ¿Por qué bloques? {#why-blocks}
 
-Para garantizar que todos los participantes en la red [Ethereum](/) mantengan un estado sincronizado y estén de acuerdo con el historial preciso de las transacciones, agrupamos las transacciones en bloques. Esto significa que docenas (o cientos) de transacciones se comprometen, se acuerdan y se sincronizan todas a la vez.
+Para garantizar que todos los participantes en la red de [Ethereum](/) mantengan un estado sincronizado y estén de acuerdo con el historial preciso de las transacciones, agrupamos las transacciones en bloques. Esto significa que docenas (o cientos) de transacciones se confirman, se acuerdan y se sincronizan al mismo tiempo.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Al espaciar los compromisos, damos a todos los participantes de la red tiempo suficiente para llegar a un consenso: aunque las solicitudes de transacciones ocurren docenas de veces por segundo, los bloques solo se crean y comprometen en Ethereum una vez cada doce segundos.
+Al espaciar las confirmaciones, damos a todos los participantes de la red tiempo suficiente para llegar a un consenso: aunque las solicitudes de transacciones ocurren docenas de veces por segundo, los bloques solo se crean y confirman en Ethereum una vez cada doce segundos.
 
 ## Cómo funcionan los bloques {#how-blocks-work}
 

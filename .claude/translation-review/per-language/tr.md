@@ -1,5 +1,10 @@
 # Turkish (tr) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in peer-das and verkle keys, catallanma secimi, inline code (gas, verkle), libp2p casing, cifte imza, oncelik ucreti, onden kosma. Open: hard-coded suffixes after numeric placeholders (`{signedA}'si`), relay naming, `islem` ambiguity.
+
 > **PR:** #18353 (stablecoins-2026-redesign, page-stablecoins.json)
 > **Date:** 2026-06-05
 > **Quality Score:** 9.2/10
