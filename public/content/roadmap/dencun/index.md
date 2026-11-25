@@ -69,7 +69,7 @@ The consensus clients handle the _Validator_ software, which has all been update
 
 ## How does Cancun-Deneb (Dencun) affect Ethereum testnets? {#testnet-impact}
 
-- Devnets, Sepolia and Holesky all underwent the Dencun upgrade and ran Proto-Danksharding. Holesky has since been [sunset](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement)
+- Devnets, Sepolia and Holesky all underwent the Dencun upgrade and ran Proto-Danksharding. Holesky has since been [shut down](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement)
 - Rollup developers can use Sepolia for EIP-4844 testing
 - Most users will be completely unaffected by this change to each testnet
 
