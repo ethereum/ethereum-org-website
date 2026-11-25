@@ -880,7 +880,18 @@ const tryWrite = (...a) => {
   }
 }
 
-// Blockers are must-criteria verified as failing. Signals change only when the blockers do, so a maintainer's dismissal or label removal sticks.
+// On issues, a blocker or a first check's open question waits on the author; a reply hands it to product review.
+export function issueLabel(record, prev) {
+  const b = record.blocking ?? blockers(record, prev)
+  const was = blockingOf(prev)
+  if (b.some((x) => !was.some((w) => squash(w) === squash(x)))) return AWAITING
+  if (!b.length && was.length) return PRODUCT_REVIEW
+  if (!prev) return record.askAuthor?.length ? AWAITING : PRODUCT_REVIEW
+  if (record.kind === "followup" && !b.length) return PRODUCT_REVIEW
+  return null
+}
+
+// Blockers are must-criteria verified as failing. PR signals change only when the blockers do, so a maintainer's dismissal or label removal sticks.
 function signal(n, isPr, record, prev) {
   const was = blockingOf(prev)
   const b = blockers(record, prev)
@@ -890,15 +901,17 @@ function signal(n, isPr, record, prev) {
   const labels = `repos/${REPO}/issues/${n}/labels`
   const unlabel = (l) =>
     tryWrite("DELETE", `${labels}/${encodeURIComponent(l)}`)
-  if (added) {
-    tryWrite("POST", labels, { labels: [AWAITING] })
-    if (!isPr) unlabel(PRODUCT_REVIEW)
-  } else if (cleared) {
-    unlabel(AWAITING)
-    if (!isPr) tryWrite("POST", labels, { labels: [PRODUCT_REVIEW] })
-  } else if (!prev && !isPr)
-    tryWrite("POST", labels, { labels: [PRODUCT_REVIEW] })
-  if (!isPr || !(added || cleared)) return record
+  if (!isPr) {
+    const to = issueLabel(record, prev)
+    if (to) {
+      tryWrite("POST", labels, { labels: [to] })
+      unlabel(to === AWAITING ? PRODUCT_REVIEW : AWAITING)
+    }
+    return record
+  }
+  if (added) tryWrite("POST", labels, { labels: [AWAITING] })
+  else if (cleared) unlabel(AWAITING)
+  if (!(added || cleared)) return record
   const mine = ghList(`repos/${REPO}/pulls/${n}/reviews?per_page=100`).filter(
     (v) => v.user?.login === BOT && v.state === "CHANGES_REQUESTED"
   )

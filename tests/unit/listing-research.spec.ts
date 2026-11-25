@@ -9,6 +9,7 @@ let blockers: Mod["blockers"],
   dataLine: Mod["dataLine"],
   followupComment: Mod["followupComment"],
   isListingIssue: Mod["isListingIssue"],
+  issueLabel: Mod["issueLabel"],
   isListingReply: Mod["isListingReply"],
   latest: Mod["latest"],
   MAX_FOLLOWUPS: Mod["MAX_FOLLOWUPS"],
@@ -30,6 +31,7 @@ test.beforeAll(async () => {
     dataLine,
     followupComment,
     isListingIssue,
+    issueLabel,
     isListingReply,
     latest,
     MAX_FOLLOWUPS,
@@ -480,4 +482,21 @@ test("coveringPr finds the requester's own open PR for the same site", () => {
   expect(coveringPr(issue, [pr({ author: "someone" })])).toBeUndefined()
   expect(coveringPr(issue, [pr({ state: "closed" })])).toBeUndefined()
   expect(coveringPr(issue, [pr({ kind: "issue" })])).toBeUndefined()
+})
+
+test("an issue waits on its author until they answer the check's questions", () => {
+  const asked = { ...rec({ Audited: "unknown" }), askAuthor: ["Audited?"] }
+  expect(issueLabel({ ...asked, kind: "research" }, null)).toBe(
+    "awaiting changes"
+  )
+  expect(issueLabel({ ...rec({ Audited: "pass" }), askAuthor: [] }, null)).toBe(
+    "needs product review 🕵️"
+  )
+  expect(issueLabel({ ...asked, kind: "followup" }, asked)).toBe(
+    "needs product review 🕵️"
+  )
+  expect(issueLabel({ ...asked, kind: "research" }, asked)).toBeNull()
+  expect(
+    issueLabel({ ...rec({ Audited: "fail" }), kind: "followup" }, asked)
+  ).toBe("awaiting changes")
 })
