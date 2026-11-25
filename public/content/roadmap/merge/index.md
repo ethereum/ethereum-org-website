@@ -175,9 +175,9 @@ Since the Shanghai/Capella network upgrade, stakers can now designate a <em>with
 <ExpandableCard
 title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-Since the Shanghai/Capella upgrade enabled withdrawals, validators are incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
+Since the Shanghai/Capella upgrade enabled withdrawals, validators with `0x01` withdrawal credentials are incentivized to withdraw their staking balance above 32 ETH, as these funds do not add to yield and are otherwise locked. Since the [Pectra upgrade](/roadmap/pectra/maxeb/), validators with `0x02` credentials can instead let their balance compound up to 2048 ETH. Depending on the APR (determined by total ETH staked), they may be incentivized to exit their validator(s) to reclaim their entire balance or potentially stake even more using their rewards to earn more yield.
 
-An important caveat here, full validator exits are rate limited by the protocol, and only so many validators may exit per epoch (every 6.4 minutes). This limit fluctuates depending on the number of active validators, but comes out to approximately 0.33% of total ETH staked can be exited from the network in a single day.
+An important caveat here, full validator exits are rate limited by the protocol. Since the Pectra upgrade, the limit (the "exit churn") is set in staked ETH per epoch (every 6.4 minutes) rather than in number of validators, so only a small fraction of the total stake can leave in any epoch. [More on how exit churn works](/roadmap/merge/issuance/#cl-issuance-post-merge).
 
 This prevents a mass exodus of staked funds. Furthermore, it prevents a potential attacker with access to a large portion of the total ETH staked from committing a slashable offense and exiting/withdrawing all of the offending validator balances in the same epoch before the protocol can enforce the slashing penalty.
 

@@ -33,9 +33,9 @@ Read a deeper dive on 7702 [here](/roadmap/pectra/7702/)
 
 ### Increase the max effective balance {#7251}
 
-Before Pectra, the effective balance of a validator was exactly 32 ETH. It was the minimum necessary amount to participate in the consensus but at the same time the maximum a single validator could stake.
+Before Pectra, the maximum effective balance of a validator was 32 ETH. That was the minimum necessary amount to participate in the consensus but at the same time the maximum that could count toward a single validator's stake. A validator's total balance could grow above 32 ETH through rewards, but anything above 32 ETH did not count toward its effective balance and earned no additional rewards.
 
-[EIP-7251](https://eips.ethereum.org/EIPS/eip-7251) raises the maximum possible effective balance to 2048 ETH, meaning that a single validator can now stake between 32 and 2048 ETH. Instead of multiples of 32, stakers can now choose an arbitrary amount of ETH to stake and receive rewards on every 1 ETH above the minimum. For example, if a validator's balance grows with their rewards to 33 ETH, the extra 1 ETH is also considered part of the effective balance and receives rewards.
+[EIP-7251](https://eips.ethereum.org/EIPS/eip-7251) raises the maximum possible effective balance to 2048 ETH for validators with `0x02` (compounding) withdrawal credentials, meaning that such a validator can now stake between 32 and 2048 ETH. Validators with `0x01` credentials keep the 32 ETH maximum. Instead of multiples of 32, stakers can now choose an arbitrary amount of ETH to stake and receive rewards on every 1 ETH above the minimum. For example, if a validator's balance grows with their rewards to 33 ETH, the extra 1 ETH is also considered part of the effective balance and receives rewards.
 
 But the benefit of a better reward system for validators is only a part of this improvement. [Stakers](/staking/) running multiple validators can now aggregate them into a single one, which enables easier operation and reduces network overhead. Because every validator in Beacon Chain submits a signature in every epoch, the bandwidth requirements grow with more validators and a large number of signatures to propagate. Aggregating validators will take load off of the network and open new scaling options while keeping the same economic security.
 
