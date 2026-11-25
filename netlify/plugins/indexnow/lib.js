@@ -124,7 +124,6 @@ module.exports = {
   MAX_URLS_PER_REQUEST,
   SITE_URL,
   changedPageUrls,
-  chunk,
   fetchSitemapUrls,
   fileToUrl,
   parseLocs,
