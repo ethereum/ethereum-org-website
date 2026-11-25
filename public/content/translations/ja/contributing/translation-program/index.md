@@ -1,22 +1,38 @@
 ---
 title: "翻訳プログラム"
 lang: ja
-description: "ethereum.org翻訳プログラムに関する情報"
+description: "ETHGlossaryであなたの言語の用語をレビューして、イーサリアムの翻訳にご協力ください。あなたが承認した用語がethereum.orgで使用されます。"
 ---
 
-翻訳プログラムは、ethereum.orgをさまざまな言語に翻訳し、世界中の何十億人もの非英語圏の人々にとってウェブサイトをよりアクセスしやすくするための共同プロジェクトでした。
+イーサリアムは、どの言語でも自然に読めるべきです。現在、最も役立つ貢献方法は、24言語に対応したイーサリアム用語の共有・コミュニティレビュー型用語集である[ETHGlossary](https://glossary.ethereum.org/)に参加することです。
+
+**あなたが承認した用語が、あなたの言語のethereum.orgで使用されます。** ウォレット、アプリ、ドキュメントのチームも、用語集のオープンなアプリケーション・プログラミング・インターフェース（API）を通じてこれらの用語を使用できます。
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  あなたの言語の用語をレビューする
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## 仕組み {#how-it-works}
+
+1. **言語を選択する。** すべての言語に同じイーサリアム用語のセットがあり、それぞれに翻訳のドラフトが用意されています。
+2. **用語をレビューする。** 用語を承認するか、より良い代替案を提案するか、コミュニティでどのように使用されているかについてのコンテキストを追加します。
+3. **公開される。** レビューされた用語はethereum.orgの翻訳のガイドとなり、ETHGlossaryのアプリケーション・プログラミング・インターフェース（API）を通じて公開されます。
+
+コミットメントは必要ありません。1つの用語をレビューするのに数分しかかかりません。
+
+**対応言語:** アラビア語、ベンガル語、中国語（簡体字および繁体字）、チェコ語、フランス語、ドイツ語、ヒンディー語、インドネシア語、イタリア語、日本語、韓国語、マラーティー語、ポーランド語、ポルトガル語（ブラジル）、ロシア語、スペイン語、スワヒリ語、タミル語、テルグ語、トルコ語、ウクライナ語、ウルドゥー語、ベトナム語。
+
 ## プログラムの状況 {#program-status}
 
-ethereum.org翻訳プログラムは縮小しており、現在新しい翻訳者のオンボーディングは行っていません。Crowdinプロジェクトは閉鎖される予定であり、これを通じた新しい翻訳の提出は受け付けていません。
+Crowdinを通じたページ全体の翻訳は一時停止されており、そこでの新しい翻訳の提出は受け付けていません。当面の間は、[ETHGlossary](https://glossary.ethereum.org/)で用語をレビューすることが貢献の方法となります。
 
-長年にわたりethereum.orgを数十の言語で利用できるようにしてくれた何千人ものコミュニティ翻訳者に深く感謝しています。彼らの成果は引き続きサイト上で公開され、[謝辞](/contributing/translation-program/acknowledgements/)および[コントリビューター](/contributing/translation-program/contributors/)ページでの表彰もそのまま残ります。
+長年にわたりethereum.orgを数十の言語で利用できるようにしてくれた何千人ものコミュニティ翻訳者に深く感謝しています。彼らの成果は引き続きサイト上で公開されており、[謝辞](/contributing/translation-program/acknowledgements/)および[コントリビューター](/contributing/translation-program/contributors/)ページでの表彰もそのまま残ります。
 
-既存の翻訳に誤りを見つけた場合は、[GitHubでIssueを作成](https://github.com/ethereum/ethereum-org-website/issues/new/choose)してください。
+既存の翻訳に誤りを見つけた場合は、[GitHubでイシューを作成](https://github.com/ethereum/ethereum-org-website/issues/new/choose)してください。
 
-_質問やフィードバックの共有については、[ethereum.orgのディスコード](/discord/)に参加してください。_
+_質問やフィードバックを共有するには、[ethereum.orgのディスコード](/discord/)に参加してください。_
 
 ## 翻訳プログラムについて {#about-us}
 

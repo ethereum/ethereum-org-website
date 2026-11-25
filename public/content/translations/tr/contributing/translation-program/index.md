@@ -1,18 +1,34 @@
 ---
 title: "Çeviri Programı"
 lang: tr
-description: "ethereum.org Çeviri Programı hakkında bilgi"
+description: "ETHGlossary'de kendi dilinizdeki terimleri inceleyerek Ethereum'u çevirmeye yardımcı olun. Onayladığınız terimler ethereum.org'un kullandığı terimlerdir."
 ---
 
-Çeviri Programı, ethereum.org'u farklı dillere çevirerek web sitesini dünya çapında İngilizce konuşmayan milyarlarca insan için daha erişilebilir hale getirmeyi amaçlayan ortak bir çabaydı.
+Ethereum her dilde doğal bir şekilde okunabilmelidir. Şu anda yardımcı olmanın en iyi yolu, 24 dilde Ethereum terimlerinin paylaşılan, topluluk tarafından incelenen bir sözlüğü olan [ETHGlossary](https://glossary.ethereum.org/)'dir.
+
+**Onayladığınız terimler, ethereum.org'un kendi dilinizde kullandığı terimlerdir.** Cüzdanlar, uygulamalar ve belgelendirme ekipleri de sözlüğün açık uygulama programlama arayüzü (API) aracılığıyla bunları kullanabilir.
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  Kendi dilinizdeki terimleri inceleyin
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## Nasıl çalışır {#how-it-works}
+
+1. **Dilinizi seçin.** Her dil, her birinin taslak çevirisi olan aynı Ethereum terimleri kümesine sahiptir.
+2. **Bir terimi inceleyin.** Onaylayın, daha iyi bir alternatif önerin veya topluluğunuzda nasıl kullanıldığına dair bağlam ekleyin.
+3. **Yayınlanır.** İncelenen terimler ethereum.org'un çevirilerine rehberlik eder ve ETHGlossary API'si aracılığıyla yayınlanır.
+
+Herhangi bir taahhüt yoktur. Tek bir terimi incelemek birkaç dakika sürer.
+
+**Diller:** Arapça, Bengalce, Çince (Basitleştirilmiş ve Geleneksel), Çekçe, Fransızca, Almanca, Hintçe, Endonezce, İtalyanca, Japonca, Korece, Marathi, Lehçe, Portekizce (Brezilya), Rusça, İspanyolca, Svahili, Tamilce, Telugu, Türkçe, Ukraynaca, Urduca ve Vietnamca.
+
 ## Program durumu {#program-status}
 
-ethereum.org Çeviri Programı yavaş yavaş sona eriyor ve artık yeni çevirmenlerin sisteme katılımını sağlamıyor. Crowdin projesi kapatılıyor ve bu proje üzerinden yeni çeviri gönderimlerini kabul etmiyoruz.
+Crowdin aracılığıyla tam sayfa çeviri duraklatıldı ve orada yeni çeviri gönderimlerini kabul etmiyoruz. Bu süre zarfında katkıda bulunmanın yolu [ETHGlossary](https://glossary.ethereum.org/) üzerinde terimleri incelemektir.
 
-Yıllar boyunca ethereum.org'u onlarca dilde erişilebilir kılan binlerce topluluk çevirmenine derinden minnettarız; çalışmaları sitede yayında kalmaya devam ediyor ve [teşekkürler](/contributing/translation-program/acknowledgements/) ile [katkıda bulunanlar](/contributing/translation-program/contributors/) sayfalarındaki takdirleri yerini koruyor.
+Yıllar boyunca ethereum.org'u düzinelerce dilde erişilebilir kılan binlerce topluluk çevirmenine derinden minnettarız; çalışmaları sitede yayında kalmaya devam ediyor ve [teşekkürler](/contributing/translation-program/acknowledgements/) ile [katkıda bulunanlar](/contributing/translation-program/contributors/) sayfalarındaki takdirleri yerini koruyor.
 
 Mevcut bir çeviride hata fark ederseniz, lütfen [GitHub'da bir sorun açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

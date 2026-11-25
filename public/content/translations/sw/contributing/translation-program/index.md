@@ -1,20 +1,36 @@
 ---
 title: Programu ya Kutafsiri
 lang: sw
-description: Taarifa kuhusu Programu ya Kutafsiri ya ethereum.org
+description: Saidia kutafsiri Ethereum kwa kukagua maneno katika lugha yako kwenye ETHGlossary. Maneno unayoidhinisha ndiyo ambayo ethereum.org hutumia.
 ---
 
-Programu ya Kutafsiri ilikuwa juhudi ya ushirikiano ya kutafsiri ethereum.org katika lugha tofauti, na kufanya tovuti iweze kufikiwa zaidi na mabilioni ya watu wasiozungumza Kiingereza duniani kote.
+Ethereum inapaswa kusomeka kwa urahisi katika kila lugha. Njia bora ya kusaidia sasa hivi ni [ETHGlossary](https://glossary.ethereum.org/), faharasa ya pamoja, iliyokaguliwa na jamii ya maneno ya Ethereum katika lugha 24.
+
+**Maneno unayoidhinisha ndiyo maneno ambayo ethereum.org hutumia katika lugha yako.** Pochi, programu na timu za nyaraka zinaweza kuyatumia pia, kupitia Kiolesura cha Kupanga Programu Tumizi (API) wazi cha faharasa.
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  Kagua maneno katika lugha yako
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## Jinsi inavyofanya kazi {#how-it-works}
+
+1. **Chagua lugha yako.** Kila lugha ina seti sawa ya maneno ya Ethereum, kila moja ikiwa na rasimu ya tafsiri.
+2. **Kagua neno.** Liidhinishe, pendekeza mbadala bora, au ongeza muktadha wa jinsi linavyotumika katika jamii yako.
+3. **Inachapishwa.** Maneno yaliyokaguliwa huongoza tafsiri za ethereum.org na huchapishwa kupitia Kiolesura cha Kupanga Programu Tumizi (API) cha ETHGlossary.
+
+Hakuna ufungamanisho. Kukagua neno moja huchukua dakika chache.
+
+**Lugha:** Kiarabu, Kibengali, Kichina (Kilichorahisishwa na cha Kiasili), Kicheki, Kifaransa, Kijerumani, Kihindi, Kiindonesia, Kiitaliano, Kijapani, Kikorea, Kimarathi, Kipolandi, Kireno (Brazili), Kirusi, Kihispania, Kiswahili, Kitamili, Kitelugu, Kituruki, Kiukreni, Kiurdu na Kivietinamu.
+
 ## Hali ya programu {#program-status}
 
-Programu ya Kutafsiri ya ethereum.org inafikia ukingoni na haifanyi tena uingizaji wa watafsiri wapya. Mradi wa Crowdin unafungwa, na hatupokei mawasilisho mapya ya tafsiri kupitia mradi huo.
+Tafsiri ya ukurasa mzima kupitia Crowdin imesitishwa, na hatupokei mawasilisho mapya ya tafsiri huko. Kukagua maneno kwenye [ETHGlossary](https://glossary.ethereum.org/) ndiyo njia ya kuchangia kwa sasa.
 
 Tunashukuru sana maelfu ya watafsiri wa jamii ambao walifanya ethereum.org ipatikane katika lugha nyingi kwa miaka mingi—kazi yao inasalia moja kwa moja kwenye tovuti, na utambuzi wao kwenye kurasa za [shukrani](/contributing/translation-program/acknowledgements/) na [wachangiaji](/contributing/translation-program/contributors/) unasalia palepale.
 
-Ukigundua kosa katika tafsiri iliyopo, tafadhali [fungua suala kwenye GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Ikiwa utaona kosa katika tafsiri iliyopo, tafadhali [fungua suala kwenye GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 _Jiunge na [Discord ya ethereum.org](/discord/) ili kuuliza maswali au kushiriki maoni._
 

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/contributing/translation-program/index.md",
-  "generatedAt": "2026-09-30T18:19:16.813Z",
-  "rootHash": "2a11a8cda9d2",
+  "generatedAt": "2026-11-25T09:06:45.000Z",
+  "rootHash": "ccd646500107",
   "tree": {
-    "contentHash": "33732f6de738",
-    "anchorHash": "2edfbd359b67",
+    "contentHash": "4b36b8284e3f",
+    "anchorHash": "a11e64f3082d",
     "children": {
       "frontmatter:title": {
         "contentHash": "87730412fde5",
@@ -16,74 +16,129 @@
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:description": {
-        "contentHash": "88dee4eb4060",
+        "contentHash": "e7c4f871995a",
         "anchorHash": "e3b0c44298fc"
       },
       "prose:1": {
-        "contentHash": "3a6f3c3e6d72",
+        "contentHash": "f4b78d554a6c",
         "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "1b98884f848b",
+        "anchorHash": "332b2ba0c6c7"
+      },
+      "prose:2": {
+        "contentHash": "b6f10a182b62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "component:6": {
+        "contentHash": "f37fe9570933",
+        "anchorHash": "c1e17a89a5dc",
+        "children": {
+          "attr:href": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7b85502833ad"
+          },
+          "prose:0": {
+            "contentHash": "42e7d21aaf65",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "attr:href",
+          "prose:0"
+        ]
       },
       "image:0": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "e3b0c44298fc"
       },
+      "how-it-works": {
+        "contentHash": "c4565d16598d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9c870aa6e5e9",
+        "children": {
+          "_label": {
+            "contentHash": "9c870aa6e5e9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0de4b29467d4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
       "program-status": {
-        "contentHash": "2ae81107df3a",
-        "anchorHash": "a8e6364314b0",
+        "contentHash": "29bc7a471a55",
+        "anchorHash": "44642070a8d2",
         "labelHash": "62c94954140b",
         "children": {
           "_label": {
             "contentHash": "62c94954140b",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:4": {
-            "contentHash": "22d86382b445",
+          "prose:5": {
+            "contentHash": "5398da7d46f2",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "4fccc8cb28f1",
-            "anchorHash": "622df95c944a"
+            "contentHash": "1b98884f848b",
+            "anchorHash": "332b2ba0c6c7"
           },
-          "prose:5": {
-            "contentHash": "6201111b83a0",
+          "prose:6": {
+            "contentHash": "c7a51913bed7",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "d415bfecf895",
-            "anchorHash": "eeb812303049"
+            "contentHash": "4fccc8cb28f1",
+            "anchorHash": "622df95c944a"
           },
-          "prose:6": {
-            "contentHash": "cd5626d7d39e",
+          "prose:7": {
+            "contentHash": "6201111b83a0",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "860e531b2486",
-            "anchorHash": "eac9a19718c6"
+            "contentHash": "d415bfecf895",
+            "anchorHash": "eeb812303049"
           },
-          "prose:7": {
-            "contentHash": "8a532f80f369",
+          "prose:8": {
+            "contentHash": "cd5626d7d39e",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
+            "contentHash": "860e531b2486",
+            "anchorHash": "eac9a19718c6"
+          },
+          "prose:9": {
+            "contentHash": "8a532f80f369",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
             "contentHash": "c8fa1aa8342c",
             "anchorHash": "416d56f793cb"
           },
-          "prose:8": {
+          "prose:10": {
             "contentHash": "4d349428b2ba",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:4",
-          "link:0",
           "prose:5",
-          "link:1",
+          "link:0",
           "prose:6",
-          "link:2",
+          "link:1",
           "prose:7",
+          "link:2",
+          "prose:8",
           "link:3",
-          "prose:8"
+          "prose:9",
+          "link:4",
+          "prose:10"
         ]
       },
       "about-us": {
@@ -409,12 +464,16 @@
       "frontmatter:lang",
       "frontmatter:description",
       "prose:1",
+      "link:0",
+      "prose:2",
+      "component:6",
       "image:0",
+      "how-it-works",
       "program-status",
       "about-us",
       "get-in-touch",
       "starting-a-translation-program"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "8d24885edc8472556ee52a1994415b6680634e20"
 }

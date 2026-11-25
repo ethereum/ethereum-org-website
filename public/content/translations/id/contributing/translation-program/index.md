@@ -1,18 +1,34 @@
 ---
 title: Program Terjemahan
 lang: id
-description: Informasi tentang Program Terjemahan ethereum.org
+description: Bantu menerjemahkan Ethereum dengan meninjau istilah-istilah dalam bahasa Anda di ETHGlossary. Istilah-istilah yang Anda setujui adalah istilah yang digunakan oleh ethereum.org.
 ---
 
-Program Terjemahan dulunya adalah upaya kolaboratif untuk menerjemahkan ethereum.org ke dalam berbagai bahasa, membuat situs web ini lebih mudah diakses oleh miliaran orang yang tidak berbahasa Inggris di seluruh dunia.
+Ethereum harus terbaca secara alami dalam setiap bahasa. Cara terbaik untuk membantu saat ini adalah melalui [ETHGlossary](https://glossary.ethereum.org/), sebuah glosarium istilah Ethereum bersama yang ditinjau oleh komunitas dalam 24 bahasa.
+
+**Istilah-istilah yang Anda setujui adalah istilah yang digunakan oleh ethereum.org dalam bahasa Anda.** Dompet, aplikasi, dan tim dokumentasi juga dapat menggunakannya, melalui Antarmuka Pemrograman Aplikasi (API) terbuka dari glosarium tersebut.
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  Tinjau istilah dalam bahasa Anda
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## Cara kerjanya {#how-it-works}
+
+1. **Pilih bahasa Anda.** Setiap bahasa memiliki kumpulan istilah Ethereum yang sama, masing-masing dengan draf terjemahan.
+2. **Tinjau sebuah istilah.** Setujui istilah tersebut, usulkan alternatif yang lebih baik, atau tambahkan konteks tentang bagaimana istilah tersebut digunakan dalam komunitas Anda.
+3. **Dirilis.** Istilah yang telah ditinjau memandu terjemahan ethereum.org dan dipublikasikan melalui Antarmuka Pemrograman Aplikasi (API) ETHGlossary.
+
+Tidak ada komitmen. Meninjau satu istilah hanya membutuhkan waktu beberapa menit.
+
+**Bahasa:** Arab, Bengali, Mandarin (Sederhana dan Tradisional), Ceko, Prancis, Jerman, Hindi, Indonesia, Italia, Jepang, Korea, Marathi, Polandia, Portugis (Brasil), Rusia, Spanyol, Swahili, Tamil, Telugu, Turki, Ukraina, Urdu, dan Vietnam.
+
 ## Status program {#program-status}
 
-Program Terjemahan ethereum.org sedang dihentikan secara bertahap dan tidak lagi melakukan orientasi penerjemah baru. Proyek Crowdin sedang ditutup, dan kami tidak menerima pengiriman terjemahan baru melaluinya.
+Terjemahan halaman penuh melalui Crowdin sedang dijeda, dan kami tidak menerima pengiriman terjemahan baru di sana. Meninjau istilah di [ETHGlossary](https://glossary.ethereum.org/) adalah cara untuk berkontribusi sementara waktu.
 
-Kami sangat berterima kasih kepada ribuan penerjemah komunitas yang telah membuat ethereum.org tersedia dalam puluhan bahasa selama bertahun-tahun—karya mereka tetap tayang di situs ini, dan pengakuan mereka di halaman [penghargaan](/contributing/translation-program/acknowledgements/) serta [kontributor](/contributing/translation-program/contributors/) tetap dipertahankan.
+Kami sangat berterima kasih kepada ribuan penerjemah komunitas yang membuat ethereum.org tersedia dalam puluhan bahasa selama bertahun-tahun—karya mereka tetap tayang di situs, dan pengakuan mereka di halaman [penghargaan](/contributing/translation-program/acknowledgements/) dan [kontributor](/contributing/translation-program/contributors/) tetap dipertahankan.
 
 Jika Anda menemukan kesalahan dalam terjemahan yang ada, silakan [buka isu di GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

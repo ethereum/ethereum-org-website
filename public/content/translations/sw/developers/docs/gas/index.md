@@ -27,56 +27,58 @@ Kwa mfano, badala ya kusema kwamba gesi yako inagharimu Etha 0.000000001, unawez
 
 Neno 'Gwei' ni ufupisho wa 'giga-wei', ikimaanisha 'bilioni Wei'. Gwei moja ni sawa na Wei bilioni moja. Wei yenyewe (iliyopewa jina la [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), muundaji wa [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) ni uniti ndogo zaidi ya ETH.
 
-## Ada za gesi zinakokotolewa vipi? {#how-are-gas-fees-calculated}
+## Ada za gesi hukokotolewa vipi? {#how-are-gas-fees-calculated}
 
-Unaweza kuweka kiasi cha gesi ambacho uko tayari kulipa unapowasilisha muamala. Kwa kutoa kiasi fulani cha gesi, unashindania muamala wako ujumuishwe kwenye kitalu kinachofuata. Ukitoa kiasi kidogo sana, wathibitishaji wana uwezekano mdogo wa kuchagua muamala wako ili ujumuishwe, ikimaanisha muamala wako unaweza kutekelezwa kwa kuchelewa au usitekelezwe kabisa. Ukitoa kiasi kikubwa sana, unaweza kupoteza ETH. Kwa hivyo, unawezaje kujua kiasi cha kulipa?
+Unaweza kuweka kiasi cha gesi ambacho uko tayari kulipa unapowasilisha muamala. Kwa kutoa kiasi fulani cha gesi, unashindania muamala wako ujumuishwe kwenye kitalu kinachofuata. Ukitoa kiasi kidogo sana, kuna uwezekano mdogo kwa wathibitishaji kuchagua muamala wako ili ujumuishwe, ikimaanisha muamala wako unaweza kutekelezwa kwa kuchelewa au usitekelezwe kabisa. Ukitoa kiasi kikubwa sana, unaweza kupoteza baadhi ya ETH. Kwa hivyo, unawezaje kujua kiasi cha kulipa?
 
-Jumla ya gesi unayolipa imegawanywa katika vipengele viwili: `base fee` na `priority fee` (ada ya kipaumbele).
+Bei unayolipa kwa kila uniti ya gesi imegawanywa katika sehemu mbili: `ada ya msingi` na `ada ya kipaumbele`.
 
-`base fee` huwekwa na itifaki—lazima ulipe angalau kiasi hiki ili muamala wako uchukuliwe kuwa halali. `priority fee` ni ada ya kipaumbele unayoongeza kwenye ada ya msingi ili kufanya muamala wako uvutie kwa wathibitishaji ili wauchague kwa ajili ya kujumuishwa kwenye kitalu kinachofuata.
+`ada ya msingi` huwekwa na itifaki—lazima ulipe angalau kiasi hiki ili muamala wako uchukuliwe kuwa halali. `ada ya kipaumbele` ni kiasi cha ziada unachoongeza kwenye ada ya msingi ili kufanya muamala wako uvutie kwa wathibitishaji ili wauchague kwa ajili ya kujumuishwa kwenye kitalu kinachofuata.
 
-Muamala unaolipa tu `base fee` ni halali kiufundi lakini hauna uwezekano wa kujumuishwa kwa sababu hautoi motisha kwa wathibitishaji kuuchagua badala ya muamala mwingine wowote. Ada 'sahihi' ya `priority` inabainishwa na matumizi ya mtandao wakati unapotuma muamala wako—kama kuna mahitaji mengi basi unaweza kulazimika kuweka ada yako ya `priority` kuwa juu zaidi, lakini wakati kuna mahitaji machache unaweza kulipa kidogo.
+Muamala unaolipa tu `ada ya msingi` ni halali kiufundi lakini hauna uwezekano wa kujumuishwa kwa sababu hautoi motisha kwa wathibitishaji kuuchagua badala ya muamala mwingine wowote. Ada 'sahihi' ya `kipaumbele` inatambuliwa na matumizi ya mtandao wakati unapotuma muamala wako—ikiwa kuna mahitaji mengi basi unaweza kulazimika kuweka ada yako ya `kipaumbele` kuwa juu zaidi, lakini wakati kuna mahitaji machache unaweza kulipa kidogo.
 
 Kwa mfano, tuseme Jordan anapaswa kumlipa Taylor ETH 1. Hamisho la ETH linahitaji uniti 21,000 za gesi, na ada ya msingi ni Gwei 10. Jordan anajumuisha ada ya kipaumbele ya Gwei 2.
 
 Jumla ya ada sasa itakuwa sawa na:
 
-`units of gas used * (base fee + priority fee)`
+`uniti za gesi zilizotumika * (ada ya msingi + ada ya kipaumbele)`
 
-ambapo `base fee` ni thamani iliyowekwa na itifaki na `priority fee` ni thamani iliyowekwa na mtumiaji kama ada ya kipaumbele kwa mthibitishaji.
+ambapo `ada ya msingi` ni thamani iliyowekwa na itifaki na `ada ya kipaumbele` ni thamani iliyowekwa na mtumiaji kama ada ya kipaumbele kwa mthibitishaji.
 
-k.m., `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
+k.m., `21,000 * (10 + 2) = Gwei 252,000` (ETH 0.000252).
 
-Wakati Jordan anatuma pesa, ETH 1.000252 itakatwa kutoka kwenye akaunti ya Jordan. Taylor atawekewa ETH 1.0000. Mthibitishaji anapokea ada ya kipaumbele ya ETH 0.000042. `base fee` ya ETH 0.00021 inachomwa.
+Wakati Jordan anatuma pesa, ETH 1.000252 itakatwa kutoka kwenye akaunti ya Jordan. Taylor atawekewa ETH 1.0000. Mthibitishaji anapokea ada ya kipaumbele ya ETH 0.000042. `ada ya msingi` ya ETH 0.00021 inachomwa.
 
 ### Ada ya msingi {#base-fee}
 
-Kila kitalu kina ada ya msingi ambayo hufanya kazi kama bei ya akiba. Ili kustahiki kujumuishwa kwenye kitalu, bei inayotolewa kwa kila gesi lazima angalau ilingane na ada ya msingi. Ada ya msingi inakokotolewa bila kutegemea kitalu cha sasa na badala yake inabainishwa na vitalu vilivyotangulia, na kufanya ada za muamala kutabirika zaidi kwa watumiaji. Kitalu kinapoundwa **ada hii ya msingi "inachomwa"**, na kuiondoa kwenye mzunguko.
+Kila kitalu kina ada ya msingi ambayo hufanya kazi kama bei ya akiba. Ili kustahiki kujumuishwa kwenye kitalu, bei inayotolewa kwa kila gesi lazima angalau iwe sawa na ada ya msingi. Ada ya msingi inakokotolewa bila kutegemea kitalu cha sasa na badala yake inatambuliwa na vitalu vilivyotangulia, na kufanya ada za muamala kutabirika zaidi kwa watumiaji. Wakati kitalu kinaundwa **ada hii ya msingi "inachomwa"**, na kuiondoa kwenye mzunguko.
 
-Ada ya msingi inakokotolewa kwa fomula inayolinganisha ukubwa wa kitalu kilichotangulia (kiasi cha gesi kilichotumika kwa miamala yote) na ukubwa unaolengwa (nusu ya kikomo cha gesi). Ada ya msingi itaongezeka au kupungua kwa kiwango cha juu cha 12.5% kwa kila kitalu ikiwa ukubwa wa kitalu unaolengwa uko juu au chini ya lengo, mtawalia. Ukuaji huu wa kielelezo hufanya isiwezekane kiuchumi kwa ukubwa wa kitalu kubaki juu kwa muda usiojulikana.
-
-| Nambari ya Kitalu | Gesi Iliyojumuishwa | Ongezeko la Ada | Ada ya Msingi ya Sasa |
-| ------------ | -----------: | -----------: | ---------------: |
-| 1            |          18M |           0% |         100 gwei |
-| 2            |          36M |           0% |         100 gwei |
-| 3            |          36M |        12.5% |       112.5 gwei |
-| 4            |          36M |        12.5% |       126.6 gwei |
-| 5            |          36M |        12.5% |       142.4 gwei |
-| 6            |          36M |        12.5% |       160.2 gwei |
-| 7            |          36M |        12.5% |       180.2 gwei |
-| 8            |          36M |        12.5% |       202.7 gwei |
-
-Katika jedwali hapo juu, mfano unaonyeshwa kwa kutumia milioni 36 kama kikomo cha gesi. Kufuatia mfano huu, ili kuunda muamala kwenye kitalu nambari 9, mkoba utamjulisha mtumiaji kwa uhakika kwamba **ada ya juu zaidi ya msingi** itakayoongezwa kwenye kitalu kinachofuata ni `current base fee * 112.5%` au `202.7 gwei * 112.5% = 228.1 gwei`.
-
-Pia ni muhimu kutambua kuwa hakuna uwezekano wa kuona ongezeko la muda mrefu la vitalu vilivyojaa kwa sababu ya kasi ambayo ada ya msingi huongezeka kabla ya kitalu kujaa.
+Ada ya msingi inakokotolewa kwa fomula inayolinganisha ukubwa wa kitalu kilichotangulia (kiasi cha gesi kilichotumika kwa miamala yote) na ukubwa unaolengwa (nusu ya kikomo cha gesi). Ada ya msingi itaongezeka au kupungua kwa kiwango cha juu cha 12.5% kwa kila kitalu ikiwa ukubwa wa kitalu uko juu au chini ya lengo, mtawalia. Ukuaji huu wa kielelezo hufanya isiwezekane kiuchumi kwa ukubwa wa kitalu kubaki juu kwa muda usiojulikana.
 
 | Nambari ya Kitalu | Gesi Iliyojumuishwa | Ongezeko la Ada | Ada ya Msingi ya Sasa |
 | ------------ | -----------: | -----------: | ---------------: |
-| 30           |          36M |        12.5% |      2705.6 gwei |
+| 1            |          30M |           0% |         Gwei 0.1 |
+| 2            |          60M |           0% |         Gwei 0.1 |
+| 3            |          60M |        12.5% |      Gwei 0.1125 |
+| 4            |          60M |        12.5% |      Gwei 0.1266 |
+| 5            |          60M |        12.5% |      Gwei 0.1424 |
+| 6            |          60M |        12.5% |      Gwei 0.1602 |
+| 7            |          60M |        12.5% |      Gwei 0.1802 |
+| 8            |          60M |        12.5% |      Gwei 0.2027 |
+
+Katika jedwali hapo juu, mfano unaonyeshwa kwa kutumia milioni 60 kama kikomo cha gesi. Kufuatia mfano huu, ili kuunda muamala kwenye kitalu nambari 9, mkoba utamjulisha mtumiaji kwa uhakika kwamba **ada ya juu zaidi ya msingi** itakayoongezwa kwenye kitalu kinachofuata ni `ada ya msingi ya sasa * 112.5%` au `Gwei 0.2027 * 112.5% = Gwei 0.2281`.
+
+<BaseFeeDiagram />
+
+Pia ni muhimu kutambua kuwa hakuna uwezekano wa kuona ongezeko la muda mrefu la vitalu vilivyojaa kwa sababu ya kasi ambayo ada ya msingi inaongezeka kabla ya kitalu kujaa.
+
+| Nambari ya Kitalu | Gesi Iliyojumuishwa | Ongezeko la Ada | Ada ya Msingi ya Sasa |
+| ------------ | -----------: | -----------: | ---------------: |
+| 30           |          60M |        12.5% |      Gwei 2.7056 |
 | ...          |          ... |        12.5% |              ... |
-| 50           |          36M |        12.5% |     28531.3 gwei |
+| 50           |          60M |        12.5% |     Gwei 28.5313 |
 | ...          |          ... |        12.5% |              ... |
-| 100          |          36M |        12.5% |  10302608.6 gwei |
+| 100          |          60M |        12.5% |  Gwei 10302.6083 |
 
 ### Ada ya kipaumbele {#priority-fee}
 
@@ -84,7 +86,7 @@ Ada ya kipaumbele inawapa motisha wathibitishaji kuongeza idadi ya miamala kweny
 
 ### Ada ya juu zaidi {#maxfee}
 
-Ili kutekeleza muamala kwenye mtandao, watumiaji wanaweza kubainisha kikomo cha juu zaidi ambacho wako tayari kulipa ili muamala wao utekelezwe. Kigezo hiki cha hiari kinajulikana kama `maxFeePerGas`. Ili muamala utekelezwe, ada ya juu zaidi lazima izidi jumla ya ada ya msingi na ada ya kipaumbele. Mtumaji wa muamala anarejeshewa tofauti kati ya ada ya juu zaidi na jumla ya ada ya msingi na ada ya kipaumbele.
+Ili kutekeleza muamala kwenye mtandao, watumiaji wanaweza kubainisha kikomo cha juu zaidi ambacho wako tayari kulipa ili muamala wao utekelezwe. Kigezo hiki cha hiari kinajulikana kama `maxFeePerGas`. Ili muamala utekelezwe, ada ya juu zaidi lazima iwe angalau ada ya msingi, na ada ya kipaumbele inayolipwa inawekewa kikomo ili ada ya msingi kujumlisha ada ya kipaumbele isizidi ada ya juu zaidi. Mtumaji wa muamala anarudishiwa tofauti kati ya ada ya juu zaidi na jumla ya ada ya msingi na ada ya kipaumbele.
 
 ### Ukubwa wa kitalu {#block-size}
 
