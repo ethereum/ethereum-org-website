@@ -31,7 +31,7 @@
   "page-roadmap-danksharding-title": "Danksharding",
   "page-roadmap-danksharding-description": "Danksharding makes L2 rollups much cheaper for users by adding \"blobs\" of data to Ethereum blocks.",
   "page-roadmap-single-slot-finality-title": "Single slot finality",
-  "page-roadmap-single-slot-finality-description": "Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and difficult to attack.",
+  "page-roadmap-single-slot-finality-description": "Instead of waiting about fifteen minutes, blocks could be finalized in seconds. This is more convenient for apps and difficult to attack.",
   "page-roadmap-account-abstraction-title": "Account abstraction",
   "page-roadmap-account-abstraction-description": "Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.",
   "page-roadmap-statelessness-title": "Statelessness",
