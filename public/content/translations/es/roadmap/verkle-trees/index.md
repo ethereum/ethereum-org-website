@@ -1,6 +1,6 @@
 ---
-title: Árboles Verkle
-description: Una descripción de alto nivel de los árboles Verkle y cómo se utilizarán para actualizar Ethereum
+title: "Árboles Verkle"
+description: "Una descripción de alto nivel de los árboles Verkle y cómo se utilizarán para actualizar Ethereum"
 lang: es
 template: roadmap
 summaryPoints:
@@ -38,9 +38,9 @@ El tamaño del testigo varía según la cantidad de hojas que incluya. Suponiend
 
 ## ¿Cuál es la estructura de un árbol Verkle? {#what-is-the-structure-of-a-verkle-tree}
 
-Los árboles Verkle son pares `(key,value)` donde las claves son elementos de 32 bytes compuestos por un _tallo_ (stem) de 31 bytes y un _sufijo_ de un solo byte. Estas claves se organizan en nodos de _extensión_ y nodos _internos_. Los nodos de extensión representan un solo tallo para 256 hijos con diferentes sufijos. Los nodos internos también tienen 256 hijos, pero pueden ser otros nodos de extensión. La principal diferencia entre la estructura del árbol Verkle y el árbol de Merkle es que el árbol Verkle es mucho más plano, lo que significa que hay menos nodos intermedios que vinculan una hoja a la raíz y, por lo tanto, se requieren menos datos para generar una prueba.
+Los árboles Verkle son pares `(key,value)` donde las claves son elementos de 32 bytes compuestos por un _tallo_ de 31 bytes y un _sufijo_ de un solo byte. Estas claves se organizan en nodos de _extensión_ y nodos _internos_. Los nodos de extensión representan un solo tallo para 256 hijos con diferentes sufijos. Los nodos internos también tienen 256 hijos, pero pueden ser otros nodos de extensión. La principal diferencia entre la estructura del árbol Verkle y la del árbol de Merkle es que el árbol Verkle es mucho más plano, lo que significa que hay menos nodos intermedios que unen una hoja con la raíz y, por lo tanto, se requieren menos datos para generar una prueba.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Lea más sobre la estructura de los árboles Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

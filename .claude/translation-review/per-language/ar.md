@@ -1,5 +1,10 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: nodes-and-clients English dates and Latin Mainnet/Beacon Chain cells restored to Arabic, slot/attestation/checkpoint glossary forms, Ethereum spelling in attestations description. Open: bytes untranslated in JSON, Verkle singular/plural, `الرمز` vs `الكود`.
+
 > **PR:** #17105
 > **Date:** 2026-03-17
 > **Quality Score:** 5.2/10 (pre-fix)
@@ -288,3 +293,15 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: `حساب` used for "computation" right after the same word for "account" (mint:116); English alt text (write-deploy:32,44); "leave `gas` out" rendered as "leave it empty" (sending:198).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:25 dangling `سوف:` before a list of verbal nouns -> `ستقوم بما يلي:`
+- echidna:414 `John Regehr` reverted to bare Latin -> `جون ريجر (John Regehr)` (dev form)
+
+**Open / notes:**
+
+- echidna:298 "falsify the property" -> `تزييف` (forge); suggested `لإثبات بطلان الخاصية` -- native call

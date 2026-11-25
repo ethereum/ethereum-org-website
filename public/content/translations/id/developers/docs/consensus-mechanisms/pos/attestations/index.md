@@ -1,60 +1,66 @@
 ---
 title: Atestasi
-description: Deskripsi tentang atestasi pada Ethereum proof-of-stake.
+description: Deskripsi tentang atestasi pada Bukti Kepemilikan (PoS) Ethereum.
 lang: id
 ---
 
-Seorang validator diharapkan untuk membuat, menandatangani, dan menyiarkan sebuah atestasi selama setiap Epok. Halaman ini menguraikan seperti apa bentuk atestasi ini dan bagaimana mereka diproses serta dikomunikasikan antar klien konsensus.
+Seorang validator diharapkan untuk membuat, menandatangani, dan menyiarkan sebuah atestasi selama setiap Epok. Halaman ini menguraikan seperti apa bentuk atestasi ini dan bagaimana mereka diproses serta dikomunikasikan di antara klien konsensus.
 
 ## Apa itu atestasi? {#what-is-an-attestation}
 
-Setiap [Epok](/glossary/#epoch) (6,4 menit) seorang validator mengusulkan sebuah atestasi ke jaringan. Atestasi tersebut adalah untuk slot tertentu di dalam Epok. Tujuan dari atestasi adalah untuk memberikan suara yang mendukung pandangan validator terhadap rantai, khususnya blok terjustifikasi yang paling baru dan blok pertama di Epok saat ini (dikenal sebagai pos pemeriksaan `source` dan `target`). Informasi ini digabungkan untuk semua validator yang berpartisipasi, memungkinkan jaringan untuk mencapai konsensus tentang state dari rantai blok.
+Setiap [Epok](/glossary/#epoch) (6,4 menit) seorang validator menyiarkan sebuah atestasi ke jaringan. Atestasi tersebut adalah untuk slot tertentu di dalam Epok. Tujuan dari atestasi ini adalah untuk memberikan suara yang mendukung pandangan validator terhadap rantai, khususnya kepala rantai, titik periksa terjustifikasi yang paling baru, dan titik periksa pada awal Epok saat ini (dikenal sebagai titik periksa `source` dan `target`). Informasi ini digabungkan untuk semua validator yang berpartisipasi, memungkinkan jaringan untuk mencapai konsensus tentang state dari rantai blok.
 
-Atestasi berisi komponen-komponen berikut:
+Sejak [pembaruan Pectra](/roadmap/pectra/) ([EIP-7549](https://eips.ethereum.org/EIPS/eip-7549)), sebuah atestasi dari validator tunggal dan atestasi agregat memiliki format yang berbeda. Atestasi validator tunggal berisi:
 
-- `aggregation_bits`: daftar bit (bitlist) validator di mana posisinya memetakan ke indeks validator di dalam komite mereka; nilainya (0/1) menunjukkan apakah validator menandatangani `data` (yaitu, apakah mereka aktif dan setuju dengan pengusul blok)
+- `committee_index`: komite tempat validator tersebut tergabung dalam slot yang diberikan
+- `attester_index`: indeks validator
 - `data`: detail yang berkaitan dengan atestasi, seperti yang didefinisikan di bawah ini
-- `signature`: tanda tangan BLS yang mengagregasi tanda tangan dari masing-masing validator
+- `signature`: tanda tangan BLS validator atas `data`
 
 Tugas pertama untuk validator yang melakukan atestasi adalah membangun `data`. `data` berisi informasi berikut:
 
 - `slot`: Nomor slot yang dirujuk oleh atestasi
-- `index`: Angka yang mengidentifikasi komite mana validator tersebut tergabung dalam slot tertentu
-- `beacon_block_root`: Hash root dari blok yang dilihat validator di ujung rantai (hasil dari penerapan algoritma pilihan percabangan)
-- `source`: Bagian dari suara finalitas yang menunjukkan apa yang dilihat validator sebagai blok terjustifikasi yang paling baru
-- `target`: Bagian dari suara finalitas yang menunjukkan apa yang dilihat validator sebagai blok pertama di Epok saat ini
+- `index`: Diatur ke `0` sejak Pectra. Komite diidentifikasi di luar `data` (oleh `committee_index`, atau oleh `committee_bits` dalam sebuah agregat) sehingga suara dari komite yang berbeda memiliki `data` yang identik dan dapat diagregasi bersama. Sebelum Pectra, bidang ini mengidentifikasi komite
+- `beacon_block_root`: Hash akar dari blok yang dilihat validator di kepala rantai (hasil dari penerapan algoritme pilihan cabang)
+- `source`: Bagian dari suara finalitas yang menunjukkan apa yang dilihat validator sebagai titik periksa terjustifikasi yang paling baru
+- `target`: Bagian dari suara finalitas yang menunjukkan apa yang dilihat validator sebagai titik periksa pada awal Epok saat ini (blok pada slot pertamanya, atau blok terbaru sebelumnya jika slot tersebut kosong)
 
-Setelah `data` dibangun, validator dapat membalik bit di `aggregation_bits` yang sesuai dengan indeks validator mereka sendiri dari 0 menjadi 1 untuk menunjukkan bahwa mereka berpartisipasi.
+Setelah `data` dibangun, validator menandatanganinya dan menyiarkan atestasi ke [subnet](#aggregated-attestation) untuk komitenya.
 
-Terakhir, validator menandatangani atestasi dan menyiarkannya ke jaringan.
+### Atestasi agregat {#aggregated-attestation}
 
-### Atestasi teragregasi {#aggregated-attestation}
+Ada overhead yang substansial terkait dengan pengiriman data ini di sekitar jaringan untuk setiap validator. Oleh karena itu, atestasi dari validator individu diagregasi di dalam subnet sebelum disiarkan lebih luas. Ini termasuk mengagregasi tanda tangan bersama-sama sehingga atestasi yang disiarkan mencakup `data` konsensus dan tanda tangan tunggal yang dibentuk dengan menggabungkan tanda tangan dari semua validator yang setuju dengan `data` tersebut. Sebuah atestasi agregat berisi:
 
-Terdapat overhead yang substansial terkait dengan pengiriman data ini di sekitar jaringan untuk setiap validator. Oleh karena itu, atestasi dari masing-masing validator diagregasi di dalam subnet sebelum disiarkan secara lebih luas. Ini termasuk mengagregasi tanda tangan bersama-sama sehingga atestasi yang disiarkan mencakup `data` konsensus dan satu tanda tangan tunggal yang dibentuk dengan menggabungkan tanda tangan dari semua validator yang setuju dengan `data` tersebut. Hal ini dapat diperiksa menggunakan `aggregation_bits` karena ini menyediakan indeks dari setiap validator di dalam komite mereka (yang ID-nya disediakan di `data`) yang dapat digunakan untuk meminta tanda tangan individu.
+- `aggregation_bits`: sebuah bitlist dengan satu bit per anggota dari setiap komite yang disertakan, di mana posisinya memetakan ke posisi validator di komitenya; nilai (0/1) menunjukkan apakah tanda tangan validator tersebut disertakan
+- `data`: data atestasi yang ditandatangani oleh setiap validator yang disertakan
+- `signature`: tanda tangan BLS yang mengagregasi tanda tangan dari validator yang disertakan
+- `committee_bits`: anggota komite mana yang dicakup oleh `aggregation_bits`
 
-Di setiap Epok, 16 validator di setiap subnet dipilih untuk menjadi `aggregators`. Agregator mengumpulkan semua atestasi yang mereka dengar melalui jaringan gosip yang memiliki `data` yang setara dengan milik mereka sendiri. Pengirim dari setiap atestasi yang cocok dicatat di dalam `aggregation_bits`. Agregator kemudian menyiarkan agregat atestasi ke jaringan yang lebih luas.
+Siapa pun dapat memeriksa tanda tangan agregat terhadap kunci publik gabungan dari validator yang bit-nya diatur.
 
-Ketika seorang validator dipilih untuk menjadi pengusul blok, mereka mengemas atestasi teragregasi dari subnet hingga slot terbaru ke dalam blok baru.
+Di setiap slot, sekitar 16 anggota dari setiap komite dipilih untuk menjadi `aggregators` (`TARGET_AGGREGATORS_PER_COMMITTEE`). Seorang validator mengetahui apakah ia dipilih dari tanda tangannya sendiri atas nomor slot. Agregator mengumpulkan semua atestasi yang mereka dengar di subnet komite mereka yang memiliki `data` yang sama dengan milik mereka, dan menggabungkannya, mencatat pengirim masing-masing di `aggregation_bits`. Agregator kemudian menyiarkan agregat tersebut ke jaringan yang lebih luas.
+
+Ketika seorang validator dipilih untuk menjadi pengusul blok, mereka menyertakan atestasi agregat dari slot terbaru di blok baru. Sejak Pectra, pengusul dapat menggabungkan agregat dari komite berbeda yang berbagi `data` yang sama menjadi satu atestasi, dan sebuah blok dapat menampung hingga 8 di antaranya.
 
 ### Siklus hidup penyertaan atestasi {#attestation-inclusion-lifecycle}
 
-1. Pembuatan (Generation)
+1. Pembuatan
 2. Propagasi
 3. Agregasi
 4. Propagasi
-5. Penyertaan (Inclusion)
+5. Penyertaan
 
 Siklus hidup atestasi diuraikan dalam skema di bawah ini:
 
-![attestation lifecycle](./attestation_schematic.png)
+<AttestationsDiagram />
 
 ## Imbalan {#rewards}
 
-Validator diberikan imbalan karena mengirimkan atestasi. Imbalan atestasi bergantung pada tanda partisipasi (sumber, target, dan head), imbalan dasar, dan tingkat partisipasi.
+Validator diberi imbalan karena mengirimkan atestasi. Imbalan atestasi bergantung pada tanda partisipasi (sumber, target, dan kepala), imbalan dasar, dan tingkat partisipasi.
 
-Masing-masing tanda partisipasi dapat bernilai benar atau salah, bergantung pada atestasi yang dikirimkan dan penundaan penyertaannya.
+Masing-masing tanda partisipasi dapat bernilai benar (true) atau salah (false), bergantung pada atestasi yang dikirimkan dan penundaan penyertaannya.
 
-Skenario terbaik terjadi ketika ketiga tanda tersebut bernilai benar, dalam hal ini seorang validator akan mendapatkan (per tanda yang benar):
+Skenario terbaik terjadi ketika ketiga tanda bernilai benar, dalam hal ini validator akan mendapatkan (per tanda yang benar):
 
 `reward += base reward * flag weight * flag attesting rate / 64`
 
@@ -68,25 +74,32 @@ Imbalan dasar dihitung berdasarkan jumlah validator yang melakukan atestasi dan 
 
 #### Penundaan penyertaan {#inclusion-delay}
 
-Pada saat validator memberikan suara pada ujung rantai (`block n`), `block n+1` belum diusulkan. Oleh karena itu, atestasi secara alami disertakan **satu blok kemudian** sehingga semua atestasi yang memilih `block n` sebagai ujung rantai disertakan dalam `block n+1` dan, **penundaan penyertaan** adalah 1. Jika penundaan penyertaan berlipat ganda menjadi dua slot, imbalan atestasi berkurang setengahnya, karena untuk menghitung imbalan atestasi, imbalan dasar dikalikan dengan kebalikan dari penundaan penyertaan.
+Pada saat validator memberikan suara pada kepala rantai (`block n`), `block n+1` belum diusulkan. Oleh karena itu, atestasi secara alami disertakan **satu blok kemudian** sehingga semua atestasi yang memilih `block n` sebagai kepala rantai disertakan dalam `block n+1` dan, **penundaan penyertaan** adalah 1. Penundaan penyertaan menentukan tanda partisipasi mana yang diperoleh oleh sebuah atestasi:
+
+- `head`: hanya jika penundaan penyertaan tepat 1 slot
+- `source`: jika penundaan penyertaan paling banyak 5 slot (akar kuadrat bilangan bulat dari 32 slot dalam sebuah Epok)
+- `target`: kapan pun atestasi disertakan (sejak pembaruan Deneb, [EIP-7045](https://eips.ethereum.org/EIPS/eip-7045))
+
+Jadi, atestasi yang disertakan terlambat dua slot kehilangan imbalan kepalanya tetapi masih mendapatkan imbalan sumber dan target.
 
 ### Skenario atestasi {#attestation-scenarios}
 
 #### Validator Pemilih yang Hilang {#missing-voting-validator}
 
-Validator memiliki waktu maksimum 1 Epok untuk mengirimkan atestasi mereka. Jika atestasi terlewat di Epok 0, mereka dapat mengirimkannya dengan penundaan penyertaan di Epok 1.
+Sebuah atestasi dapat disertakan dalam blok mana pun dari slot setelah dibuat hingga akhir Epok berikutnya. Jika atestasi dari Epok 0 tidak disertakan dalam blok selama Epok 0, atestasi tersebut masih dapat disertakan di Epok 1, dengan penundaan penyertaan yang lebih lama.
 
 #### Agregator yang Hilang {#missing-aggregator}
 
-Terdapat total 16 Agregator per Epok. Selain itu, validator acak berlangganan ke **dua subnet selama 256 Epok** dan berfungsi sebagai cadangan jika agregator hilang.
+Setiap komite menargetkan sekitar 16 agregator di setiap slot, jadi satu agregator yang hilang jarang menghentikan atestasi komite untuk diagregasi. Secara terpisah, setiap simpul suar tetap berlangganan ke **dua subnet selama 256 Epok** pada satu waktu, dipilih dari ID node-nya, yang menjaga setiap subnet terhubung dengan baik.
 
 #### Pengusul blok yang hilang {#missing-block-proposer}
 
-Perhatikan bahwa dalam beberapa kasus, agregator yang beruntung juga dapat menjadi pengusul blok. Jika atestasi tidak disertakan karena pengusul blok telah hilang, pengusul blok berikutnya akan mengambil atestasi teragregasi tersebut dan menyertakannya ke dalam blok berikutnya. Namun, **penundaan penyertaan** akan bertambah satu.
+Perhatikan bahwa dalam beberapa kasus, agregator yang beruntung juga dapat menjadi pengusul blok. Jika atestasi tidak disertakan karena pengusul blok telah hilang, pengusul blok berikutnya akan mengambil atestasi agregat tersebut dan menyertakannya ke dalam blok berikutnya. Namun, **penundaan penyertaan** akan bertambah satu.
 
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Atestasi dalam spesifikasi konsensus beranotasi Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Atestasi di eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
+- [Atestasi dalam spesifikasi konsensus Electra](https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md#attestation)
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

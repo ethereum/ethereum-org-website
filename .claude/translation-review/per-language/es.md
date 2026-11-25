@@ -1,5 +1,10 @@
 # Spanish (es) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas/verkle inline code, slot, desplegado for deploy (6 JSON keys). Open: tu/usted split in JSON, relay retransmisor vs rele, compounding composicion.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -138,3 +143,14 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: `plugin` vs `complemento` differs between files; tú/usted differs between tutorials (pre-existing).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- ABI/EVM spelled out where English leaves them bare (#80, prose -> warning)

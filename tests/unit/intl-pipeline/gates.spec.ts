@@ -117,6 +117,207 @@ test.describe("structural gate", () => {
   })
 })
 
+test.describe("code fences against the baseline", () => {
+  const fence = (code: string) => "```js\n" + code + "\n```"
+  const EN_A = `## Setup {#setup}
+
+Run it:
+
+${fence("    const a = 1")}
+`
+  const DE_A = `## Einrichtung {#setup}
+
+Ausführen:
+
+${fence("const a = 1")}
+`
+  // English adds a fence above the one the locale already broke
+  const EN_B = EN_A.replace(
+    "Run it:",
+    `Install:\n\n${fence("npm i")}\n\nRun it:`
+  )
+  const DE_B = DE_A.replace(
+    "Ausführen:",
+    `Installieren:\n\n${fence("npm i")}\n\nAusführen:`
+  )
+
+  test("a fence the locale already broke passes once English renumbers it", () => {
+    expect(
+      structuralRegressions({
+        destPath: "x.md",
+        fileType: "markdown",
+        english: EN_B,
+        output: DE_B,
+        baseline: DE_A,
+        baselineEnglish: EN_A,
+        mode: "incremental",
+      })
+    ).toEqual([])
+  })
+
+  test("a renumbered defect is matched by content even without the baseline's English", () => {
+    expect(
+      structuralRegressions({
+        destPath: "x.md",
+        fileType: "markdown",
+        english: EN_B,
+        output: DE_B,
+        baseline: DE_A,
+        mode: "incremental",
+      })
+    ).toEqual([])
+  })
+
+  test("code the merge left stale fails although no fence moved", () => {
+    const enB = EN_A.replace("const a = 1", "const a = 2")
+    const de = DE_A.replace("const a = 1", "    const a = 1")
+    const failures = structuralRegressions({
+      destPath: "x.md",
+      fileType: "markdown",
+      english: enB,
+      output: de,
+      baseline: de,
+      baselineEnglish: EN_A,
+      mode: "incremental",
+    })
+    expect(failures).toEqual([
+      "code-fence-content: fence 1 (`js`) body differs from English",
+    ])
+  })
+
+  test("a language tag the locale already had wrong passes; a stale one fails", () => {
+    const tag = (lang: string, code: string) =>
+      "```" + lang + "\n" + code + "\n```"
+    const doc = (...fences: string[]) =>
+      `## Setup {#setup}\n\n${fences.join("\n\n")}\n`
+    const input = {
+      destPath: "x.md",
+      fileType: "markdown" as const,
+      mode: "incremental" as const,
+    }
+    const broken = tag("bash", "const a = 1")
+    expect(
+      structuralRegressions({
+        ...input,
+        english: doc(fence("npm i"), tag("sh", "    const a = 1")),
+        output: doc(fence("npm i"), broken),
+        baseline: doc(broken),
+        baselineEnglish: doc(tag("sh", "    const a = 1")),
+      })
+    ).toEqual([])
+    const stale = doc(tag("bash", "const a = 1"))
+    expect(
+      structuralRegressions({
+        ...input,
+        english: doc(tag("sh", "const a = 1")),
+        output: stale,
+        baseline: stale,
+        baselineEnglish: stale,
+      })
+    ).toEqual(["code-fence-lang: fence 1: en=`sh` tr=`bash`"])
+  })
+
+  test("a defect is still known when English drops a fence the locale lacked", () => {
+    // The locale never had English's second fence, so its fences never lined
+    // up with its own English; English then deletes that fence.
+    const enA = `${EN_A}\n${fence("npm test")}\n`
+    expect(
+      structuralRegressions({
+        destPath: "x.md",
+        fileType: "markdown",
+        english: EN_A,
+        output: DE_A,
+        baseline: DE_A,
+        baselineEnglish: enA,
+        mode: "incremental",
+      })
+    ).toEqual([])
+  })
+
+  test("fences in subsections English reordered are out of place, not wrong", () => {
+    const sub = (a: string, b: string) =>
+      `## Setup {#setup}\n\n### ${a}\n\n${fence(a === "One {#one}" ? "npm i" : "npm start")}\n\n### ${b}\n\n${fence(b === "One {#one}" ? "npm i" : "npm start")}\n`
+    const before = sub("One {#one}", "Two {#two}")
+    const after = sub("Two {#two}", "One {#one}")
+    expect(
+      structuralRegressions({
+        destPath: "x.md",
+        fileType: "markdown",
+        english: after,
+        output: before,
+        baseline: before,
+        baselineEnglish: before,
+        mode: "incremental",
+      })
+    ).toEqual([])
+  })
+
+  test("a second copy of an old defect is new", () => {
+    const failures = structuralRegressions({
+      destPath: "x.md",
+      fileType: "markdown",
+      english: `${EN_A}\n${fence("    const a = 1")}\n`,
+      output: `${DE_A}\n${fence("const a = 1")}\n`,
+      baseline: DE_A,
+      baselineEnglish: EN_A,
+      mode: "incremental",
+    })
+    expect(failures).toEqual([
+      "code-fence-content: fence 2 (`js`) body differs from English",
+    ])
+  })
+})
+
+test.describe("headings against the baseline", () => {
+  // zh optimistic-rollups: the locale was one heading short of the English it
+  // was translated from, which only showed once English deleted a section.
+  const EN_A = "## A {#a}\n\nx\n\n## B {#b}\n\ny\n\n## C {#c}\n\nz\n"
+  const DE_A = "## A {#a}\n\nx\n\n## C {#c}\n\nz\n"
+  const EN_B = "## A {#a}\n\nx\n\n## B {#b}\n\ny\n"
+  const DE_B = "## A {#a}\n\nx\n"
+  const input = {
+    destPath: "x.md",
+    fileType: "markdown" as const,
+    english: EN_B,
+    baseline: DE_A,
+    mode: "incremental" as const,
+  }
+
+  test("a heading the locale was already missing is not new", () => {
+    expect(
+      structuralRegressions({ ...input, output: DE_B, baselineEnglish: EN_A })
+    ).toEqual([])
+  })
+
+  test("a locale two headings short may lose one of the gap to an English deletion", () => {
+    // English A has A/B/C/D, the locale only A/D; English B deletes B
+    const enA = "## A {#a}\n\n## B {#b}\n\n## C {#c}\n\n## D {#d}\n"
+    const de = "## A {#a}\n\n## D {#d}\n"
+    expect(
+      structuralRegressions({
+        destPath: "x.md",
+        fileType: "markdown",
+        english: enA.replace("## B {#b}\n\n", ""),
+        output: de,
+        baseline: de,
+        baselineEnglish: enA,
+        mode: "incremental",
+      })
+    ).toEqual([])
+  })
+
+  test("losing one more heading is", () => {
+    expect(
+      structuralRegressions({
+        ...input,
+        english: EN_A,
+        output: "## A {#a}\n\nx\n",
+        baselineEnglish: EN_A,
+      })
+    ).toEqual(["heading-count: en=3 tr=1"])
+  })
+})
+
 test.describe("mdx gate", () => {
   test("valid MDX compiles", async () => {
     expect(await mdxCompileError(DE_GOOD)).toBeNull()

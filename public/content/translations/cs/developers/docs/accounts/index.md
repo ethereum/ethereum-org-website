@@ -24,17 +24,17 @@ Oba typy účtů mají schopnost:
 
 ### Klíčové rozdíly {#key-differences}
 
-**Externě vlastněné**
+**Externě vlastněný účet**
 
 - Vytvoření účtu nic nestojí
-- Mohou iniciovat transakce
-- Transakce mezi externě vlastněnými účty mohou být pouze převody ETH/tokenů
-- Skládají se z kryptografického páru klíčů: veřejného a soukromého klíče, které ovládají aktivity účtu
+- Může iniciovat transakce
+- Transakce mezi externě vlastněnými účty mohou být pouze převody ETH, pokud příjemce nedelegoval na kód kontraktu (viz `codeHash` níže)
+- Skládá se z kryptografického páru klíčů: veřejného a soukromého klíče, které ovládají aktivity účtu
 
-**Kontraktové**
+**Kontraktový účet**
 
 - Vytvoření kontraktu něco stojí, protože využíváte úložiště sítě
-- Mohou odesílat zprávy pouze v reakci na přijetí transakce
+- Může odesílat zprávy pouze v reakci na přijetí transakce
 - Transakce z externího účtu na kontraktový účet mohou spustit kód, který může provést mnoho různých akcí, jako je převod tokenů nebo dokonce vytvoření nového kontraktu
 - Kontraktové účty nemají soukromé klíče. Místo toho jsou ovládány logikou kódu chytrého kontraktu
 
@@ -42,13 +42,12 @@ Oba typy účtů mají schopnost:
 
 Účty na Ethereu mají čtyři pole:
 
-- `nonce` – Počítadlo, které udává počet transakcí odeslaných z externě vlastněného účtu nebo počet kontraktů vytvořených kontraktovým účtem. Pro každý účet může být provedena pouze jedna transakce s danou nonce, což chrání před útoky typu replay (opakování), kdy jsou podepsané transakce opakovaně vysílány a znovu prováděny.
+- `nonce` – Počítadlo, které udává počet transakcí odeslaných z externě vlastněného účtu, nebo v případě kontraktového účtu o jednu více, než je počet kontraktů, které vytvořil (nonce kontraktů začínají na 1, podle [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Každá uplatněná autorizace [EIP-7702](/roadmap/pectra/7702/) také zvyšuje nonce autorizujícího účtu. Pro každý účet může být provedena pouze jedna transakce s danou nonce, což chrání před útoky typu replay (opakování), kdy jsou podepsané transakce opakovaně vysílány a znovu prováděny.
 - `balance` – Počet Wei vlastněných touto adresou. Wei je nominální hodnota ETH a v jednom ETH je 1e+18 Wei.
-- `codeHash` – Tento hash odkazuje na _kód_ účtu ve virtuálním stroji Etherea (EVM). Kontraktové účty mají naprogramované fragmenty kódu, které mohou provádět různé operace. Tento kód EVM se spustí, pokud účet obdrží volání zprávy. Na rozdíl od ostatních polí účtu jej nelze změnit. Všechny takové fragmenty kódu jsou obsaženy v databázi stavu pod svými odpovídajícími hashi pro pozdější načtení. Tato hodnota hashe je známá jako codeHash. U externě vlastněných účtů je pole codeHash hashem prázdného řetězce.
-- `storageRoot` – Někdy známý jako hash úložiště. 256bitový hash kořenového uzlu [Merkle-Patricia trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), který kóduje obsah úložiště účtu (mapování mezi 256bitovými celočíselnými hodnotami), zakódovaný do trie jako mapování z 256bitového hashe Keccak-256 256bitových celočíselných klíčů na 256bitové celočíselné hodnoty zakódované pomocí rekurzivní předpony délky (RLP). Tato trie kóduje hash obsahu úložiště tohoto účtu a ve výchozím nastavení je prázdná.
+- `codeHash` – Tento hash odkazuje na _kód_ účtu ve virtuálním stroji Etherea (EVM). Kontraktové účty mají naprogramované fragmenty kódu, které mohou provádět různé operace. Tento kód EVM se spustí, pokud účet obdrží volání zprávy. Kód kontraktu nelze po jeho nasazení změnit, na rozdíl od ostatních polí účtu. Všechny takové fragmenty kódu jsou obsaženy ve stavové databázi pod svými odpovídajícími hashi pro pozdější načtení. Tato hodnota hashe je známá jako codeHash. U externě vlastněných účtů je pole codeHash hashem prázdného řetězce, pokud účet nedelegoval na chytrý kontrakt pomocí [EIP-7702](/roadmap/pectra/7702/). Kód účtu je pak indikátorem delegace (`0xef0100` následovaný adresou kontraktu), který může účet změnit nebo vymazat novou autorizací.
+- `storageRoot` – Někdy známý jako hash úložiště. 256bitový hash kořenového uzlu [Merkle-Patricia trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), který kóduje obsah úložiště účtu (mapování mezi 256bitovými celočíselnými hodnotami), zakódovaný do trie jako mapování z 256bitového hashe Keccak 256bitových celočíselných klíčů na 256bitové celočíselné hodnoty zakódované pomocí rekurzivní předpony délky (RLP). Tato trie kóduje hash obsahu úložiště tohoto účtu a ve výchozím nastavení je prázdná.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Diagram upraven podle [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Externě vlastněné účty a páry klíčů {#externally-owned-accounts-and-key-pairs}
 

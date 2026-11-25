@@ -31,24 +31,6 @@
 [[plugins]]
   package = "./plugins/indexnow"
 
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-
-  [[plugins.inputs.audits]]
-    path = "en/"
-  [[plugins.inputs.audits]]
-    path = "en/wallets/find-wallet/"
-  [[plugins.inputs.audits]]
-    path = "en/staking/"
-  [[plugins.inputs.audits]]
-    path = "en/whitepaper/"
-  [[plugins.inputs.audits]]
-    path = "en/nft/"
-  [[plugins.inputs.audits]]
-    path = "en/developers/docs/intro-to-ethereum/"
-  [[plugins.inputs.audits]]
-    path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
-
 [functions]
   included_files = ["i18n.config.json", "src/intl/**/*", "src/data-layer/mocks/**/*"]
 
@@ -81,6 +63,11 @@
     "/*.xml",
     "/*.webmanifest"
   ]
+
+# Previews build only a locale subset (other locales 404). All locales: staging, intl/* or full/* branches, or a "[full build]" commit message.
+# Keep the trailing `pnpm build && rm -rf .next/cache` in sync with [build].command.
+[context.deploy-preview]
+  command = 'case "$HEAD" in staging|intl/*|full/*) ;; *) git log -1 --format=%B | grep -qF "[full build]" || export NEXT_PUBLIC_BUILD_LOCALES=en,es,zh,ar,ja ;; esac; pnpm build && rm -rf .next/cache'
 
 # Override SITE_URL for named branches with custom subdomains so canonical
 # URLs and OG metadata use the custom domain instead of *.netlify.app.

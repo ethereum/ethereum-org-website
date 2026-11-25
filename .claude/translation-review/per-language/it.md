@@ -1,5 +1,10 @@
 # it Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas/verkle inline code, commissioni prioritarie, The Merge, costruttori for builder. Open: `sottocolli` garble in networking-layer (replace with sottoprotocolli), `In ogni altro punto`, revertito anglicism.
+
 ## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.7/10
 
 **Fixed (critical):** `Cifratura Completamente Omoforma` -> `Omomorfa` (`roadmap/privacy` L96). "Omoforma" is not an Italian word; the term derives from *omomorfismo*. Not a glossary entry (FHE is absent from ETHGlossary), so this is an accuracy defect the glossary layer cannot catch — it appeared on a boldfaced defined term.
@@ -137,3 +142,14 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Glossary returns `(weth)` lowercase (#95); left as is in it.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- ABI/EVM spelled out (#80). Uses `causano un revert`, avoiding the de/fr undo/cancel problem

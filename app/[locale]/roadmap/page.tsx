@@ -1,11 +1,7 @@
 import { pick } from "lodash"
 import { Atom } from "lucide-react"
 import { getImageProps } from "next/image"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -60,8 +56,6 @@ import mergeImg from "@/public/images/upgrades/merge.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-roadmap")
 
@@ -187,6 +181,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <Alert variant="banner">{t("page-roadmap-banner-notification")}</Alert>
 
       <HubHero
+        breadcrumbs={{ slug: "roadmap" }}
         heroImg={roadmapHeroImg}
         header={t("page-roadmap-title")}
         description={t("page-roadmap-meta-description")}
@@ -380,8 +375,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-roadmap")
 

@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Tìm hiểu về PeerDAS như một phần của bản nâng cấp giao thức Ethereum Fusaka
+description: "Tìm hiểu về PeerDAS như một phần của bản nâng cấp giao thức Ethereum Fusaka"
 lang: vi
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -41,31 +41,31 @@ DAS là một cơ chế được xây dựng dựa trên điều này và đảm
 
 ## PeerDAS {#peer-das-2}
 
-[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) là một đề xuất cụ thể triển khai cơ chế DAS trong Ethereum, đánh dấu bản nâng cấp có lẽ là lớn nhất kể từ The Merge. PeerDAS được thiết kế để mở rộng dữ liệu của khối dữ liệu, chia nó thành các cột và phân phối một tập hợp con cho các nút.
+[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) là một đề xuất cụ thể triển khai cơ chế DAS trong Ethereum, đánh dấu bản nâng cấp có lẽ là lớn nhất kể từ The Merge. PeerDAS được thiết kế để mở rộng dữ liệu của khối dữ liệu, chia nó thành các cột và phân phối một tập con cho các nút.
 
-Ethereum mượn một số phép toán thông minh để đạt được điều này: nó áp dụng mã hóa xóa kiểu Reed-Solomon cho dữ liệu của khối dữ liệu. Dữ liệu của khối dữ liệu được biểu diễn dưới dạng một đa thức có các hệ số mã hóa dữ liệu, sau đó đánh giá đa thức đó tại các điểm bổ sung để tạo ra một khối dữ liệu mở rộng, nhân đôi số lượng đánh giá. Sự dư thừa được thêm vào này cho phép phục hồi xóa: ngay cả khi một số đánh giá bị thiếu, khối dữ liệu gốc vẫn có thể được tái tạo lại miễn là có sẵn ít nhất một nửa tổng số dữ liệu, bao gồm cả các phần mở rộng.
+Ethereum mượn một số phép toán thông minh để đạt được điều này: nó áp dụng mã hóa xóa kiểu Reed-Solomon cho dữ liệu của khối dữ liệu. Dữ liệu của khối dữ liệu được biểu diễn dưới dạng một đa thức có các hệ số mã hóa dữ liệu, sau đó đánh giá đa thức đó tại các điểm bổ sung để tạo ra một khối dữ liệu mở rộng, nhân đôi số lượng đánh giá. Sự dư thừa được thêm vào này cho phép phục hồi xóa: ngay cả khi thiếu một số đánh giá, khối dữ liệu gốc vẫn có thể được tái tạo lại miễn là có sẵn ít nhất một nửa tổng số dữ liệu, bao gồm cả các phần mở rộng.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
-Trên thực tế, đa thức này có hàng ngàn hệ số. Các cam kết KZG là các giá trị gồm vài byte, giống như một mã băm, được biết đến bởi tất cả các nút. Mọi nút nắm giữ đủ các điểm dữ liệu đều có thể [tái tạo lại một cách hiệu quả một tập hợp đầy đủ dữ liệu của khối dữ liệu](https://arxiv.org/abs/2207.11079). 
+Trên thực tế, đa thức này có hàng nghìn hệ số. Các cam kết KZG là các giá trị gồm vài byte, giống như một mã băm, được tất cả các nút biết đến. Mọi nút nắm giữ đủ các điểm dữ liệu đều có thể [tái tạo lại hiệu quả một tập hợp đầy đủ dữ liệu của khối dữ liệu](https://arxiv.org/abs/2207.11079). 
 
 > Sự thật thú vị: kỹ thuật mã hóa tương tự đã được sử dụng bởi đĩa DVD. Nếu bạn làm xước một đĩa DVD, đầu phát vẫn có thể đọc được nó nhờ mã hóa Reed-Solomon bổ sung các phần còn thiếu của đa thức. 
 
-Về mặt lịch sử, dữ liệu trong các chuỗi khối, cho dù là các khối hay các khối dữ liệu, đều được phát sóng tới tất cả các nút. Với cách tiếp cận chia nhỏ và lấy mẫu của PeerDAS, việc phát sóng mọi thứ cho mọi người không còn cần thiết nữa. Sau Fusaka, mạng lưới lớp đồng thuận được tổ chức thành các chủ đề/mạng con của giao thức lan truyền: các cột của khối dữ liệu được gán cho các mạng con cụ thể và mỗi nút đăng ký các tập hợp con được xác định trước và chỉ lưu giữ những phần đó.
+Về mặt lịch sử, dữ liệu trong các blockchain, cho dù là các khối hay các khối dữ liệu, đều được phát sóng tới tất cả các nút. Với cách tiếp cận chia nhỏ và lấy mẫu của PeerDAS, việc phát sóng mọi thứ cho mọi người không còn cần thiết nữa. Sau Fusaka, mạng lưới lớp đồng thuận được tổ chức thành các chủ đề/mạng con của giao thức lan truyền: các cột của khối dữ liệu được gán cho các mạng con cụ thể và mỗi nút đăng ký một tập con được xác định trước và chỉ lưu giữ những phần đó.
 
 Với PeerDAS, dữ liệu của khối dữ liệu mở rộng được chia thành 128 phần gọi là các cột. Dữ liệu được phân phối đến các nút này thông qua một giao thức lan truyền chuyên dụng trên các mạng con cụ thể mà chúng đăng ký. Mỗi nút thông thường trên mạng lưới tham gia vào ít nhất 8 mạng con cột được chọn ngẫu nhiên. Việc chỉ nhận dữ liệu từ 8 trong số 128 mạng con có nghĩa là nút mặc định này chỉ nhận được 1/16 tổng số dữ liệu, nhưng vì dữ liệu đã được mở rộng nên đây là 1/8 dữ liệu gốc. 
 
-Điều này cho phép một giới hạn mở rộng quy mô lý thuyết mới gấp 8 lần so với lược đồ "mọi người tải xuống mọi thứ" hiện tại. Với việc các nút đăng ký các mạng con ngẫu nhiên khác nhau phục vụ các cột của khối dữ liệu, xác suất rất cao là chúng được phân phối đồng đều và do đó mọi phần dữ liệu đều tồn tại ở đâu đó trong mạng lưới. Các nút chạy trình xác thực được yêu cầu đăng ký nhiều mạng con hơn với mỗi trình xác thực mà chúng chạy.
+Điều này cho phép một giới hạn mở rộng quy mô lý thuyết mới gấp 8 lần so với mô hình "mọi người tải xuống mọi thứ" hiện tại. Với việc các nút đăng ký các mạng con ngẫu nhiên khác nhau phục vụ các cột của khối dữ liệu, xác suất rất cao là chúng được phân phối đồng đều và do đó mọi phần dữ liệu đều tồn tại ở đâu đó trong mạng lưới. Các nút chạy trình xác thực được yêu cầu đăng ký nhiều mạng con hơn với mỗi trình xác thực mà chúng chạy.
 
-> Mỗi nút có một ID được tạo ngẫu nhiên duy nhất, nó thường đóng vai trò là danh tính công khai của nó cho các kết nối. Trong PeerDAS, con số này được sử dụng để xác định các mạng con tập hợp ngẫu nhiên mà nó phải đăng ký, dẫn đến sự phân phối ngẫu nhiên đồng đều của tất cả dữ liệu của khối dữ liệu.
+> Mỗi nút có một ID duy nhất được tạo ngẫu nhiên, nó thường đóng vai trò là danh tính công khai cho các kết nối. Trong PeerDAS, con số này được sử dụng để xác định tập hợp các mạng con ngẫu nhiên mà nó phải đăng ký, dẫn đến sự phân phối ngẫu nhiên đồng đều của tất cả dữ liệu của khối dữ liệu.
 
-Khi một nút tái tạo thành công dữ liệu gốc, sau đó nó sẽ phân phối lại các cột đã phục hồi trở lại mạng lưới, chủ động chữa lành bất kỳ khoảng trống dữ liệu nào và tăng cường khả năng phục hồi tổng thể của hệ thống. Các nút được kết nối với các trình xác thực có số dư kết hợp ≥4096 ETH phải là một siêu nút và do đó phải đăng ký tất cả các mạng con cột dữ liệu và lưu giữ tất cả các cột. Những siêu nút này sẽ liên tục chữa lành các khoảng trống dữ liệu. Bản chất tự chữa lành theo xác suất của giao thức cho phép các đảm bảo tính khả dụng mạnh mẽ trong khi không giới hạn các nhà điều hành tại nhà chỉ nắm giữ các phần của dữ liệu. 
+Khi một nút tái tạo thành công dữ liệu gốc, sau đó nó sẽ phân phối lại các cột đã phục hồi trở lại mạng lưới, chủ động chữa lành bất kỳ khoảng trống dữ liệu nào và tăng cường khả năng phục hồi tổng thể của hệ thống. Các nút được kết nối với các trình xác thực có số dư kết hợp ≥4096 ETH phải là một siêu nút và do đó phải đăng ký tất cả các mạng con cột dữ liệu và lưu giữ tất cả các cột. Các siêu nút này sẽ liên tục chữa lành các khoảng trống dữ liệu. Bản chất tự chữa lành theo xác suất của giao thức cho phép các đảm bảo mạnh mẽ về tính khả dụng trong khi không hạn chế các nhà điều hành tại nhà chỉ nắm giữ các phần của dữ liệu. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-Tính khả dụng của dữ liệu có thể được xác nhận bởi bất kỳ nút nào chỉ nắm giữ một tập hợp con nhỏ dữ liệu của khối dữ liệu nhờ vào cơ chế lấy mẫu được mô tả ở trên. Tính khả dụng này được thực thi: các trình xác thực phải tuân theo các quy tắc lựa chọn phân nhánh mới, nghĩa là chúng sẽ chỉ chấp nhận và bỏ phiếu cho các khối sau khi chúng đã xác minh tính khả dụng của dữ liệu.
+Tính khả dụng của dữ liệu có thể được xác nhận bởi bất kỳ nút nào chỉ nắm giữ một tập con nhỏ dữ liệu của khối dữ liệu nhờ cơ chế lấy mẫu được mô tả ở trên. Tính khả dụng này được thực thi: các trình xác thực phải tuân theo các quy tắc lựa chọn phân nhánh mới, nghĩa là chúng sẽ chỉ chấp nhận và bỏ phiếu cho các khối sau khi chúng đã xác minh tính khả dụng của dữ liệu.
 
-Tác động trực tiếp đến người dùng (đặc biệt là người dùng l2) là mức phí thấp hơn. Với không gian cho dữ liệu của bản cuộn nhiều hơn gấp 8 lần, các hoạt động của người dùng trên chuỗi của họ trở nên rẻ hơn theo thời gian. Nhưng mức phí thấp hơn sau Fusaka sẽ cần thời gian và phụ thuộc vào các BPO.
+Tác động trực tiếp đến người dùng (đặc biệt là người dùng l2) là mức phí thấp hơn. Với không gian cho dữ liệu Rollup nhiều hơn gấp 8 lần, các hoạt động của người dùng trên chuỗi của họ trở nên rẻ hơn theo thời gian. Nhưng mức phí thấp hơn sau Fusaka sẽ cần thời gian và phụ thuộc vào các BPO.
 
 ## Chỉ tham số khối dữ liệu (BPO) {#bpo}
 

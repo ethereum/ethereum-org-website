@@ -5,4 +5,4 @@ No `/code-review`, and do not review translation quality line by line: the intl 
 Report only these red flags:
 
 - Hand-edits to non-English files while the English source also changed in this PR (the pipeline propagates English changes; hand-propagation breaks its manifests).
-- Edits targeting the wrong base branch.
+- Edits targeting a base other than `dev` (`staging` only for hotfixes).

@@ -9,7 +9,7 @@ import {
   Recycle,
   Wallet,
 } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 import type { ReactNode } from "react"
 
 import type { Lang, MatomoEventOptions, ToCItem } from "@/lib/types"
@@ -62,11 +62,9 @@ import heroImg from "@/public/images/what-is-ethereum.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await props.params
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-open-access")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("open-access", locale)
 
   // Keyed rather than positional: sections get reordered, and an <h2> rendering
@@ -294,7 +292,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
@@ -759,8 +757,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-open-access")
 

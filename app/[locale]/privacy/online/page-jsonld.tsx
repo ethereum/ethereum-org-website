@@ -6,17 +6,19 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function PrivacyOnlinePageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-privacy-online")
@@ -57,7 +59,7 @@ export default async function PrivacyOnlinePageJsonLD({
         isPartOf: webPageId,
         headline: t("page-privacy-online-title"),
         description: t("page-privacy-online-meta-description"),
-        image: "https://ethereum.org/images/doge-computer.png",
+        image: `${SITE_URL}/images/doge-computer.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
@@ -75,7 +77,7 @@ export default async function PrivacyOnlinePageJsonLD({
               "Companies that collect and sell personal information, and the opt-out and deletion rights that apply to them",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
     ],
   }

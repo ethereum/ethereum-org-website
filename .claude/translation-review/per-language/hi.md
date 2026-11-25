@@ -1,5 +1,10 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.3/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, checkpoint, builder, deploy (tainat), accounts contract regression (anubandh). Open: kadam vs charan, dashed rendered as dharashayi, derive rendered as prapt karen.
+
 (Earlier findings from PR #17101 live in known-patterns.md.)
 
 ## PR #18772 (community-stories.json, 2026-07-10) -- 8.2/10
@@ -183,3 +188,14 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Glossary itself splits एथेरियम (Foundation) and इथेरियम.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna frontmatter `author` transliterated `ट्रेलऑफ़बिट्स`; dev and all other hi Trailofbits tutorials use Latin -> `Trailofbits`
+
+**Open / notes:**
+
+- echidna:747 relative clause attaches "returns int256" to transactions instead of the function -- native call

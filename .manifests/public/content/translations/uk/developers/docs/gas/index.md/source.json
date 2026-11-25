@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/gas/index.md",
-  "generatedAt": "2026-06-29T23:56:51.511Z",
-  "rootHash": "8212c336018a",
+  "generatedAt": "2026-11-17T08:38:48.169Z",
+  "rootHash": "2a875c152bf5",
   "tree": {
-    "contentHash": "5572fe0abd64",
-    "anchorHash": "a30eb7f2e872",
+    "contentHash": "3112ad32dfa0",
+    "anchorHash": "b85fb42d25df",
     "children": {
       "frontmatter:title": {
         "contentHash": "f5544e76fdee",
@@ -75,62 +75,52 @@
         ]
       },
       "what-is-gas": {
-        "contentHash": "bdc4972d8366",
-        "anchorHash": "2b4880a6e0cc",
+        "contentHash": "790e9cd01d2e",
+        "anchorHash": "dd8ba621f373",
         "labelHash": "ddff5b514f29",
         "children": {
           "_label": {
             "contentHash": "ddff5b514f29",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:4": {
+          "prose:0": {
             "contentHash": "e6081f3a7d5c",
             "anchorHash": "e3b0c44298fc"
           },
-          "image:0": {
-            "contentHash": "070f72356805",
-            "anchorHash": "a371712d1acb"
-          },
-          "prose:5": {
-            "contentHash": "b12227817e20",
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:1": {
-            "contentHash": "931d210378d9",
-            "anchorHash": "e395d21ce0ea"
-          },
-          "prose:6": {
-            "contentHash": "39f281ce1dc9",
+          "prose:2": {
+            "contentHash": "9dc635fd0250",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:2": {
+          "link:0": {
             "contentHash": "a5a4244986ca",
             "anchorHash": "d05e3aae8265"
           },
-          "prose:7": {
+          "prose:3": {
             "contentHash": "f89837b51749",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:3": {
+          "link:1": {
             "contentHash": "cc99b23eb56b",
             "anchorHash": "2e25a2f751df"
           },
-          "prose:8": {
+          "prose:4": {
             "contentHash": "b759759e1981",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:4",
-          "image:0",
-          "prose:5",
+          "prose:0",
+          "component:2",
+          "prose:2",
+          "link:0",
+          "prose:3",
           "link:1",
-          "prose:6",
-          "link:2",
-          "prose:7",
-          "link:3",
-          "prose:8"
+          "prose:4"
         ]
       },
       "how-are-gas-fees-calculated": {
@@ -418,15 +408,15 @@
         ]
       },
       "why-do-gas-fees-exist": {
-        "contentHash": "c62053108ebb",
-        "anchorHash": "9f336a63f18e",
+        "contentHash": "eab8328089af",
+        "anchorHash": "01b194df8e65",
         "labelHash": "b1dcb90d3e85",
         "children": {
           "_label": {
             "contentHash": "b1dcb90d3e85",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:3": {
+          "prose:1": {
             "contentHash": "8e6e5332a644",
             "anchorHash": "e3b0c44298fc"
           },
@@ -434,36 +424,21 @@
             "contentHash": "e3b0c44298fc",
             "anchorHash": "4a84d8b40318"
           },
-          "prose:4": {
+          "prose:2": {
             "contentHash": "ed415043db31",
             "anchorHash": "e3b0c44298fc"
           },
-          "image:1": {
-            "contentHash": "a59651dbc0e1",
-            "anchorHash": "8831d07d5dc2"
-          },
-          "prose:5": {
-            "contentHash": "b12227817e20",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:2": {
-            "contentHash": "931d210378d9",
-            "anchorHash": "e395d21ce0ea"
-          },
-          "prose:6": {
-            "contentHash": "d2e2adf7177b",
+          "component:4": {
+            "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:3",
+          "prose:1",
           "inline-code:0",
-          "prose:4",
-          "image:1",
-          "prose:5",
-          "link:2",
-          "prose:6"
+          "prose:2",
+          "component:4"
         ]
       },
       "what-is-gas-limit": {
@@ -549,15 +524,15 @@
         ]
       },
       "monitoring-gas-fees": {
-        "contentHash": "731b08bd6c7c",
-        "anchorHash": "e69f1771f540",
+        "contentHash": "1efa0e4b64e4",
+        "anchorHash": "bdad19ad5d4d",
         "labelHash": "6848de463c35",
         "children": {
           "_label": {
             "contentHash": "6848de463c35",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:5": {
+          "prose:4": {
             "contentHash": "30f2abc3a2be",
             "anchorHash": "e3b0c44298fc"
           },
@@ -565,7 +540,7 @@
             "contentHash": "d0299bb7f22b",
             "anchorHash": "3d21241828a2"
           },
-          "prose:6": {
+          "prose:5": {
             "contentHash": "1d93486dd2ab",
             "anchorHash": "e3b0c44298fc"
           },
@@ -573,7 +548,7 @@
             "contentHash": "3dee05652774",
             "anchorHash": "d195727de38a"
           },
-          "prose:7": {
+          "prose:6": {
             "contentHash": "26a1e98351c2",
             "anchorHash": "e3b0c44298fc"
           },
@@ -581,79 +556,30 @@
             "contentHash": "ce42adafba1e",
             "anchorHash": "d0bc2f3a6f63"
           },
-          "prose:8": {
+          "prose:7": {
             "contentHash": "0852c4d8ab9b",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
-            "contentHash": "1ccf2eb604cf",
-            "anchorHash": "bc0d803b838a"
-          },
-          "prose:9": {
-            "contentHash": "a7dee4dc266f",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:4": {
             "contentHash": "175f2a1b837b",
             "anchorHash": "491bd24f9fe8"
           },
-          "prose:10": {
+          "prose:8": {
             "contentHash": "7d34ca1e20d4",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
+          "prose:4",
+          "link:0",
           "prose:5",
-          "link:0",
+          "link:1",
           "prose:6",
-          "link:1",
-          "prose:7",
           "link:2",
-          "prose:8",
+          "prose:7",
           "link:3",
-          "prose:9",
-          "link:4",
-          "prose:10"
-        ]
-      },
-      "related-tools": {
-        "contentHash": "7fa3afbc43b1",
-        "anchorHash": "42fbf4910a2d",
-        "labelHash": "3da6e153ee8c",
-        "children": {
-          "_label": {
-            "contentHash": "3da6e153ee8c",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "prose:2": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:0": {
-            "contentHash": "cc481a547b54",
-            "anchorHash": "168fc4c56039"
-          },
-          "prose:3": {
-            "contentHash": "657a3d55a78d",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:1": {
-            "contentHash": "fb8e2d3ff144",
-            "anchorHash": "9e4d3e7efe95"
-          },
-          "prose:4": {
-            "contentHash": "e74c35f812b1",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "_label",
-          "prose:2",
-          "link:0",
-          "prose:3",
-          "link:1",
-          "prose:4"
+          "prose:8"
         ]
       },
       "further-reading": {
@@ -747,9 +673,8 @@
       "why-can-gas-fees-get-so-high",
       "initiatives-to-reduce-gas-costs",
       "monitoring-gas-fees",
-      "related-tools",
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "ff8a5b0c924e7555d20026ccfe7a14d591b7de66"
 }

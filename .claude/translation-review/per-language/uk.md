@@ -1,5 +1,10 @@
 # Ukrainian (uk) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: Etheriumi in attestations description, vyboru forka, eqivokaciya/sleshing, prioritetna komisiya, BLS-pidpys. Open: seed rendered as sid-fraza, `vyprominyuye` for emits.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -183,3 +188,15 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - No Russian contamination. Warnings: decimal separator; MetaMask UI labels given only in Ukrainian.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:54 `Фазер` (singular) with plural verb -> `Фазери`
+- echidna:282 ABI glossary insertion split "ABI signature" -> `підпис двійкового інтерфейсу програми (ABI)`
+
+**Open / notes:**
+
+- multi-client: account as both `обліковими записами` (code comment) and `акаунти` (prose) -- informational

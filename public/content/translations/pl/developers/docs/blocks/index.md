@@ -12,12 +12,11 @@ Bloki to temat bardzo przyjazny dla początkujących. Aby jednak pomóc Ci lepie
 
 ## Dlaczego bloki? {#why-blocks}
 
-Aby upewnić się, że wszyscy uczestnicy w sieci [Ethereum](/) utrzymują zsynchronizowany stan i zgadzają się co do dokładnej historii transakcji, grupujemy transakcje w bloki. Oznacza to, że dziesiątki (lub setki) transakcji są zatwierdzane, uzgadniane i synchronizowane jednocześnie.
+Aby upewnić się, że wszyscy uczestnicy sieci [Ethereum](/) utrzymują zsynchronizowany stan i zgadzają się co do dokładnej historii transakcji, grupujemy transakcje w bloki. Oznacza to, że dziesiątki (lub setki) transakcji są zatwierdzane, uzgadniane i synchronizowane jednocześnie.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Diagram zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Rozkładając zatwierdzenia w czasie, dajemy wszystkim uczestnikom sieci wystarczająco dużo czasu na osiągnięcie konsensusu: chociaż żądania transakcji pojawiają się dziesiątki razy na sekundę, bloki są tworzone i zatwierdzane w Ethereum tylko raz na dwanaście sekund.
+Rozkładając zatwierdzenia w czasie, dajemy wszystkim uczestnikom sieci wystarczająco dużo czasu na osiągnięcie konsensusu: mimo że żądania transakcji pojawiają się dziesiątki razy na sekundę, bloki są tworzone i zatwierdzane w Ethereum tylko raz na dwanaście sekund.
 
 ## Jak działają bloki {#how-blocks-work}
 

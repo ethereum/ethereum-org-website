@@ -18,7 +18,7 @@ Ethereum.org is natively translated into over 40 languages which you can find us
 
 ![Language selector menu](./language-selector-menu.png)
 
-If you are bilingual and want to help us reach more people, you can also get involved with the [ethereum.org Translation Program](/contributing/translation-program/#translation-program) and help us translate the website.
+If you are bilingual and want to help us reach more people, you can also get involved with the [ethereum.org Translation Program](/contributing/translation-program/) and help us translate the website.
 
 ## Community resources {#community}
 

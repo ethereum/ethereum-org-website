@@ -8,7 +8,7 @@ import {
   ThumbsUp,
 } from "lucide-react"
 import type { Metadata } from "next"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -16,16 +16,6 @@ import ContentFeedback from "@/components/ContentFeedback"
 import { PageHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
-import {
-  CalloutBanner,
-  CalloutButtons,
-  CalloutContent,
-  CalloutDescription,
-  CalloutMain,
-  CalloutRoot,
-  CalloutTitle,
-} from "@/components/ui/callout"
 import {
   Card,
   CardContent,
@@ -41,12 +31,14 @@ import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { safeLocale } from "@/lib/utils/intl"
 import { getMetadata } from "@/lib/utils/metadata"
 import { metricStat, SOURCES } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
 
 import ChecklistPanel from "../../_components/checklist-panel"
 import ComparisonTable from "../../_components/comparison-table"
+import { ExpertCard } from "../../_components/expert-contacts"
 import HeroStats, { type HeroStat } from "../../_components/hero-stats"
 import OrganizationPathways from "../../_components/organization-pathways"
 import SectionIntro from "../../_components/section-intro"
@@ -56,7 +48,6 @@ import PageJsonLD from "./page-jsonld"
 import { getTotalValueLockedData, getTotalValueSecuredData } from "@/lib/data"
 import scalesImg from "@/public/images/organizations/balance-scale-tipped-toward-cryptographic-proof.png"
 import heroImg from "@/public/images/organizations/frosted-glass-pavilion-private-settlement.png"
-import EthSystemsLogo from "@/public/images/organizations/logos/ethsystems.svg"
 
 const complianceCards: { key: string; icon: LucideIcon }[] = [
   { key: "selective-disclosure", icon: ScanEye },
@@ -65,6 +56,7 @@ const complianceCards: { key: string; icon: LucideIcon }[] = [
 ]
 
 const EY_URL = "https://blockchain.ey.com/technology"
+const EXPERT_CARD_SIZES = "(max-width: 768px) calc(100vw - 2rem), 600px"
 
 const solutions: {
   key: string
@@ -129,10 +121,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-organizations-enterprise-privacy")
-  const tOrganizations = await getTranslations("page-organizations")
 
   const [valueSecured, totalValueLocked, { contributors }] = await Promise.all([
     getTotalValueSecuredData(),
@@ -307,7 +296,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             "page-organizations-enterprise-privacy-solutions-examples-label"
                           )}
                         </span>
-                        {new Intl.ListFormat(locale, { type: "unit" })
+                        {new Intl.ListFormat(safeLocale(locale), {
+                          type: "unit",
+                        })
                           .formatToParts(examples.map(({ name }) => name))
                           .map(({ type, value }, idx) => {
                             const example = examples.find(
@@ -428,33 +419,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 "page-organizations-enterprise-privacy-experts-description"
               )}
             />
-            <CalloutRoot data-flow="cta">
-              <CalloutBanner>
-                <EthSystemsLogo
-                  aria-hidden="true"
-                  className="h-48 w-auto text-body @3xl/callout:h-56"
-                />
-              </CalloutBanner>
-              <CalloutMain>
-                <CalloutContent>
-                  <CalloutTitle as="h3">
-                    {tOrganizations(
-                      "page-organizations-experts-ethsystems-name"
-                    )}
-                  </CalloutTitle>
-                  <CalloutDescription>
-                    {t(
-                      "page-organizations-enterprise-privacy-experts-ethsystems-description"
-                    )}
-                  </CalloutDescription>
-                </CalloutContent>
-                <CalloutButtons>
-                  <ButtonLink href="https://ethsystems.org/">
-                    {t("page-organizations-enterprise-privacy-experts-cta")}
-                  </ButtonLink>
-                </CalloutButtons>
-              </CalloutMain>
-            </CalloutRoot>
+            <Grid balanced={2} data-flow="cta" className="text-start">
+              <ExpertCard id="ethsystems" sizes={EXPERT_CARD_SIZES} />
+              <ExpertCard
+                id="ethereum-institutional"
+                sizes={EXPERT_CARD_SIZES}
+              />
+            </Grid>
           </Section>
 
           <OrganizationPathways current="privacy" />
@@ -473,8 +444,6 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-privacy")
 

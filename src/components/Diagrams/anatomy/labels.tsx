@@ -239,7 +239,13 @@ export function AnatomyLabels({
       const placedLabels: DOMRect[] = []
       const placedLeaders: DOMRect[] = []
       const drop: string[] = []
-      for (const spot of spots) {
+      // The lit part's label is placed first, so the step's subject keeps its
+      // label on narrow screens. Tab order still follows `spots`.
+      const byPriority = [
+        ...spots.filter(({ id }) => id === litId),
+        ...spots.filter(({ id }) => id !== litId),
+      ]
+      for (const spot of byPriority) {
         const rect = labelRefs.current[spot.id]?.getBoundingClientRect()
         if (!rect) continue
         const leaders = leaderBoxes(spot)
@@ -300,7 +306,7 @@ export function AnatomyLabels({
       inView?.disconnect()
       resize?.disconnect()
     }
-  }, [spots, width, height])
+  }, [spots, width, height, litId])
 
   return (
     <div ref={containerRef} className="pointer-events-none absolute inset-0">

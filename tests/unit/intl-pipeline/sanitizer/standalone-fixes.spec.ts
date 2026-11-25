@@ -465,6 +465,44 @@ test.describe("Standalone Fixes", () => {
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
+
+    test("restores when the next line closes the parent", () => {
+      const input = "<AlertContent>\n<p>Gut zu wissen\n</AlertContent>"
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(
+        "<AlertContent>\n<p>Gut zu wissen</p>\n</AlertContent>"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves a bare <p> whose text opens with a link (zero-knowledge-proofs, bn)", () => {
+      const input =
+        '<AlertDescription>\n  <p>\n    <a href="/decentralized-identity/">বিকেন্দ্রীভূত পরিচয়</a> সম্পর্কে আরও জানুন\n  </p>\n</AlertDescription>'
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a paragraph that continues with an inline tag", () => {
+      const input = '<p>Mehr dazu\n<a href="/x/">hier</a> lesen.</p>'
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a paragraph that continues with a component", () => {
+      const input = '<p>Mehr dazu\n<Emoji text=":eyes:" /> hier lesen.</p>'
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a paragraph closed on the next line", () => {
+      const input = "<p>Mehr dazu\n</p>"
+      const { content, fixCount } = fixUnclosedParagraphTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
   })
 
   test.describe("fixFullwidthParensInLinks", () => {
@@ -583,6 +621,25 @@ test.describe("Standalone Fixes", () => {
   })
 
   test.describe("fixBlockComponentLineBreaks", () => {
+    test("splits a closer that follows inline code", () => {
+      const { content } = fixBlockComponentLineBreaks(
+        "<Alert>\n\nRun `npm i`</Alert>"
+      )
+      expect(content).toBe("<Alert>\n\nRun `npm i`\n</Alert>")
+    })
+
+    test("leaves JSX attribute values and indented closers alone", () => {
+      const input = [
+        '  <Card title="Low barrier" icon={<Fish />} description="Stake any amount." />',
+        "<Alert>",
+        "  Text",
+        "  </Alert>",
+      ].join("\n")
+      const { content, fixCount } = fixBlockComponentLineBreaks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
     test("adds newline before closing tag", () => {
       const input = "Some content</Card>"
       const { content, fixCount } = fixBlockComponentLineBreaks(input)
@@ -730,6 +787,23 @@ test.describe("Standalone Fixes", () => {
   })
 
   test.describe("normalizeBlockHtmlLines", () => {
+    test("leaves an indented closer and code alone", () => {
+      const input = [
+        "<div>",
+        "  text",
+        "  </div>",
+        "",
+        "```tsx",
+        "      <div>",
+        "        status",
+        "      </div>",
+        "```",
+        "",
+        "Close it with `x</div>`.",
+      ].join("\n")
+      expect(normalizeBlockHtmlLines(input)).toBe(input)
+    })
+
     test("splits inline closing tag to own line", () => {
       const input = "some text</section>"
       const result = normalizeBlockHtmlLines(input)
@@ -2873,6 +2947,36 @@ author: Ori Pomerantz
       const { fixCount } = fixTranslatedJsonPlaceholders(tr, en)
       expect(fixCount).toBe(0)
     })
+
+    test("leaves arguments a language reordered", () => {
+      const en = JSON.stringify({ k: "Screenshot {index} of {name}" })
+      const tr = JSON.stringify({ k: "{name}-এর {index} নং স্ক্রিনশট" })
+      const { content, fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      expect(content).toBe(tr)
+      expect(fixCount).toBe(0)
+    })
+
+    test("renames only the translated name in a reordered value", () => {
+      const en = JSON.stringify({ k: "{count} of {total}" })
+      const tr = JSON.stringify({ k: "{jumla} ya {count}" })
+      const { content, fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      expect(JSON.parse(content).k).toBe("{total} ya {count}")
+      expect(fixCount).toBe(1)
+    })
+
+    test("renames a translated copy of a repeated name", () => {
+      const en = JSON.stringify({ k: "{days} days, {days} left" })
+      const tr = JSON.stringify({ k: "{siku} siku, {days} zimebaki" })
+      const { content } = fixTranslatedJsonPlaceholders(tr, en)
+      expect(JSON.parse(content).k).toBe("{days} siku, {days} zimebaki")
+    })
+
+    test("renames every occurrence of a translated name", () => {
+      const en = JSON.stringify({ k: "{days} days, {days} left" })
+      const tr = JSON.stringify({ k: "{siku} siku, {siku} zimebaki" })
+      const { content } = fixTranslatedJsonPlaceholders(tr, en)
+      expect(JSON.parse(content).k).toBe("{days} siku, {days} zimebaki")
+    })
   })
 
   test.describe("fixBareRtlValues", () => {
@@ -3262,6 +3366,21 @@ author: Ori Pomerantz
   })
 
   test.describe("fixDroppedAutolinkClose", () => {
+    test("leaves a URL whose file name follows the parentheses", () => {
+      const input = "[source](<https://x.example/files/PayPal-(1).pdf>)"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves a URL whose path continues after the parentheses", () => {
+      const input =
+        "- [Web3j Cheat Sheet](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)"
+      const { content, fixCount } = fixDroppedAutolinkClose(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
     test("restores a dropped > on a wiki autolink ending in )", () => {
       const input =
         "[Stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type))"

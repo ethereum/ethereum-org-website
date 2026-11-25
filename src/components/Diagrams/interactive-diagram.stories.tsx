@@ -147,8 +147,6 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
-    // Covered by the diagram snapshots; keeps Chromatic usage down.
-    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

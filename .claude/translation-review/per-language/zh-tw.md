@@ -1,5 +1,10 @@
 # Traditional Chinese (zh-tw) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: zhixing kehuduan, shicao, lie/lan inversion on peerdas page (7 lines), peer-das caption swap, gossip as liuyan xieding. Open: mainland vocabulary (yunxing, miyao), nin/ni split, head touwu vs dingduan.
+
 > **PR:** #18344 (latest/ builder blog, 3 posts)
 > **Date:** 2026-06-03
 > **Quality Score:** 9.5/10
@@ -189,3 +194,16 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: MetaMask written in Latin vs `梅塔馬斯克` across files; 你/您 split within the NFT series; redundant ABI expansion (mint:34).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:60 `_種子 (seeds)_` underscore emphasis renders literally -> `*種子 (seeds)*` (#89)
+- multi-client:99/163 minting sentence subject -> `以確認已為...每位玩家鑄造了 1000 個代幣`
+
+**Open / notes:**
+
+- Mid-sentence English line breaks render as stray spaces between CJK (echidna 343, 581, 681) -- informational
+- multi-client:250 `交易發送器` loses "spammer" -- informational

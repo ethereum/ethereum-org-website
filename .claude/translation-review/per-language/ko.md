@@ -1,5 +1,10 @@
 # Korean (ko) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in 6 sites across 4 JSON keys, truncated `commitment`, The Merge as meojji. Open: Engine API Latin/Hangul split, History network wording.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -177,3 +182,16 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - `<strong>`/`<em>` instead of `**`/`*` is deliberate. Out of scope: transliterated author `엘란 할펀` in sending.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:244 closing sentence reversed ("we want to hear answers to questions") -> `...의견을 듣고 싶으며, 궁금한 점이 있으면 답변해 드리겠습니다.`
+
+**Open / notes:**
+
+- echidna: glossary noun `되돌리기` verbalized (`되돌리기됩니다`) at 4 sites; natural `되돌려집니다` -- native call (#96)
+- Particle allomorphs after inline code (`config.yaml`를 -> 을, etc.) at ~11 sites -- fluency
+- echidna author `트레일오브비츠` vs Latin in 3 of 5 ko tutorials -- informational

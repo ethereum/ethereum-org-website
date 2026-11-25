@@ -289,6 +289,7 @@ test("gate flags a translated untagged fence", () => {
       check: "code-fence-content",
       detail: "fence 1 (`untagged`) body differs from English",
       severity: "error",
+      key: expect.any(String),
     },
   ])
 })
@@ -369,4 +370,36 @@ test("no English prose fence carries an escaped quote", () => {
   walk(root)
 
   expect(offenders).toEqual([])
+})
+
+// --- flowcharts -------------------------------------------------------------
+
+const FLOW = [
+  "<Flowchart>",
+  "",
+  "- Entry point (0x00)",
+  "  - Is the call data shorter than four bytes?",
+  "    - **Yes** Non-ABI calls (0x5E)",
+  "    - **No** ABI calls (0x0D)",
+  "",
+  "</Flowchart>",
+].join("\n")
+
+const flowFindings = (tr: string) =>
+  verifyMarkdown(FLOW, tr, "x.md").filter((f) =>
+    f.check.startsWith("flowchart")
+  )
+
+test("a translated flowchart with the same shape passes", () => {
+  const tr = FLOW.replace("Entry point", "Einstiegspunkt")
+    .replace("**Yes** Non-ABI", "**Ja** Nicht-ABI")
+    .replace("**No**", "**Nein**")
+  expect(flowFindings(tr)).toEqual([])
+})
+
+test("a flowchart that moves an edge label or loses its list fails", () => {
+  const moved = FLOW.replace("**Yes** Non-ABI calls", "Non-ABI calls **Yes**")
+  expect(flowFindings(moved).map((f) => f.check)).toEqual(["flowchart-shape"])
+  const flat = FLOW.replace(/^ +/gm, "")
+  expect(flowFindings(flat).map((f) => f.check)).toEqual(["flowchart-shape"])
 })

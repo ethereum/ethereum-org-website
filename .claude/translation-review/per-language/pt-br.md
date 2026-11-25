@@ -1,5 +1,10 @@
 # Brazilian Portuguese (pt-br) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: buscadores, taxas de prioridade, escolha de fork, penalizacoes, verkle inline code. Open: plural participle in vault key, `Mesma origem`, acronym over-expansion.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -144,3 +149,14 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: a/o Viem gender differs between files; `assinar`/`assinatura` used for "subscribe" (pre-existing). Note: `Rede Principal` (for Ethereum Mainnet) and `Mainnet` are both glossary forms, depending on context.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:99/163 `tem 1000 cunhados para eles` (reads "brothers-in-law") -> `tem 1000 fichas cunhadas para si`
+
+**Open / notes:**
+
+- Unchanged frontmatter tag `"tes"` (truncated `testes`) in both files -- not fixed, out of scope

@@ -16,15 +16,15 @@ Source code verification is comparing a smart contract’s source code and the c
 
 Smart contract verification enables investigating what a contract does through the higher-level language it is written in, without having to read machine code. Functions, values, and usually the variable names and comments remain the same with the original source code that is compiled and deployed. This makes reading code much easier. Source verification also makes provision for code documentation, so that end-users know what a smart contract is designed to do.
 
-### What is full verification? {#full-verification}
+### What is an exact match? {#full-verification}
 
 There are some parts of the source code that do not affect the compiled bytecode such as comments or variable names. That means two source codes with different variable names and different comments would both be able to verify the same contract. With that, a malicious actor can add deceiving comments or give misleading variable names inside the source code and get the contract verified with a source code different than the original source code.
 
-It is possible to avoid this by appending extra data to the bytecode to serve as a _cryptographic guarantee_ for the exactness of the source code, and as a _fingerprint_ of the compilation information. The necessary information is found in the [Solidity's contract metadata](https://docs.soliditylang.org/en/v0.8.15/metadata.html), and the hash of this file is appended to the bytecode of a contract. You can see it in action in the [metadata playground](https://playground.sourcify.dev)
+It is possible to avoid this by appending extra data to the bytecode to serve as a _cryptographic guarantee_ for the exactness of the source code, and as a _fingerprint_ of the compilation information. The necessary information is found in the [Solidity's contract metadata](https://docs.soliditylang.org/en/latest/metadata.html), and the hash of this file is appended to the end of the contract's bytecode. You can see it in action in the [metadata playground](https://playground.sourcify.dev)
 
-The metadata file contains information about the compilation of the contract including the source files and their hashes. Meaning, if any of the compilation settings or even a byte in one of the source files change, the metadata file changes. Consequently the hash of the metadata file, which is appended to the bytecode, also changes. That means if a contract's bytecode + the appended metadata hash match with the given source code and compilation settings, we can be sure this is exactly the same source code used in the original compilation, not even a single byte is different.
+The metadata file contains information about the compilation of the contract, including the compiler settings and the names and hashes of the source files. Meaning, if any of the compilation settings or even a byte in one of the source files change, the metadata file changes. Consequently the hash of the metadata file, which is appended to the bytecode, also changes. That means if a contract's bytecode + the appended metadata hash match with the given source code and compilation settings, we can be sure this is exactly the same source code used in the original compilation, not even a single byte is different.
 
-This type of verification that leverages the metadata hash is referred to as **"[full verification](https://docs.sourcify.dev/docs/full-vs-partial-match/)"** (also "perfect verification"). If the metadata hashes do not match or are not considered in verification it would be a "partial match", which currently is the more common way to verify contracts. It is possible to [insert malicious code](https://samczsun.com/hiding-in-plain-sight/) that wouldn't be reflected in the verified source code without full verification. Most developers are not aware of the full verification and don't keep the metadata file of their compilation, hence partial verification has been the de facto method to verify contracts so far.
+This type of verification that leverages the metadata hash is called an **"[exact match](https://docs.sourcify.dev/docs/exact-match-vs-match/)"** (formerly "full" or "perfect" match). If the metadata hashes do not match or are not considered in verification, it is a **"match"** (formerly "partial match"): the contract's code is verified, but its source files may differ from the original ones, for example in comments or file names. It is possible to [insert malicious code](https://samczsun.com/hiding-in-plain-sight/) that wouldn't be reflected in the verified source code without an exact match. Most developers are not aware of exact matches and don't keep the metadata file of their compilation, so matches without the metadata hash have been the most common way to verify contracts so far.
 
 ## Why is source code verification important? {#importance-of-source-code-verification}
 
@@ -46,9 +46,9 @@ Publishing a smart contract's source code files makes it easier for those intere
 
 ## How to verify source code for Ethereum smart contracts {#source-code-verification-for-ethereum-smart-contracts}
 
-[Deploying a smart contract on Ethereum](/developers/docs/smart-contracts/deploying/) requires sending a transaction with a data payload (compiled bytecode) to a special address. The data payload is generated by compiling the source code, plus the [constructor arguments](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor) of the contract instance appended to the data payload in the transaction. Compilation is deterministic, meaning it always produces the same output (i.e., contract bytecode) if the same source files, and compilation settings (e.g., compiler version, optimizer) are used.
+[Deploying a smart contract on Ethereum](/developers/docs/smart-contracts/deploying/) requires sending a transaction with a data payload (compiled bytecode) to a special address. The data payload is generated by compiling the source code, plus the [constructor arguments](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor) of the contract instance appended to the data payload in the transaction. Compilation is deterministic, meaning it always produces the same output (i.e., contract bytecode) if the same source files, and compilation settings (e.g., compiler version, optimizer) are used. The source files' names and paths are part of that input too: they are recorded in the metadata, so renaming a file changes the metadata hash.
 
-![A diagram showing showing smart contract source code verification](./source-code-verification.png)
+<SourceVerifyDiagram />
 
 Verifying a smart contract basically involves the following steps:
 
@@ -56,11 +56,13 @@ Verifying a smart contract basically involves the following steps:
 
 2. Compiler outputs the bytecode of the contract
 
-3. Get the bytecode of the deployed contract at a given address
+3. Get the bytecode of the deployed contract at a given address (with `eth_getCode`)
 
 4. Compare the deployed bytecode with the recompiled bytecode. If the codes match, the contract gets verified with the given source code and compilation settings.
 
-5. Additionally, if the metadata hashes at the end of the bytecode match, it will be a full match.
+5. Additionally, if the metadata hashes at the end of the bytecode match, it will be an exact match.
+
+Verifiers can also compare the contract's creation bytecode: the code that deployed it (for a contract deployed directly from an account, the deploy transaction's input), which is the compiled bytecode followed by the encoded [constructor arguments](https://docs.soliditylang.org/en/latest/contracts.html#constructor).
 
 Note that this is a simplistic description of verification and there are many exceptions that would not work with this such as having [immutable variables](https://docs.sourcify.dev/docs/immutables/).
 
@@ -76,7 +78,7 @@ Etherscan allows you to recompile contract bytecode from the original data paylo
 
 Once verified, your contract’s source code receives a "Verified" label and is published on Etherscan for others to audit. It also gets added to the [Verified Contracts](https://etherscan.io/contractsVerified/) section—a repository of smart contracts with verified source codes.
 
-Etherscan is the most used tool for verifying contracts. However, Etherscan's contract verification has a drawback: it fails to compare the **metadata hash** of the onchain bytecode and recompiled bytecode. Therefore the matches in Etherscan are partial matches.
+Etherscan is the most used tool for verifying contracts. It labels each verified contract by [how it matched](https://info.etherscan.com/types-of-contract-verification/): an exact match of the contract's creation bytecode and constructor arguments, a runtime match of its deployed bytecode only, or a similar match, given automatically when a contract's bytecode matches that of a contract already verified. Etherscan's exact match is about the creation bytecode and constructor arguments; it is not the same distinction as the exact match and match described above.
 
 [More on verifying contracts on Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
@@ -88,21 +90,21 @@ Similar to other verification services, Blockscout allows you to verify your con
 
 ### Sourcify {#sourcify}
 
-[Sourcify](https://sourcify.dev/#/verifier) is another tool for verifying contracts that is open-sourced and decentralized. It is not a block explorer and only verifies contracts on [different EVM based networks](https://docs.sourcify.dev/docs/chains). It acts as a public infrastructure for other tools to build on top of it, and aims to enable more human-friendly contract interactions using the [ABI](/developers/docs/smart-contracts/compiling/#web-applications) and [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) comments found in the metadata file.
+[Sourcify](https://verify.sourcify.dev) is another tool for verifying contracts that is open-sourced and decentralized. It is not a block explorer and only verifies contracts on [different EVM based networks](https://docs.sourcify.dev/docs/chains). It acts as a public infrastructure for other tools to build on top of it, and aims to enable more human-friendly contract interactions using the [ABI](/developers/docs/smart-contracts/compiling/#web-applications) and [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) comments found in the metadata file.
 
-Unlike Etherscan, Sourcify supports full matches with the metadata hash. The verified contracts are served in its [public repository](https://docs.sourcify.dev/docs/repository/) on HTTP and [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/#what-is-ipfs), which is a decentralized, [content-addressed](https://docs.storacha.network/concepts/content-addressing/) storage. This allows fetching the metadata file of a contract over IPFS since the appended metadata hash is an IPFS hash.
+Sourcify reports whether a contract is an exact match, with the metadata hash, or a match without it, for both its creation and its deployed bytecode. Its verified contracts are public: they can be queried through its API and downloaded as a [dataset](https://docs.sourcify.dev/docs/repository/). Sourcify passes its verifications on to block explorers including Blockscout, Routescan and Etherscan, and shares a database of verified contracts with Blockscout and Routescan through the [Verifier Alliance](https://verifieralliance.org/).
 
-Additionally, one can also retrieve the source code files over IPFS, as IPFS hashes of these files are also found in the metadata. A contract can be verified by providing the metadata file and source files over its API or the [UI](https://sourcify.dev/#/verifier), or using the plugins. Sourcify monitoring tool also listens to contract creations on new blocks and tries to verify the contracts if their metadata and source files are published on IPFS.
+The metadata file also holds the IPFS hashes of the source files, and the metadata hash appended to the bytecode is itself an IPFS hash. If a developer publishes the metadata and source files on [IPFS](https://docs.ipfs.tech/concepts/what-is-ipfs/), anyone can fetch the exact sources of a contract from its bytecode alone, as long as the files stay available on IPFS. A contract can be verified by providing the metadata file and source files over its API or the [UI](https://verify.sourcify.dev), or using plugins for development tools such as Hardhat and Foundry. Sourcify's [monitor](https://docs.sourcify.dev/docs/monitoring/) also watches for new contracts on the chains it follows and verifies them automatically when their metadata and source files are published on IPFS.
 
 [More on verifying contracts on Sourcify](https://soliditylang.org/blog/2020/06/25/sourcify-faq/).
 
 ### Tenderly {#tenderly}
 
-The [Tenderly platform](https://tenderly.co/) enables Web3 developers to build, test, monitor, and operate smart contracts. Combining debugging tools with observability and infrastructure building blocks, Tenderly helps developers accelerate smart contract development. To fully enable Tenderly features, developers need to [perform source code verification](https://docs.tenderly.co/monitoring/contract-verification) using several methods.
+The [Tenderly platform](https://tenderly.co/) enables Web3 developers to build, test, monitor, and operate smart contracts. Combining debugging tools with observability and infrastructure building blocks, Tenderly helps developers accelerate smart contract development. To fully enable Tenderly features, developers need to [perform source code verification](https://docs.tenderly.co/contract-verification) using several methods.
 
 It's possible to verify a contract privately or publicly. If verified privately, the smart contract is visible only to you (and other members in your project). Verifying a contract publicly makes it visible to everyone using the Tenderly platform.
 
-You can verify your contracts using the [Dashboard](https://docs.tenderly.co/contract-verification), [Tenderly Hardhat plugin](https://docs.tenderly.co/contract-verification/hardhat), or [CLI](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli).
+You can verify your contracts using the [Dashboard](https://docs.tenderly.co/contract-verification), [Tenderly Hardhat plugin](https://docs.tenderly.co/contract-verification/hardhat), or [Foundry](https://docs.tenderly.co/contract-verification/foundry).
 
 When verifying contracts through the Dashboard, you need to import the source file or the metadata file generated by the Solidity compiler, the address/network, and compiler settings.
 

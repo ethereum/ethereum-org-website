@@ -6,17 +6,19 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function WhatIsEtherPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-what-is-ether")
@@ -57,7 +59,7 @@ export default async function WhatIsEtherPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-what-is-ether-title"),
         description: t("page-what-is-ether-meta-description"),
-        image: "https://ethereum.org/images/eth.png",
+        image: `${SITE_URL}/images/eth.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
@@ -75,7 +77,7 @@ export default async function WhatIsEtherPageJsonLD({
               "A decentralized platform for applications and digital economies powered by smart contracts",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
     ],
   }

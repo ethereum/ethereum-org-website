@@ -1,41 +1,58 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "ar",
-  "translatedAt": "2026-06-16T22:56:07.904Z",
-  "englishManifestHash": "af1133adf188",
+  "translatedAt": "2026-11-17T08:51:01.181Z",
+  "englishManifestHash": "65bd66688cd5",
   "placeholderOrder": [
     "LINK-a21a82",
+    "LINK-14f434",
     "LINK-9117e4",
     "LINK-8a3ac0",
-    "LINK-6b9915",
-    "LINK-f3bfdd",
+    "LINK-6f26f1",
+    "LINK-bb4721",
+    "LINK-8303da",
     "LINK-1e5648",
-    "LINK-af2306",
     "LINK-31fb17",
     "LINK-9fe6f1",
-    "IMAGE-eab026",
     "LINK-293225",
-    "LINK-194993",
-    "LINK-6c4cfe",
+    "LINK-7c9709",
+    "LINK-4f36b6",
+    "CODE-02961a",
+    "CODE-ce2e3f",
+    "LINK-76ca68",
     "LINK-d59bc8",
-    "LINK-3f81dd",
     "LINK-91b760",
     "LINK-e24bd5",
+    "LINK-5ac953",
+    "LINK-a0ee09",
+    "LINK-492c53",
     "LINK-f45079",
     "LINK-007d81",
     "LINK-0ba8c1"
   ],
   "placeholderMap": {
-    "IMAGE-eab026": {
-      "type": "image",
+    "CODE-02961a": {
+      "type": "inline-code",
       "values": {
-        "path": "portal-network-devp2p-libp2p.png"
+        "content": "transactionsRoot"
+      }
+    },
+    "CODE-ce2e3f": {
+      "type": "inline-code",
+      "values": {
+        "content": "receiptsRoot"
       }
     },
     "LINK-a21a82": {
       "type": "link",
       "values": {
         "url": "/"
+      }
+    },
+    "LINK-14f434": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/"
       }
     },
     "LINK-9117e4": {
@@ -50,13 +67,19 @@
         "url": "https://geth.ethereum.org"
       }
     },
-    "LINK-6b9915": {
+    "LINK-6f26f1": {
       "type": "link",
       "values": {
         "url": "/roadmap/statelessness/#history-expiry"
       }
     },
-    "LINK-f3bfdd": {
+    "LINK-bb4721": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/07/08/partial-history-exp"
+      }
+    },
+    "LINK-8303da": {
       "type": "link",
       "values": {
         "url": "/roadmap/statelessness/#state-expiry"
@@ -66,12 +89,6 @@
       "type": "link",
       "values": {
         "url": "/roadmap/statelessness/"
-      }
-    },
-    "LINK-af2306": {
-      "type": "link",
-      "values": {
-        "url": "/developers/docs/nodes-and-clients/light-clients/"
       }
     },
     "LINK-31fb17": {
@@ -92,28 +109,28 @@
         "url": "/developers/docs/apis/json-rpc/"
       }
     },
-    "LINK-194993": {
+    "LINK-7c9709": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/devp2p/blob/master/discv5/discv5.md"
+      }
+    },
+    "LINK-4f36b6": {
       "type": "link",
       "values": {
         "url": "https://en.wikipedia.org/wiki/Distributed_hash_table"
       }
     },
-    "LINK-6c4cfe": {
+    "LINK-76ca68": {
       "type": "link",
       "values": {
-        "url": "/developers/docs/evm/"
+        "url": "https://fluffy.guide"
       }
     },
     "LINK-d59bc8": {
       "type": "link",
       "values": {
         "url": "https://github.com/ethereum/trin"
-      }
-    },
-    "LINK-3f81dd": {
-      "type": "link",
-      "values": {
-        "url": "https://fluffy.guide"
       }
     },
     "LINK-91b760": {
@@ -126,6 +143,24 @@
       "type": "link",
       "values": {
         "url": "https://github.com/zen-eth/shisui"
+      }
+    },
+    "LINK-5ac953": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/portal-network-specs"
+      }
+    },
+    "LINK-a0ee09": {
+      "type": "link",
+      "values": {
+        "url": "https://ethresear.ch/t/using-portal-network-protocol-for-history-expiry/22658"
+      }
+    },
+    "LINK-492c53": {
+      "type": "link",
+      "values": {
+        "url": "https://blog.ethereum.org/2025/07/08/partial-history-exp"
       }
     },
     "LINK-f45079": {
@@ -149,7 +184,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-16T22:56:07.904Z",
+      "translatedAt": "2026-11-17T08:51:01.181Z",
       "status": "success"
     }
   }

@@ -1,5 +1,10 @@
 # Vietnamese (vi) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: phi uu tien, xac nhan nuoc doi, gas inline code, PoS in attestations description. Open: relay/blinded prose vs diagram, `claim` flattened to yeu cau, gossip four renderings.
+
 ## PR #18935 (intl/pending-content-translation-program-winddown-ctas) -- 2026-07-28 -- Score 8.4/10
 
 First recorded review for this locale.
@@ -163,3 +168,15 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: glossary capitals mid-sentence; NFT spelled out too often; chúng tôi/chúng ta mixed.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- Glossary capitals mid-sentence (`Chuỗi khối`, `Địa chỉ`) at multi-client 33/104/138 -- known vi pattern, left as is
+- `dApp` in title/description vs `dapp` in body -- informational

@@ -1,0 +1,3922 @@
+{
+  "version": 2,
+  "locale": "te",
+  "translatedAt": "2026-11-17T08:33:00.704Z",
+  "englishManifestHash": "5379d9feab09",
+  "placeholderOrder": [
+    "ICU-VARIABLE-0",
+    "ICU-VARIABLE-1",
+    "ICU-VARIABLE-2",
+    "ICU-VARIABLE-3",
+    "ICU-VARIABLE-4",
+    "ICU-VARIABLE-5",
+    "ICU-VARIABLE-6",
+    "ICU-VARIABLE-7",
+    "ICU-VARIABLE-8",
+    "ICU-VARIABLE-9",
+    "ICU-VARIABLE-10",
+    "ICU-VARIABLE-11",
+    "ICU-VARIABLE-12",
+    "ICU-VARIABLE-13",
+    "ICU-VARIABLE-14",
+    "ICU-VARIABLE-15",
+    "ICU-VARIABLE-16",
+    "ICU-VARIABLE-17",
+    "ICU-VARIABLE-18",
+    "ICU-VARIABLE-19",
+    "ICU-VARIABLE-20",
+    "ICU-VARIABLE-21",
+    "ICU-VARIABLE-22",
+    "ICU-VARIABLE-23",
+    "ICU-VARIABLE-24",
+    "ICU-VARIABLE-25",
+    "ICU-VARIABLE-26",
+    "ICU-VARIABLE-27",
+    "ICU-VARIABLE-28",
+    "ICU-VARIABLE-29",
+    "ICU-VARIABLE-30",
+    "ICU-VARIABLE-31",
+    "ICU-VARIABLE-32",
+    "ICU-VARIABLE-33",
+    "ICU-VARIABLE-34",
+    "ICU-VARIABLE-35",
+    "ICU-VARIABLE-36",
+    "ICU-VARIABLE-37",
+    "ICU-VARIABLE-38",
+    "ICU-VARIABLE-39",
+    "ICU-VARIABLE-40",
+    "ICU-VARIABLE-41",
+    "ICU-VARIABLE-42",
+    "ICU-VARIABLE-43",
+    "ICU-VARIABLE-44",
+    "ICU-VARIABLE-45",
+    "ICU-VARIABLE-46",
+    "ICU-VARIABLE-47",
+    "ICU-VARIABLE-48",
+    "ICU-VARIABLE-49",
+    "ICU-VARIABLE-50",
+    "ICU-VARIABLE-51",
+    "ICU-VARIABLE-52",
+    "ICU-VARIABLE-53",
+    "ICU-VARIABLE-54",
+    "ICU-VARIABLE-55",
+    "ICU-VARIABLE-56",
+    "ICU-VARIABLE-57",
+    "ICU-VARIABLE-58",
+    "ICU-VARIABLE-59",
+    "ICU-VARIABLE-60",
+    "ICU-VARIABLE-61",
+    "ICU-VARIABLE-62",
+    "ICU-VARIABLE-63",
+    "ICU-VARIABLE-64",
+    "ICU-VARIABLE-65",
+    "ICU-VARIABLE-66",
+    "ICU-VARIABLE-67",
+    "ICU-VARIABLE-68",
+    "ICU-VARIABLE-69",
+    "ICU-VARIABLE-70",
+    "ICU-VARIABLE-71",
+    "ICU-VARIABLE-72",
+    "ICU-VARIABLE-73",
+    "ICU-VARIABLE-74",
+    "ICU-VARIABLE-75",
+    "ICU-VARIABLE-76",
+    "ICU-VARIABLE-77",
+    "ICU-VARIABLE-78",
+    "ICU-VARIABLE-79",
+    "ICU-VARIABLE-80",
+    "ICU-VARIABLE-81",
+    "ICU-VARIABLE-82",
+    "ICU-VARIABLE-83",
+    "ICU-VARIABLE-84",
+    "ICU-VARIABLE-85",
+    "ICU-VARIABLE-86",
+    "ICU-VARIABLE-87",
+    "ICU-VARIABLE-88",
+    "ICU-VARIABLE-89",
+    "ICU-VARIABLE-90",
+    "ICU-VARIABLE-91",
+    "ICU-VARIABLE-92",
+    "ICU-VARIABLE-93",
+    "ICU-VARIABLE-94",
+    "ICU-VARIABLE-95",
+    "ICU-VARIABLE-96",
+    "ICU-VARIABLE-97",
+    "ICU-VARIABLE-98",
+    "ICU-VARIABLE-99",
+    "ICU-VARIABLE-100",
+    "ICU-VARIABLE-101",
+    "ICU-VARIABLE-102",
+    "ICU-VARIABLE-103",
+    "ICU-VARIABLE-104",
+    "ICU-VARIABLE-105",
+    "ICU-VARIABLE-106",
+    "ICU-VARIABLE-107",
+    "ICU-VARIABLE-108",
+    "ICU-VARIABLE-109",
+    "ICU-VARIABLE-110",
+    "ICU-VARIABLE-111",
+    "ICU-VARIABLE-112",
+    "ICU-VARIABLE-113",
+    "ICU-VARIABLE-114",
+    "ICU-VARIABLE-115",
+    "ICU-VARIABLE-116",
+    "ICU-VARIABLE-117",
+    "ICU-VARIABLE-118",
+    "ICU-VARIABLE-119",
+    "ICU-VARIABLE-120",
+    "ICU-VARIABLE-121",
+    "ICU-VARIABLE-122",
+    "ICU-VARIABLE-123",
+    "ICU-VARIABLE-124",
+    "ICU-VARIABLE-125",
+    "ICU-VARIABLE-126",
+    "ICU-VARIABLE-127",
+    "ICU-VARIABLE-128",
+    "ICU-VARIABLE-129",
+    "ICU-VARIABLE-130",
+    "ICU-VARIABLE-131",
+    "ICU-VARIABLE-132",
+    "ICU-VARIABLE-133",
+    "ICU-VARIABLE-134",
+    "ICU-VARIABLE-135",
+    "ICU-VARIABLE-136",
+    "ICU-VARIABLE-137",
+    "ICU-VARIABLE-138",
+    "ICU-VARIABLE-139",
+    "ICU-VARIABLE-140",
+    "ICU-VARIABLE-141",
+    "ICU-VARIABLE-142",
+    "ICU-VARIABLE-143",
+    "ICU-VARIABLE-144",
+    "ICU-VARIABLE-145",
+    "ICU-VARIABLE-146",
+    "ICU-VARIABLE-147",
+    "ICU-VARIABLE-148",
+    "ICU-VARIABLE-149",
+    "ICU-VARIABLE-150",
+    "ICU-VARIABLE-151",
+    "ICU-VARIABLE-152",
+    "ICU-VARIABLE-153",
+    "ICU-VARIABLE-154",
+    "ICU-VARIABLE-155",
+    "ICU-VARIABLE-156",
+    "ICU-VARIABLE-157",
+    "ICU-VARIABLE-158",
+    "ICU-VARIABLE-159",
+    "ICU-VARIABLE-160",
+    "ICU-VARIABLE-161",
+    "ICU-VARIABLE-162",
+    "ICU-VARIABLE-163",
+    "ICU-VARIABLE-164",
+    "ICU-VARIABLE-165",
+    "ICU-VARIABLE-166",
+    "ICU-VARIABLE-167",
+    "ICU-VARIABLE-168",
+    "ICU-VARIABLE-169",
+    "ICU-VARIABLE-170",
+    "ICU-VARIABLE-171",
+    "ICU-VARIABLE-172",
+    "ICU-VARIABLE-173",
+    "ICU-VARIABLE-174",
+    "ICU-VARIABLE-175",
+    "ICU-VARIABLE-176",
+    "ICU-VARIABLE-177",
+    "ICU-VARIABLE-178",
+    "ICU-VARIABLE-179",
+    "ICU-VARIABLE-180",
+    "ICU-VARIABLE-181",
+    "ICU-VARIABLE-182",
+    "ICU-VARIABLE-183",
+    "ICU-VARIABLE-184",
+    "ICU-VARIABLE-185",
+    "ICU-VARIABLE-186",
+    "ICU-VARIABLE-187",
+    "ICU-VARIABLE-188",
+    "ICU-VARIABLE-189",
+    "ICU-VARIABLE-190",
+    "ICU-VARIABLE-191",
+    "ICU-VARIABLE-192",
+    "ICU-VARIABLE-193",
+    "ICU-VARIABLE-194",
+    "ICU-VARIABLE-195",
+    "ICU-VARIABLE-196",
+    "ICU-VARIABLE-197",
+    "ICU-VARIABLE-198",
+    "ICU-VARIABLE-199",
+    "ICU-VARIABLE-200",
+    "ICU-VARIABLE-201",
+    "ICU-VARIABLE-202",
+    "ICU-VARIABLE-203",
+    "ICU-VARIABLE-204",
+    "ICU-VARIABLE-205",
+    "ICU-VARIABLE-206",
+    "ICU-VARIABLE-207",
+    "ICU-VARIABLE-208",
+    "ICU-VARIABLE-209",
+    "ICU-VARIABLE-210",
+    "ICU-VARIABLE-211",
+    "ICU-VARIABLE-212",
+    "ICU-VARIABLE-213",
+    "ICU-VARIABLE-214",
+    "ICU-VARIABLE-215",
+    "ICU-VARIABLE-216",
+    "ICU-VARIABLE-217",
+    "ICU-VARIABLE-218",
+    "ICU-VARIABLE-219",
+    "ICU-VARIABLE-220",
+    "ICU-VARIABLE-221",
+    "ICU-VARIABLE-222",
+    "ICU-VARIABLE-223",
+    "ICU-VARIABLE-224",
+    "ICU-VARIABLE-225",
+    "ICU-VARIABLE-226",
+    "ICU-VARIABLE-227",
+    "ICU-VARIABLE-228",
+    "ICU-VARIABLE-229",
+    "ICU-VARIABLE-230",
+    "ICU-VARIABLE-231",
+    "ICU-VARIABLE-232",
+    "ICU-VARIABLE-233",
+    "ICU-VARIABLE-234",
+    "ICU-VARIABLE-235",
+    "ICU-VARIABLE-236",
+    "ICU-VARIABLE-237",
+    "ICU-VARIABLE-238",
+    "ICU-VARIABLE-239",
+    "ICU-VARIABLE-240",
+    "ICU-VARIABLE-241",
+    "ICU-VARIABLE-242",
+    "ICU-VARIABLE-243",
+    "ICU-VARIABLE-244",
+    "ICU-VARIABLE-245",
+    "ICU-VARIABLE-246",
+    "ICU-VARIABLE-247",
+    "ICU-VARIABLE-248",
+    "ICU-VARIABLE-249",
+    "ICU-VARIABLE-250",
+    "ICU-VARIABLE-251",
+    "ICU-VARIABLE-252",
+    "ICU-VARIABLE-253",
+    "ICU-VARIABLE-254",
+    "ICU-VARIABLE-255",
+    "ICU-VARIABLE-256",
+    "ICU-VARIABLE-257",
+    "ICU-VARIABLE-258",
+    "ICU-VARIABLE-259",
+    "ICU-VARIABLE-260",
+    "ICU-VARIABLE-261",
+    "ICU-VARIABLE-262",
+    "ICU-VARIABLE-263",
+    "ICU-VARIABLE-264",
+    "ICU-VARIABLE-265",
+    "ICU-VARIABLE-266",
+    "ICU-VARIABLE-267",
+    "ICU-VARIABLE-268",
+    "ICU-VARIABLE-269",
+    "ICU-VARIABLE-270",
+    "ICU-VARIABLE-271",
+    "ICU-VARIABLE-272",
+    "ICU-VARIABLE-273",
+    "ICU-VARIABLE-274",
+    "ICU-VARIABLE-275",
+    "ICU-VARIABLE-276",
+    "ICU-VARIABLE-277",
+    "ICU-VARIABLE-278",
+    "ICU-VARIABLE-279",
+    "ICU-VARIABLE-280",
+    "ICU-VARIABLE-281",
+    "ICU-VARIABLE-282",
+    "ICU-VARIABLE-283",
+    "ICU-VARIABLE-284",
+    "ICU-VARIABLE-285",
+    "ICU-VARIABLE-286",
+    "ICU-VARIABLE-287",
+    "ICU-VARIABLE-288",
+    "ICU-VARIABLE-289",
+    "ICU-VARIABLE-290",
+    "ICU-VARIABLE-291",
+    "ICU-VARIABLE-292",
+    "ICU-VARIABLE-293",
+    "ICU-VARIABLE-294",
+    "ICU-VARIABLE-295",
+    "ICU-VARIABLE-296",
+    "ICU-VARIABLE-297",
+    "ICU-VARIABLE-298",
+    "ICU-VARIABLE-299",
+    "ICU-VARIABLE-300",
+    "ICU-VARIABLE-301",
+    "ICU-VARIABLE-302",
+    "ICU-VARIABLE-303",
+    "ICU-VARIABLE-304",
+    "ICU-VARIABLE-305",
+    "ICU-VARIABLE-306",
+    "ICU-VARIABLE-307",
+    "ICU-VARIABLE-308",
+    "ICU-VARIABLE-309",
+    "ICU-VARIABLE-310",
+    "ICU-VARIABLE-311",
+    "ICU-VARIABLE-312",
+    "ICU-VARIABLE-313",
+    "ICU-VARIABLE-314",
+    "ICU-VARIABLE-315",
+    "ICU-VARIABLE-316",
+    "ICU-VARIABLE-317",
+    "ICU-VARIABLE-318",
+    "ICU-VARIABLE-319",
+    "ICU-VARIABLE-320",
+    "ICU-VARIABLE-321",
+    "ICU-VARIABLE-322",
+    "ICU-VARIABLE-323",
+    "ICU-VARIABLE-324",
+    "ICU-VARIABLE-325",
+    "ICU-VARIABLE-326",
+    "ICU-VARIABLE-327",
+    "ICU-VARIABLE-328",
+    "ICU-VARIABLE-329",
+    "ICU-VARIABLE-330",
+    "ICU-VARIABLE-331",
+    "ICU-VARIABLE-332",
+    "ICU-VARIABLE-333",
+    "ICU-VARIABLE-334",
+    "ICU-VARIABLE-335",
+    "ICU-VARIABLE-336",
+    "ICU-VARIABLE-337",
+    "ICU-VARIABLE-338",
+    "ICU-VARIABLE-339",
+    "ICU-VARIABLE-340",
+    "ICU-VARIABLE-341",
+    "ICU-VARIABLE-342",
+    "ICU-VARIABLE-343",
+    "ICU-VARIABLE-344",
+    "ICU-VARIABLE-345",
+    "ICU-VARIABLE-346",
+    "ICU-VARIABLE-347",
+    "ICU-VARIABLE-348",
+    "ICU-VARIABLE-349",
+    "ICU-VARIABLE-350",
+    "ICU-VARIABLE-351",
+    "ICU-VARIABLE-352",
+    "ICU-VARIABLE-353",
+    "ICU-VARIABLE-354",
+    "ICU-VARIABLE-355",
+    "ICU-VARIABLE-356",
+    "ICU-VARIABLE-357",
+    "ICU-VARIABLE-358",
+    "ICU-VARIABLE-359",
+    "ICU-VARIABLE-360",
+    "ICU-VARIABLE-361",
+    "ICU-VARIABLE-362",
+    "ICU-VARIABLE-363",
+    "ICU-VARIABLE-364",
+    "ICU-VARIABLE-365",
+    "ICU-VARIABLE-366",
+    "ICU-VARIABLE-367",
+    "ICU-VARIABLE-368",
+    "ICU-VARIABLE-369",
+    "ICU-VARIABLE-370",
+    "ICU-VARIABLE-371",
+    "ICU-VARIABLE-372",
+    "ICU-VARIABLE-373",
+    "ICU-VARIABLE-374",
+    "ICU-VARIABLE-375",
+    "ICU-VARIABLE-376",
+    "ICU-VARIABLE-377",
+    "ICU-VARIABLE-378",
+    "ICU-VARIABLE-379",
+    "ICU-VARIABLE-380",
+    "ICU-VARIABLE-381",
+    "ICU-VARIABLE-382",
+    "ICU-VARIABLE-383",
+    "ICU-VARIABLE-384",
+    "ICU-VARIABLE-385",
+    "ICU-VARIABLE-386",
+    "ICU-VARIABLE-387",
+    "ICU-VARIABLE-388",
+    "ICU-VARIABLE-389",
+    "ICU-VARIABLE-390",
+    "ICU-VARIABLE-391",
+    "ICU-VARIABLE-392",
+    "ICU-VARIABLE-393",
+    "ICU-VARIABLE-394",
+    "ICU-VARIABLE-395",
+    "ICU-VARIABLE-396",
+    "ICU-VARIABLE-397",
+    "ICU-VARIABLE-398",
+    "ICU-VARIABLE-399",
+    "ICU-VARIABLE-400",
+    "ICU-VARIABLE-401",
+    "ICU-VARIABLE-402",
+    "ICU-VARIABLE-403",
+    "ICU-VARIABLE-404",
+    "ICU-VARIABLE-405",
+    "ICU-VARIABLE-406",
+    "ICU-VARIABLE-407",
+    "ICU-VARIABLE-408",
+    "ICU-VARIABLE-409",
+    "ICU-VARIABLE-410",
+    "ICU-VARIABLE-411",
+    "ICU-VARIABLE-412",
+    "ICU-VARIABLE-413",
+    "ICU-VARIABLE-414",
+    "ICU-VARIABLE-415",
+    "ICU-VARIABLE-416",
+    "ICU-VARIABLE-417",
+    "ICU-VARIABLE-418",
+    "ICU-VARIABLE-419",
+    "ICU-VARIABLE-420",
+    "ICU-VARIABLE-421",
+    "ICU-VARIABLE-422",
+    "ICU-VARIABLE-423",
+    "ICU-VARIABLE-424",
+    "ICU-VARIABLE-425",
+    "ICU-VARIABLE-426",
+    "ICU-VARIABLE-427",
+    "ICU-VARIABLE-428",
+    "ICU-VARIABLE-429",
+    "ICU-VARIABLE-430",
+    "ICU-VARIABLE-431",
+    "ICU-VARIABLE-432",
+    "ICU-VARIABLE-433",
+    "ICU-VARIABLE-434",
+    "ICU-VARIABLE-435",
+    "ICU-VARIABLE-436",
+    "ICU-VARIABLE-437",
+    "ICU-VARIABLE-438",
+    "ICU-VARIABLE-439",
+    "ICU-VARIABLE-440",
+    "ICU-VARIABLE-441",
+    "ICU-VARIABLE-442",
+    "ICU-VARIABLE-443",
+    "ICU-VARIABLE-444",
+    "ICU-VARIABLE-445",
+    "ICU-VARIABLE-446",
+    "ICU-VARIABLE-447",
+    "ICU-VARIABLE-448",
+    "ICU-VARIABLE-449",
+    "ICU-VARIABLE-450",
+    "ICU-VARIABLE-451",
+    "ICU-VARIABLE-452",
+    "ICU-VARIABLE-453",
+    "ICU-VARIABLE-454",
+    "ICU-VARIABLE-455",
+    "ICU-VARIABLE-456",
+    "ICU-VARIABLE-457",
+    "ICU-VARIABLE-458",
+    "ICU-VARIABLE-459",
+    "ICU-VARIABLE-460",
+    "ICU-VARIABLE-461",
+    "ICU-VARIABLE-462",
+    "ICU-VARIABLE-463",
+    "ICU-VARIABLE-464",
+    "ICU-VARIABLE-465",
+    "ICU-VARIABLE-466",
+    "ICU-VARIABLE-467",
+    "ICU-VARIABLE-468",
+    "ICU-VARIABLE-469",
+    "ICU-VARIABLE-470",
+    "ICU-VARIABLE-471",
+    "ICU-VARIABLE-472",
+    "ICU-VARIABLE-473",
+    "ICU-VARIABLE-474",
+    "ICU-VARIABLE-475",
+    "ICU-VARIABLE-476",
+    "ICU-VARIABLE-477",
+    "ICU-VARIABLE-478",
+    "ICU-VARIABLE-479",
+    "ICU-VARIABLE-480",
+    "ICU-VARIABLE-481",
+    "ICU-VARIABLE-482",
+    "ICU-VARIABLE-483",
+    "ICU-VARIABLE-484",
+    "ICU-VARIABLE-485",
+    "ICU-VARIABLE-486",
+    "ICU-VARIABLE-487",
+    "ICU-VARIABLE-488",
+    "ICU-VARIABLE-489",
+    "ICU-VARIABLE-490",
+    "ICU-VARIABLE-491",
+    "ICU-VARIABLE-492",
+    "ICU-VARIABLE-493",
+    "ICU-VARIABLE-494",
+    "ICU-VARIABLE-495",
+    "ICU-VARIABLE-496",
+    "ICU-VARIABLE-497",
+    "ICU-VARIABLE-498",
+    "ICU-VARIABLE-499",
+    "ICU-VARIABLE-500",
+    "ICU-VARIABLE-501",
+    "ICU-VARIABLE-502",
+    "ICU-VARIABLE-503",
+    "ICU-VARIABLE-504",
+    "ICU-VARIABLE-505",
+    "ICU-VARIABLE-506",
+    "ICU-VARIABLE-507",
+    "ICU-VARIABLE-508",
+    "ICU-VARIABLE-509",
+    "ICU-VARIABLE-510",
+    "ICU-VARIABLE-511",
+    "ICU-VARIABLE-512",
+    "ICU-VARIABLE-513",
+    "ICU-VARIABLE-514",
+    "ICU-VARIABLE-515",
+    "ICU-VARIABLE-516",
+    "ICU-VARIABLE-517",
+    "ICU-VARIABLE-518",
+    "ICU-VARIABLE-519",
+    "ICU-VARIABLE-520",
+    "ICU-VARIABLE-521",
+    "ICU-VARIABLE-522",
+    "ICU-VARIABLE-523",
+    "ICU-VARIABLE-524",
+    "ICU-VARIABLE-525",
+    "ICU-VARIABLE-526",
+    "ICU-VARIABLE-527",
+    "ICU-VARIABLE-528",
+    "ICU-VARIABLE-529",
+    "ICU-VARIABLE-530",
+    "ICU-VARIABLE-531",
+    "ICU-VARIABLE-532",
+    "ICU-VARIABLE-533",
+    "ICU-VARIABLE-534",
+    "ICU-VARIABLE-535",
+    "ICU-VARIABLE-536",
+    "ICU-VARIABLE-537",
+    "ICU-VARIABLE-538",
+    "ICU-VARIABLE-539",
+    "ICU-VARIABLE-540",
+    "ICU-VARIABLE-541",
+    "ICU-VARIABLE-542",
+    "ICU-VARIABLE-543",
+    "ICU-VARIABLE-544",
+    "ICU-VARIABLE-545",
+    "ICU-VARIABLE-546",
+    "ICU-VARIABLE-547",
+    "ICU-VARIABLE-548",
+    "ICU-VARIABLE-549",
+    "ICU-VARIABLE-550",
+    "ICU-VARIABLE-551",
+    "ICU-VARIABLE-552",
+    "ICU-VARIABLE-553",
+    "ICU-VARIABLE-554",
+    "ICU-VARIABLE-555",
+    "ICU-VARIABLE-556",
+    "ICU-VARIABLE-557"
+  ],
+  "placeholderMap": {
+    "ICU-VARIABLE-0": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{current}"
+      }
+    },
+    "ICU-VARIABLE-1": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{total}"
+      }
+    },
+    "ICU-VARIABLE-2": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, one {{total} step} other {{total} steps}}"
+      }
+    },
+    "ICU-VARIABLE-3": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-4": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{limit}"
+      }
+    },
+    "ICU-VARIABLE-5": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-6": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{limit}"
+      }
+    },
+    "ICU-VARIABLE-7": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-8": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{used}"
+      }
+    },
+    "ICU-VARIABLE-9": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-10": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{limit}"
+      }
+    },
+    "ICU-VARIABLE-11": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{limit}"
+      }
+    },
+    "ICU-VARIABLE-12": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-13": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returned}"
+      }
+    },
+    "ICU-VARIABLE-14": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-15": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{intrinsic}"
+      }
+    },
+    "ICU-VARIABLE-16": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-17": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{slot}"
+      }
+    },
+    "ICU-VARIABLE-18": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-19": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-20": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{sstore}"
+      }
+    },
+    "ICU-VARIABLE-21": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-22": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{intrinsic}"
+      }
+    },
+    "ICU-VARIABLE-23": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-24": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{cost}"
+      }
+    },
+    "ICU-VARIABLE-25": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-26": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{cost}"
+      }
+    },
+    "ICU-VARIABLE-27": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-28": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{cost}"
+      }
+    },
+    "ICU-VARIABLE-29": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{used}"
+      }
+    },
+    "ICU-VARIABLE-30": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{left}"
+      }
+    },
+    "ICU-VARIABLE-31": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{cost}"
+      }
+    },
+    "ICU-VARIABLE-32": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{left}"
+      }
+    },
+    "ICU-VARIABLE-33": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{limit}"
+      }
+    },
+    "ICU-VARIABLE-34": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{cost}"
+      }
+    },
+    "ICU-VARIABLE-35": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{cost}"
+      }
+    },
+    "ICU-VARIABLE-36": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-37": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-38": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-39": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-40": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-41": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-42": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fee}"
+      }
+    },
+    "ICU-VARIABLE-43": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{burned}"
+      }
+    },
+    "ICU-VARIABLE-44": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tip}"
+      }
+    },
+    "ICU-VARIABLE-45": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-46": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{sent}"
+      }
+    },
+    "ICU-VARIABLE-47": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-48": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-49": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-50": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-51": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-52": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-53": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-54": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fee}"
+      }
+    },
+    "ICU-VARIABLE-55": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{burned}"
+      }
+    },
+    "ICU-VARIABLE-56": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tip}"
+      }
+    },
+    "ICU-VARIABLE-57": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-58": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{sent}"
+      }
+    },
+    "ICU-VARIABLE-59": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-60": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-61": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-62": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-63": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-64": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-65": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-66": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-67": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-68": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, one {{slots} slot written} other {{slots} slots written}}"
+      }
+    },
+    "ICU-VARIABLE-69": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{depth}"
+      }
+    },
+    "ICU-VARIABLE-70": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{number}"
+      }
+    },
+    "ICU-VARIABLE-71": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{limit}"
+      }
+    },
+    "ICU-VARIABLE-72": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{used}"
+      }
+    },
+    "ICU-VARIABLE-73": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{limit}"
+      }
+    },
+    "ICU-VARIABLE-74": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returned}"
+      }
+    },
+    "ICU-VARIABLE-75": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{intrinsic}"
+      }
+    },
+    "ICU-VARIABLE-76": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{pc}"
+      }
+    },
+    "ICU-VARIABLE-77": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{op}"
+      }
+    },
+    "ICU-VARIABLE-78": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{cost}"
+      }
+    },
+    "ICU-VARIABLE-79": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-80": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{burned}"
+      }
+    },
+    "ICU-VARIABLE-81": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tip}"
+      }
+    },
+    "ICU-VARIABLE-82": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{nonce}"
+      }
+    },
+    "ICU-VARIABLE-83": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{definition}"
+      }
+    },
+    "ICU-VARIABLE-84": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{zone}"
+      }
+    },
+    "ICU-VARIABLE-85": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-86": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-87": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-88": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-89": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-90": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-91": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-92": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-93": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{nonce}"
+      }
+    },
+    "ICU-VARIABLE-94": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{wei}"
+      }
+    },
+    "ICU-VARIABLE-95": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{eth}"
+      }
+    },
+    "ICU-VARIABLE-96": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-97": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{nonce}"
+      }
+    },
+    "ICU-VARIABLE-98": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{start}"
+      }
+    },
+    "ICU-VARIABLE-99": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{wei}"
+      }
+    },
+    "ICU-VARIABLE-100": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{eth}"
+      }
+    },
+    "ICU-VARIABLE-101": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-102": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-103": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bits}"
+      }
+    },
+    "ICU-VARIABLE-104": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bits}"
+      }
+    },
+    "ICU-VARIABLE-105": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-106": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-107": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{address}"
+      }
+    },
+    "ICU-VARIABLE-108": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{nonce}"
+      }
+    },
+    "ICU-VARIABLE-109": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{eth}"
+      }
+    },
+    "ICU-VARIABLE-110": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bytes}"
+      }
+    },
+    "ICU-VARIABLE-111": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{chars}"
+      }
+    },
+    "ICU-VARIABLE-112": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bits}"
+      }
+    },
+    "ICU-VARIABLE-113": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bits}"
+      }
+    },
+    "ICU-VARIABLE-114": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{aliceStart}"
+      }
+    },
+    "ICU-VARIABLE-115": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bobStart}"
+      }
+    },
+    "ICU-VARIABLE-116": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{contractStart}"
+      }
+    },
+    "ICU-VARIABLE-117": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-118": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx1}"
+      }
+    },
+    "ICU-VARIABLE-119": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t1Value}"
+      }
+    },
+    "ICU-VARIABLE-120": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t1Fee}"
+      }
+    },
+    "ICU-VARIABLE-121": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-122": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx2}"
+      }
+    },
+    "ICU-VARIABLE-123": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx1}"
+      }
+    },
+    "ICU-VARIABLE-124": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2Value}"
+      }
+    },
+    "ICU-VARIABLE-125": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx1}"
+      }
+    },
+    "ICU-VARIABLE-126": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2Value}"
+      }
+    },
+    "ICU-VARIABLE-127": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2Fee}"
+      }
+    },
+    "ICU-VARIABLE-128": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2Value}"
+      }
+    },
+    "ICU-VARIABLE-129": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2RevertFee}"
+      }
+    },
+    "ICU-VARIABLE-130": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-131": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx3}"
+      }
+    },
+    "ICU-VARIABLE-132": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx2}"
+      }
+    },
+    "ICU-VARIABLE-133": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t3Value}"
+      }
+    },
+    "ICU-VARIABLE-134": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t3Fee}"
+      }
+    },
+    "ICU-VARIABLE-135": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-136": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-137": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-138": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx1}"
+      }
+    },
+    "ICU-VARIABLE-139": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t1Value}"
+      }
+    },
+    "ICU-VARIABLE-140": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t1Fee}"
+      }
+    },
+    "ICU-VARIABLE-141": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-142": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx2}"
+      }
+    },
+    "ICU-VARIABLE-143": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx1}"
+      }
+    },
+    "ICU-VARIABLE-144": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2Value}"
+      }
+    },
+    "ICU-VARIABLE-145": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2Fee}"
+      }
+    },
+    "ICU-VARIABLE-146": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-147": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx2}"
+      }
+    },
+    "ICU-VARIABLE-148": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2Value}"
+      }
+    },
+    "ICU-VARIABLE-149": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t2Fee}"
+      }
+    },
+    "ICU-VARIABLE-150": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-151": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx3}"
+      }
+    },
+    "ICU-VARIABLE-152": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx2}"
+      }
+    },
+    "ICU-VARIABLE-153": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t3Value}"
+      }
+    },
+    "ICU-VARIABLE-154": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{t3Fee}"
+      }
+    },
+    "ICU-VARIABLE-155": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-156": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx}"
+      }
+    },
+    "ICU-VARIABLE-157": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-158": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx}"
+      }
+    },
+    "ICU-VARIABLE-159": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-160": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx}"
+      }
+    },
+    "ICU-VARIABLE-161": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fee}"
+      }
+    },
+    "ICU-VARIABLE-162": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{tx}"
+      }
+    },
+    "ICU-VARIABLE-163": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-164": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{nonce}"
+      }
+    },
+    "ICU-VARIABLE-165": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-166": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-167": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-168": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-169": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-170": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-171": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-172": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-173": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-174": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-175": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-176": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-177": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-178": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-179": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-180": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-181": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-182": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-183": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-184": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-185": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, one {{value} transaction} other {{value} transactions}}"
+      }
+    },
+    "ICU-VARIABLE-186": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-187": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-188": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-189": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-190": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step5}"
+      }
+    },
+    "ICU-VARIABLE-191": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-192": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-193": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-194": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-195": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-196": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-197": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{engine}"
+      }
+    },
+    "ICU-VARIABLE-198": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-199": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{peers}"
+      }
+    },
+    "ICU-VARIABLE-200": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-201": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-202": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{rpc}"
+      }
+    },
+    "ICU-VARIABLE-203": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-204": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{engine}"
+      }
+    },
+    "ICU-VARIABLE-205": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-206": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{peers}"
+      }
+    },
+    "ICU-VARIABLE-207": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-208": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-209": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{rpc}"
+      }
+    },
+    "ICU-VARIABLE-210": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{engine}"
+      }
+    },
+    "ICU-VARIABLE-211": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{peers}"
+      }
+    },
+    "ICU-VARIABLE-212": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{rpc}"
+      }
+    },
+    "ICU-VARIABLE-213": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-214": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-215": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-216": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-217": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-218": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-219": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-220": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-221": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-222": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-223": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-224": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-225": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-226": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-227": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-228": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-229": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{members}"
+      }
+    },
+    "ICU-VARIABLE-230": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-231": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-232": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-233": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{signedA}"
+      }
+    },
+    "ICU-VARIABLE-234": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{members}"
+      }
+    },
+    "ICU-VARIABLE-235": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{signedB}"
+      }
+    },
+    "ICU-VARIABLE-236": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{members}"
+      }
+    },
+    "ICU-VARIABLE-237": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-238": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step5}"
+      }
+    },
+    "ICU-VARIABLE-239": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-240": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-241": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-242": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{zero}"
+      }
+    },
+    "ICU-VARIABLE-243": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-244": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-245": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{delay}"
+      }
+    },
+    "ICU-VARIABLE-246": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-247": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{delay}"
+      }
+    },
+    "ICU-VARIABLE-248": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count}"
+      }
+    },
+    "ICU-VARIABLE-249": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, one {{delay} slot} other {{delay} slots}}"
+      }
+    },
+    "ICU-VARIABLE-250": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{from}"
+      }
+    },
+    "ICU-VARIABLE-251": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{from}"
+      }
+    },
+    "ICU-VARIABLE-252": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{address}"
+      }
+    },
+    "ICU-VARIABLE-253": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{stake}"
+      }
+    },
+    "ICU-VARIABLE-254": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{three}"
+      }
+    },
+    "ICU-VARIABLE-255": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-256": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{compounding}"
+      }
+    },
+    "ICU-VARIABLE-257": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{stake}"
+      }
+    },
+    "ICU-VARIABLE-258": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{compounding}"
+      }
+    },
+    "ICU-VARIABLE-259": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{max}"
+      }
+    },
+    "ICU-VARIABLE-260": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-261": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-262": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-263": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-264": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{from}"
+      }
+    },
+    "ICU-VARIABLE-265": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{to}"
+      }
+    },
+    "ICU-VARIABLE-266": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{address}"
+      }
+    },
+    "ICU-VARIABLE-267": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-268": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{compounding}"
+      }
+    },
+    "ICU-VARIABLE-269": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{max}"
+      }
+    },
+    "ICU-VARIABLE-270": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{prefix}"
+      }
+    },
+    "ICU-VARIABLE-271": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{prefix}"
+      }
+    },
+    "ICU-VARIABLE-272": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{prefix}"
+      }
+    },
+    "ICU-VARIABLE-273": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{stake}"
+      }
+    },
+    "ICU-VARIABLE-274": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-275": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n, plural, one {{count} deposit} other {{count} deposits}}"
+      }
+    },
+    "ICU-VARIABLE-276": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-277": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{prefix}"
+      }
+    },
+    "ICU-VARIABLE-278": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-279": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{prefix}"
+      }
+    },
+    "ICU-VARIABLE-280": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{max}"
+      }
+    },
+    "ICU-VARIABLE-281": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-282": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{prefix}"
+      }
+    },
+    "ICU-VARIABLE-283": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-284": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n, plural, one {The beacon chain processes the deposit and activates {count} validator, identified by the public signing key in its deposit data.} other {The beacon chain processes the deposits and activates {count} validators, each identified by the public signing key in its deposit data.}}"
+      }
+    },
+    "ICU-VARIABLE-285": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-286": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n, plural, one {The validator signs blocks and attestations with its signing private key, kept online.} other {Each validator signs blocks and attestations with its own signing private key, kept online.}}"
+      }
+    },
+    "ICU-VARIABLE-287": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-288": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{from}"
+      }
+    },
+    "ICU-VARIABLE-289": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{to}"
+      }
+    },
+    "ICU-VARIABLE-290": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-291": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{prefix}"
+      }
+    },
+    "ICU-VARIABLE-292": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-293": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-294": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{prefix}"
+      }
+    },
+    "ICU-VARIABLE-295": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{max}"
+      }
+    },
+    "ICU-VARIABLE-296": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n, plural, one {{count} deposit} other {{count} deposits}}"
+      }
+    },
+    "ICU-VARIABLE-297": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-298": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n, plural, one {{count} validator active} other {{count} validators active}}"
+      }
+    },
+    "ICU-VARIABLE-299": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{signingPath}"
+      }
+    },
+    "ICU-VARIABLE-300": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bls}"
+      }
+    },
+    "ICU-VARIABLE-301": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{compounding}"
+      }
+    },
+    "ICU-VARIABLE-302": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-303": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count}"
+      }
+    },
+    "ICU-VARIABLE-304": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-305": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-306": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{withdrawalPath}"
+      }
+    },
+    "ICU-VARIABLE-307": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-308": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{signingPath}"
+      }
+    },
+    "ICU-VARIABLE-309": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-310": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count}"
+      }
+    },
+    "ICU-VARIABLE-311": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-312": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-313": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{withdrawalPath}"
+      }
+    },
+    "ICU-VARIABLE-314": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count}"
+      }
+    },
+    "ICU-VARIABLE-315": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-316": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{signingPath}"
+      }
+    },
+    "ICU-VARIABLE-317": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-318": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n}"
+      }
+    },
+    "ICU-VARIABLE-319": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n3}"
+      }
+    },
+    "ICU-VARIABLE-320": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n}"
+      }
+    },
+    "ICU-VARIABLE-321": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n1}"
+      }
+    },
+    "ICU-VARIABLE-322": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n2}"
+      }
+    },
+    "ICU-VARIABLE-323": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n1}"
+      }
+    },
+    "ICU-VARIABLE-324": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{committee}"
+      }
+    },
+    "ICU-VARIABLE-325": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-326": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-327": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-328": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{honest}"
+      }
+    },
+    "ICU-VARIABLE-329": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-330": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-331": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-332": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-333": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n2}"
+      }
+    },
+    "ICU-VARIABLE-334": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step5}"
+      }
+    },
+    "ICU-VARIABLE-335": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n3}"
+      }
+    },
+    "ICU-VARIABLE-336": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{boost}"
+      }
+    },
+    "ICU-VARIABLE-337": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-338": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-339": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n1}"
+      }
+    },
+    "ICU-VARIABLE-340": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-341": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{honest}"
+      }
+    },
+    "ICU-VARIABLE-342": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-343": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n2}"
+      }
+    },
+    "ICU-VARIABLE-344": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-345": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n2}"
+      }
+    },
+    "ICU-VARIABLE-346": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{boost}"
+      }
+    },
+    "ICU-VARIABLE-347": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-348": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-349": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesB}"
+      }
+    },
+    "ICU-VARIABLE-350": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesC}"
+      }
+    },
+    "ICU-VARIABLE-351": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-352": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-353": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesB}"
+      }
+    },
+    "ICU-VARIABLE-354": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{boost}"
+      }
+    },
+    "ICU-VARIABLE-355": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-356": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n2}"
+      }
+    },
+    "ICU-VARIABLE-357": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesB}"
+      }
+    },
+    "ICU-VARIABLE-358": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesC}"
+      }
+    },
+    "ICU-VARIABLE-359": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-360": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n2}"
+      }
+    },
+    "ICU-VARIABLE-361": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{honest}"
+      }
+    },
+    "ICU-VARIABLE-362": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-363": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesC}"
+      }
+    },
+    "ICU-VARIABLE-364": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesB}"
+      }
+    },
+    "ICU-VARIABLE-365": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-366": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n3}"
+      }
+    },
+    "ICU-VARIABLE-367": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-368": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n3}"
+      }
+    },
+    "ICU-VARIABLE-369": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesB}"
+      }
+    },
+    "ICU-VARIABLE-370": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{votesC}"
+      }
+    },
+    "ICU-VARIABLE-371": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n}"
+      }
+    },
+    "ICU-VARIABLE-372": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n1}"
+      }
+    },
+    "ICU-VARIABLE-373": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n1}"
+      }
+    },
+    "ICU-VARIABLE-374": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n2}"
+      }
+    },
+    "ICU-VARIABLE-375": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n2}"
+      }
+    },
+    "ICU-VARIABLE-376": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n3}"
+      }
+    },
+    "ICU-VARIABLE-377": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-378": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{committee}"
+      }
+    },
+    "ICU-VARIABLE-379": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{n1}"
+      }
+    },
+    "ICU-VARIABLE-380": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{boost}"
+      }
+    },
+    "ICU-VARIABLE-381": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{committee}"
+      }
+    },
+    "ICU-VARIABLE-382": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{committee}"
+      }
+    },
+    "ICU-VARIABLE-383": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{attacker}"
+      }
+    },
+    "ICU-VARIABLE-384": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{name}"
+      }
+    },
+    "ICU-VARIABLE-385": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-386": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-387": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-388": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bid}"
+      }
+    },
+    "ICU-VARIABLE-389": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-390": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step5}"
+      }
+    },
+    "ICU-VARIABLE-391": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-392": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-393": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-394": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-395": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-396": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{bid}"
+      }
+    },
+    "ICU-VARIABLE-397": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{value}"
+      }
+    },
+    "ICU-VARIABLE-398": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-399": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-400": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-401": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-402": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-403": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-404": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-405": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-406": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-407": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-408": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-409": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-410": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-411": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{block}"
+      }
+    },
+    "ICU-VARIABLE-412": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-413": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-414": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-415": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-416": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{block}"
+      }
+    },
+    "ICU-VARIABLE-417": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-418": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-419": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-420": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{block}"
+      }
+    },
+    "ICU-VARIABLE-421": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, one {{value} asset} other {{value} assets}}"
+      }
+    },
+    "ICU-VARIABLE-422": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, one {{value} share} other {{value} shares}}"
+      }
+    },
+    "ICU-VARIABLE-423": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{event}"
+      }
+    },
+    "ICU-VARIABLE-424": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{totalAssets}"
+      }
+    },
+    "ICU-VARIABLE-425": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{totalSupply}"
+      }
+    },
+    "ICU-VARIABLE-426": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{rate}"
+      }
+    },
+    "ICU-VARIABLE-427": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-428": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-429": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-430": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-431": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-432": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-433": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-434": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-435": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-436": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-437": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-438": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-439": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-440": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-441": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-442": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-443": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-444": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-445": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-446": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-447": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-448": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-449": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-450": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-451": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-452": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-453": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-454": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-455": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-456": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-457": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-458": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-459": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-460": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-461": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-462": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-463": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{event}"
+      }
+    },
+    "ICU-VARIABLE-464": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-465": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-466": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-467": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-468": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{event}"
+      }
+    },
+    "ICU-VARIABLE-469": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-470": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-471": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-472": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-473": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{event}"
+      }
+    },
+    "ICU-VARIABLE-474": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-475": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-476": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-477": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-478": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{event}"
+      }
+    },
+    "ICU-VARIABLE-479": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-480": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-481": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{input}"
+      }
+    },
+    "ICU-VARIABLE-482": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{returns}"
+      }
+    },
+    "ICU-VARIABLE-483": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-484": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-485": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-486": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{totalAssets}"
+      }
+    },
+    "ICU-VARIABLE-487": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{totalSupply}"
+      }
+    },
+    "ICU-VARIABLE-488": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{rate}"
+      }
+    },
+    "ICU-VARIABLE-489": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{deposit}"
+      }
+    },
+    "ICU-VARIABLE-490": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{shares}"
+      }
+    },
+    "ICU-VARIABLE-491": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-492": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{fn}"
+      }
+    },
+    "ICU-VARIABLE-493": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{deposit}"
+      }
+    },
+    "ICU-VARIABLE-494": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-495": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{deposit}"
+      }
+    },
+    "ICU-VARIABLE-496": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-497": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{shares}"
+      }
+    },
+    "ICU-VARIABLE-498": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{rate}"
+      }
+    },
+    "ICU-VARIABLE-499": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{deposit}"
+      }
+    },
+    "ICU-VARIABLE-500": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{shares}"
+      }
+    },
+    "ICU-VARIABLE-501": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-502": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{requestFn}"
+      }
+    },
+    "ICU-VARIABLE-503": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-504": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-505": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-506": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step4}"
+      }
+    },
+    "ICU-VARIABLE-507": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimFn}"
+      }
+    },
+    "ICU-VARIABLE-508": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{received}"
+      }
+    },
+    "ICU-VARIABLE-509": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-510": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{requestFn}"
+      }
+    },
+    "ICU-VARIABLE-511": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-512": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{requestEvent}"
+      }
+    },
+    "ICU-VARIABLE-513": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-514": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{requestFn}"
+      }
+    },
+    "ICU-VARIABLE-515": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-516": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{requestEvent}"
+      }
+    },
+    "ICU-VARIABLE-517": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-518": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-519": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-520": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{rate}"
+      }
+    },
+    "ICU-VARIABLE-521": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{received}"
+      }
+    },
+    "ICU-VARIABLE-522": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{atRequest}"
+      }
+    },
+    "ICU-VARIABLE-523": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-524": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{rate}"
+      }
+    },
+    "ICU-VARIABLE-525": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{received}"
+      }
+    },
+    "ICU-VARIABLE-526": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{atRequest}"
+      }
+    },
+    "ICU-VARIABLE-527": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-528": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimFn}"
+      }
+    },
+    "ICU-VARIABLE-529": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{received}"
+      }
+    },
+    "ICU-VARIABLE-530": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimEvent}"
+      }
+    },
+    "ICU-VARIABLE-531": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-532": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimFn}"
+      }
+    },
+    "ICU-VARIABLE-533": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{received}"
+      }
+    },
+    "ICU-VARIABLE-534": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimEvent}"
+      }
+    },
+    "ICU-VARIABLE-535": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step1}"
+      }
+    },
+    "ICU-VARIABLE-536": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{requestFn}"
+      }
+    },
+    "ICU-VARIABLE-537": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{pendingFn}"
+      }
+    },
+    "ICU-VARIABLE-538": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-539": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step2}"
+      }
+    },
+    "ICU-VARIABLE-540": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimableFn}"
+      }
+    },
+    "ICU-VARIABLE-541": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-542": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{pendingFn}"
+      }
+    },
+    "ICU-VARIABLE-543": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step3}"
+      }
+    },
+    "ICU-VARIABLE-544": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimFn}"
+      }
+    },
+    "ICU-VARIABLE-545": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{received}"
+      }
+    },
+    "ICU-VARIABLE-546": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-547": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{requestFn}"
+      }
+    },
+    "ICU-VARIABLE-548": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-549": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{pendingFn}"
+      }
+    },
+    "ICU-VARIABLE-550": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-551": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-552": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimableFn}"
+      }
+    },
+    "ICU-VARIABLE-553": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{amount}"
+      }
+    },
+    "ICU-VARIABLE-554": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{pendingFn}"
+      }
+    },
+    "ICU-VARIABLE-555": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{step}"
+      }
+    },
+    "ICU-VARIABLE-556": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{claimFn}"
+      }
+    },
+    "ICU-VARIABLE-557": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{received}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-11-17T08:33:00.704Z",
+      "status": "success"
+    }
+  }
+}

@@ -1785,13 +1785,33 @@ function syncHeaderIdsWithEnglish(
   return result
 }
 
+/** Predicate: does an offset of `md` fall inside a code fence or inline code? */
+function codeOffsets(md: string): (offset: number) => boolean {
+  const spans = [...md.matchAll(CODE_SPLIT_RE)].map(
+    (m) => [m.index, m.index + m[0].length] as const
+  )
+  return (offset) => {
+    let lo = 0
+    let hi = spans.length - 1
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1
+      if (offset < spans[mid][0]) hi = mid - 1
+      else if (offset >= spans[mid][1]) lo = mid + 1
+      else return true
+    }
+    return false
+  }
+}
+
 function normalizeBlockHtmlLines(md: string): string {
   for (const tag of BLOCK_HTML_TAGS) {
-    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
-    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${tag}>`, "g")
+    // `\S` before the closer: an indented closer is already on its own line.
+    const inlineCloseRe = new RegExp(`(\\S)[ \\t]*</${tag}>`, "g")
+    const inCode = codeOffsets(md)
     md = md.replace(
       inlineCloseRe,
       (match: string, before: string, offset: number) => {
+        if (inCode(offset + match.lastIndexOf("</"))) return match
         // Find start of current line
         const lineStart = md.lastIndexOf("\n", offset) + 1
         const lineContent = md.slice(lineStart, offset + match.length)
@@ -1958,9 +1978,11 @@ function fixBlockComponentLineBreaks(md: string): {
 
   for (const component of BLOCK_MDX_COMPONENTS) {
     // Fix inline closing tags: content</Component> → content\n</Component>
-    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
-    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${component}>`, "g")
-    content = content.replace(inlineCloseRe, (_, before) => {
+    // `\S` before the closer: an indented closer is already on its own line.
+    const inlineCloseRe = new RegExp(`(\\S)[ \\t]*</${component}>`, "g")
+    let inCode = codeOffsets(content)
+    content = content.replace(inlineCloseRe, (match, before, offset) => {
+      if (inCode(offset + match.lastIndexOf("</"))) return match
       fixCount++
       return `${before}\n</${component}>`
     })
@@ -1968,11 +1990,15 @@ function fixBlockComponentLineBreaks(md: string): {
     // Fix inline opening tags: <Component>content → <Component>\ncontent
     // Match any non-newline character after the tag (including other tags)
     // Use (?![A-Za-z]) after component name to prevent "Alert" matching "AlertTitle"
+    // Attribute values may hold JSX (`icon={<Fish />}`), so `>` inside `{}`
+    // does not end the tag; a self-closing tag has no content to split off.
     const inlineOpenRe = new RegExp(
-      `(<${component}(?![A-Za-z])[^>]*>)([^\\n])`,
+      `(<${component}(?![A-Za-z])(?:[^>{]|\\{[^}]*\\})*>)([^\\n])`,
       "g"
     )
-    content = content.replace(inlineOpenRe, (_, tag, after) => {
+    inCode = codeOffsets(content)
+    content = content.replace(inlineOpenRe, (match, tag, after, offset) => {
+      if (tag.endsWith("/>") || inCode(offset)) return match
       fixCount++
       return `${tag}\n${after}`
     })
@@ -2204,6 +2230,9 @@ function fixCrowdinSplitBackticks(
   for (let i = 0; i < translatedLines.length; i++) {
     const line = translatedLines[i]
     if (line.startsWith("```") || line.startsWith("~~~")) continue
+    // A premature close leaves an odd backtick count; on an even line the gap
+    // between two correct spans would otherwise read as a split span.
+    if ((line.match(/`/g) ?? []).length % 2 === 0) continue
 
     for (const engCode of engCodeSpans) {
       // Build a pattern that matches the English code content split by
@@ -3517,9 +3546,12 @@ function escapeMdxAngleBrackets(content: string): {
  * Restore a dropped `</p>` closing tag on a single-line block paragraph.
  * Translation sometimes drops the closing `</p>` (e.g. inside `<AlertContent>`),
  * leaving an unclosed `<p>` that breaks MDX. Uses a conservative heuristic to
- * avoid touching genuinely multi-line `<p>...</p>` blocks: only appends `</p>`
- * when the next non-blank line begins with another tag (`<`), which means the
- * paragraph text could not legitimately continue there. Skips fenced code.
+ * avoid touching genuinely multi-line `<p>...</p>` blocks: the `<p>` line must
+ * carry text, the next non-blank line must open another `<p>` or a component,
+ * or close something other than the paragraph, and no `</p>` may follow before
+ * a blank line or the next `<p>`. A bare `<p>` opens a block, and a line
+ * starting with `<a>` or `<Emoji />` can continue the paragraph (a language
+ * that puts the link first). Skips fenced code.
  */
 function fixUnclosedParagraphTags(content: string): {
   content: string
@@ -3542,6 +3574,7 @@ function fixUnclosedParagraphTags(content: string): {
 
     const trimmed = line.trim()
     if (!/^<p(\s|>)/.test(trimmed)) continue
+    if (!trimmed.replace(/^<p(\s[^>]*)?>/, "").trim()) continue
 
     const opens = (line.match(/<p(\s|>)/g) || []).length
     const closes = (line.match(/<\/p>/g) || []).length
@@ -3553,12 +3586,19 @@ function fixUnclosedParagraphTags(content: string): {
     if (j >= lines.length) continue
     const nextTrimmed = lines[j].trim()
 
-    // Only restore if the next line starts a tag — prose continuation would
-    // mean this is a legitimate multi-line paragraph and we must not touch it.
-    if (nextTrimmed.startsWith("<")) {
-      lines[i] = line + "</p>"
-      fixCount++
+    if (!/^(<\/(?!p>)|<p(\s|>)|<[A-Z])/.test(nextTrimmed)) continue
+    let closed = false
+    for (let k = j; k < lines.length; k++) {
+      const next = lines[k].trim()
+      if (!next || /^<p(\s|>)/.test(next)) break
+      if (next.includes("</p>")) {
+        closed = true
+        break
+      }
     }
+    if (closed) continue
+    lines[i] = line + "</p>"
+    fixCount++
   }
 
   return { content: lines.join("\n"), fixCount }
@@ -3987,9 +4027,10 @@ function fixDroppedAutolinkClose(content: string): {
     // (a) Dropped `>`: autolink open `](<`, a URL containing a parenthesised
     // segment, optionally followed by a stray duplicate `)`, and NOT already
     // followed by the closing `>`. The negative lookahead leaves correct
-    // `](<URL>)` untouched.
+    // `](<URL>)` untouched, and a URL that continues past the parenthesised
+    // segment (`...-(java-ethereum)/5dfa...>)`, `...-(1).pdf>)`).
     parts[i] = parts[i].replace(
-      /\]\(<(https?:\/\/[^\s<>]*\([^\s<>()]*\))\)?(?!>)/g,
+      /\]\(<(https?:\/\/[^\s<>]*\([^\s<>()]*\))\)?(?![^\s<>]*>)/g,
       (_, url) => {
         fixCount++
         return `](<${url}>)`
@@ -5203,6 +5244,11 @@ function processMarkdownFile(
  * The app expects the English key name. This function compares each
  * translated JSON value against its English counterpart and restores
  * the original placeholder names.
+ *
+ * Only names English doesn't have are renamed, to the English names the value
+ * lacks. A value whose names all exist in English is left alone: languages
+ * reorder arguments ("{name}'s screenshot {index}"), and renaming by position
+ * would swap them.
  */
 function fixTranslatedJsonPlaceholders(
   translatedJson: string,
@@ -5232,21 +5278,22 @@ function fixTranslatedJsonPlaceholders(
     const trPlaceholders = trObj[key].match(/\{[a-zA-Z_]\w*\}/g)
     if (!trPlaceholders || trPlaceholders.length === 0) continue
 
-    // If counts match but names differ, map by position
-    if (enPlaceholders.length === trPlaceholders.length) {
-      let val = trObj[key]
-      let changed = false
-      for (let j = 0; j < enPlaceholders.length; j++) {
-        if (trPlaceholders[j] !== enPlaceholders[j]) {
-          val = val.replace(trPlaceholders[j], enPlaceholders[j])
-          changed = true
-        }
-      }
-      if (changed) {
-        trObj[key] = val
-        fixCount++
-      }
-    }
+    if (enPlaceholders.length !== trPlaceholders.length) continue
+    const count = (names: string[], name: string) =>
+      names.filter((p) => p === name).length
+    const unknown = [...new Set(trPlaceholders)].filter(
+      (p) => !enPlaceholders.includes(p)
+    )
+    const missing = [...new Set(enPlaceholders)].filter(
+      (p) => count(trPlaceholders, p) < count(enPlaceholders, p)
+    )
+    if (unknown.length === 0 || unknown.length !== missing.length) continue
+    const rename = new Map(unknown.map((p, j) => [p, missing[j]]))
+    trObj[key] = trObj[key].replace(
+      /\{[a-zA-Z_]\w*\}/g,
+      (p) => rename.get(p) ?? p
+    )
+    fixCount++
   }
 
   if (fixCount === 0) return { content: translatedJson, fixCount }

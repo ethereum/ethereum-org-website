@@ -1,5 +1,10 @@
 # Simplified Chinese (zh) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.7/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, shuangqian for equivocation, youxianfei. Open: di N bu vs buzhou N, plate three ways, custody tuoguan vs baoguan.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -178,3 +183,15 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warning: `gas 限制` in code comments vs `gas 上限` in prose.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:60 `_种子_` underscore emphasis between CJK renders literally -> `*种子*` (#89)
+- multi-client:97/161 minting sentence made the players the minters -> `以确认已为...每个玩家铸造了 1000 个代币`
+
+**Open / notes:**
+
+- echidna title dropped the Latin `(Echidna)` gloss; glossary-correct, but the tool name now appears nowhere in prose while users type `echidna` -- glossary follow-up

@@ -1,15 +1,28 @@
+import { DEFAULT_LOCALE } from "../constants"
+
 import { capitalize } from "./string"
+
+// Intl throws RangeError on malformed tags (e.g. "en_US"), which raw route
+// params can carry; pass every unvalidated locale through this (#18013).
+export function safeLocale(locale: string): string {
+  try {
+    Intl.getCanonicalLocales(locale)
+    return locale
+  } catch {
+    return DEFAULT_LOCALE
+  }
+}
 
 export const getLanguageCodeName = (languageCode: string, locale: string) => {
   return capitalize(
-    new Intl.DisplayNames([locale], {
+    new Intl.DisplayNames([safeLocale(locale)], {
       type: "language",
     }).of(languageCode) as string
   )
 }
 
 export const getCountryCodeName = (countryCode: string, locale: string) => {
-  return new Intl.DisplayNames([locale], {
+  return new Intl.DisplayNames([safeLocale(locale)], {
     type: "region",
   }).of(countryCode) as string
 }

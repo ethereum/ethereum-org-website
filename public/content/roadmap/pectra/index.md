@@ -77,7 +77,7 @@ The new precompile adds the ability for every developer to easily, efficiently, 
 
 The EVM currently provides `BLOCKHASH` opcode which enables contract developers to retrieve the hash of a block directly in the execution layer. However, this is limited only to the last 256 blocks and might become problematic for stateless clients in the future.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) creates a new system contract that can serve the last 8192 block hashes as storage slots. This helps to future-proof the protocol for stateless execution and becomes more efficient when verkle tries are adopted. However, apart from this, rollups can benefit from this right away, as they can query the contract directly with a longer historical window.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) creates a new system contract that can serve the last 8192 block hashes as storage slots. This helps to future-proof the protocol for stateless execution. However, apart from this, rollups can benefit from this right away, as they can query the contract directly with a longer historical window.
 
 ### Move committee index outside Attestation {#7549}
 

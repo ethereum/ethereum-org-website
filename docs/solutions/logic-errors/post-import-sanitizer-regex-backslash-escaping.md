@@ -1,4 +1,6 @@
 ---
+status: historical
+superseded_by: "src/scripts/intl-pipeline/intl-sanitizer.ts (tests in tests/unit/intl-pipeline/); post_import_sanitize.ts no longer exists"
 title: Fix double-escaping of backslash-escaped angle brackets in MDX sanitizer
 date: 2026-02-28
 category: logic-errors

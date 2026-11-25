@@ -178,6 +178,8 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="erc-1155" />
 
+<GlossaryDefinition term="escrow" />
+
 <GlossaryDefinition term="ethash" />
 
 <GlossaryDefinition term="ether" />
@@ -264,6 +266,8 @@ authors: ["Andreas Antonopoulos"]
 
 <GlossaryDefinition term="keccak-256" />
 
+<GlossaryDefinition term="kyc" />
+
 <Divider />
 
 ## L {#section-l}
@@ -347,6 +351,8 @@ authors: ["Andreas Antonopoulos"]
 <GlossaryDefinition term="peer" />
 
 <GlossaryDefinition term="peer-to-peer-network" />
+
+<GlossaryDefinition term="p2p-trading" />
 
 <GlossaryDefinition term="permissionless" />
 

@@ -35,19 +35,19 @@
     "score": 9000
   },
   {
-    "username": "hyunmini",
-    "name": "secuholic",
-    "score": 8000
-  },
-  {
     "username": "gzeoneth",
     "name": "gzeon",
-    "score": 8000
+    "score": 9000
   },
   {
     "username": "therealgregoai",
     "name": "Grego AI",
-    "score": 7000
+    "score": 8500
+  },
+  {
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 8000
   },
   {
     "username": "alexfilippov314",
@@ -92,12 +92,12 @@
   {
     "username": "ustas-eth",
     "name": "ustas",
-    "score": 3500
+    "score": 4000
   },
   {
-    "username": "quasar",
-    "name": "Evgeny Legerov",
-    "score": 3250
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 3500
   },
   {
     "username": "karalabe",
@@ -135,11 +135,6 @@
     "score": 2500
   },
   {
-    "username": "lgprbs",
-    "name": "quasar",
-    "score": 2500
-  },
-  {
     "username": "eclipse07077",
     "name": "eclipse07077",
     "score": 2500
@@ -154,6 +149,21 @@
     "name": "Akincibor",
     "score": 1750
   },
+  {
+    "username": "sujithsomraaj",
+    "name": "sujith",
+    "score": 1500
+  },
+  {
+    "username": "Alleysira",
+    "name": "Jie Ma (UTUX Labs)",
+    "score": 1500
+  },
+  {
+    "username": "x15-eth",
+    "name": "0x15",
+    "score": 1250
+  },  
   {
     "username": "nerolation",
     "name": "Toni Wahrstätter",
@@ -182,11 +192,6 @@
   {
     "username": "",
     "name": "Jeongmin Choi",
-    "score": 1000
-  },
-  {
-    "username": "Alleysira",
-    "name": "Jie Ma (UTUX Labs)",
     "score": 1000
   },
   {
@@ -223,10 +228,15 @@
     "username": "justifyme22",
     "name": "Juan Sukaton",
     "score": 1000
-  },  
+  },
   {
-    "username": "x15-eth",
-    "name": "0x15",
+    "username": "D4r3-D3v1L",
+    "name": "d4r3d3v1l",
+    "score": 1000
+  },
+  {
+    "username": "srobins1205-sys",
+    "name": "Greenbean17",
     "score": 1000
   },  
   {
@@ -250,13 +260,13 @@
     "score": 500
   }, 
   {
-    "username": "sujithsomraaj",
-    "name": "sujith",
-    "score": 500
-  },  
-  {
     "username": "eliteaja11-dev",
     "name": "AJA",
+    "score": 500
+  },
+  {
+    "username": "Giulio2002",
+    "name": "Giulio2002",
     "score": 500
   },  
   {
@@ -272,6 +282,21 @@
   {
     "username": "loopghost",
     "name": "LoopGhost",
+    "score": 250
+  },
+  {
+    "username": "the-red-ace",
+    "name": "redbaron",
+    "score": 250
+  },
+  {
+    "username": "Matgothmog",
+    "name": "Matgothmog",
+    "score": 250
+  },
+  {
+    "username": "daniel5713",
+    "name": "Tong CAO",
     "score": 250
   },
   {

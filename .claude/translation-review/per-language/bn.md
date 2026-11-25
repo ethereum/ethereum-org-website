@@ -1,5 +1,10 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption placeholder swap, gas inline code, attestation/equivocation/fork-choice/consensus-client forms, withdrawal/signing/builder across the diagram JSON. Open: stray BiDi isolates in networking-layer and peerdas frontmatter, detached postpositions.
+
 ## PR #18772 (community-stories.json, 2026-07-10) -- 9.4/10
 - CRIT fixed: "Web2" left Latin in story-sebastian -> ওয়েব২ per ETHGlossary (web2 => ওয়েব২). Watch web2/web3 script split: glossary transliterates web2 but keeps Web3 Latin.
 - WARN: "transfer" rendered both ট্রান্সফার and হস্তান্তর within story-nico-bolivia (glossary: হস্তান্তর; ট্রান্সফার common in speech).
@@ -178,3 +183,15 @@ Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, 
 **Notes:**
 
 - Warnings: doubled ABI expansion (mint:38); `[Ethers plugin]` left untranslated; native and Western numerals mixed in part references. Glossary returns `(weth)` lowercase (#95).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- echidna:682 dropped the two-space hard line break -- cosmetic
+- Kurtosis labels (files artifacts, user services) mix Latin and transliteration -- defensible, informational

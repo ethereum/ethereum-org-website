@@ -1,5 +1,10 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap (isolates preserved), transaction fee, builder and searcher across the MEV-Boost diagram, PoS in attestations description. Open: qadam vs marhala, polynomial, relay as `rileez`.
+
 ## PR #18868 (full pipeline import, 2026-07-22) -- 8.4/10 (lowest in fleet)
 - CRIT (NOT hand-fixed, needs pipeline re-pass): `gaming/index.md` -- two whole sections (`## Gaming on Ethereum`, `## Ethereum's gaming ecosystem overview`) verbatim English between translated sections. `developers/tutorials/yellow-paper-evm/index.md` -- ~half the explanatory prose (sec 9, 9.3, 9.4, 9.4.2, 9.4.3, Opcode cost, Expanding memory cost) left English. Block-matching coverage gap, not laziness.
 - WARN: "trade-off" -> تبادلہ (glossary's *swap* term) on single-slot-finality; zkEVM correctly used سمجھوتہ. Prefer سمجھوتہ / loanword ٹریڈ آف.
@@ -231,3 +236,16 @@ Scope: how-to-write-and-deploy-an-nft (released from quarantine and fully rework
 - nft:342 `مثالیں` (examples) is used for object instances; prefer `انسٹینسز`
 - nft:226, 290 `ماحولیاتی` (ecological) is used for env file/variable; prefer `انوائرنمنٹ`
 - The step-6 heading and the word for installation differ between hello-world and the NFT tutorial
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.0/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:16/602 `Echidna 2.3.3` / `Echidna 2.3.0` left Latin inside the ltr span; glossary transliterates -> `ایکڈنا <span dir="ltr">2.3.3</span>` (critical)
+- multi-client:99/163 dropped token noun made `1000 منٹ` read as "1000 minutes" -> `1000 ٹوکن منٹ`
+- echidna:317 heading lost its `(assert)` clarifier vs dev -> restored
+
+**Open / notes:**
+
+- echidna:66 `نامانوس` (unfamiliar) for invalid; multi-client:205 `متضاد` (contradictory) for heterogeneous -- both pre-existing wording on changed lines, native call
