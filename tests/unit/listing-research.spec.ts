@@ -485,18 +485,36 @@ test("coveringPr finds the requester's own open PR for the same site", () => {
 })
 
 test("an issue waits on its author until they answer the check's questions", () => {
-  const asked = { ...rec({ Audited: "unknown" }), askAuthor: ["Audited?"] }
-  expect(issueLabel({ ...asked, kind: "research" }, null)).toBe(
-    "awaiting changes"
-  )
-  expect(issueLabel({ ...rec({ Audited: "pass" }), askAuthor: [] }, null)).toBe(
-    "needs product review 🕵️"
-  )
-  expect(issueLabel({ ...asked, kind: "followup" }, asked)).toBe(
-    "needs product review 🕵️"
-  )
-  expect(issueLabel({ ...asked, kind: "research" }, asked)).toBeNull()
+  const AWAIT = "awaiting changes"
+  const REVIEW = "needs product review 🕵️"
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const at = (r: any, prev: any, kind = "followup") => ({
+    ...r,
+    kind,
+    blocking: blockers(r, prev),
+  })
+  const asked = {
+    ...rec({ Audited: "unknown" }),
+    askAuthor: ["Audited?"],
+    waiting: true,
+  }
+  const answered = { ...rec({ Audited: "unknown" }), askAuthor: ["Audited?"] }
+
+  expect(issueLabel(at(asked, null, "research"), null)).toBe(AWAIT)
   expect(
-    issueLabel({ ...rec({ Audited: "fail" }), kind: "followup" }, asked)
-  ).toBe("awaiting changes")
+    issueLabel(at({ ...rec({ Audited: "pass" }), askAuthor: [] }, null), null)
+  ).toBe(REVIEW)
+  expect(issueLabel(at(answered, asked), asked)).toBe(REVIEW)
+  expect(issueLabel(at(answered, asked, "research"), asked)).toBeNull()
+  expect(issueLabel(at(rec({ Audited: "fail" }), asked), asked)).toBe(AWAIT)
+
+  // A later follow-up with nothing new leaves a maintainer's labels alone.
+  expect(issueLabel(at(answered, answered), answered)).toBeNull()
+  // A follow-up that asks something new waits on the author again.
+  const more = { ...answered, askAuthor: ["Audited?", "Which firm?"] }
+  expect(issueLabel(at(more, answered), answered)).toBe(AWAIT)
+  // The last follow-up hands off to a maintainer even with blockers left.
+  expect(issueLabel(at(rec({ Audited: "fail" }), asked), asked, true)).toBe(
+    REVIEW
+  )
 })

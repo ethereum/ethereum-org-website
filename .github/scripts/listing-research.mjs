@@ -340,6 +340,31 @@ export function isListingReply(item, comment, comments) {
   return l.record != null && l.followups < MAX_FOLLOWUPS
 }
 
+const bodyEditedSince = (n, author, since) => {
+  const [owner, name] = REPO.split("/")
+  const e = JSON.parse(
+    execFileSync(
+      "gh",
+      [
+        "api",
+        "graphql",
+        "-f",
+        "query=query($o:String!,$r:String!,$n:Int!){repository(owner:$o,name:$r){issue(number:$n){lastEditedAt editor{login}}}}",
+        "-f",
+        `o=${owner}`,
+        "-f",
+        `r=${name}`,
+        "-F",
+        `n=${n}`,
+        "--jq",
+        ".data.repository.issue",
+      ],
+      { encoding: "utf8" }
+    )
+  )
+  return e.editor?.login === author && e.lastEditedAt > since
+}
+
 const itemComments = (n) =>
   ghList(`repos/${REPO}/issues/${n}/comments?per_page=100`)
 
@@ -824,6 +849,11 @@ export function researchComment(r, { author, isPr }) {
     .join("\n\n")
 }
 
+export const newQuestions = (r, prev) => {
+  const asked = new Set((prev?.askAuthor || []).map(squash))
+  return (r.askAuthor || []).filter((q) => !asked.has(squash(q)))
+}
+
 // A reply to the author: only what changed since the previous check, the full check folded away.
 export function followupComment(r, prev, { author, followups }) {
   const before = new Map(
@@ -834,8 +864,7 @@ export function followupComment(r, prev, { author, followups }) {
       c.status !== "unknown" && before.get(squash(c.criterion)) !== c.status
   )
   const open = r.criteria.filter((c) => c.status === "unknown")
-  const asked = new Set((prev?.askAuthor || []).map(squash))
-  const questions = r.askAuthor.filter((q) => !asked.has(squash(q)))
+  const questions = newQuestions(r, prev)
   const was = blockingOf(prev)
   const now = blockers(r, prev)
   const last = followups + 1 >= MAX_FOLLOWUPS
@@ -873,40 +902,50 @@ export const dataLine = (r) =>
 const tryWrite = (...a) => {
   try {
     ghWrite(...a)
+    return true
   } catch (e) {
     console.log(
       `::warning::${a[0]} ${a[1]}: ${String(e.message).slice(0, 200)}`
     )
+    return false
   }
 }
 
-// On issues, a blocker or a first check's open question waits on the author; a reply hands it to product review.
-export function issueLabel(record, prev) {
-  const b = record.blocking ?? blockers(record, prev)
+const blockerChange = (b, prev) => {
   const was = blockingOf(prev)
-  if (b.some((x) => !was.some((w) => squash(w) === squash(x)))) return AWAITING
-  if (!b.length && was.length) return PRODUCT_REVIEW
-  if (!prev) return record.askAuthor?.length ? AWAITING : PRODUCT_REVIEW
-  if (record.kind === "followup" && !b.length) return PRODUCT_REVIEW
-  return null
+  return {
+    added: b.some((x) => !was.some((w) => squash(w) === squash(x))),
+    cleared: !b.length && was.length > 0,
+  }
+}
+
+// On issues, a new blocker or question waits on the author; their answer, or the last follow-up, hands it to product review. Otherwise a maintainer's labels stay.
+export function issueLabel(record, prev, last) {
+  if (last) return PRODUCT_REVIEW
+  const { added, cleared } = blockerChange(record.blocking, prev)
+  if (added || newQuestions(record, prev).length) return AWAITING
+  if (cleared || !prev) return PRODUCT_REVIEW
+  return record.kind === "followup" && !record.blocking.length && prev.waiting
+    ? PRODUCT_REVIEW
+    : null
 }
 
 // Blockers are must-criteria verified as failing. PR signals change only when the blockers do, so a maintainer's dismissal or label removal sticks.
-function signal(n, isPr, record, prev) {
-  const was = blockingOf(prev)
+function signal(n, isPr, record, prev, to, current = []) {
   const b = blockers(record, prev)
   record.blocking = b
-  const added = b.some((x) => !was.some((w) => squash(w) === squash(x)))
-  const cleared = !b.length && was.length > 0
+  const { added, cleared } = blockerChange(b, prev)
   const labels = `repos/${REPO}/issues/${n}/labels`
   const unlabel = (l) =>
     tryWrite("DELETE", `${labels}/${encodeURIComponent(l)}`)
   if (!isPr) {
-    const to = issueLabel(record, prev)
-    if (to) {
-      tryWrite("POST", labels, { labels: [to] })
-      unlabel(to === AWAITING ? PRODUCT_REVIEW : AWAITING)
-    }
+    const other = to === AWAITING ? PRODUCT_REVIEW : AWAITING
+    if (
+      to &&
+      tryWrite("POST", labels, { labels: [to] }) &&
+      current.includes(other)
+    )
+      unlabel(other)
     return record
   }
   if (added) tryWrite("POST", labels, { labels: [AWAITING] })
@@ -940,9 +979,10 @@ async function submit(n, item) {
   const prior = latest(cs)
   const replied =
     prior.record &&
-    cs.some(
+    (cs.some(
       (c) => c.user?.login === i.user.login && c.created_at > prior.posted
-    )
+    ) ||
+      (!isPr && bodyEditedSince(n, i.user.login, prior.posted)))
   if (replied && prior.followups >= MAX_FOLLOWUPS)
     return console.log(`#${n} reached ${MAX_FOLLOWUPS} follow-ups`)
   const r = await check({ ...item, pr: isPr ? n : "", issue: isPr ? "" : n })
@@ -951,6 +991,14 @@ async function submit(n, item) {
   r.related = related(r.domains, n)
   r.kind = replied ? "followup" : "research"
   r.blocking = blockers(r, prior.record)
+  const to = isPr
+    ? null
+    : issueLabel(
+        r,
+        prior.record,
+        replied && prior.followups + 1 >= MAX_FOLLOWUPS
+      )
+  if (!isPr) r.waiting = to ? to === AWAITING : !!prior.record?.waiting
   const ctx = { author: i.user.login, isPr, followups: prior.followups }
   let text =
     r.kind === "followup"
@@ -966,7 +1014,14 @@ async function submit(n, item) {
     body: `${text}\n\n${dataLine(r)}`,
   })
   console.log(`Posted listing ${r.kind} on #${n}`)
-  signal(n, isPr, { ...r }, prior.record)
+  signal(
+    n,
+    isPr,
+    { ...r },
+    prior.record,
+    to,
+    i.labels.map((l) => l.name)
+  )
 }
 
 async function main() {
@@ -990,6 +1045,16 @@ async function main() {
       isListingReply(
         ghJson(`repos/${REPO}/issues/${args[0]}`),
         ghJson(`repos/${REPO}/issues/comments/${args[1]}`),
+        itemComments(args[0])
+      )
+        ? 0
+        : 1
+    )
+  else if (cmd === "match-edit")
+    process.exit(
+      isListingReply(
+        ghJson(`repos/${REPO}/issues/${args[0]}`),
+        { user: { login: args[1] } },
         itemComments(args[0])
       )
         ? 0
