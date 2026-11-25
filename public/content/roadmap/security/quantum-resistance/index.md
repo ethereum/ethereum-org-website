@@ -58,13 +58,11 @@ The aggregation property that makes BLS efficient (combining hundreds of thousan
 
 **Why it is vulnerable**: KZG commitments rely on elliptic curve pairings, the same mathematical structure that quantum computers can attack.
 
-**Current mitigation**: KZG commitments use a "trusted setup" where many participants contributed randomness. As long as at least one participant was honest and discarded their secret, the setup is secure, even against quantum computers attempting to reverse-engineer it after the fact.
+**What the trusted setup does and does not protect**: KZG commitments use a "trusted setup" where many participants contributed randomness. As long as at least one participant was honest and discarded their secret, no one holds the setup's secret, so classical attackers cannot forge proofs. That protection does not extend to quantum computers: a sufficiently capable quantum computer could break the elliptic curve cryptography that pairing-based KZG relies on, whatever happened during the setup.
 
-**Long-term solution**: Replace KZG with a quantum-safe commitment scheme. The two leading candidates are:
-- **STARK-based commitments**: Rely on hash functions rather than elliptic curves. Already used in some ZK-rollups.
-- **Lattice-based commitments**: Rely on the hardness of lattice problems, which are believed to be quantum-resistant.
+**Long-term solution**: Replace KZG with a quantum-safe commitment scheme, which requires a different construction rather than a better setup. The EF's current plan is for blobs to [switch to hash-based commitments](https://blog.ethereum.org/2026/11/23/pqai-0), similar to the hash-based proofs used by STARKs.
 
-Both approaches are still being researched for efficiency and practicality at Ethereum's scale.
+This is still being researched for efficiency and practicality at Ethereum's scale.
 
 ### 3. Account signatures: ECDSA {#eoa-signatures}
 
@@ -100,7 +98,7 @@ These standards provide a foundation for the broader industry's post-quantum tra
 
 ## The Ethereum Foundation's approach {#ef-approach}
 
-The Ethereum Foundation formed a dedicated Post-Quantum Security team in January 2026, led by Thomas Coratger. The team's work is tracked publicly at [pq.ethereum.org](https://pq.ethereum.org).
+The Ethereum Foundation formed a dedicated Post-Quantum Security team in January 2026, led by Thomas Coratger. The team's work is tracked publicly at [pq.ethereum.org](https://pq.ethereum.org). In November 2026, the EF [recommended Keccak-256](https://blog.ethereum.org/2026/11/24/pqai-1), which Ethereum already uses, as the hash function for its hash-based cryptography.
 
 ### Current activity (as of April 2026) {#current-activity}
 
@@ -111,16 +109,14 @@ The Ethereum Foundation formed a dedicated Post-Quantum Security team in January
 
 ### Migration milestones {#migration-milestones}
 
-The team has outlined a series of protocol upgrades to incrementally introduce post-quantum cryptography into Ethereum. These are planning milestones, not guaranteed commitments. Names and ordering may change.
+As of November 2026, the plan works toward two protocol milestones. Forks after Hegotá have placeholder names (I\*, J\*, K\*, L\*), and what goes into each one, and in what order, is still being decided. These are planning targets, not a settled schedule.
 
-| Milestone | What it introduces |
-|-----------|--------------------|
-| I* | PQ key registry. Validators can register post-quantum public keys alongside existing BLS keys. |
-| J* | PQ signature verification precompiles. Smart contracts and wallets can verify PQ signatures natively. |
-| L* | PQ attestations and real-time consensus-layer proofs via leanVM. Validators begin using PQ signatures for consensus. |
-| M* | Full PQ signature aggregation and PQ-safe blob commitments. |
+- **Minimum viable post-quantum (MV-PQ)**: a contingency milestone, currently placed at J\*, that is [designed to keep Ethereum operating](https://blog.ethereum.org/2026/09/07/protocol-priorities) through the arrival of a cryptographically relevant quantum computer, with reduced guarantees. Researchers are still defining exactly what that reduction would look like. Its planned pieces include a post-quantum public-key registry for validators (placed at I\*), a post-quantum "heartbeat" on the consensus layer, hash-based data availability sampling, and hash-based signatures for transactions.
+- **Full post-quantum resistance**: execution, consensus and data all quantum-resistant, including post-quantum attestations, which are needed for full economic finality.
 
-**Target**: The EF Protocol cluster is [aiming](https://blog.ethereum.org/2026/09/07/protocol-priorities) for Ethereum L1 to be quantum-resistant across execution, consensus and data by December 2029. It treats this deadline as non-negotiable at least until January 2027, when quantum progress will be reassessed with outside experts. As a contingency, a minimum viable post-quantum (MV-PQ) L1 milestone has been added at J\*. Full execution-layer and ecosystem migration extends beyond that.
+**Target**: The EF Protocol cluster is [aiming](https://blog.ethereum.org/2026/09/07/protocol-priorities) for full post-quantum resistance of Ethereum L1 by December 2029, and treats this deadline as non-negotiable at least until January 2027, when quantum progress will be reassessed with outside experts. At Devcon in November 2026, Justin Drake [proposed December 2028](https://blog.ethereum.org/2026/11/23/pqai-0) as a target instead. That is a proposal: December 2029 remains the EF's internal deadline, with a timeline review planned for January. Early specifications have started, and work has begun on a first post-quantum consensus-layer devnet.
+
+These targets are about protocol readiness. Once the protocol supports post-quantum cryptography, users, wallets, staking pools and applications still need to move their accounts, keys and contracts to it, which will take longer.
 
 ## What do users need to do? {#what-users-need-to-do}
 
@@ -174,6 +170,8 @@ No. Ethereum has one of the most structured post-quantum programs of any blockch
 
 - [pq.ethereum.org](https://pq.ethereum.org) - _Ethereum Foundation_
 - [EF Protocol: Current and Emerging Priorities](https://blog.ethereum.org/2026/09/07/protocol-priorities) - _Ethereum Foundation_
+- [PQAI #0: Preparing Ethereum for a post-quantum, post-AI world](https://blog.ethereum.org/2026/11/23/pqai-0) - _Ethereum Foundation_
+- [PQAI #1: One hash to rule them all — Keccak-256 for Ethereum's post-quantum, post-AI era](https://blog.ethereum.org/2026/11/24/pqai-1) - _Ethereum Foundation_
 - [Post-Quantum Cryptography Project](https://pse.dev/projects/post-quantum-cryptography) - _Privacy Stewards of Ethereum (PSE)_
 - [NIST Post-Quantum Cryptography standards](https://csrc.nist.gov/projects/post-quantum-cryptography) - _NIST_
 - [Safeguarding cryptocurrency by disclosing quantum vulnerabilities responsibly](https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/) - _Google Quantum AI_

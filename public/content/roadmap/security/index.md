@@ -35,7 +35,7 @@ FOCIL is the consensus-layer headliner of Hegotá, the upgrade that follows Glam
 
 ## Faster finality {#faster-finality}
 
-For users, [finality](/glossary/#finality) is the moment a transaction becomes permanent, when reversing it would cost an attacker an enormous amount of staked ETH. Today finality takes about 15 minutes, and **researchers want to shrink that dramatically**. The work began as single-slot finality, evolved into three-slot finality, and now continues as Minimmit, a one-round consensus protocol in the Lean Ethereum program introduced in July 2025. Finality in seconds is a long-range north star on the draft roadmap, targeting roughly 2029. This remains active research, and no finality upgrade is assigned to a fork yet.
+For users, [finality](/glossary/#finality) is the moment a transaction becomes permanent, when reversing it would cost an attacker an enormous amount of staked ETH. Today finality takes about 15 minutes, and **researchers want to shrink that dramatically**. Research has explored several designs, including single-slot finality, three-slot finality and Minimmit, a protocol that can finalize a block after a single round of voting. As of September 2026, the EF Protocol cluster's [current design direction](https://blog.ethereum.org/2026/09/07/protocol-priorities#fast-finality) decouples finality from block production; this "decoupled consensus" is the leading headliner candidate for I\*, the fork after Hegotá. A candidate is not a scheduled upgrade: no finality change has been scheduled for any fork, and the November 2026 push to prioritize post-quantum security may change the order. Finality in seconds remains a long-range goal on the draft roadmap.
 
 <ButtonLink variant="outline" href="/roadmap/single-slot-finality/">More on faster finality research</ButtonLink>
 
@@ -59,7 +59,7 @@ Cryptographic transitions take years to plan and execute safely, so preparation 
 
 The Ethereum Foundation formed a dedicated **Post-Quantum Security team** in January 2026, and its work is tracked publicly at [pq.ethereum.org](https://pq.ethereum.org). Active work includes hash-based validator signatures (leanXMSS) paired with a minimal zkVM (leanVM) that aggregates the larger quantum-safe signatures efficiently, and weekly interop devnets with more than 10 client teams.
 
-A key part of the transition strategy is **EIP-8141**, which introduces native [account abstraction](/roadmap/account-abstraction/). This allows individual accounts to choose their own signature verification, meaning users could switch to quantum-safe signatures without waiting for a single protocol-wide migration. EIP-8141 is scheduled for inclusion in the Hegotá upgrade. The EF Protocol cluster is [aiming](https://blog.ethereum.org/2026/09/07/protocol-priorities) for Ethereum L1 to be quantum-resistant across execution, consensus and data by December 2029, a deadline it treats as non-negotiable at least until a reassessment in January 2027. These are planning targets and may shift.
+A key part of the transition strategy is **EIP-8141**, which introduces native [account abstraction](/roadmap/account-abstraction/). This allows individual accounts to choose their own signature verification, meaning users could switch to quantum-safe signatures without waiting for a single protocol-wide migration. EIP-8141 is scheduled for inclusion in the Hegotá upgrade. The EF Protocol cluster is [aiming](https://blog.ethereum.org/2026/09/07/protocol-priorities) for Ethereum L1 to be quantum-resistant across execution, consensus and data by December 2029, a deadline it treats as non-negotiable at least until a reassessment in January 2027. A sooner target, December 2028, has since been [proposed](https://blog.ethereum.org/2026/11/23/pqai-0), but it has not been agreed. These are planning targets and may shift.
 
 <ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/security" eventName="clicked can quantum computers steal my ETH today?">
 
@@ -92,7 +92,7 @@ In progress:
 As of November 2026:
 
 - **Block building and censorship resistance**: ePBS and block-level access lists are live on the Sepolia testnet as part of Glamsterdam; Mainnet is not yet scheduled. FOCIL is scheduled for Hegotá.
-- **Finality**: Minimmit and the wider Lean Ethereum consensus work remain in active research with no fork assignment yet.
+- **Finality**: Faster finality remains in research. Decoupled consensus is the leading headliner candidate for I\*, but no finality change is scheduled.
 - **Quantum resistance**: Weekly post-quantum interop devnets are running, and the EF Protocol cluster targets a quantum-resistant L1 by December 2029.
 - **Simplification**: Pectra and Fusaka shipped; Glamsterdam and Hegotá carry the next round of cleanups.
 
