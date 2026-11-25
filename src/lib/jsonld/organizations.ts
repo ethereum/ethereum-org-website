@@ -1,3 +1,5 @@
+import { SITE_URL } from "@/lib/constants"
+
 import { REFERENCE } from "./references"
 
 /**
@@ -64,7 +66,7 @@ export const KNOWN_ORGANIZATIONS = {
     name: "Ethereum Foundation",
     url: "https://ethereum.foundation",
     ownershipFundingInfo: "https://ethereum.foundation/ef",
-    logo: "https://ethereum.org/images/ef-logo.png",
+    logo: `${SITE_URL}/images/ef-logo.png`,
     sameAs: [
       "https://www.wikidata.org/wiki/Q114736857",
       "https://www.crunchbase.com/organization/ethereum",

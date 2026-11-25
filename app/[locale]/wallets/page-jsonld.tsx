@@ -4,13 +4,15 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function WalletsPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }) {
   const t = await getTranslations("page-wallets")
@@ -51,7 +53,7 @@ export default async function WalletsPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-wallets-title"),
         description: t("page-wallets-meta-description"),
-        image: "https://ethereum.org/images/wallets/wallet-hero.png",
+        image: `${SITE_URL}/images/wallets/wallet-hero.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
@@ -61,7 +63,7 @@ export default async function WalletsPageJsonLD({
           description:
             "Complete guide to Ethereum wallets, types, features, and how to use them safely",
         },
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
     ],
   }

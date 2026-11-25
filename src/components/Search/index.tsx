@@ -65,11 +65,11 @@ const Search = ({ asChild = false, children }: SearchProps) => {
           <SearchButton
             onClick={handleOpen}
             data-testid="search-button"
-            className="xl:hidden"
+            className="group-data-[density=compact]/navbar:inline-flex! xl:hidden"
           />
           <SearchButton
             withInput
-            className="max-xl:hidden"
+            className="group-data-[density=compact]/navbar:hidden! max-xl:hidden"
             onClick={handleOpen}
           />
         </>

@@ -6,6 +6,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { ETHEREUM_ORG_WEBSITE } from "@/lib/jsonld/constants"
 import { KNOWN_ORGANIZATIONS } from "@/lib/jsonld/organizations"
 import { REFERENCE } from "@/lib/jsonld/references"
@@ -45,7 +47,7 @@ export default async function IndexPageJsonLD({
           name: "Ethereum",
           description:
             "Ethereum is a global, open-source blockchain network with smart contract functionality, and a platform that powers digital ownership, decentralized finance (DeFi), and privacy-preserving applications.",
-          image: "https://ethereum.org/images/assets/eth-diamond-glyph.png",
+          image: `${SITE_URL}/images/assets/eth-diamond-glyph.png`,
           sameAs: [
             "https://www.wikidata.org/wiki/Q16783523",
             "https://en.wikipedia.org/wiki/Ethereum",

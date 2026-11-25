@@ -1,5 +1,5 @@
 import { Landmark, SquareCode, User } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -41,12 +41,11 @@ import infrastructureTransparent from "@/public/images/infrastructure_transparen
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
   const { locale } = params
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-ether")
 
   const [
-    { contributors, lastEditLocaleTimestamp },
+    { contributors, lastEditDate, lastEditLocaleTimestamp },
     gasPriceData,
     ethPriceData,
   ] = await Promise.all([
@@ -97,7 +96,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
@@ -634,8 +633,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-ether")
 

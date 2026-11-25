@@ -2,7 +2,7 @@ import type { getTranslations } from "next-intl/server"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
-import type { NavItem, NavSectionDetail } from "@/components/Nav/types"
+import type { NavSectionDetail } from "@/components/Nav/types"
 
 import { getFullUrl } from "@/lib/utils/url"
 
@@ -35,60 +35,52 @@ export const renderBullet = (
   return `${prefix}- [${label}](${url})${tail}`
 }
 
-const collectNavHrefs = (section: NavSectionDetail): Set<string> => {
-  const set = new Set<string>()
-  const walk = (items: NavItem[]) => {
-    for (const item of items) {
-      if (item.href) set.add(item.href)
-      if (item.items) walk(item.items)
-    }
-  }
-  walk(section.items)
-  return set
-}
-
 /**
  * Render one top-level nav section.
  *
  * Layout:
  *   ## {label}
  *
- *   - {leaf items at top level}
+ *   - {hub page, featured page}
  *
  *   ### {group label}
- *   - {group items}
+ *   - {group hub page, group items}
  *
  *   ### More
- *   - {footer items not already covered}
+ *   - {footer items no menu section lists}
  */
 export const renderNavSection = (
   section: NavSectionDetail,
-  footerSection: FooterLinkSection | undefined
+  footerSection: FooterLinkSection | undefined,
+  listedHrefs: Set<string>
 ): string => {
   const lines: string[] = [`## ${section.label}`, ""]
+  // The featured card may spotlight a page a group lists; list it once, in its group
+  const groupHrefs = new Set(
+    section.groups.flatMap(({ items }) => items.map(({ href }) => href))
+  )
 
-  const leaves = section.items.filter((item) => item.href)
-  const groups = section.items.filter((item) => item.items)
-
-  for (const leaf of leaves) {
-    if (!leaf.href) continue
+  for (const leaf of [section.hub, section.featured]) {
+    if (!leaf || (leaf !== section.hub && groupHrefs.has(leaf.href))) continue
     lines.push(renderBullet(leaf.label, leaf.href, leaf.description, 0))
   }
-  if (leaves.length > 0) lines.push("")
+  lines.push("")
 
-  for (const group of groups) {
-    if (!group.items) continue
+  for (const group of section.groups) {
     lines.push(`### ${group.label}`, "")
+    if (group.href) lines.push(renderBullet(group.label, group.href, null, 0))
     for (const child of group.items) {
-      if (!child.href) continue
-      lines.push(renderBullet(child.label, child.href, child.description, 0))
+      lines.push(
+        renderBullet(child.label, child.href, child.description ?? null, 0)
+      )
     }
     lines.push("")
   }
 
   if (footerSection) {
-    const navHrefs = collectNavHrefs(section)
-    const extra = footerSection.links.filter((link) => !navHrefs.has(link.href))
+    const extra = footerSection.links.filter(
+      (link) => !listedHrefs.has(link.href)
+    )
     if (extra.length > 0) {
       lines.push("### More", "")
       for (const link of extra) {

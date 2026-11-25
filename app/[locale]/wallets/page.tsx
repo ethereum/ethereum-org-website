@@ -1,10 +1,6 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -42,9 +38,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-wallets")
 
   // Get i18n messages
@@ -52,7 +45,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("wallets", locale as Lang)
 
   const cards = [
@@ -152,7 +145,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <WalletsPageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
@@ -387,9 +380,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-wallets")
 
