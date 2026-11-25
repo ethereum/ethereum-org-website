@@ -31,23 +31,23 @@ Das Wort „Gwei“ ist eine Zusammenziehung von „Giga-Wei“, was „Milliard
 
 Du kannst die Menge an Gas festlegen, die du zu zahlen bereit bist, wenn du eine Transaktion übermittelst. Indem du eine bestimmte Menge an Gas anbietest, bietest du darauf, dass deine Transaktion in den nächsten Block aufgenommen wird. Wenn du zu wenig anbietest, ist es weniger wahrscheinlich, dass Validatoren deine Transaktion zur Aufnahme auswählen, was bedeutet, dass deine Transaktion möglicherweise spät oder gar nicht ausgeführt wird. Wenn du zu viel anbietest, verschwendest du möglicherweise etwas ETH. Wie kannst du also feststellen, wie viel du bezahlen musst?
 
-Der Preis, den du pro Gaseinheit zahlst, ist in zwei Komponenten unterteilt: die `Grundgebühr` und die `Prioritätsgebühr`.
+Der Preis, den du pro Gaseinheit zahlst, ist in zwei Komponenten unterteilt: die `base fee` (Grundgebühr) und die `priority fee` (Prioritätsgebühr).
 
-Die `Grundgebühr` wird durch das Protokoll festgelegt – du musst mindestens diesen Betrag zahlen, damit deine Transaktion als gültig angesehen wird. Die `Prioritätsgebühr` ist ein Anreiz, den du zur Grundgebühr hinzufügst, um deine Transaktion für Validatoren attraktiv zu machen, damit sie diese für die Aufnahme in den nächsten Block auswählen.
+Die `base fee` wird durch das Protokoll festgelegt – du musst mindestens diesen Betrag zahlen, damit deine Transaktion als gültig angesehen wird. Die `priority fee` ist ein Anreiz, den du zur Grundgebühr hinzufügst, um deine Transaktion für Validatoren attraktiv zu machen, damit sie diese für die Aufnahme in den nächsten Block auswählen.
 
-Eine Transaktion, die nur die `Grundgebühr` zahlt, ist technisch gültig, wird aber wahrscheinlich nicht aufgenommen, da sie den Validatoren keinen Anreiz bietet, sie einer anderen Transaktion vorzuziehen. Die „richtige“ `Prioritätsgebühr` wird durch die Netzwerkauslastung zu dem Zeitpunkt bestimmt, an dem du deine Transaktion sendest – wenn die Nachfrage hoch ist, musst du deine `Prioritätsgebühr` möglicherweise höher ansetzen, aber bei geringerer Nachfrage kannst du weniger bezahlen.
+Eine Transaktion, die nur die `base fee` zahlt, ist technisch gültig, wird aber wahrscheinlich nicht aufgenommen, da sie den Validatoren keinen Anreiz bietet, sie einer anderen Transaktion vorzuziehen. Die „richtige“ `priority fee` wird durch die Netzwerkauslastung zu dem Zeitpunkt bestimmt, an dem du deine Transaktion sendest – wenn die Nachfrage hoch ist, musst du deine `priority fee` möglicherweise höher ansetzen, aber bei geringerer Nachfrage kannst du weniger bezahlen.
 
 Nehmen wir zum Beispiel an, Jordan muss Taylor 1 ETH zahlen. Ein ETH-Transfer erfordert 21.000 Gaseinheiten und die Grundgebühr beträgt 10 Gwei. Jordan fügt eine Prioritätsgebühr von 2 Gwei hinzu.
 
 Die Gesamtgebühr würde nun wie folgt lauten:
 
-`verwendete Gaseinheiten * (Grundgebühr + Prioritätsgebühr)`
+`units of gas used * (base fee + priority fee)`
 
-wobei die `Grundgebühr` ein vom Protokoll festgelegter Wert ist und die `Prioritätsgebühr` ein vom Benutzer als Anreiz für den Validator festgelegter Wert ist.
+wobei die `base fee` ein vom Protokoll festgelegter Wert ist und die `priority fee` ein vom Benutzer als Anreiz für den Validator festgelegter Wert ist.
 
-z. B. `21.000 * (10 + 2) = 252.000 Gwei` (0,000252 ETH).
+z. B. `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Wenn Jordan das Geld sendet, werden 1,000252 ETH von Jordans Konto abgebucht. Taylor werden 1,0000 ETH gutgeschrieben. Der Validator erhält die Prioritätsgebühr von 0,000042 ETH. Die `Grundgebühr` von 0,00021 ETH wird verbrannt.
+Wenn Jordan das Geld sendet, werden 1,000252 ETH von Jordans Konto abgebucht. Taylor werden 1,0000 ETH gutgeschrieben. Der Validator erhält die Prioritätsgebühr von 0,000042 ETH. Die `base fee` von 0,00021 ETH wird verbrannt.
 
 ### Grundgebühr {#base-fee}
 
@@ -66,7 +66,7 @@ Die Grundgebühr wird durch eine Formel berechnet, die die Größe des vorherige
 | 7            |          60M |        12,5 % |      0,1802 Gwei |
 | 8            |          60M |        12,5 % |      0,2027 Gwei |
 
-In der obigen Tabelle wird ein Beispiel mit 60 Millionen als Gaslimit demonstriert. Diesem Beispiel folgend, wird eine Wallet dem Benutzer bei der Erstellung einer Transaktion in Blocknummer 9 mit Sicherheit mitteilen, dass die **maximale Grundgebühr**, die dem nächsten Block hinzugefügt wird, `aktuelle Grundgebühr * 112,5 %` oder `0,2027 Gwei * 112,5 % = 0,2281 Gwei` beträgt.
+In der obigen Tabelle wird ein Beispiel mit 60 Millionen als Gaslimit demonstriert. Diesem Beispiel folgend, wird eine Wallet dem Benutzer bei der Erstellung einer Transaktion in Blocknummer 9 mit Sicherheit mitteilen, dass die **maximale Grundgebühr**, die dem nächsten Block hinzugefügt wird, `current base fee * 112.5%` oder `0.2027 gwei * 112.5% = 0.2281 gwei` beträgt.
 
 <BaseFeeDiagram />
 

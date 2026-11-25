@@ -31,23 +31,23 @@ La palabra 'Gwei' es una contracción de 'giga-wei', que significa 'mil millones
 
 Puede establecer la cantidad de gas que está dispuesto a pagar cuando envía una transacción. Al ofrecer una cierta cantidad de gas, está pujando para que su transacción se incluya en el siguiente bloque. Si ofrece muy poco, es menos probable que los validadores elijan su transacción para su inclusión, lo que significa que su transacción puede ejecutarse tarde o no ejecutarse en absoluto. Si ofrece demasiado, podría desperdiciar algo de ETH. Entonces, ¿cómo puede saber cuánto pagar?
 
-El precio que paga por unidad de gas se divide en dos componentes: la `tarifa base` y la `tarifa de prioridad`.
+El precio que paga por unidad de gas se divide en dos componentes: la `base fee` (tarifa base) y la `priority fee` (tarifa de prioridad).
 
-La `tarifa base` la establece el protocolo: debe pagar al menos esta cantidad para que su transacción se considere válida. La `tarifa de prioridad` es un incentivo que agrega a la tarifa base para que su transacción sea atractiva para los validadores, de modo que la elijan para su inclusión en el siguiente bloque.
+La `base fee` la establece el protocolo: debe pagar al menos esta cantidad para que su transacción se considere válida. La `priority fee` es un incentivo que agrega a la tarifa base para que su transacción sea atractiva para los validadores, de modo que la elijan para su inclusión en el siguiente bloque.
 
-Una transacción que solo paga la `tarifa base` es técnicamente válida, pero es poco probable que se incluya porque no ofrece ningún incentivo a los validadores para que la elijan sobre cualquier otra transacción. La tarifa de `prioridad` "correcta" está determinada por el uso de la red en el momento en que envía su transacción: si hay mucha demanda, es posible que deba establecer su tarifa de `prioridad` más alta, pero cuando hay menos demanda, puede pagar menos.
+Una transacción que solo paga la `base fee` es técnicamente válida, pero es poco probable que se incluya porque no ofrece ningún incentivo a los validadores para que la elijan sobre cualquier otra transacción. La tarifa de `priority` "correcta" está determinada por el uso de la red en el momento en que envía su transacción: si hay mucha demanda, es posible que deba establecer su tarifa de `priority` más alta, pero cuando hay menos demanda, puede pagar menos.
 
 Por ejemplo, digamos que Jordan tiene que pagarle a Taylor 1 ETH. Una transferencia de ETH requiere 21.000 unidades de gas y la tarifa base es de 10 Gwei. Jordan incluye una tarifa de prioridad de 2 Gwei.
 
 La tarifa total ahora sería igual a:
 
-`unidades de gas utilizadas * (tarifa base + tarifa de prioridad)`
+`units of gas used * (base fee + priority fee)`
 
-donde la `tarifa base` es un valor establecido por el protocolo y la `tarifa de prioridad` es un valor establecido por el usuario como incentivo para el validador.
+donde la `base fee` es un valor establecido por el protocolo y la `priority fee` es un valor establecido por el usuario como incentivo para el validador.
 
-p. ej., `21.000 * (10 + 2) = 252.000 Gwei` (0,000252 ETH).
+p. ej., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Cuando Jordan envía el dinero, se deducirán 1,000252 ETH de la cuenta de Jordan. A Taylor se le acreditará 1,0000 ETH. El validador recibe la tarifa de prioridad de 0,000042 ETH. La `tarifa base` de 0,00021 ETH se quema.
+Cuando Jordan envía el dinero, se deducirán 1,000252 ETH de la cuenta de Jordan. A Taylor se le acreditará 1,0000 ETH. El validador recibe la tarifa de prioridad de 0,000042 ETH. La `base fee` de 0,00021 ETH se quema.
 
 ### Tarifa base {#base-fee}
 
@@ -66,7 +66,7 @@ La tarifa base se calcula mediante una fórmula que compara el tamaño del bloqu
 | 7                |          60M |            12,5 % |        0,1802 Gwei |
 | 8                |          60M |            12,5 % |        0,2027 Gwei |
 
-En la tabla anterior, se demuestra un ejemplo utilizando 60 millones como límite de gas. Siguiendo este ejemplo, para crear una transacción en el bloque número 9, una billetera le informará al usuario con certeza que la **tarifa base máxima** que se agregará al siguiente bloque es `tarifa base actual * 112,5 %` o `0,2027 Gwei * 112,5 % = 0,2281 Gwei`.
+En la tabla anterior, se demuestra un ejemplo utilizando 60 millones como límite de gas. Siguiendo este ejemplo, para crear una transacción en el bloque número 9, una billetera le informará al usuario con certeza que la **tarifa base máxima** que se agregará al siguiente bloque es `current base fee * 112.5%` o `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 

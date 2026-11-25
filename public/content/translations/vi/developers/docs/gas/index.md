@@ -31,23 +31,23 @@ Từ 'Gwei' là viết tắt của 'giga-wei', có nghĩa là 'tỷ Wei'. Một 
 
 Bạn có thể thiết lập lượng gas mà bạn sẵn sàng trả khi gửi một giao dịch. Bằng cách đưa ra một lượng gas nhất định, bạn đang đấu giá để giao dịch của mình được đưa vào khối tiếp theo. Nếu bạn đưa ra quá ít, các trình xác thực sẽ ít có khả năng chọn giao dịch của bạn để đưa vào, nghĩa là giao dịch của bạn có thể được thực thi muộn hoặc hoàn toàn không được thực thi. Nếu bạn đưa ra quá nhiều, bạn có thể lãng phí một số ETH. Vậy, làm thế nào bạn có thể biết nên trả bao nhiêu?
 
-Giá bạn trả cho mỗi đơn vị gas được chia thành hai thành phần: `phí cơ sở` và `phí ưu tiên`.
+Giá bạn trả cho mỗi đơn vị gas được chia thành hai thành phần: `base fee` (phí cơ sở) và `priority fee` (phí ưu tiên).
 
-`phí cơ sở` được thiết lập bởi Giao thức—bạn phải trả ít nhất số tiền này để giao dịch của bạn được coi là hợp lệ. `phí ưu tiên` là khoản phí mà bạn thêm vào phí cơ sở để làm cho giao dịch của bạn trở nên hấp dẫn đối với các trình xác thực để họ chọn nó đưa vào khối tiếp theo.
+`base fee` được thiết lập bởi Giao thức—bạn phải trả ít nhất số tiền này để giao dịch của bạn được coi là hợp lệ. `priority fee` là khoản phí mà bạn thêm vào phí cơ sở để làm cho giao dịch của bạn trở nên hấp dẫn đối với các trình xác thực để họ chọn nó đưa vào khối tiếp theo.
 
-Một giao dịch chỉ trả `phí cơ sở` về mặt kỹ thuật là hợp lệ nhưng khó có khả năng được đưa vào vì nó không mang lại động lực nào cho các trình xác thực để chọn nó thay vì bất kỳ giao dịch nào khác. `phí ưu tiên` 'chính xác' được xác định bởi mức độ sử dụng mạng lưới tại thời điểm bạn gửi giao dịch—nếu có nhiều nhu cầu thì bạn có thể phải thiết lập `phí ưu tiên` của mình cao hơn, nhưng khi có ít nhu cầu hơn, bạn có thể trả ít hơn.
+Một giao dịch chỉ trả `base fee` về mặt kỹ thuật là hợp lệ nhưng khó có khả năng được đưa vào vì nó không mang lại động lực nào cho các trình xác thực để chọn nó thay vì bất kỳ giao dịch nào khác. `priority fee` 'chính xác' được xác định bởi mức độ sử dụng mạng lưới tại thời điểm bạn gửi giao dịch—nếu có nhiều nhu cầu thì bạn có thể phải thiết lập `priority fee` của mình cao hơn, nhưng khi có ít nhu cầu hơn, bạn có thể trả ít hơn.
 
 Ví dụ, giả sử Jordan phải trả cho Taylor 1 ETH. Một giao dịch chuyển ETH yêu cầu 21.000 đơn vị gas và phí cơ sở là 10 Gwei. Jordan bao gồm một khoản phí ưu tiên là 2 Gwei.
 
 Tổng phí bây giờ sẽ bằng:
 
-`số đơn vị gas đã sử dụng * (phí cơ sở + phí ưu tiên)`
+`units of gas used * (base fee + priority fee)`
 
-trong đó `phí cơ sở` là một giá trị được thiết lập bởi Giao thức và `phí ưu tiên` là một giá trị được người dùng thiết lập như một khoản phí ưu tiên cho trình xác thực.
+trong đó `base fee` là một giá trị được thiết lập bởi Giao thức và `priority fee` là một giá trị được người dùng thiết lập như một khoản phí ưu tiên cho trình xác thực.
 
-ví dụ: `21,000 * (10 + 2) = 252,000 Gwei` (0.000252 ETH).
+ví dụ: `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
-Khi Jordan gửi tiền, 1.000252 ETH sẽ bị trừ khỏi Tài khoản của Jordan. Taylor sẽ được cộng 1.0000 ETH. Trình xác thực nhận được khoản phí ưu tiên là 0.000042 ETH. `phí cơ sở` là 0.00021 ETH sẽ bị đốt.
+Khi Jordan gửi tiền, 1.000252 ETH sẽ bị trừ khỏi Tài khoản của Jordan. Taylor sẽ được cộng 1.0000 ETH. Trình xác thực nhận được khoản phí ưu tiên là 0.000042 ETH. `base fee` là 0.00021 ETH sẽ bị đốt.
 
 ### Phí cơ sở {#base-fee}
 
@@ -66,7 +66,7 @@ Phí cơ sở được tính bằng một công thức so sánh kích thước c
 | 7            |          60M |        12.5% |      0.1802 Gwei |
 | 8            |          60M |        12.5% |      0.2027 Gwei |
 
-Trong bảng trên, một ví dụ được minh họa sử dụng 60 triệu làm giới hạn gas. Theo ví dụ này, để tạo một giao dịch trên khối số 9, một Ví sẽ cho người dùng biết chắc chắn rằng **phí cơ sở tối đa** được thêm vào khối tiếp theo là `phí cơ sở hiện tại * 112.5%` hoặc `0.2027 Gwei * 112.5% = 0.2281 Gwei`.
+Trong bảng trên, một ví dụ được minh họa sử dụng 60 triệu làm giới hạn gas. Theo ví dụ này, để tạo một giao dịch trên khối số 9, một Ví sẽ cho người dùng biết chắc chắn rằng **phí cơ sở tối đa** được thêm vào khối tiếp theo là `current base fee * 112.5%` hoặc `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 

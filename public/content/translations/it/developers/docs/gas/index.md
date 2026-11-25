@@ -31,23 +31,23 @@ La parola "Gwei" è una contrazione di "giga-wei", che significa "un miliardo di
 
 Puoi impostare la quantità di gas che sei disposto a pagare quando invii una transazione. Offrendo una certa quantità di gas, fai un'offerta affinché la tua transazione venga inclusa nel blocco successivo. Se offri troppo poco, è meno probabile che i validatori scelgano la tua transazione per l'inclusione, il che significa che la tua transazione potrebbe essere eseguita in ritardo o non essere eseguita affatto. Se offri troppo, potresti sprecare degli ETH. Quindi, come fai a sapere quanto pagare?
 
-Il prezzo che paghi per unità di gas è diviso in due componenti: la `commissione di base` e la `commissione di priorità` (commissione prioritaria).
+Il prezzo che paghi per unità di gas è diviso in due componenti: la `base fee` (commissione di base) e la `priority fee` (commissione prioritaria).
 
-La `commissione di base` è impostata dal protocollo: devi pagare almeno questo importo affinché la tua transazione sia considerata valida. La `commissione di priorità` è una commissione prioritaria che aggiungi alla commissione di base per rendere la tua transazione attraente per i validatori, in modo che la scelgano per l'inclusione nel blocco successivo.
+La `base fee` è impostata dal protocollo: devi pagare almeno questo importo affinché la tua transazione sia considerata valida. La `priority fee` è una commissione prioritaria che aggiungi alla commissione di base per rendere la tua transazione attraente per i validatori, in modo che la scelgano per l'inclusione nel blocco successivo.
 
-Una transazione che paga solo la `commissione di base` è tecnicamente valida ma è improbabile che venga inclusa perché non offre alcun incentivo ai validatori per sceglierla rispetto a qualsiasi altra transazione. La commissione di `priorità` "corretta" è determinata dall'utilizzo della rete nel momento in cui invii la tua transazione: se c'è molta domanda, potresti dover impostare la tua commissione di `priorità` più alta, ma quando c'è meno domanda puoi pagare di meno.
+Una transazione che paga solo la `base fee` è tecnicamente valida ma è improbabile che venga inclusa perché non offre alcun incentivo ai validatori per sceglierla rispetto a qualsiasi altra transazione. La commissione di `priority` "corretta" è determinata dall'utilizzo della rete nel momento in cui invii la tua transazione: se c'è molta domanda, potresti dover impostare la tua commissione di `priority` più alta, ma quando c'è meno domanda puoi pagare di meno.
 
 Ad esempio, supponiamo che Jordan debba pagare a Taylor 1 ETH. Un trasferimento di ETH richiede 21.000 unità di gas e la commissione di base è di 10 Gwei. Jordan include una commissione prioritaria di 2 Gwei.
 
 La commissione totale sarebbe ora pari a:
 
-`unità di gas utilizzate * (commissione di base + commissione di priorità)`
+`units of gas used * (base fee + priority fee)`
 
-dove la `commissione di base` è un valore impostato dal protocollo e la `commissione di priorità` è un valore impostato dall'utente come commissione prioritaria per il validatore.
+dove la `base fee` è un valore impostato dal protocollo e la `priority fee` è un valore impostato dall'utente come commissione prioritaria per il validatore.
 
-es., `21.000 * (10 + 2) = 252.000 Gwei` (0,000252 ETH).
+es., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Quando Jordan invia il denaro, 1,000252 ETH verranno detratti dall'account di Jordan. A Taylor verrà accreditato 1,0000 ETH. Il validatore riceve la commissione prioritaria di 0,000042 ETH. La `commissione di base` di 0,00021 ETH viene bruciata.
+Quando Jordan invia il denaro, 1,000252 ETH verranno detratti dall'account di Jordan. A Taylor verrà accreditato 1,0000 ETH. Il validatore riceve la commissione prioritaria di 0,000042 ETH. La `base fee` di 0,00021 ETH viene bruciata.
 
 ### Commissione di base {#base-fee}
 
@@ -66,7 +66,7 @@ La commissione di base viene calcolata tramite una formula che confronta la dime
 | 7                 |         60M |                     12,5% |                 0,1802 Gwei |
 | 8                 |         60M |                     12,5% |                 0,2027 Gwei |
 
-Nella tabella precedente, viene illustrato un esempio utilizzando 60 milioni come limite di gas. Seguendo questo esempio, per creare una transazione sul blocco numero 9, un portafoglio farà sapere all'utente con certezza che la **commissione di base massima** da aggiungere al blocco successivo è `commissione di base attuale * 112,5%` o `0,2027 Gwei * 112,5% = 0,2281 Gwei`.
+Nella tabella precedente, viene illustrato un esempio utilizzando 60 milioni come limite di gas. Seguendo questo esempio, per creare una transazione sul blocco numero 9, un portafoglio farà sapere all'utente con certezza che la **commissione di base massima** da aggiungere al blocco successivo è `current base fee * 112.5%` o `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 

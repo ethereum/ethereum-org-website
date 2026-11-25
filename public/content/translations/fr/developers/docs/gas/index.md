@@ -31,23 +31,23 @@ Le mot « gwei » est une contraction de « giga-wei », signifiant « un millia
 
 Vous pouvez définir la quantité de gaz que vous êtes prêt à payer lorsque vous soumettez une transaction. En offrant une certaine quantité de gaz, vous enchérissez pour que votre transaction soit incluse dans le prochain bloc. Si vous offrez trop peu, les validateurs sont moins susceptibles de choisir votre transaction pour l'inclure, ce qui signifie que votre transaction peut s'exécuter en retard ou pas du tout. Si vous offrez trop, vous pourriez gaspiller des ETH. Alors, comment savoir combien payer ?
 
-Le prix que vous payez par unité de gaz est divisé en deux composantes : les `frais de base` et les `frais de priorité`.
+Le prix que vous payez par unité de gaz est divisé en deux composantes : les `base fee` (frais de base) et les `priority fee` (frais de priorité).
 
-Les `frais de base` sont fixés par le protocole — vous devez payer au moins ce montant pour que votre transaction soit considérée comme valide. Les `frais de priorité` sont un supplément que vous ajoutez aux frais de base pour rendre votre transaction attrayante pour les validateurs afin qu'ils la choisissent pour l'inclure dans le prochain bloc.
+Les `base fee` sont fixés par le protocole — vous devez payer au moins ce montant pour que votre transaction soit considérée comme valide. Les `priority fee` sont un supplément que vous ajoutez aux frais de base pour rendre votre transaction attrayante pour les validateurs afin qu'ils la choisissent pour l'inclure dans le prochain bloc.
 
-Une transaction qui ne paie que les `frais de base` est techniquement valide mais peu susceptible d'être incluse car elle n'offre aucune incitation aux validateurs pour la choisir par rapport à une autre transaction. Les `frais de priorité` « corrects » sont déterminés par l'utilisation du réseau au moment où vous envoyez votre transaction — s'il y a beaucoup de demande, vous devrez peut-être fixer vos `frais de priorité` plus haut, mais quand il y a moins de demande, vous pouvez payer moins.
+Une transaction qui ne paie que les `base fee` est techniquement valide mais peu susceptible d'être incluse car elle n'offre aucune incitation aux validateurs pour la choisir par rapport à une autre transaction. Les `priority fee` « corrects » sont déterminés par l'utilisation du réseau au moment où vous envoyez votre transaction — s'il y a beaucoup de demande, vous devrez peut-être fixer vos `priority fee` plus haut, mais quand il y a moins de demande, vous pouvez payer moins.
 
 Par exemple, disons que Jordan doit payer 1 ETH à Taylor. Un transfert d'ETH nécessite 21 000 unités de gaz, et les frais de base sont de 10 gwei. Jordan inclut des frais de priorité de 2 gwei.
 
 Les frais totaux seraient alors égaux à :
 
-`unités de gaz utilisées * (frais de base + frais de priorité)`
+`units of gas used * (base fee + priority fee)`
 
-où les `frais de base` sont une valeur fixée par le protocole et les `frais de priorité` sont une valeur fixée par l'utilisateur pour le validateur.
+où les `base fee` sont une valeur fixée par le protocole et les `priority fee` sont une valeur fixée par l'utilisateur pour le validateur.
 
-par ex., `21 000 * (10 + 2) = 252 000 gwei` (0,000252 ETH).
+par ex., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Lorsque Jordan envoie l'argent, 1,000252 ETH seront déduits du compte de Jordan. Taylor sera crédité de 1,0000 ETH. Le validateur reçoit les frais de priorité de 0,000042 ETH. Les `frais de base` de 0,00021 ETH sont brûlés.
+Lorsque Jordan envoie l'argent, 1,000252 ETH seront déduits du compte de Jordan. Taylor sera crédité de 1,0000 ETH. Le validateur reçoit les frais de priorité de 0,000042 ETH. Les `base fee` de 0,00021 ETH sont brûlés.
 
 ### Frais de base {#base-fee}
 
@@ -66,7 +66,7 @@ Les frais de base sont calculés par une formule qui compare la taille du bloc p
 | 7              |        60M |                 12,5 % |           0,1802 gwei |
 | 8              |        60M |                 12,5 % |           0,2027 gwei |
 
-Dans le tableau ci-dessus, un exemple est présenté en utilisant 60 millions comme limite de gaz. En suivant cet exemple, pour créer une transaction sur le bloc numéro 9, un portefeuille fera savoir à l'utilisateur avec certitude que les **frais de base maximums** à ajouter au prochain bloc sont `frais de base actuels * 112,5 %` ou `0,2027 gwei * 112,5 % = 0,2281 gwei`.
+Dans le tableau ci-dessus, un exemple est présenté en utilisant 60 millions comme limite de gaz. En suivant cet exemple, pour créer une transaction sur le bloc numéro 9, un portefeuille fera savoir à l'utilisateur avec certitude que les **frais de base maximums** à ajouter au prochain bloc sont `current base fee * 112.5%` ou `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 
@@ -84,9 +84,9 @@ Il est également important de noter qu'il est peu probable que nous observions 
 
 Les frais de priorité incitent les validateurs à maximiser le nombre de transactions dans un bloc, contraints uniquement par la limite de gaz du bloc. Sans frais de priorité, un validateur rationnel pourrait inclure moins de transactions — voire aucune — sans aucune pénalité directe sur la couche d'exécution ou la couche de consensus, car les récompenses de staking sont indépendantes du nombre de transactions dans un bloc. De plus, les frais de priorité permettent aux utilisateurs de surenchérir sur les autres pour obtenir la priorité au sein du même bloc, signalant ainsi efficacement l'urgence. 
 
-### Frais maximums {#maxfee}
+### Frais maximum {#maxfee}
 
-Pour exécuter une transaction sur le réseau, les utilisateurs peuvent spécifier une limite maximale qu'ils sont prêts à payer pour que leur transaction soit exécutée. Ce paramètre optionnel est connu sous le nom de `maxFeePerGas`. Pour qu'une transaction soit exécutée, les frais maximums doivent être au moins égaux aux frais de base, et les frais de priorité payés sont plafonnés de sorte que les frais de base plus les frais de priorité ne dépassent jamais les frais maximums. L'expéditeur de la transaction est remboursé de la différence entre les frais maximums et la somme des frais de base et des frais de priorité.
+Pour exécuter une transaction sur le réseau, les utilisateurs peuvent spécifier une limite maximale qu'ils sont prêts à payer pour que leur transaction soit exécutée. Ce paramètre optionnel est connu sous le nom de `maxFeePerGas`. Pour qu'une transaction soit exécutée, les frais maximum doivent être au moins égaux aux frais de base, et les frais de priorité payés sont plafonnés de sorte que les frais de base plus les frais de priorité ne dépassent jamais les frais maximum. L'expéditeur de la transaction est remboursé de la différence entre les frais maximum et la somme des frais de base et des frais de priorité.
 
 ### Taille de bloc {#block-size}
 

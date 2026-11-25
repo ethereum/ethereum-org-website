@@ -29,33 +29,33 @@ A palavra 'gwei' é uma contração de 'giga-wei', que significa 'bilhão de Wei
 
 ## Como as taxas de gas são calculadas? {#how-are-gas-fees-calculated}
 
-Você pode definir a quantidade de gas que está disposto a pagar ao enviar uma transação. Ao oferecer uma certa quantidade de gas, você está dando um lance para que sua transação seja incluída no próximo bloco. Se você oferecer muito pouco, é menos provável que os validadores escolham sua transação para inclusão, o que significa que sua transação pode ser executada com atraso ou nem ser executada. Se você oferecer muito, poderá desperdiçar algum ETH. Então, como saber quanto pagar?
+Você pode definir a quantidade de gás que está disposto a pagar ao enviar uma transação. Ao oferecer uma certa quantidade de gás, você está dando um lance para que sua transação seja incluída no próximo bloco. Se você oferecer muito pouco, é menos provável que os validadores escolham sua transação para inclusão, o que significa que sua transação pode ser executada com atraso ou nem ser executada. Se você oferecer muito, poderá desperdiçar algum ETH. Então, como saber quanto pagar?
 
-O preço que você paga por unidade de gas é dividido em dois componentes: a `taxa básica` e a `taxa de prioridade` (gorjeta).
+O preço que você paga por unidade de gás é dividido em dois componentes: a `base fee` (taxa básica) e a `priority fee` (gorjeta).
 
-A `taxa básica` é definida pelo protocolo — você deve pagar pelo menos esse valor para que sua transação seja considerada válida. A `taxa de prioridade` é uma gorjeta que você adiciona à taxa básica para tornar sua transação atraente para os validadores, para que eles a escolham para inclusão no próximo bloco.
+A `base fee` é definida pelo protocolo — você deve pagar pelo menos esse valor para que sua transação seja considerada válida. A `priority fee` é uma gorjeta que você adiciona à taxa básica para tornar sua transação atraente para os validadores, para que eles a escolham para inclusão no próximo bloco.
 
-Uma transação que paga apenas a `taxa básica` é tecnicamente válida, mas improvável de ser incluída porque não oferece nenhum incentivo aos validadores para escolhê-la em vez de qualquer outra transação. A taxa de `prioridade` "correta" é determinada pelo uso da rede no momento em que você envia sua transação — se houver muita demanda, você pode ter que definir sua taxa de `prioridade` mais alta, mas quando há menos demanda, você pode pagar menos.
+Uma transação que paga apenas a `base fee` é tecnicamente válida, mas improvável de ser incluída porque não oferece nenhum incentivo aos validadores para escolhê-la em vez de qualquer outra transação. A taxa de `priority` "correta" é determinada pelo uso da rede no momento em que você envia sua transação — se houver muita demanda, você pode ter que definir sua taxa de `priority` mais alta, mas quando há menos demanda, você pode pagar menos.
 
-Por exemplo, digamos que Jordan tenha que pagar 1 ETH a Taylor. Uma transferência de ETH exige 21.000 unidades de gas, e a taxa básica é de 10 gwei. Jordan inclui uma taxa de prioridade de 2 gwei.
+Por exemplo, digamos que Jordan tenha que pagar 1 ETH a Taylor. Uma transferência de ETH exige 21.000 unidades de gás, e a taxa básica é de 10 gwei. Jordan inclui uma taxa de prioridade de 2 gwei.
 
 A taxa total agora seria igual a:
 
-`unidades de gas usadas * (taxa básica + taxa de prioridade)`
+`units of gas used * (base fee + priority fee)`
 
-onde a `taxa básica` é um valor definido pelo protocolo e a `taxa de prioridade` é um valor definido pelo usuário como uma gorjeta para o validador.
+onde a `base fee` é um valor definido pelo protocolo e a `priority fee` é um valor definido pelo usuário como uma gorjeta para o validador.
 
-ex., `21.000 * (10 + 2) = 252.000 gwei` (0,000252 ETH).
+ex., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Quando Jordan envia o dinheiro, 1,000252 ETH será deduzido da conta de Jordan. Taylor será creditado com 1,0000 ETH. O validador recebe a taxa de prioridade de 0,000042 ETH. A `taxa básica` de 0,00021 ETH é queimada.
+Quando Jordan envia o dinheiro, 1,000252 ETH será deduzido da conta de Jordan. Taylor será creditado com 1,0000 ETH. O validador recebe a taxa de prioridade de 0,000042 ETH. A `base fee` de 0,00021 ETH é queimada.
 
 ### Taxa básica {#base-fee}
 
-Cada bloco tem uma taxa básica que atua como um preço de reserva. Para ser elegível para inclusão em um bloco, o preço oferecido por gas deve ser pelo menos igual à taxa básica. A taxa básica é calculada independentemente do bloco atual e, em vez disso, é determinada pelos blocos anteriores a ele, tornando as taxas de transação mais previsíveis para os usuários. Quando o bloco é criado, essa **taxa básica é "queimada"**, removendo-a de circulação.
+Cada bloco tem uma taxa básica que atua como um preço de reserva. Para ser elegível para inclusão em um bloco, o preço oferecido por gás deve ser pelo menos igual à taxa básica. A taxa básica é calculada independentemente do bloco atual e, em vez disso, é determinada pelos blocos anteriores a ele, tornando as taxas de transação mais previsíveis para os usuários. Quando o bloco é criado, essa **taxa básica é "queimada"**, removendo-a de circulação.
 
-A taxa básica é calculada por uma fórmula que compara o tamanho do bloco anterior (a quantidade de gas usada para todas as transações) com o tamanho alvo (metade do limite de gas). A taxa básica aumentará ou diminuirá em um máximo de 12,5% por bloco se o tamanho do bloco estiver acima ou abaixo do alvo, respectivamente. Esse crescimento exponencial torna economicamente inviável que o tamanho do bloco permaneça alto indefinidamente.
+A taxa básica é calculada por uma fórmula que compara o tamanho do bloco anterior (a quantidade de gás usada para todas as transações) com o tamanho alvo (metade do limite de gas). A taxa básica aumentará ou diminuirá em um máximo de 12,5% por bloco se o tamanho do bloco estiver acima ou abaixo do alvo, respectivamente. Esse crescimento exponencial torna economicamente inviável que o tamanho do bloco permaneça alto indefinidamente.
 
-| Número do bloco | Gas incluído | Aumento da taxa | Taxa básica atual |
+| Número do bloco | Gás incluído | Aumento da taxa | Taxa básica atual |
 | ------------ | -----------: | -----------: | ---------------: |
 | 1            |          30M |           0% |         0,1 gwei |
 | 2            |          60M |           0% |         0,1 gwei |
@@ -66,13 +66,13 @@ A taxa básica é calculada por uma fórmula que compara o tamanho do bloco ante
 | 7            |          60M |        12,5% |      0,1802 gwei |
 | 8            |          60M |        12,5% |      0,2027 gwei |
 
-Na tabela acima, um exemplo é demonstrado usando 60 milhões como o limite de gas. Seguindo este exemplo, para criar uma transação no bloco número 9, uma carteira informará ao usuário com certeza que a **taxa básica máxima** a ser adicionada ao próximo bloco é `taxa básica atual * 112,5%` ou `0,2027 gwei * 112,5% = 0,2281 gwei`.
+Na tabela acima, um exemplo é demonstrado usando 60 milhões como o limite de gas. Seguindo este exemplo, para criar uma transação no bloco número 9, uma carteira informará ao usuário com certeza que a **taxa básica máxima** a ser adicionada ao próximo bloco é `current base fee * 112.5%` ou `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 
 Também é importante notar que é improvável que vejamos picos prolongados de blocos cheios devido à velocidade com que a taxa básica aumenta antes de um bloco cheio.
 
-| Número do bloco | Gas incluído | Aumento da taxa | Taxa básica atual |
+| Número do bloco | Gás incluído | Aumento da taxa | Taxa básica atual |
 | ------------ | -----------: | -----------: | ---------------: |
 | 30           |          60M |        12,5% |      2,7056 gwei |
 | ...          |          ... |        12,5% |              ... |

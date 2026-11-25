@@ -31,23 +31,23 @@ Słowo „gwei” to skrót od „giga-wei”, co oznacza „miliard wei”. Jed
 
 Możesz ustawić ilość gazu, jaką jesteś skłonny zapłacić, podczas wysyłania transakcji. Oferując określoną ilość gazu, licytujesz, aby Twoja transakcja została włączona do następnego bloku. Jeśli zaoferujesz zbyt mało, walidatory będą mniej skłonne do wybrania Twojej transakcji do włączenia, co oznacza, że Twoja transakcja może zostać wykonana z opóźnieniem lub wcale. Jeśli zaoferujesz zbyt dużo, możesz zmarnować trochę ETH. Jak więc określić, ile zapłacić?
 
-Cena, którą płacisz za jednostkę gazu, dzieli się na dwa składniki: `opłatę podstawową` i `opłatę priorytetową`.
+Cena, którą płacisz za jednostkę gazu, dzieli się na dwa składniki: `base fee` (opłatę podstawową) i `priority fee` (opłatę priorytetową).
 
-`Opłata podstawowa` jest ustalana przez protokół — musisz zapłacić co najmniej tę kwotę, aby Twoja transakcja została uznana za ważną. `Opłata priorytetowa` to dodatek, który doliczasz do opłaty podstawowej, aby Twoja transakcja była atrakcyjna dla walidatorów, dzięki czemu wybiorą ją do włączenia w następnym bloku.
+`base fee` jest ustalana przez protokół — musisz zapłacić co najmniej tę kwotę, aby Twoja transakcja została uznana za ważną. `priority fee` to dodatek, który doliczasz do opłaty podstawowej, aby Twoja transakcja była atrakcyjna dla walidatorów, dzięki czemu wybiorą ją do włączenia w następnym bloku.
 
-Transakcja, która opłaca tylko `opłatę podstawową`, jest technicznie ważna, ale mało prawdopodobne, że zostanie włączona, ponieważ nie oferuje walidatorom żadnej zachęty do wybrania jej zamiast innej transakcji. „Właściwa” `opłata priorytetowa` jest określana przez wykorzystanie sieci w momencie wysyłania transakcji — jeśli popyt jest duży, być może będziesz musiał ustawić wyższą `opłatę priorytetową`, ale gdy popyt jest mniejszy, możesz zapłacić mniej.
+Transakcja, która opłaca tylko `base fee`, jest technicznie ważna, ale mało prawdopodobne, że zostanie włączona, ponieważ nie oferuje walidatorom żadnej zachęty do wybrania jej zamiast innej transakcji. „Właściwa” `priority fee` jest określana przez wykorzystanie sieci w momencie wysyłania transakcji — jeśli popyt jest duży, być może będziesz musiał ustawić wyższą `priority fee`, ale gdy popyt jest mniejszy, możesz zapłacić mniej.
 
 Na przykład, powiedzmy, że Jordan musi zapłacić Taylorowi 1 ETH. Transfer ETH wymaga 21 000 jednostek gazu, a opłata podstawowa wynosi 10 gwei. Jordan dołącza opłatę priorytetową w wysokości 2 gwei.
 
 Całkowita opłata byłaby teraz równa:
 
-`zużyte jednostki gazu * (opłata podstawowa + opłata priorytetowa)`
+`units of gas used * (base fee + priority fee)`
 
-gdzie `opłata podstawowa` to wartość ustalana przez protokół, a `opłata priorytetowa` to wartość ustalana przez użytkownika jako zachęta dla walidatora.
+gdzie `base fee` to wartość ustalana przez protokół, a `priority fee` to wartość ustalana przez użytkownika jako zachęta dla walidatora.
 
-np. `21 000 * (10 + 2) = 252 000 gwei` (0,000252 ETH).
+np. `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Kiedy Jordan wysyła pieniądze, z konta Jordana zostanie pobrane 1,000252 ETH. Na konto Taylora wpłynie 1,0000 ETH. Walidator otrzymuje opłatę priorytetową w wysokości 0,000042 ETH. `Opłata podstawowa` w wysokości 0,00021 ETH zostaje spalona.
+Kiedy Jordan wysyła pieniądze, z konta Jordana zostanie pobrane 1,000252 ETH. Na konto Taylora wpłynie 1,0000 ETH. Walidator otrzymuje opłatę priorytetową w wysokości 0,000042 ETH. `base fee` w wysokości 0,00021 ETH zostaje spalona.
 
 ### Opłata podstawowa {#base-fee}
 
@@ -66,7 +66,7 @@ Opłata podstawowa jest obliczana za pomocą wzoru, który porównuje rozmiar po
 | 7           |           60M |         12,5% |              0,1802 gwei |
 | 8           |           60M |         12,5% |              0,2027 gwei |
 
-W powyższej tabeli przedstawiono przykład z wykorzystaniem 60 milionów jako limitu gazu. Zgodnie z tym przykładem, aby utworzyć transakcję w bloku numer 9, portfel poinformuje użytkownika z całą pewnością, że **maksymalna opłata podstawowa**, która zostanie dodana do następnego bloku, wynosi `obecna opłata podstawowa * 112,5%` lub `0,2027 gwei * 112,5% = 0,2281 gwei`.
+W powyższej tabeli przedstawiono przykład z wykorzystaniem 60 milionów jako limitu gazu. Zgodnie z tym przykładem, aby utworzyć transakcję w bloku numer 9, portfel poinformuje użytkownika z całą pewnością, że **maksymalna opłata podstawowa**, która zostanie dodana do następnego bloku, wynosi `current base fee * 112.5%` lub `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 

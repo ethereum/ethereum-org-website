@@ -31,23 +31,23 @@ Gaz ücretleri, Ethereum'un yerel para birimi olan Ether (ETH) cinsinden ödenme
 
 Bir işlem gönderdiğinizde ödemeye razı olduğunuz gaz miktarını ayarlayabilirsiniz. Belirli bir miktar gaz teklif ederek, işleminizin bir sonraki bloka dahil edilmesi için teklif vermiş olursunuz. Çok az teklif verirseniz, doğrulayıcıların işleminizi dahil etmek için seçme olasılığı daha düşüktür, bu da işleminizin geç yürütülebileceği veya hiç yürütülmeyebileceği anlamına gelir. Çok fazla teklif verirseniz, bir miktar ETH israf edebilirsiniz. Peki, ne kadar ödeyeceğinizi nasıl bilebilirsiniz?
 
-Birim gaz başına ödediğiniz fiyat iki bileşene ayrılır: `taban ücret` ve `öncelik ücreti`.
+Birim gaz başına ödediğiniz fiyat iki bileşene ayrılır: `base fee` (taban ücret) ve `priority fee` (öncelik ücreti).
 
-`taban ücret` protokol tarafından belirlenir; işleminizin geçerli sayılması için en az bu tutarı ödemeniz gerekir. `öncelik ücreti`, işleminizi doğrulayıcılar için cazip hale getirmek ve böylece onu bir sonraki bloka dahil etmek üzere seçmelerini sağlamak için taban ücrete eklediğiniz bir teşviktir.
+`base fee` protokol tarafından belirlenir; işleminizin geçerli sayılması için en az bu tutarı ödemeniz gerekir. `priority fee`, işleminizi doğrulayıcılar için cazip hale getirmek ve böylece onu bir sonraki bloka dahil etmek üzere seçmelerini sağlamak için taban ücrete eklediğiniz bir teşviktir.
 
-Yalnızca `taban ücret` ödeyen bir işlem teknik olarak geçerlidir ancak doğrulayıcılara onu diğer işlemlere tercih etmeleri için hiçbir teşvik sunmadığından dahil edilme olasılığı düşüktür. 'Doğru' `öncelik` ücreti, işleminizi gönderdiğiniz sıradaki ağ kullanımına göre belirlenir; çok fazla talep varsa `öncelik` ücretinizi daha yüksek belirlemeniz gerekebilir, ancak daha az talep olduğunda daha az ödeyebilirsiniz.
+Yalnızca `base fee` ödeyen bir işlem teknik olarak geçerlidir ancak doğrulayıcılara onu diğer işlemlere tercih etmeleri için hiçbir teşvik sunmadığından dahil edilme olasılığı düşüktür. 'Doğru' `priority` ücreti, işleminizi gönderdiğiniz sıradaki ağ kullanımına göre belirlenir; çok fazla talep varsa `priority` ücretinizi daha yüksek belirlemeniz gerekebilir, ancak daha az talep olduğunda daha az ödeyebilirsiniz.
 
 Örneğin, Jordan'ın Taylor'a 1 ETH ödemesi gerektiğini varsayalım. Bir ETH transferi 21.000 birim gaz gerektirir ve taban ücret 10 Gwei'dir. Jordan 2 Gwei'lik bir öncelik ücreti ekler.
 
 Toplam ücret artık şuna eşit olacaktır:
 
-`kullanılan gaz birimi * (taban ücret + öncelik ücreti)`
+`units of gas used * (base fee + priority fee)`
 
-burada `taban ücret` protokol tarafından belirlenen bir değerdir ve `öncelik ücreti` kullanıcı tarafından doğrulayıcıya bir teşvik olarak belirlenen bir değerdir.
+burada `base fee` protokol tarafından belirlenen bir değerdir ve `priority fee` kullanıcı tarafından doğrulayıcıya bir teşvik olarak belirlenen bir değerdir.
 
-örn., `21.000 * (10 + 2) = 252.000 Gwei` (0,000252 ETH).
+örn., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Jordan parayı gönderdiğinde, Jordan'ın hesabından 1,000252 ETH düşülecektir. Taylor'ın hesabına 1,0000 ETH yatırılacaktır. Doğrulayıcı 0,000042 ETH'lik öncelik ücretini alır. 0,00021 ETH'lik `taban ücret` yakılır.
+Jordan parayı gönderdiğinde, Jordan'ın hesabından 1,000252 ETH düşülecektir. Taylor'ın hesabına 1,0000 ETH yatırılacaktır. Doğrulayıcı 0,000042 ETH'lik öncelik ücretini alır. 0,00021 ETH'lik `base fee` yakılır.
 
 ### Taban ücret {#base-fee}
 
@@ -66,7 +66,7 @@ Taban ücret, önceki blokun boyutunu (tüm işlemler için kullanılan gaz mikt
 | 7            |          60M |        %12,5 |      0,1802 Gwei |
 | 8            |          60M |        %12,5 |      0,2027 Gwei |
 
-Yukarıdaki tabloda, gaz limiti olarak 60 milyon kullanılarak bir örnek gösterilmiştir. Bu örneği takiben, 9 numaralı blokta bir işlem oluşturmak için bir cüzdan, kullanıcıya bir sonraki bloka eklenecek **maksimum taban ücretin** `mevcut taban ücret * %112,5` veya `0,2027 Gwei * %112,5 = 0,2281 Gwei` olduğunu kesin olarak bildirecektir.
+Yukarıdaki tabloda, gaz limiti olarak 60 milyon kullanılarak bir örnek gösterilmiştir. Bu örneği takiben, 9 numaralı blokta bir işlem oluşturmak için bir cüzdan, kullanıcıya bir sonraki bloka eklenecek **maksimum taban ücretin** `current base fee * 112.5%` veya `0.2027 gwei * 112.5% = 0.2281 gwei` olduğunu kesin olarak bildirecektir.
 
 <BaseFeeDiagram />
 

@@ -6,7 +6,7 @@ description: Saidia kutafsiri Ethereum kwa kukagua maneno katika lugha yako kwen
 
 Ethereum inapaswa kusomeka kwa urahisi katika kila lugha. Njia bora ya kusaidia sasa hivi ni [ETHGlossary](https://glossary.ethereum.org/), faharasa ya pamoja, iliyokaguliwa na jamii ya maneno ya Ethereum katika lugha 24.
 
-**Maneno unayoidhinisha ndiyo maneno ambayo ethereum.org hutumia katika lugha yako.** Pochi, programu na timu za nyaraka zinaweza kuyatumia pia, kupitia Kiolesura cha Kupanga Programu Tumizi (API) wazi cha faharasa.
+**Maneno unayoidhinisha ndiyo maneno ambayo ethereum.org hutumia katika lugha yako.** Mikoba, programu na timu za nyaraka zinaweza kuyatumia pia, kupitia Kiolesura cha Kupanga Programu Tumizi (API) wazi cha faharasa.
 
 <ButtonLink href="https://glossary.ethereum.org/translations">
   Kagua maneno katika lugha yako

@@ -6,7 +6,7 @@ description: "Ajude a traduzir o Ethereum revisando termos no seu idioma no ETHG
 
 O Ethereum deve ser lido de forma natural em todos os idiomas. A melhor maneira de ajudar agora é através do [ETHGlossary](https://glossary.ethereum.org/), um glossário compartilhado e revisado pela comunidade de termos do Ethereum em 24 idiomas.
 
-**Os termos que você aprova são os termos que o ethereum.org usa no seu idioma.** Carteiras, aplicativos e equipes de documentação também podem usá-los, por meio da Interface de Programação de Aplicações (API) aberta do glossário.
+**Os termos que você aprova são os termos que o ethereum.org usa no seu idioma.** Carteiras, aplicativos e equipes de documentação também podem usá-los, por meio da API aberta do glossário.
 
 <ButtonLink href="https://glossary.ethereum.org/translations">
   Revise os termos no seu idioma
@@ -18,7 +18,7 @@ O Ethereum deve ser lido de forma natural em todos os idiomas. A melhor maneira 
 
 1. **Escolha seu idioma.** Cada idioma tem o mesmo conjunto de termos do Ethereum, cada um com um rascunho de tradução.
 2. **Revise um termo.** Aprove-o, proponha uma alternativa melhor ou adicione contexto sobre como ele é usado na sua comunidade.
-3. **É publicado.** Os termos revisados orientam as traduções do ethereum.org e são publicados por meio da Interface de Programação de Aplicações (API) do ETHGlossary.
+3. **É publicado.** Os termos revisados orientam as traduções do ethereum.org e são publicados por meio da API do ETHGlossary.
 
 Não há compromisso. Revisar um único termo leva alguns minutos.
 

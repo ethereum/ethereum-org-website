@@ -31,23 +31,23 @@ Slovo „Gwei“ je zkratka pro „giga-wei“, což znamená „miliarda Wei“
 
 Při odesílání transakce můžete nastavit množství gasu, které jste ochotni zaplatit. Nabídnutím určitého množství gasu přihazujete na to, aby byla vaše transakce zahrnuta do dalšího bloku. Pokud nabídnete příliš málo, je méně pravděpodobné, že validátoři vaši transakci k zahrnutí vyberou, což znamená, že se vaše transakce může provést pozdě nebo vůbec. Pokud nabídnete příliš mnoho, můžete zbytečně utratit nějaké ETH. Jak tedy poznáte, kolik máte zaplatit?
 
-Cena, kterou platíte za jednotku gasu, se dělí na dvě složky: `základní poplatek` a `prioritní poplatek`.
+Cena, kterou platíte za jednotku gasu, se dělí na dvě složky: `base fee` (základní poplatek) a `priority fee` (prioritní poplatek).
 
-`Základní poplatek` je stanoven protokolem – musíte zaplatit alespoň tuto částku, aby byla vaše transakce považována za platnou. `Prioritní poplatek` je částka, kterou přidáte k základnímu poplatku, aby byla vaše transakce pro validátory atraktivní a vybrali ji k zahrnutí do dalšího bloku.
+`base fee` je stanoven protokolem – musíte zaplatit alespoň tuto částku, aby byla vaše transakce považována za platnou. `priority fee` je částka, kterou přidáte k základnímu poplatku, aby byla vaše transakce pro validátory atraktivní a vybrali ji k zahrnutí do dalšího bloku.
 
-Transakce, která platí pouze `základní poplatek`, je technicky platná, ale je nepravděpodobné, že bude zahrnuta, protože validátorům nenabízí žádnou motivaci, aby si ji vybrali před jakoukoli jinou transakcí. „Správný“ `prioritní poplatek` je určen využitím sítě v době, kdy transakci odesíláte – pokud je velká poptávka, možná budete muset nastavit `prioritní poplatek` výše, ale když je poptávka menší, můžete zaplatit méně.
+Transakce, která platí pouze `base fee`, je technicky platná, ale je nepravděpodobné, že bude zahrnuta, protože validátorům nenabízí žádnou motivaci, aby si ji vybrali před jakoukoli jinou transakcí. „Správný“ `priority fee` je určen využitím sítě v době, kdy transakci odesíláte – pokud je velká poptávka, možná budete muset nastavit `priority fee` výše, ale když je poptávka menší, můžete zaplatit méně.
 
 Řekněme například, že Jordan musí zaplatit Taylorovi 1 ETH. Převod ETH vyžaduje 21 000 jednotek gasu a základní poplatek je 10 Gwei. Jordan zahrne prioritní poplatek 2 Gwei.
 
 Celkový poplatek by se nyní rovnal:
 
-`spotřebované jednotky gasu * (základní poplatek + prioritní poplatek)`
+`units of gas used * (base fee + priority fee)`
 
-kde `základní poplatek` je hodnota nastavená protokolem a `prioritní poplatek` je hodnota nastavená uživatelem jako odměna pro validátora.
+kde `base fee` je hodnota nastavená protokolem a `priority fee` je hodnota nastavená uživatelem jako odměna pro validátora.
 
-např. `21 000 * (10 + 2) = 252 000 Gwei` (0,000252 ETH).
+např. `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Když Jordan odešle peníze, z jeho účtu se odečte 1,000252 ETH. Taylorovi bude připsáno 1,0000 ETH. Validátor obdrží prioritní poplatek 0,000042 ETH. `Základní poplatek` ve výši 0,00021 ETH je spálen.
+Když Jordan odešle peníze, z jeho účtu se odečte 1,000252 ETH. Taylorovi bude připsáno 1,0000 ETH. Validátor obdrží prioritní poplatek 0,000042 ETH. `base fee` ve výši 0,00021 ETH je spálen.
 
 ### Základní poplatek {#base-fee}
 
@@ -66,7 +66,7 @@ Základní poplatek se počítá podle vzorce, který porovnává velikost před
 | 7           |          60M |           12,5 % |                0,1802 Gwei |
 | 8           |          60M |           12,5 % |                0,2027 Gwei |
 
-V tabulce výše je uveden příklad s použitím 60 milionů jako limitu plynu. Podle tohoto příkladu při vytváření transakce v bloku číslo 9 peněženka uživateli s jistotou oznámí, že **maximální základní poplatek**, který bude přidán do dalšího bloku, je `aktuální základní poplatek * 112,5 %` nebo `0,2027 Gwei * 112,5 % = 0,2281 Gwei`.
+V tabulce výše je uveden příklad s použitím 60 milionů jako limitu plynu. Podle tohoto příkladu při vytváření transakce v bloku číslo 9 peněženka uživateli s jistotou oznámí, že **maximální základní poplatek**, který bude přidán do dalšího bloku, je `current base fee * 112.5%` nebo `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 

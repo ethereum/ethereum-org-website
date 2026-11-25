@@ -31,23 +31,23 @@ Kata 'Gwei' adalah singkatan dari 'giga-wei', yang berarti 'miliar Wei'. Satu Gw
 
 Anda dapat menetapkan jumlah gas yang bersedia Anda bayar saat mengirimkan transaksi. Dengan menawarkan sejumlah gas tertentu, Anda menawar agar transaksi Anda dimasukkan ke dalam blok berikutnya. Jika Anda menawarkan terlalu sedikit, validator cenderung tidak akan memilih transaksi Anda untuk dimasukkan, yang berarti transaksi Anda mungkin dieksekusi terlambat atau tidak sama sekali. Jika Anda menawarkan terlalu banyak, Anda mungkin membuang-buang ETH. Jadi, bagaimana Anda bisa tahu berapa banyak yang harus dibayar?
 
-Harga yang Anda bayar per unit gas dibagi menjadi dua komponen: `biaya dasar` dan `biaya prioritas` (tip).
+Harga yang Anda bayar per unit gas dibagi menjadi dua komponen: `base fee` (biaya dasar) dan `priority fee` (tip).
 
-`biaya dasar` ditetapkan oleh protokol—Anda harus membayar setidaknya jumlah ini agar transaksi Anda dianggap valid. `biaya prioritas` adalah tip yang Anda tambahkan ke biaya dasar untuk membuat transaksi Anda menarik bagi validator sehingga mereka memilihnya untuk dimasukkan ke dalam blok berikutnya.
+`base fee` ditetapkan oleh protokol—Anda harus membayar setidaknya jumlah ini agar transaksi Anda dianggap valid. `priority fee` adalah tip yang Anda tambahkan ke biaya dasar untuk membuat transaksi Anda menarik bagi validator sehingga mereka memilihnya untuk dimasukkan ke dalam blok berikutnya.
 
-Transaksi yang hanya membayar `biaya dasar` secara teknis valid tetapi kecil kemungkinannya untuk dimasukkan karena tidak menawarkan insentif kepada validator untuk memilihnya dibandingkan transaksi lainnya. `biaya prioritas` yang 'tepat' ditentukan oleh penggunaan jaringan pada saat Anda mengirim transaksi—jika ada banyak permintaan maka Anda mungkin harus menetapkan `biaya prioritas` Anda lebih tinggi, tetapi ketika permintaan lebih sedikit Anda dapat membayar lebih sedikit.
+Transaksi yang hanya membayar `base fee` secara teknis valid tetapi kecil kemungkinannya untuk dimasukkan karena tidak menawarkan insentif kepada validator untuk memilihnya dibandingkan transaksi lainnya. `priority fee` yang 'tepat' ditentukan oleh penggunaan jaringan pada saat Anda mengirim transaksi—jika ada banyak permintaan maka Anda mungkin harus menetapkan `priority fee` Anda lebih tinggi, tetapi ketika permintaan lebih sedikit Anda dapat membayar lebih sedikit.
 
 Sebagai contoh, katakanlah Jordan harus membayar Taylor 1 ETH. Transfer ETH memerlukan 21.000 unit gas, dan biaya dasar adalah 10 Gwei. Jordan menyertakan tip sebesar 2 Gwei.
 
 Total biaya sekarang akan sama dengan:
 
-`unit gas yang digunakan * (biaya dasar + biaya prioritas)`
+`units of gas used * (base fee + priority fee)`
 
-di mana `biaya dasar` adalah nilai yang ditetapkan oleh protokol dan `biaya prioritas` adalah nilai yang ditetapkan oleh pengguna sebagai tip untuk validator.
+di mana `base fee` adalah nilai yang ditetapkan oleh protokol dan `priority fee` adalah nilai yang ditetapkan oleh pengguna sebagai tip untuk validator.
 
-mis., `21.000 * (10 + 2) = 252.000 Gwei` (0,000252 ETH).
+mis., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Ketika Jordan mengirim uang, 1,000252 ETH akan dipotong dari akun Jordan. Taylor akan dikreditkan 1,0000 ETH. Validator menerima tip sebesar 0,000042 ETH. `biaya dasar` sebesar 0,00021 ETH dibakar.
+Ketika Jordan mengirim uang, 1,000252 ETH akan dipotong dari akun Jordan. Taylor akan dikreditkan 1,0000 ETH. Validator menerima tip sebesar 0,000042 ETH. `base fee` sebesar 0,00021 ETH dibakar.
 
 ### Biaya dasar {#base-fee}
 
@@ -66,7 +66,7 @@ Biaya dasar dihitung dengan rumus yang membandingkan ukuran blok sebelumnya (jum
 | 7          |                 60M |             12,5% |          0,1802 Gwei |
 | 8          |                 60M |             12,5% |          0,2027 Gwei |
 
-Dalam tabel di atas, sebuah contoh didemonstrasikan menggunakan 60 juta sebagai batas gas. Mengikuti contoh ini, untuk membuat transaksi pada blok nomor 9, dompet akan memberi tahu pengguna dengan pasti bahwa **biaya dasar maksimum** yang akan ditambahkan ke blok berikutnya adalah `biaya dasar saat ini * 112,5%` atau `0,2027 Gwei * 112,5% = 0,2281 Gwei`.
+Dalam tabel di atas, sebuah contoh didemonstrasikan menggunakan 60 juta sebagai batas gas. Mengikuti contoh ini, untuk membuat transaksi pada blok nomor 9, dompet akan memberi tahu pengguna dengan pasti bahwa **biaya dasar maksimum** yang akan ditambahkan ke blok berikutnya adalah `current base fee * 112.5%` atau `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
 <BaseFeeDiagram />
 
