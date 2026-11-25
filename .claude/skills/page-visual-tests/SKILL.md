@@ -1,6 +1,6 @@
 ---
 name: page-visual-tests
-description: Playwright + Chromatic full-page visual tests for ethereum.org. Trigger on "add a page to the visual suite", "the snapshot keeps changing", "chromatic pages", "chromatic playwright", or edits to `tests/visual/`, `playwright.visual.config.ts`, or the `page-visual-tests` job in `.github/workflows/ci.yml`. Skip for Storybook Chromatic (the `visual-tests` job in ci.yml), e2e (`tests/e2e/`), unit (`tests/unit/`).
+description: Playwright + Chromatic full-page visual tests for ethereum.org. Trigger on "add a page to the visual suite", "the snapshot keeps changing", "chromatic pages", "chromatic playwright", or edits to `tests/visual/`, `playwright.visual.config.ts`, or the `page-visual-tests` job in `.github/workflows/ci.yml`. Skip for Storybook Chromatic (`.github/workflows/chromatic.yml`), e2e (`tests/e2e/`), unit (`tests/unit/`).
 ---
 
 # Page Visual Tests (Playwright + Chromatic)

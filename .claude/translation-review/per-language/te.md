@@ -1,5 +1,10 @@
 # Telugu (te) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder swaps (peer-das caption, verkle), builder, execution client, fork choice, Ethereum spelling, gas inline code. Open: `saganiki paiga` for each-over-half, compounding sammelanam.
+
 > **PR:** #18739 (intl/pending-privacy-page)
 > **Date:** 2026-07-09
 > **Quality Score:** 8.3/10 (pre-fix) -> ~9.5 (post-fix, semantic fidelity restored)
@@ -149,3 +154,43 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `Chain Platform` transliterated -> Latin (L54, L83); stray U+2068/U+2069 around `ETH`.
 - Open: bare dApp/EVM expanded (#80); glossary EVM entry spells `ఈథీరియం` vs file `ఎథీరియం`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.2/10
+
+Scope: 27 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:966 Solidity always_latin (`సోలిడిటీ ధృవీకర్తను` -> `Solidity ధృవీకర్తను`)
+- security/index.md:18-27 fabricated second frontmatter block deleted
+
+**Open (native call needed):**
+
+- None at critical level.
+- 17 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is fluent and mostly faithful. te's known reported-speech negation error (the `-మని` suffix flipping meaning) did not recur. The two te-specific must-fixes are the made-up frontmatter block in the security page and the transliterated Solidity; the founders tag regression affects other locales too.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Retranslated in full (write-deploy correct). Warnings: English alt text; NFT spelled out too often.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:136 personal pronoun for accounts `ప్రతి ఒక్కరి` -> `ప్రతి ఒక్కదాని`
+
+**Open / notes:**
+
+- ABI/EVM spelled out (#80); `ఈథీరియం` vs locale `ఎథీరియం` in the EVM expansion (known glossary inconsistency)
+- Unchanged echidna:317 glossary verb pasted into heading; echidna:507 we/our mix -- out of scope

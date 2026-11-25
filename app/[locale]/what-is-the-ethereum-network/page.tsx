@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -29,11 +29,9 @@ import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-n
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-what-is-the-ethereum-network")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(
       "what-is-the-ethereum-network",
       locale as Lang
@@ -66,17 +64,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "learn/what-is-the-ethereum-network",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "what-is-the-ethereum-network" }}
             heroImg={heroImg}
             title={t("page-what-is-ethereum-network-title")}
             description={
@@ -620,8 +615,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-the-ethereum-network")
 

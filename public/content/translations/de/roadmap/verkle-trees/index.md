@@ -1,6 +1,6 @@
 ---
-title: Verkle-Bäume
-description: Eine allgemeine Beschreibung von Verkle-Bäumen und wie sie zur Aktualisierung von Ethereum verwendet werden
+title: "Verkle-Bäume"
+description: "Eine allgemeine Beschreibung von Verkle-Bäumen und wie sie zur Aktualisierung von Ethereum verwendet werden"
 lang: de
 template: roadmap
 summaryPoints:
@@ -38,9 +38,9 @@ Die Größe des Zeugen variiert je nach Anzahl der enthaltenen Blätter. Angenom
 
 ## Wie ist die Struktur eines Verkle-Baums? {#what-is-the-structure-of-a-verkle-tree}
 
-Verkle-Bäume sind `(key,value)`-Paare, bei denen die Schlüssel 32-Byte-Elemente sind, die aus einem 31-Byte-_Stamm_ (Stem) und einem Einzel-Byte-_Suffix_ bestehen. Diese Schlüssel sind in _Erweiterungsknoten_ (Extension Nodes) und _innere_ Knoten (Inner Nodes) organisiert. Erweiterungsknoten repräsentieren einen einzelnen Stamm für 256 Kinder mit unterschiedlichen Suffixen. Innere Knoten haben ebenfalls 256 Kinder, aber sie können andere Erweiterungsknoten sein. Der Hauptunterschied zwischen der Struktur des Verkle-Baums und des Merkle-Baums besteht darin, dass der Verkle-Baum viel flacher ist, was bedeutet, dass es weniger Zwischenknoten gibt, die ein Blatt mit der Wurzel verbinden, und daher weniger Daten zur Generierung eines Beweises erforderlich sind.
+Verkle-Bäume sind `(key,value)`-Paare, bei denen die Schlüssel 32-Byte-Elemente sind, die aus einem 31-Byte-_Stamm_ und einem Ein-Byte-_Suffix_ bestehen. Diese Schlüssel sind in _Erweiterungs_-Knoten und _inneren_ Knoten organisiert. Erweiterungsknoten repräsentieren einen einzelnen Stamm für 256 Kinder mit unterschiedlichen Suffixen. Innere Knoten haben ebenfalls 256 Kinder, aber diese können andere Erweiterungsknoten sein. Der Hauptunterschied zwischen der Struktur des Verkle-Baums und der des Merkle-Baums besteht darin, dass der Verkle-Baum viel flacher ist. Das bedeutet, dass es weniger Zwischenknoten gibt, die ein Blatt mit der Wurzel verbinden, und daher weniger Daten erforderlich sind, um einen Beweis zu generieren.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Lesen Sie mehr über die Struktur von Verkle-Bäumen](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type {
   AppData,
@@ -52,10 +48,7 @@ const Page = async (props: {
   params: Promise<PageParams & { application: string }>
 }) => {
   const { locale, application } = await props.params
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-apps")
-  const tCommon = await getTranslations("common")
   const tItem = await getTranslations("component-catalog-item")
   const appDescriptions = await getTranslations("page-app-descriptions")
 
@@ -134,10 +127,7 @@ const Page = async (props: {
         tooltip: t("page-apps-info-listing-reviewed-tooltip"),
       },
     ].filter((row) => !!row),
-    breadcrumbs: [
-      { label: "ethereum.org", href: "/" },
-      { label: tCommon("apps"), href: "/apps/" },
-    ],
+    breadcrumbSlug: `/apps/${application}`,
     next: nextApp && {
       name: nextApp.name,
       href: `/apps/${slugify(nextApp.name)}/`,
@@ -206,8 +196,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string; application: string }>
 }) {
   const { locale, application } = await props.params
-  setRequestLocale(locale)
-
   try {
     const appsData = await getAppsData()
     if (!appsData) {

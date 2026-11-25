@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "{name} के बारे में",
+  "catalog-item-gallery-modal-title": "{name} के स्क्रीनशॉट",
+  "catalog-item-gallery-screenshot-alt": "{name} का स्क्रीनशॉट {index}",
+  "catalog-item-gallery-title": "गैलरी",
+  "catalog-item-info-title": "जानकारी",
+  "catalog-item-link-label": "{platform} पर {name}",
+  "catalog-item-see-next": "अगला देखें",
+  "catalog-item-source-code": "सोर्स कोड",
+  "catalog-item-view-on-github": "GitHub पर देखें",
+  "catalog-item-visit-website": "वेबसाइट पर जाएं"
+}

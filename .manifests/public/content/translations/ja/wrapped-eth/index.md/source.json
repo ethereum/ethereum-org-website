@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/wrapped-eth/index.md",
-  "generatedAt": "2026-06-08T11:24:30.683Z",
-  "rootHash": "710a05559898",
+  "generatedAt": "2026-10-21T22:19:21.051Z",
+  "rootHash": "0ccc8cc2667a",
   "tree": {
     "contentHash": "38a6746830a1",
-    "anchorHash": "d21da5bb1d56",
+    "anchorHash": "145bb29d18f6",
     "children": {
       "frontmatter:title": {
         "contentHash": "8e04277479ea",
@@ -108,7 +108,7 @@
       },
       "weth-vs-eth-differences": {
         "contentHash": "22674a71a2a7",
-        "anchorHash": "868a62590e92",
+        "anchorHash": "5b807dfcd894",
         "labelHash": "c3eb652ad7bd",
         "children": {
           "_label": {
@@ -121,7 +121,7 @@
           },
           "link:0": {
             "contentHash": "b92f0d72bdb2",
-            "anchorHash": "94f254dbdfb4"
+            "anchorHash": "68f65f0eae8f"
           },
           "prose:4": {
             "contentHash": "d9dd56f4ada7",
@@ -382,5 +382,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

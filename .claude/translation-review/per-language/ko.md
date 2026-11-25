@@ -1,5 +1,10 @@
 # Korean (ko) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in 6 sites across 4 JSON keys, truncated `commitment`, The Merge as meojji. Open: Engine API Latin/Hangul split, History network wording.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -148,3 +153,45 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `보장` (guarantee) for promise blurs the page's promise-vs-guarantee contrast; Visa/Revolut script split; 그랜트/보조금.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 14 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Korean prose is fluent and complies with ETHGlossary. The main defects come from the pipeline: acronym expansion in descriptions and three untranslated founders tags that hit the whole fleet. There are a few term-level semantic slips (agnostic, mandate) and some cross-file wording inconsistencies.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `비엠`/`알케미` brand tags restored to `viem`/`alchemy` (sending)
+- 2 captions in the mint tutorial that had reverted to English restored from dev
+
+**Notes:**
+
+- `<strong>`/`<em>` instead of `**`/`*` is deliberate. Out of scope: transliterated author `엘란 할펀` in sending.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:244 closing sentence reversed ("we want to hear answers to questions") -> `...의견을 듣고 싶으며, 궁금한 점이 있으면 답변해 드리겠습니다.`
+
+**Open / notes:**
+
+- echidna: glossary noun `되돌리기` verbalized (`되돌리기됩니다`) at 4 sites; natural `되돌려집니다` -- native call (#96)
+- Particle allomorphs after inline code (`config.yaml`를 -> 을, etc.) at ~11 sites -- fluency
+- echidna author `트레일오브비츠` vs Latin in 3 of 5 ko tutorials -- informational

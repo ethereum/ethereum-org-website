@@ -22,33 +22,32 @@ Cả hai loại tài khoản đều có khả năng:
 - Nhận, giữ và gửi ETH cùng các token
 - Tương tác với các hợp đồng thông minh đã được triển khai
 
-### Những điểm khác biệt chính {#key-differences}
+### Các điểm khác biệt chính {#key-differences}
 
 **Thuộc sở hữu bên ngoài**
 
 - Việc tạo một tài khoản không tốn phí
 - Có thể khởi tạo các giao dịch
-- Các giao dịch giữa các tài khoản thuộc sở hữu bên ngoài chỉ có thể là các giao dịch chuyển ETH/token
+- Các giao dịch giữa các tài khoản thuộc sở hữu bên ngoài (EOA) chỉ có thể là các khoản chuyển ETH, trừ khi người nhận đã ủy quyền cho mã hợp đồng (xem `codeHash` bên dưới)
 - Được tạo thành từ một cặp khóa mật mã học: khóa công khai và khóa riêng tư kiểm soát các hoạt động của tài khoản
 
 **Hợp đồng**
 
-- Việc tạo một hợp đồng sẽ tốn phí vì bạn đang sử dụng không gian lưu trữ của mạng lưới
+- Việc tạo một hợp đồng có tốn phí vì bạn đang sử dụng không gian lưu trữ của mạng lưới
 - Chỉ có thể gửi các thông điệp để phản hồi lại việc nhận một giao dịch
-- Các giao dịch từ một tài khoản bên ngoài đến một tài khoản hợp đồng có thể kích hoạt mã, mã này có thể thực thi nhiều hành động khác nhau, chẳng hạn như chuyển token hoặc thậm chí tạo một hợp đồng mới
-- Các tài khoản hợp đồng không có khóa riêng tư. Thay vào đó, chúng được kiểm soát bởi logic của mã hợp đồng thông minh
+- Các giao dịch từ một tài khoản bên ngoài đến một tài khoản hợp đồng có thể kích hoạt mã có thể thực thi nhiều hành động khác nhau, chẳng hạn như chuyển token hoặc thậm chí tạo một hợp đồng mới
+- Các tài khoản hợp đồng không có các khóa riêng tư. Thay vào đó, chúng được kiểm soát bởi logic của mã hợp đồng thông minh
 
 ## Khảo sát một tài khoản {#an-account-examined}
 
 Các tài khoản Ethereum có bốn trường:
 
-- `nonce` – Một bộ đếm cho biết số lượng giao dịch được gửi từ một tài khoản thuộc sở hữu bên ngoài hoặc số lượng hợp đồng được tạo bởi một tài khoản hợp đồng. Chỉ có một giao dịch với một nonce nhất định có thể được thực thi cho mỗi tài khoản, giúp bảo vệ chống lại các cuộc tấn công phát lại (replay attacks) nơi các giao dịch đã ký bị phát sóng và thực thi lặp đi lặp lại.
+- `nonce` – Một bộ đếm cho biết số lượng giao dịch được gửi từ một tài khoản thuộc sở hữu bên ngoài (EOA) hoặc, đối với một tài khoản hợp đồng, nhiều hơn một so với số lượng hợp đồng mà nó đã tạo (nonce của hợp đồng bắt đầu từ 1, theo [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Mỗi ủy quyền [EIP-7702](/roadmap/pectra/7702/) được áp dụng cũng làm tăng nonce của tài khoản ủy quyền. Chỉ một giao dịch với một nonce nhất định mới có thể được thực thi cho mỗi tài khoản, bảo vệ khỏi các cuộc tấn công phát lại nơi các giao dịch đã ký được phát sóng và thực thi lại nhiều lần.
 - `balance` – Số lượng Wei thuộc sở hữu của địa chỉ này. Wei là một đơn vị của ETH và có 1e+18 Wei trong mỗi ETH.
-- `codeHash` – Mã băm này đề cập đến _mã_ của một tài khoản trên Máy ảo Ethereum (EVM). Các tài khoản hợp đồng có các đoạn mã được lập trình sẵn có thể thực hiện các thao tác khác nhau. Mã EVM này được thực thi nếu tài khoản nhận được một lời gọi thông điệp. Nó không thể bị thay đổi, không giống như các trường tài khoản khác. Tất cả các đoạn mã như vậy được chứa trong cơ sở dữ liệu trạng thái dưới các mã băm tương ứng của chúng để truy xuất sau này. Giá trị mã băm này được gọi là codeHash. Đối với các tài khoản thuộc sở hữu bên ngoài, trường codeHash là mã băm của một chuỗi rỗng.
-- `storageRoot` – Đôi khi được gọi là mã băm lưu trữ. Một mã băm 256-bit của nút gốc của một [cây tiền tố Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) mã hóa nội dung lưu trữ của tài khoản (một ánh xạ giữa các giá trị số nguyên 256-bit), được mã hóa vào cây tiền tố dưới dạng một ánh xạ từ mã băm Keccak-256 của các khóa số nguyên 256-bit sang các giá trị số nguyên 256-bit được mã hóa bằng Tiền tố độ dài đệ quy (RLP). Cây tiền tố này mã hóa mã băm của nội dung lưu trữ của tài khoản này, và mặc định là rỗng.
+- `codeHash` – Mã băm này đề cập đến _mã_ của một tài khoản trên Máy ảo Ethereum (EVM). Các tài khoản hợp đồng có các đoạn mã được lập trình sẵn có thể thực hiện các thao tác khác nhau. Mã EVM này được thực thi nếu tài khoản nhận được một lời gọi thông điệp. Mã của một hợp đồng không thể bị thay đổi sau khi nó được triển khai, không giống như các trường tài khoản khác. Tất cả các đoạn mã như vậy được chứa trong cơ sở dữ liệu trạng thái dưới các mã băm tương ứng của chúng để truy xuất sau này. Giá trị mã băm này được gọi là một codeHash. Đối với các tài khoản thuộc sở hữu bên ngoài, trường codeHash là mã băm của một chuỗi rỗng, trừ khi tài khoản đã ủy quyền cho một hợp đồng thông minh với [EIP-7702](/roadmap/pectra/7702/). Mã của tài khoản khi đó là một chỉ báo sự ủy quyền (`0xef0100` theo sau là địa chỉ của hợp đồng), mà tài khoản có thể thay đổi hoặc xóa bằng một ủy quyền mới.
+- `storageRoot` – Đôi khi được gọi là mã băm lưu trữ. Một mã băm 256-bit của nút gốc của một [cây tiền tố Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) mã hóa nội dung lưu trữ của tài khoản (một ánh xạ giữa các giá trị số nguyên 256-bit), được mã hóa vào cây tiền tố dưới dạng một ánh xạ từ mã băm Keccak 256-bit của các khóa số nguyên 256-bit sang các giá trị số nguyên 256-bit được mã hóa bằng Tiền tố độ dài đệ quy (RLP). Cây tiền tố này mã hóa mã băm của nội dung lưu trữ của tài khoản này, và mặc định là rỗng.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Sơ đồ được phỏng theo [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Các tài khoản thuộc sở hữu bên ngoài và các cặp khóa {#externally-owned-accounts-and-key-pairs}
 

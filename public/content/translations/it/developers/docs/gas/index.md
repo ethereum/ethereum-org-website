@@ -15,18 +15,17 @@ Per comprendere meglio questa pagina, ti consigliamo di leggere prima le [transa
 
 Il gas si riferisce all'unità che misura la quantità di sforzo computazionale richiesto per eseguire operazioni specifiche sulla rete Ethereum.
 
-Poiché ogni transazione di Ethereum richiede risorse computazionali per essere eseguita, tali risorse devono essere pagate per garantire che Ethereum non sia vulnerabile allo spam e non possa rimanere bloccato in cicli computazionali infiniti. Il pagamento per il calcolo viene effettuato sotto forma di una commissione del gas.
+Poiché ogni transazione di Ethereum richiede risorse computazionali per essere eseguita, tali risorse devono essere pagate per garantire che Ethereum non sia vulnerabile allo spam e non possa rimanere bloccato in cicli computazionali infiniti. Il pagamento per il calcolo viene effettuato sotto forma di commissione del gas.
 
 La commissione del gas è **la quantità di gas utilizzata per eseguire un'operazione, moltiplicata per il costo per unità di gas**. La commissione viene pagata indipendentemente dal fatto che una transazione abbia successo o fallisca.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 Le commissioni del gas devono essere pagate nella valuta nativa di Ethereum, l'ether (ETH). I prezzi del gas sono solitamente quotati in Gwei, che è una denominazione di ETH. Ogni Gwei è pari a un miliardesimo di ETH (0,000000001 ETH o 10<sup>-9</sup> ETH).
 
 Ad esempio, invece di dire che il tuo gas costa 0,000000001 ether, puoi dire che il tuo gas costa 1 Gwei.
 
-La parola "Gwei" è una contrazione di "giga-wei", che significa "un miliardo di Wei". Un Gwei è uguale a un miliardo di Wei. Il Wei stesso (che prende il nome da [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), creatore di [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) è l'unità più piccola di ETH.
+La parola "Gwei" è una contrazione di "giga-wei", che significa "un miliardo di Wei". Un Gwei è pari a un miliardo di Wei. Il Wei stesso (che prende il nome da [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), creatore di [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) è l'unità più piccola di ETH.
 
 ## Come vengono calcolate le commissioni del gas? {#how-are-gas-fees-calculated}
 
@@ -101,12 +100,11 @@ Puoi dichiarare esplicitamente quanto sei disposto a pagare per far eseguire la 
 
 ## Perché esistono le commissioni del gas? {#why-do-gas-fees-exist}
 
-In breve, le commissioni del gas aiutano a mantenere sicura la rete Ethereum. Richiedendo una commissione per ogni calcolo eseguito sulla rete, impediamo ai malintenzionati di inviare spam alla rete. Al fine di evitare cicli infiniti accidentali o ostili o altri sprechi computazionali nel codice, ogni transazione è tenuta a impostare un limite a quanti passaggi computazionali di esecuzione del codice può utilizzare. L'unità fondamentale di calcolo è il "gas".
+In breve, le commissioni del gas aiutano a mantenere sicura la rete Ethereum. Richiedendo una commissione per ogni calcolo eseguito sulla rete, impediamo ai malintenzionati di inviare spam sulla rete. Al fine di evitare cicli infiniti accidentali o ostili o altri sprechi computazionali nel codice, ogni transazione deve impostare un limite al numero di passaggi computazionali di esecuzione del codice che può utilizzare. L'unità fondamentale di calcolo è il "gas".
 
-Sebbene una transazione includa un limite, qualsiasi gas non utilizzato in una transazione viene restituito all'utente (es., `max fee - (base fee + tip)` viene restituito).
+Sebbene una transazione includa un limite, qualsiasi gas non utilizzato in una transazione viene restituito all'utente (es., viene restituito `max fee - (base fee + tip)`).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Cos'è il limite di gas? {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ Il ridimensionamento di layer 2 (l2) è un'iniziativa primaria per migliorare no
 
 ## Monitoraggio delle commissioni del gas {#monitoring-gas-fees}
 
-Se vuoi monitorare i prezzi del gas, in modo da poter inviare i tuoi ETH a un costo inferiore, puoi utilizzare molti strumenti diversi come:
+Se desideri monitorare i prezzi del gas, in modo da poter inviare i tuoi ETH spendendo meno, puoi utilizzare molti strumenti diversi come:
 
 - [Etherscan](https://etherscan.io/gastracker) _Stimatore del prezzo del gas delle transazioni_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Stimatore open source del prezzo del gas delle transazioni_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitora e traccia i prezzi del gas di Ethereum e L2 per ridurre le commissioni di transazione e risparmiare denaro_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Estensione di Chrome per la stima del gas che supporta sia le transazioni legacy di Tipo 0 che le transazioni EIP-1559 di Tipo 2._
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitora e traccia i prezzi del gas di Ethereum e dei layer 2 (l2) per ridurre le commissioni di transazione e risparmiare denaro_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcola le commissioni del gas nella tua valuta locale per diversi tipi di transazioni su Mainnet, Arbitrum e Polygon._
-
-## Strumenti correlati {#related-tools}
-
-- [Piattaforma Gas di Blocknative](https://www.blocknative.com/gas) _API di stima del gas basata sulla piattaforma dati mempool globale di Blocknative_
-- [Gas Network](https://gas.network) Oracoli del gas onchain. Supporto per oltre 35 catene. 
 
 ## Letture consigliate {#further-reading}
 

@@ -1,5 +1,10 @@
 # French (fr) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas inline code, choix de fourche, frais de priorite, creneaux. Open: `creneau de stockage` for storage slot (native call), Engine API vs API Engine.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -112,3 +117,48 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 ## PR #19480 (intl/pending-dev, wagmi backtick retranslation) -- 2026-10-14
 
 - Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:448 non-word (`grâce aux arbitreurs qui` -> `grâce aux arbitragistes qui`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: ETHGlossary deviation (EOA, high confidence): `compte détenu en externe`. The dev version was compliant at 4 sites and this run regressed it. The script_rule is not set, so this goes to a human. (`mais un [compte externe]` -> `mais un [compte détenu en externe]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA glossary deviation, 2 occurrences on this line.
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA glossary deviation. (`qu'aux comptes externes.` -> `qu'aux comptes détenus en externe.`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA glossary deviation. (`provient d'un compte externe,` -> `provient d'un compte détenu en externe,`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA glossary deviation. The English here is "that owner is externally owned". (`ce propriétaire est un compte externe` -> `ce propriétaire est un compte détenu en externe`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The French text reads fluently and is structurally clean. Most problems come from a full retranslation that undid correct dev wording (the EOA glossary form, `arbitragistes`, `d'entiers`) and from bare acronyms expanded into the glossary's long form. The only items that can be fixed automatically are the three English tag values in `page-founders.json` and the `arbitreurs` restore.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Clean otherwise.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.2/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client title and description: retranslation spelled out `dapp` as `application décentralisée (dapp)` in both meta slots although the English did not change (#80, #91) -> restored dev's `une dapp`
+- multi-client:93 `dépendances paires` (paired) -> `dépendances pairs (peer dependencies)`
+
+**Open / notes:**
+
+- echidna:340 glossary `annuler` for revert reads as overflows being "cancelled" (L415/L422 unchanged, same issue) -- native call (#96)
+- ABI/EVM spelled out (#80)

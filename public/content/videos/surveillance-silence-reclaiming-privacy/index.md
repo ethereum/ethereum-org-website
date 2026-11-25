@@ -19,7 +19,7 @@ A keynote by **Naomi Brockwell** at EthBoulder 2026 on the erosion of digital pr
 
 ### Two-part talk: warning + solution (00:00) {#two-part-talk-warning-solution-0000}
 
-**Naomi:** Wonderful. Welcome everyone. Thank you for for being here. So, this is going to be a two-part talk. in the first part, it might get like a little intense. I have been known to get pretty intense when it comes to privacy and surveillance talks. the second part is going to be a little bit of a different tone. So in the first part I'm going to tell you a story and in the second part we're going to save the world. So if you guys are all cool with that we can get started. 
+**Naomi:** Wonderful. Welcome everyone. Thank you for being here. So, this is going to be a two-part talk. in the first part, it might get like a little intense. I have been known to get pretty intense when it comes to privacy and surveillance talks. the second part is going to be a little bit of a different tone. So in the first part I'm going to tell you a story and in the second part we're going to save the world. So if you guys are all cool with that we can get started. 
 
 ### The emperor's new clothes (00:44) {#the-emperors-new-clothes-0044}
 
@@ -45,7 +45,7 @@ We feel that something is wrong when we skim a privacy policy and we know that w
 
 So how bad is the status quo? How bad is this stuff really? Or maybe we should talk about this because some people think that this is just a matter of companies trying to sell us a better pair of shoes. This is just like a consumer thing, right? Or maybe it's just about social media companies learning about us to create a more finely tuned algorithm, right? That doesn't seem so dire. What's what's the problem with all of that?
 
-But right now, we are all consenting to a pervasive surveillance machine that is quietly invading every private area of our lives. Now, in some places like authoritarian regimes, this machine is used to control disscent before it happens by flagging potentially problematic people as more likely to join a protest movement and then targeting those people. Sometimes this machine is used to shape public sentiment or influence opinions or sway elections or get entire populations to to hate certain types of people by convincing them that those groups hate them. And then there are countries that publicly broadcast information about citizens whose social credit scores have dropped and then they use those scores to restrict travel, to limit their employment, to block their children from certain schools or to cut them off from opportunity entirely. 
+But right now, we are all consenting to a pervasive surveillance machine that is quietly invading every private area of our lives. Now, in some places like authoritarian regimes, this machine is used to control disscent before it happens by flagging potentially problematic people as more likely to join a protest movement and then targeting those people. Sometimes this machine is used to shape public sentiment or influence opinions or sway elections or get entire populations to hate certain types of people by convincing them that those groups hate them. And then there are countries that publicly broadcast information about citizens whose social credit scores have dropped and then they use those scores to restrict travel, to limit their employment, to block their children from certain schools or to cut them off from opportunity entirely. 
 
 ### Data collection at trillion-dollar scale (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  

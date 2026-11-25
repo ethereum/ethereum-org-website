@@ -1,5 +1,6 @@
 ---
 title: Prediction markets
+description: "What are prediction markets? Learn how Ethereum-based markets let anyone trade on the outcome of real-world events, and why their odds can be so accurate."
 lang: en
 template: use-cases
 image: /images/use-cases/prediction-markets.png

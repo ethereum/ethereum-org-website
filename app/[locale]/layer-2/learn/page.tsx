@@ -1,9 +1,5 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -51,13 +47,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage(SLUG)
   const messages = pick(allMessages, requiredNamespaces)
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("layer-2/learn", locale as Lang)
 
   const t = await getTranslations("page-layer-2-learn")
@@ -103,12 +97,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
       <PageHero
-        breadcrumbs={{ slug: SLUG, startDepth: 1 }}
+        breadcrumbs={{ slug: SLUG }}
         heroImg={heroImg}
         title={t("page-layer-2-learn-title")}
         description={t("page-layer-2-learn-description")}
@@ -388,8 +382,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-layer-2-learn")
 

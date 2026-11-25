@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "O {name}",
+  "catalog-item-gallery-modal-title": "Snímky obrazovky {name}",
+  "catalog-item-gallery-screenshot-alt": "Snímek obrazovky {index} z {name}",
+  "catalog-item-gallery-title": "Galerie",
+  "catalog-item-info-title": "Informace",
+  "catalog-item-link-label": "{name} na {platform}",
+  "catalog-item-see-next": "Zobrazit další",
+  "catalog-item-source-code": "Zdrojový kód",
+  "catalog-item-view-on-github": "Zobrazit na GitHubu",
+  "catalog-item-visit-website": "Navštívit webové stránky"
+}

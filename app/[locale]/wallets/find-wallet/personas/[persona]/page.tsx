@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
@@ -18,7 +19,6 @@ import {
   WALLET_PERSONAS,
 } from "@/lib/utils/walletData"
 
-import FindWalletBreadcrumbs from "../../_components/FindWalletBreadcrumbs"
 import WalletsPageBody from "../../_components/WalletsPageBody"
 
 import PersonaPageJsonLD from "./page-jsonld"
@@ -32,7 +32,6 @@ const getPersona = (id: string) =>
 
 const Page = async (props: { params: Promise<PersonaPageParams> }) => {
   const { locale, persona: personaId } = await props.params
-  setRequestLocale(locale)
 
   if (!isWalletPersonaId(personaId)) notFound()
   const persona = getPersona(personaId)!
@@ -65,7 +64,10 @@ const Page = async (props: { params: Promise<PersonaPageParams> }) => {
       <MainArticle className="relative flex flex-col">
         <PageHero
           breadcrumbs={
-            <FindWalletBreadcrumbs locale={locale} leaf={t(persona.titleKey)} />
+            <Breadcrumbs
+              slug={`/wallets/find-wallet/personas/${personaId}`}
+              label={t(persona.titleKey)}
+            />
           }
           title={t(persona.heroTitleKey)}
           description={t(persona.heroDescKey)}
@@ -92,7 +94,6 @@ export async function generateMetadata(props: {
   params: Promise<PersonaPageParams>
 }) {
   const { locale, persona: personaId } = await props.params
-  setRequestLocale(locale)
 
   if (!isWalletPersonaId(personaId)) return {}
   const persona = getPersona(personaId)!

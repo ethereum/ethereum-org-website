@@ -1,8 +1,8 @@
 {
   "version": 2,
   "locale": "ar",
-  "translatedAt": "2026-10-14T17:56:15.958Z",
-  "englishManifestHash": "b217db3738e7",
+  "translatedAt": "2026-10-21T21:52:21.203Z",
+  "englishManifestHash": "26d9305a621c",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-db1122",
@@ -114,7 +114,7 @@
     "CODE-86768c",
     "CODE-9556b8",
     "CODEBLOCK-5ac2af",
-    "LINK-a9b643",
+    "LINK-a34ce9",
     "LINK-431b7a",
     "LINK-2e633d",
     "LINK-2f501c",
@@ -624,10 +624,10 @@
         "url": "https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment"
       }
     },
-    "LINK-a9b643": {
+    "LINK-a34ce9": {
       "type": "link",
       "values": {
-        "url": "https://docs.openzeppelin.com/contracts/2.x/api/math"
+        "url": "https://docs.openzeppelin.com/contracts/3.x/api/math"
       }
     },
     "LINK-431b7a": {
@@ -957,7 +957,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-10-14T17:56:15.958Z",
+      "translatedAt": "2026-10-21T21:52:21.203Z",
       "status": "success"
     }
   }

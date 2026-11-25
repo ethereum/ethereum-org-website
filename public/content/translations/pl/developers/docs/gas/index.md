@@ -17,16 +17,15 @@ Gaz odnosi się do jednostki, która mierzy ilość wysiłku obliczeniowego wyma
 
 Ponieważ każda transakcja w Ethereum wymaga zasobów obliczeniowych do wykonania, za te zasoby trzeba zapłacić, aby upewnić się, że Ethereum nie jest podatne na spam i nie może utknąć w nieskończonych pętlach obliczeniowych. Płatność za obliczenia dokonywana jest w formie opłaty za gaz.
 
-Opłata za gaz to **ilość gazu zużyta do wykonania jakiejś operacji, pomnożona przez koszt jednostki gazu**. Opłata jest uiszczana niezależnie od tego, czy transakcja zakończy się sukcesem, czy nie.
+Opłata za gaz to **ilość gazu zużytego do wykonania jakiejś operacji, pomnożona przez koszt jednostki gazu**. Opłata jest uiszczana niezależnie od tego, czy transakcja się powiedzie, czy nie.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagram zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 Opłaty za gaz muszą być uiszczane w natywnej walucie Ethereum, etherze (ETH). Ceny gazu są zazwyczaj podawane w gwei, które jest nominałem ETH. Każde gwei jest równe jednej miliardowej ETH (0,000000001 ETH lub 10<sup>-9</sup> ETH).
 
 Na przykład, zamiast mówić, że Twój gaz kosztuje 0,000000001 ethera, możesz powiedzieć, że Twój gaz kosztuje 1 gwei.
 
-Słowo „gwei” to skrót od „giga-wei”, co oznacza „miliard wei”. Jedno gwei jest równe jednemu miliardowi wei. Samo wei (nazwane na cześć [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), twórcy [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) jest najmniejszą jednostką ETH.
+Słowo „gwei” to skrót od „giga-wei”, co oznacza „miliard wei”. Jedno gwei jest równe jednemu miliardowi wei. Samo wei (nazwane na cześć [Wei Daia](https://wikipedia.org/wiki/Wei_Dai), twórcy [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) jest najmniejszą jednostką ETH.
 
 ## Jak obliczane są opłaty za gaz? {#how-are-gas-fees-calculated}
 
@@ -101,12 +100,11 @@ Możesz wyraźnie określić, ile jesteś skłonny zapłacić za wykonanie swoje
 
 ## Dlaczego istnieją opłaty za gaz? {#why-do-gas-fees-exist}
 
-Krótko mówiąc, opłaty za gaz pomagają utrzymać bezpieczeństwo sieci Ethereum. Wymagając opłaty za każde obliczenie wykonane w sieci, zapobiegamy spamowaniu sieci przez złych aktorów. Aby uniknąć przypadkowych lub wrogich nieskończonych pętli lub innych strat obliczeniowych w kodzie, każda transakcja musi mieć ustawiony limit liczby kroków obliczeniowych wykonania kodu, z których może skorzystać. Podstawową jednostką obliczeniową jest „gaz”.
+Krótko mówiąc, opłaty za gaz pomagają utrzymać bezpieczeństwo sieci Ethereum. Wymagając opłaty za każde obliczenie wykonane w sieci, zapobiegamy spamowaniu sieci przez złośliwych aktorów. Aby uniknąć przypadkowych lub wrogich nieskończonych pętli lub innego marnotrawstwa mocy obliczeniowej w kodzie, każda transakcja musi określać limit liczby kroków obliczeniowych, które może wykorzystać podczas wykonywania kodu. Podstawową jednostką obliczeniową jest „gaz”.
 
 Chociaż transakcja zawiera limit, każdy gaz niewykorzystany w transakcji jest zwracany użytkownikowi (np. zwracane jest `max fee - (base fee + tip)`).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagram zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Czym jest limit gazu? {#what-is-gas-limit}
 
@@ -130,16 +128,10 @@ Skalowanie warstwy 2 (L2) to główna inicjatywa mająca na celu znaczne obniże
 
 Jeśli chcesz monitorować ceny gazu, aby móc wysyłać swoje ETH taniej, możesz skorzystać z wielu różnych narzędzi, takich jak:
 
-- [Etherscan](https://etherscan.io/gastracker) _Estymator ceny gazu transakcji_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estymator ceny gazu transakcji typu open source_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitoruj i śledź ceny gazu w Ethereum oraz L2, aby obniżyć opłaty transakcyjne i zaoszczędzić pieniądze_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Rozszerzenie do przeglądarki Chrome szacujące gaz, obsługujące zarówno starsze transakcje typu 0, jak i transakcje typu 2 EIP-1559._
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Obliczaj opłaty za gaz w lokalnej walucie dla różnych typów transakcji w Sieci głównej, Arbitrum i Polygon._
-
-## Powiązane narzędzia {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API do szacowania gazu zasilane przez globalną platformę danych mempool firmy Blocknative_
-- [Gas Network](https://gas.network) Wyrocznie gazu onchain. Obsługa ponad 35 sieci. 
+- [Etherscan](https://etherscan.io/gastracker) _Estymator cen gazu dla transakcji_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estymator cen gazu dla transakcji typu open source_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitoruj i śledź ceny gazu w Ethereum oraz warstwie 2 (L2), aby zmniejszyć opłaty transakcyjne i zaoszczędzić pieniądze_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Oblicz opłaty za gaz w lokalnej walucie dla różnych typów transakcji w Sieci głównej, Arbitrum i Polygon._
 
 ## Dalsza lektura {#further-reading}
 

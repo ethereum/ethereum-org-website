@@ -4,13 +4,13 @@ description: Penjelasan tentang kunci yang digunakan dalam mekanisme konsensus B
 lang: id
 ---
 
-Ethereum mengamankan aset pengguna menggunakan kriptografi kunci publik-privat. Kunci publik digunakan sebagai dasar untuk alamat Ethereum—yaitu, dapat dilihat oleh masyarakat umum dan digunakan sebagai pengidentifikasi unik. Kunci privat (atau 'rahasia') hanya boleh diakses oleh pemilik akun. Kunci privat digunakan untuk 'menandatangani' transaksi dan data sehingga kriptografi dapat membuktikan bahwa pemegangnya menyetujui suatu tindakan dari kunci privat tertentu.
+Ethereum mengamankan aset pengguna menggunakan kriptografi kunci publik-privat. Kunci publik digunakan sebagai dasar untuk alamat Ethereum—yaitu, dapat dilihat oleh masyarakat umum dan digunakan sebagai pengidentifikasi unik. Kunci privat (atau 'rahasia') seharusnya hanya dapat diakses oleh pemilik akun. Kunci privat digunakan untuk 'menandatangani' transaksi dan data sehingga kriptografi dapat membuktikan bahwa pemegang menyetujui beberapa tindakan dari kunci privat tertentu.
 
 Kunci Ethereum dihasilkan menggunakan [kriptografi kurva eliptik](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
-Namun, ketika Ethereum beralih dari [Bukti Kerja (PoW)](/developers/docs/consensus-mechanisms/pow) ke [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos), jenis kunci baru ditambahkan ke Ethereum. Kunci asli masih berfungsi persis sama seperti sebelumnya—tidak ada perubahan pada kunci berbasis kurva eliptik yang mengamankan akun. Namun, pengguna membutuhkan jenis kunci baru untuk berpartisipasi dalam Bukti Kepemilikan (PoS) dengan melakukan staking ETH dan menjalankan validator. Kebutuhan ini muncul dari tantangan skalabilitas yang terkait dengan banyaknya pesan yang berlalu-lalang di antara sejumlah besar validator yang mewajibkan metode kriptografi yang dapat dengan mudah diagregasi untuk mengurangi jumlah komunikasi yang diperlukan agar jaringan mencapai konsensus.
+Namun, ketika Ethereum beralih dari [Bukti Kerja (PoW)](/developers/docs/consensus-mechanisms/pow) ke [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos), jenis kunci baru ditambahkan ke Ethereum. Kunci asli masih berfungsi persis sama seperti sebelumnya—tidak ada perubahan pada kunci berbasis kurva eliptik yang mengamankan akun. Namun, pengguna membutuhkan jenis kunci baru untuk berpartisipasi dalam Bukti Kepemilikan (PoS) dengan melakukan staking ETH dan menjalankan validator. Kebutuhan ini muncul dari tantangan skalabilitas yang terkait dengan banyaknya pesan yang diteruskan di antara sejumlah besar validator yang mewajibkan metode kriptografi yang dapat dengan mudah diagregasi untuk mengurangi jumlah komunikasi yang diwajibkan agar jaringan mencapai konsensus.
 
-Jenis kunci baru ini menggunakan [skema tanda tangan **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS memungkinkan agregasi tanda tangan yang sangat efisien tetapi juga memungkinkan rekayasa balik dari kunci validator individu yang diagregasi dan sangat ideal untuk mengelola tindakan antar validator.
+Jenis kunci baru ini menggunakan [skema tanda tangan **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). Tanda tangan BLS dari banyak validator dapat diagregasi menjadi satu tanda tangan yang diverifikasi dalam satu pemeriksaan, yang menjaga pesan konsensus tetap kecil. BLS tidak aman dari kuantum, sehingga [peta jalan pascakuantum](/roadmap/security/quantum-resistance/) berencana untuk mengganti kunci BLS validator dengan kunci berbasis hash.
 
 ## Dua jenis kunci validator {#two-types-of-keys}
 
@@ -37,15 +37,15 @@ Fleksibilitas ini memiliki keuntungan untuk memindahkan kunci penandatanganan va
 
 ### Kredensial penarikan {#withdrawal-credentials}
 
-Setiap validator memiliki properti yang dikenal sebagai _kredensial penarikan_. Byte pertama dari bidang 32-byte ini mengidentifikasi jenis akun: `0x00` mewakili kredensial BLS asli (pra-Shapella, tidak dapat ditarik), `0x01` mewakili kredensial warisan yang menunjuk ke alamat eksekusi, dan `0x02` mewakili jenis kredensial pemajemukan modern.
+Setiap validator memiliki properti yang dikenal sebagai _kredensial penarikan_. Byte pertama dari bidang 32-byte ini mengidentifikasi jenis akun: `0x00` mewakili kredensial BLS lama (pra-Shapella, tidak dapat ditarik), `0x01` mewakili kredensial lama yang menunjuk ke alamat eksekusi, dan `0x02` mewakili jenis kredensial penggabungan (compounding) modern.
 
-Validator dengan kunci BLS `0x00` wajib memperbarui kredensial ini untuk menunjuk ke alamat eksekusi guna mengaktifkan pembayaran kelebihan saldo atau penarikan penuh dari staking. Hal ini dapat dilakukan dengan memberikan alamat eksekusi dalam data deposit selama pembuatan kunci awal, _ATAU_ dengan menggunakan kunci penarikan di kemudian hari untuk menandatangani dan menyiarkan pesan `BLSToExecutionChange`.
+Validator dengan kunci BLS `0x00` harus memperbarui kredensial ini untuk menunjuk ke alamat eksekusi guna mengaktifkan pembayaran kelebihan saldo atau penarikan penuh dari staking. Hal ini dapat dilakukan dengan memberikan alamat eksekusi dalam data deposit selama pembuatan kunci awal, _ATAU_ dengan menggunakan kunci penarikan di lain waktu untuk menandatangani dan menyiarkan pesan `BLSToExecutionChange`. Proposal untuk menghapus kredensial `0x00` secara bertahap menjelang transisi pascakuantum sedang dalam diskusi, jadi validator yang masih menggunakan `0x00` harus mengonversinya sekarang.
 
 [Lebih lanjut tentang kredensial penarikan validator](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
 ### Kunci penarikan {#withdrawal-key}
 
-Kunci penarikan akan diwajibkan untuk memperbarui kredensial penarikan agar menunjuk ke alamat eksekusi, jika tidak diatur selama deposit awal. Ini akan memungkinkan pembayaran kelebihan saldo mulai diproses, dan juga akan memungkinkan pengguna untuk menarik sepenuhnya ETH yang di-stake.
+Kunci penarikan akan diwajibkan untuk memperbarui kredensial penarikan agar menunjuk ke alamat eksekusi, jika tidak diatur selama deposit awal. Hal ini akan memungkinkan pembayaran kelebihan saldo mulai diproses, dan juga akan memungkinkan pengguna untuk menarik sepenuhnya ETH yang mereka stake.
 
 Sama seperti kunci validator, kunci penarikan juga terdiri dari dua komponen:
 
@@ -54,22 +54,22 @@ Sama seperti kunci validator, kunci penarikan juga terdiri dari dua komponen:
 
 Kehilangan kunci ini sebelum memperbarui kredensial penarikan ke jenis `0x01` berarti kehilangan akses ke saldo validator. Validator masih dapat menandatangani atestasi dan blok karena tindakan ini mewajibkan kunci privat validator, namun hanya ada sedikit atau tidak ada insentif sama sekali jika kunci penarikan hilang.
 
-Memisahkan kunci validator dari kunci akun Ethereum memungkinkan beberapa validator dijalankan oleh satu pengguna.
+Memisahkan kunci validator dari kunci akun Ethereum memungkinkan beberapa validator dijalankan oleh satu pengguna. Dengan kredensial `0x02`, satu validator dapat menampung hingga 2.048 ETH, sehingga stake yang lebih besar tidak perlu lagi dibagi ke banyak validator.
 
-![validator key schematic](validator-key-schematic.png)
+<ValidatorKeysDiagram />
 
-**Catatan**: Keluar dari tugas staking dan menarik saldo validator saat ini mewajibkan penandatanganan [pesan keluar sukarela (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) dengan kunci validator. Namun, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) adalah proposal yang akan memungkinkan pengguna untuk memicu keluarnya validator dan menarik saldonya dengan menandatangani pesan keluar menggunakan kunci penarikan di masa mendatang. Ini akan mengurangi asumsi kepercayaan dengan memungkinkan staker yang mendelegasikan ETH ke [penyedia staking-as-a-service](/staking/saas/#what-is-staking-as-a-service) untuk tetap memegang kendali atas dana mereka.
+**Catatan**: Validator dapat keluar dengan menandatangani [pesan keluar sukarela (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) dengan kunci validator. Sejak peningkatan Pectra, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) juga memungkinkan alamat penarikan memicu keluarnya validator, dan penarikan sebagian untuk validator `0x02`. Hal ini mengurangi asumsi kepercayaan dengan membiarkan staker yang mendelegasikan ETH ke [penyedia staking sebagai layanan](/staking/saas/#what-is-staking-as-a-service) tetap memegang kendali atas dana mereka.
 
 ## Menurunkan kunci dari frasa benih {#deriving-keys-from-seed}
 
 Jika setiap 32 ETH yang di-stake mewajibkan set baru yang terdiri dari 2 kunci yang sepenuhnya independen, manajemen kunci akan dengan cepat menjadi tidak praktis, terutama bagi pengguna yang menjalankan beberapa validator. Sebaliknya, beberapa kunci validator dapat diturunkan dari satu rahasia umum tunggal dan menyimpan rahasia tunggal tersebut memungkinkan akses ke beberapa kunci validator.
 
-[Mnemonic](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) dan jalur adalah fitur menonjol yang sering ditemui pengguna saat [mereka mengakses](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) dompet mereka. Mnemonic adalah urutan kata yang bertindak sebagai benih awal untuk kunci privat. Ketika digabungkan dengan data tambahan, mnemonic menghasilkan hash yang dikenal sebagai 'kunci utama'. Ini dapat dianggap sebagai akar dari sebuah pohon. Cabang-cabang dari akar ini kemudian dapat diturunkan menggunakan jalur hierarkis sehingga node anak dapat ada sebagai kombinasi dari hash node induknya dan indeks mereka di dalam pohon. Baca tentang standar [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) dan [BIP-19](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) untuk pembuatan kunci berbasis mnemonic.
+[Mnemonic](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) dan jalur adalah fitur menonjol yang sering ditemui pengguna saat [mereka mengakses](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) dompet mereka. Mnemonic adalah urutan kata yang bertindak sebagai benih awal untuk kunci privat. Ketika digabungkan dengan data tambahan, mnemonic menghasilkan hash yang dikenal sebagai 'kunci master'. Ini dapat dianggap sebagai akar dari sebuah pohon. Cabang-cabang dari akar ini kemudian dapat diturunkan menggunakan jalur hierarkis sehingga node anak dapat ada sebagai kombinasi dari hash node induknya dan indeks mereka di dalam pohon. Baca tentang standar [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) dan [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) untuk pembuatan kunci berbasis mnemonic.
 
 Jalur-jalur ini memiliki struktur berikut, yang akan familier bagi pengguna yang pernah berinteraksi dengan dompet perangkat keras:
 
 ```
-m/44'/60'/0'/0`
+m/44'/60'/0'/0
 ```
 
 Garis miring di jalur ini memisahkan komponen kunci privat sebagai berikut:
@@ -78,10 +78,10 @@ Garis miring di jalur ini memisahkan komponen kunci privat sebagai berikut:
 master_key / purpose / coin_type / account / change / address_index
 ```
 
-Logika ini memungkinkan pengguna untuk melampirkan sebanyak mungkin validator ke satu **frasa mnemonic** karena akar pohonnya bisa sama, dan diferensiasi dapat terjadi di cabang-cabangnya. Pengguna dapat **menurunkan sejumlah kunci** dari frasa mnemonic tersebut.
+Logika ini memungkinkan pengguna untuk melampirkan sebanyak mungkin validator ke satu **frasa mnemonic** karena akar pohonnya bisa sama, dan diferensiasi dapat terjadi di cabang-cabangnya. Pengguna dapat **menurunkan sejumlah kunci** dari frasa mnemonic.
 
 ```
-[m / 0]
+      [m / 0]
      /
     /
 [m] - [m / 1]
@@ -90,9 +90,9 @@ Logika ini memungkinkan pengguna untuk melampirkan sebanyak mungkin validator ke
       [m / 2]
 ```
 
-Setiap cabang dipisahkan oleh `/` sehingga `m/2` berarti mulai dengan kunci utama dan ikuti cabang 2. Dalam skema di bawah ini, satu frasa mnemonic digunakan untuk menyimpan tiga kunci penarikan, masing-masing dengan dua validator terkait.
+Setiap cabang dipisahkan oleh `/` sehingga `m/2` berarti mulai dengan kunci master dan ikuti cabang 2. Kunci validator mengikuti [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334): validator `i` mendapatkan kunci penarikannya di `m/12381/3600/i/0` dan kunci penandatanganannya di `m/12381/3600/i/0/0` (12381 mengidentifikasi kurva BLS12-381, 3600 jenis koin untuk kunci lapisan konsensus).
 
-![validator key logic](multiple-keys.png)
+<KeyDerivationDiagram />
 
 ## Bacaan lebih lanjut {#further-reading}
 

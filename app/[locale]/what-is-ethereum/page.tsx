@@ -6,7 +6,7 @@ import {
   SquareCode,
   User,
 } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
@@ -54,11 +54,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-what-is-ethereum")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("what-is-ethereum", locale as Lang)
 
   const tocItems: ToCItem[] = [
@@ -83,14 +81,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{ slug: "learn/what-is-ethereum", startDepth: 1 }}
+            breadcrumbs={{ slug: "what-is-ethereum" }}
             heroImg={heroImg}
             title={tocItems[0].title}
             description={
@@ -920,8 +918,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-ethereum")
 

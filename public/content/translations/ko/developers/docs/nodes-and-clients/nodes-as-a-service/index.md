@@ -209,7 +209,7 @@ sidebarDepth: 2
     - 50개 이상의 블록체인 노드에 대한 접근
 
 - [**Infura**](https://infura.io/)
-  - [문서](https://infura.io/docs)
+  - [문서](https://docs.infura.io/)
   - 기능
     - 무료 등급 옵션
     - 사용량에 따른 확장

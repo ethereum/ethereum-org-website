@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -36,8 +36,6 @@ import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-pipi
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const [growThePieData, l2beatData] = await Promise.all([
     getGrowThePieData(),
@@ -88,7 +86,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       : growThePieData.txCostsMedianUsd.value
 
   const heroContent: HubHeroProps = {
-    title: t("page-layer-2-hero-title"),
+    breadcrumbs: { slug: "layer-2" },
     header: t("page-layer-2-hero-header"),
     description: t("page-layer-2-hero-description"),
     heroImg: heroImg,
@@ -501,8 +499,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-layer-2")
 

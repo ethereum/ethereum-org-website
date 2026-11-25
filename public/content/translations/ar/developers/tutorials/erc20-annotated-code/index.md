@@ -13,7 +13,7 @@ published: 2021-03-09
 
 أحد أكثر الاستخدامات شيوعًا لشبكة إيثيريوم هو قيام مجموعة بإنشاء رمز مميز قابل للتداول، وهو ما يمثل عملتهم الخاصة بمعنى ما. تتبع هذه الرموز المميزة عادةً معيارًا قياسيًا، وهو [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/). يجعل هذا المعيار من الممكن كتابة أدوات، مثل مجمعات السيولة والمحافظ، تعمل مع جميع رموز <span dir="ltr">ERC-20</span> المميزة. في هذه المقالة، سنقوم بتحليل [تنفيذ ⁦ERC20⁩ بلغة Solidity من أوبن زبلن](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)، بالإضافة إلى [تعريف الواجهة](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
-هذا كود مصدري مشروح. إذا كنت ترغب في تنفيذ <span dir="ltr">ERC-20</span>، [اقرأ هذا البرنامج التعليمي](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
+هذا كود مصدري مشروح. إذا كنت ترغب في تنفيذ <span dir="ltr">ERC-20</span>، [اقرأ هذا البرنامج التعليمي](https://docs.openzeppelin.com/contracts/3.x/erc20-supply).
 
 ## الواجهة {#the-interface}
 

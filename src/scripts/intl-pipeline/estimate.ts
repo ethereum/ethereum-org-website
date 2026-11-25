@@ -263,6 +263,11 @@ async function main() {
         rows.push(planFull(file, locale))
         continue
       }
+      // CRLF English is translated in full (see runIncremental)
+      if (englishA.includes("\r\n") || file.content.includes("\r\n")) {
+        rows.push(planFull(file, locale))
+        continue
+      }
 
       const sectionIds = getLlmSectionIds(englishA, file.content, file.type)
       if (sectionIds.length === 0) continue

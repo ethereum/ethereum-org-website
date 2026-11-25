@@ -13,7 +13,7 @@ published: 2021-03-09
 
 イーサリアムの最も一般的な用途の1つは、グループが取引可能なトークン、ある意味で独自の通貨を作成することです。これらのトークンは通常、[ERC-20](/developers/docs/standards/tokens/erc-20/)という標準に従っています。この標準により、流動性プールやウォレットなど、すべてのERC-20トークンで機能するツールを作成できるようになります。この記事では、[オープンツェッペリンのSolidityによるERC20実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)と、[インターフェース定義](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)を分析します。
 
-これは注釈付きのソースコードです。ERC-20を実装したい場合は、[こちらのチュートリアルをお読みください](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)。
+これは注釈付きのソースコードです。ERC-20を実装したい場合は、[こちらのチュートリアルをお読みください](https://docs.openzeppelin.com/contracts/3.x/erc20-supply)。
 
 ## インターフェース {#the-interface}
 

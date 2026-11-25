@@ -4,13 +4,13 @@ description: "Wyjaśnienie kluczy używanych w mechanizmie konsensusu dowodu sta
 lang: pl
 ---
 
-Ethereum zabezpiecza aktywa użytkowników za pomocą kryptografii klucza publicznego i prywatnego. Klucz publiczny służy jako podstawa dla adresu Ethereum — to znaczy, że jest widoczny dla ogółu i używany jako unikalny identyfikator. Klucz prywatny (lub „tajny”) powinien być zawsze dostępny tylko dla właściciela konta. Klucz prywatny jest używany do „podpisywania” transakcji i danych, dzięki czemu kryptografia może udowodnić, że posiadacz zatwierdza określone działanie konkretnego klucza prywatnego.
+Ethereum zabezpiecza aktywa użytkowników za pomocą kryptografii klucza publicznego i prywatnego. Klucz publiczny służy jako podstawa adresu Ethereum — to znaczy, że jest widoczny dla ogółu i używany jako unikalny identyfikator. Klucz prywatny (lub „tajny”) powinien być zawsze dostępny tylko dla właściciela konta. Klucz prywatny służy do „podpisywania” transakcji i danych, dzięki czemu kryptografia może udowodnić, że posiadacz zatwierdza określone działanie konkretnego klucza prywatnego.
 
 Klucze Ethereum są generowane przy użyciu [kryptografii krzywych eliptycznych](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
-Jednakże, gdy Ethereum przeszło z [dowodu pracy (PoW)](/developers/docs/consensus-mechanisms/pow) na [dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos), do Ethereum dodano nowy typ klucza. Oryginalne klucze nadal działają dokładnie tak samo jak wcześniej — nie wprowadzono żadnych zmian w kluczach opartych na krzywych eliptycznych zabezpieczających konta. Użytkownicy potrzebowali jednak nowego typu klucza do uczestnictwa w dowodzie stawki poprzez stakowanie ETH i uruchamianie walidatorów. Potrzeba ta wynikała z wyzwań związanych ze skalowalnością, związanych z wieloma wiadomościami przesyłanymi między dużą liczbą walidatorów, co wymagało metody kryptograficznej, którą można by łatwo agregować w celu zmniejszenia ilości komunikacji wymaganej do osiągnięcia konsensusu przez sieć.
+Jednak gdy Ethereum przeszło z [dowodu pracy (PoW)](/developers/docs/consensus-mechanisms/pow) na [dowód stawki (PoS)](/developers/docs/consensus-mechanisms/pos), do Ethereum dodano nowy typ klucza. Oryginalne klucze nadal działają dokładnie tak samo jak wcześniej — nie wprowadzono żadnych zmian w kluczach opartych na krzywych eliptycznych zabezpieczających konta. Jednak użytkownicy potrzebowali nowego typu klucza, aby uczestniczyć w dowodzie stawki poprzez staking ETH i uruchamianie walidatorów. Potrzeba ta wynikała z wyzwań związanych ze skalowalnością, związanych z wieloma wiadomościami przesyłanymi między dużą liczbą walidatorów, co wymagało metody kryptograficznej, którą można by łatwo agregować w celu zmniejszenia ilości komunikacji wymaganej do osiągnięcia konsensusu przez sieć.
 
-Ten nowy typ klucza wykorzystuje [schemat podpisu **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS umożliwia bardzo wydajną agregację podpisów, ale pozwala również na inżynierię wsteczną zagregowanych indywidualnych kluczy walidatorów i jest idealny do zarządzania działaniami między walidatorami.
+Ten nowy typ klucza wykorzystuje [schemat podpisu **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). Podpisy BLS od wielu walidatorów można zagregować w jeden podpis, który jest weryfikowany w ramach jednego sprawdzenia, co sprawia, że wiadomości konsensusu są małe. BLS nie jest odporny na komputery kwantowe, dlatego [mapa drogowa ery postkwantowej](/roadmap/security/quantum-resistance/) zakłada zastąpienie kluczy BLS walidatorów kluczami opartymi na hashach.
 
 ## Dwa typy kluczy walidatora {#two-types-of-keys}
 
@@ -37,51 +37,51 @@ Ta elastyczność ma tę zaletę, że pozwala na bardzo szybkie przenoszenie klu
 
 ### Dane uwierzytelniające wypłaty {#withdrawal-credentials}
 
-Każdy walidator ma właściwość znaną jako _dane uwierzytelniające wypłaty_. Pierwszy bajt tego 32-bajtowego pola identyfikuje typ konta: `0x00` reprezentuje oryginalne dane uwierzytelniające BLS (sprzed Shapella, bez możliwości wypłaty), `0x01` reprezentuje starsze dane uwierzytelniające, które wskazują na adres wykonawczy, a `0x02` reprezentuje nowoczesny typ danych uwierzytelniających z kapitalizacją (compounding).
+Każdy walidator ma właściwość znaną jako _dane uwierzytelniające wypłaty_. Pierwszy bajt tego 32-bajtowego pola identyfikuje typ konta: `0x00` reprezentuje starsze dane uwierzytelniające BLS (sprzed aktualizacji Shapella, bez możliwości wypłaty), `0x01` reprezentuje starsze dane uwierzytelniające, które wskazują na adres wykonawczy, a `0x02` reprezentuje nowoczesny typ danych uwierzytelniających z kapitalizacją (compounding).
 
-Walidatory z kluczami BLS `0x00` muszą zaktualizować te dane uwierzytelniające, aby wskazywały na adres wykonawczy w celu aktywacji wypłat nadwyżki salda lub pełnej wypłaty ze stakowania. Można to zrobić, podając adres wykonawczy w danych depozytu podczas początkowego generowania klucza _LUB_ używając klucza wypłaty w późniejszym czasie do podpisania i rozgłoszenia wiadomości `BLSToExecutionChange`.
+Walidatorzy z kluczami BLS `0x00` muszą zaktualizować te dane uwierzytelniające, aby wskazywały na adres wykonawczy, w celu aktywacji wypłat nadwyżki salda lub pełnej wypłaty ze stakingu. Można to zrobić, podając adres wykonawczy w danych depozytu podczas początkowego generowania klucza, _LUB_ używając klucza wypłaty w późniejszym czasie do podpisania i rozgłoszenia wiadomości `BLSToExecutionChange`. Propozycje wycofania danych uwierzytelniających `0x00` przed przejściem na kryptografię postkwantową są obecnie dyskutowane, więc walidatorzy nadal korzystający z `0x00` powinni dokonać konwersji już teraz.
 
 [Więcej o danych uwierzytelniających wypłaty walidatora](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
 ### Klucz wypłaty {#withdrawal-key}
 
-Klucz wypłaty będzie wymagany do aktualizacji danych uwierzytelniających wypłaty, aby wskazywały na adres wykonawczy, jeśli nie został ustawiony podczas początkowego depozytu. Umożliwi to rozpoczęcie przetwarzania wypłat nadwyżki salda, a także pozwoli użytkownikom na pełną wypłatę ich stakowanych ETH.
+Klucz wypłaty będzie wymagany do zaktualizowania danych uwierzytelniających wypłaty, aby wskazywały na adres wykonawczy, jeśli nie zostało to ustawione podczas początkowego depozytu. Umożliwi to rozpoczęcie przetwarzania wypłat nadwyżki salda, a także pozwoli użytkownikom na pełną wypłatę ich stakowanego ETH.
 
-Podobnie jak klucze walidatora, klucze wypłaty również składają się z dwóch komponentów:
+Podobnie jak klucze walidatora, klucze wypłaty również składają się z dwóch elementów:
 
 - **Prywatny** klucz wypłaty
 - **Publiczny** klucz wypłaty
 
-Utrata tego klucza przed aktualizacją danych uwierzytelniających wypłaty do typu `0x01` oznacza utratę dostępu do salda walidatora. Walidator nadal może podpisywać poświadczenia i bloki, ponieważ te działania wymagają klucza prywatnego walidatora, jednak w przypadku utraty kluczy wypłaty nie ma ku temu prawie żadnej zachęty.
+Utrata tego klucza przed zaktualizowaniem danych uwierzytelniających wypłaty do typu `0x01` oznacza utratę dostępu do salda walidatora. Walidator nadal może podpisywać poświadczenia i bloki, ponieważ te działania wymagają klucza prywatnego walidatora, jednak w przypadku utraty kluczy wypłaty nie ma ku temu prawie żadnej zachęty.
 
-Oddzielenie kluczy walidatora od kluczy konta Ethereum umożliwia jednemu użytkownikowi uruchomienie wielu walidatorów.
+Oddzielenie kluczy walidatora od kluczy konta Ethereum umożliwia jednemu użytkownikowi uruchomienie wielu walidatorów. Dzięki danym uwierzytelniającym `0x02` jeden walidator może posiadać do 2048 ETH, więc większa stawka nie musi już być dzielona na wielu walidatorów.
 
-![validator key schematic](validator-key-schematic.png)
+<ValidatorKeysDiagram />
 
-**Uwaga**: Wyjście z obowiązków stakowania i wypłata salda walidatora wymaga obecnie podpisania [wiadomości o dobrowolnym wyjściu (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) za pomocą klucza walidatora. Jednakże [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) to propozycja, która w przyszłości pozwoli użytkownikowi na wyzwolenie wyjścia walidatora i wypłatę jego salda poprzez podpisywanie wiadomości o wyjściu za pomocą klucza wypłaty. Zmniejszy to założenia dotyczące zaufania, umożliwiając stakerom, którzy delegują ETH do [dostawców usług stakowania (staking-as-a-service)](/staking/saas/#what-is-staking-as-a-service), zachowanie kontroli nad swoimi środkami.
+**Uwaga**: Walidator może wyjść, podpisując [wiadomość o dobrowolnym wyjściu (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) za pomocą klucza walidatora. Od aktualizacji Pectra, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) pozwala również adresowi wypłaty na wyzwolenie wyjścia walidatora oraz częściowe wypłaty dla walidatorów `0x02`. Zmniejsza to założenia dotyczące zaufania, pozwalając stakerom, którzy delegują ETH do [dostawców stakingu jako usługi](/staking/saas/#what-is-staking-as-a-service), zachować kontrolę nad swoimi środkami.
 
 ## Wyprowadzanie kluczy z frazy odzyskiwania {#deriving-keys-from-seed}
 
-Gdyby każde stakowane 32 ETH wymagało nowego zestawu 2 całkowicie niezależnych kluczy, zarządzanie kluczami szybko stałoby się nieporęczne, zwłaszcza dla użytkowników uruchamiających wiele walidatorów. Zamiast tego wiele kluczy walidatora można wyprowadzić z jednego wspólnego sekretu, a przechowywanie tego jednego sekretu umożliwia dostęp do wielu kluczy walidatora.
+Gdyby każde stakowane 32 ETH wymagało nowego zestawu 2 całkowicie niezależnych kluczy, zarządzanie kluczami szybko stałoby się nieporęczne, zwłaszcza dla użytkowników uruchamiających wielu walidatorów. Zamiast tego wiele kluczy walidatora można wyprowadzić z jednego wspólnego sekretu, a przechowywanie tego jednego sekretu umożliwia dostęp do wielu kluczy walidatora.
 
-[Mnemoniki](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) i ścieżki to istotne funkcje, z którymi użytkownicy często się spotykają, gdy [uzyskują dostęp](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) do swoich portfeli. Mnemonik to sekwencja słów, która działa jako początkowe ziarno (seed) dla klucza prywatnego. W połączeniu z dodatkowymi danymi mnemonik generuje hash znany jako „klucz główny” (master key). Można to traktować jako korzeń drzewa. Gałęzie z tego korzenia można następnie wyprowadzić za pomocą hierarchicznej ścieżki, dzięki czemu węzły potomne mogą istnieć jako kombinacje hasha ich węzła nadrzędnego i ich indeksu w drzewie. Przeczytaj o standardach [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) i [BIP-19](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) dotyczących generowania kluczy opartych na mnemonikach.
+[Mnemoniki](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) i ścieżki to istotne funkcje, z którymi użytkownicy często się spotykają, gdy [uzyskują dostęp](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) do swoich portfeli. Mnemonik to sekwencja słów, która działa jako początkowe ziarno dla klucza prywatnego. W połączeniu z dodatkowymi danymi mnemonik generuje hash znany jako „klucz główny”. Można to traktować jako korzeń drzewa. Gałęzie z tego korzenia można następnie wyprowadzić za pomocą hierarchicznej ścieżki, tak aby węzły potomne mogły istnieć jako kombinacje hasha ich węzła nadrzędnego i ich indeksu w drzewie. Przeczytaj o standardach [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) i [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) dotyczących generowania kluczy na podstawie mnemoników.
 
 Ścieżki te mają następującą strukturę, która będzie znajoma dla użytkowników, którzy mieli do czynienia z portfelami sprzętowymi:
 
 ```
-m/44'/60'/0'/0`
+m/44'/60'/0'/0
 ```
 
-Ukośniki w tej ścieżce oddzielają komponenty klucza prywatnego w następujący sposób:
+Ukośniki w tej ścieżce oddzielają składniki klucza prywatnego w następujący sposób:
 
 ```
 master_key / purpose / coin_type / account / change / address_index
 ```
 
-Ta logika umożliwia użytkownikom dołączenie jak największej liczby walidatorów do pojedynczej **frazy mnemonicznej**, ponieważ korzeń drzewa może być wspólny, a zróżnicowanie może następować na gałęziach. Użytkownik może **wyprowadzić dowolną liczbę kluczy** z frazy mnemonicznej.
+Ta logika umożliwia użytkownikom dołączenie jak największej liczby walidatorów do jednej **frazy mnemonicznej**, ponieważ korzeń drzewa może być wspólny, a zróżnicowanie może nastąpić na gałęziach. Użytkownik może **wyprowadzić dowolną liczbę kluczy** z frazy mnemonicznej.
 
 ```
-[m / 0]
+      [m / 0]
      /
     /
 [m] - [m / 1]
@@ -90,9 +90,9 @@ Ta logika umożliwia użytkownikom dołączenie jak największej liczby walidato
       [m / 2]
 ```
 
-Każda gałąź jest oddzielona znakiem `/`, więc `m/2` oznacza rozpoczęcie od klucza głównego i podążanie gałęzią 2. Na poniższym schemacie pojedyncza fraza mnemoniczna jest używana do przechowywania trzech kluczy wypłaty, z których każdy ma dwa powiązane walidatory.
+Każda gałąź jest oddzielona znakiem `/`, więc `m/2` oznacza rozpoczęcie od klucza głównego i podążanie gałęzią 2. Klucze walidatora są zgodne z [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334): walidator `i` otrzymuje swój klucz wypłaty pod adresem `m/12381/3600/i/0`, a swój klucz podpisujący pod adresem `m/12381/3600/i/0/0` (12381 identyfikuje krzywą BLS12-381, 3600 to typ monety dla kluczy warstwy konsensusu).
 
-![validator key logic](multiple-keys.png)
+<KeyDerivationDiagram />
 
 ## Dalsza lektura {#further-reading}
 

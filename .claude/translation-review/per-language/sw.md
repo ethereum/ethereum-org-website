@@ -1,5 +1,10 @@
 # Swahili (sw) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: `angalau` (at least) for at-most in attestations inclusion delay, ada za kipaumbele, wathibitishaji plural, minyororo ya vitalu, ukataji, mchepuko. Open: relay Rilei vs wapeanaji, honest as halali.
+
 ## PR #18772 (community-stories.json, 2026-07-10) -- 9.1/10
 - CRIT fixed: passive-voice agency reversal in story-casio: "benki zote zilikataliwa maombi yangu" (banks WERE denied) -> "benki zote zilikataa maombi yangu" (banks denied my applications). Passive constructions are an inversion vector -- check polarity of passive renderings on every sw import.
 - WARN: "took for granted" -> "tulivichukulia poa" (considered them cool) weakens the idiom (story-yamille).
@@ -135,3 +140,54 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: brand `Chain Platform` translated as `Jukwaa la Chain` (L54, L83).
 - Open: "development" `maendeleo` -> `usanidi` (reads as configure/setup), needs native check; "scaling" `kuongeza ukubwa` weaker than dev `kuongeza uwezo`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:828 at most -> at least inversion (`ni angalau dakika moja` -> `si zaidi ya dakika moja`)
+- app-plasma:1186 call = phone call (`Piga simu kwa mkataba wa mhakiki` -> `Ita mkataba wa mhakiki`)
+- page-wallet-descriptions.json:39 multicall = many phones (`simu nyingi (multicall)` -> `miito mingi (multicall)`)
+- app-plasma:115 glossary hyphen (`Sifuri maarifa ya mikono` -> `Sifuri-maarifa ya mikono`)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:33: ETHGlossary `blockchain` = `mnyororo wa vitalu`. `minyororo ya kuzuia` means "chains of blocking/preventing" (trust-wallet) (`minyororo mingi ya kuzuia` -> `minyororo mingi ya vitalu`)
+- page-wallet-descriptions.json:35: Same `blockchain` deviation (gem-wallet) (`minyororo mingi ya kuzuia` -> `minyororo mingi ya vitalu`)
+- page-wallet-descriptions.json:42: Same `blockchain` deviation (edge-wallet) (`minyororo ya kuzuia` -> `minyororo ya vitalu`)
+- page-wallet-descriptions.json:23: ETHGlossary `private key` = `ufunguo wa siri` (ledger) (`funguo zako za faragha` -> `funguo zako za siri`)
+- developers/tutorials/app-plasma/index.md:1186: ETHGlossary `revert` = `tengua`. `hurejesha` reads as "returns" (`hurejesha muamala` -> `hutengua muamala`)
+- developers/tutorials/app-plasma/index.md:22: ETHGlossary `Merkle proof` = `ushahidi wa Merkle` (37 site uses vs 3 of this form) (`kutoa uthibitisho wa Merkle` -> `kutoa ushahidi wa Merkle`)
+- 19 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The new prediction-markets, founders and wallet-description content reads fluently and follows the glossary for brands. The app-plasma retranslation made one meaning reversal and a "phone call" regression, and the wallet descriptions brought in a wrong blockchain term; these need fixing before merge.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `kizuizi` (obstacle) changed to `kitalu` (block) (mint:142)
+
+**Notes:**
+
+- Warnings (heaviest drift): `simu` (phone call) used for RPC calls; `iliyokufuliwa` should be `iliyofuliwa`; private key / metadata / blockchain / function terms differ between files.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 8.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client: "output" rendered `Toleo` (release) at 4 sites, regressing dev's `Matokeo` -> `Matokeo` with concord
+- echidna: noun "assertion" rendered as imperative `thibitisha` at 7 sites (incl. 2 headings), regressing dev's `uthibitisho` -> restored (#96)
+- echidna:282 `Jina tupu` (empty name) -> `Jina pekee` (bare name)
+
+**Open / notes:**
+
+- multi-client: software client as `wateja` (customer) at 6 changed sites plus unchanged L3/L7/L16. Not auto-fixed: ETHGlossary itself sanctions `mteja wa mwafaka` (consensus client) and lists `mteja wa utekelezaji` as an alias for execution client, so there is no single deterministic target. Glossary follow-up: reconcile `kiteja` vs `mteja` across client entries
+- multi-client:61/219 "mapped" -> `-chorwa` (drawn); 250 `matukio` for instances; `kichunguza bloku` vs glossary `kichunguzi cha bloku` -- native call

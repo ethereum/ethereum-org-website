@@ -66,7 +66,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
-- [Documentation](https://docs.infura.io/api)
+- [Documentation](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Cost-effective EVM JSON-RPC provider_**
@@ -77,7 +77,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **NOWNodes - _Full Nodes and Block Explorers._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentation](https://nownodes.gitbook.io/documentation)
+- [Documentation](https://docs.nownodes.io/)
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 
@@ -176,7 +176,6 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [moralis.io](https://moralis.io)
 - [Documentation](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
@@ -210,7 +209,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Documentation](https://www.covalenthq.com/docs/api/)
+- [Documentation](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
@@ -226,5 +225,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials {#related-tutorials}
 
-- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
-- [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Using the DAI token, see how to call contracts function using JavaScript._
+- [Server components and agents for web3 apps](/developers/tutorials/server-components/) _– How to write TypeScript server components that listen to blockchain events and respond with transactions._

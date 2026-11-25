@@ -15,6 +15,7 @@ import {
   MAX_PROMPT_BYTES,
   MAX_SPLIT_DEPTH,
 } from "../../constants"
+import { wrapperTags } from "../shared-patterns"
 import { delay } from "../workflows/utils"
 
 import {
@@ -306,11 +307,13 @@ async function translateNormalizedMarkdown(
   // Step 6: Build placeholderMap from the normalizer tree
   const placeholderMap = buildPlaceholderMap(tree)
 
-  // Step 7: Reconstruct
-  let finalContent = reconstructFromPlaceholders(translatedProse, extractions)
-
-  // Step 8: Restore heading anchor IDs from English source.
-  finalContent = restoreHeadingIds(finalContent, fileContent)
+  // Steps 7-8: Reconstruct, then restore heading anchor IDs from English.
+  let finalContent = restoreNormalizedMarkdown(
+    translatedProse,
+    extractions,
+    normalized,
+    fileContent
+  )
 
   // Step 9: Translate code comments (from normalizer tree)
   const commentNodes = collectCommentNodes(tree)
@@ -473,7 +476,9 @@ function restoreHeadingIds(translated: string, english: string): string {
     if (inFence) continue
     HEADING_RE.lastIndex = 0
     if (HEADING_RE.test(lines[i]) && !lines[i].includes("{#")) {
-      lines[i] = `${lines[i].trimEnd()} ${englishIds[idIndex]}`
+      // Keep a CRLF source's `\r`: trimEnd() would strip it from this line only.
+      const cr = lines[i].endsWith("\r") ? "\r" : ""
+      lines[i] = `${lines[i].trimEnd()} ${englishIds[idIndex]}${cr}`
       idIndex++
     }
   }
@@ -503,9 +508,9 @@ function verifyPlaceholders(normalized: string, translated: string): string[] {
     }
   }
 
-  // Self-closing CODEBLOCK (true code) and COMPONENT (childless)
+  // Self-closing CODEBLOCK (true code), COMPONENT and HTMLTAG (childless)
   const selfClosingRe =
-    /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT)-[a-f0-9]+ \/>/g
+    /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT|HTMLTAG)-[a-f0-9]+ \/>/g
   while ((match = selfClosingRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -542,7 +547,7 @@ function verifyPlaceholders(normalized: string, translated: string): string[] {
  */
 /** Placeholder TYPE -> the extraction-key prefix used in the extractions Map. */
 type WrapperType = "LINK" | "HTMLTAG" | "COMPONENT" | "CODEBLOCK"
-type SelfClosingType = "CODE" | "IMAGE" | "CODEBLOCK" | "COMPONENT"
+type SelfClosingType = "CODE" | "IMAGE" | "CODEBLOCK" | "COMPONENT" | "HTMLTAG"
 
 /**
  * Rebuild the final markup for a single wrapper extraction, given the
@@ -562,22 +567,19 @@ function rebuildWrapper(
       if (!urlMatch) return null
       return `[${translatedText}](${urlMatch[1]})`
     }
-    case "HTMLTAG": {
-      const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
-      const closingMatch = original.match(/<\/(\w+)>/)
-      if (!tagMatch || !closingMatch) return null
-      return `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
-    }
+    case "HTMLTAG":
     case "COMPONENT": {
-      const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
-      const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
-      if (!openingTagMatch || !closingTagMatch) return null
-      return `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedText}</${closingTagMatch[1]}>`
+      const tags = wrapperTags(original)
+      return tags ? `${tags.open}${translatedText}${tags.close}` : null
     }
     case "CODEBLOCK": {
       const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
       if (!fenceMatch) return null
-      return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedText.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
+      // Drop the blank lines around the body but keep its first line's indent.
+      const body = translatedText
+        .replace(/^(?:[ \t]*\r?\n)+/, "")
+        .replace(/(?:\n[ \t\r]*)+$/, "")
+      return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${body}\n${fenceMatch[1]}${fenceMatch[2]}`
     }
   }
 }
@@ -600,7 +602,8 @@ function rebuildWrapper(
 function recoverPlaceholdersByPosition(
   result: string,
   originalTranslated: string,
-  extractions: Map<string, string>
+  extractions: Map<string, string>,
+  sent: string
 ): string {
   const wrapperTypes: WrapperType[] = [
     "LINK",
@@ -613,8 +616,14 @@ function recoverPlaceholdersByPosition(
     "IMAGE",
     "CODEBLOCK",
     "COMPONENT",
+    "HTMLTAG",
   ]
   let recovered = 0
+
+  // Only tokens the model was sent can be missing from its output; one held
+  // inside another extraction (`<hr />` in inline code) never reached it.
+  const missing = (token: string) =>
+    sent.includes(token) && !originalTranslated.includes(token)
 
   // --- Wrapper recovery (open/close tag pairs) ---
   for (const type of wrapperTypes) {
@@ -627,7 +636,7 @@ function recoverPlaceholdersByPosition(
       if (!key.startsWith(prefix)) return
       const hash = key.slice(prefix.length)
       const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
-      if (!originalTranslated.includes(openTag)) unconsumed.push(original)
+      if (missing(openTag)) unconsumed.push(original)
     })
     if (unconsumed.length === 0) continue
 
@@ -682,8 +691,7 @@ function recoverPlaceholdersByPosition(
       const selfCloseRe = new RegExp(
         `^<HTML-PLACEHOLDER-${type}-([A-Za-z0-9]+) />$`
       )
-      if (!selfCloseRe.test(key)) return
-      if (!originalTranslated.includes(key)) unconsumed.push(original)
+      if (selfCloseRe.test(key) && missing(key)) unconsumed.push(original)
     })
     if (unconsumed.length === 0) continue
 
@@ -713,16 +721,35 @@ function recoverPlaceholdersByPosition(
   return result
 }
 
+/**
+ * Model output for normalized prose -> final markdown: placeholders restored
+ * and English heading IDs reattached. The identity sweep runs this exact path.
+ */
+export function restoreNormalizedMarkdown(
+  translatedProse: string,
+  extractions: Map<string, string>,
+  normalized: string,
+  english: string
+): string {
+  return restoreHeadingIds(
+    reconstructFromPlaceholders(translatedProse, extractions, normalized),
+    english
+  )
+}
+
 function reconstructFromPlaceholders(
   translated: string,
-  extractions: Map<string, string>
+  extractions: Map<string, string>,
+  sent: string
 ): string {
   let result = translated
 
   // Block placeholders: replace ALL occurrences with originals.
   // Content-addressed placeholders can appear multiple times when the
   // same inline code/image appears repeatedly (e.g., `base fee` x5).
-  extractions.forEach((original, placeholder) => {
+  // Reverse insertion order: a later pass can capture an earlier placeholder
+  // (inline code `<hr />` holds an HTMLTAG token), so outer expands first.
+  ;[...extractions].reverse().forEach(([placeholder, original]) => {
     if (
       placeholder.startsWith("LINK:") ||
       placeholder.startsWith("HTMLTAG:") ||
@@ -734,108 +761,37 @@ function reconstructFromPlaceholders(
     result = result.split(placeholder).join(original)
   })
 
-  // Wrapper placeholders: LINK
-  // Loop to handle duplicate content-addressed placeholders (same link text+URL)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("LINK:")) return
-    const hash = key.slice(5)
-    const openTag = `<HTML-PLACEHOLDER-LINK-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-LINK-${hash}>`
-    const urlMatch = original.match(/\]\(([^)]+)\)/)
-    if (!urlMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `[${translatedText}](${urlMatch[1]})`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: HTMLTAG
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("HTMLTAG:")) return
-    const hash = key.slice(8)
-    const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
-    const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
-    const closingMatch = original.match(/<\/(\w+)>/)
-    if (!tagMatch || !closingMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: COMPONENT (components with children)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("COMPONENT:")) return
-    const hash = key.slice(10)
-    const openTag = `<HTML-PLACEHOLDER-COMPONENT-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-COMPONENT-${hash}>`
-    const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
-    const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
-    if (!openingTagMatch || !closingTagMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedChildren = result.slice(
-        openIdx + openTag.length,
-        closeIdx
-      )
-      const rebuilt = `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedChildren}</${closingTagMatch[1]}>`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: CODEBLOCK (prose/markdown fences)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("CODEBLOCK:")) return
-    const hash = key.slice(10)
-    const openTag = `<HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
-    const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
-    if (!fenceMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedContent = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedContent.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
+  // Wrapper placeholders, rebuilt around the translated text between them.
+  // Loop per key: content-addressed duplicates share one hash.
+  for (const type of ["LINK", "HTMLTAG", "COMPONENT", "CODEBLOCK"] as const) {
+    extractions.forEach((original, key) => {
+      if (!key.startsWith(`${type}:`)) return
+      const hash = key.slice(type.length + 1)
+      const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
+      const closeTag = `</HTML-PLACEHOLDER-${type}-${hash}>`
+      let openIdx = result.indexOf(openTag)
+      while (openIdx >= 0) {
+        const closeIdx = result.indexOf(closeTag, openIdx)
+        if (closeIdx < 0) break
+        const rebuilt = rebuildWrapper(
+          type,
+          original,
+          result.slice(openIdx + openTag.length, closeIdx)
+        )
+        if (rebuilt === null) break
+        result =
+          result.slice(0, openIdx) +
+          rebuilt +
+          result.slice(closeIdx + closeTag.length)
+        openIdx = result.indexOf(openTag)
+      }
+    })
+  }
 
   // Final pass: positional fallback for tokens the exact-hash passes could not
   // restore because Gemini corrupted the hash (e.g. -> 000000). Only fires when
   // residual/unconsumed counts match per type; otherwise leaves residuals as-is.
-  result = recoverPlaceholdersByPosition(result, translated, extractions)
+  result = recoverPlaceholdersByPosition(result, translated, extractions, sent)
 
   return result
 }

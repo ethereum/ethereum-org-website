@@ -1,5 +1,3 @@
-import { setRequestLocale } from "next-intl/server"
-
 import type { Lang } from "@/lib/types"
 
 import PageHero from "@/components/Hero/PageHero"
@@ -17,8 +15,6 @@ const Page = async (props: { params: Promise<{ locale: string }> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const { contributors } = await getAppPageContributorInfo(
     "contributing/translation-program/translatathon/leaderboard",
     locale as Lang
@@ -33,7 +29,6 @@ const Page = async (props: { params: Promise<{ locale: string }> }) => {
       <PageHero
         breadcrumbs={{
           slug: "/contributing/translation-program/translatathon/leaderboard",
-          startDepth: 1,
         }}
         heroImg={heroImg}
         title="2025 Ethereum.org Translatathon"
@@ -59,8 +54,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   return await getMetadata({
     locale,

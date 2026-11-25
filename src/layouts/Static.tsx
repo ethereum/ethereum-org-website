@@ -3,6 +3,7 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 import ContentFeedback from "@/components/ContentFeedback"
 import Contributors from "@/components/Contributors"
+import { mdxDiagramComponents } from "@/components/Diagrams/mdx-diagram-components"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FileContributors from "@/components/FileContributors"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
@@ -44,6 +45,7 @@ export const staticComponents = {
   TranslationChartImage,
   ListenToPlayer,
   WhitepaperBridge,
+  ...mdxDiagramComponents,
 }
 
 type StaticLayoutProps = ChildOnlyProp &
@@ -74,6 +76,7 @@ export const StaticLayout = ({
     <div dir={contentNotTranslated ? "ltr" : "unset"}>
       {isGuidesHub ? (
         <HubHero
+          breadcrumbs={{ slug }}
           heroImg={guideHeroImg}
           header={frontmatter.title}
           description={frontmatter.description}

@@ -1,5 +1,10 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.3/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, checkpoint, builder, deploy (tainat), accounts contract regression (anubandh). Open: kadam vs charan, dashed rendered as dharashayi, derive rendered as prapt karen.
+
 (Earlier findings from PR #17101 live in known-patterns.md.)
 
 ## PR #18772 (community-stories.json, 2026-07-10) -- 8.2/10
@@ -153,3 +158,44 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: glossary `staker` -> `स्टेकर/स्टेकरों` (3x), `peer` -> `पीयरों` (L17).
 - Open: nukta `फ़ॉसेट` (32x) vs glossary `faucet` = `फॉसेट`; `फ़ॉसेट` is an alias of `testnet faucet`, upstream inconsistency. L122 ब्लॉकचेन gender `करता` -> `करती`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security: `कॉन्ट्रैक्ट` -> `अनुबंध` restored (141 sites; `ओपनजेपेलिन कॉन्ट्रैक्ट्स` kept)
+- app-plasma: `लेनदेन` -> `लेन-देन` restored (56 sites; `लेनदेन हैश` kept)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:442: `oracle` is spelled two ways in one paragraph. The glossary form is `ऑरेकल` (16 other sites use it). (`"ओरेकल समस्या"` -> `"ऑरेकल समस्या"`)
+- developers/docs/smart-contracts/security/index.md:442: Second instance of the same oracle spelling (`ब्लॉकचेन ओरेकल` -> `ब्लॉकचेन ऑरेकल`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and structurally clean, and the new prediction-markets and wallet copy is accurate. The score is pulled down by two retranslations that went back to non-glossary forms: the security page's contract term (the third time this has happened) and app-plasma's transaction term.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Glossary itself splits एथेरियम (Foundation) and इथेरियम.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna frontmatter `author` transliterated `ट्रेलऑफ़बिट्स`; dev and all other hi Trailofbits tutorials use Latin -> `Trailofbits`
+
+**Open / notes:**
+
+- echidna:747 relative clause attaches "returns int256" to transactions instead of the function -- native call

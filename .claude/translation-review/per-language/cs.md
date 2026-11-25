@@ -1,5 +1,10 @@
 # Czech (cs) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.8/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: verkle inline code, glossary (fork choice, kontrakt, prioritni poplatek, ekvivokace, vystup, hledac, stvrzenka replacing ucenka). Open: gas/plyn policy, validator client word order, head block.
+
 > **PR:** #18344 (latest/ builder blog, 3 posts)
 > **Date:** 2026-06-03
 > **Quality Score:** 8.8/10
@@ -159,3 +164,42 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `[EVM-based Chains]` -> `[Řetězce založené na EVM]` (regression to English).
 - Open: `[Testnet Faucet]` label English (glossary `testnetový faucet`).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- scam-token-tricks:441 typo (`není podezřelná` -> `není podezřelá`)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:4,5,7,9,10,12,13,14,17,18,26,27,32,34,35: Differs from ETHGlossary `self-custody` = `vlastní správa` (a translate term, high confidence). The phrase appears 18 times, only in this new file. Elsewhere cs uses `s vlastní správou` 14 times (`s vlastním držením` -> `s vlastní správou`)
+- developers/tutorials/app-plasma/index.md:970: Differs from ETHGlossary `verifier` = `ověřovatel` (translate term). The same file uses `ověřovatel` at lines 1158, 1177 and 1190
+- 11 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Czech prose is fluent and structurally clean, with no build- or navigation-breaking defects. The main fixes are the self-custody term deviation in the new wallet-descriptions file, three English founders tags, and one misspelled word.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `limit plynu` changed to `limit gasu` (mint, 4x; prose and code comments)
+
+**Notes:**
+
+- Warnings: NFT gender drifts between masculine and neuter across the NFT series.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:605 `odstranena` -> `odstraněna`
+- multi-client:23 case agreement `použitím` -> `použití`
+- multi-client:35 `v frameworcích` -> `ve frameworcích`; "a major reason" overstated -> `jeden z hlavních důvodů`

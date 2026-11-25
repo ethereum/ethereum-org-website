@@ -6,6 +6,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -17,7 +18,6 @@ export default async function OrganizationsPageJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-organizations")
-  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, "/organizations/")
 
@@ -50,23 +50,7 @@ export default async function OrganizationsPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: tCommon("home"),
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: tCommon("organizations"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "organizations"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
       },

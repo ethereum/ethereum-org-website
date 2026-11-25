@@ -141,6 +141,7 @@ const CollectiblesCurrentYear = ({
   address,
 }: CollectiblesCurrentYearProps) => {
   const t = useTranslations("page-collectibles")
+  const tCommon = useTranslations("common")
 
   const socialBadges = React.useMemo(
     () => badges.filter((b) => b.category === "Events/Calls"),
@@ -187,13 +188,6 @@ const CollectiblesCurrentYear = ({
     () =>
       badges.find(
         (b) => b.category === "Design" && b.name.startsWith("User testing")
-      ),
-    [badges]
-  )
-  const gitpoapBadge = React.useMemo(
-    () =>
-      badges.find(
-        (b) => b.category === "Github" && b.name.startsWith("GitPOAP")
       ),
     [badges]
   )
@@ -369,32 +363,6 @@ const CollectiblesCurrentYear = ({
               </HighlightCardFooter>
             </HighlightCard>
           )}
-          {/* GitPOAP */}
-          {gitpoapBadge && (
-            <HighlightCard>
-              <HighlightCardBody
-                className={cn(
-                  address && !gitpoapBadge.owned && "[&_img]:grayscale"
-                )}
-                src={gitpoapBadge.image}
-                alt="GitPOAP badge" // TODO: extract intl
-                href={gitpoapBadge.link}
-              >
-                <h4 className="text-lg">
-                  {t("page-collectibles-code-content-gitpoap-title")}
-                </h4>
-                <p>{t("page-collectibles-code-content-gitpoap-desc")}</p>
-                <CheckList>
-                  <CheckItem owned={gitpoapBadge.owned}>
-                    {t("page-collectibles-code-content-gitpoap-1pr")}
-                  </CheckItem>
-                </CheckList>
-              </HighlightCardBody>
-              <HighlightCardFooter href="https://github.com/ethereum/ethereum-org-website/issues">
-                {t("page-collectibles-get-started")}
-              </HighlightCardFooter>
-            </HighlightCard>
-          )}
         </HighlightCardGrid>
       </div>
 
@@ -446,7 +414,7 @@ const CollectiblesCurrentYear = ({
                 </CheckList>
               </HighlightCardBody>
               <HighlightCardFooter href="/contributing/translation-program/">
-                {t("common:learn-more")}
+                {tCommon("learn-more")}
               </HighlightCardFooter>
             </HighlightCard>
           </HighlightCardGrid>

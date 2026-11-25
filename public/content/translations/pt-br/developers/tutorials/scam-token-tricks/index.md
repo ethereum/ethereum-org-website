@@ -2,7 +2,7 @@
 title: "Alguns truques usados por tokens fraudulentos e como detectá-los"
 description: "Neste tutorial, dissecamos um token fraudulento para ver alguns dos truques que os golpistas usam, como eles os implementam e como podemos detectá-los."
 author: Ori Pomerantz
-tags: ["fraude", "Solidity", "erc-20", "JavaScript", "TypeScript"]
+tags: ["golpe", "Solidity", "erc-20", "JavaScript", "TypeScript"]
 skill: intermediate
 breadcrumb: Truques de tokens fraudulentos
 published: 2023-09-15
@@ -15,7 +15,7 @@ Neste tutorial, dissecamos [um token fraudulento](https://etherscan.io/token/0xb
 
 Um dos usos mais comuns do Ethereum é para um grupo criar um token negociável, em certo sentido, sua própria moeda. No entanto, onde quer que existam casos de uso legítimos que tragam valor, também existem criminosos que tentam roubar esse valor para si mesmos.
 
-Você pode ler mais sobre este assunto [em outro lugar no ethereum.org](/guides/how-to-id-scam-tokens/) a partir da perspectiva do usuário. Este tutorial se concentra em dissecar um token fraudulento para ver como ele é feito e como pode ser detectado.
+Você pode ler mais sobre este assunto [em outras partes do ethereum.org](/guides/how-to-id-scam-tokens/) a partir da perspectiva do usuário. Este tutorial se concentra em dissecar um token fraudulento para ver como isso é feito e como pode ser detectado.
 
 ### Como sei que o wARB é um golpe? {#warb-scam}
 
@@ -37,9 +37,9 @@ Vamos comparar este token com tokens ERC-20 legítimos. Se você não está fami
 
 ### Constantes para endereços privilegiados {#constants-for-privileged-addresses}
 
-Os contratos às vezes precisam de endereços privilegiados. Contratos que são projetados para uso a longo prazo permitem que algum endereço privilegiado altere esses endereços, por exemplo, para permitir o uso de um novo contrato multisig. Existem várias maneiras de fazer isso.
+Os contratos às vezes precisam de endereços privilegiados. Contratos que são projetados para uso a longo prazo permitem que algum endereço privilegiado altere esses endereços, por exemplo, para permitir o uso de um novo contrato de multisig. Existem várias maneiras de fazer isso.
 
-O [contrato de token `HOP`](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) usa o padrão [`Ownable`](https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable). O endereço privilegiado é mantido no armazenamento, em um campo chamado `_owner` (veja o terceiro arquivo, `Ownable.sol`).
+O [contrato de token `HOP`](https://etherscan.io/address/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc#code) usa o padrão [`Ownable`](https://docs.openzeppelin.com/contracts/3.x/access-control#ownership-and-ownable). O endereço privilegiado é mantido no armazenamento, em um campo chamado `_owner` (veja o terceiro arquivo, `Ownable.sol`).
 
 ```solidity
 abstract contract Ownable is Context {
@@ -62,7 +62,7 @@ O [contrato de token `ARB`](https://etherscan.io/address/0xad0c361ef902a7d9851ca
     }
 ```
 
-Em contraste, o contrato `wARB` tem um `contract_owner` codificado de forma rígida (hardcoded).
+Em contraste, o contrato `wARB` tem um `contract_owner` codificado de forma rígida (hard coded).
 
 ```solidity
 contract WrappedArbitrum is Context, IERC20 {
@@ -114,7 +114,7 @@ A parte suspeita é:
 
 Se o proprietário do contrato envia tokens, por que o evento `Transfer` mostra que eles vêm de `deployer`?
 
-No entanto, há um problema mais importante. Quem chama essa função `_transfer`? Ela não pode ser chamada de fora, pois está marcada como `internal`. E o código que temos não inclui nenhuma chamada para `_transfer`. Claramente, ela está aqui como uma isca.
+No entanto, há uma questão mais importante. Quem chama essa função `_transfer`? Ela não pode ser chamada de fora, pois está marcada como `internal`. E o código que temos não inclui nenhuma chamada para `_transfer`. Claramente, ela está aqui como uma isca.
 
 ```solidity
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
@@ -191,7 +191,7 @@ Essa restrição faz todo o sentido, porque não gostaríamos que contas aleató
 }
 ```
 
-Uma função para transferir de uma conta de pool para uma matriz de destinatários uma matriz de valores faz todo o sentido. Existem muitos casos de uso em que você desejará distribuir tokens de uma única fonte para vários destinos, como folha de pagamento, airdrops, etc. É mais barato (em gás) fazer isso em uma única transação em vez de emitir várias transações, ou até mesmo chamar o ERC-20 várias vezes de um contrato diferente como parte da mesma transação.
+Uma função para transferir de uma conta de pool para um array de destinatários um array de valores faz todo o sentido. Existem muitos casos de uso em que você desejará distribuir tokens de uma única fonte para vários destinos, como folha de pagamento, airdrops, etc. É mais barato (em gás) fazer em uma única transação em vez de emitir várias transações, ou mesmo chamar o ERC-20 várias vezes de um contrato diferente como parte da mesma transação.
 
 No entanto, `dropNewTokens` não faz isso. Ela emite [eventos `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1), mas na verdade não transfere nenhum token. Não há razão legítima para confundir aplicativos offchain informando-os sobre uma transferência que não aconteceu de verdade.
 
@@ -206,7 +206,7 @@ Além disso, a funcionalidade não está relacionada a `approve`.
         address[] memory holders)
 ```
 
-Esta função é chamada com uma matriz de endereços para os detentores do token.
+Esta função é chamada com um array de endereços para os detentores do token.
 
 ```solidity
     public approver() {
@@ -227,7 +227,7 @@ O modificador `approver()` garante que apenas `contract_owner` tenha permissão 
 
 ```
 
-Para cada endereço de detentor, a função move todo o saldo do detentor para o endereço `0x00...01`, efetivamente queimando-o (a verdadeira função `burn` no padrão também altera o suprimento total e transfere os tokens para `0x00...00`). Isso significa que `contract_owner` pode remover os ativos de qualquer usuário. Isso não parece um recurso que você desejaria em um token de governança.
+Para cada endereço de detentor, a função move todo o saldo do detentor para o endereço `0x00...01`, efetivamente queimando-o (a verdadeira `burn` no padrão também altera o fornecimento total e transfere os tokens para `0x00...00`). Isso significa que `contract_owner` pode remover os ativos de qualquer usuário. Isso não parece um recurso que você desejaria em um token de governança.
 
 ### Problemas de qualidade de código {#code-quality-issues}
 
@@ -235,9 +235,9 @@ Esses problemas de qualidade de código não _provam_ que este código é um gol
 
 #### A função `mount` {#the-mount-function}
 
-Embora não seja especificado [no padrão](https://eips.ethereum.org/EIPS/eip-20), de modo geral, a função que cria novos tokens é chamada de [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+Embora não seja especificado no [padrão](https://eips.ethereum.org/EIPS/eip-20), de modo geral, a função que cria novos tokens é chamada de [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
-Se olharmos no construtor `wARB`, vemos que a função de cunhagem (mint) foi renomeada para `mount` por algum motivo, e é chamada cinco vezes com um quinto do suprimento inicial, em vez de uma vez para o valor total por uma questão de eficiência.
+Se olharmos no construtor `wARB`, vemos que a função de cunhagem foi renomeada para `mount` por algum motivo, e é chamada cinco vezes com um quinto do fornecimento inicial, em vez de uma vez para o valor total por eficiência.
 
 ```solidity
     constructor () public {
@@ -262,7 +262,7 @@ A própria função `mount` também é suspeita.
         require(msg.sender == contract_owner, "ERC20: mint to the zero address");
 ```
 
-Olhando para o `require`, vemos que apenas o proprietário do contrato tem permissão para cunhar. Isso é legítimo. Mas a mensagem de erro deveria ser _only owner is allowed to mint_ (apenas o proprietário tem permissão para cunhar) ou algo parecido. Em vez disso, é a irrelevante _ERC20: mint to the zero address_ (ERC20: cunhar para o endereço zero). O teste correto para cunhar para o endereço zero é `require(account != address(0), "<error message>")`, o que o contrato nunca se preocupa em verificar.
+Olhando para o `require`, vemos que apenas o proprietário do contrato tem permissão para cunhar. Isso é legítimo. Mas a mensagem de erro deveria ser _only owner is allowed to mint_ (apenas o proprietário tem permissão para cunhar) ou algo parecido. Em vez disso, é a irrelevante _ERC20: mint to the zero address_ (ERC20: cunhar para o endereço zero). O teste correto para cunhagem para o endereço zero é `require(account != address(0), "<error message>")`, o que o contrato nunca se preocupa em verificar.
 
 ```solidity
         _totalSupply = _totalSupply.add(amount);
@@ -311,7 +311,7 @@ Existem alguns truques que podemos usar para identificar que um token ERC-20 é 
 
 ## Eventos `Approval` suspeitos {#suspicious-approval-events}
 
-Os [eventos `Approval`](https://eips.ethereum.org/EIPS/eip-20#approval) só devem acontecer com uma solicitação direta (em contraste com os [eventos `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1) que podem acontecer como resultado de uma permissão). [Veja a documentação da Solidity](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) para uma explicação detalhada desse problema e por que as solicitações precisam ser diretas, em vez de mediadas por um contrato.
+[Eventos `Approval`](https://eips.ethereum.org/EIPS/eip-20#approval) só devem acontecer com uma solicitação direta (em contraste com os [eventos `Transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer-1) que podem acontecer como resultado de uma permissão). [Veja a documentação da linguagem Solidity](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) para uma explicação detalhada desse problema e por que as solicitações precisam ser diretas, em vez de mediadas por um contrato.
 
 Isso significa que os eventos `Approval` que aprovam gastos de uma [conta de propriedade externa](/developers/docs/accounts/#types-of-account) devem vir de transações que se originam nessa conta e cujo destino é o contrato ERC-20. Qualquer outro tipo de aprovação de uma conta de propriedade externa é suspeito.
 
@@ -379,7 +379,7 @@ const isContract = async (addr: Address): boolean =>
   await client.getBytecode({ address: addr })
 ```
 
-Nosso algoritmo é aplicável apenas a contas de propriedade externa. Se houver algum bytecode retornado por `client.getBytecode`, isso significa que este é um contrato e devemos simplesmente ignorá-lo.
+Nosso algoritmo é aplicável apenas a contas de propriedade externa. Se houver algum bytecode retornado por `client.getBytecode`, isso significa que este é um contrato e devemos apenas ignorá-lo.
 
 Se você não usou TypeScript antes, a definição da função pode parecer um pouco estranha. Não dizemos apenas que o primeiro (e único) parâmetro é chamado `addr`, mas também que é do tipo `Address`. Da mesma forma, a parte `: boolean` diz ao TypeScript que o valor de retorno da função é um booleano.
 
@@ -420,7 +420,7 @@ Se a aprovação vier de uma conta de propriedade externa, obtenha a transação
 if (owner.toLowerCase() != txn.from.toLowerCase()) return ev
 ```
 
-Não podemos simplesmente verificar a igualdade de strings porque os endereços são hexadecimais, então eles contêm letras. Às vezes, por exemplo em `txn.from`, essas letras são todas minúsculas. Em outros casos, como `ev.args._owner`, o endereço está em [letras maiúsculas e minúsculas para identificação de erros](https://eips.ethereum.org/EIPS/eip-55).
+Não podemos apenas verificar a igualdade de strings porque os endereços são hexadecimais, então eles contêm letras. Às vezes, por exemplo em `txn.from`, essas letras são todas minúsculas. Em outros casos, como `ev.args._owner`, o endereço está em [letras maiúsculas e minúsculas para identificação de erros](https://eips.ethereum.org/EIPS/eip-55).
 
 Mas se a transação não for do proprietário, e esse proprietário for de propriedade externa, então temos uma transação suspeita.
 
@@ -447,9 +447,9 @@ const testResults = (await Promise.all(testPromises)).filter((x) => x != null)
 console.log(testResults)
 ```
 
-[Uma função `async`](https://www.w3schools.com/js/js_async.asp) retorna um objeto `Promise`. Com a sintaxe comum, `await x()`, esperamos que esse `Promise` seja cumprido antes de continuarmos o processamento. Isso é simples de programar e acompanhar, mas também é ineficiente. Enquanto esperamos que o `Promise` de um evento específico seja cumprido, já podemos começar a trabalhar no próximo evento.
+[Uma função `async`](https://www.w3schools.com/js/js_async.asp) retorna um objeto `Promise`. Com a sintaxe comum, `await x()`, esperamos que esse `Promise` seja cumprido antes de continuarmos o processamento. Isso é simples de programar e seguir, mas também é ineficiente. Enquanto esperamos que o `Promise` de um evento específico seja cumprido, já podemos começar a trabalhar no próximo evento.
 
-Aqui usamos [`map`](https://www.w3schools.com/jsref/jsref_map.asp) para criar uma matriz de objetos `Promise`. Em seguida, usamos [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/) para esperar que todas essas promessas sejam resolvidas. Em seguida, usamos [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp) nesses resultados para remover os eventos não suspeitos.
+Aqui usamos [`map`](https://www.w3schools.com/jsref/jsref_map.asp) para criar um array de objetos `Promise`. Em seguida, usamos [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/) para esperar que todas essas promessas sejam resolvidas. Em seguida, usamos [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp) nesses resultados para remover os eventos não suspeitos.
 
 ### Eventos `Transfer` suspeitos {#suspicious-transfer-events}
 

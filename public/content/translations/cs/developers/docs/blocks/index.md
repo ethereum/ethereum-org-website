@@ -12,12 +12,11 @@ Bloky jsou téma velmi přívětivé pro začátečníky. Ale abychom vám pomoh
 
 ## Proč bloky? {#why-blocks}
 
-Abychom zajistili, že všichni účastníci v [síti Ethereum](/) udržují synchronizovaný stav a shodnou se na přesné historii transakcí, seskupujeme transakce do bloků. To znamená, že desítky (nebo stovky) transakcí jsou potvrzeny, odsouhlaseny a synchronizovány najednou.
+Abychom zajistili, že všichni účastníci v [síti Etherea](/) udržují synchronizovaný stav a shodnou se na přesné historii transakcí, seskupujeme transakce do bloků. To znamená, že desítky (nebo stovky) transakcí jsou potvrzeny, odsouhlaseny a synchronizovány najednou.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Diagram upraven z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Rozložením potvrzení v čase dáváme všem účastníkům sítě dostatek času k dosažení konsensu: i když k požadavkům na transakce dochází desítkykrát za sekundu, bloky jsou na Ethereu vytvářeny a potvrzovány pouze jednou za dvanáct sekund.
+Díky časovým rozestupům mezi potvrzeními dáváme všem účastníkům sítě dostatek času na dosažení konsensu: i když k požadavkům na transakce dochází desítkykrát za sekundu, bloky jsou na Ethereu vytvářeny a potvrzovány pouze jednou za dvanáct sekund.
 
 ## Jak bloky fungují {#how-blocks-work}
 

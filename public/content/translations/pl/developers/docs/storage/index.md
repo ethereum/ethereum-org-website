@@ -142,7 +142,7 @@ Oparte na dowodzie stawki (PoS):
 **Arweave – _Arweave to platforma dStorage do przechowywania danych._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Dokumentacja](https://docs.arweave.org/info/)
+- [Dokumentacja](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs – _Züs to platforma dStorage oparta na dowodzie stawki (PoS) z shardingiem i blobberami._**

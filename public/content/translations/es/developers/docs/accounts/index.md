@@ -26,14 +26,14 @@ Ambos tipos de cuentas tienen la capacidad de:
 
 **De propiedad externa**
 
-- Crear una cuenta no cuesta nada
+- Crear una cuenta no tiene costo
 - Puede iniciar transacciones
-- Las transacciones entre cuentas de propiedad externa solo pueden ser transferencias de ETH o tokens
+- Las transacciones entre cuentas de propiedad externa solo pueden ser transferencias de ETH, a menos que el destinatario haya delegado al código del contrato (consulte `codeHash` a continuación)
 - Compuesta por un par de claves criptográficas: claves públicas y privadas que controlan las actividades de la cuenta
 
 **De contrato**
 
-- Crear un contrato tiene un costo porque se utiliza el almacenamiento de la red
+- Crear un contrato tiene un costo porque está utilizando el almacenamiento de la red
 - Solo puede enviar mensajes en respuesta a la recepción de una transacción
 - Las transacciones de una cuenta externa a una cuenta de contrato pueden activar código que puede ejecutar muchas acciones diferentes, como transferir tokens o incluso crear un nuevo contrato
 - Las cuentas de contrato no tienen claves privadas. En su lugar, están controladas por la lógica del código del contrato inteligente
@@ -42,13 +42,12 @@ Ambos tipos de cuentas tienen la capacidad de:
 
 Las cuentas de Ethereum tienen cuatro campos:
 
-- `nonce`: un contador que indica el número de transacciones enviadas desde una cuenta de propiedad externa o el número de contratos creados por una cuenta de contrato. Solo se puede ejecutar una transacción con un nonce determinado para cada cuenta, lo que protege contra ataques de repetición en los que las transacciones firmadas se transmiten y vuelven a ejecutar repetidamente.
-- `balance`: la cantidad de Wei que posee esta dirección. Wei es una denominación de ETH y hay 1e+18 Wei por ETH.
-- `codeHash`: este hash se refiere al _código_ de una cuenta en la Máquina Virtual de Ethereum (EVM). Las cuentas de contrato tienen fragmentos de código programados que pueden realizar diferentes operaciones. Este código de la EVM se ejecuta si la cuenta recibe una llamada de mensaje. No se puede cambiar, a diferencia de los otros campos de la cuenta. Todos estos fragmentos de código están contenidos en la base de datos de estado bajo sus hashes correspondientes para su posterior recuperación. Este valor hash se conoce como codeHash. Para las cuentas de propiedad externa, el campo codeHash es el hash de una cadena vacía.
-- `storageRoot`: a veces conocido como hash de almacenamiento. Un hash de 256 bits del nodo raíz de un [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) que codifica el contenido de almacenamiento de la cuenta (un mapeo entre valores enteros de 256 bits), codificado en el trie como un mapeo desde el hash Keccak-256 de las claves enteras de 256 bits a los valores enteros de 256 bits codificados en Prefijo de longitud recursiva (RLP). Este trie codifica el hash del contenido de almacenamiento de esta cuenta y está vacío de forma predeterminada.
+- `nonce`: un contador que indica el número de transacciones enviadas desde una cuenta de propiedad externa o, para una cuenta de contrato, uno más que el número de contratos que ha creado (los nonces de contrato comienzan en 1, según la [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Cada autorización de la [EIP-7702](/roadmap/pectra/7702/) que se aplica también incrementa el nonce de la cuenta autorizadora. Solo se puede ejecutar una transacción con un nonce determinado para cada cuenta, lo que protege contra ataques de repetición en los que las transacciones firmadas se transmiten y vuelven a ejecutar repetidamente.
+- `balance`: el número de Wei que posee esta dirección. Wei es una denominación de ETH y hay 1e+18 Wei por ETH.
+- `codeHash`: este hash se refiere al _código_ de una cuenta en la Máquina Virtual de Ethereum (EVM). Las cuentas de contrato tienen fragmentos de código programados que pueden realizar diferentes operaciones. Este código de la EVM se ejecuta si la cuenta recibe una llamada de mensaje. El código de un contrato no se puede cambiar una vez que se implementa, a diferencia de los otros campos de la cuenta. Todos estos fragmentos de código están contenidos en la base de datos de estado bajo sus hashes correspondientes para su posterior recuperación. Este valor hash se conoce como codeHash. Para las cuentas de propiedad externa, el campo codeHash es el hash de una cadena vacía, a menos que la cuenta haya delegado a un contrato inteligente con la [EIP-7702](/roadmap/pectra/7702/). El código de la cuenta es entonces un indicador de delegación (`0xef0100` seguido de la dirección del contrato), que la cuenta puede cambiar o borrar con una nueva autorización.
+- `storageRoot`: a veces conocido como hash de almacenamiento. Un hash de 256 bits del nodo raíz de un [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) que codifica el contenido de almacenamiento de la cuenta (un mapeo entre valores enteros de 256 bits), codificado en el trie como un mapeo desde el hash Keccak-256 de las claves enteras de 256 bits a los valores enteros de 256 bits codificados con el Prefijo de longitud recursiva (RLP). Este trie codifica el hash del contenido de almacenamiento de esta cuenta y está vacío de forma predeterminada.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Cuentas de propiedad externa y pares de claves {#externally-owned-accounts-and-key-pairs}
 

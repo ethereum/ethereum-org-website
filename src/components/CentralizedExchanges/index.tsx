@@ -17,12 +17,12 @@ import Select from "../Select"
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
 
 const ListContainer = (props: ChildOnlyProp) => (
-  <div className="mt-16 flex flex-col gap-4" {...props} />
+  <div className="mt-16 flex w-full flex-col gap-4 md:flex-1" {...props} />
 )
 
 const ResultsContainer = (props: ChildOnlyProp) => (
   <div
-    className="flex w-full max-w-screen-md flex-wrap justify-center md:flex-nowrap first:md:me-6"
+    className="flex w-full max-w-screen-md flex-wrap justify-center gap-x-8 md:flex-nowrap"
     {...props}
   />
 )
@@ -77,8 +77,12 @@ const CentralizedExchanges = ({
     hasSelectedCountry,
     placeholderString,
     hasExchangeResults,
+    hasP2pResults,
     filteredExchanges,
+    filteredP2p,
   } = useCentralizedExchanges()
+
+  const hasAnyResults = hasExchangeResults || hasP2pResults
 
   const lastUpdated = getLocaleTimestamp(locale as Lang, lastDataUpdateDate)
 
@@ -97,7 +101,7 @@ const CentralizedExchanges = ({
         />
       </div>
       {/* No results */}
-      {hasSelectedCountry && !hasExchangeResults && (
+      {hasSelectedCountry && !hasAnyResults && (
         <ResultsContainer>
           <NoResults>
             {t("page-get-eth-exchanges-no-exchanges-or-wallets")}
@@ -105,27 +109,39 @@ const CentralizedExchanges = ({
         </ResultsContainer>
       )}
       {/* Has results */}
-      {hasExchangeResults && (
+      {hasAnyResults && (
         <>
           <ResultsContainer>
             <ListContainer>
               <h3 className="text-xl md:text-2xl">
                 {t("page-get-eth-exchanges-header-exchanges")}
               </h3>
-              {hasExchangeResults && (
+              {hasExchangeResults ? (
                 <SuccessContainer>
                   <p className="text-body-medium">
                     {t("page-get-eth-exchanges-success-exchange")}
                   </p>
                   <CardList items={filteredExchanges} />
                 </SuccessContainer>
-              )}
-              {!hasExchangeResults && (
+              ) : (
                 <NoResultsSingle>
                   {t("page-get-eth-exchanges-no-exchanges")}
                 </NoResultsSingle>
               )}
             </ListContainer>
+            {hasP2pResults && (
+              <ListContainer>
+                <h3 className="text-xl md:text-2xl">
+                  {t("page-get-eth-exchanges-header-p2p")}
+                </h3>
+                <SuccessContainer>
+                  <p className="text-body-medium">
+                    {t("page-get-eth-exchanges-success-p2p")}
+                  </p>
+                  <CardList items={filteredP2p} />
+                </SuccessContainer>
+              </ListContainer>
+            )}
           </ResultsContainer>
           <p className="mt-16 max-w-screen-lg text-body-medium">
             {t("page-get-eth-exchanges-disclaimer")}{" "}

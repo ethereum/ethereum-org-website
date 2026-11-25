@@ -1,6 +1,7 @@
 /**
  * Trigger.dev scheduled tasks for data fetching.
  *
+ * Monthly tasks run on the 1st at midnight UTC.
  * Weekly tasks run on Sundays at midnight UTC.
  * Daily tasks run at midnight UTC.
  * Hourly tasks run every hour.
@@ -42,15 +43,24 @@ import { KEYS, set } from "./storage"
 // Per-task overrides for the config-wide defaults in trigger.config.ts
 interface TaskOverrides {
   maxDuration?: number
+  retry?: { maxAttempts: number }
 }
 
 // Task definition: storage key + fetch function + optional runtime overrides
 type TaskDef = [string, () => Promise<unknown>, TaskOverrides?]
 
+const MONTHLY: TaskDef[] = [
+  // ~315GiB BigQuery scan: monthly with no retry stays inside the 1TiB free tier
+  [
+    KEYS.ACCOUNT_HOLDERS,
+    fetchAccountHolders,
+    { maxDuration: 900, retry: { maxAttempts: 1 } },
+  ],
+]
+
 const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
 const DAILY: TaskDef[] = [
-  [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
   [KEYS.BLOB_STATS, fetchBlobStats],
   [KEYS.COLLECTIBLES, fetchCollectibles],
@@ -103,18 +113,26 @@ function createDataTask([key, fetchFn, overrides]: TaskDef) {
   })
 }
 
+const monthlyFetchTasks = MONTHLY.map(createDataTask)
 const weeklyFetchTasks = WEEKLY.map(createDataTask)
 const dailyFetchTasks = DAILY.map(createDataTask)
 const hourlyFetchTasks = HOURLY.map(createDataTask)
 
 // Must export for trigger.dev to discover
 export const allFetchTasks = [
+  ...monthlyFetchTasks,
   ...weeklyFetchTasks,
   ...dailyFetchTasks,
   ...hourlyFetchTasks,
 ]
 
 // ─── Scheduled orchestrators ───
+export const monthlyTask = schedules.task({
+  id: "monthly-data-fetch",
+  cron: "0 0 1 * *",
+  run: () => Promise.all(monthlyFetchTasks.map((t) => t.trigger())),
+})
+
 export const weeklyTask = schedules.task({
   id: "weekly-data-fetch",
   cron: "0 0 * * 0", // Sundays at midnight UTC
@@ -133,26 +151,25 @@ export const hourlyTask = schedules.task({
   run: () => Promise.all(hourlyFetchTasks.map((t) => t.trigger())),
 })
 
-// ─── Global failure handler → Sentry + Discord ───
+// ─── Global failure handler → Sentry + Mattermost ───
 tasks.onFailure(async ({ ctx, error }) => {
   Sentry.captureException(error, {
     tags: { module: "data-layer" },
     extra: { taskId: ctx.task.id },
   })
 
-  const webhookUrl = process.env.DISCORD_WEBHOOK_URL
+  const webhookUrl = process.env.MATTERMOST_ALERTS_WEBHOOK_URL
   if (!webhookUrl) return
 
   await fetch(webhookUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      embeds: [
+      attachments: [
         {
           title: `Data Fetch Failed: ${ctx.task.id}`,
-          color: 0xff0000,
-          description: String(error).slice(0, 2000),
-          timestamp: new Date().toISOString(),
+          color: "#ff0000",
+          text: String(error).slice(0, 2000),
         },
       ],
     }),

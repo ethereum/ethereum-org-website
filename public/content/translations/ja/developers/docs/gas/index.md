@@ -11,20 +11,19 @@ lang: ja
 
 このページをよりよく理解するために、まずは[トランザクション](/developers/docs/transactions/)と[EVM](/developers/docs/evm/)について読んでおくことをお勧めします。
 
-## ガスとは？ {#what-is-gas}
+## ガスとは何ですか？ {#what-is-gas}
 
 ガスとは、イーサリアム・ネットワーク上で特定の操作を実行するために必要な計算量の単位を指します。
 
-イーサリアムの各トランザクションを実行するには計算リソースが必要であるため、イーサリアムがスパムに対して脆弱にならず、無限の計算ループに陥らないようにするために、そのリソースに対する支払いを行う必要があります。計算に対する支払いは、ガス代という形で行われます。
+イーサリアムの各トランザクションを実行するには計算リソースが必要であるため、イーサリアムがスパムに対して脆弱にならず、無限の計算ループに陥らないようにするために、それらのリソースに対して支払いを行う必要があります。計算に対する支払いは、ガス代という形で行われます。
 
 ガス代は、**ある操作を行うために使用されたガス量に、ガス1単位あたりのコストを掛けたもの**です。この手数料は、トランザクションの成功・失敗に関わらず支払われます。
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)から引用した図_
+<GasEvmDiagram />
 
-ガス代は、イーサリアムのネイティブ通貨であるイーサ (ETH) で支払う必要があります。ガス価格は通常、ETHの単位の1つであるGweiで提示されます。1 Gweiは10億分の1 ETH (0.000000001 ETH または 10<sup>-9</sup> ETH) に相当します。
+ガス代は、イーサリアムのネイティブ通貨であるイーサ (ETH) で支払う必要があります。ガス価格は通常、ETHの単位の1つであるGweiで提示されます。1 Gweiは10億分の1 ETH (0.000000001 ETHまたは10<sup>-9</sup> ETH) に相当します。
 
-例えば、ガスのコストが0.000000001イーサであると言う代わりに、ガスのコストは1 Gweiであると言うことができます。
+例えば、ガスのコストが0.000000001イーサであると言う代わりに、ガスのコストが1 Gweiであると言うことができます。
 
 「Gwei」という言葉は「giga-wei」の略語であり、「10億Wei」を意味します。1 Gweiは10億Weiに等しいです。Wei自体 ([b-money](https://www.investopedia.com/terms/b/bmoney.asp)の作成者である[ウェイ・ダイ](https://wikipedia.org/wiki/Wei_Dai)にちなんで名付けられました) は、ETHの最小単位です。
 
@@ -101,12 +100,11 @@ Jordanが送金すると、Jordanのアカウントから1.000252 ETHが差し�
 
 ## なぜガス代が存在するのですか？ {#why-do-gas-fees-exist}
 
-簡単に言えば、ガス代はイーサリアム・ネットワークの安全性を保つために役立っています。ネットワーク上で実行されるすべての計算に手数料を要求することで、悪意のあるアクターがネットワークにスパムを送信するのを防ぎます。コード内の偶発的または悪意のある無限ループやその他の計算の無駄を避けるために、各トランザクションは、コード実行の計算ステップをいくつ使用できるかの上限を設定する必要があります。計算の基本単位が「ガス」です。
+簡単に言えば、ガス代はイーサリアム・ネットワークの安全性を保つために役立ちます。ネットワーク上で実行されるすべての計算に手数料を要求することで、悪意のある者がネットワークにスパムを送信するのを防ぎます。コード内の偶発的または悪意のある無限ループやその他の計算の無駄を避けるために、各トランザクションは、コード実行の計算ステップをどれだけ使用できるかの制限を設定する必要があります。計算の基本単位が「ガス」です。
 
-トランザクションには上限が含まれていますが、トランザクションで使用されなかったガスはユーザーに返還されます (例: `max fee - (base fee + tip)`が返還されます)。
+トランザクションには制限が含まれていますが、トランザクションで使用されなかったガスはユーザーに返還されます (例: `最大手数料 - (基本料金 + チップ)` が返還されます)。
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)から引用した図_
+<GasTxDiagram />
 
 ## ガス・リミットとは何ですか？ {#what-is-gas-limit}
 
@@ -126,20 +124,14 @@ _[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm
 
 [レイヤー2 (L2) スケーリングの詳細](/developers/docs/scaling/#layer-2-scaling)
 
-## ガス代のモニタリング {#monitoring-gas-fees}
+## ガス代の監視 {#monitoring-gas-fees}
 
 ガス価格を監視して、より安くETHを送金したい場合は、以下のようなさまざまなツールを使用できます。
 
-- [Etherscan](https://etherscan.io/gastracker) _トランザクションガス価格見積もりツール_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _オープンソースのトランザクションガス価格見積もりツール_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _イーサリアムおよびL2のガス価格を監視・追跡し、トランザクション手数料を削減して節約_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Type 0のレガシートランザクションとType 2のEIP-1559トランザクションの両方をサポートする、ガス見積もり用のクローム拡張機能。_
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _メインネット、アービトラム、ポリゴンでのさまざまなトランザクションタイプのガス代を現地通貨で計算。_
-
-## 関連ツール {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Blocknativeのグローバルなメンプールデータプラットフォームを活用したガス見積もりAPI_
-- [Gas Network](https://gas.network) _オンチェーンのガスオラクル。35以上のチェーンをサポート。_
+- [Etherscan](https://etherscan.io/gastracker) _トランザクションのガス価格見積もりツール_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _オープンソースのトランザクションのガス価格見積もりツール_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _イーサリアムおよびレイヤー2 (L2) のガス価格を監視・追跡し、トランザクション手数料を削減して節約_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _メインネット、アービトラム、ポリゴン上のさまざまなトランザクションタイプについて、現地通貨でガス代を計算します。_
 
 ## 参考文献 {#further-reading}
 

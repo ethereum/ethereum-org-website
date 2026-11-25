@@ -28,27 +28,26 @@ Oba typy kont mają możliwość:
 
 - Utworzenie konta nic nie kosztuje
 - Może inicjować transakcje
-- Transakcje między kontami posiadanymi zewnętrznie mogą być tylko transferami ETH/tokenów
-- Składa się z kryptograficznej pary kluczy: klucza publicznego i prywatnego, które kontrolują aktywność konta
+- Transakcje między kontami posiadanymi zewnętrznie mogą być tylko transferami ETH, chyba że odbiorca oddelegował do kodu kontraktu (zobacz `codeHash` poniżej)
+- Składa się z kryptograficznej pary kluczy: klucza publicznego i prywatnego, które kontrolują działania na koncie
 
 **Kontrakt**
 
-- Utworzenie kontraktu wiąże się z kosztami, ponieważ wykorzystujesz pamięć sieci
-- Może wysyłać wiadomości tylko w odpowiedzi na otrzymaną transakcję
-- Transakcje z konta zewnętrznego na konto kontraktu mogą wyzwolić kod, który może wykonać wiele różnych akcji, takich jak transfer tokenów lub nawet utworzenie nowego kontraktu
+- Utworzenie kontraktu wiąże się z kosztami, ponieważ używasz pamięci sieci
+- Może wysyłać wiadomości tylko w odpowiedzi na otrzymanie transakcji
+- Transakcje z konta zewnętrznego na konto kontraktu mogą wyzwolić kod, który może wykonać wiele różnych akcji, takich jak transfer tokenów, a nawet utworzenie nowego kontraktu
 - Konta kontraktów nie mają kluczy prywatnych. Zamiast tego są kontrolowane przez logikę kodu inteligentnego kontraktu
 
 ## Analiza konta {#an-account-examined}
 
 Konta Ethereum mają cztery pola:
 
-- `nonce` – Licznik wskazujący liczbę transakcji wysłanych z konta posiadanego zewnętrznie lub liczbę kontraktów utworzonych przez konto kontraktu. Dla każdego konta może zostać wykonana tylko jedna transakcja z danym nonce, co chroni przed atakami typu replay (powtórzenia), w których podpisane transakcje są wielokrotnie rozgłaszane i ponownie wykonywane.
+- `nonce` – Licznik, który wskazuje liczbę transakcji wysłanych z konta posiadanego zewnętrznie lub, w przypadku konta kontraktu, o jedną więcej niż liczba utworzonych przez niego kontraktów (nonce kontraktów zaczynają się od 1, zgodnie z [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Każda zastosowana autoryzacja [EIP-7702](/roadmap/pectra/7702/) również zwiększa nonce autoryzującego konta. Dla każdego konta może zostać wykonana tylko jedna transakcja z danym nonce, co chroni przed atakami typu replay, w których podpisane transakcje są wielokrotnie rozgłaszane i ponownie wykonywane.
 - `balance` – Liczba wei posiadanych przez ten adres. Wei to nominał ETH, a na 1 ETH przypada 1e+18 wei.
-- `codeHash` – Ten hash odnosi się do _kodu_ konta w Maszynie Wirtualnej Ethereum (EVM). Konta kontraktów mają zaprogramowane fragmenty kodu, które mogą wykonywać różne operacje. Ten kod EVM jest wykonywany, jeśli konto otrzyma wywołanie wiadomości. Nie można go zmienić, w przeciwieństwie do innych pól konta. Wszystkie takie fragmenty kodu są zawarte w bazie danych stanu pod odpowiadającymi im hashami w celu późniejszego pobrania. Ta wartość hasha jest znana jako codeHash. W przypadku kont posiadanych zewnętrznie pole codeHash jest hashem pustego ciągu znaków.
-- `storageRoot` – Czasami nazywany hashem pamięci (storage hash). 256-bitowy hash węzła głównego [drzewa Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), który koduje zawartość pamięci konta (mapowanie między 256-bitowymi wartościami całkowitymi), zakodowany w drzewie jako mapowanie z 256-bitowego hasha Keccak 256-bitowych kluczy całkowitych na 256-bitowe wartości całkowite zakodowane za pomocą rekurencyjnego przedrostka długości (RLP). To drzewo koduje hash zawartości pamięci tego konta i domyślnie jest puste.
+- `codeHash` – Ten hash odnosi się do _kodu_ konta na Maszynie Wirtualnej Ethereum (EVM). Konta kontraktów mają zaprogramowane fragmenty kodu, które mogą wykonywać różne operacje. Ten kod EVM jest wykonywany, jeśli konto otrzyma wywołanie wiadomości. Kod kontraktu nie może zostać zmieniony po jego wdrożeniu, w przeciwieństwie do innych pól konta. Wszystkie takie fragmenty kodu są zawarte w bazie danych stanu pod odpowiadającymi im hashami w celu późniejszego pobrania. Ta wartość hasha jest znana jako codeHash. W przypadku kont posiadanych zewnętrznie pole codeHash jest hashem pustego ciągu znaków, chyba że konto oddelegowało do inteligentnego kontraktu za pomocą [EIP-7702](/roadmap/pectra/7702/). Kod konta jest wtedy wskaźnikiem delegowania (`0xef0100`, po którym następuje adres kontraktu), który konto może zmienić lub wyczyścić za pomocą nowej autoryzacji.
+- `storageRoot` – Czasami znany jako hash pamięci. 256-bitowy hash węzła głównego [drzewa Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), które koduje zawartość pamięci konta (mapowanie między 256-bitowymi wartościami całkowitymi), zakodowaną w drzewie jako mapowanie z 256-bitowego hasha Keccak 256-bitowych kluczy całkowitych na 256-bitowe wartości całkowite zakodowane za pomocą rekurencyjnego przedrostka długości (RLP). To drzewo koduje hash zawartości pamięci tego konta i domyślnie jest puste.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Diagram zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Konta posiadane zewnętrznie i pary kluczy {#externally-owned-accounts-and-key-pairs}
 

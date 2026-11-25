@@ -135,7 +135,7 @@ Bu sözleşme, likidite token'ları için ERC-20 fonksiyonlarını sağlayan `Un
     using SafeMath  for uint;
 ```
 
-[SafeMath kütüphanesi](https://docs.openzeppelin.com/contracts/2.x/api/math), taşmaları (overflow) ve alt taşmaları (underflow) önlemek için kullanılır. Bu önemlidir çünkü aksi takdirde bir değerin `-1` olması gerekirken `2^256-1` olduğu bir durumla karşılaşabiliriz.
+[SafeMath kütüphanesi](https://docs.openzeppelin.com/contracts/3.x/api/math), taşmaları (overflow) ve alt taşmaları (underflow) önlemek için kullanılır. Bu önemlidir çünkü aksi takdirde bir değerin `-1` olması gerekirken `2^256-1` olduğu bir durumla karşılaşabiliriz.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -1673,7 +1673,7 @@ Bu sözleşme, takasları eski v1'den v2'ye taşımak için kullanıldı. Artık
 
 ## Kütüphaneler {#libraries}
 
-[SafeMath kütüphanesi](https://docs.openzeppelin.com/contracts/2.x/api/math) iyi bir şekilde belgelenmiştir, bu yüzden burada belgelemeye gerek yoktur.
+[SafeMath kütüphanesi](https://docs.openzeppelin.com/contracts/3.x/api/math) iyi bir şekilde belgelenmiştir, bu yüzden burada belgelemeye gerek yoktur.
 
 ### Math {#math}
 

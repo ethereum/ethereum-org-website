@@ -4,7 +4,7 @@ import { getLocale, getTranslations } from "next-intl/server"
 import { tv, type VariantProps } from "tailwind-variants"
 
 import { cn } from "@/lib/utils/cn"
-import { dateTimeFormat, isValidDate } from "@/lib/utils/date"
+import { formatDateTime, isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
@@ -75,9 +75,9 @@ const BigNumber = async ({
 
   const lastUpdatedDisplay =
     lastUpdated && isValidDate(lastUpdated)
-      ? dateTimeFormat(locale, {
+      ? formatDateTime(locale, new Date(lastUpdated), {
           dateStyle: "medium",
-        }).format(new Date(lastUpdated))
+        })
       : ""
   return (
     <div

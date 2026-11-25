@@ -6,21 +6,22 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function PrivacyEthereumPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-privacy-ethereum")
-  const tPrivacy = await getTranslations("page-privacy")
-  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/privacy/ethereum/`)
 
@@ -47,35 +48,7 @@ export default async function PrivacyEthereumPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: tCommon("values"),
-              item: normalizeUrlForJsonLd(locale, "/values/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: tPrivacy("page-privacy-title"),
-              item: normalizeUrlForJsonLd(locale, "/privacy/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 4,
-              name: t("page-privacy-ethereum-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "privacy/ethereum"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: articleId,
@@ -86,7 +59,7 @@ export default async function PrivacyEthereumPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-privacy-ethereum-title"),
         description: t("page-privacy-ethereum-meta-description"),
-        image: "https://ethereum.org/images/infrastructure_transparent.png",
+        image: `${SITE_URL}/images/infrastructure_transparent.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
@@ -104,7 +77,7 @@ export default async function PrivacyEthereumPageJsonLD({
               "A decentralized platform for applications and digital economies powered by smart contracts",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
     ],
   }

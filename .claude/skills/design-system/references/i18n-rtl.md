@@ -7,19 +7,15 @@ The site supports 25 languages, including **Arabic** and **Urdu** (RTL). Transla
 ### Server Components (preferred)
 
 ```tsx
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
-export default async function Page({ params }) {
-  const { locale } = await params
-
-  setRequestLocale(locale) // MUST run before any next-intl API (see note below)
-
+export default async function Page() {
   const t = await getTranslations("page-namespace")
   return <h1>{t("page-title")}</h1>
 }
 ```
 
-`setRequestLocale(locale)` **must** be the first statement in every page and `generateMetadata` under `app/[locale]/`, before any next-intl API -- including the `getMetadata`/`getMdMetadata` helpers, which call `getTranslations("common")` internally. Skipping it forces dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params. Descendant server components (no `params`) read the locale with `getLocale()`, which resolves statically once the page has primed the cache. Full root cause and prevention: `docs/solutions/architecture/setrequestlocale-static-to-dynamic-rendering.md`.
+`src/i18n/request.ts` resolves the locale from `next/root-params`, so next-intl APIs read the `[locale]` segment without touching request headers and pages stay static on their own -- nothing needs priming before them, in pages or in `generateMetadata`. Any server component reads the locale with `getLocale()`. The exception is Route Handlers and Server Actions, which `next/root-params` doesn't reach yet: pass the locale explicitly there, e.g. `getTranslations({ locale, namespace })`.
 
 ### Client Components
 
@@ -39,8 +35,6 @@ export function Widget() {
 ```
 
 One namespace-bound function per namespace -- to access another namespace, bind a second function (`tCommon` above) rather than reaching across namespaces from one `t`.
-
-Do not use the legacy `@/hooks/useTranslation` wrapper (`const { t } = useTranslation("ns")` with `namespace:key` syntax) in new code -- it returns raw messages by default and silently skips ICU interpolation in its plain-key form. Existing call sites are being migrated.
 
 Caveat for both APIs: strings with embedded HTML (`<b>`, `<a href>`) predate next-intl and break plain `t()` ICU parsing -- use `t.raw("key")` (rendered downstream via htmr/`Translation`) or `t.rich(...)` for those.
 
@@ -170,10 +164,10 @@ const formatted = numberFormat(locale, { maximumFractionDigits: 2 }).format(1234
 ### Dates
 
 ```tsx
-import { dateTimeFormat } from "@/lib/utils/date"
+import { formatDateTime } from "@/lib/utils/date"
 
-const formatted = dateTimeFormat(locale, { dateStyle: "medium" }).format(new Date())
-// Handles calendar (Hijri for Arabic), numbering system, locale-correct ordering
+const formatted = formatDateTime(locale, new Date(), { dateStyle: "medium" })
+// Gregorian calendar, Urdu numerals, UTC, and SSR-safe whitespace
 ```
 
 **Never use** `Intl.DateTimeFormat`, `.toLocaleDateString()`, or `.toLocaleTimeString()` directly.
@@ -271,11 +265,11 @@ H1-H4 headings in markdown require a custom `{#lower-kebab-id}`. Enforced by mar
 
 ## Common Mistakes
 
-- Calling a next-intl API (`getTranslations`, `getLocale`, or the `getMetadata`/`getMdMetadata` helpers) before `setRequestLocale(locale)` in a page or `generateMetadata` -- opts the route into dynamic rendering and throws `Page changed from static to dynamic at runtime, reason: headers` for on-demand params
+- Calling a next-intl API in a Route Handler or Server Action without an explicit locale -- `next/root-params` doesn't reach them, so pass `{ locale, namespace }`
 - Using `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` for layout (use logical equivalents)
 - Hard-coding English in JSX
 - `value.toLocaleString()` -- use `numberFormat()`
-- `new Date().toLocaleDateString()` -- use `dateTimeFormat()`
+- `new Date().toLocaleDateString()` -- use `formatDateTime()`
 - Right-pointing chevrons that don't mirror in RTL (add `rtl:-scale-x-100`, or use `ChevronNext` from `@/components/Chevron`)
 - Reaching for the `useRtlFlip` hook just to flip an element -- use the inline `rtl:-scale-x-100` variant instead; the hook is only for when you need the `isRtl`/`direction` value
 - Manually editing translated markdown files -- let the pipeline propagate

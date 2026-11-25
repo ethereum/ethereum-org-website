@@ -1,5 +1,10 @@
 # Marathi (mr) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: two placeholder swaps, builder, deploy, checkpoint, execution/consensus client, equivocation, contract. Open: fork choice spelling variants, scenario, mnemonic.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 8.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -136,3 +141,62 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: glossary `staker` -> `स्टेकर्स` (3x), `peer` -> `पीअर्स` (`सहकाऱ्यांमधील` = among coworkers); "deprecated" `नाकारलेले` (rejected) -> dev `कालबाह्य` (10 sites).
 - Open: glossary `Ethereum Mainnet` uses `इथरियम` vs `Ethereum` entry `इथेरियम` (upstream).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.8/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- developers/docs/apis/backend/index.md:38: The glossary term "decentralized" (scriptRule: translate) was changed from the glossary form to a transliteration. This is a regression: dev had विकेंद्रित. (`डिसेंट्रलाइज्ड APIs` -> `विकेंद्रित APIs`)
+- wrapped-eth/index.md:34: The glossary term "validator" (scriptRule: translate, confidence high) is `प्रमाणक`. The locale uses that form 1774 times and `व्हॅलिडेटर` 79 times. This wording was already there before the PR, which (`इथेरियम व्हॅलिडेटर्सद्वारे` -> `इथेरियम प्रमाणकांद्वारे`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Marathi is fluent and closely follows the glossary, including the large new JSON sets (founders, wallet descriptions, stories map). There are no build- or navigation-breaking defects. The two criticals are glossary "translate" deviations that need a person to fix. The rest are small regressions from the retranslation and inconsistencies between files.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- `(weth)` changed to `(WETH)` (websockets:175; #95)
+
+**Notes:**
+
+- hello-world quarantined (JSON parse error). Warnings: Latin `MetaMask` link label, English alt text, `तोच खाते` should be `तेच खाते`.
+
+## PR #19608 (intl/pending-dev, run 1023-1817) -- 2026-10-23 -- Score 9.2/10
+Scope: hello-world-smart-contract (released from quarantine and fully reworked for Hardhat 3) and how-to-write-and-deploy-an-nft (small edit). Changed lines only.
+
+**Fixed in this branch:**
+
+- None (0 critical)
+
+**Notes:**
+
+- Glossary is followed in full. Code, fence tags, hrefs and IDs match English exactly.
+
+**Open (warnings):**
+
+- hello-world:219 "compromising your secrets" is rendered as `तडजोड` (compromise in the sense of a concession; same polyseme as #19115). Prefer `सिक्रेट्स धोक्यात आणत आहात`
+- hello-world:344 "under the hood" is `तांत्रिकदृष्ट्या` here but `अंतर्गतपणे` at L346
+- nft:66-75 the PR's `इनिशियलाईज`/`टाईप` disagrees with `टाइप` elsewhere in the file and with the hello-world spelling
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 8.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna: glossary infinitive `पूर्ववत करणे` pasted as a predicate (`पूर्ववत करणे होतात`) at 4 sites -> `पूर्ववत होतात/झाले/होईल/झाली` (#96)
+- multi-client concept tag `टेस्टिंग` diverged from the locale tag `चाचणी` (splits the tag filter) -> `चाचणी`
+- multi-client:250 `ट्रान्झॅक्शन स्पॅमर` -> glossary `व्यवहार स्पॅमर`
+
+**Open / notes:**
+
+- multi-client fully re-registered toward English loanwords (`लोकल`, `टेस्ट करावे`) although only sections changed -- native call
+- ABI/EVM spelled out (#80); echidna:747 same relative-clause issue as hi

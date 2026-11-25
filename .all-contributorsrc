@@ -14605,6 +14605,61 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "patrick-star-10",
+      "name": "patrick-star-10",
+      "avatar_url": "https://avatars.githubusercontent.com/u/204532789?v=4",
+      "profile": "https://github.com/patrick-star-10",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "SayedZahur786",
+      "name": "Mohd Jahur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177766328?v=4",
+      "profile": "https://github.com/SayedZahur786",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "markksantos",
+      "name": "Mark Santos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24554186?v=4",
+      "profile": "https://www.markstudios.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Prudentdev-xyz",
+      "name": "Prudent",
+      "avatar_url": "https://avatars.githubusercontent.com/u/148275637?v=4",
+      "profile": "https://abdqoharr-portfolio.vercel.app",
+      "contributions": [
+        "maintenance",
+        "content"
+      ]
+    },
+    {
+      "login": "rossydefi",
+      "name": "RossyDeFi ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/283284215?v=4",
+      "profile": "https://github.com/rossydefi",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Alike001",
+      "name": "Hammed Ali Oyeleye ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/211592156?v=4",
+      "profile": "https://github.com/Alike001",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

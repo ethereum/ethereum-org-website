@@ -1,5 +1,10 @@
 # Spanish (es) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas/verkle inline code, slot, desplegado for deploy (6 JSON keys). Open: tu/usted split in JSON, relay retransmisor vs rele, compounding composicion.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -111,3 +116,41 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `Desarrollado por Ethereum` for Powered by; `Tesorerías` for treasuries; public-sector use-cases on tú vs usted elsewhere.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.8/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:102: ETHGlossary deviation. The `layer-2-l2` entry (high confidence, no script_rule) is `capa 2 (l2)`, with a note to keep it lowercase in body text. This PR changed the old `(l2)` to `(L2)`. The rule is " (`[capa 2 (L2)](/layer-2/)` -> `[capa 2 (l2)](/layer-2/)`)
+- 8 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is accurate and complies with the glossary across a large rewrite of prediction-markets and the plasma tutorial. The fixes needed are three English tag labels in founders and one L2 casing deviation. The rest are tú/usted and terminology consistency issues for a native reviewer.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: `plugin` vs `complemento` differs between files; tú/usted differs between tutorials (pre-existing).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- ABI/EVM spelled out where English leaves them bare (#80, prose -> warning)

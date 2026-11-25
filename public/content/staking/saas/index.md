@@ -1,6 +1,6 @@
 ---
 title: Delegated staking (staking as a service)
-description: An overview of how to get started with delegated staking
+description: "What is staking as a service? Learn how to deposit 32 ETH while a node operator runs your validator, and the tradeoffs versus home or pooled staking."
 lang: en
 template: staking
 image: /images/staking/leslie-saas.png

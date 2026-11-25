@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/scam-token-tricks/index.md",
-  "generatedAt": "2026-06-17T00:42:27.554Z",
-  "rootHash": "9ee156b72f26",
+  "generatedAt": "2026-10-21T22:13:00.190Z",
+  "rootHash": "74115b9b5481",
   "tree": {
     "contentHash": "985af9d09ffd",
-    "anchorHash": "22f1370b0fdd",
+    "anchorHash": "f977e5ddcb06",
     "children": {
       "frontmatter:title": {
         "contentHash": "bafabb4840a1",
@@ -231,7 +231,7 @@
       },
       "compare-legit-erc20": {
         "contentHash": "111c8079b6e0",
-        "anchorHash": "e392cf81d05f",
+        "anchorHash": "fa8225c61741",
         "labelHash": "87141252a980",
         "children": {
           "_label": {
@@ -252,7 +252,7 @@
           },
           "constants-for-privileged-addresses": {
             "contentHash": "a79645684e8f",
-            "anchorHash": "56ea16984564",
+            "anchorHash": "3da41301ca56",
             "labelHash": "4be401e2e42e",
             "children": {
               "_label": {
@@ -1465,5 +1465,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

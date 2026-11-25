@@ -27,6 +27,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - Also available in Chinese, Korean, Russian, and Japanese
 - [Ethplorer](https://ethplorer.io/) - A block explorer with a focus on tokens. Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese
+- [Ethscanner](https://ethscanner.io/) - By Routescan. Contributes verified contracts to the Verifier Alliance's open dataset and shows cross-chain transactions
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

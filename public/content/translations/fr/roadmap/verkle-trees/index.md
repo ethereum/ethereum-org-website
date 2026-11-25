@@ -1,6 +1,6 @@
 ---
 title: Arbres Verkle
-description: Une description de haut niveau des arbres Verkle et de la manière dont ils seront utilisés pour mettre à niveau Ethereum
+description: "Une description de haut niveau des arbres Verkle et de la manière dont ils seront utilisés pour mettre à niveau Ethereum"
 lang: fr
 template: roadmap
 summaryPoints:
@@ -38,9 +38,9 @@ La taille du témoin varie en fonction du nombre de feuilles qu'il inclut. En su
 
 ## Quelle est la structure d'un arbre Verkle ? {#what-is-the-structure-of-a-verkle-tree}
 
-Les arbres Verkle sont des paires `(key,value)` où les clés sont des éléments de 32 octets composés d'une _souche_ de 31 octets et d'un _suffixe_ d'un seul octet. Ces clés sont organisées en nœuds d'_extension_ et en nœuds _internes_. Les nœuds d'extension représentent une souche unique pour 256 enfants avec des suffixes différents. Les nœuds internes ont également 256 enfants, mais ils peuvent être d'autres nœuds d'extension. La principale différence entre la structure de l'arbre Verkle et celle de l'arbre de Merkle est que l'arbre Verkle est beaucoup plus plat, ce qui signifie qu'il y a moins de nœuds intermédiaires reliant une feuille à la racine, et donc moins de données requises pour générer une preuve.
+Les arbres Verkle sont des paires `(key,value)` où les clés sont des éléments de 32 octets composés d'une _souche_ de 31 octets et d'un _suffixe_ d'un seul octet. Ces clés sont organisées en nœuds d'_extension_ et en nœuds _internes_. Les nœuds d'extension représentent une seule souche pour 256 enfants avec des suffixes différents. Les nœuds internes ont également 256 enfants, mais ils peuvent être d'autres nœuds d'extension. La principale différence entre la structure de l'arbre Verkle et celle de l'arbre de Merkle est que l'arbre Verkle est beaucoup plus plat, ce qui signifie qu'il y a moins de nœuds intermédiaires reliant une feuille à la racine, et donc moins de données requises pour générer une preuve.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [En savoir plus sur la structure des arbres Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

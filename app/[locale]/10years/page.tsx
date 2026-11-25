@@ -1,12 +1,9 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -45,8 +42,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const stories = await getCommunityStories(locale)
 
   // Get i18n messages
@@ -76,7 +71,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           )}
         >
           <div className="flex flex-1 flex-col gap-5">
-            <div>
+            <div className="flex flex-col gap-4">
+              <Breadcrumbs slug="10years" />
               <h1 className="text-2xl">{t("page-10-year-hero-title")}</h1>
             </div>
 
@@ -380,8 +376,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-10-year-anniversary")
 

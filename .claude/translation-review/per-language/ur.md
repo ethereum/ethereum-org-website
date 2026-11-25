@@ -1,5 +1,10 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap (isolates preserved), transaction fee, builder and searcher across the MEV-Boost diagram, PoS in attestations description. Open: qadam vs marhala, polynomial, relay as `rileez`.
+
 ## PR #18868 (full pipeline import, 2026-07-22) -- 8.4/10 (lowest in fleet)
 - CRIT (NOT hand-fixed, needs pipeline re-pass): `gaming/index.md` -- two whole sections (`## Gaming on Ethereum`, `## Ethereum's gaming ecosystem overview`) verbatim English between translated sections. `developers/tutorials/yellow-paper-evm/index.md` -- ~half the explanatory prose (sec 9, 9.3, 9.4, 9.4.2, 9.4.3, Opcode cost, Expanding memory cost) left English. Block-matching coverage gap, not laziness.
 - WARN: "trade-off" -> تبادلہ (glossary's *swap* term) on single-slot-finality; zkEVM correctly used سمجھوتہ. Prefer سمجھوتہ / loanword ٹریڈ آف.
@@ -163,3 +168,84 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `EF Blog` -> `EF بلاگ` (2x, regression); `Chain Platform`/`Google Cloud` restored to Latin inside `dir="ltr"` spans.
 - Open: `ہم مرتبہ افراد` adds "persons" to peers; "you write" dropped L29; `آپٹیمسٹک` spelling split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 7.8/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:3 Ethereum transliterate (`محفوظ ⁦Ethereum⁩ سمارٹ` -> `محفوظ ایتھیریم سمارٹ`)
+- security:9 Ethereum transliterate (`[Ethereum](/)` -> `[ایتھیریم](/)`)
+- security:13 Ethereum transliterate (`یہ گائیڈ Ethereum ڈیولپرز` -> `یہ گائیڈ ایتھیریم ڈیولپرز`)
+- security:500,506,510,512,526,544 Web3 always_latin (`ویب 3` -> `Web3`)
+- security:102 Optimism transliterate (`[Optimism]` -> `[آپٹیمزم]`)
+- security:118 Slither transliterate (`Mythril اور Slither` -> `Mythril اور سلدر`)
+- security:566 Slither transliterate (`<span dir="ltr">Slither</span>` -> `سلدر`)
+- security:226,482 OpenZeppelin transliterate (`[OpenZeppelin Contracts]` -> `[اوپن زیپلن کنٹریکٹس]`)
+- security:496 OpenZeppelin transliterate (`[OpenZeppelin]` -> `[اوپن زیپلن]`)
+- security:486 ConsenSys transliterate (`[ConsenSys Diligence]` -> `[کنسینسس ڈیلیجنس]`)
+- security:532 ConsenSys transliterate + English title (`[ConsenSys: Smart Contract Known Attacks]` -> `[کنسینسس: سمارٹ کنٹریکٹ کے معلوم حملے]`)
+- security:550 ConsenSys transliterate + English title (`[ConsenSys: Ethereum Smart Contract Security Best ` -> `[کنسینسس: ایتھیریم سمارٹ کنٹریکٹ سیکیورٹی کے بہتری`)
+- security:11 English in LTR span (`<span dir="ltr">$1 billion</span>` -> `<span dir="ltr">$1</span> بلین`)
+- security:23 untranslated English (`<span dir="ltr">externally owned accounts (EOAs)</` -> `بیرونی ملکیت والے اکاؤنٹس (EOAs)`)
+- security:267 untranslated English (`کسی externally owned account (EOA) سے` -> `کسی بیرونی ملکیت والے اکاؤنٹ (EOA) سے`)
+- security:27 heading reverted to English (`#### Ownable pattern {#ownable-pattern}` -> `#### Ownable پیٹرن {#ownable-pattern}`)
+- security:25 untranslated bold terms (`**Ownable pattern** اور **role-based control**` -> `**Ownable پیٹرن** اور **رول پر مبنی کنٹرول**`)
+- app-plasma:1228 split L2s bidi span (`L<span dir="ltr">2s</span>` -> `<span dir="ltr">L2s</span>`)
+- scam-token-tricks:82 English date (`<span dir="ltr">May 19th, 2023</span>` -> `19 مئی 2023`)
+- issuance:87 English month (`<span dir="ltr">September 2022</span>` -> `ستمبر <span dir="ltr">2022</span>`)
+- security: `اسمارٹ کانٹریکٹ`/`کانٹریکٹ` -> `سمارٹ کنٹریکٹ`/`کنٹریکٹ` restored (196 sites)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:29, 33, 134, 136, 142, 150, 218, 262, 26: "address" spelled differently from the glossary (dev had پتہ 20 times; the glossary rule is "translate") (`ایڈریس` -> `پتہ` / `پتے` (inflect)`)
+- developers/docs/smart-contracts/security/index.md:7, 35, 202, 214, 216, 444, 452 (9 uses): "decentralized" spelled differently from the glossary (dev had لامركزی; the glossary rule is "translate") (`ڈی سینٹرلائزڈ` / `ڈی سینٹرلائز` -> `لامركزی` / `لامرکزی بنانا`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Most files are clean and follow the glossary. The score is pulled down by security/index.md, which was translated again in full because of two English link changes and undid dozens of correct dev forms. Restoring that file from dev and re-applying the two links fixes most of the critical list.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score n/a (2 files)
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None
+
+**Notes:**
+
+- 4 tasks quarantined (unescaped `dir="ltr"`; #94). Warning: `ٹیسٹ نیٹ` vs glossary `آزمائشی نیٹ ورک`.
+
+## PR #19608 (intl/pending-dev, run 1023-1817) -- 2026-10-23 -- Score 9.4/10
+Scope: how-to-write-and-deploy-an-nft (released from quarantine and fully reworked) and hello-world (small edit). Changed lines only.
+
+**Fixed in this branch:**
+
+- how-to-write-and-deploy-an-nft:58-67: the `json` response block was duplicated and placed after the next paragraph, and the old indented line was left in (known-patterns #93)
+
+**Notes:**
+
+- The testnet drift from #19568 is fixed (`آزمائشی نیٹ ورک`). The `console` fence is correct. Code matches English byte for byte, and all 124 `dir="ltr"` spans are balanced.
+- 3 tasks were still quarantined after the second attempt (#94).
+
+**Open (warnings):**
+
+- nft:274 comment translates `PRIVATE_KEY` as `نجی کلید` while keeping `API_URL` in Latin
+- nft:348 `دلائل` (arguments in the debate sense) is used for function arguments; prefer `آرگیومنٹس`/`پیرامیٹرز`
+- nft:342 `مثالیں` (examples) is used for object instances; prefer `انسٹینسز`
+- nft:226, 290 `ماحولیاتی` (ecological) is used for env file/variable; prefer `انوائرنمنٹ`
+- The step-6 heading and the word for installation differ between hello-world and the NFT tutorial
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.0/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:16/602 `Echidna 2.3.3` / `Echidna 2.3.0` left Latin inside the ltr span; glossary transliterates -> `ایکڈنا <span dir="ltr">2.3.3</span>` (critical)
+- multi-client:99/163 dropped token noun made `1000 منٹ` read as "1000 minutes" -> `1000 ٹوکن منٹ`
+- echidna:317 heading lost its `(assert)` clarifier vs dev -> restored
+
+**Open / notes:**
+
+- echidna:66 `نامانوس` (unfamiliar) for invalid; multi-client:205 `متضاد` (contradictory) for heterogeneous -- both pre-existing wording on changed lines, native call

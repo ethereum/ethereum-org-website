@@ -1,5 +1,10 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption placeholder swap, gas inline code, attestation/equivocation/fork-choice/consensus-client forms, withdrawal/signing/builder across the diagram JSON. Open: stray BiDi isolates in networking-layer and peerdas frontmatter, detached postpositions.
+
 ## PR #18772 (community-stories.json, 2026-07-10) -- 9.4/10
 - CRIT fixed: "Web2" left Latin in story-sebastian -> ওয়েব২ per ETHGlossary (web2 => ওয়েব২). Watch web2/web3 script split: glossary transliterates web2 but keeps Web3 Latin.
 - WARN: "transfer" rendered both ট্রান্সফার and হস্তান্তর within story-nico-bolivia (glossary: হস্তান্তর; ট্রান্সফার common in speech).
@@ -143,3 +148,50 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: stray U+2066/U+2069 isolates around `ETH` in description (LTR page).
 - Open: `deprecated` -> `অবচয়িত` (depreciation sense) vs dev `বাতিলকৃত`, needs native check; bare "EVM networks" expanded (#80).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.1/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:1216 dropped link (`ডেটার জন্য অনুরোধ করা হলে ভুল তথ্য` -> `ডেটার জন্য [অনুরোধ করা হলে](https://github.com/qbz`)
+- app-plasma:966 Solidity always_latin (`সলিডিটি যাচাইকারী (solidity verifier)` -> `Solidity যাচাইকারী`)
+- app-plasma:200 ETH always_latin (`মিলি-ইটিএইচ` -> `milliETH`)
+- app-plasma:558 ETH always_latin (`ইটিএইচ এর` -> `ETH-এর`)
+
+**Open (native call needed):**
+
+- developers/tutorials/app-plasma/index.md:294: The text uses a hybrid of the bare "zero-knowledge" entry and a translated head noun. The glossary has a compound entry: `zk-proof` is `শূন্য-জ্ঞান প্রমাণ` (translate, confidence high). The rest of th (`জিরো-নলেজ প্রমাণের অংশ` -> `শূন্য-জ্ঞান প্রমাণের অংশ`)
+- developers/tutorials/app-plasma/index.md:296: Same zk-proof hybrid, 3 occurrences on this line. Replace all of them. Flag for a human. (`জিরো-নলেজ প্রমাণের` -> `শূন্য-জ্ঞান প্রমাণের`)
+- developers/tutorials/app-plasma/index.md:738: Same zk-proof hybrid. Flag for a human. (`জিরো-নলেজ প্রমাণের ভেতরে` -> `শূন্য-জ্ঞান প্রমাণের ভেতরে`)
+- developers/tutorials/scam-token-tricks/index.md:462: DeFi is transliterated as a hybrid that is not in the glossary. The `decentralized-finance-defi` entry is "translate", and its ui/tag form is `DeFi` with note "Acronym preferred in all contexts". dev  (`ডিফাই (DeFi)` -> `DeFi`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Good fluency overall, with the prediction-markets rewrite reading well. The defects are concentrated in the full app-plasma retranslation, which regressed wording that was correct on dev, and in three founders tags that shipped in English after the key rename.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `transactions` concept tag restored to `ট্রানজ্যাকশন`; literal `\n` at the end of the description removed (sending)
+
+**Notes:**
+
+- Warnings: doubled ABI expansion (mint:38); `[Ethers plugin]` left untranslated; native and Western numerals mixed in part references. Glossary returns `(weth)` lowercase (#95).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- echidna:682 dropped the two-space hard line break -- cosmetic
+- Kurtosis labels (files artifacts, user services) mix Latin and transliteration -- defensible, informational

@@ -58,7 +58,7 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [Contoh](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Buat aplikasi yang didukung Ethereum dengan satu perintah. Dilengkapi dengan berbagai pilihan kerangka kerja UI dan templat keuangan terdesentralisasi (DeFi) untuk dipilih._**
+**Create Eth App -** **_Buat aplikasi yang didukung Ethereum dengan satu perintah. Hadir dengan berbagai pilihan kerangka kerja UI dan templat keuangan terdesentralisasi (DeFi) untuk dipilih._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Templat](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
@@ -101,7 +101,7 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Platform pengembangan Web3 tingkat perusahaan, yang memungkinkan Anda membangun aplikasi NFT di semua rantai utama Rantai EVM (dan lainnya)._**
+**Crossmint -** **_Platform pengembangan Web3 tingkat perusahaan, yang memungkinkan Anda membangun aplikasi token yang tidak dapat dipertukarkan (NFT) di semua rantai utama Rantai EVM (dan lainnya)._**
 
 - [Situs Web](https://www.crossmint.com)
 - [Dokumentasi](https://docs.crossmint.com)
@@ -115,7 +115,6 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 
 **OpenZeppelin SDK -** **_Perangkat Kontrak Pintar Terbaik: Serangkaian alat untuk membantu Anda mengembangkan, mengompilasi, meningkatkan, menyebarkan, dan berinteraksi dengan kontrak pintar._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum Komunitas](https://forum.openzeppelin.com/c/support/17)
 - **Pengembangan OpenZeppelin SDK telah berakhir**
@@ -124,21 +123,21 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (didukung oleh Covalent) -** **_GoldRush menawarkan rangkaian API data rantai blok terlengkap untuk pengembang, analis, dan perusahaan. Baik Anda sedang membangun dasbor DeFi, dompet, bot perdagangan, agen AI, atau platform kepatuhan, API data menyediakan akses yang cepat, akurat, dan ramah pengembang ke data onchain penting yang Anda butuhkan_**
+**GoldRush (didukung oleh Covalent) -** **_GoldRush menawarkan rangkaian Antarmuka Pemrograman Aplikasi (API) data rantai blok terlengkap untuk pengembang, analis, dan perusahaan. Baik Anda sedang membangun dasbor DeFi, dompet, bot perdagangan, agen AI, atau platform kepatuhan, API data menyediakan akses yang cepat, akurat, dan ramah pengembang ke data onchain penting yang Anda butuhkan_**
 
 - [Situs Web](https://goldrush.dev/)
 - [Dokumentasi](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Kerangka kerja Python serba ada untuk pengujian kontrak, fuzzing, penyebaran, pemindaian kerentanan, dan navigasi kode._**
+**Wake -** **_Kerangka kerja Python lengkap untuk pengujian kontrak, fuzzing, penyebaran, pemindaian kerentanan, dan navigasi kode._**
 
 - [Beranda](https://getwake.io/)
 - [Dokumentasi](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Ekstensi VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Kerangka kerja sumber terbuka, modular, dan agnostik yang memudahkan pengembang aplikasi terdesentralisasi (dapp) untuk membangun identitas terdesentralisasi dan kredensial yang dapat diverifikasi ke dalam aplikasi mereka._**
+**Veramo -** **_Kerangka kerja sumber terbuka, modular, dan agnostik yang memudahkan pengembang aplikasi terdesentralisasi untuk membangun identitas terdesentralisasi dan kredensial yang dapat diverifikasi ke dalam aplikasi mereka._**
 
 - [Beranda](https://veramo.io/)
 - [Dokumentasi](https://veramo.io/docs/basics/introduction)
@@ -150,6 +149,7 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 
 - [Dokumentasi](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Bacaan lebih lanjut {#further-reading}
 
 _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

@@ -1,5 +1,10 @@
 # Traditional Chinese (zh-tw) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: zhixing kehuduan, shicao, lie/lan inversion on peerdas page (7 lines), peer-das caption swap, gossip as liuyan xieding. Open: mainland vocabulary (yunxing, miyao), nin/ni split, head touwu vs dingduan.
+
 > **PR:** #18344 (latest/ builder blog, 3 posts)
 > **Date:** 2026-06-03
 > **Quality Score:** 9.5/10
@@ -156,3 +161,49 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: "legacy" `傳統` -> `舊版` (L192 heading).
 - Open: "much faster" lost `得多` (L178).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.0/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:482 OpenZeppelin transliterate (`[OpenZeppelin Contracts]` -> `[歐本齊柏林合約]`)
+- security:496 OpenZeppelin transliterate (`[OpenZeppelin]` -> `[歐本齊柏林]`)
+- security:502 Nethermind transliterate (`[Nethermind]` -> `[奈瑟邁]`)
+- security:566 Slither transliterate (`如何使用 Slither 尋找` -> `如何使用斯立瑟尋找`)
+- security:568 Manticore transliterate (`如何使用 Manticore 尋找` -> `如何使用曼蒂科爾尋找`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is fluent and structurally clean. The main problem is that the retranslated security page reverted five transliterated brand names to Latin, which are auto-fixable. The rest is terminology drift and mainland vocabulary in the new prediction-markets copy.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `_x_` italics next to CJK characters converted to `<em>` (4 sites)
+
+**Notes:**
+
+- Warnings: MetaMask written in Latin vs `梅塔馬斯克` across files; 你/您 split within the NFT series; redundant ABI expansion (mint:34).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:60 `_種子 (seeds)_` underscore emphasis renders literally -> `*種子 (seeds)*` (#89)
+- multi-client:99/163 minting sentence subject -> `以確認已為...每位玩家鑄造了 1000 個代幣`
+
+**Open / notes:**
+
+- Mid-sentence English line breaks render as stray spaces between CJK (echidna 343, 581, 681) -- informational
+- multi-client:250 `交易發送器` loses "spammer" -- informational

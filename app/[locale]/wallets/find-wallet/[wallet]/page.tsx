@@ -1,6 +1,6 @@
 import { Info } from "lucide-react"
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { CatalogItem, ChainName, PageParams } from "@/lib/types"
 
@@ -13,7 +13,7 @@ import { XCircle } from "@/components/icons/XCircle"
 import Tooltip from "@/components/Tooltip"
 
 import { formatDate } from "@/lib/utils/date"
-import { getMetadata } from "@/lib/utils/metadata"
+import { getMetadata, truncateDescription } from "@/lib/utils/metadata"
 import {
   buildWalletMetaDescription,
   type CatalogWallet,
@@ -46,11 +46,9 @@ type WalletPageParams = PageParams & { wallet: string }
 /** Standalone wallet detail: the linkable, crawlable twin of the catalog modal. */
 const Page = async (props: { params: Promise<WalletPageParams> }) => {
   const { locale, wallet: walletSlug } = await props.params
-  setRequestLocale(locale)
 
-  const [t, tCommon, tItem, walletDescriptions] = await Promise.all([
+  const [t, tItem, walletDescriptions] = await Promise.all([
     getTranslations({ locale, namespace: "page-wallets-find-wallet" }),
-    getTranslations({ locale, namespace: "common" }),
     getTranslations({ locale, namespace: "component-catalog-item" }),
     getTranslations({ locale, namespace: "page-wallet-descriptions" }),
   ])
@@ -99,11 +97,7 @@ const Page = async (props: { params: Promise<WalletPageParams> }) => {
         tooltip: t("page-find-wallet-info-listing-reviewed-tooltip"),
       },
     ].filter((row) => !!row),
-    breadcrumbs: [
-      { label: "ethereum.org", href: "/" },
-      { label: tCommon("wallets"), href: "/wallets/" },
-      { label: tCommon("find-wallet"), href: "/wallets/find-wallet/" },
-    ],
+    breadcrumbSlug: `/wallets/find-wallet/${walletSlug}`,
     next: {
       name: nextWallet.name,
       href: `/wallets/find-wallet/${getWalletSlug(nextWallet)}/`,
@@ -182,7 +176,6 @@ export async function generateMetadata(props: {
   params: Promise<WalletPageParams>
 }) {
   const { locale, wallet: walletSlug } = await props.params
-  setRequestLocale(locale)
 
   const [t, walletDescriptions] = await Promise.all([
     getTranslations({ locale, namespace: "page-wallets-find-wallet" }),
@@ -201,7 +194,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["wallets", "find-wallet", walletSlug],
     title: wallet.name,
-    description: description.slice(0, 160),
+    description: truncateDescription(description),
     image: "/images/wallets/wallet-hero.png",
   })
 }

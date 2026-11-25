@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "关于 {name}",
+  "catalog-item-gallery-modal-title": "{name} 截图",
+  "catalog-item-gallery-screenshot-alt": "{name} 的第 {index} 张截图",
+  "catalog-item-gallery-title": "图库",
+  "catalog-item-info-title": "信息",
+  "catalog-item-link-label": "{platform} 上的 {name}",
+  "catalog-item-see-next": "查看下一个",
+  "catalog-item-source-code": "源代码",
+  "catalog-item-view-on-github": "在 GitHub 上查看",
+  "catalog-item-visit-website": "访问网站"
+}

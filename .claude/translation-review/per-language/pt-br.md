@@ -1,5 +1,10 @@
 # Brazilian Portuguese (pt-br) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: buscadores, taxas de prioridade, escolha de fork, penalizacoes, verkle inline code. Open: plural participle in vault key, `Mesma origem`, acronym over-expansion.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -109,3 +114,49 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `Desenvolvido por` for Powered by; `Tesourarias`; `Valor garantido/assegurado` split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- page-founders.json:18 Ethereum gender (`meetups locais da Ethereum` -> `meetups locais do Ethereum`)
+- page-founders.json:27 Ethereum gender (`que beneficiam a Ethereum` -> `que beneficiam o Ethereum`)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:29: ETHGlossary `swap` gives pt-br `troca`. The loanword was already corrected to `trocas` in PRs #19076 and #19474 (`com swaps, staking` -> `com trocas, staking`)
+- page-wallet-descriptions.json:35: ETHGlossary `swap` = `troca`; the adjective must change to feminine agreement (`com swaps integrados` -> `com trocas integradas`)
+- page-wallet-descriptions.json:37: ETHGlossary `swap` = `troca` (`swaps entre criptomoedas` -> `trocas entre criptomoedas`)
+- page-wallet-descriptions.json:39: ETHGlossary `swap` = `troca`; the article and adjective must change to feminine (`um swap de tokens integrado` -> `uma troca de tokens integrada`)
+- page-wallet-descriptions.json:47: ETHGlossary `swap` = `troca` (`que combina swaps,` -> `que combina trocas,`)
+- page-founders.json:46: ETHGlossary bare `gas` = `gás` (only the compound `gas fee` gives `taxa de gas`) (`"Patrocínio de gas"` -> `"Patrocínio de gás"`)
+- 11 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and has fewer anglicisms than before (security and app-plasma read well), but the new JSON content regressed on glossary use (`swaps`, `gas`, Ethereum's gender) and has three untranslated founders tags.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `(weth)` changed to `(WETH)` (websockets:175)
+
+**Notes:**
+
+- Warnings: a/o Viem gender differs between files; `assinar`/`assinatura` used for "subscribe" (pre-existing). Note: `Rede Principal` (for Ethereum Mainnet) and `Mainnet` are both glossary forms, depending on context.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:99/163 `tem 1000 cunhados para eles` (reads "brothers-in-law") -> `tem 1000 fichas cunhadas para si`
+
+**Open / notes:**
+
+- Unchanged frontmatter tag `"tes"` (truncated `testes`) in both files -- not fixed, out of scope

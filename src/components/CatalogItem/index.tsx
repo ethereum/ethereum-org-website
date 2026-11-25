@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server"
 
 import type { CatalogItem } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import ChainImages, { getRenderableChains } from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import ContentFeedback from "@/components/ContentFeedback"
@@ -11,14 +12,6 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import Tooltip from "@/components/Tooltip"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
@@ -126,10 +119,10 @@ const CatalogItemHero = ({ item }: { item: CatalogItem }) => (
         <div className="flex flex-col gap-2">
           {item.tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
-              {item.tags.map(({ label, status }) => (
-                <Tag key={label} status={status ?? "tag"}>
-                  {label}
-                </Tag>
+              {item.tags.map(({ label, status, node }) => (
+                <Fragment key={label}>
+                  {node ?? <Tag status={status ?? "tag"}>{label}</Tag>}
+                </Fragment>
               ))}
             </div>
           )}
@@ -185,23 +178,7 @@ const CatalogItemLayout = async ({
   return (
     <>
       <div className="px-page py-hero lg:py-hero-2x">
-        <Breadcrumb>
-          <BreadcrumbList>
-            {item.breadcrumbs.map(({ label, href }) => (
-              <Fragment key={href}>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href={href}>{label}</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
-                  /
-                </BreadcrumbSeparator>
-              </Fragment>
-            ))}
-            <BreadcrumbItem>
-              <BreadcrumbPage>{item.name}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <Breadcrumbs slug={item.breadcrumbSlug} label={item.name} />
       </div>
 
       <main className="px-page pb-page">

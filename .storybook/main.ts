@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     // Recursive everywhere: a story nested a directory deeper than expected
     // would otherwise never load, with no error to say so.
     "../src/components/**/*.stories.{ts,tsx}",
+    "../src/components/**/*.mdx",
     "../src/layouts/**/*.stories.{ts,tsx}",
     "../src/styles/**/*.stories.{ts,tsx}",
     "../app/**/*.stories.{ts,tsx}",
@@ -32,6 +33,10 @@ const config: StorybookConfig = {
     { from: "../public/content", to: "/content" },
     { from: "../public/audio", to: "/audio" },
   ],
+
+  // next >=16.4 picocolors reads globalThis.process.env unguarded at import time.
+  previewHead: (head) =>
+    `${head}<script>globalThis.process ??= { env: {} }</script>`,
 
   framework: {
     name: "@storybook/nextjs",

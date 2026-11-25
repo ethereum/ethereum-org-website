@@ -8,6 +8,9 @@
  * bodies raw, fences and all.
  */
 
+import fs from "fs"
+import path from "path"
+
 import { expect, test } from "@playwright/test"
 
 import {
@@ -20,6 +23,11 @@ import {
 import { normalizeContent } from "../../../src/scripts/intl-pipeline/lib/llm/content-normalizer"
 import { planIncrementalBatches } from "../../../src/scripts/intl-pipeline/lib/llm/plan"
 import { classifyFailure } from "../../../src/scripts/intl-pipeline/lib/quarantine"
+import {
+  FENCED_BLOCK_RE,
+  fenceLanguage,
+  PROSE_FENCE_TAGS,
+} from "../../../src/scripts/intl-pipeline/lib/shared-patterns"
 import { verifyMarkdown } from "../../../src/scripts/intl-pipeline/lib/verify-structure"
 
 /** The real shape of the defect: an untagged `clef` console transcript. */
@@ -281,6 +289,7 @@ test("gate flags a translated untagged fence", () => {
       check: "code-fence-content",
       detail: "fence 1 (`untagged`) body differs from English",
       severity: "error",
+      key: expect.any(String),
     },
   ])
 })
@@ -322,4 +331,75 @@ test("gate flags a translated language tag", () => {
 
 test("gate passes an untouched translation", () => {
   expect(fenceFindings(EN, EN.replace("Prose before.", "Vorher."))).toEqual([])
+})
+
+/**
+ * A prose-tagged fence is sent to the model inside a JSON string value, so a
+ * `\"` in one is both a translation bug and an escaping hazard: the model has
+ * to re-emit it as `\\\"` and a slip kills the whole file+locale task. Two
+ * reproduced `npm init` transcripts sat in ```text fences and did exactly that
+ * to mr and ur in run 39855262412. A lone `\` is not the signal -- escaped
+ * markdown punctuation is legitimate prose.
+ */
+test("no English prose fence carries an escaped quote", () => {
+  const root = path.join(process.cwd(), "public/content")
+  const offenders: string[] = []
+
+  const walk = (dir: string) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name === "translations") continue
+      const full = path.join(dir, entry.name)
+      if (entry.isDirectory()) {
+        walk(full)
+        continue
+      }
+      if (!entry.name.endsWith(".md")) continue
+      const src = fs.readFileSync(full, "utf-8")
+      // The pipeline's own pattern, so the guard cannot drift from what it
+      // actually translates: tildes and empty fences included.
+      for (const m of src.matchAll(FENCED_BLOCK_RE)) {
+        const body = m[4]
+        if (!body) continue
+        if (!PROSE_FENCE_TAGS.has(fenceLanguage(m[3]))) continue
+        if (body.includes('\\"')) {
+          offenders.push(path.relative(root, full))
+        }
+      }
+    }
+  }
+  walk(root)
+
+  expect(offenders).toEqual([])
+})
+
+// --- flowcharts -------------------------------------------------------------
+
+const FLOW = [
+  "<Flowchart>",
+  "",
+  "- Entry point (0x00)",
+  "  - Is the call data shorter than four bytes?",
+  "    - **Yes** Non-ABI calls (0x5E)",
+  "    - **No** ABI calls (0x0D)",
+  "",
+  "</Flowchart>",
+].join("\n")
+
+const flowFindings = (tr: string) =>
+  verifyMarkdown(FLOW, tr, "x.md").filter((f) =>
+    f.check.startsWith("flowchart")
+  )
+
+test("a translated flowchart with the same shape passes", () => {
+  const tr = FLOW.replace("Entry point", "Einstiegspunkt")
+    .replace("**Yes** Non-ABI", "**Ja** Nicht-ABI")
+    .replace("**No**", "**Nein**")
+  expect(flowFindings(tr)).toEqual([])
+})
+
+test("a flowchart that moves an edge label or loses its list fails", () => {
+  const moved = FLOW.replace("**Yes** Non-ABI calls", "Non-ABI calls **Yes**")
+  expect(flowFindings(moved).map((f) => f.check)).toEqual(["flowchart-shape"])
+  const flat = FLOW.replace(/^ +/gm, "")
+  expect(flowFindings(flat).map((f) => f.check)).toEqual(["flowchart-shape"])
 })

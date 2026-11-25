@@ -13,20 +13,19 @@ lang: zh-tw
 
 ## 什麼是燃料？ {#what-is-gas}
 
-燃料是指衡量在以太坊網路上執行特定操作所需運算工作量的單位。
+燃料是指用於衡量在以太坊網路上執行特定操作所需運算工作量的單位。
 
-由於每筆以太坊交易都需要運算資源來執行，因此必須為這些資源付費，以確保以太坊不會受到垃圾訊息攻擊，也不會陷入無限的運算迴圈。運算費用的支付形式為 Gas 費。
+由於每筆以太坊交易都需要運算資源來執行，因此必須為這些資源付費，以確保以太坊不會受到垃圾訊息的攻擊，也不會陷入無限的運算迴圈。運算費用的支付形式為 Gas 費。
 
-Gas 費是**執行某項操作所使用的燃料數量，乘以每單位燃料的成本**。無論交易成功或失敗，都必須支付該費用。
+Gas 費是**執行某項操作所使用的燃料數量，乘以每單位燃料的成本**。無論交易成功或失敗，都必須支付此費用。
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-Gas 費必須以以太坊的原生貨幣以太幣 (ETH) 支付。Gas 價格通常以 Gwei 報價，這是 ETH 的一種面額。每個 Gwei 等於十億分之一 ETH（0.000000001 ETH 或 10<sup>-9</sup> ETH）。
+Gas 費必須以以太坊的原生貨幣以太幣 (ETH) 支付。Gas 價格通常以 Gwei 報價，這是 ETH 的一個面額。每個 Gwei 等於十億分之一 ETH（0.000000001 ETH 或 10<sup>-9</sup> ETH）。
 
-例如，你可以說你的燃料成本為 1 Gwei，而不是說你的燃料成本為 0.000000001 以太幣。
+例如，與其說你的燃料花費 0.000000001 以太幣，你可以說你的燃料花費 1 Gwei。
 
-「Gwei」一詞是「giga-wei」的縮寫，意思是「十億 Wei」。一 Gwei 等於十億 Wei。Wei 本身（以 [b-money](https://www.investopedia.com/terms/b/bmoney.asp) 創造者[戴偉](https://wikipedia.org/wiki/Wei_Dai)的名字命名）是 ETH 的最小單位。
+「Gwei」這個詞是「giga-wei」的縮寫，意思是「十億 Wei」。一個 Gwei 等於十億 Wei。Wei 本身（以 [b-money](https://www.investopedia.com/terms/b/bmoney.asp) 的創造者[戴偉](https://wikipedia.org/wiki/Wei_Dai)命名）是 ETH 的最小單位。
 
 ## Gas 費是如何計算的？ {#how-are-gas-fees-calculated}
 
@@ -101,12 +100,11 @@ Gas 費必須以以太坊的原生貨幣以太幣 (ETH) 支付。Gas 價格通�
 
 ## 為什麼會有 Gas 費？ {#why-do-gas-fees-exist}
 
-簡而言之，Gas 費有助於保持以太坊網路的安全。透過要求對網路上執行的每次運算收取費用，我們防止了惡意行為者對網路發送垃圾訊息。為了避免程式碼中意外或惡意的無限迴圈或其他運算浪費，每筆交易都被要求設定其可以使用的程式碼執行運算步驟的限制。運算的基本單位是「燃料」。
+簡而言之，Gas 費有助於保持以太坊網路的安全。透過要求對網路上執行的每次運算收取費用，我們防止了惡意行為者向網路發送垃圾訊息。為了避免程式碼中出現意外或惡意的無限迴圈或其他運算浪費，每筆交易都被要求設定其可以使用的程式碼執行運算步驟的限制。運算的基本單位是「燃料」。
 
 雖然交易包含一個限制，但交易中未使用的任何燃料都會退還給使用者（例如，退還 `max fee - (base fee + tip)`）。
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## 什麼是 Gas 限制？ {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ Gas 限制是指你願意在一筆交易中消耗的最大燃料數量。涉及[
 
 ## 監控 Gas 費 {#monitoring-gas-fees}
 
-如果你想監控 Gas 價格，以便以更低的成本發送你的 ETH，你可以使用許多不同的工具，例如：
+如果你想監控 Gas 價格，以便用更少的費用發送你的 ETH，你可以使用許多不同的工具，例如：
 
 - [Etherscan](https://etherscan.io/gastracker) _交易 Gas 價格估算器_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _開源交易 Gas 價格估算器_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _監控和追蹤以太坊及 L2 Gas 價格，以降低交易手續費並節省金錢_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _支援 Type 0 傳統交易和 Type 2 EIP-1559 交易的 Gas 估算 Chrome 擴充功能。_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _監控和追蹤以太坊和第二層 (L2) Gas 價格，以減少交易手續費並節省金錢_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _以你的當地貨幣計算主網、Arbitrum 和 Polygon 上不同交易類型的 Gas 費。_
-
-## 相關工具 {#related-tools}
-
-- [Blocknative 的 Gas 平台](https://www.blocknative.com/gas) _由 Blocknative 全球記憶體池資料平台驅動的 Gas 估算 API_
-- [Gas Network](https://gas.network) 鏈上 Gas 預言機。支援 35 條以上的區塊鏈。 
 
 ## 延伸閱讀 {#further-reading}
 

@@ -58,18 +58,11 @@
   "page-apps-filter-by": "필터링 기준",
   "page-apps-filter-all": "전체",
   "page-apps-showing": "표시 중",
-  "page-apps-visit-app": "{appName} 방문하기",
-  "page-apps-see-next": "다음 보기",
-  "page-apps-info-title": "정보",
   "page-apps-info-founded": "설립일",
   "page-apps-info-creator": "제작자",
-  "page-apps-info-last-updated": "최근 업데이트",
-  "page-apps-gallery-title": "갤러리",
-  "page-apps-gallery-screenshot-alt": "애플리케이션 인터페이스를 보여주는 {appName}의 스크린샷 {index}",
-  "page-apps-gallery-modal-title": "{appName} 스크린샷",
+  "page-apps-info-languages": "언어",
+  "page-apps-info-listing-reviewed": "등록 정보 검토일",
+  "page-apps-info-listing-reviewed-tooltip": "ethereum.org에 등록된 이 앱의 세부 정보가 마지막으로 검토된 날짜입니다. 앱 자체가 마지막으로 변경된 날짜를 나타내지는 않습니다.",
   "page-apps-more-apps-like-this": "이와 유사한 앱 더 보기",
-  "page-apps-by-company": "제작: {company}",
-  "page-apps-today": "오늘",
-  "page-apps-one-day-ago": "1일 전",
-  "page-apps-days-ago": "{days}일 전"
+  "page-apps-detail-meta-title": "이더리움 앱 - {name}"
 }

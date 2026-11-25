@@ -12,12 +12,11 @@ Ein grundlegendes Verständnis gängiger Begriffe der Informatik wie [Bytes](htt
 
 ## Vom Ledger zur Zustandsmaschine {#from-ledger-to-state-machine}
 
-Die Analogie eines „verteilten Ledgers“ (Distributed Ledger) wird oft verwendet, um Blockchains wie Bitcoin zu beschreiben, die eine dezentrale Währung mithilfe grundlegender Werkzeuge der Kryptographie ermöglichen. Der Ledger führt eine Aufzeichnung der Aktivitäten, die sich an eine Reihe von Regeln halten muss, welche bestimmen, was jemand tun darf und was nicht, um den Ledger zu ändern. Zum Beispiel kann eine Bitcoin-Adresse nicht mehr Bitcoin ausgeben, als sie zuvor empfangen hat. Diese Regeln untermauern alle Transaktionen auf Bitcoin und vielen anderen Blockchains.
+Die Analogie eines „verteilten Ledgers“ wird oft verwendet, um Blockchains wie Bitcoin zu beschreiben, die eine dezentrale Währung mithilfe grundlegender Werkzeuge der Kryptographie ermöglichen. Der Ledger führt eine Aufzeichnung der Aktivitäten, die sich an eine Reihe von Regeln halten muss. Diese Regeln bestimmen, was jemand tun darf und was nicht, um den Ledger zu ändern. Zum Beispiel kann eine Bitcoin-Adresse nicht mehr Bitcoin ausgeben, als sie zuvor empfangen hat. Diese Regeln bilden die Grundlage für alle Transaktionen bei Bitcoin und vielen anderen Blockchains.
 
-Während Ethereum seine eigene native Kryptowährung (Ether) hat, die fast genau denselben intuitiven Regeln folgt, ermöglicht es auch eine viel mächtigere Funktion: [Smart Contracts](/developers/docs/smart-contracts/). Für diese komplexere Funktion ist eine anspruchsvollere Analogie erforderlich. Anstelle eines verteilten Ledgers ist Ethereum eine verteilte [Zustandsmaschine](https://wikipedia.org/wiki/Finite-state_machine). Der Zustand von Ethereum ist eine große Datenstruktur, die nicht nur alle Konten und Salden enthält, sondern auch einen _Maschinenzustand_, der sich von Block zu Block gemäß einem vordefinierten Regelwerk ändern und beliebigen Maschinencode ausführen kann. Die spezifischen Regeln für die Änderung des Zustands von Block zu Block werden durch die EVM definiert.
+Während Ethereum seine eigene native Kryptowährung (Ether) hat, die fast genau denselben intuitiven Regeln folgt, ermöglicht es auch eine viel mächtigere Funktion: [Smart Contracts](/developers/docs/smart-contracts/). Für diese komplexere Funktion ist eine ausgefeiltere Analogie erforderlich. Anstelle eines verteilten Ledgers ist Ethereum eine verteilte [Zustandsmaschine](https://wikipedia.org/wiki/Finite-state_machine). Der Zustand von Ethereum ist eine große Datenstruktur, die nicht nur alle Konten und Salden enthält, sondern auch einen _Maschinenzustand_, der sich von Block zu Block gemäß einem vordefinierten Regelwerk ändern und beliebigen Maschinencode ausführen kann. Die spezifischen Regeln für die Änderung des Zustands von Block zu Block werden durch die EVM definiert.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Diagramm adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## Die Ethereum-Zustandsübergangsfunktion {#the-ethereum-state-transition-function}
 
@@ -55,22 +54,21 @@ Verträge enthalten einen Merkle-Patricia-_Speicher-Trie_ (als wortadressierbare
 
 ### Opcodes {#opcodes}
 
-Kompilierter Smart Contract-Bytecode wird als eine Reihe von EVM-[Opcodes](/developers/docs/evm/opcodes) ausgeführt, die Standard-Stack-Operationen wie `XOR`, `AND`, `ADD`, `SUB` usw. durchführen. Die EVM implementiert auch eine Reihe von Blockchain-spezifischen Stack-Operationen, wie `ADDRESS`, `BALANCE`, `BLOCKHASH` usw. Das Opcode-Set enthält auch `TSTORE` und `TLOAD`, die Zugriff auf den transienten Speicher bieten.
+Kompilierter Smart Contract-Bytecode wird als eine Reihe von EVM-[Opcodes](/developers/docs/evm/opcodes) ausgeführt, die Standard-Stack-Operationen wie `XOR`, `AND`, `ADD`, `SUB` usw. durchführen. Die EVM implementiert auch eine Reihe von Blockchain-spezifischen Stack-Operationen wie `ADDRESS`, `BALANCE`, `BLOCKHASH` usw. Das Opcode-Set enthält auch `TSTORE` und `TLOAD`, die Zugriff auf den transienten Speicher bieten.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Diagramme adaptiert von [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## EVM-Implementierungen {#evm-implementations}
 
 Alle Implementierungen der EVM müssen sich an die im Ethereum Yellow Paper beschriebene Spezifikation halten.
 
-Im Laufe der zehnjährigen Geschichte von Ethereum wurde die EVM mehrfach überarbeitet, und es gibt mehrere Implementierungen der EVM in verschiedenen Programmiersprachen.
+In der zehnjährigen Geschichte von Ethereum hat die EVM mehrere Überarbeitungen erfahren, und es gibt mehrere Implementierungen der EVM in verschiedenen Programmiersprachen.
 
 [Ethereum-Ausführungsclients](/developers/docs/nodes-and-clients/#execution-clients) enthalten eine EVM-Implementierung. Darüber hinaus gibt es mehrere eigenständige Implementierungen, darunter:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Weiterführende Literatur {#further-reading}

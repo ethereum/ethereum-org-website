@@ -171,7 +171,6 @@ In a dapp, the user's wallet (like MetaMask, Rainbow, or WalletConnect) handles 
 
 ## Related tutorials {#related-tutorials}
 
-- [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Sending transactions using web3.js and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [How to view your NFT in your wallet](/developers/tutorials/how-to-view-nft-in-metamask/)
 
@@ -180,7 +179,7 @@ In a dapp, the user's wallet (like MetaMask, Rainbow, or WalletConnect) handles 
 - [Viem documentation: Reading and writing to contracts](https://viem.sh/docs/contract/readContract)
 - [ethers.js documentation: Contracts](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [What is an ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [How do smart contract ABIs work? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Related topics {#related-topics}
 

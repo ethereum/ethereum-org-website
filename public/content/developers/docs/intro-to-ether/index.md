@@ -1,6 +1,6 @@
 ---
 title: Technical intro to ether
-description: A developer's introduction to the ether cryptocurrency.
+description: "A technical introduction to ether (ETH): what it is used for, how it is denominated in wei and gwei, and how it is minted, burned and transferred."
 lang: en
 ---
 

@@ -38,7 +38,15 @@ const activateWhenPresent = (selector: string) => {
   requestAnimationFrame(attempt)
 }
 
-const LanguageMorpher = () => {
+const ETHER_SYMBOL = "Ξ"
+
+type LanguageMorpherProps = {
+  // From loadEthereumNames: this button opens the language picker, so it only
+  // cycles through languages the picker offers.
+  names: string[]
+}
+
+const LanguageMorpher = ({ names }: LanguageMorpherProps) => {
   const isClient = useIsClient()
 
   const handleMobileClick = () => {
@@ -65,26 +73,7 @@ const LanguageMorpher = () => {
       variant="ghost"
     >
       <Morpher
-        words={[
-          "Ethereum",
-          "以太坊",
-          "イーサリアム",
-          "Etérium",
-          "이더리움",
-          "اتریوم",
-          "Αιθέριο",
-          "Eterijum",
-          "إثيريوم",
-          "อีเธอเรียม",
-          "Эфириум",
-          "इथीरियम",
-          "ಇಥೀರಿಯಮ್",
-          "אתריום",
-          "Ξ",
-          "ইথেরিয়াম",
-          "எதீரியம்",
-          "ఇథిరియూమ్",
-        ]}
+        words={[...names, ETHER_SYMBOL]}
         charSet="abcdxyz01234567{}%$?!"
       />
     </Button>
