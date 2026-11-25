@@ -66,7 +66,7 @@ Proof verification operates in constant time regardless of block complexity. Thi
 
 The main challenge for zkEVM L1 verification is speed. Ethereum blocks are produced every 12 seconds, meaning proofs need to be generated within a similar timeframe to be useful for consensus.
 
-Proving has become much faster. At the time of writing (November 2026), [Ethproofs](https://ethproofs.org/) reports that most Mainnet blocks are proven in under 10 seconds, within a single slot. Research now focuses on making real-time proving reliable for every block and affordable to run, through:
+Proving has become much faster: several zkVM provers tracked on [Ethproofs](https://ethproofs.org/) have demonstrated proving Mainnet blocks in under 10 seconds. Proving time is not the same as being ready for consensus, though. For proofs to matter for consensus, they also have to be produced reliably for every block, shared across the network and verified in time. Research now focuses on closing that gap and on making real-time proving affordable to run, through:
 
 - **Parallelization**: Distributing proving work across multiple machines
 - **Specialized hardware**: Designing circuits and hardware optimized for ZK proving
@@ -83,7 +83,7 @@ The Ethereum Foundation's [zkEVM team](https://zkevm.ethereum.foundation/) leads
 
 ### Optional execution proofs {#optional-execution-proofs}
 
-The zkEVM team's first proposed protocol change is [EIP-8025](https://eips.ethereum.org/EIPS/eip-8025) (Optional Execution Proofs). Provers that choose to take part generate proofs of each block's execution and share them on the network, and validators that opt in can check those proofs instead of re-executing the block. The proofs are a supplementary check: EIP-8025 does not change consensus validity rules, and a validator that hasn't received enough valid proofs in time attests as it does today.
+The zkEVM team's first proposed protocol change is [EIP-8025](https://eips.ethereum.org/EIPS/eip-8025) (Optional Execution Proofs). Provers that choose to take part generate proofs of each block's execution and share them on the network. Nodes that opt in to verifying them can check a proof without the execution-layer state, but in this optional phase they [still re-execute every block](https://eips.ethereum.org/EIPS/eip-8025#consensus-layer). A verified proof is only an extra signal: it doesn't determine fork choice, and validators must not delay block validation or attestation while waiting for one. EIP-8025 does not change consensus validity rules. Letting proofs replace re-execution would be a later step that needs a separate proposal.
 
 EIP-8025 was proposed for the Hegotá upgrade, but the Hegotá planning EIP ([EIP-8081](https://eips.ethereum.org/EIPS/eip-8081)) lists it as declined for inclusion. It remains a draft.
 
