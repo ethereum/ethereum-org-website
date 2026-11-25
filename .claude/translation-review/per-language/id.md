@@ -1,5 +1,10 @@
 # id Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: checkpoint, Bukti Kepemilikan in attestations description, fork choice algorithm, ekivokasi, rantai blok. Open: `dikembalikan` for revert, head/kepala, stem/batang page vs diagram.
+
 ## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.3/10
 
 **Fixed (critical):** `set anonimitas` -> `himpunan anonimitas` (`roadmap/privacy` L74). The companion video transcript already used the glossary form 3x in the same PR — cross-file disagreement was the tell.

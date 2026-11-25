@@ -170,7 +170,7 @@ A API do Construtor também atua como um middleware entre validadores e clientes
 
 Abaixo está uma visão geral de como a API do Construtor funciona:
 
-1. A API do Construtor conecta o validador a uma rede de construtores de blocos que executam clientes da camada de execução. Como na PBS, os construtores são partes especializadas que investem na construção de blocos com uso intensivo de recursos e usam estratégias diferentes para maximizar a receita obtida com MEV + gorjetas de prioridade.
+1. A API do Construtor conecta o validador a uma rede de construtores de blocos que executam clientes da camada de execução. Como na PBS, os construtores são partes especializadas que investem na construção de blocos com uso intensivo de recursos e usam estratégias diferentes para maximizar a receita obtida com MEV + taxas de prioridade.
 
 2. Um validador (executando um cliente da camada de consenso) solicita cargas de execução junto com lances da rede de construtores. Os lances dos construtores conterão o cabeçalho da carga de execução — um compromisso criptográfico com o conteúdo da carga — e uma taxa a ser paga ao validador.
 

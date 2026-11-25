@@ -113,7 +113,7 @@ Le domaine de commérage inclut toutes les informations qui doivent se propager 
 
 ### Requête-réponse {#request-response}
 
-Le domaine requête-réponse contient des protocoles pour les clients demandant des informations spécifiques à leurs pairs. Les exemples incluent la demande de blocs phares spécifiques correspondant à certains hashs racines ou dans une plage d'emplacements (slots). Les réponses sont toujours renvoyées sous forme d'octets encodés SSZ et compressés avec snappy.
+Le domaine requête-réponse contient des protocoles pour les clients demandant des informations spécifiques à leurs pairs. Les exemples incluent la demande de blocs phares spécifiques correspondant à certains hashs racines ou dans une plage de créneaux. Les réponses sont toujours renvoyées sous forme d'octets encodés SSZ et compressés avec snappy.
 
 ## Pourquoi le client de consensus préfère-t-il SSZ à RLP ? {#ssz-vs-rlp}
 

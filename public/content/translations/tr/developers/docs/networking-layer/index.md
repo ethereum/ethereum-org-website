@@ -105,7 +105,7 @@ Mutabakat düğümleri için ENR, düğümün açık anahtarını, IP adresini, 
 
 ### libP2P {#libp2p}
 
-libp2P yığını, keşiften sonraki tüm iletişimleri destekler. İstemciler, ENR'lerinde tanımlandığı gibi IPv4 ve/veya IPv6 üzerinden arama yapabilir ve dinleyebilir. libp2P katmanındaki protokoller, dedikodu ve istek/yanıt (req/resp) alanlarına ayrılabilir.
+libp2p yığını, keşiften sonraki tüm iletişimleri destekler. İstemciler, ENR'lerinde tanımlandığı gibi IPv4 ve/veya IPv6 üzerinden arama yapabilir ve dinleyebilir. libp2p katmanındaki protokoller, dedikodu ve istek/yanıt (req/resp) alanlarına ayrılabilir.
 
 ### Dedikodu {#gossip}
 

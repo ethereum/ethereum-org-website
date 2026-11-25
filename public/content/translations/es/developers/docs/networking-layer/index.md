@@ -113,7 +113,7 @@ El dominio gossip incluye toda la información que tiene que propagarse rápidam
 
 ### Solicitud-respuesta {#request-response}
 
-El dominio de solicitud-respuesta contiene protocolos para clientes que solicitan información específica de sus pares. Los ejemplos incluyen la solicitud de bloques baliza específicos que coincidan con ciertos hashes raíz o dentro de un rango de ranuras (slots). Las respuestas siempre se devuelven como bytes codificados en SSZ y comprimidos con snappy.
+El dominio de solicitud-respuesta contiene protocolos para clientes que solicitan información específica de sus pares. Los ejemplos incluyen la solicitud de bloques baliza específicos que coincidan con ciertos hashes raíz o dentro de un rango de slots. Las respuestas siempre se devuelven como bytes codificados en SSZ y comprimidos con snappy.
 
 ## ¿Por qué el cliente de consenso prefiere SSZ a RLP? {#ssz-vs-rlp}
 

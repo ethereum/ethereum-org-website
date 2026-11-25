@@ -1,5 +1,10 @@
 # Czech (cs) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.8/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: verkle inline code, glossary (fork choice, kontrakt, prioritni poplatek, ekvivokace, vystup, hledac, stvrzenka replacing ucenka). Open: gas/plyn policy, validator client word order, head block.
+
 > **PR:** #18344 (latest/ builder blog, 3 posts)
 > **Date:** 2026-06-03
 > **Quality Score:** 8.8/10

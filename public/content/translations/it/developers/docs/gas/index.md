@@ -102,7 +102,7 @@ Puoi dichiarare esplicitamente quanto sei disposto a pagare per far eseguire la 
 
 In breve, le commissioni del gas aiutano a mantenere sicura la rete Ethereum. Richiedendo una commissione per ogni calcolo eseguito sulla rete, impediamo ai malintenzionati di inviare spam sulla rete. Al fine di evitare cicli infiniti accidentali o ostili o altri sprechi computazionali nel codice, ogni transazione deve impostare un limite al numero di passaggi computazionali di esecuzione del codice che può utilizzare. L'unità fondamentale di calcolo è il "gas".
 
-Sebbene una transazione includa un limite, qualsiasi gas non utilizzato in una transazione viene restituito all'utente (es., viene restituito `commissione massima - (commissione di base + commissione prioritaria)`).
+Sebbene una transazione includa un limite, qualsiasi gas non utilizzato in una transazione viene restituito all'utente (es., viene restituito `max fee - (base fee + tip)`).
 
 <GasTxDiagram />
 

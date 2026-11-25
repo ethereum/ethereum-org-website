@@ -140,7 +140,7 @@ Die Bekämpfung dieser MEV-bezogenen Probleme im Post-Merge-Ethereum ist ein zen
 
 ### Proposer-Builder-Trennung {#proposer-builder-separation}
 
-Sowohl bei Proof-of-Work als auch bei Proof-of-Stake schlägt ein Knoten, der einen Block erstellt, diesen anderen am Konsens teilnehmenden Knoten zur Hinzufügung zur Chain vor. Ein neuer Block wird Teil der kanonischen Chain, nachdem ein anderer Miner darauf aufbaut (bei PoW) oder er Bestätigungen (Attestations) von der Mehrheit der Validatoren erhält (bei PoS).
+Sowohl bei Proof-of-Work als auch bei Proof-of-Stake schlägt ein Knoten, der einen Block erstellt, diesen anderen am Konsens teilnehmenden Knoten zur Hinzufügung zur Chain vor. Ein neuer Block wird Teil der kanonischen Chain, nachdem ein anderer Miner darauf aufbaut (bei PoW) oder er Attestierungen von der Mehrheit der Validatoren erhält (bei PoS).
 
 Die Kombination der Rollen des Blockproduzenten und des Block-Proposers ist es, die die meisten der zuvor beschriebenen MEV-bezogenen Probleme mit sich bringt. Beispielsweise haben Konsensknoten einen Anreiz, Chain-Reorganisationen in [Time-Bandit-Angriffen](https://www.mev.wiki/attack-examples/time-bandit-attack) auszulösen, um die MEV-Einnahmen zu maximieren.
 
@@ -148,7 +148,7 @@ Die [Proposer-Builder-Trennung](https://ethresear.ch/t/proposer-block-builder-se
 
 Unter PBS erstellt ein Block-Builder ein Transaktionsbündel und gibt ein Gebot für dessen Aufnahme in einen Beacon Chain-Block (als „Ausführungs-Payload“) ab. Der Validator, der ausgewählt wurde, um den nächsten Block vorzuschlagen, prüft dann die verschiedenen Gebote und wählt das Bündel mit der höchsten Gebühr. PBS schafft im Wesentlichen einen Auktionsmarkt, auf dem Builder mit Validatoren verhandeln, die Blockspace verkaufen.
 
-Aktuelle PBS-Designs verwenden ein [Commit-Reveal-Schema](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/), bei dem Builder zusammen mit ihren Geboten nur ein kryptografisches Commitment zum Inhalt eines Blocks (Block-Header) veröffentlichen. Nach Annahme des Gewinnergebots erstellt der Proposer einen signierten Blockvorschlag, der den Block-Header enthält. Es wird erwartet, dass der Block-Builder den vollständigen Blockkörper veröffentlicht, nachdem er den signierten Blockvorschlag gesehen hat, und er muss auch genügend [Bestätigungen](/glossary/#attestation) von Validatoren erhalten, bevor er endgültig ist.
+Aktuelle PBS-Designs verwenden ein [Commit-Reveal-Schema](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/), bei dem Builder zusammen mit ihren Geboten nur ein kryptografisches Commitment zum Inhalt eines Blocks (Block-Header) veröffentlichen. Nach Annahme des Gewinnergebots erstellt der Proposer einen signierten Blockvorschlag, der den Block-Header enthält. Es wird erwartet, dass der Block-Builder den vollständigen Blockkörper veröffentlicht, nachdem er den signierten Blockvorschlag gesehen hat, und er muss auch genügend [Attestierungen](/glossary/#attestation) von Validatoren erhalten, bevor er endgültig ist.
 
 #### Wie mildert die Proposer-Builder-Trennung die Auswirkungen von MEV? {#how-does-pbs-curb-mev-impact}
 
@@ -170,7 +170,7 @@ Die Builder-API fungiert auch als Middleware zwischen Validatoren und Clients de
 
 Nachfolgend finden Sie einen Überblick darüber, wie die Builder-API funktioniert:
 
-1. Die Builder-API verbindet den Validator mit einem Netzwerk von Block-Buildern, die Clients der Ausführungsschicht betreiben. Wie bei PBS sind Builder spezialisierte Parteien, die in ressourcenintensives Block-Building investieren und verschiedene Strategien anwenden, um die Einnahmen aus MEV + Priority-Tips zu maximieren.
+1. Die Builder-API verbindet den Validator mit einem Netzwerk von Block-Buildern, die Clients der Ausführungsschicht betreiben. Wie bei PBS sind Builder spezialisierte Parteien, die in ressourcenintensives Block-Building investieren und verschiedene Strategien anwenden, um die Einnahmen aus MEV + Prioritätsgebühren zu maximieren.
 
 2. Ein Validator (der einen Client der Konsensschicht betreibt) fordert Ausführungs-Payloads zusammen mit Geboten aus dem Netzwerk der Builder an. Gebote von Buildern enthalten den Header der Ausführungs-Payload – ein kryptografisches Commitment zum Inhalt der Payload – und eine an den Validator zu zahlende Gebühr.
 

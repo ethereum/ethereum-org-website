@@ -21,7 +21,7 @@ Kazi ya kwanza kwa mthibitishaji anayethibitisha ni kuunda `data`. `data` ina ta
 
 - `slot`: Nambari ya sloti ambayo uthibitisho unarejelea
 - `index`: Imewekwa kuwa `0` tangu Pectra. Kamati inatambulishwa nje ya `data` (kwa `committee_index`, au kwa `committee_bits` katika mkusanyiko) ili kura kutoka kwa kamati tofauti ziwe na `data` zinazofanana na ziweze kukusanywa pamoja. Kabla ya Pectra, uwanja huu ulitambulisha kamati
-- `beacon_block_root`: Heshi ya mzizi ya kitalu ambacho mthibitishaji anakiona kwenye kichwa cha mnyororo (matokeo ya kutumia algoriti ya kuchagua mchepuo)
+- `beacon_block_root`: Heshi ya mzizi ya kitalu ambacho mthibitishaji anakiona kwenye kichwa cha mnyororo (matokeo ya kutumia algoriti ya kuchagua mchepuko)
 - `source`: Sehemu ya kura ya ukamilifu inayoonyesha kile wathibitishaji wanachokiona kama kituo cha ukaguzi cha hivi karibuni kilichohalalishwa
 - `target`: Sehemu ya kura ya ukamilifu inayoonyesha kile wathibitishaji wanachokiona kama kituo cha ukaguzi mwanzoni mwa kipindi cha sasa (kitalu kwenye sloti yake ya kwanza, au kitalu cha hivi karibuni kabla yake ikiwa sloti hiyo ni tupu)
 
@@ -77,7 +77,7 @@ Tuzo ya msingi huhesabiwa kulingana na idadi ya wathibitishaji wanaothibitisha n
 Wakati wathibitishaji walipopiga kura kwenye kichwa cha mnyororo (`block n`), `block n+1` kilikuwa bado hakijapendekezwa. Kwa hivyo uthibitisho kwa asili hujumuishwa **kitalu kimoja baadaye** hivyo uthibitisho wote uliopiga kura kwenye `block n` kuwa kichwa cha mnyororo ulijumuishwa katika `block n+1` na, **ucheleweshaji wa kujumuishwa** ni 1. Ucheleweshaji wa kujumuishwa huamua ni bendera zipi za ushiriki ambazo uthibitisho unapata:
 
 - `head`: tu ikiwa ucheleweshaji wa kujumuishwa ni sloti 1 kamili
-- `source`: ikiwa ucheleweshaji wa kujumuishwa ni angalau sloti 5 (kipeo cha pili cha nambari kamili cha sloti 32 katika kipindi)
+- `source`: ikiwa ucheleweshaji wa kujumuishwa si zaidi ya sloti 5 (kipeuo cha pili cha nambari kamili cha sloti 32 katika kipindi)
 - `target`: wakati wowote uthibitisho unapojumuishwa (tangu sasisho la Deneb, [EIP-7045](https://eips.ethereum.org/EIPS/eip-7045))
 
 Kwa hivyo uthibitisho uliojumuishwa sloti mbili kwa kuchelewa hupoteza tuzo yake ya kichwa lakini bado hupata tuzo za chanzo na lengo.

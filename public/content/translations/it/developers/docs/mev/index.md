@@ -170,7 +170,7 @@ La Builder API funge anche da middleware tra i validatori e i client del livello
 
 Di seguito è riportata una panoramica di come funziona la Builder API:
 
-1. La Builder API connette il validatore a una rete di costruttori di blocchi che eseguono client del livello di esecuzione. Come nella PBS, i costruttori sono parti specializzate che investono nella costruzione di blocchi ad alta intensità di risorse e utilizzano diverse strategie per massimizzare le entrate guadagnate dal MEV + le mance di priorità.
+1. La Builder API connette il validatore a una rete di costruttori di blocchi che eseguono client del livello di esecuzione. Come nella PBS, i costruttori sono parti specializzate che investono nella costruzione di blocchi ad alta intensità di risorse e utilizzano diverse strategie per massimizzare le entrate guadagnate dal MEV + le commissioni prioritarie.
 
 2. Un validatore (che esegue un client del livello di consenso) richiede payload di esecuzione insieme alle offerte dalla rete di costruttori. Le offerte dei costruttori conterranno l'intestazione del payload di esecuzione — un commitment crittografico ai contenuti del payload — e una commissione da pagare al validatore.
 

@@ -109,7 +109,7 @@ Mkusanyiko wa libP2P unasaidia mawasiliano yote baada ya ugunduzi. Viteja vinawe
 
 ### Uvumi {#gossip}
 
-Kikoa cha uvumi kinajumuisha taarifa zote ambazo zinapaswa kuenea kwa haraka kwenye mtandao mzima. Hii inajumuisha vitalu vya kinara, uthibitisho, uthibitisho, kutoka na kufyeka. Hii inasambazwa kwa kutumia libP2P gossipsub v1 na inategemea data fafanuzi mbalimbali kuhifadhiwa ndani ya kila nodi, ikiwa ni pamoja na ukubwa wa juu wa mizigo ya uvumi ya kupokea na kutuma. Taarifa za kina kuhusu kikoa cha uvumi zinapatikana [hapa](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+Kikoa cha uvumi kinajumuisha taarifa zote ambazo zinapaswa kuenea kwa haraka kwenye mtandao mzima. Hii inajumuisha vitalu vya kinara, uthibitisho, uthibitisho, kujitoa na ukataji. Hii inasambazwa kwa kutumia libP2P gossipsub v1 na inategemea data fafanuzi mbalimbali kuhifadhiwa ndani ya kila nodi, ikiwa ni pamoja na ukubwa wa juu wa mizigo ya uvumi ya kupokea na kutuma. Taarifa za kina kuhusu kikoa cha uvumi zinapatikana [hapa](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Ombi-jibu {#request-response}
 

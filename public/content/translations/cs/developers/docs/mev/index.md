@@ -26,7 +26,7 @@ Z tohoto důvodu u některých vysoce konkurenčních příležitostí MEV, jako
 
 Tato dynamika způsobila, že být dobrý v „gas golfingu“ – programování transakcí tak, aby spotřebovaly co nejméně gasu – je konkurenční výhodou, protože to hledačům umožňuje nastavit vyšší cenu plynu při zachování konstantních celkových poplatků za plyn (protože poplatky za plyn = cena plynu \* spotřebovaný gas).
 
-Mezi několik známých technik gas golfingu patří: používání adres, které začínají dlouhým řetězcem nul (např. [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://eth.blockscout.com/address/0x0000000000C521824EaFf97Eac7B73B084ef9306)), protože zabírají méně místa (a tedy i gasu) pro uložení; a ponechání malých zůstatků [ERC-20](/developers/docs/standards/tokens/erc-20/) tokenů ve smlouvách, protože inicializace úložného slotu (případ, kdy je zůstatek 0) stojí více gasu než aktualizace úložného slotu. Hledání dalších technik ke snížení spotřeby gasu je aktivní oblastí výzkumu mezi hledači.
+Mezi několik známých technik gas golfingu patří: používání adres, které začínají dlouhým řetězcem nul (např. [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://eth.blockscout.com/address/0x0000000000C521824EaFf97Eac7B73B084ef9306)), protože zabírají méně místa (a tedy i gasu) pro uložení; a ponechání malých zůstatků [ERC-20](/developers/docs/standards/tokens/erc-20/) tokenů v kontraktech, protože inicializace úložného slotu (případ, kdy je zůstatek 0) stojí více gasu než aktualizace úložného slotu. Hledání dalších technik ke snížení spotřeby gasu je aktivní oblastí výzkumu mezi hledači.
 
 ### Zobecnění frontrunneři {#mev-extraction-generalized-frontrunners}
 
@@ -170,7 +170,7 @@ Builder API také funguje jako middleware mezi validátory a klienty exekuční 
 
 Níže je uveden přehled toho, jak Builder API funguje:
 
-1. Builder API připojuje validátora k síti tvůrců bloků provozujících klienty exekuční vrstvy. Stejně jako v PBS jsou tvůrci specializované strany, které investují do sestavování bloků náročného na zdroje a používají různé strategie k maximalizaci příjmů získaných z MEV + prioritních spropitných.
+1. Builder API připojuje validátora k síti tvůrců bloků provozujících klienty exekuční vrstvy. Stejně jako v PBS jsou tvůrci specializované strany, které investují do sestavování bloků náročného na zdroje a používají různé strategie k maximalizaci příjmů získaných z MEV + prioritních poplatků.
 
 2. Validátor (provozující klienta vrstvy konsensu) si vyžádá exekuční payloady spolu s nabídkami od sítě tvůrců. Nabídky od tvůrců budou obsahovat hlavičku exekučního payloadu – kryptografický závazek k obsahu payloadu – a poplatek, který má být zaplacen validátorovi.
 
@@ -178,7 +178,7 @@ Níže je uveden přehled toho, jak Builder API funguje:
 
 4. Jakmile tvůrce uvidí podepsaný zaslepený blok, prostřednictvím relé, které neslo jeho nabídku, odhalí celý exekuční payload a zveřejní kompletní podepsaný beacon blok do sítě. (Před upgradem Fusaka byl payload místo toho vrácen validátorovi, který blok zveřejnil.)
 
-5. Od validátora používajícího Builder API se stále očekává, že sestaví blok lokálně pro případ, že by tvůrce bloku neodpověděl pohotově, aby nepřišel o odměny za návrh bloku. Validátor však nemůže vytvořit další blok pomocí nyní odhalených transakcí nebo jiné sady, protože by to znamenalo _equivocation_ (podepsání dvou bloků ve stejném slotu), což je přestupek trestaný slashingem.
+5. Od validátora používajícího Builder API se stále očekává, že sestaví blok lokálně pro případ, že by tvůrce bloku neodpověděl pohotově, aby nepřišel o odměny za návrh bloku. Validátor však nemůže vytvořit další blok pomocí nyní odhalených transakcí nebo jiné sady, protože by to znamenalo _ekvivokaci_ (podepsání dvou bloků ve stejném slotu), což je přestupek trestaný slashingem.
 
 Příkladem implementace Builder API je [MEV-Boost](https://github.com/flashbots/mev-boost), vylepšení [aukčního mechanismu Flashbots](https://docs.flashbots.net/flashbots-auction/overview) navržené k omezení negativních externalit MEV na Ethereu. Aukce Flashbots umožňuje validátorům v důkazu podílem outsourcovat práci na sestavování ziskových bloků specializovaným stranám zvaným **hledači**.
 

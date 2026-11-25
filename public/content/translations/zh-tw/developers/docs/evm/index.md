@@ -64,7 +64,7 @@ EVM 作為一個深度為 1024 個項目的[堆疊機](https://wikipedia.org/wik
 
 在以太坊十年的歷史中，EVM 經歷了多次修訂，並且有多種不同程式語言的 EVM 實作。
 
-[以太坊執行用戶端](/developers/docs/nodes-and-clients/#execution-clients)包含一個 EVM 實作。此外，還有多個獨立的實作，包括：
+[以太坊執行客戶端](/developers/docs/nodes-and-clients/#execution-clients)包含一個 EVM 實作。此外，還有多個獨立的實作，包括：
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

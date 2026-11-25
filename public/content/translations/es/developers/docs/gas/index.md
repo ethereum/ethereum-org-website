@@ -102,7 +102,7 @@ Puede indicar explícitamente cuánto está dispuesto a pagar para que se ejecut
 
 En resumen, las tarifas de gas ayudan a mantener segura la red Ethereum. Al requerir una tarifa por cada cálculo ejecutado en la red, evitamos que actores malintencionados envíen spam a la red. Para evitar bucles infinitos accidentales u hostiles u otro desperdicio computacional en el código, se requiere que cada transacción establezca un límite en la cantidad de pasos computacionales de ejecución de código que puede usar. La unidad fundamental de computación es el "gas".
 
-Aunque una transacción incluye un límite, cualquier gas no utilizado en una transacción se devuelve al usuario (p. ej., se devuelve `tarifa máxima - (tarifa base + tarifa de prioridad)`).
+Aunque una transacción incluye un límite, cualquier gas no utilizado en una transacción se devuelve al usuario (p. ej., se devuelve `max fee - (base fee + tip)`).
 
 <GasTxDiagram />
 

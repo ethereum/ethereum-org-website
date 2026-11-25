@@ -34,7 +34,7 @@ Kârlı MEV fırsatlarını tespit etmek için karmaşık algoritmalar programla
 
 ### Flashbots {#mev-extraction-flashbots}
 
-Flashbots, yürütme istemcilerini, arayıcıların MEV işlemlerini halka açık bellek havuzuna ifşa etmeden doğrulayıcılara göndermelerine olanak tanıyan bir hizmetle genişleten bağımsız bir projedir. Bu, işlemlerin genelleştirilmiş frontrunner'lar tarafından önden çalıştırılmasını (frontrun edilmesini) önler.
+Flashbots, yürütme istemcilerini, arayıcıların MEV işlemlerini halka açık bellek havuzuna ifşa etmeden doğrulayıcılara göndermelerine olanak tanıyan bir hizmetle genişleten bağımsız bir projedir. Bu, işlemlerin genelleştirilmiş frontrunner'lar tarafından önden koşulmasını (frontrun edilmesini) önler.
 
 ## MEV örnekleri {#mev-examples}
 
@@ -170,7 +170,7 @@ Oluşturucu API'si ayrıca doğrulayıcılar ve yürütme katmanı istemcileri a
 
 Aşağıda Oluşturucu API'sinin nasıl çalıştığına dair bir genel bakış yer almaktadır:
 
-1. Oluşturucu API'si, doğrulayıcıyı yürütme katmanı istemcileri çalıştıran bir blok oluşturucular ağına bağlar. PBS'de olduğu gibi, oluşturucular kaynak yoğun blok oluşturmaya yatırım yapan ve MEV + öncelik bahşişlerinden kazanılan geliri en üst düzeye çıkarmak için farklı stratejiler kullanan uzmanlaşmış taraflardır.
+1. Oluşturucu API'si, doğrulayıcıyı yürütme katmanı istemcileri çalıştıran bir blok oluşturucular ağına bağlar. PBS'de olduğu gibi, oluşturucular kaynak yoğun blok oluşturmaya yatırım yapan ve MEV + öncelik ücretlerinden kazanılan geliri en üst düzeye çıkarmak için farklı stratejiler kullanan uzmanlaşmış taraflardır.
 
 2. Bir doğrulayıcı (bir mutabakat katmanı istemcisi çalıştıran), oluşturucular ağından tekliflerle birlikte yürütme yükleri talep eder. Oluşturuculardan gelen teklifler, yürütme yükü başlığını (yükün içeriğine yönelik kriptografik bir taahhüt) ve doğrulayıcıya ödenecek bir ücreti içerecektir.
 
@@ -178,7 +178,7 @@ Aşağıda Oluşturucu API'sinin nasıl çalıştığına dair bir genel bakış
 
 4. İmzalı kör bloğu gördükten sonra oluşturucu, teklifini taşıyan röle aracılığıyla tam yürütme yükünü ortaya çıkarır ve eksiksiz imzalı İşaret bloğunu ağda yayınlar. (Fusaka yükseltmesinden önce, yük bunun yerine bloğu yayınlayan doğrulayıcıya iade ediliyordu.)
 
-5. Oluşturucu API'sini kullanan bir doğrulayıcının, blok oluşturucunun derhal yanıt verememesi durumunda blok teklifi ödüllerini kaçırmaması için yine de yerel olarak bir blok oluşturması beklenir. Ancak doğrulayıcı, kesinti (slashing) gerektiren bir suç olan _çift imza (equivocation)_ (aynı slot içinde iki blok imzalama) anlamına geleceğinden, şimdi ortaya çıkan işlemleri veya başka bir seti kullanarak başka bir blok oluşturamaz.
+5. Oluşturucu API'sini kullanan bir doğrulayıcının, blok oluşturucunun derhal yanıt verememesi durumunda blok teklifi ödüllerini kaçırmaması için yine de yerel olarak bir blok oluşturması beklenir. Ancak doğrulayıcı, kesinti (slashing) gerektiren bir suç olan _çifte imza (equivocation)_ (aynı slot içinde iki blok imzalama) anlamına geleceğinden, şimdi ortaya çıkan işlemleri veya başka bir seti kullanarak başka bir blok oluşturamaz.
 
 Oluşturucu API'sinin örnek bir uygulaması, Ethereum'da MEV'in olumsuz dışsallıklarını engellemek için tasarlanmış [Flashbots müzayede mekanizmasının](https://docs.flashbots.net/flashbots-auction/overview) bir geliştirmesi olan [MEV-Boost](https://github.com/flashbots/mev-boost)'tur. Flashbots müzayedesi, Hisse Kanıtı'ndaki doğrulayıcıların kârlı bloklar oluşturma işini **arayıcılar** adı verilen uzmanlaşmış taraflara dış kaynak olarak vermelerine olanak tanır.
 

@@ -157,4 +157,4 @@ Una volta che il blocco è stato attestato da un numero sufficiente di validator
 [Documento su Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Introduzione al p2p di Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)
 [Relazione tra Eth1 ed Eth2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
-[Video sui dettagli del client Eth2 e La Fusione](https://www.youtube.com/watch?v=zNIrIninMgg)
+[Video sui dettagli del client Eth2 e su The Merge](https://www.youtube.com/watch?v=zNIrIninMgg)

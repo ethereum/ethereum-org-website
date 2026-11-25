@@ -1,5 +1,10 @@
 # Polish (pl) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.8/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: pokwitowania replacing paragony (22 forms), ekwiwokacja. Open: missing `few` plural in 2 keys, gossip five ways, storage slot vs memory.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.8/10

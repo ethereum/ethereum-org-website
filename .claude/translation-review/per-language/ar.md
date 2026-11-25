@@ -1,5 +1,10 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: nodes-and-clients English dates and Latin Mainnet/Beacon Chain cells restored to Arabic, slot/attestation/checkpoint glossary forms, Ethereum spelling in attestations description. Open: bytes untranslated in JSON, Verkle singular/plural, `الرمز` vs `الكود`.
+
 > **PR:** #17105
 > **Date:** 2026-03-17
 > **Quality Score:** 5.2/10 (pre-fix)

@@ -51,7 +51,7 @@ Pada kenyataannya, polinomial ini memiliki ribuan koefisien. Komitmen KZG adalah
 
 > Fakta menarik: teknik pengodean yang sama digunakan oleh DVD. Jika Anda menggores DVD, pemutar masih dapat membacanya berkat pengodean Reed-Solomon yang menambahkan bagian polinomial yang hilang. 
 
-Secara historis, data dalam blockchain, baik blok maupun blob, disiarkan ke semua node. Dengan pendekatan pemisahan-dan-pencuplikan (split-and-sample) PeerDAS, menyiarkan semuanya ke semua orang tidak lagi diperlukan. Pasca-Fusaka, jaringan lapisan konsensus diatur ke dalam topik/subnet gosip: kolom blob ditetapkan ke subnet tertentu, dan setiap node berlangganan ke subset yang telah ditentukan sebelumnya dan hanya menyimpan bagian-bagian tersebut.
+Secara historis, data dalam rantai blok, baik blok maupun blob, disiarkan ke semua node. Dengan pendekatan pemisahan-dan-pencuplikan (split-and-sample) PeerDAS, menyiarkan semuanya ke semua orang tidak lagi diperlukan. Pasca-Fusaka, jaringan lapisan konsensus diatur ke dalam topik/subnet gosip: kolom blob ditetapkan ke subnet tertentu, dan setiap node berlangganan ke subset yang telah ditentukan sebelumnya dan hanya menyimpan bagian-bagian tersebut.
 
 Dengan PeerDAS, data blob yang diperluas dibagi menjadi 128 bagian yang disebut kolom. Data didistribusikan ke node-node ini melalui protokol gosip khusus pada subnet tertentu yang mereka langgani. Setiap node reguler di jaringan berpartisipasi dalam setidaknya 8 subnet kolom yang dipilih secara acak. Menerima data dari hanya 8 dari 128 subnet berarti bahwa node default ini hanya menerima 1/16 dari semua data, tetapi karena data tersebut diperluas, ini adalah 1/8 dari data asli. 
 

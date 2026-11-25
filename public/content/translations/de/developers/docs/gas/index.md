@@ -102,7 +102,7 @@ Du kannst explizit angeben, wie viel du bereit bist zu zahlen, um deine Transakt
 
 Kurz gesagt, Gasgebühren tragen dazu bei, das Ethereum-Netzwerk sicher zu halten. Indem wir für jede im Netzwerk ausgeführte Berechnung eine Gebühr verlangen, verhindern wir, dass böswillige Akteure das Netzwerk mit Spam überfluten. Um versehentliche oder feindselige Endlosschleifen oder andere Rechenverschwendung im Code zu vermeiden, muss jede Transaktion ein Limit dafür festlegen, wie viele Rechenschritte der Codeausführung sie verwenden darf. Die grundlegende Recheneinheit ist „Gas“.
 
-Obwohl eine Transaktion ein Limit enthält, wird jegliches Gas, das nicht in einer Transaktion verwendet wird, an den Benutzer zurückgegeben (z. B. wird `Maximalgebühr - (Grundgebühr + Prioritätsgebühr)` zurückgegeben).
+Obwohl eine Transaktion ein Limit enthält, wird jegliches Gas, das nicht in einer Transaktion verwendet wird, an den Benutzer zurückgegeben (z. B. wird `max fee - (base fee + tip)` zurückgegeben).
 
 <GasTxDiagram />
 

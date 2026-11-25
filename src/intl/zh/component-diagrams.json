@@ -620,7 +620,7 @@
   "peer-das-value-increase": "增加值 {n}",
   "peer-das-value-decrease": "减少值 {n}",
   "peer-das-erasure-title": "使用多项式扩展数据",
-  "peer-das-erasure-caption": "一条曲线穿过 {total} 个数据值，其 {needed} 个点中的任意 {needed} 个点都可以将其还原。真实的斑点对扩展到 {extended} 个的 {original} 个值执行相同的操作，使用的是有限域中的算术而不是实数。",
+  "peer-das-erasure-caption": "一条曲线穿过 {needed} 个数据值，其 {total} 个点中的任意 {needed} 个点都可以将其还原。真实的斑点对扩展到 {extended} 个的 {original} 个值执行相同的操作，使用的是有限域中的算术而不是实数。",
   "peer-das-erasure-description": "一个图表，其水平轴上有 {total} 个求值点。每隔一个点，一个条形图显示 {original} 个数据值之一，并且一条穿过所有 {original} 个点的三次多项式曲线穿过它们的顶部。你可以使用控件或通过拖动其点来更改每个值，曲线会随之改变。步骤 {step1}：在中间的 {extra} 个点（即扩展数据）上对曲线求值，用第二种颜色的虚线柱表示。在真实的斑点中，新的求值点也位于原始求值点之间。步骤 {step2}：{total} 个点中有 {lost} 个点丢失：原始数据、相邻点的区块或整个扩展数据，并且曲线不再已知。步骤 {step3}：剩下的 {needed} 个点只适合这样一条曲线，因此从它们重新计算曲线，丢失的点也随之恢复。真实的斑点在更大规模上以相同的方式工作：{blob} 个值扩展到 {extended} 个，其中任何一半都足以重建斑点。它们使用有限域中的算术，其中的值会环绕而不是增长，而不是这里绘制的实数。",
   "peer-das-erasure-presets-label": "选择要丢失的点",
   "peer-das-erasure-preset-data": "数据",

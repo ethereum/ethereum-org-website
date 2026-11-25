@@ -38,7 +38,7 @@ Velikost svědka se liší v závislosti na počtu listů, které obsahuje. Za p
 
 ## Jaká je struktura Verkle stromu? {#what-is-the-structure-of-a-verkle-tree}
 
-Verkle stromy jsou páry `(klíč, hodnota)`, kde klíče jsou 32bajtové prvky složené z 31bajtového _kmene_ a jednobajtové _přípony_. Tyto klíče jsou uspořádány do _rozšiřujících_ uzlů a _vnitřních_ uzlů. Rozšiřující uzly představují jeden kmen pro 256 potomků s různými příponami. Vnitřní uzly mají také 256 potomků, ale mohou to být další rozšiřující uzly. Hlavní rozdíl mezi strukturou Verkle stromu a Merkleova stromu spočívá v tom, že Verkle strom je mnohem plošší, což znamená, že existuje méně mezilehlých uzlů spojujících list s kořenem, a proto je ke generování důkazu potřeba méně dat.
+Verkle stromy jsou páry `(key,value)`, kde klíče jsou 32bajtové prvky složené z 31bajtového _kmene_ a jednobajtové _přípony_. Tyto klíče jsou uspořádány do _rozšiřujících_ uzlů a _vnitřních_ uzlů. Rozšiřující uzly představují jeden kmen pro 256 potomků s různými příponami. Vnitřní uzly mají také 256 potomků, ale mohou to být další rozšiřující uzly. Hlavní rozdíl mezi strukturou Verkle stromu a Merkleova stromu spočívá v tom, že Verkle strom je mnohem plošší, což znamená, že existuje méně mezilehlých uzlů spojujících list s kořenem, a proto je ke generování důkazu potřeba méně dat.
 
 <VerkleTreeDiagram />
 

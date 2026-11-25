@@ -170,7 +170,7 @@ API ya Mjenzi pia hufanya kazi kama programu ya kati kati ya wathibitishaji na w
 
 Hapa chini kuna muhtasari wa jinsi API ya Mjenzi inavyofanya kazi:
 
-1. API ya Mjenzi huunganisha mthibitishaji kwenye mtandao wa wajenga kizuizi wanaoendesha wateja wa tabaka la utekelezaji. Kama ilivyo katika PBS, wajenzi ni pande maalum zinazowekeza katika ujenzi wa kitalu unaotumia rasilimali nyingi na kutumia mikakati tofauti ili kuongeza mapato yanayopatikana kutoka kwa MEV + vidokezo vya kipaumbele.
+1. API ya Mjenzi huunganisha mthibitishaji kwenye mtandao wa wajenga kizuizi wanaoendesha wateja wa tabaka la utekelezaji. Kama ilivyo katika PBS, wajenzi ni pande maalum zinazowekeza katika ujenzi wa kitalu unaotumia rasilimali nyingi na kutumia mikakati tofauti ili kuongeza mapato yanayopatikana kutoka kwa MEV + ada za kipaumbele.
 
 2. Mthibitishaji (anayeendesha kiteja cha tabaka la mwafaka) huomba mizigo ya utekelezaji pamoja na zabuni kutoka kwa mtandao wa wajenzi. Zabuni kutoka kwa wajenzi zitakuwa na kichwa cha mzigo wa utekelezaji—ufungamanisho wa kificho kwa yaliyomo kwenye mzigo—na ada ya kulipwa kwa mthibitishaji.
 

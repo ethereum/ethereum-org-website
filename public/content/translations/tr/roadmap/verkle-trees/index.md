@@ -38,7 +38,7 @@ Tanık boyutu, içerdiği yaprak sayısına bağlı olarak değişir. Tanığın
 
 ## Bir Verkle ağacının yapısı nasıldır? {#what-is-the-structure-of-a-verkle-tree}
 
-Verkle Ağaçları, anahtarların 31 baytlık bir _gövde_ ve tek baytlık bir _sonek_ten oluşan 32 baytlık öğeler olduğu `(anahtar,değer)` çiftleridir. Bu anahtarlar _uzantı_ düğümleri ve _iç_ düğümler olarak düzenlenir. Uzantı düğümleri, farklı soneklere sahip 256 alt öğe için tek bir gövdeyi temsil eder. İç düğümlerin de 256 alt öğesi vardır, ancak bunlar başka uzantı düğümleri olabilir. Verkle ağacı ile Merkle ağacı yapısı arasındaki temel fark, Verkle ağacının çok daha düz olmasıdır; yani bir yaprağı köke bağlayan daha az ara düğüm vardır ve bu nedenle bir kanıt oluşturmak için daha az veri gerekir.
+Verkle Ağaçları, anahtarların 31 baytlık bir _gövde_ ve tek baytlık bir _sonek_ten oluşan 32 baytlık öğeler olduğu `(key,value)` çiftleridir. Bu anahtarlar _uzantı_ düğümleri ve _iç_ düğümler olarak düzenlenir. Uzantı düğümleri, farklı soneklere sahip 256 alt öğe için tek bir gövdeyi temsil eder. İç düğümlerin de 256 alt öğesi vardır, ancak bunlar başka uzantı düğümleri olabilir. Verkle ağacı ile Merkle ağacı yapısı arasındaki temel fark, Verkle ağacının çok daha düz olmasıdır; yani bir yaprağı köke bağlayan daha az ara düğüm vardır ve bu nedenle bir kanıt oluşturmak için daha az veri gerekir.
 
 <VerkleTreeDiagram />
 

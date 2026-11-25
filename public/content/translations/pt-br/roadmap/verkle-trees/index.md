@@ -38,7 +38,7 @@ O tamanho da testemunha varia dependendo do número de folhas que ela inclui. Su
 
 ## Qual é a estrutura de uma árvore Verkle? {#what-is-the-structure-of-a-verkle-tree}
 
-As árvores Verkle são pares `(chave, valor)` onde as chaves são elementos de 32 bytes compostos por um _tronco_ de 31 bytes e um _sufixo_ de um único byte. Essas chaves são organizadas em nós de _extensão_ e nós _internos_. Os nós de extensão representam um único tronco para 256 filhos com sufixos diferentes. Os nós internos também têm 256 filhos, mas eles podem ser outros nós de extensão. A principal diferença entre a estrutura da árvore Verkle e da árvore de Merkle é que a árvore Verkle é muito mais plana, o que significa que há menos nós intermediários ligando uma folha à raiz e, portanto, menos dados necessários para gerar uma prova.
+As árvores Verkle são pares `(key,value)` onde as chaves são elementos de 32 bytes compostos por um _tronco_ de 31 bytes e um _sufixo_ de um único byte. Essas chaves são organizadas em nós de _extensão_ e nós _internos_. Os nós de extensão representam um único tronco para 256 filhos com sufixos diferentes. Os nós internos também têm 256 filhos, mas eles podem ser outros nós de extensão. A principal diferença entre a estrutura da árvore Verkle e da árvore de Merkle é que a árvore Verkle é muito mais plana, o que significa que há menos nós intermediários ligando uma folha à raiz e, portanto, menos dados necessários para gerar uma prova.
 
 <VerkleTreeDiagram />
 

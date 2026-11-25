@@ -21,7 +21,7 @@ Prvním úkolem pro atestujícího validátora je sestavit `data`. `data` obsahu
 
 - `slot`: Číslo slotu, na které se atestace vztahuje
 - `index`: Od upgradu Pectra nastaveno na `0`. Výbor je identifikován mimo `data` (pomocí `committee_index` nebo pomocí `committee_bits` v agregátu), takže hlasy z různých výborů mají identická `data` a mohou být agregovány dohromady. Před upgradem Pectra toto pole identifikovalo výbor
-- `beacon_block_root`: Kořenový hash bloku, který validátor vidí na hlavě řetězce (výsledek použití algoritmu fork-choice)
+- `beacon_block_root`: Kořenový hash bloku, který validátor vidí na hlavě řetězce (výsledek použití algoritmu volby forku)
 - `source`: Část hlasu o finalitě označující, co validátory vidí jako nejnovější ospravedlněný kontrolní bod
 - `target`: Část hlasu o finalitě označující, co validátory vidí jako kontrolní bod na začátku aktuální epochy (blok v jejím prvním slotu, nebo nejnovější blok před ním, pokud je tento slot prázdný)
 

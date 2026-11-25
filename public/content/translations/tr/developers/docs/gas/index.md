@@ -102,7 +102,7 @@ Taban ücretin ayarlanma miktarı, mevcut blok boyutunun hedeften ne kadar uzak 
 
 Kısacası, gaz ücretleri Ethereum ağının güvenli kalmasına yardımcı olur. Ağda yürütülen her hesaplama için bir ücret talep ederek, kötü niyetli kişilerin ağa spam göndermesini engelleriz. Kodda kazara veya kasıtlı sonsuz döngülerden veya diğer hesaplama israflarından kaçınmak için, her işlemin kod yürütmede ne kadar hesaplama adımı kullanabileceğine dair bir sınır belirlemesi gerekir. Temel hesaplama birimi "gaz"dır.
 
-Bir işlem bir sınır içerse de, bir işlemde kullanılmayan gaz kullanıcıya iade edilir (örn., `maksimum ücret - (taban ücret + öncelik ücreti)` iade edilir).
+Bir işlem bir sınır içerse de, bir işlemde kullanılmayan gaz kullanıcıya iade edilir (örn., `max fee - (base fee + tip)` iade edilir).
 
 <GasTxDiagram />
 

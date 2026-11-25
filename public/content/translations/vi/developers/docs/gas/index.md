@@ -102,7 +102,7 @@ Bạn có thể nêu rõ số tiền bạn sẵn sàng trả để giao dịch c
 
 Nói ngắn gọn, phí gas giúp giữ cho mạng lưới Ethereum an toàn. Bằng cách yêu cầu một khoản phí cho mỗi tính toán được thực thi trên mạng lưới, chúng tôi ngăn chặn những kẻ xấu spam mạng lưới. Để tránh các vòng lặp vô hạn do vô tình hoặc cố ý hoặc các lãng phí tính toán khác trong mã, mỗi giao dịch được yêu cầu thiết lập một giới hạn về số bước tính toán của việc thực thi mã mà nó có thể sử dụng. Đơn vị tính toán cơ bản là "Gas".
 
-Mặc dù một giao dịch bao gồm một giới hạn, bất kỳ lượng gas nào không được sử dụng trong một giao dịch sẽ được trả lại cho người dùng (ví dụ: `phí tối đa - (phí cơ sở + phí ưu tiên)` được trả lại).
+Mặc dù một giao dịch bao gồm một giới hạn, bất kỳ lượng gas nào không được sử dụng trong một giao dịch sẽ được trả lại cho người dùng (ví dụ: `max fee - (base fee + tip)` được trả lại).
 
 <GasTxDiagram />
 

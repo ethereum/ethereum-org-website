@@ -102,7 +102,7 @@ Vous pouvez indiquer explicitement combien vous êtes prêt à payer pour faire 
 
 En bref, les frais de gaz aident à maintenir la sécurité du réseau Ethereum. En exigeant des frais pour chaque calcul exécuté sur le réseau, nous empêchons les acteurs malveillants de spammer le réseau. Afin d'éviter les boucles infinies accidentelles ou hostiles ou tout autre gaspillage de calcul dans le code, chaque transaction doit définir une limite quant au nombre d'étapes de calcul d'exécution de code qu'elle peut utiliser. L'unité fondamentale de calcul est le « gaz ».
 
-Bien qu'une transaction inclue une limite, tout gaz non utilisé dans une transaction est retourné à l'utilisateur (par ex., `frais maximum - (frais de base + frais de priorité)` est retourné).
+Bien qu'une transaction inclue une limite, tout gaz non utilisé dans une transaction est retourné à l'utilisateur (par ex., `max fee - (base fee + tip)` est retourné).
 
 <GasTxDiagram />
 

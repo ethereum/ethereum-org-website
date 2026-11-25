@@ -1,5 +1,10 @@
 # Telugu (te) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder swaps (peer-das caption, verkle), builder, execution client, fork choice, Ethereum spelling, gas inline code. Open: `saganiki paiga` for each-over-half, compounding sammelanam.
+
 > **PR:** #18739 (intl/pending-privacy-page)
 > **Date:** 2026-07-09
 > **Quality Score:** 8.3/10 (pre-fix) -> ~9.5 (post-fix, semantic fidelity restored)

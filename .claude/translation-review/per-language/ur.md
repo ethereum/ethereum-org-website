@@ -1,5 +1,10 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap (isolates preserved), transaction fee, builder and searcher across the MEV-Boost diagram, PoS in attestations description. Open: qadam vs marhala, polynomial, relay as `rileez`.
+
 ## PR #18868 (full pipeline import, 2026-07-22) -- 8.4/10 (lowest in fleet)
 - CRIT (NOT hand-fixed, needs pipeline re-pass): `gaming/index.md` -- two whole sections (`## Gaming on Ethereum`, `## Ethereum's gaming ecosystem overview`) verbatim English between translated sections. `developers/tutorials/yellow-paper-evm/index.md` -- ~half the explanatory prose (sec 9, 9.3, 9.4, 9.4.2, 9.4.3, Opcode cost, Expanding memory cost) left English. Block-matching coverage gap, not laziness.
 - WARN: "trade-off" -> تبادلہ (glossary's *swap* term) on single-slot-finality; zkEVM correctly used سمجھوتہ. Prefer سمجھوتہ / loanword ٹریڈ آف.

@@ -38,7 +38,7 @@ La dimensione del testimone varia a seconda del numero di foglie che include. Su
 
 ## Qual è la struttura di un albero di Verkle? {#what-is-the-structure-of-a-verkle-tree}
 
-Gli alberi di Verkle sono coppie `(chiave,valore)` in cui le chiavi sono elementi da 32 byte composti da uno _stem_ di 31 byte e un _suffisso_ di un singolo byte. Queste chiavi sono organizzate in nodi di _estensione_ e nodi _interni_. I nodi di estensione rappresentano un singolo stem per 256 figli con suffissi diversi. Anche i nodi interni hanno 256 figli, ma possono essere altri nodi di estensione. La differenza principale tra la struttura dell'albero di Verkle e quella dell'albero di Merkle è che l'albero di Verkle è molto più piatto, il che significa che ci sono meno nodi intermedi che collegano una foglia alla radice e, di conseguenza, sono necessari meno dati per generare una prova.
+Gli alberi di Verkle sono coppie `(key,value)` in cui le chiavi sono elementi da 32 byte composti da uno _stem_ di 31 byte e un _suffisso_ di un singolo byte. Queste chiavi sono organizzate in nodi di _estensione_ e nodi _interni_. I nodi di estensione rappresentano un singolo stem per 256 figli con suffissi diversi. Anche i nodi interni hanno 256 figli, ma possono essere altri nodi di estensione. La differenza principale tra la struttura dell'albero di Verkle e quella dell'albero di Merkle è che l'albero di Verkle è molto più piatto, il che significa che ci sono meno nodi intermedi che collegano una foglia alla radice e, di conseguenza, sono necessari meno dati per generare una prova.
 
 <VerkleTreeDiagram />
 

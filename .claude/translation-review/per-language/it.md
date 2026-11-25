@@ -1,5 +1,10 @@
 # it Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas/verkle inline code, commissioni prioritarie, The Merge, costruttori for builder. Open: `sottocolli` garble in networking-layer (replace with sottoprotocolli), `In ogni altro punto`, revertito anglicism.
+
 ## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.7/10
 
 **Fixed (critical):** `Cifratura Completamente Omoforma` -> `Omomorfa` (`roadmap/privacy` L96). "Omoforma" is not an Italian word; the term derives from *omomorfismo*. Not a glossary entry (FHE is absent from ETHGlossary), so this is an accuracy defect the glossary layer cannot catch — it appeared on a boldfaced defined term.

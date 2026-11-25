@@ -170,7 +170,7 @@ L'API Builder agit également comme un intergiciel (middleware) entre les valida
 
 Voici un aperçu du fonctionnement de l'API Builder :
 
-1. L'API Builder connecte le validateur à un réseau de constructeurs de blocs exécutant des clients de la couche d'exécution. Comme dans la PBS, les constructeurs sont des parties spécialisées qui investissent dans la construction de blocs gourmande en ressources et utilisent différentes stratégies pour maximiser les revenus tirés de la MEV + des pourboires de priorité.
+1. L'API Builder connecte le validateur à un réseau de constructeurs de blocs exécutant des clients de la couche d'exécution. Comme dans la PBS, les constructeurs sont des parties spécialisées qui investissent dans la construction de blocs gourmande en ressources et utilisent différentes stratégies pour maximiser les revenus tirés de la MEV + des frais de priorité.
 
 2. Un validateur (exécutant un client de la couche de consensus) demande des charges utiles d'exécution ainsi que des offres au réseau de constructeurs. Les offres des constructeurs contiendront l'en-tête de la charge utile d'exécution — un engagement cryptographique sur le contenu de la charge utile — et des frais à payer au validateur.
 

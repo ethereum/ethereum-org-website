@@ -109,7 +109,7 @@ Stack libp2p podporuje veškerou komunikaci po objevování. Klienti mohou vytá
 
 ### Gossip {#gossip}
 
-Doména gossip zahrnuje všechny informace, které se musí rychle šířit po celé síti. To zahrnuje beacon bloky, důkazy, atestace, odchody (exits) a penalizace (slashings). To se přenáší pomocí libp2p gossipsub v1 a spoléhá se na různá metadata uložená lokálně na každém uzlu, včetně maximální velikosti gossip payloadů pro příjem a přenos. Podrobné informace o doméně gossip jsou k dispozici [zde](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+Doména gossip zahrnuje všechny informace, které se musí rychle šířit po celé síti. To zahrnuje beacon bloky, důkazy, atestace, výstupy (exits) a penalizace (slashings). To se přenáší pomocí libp2p gossipsub v1 a spoléhá se na různá metadata uložená lokálně na každém uzlu, včetně maximální velikosti gossip payloadů pro příjem a přenos. Podrobné informace o doméně gossip jsou k dispozici [zde](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Požadavek-odpověď {#request-response}
 

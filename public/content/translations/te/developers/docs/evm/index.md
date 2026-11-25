@@ -64,7 +64,7 @@ EVM యొక్క అన్ని అమలులు ఎథీరియం ఎ
 
 ఎథీరియం యొక్క పదేళ్ల చరిత్రలో, EVM అనేక పునర్విమర్శలకు గురైంది మరియు వివిధ ప్రోగ్రామింగ్ భాషలలో EVM యొక్క అనేక అమలులు ఉన్నాయి.
 
-[ఎథీరియం ఎగ్జిక్యూషన్ క్లయింట్‌లు](/developers/docs/nodes-and-clients/#execution-clients) EVM అమలును కలిగి ఉంటాయి. అదనంగా, బహుళ స్వతంత్ర అమలులు ఉన్నాయి, వీటిలో ఇవి ఉన్నాయి:
+[ఎథీరియం అమలు క్లయింట్‌లు](/developers/docs/nodes-and-clients/#execution-clients) EVM అమలును కలిగి ఉంటాయి. అదనంగా, బహుళ స్వతంత్ర అమలులు ఉన్నాయి, వీటిలో ఇవి ఉన్నాయి:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

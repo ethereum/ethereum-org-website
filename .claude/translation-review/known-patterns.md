@@ -1203,3 +1203,19 @@ The sweep also showed two sanitizer false positives that silently corrupted corr
 After the fixes, on the same data: 0 failing and 29 pairs to full translation (what-is-ether/supply, whose manifest commit is gone, and 5 nodes-and-clients locales that lack a section English has). 0 of 834 mutated edits are lost in each of de, ja, ur and ko, and 127 of 127 component removals reach de. A reply-faithful stand-in (fences lifted and restored as `main.ts` does) agrees with the sweep on every pair. Run `--pairs` with pending merged in before each large dispatch.
 
 Still open: components English added that older runs dropped stay missing until their section changes again: 57 locale files on pos (`QuizWidget`), glamsterdam (`EipTag`), optimistic-rollups and zk-rollups (`VideoWatch`) on 2026-11-24, fixed by running those pages with `mode: full`. And an English heading's text never reaches the locale incrementally. The reply carries section bodies only, and `diff()` reports a heading edit as no drift at all. A heading edit inside inline code now falls back to full translation; other heading edits are silently kept old. 49 pairs on 3 pages had one on 2026-11-23 (portal-network, smart-contracts/verifying, learn-foundational-ethereum-topics-with-sql); run those with `mode: full` or fix the heading in review.
+
+### 100. ICU placeholders rebound to the wrong slot in `component-diagrams.json` (CRITICAL -- wrong numbers rendered; confirmed PR #19815)
+
+Placeholder names and counts survive but are bound to the wrong words after the translator reorders the sentence (SOV/head-final locales most affected: ja, ko, mr, ta, te, tr, ur, zh, zh-tw, hi, bn). The set-equality placeholder gate cannot see it. Recurring keys: `peer-das-erasure-caption` (`{needed}`/`{total}` swapped), `peer-das-definition-subnet` and `peer-das-subnets-description` (`{first}`/`{last}` reversed; `{balance}`/`{columns}` swapped), `verkle-tree-description` (`{levels}`/`{merkleLevels}`), `validator-keys-description` (`{stake}`/`{max}`/`{amount}`/`{compounding}`). Review method: for every key with 3+ distinct arguments, read the English and the locale side by side and check which word each argument sits beside, not just that the set matches.
+
+### 101. Inline code spans translated in re-translated pages (CRITICAL -- confirmed PR #19815)
+
+`gas/index.md` `` `max fee - (base fee + tip)` `` (bn, de, es, fr, it, te, tr, vi) and `verkle-trees/index.md` `` `(key,value)` `` (cs, es, it, pt-br, tr). Both were correct before the re-translation; the pipeline's inline-code backstop did not catch the substitution. Check every inline span in changed lines against English.
+
+### 102. The same glossary misses recur across locales on the same English lines (WARNING -> CRITICAL per glossary -- confirmed PR #19815)
+
+`mev/index.md` "priority tips" (tip -> fee, not gratuity/hint) and "equivocation" (rendered as ambiguity/dual-meaning in ~16 locales); `attestations/index.md` "fork choice algorithm"; `networking-layer/index.md` "slashings"/"slots". When one locale shows a miss on a line, grep the same line in the other 23.
+
+### 103. English moved after the PR head, so locales lag (INFORMATIONAL -- confirmed PR #19815)
+
+Merging latest `dev` into the review worktree brings newer English (`<BaseFeeDiagram />`, 60M-gas table, Verkle EIP-6800/7864 links, 257 extra `component-diagrams` keys). Compare locale files against the English at the PR head (`git show <PR head>:<path>`), not the worktree, or every locale reports phantom missing keys and tags.

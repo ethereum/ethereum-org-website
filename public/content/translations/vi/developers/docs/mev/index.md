@@ -170,7 +170,7 @@ API của trình xây dựng cũng hoạt động như một phần mềm trung 
 
 Dưới đây là tổng quan về cách API của trình xây dựng hoạt động:
 
-1. API của trình xây dựng kết nối trình xác thực với một mạng lưới các trình tạo block chạy các máy khách lớp thực thi. Giống như trong PBS, các trình xây dựng là các bên chuyên biệt đầu tư vào việc xây dựng khối tốn nhiều tài nguyên và sử dụng các chiến lược khác nhau để tối đa hóa doanh thu kiếm được từ MEV + tiền boa ưu tiên.
+1. API của trình xây dựng kết nối trình xác thực với một mạng lưới các trình tạo block chạy các máy khách lớp thực thi. Giống như trong PBS, các trình xây dựng là các bên chuyên biệt đầu tư vào việc xây dựng khối tốn nhiều tài nguyên và sử dụng các chiến lược khác nhau để tối đa hóa doanh thu kiếm được từ MEV + phí ưu tiên.
 
 2. Một trình xác thực (chạy một máy khách lớp đồng thuận) yêu cầu tải trọng thực thi cùng với giá thầu từ mạng lưới các trình xây dựng. Giá thầu từ các trình xây dựng sẽ chứa tiêu đề tải trọng thực thi — một cam kết mật mã đối với nội dung của tải trọng — và một khoản phí phải trả cho trình xác thực.
 
@@ -178,7 +178,7 @@ Dưới đây là tổng quan về cách API của trình xây dựng hoạt đ�
 
 4. Khi nhìn thấy khối bị mù đã ký, trình xây dựng, thông qua rơ-le mang giá thầu của nó, tiết lộ toàn bộ tải trọng thực thi và xuất bản khối Beacon đã ký hoàn chỉnh lên mạng lưới. (Trước bản nâng cấp Fusaka, tải trọng thay vào đó được trả lại cho trình xác thực, người đã xuất bản khối.)
 
-5. Một trình xác thực sử dụng API của trình xây dựng vẫn được kỳ vọng sẽ xây dựng một khối cục bộ trong trường hợp trình tạo block không phản hồi kịp thời, để họ không bỏ lỡ phần thưởng đề xuất khối. Tuy nhiên, trình xác thực không thể tạo một khối khác bằng cách sử dụng các giao dịch hiện đã được tiết lộ hoặc một bộ khác, vì điều đó sẽ tương đương với _sự lập lờ_ (ký hai khối trong cùng một khe), đây là một hành vi vi phạm có thể bị cắt giảm (slashable).
+5. Một trình xác thực sử dụng API của trình xây dựng vẫn được kỳ vọng sẽ xây dựng một khối cục bộ trong trường hợp trình tạo block không phản hồi kịp thời, để họ không bỏ lỡ phần thưởng đề xuất khối. Tuy nhiên, trình xác thực không thể tạo một khối khác bằng cách sử dụng các giao dịch hiện đã được tiết lộ hoặc một bộ khác, vì điều đó sẽ tương đương với _xác nhận nước đôi_ (ký hai khối trong cùng một khe), đây là một hành vi vi phạm có thể bị cắt giảm (slashable).
 
 Một ví dụ triển khai API của trình xây dựng là [MEV-Boost](https://github.com/flashbots/mev-boost), một cải tiến đối với [cơ chế đấu giá Flashbots](https://docs.flashbots.net/flashbots-auction/overview) được thiết kế để kiềm chế các ngoại ứng tiêu cực của MEV trên Ethereum. Đấu giá Flashbots cho phép các trình xác thực trong Bằng chứng cổ phần thuê ngoài công việc xây dựng các khối sinh lời cho các bên chuyên biệt được gọi là **người tìm kiếm**.
 

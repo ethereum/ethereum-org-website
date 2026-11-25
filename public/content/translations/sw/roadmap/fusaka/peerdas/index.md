@@ -51,7 +51,7 @@ Kiuhalisia, polinomiali hii ina maelfu ya migawo. Ufungamanisho wa KZG ni thaman
 
 > Ukweli wa kufurahisha: mbinu hiyo hiyo ya usimbaji ilitumiwa na DVD. Ikiwa ulikwaruza DVD, kichezaji bado kiliweza kuisoma kutokana na usimbaji wa Reed-Solomon ambao huongeza vipande vilivyokosekana vya polinomiali. 
 
-Kihistoria, data katika minyororo ya kitalu, iwe vitalu au mablobu, ilitangazwa kwa nodi zote. Kwa mbinu ya kugawanya-na-kusampulisha ya PeerDAS, kutangaza kila kitu kwa kila mtu si lazima tena. Baada ya Fusaka, mtandao wa tabaka la mwafaka umepangwa katika mada za uvumi/mitandao midogo: safuwima za blobu zinagawiwa kwa mitandao midogo maalum, na kila nodi hujiunga na seti ndogo zilizobainishwa mapema na kuhifadhi vipande hivyo pekee.
+Kihistoria, data katika minyororo ya vitalu, iwe vitalu au mablobu, ilitangazwa kwa nodi zote. Kwa mbinu ya kugawanya-na-kusampulisha ya PeerDAS, kutangaza kila kitu kwa kila mtu si lazima tena. Baada ya Fusaka, mtandao wa tabaka la mwafaka umepangwa katika mada za uvumi/mitandao midogo: safuwima za blobu zinagawiwa kwa mitandao midogo maalum, na kila nodi hujiunga na seti ndogo zilizobainishwa mapema na kuhifadhi vipande hivyo pekee.
 
 Kwa PeerDAS, data ya blobu iliyopanuliwa inagawanywa katika vipande 128 vinavyoitwa safuwima. Data inasambazwa kwa nodi hizi kupitia itifaki ya uvumi maalum kwenye mitandao midogo maalum ambayo zinajiunga nayo. Kila nodi ya kawaida kwenye mtandao inashiriki katika angalau mitandao midogo 8 ya safuwima iliyochaguliwa kwa nasibu. Kupokea data kutoka kwa mitandao midogo 8 tu kati ya 128 inamaanisha kuwa nodi hii ya msingi inapokea 1/16 tu ya data yote, lakini kwa sababu data ilipanuliwa hii ni 1/8 ya data asili. 
 

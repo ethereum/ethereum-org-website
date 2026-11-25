@@ -1,5 +1,10 @@
 # Ukrainian (uk) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: Etheriumi in attestations description, vyboru forka, eqivokaciya/sleshing, prioritetna komisiya, BLS-pidpys. Open: seed rendered as sid-fraza, `vyprominyuye` for emits.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10

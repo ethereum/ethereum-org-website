@@ -109,7 +109,7 @@ A pilha libp2p suporta todas as comunicações após a descoberta. Os clientes p
 
 ### Fofoca (Gossip) {#gossip}
 
-O domínio de fofoca inclui todas as informações que devem se espalhar rapidamente por toda a rede. Isso inclui blocos beacon, provas, atestações, saídas e cortes (slashings). Isso é transmitido usando o gossipsub v1 da libp2p e depende de vários metadados sendo armazenados localmente em cada nó, incluindo o tamanho máximo das cargas (payloads) de fofoca para receber e transmitir. Informações detalhadas sobre o domínio de fofoca estão disponíveis [aqui](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
+O domínio de fofoca inclui todas as informações que devem se espalhar rapidamente por toda a rede. Isso inclui blocos beacon, provas, atestações, saídas e penalizações (slashings). Isso é transmitido usando o gossipsub v1 da libp2p e depende de vários metadados sendo armazenados localmente em cada nó, incluindo o tamanho máximo das cargas (payloads) de fofoca para receber e transmitir. Informações detalhadas sobre o domínio de fofoca estão disponíveis [aqui](https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub).
 
 ### Solicitação-resposta {#request-response}
 

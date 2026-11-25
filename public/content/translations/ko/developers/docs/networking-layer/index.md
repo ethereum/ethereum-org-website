@@ -157,4 +157,4 @@ SSZ는 단순 직렬화(simple serialization)를 의미합니다. 이는 고정�
 [kademlia 논문](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [이더리움 p2p 소개](https://p2p.paris/en/talks/intro-ethereum-networking/)
 [이더1/이더2 관계](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
-[병합 및 이더2 클라이언트 세부 정보 비디오](https://www.youtube.com/watch?v=zNIrIninMgg)
+[머지 및 이더2 클라이언트 세부 정보 비디오](https://www.youtube.com/watch?v=zNIrIninMgg)

@@ -21,7 +21,7 @@ La première tâche pour un validateur attestant est de construire les `data`. L
 
 - `slot` : Le numéro du créneau auquel l'attestation fait référence
 - `index` : Défini sur `0` depuis Pectra. Le comité est identifié en dehors des `data` (par `committee_index`, ou par `committee_bits` dans un agrégat) afin que les votes de différents comités aient des `data` identiques et puissent être agrégés ensemble. Avant Pectra, ce champ identifiait le comité
-- `beacon_block_root` : Le hash racine du bloc que le validateur voit à la tête de la chaîne (le résultat de l'application de l'algorithme de choix de fork)
+- `beacon_block_root` : Le hash racine du bloc que le validateur voit à la tête de la chaîne (le résultat de l'application de l'algorithme de choix de fourche)
 - `source` : Une partie du vote de finalité indiquant ce que les validateurs voient comme le point de contrôle justifié le plus récent
 - `target` : Une partie du vote de finalité indiquant ce que les validateurs voient comme le point de contrôle au début de l'époque actuelle (le bloc à son premier créneau, ou le dernier bloc avant celui-ci si ce créneau est vide)
 

@@ -135,12 +135,12 @@ sidebarDepth: 2
 
 | العميل                                                                   | اللغة   | أنظمة التشغيل     | الشبكات                | استراتيجيات المزامنة                                            | تقليم الحالة   |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [جو إيثريوم (geth)](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [كاملة](#full-sync)                     | أرشيفية, مقلمة |
-| [نيذرميند](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), سريعة, [كاملة](#full-sync)               | أرشيفية, مقلمة |
-| [بيسو](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [سريعة](#fast-sync), [كاملة](#full-sync) | أرشيفية, مقلمة |
-| [إريغون](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [كاملة](#full-sync)                                         | أرشيفية, مقلمة |
-| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [كاملة](#full-sync)                     | مقلمة          |
-| [ريث](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [كاملة](#full-sync)                                         | أرشيفية, مقلمة |
+| [جو إيثريوم (geth)](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [Snap](#snap-sync), [كاملة](#full-sync)                     | أرشيفية، مقلمة |
+| [نيذرميند](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [Snap](#snap-sync), سريعة, [كاملة](#full-sync)               | أرشيفية، مقلمة |
+| [بيسو](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [Snap](#snap-sync), [سريعة](#fast-sync), [كاملة](#full-sync) | أرشيفية، مقلمة |
+| [إريغون](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [كاملة](#full-sync)                                         | أرشيفية، مقلمة |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | الشبكة الرئيسية، Sepolia، Hoodi | [Snap](#snap-sync), [كاملة](#full-sync)                     | مقلمة          |
+| [ريث](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | الشبكة الرئيسية، Sepolia، Hoodi | [كاملة](#full-sync)                                         | أرشيفية، مقلمة |
 
 لمزيد من المعلومات حول الشبكات المدعومة، اقرأ عن [شبكات إيثيريوم](/developers/docs/networks/).
 
@@ -188,16 +188,16 @@ ethrex هو عميل تنفيذ إيثيريوم بسيط ومعياري مكت�
 
 ## عملاء الإجماع {#consensus-clients}
 
-هناك العديد من عملاء الإجماع (المعروفين سابقًا باسم عملاء "إيث 2") لدعم [ترقيات الإجماع](/roadmap/beacon-chain/). وهم مسؤولون عن جميع المنطق المتعلق بالإجماع بما في ذلك خوارزمية اختيار التفرع، ومعالجة الإثباتات، وإدارة مكافآت وعقوبات [إثبات الحصة (PoS)](/developers/docs/consensus-mechanisms/pos).
+هناك العديد من عملاء الإجماع (المعروفين سابقًا باسم عملاء "إيث 2") لدعم [ترقيات الإجماع](/roadmap/beacon-chain/). وهم مسؤولون عن جميع المنطق المتعلق بالإجماع بما في ذلك خوارزمية اختيار التفرع، ومعالجة التصديقات، وإدارة مكافآت وعقوبات [إثبات الحصة (PoS)](/developers/docs/consensus-mechanisms/pos).
 
 | العميل                                                        | اللغة   | أنظمة التشغيل     | الشبكات                                                |
 | ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------------------------- |
-| [لايتهاوس](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Pyrmont, Sepolia, وغيرها         |
-| [لودستار](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, وغيرها                  |
-| [نيمبوس](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, وغيرها                  |
-| [برايزم](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Pyrmont, Sepolia, وغيرها |
-| [تيكو](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Sepolia, وغيرها          |
-| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, وغيرها                  |
+| [لايتهاوس](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | سلسلة المنارة، Hoodi, Pyrmont, Sepolia, وغيرها         |
+| [لودستار](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | سلسلة المنارة، Hoodi, Sepolia, وغيرها                  |
+| [نيمبوس](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | سلسلة المنارة، Hoodi, Sepolia, وغيرها                  |
+| [برايزم](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, macOS | سلسلة المنارة، Gnosis, Hoodi, Pyrmont, Sepolia, وغيرها |
+| [تيكو](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | سلسلة المنارة، Gnosis, Hoodi, Sepolia, وغيرها          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | سلسلة المنارة، Hoodi, Sepolia, وغيرها                  |
 
 ### لايتهاوس {#lighthouse}
 
@@ -301,8 +301,8 @@ Grandine هو تطبيق عميل إجماع، مكتوب بلغة Rust بموج
 
 ## قراءة إضافية {#further-reading}
 
-- [إيثيريوم 101 - الجزء 2 - فهم العقد](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes، <span dir="ltr">13 February 2019</span>_
-- [تشغيل عقد إيثيريوم الكاملة: دليل للمتحمسين بالكاد](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux، <span dir="ltr">7 November 2019</span>_
+- [إيثيريوم 101 - الجزء 2 - فهم العقد](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes، 13 فبراير 2019_
+- [تشغيل عقد إيثيريوم الكاملة: دليل للمتحمسين بالكاد](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux، 7 نوفمبر 2019_
 
 ## مواضيع ذات صلة {#related-topics}
 

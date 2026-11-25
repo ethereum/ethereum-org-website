@@ -1,6 +1,6 @@
 ---
 title: Atestasi
-description: Deskripsi tentang atestasi pada proof-of-stake Ethereum.
+description: Deskripsi tentang atestasi pada Bukti Kepemilikan (PoS) Ethereum.
 lang: id
 ---
 
@@ -21,7 +21,7 @@ Tugas pertama untuk validator yang melakukan atestasi adalah membangun `data`. `
 
 - `slot`: Nomor slot yang dirujuk oleh atestasi
 - `index`: Diatur ke `0` sejak Pectra. Komite diidentifikasi di luar `data` (oleh `committee_index`, atau oleh `committee_bits` dalam sebuah agregat) sehingga suara dari komite yang berbeda memiliki `data` yang identik dan dapat diagregasi bersama. Sebelum Pectra, bidang ini mengidentifikasi komite
-- `beacon_block_root`: Hash akar dari blok yang dilihat validator di kepala rantai (hasil dari penerapan algoritma pilihan percabangan)
+- `beacon_block_root`: Hash akar dari blok yang dilihat validator di kepala rantai (hasil dari penerapan algoritme pilihan cabang)
 - `source`: Bagian dari suara finalitas yang menunjukkan apa yang dilihat validator sebagai titik periksa terjustifikasi yang paling baru
 - `target`: Bagian dari suara finalitas yang menunjukkan apa yang dilihat validator sebagai titik periksa pada awal Epok saat ini (blok pada slot pertamanya, atau blok terbaru sebelumnya jika slot tersebut kosong)
 

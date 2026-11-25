@@ -21,7 +21,7 @@ A primeira tarefa para um validador que está atestando é construir o `data`. O
 
 - `slot`: O número do slot ao qual a atestação se refere
 - `index`: Definido como `0` desde a Pectra. O comitê é identificado fora do `data` (por `committee_index`, ou por `committee_bits` em um agregado) para que os votos de diferentes comitês tenham o mesmo `data` e possam ser agregados juntos. Antes da Pectra, este campo identificava o comitê
-- `beacon_block_root`: O hash raiz do bloco que o validador vê na cabeça da cadeia (o resultado da aplicação do algoritmo de escolha de bifurcação)
+- `beacon_block_root`: O hash raiz do bloco que o validador vê na cabeça da cadeia (o resultado da aplicação do algoritmo de escolha de fork)
 - `source`: Parte do voto de finalidade indicando o que os validadores veem como o ponto de verificação justificado mais recente
 - `target`: Parte do voto de finalidade indicando o que os validadores veem como o ponto de verificação no início da época atual (o bloco em seu primeiro slot, ou o bloco mais recente antes dele se esse slot estiver vazio)
 
