@@ -243,3 +243,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - echidna:64 invariants as `மாறிலிகள்` (constants), same word used for constants on L46 -- native call
 - multi-client: `கட்டமைப்பு` used for both framework and struct -- native call
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.2/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Glossary: `வாலெட்டுகள்` -> `பணப்பைகள்` (translation-program:9); genitive `ETH-இன்` restored at gas:50.
+
+**Open / notes:**
+
+- `உறுதிப்பாடு` for "no obligation"; literary `செய்க` CTA among polite imperatives.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

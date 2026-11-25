@@ -191,3 +191,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - multi-client: software client as `wateja` (customer) at 6 changed sites plus unchanged L3/L7/L16. Not auto-fixed: ETHGlossary itself sanctions `mteja wa mwafaka` (consensus client) and lists `mteja wa utekelezaji` as an alias for execution client, so there is no single deterministic target. Glossary follow-up: reconcile `kiteja` vs `mteja` across client entries
 - multi-client:61/219 "mapped" -> `-chorwa` (drawn); 250 `matukio` for instances; `kichunguza bloku` vs glossary `kichunguzi cha bloku` -- native call
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Glossary: `Pochi` -> `Mikoba` (translation-program:9).
+
+**Open / notes:**
+
+- `inatambuliwa` for "determined" (dev had `inabainishwa`); `ufungamanisho` used for "no obligation"; msanidi/wasanidi drift.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

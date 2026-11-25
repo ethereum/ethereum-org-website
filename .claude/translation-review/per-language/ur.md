@@ -249,3 +249,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - echidna:66 `نامانوس` (unfamiliar) for invalid; multi-client:205 `متضاد` (contradictory) for heterogeneous -- both pre-existing wording on changed lines, native call
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.4/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Only the two formula spans at gas L44 and L69 needed restoring (the review agent reported none).
+
+**Open / notes:**
+
+- `paused` lost its temporary sense (translation-program:29).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

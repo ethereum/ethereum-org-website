@@ -183,3 +183,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - echidna: glossary `rückgängig machen` for revert reads as overflows/contracts being "undone" (L340, L422; L415 unchanged); the glossary note allows `Revert` -- native call (known-patterns #96)
 - ABI/EVM spelled out where English leaves them bare (#80, prose -> warning)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` rendered with the glossary term would repeat the priority fee; left as is.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

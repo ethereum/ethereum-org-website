@@ -203,3 +203,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 - echidna:605 `odstranena` -> `odstraněna`
 - multi-client:23 case agreement `použitím` -> `použití`
 - multi-client:35 `v frameworcích` -> `ve frameworcích`; "a major reason" overstated -> `jeden z hlavních důvodů`
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `limit plynu` (glossary compound) vs the cs `gas` = `gas` rule: decide for the whole file, not only changed lines (queue item 13); gas:107 `max fee` span was already translated on dev (out of scope, same #101).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

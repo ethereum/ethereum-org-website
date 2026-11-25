@@ -214,3 +214,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - multi-client "files artifacts" -> `dosya eserleri` (eser = creative work); dev had `Dosya Yapıları` -- native call
 - `hala` should be `hâlâ` (multi-client:163, echidna:513) -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` rendered `teşvik` at gas:36, :46 instead of glossary `öncelik ücreti`; left as is (tautology), the review agent called it critical -- native/maintainer call.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

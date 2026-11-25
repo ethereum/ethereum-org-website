@@ -1210,7 +1210,7 @@ Placeholder names and counts survive but are bound to the wrong words after the 
 
 ### 101. Inline code spans translated in re-translated pages (CRITICAL -- confirmed PR #19815)
 
-`gas/index.md` `` `max fee - (base fee + tip)` `` (bn, de, es, fr, it, te, tr, vi) and `verkle-trees/index.md` `` `(key,value)` `` (cs, es, it, pt-br, tr). Both were correct before the re-translation; the pipeline's inline-code backstop did not catch the substitution. Check every inline span in changed lines against English.
+`gas/index.md` `` `max fee - (base fee + tip)` `` (bn, de, es, fr, it, te, tr, vi) and `verkle-trees/index.md` `` `(key,value)` `` (cs, es, it, pt-br, tr). Both were correct before the re-translation; the pipeline's inline-code backstop did not catch the substitution. Check every inline span in changed lines against English. Recurred in PR #19901: the same gas page lost every `` `base fee` ``, `` `priority fee` ``, the `` `units of gas used * (base fee + priority fee)` `` formula and the `` `21,000 * (10 + 2) = 252,000 gwei` `` / `` `current base fee * 112.5%` `` examples in 23 of 24 locales (also `Gwei` re-cased inside spans and number separators localized). Review agents split on severity (one filed it as a warning); it is CRITICAL. Fix by mapping each span in changed lines to the English span by index; where English has `` `priority` `` followed by plain "fee", keep `` `priority` `` plus the locale's fee word.
 
 ### 102. The same glossary misses recur across locales on the same English lines (WARNING -> CRITICAL per glossary -- confirmed PR #19815)
 

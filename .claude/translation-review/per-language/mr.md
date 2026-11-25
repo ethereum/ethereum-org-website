@@ -200,3 +200,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - multi-client fully re-registered toward English loanwords (`लोकल`, `टेस्ट करावे`) although only sections changed -- native call
 - ABI/EVM spelled out (#80); echidna:747 same relative-clause issue as hi
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- API over-expanded; translation-program:29 softened to "one way".
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

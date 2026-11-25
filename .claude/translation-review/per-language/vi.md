@@ -180,3 +180,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - Glossary capitals mid-sentence (`Chuỗi khối`, `Địa chỉ`) at multi-client 33/104/138 -- known vi pattern, left as is
 - `dApp` in title/description vs `dapp` in body -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- Glossary capitals (`Giao thuc`, `Tai khoan`, `Vi`) leak into mid-sentence; ambiguous clause at gas:89.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)
