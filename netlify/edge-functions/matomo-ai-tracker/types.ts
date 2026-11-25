@@ -8,8 +8,11 @@ export interface Logger {
 }
 
 export interface Env {
-  MATOMO_URL: string
-  MATOMO_SITE_ID: string
+  MATOMO_AI_TRACKER_ENABLED?: string
+  MATOMO_URL?: string
+  MATOMO_SITE_ID?: string
+  NEXT_PUBLIC_MATOMO_URL?: string
+  NEXT_PUBLIC_MATOMO_SITE_ID?: string
   MATOMO_TIMEOUT_MS?: string
   LOG_LEVEL?: LogLevel
   HTTP_METHOD_ALLOWLIST?: string

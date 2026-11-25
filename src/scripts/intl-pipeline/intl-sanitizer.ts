@@ -1,6 +1,13 @@
 import * as fs from "fs"
 import * as path from "path"
 
+import {
+  CODE_SPLIT_RE,
+  FENCE_SPLIT_RE,
+  proseLineMask,
+  replaceOutsideInlineCode,
+} from "./lib/shared-patterns"
+
 // franc-min is ESM-only; use dynamic import
 let francDetect: ((text: string) => string) | null = null
 async function loadFranc(): Promise<void> {
@@ -23,7 +30,7 @@ async function loadFranc(): Promise<void> {
  * - Protect known brand/team names from inadvertent translation
  * - Validate JSON files; report issues
  *
- * Wired into the pipeline via lib/workflows/sanitization.ts
+ * Wired into the pipeline per task via sanitizeAndGate in main.ts (before the gates and the commit)
  */
 
 const ROOT = process.cwd()
@@ -221,8 +228,7 @@ function stripCrowdinBoilerplate(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -270,8 +276,7 @@ function fixKnownBrandGarbles(content: string): {
   let fixCount = 0
   const corrections = BRAND_GARBLE_CORRECTIONS
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -302,8 +307,7 @@ function fixMissingOpeningSup(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -348,8 +352,7 @@ function fixMergedSupDigits(
   if (engExponents.length === 0)
     return { content: translatedContent, fixCount: 0 }
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = translatedContent.split(codeBlockPattern)
+  const parts = translatedContent.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -392,8 +395,7 @@ function removeStaleComponents(
 ): { content: string; fixCount: number } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = translatedContent.split(codeBlockPattern)
+  const parts = translatedContent.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue
@@ -450,8 +452,7 @@ function fixCrowdinNumberedTags(
 
   if (tagMap.size === 0) return { content: translatedContent, fixCount: 0 }
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = translatedContent.split(codeBlockPattern)
+  const parts = translatedContent.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -498,8 +499,7 @@ function fixSplitBoldMarkers(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -563,8 +563,7 @@ function fixKnownWrongCompounds(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -595,8 +594,7 @@ function fixDuplicatedTagValues(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -697,8 +695,7 @@ function fixTickerTranspositions(content: string): {
   let fixCount = 0
 
   // Split content to preserve code blocks
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -738,8 +735,7 @@ function fixBrandCapitalization(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -876,8 +872,7 @@ function fixLowercasedMdxComponents(
   let fixCount = 0
 
   // Split to preserve code blocks
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = translatedContent.split(codeBlockPattern)
+  const parts = translatedContent.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -1076,8 +1071,7 @@ function fixEscapedBoldAndItalic(content: string): {
   let fixCount = 0
 
   // Split content to preserve code blocks
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -1309,8 +1303,7 @@ function warnCatastrophicCodeFenceDrift(
   }
 
   // Check 2: Code keywords outside fences in translated content
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = translatedContent.split(codeBlockPattern)
+  const parts = translatedContent.split(FENCE_SPLIT_RE)
   let codeOutsideFenceCount = 0
 
   for (let i = 0; i < parts.length; i++) {
@@ -1525,8 +1518,7 @@ function fixMissingLinkBrackets(
   }
 
   // Split to preserve code blocks
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = translatedContent.split(codeBlockPattern)
+  const parts = translatedContent.split(CODE_SPLIT_RE)
   let fixCount = 0
 
   for (let i = 0; i < parts.length; i++) {
@@ -1793,13 +1785,33 @@ function syncHeaderIdsWithEnglish(
   return result
 }
 
+/** Predicate: does an offset of `md` fall inside a code fence or inline code? */
+function codeOffsets(md: string): (offset: number) => boolean {
+  const spans = [...md.matchAll(CODE_SPLIT_RE)].map(
+    (m) => [m.index, m.index + m[0].length] as const
+  )
+  return (offset) => {
+    let lo = 0
+    let hi = spans.length - 1
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1
+      if (offset < spans[mid][0]) hi = mid - 1
+      else if (offset >= spans[mid][1]) lo = mid + 1
+      else return true
+    }
+    return false
+  }
+}
+
 function normalizeBlockHtmlLines(md: string): string {
   for (const tag of BLOCK_HTML_TAGS) {
-    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
-    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${tag}>`, "g")
+    // `\S` before the closer: an indented closer is already on its own line.
+    const inlineCloseRe = new RegExp(`(\\S)[ \\t]*</${tag}>`, "g")
+    const inCode = codeOffsets(md)
     md = md.replace(
       inlineCloseRe,
       (match: string, before: string, offset: number) => {
+        if (inCode(offset + match.lastIndexOf("</"))) return match
         // Find start of current line
         const lineStart = md.lastIndexOf("\n", offset) + 1
         const lineContent = md.slice(lineStart, offset + match.length)
@@ -1966,9 +1978,11 @@ function fixBlockComponentLineBreaks(md: string): {
 
   for (const component of BLOCK_MDX_COMPONENTS) {
     // Fix inline closing tags: content</Component> → content\n</Component>
-    // Use [ \t]* (horizontal whitespace) instead of \s* to preserve blank lines
-    const inlineCloseRe = new RegExp(`([^\\n])[ \\t]*</${component}>`, "g")
-    content = content.replace(inlineCloseRe, (_, before) => {
+    // `\S` before the closer: an indented closer is already on its own line.
+    const inlineCloseRe = new RegExp(`(\\S)[ \\t]*</${component}>`, "g")
+    let inCode = codeOffsets(content)
+    content = content.replace(inlineCloseRe, (match, before, offset) => {
+      if (inCode(offset + match.lastIndexOf("</"))) return match
       fixCount++
       return `${before}\n</${component}>`
     })
@@ -1976,11 +1990,15 @@ function fixBlockComponentLineBreaks(md: string): {
     // Fix inline opening tags: <Component>content → <Component>\ncontent
     // Match any non-newline character after the tag (including other tags)
     // Use (?![A-Za-z]) after component name to prevent "Alert" matching "AlertTitle"
+    // Attribute values may hold JSX (`icon={<Fish />}`), so `>` inside `{}`
+    // does not end the tag; a self-closing tag has no content to split off.
     const inlineOpenRe = new RegExp(
-      `(<${component}(?![A-Za-z])[^>]*>)([^\\n])`,
+      `(<${component}(?![A-Za-z])(?:[^>{]|\\{[^}]*\\})*>)([^\\n])`,
       "g"
     )
-    content = content.replace(inlineOpenRe, (_, tag, after) => {
+    inCode = codeOffsets(content)
+    content = content.replace(inlineOpenRe, (match, tag, after, offset) => {
+      if (tag.endsWith("/>") || inCode(offset)) return match
       fixCount++
       return `${tag}\n${after}`
     })
@@ -2001,8 +2019,7 @@ function collapseInlineHtmlFromEnglish(
   let fixCount = 0
 
   // Split on code fences to protect code blocks
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = translatedMd.split(codeBlockPattern)
+  const parts = translatedMd.split(FENCE_SPLIT_RE)
 
   // Build a set of lines in English where tag opens and closes on same line
   const englishLines = englishMd.split("\n")
@@ -2142,7 +2159,7 @@ function repairUnclosedBackticks(
           engLine.includes("<")
         ) {
           // Extract inline code blocks from English
-          const codeBlockRe = /`([^`]+)`/g
+          const codeBlockRe = /`([^`\n]+)`/g
           let engMatch
           while ((engMatch = codeBlockRe.exec(engLine))) {
             const engCode = engMatch[1]
@@ -2202,7 +2219,7 @@ function fixCrowdinSplitBackticks(
 
   // Extract all inline code spans from English
   const engCodeSpans: string[] = []
-  const codeSpanRe = /`([^`]+)`/g
+  const codeSpanRe = /`([^`\n]+)`/g
   for (const engLine of englishLines) {
     let m: RegExpExecArray | null
     while ((m = codeSpanRe.exec(engLine)) !== null) {
@@ -2213,6 +2230,9 @@ function fixCrowdinSplitBackticks(
   for (let i = 0; i < translatedLines.length; i++) {
     const line = translatedLines[i]
     if (line.startsWith("```") || line.startsWith("~~~")) continue
+    // A premature close leaves an odd backtick count; on an even line the gap
+    // between two correct spans would otherwise read as a split span.
+    if ((line.match(/`/g) ?? []).length % 2 === 0) continue
 
     for (const engCode of engCodeSpans) {
       // Build a pattern that matches the English code content split by
@@ -2523,8 +2543,7 @@ function fixAsciiGuillemets(content: string): {
   // Split content to preserve code blocks (both fenced and inline)
   // Fenced: ```...``` or ~~~...~~~
   // Inline: `...`
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     // Skip code blocks (odd indices after split with capturing group)
@@ -2563,8 +2582,7 @@ function fixGuillemetsInHtmlTags(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue
@@ -2651,8 +2669,7 @@ function fixMissingComponentClosingTags(content: string): {
 
   const singleLineComponents = ["SocialListItem"]
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue
@@ -2689,8 +2706,7 @@ function fixMangledDocLinks(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue
@@ -2932,7 +2948,7 @@ const RTL_LOCALES = new Set(["ar", "ur"])
 //     verbatim from the English source, and any later span-wrapping inside
 //     the slug breaks markdownlint's custom-id rule and TOC anchors
 const RTL_SKIP_PATTERN =
-  /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`|\]\([^)]+\)|https?:\/\/[^\s<>)]+|<span dir="ltr">[\s\S]*?<\/span>|\w+="[^"]*"|\{#[^}]+\})/g
+  /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`\n]+`|\]\([^)]+\)|https?:\/\/[^\s<>)]+|<span dir="ltr">[\s\S]*?<\/span>|\w+="[^"]*"|\{#[^}]+\})/g
 
 /**
  * Wrap bare numeric dates in RTL files with <span dir="ltr"> to prevent
@@ -3219,7 +3235,7 @@ function fixSpanWrappedBackticks(content: string): {
   const parts = content.split(fencePattern)
 
   // Pattern 1: <span dir="ltr"> wrapping backtick content
-  const spanAroundBacktickRe = /<span dir="ltr">\s*(`[^`]+`)\s*<\/span>/g
+  const spanAroundBacktickRe = /<span dir="ltr">\s*(`[^`\n]+`)\s*<\/span>/g
 
   // Pattern 2: backticks wrapping <span dir="ltr"> content (makes span visible as code)
   const backtickAroundSpanRe = /`<span dir="ltr">\s*([\s\S]+?)\s*<\/span>`/g
@@ -3276,8 +3292,7 @@ function fixBoldWrappedOrderedListNumerals(
 function warnTranslatedTechnicalNumerals(content: string): string[] {
   const warnings: string[] = []
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   // Arabic-Indic digits: ٠١٢٣٤٥٦٧٨٩
   // Extended Arabic-Indic digits: ۰۱۲۳۴۵۶۷۸۹
@@ -3344,7 +3359,7 @@ function fixCrossScriptPunctuation(
     if (inFencedBlock) continue
 
     // Split on inline code spans to avoid touching code
-    const inlineCodePattern = /(`[^`]+`)/g
+    const inlineCodePattern = /(`[^`\n]+`)/g
     const parts = line.split(inlineCodePattern)
 
     let changed = false
@@ -3380,8 +3395,7 @@ function detectCrossScriptContamination(
   if (!detector) return warnings
 
   // Skip code blocks — foreign characters in code are valid
-  const codeBlockRe = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockRe)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -3429,7 +3443,7 @@ function fixMisplacedBacktickAroundJsxFragment(content: string): {
     // The closing backtick should wrap the </> too.
     // Pattern: backtick-content-backtick SPACE </> or \</> followed by )
     lines[i] = line.replace(
-      /(`<[^`]*`)\s*(?:\\)?(<\/>)(\))/g,
+      /(`<[^`\n]*`)\s*(?:\\)?(<\/>)(\))/g,
       (_, codeSpan, fragment, paren) => {
         fixCount++
         // Move closing backtick to after the fragment
@@ -3470,7 +3484,7 @@ function escapeMdxAngleBrackets(content: string): {
 
     // Split this single line on inline code spans.
     // Per-line splitting ensures broken backticks don't cascade across lines.
-    const inlineCodePattern = /(`[^`]+`)/g
+    const inlineCodePattern = /(`[^`\n]+`)/g
     const parts = line.split(inlineCodePattern)
 
     let changed = false
@@ -3532,9 +3546,12 @@ function escapeMdxAngleBrackets(content: string): {
  * Restore a dropped `</p>` closing tag on a single-line block paragraph.
  * Translation sometimes drops the closing `</p>` (e.g. inside `<AlertContent>`),
  * leaving an unclosed `<p>` that breaks MDX. Uses a conservative heuristic to
- * avoid touching genuinely multi-line `<p>...</p>` blocks: only appends `</p>`
- * when the next non-blank line begins with another tag (`<`), which means the
- * paragraph text could not legitimately continue there. Skips fenced code.
+ * avoid touching genuinely multi-line `<p>...</p>` blocks: the `<p>` line must
+ * carry text, the next non-blank line must open another `<p>` or a component,
+ * or close something other than the paragraph, and no `</p>` may follow before
+ * a blank line or the next `<p>`. A bare `<p>` opens a block, and a line
+ * starting with `<a>` or `<Emoji />` can continue the paragraph (a language
+ * that puts the link first). Skips fenced code.
  */
 function fixUnclosedParagraphTags(content: string): {
   content: string
@@ -3557,6 +3574,7 @@ function fixUnclosedParagraphTags(content: string): {
 
     const trimmed = line.trim()
     if (!/^<p(\s|>)/.test(trimmed)) continue
+    if (!trimmed.replace(/^<p(\s[^>]*)?>/, "").trim()) continue
 
     const opens = (line.match(/<p(\s|>)/g) || []).length
     const closes = (line.match(/<\/p>/g) || []).length
@@ -3568,12 +3586,19 @@ function fixUnclosedParagraphTags(content: string): {
     if (j >= lines.length) continue
     const nextTrimmed = lines[j].trim()
 
-    // Only restore if the next line starts a tag — prose continuation would
-    // mean this is a legitimate multi-line paragraph and we must not touch it.
-    if (nextTrimmed.startsWith("<")) {
-      lines[i] = line + "</p>"
-      fixCount++
+    if (!/^(<\/(?!p>)|<p(\s|>)|<[A-Z])/.test(nextTrimmed)) continue
+    let closed = false
+    for (let k = j; k < lines.length; k++) {
+      const next = lines[k].trim()
+      if (!next || /^<p(\s|>)/.test(next)) break
+      if (next.includes("</p>")) {
+        closed = true
+        break
+      }
     }
+    if (closed) continue
+    lines[i] = line + "</p>"
+    fixCount++
   }
 
   return { content: lines.join("\n"), fixCount }
@@ -3592,8 +3617,7 @@ function fixFullwidthParensInLinks(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks and inline code
@@ -3628,10 +3652,8 @@ function restoreDroppedBackslashEscapes(
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-
   // Collect all \<X patterns from English prose (outside code blocks)
-  const enParts = englishContent.split(codeBlockPattern)
+  const enParts = englishContent.split(CODE_SPLIT_RE)
   const escapedFollowers = new Set<string>()
   for (let i = 0; i < enParts.length; i++) {
     if (i % 2 === 1) continue
@@ -3644,7 +3666,7 @@ function restoreDroppedBackslashEscapes(
   if (escapedFollowers.size === 0) return { content, fixCount }
 
   // Check translation for bare <X where English has \<X
-  const trParts = content.split(codeBlockPattern)
+  const trParts = content.split(CODE_SPLIT_RE)
   for (let i = 0; i < trParts.length; i++) {
     if (i % 2 === 1) continue
     for (const follower of escapedFollowers) {
@@ -3700,9 +3722,9 @@ function fixAsymmetricBackticks(content: string): {
 
     // Match single-open, double-close: `content`` (not preceded or followed by `)
     // (?<!`) ensures the opening backtick is single (not part of ``)
-    // [^`]+ matches the code content (no backticks inside)
+    // [^`\n]+ matches the code content: no backticks, and never a newline
     // ``(?!`) ensures exactly two closing backticks (not part of ```)
-    const asymmetricRe = /(?<!`)(`[^`]+`)`(?!`)/g
+    const asymmetricRe = /(?<!`)(`[^`\n]+`)`(?!`)/g
     const fixed = line.replace(asymmetricRe, (_, correctSpan) => {
       fixCount++
       return correctSpan
@@ -3723,8 +3745,7 @@ function fixBackslashBeforeClosingTag(content: string): {
   let fixCount = 0
 
   // Split content to preserve code blocks (fenced and inline)
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -3741,18 +3762,21 @@ function fixBackslashBeforeClosingTag(content: string): {
 }
 
 /**
- * Remove junk text appended after heading anchor IDs.
- * Crowdin sometimes appends translated "translations" of the anchor ID
- * after the {#anchor-id} tag, e.g. {#network-impact}네트워크-충격
- * These break rendering and must be stripped.
- */
-/**
- * Strip empty heading anchors ({#} or {# }) from markdown headings.
+ * Strip empty anchors ({#} or {# }) from markdown prose.
  *
- * English h5 headings have no anchor, but the pipeline can inject an empty
- * {#} onto translated h5 headings. MDX parses {#} as a JS expression and
- * acorn rejects it, breaking the build (PR #18438 hit 70 files / 24 locales).
- * An empty {#} is never valid, so stripping it is always correct.
+ * English requires an anchor on h1-h4 only, so an h5 legitimately has none;
+ * the translation prompt tells the model to preserve anchors and it invents an
+ * empty one. MDX parses {#} as a JS expression and acorn rejects it, breaking
+ * the build (PR #18438 hit 70 files / 24 locales).
+ *
+ * Scoped to match `verify-structure`'s empty-anchor check exactly -- every
+ * line outside a fence, and within a line everything outside an inline code
+ * span, so a documented `` `{#}` `` survives. Anything narrower is a gate
+ * finding with no repair: the first version only touched the end of a heading
+ * line, which left `##### Resources {#} (cont.)` and `#####\tResources {#}`
+ * failing, and is why 3 of the 11 anchors in `developers/docs/networks`
+ * survived in all 24 locales. `{#}` is never valid in prose, so removing every
+ * occurrence is safe.
  *
  * Example: "##### Operating system {#}" -> "##### Operating system"
  */
@@ -3760,34 +3784,39 @@ function fixEmptyHeadingAnchors(content: string): {
   content: string
   fixCount: number
 } {
+  const lines = content.split("\n")
+  const prose = proseLineMask(lines)
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
-
-  for (let i = 0; i < parts.length; i++) {
-    if (i % 2 === 1) continue // Skip code blocks
-
-    parts[i] = parts[i].replace(
-      /^(#{1,6} .*?)[ \t]*\{#[ \t]*\}[ \t]*$/gm,
-      (_, heading) => {
-        fixCount++
-        return heading
-      }
-    )
+  for (let i = 0; i < lines.length; i++) {
+    if (!prose[i] || !/\{#[ \t]*\}/.test(lines[i])) continue
+    // \r is matched explicitly: split("\n") leaves it on a CRLF file, and 25
+    // corpus files are CRLF (including one English source).
+    const fixed = replaceOutsideInlineCode(lines[i], (run) =>
+      run.replace(/[ \t]*\{#[ \t]*\}[ \t]*/g, " ")
+    ).replace(/[ \t\r]+$/, "")
+    if (fixed !== lines[i]) {
+      lines[i] = fixed
+      fixCount++
+    }
   }
 
-  return { content: parts.join(""), fixCount }
+  return { content: fixCount ? lines.join("\n") : content, fixCount }
 }
 
+/**
+ * Remove junk text appended after heading anchor IDs.
+ * Crowdin sometimes appends translated "translations" of the anchor ID
+ * after the {#anchor-id} tag, e.g. {#network-impact}네트워크-충격
+ * These break rendering and must be stripped.
+ */
 function fixJunkAfterHeadingAnchors(content: string): {
   content: string
   fixCount: number
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -3917,8 +3946,7 @@ function fixBacktickWrappedLinks(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(FENCE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip fenced code blocks
@@ -3945,8 +3973,7 @@ function fixMissingLinkParentheses(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -3992,8 +4019,7 @@ function fixDroppedAutolinkClose(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -4001,9 +4027,10 @@ function fixDroppedAutolinkClose(content: string): {
     // (a) Dropped `>`: autolink open `](<`, a URL containing a parenthesised
     // segment, optionally followed by a stray duplicate `)`, and NOT already
     // followed by the closing `>`. The negative lookahead leaves correct
-    // `](<URL>)` untouched.
+    // `](<URL>)` untouched, and a URL that continues past the parenthesised
+    // segment (`...-(java-ethereum)/5dfa...>)`, `...-(1).pdf>)`).
     parts[i] = parts[i].replace(
-      /\]\(<(https?:\/\/[^\s<>]*\([^\s<>()]*\))\)?(?!>)/g,
+      /\]\(<(https?:\/\/[^\s<>]*\([^\s<>()]*\))\)?(?![^\s<>]*>)/g,
       (_, url) => {
         fixCount++
         return `](<${url}>)`
@@ -4034,8 +4061,7 @@ function fixMissingClosingEmTag(content: string): {
 
   // Only split on fenced blocks — inline backticks must NOT split here
   // because <em>..`code`..></li> spans across inline code spans
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(FENCE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -4063,8 +4089,7 @@ function fixImagePathDotSlash(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -4093,8 +4118,7 @@ function fixEscapedQuotesInJsxAttributes(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(FENCE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip fenced code blocks
@@ -4130,8 +4154,7 @@ function fixInnerQuotesInJsxAttributes(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(FENCE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip fenced code blocks
@@ -4256,7 +4279,7 @@ function escapeTildeStrikethrough(content: string): {
   // Split on fenced code blocks, inline code, AND markdown link URLs.
   // The ](url) portion of links is skipped to avoid escaping tildes
   // in URLs like https://example.com/~user/path
-  const skipPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`|\]\([^)]+\))/g
+  const skipPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`\n]+`|\]\([^)]+\))/g
   const parts = body.split(skipPattern)
 
   for (let i = 0; i < parts.length; i++) {
@@ -4287,8 +4310,7 @@ function fixBoldAdjacentNonLatin(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   // Match **bold text** immediately followed by a non-Latin char.
   // Lookbehind ensures we only match OPENING ** (preceded by whitespace,
@@ -4325,8 +4347,7 @@ function fixItalicAdjacentNonLatin(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   // Non-Latin char class (same as bold fix, no combining-mark ranges)
   const NL =
@@ -4387,7 +4408,7 @@ function warnTranslatedInlineCode(
     let count = 0
     for (let i = 0; i < parts.length; i++) {
       if (i % 2 === 1) continue
-      const spans = parts[i].match(/`[^`]+`/g)
+      const spans = parts[i].match(/`[^`\n]+`/g)
       if (spans) count += spans.length
     }
     return count
@@ -4415,7 +4436,7 @@ function warnTranslatedInlineCode(
     const lines = parts[i].split("\n")
     for (let j = 0; j < lines.length; j++) {
       // Count backticks on this line (outside double/triple backticks)
-      const stripped = lines[j].replace(/``[^`]*``/g, "")
+      const stripped = lines[j].replace(/``[^`\n]*``/g, "")
       const backtickCount = (stripped.match(/`/g) || []).length
       if (backtickCount % 2 === 1) {
         warnings.push(
@@ -4440,14 +4461,13 @@ function warnExposedMdxTags(content: string): string[] {
   const safePattern =
     /^\/?(a|em|strong|b|i|u|mark|cite|code|li|ul|ol|p|br|div|span|img|h[1-6]|table|tr|td|th|thead|tbody|blockquote|pre|hr|sup|sub|details|summary|abbr|del|ins|kbd|s|small|var|wbr|figcaption|figure|section|article|aside|footer|header|main|nav|dl|dt|dd)\b/
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(FENCE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip fenced code blocks
 
     // Split out inline code spans to avoid false positives
-    const inlineParts = parts[i].split(/(`[^`]+`)/g)
+    const inlineParts = parts[i].split(/(`[^`\n]+`)/g)
 
     for (let j = 0; j < inlineParts.length; j++) {
       if (j % 2 === 1) continue // Skip inline code
@@ -4487,8 +4507,7 @@ function removeOrphanedClosingTags(content: string): {
   // Fenced-only split: inline backticks must NOT fragment the content
   // because HTML tags like <em>...`code`...</em> legitimately span
   // across inline code spans (idempotency bug #24).
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(FENCE_SPLIT_RE)
 
   for (let partIdx = 0; partIdx < parts.length; partIdx++) {
     if (partIdx % 2 === 1) continue // Skip fenced code blocks
@@ -4502,7 +4521,7 @@ function removeOrphanedClosingTags(content: string): {
         const line = lines[i]
         // Strip inline code spans for counting only -- tags inside
         // backticks are literal text, not real HTML
-        const lineForCounting = line.replace(/`[^`]+`/g, "")
+        const lineForCounting = line.replace(/`[^`\n]+`/g, "")
         const closeRe = new RegExp(`</${tag}>`, "g")
         const openRe = new RegExp(`<${tag}[\\s>]`, "g")
         const closeCount = (lineForCounting.match(closeRe) || []).length
@@ -4614,7 +4633,7 @@ function detectUntranslatedContent(content: string, locale: string): string[] {
     const cleanPara = para
       .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1") // Remove markdown links (keep text)
       .replace(/<[^>]+>/g, "") // Remove HTML/JSX tags
-      .replace(/`[^`]+`/g, "") // Remove inline code
+      .replace(/`[^`\n]+`/g, "") // Remove inline code
       .trim()
 
     if (cleanPara.length < 80) continue // Too short for reliable detection
@@ -4874,8 +4893,7 @@ function processMarkdownFile(
   // legitimate content inside backtick delimiters (e.g., `\` should stay as-is)
   {
     const snapshot = content
-    const cbPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-    const cbParts = content.split(cbPattern)
+    const cbParts = content.split(CODE_SPLIT_RE)
     for (let ci = 0; ci < cbParts.length; ci++) {
       if (ci % 2 === 1) continue // Skip code blocks and inline code
       cbParts[ci] = cbParts[ci].replace(/\\`/g, "`")
@@ -5226,6 +5244,11 @@ function processMarkdownFile(
  * The app expects the English key name. This function compares each
  * translated JSON value against its English counterpart and restores
  * the original placeholder names.
+ *
+ * Only names English doesn't have are renamed, to the English names the value
+ * lacks. A value whose names all exist in English is left alone: languages
+ * reorder arguments ("{name}'s screenshot {index}"), and renaming by position
+ * would swap them.
  */
 function fixTranslatedJsonPlaceholders(
   translatedJson: string,
@@ -5255,21 +5278,22 @@ function fixTranslatedJsonPlaceholders(
     const trPlaceholders = trObj[key].match(/\{[a-zA-Z_]\w*\}/g)
     if (!trPlaceholders || trPlaceholders.length === 0) continue
 
-    // If counts match but names differ, map by position
-    if (enPlaceholders.length === trPlaceholders.length) {
-      let val = trObj[key]
-      let changed = false
-      for (let j = 0; j < enPlaceholders.length; j++) {
-        if (trPlaceholders[j] !== enPlaceholders[j]) {
-          val = val.replace(trPlaceholders[j], enPlaceholders[j])
-          changed = true
-        }
-      }
-      if (changed) {
-        trObj[key] = val
-        fixCount++
-      }
-    }
+    if (enPlaceholders.length !== trPlaceholders.length) continue
+    const count = (names: string[], name: string) =>
+      names.filter((p) => p === name).length
+    const unknown = [...new Set(trPlaceholders)].filter(
+      (p) => !enPlaceholders.includes(p)
+    )
+    const missing = [...new Set(enPlaceholders)].filter(
+      (p) => count(trPlaceholders, p) < count(enPlaceholders, p)
+    )
+    if (unknown.length === 0 || unknown.length !== missing.length) continue
+    const rename = new Map(unknown.map((p, j) => [p, missing[j]]))
+    trObj[key] = trObj[key].replace(
+      /\{[a-zA-Z_]\w*\}/g,
+      (p) => rename.get(p) ?? p
+    )
+    fixCount++
   }
 
   if (fixCount === 0) return { content: translatedJson, fixCount }
@@ -5688,8 +5712,7 @@ function fixBrokenBracketInLinks(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -5720,8 +5743,7 @@ function stripLlmArtifactTokens(content: string): {
   let fixCount = 0
   const tokenPattern = /<\/?(?:bos|eos|s|pad|unk|mask)>/gi
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip code blocks
@@ -5749,8 +5771,7 @@ function fixSmartQuotesInJsxAttributes(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(CODE_SPLIT_RE)
 
   // Match JSX/HTML tags (self-closing or opening) that contain smart quotes
   const smartQuoteChars = /[\u201C\u201D\u201E\u201F]/
@@ -5780,8 +5801,7 @@ function fixJsxAttributeSpacing(content: string): {
 } {
   let fixCount = 0
 
-  const codeBlockPattern = /(```[\s\S]*?```|~~~[\s\S]*?~~~)/g
-  const parts = content.split(codeBlockPattern)
+  const parts = content.split(FENCE_SPLIT_RE)
 
   // Match entire HTML/JSX tags, then fix spaced attributes within each
   const tagRe = /<[A-Za-z][^>]*>/g

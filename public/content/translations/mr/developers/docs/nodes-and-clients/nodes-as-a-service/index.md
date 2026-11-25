@@ -209,7 +209,7 @@ sidebarDepth: 2
     - 50+ ब्लॉकचेन नोड्सचा ॲक्सेस
 
 - [**Infura**](https://infura.io/)
-  - [दस्तऐवज](https://infura.io/docs)
+  - [दस्तऐवज](https://docs.infura.io/)
   - वैशिष्ट्ये
     - विनामूल्य स्तर पर्याय
     - आवश्यकतेनुसार स्केल करा

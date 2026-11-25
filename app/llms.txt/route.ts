@@ -3,11 +3,12 @@ import { getTranslations } from "next-intl/server"
 import { SITE_URL } from "@/lib/constants"
 
 import { renderLegalSection, renderNavSection } from "@/lib/llms-txt/render"
-import { buildNavigation } from "@/lib/nav/buildNavigation"
+import { buildNavigation, getNavSectionLinks } from "@/lib/nav/buildNavigation"
 import {
   buildFooterDipperLinks,
   buildFooterLinkSections,
 } from "@/lib/nav/footerLinks"
+import { getNextUpgradeSlug } from "@/lib/nav/links"
 
 export const dynamic = "force-static"
 
@@ -15,7 +16,7 @@ const INTRO = `# Ethereum.org
 
 > The official Ethereum website providing comprehensive education, resources, and community information about Ethereum — the decentralized world computer that enables smart contracts and decentralized applications.
 
-Ethereum.org is the primary educational hub for Ethereum, offering beginner-friendly explanations alongside advanced technical documentation. The site covers everything from basic concepts like "What is Ethereum?" to detailed developer guides, staking information, and protocol research. For the developer-documentation-only index, see ${SITE_URL}/developers/docs/llms.txt. To report a security vulnerability in Ethereum's core protocol, clients, or key smart contracts, see the Ethereum Foundation Bug Bounty Program at ${SITE_URL}/bug-bounty (summarized under "Security & Bug Bounty" below).`
+Ethereum.org is the primary educational hub for Ethereum, offering beginner-friendly explanations alongside advanced technical documentation. The site covers everything from basic concepts like "What is Ethereum?" to detailed developer guides, staking information, and protocol research. For the developer-documentation-only index, see ${SITE_URL}/developers/docs/llms.txt. Markdown-backed pages (most educational and documentation content) serve their raw markdown source at the page URL plus a \`.md\` suffix — e.g. ${SITE_URL}/smart-contracts.md, or ${SITE_URL}/es/smart-contracts.md for a translation — and advertise it in HTML via \`<link rel="alternate" type="text/markdown">\`. To report a security vulnerability in Ethereum's core protocol, clients, or key smart contracts, see the Ethereum Foundation Bug Bounty Program at ${SITE_URL}/bug-bounty (summarized under "Security & Bug Bounty" below).`
 
 const SECURITY = `## Security & Bug Bounty
 
@@ -25,20 +26,32 @@ const SECURITY = `## Security & Bug Bounty
 export const GET = async () => {
   const t = await getTranslations({ locale: "en", namespace: "common" })
 
-  const nav = buildNavigation(t)
+  const nav = buildNavigation(t, getNextUpgradeSlug())
   const footerSections = buildFooterLinkSections(t)
   const dipperLinks = buildFooterDipperLinks(t)
+  // A footer link any menu lists stays out of every section's "More"
+  const listed = new Set(
+    Object.values(nav)
+      .flatMap(getNavSectionLinks)
+      .map(({ href }) => href)
+  )
 
   const findFooter = (title: string) =>
     footerSections.find((s) => s.title === title)
 
   const body = [
     INTRO,
-    renderNavSection(nav.learn, findFooter(nav.learn.label)),
-    renderNavSection(nav.use, findFooter(nav.use.label)),
-    renderNavSection(nav.build, findFooter(nav.build.label)),
-    renderNavSection(nav.participate, findFooter(nav.participate.label)),
-    renderNavSection(nav.research, findFooter(nav.research.label)),
+    renderNavSection(nav.learn, findFooter(nav.learn.label), listed),
+    renderNavSection(nav.use, findFooter(nav.use.label), listed),
+    renderNavSection(nav.build, findFooter(nav.build.label), listed),
+    // Footer columns still carry the previous menu's titles
+    renderNavSection(nav.roadmap, findFooter(t("research")), listed),
+    renderNavSection(nav.community, findFooter(t("participate")), listed),
+    renderNavSection(
+      nav.organizations,
+      findFooter(nav.organizations.label),
+      listed
+    ),
     SECURITY,
     renderLegalSection(dipperLinks),
     "",

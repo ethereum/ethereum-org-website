@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## Gry na Ethereum
+## Gry na Ethereum {#gaming-on-ethereum}
 
 Gry na Ethereum przybierają różne formy, od gier, które wykorzystują blockchain do określonych funkcji, po te, w których cały świat gry żyje onchain. Blockchain Ethereum może być używany w grach w różnym zakresie. Gry mogą przechowywać swoje waluty jako zbywalne tokeny lub inne zasoby w grze (postacie, wyposażenie, zwierzaki itp.) w formie [niewymiennych tokenów (NFT)](/nft/). Gry mogą również wykorzystywać inteligentne kontrakty do hostowania swojej logiki, zasad i stanu onchain. Takie gry są powszechnie określane jako „gry w pełni onchain”.
 
@@ -32,7 +32,7 @@ Kiedy uruchomiono Ethereum, **projektanci gier dostrzegli okazję do zbudowania 
 
 Blockchain Ethereum umożliwił tworzenie światów, w których zasady nie mogą być arbitralnie zmieniane, stan nie może zostać usunięty, a każdy może budować rozszerzenia, które żyją tak długo, jak istnieje sieć. Jest to coś, co Ethereum zapewnia natywnie.
 
-## Przegląd ekosystemu gier na Ethereum
+## Przegląd ekosystemu gier na Ethereum {#ethereums-gaming-ecosystem-overview}
 
 - **Warstwy 2 (L2):** Dzięki niższym opłatom i krótkiemu czasowi transakcji, warstwy 2 (L2) Ethereum stały się powszechnym miejscem uruchamiania gier. Krajobraz L2 stale ewoluuje, a wiodące ekosystemy gier Web3, takie jak Ronin (pierwotnie łańcuch poboczny dla Axie Infinity), przeszły niedawno na architekturę warstwy 2 Ethereum, dziedzicząc gwarancje bezpieczeństwa Ethereum przy jednoczesnym zachowaniu infrastruktury zoptymalizowanej pod kątem gier. Obecnie wiodące warstwy 2 (L2) dla gier to: [Ronin](https://www.roninchain.com/), [Starknet](https://www.starknet.io/), [Abstract](https://abs.xyz/) i [Base](https://www.base.org/).
 - **Infrastruktura:** Aby ułatwić tworzenie gier onchain, istnieje wiele stosów narzędzi; [Cartridge](https://cartridge.gg/) (oferujący klucze sesji, transakcje bez gazu za pośrednictwem paymastera i uwierzytelnianie oparte na WebAuthn za pośrednictwem Cartridge Controller), [Dojo](https://dojoengine.org/) (weryfikowalny framework gier z natywną obsługą abstrakcji konta), [MUD](https://mud.dev/) (silnik gier onchain oparty na EVM). Inne, takie jak [Proof of Play](https://proofofplay.com/) i [Thirdweb](https://thirdweb.com/), pozwalają deweloperom tworzyć gry z doświadczeniami użytkownika podobnymi do Web2.

@@ -24,6 +24,7 @@ type HomeHeroProps = ClassNameProp & {
   image2xl?: StaticImageData
   alt?: string
   eventCategory?: string
+  ethereumNames: string[]
 }
 
 const HomeHero = async ({
@@ -32,6 +33,7 @@ const HomeHero = async ({
   image2xl,
   alt: altProp,
   eventCategory = "Homepage",
+  ethereumNames,
 }: HomeHeroProps) => {
   const t = await getTranslations("page-index")
   const baseImage = image ?? heroBase
@@ -63,7 +65,8 @@ const HomeHero = async ({
 
   return (
     <section className={cn("w-full", className)}>
-      <div className="h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
+      {/* 25.75rem = nav + top padding + morpher + two h1 lines + 6rem for a temporary banner */}
+      <div className="h-[clamp(200px,calc(100svh_-_25.75rem),240px)] overflow-hidden md:h-[clamp(240px,calc(100svh_-_25.75rem),380px)] lg:h-[clamp(350px,calc(100svh_-_25.75rem),480px)]">
         <picture>
           <source
             media={`(min-width: ${breakpointAsNumber["2xl"]}px)`}
@@ -89,7 +92,7 @@ const HomeHero = async ({
 
       <div className="flex flex-col items-center px-4 py-12 text-center lg:py-16">
         <div className="flex w-full flex-col items-center gap-4">
-          <LanguageMorpher />
+          <LanguageMorpher names={ethereumNames} />
 
           <div className="flex flex-col items-center gap-8">
             <h1 className="max-w-[893px] text-5xl leading-[1.1] font-black text-balance md:text-6xl lg:text-7xl lg:leading-[0.9]">

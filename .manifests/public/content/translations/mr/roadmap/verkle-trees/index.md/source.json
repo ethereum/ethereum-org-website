@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/roadmap/verkle-trees/index.md",
-  "generatedAt": "2026-07-23T00:25:46.081Z",
-  "rootHash": "d41459cf98c6",
+  "generatedAt": "2026-11-20T02:20:47.653Z",
+  "rootHash": "395d2d7c90b6",
   "tree": {
-    "contentHash": "b1271bfb020a",
-    "anchorHash": "fd4d41bb5bf7",
+    "contentHash": "3dbfac7edc64",
+    "anchorHash": "38c7c6f4d6d2",
     "children": {
       "frontmatter:title": {
         "contentHash": "fdf6b8b2922f",
@@ -24,8 +24,22 @@
         "anchorHash": "3de1580490d2"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "e974fc81ce47",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "0": {
+            "contentHash": "1edcdf824bc5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "18745704af65",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:1": {
         "contentHash": "77350120e389",
@@ -155,15 +169,15 @@
         ]
       },
       "what-is-the-structure-of-a-verkle-tree": {
-        "contentHash": "4837a3456094",
-        "anchorHash": "5debda9e17c4",
+        "contentHash": "55d68182ff3e",
+        "anchorHash": "7b8931d1fb9d",
         "labelHash": "8845f66bc660",
         "children": {
           "_label": {
             "contentHash": "8845f66bc660",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:3": {
+          "prose:1": {
             "contentHash": "b513baafac95",
             "anchorHash": "e3b0c44298fc"
           },
@@ -171,26 +185,26 @@
             "contentHash": "e3b0c44298fc",
             "anchorHash": "45aed7f4bea9"
           },
-          "prose:4": {
+          "prose:2": {
             "contentHash": "18ab02e80ef4",
             "anchorHash": "e3b0c44298fc"
           },
-          "image:1": {
-            "contentHash": "2a6d603f8394",
-            "anchorHash": "80a133b3b669"
+          "component:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
           },
-          "link:2": {
+          "link:0": {
             "contentHash": "7ae9dc0b1813",
             "anchorHash": "dc37eb003f30"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:3",
+          "prose:1",
           "inline-code:0",
-          "prose:4",
-          "image:1",
-          "link:2"
+          "prose:2",
+          "component:4",
+          "link:0"
         ]
       },
       "current-progress": {
@@ -364,5 +378,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "a5e622b8c76898f296518509dc1c5fa1454dc0ee"
 }

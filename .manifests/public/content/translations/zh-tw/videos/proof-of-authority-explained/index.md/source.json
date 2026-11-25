@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/videos/proof-of-authority-explained/index.md",
-  "generatedAt": "2026-04-29T06:05:45.437Z",
-  "rootHash": "a35c272a097c",
+  "generatedAt": "2026-09-30T19:15:43.693Z",
+  "rootHash": "a212c5e68d46",
   "tree": {
-    "contentHash": "a3be11c63464",
-    "anchorHash": "94cbfd31ccfa",
+    "contentHash": "cdfac4ffa5db",
+    "anchorHash": "28301c2170a4",
     "children": {
       "frontmatter:title": {
-        "contentHash": "975c906573b6",
+        "contentHash": "f19abfcb4c61",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "a321aa3960f3",
+        "contentHash": "be851d60028b",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -21,7 +21,7 @@
       },
       "frontmatter:youtubeId": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "7d3bac8a1e57"
+        "anchorHash": "688a9e8dd477"
       },
       "frontmatter:uploadDate": {
         "contentHash": "e3b0c44298fc",
@@ -29,15 +29,21 @@
       },
       "frontmatter:duration": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ed78755f5676"
+        "anchorHash": "2f11f1d293c3"
       },
       "frontmatter:educationLevel": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "94e6f02a5aca"
       },
       "frontmatter:topic": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "58855d9c3ff7",
+        "children": {
+          "0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3ddeb596fa81"
+          }
+        }
       },
       "frontmatter:format": {
         "contentHash": "e3b0c44298fc",
@@ -49,7 +55,7 @@
       },
       "frontmatter:breadcrumb": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "3266508d05b4"
+        "anchorHash": "735235928bab"
       },
       "prose:1": {
         "contentHash": "4a648acdd90f",
@@ -201,5 +207,5 @@
       "what-comes-next-519"
     ]
   },
-  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
 }

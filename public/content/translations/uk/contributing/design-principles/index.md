@@ -1,8 +1,8 @@
 ---
-title: Наші принципи дизайну
-metaTitle: Принципи дизайну
+title: "Наші принципи дизайну"
+metaTitle: "Принципи дизайну"
 lang: uk
-description: Принципи, що лежать в основі рішень щодо дизайну та контенту ethereum.org
+description: "Принципи, що лежать в основі рішень щодо дизайну та контенту ethereum.org"
 ---
 
 <Emoji text=":wave:" size={1} /> Вітаємо! Це принципи дизайну ethereum.org. Вони є частиною безперервного процесу розвитку та вдосконалення ethereum.org.
@@ -89,4 +89,4 @@ description: Принципи, що лежать в основі рішень щ
 
 Хоча ці принципи зосереджені на вебсайті ethereum.org, ми сподіваємося, що багато з них відображають цінності екосистеми Етеріуму загалом. Можливо, ви навіть захочете впровадити деякі з них у свій власний проєкт!
 
-Поділіться своїми думками на нашому [сервері Discord](https://discord.gg/ethereum-org) або [створивши проблему (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Поділіться своїми думками на нашому [сервері Discord](/discord/) або [створивши проблему (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

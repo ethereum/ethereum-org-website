@@ -3,7 +3,6 @@ import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
 import type { ReactElement, ReactNode } from "react"
-import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
   BlogFrontmatter,
@@ -17,14 +16,14 @@ import type {
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
+import type { TagProps } from "@/components/ui/tag"
 
 import chains from "@/data/chains"
-import { Rollup, Rollups } from "@/data/networks/networks"
+import type { Rollup } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
 import { screens } from "./utils/screen"
-import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/layouts"
 
@@ -306,7 +305,7 @@ export type LocaleContributions = {
 }
 
 export type LocaleDisplayInfo = {
-  localeOption: string
+  localeOption: Lang
   sourceName: string
   targetName: string
   englishName: string
@@ -381,22 +380,6 @@ export type CostLeaderboardData = Pick<
   }
 
 // GitHub contributors
-
-export type Commit = {
-  commit: {
-    author: {
-      name: string
-      email: string
-      date: string
-    }
-    message: string
-  }
-  author: {
-    avatar_url: string
-    login: string
-    html_url: string
-  }
-}
 
 export type Author = {
   name: string
@@ -548,11 +531,6 @@ export type EtherscanTxCountResponse = {
   result: EtherscanTxCountItem[]
 }
 
-export type DefiLlamaTVLResponse = {
-  date: number
-  tvl: number
-}[]
-
 export type MetricReturnData = ValueOrError<number>
 
 export type EthPriceData =
@@ -634,18 +612,14 @@ export type GrowThePieMasterData = {
   launchDates: Record<string, string>
 }
 
-export type GithubRepoData = {
-  starCount: number
-  languages: string[]
-}
-
 export type L2beatData = {
   projects: Record<
     string,
     {
       stage: string
+      type?: "layer2" | "layer3"
       tvl: { total: number }
-      tvs: { breakdown: { total: number } }
+      tvs: { breakdown: { total: number; stablecoin?: number } }
       risks: Array<{ name: string; sentiment: string }>
     }
   >
@@ -678,8 +652,9 @@ export type PhoneScreenProps = SimulatorNavProps & {
 // Events (Geode Labs Supabase API)
 export interface GeodeApiEventItem {
   title: string
-  logoImage: string
-  bannerImage: string
+  // Nullable: the feed sends null for events with no image.
+  logoImage: string | null
+  bannerImage: string | null
   startTime: string
   endTime: string | null
   location: string
@@ -701,6 +676,9 @@ export type EventType =
   | "other"
 
 export interface EventItem extends GeodeApiEventItem {
+  // Narrowed from the raw feed: transformEvent normalizes a missing image to "".
+  logoImage: string
+  bannerImage: string
   id: string // slugified title
   eventTypes: EventType[]
   eventTypesLabels?: string[]
@@ -754,7 +732,7 @@ export type ChainIdNetworkResponse = {
 
 export type Chain = Pick<
   ChainIdNetworkResponse,
-  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain" | "shortName"
 >
 
 export type ChainName = (typeof chains)[number]["name"]
@@ -763,28 +741,96 @@ export type NonEVMChainName = "Starknet"
 
 export type AppOnlyChainName = "Immutable zkEVM" | "Ronin"
 
-export type ExtendedRollup = Rollup & {
-  networkMaturity: MaturityLevel
-  txCosts: number | undefined
+export type NetworkMetrics = {
   tvl: number
-  walletsSupported: string[]
-  activeAddresses: number | undefined
+  txCosts: number | null
+  activeAddresses: number | null
   launchDate: string | null
-  walletsSupportedCount: string
-  blockspaceData: {
-    nft: number
-    defi: number
-    social: number
-    token_transfers: number
-    unlabeled: number
-  } | null
+  /** Slugs of the listed wallets that support the network */
+  walletSlugs: string[]
+}
+
+/** A layer 2 listed in the networks catalog, with its live metrics */
+export type CatalogNetwork = Rollup &
+  NetworkMetrics & {
+    networkMaturity: MaturityLevel
+    blockspaceData: BlockspaceData | null
+  }
+
+/** Ethereum itself: the catalog's pinned reference, never a listed network */
+export type MainnetNetwork = NetworkMetrics & {
+  name: string
+  chainName: ChainName
+  logo: StaticImageData
+  feeToken: string[]
 }
 
 // Wallets
+/** Fee category; maps to the `page-find-wallet-fee-label-*` intl strings */
+export type WalletFeeType =
+  | "swap"
+  | "swap-bridge"
+  | "buy"
+  | "buy-sell"
+  | "staking"
+  | "shield-unshield"
+  | "device"
+  /** One-off: renders the whole "Free tier, paid plans from {usd}/month" template */
+  | "free-tier-plans"
+
+/** Non-numeric fee values; maps to the `page-find-wallet-fee-value-*` intl strings */
+export type WalletFeeText = "variable" | "undisclosed" | "set-by-provider"
+
+/** Wraps the formatted value; maps to the `page-find-wallet-fee-qualifier-*` intl strings */
+export type WalletFeeQualifier =
+  | "of-rewards"
+  | "per-card"
+  | "lower-with-premium"
+  | "tpt-holder-discounts"
+  /** Requires `qualifierPercent` */
+  | "stablecoins"
+  /** Requires `qualifierPercent` */
+  | "stablecoins-lower-l2"
+  /** Requires `qualifierUsd` */
+  | "free-under-fox-discounts"
+
+/** Exact amount, or [min, max] range */
+export type WalletFeeAmount = number | [min: number, max: number]
+
+export type WalletFee = (
+  | {
+      /** Human-readable percent: 0.875 renders as "0.875%" */
+      percent: WalletFeeAmount
+      /** Renders as "from {value}" */
+      from?: boolean
+      usd?: never
+      text?: never
+    }
+  | {
+      usd: WalletFeeAmount
+      /** Renders as "from {value}" */
+      from?: boolean
+      percent?: never
+      text?: never
+    }
+  | { text: WalletFeeText; percent?: never; usd?: never; from?: never }
+) & {
+  type: WalletFeeType
+  qualifier?: WalletFeeQualifier
+  /** Human-readable percent interpolated into the qualifier string */
+  qualifierPercent?: number
+  /** USD amount interpolated into the qualifier string */
+  qualifierUsd?: number
+}
+
 export type WalletData = {
   last_updated: string
   name: string
+  /** Set only to keep a URL stable across a rename; defaults to slugified name. */
+  slug?: string
   image: StaticImageData
+  banner?: StaticImageData
+  screenshots?: StaticImageData[]
   twBackgroundColor: string
   twGradiantBrandColor: string
   url: string
@@ -830,111 +876,16 @@ export type WalletData = {
   mpc?: boolean
   new_to_crypto?: boolean
   privacy?: boolean
+  /**
+   * Fees shown on the wallet card, e.g. "Swap fee: 0.85%" or "Device: $149".
+   * Rendered by formatWalletFees; omitted when the wallet has no fee to surface.
+   */
+  fees?: WalletFee[]
 }
 
 export type Wallet = WalletData & {
   supportedLanguages: string[]
 }
-
-export type WalletRow = Wallet & { id: string }
-
-export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
-
-export interface WalletFilterData {
-  title: TranslationKey
-  filterKey?: string
-  description: TranslationKey | ""
-}
-
-export type FilterInputState = boolean | Lang | string | string[] | null
-
-export type FilterOption = {
-  title: string
-  showFilterOption: boolean
-  items: Array<FilterItem>
-}
-
-type FilterItem = {
-  filterKey: string
-  filterLabel: string
-  description: string
-  inputState: FilterInputState
-  ignoreFilterReset?: boolean
-  input: FilterInput
-  options: Array<FilterOptionItem>
-  optionsLegend?: string // sr-only legend for the nested fieldset wrapping `options` (when present)
-}
-
-type FilterInput = (
-  filterIndex: number,
-  itemIndex: number,
-  state: FilterInputState,
-  updateFilterState: UpdateFilterState
-) => ReactElement<unknown>
-
-type FilterOptionItem = {
-  filterKey: string
-  filterLabel: string
-  description: string
-  ignoreFilterReset?: boolean
-  inputState: FilterInputState
-  input: FilterOptionInput
-}
-
-type FilterOptionInput = (
-  filterIndex: number,
-  itemIndex: number,
-  optionIndex: number,
-  state: FilterInputState,
-  updateFilterState: UpdateFilterState
-) => ReactElement<unknown>
-
-type UpdateFilterState = (
-  filterIndex: number,
-  itemIndex: number,
-  inputState: FilterInputState,
-  optionIndex?: number
-) => void
-
-export interface WalletPersonas {
-  title: string
-  description: string
-  presetFilters: {
-    android: boolean
-    ios: boolean
-    linux: boolean
-    windows: boolean
-    macOS: boolean
-    firefox: boolean
-    chromium: boolean
-    hardware: boolean
-    open_source: boolean
-    non_custodial: boolean
-    hardware_support: boolean
-    rpc_importing: boolean
-    nft_support: boolean
-    connect_to_dapps: boolean
-    staking: boolean
-    swaps: boolean
-    layer_2: boolean
-    gas_fee_customization: boolean
-    ens_support: boolean
-    erc_20_support: boolean
-    buy_crypto: boolean
-    withdraw_crypto: boolean
-    multisig: boolean
-    social_recovery: boolean
-    new_to_crypto?: boolean
-  }
-}
-
-export type TPresetFilters = WalletPersonas[]
-
-export type ProductTablePresetFilters = WalletPersonas[]
-
-export type ProductTableColumnDefs = ColumnDef<Wallet | Rollups>
-
-export type ProductTableRow = Wallet | Rollup
 
 export interface DropdownOption {
   label: string
@@ -1182,16 +1133,6 @@ export type CommunityBlog = {
   href: string
 } & ({ name: string; feed?: string } | { name?: string; feed: string })
 
-type NestedDivs = {
-  div: NestedDivs[]
-}
-
-export type HTMLResult = {
-  html: {
-    body: Record<string, NestedDivs>[]
-  }
-}
-
 export type EventCardProps = {
   title: string
   href: string
@@ -1376,10 +1317,20 @@ export type AppData =
   | PrivacyApp
   | GovernanceDaoApp
 
+export interface MeetupGroup {
+  title: string
+  location: string
+  link: string
+  logoImage?: string
+  bannerImage?: string
+}
+
 export type CommunityPick = {
   name: string
   twitterURL: string
   twitterHandle: string
+  /** S3 avatar; `""` = mirroring failed, `undefined` = not synced yet */
+  avatarImage?: string
   app1Name: string | null
   app2Name: string | null
   app3Name: string | null
@@ -1471,6 +1422,7 @@ export type DeveloperToolsRepoLink = {
   finalScore?: number
   scoreSource?: "official-weight" | "github-inferred" | "unscored"
   lastUpdated?: string | null
+  license?: string | null
 }
 
 export type DeveloperToolsPackageLink = {
@@ -1489,11 +1441,14 @@ export type BuilderResourcesCatalogResource = {
   tags: string[]
   website?: string | null
   llmstext?: string | null
+  crops_native?: true
   subcategory_id: string
   resource_raw_score?: number
   resource_score?: number
   resource_rank?: number
   resource_score_source?: "official-weight" | "github-inferred" | "unscored"
+  /** Last edit of this entry in the upstream catalog (ISO date). */
+  updated_at?: string
 }
 
 export type DeveloperToolsRankingCoverage = {
@@ -1532,4 +1487,43 @@ export interface BuilderResourcesTaxonomy {
     definitions: BuilderResourcesTaxonomyCategory[]
   }
   tags: string[]
+}
+
+export type CatalogItemKind = "app" | "tool" | "wallet" | "network"
+
+export type CatalogItemLinkKind =
+  | "x"
+  | "discord"
+  | "telegram"
+  | "reddit"
+  | "farcaster"
+  | "github"
+  | "code"
+
+export interface CatalogItemLink {
+  kind: CatalogItemLinkKind
+  href: string
+}
+
+export interface CatalogItem {
+  kind: CatalogItemKind
+  slug: string
+  name: string
+  logo?: string | StaticImageData
+  banner?: string | StaticImageData
+  screenshots: (string | StaticImageData)[]
+  /** `node` replaces the default `Tag` render, e.g. for an interactive badge. */
+  tags: { label: string; status?: TagProps["status"]; node?: ReactNode }[]
+  subtitle?: string
+  chains: ChainName[]
+  /** Localized; rendered as markdown. */
+  description?: string
+  primaryLink?: { href: string; label: string }
+  /** Labelled outline buttons after the primary one */
+  secondaryLinks?: { href: string; label: string }[]
+  socialLinks: CatalogItemLink[]
+  infoRows: { label: string; value: ReactNode; tooltip?: string }[]
+  /** Page path; the trail comes from the breadcrumb IA map, closed by `name` */
+  breadcrumbSlug: string
+  next?: { name: string; href: string }
 }

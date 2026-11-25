@@ -130,7 +130,7 @@ Tutatumia [Vite](https://vite.dev/) na [React](https://react.dev/). Hizi ni zana
 
 #### Kijenzi cha WASM {#wasm}
 
-Msimbo wa chanzo unaokusanywa kuwa WASM umeandikwa katika [Rust](https://rust-lang.org/). Unaweza kuuona katika [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Msimbo huu kimsingi ni kiolesura kati ya msimbo wa JavaScript na [maktaba ya `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Msimbo wa chanzo unaokusanywa (compiled) kuwa WASM umeandikwa katika [Rust](https://rust-lang.org/). Unaweza kuuona katika [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Msimbo huu kimsingi ni kiolesura kati ya msimbo wa JavaScript na [maktaba ya `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
@@ -149,13 +149,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-Kifurushi cha [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) kinahitaji kuzalisha thamani nasibu. Hilo haliwezi kufanywa kwa njia za kialgoriti pekee; inahitaji ufikiaji wa mchakato wa kimaumbile kama chanzo cha Entropi. Ufafanuzi huu unabainisha kwamba tutapata Entropi hiyo kwa kuuliza kivinjari tunachoendesha.
+Kifurushi cha [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) kinahitaji kuzalisha thamani nasibu. Hilo haliwezi kufanywa kwa njia za kialgoriti pekee; linahitaji ufikiaji wa mchakato wa kifizikia kama chanzo cha Entropi. Ufafanuzi huu unabainisha kwamba tutapata Entropi hiyo kwa kukiuliza kivinjari tunachotumia.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-[Maktaba hii](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) inatupa jumbe za makosa zenye maana zaidi wakati msimbo wa WASM unapoingiwa na hofu (panics) na hauwezi kuendelea.
+[Maktaba hii](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) inatupa jumbe za makosa zenye maana zaidi wakati msimbo wa WASM unapopata hitilafu (panics) na kushindwa kuendelea.
 
 ```toml
 [lib]
@@ -172,9 +172,9 @@ Huu ndio msimbo halisi wa Rust.
 use wasm_bindgen::prelude::*;
 ```
 
-Ufafanuzi wa kuunda kifurushi cha WASM kutoka kwa Rust. Zimeandikwa [hapa](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
+Ufafanuzi wa kuunda kifurushi cha WASM kutoka kwenye Rust. Zimeandikwa [hapa](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -182,32 +182,32 @@ use eth_stealth_addresses::{
 };
 ```
 
-Vitendaji (functions) tunavyohitaji kutoka kwenye [maktaba ya `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Fomula (functions) tunazohitaji kutoka kwenye [maktaba ya `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 ```rust
 use hex::{decode,encode};
 ```
 
-Rust kwa kawaida hutumia [safu](https://doc.rust-lang.org/std/primitive.array.html) za baiti (`[u8; <size>]`) kwa thamani. Lakini katika JavaScript, kwa kawaida tunatumia mifuatano ya heksadesimali. [Maktaba ya `hex`](https://docs.rs/hex/latest/hex/) inatutafsiria kutoka uwakilishi mmoja hadi mwingine.
+Rust kwa kawaida hutumia [safu (arrays)](https://doc.rust-lang.org/std/primitive.array.html) za baiti (`[u8; <size>]`) kwa thamani. Lakini katika JavaScript, kwa kawaida tunatumia mifuatano ya heksadesimali. [Maktaba ya `hex`](https://docs.rs/hex/latest/hex/) inatutafsiria kutoka uwakilishi mmoja hadi mwingine.
 
 ```rust
 #[wasm_bindgen]
 ```
 
-Zalisha vifungo (bindings) vya WASM ili kuweza kuita kitendaji hiki kutoka kwenye JavaScript.
+Zalisha viunganishi (bindings) vya WASM ili kuweza kuita fomula hii kutoka kwenye JavaScript.
 
 ```rust
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-Njia rahisi zaidi ya kurejesha kipengee (object) chenye nyanja nyingi ni kurejesha mfuatano wa JSON. 
+Njia rahisi zaidi ya kurejesha kipengee (object) chenye sehemu nyingi ni kurejesha mfuatano wa JSON.
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
         generate_stealth_meta_address();
 ```
 
-[`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) inarejesha nyanja tatu:
+[`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) inarejesha sehemu tatu:
 
 - Anwani-meta (*K<sub>pub</sub>* na *V<sub>pub</sub>*)
 - Ufunguo wa siri wa kutazama (*V<sub>priv</sub>*)
@@ -224,28 +224,28 @@ Sintaksia ya [tuple](https://doc.rust-lang.org/std/primitive.tuple.html) inaturu
 }
 ```
 
-Tumia makro ya [`format!`](https://doc.rust-lang.org/std/fmt/index.html) kuzalisha mfuatano uliosimbwa kwa JSON. Tumia [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) kubadilisha safu kuwa mifuatano ya heksi (hex strings).
+Tumia makro ya [`format!`](https://doc.rust-lang.org/std/fmt/index.html) ili kuzalisha mfuatano uliosimbwa kwa JSON. Tumia [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) kubadilisha safu kuwa mifuatano ya heksadesimali.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-Kitendaji hiki hubadilisha mfuatano wa heksi (uliotolewa na JavaScript) kuwa safu ya baiti. Tunakitumia kuchanganua thamani zilizotolewa na msimbo wa JavaScript. Kitendaji hiki ni kigumu kwa sababu ya jinsi Rust inavyoshughulikia safu na vekta.
+Fomula hii inabadilisha mfuatano wa heksadesimali (uliotolewa na JavaScript) kuwa safu ya baiti. Tunaitumia kuchanganua thamani zilizotolewa na msimbo wa JavaScript. Fomula hii ni ngumu kwa sababu ya jinsi Rust inavyoshughulikia safu na vekta.
 
-Usemi wa `<const N: usize>` unaitwa [kijeneriki (generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` ni kigezo kinachodhibiti urefu wa safu iliyorejeshwa. Kitendaji hiki kwa kweli kinaitwa `str_to_array::<n>`, ambapo `n` ni urefu wa safu.
+Usemi wa `<const N: usize>` unaitwa [generic](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` ni kigezo kinachodhibiti urefu wa safu iliyorejeshwa. Fomula hii kwa kweli inaitwa `str_to_array::<n>`, ambapo `n` ni urefu wa safu.
 
-Thamani ya kurejesha ni `Option<[u8; N]>`, ambayo inamaanisha safu iliyorejeshwa ni ya [hiari (optional)](https://doc.rust-lang.org/std/option/). Huu ni mtindo wa kawaida katika Rust kwa vitendaji ambavyo vinaweza kushindwa.
+Thamani inayorejeshwa ni `Option<[u8; N]>`, ambayo inamaanisha safu iliyorejeshwa ni ya [hiari](https://doc.rust-lang.org/std/option/). Huu ni mtindo wa kawaida katika Rust kwa fomula ambazo zinaweza kushindwa.
 
-Kwa mfano, ikiwa tutaita `str_to_array::10("bad060a7")`, kitendaji kinapaswa kurejesha safu ya thamani kumi, lakini ingizo ni baiti nne tu. Kitendaji kinahitaji kushindwa, na kinafanya hivyo kwa kurejesha `None`. Thamani ya kurejesha kwa `str_to_array::4("bad060a7")` itakuwa `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+Kwa mfano, ikiwa tutaita `str_to_array::10("bad060a7")`, fomula inapaswa kurejesha safu ya thamani kumi, lakini ingizo ni baiti nne tu. Fomula inahitaji kushindwa, na inafanya hivyo kwa kurejesha `None`. Thamani inayorejeshwa kwa `str_to_array::4("bad060a7")` itakuwa `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
     // decode inarejesha Result<Vec<u8>, _>
     let vec = decode(s).ok()?;
 ```
 
-Kitendaji cha [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) kinarejesha `Result<Vec<u8>, FromHexError>`. Aina ya [`Result`](https://doc.rust-lang.org/std/result/) inaweza kuwa na matokeo yaliyofaulu (`Ok(value)`) au kosa (`Err(error)`).
+Fomula ya [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) inarejesha `Result<Vec<u8>, FromHexError>`. Aina ya [`Result`](https://doc.rust-lang.org/std/result/) inaweza kuwa na matokeo yaliyofaulu (`Ok(value)`) au kosa (`Err(error)`).
 
-Mbinu ya `.ok()` inabadilisha `Result` kuwa `Option`, ambayo thamani yake ni thamani ya `Ok()` ikiwa imefaulu au `None` ikiwa sivyo. Hatimaye, [kiendeshaji cha alama ya kuuliza](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) kinasitisha vitendaji vya sasa na kurejesha `None` ikiwa `Option` ni tupu. Vinginevyo, inafungua (unwraps) thamani na kurejesha hiyo (katika kesi hii, ili kugawa thamani kwa `vec`).
+Mbinu ya `.ok()` inabadilisha `Result` kuwa `Option`, ambayo thamani yake ni thamani ya `Ok()` ikiwa imefaulu au `None` ikiwa haijafaulu. Hatimaye, [kiendeshaji cha alama ya kuuliza](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) kinasitisha fomula za sasa na kurejesha `None` ikiwa `Option` ni tupu. Vinginevyo, inafungua (unwraps) thamani na kuirejesha (katika kesi hii, ili kugawa thamani kwa `vec`).
 
 Hii inaonekana kama mbinu ngumu isivyo kawaida ya kushughulikia makosa, lakini `Result` na `Option` zinahakikisha kwamba makosa yote yanashughulikiwa, kwa njia moja au nyingine.
 
@@ -267,16 +267,16 @@ Rust ina aina mbili za safu. [Safu (Arrays)](https://doc.rust-lang.org/std/primi
 }
 ```
 
-Rust haikuhitaji kutumia neno kuu la [`return`](https://doc.rust-lang.org/std/keyword.return.html) unapokurejesha thamani mwishoni mwa kitendaji.
+Rust haikuhitaji kutumia neno msingi la [`return`](https://doc.rust-lang.org/std/keyword.return.html) unapokurejesha thamani mwishoni mwa fomula.
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-Kitendaji hiki kinapokea anwani-meta ya umma, ambayo inajumuisha *V<sub>pub</sub>* na *K<sub>pub</sub>*. Inarejesha anwani fiche, ufunguo wa umma wa kuchapisha (*R<sub>pub</sub>*), na thamani ya skanisho ya baiti moja ambayo inaharakisha utambuzi wa anwani zilizochapishwa ambazo zinaweza kuwa za Alice.
+Fomula hii inapokea anwani-meta ya umma, ambayo inajumuisha *V<sub>pub</sub>* na *K<sub>pub</sub>*. Inarejesha anwani fiche, ufunguo wa umma wa kuchapisha (*R<sub>pub</sub>*), na thamani ya utambazaji ya baiti moja ambayo inaharakisha utambuzi wa anwani zilizochapishwa ambazo zinaweza kuwa za Alice.
 
-Thamani ya skanisho ni sehemu ya siri ya pamoja (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Thamani hii inapatikana kwa Alice, na kuiangalia ni haraka zaidi kuliko kuangalia ikiwa *f(K<sub>pub</sub>+G\*heshi(S))* inalingana na anwani iliyochapishwa.
+Thamani ya utambazaji ni sehemu ya siri ya pamoja (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Thamani hii inapatikana kwa Alice, na kuiangalia ni haraka zaidi kuliko kuangalia ikiwa *f(K<sub>pub</sub>+G\*hash(S))* ni sawa na anwani iliyochapishwa.
 
 ```rust
     let (address, r_pub, scan) = 
@@ -310,9 +310,9 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-Kitendaji hiki kinatumia [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) ya maktaba kukokotoa ufunguo wa siri wa kutoa kutoka kwenye anwani (*R<sub>priv</sub>*). Ukokotoaji huu unahitaji thamani hizi:
+Fomula hii inatumia [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) ya maktaba ili kukokotoa ufunguo wa siri wa kutoa kutoka kwenye anwani (*R<sub>priv</sub>*). Ukokotoaji huu unahitaji thamani hizi:
 
-- Anwani (*Anwani=f(P<sub>pub</sub>)*)
+- Anwani (*Address=f(P<sub>pub</sub>)*)
 - Ufunguo wa umma uliotengenezwa na Bill (*R<sub>pub</sub>*)
 - Ufunguo wa siri wa kutazama (*V<sub>priv</sub>*)
 - Ufunguo wa siri wa kutumia (*K<sub>priv</sub>*)
@@ -321,7 +321,7 @@ Kitendaji hiki kinatumia [`compute_stealth_key`](https://docs.rs/eth-stealth-add
 #[wasm_bindgen(start)]
 ```
 
-[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) inabainisha kwamba kitendaji kinatekelezwa wakati msimbo wa WASM unapoanzishwa.
+[`#[wasm_bindgen(start)]`](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/on-rust-exports/start.html) inabainisha kwamba fomula inatekelezwa wakati msimbo wa WASM unapoanzishwa.
 
 ```rust
 pub fn main() {
@@ -329,7 +329,7 @@ pub fn main() {
 }
 ```
 
-Msimbo huu unabainisha kwamba pato la hofu (panic output) litumwe kwenye kiweko (console) cha JavaScript. Ili kuiona ikifanya kazi, tumia programu na umpe Bill anwani-meta batili (badilisha tu tarakimu moja ya heksadesimali). Utaona kosa hili kwenye kiweko cha JavaScript:
+Msimbo huu unabainisha kwamba pato la hitilafu (panic) litumwe kwenye kiweko (console) cha JavaScript. Ili kuiona ikifanya kazi, tumia programu na umpe Bill anwani-meta batili (badilisha tu tarakimu moja ya heksadesimali). Utaona kosa hili kwenye kiweko cha JavaScript:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -372,13 +372,13 @@ Tunahitaji programu-jalizi (plugins) mbili za Vite: [react](https://www.npmjs.co
 
 **`App.jsx`**
 
-Faili hili ndilo kijenzi kikuu cha programu. Ni kontena linalojumuisha vijenzi viwili: `Alice` na `Bill`, violesura vya watumiaji kwa watumiaji hao. Sehemu husika kwa WASM ni msimbo wa kuanzisha.
+Faili hili ndilo kijenzi kikuu cha programu. Ni kontena linalojumuisha vijenzi viwili: `Alice` na `Bill`, violesura vya watumiaji kwa ajili ya watumiaji hao. Sehemu husika kwa WASM ni msimbo wa kuanzisha.
 
 ```jsx
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Tunapotumia [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), inaunda faili mbili tunazotumia hapa: faili la wasm lenye msimbo halisi (hapa, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) na faili la JavaScript lenye ufafanuzi wa kulitumia (hapa, `src/rust_wasm/pkg/rust_wasm.js`). Usafirishaji chaguomsingi (default export) wa faili hilo la JavaScript ni msimbo unaohitaji kuendeshwa ili kuanzisha WASM.
+Tunapotumia [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), inaunda faili mbili tunazotumia hapa: faili la wasm lenye msimbo halisi (hapa, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) na faili la JavaScript lenye ufafanuzi wa kulitumia (hapa, `src/rust-wasm/pkg/rust_wasm.js`). Usafirishaji chaguomsingi (default export) wa faili hilo la JavaScript ni msimbo unaohitaji kuendeshwa ili kuanzisha WASM.
 
 ```jsx
 function App() {
@@ -401,19 +401,19 @@ function App() {
   )
 ```
 
-[Ndoano (hook) ya `useEffect`](https://react.dev/reference/react/useEffect) inakuruhusu kubainisha kitendaji kinachotekelezwa wakati vigeu vya hali (state variables) vinapobadilika. Hapa, orodha ya vigeu vya hali ni tupu (`[]`), kwa hivyo kitendaji hiki kinatekelezwa mara moja tu ukurasa unapopakiwa.
+[Ndoano (hook) ya `useEffect`](https://react.dev/reference/react/useEffect) inakuruhusu kubainisha fomula inayotekelezwa wakati vigezo vya hali vinapobadilika. Hapa, orodha ya vigezo vya hali ni tupu (`[]`), kwa hivyo fomula hii inatekelezwa mara moja tu wakati ukurasa unapopakiwa.
 
-Kitendaji cha athari (effect function) kinapaswa kurejesha mara moja. Ili kutumia msimbo usiolingana (asynchronous code), kama vile `init` ya WASM (ambayo inapaswa kupakia faili la `.wasm` na kwa hivyo inachukua muda) tunafafanua kitendaji cha ndani cha [`async`](https://en.wikipedia.org/wiki/Async/await) na kukiendesha bila `await`.
+Fomula ya athari (effect function) inapaswa kurejesha mara moja. Ili kutumia msimbo usiolingana (asynchronous code), kama vile `init` ya WASM (ambayo inapaswa kupakia faili la `.wasm` na kwa hivyo inachukua muda) tunafafanua fomula ya ndani ya [`async`](https://en.wikipedia.org/wiki/Async/await) na kuiendesha bila `await`.
 
 **`Bill.jsx`**
 
-Hiki ni kiolesura cha mtumiaji cha Bill. Kina kitendo kimoja, kuunda anwani kulingana na anwani-meta fiche iliyotolewa na Alice.
+Hiki ni kiolesura cha mtumiaji kwa ajili ya Bill. Kina kitendo kimoja, kuunda anwani kulingana na anwani-meta fiche iliyotolewa na Alice.
 
 ```jsx
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Mbali na usafirishaji chaguomsingi, msimbo wa JavaScript uliotengenezwa na `wasm-pack` unasafirisha kitendaji kwa kila kitendaji katika msimbo wa WASM.
+Mbali na usafirishaji chaguomsingi, msimbo wa JavaScript uliotengenezwa na `wasm-pack` unasafirisha fomula kwa kila fomula katika msimbo wa WASM.
 
 ```jsx
             <button onClick={() => {
@@ -421,14 +421,14 @@ Mbali na usafirishaji chaguomsingi, msimbo wa JavaScript uliotengenezwa na `wasm
             }}>
 ```
 
-Ili kuita vitendaji vya WASM, tunaita tu kitendaji kilichosafirishwa na faili la JavaScript lililoundwa na `wasm-pack`.
+Ili kuita fomula za WASM, tunaita tu fomula iliyosafirishwa na faili la JavaScript lililoundwa na `wasm-pack`.
 
 **`Alice.jsx`**
 
 Msimbo katika `Alice.jsx` unafanana, isipokuwa kwamba Alice ana vitendo viwili:
 
 - Kuzalisha anwani-meta
-- Kupata ufunguo wa siri kwa anwani iliyochapishwa na Bill
+- Kupata ufunguo wa siri kwa ajili ya anwani iliyochapishwa na Bill
 
 ## Hitimisho {#conclusion}
 

@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+
+import type { Lang } from "@/lib/types"
 
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { PersistentPanel } from "@/components/ui/persistent-panel"
@@ -9,8 +11,10 @@ import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { SITE_TITLE } from "@/lib/constants"
+import { SECTION_LABELS, SITE_TITLE } from "@/lib/constants"
 
 import HamburgerButton from "./HamburgerButton"
 
@@ -24,21 +28,26 @@ const MobileMenuContent = React.lazy(lazyImport)
 function MobileMenuContentSkeleton() {
   return (
     <div className="flex flex-1 flex-col">
-      {/* Header */}
-      <div className="flex items-center justify-between p-6">
+      {/* Header: site title and Close */}
+      <div className="flex h-19 shrink-0 items-center justify-between border-b border-body-light px-6">
         <Skeleton className="h-5 w-32" />
         <Skeleton className="h-5 w-12" />
       </div>
 
-      {/* Nav sections (5 collapsible rows) */}
+      {/* Sections: icon, label and description, chevron */}
       <div className="flex-1">
-        {Array.from({ length: 5 }).map((_, i) => (
+        {Array.from({ length: SECTION_LABELS.length }).map((_, i) => (
           <div
             key={i}
-            className="flex items-center gap-2 border-b border-body-light px-4 py-4 first:border-t"
+            className="flex items-center gap-4 border-b border-body-light px-6 py-4"
           >
-            <Skeleton className="h-4 w-4" />
-            <Skeleton className="h-5 w-36" />
+            <Skeleton className="size-6 shrink-0" />
+            <div className="flex-1 space-y-2">
+              <Skeleton className="h-5 w-28" />
+              <Skeleton className="h-3.5 w-full" />
+              <Skeleton className="h-3.5 w-2/3" />
+            </div>
+            <Skeleton className="size-5 shrink-0" />
           </div>
         ))}
       </div>
@@ -61,11 +70,12 @@ function MobileMenuContentSkeleton() {
 
 type MobileMenuClientProps = {
   className?: string
-  side: "left" | "right"
 }
 
-const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
+const MobileMenuClient = ({ className }: MobileMenuClientProps) => {
   const t = useTranslations("common")
+  const locale = useLocale()
+  const side = isLangRightToLeft(locale as Lang) ? "right" : "left"
   const [open, setOpen] = useCloseOnNavigate()
   const triggerRef = React.useRef<HTMLButtonElement>(null)
   // Track if menu has ever been opened to keep content loaded after first open
@@ -86,6 +96,12 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
       setHasBeenOpened(true)
     }
     setOpen(nextOpen)
+
+    trackCustomEvent({
+      eventCategory: "Mobile navigation menu",
+      eventAction: "Menu toggled",
+      eventName: `${nextOpen ? "Open" : "Close"} menu: ${locale}`,
+    })
   }
 
   return (

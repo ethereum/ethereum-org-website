@@ -24,13 +24,13 @@ Los validadores reciben recompensas cuando emiten votos que son consistentes con
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
 ```
 
-donde `base_reward_factor` es 64, `base_rewards_per_epoch` es 4 y `sum(active balance)` es el total de ether en staking en todos los validadores activos.
+donde `base_reward_factor` es 64, `base_rewards_per_epoch` es 4 y `sum(active balance)` es el ether total en staking de todos los validadores activos.
 
-Esto significa que la recompensa base es proporcional al saldo efectivo del validador e inversamente proporcional al número de validadores en la red. Cuantos más validadores haya, mayor será la emisión general (ya que `sqrt(N)`), pero menor será la `base_reward` por validador (ya que `1/sqrt(N)`). Estos factores influyen en el APR de un nodo de staking. Lea la justificación de esto en las [notas de Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
+Esto significa que la recompensa base es proporcional al saldo efectivo del validador e inversamente proporcional al número de validadores en la red. Cuantos más validadores haya, mayor será la emisión general (como `sqrt(N)`) pero menor será la `base_reward` por validador (como `1/sqrt(N)`). Estos factores influyen en el APR de un nodo de staking. Lea la justificación de esto en las [notas de Vitalik](https://notes.ethereum.org/@vbuterin/serenity_design_rationale?type=view#Base-rewards).
 
 La recompensa total se calcula entonces como la suma de cinco componentes que tienen cada uno una ponderación que determina cuánto añade cada componente a la recompensa total. Los componentes son:
 
-```
+```text
 1. voto de origen: el validador ha emitido un voto oportuno para el punto de control de origen correcto
 2. voto de destino: el validador ha emitido un voto oportuno para el punto de control de destino correcto
 3. voto de cabeza: el validador ha emitido un voto oportuno para el bloque de cabeza correcto
@@ -48,11 +48,11 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-Estas ponderaciones suman 64. La recompensa se calcula como la suma de las ponderaciones aplicables dividida por 64. Un validador que haya emitido votos oportunos de origen, destino y cabeza, haya propuesto un bloque y haya participado en un comité de sincronización podría recibir `64/64 * base_reward == base_reward`. Sin embargo, un validador no suele ser un proponente de bloque, por lo que su recompensa máxima es `64-8 /64 * base_reward == 7/8 * base_reward`. Los validadores que no son proponentes de bloques ni están en un comité de sincronización pueden recibir `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+Estas ponderaciones suman 64. La recompensa se calcula como la suma de las ponderaciones aplicables dividida por 64. Un validador que haya emitido votos oportunos de origen, destino y cabeza, haya propuesto un bloque y haya participado en un comité de sincronización podría recibir `64/64 * base_reward == base_reward`. Sin embargo, un validador no suele ser un proponente de bloque, por lo que su recompensa máxima es `64-8 /64 * base_reward == 7/8 * base_reward`. Los validadores que no son proponentes de bloque ni están en un comité de sincronización pueden recibir `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-Se añade una recompensa adicional para incentivar las atestaciones rápidas. Esta es la `inclusion_delay_reward`. Esta tiene un valor igual a la `base_reward` multiplicada por `1/delay` donde `delay` es el número de slots que separan la propuesta de bloque y la atestación. Por ejemplo, si la atestación se envía dentro de un slot de la propuesta de bloque, el atestador recibe `base_reward * 1/1 == base_reward`. Si la atestación llega en el siguiente slot, el atestador recibe `base_reward * 1/2` y así sucesivamente.
+Se añade una recompensa adicional para incentivar las atestaciones rápidas. Esta es la `inclusion_delay_reward`. Esta tiene un valor igual a la `base_reward` multiplicada por `1/delay`, donde `delay` es el número de slots que separan la propuesta de bloque y la atestación. Por ejemplo, si la atestación se envía dentro de un slot de la propuesta de bloque, el atestador recibe `base_reward * 1/1 == base_reward`. Si la atestación llega en el siguiente slot, el atestador recibe `base_reward * 1/2` y así sucesivamente.
 
-Los proponentes de bloques reciben `8 / 64 * base_reward` por **cada atestación válida** incluida en el bloque, por lo que el valor real de la recompensa aumenta proporcionalmente con el número de validadores que atestiguan. Los proponentes de bloques también pueden aumentar su recompensa al incluir evidencia de mal comportamiento por parte de otros validadores en su bloque propuesto. Estas recompensas son las "zanahorias" que fomentan la honestidad del validador. Un proponente de bloque que incluya un recorte será recompensado con la `slashed_validators_effective_balance / 512`.
+Los proponentes de bloque reciben `8 / 64 * base_reward` por **cada atestación válida** incluida en el bloque, por lo que el valor real de la recompensa escala con el número de validadores que atestiguan. Los proponentes de bloque también pueden aumentar su recompensa al incluir evidencia de mal comportamiento de otros validadores en su bloque propuesto. Estas recompensas son las "zanahorias" que fomentan la honestidad del validador. Un proponente de bloque que incluya un recorte será recompensado con el `slashed_validators_effective_balance / 512`.
 
 ### Penalizaciones {#penalties}
 

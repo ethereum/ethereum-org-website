@@ -130,7 +130,7 @@ Wir werden [Vite](https://vite.dev/) und [React](https://react.dev/) verwenden. 
 
 #### Die WASM-Komponente {#wasm}
 
-Der Quellcode, der zu WASM kompiliert wird, ist in [Rust](https://rust-lang.org/) geschrieben. Du kannst ihn in [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) sehen. Dieser Code ist in erster Linie eine Schnittstelle zwischen dem JavaScript-Code und [der `eth-stealth-addresses`-Bibliothek](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Der Quellcode, der zu WASM kompiliert wird, ist in [Rust](https://rust-lang.org/) geschrieben. Du kannst ihn in [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) sehen. Dieser Code ist in erster Linie eine Schnittstelle zwischen dem JavaScript-Code und [der Bibliothek `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
@@ -149,13 +149,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-Das [`getrandom`](https://docs.rs/getrandom/latest/getrandom/)-Paket muss Zufallswerte generieren. Das kann nicht durch rein algorithmische Mittel geschehen; es erfordert den Zugriff auf einen physikalischen Prozess als Quelle der Entropie. Diese Definition legt fest, dass wir diese Entropie erhalten, indem wir den Browser abfragen, in dem wir ausgeführt werden.
+Das Paket [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) muss Zufallswerte generieren. Das kann nicht durch rein algorithmische Mittel geschehen; es erfordert den Zugriff auf einen physikalischen Prozess als Quelle der Entropie. Diese Definition legt fest, dass wir diese Entropie erhalten, indem wir den Browser abfragen, in dem wir ausgeführt werden.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-[Diese Bibliothek](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) liefert uns aussagekräftigere Fehlermeldungen, wenn der WASM-Code in Panik gerät (panics) und nicht fortgesetzt werden kann.
+[Diese Bibliothek](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/) liefert uns aussagekräftigere Fehlermeldungen, wenn der WASM-Code einen Panic auslöst und nicht fortgesetzt werden kann.
 
 ```toml
 [lib]
@@ -174,7 +174,7 @@ use wasm_bindgen::prelude::*;
 
 Die Definitionen, um ein WASM-Paket aus Rust zu erstellen. Sie sind [hier](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html) dokumentiert.
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -182,13 +182,13 @@ use eth_stealth_addresses::{
 };
 ```
 
-Die Funktionen, die wir aus [der `eth-stealth-addresses`-Bibliothek](https://github.com/kassandraoftroy/eth-stealth-addresses) benötigen.
+Die Funktionen, die wir aus [der Bibliothek `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses) benötigen.
 
 ```rust
 use hex::{decode,encode};
 ```
 
-Rust verwendet typischerweise Byte-[Arrays](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) für Werte. Aber in JavaScript verwenden wir typischerweise hexadezimale Strings. [Die `hex`-Bibliothek](https://docs.rs/hex/latest/hex/) übersetzt für uns von einer Darstellung in die andere.
+Rust verwendet typischerweise Byte-[Arrays](https://doc.rust-lang.org/std/primitive.array.html) (`[u8; <size>]`) für Werte. Aber in JavaScript verwenden wir typischerweise hexadezimale Strings. [Die Bibliothek `hex`](https://docs.rs/hex/latest/hex/) übersetzt für uns von der einen Darstellung in die andere.
 
 ```rust
 #[wasm_bindgen]
@@ -207,13 +207,13 @@ Der einfachste Weg, ein Objekt mit mehreren Feldern zurückzugeben, ist die Rüc
         generate_stealth_meta_address();
 ```
 
-Die [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) gibt drei Felder zurück:
+Die Funktion [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) gibt drei Felder zurück:
 
 - Die Meta-Adresse (*K<sub>pub</sub>* und *V<sub>pub</sub>*)
-- Den privaten Ansichtsschlüssel (*V<sub>priv</sub>*)
-- Den privaten Ausgabeschlüssel (*K<sub>priv</sub>*)
+- Den privaten Schlüssel zum Ansehen (*V<sub>priv</sub>*)
+- Den privaten Schlüssel zum Ausgeben (*K<sub>priv</sub>*)
 
-Die [Tupel](https://doc.rust-lang.org/std/primitive.tuple.html)-Syntax lässt uns diese Werte wieder trennen.
+Die [Tupel](https://doc.rust-lang.org/std/primitive.tuple.html)-Syntax ermöglicht es uns, diese Werte wieder zu trennen.
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -224,7 +224,7 @@ Die [Tupel](https://doc.rust-lang.org/std/primitive.tuple.html)-Syntax lässt un
 }
 ```
 
-Verwende das [`format!`](https://doc.rust-lang.org/std/fmt/index.html)-Makro, um den JSON-kodierten String zu generieren. Verwende [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html), um die Arrays in Hex-Strings umzuwandeln.
+Verwende das Makro [`format!`](https://doc.rust-lang.org/std/fmt/index.html), um den JSON-kodierten String zu generieren. Verwende [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html), um die Arrays in Hex-Strings umzuwandeln.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
@@ -232,7 +232,7 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 
 Diese Funktion wandelt einen Hex-String (bereitgestellt von JavaScript) in ein Byte-Array um. Wir verwenden sie, um Werte zu parsen, die vom JavaScript-Code bereitgestellt werden. Diese Funktion ist kompliziert, weil Rust Arrays und Vektoren auf eine bestimmte Weise handhabt.
 
-Der Ausdruck `<const N: usize>` wird als [Generikum (Generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html) bezeichnet. `N` ist ein Parameter, der die Länge des zurückgegebenen Arrays steuert. Die Funktion wird eigentlich `str_to_array::<n>` genannt, wobei `n` die Array-Länge ist.
+Der Ausdruck `<const N: usize>` wird als [Generic](https://doc.rust-lang.org/book/ch10-01-syntax.html) bezeichnet. `N` ist ein Parameter, der die Länge des zurückgegebenen Arrays steuert. Die Funktion heißt eigentlich `str_to_array::<n>`, wobei `n` die Array-Länge ist.
 
 Der Rückgabewert ist `Option<[u8; N]>`, was bedeutet, dass das zurückgegebene Array [optional](https://doc.rust-lang.org/std/option/) ist. Dies ist ein typisches Muster in Rust für Funktionen, die fehlschlagen können.
 
@@ -245,7 +245,7 @@ Wenn wir zum Beispiel `str_to_array::10("bad060a7")` aufrufen, soll die Funktion
 
 Die Funktion [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) gibt ein `Result<Vec<u8>, FromHexError>` zurück. Der Typ [`Result`](https://doc.rust-lang.org/std/result/) kann entweder ein erfolgreiches Ergebnis (`Ok(value)`) oder einen Fehler (`Err(error)`) enthalten.
 
-Die Methode `.ok()` wandelt das `Result` in ein `Option` um, dessen Wert entweder der `Ok()`-Wert ist, wenn es erfolgreich war, oder `None`, wenn nicht. Schließlich bricht der [Fragezeichen-Operator](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) die aktuelle Funktion ab und gibt ein `None` zurück, wenn das `Option` leer ist. Andernfalls entpackt (unwraps) er den Wert und gibt ihn zurück (in diesem Fall, um `vec` einen Wert zuzuweisen).
+Die Methode `.ok()` wandelt das `Result` in eine `Option` um, deren Wert entweder der `Ok()`-Wert ist, wenn sie erfolgreich war, oder `None`, wenn nicht. Schließlich bricht der [Fragezeichen-Operator](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) die aktuelle Funktion ab und gibt ein `None` zurück, wenn die `Option` leer ist. Andernfalls entpackt er den Wert und gibt ihn zurück (in diesem Fall, um `vec` einen Wert zuzuweisen).
 
 Dies sieht nach einer seltsam komplizierten Methode zur Fehlerbehandlung aus, aber `Result` und `Option` stellen sicher, dass alle Fehler auf die eine oder andere Weise behandelt werden.
 
@@ -260,30 +260,30 @@ Wenn die Anzahl der Bytes falsch ist, ist das ein Fehler, und wir geben `None` z
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust hat zwei Array-Typen. [Arrays](https://doc.rust-lang.org/std/primitive.array.html) haben eine feste Größe. [Vektoren](https://doc.rust-lang.org/std/vec/index.html) können wachsen und schrumpfen. `hex::decode` gibt einen Vektor zurück, aber die `eth_stealth_addresses`-Bibliothek möchte Arrays empfangen. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) konvertiert einen Wert in einen anderen Typ, zum Beispiel einen Vektor in ein Array.
+Rust hat zwei Array-Typen. [Arrays](https://doc.rust-lang.org/std/primitive.array.html) haben eine feste Größe. [Vektoren](https://doc.rust-lang.org/std/vec/index.html) können wachsen und schrumpfen. `hex::decode` gibt einen Vektor zurück, aber die Bibliothek `eth_stealth_addresses` möchte Arrays empfangen. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) konvertiert einen Wert in einen anderen Typ, zum Beispiel einen Vektor in ein Array.
 
 ```rust
     Some(array)
 }
 ```
 
-Rust verlangt nicht, dass du das Schlüsselwort [`return`](https://doc.rust-lang.org/std/keyword.return.html) verwendest, wenn du am Ende einer Funktion einen Wert zurückgibst.
+Rust verlangt nicht, dass du das Schlüsselwort [`return`](https://doc.rust-lang.org/std/keyword.return.html) verwendest, wenn du einen Wert am Ende einer Funktion zurückgibst.
 
 ```rust
 #[wasm_bindgen]
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-Diese Funktion empfängt eine öffentliche Meta-Adresse, die sowohl *V<sub>pub</sub>* als auch *K<sub>pub</sub>* enthält. Sie gibt die Stealth-Adresse, den zu veröffentlichenden öffentlichen Schlüssel (*R<sub>pub</sub>*) und einen Ein-Byte-Scanwert zurück, der die Identifizierung beschleunigt, welche veröffentlichten Adressen zu Alice gehören könnten.
+Diese Funktion empfängt eine öffentliche Meta-Adresse, die sowohl *V<sub>pub</sub>* als auch *K<sub>pub</sub>* enthält. Sie gibt die Stealth-Adresse, den zu veröffentlichenden öffentlichen Schlüssel (*R<sub>pub</sub>*) und einen Ein-Byte-Scan-Wert zurück, der die Identifizierung beschleunigt, welche veröffentlichten Adressen zu Alice gehören könnten.
 
-Der Scanwert ist Teil des gemeinsamen Geheimnisses (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Dieser Wert steht Alice zur Verfügung, und seine Überprüfung ist viel schneller als die Überprüfung, ob *f(K<sub>pub</sub>+G\*hash(S))* der veröffentlichten Adresse entspricht.
+Der Scan-Wert ist Teil des gemeinsamen Geheimnisses (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Dieser Wert steht Alice zur Verfügung, und seine Überprüfung ist viel schneller als die Überprüfung, ob *f(K<sub>pub</sub>+G\*hash(S))* der veröffentlichten Adresse entspricht.
 
 ```rust
     let (address, r_pub, scan) = 
         generate_stealth_address(&str_to_array::<66>(stealth_address)?);
 ```
 
-Wir verwenden die [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) der Bibliothek.
+Wir verwenden die Funktion [`generate_stealth_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_address.html) der Bibliothek.
 
 ```rust
     format!("{{\"address\":\"{}\",\"rPub\":\"{}\",\"scan\":\"{}\"}}",
@@ -310,12 +310,12 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-Diese Funktion verwendet die [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) der Bibliothek, um den privaten Schlüssel zum Abheben von der Adresse (*R<sub>priv</sub>*) zu berechnen. Diese Berechnung erfordert diese Werte:
+Diese Funktion verwendet die Funktion [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) der Bibliothek, um den privaten Schlüssel zum Abheben von der Adresse (*R<sub>priv</sub>*) zu berechnen. Diese Berechnung erfordert diese Werte:
 
-- Die Adresse (*Adresse=f(P<sub>pub</sub>)*)
+- Die Adresse (*Address=f(P<sub>pub</sub>)*)
 - Den von Bill generierten öffentlichen Schlüssel (*R<sub>pub</sub>*)
-- Den privaten Ansichtsschlüssel (*V<sub>priv</sub>*)
-- Den privaten Ausgabeschlüssel (*K<sub>priv</sub>*)
+- Den privaten Schlüssel zum Ansehen (*V<sub>priv</sub>*)
+- Den privaten Schlüssel zum Ausgeben (*K<sub>priv</sub>*)
 
 ```rust
 #[wasm_bindgen(start)]
@@ -349,9 +349,9 @@ Wieder gefolgt von einem Stacktrace.
 
 #### Die Benutzeroberfläche {#ui}
 
-Die Benutzeroberfläche ist mit [React](https://react.dev/) geschrieben und wird von [Vite](https://vite.dev/) bereitgestellt. Du kannst mehr darüber in [diesem Tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) erfahren. Hier besteht kein Bedarf für [Wagmi](https://wagmi.sh/), da wir nicht direkt mit einer Blockchain oder einer Wallet interagieren.
+Die Benutzeroberfläche ist mit [React](https://react.dev/) geschrieben und wird von [Vite](https://vite.dev/) bereitgestellt. Du kannst mehr darüber in [diesem Tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) erfahren. Hier besteht kein Bedarf an [Wagmi](https://wagmi.sh/), da wir nicht direkt mit einer Blockchain oder einer Wallet interagieren.
 
-Der einzige nicht offensichtliche Teil der Benutzeroberfläche ist die WASM-Konnektivität. Hier ist, wie sie funktioniert.
+Der einzige nicht offensichtliche Teil der Benutzeroberfläche ist die WASM-Konnektivität. So funktioniert sie.
 
 **`vite.config.js`**
 
@@ -378,7 +378,7 @@ Diese Datei ist die Hauptkomponente der Anwendung. Sie ist ein Container, der zw
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Wenn wir [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) verwenden, erstellt es zwei Dateien, die wir hier verwenden: eine wasm-Datei mit dem eigentlichen Code (hier `src/rust-wasm/pkg/rust_wasm_bg.wasm`) und eine JavaScript-Datei mit den Definitionen zu deren Verwendung (hier `src/rust_wasm/pkg/rust_wasm.js`). Der Standardexport (Default Export) dieser JavaScript-Datei ist Code, der ausgeführt werden muss, um WASM zu initiieren.
+Wenn wir [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) verwenden, erstellt es zwei Dateien, die wir hier verwenden: eine wasm-Datei mit dem eigentlichen Code (hier `src/rust-wasm/pkg/rust_wasm_bg.wasm`) und eine JavaScript-Datei mit den Definitionen, um ihn zu verwenden (hier `src/rust-wasm/pkg/rust_wasm.js`). Der Standardexport dieser JavaScript-Datei ist Code, der ausgeführt werden muss, um WASM zu initiieren.
 
 ```jsx
 function App() {
@@ -401,7 +401,7 @@ function App() {
   )
 ```
 
-Der [`useEffect`-Hook](https://react.dev/reference/react/useEffect) lässt dich eine Funktion angeben, die ausgeführt wird, wenn sich Zustandsvariablen ändern. Hier ist die Liste der Zustandsvariablen leer (`[]`), sodass diese Funktion nur einmal beim Laden der Seite ausgeführt wird.
+Der [`useEffect`-Hook](https://react.dev/reference/react/useEffect) ermöglicht es dir, eine Funktion anzugeben, die ausgeführt wird, wenn sich Zustandsvariablen ändern. Hier ist die Liste der Zustandsvariablen leer (`[]`), sodass diese Funktion nur einmal beim Laden der Seite ausgeführt wird.
 
 Die Effekt-Funktion muss sofort zurückkehren. Um asynchronen Code zu verwenden, wie z. B. das WASM-`init` (das die `.wasm`-Datei laden muss und daher Zeit benötigt), definieren wir eine interne [`async`](https://en.wikipedia.org/wiki/Async/await)-Funktion und führen sie ohne ein `await` aus.
 
@@ -421,7 +421,7 @@ Zusätzlich zum Standardexport exportiert der von `wasm-pack` generierte JavaScr
             }}>
 ```
 
-Um WASM-Funktionen aufzurufen, rufen wir einfach die Funktion auf, die von der durch `wasm-pack` erstellten JavaScript-Datei exportiert wurde.
+Um WASM-Funktionen aufzurufen, rufen wir einfach die Funktion auf, die von der durch `wasm-pack` erstellten JavaScript-Datei exportiert wird.
 
 **`Alice.jsx`**
 

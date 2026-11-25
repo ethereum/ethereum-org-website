@@ -80,11 +80,11 @@ Hii ni mbinu ya kiutendaji. Watumiaji na mikoba inayotaka ulinzi wa baada ya kwa
 
 ### 4. Uthibitisho wa ZK wa tabaka la programu {#zk-proofs}
 
-**Inachofanya**: Mifumo ya uthibitisho wa maarifa-sifuri inatumiwa na mikusanyiko ya tabaka la 2 (l2) na programu zingine kuthibitisha ukokotoaji bila kufichua data ya msingi.
+**Inachofanya**: Mifumo ya uthibitisho inatumika na mikusanyiko ya tabaka la 2 (l2) kuthibitisha ukokotoaji bila kuutekeleza upya, na, ambapo programu inatekeleza sifa ya sifuri-maarifa, kuthibitisha taarifa bila kufichua ingizo za siri zilizo nyuma yake.
 
-**Kwa nini iko hatarini**: Mifumo mingi maarufu ya uthibitisho wa ZK (SNARKs zinazotumia uoanishaji wa tao la duaradufu) inategemea mawazo yaliyo hatarini kwa kwanta.
+**Kwa nini iko hatarini**: Mifumo mingi maarufu ya uthibitisho wa ZK (SNARK zinazotumia uoanishaji wa tao la duaradufu) inategemea dhana zilizo hatarini kwa kwanta.
 
-**Mbinu**: STARKs, ambazo zinategemea vitendaji vya heshi badala ya matao ya duaradufu, tayari ni sugu kwa kwanta na zinatumiwa na mikusanyiko kadhaa. Kupitishwa kwa asili kwa mfumo wa ikolojia kwa mifumo inayotegemea STARK tayari kunatoa usalama wa baada ya kwanta kwenye tabaka la programu.
+**Mbinu**: STARK, ambazo zinategemea vitendaji vya heshi badala ya matao ya duaradufu, tayari ni sugu kwa kwanta na zinatumiwa na mikusanyiko kadhaa. Uidhinishaji wa asili wa mfumo wa ikolojia wa mifumo inayotegemea STARK tayari unatoa usalama wa baada ya kwanta kwenye tabaka la programu.
 
 ## Viwango vya NIST {#nist-standards}
 

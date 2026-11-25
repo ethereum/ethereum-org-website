@@ -7,6 +7,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 import { getLocaleYear } from "@/lib/utils/date"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -55,7 +56,6 @@ export default async function ConferencesJsonLD({
   conferences: EventItem[]
 }) {
   const t = await getTranslations("page-community-events")
-  const common = await getTranslations("common")
 
   const year = getLocaleYear(locale)
   const url = normalizeUrlForJsonLd(locale, `/community/events/conferences/`)
@@ -66,7 +66,10 @@ export default async function ConferencesJsonLD({
     url: contributor.html_url,
   }))
 
-  const datedConferences = conferences.filter((c) => c.startTime)
+  // Same rule as meetups: a dated event with a location Google can name.
+  const datedConferences = conferences.filter(
+    (c) => c.startTime && (c.isOnline || c.location)
+  )
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -82,35 +85,10 @@ export default async function ConferencesJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Community",
-              item: normalizeUrlForJsonLd(locale, "/community/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: common("events"),
-              item: normalizeUrlForJsonLd(locale, "/community/events/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 4,
-              name: t("page-events-section-upcoming-conferences"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          "community/events/conferences"
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#conferences` },

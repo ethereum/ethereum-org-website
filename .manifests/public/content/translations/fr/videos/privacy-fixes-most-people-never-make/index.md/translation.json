@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "locale": "fr",
+  "translatedAt": "2026-09-30T19:14:18.161Z",
+  "englishManifestHash": "c59e21f72ce8",
+  "placeholderOrder": [
+    "LINK-89bc8c",
+    "LINK-0ecea7",
+    "LINK-a02db9"
+  ],
+  "placeholderMap": {
+    "LINK-89bc8c": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ludlowinstitute.org/"
+      }
+    },
+    "LINK-0ecea7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.youtube.com/watch?v=PgIxxWDRpbA"
+      }
+    },
+    "LINK-a02db9": {
+      "type": "link",
+      "values": {
+        "url": "https://privacytests.org"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-09-30T19:14:18.161Z",
+      "status": "success"
+    }
+  }
+}

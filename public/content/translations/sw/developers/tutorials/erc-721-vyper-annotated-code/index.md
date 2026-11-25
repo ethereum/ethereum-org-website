@@ -51,7 +51,7 @@ Mstari wa kwanza unaingiza kiolesura, na wa pili unabainisha kuwa tunakitekeleza
 ```python
 #pragma version >0.3.10
 ```
-### Kiolesura cha ERC721Receiver
+### Kiolesura cha ERC721Receiver {#receiver-interface}
 
 ```python
 # Kiolesura cha mkataba kinachoitwa na safeTransferFrom()
@@ -90,7 +90,7 @@ Ombi linaweza kuwa na hadi baiti 1024 za data ya mtumiaji.
 ```
 
 Ili kuzuia visa ambapo mkataba unakubali hamisho kwa bahati mbaya, thamani inayorejeshwa si boolean, bali ni thamani maalum ya baiti nne, kiteuzi cha kazi cha `onERC721Received`. Kazi hii ni `nonpayable` kwa sababu mkataba unaopokea unaweza kubadilisha hali yake wenyewe unapokubali tokeni.
-### Matukio
+### Matukio {#events}
 
 [Matukio](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 hutolewa ili kuwajulisha watumiaji na seva zilizo nje ya mnyororo wa vitalu kuhusu matukio. Kumbuka kwamba maudhui ya matukio hayapatikani kwa mikataba kwenye mnyororo wa vitalu. Matukio matatu ya ERC-721 yamefafanuliwa na kiolesura cha `IERC721` tulichoingiza, kwa hivyo mkataba huu hauyatangazi wenyewe; unayatoa kwa `log IERC721.<Event>(...)`, kama tutakavyoona katika kazi za hamisho hapa chini.
@@ -100,7 +100,7 @@ hutolewa ili kuwajulisha watumiaji na seva zilizo nje ya mnyororo wa vitalu kuhu
 Idhini ya ERC-721 inafanana na kibali cha ERC-20: anwani maalum inaruhusiwa kuhamisha tokeni maalum, na `Approval` (`owner`, `approved`, `token_id`) hutolewa kila wakati anwani hiyo iliyoidhinishwa inapowekwa au kuthibitishwa tena. Hii inatoa utaratibu kwa mikataba kujibu inapokubali tokeni. Mikataba haiwezi kusikiliza matukio, kwa hivyo ikiwa utaihamishia tokeni tu "haijui" kuihusu. Kwa njia hii mmiliki kwanza anawasilisha idhini na kisha kutuma ombi kwa mkataba: "Nimekuidhinisha kuhamisha tokeni X, tafadhali fanya ...". Hili ni chaguo la muundo ili kufanya kiwango cha ERC-721 kifanane na kiwango cha ERC-20. Kwa sababu tokeni za ERC-721 hazifungiki, mkataba unaweza pia kutambua kwamba ulipata tokeni maalum kwa kuangalia umiliki wa tokeni.
 
 Hatimaye, `ApprovalForAll` (`owner`, `operator`, `approved`) hutolewa wakati _mhudumu_ anapowezeshwa au kulemazwa kwa mmiliki. Wakati mwingine ni muhimu kuwa na mhudumu anayeweza kusimamia tokeni zote za akaunti za aina maalum (zile zinazosimamiwa na mkataba maalum), sawa na nguvu ya kisheria. Kwa mfano, ninaweza kutaka kutoa nguvu kama hiyo kwa mkataba ambao unakagua ikiwa sijawasiliana nao kwa miezi sita, na ikiwa ndivyo unasambaza rasilimali zangu kwa warithi wangu (ikiwa mmoja wao ataiomba, mikataba haiwezi kufanya chochote bila kuitwa na muamala). Katika ERC-20 tunaweza tu kutoa kibali kikubwa kwa mkataba wa urithi, lakini hiyo haifanyi kazi kwa ERC-721 kwa sababu tokeni hazifungiki. Hii ndiyo sawa yake. Thamani ya `approved` inatuambia ikiwa tukio ni la idhini, au utoaji wa idhini.
-### Vigezo vya Hali
+### Vigezo vya Hali {#state-vars}
 
 Vigezo hivi vina hali ya sasa ya tokeni: zipi zinapatikana na nani anazimiliki. Vingi vya hivi ni vitu vya `HashMap`, [ramani za mwelekeo mmoja zilizopo kati ya aina mbili](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -152,7 +152,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 
 Hizi ndizo kazi ambazo zinatekeleza ERC-721 haswa.
 
-#### Konstrukta
+#### Konstrukta {#constructor}
 
 ```python
 @deploy
@@ -175,7 +175,7 @@ Katika Python, na katika Vyper, unaweza pia kuunda maoni kwa kubainisha mfuatano
 ```
 
 Ili kufikia vigezo vya hali unatumia `self.<variable name>` (tena, sawa na katika Python). Konstrukta inarekodi akaunti iliyosambaza mkataba kama `minter`.
-#### Kazi za Kutazama
+#### Kazi za Kutazama {#views}
 
 Hizi ni kazi ambazo hazibadilishi hali ya mnyororo wa vitalu, na kwa hivyo zinaweza kutekelezwa bila malipo ikiwa zinaitwa kutoka nje. Ikiwa kazi za kutazama zinaitwa na mkataba bado zinapaswa kutekelezwa kwenye kila nodi na kwa hivyo zinagharimu gesi.
 
@@ -279,7 +279,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Kazi hii inakagua ikiwa `_operator` inaruhusiwa kusimamia tokeni zote za `_owner` katika mkataba huu.
 Kwa sababu kunaweza kuwa na wahudumu wengi, hii ni HashMap ya viwango viwili.
-#### Kazi za Kusaidia Hamisho
+#### Kazi za Kusaidia Hamisho {#transfer-helpers}
 
 Kazi hizi zinatekeleza operesheni ambazo ni sehemu ya kuhamisha au kusimamia tokeni.
 
@@ -401,7 +401,7 @@ tunataka eneo moja tu katika msimbo ambapo tunafanya hivyo ili kurahisisha ukagu
 Ili kutoa tukio katika Vyper unatumia taarifa ya `log` ([tazama hapa kwa maelezo zaidi](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 Kwa sababu matukio ni ya kiolesura kilichoingizwa, tunayarejelea kama `IERC721.Transfer` na kupitisha nyanja zake kwa
 neno muhimu.
-#### Kazi za Hamisho
+#### Kazi za Hamisho {#transfer-funs}
 
 ```python
 

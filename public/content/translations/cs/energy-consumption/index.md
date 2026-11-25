@@ -1,11 +1,11 @@
 ---
-title: Spotřeba energie Etherea
-metaTitle: Spotřeba energie Etherea
-description: Základní informace, které potřebujete k pochopení spotřeby energie Etherea.
+title: "Spotřeba energie Etherea"
+metaTitle: "Spotřeba energie Etherea"
+description: "Základní informace, které potřebujete k pochopení spotřeby energie Etherea."
 lang: cs
 ---
 
-[Ethereum](/) je ekologický blockchain. [Mechanismus konsensu důkaz podílem (PoS)](/developers/docs/consensus-mechanisms/pos) Etherea využívá k [zabezpečení sítě](/developers/docs/consensus-mechanisms/pow) ETH namísto energie. Spotřeba energie Etherea je přibližně [~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022) v rámci celé globální sítě.
+[Ethereum](/) je ekologický blockchain. [Mechanismus konsensu důkaz podílem (PoS)](/developers/docs/consensus-mechanisms/pos) Etherea využívá k [zabezpečení sítě](/developers/docs/consensus-mechanisms/pow) ETH namísto energie. Spotřeba energie Etherea je přibližně [\~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022) v rámci celé globální sítě.
 
 Odhad spotřeby energie pro Ethereum pochází ze studie [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Vytvořili odhady spotřeby elektřiny a uhlíkové stopy sítě Ethereum zdola nahoru ([viz zpráva](https://carbon-ratings.com/eth-report-2022)). Měřili spotřebu elektřiny různých uzlů s různými konfiguracemi hardwaru a klientského softwaru. Odhadovaných **2 601 MWh** (0,0026 TWh) roční spotřeby elektřiny sítě odpovídá ročním emisím uhlíku ve výši **870 tun CO2e** při použití regionálně specifických faktorů uhlíkové náročnosti. Tato hodnota se mění s tím, jak uzly vstupují do sítě a opouštějí ji – můžete ji sledovat pomocí klouzavého 7denního průměru odhadu z [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) (upozorňujeme, že pro své odhady používají mírně odlišnou metodu – podrobnosti jsou k dispozici na jejich webu).
 
@@ -83,3 +83,5 @@ Platformy pro financování veřejných statků nativní pro Web3, jako je [Gitc
 
 - [Beacon chain](/roadmap/beacon-chain)
 - [Merge](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

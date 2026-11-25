@@ -1,5 +1,10 @@
 # Vietnamese (vi) Translation Review Findings
 
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: phi uu tien, xac nhan nuoc doi, gas inline code, PoS in attestations description. Open: relay/blinded prose vs diagram, `claim` flattened to yeu cau, gossip four renderings.
+
 ## PR #18935 (intl/pending-content-translation-program-winddown-ctas) -- 2026-07-28 -- Score 8.4/10
 
 First recorded review for this locale.
@@ -31,3 +36,147 @@ Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers
 - `đúc Taruchi` for "mint" is glossary-correct (`mint => đúc`); brands intact.
 - Zero ETHGlossary deviations across both files, verified against 60 plasma terms + 43 accounts terms, including the `zero-knowledge => không tri thức` vs `zero-knowledge proof => Bằng chứng không kiến thức` split and lowercase `l2`/`danksharding`.
 - Tense-neutrality (#33) handled: `chưa được triển khai` carries "not yet".
+
+## PR #19015 (intl/pending-dev) -- 2026-08-10 -- Score 8.4/10 (pre-fix)
+
+- Scope: 11-12 files (8-9 markdown + common / learn-quizzes / page-what-is-ethereum JSON). Fleet avg 8.4.
+- Dropped `[bản nâng cấp London]` and `[bản nâng cấp Pectra]` links restored. **Its historical untranslated-chunk failure mode was absent** (zero English prose found). Open: `exposure` -> `tiếp xúc` (physical contact) in 2 quiz keys where the article itself correctly uses `tiếp cận`; `client` rendered 3 ways across files.
+- Fleet-wide items fixed in this branch for every locale: the `<p></p>` MDX build-breaker (8 locales), the `.pdf` autolink corruption (#50), the deleted `{#will-my-smart-contracts-change}` FAQ section (#32), the missing `<QuizWidget>` component (#49), and the two stale glamsterdam prose clauses (#51 -- `Q4 2026` and the stakers/liquidity sentence).
+
+## PR #19076 (intl/find-wallet-translations) -- 2026-08-14 -- Score 9.2/10
+
+Scope: `page-wallets-find-wallet.json` only -- 47 added keys (persona hero copy + a new `page-find-wallet-fee-*` disclosure cluster), 1 changed (`persona-legend` filter -> browse), 5 removed. Fleet avg 9.35.
+
+**Fixed in this branch:**
+
+- `get-wallet` `Tải {wallet}` -> `Nhận {wallet}` (critical: `Tải` = *download*. The CTA is unconditional in the wallet modal and links to `wallet.url`, and the page lists 7 hardware wallets carrying `device` fees -- Ledger, Trezor, Keystone, GridPlus Lattice1, Cypherock X1, Burner, imKey Pro -- so it read "Download Ledger Nano X" for a physical device you buy. vi's own corpus already had the right verb: `page-start.json` renders "Get wallet" as `Nhận ví`).
+
+**Open (native call needed):**
+
+- `fee-row-label` -> `Những gì bạn phải trả` = "what you must pay" (the amount); prefer `Bạn trả cho những gì`.
+- `fee-label-shield-unshield` -> `che giấu` is *conceal/cover up*, used for concealing wrongdoing. The privacy sense survives but the valence is wrong (#57).
+- `fee-qualifier-stablecoins-lower-l2` -> bare lowercase `các l2` vs the file's `Lớp 2` (#53).
+
+**Notes:**
+
+- Diacritics complete and correct throughout; vi's historical untranslated-chunk failure mode is absent.
+
+## PR #19115 -- staking redesign (6 MD + 1 JSON), 2026-08-19
+
+**Score: 8.2/10** (fleet avg 7.8 -- lowest recorded in this series; the gap is structural, not linguistic)
+
+Signature untranslated-English-chunk failure is ABSENT -- verified paragraph-by-paragraph across all 6 files and 279 JSON keys. No duplication from the two pipeline passes. Remaining: `số dư hiệu quả` vs glossary `hiệu dụng`, Staking Launchpad translated in 3 of 14 places, and an ETHGlossary casing leak confined to one file (15 mid-sentence capitals from entries that ship capitalized).
+
+Fleet-wide defects also present in this locale (see known-patterns #60-64): heading-anchor rotation in `run-a-node`, reverted `<Card title>` attributes, untranslated image alt text, and the `</ExpandableCard>` -> `</ButtonLink>` MDX breaker. All repaired in this PR.
+
+## PR #19034 (intl/pending-dev) -- 2026-08-20 -- Score 8.8/10
+Scope: new `page-open-source.json` (228 keys) + retranslated `community/research/index.md`, plus 3 single-key JSON changes. Fleet avg 8.67, median 8.80.
+**Fixed in this branch:**
+- AI prompt-card fill-in blanks (`[app]`, `[my device]`, `[my system]`, `[this]`, `[this error]`, `[App]`) translated -- they were shipped as verbatim English.
+
+- `oracle` kept Latin and newly capitalized at 2 changed lines, against the glossary (`nguồn cấp dữ liệu`) and 255 tree occurrences.
+
+**Open (native call needed):**
+
+- Two pre-existing lines in the same section carry the same wrong form (L436 heading, L440 link) -- out of scope here.
+- `tính hợp lệ` (validity) for "soundness" -- a distinct proof-system property.
+- `Mã nguồn mở dễ dãi` injects a mildly pejorative "lax" valence into the neutral "permissive" license label.
+- `Kiểm tra AlternativeTo` ("inspect/test") for the "Check out" button.
+- `Giao thức`/`giao thức` split 10:9 within one file (the locale-wide glossary casing leak).
+
+## PR #19326 (intl/pending-dev) -- 2026-09-28 -- Score 8.0/10
+
+Scope: `developers/docs/accounts/index.md`, `smart-contracts/languages/index.md`, `smart-contracts/testing/index.md`, `src/intl/vi/page-apps.json`. 16 critical, 14 warnings. Brand 9/10 | Technical 6/10 | Semantic 8/10 | Consistency 7/10 | Tone 10/10. Fleet average 8.1 across 24 locales.
+
+**Fleet-wide patterns (see known-patterns #79/#80):**
+
+- Translated Geth/`clef` console output: vi affected on the full block; restored byte-exact from the English source. 17 of 24 locales hit.
+- Whitehat parenthetical at `testing/index.md:245`: pre-existing, not introduced here; fixed anyway.
+- Bare-acronym over-expansion in `page-apps.json`: collapsed to the ETHGlossary short form.
+- Trailing newline stripped at EOF by this run's writer; restored. Cosmetic only, no gate was checking it.
+
+**Notes:**
+
+- Zero ETHGlossary deviations across all 4 files and no untranslated English chunks; vi's historical failure mode was absent. Both critical classes were the fleet-wide mechanical patterns.
+- `testing/index.md:154` **adds** a `)` that the English source is itself missing. The paren bug is upstream in `public/content/developers/docs/smart-contracts/testing/index.md:154`.
+
+
+
+## PR #19357 (intl/pending-dev, full sweep) -- 2026-09-30 -- Score 8.9/10
+
+Scope: full sweep, ~191-198 files. Sampled for idiom: largest prose diffs; glossary triage over scripted candidates restricted to changed lines.
+
+**Fixed in this branch:**
+
+- `page-find-wallet-private-transactions-desc` restored from the pre-rename `page-find-wallet-privacy-desc` value (shipped in English fleet-wide, known-patterns #81).
+
+**Open (warnings):**
+
+- learn-quizzes:1315 misattached "largest"; open-access `giao tiếp linh hoạt` for resilient.
+- Mid-sentence capitalized glossary terms still leak (known, glossary/prompt-level).
+
+## PR #19474 (intl/pending-dev, /organizations namespaces) -- 2026-10-14 -- Score 9.2/10
+
+Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, small MD href/EIP updates). Label/meta acronym trim applied fleet-wide (known-patterns #86).
+
+**Fixed in this branch:**
+
+- `tokenization` `node` -> `nút` (glossary).
+
+**Open (warnings):**
+
+- client `client`/`máy khách` split; rollup `bản cuộn`/`Rollup` mix; glossary mid-sentence capitals leak.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:208 English pronoun leaked (`giám sát them ngoài chuỗi` -> `giám sát chúng ngoài chuỗi`)
+- common.json:10 acronym expanded in breadcrumb (#80) (`"Thêm dự án khoa học phi tập trung (DeSci)"` -> `"Thêm dự án DeSci"`)
+- common.json:76 acronym expanded in breadcrumb (#80) (`"Tổ chức tự trị phi tập trung (DAO)"` -> `"DAO"`)
+- common.json:85 acronym expanded in breadcrumb (#80) (`"Tài chính phi tập trung (DeFi)"` -> `"DeFi"`)
+- common.json:89 acronym expanded in breadcrumb (#80) (`"Khoa học phi tập trung (DeSci)"` -> `"DeSci"`)
+- common.json:142 acronym expanded in breadcrumb (#80) (`"Công nghệ trình xác thực phân tán (DVT)"` -> `"DVT"`)
+- common.json:171 acronym expanded in breadcrumb (#80) (`"Tài chính tái tạo (ReFi)"` -> `"ReFi"`)
+- common.json:40 acronym expanded in breadcrumb (#80) (`"Tài sản thế giới thực (RWA)"` -> `"RWA"`)
+
+**Open (native call needed):**
+
+- common.json:151: ETHGlossary deviation. `ethereum-foundation` is scriptRule `translate` and the vi form is `Tổ chức Ethereum`. The vi corpus uses that form 35 times and this new key uses Latin. Flag for human review (`"Ethereum Foundation"` -> `"Tổ chức Ethereum"`)
+- developers/docs/smart-contracts/security/index.md:440: ETHGlossary deviation. `oracle` is scriptRule `translate` → `nguồn cấp dữ liệu`. This is a regression: the pre-PR heading matched the glossary. Flag for human review (`#### Thao túng oracle {#oracle-manipulation}` -> `#### Thao túng nguồn cấp dữ liệu {#oracle-manipulation}`)
+- developers/docs/smart-contracts/security/index.md:452: Same `oracle` deviation, also a regression. Flag for human review (`##### Cách ngăn chặn thao túng oracle` -> `##### Cách ngăn chặn thao túng nguồn cấp dữ liệu`)
+- developers/docs/smart-contracts/security/index.md:454: Same `oracle` deviation, also a regression. Flag for human review (`[tránh thao túng oracle]` -> `[tránh thao túng nguồn cấp dữ liệu]`)
+- page-wallet-descriptions.json:33: ETHGlossary deviation. `blockchain` is scriptRule `translate` → `chuỗi khối`. Flag for human review (`từ nhiều blockchain` -> `từ nhiều chuỗi khối`)
+- page-wallet-descriptions.json:35: Same `blockchain` deviation. Flag for human review (`dành cho nhiều blockchain` -> `dành cho nhiều chuỗi khối`)
+- page-wallet-descriptions.json:42: Same `blockchain` deviation. Flag for human review (`trên các blockchain` -> `trên các chuỗi khối`)
+- common.json:149: ETHGlossary deviation. `fork` is scriptRule `translate` → `phân nhánh`, and vi prose elsewhere already uses `các đợt phân nhánh`. Flag for human review (`"Lịch sử các đợt fork"` -> `"Lịch sử các đợt phân nhánh"`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The new prose (prediction markets, wallet descriptions, founders, SolidRPC/eth.zig entries) is fluent and accurate. The retranslation pass undid several glossary-correct forms (oracle, the availability-bond wording) and spread the known mid-sentence capitalization leak. The criticals are concentrated in common.json breadcrumb acronym expansion and three untranslated founders tags.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: glossary capitals mid-sentence; NFT spelled out too often; chúng tôi/chúng ta mixed.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- Glossary capitals mid-sentence (`Chuỗi khối`, `Địa chỉ`) at multi-client 33/104/138 -- known vi pattern, left as is
+- `dApp` in title/description vs `dapp` in body -- informational

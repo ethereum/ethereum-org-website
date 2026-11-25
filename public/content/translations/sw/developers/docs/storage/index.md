@@ -142,7 +142,7 @@ Zinazotegemea Uthibitisho wa Dau:
 **Arweave - _Arweave ni jukwaa la hifadhi iliyogatuliwa (dStorage) kwa ajili ya kuhifadhi data._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Nyaraka](https://docs.arweave.org/info/)
+- [Nyaraka](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs ni jukwaa la hifadhi iliyogatuliwa (dStorage) la Uthibitisho wa Dau lenye shadi na blobbers._**

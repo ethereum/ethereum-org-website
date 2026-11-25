@@ -47,7 +47,7 @@ Chytrý kontrakt je kód, který žije na blockchainu Etherea a běží přesně
 
 <VideoWatch slug="what-is-a-dapp" />
 
-## Nástroje pro tvorbu dapp
+## Nástroje pro tvorbu dapp {#dapp-tools}
 
 **Scaffold-ETH 2 _- Rychle experimentujte se Solidity pomocí frontendu, který se přizpůsobí vašemu chytrému kontraktu._**
 

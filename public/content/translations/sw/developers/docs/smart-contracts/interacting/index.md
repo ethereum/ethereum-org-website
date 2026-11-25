@@ -82,7 +82,7 @@ Wasanidi programu kwa kawaida hutumia maktaba ya JavaScript/TypeScript kuingilia
 
 - **[ethers.js](https://docs.ethers.org/)** - Pia inafanya kazi katika Node.js kwa hati za upande wa seva na roboti
 - **[web3.py](https://web3py.readthedocs.io/)** - Maktaba ya Python kwa mwingiliano wa Ethereum
-- **[go-ethereum](https://geth.ethereum.org/docs/interact-with-geth)** - Maktaba rasmi ya Go kutoka kwa timu ya Geth
+- **[go-ethereum](https://geth.ethereum.org/docs/developers/dapp-developer/native)** - Maktaba rasmi ya Go kutoka kwa timu ya Geth
 
 ### Mfano: kusoma salio la tokeni kwa kutumia Viem {#example-viem}
 

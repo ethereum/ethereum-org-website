@@ -30,6 +30,38 @@ interface PromptOptions {
 }
 
 /**
+ * Build the prompt for the separate code-comment pass.
+ *
+ * Comments are the one translatable thing inside a code fence, and both
+ * translation paths send them in their own small call rather than exposing the
+ * fence body. Shared so the planner can render the real prompt it is about to
+ * pay for instead of estimating it.
+ */
+export function buildCommentPrompt(options: {
+  comments: string[]
+  languageName: string
+  glossaryTerms: Map<string, string>
+}): string {
+  const { comments, languageName, glossaryTerms } = options
+
+  const payload: Record<string, string> = {}
+  comments.forEach((text, i) => {
+    payload[`c${i}`] = text
+  })
+
+  const glossaryLines: string[] = []
+  glossaryTerms.forEach((loc, en) => glossaryLines.push(`  ${en} = ${loc}`))
+  const glossaryHint =
+    glossaryLines.length > 0
+      ? `\nUse these exact translations for glossary terms:\n${glossaryLines.slice(0, 30).join("\n")}`
+      : ""
+
+  return `Translate these code comments to ${languageName}. Return ONLY a JSON object with the same keys and translated values. Do not add explanations.${glossaryHint}
+
+${JSON.stringify(payload, null, 2)}`
+}
+
+/**
  * Build the complete translation prompt for a single file.
  */
 export function buildTranslationPrompt(options: PromptOptions): string {
@@ -163,6 +195,7 @@ This content has been pre-processed. Non-translatable elements have been replace
    <HTML-PLACEHOLDER-CODE-****** /> = inline code (will be restored)
    <HTML-PLACEHOLDER-IMAGE-****** /> = image (will be restored)
    <HTML-PLACEHOLDER-COMPONENT-****** /> = childless JSX component (will be restored)
+   <HTML-PLACEHOLDER-HTMLTAG-****** /> = self-closing HTML element (will be restored)
 
 2. WRAPPER placeholders -- translate the text BETWEEN the tags, keep the tags themselves:
    <HTML-PLACEHOLDER-CODEBLOCK-******>translate this text</HTML-PLACEHOLDER-CODEBLOCK-******> = markdown/text fence (translate the prose inside)

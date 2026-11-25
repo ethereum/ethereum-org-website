@@ -219,7 +219,7 @@ class PoolInfo:
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Web3에서 EVM의 함수를 호출하는 구문은 `<contract object>.functions.<function name>().call(<parameters>)`입니다. 매개변수는 EVM 함수의 매개변수(있는 경우, 여기서는 없음)이거나 블록체인 동작을 수정하기 위한 [명명된 매개변수(named parameters)](https://en.wikipedia.org/wiki/Named_parameter)일 수 있습니다. 여기서는 실행하고자 하는 [블록 번호](/developers/docs/apis/json-rpc/#default-block)를 지정하기 위해 `block_identifier` 하나를 사용합니다.
+Web3에서 EVM의 함수를 호출하는 구문은 `<contract object>.functions.<function name>().call(<parameters>)`입니다. 매개변수는 EVM 함수의 매개변수(있는 경우, 여기서는 없음)이거나 블록체인 동작을 수정하기 위한 [명명된 매개변수(named parameters)](https://en.wikipedia.org/wiki/Named_parameter)일 수 있습니다. 여기서는 실행하고자 하는 [블록 번호](/developers/docs/apis/json-rpc/#block-parameter)를 지정하기 위해 `block_identifier` 하나를 사용합니다.
 
 결과는 [배열 형태의 이 구조체](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72)입니다. 첫 번째 값은 두 토큰 간의 환율 함수입니다.
 

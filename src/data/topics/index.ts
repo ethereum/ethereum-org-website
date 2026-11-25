@@ -20,12 +20,6 @@ export type TopicConfig = {
     items: TopicDropdownItem[]
   }
   editBanner?: { textKey: string; linkKey: string }
-  /**
-   * When true, the hero description gets an appended "page last updated"
-   * timestamp line. Used by the Upgrade topic to surface freshness on its
-   * historical event pages.
-   */
-  showLastUpdatedInHero?: boolean
 }
 
 export const topics: Record<string, TopicConfig> = {

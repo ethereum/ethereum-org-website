@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/ipfs-decentralized-ui/index.md",
-  "generatedAt": "2026-06-18T00:09:05.149Z",
-  "rootHash": "3e0972fea410",
+  "generatedAt": "2026-10-21T22:08:57.219Z",
+  "rootHash": "23fd647080b9",
   "tree": {
-    "contentHash": "9fc28b0ba78a",
-    "anchorHash": "3f29c205ec54",
+    "contentHash": "5952f0e65da1",
+    "anchorHash": "402bf4a96eff",
     "children": {
       "frontmatter:title": {
         "contentHash": "aaa591cec2e8",
@@ -20,8 +20,27 @@
         "anchorHash": "db965b80c20c"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "1714aaa19309"
+        "contentHash": "91a723475b91",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "b63927b16426",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "c40cc25b38bd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "1cf387c012cd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",
@@ -53,7 +72,7 @@
       },
       "link:1": {
         "contentHash": "b847974b3a0e",
-        "anchorHash": "f9d985fc97ad"
+        "anchorHash": "a65142db1a19"
       },
       "prose:5": {
         "contentHash": "6ed33d2b54f4",
@@ -400,5 +419,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

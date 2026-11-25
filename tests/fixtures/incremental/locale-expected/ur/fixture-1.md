@@ -1,6 +1,6 @@
 ---
 title: "اوپن سورس لائسنسنگ کو سمجھنا"
-description: "مفت سافٹ ویئر لائسنسز اور باہمی ترقی کے لیے ایک عملی گائیڈ"
+description: "اوپن سورس لائسنسز، تعمیل، اور تعاون کے لیے ایک جامع گائیڈ"
 image: /images/open-source/hero-licensing-v2.png
 alt: "مختلف لائسنس کی اقسام کو ظاہر کرنے والا خاکہ"
 template: tutorial
@@ -131,13 +131,13 @@ def is_permissive(license_text: str) -> bool:
 
 ### لائسنس اسکیننگ {#license-scanning}
 
-خودکار لائسنس اسکیننگ ہر <span dir="ltr">CI/CD</span> پائپ لائن کا حصہ ہونی چاہیے۔ یہ غیر مطابقت پذیر لائسنسوں کو آپ کے انحصار کے درخت (dependency tree) میں داخل ہونے سے پہلے پکڑ لیتی ہے۔
+خودکار لائسنس اسکیننگ ہر <span dir="ltr">CI/CD</span> پائپ لائن کا حصہ ہونی چاہیے۔ یہ غیر مطابقت پذیر لائسنسوں کو آپ کے انحصار کے درخت (dependency tree) میں داخل ہونے سے پہلے ہی پکڑ لیتی ہے۔
 
 ```bash
 # اپنے پروجیکٹ پر لائسنس اسکین چلائیں
 npx license-checker --production --json > licenses.json
 
-# پروڈکشن کے انحصار میں کاپی لیفٹ لائسنس چیک کریں
+# پروڈکشن ڈیپینڈینسیز میں کاپی لیفٹ لائسنسز کی جانچ کریں
 npx license-checker --production --onlyAllow "MIT;Apache-2.0;BSD-2-Clause;ISC"
 ```
 
@@ -151,6 +151,7 @@ npx license-checker --production --onlyAllow "MIT;Apache-2.0;BSD-2-Clause;ISC"
   }
 }
 ```
+
 ### SBOM جنریشن {#sbom-generation}
 
 ایک سافٹ ویئر بل آف میٹریلز (<span dir="ltr">SBOM</span>) آپ کے سافٹ ویئر کے تمام اجزاء کی فہرست بناتا ہے۔ <span dir="ltr">SBOM</span> تیار کرنا ریگولیٹری تعمیل کے لیے تیزی سے ضروری ہوتا جا رہا ہے، خاص طور پر سیکیورٹی کے لحاظ سے حساس صنعتوں میں۔

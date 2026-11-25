@@ -209,7 +209,7 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
     - Acceso a más de 50 nodos de cadena de bloques
 
 - [**Infura**](https://infura.io/)
-  - [Documentación](https://infura.io/docs)
+  - [Documentación](https://docs.infura.io/)
   - Características
     - Opción de nivel gratuito
     - Escale a medida que avanza

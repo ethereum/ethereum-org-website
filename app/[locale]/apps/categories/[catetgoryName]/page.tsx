@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import {
   AppCategoryEnum,
@@ -14,17 +10,10 @@ import {
   type SectionNavDetails,
 } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
@@ -49,12 +38,15 @@ const VALID_CATEGORIES = Object.values(AppCategoryEnum)
 const isValidCategory = (category: string): category is AppCategoryEnum =>
   VALID_CATEGORIES.includes(category as AppCategoryEnum)
 
+// Revalidated daily to pick up apps data updates. Without generateStaticParams
+// this route would render on every request.
+export const revalidate = 86400
+
 const Page = async (props: {
   params: Promise<PageParams & { catetgoryName: string }>
 }) => {
   const params = await props.params
   const { locale, catetgoryName } = params
-  setRequestLocale(locale)
 
   // Fetch apps data using the new data-layer function (already cached)
   const appsData = await getAppsData()
@@ -144,27 +136,10 @@ const Page = async (props: {
         <div className="flex flex-col gap-12">
           <PageHero
             breadcrumbs={
-              <Breadcrumb>
-                <BreadcrumbList>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator className="mx-2.5 text-body-medium">
-                    /
-                  </BreadcrumbSeparator>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink href="/apps">
-                      {t("page-apps-all-apps")}
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator className="mx-2.5 text-body-medium">
-                    /
-                  </BreadcrumbSeparator>
-                  <BreadcrumbItem>
-                    <BreadcrumbPage>{t(category.name)}</BreadcrumbPage>
-                  </BreadcrumbItem>
-                </BreadcrumbList>
-              </Breadcrumb>
+              <Breadcrumbs
+                slug={`/apps/categories/${catetgoryName}`}
+                label={t(category.name)}
+              />
             }
             title={t(category.name)}
             description={t(category.description)}
@@ -217,13 +192,17 @@ const Page = async (props: {
   )
 }
 
+export function generateStaticParams() {
+  return Object.values(appsCategories).map(({ slug }) => ({
+    catetgoryName: slug,
+  }))
+}
+
 export async function generateMetadata(props: {
   params: Promise<{ locale: string; catetgoryName: string }>
 }) {
   const params = await props.params
   const { locale, catetgoryName } = params
-
-  setRequestLocale(locale)
 
   try {
     const t = await getTranslations("page-apps")

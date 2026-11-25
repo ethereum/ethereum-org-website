@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3js युटिलिटी फंक्शन्स](https://docs.web3js.org/api/web3-utils)
 - [Ethers युटिलिटी फंक्शन्स](https://docs.ethers.org/v6/api/utils/)
 
-## उपलब्ध लायब्ररीज्
+## उपलब्ध लायब्ररीज् {#available-libraries}
 
 **Web3.js -** **_इथेरियम JavaScript API._**
 

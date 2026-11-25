@@ -135,7 +135,7 @@ sidebarDepth: 3
 
 #### WASM 组件 {#wasm}
 
-编译成 WASM 的源代码是用 [Rust](https://rust-lang.org/) 编写的。你可以在 [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) 中看到它。这段代码主要是 JavaScript 代码和 [`eth-stealth-addresses` 库](https://github.com/kassandraoftroy/eth-stealth-addresses)之间的接口。
+编译为 WASM 的源代码是用 [Rust](https://rust-lang.org/) 编写的。你可以在 [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs) 中查看它。这段代码主要是 JavaScript 代码和 [`eth-stealth-addresses` 库](https://github.com/kassandraoftroy/eth-stealth-addresses)之间的接口。
 
 **`Cargo.toml`**
 
@@ -154,13 +154,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) 包需要生成随机值。这不能通过纯算法手段完成；它需要访问物理过程作为熵源。此定义指定我们将通过询问我们正在运行的浏览器来获取该熵。
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) 包需要生成随机值。这不能通过纯算法手段完成；它需要访问物理过程作为熵源。此定义指定我们将通过请求运行代码的浏览器来获取该熵。
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-当 WASM 代码发生 panic 且无法继续时，[这个库](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/)会为我们提供更有意义的错误消息。
+当 WASM 代码发生 panic（恐慌）且无法继续时，[这个库](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/)会为我们提供更有意义的错误消息。
 
 ```toml
 [lib]
@@ -177,9 +177,9 @@ crate-type = ["cdylib", "rlib"]
 use wasm_bindgen::prelude::*;
 ```
 
-从 Rust 创建 WASM 包的定义。它们在[此处](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html)有记录。
+从 Rust 创建 WASM 包的定义。它们的文档在[这里](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html)。
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -193,7 +193,7 @@ use eth_stealth_addresses::{
 use hex::{decode,encode};
 ```
 
-Rust 通常使用字节[数组](https://doc.rust-lang.org/std/primitive.array.html)（`[u8; <size>]`）来表示值。但在 JavaScript 中，我们通常使用十六进制字符串。[`hex` 库](https://docs.rs/hex/latest/hex/)为我们在一种表示形式和另一种表示形式之间进行转换。
+Rust 通常使用字节[数组](https://doc.rust-lang.org/std/primitive.array.html)（`[u8; <size>]`）来表示值。但在 JavaScript 中，我们通常使用十六进制字符串。[`hex` 库](https://docs.rs/hex/latest/hex/)为我们实现了这两种表示形式之间的转换。
 
 ```rust
 #[wasm_bindgen]
@@ -215,10 +215,10 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html) 返回三个字段：
 
 - 元地址（*K<sub>pub</sub>* 和 *V<sub>pub</sub>*）
-- 查看私钥（*V<sub>priv</sub>*）
-- 花费私钥（*K<sub>priv</sub>*）
+- 视图私钥（*V<sub>priv</sub>*）
+- 支出私钥（*K<sub>priv</sub>*）
 
-[元组](https://doc.rust-lang.org/std/primitive.tuple.html)语法让我们再次分离这些值。
+[元组](https://doc.rust-lang.org/std/primitive.tuple.html)语法让我们能够再次分离这些值。
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -229,19 +229,19 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-使用 [`format!`](https://doc.rust-lang.org/std/fmt/index.html) 宏生成 JSON 编码的字符串。使用 [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) 将数组更改为十六进制字符串。
+使用 [`format!`](https://doc.rust-lang.org/std/fmt/index.html) 宏生成 JSON 编码的字符串。使用 [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html) 将数组转换为十六进制字符串。
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 ```
 
-此函数将十六进制字符串（由 JavaScript 提供）转换为字节数组。我们使用它来解析 JavaScript 代码提供的值。由于 Rust 处理数组和向量的方式，这个函数很复杂。
+此函数将十六进制字符串（由 JavaScript 提供）转换为字节数组。我们使用它来解析 JavaScript 代码提供的值。由于 Rust 处理数组和向量的方式，这个函数比较复杂。
 
-`<const N: usize>` 表达式被称为[泛型](https://doc.rust-lang.org/book/ch10-01-syntax.html)。`N` 是一个控制返回数组长度的参数。该函数实际上被称为 `str_to_array::<n>`，其中 `n` 是数组长度。
+`<const N: usize>` 表达式被称为[泛型](https://doc.rust-lang.org/book/ch10-01-syntax.html)。`N` 是控制返回数组长度的参数。该函数实际上被称为 `str_to_array::<n>`，其中 `n` 是数组长度。
 
 返回值为 `Option<[u8; N]>`，这意味着返回的数组是[可选的](https://doc.rust-lang.org/std/option/)。这是 Rust 中可能失败的函数的典型模式。
 
-例如，如果我们调用 `str_to_array::10("bad060a7")`，该函数应该返回一个包含十个值的数组，但输入只有四个字节。该函数需要失败，它通过返回 `None` 来实现。对于 `str_to_array::4("bad060a7")` 的返回值将是 `Some<[0xba, 0xd0, 0x60, 0xa7]>`。
+例如，如果我们调用 `str_to_array::10("bad060a7")`，该函数应该返回一个包含十个值的数组，但输入只有四个字节。该函数需要失败，它通过返回 `None` 来实现。`str_to_array::4("bad060a7")` 的返回值将是 `Some<[0xba, 0xd0, 0x60, 0xa7]>`。
 
 ```rust
     // decode 返回 Result<Vec<u8>, _>
@@ -250,9 +250,9 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 
 [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) 函数返回一个 `Result<Vec<u8>, FromHexError>`。[`Result`](https://doc.rust-lang.org/std/result/) 类型可以包含成功的结果（`Ok(value)`）或错误（`Err(error)`）。
 
-`.ok()` 方法将 `Result` 转换为 `Option`，如果成功，其值为 `Ok()` 值，如果不成功，则为 `None`。最后，如果 `Option` 为空，[问号运算符](https://doc.rust-lang.org/std/option/#the-question-mark-operator-)将中止当前函数并返回 `None`。否则，它会解包该值并返回它（在这种情况下，是为了给 `vec` 赋值）。
+`.ok()` 方法将 `Result` 转换为 `Option`，如果成功，其值为 `Ok()` 的值，否则为 `None`。最后，[问号运算符](https://doc.rust-lang.org/std/option/#the-question-mark-operator-)会中止当前函数，如果 `Option` 为空，则返回 `None`。否则，它会解包该值并返回它（在这种情况下，是为了给 `vec` 赋值）。
 
-这看起来像是一种处理错误的奇怪而复杂的方法，但 `Result` 和 `Option` 确保所有错误都能以某种方式得到处理。
+这看起来像是一种奇怪且复杂的错误处理方法，但 `Result` 和 `Option` 确保了所有错误都能以某种方式得到处理。
 
 ```rust
     if vec.len() != N { return None; }
@@ -265,7 +265,7 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust 有两种数组类型。[数组（Array）](https://doc.rust-lang.org/std/primitive.array.html)具有固定大小。[向量（Vector）](https://doc.rust-lang.org/std/vec/index.html)可以增长和缩小。`hex::decode` 返回一个向量，但 `eth_stealth_addresses` 库希望接收数组。[`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) 将一个值转换为另一种类型，例如，将向量转换为数组。
+Rust 有两种数组类型。[数组](https://doc.rust-lang.org/std/primitive.array.html)具有固定大小。[向量](https://doc.rust-lang.org/std/vec/index.html)可以增长和缩小。`hex::decode` 返回一个向量，但 `eth_stealth_addresses` 库希望接收数组。[`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods) 将一个值转换为另一种类型，例如，将向量转换为数组。
 
 ```rust
     Some(array)
@@ -279,9 +279,9 @@ Rust 有两种数组类型。[数组（Array）](https://doc.rust-lang.org/std/p
 pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 ```
 
-此函数接收一个公共元地址，其中包括 *V<sub>pub</sub>* 和 *K<sub>pub</sub>*。它返回隐形地址、要发布的公钥（*R<sub>pub</sub>*）以及一个单字节的扫描值，该扫描值可加速识别哪些已发布的地址可能属于爱丽丝。
+此函数接收一个公共元地址，其中包括 *V<sub>pub</sub>* 和 *K<sub>pub</sub>*。它返回隐形地址、要发布的公钥（*R<sub>pub</sub>*）以及一个单字节的扫描值，该扫描值可加快识别哪些已发布的地址可能属于爱丽丝。
 
-扫描值是共享秘密（*S = GR<sub>priv</sub>V<sub>priv</sub>*）的一部分。这个值对爱丽丝可用，并且检查它比检查 *f(K<sub>pub</sub>+G\*hash(S))* 是否等于已发布的地址要快得多。
+扫描值是共享秘密（*S = GR<sub>priv</sub>V<sub>priv</sub>*）的一部分。这个值对爱丽丝可用，检查它比检查 *f(K<sub>pub</sub>+G\*hash(S))* 是否等于已发布的地址要快得多。
 
 ```rust
     let (address, r_pub, scan) = 
@@ -315,12 +315,12 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-此函数使用该库的 [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) 来计算从该地址提取资金的私钥（*R<sub>priv</sub>*）。此计算需要以下值：
+此函数使用该库的 [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) 来计算从该地址提取资产的私钥（*R<sub>priv</sub>*）。此计算需要以下值：
 
 - 地址（*Address=f(P<sub>pub</sub>)*）
 - 比尔生成的公钥（*R<sub>pub</sub>*）
-- 查看私钥（*V<sub>priv</sub>*）
-- 花费私钥（*K<sub>priv</sub>*）
+- 视图私钥（*V<sub>priv</sub>*）
+- 支出私钥（*K<sub>priv</sub>*）
 
 ```rust
 #[wasm_bindgen(start)]
@@ -383,7 +383,7 @@ export default defineConfig({
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-当我们使用 [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) 时，它会创建我们在这里使用的两个文件：一个包含实际代码的 wasm 文件（这里是 `src/rust-wasm/pkg/rust_wasm_bg.wasm`）和一个包含使用定义的 JavaScript 文件（这里是 `src/rust_wasm/pkg/rust_wasm.js`）。该 JavaScript 文件的默认导出是启动 WASM 需要运行的代码。
+当我们使用 [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/) 时，它会创建我们在这里使用的两个文件：一个包含实际代码的 wasm 文件（这里是 `src/rust-wasm/pkg/rust_wasm_bg.wasm`）和一个包含使用它的定义的 JavaScript 文件（这里是 `src/rust-wasm/pkg/rust_wasm.js`）。该 JavaScript 文件的默认导出是初始化 WASM 需要运行的代码。
 
 ```jsx
 function App() {
@@ -406,9 +406,9 @@ function App() {
   )
 ```
 
-[`useEffect` 钩子](https://react.dev/reference/react/useEffect)允许你指定一个在状态变量更改时执行的函数。在这里，状态变量列表为空（`[]`），因此该函数仅在页面加载时执行一次。
+[`useEffect` 钩子 (hook)](https://react.dev/reference/react/useEffect) 允许你指定一个在状态变量更改时执行的函数。在这里，状态变量列表为空（`[]`），因此该函数仅在页面加载时执行一次。
 
-effect 函数必须立即返回。要使用异步代码，例如 WASM `init`（它必须加载 `.wasm` 文件，因此需要时间），我们定义一个内部的 [`async`](https://en.wikipedia.org/wiki/Async/await) 函数，并在没有 `await` 的情况下运行它。
+effect 函数必须立即返回。要使用异步代码，例如 WASM `init`（它必须加载 `.wasm` 文件，因此需要时间），我们定义一个内部 [`async`](https://en.wikipedia.org/wiki/Async/await) 函数并在没有 `await` 的情况下运行它。
 
 **`Bill.jsx`**
 
@@ -430,7 +430,7 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 
 **`Alice.jsx`**
 
-`Alice.jsx` 中的代码类似，除了爱丽丝有两个操作：
+`Alice.jsx` 中的代码类似，不同之处在于爱丽丝有两个操作：
 
 - 生成元地址
 - 获取比尔发布的地址的私钥

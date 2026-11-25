@@ -12,12 +12,11 @@ EVM'yi anlamak için [baytlar](https://wikipedia.org/wiki/Byte), [bellek](https:
 
 ## Defterden durum makinesine {#from-ledger-to-state-machine}
 
-'Dağıtık defter' analojisi, genellikle kriptografinin temel araçlarını kullanarak merkeziyetsiz bir para birimi sağlayan Bitcoin gibi blokzincirleri tanımlamak için kullanılır. Defter, birinin defteri değiştirmek için ne yapıp ne yapamayacağını yöneten bir dizi kurala uyması gereken bir aktivite kaydı tutar. Örneğin, bir Bitcoin adresi daha önce aldığından daha fazla Bitcoin harcayamaz. Bu kurallar, Bitcoin ve diğer birçok blokzincirdeki tüm işlemlerin temelini oluşturur.
+'Dağıtık defter' analojisi, kriptografinin temel araçlarını kullanarak merkeziyetsiz bir para birimi sağlayan Bitcoin gibi blokzincirleri tanımlamak için sıklıkla kullanılır. Defter, birinin defteri değiştirmek için ne yapıp ne yapamayacağını yöneten bir dizi kurala uyması gereken bir etkinlik kaydı tutar. Örneğin, bir Bitcoin adresi daha önce aldığından daha fazla Bitcoin harcayamaz. Bu kurallar, Bitcoin ve diğer birçok blokzincirdeki tüm işlemlerin temelini oluşturur.
 
-Ethereum, neredeyse tamamen aynı sezgisel kuralları izleyen kendi yerel kripto parasına (Ether) sahip olsa da, çok daha güçlü bir işlevi de mümkün kılar: [akıllı sözleşmeler](/developers/docs/smart-contracts/). Bu daha karmaşık özellik için daha gelişmiş bir analoji gereklidir. Ethereum, dağıtık bir defter yerine dağıtık bir [durum makinesidir](https://wikipedia.org/wiki/Finite-state_machine). Ethereum'un durumu, yalnızca tüm hesapları ve bakiyeleri değil, aynı zamanda önceden tanımlanmış bir dizi kurala göre bloktan bloğa değişebilen ve rastgele makine kodunu yürütebilen bir _makine durumunu_ da tutan büyük bir veri yapısıdır. Durumun bloktan bloğa değiştirilmesine ilişkin belirli kurallar EVM tarafından tanımlanır.
+Ethereum, neredeyse tamamen aynı sezgisel kuralları izleyen kendi yerel kripto parasına (Ether) sahip olsa da, çok daha güçlü bir işlevi de mümkün kılar: [akıllı sözleşmeler](/developers/docs/smart-contracts/). Bu daha karmaşık özellik için daha sofistike bir analoji gereklidir. Dağıtık bir defter yerine Ethereum, dağıtık bir [durum makinesidir](https://wikipedia.org/wiki/Finite-state_machine). Ethereum'un durumu, yalnızca tüm hesapları ve bakiyeleri değil, aynı zamanda önceden tanımlanmış bir dizi kurala göre bloktan bloğa değişebilen ve rastgele makine kodunu yürütebilen bir _makine durumunu_ da tutan büyük bir veri yapısıdır. Durumu bloktan bloğa değiştirmenin belirli kuralları EVM tarafından tanımlanır.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+<EvmZonesDiagram />
 
 ## Ethereum durum geçiş fonksiyonu {#the-ethereum-state-transition-function}
 
@@ -55,14 +54,13 @@ Sözleşmeler, söz konusu hesapla ilişkili ve küresel durumun bir parçası o
 
 ### İşlem kodları {#opcodes}
 
-Derlenmiş akıllı sözleşme baytkodu, `XOR`, `AND`, `ADD`, `SUB` vb. gibi standart yığın operasyonlarını gerçekleştiren bir dizi EVM [işlem kodu](/developers/docs/evm/opcodes) olarak yürütülür. EVM ayrıca `ADDRESS`, `BALANCE`, `BLOCKHASH` vb. gibi blokzincire özgü bir dizi yığın operasyonunu da uygular. İşlem kodu seti ayrıca geçici depolamaya erişim sağlayan `TSTORE` ve `TLOAD` kodlarını da içerir.
+Derlenmiş akıllı sözleşme baytkodu, `XOR`, `AND`, `ADD`, `SUB` vb. gibi standart yığın (stack) operasyonlarını gerçekleştiren bir dizi EVM [işlem kodu](/developers/docs/evm/opcodes) olarak yürütülür. EVM ayrıca `ADDRESS`, `BALANCE`, `BLOCKHASH` vb. gibi blokzincire özgü bir dizi yığın operasyonunu da uygular. İşlem kodu seti, geçici depolamaya erişim sağlayan `TSTORE` ve `TLOAD`'u da içerir.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Diyagramlar [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+<GasEvmDiagram />
 
 ## EVM uygulamaları {#evm-implementations}
 
-EVM'nin tüm uygulamaları, Ethereum Sarı Bülteni'nde açıklanan spesifikasyona uymak zorundadır.
+EVM'nin tüm uygulamaları, Ethereum Sarı Bülteni'nde açıklanan spesifikasyona uymalıdır.
 
 Ethereum'un on yıllık tarihi boyunca EVM çeşitli revizyonlardan geçmiştir ve çeşitli programlama dillerinde EVM'nin birkaç uygulaması bulunmaktadır.
 
@@ -70,7 +68,7 @@ Ethereum'un on yıllık tarihi boyunca EVM çeşitli revizyonlardan geçmiştir 
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Daha Fazla Okuma {#further-reading}
@@ -91,3 +89,5 @@ Ethereum'un on yıllık tarihi boyunca EVM çeşitli revizyonlardan geçmiştir 
 
 - [Sarı Bülten'in EVM Spesifikasyonlarını Anlamak](/developers/tutorials/yellow-paper-evm/) _– Ethereum Sarı Bülteni'ndeki resmi EVM spesifikasyonunun rehberli bir incelemesi._
 - [Bir Sözleşmeye Tersine Mühendislik Uygulamak](/developers/tutorials/reverse-engineering-a-contract/) _– EVM işlem kodlarını kullanarak derlenmiş bir akıllı sözleşmeye nasıl tersine mühendislik yapılacağı._
+
+<QuizWidget quizKey="evm" />

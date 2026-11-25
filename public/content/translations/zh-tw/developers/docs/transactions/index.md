@@ -178,7 +178,7 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 
 任何涉及智能合約的交易都需要燃料。
 
-智能合約也可以包含被稱為 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函式，這些函式不會改變合約的狀態。因此，從外部擁有帳戶（EOA）呼叫這些函式不需要任何燃料。此情境的底層 RPC 呼叫是 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)。
+智能合約也可以包含被稱為 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函式，這些函式不會改變合約的狀態。因此，從外部擁有帳戶（EOA）呼叫這些函式不需要任何燃料。此情境的底層 RPC 呼叫是 [`eth_call`](/developers/docs/apis/json-rpc/#eth-call)。
 
 與使用 `eth_call` 存取時不同，這些 `view` 或 `pure` 函式通常也會在內部被呼叫（即從合約本身或從另一個合約），這確實會消耗燃料。
 
@@ -238,3 +238,7 @@ _知道有什麼社群資源對你有幫助嗎？編輯此頁面並加入它！_
 - [帳戶](/developers/docs/accounts/)
 - [以太坊虛擬機 (EVM)](/developers/docs/evm/)
 - [燃料](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

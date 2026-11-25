@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "vi",
-  "translatedAt": "2026-07-22T23:10:09.151Z",
-  "englishManifestHash": "52b7ce2aefee",
+  "translatedAt": "2026-10-15T03:59:50.667Z",
+  "englishManifestHash": "c156e12b98a8",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-d1b8fd",
@@ -18,6 +18,7 @@
     "LINK-672bc2",
     "LINK-9bc568",
     "LINK-98c91a",
+    "LINK-e00b3a",
     "LINK-df7e92",
     "LINK-cd7eb4",
     "LINK-97e3e6",
@@ -28,6 +29,7 @@
     "LINK-e599c3",
     "LINK-6c0137",
     "LINK-4d8bbc",
+    "LINK-25fb9e",
     "LINK-b0ae41",
     "LINK-fdb772",
     "LINK-735210",
@@ -48,6 +50,7 @@
     "LINK-be6819",
     "LINK-44369c",
     "LINK-41a394",
+    "LINK-66cc34",
     "LINK-380a58",
     "LINK-12c146",
     "LINK-e29f43",
@@ -55,6 +58,7 @@
     "LINK-50ec77",
     "LINK-2b65b8",
     "LINK-cafe65",
+    "LINK-1b48cf",
     "LINK-acb6f2",
     "LINK-ab0b90",
     "LINK-8a700e",
@@ -152,6 +156,12 @@
         "url": "https://www.infura.io/faucet"
       }
     },
+    "LINK-e00b3a": {
+      "type": "link",
+      "values": {
+        "url": "https://openfaucet.org/ethereum-sepolia"
+      }
+    },
     "LINK-df7e92": {
       "type": "link",
       "values": {
@@ -210,6 +220,12 @@
       "type": "link",
       "values": {
         "url": "https://hoodi.ethpandaops.io/"
+      }
+    },
+    "LINK-25fb9e": {
+      "type": "link",
+      "values": {
+        "url": "https://openfaucet.org/ethereum-hoodi"
       }
     },
     "LINK-b0ae41": {
@@ -332,6 +348,12 @@
         "url": "https://ethfaucet.com/networks/arbitrum"
       }
     },
+    "LINK-66cc34": {
+      "type": "link",
+      "values": {
+        "url": "https://openfaucet.org/arbitrum-sepolia"
+      }
+    },
     "LINK-380a58": {
       "type": "link",
       "values": {
@@ -372,6 +394,12 @@
       "type": "link",
       "values": {
         "url": "https://ethfaucet.com/networks/optimism"
+      }
+    },
+    "LINK-1b48cf": {
+      "type": "link",
+      "values": {
+        "url": "https://openfaucet.org/optimism-sepolia"
       }
     },
     "LINK-acb6f2": {
@@ -443,7 +471,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-07-22T23:10:09.151Z",
+      "translatedAt": "2026-10-15T03:59:50.667Z",
       "status": "success"
     }
   }

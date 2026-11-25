@@ -178,7 +178,7 @@ _[इथेरियम EVM इलस्ट्रेटेड](https://takenobu-
 
 स्मार्ट कॉन्ट्रॅक्टचा समावेश असलेल्या कोणत्याही व्यवहारासाठी गॅस आवश्यक असतो.
 
-स्मार्ट कॉन्ट्रॅक्ट्समध्ये [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) किंवा [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) फंक्शन्स म्हणून ओळखली जाणारी फंक्शन्स देखील असू शकतात, जी कॉन्ट्रॅक्टची स्थिती बदलत नाहीत. त्यामुळे, EOA मधून या फंक्शन्सना कॉल करण्यासाठी कोणत्याही गॅसची आवश्यकता नसते. या परिस्थितीसाठी अंतर्निहित RPC कॉल [`eth_call`](/developers/docs/apis/json-rpc#eth_call) आहे.
+स्मार्ट कॉन्ट्रॅक्ट्समध्ये [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) किंवा [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) फंक्शन्स म्हणून ओळखली जाणारी फंक्शन्स देखील असू शकतात, जी कॉन्ट्रॅक्टची स्थिती बदलत नाहीत. त्यामुळे, EOA मधून या फंक्शन्सना कॉल करण्यासाठी कोणत्याही गॅसची आवश्यकता नसते. या परिस्थितीसाठी अंतर्निहित RPC कॉल [`eth_call`](/developers/docs/apis/json-rpc/#eth-call) आहे.
 
 `eth_call` वापरून ॲक्सेस केल्यावर विपरीत, ही `view` किंवा `pure` फंक्शन्स सामान्यतः अंतर्गतपणे (म्हणजेच, स्वतः कॉन्ट्रॅक्टमधून किंवा दुसऱ्या कॉन्ट्रॅक्टमधून) कॉल केली जातात ज्यासाठी गॅस खर्च होतो.
 
@@ -238,3 +238,7 @@ _तुम्हाला मदत केलेल्या एखाद्य�
 - [खाती](/developers/docs/accounts/)
 - [इथेरियम व्हर्च्युअल मशीन (EVM)](/developers/docs/evm/)
 - [गॅस](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

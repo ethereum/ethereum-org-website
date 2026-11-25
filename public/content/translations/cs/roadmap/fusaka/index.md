@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Přečtěte si o aktualizaci protokolu Fusaka
+description: "Přečtěte si o aktualizaci protokolu Fusaka"
 lang: cs
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -29,7 +29,7 @@ Aktualizace Fusaka je pouze jedním krokem v dlouhodobých cílech vývoje Ether
 
 Toto je _hlavní tahák_ forku Fusaka, hlavní funkce přidaná v této aktualizaci. Sítě vrstvy 2 (l2) v současnosti odesílají svá data do Etherea v blobech, což je dočasný datový typ vytvořený speciálně pro vrstvu 2 (l2). Před Fusakou musel každý plný uzel ukládat každý blob, aby se zajistilo, že data existují. S rostoucí propustností blobů se stahování všech těchto dat stává neudržitelně náročným na zdroje.
 
-Díky [vzorkování dostupnosti dat (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice) bude každý uzel zodpovědný pouze za podmnožinu dat blobu, místo aby musel ukládat všechna data. Bloby jsou rovnoměrně a náhodně distribuovány mezi uzly v síti, přičemž každý plný uzel uchovává pouze 1/8 dat, což umožňuje teoretické škálování až na osminásobek. Pro zajištění dostupnosti dat lze jakoukoli část dat zrekonstruovat z jakýchkoli existujících 50 % celku pomocí metod, které snižují pravděpodobnost chybných nebo chybějících dat na kryptograficky zanedbatelnou úroveň (~jedna ku 10<sup>20</sup> až jedna ku 10<sup>24</sup>).
+Díky [vzorkování dostupnosti dat (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice) bude každý uzel zodpovědný pouze za podmnožinu dat blobu, místo aby musel ukládat všechna data. Bloby jsou rovnoměrně a náhodně distribuovány mezi uzly v síti, přičemž každý plný uzel uchovává pouze 1/8 dat, což umožňuje teoretické škálování až na osminásobek. Pro zajištění dostupnosti dat lze jakoukoli část dat zrekonstruovat z jakýchkoli existujících 50 % celku pomocí metod, které snižují pravděpodobnost chybných nebo chybějících dat na kryptograficky zanedbatelnou úroveň (\~jedna ku 10<sup>20</sup> až jedna ku 10<sup>24</sup>).
 
 To udržuje požadavky na hardware a šířku pásma pro uzly na přijatelné úrovni a zároveň umožňuje škálování blobů, což vede k většímu škálování s menšími poplatky pro sítě vrstvy 2 (l2).
 
@@ -137,9 +137,9 @@ Cílem je omezit čas propagace/validace v nejhorším případě a sladit se s 
 
 Před zvýšením limitu plynu z 30M na 36M v únoru 2025 (a následně na 45M) se tato hodnota od Merge (září 2022) nezměnila. Cílem tohoto EIP je učinit z konzistentního škálování prioritu.
 
-EIP-7935 koordinuje týmy klientů exekuční vrstvy, aby pro Fusaku zvýšily výchozí limit plynu nad dnešních 45M. Jedná se o informační EIP, ale výslovně žádá klienty, aby otestovali vyšší limity na devnetech, shodli se na bezpečné hodnotě a dodali toto číslo ve svých vydáních pro Fusaku.
+EIP-7935 koordinoval týmy klientů exekuční vrstvy (EL), aby zvýšily výchozí limit plynu nad 45M, který předcházel Fusace. Jedná se o informativní EIP, ale výslovně žádal klienty, aby otestovali vyšší limity na devnetech, shodli se na bezpečné hodnotě a dodali toto číslo ve svých vydáních pro Fusaku.
 
-Plánování devnetu cílí na zátěž ~60M (plné bloky se syntetickou zátěží) a iterativní zvyšování; výzkum říká, že patologie velikosti bloku v nejhorším případě by neměly představovat omezení pod ~150M. Zavedení by mělo být spojeno se zastropováním limitu plynu pro transakce (EIP-7825), aby žádná jednotlivá transakce nemohla dominovat při zvyšování limitů.
+Testování na devnetech cílilo na ~60M při zátěži (plné bloky se syntetickou zátěží) s iterativním navyšováním; výzkum říká, že patologie velikosti bloku v nejhorším případě by neměly představovat omezení pod ~150M. Zavedení bylo spojeno se stropem limitu plynu pro transakce (EIP-7825), aby žádná jednotlivá transakce nemohla dominovat při zvyšování limitů. Klienti dodali 60M jako výchozí hodnotu pro Fusaku.
 
 **Zdroje**: [Technická specifikace EIP-7935](https://eips.ethereum.org/EIPS/eip-7935)
 
@@ -249,11 +249,11 @@ Požadavky na uzly jsou i po BPO Fusaky stále v rámci [doporučených mezí](h
 
 Běžné uzly bez jakýchkoli validátorů se přihlásí k odběru pouze 4 podsítí, čímž zajistí správu 1/8 původních dat. To znamená, že při stejném množství dat blobů by šířka pásma uzlu pro jejich stahování byla osmkrát (8x) menší. Využití disku a šířka pásma pro stahování blobů u normálního plného uzlu by se mohly snížit přibližně o 80 % na pouhých několik Mb.
 
-#### Sóloví stakeři {#solo-stakers}
+#### Sólo stakeři {#solo-stakers}
 
-Pokud je uzel používán pro klienta validátoru, musí spravovat více sloupců, a proto zpracovávat více dat. S přidaným validátorem se uzel přihlásí k odběru alespoň 8 sloupcových podsítí, a proto zpracovává dvakrát více dat než běžný uzel, ale stále méně než před Fusakou. Pokud je zůstatek validátoru vyšší než 287 ETH, bude se přihlašovat k odběru stále více podsítí.
+Pokud je uzel používán pro klienta validátoru, musí spravovat více sloupců, a proto zpracovávat více dat. S přidaným validátorem se uzel přihlásí k odběru alespoň 8 podsítí sloupců, a proto zpracovává dvakrát více dat než běžný uzel, ale stále méně než před Fusakou. Pokud je zůstatek validátoru vyšší než 287 ETH, bude odebírat stále více podsítí.
 
-Pro sólového stakera to znamená, že jeho využití disku a šířka pásma pro stahování se sníží přibližně o 50 %. K lokálnímu sestavování bloků a nahrávání všech blobů do sítě je však zapotřebí větší šířka pásma pro nahrávání. Lokální tvůrci bloků budou v době Fusaky potřebovat 2-3krát vyšší šířku pásma pro nahrávání než dříve a s cílem BPO2 15/21 blobů bude muset být konečná potřebná šířka pásma pro nahrávání přibližně 5krát vyšší, na úrovni 100 Mbps.
+Pro sólo stakera to znamená, že jeho využití disku a šířka pásma pro stahování klesne přibližně o 50 %. K lokálnímu vytváření bloků a nahrávání všech blobů do sítě je však zapotřebí větší šířka pásma pro nahrávání. Lokální tvůrci budou v době Fusaky potřebovat 2-3krát vyšší šířku pásma pro nahrávání než dříve a s cílem BPO2 15/21 blobů bude muset být konečná potřebná šířka pásma pro nahrávání přibližně 5krát vyšší, a to 100 Mbps.
 
 #### Velcí validátoři {#large-validators}
 

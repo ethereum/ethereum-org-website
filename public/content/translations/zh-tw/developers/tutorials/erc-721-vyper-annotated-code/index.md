@@ -47,7 +47,7 @@ ERC-721 介面內建於 Vyper 語言中。
 ```python
 #pragma version >0.3.10
 ```
-### ERC721Receiver 介面
+### ERC721Receiver 介面 {#receiver-interface}
 
 ```python
 # 由 safeTransferFrom() 呼叫的合約介面
@@ -86,7 +86,7 @@ ERC-721 代幣 ID 為 256 位元。通常，它們是透過對代幣所代表的
 ```
 
 為了防止合約意外接受轉帳的情況，回傳值不是布林值，而是一個特定的四位元組值，即 `onERC721Received` 的函式選擇器。該函式是 `nonpayable`，因為接收合約在接受代幣時可能會改變其自身的狀態。
-### 事件
+### 事件 {#events}
 
 觸發[事件](/developers/docs/smart-contracts/anatomy/#events-and-logs)是為了通知區塊鏈外部的使用者和伺服器發生了事件。請注意，區塊鏈上的合約無法取得事件的內容。這三個 ERC-721 事件是由我們匯入的 `IERC721` 介面所定義的，因此此合約本身並不宣告它們；它使用 `log IERC721.<Event>(...)` 來觸發它們，正如我們將在下面的轉帳函式中看到的那樣。
 
@@ -95,7 +95,7 @@ ERC-721 代幣 ID 為 256 位元。通常，它們是透過對代幣所代表的
 ERC-721 的授權類似於 ERC-20 的授權額度：允許特定地址轉帳特定代幣，並且每當設定或重新確認該授權地址時，都會觸發 `Approval` (`owner`, `approved`, `token_id`)。這為合約在接受代幣時提供了一種回應機制。合約無法監聽事件，因此如果你只是將代幣轉帳給它們，它們並不會「知道」。透過這種方式，擁有者首先提交授權，然後向合約發送請求：「我已授權你轉帳代幣 X，請執行...」。這是一種設計選擇，旨在使 ERC-721 標準類似於 ERC-20 標準。由於 ERC-721 代幣是不可替代的，合約也可以透過查看代幣的擁有權來識別它獲得了特定的代幣。
 
 最後，當為擁有者啟用或停用_操作員_時，會觸發 `ApprovalForAll` (`owner`, `operator`, `approved`)。有時，擁有一個可以管理帳戶中所有特定類型代幣（由特定合約管理的代幣）的操作員會很有用，這類似於委託書。例如，我可能想將此權力授予一個合約，該合約會檢查我是否已經六個月沒有聯絡它，如果是，則將我的資產分配給我的繼承人（如果其中一人提出要求，合約在沒有被交易呼叫的情況下無法執行任何操作）。在 ERC-20 中，我們只需給予繼承合約很高的授權額度即可，但這對 ERC-721 不起作用，因為代幣是不可替代的。這就是等效的做法。`approved` 值告訴我們該事件是為了授權，還是為了撤銷授權。
-### 狀態變數
+### 狀態變數 {#state-vars}
 
 這些變數包含代幣的目前狀態：哪些代幣可用以及誰擁有它們。其中大部分是 `HashMap` 物件，即[存在於兩種類型之間的單向對應](https://vyper.readthedocs.io/en/latest/types.html#mappings)。
 
@@ -147,7 +147,7 @@ SUPPORTED_INTERFACES: constant(bytes4[2]) = [
 
 這些是實際實作 ERC-721 的函式。
 
-#### 建構函式
+#### 建構函式 {#constructor}
 
 ```python
 @deploy
@@ -169,7 +169,7 @@ def __init__():
 ```
 
 要存取狀態變數，你可以使用 `self.<variable name>`（同樣，與 Python 相同）。建構函式將部署合約的帳戶記錄為 `minter`。
-#### 視圖函式
+#### 視圖函式 {#views}
 
 這些是不會修改區塊鏈狀態的函式，因此如果從外部呼叫它們，可以免費執行。如果視圖函式由合約呼叫，它們仍然必須在每個節點上執行，因此需要消耗燃料。
 
@@ -267,7 +267,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 ```
 
 此函式檢查 `_operator` 是否被允許管理此合約中 `_owner` 的所有代幣。因為可以有多個操作員，所以這是一個兩層的 HashMap。
-#### 轉帳輔助函式
+#### 轉帳輔助函式 {#transfer-helpers}
 
 這些函式實作了屬於轉帳或管理代幣一部分的操作。
 
@@ -382,7 +382,7 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
 ```
 
 要在 Vyper 中觸發事件，你可以使用 `log` 語句（[有關更多詳細資訊，請參閱此處](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)）。因為事件屬於匯入的介面，所以我們將它們稱為 `IERC721.Transfer` 並透過關鍵字傳遞它們的欄位。
-#### 轉帳函式
+#### 轉帳函式 {#transfer-funs}
 
 ```python
 

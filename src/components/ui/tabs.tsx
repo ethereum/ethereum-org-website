@@ -42,11 +42,15 @@ TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 const TabsContent = React.forwardRef<
   React.ComponentRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...props }, ref) => (
+>(({ className, forceMount = true, ...props }, ref) => (
+  // forceMount ships every panel in server HTML; Radix then skips `hidden`, so
+  // inactive panels need display:none to leave layout, tab order and a11y tree.
   <TabsPrimitive.Content
     ref={ref}
+    forceMount={forceMount}
     className={cn(
       "mt-4 rounded-lg border p-6 ring-offset-background focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover",
+      "data-[state=inactive]:hidden",
       className
     )}
     {...props}

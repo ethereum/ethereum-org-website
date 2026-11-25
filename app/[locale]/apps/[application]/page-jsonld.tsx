@@ -4,6 +4,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd, slugify } from "@/lib/utils/url"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -24,12 +25,18 @@ export default async function AppsAppJsonLD({
   locale,
   app,
   contributors,
+  name,
+  description,
+  sameAs,
 }: {
   locale: string
   app: AppData
   contributors: FileContributor[]
+  name: string
+  description: string
+  sameAs: string[]
 }) {
-  const url = normalizeUrlForJsonLd(locale, `/apps/${slugify(app.name)}`)
+  const url = normalizeUrlForJsonLd(locale, `/apps/${slugify(app.name)}/`)
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -44,36 +51,18 @@ export default async function AppsAppJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: `Ethereum Apps - ${app.name}`,
-        description: app.description,
+        name,
+        description,
         url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Apps",
-              item: normalizeUrlForJsonLd(locale, "/apps/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: app.name,
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(
+          locale,
+          `/apps/${slugify(app.name)}`,
+          app.name
+        ),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#applications` },
@@ -82,7 +71,7 @@ export default async function AppsAppJsonLD({
         "@type": "WebApplication",
         "@id": `${url}#applications`,
         name: app.name,
-        description: app.description,
+        description,
         url: app.url,
         image: app.image,
         applicationCategory:
@@ -105,7 +94,7 @@ export default async function AppsAppJsonLD({
         dateModified: app.lastUpdated,
         inLanguage: app.languages,
         screenshot: app.screenshots.slice(0, 5),
-        sameAs: [app.twitter, app.github, app.discord].filter(Boolean),
+        sameAs,
       },
     ],
   }

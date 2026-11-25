@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/blocks/index.md",
-  "generatedAt": "2026-06-16T21:52:35.037Z",
-  "rootHash": "1ab3ddd23cb7",
+  "generatedAt": "2026-11-17T08:25:09.738Z",
+  "rootHash": "0265e80377b5",
   "tree": {
-    "contentHash": "d3c22d8cf143",
-    "anchorHash": "034041031670",
+    "contentHash": "9cf73d3024e0",
+    "anchorHash": "c95426556ebe",
     "children": {
       "frontmatter:title": {
         "contentHash": "1cd5a6687bb7",
@@ -73,15 +73,15 @@
         ]
       },
       "why-blocks": {
-        "contentHash": "b7ddab19a404",
-        "anchorHash": "5bb2cffbac98",
+        "contentHash": "bd7dfd431f3d",
+        "anchorHash": "cc5dd3a75e19",
         "labelHash": "1aad1f40a694",
         "children": {
           "_label": {
             "contentHash": "1aad1f40a694",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:3": {
+          "prose:1": {
             "contentHash": "20c35653dc99",
             "anchorHash": "e3b0c44298fc"
           },
@@ -89,36 +89,26 @@
             "contentHash": "a13bebeb57e1",
             "anchorHash": "8a5edab28263"
           },
-          "prose:4": {
+          "prose:2": {
             "contentHash": "10595e617c28",
             "anchorHash": "e3b0c44298fc"
           },
-          "image:1": {
-            "contentHash": "7dd3b5526602",
-            "anchorHash": "91335bc81aba"
-          },
-          "prose:5": {
-            "contentHash": "b12227817e20",
+          "component:4": {
+            "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:2": {
-            "contentHash": "931d210378d9",
-            "anchorHash": "e395d21ce0ea"
-          },
-          "prose:6": {
-            "contentHash": "11b57fa0f366",
+          "prose:0": {
+            "contentHash": "1a7c4a6f32c7",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:3",
+          "prose:1",
           "link:0",
-          "prose:4",
-          "image:1",
-          "prose:5",
-          "link:2",
-          "prose:6"
+          "prose:2",
+          "component:4",
+          "prose:0"
         ]
       },
       "how-blocks-work": {
@@ -961,8 +951,8 @@
         ]
       },
       "related-topics": {
-        "contentHash": "e71ec30d0da6",
-        "anchorHash": "a80c779278ba",
+        "contentHash": "ed6b80d9158a",
+        "anchorHash": "c0ef0d75bc50",
         "labelHash": "5a38da0df0ab",
         "children": {
           "_label": {
@@ -992,6 +982,16 @@
           "link:2": {
             "contentHash": "c7a6db281618",
             "anchorHash": "93c4e99645de"
+          },
+          "component:7": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "4e6035897f3f",
+            "children": {
+              "attr:quizKey": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2a12da17d27c"
+              }
+            }
           }
         },
         "childrenOrder": [
@@ -1001,7 +1001,8 @@
           "prose:4",
           "link:1",
           "prose:5",
-          "link:2"
+          "link:2",
+          "component:7"
         ]
       }
     },
@@ -1021,5 +1022,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ff8a5b0c924e7555d20026ccfe7a14d591b7de66"
 }

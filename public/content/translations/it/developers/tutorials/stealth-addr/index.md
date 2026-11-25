@@ -135,7 +135,7 @@ Useremo [Vite](https://vite.dev/) e [React](https://react.dev/). Questi sono str
 
 #### Il componente WASM {#wasm}
 
-Il codice sorgente che viene compilato in WASM è scritto in [Rust](https://rust-lang.org/). Puoi vederlo in [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Questo codice è principalmente un'interfaccia tra il codice JavaScript e [la libreria `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Il codice sorgente che viene compilato in WASM è scritto in [Rust](https://rust-lang.org/). Puoi vederlo in [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs). Questo codice è principalmente un'interfaccia tra il codice JavaScript e [la libreria `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 **`Cargo.toml`**
 
@@ -154,7 +154,7 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-Il pacchetto [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) ha bisogno di generare valori casuali. Questo non può essere fatto con mezzi puramente algoritmici; richiede l'accesso a un processo fisico come fonte di entropia. Questa definizione specifica che otterremo quell'entropia chiedendola al browser in cui siamo in esecuzione.
+Il pacchetto [`getrandom`](https://docs.rs/getrandom/latest/getrandom/) ha bisogno di generare valori casuali. Ciò non può essere fatto con mezzi puramente algoritmici; richiede l'accesso a un processo fisico come fonte di entropia. Questa definizione specifica che otterremo quell'entropia chiedendola al browser in cui siamo in esecuzione.
 
 ```toml
 console_error_panic_hook = "0.1.7"
@@ -179,7 +179,7 @@ use wasm_bindgen::prelude::*;
 
 Le definizioni per creare un pacchetto WASM da Rust. Sono documentate [qui](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html).
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -187,7 +187,7 @@ use eth_stealth_addresses::{
 };
 ```
 
-Le funzioni di cui abbiamo bisogno dalla [libreria `eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
+Le funzioni di cui abbiamo bisogno dalla libreria [`eth-stealth-addresses`](https://github.com/kassandraoftroy/eth-stealth-addresses).
 
 ```rust
 use hex::{decode,encode};
@@ -205,7 +205,7 @@ Genera i binding WASM per poter chiamare questa funzione da JavaScript.
 pub fn wasm_generate_stealth_meta_address() -> String {
 ```
 
-Il modo più semplice per restituire un oggetto con più campi è restituire una stringa JSON. 
+Il modo più semplice per restituire un oggetto con campi multipli è restituire una stringa JSON. 
 
 ```rust
     let (address, spend_private_key, view_private_key) = 
@@ -218,7 +218,7 @@ La funzione [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addres
 - La chiave privata di visualizzazione (*V<sub>priv</sub>*)
 - La chiave privata di spesa (*K<sub>priv</sub>*)
 
-La sintassi della [tupla](https://doc.rust-lang.org/std/primitive.tuple.html) ci permette di separare di nuovo quei valori.
+La sintassi delle [tuple](https://doc.rust-lang.org/std/primitive.tuple.html) ci permette di separare nuovamente quei valori.
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -239,18 +239,18 @@ Questa funzione trasforma una stringa esadecimale (fornita da JavaScript) in un 
 
 L'espressione `<const N: usize>` è chiamata [generico](https://doc.rust-lang.org/book/ch10-01-syntax.html). `N` è un parametro che controlla la lunghezza dell'array restituito. La funzione è in realtà chiamata `str_to_array::<n>`, dove `n` è la lunghezza dell'array.
 
-Il valore di ritorno è `Option<[u8; N]>`, il che significa che l'array restituito è [opzionale](https://doc.rust-lang.org/std/option/). Questo è un pattern tipico in Rust per le funzioni che potrebbero fallire.
+Il valore restituito è `Option<[u8; N]>`, il che significa che l'array restituito è [opzionale](https://doc.rust-lang.org/std/option/). Questo è un pattern tipico in Rust per le funzioni che potrebbero fallire.
 
-Ad esempio, se chiamiamo `str_to_array::10("bad060a7")`, la funzione dovrebbe restituire un array di dieci valori, ma l'input è di soli quattro byte. La funzione deve fallire, e lo fa restituendo `None`. Il valore di ritorno per `str_to_array::4("bad060a7")` sarebbe `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
+Ad esempio, se chiamiamo `str_to_array::10("bad060a7")`, la funzione dovrebbe restituire un array di dieci valori, ma l'input è di soli quattro byte. La funzione deve fallire, e lo fa restituendo `None`. Il valore restituito per `str_to_array::4("bad060a7")` sarebbe `Some<[0xba, 0xd0, 0x60, 0xa7]>`.
 
 ```rust
     // decode restituisce Result<Vec<u8>, _>
     let vec = decode(s).ok()?;
 ```
 
-La funzione [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) restituisce un `Result<Vec<u8>, FromHexError>`. Il tipo [`Result`](https://doc.rust-lang.org/std/result/) può contenere un risultato di successo (`Ok(value)`) o un errore (`Err(error)`).
+La funzione [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) restituisce un `Result<Vec<u8>, FromHexError>`. Il tipo [`Result`](https://doc.rust-lang.org/std/result/) può contenere un risultato positivo (`Ok(value)`) o un errore (`Err(error)`).
 
-Il metodo `.ok()` trasforma il `Result` in un `Option`, il cui valore è il valore `Ok()` in caso di successo o `None` in caso contrario. Infine, l'[operatore punto interrogativo](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) interrompe le funzioni correnti e restituisce un `None` se l'`Option` è vuoto. Altrimenti, estrae il valore e lo restituisce (in questo caso, per assegnare un valore a `vec`).
+Il metodo `.ok()` trasforma il `Result` in un `Option`, il cui valore è il valore `Ok()` se ha successo o `None` in caso contrario. Infine, l'[operatore punto interrogativo](https://doc.rust-lang.org/std/option/#the-question-mark-operator-) interrompe la funzione corrente e restituisce un `None` se l'`Option` è vuoto. Altrimenti, estrae il valore e lo restituisce (in questo caso, per assegnare un valore a `vec`).
 
 Questo sembra un metodo stranamente contorto per gestire gli errori, ma `Result` e `Option` assicurano che tutti gli errori vengano gestiti, in un modo o nell'altro.
 
@@ -272,7 +272,7 @@ Rust ha due tipi di array. Gli [array](https://doc.rust-lang.org/std/primitive.a
 }
 ```
 
-Rust non richiede di usare la parola chiave [`return`](https://doc.rust-lang.org/std/keyword.return.html) quando si restituisce un valore alla fine di una funzione.
+Rust non richiede l'uso della parola chiave [`return`](https://doc.rust-lang.org/std/keyword.return.html) quando si restituisce un valore alla fine di una funzione.
 
 ```rust
 #[wasm_bindgen]
@@ -281,7 +281,7 @@ pub fn wasm_generate_stealth_address(stealth_address: &str) -> Option<String> {
 
 Questa funzione riceve un meta-indirizzo pubblico, che include sia *V<sub>pub</sub>* che *K<sub>pub</sub>*. Restituisce l'indirizzo stealth, la chiave pubblica da pubblicare (*R<sub>pub</sub>*) e un valore di scansione di un byte che accelera l'identificazione di quali indirizzi pubblicati potrebbero appartenere ad Alice.
 
-Il valore di scansione fa parte del segreto condiviso (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Questo valore è disponibile per Alice, e controllarlo è molto più veloce che controllare se *f(K<sub>pub</sub>+G\*hash(S))* è uguale all'indirizzo pubblicato.
+Il valore di scansione fa parte del segreto condiviso (*S = GR<sub>priv</sub>V<sub>priv</sub>*). Questo valore è disponibile per Alice e controllarlo è molto più veloce rispetto a verificare se *f(K<sub>pub</sub>+G\*hash(S))* è uguale all'indirizzo pubblicato.
 
 ```rust
     let (address, r_pub, scan) = 
@@ -317,7 +317,7 @@ pub fn wasm_compute_stealth_key(
 
 Questa funzione usa la funzione [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html) della libreria per calcolare la chiave privata per prelevare dall'indirizzo (*R<sub>priv</sub>*). Questo calcolo richiede questi valori:
 
-- L'indirizzo (*Indirizzo=f(P<sub>pub</sub>)*)
+- L'indirizzo (*Address=f(P<sub>pub</sub>)*)
 - La chiave pubblica generata da Bill (*R<sub>pub</sub>*)
 - La chiave privata di visualizzazione (*V<sub>priv</sub>*)
 - La chiave privata di spesa (*K<sub>priv</sub>*)
@@ -343,7 +343,7 @@ assertion `left == right` failed
  right: 1
 ```
 
-Seguito da una traccia dello stack (stack trace). Quindi dai a Bill il meta-indirizzo valido, e dai ad Alice un indirizzo non valido o una chiave pubblica non valida. Vedrai questo errore:
+Seguito da una traccia dello stack (stack trace). Poi dai a Bill il meta-indirizzo valido e dai ad Alice un indirizzo non valido o una chiave pubblica non valida. Vedrai questo errore:
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
@@ -354,7 +354,7 @@ Di nuovo, seguito da una traccia dello stack.
 
 #### L'interfaccia utente {#ui}
 
-L'interfaccia utente è scritta usando [React](https://react.dev/) ed è servita da [Vite](https://vite.dev/). Puoi imparare a conoscerli usando [questo tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Non c'è bisogno di [Wagmi](https://wagmi.sh/) qui perché non interagiamo direttamente con una blockchain o un portafoglio.
+L'interfaccia utente è scritta usando [React](https://react.dev/) e servita da [Vite](https://vite.dev/). Puoi imparare a conoscerli usando [questo tutorial](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/). Non c'è bisogno di [Wagmi](https://wagmi.sh/) qui perché non interagiamo direttamente con una blockchain o un portafoglio.
 
 L'unica parte non ovvia dell'interfaccia utente è la connettività WASM. Ecco come funziona.
 
@@ -373,7 +373,7 @@ export default defineConfig({
 })
 ```
 
-Abbiamo bisogno di due plugin Vite: [react](https://www.npmjs.com/package/@vitejs/plugin-react) e [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
+Abbiamo bisogno di due plugin di Vite: [react](https://www.npmjs.com/package/@vitejs/plugin-react) e [wasm](https://github.com/Menci/vite-plugin-wasm#readme).
 
 **`App.jsx`**
 
@@ -383,7 +383,7 @@ Questo file è il componente principale dell'applicazione. È un contenitore che
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-Quando usiamo [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), crea due file che usiamo qui: un file wasm con il codice vero e proprio (qui, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) e un file JavaScript con le definizioni per usarlo (qui, `src/rust_wasm/pkg/rust_wasm.js`). L'esportazione predefinita di quel file JavaScript è il codice che deve essere eseguito per avviare WASM.
+Quando usiamo [`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/), crea due file che usiamo qui: un file wasm con il codice vero e proprio (qui, `src/rust-wasm/pkg/rust_wasm_bg.wasm`) e un file JavaScript con le definizioni per usarlo (qui, `src/rust-wasm/pkg/rust_wasm.js`). L'esportazione predefinita di quel file JavaScript è il codice che deve essere eseguito per avviare WASM.
 
 ```jsx
 function App() {
@@ -408,7 +408,7 @@ function App() {
 
 L'[hook `useEffect`](https://react.dev/reference/react/useEffect) ti permette di specificare una funzione che viene eseguita quando le variabili di stato cambiano. Qui, l'elenco delle variabili di stato è vuoto (`[]`), quindi questa funzione viene eseguita solo una volta al caricamento della pagina.
 
-La funzione dell'effetto deve restituire immediatamente. Per usare codice asincrono, come il `init` di WASM (che deve caricare il file `.wasm` e quindi richiede tempo) definiamo una funzione interna [`async`](https://en.wikipedia.org/wiki/Async/await) e la eseguiamo senza un `await`.
+La funzione dell'effetto deve restituire immediatamente. Per usare codice asincrono, come l'`init` di WASM (che deve caricare il file `.wasm` e quindi richiede tempo) definiamo una funzione [`async`](https://en.wikipedia.org/wiki/Async/await) interna e la eseguiamo senza un `await`.
 
 **`Bill.jsx`**
 

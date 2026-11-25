@@ -1,7 +1,7 @@
 ---
-title: Ether enveloppé (WETH)
-metaTitle: Qu'est-ce que l'ether enveloppé (WETH)
-description: Une introduction à l'ether enveloppé (WETH) — un jeton enveloppé compatible ERC-20 pour l'ether (ETH). 
+title: "Ether enveloppé (WETH)"
+metaTitle: "Qu'est-ce que l'ether enveloppé (WETH)"
+description: "Une introduction à l'ether enveloppé (WETH) — un jeton enveloppé compatible ERC-20 pour l'ether (ETH)."
 lang: fr
 ---
 
@@ -31,7 +31,7 @@ Vous pouvez désenvelopper du WETH en ETH en utilisant le contrat intelligent WE
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Ether enveloppé (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Offre     | L'[offre d'ETH](/eth/supply/) est gérée par le protocole [Ethereum](/). L'[émission](/roadmap/merge/issuance) d'ETH est gérée par les validateurs Ethereum lors du traitement des transactions et de la création de blocs.                           | Le WETH est un jeton ERC-20 dont l'offre est gérée par un contrat intelligent. De nouvelles unités de WETH sont émises par le contrat après avoir reçu des dépôts d'ETH des utilisateurs, ou des unités de WETH sont brûlées lorsqu'un utilisateur souhaite échanger du WETH contre de l'ETH.                                                                                                                                        |
+| Offre     | L'[offre d'ETH](/what-is-ether/supply/) est gérée par le protocole [Ethereum](/). L'[émission](/roadmap/merge/issuance) d'ETH est gérée par les validateurs Ethereum lors du traitement des transactions et de la création de blocs.                           | Le WETH est un jeton ERC-20 dont l'offre est gérée par un contrat intelligent. De nouvelles unités de WETH sont émises par le contrat après avoir reçu des dépôts d'ETH des utilisateurs, ou des unités de WETH sont brûlées lorsqu'un utilisateur souhaite échanger du WETH contre de l'ETH.                                                                                                                                        |
 | Propriété  | La propriété est gérée par le protocole Ethereum via le solde de votre compte.  | La propriété du WETH est gérée par le contrat intelligent du jeton WETH, sécurisé par le protocole Ethereum.                                                                                                                                         |
 | Gaz        | L'ether (ETH) est l'unité de paiement acceptée pour le calcul sur le réseau Ethereum. Les frais de gaz sont libellés en gwei (une unité d'ether).                                                                                    | Le paiement du gaz avec des jetons WETH n'est pas pris en charge nativement.                                                                                                                                                                                              |
 

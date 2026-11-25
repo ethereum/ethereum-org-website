@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## Michezo kwenye Ethereum
+## Michezo kwenye Ethereum {#gaming-on-ethereum}
 
 Michezo kwenye Ethereum inakuja kwa aina mbalimbali, kuanzia michezo inayotumia mnyororo wa vitalu kwa vipengele maalum hadi ile ambayo ulimwengu mzima wa mchezo unaishi mnyororoni. Mnyororo wa vitalu wa Ethereum unaweza kutumika na michezo kwa uwezo mbalimbali. Michezo inaweza kuhifadhi sarafu zake kama tokeni zinazoweza kuhamishwa au rasilimali nyingine za ndani ya mchezo (wahusika, vifaa, wanyama vipenzi, n.k.) katika mfumo wa [tokeni zisizoweza kubadilishwa (NFTs)](/nft/). Michezo pia inaweza kutumia mikataba mahiri kuhifadhi mantiki, sheria, na hali zake mnyororoni. Michezo kama hiyo kwa kawaida hujulikana kama "michezo mnyororoni kikamilifu."
 
@@ -32,7 +32,7 @@ Wakati Ethereum ilipozinduliwa, **wabunifu wa michezo waliona fursa ya kujenga u
 
 Mnyororo wa vitalu wa Ethereum uliwezesha ulimwengu ambapo sheria haziwezi kubadilishwa kiholela, hali haiwezi kufutwa, na mtu yeyote anaweza kujenga viendelezi vinavyoishi mradi tu mtandao upo. Hili ni jambo ambalo Ethereum hutoa kiasili.
 
-## Muhtasari wa mfumo ikolojia wa michezo wa Ethereum
+## Muhtasari wa mfumo ikolojia wa michezo wa Ethereum {#ethereums-gaming-ecosystem-overview}
 - **Tabaka la 2 (l2):** Kwa ada nafuu na nyakati fupi za miamala, l2 za Ethereum zimekuwa mahali pa kawaida kwa michezo kuzinduliwa. Mandhari ya l2 yanaendelea kubadilika, huku mifumo ikolojia inayoongoza ya michezo ya Web3 kama Ronin (awali mnyororo wa kando wa Axie Infinity) ikihamia hivi karibuni kwenye usanifu wa tabaka la 2 (l2) la Ethereum ikirithi dhamana za usalama za Ethereum huku ikihifadhi miundombinu yake iliyoboreshwa kwa michezo. L2 zinazoongoza kwa sasa kwa michezo ni pamoja na: [Ronin](https://www.roninchain.com/), [Starknet](https://www.starknet.io/), [Abstract](https://abs.xyz/), na [Base](https://www.base.org/).
 - **Miundombinu:** Ili kurahisisha uundaji wa michezo mnyororoni, kuna rundo la zana kadhaa; [Cartridge](https://cartridge.gg/) (inayotoa funguo za kipindi, miamala isiyo na gesi kupitia Mlipiaji, na uthibitishaji unaotegemea WebAuthn kupitia Kidhibiti cha Cartridge), [Dojo](https://dojoengine.org/) (mfumo wa michezo unaoweza kuthibitishwa wenye usaidizi wa asili wa udhanifu wa akaunti), [MUD](https://mud.dev/) (injini ya mchezo mnyororoni inayotegemea EVM). Nyingine, kama [Proof of Play](https://proofofplay.com/) na [Thirdweb](https://thirdweb.com/), huruhusu wasanidi programu kuunda michezo yenye uzoefu wa mtumiaji unaofanana na Web2.
 - **Jamii za michezo:** Mfumo ikolojia wa michezo wa Ethereum unasaidiwa na vyama vya michezo, ikiwa ni pamoja na ([YGG](https://x.com/YieldGuild), [MANA Gaming](https://x.com/ManaGamingBR), [WASD](https://x.com/WASD_0x), [LegacyGG](https://x.com/Lgc_GG), [Gaming Grid](https://x.com/GamingGridx), na [OLAGG](https://x.com/OLAGuildGames)) kwa ushirikiano wa wachezaji, majukwaa ya ugunduzi kama [GAM3S.GG](https://games.gg/), na vyombo vya habari kama [Gaming Daily](https://x.com/GamingDailyx) kwa uchanganuzi wa michezo na utangazaji wa mfumo ikolojia. Baadhi hujumuisha haya yote, kama [FOCGERS](https://x.com/FOCGERS).

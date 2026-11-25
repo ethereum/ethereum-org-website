@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/tutorials/token-integration-checklist/index.md",
   "generatedAt": "2026-06-18T00:31:38.043Z",
-  "rootHash": "691192cb6452",
+  "rootHash": "2ddc50a97712",
   "tree": {
-    "contentHash": "6a150c87ec39",
-    "anchorHash": "8d474002d773",
+    "contentHash": "7c48ba98e599",
+    "anchorHash": "006cf77e782d",
     "children": {
       "frontmatter:title": {
         "contentHash": "6c517ba5365d",
@@ -17,15 +17,39 @@
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f10cc36124c6"
+        "anchorHash": "d78efb663a1b"
       },
       "frontmatter:lang": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "dbd3a49d0d90"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "5bc228986a7f"
+        "contentHash": "978d8e566b0a",
+        "anchorHash": "01e58d9bfef2",
+        "children": {
+          "0": {
+            "contentHash": "659dae769fc3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "5d2d3ceb7abe",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "3": {
+            "contentHash": "c51e455b41df",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
       },
       "frontmatter:skill": {
         "contentHash": "e3b0c44298fc",

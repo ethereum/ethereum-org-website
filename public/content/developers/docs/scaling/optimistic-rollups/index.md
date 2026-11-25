@@ -128,13 +128,15 @@ The challenger will then choose what assertion it wants to challenge. The dividi
 
 The asserter is required to provide a “one-step proof” verifying the validity of the disputed single-step computation. If the asserter fails to provide the one-step proof, or the L1 verifier deems the proof invalid, they lose the challenge.
 
+<OptimisticRollupDiagram />
+
 Some notes about this type of fraud proof:
 
 1. Multi-round interactive fraud proving is considered efficient because it minimizes the work the L1 chain must do in dispute arbitration. Instead of replaying the entire transaction, the L1 chain only needs to re-execute one step in the rollup's execution.
 
 2. Bisection protocols reduce the amount of data posted onchain (no need to publish state commits for every transaction). Also, optimistic rollup transactions are not constrained by Ethereum's gas limit. Conversely, optimistic rollups re-executing transactions must make sure an L2 transaction has a lower gas limit to emulate its execution within a single Ethereum transaction.
 
-3. Part of the malicious asserter's bond is awarded to the challenger, while the other part is burned. The burning prevents collusion among validators; if two validators collude to initiate bogus challenges, they will still forfeit a considerable chunk of the entire stake.
+3. In some designs, part of the malicious asserter's bond is awarded to the challenger, while the other part is burned. The burning prevents collusion among validators; if two validators collude to initiate bogus challenges, they will still forfeit a considerable chunk of the entire stake.
 
 4. Multi-round interactive proving requires both parties (the asserter and the challenger) to make moves within the specified time window. Failure to act before the deadline expires causes the defaulting party to forfeit the challenge.
 
@@ -263,6 +265,3 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
 
-## Tutorials: Optimistic rollups and bridges on Ethereum {#tutorials}
-
-- [Optimism standard bridge contract walkthrough](/developers/tutorials/optimism-std-bridge-annotated-code/) _– An annotated code walkthrough of the Optimism standard bridge for moving assets between L1 and L2._

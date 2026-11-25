@@ -8,13 +8,22 @@
 import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
-import { GEMINI_TIMEOUT_MS, LLM, MAX_SPLIT_DEPTH } from "../../constants"
+import {
+  GEMINI_TIMEOUT_MS,
+  LLM,
+  LLM_PROVIDER,
+  MAX_PROMPT_BYTES,
+  MAX_SPLIT_DEPTH,
+} from "../../constants"
+import { wrapperTags } from "../shared-patterns"
 import { delay } from "../workflows/utils"
 
 import {
+  applyBlockComments,
   chunkProse,
   type CodeBlock,
   type CodeComment,
+  collectBlockComments,
   extractCodeBlocks,
   extractComments,
   getCommentSyntax,
@@ -23,18 +32,21 @@ import {
   restoreComments,
 } from "./code-block-extractor"
 import { type ContentNode, normalizeContent } from "./content-normalizer"
+import { recordUsage, reserveForCall } from "./cost-meter"
 import {
   chunkJson,
   mergeJsonBatches,
   prepareJsonBatches,
   restoreJsonBatch,
 } from "./json-batcher"
+import { generateViaOpenRouter, type ProviderResponse } from "./openrouter"
 import {
   validateTranslatedJson,
   validateTranslatedMarkdown,
   type ValidationResult,
 } from "./output-validation"
-import { buildTranslationPrompt } from "./prompt-builder"
+import { isIrreducibleChunk } from "./plan"
+import { buildCommentPrompt, buildTranslationPrompt } from "./prompt-builder"
 
 /**
  * Check if the active LLM is available (API key present)
@@ -122,6 +134,12 @@ interface GeminiCallMetadata {
   chunkIndex?: number
   totalChunks?: number
   label?: string
+  /**
+   * This prompt carries one indivisible unit already over the chunk budget, so
+   * the per-call ceiling does not apply -- there is no smaller call to make.
+   * Set from a computed fact, never to silence the guard.
+   */
+  irreducible?: boolean
 }
 
 /**
@@ -289,11 +307,13 @@ async function translateNormalizedMarkdown(
   // Step 6: Build placeholderMap from the normalizer tree
   const placeholderMap = buildPlaceholderMap(tree)
 
-  // Step 7: Reconstruct
-  let finalContent = reconstructFromPlaceholders(translatedProse, extractions)
-
-  // Step 8: Restore heading anchor IDs from English source.
-  finalContent = restoreHeadingIds(finalContent, fileContent)
+  // Steps 7-8: Reconstruct, then restore heading anchor IDs from English.
+  let finalContent = restoreNormalizedMarkdown(
+    translatedProse,
+    extractions,
+    normalized,
+    fileContent
+  )
 
   // Step 9: Translate code comments (from normalizer tree)
   const commentNodes = collectCommentNodes(tree)
@@ -456,7 +476,9 @@ function restoreHeadingIds(translated: string, english: string): string {
     if (inFence) continue
     HEADING_RE.lastIndex = 0
     if (HEADING_RE.test(lines[i]) && !lines[i].includes("{#")) {
-      lines[i] = `${lines[i].trimEnd()} ${englishIds[idIndex]}`
+      // Keep a CRLF source's `\r`: trimEnd() would strip it from this line only.
+      const cr = lines[i].endsWith("\r") ? "\r" : ""
+      lines[i] = `${lines[i].trimEnd()} ${englishIds[idIndex]}${cr}`
       idIndex++
     }
   }
@@ -486,9 +508,9 @@ function verifyPlaceholders(normalized: string, translated: string): string[] {
     }
   }
 
-  // Self-closing CODEBLOCK (true code) and COMPONENT (childless)
+  // Self-closing CODEBLOCK (true code), COMPONENT and HTMLTAG (childless)
   const selfClosingRe =
-    /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT)-[a-f0-9]+ \/>/g
+    /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT|HTMLTAG)-[a-f0-9]+ \/>/g
   while ((match = selfClosingRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -525,7 +547,7 @@ function verifyPlaceholders(normalized: string, translated: string): string[] {
  */
 /** Placeholder TYPE -> the extraction-key prefix used in the extractions Map. */
 type WrapperType = "LINK" | "HTMLTAG" | "COMPONENT" | "CODEBLOCK"
-type SelfClosingType = "CODE" | "IMAGE" | "CODEBLOCK" | "COMPONENT"
+type SelfClosingType = "CODE" | "IMAGE" | "CODEBLOCK" | "COMPONENT" | "HTMLTAG"
 
 /**
  * Rebuild the final markup for a single wrapper extraction, given the
@@ -545,22 +567,19 @@ function rebuildWrapper(
       if (!urlMatch) return null
       return `[${translatedText}](${urlMatch[1]})`
     }
-    case "HTMLTAG": {
-      const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
-      const closingMatch = original.match(/<\/(\w+)>/)
-      if (!tagMatch || !closingMatch) return null
-      return `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
-    }
+    case "HTMLTAG":
     case "COMPONENT": {
-      const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
-      const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
-      if (!openingTagMatch || !closingTagMatch) return null
-      return `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedText}</${closingTagMatch[1]}>`
+      const tags = wrapperTags(original)
+      return tags ? `${tags.open}${translatedText}${tags.close}` : null
     }
     case "CODEBLOCK": {
       const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
       if (!fenceMatch) return null
-      return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedText.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
+      // Drop the blank lines around the body but keep its first line's indent.
+      const body = translatedText
+        .replace(/^(?:[ \t]*\r?\n)+/, "")
+        .replace(/(?:\n[ \t\r]*)+$/, "")
+      return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${body}\n${fenceMatch[1]}${fenceMatch[2]}`
     }
   }
 }
@@ -583,7 +602,8 @@ function rebuildWrapper(
 function recoverPlaceholdersByPosition(
   result: string,
   originalTranslated: string,
-  extractions: Map<string, string>
+  extractions: Map<string, string>,
+  sent: string
 ): string {
   const wrapperTypes: WrapperType[] = [
     "LINK",
@@ -596,8 +616,14 @@ function recoverPlaceholdersByPosition(
     "IMAGE",
     "CODEBLOCK",
     "COMPONENT",
+    "HTMLTAG",
   ]
   let recovered = 0
+
+  // Only tokens the model was sent can be missing from its output; one held
+  // inside another extraction (`<hr />` in inline code) never reached it.
+  const missing = (token: string) =>
+    sent.includes(token) && !originalTranslated.includes(token)
 
   // --- Wrapper recovery (open/close tag pairs) ---
   for (const type of wrapperTypes) {
@@ -610,7 +636,7 @@ function recoverPlaceholdersByPosition(
       if (!key.startsWith(prefix)) return
       const hash = key.slice(prefix.length)
       const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
-      if (!originalTranslated.includes(openTag)) unconsumed.push(original)
+      if (missing(openTag)) unconsumed.push(original)
     })
     if (unconsumed.length === 0) continue
 
@@ -665,8 +691,7 @@ function recoverPlaceholdersByPosition(
       const selfCloseRe = new RegExp(
         `^<HTML-PLACEHOLDER-${type}-([A-Za-z0-9]+) />$`
       )
-      if (!selfCloseRe.test(key)) return
-      if (!originalTranslated.includes(key)) unconsumed.push(original)
+      if (selfCloseRe.test(key) && missing(key)) unconsumed.push(original)
     })
     if (unconsumed.length === 0) continue
 
@@ -696,16 +721,35 @@ function recoverPlaceholdersByPosition(
   return result
 }
 
+/**
+ * Model output for normalized prose -> final markdown: placeholders restored
+ * and English heading IDs reattached. The identity sweep runs this exact path.
+ */
+export function restoreNormalizedMarkdown(
+  translatedProse: string,
+  extractions: Map<string, string>,
+  normalized: string,
+  english: string
+): string {
+  return restoreHeadingIds(
+    reconstructFromPlaceholders(translatedProse, extractions, normalized),
+    english
+  )
+}
+
 function reconstructFromPlaceholders(
   translated: string,
-  extractions: Map<string, string>
+  extractions: Map<string, string>,
+  sent: string
 ): string {
   let result = translated
 
   // Block placeholders: replace ALL occurrences with originals.
   // Content-addressed placeholders can appear multiple times when the
   // same inline code/image appears repeatedly (e.g., `base fee` x5).
-  extractions.forEach((original, placeholder) => {
+  // Reverse insertion order: a later pass can capture an earlier placeholder
+  // (inline code `<hr />` holds an HTMLTAG token), so outer expands first.
+  ;[...extractions].reverse().forEach(([placeholder, original]) => {
     if (
       placeholder.startsWith("LINK:") ||
       placeholder.startsWith("HTMLTAG:") ||
@@ -717,110 +761,90 @@ function reconstructFromPlaceholders(
     result = result.split(placeholder).join(original)
   })
 
-  // Wrapper placeholders: LINK
-  // Loop to handle duplicate content-addressed placeholders (same link text+URL)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("LINK:")) return
-    const hash = key.slice(5)
-    const openTag = `<HTML-PLACEHOLDER-LINK-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-LINK-${hash}>`
-    const urlMatch = original.match(/\]\(([^)]+)\)/)
-    if (!urlMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `[${translatedText}](${urlMatch[1]})`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: HTMLTAG
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("HTMLTAG:")) return
-    const hash = key.slice(8)
-    const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
-    const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
-    const closingMatch = original.match(/<\/(\w+)>/)
-    if (!tagMatch || !closingMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: COMPONENT (components with children)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("COMPONENT:")) return
-    const hash = key.slice(10)
-    const openTag = `<HTML-PLACEHOLDER-COMPONENT-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-COMPONENT-${hash}>`
-    const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
-    const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
-    if (!openingTagMatch || !closingTagMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedChildren = result.slice(
-        openIdx + openTag.length,
-        closeIdx
-      )
-      const rebuilt = `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedChildren}</${closingTagMatch[1]}>`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: CODEBLOCK (prose/markdown fences)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("CODEBLOCK:")) return
-    const hash = key.slice(10)
-    const openTag = `<HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
-    const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
-    if (!fenceMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedContent = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedContent.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
+  // Wrapper placeholders, rebuilt around the translated text between them.
+  // Loop per key: content-addressed duplicates share one hash.
+  for (const type of ["LINK", "HTMLTAG", "COMPONENT", "CODEBLOCK"] as const) {
+    extractions.forEach((original, key) => {
+      if (!key.startsWith(`${type}:`)) return
+      const hash = key.slice(type.length + 1)
+      const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
+      const closeTag = `</HTML-PLACEHOLDER-${type}-${hash}>`
+      let openIdx = result.indexOf(openTag)
+      while (openIdx >= 0) {
+        const closeIdx = result.indexOf(closeTag, openIdx)
+        if (closeIdx < 0) break
+        const rebuilt = rebuildWrapper(
+          type,
+          original,
+          result.slice(openIdx + openTag.length, closeIdx)
+        )
+        if (rebuilt === null) break
+        result =
+          result.slice(0, openIdx) +
+          rebuilt +
+          result.slice(closeIdx + closeTag.length)
+        openIdx = result.indexOf(openTag)
+      }
+    })
+  }
 
   // Final pass: positional fallback for tokens the exact-hash passes could not
   // restore because Gemini corrupted the hash (e.g. -> 000000). Only fires when
   // residual/unconsumed counts match per type; otherwise leaves residuals as-is.
-  result = recoverPlaceholdersByPosition(result, translated, extractions)
+  result = recoverPlaceholdersByPosition(result, translated, extractions, sent)
 
   return result
+}
+
+/**
+ * Translate the comments inside fences the incremental path lifted out, in
+ * place.
+ *
+ * The fence bodies themselves never reach the model, so this is the only way a
+ * code comment gets localized on that path -- without it, retranslating a
+ * section would quietly revert its comments to English. Mirrors the full path's
+ * pass: one small call for the whole file+locale, and non-fatal, because an
+ * English comment is a blemish while a failed task costs the whole file.
+ *
+ */
+export async function translateFenceComments(options: {
+  blocks: CodeBlock[]
+  targetLanguage: string
+  glossaryTerms: Map<string, string>
+  filePath: string
+}): Promise<{ input: number; output: number }> {
+  const { blocks, targetLanguage, glossaryTerms, filePath } = options
+  const noTokens = { input: 0, output: 0 }
+
+  const found = collectBlockComments(blocks)
+  if (found.length === 0) return noTokens
+
+  const prompt = buildCommentPrompt({
+    comments: found.map((f) => f.comment.text),
+    languageName: LANGUAGE_NAMES[targetLanguage] || targetLanguage,
+    glossaryTerms,
+  })
+
+  let translatedMap: Record<string, string>
+  let tokensUsed = noTokens
+  try {
+    const result = await callGeminiRaw(prompt, {
+      filePath,
+      targetLanguage,
+      label: "code-comments",
+    })
+    tokensUsed = result.tokensUsed
+    translatedMap = JSON.parse(stripCodeBlockWrapping(result.text, "json"))
+  } catch (error) {
+    console.warn(
+      `  [comments] ${filePath}: fence comment translation failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+    )
+    return tokensUsed
+  }
+
+  applyBlockComments(found, translatedMap)
+
+  return tokensUsed
 }
 
 /**
@@ -879,22 +903,11 @@ async function translateNormalizedComments(
 ): Promise<string> {
   if (commentNodes.length === 0) return content
 
-  const commentPayload: Record<string, string> = {}
-  for (let i = 0; i < commentNodes.length; i++) {
-    commentPayload[`c${i}`] = commentNodes[i].text
-  }
-
-  const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
-  const glossaryLines: string[] = []
-  glossaryTerms.forEach((loc, en) => glossaryLines.push(`  ${en} = ${loc}`))
-  const glossaryHint =
-    glossaryLines.length > 0
-      ? `\nUse these exact translations for glossary terms:\n${glossaryLines.slice(0, 30).join("\n")}`
-      : ""
-
-  const commentPrompt = `Translate these code comments to ${languageName}. Return ONLY a JSON object with the same keys and translated values. Do not add explanations.${glossaryHint}
-
-${JSON.stringify(commentPayload, null, 2)}`
+  const commentPrompt = buildCommentPrompt({
+    comments: commentNodes.map((n) => n.text),
+    languageName: LANGUAGE_NAMES[targetLanguage] || targetLanguage,
+    glossaryTerms,
+  })
 
   const result = await callGeminiRaw(commentPrompt, {
     filePath,
@@ -915,9 +928,15 @@ ${JSON.stringify(commentPayload, null, 2)}`
   for (let i = 0; i < commentNodes.length; i++) {
     const original = commentNodes[i].text
     const translated = translatedMap[`c${i}`]
-    if (translated && translated !== original) {
+    // typeof: the map came from JSON.parse. Function replacement: a string one
+    // would read `$&` and friends in the comment as replacement patterns.
+    if (
+      typeof translated === "string" &&
+      translated &&
+      translated !== original
+    ) {
       // Replace first occurrence (comments may repeat, handle one at a time)
-      content = content.replace(original, translated)
+      content = content.replace(original, () => translated)
     }
   }
 
@@ -1249,7 +1268,15 @@ async function callGemini(
 
   // Retry loop for validation failures (API call retries are in callGeminiRaw)
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    const result = await callGeminiRaw(prompt, metadata)
+    // chunkProse / chunkJson only exceed MAX_CHUNK_BYTES for a unit they cannot
+    // split (one paragraph, one JSON key). Such a chunk is irreducible: there is
+    // no smaller call to make, so the per-call ceiling does not apply to it.
+    const result = await callGeminiRaw(prompt, {
+      ...metadata,
+      irreducible:
+        metadata?.irreducible ??
+        isIrreducibleChunk(Buffer.byteLength(fileContent, "utf-8")),
+    })
 
     let text = result.text
     text = stripCodeBlockWrapping(text, fileType)
@@ -1257,7 +1284,7 @@ async function callGemini(
     const validation: ValidationResult =
       fileType === "json"
         ? validateTranslatedJson(text, fileContent)
-        : validateTranslatedMarkdown(text, fileContent)
+        : validateTranslatedMarkdown(text, fileContent, targetLanguage)
 
     if (validation.valid) {
       return {
@@ -1295,7 +1322,7 @@ export async function callGeminiRaw(
   prompt: string,
   metadata?: GeminiCallMetadata
 ): Promise<{ text: string; tokensUsed: { input: number; output: number } }> {
-  const client = getGeminiClient()
+  const client = LLM_PROVIDER === "openrouter" ? null : getGeminiClient()
   const verbose = process.env.VERBOSE === "true"
   const ts = () => new Date().toISOString()
 
@@ -1329,6 +1356,31 @@ export async function callGeminiRaw(
       // recitation match (e.g. on our own open-licensed whitepaper content).
       const temperature = attempt === 1 ? 0 : Math.min(0.5 * (attempt - 1), 1)
 
+      // Prompt-size guard first, so a refusal cannot leak a reservation: this
+      // throw leaves the try/catch that would settle it.
+      //
+      // The ceiling refuses prompts we could have made smaller. It does not
+      // refuse content that cannot be split: a single section or chunk already
+      // past the chunk budget is as small as this call gets, and the chunkers
+      // only exceed the budget for such indivisible units. Those are sent at
+      // whatever size they are (metadata.irreducible), while the overhead we
+      // chose to add around them stays bounded by the batching budget.
+      const promptBytes = Buffer.byteLength(prompt, "utf-8")
+      if (!metadata?.irreducible && promptBytes > MAX_PROMPT_BYTES) {
+        throw new Error(
+          `[cost-guard] prompt for ${ctx} is ${promptBytes} bytes, ` +
+            `over the ${MAX_PROMPT_BYTES}-byte ceiling -- refusing to send`
+        )
+      }
+
+      // Spend guard runs before the request, so a runaway call pattern stops at
+      // the cap instead of at the end of the run. The reservation covers this
+      // call while it is in flight -- see reserveForCall.
+      const settleReservation = reserveForCall(
+        `${ctx} (${prompt.length} chars)`,
+        promptBytes
+      )
+
       console.log(
         `[${ts()}] [gemini] REQUEST model=${modelId} ${ctx}${attempt > 1 ? ` attempt=${attempt} temp=${temperature}` : ""}`
       )
@@ -1358,19 +1410,51 @@ export async function callGeminiRaw(
       try {
         const controller = new AbortController()
         const timeout = setTimeout(() => controller.abort(), GEMINI_TIMEOUT_MS)
-        const response = await client.models
-          .generateContent({
-            model: modelId,
-            contents: prompt,
-            config: {
-              temperature,
-              safetySettings: SAFETY_SETTINGS,
-              abortSignal: controller.signal,
-            },
-          })
-          .finally(() => clearTimeout(timeout))
+        const request: Promise<ProviderResponse> =
+          LLM_PROVIDER === "openrouter"
+            ? generateViaOpenRouter({
+                modelId,
+                prompt,
+                temperature,
+                signal: controller.signal,
+              })
+            : (client!.models.generateContent({
+                model: modelId,
+                contents: prompt,
+                config: {
+                  temperature,
+                  safetySettings: SAFETY_SETTINGS,
+                  abortSignal: controller.signal,
+                },
+              }) as unknown as Promise<ProviderResponse>)
+        const response = await request.finally(() => clearTimeout(timeout))
         const usage = response.usageMetadata
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
+
+        // Thinking tokens are billed as output by both providers but reported
+        // differently: OpenRouter folds them into completion_tokens, while the
+        // Gemini SDK keeps them out of candidatesTokenCount and reports them as
+        // thoughtsTokenCount. Normalize to billable output so the meter, the
+        // fuse, and the per-language summary all reflect the invoice.
+        const reasoningTokens =
+          response.reasoningTokens ?? usage?.thoughtsTokenCount ?? 0
+        const visibleOutput = usage?.candidatesTokenCount || 0
+        const billableOutput =
+          LLM_PROVIDER === "openrouter"
+            ? visibleOutput
+            : visibleOutput + reasoningTokens
+
+        // Meter every billed call, including ones that come back blocked or
+        // empty below -- those still charge for the prompt. costUsd is the
+        // provider's own figure when it reports one. Recording replaces this
+        // call's reservation with its real cost.
+        recordUsage(
+          usage?.promptTokenCount || 0,
+          billableOutput,
+          response.costUsd,
+          reasoningTokens
+        )
+        settleReservation(0)
 
         // Inspect response for non-obvious failure modes before accessing .text
         const candidate = (
@@ -1412,7 +1496,18 @@ export async function callGeminiRaw(
           `[${ts()}] [gemini] RESPONSE model=${modelId} ${ctx} ` +
             `duration=${duration}s ` +
             `tokens_in=${usage?.promptTokenCount || 0} ` +
-            `tokens_out=${usage?.candidatesTokenCount || 0}` +
+            // tokens_out is the BILLABLE output on both transports, so the
+            // number means the same thing whichever provider served the call.
+            // reasoning is a subset of it, not an addition: OpenRouter folds
+            // thinking into completion_tokens, and the Gemini branch above adds
+            // thoughtsTokenCount in. Cost triage can read tokens_out alone.
+            `tokens_out=${billableOutput}` +
+            (reasoningTokens
+              ? ` (of which reasoning=${reasoningTokens}, visible=${visibleOutput})`
+              : "") +
+            (response.costUsd != null
+              ? ` cost=$${response.costUsd.toFixed(6)}`
+              : "") +
             (finishReason && finishReason !== "STOP"
               ? ` finishReason=${finishReason}`
               : "")
@@ -1431,10 +1526,11 @@ export async function callGeminiRaw(
           text,
           tokensUsed: {
             input: usage?.promptTokenCount || 0,
-            output: usage?.candidatesTokenCount || 0,
+            output: billableOutput,
           },
         }
       } catch (error) {
+        settleReservation(0)
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
         lastError = error instanceof Error ? error : new Error(String(error))
 

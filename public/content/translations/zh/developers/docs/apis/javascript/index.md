@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3.js 实用函数](https://docs.web3js.org/api/web3-utils)
 - [Ethers 实用函数](https://docs.ethers.org/v6/api/utils/)
 
-## 可用库
+## 可用库 {#available-libraries}
 
 **Web3.js -** **_以太坊 JavaScript API。_**
 

@@ -14,10 +14,9 @@ lang: ja
 
 [イーサリアム](/)ネットワークのすべての参加者が同期された状態を維持し、トランザクションの正確な履歴について合意できるようにするために、トランザクションをブロックにバッチ処理します。これは、数十（または数百）のトランザクションが一度にコミットされ、合意され、同期されることを意味します。
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)から引用した図_
+<BlockStateDiagram />
 
-コミットの間隔を空けることで、すべてのネットワーク参加者がコンセンサスに達するための十分な時間を与えます。トランザクションの要求は1秒間に数十回発生しますが、イーサリアムでブロックが作成およびコミットされるのは12秒に1回だけです。
+コミットの間隔を空けることで、すべてのネットワーク参加者がコンセンサスに達するのに十分な時間を与えます。トランザクション要求は1秒間に数十回発生しますが、イーサリアムではブロックは12秒に1回だけ作成され、コミットされます。
 
 ## ブロックの仕組み {#how-blocks-work}
 
@@ -151,3 +150,5 @@ _役に立ったコミュニティリソースをご存知ですか？このペ�
 - [トランザクション](/developers/docs/transactions/)
 - [ガス](/developers/docs/gas/)
 - [プルーフ・オブ・ステーク (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

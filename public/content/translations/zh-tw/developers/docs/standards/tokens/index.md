@@ -29,7 +29,7 @@ incomplete: true
 
 [ERC](https://eips.ethereum.org/erc) 提案的完整清單。
 
-## 延伸閱讀
+## 延伸閱讀 {#further-reading}
 
 _知道對您有幫助的社群資源嗎？編輯此頁面並加入它！_
 

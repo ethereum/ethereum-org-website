@@ -175,7 +175,7 @@ ERC-20తో ఈ సమస్యను పూర్తిగా నివార�
 - [ఓపెన్‌జెప్పెలిన్ - ERC-20 అమలు](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 టోకెన్‌లకు గైడ్](https://www.alchemy.com/overviews/erc20-solidity)
 
-## ఇతర ఫంజిబుల్ టోకెన్ ప్రమాణాలు
+## ఇతర ఫంజిబుల్ టోకెన్ ప్రమాణాలు {#fungible-token-standards}
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)

@@ -87,62 +87,11 @@ If the comment contains a deploy log URL (e.g., `https://app.netlify.com/sites/.
 
 ## Phase 4: Analyze Errors
 
-Parse the build logs to identify error types.
-
-### Common Error Patterns
-
-**TypeScript Errors:**
-```
-error TS\d+: .+
-Type '.+' is not assignable to type '.+'
-Property '.+' does not exist on type '.+'
-Cannot find name '.+'
-```
-
-**ESLint Errors:**
-```
-\d+:\d+\s+error\s+.+eslint
-```
-
-**Next.js Build Errors:**
-```
-Error: .+ in .+
-Failed to compile
-Build optimization failed
-Module not found: Can't resolve
-```
-
-**Import/Export Errors:**
-```
-Cannot find module '.+'
-Module not found
-Export '.+' was not found in '.+'
-```
-
-**Translation/i18n Errors (common in translation PRs):**
-```
-SyntaxError: .+ in JSON
-Unexpected token
-Missing required key
-Invalid message format
-```
-
-**MDX/Markdown Errors:**
-```
-Error compiling MDX
-Could not parse expression
-Unexpected end of file
-```
-
-For each error found, extract:
-- File path
-- Line number (if available)
-- Error message
-- Error type/category
+Parse the build logs. For each error, extract file path, line number (if available), message, and category (TypeScript, ESLint, MDX/markdown, JSON/i18n, module resolution, Next.js build).
 
 ## Phase 5: Propose Fixes
 
-For each identified error, read the relevant file from the PR branch and propose a fix.
+For each identified error, read the relevant file from the PR branch and propose a fix with the current code, the fixed code, and why it fixes the error.
 
 ### Reading Files from PR Branch
 
@@ -160,65 +109,6 @@ fi
 
 Then read files from `$WORKTREE_PATH/{file_path}`.
 
-### Fix Proposal Format
-
-Present fixes in this format:
-
-```markdown
-## Build Error Analysis
-
-**PR:** #{PR_NUMBER}
-**Failed Check:** {CHECK_NAME}
-**Errors Found:** {COUNT}
-
----
-
-### Error 1: {ERROR_TYPE}
-
-**File:** `{FILE_PATH}:{LINE_NUMBER}`
-**Message:** {ERROR_MESSAGE}
-
-**Current code:**
-```{lang}
-{CURRENT_CODE_SNIPPET}
-```
-
-**Proposed fix:**
-```{lang}
-{FIXED_CODE_SNIPPET}
-```
-
-**Explanation:** {WHY_THIS_FIXES_IT}
-
----
-
-(Repeat for each error)
-```
-
-### Error Categories & Fix Strategies
-
-**TypeScript type errors:**
-- Read the file and surrounding context
-- Check type definitions in the codebase (`src/lib/types.ts`, etc.)
-- Propose type corrections or proper type assertions
-
-**Missing imports:**
-- Search codebase for the export using Grep
-- Propose correct import path
-
-**Invalid JSON (common in translations):**
-- Read the JSON file
-- Identify syntax errors (trailing commas, missing quotes, unescaped characters)
-- Propose corrected JSON
-
-**Module not found:**
-- Check if file exists at expected path
-- Suggest correct path or check if dependency needs installing
-
-**MDX compilation errors:**
-- Check for malformed JSX, unclosed tags, or invalid expressions
-- Propose syntax corrections
-
 ## Phase 6: Present Results
 
 After analyzing errors, use AskUserQuestion to present options:
@@ -228,7 +118,7 @@ After analyzing errors, use AskUserQuestion to present options:
 **Options:**
 1. **Show all fixes** - Display detailed fix proposals for review
 2. **Focus on first error** - Work through errors one at a time with full context
-3. **Export report** - Save analysis to `build-errors-{PR_NUMBER}.md`
+3. **Export report** - Save analysis to a temp directory outside the repo (e.g. `$TMPDIR/build-errors-{PR_NUMBER}.md`), never the repo root
 4. **Done** - End session (apply fixes manually or ask Claude separately)
 
 ## Notes

@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "zh-tw",
-  "translatedAt": "2026-06-17T21:59:33.100Z",
-  "englishManifestHash": "b925b639105f",
+  "translatedAt": "2026-10-15T03:59:42.534Z",
+  "englishManifestHash": "c156e12b98a8",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-d1b8fd",
@@ -14,11 +14,11 @@
     "LINK-7d57b0",
     "LINK-ea844a",
     "LINK-9a26ee",
-    "LINK-ad0f71",
     "LINK-c43374",
     "LINK-672bc2",
     "LINK-9bc568",
     "LINK-98c91a",
+    "LINK-e00b3a",
     "LINK-df7e92",
     "LINK-cd7eb4",
     "LINK-97e3e6",
@@ -29,6 +29,7 @@
     "LINK-e599c3",
     "LINK-6c0137",
     "LINK-4d8bbc",
+    "LINK-25fb9e",
     "LINK-b0ae41",
     "LINK-fdb772",
     "LINK-735210",
@@ -49,6 +50,7 @@
     "LINK-be6819",
     "LINK-44369c",
     "LINK-41a394",
+    "LINK-66cc34",
     "LINK-380a58",
     "LINK-12c146",
     "LINK-e29f43",
@@ -56,7 +58,8 @@
     "LINK-50ec77",
     "LINK-2b65b8",
     "LINK-cafe65",
-    "LINK-90de9c",
+    "LINK-1b48cf",
+    "LINK-acb6f2",
     "LINK-ab0b90",
     "LINK-8a700e",
     "LINK-1f472a",
@@ -129,12 +132,6 @@
         "url": "https://faucet.chainstack.com/sepolia-testnet-faucet"
       }
     },
-    "LINK-ad0f71": {
-      "type": "link",
-      "values": {
-        "url": "https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia"
-      }
-    },
     "LINK-c43374": {
       "type": "link",
       "values": {
@@ -157,6 +154,12 @@
       "type": "link",
       "values": {
         "url": "https://www.infura.io/faucet"
+      }
+    },
+    "LINK-e00b3a": {
+      "type": "link",
+      "values": {
+        "url": "https://openfaucet.org/ethereum-sepolia"
       }
     },
     "LINK-df7e92": {
@@ -217,6 +220,12 @@
       "type": "link",
       "values": {
         "url": "https://hoodi.ethpandaops.io/"
+      }
+    },
+    "LINK-25fb9e": {
+      "type": "link",
+      "values": {
+        "url": "https://openfaucet.org/ethereum-hoodi"
       }
     },
     "LINK-b0ae41": {
@@ -339,6 +348,12 @@
         "url": "https://ethfaucet.com/networks/arbitrum"
       }
     },
+    "LINK-66cc34": {
+      "type": "link",
+      "values": {
+        "url": "https://openfaucet.org/arbitrum-sepolia"
+      }
+    },
     "LINK-380a58": {
       "type": "link",
       "values": {
@@ -381,10 +396,16 @@
         "url": "https://ethfaucet.com/networks/optimism"
       }
     },
-    "LINK-90de9c": {
+    "LINK-1b48cf": {
       "type": "link",
       "values": {
-        "url": "https://docs.optimism.io/builders/tools/build/faucets"
+        "url": "https://openfaucet.org/optimism-sepolia"
+      }
+    },
+    "LINK-acb6f2": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.optimism.io/app-developers/tools/faucets"
       }
     },
     "LINK-ab0b90": {
@@ -450,7 +471,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T21:59:33.100Z",
+      "translatedAt": "2026-10-15T03:59:42.534Z",
       "status": "success"
     }
   }

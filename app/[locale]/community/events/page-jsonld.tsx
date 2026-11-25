@@ -10,6 +10,7 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { communityHubSchemas } from "@/data/community-hub-schemas"
 import communityHubs from "@/data/community-hubs"
 
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
@@ -72,7 +73,7 @@ function buildHubSchemaNodes(
     startDate:
       schema.schedule.startDate ?? new Date().toISOString().split("T")[0],
     isAccessibleForFree: true,
-    url: hub.coworkingSignupUrl,
+    url: hub.coworkingSignupUrl ?? hub.meetupUrl,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     organizer: REFERENCE.ETHEREUM_FOUNDATION,
@@ -105,7 +106,6 @@ export default async function EventsJsonLD({
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-community-events")
-  const common = await getTranslations("common")
 
   const year = getLocaleYear(locale)
   const url = normalizeUrlForJsonLd(locale, `/community/events/`)
@@ -134,29 +134,7 @@ export default async function EventsJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Community",
-              item: normalizeUrlForJsonLd(locale, "/community/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: common("events"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "community/events"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#sections` },

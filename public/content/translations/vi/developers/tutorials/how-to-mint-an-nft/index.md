@@ -1,6 +1,6 @@
 ---
 title: "Cách đúc một NFT (Phần 2/3 của Chuỗi hướng dẫn về NFT)"
-description: "Hướng dẫn này mô tả cách đúc một NFT trên chuỗi khối Ethereum bằng cách sử dụng hợp đồng thông minh của chúng tôi và Web3."
+description: "Hướng dẫn này mô tả cách đúc một token không thể thay thế (NFT) trên Chuỗi khối Ethereum bằng cách sử dụng hợp đồng thông minh của chúng tôi, Hardhat và ethers.js."
 author: "Sumi Mudgil"
 tags: ["ERC-721", "Alchemy", "Solidity", "hợp đồng thông minh"]
 skill: beginner
@@ -9,79 +9,55 @@ lang: vi
 published: 2021-04-22
 ---
 
-[Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 triệu USD
-[3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 triệu USD
-[Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 triệu USD
-
-Tất cả họ đều đúc NFT của mình bằng cách sử dụng API mạnh mẽ của Alchemy. Trong hướng dẫn này, chúng tôi sẽ chỉ cho bạn cách làm điều tương tự trong \<10 phút.
-
-"Việc đúc một NFT" là hành động xuất bản một phiên bản duy nhất của token ERC-721 của bạn lên chuỗi khối. Sử dụng hợp đồng thông minh của chúng tôi từ [Phần 1 của chuỗi hướng dẫn về NFT này](/developers/tutorials/how-to-write-and-deploy-an-nft/), hãy cùng thể hiện kỹ năng Web3 của chúng ta và đúc một NFT. Vào cuối hướng dẫn này, bạn sẽ có thể đúc bao nhiêu NFT tùy thích (và tùy theo ví của bạn)!
+“Việc đúc một token không thể thay thế (NFT)” là hành động xuất bản một phiên bản duy nhất của token ERC-721 của bạn trên Chuỗi khối. Sử dụng hợp đồng thông minh của chúng tôi từ [Phần 1 của chuỗi hướng dẫn về NFT này](/developers/tutorials/how-to-write-and-deploy-an-nft/), hãy cùng thể hiện các kỹ năng Web3 của chúng ta và đúc một NFT. Vào cuối hướng dẫn này, bạn sẽ có thể đúc bao nhiêu NFT tùy theo mong muốn của bạn (và Ví của bạn)!
 
 Hãy cùng bắt đầu nào!
 
-## Bước 1: Cài đặt Web3 {#install-web3}
+## Bước 1: Kiểm tra thiết lập của bạn {#install-web3}
 
-Nếu bạn đã làm theo hướng dẫn đầu tiên về cách tạo hợp đồng thông minh NFT của mình, bạn đã có kinh nghiệm sử dụng Ethers.js. Web3 tương tự như Ethers, vì nó là một thư viện được sử dụng để giúp việc tạo các yêu cầu đến chuỗi khối [Ethereum](/) trở nên dễ dàng hơn. Trong hướng dẫn này, chúng ta sẽ sử dụng [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3), đây là một thư viện Web3 nâng cao cung cấp tính năng tự động thử lại và hỗ trợ WebSocket mạnh mẽ.
+Nếu bạn đã làm theo hướng dẫn đầu tiên về việc tạo hợp đồng thông minh cho token không thể thay thế (NFT) của mình, bạn đã có mọi thứ mình cần: một dự án Hardhat 3 với [plugin Ethers](https://hardhat.org/docs/plugins/hardhat-ethers) và [ethers.js](https://docs.ethers.org/v6/), một Thư viện được sử dụng để giúp việc tạo các yêu cầu tới Chuỗi khối [Ethereum](/) trở nên dễ dàng hơn. Chúng ta sẽ viết mã cho việc đúc của mình dưới dạng một tập lệnh Hardhat, vì vậy nó sẽ sử dụng lại các cài đặt mạng lưới Sepolia và các giá trị `API_URL` và `PRIVATE_KEY` từ Phần 1 — không có gì mới để cài đặt.
 
-Trong thư mục gốc của dự án, hãy chạy:
-
-```
-npm install @alch/alchemy-web3
-```
-
-## Bước 2: Tạo một tệp `mint-nft.js` {#create-mintnftjs}
+## Bước 2: Tạo tệp `mint-nft.js` {#create-mintnftjs}
 
 Bên trong thư mục scripts của bạn, hãy tạo một tệp `mint-nft.js` và thêm các dòng mã sau:
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+import { network } from "hardhat"
+
+const { ethers } = await network.create()
 ```
+
+Giống như trong tập lệnh triển khai của chúng ta, `network.create()` kết nối với mạng lưới mà bạn chọn bằng `--network` khi bạn chạy tập lệnh, và cung cấp cho chúng ta một đối tượng `ethers` cho mạng lưới đó.
 
 ## Bước 3: Lấy ABI hợp đồng của bạn {#contract-abi}
 
-ABI (Giao diện nhị phân ứng dụng) hợp đồng của chúng ta là giao diện để tương tác với hợp đồng thông minh của chúng ta. Bạn có thể tìm hiểu thêm về [ABI hợp đồng](/glossary/#abi). Hardhat tự động tạo một ABI cho chúng ta và lưu nó trong tệp `MyNFT.json`. Để sử dụng nó, chúng ta sẽ cần phân tích cú pháp nội dung bằng cách thêm các dòng mã sau vào tệp `mint-nft.js` của chúng ta:
+Giao diện nhị phân ứng dụng (ABI) hợp đồng của chúng ta là giao diện để tương tác với hợp đồng thông minh của chúng ta. Bạn có thể tìm hiểu thêm về [ABI hợp đồng](/glossary/#abi). Hardhat tự động tạo một ABI cho chúng ta khi nó biên dịch hợp đồng và lưu nó trong tệp `artifacts/contracts/MyNFT.sol/MyNFT.json`. Plugin Hardhat Ethers đọc nó từ đó cho chúng ta khi chúng ta tạo phiên bản hợp đồng của mình ở bước 5, vì vậy chúng ta không cần phải tự tải nó.
 
-```js
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
+Nếu bạn muốn xem ABI, bạn có thể in nó ra bảng điều khiển của mình. Từ thư mục gốc của dự án của bạn, hãy chạy:
+
+```sh
+node -p "JSON.stringify(require('./artifacts/contracts/MyNFT.sol/MyNFT.json').abi)"
 ```
 
-Nếu bạn muốn xem ABI, bạn có thể in nó ra bảng điều khiển (console) của mình:
-
-```js
-console.log(JSON.stringify(contract.abi))
-```
-
-Để chạy `mint-nft.js` và xem ABI của bạn được in ra bảng điều khiển, hãy điều hướng đến terminal của bạn và chạy:
-
-```js
-node scripts/mint-nft.js
-```
 ## Bước 4: Cấu hình siêu dữ liệu cho NFT của bạn bằng IPFS {#config-meta}
 
-Nếu bạn còn nhớ từ hướng dẫn của chúng ta trong Phần 1, hàm hợp đồng thông minh `mintNFT` của chúng ta nhận vào một tham số tokenURI sẽ phân giải thành một tài liệu JSON mô tả siêu dữ liệu của NFT — đây thực sự là thứ mang lại sức sống cho NFT, cho phép nó có các thuộc tính có thể cấu hình, chẳng hạn như tên, mô tả, hình ảnh và các thuộc tính khác.
+Nếu bạn còn nhớ từ hướng dẫn của chúng ta trong Phần 1, hàm hợp đồng thông minh `mintNFT` của chúng ta nhận vào một tham số tokenURI sẽ phân giải thành một tài liệu JSON mô tả siêu dữ liệu của token không thể thay thế (NFT)— đây thực sự là thứ mang lại sức sống cho NFT, cho phép nó có các thuộc tính có thể cấu hình, chẳng hạn như tên, mô tả, hình ảnh và các thuộc tính khác.
 
-> _Hệ thống tệp liên hành tinh (IPFS) là một giao thức phi tập trung và mạng lưới ngang hàng để lưu trữ và chia sẻ dữ liệu trong một hệ thống tệp phân tán._
+> _Hệ thống tệp liên hành tinh (IPFS) là một Giao thức phi tập trung và mạng lưới ngang hàng để lưu trữ và chia sẻ dữ liệu trong một hệ thống tệp phân tán._
 
-Chúng ta sẽ sử dụng Pinata, một API và bộ công cụ IPFS tiện lợi, để lưu trữ tài sản và siêu dữ liệu NFT của chúng ta nhằm đảm bảo NFT của chúng ta thực sự phi tập trung. Nếu bạn chưa có tài khoản Pinata, hãy đăng ký một tài khoản miễn phí [tại đây](https://app.pinata.cloud) và hoàn thành các bước để xác minh email của bạn.
+Chúng ta sẽ sử dụng Pinata, một Giao diện Lập trình Ứng dụng (API) IPFS và bộ công cụ tiện lợi, để lưu trữ tài sản và siêu dữ liệu NFT của chúng ta nhằm đảm bảo NFT của chúng ta thực sự phi tập trung. Nếu bạn chưa có Tài khoản Pinata, hãy đăng ký một Tài khoản miễn phí [tại đây](https://app.pinata.cloud) và hoàn thành các bước để xác minh email của bạn.
 
-Sau khi bạn đã tạo tài khoản:
+Sau khi bạn đã tạo một Tài khoản:
 
-- Điều hướng đến trang "Files" và nhấp vào nút "Upload" màu xanh lam ở trên cùng bên trái của trang.
+- Điều hướng đến [trang Files](https://app.pinata.cloud/ipfs/files) và nhấp vào nút "Add" ở góc trên cùng bên phải của trang.
 
-- Tải một hình ảnh lên Pinata — đây sẽ là tài sản hình ảnh cho NFT của bạn. Bạn có thể thoải mái đặt tên cho tài sản theo ý muốn
+- Tải một hình ảnh lên Pinata — đây sẽ là tài sản hình ảnh cho NFT của bạn. Hãy thoải mái đặt tên cho tài sản theo bất kỳ cách nào bạn muốn. Đảm bảo bạn tải nó lên IPFS công khai: các tệp trên [Private IPFS](https://docs.pinata.cloud/files/private-ipfs) không thể được lấy bởi các Ví và thị trường hiển thị NFT của bạn.
 
-- Sau khi tải lên, bạn sẽ thấy thông tin tệp trong bảng trên trang "Files". Bạn cũng sẽ thấy một cột CID. Bạn có thể sao chép CID bằng cách nhấp vào nút sao chép bên cạnh nó. Bạn có thể xem tệp tải lên của mình tại: `https://gateway.pinata.cloud/ipfs/<CID>`. Ví dụ, bạn có thể tìm thấy hình ảnh chúng tôi đã sử dụng trên IPFS [tại đây](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5).
+- Sau khi tải lên, bạn sẽ thấy tệp được liệt kê trên trang Files cùng với CID (mã định danh nội dung) của nó. Sao chép CID. Bạn có thể xem tệp tải lên của mình tại: `https://gateway.pinata.cloud/ipfs/<CID>`, hoặc thông qua cổng chuyên dụng được liệt kê dưới mục "Gateways" trong thanh bên của Pinata. Ví dụ, bạn có thể tìm thấy hình ảnh chúng tôi đã sử dụng trên IPFS [tại đây](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5).
 
-Đối với những người học trực quan hơn, các bước trên được tóm tắt tại đây:
+Bây giờ, chúng ta sẽ muốn tải lên một tài liệu nữa lên Pinata. Nhưng trước khi làm điều đó, chúng ta cần tạo nó!
 
-![How to upload your image to Pinata](./instructionsPinata.mp4#712x376)
-
-Bây giờ, chúng ta sẽ muốn tải thêm một tài liệu nữa lên Pinata. Nhưng trước khi làm điều đó, chúng ta cần tạo nó!
-
-Trong thư mục gốc của bạn, hãy tạo một tệp mới có tên là `nft-metadata.json` và thêm mã json sau:
+Trong thư mục gốc của bạn, hãy tạo một tệp mới có tên `nft-metadata.json` và thêm mã json sau:
 
 ```json
 {
@@ -101,226 +77,151 @@ Trong thư mục gốc của bạn, hãy tạo một tệp mới có tên là `n
 }
 ```
 
-Bạn có thể thoải mái thay đổi dữ liệu trong json. Bạn có thể xóa hoặc thêm vào phần thuộc tính (attributes). Quan trọng nhất, hãy đảm bảo trường hình ảnh (image) trỏ đến vị trí hình ảnh IPFS của bạn — nếu không, NFT của bạn sẽ bao gồm một bức ảnh của một chú chó (rất dễ thương!).
+Hãy thoải mái thay đổi dữ liệu trong json. Bạn có thể xóa hoặc thêm vào phần thuộc tính. Quan trọng nhất, hãy đảm bảo trường hình ảnh trỏ đến vị trí hình ảnh IPFS của bạn, dưới dạng `ipfs://<image-CID>` — nếu không, NFT của bạn sẽ bao gồm một bức ảnh của một chú chó (rất dễ thương!).
 
-Sau khi bạn chỉnh sửa xong tệp JSON, hãy lưu nó và tải lên Pinata, làm theo các bước tương tự như chúng ta đã làm để tải hình ảnh lên.
+Khi bạn đã chỉnh sửa xong tệp JSON, hãy lưu nó và tải nó lên Pinata, làm theo các bước tương tự như chúng ta đã làm để tải hình ảnh lên. Sao chép cả CID của `nft-metadata.json`; chúng ta sẽ cần nó ở bước 9.
 
-![How to upload your nft-metadata.json to Pinata](./uploadPinata.mp4#1280x676)
+## Bước 5: Tạo một phiên bản hợp đồng của bạn {#instance-contract}
 
-## Bước 5: Tạo một phiên bản của hợp đồng của bạn {#instance-contract}
+Bây giờ, để tương tác với hợp đồng của chúng ta, chúng ta cần tạo một phiên bản của nó trong mã của mình. Để làm như vậy, chúng ta sẽ cần Địa chỉ hợp đồng của mình, mà tập lệnh triển khai của chúng ta đã in ra trong Phần 1. Bạn cũng có thể tìm thấy nó trên [Etherscan](https://sepolia.etherscan.io/) hoặc [Blockscout](https://eth-sepolia.blockscout.com/) bằng cách tra cứu Địa chỉ mà bạn đã sử dụng để triển khai hợp đồng.
 
-Bây giờ, để tương tác với hợp đồng của chúng ta, chúng ta cần tạo một phiên bản của nó trong mã của mình. Để làm như vậy, chúng ta sẽ cần địa chỉ hợp đồng mà chúng ta có thể lấy từ việc triển khai hoặc [Blockscout](https://eth-sepolia.blockscout.com/) bằng cách tra cứu địa chỉ bạn đã sử dụng để triển khai hợp đồng.
+![Xem Địa chỉ hợp đồng của bạn trên Etherscan](./view-contract-etherscan.png)
 
-![View your contract address on Etherscan](./view-contract-etherscan.png)
+Trong ví dụ trên, Địa chỉ hợp đồng của chúng ta là 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
-Trong ví dụ trên, địa chỉ hợp đồng của chúng ta là 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
-
-Tiếp theo, chúng ta sẽ sử dụng [phương thức hợp đồng](https://docs.web3js.org/api/web3-eth-contract/class/Contract) của Web3 để tạo hợp đồng của chúng ta bằng cách sử dụng ABI và địa chỉ. Trong tệp `mint-nft.js` của bạn, hãy thêm đoạn sau:
+Tiếp theo, chúng ta sẽ sử dụng phương thức `getContractAt` của plugin Hardhat Ethers để tạo hợp đồng của chúng ta bằng cách sử dụng tên của nó (cho nó biết nên sử dụng Giao diện nhị phân ứng dụng (ABI) nào) và Địa chỉ của nó. Trong tệp `mint-nft.js` của bạn, hãy thêm phần sau, thay thế Địa chỉ bằng Địa chỉ của riêng bạn:
 
 ```js
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 ```
 
-## Bước 6: Cập nhật tệp `.env` {#update-env}
+## Bước 6: Kiểm tra tệp `.env` {#update-env}
 
-Bây giờ, để tạo và gửi các giao dịch đến chuỗi Ethereum, chúng ta sẽ sử dụng địa chỉ tài khoản Ethereum công khai của bạn để lấy nonce của tài khoản (sẽ giải thích bên dưới).
+Mỗi giao dịch mà chúng ta gửi phải được ký bằng khóa riêng tư của Tài khoản của bạn. Nếu bạn đã hoàn thành phần 1 của hướng dẫn, tệp `.env` của chúng ta sẽ trông giống như thế này:
 
-Thêm khóa công khai của bạn vào tệp `.env` của bạn — nếu bạn đã hoàn thành phần 1 của hướng dẫn, tệp `.env` của chúng ta bây giờ sẽ trông như thế này:
-
-```js
-API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
-PRIVATE_KEY = "your-private-account-address"
-PUBLIC_KEY = "your-public-account-address"
+```text
+API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
+PRIVATE_KEY="your-metamask-private-key"
 ```
+
+Không cần phải thêm Địa chỉ công khai của bạn: ethers sẽ tự tính toán nó từ khóa riêng tư.
 
 ## Bước 7: Tạo giao dịch của bạn {#create-txn}
 
-Đầu tiên, hãy định nghĩa một hàm có tên là `mintNFT(tokenData)` và tạo giao dịch của chúng ta bằng cách thực hiện các bước sau:
+Đầu tiên, hãy định nghĩa một hàm có tên `mintNFT(tokenURI)` và tạo giao dịch của chúng ta bằng cách thực hiện những việc sau:
 
-1. Lấy _PRIVATE_KEY_ và _PUBLIC_KEY_ của bạn từ tệp `.env`.
+1. Lấy Tài khoản mà chúng ta gửi giao dịch từ đó. `ethers.getSigners()` trả về các Tài khoản được cấu hình cho mạng lưới, trên Sepolia là Tài khoản có khóa riêng tư nằm trong `.env`. Vì `mintNFT` là `onlyOwner`, đây phải là cùng một Tài khoản đã triển khai hợp đồng.
 
-1. Tiếp theo, chúng ta sẽ cần tìm ra nonce của tài khoản. Đặc tả nonce được sử dụng để theo dõi số lượng giao dịch được gửi từ địa chỉ của bạn — điều mà chúng ta cần cho mục đích bảo mật và để ngăn chặn các cuộc tấn công phát lại (replay attack). Để lấy số lượng giao dịch được gửi từ địa chỉ của bạn, chúng ta sử dụng [getTransactionCount](https://www.alchemy.com/docs/chains/ethereum/ethereum-api-endpoints/eth-get-transaction-count).
+1. Gọi hàm `mintNFT` trên phiên bản hợp đồng của chúng ta, với Địa chỉ của chính chúng ta làm người nhận và URI siêu dữ liệu. Đây là phép tính mà chúng ta muốn thực hiện trong giao dịch này — trong trường hợp này là việc đúc một token không thể thay thế (NFT).
 
-1. Cuối cùng, chúng ta sẽ thiết lập giao dịch của mình với các thông tin sau:
+Bạn không cần phải tự tính toán nonce (số lượng giao dịch được gửi từ Địa chỉ của bạn, giúp ngăn chặn các cuộc tấn công phát lại), giới hạn gas, hoặc các khoản phí: ethers sẽ lấy hoặc ước tính chúng trước khi gửi giao dịch.
 
-- `'from': PUBLIC_KEY` — Nguồn gốc giao dịch của chúng ta là địa chỉ công khai của chúng ta
-
-- `'to': contractAddress` — Hợp đồng mà chúng ta muốn tương tác và gửi giao dịch đến
-
-- `'nonce': nonce` — Nonce của tài khoản với số lượng giao dịch được gửi từ địa chỉ của chúng ta
-
-- `'gas': estimatedGas` — Lượng Gas ước tính cần thiết để hoàn thành giao dịch
-
-- `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Phép tính mà chúng ta muốn thực hiện trong giao dịch này — trong trường hợp này là đúc một NFT
-
-Tệp `mint-nft.js` của bạn bây giờ sẽ trông như thế này:
+Tệp `mint-nft.js` của bạn bây giờ sẽ trông giống như thế này:
 
 ```js
-   require('dotenv').config();
-   const API_URL = process.env.API_URL;
-   const PUBLIC_KEY = process.env.PUBLIC_KEY;
-   const PRIVATE_KEY = process.env.PRIVATE_KEY;
+import { network } from "hardhat"
 
-   const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-   const web3 = createAlchemyWeb3(API_URL);
+const { ethers } = await network.create()
 
-   const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-   const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778";
-   const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
-
-   async function mintNFT(tokenURI) {
-     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //lấy nonce mới nhất
-
-   //giao dịch
-     const tx = {
-       'from': PUBLIC_KEY,
-       'to': contractAddress,
-       'nonce': nonce,
-       'gas': 500000,
-       'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
-     };
-   }​
-```
-## Bước 8: Ký giao dịch {#sign-txn}
-
-Bây giờ chúng ta đã tạo giao dịch của mình, chúng ta cần ký nó để gửi đi. Đây là lúc chúng ta sẽ sử dụng khóa riêng tư của mình.
-
-`web3.eth.sendSignedTransaction` sẽ cung cấp cho chúng ta mã băm giao dịch, mà chúng ta có thể sử dụng để đảm bảo giao dịch của mình đã được khai thác và không bị mạng lưới loại bỏ. Bạn sẽ nhận thấy trong phần ký giao dịch, chúng tôi đã thêm một số kiểm tra lỗi để chúng ta biết liệu giao dịch của mình có được thực hiện thành công hay không.
-
-```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
-
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
-
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //lấy nonce mới nhất
+  const [signer] = await ethers.getSigners()
 
-  //giao dịch
-  const tx = {
-    from: PUBLIC_KEY,
-    to: contractAddress,
-    nonce: nonce,
-    gas: 500000,
-    data: nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
-  }
-
-  const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
-  signPromise
-    .then((signedTx) => {
-      web3.eth.sendSignedTransaction(
-        signedTx.rawTransaction,
-        function (err, hash) {
-          if (!err) {
-            console.log(
-              "The hash of your transaction is: ",
-              hash,
-              "\nCheck Alchemy's Mempool to view the status of your transaction!"
-            )
-          } else {
-            console.log(
-              "Something went wrong when submitting your transaction:",
-              err
-            )
-          }
-        }
-      )
-    })
-    .catch((err) => {
-      console.log(" Promise failed:", err)
-    })
+  // Gửi giao dịch. ethers sẽ điền nonce, giới hạn gas và phí cho chúng ta.
+  const tx = await nftContract.mintNFT(signer.address, tokenURI)
 }
 ```
 
-## Bước 9: Gọi `mintNFT` và chạy node `mint-nft.js` {#call-mintnft-fn}
+## Bước 8: Ký giao dịch {#sign-txn}
 
-Bạn còn nhớ `metadata.json` mà bạn đã tải lên Pinata không? Lấy mã băm của nó từ Pinata và truyền đoạn sau làm tham số cho hàm `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
+Bởi vì mạng lưới được cấu hình với khóa riêng tư của chúng ta, ethers sẽ tự động ký giao dịch bằng khóa đó trước khi gửi nó.
 
-Dưới đây là cách lấy mã băm:
+Việc gọi `mintNFT` sẽ trả về kết quả sau khi giao dịch đã được gửi, và cung cấp cho chúng ta mã băm giao dịch, mà chúng ta có thể sử dụng để đảm bảo giao dịch của mình đã được khai thác và không bị mạng lưới loại bỏ. `tx.wait()` sau đó sẽ đợi cho đến khi giao dịch được đưa vào một khối. Chúng tôi cũng đã thêm một số kiểm tra lỗi để chúng ta biết liệu giao dịch của mình có được thực hiện thành công hay không.
 
-![How to get your nft metadata hashcode on Pinata](./metadataPinata.gif)_Cách lấy mã băm siêu dữ liệu nft của bạn trên Pinata_
+```js
+import { network } from "hardhat"
 
-> Kiểm tra kỹ xem mã băm bạn đã sao chép có liên kết đến **metadata.json** của bạn hay không bằng cách tải `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` vào một cửa sổ riêng. Trang sẽ trông giống như ảnh chụp màn hình bên dưới:
+const { ethers } = await network.create()
 
-![Your page should display the json metadata](./metadataJSON.png)_Trang của bạn sẽ hiển thị siêu dữ liệu json_
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
+
+async function mintNFT(tokenURI) {
+  const [signer] = await ethers.getSigners()
+
+  try {
+    // Gửi giao dịch. ethers sẽ điền nonce, giới hạn gas và phí cho chúng ta.
+    const tx = await nftContract.mintNFT(signer.address, tokenURI)
+    console.log("The hash of your transaction is:", tx.hash)
+
+    // Đợi giao dịch được đưa vào một khối
+    const receipt = await tx.wait()
+    console.log("Your NFT was minted in block", receipt.blockNumber)
+  } catch (err) {
+    console.log("Something went wrong when submitting your transaction:", err)
+  }
+}
+```
+
+## Bước 9: Gọi `mintNFT` và chạy `mint-nft.js` {#call-mintnft-fn}
+
+Bạn còn nhớ `nft-metadata.json` mà bạn đã tải lên Pinata không? Lấy CID của nó từ Pinata và truyền `ipfs://<metadata-CID>` làm tham số cho hàm `mintNFT`. Các Ví và thị trường phân giải các URI `ipfs://` thông qua một cổng IPFS mà họ chọn, vì vậy token không thể thay thế (NFT) của bạn không phụ thuộc vào bất kỳ cổng đơn lẻ nào.
+
+> Kiểm tra kỹ xem CID mà bạn đã sao chép có liên kết đến **nft-metadata.json** của bạn hay không bằng cách tải `https://gateway.pinata.cloud/ipfs/<metadata-CID>` vào một cửa sổ riêng. Trang sẽ trông giống như ảnh chụp màn hình bên dưới:
+
+![Trang của bạn sẽ hiển thị siêu dữ liệu json](./metadataJSON.png)_Trang của bạn sẽ hiển thị siêu dữ liệu json_
 
 Nhìn chung, mã của bạn sẽ trông giống như thế này:
 
 ```js
-require("dotenv").config()
-const API_URL = process.env.API_URL
-const PUBLIC_KEY = process.env.PUBLIC_KEY
-const PRIVATE_KEY = process.env.PRIVATE_KEY
+import { network } from "hardhat"
 
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
-const web3 = createAlchemyWeb3(API_URL)
+const { ethers } = await network.create()
 
-const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
 const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
-const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
+const nftContract = await ethers.getContractAt("MyNFT", contractAddress)
 
 async function mintNFT(tokenURI) {
-  const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //lấy nonce mới nhất
+  const [signer] = await ethers.getSigners()
 
-  //giao dịch
-  const tx = {
-    from: PUBLIC_KEY,
-    to: contractAddress,
-    nonce: nonce,
-    gas: 500000,
-    data: nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
+  try {
+    // Gửi giao dịch. ethers sẽ điền nonce, giới hạn gas và phí cho chúng ta.
+    const tx = await nftContract.mintNFT(signer.address, tokenURI)
+    console.log("The hash of your transaction is:", tx.hash)
+
+    // Đợi giao dịch được đưa vào một khối
+    const receipt = await tx.wait()
+    console.log("Your NFT was minted in block", receipt.blockNumber)
+  } catch (err) {
+    console.log("Something went wrong when submitting your transaction:", err)
   }
-
-  const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
-  signPromise
-    .then((signedTx) => {
-      web3.eth.sendSignedTransaction(
-        signedTx.rawTransaction,
-        function (err, hash) {
-          if (!err) {
-            console.log(
-              "The hash of your transaction is: ",
-              hash,
-              "\nCheck Alchemy's Mempool to view the status of your transaction!"
-            )
-          } else {
-            console.log(
-              "Something went wrong when submitting your transaction:",
-              err
-            )
-          }
-        }
-      )
-    })
-    .catch((err) => {
-      console.log("Promise failed:", err)
-    })
 }
 
-mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
+await mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
-Bây giờ, hãy chạy `node scripts/mint-nft.js` để triển khai NFT của bạn. Sau vài giây, bạn sẽ thấy một phản hồi như thế này trong terminal của mình:
+Bây giờ, hãy chạy tập lệnh trên Sepolia để đúc NFT của bạn:
 
-    The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+```sh
+npx hardhat run scripts/mint-nft.js --network sepolia
+```
 
-    Check Alchemy's Mempool to view the status of your transaction!
+Sau vài giây, bạn sẽ thấy một phản hồi như thế này trong thiết bị đầu cuối của mình:
 
-Tiếp theo, hãy truy cập [mempool Alchemy](https://dashboard.alchemy.com/mempool) của bạn để xem trạng thái giao dịch của bạn (cho dù nó đang chờ xử lý, đã được khai thác hay bị mạng lưới loại bỏ). Nếu giao dịch của bạn bị loại bỏ, việc kiểm tra [Blockscout](https://eth-sepolia.blockscout.com/) và tìm kiếm mã băm giao dịch của bạn cũng rất hữu ích.
+```text
+The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+Your NFT was minted in block <block number>
+```
 
-![View your NFT transaction hash on Etherscan](./view-nft-etherscan.png)_Xem mã băm giao dịch NFT của bạn trên Etherscan_
+Để xem chi tiết giao dịch của bạn, hãy tìm kiếm Mã băm của nó trên [Etherscan](https://sepolia.etherscan.io/) hoặc [Blockscout](https://eth-sepolia.blockscout.com/).
 
-Và thế là xong! Bây giờ bạn đã triển khai VÀ đúc một NFT trên chuỗi khối Ethereum <Emoji text=":money_mouth_face:" size={1} />
+![Xem mã băm giao dịch NFT của bạn trên Etherscan](./view-nft-etherscan.png)_Xem mã băm giao dịch NFT của bạn trên Etherscan_
 
-Sử dụng `mint-nft.js`, bạn có thể đúc bao nhiêu NFT tùy thích (và tùy theo ví của bạn)! Chỉ cần đảm bảo truyền vào một tokenURI mới mô tả siêu dữ liệu của NFT (nếu không, bạn sẽ chỉ tạo ra một loạt các NFT giống hệt nhau với các ID khác nhau).
+Và thế là xong! Bây giờ bạn đã triển khai VÀ đúc một NFT trên Chuỗi khối Ethereum <Emoji text=":money_mouth_face:" size={1} />
 
-Có lẽ, bạn muốn có thể khoe NFT trong ví của mình — vì vậy hãy nhớ xem [Phần 3: Cách xem NFT trong Ví của bạn](/developers/tutorials/how-to-view-nft-in-metamask/)!
+Sử dụng `mint-nft.js`, bạn có thể đúc bao nhiêu NFT tùy theo mong muốn của bạn (và Ví của bạn)! Chỉ cần đảm bảo truyền vào một tokenURI mới mô tả siêu dữ liệu của NFT (nếu không, bạn sẽ chỉ tạo ra một loạt các NFT giống hệt nhau với các ID khác nhau).
+
+Có lẽ, bạn muốn có thể khoe NFT trong Ví của mình — vì vậy hãy chắc chắn xem qua [Phần 3: Cách xem NFT của bạn trong Ví của bạn](/developers/tutorials/how-to-view-nft-in-metamask/)!

@@ -21,7 +21,7 @@ Für einen Ethereum-Knoten enthält die multiaddr die Knoten-ID (einen Hash ihre
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode
+## Enode {#enode}
 
 Ein Enode ist eine Möglichkeit, einen Ethereum-Knoten über ein URL-Adressformat zu identifizieren. Die hexadezimale Knoten-ID wird im Benutzernamen-Teil der URL kodiert und durch ein @-Zeichen vom Host getrennt. Die Spezifikation definiert den Hostnamen lediglich als IP-Adresse; die meisten Clients (wie Geth und Besu) akzeptieren hier jedoch auch einen DNS-Namen und lösen diesen beim Start in eine IP-Adresse auf. Dies ist eher ein Client-spezifisches Verhalten als ein Teil des Standards. Der Port im Hostnamen-Abschnitt ist der TCP-Listening-Port. Wenn sich die TCP- und UDP-Ports (Erkennung) unterscheiden, wird der UDP-Port als Abfrageparameter "discport" angegeben.
 

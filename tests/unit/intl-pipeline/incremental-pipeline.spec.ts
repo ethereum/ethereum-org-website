@@ -24,6 +24,11 @@ import { join } from "node:path"
 import { expect, test } from "@playwright/test"
 
 import { pipeline } from "../../../src/scripts/intl-pipeline"
+import {
+  FRONTMATTER_PREFIX,
+  frontmatterFieldText,
+  parseFrontmatterDoc,
+} from "../../../src/scripts/intl-pipeline/lib/llm/frontmatter"
 import { findSection } from "../../../src/scripts/intl-pipeline/pipeline"
 
 // ---------------------------------------------------------------------------
@@ -616,6 +621,12 @@ for (const lang of LANGS) {
         // fence-aware boundaries as the pipeline (a naive `\n#` search cuts at
         // comments and headings inside code fences)
         const lb = locB(lang, "md")
+        // Translatable frontmatter travels as `frontmatter:<key>` pseudo-sections
+        if (sectionId.startsWith(FRONTMATTER_PREFIX)) {
+          const fm = parseFrontmatterDoc(lb)
+          const key = sectionId.slice(FRONTMATTER_PREFIX.length)
+          return (fm && frontmatterFieldText(fm.doc, key)) || englishContent
+        }
         const sec = findSection(lb, sectionId)
         return sec ? lb.slice(sec.start, sec.end).trim() : englishContent
       }

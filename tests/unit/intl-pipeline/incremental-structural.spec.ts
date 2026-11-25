@@ -123,9 +123,7 @@ Erreichen Sie das Team auf dem [Chat-Server](https://chat.example/invite).
     expect(sectionOf(result, "get-in-touch")).toBe(
       sectionOf(localeA, "get-in-touch")
     )
-    expect(countOf(result, "https://discord.gg/ethereum-org")).toBeGreaterThan(
-      0
-    )
+    expect(countOf(result, "/discord/")).toBeGreaterThan(0)
   })
 
   test("real run 1: unrelated links are not repointed by the index cascade", () => {
@@ -551,6 +549,65 @@ Beta-Text mit [anderem](https://b.example/).
     expect(findStructuralRegressions(enA, drifted, enB, result)).toEqual([])
   })
 
+  test("an inline code span English changed but the locale kept is reported", () => {
+    // evm/opcodes: the locale's table cell words the span differently, so the
+    // substitution has nothing to rewrite
+    const enCode = enA.replace("Beta body", "Run `npm ci`. Beta body")
+    const deCode = locale.replace("Beta-Text", "`npm  ci` ausführen. Beta-Text")
+    const enCodeB = enCode.replace("`npm ci`", "`pnpm i`")
+    const result = pipeline(enCode, enCodeB, deCode, "markdown")
+    expect(
+      findStructuralRegressions(enCode, deCode, enCodeB, result).map(
+        (r) => r.detail
+      )
+    ).toContain("`pnpm i` not updated in locale")
+  })
+
+  test("a code span count a retranslated section corrects is not reported", () => {
+    // transfers-and-approval: English `approve` 1 -> 2 in a routed section the
+    // locale already had at 2
+    const enCode = enA.replace("Beta body", "Call `approve`. Beta body")
+    const deCode = locale.replace(
+      "Beta-Text",
+      "`approve` und `approve` aufrufen. Beta-Text"
+    )
+    const enCodeB = enCode.replace(
+      "Call `approve`. Beta body",
+      "Call `approve`, then `approve` again. Beta body, revised"
+    )
+    const result = pipeline(
+      enCode,
+      enCodeB,
+      deCode,
+      "markdown",
+      bodyOnlyTranslator(enCodeB)
+    )
+    expect(
+      findStructuralRegressions(enCode, deCode, enCodeB, result).filter(
+        (r) => r.kind === "code-span"
+      )
+    ).toEqual([])
+  })
+
+  test("a changed section the locale doesn't have is reported", () => {
+    // evm/opcodes (de): the locale lost the page's only heading, so the
+    // retranslated #beta had nowhere to go and the edit vanished
+    const headless = locale.replace("## Beta {#beta}\n\n", "")
+    const enEdited = enA.replace("Beta body", "Beta body, revised,")
+    const result = pipeline(
+      enA,
+      enEdited,
+      headless,
+      "markdown",
+      bodyOnlyTranslator(enEdited)
+    )
+    expect(
+      findStructuralRegressions(enA, headless, enEdited, result).map(
+        (r) => r.detail
+      )
+    ).toContain("{#beta} changed but not in locale")
+  })
+
   test("JSON files are out of scope", () => {
     expect(findStructuralRegressions("{}", "{}", "{}", "{}", "json")).toEqual(
       []
@@ -601,5 +658,425 @@ Beta-Text mit [anderem](https://b.example/).
           )
       )
     ).toBe(true)
+  })
+})
+
+// ---------------------------------------------------------------------------
+// Code fence edits
+// ---------------------------------------------------------------------------
+
+test.describe("code fence edits", () => {
+  // run-node-raspberry-pi: English bumped the image name inside a fence and
+  // nothing else in the section, and all 24 locales kept the old command.
+  const enA = `Intro with a fence:
+
+\`\`\`shell
+make old
+\`\`\`
+
+## Flash {#flash}
+
+Flash the card.
+
+\`\`\`shell
+# unzip and flash image
+unzip ethonarm_22.04.00.img.zip
+\`\`\`
+
+## Next {#next}
+
+Done.
+`
+  const enB = enA
+    .replace("make old", "make new")
+    .replace("ethonarm_22.04.00", "ethonarm_rpi5_<version>")
+  const locale = `Einleitung mit Block:
+
+\`\`\`shell
+make old
+\`\`\`
+
+## Flashen {#flash}
+
+Die Karte flashen.
+
+\`\`\`shell
+# Image entpacken und flashen
+unzip ethonarm_22.04.00.img.zip
+\`\`\`
+
+## Weiter {#next}
+
+Fertig.
+`
+
+  test("a code-only edit sends its section and the preamble to the model", () => {
+    const ids = getLlmSectionIds(enA, enB, "markdown")
+    expect(ids).toContain("flash")
+    expect(ids).toContain("_preamble")
+    expect(ids).not.toContain("next")
+  })
+
+  // The preamble has no heading, so the model gets and returns its whole text
+  const translator = (english: string) => (id: string, content: string) =>
+    id === "_preamble" ? content : bodyOnly(english, id)
+
+  test("the merged fence is English-B's code", () => {
+    const result = pipeline(enA, enB, locale, "markdown", translator(enB))
+    expect(result).toContain("unzip ethonarm_rpi5_<version>.img.zip")
+    expect(result).not.toContain("ethonarm_22.04.00")
+    expect(result).toContain("make new")
+    expect(sectionOf(result, "next")).toBe("## Weiter {#next}\n\nFertig.")
+    expect(findStructuralRegressions(enA, locale, enB, result)).toEqual([])
+  })
+
+  test("a changed language tag alone sends its section to the model", () => {
+    // how-to-use-slither: `bash` became `sh` and nothing else in the fence moved
+    const retagged = enA.replace("```shell\n# unzip", "```sh\n# unzip")
+    expect(getLlmSectionIds(enA, retagged, "markdown")).toEqual(["flash"])
+    const result = pipeline(
+      enA,
+      retagged,
+      locale,
+      "markdown",
+      translator(retagged)
+    )
+    expect(result).toContain("```sh\n# unzip")
+    expect(
+      findStructuralRegressions(enA, locale, retagged, locale).map(
+        (r) => r.kind
+      )
+    ).toContain("code-fence")
+  })
+
+  test("a fence the merge left stale is reported", () => {
+    const regressions = findStructuralRegressions(enA, locale, enB, locale)
+    expect(regressions.filter((r) => r.kind === "code-fence")).toHaveLength(4)
+  })
+
+  test("a fence already broken before the run is not reported", () => {
+    // secret-state: the locale lost the fence's indentation long ago; English
+    // now adds a fence in another section.
+    const indented = enA.replace("make old", "    make old")
+    const broken = locale // still `make old`, unindented
+    const added = indented.replace("Done.", "Done.\n\n```shell\nls\n```")
+    const result = pipeline(
+      indented,
+      added,
+      broken,
+      "markdown",
+      translator(added)
+    )
+    expect(result).toContain("```shell\nls\n```")
+    expect(findStructuralRegressions(indented, broken, added, result)).toEqual(
+      []
+    )
+  })
+})
+
+// ---------------------------------------------------------------------------
+// Sections with subsections
+// ---------------------------------------------------------------------------
+
+test.describe("sections with subsections", () => {
+  const enA = `## Setup {#setup}
+
+Install the package first.
+
+\`\`\`bash
+npm i old-pkg
+\`\`\`
+
+### Install {#install}
+
+Run \`old-cmd\` to finish.
+
+<YouTube id="aaa111" />
+
+## Run {#run}
+
+Pick a client.
+
+##### Geth
+
+Geth syncs in a day.
+
+## Next {#next}
+
+Done.
+`
+  const locale = `## Einrichtung {#setup}
+
+Zuerst das Paket installieren.
+
+\`\`\`bash
+npm i old-pkg
+\`\`\`
+
+### Installation {#install}
+
+Mit \`old-cmd\` abschließen.
+
+<YouTube id="aaa111" />
+
+## Ausführen {#run}
+
+Einen Client wählen.
+
+##### Geth
+
+Geth synchronisiert an einem Tag.
+
+## Weiter {#next}
+
+Fertig.
+`
+  const translator = (english: string) => (id: string) => bodyOnly(english, id)
+
+  test("a parent's own prose edit retranslates the parent (it used to route `prose:0`)", () => {
+    // app-plasma #stage-2, roadmap/privacy #private-writes: the edit was dropped
+    // and the manifest stamped
+    const enB = enA.replace("Install the package first.", "Install it first.")
+    expect(getLlmSectionIds(enA, enB, "markdown")).toEqual(["setup"])
+    const result = pipeline(enA, enB, locale, "markdown", translator(enB))
+    expect(sectionOf(result, "setup")).toContain("Install it first.")
+    expect(sectionOf(result, "install")).toContain("Mit `old-cmd` abschließen.")
+  })
+
+  test("a routed parent still applies its subsections' inert edits", () => {
+    const enB = enA
+      .replace("npm i old-pkg", "npm i new-pkg")
+      .replace("`old-cmd`", "`new-cmd`")
+      .replace("aaa111", "bbb222")
+    expect(getLlmSectionIds(enA, enB, "markdown")).toEqual(["setup"])
+    const result = pipeline(enA, enB, locale, "markdown", translator(enB))
+    expect(sectionOf(result, "setup")).toContain("npm i new-pkg")
+    expect(sectionOf(result, "install")).toContain("Mit `new-cmd` abschließen.")
+    expect(sectionOf(result, "install")).toContain('<YouTube id="bbb222" />')
+  })
+
+  test("a heading without an anchor travels with its section", () => {
+    // run-a-node: `##### Geth` has no {#id}; the planner sends it as part of
+    // #run, so the merge must replace it as part of #run too
+    const enB = enA.replace("Geth syncs in a day.", "Geth syncs in hours.")
+    expect(getLlmSectionIds(enA, enB, "markdown")).toEqual(["run"])
+    const result = pipeline(enA, enB, locale, "markdown", translator(enB))
+    expect(result.match(/^##### /gm)).toHaveLength(1)
+    expect(result).toContain("Geth syncs in hours.")
+    expect(findStructuralRegressions(enA, locale, enB, result)).toEqual([])
+  })
+
+  test("an inert edit under a heading without an anchor reaches the locale", () => {
+    const withLink = (s: string, url: string) =>
+      s.replace(/^(Geth \S+ \S+ \S+ \S+)\.$/m, `$1, see [docs](${url}).`)
+    const en = withLink(enA, "https://geth.example/old")
+    const de = locale.replace(
+      "Geth synchronisiert an einem Tag.",
+      "Geth synchronisiert an einem Tag, siehe [Doku](https://geth.example/old)."
+    )
+    const enB = en.replace("geth.example/old", "geth.example/new")
+    const result = pipeline(en, enB, de, "markdown", translator(enB))
+    expect(result).toContain("(https://geth.example/new)")
+    expect(result).not.toContain("geth.example/old")
+  })
+
+  test("a subsection English adds under a section that had none is inserted", () => {
+    // clear-signing: diff() reports no addition for `### Add a test file`
+    const enB = enA.replace(
+      "Pick a client.\n",
+      "Pick a client.\n\n### Sync modes {#sync-modes}\n\nSnap or full.\n"
+    )
+    expect(getLlmSectionIds(enA, enB, "markdown")).toContain("sync-modes")
+    const result = pipeline(enA, enB, locale, "markdown", translator(enB))
+    expect(result.match(/\{#sync-modes\}/g)).toHaveLength(1)
+    expect(result.indexOf("{#sync-modes}")).toBeGreaterThan(
+      result.indexOf("Einen Client wählen.")
+    )
+    expect(result.indexOf("{#sync-modes}")).toBeLessThan(
+      result.indexOf("##### Geth")
+    )
+    expect(findStructuralRegressions(enA, locale, enB, result)).toEqual([])
+  })
+
+  test("a new first section is inserted before the locale's first section", () => {
+    // contributing/translation-program: `## How it works` became the first section
+    const enB = `## Overview {#overview}\n\nRead this first.\n\n${enA}`
+    const result = pipeline(enA, enB, locale, "markdown", translator(enB))
+    expect(result.indexOf("{#overview}")).toBeLessThan(
+      result.indexOf("{#setup}")
+    )
+    expect(findStructuralRegressions(enA, locale, enB, result)).toEqual([])
+  })
+
+  test("a body opening with a deeper heading keeps the section's heading", () => {
+    // uniswap-v2-annotated-code: `##### _update` opens #pair-update-internal's body
+    const en = enA.replace("Pick a client.\n\n", "")
+    const de = locale.replace("Einen Client wählen.\n\n", "")
+    const enB = en.replace("Geth syncs in a day.", "Geth syncs in hours.")
+    const result = pipeline(en, enB, de, "markdown", translator(enB))
+    expect(result).toContain("## Ausführen {#run}\n\n##### Geth")
+    expect(findStructuralRegressions(en, de, enB, result)).toEqual([])
+  })
+
+  test("a link edit nothing applies retranslates its section", () => {
+    // all-you-can-cache: every link after a fence is `link:0` again, so the
+    // middle one's URL edit gets no change entry and was never applied
+    const fence = (cmd: string) => "```sh\n" + cmd + "\n```"
+    const links = (url: string, is = "is") =>
+      [
+        `[The code](https://a.example/) ${is} here.`,
+        fence("forge test"),
+        `[This](${url}) ${is} how.`,
+        fence("forge build"),
+        `[More](https://c.example/) ${is} here.`,
+      ].join("\n\n")
+    const en = enA.replace(
+      "Install the package first.",
+      links("https://old.example/x")
+    )
+    const de = locale.replace(
+      "Zuerst das Paket installieren.",
+      links("https://old.example/x", "ist")
+    )
+    const enB = en.replace("old.example", "new.example")
+    expect(getLlmSectionIds(en, enB, "markdown")).toEqual(["setup"])
+    const result = pipeline(en, enB, de, "markdown", translator(enB))
+    expect(result).toContain("(https://new.example/x)")
+    expect(findStructuralRegressions(en, de, enB, result)).toEqual([])
+  })
+
+  test("a value English changed in one of two places is not rewritten in both", () => {
+    // videos/ethereum-staking-withdrawals: `0x00` twice, English changed one
+    const en = enA.replace(
+      "Pick a client.",
+      "Pick `0x00` here and `0x00` there."
+    )
+    const de = locale.replace(
+      "Einen Client wählen.",
+      "Hier `0x00` und dort `0x00` wählen."
+    )
+    const enB = en.replace("and `0x00` there", "and `0x01` there")
+    expect(getLlmSectionIds(en, enB, "markdown")).toEqual(["run"])
+    const result = pipeline(en, enB, de, "markdown", translator(enB))
+    expect(result.match(/`0x00`/g)).toHaveLength(1)
+    expect(result.match(/`0x01`/g)).toHaveLength(1)
+  })
+
+  test("a locale heading that lost its anchor survives its neighbour's retranslation", () => {
+    const de = locale.replace("## Weiter {#next}", "## Weiter")
+    const enB = enA.replace("Geth syncs in a day.", "Geth syncs in hours.")
+    const result = pipeline(enA, enB, de, "markdown", translator(enB))
+    expect(result).toContain("## Weiter\n\nFertig.")
+  })
+
+  test("a subsection English moved is caught, not left in place", () => {
+    const en = enA.replace(
+      "### Install {#install}",
+      "### Install {#install}\n\nFirst.\n\n### Verify {#verify}\n\nThen check."
+    )
+    const de = locale.replace(
+      "### Installation {#install}",
+      "### Installation {#install}\n\nZuerst.\n\n### Prüfen {#verify}\n\nDann prüfen."
+    )
+    // English moves #verify above #install
+    const enB = en
+      .replace("### Verify {#verify}\n\nThen check.\n\n", "")
+      .replace(
+        "### Install {#install}",
+        "### Verify {#verify}\n\nThen check.\n\n### Install {#install}"
+      )
+    const result = pipeline(en, enB, de, "markdown", translator(enB))
+    expect(
+      findStructuralRegressions(en, de, enB, result).map((r) => r.kind)
+    ).toContain("section-order")
+  })
+
+  test("a component English removed goes even when its title is translated", () => {
+    // roadmap/security: matching the translated title too left de, ja and ur
+    // with the card, and the dry merge on English found nothing wrong
+    const card = (title: string) =>
+      `<ExpandableCard title="${title}" eventCategory="/security">\n\nCard body.\n\n</ExpandableCard>`
+    const en = enA.replace(
+      "Pick a client.",
+      `Pick a client.\n\n${card("Is Ethereum secure today?")}`
+    )
+    const de = locale.replace(
+      "Einen Client wählen.",
+      `Einen Client wählen.\n\n${card("Ist Ethereum heute sicher?")}`
+    )
+    const enB = en.replace(`\n\n${card("Is Ethereum secure today?")}`, "")
+    const result = pipeline(en, enB, de, "markdown", translator(enB))
+    expect(result).not.toContain("ExpandableCard")
+  })
+
+  test("English emptying a section's own body keeps the locale heading", () => {
+    const enB = enA
+      .replace("Install the package first.\n\n", "")
+      .replace("```bash\nnpm i old-pkg\n```\n\n", "")
+    // the model has nothing to translate, and the English fallback is the
+    // English heading
+    const result = pipeline(enA, enB, locale, "markdown", (_, en) => en)
+    expect(result).toContain("## Einrichtung {#setup}\n\n### Installation")
+  })
+
+  test("a new section's translated heading comes back with its body", () => {
+    const enB = enA.replace(
+      "## Next {#next}",
+      "## Troubleshooting {#troubleshooting}\n\nCheck the logs.\n\n## Next {#next}"
+    )
+    const result = pipeline(enA, enB, locale, "markdown", (id, en) =>
+      id === "troubleshooting"
+        ? "## Fehlerbehebung {#troubleshooting}\n\nDie Logs prüfen."
+        : en
+    )
+    expect(result).toContain(
+      "## Fehlerbehebung {#troubleshooting}\n\nDie Logs prüfen."
+    )
+  })
+
+  test("a preamble edit the model will redo doesn't route other sections", () => {
+    // javascript: the preamble's link also appears under #run; the dry merge
+    // used to rewrite it there, as the real merge (which skips the preamble's
+    // edits when the model redoes the preamble) never does
+    const en =
+      `Intro with [team](https://a.example/old) and more.\n\n${enA}`.replace(
+        "Pick a client.",
+        "Pick a client from [team](https://a.example/old)."
+      )
+    const enB = en.replace(
+      "Intro with [team](https://a.example/old) and more.",
+      "Intro, revised, with [team](https://a.example/new)."
+    )
+    expect(getLlmSectionIds(en, enB, "markdown")).toEqual(["_preamble"])
+  })
+
+  test("a prose fence retag is routed like a code fence retag", () => {
+    const en = enA.replace(
+      "Pick a client.",
+      "Pick a client:\n\n```text\nGeth, Besu\n```"
+    )
+    const enB = en.replace("```text", "```txt")
+    expect(getLlmSectionIds(en, enB, "markdown")).toEqual(["run"])
+  })
+})
+
+// ---------------------------------------------------------------------------
+// JSON routing
+// ---------------------------------------------------------------------------
+
+test.describe("JSON routing", () => {
+  const A = JSON.stringify({ a: "Hello", nested: { b: "World" } }, null, 2)
+
+  test("a new key is sent to the model", () => {
+    const B = JSON.stringify(
+      { a: "Hello", c: "New key", nested: { b: "World" } },
+      null,
+      2
+    )
+    expect(getLlmSectionIds(A, B, "json")).toEqual(["c"])
+  })
+
+  test("nothing changed, nothing sent", () => {
+    expect(getLlmSectionIds(A, A, "json")).toEqual([])
   })
 })

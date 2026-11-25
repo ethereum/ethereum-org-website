@@ -36,5 +36,19 @@ export const getMdMetadata = async ({
     image,
     author,
   })
-  return metadata
+
+  // Advertise the raw markdown source. Only markdown-backed pages get this --
+  // React pages have no .md counterpart, so this stays out of getMetadata().
+  const canonical = metadata.alternates?.canonical
+  if (!canonical) return metadata
+
+  return {
+    ...metadata,
+    alternates: {
+      ...metadata.alternates,
+      types: {
+        "text/markdown": `${String(canonical).replace(/\/$/, "")}.md`,
+      },
+    },
+  }
 }

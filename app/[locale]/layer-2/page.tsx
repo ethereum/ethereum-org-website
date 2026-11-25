@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -19,7 +19,7 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
-import { formatPriceUSD, numberFormat } from "@/lib/utils/numbers"
+import { formatSmallUSD } from "@/lib/utils/numbers"
 
 import { layer2Data } from "@/data/networks/networks"
 
@@ -36,8 +36,6 @@ import layer2LearnCalloutImage from "@/public/images/network-column-rooftop-pipi
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const [growThePieData, l2beatData] = await Promise.all([
     getGrowThePieData(),
@@ -79,13 +77,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-layer-2")
   const tCommon = await getTranslations("common")
 
+  // Both fees are formatted by significant digits, not fixed decimals: median
+  // costs are routinely sub-cent and 2-decimal rounding flattens them to $0.00
+  const ethereumTxCost = growThePieData.dailyTxCosts["ethereum"]
   const medianTxCost =
     "error" in growThePieData.txCostsMedianUsd
-      ? { error: growThePieData.txCostsMedianUsd.error }
+      ? null
       : growThePieData.txCostsMedianUsd.value
 
   const heroContent: HubHeroProps = {
-    title: t("page-layer-2-hero-title"),
+    breadcrumbs: { slug: "layer-2" },
     header: t("page-layer-2-hero-header"),
     description: t("page-layer-2-hero-description"),
     heroImg: heroImg,
@@ -166,10 +167,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <BigNumber
               center={false}
               className="py-0"
-              value={formatPriceUSD(
-                growThePieData.dailyTxCosts["ethereum"] || 0,
-                locale
-              )}
+              value={
+                ethereumTxCost ? formatSmallUSD(ethereumTxCost, locale) : "-"
+              }
             >
               {t("page-layer-2-blockchain-transaction-cost")}
             </BigNumber>
@@ -177,12 +177,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <BigNumber
               center={false}
               className="py-0"
-              value={numberFormat(locale, {
-                style: "currency",
-                currency: "USD",
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 3,
-              }).format(typeof medianTxCost === "number" ? medianTxCost : 0)}
+              value={medianTxCost ? formatSmallUSD(medianTxCost, locale) : "-"}
             >
               {t("page-layer-2-networks-transaction-cost")}
             </BigNumber>
@@ -504,8 +499,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-layer-2")
 

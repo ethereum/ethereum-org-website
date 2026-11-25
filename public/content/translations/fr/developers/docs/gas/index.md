@@ -15,14 +15,13 @@ Pour mieux comprendre cette page, nous vous recommandons de lire d'abord ce qui 
 
 Le gaz désigne l'unité qui mesure la quantité d'effort de calcul nécessaire pour exécuter des opérations spécifiques sur le réseau Ethereum.
 
-Étant donné que chaque transaction Ethereum nécessite des ressources de calcul pour s'exécuter, ces ressources doivent être payées pour garantir qu'Ethereum n'est pas vulnérable au spam et ne peut pas rester bloqué dans des boucles de calcul infinies. Le paiement du calcul s'effectue sous la forme de frais de gaz.
+Puisque chaque transaction Ethereum nécessite des ressources de calcul pour s'exécuter, ces ressources doivent être payées pour s'assurer qu'Ethereum n'est pas vulnérable au spam et ne peut pas rester bloqué dans des boucles de calcul infinies. Le paiement pour le calcul s'effectue sous la forme de frais de gaz.
 
-Les frais de gaz correspondent à **la quantité de gaz utilisée pour effectuer une opération, multipliée par le coût par unité de gaz**. Les frais sont payés, que la transaction réussisse ou échoue.
+Les frais de gaz correspondent à **la quantité de gaz utilisée pour effectuer une opération, multipliée par le coût par unité de gaz**. Les frais sont payés indépendamment de la réussite ou de l'échec d'une transaction.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-Les frais de gaz doivent être payés dans la monnaie native d'Ethereum, l'ether (ETH). Les prix du gaz sont généralement indiqués en gwei, qui est une dénomination de l'ETH. Chaque gwei est égal à un milliardième d'ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
+Les frais de gaz doivent être payés dans la devise native d'Ethereum, l'ether (ETH). Les prix du gaz sont généralement indiqués en gwei, qui est une dénomination de l'ETH. Chaque gwei est égal à un milliardième d'ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
 
 Par exemple, au lieu de dire que votre gaz coûte 0,000000001 ether, vous pouvez dire que votre gaz coûte 1 gwei.
 
@@ -101,12 +100,11 @@ Vous pouvez indiquer explicitement combien vous êtes prêt à payer pour faire 
 
 ## Pourquoi les frais de gaz existent-ils ? {#why-do-gas-fees-exist}
 
-En bref, les frais de gaz aident à maintenir la sécurité du réseau Ethereum. En exigeant des frais pour chaque calcul exécuté sur le réseau, nous empêchons les acteurs malveillants de spammer le réseau. Afin d'éviter les boucles infinies accidentelles ou hostiles ou tout autre gaspillage de calcul dans le code, chaque transaction est tenue de définir une limite au nombre d'étapes de calcul d'exécution de code qu'elle peut utiliser. L'unité fondamentale de calcul est le « gaz ».
+En bref, les frais de gaz aident à maintenir la sécurité du réseau Ethereum. En exigeant des frais pour chaque calcul exécuté sur le réseau, nous empêchons les acteurs malveillants de spammer le réseau. Afin d'éviter les boucles infinies accidentelles ou hostiles ou tout autre gaspillage de calcul dans le code, chaque transaction doit définir une limite quant au nombre d'étapes de calcul d'exécution de code qu'elle peut utiliser. L'unité fondamentale de calcul est le « gaz ».
 
-Bien qu'une transaction inclue une limite, tout gaz non utilisé dans une transaction est restitué à l'utilisateur (par ex., `max fee - (base fee + tip)` est restitué).
+Bien qu'une transaction inclue une limite, tout gaz non utilisé dans une transaction est retourné à l'utilisateur (par ex., `max fee - (base fee + tip)` est retourné).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Qu'est-ce que la limite de gaz ? {#what-is-gas-limit}
 
@@ -132,14 +130,8 @@ Si vous souhaitez surveiller les prix du gaz, afin de pouvoir envoyer vos ETH po
 
 - [Etherscan](https://etherscan.io/gastracker) _Estimateur de prix du gaz de transaction_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimateur open source de prix du gaz de transaction_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Surveillez et suivez les prix du gaz sur Ethereum et les L2 pour réduire les frais de transaction et économiser de l'argent_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extension Chrome d'estimation de gaz prenant en charge à la fois les transactions héritées de Type 0 et les transactions EIP-1559 de Type 2._
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Surveillez et suivez les prix du gaz sur Ethereum et les couches 2 (l2) pour réduire les frais de transaction et faire des économies_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calculez les frais de gaz dans votre devise locale pour différents types de transactions sur le Réseau principal, Arbitrum et Polygon._
-
-## Outils connexes {#related-tools}
-
-- [Plateforme de gaz de Blocknative](https://www.blocknative.com/gas) _API d'estimation de gaz alimentée par la plateforme mondiale de données de mempool de Blocknative_
-- [Gas Network](https://gas.network) Oracles de gaz onchain. Prise en charge de plus de 35 chaînes. 
 
 ## Complément d'information {#further-reading}
 

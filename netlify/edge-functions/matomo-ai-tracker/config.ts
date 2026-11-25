@@ -23,22 +23,33 @@ const defaultAllowlistPattern = `(?:${defaultUserAgentPatterns
   .map(escapeRegex)
   .join("|")})`
 const defaultHttpMethodAllowlist = ["GET"]
+// Deviates from upstream: "txt" removed so llms.txt hits stay pageviews --
+// Matomo's bot telemetry does not surface download-flagged hits in the AI
+// Chatbots report (verified empirically on site 43)
 const defaultDocumentPattern =
-  "^[^?]+\\.(?:pdf|docx?|xlsx?|pptx?|csv|json|txt|xml|epub|mobi|azw3|mp3|mp4|mpe?g|webm|mov|avi|ogg|wav|flac|zip|gz|gzip|tgz|tar|bz2|tbz|7z|rar|dmg|exe|msi|apk|jar|md5|sig)(?:\\?|$)"
+  "^[^?]+\\.(?:pdf|docx?|xlsx?|pptx?|csv|json|xml|epub|mobi|azw3|mp3|mp4|mpe?g|webm|mov|avi|ogg|wav|flac|zip|gz|gzip|tgz|tar|bz2|tbz|7z|rar|dmg|exe|msi|apk|jar|md5|sig)(?:\\?|$)"
+// Deviates from upstream: "txt" removed from the exclude list so llms.txt
+// fetches are tracked (robots.txt is excluded at the netlify.toml layer)
 const defaultUrlExcludePattern =
-  "^[^?]+\\.(?:css|js|mjs|map|json|xml|webmanifest|manifest|png|jpe?g|gif|webp|avif|svg|ico|bmp|tiff?|woff2?|ttf|otf|eot|rss|atom|wasm|txt)(?:\\?|$)"
+  "^[^?]+\\.(?:css|js|mjs|map|json|xml|webmanifest|manifest|png|jpe?g|gif|webp|avif|svg|ico|bmp|tiff?|woff2?|ttf|otf|eot|rss|atom|wasm)(?:\\?|$)"
 
 export function getConfig(
   env: Partial<Env> & Record<string, string | undefined>
 ): MatomoConfig {
-  const matomoUrl = env.MATOMO_URL
+  // Unprefixed vars act as overrides; default to the site-wide NEXT_PUBLIC_*
+  // vars already scoped per deploy context in Netlify
+  const matomoUrl = env.MATOMO_URL || env.NEXT_PUBLIC_MATOMO_URL
   if (!matomoUrl) {
-    throw new Error("MATOMO_URL is required")
+    throw new Error(
+      "MATOMO_URL is required (MATOMO_URL or NEXT_PUBLIC_MATOMO_URL)"
+    )
   }
 
-  const siteIdRaw = env.MATOMO_SITE_ID
+  const siteIdRaw = env.MATOMO_SITE_ID || env.NEXT_PUBLIC_MATOMO_SITE_ID
   if (!siteIdRaw) {
-    throw new Error("MATOMO_SITE_ID is required")
+    throw new Error(
+      "MATOMO_SITE_ID is required (MATOMO_SITE_ID or NEXT_PUBLIC_MATOMO_SITE_ID)"
+    )
   }
   const matomoSiteId = toInt(siteIdRaw)
   if (matomoSiteId === undefined) {

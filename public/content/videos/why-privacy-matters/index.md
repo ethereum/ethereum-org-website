@@ -17,7 +17,7 @@ A TED talk by **Glenn Greenwald**, one of the first reporters to see and write a
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=pcSlowAhvUk) published by TED. It has been lightly edited for readability.*
 
-#### An experience everyone has had (0:12) {#an-experience-everyone-has-had-012}
+### An experience everyone has had (0:12) {#an-experience-everyone-has-had-012}
 
 There is an entire genre of YouTube videos devoted to an experience which I am certain that everyone in this room has had. It entails an individual who, thinking they're alone, engages in some expressive behavior—wild singing, gyrating dancing, some mild sexual activity—only to discover that, in fact, they are not alone, that there is a person watching and lurking, the discovery of which causes them to immediately cease what they were doing in horror. 
 
@@ -25,7 +25,7 @@ The sense of shame and humiliation in their face is palpable. It's the sense of,
 
 This is the crux of the work on which I have been singularly focused for the last 16 months: the question of why privacy matters, a question that has arisen in the context of a global debate, enabled by the revelations of Edward Snowden that the United States and its partners, unbeknownst to the entire world, has converted the Internet, once heralded as an unprecedented tool of liberation and democratization, into an unprecedented zone of mass, indiscriminate surveillance.
 
-#### The "nothing to hide" argument (1:29) {#the-nothing-to-hide-argument-129}
+### The "nothing to hide" argument (1:29) {#the-nothing-to-hide-argument-129}
 
 There is a very common sentiment that arises in this debate, even among people who are uncomfortable with mass surveillance, which says that there is no real harm that comes from this large-scale invasion because only people who are engaged in bad acts have a reason to want to hide and to care about their privacy.
 
@@ -37,7 +37,7 @@ But by contrast, good people are people who go to work, come home, raise their c
 
 The people who are actually saying that are engaged in a very extreme act of self-deprecation. What they're really saying is, "I have agreed to make myself such a harmless and unthreatening and uninteresting person that I actually don't fear having the government know what it is that I'm doing."
 
-#### Even privacy's critics don't believe what they say (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
+### Even privacy's critics don't believe what they say (2:49) {#even-privacys-critics-dont-believe-what-they-say-249}
 
 This mindset has found what I think is its purest expression in a 2009 interview with the longtime CEO of Google, Eric Schmidt, who, when asked about all the different ways his company is causing invasions of privacy for hundreds of millions of people around the world, said this: "If you're doing something that you don't want other people to know, maybe you shouldn't be doing it in the first place."
 
@@ -49,7 +49,7 @@ The very same Eric Schmidt, the CEO of Google, ordered his employees at Google t
 
 This same division can be seen with the CEO of Facebook, Mark Zuckerberg, who in an infamous interview in 2010 pronounced that privacy is no longer a "social norm." Last year, Mark Zuckerberg and his new wife purchased not only their own house but also all four adjacent houses in Palo Alto for a total of 30 million dollars in order to ensure that they enjoyed a zone of privacy that prevented other people from monitoring what they do in their personal lives.
 
-#### The email password challenge (4:51) {#the-email-password-challenge-451}
+### The email password challenge (4:51) {#the-email-password-challenge-451}
 
 Over the last 16 months, as I've debated this issue around the world, every single time somebody has said to me, "I don't really worry about invasions of privacy because I don't have anything to hide," I always say the same thing to them. 
 
@@ -65,7 +65,7 @@ There's a reason why we seek that out, and our reason is that all of us, not jus
 
 We make judgments every single day about the kinds of things that we say and think and do that we're willing to have other people know, and the kinds of things that we say and think and do that we don't want anyone else to know about. People can very easily in words claim that they don't value their privacy, but their actions negate the authenticity of that belief.
 
-#### Being watched changes our behavior (7:02) {#being-watched-changes-our-behavior-702}
+### Being watched changes our behavior (7:02) {#being-watched-changes-our-behavior-702}
 
 Now, there's a reason why privacy is so craved universally and instinctively. It isn't just a reflexive movement like breathing air or drinking water. The reason is that when we're in a state where we can be monitored, where we can be watched, our behavior changes dramatically. 
 
@@ -73,7 +73,7 @@ The range of behavioral options that we consider when we think we're being watch
 
 Human shame is a very powerful motivator, as is the desire to avoid it, and that's the reason why people, when they're in a state of being watched, make decisions not that are the byproduct of their own agency but that are about the expectations that others have of them or the mandates of societal orthodoxy.
 
-#### Bentham's panopticon (8:09) {#benthams-panopticon-809}
+### Bentham's panopticon (8:09) {#benthams-panopticon-809}
 
 This realization was exploited most powerfully for pragmatic ends by the 18th-century philosopher Jeremy Bentham, who set out to resolve an important problem ushered in by the industrial age, where, for the first time, institutions had become so large and centralized that they were no longer able to monitor and therefore control each one of their individual members. 
 
@@ -81,7 +81,7 @@ And the solution that he devised was an architectural design originally intended
 
 The 20th-century French philosopher Michel Foucault realized that that model could be used not just for prisons but for every institution that seeks to control human behavior: schools, hospitals, factories, workplaces. And what he said was that this mindset, this framework discovered by Bentham, was the key means of societal control for modern, Western societies, which no longer need the overt weapons of tyranny—punishing or imprisoning or killing dissidents, or legally compelling loyalty to a particular party—because mass surveillance creates a prison in the mind that is a much more subtle though much more effective means of fostering compliance with social norms or with social orthodoxy, much more effective than brute force could ever be.
 
-#### Orwell, religion, and the prison in the mind (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
+### Orwell, religion, and the prison in the mind (10:08) {#orwell-religion-and-the-prison-in-the-mind-1008}
 
 The most iconic work of literature about surveillance and privacy is the George Orwell novel *1984*, which we all learn in school, and therefore it's almost become a cliche. In fact, whenever you bring it up in a debate about surveillance, people instantaneously dismiss it as inapplicable, and what they say is, "Oh, well in *1984*, there were monitors in people's homes, they were being watched at every given moment, and that has nothing to do with the surveillance state that we face." 
 
@@ -93,7 +93,7 @@ What all of these seemingly disparate works recognize, the conclusion that they 
 
 Conversely, even more importantly, it is a realm of privacy, the ability to go somewhere where we can think and reason and interact and speak without the judgmental eyes of others being cast upon us, in which creativity and exploration and dissent exclusively reside, and that is the reason why, when we allow a society to exist in which we're subject to constant monitoring, we allow the essence of human freedom to be severely crippled.
 
-#### Two destructive lessons (12:30) {#two-destructive-lessons-1230}
+### Two destructive lessons (12:30) {#two-destructive-lessons-1230}
 
 The last point I want to observe about this mindset, the idea that only people who are doing something wrong have things to hide and therefore reasons to care about privacy, is that it entrenches two very destructive messages, two destructive lessons. The first of which is that the only people who care about privacy, the only people who will seek out privacy, are by definition bad people. 
 
@@ -111,7 +111,7 @@ The renowned socialist activist Rosa Luxemburg once said, "He who does not move 
 
 Thank you very much. (Applause)
 
-#### Q&A with Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
+### Q&A with Bruno Giussani (15:25) {#qa-with-bruno-giussani-1525}
 
 **Bruno Giussani:** Glenn, thank you. The case is rather convincing, I have to say, but I want to bring you back to the last 16 months and to Edward Snowden for a few questions, if you don't mind. The first one is personal to you. We have all read about the arrest of your partner, David Miranda, in London, and other difficulties, but I assume that in terms of personal engagement and risk, that the pressure on you is not that easy to take on the biggest sovereign organizations in the world. Tell us a little bit about that.
 

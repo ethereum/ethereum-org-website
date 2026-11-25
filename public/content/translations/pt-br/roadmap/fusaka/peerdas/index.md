@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Aprenda sobre o PeerDAS como parte da atualização Fusaka do protocolo Ethereum
+description: "Aprenda sobre o PeerDAS como parte da atualização Fusaka do protocolo Ethereum"
 lang: pt-br
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -41,31 +41,31 @@ A DAS é um mecanismo que se baseia nisso e garante que os dados estejam correto
 
 ## PeerDAS {#peer-das-2}
 
-O [PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) é uma proposta específica que implementa o mecanismo de DAS no Ethereum, marcando provavelmente a maior atualização desde The Merge. O PeerDAS foi projetado para estender os dados de blob, dividindo-os em colunas e distribuindo um subconjunto para os nós.
+O [PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) é uma proposta específica que implementa o mecanismo de DAS no Ethereum, marcando provavelmente a maior atualização desde o The Merge. O PeerDAS foi projetado para estender os dados de blob, dividindo-os em colunas e distribuindo um subconjunto para os nós.
 
-O Ethereum empresta um pouco de matemática inteligente para conseguir isso: ele aplica a codificação de apagamento no estilo Reed-Solomon aos dados de blob. Os dados de blob são representados como um polinômio cujos coeficientes codificam os dados, em seguida, avaliam esse polinômio em pontos adicionais para criar um blob estendido, dobrando o número de avaliações. Essa redundância adicionada permite a recuperação de apagamento: mesmo que algumas avaliações estejam faltando, o blob original pode ser reconstruído desde que pelo menos metade do total de dados, incluindo as peças estendidas, esteja disponível.
+O Ethereum pega emprestada uma matemática inteligente para alcançar isso: ele aplica a codificação de apagamento no estilo Reed-Solomon aos dados de blob. Os dados de blob são representados como um polinômio cujos coeficientes codificam os dados, em seguida, avaliam esse polinômio em pontos adicionais para criar um blob estendido, dobrando o número de avaliações. Essa redundância adicional permite a recuperação de apagamento: mesmo que algumas avaliações estejam faltando, o blob original pode ser reconstruído desde que pelo menos metade do total de dados, incluindo as partes estendidas, esteja disponível.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
 Na realidade, esse polinômio tem milhares de coeficientes. Os compromissos KZG são valores de poucos bytes, algo como um hash, conhecidos por todos os nós. Todo nó que possui pontos de dados suficientes pode [reconstruir eficientemente um conjunto completo de dados de blob](https://arxiv.org/abs/2207.11079). 
 
-> Curiosidade: a mesma técnica de codificação era usada por DVDs. Se você arranhasse um DVD, o reprodutor ainda conseguia lê-lo graças à codificação Reed-Solomon que adiciona as peças que faltam do polinômio. 
+> Curiosidade: a mesma técnica de codificação era usada por DVDs. Se você arranhasse um DVD, o reprodutor ainda conseguia lê-lo graças à codificação Reed-Solomon, que adiciona as partes ausentes do polinômio. 
 
-Historicamente, os dados em blockchains, sejam blocos ou blobs, eram transmitidos para todos os nós. Com a abordagem de divisão e amostragem do PeerDAS, transmitir tudo para todos não é mais necessário. Pós-Fusaka, a rede da camada de consenso é organizada em tópicos/sub-redes de protocolo de fofoca: as colunas de blob são atribuídas a sub-redes específicas, e cada nó se inscreve em subconjuntos predeterminados e custodia apenas essas peças.
+Historicamente, os dados em blockchains, sejam blocos ou blobs, eram transmitidos para todos os nós. Com a abordagem de divisão e amostragem do PeerDAS, transmitir tudo para todos não é mais necessário. Pós-Fusaka, a rede da camada de consenso é organizada em tópicos/sub-redes do protocolo de fofoca: as colunas de blob são atribuídas a sub-redes específicas, e cada nó se inscreve em subconjuntos predeterminados e mantém a custódia apenas dessas partes.
 
-Com o PeerDAS, os dados de blob estendidos são divididos em 128 pedaços chamados colunas. Os dados são distribuídos para esses nós por meio de um protocolo de fofoca dedicado em sub-redes específicas nas quais eles se inscrevem. Cada nó regular na rede participa de pelo menos 8 sub-redes de colunas escolhidas aleatoriamente. Receber dados de apenas 8 de 128 sub-redes significa que esse nó padrão recebe apenas 1/16 de todos os dados, mas como os dados foram estendidos, isso é 1/8 dos dados originais. 
+Com o PeerDAS, os dados de blob estendidos são divididos em 128 partes chamadas colunas. Os dados são distribuídos para esses nós por meio de um protocolo de fofoca dedicado em sub-redes específicas nas quais eles se inscrevem. Cada nó regular na rede participa de pelo menos 8 sub-redes de colunas escolhidas aleatoriamente. Receber dados de apenas 8 das 128 sub-redes significa que esse nó padrão recebe apenas 1/16 de todos os dados, mas como os dados foram estendidos, isso representa 1/8 dos dados originais. 
 
-Isso permite um novo limite teórico de escalabilidade de 8x o esquema atual de "todos baixam tudo". Com os nós se inscrevendo em diferentes sub-redes aleatórias que servem colunas de blob, a probabilidade é muito alta de que eles sejam distribuídos uniformemente e, portanto, cada pedaço de dado exista em algum lugar na rede. Os nós que executam validadores são obrigados a se inscrever em mais sub-redes com cada validador que executam.
+Isso permite um novo limite teórico de escalabilidade de 8x o esquema atual de "todos baixam tudo". Com os nós se inscrevendo em diferentes sub-redes aleatórias que atendem a colunas de blob, a probabilidade é muito alta de que eles sejam distribuídos uniformemente e, portanto, cada pedaço de dado exista em algum lugar na rede. Exige-se que os nós que executam validadores se inscrevam em mais sub-redes a cada validador que executam.
 
 > Cada nó tem um ID exclusivo gerado aleatoriamente, que normalmente serve como sua identidade pública para conexões. No PeerDAS, esse número é usado para determinar o conjunto aleatório de sub-redes nas quais ele deve se inscrever, resultando em uma distribuição aleatória uniforme de todos os dados de blob.
 
-Uma vez que um nó reconstrói com sucesso os dados originais, ele redistribui as colunas recuperadas de volta para a rede, curando ativamente quaisquer lacunas de dados e melhorando a resiliência geral do sistema. Os nós conectados a validadores com um saldo combinado ≥4096 ETH devem ser um supernó e, portanto, devem se inscrever em todas as sub-redes de colunas de dados e custodiar todas as colunas. Esses supernós curarão continuamente as lacunas de dados. A natureza probabilisticamente autocurativa do protocolo permite fortes garantias de disponibilidade, ao mesmo tempo em que não limita os operadores domésticos que mantêm apenas partes dos dados. 
+Uma vez que um nó reconstrói com sucesso os dados originais, ele redistribui as colunas recuperadas de volta para a rede, curando ativamente quaisquer lacunas de dados e melhorando a resiliência geral do sistema. Os nós conectados a validadores com um saldo combinado ≥ 4096 ETH devem ser um supernó e, portanto, devem se inscrever em todas as sub-redes de colunas de dados e manter a custódia de todas as colunas. Esses supernós curarão continuamente as lacunas de dados. A natureza probabilisticamente autocurativa do protocolo permite fortes garantias de disponibilidade, ao mesmo tempo em que não limita os operadores domésticos que mantêm apenas partes dos dados. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-A disponibilidade de dados pode ser confirmada por qualquer nó que mantenha apenas um pequeno subconjunto dos dados de blob, graças ao mecanismo de amostragem descrito acima. Essa disponibilidade é imposta: os validadores devem seguir novas regras de escolha de bifurcação, o que significa que eles só aceitarão e votarão em blocos depois de terem verificado a disponibilidade dos dados.
+A disponibilidade de dados pode ser confirmada por qualquer nó que mantenha apenas um pequeno subconjunto dos dados de blob, graças ao mecanismo de amostragem descrito acima. Essa disponibilidade é imposta: os validadores devem seguir as novas regras de escolha de bifurcação, o que significa que eles só aceitarão e votarão em blocos depois de terem verificado a disponibilidade dos dados.
 
-O impacto direto nos usuários (particularmente usuários de l2) são taxas mais baixas. Com 8x mais espaço para dados de rollup, as operações dos usuários em sua cadeia se tornam ainda mais baratas com o tempo. Mas as taxas mais baixas pós-Fusaka levarão tempo e dependerão de BPOs.
+O impacto direto nos usuários (particularmente usuários de l2) são taxas mais baixas. Com 8x mais espaço para dados de rollup, as operações dos usuários em sua cadeia se tornam ainda mais baratas com o tempo. Mas as taxas mais baixas pós-Fusaka levarão tempo e dependerão das BPOs.
 
 ## Blob-Parameter-Only (BPOs) {#bpo}
 

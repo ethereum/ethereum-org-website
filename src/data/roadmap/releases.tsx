@@ -7,46 +7,65 @@ import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 import GlamsterdamImage from "@/public/images/roadmap/roadmap-glamsterdam.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
+import BeaconChainImage from "@/public/images/upgrades/core.png"
 
 type TranslationFunction = (key: string) => string
 
-type DateString =
-  | `2${number}${number}${number}-${number}${number}-${number}${number}`
-  | `${number}${number}${number}${number}-${number}${number}-${number}${number}T${number}${number}:${number}${number}:${number}${number}.${number}${number}${number}Z`
-type YearString = `2${number}${number}${number}`
-
-interface BaseRelease {
+/**
+ * The editorial half of a release: which image, which name, which features to
+ * call out. Every volatile fact — the mainnet target, the stage it has reached,
+ * the milestones ahead, the Forkcast link — comes from `src/data/upgrades`,
+ * keyed by {@link Release.upgradeSlug}, so nothing here can drift from what
+ * Forkcast says.
+ */
+export interface Release {
   image: StaticImageData
+  /**
+   * Key into `src/data/upgrades`. Not derived from `href`: the store uses
+   * Forkcast's slugs and our content directories predate them, so `the-merge`
+   * lives at `/roadmap/merge/`. Asserted by
+   * `tests/unit/roadmap/release-carousel.spec.ts`.
+   */
+  upgradeSlug: string
+  /**
+   * Kept out of the store on purpose. The store knows "The Merge"; the
+   * carousel says "Paris (The Merge)" so the execution-layer name is
+   * discoverable. That is an editorial choice, not a fact that can go stale.
+   */
   releaseName: string
   content: React.ReactNode | ((t: TranslationFunction) => React.ReactNode)
-  displayDate?: string
   href?: string
-  forkcast_href?: string
 }
-
-interface ReleaseWithDate extends BaseRelease {
-  releaseDate: DateString
-  plannedReleaseYear?: never
-}
-
-interface ReleaseWithYear extends BaseRelease {
-  releaseDate?: never
-  plannedReleaseYear: YearString
-}
-
-interface ReleaseUnscheduled extends BaseRelease {
-  releaseDate?: never
-  plannedReleaseYear?: never
-}
-
-// Release may have either a releaseDate or a plannedReleaseYear, but not both.
-export type Release = ReleaseWithDate | ReleaseWithYear | ReleaseUnscheduled
 
 export const getReleasesData = (t: TranslationFunction): Release[] => [
   {
+    image: BeaconChainImage,
+    upgradeSlug: "beacon-chain",
+    releaseName: "Beacon Chain",
+    content: (
+      <>
+        <p>
+          <strong>{t("page-roadmap-beacon-chain-pos-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-beacon-chain-pos-item-1")}</li>
+          <li>{t("page-roadmap-beacon-chain-pos-item-2")}</li>
+        </ul>
+        <p>
+          <strong>{t("page-roadmap-beacon-chain-merge-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-beacon-chain-merge-item-1")}</li>
+          <li>{t("page-roadmap-beacon-chain-merge-item-2")}</li>
+        </ul>
+      </>
+    ),
+    href: "/roadmap/beacon-chain/",
+  },
+  {
     image: DevelopersHubHeroImage,
+    upgradeSlug: "the-merge",
     releaseName: "Paris (The Merge)",
-    releaseDate: "2022-09-15T06:42:42.000Z",
     content: (
       <>
         <p>
@@ -76,8 +95,8 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   },
   {
     image: QuizzesHubHeroImage,
+    upgradeSlug: "shapella",
     releaseName: "Shapella",
-    releaseDate: "2023-04-12T22:27:35.000Z",
     content: (
       <>
         <p>
@@ -107,8 +126,8 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   },
   {
     image: Layer2HubHeroImage,
+    upgradeSlug: "dencun",
     releaseName: "Dencun",
-    releaseDate: "2024-03-13T13:55:35.000Z",
     content: (
       <>
         <p>
@@ -138,8 +157,8 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
   },
   {
     image: PectraImage,
+    upgradeSlug: "pectra",
     releaseName: "Pectra",
-    releaseDate: "2025-05-07T10:05:11.000Z",
     content: (
       <>
         <p>
@@ -163,12 +182,11 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
       </>
     ),
     href: "/roadmap/pectra",
-    forkcast_href: "https://forkcast.org/upgrade/pectra",
   },
   {
     image: FusakaImage,
+    upgradeSlug: "fusaka",
     releaseName: "Fusaka",
-    releaseDate: "2025-12-03T21:49:11.000Z",
     content: (
       <>
         <p>
@@ -195,13 +213,11 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
       </>
     ),
     href: "/roadmap/fusaka",
-    forkcast_href: "https://forkcast.org/upgrade/fusaka",
   },
   {
     image: GlamsterdamImage,
+    upgradeSlug: "glamsterdam",
     releaseName: "Glamsterdam",
-    plannedReleaseYear: "2026",
-    displayDate: "Q4 2026",
     href: "/roadmap/glamsterdam/",
     content: (
       <>
@@ -222,23 +238,34 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
         </ul>
       </>
     ),
-    forkcast_href: "https://forkcast.org/upgrade/glamsterdam",
   },
   {
     image: GuidesHubHeroImage,
+    upgradeSlug: "hegota",
     releaseName: "Hegotá",
-    plannedReleaseYear: "2027",
-    displayDate: "2027",
+    href: "/roadmap/hegota/",
     content: (
       <>
         <p>
-          <strong>{t("page-roadmap-hegota-discussed-title")}</strong>
+          <strong>{t("page-roadmap-hegota-focil-title")}</strong>
         </p>
         <ul>
-          <li>{t("page-roadmap-hegota-discussed-item-1")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-1")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-2")}</li>
+          <li>{t("page-roadmap-hegota-focil-item-3")}</li>
         </ul>
+        <p>
+          <strong>{t("page-roadmap-hegota-frame-title")}</strong>
+        </p>
+        <ul>
+          <li>{t("page-roadmap-hegota-frame-item-1")}</li>
+          <li>{t("page-roadmap-hegota-frame-item-2")}</li>
+          <li>{t("page-roadmap-hegota-frame-item-3")}</li>
+        </ul>
+        {/* Hegotá is still `planning` upstream, so the slide must not read as a
+            settled feature list the way a scheduled fork's does. */}
+        <p>{t("page-roadmap-hegota-scope-note")}</p>
       </>
     ),
-    forkcast_href: "https://forkcast.org/upgrade/hegota",
   },
 ]

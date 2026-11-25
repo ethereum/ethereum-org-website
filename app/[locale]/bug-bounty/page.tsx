@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, Params } from "@/lib/types"
 
@@ -14,9 +14,8 @@ import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { AccordionContainer } from "@/components/ui/accordion"
+import { Alert, AlertContent } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-// Uncomment `Alert` for Bug Bounty Banner:
-// import { Alert } from "@/components/ui/alert"
 import { Card, CardContent, CardParagraph } from "@/components/ui/card"
 import { Flex, VStack } from "@/components/ui/flex"
 import { Grid } from "@/components/ui/grid"
@@ -36,6 +35,7 @@ import BugBountyJsonLD from "./page-jsonld"
 
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
+import ethrex from "@/public/images/upgrades/ethrex.png"
 import geth from "@/public/images/upgrades/geth.png"
 import grandine from "@/public/images/upgrades/grandine.png"
 import lighthouseLight from "@/public/images/upgrades/lighthouse-light.png"
@@ -78,7 +78,7 @@ export default async function Page(props: { params: Promise<Params> }) {
   const { locale } = params
 
   const t = await getTranslations("page-bug-bounty")
-  const tCommon = await getTranslations("common")
+  const tEvents = await getTranslations("page-community-events")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("bug-bounty", locale as Lang)
@@ -117,13 +117,18 @@ export default async function Page(props: { params: Promise<Params> }) {
   const clients: CardDetails[] = [
     {
       title: "Besu",
-      link: "https://besu.hyperledger.org/en/stable/",
+      link: "https://docs.besu-eth.org/",
       image: besu,
     },
     {
       title: "Erigon",
-      link: "https://github.com/ledgerwatch/erigon",
+      link: "https://github.com/erigontech/erigon",
       image: erigon,
+    },
+    {
+      title: "ethrex",
+      link: "https://docs.ethrex.xyz/",
+      image: ethrex,
     },
     {
       title: "Geth",
@@ -153,7 +158,7 @@ export default async function Page(props: { params: Promise<Params> }) {
     },
     {
       title: "Prysm",
-      link: "https://prylabs.net/",
+      link: "https://prysm.offchainlabs.com/docs/",
       image: prysm,
     },
     {
@@ -163,7 +168,7 @@ export default async function Page(props: { params: Promise<Params> }) {
     },
     {
       title: "Teku",
-      link: "https://pegasys.tech/teku",
+      link: "https://consensys.io/teku",
       image: tekuLight,
       className: "[&_img]:dark:invert",
     },
@@ -215,10 +220,15 @@ export default async function Page(props: { params: Promise<Params> }) {
   return (
     <>
       <BugBountyJsonLD locale={locale} contributors={contributors} />
-      {/* Uncomment for Bug Bounty Banner: */}
-      {/* <Alert variant="banner">
-        Fusaka vulnerabilities are now part of the Bug Bounty Program!
-      </Alert> */}
+      <Alert variant="banner">
+        <p>
+          {t.rich("glamsterdam-banner", {
+            a: (chunks) => (
+              <InlineLink href="#glamsterdam">{chunks}</InlineLink>
+            ),
+          })}
+        </p>
+      </Alert>
 
       <PageHero
         breadcrumbs={{ slug: "bug-bounty" }}
@@ -263,6 +273,55 @@ export default async function Page(props: { params: Promise<Params> }) {
       />
 
       <MainArticle className="flow *:px-page! **:[:is(p,ul,ol)]:max-w-3xl">
+        <Section id="glamsterdam">
+          <h2>{t("glamsterdam-title")}</h2>
+          <p>
+            {t.rich("glamsterdam-opening", {
+              a: (chunks) => (
+                <InlineLink href="https://blog.ethereum.org">
+                  {chunks}
+                </InlineLink>
+              ),
+            })}
+          </p>
+          <p>{t("glamsterdam-scope")}</p>
+          {/* Boxed rather than a plain paragraph: only clients with a published
+              Glamsterdam release are in scope, alongside the specifications, so a
+              reporter who skims past this wastes their time and ours on an
+              ineligible client report. */}
+          {/* max-w-3xl by hand: MainArticle constrains the text column with
+              `**:[:is(p,ul,ol)]:max-w-3xl`, and an Alert is a div, so without this it
+              runs the full page width and reads as a different section rather than an
+              aside to the paragraph above it. */}
+          <Alert variant="warning" className="max-w-3xl">
+            <AlertContent>
+              <p>
+                {t.rich("glamsterdam-specs", {
+                  a: (chunks) => (
+                    <InlineLink href="https://blog.ethereum.org/2026/09/17/glamsterdam-testnet-announcement#client-releases">
+                      {chunks}
+                    </InlineLink>
+                  ),
+                })}
+              </p>
+            </AlertContent>
+          </Alert>
+          <h3>{t("glamsterdam-rewards-title")}</h3>
+          <UnorderedList>
+            <ListItem>{t("glamsterdam-rewards-initial")}</ListItem>
+            <ListItem>{t("glamsterdam-rewards-sepolia")}</ListItem>
+            <ListItem>{t("glamsterdam-rewards-hoodi")}</ListItem>
+          </UnorderedList>
+          <p>{t("glamsterdam-rewards-submission")}</p>
+          <p>{t("glamsterdam-rewards-low")}</p>
+          <p>{t("glamsterdam-timing")}</p>
+          <p>
+            {t.rich("glamsterdam-rules", {
+              a: (chunks) => <InlineLink href="#rules">{chunks}</InlineLink>,
+            })}
+          </p>
+        </Section>
+
         <Section id="clients">
           <p className="mx-auto text-center uppercase">
             {t("page-upgrades-bug-bounty-clients")}
@@ -271,77 +330,84 @@ export default async function Page(props: { params: Promise<Params> }) {
             <div>
               <Image
                 src={besu}
-                alt={tCommon("item-logo", { item: "Besu" })}
+                alt={tEvents("item-logo", { item: "Besu" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={erigon}
-                alt={tCommon("item-logo", { item: "Erigon" })}
+                alt={tEvents("item-logo", { item: "Erigon" })}
+                {...iconImageProps()}
+              />
+            </div>
+            <div>
+              <Image
+                src={ethrex}
+                alt={tEvents("item-logo", { item: "ethrex" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={geth}
-                alt={tCommon("item-logo", { item: "Geth" })}
+                alt={tEvents("item-logo", { item: "Geth" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={nethermind}
-                alt={tCommon("item-logo", { item: "Nethermind" })}
+                alt={tEvents("item-logo", { item: "Nethermind" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={reth}
-                alt={tCommon("item-logo", { item: "Reth" })}
+                alt={tEvents("item-logo", { item: "Reth" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={lighthouseLight}
-                alt={tCommon("item-logo", { item: "Lighthouse" })}
+                alt={tEvents("item-logo", { item: "Lighthouse" })}
                 {...iconImageProps(true)}
               />
             </div>
             <div>
               <Image
                 src={lodestar}
-                alt={tCommon("item-logo", { item: "Lodestar" })}
+                alt={tEvents("item-logo", { item: "Lodestar" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={nimbus}
-                alt={tCommon("item-logo", { item: "Nimbus" })}
+                alt={tEvents("item-logo", { item: "Nimbus" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={prysm}
-                alt={tCommon("item-logo", { item: "Prysm" })}
+                alt={tEvents("item-logo", { item: "Prysm" })}
                 {...iconImageProps()}
               />
             </div>
             <div>
               <Image
                 src={tekuLight}
-                alt={tCommon("item-logo", { item: "Teku" })}
+                alt={tEvents("item-logo", { item: "Teku" })}
                 {...iconImageProps(true)}
               />
             </div>
             <div>
               <Image
                 src={grandine}
-                alt={tCommon("item-logo", { item: "Grandine" })}
+                alt={tEvents("item-logo", { item: "Grandine" })}
                 {...iconImageProps()}
               />
             </div>
@@ -360,6 +426,27 @@ export default async function Page(props: { params: Promise<Params> }) {
                 ),
               })}
             </p>
+
+            {/* Sits in #in-scope rather than the Glamsterdam section: the Fast
+                Confirmation Rule is part of the general programme, not tied to one
+                upgrade. max-w-3xl because MainArticle only constrains p/ul/ol. */}
+            <Alert variant="update" className="max-w-3xl">
+              {/* A <p> inside AlertContent, not bare children: AlertContent is
+                  `flex flex-col`, so rich text with a link becomes separate flex
+                  children and each fragment lands on its own line — the link broke
+                  away and the full stop after it sat alone on a third row. */}
+              <AlertContent>
+                <p>
+                  {t.rich("fcr-scope", {
+                    a: (chunks) => (
+                      <InlineLink href="https://github.com/ethereum/consensus-specs/blob/master/specs/phase0/fast-confirmation.md">
+                        {chunks}
+                      </InlineLink>
+                    ),
+                  })}
+                </p>
+              </AlertContent>
+            </Alert>
 
             <Flex className="flex-wrap gap-8">
               <MarkdownCard
@@ -463,7 +550,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                     {t("page-upgrades-bug-bounty-deposit-contract-specs")}
                   </InlineLink>
                   <br />
-                  <InlineLink href="https://github.com/ethereum/consensus-specs/blob/master/solidity_deposit_contract/deposit_contract.sol">
+                  <InlineLink href="https://github.com/ethereum/solidity-deposit-contract/blob/master/deposit_contract.sol">
                     {t("page-upgrades-bug-bounty-deposit-contract-source")}
                   </InlineLink>
                 </div>
@@ -598,8 +685,20 @@ export default async function Page(props: { params: Promise<Params> }) {
             <h2 className="max-w-[100ch]">
               {t("page-upgrades-bug-bounty-severity-qualifications-title")}
             </h2>
-            <p className="mb-8 max-w-[100ch] text-body-medium">
+            <p className="mb-0 max-w-[100ch] text-body-medium">
               {t("page-upgrades-bug-bounty-severity-qualifications-desc")}
+            </p>
+            <p className="mt-1 mb-8 max-w-[100ch] text-body-medium italic">
+              {t.rich(
+                "page-upgrades-bug-bounty-severity-qualifications-hardware",
+                {
+                  a: (chunks) => (
+                    <InlineLink href="https://eips.ethereum.org/EIPS/eip-7870">
+                      {chunks}
+                    </InlineLink>
+                  ),
+                }
+              )}
             </p>
             <Grid balanced={4}>
               {/* Low */}
@@ -834,8 +933,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-bug-bounty")
 

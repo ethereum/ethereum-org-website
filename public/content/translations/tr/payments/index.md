@@ -1,7 +1,7 @@
 ---
-title: Ethereum Ödemeleri
-metaTitle: Ethereum'da Ödemeler
-description: Ethereum'daki ödemelere genel bir bakış
+title: "Ethereum Ödemeleri"
+metaTitle: "Ethereum'da Ödemeler"
+description: "Ethereum'daki ödemelere genel bir bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
@@ -62,7 +62,7 @@ El Salvador ve Orta Afrika Cumhuriyeti gibi ülkeler kripto paraları yasal öde
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Bugün bir cüzdan uygulamasıyla Ethereum hesabınızı oluşturun.</div>
-  <ButtonLink href="/wallets/find-wallet">
+<ButtonLink href="/wallets/find-wallet">
     Başlayın
   </ButtonLink>
 </AlertContent>
@@ -206,3 +206,7 @@ Hızlı afet yardımını kolaylaştırmaktan küresel çalışanları güçlend
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

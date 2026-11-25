@@ -1,35 +1,54 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/stories/funding-culture/index.md",
   "generatedAt": "2026-07-23T00:26:18.684Z",
-  "rootHash": "360871f5580c",
+  "rootHash": "e5d129608311",
   "tree": {
-    "contentHash": "2be76f9b560f",
-    "anchorHash": "35a9a2e02cfa",
+    "contentHash": "534e69c8f796",
+    "anchorHash": "a66d4b7c3b18",
     "children": {
       "frontmatter:title": {
-        "contentHash": "66644dd2f720",
+        "contentHash": "2b0b70287c81",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "4e4094a17190",
+        "contentHash": "2798e72a6862",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:author": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "1ccdf41c405b"
+        "anchorHash": "979507ec9642"
       },
       "frontmatter:team": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "392e334c8b6b"
+        "anchorHash": "ec91fce2d339"
       },
       "frontmatter:tags": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "a0ca7a7d001e",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "f58b2ff6fe5a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "a4754f13840f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "ffd59860d903",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:published": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "1b43ad116a80"
+        "anchorHash": "aba25c7d54ed"
       },
       "frontmatter:image": {
         "contentHash": "e3b0c44298fc",

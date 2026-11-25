@@ -5,6 +5,7 @@ const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
 
+const mdRedirects = require("./md-redirects.config")
 const redirects = require("./redirects.config")
 
 const i18nConfigJson = require("./i18n.config.json")
@@ -125,6 +126,9 @@ module.exports = (phase) => {
     // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
     serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
+    // Show the proxy the raw path. Otherwise Netlify appends the trailing slash
+    // before the proxy runs, hiding slash-less URLs from its 301 (#19703).
+    skipProxyUrlNormalize: true,
     images: {
       // Disable Next's on-disk image LRU: its eager mkdir('.next/cache/images')
       // crashes on Netlify's read-only Lambda FS as an unhandled rejection.
@@ -172,21 +176,40 @@ module.exports = (phase) => {
               key: "X-Frame-Options",
               value: "DENY",
             },
+            {
+              // RFC 8288 discovery pointer for agents; static, so no Vary
+              // fragmentation of the CDN cache.
+              key: "Link",
+              value: '</llms.txt>; rel="describedby"; type="text/plain"',
+            },
           ],
         },
       ]
     },
     async redirects() {
-      // Build a strict locale matcher from configured locales
-      const LOCALE_ALTS = i18nConfigJson.map(({ code }) => code).join("|") // e.g. "en|es|fr|..."
+      // Build a strict locale matcher from configured locales, minus the
+      // default locale, which is served unprefixed
+      const DEFAULT_LOCALE = "en"
+      const LOCALE_ALTS = i18nConfigJson
+        .map(({ code }) => code)
+        .filter((code) => code !== DEFAULT_LOCALE)
+        .join("|") // e.g. "es|fr|..."
 
-      // Helper function to generate both English (no prefix) and locale-prefixed redirects
+      // Helper function to generate English (no prefix) and locale-prefixed redirects
       const createRedirect = (source, destination, permanent = true) => {
         // For external URLs, don't modify the destination
         const isExternal = destination.startsWith("http")
 
         // English / default-locale: no prefix in source or destination
         const defaultRedirect = { source, destination, permanent }
+
+        // On Netlify the proxy issues these redirects itself (resolvePathRoute);
+        // these rules cover environments where Next's redirects run first.
+        const defaultLocaleRedirect = {
+          source: `/${DEFAULT_LOCALE}${source}`,
+          destination,
+          permanent,
+        }
 
         // Locale-prefixed: only match allowed locales (prevents matching arbitrary segments)
         const localeRedirect = {
@@ -195,7 +218,7 @@ module.exports = (phase) => {
           permanent,
         }
 
-        return [defaultRedirect, localeRedirect]
+        return [defaultRedirect, defaultLocaleRedirect, localeRedirect]
       }
 
       return [
@@ -211,6 +234,8 @@ module.exports = (phase) => {
         ...redirects.flatMap(([source, destination, permanent]) =>
           createRedirect(source, destination, permanent)
         ),
+        // Agent-facing markdown source redirects (see md-redirects.config.js)
+        ...mdRedirects,
       ]
     },
   }
@@ -269,8 +294,9 @@ module.exports = (phase) => {
           // Dev-only files that get traced from the package root but are never
           // read by the SSR handler at runtime. Keep dir excludes anchored with
           // "/**" -- Turbopack matches these globs as substrings during trace
-          // pruning, so a bare "docs" also matches the "@docsearch" SSR chunk
-          // and drops it, 502ing ISR pages that use search.
+          // pruning, so a bare "docs" also matches the search modal's SSR chunk
+          // (the package name contains "docsearch") and drops it, 502ing ISR
+          // pages that use search.
           "tests/**",
           "docs/**",
           "README.md",
@@ -307,6 +333,15 @@ module.exports = (phase) => {
         "\\[locale\\]/developers": [
           "./public/content/latest/**/*.md",
           "./public/content/translations/*/latest/**/*.md",
+        ],
+        "\\[locale\\]/community": [
+          "./public/content/stories/**/*.md",
+          "./public/content/translations/*/stories/**/*.md",
+        ],
+        // Story pages also read co-located and hero images from disk.
+        "\\[locale\\]/stories": [
+          "./public/content/stories/**/*",
+          "./public/content/translations/*/stories/**/*.md",
         ],
       },
     }

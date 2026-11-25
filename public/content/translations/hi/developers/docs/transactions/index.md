@@ -178,7 +178,7 @@ _आरेख [इथेरियम EVM इलस्ट्रेटेड](http
 
 किसी भी लेन-देन के लिए गैस की आवश्यकता होती है जिसमें स्मार्ट अनुबंध शामिल होता है।
 
-स्मार्ट अनुबंधों में [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) या [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) फ़ंक्शन के रूप में जाने जाने वाले फ़ंक्शन भी हो सकते हैं, जो अनुबंध की स्थिति को नहीं बदलते हैं। इस प्रकार, EOA से इन फ़ंक्शंस को कॉल करने के लिए किसी गैस की आवश्यकता नहीं होगी। इस परिदृश्य के लिए अंतर्निहित RPC कॉल [`eth_call`](/developers/docs/apis/json-rpc#eth_call) है।
+स्मार्ट अनुबंधों में [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) या [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) फ़ंक्शन के रूप में जाने जाने वाले फ़ंक्शन भी हो सकते हैं, जो अनुबंध की स्थिति को नहीं बदलते हैं। इस प्रकार, EOA से इन फ़ंक्शंस को कॉल करने के लिए किसी गैस की आवश्यकता नहीं होगी। इस परिदृश्य के लिए अंतर्निहित RPC कॉल [`eth_call`](/developers/docs/apis/json-rpc/#eth-call) है।
 
 `eth_call` का उपयोग करके एक्सेस किए जाने के विपरीत, इन `view` या `pure` फ़ंक्शंस को आमतौर पर आंतरिक रूप से (यानी, अनुबंध से ही या किसी अन्य अनुबंध से) भी कॉल किया जाता है, जिसमें गैस खर्च होती है।
 
@@ -238,3 +238,7 @@ _क्या आप किसी ऐसे सामुदायिक सं�
 - [खाते](/developers/docs/accounts/)
 - [इथेरियम वर्चुअल मशीन (EVM)](/developers/docs/evm/)
 - [गैस](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

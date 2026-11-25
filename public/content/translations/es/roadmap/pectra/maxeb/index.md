@@ -143,7 +143,7 @@ Hay varias herramientas disponibles para gestionar las consolidaciones. La herra
 
 ## Preguntas frecuentes {#faq}
 
-### ¿Optar por participar cambia mi suerte en las propuestas o mis recompensas?
+### ¿Optar por participar cambia mi suerte en las propuestas o mis recompensas? {#change-luck-or-rewards}
 No. Optar por participar no disminuye tu probabilidad de proponer: tus deberes y la selección de propuestas siguen siendo los mismos. Por ejemplo, si tienes dos validadores de 32 ETH frente a un validador de 64 ETH, tendrás las mismas posibilidades totales de ser seleccionado para proponer un bloque y ganar recompensas.
 ### ¿Optar por participar cambia mi riesgo de recorte? {#change-slashing-risk}
 

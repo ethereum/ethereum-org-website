@@ -45,7 +45,7 @@ A validator is usually one machine holding one signing key. **Distributed valida
 
 The network also protects itself through [client diversity](/developers/docs/nodes-and-clients/client-diversity/): Ethereum runs on several independently built software implementations, so a bug in one client leaves the rest of the network standing.
 
-Two earlier research ideas, view-merge and secret leader election, are no longer active roadmap items.
+Two earlier research ideas, view-merge and [secret leader election](/roadmap/secret-leader-election/), are no longer active roadmap items.
 
 <ButtonLink variant="outline" href="/staking/dvt/">More on distributed validator technology</ButtonLink>
 
@@ -85,7 +85,7 @@ In progress:
 
 - **Glamsterdam (targeted for 2026)**: The headliners are ePBS (EIP-7732) and block-level access lists (EIP-7928), with gas repricing also being considered.
 - **Hegotá (targeted for 2027)**: FOCIL (EIP-7805) is the consensus-layer headliner. Being considered for inclusion: EIP-8141 (native account abstraction).
-- **Ongoing**: Efforts to simplify the [EVM](/developers/docs/evm/), harmonize client implementations, and phase out deprecated features continue across client teams. Work on statelessness (letting participants verify the chain without storing all of its data) is being redesigned around quantum-safe binary hash trees, with the final approach yet to be confirmed.
+- **Ongoing**: Efforts to simplify the [EVM](/developers/docs/evm/), harmonize client implementations, and phase out deprecated features continue across client teams. Work on [statelessness](/roadmap/statelessness/) (letting participants verify the chain without storing all of its data) is being redesigned around quantum-safe binary hash trees, which would replace the earlier [Verkle tree](/roadmap/verkle-trees/) design. The final approach is yet to be confirmed.
 
 ## Current progress {#current-progress}
 

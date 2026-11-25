@@ -43,7 +43,9 @@ import { createHash } from "crypto"
 import {
   ATTRIBUTE_RE,
   FENCED_BLOCK_RE,
+  fenceLanguage,
   isTranslatableValue,
+  PROSE_FENCE_TAGS,
   TRANSLATABLE_ATTRIBUTES,
   type TranslatableAttribute,
 } from "../shared-patterns"
@@ -252,9 +254,6 @@ function linkCloseTag(hash: string): string {
 // Pass 1: Fenced code blocks
 // ---------------------------------------------------------------------------
 
-/** Language tags that indicate prose content, not executable code */
-const PROSE_FENCE_TAGS = new Set(["md", "markdown", "mdx", "text", "txt", ""])
-
 function extractCodeFences(
   markdown: string,
   tree: ContentNode[],
@@ -268,7 +267,7 @@ function extractCodeFences(
       const codeContent = groups[3] ?? ""
 
       const hash = shortHash(fullMatch)
-      const language = langTag.toLowerCase().split(/\s+/)[0] || ""
+      const language = fenceLanguage(langTag)
 
       // Markdown/text fences contain prose, not code.
       // Treat the body as translatable content (like component children).
@@ -563,11 +562,9 @@ function extractHtmlTags(
 
         extractions.set(`HTMLTAG:${hash}`, fullMatch)
 
-        // Wrapper style: text stays visible for Gemini, tags become placeholders
-        if (children.trim()) {
-          return `${open}${children}${close}`
-        }
-        return open
+        // Wrapper style: text stays visible for Gemini, tags become placeholders.
+        // Always emit the close token: reconstruction needs the pair.
+        return `${open}${children}${close}`
       }
     )
   } // end while loop for nested tags

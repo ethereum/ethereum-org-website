@@ -1,5 +1,5 @@
 import { getImageProps } from "next/image"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -49,8 +49,6 @@ type PrincipleCard = {
 const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-values")
 
   const { contributors } = await getAppPageContributorInfo(
@@ -64,8 +62,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       title: t("page-values-card-privacy-title"),
       description: t("page-values-card-privacy-description"),
       icon: <PrivacyIcon />,
-      // Only Privacy has a live destination; the other three deep-dive pages
-      // are WIP, so their CTAs are intentionally omitted.
+      // Privacy, Open Source and Open Access have live destinations; the
+      // Security deep-dive is WIP, so its CTA is intentionally omitted.
       cta: { label: t("page-values-card-privacy-cta"), href: "/privacy" },
     },
     {
@@ -73,12 +71,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       title: t("page-values-card-open-source-title"),
       description: t("page-values-card-open-source-description"),
       icon: <OpenSourceStakingIcon />,
+      cta: {
+        label: t("page-values-card-open-source-cta"),
+        href: "/open-source",
+      },
     },
     {
       id: "censorship-resistance",
       title: t("page-values-card-censorship-resistance-title"),
       description: t("page-values-card-censorship-resistance-description"),
       icon: <BetterUserExperienceIcon />,
+      cta: {
+        label: t("page-values-card-censorship-resistance-cta"),
+        href: "/open-access",
+      },
     },
     {
       id: "security",
@@ -120,6 +126,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <ValuesPageJsonLD locale={locale} contributors={contributors} />
 
       <HubHero
+        breadcrumbs={{ slug: "values" }}
         heroImg={layer2HubHeroImg}
         header={t("page-values-hero-header")}
         description={t("page-values-hero-description")}
@@ -259,8 +266,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await props.params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-values")
 

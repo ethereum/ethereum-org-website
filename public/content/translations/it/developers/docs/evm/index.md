@@ -12,12 +12,11 @@ Una certa familiarità di base con la terminologia comune dell'informatica, come
 
 ## Dal libro mastro alla macchina a stati {#from-ledger-to-state-machine}
 
-L'analogia di un "libro mastro distribuito" viene spesso utilizzata per descrivere le blockchain come Bitcoin, che abilitano una criptovaluta decentralizzata utilizzando strumenti fondamentali di crittografia. Il libro mastro mantiene un registro delle attività che deve aderire a un insieme di regole che governano ciò che qualcuno può e non può fare per modificare il libro mastro stesso. Ad esempio, un indirizzo Bitcoin non può spendere più Bitcoin di quanti ne abbia ricevuti in precedenza. Queste regole sono alla base di tutte le transazioni su Bitcoin e su molte altre blockchain.
+L'analogia di un "libro mastro distribuito" è spesso usata per descrivere le blockchain come Bitcoin, che abilitano una valuta decentralizzata utilizzando strumenti fondamentali della crittografia. Il libro mastro mantiene un registro delle attività che deve aderire a un insieme di regole che governano ciò che qualcuno può e non può fare per modificare il libro mastro. Ad esempio, un indirizzo Bitcoin non può spendere più Bitcoin di quanti ne abbia ricevuti in precedenza. Queste regole sono alla base di tutte le transazioni su Bitcoin e su molte altre blockchain.
 
-Sebbene Ethereum abbia la propria criptovaluta nativa (ether) che segue quasi esattamente le stesse regole intuitive, abilita anche una funzione molto più potente: gli [smart contract](/developers/docs/smart-contracts/). Per questa funzionalità più complessa, è necessaria un'analogia più sofisticata. Invece di un libro mastro distribuito, Ethereum è una [macchina a stati](https://wikipedia.org/wiki/Finite-state_machine) distribuita. Lo stato di Ethereum è una grande struttura dati che contiene non solo tutti gli account e i saldi, ma uno _stato della macchina_, che può cambiare da un blocco all'altro secondo un insieme predefinito di regole e che può eseguire codice macchina arbitrario. Le regole specifiche per il cambiamento di stato da un blocco all'altro sono definite dall'EVM.
+Sebbene Ethereum abbia la propria criptovaluta nativa (ether) che segue quasi esattamente le stesse regole intuitive, abilita anche una funzione molto più potente: gli [smart contract](/developers/docs/smart-contracts/). Per questa funzionalità più complessa, è necessaria un'analogia più sofisticata. Invece di un libro mastro distribuito, Ethereum è una [macchina a stati](https://wikipedia.org/wiki/Finite-state_machine) distribuita. Lo stato di Ethereum è una grande struttura dati che contiene non solo tutti gli account e i saldi, ma uno _stato della macchina_, che può cambiare da blocco a blocco secondo un insieme predefinito di regole, e che può eseguire codice macchina arbitrario. Le regole specifiche per cambiare stato da blocco a blocco sono definite dall'EVM.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## La funzione di transizione di stato di Ethereum {#the-ethereum-state-transition-function}
 
@@ -55,10 +54,9 @@ I contratti contengono un trie di archiviazione Merkle Patricia (come un array d
 
 ### Codici operativi (opcode) {#opcodes}
 
-Il bytecode compilato dello smart contract viene eseguito come una serie di [codici operativi (opcode)](/developers/docs/evm/opcodes) dell'EVM, che eseguono operazioni standard sullo stack come `XOR`, `AND`, `ADD`, `SUB`, ecc. L'EVM implementa anche una serie di operazioni sullo stack specifiche per la blockchain, come `ADDRESS`, `BALANCE`, `BLOCKHASH`, ecc. Il set di opcode include anche `TSTORE` e `TLOAD`, che forniscono l'accesso all'archiviazione transitoria.
+Il bytecode compilato degli smart contract viene eseguito come una serie di [codici operativi (opcode)](/developers/docs/evm/opcodes) dell'EVM, che eseguono operazioni standard sullo stack come `XOR`, `AND`, `ADD`, `SUB`, ecc. L'EVM implementa anche una serie di operazioni sullo stack specifiche per la blockchain, come `ADDRESS`, `BALANCE`, `BLOCKHASH`, ecc. Il set di codici operativi (opcode) include anche `TSTORE` e `TLOAD`, che forniscono l'accesso all'archiviazione transitoria.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Diagrammi adattati da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## Implementazioni dell'EVM {#evm-implementations}
 
@@ -70,7 +68,7 @@ I [client di esecuzione di Ethereum](/developers/docs/nodes-and-clients/#executi
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Letture consigliate {#further-reading}
@@ -91,3 +89,5 @@ I [client di esecuzione di Ethereum](/developers/docs/nodes-and-clients/#executi
 
 - [Comprendere le specifiche dell'EVM dello Yellow Paper](/developers/tutorials/yellow-paper-evm/) _– Una guida passo passo alle specifiche formali dell'EVM tratte dallo yellow paper di Ethereum._
 - [Ingegneria inversa di un contratto](/developers/tutorials/reverse-engineering-a-contract/) _– Come eseguire l'ingegneria inversa di uno smart contract compilato utilizzando i codici operativi (opcode) dell'EVM._
+
+<QuizWidget quizKey="evm" />

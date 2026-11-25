@@ -9,11 +9,13 @@ import PageActions from "@/components/PageActions"
 import { Alert } from "@/components/ui/alert"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
+import UpgradeSummary from "@/components/UpgradeSummary"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { buildTopicDropdown } from "@/lib/utils/topicDropdown"
 
 import type { TopicConfig } from "@/data/topics"
+import { isForkcastUpgrade } from "@/data/upgrades"
 
 import { ContentLayout } from "./ContentLayout"
 
@@ -51,14 +53,17 @@ export const TopicLayout = async ({
     )
   }
 
+  // `slug` is locale-independent ("roadmap/glamsterdam"), so its last segment
+  // is a stable key into the upgrade data on every locale.
+  const upgradeKey = slug.split("/").filter(Boolean).pop()
+  const upgradeSlug =
+    upgradeKey && isForkcastUpgrade(upgradeKey) ? upgradeKey : null
+
   const t = await getTranslations(config.translationNs)
-  const tCommon = config.showLastUpdatedInHero
-    ? await getTranslations("common")
-    : null
 
   const dropdownLinks = buildTopicDropdown(config.dropdown, t)
 
-  const baseDescription = frontmatter.summary ? (
+  const heroDescription = frontmatter.summary ? (
     <p className="text-lg">{frontmatter.summary}</p>
   ) : frontmatter.summaryPoints && frontmatter.summaryPoints.length > 0 ? (
     <List>
@@ -69,18 +74,6 @@ export const TopicLayout = async ({
   ) : frontmatter.description ? (
     <p className="text-lg">{frontmatter.description}</p>
   ) : undefined
-
-  const heroDescription =
-    tCommon && lastEditLocaleTimestamp ? (
-      <>
-        {baseDescription}
-        <p className="border-t pt-4 italic">
-          {tCommon("page-last-updated")}: {lastEditLocaleTimestamp}
-        </p>
-      </>
-    ) : (
-      baseDescription
-    )
 
   const editBanner =
     config.editBanner && frontmatter.hideEditBanner !== true ? (
@@ -99,7 +92,7 @@ export const TopicLayout = async ({
     <>
       {editBanner}
       <PageHero
-        breadcrumbs={{ slug, startDepth: 1 }}
+        breadcrumbs={{ slug }}
         heroImg={
           frontmatter.image
             ? {
@@ -117,6 +110,10 @@ export const TopicLayout = async ({
     </>
   )
 
+  // Rendered through ContentLayout's article-header slot so the upgrade card
+  // appears before contributors and page actions without changing other
+  // layouts.
+
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
@@ -125,6 +122,7 @@ export const TopicLayout = async ({
       contributors={contributors}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={heroSection}
+      articleHeader={upgradeSlug ? <UpgradeSummary slug={upgradeSlug} /> : null}
       showDropdown={frontmatter.showDropdown ?? true}
     >
       {/*

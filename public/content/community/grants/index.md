@@ -11,7 +11,7 @@ This list is curated by our community. If there's something missing or incorrect
 
 <Alert variant="update">
 <Emoji text="🎗️" />
-<div>Founders, need help accelerating your business? [Head over to Founders Support](/founders/)</div>
+<div>Founders, need help accelerating your business? [Head over to Founders Support](/organizations/founders/)</div>
 </Alert>
 
 ## Broad Ethereum ecosystem {#broad-ethereum-ecosystem}

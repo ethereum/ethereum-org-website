@@ -1,6 +1,6 @@
 ---
-title: Thêm ví
-description: Chính sách chúng tôi sử dụng khi thêm ví vào ethereum.org
+title: "Thêm ví"
+description: "Chính sách chúng tôi sử dụng khi thêm ví vào ethereum.org"
 lang: vi
 ---
 
@@ -58,7 +58,7 @@ Các ví đang thay đổi nhanh chóng trên Ethereum. Chúng tôi đã cố g�
 
 ## Thêm ví {#adding-a-wallet}
 
-Nếu bạn muốn thêm một ví vào ethereum.org, hãy tạo một issue trên GitHub.
+Nếu bạn muốn thêm một ví vào ethereum.org, hãy tạo một issue trên GitHub. Mô tả ví mà bạn cung cấp trong issue sẽ được hiển thị trên trang của ví, vì vậy hãy chỉ viết một hoặc hai câu mô tả thực tế.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Tạo một issue

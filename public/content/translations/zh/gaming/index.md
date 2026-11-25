@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## 以太坊上的游戏
+## 以太坊上的游戏 {#gaming-on-ethereum}
 以太坊上的游戏形式多样，从利用区块链实现特定功能的游戏，到整个游戏世界都存在于链上的游戏。以太坊区块链可以在不同层面上与游戏结合。游戏可以将其货币作为可转移的代币进行存储，或者将其他游戏内资产（角色、装备、宠物等）以[非同质化代币 (NFT)](/nft/) 的形式进行存储。游戏还可以利用智能合约将其逻辑、规则和状态托管在链上。这类游戏通常被称为“全链上游戏”。
 
 以太坊生态系统还包括[二层网络 (l2) 区块链](/layer-2/learn/)，它们继承了以太坊主网的安全保障，同时扩展了以太坊的规模并支持专门的用例。由于确认时间更短且费用更低，L2 网络可以为链上游戏及其社区提供额外的好处，使游戏玩法更容易被大众接受。
@@ -31,7 +31,7 @@ buttons:
 
 以太坊区块链实现了这样一个世界：规则不能被随意更改，状态不能被删除，任何人都可以构建只要网络存在就能一直存活的扩展。这是以太坊原生提供的东西。
 
-## 以太坊游戏生态系统概览
+## 以太坊游戏生态系统概览 {#ethereums-gaming-ecosystem-overview}
 - **二层网络 (l2)：** 凭借更低廉的费用和更短的交易时间，以太坊 L2 成为游戏发布的常见场所。L2 领域不断发展，像 Ronin（最初是《Axie Infinity》的侧链）这样领先的 Web3 游戏生态系统最近过渡到了以太坊二层网络 (l2) 架构，继承了以太坊的安全保障，同时保留了其针对游戏优化的基础设施。目前领先的游戏 L2 包括：[Ronin](https://www.roninchain.com/)、[Starknet](https://www.starknet.io/)、[Abstract](https://abs.xyz/) 和 [Base](https://www.base.org/)。
 - **基础设施：** 为了让开发链上游戏变得更容易，存在许多工具栈；[Cartridge](https://cartridge.gg/)（提供会话密钥、通过代付合约实现免 Gas 交易，以及通过 Cartridge Controller 实现基于 WebAuthn 的身份验证），[Dojo](https://dojoengine.org/)（一个原生支持账户抽象的可证明游戏框架），[MUD](https://mud.dev/)（一个基于 EVM 的链上游戏引擎）。其他工具，如 [Proof of Play](https://proofofplay.com/) 和 [Thirdweb](https://thirdweb.com/)，允许开发者构建具有类似 Web2 用户体验的游戏。
 - **游戏社区：** 以太坊的游戏生态系统得到了游戏公会的支持，包括用于玩家协作的（[YGG](https://x.com/YieldGuild)、[MANA Gaming](https://x.com/ManaGamingBR)、[WASD](https://x.com/WASD_0x)、[LegacyGG](https://x.com/Lgc_GG)、[Gaming Grid](https://x.com/GamingGridx) 和 [OLAGG](https://x.com/OLAGuildGames)），像 [GAM3S.GG](https://games.gg/) 这样的发现平台，以及像 [Gaming Daily](https://x.com/GamingDailyx) 这样用于游戏分析和生态系统报道的媒体机构。有些社区涵盖了所有这些方面，比如 [FOCGERS](https://x.com/FOCGERS)。

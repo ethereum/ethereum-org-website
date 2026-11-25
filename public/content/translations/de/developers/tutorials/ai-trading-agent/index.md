@@ -219,7 +219,7 @@ Wenn wir die Zukunft lesen könnten, bräuchten wir keine KI für das Trading.
         sqrt_price_x96 = Decimal(self.contract.functions.slot0().call(block_identifier=block)[0])
 ```
 
-Die Syntax zum Aufrufen einer Funktion auf der EVM von Web3 aus lautet: `<contract object>.functions.<function name>().call(<parameters>)`. Die Parameter können die Parameter der EVM-Funktion sein (falls vorhanden; hier gibt es keine) oder [benannte Parameter](https://en.wikipedia.org/wiki/Named_parameter) zur Änderung des Blockchain-Verhaltens. Hier verwenden wir einen, `block_identifier`, um [die Blocknummer](/developers/docs/apis/json-rpc/#default-block) anzugeben, in der wir die Ausführung wünschen.
+Die Syntax zum Aufrufen einer Funktion auf der EVM von Web3 aus lautet: `<contract object>.functions.<function name>().call(<parameters>)`. Die Parameter können die Parameter der EVM-Funktion sein (falls vorhanden; hier gibt es keine) oder [benannte Parameter](https://en.wikipedia.org/wiki/Named_parameter) zur Änderung des Blockchain-Verhaltens. Hier verwenden wir einen, `block_identifier`, um [die Blocknummer](/developers/docs/apis/json-rpc/#block-parameter) anzugeben, in der wir die Ausführung wünschen.
 
 Das Ergebnis ist [dieses Struct in Array-Form](https://github.com/Uniswap/v3-core/blob/main/contracts/UniswapV3Pool.sol#L56-L72). Der erste Wert ist eine Funktion des Wechselkurses zwischen den beiden Token.
 

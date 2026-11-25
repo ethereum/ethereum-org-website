@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Dowiedz się o PeerDAS w ramach aktualizacji protokołu Ethereum o nazwie Fusaka
+description: "Dowiedz się o PeerDAS w ramach aktualizacji protokołu Ethereum o nazwie Fusaka"
 lang: pl
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -41,31 +41,31 @@ DAS to mechanizm, który opiera się na tym i zapewnia, że dane są zarówno po
 
 ## PeerDAS {#peer-das-2}
 
-[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) to konkretna propozycja, która implementuje mechanizm DAS w Ethereum, stanowiąc prawdopodobnie największą aktualizację od czasu The Merge. PeerDAS ma na celu rozszerzenie danych blob, dzieląc je na kolumny i dystrybuując podzbiór do węzłów.
+[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) to konkretna propozycja, która wdraża mechanizm DAS w Ethereum, stanowiąc prawdopodobnie największą aktualizację od czasu The Merge. PeerDAS ma na celu rozszerzenie danych blobów, dzieląc je na kolumny i dystrybuując ich podzbiór do węzłów.
 
-Ethereum zapożycza sprytną matematykę, aby to osiągnąć: stosuje kodowanie wymazań w stylu Reeda-Solomona do danych blob. Dane blob są reprezentowane jako wielomian, którego współczynniki kodują dane, a następnie oceniają ten wielomian w dodatkowych punktach, aby utworzyć rozszerzony blob, podwajając liczbę ocen. Ta dodana redundancja umożliwia odzyskiwanie po wymazaniu: nawet jeśli brakuje niektórych ocen, oryginalny blob można zrekonstruować, o ile dostępna jest co najmniej połowa wszystkich danych, w tym rozszerzone fragmenty.
+Ethereum zapożycza sprytną matematykę, aby to osiągnąć: stosuje kodowanie wymazań w stylu Reeda-Solomona do danych blobów. Dane blobów są reprezentowane jako wielomian, którego współczynniki kodują dane, a następnie wielomian ten jest ewaluowany w dodatkowych punktach, aby utworzyć rozszerzony blob, podwajając liczbę ewaluacji. Ta dodana redundancja umożliwia odzyskiwanie wymazań: nawet jeśli brakuje niektórych ewaluacji, oryginalny blob może zostać zrekonstruowany, o ile dostępna jest co najmniej połowa wszystkich danych, w tym rozszerzone fragmenty.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
-W rzeczywistości ten wielomian ma tysiące współczynników. Zobowiązania KZG to wartości rzędu kilku bajtów, coś w rodzaju hasha, znane wszystkim węzłom. Każdy węzeł posiadający wystarczającą liczbę punktów danych może [skutecznie zrekonstruować pełny zestaw danych blob](https://arxiv.org/abs/2207.11079). 
+W rzeczywistości ten wielomian ma tysiące współczynników. Zobowiązania KZG to wartości o wielkości kilku bajtów, coś w rodzaju hasha, znane wszystkim węzłom. Każdy węzeł posiadający wystarczającą liczbę punktów danych może [wydajnie zrekonstruować pełny zestaw danych bloba](https://arxiv.org/abs/2207.11079). 
 
-> Ciekawostka: ta sama technika kodowania była używana w płytach DVD. Jeśli porysowałeś płytę DVD, odtwarzacz nadal był w stanie ją odczytać dzięki kodowaniu Reeda-Solomona, które dodaje brakujące fragmenty wielomianu. 
+> Ciekawostka: ta sama technika kodowania była używana w płytach DVD. Jeśli zarysowałeś płytę DVD, odtwarzacz nadal był w stanie ją odczytać dzięki kodowaniu Reeda-Solomona, które dodaje brakujące fragmenty wielomianu. 
 
-Historycznie dane w łańcuchach bloków, czy to bloki, czy bloby, były rozgłaszane do wszystkich węzłów. Dzięki podejściu PeerDAS polegającemu na podziale i próbkowaniu, rozgłaszanie wszystkiego do wszystkich nie jest już konieczne. Po aktualizacji Fusaka, sieć warstwy konsensusu jest zorganizowana w tematy/podsieci protokołu plotkowania: kolumny blobów są przypisywane do określonych podsieci, a każdy węzeł subskrybuje z góry określone podzbiory i przechowuje tylko te fragmenty.
+Historycznie dane w łańcuchach bloków, czy to bloki, czy bloby, były rozgłaszane do wszystkich węzłów. Dzięki podejściu PeerDAS polegającemu na podziale i próbkowaniu, rozgłaszanie wszystkiego do wszystkich nie jest już konieczne. Po aktualizacji Fusaka sieć warstwy konsensusu jest zorganizowana w tematy/podsieci protokołu plotkowania: kolumny blobów są przypisywane do określonych podsieci, a każdy węzeł subskrybuje z góry określone podzbiory i przechowuje tylko te fragmenty.
 
-Dzięki PeerDAS rozszerzone dane blob są dzielone na 128 części zwanych kolumnami. Dane są dystrybuowane do tych węzłów za pośrednictwem dedykowanego protokołu plotkowania w określonych podsieciach, które subskrybują. Każdy zwykły węzeł w sieci uczestniczy w co najmniej 8 losowo wybranych podsieciach kolumn. Otrzymywanie danych z zaledwie 8 ze 128 podsieci oznacza, że ten domyślny węzeł otrzymuje tylko 1/16 wszystkich danych, ale ponieważ dane zostały rozszerzone, jest to 1/8 oryginalnych danych. 
+Dzięki PeerDAS rozszerzone dane blobów są dzielone na 128 fragmentów zwanych kolumnami. Dane są dystrybuowane do tych węzłów za pośrednictwem dedykowanego protokołu plotkowania w określonych podsieciach, które subskrybują. Każdy zwykły węzeł w sieci uczestniczy w co najmniej 8 losowo wybranych podsieciach kolumn. Otrzymywanie danych z zaledwie 8 ze 128 podsieci oznacza, że ten domyślny węzeł otrzymuje tylko 1/16 wszystkich danych, ale ponieważ dane zostały rozszerzone, stanowi to 1/8 oryginalnych danych. 
 
-Pozwala to na nowy teoretyczny limit skalowania wynoszący 8-krotność obecnego schematu „każdy pobiera wszystko”. Ponieważ węzły subskrybują różne losowe podsieci obsługujące kolumny blobów, prawdopodobieństwo jest bardzo wysokie, że są one równomiernie rozłożone, a zatem każdy fragment danych istnieje gdzieś w sieci. Węzły uruchamiające walidatory są zobowiązane do subskrybowania większej liczby podsieci z każdym uruchamianym walidatorem.
+Pozwala to na nowy teoretyczny limit skalowania, który jest 8-krotnie większy niż w obecnym schemacie „każdy pobiera wszystko”. Ponieważ węzły subskrybują różne losowe podsieci obsługujące kolumny blobów, prawdopodobieństwo, że są one równomiernie rozłożone, jest bardzo wysokie, a zatem każdy fragment danych istnieje gdzieś w sieci. Węzły uruchamiające walidatory są zobowiązane do subskrybowania większej liczby podsieci z każdym uruchomionym walidatorem.
 
-> Każdy węzeł ma unikalny, losowo wygenerowany identyfikator, który zwykle służy jako jego publiczna tożsamość dla połączeń. W PeerDAS liczba ta jest używana do określenia losowego zestawu podsieci, które musi subskrybować, co skutkuje jednolitą losową dystrybucją wszystkich danych blob.
+> Każdy węzeł ma unikalny, losowo wygenerowany identyfikator, który normalnie służy jako jego publiczna tożsamość dla połączeń. W PeerDAS liczba ta jest używana do określenia losowego zestawu podsieci, które musi subskrybować, co skutkuje równomiernym, losowym rozkładem wszystkich danych blobów.
 
-Gdy węzeł pomyślnie zrekonstruuje oryginalne dane, redystrybuuje odzyskane kolumny z powrotem do sieci, aktywnie naprawiając wszelkie luki w danych i zwiększając ogólną odporność systemu. Węzły połączone z walidatorami o łącznym saldzie ≥4096 ETH muszą być superwęzłami, a zatem muszą subskrybować wszystkie podsieci kolumn danych i przechowywać wszystkie kolumny. Te superwęzły będą stale naprawiać luki w danych. Probabilistycznie samonaprawiająca się natura protokołu pozwala na silne gwarancje dostępności, jednocześnie nie ograniczając domowych operatorów przechowujących tylko części danych. 
+Gdy węzeł pomyślnie zrekonstruuje oryginalne dane, redystrybuuje odzyskane kolumny z powrotem do sieci, aktywnie naprawiając wszelkie luki w danych i zwiększając ogólną odporność systemu. Węzły połączone z walidatorami o łącznym saldzie ≥4096 ETH muszą być superwęzłami, a zatem muszą subskrybować wszystkie podsieci kolumn danych i przechowywać wszystkie kolumny. Te superwęzły będą stale naprawiać luki w danych. Probabilistyczna, samonaprawiająca się natura protokołu pozwala na silne gwarancje dostępności, nie ograniczając jednocześnie operatorów domowych przechowujących tylko części danych. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-Dostępność danych może zostać potwierdzona przez dowolny węzeł przechowujący tylko niewielki podzbiór danych blob dzięki opisanemu powyżej mechanizmowi próbkowania. Ta dostępność jest wymuszana: walidatory muszą przestrzegać nowych reguł wyboru rozwidlenia (fork-choice), co oznacza, że będą akceptować i oddawać głos na bloki dopiero po zweryfikowaniu dostępności danych.
+Dostępność danych może zostać potwierdzona przez dowolny węzeł przechowujący tylko niewielki podzbiór danych bloba dzięki opisanemu powyżej mechanizmowi próbkowania. Ta dostępność jest wymuszana: walidatory muszą przestrzegać nowych reguł wyboru rozwidlenia, co oznacza, że zaakceptują i oddadzą głos na bloki dopiero po zweryfikowaniu dostępności danych.
 
-Bezpośrednim wpływem na użytkowników (szczególnie użytkowników L2) są niższe opłaty. Dzięki 8-krotnie większej przestrzeni na dane rollupów, operacje użytkowników na ich łańcuchu z czasem stają się jeszcze tańsze. Jednak niższe opłaty po aktualizacji Fusaka będą wymagały czasu i będą zależeć od BPO.
+Bezpośrednim wpływem na użytkowników (szczególnie użytkowników warstwy 2 (L2)) są niższe opłaty. Dzięki 8-krotnie większej przestrzeni na dane rollupów, operacje użytkowników w ich łańcuchu z czasem stają się jeszcze tańsze. Jednak niższe opłaty po aktualizacji Fusaka będą wymagały czasu i będą zależeć od BPO.
 
 ## Blob-Parameter-Only (BPO) {#bpo}
 

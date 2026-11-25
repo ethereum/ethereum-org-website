@@ -29,13 +29,13 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Hizmet Olarak Düğüm (Node-as-a-Service)._**
+**All That Node -** **_Hizmet Olarak Düğüm._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Belgeler](https://docs.allthatnode.com)
 - [Discord](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs'ten Blast -** **_Ethereum Ana Ağı ve Test Ağları için Merkeziyetsiz API'ler._**
+**Bware Labs'ten Blast -** **_Ethereum Ana Ağı ve Test Ağları için Merkeziyetsiz uygulama programlama arayüzleri (API'ler)._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Belgeler](https://docs.blastapi.io)
@@ -48,7 +48,7 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
-**Cloudflare Ethereum Gateway.**
+**Cloudflare Ethereum Ağ Geçidi.**
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
@@ -58,7 +58,7 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 **Blockscout - Açık Kaynaklı Blok Gezgini**
 - [Belgeler](https://docs.blockscout.com/)
 
-**GetBlock-** **_Web3 geliştirmesi için hizmet olarak blokzincir (Blockchain-as-a-service)_**
+**GetBlock-** **_Web3 geliştirmesi için hizmet olarak blokzincir_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Belgeler](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 - [Belgeler](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Uygun maliyetli EVM JSON-RPC sağlayıcısı_**
+**Node RPC - _Uygun maliyetli Ethereum Sanal Makinesi (EVM) JSON-RPC sağlayıcısı_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Belgeler](https://docs.noderpc.xyz/node-rpc)
@@ -91,6 +91,12 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 - [Belgeler](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_Tam, arşiv ve anahtarsız genel erişime sahip EVM JSON-RPC altyapısı._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Belgeler](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_JSON-RPC/WebSockets API'si olarak hız odaklı Ethereum düğümleri._**
 
 - [zmok.io](https://zmok.io/)
@@ -100,7 +106,13 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 
 ### Geliştirme araçları {#development-tools}
 
-**ethers-kt -** **_EVM tabanlı blokzincirler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
+**eth.zig -** **_Derleme zamanı Uygulama İkili Arayüzü (ABI) kodlaması ve sözleşme bağlamaları içeren Ethereum için bir Zig kütüphanesi._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Belgeler](https://ethzig.org)
+- [Örnekler](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_Ethereum Sanal Makinesi (EVM) tabanlı blokzincirler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Örnekler](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -115,8 +127,8 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 **Python Araçları -** **_Python aracılığıyla Ethereum etkileşimi için çeşitli kütüphaneler._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [Web3.py GitHub](https://github.com/ethereum/web3.py)
-- [Web3.py Sohbeti](https://gitter.im/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.py Sohbeti](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_Nihai blokzincir geliştirme platformu._**
 
@@ -125,7 +137,7 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 - [Belgeler](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_Ethereum için bir Java/Android/Kotlin/Scala entegrasyon kütüphanesi._**
+**web3j -** **_Ethereum için bir Java/Android/Kotlin/Scala entegrasyon kütüphanesi._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Belgeler](https://docs.web3j.io/)

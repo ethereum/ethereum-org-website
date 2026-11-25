@@ -79,3 +79,7 @@ Wenn Apps alle auf Ethereum aufgebaut sind, sind sie alle kompatibel. Ein Token 
 <ExpandableCard title="Was ist die beste Krypto-Wallet?" visible>
   <p>Eine Krypto-Wallet ermöglicht es dir, deine Token zu halten und dein Ethereum-Konto zu verwalten. Es gibt viele großartige Wallets, die jeweils einem anderen Zweck dienen. Um herauszufinden, welche Wallet am besten für dich geeignet ist, besuche unsere [Liste von Wallets](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

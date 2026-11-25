@@ -15,16 +15,15 @@ Untuk lebih memahami halaman ini, kami sarankan Anda membaca terlebih dahulu ten
 
 Gas merujuk pada unit yang mengukur jumlah upaya komputasi yang diperlukan untuk mengeksekusi operasi tertentu di jaringan Ethereum.
 
-Karena setiap transaksi Ethereum memerlukan sumber daya komputasi untuk dieksekusi, sumber daya tersebut harus dibayar untuk memastikan Ethereum tidak rentan terhadap spam dan tidak terjebak dalam putaran komputasi tak terbatas. Pembayaran untuk komputasi dilakukan dalam bentuk biaya gas.
+Karena setiap transaksi Ethereum memerlukan sumber daya komputasi untuk dieksekusi, sumber daya tersebut harus dibayar untuk memastikan Ethereum tidak rentan terhadap spam dan tidak dapat terjebak dalam perulangan komputasi tak terbatas. Pembayaran untuk komputasi dilakukan dalam bentuk biaya gas.
 
 Biaya gas adalah **jumlah gas yang digunakan untuk melakukan suatu operasi, dikalikan dengan biaya per unit gas**. Biaya ini dibayarkan terlepas dari apakah transaksi berhasil atau gagal.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagram diadaptasi dari [Ilustrasi EVM Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-Biaya gas harus dibayar dalam mata uang asli Ethereum, ether (ETH). Harga gas biasanya dikutip dalam Gwei, yang merupakan denominasi dari ETH. Setiap Gwei sama dengan sepersemiliar ETH (0,000000001 ETH atau 10<sup>-9</sup> ETH).
+Biaya gas harus dibayar dalam mata uang asli Ethereum, yaitu Ether (ETH). Harga gas biasanya dikutip dalam Gwei, yang merupakan denominasi dari ETH. Setiap Gwei sama dengan sepersemiliar ETH (0,000000001 ETH atau 10<sup>-9</sup> ETH).
 
-Sebagai contoh, alih-alih mengatakan bahwa biaya gas Anda adalah 0,000000001 ether, Anda dapat mengatakan biaya gas Anda adalah 1 Gwei.
+Sebagai contoh, alih-alih mengatakan bahwa biaya gas Anda adalah 0,000000001 Ether, Anda dapat mengatakan bahwa biaya gas Anda adalah 1 Gwei.
 
 Kata 'Gwei' adalah singkatan dari 'giga-wei', yang berarti 'miliar Wei'. Satu Gwei sama dengan satu miliar Wei. Wei itu sendiri (dinamai dari [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), pencipta [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) adalah unit terkecil dari ETH.
 
@@ -101,12 +100,11 @@ Anda dapat secara eksplisit menyatakan berapa banyak yang bersedia Anda bayar ag
 
 ## Mengapa biaya gas ada? {#why-do-gas-fees-exist}
 
-Singkatnya, biaya gas membantu menjaga keamanan jaringan Ethereum. Dengan mewajibkan biaya untuk setiap komputasi yang dieksekusi di jaringan, kita mencegah pelaku kejahatan melakukan spam pada jaringan. Untuk menghindari putaran tak terbatas yang tidak disengaja atau bermusuhan atau pemborosan komputasi lainnya dalam kode, setiap transaksi diwajibkan untuk menetapkan batas berapa banyak langkah komputasi eksekusi kode yang dapat digunakannya. Unit dasar komputasi adalah "gas".
+Singkatnya, biaya gas membantu menjaga keamanan jaringan Ethereum. Dengan mewajibkan biaya untuk setiap komputasi yang dieksekusi di jaringan, kita mencegah pelaku jahat melakukan spam pada jaringan. Untuk menghindari perulangan tak terbatas yang tidak disengaja atau bersifat merusak, atau pemborosan komputasi lainnya dalam kode, setiap transaksi diwajibkan untuk menetapkan batas berapa banyak langkah komputasi eksekusi kode yang dapat digunakannya. Unit dasar komputasi adalah "gas".
 
-Meskipun transaksi menyertakan batas, gas apa pun yang tidak digunakan dalam transaksi akan dikembalikan kepada pengguna (mis., `max fee - (base fee + tip)` dikembalikan).
+Meskipun sebuah transaksi menyertakan batas, gas apa pun yang tidak digunakan dalam transaksi akan dikembalikan kepada pengguna (mis., `max fee - (base fee + tip)` dikembalikan).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagram diadaptasi dari [Ilustrasi EVM Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Apa itu batas gas? {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ Penskalaan lapisan 2 (l2) adalah inisiatif utama untuk sangat meningkatkan biaya
 
 ## Memantau biaya gas {#monitoring-gas-fees}
 
-Jika Anda ingin memantau harga gas, sehingga Anda dapat mengirim ETH Anda dengan biaya lebih murah, Anda dapat menggunakan banyak alat yang berbeda seperti:
+Jika Anda ingin memantau harga gas, sehingga Anda dapat mengirim ETH Anda dengan biaya lebih murah, Anda dapat menggunakan berbagai alat seperti:
 
 - [Etherscan](https://etherscan.io/gastracker) _Estimator harga gas transaksi_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimator harga gas transaksi sumber terbuka_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _Pantau dan lacak harga gas Ethereum dan L2 untuk mengurangi biaya transaksi dan menghemat uang_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Ekstensi Chrome untuk estimasi gas yang mendukung transaksi warisan Tipe 0 dan transaksi EIP-1559 Tipe 2._
-- [Kalkulator Biaya Gas Cryptoneur](https://cryptoneur.xyz/en/gas-fees-calculator) _Hitung biaya gas dalam mata uang lokal Anda untuk berbagai jenis transaksi di Mainnet, Arbitrum, dan Polygon._
-
-## Alat terkait {#related-tools}
-
-- [Platform Gas Blocknative](https://www.blocknative.com/gas) _API estimasi gas yang didukung oleh platform data mempool global Blocknative_
-- [Jaringan Gas](https://gas.network) Oracle Gas Onchain. Dukungan untuk 35+ rantai. 
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Hitung biaya gas dalam mata uang lokal Anda untuk berbagai jenis transaksi di Mainnet, Arbitrum, dan Polygon._
 
 ## Bacaan lebih lanjut {#further-reading}
 

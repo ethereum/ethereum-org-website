@@ -19,7 +19,7 @@ Como casi todo lo demás en Ethereum, el Libro Amarillo evoluciona con el tiempo
 
 El Libro Amarillo original se escribió justo al comienzo del desarrollo de Ethereum. Describe el mecanismo de consenso original basado en prueba de trabajo (PoW) que se utilizó originalmente para asegurar la red. Sin embargo, Ethereum desactivó la prueba de trabajo y comenzó a utilizar el consenso basado en prueba de participación (PoS) en septiembre de 2022. Este tutorial se centrará en las partes del Libro Amarillo que definen la Máquina Virtual de Ethereum (EVM). La EVM no se vio afectada por la transición a la prueba de participación (excepto por el valor de retorno del código de operación DIFFICULTY).
 
-## 9 Modelo de ejecución
+## 9 Modelo de ejecución {#9-execution-model}
 
 Esta sección (pág. 14-16) incluye la mayor parte de la definición de la EVM.
 
@@ -59,7 +59,7 @@ El término ejecución excepcional significa una excepción que hace que se dete
 
 Esta sección explica cómo se calculan las tarifas de gas. Hay tres costos:
 
-### Costo del código de operación
+### Costo del código de operación {#opcode-cost}
 
 El costo inherente del código de operación específico. Para obtener este valor, busque el grupo de costo del código de operación en el Apéndice H (pág. 29, debajo de la ecuación (329)) y busque el grupo de costo en la ecuación (326). Esto le da una función de costo, que en la mayoría de los casos utiliza parámetros del Apéndice G (pág. 28).
 
@@ -73,7 +73,7 @@ El costo de ejecutar el código que estamos llamando.
 - En el caso de [`CREATE`](https://www.evm.codes/#f0) y [`CREATE2`](https://www.evm.codes/#f5), el constructor para el nuevo contrato.
 - En el caso de [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa) o [`DELEGATECALL`](https://www.evm.codes/#f4), el contrato que llamamos.
 
-### Costo de expansión de memoria
+### Costo de expansión de memoria {#expanding-memory-cost}
 
 El costo de expandir la memoria (si es necesario).
 
@@ -84,7 +84,7 @@ La función _C<sub>mem</sub>_ se define en la ecuación 328: _C<sub>mem</sub>(a)
 **Nota:** estos factores solo influyen en el costo de gas _inherente_; no tienen en cuenta el mercado de tarifas ni las propinas a los validadores que determinan cuánto debe pagar un usuario final. Este es solo el costo bruto de ejecutar una operación particular en la EVM.
 
 [Más información sobre el gas](/developers/docs/gas/).
-## 9.3 Entorno de ejecución
+## 9.3 Entorno de ejecución {#93-execution-env}
 
 El entorno de ejecución es una tupla, _I_, que incluye información que no forma parte del estado de la cadena de bloques ni de la EVM.
 
@@ -109,7 +109,7 @@ Se necesitan algunos otros parámetros para comprender el resto de la sección 9
 | _g_       | 9.3 (pág. 14)          | Gas restante                                                                                                                                                                                                                                                       |
 | _A_       | 6.1 (pág. 9)           | Subestado acumulado (cambios programados para cuando finalice la transacción)                                                                                                                                                                                      |
 | _o_       | 9.3 (pág. 14)          | Salida: el resultado devuelto en el caso de una transacción interna (cuando un contrato llama a otro) y llamadas a funciones de vista (cuando solo está solicitando información, por lo que no hay necesidad de esperar a que se procese una transacción) |
-## 9.4 Descripción general de la ejecución
+## 9.4 Descripción general de la ejecución {#94-execution-overview}
 
 Ahora que tenemos todos los preliminares, finalmente podemos comenzar a trabajar en cómo funciona la EVM.
 
@@ -136,7 +136,7 @@ Esta sección explica el estado de la máquina con mayor detalle. Especifica que
 
 Como se trata de una [máquina de pila](https://en.wikipedia.org/wiki/Stack_machine), necesitamos realizar un seguimiento del número de elementos extraídos (_δ_) e insertados (_α_) por cada código de operación.
 
-## 9.4.2 Detención excepcional
+## 9.4.2 Detención excepcional {#942-exceptional-halt}
 
 Esta sección define la función _Z_, que especifica cuándo tenemos una terminación anormal. Esta es una función [booleana](https://en.wikipedia.org/wiki/Boolean_data_type), por lo que usa [_∨_ para un o lógico](https://en.wikipedia.org/wiki/Logical_disjunction) y [_∧_ para un y lógico](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -181,7 +181,7 @@ Tenemos una detención excepcional si alguna de estas condiciones es verdadera:
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   No puede ejecutar [`SSTORE`](https://www.evm.codes/#55) a menos que tenga más de G<sub>callstipend</sub> (definido como 2300 en el Apéndice G) de gas.
-## 9.4.3 Validez del destino de salto
+## 9.4.3 Validez del destino de salto {#943-jump-dest-valid}
 
 Aquí definimos formalmente cuáles son los códigos de operación [`JUMPDEST`](https://www.evm.codes/#5b). No podemos simplemente buscar el valor de byte 0x5B, porque podría estar dentro de un PUSH (y por lo tanto ser datos y no un código de operación).
 
@@ -198,7 +198,7 @@ La función de detención _H_, puede devolver tres tipos de valores.
 - Si tenemos un código de operación de detención que no produce salida (ya sea [`STOP`](https://www.evm.codes/#00) o [`SELFDESTRUCT`](https://www.evm.codes/#ff)), devuelva una secuencia de bytes de tamaño cero como valor de retorno. Tenga en cuenta que esto es muy diferente del conjunto vacío. Este valor significa que la EVM realmente se detuvo, solo que no hay datos de retorno para leer.
 - Si tenemos un código de operación de detención que sí produce salida (ya sea [`RETURN`](https://www.evm.codes/#f3) o [`REVERT`](https://www.evm.codes/#fd)), devuelva la secuencia de bytes especificada por ese código de operación. Esta secuencia se toma de la memoria, el valor en la parte superior de la pila (_μ<sub>s</sub>[0]_) es el primer byte, y el valor posterior (_μ<sub>s</sub>[1]_) es la longitud.
 
-## H.2 Conjunto de instrucciones
+## H.2 Conjunto de instrucciones {#h2-instruction-set}
 
 Antes de pasar a la subsección final de la EVM, 9.5, veamos las instrucciones en sí. Se definen en el Apéndice H.2 que comienza en la pág. 30. Se espera que todo lo que no se especifique que cambia con ese código de operación específico permanezca igual. Las variables que sí cambian se especifican como \<algo\>′.
 
@@ -242,7 +242,7 @@ La segunda ecuación, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] 
 |       |           |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Tenga en cuenta que para usar cualquier elemento de la pila, necesitamos extraerlo, lo que significa que también necesitamos extraer todos los elementos de la pila que están encima de él. En el caso de [`DUP<n>`](https://www.evm.codes/#8f) y [`SWAP<n>`](https://www.evm.codes/#9f), esto significa tener que extraer y luego insertar hasta dieciséis valores.
-## 9.5 El ciclo de ejecución
+## 9.5 El ciclo de ejecución {#95-exec-cycle}
 
 Ahora que tenemos todas las partes, finalmente podemos comprender cómo se documenta el ciclo de ejecución de la EVM.
 

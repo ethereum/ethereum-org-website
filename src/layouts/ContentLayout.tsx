@@ -27,6 +27,7 @@ const variants = cva("flow flex-1", {
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
   Pick<TableOfContentsProps, "dropdownLinks" | "showDropdown"> & {
     children: React.ReactNode
+    articleHeader?: React.ReactNode
     tocItems: TableOfContentsProps["items"]
     heroSection: React.ReactNode
     contributors: FileContributor[]
@@ -40,6 +41,7 @@ export const ContentLayout = ({
   tocItems,
   showDropdown = true,
   heroSection,
+  articleHeader,
   contributors,
   lastEditLocaleTimestamp,
   listenSlug,
@@ -52,6 +54,7 @@ export const ContentLayout = ({
     <main className="p-page">
       <div className="flex justify-between gap-x-space-3x max-lg:flex-col-reverse">
         <MainArticle className={variants({ variant })}>
+          {articleHeader}
           <FileContributors
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}

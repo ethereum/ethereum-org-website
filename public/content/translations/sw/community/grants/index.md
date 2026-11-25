@@ -4,15 +4,13 @@ description: Orodha ya mipango ya ruzuku katika mfumo mzima wa ikolojia wa Ether
 lang: sw
 ---
 
-# Ruzuku za Ethereum {#ethereum-grants}
-
 Mipango iliyoorodheshwa hapa chini inatoa ruzuku mbalimbali za ufadhili kwa miradi inayofanya kazi kukuza mafanikio na ukuaji wa mfumo wa ikolojia wa [Ethereum](/). Tumia hii kama mwongozo wa kupata na kutuma maombi ya fedha ili kusaidia kufanikisha mradi wako unaofuata wa Ethereum.
 
 Orodha hii inasimamiwa na jamii yetu. Ikiwa kuna kitu kinakosekana au si sahihi, tafadhali hariri ukurasa huu!
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Waanzilishi, mnahitaji msaada wa kuharakisha biashara yenu? [Nendeni kwenye Usaidizi wa Waanzilishi](/founders/)</div>
+<div>Waanzilishi, mnahitaji msaada wa kuharakisha biashara yenu? [Nendeni kwenye Usaidizi wa Waanzilishi](/organizations/founders/)</div>
 </Alert>
 
 ## Mfumo mpana wa ikolojia wa Ethereum {#broad-ethereum-ecosystem}

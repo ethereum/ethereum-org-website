@@ -1,9 +1,5 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -18,7 +14,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import OrganizerCTA from "../_components/organizer-cta"
-import { getMeetupGroups, mapEventTranslations } from "../utils"
+import { getMeetupGroups } from "../meetup-groups"
+import { mapEventTranslations } from "../utils"
 
 import FilterMeetups from "./_components/filter-meetups"
 import PageJsonLD from "./page-jsonld"
@@ -43,7 +40,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups(locale)
+  const meetupGroups = await getMeetupGroups(locale)
   // Show API meetups first (sorted by date), then groups (sorted alphabetically)
   const meetups = [...apiMeetups, ...meetupGroups]
 
@@ -95,8 +92,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-community-events")
 

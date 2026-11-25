@@ -1,11 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/ai-agents/index.md",
   "generatedAt": "2026-07-22T22:43:35.627Z",
-  "rootHash": "57c137e4cefc",
+  "rootHash": "ba9a9cb01dfb",
   "tree": {
-    "contentHash": "be1e99973b31",
-    "anchorHash": "8417fa89bab7",
+    "contentHash": "09af5530bb25",
+    "anchorHash": "06b6a73b317a",
     "children": {
       "frontmatter:title": {
         "contentHash": "3d9e43485a12",
@@ -40,24 +40,78 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:summaryPoints": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
+        "contentHash": "c1925314719e",
+        "anchorHash": "918e1f78a588",
+        "children": {
+          "0": {
+            "contentHash": "551e3fc9f5c1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "1": {
+            "contentHash": "f5895216c667",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "2": {
+            "contentHash": "2b24fa867580",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1",
+          "2"
+        ]
       },
       "frontmatter:buttons": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "frontmatter:- content": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "6ec003c724a2"
-      },
-      "frontmatter:toId": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "d1aae8d77d79"
-      },
-      "frontmatter:isSecondary": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "fcbcf165908d"
+        "contentHash": "e13a80477531",
+        "anchorHash": "e2813db2bb08",
+        "children": {
+          "0": {
+            "contentHash": "f5818652a990",
+            "anchorHash": "78236ee6abce",
+            "children": {
+              "content": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3961d0779551"
+              },
+              "toId": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3316d3486cd4"
+              }
+            },
+            "childrenOrder": [
+              "content",
+              "toId"
+            ]
+          },
+          "1": {
+            "contentHash": "918e1f78a588",
+            "anchorHash": "31cfc833755d",
+            "children": {
+              "content": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "6ec003c724a2"
+              },
+              "toId": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d1aae8d77d79"
+              },
+              "isSecondary": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "fcbcf165908d"
+              }
+            },
+            "childrenOrder": [
+              "content",
+              "toId",
+              "isSecondary"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "0",
+          "1"
+        ]
       },
       "prose:0": {
         "contentHash": "6eaefc16d922",
@@ -561,11 +615,6 @@
       "frontmatter:alt",
       "frontmatter:summaryPoints",
       "frontmatter:buttons",
-      "frontmatter:- content",
-      "frontmatter:toId",
-      "frontmatter:- content",
-      "frontmatter:toId",
-      "frontmatter:isSecondary",
       "prose:0",
       "what-are-ai-agents",
       "verifiable-ai",

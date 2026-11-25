@@ -19,7 +19,7 @@ Giống như hầu hết mọi thứ khác trong Ethereum, Sách vàng phát tri
 
 Sách vàng ban đầu được viết ngay từ khi bắt đầu phát triển Ethereum. Nó mô tả cơ chế đồng thuận Bằng chứng công việc (PoW) ban đầu được sử dụng để bảo mật mạng lưới. Tuy nhiên, Ethereum đã tắt Bằng chứng công việc (PoW) và bắt đầu sử dụng cơ chế đồng thuận Bằng chứng cổ phần (PoS) vào tháng 9 năm 2022. Hướng dẫn này sẽ tập trung vào các phần của sách vàng định nghĩa Máy ảo Ethereum (EVM). EVM không bị thay đổi bởi quá trình chuyển đổi sang Bằng chứng cổ phần (PoS) (ngoại trừ giá trị trả về của mã lệnh DIFFICULTY).
 
-## 9 Mô hình thực thi
+## 9 Mô hình thực thi {#9-execution-model}
 
 Phần này (trang 14-16) bao gồm hầu hết định nghĩa về EVM.
 
@@ -59,7 +59,7 @@ Thuật ngữ thực thi ngoại lệ (exceptional execution) có nghĩa là m�
 
 Phần này giải thích cách tính phí Gas. Có ba loại chi phí:
 
-### Chi phí mã lệnh
+### Chi phí mã lệnh {#opcode-cost}
 
 Chi phí vốn có của mã lệnh cụ thể. Để có được giá trị này, hãy tìm nhóm chi phí của mã lệnh trong Phụ lục H (trang 29, dưới phương trình (329)) và tìm nhóm chi phí trong phương trình (326). Điều này cung cấp cho bạn một hàm chi phí, trong hầu hết các trường hợp sử dụng các tham số từ Phụ lục G (trang 28).
 
@@ -73,7 +73,7 @@ Chi phí chạy mã mà chúng ta đang gọi.
 - Trong trường hợp của [`CREATE`](https://www.evm.codes/#f0) và [`CREATE2`](https://www.evm.codes/#f5), là hàm khởi tạo cho hợp đồng mới.
 - Trong trường hợp của [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), hoặc [`DELEGATECALL`](https://www.evm.codes/#f4), là hợp đồng mà chúng ta gọi.
 
-### Chi phí mở rộng bộ nhớ
+### Chi phí mở rộng bộ nhớ {#expanding-memory-cost}
 
 Chi phí mở rộng bộ nhớ (nếu cần thiết).
 
@@ -84,7 +84,7 @@ Hàm _C<sub>mem</sub>_ được định nghĩa trong phương trình 328: _C<sub
 **Lưu ý** rằng các yếu tố này chỉ ảnh hưởng đến chi phí Gas _vốn có_ - nó không tính đến thị trường phí hoặc tiền boa cho các trình xác thực quyết định số tiền mà người dùng cuối phải trả - đây chỉ là chi phí thô để chạy một hoạt động cụ thể trên EVM.
 
 [Đọc thêm về Gas](/developers/docs/gas/).
-## 9.3 Môi trường thực thi
+## 9.3 Môi trường thực thi {#93-execution-env}
 
 Môi trường thực thi là một bộ (tuple), _I_, bao gồm thông tin không thuộc về trạng thái Chuỗi khối hoặc EVM.
 
@@ -109,7 +109,7 @@ Một vài tham số khác cần thiết để hiểu phần còn lại của ph
 | _g_ | 9.3 (trang 14) | Gas còn lại |
 | _A_ | 6.1 (trang 9) | Trạng thái phụ tích lũy (các thay đổi được lên lịch khi giao dịch kết thúc) |
 | _o_ | 9.3 (trang 14) | Đầu ra - kết quả trả về trong trường hợp giao dịch nội bộ (khi một hợp đồng gọi một hợp đồng khác) và các lệnh gọi đến các hàm view (khi bạn chỉ yêu cầu thông tin, vì vậy không cần phải đợi một giao dịch) |
-## 9.4 Tổng quan về thực thi
+## 9.4 Tổng quan về thực thi {#94-execution-overview}
 
 Bây giờ chúng ta đã có tất cả các bước chuẩn bị, cuối cùng chúng ta có thể bắt đầu tìm hiểu cách EVM hoạt động.
 
@@ -136,7 +136,7 @@ Phần này giải thích chi tiết hơn về trạng thái máy. Nó chỉ đ�
 
 Vì đây là một [máy ngăn xếp](https://en.wikipedia.org/wiki/Stack_machine), chúng ta cần theo dõi số lượng mục được lấy ra (_δ_) và đẩy vào (_α_) bởi mỗi mã lệnh.
 
-## 9.4.2 Dừng ngoại lệ
+## 9.4.2 Dừng ngoại lệ {#942-exceptional-halt}
 
 Phần này định nghĩa hàm _Z_, chỉ định khi nào chúng ta có một sự kết thúc bất thường. Đây là một hàm [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type), vì vậy nó sử dụng [_∨_ cho phép toán logic OR](https://en.wikipedia.org/wiki/Logical_disjunction) và [_∧_ cho phép toán logic AND](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -181,7 +181,7 @@ Chúng ta có một điểm dừng ngoại lệ nếu bất kỳ điều kiện 
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   Bạn không thể chạy [`SSTORE`](https://www.evm.codes/#55) trừ khi bạn có nhiều hơn G<sub>callstipend</sub> (được định nghĩa là 2300 trong Phụ lục G) Gas.
-## 9.4.3 Tính hợp lệ của đích đến bước nhảy
+## 9.4.3 Tính hợp lệ của đích đến bước nhảy {#943-jump-dest-valid}
 
 Ở đây chúng ta chính thức định nghĩa các mã lệnh [`JUMPDEST`](https://www.evm.codes/#5b) là gì. Chúng ta không thể chỉ tìm kiếm giá trị byte 0x5B, vì nó có thể nằm bên trong một PUSH (và do đó là dữ liệu chứ không phải là mã lệnh).
 
@@ -198,7 +198,7 @@ Hàm dừng _H_, có thể trả về ba loại giá trị.
 - Nếu chúng ta có một mã lệnh dừng không tạo ra đầu ra (hoặc [`STOP`](https://www.evm.codes/#00) hoặc [`SELFDESTRUCT`](https://www.evm.codes/#ff)), trả về một chuỗi có kích thước 0 byte làm giá trị trả về. Lưu ý rằng điều này rất khác với tập hợp rỗng. Giá trị này có nghĩa là EVM thực sự đã dừng lại, chỉ là không có dữ liệu trả về để đọc.
 - Nếu chúng ta có một mã lệnh dừng tạo ra đầu ra (hoặc [`RETURN`](https://www.evm.codes/#f3) hoặc [`REVERT`](https://www.evm.codes/#fd)), trả về chuỗi byte được chỉ định bởi mã lệnh đó. Chuỗi này được lấy từ bộ nhớ, giá trị ở đỉnh ngăn xếp (_μ<sub>s</sub>[0]_) là byte đầu tiên và giá trị sau nó (_μ<sub>s</sub>[1]_) là độ dài.
 
-## H.2 Tập lệnh
+## H.2 Tập lệnh {#h2-instruction-set}
 
 Trước khi chúng ta đi đến tiểu mục cuối cùng của EVM, 9.5, hãy xem xét chính các lệnh. Chúng được định nghĩa trong Phụ lục H.2 bắt đầu từ trang 30. Bất cứ điều gì không được chỉ định là thay đổi với mã lệnh cụ thể đó đều được cho là giữ nguyên. Các biến có thay đổi được chỉ định bằng \<something\>′.
 
@@ -242,7 +242,7 @@ Phương trình thứ hai, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub
 | | | | | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Lưu ý rằng để sử dụng bất kỳ mục ngăn xếp nào, chúng ta cần lấy nó ra, điều đó có nghĩa là chúng ta cũng cần lấy ra tất cả các mục ngăn xếp nằm trên nó. Trong trường hợp của [`DUP<n>`](https://www.evm.codes/#8f) và [`SWAP<n>`](https://www.evm.codes/#9f), điều này có nghĩa là phải lấy ra và sau đó đẩy lên đến mười sáu giá trị.
-## 9.5 Chu kỳ thực thi
+## 9.5 Chu kỳ thực thi {#95-exec-cycle}
 
 Bây giờ chúng ta đã có tất cả các phần, cuối cùng chúng ta có thể hiểu cách chu kỳ thực thi của EVM được ghi lại.
 

@@ -33,6 +33,7 @@ import { cn } from "@/lib/utils/cn"
 
 const meta = {
   title: "Design System / Gradients",
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     layout: "padded",

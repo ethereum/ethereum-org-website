@@ -43,9 +43,9 @@ MaxEB hakkında daha derinlemesine bir incelemeyi [buradan](/roadmap/pectra/maxe
 
 ### Blob işlem kapasitesi artışı {#7691}
 
-Bloblar, L2'ler için [veri kullanılabilirliği](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) sağlar. Bunlar [önceki ağ güncellemesinde](/roadmap/dencun/) tanıtılmıştı. 
+Bloblar, L2'ler için [veri kullanılabilirliği](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) sağlar. [Önceki ağ güncellemesinde](/roadmap/dencun/) tanıtıldılar. 
 
-Şu anda ağ, blok başına ortalama 3 blob ve maksimum 6 blob hedeflemektedir. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) ile ortalama blob sayısı 6'ya, blok başına maksimum 9'a çıkarılacak ve bu da Ethereum toplamaları için artan bir kapasiteyle sonuçlanacaktır. Bu EIP, [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) daha da yüksek blob sayılarına olanak tanıyana kadar aradaki boşluğu kapatmaya yardımcı olur.
+Pectra'dan önce ağ, blok başına ortalama 3 ve maksimum 6 blob hedefliyordu. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), hedefi 6'ya ve maksimumu blok başına 9'a çıkararak Ethereum toplamaları için kapasiteyi artırdı. Bu, [Fusaka](/roadmap/fusaka/)'da kullanıma sunulan ve daha da yüksek blob sayılarına olanak tanıyan [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594)'a kadar aradaki boşluğu doldurdu.
 
 ### Çağrı verisi maliyetini artırma {#7623}
 

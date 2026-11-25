@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils/cn"
 
 const meta = {
   title: "Design System / Shadows",
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     layout: "fullscreen",

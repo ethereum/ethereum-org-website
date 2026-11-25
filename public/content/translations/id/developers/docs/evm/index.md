@@ -12,12 +12,11 @@ Beberapa pemahaman dasar tentang terminologi umum dalam ilmu komputer seperti [b
 
 ## Dari buku besar ke mesin state {#from-ledger-to-state-machine}
 
-Analogi 'buku besar terdistribusi' sering digunakan untuk menggambarkan rantai blok seperti Bitcoin, yang memungkinkan mata uang terdesentralisasi menggunakan alat dasar kriptografi. Buku besar tersebut memelihara catatan aktivitas yang harus mematuhi serangkaian aturan yang mengatur apa yang dapat dan tidak dapat dilakukan seseorang untuk memodifikasi buku besar tersebut. Misalnya, sebuah alamat Bitcoin tidak dapat membelanjakan lebih banyak Bitcoin daripada yang telah diterimanya sebelumnya. Aturan-aturan ini mendasari semua transaksi di Bitcoin dan banyak rantai blok lainnya.
+Analogi 'buku besar terdistribusi' sering digunakan untuk mendeskripsikan rantai blok seperti Bitcoin, yang memungkinkan mata uang terdesentralisasi menggunakan alat dasar kriptografi. Buku besar tersebut memelihara catatan aktivitas yang harus mematuhi serangkaian aturan yang mengatur apa yang dapat dan tidak dapat dilakukan seseorang untuk memodifikasi buku besar. Sebagai contoh, sebuah alamat Bitcoin tidak dapat membelanjakan lebih banyak Bitcoin daripada yang telah diterimanya sebelumnya. Aturan-aturan ini mendasari semua transaksi di Bitcoin dan banyak rantai blok lainnya.
 
-Meskipun Ethereum memiliki mata uang kripto aslinya sendiri (ether) yang mengikuti aturan intuitif yang hampir sama persis, Ethereum juga memungkinkan fungsi yang jauh lebih kuat: [kontrak pintar](/developers/docs/smart-contracts/). Untuk fitur yang lebih kompleks ini, diperlukan analogi yang lebih canggih. Alih-alih buku besar terdistribusi, Ethereum adalah [mesin state](https://wikipedia.org/wiki/Finite-state_machine) terdistribusi. State Ethereum adalah struktur data besar yang tidak hanya menyimpan semua akun dan saldo, tetapi juga sebuah _state mesin_, yang dapat berubah dari blok ke blok menurut serangkaian aturan yang telah ditentukan sebelumnya, dan yang dapat mengeksekusi kode mesin arbitrer. Aturan spesifik untuk mengubah state dari blok ke blok ditentukan oleh EVM.
+Meskipun Ethereum memiliki mata uang kripto aslinya sendiri (Ether) yang mengikuti aturan intuitif yang hampir sama persis, Ethereum juga memungkinkan fungsi yang jauh lebih kuat: [kontrak pintar](/developers/docs/smart-contracts/). Untuk fitur yang lebih kompleks ini, diperlukan analogi yang lebih canggih. Alih-alih buku besar terdistribusi, Ethereum adalah [mesin state](https://wikipedia.org/wiki/Finite-state_machine) terdistribusi. State Ethereum adalah struktur data besar yang tidak hanya menyimpan semua akun dan saldo, tetapi juga _state mesin_, yang dapat berubah dari blok ke blok menurut serangkaian aturan yang telah ditentukan sebelumnya, dan yang dapat mengeksekusi kode mesin arbitrer. Aturan spesifik untuk mengubah state dari blok ke blok ditentukan oleh EVM.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Diagram diadaptasi dari [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## Fungsi transisi state Ethereum {#the-ethereum-state-transition-function}
 
@@ -57,12 +56,11 @@ Kontrak berisi trie _penyimpanan_ Merkle Patricia (sebagai array kata yang dapat
 
 Kode bita kontrak pintar yang dikompilasi dieksekusi sebagai sejumlah [opcode](/developers/docs/evm/opcodes) EVM, yang melakukan operasi tumpukan standar seperti `XOR`, `AND`, `ADD`, `SUB`, dll. EVM juga mengimplementasikan sejumlah operasi tumpukan khusus rantai blok, seperti `ADDRESS`, `BALANCE`, `BLOCKHASH`, dll. Kumpulan opcode juga mencakup `TSTORE` dan `TLOAD`, yang menyediakan akses ke penyimpanan sementara.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Diagram diadaptasi dari [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## Implementasi EVM {#evm-implementations}
 
-Semua implementasi EVM harus mematuhi spesifikasi yang dijelaskan dalam kertas kuning Ethereum.
+Semua implementasi EVM harus mematuhi spesifikasi yang dijelaskan dalam Kertas Kuning Ethereum.
 
 Selama sepuluh tahun sejarah Ethereum, EVM telah mengalami beberapa revisi, dan ada beberapa implementasi EVM dalam berbagai bahasa pemrograman.
 
@@ -70,7 +68,7 @@ Selama sepuluh tahun sejarah Ethereum, EVM telah mengalami beberapa revisi, dan 
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Bacaan Lebih Lanjut {#further-reading}
@@ -91,3 +89,5 @@ Selama sepuluh tahun sejarah Ethereum, EVM telah mengalami beberapa revisi, dan 
 
 - [Memahami Spesifikasi EVM di Kertas Kuning](/developers/tutorials/yellow-paper-evm/) _– Panduan terarah tentang spesifikasi EVM formal dari Kertas Kuning Ethereum._
 - [Rekayasa Balik Kontrak](/developers/tutorials/reverse-engineering-a-contract/) _– Cara merekayasa balik kontrak pintar yang dikompilasi menggunakan opcode EVM._
+
+<QuizWidget quizKey="evm" />

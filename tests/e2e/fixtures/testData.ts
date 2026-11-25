@@ -1,5 +1,6 @@
 import en from "@/intl/en/common.json"
 import enStart from "@/intl/en/page-start.json"
+import enFindWallet from "@/intl/en/page-wallets-find-wallet.json"
 import es from "@/intl/es/common.json"
 
 /**
@@ -38,7 +39,8 @@ export const testData = {
     headings: {
       homepage: en["site-title"],
       startPage: enStart["page-start-meta-title"],
-      findWallet: en["nav-find-wallet-label"],
+      findWallet: enFindWallet["page-find-wallet-title"],
+      findWalletRelated: enFindWallet["page-find-wallet-related-title"],
       notFoundEn: en["we-couldnt-find-that-page"],
       notFoundEs: es["we-couldnt-find-that-page"],
     },

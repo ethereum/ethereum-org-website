@@ -13,20 +13,19 @@ lang: ur
 
 ## گیس کیا ہے؟ {#what-is-gas}
 
-گیس سے مراد وہ اکائی ہے جو ایتھیریم نیٹ ورک پر مخصوص کاموں کو انجام دینے کے لیے درکار کمپیوٹیشنل کوشش کی مقدار کو ماپتی ہے۔
+گیس سے مراد وہ اکائی ہے جو ایتھیریم نیٹ ورک پر مخصوص کام انجام دینے کے لیے درکار کمپیوٹیشنل کوشش کی مقدار کو ماپتی ہے۔
 
-چونکہ ہر ایتھیریم ٹرانزیکشن کو انجام دینے کے لیے کمپیوٹیشنل وسائل کی ضرورت ہوتی ہے، اس لیے ان وسائل کی ادائیگی کرنی پڑتی ہے تاکہ یہ یقینی بنایا جا سکے کہ ایتھیریم سپیم کا شکار نہ ہو اور لامحدود کمپیوٹیشنل لوپس میں نہ پھنس سکے۔ کمپیوٹیشن کی ادائیگی گیس فیس کی صورت میں کی جاتی ہے۔
+چونکہ ہر ایتھیریم ٹرانزیکشن کو انجام دینے کے لیے کمپیوٹیشنل وسائل کی ضرورت ہوتی ہے، اس لیے ان وسائل کی ادائیگی کرنی پڑتی ہے تاکہ اس بات کو یقینی بنایا جا سکے کہ ایتھیریم اسپام کا شکار نہ ہو اور لامحدود کمپیوٹیشنل لوپس میں نہ پھنسے۔ کمپیوٹیشن کی ادائیگی گیس فیس کی صورت میں کی جاتی ہے۔
 
-گیس فیس **کسی کام کو کرنے کے لیے استعمال ہونے والی گیس کی مقدار ہے، جسے فی یونٹ گیس کی قیمت سے ضرب دیا جاتا ہے**۔ فیس ادا کی جاتی ہے قطع نظر اس کے کہ ٹرانزیکشن کامیاب ہو یا ناکام۔
+گیس فیس **کسی کام کو انجام دینے کے لیے استعمال ہونے والی گیس کی مقدار کو فی یونٹ گیس کی قیمت سے ضرب دے کر نکالی جاتی ہے**۔ فیس ادا کی جاتی ہے قطع نظر اس کے کہ ٹرانزیکشن کامیاب ہو یا ناکام۔
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_خاکہ [ایتھیریم EVM کی تصویر کشی](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) سے ماخوذ ہے_
+<GasEvmDiagram />
 
-گیس فیس ایتھیریم کی مقامی کرنسی، ایتھر (<span dir="ltr">ETH</span>) میں ادا کرنی ہوتی ہے۔ گیس کی قیمتیں عام طور پر <span dir="ltr">Gwei</span> میں بتائی جاتی ہیں، جو <span dir="ltr">ETH</span> کی ایک اکائی ہے۔ ہر <span dir="ltr">Gwei</span> ایک <span dir="ltr">ETH</span> کے ایک اربویں حصے (<span dir="ltr">0.000000001 ETH</span> یا <span dir="ltr">10<sup>-9</sup> ETH</span>) کے برابر ہے۔
+گیس فیس ایتھیریم کی مقامی کرنسی، ایتھر (<span dir="ltr">ETH</span>) میں ادا کرنی ہوتی ہے۔ گیس کی قیمتیں عام طور پر <span dir="ltr">Gwei</span> میں بتائی جاتی ہیں، جو کہ <span dir="ltr">ETH</span> کی ایک اکائی ہے۔ ہر <span dir="ltr">Gwei</span> ایک <span dir="ltr">ETH</span> کے ایک اربویں حصے (<span dir="ltr">0.000000001 ETH</span> یا <span dir="ltr">10<sup>-9</sup> ETH</span>) کے برابر ہوتا ہے۔
 
 مثال کے طور پر، یہ کہنے کے بجائے کہ آپ کی گیس کی قیمت <span dir="ltr">0.000000001</span> ایتھر ہے، آپ کہہ سکتے ہیں کہ آپ کی گیس کی قیمت <span dir="ltr">1 Gwei</span> ہے۔
 
-لفظ '<span dir="ltr">Gwei</span>' دراصل '<span dir="ltr">giga-wei</span>' کا مخفف ہے، جس کا مطلب ہے 'ایک ارب <span dir="ltr">Wei</span>'۔ ایک <span dir="ltr">Gwei</span> ایک ارب <span dir="ltr">Wei</span> کے برابر ہے۔ <span dir="ltr">Wei</span> بذات خود ([<span dir="ltr">b-money</span>](https://www.investopedia.com/terms/b/bmoney.asp) کے خالق [وے ڈائی](https://wikipedia.org/wiki/Wei_Dai) کے نام پر رکھا گیا) <span dir="ltr">ETH</span> کی سب سے چھوٹی اکائی ہے۔
+لفظ '<span dir="ltr">Gwei</span>' دراصل '<span dir="ltr">giga-wei</span>' کا مخفف ہے، جس کا مطلب 'ایک ارب <span dir="ltr">Wei</span>' ہے۔ ایک <span dir="ltr">Gwei</span> ایک ارب <span dir="ltr">Wei</span> کے برابر ہوتا ہے۔ <span dir="ltr">Wei</span> بذات خود ([b-money](https://www.investopedia.com/terms/b/bmoney.asp) کے خالق، [وے ڈائی](https://wikipedia.org/wiki/Wei_Dai) کے نام پر رکھا گیا) <span dir="ltr">ETH</span> کی سب سے چھوٹی اکائی ہے۔
 
 ## گیس فیس کا حساب کیسے لگایا جاتا ہے؟ {#how-are-gas-fees-calculated}
 
@@ -101,12 +100,11 @@ _خاکہ [ایتھیریم EVM کی تصویر کشی](https://takenobu-hs.gith
 
 ## گیس فیس کیوں موجود ہے؟ {#why-do-gas-fees-exist}
 
-مختصراً، گیس فیس ایتھیریم نیٹ ورک کو محفوظ رکھنے میں مدد کرتی ہے۔ نیٹ ورک پر انجام پانے والی ہر کمپیوٹیشن کے لیے فیس کا تقاضا کر کے، ہم برے عناصر کو نیٹ ورک پر سپیم کرنے سے روکتے ہیں۔ کوڈ میں حادثاتی یا مخالفانہ لامحدود لوپس یا دیگر کمپیوٹیشنل ضیاع سے بچنے کے لیے، ہر ٹرانزیکشن کے لیے یہ حد مقرر کرنا ضروری ہے کہ وہ کوڈ پر عمل درآمد کے کتنے کمپیوٹیشنل مراحل استعمال کر سکتی ہے۔ کمپیوٹیشن کی بنیادی اکائی "گیس" ہے۔
+مختصراً، گیس فیس ایتھیریم نیٹ ورک کو محفوظ رکھنے میں مدد کرتی ہے۔ نیٹ ورک پر انجام پانے والی ہر کمپیوٹیشن کے لیے فیس کا تقاضا کر کے، ہم برے عناصر کو نیٹ ورک پر اسپام کرنے سے روکتے ہیں۔ کوڈ میں حادثاتی یا نقصان دہ لامحدود لوپس یا دیگر کمپیوٹیشنل ضیاع سے بچنے کے لیے، ہر ٹرانزیکشن کے لیے یہ حد مقرر کرنا ضروری ہے کہ وہ کوڈ پر عمل درآمد کے کتنے کمپیوٹیشنل مراحل استعمال کر سکتی ہے۔ کمپیوٹیشن کی بنیادی اکائی "گیس" ہے۔
 
 اگرچہ ایک ٹرانزیکشن میں ایک حد شامل ہوتی ہے، لیکن ٹرانزیکشن میں استعمال نہ ہونے والی کوئی بھی گیس صارف کو واپس کر دی جاتی ہے (مثال کے طور پر، `max fee - (base fee + tip)` واپس کر دی جاتی ہے)۔
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_خاکہ [ایتھیریم EVM کی تصویر کشی](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) سے ماخوذ ہے_
+<GasTxDiagram />
 
 ## گیس کی حد کیا ہے؟ {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ _خاکہ [ایتھیریم EVM کی تصویر کشی](https://takenobu-hs.gith
 
 ## گیس فیس کی نگرانی {#monitoring-gas-fees}
 
-اگر آپ گیس کی قیمتوں کی نگرانی کرنا چاہتے ہیں، تاکہ آپ اپنا <span dir="ltr">ETH</span> کم قیمت میں بھیج سکیں، تو آپ بہت سے مختلف ٹولز استعمال کر سکتے ہیں جیسے:
+اگر آپ گیس کی قیمتوں کی نگرانی کرنا چاہتے ہیں، تاکہ آپ اپنا <span dir="ltr">ETH</span> کم قیمت پر بھیج سکیں، تو آپ بہت سے مختلف ٹولز استعمال کر سکتے ہیں جیسے کہ:
 
-- [Etherscan](https://etherscan.io/gastracker) _ٹرانزیکشن گیس کی قیمت کا تخمینہ کار_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _اوپن سورس ٹرانزیکشن گیس کی قیمت کا تخمینہ کار_
-- [<span dir="ltr">ETH Gas Tracker</span>](https://www.ethgastracker.com/) _ٹرانزیکشن فیس کو کم کرنے اور پیسے بچانے کے لیے ایتھیریم، اور لیئر ۲ (l2) گیس کی قیمتوں کی نگرانی اور ٹریک کریں_
-- [<span dir="ltr">Blocknative ETH Gas Estimator</span>](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _گیس کا تخمینہ لگانے والی کروم ایکسٹینشن جو ٹائپ 0 کی پرانی ٹرانزیکشنز اور ٹائپ 2 <span dir="ltr">EIP-1559</span> ٹرانزیکشنز دونوں کو سپورٹ کرتی ہے۔_
-- [<span dir="ltr">Cryptoneur Gas Fees Calculator</span>](https://cryptoneur.xyz/en/gas-fees-calculator) _مین نیٹ، آربٹرم، اور پولی گون پر مختلف ٹرانزیکشن اقسام کے لیے اپنی مقامی کرنسی میں گیس فیس کا حساب لگائیں۔_
-
-## متعلقہ ٹولز {#related-tools}
-
-- [<span dir="ltr">Blocknative's Gas Platform</span>](https://www.blocknative.com/gas) _گیس کے تخمینے کی <span dir="ltr">API</span> جو <span dir="ltr">Blocknative</span> کے عالمی میم پول ڈیٹا پلیٹ فارم سے چلتی ہے_
-- [<span dir="ltr">Gas Network</span>](https://gas.network) آن چین گیس اوریکلز۔ <span dir="ltr">35+</span> چینز کے لیے سپورٹ۔ 
+- [Etherscan](https://etherscan.io/gastracker) _ٹرانزیکشن گیس کی قیمت کا تخمینہ لگانے والا_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _اوپن سورس ٹرانزیکشن گیس کی قیمت کا تخمینہ لگانے والا_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _ٹرانزیکشن فیس کو کم کرنے اور پیسے بچانے کے لیے ایتھیریم اور لیئر ۲ (l2) گیس کی قیمتوں کی نگرانی اور ٹریک کریں_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _مین نیٹ، آربٹرم، اور پولی گون پر مختلف ٹرانزیکشن کی اقسام کے لیے اپنی مقامی کرنسی میں گیس فیس کا حساب لگائیں۔_
 
 ## مزید مطالعہ {#further-reading}
 

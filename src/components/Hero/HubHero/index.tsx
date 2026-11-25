@@ -2,6 +2,7 @@ import { ReactElement } from "react"
 
 import type { CommonHeroProps } from "@/lib/types"
 
+import Breadcrumbs, { type BreadcrumbsProps } from "@/components/Breadcrumbs"
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 import { Stack } from "@/components/ui/flex"
@@ -10,11 +11,14 @@ import { cn } from "@/lib/utils/cn"
 
 export type HubHeroProps = Omit<
   CommonHeroProps,
-  "breadcrumbs" | "blurDataURL"
-> & { className?: string }
+  "breadcrumbs" | "blurDataURL" | "title"
+> & {
+  className?: string
+  breadcrumbs?: BreadcrumbsProps
+}
 const HubHero = ({
+  breadcrumbs,
   heroImg,
-  title,
   header,
   description,
   buttons,
@@ -50,20 +54,14 @@ const HubHero = ({
           "xl:start-[32px]"
         )}
       >
-        {title ? (
-          <h1
-            data-label="breadcrumb"
-            className="text-md font-normal text-body-medium uppercase"
-          >
-            {title}
-          </h1>
-        ) : null}
+        {breadcrumbs && (
+          <Breadcrumbs
+            {...breadcrumbs}
+            className="[&_ol]:justify-center xl:[&_ol]:justify-start"
+          />
+        )}
         <Stack className="max-w-screen-md gap-2 self-center md:gap-1">
-          {title ? (
-            <h2 className="text-4xl lg:text-5xl">{header}</h2>
-          ) : (
-            <h1 className="text-4xl lg:text-5xl">{header}</h1>
-          )}
+          <h1 className="text-4xl lg:text-5xl">{header}</h1>
 
           <p className="text-lg">{description}</p>
         </Stack>

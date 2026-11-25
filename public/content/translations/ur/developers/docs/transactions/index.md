@@ -178,7 +178,7 @@ _خاکہ [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/eth
 
 کسی بھی ایسی ٹرانزیکشن کے لیے گیس درکار ہوتی ہے جس میں سمارٹ کنٹریکٹ شامل ہو۔
 
-سمارٹ کنٹریکٹس میں ایسے فنکشنز بھی ہو سکتے ہیں جنہیں [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) یا [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) فنکشنز کہا جاتا ہے، جو کنٹریکٹ کی حالت کو تبدیل نہیں کرتے۔ اس طرح، کسی EOA سے ان فنکشنز کو کال کرنے کے لیے کسی گیس کی ضرورت نہیں ہوگی۔ اس صورتحال کے لیے بنیادی RPC کال [`eth_call`](/developers/docs/apis/json-rpc#eth_call) ہے۔
+سمارٹ کنٹریکٹس میں ایسے فنکشنز بھی ہو سکتے ہیں جنہیں [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) یا [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) فنکشنز کہا جاتا ہے، جو کنٹریکٹ کی حالت کو تبدیل نہیں کرتے۔ اس طرح، کسی EOA سے ان فنکشنز کو کال کرنے کے لیے کسی گیس کی ضرورت نہیں ہوگی۔ اس صورتحال کے لیے بنیادی RPC کال [`eth_call`](/developers/docs/apis/json-rpc/#eth-call) ہے۔
 
 `eth_call` کا استعمال کرتے ہوئے رسائی کے برعکس، ان `view` یا `pure` فنکشنز کو عام طور پر اندرونی طور پر بھی کال کیا جاتا ہے (یعنی، خود کنٹریکٹ سے یا کسی دوسرے کنٹریکٹ سے) جس پر گیس خرچ ہوتی ہے۔
 
@@ -238,3 +238,7 @@ _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہی�
 - [اکاؤنٹس](/developers/docs/accounts/)
 - [ایتھیریم ورچوئل مشین (EVM)](/developers/docs/evm/)
 - [گیس](/developers/docs/gas/)
+
+<Divider />
+
+<QuizWidget quizKey="transactions" />

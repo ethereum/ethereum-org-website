@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Scopri di più su PeerDAS come parte dell'aggiornamento del protocollo Ethereum Fusaka
+description: "Scopri di più su PeerDAS come parte dell'aggiornamento del protocollo Ethereum Fusaka"
 lang: it
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -41,31 +41,31 @@ Il DAS è un meccanismo che si basa su questo e garantisce che i dati siano sia 
 
 ## PeerDAS {#peer-das-2}
 
-[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) è una proposta specifica che implementa il meccanismo DAS in Ethereum, segnando probabilmente il più grande aggiornamento da The Merge. PeerDAS è progettato per estendere i dati dei blob, dividendoli in colonne e distribuendone un sottoinsieme ai nodi.
+[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) è una proposta specifica che implementa il meccanismo di campionamento della disponibilità dei dati (DAS) in Ethereum, segnando probabilmente il più grande aggiornamento da The Merge. PeerDAS è progettato per estendere i dati dei blob, dividendoli in colonne e distribuendone un sottoinsieme ai nodi.
 
-Ethereum prende in prestito un po' di matematica intelligente per ottenere questo risultato: applica la codifica a cancellazione in stile Reed-Solomon ai dati dei blob. I dati dei blob sono rappresentati come un polinomio i cui coefficienti codificano i dati, quindi valutano quel polinomio in punti aggiuntivi per creare un blob esteso, raddoppiando il numero di valutazioni. Questa ridondanza aggiunta consente il recupero della cancellazione: anche se mancano alcune valutazioni, il blob originale può essere ricostruito purché sia disponibile almeno la metà dei dati totali, comprese le parti estese.
+Ethereum prende in prestito un po' di matematica intelligente per ottenere questo risultato: applica la codifica a cancellazione in stile Reed-Solomon ai dati dei blob. I dati dei blob sono rappresentati come un polinomio i cui coefficienti codificano i dati, quindi valuta quel polinomio in punti aggiuntivi per creare un blob esteso, raddoppiando il numero di valutazioni. Questa ridondanza aggiunta consente il recupero delle cancellazioni: anche se mancano alcune valutazioni, il blob originale può essere ricostruito purché sia disponibile almeno la metà dei dati totali, inclusi i pezzi estesi.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
-In realtà, questo polinomio ha migliaia di coefficienti. I commitment KZG sono valori di pochi byte, qualcosa di simile a un hash, noti a tutti i nodi. Ogni nodo che detiene abbastanza punti dati può [ricostruire in modo efficiente un set completo di dati dei blob](https://arxiv.org/abs/2207.11079). 
+In realtà, questo polinomio ha migliaia di coefficienti. I commitment KZG sono valori di pochi byte, qualcosa di simile a un hash, noti a tutti i nodi. Ogni nodo che possiede abbastanza punti dati può [ricostruire in modo efficiente un set completo di dati dei blob](https://arxiv.org/abs/2207.11079). 
 
-> Curiosità: la stessa tecnica di codifica veniva utilizzata dai DVD. Se graffiavi un DVD, il lettore era ancora in grado di leggerlo grazie alla codifica Reed-Solomon che aggiunge le parti mancanti del polinomio. 
+> Curiosità: la stessa tecnica di codifica veniva utilizzata dai DVD. Se si graffiava un DVD, il lettore era ancora in grado di leggerlo grazie alla codifica Reed-Solomon che aggiunge i pezzi mancanti del polinomio. 
 
-Storicamente, i dati nelle blockchain, che si trattasse di blocchi o blob, venivano trasmessi a tutti i nodi. Con l'approccio di divisione e campionamento di PeerDAS, non è più necessario trasmettere tutto a tutti. Dopo Fusaka, il networking del livello di consenso è organizzato in argomenti/sottoreti del protocollo gossip: le colonne dei blob vengono assegnate a sottoreti specifiche e ogni nodo si iscrive a sottoinsiemi predeterminati e custodisce solo quelle parti.
+Storicamente, i dati nelle blockchain, che si trattasse di blocchi o blob, venivano trasmessi a tutti i nodi. Con l'approccio di divisione e campionamento di PeerDAS, non è più necessario trasmettere tutto a tutti. Dopo Fusaka, il networking del livello di consenso è organizzato in topic/sottoreti gossip: le colonne dei blob vengono assegnate a sottoreti specifiche e ogni nodo si iscrive a sottoinsiemi predeterminati e custodisce solo quei pezzi.
 
-Con PeerDAS, i dati estesi dei blob sono divisi in 128 parti chiamate colonne. I dati vengono distribuiti a questi nodi tramite un protocollo gossip dedicato su sottoreti specifiche a cui sono iscritti. Ogni nodo regolare sulla rete partecipa ad almeno 8 sottoreti di colonne scelte casualmente. Ricevere dati da sole 8 delle 128 sottoreti significa che questo nodo predefinito riceve solo 1/16 di tutti i dati, ma poiché i dati sono stati estesi, questo corrisponde a 1/8 dei dati originali. 
+Con PeerDAS, i dati estesi dei blob vengono divisi in 128 pezzi chiamati colonne. I dati vengono distribuiti a questi nodi tramite un protocollo gossip dedicato su sottoreti specifiche a cui sono iscritti. Ogni nodo regolare sulla rete partecipa ad almeno 8 sottoreti di colonne scelte casualmente. Ricevere dati da sole 8 sottoreti su 128 significa che questo nodo predefinito riceve solo 1/16 di tutti i dati, ma poiché i dati sono stati estesi, questo corrisponde a 1/8 dei dati originali. 
 
-Ciò consente un nuovo limite teorico di scalabilità pari a 8 volte l'attuale schema in cui "tutti scaricano tutto". Con i nodi che si iscrivono a diverse sottoreti casuali che servono le colonne dei blob, la probabilità è molto alta che siano distribuiti uniformemente e quindi che ogni porzione di dati esista da qualche parte nella rete. I nodi che eseguono validatori sono tenuti a iscriversi a più sottoreti per ogni validatore che eseguono.
+Ciò consente un nuovo limite teorico di scalabilità pari a 8 volte l'attuale schema "tutti scaricano tutto". Con i nodi che si iscrivono a diverse sottoreti casuali che servono le colonne dei blob, la probabilità è molto alta che siano distribuiti uniformemente e quindi che ogni pezzo di dati esista da qualche parte nella rete. Ai nodi che eseguono validatori è richiesto di iscriversi a più sottoreti per ogni validatore che eseguono.
 
-> Ogni nodo ha un ID univoco generato casualmente, che normalmente funge da identità pubblica per le connessioni. In PeerDAS, questo numero viene utilizzato per determinare le sottoreti di un set casuale a cui deve iscriversi, risultando in una distribuzione casuale uniforme di tutti i dati dei blob.
+> Ogni nodo ha un ID univoco generato casualmente, che normalmente funge da identità pubblica per le connessioni. In PeerDAS, questo numero viene utilizzato per determinare l'insieme casuale di sottoreti a cui deve iscriversi, risultando in una distribuzione casuale uniforme di tutti i dati dei blob.
 
-Una volta che un nodo ricostruisce con successo i dati originali, ridistribuisce le colonne recuperate nella rete, sanando attivamente eventuali lacune nei dati e migliorando la resilienza complessiva del sistema. I nodi connessi a validatori con un saldo combinato ≥4096 ETH devono essere un supernodo e pertanto devono iscriversi a tutte le sottoreti delle colonne di dati e custodire tutte le colonne. Questi supernodi saneranno continuamente le lacune nei dati. La natura probabilisticamente auto-riparante del protocollo consente forti garanzie di disponibilità pur non limitando gli operatori domestici che detengono solo porzioni dei dati. 
+Una volta che un nodo ricostruisce con successo i dati originali, ridistribuisce le colonne recuperate nella rete, sanando attivamente eventuali lacune nei dati e migliorando la resilienza complessiva del sistema. I nodi connessi a validatori con un saldo combinato ≥4096 ETH devono essere supernodi e pertanto devono iscriversi a tutte le sottoreti delle colonne di dati e custodire tutte le colonne. Questi supernodi saneranno continuamente le lacune nei dati. La natura probabilisticamente auto-riparante del protocollo consente forti garanzie di disponibilità senza limitare gli operatori domestici che detengono solo porzioni dei dati. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-La disponibilità dei dati può essere confermata da qualsiasi nodo che detiene solo un piccolo sottoinsieme dei dati dei blob grazie al meccanismo di campionamento descritto sopra. Questa disponibilità è applicata rigorosamente: i validatori devono seguire le nuove regole di scelta del fork, il che significa che accetteranno e voteranno per i blocchi solo dopo aver verificato la disponibilità dei dati.
+La disponibilità dei dati può essere confermata da qualsiasi nodo che detiene solo un piccolo sottoinsieme dei dati dei blob grazie al meccanismo di campionamento descritto sopra. Questa disponibilità è applicata rigorosamente: i validatori devono seguire nuove regole di scelta del fork, il che significa che accetteranno e voteranno per i blocchi solo dopo aver verificato la disponibilità dei dati.
 
-L'impatto diretto sugli utenti (in particolare gli utenti dei layer 2 (l2)) è la riduzione delle commissioni. Con uno spazio 8 volte maggiore per i dati dei rollup, le operazioni degli utenti sulla loro catena diventano ancora più economiche nel tempo. Ma le commissioni più basse dopo Fusaka richiederanno tempo e dipenderanno dai BPO.
+L'impatto diretto sugli utenti (in particolare gli utenti dei layer 2 (l2)) sono commissioni più basse. Con uno spazio 8 volte maggiore per i dati dei rollup, le operazioni degli utenti sulla loro catena diventeranno ancora più economiche nel tempo. Ma le commissioni più basse dopo Fusaka richiederanno tempo e dipenderanno dai BPO.
 
 ## Blob-Parameter-Only (BPO) {#bpo}
 

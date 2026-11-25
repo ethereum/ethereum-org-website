@@ -1,3 +1,5 @@
+import { normalizeIntlSpaces, safeLocale } from "./intl"
+
 /**
  * A wrapper for Intl.NumberFormat that enforces Web3 numeral standards.
  * - Arabic ('ar') defaults to Western Arabic numerals (1, 2, 3).
@@ -29,7 +31,7 @@ export function numberFormat(
     ...(numberingSystem && { numberingSystem }),
   }
 
-  return new Intl.NumberFormat(locale, finalOptions)
+  return new Intl.NumberFormat(safeLocale(locale), finalOptions)
 }
 
 export const formatLargeUSD = (value: number, locale: string): string => {
@@ -65,18 +67,25 @@ export const formatCompactNumber = (
   locale: string,
   options?: Intl.NumberFormatOptions
 ): string =>
-  numberFormat(locale, {
-    notation: "compact",
-    maximumSignificantDigits: 3,
-    ...options,
-  }).format(value)
+  normalizeIntlSpaces(
+    numberFormat(locale, {
+      notation: "compact",
+      maximumSignificantDigits: 3,
+      ...options,
+    }).format(value)
+  )
 
-export const formatPriceUSD = (value: number, locale: string): string => {
+export const formatPriceUSD = (
+  value: number,
+  locale: string,
+  options?: Intl.NumberFormatOptions
+): string => {
   return numberFormat(locale, {
     style: "currency",
     currency: "USD",
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
+    ...options,
   }).format(value)
 }
 

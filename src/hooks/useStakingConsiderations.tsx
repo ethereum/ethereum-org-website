@@ -382,8 +382,8 @@ export const useStakingConsiderations = ({
   }
 
   const pageData = data[page]
-  const { title, description, valid, caution, warning, Svg } =
-    pageData[activeIndex]
+  // Per-item `Svg` is read off `pageData` (it renders in the tab labels, not the panel)
+  const { title, description, valid, caution, warning } = pageData[activeIndex]
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("page-staking-considerations-dropdown-text"),
@@ -410,7 +410,6 @@ export const useStakingConsiderations = ({
     dropdownLinks,
     handleSelection,
     indicatorSvgStyle,
-    Svg,
     pageData,
     activeIndex,
   }

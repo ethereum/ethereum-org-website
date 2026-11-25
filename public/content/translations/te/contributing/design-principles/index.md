@@ -1,8 +1,8 @@
 ---
-title: మా డిజైన్ సూత్రాలు
-metaTitle: డిజైన్ సూత్రాలు
+title: "మా డిజైన్ సూత్రాలు"
+metaTitle: "డిజైన్ సూత్రాలు"
 lang: te
-description: ethereum.org డిజైన్ మరియు కంటెంట్ నిర్ణయాల వెనుక ఉన్న సూత్రాలు
+description: "ethereum.org డిజైన్ మరియు కంటెంట్ నిర్ణయాల వెనుక ఉన్న సూత్రాలు"
 ---
 
 <Emoji text=":wave:" size={1} /> నమస్కారం, మరియు ethereum.org డిజైన్ సూత్రాలకు స్వాగతం. ఇది ethereum.org ని అభివృద్ధి చేయడానికి మరియు మెరుగుపరచడానికి జరుగుతున్న నిరంతర ప్రక్రియలో ఒక భాగం.
@@ -89,4 +89,4 @@ ethereum.org సందర్భంలో, ఈ వెబ్‌సైట్ ప్
 
 ఈ సూత్రాలు ethereum.org వెబ్‌సైట్‌పై దృష్టి సారించినప్పటికీ, వాటిలో చాలా వరకు మొత్తం ఎథీరియం పర్యావరణ వ్యవస్థ యొక్క విలువలకు ప్రాతినిధ్యం వహిస్తాయని మేము ఆశిస్తున్నాము. బహుశా మీరు వాటిలో కొన్నింటిని మీ స్వంత ప్రాజెక్ట్‌లో కూడా చేర్చాలనుకోవచ్చు!
 
-[డిస్కార్డ్ సర్వర్](https://discord.gg/ethereum-org)లో లేదా [ఒక ఇష్యూని సృష్టించడం](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) ద్వారా మీ ఆలోచనలను మాకు తెలియజేయండి.
+[డిస్కార్డ్ సర్వర్](/discord/)లో లేదా [ఒక ఇష్యూని సృష్టించడం](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) ద్వారా మీ ఆలోచనలను మాకు తెలియజేయండి.

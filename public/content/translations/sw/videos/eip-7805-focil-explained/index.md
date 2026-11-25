@@ -19,7 +19,7 @@ Sehemu ya 141 ya **PEEPanEIP** na Ethereum Cat Herders. Mwenyeji Pooja Ranjan an
 
 *Nakala hii ni toleo linalofikika la [nakala asili ya video](https://www.youtube.com/watch?v=cUGyLx-mf6I) iliyochapishwa na Ethereum Cat Herders. Imehaririwa kidogo ili isomeke kwa urahisi.*
 
-#### Utangulizi (0:35) {#introduction-035}
+### Utangulizi (0:35) {#introduction-035}
 
 **Pooja Ranjan:** Hujambo na karibu kwenye PEEPanEIP, kipindi cha pekee ambapo tunachunguza kwa kina Mapendekezo ya Kuboresha Ethereum na kuchunguza athari zake kwenye mfumo ikolojia. Hii ni sehemu ya 141, inayoletwa kwenu na Ethereum Cat Herders. Mimi ni mwenyeji wako, Pooja Ranjan, na leo tunazungumzia EIP-7805, Orodha za Ujumuishaji zinazolazimishwa na Chaguo la Mchepuo.
 
@@ -33,7 +33,7 @@ Katika sehemu hii, tutachunguza maelezo ya EIP-7805, athari zake, na athari zake
 
 **Pooja Ranjan:** Tuna furaha kujifunza kuhusu muhtasari wa pendekezo hili, lilipofikia leo, na ni hivi karibuni kiasi gani tunaweza kuliona kwenye Mtandao Mkuu wa Ethereum. Lakini kabla hatujaanza, jamii yetu inapenda kuwafahamu watafiti na wasanidi walio nyuma ya kazi hii. Je, mnaweza kushiriki kidogo kujihusu, mradi mnaohusika nao kwa sasa, na safari yenu ndani ya mfumo ikolojia wa Ethereum?
 
-#### Utambulisho wa wageni (2:14) {#guest-introductions-214}
+### Utambulisho wa wageni (2:14) {#guest-introductions-214}
 
 **Julian Ma:** Sawa, ninaweza kuanza. Mimi ni Julian, mtafiti katika Kikundi cha Vivutio Imara (Robust Incentives Group), kama tu Thomas, katika Taasisi ya Ethereum. Kikundi cha Vivutio Imara kinahusika na uchumi wa itifaki kwa mapana sana. Baadhi yetu tumekuwa tukiangalia mifumo ya ada ya muamala, kama EIP-1559, na wengine wamekuwa wakiangalia mashambulizi ya tabaka la mwafaka, hasa yale yanayochochewa na vivutio vya kiuchumi.
 
@@ -45,7 +45,7 @@ Nimefanya kazi kwenye mada zinazofanana. MEV ilikuwa kubwa sana nilipojiunga. Ch
 
 **Pooja Ranjan:** Asante kwa kushiriki. Kila mara inatia moyo kujifunza asili ya wasanidi. Inavutia kuona kwamba wanatoka katika nyanja tofauti na hatimaye kuchangia kwenye mfumo ikolojia wa Ethereum. Ninaelewa tuna wasilisho hapa leo. Kwa hivyo bila kupoteza wakati, hebu tuangalie.
 
-#### Wasilisho: malengo ya FOCIL (5:16) {#presentation-goals-of-focil-516}
+### Wasilisho: malengo ya FOCIL (5:16) {#presentation-goals-of-focil-516}
 
 **Julian Ma:** Sawa kabisa, asante sana. Ningependa kuanza na wasilisho fupi kuhusu jinsi EIP-7805, au FOCIL, inavyofanya kazi na kwa nini hasa tunataka kuifanya. Inakusudiwa kuanzisha mazungumzo, kwa hivyo haitakuwa ya kina sana, ili kuacha nafasi ya majadiliano baadaye.
 
@@ -53,7 +53,7 @@ Lengo kuu la FOCIL ni kuongeza kutoegemea upande wowote kwa kuaminika kwa Ethere
 
 Lengo la kiwango cha juu ni kufuata sifa tunayoiita kutoegemea upande wowote kwa mnyororo, ambayo inamaanisha muamala wowote unaosubiri unaolipa ada unapaswa kujumuishwa ikiwa unapatikana na ikiwa kuna nafasi ya kuujumuisha mnyororoni. Tunaamini kwamba ikiwa sifa hii itatimizwa vya kutosha, basi tunaongeza kutoegemea upande wowote kwa kuaminika kwa Ethereum.
 
-#### Kwa nini tunahitaji FOCIL, na kwa nini sasa? (6:09) {#why-do-we-need-focil-and-why-now-609}
+### Kwa nini tunahitaji FOCIL, na kwa nini sasa? (6:09) {#why-do-we-need-focil-and-why-now-609}
 
 **Julian Ma:** Kwa nini tunahitaji kitu kama hiki? Kwa sasa karibu wathibitishaji wote hukabidhi ujenzi wa kitalu kwa MEV-Boost, ambalo ni soko la nje ya itifaki ambapo wajenzi hushindania haki za ujenzi wa kitalu. Katika soko hili kuna taasisi mbili tu zinazotawala kweli, na hii inamaanisha kuwa 90% ya vitalu hujengwa na taasisi mbili tu.
 
@@ -65,7 +65,7 @@ Kisha, mikusanyiko ya msingi inazidi kuwa maarufu siku hizi, na itabeba mzigo kw
 
 Na uwezekano ni kwamba FOCIL inaweza kusaidia katika kuongeza uwezo, kulingana na nani unamuuliza. Leo Ethereum bado inapata ukinzani wake wa udhibiti kutoka kwenye ujenzi wa kitalu wa ndani. Ikiwa Ethereum inaweza kupata ukinzani wa udhibiti kutoka kwingineko, kwa mfano kupitia FOCIL, basi labda tunaweza kuongeza matarajio tuliyonayo kwa wajenga kizuizi na kuruhusu, kwa mfano, mablobu zaidi. Lakini uwezekano ni kwamba hili linaweza kufanywa bila FOCIL pia. Kwa hivyo, FOCIL imependekezwa kutekelezwa katika Fusaka.
 
-#### Jinsi FOCIL inavyofanya kazi (8:10) {#how-focil-works-810}
+### Jinsi FOCIL inavyofanya kazi (8:10) {#how-focil-works-810}
 
 **Julian Ma:** Sasa nitakuelekeza jinsi FOCIL inavyofanya kazi. Tutaanza na mambo ya msingi na kwenda hatua kwa hatua hadi tuwe na utaratibu kamili, na kisha tuchunguze jinsi utaratibu huu kamili unavyokidhi sifa tunazotaka.
 
@@ -79,7 +79,7 @@ Kisha tunaelekea kwenye hatua ya mwisho, ambayo ni utekelezaji. Kama nilivyosema
 
 Kujumuisha utaratibu kamili: katika kila sloti, wajumbe 16 wa kamati huchaguliwa kama wajumbe wa kamati ya orodha ya ujumuishaji. Wanaangalia mempool na kuunda vitu vya orodha ya ujumuishaji ambavyo wanasambaza kwenye mada ya jumla kabla ya muda wa mwisho, katika kesi hii sekunde ya 9. Mjenzi huangalia orodha hizi za ujumuishaji na kujumuisha miamala yote aliyoiona kwenye kitalu chake. Washuhudiaji kisha huangalia ikiwa miamala yote waliyokuwa wameiona kabla ya sekunde ya 9 katika orodha za ujumuishaji iko kweli kwenye kitalu. Ikiwa ukaguzi huu utafaulu, wanapiga kura kwa ajili ya kitalu, na tunaendelea kwenye sloti inayofuata, ambapo mpangilio huo huo unafanyika tena.
 
-#### IL Boost na kutokusongamana (11:07) {#il-boost-and-uncrowdability-1107}
+### IL Boost na kutokusongamana (11:07) {#il-boost-and-uncrowdability-1107}
 
 **Julian Ma:** Moja ya wasiwasi mkubwa kuhusu orodha za ujumuishaji, uliotolewa kwa EIP iliyopita kutoka kwa Mike na wakati wa usanidi baada ya hapo, ni "IL Boost," au kutokusongamana. Inarejelea ukweli kwamba wapendekezaji wa orodha ya ujumuishaji wanaweza kutaka kuuza haki zao za kujenga orodha ya ujumuishaji. Ni wasiwasi wenye mantiki sana, kwa sababu tunaona hili likitokea kwenye ujenzi wa kitalu: kuuza haki hii husababisha soko lililowekwa kati la wajenzi wa kisasa.
 
@@ -93,7 +93,7 @@ Na mwishowe, orodha hizi za ujumuishaji huundwa sekunde 3 kabla mzalishaji wa ki
 
 Kwa sababu ya sababu hizi, tunaamini kwamba hakuna mpendekezaji binafsi wa orodha ya ujumuishaji aliye na nguvu ya kujumuisha, kupanga, au kutenga, ambayo ndiyo tafsiri ya msingi ya MEV. Kwa hivyo orodha za ujumuishaji hazipaswi kuathiriwa na MEV.
 
-#### Muhtasari wa wasilisho (13:09) {#summary-of-the-presentation-1309}
+### Muhtasari wa wasilisho (13:09) {#summary-of-the-presentation-1309}
 
 **Julian Ma:** Kwa kufupisha wasilisho hili la haraka: FOCIL inaruhusu wathibitishaji wengi kuchangia katika ujenzi wa kitalu, kuzuia ukiritimba wa ujumuishaji wa mpendekezaji mmoja na kuongeza kutoegemea upande wowote kwa kuaminika kwa Ethereum. Tunaamini kuwa ni muhimu kutekeleza FOCIL sasa kwa sababu kwa sasa kuna wajenzi wawili tu wakuu ambao wanaweza kuanza kudhibiti wakati wowote, na hii inaweza kuwa kwa sababu za kiuchumi ambazo wanaweza kufaidika nazo. Ujenzi wa kitalu unaweza kubeba mzigo mkubwa zaidi kwa sababu mikusanyiko ya msingi itataka kutumia sifa za upangaji mfuatano za Ethereum. FOCIL itazinduliwa kwa urahisi zaidi wakati kuna pande chache zinazodhibiti: kwanza, kwa sababu inamaanisha kuwa ni chaguo-msingi kwa wathibitishaji kuunda orodha za ujumuishaji, na pili, kwa sababu inamaanisha kuwa kuna ukosefu mdogo wa utulivu wa soko kati ya wajenzi wanaodhibiti na wajenzi wasiodhibiti. Na hatimaye, FOCIL inaweza kusaidia katika kuongeza uwezo, ambalo labda ni somo ambalo tunaweza kulichambua kwa kina zaidi.
 
@@ -101,7 +101,7 @@ Asante kwa muda wa kutoa wasilisho hili dogo. Nilitaka tu kuonyesha msimbo wa QR
 
 **Pooja Ranjan:** Asante sana kwa wasilisho hili la haraka na muhtasari wa pendekezo.
 
-#### Maswali na Majibu: EIP-7805 inatofautiana vipi na EIP-7547? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
+### Maswali na Majibu: EIP-7805 inatofautiana vipi na EIP-7547? (14:17) {#qa-how-does-eip-7805-differ-from-eip-7547-1417}
 
 **Pooja Ranjan:** Ningependa kuanza sehemu ya Maswali na Majibu kwa swali la kwanza kabisa, kuhusu pendekezo la awali ambalo pia lilitajwa kwenye wasilisho lako: pendekezo la 7547, orodha za ujumuishaji, na Mike Neuder. Nataka kuelewa tofauti ya msingi kati ya pendekezo hilo na FOCIL tuliyonayo kwenye 7805. Uligusia kwa kiasi fulani kwenye wasilisho lako kuhusu IL Boost na hali ya kutoweza kusongamana. Je, ungependa labda kuelezea zaidi kidogo kuhusu hilo?
 
@@ -115,7 +115,7 @@ Na kisha maelezo zaidi ya kiufundi: kulikuwa na baadhi ya kutokubaliana na udhan
 
 **Pooja Ranjan:** Asante sana. Kwa watu ambao wangependa kujifunza zaidi kuhusu pendekezo la 7547, tunayo sehemu iliyorekodiwa na Mike Neuder, sehemu ya 130 ya PEEPanEIP, ambayo inatoa muhtasari wa kiwango cha juu. Siku zote napenda kuona mapendekezo yanayoshindana, kwa sababu najua hiyo ni kwa ajili ya kuboresha mfumo ikolojia na mnyororo. Naona kwenye soga kuna maswali machache. Labda ningependa kumkaribisha Kataya ashiriki swali lake.
 
-#### Je, mpendekezaji anapaswa kujumuisha orodha zote 16? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
+### Je, mpendekezaji anapaswa kujumuisha orodha zote 16? (19:05) {#does-the-proposer-have-to-include-all-16-lists-1905}
 
 **Kataya:** Habari, asante. Swali langu lilikuwa: je, mpendekezaji wa bloku anapata orodha 16 za ujumuishaji, kila moja kutoka kwa mjumbe mmoja wa kamati, na je, anapaswa kujumuisha miamala yote kutoka kwenye orodha hizi?
 
@@ -123,7 +123,7 @@ Na kisha maelezo zaidi ya kiufundi: kulikuwa na baadhi ya kutokubaliana na udhan
 
 **Pooja Ranjan:** Swali linalofuata kwenye soga ni la Justin. Justin, ungependa kusoma swali lako kwa wageni?
 
-#### Miamala ya faragha ya mempool katika orodha za ujumuishaji (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
+### Miamala ya faragha ya mempool katika orodha za ujumuishaji (19:55) {#private-mempool-transactions-in-inclusion-lists-1955}
 
 **Justin:** Nimekuwa nikiuliza maswali mengi sana. Nilitaka kuuliza nini kinazuia kuweka muamala kutoka kwenye mempool ya faragha kwenye orodha ya ujumuishaji, na nadhani hilo lilijibiwa vizuri. Inaonekana kwamba hiyo ni sawa kabisa, ukizingatia kwamba mjenzi kimsingi atazipanga vyovyote anavyoona inafaa, na muamala wako unakuwa wa umma unapotoka kwenye orodha ya ujumuishaji (IL) pia. Kwa hivyo nadhani hiyo inaeleweka. Asante.
 
@@ -133,7 +133,7 @@ Kwa hivyo ama una muamala wa umma, na unaweza tu kuuwasilisha kwenye mempool ya 
 
 **Pooja Ranjan:** Asante kwa kushiriki. Naona swali linalofuata ni la Ladislaus.
 
-#### FOCIL na kuongeza uwezo (21:41) {#focil-and-scaling-2141}
+### FOCIL na kuongeza uwezo (21:41) {#focil-and-scaling-2141}
 
 **Ladislaus:** Habari zenu. Hii inarejelea hoja mliyoileta kuhusu FOCIL na kuongeza uwezo. Nimeona baadhi ya mijadala hivi karibuni, kama sote tulivyoona, kuhusu kuongeza uwezo wa Ethereum, na kama mlivyotaja kwa usahihi, kuna kikwazo hiki cha wajenzi wachache huko nje. Binafsi napenda kuichukulia FOCIL kama inayowezesha upya ujenzi wa ndani, na ninaiona kama hitaji la lazima kuingizwa kwenye itifaki kabla ya kuongeza mahitaji ya kipimo data, au mahitaji ya nodi kwa ujumla. Labda mnaweza kufafanua jinsi mnavyofikiria kuhusu hili, na pia njia nyingine zinazowezekana za kuongeza uwezo, labda bila FOCIL, kama mlivyotaja.
 
@@ -151,7 +151,7 @@ Hivyo tunataka kweli kuweka waweka dhamana wa nyumbani na wajenga vizuizi wa nda
 
 **Pooja Ranjan:** Asante sana. Nadhani swali linalofuata ni la Luis.
 
-#### Vigezo vya kuchagua miamala (26:46) {#criteria-for-selecting-transactions-2646}
+### Vigezo vya kuchagua miamala (26:46) {#criteria-for-selecting-transactions-2646}
 
 **Luis Pinto:** Nilijiunga dakika chache baada ya kuanza, lakini inaonekana kwangu kama hii inagatua uchaguzi wa miamala katika mtandao kwa ujumla. Hiyo ni nzuri sana kwa maoni yangu; inapambana dhidi ya MEV na udhibiti. Na hakika ninapenda sehemu ya kuwa na watoa ushahidi kufanya kazi hii, kwa sababu katika siku zijazo watakuwa na mahitaji madogo ya vifaa kuliko wajenzi, hata zaidi na ubilahali na wateja wa ubilahali. Kwa kuwa utaweza kuendesha hii kwa vifaa vya chini sana, inafanya mambo kuwa yaliyogatuliwa sana. Nadhani changamoto kuu hapa ni kufafanua vigezo vya uchaguzi wa miamala wa hizi orodha za ujumuishaji, iwe unatumia ada za kipaumbele au idadi ya mablobu; kuna vigeugeu vingi sana. Je, mmefikia seti ya vigezo ambavyo mnafikiria kuvitekeleza?
 
@@ -165,7 +165,7 @@ Kisha, kwa kanuni ya ujumuishaji, ni swali zuri sana. Tulifikiria sana kuhusu hi
 
 **Luis Pinto:** Sawa, asante.
 
-#### Utangamano na EIP-7702, ePBS, na PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
+### Utangamano na EIP-7702, ePBS, na PeerDAS (30:43) {#compatibility-with-eip-7702-epbs-and-peerdas-3043}
 
 **Pooja Ranjan:** Asante sana. Kama ninavyoelewa, pendekezo hili tayari limependekezwa kwa ajili ya uboreshaji baada ya Pectra, Fusaka. Na kwa kuwa Fusaka inaweza au isiweze kujumuisha baadhi ya EIP zingine ambazo zinaendelea, ninajiuliza ni nini hali ya utangamano wa FOCIL kuhusiana na mapendekezo kama vile 7702, ambayo ni kwa ajili ya udhanifu wa akaunti, ePBS, na PeerDAS.
 
@@ -175,7 +175,7 @@ Tuna uhakika sana, kwa sababu pia tulizungumza na timu za udhanifu wa akaunti, n
 
 **Pooja Ranjan:** Ni vizuri kujua hilo. Niliona Jihoon pia alishiriki HackMD, ambayo tutaiongeza kwenye rasilimali, kwa watu ambao wangependa kujifunza zaidi kuhusu utangamano na ePBS haswa. Na ndiyo, ninakumbuka kutoka kwenye mazungumzo ya mwisho na Mike, nadhani pendekezo halikujumuishwa kwa sababu ya kutotangamana kwa udhanifu wa akaunti. Kwa hivyo ni vizuri kujua kwamba hili tayari limeshughulikiwa.
 
-#### FOCIL na MEV ya sloti nyingi (33:04) {#focil-and-multi-slot-mev-3304}
+### FOCIL na MEV ya sloti nyingi (33:04) {#focil-and-multi-slot-mev-3304}
 
 **Pooja Ranjan:** Nilikuwa nikipitia nyaraka na maelezo yaliyoongezwa kwenye tovuti ya FOCIL, meetfocil.eth.limo, na kujifunza kuhusu neno linaloitwa MEV ya sloti nyingi. Julian pia alitaja kwamba MEV-Boost kwa ujumla inaleta faida, licha ya nia na juhudi zinazofanywa na wasanidi kuiweka katika kiwango sawa. Nashangaa jinsi FOCIL itakavyozuia hili.
 
@@ -191,7 +191,7 @@ Kwa hivyo FOCIL inasuluhisha sehemu za MEV ya sloti nyingi ambapo miamala haikum
 
 **Pooja Ranjan:** Vizuri sana, asante sana kwa kushiriki hilo. Ninaelewa kuna utafiti mwingi unaoendelea kushughulikia suala la MEV, kwa hivyo ni vizuri kujua kwamba angalau kimsingi itasaidia zaidi kuliko hali ya sasa.
 
-#### Mabadilishano na changamoto (36:44) {#trade-offs-and-challenges-3644}
+### Mabadilishano na changamoto (36:44) {#trade-offs-and-challenges-3644}
 
 **Pooja Ranjan:** Nina swali moja kuhusiana na kile Thomas alichotaja hapo awali kuhusu kura kinzani za IL. Niliona kuwa katika sehemu ya mazingatio ya usalama ya pendekezo, kuna mambo kadhaa yaliyotajwa, kama vile uhai wa mwafaka, kura kinzani za IL, na ujenzi wa mzigo wa utekelezaji. Ungechukulia nini kama mabadilishano makubwa zaidi, au jambo ambalo linaweza kuhitaji utafiti zaidi na linaweza kuzuia pendekezo hili kuingia katika uboreshaji unaofuata kama lilivyo?
 
@@ -203,7 +203,7 @@ Ninaweza kuwa na upendeleo, lakini sioni mabadilishano makubwa. Nadhani inageuza
 
 **Pooja Ranjan:** Ni vizuri kujua hilo. Katika mapendekezo mengi tunaona kwamba sehemu ya mazingatio ya usalama haina taarifa yoyote au ina taarifa kidogo sana, kwa hivyo ni vizuri kujua utafiti umefanywa kwenye sehemu hiyo na tunafahamu mazingatio ya usalama yanayowezekana. Nimefurahi kujua si kizuizi au changamoto inayowezekana kwa utekelezaji na kupitishwa katika siku zijazo.
 
-#### Taratibu za ada ya muamala kwa orodha za ujumuishaji (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
+### Taratibu za ada ya muamala kwa orodha za ujumuishaji (39:50) {#transaction-fee-mechanisms-for-inclusion-lists-3950}
 
 **Pooja Ranjan:** Nina swali kuhusu baadhi ya maswali wazi niliyoyapata kwenye tovuti yenyewe, kuhusu utaratibu wa ada ya muamala. Ninashangaa kama kuna sasisho lolote, au kama ungependa kushiriki zaidi kuhusu njia bora ya kutoza ada na kusambaza ada hizi kwa ajili ya kujumuishwa kwenye orodha ya ujumuishaji.
 
@@ -219,7 +219,7 @@ Kuhusu hoja ya Luis ya awali, kutoa motisha kunahusu sana jinsi orodha za ujumui
 
 **Pooja Ranjan:** Oh, hiyo inavutia. Kwa hivyo tunapaswa kutarajia baadhi ya mapendekezo ya ziada katika siku zijazo ili kuboresha vipengele vya sasa vya FOCIL.
 
-#### Ukubwa wa orodha ya ujumuishaji (44:16) {#inclusion-list-size-4416}
+### Ukubwa wa orodha ya ujumuishaji (44:16) {#inclusion-list-size-4416}
 
 **Pooja Ranjan:** Nina swali lingine. Sina uhakika kama inapaswa kuwa sehemu ya pendekezo la sasa, lakini nina hamu ya kuelewa ikiwa kuna sasisho lolote kuhusu ukubwa wa IL. Orodha za ujumuishaji lazima ziwe na kikomo cha ukubwa ili kuzuia matumizi makubwa ya kipimo data. Je, tuna utafiti wowote zaidi au masasisho kuhusu jinsi ukubwa bora wa orodha ya ujumuishaji unavyoweza kuamuliwa?
 
@@ -229,7 +229,7 @@ Sijui kama kuna utafiti mwingi sana wa kufanywa kuhusu ukubwa kamili ulio bora. 
 
 Kwa siku zijazo, unaweza kuongeza ukubwa wa IL, lakini pia unaweza kufikiria kuongeza idadi ya wajumbe wa kamati ya IL. Hiyo inakuruhusu kuwa na nafasi zaidi za kupata mjumbe mmoja mwaminifu wa kamati ya IL ikiwa sehemu kubwa ya mtandao itaamua kuanza kudhibiti. Kwa hivyo hilo pia ni jambo tunaloweza kufanya. Kwa sasa, inaonekana kama 16 itakuwa sawa kabisa na inatosha, lakini hakika unaweza kubadilisha vigezo hivi katika siku zijazo ikiwa udhibiti utazidi sana, au ikiwa tunahitaji kuchukua hatua zaidi.
 
-#### Vipimo vya kufuatilia upokeaji (46:39) {#metrics-to-track-adoption-4639}
+### Vipimo vya kufuatilia upokeaji (46:39) {#metrics-to-track-adoption-4639}
 
 **Pooja Ranjan:** Swali la kufuatilia hapa: je, una vipimo vyovyote akilini ambavyo tunaweza kuvifuatilia ili kuelewa upokeaji au mafanikio ya pendekezo hili?
 
@@ -241,7 +241,7 @@ Nadhani ni jambo muhimu sana kwamba ni muhimu kutekeleza FOCIL hivi karibuni, kw
 
 **Pooja Ranjan:** Inavutia sana. Kwa hivyo labda ni jambo kwa watafiti: orodha inayowezekana ya matamanio kwa ajili ya maboresho, kwamba dashibodi na wafuatiliaji wa vipimo vinapaswa kushirikiwa na wasanidi kwa ajili ya pendekezo wakati wowote linapojumuishwa kwenye boresho la mtandao.
 
-#### Hali ya utekelezaji wa mteja (49:11) {#client-implementation-status-4911}
+### Hali ya utekelezaji wa mteja (49:11) {#client-implementation-status-4911}
 
 **Pooja Ranjan:** Kama Julian alivyotaja, pendekezo hili linaweza kuhitaji kutekelezwa haraka iwezekanavyo. Nina hamu ya kuelewa tumefikia wapi kwenye utekelezaji wa mteja, kwa sababu ninakumbuka katika simu iliyopita ya mtandao wa majaribio Paritosh alitaja kuongeza usaidizi fulani na mitandao ya wasanidi. Kwa hivyo tumefikia wapi kuhusu hilo?
 
@@ -253,7 +253,7 @@ Kwa ujumla, tunapata mitandao ya wasanidi zaidi na zaidi iliyo tayari na inayofa
 
 **Pooja Ranjan:** Asante kwa kushiriki hilo. Ninatarajia kufuatilia sasisho kwenye mitandao ya wasanidi. Sina uhakika kutakuwa na matoleo mangapi ya mtandao huu wa wasanidi, lakini nina furaha kuona ukija. Ninaona Justin ana swali hapa. Justin, tafadhali endelea.
 
-#### FOCIL katika Fusaka au Glamsterdam? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
+### FOCIL katika Fusaka au Glamsterdam? (52:07) {#focil-in-fusaka-or-glamsterdam-5207}
 
 **Justin:** Sawa, jifunge mkanda kwa hili. Ulitoa hoja nzuri sana kwamba wakati mzuri wa kushughulikia udhibiti ni kabla udhibiti haujatokea, sivyo? Hivyo basi: FOCIL katika Fusaka, au inaweza kusubiri hadi Glamsterdam? Na ni ipi ninayopaswa kuitetea kama msanidi?
 
@@ -265,7 +265,7 @@ Jambo lingine ninalotaka kutaja, kwa sababu nadhani ni muhimu: ikiwa tunaelekea 
 
 **Pooja Ranjan:** Inasikitisha kuona wakati mwingine mapendekezo hayachaguliwi kwa sasisho lijalo au la karibu zaidi, lakini ni mapendekezo machache tu yanayoweza kujumuishwa katika sasisho moja. Ninathamini sana kazi yote ngumu inayofanywa nyuma ya uwasilishaji wa pendekezo, utayari wa pendekezo, pamoja na majaribio yanayofanyika. Kwa hivyo asante sana kwa kazi yote mnayofanya kwa mfumo wa ikolojia wa Ethereum.
 
-#### Maswali ya haraka (55:18) {#rapid-fire-5518}
+### Maswali ya haraka (55:18) {#rapid-fire-5518}
 
 **Pooja Ranjan:** Kabla hatujamaliza, tuna mzunguko mfupi wa maswali ya haraka. Sharti pekee ni kwamba jibu linapaswa kuwa neno moja au sentensi moja, na tutajaribu kufanya hivyo kwa kutumia kipima muda, labda sekunde 30 kila mmoja. Ikiwa uko tayari, hebu tuendelee na kuanza na Julian. Ni tatizo gani gumu zaidi katika utafiti wa mnyororo wa vitalu kwa sasa?
 
@@ -317,7 +317,7 @@ Jambo lingine ninalotaka kutaja, kwa sababu nadhani ni muhimu: ikiwa tunaelekea 
 
 **Pooja Ranjan:** Umefanya vizuri sana, asante sana, Thomas. Asante kwa kujibu maswali haya yote. Tunapomalizia, ningependa kukupa fursa hii: ikiwa una ujumbe wowote kwa jamii kuhusu pendekezo hili, au kwa jamii ya Ethereum kwa ujumla.
 
-#### Ujumbe kwa jamii (58:08) {#messages-to-the-community-5808}
+### Ujumbe kwa jamii (58:08) {#messages-to-the-community-5808}
 
 **Thomas Thiery:** Kwa kweli, hilo ni jambo muhimu sana, kwa sababu tuna mijadala inayoendelea wakati wote, na yote ipo wazi kwa umma kwenye Discord. Kulikuwa na msukumo mwanzoni wa kuweka kila kitu wazi kwa umma, na kwa kweli watu wanafanya hivyo, kwa hivyo nina furaha sana. Unaweza kufuatilia mijadala na maendeleo kwenye Discord ya umma ya Eth R&D, kwenye chaneli ya inclusion-list. Hapo ndipo kimsingi kila kitu kinafanyika hivi sasa. Kisha unaweza kuwasiliana nasi kwenye Twitter, Telegram, popote pale. Jisikie huru.
 
@@ -325,6 +325,6 @@ Kadiri tunavyozungumza na watu wengi na kuwashirikisha, ndivyo muundo utakuwa bo
 
 **Julian Ma:** Kuongezea tu hapo, natumai tumewafanya baadhi ya watu wawe na shauku kuhusu FOCIL. Ikiwa una shauku, tafadhali tujulishe. Na ikiwa kuna baadhi ya maswali ambayo bado unayo, tutafurahi kuyajibu, na tunatumai tunaweza kukushawishi kuwa FOCIL ndiyo njia sahihi ya kufuata. Asante sana. Ilikuwa furaha kweli kuwa hapa, na asante kwa kuandaa kikao hiki. Na pia asante kwa kila mtu kwa kuhudhuria, bila shaka.
 
-#### Maneno ya kufunga (59:52) {#closing-words-5952}
+### Maneno ya kufunga (59:52) {#closing-words-5952}
 
 **Pooja Ranjan:** Asante. Tumefika mwisho. Shukrani za dhati kwa Thomas na Julian kwa kujiunga nasi leo na kushiriki ufahamu wao kuhusu EIP-7805. Asante kwa washiriki wote; maswali yenu yanatia moyo na kuelimisha. Asante kwa kufuatilia. Ikiwa umefurahia mazungumzo haya, hakikisha unapenda, unajiandikisha, na kushiriki kipindi hiki na wapenzi wenzako wa Ethereum. Tutawaletea EIP zaidi na maendeleo ya utafiti kwenye PEEPanEIP. Hadi wakati mwingine, endelea kunguruma kwa maarifa na kuvinjari Ethereum pamoja na Ethereum Cat Herders. Nakutakia mwendelezo mwema wa siku.

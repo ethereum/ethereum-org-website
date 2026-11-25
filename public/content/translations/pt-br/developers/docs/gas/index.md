@@ -13,18 +13,17 @@ Para entender melhor esta página, recomendamos que você leia primeiro sobre [t
 
 ## O que é gás? {#what-is-gas}
 
-Gás refere-se à unidade que mede a quantidade de esforço computacional necessário para executar operações específicas na rede Ethereum.
+O gas refere-se à unidade que mede a quantidade de esforço computacional necessário para executar operações específicas na rede Ethereum.
 
 Como cada transação na Ethereum exige recursos computacionais para ser executada, esses recursos precisam ser pagos para garantir que a Ethereum não seja vulnerável a spam e não fique presa em loops computacionais infinitos. O pagamento pela computação é feito na forma de uma taxa de gas.
 
-A taxa de gas é **a quantidade de gás usada para realizar alguma operação, multiplicada pelo custo por unidade de gás**. A taxa é paga independentemente de uma transação ser bem-sucedida ou falhar.
+A taxa de gas é **a quantidade de gas usada para realizar alguma operação, multiplicada pelo custo por unidade de gas**. A taxa é paga independentemente de uma transação ser bem-sucedida ou falhar.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-As taxas de gas devem ser pagas na moeda nativa da Ethereum, o ether (ETH). Os preços do gás geralmente são cotados em gwei, que é uma denominação do ETH. Cada gwei é igual a um bilionésimo de um ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
+As taxas de gas devem ser pagas na moeda nativa da Ethereum, o ether (ETH). Os preços do gas geralmente são cotados em gwei, que é uma denominação do ETH. Cada gwei é igual a um bilionésimo de um ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
 
-Por exemplo, em vez de dizer que seu gás custa 0,000000001 ether, você pode dizer que seu gás custa 1 gwei.
+Por exemplo, em vez de dizer que seu gas custa 0,000000001 ether, você pode dizer que seu gas custa 1 gwei.
 
 A palavra 'gwei' é uma contração de 'giga-wei', que significa 'bilhão de Wei'. Um gwei é igual a um bilhão de Wei. O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), criador do [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
 
@@ -101,12 +100,11 @@ Você pode declarar explicitamente quanto está disposto a pagar para que sua tr
 
 ## Por que as taxas de gas existem? {#why-do-gas-fees-exist}
 
-Em suma, as taxas de gas ajudam a manter a rede Ethereum segura. Ao exigir uma taxa para cada computação executada na rede, evitamos que agentes mal-intencionados enviem spam para a rede. Para evitar loops infinitos acidentais ou hostis ou outros desperdícios computacionais no código, cada transação é obrigada a definir um limite de quantas etapas computacionais de execução de código ela pode usar. A unidade fundamental de computação é o "gás".
+Em resumo, as taxas de gas ajudam a manter a rede Ethereum segura. Ao exigir uma taxa para cada computação executada na rede, evitamos que agentes mal-intencionados enviem spam para a rede. Para evitar loops infinitos acidentais ou hostis, ou outro desperdício computacional no código, cada transação é obrigada a definir um limite de quantas etapas computacionais de execução de código ela pode usar. A unidade fundamental de computação é o "gas".
 
-Embora uma transação inclua um limite, qualquer gás não utilizado em uma transação é devolvido ao usuário (ex., `max fee - (base fee + tip)` é devolvido).
+Embora uma transação inclua um limite, qualquer gas não utilizado em uma transação é devolvido ao usuário (ex., `max fee - (base fee + tip)` é devolvido).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## O que é o limite de gas? {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ O dimensionamento da camada 2 é uma iniciativa primária para melhorar muito os
 
 ## Monitorando as taxas de gas {#monitoring-gas-fees}
 
-Se você quiser monitorar os preços do gás, para poder enviar seu ETH por menos, você pode usar muitas ferramentas diferentes, como:
+Se você quiser monitorar os preços do gas, para poder enviar seu ETH por menos, você pode usar muitas ferramentas diferentes, como:
 
-- [Etherscan](https://etherscan.io/gastracker) _Estimador de preço do gás de transação_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimador de preço do gás de transação de código aberto_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitore e rastreie os preços do gás da Ethereum e da camada 2 para reduzir as taxas de transação e economizar dinheiro_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extensão do Chrome para estimativa de gás com suporte a transações legadas do Tipo 0 e transações do Tipo 2 EIP-1559._
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcule as taxas de gas na sua moeda local para diferentes tipos de transação na Mainnet, Arbitrum e Polygon._
-
-## Ferramentas relacionadas {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API de estimativa de gás alimentada pela plataforma global de dados de mempool da Blocknative_
-- [Gas Network](https://gas.network) Oráculos de gás onchain. Suporte para mais de 35 cadeias. 
+- [Etherscan](https://etherscan.io/gastracker) _Estimador de preço do gas de transação_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimador de preço do gas de transação de código aberto_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitore e rastreie os preços do gas da Ethereum e da camada 2 (l2) para reduzir as taxas de transação e economizar dinheiro_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcule as taxas de gas em sua moeda local para diferentes tipos de transação na Mainnet, Arbitrum e Polygon._
 
 ## Leitura adicional {#further-reading}
 

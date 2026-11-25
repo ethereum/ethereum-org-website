@@ -48,6 +48,7 @@ const ListenToPlayer = ({ slug, className }: ListenToPlayerProps) => {
     const audioPlayer = new Howl({
       src: [playlist[currentTrackIndex].audioFile],
       html5: true,
+      preload: "metadata",
       onload: () => {
         setSound(audioPlayer)
         setTimeRemaining(audioPlayer.duration())
@@ -244,7 +245,7 @@ const ListenToPlayer = ({ slug, className }: ListenToPlayerProps) => {
               isExpanded={isExpanded}
               setIsExpanded={setIsExpanded}
               title={
-                countdown > 0
+                countdown > 0 && playlist[currentTrackIndex + 1]
                   ? `${t(playlist[currentTrackIndex + 1].title)} in ${countdown}s`
                   : t(playlist[currentTrackIndex].title)
               }

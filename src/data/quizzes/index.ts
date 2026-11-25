@@ -65,7 +65,7 @@ const quizzes = {
     questions: ["gas-1", "gas-2", "gas-3", "gas-4", "gas-5"],
   },
   daos: {
-    title: "learn-quizzes:page-daos",
+    title: "dao-page",
     questions: ["daos-1", "daos-2", "daos-3", "daos-4", "daos-5"],
   },
   "staking-solo": {
@@ -106,7 +106,7 @@ const quizzes = {
     ],
   },
   defi: {
-    title: "learn-quizzes:page-defi",
+    title: "defi-page",
     questions: ["defi-1", "defi-2", "defi-3", "defi-4", "defi-5"],
   },
   "smart-contracts": {
@@ -203,6 +203,27 @@ const quizzes = {
     title: "evm",
     questions: ["evm-1", "evm-2", "evm-3", "evm-4", "evm-5", "evm-6"],
   },
+  "ethereum-vs-bitcoin": {
+    title: "ethereum-vs-bitcoin",
+    questions: [
+      "ethereum-vs-bitcoin-1",
+      "ethereum-vs-bitcoin-2",
+      "ethereum-vs-bitcoin-3",
+      "ethereum-vs-bitcoin-4",
+      "ethereum-vs-bitcoin-5",
+    ],
+  },
+  "proof-of-stake": {
+    title: "learn-quizzes:page-proof-of-stake",
+    questions: [
+      "proof-of-stake-1",
+      "proof-of-stake-2",
+      "proof-of-stake-3",
+      "proof-of-stake-4",
+      "proof-of-stake-5",
+      "proof-of-stake-6",
+    ],
+  },
   transactions: {
     title: "transactions",
     questions: [
@@ -230,17 +251,7 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
       { id: "wallets", level: "beginner" },
       { id: "what-are-apps", level: "beginner" },
       { id: "web3", level: "beginner" },
-      { id: "energy-consumption", level: "beginner" },
-    ],
-  },
-  {
-    id: "security-and-privacy",
-    titleKey: "security-and-privacy",
-    descriptionKey: "security-and-privacy-description",
-    quizzes: [
-      { id: "security", level: "beginner" },
-      { id: "privacy", level: "beginner" },
-      { id: "zero-knowledge-proofs", level: "intermediate" },
+      { id: "ethereum-vs-bitcoin", level: "beginner" },
     ],
   },
   {
@@ -262,10 +273,21 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
     quizzes: [
       { id: "accounts", level: "beginner" },
       { id: "smart-contracts", level: "beginner" },
+      { id: "energy-consumption", level: "beginner" },
       { id: "transactions", level: "intermediate" },
       { id: "blocks", level: "intermediate" },
       { id: "gas", level: "advanced" },
       { id: "evm", level: "advanced" },
+    ],
+  },
+  {
+    id: "security-and-privacy",
+    titleKey: "security-and-privacy",
+    descriptionKey: "security-and-privacy-description",
+    quizzes: [
+      { id: "security", level: "beginner" },
+      { id: "privacy", level: "beginner" },
+      { id: "zero-knowledge-proofs", level: "intermediate" },
     ],
   },
   {
@@ -277,6 +299,7 @@ const quizzesSectionsRaw: QuizzesHubSection[] = [
       { id: "layer-2", level: "intermediate" },
       { id: "run-a-node", level: "intermediate" },
       { id: "merge", level: "intermediate" },
+      { id: "proof-of-stake", level: "intermediate" },
       { id: "staking-solo", level: "advanced" },
       { id: "scaling", level: "advanced" },
     ],

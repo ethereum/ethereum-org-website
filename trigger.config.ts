@@ -7,7 +7,9 @@ import { defineConfig } from "@trigger.dev/sdk/v3"
  */
 export default defineConfig({
   project: process.env.TRIGGER_PROJECT_REF!,
-  runtime: "node",
+  // "node" pins Node 21.7.3, which Trigger.dev stops deploying on 5 Oct 2026.
+  // "node-22" (22.16.0) matches the .nvmrc the rest of the repo builds against.
+  runtime: "node-22",
   logLevel: "log",
   // Maximum duration for all tasks (5 minutes)
   // See https://trigger.dev/docs/runs/max-duration

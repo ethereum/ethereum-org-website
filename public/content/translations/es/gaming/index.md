@@ -17,7 +17,7 @@ buttons:
     isSecondary: false
 ---
 
-## Juegos en Ethereum
+## Juegos en Ethereum {#gaming-on-ethereum}
 
 Los juegos en Ethereum se presentan en diversas formas, desde juegos que utilizan la cadena de bloques para características específicas hasta aquellos en los que todo el mundo del juego vive en cadena. La cadena de bloques de Ethereum se puede utilizar con juegos en diversas capacidades. Los juegos pueden almacenar sus monedas como tokens transferibles u otros activos del juego (personajes, equipamiento, mascotas, etc.) en forma de [tokens no fungibles (NFT)](/nft/). Los juegos también pueden utilizar contratos inteligentes para alojar su lógica, reglas y estado en cadena. Estos juegos se conocen comúnmente como "juegos totalmente en cadena".
 
@@ -32,7 +32,7 @@ Cuando se lanzó Ethereum, **los diseñadores de juegos vieron la oportunidad de
 
 La cadena de bloques de Ethereum permitió mundos donde las reglas no se pueden cambiar arbitrariamente, el estado no se puede eliminar y cualquiera puede construir extensiones que vivan tanto tiempo como exista la red. Esto es algo que Ethereum proporciona de forma nativa.
 
-## Descripción general del ecosistema de juegos de Ethereum
+## Descripción general del ecosistema de juegos de Ethereum {#ethereums-gaming-ecosystem-overview}
 
 - **Capas 2:** Con tarifas más baratas y tiempos de transacción cortos, las l2 de Ethereum se convirtieron en un lugar común para el lanzamiento de juegos. El panorama de las l2 continúa evolucionando, con ecosistemas de juegos Web3 líderes como Ronin (originalmente una cadena lateral para Axie Infinity) que recientemente hicieron la transición a la arquitectura de capa 2 de Ethereum, heredando las garantías de seguridad de Ethereum mientras conservan su infraestructura optimizada para juegos. Las l2 líderes actuales para juegos incluyen: [Ronin](https://www.roninchain.com/), [Starknet](https://www.starknet.io/), [Abstract](https://abs.xyz/) y [Base](https://www.base.org/).
 - **Infraestructura:** Para facilitar el desarrollo de juegos en cadena, existen varias pilas de herramientas; [Cartridge](https://cartridge.gg/) (que ofrece claves de sesión, transacciones sin gas a través de un pagador y autenticación basada en WebAuthn a través de Cartridge Controller), [Dojo](https://dojoengine.org/) (un marco de juegos demostrable con soporte nativo de abstracción de cuentas), [MUD](https://mud.dev/) (un motor de juegos en cadena basado en EVM). Otros, como [Proof of Play](https://proofofplay.com/) y [Thirdweb](https://thirdweb.com/), permiten a los desarrolladores crear juegos con experiencias de usuario similares a las de la Web2.

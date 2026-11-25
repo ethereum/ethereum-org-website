@@ -20,7 +20,7 @@ lang: ja
 
 ## 利用可能なライブラリ {#available-libraries}
 
-### インフラストラクチャとノードサービス {#infrastructure-and-node-services}
+### インフラストラクチャおよびノードサービス {#infrastructure-and-node-services}
 
 **Alchemy -** **_イーサリアム開発プラットフォーム_**
 
@@ -35,7 +35,7 @@ lang: ja
 - [ドキュメント](https://docs.allthatnode.com)
 - [ディスコード](https://discord.gg/GmcdVEUbJM)
 
-**Blast by Bware Labs -** **_イーサリアム・メインネットおよびテストネット向けの分散型API_**
+**Blast by Bware Labs -** **_イーサリアム・メインネットおよびテストネット向けの分散型アプリケーション・プログラミング・インターフェース（API）_**
 
 - [blastapi.io](https://blastapi.io/)
 - [ドキュメント](https://docs.blastapi.io)
@@ -58,7 +58,7 @@ lang: ja
 **Blockscout - オープンソースのブロック・エクスプローラー**
 - [ドキュメント](https://docs.blockscout.com/)
 
-**GetBlock -** **_Web3開発向けのBlockchain-as-a-service_**
+**GetBlock-** **_Web3開発向けのBlockchain-as-a-Service_**
 
 - [GetBlock.io](https://getblock.io/)
 - [ドキュメント](https://docs.getblock.io/)
@@ -69,7 +69,7 @@ lang: ja
 - [ドキュメント](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _費用対効果の高いEVM JSON-RPCプロバイダー_**
+**Node RPC - _費用対効果の高いイーサリアム仮想マシン（EVM）JSON-RPCプロバイダー_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [ドキュメント](https://docs.noderpc.xyz/node-rpc)
@@ -91,6 +91,12 @@ lang: ja
 - [ドキュメント](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_フル、アーカイブ、およびキーレスのパブリックアクセスを備えたEVM JSON-RPCインフラストラクチャ_**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [ドキュメント](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_JSON-RPC/WebSockets APIとしての速度重視のイーサリアムノード_**
 
 - [zmok.io](https://zmok.io/)
@@ -100,7 +106,13 @@ lang: ja
 
 ### 開発ツール {#development-tools}
 
-**ethers-kt -** **_EVMベースのブロックチェーン向けの非同期で高性能なKotlin/Java/Androidライブラリ_**
+**eth.zig -** **_コンパイル時のアプリケーション・バイナリ・インターフェース（ABI）エンコーディングとコントラクトバインディングを備えた、イーサリアム向けのZigライブラリ_**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [ドキュメント](https://ethzig.org)
+- [例](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_イーサリアム仮想マシン（EVM）ベースのブロックチェーン向けの非同期で高性能なKotlin/Java/Androidライブラリ_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -112,11 +124,11 @@ lang: ja
 - [ドキュメント](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [ディスコード](https://discord.com/invite/jQPrR58FxX)
 
-**Python Tooling -** **_Python経由でイーサリアムとやり取りするためのさまざまなライブラリ_**
+**Pythonツール -** **_Pythonを介してイーサリアムとやり取りするためのさまざまなライブラリ_**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [Web3.py GitHub](https://github.com/ethereum/web3.py)
-- [Web3.py チャット](https://gitter.im/ethereum/web3.py)
+- [Web3.pyチャット](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_究極のブロックチェーン開発プラットフォーム_**
 

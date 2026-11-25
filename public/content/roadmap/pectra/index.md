@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Learn about the Pectra protocol upgrade
+description: "Pectra went live on May 7, 2025. Learn what this Ethereum upgrade changed, including EIP-7702 smart accounts and a 2048 ETH max validator balance."
 lang: en
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -45,7 +45,7 @@ Read a deeper dive on maxEB [here](/roadmap/pectra/maxeb/)
 
 Blobs provide [data availability](/developers/docs/data-availability/#data-availability-and-layer-2-rollups) for L2s. They were introduced in the [the previous network upgrade](/roadmap/dencun/). 
 
-Currently, network targets an average 3 blobs per block with a maximum of 6 blobs. With [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), the average blob count will be increased to 6, with a maximum of 9 per block, resulting in increased capacity for Ethereum rollups. This EIP helps bridge the gap until [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) enables even higher blob counts.
+Before Pectra, the network targeted an average 3 blobs per block with a maximum of 6. [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691) raised the target to 6 and the maximum to 9 per block, increasing capacity for Ethereum rollups. It bridged the gap until [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594), which shipped in [Fusaka](/roadmap/fusaka/) and allows higher blob counts still.
 
 ### Increase calldata cost {#7623}
 
@@ -77,7 +77,7 @@ The new precompile adds the ability for every developer to easily, efficiently, 
 
 The EVM currently provides `BLOCKHASH` opcode which enables contract developers to retrieve the hash of a block directly in the execution layer. However, this is limited only to the last 256 blocks and might become problematic for stateless clients in the future.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) creates a new system contract that can serve the last 8192 block hashes as storage slots. This helps to future-proof the protocol for stateless execution and becomes more efficient when verkle tries are adopted. However, apart from this, rollups can benefit from this right away, as they can query the contract directly with a longer historical window.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) creates a new system contract that can serve the last 8192 block hashes as storage slots. This helps to future-proof the protocol for stateless execution. However, apart from this, rollups can benefit from this right away, as they can query the contract directly with a longer historical window.
 
 ### Move committee index outside Attestation {#7549}
 

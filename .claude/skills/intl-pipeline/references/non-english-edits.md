@@ -8,7 +8,7 @@ Decision tree for: "Can I edit this translated file by hand?" The answer is some
 Are you editing a translated file?
 │
 ├── Has the English source changed since the manifest was stamped?
-│   (Check: is .manifest-source.json's sourceCommitSha older than the most recent commit
+│   (Check: is .manifests/{destPath}/source.json's sourceCommitSha older than the most recent commit
 │    that touched the English file?)
 │   │
 │   ├── NO (English unchanged since stamp)
@@ -22,14 +22,15 @@ Are you editing a translated file?
 │       └── NOT allowed by hand. Options:
 │           - Trigger the pipeline -- it'll merge the English change into the locale via
 │             incremental translation, preserving the locale parts unaffected by the change.
-│           - If urgent (build-breaking): make the locale edit, THEN trigger
-│             intl-pipeline.yml with stamp_only: true.
+│           - If urgent (build-breaking) and the pipeline can't run: make the edit
+│             in EVERY affected locale, THEN trigger intl-pipeline.yml with
+│             stamp_only: true for exactly those locales.
 │             Safe only if no intl/pending-{base} branch exists.
 ```
 
 ## Why this rule exists
 
-The pipeline tracks state with two manifests per file+locale: `.manifest-source.json` (Merkle tree of English at stamp time, plus `sourceCommitSha`) and `.manifest-translation.json` (Merkle tree of the locale, mirroring the English structure).
+The pipeline tracks state with two manifests per file+locale, centralized under `.manifests/{destPath}/`: `source.json` (Merkle tree of English at stamp time, plus `sourceCommitSha`) and `translation.json` (Merkle tree of the locale, mirroring the English structure).
 
 When the pipeline runs incrementally, it compares:
 
@@ -48,7 +49,7 @@ These are safe to do by hand without breaking the manifest:
 - **Sanitizer follow-up edits** — `/fix-sanitizer-bug` or manual application of a sanitizer pattern.
 - **Native-speaker corrections** during review — replacing a phonetic transliteration with the established one.
 - **Typo fixes in localized content** — the English version doesn't have the same typo.
-- **Comment-only edits inside code fences** — code comments may be translated; if you adjust one, the manifest doesn't care.
+- **Comment-only edits inside code fences** — code comments may be translated; if you adjust one, the manifest doesn't care, and `code-fence-content` ignores comments. Everything else inside a non-prose fence must stay byte-identical to English, or the gate fails the pair.
 
 In all of these, the manifest's English-to-locale mapping is still accurate after the edit. The next pipeline run sees the corrected locale as the new baseline.
 
@@ -71,8 +72,8 @@ Sometimes you legitimately need to hand-edit a locale to reflect an English chan
 **Procedure:**
 
 1. Confirm no `intl/pending-{base}` branch exists for the base you're working against. If one exists, merge or close it first. (Hand-edits + an open pending PR = merge conflict roulette.)
-2. Make the English-driven edit on the locale by hand.
-3. Trigger `intl-pipeline.yml` with `stamp_only: true`:
+2. Make the English-driven edit by hand in every locale you will stamp.
+3. Trigger `intl-pipeline.yml` with `stamp_only: true`, limited to that file and those locales (the run refuses a stamp without `target_path` and `target_languages`):
 
 ```bash
 gh workflow run intl-pipeline.yml \
@@ -81,7 +82,7 @@ gh workflow run intl-pipeline.yml \
   -f stamp_only=true
 ```
 
-This regenerates manifests without translation. The pipeline reads the current locale state, computes new manifests, commits them. Next incremental run starts from the new stamped state.
+For each pair whose English differs from its `source.json`, this rewrites `source.json` from the current English and commits it. It reads no locale file, writes no locale content and leaves `translation.json` alone; pairs whose English didn't change are skipped. The stamp asserts the locale already matches the new English, so a locale you didn't fix is stranded: nothing is left to detect its drift, and later runs never translate the change.
 
 ## Detecting drift without running the pipeline
 
@@ -89,13 +90,13 @@ To check whether a hand-edit would cause drift:
 
 ```bash
 # Get the stamped source commit for a locale file
-jq -r '.sourceCommitSha' public/content/translations/ja/some-page/index.md.manifest-source.json
+jq -r '.sourceCommitSha' .manifests/public/content/translations/ja/some-page/index.md/source.json
 
 # Check if English has commits after that SHA
 git log <stamped-sha>..HEAD -- public/content/some-page/index.md
 ```
 
-If there are commits, the English side has moved. Hand-editing the locale will cause drift unless you also `stamp_only`.
+If there are commits, the English side has moved. Hand-editing the locale will cause drift: run the pipeline instead, or follow the `stamp_only` procedure above.
 
 ## What about `.claude/translation-review/per-language/{lang}.md`?
 
@@ -112,8 +113,3 @@ Hand-edit them in the ETHGlossary repo via PR. The pipeline picks them up on the
 - You're touching pipeline source code at `src/scripts/intl-pipeline/`
 - You're working in the `.worktrees/` of another task that doesn't intersect translation content
 
-## See also
-
-- `references/architecture.md` for why the manifest is structured the way it is
-- `references/recovery.md` for what to do if a hand-edit already caused drift
-- `references/orchestration.md` for the pending-branch lifecycle that interacts with `stamp_only`

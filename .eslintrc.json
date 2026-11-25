@@ -6,7 +6,11 @@
     "node": true,
     "browser": true
   },
-  "plugins": ["simple-import-sort", "@typescript-eslint", "unused-imports"],
+  "plugins": [
+    "simple-import-sort",
+    "@typescript-eslint",
+    "unused-imports"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -60,9 +64,12 @@
         "varsIgnorePattern": "^_$"
       }
     ],
-    "unused-imports/no-unused-imports": "warn"
+    "unused-imports/no-unused-imports": "error"
   },
   "overrides": [
+    {
+      "files": ["**/*.mjs"]
+    },
     {
       "files": ["**/*.{ts,tsx}"],
       "extends": ["plugin:@typescript-eslint/recommended"],
@@ -72,7 +79,37 @@
           {
             "fixToUnknown": true
           }
+        ],
+        "@typescript-eslint/no-unused-vars": "off"
+      }
+    },
+    {
+      "files": ["app/**", "src/components/**"],
+      "rules": {
+        "@typescript-eslint/no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": [
+                  "@/data-layer",
+                  "@/data-layer/*",
+                  "../**/data-layer",
+                  "../**/data-layer/*"
+                ],
+                "allowTypeImports": true,
+                "message": "Read data through the cached getters in @/lib/data."
+              }
+            ]
+          }
         ]
+      }
+    },
+    {
+      // Pure helper import, no fetch.
+      "files": ["app/[[]locale]/community/events/utils.ts"],
+      "rules": {
+        "@typescript-eslint/no-restricted-imports": "off"
       }
     },
     {
@@ -92,6 +129,9 @@
     "storybook-static/",
     "**/*.d.ts",
     "src/intl/",
-    "public/code-examples/"
+    "public/code-examples/",
+    "!.storybook",
+    "!.github",
+    "!.eslint-rules"
   ]
 }

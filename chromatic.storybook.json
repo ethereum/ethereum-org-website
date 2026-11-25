@@ -3,6 +3,8 @@
   "untraced": [
     "public/content/**",
     "src/intl/**",
-    "src/data/**"
+    "src/data/**",
+    ".storybook/*.mdx",
+    ".storybook/next-intl.ts"
   ]
 }

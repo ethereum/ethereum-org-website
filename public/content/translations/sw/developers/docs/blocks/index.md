@@ -12,12 +12,11 @@ Vitalu ni mada rahisi sana kwa wanaoanza. Lakini ili kukusaidia kuelewa ukurasa 
 
 ## Kwa nini vitalu? {#why-blocks}
 
-Ili kuhakikisha kwamba washiriki wote kwenye mtandao wa [Ethereum](/) wanadumisha hali iliyosawazishwa na kukubaliana juu ya historia sahihi ya miamala, tunaweka miamala katika makundi kwenye vitalu. Hii inamaanisha makumi (au mamia) ya miamala inafungamanishwa, inakubaliwa, na kusawazishwa kwa wakati mmoja.
+Ili kuhakikisha kwamba washiriki wote kwenye mtandao wa [Ethereum](/) wanadumisha hali iliyosawazishwa na kukubaliana juu ya historia sahihi ya miamala, tunaweka miamala katika makundi kwenye vitalu. Hii inamaanisha makumi (au mamia) ya miamala inafungamanishwa, kukubaliwa, na kusawazishwa kwa wakati mmoja.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Kwa kuweka nafasi kati ya ufungamanisho, tunawapa washiriki wote wa mtandao muda wa kutosha kufikia mwafaka: ingawa maombi ya miamala hutokea mara nyingi kwa sekunde, vitalu huundwa na kufungamanishwa kwenye Ethereum mara moja tu kila baada ya sekunde kumi na mbili.
+Kwa kutenganisha ufungamanisho, tunawapa washiriki wote wa mtandao muda wa kutosha kufikia mwafaka: ingawa maombi ya miamala hutokea mara nyingi kwa sekunde, vitalu huundwa na kufungamanishwa kwenye Ethereum mara moja tu kila baada ya sekunde kumi na mbili.
 
 ## Jinsi vitalu vinavyofanya kazi {#how-blocks-work}
 
@@ -60,7 +59,7 @@ Kitalu `body` kina sehemu zake kadhaa:
 | `attestations`       | orodha ya uthibitisho uliotolewa dhidi ya sloti zilizopita |
 | `deposits`           | orodha ya amana mpya kwenye mkataba wa amana     |
 | `voluntary_exits`    | orodha ya wathibitishaji wanaoondoka kwenye mtandao           |
-| `sync_aggregate`     | kikundi kidogo cha wathibitishaji kinachotumika kuhudumia wateja wepesi |
+| `sync_aggregate`     | kikundi kidogo cha wathibitishaji kinachotumika kuhudumia viteja vyepesi |
 | `execution_payload`  | miamala iliyopitishwa kutoka kwa kiteja cha utekelezaji    |
 
 Sehemu ya `attestations` ina orodha ya uthibitisho wote katika kitalu. Uthibitisho una aina yake ya data ambayo ina vipande kadhaa vya data. Kila uthibitisho una:
@@ -81,7 +80,7 @@ Sehemu ya `data` katika `attestation` ina yafuatayo:
 | `source`            | kituo cha ukaguzi cha mwisho kilichohalalishwa                                   |
 | `target`            | kitalu cha hivi punde cha mpaka wa kipindi                                 |
 
-Kutekeleza miamala katika `execution_payload` kunasasisha hali ya kimataifa. Wateja wote hutekeleza tena miamala katika `execution_payload` ili kuhakikisha hali mpya inalingana na ile iliyo katika sehemu ya `state_root` ya kitalu kipya. Hivi ndivyo wateja wanaweza kujua kwamba kitalu kipya ni halali na salama kuongezwa kwenye mnyororo wao wa vitalu. `execution payload` yenyewe ni kipengee chenye sehemu kadhaa. Pia kuna `execution_payload_header` ambayo ina taarifa muhimu za muhtasari kuhusu data ya utekelezaji. Miundo hii ya data imepangwa kama ifuatavyo:
+Kutekeleza miamala katika `execution_payload` kunasasisha hali ya kimataifa. Viteja vyote hutekeleza tena miamala katika `execution_payload` ili kuhakikisha hali mpya inalingana na ile iliyo katika sehemu ya `state_root` ya kitalu kipya. Hivi ndivyo viteja vinaweza kujua kwamba kitalu kipya ni halali na salama kuongezwa kwenye mnyororo wao wa vitalu. `execution payload` yenyewe ni kipengee chenye sehemu kadhaa. Pia kuna `execution_payload_header` ambayo ina taarifa muhimu za muhtasari kuhusu data ya utekelezaji. Miundo hii ya data imepangwa kama ifuatavyo:
 
 `execution_payload_header` ina sehemu zifuatazo:
 
@@ -151,3 +150,5 @@ _Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 - [Miamala](/developers/docs/transactions/)
 - [Gesi](/developers/docs/gas/)
 - [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

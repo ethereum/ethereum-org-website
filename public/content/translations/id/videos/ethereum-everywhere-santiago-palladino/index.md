@@ -19,7 +19,7 @@ Sebuah bincang-bincang oleh **Santiago Palladino** di Ethereum Day selama Devcon
 
 *Transkrip ini adalah salinan yang dapat diakses dari [transkrip video asli](https://www.youtube.com/watch?v=FzJBV3oSUns) yang diterbitkan oleh Yayasan Ethereum. Transkrip ini telah diedit sedikit agar lebih mudah dibaca.*
 
-#### Tumbuh jauh dari sana (0:07) {#growing-up-far-away-007}
+### Tumbuh jauh dari sana (0:07) {#growing-up-far-away-007}
 
 **Santiago Palladino:** Terima kasih, Binji. Terima kasih kepada Anda semua yang telah hadir di sini. Merupakan suatu kehormatan mutlak berada di sini di atas panggung dan bahkan lebih merupakan suatu kehormatan karena Devconnect diadakan di sini di Buenos Aires.
 
@@ -39,13 +39,13 @@ Kiasan berulang yang akan kami lihat adalah Argentina sebagai tempat untuk melar
 
 Kutipan itu berasal dari episode Dexter bertahun-tahun yang lalu. Saya sebenarnya masuk ke wiki Dexter untuk mencoba menemukannya dan menemukan deskripsi yang indah ini: "Argentina adalah sebuah lokasi dalam sebuah acara." Oh, dan omong-omong, itu juga tempat yang nyata—sekadar agar kalian tahu.
 
-#### Desentralisasi sebagai sebuah fitur (4:47) {#decentralization-as-a-feature-447}
+### Desentralisasi sebagai sebuah fitur (4:47) {#decentralization-as-a-feature-447}
 
 **Santiago Palladino:** Jadi kami jauh, kami terputus. Dan dengan jauh saya tidak hanya bermaksud secara geografis—seperti yang sebagian besar dari Anda yang bepergian ke sini telah alami di pesawat. Hei, ini saatnya pembalasan—kami selalu harus menghadapi ini ketika kami pergi ke tempat lain.
 
 Maksud saya adalah: berada sangat jauh, sangat terputus dari belahan dunia lainnya, saya pikir tidak mengherankan bahwa ketika kami menemukan teknologi di mana desentralisasi bukanlah sebuah bug melainkan sebuah fitur—bahwa itu adalah sebuah aset—kami langsung terjun ke dalamnya.
 
-#### Satu dekade kripto Argentina (5:27) {#a-decade-of-argentine-crypto-527}
+### Satu dekade kripto Argentina (5:27) {#a-decade-of-argentine-crypto-527}
 
 **Santiago Palladino:** Sekarang setelah saya memberi Anda beberapa konteks dari mana saya berasal, saya ingin berbicara tentang dua hal. Pertama, mempromosikan apa yang telah dilakukan orang Argentina di kripto selama sepuluh tahun terakhir ini atau lebih. Dan juga membahas berbagai orang, berbagai profil, berbagai latar belakang yang kita butuhkan untuk membangun Ethereum. Poin yang ingin saya sampaikan adalah: kita membutuhkan keragaman di Ethereum. Kita membutuhkan keragaman geografis. Kita membutuhkan berbagai bidang keahlian, berbagai domain. Kita membutuhkan sebanyak mungkin orang untuk terjun membangun apa yang ingin kita bangun.
 
@@ -59,7 +59,7 @@ Dari Voltaire, beberapa proyek Argentina yang paling dikenal muncul: OpenZeppeli
 
 Rasio pengembang Web3 terhadap Web2 di Argentina hampir tiga kali lipat dari AS. Bahkan di Aztec Labs, satu dari enam insinyur adalah orang Argentina—dan saya berbicara tentang perusahaan yang didirikan di Inggris. Kami menyukai Web3. Kami secara alami tertarik padanya. Saya pikir alasannya adalah setengah dari apa yang disebutkan Isabelle dalam bincang-bincangnya selama acara ini, dan juga perasaan terputus ini dan menemukan di Ethereum sebuah tempat di mana kami dapat membangun, di mana kami dapat berkembang, dan di mana kami disambut.
 
-#### Menyusup ke dalam ekosistem (9:37) {#infiltrating-the-ecosystem-937}
+### Menyusup ke dalam ekosistem (9:37) {#infiltrating-the-ecosystem-937}
 
 **Santiago Palladino:** Izinkan saya membagikan beberapa anekdot lagi—sekali lagi, bukan tentang uang, tetapi tentang hal-hal yang telah dibangun oleh orang-orang Argentina yang telah menyusup ke ekosistem Web3 ini. Bagi saya, pengalaman pertama saya di Web3 adalah mengaudit bahasa kontrak pintar—Serpent. Jika Anda belum pernah mendengarnya, itu karena kami menghancurkannya.
 
@@ -67,7 +67,7 @@ Berasal dari sepuluh tahun pengembangan profesional dan tiba-tiba mendarat di ek
 
 Komunitas keamanan di sini di Argentina luar biasa. Ada kerentanan kritis besar yang ditemukan oleh orang Argentina di ENS—yang itu dari Red Guild, salah satu tim keamanan yang paling kurang dihargai di seluruh ekosistem, jika Anda bertanya kepada saya. Orang-orang ini fantastis. Juga orang Argentina yang menemukan serangan kritis pada MakerDAO, atau bahkan serangan rantai pasokan pada SMS yang mengarah pada pencurian ratusan akun Telegram. Omong-omong—pengingat harian: jangan gunakan SMS untuk 2FA.
 
-#### Standar dan infrastruktur (11:17) {#standards-and-infrastructure-1117}
+### Standar dan infrastruktur (11:17) {#standards-and-infrastructure-1117}
 
 **Santiago Palladino:** Kami juga berkontribusi banyak pada standar. Lima tahun pertama saya di kripto adalah di OpenZeppelin. Saya memiliki kesempatan untuk membangun kontrak ERC-721 bersama dengan seorang pria yang duduk di sebelah sana, dan Facu juga. Kode itu pada akhirnya akan memicu kegilaan NFT beberapa tahun kemudian—itu ditulis dari sini.
 
@@ -83,7 +83,7 @@ Semua ini dikompilasi dalam inisiatif yang indah oleh tim Crecimiento. Anda dapa
 
 Mereka juga memberikan kontribusi besar. Saya ingin berhenti pada satu hal. Kemarin ada Kongres Cypherpunk Ethereum tentang privasi. Di panggung utama, Vitalik mendemonstrasikan Kohaku, dompet privasi baru. Satu jam kemudian, di panggung kedua—hampir tersembunyi di lantai paling atas—ada panel yang mencakup salah satu pengembang yang benar-benar membangun Kohaku, yang merupakan orang Argentina dan bekerja beberapa blok dari sini.
 
-#### Membawa Ethereum pulang (15:07) {#bringing-ethereum-home-1507}
+### Membawa Ethereum pulang (15:07) {#bringing-ethereum-home-1507}
 
 **Santiago Palladino:** Tetapi semua kontribusi ini, semua hal yang dibawa Argentina ke Web3—itu tidak cukup. Kami ingin melakukan lebih banyak lagi. Kami ingin membawa Ethereum ke sini. Dan peringatan bocoran, karena Anda duduk di sini—ya, kami berhasil.
 
@@ -91,13 +91,13 @@ Ini semua dimulai pada tahun 2018 dengan ETH Buenos Aires, hackathon komunitas E
 
 Dan ya, pada akhirnya ini mengarah pada bincang-bincang oleh Mariano di Devcon 5. Bincang-bincang itu berjudul "Hidup di DeFi—Bagaimana Kami Bertahan dari Inflasi 50% Argentina." Angka itu tampak lucu setelah mengalami inflasi 300%. Anda sudah melihat gambar itu dalam presentasi Mariano. Apa yang tidak dia tunjukkan adalah bahwa saya masih memiliki kausnya. Kami benar-benar mencetak kaus bertuliskan "Devcon Buenos Aires 2020" untuk mencoba mewujudkannya melalui meme. Saya telah menyimpannya selama lebih dari lima tahun. Saya bangga menunjukkannya sekarang.
 
-#### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
+### Devconnect Buenos Aires (16:34) {#devconnect-buenos-aires-1634}
 
 **Santiago Palladino:** Kami berhasil. Saya tidak bisa menjelaskan betapa bangganya, betapa terhormatnya saya bahwa Devconnect akhirnya datang ke sini. Ini benar-benar mimpi yang menjadi kenyataan.
 
 Saya pikir itu masuk akal—bukan hanya karena saya mencintai negara ini, tetapi karena ini benar-benar menunjukkan bahwa Ethereum menempatkan konferensi mereka sesuai dengan perkataan mereka. Semua etos tentang desentralisasi ini benar-benar ditindaklanjuti dengan menyelenggarakan konferensi di sini, memanfaatkan bakat yang ada—yang semoga saya telah meyakinkan Anda bahwa itu ada—dan juga memanfaatkan basis pengguna yang ada. Hampir satu dari lima orang Argentina memegang kripto, terdesentralisasi atau terpusat. Kita bisa berdebat lama tentang apakah memegang kripto di bursa terpusat benar-benar memegang kripto atau tidak, tetapi ini adalah orang-orang yang sudah memilikinya, yang sudah terpapar padanya. Ada basis pengguna yang ada untuk Anda manfaatkan dan mencoba meluncurkan hal-hal baru, produk baru, dan melihat apa yang bisa dibangun.
 
-#### Ethereum untuk semua orang (17:46) {#ethereum-for-everyone-1746}
+### Ethereum untuk semua orang (17:46) {#ethereum-for-everyone-1746}
 
 **Santiago Palladino:** Izinkan saya beralih topik sebentar. Saya tahu saya telah mempromosikan betapa hebatnya Argentina untuk menyelenggarakan acara, untuk bakat lokal, untuk segalanya. Tetapi poin yang sebenarnya ingin saya sampaikan adalah bahwa jika Ethereum berhasil di sini—di sudut dunia ini, yang terpisah jauh—itu bisa berhasil di mana saja. Argentina hanyalah sebuah contoh yang menunjukkan bahwa Ethereum adalah teknologi yang benar-benar tanpa batas dan dapat bekerja di sudut dunia mana pun.
 
@@ -125,7 +125,7 @@ Operator node menjalankan jaringan, benar-benar mengeksekusi perangkat lunak tem
 
 Semua ini didukung oleh sekelompok orang yang sangat beragam. Jika Anda hanya memilih sekelompok pengembang—dan saya sendiri adalah seorang pengembang—kita tidak dapat membangun ini.
 
-#### Aleph (23:59) {#the-aleph-2359}
+### Aleph (23:59) {#the-aleph-2359}
 
 **Santiago Palladino:** Saya tahu ini mungkin tidak populer untuk dikatakan di konferensi yang disebut Devconnect, tetapi maksud saya adalah: Ethereum adalah teknologi yang dimaksudkan untuk berjalan di mana saja dan dimaksudkan untuk semua orang—untuk dibangun oleh semua orang, dari setiap latar belakang, dari setiap tempat di dunia.
 
@@ -133,7 +133,7 @@ Dengan satu menit yang tersisa, saya ingin mengambil kutipan dari Jorge Luis Bor
 
 Apa yang saya minta Anda lakukan selama hari-hari ini adalah terhubung dengan orang lain. Kumpulkan umpan balik tentang apa yang sedang Anda bangun. Cobalah untuk menemukan mitra, pembangun, pengguna, investor. Keluarlah dari gelembung Anda, keluar dari zona nyaman Anda, dan bicaralah dengan sebanyak mungkin orang. Temui orang baru, berinteraksilah dengan orang baru. Ingatlah bahwa inovasi berkembang pesat pada keragaman—baik itu geografis, dari latar belakang, atau dari ideologi. Terhubung, bangun bersama, dan nikmati minggu ini. Terima kasih.
 
-#### Tanya Jawab (25:35) {#qa-2535}
+### Tanya Jawab (25:35) {#qa-2535}
 
 **Binji:** Itu luar biasa. Terima kasih banyak. Saya pikir Anda membahas hampir semua hal seputar Ethereum—budaya, properti teknis—semuanya dalam satu bincang-bincang. Itu sangat mengesankan. Saya rasa saya belum pernah melihat seseorang melakukan semua itu sekaligus. Jadi, ada beberapa pertanyaan. Yang menurut saya paling menarik—terutama ketika Anda berbicara tentang kasus penggunaan—apa sesuatu yang ingin Anda lihat dibangun di Ethereum yang belum dibangun?
 

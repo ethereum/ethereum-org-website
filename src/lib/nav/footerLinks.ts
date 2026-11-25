@@ -1,7 +1,5 @@
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
-import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
-
 type TranslateFn = (key: string) => string
 
 export const buildFooterLinkSections = (
@@ -64,8 +62,6 @@ export const buildFooterLinkSections = (
         href: "/developers/docs/design-and-ux/",
         text: t("nav-docs-design-label"),
       },
-      { href: ENTERPRISE_ETHEREUM_URL, text: t("enterprise-mainnet") },
-      { href: "/founders/", text: t("founders") },
     ],
   },
   {
@@ -101,6 +97,35 @@ export const buildFooterLinkSections = (
         href: "/reports/trillion-dollar-security/",
         text: t("trillion-dollar-security"),
       },
+    ],
+  },
+  {
+    title: t("organizations"),
+    links: [
+      { href: "/organizations/", text: t("nav-overview-label") },
+      {
+        href: "/organizations/enterprise/",
+        text: t("nav-organizations-enterprise-home-label"),
+      },
+      {
+        href: "/organizations/enterprise/tokenization/",
+        text: t("tokenization"),
+      },
+      {
+        href: "/organizations/enterprise/onchain-finance/",
+        text: t("onchain-finance"),
+      },
+      {
+        href: "/organizations/enterprise/privacy/",
+        text: t("nav-organizations-privacy-label"),
+      },
+      {
+        href: "/organizations/enterprise/enterprise-l2s/",
+        text: t("enterprise-l2s"),
+      },
+      { href: "/organizations/public-sector/", text: t("public-sector") },
+      { href: "/organizations/small-business/", text: t("small-business") },
+      { href: "/organizations/founders/", text: t("founders") },
     ],
   },
 ]

@@ -16,8 +16,7 @@ Analogia „rozproszonej księgi rachunkowej” jest często używana do opisu b
 
 Chociaż Ethereum ma własną natywną kryptowalutę (ether), która podlega niemal dokładnie tym samym intuicyjnym zasadom, umożliwia również znacznie potężniejszą funkcję: [inteligentne kontrakty](/developers/docs/smart-contracts/). Dla tej bardziej złożonej funkcji wymagana jest bardziej wyrafinowana analogia. Zamiast rozproszonej księgi rachunkowej, Ethereum jest rozproszoną [maszyną stanów](https://wikipedia.org/wiki/Finite-state_machine). Stan Ethereum to duża struktura danych, która przechowuje nie tylko wszystkie konta i salda, ale także _stan maszyny_, który może zmieniać się z bloku na blok zgodnie z wcześniej zdefiniowanym zestawem reguł i który może wykonywać dowolny kod maszynowy. Konkretne zasady zmiany stanu z bloku na blok są definiowane przez EVM.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Schemat na podstawie [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## Funkcja przejścia stanu Ethereum {#the-ethereum-state-transition-function}
 
@@ -57,8 +56,7 @@ Kontrakty zawierają _drzewo trie pamięci_ Merkle Patricia (jako adresowalną s
 
 Skompilowany kod bajtowy inteligentnego kontraktu jest wykonywany jako szereg [kodów operacji](/developers/docs/evm/opcodes) EVM, które wykonują standardowe operacje na stosie, takie jak `XOR`, `AND`, `ADD`, `SUB` itp. EVM implementuje również szereg operacji na stosie specyficznych dla blockchaina, takich jak `ADDRESS`, `BALANCE`, `BLOCKHASH` itp. Zestaw kodów operacji obejmuje również `TSTORE` i `TLOAD`, które zapewniają dostęp do pamięci ulotnej.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Schematy na podstawie [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## Implementacje EVM {#evm-implementations}
 
@@ -68,10 +66,10 @@ W ciągu dziesięcioletniej historii Ethereum, EVM przeszła kilka rewizji i ist
 
 [Klienty warstwy wykonawczej Ethereum](/developers/docs/nodes-and-clients/#execution-clients) zawierają implementację EVM. Ponadto istnieje wiele samodzielnych implementacji, w tym:
 
-- [Py-EVM](https://github.com/ethereum/py-evm) – _Python_
-- [evmone](https://github.com/ethereum/evmone) – _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) – _JavaScript_
-- [revm](https://github.com/bluealloy/revm) – _Rust_
+- [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
+- [evmone](https://github.com/ethereum/evmone) - _C++_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
+- [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Dalsza lektura {#further-reading}
 
@@ -91,3 +89,5 @@ W ciągu dziesięcioletniej historii Ethereum, EVM przeszła kilka rewizji i ist
 
 - [Zrozumienie specyfikacji EVM z żółtej księgi](/developers/tutorials/yellow-paper-evm/) _– Przewodnik po formalnej specyfikacji EVM z żółtej księgi Ethereum._
 - [Inżynieria wsteczna kontraktu](/developers/tutorials/reverse-engineering-a-contract/) _– Jak przeprowadzić inżynierię wsteczną skompilowanego inteligentnego kontraktu przy użyciu kodów operacji EVM._
+
+<QuizWidget quizKey="evm" />

@@ -1,18 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "sourceFile": "public/content/developers/docs/mev/index.md",
-  "generatedAt": "2026-06-16T22:54:13.083Z",
-  "rootHash": "7087b1b8208a",
+  "generatedAt": "2026-11-17T08:42:56.550Z",
+  "rootHash": "050b4b84e685",
   "tree": {
-    "contentHash": "74bca1ba1faf",
-    "anchorHash": "ca13d8c043f2",
+    "contentHash": "78cc384836b7",
+    "anchorHash": "cba6bff5538f",
     "children": {
       "frontmatter:title": {
         "contentHash": "34e1859f1a31",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "16aaa3c53d50",
+        "contentHash": "b25fb52ed5b7",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -563,8 +563,8 @@
         ]
       },
       "mev-in-ethereum-proof-of-stake": {
-        "contentHash": "aed07e7bebfc",
-        "anchorHash": "23cfe4cdef05",
+        "contentHash": "abd9d9b53349",
+        "anchorHash": "80eeffcc9d5a",
         "labelHash": "b669208046d4",
         "children": {
           "_label": {
@@ -577,7 +577,7 @@
           },
           "validator-centralization": {
             "contentHash": "7ec9aaca878d",
-            "anchorHash": "12550b2bb983",
+            "anchorHash": "8c002437dca7",
             "labelHash": "600569b926dd",
             "children": {
               "_label": {
@@ -606,7 +606,7 @@
               },
               "link:2": {
                 "contentHash": "e95bdcabf151",
-                "anchorHash": "c474a7685a16"
+                "anchorHash": "f7d368305c9c"
               },
               "prose:9": {
                 "contentHash": "cc1aaad956ff",
@@ -773,31 +773,31 @@
             ]
           },
           "builder-api": {
-            "contentHash": "db6eae835c4a",
-            "anchorHash": "ea26070fc066",
+            "contentHash": "d18b8cfc6766",
+            "anchorHash": "50e81e384eae",
             "labelHash": "0b2e8da9113c",
             "children": {
               "_label": {
                 "contentHash": "0b2e8da9113c",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:9": {
+              "prose:6": {
                 "contentHash": "ea3a55cce7ca",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
-                "contentHash": "d1d896465dc2",
-                "anchorHash": "d8a3189b8b68"
+                "contentHash": "2c833f65ea55",
+                "anchorHash": "adf7a6020796"
               },
-              "prose:10": {
+              "prose:7": {
                 "contentHash": "f93cb7537127",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:1": {
-                "contentHash": "0b2e8da9113c",
-                "anchorHash": "c2ffafbb09a8"
+                "contentHash": "f0e2b3c0ae8d",
+                "anchorHash": "2d66881d658b"
               },
-              "prose:11": {
+              "prose:8": {
                 "contentHash": "9577678ef98e",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -805,7 +805,7 @@
                 "contentHash": "5ab758ff4719",
                 "anchorHash": "717d1b179bf6"
               },
-              "prose:12": {
+              "prose:9": {
                 "contentHash": "7480d65d58a4",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -813,15 +813,15 @@
                 "contentHash": "0d536992f114",
                 "anchorHash": "ae0906e8c6b2"
               },
-              "prose:13": {
-                "contentHash": "6cbf522d5cb8",
+              "prose:10": {
+                "contentHash": "03a047e42020",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:4": {
                 "contentHash": "8c6cb9461511",
                 "anchorHash": "244b063a3be5"
               },
-              "prose:14": {
+              "prose:11": {
                 "contentHash": "e7a446779303",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -829,32 +829,24 @@
                 "contentHash": "31d60586a2dc",
                 "anchorHash": "68b074b251cb"
               },
-              "prose:15": {
+              "prose:12": {
                 "contentHash": "3452ed996098",
                 "anchorHash": "e3b0c44298fc"
               },
-              "image:6": {
-                "contentHash": "96e48a451513",
-                "anchorHash": "55295c476729"
+              "component:14": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
               },
-              "prose:16": {
+              "prose:2": {
                 "contentHash": "3e4594cc6121",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:7": {
-                "contentHash": "2c833f65ea55",
-                "anchorHash": "adf7a6020796"
-              },
-              "prose:17": {
-                "contentHash": "8b2c2490a1ca",
+              "prose:3": {
+                "contentHash": "f1d082959936",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:8": {
-                "contentHash": "f0e2b3c0ae8d",
-                "anchorHash": "2d66881d658b"
-              },
-              "prose:18": {
-                "contentHash": "580b6e333955",
+              "prose:4": {
+                "contentHash": "96c01618a93b",
                 "anchorHash": "e3b0c44298fc"
               },
               "how-does-builder-api-curb-mev-impact": {
@@ -879,25 +871,25 @@
             },
             "childrenOrder": [
               "_label",
-              "prose:9",
+              "prose:6",
               "link:0",
-              "prose:10",
+              "prose:7",
               "link:1",
-              "prose:11",
+              "prose:8",
               "link:2",
-              "prose:12",
+              "prose:9",
               "link:3",
-              "prose:13",
+              "prose:10",
               "link:4",
-              "prose:14",
+              "prose:11",
               "link:5",
-              "prose:15",
-              "image:6",
-              "prose:16",
-              "link:7",
-              "prose:17",
-              "link:8",
-              "prose:18",
+              "prose:12",
+              "component:14",
+              "prose:2",
+              "link:0",
+              "prose:3",
+              "link:1",
+              "prose:4",
               "how-does-builder-api-curb-mev-impact"
             ]
           }
@@ -962,7 +954,7 @@
       },
       "further-reading": {
         "contentHash": "8743a2ca83e7",
-        "anchorHash": "80b4b676632d",
+        "anchorHash": "38ab855d2bd1",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
@@ -991,7 +983,7 @@
           },
           "link:2": {
             "contentHash": "2d7bf9f5a311",
-            "anchorHash": "aed410a7c14b"
+            "anchorHash": "2b3ff0e277dd"
           },
           "prose:13": {
             "contentHash": "3973e022e932",
@@ -1091,5 +1083,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "ff8a5b0c924e7555d20026ccfe7a14d591b7de66"
 }

@@ -4,15 +4,13 @@ description: Daftar program hibah di seluruh ekosistem Ethereum.
 lang: id
 ---
 
-# Hibah Ethereum {#ethereum-grants}
-
 Program-program yang tercantum di bawah ini menawarkan berbagai hibah pendanaan untuk proyek-proyek yang bekerja untuk mendorong kesuksesan dan pertumbuhan ekosistem [Ethereum](/). Gunakan ini sebagai panduan untuk menemukan dan mengajukan dana guna membantu menyukseskan proyek Ethereum Anda berikutnya.
 
 Daftar ini dikurasi oleh komunitas kami. Jika ada yang kurang atau salah, silakan edit halaman ini!
 
 <Alert variant="update" className="mt-8">
 <Emoji text="🎗️" />
-<div>Para pendiri, butuh bantuan untuk mengakselerasi bisnis Anda? [Kunjungi Founders Support](/founders/)</div>
+<div>Para pendiri, butuh bantuan untuk mengakselerasi bisnis Anda? [Kunjungi Founders Support](/organizations/founders/)</div>
 </Alert>
 
 ## Ekosistem Ethereum secara luas {#broad-ethereum-ecosystem}

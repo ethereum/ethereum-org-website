@@ -21,7 +21,7 @@ Para un nodo de Ethereum, el multiaddr contiene el ID del nodo (un hash de su cl
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
-## Enode
+## Enode {#enode}
 
 Un enode es una forma de identificar un nodo de Ethereum utilizando un formato de dirección URL. El ID de nodo hexadecimal se codifica en la parte del nombre de usuario de la URL, separado del host mediante un signo @. La especificación solo define el nombre de host como una dirección IP; sin embargo, la mayoría de los clientes (como Geth y Besu) también aceptan un nombre DNS aquí y lo resuelven a una dirección IP al inicio. Este es un comportamiento específico del cliente en lugar de ser parte del estándar. El puerto en la sección del nombre de host es el puerto de escucha TCP. Si los puertos TCP y UDP (descubrimiento) difieren, el puerto UDP se especifica como un parámetro de consulta "discport".
 

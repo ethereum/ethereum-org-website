@@ -1,6 +1,6 @@
 ---
 title: Ethereum development documentation
-description: Introducing the ethereum.org developer documentation.
+description: "Ethereum developer documentation: learn the fundamentals, the Ethereum stack, smart contracts, nodes and scaling, with guides to build your first dapp."
 lang: en
 ---
 

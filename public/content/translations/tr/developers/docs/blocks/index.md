@@ -12,12 +12,11 @@ Bloklar, yeni başlayanlar için oldukça uygun bir konudur. Ancak bu sayfayı d
 
 ## Neden bloklar? {#why-blocks}
 
-[Ethereum](/) ağındaki tüm katılımcıların senkronize bir durumu korumasını ve işlemlerin kesin geçmişi üzerinde mutabakata varmasını sağlamak için işlemleri bloklar halinde gruplandırıyoruz. Bu, düzinelerce (veya yüzlerce) işlemin aynı anda taahhüt edildiği, üzerinde anlaşıldığı ve senkronize edildiği anlamına gelir.
+[Ethereum](/) ağındaki tüm katılımcıların senkronize bir durumu korumasını ve işlemlerin kesin geçmişi üzerinde anlaşmasını sağlamak için işlemleri bloklar halinde gruplandırıyoruz. Bu, düzinelerce (veya yüzlerce) işlemin aynı anda taahhüt edildiği, üzerinde anlaşıldığı ve senkronize edildiği anlamına gelir.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)'dan uyarlanmıştır_
+<BlockStateDiagram />
 
-Taahhütleri aralıklı hale getirerek, tüm ağ katılımcılarına mutabakata varmaları için yeterli zaman tanıyoruz: işlem talepleri saniyede onlarca kez gerçekleşse bile, bloklar Ethereum'da yalnızca on iki saniyede bir oluşturulur ve taahhüt edilir.
+Taahhütleri zamana yayarak, tüm ağ katılımcılarına mutabakata varmaları için yeterli zaman tanıyoruz: işlem talepleri saniyede düzinelerce kez gerçekleşse bile, bloklar Ethereum'da yalnızca on iki saniyede bir oluşturulur ve taahhüt edilir.
 
 ## Bloklar nasıl çalışır {#how-blocks-work}
 
@@ -151,3 +150,5 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 - [İşlemler](/developers/docs/transactions/)
 - [Gaz](/developers/docs/gas/)
 - [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

@@ -28,7 +28,7 @@ wie zum Beispiel:
 
 Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einführung in [Dapps](/developers/docs/dapps/) und den [Ethereum-Stack](/developers/docs/ethereum-stack/) zu lesen.
 
-## Verfügbare Frameworks
+## Verfügbare Frameworks {#available-frameworks}
 
 **Foundry** - **_Foundry ist ein blitzschnelles, portables und modulares Toolkit für die Entwicklung von Ethereum-Anwendungen._**
 
@@ -91,7 +91,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_Erstellen Sie Web3-Anwendungen, die mit Ihren Smart Contracts interagieren können, indem Sie unsere leistungsstarken SDKs und CLI verwenden._**
+**thirdweb SDK -** **_Erstellen Sie Web3-Anwendungen, die mit Ihren Smart Contracts interagieren können, mithilfe unserer leistungsstarken SDKs und CLI._**
 
 - [Dokumentation](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -102,7 +102,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Web3-Entwicklungsplattform auf Unternehmensniveau, mit der Sie NFT-Anwendungen auf allen wichtigen Chains, EVM-Chains (und anderen), erstellen können._**
+**Crossmint -** **_Web3-Entwicklungsplattform auf Unternehmensniveau, mit der Sie Anwendungen für Nicht-fungible Token (NFTs) auf allen wichtigen Chains, EVM-Chains (und anderen) erstellen können._**
 
 - [Website](https://www.crossmint.com)
 - [Dokumentation](https://docs.crossmint.com)
@@ -116,16 +116,15 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 
 **OpenZeppelin SDK -** **_Das ultimative Smart-Contract-Toolkit: Eine Suite von Tools, die Ihnen helfen, Smart Contracts zu entwickeln, zu kompilieren, zu aktualisieren, bereitzustellen und mit ihnen zu interagieren._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community-Forum](https://forum.openzeppelin.com/c/support/17)
 - **Die Entwicklung des OpenZeppelin SDK wurde eingestellt**
 
-**Catapulta -** **_Multi-Chain-Tool zur Bereitstellung von Smart Contracts, automatisiert Verifizierungen in Block-Explorern, verfolgt bereitgestellte Smart Contracts und teilt Bereitstellungsberichte, Plug-and-Play für Foundry- und Hardhat-Projekte._**
+**Catapulta -** **_Multi-Chain-Tool für die Bereitstellung von Smart Contracts, automatisiert Verifizierungen in Block-Explorern, behält den Überblick über bereitgestellte Smart Contracts und teilt Bereitstellungsberichte, Plug-and-Play für Foundry- und Hardhat-Projekte._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (powered by Covalent) -** **_GoldRush bietet die umfassendste Blockchain-Daten-API-Suite für Entwickler, Analysten und Unternehmen. Egal, ob Sie ein DeFi-Dashboard, eine Wallet, einen Trading-Bot, einen KI-Agenten oder eine Compliance-Plattform erstellen, die Daten-APIs bieten schnellen, genauen und entwicklerfreundlichen Zugriff auf die wesentlichen Onchain-Daten, die Sie benötigen._**
+**GoldRush (powered by Covalent) -** **_GoldRush bietet die umfassendste Blockchain-Daten-Programmierschnittstellen (API)-Suite für Entwickler, Analysten und Unternehmen. Egal, ob Sie ein DeFi-Dashboard, eine Wallet, einen Trading-Bot, einen KI-Agenten oder eine Compliance-Plattform erstellen, die Daten-APIs bieten schnellen, genauen und entwicklerfreundlichen Zugriff auf die wesentlichen Onchain-Daten, die Sie benötigen._**
 
 - [Website](https://goldrush.dev/)
 - [Dokumentation](https://goldrush.dev/docs/chains/ethereum)
@@ -139,7 +138,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code-Erweiterung](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Modulares und agnostisches Open-Source-Framework, das es Entwicklern von Dapps leicht macht, dezentrale Identitäten und verifizierbare Nachweise in ihre Anwendungen zu integrieren._**
+**Veramo -** **_Modulares und agnostisches Open-Source-Framework, das es Entwicklern von dezentralen Anwendungen (Dapps) leicht macht, dezentrale Identitäten und verifizierbare Nachweise in ihre Anwendungen zu integrieren._**
 
 - [Startseite](https://veramo.io/)
 - [Dokumentation](https://veramo.io/docs/basics/introduction)
@@ -151,6 +150,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 
 - [Dokumentation](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Weiterführende Literatur {#further-reading}
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

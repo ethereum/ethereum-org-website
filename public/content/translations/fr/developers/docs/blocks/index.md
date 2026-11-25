@@ -12,10 +12,9 @@ Les blocs sont un sujet très accessible aux débutants. Mais pour vous aider à
 
 ## Pourquoi des blocs ? {#why-blocks}
 
-Pour s'assurer que tous les participants du réseau [Ethereum](/) maintiennent un état synchronisé et s'accordent sur l'historique précis des transactions, nous regroupons les transactions en blocs. Cela signifie que des dizaines (ou des centaines) de transactions sont engagées, approuvées et synchronisées en une seule fois.
+Pour s'assurer que tous les participants du réseau [Ethereum](/) maintiennent un état synchronisé et s'accordent sur l'historique précis des transactions, nous regroupons les transactions en blocs. Cela signifie que des dizaines (ou des centaines) de transactions sont engagées, approuvées et synchronisées en même temps.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
 En espaçant les engagements, nous donnons à tous les participants du réseau suffisamment de temps pour parvenir à un consensus : même si les requêtes de transaction se produisent des dizaines de fois par seconde, les blocs ne sont créés et engagés sur Ethereum qu'une fois toutes les douze secondes.
 
@@ -151,3 +150,5 @@ _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette p
 - [Transactions](/developers/docs/transactions/)
 - [Gaz](/developers/docs/gas/)
 - [Preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

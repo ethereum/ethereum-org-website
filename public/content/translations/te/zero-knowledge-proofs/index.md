@@ -239,3 +239,7 @@ MACIని ఉపయోగించడానికి కోఆర్డిన�
 - [స్వీయ-సార్వభౌమ గుర్తింపు కోసం శూన్య-జ్ఞాన నిరూపణలు (ZKPs) ఎందుకు గేమ్ ఛేంజర్](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
 - [EIP-7503 వివరణ: ZK నిరూపణలతో ఎథీరియంలో ప్రైవేట్ బదిలీలను ప్రారంభించడం](https://web.archive.org/web/20251116093505/https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions/) — _Emmanuel Awosika_
 - [ZK కార్డ్ గేమ్: ZK ప్రాథమికాలను మరియు నిజ జీవిత వినియోగ సందర్భాలను తెలుసుకోవడానికి గేమ్](https://github.com/ZK-card/zk-cards) - _ZK-Cards_
+
+<Divider />
+
+<QuizWidget quizKey="zero-knowledge-proofs" />

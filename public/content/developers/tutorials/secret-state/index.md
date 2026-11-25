@@ -20,6 +20,7 @@ After reading this article you will know how to create this kind of secret state
 | [Zokrates](https://zokrates.github.io/)       | Zero-knowledge proofs and their verification            |               1.1.9 |
 | [Typescript](https://www.typescriptlang.org/) | Programming language for both the server and the client |               5.4.2 |
 | [Node](https://nodejs.org/en)                 | Running the server                                      |             20.18.2 |
+| [Foundry](https://getfoundry.sh/)             | Local blockchain and contract deployment                |               1.0.0 |
 | [Viem](https://viem.sh/)                      | Communication with the Blockchain                       |              2.9.20 |
 | [MUD](https://mud.dev/)                       | Onchain data management                                 |              2.0.12 |
 | [React](https://react.dev/)                   | Client user interface                                   |              18.2.0 |
@@ -35,7 +36,24 @@ This application is written using [MUD](https://mud.dev/), a framework that lets
 
 To run the minesweeper example:
 
-1. Make sure you [have the prerequisites installed](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), and [`mprocs`](https://github.com/pvolok/mprocs).
+1. Make sure you [have the prerequisites installed](https://mud.dev/quickstart#prerequisites): [Node](https://nodejs.org/en), [Foundry](https://getfoundry.sh/introduction/installation), [`git`](https://git-scm.com/downloads), and [`pnpm`](https://pnpm.io/installation).
+
+   This example uses MUD 2.0.12, which needs specific versions of Node and Foundry:
+
+   - **Node 20**. The MUD 2.0.12 command line tool uses [JSON import assertions](https://v8.dev/features/import-attributes), which newer versions of Node no longer support, so on Node 22 or later it fails with `SyntaxError: Unexpected identifier 'assert'`. Node 20 [reached end of life](https://nodejs.org/en/about/previous-releases) in April 2026 and no longer gets security updates, so only use it for this local example. A Node version manager such as [`fnm`](https://github.com/Schniz/fnm) or [`nvm`](https://github.com/nvm-sh/nvm) lets you switch to Node 20 just for this directory, for example:
+
+     ```sh copy
+     fnm install 20
+     fnm use 20
+     ```
+
+   - **Foundry 1.0.0**. With current Foundry versions the post-deployment script fails with _Usage of `address(this)` detected in script contract_. Install the tested version with:
+
+     ```sh copy
+     foundryup -i 1.0.0
+     ```
+
+     When you are done with this tutorial, you can return to the latest version with `foundryup`.
 
 2. Clone the repository.
 
@@ -48,10 +66,9 @@ To run the minesweeper example:
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
-   npm install -g mprocs
    ```
 
-   If Foundry was installed as part of `pnpm install`, you need to restart the command-line shell.
+   [`mprocs`](https://github.com/pvolok/mprocs), which runs all the processes in a single terminal, is installed as one of the packages.
 
 4. Compile the contracts
 
@@ -62,10 +79,10 @@ To run the minesweeper example:
     ```
 
 
-5. Start the program (including an [anvil](https://book.getfoundry.sh/anvil/) blockchain) and wait.
+5. Start the program (including an [anvil](https://getfoundry.sh/anvil/overview) blockchain) and wait.
 
    ```sh copy
-   mprocs
+   pnpm dev
    ```
 
    Note that the startup takes a long time. To see the progress, first use the down arrow to scroll to the _contracts_ tab to see the MUD contracts being deployed. When you get the message _Waiting for file changes…_, the contracts are deployed and further progress will happen in the _server_ tab. There, you wait until you get the message _Verifier address: 0x...._.
@@ -144,11 +161,11 @@ These flows coordinate execution between the client, the onchain component, and 
 
 #### Initialization {#initialization-flow}
 
-When you run `mprocs`, these steps happen:
+When you run `pnpm dev` (which runs `mprocs`), these steps happen:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) runs four components:
 
-   - [Anvil](https://book.getfoundry.sh/anvil/), which runs a local blockchain
+   - [Anvil](https://getfoundry.sh/anvil/overview), which runs a local blockchain
    - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), which compiles (if needed) and deploys the contracts for MUD
    - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), which runs [Vite](https://vitejs.dev/) to serve the UI and client code to web browsers.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), which performs the server actions
@@ -511,7 +528,7 @@ Security tests are important because a functionality bug will eventually reveal 
 
 ### Permissions {#permissions}
 
-There is one privileged entity in this game, the server. It is the only user allowed to call the functions in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). We can use [`cast`](https://book.getfoundry.sh/cast/) to verify calls to permissioned functions are only allowed as the server account.
+There is one privileged entity in this game, the server. It is the only user allowed to call the functions in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). We can use [`cast`](https://getfoundry.sh/cast/overview) to verify calls to permissioned functions are only allowed as the server account.
 
 [The server's private key is in `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
 
@@ -522,6 +539,8 @@ There is one privileged entity in this game, the server. It is the only user all
    UNAUTHORIZED_KEY=0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a
    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
    ```
+
+   This `WORLD_ADDRESS` is the address MUD deploys to on a fresh `anvil`. If your `World` is at a different address, use the value in `packages/contracts/worlds.json`.
 
 2. Use `cast` to attempt to set the verifier address as an unauthorized address.
 
@@ -537,7 +556,7 @@ There is one privileged entity in this game, the server. It is the only user all
    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY
    ```
 
-   The address in **app\_\_VerifiedAddress** should now be zero.
+   The address in **app\_\_VerifierAddress** should now be zero.
 
 All MUD functions in the same `System` go through the same access control, so I consider this test sufficient. If you don't, you can check the other functions in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
@@ -553,7 +572,7 @@ The simplest possibility is to provide the wrong answer in the zero-knowledge pr
 proof.inputs[3] = "0x" + "1".padStart(64, "0")
 ```
 
-This means we'll always claim there is one bomb, regardless of the correct answer. Try to play with this version, and you'll see in the **server** tab of the `pnpm dev` screen this error:
+This means we'll always claim there is one bomb, regardless of the correct answer. Try to play with this version, and you'll see in the **server** tab of the `mprocs` screen this error:
 
 ```
       cause: {
@@ -675,7 +694,9 @@ As a tutorial this article needed a short game that is easy to understand, but t
 
 [Zokrates](https://zokrates.github.io/) isn't the only zero-knowledge library available, but it is similar to a normal, [imperative](https://en.wikipedia.org/wiki/Imperative_programming) programming language and supports boolean variables.
 
-For your application, with different requirements, you might prefer to use [Circum](https://docs.circom.io/getting-started/installation/) or [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
+However, ZoKrates is no longer actively maintained. Its latest release, 0.8.8 (and the matching `zokrates-js` 1.1.9), is from November 2023, and the main branch has had no commits since April 2024. The code in this tutorial still works, but don't expect bug fixes or security updates. For a new project, consider a maintained language such as [Noir](https://noir-lang.org/), which is used in [this tutorial](/developers/tutorials/app-plasma/).
+
+For your application, with different requirements, you might prefer to use [Circom](https://docs.circom.io/getting-started/installation/) or [Cairo](https://www.cairo-lang.org/).
 
 ### When to compile Zokrates {#when-compile-zokrates}
 
@@ -703,8 +724,7 @@ In general, when processing can be done either in TypeScript or Zokrates, it is 
 
 However, we still [flatten the map in Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), whereas we could have done it in TypeScript. The reason is that the other options are, in my opinion, worse.
 
-- Provide a one dimensional array of boolean to the Zokrates code, and use an expression such as `x*(height+2)
-+y` to get the two dimensional map. This would make [the code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) somewhat more complicated, so I decided the performance gain isn't worth it for a tutorial.
+- Provide a one dimensional array of boolean to the Zokrates code, and use an expression such as `x*(height+2)+y` to get the two dimensional map. This would make [the code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) somewhat more complicated, so I decided the performance gain isn't worth it for a tutorial.
 
 - Send Zokrates both the one dimensional array and the two dimensional array. However, this solution doesn't gain us anything. The Zokrates code would have to verify that the one dimensional array it is provided really is the correct representation of the two dimensional array. So there wouldn't be any performance gain.
 

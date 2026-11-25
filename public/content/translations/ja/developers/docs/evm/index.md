@@ -10,14 +10,13 @@ lang: ja
 
 EVMを理解するには、[バイト](https://wikipedia.org/wiki/Byte)、[メモリ](https://wikipedia.org/wiki/Computer_memory)、[スタック](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) などのコンピューターサイエンスの一般的な用語に関する基本的な知識が必要です。また、[ハッシュ関数](https://wikipedia.org/wiki/Cryptographic_hash_function)や[マークル・ツリー](https://wikipedia.org/wiki/Merkle_tree)などの暗号技術やブロックチェーンの概念に慣れておくと役立ちます。
 
-## 台帳から状態マシンへ {#from-ledger-to-state-machine}
+## 台帳からステートマシンへ {#from-ledger-to-state-machine}
 
-「分散型台帳」という例えは、暗号技術の基本的なツールを使用して分散型通貨を可能にするビットコインのようなブロックチェーンを説明するためによく使用されます。台帳は、台帳を変更するために誰が何をでき、何ができないかを管理する一連のルールに従わなければならない活動の記録を維持します。たとえば、ビットコインのアドレスは、以前に受け取った以上のビットコインを支払うことはできません。これらのルールは、ビットコインや他の多くのブロックチェーン上のすべてのトランザクションの基盤となっています。
+「分散型台帳」という例えは、暗号技術の基本的なツールを使用して分散型通貨を可能にする、ビットコインのようなブロックチェーンを説明するためによく使用されます。台帳は、台帳を変更するために誰が何をでき、何ができないかを管理する一連のルールに従わなければならない活動の記録を維持します。例えば、ビットコインのアドレスは、以前に受け取った以上のビットコインを消費することはできません。これらのルールは、ビットコインや他の多くのブロックチェーン上のすべてのトランザクションの基盤となっています。
 
-イーサリアムには、ほぼ同じ直感的なルールに従う独自のネイティブ暗号資産 (イーサ) がありますが、はるかに強力な機能である[スマート・コントラクト](/developers/docs/smart-contracts/)も可能にします。このより複雑な機能には、より洗練された例えが必要です。分散型台帳の代わりに、イーサリアムは分散型の[状態マシン](https://wikipedia.org/wiki/Finite-state_machine)です。イーサリアムの状態は、すべてのアカウントと残高だけでなく、事前に定義された一連のルールに従ってブロックごとに変化し、任意の機械語コードを実行できる「マシン状態 (machine state)」を保持する大規模なデータ構造です。ブロックごとに状態を変更する具体的なルールは、EVMによって定義されています。
+イーサリアムには、ほぼ同じ直感的なルールに従う独自のネイティブ暗号資産 (イーサ) がありますが、はるかに強力な機能である[スマート・コントラクト](/developers/docs/smart-contracts/)も可能にします。このより複雑な機能には、より洗練された例えが必要です。分散型台帳の代わりに、イーサリアムは分散型[ステートマシン](https://wikipedia.org/wiki/Finite-state_machine)です。イーサリアムの状態は、すべてのアカウントと残高だけでなく、事前に定義された一連のルールに従ってブロックごとに変化し、任意の機械語コードを実行できる「マシン状態 (_machine state_)」を保持する大規模なデータ構造です。ブロックごとに状態を変更する具体的なルールは、EVMによって定義されています。
 
-![A diagram showing the make up of the EVM](./evm.png)
-_図は[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)から引用・改変_
+<EvmZonesDiagram />
 
 ## イーサリアムの状態遷移関数 {#the-ethereum-state-transition-function}
 
@@ -55,22 +54,21 @@ EVMは、深さ1024アイテムの[スタックマシン](https://wikipedia.org/
 
 ### オペコード {#opcodes}
 
-コンパイルされたスマート・コントラクトのバイトコードは、`XOR`、`AND`、`ADD`、`SUB` などの標準的なスタック操作を実行する多数のEVM[オペコード](/developers/docs/evm/opcodes)として実行されます。EVMはまた、`ADDRESS`、`BALANCE`、`BLOCKHASH` などのブロックチェーン固有のスタック操作も多数実装しています。オペコードセットには、一時ストレージへのアクセスを提供する `TSTORE` と `TLOAD` も含まれています。
+コンパイルされたスマート・コントラクトのバイトコードは、`XOR`、`AND`、`ADD`、`SUB` などの標準的なスタック操作を実行する多数のEVM[オペコード](/developers/docs/evm/opcodes)として実行されます。EVMはまた、`ADDRESS`、`BALANCE`、`BLOCKHASH` など、ブロックチェーン固有のスタック操作も多数実装しています。オペコードのセットには、一時ストレージへのアクセスを提供する `TSTORE` と `TLOAD` も含まれています。
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_図は[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)から引用・改変_
+<GasEvmDiagram />
 
 ## EVMの実装 {#evm-implementations}
 
-EVMのすべての実装は、イーサリアムのイエロー・ペーパーに記載されている仕様に準拠する必要があります。
+EVMのすべての実装は、イーサリアムのイエロー・ペーパーに記載されている仕様に従う必要があります。
 
-イーサリアムの10年の歴史の中で、EVMは何度かの改訂を経ており、さまざまなプログラミング言語によるEVMの実装がいくつか存在します。
+イーサリアムの10年の歴史の中で、EVMは何度か改訂されており、さまざまなプログラミング言語によるEVMの実装がいくつか存在します。
 
 [イーサリアムの実行クライアント](/developers/docs/nodes-and-clients/#execution-clients)には、EVMの実装が含まれています。さらに、以下のような複数のスタンドアロン実装があります。
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## 参考文献 {#further-reading}
@@ -91,3 +89,5 @@ EVMのすべての実装は、イーサリアムのイエロー・ペーパー�
 
 - [イエロー・ペーパーのEVM仕様を理解する](/developers/tutorials/yellow-paper-evm/) _– イーサリアムのイエロー・ペーパーに記載されている正式なEVM仕様のガイド付きウォークスルー。_
 - [コントラクトのリバースエンジニアリング](/developers/tutorials/reverse-engineering-a-contract/) _– EVMオペコードを使用してコンパイルされたスマート・コントラクトをリバースエンジニアリングする方法。_
+
+<QuizWidget quizKey="evm" />

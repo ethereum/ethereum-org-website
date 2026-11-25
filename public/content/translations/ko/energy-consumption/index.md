@@ -1,7 +1,7 @@
 ---
-title: 이더리움의 에너지 소비량
-metaTitle: 이더리움 에너지 소비량
-description: 이더리움의 에너지 소비량을 이해하는 데 필요한 기본 정보입니다.
+title: "이더리움의 에너지 소비량"
+metaTitle: "이더리움 에너지 소비량"
+description: "이더리움의 에너지 소비량을 이해하는 데 필요한 기본 정보입니다."
 lang: ko
 ---
 
@@ -83,3 +83,5 @@ CCRI는 머지로 인해 이더리움의 연간 전력 소비량이 **99.988%** 
 
 - [비콘 체인](/roadmap/beacon-chain)
 - [머지](/roadmap/merge/)
+
+<QuizWidget quizKey="energy-consumption" />

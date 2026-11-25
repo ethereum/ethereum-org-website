@@ -15,12 +15,11 @@ Gas 对[以太坊](/)网络至关重要。它是允许网络运行的燃料，�
 
 Gas 是指衡量在以太坊网络上执行特定操作所需计算工作量的单位。
 
-由于每笔以太坊交易都需要计算资源来执行，因此必须为这些资源付费，以确保以太坊不会受到垃圾信息的攻击，并且不会陷入无限的计算循环。计算的付款以 gas 费的形式进行。
+由于每笔以太坊交易都需要计算资源来执行，因此必须为这些资源付费，以确保以太坊不易受到垃圾信息的攻击，并且不会陷入无限的计算循环。计算费用的支付形式为 gas 费。
 
-gas 费是**执行某项操作所消耗的 Gas 数量乘以单位 Gas 的成本**。无论交易成功还是失败，都必须支付该费用。
+gas 费是**执行某项操作所消耗的 Gas 量乘以单位 Gas 的成本**。无论交易成功还是失败，都需要支付该费用。
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_图表改编自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 gas 费必须以以太坊的原生货币以太币 (ETH) 支付。Gas 价格通常以 Gwei 报价，Gwei 是 ETH 的一种面额。每个 Gwei 等于十亿分之一 ETH（0.000000001 ETH 或 10<sup>-9</sup> ETH）。
 
@@ -101,12 +100,11 @@ gas 费必须以以太坊的原生货币以太币 (ETH) 支付。Gas 价格通�
 
 ## 为什么存在 gas 费？ {#why-do-gas-fees-exist}
 
-简而言之，gas 费有助于保持以太坊网络的安全。通过要求对网络上执行的每次计算收取费用，我们防止了恶意行为者向网络发送垃圾信息。为了避免代码中出现意外或恶意的无限循环或其他计算浪费，每笔交易都需要设置其可以使用的代码执行计算步骤的限制。计算的基本单位是“Gas”。
+简而言之，gas 费有助于保持以太坊网络的安全。通过要求对网络上执行的每次计算收取费用，我们可以防止恶意行为者向网络发送垃圾信息。为了避免代码中出现意外或恶意的无限循环或其他计算浪费，每笔交易都要求设置一个限制，规定其可以使用的代码执行计算步骤的数量。计算的基本单位是“Gas”。
 
 尽管交易包含一个限制，但交易中未使用的任何 Gas 都会退还给用户（例如，退还 `max fee - (base fee + tip)`）。
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_图表改编自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## 什么是 gas 上限？ {#what-is-gas-limit}
 
@@ -128,18 +126,12 @@ gas 上限是指您愿意在一笔交易中消耗的最大 Gas 量。涉及[智�
 
 ## 监控 gas 费 {#monitoring-gas-fees}
 
-如果您想监控 Gas 价格，以便以更低的成本发送您的 ETH，您可以使用许多不同的工具，例如：
+如果您想监控 Gas 价格，以便以更低的成本发送 ETH，您可以使用许多不同的工具，例如：
 
 - [Etherscan](https://etherscan.io/gastracker) _交易 Gas 价格估算器_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _开源交易 Gas 价格估算器_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _监控和跟踪以太坊及二层网络 (l2) Gas 价格，以降低交易费并节省资金_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas 估算 Chrome 扩展程序，支持 Type 0 传统交易和 Type 2 EIP-1559 交易。_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _监控和跟踪以太坊及二层网络 (l2) 的 Gas 价格，以降低交易费并省钱_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _以您的当地货币计算主网、Arbitrum 和 Polygon 上不同交易类型的 gas 费。_
-
-## 相关工具 {#related-tools}
-
-- [Blocknative 的 Gas 平台](https://www.blocknative.com/gas) _由 Blocknative 的全球内存池数据平台提供支持的 Gas 估算 API_
-- [Gas Network](https://gas.network) 链上 Gas 预言机。支持 35 条以上的链。
 
 ## 延伸阅读 {#further-reading}
 

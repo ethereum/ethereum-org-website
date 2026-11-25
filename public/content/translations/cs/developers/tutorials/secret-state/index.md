@@ -703,8 +703,7 @@ Obecně platí, že když lze zpracování provést buď v TypeScriptu, nebo v Z
 
 Nicméně stále [zplošťujeme mapu v Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), ačkoli jsme to mohli udělat v TypeScriptu. Důvodem je, že ostatní možnosti jsou podle mého názoru horší.
 
-- Poskytnout kódu Zokrates jednorozměrné pole booleovských hodnot a použít výraz jako `x*(height+2)
-+y` k získání dvourozměrné mapy. To by [kód](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) poněkud zkomplikovalo, takže jsem se rozhodl, že nárůst výkonu za to v tutoriálu nestojí.
+- Poskytnout kódu Zokrates jednorozměrné pole booleovských hodnot a použít výraz jako `x*(height+2)+y` k získání dvourozměrné mapy. To by [kód](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) poněkud zkomplikovalo, takže jsem se rozhodl, že nárůst výkonu za to v tutoriálu nestojí.
 
 - Poslat do Zokrates jak jednorozměrné, tak dvourozměrné pole. Toto řešení nám však nic nepřinese. Kód Zokrates by musel ověřit, že poskytnuté jednorozměrné pole je skutečně správnou reprezentací dvourozměrného pole. Takže by nedošlo k žádnému nárůstu výkonu.
 

@@ -22,7 +22,31 @@ import {
   walk,
 } from "intl-content-tree"
 
+import {
+  applyFrontmatterChange,
+  FRONTMATTER_PREFIX,
+  frontmatterFieldText,
+  frontmatterKey,
+  isWholeField,
+  parseFrontmatterDoc,
+  serializeFrontmatter,
+  setFrontmatterFieldText,
+} from "./lib/llm/frontmatter"
 import { TRANSLATABLE_ATTRIBUTES } from "./lib/shared-patterns"
+import { fenceCode } from "./lib/verify-structure"
+
+/** Pseudo-section id for prose between the frontmatter and the first heading */
+export const PREAMBLE_ID = "_preamble"
+
+const TRANSLATABLE_KEYS = new Set<string>(TRANSLATABLE_ATTRIBUTES)
+
+/** `frontmatter:<key>` (or a path under it) whose key the LLM translates */
+function isTranslatableFrontmatter(id: string): boolean {
+  return (
+    id.startsWith(FRONTMATTER_PREFIX) &&
+    TRANSLATABLE_KEYS.has(frontmatterKey(id))
+  )
+}
 
 // ---------------------------------------------------------------------------
 // Config
@@ -50,6 +74,17 @@ export function escapeRegex(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
 }
 
+/**
+ * Where the section starting at `startFrom` ends: the next heading with an
+ * anchor. A heading without one (`##### Geth`) stays inside the section, as it
+ * does in the content tree and in the planner's `extractSections`, which sends
+ * it to the model as part of this section's body. English anchors every h1-h4,
+ * so an unanchored h1-h4 is a locale heading that lost its anchor: it still ends
+ * the section rather than be replaced along with it.
+ */
+const startsSection = (line: string) =>
+  /^#{1,4}\s/.test(line) || /^#{5,6}\s.*\{#[^}]+\}\s*$/.test(line)
+
 function findNextHeading(text: string, startFrom: number): number {
   let inFence = false
   const lines = text.slice(startFrom).split("\n")
@@ -63,7 +98,7 @@ function findNextHeading(text: string, startFrom: number): number {
     if (line.startsWith("```")) {
       inFence = !inFence
     }
-    if (!inFence && line.match(/^#{1,6}\s/)) {
+    if (!inFence && startsSection(line)) {
       return pos
     }
     pos += line.length + 1
@@ -224,8 +259,14 @@ function removeLocaleComponent(
 ): string {
   const tag = node.meta?.tagName
   if (!tag) return text
+  // Inert values only: a translated `title` never matches the English one
   const attrValues = node.children
-    .filter((c) => c.elementType === "component-attribute" && c.value)
+    .filter(
+      (c) =>
+        c.elementType === "component-attribute" &&
+        c.contentType === "inert" &&
+        c.value
+    )
     .map((c) => c.value as string)
 
   return applyInSection(text, sectionId, (scope) => {
@@ -284,7 +325,9 @@ function withAnchor(headingLine: string, sectionId: string): string {
  * The prompt sends the heading as an attribute and asks only for body content
  * back, so the heading must be supplied here rather than trusted to appear in
  * the model output. A model that echoes one anyway wins (it is the fresher
- * label), with its anchor forced back to the expected ID.
+ * label), with its anchor forced back to the expected ID. A deeper heading
+ * opening the body is not an echo but a subsection without an anchor
+ * (`##### _update` under `#### Internal Update Functions`).
  */
 function assembleSection(
   headingLine: string,
@@ -294,7 +337,12 @@ function assembleSection(
   const body = translated.replace(/^\s+/, "").trimEnd()
   const firstBreak = body.indexOf("\n")
   const firstLine = firstBreak === -1 ? body : body.slice(0, firstBreak)
-  if (/^#{1,6}\s/.test(firstLine)) {
+  const level = (line: string) => line.match(/^#*/)?.[0].length ?? 0
+  if (
+    /^#{1,6}\s/.test(firstLine) &&
+    (level(firstLine) <= level(headingLine) ||
+      firstLine.includes(`{#${sectionId}}`))
+  ) {
     const rest =
       firstBreak === -1 ? "" : body.slice(firstBreak + 1).replace(/^\n+/, "")
     const heading = withAnchor(firstLine, sectionId)
@@ -320,7 +368,13 @@ function spliceSection(
 // ---------------------------------------------------------------------------
 
 export interface StructuralRegression {
-  kind: "anchor" | "heading-count" | "href"
+  kind:
+    | "anchor"
+    | "heading-count"
+    | "href"
+    | "code-fence"
+    | "code-span"
+    | "section-order"
   detail: string
 }
 
@@ -334,6 +388,23 @@ function hrefList(text: string): string[] {
     ...[...body.matchAll(/\]\(([^)\s]+)\)/g)].map((m) => m[1]),
     ...[...body.matchAll(/href="([^"]+)"/g)].map((m) => m[1]),
   ]
+}
+
+/** Inline code spans outside fenced code and outside `skip` sections, counted. */
+function codeSpans(text: string, skip: Set<string>): Map<string, number> {
+  const counts = new Map<string, number>()
+  let section: string | null = PREAMBLE_ID
+  let inFence = false
+  for (const line of text.split("\n")) {
+    if (line.trimStart().startsWith("```")) inFence = !inFence
+    if (inFence) continue
+    if (startsSection(line))
+      section = line.match(/\{#([^}]+)\}\s*$/)?.[1] ?? null
+    if (section !== null && skip.has(section)) continue
+    for (const m of line.matchAll(/`([^`\n]+)`/g))
+      counts.set(m[1], (counts.get(m[1]) ?? 0) + 1)
+  }
+  return counts
 }
 
 /** Multiset difference: items in `actual` that `expected` does not account for. */
@@ -355,6 +426,9 @@ interface StructuralDelta {
   headingDelta: number
   missingHrefs: string[]
   extraHrefs: string[]
+  missingFences: string[]
+  extraFences: string[]
+  outOfOrder: boolean
 }
 
 function structuralDelta(english: string, locale: string): StructuralDelta {
@@ -362,13 +436,30 @@ function structuralDelta(english: string, locale: string): StructuralDelta {
   const locAnchors = [...anchorSet(locale)]
   const enHrefs = hrefList(english)
   const locHrefs = hrefList(locale)
+  const enFences = fenceCode(english)
+  const locFences = fenceCode(locale)
+  // The anchors both share, in each text's order: the merge reorders h2
+  // sections only, so a subsection English moved stays where it was
+  const enIds = scanHeadings(english).flatMap((h) => (h.id ? [h.id] : []))
+  const locIds = scanHeadings(locale).flatMap((h) => (h.id ? [h.id] : []))
+  const shared = (xs: string[], ys: string[]) =>
+    xs.filter((x) => ys.includes(x))
   return {
     missingAnchors: surplus(locAnchors, enAnchors),
     extraAnchors: surplus(enAnchors, locAnchors),
     headingDelta: scanHeadings(english).length - scanHeadings(locale).length,
     missingHrefs: surplus(locHrefs, enHrefs),
     extraHrefs: surplus(enHrefs, locHrefs),
+    missingFences: surplus(locFences, enFences),
+    extraFences: surplus(enFences, locFences),
+    outOfOrder: shared(enIds, locIds).join() !== shared(locIds, enIds).join(),
   }
+}
+
+/** `fenceCode` entries are the language tag, then the code. */
+const describeFence = (fence: string) => {
+  const [tag, first = ""] = fence.split("\n")
+  return `\`${tag || "untagged"}\` fence \`${first.trim().slice(0, 60)}\``
 }
 
 /**
@@ -411,22 +502,78 @@ export function findStructuralRegressions(
   for (const href of surplus(before.extraHrefs, after.extraHrefs)) {
     out.push({ kind: "href", detail: `stale ${href} left in locale` })
   }
+  for (const fence of surplus(before.missingFences, after.missingFences)) {
+    out.push({
+      kind: "code-fence",
+      detail: `${describeFence(fence)} missing from locale`,
+    })
+  }
+  for (const fence of surplus(before.extraFences, after.extraFences)) {
+    out.push({
+      kind: "code-fence",
+      detail: `stale ${describeFence(fence)} left in locale`,
+    })
+  }
+  // A section sent to the model replaces the locale's copy of it; a locale
+  // without that section keeps nothing of the change
+  const placed = anchorSet(localeB)
+  const retranslated = new Set<string>()
+  for (const id of getLlmSectionIds(englishA, englishB, "markdown")) {
+    if (id === PREAMBLE_ID || placed.has(id)) retranslated.add(id)
+    else if (anchorSet(englishB).has(id)) {
+      out.push({ kind: "anchor", detail: `{#${id}} changed but not in locale` })
+    }
+  }
+  // An inline code span English changed has to change in the locale as often
+  // outside the retranslated sections: a substitution finds nothing to rewrite
+  // when the locale words the span differently, and no other check compares
+  // inline code
+  const [spansA, spansLocA, spansB, spansLocB] = [
+    englishA,
+    localeA,
+    englishB,
+    localeB,
+  ].map((text) => codeSpans(text, retranslated))
+  for (const span of new Set([...spansA.keys(), ...spansB.keys()])) {
+    const english = (spansB.get(span) ?? 0) - (spansA.get(span) ?? 0)
+    const locale = (spansLocB.get(span) ?? 0) - (spansLocA.get(span) ?? 0)
+    if (english !== 0 && locale !== english) {
+      out.push({
+        kind: "code-span",
+        detail: `\`${span}\` not updated in locale`,
+      })
+    }
+  }
+  if (after.outOfOrder && !before.outOfOrder) {
+    out.push({ kind: "section-order", detail: "sections out of English order" })
+  }
   return out
 }
 
-function parseFrontmatter(
-  text: string
-): { yaml: string; body: string; start: number; end: number } | null {
-  if (!text.startsWith("---")) return null
-  const endIdx = text.indexOf("\n---", 3)
-  if (endIdx === -1) return null
-  const yamlEnd = endIdx + 4
-  return {
-    yaml: text.slice(4, endIdx),
-    body: text.slice(yamlEnd),
-    start: 0,
-    end: yamlEnd,
+/**
+ * Character range of the preamble: prose after the frontmatter (or file start)
+ * and before the first heading. `end` equals `start` when there is none.
+ */
+function preambleRange(text: string): { start: number; end: number } {
+  const lines = text.split("\n")
+  let startLine = 0
+  if (lines[0]?.trim() === "---") {
+    const close = lines.findIndex((l, i) => i > 0 && l.trim() === "---")
+    startLine = close === -1 ? 0 : close + 1
   }
+  const firstHeading = scanHeadings(text).find((h) => h.lineIdx >= startLine)
+  const endLine = firstHeading ? firstHeading.lineIdx : lines.length
+  const offset = (line: number) =>
+    lines.slice(0, line).reduce((n, l) => n + l.length + 1, 0)
+  return { start: offset(startLine), end: offset(endLine) }
+}
+
+/** Replace (or insert) the preamble, keeping one blank line on each side. */
+function replacePreamble(text: string, body: string): string {
+  const { start, end } = preambleRange(text)
+  const trimmed = body.trim()
+  const replacement = trimmed ? `\n${trimmed}\n\n` : "\n"
+  return text.slice(0, start) + replacement + text.slice(end)
 }
 
 // ---------------------------------------------------------------------------
@@ -570,32 +717,62 @@ function translatableFingerprint(node: TreeNode): string {
 }
 
 interface Routing {
-  leafTdPaths: string[]
   addedIds: Set<string>
   renamedOldIds: Set<string>
   llmSectionIds: Set<string>
 }
 
-function route(
-  treeA: TreeNode,
-  treeB: TreeNode,
-  dr: DiffResult,
+interface Trees {
+  treeA: TreeNode
+  treeB: TreeNode
+  dr: DiffResult
   cs: ChangeSet
+}
+
+function route(
+  { treeA, treeB, dr, cs }: Trees,
+  format: "markdown" | "json"
 ): Routing {
   // Leaf translatableDrift sections only -- parents would duplicate their children
   const tdPaths = dr.translatableDrift.map((e) => e.path)
   const leafTdPaths = tdPaths.filter(
     (p) => !tdPaths.some((o) => o !== p && o.startsWith(p + "/"))
   )
+  // An element entry (`prose:0`, or a heading without an anchor, `_auto:geth`)
+  // translates as part of its nearest anchored section: no section answers to
+  // the element's own id. Root-level elements are the preamble's, which
+  // translates as one pseudo-section.
+  const isElement = (e: { id: string }) =>
+    e.id.includes(":") && !e.id.startsWith(FRONTMATTER_PREFIX)
+  const toSectionId = (e: { id: string; path: string }) =>
+    isElement(e) ? (containingSectionId(e.path) ?? PREAMBLE_ID) : e.id
   const leafTdIds = dr.translatableDrift
     .filter((e) => leafTdPaths.includes(e.path))
-    .map((e) => e.id)
+    .map(toSectionId)
 
   const renamedOldIds = new Set(cs.sectionRenames.map((r) => r.oldId))
   const renamedNewIds = new Set(cs.sectionRenames.map((r) => r.newId))
 
+  // Only whole new sections are inserted. diff() reports no addition for a
+  // subsection English adds under a section that had none, so new anchors are
+  // also found by comparing the trees, in English-B order so a new section is
+  // inserted after a new one it follows. JSON keys are never sections.
+  const anchored = (tree: TreeNode) =>
+    [...walk(tree)]
+      .filter((n) => n.nodeType === "section" && !n.id.includes(":"))
+      .map((n) => n.id)
+  const idsA = new Set(anchored(treeA))
+  const reportedAdded = dr.added
+    .filter((e) => !renamedNewIds.has(e.id) && !isElement(e))
+    .map((e) => e.id)
   const addedIds = new Set(
-    dr.added.filter((e) => !renamedNewIds.has(e.id)).map((e) => e.id)
+    format === "json"
+      ? reportedAdded
+      : anchored(treeB).filter(
+          (id) =>
+            !renamedNewIds.has(id) &&
+            (reportedAdded.includes(id) || !idsA.has(id))
+        )
   )
 
   // A renamed section whose translatable content also changed has to be
@@ -614,13 +791,79 @@ function route(
     }
   }
 
-  const llmSectionIds = new Set(
-    [...leafTdIds, ...addedIds, ...renamedRetranslateIds].filter(
-      (id) => !id.startsWith("frontmatter:")
-    )
-  )
+  // A translatable frontmatter field is rewritten whole by the LLM whatever
+  // kind of drift it shows: an item reorder or removal arrives as inert or
+  // structural drift, and applying those edits by hand would put English item
+  // text into a translated list.
+  const translatableFmIds = [...dr.inertDrift, ...dr.structuralDrift]
+    .map((e) => e.id)
+    .filter((id) => isTranslatableFrontmatter(id))
 
-  return { leafTdPaths, addedIds, renamedOldIds, llmSectionIds }
+  const llmSectionIds = new Set([
+    ...leafTdIds,
+    ...addedIds,
+    ...renamedRetranslateIds,
+    ...translatableFmIds,
+  ])
+
+  return { addedIds, renamedOldIds, llmSectionIds }
+}
+
+/** A section's body without its heading line, whitespace-normalized. */
+function sectionBody(text: string, sectionId: string): string | null {
+  let body: string
+  if (sectionId === PREAMBLE_ID) {
+    const { start, end } = preambleRange(text)
+    body = text.slice(start, end)
+  } else {
+    const sec = findSection(text, sectionId)
+    if (!sec) return null
+    body = text.slice(sec.start, sec.end)
+    body = body.slice(body.indexOf("\n") + 1)
+  }
+  return body
+    .replace(/[ \t]+$/gm, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim()
+}
+
+/**
+ * Markdown routing. Beyond what the diff reports, a section goes to the model
+ * whenever the deterministic steps can't carry it from English-A to English-B:
+ * they are run once with English-A standing in for the locale, and any section
+ * that doesn't come out as English-B's is retranslated. That covers edits the
+ * diff leaves out (a parent's own body, a fence's code or tag, a value whose
+ * id repeats after a fence), edits no step applies, and substitutions that hit
+ * an unchanged copy of the value.
+ */
+function routeMarkdown(
+  englishA: string,
+  englishB: string,
+  trees: Trees
+): Routing {
+  const routing = route(trees, "markdown")
+  // A pass-through model, so steps that defer to the model skip as they will
+  const probe = mergeMarkdown(
+    englishA,
+    englishB,
+    englishA,
+    trees,
+    routing,
+    (_, english) => english
+  )
+  const ids = [
+    PREAMBLE_ID,
+    ...[...walk(trees.treeB)]
+      .filter((n) => n.nodeType === "section" && !n.id.includes(":"))
+      .map((n) => n.id),
+  ]
+  for (const id of ids) {
+    if (routing.llmSectionIds.has(id)) continue
+    if (sectionBody(probe, id) !== sectionBody(englishB, id)) {
+      routing.llmSectionIds.add(id)
+    }
+  }
+  return routing
 }
 
 /** Section IDs the LLM must translate for this English diff. */
@@ -633,10 +876,17 @@ export function getLlmSectionIds(
   const parse = format === "markdown" ? parseMarkdown : parseJson
   const treeA = parse(englishA, config)
   const treeB = parse(englishB, config)
-  return [
-    ...route(treeA, treeB, diff(treeA, treeB), extractChanges(treeA, treeB))
-      .llmSectionIds,
-  ]
+  const trees = {
+    treeA,
+    treeB,
+    dr: diff(treeA, treeB),
+    cs: extractChanges(treeA, treeB),
+  }
+  const routing =
+    format === "markdown"
+      ? routeMarkdown(englishA, englishB, trees)
+      : route(trees, "json")
+  return [...routing.llmSectionIds]
 }
 
 // ---------------------------------------------------------------------------
@@ -652,18 +902,33 @@ function pipelineMarkdown(
 ): string {
   const treeA = parseMarkdown(englishA, config)
   const treeB = parseMarkdown(englishB, config)
-  const dr = diff(treeA, treeB)
-  const cs = extractChanges(treeA, treeB)
-
-  const renames = cs.sectionRenames
-  const { leafTdPaths, addedIds, renamedOldIds, llmSectionIds } = route(
+  const trees = {
     treeA,
     treeB,
-    dr,
-    cs
-  )
+    dr: diff(treeA, treeB),
+    cs: extractChanges(treeA, treeB),
+  }
+  const routing = routeMarkdown(englishA, englishB, trees)
+  return mergeMarkdown(englishA, englishB, localeA, trees, routing, llm)
+}
+
+function mergeMarkdown(
+  englishA: string,
+  englishB: string,
+  localeA: string,
+  { treeA, treeB, dr, cs }: Trees,
+  { addedIds, renamedOldIds, llmSectionIds }: Routing,
+  llm?: LlmTranslator
+): string {
+  const renames = cs.sectionRenames
 
   let result = localeA
+
+  // Frontmatter edits go through the YAML document, never the text. If the
+  // locale block does not parse, frontmatter is left exactly as it was.
+  const localeFm = parseFrontmatterDoc(localeA)
+  const englishFm = parseFrontmatterDoc(englishB)
+  let fmDirty = false
 
   // --- Phase 3: Deterministic Propagation ---
 
@@ -684,9 +949,24 @@ function pipelineMarkdown(
   const enBAnchors = anchorSet(englishB)
   const componentPaths = new Set<string>()
 
+  const removedFmFields = new Set<string>()
   for (const removed of dr.removed) {
     if (renamedOldIds.has(removed.id)) continue
     const node = getNodeByPath(treeA, removed.path)
+    if (node?.elementType === "frontmatter-field") {
+      // A field English dropped entirely; its items are not removed one by one
+      removedFmFields.add(removed.id)
+      if (
+        localeFm &&
+        applyFrontmatterChange(localeFm.doc, {
+          action: "remove",
+          path: removed.id,
+        })
+      ) {
+        fmDirty = true
+      }
+      continue
+    }
     if (node?.elementType === "component") {
       componentPaths.add(removed.path)
       continue
@@ -729,48 +1009,51 @@ function pipelineMarkdown(
     }
   }
 
+  // 3c-fm. Frontmatter: inert edits, item additions and removals are applied
+  // to the YAML document in place. Translatable fields the LLM will rewrite
+  // (Phase 5) are skipped here; without an LLM, English stands in for them the
+  // same way it does for body sections.
+  if (localeFm) {
+    for (const change of cs.changes) {
+      if (change.elementType !== "frontmatter-field") continue
+      if (!change.path.startsWith(FRONTMATTER_PREFIX)) continue
+      const fieldId = `${FRONTMATTER_PREFIX}${frontmatterKey(change.path)}`
+      if (removedFmFields.has(fieldId)) continue
+      if (llm && isTranslatableFrontmatter(fieldId)) continue
+      if (
+        applyFrontmatterChange(
+          localeFm.doc,
+          {
+            action: change.action,
+            path: change.path,
+            oldValue: change.oldValue,
+            newValue: change.newValue,
+          },
+          englishFm?.doc
+        )
+      ) {
+        fmDirty = true
+      }
+    }
+  }
+
   // 3c. Apply inert value updates from extractChanges
   for (const change of cs.changes) {
     if (change.action !== "update") continue
     if (change.oldValue === undefined || change.newValue === undefined) continue
+    if (change.elementType === "frontmatter-field") continue
 
-    // Check if this change is inside an LLM section
-    let belongsToLlmSection = false
-    for (const id of llmSectionIds) {
-      if (
-        change.path.includes("/" + id + "/") ||
-        change.path.startsWith(id + "/")
-      ) {
-        belongsToLlmSection = true
-        break
-      }
-    }
-    for (const p of leafTdPaths) {
-      if (change.path.startsWith(p + "/") || change.path === p) {
-        belongsToLlmSection = true
-        break
-      }
-    }
+    // Only a change's own section is retranslated; a routed parent does not
+    // cover its anchored subsections.
+    const belongsToLlmSection = llmSectionIds.has(
+      containingSectionId(change.path) ?? PREAMBLE_ID
+    )
 
     // Skip changes inside LLM sections when mock is provided
     if (belongsToLlmSection && llm) continue
 
     // Skip translatable changes without LLM
     if (change.contentType === "translatable") continue
-
-    // Inert/mixed changes: apply to locale text
-    if (change.elementType === "frontmatter-field" && change.key) {
-      const fm = parseFrontmatter(result)
-      if (fm) {
-        const keyPattern = new RegExp(
-          `^(${escapeRegex(change.key)}:\\s*).*$`,
-          "m"
-        )
-        const newYaml = fm.yaml.replace(keyPattern, `$1${change.newValue}`)
-        result = `---\n${newYaml}\n---${fm.body}`
-      }
-      continue
-    }
 
     // Value substitutions are scoped to the section the change belongs to: the
     // same URL, path or code span routinely appears in several sections, and a
@@ -861,45 +1144,6 @@ function pipelineMarkdown(
       }
       continue
     }
-
-    if (change.elementType === "code-body" && change.newValue) {
-      const pathParts = change.path.split("/")
-      const codeFenceIdx = pathParts.findIndex((p) =>
-        p.startsWith("code-fence:")
-      )
-      const sectionId = codeFenceIdx > 0 ? pathParts[codeFenceIdx - 1] : ""
-
-      if (sectionId) {
-        const sec = findSection(result, sectionId)
-        if (sec) {
-          const enBSec = findSection(englishB, sectionId)
-          if (enBSec) {
-            const enBContent = englishB.slice(enBSec.start, enBSec.end)
-            const fencePattern = /```\w+\n[\s\S]*?```/g
-            const enASecObj = findSection(englishA, sectionId)
-            const enAContent = enASecObj
-              ? englishA.slice(enASecObj.start, enASecObj.end)
-              : ""
-            let fenceMatch: RegExpExecArray | null
-            while ((fenceMatch = fencePattern.exec(enBContent)) !== null) {
-              if (!enAContent.includes(fenceMatch[0])) {
-                const secContent = result.slice(sec.start, sec.end)
-                const trimmed = secContent.trimEnd()
-                const insertAt = sec.start + trimmed.length
-                result =
-                  result.slice(0, insertAt) +
-                  "\n\n" +
-                  fenceMatch[0] +
-                  "\n" +
-                  result.slice(sec.end)
-                break
-              }
-            }
-          }
-        }
-      }
-      continue
-    }
   }
 
   // 3e. Supplementary pass: propagate attribute changes extractChanges missed
@@ -983,6 +1227,32 @@ function pipelineMarkdown(
   // --- Phase 4 & 5: LLM Translation + Assembly ---
 
   for (const sectionId of llmSectionIds) {
+    if (sectionId.startsWith(FRONTMATTER_PREFIX)) {
+      if (!localeFm || !englishFm || !isWholeField(sectionId)) continue
+      const key = frontmatterKey(sectionId)
+      const englishText = frontmatterFieldText(englishFm.doc, key)
+      if (!englishText) continue
+      const translated = llm ? llm(sectionId, englishText) : englishText
+      if (!translated.trim()) continue
+      // A list that came back with a different item count is applied from
+      // English instead: the shape must match English, the words can catch up.
+      const applied =
+        setFrontmatterFieldText(localeFm.doc, key, translated, englishFm.doc) ||
+        setFrontmatterFieldText(localeFm.doc, key, englishText, englishFm.doc)
+      if (applied) fmDirty = true
+      continue
+    }
+
+    if (sectionId === PREAMBLE_ID) {
+      const { start, end } = preambleRange(englishB)
+      const englishContent = englishB.slice(start, end).trim()
+      if (!englishContent) continue
+      const translated = llm ? llm(sectionId, englishContent) : englishContent
+      if (!translated.trim()) continue
+      result = replacePreamble(result, translated)
+      continue
+    }
+
     const enBSec = findSection(englishB, sectionId)
     if (!enBSec) continue
     const englishContent = englishB.slice(enBSec.start, enBSec.end).trimEnd()
@@ -994,22 +1264,32 @@ function pipelineMarkdown(
     if (addedIds.has(sectionId)) {
       const enBOrder = getSectionOrder(englishB)
       const idx = enBOrder.indexOf(sectionId)
-      if (idx <= 0) continue
-      const prevSec = findSection(result, enBOrder[idx - 1])
-      if (!prevSec) continue
+      if (idx < 0) continue
+      // After the section English puts before it; a new first section, or one
+      // whose predecessor the locale lacks, goes before the next one it has.
+      const prevSec = idx > 0 ? findSection(result, enBOrder[idx - 1]) : null
+      const at =
+        prevSec?.end ??
+        enBOrder
+          .slice(idx + 1)
+          .map((id) => findSection(result, id))
+          .find((sec) => sec !== null)?.start
+      if (at === undefined) continue
       // New section: no locale heading exists yet, so English-B's stands in when
       // the model returns body only.
       const section = assembleSection(enBSec.headingLine, translated, sectionId)
-      result =
-        result.slice(0, prevSec.end) +
-        section +
-        "\n\n" +
-        result.slice(prevSec.end)
+      result = result.slice(0, at) + section + "\n\n" + result.slice(at)
       continue
     }
 
     const localeSec = findSection(result, sectionId)
     if (!localeSec) continue
+    // English emptied the section's own body: nothing to translate, and the
+    // English fallback is just the English heading
+    if (!englishContent.includes("\n")) {
+      result = spliceSection(result, localeSec, localeSec.headingLine)
+      continue
+    }
     // An empty model response must never be written back: it would delete the
     // whole section, heading included.
     if (!translated.trim()) continue
@@ -1072,6 +1352,14 @@ function pipelineMarkdown(
       reordered.push(content)
     }
     result = beforeFirstH2 + reordered.join("")
+  }
+
+  if (localeFm && fmDirty) {
+    const bodyStart = result.indexOf("\n---", 3) + 4
+    result = serializeFrontmatter({
+      doc: localeFm.doc,
+      body: result.slice(bodyStart),
+    })
   }
 
   return result.trimEnd() + "\n"

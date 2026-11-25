@@ -1,0 +1,12 @@
+{
+  "catalog-item-about-title": "{name} について",
+  "catalog-item-gallery-modal-title": "{name} のスクリーンショット",
+  "catalog-item-gallery-screenshot-alt": "{name} のスクリーンショット {index}",
+  "catalog-item-gallery-title": "ギャラリー",
+  "catalog-item-info-title": "情報",
+  "catalog-item-link-label": "{platform} の {name}",
+  "catalog-item-see-next": "次を見る",
+  "catalog-item-source-code": "ソースコード",
+  "catalog-item-view-on-github": "GitHubで見る",
+  "catalog-item-visit-website": "ウェブサイトにアクセス"
+}

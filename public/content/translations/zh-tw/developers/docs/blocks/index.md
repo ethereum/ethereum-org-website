@@ -10,14 +10,13 @@ lang: zh-tw
 
 區塊是一個對初學者非常友善的主題。但為了幫助你更了解本頁面，我們建議你先閱讀[帳戶](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)以及我們的[以太坊簡介](/developers/docs/intro-to-ethereum/)。
 
-## 為何需要區塊？ {#why-blocks}
+## 為什麼需要區塊？ {#why-blocks}
 
-為了確保[以太坊](/)網路上的所有參與者保持同步的狀態，並對精確的交易歷史達成共識，我們將交易分批放入區塊中。這意味著數十（或數百）筆交易會同時被提交、達成共識並同步。
+為了確保 [以太坊](/) 網路上的所有參與者保持同步的狀態，並對精確的交易歷史達成一致，我們將交易分批打包進區塊中。這意味著數十（或數百）筆交易會同時被提交、達成一致並進行同步。
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_圖表改編自[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-透過拉開提交的間隔，我們給予所有網路參與者足夠的時間來達成共識：即使每秒發生數十次交易請求，以太坊上每十二秒才會建立並提交一次區塊。
+透過拉開提交的間隔時間，我們給予所有網路參與者足夠的時間來達成共識：即使每秒發生數十次交易請求，以太坊上每十二秒才會建立並提交一次區塊。
 
 ## 區塊如何運作 {#how-blocks-work}
 
@@ -88,7 +87,7 @@ _圖表改編自[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/e
 | 欄位               | 描述                                                         |
 | :------------------ | :------------------------------------------------------------------ |
 | `parent_hash`       | 父區塊的雜湊                                            |
-| `fee_recipient`     | 支付交易費用的帳戶地址                      |
+| `fee_recipient`     | 接收交易費用的帳戶地址                      |
 | `state_root`        | 套用此區塊變更後的全域狀態根雜湊 |
 | `receipts_root`     | 交易收據 Trie 的雜湊                               |
 | `logs_bloom`        | 包含事件日誌的資料結構                                |
@@ -108,7 +107,7 @@ _圖表改編自[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/e
 | 欄位              | 描述                                                         |
 | :----------------- | :------------------------------------------------------------------ |
 | `parent_hash`      | 父區塊的雜湊                                            |
-| `fee_recipient`    | 支付交易費用的帳戶地址                      |
+| `fee_recipient`    | 接收交易費用的帳戶地址                      |
 | `state_root`       | 套用此區塊變更後的全域狀態根雜湊 |
 | `receipts_root`    | 交易收據 Trie 的雜湊                               |
 | `logs_bloom`       | 包含事件日誌的資料結構                                |
@@ -151,3 +150,5 @@ _知道有什麼社群資源對你有幫助嗎？編輯此頁面並加入它！_
 - [交易](/developers/docs/transactions/)
 - [燃料](/developers/docs/gas/)
 - [權益證明 (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

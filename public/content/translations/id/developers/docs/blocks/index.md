@@ -12,12 +12,11 @@ Blok adalah topik yang sangat ramah pemula. Namun untuk membantu Anda lebih mema
 
 ## Mengapa blok? {#why-blocks}
 
-Untuk memastikan bahwa semua peserta di jaringan [Ethereum](/) mempertahankan state yang tersinkronisasi dan menyetujui riwayat transaksi yang tepat, kami mengelompokkan transaksi ke dalam blok. Ini berarti puluhan (atau ratusan) transaksi dikomit, disetujui, dan disinkronkan sekaligus.
+Untuk memastikan bahwa semua peserta di jaringan [Ethereum](/) mempertahankan state yang tersinkronisasi dan menyepakati riwayat transaksi yang tepat, kami mengelompokkan transaksi ke dalam blok. Ini berarti puluhan (atau ratusan) transaksi dikomit, disepakati, dan disinkronkan sekaligus.
 
-![A diagram showing transaction in a block causing state changes](./tx-block.png)
-_Diagram diadaptasi dari [Ilustrasi EVM Ethereum](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<BlockStateDiagram />
 
-Dengan memberi jarak pada komit, kami memberi semua peserta jaringan cukup waktu untuk mencapai konsensus: meskipun permintaan transaksi terjadi puluhan kali per detik, blok hanya dibuat dan dikomit di Ethereum setiap dua belas detik sekali.
+Dengan memberi jarak waktu pada komit, kami memberikan waktu yang cukup bagi semua peserta jaringan untuk mencapai konsensus: meskipun permintaan transaksi terjadi puluhan kali per detik, blok hanya dibuat dan dikomit di Ethereum setiap dua belas detik sekali.
 
 ## Bagaimana blok bekerja {#how-blocks-work}
 
@@ -151,3 +150,5 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 - [Transaksi](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)
 - [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos)
+
+<QuizWidget quizKey="blocks" />

@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { PageParams, ToCItem } from "@/lib/types"
 import type { Lang } from "@/lib/types"
@@ -21,7 +21,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -32,13 +32,19 @@ import PageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
+import dogeComputer from "@/public/images/doge-computer.png"
 import eth from "@/public/images/eth.png"
 import financeTransparent from "@/public/images/finance_transparent.png"
 import futureTransparent from "@/public/images/future_transparent.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
+import guidesHubHero from "@/public/images/heroes/guides-hub-hero.jpg"
 import heroImage from "@/public/images/heroes/learn-hub-hero.png"
+import storiesHero from "@/public/images/heroes/stories-hero.png"
 import impact from "@/public/images/impact_transparent.png"
+import networkColumn from "@/public/images/network-column-rooftop-piping-construction.png"
+import peopleLearning from "@/public/images/people-learning.png"
 import merge from "@/public/images/upgrades/merge.png"
+import upgradeRhino from "@/public/images/upgrades/upgrade_rhino.png"
 import wallet from "@/public/images/wallet.png"
 import whatIsEth from "@/public/images/what-is-ethereum.png"
 
@@ -97,6 +103,7 @@ const LearnCard = ({
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
+
   const t = await getTranslations("page-learn")
   const tCommon = await getTranslations("common")
 
@@ -121,6 +128,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       title: t("toc-go-deeper"),
     },
     {
+      id: "reference-and-resources",
+      title: t("toc-reference-and-resources"),
+    },
+    {
       id: "books-and-podcasts",
       title: t("toc-books-and-podcasts"),
     },
@@ -132,7 +143,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
   }))
 
   const heroContent: HubHeroProps = {
-    title: tCommon("learn-hub"),
+    breadcrumbs: { slug: "learn" },
     header: t("hero-header"),
     description: t("hero-subtitle"),
     heroImg: heroImage,
@@ -301,6 +312,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <AdditionalDocReading
             heading={t("additional-reading-more-on-ethereum-basics")}
             docLinks={[
+              { href: "/values/", children: t("values-hub-desc") },
               { href: "/guides/", children: t("guides-hub-desc") },
               { href: "/quizzes/", children: t("quiz-hub-desc") },
               {
@@ -344,6 +356,32 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ctaLabel={t("get-eth-cta")}
             />
           </Grid>
+          <LinkWithArrow href="/start/">{t("get-started-link")}</LinkWithArrow>
+
+          <h3>{t("keep-learning-title")}</h3>
+          <Grid>
+            <LearnCard
+              href="/staking/"
+              image={upgradeRhino}
+              title={t("staking-card-title")}
+              description={t("staking-card-description")}
+              ctaLabel={t("staking-cta")}
+            />
+            <LearnCard
+              href="/layer-2/"
+              image={networkColumn}
+              title={t("layer-2-learn-card-title")}
+              description={t("layer-2-learn-card-description")}
+              ctaLabel={t("layer-2-learn-cta")}
+            />
+            <LearnCard
+              href="/stories/"
+              image={storiesHero}
+              title={t("stories-card-title")}
+              description={t("stories-card-description")}
+              ctaLabel={t("stories-cta")}
+            />
+          </Grid>
 
           <AdditionalDocReading
             heading={t("additional-reading-more-on-using-ethereum")}
@@ -357,6 +395,16 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               {
                 href: "/guides/how-to-use-a-wallet/",
                 children: t("additional-reading-how-to-use-a-wallet"),
+              },
+              {
+                href: "/security/",
+                children: t("additional-reading-security"),
+              },
+              { href: "/gas/", children: t("additional-reading-gas") },
+              { href: "/bridges/", children: t("additional-reading-bridges") },
+              {
+                href: "/community/support/",
+                children: t("additional-reading-support"),
               },
             ]}
           />
@@ -402,7 +450,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               ctaLabel={t("ethereum-whitepaper-card-button")}
             />
             <LearnCard
-              href="/privacy/"
+              href="/privacy/ethereum/"
               image={hackathon}
               title={t("privacy-card-title")}
               description={t("privacy-card-description")}
@@ -432,16 +480,50 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 children: t("more-on-ethereum-protocol-evm"),
               },
               {
-                href: "/developers/docs/nodes-and-clients/",
-                children: t("more-on-ethereum-protocol-nodes-and-clients"),
+                href: "/zero-knowledge-proofs/",
+                children: t("more-on-ethereum-protocol-zero-knowledge-proofs"),
+              },
+              {
+                href: "/run-a-node/",
+                children: t("more-on-ethereum-protocol-run-a-node"),
               },
             ]}
           />
         </Section>
 
-        {/* Section 5: Books and podcasts */}
+        {/* Section 5: Reference and resources */}
         <Section id={tocItems[4].id}>
           <h2>{tocItems[4].title}</h2>
+          <p>{t("reference-and-resources-description")}</p>
+
+          <Grid>
+            <LearnCard
+              href="/what-are-apps/"
+              image={dogeComputer}
+              title={t("what-are-apps-card-title")}
+              description={t("what-are-apps-card-description")}
+              ctaLabel={t("what-are-apps-cta")}
+            />
+            <LearnCard
+              href="/glossary/"
+              image={peopleLearning}
+              title={t("glossary-card-title")}
+              description={t("glossary-card-description")}
+              ctaLabel={t("glossary-cta")}
+            />
+            <LearnCard
+              href="/resources/"
+              image={guidesHubHero}
+              title={t("resources-card-title")}
+              description={t("resources-card-description")}
+              ctaLabel={t("resources-cta")}
+            />
+          </Grid>
+        </Section>
+
+        {/* Section 6: Books and podcasts */}
+        <Section id={tocItems[5].id}>
+          <h2>{tocItems[5].title}</h2>
 
           {furtherReading.map(({ heading, items }) => (
             <Fragment key={heading}>
@@ -467,8 +549,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-learn")
 

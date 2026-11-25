@@ -1,6 +1,6 @@
 ---
 title: "Comprender las licencias de código abierto"
-description: "Una guía práctica sobre licencias de software libre y desarrollo colaborativo"
+description: "Una guía exhaustiva sobre licencias de código abierto, cumplimiento y colaboración"
 image: /images/open-source/hero-licensing-v2.png
 alt: "Diagrama que muestra diferentes tipos de licencias"
 template: tutorial
@@ -131,13 +131,13 @@ Las organizaciones que utilizan software de código abierto deben rastrear sus d
 
 ### Escaneo de licencias {#license-scanning}
 
-El escaneo automatizado de licencias debe ser parte de cada CI/CD pipeline. Detecta licencias incompatibles antes de que entren en su árbol de dependencias.
+El escaneo automatizado de licencias debe ser parte de cada canalización (pipeline) de CI/CD. Detecta licencias incompatibles antes de que ingresen a su árbol de dependencias.
 
 ```bash
 # Ejecutar un escaneo de licencias en tu proyecto
 npx license-checker --production --json > licenses.json
 
-# Comprobar si hay licencias copyleft en las dependencias de producción
+# Verificar si hay licencias copyleft en las dependencias de producción
 npx license-checker --production --onlyAllow "MIT;Apache-2.0;BSD-2-Clause;ISC"
 ```
 
@@ -151,6 +151,7 @@ Considere usar <a href="https://docs.github.com/en/code-security/dependabot" tar
   }
 }
 ```
+
 ### Generación de SBOM {#sbom-generation}
 
 Una lista de materiales de software (SBOM) enumera todos los componentes de su software. La generación de un SBOM es cada vez más necesaria para el cumplimiento normativo, especialmente en industrias sensibles a la seguridad.

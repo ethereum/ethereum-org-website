@@ -1,13 +1,13 @@
 [
   {
+    "username": "revofusion",
+    "name": "Revofusion",
+    "score": 48000
+  },
+  {
     "username": "protolambda",
     "name": "protolambda",
     "score": 42400
-  },
-  {
-    "username": "revofusion",
-    "name": "Revofusion",
-    "score": 46250
   },
   {
     "username": "cryptosubtlety",
@@ -33,6 +33,21 @@
     "username": "grandinetech",
     "name": "Grandine team",
     "score": 9000
+  },
+  {
+    "username": "gzeoneth",
+    "name": "gzeon",
+    "score": 9000
+  },
+  {
+    "username": "therealgregoai",
+    "name": "Grego AI",
+    "score": 8500
+  },
+  {
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 8000
   },
   {
     "username": "alexfilippov314",
@@ -68,11 +83,21 @@
     "username": "sbudella-gco",
     "name": "Giuseppe Cocomazzi",
     "score": 5000
-  },  
+  },
   {
     "username": "asanso",
     "name": "Antonio Sanso",
     "score": 4000
+  },
+  {
+    "username": "ustas-eth",
+    "name": "ustas",
+    "score": 4000
+  },
+  {
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 3500
   },
   {
     "username": "karalabe",
@@ -103,21 +128,46 @@
     "username": "sonny2k",
     "name": "Thanh Luu (sonny2k)",
     "score": 2500
-  },  
+  },
+  {
+    "username": "loopghost",
+    "name": "LoopGhost",
+    "score": 2500
+  },
+  {
+    "username": "eclipse07077",
+    "name": "eclipse07077",
+    "score": 2500
+  },
+  {
+    "username": "0xalpharush",
+    "name": "alpharush",
+    "score": 2000
+  },
   {
     "username": "",
     "name": "Akincibor",
     "score": 1750
   },
   {
+    "username": "sujithsomraaj",
+    "name": "sujith",
+    "score": 1500
+  },
+  {
+    "username": "Alleysira",
+    "name": "Jie Ma (UTUX Labs)",
+    "score": 1500
+  },
+  {
+    "username": "x15-eth",
+    "name": "0x15",
+    "score": 1250
+  },  
+  {
     "username": "nerolation",
     "name": "Toni Wahrstätter",
     "score": 1000
-  },
-  {
-    "username": "0xalpharush",
-    "name": "alpharush",
-    "score": 2000
   },
   {
     "username": "DragonDev1906",
@@ -135,30 +185,60 @@
     "score": 1000
   },
   {
-    "username": "quasar",
-    "name": "Evgeny Legerov",
-    "score": 1000
-  },
-  {
     "username": "0xfadam",
     "name": "fadam",
     "score": 1000
   },
   {
-    "username": "therealgregoai",
-    "name": "Grego AI",
-    "score": 1000
-  },
-  {
-    "username": "Jeongmin Choi",
+    "username": "",
     "name": "Jeongmin Choi",
     "score": 1000
   },
   {
-    "username": "Alleysira",
-    "name": "Jie Ma (UTUX Labs)",
+    "username": "aydarkhusaenov",
+    "name": "Legat",
     "score": 1000
   },
+  {
+    "username": "lgandx",
+    "name": "LAURENT GAFFIE",
+    "score": 1000
+  },
+  {
+    "username": "HackWidMaddy",
+    "name": "Madhav Shah",
+    "score": 1000
+  },
+  {
+    "username": "uShure",
+    "name": "moguchever",
+    "score": 1000
+  },
+  {
+    "username": "colinlyguo",
+    "name": "colinlyguo (AlphaSec)",
+    "score": 1000
+  },
+  {
+    "username": "kaslovdmitri",
+    "name": "Dmitri Kaslov",
+    "score": 1000
+  }, 
+  {
+    "username": "justifyme22",
+    "name": "Juan Sukaton",
+    "score": 1000
+  },
+  {
+    "username": "D4r3-D3v1L",
+    "name": "d4r3d3v1l",
+    "score": 1000
+  },
+  {
+    "username": "srobins1205-sys",
+    "name": "Greenbean17",
+    "score": 1000
+  },  
   {
     "username": "sko94",
     "name": "XDZIBECX",
@@ -170,9 +250,54 @@
     "score": 500
   },
   {
+    "username": "trailofbits",
+    "name": "Trail of Bits",
+    "score": 500
+  },
+  {
+    "username": "Stassi99",
+    "name": "Sta",
+    "score": 500
+  }, 
+  {
+    "username": "eliteaja11-dev",
+    "name": "AJA",
+    "score": 500
+  },
+  {
+    "username": "Giulio2002",
+    "name": "Giulio2002",
+    "score": 500
+  },  
+  {
     "username": "0xSorryNotSorry",
     "name": "sorryNotsorry",
     "score": 375
+  },
+  {
+    "username": "arronxd",
+    "name": "Arron5",
+    "score": 250
+  },
+  {
+    "username": "loopghost",
+    "name": "LoopGhost",
+    "score": 250
+  },
+  {
+    "username": "the-red-ace",
+    "name": "redbaron",
+    "score": 250
+  },
+  {
+    "username": "Matgothmog",
+    "name": "Matgothmog",
+    "score": 250
+  },
+  {
+    "username": "daniel5713",
+    "name": "Tong CAO",
+    "score": 250
   },
   {
     "username": "mcdee",

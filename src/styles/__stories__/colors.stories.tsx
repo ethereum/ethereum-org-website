@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils/cn"
 
 const meta = {
   title: "Design System / Colors",
+  tags: ["autodocs"],
   parameters: {
     chromatic: { disableSnapshot: true },
     layout: "padded",
@@ -166,10 +167,6 @@ const semantic: { title: string; description?: string; classes: string[] }[] = [
       "bg-body-medium",
       "bg-body-light",
       "bg-body-inverse",
-      "bg-body-menu",
-      "bg-body-menu-low",
-      "bg-body-menu-medium",
-      "bg-body-menu-high",
       "bg-disabled",
     ],
   },

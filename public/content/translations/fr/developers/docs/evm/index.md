@@ -10,18 +10,17 @@ La machine virtuelle Ethereum (EVM) est un environnement virtuel décentralisé 
 
 Une certaine familiarité avec la terminologie courante en informatique, telle que les [octets](https://wikipedia.org/wiki/Byte), la [mémoire](https://wikipedia.org/wiki/Computer_memory) et une [pile](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>), est nécessaire pour comprendre l'EVM. Il serait également utile d'être à l'aise avec les concepts de cryptographie et de chaîne de blocs tels que les [fonctions de hash](https://wikipedia.org/wiki/Cryptographic_hash_function) et l'[arbre de Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
-## Du registre à la machine à états {#from-ledger-to-state-machine}
+## Du registre à la machine d'état {#from-ledger-to-state-machine}
 
-L'analogie d'un « registre distribué » est souvent utilisée pour décrire les chaînes de blocs comme Bitcoin, qui permettent une cryptomonnaie décentralisée en utilisant des outils fondamentaux de cryptographie. Le registre conserve un historique d'activité qui doit respecter un ensemble de règles régissant ce que quelqu'un peut et ne peut pas faire pour modifier le registre. Par exemple, une adresse Bitcoin ne peut pas dépenser plus de Bitcoin qu'elle n'en a reçu précédemment. Ces règles sous-tendent toutes les transactions sur Bitcoin et de nombreuses autres chaînes de blocs.
+L'analogie d'un « registre distribué » est souvent utilisée pour décrire les chaînes de blocs comme Bitcoin, qui permettent une cryptomonnaie décentralisée en utilisant des outils fondamentaux de cryptographie. Le registre maintient un enregistrement de l'activité qui doit respecter un ensemble de règles régissant ce que quelqu'un peut et ne peut pas faire pour modifier le registre. Par exemple, une adresse Bitcoin ne peut pas dépenser plus de Bitcoin qu'elle n'en a reçu précédemment. Ces règles sous-tendent toutes les transactions sur Bitcoin et de nombreuses autres chaînes de blocs.
 
-Bien qu'Ethereum possède sa propre cryptomonnaie native (l'ether) qui suit presque exactement les mêmes règles intuitives, il permet également une fonction beaucoup plus puissante : les [contrats intelligents](/developers/docs/smart-contracts/). Pour cette fonctionnalité plus complexe, une analogie plus sophistiquée est requise. Au lieu d'un registre distribué, Ethereum est une [machine à états](https://wikipedia.org/wiki/Finite-state_machine) distribuée. L'état d'Ethereum est une vaste structure de données qui contient non seulement tous les comptes et soldes, mais aussi un _état de la machine_, qui peut changer de bloc en bloc selon un ensemble de règles prédéfinies, et qui peut exécuter du code machine arbitraire. Les règles spécifiques de changement d'état de bloc en bloc sont définies par l'EVM.
+Bien qu'Ethereum possède sa propre cryptomonnaie native (ether) qui suit presque exactement les mêmes règles intuitives, il permet également une fonction beaucoup plus puissante : les [contrats intelligents](/developers/docs/smart-contracts/). Pour cette fonctionnalité plus complexe, une analogie plus sophistiquée est requise. Au lieu d'un registre distribué, Ethereum est une [machine d'état](https://wikipedia.org/wiki/Finite-state_machine) distribuée. L'état d'Ethereum est une grande structure de données qui contient non seulement tous les comptes et soldes, mais aussi un _état de la machine_, qui peut changer de bloc en bloc selon un ensemble de règles prédéfinies, et qui peut exécuter du code machine arbitraire. Les règles spécifiques de changement d'état de bloc en bloc sont définies par la Machine Virtuelle Ethereum (EVM).
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## La fonction de transition d'état d'Ethereum {#the-ethereum-state-transition-function}
 
-L'EVM se comporte comme le ferait une fonction mathématique : étant donné une entrée, elle produit une sortie déterministe. Il est donc très utile de décrire plus formelnellement Ethereum comme ayant une **fonction de transition d'état** :
+L'EVM se comporte comme le ferait une fonction mathématique : étant donné une entrée, elle produit une sortie déterministe. Il est donc très utile de décrire plus formellement Ethereum comme ayant une **fonction de transition d'état** :
 
 ```
 Y(S, T)= S'
@@ -55,14 +54,13 @@ Les contrats contiennent un trie de _stockage_ de Merkle Patricia (sous forme de
 
 ### Codes d'opération {#opcodes}
 
-Le bytecode de contrat intelligent compilé s'exécute sous la forme d'un certain nombre de [codes d'opération](/developers/docs/evm/opcodes) de l'EVM, qui effectuent des opérations de pile standard telles que `XOR`, `AND`, `ADD`, `SUB`, etc. L'EVM implémente également un certain nombre d'opérations de pile spécifiques à la chaîne de blocs, telles que `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc. L'ensemble de codes d'opération comprend également `TSTORE` et `TLOAD`, qui fournissent un accès au stockage transitoire.
+Le bytecode de contrat intelligent compilé s'exécute sous la forme d'un certain nombre de [codes d'opération](/developers/docs/evm/opcodes) de la Machine Virtuelle Ethereum (EVM), qui effectuent des opérations de pile standard telles que `XOR`, `AND`, `ADD`, `SUB`, etc. L'EVM implémente également un certain nombre d'opérations de pile spécifiques à la chaîne de blocs, telles que `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc. L'ensemble de codes d'opération comprend également `TSTORE` et `TLOAD`, qui fournissent un accès au stockage transitoire.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Schémas adaptés de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## Implémentations de l'EVM {#evm-implementations}
 
-Toutes les implémentations de l'EVM doivent respecter les spécifications décrites dans le livre jaune d'Ethereum.
+Toutes les implémentations de la Machine Virtuelle Ethereum (EVM) doivent respecter les spécifications décrites dans le livre jaune d'Ethereum.
 
 Au cours des dix années d'histoire d'Ethereum, l'EVM a subi plusieurs révisions, et il existe plusieurs implémentations de l'EVM dans divers langages de programmation.
 
@@ -70,7 +68,7 @@ Les [clients d'exécution Ethereum](/developers/docs/nodes-and-clients/#executio
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Complément d'information {#further-reading}
@@ -91,3 +89,5 @@ Les [clients d'exécution Ethereum](/developers/docs/nodes-and-clients/#executio
 
 - [Comprendre les spécifications de l'EVM du livre jaune](/developers/tutorials/yellow-paper-evm/) _– Une visite guidée des spécifications formelles de l'EVM issues du livre jaune d'Ethereum._
 - [Rétro-ingénierie d'un contrat](/developers/tutorials/reverse-engineering-a-contract/) _– Comment faire de la rétro-ingénierie sur un contrat intelligent compilé en utilisant les codes d'opération de l'EVM._
+
+<QuizWidget quizKey="evm" />

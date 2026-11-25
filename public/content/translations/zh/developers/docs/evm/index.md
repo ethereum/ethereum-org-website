@@ -12,12 +12,11 @@ lang: zh
 
 ## 从账本到状态机 {#from-ledger-to-state-machine}
 
-人们经常使用“分布式账本”的比喻来描述像比特币这样的区块链，它利用密码学的基础工具实现了一种去中心化货币。该账本维护着活动记录，这些记录必须遵守一组规则，这些规则规定了人们在修改账本时能做什么和不能做什么。例如，一个比特币地址花费的比特币不能超过它之前收到的比特币。这些规则构成了比特币和许多其他区块链上所有交易的基础。
+“分布式账本”的比喻经常被用来描述像比特币这样的区块链，它们使用密码学的基础工具来实现去中心化的货币。账本维护着活动记录，这些记录必须遵守一套规则，这套规则规定了人们在修改账本时能做什么和不能做什么。例如，一个比特币地址花费的比特币不能超过它之前收到的比特币。这些规则构成了比特币和许多其他区块链上所有交易的基础。
 
-虽然以太坊拥有自己的原生加密货币（以太币），并且遵循几乎完全相同的直观规则，但它还实现了一个更强大的功能：[智能合约](/developers/docs/smart-contracts/)。对于这个更复杂的功能，需要一个更复杂的比喻。以太坊不是一个分布式账本，而是一个分布式[状态机](https://wikipedia.org/wiki/Finite-state_machine)。以太坊的状态是一个大型数据结构，它不仅保存所有账户和余额，还保存一个_机器状态_，该状态可以根据预定义的一组规则在区块之间发生变化，并且可以执行任意机器代码。在区块之间改变状态的具体规则由 EVM 定义。
+虽然以太坊有自己的原生加密货币（以太币），它遵循几乎完全相同的直观规则，但它还实现了一个更强大的功能：[智能合约](/developers/docs/smart-contracts/)。对于这个更复杂的功能，需要一个更复杂的比喻。以太坊不是一个分布式账本，而是一个分布式[状态机](https://wikipedia.org/wiki/Finite-state_machine)。以太坊的状态是一个大型数据结构，它不仅保存所有账户和余额，还保存一个_机器状态_，该状态可以根据预定义的一套规则在区块之间发生变化，并且可以执行任意机器代码。在区块之间改变状态的具体规则由 EVM 定义。
 
-![A diagram showing the make up of the EVM](./evm.png)
-_图表改编自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## 以太坊状态转换函数 {#the-ethereum-state-transition-function}
 
@@ -57,8 +56,7 @@ EVM 作为一个深度为 1024 个项的[堆栈机](https://wikipedia.org/wiki/S
 
 编译后的智能合约字节码作为许多 EVM [操作码](/developers/docs/evm/opcodes)执行，这些操作码执行标准的堆栈操作，如 `XOR`、`AND`、`ADD`、`SUB` 等。EVM 还实现了许多特定于区块链的堆栈操作，例如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。操作码集还包括 `TSTORE` 和 `TLOAD`，它们提供对瞬态存储的访问。
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_图表改编自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## EVM 实现 {#evm-implementations}
 
@@ -70,7 +68,7 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## 延伸阅读 {#further-reading}
@@ -91,3 +89,5 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 
 - [理解黄皮书的 EVM 规范](/developers/tutorials/yellow-paper-evm/) _– 以太坊黄皮书中正式 EVM 规范的引导式演练。_
 - [逆向工程合约](/developers/tutorials/reverse-engineering-a-contract/) _– 如何使用 EVM 操作码对已编译的智能合约进行逆向工程。_
+
+<QuizWidget quizKey="evm" />

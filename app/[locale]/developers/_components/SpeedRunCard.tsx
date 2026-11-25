@@ -25,6 +25,7 @@ const SpeedRunCard = ({
 }: SpeedRunCardProps) => (
   <Card
     href="https://speedrunethereum.com/"
+    sendReferrer
     variant="ghost"
     className={cn(
       "relative min-h-112 overflow-hidden rounded-b-none hover:bg-inherit hover:shadow-none",

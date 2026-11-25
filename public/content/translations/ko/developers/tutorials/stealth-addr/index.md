@@ -130,11 +130,11 @@ sidebarDepth: 3
 
 #### WASM 컴포넌트 {#wasm}
 
-WASM으로 컴파일되는 소스 코드는 [Rust](https://rust-lang.org/)로 작성되었습니다. [`src/rust_wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs)에서 확인할 수 있습니다. 이 코드는 주로 JavaScript 코드와 [`eth-stealth-addresses` 라이브러리](https://github.com/kassandraoftroy/eth-stealth-addresses) 사이의 인터페이스 역할을 합니다.
+WASM으로 컴파일되는 소스 코드는 [Rust](https://rust-lang.org/)로 작성되었습니다. [`src/rust-wasm/src/lib.rs`](https://github.com/qbzzt/251022-stealth-addresses/blob/main/src/rust-wasm/src/lib.rs)에서 확인할 수 있습니다. 이 코드는 주로 JavaScript 코드와 [`eth-stealth-addresses` 라이브러리](https://github.com/kassandraoftroy/eth-stealth-addresses) 사이의 인터페이스 역할을 합니다.
 
 **`Cargo.toml`**
 
-Rust의 [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html)는 JavaScript의 [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)와 유사합니다. 패키지 정보, 의존성 선언 등을 포함합니다.
+Rust의 [`Cargo.toml`](https://doc.rust-lang.org/cargo/reference/manifest.html)은 JavaScript의 [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json)과 유사합니다. 패키지 정보, 의존성 선언 등을 포함합니다.
 
 ```toml
 [package]
@@ -149,13 +149,13 @@ wasm-bindgen = "0.2.104"
 getrandom = { version = "0.2", features = ["js"] }
 ```
 
-[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) 패키지는 무작위 값을 생성해야 합니다. 이는 순수한 알고리즘적 수단으로는 불가능하며, 엔트로피 소스로서 물리적 프로세스에 대한 접근이 필요합니다. 이 정의는 우리가 실행 중인 브라우저에 요청하여 해당 엔트로피를 얻을 것임을 명시합니다.
+[`getrandom`](https://docs.rs/getrandom/latest/getrandom/) 패키지는 무작위 값을 생성해야 합니다. 이는 순수한 알고리즘 방식으로는 수행할 수 없으며, 엔트로피의 소스로서 물리적 프로세스에 접근해야 합니다. 이 정의는 우리가 실행 중인 브라우저에 요청하여 해당 엔트로피를 얻을 것임을 명시합니다.
 
 ```toml
 console_error_panic_hook = "0.1.7"
 ```
 
-[이 라이브러리](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/)는 WASM 코드가 패닉 상태에 빠져 계속할 수 없을 때 더 의미 있는 오류 메시지를 제공합니다.
+[이 라이브러리](https://docs.rs/console_error_panic_hook/latest/console_error_panic_hook/)는 WASM 코드가 패닉 상태에 빠져 계속 실행할 수 없을 때 더 의미 있는 오류 메시지를 제공합니다.
 
 ```toml
 [lib]
@@ -174,7 +174,7 @@ use wasm_bindgen::prelude::*;
 
 Rust에서 WASM 패키지를 생성하기 위한 정의입니다. [여기](https://wasm-bindgen.github.io/wasm-bindgen/reference/attributes/index.html)에 문서화되어 있습니다.
 
-```rust 
+```rust
 use eth_stealth_addresses::{
     generate_stealth_meta_address,
     generate_stealth_address,
@@ -188,7 +188,7 @@ use eth_stealth_addresses::{
 use hex::{decode,encode};
 ```
 
-Rust는 일반적으로 값을 위해 바이트 [배열](https://doc.rust-lang.org/std/primitive.array.html)(`[u8; <size>]`)을 사용합니다. 하지만 JavaScript에서는 일반적으로 16진수 문자열을 사용합니다. [`hex` 라이브러리](https://docs.rs/hex/latest/hex/)는 한 표현에서 다른 표현으로 변환해 줍니다.
+Rust는 일반적으로 값에 바이트 [배열](https://doc.rust-lang.org/std/primitive.array.html)(`[u8; <size>]`)을 사용합니다. 하지만 JavaScript에서는 일반적으로 16진수 문자열을 사용합니다. [`hex` 라이브러리](https://docs.rs/hex/latest/hex/)는 한 표현에서 다른 표현으로 변환해 줍니다.
 
 ```rust
 #[wasm_bindgen]
@@ -209,11 +209,11 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 
 [`generate_stealth_meta_address`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.generate_stealth_meta_address.html)는 세 가지 필드를 반환합니다.
 
-- 메타 주소 (*K<sub>pub</sub>* 및 *V<sub>pub</sub>*)
-- 조회 개인 키 (*V<sub>priv</sub>*)
-- 지출 개인 키 (*K<sub>priv</sub>*)
+- 메타 주소(*K<sub>pub</sub>* 및 *V<sub>pub</sub>*)
+- 보기용 개인 키(*V<sub>priv</sub>*)
+- 지출용 개인 키(*K<sub>priv</sub>*)
 
-[튜플(tuple)](https://doc.rust-lang.org/std/primitive.tuple.html) 구문을 사용하면 해당 값들을 다시 분리할 수 있습니다.
+[튜플](https://doc.rust-lang.org/std/primitive.tuple.html) 구문을 사용하면 해당 값들을 다시 분리할 수 있습니다.
 
 ```rust
     format!("{{\"address\":\"{}\",\"view_private_key\":\"{}\",\"spend_private_key\":\"{}\"}}",
@@ -224,7 +224,7 @@ pub fn wasm_generate_stealth_meta_address() -> String {
 }
 ```
 
-[`format!`](https://doc.rust-lang.org/std/fmt/index.html) 매크로를 사용하여 JSON으로 인코딩된 문자열을 생성합니다. 배열을 16진수 문자열로 변경하려면 [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html)를 사용합니다.
+[`format!`](https://doc.rust-lang.org/std/fmt/index.html) 매크로를 사용하여 JSON으로 인코딩된 문자열을 생성합니다. [`hex::encode`](https://docs.rs/hex/latest/hex/fn.encode.html)를 사용하여 배열을 16진수 문자열로 변경합니다.
 
 ```rust
 fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
@@ -232,11 +232,11 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 
 이 함수는 (JavaScript에서 제공된) 16진수 문자열을 바이트 배열로 변환합니다. JavaScript 코드에서 제공된 값을 파싱하는 데 사용합니다. 이 함수는 Rust가 배열과 벡터를 처리하는 방식 때문에 복잡합니다.
 
-`<const N: usize>` 표현식은 [제네릭(generic)](https://doc.rust-lang.org/book/ch10-01-syntax.html)이라고 부릅니다. `N`는 반환되는 배열의 길이를 제어하는 매개변수입니다. 이 함수는 실제로 `str_to_array::<n>`로 호출되며, 여기서 `n`은 배열의 길이입니다.
+`<const N: usize>` 표현식은 [제네릭](https://doc.rust-lang.org/book/ch10-01-syntax.html)이라고 합니다. `N`은 반환되는 배열의 길이를 제어하는 매개변수입니다. 이 함수는 실제로 `str_to_array::<n>`으로 호출되며, 여기서 `n`은 배열의 길이입니다.
 
 반환 값은 `Option<[u8; N]>`이며, 이는 반환되는 배열이 [선택적(optional)](https://doc.rust-lang.org/std/option/)임을 의미합니다. 이는 실패할 수 있는 함수에 대한 Rust의 전형적인 패턴입니다.
 
-예를 들어 `str_to_array::10("bad060a7")`를 호출하면 함수는 10개의 값으로 구성된 배열을 반환해야 하지만, 입력은 4바이트에 불과합니다. 함수는 실패해야 하며, `None`을 반환하여 이를 수행합니다. `str_to_array::4("bad060a7")`의 반환 값은 `Some<[0xba, 0xd0, 0x60, 0xa7]>`가 됩니다.
+예를 들어 `str_to_array::10("bad060a7")`을 호출하면 함수는 10개의 값을 가진 배열을 반환해야 하지만, 입력은 4바이트에 불과합니다. 함수는 실패해야 하며, `None`을 반환하여 이를 수행합니다. `str_to_array::4("bad060a7")`의 반환 값은 `Some<[0xba, 0xd0, 0x60, 0xa7]>`이 됩니다.
 
 ```rust
     // decode는 Result<Vec<u8>, _>를 반환합니다
@@ -245,22 +245,22 @@ fn str_to_array<const N: usize>(s: &str) -> Option<[u8; N]> {
 
 [`hex::decode`](https://docs.rs/hex/latest/hex/fn.decode.html) 함수는 `Result<Vec<u8>, FromHexError>`를 반환합니다. [`Result`](https://doc.rust-lang.org/std/result/) 타입은 성공적인 결과(`Ok(value)`) 또는 오류(`Err(error)`)를 포함할 수 있습니다.
 
-`.ok()` 메서드는 `Result`를 `Option`으로 변환하며, 그 값은 성공 시 `Ok()` 값이고 그렇지 않으면 `None`입니다. 마지막으로 [물음표 연산자](https://doc.rust-lang.org/std/option/#the-question-mark-operator-)는 `Option`이 비어 있는 경우 현재 함수를 중단하고 `None`을 반환합니다. 그렇지 않으면 값을 언랩(unwrap)하여 반환합니다(이 경우 `vec`에 값을 할당하기 위해).
+`.ok()` 메서드는 `Result`를 `Option`으로 변환하며, 그 값은 성공한 경우 `Ok()` 값이 되고 그렇지 않은 경우 `None`이 됩니다. 마지막으로 [물음표 연산자](https://doc.rust-lang.org/std/option/#the-question-mark-operator-)는 `Option`이 비어 있으면 현재 함수를 중단하고 `None`을 반환합니다. 그렇지 않으면 값을 언래핑(unwrap)하여 반환합니다(이 경우 `vec`에 값을 할당하기 위해).
 
-오류를 처리하는 방식이 이상하게 복잡해 보일 수 있지만, `Result`와 `Option`는 어떤 식으로든 모든 오류가 처리되도록 보장합니다.
+이는 오류를 처리하는 이상하게 복잡한 방법처럼 보이지만, `Result`와 `Option`은 모든 오류가 어떤 식으로든 처리되도록 보장합니다.
 
 ```rust
     if vec.len() != N { return None; }
 ```
 
-바이트 수가 올바르지 않으면 실패이며, `None`을 반환합니다.
+바이트 수가 올바르지 않으면 실패이며 `None`을 반환합니다.
 
 ```rust
-    // try_into는 vec를 소비하여 [u8; N]을 생성하려고 시도합니다
+    // try_into는 vec를 소비하여 [u8; N]을 만들려고 시도합니다
     let array: [u8; N] = vec.try_into().ok()?;
 ```
 
-Rust에는 두 가지 배열 타입이 있습니다. [배열(Array)](https://doc.rust-lang.org/std/primitive.array.html)은 고정된 크기를 가집니다. [벡터(Vector)](https://doc.rust-lang.org/std/vec/index.html)는 크기가 늘어나거나 줄어들 수 있습니다. `hex::decode`는 벡터를 반환하지만, `eth_stealth_addresses` 라이브러리는 배열을 받기를 원합니다. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods)는 값을 다른 타입으로 변환합니다(예: 벡터를 배열로 변환).
+Rust에는 두 가지 배열 타입이 있습니다. [배열](https://doc.rust-lang.org/std/primitive.array.html)은 고정된 크기를 가집니다. [벡터](https://doc.rust-lang.org/std/vec/index.html)는 커지거나 줄어들 수 있습니다. `hex::decode`는 벡터를 반환하지만, `eth_stealth_addresses` 라이브러리는 배열을 받기를 원합니다. [`.try_into()`](https://doc.rust-lang.org/std/convert/trait.TryInto.html#required-methods)는 값을 다른 타입으로 변환합니다(예: 벡터를 배열로 변환).
 
 ```rust
     Some(array)
@@ -310,12 +310,12 @@ pub fn wasm_compute_stealth_key(
 }
 ```
 
-이 함수는 라이브러리의 [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html)를 사용하여 주소에서 출금할 개인 키(*R<sub>priv</sub>*)를 계산합니다. 이 계산에는 다음 값들이 필요합니다.
+이 함수는 라이브러리의 [`compute_stealth_key`](https://docs.rs/eth-stealth-addresses/latest/eth_stealth_addresses/fn.compute_stealth_key.html)를 사용하여 주소에서 출금하기 위한 개인 키(*R<sub>priv</sub>*)를 계산합니다. 이 계산에는 다음 값들이 필요합니다.
 
-- 주소 (*Address=f(P<sub>pub</sub>)*)
-- 빌이 생성한 공개키 (*R<sub>pub</sub>*)
-- 조회 개인 키 (*V<sub>priv</sub>*)
-- 지출 개인 키 (*K<sub>priv</sub>*)
+- 주소(*Address=f(P<sub>pub</sub>)*)
+- 빌이 생성한 공개키(*R<sub>pub</sub>*)
+- 보기용 개인 키(*V<sub>priv</sub>*)
+- 지출용 개인 키(*K<sub>priv</sub>*)
 
 ```rust
 #[wasm_bindgen(start)]
@@ -329,7 +329,7 @@ pub fn main() {
 }
 ```
 
-이 코드는 패닉 출력이 JavaScript 콘솔로 전송되도록 지정합니다. 실제 작동을 확인하려면 애플리케이션을 사용하고 빌에게 유효하지 않은 메타 주소를 제공해 보십시오(16진수 숫자 하나만 변경). JavaScript 콘솔에서 다음 오류를 볼 수 있습니다.
+이 코드는 패닉 출력이 JavaScript 콘솔로 전송되도록 지정합니다. 실제 작동을 확인하려면 애플리케이션을 사용하고 빌에게 유효하지 않은 메타 주소를 제공해 보십시오(16진수 숫자 하나만 변경하면 됩니다). JavaScript 콘솔에서 다음 오류를 볼 수 있습니다.
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/subtle-2.6.1/src/lib.rs:701:9:
@@ -338,7 +338,7 @@ assertion `left == right` failed
  right: 1
 ```
 
-이어서 스택 트레이스가 나타납니다. 그런 다음 빌에게 유효한 메타 주소를 제공하고, 앨리스에게는 유효하지 않은 주소나 유효하지 않은 공개키를 제공해 보십시오. 다음 오류가 표시됩니다.
+이어서 스택 트레이스가 나타납니다. 그런 다음 빌에게 유효한 메타 주소를 제공하고, 앨리스에게 유효하지 않은 주소나 유효하지 않은 공개키를 제공해 보십시오. 다음 오류를 볼 수 있습니다.
 
 ```
 rust_wasm.js:236 panicked at /home/ori/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/eth-stealth-addresses-0.1.0/src/lib.rs:78:9:
@@ -349,9 +349,9 @@ keys do not generate stealth address
 
 #### 사용자 인터페이스 {#ui}
 
-사용자 인터페이스는 [React](https://react.dev/)를 사용하여 작성되었으며 [Vite](https://vite.dev/)를 통해 제공됩니다. [이 튜토리얼](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)을 통해 이에 대해 배울 수 있습니다. 여기서는 블록체인이나 지갑과 직접 상호작용하지 않으므로 [Wagmi](https://wagmi.sh/)가 필요하지 않습니다.
+사용자 인터페이스는 [React](https://react.dev/)를 사용하여 작성되었으며 [Vite](https://vite.dev/)를 통해 제공됩니다. [이 튜토리얼](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/)을 통해 이에 대해 알아볼 수 있습니다. 여기서는 블록체인이나 지갑과 직접 상호작용하지 않으므로 [Wagmi](https://wagmi.sh/)가 필요하지 않습니다.
 
-사용자 인터페이스에서 유일하게 직관적이지 않은 부분은 WASM 연결입니다. 작동 방식은 다음과 같습니다.
+사용자 인터페이스에서 유일하게 명확하지 않은 부분은 WASM 연결입니다. 작동 방식은 다음과 같습니다.
 
 **`vite.config.js`**
 
@@ -378,7 +378,7 @@ export default defineConfig({
 import init from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-[`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)를 사용하면 여기서 사용할 두 개의 파일이 생성됩니다. 실제 코드가 포함된 wasm 파일(여기서는 `src/rust-wasm/pkg/rust_wasm_bg.wasm`)과 이를 사용하기 위한 정의가 포함된 JavaScript 파일(여기서는 `src/rust_wasm/pkg/rust_wasm.js`)입니다. 해당 JavaScript 파일의 기본 내보내기(default export)는 WASM을 초기화하기 위해 실행해야 하는 코드입니다.
+[`wasm-pack`](https://rustwasm.github.io/docs/wasm-pack/)을 사용하면 여기서 사용할 두 개의 파일이 생성됩니다. 실제 코드가 포함된 wasm 파일(여기서는 `src/rust-wasm/pkg/rust_wasm_bg.wasm`)과 이를 사용하기 위한 정의가 포함된 JavaScript 파일(여기서는 `src/rust-wasm/pkg/rust_wasm.js`)입니다. 해당 JavaScript 파일의 기본 내보내기(default export)는 WASM을 초기화하기 위해 실행해야 하는 코드입니다.
 
 ```jsx
 function App() {
@@ -401,9 +401,9 @@ function App() {
   )
 ```
 
-[`useEffect` 훅(hook)](https://react.dev/reference/react/useEffect)을 사용하면 상태 변수가 변경될 때 실행되는 함수를 지정할 수 있습니다. 여기서는 상태 변수 목록이 비어 있으므로(`[]`), 이 함수는 페이지가 로드될 때 한 번만 실행됩니다.
+[`useEffect` 훅(hook)](https://react.dev/reference/react/useEffect)을 사용하면 상태 변수가 변경될 때 실행되는 함수를 지정할 수 있습니다. 여기서 상태 변수 목록은 비어 있으므로(`[]`), 이 함수는 페이지가 로드될 때 한 번만 실행됩니다.
 
-effect 함수는 즉시 반환되어야 합니다. WASM `init`(`.wasm` 파일을 로드해야 하므로 시간이 걸림)과 같은 비동기 코드를 사용하기 위해, 내부 [`async`](https://en.wikipedia.org/wiki/Async/await) 함수를 정의하고 `await` 없이 실행합니다.
+effect 함수는 즉시 반환되어야 합니다. WASM `init`(`.wasm` 파일을 로드해야 하므로 시간이 걸림)과 같은 비동기 코드를 사용하기 위해 내부 [`async`](https://en.wikipedia.org/wiki/Async/await) 함수를 정의하고 `await` 없이 실행합니다.
 
 **`Bill.jsx`**
 
@@ -413,7 +413,7 @@ effect 함수는 즉시 반환되어야 합니다. WASM `init`(`.wasm` 파일을
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 ```
 
-기본 내보내기 외에도 `wasm-pack`에 의해 생성된 JavaScript 코드는 WASM 코드의 모든 함수에 대한 함수를 내보냅니다.
+기본 내보내기 외에도 `wasm-pack`이 생성한 JavaScript 코드는 WASM 코드의 모든 함수에 대한 함수를 내보냅니다.
 
 ```jsx
             <button onClick={() => {
@@ -421,14 +421,14 @@ import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
             }}>
 ```
 
-WASM 함수를 호출하려면 `wasm-pack`가 생성한 JavaScript 파일에서 내보낸 함수를 호출하기만 하면 됩니다.
+WASM 함수를 호출하려면 `wasm-pack`이 생성한 JavaScript 파일에서 내보낸 함수를 호출하기만 하면 됩니다.
 
 **`Alice.jsx`**
 
 `Alice.jsx`의 코드는 앨리스에게 두 가지 작업이 있다는 점을 제외하면 유사합니다.
 
 - 메타 주소 생성
-- 빌이 게시한 주소에 대한 개인 키 가져오기
+- 빌이 게시한 주소의 개인 키 가져오기
 
 ## 결론 {#conclusion}
 

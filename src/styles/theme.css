@@ -144,10 +144,6 @@
   --color-body-medium: hsla(var(--body-medium));
   --color-body-light: hsla(var(--body-light));
   --color-body-inverse: hsla(var(--body-inverse));
-  --color-body-menu: hsla(var(--body-menu));
-  --color-body-menu-low: hsla(var(--body-menu-low));
-  --color-body-menu-medium: hsla(var(--body-menu-medium));
-  --color-body-menu-high: hsla(var(--body-menu-high));
 
   /* Colors: disabled */
   --color-disabled: hsla(var(--disabled));
@@ -211,6 +207,19 @@
   --color-staking-red: hsla(var(--staking-red));
   --color-staking-red-fill: hsla(var(--staking-red-fill));
 
+  /* Colors: diagrams */
+  --color-diagram-entity-fill: hsla(var(--diagram-entity-fill));
+  --color-diagram-revert: hsla(var(--diagram-revert));
+  --color-diagram-bg: hsla(var(--diagram-bg));
+  --color-diagram-plate: hsla(var(--diagram-plate));
+  --color-diagram-edge: hsla(var(--diagram-edge));
+  --color-diagram-pipe: hsla(var(--diagram-pipe));
+  --color-diagram-entity: hsla(var(--diagram-entity));
+  --color-diagram-gas: hsla(var(--diagram-gas));
+  --color-diagram-line-faint: hsla(var(--diagram-line-faint));
+  --color-diagram-line: hsla(var(--diagram-line));
+  --color-diagram-line-strong: hsla(var(--diagram-line-strong));
+
   /* Border radius */
   --radius-base: var(--radius-2xl);
 
@@ -230,7 +239,18 @@
   --animate-counter-spin-9: spin 18s linear infinite reverse;
   --animate-pulse-light: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-fade-in: fade-in 150ms ease-in-out;
+  /* Diagrams: one-shot, never looping (see .claude/skills/devdocs-diagrams) */
+  --animate-diagram-flow: diagram-flow 700ms ease-out both;
+  --animate-diagram-travel-y: diagram-travel-y 700ms ease-out both;
+  --animate-diagram-pop: diagram-pop 500ms ease-out both;
   --animate-blink: blink 1.06s step-end infinite;
+  /* Nav menu: panel open/close, and content sliding between sections */
+  --animate-nav-panel-in: nav-panel-in 200ms ease-out;
+  --animate-nav-panel-out: nav-panel-out 150ms ease-in;
+  --animate-nav-enter-from-left: nav-enter-from-left 250ms ease-out;
+  --animate-nav-enter-from-right: nav-enter-from-right 250ms ease-out;
+  --animate-nav-exit-to-left: nav-exit-to-left 250ms ease-out;
+  --animate-nav-exit-to-right: nav-exit-to-right 250ms ease-out;
 
   @keyframes scroll-left {
     0% { transform: translateX(0%); }
@@ -256,9 +276,54 @@
     100% { opacity: 1; }
   }
 
+  @keyframes diagram-flow {
+    from { stroke-dashoffset: 48; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes diagram-travel-y {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+
+  @keyframes diagram-pop {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+  }
+
+  @keyframes nav-panel-in {
+    from { opacity: 0; transform: translateY(-0.5rem) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes nav-panel-out {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(-0.5rem) scale(0.98); }
+  }
+
+  @keyframes nav-enter-from-left {
+    from { opacity: 0; transform: translateX(-3rem); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes nav-enter-from-right {
+    from { opacity: 0; transform: translateX(3rem); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes nav-exit-to-left {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(-3rem); }
+  }
+
+  @keyframes nav-exit-to-right {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(3rem); }
   }
 }
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { VideoData } from "@/lib/types"
 
@@ -29,9 +29,6 @@ const VideoLandingPage = async (props: {
 }) => {
   const { locale, slug } = await props.params
 
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-videos")
 
   let data: VideoData | undefined
@@ -44,21 +41,16 @@ const VideoLandingPage = async (props: {
   const { frontmatter } = data
   const transcriptMdx = data.content.trim() || null
 
-  const breadcrumbSlug =
-    "/videos/" + (frontmatter.breadcrumb || slug.replaceAll("-", " "))
-
   return (
     <>
-      <VideoPageJsonLD
-        locale={locale}
-        slug={slug}
-        frontmatter={frontmatter}
-        transcript={transcriptMdx}
-      />
+      <VideoPageJsonLD locale={locale} slug={slug} frontmatter={frontmatter} />
 
       <main className="max-w-4xl p-page pt-hero lg:pt-hero-2x">
         <MainArticle className="flow">
-          <Breadcrumbs slug={breadcrumbSlug} startDepth={1} />
+          <Breadcrumbs
+            slug={`/videos/${slug}`}
+            label={frontmatter.breadcrumb || slug.replaceAll("-", " ")}
+          />
 
           <div className="sticky top-24 z-10 md:static">
             <YouTube
@@ -111,9 +103,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
-
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   let data
   try {

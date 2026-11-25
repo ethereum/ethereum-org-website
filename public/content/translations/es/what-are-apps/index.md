@@ -79,3 +79,7 @@ Cuando todas las aplicaciones se construyen en Ethereum, todas son compatibles. 
 <ExpandableCard title="¿Cuál es la mejor billetera cripto?" visible>
   <p>Una billetera cripto te permite guardar tus tokens y administrar tu cuenta de Ethereum. Hay muchas billeteras excelentes, cada una con un propósito diferente. Para descubrir qué billetera es mejor para ti, visita nuestra [lista de billeteras](/wallets/find-wallet).</p>
 </ExpandableCard>
+
+<Divider />
+
+<QuizWidget quizKey="what-are-apps" />

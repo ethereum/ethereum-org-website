@@ -6,9 +6,9 @@
    <img {...props} fetchPriority="high" />
    ```
 
-   (PR #17958). `priority: true` on `getImageProps` is not enough.
+   (PR #17958). `preload: true` (formerly `priority`, deprecated in Next 16) on `getImageProps` is not enough.
 
-2. **Remove `priority` from below-fold images** — they compete with the hero for preload budget (SHA `d41f2a9b3` trustlogos).
+2. **Remove `preload` (formerly `priority`) from below-fold images** — they compete with the hero for preload budget (SHA `d41f2a9b3` trustlogos).
 
 3. **Re-encode oversized assets** — PNG → JPG, resize to display size (SHA `e2430a276`: 3.3MB → 119KB banner).
 
@@ -29,4 +29,4 @@
 
    Verify in DevTools: inspect the `<img>`, check `currentSrc` — the `&w=` should match the rendered CSS width × DPR, not the largest entry in `srcSet`.
 
-5. **Lower `quality` on non-LCP images** — `quality={65}` is visually indistinguishable from default `75` for photographic content, ~15% smaller. Add new values to the `qualities` allow-list in `next.config.js` (Next.js 15 only honors whitelisted qualities). SHA `6dc51d32a2`.
+5. **Lower `quality` on non-LCP images** — a step below the default `75` is visually indistinguishable for photographic content and meaningfully smaller. `quality` values must come from the `qualities` allow-list in `next.config.js` — Next.js rejects values that aren't whitelisted, so check the current list and add a new value there first. SHA `6dc51d32a2`.

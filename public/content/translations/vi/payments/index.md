@@ -206,3 +206,7 @@ Từ việc tạo điều kiện cứu trợ thảm họa nhanh chóng đến vi
   </ButtonLink>
 </AlertContent>
 </Alert>
+
+<Divider />
+
+<QuizWidget quizKey="payments" />

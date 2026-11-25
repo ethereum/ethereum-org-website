@@ -52,7 +52,7 @@
     "LINK-4dc120": {
       "type": "link",
       "values": {
-        "url": "https://discord.gg/ethereum-org"
+        "url": "/discord/"
       }
     },
     "LINK-80b8a1": {
@@ -94,7 +94,7 @@
     "LINK-20d0cc": {
       "type": "link",
       "values": {
-        "url": "https://discord.gg/ethereum-org"
+        "url": "/discord/"
       }
     }
   },

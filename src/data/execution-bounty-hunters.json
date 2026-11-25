@@ -15,6 +15,11 @@
     "score": 35000
   },
   {
+    "username": "cyberthirst",
+    "name": "cyberthirst",
+    "score": 33000
+  },
+  {
     "username": "",
     "name": "nrv (@nervoir)",
     "score": 31000
@@ -28,11 +33,6 @@
     "username": "chainsecurity",
     "name": "ChainSecurity",
     "score": 24500
-  },
-  {
-    "username": "cyberthirst",
-    "name": "cyberthirst",
-    "score": 21000
   },
   {
     "username": "junorouse",
@@ -50,14 +50,19 @@
     "score": 20000
   },
   {
-    "username": "peckshield",
-    "name": "PeckShield",
-    "score": 17000
+    "username": "tristartom",
+    "name": "Bob Conan",
+    "score": 18350
   },
   {
     "username": "iam-ned",
     "name": "David Matosse",
-    "score": 16250
+    "score": 17250
+  },
+  {
+    "username": "peckshield",
+    "name": "PeckShield",
+    "score": 17000
   },
   {
     "username": "itsunixiknowthis",
@@ -75,11 +80,6 @@
     "score": 15000
   },
   {
-    "username": "",
-    "name": "Bob Conan",
-    "score": 14000
-  },
-  {
     "username": "tintinweb",
     "name": "Tin",
     "score": 12500
@@ -92,13 +92,23 @@
   {
     "username": "DELENE-TCHIO-ROMUALD",
     "name": "Delene Tchio Romuald",
-    "score": 11250
+    "score": 12500
   },
   {
     "username": "lukaszmatczak",
     "name": "Łukasz Matczak",
     "score": 11000
   },
+  {
+    "username": "eclipse07077",
+    "name": "eclipse07077",
+    "score": 11000
+  },
+  {
+    "username": "sxguan",
+    "name": "sxguan",
+    "score": 11000
+  },  
   {
     "username": "",
     "name": "Heilman/Marcus/Goldberg",
@@ -170,6 +180,21 @@
     "score": 5000
   },
   {
+    "username": "gzeoneth",
+    "name": "gzeon",
+    "score": 5000
+  },
+  {
+    "username": "hyunmini",
+    "name": "secuholic",
+    "score": 4250
+  },
+  {
+    "username": "silverologist",
+    "name": "silverologist",
+    "score": 3750
+  },
+  {
     "username": "axic",
     "name": "Alex Beregszaszi",
     "score": 3500
@@ -182,6 +207,11 @@
   {
     "username": "0xalpharush",
     "name": "alpharush",
+    "score": 3000
+  },
+  {
+    "username": "Giulio2002",
+    "name": "Giulio2002",
     "score": 3000
   },
   {
@@ -199,6 +229,16 @@
     "name": "OP Labs",
     "score": 2500
   },
+  {
+    "username": "shaheenfazim",
+    "name": "Shaheen Fazim",
+    "score": 2500
+  },
+  {
+    "username": "grelgp",
+    "name": "grelgp",
+    "score": 2500
+  },  
   {
     "username": "yaronvel",
     "name": "Yaron Velner",
@@ -227,6 +267,21 @@
   {
     "username": "Cjentzsch",
     "name": "Christoph Jentzsch",
+    "score": 2000
+  },
+  {
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 2000
+  },
+  {
+    "username": "colinlyguo",
+    "name": "colinlyguo (AlphaSec)",
+    "score": 2000
+  },
+  {
+    "username": "lgandx",
+    "name": "Laurent Gaffie",
     "score": 2000
   },
   {
@@ -340,6 +395,66 @@
     "score": 1000
   },
   {
+    "username": "aydarkhusaenov",
+    "name": "Legat",
+    "score": 1000
+  },
+  {
+    "username": "phx-Alleysira",
+    "name": "phx & Alleysira (UTUX Labs)",
+    "score": 1000
+  },
+  {
+    "username": "ustas-eth",
+    "name": "ustas",
+    "score": 1000
+  },
+  {
+    "username": "DanielBoye",
+    "name": "DanielBoye",
+    "score": 1000
+  },
+  {
+    "username": "0xSHKWON",
+    "name": "0xSHKWON",
+    "score": 1000
+  },
+  {
+    "username": "Matgothmog",
+    "name": "Matgothmog",
+    "score": 1000
+  },
+  {
+    "username": "L-KH",
+    "name": "lahcen-kh",
+    "score": 1000
+  },
+  {
+    "username": "Smacaud",
+    "name": "Smacaud",
+    "score": 1000
+  }, 
+  {
+    "username": "the-red-ace",
+    "name": "redbaron",
+    "score": 1000
+  },
+  {
+    "username": "joohhnnn",
+    "name": "Joohhnnn",
+    "score": 1000
+  },
+  {
+    "username": "mardgez",
+    "name": "mardgez",
+    "score": 1000
+  },
+  {
+    "username": "alepacheco",
+    "name": "alepacheco",
+    "score": 1000
+  },
+  {
     "username": "n0thingness",
     "name": "Daniel Briskin",
     "score": 750
@@ -390,6 +505,16 @@
     "score": 500
   },
   {
+    "username": "timmylegodt",
+    "name": "Timmy",
+    "score": 500
+  },
+  {
+    "username": "CoMMaNDOX07",
+    "name": "CoMMaNDO",
+    "score": 500
+  },
+  {
     "username": "rholterhus",
     "name": "Riley Holterhus",
     "score": 250
@@ -397,6 +522,16 @@
   {
     "username": "howydev",
     "name": "Howy",
+    "score": 250
+  },
+  {
+    "username": "VanZ27",
+    "name": "VanSecQA",
+    "score": 250
+  },
+  {
+    "username": "kaslovdmitri",
+    "name": "Dmitri Kaslov",
     "score": 250
   },
   {

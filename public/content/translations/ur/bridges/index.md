@@ -135,8 +135,11 @@ _<span dir="ltr">Web3</span> لیئر ۱ (l1) بلاک چینز اور لیئر 
 <Divider />
 
 ## مزید مطالعہ {#further-reading}
+
 - [<span dir="ltr">EIP-5164</span>: کراس چین ایگزیکیوشن](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _<span dir="ltr">June 18, 2022</span> - برینڈن ایسلسٹائن_
 - [<span dir="ltr">L2Bridge</span> رسک فریم ورک](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _<span dir="ltr">July 5, 2022</span> - بارٹیک کیپوسزیوسکی_
 - ["مستقبل ملٹی چین کیوں ہوگا، لیکن یہ کراس چین نہیں ہوگا۔"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _<span dir="ltr">January 8, 2022</span> - وٹالک بوٹیرن_
 - [محفوظ کراس چین باہمی عمل پذیری کے لیے مشترکہ سیکیورٹی کا استعمال: لاگرینج اسٹیٹ کمیٹیاں اور اس سے آگے](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _<span dir="ltr">June 12, 2024</span> - ایمانوئل اووسیکا_
 - [رول اپ باہمی عمل پذیری کے حل کی حالت](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _<span dir="ltr">June 20, 2024</span> - ایلکس ہک_
+
+<QuizWidget quizKey="bridges" />

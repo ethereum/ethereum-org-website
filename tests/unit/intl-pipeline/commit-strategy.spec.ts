@@ -10,6 +10,11 @@ import { expect, test } from "@playwright/test"
 
 import { generateTempBranchName } from "../../../src/scripts/intl-pipeline/lib/utils/branch-naming"
 
+// Side-effect import: config.ts throws on a missing GITHUB_API_TOKEN at import time.
+import "./env-shim"
+
+import { assertStampScope } from "@/scripts/intl-pipeline/config"
+
 test.describe("Commit strategy", () => {
   test("temp branch name format: tmp-intl/run-MMDD-HHMM", () => {
     const name = generateTempBranchName()
@@ -68,3 +73,25 @@ test.describe("Commit strategy", () => {
  *    - squashByLanguage() called after pool.drain() to avoid race conditions
  *    - All languages finish before any squashing begins
  */
+
+test.describe("stamp_only scope", () => {
+  const scope = (targetPaths: string[], targetLanguages: string[]) => () =>
+    assertStampScope({ stampOnly: true, targetPaths, targetLanguages })
+
+  test("a stamp must name its files and locales", () => {
+    expect(scope([], [])).toThrow(/TARGET_PATH and TARGET_LANGUAGES/)
+    expect(scope(["public/content/foo/index.md"], [])).toThrow()
+    expect(scope([], ["de"])).toThrow()
+  })
+
+  test("a scoped stamp, or no stamp, passes", () => {
+    expect(scope(["public/content/foo/index.md"], ["de", "fr"])).not.toThrow()
+    expect(() =>
+      assertStampScope({
+        stampOnly: false,
+        targetPaths: [],
+        targetLanguages: [],
+      })
+    ).not.toThrow()
+  })
+})

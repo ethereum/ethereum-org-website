@@ -14,7 +14,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 import LanguagePicker from "."
 
 import { useDisclosure } from "@/hooks/useDisclosure"
-import { useEventListener } from "@/hooks/useEventListener"
+import { useKeyboardShortcut } from "@/hooks/useKeyboardShortcut"
 
 type DesktopLanguagePickerProps = {
   languages: LocaleDisplayInfo[]
@@ -31,11 +31,7 @@ const DesktopLanguagePicker = ({
 }: DesktopLanguagePickerProps) => {
   const { isOpen, setValue, onClose, onOpen } = useDisclosure()
 
-  useEventListener("keydown", (e) => {
-    if (e.key !== "\\" || e.metaKey || e.ctrlKey) return
-    e.preventDefault()
-    onOpen()
-  })
+  useKeyboardShortcut("language", onOpen)
 
   return (
     <Popover open={isOpen} onOpenChange={setValue}>
@@ -47,7 +43,10 @@ const DesktopLanguagePicker = ({
         >
           <Languages className="align-middle text-2xl" />
           &nbsp;
-          <span className="max-lg:hidden">{languageLabel}&nbsp;</span>
+          {/* Visually hidden when space is short, but still the button's name */}
+          <span className="group-data-[density=compact]/navbar:sr-only max-lg:sr-only">
+            {languageLabel}&nbsp;
+          </span>
           {locale.toUpperCase()}
         </Button>
       </PopoverTrigger>
@@ -62,7 +61,6 @@ const DesktopLanguagePicker = ({
           className="max-h-[calc(100vh-12rem)]"
           languages={languages}
           onSelect={onClose}
-          onNoResultsClose={onClose}
         />
       </PopoverContent>
     </Popover>
