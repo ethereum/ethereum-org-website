@@ -31,7 +31,7 @@ La parola "Gwei" è una contrazione di "giga-wei", che significa "un miliardo di
 
 Puoi impostare la quantità di gas che sei disposto a pagare quando invii una transazione. Offrendo una certa quantità di gas, fai un'offerta affinché la tua transazione venga inclusa nel blocco successivo. Se offri troppo poco, è meno probabile che i validatori scelgano la tua transazione per l'inclusione, il che significa che la tua transazione potrebbe essere eseguita in ritardo o non essere eseguita affatto. Se offri troppo, potresti sprecare degli ETH. Quindi, come fai a sapere quanto pagare?
 
-Il gas totale che paghi è diviso in due componenti: la `base fee` e la `priority fee` (commissione prioritaria).
+Il prezzo che paghi per unità di gas è diviso in due componenti: la `base fee` (commissione di base) e la `priority fee` (commissione prioritaria).
 
 La `base fee` è impostata dal protocollo: devi pagare almeno questo importo affinché la tua transazione sia considerata valida. La `priority fee` è una commissione prioritaria che aggiungi alla commissione di base per rendere la tua transazione attraente per i validatori, in modo che la scelgano per l'inclusione nel blocco successivo.
 
@@ -53,30 +53,32 @@ Quando Jordan invia il denaro, 1,000252 ETH verranno detratti dall'account di Jo
 
 Ogni blocco ha una commissione di base che funge da prezzo di riserva. Per essere idoneo all'inclusione in un blocco, il prezzo offerto per il gas deve essere almeno pari alla commissione di base. La commissione di base viene calcolata indipendentemente dal blocco corrente ed è invece determinata dai blocchi precedenti, rendendo le commissioni di transazione più prevedibili per gli utenti. Quando il blocco viene creato, questa **commissione di base viene "bruciata"**, rimuovendola dalla circolazione.
 
-La commissione di base viene calcolata tramite una formula che confronta la dimensione del blocco precedente (la quantità di gas utilizzata per tutte le transazioni) con la dimensione target (metà del limite di gas). La commissione di base aumenterà o diminuirà di un massimo del 12,5% per blocco se la dimensione del blocco target è rispettivamente superiore o inferiore al target. Questa crescita esponenziale rende economicamente non redditizio che la dimensione del blocco rimanga elevata a tempo indeterminato.
+La commissione di base viene calcolata tramite una formula che confronta la dimensione del blocco precedente (la quantità di gas utilizzata per tutte le transazioni) con la dimensione target (metà del limite di gas). La commissione di base aumenterà o diminuirà di un massimo del 12,5% per blocco se la dimensione del blocco è rispettivamente superiore o inferiore al target. Questa crescita esponenziale rende economicamente non redditizio che la dimensione del blocco rimanga elevata a tempo indeterminato.
 
 | Numero del blocco | Gas incluso | Aumento della commissione | Commissione di base attuale |
-| ------------ | -----------: | -----------: | ---------------: |
-| 1            |          18M |           0% |         100 Gwei |
-| 2            |          36M |           0% |         100 Gwei |
-| 3            |          36M |        12,5% |       112,5 Gwei |
-| 4            |          36M |        12,5% |       126,6 Gwei |
-| 5            |          36M |        12,5% |       142,4 Gwei |
-| 6            |          36M |        12,5% |       160,2 Gwei |
-| 7            |          36M |        12,5% |       180,2 Gwei |
-| 8            |          36M |        12,5% |       202,7 Gwei |
+| ----------------- | ----------: | ------------------------: | --------------------------: |
+| 1                 |         30M |                        0% |                    0,1 Gwei |
+| 2                 |         60M |                        0% |                    0,1 Gwei |
+| 3                 |         60M |                     12,5% |                 0,1125 Gwei |
+| 4                 |         60M |                     12,5% |                 0,1266 Gwei |
+| 5                 |         60M |                     12,5% |                 0,1424 Gwei |
+| 6                 |         60M |                     12,5% |                 0,1602 Gwei |
+| 7                 |         60M |                     12,5% |                 0,1802 Gwei |
+| 8                 |         60M |                     12,5% |                 0,2027 Gwei |
 
-Nella tabella precedente, viene mostrato un esempio utilizzando 36 milioni come limite di gas. Seguendo questo esempio, per creare una transazione sul blocco numero 9, un portafoglio farà sapere all'utente con certezza che la **commissione di base massima** da aggiungere al blocco successivo è `current base fee * 112.5%` o `202.7 gwei * 112.5% = 228.1 gwei`.
+Nella tabella precedente, viene illustrato un esempio utilizzando 60 milioni come limite di gas. Seguendo questo esempio, per creare una transazione sul blocco numero 9, un portafoglio farà sapere all'utente con certezza che la **commissione di base massima** da aggiungere al blocco successivo è `current base fee * 112.5%` o `0.2027 gwei * 112.5% = 0.2281 gwei`.
+
+<BaseFeeDiagram />
 
 È anche importante notare che è improbabile che assisteremo a picchi prolungati di blocchi pieni a causa della velocità con cui la commissione di base aumenta prima di un blocco pieno.
 
 | Numero del blocco | Gas incluso | Aumento della commissione | Commissione di base attuale |
-| ------------ | -----------: | -----------: | ---------------: |
-| 30           |          36M |        12,5% |      2705,6 Gwei |
-| ...          |          ... |        12,5% |              ... |
-| 50           |          36M |        12,5% |     28531,3 Gwei |
-| ...          |          ... |        12,5% |              ... |
-| 100          |          36M |        12,5% |  10302608,6 Gwei |
+| ----------------- | ----------: | ------------------------: | --------------------------: |
+| 30                |         60M |                     12,5% |                 2,7056 Gwei |
+| ...               |         ... |                     12,5% |                         ... |
+| 50                |         60M |                     12,5% |                28,5313 Gwei |
+| ...               |         ... |                     12,5% |                         ... |
+| 100               |         60M |                     12,5% |             10302,6083 Gwei |
 
 ### Commissione di priorità (commissioni prioritarie) {#priority-fee}
 
@@ -84,7 +86,7 @@ La commissione di priorità (commissione prioritaria) incentiva i validatori a m
 
 ### Commissione massima {#maxfee}
 
-Per eseguire una transazione sulla rete, gli utenti possono specificare un limite massimo che sono disposti a pagare affinché la loro transazione venga eseguita. Questo parametro opzionale è noto come `maxFeePerGas`. Affinché una transazione venga eseguita, la commissione massima deve superare la somma della commissione di base e della commissione prioritaria. Al mittente della transazione viene rimborsata la differenza tra la commissione massima e la somma della commissione di base e della commissione prioritaria.
+Per eseguire una transazione sulla rete, gli utenti possono specificare un limite massimo che sono disposti a pagare affinché la loro transazione venga eseguita. Questo parametro opzionale è noto come `maxFeePerGas`. Affinché una transazione venga eseguita, la commissione massima deve essere almeno pari alla commissione di base e la commissione prioritaria pagata è limitata in modo che la commissione di base più la commissione prioritaria non superi mai la commissione massima. Al mittente della transazione viene rimborsata la differenza tra la commissione massima e la somma della commissione di base e della commissione prioritaria.
 
 ### Dimensione del blocco {#block-size}
 

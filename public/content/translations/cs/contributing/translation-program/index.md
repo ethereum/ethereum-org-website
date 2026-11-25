@@ -1,20 +1,36 @@
 ---
 title: "Překladatelský program"
 lang: cs
-description: "Informace o překladatelském programu ethereum.org"
+description: "Pomozte s překladem Etherea revizí termínů ve vašem jazyce na ETHGlossary. Termíny, které schválíte, jsou ty, které používá ethereum.org."
 ---
 
-Překladatelský program byl společným úsilím o překlad webu ethereum.org do různých jazyků, čímž se web stal přístupnějším pro miliardy lidí na celém světě, kteří nemluví anglicky.
+Ethereum by mělo znít přirozeně v každém jazyce. Nejlepší způsob, jak nyní pomoci, je [ETHGlossary](https://glossary.ethereum.org/), sdílený, komunitou revidovaný glosář termínů Etherea ve 24 jazycích.
+
+**Termíny, které schválíte, jsou termíny, které ethereum.org používá ve vašem jazyce.** Peněženky, aplikace a týmy tvořící dokumentaci je mohou používat také, a to prostřednictvím otevřeného rozhraní pro programování aplikací (API) glosáře.
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  Zrevidujte termíny ve svém jazyce
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## Jak to funguje {#how-it-works}
+
+1. **Vyberte si svůj jazyk.** Každý jazyk má stejnou sadu termínů Etherea, každý s návrhem překladu.
+2. **Zrevidujte termín.** Můžete jej schválit, navrhnout lepší alternativu nebo přidat kontext, jak se používá ve vaší komunitě.
+3. **Jde to do světa.** Revidované termíny slouží jako vodítko pro překlady webu ethereum.org a jsou publikovány prostřednictvím rozhraní pro programování aplikací (API) ETHGlossary.
+
+Nevzniká vám žádný závazek. Revize jednoho termínu zabere jen pár minut.
+
+**Jazyky:** arabština, bengálština, čínština (zjednodušená a tradiční), čeština, francouzština, němčina, hindština, indonéština, italština, japonština, korejština, maráthština, polština, portugalština (Brazílie), ruština, španělština, svahilština, tamilština, telugština, turečtina, ukrajinština, urdština a vietnamština.
+
 ## Stav programu {#program-status}
 
-Překladatelský program ethereum.org se chýlí ke konci a již neprovádí onboarding nových překladatelů. Projekt na platformě Crowdin se uzavírá a nepřijímáme přes něj žádné nové návrhy překladů.
+Překlad celých stránek přes Crowdin je pozastaven a nepřijímáme tam žádné nové návrhy překladů. Mezitím můžete přispět revizí termínů na [ETHGlossary](https://glossary.ethereum.org/).
 
-Jsme hluboce vděční tisícům komunitních překladatelů, díky nimž byl web ethereum.org v průběhu let dostupný v desítkách jazyků – jejich práce zůstává na webu aktivní a jejich uznání na stránkách [poděkování](/contributing/translation-program/acknowledgements/) a [přispěvatelů](/contributing/translation-program/contributors/) zůstává zachováno.
+Jsme hluboce vděční tisícům komunitních překladatelů, díky nimž je web ethereum.org v průběhu let dostupný v desítkách jazyků – jejich práce zůstává na webu aktivní a jejich uznání na stránkách [poděkování](/contributing/translation-program/acknowledgements/) a [přispěvatelů](/contributing/translation-program/contributors/) zůstává zachováno.
 
-Pokud v existujícím překladu objevíte chybu, prosím [nahlaste problém na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Pokud v existujícím překladu objevíte chybu, [založte prosím issue na GitHubu](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 _Připojte se na [Discord ethereum.org](/discord/), kde se můžete ptát nebo sdílet zpětnou vazbu._
 

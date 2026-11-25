@@ -206,3 +206,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - `ディスカバリー` for discovery is glossary-literal but stiff; `ローカル・テストネット` vs `ローカルのテストネット` -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- "remain high indefinitely" rendered as "infinitely high" (gas:32); API over-expanded (#80).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

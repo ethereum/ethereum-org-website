@@ -207,3 +207,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - Mid-sentence English line breaks render as stray spaces between CJK (echidna 343, 581, 681) -- informational
 - multi-client:250 `交易發送器` loses "spammer" -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Spaces added around restored spans, as dev had.
+
+**Open / notes:**
+
+- `approve` rendered `授權` (authorize) -- `核准` fits the page; `滿區塊` vs dev `滿載區塊`.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

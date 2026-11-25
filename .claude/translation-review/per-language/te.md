@@ -194,3 +194,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - ABI/EVM spelled out (#80); `ఈథీరియం` vs locale `ఎథీరియం` in the EVM expansion (known glossary inconsistency)
 - Unchanged echidna:317 glossary verb pasted into heading; echidna:507 we/our mix -- out of scope
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- API over-expanded after a brand name (translation-program:21).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

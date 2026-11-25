@@ -195,3 +195,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - echidna:682 dropped the two-space hard line break -- cosmetic
 - Kurtosis labels (files artifacts, user services) mix Latin and transliteration -- defensible, informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- Glossary `transaction fee` = `লেনদেন ফি` conflicts with `transaction` = `ট্রানজ্যাকশন` in the glossary itself (gas:54); anglicism drift `ইনসেনটিভ`/`সার্কুলেশন`; `কমিটমেন্ট` used for non-cryptographic commitment.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

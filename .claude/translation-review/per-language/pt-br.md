@@ -160,3 +160,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - Unchanged frontmatter tag `"tes"` (truncated `testes`) in both files -- not fixed, out of scope
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Bare `gas` -> `gás` on 6 lines (gas L32, L34, L40, L54, L56, table headers); API acronym shortened on translation-program L9, L21.
+
+**Open / notes:**
+
+- Lines this PR did not change (L16-L26) still use `gas`; the glossary says `gás` for the bare term, compounds stay `taxa de gas`.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

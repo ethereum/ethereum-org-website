@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/gas/index.md",
-  "generatedAt": "2026-11-17T08:38:08.645Z",
-  "rootHash": "2a875c152bf5",
+  "generatedAt": "2026-11-25T09:07:54.504Z",
+  "rootHash": "59cb52b046cf",
   "tree": {
-    "contentHash": "3112ad32dfa0",
-    "anchorHash": "b85fb42d25df",
+    "contentHash": "9daca9784f96",
+    "anchorHash": "1208d2b32722",
     "children": {
       "frontmatter:title": {
         "contentHash": "f5544e76fdee",
@@ -124,8 +124,8 @@
         ]
       },
       "how-are-gas-fees-calculated": {
-        "contentHash": "7646b262cf14",
-        "anchorHash": "8549b92db467",
+        "contentHash": "4614647f97f2",
+        "anchorHash": "bbc8e51c2189",
         "labelHash": "b8cfc08b305b",
         "children": {
           "_label": {
@@ -133,7 +133,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:12": {
-            "contentHash": "65ea0affb407",
+            "contentHash": "39fb982f592a",
             "anchorHash": "e3b0c44298fc"
           },
           "inline-code:0": {
@@ -233,8 +233,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "base-fee": {
-            "contentHash": "306badbff222",
-            "anchorHash": "83d27934b11e",
+            "contentHash": "b8dcc7b0cb56",
+            "anchorHash": "cb347a0cafd5",
             "labelHash": "6efacc6c89ed",
             "children": {
               "_label": {
@@ -242,7 +242,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:2": {
-                "contentHash": "295fc86a2dde",
+                "contentHash": "83152f965627",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:0": {
@@ -255,10 +255,18 @@
               },
               "inline-code:1": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "a4e696db097d"
+                "anchorHash": "90d3d34d2ec7"
               },
               "prose:4": {
-                "contentHash": "422f51bfc240",
+                "contentHash": "cdb4ee2aea69",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:6": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "7e79394a7041",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -268,7 +276,9 @@
               "inline-code:0",
               "prose:3",
               "inline-code:1",
-              "prose:4"
+              "prose:4",
+              "component:6",
+              "prose:0"
             ]
           },
           "priority-fee": {
@@ -291,7 +301,7 @@
             ]
           },
           "maxfee": {
-            "contentHash": "4196e4251804",
+            "contentHash": "cd32176ab6c8",
             "anchorHash": "e023a1eb8ae8",
             "labelHash": "3c4276261081",
             "children": {
@@ -308,7 +318,7 @@
                 "anchorHash": "7c58b14a800e"
               },
               "prose:2": {
-                "contentHash": "7edb5d5a7f7a",
+                "contentHash": "fe8c7212af7c",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -676,5 +686,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ff8a5b0c924e7555d20026ccfe7a14d591b7de66"
+  "sourceCommitSha": "8d24885edc8472556ee52a1994415b6680634e20"
 }

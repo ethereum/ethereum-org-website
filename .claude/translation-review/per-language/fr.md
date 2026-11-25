@@ -162,3 +162,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - echidna:340 glossary `annuler` for revert reads as overflows being "cancelled" (L415/L422 unchanged, same issue) -- native call (#96)
 - ABI/EVM spelled out (#80)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Glossary: `frais maximums` -> `frais maximum` (gas L87, L89).
+
+**Open / notes:**
+
+- `suite a un bloc plein` reverses "preceding" (gas:73, dev had `avant`); `telugu` -> `telougou`; `supplement` for tip.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

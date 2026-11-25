@@ -162,3 +162,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 - echidna: revert rendered passive `dikembalikan` ("is returned") at 3 sites, regressing dev's `mengembalikan (revert)` -> restored with the `(revert)` gloss (#96)
 - echidna:145 `di-deploy` -> glossary `disebarkan`
 - multi-client: non-standard `enklaf` -> `enklave` (6 sites)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- API expanded on L21 after L9.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

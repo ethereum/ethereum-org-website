@@ -162,3 +162,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Fixed in this branch:**
 
 - echidna:344 `counter` "may cause an overflow" -> `может переполниться` (can overflow)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.2/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- The agent filed #101 as a warning; it is critical (see PR #19901). `Тейлор будет зачислено` grammar.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

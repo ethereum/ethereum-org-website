@@ -200,3 +200,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - multi-client: account as both `обліковими записами` (code comment) and `акаунти` (prose) -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` -> `надбавка`/`заохочення`; `повинна бути принаймні не меншою` says "at least" twice (gas:89); `акаунт` vs `рахунок` in one paragraph.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)
