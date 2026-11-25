@@ -1,7 +1,7 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/networking-layer/portal-network/index.md",
-  "generatedAt": "2026-11-17T08:51:02.791Z",
+  "generatedAt": "2026-11-25T09:52:29.338Z",
   "rootHash": "65bd66688cd5",
   "tree": {
     "contentHash": "0112594473f9",
@@ -376,5 +376,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ff8a5b0c924e7555d20026ccfe7a14d591b7de66"
+  "sourceCommitSha": "2a4de29685c0f579e19dadc80da2e7ba58749e3e"
 }
