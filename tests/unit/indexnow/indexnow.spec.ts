@@ -10,7 +10,7 @@ import {
   INDEXNOW_KEY,
   parseLocs,
   urlLocale,
-} from "../../../plugins/indexnow/lib.js"
+} from "../../../netlify/plugins/indexnow/lib.js"
 
 test("the key file at the site root holds exactly the key", () => {
   // Engines reject every submission if /<key>.txt is missing or differs

@@ -40,7 +40,7 @@
     "typesense:promote": "tsx src/scripts/typesense/promote.ts",
     "typesense:curate": "tsx src/scripts/typesense/curate.ts",
     "typesense:localize-curation": "tsx src/scripts/typesense/localize-curation.ts",
-    "indexnow:submit": "node plugins/indexnow/cli.js"
+    "indexnow:submit": "node netlify/plugins/indexnow/cli.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1115.0",

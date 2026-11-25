@@ -1,7 +1,7 @@
 // IndexNow submission helpers shared by the Netlify build plugin and the CLI.
 // Protocol: https://www.indexnow.org/documentation
 
-const i18nConfig = require("../../i18n.config.json")
+const i18nConfig = require("../../../i18n.config.json")
 
 // Public by design: engines verify ownership by fetching /<key>.txt, which
 // must contain exactly this value (public/fc6bce24ef26bd1222946b181a2d2197.txt).

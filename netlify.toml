@@ -27,9 +27,9 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Submits changed pages to IndexNow after production deploys (plugins/indexnow)
+# Submits changed pages to IndexNow after production deploys (netlify/plugins/indexnow)
 [[plugins]]
-  package = "./plugins/indexnow"
+  package = "./netlify/plugins/indexnow"
 
 [functions]
   included_files = ["i18n.config.json", "src/intl/**/*", "src/data-layer/mocks/**/*"]
