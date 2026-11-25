@@ -563,7 +563,8 @@ export function extractSections(content: string): ExtractedSection[] {
 export function buildSectionList(
   englishSections: ExtractedSection[],
   localeSections: ExtractedSection[],
-  translateIds: string[]
+  translateIds: string[],
+  fileType: "markdown" | "json"
 ): SectionForPrompt[] {
   const localeMap = new Map<string, ExtractedSection>()
   for (const s of localeSections) {
@@ -575,12 +576,21 @@ export function buildSectionList(
 
   for (const section of englishSections) {
     if (translateSet.has(section.id)) {
-      // Changed section: send English content for translation
+      // Changed section: send English content for translation. A markdown
+      // section the locale doesn't have yet sends its heading as content too,
+      // so the reply carries a translated heading; nothing else would translate
+      // it. A JSON key has no heading: its reply is the value itself.
+      const isNew =
+        fileType === "markdown" &&
+        section.level > 0 &&
+        !localeMap.has(section.id)
       result.push({
         id: section.id,
         action: "TRANSLATE",
-        content: section.body,
-        headingText: section.headingText,
+        content: isNew
+          ? `${"#".repeat(section.level)} ${section.headingText} {#${section.id}}\n\n${section.body}`.trimEnd()
+          : section.body,
+        headingText: isNew ? undefined : section.headingText,
         level: section.level,
       })
     } else {

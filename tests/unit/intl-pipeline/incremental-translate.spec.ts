@@ -505,9 +505,12 @@ test.describe("buildSectionList", () => {
   ]
 
   test("marks specified IDs as TRANSLATE, others as CONTEXT", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result).toHaveLength(3)
     expect(result.find((s) => s.id === "intro")!.action).toBe("CONTEXT")
     expect(result.find((s) => s.id === "details")!.action).toBe("TRANSLATE")
@@ -515,36 +518,76 @@ test.describe("buildSectionList", () => {
   })
 
   test("TRANSLATE sections use English content", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result.find((s) => s.id === "details")!.content).toBe(
       "English details."
     )
   })
 
+  test("a section the locale lacks sends its heading for translation", () => {
+    // Nothing else translates a new section's heading: the reply carries body
+    // text only, so it used to land in the locale in English
+    const result = buildSectionList(
+      englishSections,
+      localeSections.slice(0, 2),
+      ["conclusion"],
+      "markdown"
+    )
+    const conclusion = result.find((s) => s.id === "conclusion")!
+    expect(conclusion.content).toBe(
+      "## Conclusion {#conclusion}\n\nEnglish conclusion."
+    )
+    expect(conclusion.headingText).toBeUndefined()
+  })
+
   test("CONTEXT sections use locale content", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result.find((s) => s.id === "intro")!.content).toBe(
       "Intro en espanol."
     )
   })
 
   test("sections without locale match are omitted from CONTEXT", () => {
-    const result = buildSectionList(englishSections, [], ["details"])
+    const result = buildSectionList(
+      englishSections,
+      [],
+      ["details"],
+      "markdown"
+    )
     // intro and conclusion have no locale match, so only TRANSLATE section appears
     expect(result).toHaveLength(1)
     expect(result[0].action).toBe("TRANSLATE")
   })
 
   test("preserves document order", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "conclusion",
-      "intro",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["conclusion", "intro"],
+      "markdown"
+    )
     expect(result.map((s) => s.id)).toEqual(["intro", "details", "conclusion"])
+  })
+
+  test("a new JSON key is sent as its bare value, with no heading", () => {
+    const en = extractJsonSections(
+      JSON.stringify({ old: "Old value", nest: { added: "A new value" } })
+    )
+    const de = extractJsonSections(JSON.stringify({ old: "Alter Wert" }))
+    const [added] = buildSectionList(en, de, ["nest/added"], "json").filter(
+      (s) => s.action === "TRANSLATE"
+    )
+    expect(added.content).toBe("A new value")
   })
 })
 

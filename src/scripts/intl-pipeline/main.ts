@@ -526,6 +526,7 @@ async function sanitizeAndGate(opts: {
   content: string
   file: FileContext
   baseline?: string
+  baselineEnglish?: string
   mode: "incremental" | "full"
 }): Promise<string> {
   let content = opts.content
@@ -545,6 +546,7 @@ async function sanitizeAndGate(opts: {
     english: opts.file.content,
     output: content,
     baseline: opts.baseline,
+    baselineEnglish: opts.baselineEnglish,
     mode: opts.mode,
   })
   if (!gate.ok) throw new GateError(opts.destPath, gate.failures)
@@ -719,6 +721,23 @@ async function runIncremental(
 
   const englishB = file.content
 
+  // The content tree finds no headings in CRLF text, so the merge would take the
+  // whole page for its preamble and write English over the translation.
+  if (englishA.includes("\r\n") || englishB.includes("\r\n")) {
+    log(
+      `[${locale}] ${file.path}: CRLF English, falling back to full translation`
+    )
+    return runFullTranslation(
+      file,
+      locale,
+      destPath,
+      committer,
+      baseBranchSha,
+      committedFiles,
+      localeContent
+    )
+  }
+
   const llmSectionIds = getLlmSectionIds(englishA, englishB, file.type)
   log(`[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need LLM`)
 
@@ -801,6 +820,7 @@ async function runIncremental(
     content: finalContent,
     file,
     baseline: localeContent,
+    baselineEnglish: englishA,
     mode: "incremental",
   })
 

@@ -73,7 +73,7 @@ Sometimes you legitimately need to hand-edit a locale to reflect an English chan
 
 1. Confirm no `intl/pending-{base}` branch exists for the base you're working against. If one exists, merge or close it first. (Hand-edits + an open pending PR = merge conflict roulette.)
 2. Make the English-driven edit by hand in every locale you will stamp.
-3. Trigger `intl-pipeline.yml` with `stamp_only: true`, limited to that file and those locales:
+3. Trigger `intl-pipeline.yml` with `stamp_only: true`, limited to that file and those locales (the run refuses a stamp without `target_path` and `target_languages`):
 
 ```bash
 gh workflow run intl-pipeline.yml \

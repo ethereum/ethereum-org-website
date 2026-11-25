@@ -67,6 +67,30 @@ const stampOnly = ["1", "true", "yes", "on"].includes(
 const dryRun = ["1", "true", "yes", "on"].includes(
   (process.env.DRY_RUN || "").toLowerCase()
 )
+
+/**
+ * A stamp declares each pair's locale current with English without translating
+ * it. Unscoped, it would bury every pending English change in every locale, so
+ * it must name the files and locales that were fixed by hand.
+ */
+export function assertStampScope(opts: {
+  stampOnly: boolean
+  targetPaths: string[]
+  targetLanguages: string[]
+}): void {
+  if (!opts.stampOnly) return
+  if (opts.targetPaths.length && opts.targetLanguages.length) return
+  throw new Error(
+    "STAMP_ONLY needs TARGET_PATH and TARGET_LANGUAGES: name the files and the " +
+      "locales you fixed by hand. Refusing to stamp every pair."
+  )
+}
+
+assertStampScope({
+  stampOnly,
+  targetPaths,
+  targetLanguages: targetLanguagesInput,
+})
 const mode = (process.env.MODE || "auto") as "auto" | "full" | "estimate"
 const concurrency = parseInt(process.env.GEMINI_CONCURRENCY || "16", 10)
 
