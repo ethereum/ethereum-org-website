@@ -15,7 +15,12 @@ import { SECTION_LABELS } from "@/lib/constants"
  */
 export type KeyCombo = readonly string[]
 
-export type ShortcutGroup = "general" | "navigation" | "search" | "display"
+export type ShortcutGroup =
+  | "general"
+  | "navigation"
+  | "search"
+  | "display"
+  | "courses"
 
 export type Shortcut = {
   /** Chords that all trigger this action. Matched in order. */
@@ -38,10 +43,16 @@ export type Shortcut = {
   documentedOnly?: boolean
   /** Only bound while the desktop nav bar is shown (wide enough windows, labels that fit). */
   desktopOnly?: boolean
+  /** Only bound on pages whose locale-free path matches, so only listed there. */
+  path?: RegExp
 }
 
 // One digit per top-level nav section, so the range tracks the menu itself.
 const NAV_SECTION_COMBOS = SECTION_LABELS.map((_, index) => [String(index + 1)])
+
+// A lesson or Course Mastery (`/courses/<course>/<lesson or exam>/`): the
+// hub, course and profile pages don't bind the course keys
+const COURSE_PLAYER_PATH = /^\/courses\/(?!profile\/)[^/]+\/[^/]+\/?$/
 
 export const KEYBOARD_SHORTCUTS = {
   help: {
@@ -107,6 +118,30 @@ export const KEYBOARD_SHORTCUTS = {
     group: "display",
     desktopOnly: true,
   },
+  // Lesson and Course Mastery answers: the letters match the option markers
+  coursePickAnswer: {
+    combos: [["a"], ["b"], ["c"], ["d"]],
+    displayCombos: [["a"], ["d"]],
+    separator: "range",
+    labelKey: "shortcut-course-pick-answer",
+    group: "courses",
+    documentedOnly: true,
+    path: COURSE_PLAYER_PATH,
+  },
+  courseCheckNavigate: {
+    combos: [["ArrowLeft"], ["ArrowRight"]],
+    labelKey: "shortcut-course-check-navigate",
+    group: "courses",
+    documentedOnly: true,
+    path: COURSE_PLAYER_PATH,
+  },
+  courseContinue: {
+    combos: [["Enter"]],
+    labelKey: "shortcut-course-continue",
+    group: "courses",
+    documentedOnly: true,
+    path: COURSE_PLAYER_PATH,
+  },
 } satisfies Record<string, Shortcut>
 
 export type ShortcutId = keyof typeof KEYBOARD_SHORTCUTS
@@ -117,9 +152,16 @@ export const SHORTCUT_GROUPS: { id: ShortcutGroup; labelKey: string }[] = [
   { id: "navigation", labelKey: "shortcut-group-navigation" },
   { id: "search", labelKey: "shortcut-group-search" },
   { id: "display", labelKey: "shortcut-group-display" },
+  { id: "courses", labelKey: "shortcut-group-courses" },
 ]
 
-export const getShortcutsByGroup = (group: ShortcutGroup): Shortcut[] =>
+/** A group's shortcuts, less those bound only on other pages */
+export const getShortcutsByGroup = (
+  group: ShortcutGroup,
+  pathname = "/"
+): Shortcut[] =>
   Object.values(KEYBOARD_SHORTCUTS).filter(
-    (shortcut) => shortcut.group === group
+    (shortcut: Shortcut) =>
+      shortcut.group === group &&
+      (!shortcut.path || shortcut.path.test(pathname))
   )

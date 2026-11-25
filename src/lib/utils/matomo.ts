@@ -23,6 +23,10 @@ export const clearMatomoOptOutCache = () => {
   cachedOptOut = null
 }
 
+/** False when events would be dropped: dev builds, Do Not Track, or opt-out */
+export const isTrackingEnabled = (): boolean =>
+  IS_PROD && navigator.doNotTrack !== "1" && !isOptedOut()
+
 const scheduleIdleCallback =
   typeof window !== "undefined" &&
   typeof window.requestIdleCallback === "function"
@@ -40,12 +44,8 @@ export const trackCustomEvent = (
   // without this.
   { immediate = false }: { immediate?: boolean } = {}
 ): void => {
-  if (!IS_PROD) return
-
-  // Respect Do Not Track header
-  if (navigator.doNotTrack === "1") return
-
-  if (isOptedOut()) return
+  // Respects the Do Not Track header and the site opt-out
+  if (!isTrackingEnabled()) return
 
   // Capture URL synchronously — client-side navigations can change
   // window.location before the idle callback fires
