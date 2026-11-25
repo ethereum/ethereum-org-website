@@ -215,6 +215,8 @@ Higher-level convenience for typical modal needs. `tv` slots with `size` and `va
 **`size`**: `md | lg | xl`
 **`variant`**: `simulator | unstyled`
 
+**`fullscreenMobile`**: boolean. Full-bleed below `md` (no overlay padding, no max-width, no radius); identical to the default above `md`. For stepped or long-form dialogs where a centered card at phone width is just a worse page.
+
 ### `Dialog` -- `ui/dialog`
 
 ```tsx

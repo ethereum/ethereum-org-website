@@ -103,15 +103,24 @@
     text-align: left;
   }
 
-  /* Apply Urdu numerals to ordered lists when the locale is ur */
+  /* Apply Urdu numerals to ordered lists when the locale is ur. CSS counters
+     outside ::marker match via counter(name, var(--list-counter-style, decimal)). */
   :lang(ur) ol {
     list-style-type: urdu;
+  }
+
+  :lang(ur) {
+    --list-counter-style: urdu;
   }
 
   /* Fallback for older browsers that don't support urdu counter style */
   @supports not (list-style-type: urdu) {
     :lang(ur) ol {
       list-style-type: persian;
+    }
+
+    :lang(ur) {
+      --list-counter-style: persian;
     }
   }
 
@@ -205,7 +214,7 @@
      the indent (flow is base-layer and can't override the utility `ms-6`). */
   :where(.flow) :is(ul, ol) {
     @apply mb-0;
-}
+  }
 
   :where(.flow) li {
     @apply mb-0;

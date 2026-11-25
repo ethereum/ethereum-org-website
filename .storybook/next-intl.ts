@@ -23,6 +23,7 @@ export const ns = [
   "page-gas",
   "page-index",
   "page-learn",
+  "page-open-source",
   "page-upgrades",
   "page-developers-index",
   "page-stablecoins",
