@@ -361,7 +361,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Beacon API endpoints on Mainnet and Sepolia
     - Spectrum's Boosted Nodes, a caching and routing layer in front of our own nodes
     - Dedicated nodes
-    - Own servers in Tier III data centers in Malta, the Netherlands, and Canada, plus a bare metal deployment in Singapore
+    - Self operated Tier III data centers in Malta, the Netherlands, and Canada, plus a bare metal deployment in Singapore
     - SOC 2 Type II attested
     - Over a billion requests a day at 99.99% uptime
 
