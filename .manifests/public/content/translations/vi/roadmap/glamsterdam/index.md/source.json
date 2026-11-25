@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/glamsterdam/index.md",
-  "generatedAt": "2026-10-14T17:50:48.517Z",
-  "rootHash": "acc9df21014e",
+  "generatedAt": "2026-11-25T10:12:46.583Z",
+  "rootHash": "58e299a394d9",
   "tree": {
-    "contentHash": "d3f98cb8e125",
+    "contentHash": "6c21c494c097",
     "anchorHash": "84eb10562e61",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "cd30d456d5ac",
+        "contentHash": "3dbd8bd178c1",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -1152,5 +1152,5 @@
       "faq"
     ]
   },
-  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+  "sourceCommitSha": "2a4de29685c0f579e19dadc80da2e7ba58749e3e"
 }

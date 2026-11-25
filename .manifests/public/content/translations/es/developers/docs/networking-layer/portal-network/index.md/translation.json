@@ -1,7 +1,7 @@
 {
   "version": 2,
   "locale": "es",
-  "translatedAt": "2026-11-17T08:51:05.241Z",
+  "translatedAt": "2026-11-25T09:52:31.171Z",
   "englishManifestHash": "65bd66688cd5",
   "placeholderOrder": [
     "LINK-a21a82",
@@ -184,7 +184,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-11-17T08:51:05.241Z",
+      "translatedAt": "2026-11-25T09:52:31.171Z",
       "status": "success"
     }
   }

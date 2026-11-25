@@ -1,7 +1,7 @@
 {
   "version": 2,
   "locale": "uk",
-  "translatedAt": "2026-11-17T08:53:13.101Z",
+  "translatedAt": "2026-11-25T09:55:31.261Z",
   "englishManifestHash": "65bd66688cd5",
   "placeholderOrder": [
     "LINK-a21a82",
@@ -184,7 +184,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-11-17T08:53:13.101Z",
+      "translatedAt": "2026-11-25T09:55:31.261Z",
       "status": "success"
     }
   }

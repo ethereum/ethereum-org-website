@@ -1,7 +1,7 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/index.md",
-  "generatedAt": "2026-10-14T17:44:43.726Z",
+  "generatedAt": "2026-11-25T10:06:26.434Z",
   "rootHash": "9f48c9a15dbb",
   "tree": {
     "contentHash": "c709497c55ce",
@@ -592,5 +592,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+  "sourceCommitSha": "2a4de29685c0f579e19dadc80da2e7ba58749e3e"
 }
