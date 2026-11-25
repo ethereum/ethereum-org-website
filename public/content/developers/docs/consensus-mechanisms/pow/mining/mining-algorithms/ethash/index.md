@@ -100,7 +100,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-The cache production process involves first sequentially filling up 32 MB of memory, then performing two passes of Sergio Demian Lerner's _RandMemoHash_ algorithm from [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). The output is a set of 524288 64-byte values.
+The cache production process involves first sequentially filling up 32 MB of memory, then performing three passes (`CACHE_ROUNDS`) of Sergio Demian Lerner's _RandMemoHash_ algorithm from [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). The output is a set of 524288 64-byte values.
 
 ## Data aggregation function {#date-aggregation-function}
 

@@ -111,7 +111,8 @@ export function planIncrementalBatches(
   const sectionList = buildSectionList(
     extract(englishContent),
     extract(localeContent),
-    sectionIds
+    sectionIds,
+    fileType
   )
 
   // Lift code fences out before anything measures or sends a section. The

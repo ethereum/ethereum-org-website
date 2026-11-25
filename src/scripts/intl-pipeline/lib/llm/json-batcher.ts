@@ -15,6 +15,7 @@
 import { createHash } from "crypto"
 
 import { MAX_CHUNK_BYTES } from "../../constants"
+import { wrapperTags } from "../shared-patterns"
 
 type JsonValue =
   | string
@@ -374,13 +375,10 @@ function restoreHtmlInString(
         const hash = placeholder.slice(8)
         const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
         const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
-        const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
-        const closingMatch = original.match(/<\/(\w+)>/)
-        if (tagMatch && closingMatch) {
-          result = result
-            .split(openTag)
-            .join(`<${tagMatch[1]}${tagMatch[2] || ""}>`)
-          result = result.split(closeTag).join(`</${closingMatch[1]}>`)
+        const tags = wrapperTags(original)
+        if (tags) {
+          result = result.split(openTag).join(tags.open)
+          result = result.split(closeTag).join(tags.close)
         }
       } else {
         // Self-closing placeholder: global direct replacement.

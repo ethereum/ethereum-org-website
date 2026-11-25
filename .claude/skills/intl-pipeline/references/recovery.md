@@ -10,13 +10,13 @@ Load this when "the pipeline did something wrong" — bad translation in product
 | A pair is skipped every run                                                   | `.manifests/quarantine.json` holds it                                                                                   | Fix the cause (or the English), or rerun the pair with `mode: full`; see "Quarantined pairs"                      |
 | Task fails with `[gate] ...`                                                  | The output would have shipped a structural or MDX regression                                                            | Read the listed checks; the file is retried next run and quarantined on the second strike; see "Pre-commit gates" |
 | Lots of content changed but few/no manifests in the PR diff                   | Content and manifests desynced (manifest drift)                                                                         | See "Manifest drift after a run" below                                                                            |
-| Translation looks wrong, not yet merged                                       | Is it a glossary deviation?                                                                                             | Re-run pipeline targeting that file+locale; auto-fix should correct                                               |
+| Translation looks wrong, not yet merged                                       | Is it a glossary deviation?                                                                                             | `/review-translations` auto-fixes glossary deviations; otherwise re-run that file+locale with `mode: full`        |
 | Translation already merged to `dev`, looks wrong                              | Is the English version up to date?                                                                                      | Re-run with `mode: full` for that file                                                                            |
 | Manifest file is invalid / missing                                            | One of the two manifests gone?                                                                                          | Delete both manifests for that file+locale; pipeline auto-runs full mode                                          |
 | Build fails on a locale (MDX compile error)                                   | Is it the sanitizer's fault or content?                                                                                 | Triage MDX error → fix sanitizer (test-first) OR scope-fix the affected file                                      |
 | `intl/pending-{base}` PR has merge conflicts on base side                     | Was base force-pushed/rebased?                                                                                          | Don't rebase pending; merge base→pending again, or close pending and start fresh                                  |
 | LLM returned garbage / refused                                                | Check `finishReason` in logs                                                                                            | See "LLM returned garbage / refused" below                                                                        |
-| English-locale structural mismatch (locale missing inline element vs English) | Look at the manifest's element mapping                                                                                  | Re-run `mode: full` for that file; pipeline regenerates from scratch                                              |
+| English-locale structural mismatch (locale missing inline element vs English) | `verify-structure.ts --changed`                                                                                         | Re-run `mode: full` for that file; pipeline regenerates from scratch                                              |
 | Heading anchors missing or wrong across many locales                          | `pnpm exec tsx src/scripts/intl-pipeline/verify-structure.ts --changed` reports `heading-anchor`                        | One-off `repair-anchors.ts`; see "One-off repair scripts"                                                         |
 | Hand-edit slipped through review                                              | Was it pre- or post-English-change?                                                                                     | If pre-: leave it, manifest still valid. If post-: re-run pipeline; will overwrite OR conflict                    |
 
@@ -97,7 +97,7 @@ Error-string -> source map (where to look when a signature appears):
 
 **Historical cause (FIXED):** a `SharedCommitter` ref race — guarded since by `tests/unit/intl-pipeline/commit-ref-race.spec.ts`. Fresh drift therefore means a NEW throw point between a content commit and its manifest commit in `main.ts` (`runFullTranslation`/`runIncremental`), not the committer.
 
-**Recovery for a branch already in a drift state:** the content on the branch is correct, only the manifests are stale. Cheapest correct path is to discard and re-run clean; the alternative is a `stamp_only` pass to regenerate the missing manifests against the committed content, which is fragile and only worth it to preserve an expensive run.
+**Recovery for a branch already in a drift state:** the content on the branch is correct, only the manifests are stale. Cheapest correct path is to discard and re-run clean; the alternative is a `stamp_only` pass, which rewrites only the `source.json` of pairs whose English moved (asserting their committed content is current) and leaves `translation.json` stale; fragile, and only worth it to preserve an expensive run.
 
 ## PR body too large
 
@@ -117,12 +117,13 @@ Error-string -> source map (where to look when a signature appears):
 
 The pending PR has a wrong translation. Causes: bad Gemini output, missing ETHGlossary term, false-positive sanitizer fix, prompt context confusion.
 
-**Fix:** re-run the pipeline targeting the specific file+locale. New commit overwrites the bad translation on the pending branch.
+**Fix:** re-run the pipeline for that file+locale with `mode: full`. A default (`auto`) re-run skips any pair whose English hasn't changed since its manifest, so it leaves the bad translation in place.
 
 ```bash
 gh workflow run intl-pipeline.yml \
   -f target_path="public/content/some-page/index.md" \
-  -f target_languages="ja"
+  -f target_languages="ja" \
+  -f mode=full
 ```
 
 If the issue is a glossary deviation, the auto-fix step in `/review-translations` will catch it. If the issue is something the policy doesn't yet cover, the right fix is upstream — either add the term to ETHGlossary or correct the per-language entry there.

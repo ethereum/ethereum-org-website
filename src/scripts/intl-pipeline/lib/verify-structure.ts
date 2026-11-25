@@ -48,9 +48,36 @@ export type Finding = {
   check: string
   detail: string
   severity: Severity
+  /**
+   * The locale fence a finding is about, as `fenceIdentities` names it, so the
+   * gate can recognize a fence the locale already had wrong after English
+   * renumbered it.
+   */
+  key?: string
 }
 
 // --- helpers ---------------------------------------------------------------
+
+/**
+ * Each `<Flowchart>`'s list as nesting level plus whether the item opens with a
+ * **bold** edge label: `remarkFlowchart` draws boxes, arrows and decisions from
+ * exactly that, and throws when the list is gone.
+ */
+function flowchartShapes(src: string): string[] {
+  return [...src.matchAll(/<Flowchart\b[^>]*>([\s\S]*?)<\/Flowchart>/g)].map(
+    (m) => {
+      const items = [
+        ...m[1].matchAll(/^([ \t]*)(?:[-*+]|\d+[.)])[ \t]+(\*\*|__)?/gm),
+      ]
+      const indents = [...new Set(items.map((i) => i[1].length))].sort(
+        (a, b) => a - b
+      )
+      return items
+        .map((i) => `${indents.indexOf(i[1].length)}${i[2] ? "b" : ""}`)
+        .join(" ")
+    }
+  )
+}
 
 /** Heading scan that ignores fenced code (a shell `# comment` is not a heading). */
 function headings(src: string) {
@@ -130,6 +157,23 @@ const fenceBody = (body: string, language: string) =>
     .map((l) => l.replace(/[ \t]+$/, ""))
     .filter((l) => l !== "")
     .join("\n")
+
+/** A fence as its language tag, then its code (see `fenceBody`). */
+const fenceIdentity = (f: Fence) =>
+  `${f.language}\n${fenceBody(f.body, f.language)}`
+
+/** Every fence, in document order. */
+export const fenceIdentities = (src: string) =>
+  fenceBlocks(src).map(fenceIdentity)
+
+/** Every fence the model never translates, in document order. */
+export const fenceCode = (src: string) =>
+  fenceBlocks(src)
+    .filter((f) => !PROSE_FENCE_TAGS.has(f.language))
+    .map(fenceIdentity)
+
+/** Headings outside fenced code. */
+export const headingCount = (src: string) => headings(src).length
 const hrefs = (src: string) => all(src, /(?:\]\(|href=")(\/[^)"\s]*)/g)
 const altText = (src: string) => all(src, /!\[([^\]]*)\]/g)
 const attrValues = (src: string, attr: string) =>
@@ -158,8 +202,12 @@ export function verifyMarkdown(
   file: string
 ): Finding[] {
   const f: Finding[] = []
-  const add = (check: string, detail: string, severity: Severity = "error") =>
-    f.push({ file, check, detail, severity })
+  const add = (
+    check: string,
+    detail: string,
+    severity: Severity = "error",
+    key?: string
+  ) => f.push({ file, check, detail, severity, ...(key ? { key } : {}) })
 
   const eh = headings(enSrc)
   const th = headings(trSrc)
@@ -190,6 +238,18 @@ export function verifyMarkdown(
   const tagDiff = diffMultiset(tags(enSrc), tags(trSrc))
   if (tagDiff.length) add("jsx-tags", tagDiff.join(", "))
 
+  // A differing <Flowchart> count is already a jsx-tags finding.
+  const efc = flowchartShapes(enSrc)
+  const tfc = flowchartShapes(trSrc)
+  if (efc.length === tfc.length)
+    efc.forEach((shape, i) => {
+      if (shape !== tfc[i])
+        add(
+          "flowchart-shape",
+          `flowchart ${i + 1}: list nesting or **bold** edge labels differ from English`
+        )
+    })
+
   // Internal links must be byte-identical.
   const hrefDiff = diffMultiset(hrefs(enSrc), hrefs(trSrc))
   if (hrefDiff.length) add("internal-href", hrefDiff.join(", "))
@@ -211,7 +271,9 @@ export function verifyMarkdown(
         if (eb[i].language !== tb[i].language) {
           add(
             "code-fence-lang",
-            `fence ${i + 1}: en=\`${eb[i].language || "(none)"}\` tr=\`${tb[i].language || "(none)"}\``
+            `fence ${i + 1}: en=\`${eb[i].language || "(none)"}\` tr=\`${tb[i].language || "(none)"}\``,
+            "error",
+            fenceIdentity(tb[i])
           )
           continue
         }
@@ -220,7 +282,9 @@ export function verifyMarkdown(
         if (fenceBody(eb[i].body, lang) !== fenceBody(tb[i].body, lang))
           add(
             "code-fence-content",
-            `fence ${i + 1} (\`${eb[i].language || "untagged"}\`) body differs from English`
+            `fence ${i + 1} (\`${eb[i].language || "untagged"}\`) body differs from English`,
+            "error",
+            fenceIdentity(tb[i])
           )
       }
     }

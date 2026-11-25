@@ -1270,6 +1270,31 @@ test.describe("English Comparison Fixes", () => {
   })
 
   test.describe("fixCrowdinSplitBackticks", () => {
+    test("still repairs a split that leaves a valid span behind", () => {
+      const english = "Use `address` or `address payable` here"
+      const translated = "Nutze `address` oder `address` payable` hier"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
+        translated,
+        english
+      )
+      expect(content).toBe("Nutze `address` oder `address payable` hier")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not merge two adjacent correct spans", () => {
+      // An odd line elsewhere yields the span `withdraw() in `, as on the
+      // real smart-contracts/security page.
+      const english =
+        "calls `withdraw()` in `Victim` again\nthe `withdraw() in ` case"
+      const translated = "ruft `withdraw()` in `Victim` erneut auf"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
     test("repairs premature backtick close splitting inline code", () => {
       const english = "we use an empty component (`<> ... </>`) to combine them"
       const translated =

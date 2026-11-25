@@ -562,11 +562,9 @@ function extractHtmlTags(
 
         extractions.set(`HTMLTAG:${hash}`, fullMatch)
 
-        // Wrapper style: text stays visible for Gemini, tags become placeholders
-        if (children.trim()) {
-          return `${open}${children}${close}`
-        }
-        return open
+        // Wrapper style: text stays visible for Gemini, tags become placeholders.
+        // Always emit the close token: reconstruction needs the pair.
+        return `${open}${children}${close}`
       }
     )
   } // end while loop for nested tags

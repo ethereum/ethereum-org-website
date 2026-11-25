@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl"
 
 import Modal from "@/components/ui/dialog-modal"
 
-import { cn } from "@/lib/utils/cn"
+import { MAIN_NAV_ID } from "@/lib/constants"
 
 import ShortcutKeys from "./ShortcutKeys"
 
@@ -15,6 +15,9 @@ type ShortcutsDialogProps = {
 
 const ShortcutsDialog = ({ open, onOpenChange }: ShortcutsDialogProps) => {
   const t = useTranslations("common")
+  // Desktop-only shortcuts act on the desktop bar, which narrow windows and
+  // long-label locales swap for the mobile menu
+  const hasDesktopBar = open && !!document.getElementById(MAIN_NAV_ID)
 
   return (
     <Modal
@@ -25,7 +28,9 @@ const ShortcutsDialog = ({ open, onOpenChange }: ShortcutsDialogProps) => {
     >
       <div className="flex flex-col gap-6">
         {SHORTCUT_GROUPS.map((group) => {
-          const shortcuts = getShortcutsByGroup(group.id)
+          const shortcuts = getShortcutsByGroup(group.id).filter(
+            ({ desktopOnly }) => hasDesktopBar || !desktopOnly
+          )
           if (!shortcuts.length) return null
 
           return (
@@ -35,14 +40,9 @@ const ShortcutsDialog = ({ open, onOpenChange }: ShortcutsDialogProps) => {
               </h3>
               <dl className="m-0">
                 {shortcuts.map((shortcut) => (
-                  // Rule sits on the top edge so a hidden desktop-only row
-                  // at the end of a group leaves no dangling border.
                   <div
                     key={shortcut.labelKey}
-                    className={cn(
-                      "flex items-center justify-between gap-6 border-t py-2 first:border-t-0",
-                      shortcut.desktopOnly && "max-md:hidden"
-                    )}
+                    className="flex items-center justify-between gap-6 border-t py-2 first:border-t-0"
                   >
                     <dt className="text-body">{t(shortcut.labelKey)}</dt>
                     <dd className="m-0">

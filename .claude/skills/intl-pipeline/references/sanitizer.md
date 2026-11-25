@@ -12,23 +12,23 @@ The post-import sanitizer normalizes translation outputs to fix Gemini-produced 
 
 Each fix function is one of:
 
-| Category                              | Pattern                                                                 | Auto-correctable?                                |
-| ------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------ |
-| Brand-name mistranslations            | Gemini's transliteration of a brand differs from the canonical form     | Yes (auto-fix to canonical form per script_rule) |
-| Code-fence drift                      | Translator put translated text inside ` ```python ` blocks              | Yes (split content / restore code)               |
-| BiDi corruption                       | RTL languages: Latin tokens followed by punctuation flip direction      | Yes (wrap in `<span dir="ltr">`)                 |
-| Backslash escaping                    | Translator inserts backslash before closing HTML tag (`\</strong>`)     | Yes (strip the backslash)                        |
-| Asymmetric backticks                  | `` `code`` `` (single-open, double-close) — exposes raw HTML/JSX to MDX | Yes (rebalance)                                  |
-| Backtick-wrapped markdown links       | `` `[text](/path)` `` — rendered as inline code instead of link         | Yes (strip backticks)                            |
-| Orphaned closing tags                 | `</a>`, `</em>`, `</li>` without matching opener                        | Yes (strip the orphan)                           |
-| Inner double quotes in JSX attribute  | `title="What is "X"?"` breaks attribute parsing                         | Yes (escape or downgrade to single quote)        |
-| Junk text after heading anchors       | `{#section-id}translated-anchor-id` — Crowdin appended translated ID    | Yes (strip the junk)                             |
-| Image path corruption                 | `./image.png` → `/.image.png`                                           | Yes (restore `./`)                               |
-| Tilde range notation                  | `100~200` parsed as strikethrough by remark-gfm                         | Yes (convert to en-dash or `&#x7E;`)             |
-| Translated GitHub `@username`         | `@axic` → `@kwaaxic`                                                    | Yes (revert)                                     |
-| Crowdin `''text''` double apostrophes | Crowdin escaping artifact                                               | Yes (strip)                                      |
-| Lorem ipsum placeholder               | Placeholder text left in translation                                    | No (flag as warning; manual review)              |
-| Cross-script contamination            | Unexpected script characters (Devanagari in Turkish)                    | No (flag as warning; manual review)              |
+| Category                              | Pattern                                                                 | Auto-correctable?                              |
+| ------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------- |
+| Brand-name mistranslations            | A known garbled brand form listed in `BRAND_GARBLE_CORRECTIONS`         | Only the listed garbles; no ETHGlossary lookup |
+| Code-fence drift                      | Translator put translated text inside ` ```python ` blocks              | Yes (split content / restore code)             |
+| BiDi corruption                       | RTL languages: Latin tokens followed by punctuation flip direction      | Yes (wrap in `<span dir="ltr">`)               |
+| Backslash escaping                    | Translator inserts backslash before closing HTML tag (`\</strong>`)     | Yes (strip the backslash)                      |
+| Asymmetric backticks                  | `` `code`` `` (single-open, double-close) — exposes raw HTML/JSX to MDX | Yes (rebalance)                                |
+| Backtick-wrapped markdown links       | `` `[text](/path)` `` — rendered as inline code instead of link         | Yes (strip backticks)                          |
+| Orphaned closing tags                 | `</a>`, `</em>`, `</li>` without matching opener                        | Yes (strip the orphan)                         |
+| Inner double quotes in JSX attribute  | `title="What is "X"?"` breaks attribute parsing                         | Yes (escape or downgrade to single quote)      |
+| Junk text after heading anchors       | `{#section-id}translated-anchor-id` — Crowdin appended translated ID    | Yes (strip the junk)                           |
+| Image path corruption                 | `./image.png` → `/.image.png`                                           | Yes (restore `./`)                             |
+| Tilde range notation                  | `100~200` parsed as strikethrough by remark-gfm                         | Yes (convert to en-dash or `&#x7E;`)           |
+| Translated GitHub `@username`         | `@axic` → `@kwaaxic`                                                    | Yes (revert)                                   |
+| Crowdin `''text''` double apostrophes | Crowdin escaping artifact                                               | Yes (strip)                                    |
+| Lorem ipsum placeholder               | Placeholder text left in translation                                    | No (flag as warning; manual review)            |
+| Cross-script contamination            | Unexpected script characters (Devanagari in Turkish)                    | No (flag as warning; manual review)            |
 
 ## Adding a new fix function
 
@@ -49,4 +49,3 @@ Run all sanitizer tests:
 ```bash
 npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 ```
-
