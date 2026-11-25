@@ -4,7 +4,17 @@ import { pathToFileURL } from "url"
 import { expect, test } from "@playwright/test"
 
 type Mod = typeof import("../../.github/scripts/listing-research.mjs")
-let check: Mod["check"],
+let blockers: Mod["blockers"],
+  check: Mod["check"],
+  dataLine: Mod["dataLine"],
+  followupComment: Mod["followupComment"],
+  isListingIssue: Mod["isListingIssue"],
+  isListingReply: Mod["isListingReply"],
+  latest: Mod["latest"],
+  MAX_FOLLOWUPS: Mod["MAX_FOLLOWUPS"],
+  productSites: Mod["productSites"],
+  coveringPr: Mod["coveringPr"],
+  researchComment: Mod["researchComment"],
   esc: Mod["esc"],
   LISTING: Mod["LISTING"],
   publicUrl: Mod["publicUrl"],
@@ -15,7 +25,17 @@ let check: Mod["check"],
 
 test.beforeAll(async () => {
   ;({
+    blockers,
     check,
+    dataLine,
+    followupComment,
+    isListingIssue,
+    isListingReply,
+    latest,
+    MAX_FOLLOWUPS,
+    productSites,
+    coveringPr,
+    researchComment,
     esc,
     LISTING,
     publicUrl,
@@ -168,4 +188,296 @@ test("section marks product-only passes as claimed and nice criteria as preferre
   expect(out).toContain("| ✅ | Documented |")
   expect(out).toContain("| ☑️ | Widely used |")
   expect(out).toContain("| ✅ | Open source _(preferred)_ |")
+})
+
+const outsider = (over: Record<string, unknown> = {}) => ({
+  state: "open",
+  title: "Suggest a developer tool: Foo",
+  body: "",
+  labels: [],
+  author_association: "NONE",
+  user: { login: "alice", type: "User" },
+  ...over,
+})
+
+test("isListingIssue takes outside listing requests, with or without the form", () => {
+  expect(isListingIssue(outsider())).toBe(true)
+  expect(
+    isListingIssue(
+      outsider({ title: "Whatever", labels: [{ name: "wallet 👛" }] })
+    )
+  ).toBe(true)
+  expect(
+    isListingIssue(
+      outsider({
+        title: "Add Foo to the oracles page",
+        body: "See https://foo.xyz",
+      })
+    )
+  ).toBe(true)
+  expect(isListingIssue(outsider({ title: "Add a dark mode toggle" }))).toBe(
+    false
+  )
+  expect(isListingIssue(outsider({ title: "Suggest a glossary term" }))).toBe(
+    false
+  )
+  expect(
+    isListingIssue(
+      outsider({ title: "Event listing", body: "https://conf.xyz" })
+    )
+  ).toBe(false)
+  expect(isListingIssue(outsider({ author_association: "MEMBER" }))).toBe(false)
+  expect(isListingIssue(outsider(), ["alice"])).toBe(false)
+  expect(isListingIssue(outsider({ pull_request: {} }))).toBe(false)
+  expect(isListingIssue(outsider({ state: "closed" }))).toBe(false)
+})
+
+const rec = (statuses: Record<string, string>, extra = {}) => ({
+  product: "Foo",
+  policy: { page: "adding-developer-tools", why: "" },
+  criteria: Object.entries(statuses).map(([criterion, status]) => ({
+    criterion,
+    status,
+    weight: "must",
+    quote: status === "unknown" ? "" : "a quote long enough to count",
+    url: "https://foo.xyz/",
+    source: "independent",
+  })),
+  facts: [],
+  existing: [],
+  askAuthor: [],
+  ...extra,
+})
+const bot = (body: string, i = 0) => ({
+  id: i,
+  created_at: `2026-11-2${i}T00:00:00Z`,
+  user: { login: "ethorg-agent[bot]" },
+  body,
+})
+
+test("latest reads review and listing data lines, counting only follow-ups", () => {
+  const r1 = rec({ Documented: "unknown" })
+  const r2 = { ...rec({ Documented: "pass" }), kind: "followup" }
+  const cs = [
+    bot(
+      `## review\n<!-- ethorg-review: ${JSON.stringify({ listing: r1 })} -->`,
+      1
+    ),
+    {
+      ...bot(dataLine({ ...r2, kind: "research" }), 2),
+      user: { login: "mallory" },
+    },
+    bot(`thanks\n\n${dataLine(r2)}`, 3),
+  ]
+  const l = latest(cs)
+  expect(l.record.criteria[0].status).toBe("pass")
+  expect(l.followups).toBe(1)
+  expect(latest([]).record).toBeNull()
+})
+
+test("isListingReply answers only the author, after a check, under the cap", () => {
+  const item = { state: "open", user: { login: "alice" } }
+  const checked = [bot(dataLine(rec({ A: "unknown" })))]
+  const by = (login: string) => ({ user: { login, type: "User" } })
+  expect(isListingReply(item, by("alice"), checked)).toBe(true)
+  expect(isListingReply(item, by("bob"), checked)).toBe(false)
+  expect(isListingReply(item, by("alice"), [])).toBe(false)
+  const capped = Array.from({ length: MAX_FOLLOWUPS }, (_, i) =>
+    bot(dataLine({ ...rec({ A: "unknown" }), kind: "followup" }), i)
+  )
+  expect(isListingReply(item, by("alice"), [...checked, ...capped])).toBe(false)
+})
+
+test("only failing must criteria block", () => {
+  const r = rec({ Audited: "fail", Docs: "unknown" })
+  r.criteria.push({
+    ...r.criteria[0],
+    criterion: "Open source",
+    weight: "nice",
+  })
+  expect(blockers(r)).toEqual(["Audited"])
+  expect(blockers(null)).toEqual([])
+})
+
+test("research comment tags the author and asks issues to wait for a go-ahead", () => {
+  const issue = researchComment(rec({ Audited: "fail" }), {
+    author: "alice",
+    isPr: false,
+  })
+  expect(issue.startsWith("@alice ")).toBe(true)
+  expect(issue).toContain("**Blocking:**")
+  expect(issue).toContain("go-ahead before opening a pull request")
+  const pr = researchComment(rec({ Audited: "pass" }), {
+    author: "alice",
+    isPr: true,
+  })
+  expect(pr).not.toContain("**Blocking:**")
+  expect(pr).not.toContain("go-ahead")
+  expect(researchComment(rec({}), { author: "a b", isPr: true })).toMatch(
+    /^Hi /
+  )
+})
+
+test("follow-up shows only what changed and hands off at the cap", () => {
+  const prev = rec({ Audited: "fail", Docs: "unknown", Used: "unknown" })
+  const next = rec({ Audited: "pass", Docs: "unknown", Used: "unknown" })
+  const out = followupComment(next, prev, { author: "alice", followups: 0 })
+  expect(out).toContain("- ✅ Audited")
+  expect(out).toContain("**Still open:** Docs · Used")
+  expect(out).toContain("**The blocking points are resolved.**")
+  expect(out).not.toContain("a maintainer will take it from here")
+  const same = followupComment(prev, prev, {
+    author: "alice",
+    followups: MAX_FOLLOWUPS - 1,
+  })
+  expect(same).toContain("didn't change any criterion")
+  expect(same).toContain("**Still blocking:**")
+  expect(same).toContain("a maintainer will take it from here")
+})
+
+test("check keeps an existing listing only when its text is in the file", async () => {
+  const r = await check(
+    {
+      issue: "7",
+      existing: JSON.stringify([
+        { path: "public/content/a.md", text: "Foo   is a node provider" },
+        { path: "public/content/a.md", text: "Bar is something else" },
+        { path: "../etc/passwd", text: "root:x:0:0:root" },
+      ]),
+    },
+    async () => ({ status: 0, text: null, error: "offline" }),
+    async (path: string) =>
+      path === "public/content/a.md"
+        ? "- [Foo](x) foo is a node provider"
+        : null
+  )
+  expect(r.issue).toBe(7)
+  expect(r.pr).toBeUndefined()
+  expect(r.existing.map((e) => e.text)).toEqual(["Foo   is a node provider"])
+})
+
+test("a blocker stays until its criterion passes", () => {
+  const prev = rec({ Audited: "fail" })
+  expect(blockers(rec({ Audited: "unknown" }), prev)).toEqual(["Audited"])
+  expect(blockers(rec({ Audited: "pass" }), prev)).toEqual([])
+  expect(
+    blockers(rec({ Audited: "unknown" }), { ...rec({}), blocking: ["Audited"] })
+  ).toEqual(["Audited"])
+  const out = followupComment(rec({ Audited: "unknown" }), prev, {
+    author: "alice",
+    followups: 0,
+  })
+  expect(out).toContain("**Still blocking:**")
+  expect(out).not.toContain("resolved")
+})
+
+test("latest counts an edited review from its last edit", () => {
+  const review = {
+    ...bot(
+      `<!-- ethorg-review: ${JSON.stringify({ listing: rec({ A: "pass" }) })} -->`,
+      1
+    ),
+    updated_at: "2026-11-29T00:00:00Z",
+  }
+  const followup = bot(
+    dataLine({ ...rec({ A: "unknown" }), kind: "followup" }),
+    2
+  )
+  expect(latest([review, followup]).record.criteria[0].status).toBe("pass")
+})
+
+test("isListingIssue skips quiz and glossary suggestions whatever the title", () => {
+  expect(
+    isListingIssue(
+      outsider({
+        title: "Add/Update/Delete quiz question",
+        body: "Source: https://foo.xyz",
+      })
+    )
+  ).toBe(false)
+  expect(
+    isListingIssue(
+      outsider({ title: "Whatever", labels: [{ name: "quiz 📚" }] })
+    )
+  ).toBe(false)
+})
+
+test("only a quoted, non-repo fail blocks, and unweighted criteria are preferred", async () => {
+  const r = rec({ Audited: "fail", Differentiated: "fail", Docs: "fail" })
+  r.criteria[1] = { ...r.criteria[1], source: "repo", url: "public/x.md" }
+  r.criteria[2] = { ...r.criteria[2], quote: "" }
+  expect(blockers(r)).toEqual(["Audited"])
+  const checked = await check(
+    { criteria: JSON.stringify([{ criterion: "X", status: "unknown" }]) },
+    async () => ({ status: 0, text: null, error: "offline" })
+  )
+  expect(checked.criteria[0].weight).toBe("nice")
+})
+
+test("follow-up marks an author-only pass as claimed", () => {
+  const prev = rec({ Used: "unknown" })
+  const next = rec({ Used: "pass" })
+  next.criteria[0].source = "author"
+  const out = followupComment(next, prev, { author: "alice", followups: 0 })
+  expect(out).toContain("- ☑️ Used")
+})
+
+test("a blocker whose criterion was reworded is dropped", () => {
+  const prev = rec({ "Open source code": "fail" })
+  expect(blockers(rec({ "Source code is public": "pass" }), prev)).toEqual([])
+})
+
+test("latest dates a reply against when a check was posted, not edited", () => {
+  const review = {
+    ...bot(
+      `<!-- ethorg-review: ${JSON.stringify({ listing: rec({ A: "pass" }) })} -->`,
+      1
+    ),
+    updated_at: "2026-11-29T00:00:00Z",
+  }
+  expect(latest([review]).posted).toBe("2026-11-21T00:00:00Z")
+})
+
+test("productSites falls back to the request's own links", () => {
+  const item = {
+    criteria: JSON.stringify([
+      { url: "github.com/solana-foundation/explorer", source: "author" },
+    ]),
+  }
+  expect(productSites(item)).toEqual([])
+  expect(
+    productSites(item, "URL: https://explorer.solana.com and https://x.com/foo")
+  ).toEqual(["solana.com"])
+  const cited = {
+    criteria: JSON.stringify([{ url: "foo.xyz/docs", source: "author" }]),
+  }
+  expect(
+    productSites(cited, "https://etherscan.io/address/0x1 https://certik.com/x")
+  ).toEqual(["foo.xyz"])
+  expect(
+    productSites(item, "https://www.ethereum.org/developers/ https://foo.xyz")
+  ).toEqual(["foo.xyz"])
+})
+
+test("registrableDomain keeps the subdomain on shared hosting", () => {
+  expect(registrableDomain("agentforge-taupe.vercel.app")).toBe(
+    "agentforge-taupe.vercel.app"
+  )
+  expect(registrableDomain("docs.foo.github.io")).toBe("foo.github.io")
+  expect(registrableDomain("www.dwellir.com")).toBe("dwellir.com")
+})
+
+test("coveringPr finds the requester's own open PR for the same site", () => {
+  const issue = { number: 19848, user: { login: "benjichat" } }
+  const pr = (o: object) => ({
+    number: 19540,
+    kind: "pr",
+    state: "open",
+    author: "benjichat",
+    ...o,
+  })
+  expect(coveringPr(issue, [pr({})])).toBe(19540)
+  expect(coveringPr(issue, [pr({ author: "someone" })])).toBeUndefined()
+  expect(coveringPr(issue, [pr({ state: "closed" })])).toBeUndefined()
+  expect(coveringPr(issue, [pr({ kind: "issue" })])).toBeUndefined()
 })

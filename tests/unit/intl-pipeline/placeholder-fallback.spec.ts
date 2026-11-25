@@ -31,7 +31,11 @@ test.describe("Placeholder positional fallback", () => {
     const translated =
       "Prefix <HTML-PLACEHOLDER-COMPONENT-000000>etiqueta traducida</HTML-PLACEHOLDER-COMPONENT-000000> suffix"
 
-    const result = reconstructFromPlaceholders(translated, extractions)
+    // What the model was sent: the extraction's real token.
+    const sent =
+      "Prefix <HTML-PLACEHOLDER-COMPONENT-abc123>Try it</HTML-PLACEHOLDER-COMPONENT-abc123> suffix"
+
+    const result = reconstructFromPlaceholders(translated, extractions, sent)
 
     expect(result).toBe(
       'Prefix <ButtonLink size="sm" variant="outline" href="https://x">etiqueta traducida</ButtonLink> suffix'
@@ -49,7 +53,10 @@ test.describe("Placeholder positional fallback", () => {
       "<HTML-PLACEHOLDER-COMPONENT-000000>label one</HTML-PLACEHOLDER-COMPONENT-000000> " +
       "<HTML-PLACEHOLDER-COMPONENT-111111>label two</HTML-PLACEHOLDER-COMPONENT-111111>"
 
-    const result = reconstructFromPlaceholders(translated, extractions)
+    const sent =
+      "<HTML-PLACEHOLDER-COMPONENT-abc123>Try it</HTML-PLACEHOLDER-COMPONENT-abc123>"
+
+    const result = reconstructFromPlaceholders(translated, extractions, sent)
 
     // Counts disagree -> no guessing; residuals left untouched.
     expect(result).toBe(translated)
@@ -65,7 +72,10 @@ test.describe("Placeholder positional fallback", () => {
     const translated =
       "Lee la <HTML-PLACEHOLDER-LINK-def456>documentación</HTML-PLACEHOLDER-LINK-def456> aquí."
 
-    const result = reconstructFromPlaceholders(translated, extractions)
+    const sent =
+      "Read the <HTML-PLACEHOLDER-LINK-def456>ethers.org docs</HTML-PLACEHOLDER-LINK-def456> here."
+
+    const result = reconstructFromPlaceholders(translated, extractions, sent)
 
     expect(result).toBe("Lee la [documentación](https://docs.ethers.org) aquí.")
     expect(result).not.toContain("HTML-PLACEHOLDER")

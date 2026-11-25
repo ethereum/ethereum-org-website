@@ -114,3 +114,16 @@ test("reports a failure rather than silently shipping a residual placeholder", (
   expect(value).not.toContain("HTML-PLACEHOLDER")
   expect(failures.length).toBeGreaterThan(0)
 })
+
+test("closes a wrapper with its own tag, not a nested one", () => {
+  const source = JSON.stringify({
+    k: 'Read <a href="/glossary/#pos"><strong>proof-of-stake</strong> docs</a> first.',
+  })
+  const prepared = prepareJsonBatches(source)
+  const { content, failures } = restoreJsonBatch(
+    prepared.batchContents[0],
+    prepared.placeholderMaps[0]
+  )
+  expect(JSON.parse(content)).toEqual(JSON.parse(source))
+  expect(failures).toHaveLength(0)
+})

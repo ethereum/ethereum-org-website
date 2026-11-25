@@ -280,6 +280,11 @@
     "score": 2000
   },
   {
+    "username": "lgandx",
+    "name": "Laurent Gaffie",
+    "score": 2000
+  },
+  {
     "username": "hwanjo",
     "name": "Hwanjo Heo",
     "score": 1500
@@ -390,11 +395,6 @@
     "score": 1000
   },
   {
-    "username": "lgandx",
-    "name": "Laurent Gaffie",
-    "score": 1000
-  },
-  {
     "username": "aydarkhusaenov",
     "name": "Legat",
     "score": 1000
@@ -448,7 +448,12 @@
     "username": "mardgez",
     "name": "mardgez",
     "score": 1000
-  },  
+  },
+  {
+    "username": "alepacheco",
+    "name": "alepacheco",
+    "score": 1000
+  },
   {
     "username": "n0thingness",
     "name": "Daniel Briskin",
@@ -517,6 +522,16 @@
   {
     "username": "howydev",
     "name": "Howy",
+    "score": 250
+  },
+  {
+    "username": "VanZ27",
+    "name": "VanSecQA",
+    "score": 250
+  },
+  {
+    "username": "kaslovdmitri",
+    "name": "Dmitri Kaslov",
     "score": 250
   },
   {

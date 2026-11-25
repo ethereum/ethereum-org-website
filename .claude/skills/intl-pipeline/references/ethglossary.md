@@ -46,7 +46,7 @@ Pipeline-specific mapping — these are how this consumer interprets glossary fi
 | `always_latin` | Stricter than `keep_latin` — translating breaks code or specification. Pipeline never modifies. Solidity, ETH, ERC-20, file extensions. |
 | `transliterate_with_translation` | Latin form plus native-script gloss (e.g., "MetaMask 钱包"). |
 
-If a term's `script_rule` is `transliterate` and the LLM produces a different form, the sanitizer auto-corrects to the canonical glossary form. This is the deterministic backbone that makes the pipeline reproducible.
+Glossary terms reach the model only through the prompt; nothing in the pipeline checks the output against the glossary. The sanitizer's only brand fix is the hard-coded `BRAND_GARBLE_CORRECTIONS` list, and glossary deviations are caught at review (`/review-translations` auto-fixes them).
 
 ## `term_role` taxonomy
 

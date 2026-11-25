@@ -41,7 +41,7 @@ export type Shortcut = {
    * These are not counted by the hook's Matomo event either.
    */
   documentedOnly?: boolean
-  /** Only bound on viewports that render the desktop nav. */
+  /** Only bound while the desktop nav bar is shown (wide enough windows, labels that fit). */
   desktopOnly?: boolean
   /** Only bound on pages whose locale-free path matches, so only listed there. */
   path?: RegExp

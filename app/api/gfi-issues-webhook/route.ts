@@ -81,7 +81,7 @@ export async function POST(req: Request) {
 
   if (!discordRes.ok) {
     const error = await discordRes.json()
-    console.log(error)
+    console.error("GFI webhook: Discord request failed", error)
     return NextResponse.json(
       { message: "Error sending GFI to Discord" },
       { status: 500 }
