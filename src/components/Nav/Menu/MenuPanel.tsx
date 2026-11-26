@@ -64,7 +64,9 @@ export const HubCard = ({
             <ChevronNext className="size-4 shrink-0 text-primary transition-transform group-hover/link:translate-x-0.5 motion-reduce:transition-none rtl:group-hover/link:-translate-x-0.5" />
           </span>
         </CardTitle>
-        <CardParagraph size="sm">{hub.description}</CardParagraph>
+        <CardParagraph size="sm" textColor="body">
+          {hub.description}
+        </CardParagraph>
       </CardContent>
     </Card>
   )
