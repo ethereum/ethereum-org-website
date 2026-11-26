@@ -117,37 +117,23 @@ test.describe("getPageLastModified", () => {
       about: [commit("2025-01-02T03:04:05Z"), commit("2026-07-08T09:10:11Z")],
       "videos/example": [commit("2025-01-02T03:04:05Z")],
     },
-    appPages: {
-      staking: [commit("2025-05-06T07:08:09Z")],
-      "apps/[application]": [commit("2026-07-08T09:10:11Z")],
-    },
+    appPages: {},
     generatedAt: "2026-10-16T00:00:00Z",
   }
 
   test("returns the latest commit as ISO 8601 regardless of slashes", () => {
     for (const slug of ["about", "/about", "/about/"]) {
-      expect(getPageLastModified(contributors, "content", slug)).toBe(
+      expect(getPageLastModified(contributors, slug)).toBe(
         "2026-07-08T09:10:11.000Z"
       )
     }
-    expect(getPageLastModified(contributors, "content", "videos/example")).toBe(
+    expect(getPageLastModified(contributors, "videos/example")).toBe(
       "2025-01-02T03:04:05.000Z"
     )
-    expect(getPageLastModified(contributors, "appPages", "/staking/")).toBe(
-      "2025-05-06T07:08:09.000Z"
-    )
-  })
-
-  test("dynamic pages don't inherit their template's date", () => {
-    expect(
-      getPageLastModified(contributors, "appPages", "/apps/example-app/")
-    ).toBeUndefined()
   })
 
   test("is undefined without history or data", () => {
-    expect(
-      getPageLastModified(contributors, "content", "/unknown/")
-    ).toBeUndefined()
-    expect(getPageLastModified(null, "content", "/about/")).toBeUndefined()
+    expect(getPageLastModified(contributors, "/unknown/")).toBeUndefined()
+    expect(getPageLastModified(null, "/about/")).toBeUndefined()
   })
 })

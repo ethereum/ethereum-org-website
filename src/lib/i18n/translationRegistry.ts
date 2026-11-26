@@ -98,14 +98,12 @@ type PageWithTranslations = {
   lastModified?: string
 }
 
-// Concrete dynamic-route paths aren't keys, so they never inherit their
-// template's commit date.
+// App pages are skipped: page.tsx history misses intl JSON and component edits.
 export function getPageLastModified(
   contributors: GitHubContributorsData | null,
-  source: "content" | "appPages",
   slug: string
 ): string | undefined {
-  const history = contributors?.[source][normalizeContentSlug(slug)] ?? []
+  const history = contributors?.content[normalizeContentSlug(slug)] ?? []
   return getAppPageLastCommitDate(history) || undefined
 }
 
@@ -203,14 +201,13 @@ export async function getAllPagesWithTranslations(): Promise<
 
   for (const slug of [...mdSlugs, ...videoSlugs]) {
     const translatedLocales = await getTranslatedLocales(slug)
-    const lastModified = getPageLastModified(contributors, "content", slug)
+    const lastModified = getPageLastModified(contributors, slug)
     pages.push({ slug, translatedLocales, lastModified })
   }
 
   for (const path of uniqueIntlPaths) {
     const translatedLocales = await getTranslatedLocales(path)
-    const lastModified = getPageLastModified(contributors, "appPages", path)
-    pages.push({ slug: path, translatedLocales, lastModified })
+    pages.push({ slug: path, translatedLocales })
   }
 
   return pages
