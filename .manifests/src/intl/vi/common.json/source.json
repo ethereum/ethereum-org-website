@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-11-26T05:36:02.715Z",
-  "rootHash": "c61646cf30db",
+  "generatedAt": "2026-11-26T08:11:38.994Z",
+  "rootHash": "2adf7c6f03f1",
   "tree": {
-    "contentHash": "6d20e8b56f6e",
-    "anchorHash": "9b7dcbe36af5",
+    "contentHash": "0cfd4e69e372",
+    "anchorHash": "203955e39f93",
     "children": {
       "7702": {
         "contentHash": "caa43aab9927",
@@ -1787,6 +1787,10 @@
         "contentHash": "20fb06948d5c",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-courses-description": {
+        "contentHash": "fa42ab94cb2f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-courses-label": {
         "contentHash": "0b387a6fe5ae",
         "anchorHash": "e3b0c44298fc"
@@ -2233,6 +2237,10 @@
       },
       "nav-eyebrow-most-read": {
         "contentHash": "98988b9f3632",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-eyebrow-new": {
+        "contentHash": "18fdd549b2ed",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-eyebrow-next-upgrade": {
@@ -3203,6 +3211,7 @@
       "nav-join-ethereum-org-description",
       "nav-join-ethereum-org-label",
       "nav-l2-networks-description",
+      "nav-courses-description",
       "nav-courses-label",
       "nav-learn-by-coding-description",
       "nav-learn-by-coding-label",
@@ -3315,6 +3324,7 @@
       "nav-eyebrow-calendar",
       "nav-eyebrow-most-popular",
       "nav-eyebrow-most-read",
+      "nav-eyebrow-new",
       "nav-eyebrow-next-upgrade",
       "nav-get-a-wallet-label",
       "nav-glamsterdam-description",
@@ -3454,5 +3464,5 @@
       "zkevm"
     ]
   },
-  "sourceCommitSha": "f2cb2130369f28bd1044a722771f5c84f3f2e127"
+  "sourceCommitSha": "f872a44d76783ef8a7fd2dd50a87c9658ab9e654"
 }
