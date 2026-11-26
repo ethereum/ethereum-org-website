@@ -1,5 +1,10 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: `get-eth-description` `اپنے پتہ پر` -> `اپنے پتے پر` (glossary citation form not inflected). Open: `account-name-reserved` `کے لیے استعمال ہو سکتا ہے` reads as 'could be used for', not 'could pass for'; `account-sessions-hint` `یہ کبھی نہیں کہ` is clipped; `account-name-edit` `مدون کریں` for 'edit' (`ترمیم کریں`).
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 

@@ -9,7 +9,7 @@
   "page-start-steps-wallet-cta": "{count, plural, one {⁦{countFormatted}⁩ والیٹ} other {⁦{countFormatted}⁩ والیٹس}} میں سے منتخب کریں",
   "page-start-steps-wallet-languages": "{count, plural, one {⁦{countFormatted}⁩ زبان} other {⁦{countFormatted}⁩ زبانوں}} میں دستیاب ہے",
   "page-start-steps-get-eth-title": "کچھ ⁦ETH⁩ حاصل کریں",
-  "page-start-steps-get-eth-description": "{count, plural, one {اوپر دیا گیا والیٹ آپ کو} other {اوپر دیے گئے تمام ⁦{countFormatted}⁩ والیٹس آپ کو}} ایپ کے اندر کارڈ کے ذریعے ⁦ETH⁩ خریدنے کی سہولت دیتے ہیں، لہذا یہ آپ کے والیٹ سے باہر نکلے بغیر ہو سکتا ہے۔ آپ کسی ایکسچینج پر بھی خرید سکتے ہیں اور اسے اپنے پتہ پر بھیج سکتے ہیں، یا ⁦ETH⁩ حاصل کرنے کے دیگر طریقے دیکھ سکتے ہیں۔",
+  "page-start-steps-get-eth-description": "{count, plural, one {اوپر دیا گیا والیٹ آپ کو} other {اوپر دیے گئے تمام ⁦{countFormatted}⁩ والیٹس آپ کو}} ایپ کے اندر کارڈ کے ذریعے ⁦ETH⁩ خریدنے کی سہولت دیتے ہیں، لہذا یہ آپ کے والیٹ سے باہر نکلے بغیر ہو سکتا ہے۔ آپ کسی ایکسچینج پر بھی خرید سکتے ہیں اور اسے اپنے پتے پر بھیج سکتے ہیں، یا ⁦ETH⁩ حاصل کرنے کے دیگر طریقے دیکھ سکتے ہیں۔",
   "page-start-steps-get-eth-cta": "⁦ETH⁩ حاصل کریں",
   "page-start-steps-apps-title": "کوئی ایپ آزمائیں",
   "page-start-steps-apps-description": "ٹوکنز کا تبادلہ کرنے، قرض دینے اور سود کمانے، آرٹ خریدنے اور بیچنے، گیمز کھیلنے اور مزید بہت کچھ کے لیے اپنا والیٹ استعمال کریں۔",

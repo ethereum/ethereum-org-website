@@ -1,5 +1,10 @@
 # Korean (ko) Translation Review Findings
 
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: none needed. Open: `page-start-steps-wallet-title` `지갑 만들기` ('create') for 'Get a wallet'; the step links to choosing a wallet, `지갑 받기`/`지갑 선택하기` fits better.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.5/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 

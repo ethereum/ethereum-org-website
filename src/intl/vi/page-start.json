@@ -4,7 +4,7 @@
   "page-start-hero-alt": "Bắt đầu với tiền mã hóa",
   "page-start-title": "Bắt đầu với Ethereum",
   "page-start-subtitle": "Ethereum không chỉ là việc giao dịch token trên sàn. Hãy tự mình bước vào thế giới mới và tìm hiểu tất cả những điều cơ bản chỉ trong vài bước.",
-  "page-start-steps-wallet-title": "Tải ví",
+  "page-start-steps-wallet-title": "Nhận ví",
   "page-start-steps-wallet-description": "Ví là tài khoản của bạn trên Ethereum. Hãy chọn một ví phù hợp với cách bạn dự định sử dụng.",
   "page-start-steps-wallet-cta": "Chọn từ {count, plural, one {{countFormatted} ví} other {{countFormatted} ví}}",
   "page-start-steps-wallet-languages": "Có sẵn bằng {count, plural, one {{countFormatted} ngôn ngữ} other {{countFormatted} ngôn ngữ}}",

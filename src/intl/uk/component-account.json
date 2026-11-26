@@ -4,7 +4,7 @@
   "account-continue-passkey": "Продовжити за допомогою ключа доступу",
   "account-passkey-missing": "Ще немає ключа доступу для ethereum.org на цьому пристрої? Створіть його, щоб відкрити акаунт.",
   "account-create-passkey": "Створити ключ доступу",
-  "account-sign-in-wallet": "Продовжити з Етеріум",
+  "account-sign-in-wallet": "Продовжити з Етеріумом",
   "account-wallet-statement": "Увійдіть на ethereum.org. Цей підпис нічого не коштує і не може переказувати кошти.",
   "account-wallet-taken": "Цей гаманець вже використовується іншим акаунтом.",
   "account-error": "Щось пішло не так. Будь ласка, спробуйте ще раз.",
