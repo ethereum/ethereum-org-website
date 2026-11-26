@@ -1,5 +1,10 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: hard-coded Eastern digit `٠` in the `zero` branch of `wallet-cta`, `wallet-languages`, `apps-cta-count` -> `{countFormatted}` (ar numerals are Western). Open: none.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.1/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 
