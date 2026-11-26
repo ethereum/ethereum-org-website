@@ -8,7 +8,8 @@
  *   branch deploys dev, staging    their databases
  *   other branch deploys           none (they share dev's credentials)
  *   deploy previews                `preview_<PR>`, when the PR touches the
- *                                  learner code or has the `preview-db` label
+ *                                  learner code or has the `preview-db` label,
+ *                                  except release PRs (head dev or staging)
  *   no LEARNER_DB_MIGRATE_URL      none, e.g. a fork PR's preview
  *
  * In previews LEARNER_DB_MIGRATE_URL is the provisioner, which owns every
@@ -166,6 +167,7 @@ const main = async () => {
 
   if (CONTEXT === "deploy-preview") {
     if (!REVIEW_ID || !/^\d+$/.test(REVIEW_ID)) return write(false)
+    if (DATABASE_BRANCHES.includes(BRANCH ?? "")) return write(false)
     const wanted = await previewWantsDb(REVIEW_ID).catch((error) => {
       console.warn(`[learner-db] PR lookup failed, no database: ${error}`)
       return false
