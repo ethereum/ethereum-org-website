@@ -5,10 +5,7 @@
 
 import { expect, test } from "@playwright/test"
 
-import {
-  flowchartShapes,
-  remarkFlowchart,
-} from "../../../src/lib/md/remarkFlowchart"
+import { remarkFlowchart } from "../../../src/lib/md/remarkFlowchart"
 
 type Node = {
   type: string
@@ -17,19 +14,15 @@ type Node = {
   children?: Node[]
 }
 
-/** Parses `md` with the site's MDX parser and returns the tree before and after the plugin. */
+/** Parses `md` with the site's MDX parser and returns the tree after the plugin. */
 async function run(md: string, warn: (message: string) => void = () => {}) {
   const { serialize } = await import("next-mdx-remote/serialize")
   const { default: remarkGfm } = await import("remark-gfm")
-  let before: Node | undefined
   let after: Node | undefined
   await serialize(md, {
     mdxOptions: {
       remarkPlugins: [
         remarkGfm,
-        () => (tree: Node) => {
-          before = structuredClone(tree)
-        },
         [remarkFlowchart, { warn }],
         () => (tree: Node) => {
           after = tree
@@ -37,7 +30,7 @@ async function run(md: string, warn: (message: string) => void = () => {}) {
       ],
     },
   } as never)
-  return { before: before!, after: after! }
+  return after!
 }
 
 const classesOf = (node: Node) => node.data?.hProperties?.className ?? []
@@ -63,7 +56,7 @@ const DECISION = `<Flowchart>
 </Flowchart>`
 
 test("an item with two labelled exits is a decision", async () => {
-  const { after } = await run(DECISION)
+  const after = await run(DECISION)
   const decisions = all(after, "flowchart-decision").map(textOf)
   expect(decisions).toEqual(["Ready?"])
   expect(all(after, "flowchart-edge").map(textOf)).toEqual(["Yes", "No"])
@@ -76,7 +69,7 @@ test("an item with two labelled exits is a decision", async () => {
 })
 
 test("an unlabelled fork is not a decision", async () => {
-  const { after } = await run(`<Flowchart>
+  const after = await run(`<Flowchart>
 
 - Start
   - One
@@ -88,7 +81,7 @@ test("an unlabelled fork is not a decision", async () => {
 })
 
 test("a decision with exactly one exit that ends at once draws it beside the box", async () => {
-  const { after } = await run(`<Flowchart>
+  const after = await run(`<Flowchart>
 
 - Start
   - Is it A?
@@ -114,7 +107,7 @@ test("a decision with exactly one exit that ends at once draws it beside the box
 })
 
 test("a decision whose exits both continue keeps them below", async () => {
-  const { after } = await run(`<Flowchart>
+  const after = await run(`<Flowchart>
 
 - Is it A?
   - **Yes** Handle A
@@ -128,7 +121,7 @@ test("a decision whose exits both continue keeps them below", async () => {
 })
 
 test("a <strong> label (the sanitizer's CJK form) is a label", async () => {
-  const { after } = await run(`<Flowchart>
+  const after = await run(`<Flowchart>
 
 - 开始
   - 准备好了吗？
@@ -141,7 +134,7 @@ test("a <strong> label (the sanitizer's CJK form) is a label", async () => {
 })
 
 test("a list split by a changed bullet character is read as one", async () => {
-  const { after } = await run(`<Flowchart>
+  const after = await run(`<Flowchart>
 
 - Start
   - Ready?
@@ -175,17 +168,4 @@ test("a second paragraph in an item is reported, not silently dropped", async ()
   expect(warnings).toEqual([
     "<Flowchart> draws only the first paragraph of an item; dropped paragraph",
   ])
-})
-
-test("flowchartShapes reports each chart's depth and label pattern", async () => {
-  const { before } = await run(`${DECISION}
-
-Text between.
-
-<Flowchart>
-
-- Only
-
-</Flowchart>`)
-  expect(flowchartShapes(before as never)).toEqual(["0 1 2b 2b", "0"])
 })

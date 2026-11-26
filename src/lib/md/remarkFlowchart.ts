@@ -156,26 +156,8 @@ function rootItemsOf(node: JsxNode) {
   return items
 }
 
-const shapeOf = (items: ListItem[], depth = 0): string[] =>
-  items.flatMap((item) => [
-    `${depth}${hasEdgeLabel(item) ? "b" : ""}`,
-    ...shapeOf(itemsOf(item), depth + 1),
-  ])
-
-/**
- * Each `<Flowchart>`'s list as parsed, item by item: depth plus "b" when it
- * opens with an edge label. The intl gate compares translations against
- * English with this, so it sees exactly what the chart is drawn from.
- */
-export function flowchartShapes(tree: Nodes): string[] {
-  if (isFlowchart(tree)) return [shapeOf(rootItemsOf(tree)).join(" ")]
-  return "children" in tree
-    ? (tree.children as Nodes[]).flatMap(flowchartShapes)
-    : []
-}
-
-// A local walk instead of unist-util-visit: the intl gate (lib/gates.ts) loads
-// this plugin from a CJS build that can't import that ESM-only package.
+// A local walk instead of unist-util-visit: the unit-test runner loads this
+// plugin from a CJS build that can't import that ESM-only package.
 function transform(node: Nodes, warn: Warn) {
   if (isFlowchart(node)) {
     const chart = toList(rootItemsOf(node), ["flowchart-root"], warn)
