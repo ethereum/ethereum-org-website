@@ -4,7 +4,7 @@ description: "Una introducción a los rollups de conocimiento cero, una solució
 lang: es
 ---
 
-Los rollups de conocimiento cero (ZK-rollups) son [soluciones de escalabilidad](/developers/docs/scaling/) de capa 2 (l2) que aumentan la capacidad de procesamiento en la red principal de [Ethereum](/) al trasladar el cálculo y el almacenamiento del estado fuera de la cadena. Los ZK-rollups pueden procesar miles de transacciones en un lote y luego solo publicar algunos datos de resumen mínimos en la red principal. Estos datos de resumen definen los cambios que deben realizarse en el estado de Ethereum y alguna prueba criptográfica de que esos cambios son correctos.
+Los rollups de conocimiento cero (ZK-rollups) son [soluciones de escalabilidad](/developers/docs/scaling/) de capa 2 (l2) que aumentan la capacidad de procesamiento en la red principal de [Ethereum](/) al trasladar el cálculo y el almacenamiento del estado fuera de la cadena. Los ZK-rollups pueden procesar miles de transacciones en un lote y luego solo publicar algunos datos de resumen mínimos en la Red principal. Estos datos de resumen definen los cambios que deben realizarse en el estado de Ethereum y alguna prueba criptográfica de que esos cambios son correctos.
 
 ## Requisitos previos {#prerequisites}
 
@@ -22,7 +22,7 @@ Los ZK-rollups escriben transacciones en Ethereum como `calldata` o en [blobs](/
 
 ## ¿Cómo interactúan los ZK-rollups con Ethereum? {#zk-rollups-and-ethereum}
 
-Una cadena de ZK-rollup es un protocolo fuera de la cadena que opera sobre la cadena de bloques de Ethereum y es administrado por contratos inteligentes de Ethereum en cadena. Los ZK-rollups ejecutan transacciones fuera de la red principal, pero periódicamente envían lotes de transacciones fuera de la cadena a un contrato de rollup en cadena. Este registro de transacciones es inmutable, al igual que la cadena de bloques de Ethereum, y forma la cadena del ZK-rollup.
+Una cadena de ZK-rollup es un protocolo fuera de la cadena que opera sobre la cadena de bloques de Ethereum y es administrado por contratos inteligentes de Ethereum en cadena. Los ZK-rollups ejecutan transacciones fuera de la Red principal, pero periódicamente envían lotes de transacciones fuera de la cadena a un contrato de rollup en cadena. Este registro de transacciones es inmutable, al igual que la cadena de bloques de Ethereum, y forma la cadena del ZK-rollup.
 
 La arquitectura central del ZK-rollup se compone de los siguientes elementos:
 
@@ -44,13 +44,13 @@ Estar en cadena es necesario para que los usuarios interactúen con el rollup. S
 
 ### Finalidad de la transacción {#transaction-finality}
 
-Ethereum actúa como una capa de liquidación para los ZK-rollups: las transacciones de capa 2 se finalizan solo si el contrato de capa 1 acepta la prueba de validez. Esto elimina el riesgo de que operadores maliciosos corrompan la cadena (por ejemplo, robando fondos del rollup) ya que cada transacción debe ser aprobada en la red principal. Además, Ethereum garantiza que las operaciones de los usuarios no se pueden revertir una vez finalizadas en la capa 1.
+Ethereum actúa como una capa de liquidación para los ZK-rollups: las transacciones de capa 2 se finalizan solo si el contrato de capa 1 acepta la prueba de validez. Esto elimina el riesgo de que operadores maliciosos corrompan la cadena (por ejemplo, robando fondos del rollup) ya que cada transacción debe ser aprobada en la Red principal. Además, Ethereum garantiza que las operaciones de los usuarios no se pueden revertir una vez finalizadas en la capa 1.
 
 ### Resistencia a la censura {#censorship-resistance}
 
 La mayoría de los ZK-rollups utilizan un "supernodo" (el operador) para ejecutar transacciones, producir lotes y enviar bloques a la capa 1. Si bien esto garantiza la eficiencia, aumenta el riesgo de censura: los operadores maliciosos de ZK-rollups pueden censurar a los usuarios al negarse a incluir sus transacciones en los lotes.
 
-Como medida de seguridad, los ZK-rollups permiten a los usuarios enviar transacciones directamente al contrato del rollup en la red principal si creen que están siendo censurados por el operador. Esto permite a los usuarios forzar una salida del ZK-rollup a Ethereum sin tener que depender del permiso del operador.
+Como medida de seguridad, los ZK-rollups permiten a los usuarios enviar transacciones directamente al contrato del rollup en la Red principal si creen que están siendo censurados por el operador. Esto permite a los usuarios forzar una salida del ZK-rollup a Ethereum sin tener que depender del permiso del operador.
 
 ## ¿Cómo funcionan los ZK-rollups? {#how-do-zk-rollups-work}
 
@@ -190,7 +190,7 @@ Cuánto pagan los usuarios por las transacciones en los ZK-rollups depende de la
 
 3. **Tarifas del operador de capa 2**: Esta es la cantidad pagada al operador del rollup como compensación por los costos computacionales incurridos en el procesamiento de transacciones, de manera muy similar a las ["tarifas de prioridad (propinas)" de las transacciones](/developers/docs/gas/#how-are-gas-fees-calculated) en la red principal de Ethereum.
 
-4. **Generación y verificación de pruebas**: Los operadores de ZK-rollups deben producir pruebas de validez para los lotes de transacciones, lo que requiere muchos recursos. Verificar pruebas de conocimiento cero en la red principal también cuesta gas, desde unos pocos cientos de miles de gas para un ZK-SNARK hasta varios millones para un ZK-STARK, dependiendo del sistema de prueba.
+4. **Generación y verificación de pruebas**: Los operadores de ZK-rollups deben producir pruebas de validez para los lotes de transacciones, lo que requiere muchos recursos. Verificar pruebas de conocimiento cero en la Red principal también cuesta gas, desde unos pocos cientos de miles de gas para un ZK-SNARK hasta varios millones para un ZK-STARK, dependiendo del sistema de prueba.
 
 Aparte del procesamiento por lotes de transacciones, los ZK-rollups reducen las tarifas para los usuarios al comprimir los datos de las transacciones. Puede [ver una descripción general en tiempo real](https://l2fees.info/) de cuánto cuesta usar los ZK-rollups de Ethereum.
 

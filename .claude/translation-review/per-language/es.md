@@ -1,5 +1,10 @@
 # Spanish (es) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: slot (glamsterdam x2), Red principal casing (zk-rollups x5). Open: parent as principal (SQL), English number separators 15.7/2,048, acronym over-expansion, tu/usted split in erc-721.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

@@ -158,12 +158,12 @@ Los refinamientos en las funciones de los validadores y los procesos de salida g
 
 <EipTag upgrade="glamsterdam" id={8045} />
 
-- Evita que los validadores penalizados (recortados) sean seleccionados para proponer bloques futuros, eliminando los espacios (slots) perdidos garantizados
+- Evita que los validadores penalizados (recortados) sean seleccionados para proponer bloques futuros, eliminando los slots perdidos garantizados
 - Mantiene a Ethereum funcionando sin problemas y de manera confiable, previniendo paradas severas en el caso de un evento de recorte masivo
 
 Actualmente, incluso si un validador es penalizado (recortado por romper las reglas o no operar como se esperaba), el sistema aún podría elegirlo para liderar un bloque en el futuro cercano cuando genera previsiones de proponentes futuros.
 
-Debido a que los bloques de proponentes penalizados se rechazan automáticamente como inválidos, esto hace que la red pierda espacios y retrasa la recuperación de la red durante eventos de recortes masivos.
+Debido a que los bloques de proponentes penalizados se rechazan automáticamente como inválidos, esto hace que la red pierda slots y retrasa la recuperación de la red durante eventos de recortes masivos.
 
 **Excluir a los validadores penalizados de proponer (o EIP-8045)** simplemente filtra a los validadores penalizados para que no sean seleccionados para funciones futuras. Esto mejora la resiliencia de la cadena al garantizar que solo se seleccionen validadores saludables para proponer bloques, manteniendo la calidad del servicio durante las interrupciones de la red.
 

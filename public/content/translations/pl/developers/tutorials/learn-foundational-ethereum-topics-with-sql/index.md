@@ -129,7 +129,7 @@ FROM ethereum.blocks
 WHERE number IN (12396854, 12396855, 12396856)
 ```
 
-Możemy zbadać blok, odpytując czas, numer bloku, hash, hash rodzica i nonce. Blok 12396854 został wyprodukowany przed [The Merge](/roadmap/merge/), kiedy bloki były wydobywane za pomocą dowodu pracy (PoW), a nonce miało znaczenie. W blokach dowodu stawki (PoS) nonce zawsze wynosi zero.
+Możemy zbadać blok, odpytując czas, numer bloku, hash, hash rodzica i nonce. Blok 12396854 został wyprodukowany przed [The Merge](/roadmap/merge/), kiedy bloki były kopane za pomocą dowodu pracy (PoW), a nonce miało znaczenie. W blokach dowodu stawki (PoS) nonce zawsze wynosi zero.
 
 Jedyną rzeczą, której to zapytanie nie obejmuje, jest _lista transakcji_, która wymaga osobnego zapytania poniżej, oraz _korzeń stanu_ (state root). Pełny lub archiwalny węzeł będzie przechowywał wszystkie transakcje i przejścia stanów, umożliwiając klientom odpytywanie stanu łańcucha w dowolnym momencie. Ponieważ wymaga to dużej przestrzeni dyskowej, możemy oddzielić dane łańcucha od danych stanu:
 
@@ -166,7 +166,7 @@ Dla bloku 12396854, z 222 wszystkich transakcji, 204 zostały pomyślnie zweryfi
 
 ![Screenshot of a successful Ethereum transaction](./successful_txn.png)
 
-Żądania transakcji występują dziesiątki razy na sekundę, ale bloki są dodawane tylko okresowo ([źródło](/developers/docs/blocks/)). W ramach dowodu pracy (PoW) blok był wydobywany średnio co 13 do 15 sekund, z dużą zmiennością. Od czasu [The Merge](/roadmap/merge/) we wrześniu 2022 r., dowód stawki (PoS) dzieli czas na 12-sekundowe sloty, a każdy slot może mieć co najwyżej jeden blok.
+Żądania transakcji występują dziesiątki razy na sekundę, ale bloki są dodawane tylko okresowo ([źródło](/developers/docs/blocks/)). W ramach dowodu pracy (PoW) blok był kopany średnio co 13 do 15 sekund, z dużą zmiennością. Od czasu [The Merge](/roadmap/merge/) we wrześniu 2022 r., dowód stawki (PoS) dzieli czas na 12-sekundowe sloty, a każdy slot może mieć co najwyżej jeden blok.
 
 Więc dzisiaj może być co najwyżej 86400 / 12 = 7200 bloków dziennie. W praktyce jest ich nieco mniej, ponieważ walidator czasami omija swój slot.
 

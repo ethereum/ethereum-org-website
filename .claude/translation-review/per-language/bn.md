@@ -1,5 +1,10 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: junk-syllable negation corruption (pos L46), bad actors as film actors, যতক্ষণ না inversion (verifying), zero-knowledge proof hybrid regressed (6 sites zk-rollups), U+3002 x6 and U+2060 x6 in erc-721. Open: equivocation ইক্যুইভোকেশন vs দ্ব্যর্থবোধক, ZK-rollup Latin, taka for currency, API over-expansion.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

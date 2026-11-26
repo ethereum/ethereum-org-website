@@ -118,7 +118,7 @@ Se alguém contestar uma afirmação, o protocolo de rollup iniciará o cálculo
 
 Esquemas de prova interativa de rodada única repetem transações contestadas na L1 para detectar afirmações inválidas. O protocolo de rollup emula a reexecução da transação contestada na L1 (Ethereum) usando um contrato verificador, com a raiz de estado calculada determinando quem vence o desafio. Se a reivindicação do desafiante sobre o estado correto do rollup estiver correta, o operador é penalizado tendo sua garantia reduzida (slashed).
 
-No entanto, reexecutar transações na L1 para detectar fraudes exige a publicação de compromissos de estado para transações individuais e aumenta os dados que os rollups devem publicar onchain. Repetir transações também incorre em custos significativos de gas. Por essas razões, os rollups otimistas estão mudando para a prova interativa de várias rodadas, que atinge o mesmo objetivo (ou seja, detectar operações de rollup inválidas) com mais eficiência.
+No entanto, reexecutar transações na L1 para detectar fraudes exige a publicação de compromissos de estado para transações individuais e aumenta os dados que os rollups devem publicar onchain. Repetir transações também incorre em custos significativos de gás. Por essas razões, os rollups otimistas estão mudando para a prova interativa de várias rodadas, que atinge o mesmo objetivo (ou seja, detectar operações de rollup inválidas) com mais eficiência.
 
 #### Prova interativa de várias rodadas {#multi-round-interactive-proving}
 
@@ -192,7 +192,7 @@ As chamadas de contrato cross-chain acontecem de forma assíncrona — o que sig
 
 Um exemplo de uma chamada de contrato cross-chain é o depósito de token descrito anteriormente. Um contrato na L1 bloqueia os tokens do usuário e envia uma mensagem para um contrato emparelhado na L2 para cunhar uma quantidade igual de tokens no rollup.
 
-Como as chamadas de mensagem cross-chain resultam na execução do contrato, o remetente geralmente é obrigado a cobrir os [custos de gas](/developers/docs/gas/) para a computação. É aconselhável definir um limite de gas alto para evitar que a transação falhe na cadeia de destino. O cenário de ponte de tokens é um bom exemplo; se o lado L1 da transação (depositar os tokens) funcionar, mas o lado L2 (cunhar novos tokens) falhar devido a pouco gas, o depósito se torna irrecuperável.
+Como as chamadas de mensagem cross-chain resultam na execução do contrato, o remetente geralmente é obrigado a cobrir os [custos de gás](/developers/docs/gas/) para a computação. É aconselhável definir um limite de gas alto para evitar que a transação falhe na cadeia de destino. O cenário de ponte de tokens é um bom exemplo; se o lado L1 da transação (depositar os tokens) funcionar, mas o lado L2 (cunhar novos tokens) falhar devido a pouco gás, o depósito se torna irrecuperável.
 
 Finalmente, devemos notar que as chamadas de mensagem L2 > L1 entre contratos precisam levar em conta os atrasos (as chamadas L1 > L2 são tipicamente executadas após alguns minutos). Isso ocorre porque as mensagens enviadas para a Mainnet a partir do rollup otimista não podem ser executadas até que a janela de desafio expire.
 

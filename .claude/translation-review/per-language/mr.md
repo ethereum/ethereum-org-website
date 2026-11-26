@@ -1,5 +1,10 @@
 # Marathi (mr) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: execution client x4 reverted to glossary form, epoch to parva, deployed to prasthapit x4, actors as performers, high-volume as aawaj, builder. Open: computed as mojlele (measured), state root as mool, l1 numeral.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

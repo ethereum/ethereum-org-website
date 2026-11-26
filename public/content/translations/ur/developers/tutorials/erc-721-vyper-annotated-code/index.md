@@ -166,7 +166,7 @@ def __init__():
     """
 ```
 
-<span dir="ltr">Python</span> اور <span dir="ltr">Vyper</span> میں، آپ ایک ملٹی لائن سٹرنگ (جو `"""` سے شروع اور ختم ہوتی ہے) بتا کر بھی ایک تبصرہ بنا سکتے ہیں، اور اسے کسی بھی طرح استعمال نہیں کر سکتے۔ ان تبصروں میں [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) بھی شامل ہو سکتا ہے۔
+<span dir="ltr">Python</span> اور <span dir="ltr">Vyper</span> میں، آپ ایک ملٹی لائن سٹرنگ (جو `"""` سے شروع اور ختم ہوتی ہے) بتا کر بھی ایک تبصرہ بنا سکتے ہیں، جبکہ اسے کسی بھی طرح استعمال نہیں کیا جاتا۔ ان تبصروں میں [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) بھی شامل ہو سکتا ہے۔
 
 ```python
     self.minter = msg.sender
@@ -475,7 +475,7 @@ def approve(_approved: address, _tokenId: uint256):
          اگر `_tokenId` ایک درست NFT نہیں ہے تو ایرر (throw) دیتا ہے۔ (نوٹ: یہ EIP میں نہیں لکھا گیا ہے)
          اگر `_approved` موجودہ مالک ہے تو ایرر (throw) دیتا ہے۔ (نوٹ: یہ EIP میں نہیں لکھا گیا ہے)
     @param _approved دی گئی NFT آئی ڈی کے لیے منظور کیا جانے والا پتہ۔
-    @param _tokenId منظور کیے جانے والے ٹوکن کی آئی ڈی。
+    @param _tokenId منظور کیے جانے والے ٹوکن کی آئی ڈی۔
     """
     owner: address = self.idToOwner[_tokenId]
     # اگر `_tokenId` ایک درست NFT نہیں ہے تو ایرر (throw) دیتا ہے
@@ -537,7 +537,7 @@ def mint(_to: address, _tokenId: uint256) -> bool:
          اگر `_tokenId` کسی کی ملکیت ہے تو ایرر (throw) دیتا ہے۔
     @param _to وہ پتہ جو ڈھالے گئے ٹوکن وصول کرے گا۔
     @param _tokenId ڈھالنے کے لیے ٹوکن آئی ڈی۔
-    @return ایک بولین جو ظاہر کرتا ہے کہ آیا آپریشن کامیاب رہا。
+    @return ایک بولین جو ظاہر کرتا ہے کہ آیا آپریشن کامیاب رہا۔
     """
     # اگر `msg.sender` منٹر نہیں ہے تو ایرر (throw) دیتا ہے
     assert msg.sender == self.minter
@@ -565,7 +565,7 @@ def burn(_tokenId: uint256):
          ایرر (throw) دیتا ہے جب تک کہ `msg.sender` موجودہ مالک، ایک مجاز آپریٹر، یا اس NFT کے لیے منظور شدہ
          پتہ نہ ہو۔
          اگر `_tokenId` ایک درست NFT نہیں ہے تو ایرر (throw) دیتا ہے۔
-    @param _tokenId جلائے جانے والے ERC721 ٹوکن کی uint256 آئی ڈی。
+    @param _tokenId جلائے جانے والے ERC721 ٹوکن کی uint256 آئی ڈی۔
     """
     # تقاضے چیک کریں
     assert self._isApprovedOrOwner(msg.sender, _tokenId)

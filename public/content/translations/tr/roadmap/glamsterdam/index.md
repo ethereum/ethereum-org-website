@@ -56,7 +56,7 @@ Anlamlı bir Katman 1 (L1) ölçeklendirmesi, protokol dışı güven varsayıml
 - Güven gerektirmeyen oluşturucu ödemelerini doğrudan protokole dahil eder 
 - Güven gerektirmeyen izlemeyi sağlamak için staking havuzları için mimari güncellemeler gerektirir, ancak genel staking kullanıcı deneyimi, iyileştirilmiş bir oluşturucu seçim süreci ile geliştirilir
 
-Şu anda blok teklif etme ve oluşturma süreci, blok teklif ediciler ile blok oluşturucular arasında bir devir teslim içerir. Teklif ediciler ve oluşturucular arasındaki ilişki, çekirdek Ethereum protokolünün bir parçası değildir, bu nedenle güvenilir üçüncü taraf ara yazılımlara, yazılımlara (aktarıcılar) ve varlıklar arasındaki protokol dışı güvene dayanır.
+Şu anda blok teklif etme ve oluşturma süreci, blok teklifçileri ile blok oluşturucular arasında bir devir teslim içerir. Teklif ediciler ve oluşturucular arasındaki ilişki, çekirdek Ethereum protokolünün bir parçası değildir, bu nedenle güvenilir üçüncü taraf ara yazılımlara, yazılımlara (aktarıcılar) ve varlıklar arasındaki protokol dışı güvene dayanır.
 
 Teklif ediciler ve oluşturucular arasındaki protokol dışı ilişki, blok doğrulama sırasında [doğrulayıcıları](/glossary/#validator) dar bir 2 saniyelik pencerede işlem yayınlama ve yürütme işlemlerini aceleye getirmeye zorlayan bir "sıcak yol" (hot path) da yaratır ve bu da ağın ne kadar veriyi işleyebileceğini sınırlar.
 

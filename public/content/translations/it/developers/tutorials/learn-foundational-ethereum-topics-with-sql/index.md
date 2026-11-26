@@ -2,7 +2,7 @@
 title: Imparare gli argomenti fondamentali di Ethereum con SQL
 description: Questo tutorial aiuta i lettori a comprendere i concetti fondamentali di Ethereum, tra cui transazioni, blocchi e gas, interrogando i dati onchain con lo Structured Query Language (SQL).
 author: "Paul Apivat"
-tags: ["SQL", "Querying", "transazioni", "dati-e-analisi"]
+tags: ["SQL", "Interrogazione", "transazioni", "dati-e-analisi"]
 skill: beginner
 breadcrumb: Ethereum con SQL
 lang: it
@@ -25,7 +25,7 @@ Qualsiasi account può essere visualizzato su un block explorer come [Etherscan]
 
 Tuttavia, un utente potrebbe voler interrogare i dati direttamente per riconciliare le informazioni fornite dai block explorer esterni. [Dune](https://dune.com/) offre questa capacità a chiunque abbia una certa conoscenza di SQL.
 
-Come riferimento, l'account dello smart contract della Ethereum Foundation (EF) può essere visualizzato su [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
+Come riferimento, l'account dello smart contract della Fondazione Ethereum (EF) può essere visualizzato su [Blockscout](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe).
 
 Una cosa da notare è che tutti gli account, incluso quello della EF, hanno un indirizzo pubblico che può essere utilizzato per inviare e ricevere transazioni.
 
@@ -87,7 +87,7 @@ Una transazione inviata include diverse informazioni, tra cui ([fonte](/develope
 - **maxPriorityFeePerGas** - la quantità massima di gas da includere come commissione prioritaria per il validatore
 - **maxFeePerGas** - la quantità massima di gas che si è disposti a pagare per la transazione (comprensiva di baseFeePerGas e maxPriorityFeePerGas)
 
-Possiamo interrogare queste informazioni specifiche per le transazioni verso l'indirizzo pubblico della Ethereum Foundation:
+Possiamo interrogare queste informazioni specifiche per le transazioni verso l'indirizzo pubblico della Fondazione Ethereum:
 
 ```sql
 SELECT
@@ -252,11 +252,11 @@ Possiamo anche giustapporre questi due grafici per vedere come si allineano **do
 
 Pertanto possiamo comprendere i prezzi del gas come una funzione della domanda di spazio nei blocchi di Ethereum, data l'offerta disponibile.
 
-Infine, potremmo voler interrogare i prezzi medi giornalieri del gas per la catena di Ethereum; tuttavia, farlo comporterà un tempo di query particolarmente lungo, quindi filtreremo la nostra query per la quantità media di gas pagata per transazione dalla Ethereum Foundation.
+Infine, potremmo voler interrogare i prezzi medi giornalieri del gas per la catena di Ethereum; tuttavia, farlo comporterà un tempo di query particolarmente lungo, quindi filtreremo la nostra query per la quantità media di gas pagata per transazione dalla Fondazione Ethereum.
 
 ![Chart showing Ethereum Foundation daily gas usage](./ef_daily_gas.png)
 
-Possiamo vedere i prezzi del gas pagati per tutte le transazioni effettuate verso l'indirizzo della Ethereum Foundation nel corso degli anni. Ecco la query:
+Possiamo vedere i prezzi del gas pagati per tutte le transazioni effettuate verso l'indirizzo della Fondazione Ethereum nel corso degli anni. Ecco la query:
 
 ```sql
 SELECT

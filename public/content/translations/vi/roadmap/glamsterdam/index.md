@@ -158,12 +158,12 @@ Các tinh chỉnh đối với nhiệm vụ của trình xác thực và quy tr�
 
 <EipTag upgrade="glamsterdam" id={8045} />
 
-- Ngăn chặn các trình xác thực bị phạt (bị phạt cắt giảm) được chọn để đề xuất các khối trong tương lai, loại bỏ các slot bị bỏ lỡ chắc chắn
+- Ngăn chặn các trình xác thực bị phạt (bị phạt cắt giảm) được chọn để đề xuất các khối trong tương lai, loại bỏ các khe bị bỏ lỡ chắc chắn
 - Giữ cho Ethereum hoạt động trơn tru và đáng tin cậy, ngăn chặn tình trạng đình trệ nghiêm trọng trong trường hợp xảy ra sự kiện phạt cắt giảm hàng loạt
 
 Hiện tại, ngay cả khi một trình xác thực bị phạt cắt giảm (bị phạt vì vi phạm quy tắc hoặc không hoạt động như mong đợi), hệ thống vẫn có thể chọn họ để dẫn dắt một khối trong tương lai gần khi nó tạo ra các dự đoán người đề xuất trong tương lai.
 
-Vì các khối từ những người đề xuất bị phạt cắt giảm sẽ tự động bị từ chối là không hợp lệ, điều này khiến mạng lưới bỏ lỡ các slot và làm chậm quá trình phục hồi mạng lưới trong các sự kiện phạt cắt giảm hàng loạt.
+Vì các khối từ những người đề xuất bị phạt cắt giảm sẽ tự động bị từ chối là không hợp lệ, điều này khiến mạng lưới bỏ lỡ các khe và làm chậm quá trình phục hồi mạng lưới trong các sự kiện phạt cắt giảm hàng loạt.
 
 **Loại trừ các trình xác thực bị phạt cắt giảm khỏi việc đề xuất (hoặc EIP-8045)** đơn giản là lọc ra các trình xác thực bị phạt cắt giảm khỏi việc được chọn cho các nhiệm vụ trong tương lai. Điều này cải thiện khả năng phục hồi của chuỗi bằng cách đảm bảo chỉ những trình xác thực khỏe mạnh mới được chọn để đề xuất khối, duy trì chất lượng dịch vụ trong thời gian mạng lưới bị gián đoạn.
 

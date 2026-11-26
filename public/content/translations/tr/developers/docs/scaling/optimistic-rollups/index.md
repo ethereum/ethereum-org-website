@@ -170,7 +170,7 @@ Bazı iyimser rolluplar, sıralayıcıların kullanıcıları sansürlemesini ö
 
 Fonları Ethereum'a çekmeden önce bir hafta beklemekten kaçınmak için iyimser rollup kullanıcıları bir **likidite sağlayıcı** (LP) kullanabilir. Bir likidite sağlayıcı, bekleyen bir L2 çekim işleminin sahipliğini üstlenir ve kullanıcıya L1'de (bir ücret karşılığında) ödeme yapar.
 
-Likidite sağlayıcılar, fonları serbest bırakmadan önce (zinciri kendileri yürüterek) kullanıcının çekim talebinin geçerlliğini kontrol edebilirler. Bu şekilde işlemin eninde sonunda onaylanacağına dair güvenceleri olur (yani güven gerektirmeyen kesinlik).
+Likidite sağlayıcılar, fonları serbest bırakmadan önce (zinciri kendileri yürüterek) kullanıcının çekim talebinin geçerliliğini kontrol edebilirler. Bu şekilde işlemin eninde sonunda onaylanacağına dair güvenceleri olur (yani güven gerektirmeyen kesinlik).
 
 #### 2. EVM uyumluluğu {#evm-compatibility}
 

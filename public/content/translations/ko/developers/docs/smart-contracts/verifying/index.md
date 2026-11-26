@@ -78,7 +78,7 @@ Etherscan을 사용하면 원본 데이터 페이로드(소스 코드, 라이브
 
 검증이 완료되면 컨트랙트의 소스 코드는 "Verified(검증됨)" 라벨을 받고 다른 사람들이 감사할 수 있도록 Etherscan에 게시됩니다. 또한 검증된 소스 코드를 가진 스마트 컨트랙트 저장소인 [Verified Contracts(검증된 컨트랙트)](https://etherscan.io/contractsVerified/) 섹션에 추가됩니다.
 
-Etherscan은 컨트랙 검증에 가장 많이 사용되는 도구입니다. Etherscan은 [일치 방식](https://info.etherscan.com/types-of-contract-verification/)에 따라 각 검증된 컨트랙트에 라벨을 지정합니다. 컨트랙트의 생성 바이트코드와 생성자 인수의 정확한 일치(exact match), 배포된 바이트코드만의 런타임 일치(runtime match), 또는 컨트랙트의 바이트코드가 이미 검증된 컨트랙트의 바이트코드와 일치할 때 자동으로 부여되는 유사 일치(similar match)가 있습니다. Etherscan의 정확한 일치는 생성 바이트코드 및 생성자 인수와 관련이 있으며, 위에서 설명한 정확한 일치 및 일치와는 다른 구분입니다.
+Etherscan은 컨트랙트 검증에 가장 많이 사용되는 도구입니다. Etherscan은 [일치 방식](https://info.etherscan.com/types-of-contract-verification/)에 따라 각 검증된 컨트랙트에 라벨을 지정합니다. 컨트랙트의 생성 바이트코드와 생성자 인수의 정확한 일치(exact match), 배포된 바이트코드만의 런타임 일치(runtime match), 또는 컨트랙트의 바이트코드가 이미 검증된 컨트랙트의 바이트코드와 일치할 때 자동으로 부여되는 유사 일치(similar match)가 있습니다. Etherscan의 정확한 일치는 생성 바이트코드 및 생성자 인수와 관련이 있으며, 위에서 설명한 정확한 일치 및 일치와는 다른 구분입니다.
 
 [Etherscan에서 컨트랙트 검증에 대해 자세히 알아보기](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 

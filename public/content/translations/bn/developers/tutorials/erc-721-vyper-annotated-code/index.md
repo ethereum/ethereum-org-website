@@ -1,11 +1,11 @@
 ---
-title: "⁠Vyper ERC-721⁠ কন্ট্রাক্ট ওয়াকথ্রু"
-description: "রিউয়া নাকামুরার ⁠ERC-721⁠ কন্ট্রাক্ট এবং এটি কীভাবে কাজ করে"
+title: "Vyper ERC-721 কন্ট্রাক্ট ওয়াকথ্রু"
+description: "রিউয়া নাকামুরার ERC-721 কন্ট্রাক্ট এবং এটি কীভাবে কাজ করে"
 author: "ওরি পোমেরান্টজ"
 lang: bn
 tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
-breadcrumb: "⁠Vyper ERC-721⁠"
+breadcrumb: "Vyper ERC-721"
 published: 2021-04-01
 ---
 
@@ -421,7 +421,7 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
             সেগুলো স্থায়ীভাবে হারিয়ে যেতে পারে।
     @param _from NFT এর বর্তমান মালিক।
     @param _to নতুন মালিক।
-    @param _tokenId হস্তান্তর করার জন্য NFT。
+    @param _tokenId হস্তান্তর করার জন্য NFT।
     """
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
@@ -452,7 +452,7 @@ def safeTransferFrom(
     @param _from NFT এর বর্তমান মালিক।
     @param _to নতুন মালিক।
     @param _tokenId হস্তান্তর করার জন্য NFT।
-    @param _data কোনো নির্দিষ্ট ফরম্যাট ছাড়া অতিরিক্ত ডেটা, যা `_to` এর কলে পাঠানো হয়。
+    @param _data কোনো নির্দিষ্ট ফরম্যাট ছাড়া অতিরিক্ত ডেটা, যা `_to` এর কলে পাঠানো হয়।
     """
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
@@ -491,7 +491,7 @@ def approve(_approved: address, _tokenId: uint256):
          `_tokenId` একটি বৈধ NFT না হলে থ্রো করে। (নোট: এটি EIP তে লেখা নেই)
          `_approved` বর্তমান মালিক হলে থ্রো করে। (নোট: এটি EIP তে লেখা নেই)
     @param _approved প্রদত্ত NFT আইডি এর জন্য অনুমোদিত করার ঠিকানা।
-    @param _tokenId অনুমোদিত করার টোকেন এর আইডি。
+    @param _tokenId অনুমোদিত করার টোকেন এর আইডি।
     """
     owner: address = self.idToOwner[_tokenId]
     # `_tokenId` একটি বৈধ NFT না হলে থ্রো করে
@@ -524,7 +524,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
          `_operator` যদি `msg.sender` হয় তবে থ্রো করে। (নোট: এটি EIP তে লেখা নেই)
     @notice প্রেরকের কাছে সেই সময়ে কোনো টোকেন না থাকলেও এটি কাজ করে।
     @param _operator অনুমোদিত অপারেটরদের সেটে যোগ করার ঠিকানা।
-    @param _approved অপারেটররা অনুমোদিত হলে True, অনুমোদন বাতিল করতে false。
+    @param _approved অপারেটররা অনুমোদিত হলে True, অনুমোদন বাতিল করতে false।
     """
     # `_operator` যদি `msg.sender` হয় তবে থ্রো করে
     assert _operator != msg.sender
@@ -553,7 +553,7 @@ def mint(_to: address, _tokenId: uint256) -> bool:
          `_tokenId` কারো মালিকানাধীন হলে থ্রো করে।
     @param _to ঠিকানা যা মিন্ট করা টোকেন গুলো গ্রহণ করবে।
     @param _tokenId মিন্ট করার টোকেন আইডি।
-    @return একটি বুলিয়ান যা নির্দেশ করে অপারেশনটি সফল হয়েছে কিনা。
+    @return একটি বুলিয়ান যা নির্দেশ করে অপারেশনটি সফল হয়েছে কিনা।
     """
     # `msg.sender` মিন্টার না হলে থ্রো করে
     assert msg.sender == self.minter
@@ -581,7 +581,7 @@ def burn(_tokenId: uint256):
          `msg.sender` বর্তমান মালিক, একজন অনুমোদিত অপারেটর, অথবা এই NFT এর জন্য অনুমোদিত
          ঠিকানা না হলে থ্রো করে।
          `_tokenId` একটি বৈধ NFT না হলে থ্রো করে।
-    @param _tokenId পোড়ানো হবে এমন ERC-721 টোকেন এর uint256 আইডি。
+    @param _tokenId পোড়ানো হবে এমন ERC-721 টোকেন এর uint256 আইডি।
     """
     # প্রয়োজনীয়তাগুলো চেক করুন
     assert self._isApprovedOrOwner(msg.sender, _tokenId)

@@ -186,7 +186,7 @@ L'utilisation des outils existants est importante car ces outils ont été large
 
 #### 3. Appels de contrats inter-chaîne {#cross-chain-contract-calls}
 
-Les utilisateurs (comptes détenus par des entités externes) interagissent avec les contrats l2 en soumettant une transaction au contrat de rollup ou en demandant à un séquenceur ou à un validateur de le faire pour eux. Les rollup optimistes permettent également aux comptes de contrat sur Ethereum d'interagir avec les contrats l2 en utilisant des contrats de pont pour relayer les messages et transmettre les données entre la l1 et la l2. Cela signifie que vous pouvez programmer un contrat l1 sur le réseau principal Ethereum pour invoquer des fonctions appartenant à des contrats sur un rollup optimiste l2.
+Les utilisateurs (comptes détenus en externe) interagissent avec les contrats l2 en soumettant une transaction au contrat de rollup ou en demandant à un séquenceur ou à un validateur de le faire pour eux. Les rollup optimistes permettent également aux comptes de contrat sur Ethereum d'interagir avec les contrats l2 en utilisant des contrats de pont pour relayer les messages et transmettre les données entre la l1 et la l2. Cela signifie que vous pouvez programmer un contrat l1 sur le réseau principal Ethereum pour invoquer des fonctions appartenant à des contrats sur un rollup optimiste l2.
 
 Les appels de contrats inter-chaîne se produisent de manière asynchrone — ce qui signifie que l'appel est d'abord initié, puis exécuté ultérieurement. C'est différent des appels entre deux contrats sur Ethereum, où l'appel produit des résultats immédiatement.
 

@@ -253,7 +253,7 @@ zkEVMに取り組んでいるプロジェクトには以下が含まれます。
 
 - **[ZKsync](https://docs.zksync.io/)** - _ZKsync Eraは、Matter Labsによって構築されたEVM互換のZKロールアップであり、独自のzkEVMを搭載しています。_
 
-- **[Starknet](https://starkware.co/starknet/)** - _StarkNetは、StarkWareによって構築されたEVM互換のレイヤー2 (L2) スケーリングソリューションです。_
+- **[スタークネット](https://starkware.co/starknet/)** - _スタークネットは、StarkWareによって構築されたEVM互換のレイヤー2 (L2) スケーリングソリューションです。_
 
 - **[Morph](https://www.morphl2.io/)** - _Morphは、レイヤー2 (L2) の状態チャレンジ問題に対処するためにZK証明を利用するハイブリッドロールアップのスケーリングソリューションです。_
 

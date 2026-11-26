@@ -136,7 +136,7 @@ Kilka uwag na temat tego typu dowodu oszustwa:
 
 2. Protokoły bisekcji zmniejszają ilość danych przesyłanych onchain (nie ma potrzeby publikowania zobowiązań stanu dla każdej transakcji). Ponadto transakcje optymistycznego rollupa nie są ograniczone przez limit gazu Ethereum. Z kolei optymistyczne rollupy ponownie wykonujące transakcje muszą upewnić się, że transakcja L2 ma niższy limit gazu, aby emulować jej wykonanie w ramach pojedynczej transakcji Ethereum.
 
-3. W niektórych projektach część kaucji złośliwego zgłaszającego jest przyznawana rzucającemu wyzwanie, podczas gdy druga część jest spalana. Spalanie zapobiega zmowie między walidatorami; jeśli dwóch walidatorów wejdzie w zmowę w celu zainicjowania fałzywych wyzwań, i tak stracą znaczną część całej stawki.
+3. W niektórych projektach część kaucji złośliwego zgłaszającego jest przyznawana rzucającemu wyzwanie, podczas gdy druga część jest spalana. Spalanie zapobiega zmowie między walidatorami; jeśli dwóch walidatorów wejdzie w zmowę w celu zainicjowania fałszywych wyzwań, i tak stracą znaczną część całej stawki.
 
 4. Wielorundowe interaktywne dowodzenie wymaga od obu stron (zgłaszającego i rzucającego wyzwanie) wykonania ruchów w określonym oknie czasowym. Brak działania przed upływem terminu powoduje, że strona zwlekająca przegrywa wyzwanie.
 

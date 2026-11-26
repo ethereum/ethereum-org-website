@@ -276,7 +276,7 @@ Ta zmiana zapobiegłaby awariom synchronizacji sieci w okresach dużej aktywnoś
 
 ### Czy aktualizacja Glamsterdam wpływa na wszystkie węzły i walidatory Ethereum? {#does-the-glamsterdam-upgrade-affect-all-ethereum-nodes-and-validators}
 
-Tak, aktualizacja Glamsterdam wymaga aktualizacji zarówno [klientów warstwy wykonawczej, jak i klientów warstwy konsensusu](/developers/docs/nodes-and-clients/). Ponieważ ta aktualizacja wprowadza wbudowaną w protokół separację proponującego i budującego (ePBS), operatorzy węzłów będą musieli upewnić się, że ich klienci są zaktualizowani, aby obsługiwać nowe sposoby budowania, walidacji i poświadczania bloków przez sieć.
+Tak, aktualizacja Glamsterdam wymaga aktualizacji zarówno [klientów warstwy wykonawczej, jak i klientów konsensusu](/developers/docs/nodes-and-clients/). Ponieważ ta aktualizacja wprowadza wbudowaną w protokół separację proponującego i budującego (ePBS), operatorzy węzłów będą musieli upewnić się, że ich klienci są zaktualizowani, aby obsługiwać nowe sposoby budowania, walidacji i poświadczania bloków przez sieć.
 
 Wszyscy główni klienci Ethereum wydadzą wersje obsługujące twarde rozwidlenie oznaczone jako wysoki priorytet. Możesz śledzić, kiedy te wydania będą dostępne w repozytoriach GitHub klientów, na ich [kanałach Discord](https://ethstaker.org/support), na [Discordzie EthStaker](https://dsc.gg/ethstaker) lub subskrybując blog Ethereum, aby otrzymywać aktualizacje protokołu.
 

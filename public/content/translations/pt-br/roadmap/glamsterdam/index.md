@@ -56,7 +56,7 @@ O dimensionamento significativo da L1 exige o afastamento de premissas de confia
 - Introduz pagamentos de construtores sem necessidade de confiança diretamente no protocolo 
 - Exige atualizações arquitetônicas para pools de staking para permitir o monitoramento sem necessidade de confiança, embora a experiência geral do usuário de staking seja melhorada por um processo refinado de seleção de construtores
 
-Atualmente, o processo de propor e construir blocos inclui uma transferência entre proponentes de blocos e construtores de blocos. O relacionamento entre proponentes e construtores não faz parte do protocolo principal do Ethereum, portanto, depende de middleware de terceiros confiáveis, software (retransmissores) e confiança fora do protocolo entre as entidades.
+Atualmente, o processo de propor e construir blocos inclui uma transferência entre propositores de blocos e construtores de blocos. O relacionamento entre proponentes e construtores não faz parte do protocolo principal do Ethereum, portanto, depende de middleware de terceiros confiáveis, software (retransmissores) e confiança fora do protocolo entre as entidades.
 
 O relacionamento fora do protocolo entre proponentes e construtores também cria um "caminho crítico" (hot path) durante a validação de bloco que força os [validadores](/glossary/#validator) a se apressarem na transmissão e execução de transações em uma janela apertada de 2 segundos, limitando a quantidade de dados que a rede pode lidar.
 
@@ -131,18 +131,18 @@ Precificar o armazenamento de dados de forma mais precisa e previsível ajudará
 
 **Recursos**: [Especificação técnica da EIP-8037](https://eips.ethereum.org/EIPS/eip-8037)
 
-### Atualização do custo de gas para acesso de estado {#state-access-gas-cost-update}
+### Atualização do custo de gás para acesso de estado {#state-access-gas-cost-update}
 
 <EipTag upgrade="glamsterdam" id={8038} />
 
-- Aumenta os custos de gas para quando os aplicativos leem ou atualizam informações armazenadas permanentemente no Ethereum (códigos de operação de acesso de estado) para corresponder com precisão ao trabalho de computação que esses comandos exigem
+- Aumenta os custos de gás para quando os aplicativos leem ou atualizam informações armazenadas permanentemente no Ethereum (códigos de operação de acesso de estado) para corresponder com precisão ao trabalho de computação que esses comandos exigem
 - Fortalece a resiliência da rede prevenindo ataques de negação de serviço que exploram operações de leitura de dados artificialmente baratas
 
 À medida que o estado do Ethereum cresceu, o ato de pesquisar e ler dados antigos ("acesso de estado") tornou-se mais pesado e lento para os nós processarem. As taxas para essas ações permaneceram as mesmas, embora agora seja um pouco mais caro procurar informações (em termos de poder de computação).
 
 Como resultado, alguns comandos específicos estão atualmente subprecificados em relação ao trabalho que forçam um nó a fazer. `EXTCODESIZE` e `EXTCODECOPY` estão subprecificados, por exemplo, porque exigem duas leituras de banco de dados separadas — uma para o objeto da conta e uma segunda para o tamanho real do código ou bytecode.
 
-A **Atualização do custo de gas para acesso de estado (ou EIP-8038)** aumenta as constantes de gas para códigos de operação de acesso de estado, como pesquisar dados de contas e contratos, para se alinhar com o desempenho do hardware moderno e o tamanho do estado.
+A **Atualização do custo de gás para acesso de estado (ou EIP-8038)** aumenta as constantes de gás para códigos de operação de acesso de estado, como pesquisar dados de contas e contratos, para se alinhar com o desempenho do hardware moderno e o tamanho do estado.
 
 Alinhar o custo do acesso de estado também ajuda a tornar o Ethereum mais resiliente. Como essas ações pesadas de leitura de dados são artificialmente baratas, um invasor mal-intencionado poderia enviar spam para a rede com milhares de solicitações de dados complexas em um único bloco antes de atingir o limite de taxas da rede, potencialmente fazendo com que a rede trave ou falhe (um ataque de negação de serviço). Mesmo sem intenção maliciosa, os desenvolvedores não são economicamente encorajados a construir aplicativos eficientes se a leitura de dados da rede for muito barata.
 
@@ -294,22 +294,22 @@ O recurso de destaque é o ePBS (EIP-7732), que separa a pesada tarefa de valida
 
 ### O Glamsterdam reduzirá as taxas no Ethereum (camada 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
 
-Sim, o Glamsterdam muito provavelmente reduzirá as taxas para usuários comuns! Reduzir o gas intrínseco de transação (ou EIP-2780) reduz a taxa básica para enviar ETH, tornando o ETH muito mais barato de usar para pagamentos diários.
+Sim, o Glamsterdam muito provavelmente reduzirá as taxas para usuários comuns! Reduzir o gás intrínseco de transação (ou EIP-2780) reduz a taxa básica para enviar ETH, tornando o ETH muito mais barato de usar para pagamentos diários.
 
-Além disso, para sustentabilidade a longo prazo, o Glamsterdam introduz Listas de Acesso em Nível de Bloco (BALs). Isso permite o processamento paralelo e prepara a L1 para lidar com segurança com limites de gas gerais mais altos no futuro, o que provavelmente reduzirá os custos de gas por transação à medida que a capacidade cresce.
+Além disso, para sustentabilidade a longo prazo, o Glamsterdam introduz Listas de Acesso em Nível de Bloco (BALs). Isso permite o processamento paralelo e prepara a L1 para lidar com segurança com limites de gas gerais mais altos no futuro, o que provavelmente reduzirá os custos de gás por transação à medida que a capacidade cresce.
 
 ### Haverá alguma mudança nos meus contratos inteligentes existentes pós-Glamsterdam? {#will-my-smart-contracts-change}
 
-Os contratos existentes continuarão a funcionar normalmente após o Glamsterdam. Os desenvolvedores provavelmente obterão várias novas ferramentas e devem revisar seu uso de gas:
+Os contratos existentes continuarão a funcionar normalmente após o Glamsterdam. Os desenvolvedores provavelmente obterão várias novas ferramentas e devem revisar seu uso de gás:
 
 - Aumentar o tamanho máximo do contrato (ou EIP-7954) permite que os desenvolvedores implantem aplicativos maiores, elevando o limite de tamanho máximo do contrato de cerca de 24KiB para 64KiB.
 - A pré-implantação de fábrica determinística (ou EIP-7997) introduz um contrato de fábrica universal e integrado. Ela permite que os desenvolvedores implantem seus aplicativos e carteiras de contratos inteligentes exatamente no mesmo endereço em todas as cadeias EVM participantes.
 - Se o seu aplicativo depende de rastreamento complexo para encontrar transferências de ETH, Transferências e queimas de ETH emitem um log (ou EIP-7708) permitirá que você mude para o uso de logs para uma contabilidade mais simples e confiável.
-- O aumento do custo de gas para criação de estado (ou EIP-8037) e a atualização do custo de gas para acesso de estado (ou EIP-8038) introduzem novos modelos de sustentabilidade que mudarão certos custos de implantação de contratos, já que a criação de novas contas ou armazenamento permanente terá uma nova taxa fixa padronizada com base no tamanho dos dados criados.
+- O aumento do custo de gás para criação de estado (ou EIP-8037) e a atualização do custo de gás para acesso de estado (ou EIP-8038) introduzem novos modelos de sustentabilidade que mudarão certos custos de implantação de contratos, já que a criação de novas contas ou armazenamento permanente terá uma nova taxa fixa padronizada com base no tamanho dos dados criados.
 
 ### Como o Glamsterdam afetará o armazenamento do nó e os requisitos de hardware? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Várias EIPs sob consideração para o Glamsterdam abordam o declínio de desempenho do crescimento do estado:
 
-- O aumento do custo de gas para criação de estado (ou EIP-8037) introduz uma estrutura de custo fixo (CPSB) para atingir uma taxa de crescimento do banco de dados de estado de 120 GiB/ano, garantindo que o hardware físico padrão possa continuar executando a rede de forma eficiente.
+- O aumento do custo de gás para criação de estado (ou EIP-8037) introduz uma estrutura de custo fixo (CPSB) para atingir uma taxa de crescimento do banco de dados de estado de 120 GiB/ano, garantindo que o hardware físico padrão possa continuar executando a rede de forma eficiente.
 - As listas parciais de recibos de bloco eth/70 (ou EIP-7975) permitem que os nós solicitem recibos de bloco paginados, o que divide listas de recibos de bloco pesadas em dados em pedaços menores para evitar travamentos e falhas de sincronização à medida que o Ethereum escala.

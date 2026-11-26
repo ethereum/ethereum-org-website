@@ -56,7 +56,7 @@ Jako środek bezpieczeństwa, ZK-rollupy pozwalają użytkownikom na przesyłani
 
 ### Transakcje {#transactions}
 
-Użytkownicy w ZK-rollupie podpisują transakcje i przesyłają je do operatorów L2 w celu przetworzenia i włączenia do następnej partii. W niektórych przypadkach operatorem jest scentralizowany podmiot, zwany sekwenserem, który wykonuje transakcje, agreguje je w partie i przesyłaja do L1. Sekwenser w tym systemie jest jedynym podmiotem uprawnionym do tworzenia bloków L2 i dodawania transakcji rollupa do kontraktu ZK-rollupa.
+Użytkownicy w ZK-rollupie podpisują transakcje i przesyłają je do operatorów L2 w celu przetworzenia i włączenia do następnej partii. W niektórych przypadkach operatorem jest scentralizowany podmiot, zwany sekwenserem, który wykonuje transakcje, agreguje je w partie i przesyłają do L1. Sekwenser w tym systemie jest jedynym podmiotem uprawnionym do tworzenia bloków L2 i dodawania transakcji rollupa do kontraktu ZK-rollupa.
 
 Inne ZK-rollupy mogą rotować rolę operatora, używając zestawu walidatorów [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos/). Potencjalni operatorzy deponują środki w kontrakcie rollupa, a wielkość każdej stawki wpływa na szanse stakującego na zostanie wybranym do wyprodukowania następnej partii rollupa. Stawka operatora może zostać poddana cięciu, jeśli działa on złośliwie, co zachęca go do publikowania ważnych bloków.
 

@@ -90,7 +90,7 @@ Kwa sababu zinatoa mwonekano wa papo hapo wa miamala ipi haiingiliani, BALs huru
 
 Kwa kuwa BAL inajumuisha matokeo ya mwisho ya miamala (thamani za baada ya utekelezaji), wakati nodi za mtandao zinahitaji kusawazisha kwa hali ya sasa ya mtandao, zinaweza kunakili matokeo hayo ya mwisho ili kusasisha rekodi zao. Wathibitishaji hawahitaji tena kurudia miamala yote changamano kutoka mwanzo ili kujua nini kilitokea, na kuifanya iwe haraka na rahisi kwa nodi mpya kujiunga na mtandao.
 
-Usomaji sambamba wa diski uliowezeshwa by BALs utakuwa hatua muhimu kuelekea siku zijazo ambapo Ethereum inaweza kuchakata miamala mingi kwa wakati mmoja, ikiongeza kwa kiasi kikubwa kasi ya mtandao.
+Usomaji sambamba wa diski uliowezeshwa na BALs utakuwa hatua muhimu kuelekea siku zijazo ambapo Ethereum inaweza kuchakata miamala mingi kwa wakati mmoja, ikiongeza kwa kiasi kikubwa kasi ya mtandao.
 
 #### eth/71 Ubadilishanaji wa Orodha ya Ufikiaji wa Kitalu {#bale}
 

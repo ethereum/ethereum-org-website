@@ -1,5 +1,10 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.1/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+0 critical. Open: slot as الفترات الزمنية vs خانة (glamsterdam), compiler مترجم vs مُصرّف, builder منشئي vs بُناة, dropped span dir=ltr wrappers in verifying (24 to 0), Ryuya Nakamura Latin in body but transliterated in author.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 
