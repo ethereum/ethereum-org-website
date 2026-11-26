@@ -124,7 +124,7 @@ const Menu = (props: NavMenuProps) => {
             className={cn(
               "pointer-events-auto relative mt-2 h-(--radix-navigation-menu-viewport-height) w-full max-w-6xl origin-top overflow-hidden",
               "rounded-base border bg-background text-body shadow-lg",
-              "transition-[height] duration-300 ease-out motion-reduce:transition-none",
+              "transition-[height] duration-200 ease-out motion-reduce:transition-none",
               "motion-safe:data-[state=closed]:animate-nav-panel-out motion-safe:data-[state=open]:animate-nav-panel-in"
             )}
           />
