@@ -25,7 +25,10 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
-import { restoreCodeBlocksStrict } from "./lib/llm/code-block-extractor"
+import {
+  restoreCodeBlocksStrict,
+  restoreInlineCode,
+} from "./lib/llm/code-block-extractor"
 import {
   callReserveUsd,
   minimumFuseUsd,
@@ -394,6 +397,8 @@ async function buildGeminiTranslator(
     projectedBytes,
     translateCount,
     codeBlocks,
+    codeLoss,
+    inlineCode,
   } = planned
 
   // A sane incremental update is a handful of batches. Hundreds means the
@@ -451,21 +456,28 @@ async function buildGeminiTranslator(
     // So the batch is re-sent first: a malformed envelope is a sampling slip
     // that a fresh sample clears. The file budget is not charged for the
     // re-sends (see createFileBudget) -- the run fuse still meters them.
-    const { translations, tokens } = await translateBatchWithParseRetry(
-      batch,
-      (prompt) =>
-        callGeminiRaw(prompt, {
-          filePath,
-          targetLanguage: locale,
-          label: "incremental",
-          irreducible: batch.irreducible,
-        }),
-      (attempt, error) =>
-        log(
-          `  batch ${index + 1}/${plan.length} did not parse (attempt ${attempt}/${PARSE_ATTEMPTS}), re-sending: ${error.message.split("\n")[0]}`,
-          "warn"
-        )
-    )
+    const { translations, tokens, complaint } =
+      await translateBatchWithParseRetry(
+        batch,
+        (prompt) =>
+          callGeminiRaw(prompt, {
+            filePath,
+            targetLanguage: locale,
+            label: "incremental",
+            irreducible: batch.irreducible,
+          }),
+        (attempt, error) =>
+          log(
+            `  batch ${index + 1}/${plan.length} rejected (attempt ${attempt}/${PARSE_ATTEMPTS}), re-sending: ${error.message.split("\n")[0]}`,
+            "warn"
+          ),
+        codeLoss ?? undefined
+      )
+    if (complaint)
+      log(
+        `  batch ${index + 1}/${plan.length} still loses code; shipping the closest reply for review: ${complaint}`,
+        "warn"
+      )
     Object.assign(allTranslations, translations)
     totalInput += tokens.input
     totalOutput += tokens.output
@@ -503,10 +515,14 @@ async function buildGeminiTranslator(
         ? allTranslations[sectionId]
         : undefined
       if (!translated) return englishFallback
-      const blocks = codeBlocks.get(sectionId)
-      if (!blocks || blocks.length === 0) return translated
-      return restoreCodeBlocksStrict(
+      const prose = restoreInlineCode(
         translated,
+        inlineCode.get(sectionId) ?? []
+      )
+      const blocks = codeBlocks.get(sectionId)
+      if (!blocks || blocks.length === 0) return prose
+      return restoreCodeBlocksStrict(
+        prose,
         blocks,
         `${filePath} (${locale}) section "${sectionId}"`
       )
