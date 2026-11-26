@@ -1,7 +1,8 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-10-15 (PR #19486, 24 langs: networks/index.md quarantine release -- a full re-translation of a released file regresses dev-correct wording; ar enterprise JSON repeats #86; fleet avg 9.3)
+> Last updated: 2026-11-25 (PR #19902, 24 langs, 8 re-translated pages: retranslation regressed dev-correct glossary forms across the fleet, /filter misses inflected forms, actor/property polysemes recur, stray CJK punctuation in bn/ur)
+> Previous: 2026-10-15 (PR #19486, 24 langs: networks/index.md quarantine release -- a full re-translation of a released file regresses dev-correct wording; ar enterprise JSON repeats #86; fleet avg 9.3)
 > Previous: 2026-08-20 (PR #19034 full pipeline, 24 langs: **bracket-placeholder blanks are a coverage gap `verify-structure` cannot see** (11 locales), character-level generation corruption in 3 locales, the semantic-translation-of-an-org-name split, `soundness`/`test harness` as glossary gaps, the ar `validator` glossary entry breaking NFC, and the rule that a dominant-but-wrong tree form must be fixed globally or not at all; fleet avg 8.67)
 > Previous: 2026-08-14 (PR #19076 find-wallet JSON, 24 langs: **ETHGlossary's own term data is the defect source** for lowercased acronym parentheticals and non-Western numerals, runtime-composed fragment keys forcing per-locale agreement guesses, the check-the-tree-before-fixing-a-term-of-art hygiene rule, and three glossary coverage gaps; fleet avg 9.35)
 > Previous: 2026-07-29 (PR #18938 full pipeline, 24 langs: Indic loaded-polyseme bloc failure, sanitizer frontmatter-guard newline bug corrupting `uploadDate`, `/videos` frontmatter bypassing ETHGlossary, split-sentence `-strong` keys, partial-update manifest drift; fleet avg 8.9 -- lowest in months)
@@ -291,6 +292,30 @@ ETHGlossary frequently has multiple entries for one base term that differ by sur
 - cs: "zero-knowledge proof" -> "důkaz s nulovou znalostí" flagged against bare `zero-knowledge => s nulovým vědomím`, but glossary has `zero-knowledge proof => důkaz s nulovou znalostí`. Translator correctly used the bare form for "zero-knowledge tooling/language" and the proof form for "zero-knowledge proof" (the vi agent caught this split; the cs agent missed it).
 
 **Rule:** when a flagged term has adjacent qualifier words in English (X Mainnet, X proof, X layer), grep the glossary JSON for the multi-word entry before treating it as critical. The `/filter` output already includes both forms.
+
+### 104. Re-translation regresses glossary forms that dev already had right (CRITICAL -- confirmed PR #19902)
+
+`execution client` (pl, mr, te), `optimistic rollup` (id, te, vi, zh), `slot` (es, vi, ta), `blob` (ja, ru, ta), `deploy` (mr, ta), `epoch` (hi, mr, te, ru), `Fondazione Ethereum` (it), `block proposer` compound (tr, pt-br), and `Ethereum` to bare Latin across ~80 sites in ru optimistic-rollups. Diff changed lines against dev and grep the locale tree for the dominant form of every cross-linked term before accepting a new synonym.
+
+### 105. ETHGlossary /filter misses inflected and plural forms (PROCESS -- confirmed PR #19902)
+
+`equivocating`/`equivocated` (id, ur, ru, mr), `blobs`, `block explorers`, `execution clients` never came back from /filter. Spot-check recurring terms with `GET /translations/{lang}/{id}` and grep the tree for transliterated forms.
+
+### 106. `actor`/`property`/`claim`/`at stake` polysemes recur (CRITICAL -- confirmed PR #19902)
+
+`actor` as performer (hi, mr, te, ta, bn, ur); `property` as wealth (hi); `claim` as token-claim or billing sense (ja, uk, vi); `at stake` as staking (tr, it, ja, vi, zh-tw). Glossary-literal substitution corrupts idioms.
+
+### 107. Stray CJK punctuation and word joiners in non-CJK locales (CRITICAL -- confirmed PR #19902)
+
+U+3002 closing translated docstring comments in bn and ur erc-721 (also pre-existing in ur erc-1363); U+2060 around Latin runs in bn frontmatter. Sweep with `grep -P '\x{3002}|\x{2060}'`.
+
+### 108. CJK emphasis flanking: `**` beside full-width punctuation (CRITICAL -- confirmed PR #19902)
+
+zh: closing `**` after a full-width bracket before a CJK char, or opening `**` after a CJK char before a curly quote, renders literal asterisks. Use `<strong>` at that site (extends #89 beyond underscores).
+
+### 109. Acronym over-expansion and dropped bidi wrappers (WARNING -- confirmed PR #19902)
+
+Bare `API`/`ABI`/`MEV`/`NFT` expanded in link text and prose (de, es, cs, it, id, tr, bn, zh, te); #80 recurrence. ar verifying lost all 24 `span dir="ltr"` wrappers; compare wrapper counts against dev for RTL locales.
 
 ## Per-Language Notes
 

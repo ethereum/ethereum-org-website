@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "de",
-  "translatedAt": "2026-06-17T22:36:20.413Z",
-  "englishManifestHash": "29058db0bec9",
+  "translatedAt": "2026-11-25T10:14:57.748Z",
+  "englishManifestHash": "8ec6c61b4d46",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-76de4c",
@@ -57,16 +57,13 @@
     "LINK-c4c673",
     "LINK-cd3e6d",
     "CODE-1945d2",
-    "COMPONENT-000000",
     "LINK-d812b5",
-    "LINK-8cc06e",
     "LINK-17f6dc",
     "LINK-fc8443",
     "LINK-e2d888",
     "LINK-d56ab8",
     "LINK-881934",
-    "LINK-73e6e7",
-    "LINK-021d52"
+    "LINK-73e6e7"
   ],
   "placeholderMap": {
     "CODE-6ba9f2": {
@@ -285,12 +282,6 @@
         "url": "https://www.alchemy.com/overviews/optimistic-rollups"
       }
     },
-    "LINK-8cc06e": {
-      "type": "link",
-      "values": {
-        "url": "https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction"
-      }
-    },
     "LINK-17f6dc": {
       "type": "link",
       "values": {
@@ -326,17 +317,11 @@
       "values": {
         "url": "https://www.alchemy.com/overviews/optimistic-virtual-machine"
       }
-    },
-    "LINK-021d52": {
-      "type": "link",
-      "values": {
-        "url": "/developers/tutorials/optimism-std-bridge-annotated-code/"
-      }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T22:36:20.413Z",
+      "translatedAt": "2026-11-25T10:14:57.748Z",
       "status": "success"
     }
   }

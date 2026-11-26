@@ -1,5 +1,10 @@
 # Japanese (ja) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: Blob to ブロブ x3 (regression of PR 19357 fix), Starknet to スタークネット. Open: transfer トランスファー vs 送金 split in erc-721, claim as 請求, at stake as ステーク, ファイナライズ済み used as verb, devnet.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.0/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

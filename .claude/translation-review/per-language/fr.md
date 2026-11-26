@@ -1,5 +1,10 @@
 # French (fr) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.5/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: EOA comptes detenus en externe (optimistic-rollups L189). Open: gossip rendered potins, parenthetical English glosses in portal-network, sanctionne/reduction slashing mix.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

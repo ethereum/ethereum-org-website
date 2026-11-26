@@ -1,5 +1,10 @@
 # id Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.4/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: rollup optimis to rollup Optimistic (zk-rollups x5), equivocation to ekivokasi (pos L44). Open: L50 berdalih unchanged line, API/MEV over-expansion, capitalization leaks, mengkueri.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 
