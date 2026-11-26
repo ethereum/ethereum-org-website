@@ -151,7 +151,12 @@ const promoteLocale = async (
 
   // A warning, not a refusal: these links break on the next deploy, but a refusal
   // would keep serving an index with just as many.
-  const radix = await radixAnchors(source)
+  const radix = await radixAnchors(source).catch((error) => {
+    console.log(
+      `::warning::${locale}: radix anchor check failed: ${(error as Error).message}`
+    )
+    return { count: 0, sample: [] as string[] }
+  })
   if (radix.count)
     console.log(
       `::warning::${locale}: ${radix.count} records anchored to per-build Radix ids, e.g. ${radix.sample.join(", ")} -- give those headings a stable id (docs/site-search.md)`
