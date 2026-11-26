@@ -177,7 +177,6 @@ export const buildNavigation = (
             href: "/ethereum-history-founder-and-ownership/",
           },
           { label: t("glossary"), href: "/glossary/" },
-          { label: t("nav-courses-label"), href: "/courses/" },
           { label: t("quizzes"), href: "/quizzes/" },
           { label: t("videos"), href: "/videos/" },
           { label: t("nav-reports-label"), href: "/reports/" },
