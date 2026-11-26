@@ -141,6 +141,9 @@ export const GroupHeading = ({
     </p>
   )
 
+// Tighter than the panel's own radius so the cards nest inside its corners
+const nestedCardClasses = "rounded-lg [--card-pad:--spacing(3)]"
+
 type MenuPanelProps = {
   sectionKey: NavSectionKey
   section: NavSectionDetail
@@ -178,14 +181,23 @@ const MenuPanel = ({
   )
 
   return (
-    <div className="flex gap-6 p-6 max-xl:flex-col xl:gap-8">
+    <div className="flex gap-6 p-4 max-xl:flex-col xl:gap-8">
       <div className="grid shrink-0 auto-rows-min gap-3 max-xl:grid-cols-2 xl:w-64">
         <NavigationMenuLink asChild active={isActive(section.hub.href)}>
-          <HubCard sectionKey={sectionKey} hub={section.hub} track={track} />
+          <HubCard
+            sectionKey={sectionKey}
+            hub={section.hub}
+            track={track}
+            className={nestedCardClasses}
+          />
         </NavigationMenuLink>
         {section.featured && (
           <NavigationMenuLink asChild active={isActive(section.featured.href)}>
-            <FeaturedCard featured={section.featured} track={track} />
+            <FeaturedCard
+              featured={section.featured}
+              track={track}
+              className={nestedCardClasses}
+            />
           </NavigationMenuLink>
         )}
       </div>
