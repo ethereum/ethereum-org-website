@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-start.json",
-  "generatedAt": "2026-05-25T10:45:13.440Z",
-  "rootHash": "57c3f8518a32",
+  "generatedAt": "2026-11-26T15:03:25.023Z",
+  "rootHash": "de9bb25f428c",
   "tree": {
-    "contentHash": "3cad9b8a47ce",
-    "anchorHash": "744a68cd62ac",
+    "contentHash": "52bb813ad9f3",
+    "anchorHash": "acb30a5ca60d",
     "children": {
       "page-start-meta-title": {
         "contentHash": "cc9b1cf89594",
@@ -27,16 +27,140 @@
         "contentHash": "a5ea7f24186e",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-start-steps-wallet-title": {
+        "contentHash": "c96d704b5c33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-wallet-description": {
+        "contentHash": "ed5c94401281",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-wallet-cta": {
+        "contentHash": "d3dedfe5203a",
+        "anchorHash": "df408989c9f8",
+        "children": {
+          "prose:1": {
+            "contentHash": "4279f50e495e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ae4b352e6738"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-start-steps-wallet-languages": {
+        "contentHash": "96bc30ed723b",
+        "anchorHash": "1ee05ac82493",
+        "children": {
+          "prose:1": {
+            "contentHash": "59e5d85f147d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "39a807dd5e54"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-start-steps-get-eth-title": {
+        "contentHash": "8f1c0203866c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-get-eth-description": {
+        "contentHash": "3bab4c321aa6",
+        "anchorHash": "89b763229e82",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "28a14ae9f9b0"
+          },
+          "prose:1": {
+            "contentHash": "634f0ed8b965",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-start-steps-get-eth-cta": {
+        "contentHash": "8c677f2fb12b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-apps-title": {
+        "contentHash": "e2aa164752f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-apps-description": {
+        "contentHash": "4c6672f363a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-apps-cta": {
+        "contentHash": "e0ab0ec18559",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-apps-cta-count": {
+        "contentHash": "51826f7d58e7",
+        "anchorHash": "a658431aa377",
+        "children": {
+          "prose:1": {
+            "contentHash": "3b73900b8d29",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c204577d6572"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-start-steps-connect-title": {
+        "contentHash": "247587d2a72c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-guides-title": {
+        "contentHash": "9ddd1a78bae5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-guides-description": {
+        "contentHash": "5c0928713d0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-guides-cta": {
+        "contentHash": "29b7dfe71867",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-guides-use-a-wallet": {
+        "contentHash": "2b58bdf9f156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-guides-swap-tokens": {
+        "contentHash": "d7834a22fa0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-steps-guides-id-scam-tokens": {
+        "contentHash": "8ba6867e2274",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-start-share-section-title": {
         "contentHash": "b294006ec840",
         "anchorHash": "e3b0c44298fc"
       },
       "page-start-share-section-description": {
         "contentHash": "ce0403ccdcfe",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-man-doge-alt": {
-        "contentHash": "514bc5dc65a0",
         "anchorHash": "e3b0c44298fc"
       },
       "page-start-share-modal-trigger": {
@@ -81,60 +205,12 @@
           "icu:0"
         ]
       },
-      "page-start-download-wallet-title": {
-        "contentHash": "c9ae3b898391",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-download-wallet-description": {
-        "contentHash": "12f01ec0f5db",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-download-wallet-checkbox": {
-        "contentHash": "fd88b92c6e04",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-download-wallet-continue": {
-        "contentHash": "31fbef162594",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-download-wallet-get-wallet": {
-        "contentHash": "4d6878db2836",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-connect-wallet-title": {
-        "contentHash": "5a05d2f89a04",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-start-connect-wallet-description": {
         "contentHash": "efd40a8d020b",
         "anchorHash": "e3b0c44298fc"
       },
       "page-start-connect-wallet-account-message": {
         "contentHash": "6d0d14acada9",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-connect-wallet-continue": {
-        "contentHash": "d8fff6e063e5",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-connect-wallet-finance-alt": {
-        "contentHash": "b696d75511dc",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-apps-title": {
-        "contentHash": "ed882ff0019f",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-apps-description": {
-        "contentHash": "c45d05df2976",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-apps-explore-more": {
-        "contentHash": "6fac593fa3c3",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-start-apps-go": {
-        "contentHash": "6cc8519b9158",
         "anchorHash": "e3b0c44298fc"
       },
       "page-start-apps-socials-tag": {
@@ -149,10 +225,6 @@
         "contentHash": "387c6b1f130e",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-start-apps-farcaster-description": {
-        "contentHash": "3acd99161ff9",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-start-apps-aave-description": {
         "contentHash": "db969c9dcd69",
         "anchorHash": "e3b0c44298fc"
@@ -164,6 +236,10 @@
       "page-start-apps-opensea-description": {
         "contentHash": "151c68b7b468",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-start-apps-zora-description": {
+        "contentHash": "e4656da14722",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -172,9 +248,26 @@
       "page-start-hero-alt",
       "page-start-title",
       "page-start-subtitle",
+      "page-start-steps-wallet-title",
+      "page-start-steps-wallet-description",
+      "page-start-steps-wallet-cta",
+      "page-start-steps-wallet-languages",
+      "page-start-steps-get-eth-title",
+      "page-start-steps-get-eth-description",
+      "page-start-steps-get-eth-cta",
+      "page-start-steps-apps-title",
+      "page-start-steps-apps-description",
+      "page-start-steps-apps-cta",
+      "page-start-steps-apps-cta-count",
+      "page-start-steps-connect-title",
+      "page-start-steps-guides-title",
+      "page-start-steps-guides-description",
+      "page-start-steps-guides-cta",
+      "page-start-steps-guides-use-a-wallet",
+      "page-start-steps-guides-swap-tokens",
+      "page-start-steps-guides-id-scam-tokens",
       "page-start-share-section-title",
       "page-start-share-section-description",
-      "page-start-man-doge-alt",
       "page-start-share-modal-trigger",
       "page-start-share-modal-title",
       "page-start-share-modal-description",
@@ -182,28 +275,16 @@
       "page-start-share-modal-share",
       "page-start-share-modal-twitter",
       "page-start-share-modal-tweet-text",
-      "page-start-download-wallet-title",
-      "page-start-download-wallet-description",
-      "page-start-download-wallet-checkbox",
-      "page-start-download-wallet-continue",
-      "page-start-download-wallet-get-wallet",
-      "page-start-connect-wallet-title",
       "page-start-connect-wallet-description",
       "page-start-connect-wallet-account-message",
-      "page-start-connect-wallet-continue",
-      "page-start-connect-wallet-finance-alt",
-      "page-start-apps-title",
-      "page-start-apps-description",
-      "page-start-apps-explore-more",
-      "page-start-apps-go",
       "page-start-apps-socials-tag",
       "page-start-apps-finance-tag",
       "page-start-apps-collectibles-tag",
-      "page-start-apps-farcaster-description",
       "page-start-apps-aave-description",
       "page-start-apps-uniswap-description",
-      "page-start-apps-opensea-description"
+      "page-start-apps-opensea-description",
+      "page-start-apps-zora-description"
     ]
   },
-  "sourceCommitSha": "647106d896d17d983a5bec54d4f14ca23f4039cf"
+  "sourceCommitSha": "01d9bbb68daf967f8383bdea4591448682bbd542"
 }

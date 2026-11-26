@@ -1,0 +1,268 @@
+{
+  "version": 2,
+  "sourceFile": "src/intl/en/component-account.json",
+  "generatedAt": "2026-11-26T15:03:02.918Z",
+  "rootHash": "3b27ac9e7641",
+  "tree": {
+    "contentHash": "e2278338712d",
+    "anchorHash": "c66fdec2febf",
+    "children": {
+      "account-continue-title": {
+        "contentHash": "f2fe3e7a3a87",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-continue-description": {
+        "contentHash": "6c2a158c0a72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-continue-passkey": {
+        "contentHash": "5af97b6cd5ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-passkey-missing": {
+        "contentHash": "2eac30615cb6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-create-passkey": {
+        "contentHash": "deecceb8db52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-sign-in-wallet": {
+        "contentHash": "648440a11800",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-wallet-statement": {
+        "contentHash": "c8081e035f96",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-wallet-taken": {
+        "contentHash": "4172e434b8ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-error": {
+        "contentHash": "3ccd9d6586ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-passkey-default-name": {
+        "contentHash": "904c9aa9baae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-methods-title": {
+        "contentHash": "5854d46a1053",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-methods-hint": {
+        "contentHash": "08c9b9ef57dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-add-passkey": {
+        "contentHash": "09fb67d57bc7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-add-wallet": {
+        "contentHash": "b638fcc05086",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-sessions-title": {
+        "contentHash": "d223f894cb67",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-sessions-hint": {
+        "contentHash": "459cd7c84f7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-session-current": {
+        "contentHash": "d052579c6a31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-session-other": {
+        "contentHash": "0d557cdf264a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-session-signed-in": {
+        "contentHash": "c64a4290d7fb",
+        "anchorHash": "447c3aacf35b",
+        "children": {
+          "prose:1": {
+            "contentHash": "ca566c8968e7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20cadc1ac13b"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "account-sign-out-others": {
+        "contentHash": "2e75111bfa43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-remove": {
+        "contentHash": "c3812fc4acb8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-sign-out": {
+        "contentHash": "48f0d3d397d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-delete": {
+        "contentHash": "a2e20a335700",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-delete-title": {
+        "contentHash": "e3b4e711266e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-delete-description": {
+        "contentHash": "e0e2883b4e7e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-confirm-title": {
+        "contentHash": "6176eec272e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-confirm-description": {
+        "contentHash": "8a62887e20a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-confirm-failed": {
+        "contentHash": "8023316e5b7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-cancel": {
+        "contentHash": "19766ed6ccb2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-sign-in": {
+        "contentHash": "bfd402b2f6f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-signed-in": {
+        "contentHash": "ca566c8968e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-rename": {
+        "contentHash": "3064d79a295c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-passkey-name": {
+        "contentHash": "30a3a952bf7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-save": {
+        "contentHash": "1509f561f241",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-name-label": {
+        "contentHash": "2b7f6a84de91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-name-saved": {
+        "contentHash": "b5c120b316c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-name-length": {
+        "contentHash": "def0e9910530",
+        "anchorHash": "6ff2b72c25e2",
+        "children": {
+          "prose:2": {
+            "contentHash": "c36d819e7bc6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3295bc4ac8e6"
+          },
+          "prose:3": {
+            "contentHash": "663ea1bfffe5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "165bb764e3b4"
+          },
+          "prose:4": {
+            "contentHash": "58213fd0f931",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1",
+          "prose:4"
+        ]
+      },
+      "account-name-characters": {
+        "contentHash": "912bc2abc837",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-name-link": {
+        "contentHash": "3975fd8366fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-name-reserved": {
+        "contentHash": "59515db59363",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-name-language": {
+        "contentHash": "c9d799a93423",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-name-edit": {
+        "contentHash": "e6868d03ec2a",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "account-continue-title",
+      "account-continue-description",
+      "account-continue-passkey",
+      "account-passkey-missing",
+      "account-create-passkey",
+      "account-sign-in-wallet",
+      "account-wallet-statement",
+      "account-wallet-taken",
+      "account-error",
+      "account-passkey-default-name",
+      "account-methods-title",
+      "account-methods-hint",
+      "account-add-passkey",
+      "account-add-wallet",
+      "account-sessions-title",
+      "account-sessions-hint",
+      "account-session-current",
+      "account-session-other",
+      "account-session-signed-in",
+      "account-sign-out-others",
+      "account-remove",
+      "account-sign-out",
+      "account-delete",
+      "account-delete-title",
+      "account-delete-description",
+      "account-confirm-title",
+      "account-confirm-description",
+      "account-confirm-failed",
+      "account-cancel",
+      "account-sign-in",
+      "account-signed-in",
+      "account-rename",
+      "account-passkey-name",
+      "account-save",
+      "account-name-label",
+      "account-name-saved",
+      "account-name-length",
+      "account-name-characters",
+      "account-name-link",
+      "account-name-reserved",
+      "account-name-language",
+      "account-name-edit"
+    ]
+  },
+  "sourceCommitSha": "01d9bbb68daf967f8383bdea4591448682bbd542"
+}
