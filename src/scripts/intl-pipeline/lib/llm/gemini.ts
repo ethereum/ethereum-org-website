@@ -32,7 +32,7 @@ import {
   restoreComments,
 } from "./code-block-extractor"
 import { type ContentNode, normalizeContent } from "./content-normalizer"
-import { recordUsage, reserveForCall } from "./cost-meter"
+import { recordUsage, reserveForCall, RunFuseExceededError } from "./cost-meter"
 import {
   chunkJson,
   mergeJsonBatches,
@@ -490,6 +490,30 @@ function restoreHeadingIds(translated: string, english: string): string {
   }
 
   return lines.join("\n")
+}
+
+/** Inline-code placeholders the translation dropped or repeated: per tag, and how many copies are off in all. */
+function codePlaceholderIssues(
+  source: string,
+  translated: string
+): { issues: string[]; off: number } {
+  const count = (text: string) => {
+    const m = new Map<string, number>()
+    for (const tag of text.match(/<HTML-PLACEHOLDER-CODE-[a-f0-9]+ \/>/g) ?? [])
+      m.set(tag, (m.get(tag) ?? 0) + 1)
+    return m
+  }
+  const want = count(source)
+  const got = count(translated)
+  const issues: string[] = []
+  let off = 0
+  for (const tag of new Set([...want.keys(), ...got.keys()])) {
+    const w = want.get(tag) ?? 0
+    const g = got.get(tag) ?? 0
+    if (w !== g) issues.push(`${tag} x${g} (expected x${w})`)
+    off += Math.abs(w - g)
+  }
+  return { issues, off }
 }
 
 /**
@@ -1242,7 +1266,8 @@ ${JSON.stringify(commentPayload, null, 2)}`
  */
 async function callGemini(
   options: TranslateFileOptions,
-  metadata?: GeminiCallMetadata
+  metadata?: GeminiCallMetadata,
+  raw: typeof callGeminiRaw = callGeminiRaw
 ): Promise<TranslateFileResult> {
   const {
     filePath,
@@ -1255,7 +1280,7 @@ async function callGemini(
   } = options
 
   const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
-  const prompt = buildTranslationPrompt({
+  const basePrompt = buildTranslationPrompt({
     filePath,
     fileContent,
     fileType,
@@ -1265,18 +1290,46 @@ async function callGemini(
     htmlExtracted,
     normalized,
   })
+  let prompt = basePrompt
+  // chunkProse / chunkJson only exceed MAX_CHUNK_BYTES for a unit they cannot
+  // split (one paragraph, one JSON key). Such a chunk is irreducible: there is
+  // no smaller call to make, so the per-call ceiling does not apply to it.
+  const irreducible =
+    metadata?.irreducible ??
+    isIrreducibleChunk(Buffer.byteLength(fileContent, "utf-8"))
+
+  // Every attempt is billed, so its tokens count.
+  const tokensUsed = { input: 0, output: 0 }
+  // The valid reply that lost the least so far: other placeholders first (a
+  // lost link or component fails the gate), then inline-code tags. Lost code
+  // never fails the file: what re-sending can't clear ships for review.
+  let best: {
+    text: string
+    issues: string[]
+    off: number
+    otherLost: number
+  } | null = null
+  const shipBest = (why: string) => {
+    console.warn(
+      `[WARN] ${filePath}: ${why}; shipping the reply that lost the least inline code (${best!.issues.join(", ")}) for review`
+    )
+    return { translatedContent: best!.text, tokensUsed }
+  }
 
   // Retry loop for validation failures (API call retries are in callGeminiRaw)
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    // chunkProse / chunkJson only exceed MAX_CHUNK_BYTES for a unit they cannot
-    // split (one paragraph, one JSON key). Such a chunk is irreducible: there is
-    // no smaller call to make, so the per-call ceiling does not apply to it.
-    const result = await callGeminiRaw(prompt, {
-      ...metadata,
-      irreducible:
-        metadata?.irreducible ??
-        isIrreducibleChunk(Buffer.byteLength(fileContent, "utf-8")),
-    })
+    let result: Awaited<ReturnType<typeof callGeminiRaw>>
+    try {
+      result = await raw(prompt, { ...metadata, irreducible })
+    } catch (error) {
+      if (!best || error instanceof RunFuseExceededError) throw error
+      return shipBest(
+        `re-send failed (${error instanceof Error ? error.message.split("\n")[0] : error})`
+      )
+    }
+
+    tokensUsed.input += result.tokensUsed.input
+    tokensUsed.output += result.tokensUsed.output
 
     let text = result.text
     text = stripCodeBlockWrapping(text, fileType)
@@ -1287,10 +1340,41 @@ async function callGemini(
         : validateTranslatedMarkdown(text, fileContent, targetLanguage)
 
     if (validation.valid) {
-      return {
-        translatedContent: text,
-        tokensUsed: result.tokensUsed,
+      const { issues, off } =
+        normalized && fileType === "markdown"
+          ? codePlaceholderIssues(fileContent, text)
+          : { issues: [], off: 0 }
+      const otherLost =
+        normalized && fileType === "markdown"
+          ? verifyPlaceholders(fileContent, text).filter(
+              (p) => !p.includes("PLACEHOLDER-CODE-")
+            ).length
+          : 0
+      if (
+        !best ||
+        otherLost < best.otherLost ||
+        (otherLost === best.otherLost && off < best.off)
+      )
+        best = { text, issues, off, otherLost }
+      if (!best.issues.length) {
+        return { translatedContent: best.text, tokensUsed }
       }
+      // The same prompt would come back the same at temperature 0
+      const withNote =
+        basePrompt +
+        `\n\nA previous attempt lost or repeated inline-code placeholders (${best.issues.slice(0, 10).join(", ")}${best.issues.length > 10 ? ` (+${best.issues.length - 10} more)` : ""}). Every <HTML-PLACEHOLDER-CODE-****** /> tag must appear exactly as many times as in the source.`
+      if (
+        attempt < MAX_RETRIES &&
+        (irreducible ||
+          Buffer.byteLength(withNote, "utf-8") <= MAX_PROMPT_BYTES)
+      ) {
+        console.warn(
+          `[WARN] ${filePath} attempt ${attempt}: inline code ${best.issues.join(", ")}. Retrying...`
+        )
+        prompt = withNote
+        continue
+      }
+      return shipBest("inline code still differs")
     }
 
     if (attempt < MAX_RETRIES) {
@@ -1300,6 +1384,8 @@ async function callGemini(
       await delay(RETRY_DELAY_MS * attempt)
       continue
     }
+
+    if (best) return shipBest(`re-send failed validation (${validation.error})`)
 
     throw new Error(
       `Output validation failed after ${MAX_RETRIES} attempts: ${validation.error}`
@@ -1613,4 +1699,6 @@ function stripCodeBlockWrapping(
 /** Test-only exports for internal helpers (not part of the public API). */
 export const _testOnly = {
   reconstructFromPlaceholders,
+  codePlaceholderIssues,
+  callGemini,
 }

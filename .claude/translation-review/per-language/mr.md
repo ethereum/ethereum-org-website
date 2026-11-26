@@ -1,5 +1,15 @@
 # Marathi (mr) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: execution client x4 reverted to glossary form, epoch to parva, deployed to prasthapit x4, actors as performers, high-volume as aawaj, builder. Open: computed as mojlele (measured), state root as mool, l1 numeral.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: two placeholder swaps, builder, deploy, checkpoint, execution/consensus client, equivocation, contract. Open: fork choice spelling variants, scenario, mnemonic.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 8.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -195,3 +205,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - multi-client fully re-registered toward English loanwords (`लोकल`, `टेस्ट करावे`) although only sections changed -- native call
 - ABI/EVM spelled out (#80); echidna:747 same relative-clause issue as hi
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- API over-expanded; translation-program:29 softened to "one way".
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

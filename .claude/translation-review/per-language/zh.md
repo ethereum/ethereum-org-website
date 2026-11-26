@@ -1,5 +1,15 @@
 # Simplified Chinese (zh) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: optimistic rollup to 乐观 Rollup x5, two CJK emphasis-flanking defects (strong tags), plus one in verifying. Open: lone 您 in pos, 先决 vs 前提条件, API over-expansion, leaked English glosses in portal-network, Blob vs 斑点.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.7/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, shuangqian for equivocation, youxianfei. Open: di N bu vs buzhou N, plate three ways, custody tuoguan vs baoguan.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -190,3 +200,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - echidna title dropped the Latin `(Echidna)` gloss; glossary-correct, but the tool name now appears nowhere in prose while users type `echidna` -- glossary follow-up
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Spaces added around restored spans, as dev had.
+
+**Open / notes:**
+
+- API re-expanded on L21.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

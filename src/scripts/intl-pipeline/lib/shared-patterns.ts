@@ -104,7 +104,10 @@ export function proseLineMask(lines: readonly string[]): boolean[] {
 }
 
 /** Inline code span, bounded to one line -- see {@link CODE_SPLIT_RE}. */
-const INLINE_CODE_RE = /`[^`\n]+`/g
+export const INLINE_CODE_RE = /`[^`\n]+`/g
+
+/** Any placeholder text, however mangled; none may reach shipped output. */
+export const PLACEHOLDER_RESIDUE_RE = /HTML-PLACEHOLDER-[^\s>]*/gi
 
 /**
  * Rewrite the prose runs of a single line, leaving inline code spans alone.
@@ -124,6 +127,34 @@ export function replaceOutsideInlineCode(
     last = m.index + m[0].length
   }
   return out + fn(line.slice(last))
+}
+
+/** Inline code spans outside fenced blocks, backticks included, in order. */
+export function inlineCodeSpans(text: string): string[] {
+  FENCED_BLOCK_RE.lastIndex = 0
+  const prose = text.replace(FENCED_BLOCK_RE, "")
+  return prose.match(INLINE_CODE_RE) ?? []
+}
+
+/**
+ * Inline code is copied, never translated: spans English has that the
+ * translation lacks, and spans the translation has that English doesn't.
+ */
+export function inlineCodeDrift(
+  english: string,
+  translated: string
+): { missing: string[]; extra: string[] } {
+  const left = new Map<string, number>()
+  for (const span of inlineCodeSpans(english))
+    left.set(span, (left.get(span) ?? 0) + 1)
+  const extra: string[] = []
+  for (const span of inlineCodeSpans(translated)) {
+    const n = left.get(span) ?? 0
+    if (n) left.set(span, n - 1)
+    else extra.push(span)
+  }
+  const missing = [...left].flatMap(([span, n]) => Array(n).fill(span))
+  return { missing, extra }
 }
 
 /** Normalize a fence info string to its bare language tag. */

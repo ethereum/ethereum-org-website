@@ -3,29 +3,29 @@ import { fetchRetry } from "./fetchRetry"
 export const FETCH_L2BEAT_TASK_ID = "fetch-l2beat"
 
 /**
- * Fetch L2BEAT scaling summary data.
+ * Fetch ETHBEAT scaling summary data.
  * Returns scaling project data including TVL, maturity, and other metrics.
  *
- * @see https://l2beat.com/api/scaling/summary
+ * @see https://ethbeat.org/api/scaling/summary
  */
 export async function fetchL2beat(): Promise<unknown> {
-  const url = "https://l2beat.com/api/scaling/summary"
+  const url = "https://ethbeat.org/api/scaling/summary"
 
-  console.log("Starting L2BEAT data fetch")
+  console.log("Starting ETHBEAT data fetch")
 
   const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status
-    console.warn("L2BEAT fetch non-OK", { status, url })
+    console.warn("ETHBEAT fetch non-OK", { status, url })
     throw new Error(
-      `L2BEAT API responded with ${status}: ${response.statusText}`
+      `ETHBEAT API responded with ${status}: ${response.statusText}`
     )
   }
 
   const data = await response.json()
 
-  console.log("Successfully fetched L2BEAT data")
+  console.log("Successfully fetched ETHBEAT data")
 
   return data
 }

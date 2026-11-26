@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: "Aprenda sobre a atualização do protocolo Glamsterdam"
+description: "Glamsterdam é a próxima atualização do Ethereum após Fusaka. Saiba como ela planeja escalar a camada 1 com processamento paralelo, ePBS e precificação de estado mais justa."
 lang: pt-br
 template: upgrade
 ---
@@ -15,68 +15,72 @@ A atualização Glamsterdam é apenas um único passo nos objetivos de desenvolv
 
 A próxima atualização Glamsterdam do [Ethereum](/) foi projetada para abrir caminho para a próxima geração de escalabilidade. Glamsterdam recebe esse nome a partir da combinação de "Amsterdam" (atualização da camada de execução, nomeada em homenagem a um local anterior da Devconnect) e "Gloas" (atualização da camada de consenso, nomeada em homenagem a uma estrela).
 
-Seguindo o progresso feito na atualização [Fusaka](/roadmap/fusaka/), a Glamsterdam se concentra em escalar a camada 1 (l1) reorganizando como a rede processa transações e gerencia seu banco de dados crescente, atualizando fundamentalmente como o Ethereum cria e verifica blocos.
+Seguindo o progresso feito na atualização [Fusaka](/roadmap/fusaka/), Glamsterdam foca em escalar a camada 1 (l1) reorganizando como a rede processa transações e gerencia seu banco de dados crescente, atualizando fundamentalmente como o Ethereum cria e verifica blocos.
 
-Enquanto a Fusaka se concentrou em refinamentos fundamentais, a Glamsterdam avança os objetivos de "Escalar a L1" e "Escalar Blobs" ao consagrar a separação de funções entre diferentes participantes da rede e introduzir maneiras mais eficientes de lidar com dados para preparar o [estado](/glossary/#state) para paralelização de alta vazão.
+Enquanto Fusaka focou em refinamentos fundamentais, Glamsterdam avança os objetivos de "Escalar a L1" e "Escalar Blobs" ao consagrar a separação de funções entre diferentes participantes da rede e introduzir maneiras mais eficientes de lidar com dados para preparar o [estado](/glossary/#state) para paralelização de alta vazão.
 
 Essas melhorias garantem que o Ethereum permaneça rápido, acessível e descentralizado à medida que lida com mais atividades, mantendo os requisitos de hardware gerenciáveis para pessoas que executam [nós](/glossary/#node) em casa.
 
 <VideoWatch slug="ethereum-evolution-glamsterdam" />
 
-## Melhorias consideradas para a Glamsterdam {#improvements-in-glamsterdam}
+## Melhorias no Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Nota: Este artigo destaca uma seleção de Propostas de Melhoria do Ethereum (EIPs) programadas para inclusão na Glamsterdam. Propostas adicionais programadas que estão sendo testadas em devnets incluem EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246 e EIP-8282. O escopo está congelado, mas ainda pode mudar antes da Mainnet, já que a meta EIP permanece em rascunho. Para as atualizações de status mais recentes, veja a [atualização Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Nota: Este artigo destaca uma seleção de EIPs programadas para inclusão no Glamsterdam. Propostas adicionais programadas sendo testadas em devnets incluem EIP-7688, EIP-7778, EIP-7843, EIP-7976, EIP-7981, EIP-8024, eth/72 (EIP-8070), EIP-8136, snap/2 (EIP-8189), EIP-8246 e EIP-8282. O escopo está congelado, mas ainda pode mudar antes da Mainnet, já que a meta EIP permanece em rascunho. Para as atualizações de status mais recentes, veja a [atualização Glamsterdam no Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Se você quiser adicionar uma EIP que está sendo considerada para a Glamsterdam, mas que ainda não foi adicionada a esta página, [saiba como contribuir para o ethereum.org aqui](/contributing/).
+Se você quiser adicionar uma EIP que está sob consideração para o Glamsterdam, mas ainda não foi adicionada a esta página, [saiba como contribuir para o ethereum.org aqui](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 A atualização Glamsterdam concentra-se em três objetivos principais:
 
-- Acelerar o processamento (paralelização): reorganizar como a rede registra as dependências de dados, para que possa processar com segurança muitas transações ao mesmo tempo, em vez de em uma sequência lenta, uma a uma.
-- Expandir a capacidade: dividir o trabalho pesado de criar e verificar blocos, dando à rede mais tempo para propagar quantidades maiores de dados sem perder velocidade.
-- Prevenir o inchaço do banco de dados (sustentabilidade): ajustar as taxas da rede para refletir com precisão o custo de hardware a longo prazo de armazenar novos dados, desbloqueando futuros aumentos no limite de gas e, ao mesmo tempo, evitando a degradação do desempenho do hardware.
+- Acelerar o processamento (paralelização): Reorganizar como a rede registra dependências de dados, para que possa processar com segurança muitas transações ao mesmo tempo, em vez de em uma sequência lenta, uma a uma.
+- Expandir a capacidade: Dividir o trabalho pesado de criar e verificar blocos, dando à rede mais tempo para propagar quantidades maiores de dados sem desacelerar.
+- Prevenir o inchaço do banco de dados (sustentabilidade): Ajustar as taxas da rede para refletir com precisão o custo de hardware a longo prazo de armazenar novos dados, desbloqueando futuros aumentos no limite de gas enquanto previne a degradação do desempenho do hardware.
 
-Em resumo, a Glamsterdam introduzirá mudanças estruturais para garantir que, à medida que a rede aumenta a capacidade, ela permaneça sustentável e o desempenho continue alto.
+Em resumo, Glamsterdam introduzirá mudanças estruturais para garantir que, à medida que a rede aumenta a capacidade, ela permaneça sustentável e o desempenho continue alto.
 
 ## Escalar a L1 e processamento paralelo {#scale-l1}
 
-O dimensionamento significativo da camada 1 (l1) exige o afastamento de premissas de confiança fora do protocolo e restrições de execução em série. A Glamsterdam aborda isso consagrando a separação de certas funções de construção de blocos e introduzindo novas estruturas de dados que permitem que a rede se prepare para o processamento paralelo.
+O dimensionamento significativo da L1 exige o afastamento de premissas de confiança fora do protocolo e restrições de execução em série. Glamsterdam aborda isso consagrando a separação de certas funções de construção de blocos e introduzindo novas estruturas de dados que permitem que a rede se prepare para o processamento paralelo.
 
-### Proposta principal: Separação Propositor-Construtor Consagrada (ePBS) {#epbs}
+### Destaque: Separação Propositor-Construtor Consagrada (ePBS) {#epbs}
+
+<EipTag upgrade="glamsterdam" id={7732} />
 
 - Remove premissas de confiança fora do protocolo e a dependência de retransmissores (relays) de terceiros
-- Suporta a escalabilidade da camada 1 (l1) permitindo cargas de execução muito maiores por meio de janelas de propagação estendidas
+- Suporta o dimensionamento da L1 permitindo cargas de execução muito maiores por meio de janelas de propagação estendidas
 - Introduz pagamentos de construtores sem necessidade de confiança diretamente no protocolo 
 - Exige atualizações arquitetônicas para pools de staking para permitir o monitoramento sem necessidade de confiança, embora a experiência geral do usuário de staking seja melhorada por um processo refinado de seleção de construtores
 
-Atualmente, o processo de propor e construir blocos inclui uma transferência entre proponentes de blocos e construtores de blocos. A relação entre proponentes e construtores não faz parte do protocolo principal do Ethereum, portanto, depende de middleware de terceiros confiáveis, software (retransmissores) e confiança fora do protocolo entre as entidades.
+Atualmente, o processo de propor e construir blocos inclui uma transferência entre propositores de blocos e construtores de blocos. O relacionamento entre proponentes e construtores não faz parte do protocolo principal do Ethereum, portanto, depende de middleware de terceiros confiáveis, software (retransmissores) e confiança fora do protocolo entre as entidades.
 
-A relação fora do protocolo entre proponentes e construtores também cria um "caminho crítico" (hot path) durante a validação de bloco que força os [validadores](/glossary/#validator) a se apressarem na transmissão e execução de transações em uma janela apertada de 2 segundos, limitando a quantidade de dados que a rede pode suportar.
+O relacionamento fora do protocolo entre proponentes e construtores também cria um "caminho crítico" (hot path) durante a validação de bloco que força os [validadores](/glossary/#validator) a se apressarem na transmissão e execução de transações em uma janela apertada de 2 segundos, limitando a quantidade de dados que a rede pode lidar.
 
 A **Separação Propositor-Construtor Consagrada (ePBS, ou EIP-7732)** separa formalmente o trabalho do proponente (que seleciona o bloco de consenso) do construtor (que monta a carga de execução), consagrando essa transferência diretamente no protocolo. 
 
 Construir a troca sem necessidade de confiança de uma carga de bloco por pagamento diretamente no protocolo remove a necessidade de middleware de terceiros (como o MEV-Boost). No entanto, construtores e proponentes ainda podem optar por usar retransmissores ou middleware fora do protocolo para recursos complexos que ainda não fazem parte do protocolo principal. 
 
-Para resolver o gargalo do "caminho crítico", a ePBS também introduz o Comitê de Pontualidade de Carga (Payload Timeliness Committee - PTC) e uma lógica de prazo duplo, permitindo que os validadores atestem o bloco de consenso e a pontualidade da carga de execução separadamente para maximizar a vazão.
+Para resolver o gargalo do "caminho crítico", o ePBS também introduz o Comitê de Pontualidade de Carga (PTC) e uma lógica de prazo duplo, permitindo que os validadores atestem o bloco de consenso e a pontualidade da carga de execução separadamente para maximizar a vazão.
 
 <VideoWatch slug="proposer-builder-separation" />
 
 Separar as funções de proponente e construtor no nível do protocolo expande a janela de propagação (ou o tempo disponível para espalhar dados pela rede) de 2 segundos para cerca de 9 segundos.
 
-Ao substituir middleware e retransmissores fora do protocolo por mecânicas dentro do protocolo, a ePBS reduz as dependências de confiança e permite que o Ethereum processe com segurança quantidades muito maiores de dados (como mais blobs para [camadas 2 (l2)](/glossary/#layer-2)) sem sobrecarregar a rede.
+Ao substituir middleware e retransmissores fora do protocolo por mecânicas dentro do protocolo, o ePBS reduz as dependências de confiança e permite que o Ethereum processe com segurança quantidades muito maiores de dados (como mais blobs para [camadas 2 (l2)](/glossary/#layer-2)) sem sobrecarregar a rede.
 
 **Recursos**: [Especificação técnica da EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
-### Proposta principal: Listas de Acesso em Nível de Bloco (BALs) {#bals}
+### Destaque: Listas de Acesso em Nível de Bloco (BALs) {#bals}
+
+<EipTag upgrade="glamsterdam" id={7928} />
 
 - Elimina gargalos de processamento sequencial fornecendo um mapa antecipado de todas as dependências de transação, preparando o terreno para que os validadores processem muitas transações em paralelo em vez de uma a uma
 - Permite que os nós atualizem seus registros lendo os resultados finais sem precisar reproduzir cada transação (sincronização sem execução), tornando muito mais rápido sincronizar um nó com a rede
-- Elimina adivinhações, permitindo que os validadores pré-carreguem todos os dados necessários de uma só vez em vez de descobri-los passo a passo, o que torna a validação muito mais rápida
+- Elimina adivinhações, permitindo que os validadores pré-carreguem todos os dados necessários de uma vez em vez de descobri-los passo a passo, o que torna a validação muito mais rápida
 
 O Ethereum de hoje é como uma estrada de pista única; como a rede não sabe quais dados uma transação precisará ou alterará (como quais contas uma transação tocará) até que uma transação seja executada, os validadores devem processar as transações uma a uma em uma linha estrita e sequencial. Se eles tentassem processar as transações todas de uma vez, sem conhecer essas dependências, duas transações poderiam acidentalmente tentar alterar exatamente os mesmos dados ao mesmo tempo, causando erros.
 
@@ -86,11 +90,13 @@ Como elas dão visibilidade instantânea sobre quais transações não se sobrep
 
 Como a BAL inclui os resultados finais das transações (os valores pós-execução), quando os nós da rede precisam sincronizar com o estado atual da rede, eles podem copiar esses resultados finais para atualizar seus registros. Os validadores não precisam mais reproduzir todas as transações complicadas do zero para saber o que aconteceu, tornando mais rápido e fácil para novos nós se juntarem à rede.
 
-As leituras de disco paralelas habilitadas pelas BALs serão um passo significativo em direção a um futuro onde o Ethereum poderá processar muitas transações de uma só vez, aumentando significativamente a velocidade da rede.
+As leituras de disco paralelas habilitadas pelas BALs serão um passo significativo em direção a um futuro onde o Ethereum poderá processar muitas transações de uma vez, aumentando significativamente a velocidade da rede.
 
-#### Troca de Lista de Acesso de Bloco eth/71 {#bale}
+#### eth/71 Troca de Lista de Acesso de Bloco {#bale}
 
-A Troca de Lista de Acesso de Bloco (eth/71 ou EIP-8159) é a companheira de rede direta para listas de acesso em nível de bloco. Enquanto as BALs desbloqueiam a execução paralela, a eth/71 atualiza o protocolo ponto a ponto para permitir que os nós realmente compartilhem essas listas pela rede. Agora exigida para todos os clientes da camada de execução, a troca de lista de acesso de bloco permitirá uma sincronização mais rápida e permitirá que os nós realizem atualizações de estado sem execução.
+<EipTag upgrade="glamsterdam" id={8159} />
+
+A Troca de Lista de Acesso de Bloco (eth/71 ou EIP-8159) é a companheira de rede direta das listas de acesso em nível de bloco. Enquanto as BALs desbloqueiam a execução paralela, a eth/71 atualiza o protocolo ponto a ponto para permitir que os nós realmente compartilhem essas listas pela rede. Agora exigida para todos os clientes da camada de execução, a troca de lista de acesso de bloco permitirá uma sincronização mais rápida e permitirá que os nós realizem atualizações de estado sem execução.
 
 **Recursos**:
 
@@ -99,19 +105,21 @@ A Troca de Lista de Acesso de Bloco (eth/71 ou EIP-8159) é a companheira de red
 
 ## Sustentabilidade da rede {#network-sustainability}
 
-À medida que a rede Ethereum cresce mais rápido, é importante garantir que o custo de usá-la corresponda ao desgaste do hardware que executa o Ethereum. A rede precisa aumentar seus limites de capacidade geral para escalar com segurança e processar mais transações.
+À medida que a rede Ethereum cresce mais rápido, é importante garantir que o custo de usá-la corresponda ao desgaste do hardware que executa o Ethereum. A rede precisa aumentar seus limites gerais de capacidade para escalar com segurança e processar mais transações.
 
 ### Aumento do custo de gas para criação de estado {#state-creation-gas-cost-increase}
+
+<EipTag upgrade="glamsterdam" id={8037} />
 
 - Garante que as taxas para criar novas contas ou contratos inteligentes reflitam com precisão o fardo de longo prazo que eles colocam no banco de dados do Ethereum
 - Define um **custo fixo por byte de estado (CPSB)** visando uma taxa de crescimento segura e previsível de 120 GiB/ano, garantindo que o hardware físico padrão possa continuar executando a rede
 - Separa a contabilidade dessas taxas específicas para um novo reservatório, removendo antigos limites de transação e permitindo que os desenvolvedores implantem aplicativos maiores e mais complexos
 
-Adicionar novas contas, tokens e [contratos inteligentes](/glossary/#smart-contract) cria dados permanentes (conhecidos como "estado") que todo computador que executa a rede deve armazenar indefinidamente. As taxas atuais para adicionar ou ler esses dados são inconsistentes e não refletem necessariamente o fardo real de armazenamento a longo prazo que eles colocam no hardware da rede.
+Adicionar novas contas, tokens e [contratos inteligentes](/glossary/#smart-contract) cria dados permanentes (conhecidos como "estado") que todo computador executando a rede deve armazenar indefinidamente. As taxas atuais para adicionar ou ler esses dados são inconsistentes e não refletem necessariamente o fardo real de armazenamento a longo prazo que eles colocam no hardware da rede.
 
 Algumas ações que criam estado no Ethereum, como criar novas contas ou implantar grandes contratos inteligentes, têm tido um custo relativamente baixo em comparação com o espaço de armazenamento permanente que ocupam nos nós da rede; por exemplo, a implantação de contrato é significativamente mais barata por byte do que a criação de slots de armazenamento.
 
-Sem ajustes, o crescimento do estado do Ethereum se tornaria insustentável à medida que a rede escala em direção ao piso de limite de gas de 200M habilitado pela Glamsterdam (com desenvolvedores testando atualmente em um limite de gas de bloco de referência de 150M para derivar preços de estado precisos).
+Sem ajuste, o crescimento do estado do Ethereum se tornaria insustentável à medida que a rede escala em direção ao piso de limite de gas de 200M habilitado pelo Glamsterdam (com desenvolvedores testando atualmente em um limite de gas de bloco de referência de 150M para derivar uma precificação de estado precisa).
 
 O **Aumento do custo de gas para criação de estado (ou EIP-8037)** harmoniza os custos vinculando-os ao tamanho real dos dados sendo criados, atualizando as taxas para que sejam proporcionais à quantidade de dados permanentes que uma operação cria ou acessa.
 
@@ -119,37 +127,41 @@ A EIP-8037 também introduz um modelo de reservatório para gerenciar esses cust
 
 Antes da EIP-8037, tanto o trabalho computacional (o processamento ativo) quanto o armazenamento de dados permanentes (salvar o contrato inteligente no banco de dados da rede) compartilhavam o mesmo limite de gas. O modelo de reservatório divide a contabilidade: o limite de gas para o trabalho computacional real da transação (processamento) e para o armazenamento de dados a longo prazo (gas de estado). Separar os dois ajuda a evitar que o tamanho absoluto dos dados de um aplicativo atinja o limite de gas; desde que os desenvolvedores forneçam fundos suficientes para encher o reservatório para armazenamento de dados, eles podem implantar contratos inteligentes muito maiores e mais complexos.
 
-Precificar o armazenamento de dados de forma mais precisa e previsível ajudará o Ethereum a aumentar com segurança sua velocidade e capacidade sem inchar o banco de dados. Essa sustentabilidade permitirá que os operadores de nós continuem usando hardware (relativamente) acessível nos próximos anos, mantendo o staking doméstico acessível para manter a descentralização da rede.
+Precificar o armazenamento de dados de forma mais precisa e previsível ajudará o Ethereum a aumentar com segurança sua velocidade e capacidade sem inchar o banco de dados. Essa sustentabilidade permitirá que os operadores de nós continuem usando hardware (relativamente) acessível por muitos anos, mantendo o staking doméstico acessível para manter a descentralização da rede.
 
 **Recursos**: [Especificação técnica da EIP-8037](https://eips.ethereum.org/EIPS/eip-8037)
 
-### Atualização do custo de gas para acesso ao estado {#state-access-gas-cost-update}
+### Atualização do custo de gás para acesso de estado {#state-access-gas-cost-update}
 
-- Aumenta os custos de gas para quando os aplicativos leem ou atualizam informações armazenadas permanentemente no Ethereum (códigos de operação de acesso ao estado) para corresponder com precisão ao trabalho de computação que esses comandos exigem
+<EipTag upgrade="glamsterdam" id={8038} />
+
+- Aumenta os custos de gás para quando os aplicativos leem ou atualizam informações armazenadas permanentemente no Ethereum (códigos de operação de acesso de estado) para corresponder com precisão ao trabalho de computação que esses comandos exigem
 - Fortalece a resiliência da rede prevenindo ataques de negação de serviço que exploram operações de leitura de dados artificialmente baratas
 
-À medida que o estado do Ethereum cresceu, o ato de pesquisar e ler dados antigos ("acesso ao estado") tornou-se mais pesado e lento para os nós processarem. As taxas para essas ações permaneceram as mesmas, embora agora seja um pouco mais caro procurar informações (em termos de poder de computação).
+À medida que o estado do Ethereum cresceu, o ato de pesquisar e ler dados antigos ("acesso de estado") tornou-se mais pesado e lento para os nós processarem. As taxas para essas ações permaneceram as mesmas, embora agora seja um pouco mais caro procurar informações (em termos de poder de computação).
 
 Como resultado, alguns comandos específicos estão atualmente subprecificados em relação ao trabalho que forçam um nó a fazer. `EXTCODESIZE` e `EXTCODECOPY` estão subprecificados, por exemplo, porque exigem duas leituras de banco de dados separadas — uma para o objeto da conta e uma segunda para o tamanho real do código ou bytecode.
 
-A **Atualização do custo de gas para acesso ao estado (ou EIP-8038)** aumenta as constantes de gas para códigos de operação de acesso ao estado, como pesquisar dados de contas e contratos, para se alinhar com o desempenho do hardware moderno e o tamanho do estado.
+A **Atualização do custo de gás para acesso de estado (ou EIP-8038)** aumenta as constantes de gás para códigos de operação de acesso de estado, como pesquisar dados de contas e contratos, para se alinhar com o desempenho do hardware moderno e o tamanho do estado.
 
-Alinhar o custo do acesso ao estado também ajuda a tornar o Ethereum mais resiliente. Como essas ações pesadas de leitura de dados são artificialmente baratas, um invasor mal-intencionado poderia enviar spam para a rede com milhares de solicitações de dados complexas em um único bloco antes de atingir o limite de taxas da rede, potencialmente fazendo com que a rede trave ou falhe (um ataque de negação de serviço). Mesmo sem intenção maliciosa, os desenvolvedores não são economicamente encorajados a construir aplicativos eficientes se a leitura de dados da rede for muito barata.
+Alinhar o custo do acesso de estado também ajuda a tornar o Ethereum mais resiliente. Como essas ações pesadas de leitura de dados são artificialmente baratas, um invasor mal-intencionado poderia enviar spam para a rede com milhares de solicitações de dados complexas em um único bloco antes de atingir o limite de taxas da rede, potencialmente fazendo com que a rede trave ou falhe (um ataque de negação de serviço). Mesmo sem intenção maliciosa, os desenvolvedores não são economicamente encorajados a construir aplicativos eficientes se a leitura de dados da rede for muito barata.
 
-Ao precificar as ações de acesso ao estado com mais precisão, o Ethereum pode ser mais resiliente contra lentidões acidentais ou intencionais, enquanto alinhar os custos da rede com a carga de hardware prova ser uma base mais sustentável para futuros aumentos no limite de gas.
+Ao precificar as ações de acesso de estado com mais precisão, o Ethereum pode ser mais resiliente contra lentidões acidentais ou intencionais, enquanto alinhar os custos da rede com a carga de hardware prova ser uma base mais sustentável para futuros aumentos no limite de gas.
 
 **Recursos**: [Especificação técnica da EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
 ## Resiliência da rede {#network-resilience}
 
-Refinamentos nas funções dos validadores e nos processos de saída garantem a estabilidade da rede durante eventos de penalização em massa (slashing) e aceleram a rapidez com que os stakers podem movimentar seu stake. Essas melhorias tornam a rede mais estável e garantem que todos os participantes, grandes e pequenos, sejam tratados de forma justa.
+Refinamentos nas funções dos validadores e nos processos de saída garantem a estabilidade da rede durante eventos de penalização em massa e aceleram a rapidez com que os stakers podem mover seu stake. Essas melhorias tornam a rede mais estável e garantem que todos os participantes, grandes e pequenos, sejam tratados de forma justa.
 
 ### Excluir validadores penalizados de propor {#exclude-slashed-validators}
+
+<EipTag upgrade="glamsterdam" id={8045} />
 
 - Impede que validadores penalizados (slashed) sejam selecionados para propor blocos futuros, eliminando slots perdidos garantidos
 - Mantém o Ethereum funcionando de forma suave e confiável, prevenindo travamentos severos no caso de um evento de penalização em massa
 
-Atualmente, mesmo que um validador seja penalizado (punido por quebrar as regras ou não operar conforme o esperado), o sistema ainda pode escolhê-lo para liderar um bloco no futuro próximo quando gera previsões de proponentes futuros.
+Atualmente, mesmo que um validador seja penalizado (punido por quebrar as regras ou não operar como esperado), o sistema ainda pode escolhê-lo para liderar um bloco no futuro próximo quando gera previsões de proponentes futuros.
 
 Como os blocos de proponentes penalizados são automaticamente rejeitados como inválidos, isso faz com que a rede perca slots e atrasa a recuperação da rede durante eventos de penalização em massa.
 
@@ -157,15 +169,17 @@ Como os blocos de proponentes penalizados são automaticamente rejeitados como i
 
 **Recursos**: [Especificação técnica da EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Permitir que as saídas usem a fila de consolidação {#increase-exit-and-consolidation-churn}
+### Aumentar a rotatividade de saída e consolidação {#increase-exit-and-consolidation-churn}
 
-- Reduz significativamente os tempos de saque de staking, permitindo que a capacidade de saída escale com a quantidade total de ETH em stake, em vez de ser limitada a uma taxa fixa
+<EipTag upgrade="glamsterdam" id={8061} />
+
+- Reduz significativamente os tempos de saque de staking permitindo que a capacidade de saída escale com a quantidade total de ETH em stake, em vez de ser limitada a uma taxa fixa
 - Dá às consolidações de validadores sua própria capacidade de fila dedicada, acelerando a transição para validadores maiores e mais eficientes
 - Mantém a segurança da rede por meio de parâmetros de segurança cuidadosamente analisados
 
-O limite de rotatividade do Ethereum é um limite de segurança na taxa em que os validadores podem entrar, sair ou fundir (consolidar) seu ETH em stake, para garantir que a segurança da rede nunca seja desestabilizada. Hoje, saídas e ativações compartilham um único limite máximo, portanto, durante períodos de alta demanda, os stakers podem enfrentar longas esperas para sacar seu ETH. As consolidações, onde os validadores se fundem em validadores maiores com até 2.048 ETH (habilitado pela [atualização Pectra](/roadmap/pectra)), também competem por essa capacidade limitada, o que significa que consolidar todo o conjunto de validadores levaria anos na taxa atual.
+O limite de rotatividade do Ethereum é um limite de segurança na taxa em que os validadores podem entrar, sair ou fundir (consolidar) seu ETH em stake, para garantir que a segurança da rede nunca seja desestabilizada. Hoje, saídas e ativações compartilham um único limite máximo, então, durante períodos de alta demanda, os stakers podem enfrentar longas esperas para sacar seu ETH. As consolidações, onde os validadores se fundem em validadores maiores com até 2.048 ETH (habilitadas pela [atualização Pectra](/roadmap/pectra)), também competem por essa capacidade limitada, o que significa que consolidar o conjunto completo de validadores levaria anos na taxa atual.
 
-**Aumentar o limite de rotatividade de saída e consolidação (ou EIP-8061)** reorganiza esses limites em faixas separadas:
+**Aumentar a rotatividade de saída e consolidação (ou EIP-8061)** reorganiza esses limites em faixas separadas:
 
 - As ativações de validadores mantêm seu limite máximo existente, inalterado
 - As saídas não são mais limitadas e, em vez disso, escalam com a quantidade total de ETH em stake
@@ -173,15 +187,17 @@ O limite de rotatividade do Ethereum é um limite de segurança na taxa em que o
 
 Nos níveis atuais de staking, isso aumenta a capacidade de saída em cerca de 4x e a capacidade de consolidação em cerca de 2x, o que significa que os stakers podem sacar seu ETH muito mais rápido durante períodos de alta demanda e a rede transita mais rapidamente para um conjunto de validadores menor e mais eficiente.
 
-Como o stake pode entrar e sair da rede mais rapidamente, a mudança reduz pela metade o tempo que um nó pode permanecer offline antes de precisar de um ponto de verificação confiável recente para retornar com segurança à rede (o período de subjetividade fraca, de cerca de 15,7 dias para cerca de 7 dias). Essa compensação foi cuidadosamente analisada para garantir que a segurança da rede seja mantida.
+Como o stake pode entrar e sair da rede mais rápido, a mudança reduz pela metade o tempo que um nó pode permanecer offline antes de precisar de um ponto de verificação confiável recente para se juntar novamente à rede com segurança (o período de subjetividade fraca, de cerca de 15,7 dias para cerca de 7 dias). Essa compensação foi cuidadosamente analisada para garantir que a segurança da rede seja mantida.
 
 **Recursos**: [Especificação técnica da EIP-8061](https://eips.ethereum.org/EIPS/eip-8061)
 
 ## Melhorar a experiência do usuário e do desenvolvedor {#improve-user-developer-experience}
 
-A atualização Glamsterdam do Ethereum visa melhorar a experiência do usuário, aprimorar a descoberta de dados e lidar com o aumento do tamanho das mensagens para evitar falhas de sincronização. Isso torna mais fácil rastrear o que está acontecendo onchain, ao mesmo tempo em que evita problemas técnicos à medida que a rede escala.
+A atualização Glamsterdam do Ethereum visa melhorar a experiência do usuário, aprimorar a descoberta de dados e lidar com o aumento do tamanho das mensagens para evitar falhas de sincronização. Isso torna mais fácil rastrear o que está acontecendo onchain enquanto previne contratempos técnicos à medida que a rede escala.
 
 ### Reduzir os custos intrínsecos de gas de transação {#reduce-intrinsic-transaction-gas-costs}
+
+<EipTag upgrade="glamsterdam" id={2780} />
 
 - Reduz a taxa básica para transações, diminuindo o custo geral de um pagamento simples de ETH nativo
 - Torna transferências menores mais acessíveis, impulsionando a viabilidade do Ethereum como um meio de troca rotineiro
@@ -192,15 +208,17 @@ Reduzir o gas intrínseco de transação funciona dividindo a taxa de transaçã
 
 A proposta introduz uma exceção para a criação de contas totalmente novas para evitar que taxas mais baixas sobrecarreguem o estado da rede. Se uma transferência enviar ETH para um endereço vazio e inexistente, a rede deverá criar um novo registro permanente para ele. Uma sobretaxa de gas é adicionada para essa criação de conta para ajudar a cobrir seu fardo de armazenamento a longo prazo.
 
-Juntas, a EIP-2780 visa tornar as transferências diárias entre contas existentes mais acessíveis, garantindo que a rede ainda esteja protegida contra o inchaço do banco de dados, precificando com precisão o verdadeiro crescimento do estado.
+Juntas, a EIP-2780 visa tornar as transferências diárias entre contas existentes mais acessíveis, garantindo que a rede ainda esteja protegida contra o inchaço do banco de dados ao precificar com precisão o verdadeiro crescimento do estado.
 
 **Recursos**: [Especificação técnica da EIP-2780](https://eips.ethereum.org/EIPS/eip-2780)
 
 ### Pré-implantação de Fábrica Determinística {#deterministic-factory-predeploy}
 
+<EipTag upgrade="glamsterdam" id={7997} />
+
 - Dá aos desenvolvedores uma maneira nativa de implantar aplicativos e carteiras de contratos inteligentes exatamente no mesmo endereço em várias cadeias
 - Permite que os usuários tenham o mesmo endereço de carteira inteligente em várias redes de camada 2 (l2), reduzindo a carga cognitiva, reduzindo a confusão e reduzindo o risco de perda acidental de fundos
-- Substitui as soluções alternativas que os desenvolvedores usam atualmente para alcançar essa paridade, tornando mais fácil e seguro construir carteiras e aplicativos multi-cadeia
+- Substitui as soluções alternativas que os desenvolvedores usam atualmente para alcançar essa paridade, tornando mais fácil e seguro construir carteiras e aplicativos multi-chain
 
 Se um usuário tem uma carteira de contrato inteligente hoje com contas em várias cadeias compatíveis com a Máquina Virtual Ethereum (EVM), ele frequentemente acaba com um endereço completamente diferente em redes diferentes. Isso não é apenas confuso, mas pode levar à perda acidental de fundos.
 
@@ -208,24 +226,28 @@ A **Pré-implantação de Fábrica Determinística (ou EIP-7997)** dá aos desen
 
 A Pré-implantação de Fábrica Determinística funciona colocando permanentemente um programa de fábrica mínimo e especializado em um local idêntico (especificamente, o endereço 0x12) em cada cadeia compatível com EVM participante. Seu objetivo é fornecer um contrato de fábrica universal e padrão que possa ser adotado por qualquer rede compatível com EVM; desde que uma cadeia EVM participe e adote esse padrão, os desenvolvedores poderão usá-lo para implantar seus contratos inteligentes exatamente no mesmo endereço nessa rede.
 
-Essa padronização simplifica a construção e o gerenciamento de aplicativos cross-chain para desenvolvedores e o ecossistema mais amplo. Os desenvolvedores não precisam mais construir código personalizado e específico da cadeia para vincular seus softwares em diferentes redes, em vez disso, usam essa fábrica universal para gerar exatamente o mesmo endereço para seu aplicativo em todos os lugares. Além disso, exploradores de blocos, serviços de rastreamento e carteiras podem identificar e vincular mais facilmente esses aplicativos e contas em várias cadeias, criando um ambiente multi-cadeia mais unificado e contínuo para todos os participantes baseados no Ethereum.
+Essa padronização simplifica a construção e o gerenciamento de aplicativos cross-chain para desenvolvedores e o ecossistema mais amplo. Os desenvolvedores não precisam mais construir código personalizado e específico da cadeia para vincular seus softwares em redes diferentes, em vez disso, usam essa fábrica universal para gerar exatamente o mesmo endereço para seu aplicativo em todos os lugares. Além disso, exploradores de blocos, serviços de rastreamento e carteiras podem identificar e vincular mais facilmente esses aplicativos e contas em várias cadeias, criando um ambiente multi-chain mais unificado e contínuo para todos os participantes baseados no Ethereum.
 
 **Recursos**: [Especificação técnica da EIP-7997](https://eips.ethereum.org/EIPS/eip-7997)
 
 ### Transferências e queimas de ETH emitem um log {#eth-transfers-and-burns-emit-a-log}
+
+<EipTag upgrade="glamsterdam" id={7708} />
 
 - Gera automaticamente um registro permanente (log) toda vez que ETH é transferido ou queimado
 - Corrige um ponto cego histórico que permite que aplicativos, exchanges e pontes detectem de forma confiável os depósitos dos usuários sem ferramentas de rastreamento ad-hoc
 
 Ao contrário dos tokens (ERC-20s), as transferências regulares de ETH entre contratos inteligentes não emitem um recibo claro (log padrão), tornando-as difíceis de rastrear para exchanges e aplicativos.
 
-Transferências e queimas de ETH emitem um log (ou EIP-7708) torna obrigatório que a rede emita um evento de log padrão toda vez que uma quantia diferente de zero de ETH for movida ou queimada.
+Transferências e queimas de ETH emitem um log (ou EIP-7708) torna obrigatório que a rede emita um evento de log padrão toda vez que uma quantidade diferente de zero de ETH for movida ou queimada.
 
-Isso tornará muito mais fácil e confiável para carteiras, exchanges e operadores de pontes rastrear com precisão depósitos e movimentos sem ferramentas personalizadas.
+Isso tornará muito mais fácil e confiável para carteiras, exchanges e operadores de pontes rastrearem com precisão depósitos e movimentos sem ferramentas personalizadas.
 
 **Recursos**: [Especificação técnica da EIP-7708](https://eips.ethereum.org/EIPS/eip-7708)
 
-### Listas parciais de recibos de bloco eth/70 {#eth-70-partial-block-receipt-lists}
+### eth/70 listas parciais de recibos de bloco {#eth-70-partial-block-receipt-lists}
+
+<EipTag upgrade="glamsterdam" id={7975} />
 
 À medida que aumentamos a quantidade de trabalho que o Ethereum pode fazer, as listas de recibos para essas ações (os registros de dados dessas transações) estão ficando tão grandes que poderiam potencialmente fazer com que os nós da rede falhassem ao tentar sincronizar dados uns com os outros.
 
@@ -239,19 +261,16 @@ Essa mudança evitaria falhas de sincronização da rede durante períodos de at
 
 - [Roteiro do Ethereum](/roadmap/)
 - [Forkcast: Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
-- [Meta EIP da Glamsterdam](https://eips.ethereum.org/EIPS/eip-7773)
+- [Meta EIP do Glamsterdam](https://eips.ethereum.org/EIPS/eip-7773)
 - [Anúncio no blog sobre a Atualização de Prioridades do Protocolo para 2026](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
-- [Podcast The Daily Gwei Refuel - Ethereum pós-quântico, a Glamsterdam está chegando](https://www.youtube.com/watch?v=qx9sd50uQjQ)
-
-
-
+- [Podcast The Daily Gwei Refuel - Ethereum pós-quântico, Glamsterdam está chegando](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 
 ## Perguntas frequentes {#faq}
 
 ### Como o ETH pode ser convertido após a bifurcação rígida Glamsterdam? {#how-can-eth-be-converted-after-the-hardfork}
 
 - **Nenhuma ação é necessária para o seu ETH**: Não há necessidade de converter ou atualizar seu ETH após a atualização Glamsterdam. Os saldos da sua conta permanecerão os mesmos, e o ETH que você possui atualmente permanecerá acessível em sua forma existente após a bifurcação rígida.
-- **Cuidado com golpes!** <Emoji text="⚠️" /> **qualquer pessoa instruindo você a "atualizar" seu ETH está tentando aplicar um golpe.** Não há nada que você precise fazer em relação a esta atualização. Seus ativos permanecerão completamente inalterados. Lembre-se, manter-se informado é a melhor defesa contra golpes.
+- **Cuidado com golpes!** <Emoji text="⚠️" /> **qualquer pessoa instruindo você a "atualizar" seu ETH está tentando aplicar um golpe.** Não há nada que você precise fazer em relação a esta atualização. Seus ativos permanecerão completamente inalterados. Lembre-se, manter-se informado é a melhor defesa contra golpes.
 
 [Mais sobre como reconhecer e evitar golpes](/security/)
 
@@ -261,36 +280,36 @@ Sim, a atualização Glamsterdam exige atualizações tanto para [clientes de ex
 
 Todos os principais clientes do Ethereum lançarão versões com suporte à bifurcação rígida marcadas como de alta prioridade. Você pode acompanhar quando esses lançamentos estarão disponíveis nos repositórios do GitHub dos clientes, em seus [canais do Discord](https://ethstaker.org/support), no [Discord do EthStaker](https://dsc.gg/ethstaker), ou assinando o blog do Ethereum para atualizações do protocolo.
 
-Para manter a sincronização com a rede Ethereum após a atualização, os operadores de nós devem garantir que estão executando uma versão de cliente suportada. Observe que as informações sobre os lançamentos de clientes são sensíveis ao tempo, e os usuários devem consultar as atualizações mais recentes para obter os detalhes mais atuais.
+Para manter a sincronização com a rede Ethereum pós-atualização, os operadores de nós devem garantir que estão executando uma versão de cliente suportada. Observe que as informações sobre os lançamentos de clientes são sensíveis ao tempo, e os usuários devem consultar as atualizações mais recentes para obter os detalhes mais atuais.
 
-### Como um staker, o que preciso fazer para a atualização Glamsterdam? {#as-a-staker-what-do-i-need-to-do-for-the-glamsterdam-upgrade}
+### Como staker, o que preciso fazer para a atualização Glamsterdam? {#as-a-staker-what-do-i-need-to-do-for-the-glamsterdam-upgrade}
 
-Como em toda atualização de rede, certifique-se de atualizar seus clientes para as versões mais recentes marcadas com suporte à Glamsterdam. Acompanhe as atualizações na lista de e-mails e nos [Anúncios do Protocolo no Blog da EF](https://blog.ethereum.org/category/protocol) para se informar sobre os lançamentos.
+Como em toda atualização de rede, certifique-se de atualizar seus clientes para as versões mais recentes marcadas com suporte ao Glamsterdam. Acompanhe as atualizações na lista de e-mails e nos [Anúncios do Protocolo no Blog da EF](https://blog.ethereum.org/category/protocol) para se informar sobre os lançamentos.
 
-Para validar sua configuração antes que a Glamsterdam seja ativada na Mainnet, você pode executar um validador em redes de teste. As bifurcações de redes de teste também são anunciadas na lista de e-mails e no blog.
+Para validar sua configuração antes que o Glamsterdam seja ativado na Mainnet, você pode executar um validador em redes de teste. As bifurcações de redes de teste também são anunciadas na lista de e-mails e no blog.
 
-### Quais melhorias a Glamsterdam incluirá para a escalabilidade da L1? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
+### Quais melhorias o Glamsterdam incluirá para o dimensionamento da L1? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
 
-O recurso principal é a ePBS (EIP-7732), que separa a pesada tarefa de validar transações da rede da tarefa de alcançar consenso. Isso expande a janela de propagação de dados de 2 segundos para cerca de 9 segundos, desbloqueando a capacidade do Ethereum de lidar com segurança com uma vazão de transações muito maior e acomodar mais blobs de dados para redes de camada 2 (l2).
+O recurso de destaque é o ePBS (EIP-7732), que separa a pesada tarefa de validar transações da rede da tarefa de alcançar consenso. Isso expande a janela de propagação de dados de 2 segundos para cerca de 9 segundos, desbloqueando a capacidade do Ethereum de lidar com segurança com uma vazão de transações muito maior e acomodar mais blobs de dados para redes de camada 2 (l2).
 
-### A Glamsterdam reduzirá as taxas no Ethereum (camada 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
+### O Glamsterdam reduzirá as taxas no Ethereum (camada 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
 
-Sim, a Glamsterdam muito provavelmente reduzirá as taxas para usuários comuns! Reduzir o gas intrínseco de transação (ou EIP-2780) reduz a taxa básica para enviar ETH, tornando o ETH muito mais barato de usar para pagamentos diários.
+Sim, o Glamsterdam muito provavelmente reduzirá as taxas para usuários comuns! Reduzir o gás intrínseco de transação (ou EIP-2780) reduz a taxa básica para enviar ETH, tornando o ETH muito mais barato de usar para pagamentos diários.
 
-Além disso, para sustentabilidade a longo prazo, a Glamsterdam introduz Listas de Acesso em Nível de Bloco (BALs). Isso permite o processamento paralelo e prepara a L1 para lidar com segurança com limites de gas gerais mais altos no futuro, o que provavelmente reduzirá os custos de gas por transação à medida que a capacidade cresce.
+Além disso, para sustentabilidade a longo prazo, o Glamsterdam introduz Listas de Acesso em Nível de Bloco (BALs). Isso permite o processamento paralelo e prepara a L1 para lidar com segurança com limites de gas gerais mais altos no futuro, o que provavelmente reduzirá os custos de gás por transação à medida que a capacidade cresce.
 
-### Haverá alguma alteração nos meus contratos inteligentes existentes após a Glamsterdam? {#will-my-smart-contracts-change}
+### Haverá alguma mudança nos meus contratos inteligentes existentes pós-Glamsterdam? {#will-my-smart-contracts-change}
 
-Os contratos existentes continuarão a funcionar normalmente após a Glamsterdam. Os desenvolvedores provavelmente obterão várias ferramentas novas e devem revisar seu uso de gas:
+Os contratos existentes continuarão a funcionar normalmente após o Glamsterdam. Os desenvolvedores provavelmente obterão várias novas ferramentas e devem revisar seu uso de gás:
 
-- O Aumento do tamanho máximo do contrato (ou EIP-7954) permite que os desenvolvedores implantem aplicativos maiores, elevando o limite de tamanho máximo do contrato de aproximadamente 24 KiB para 64 KiB.
-- A Pré-implantação de Fábrica Determinística (ou EIP-7997) introduz um contrato de fábrica universal e integrado. Ela permite que os desenvolvedores implantem seus aplicativos e carteiras de contratos inteligentes exatamente no mesmo endereço em todas as cadeias EVM participantes.
+- Aumentar o tamanho máximo do contrato (ou EIP-7954) permite que os desenvolvedores implantem aplicativos maiores, elevando o limite de tamanho máximo do contrato de cerca de 24KiB para 64KiB.
+- A pré-implantação de fábrica determinística (ou EIP-7997) introduz um contrato de fábrica universal e integrado. Ela permite que os desenvolvedores implantem seus aplicativos e carteiras de contratos inteligentes exatamente no mesmo endereço em todas as cadeias EVM participantes.
 - Se o seu aplicativo depende de rastreamento complexo para encontrar transferências de ETH, Transferências e queimas de ETH emitem um log (ou EIP-7708) permitirá que você mude para o uso de logs para uma contabilidade mais simples e confiável.
-- O Aumento do custo de gas para criação de estado (ou EIP-8037) e a Atualização do custo de gas para acesso ao estado (ou EIP-8038) introduzem novos modelos de sustentabilidade que alterarão certos custos de implantação de contratos, pois a criação de novas contas ou armazenamento permanente terá uma nova taxa fixa padronizada com base no tamanho dos dados criados.
+- O aumento do custo de gás para criação de estado (ou EIP-8037) e a atualização do custo de gás para acesso de estado (ou EIP-8038) introduzem novos modelos de sustentabilidade que mudarão certos custos de implantação de contratos, já que a criação de novas contas ou armazenamento permanente terá uma nova taxa fixa padronizada com base no tamanho dos dados criados.
 
-### Como a Glamsterdam afetará o armazenamento do nó e os requisitos de hardware? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
+### Como o Glamsterdam afetará o armazenamento do nó e os requisitos de hardware? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
-Várias EIPs sob consideração para a Glamsterdam abordam o declínio acentuado de desempenho do crescimento do estado:
+Várias EIPs sob consideração para o Glamsterdam abordam o declínio de desempenho do crescimento do estado:
 
-- O aumento do custo de gas para criação de estado (ou EIP-8037) introduz uma estrutura de custo fixo (CPSB) para atingir uma taxa de crescimento do banco de dados de estado de 120 GiB/ano, garantindo que o hardware físico padrão possa continuar executando a rede com eficiência.
-- As listas parciais de recibos de bloco eth/70 (ou EIP-7975) permitem que os nós solicitem recibos de bloco paginados, o que divide listas de recibos de bloco pesadas em dados em pedaços menores para evitar falhas e problemas de sincronização à medida que o Ethereum escala.
+- O aumento do custo de gás para criação de estado (ou EIP-8037) introduz uma estrutura de custo fixo (CPSB) para atingir uma taxa de crescimento do banco de dados de estado de 120 GiB/ano, garantindo que o hardware físico padrão possa continuar executando a rede de forma eficiente.
+- As listas parciais de recibos de bloco eth/70 (ou EIP-7975) permitem que os nós solicitem recibos de bloco paginados, o que divide listas de recibos de bloco pesadas em dados em pedaços menores para evitar travamentos e falhas de sincronização à medida que o Ethereum escala.

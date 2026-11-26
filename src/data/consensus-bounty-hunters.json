@@ -163,7 +163,12 @@
     "username": "x15-eth",
     "name": "0x15",
     "score": 1250
-  },  
+  },
+  {
+    "username": "colinlyguo",
+    "name": "colinlyguo (AlphaSec)",
+    "score": 1125
+  },
   {
     "username": "nerolation",
     "name": "Toni Wahrstätter",
@@ -212,11 +217,6 @@
   {
     "username": "uShure",
     "name": "moguchever",
-    "score": 1000
-  },
-  {
-    "username": "colinlyguo",
-    "name": "colinlyguo (AlphaSec)",
     "score": 1000
   },
   {

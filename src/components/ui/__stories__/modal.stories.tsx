@@ -52,6 +52,21 @@ export const VariantSimulator: Story = {
   },
 }
 
+export const VariantStacked: Story = {
+  args: {
+    variant: "stacked",
+    title: "A longer title that a translation can make longer still",
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "`stacked` variant puts the close button on its own top row, so the title spans the full width. Use it when the title is long or translated, rather than letting it wrap around the close button.",
+      },
+    },
+  },
+}
+
 export const VariantUnstyled: Story = {
   args: {
     variant: "unstyled",

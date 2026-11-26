@@ -19,6 +19,7 @@ An issue is critical if at least one of:
 3. **Semantically wrong** — proof-of-stake ↔ proof-of-work, "mainnet" → "market", "client" → "customer", validator ↔ miner. Wei/Gwei/ETH translated to anything.
 4. **Deterministic ETHGlossary deviation** — locale form differs from the glossary entry where the entry's `script_rule` is `keep_latin`, `always_latin`, or `transliterate` (the `translation.term` field is the canonical form).
 5. **Brand/programming-language/OS-platform in wrong script** — Solidity transliterated when policy is `always_latin`; Python in Devanagari; macOS in Hangul.
+6. **Inline code lost or altered** — an English `` `backticked` `` span missing from the translation, or present only in altered form (`verify-structure` reports it as `missing` in an `inline-code` warning, so the pipeline gate ships the file for this review to repair). Code is copied, never translated: restore the English span in place, byte for byte, on lines the PR changed (a file behind its English waits for the pipeline instead). Backticks the translation only added (`unexpected` with nothing missing) are not critical.
 
 These are auto-fixable because the correct answer is deterministic. The auto-fix replaces the wrong form with the right one.
 

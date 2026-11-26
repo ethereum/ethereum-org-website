@@ -1,41 +1,58 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "it",
-  "translatedAt": "2026-06-16T22:03:18.677Z",
-  "englishManifestHash": "72c015a16f12",
+  "translatedAt": "2026-11-17T08:33:11.943Z",
+  "englishManifestHash": "81e43bc1d3db",
   "placeholderOrder": [
     "LINK-f832bc",
     "CODE-41cf67",
     "CODE-34a040",
-    "CODE-6aa5b5",
-    "CODE-3a6eb0",
+    "LINK-42e833",
+    "LINK-81d2c5",
+    "CODE-5574e7",
+    "CODE-7e616c",
     "CODE-3a6eb0",
     "CODE-1a2fc2",
     "CODE-3a6eb0",
     "CODE-3a6eb0",
+    "CODE-3a6eb0",
     "CODE-655883",
     "CODE-1bc04b",
+    "CODE-5feceb",
+    "CODE-3a6eb0",
+    "CODE-5574e7",
+    "CODE-7d2ed9",
+    "CODE-3a6eb0",
     "CODE-d8b9f4",
     "CODE-41cf67",
     "CODE-34a040",
     "CODE-3a6eb0",
-    "CODE-6aa5b5",
+    "LINK-dc6d4e",
     "CODE-3a6eb0",
     "CODE-3a6eb0",
     "CODE-6aa5b5",
     "CODE-3a6eb0",
+    "CODE-1a2fc2",
+    "CODE-7d2ed9",
+    "CODE-6aa5b5",
     "CODE-0da1c1",
+    "CODE-1a79d5",
     "CODE-3a6eb0",
     "CODE-6aa5b5",
-    "IMAGE-94cd9d",
+    "CODE-3a6eb0",
     "CODE-e7fa7b",
     "CODE-891d48",
     "CODE-c1fe50",
     "CODE-82d0a8",
     "CODE-c1fe50",
     "CODE-82d0a8",
+    "CODE-9f2e6d",
+    "CODE-41cf67",
+    "CODE-34a040",
+    "LINK-e9b21e",
     "LINK-783e50",
-    "LINK-996d0c"
+    "LINK-996d0c",
+    "LINK-87f010"
   ],
   "placeholderMap": {
     "CODE-41cf67": {
@@ -50,10 +67,16 @@
         "content": "target"
       }
     },
-    "CODE-6aa5b5": {
+    "CODE-5574e7": {
       "type": "inline-code",
       "values": {
-        "content": "aggregation_bits"
+        "content": "committee_index"
+      }
+    },
+    "CODE-7e616c": {
+      "type": "inline-code",
+      "values": {
+        "content": "attester_index"
       }
     },
     "CODE-3a6eb0": {
@@ -80,16 +103,40 @@
         "content": "index"
       }
     },
+    "CODE-5feceb": {
+      "type": "inline-code",
+      "values": {
+        "content": "0"
+      }
+    },
+    "CODE-7d2ed9": {
+      "type": "inline-code",
+      "values": {
+        "content": "committee_bits"
+      }
+    },
     "CODE-d8b9f4": {
       "type": "inline-code",
       "values": {
         "content": "beacon_block_root"
       }
     },
+    "CODE-6aa5b5": {
+      "type": "inline-code",
+      "values": {
+        "content": "aggregation_bits"
+      }
+    },
     "CODE-0da1c1": {
       "type": "inline-code",
       "values": {
         "content": "aggregators"
+      }
+    },
+    "CODE-1a79d5": {
+      "type": "inline-code",
+      "values": {
+        "content": "TARGET_AGGREGATORS_PER_COMMITTEE"
       }
     },
     "CODE-e7fa7b": {
@@ -116,16 +163,40 @@
         "content": "block n+1"
       }
     },
-    "IMAGE-94cd9d": {
-      "type": "image",
+    "CODE-9f2e6d": {
+      "type": "inline-code",
       "values": {
-        "path": "./attestation_schematic.png"
+        "content": "head"
       }
     },
     "LINK-f832bc": {
       "type": "link",
       "values": {
         "url": "/glossary/#epoch"
+      }
+    },
+    "LINK-42e833": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pectra/"
+      }
+    },
+    "LINK-81d2c5": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7549"
+      }
+    },
+    "LINK-dc6d4e": {
+      "type": "link",
+      "values": {
+        "url": "#aggregated-attestation"
+      }
+    },
+    "LINK-e9b21e": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-7045"
       }
     },
     "LINK-783e50": {
@@ -139,11 +210,17 @@
       "values": {
         "url": "https://eth2book.info/capella/part3/containers/dependencies/#attestationdata"
       }
+    },
+    "LINK-87f010": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/electra/beacon-chain.md#attestation"
+      }
     }
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-16T22:03:18.677Z",
+      "translatedAt": "2026-11-17T08:33:11.943Z",
       "status": "success"
     }
   }

@@ -15,24 +15,23 @@ Per comprendere meglio questa pagina, ti consigliamo di leggere prima le [transa
 
 Il gas si riferisce all'unità che misura la quantità di sforzo computazionale richiesto per eseguire operazioni specifiche sulla rete Ethereum.
 
-Poiché ogni transazione di Ethereum richiede risorse computazionali per essere eseguita, tali risorse devono essere pagate per garantire che Ethereum non sia vulnerabile allo spam e non possa rimanere bloccato in cicli computazionali infiniti. Il pagamento per il calcolo viene effettuato sotto forma di una commissione del gas.
+Poiché ogni transazione di Ethereum richiede risorse computazionali per essere eseguita, tali risorse devono essere pagate per garantire che Ethereum non sia vulnerabile allo spam e non possa rimanere bloccato in cicli computazionali infiniti. Il pagamento per il calcolo viene effettuato sotto forma di commissione del gas.
 
 La commissione del gas è **la quantità di gas utilizzata per eseguire un'operazione, moltiplicata per il costo per unità di gas**. La commissione viene pagata indipendentemente dal fatto che una transazione abbia successo o fallisca.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 Le commissioni del gas devono essere pagate nella valuta nativa di Ethereum, l'ether (ETH). I prezzi del gas sono solitamente quotati in Gwei, che è una denominazione di ETH. Ogni Gwei è pari a un miliardesimo di ETH (0,000000001 ETH o 10<sup>-9</sup> ETH).
 
 Ad esempio, invece di dire che il tuo gas costa 0,000000001 ether, puoi dire che il tuo gas costa 1 Gwei.
 
-La parola "Gwei" è una contrazione di "giga-wei", che significa "un miliardo di Wei". Un Gwei è uguale a un miliardo di Wei. Il Wei stesso (che prende il nome da [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), creatore di [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) è l'unità più piccola di ETH.
+La parola "Gwei" è una contrazione di "giga-wei", che significa "un miliardo di Wei". Un Gwei è pari a un miliardo di Wei. Il Wei stesso (che prende il nome da [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), creatore di [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) è l'unità più piccola di ETH.
 
 ## Come vengono calcolate le commissioni del gas? {#how-are-gas-fees-calculated}
 
 Puoi impostare la quantità di gas che sei disposto a pagare quando invii una transazione. Offrendo una certa quantità di gas, fai un'offerta affinché la tua transazione venga inclusa nel blocco successivo. Se offri troppo poco, è meno probabile che i validatori scelgano la tua transazione per l'inclusione, il che significa che la tua transazione potrebbe essere eseguita in ritardo o non essere eseguita affatto. Se offri troppo, potresti sprecare degli ETH. Quindi, come fai a sapere quanto pagare?
 
-Il gas totale che paghi è diviso in due componenti: la `base fee` e la `priority fee` (commissione prioritaria).
+Il prezzo che paghi per unità di gas è diviso in due componenti: la `base fee` (commissione di base) e la `priority fee` (commissione prioritaria).
 
 La `base fee` è impostata dal protocollo: devi pagare almeno questo importo affinché la tua transazione sia considerata valida. La `priority fee` è una commissione prioritaria che aggiungi alla commissione di base per rendere la tua transazione attraente per i validatori, in modo che la scelgano per l'inclusione nel blocco successivo.
 
@@ -54,30 +53,32 @@ Quando Jordan invia il denaro, 1,000252 ETH verranno detratti dall'account di Jo
 
 Ogni blocco ha una commissione di base che funge da prezzo di riserva. Per essere idoneo all'inclusione in un blocco, il prezzo offerto per il gas deve essere almeno pari alla commissione di base. La commissione di base viene calcolata indipendentemente dal blocco corrente ed è invece determinata dai blocchi precedenti, rendendo le commissioni di transazione più prevedibili per gli utenti. Quando il blocco viene creato, questa **commissione di base viene "bruciata"**, rimuovendola dalla circolazione.
 
-La commissione di base viene calcolata tramite una formula che confronta la dimensione del blocco precedente (la quantità di gas utilizzata per tutte le transazioni) con la dimensione target (metà del limite di gas). La commissione di base aumenterà o diminuirà di un massimo del 12,5% per blocco se la dimensione del blocco target è rispettivamente superiore o inferiore al target. Questa crescita esponenziale rende economicamente non redditizio che la dimensione del blocco rimanga elevata a tempo indeterminato.
+La commissione di base viene calcolata tramite una formula che confronta la dimensione del blocco precedente (la quantità di gas utilizzata per tutte le transazioni) con la dimensione target (metà del limite di gas). La commissione di base aumenterà o diminuirà di un massimo del 12,5% per blocco se la dimensione del blocco è rispettivamente superiore o inferiore al target. Questa crescita esponenziale rende economicamente non redditizio che la dimensione del blocco rimanga elevata a tempo indeterminato.
 
 | Numero del blocco | Gas incluso | Aumento della commissione | Commissione di base attuale |
-| ------------ | -----------: | -----------: | ---------------: |
-| 1            |          18M |           0% |         100 Gwei |
-| 2            |          36M |           0% |         100 Gwei |
-| 3            |          36M |        12,5% |       112,5 Gwei |
-| 4            |          36M |        12,5% |       126,6 Gwei |
-| 5            |          36M |        12,5% |       142,4 Gwei |
-| 6            |          36M |        12,5% |       160,2 Gwei |
-| 7            |          36M |        12,5% |       180,2 Gwei |
-| 8            |          36M |        12,5% |       202,7 Gwei |
+| ----------------- | ----------: | ------------------------: | --------------------------: |
+| 1                 |         30M |                        0% |                    0,1 Gwei |
+| 2                 |         60M |                        0% |                    0,1 Gwei |
+| 3                 |         60M |                     12,5% |                 0,1125 Gwei |
+| 4                 |         60M |                     12,5% |                 0,1266 Gwei |
+| 5                 |         60M |                     12,5% |                 0,1424 Gwei |
+| 6                 |         60M |                     12,5% |                 0,1602 Gwei |
+| 7                 |         60M |                     12,5% |                 0,1802 Gwei |
+| 8                 |         60M |                     12,5% |                 0,2027 Gwei |
 
-Nella tabella precedente, viene mostrato un esempio utilizzando 36 milioni come limite di gas. Seguendo questo esempio, per creare una transazione sul blocco numero 9, un portafoglio farà sapere all'utente con certezza che la **commissione di base massima** da aggiungere al blocco successivo è `current base fee * 112.5%` o `202.7 gwei * 112.5% = 228.1 gwei`.
+Nella tabella precedente, viene illustrato un esempio utilizzando 60 milioni come limite di gas. Seguendo questo esempio, per creare una transazione sul blocco numero 9, un portafoglio farà sapere all'utente con certezza che la **commissione di base massima** da aggiungere al blocco successivo è `current base fee * 112.5%` o `0.2027 gwei * 112.5% = 0.2281 gwei`.
+
+<BaseFeeDiagram />
 
 È anche importante notare che è improbabile che assisteremo a picchi prolungati di blocchi pieni a causa della velocità con cui la commissione di base aumenta prima di un blocco pieno.
 
 | Numero del blocco | Gas incluso | Aumento della commissione | Commissione di base attuale |
-| ------------ | -----------: | -----------: | ---------------: |
-| 30           |          36M |        12,5% |      2705,6 Gwei |
-| ...          |          ... |        12,5% |              ... |
-| 50           |          36M |        12,5% |     28531,3 Gwei |
-| ...          |          ... |        12,5% |              ... |
-| 100          |          36M |        12,5% |  10302608,6 Gwei |
+| ----------------- | ----------: | ------------------------: | --------------------------: |
+| 30                |         60M |                     12,5% |                 2,7056 Gwei |
+| ...               |         ... |                     12,5% |                         ... |
+| 50                |         60M |                     12,5% |                28,5313 Gwei |
+| ...               |         ... |                     12,5% |                         ... |
+| 100               |         60M |                     12,5% |             10302,6083 Gwei |
 
 ### Commissione di priorità (commissioni prioritarie) {#priority-fee}
 
@@ -85,7 +86,7 @@ La commissione di priorità (commissione prioritaria) incentiva i validatori a m
 
 ### Commissione massima {#maxfee}
 
-Per eseguire una transazione sulla rete, gli utenti possono specificare un limite massimo che sono disposti a pagare affinché la loro transazione venga eseguita. Questo parametro opzionale è noto come `maxFeePerGas`. Affinché una transazione venga eseguita, la commissione massima deve superare la somma della commissione di base e della commissione prioritaria. Al mittente della transazione viene rimborsata la differenza tra la commissione massima e la somma della commissione di base e della commissione prioritaria.
+Per eseguire una transazione sulla rete, gli utenti possono specificare un limite massimo che sono disposti a pagare affinché la loro transazione venga eseguita. Questo parametro opzionale è noto come `maxFeePerGas`. Affinché una transazione venga eseguita, la commissione massima deve essere almeno pari alla commissione di base e la commissione prioritaria pagata è limitata in modo che la commissione di base più la commissione prioritaria non superi mai la commissione massima. Al mittente della transazione viene rimborsata la differenza tra la commissione massima e la somma della commissione di base e della commissione prioritaria.
 
 ### Dimensione del blocco {#block-size}
 
@@ -101,12 +102,11 @@ Puoi dichiarare esplicitamente quanto sei disposto a pagare per far eseguire la 
 
 ## Perché esistono le commissioni del gas? {#why-do-gas-fees-exist}
 
-In breve, le commissioni del gas aiutano a mantenere sicura la rete Ethereum. Richiedendo una commissione per ogni calcolo eseguito sulla rete, impediamo ai malintenzionati di inviare spam alla rete. Al fine di evitare cicli infiniti accidentali o ostili o altri sprechi computazionali nel codice, ogni transazione è tenuta a impostare un limite a quanti passaggi computazionali di esecuzione del codice può utilizzare. L'unità fondamentale di calcolo è il "gas".
+In breve, le commissioni del gas aiutano a mantenere sicura la rete Ethereum. Richiedendo una commissione per ogni calcolo eseguito sulla rete, impediamo ai malintenzionati di inviare spam sulla rete. Al fine di evitare cicli infiniti accidentali o ostili o altri sprechi computazionali nel codice, ogni transazione deve impostare un limite al numero di passaggi computazionali di esecuzione del codice che può utilizzare. L'unità fondamentale di calcolo è il "gas".
 
-Sebbene una transazione includa un limite, qualsiasi gas non utilizzato in una transazione viene restituito all'utente (es., `max fee - (base fee + tip)` viene restituito).
+Sebbene una transazione includa un limite, qualsiasi gas non utilizzato in una transazione viene restituito all'utente (es., viene restituito `max fee - (base fee + tip)`).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Cos'è il limite di gas? {#what-is-gas-limit}
 
@@ -128,18 +128,12 @@ Il ridimensionamento di layer 2 (l2) è un'iniziativa primaria per migliorare no
 
 ## Monitoraggio delle commissioni del gas {#monitoring-gas-fees}
 
-Se vuoi monitorare i prezzi del gas, in modo da poter inviare i tuoi ETH a un costo inferiore, puoi utilizzare molti strumenti diversi come:
+Se desideri monitorare i prezzi del gas, in modo da poter inviare i tuoi ETH spendendo meno, puoi utilizzare molti strumenti diversi come:
 
 - [Etherscan](https://etherscan.io/gastracker) _Stimatore del prezzo del gas delle transazioni_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Stimatore open source del prezzo del gas delle transazioni_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitora e traccia i prezzi del gas di Ethereum e L2 per ridurre le commissioni di transazione e risparmiare denaro_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Estensione di Chrome per la stima del gas che supporta sia le transazioni legacy di Tipo 0 che le transazioni EIP-1559 di Tipo 2._
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitora e traccia i prezzi del gas di Ethereum e dei layer 2 (l2) per ridurre le commissioni di transazione e risparmiare denaro_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcola le commissioni del gas nella tua valuta locale per diversi tipi di transazioni su Mainnet, Arbitrum e Polygon._
-
-## Strumenti correlati {#related-tools}
-
-- [Piattaforma Gas di Blocknative](https://www.blocknative.com/gas) _API di stima del gas basata sulla piattaforma dati mempool globale di Blocknative_
-- [Gas Network](https://gas.network) Oracoli del gas onchain. Supporto per oltre 35 catene. 
 
 ## Letture consigliate {#further-reading}
 

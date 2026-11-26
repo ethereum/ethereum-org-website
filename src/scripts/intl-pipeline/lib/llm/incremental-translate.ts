@@ -9,9 +9,19 @@
  * arrived in, which are surgically placed back into the locale file.
  */
 
-import { MAX_PROMPT_BYTES } from "../../constants"
-import { TRANSLATABLE_ATTRIBUTES } from "../shared-patterns"
+import { MAX_PROMPT_BYTES, RETRY_NOTE_RESERVE_BYTES } from "../../constants"
+import {
+  inlineCodeDrift,
+  PLACEHOLDER_RESIDUE_RE,
+  TRANSLATABLE_ATTRIBUTES,
+} from "../shared-patterns"
 
+import {
+  CODE_BLOCK_MARKER_RE,
+  inlineCodeTag,
+  restoreInlineCode,
+} from "./code-block-extractor"
+import { RunFuseExceededError } from "./cost-meter"
 import {
   FRONTMATTER_PREFIX,
   frontmatterFieldText,
@@ -254,6 +264,103 @@ function parserComplaint(error: Error): string {
   return error.message.split("\n")[0].slice(0, MAX_COMPLAINT_CHARS)
 }
 
+/** English code a section's reply lost. A lost fence marker fails the file, so it outranks any number of lost spans. */
+export interface CodeLoss {
+  markers: number
+  spans: number
+  detail: string
+}
+
+/** Whether `a` lost less code than `b`; no loss at all is null. */
+function lostLess(a: CodeLoss | null, b: CodeLoss | null): boolean {
+  const [am, as] = [a?.markers ?? 0, a?.spans ?? 0]
+  const [bm, bs] = [b?.markers ?? 0, b?.spans ?? 0]
+  return am < bm || (am === bm && as < bs)
+}
+
+const CODE_TAG_INDEX_RE = /<HTML-PLACEHOLDER-CODE-(\d+)\s*\/?>/g
+
+/**
+ * Code a section's reply lost, checked once `spans` (its lifted inline code)
+ * are restored: inline spans dropped, altered or tagged twice, fence markers
+ * not kept exactly once, and placeholder tags left over. Leftover tags fail
+ * the gate as a lost marker fails the restore, so they rank alike. Backticks
+ * the model merely added are style, so they alone are no loss.
+ */
+export function sectionCodeLoss(
+  sent: string,
+  reply: string,
+  spans: string[] = []
+): CodeLoss | null {
+  const translated = restoreInlineCode(reply, spans)
+  const { missing, extra } = inlineCodeDrift(sent, translated)
+  const markers = [...new Set(sent.match(CODE_BLOCK_MARKER_RE) ?? [])].filter(
+    (m) => translated.split(m).length !== 2
+  )
+  const residue = translated.match(PLACEHOLDER_RESIDUE_RE) ?? []
+  const residueCount = Math.max(
+    0,
+    residue.length - (sent.match(PLACEHOLDER_RESIDUE_RE)?.length ?? 0)
+  )
+  // Per span text, tags beyond the number of slots that carry it: writing tag
+  // 0 twice for two identical spans restores the English exactly.
+  const tagged = new Map<string, number>()
+  for (const [, i] of reply.matchAll(CODE_TAG_INDEX_RE)) {
+    const span = spans[Number(i)]
+    if (span !== undefined) tagged.set(span, (tagged.get(span) ?? 0) + 1)
+  }
+  const repeated = [...tagged].flatMap(([span, n]) => {
+    const slots = spans.filter((s) => s === span).length
+    return n > slots ? [{ span, extra: n - slots }] : []
+  })
+  if (!missing.length && !markers.length && !residueCount && !repeated.length)
+    return null
+  const label = (span: string) => {
+    const i = spans.indexOf(span)
+    return i < 0 ? span : `${inlineCodeTag(i)} (${span})`
+  }
+  return {
+    markers: markers.length + residueCount,
+    spans: missing.length + repeated.reduce((n, r) => n + r.extra, 0),
+    detail: [
+      ...missing.map((c) => `missing ${label(c)}`),
+      ...markers.map((m) => `${m} must appear exactly once`),
+      ...(residueCount
+        ? [`unknown placeholder ${[...new Set(residue)].join(" ")}`]
+        : []),
+      ...repeated.map((r) => `${label(r.span)} sent ${r.extra} extra time(s)`),
+      ...extra.map((c) => `not in the English ${c}`),
+    ].join(", "),
+  }
+}
+
+/** Sent back with the prompt when a response lost English code. */
+function codeInstruction(complaint: string): string {
+  return [
+    "",
+    "YOUR PREVIOUS RESPONSE LOST CODE.",
+    complaint,
+    "Send every translated section again. Keep every <HTML-PLACEHOLDER-CODE-n /> tag and every <!-- CODE_BLOCK_n --> line exactly once, unchanged, and copy any `backticked` span byte for byte: never translate, drop, merge or repeat code.",
+  ].join("\n")
+}
+
+/** The complaint cut to what fits the note's reserve, on a character boundary. */
+function fitComplaint(complaint: string): string {
+  const room =
+    RETRY_NOTE_RESERVE_BYTES -
+    Buffer.byteLength(codeInstruction(""), "utf-8") -
+    1
+  if (Buffer.byteLength(complaint, "utf-8") <= room) return complaint
+  let out = ""
+  let bytes = 0
+  for (const ch of complaint) {
+    bytes += Buffer.byteLength(ch, "utf-8")
+    if (bytes > room - 4) break
+    out += ch
+  }
+  return `${out} ...`
+}
+
 /**
  * Sent back with the prompt after a response cannot be read.
  *
@@ -295,8 +402,8 @@ interface RetryableBatch {
  * the caller stops with the parse error instead. The planner reserves
  * RETRY_NOTE_RESERVE_BYTES to keep this from happening in the first place.
  */
-function retryPrompt(batch: RetryableBatch, error: Error): string | null {
-  const prompt = batch.prompt + "\n" + reparseInstruction(error)
+function retryPrompt(batch: RetryableBatch, note: string): string | null {
+  const prompt = batch.prompt + "\n" + note
   const fits =
     batch.irreducible || Buffer.byteLength(prompt, "utf-8") <= MAX_PROMPT_BYTES
   return fits ? prompt : null
@@ -316,35 +423,75 @@ function retryPrompt(batch: RetryableBatch, error: Error): string | null {
 export async function translateBatchWithParseRetry(
   batch: RetryableBatch,
   call: BatchCaller,
-  onRetry?: (attempt: number, error: Error) => void
+  onRetry?: (attempt: number, error: Error) => void,
+  check?: (id: string, translated: string) => CodeLoss | null
 ): Promise<{
   translations: Record<string, string>
   tokens: { input: number; output: number }
+  /** The code the shipped translations still lose, if re-sending never cleared it. */
+  complaint: string | null
 }> {
   const tokens = { input: 0, output: 0 }
   let prompt = batch.prompt
   let lastError: Error | undefined
+  // Per section, the reply that lost the least code so far. The check never
+  // fails a batch: what it can't clear ships for the translation review.
+  const best = new Map<string, { text: string; loss: CodeLoss | null }>()
+  const complaintOf = () =>
+    [...best]
+      .flatMap(([id, b]) =>
+        b.loss ? [`Section "${id}": ${b.loss.detail}`] : []
+      )
+      .join("\n") || null
+  const settle = () => {
+    const translations: Record<string, string> = Object.create(null)
+    for (const [id, b] of best) translations[id] = b.text
+    return { translations, tokens, complaint: complaintOf() }
+  }
 
   for (let attempt = 1; attempt <= PARSE_ATTEMPTS; attempt++) {
-    const result = await call(prompt)
+    let result: Awaited<ReturnType<BatchCaller>>
+    try {
+      result = await call(prompt)
+    } catch (error) {
+      // A reply in hand beats failing the file over a re-send; the run fuse
+      // still stops the run.
+      if (best.size === 0 || error instanceof RunFuseExceededError) throw error
+      return settle()
+    }
     tokens.input += result.tokensUsed.input
     tokens.output += result.tokensUsed.output
 
+    let translations: Record<string, string>
     try {
-      return {
-        translations: parseIncrementalResponse(result.text, batch.translateIds),
-        tokens,
-      }
+      translations = parseIncrementalResponse(result.text, batch.translateIds)
     } catch (error) {
       lastError = error instanceof Error ? error : new Error(String(error))
       if (attempt === PARSE_ATTEMPTS) break
-      const next = retryPrompt(batch, lastError)
+      const next = retryPrompt(batch, reparseInstruction(lastError))
       if (!next) break
       prompt = next
       onRetry?.(attempt, lastError)
+      continue
     }
+    if (!check) return { translations, tokens, complaint: null }
+
+    for (const [id, text] of Object.entries(translations)) {
+      const loss = check(id, text)
+      const prev = best.get(id)
+      if (!prev || lostLess(loss, prev.loss)) best.set(id, { text, loss })
+    }
+    const complaint = complaintOf()
+    const next =
+      complaint && attempt < PARSE_ATTEMPTS
+        ? retryPrompt(batch, codeInstruction(fitComplaint(complaint)))
+        : null
+    if (!next) return settle()
+    prompt = next
+    onRetry?.(attempt, new Error(complaint ?? ""))
   }
 
+  if (best.size) return settle()
   throw lastError
 }
 
@@ -563,7 +710,8 @@ export function extractSections(content: string): ExtractedSection[] {
 export function buildSectionList(
   englishSections: ExtractedSection[],
   localeSections: ExtractedSection[],
-  translateIds: string[]
+  translateIds: string[],
+  fileType: "markdown" | "json"
 ): SectionForPrompt[] {
   const localeMap = new Map<string, ExtractedSection>()
   for (const s of localeSections) {
@@ -575,12 +723,21 @@ export function buildSectionList(
 
   for (const section of englishSections) {
     if (translateSet.has(section.id)) {
-      // Changed section: send English content for translation
+      // Changed section: send English content for translation. A markdown
+      // section the locale doesn't have yet sends its heading as content too,
+      // so the reply carries a translated heading; nothing else would translate
+      // it. A JSON key has no heading: its reply is the value itself.
+      const isNew =
+        fileType === "markdown" &&
+        section.level > 0 &&
+        !localeMap.has(section.id)
       result.push({
         id: section.id,
         action: "TRANSLATE",
-        content: section.body,
-        headingText: section.headingText,
+        content: isNew
+          ? `${"#".repeat(section.level)} ${section.headingText} {#${section.id}}\n\n${section.body}`.trimEnd()
+          : section.body,
+        headingText: isNew ? undefined : section.headingText,
         level: section.level,
       })
     } else {

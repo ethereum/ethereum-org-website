@@ -59,8 +59,8 @@ body:
   - type: input
     id: layer_2_l2beat
     attributes:
-      label: L2BEAT page
-      description: Please provide a link to the layer 2s page on L2BEAT
+      label: ETHBEAT page
+      description: Please provide a link to the layer 2s page on ETHBEAT
     validations:
       required: true
   - type: textarea

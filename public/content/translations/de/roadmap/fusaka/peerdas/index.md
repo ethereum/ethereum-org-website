@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Erfahren Sie mehr über PeerDAS als Teil des Fusaka-Upgrades für das Ethereum-Protokoll
+description: "Erfahren Sie mehr über PeerDAS als Teil des Fusaka-Upgrades für das Ethereum-Protokoll"
 lang: de
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -41,31 +41,31 @@ DAS ist ein Mechanismus, der darauf aufbaut und sicherstellt, dass die Daten sow
 
 ## PeerDAS {#peer-das-2}
 
-[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) ist ein spezifischer Vorschlag, der den DAS-Mechanismus in Ethereum implementiert und wahrscheinlich das größte Upgrade seit dem Merge markiert. PeerDAS ist darauf ausgelegt, Blob-Daten zu erweitern, sie in Spalten zu unterteilen und eine Teilmenge an Knoten zu verteilen.
+[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) ist ein spezifischer Vorschlag, der den DAS-Mechanismus in Ethereum implementiert und wahrscheinlich das größte Upgrade seit dem Merge darstellt. PeerDAS ist darauf ausgelegt, Blob-Daten zu erweitern, sie in Spalten zu unterteilen und eine Teilmenge an Knoten zu verteilen.
 
-Ethereum leiht sich dafür etwas clevere Mathematik: Es wendet Löschcodierung im Reed-Solomon-Stil auf Blob-Daten an. Blob-Daten werden als Polynom dargestellt, dessen Koeffizienten die Daten kodieren. Dann wird dieses Polynom an zusätzlichen Punkten ausgewertet, um einen erweiterten Blob zu erstellen, was die Anzahl der Auswertungen verdoppelt. Diese hinzugefügte Redundanz ermöglicht die Wiederherstellung nach Löschung: Selbst wenn einige Auswertungen fehlen, kann der ursprüngliche Blob rekonstruiert werden, solange mindestens die Hälfte der gesamten Daten, einschließlich der erweiterten Stücke, verfügbar ist.
+Ethereum bedient sich einiger cleverer Mathematik, um dies zu erreichen: Es wendet Löschcodierung im Reed-Solomon-Stil auf Blob-Daten an. Blob-Daten werden als Polynom dargestellt, dessen Koeffizienten die Daten codieren. Anschließend wird dieses Polynom an zusätzlichen Punkten ausgewertet, um einen erweiterten Blob zu erstellen, wodurch die Anzahl der Auswertungen verdoppelt wird. Diese zusätzliche Redundanz ermöglicht die Wiederherstellung nach Löschungen (Erasure Recovery): Selbst wenn einige Auswertungen fehlen, kann der ursprüngliche Blob rekonstruiert werden, solange mindestens die Hälfte der gesamten Daten, einschließlich der erweiterten Teile, verfügbar ist.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
-In der Realität hat dieses Polynom Tausende von Koeffizienten. KZG-Commitments sind Werte von wenigen Bytes, ähnlich wie ein Hash, die allen Knoten bekannt sind. Jeder Knoten, der genügend Datenpunkte hält, kann [effizient einen vollständigen Satz von Blob-Daten rekonstruieren](https://arxiv.org/abs/2207.11079). 
+In der Realität hat dieses Polynom Tausende von Koeffizienten. KZG-Commitments sind Werte von wenigen Bytes, ähnlich wie ein Hash, die allen Knoten bekannt sind. Jeder Knoten, der über genügend Datenpunkte verfügt, kann [einen vollständigen Satz von Blob-Daten effizient rekonstruieren](https://arxiv.org/abs/2207.11079). 
 
-> Fun Fact: Dieselbe Codierungstechnik wurde bei DVDs verwendet. Wenn man eine DVD zerkratzte, konnte der Player sie dank der Reed-Solomon-Codierung, die fehlende Stücke des Polynoms hinzufügt, immer noch lesen. 
+> Fun Fact: Dieselbe Codierungstechnik wurde bei DVDs verwendet. Wenn man eine DVD zerkratzt hat, konnte der Player sie dank der Reed-Solomon-Codierung, die fehlende Teile des Polynoms hinzufügt, immer noch lesen. 
 
-Historisch gesehen wurden Daten in Blockchains, ob Blöcke oder Blobs, an alle Knoten gesendet. Mit dem Split-and-Sample-Ansatz von PeerDAS ist es nicht mehr notwendig, alles an jeden zu senden. Nach Fusaka ist das Netzwerk der Konsensschicht in Gossip-Themen/Subnetze organisiert: Blob-Spalten werden bestimmten Subnetzen zugewiesen, und jeder Knoten abonniert eine vorbestimmte Teilmenge und verwahrt nur diese Stücke.
+Historisch gesehen wurden Daten in Blockchains, ob Blöcke oder Blobs, an alle Knoten gesendet (Broadcast). Mit dem Split-and-Sample-Ansatz von PeerDAS ist es nicht mehr notwendig, alles an jeden zu senden. Nach Fusaka ist das Netzwerk der Konsensschicht in Gossip-Themen/Subnetze organisiert: Blob-Spalten werden bestimmten Subnetzen zugewiesen, und jeder Knoten abonniert eine vorgegebene Teilmenge und verwahrt nur diese Teile.
 
-Mit PeerDAS werden erweiterte Blob-Daten in 128 Stücke, sogenannte Spalten, unterteilt. Daten werden über ein dediziertes Gossip-Protokoll auf bestimmten Subnetzen, die sie abonnieren, an diese Knoten verteilt. Jeder reguläre Knoten im Netzwerk nimmt an mindestens 8 zufällig ausgewählten Spalten-Subnetzen teil. Der Empfang von Daten aus nur 8 von 128 Subnetzen bedeutet, dass dieser Standardknoten nur 1/16 aller Daten erhält, aber da die Daten erweitert wurden, entspricht dies 1/8 der ursprünglichen Daten. 
+Mit PeerDAS werden erweiterte Blob-Daten in 128 Teile, sogenannte Spalten, unterteilt. Die Daten werden über ein dediziertes Gossip-Protokoll in bestimmten Subnetzen, die sie abonnieren, an diese Knoten verteilt. Jeder reguläre Knoten im Netzwerk nimmt an mindestens 8 zufällig ausgewählten Spalten-Subnetzen teil. Der Empfang von Daten aus nur 8 von 128 Subnetzen bedeutet, dass dieser Standardknoten nur 1/16 aller Daten empfängt, aber da die Daten erweitert wurden, entspricht dies 1/8 der ursprünglichen Daten. 
 
-Dies ermöglicht ein neues theoretisches Skalierungslimit, das 8-mal so hoch ist wie das aktuelle „Jeder lädt alles herunter“-Schema. Da Knoten verschiedene zufällige Subnetze abonnieren, die Blob-Spalten bedienen, ist die Wahrscheinlichkeit sehr hoch, dass sie gleichmäßig verteilt sind und daher jedes Datenstück irgendwo im Netzwerk existiert. Knoten, die Validatoren betreiben, müssen mit jedem Validator, den sie betreiben, mehr Subnetze abonnieren.
+Dies ermöglicht ein neues theoretisches Skalierungslimit, das 8-mal höher ist als das aktuelle „Jeder lädt alles herunter“-Schema. Da Knoten verschiedene zufällige Subnetze abonnieren, die Blob-Spalten bedienen, ist die Wahrscheinlichkeit sehr hoch, dass sie gleichmäßig verteilt sind und somit jedes Datenelement irgendwo im Netzwerk existiert. Knoten, die Validatoren betreiben, müssen mit jedem Validator, den sie betreiben, mehr Subnetze abonnieren.
 
-> Jeder Knoten hat eine eindeutige, zufällig generierte ID, die normalerweise als seine öffentliche Identität für Verbindungen dient. In PeerDAS wird diese Nummer verwendet, um zufällige Subnetze zu bestimmen, die er abonnieren muss, was zu einer gleichmäßigen zufälligen Verteilung aller Blob-Daten führt.
+> Jeder Knoten hat eine eindeutige, zufällig generierte ID, die normalerweise als seine öffentliche Identität für Verbindungen dient. In PeerDAS wird diese Nummer verwendet, um eine zufällige Menge von Subnetzen zu bestimmen, die er abonnieren muss, was zu einer gleichmäßigen zufälligen Verteilung aller Blob-Daten führt.
 
-Sobald ein Knoten die ursprünglichen Daten erfolgreich rekonstruiert hat, verteilt er die wiederhergestellten Spalten zurück in das Netzwerk, heilt aktiv alle Datenlücken und verbessert die allgemeine Systemresilienz. Knoten, die mit Validatoren mit einem kombinierten Guthaben von ≥4096 ETH verbunden sind, müssen ein Superknoten sein und daher alle Datenspalten-Subnetze abonnieren und alle Spalten verwahren. Diese Superknoten werden kontinuierlich Datenlücken heilen. Die probabilistisch selbstheilende Natur des Protokolls ermöglicht starke Verfügbarkeitsgarantien, ohne Heimanwender einzuschränken, die nur Teile der Daten halten. 
+Sobald ein Knoten die ursprünglichen Daten erfolgreich rekonstruiert hat, verteilt er die wiederhergestellten Spalten zurück in das Netzwerk, heilt aktiv alle Datenlücken und verbessert die allgemeine Systemresilienz. Knoten, die mit Validatoren mit einem kombinierten Guthaben von ≥ 4096 ETH verbunden sind, müssen ein Superknoten sein und daher alle Datenspalten-Subnetze abonnieren und alle Spalten verwahren. Diese Superknoten werden kontinuierlich Datenlücken heilen. Die probabilistisch selbstheilende Natur des Protokolls ermöglicht starke Verfügbarkeitsgarantien, ohne Heimbetreiber einzuschränken, die nur Teile der Daten halten. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-Die Datenverfügbarkeit kann von jedem Knoten bestätigt werden, der nur eine kleine Teilmenge der Blob-Daten hält, dank des oben beschriebenen Sampling-Mechanismus. Diese Verfügbarkeit wird erzwungen: Validatoren müssen neuen Fork-Choice-Regeln folgen, was bedeutet, dass sie Blöcke nur akzeptieren und für sie stimmen, nachdem sie die Verfügbarkeit der Daten verifiziert haben.
+Die Datenverfügbarkeit kann von jedem Knoten bestätigt werden, der nur eine kleine Teilmenge der Blob-Daten hält, dank des oben beschriebenen Sampling-Mechanismus. Diese Verfügbarkeit wird erzwungen: Validatoren müssen neuen Fork-Choice-Regeln folgen, was bedeutet, dass sie Blöcke erst akzeptieren und für sie stimmen, nachdem sie die Verfügbarkeit der Daten verifiziert haben.
 
-Die direkte Auswirkung auf Nutzer (insbesondere L2-Nutzer) sind niedrigere Gebühren. Mit 8-mal mehr Platz für Rollup-Daten werden Nutzeroperationen auf ihrer Chain mit der Zeit noch günstiger. Aber niedrigere Gebühren nach Fusaka werden Zeit brauchen und von BPOs abhängen.
+Die direkte Auswirkung auf Benutzer (insbesondere L2-Benutzer) sind niedrigere Gebühren. Mit 8-mal mehr Platz für Rollup-Daten werden Benutzeroperationen auf ihrer Chain mit der Zeit noch günstiger. Aber niedrigere Gebühren nach Fusaka werden Zeit brauchen und von BPOs abhängen.
 
 ## Blob-Parameter-Only (BPOs) {#bpo}
 

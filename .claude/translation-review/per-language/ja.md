@@ -1,5 +1,15 @@
 # Japanese (ja) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: Blob to ブロブ x3 (regression of PR 19357 fix), Starknet to スタークネット. Open: transfer トランスファー vs 送金 split in erc-721, claim as 請求, at stake as ステーク, ファイナライズ済み used as verb, devnet.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in 5 JSON keys (validator-keys, peer-das caption/subnets, verkle), consensus client, fork choice, equivocation. Open: BLS key pair wording, colon style, head vs sentou.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -201,3 +211,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - `ディスカバリー` for discovery is glossary-literal but stiff; `ローカル・テストネット` vs `ローカルのテストネット` -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- "remain high indefinitely" rendered as "infinitely high" (gas:32); API over-expanded (#80).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

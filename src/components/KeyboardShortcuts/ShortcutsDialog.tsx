@@ -6,6 +6,7 @@ import { MAIN_NAV_ID } from "@/lib/constants"
 
 import ShortcutKeys from "./ShortcutKeys"
 
+import { usePathname } from "@/i18n/navigation"
 import { getShortcutsByGroup, SHORTCUT_GROUPS } from "@/lib/keyboard-shortcuts"
 
 type ShortcutsDialogProps = {
@@ -15,6 +16,7 @@ type ShortcutsDialogProps = {
 
 const ShortcutsDialog = ({ open, onOpenChange }: ShortcutsDialogProps) => {
   const t = useTranslations("common")
+  const pathname = usePathname()
   // Desktop-only shortcuts act on the desktop bar, which narrow windows and
   // long-label locales swap for the mobile menu
   const hasDesktopBar = open && !!document.getElementById(MAIN_NAV_ID)
@@ -28,7 +30,7 @@ const ShortcutsDialog = ({ open, onOpenChange }: ShortcutsDialogProps) => {
     >
       <div className="flex flex-col gap-6">
         {SHORTCUT_GROUPS.map((group) => {
-          const shortcuts = getShortcutsByGroup(group.id).filter(
+          const shortcuts = getShortcutsByGroup(group.id, pathname).filter(
             ({ desktopOnly }) => hasDesktopBar || !desktopOnly
           )
           if (!shortcuts.length) return null

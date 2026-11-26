@@ -1,5 +1,15 @@
 # Vietnamese (vi) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: slot to khe (regression), optimistic rollup to Rollup lac quan x4. Open: claim as yeu cau nhan, equivocating as lap lo, tien boa for tip, storage as bo nho, locale-wide casing leak.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: phi uu tien, xac nhan nuoc doi, gas inline code, PoS in attestations description. Open: relay/blinded prose vs diagram, `claim` flattened to yeu cau, gossip four renderings.
+
 ## PR #18935 (intl/pending-content-translation-program-winddown-ctas) -- 2026-07-28 -- Score 8.4/10
 
 First recorded review for this locale.
@@ -175,3 +185,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - Glossary capitals mid-sentence (`Chuỗi khối`, `Địa chỉ`) at multi-client 33/104/138 -- known vi pattern, left as is
 - `dApp` in title/description vs `dapp` in body -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- Glossary capitals (`Giao thuc`, `Tai khoan`, `Vi`) leak into mid-sentence; ambiguous clause at gas:89.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

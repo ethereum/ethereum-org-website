@@ -150,7 +150,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               data-flow="cta"
               className="gap-4 max-sm:flex-col max-sm:*:[a]:w-full"
             >
-              <ButtonLink href="https://l2beat.com">
+              <ButtonLink href="https://ethbeat.org">
                 {t("page-layer-2-networks-more-advanced-link-1")}
               </ButtonLink>
               <ButtonLink href="https://growthepie.com">

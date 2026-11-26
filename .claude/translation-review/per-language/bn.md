@@ -1,5 +1,15 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: junk-syllable negation corruption (pos L46), bad actors as film actors, যতক্ষণ না inversion (verifying), zero-knowledge proof hybrid regressed (6 sites zk-rollups), U+3002 x6 and U+2060 x6 in erc-721. Open: equivocation ইক্যুইভোকেশন vs দ্ব্যর্থবোধক, ZK-rollup Latin, taka for currency, API over-expansion.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption placeholder swap, gas inline code, attestation/equivocation/fork-choice/consensus-client forms, withdrawal/signing/builder across the diagram JSON. Open: stray BiDi isolates in networking-layer and peerdas frontmatter, detached postpositions.
+
 ## PR #18772 (community-stories.json, 2026-07-10) -- 9.4/10
 - CRIT fixed: "Web2" left Latin in story-sebastian -> ওয়েব২ per ETHGlossary (web2 => ওয়েব২). Watch web2/web3 script split: glossary transliterates web2 but keeps Web3 Latin.
 - WARN: "transfer" rendered both ট্রান্সফার and হস্তান্তর within story-nico-bolivia (glossary: হস্তান্তর; ট্রান্সফার common in speech).
@@ -190,3 +200,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - echidna:682 dropped the two-space hard line break -- cosmetic
 - Kurtosis labels (files artifacts, user services) mix Latin and transliteration -- defensible, informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- Glossary `transaction fee` = `লেনদেন ফি` conflicts with `transaction` = `ট্রানজ্যাকশন` in the glossary itself (gas:54); anglicism drift `ইনসেনটিভ`/`সার্কুলেশন`; `কমিটমেন্ট` used for non-cryptographic commitment.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

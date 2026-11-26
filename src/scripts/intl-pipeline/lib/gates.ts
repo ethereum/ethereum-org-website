@@ -16,7 +16,13 @@
 
 import { escapeHeadingIds } from "../../../lib/md/escapeHeadingIds"
 
-import { type Finding, verifyJson, verifyMarkdown } from "./verify-structure"
+import {
+  fenceIdentities,
+  type Finding,
+  headingCount,
+  verifyJson,
+  verifyMarkdown,
+} from "./verify-structure"
 
 export interface GateInput {
   destPath: string
@@ -27,6 +33,8 @@ export interface GateInput {
   output: string
   /** The locale file being replaced; absent for a first translation */
   baseline?: string
+  /** The English `baseline` was translated from (its manifest's commit) */
+  baselineEnglish?: string
   mode: "incremental" | "full"
 }
 
@@ -49,26 +57,63 @@ const countBy = (fs: Finding[]) => {
  * Structural findings the output introduces. Incremental: a finding counts only
  * if the baseline did not already have it and the check's error count grew.
  * Full: every error counts.
+ *
+ * Fences and the heading count are judged against the baseline's own English
+ * (`baselineEnglish`) instead: against current English a fence that merely
+ * trails an English edit looks like an old defect, so stale code would pass,
+ * and English adding or deleting fences and sections renumbers a defect the
+ * locale already had without making it new. A fence whose code English has
+ * elsewhere is out of place, not wrong (subsections English reordered).
  */
 export function structuralRegressions(input: GateInput): string[] {
   const verify = input.fileType === "json" ? verifyJson : verifyMarkdown
-  const after = verify(input.english, input.output, input.destPath).filter(
-    (f) => f.severity === "error"
-  )
+  const errors = (english: string, output: string) =>
+    verify(english, output, input.destPath).filter(
+      (f) => f.severity === "error"
+    )
+  const after = errors(input.english, input.output)
   if (input.mode === "full" || input.baseline === undefined) {
     return after.map(identity)
   }
-  const before = verify(input.english, input.baseline, input.destPath).filter(
-    (f) => f.severity === "error"
-  )
+  const own = input.baselineEnglish ?? input.english
+
+  // Fences English-B has somewhere: right code, only out of place
+  const englishFences = new Set(fenceIdentities(input.english))
+  // Baseline fences no fence of its own English matches (tag and code)
+  const broken = new Map<string, number>()
+  for (const id of fenceIdentities(input.baseline))
+    broken.set(id, (broken.get(id) ?? 0) + 1)
+  for (const id of fenceIdentities(own))
+    if (broken.get(id)) broken.set(id, (broken.get(id) ?? 0) - 1)
+
+  // A locale short of (or over) its own English by n headings may stay so
+  const gap = (english: string, locale: string) =>
+    headingCount(english) - headingCount(locale)
+  const ownGap = gap(own, input.baseline)
+  const outGap = gap(input.english, input.output)
+  const knownGap =
+    Math.sign(outGap) === Math.sign(ownGap) &&
+    Math.abs(outGap) <= Math.abs(ownGap)
+
+  const positional = (f: Finding) => !f.key && f.check !== "heading-count"
+  const before = errors(input.english, input.baseline).filter(positional)
   const known = new Set(before.map(identity))
   const beforeCounts = countBy(before)
-  const afterCounts = countBy(after)
+  const afterCounts = countBy(after.filter(positional))
   return after
-    .filter((f) => !known.has(identity(f)))
-    .filter(
-      (f) => (afterCounts.get(f.check) ?? 0) > (beforeCounts.get(f.check) ?? 0)
-    )
+    .filter((f) => {
+      if (f.key) {
+        if (englishFences.has(f.key)) return false
+        const left = broken.get(f.key) ?? 0
+        if (left > 0) broken.set(f.key, left - 1)
+        return left === 0
+      }
+      if (f.check === "heading-count") return !knownGap
+      return (
+        !known.has(identity(f)) &&
+        (afterCounts.get(f.check) ?? 0) > (beforeCounts.get(f.check) ?? 0)
+      )
+    })
     .map(identity)
 }
 

@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Découvrez PeerDAS dans le cadre de la mise à jour Fusaka du protocole Ethereum
+description: "Découvrez PeerDAS dans le cadre de la mise à jour Fusaka du protocole Ethereum"
 lang: fr
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -41,31 +41,31 @@ Le DAS est un mécanisme qui s'appuie sur cela et garantit que les données sont
 
 ## PeerDAS {#peer-das-2}
 
-[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) est une proposition spécifique qui implémente le mécanisme DAS dans Ethereum, marquant probablement la plus grande mise à jour depuis La Fusion. PeerDAS est conçu pour étendre les données de blobs, en les divisant en colonnes et en distribuant un sous-ensemble aux nœuds.
+[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) est une proposition spécifique qui implémente le mécanisme d'échantillonnage de la disponibilité des données (DAS) dans Ethereum, marquant probablement la plus grande mise à jour depuis La Fusion. PeerDAS est conçu pour étendre les données de blobs, en les divisant en colonnes et en distribuant un sous-ensemble aux nœuds.
 
-Ethereum emprunte des mathématiques astucieuses pour y parvenir : il applique un codage d'effacement de type Reed-Solomon aux données de blobs. Les données de blobs sont représentées comme un polynôme dont les coefficients encodent les données, puis évaluent ce polynôme à des points supplémentaires pour créer un blob étendu, doublant ainsi le nombre d'évaluations. Cette redondance ajoutée permet la récupération par effacement : même si certaines évaluations manquent, le blob d'origine peut être reconstruit tant qu'au moins la moitié des données totales, y compris les morceaux étendus, sont disponibles.
+Ethereum emprunte des mathématiques astucieuses pour y parvenir : il applique un codage d'effacement de type Reed-Solomon aux données de blobs. Les données de blobs sont représentées sous la forme d'un polynôme dont les coefficients encodent les données, puis ce polynôme est évalué à des points supplémentaires pour créer un blob étendu, doublant ainsi le nombre d'évaluations. Cette redondance ajoutée permet la récupération par effacement : même si certaines évaluations manquent, le blob d'origine peut être reconstruit tant qu'au moins la moitié des données totales, y compris les morceaux étendus, est disponible.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
-En réalité, ce polynôme a des milliers de coefficients. Les engagements KZG sont des valeurs de quelques octets, un peu comme un hash, connues de tous les nœuds. Chaque nœud détenant suffisamment de points de données peut [reconstruire efficacement un ensemble complet de données de blobs](https://arxiv.org/abs/2207.11079). 
+En réalité, ce polynôme possède des milliers de coefficients. Les engagements KZG sont des valeurs de quelques octets, un peu comme un hash, connues de tous les nœuds. Chaque nœud détenant suffisamment de points de données peut [reconstruire efficacement un ensemble complet de données de blobs](https://arxiv.org/abs/2207.11079). 
 
 > Fait amusant : la même technique de codage était utilisée par les DVD. Si vous rayiez un DVD, le lecteur était toujours capable de le lire grâce au codage Reed-Solomon qui ajoute les morceaux manquants du polynôme. 
 
-Historiquement, les données dans les blockchains, qu'il s'agisse de blocs ou de blobs, étaient diffusées à tous les nœuds. Avec l'approche de division et d'échantillonnage de PeerDAS, il n'est plus nécessaire de tout diffuser à tout le monde. Après Fusaka, la mise en réseau de la couche de consensus est organisée en sujets/sous-réseaux de protocole de commérage : les colonnes de blobs sont assignées à des sous-réseaux spécifiques, et chaque nœud s'abonne à des sous-ensembles prédéterminés et ne conserve que ces morceaux.
+Historiquement, les données dans les chaînes de blocs, qu'il s'agisse de blocs ou de blobs, étaient diffusées à tous les nœuds. Avec l'approche de division et d'échantillonnage de PeerDAS, il n'est plus nécessaire de tout diffuser à tout le monde. Après Fusaka, la mise en réseau de la couche de consensus est organisée en sujets de commérage/sous-réseaux : les colonnes de blobs sont assignées à des sous-réseaux spécifiques, et chaque nœud s'abonne à des sous-ensembles prédéterminés et ne conserve que ces morceaux.
 
 Avec PeerDAS, les données de blobs étendues sont divisées en 128 morceaux appelés colonnes. Les données sont distribuées à ces nœuds via un protocole de commérage dédié sur des sous-réseaux spécifiques auxquels ils s'abonnent. Chaque nœud régulier sur le réseau participe à au moins 8 sous-réseaux de colonnes choisis au hasard. Recevoir des données de seulement 8 des 128 sous-réseaux signifie que ce nœud par défaut ne reçoit que 1/16 de toutes les données, mais comme les données ont été étendues, cela représente 1/8 des données d'origine. 
 
-Cela permet une nouvelle limite théorique de mise à l'échelle de 8 fois le schéma actuel où « tout le monde télécharge tout ». Avec des nœuds s'abonnant à différents sous-réseaux aléatoires servant des colonnes de blobs, la probabilité est très élevée qu'ils soient uniformément distribués et donc que chaque morceau de données existe quelque part dans le réseau. Les nœuds exécutant des validateurs sont tenus de s'abonner à plus de sous-réseaux avec chaque validateur qu'ils exécutent.
+Cela permet une nouvelle limite de mise à l'échelle théorique de 8 fois le schéma actuel où « tout le monde télécharge tout ». Les nœuds s'abonnant à différents sous-réseaux aléatoires servant des colonnes de blobs, la probabilité est très élevée qu'ils soient uniformément distribués et que, par conséquent, chaque morceau de données existe quelque part dans le réseau. Les nœuds exécutant des validateurs sont tenus de s'abonner à davantage de sous-réseaux pour chaque validateur qu'ils exécutent.
 
-> Chaque nœud possède un identifiant unique généré aléatoirement, qui sert normalement d'identité publique pour les connexions. Dans PeerDAS, ce nombre est utilisé pour déterminer l'ensemble aléatoire de sous-réseaux auxquels il doit s'abonner, ce qui entraîne une distribution aléatoire uniforme de toutes les données de blobs.
+> Chaque nœud possède un identifiant unique généré aléatoirement, qui sert normalement d'identité publique pour les connexions. Dans PeerDAS, ce nombre est utilisé pour déterminer l'ensemble aléatoire de sous-réseaux auxquels il doit s'abonner, ce qui se traduit par une distribution aléatoire uniforme de toutes les données de blobs.
 
-Une fois qu'un nœud a réussi à reconstruire les données d'origine, il redistribue ensuite les colonnes récupérées dans le réseau, comblant activement les lacunes de données et améliorant la résilience globale du système. Les nœuds connectés à des validateurs avec un solde combiné ≥ 4096 ETH doivent être un supernœud et doivent donc s'abonner à tous les sous-réseaux de colonnes de données et conserver toutes les colonnes. Ces supernœuds combleront continuellement les lacunes de données. La nature probabiliste d'auto-guérison du protocole permet de fortes garanties de disponibilité tout en ne limitant pas les opérateurs à domicile qui ne détiennent que des portions des données. 
+Une fois qu'un nœud a réussi à reconstruire les données d'origine, il redistribue ensuite les colonnes récupérées dans le réseau, comblant activement les lacunes de données et améliorant la résilience globale du système. Les nœuds connectés à des validateurs avec un solde combiné ≥ 4096 ETH doivent être des supernœuds et doivent donc s'abonner à tous les sous-réseaux de colonnes de données et conserver toutes les colonnes. Ces supernœuds combleront continuellement les lacunes de données. La nature probabiliste d'auto-guérison du protocole permet de fortes garanties de disponibilité sans limiter les opérateurs à domicile qui ne détiennent que des portions des données. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-La disponibilité des données peut être confirmée par n'importe quel nœud ne détenant qu'un petit sous-ensemble des données de blobs grâce au mécanisme d'échantillonnage décrit ci-dessus. Cette disponibilité est appliquée : les validateurs doivent suivre de nouvelles règles de choix de fork, ce qui signifie qu'ils n'accepteront et ne voteront pour des blocs qu'après avoir vérifié la disponibilité des données.
+La disponibilité des données peut être confirmée par n'importe quel nœud ne détenant qu'un petit sous-ensemble des données de blobs grâce au mécanisme d'échantillonnage décrit ci-dessus. Cette disponibilité est imposée : les validateurs doivent suivre de nouvelles règles de choix de fork, ce qui signifie qu'ils n'accepteront et ne voteront pour des blocs qu'après avoir vérifié la disponibilité des données.
 
-L'impact direct sur les utilisateurs (en particulier les utilisateurs de l2) est une baisse des frais. Avec 8 fois plus d'espace pour les données de rollup, les opérations des utilisateurs sur leur chaîne deviennent encore moins chères avec le temps. Mais la baisse des frais après Fusaka prendra du temps et dépendra des BPO.
+L'impact direct sur les utilisateurs (en particulier les utilisateurs de l2) est une réduction des frais. Avec 8 fois plus d'espace pour les données de rollup, les opérations des utilisateurs sur leur chaîne deviennent encore moins chères avec le temps. Mais la baisse des frais après Fusaka prendra du temps et dépendra des BPO.
 
 ## Blob-Parameter-Only (BPO) {#bpo}
 

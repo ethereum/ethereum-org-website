@@ -364,7 +364,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               "page-what-is-ethereum-network-layer-2s-section-description-6",
               {
                 l2beat: (chunks) => (
-                  <Link href="https://l2beat.com/scaling/summary">
+                  <Link href="https://ethbeat.org/layer2s/summary">
                     {chunks}
                   </Link>
                 ),
@@ -516,7 +516,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 "page-what-is-ethereum-network-live-network-data-section-description-13",
                 {
                   l2beat: (chunks) => (
-                    <Link href="https://l2beat.com/">{chunks}</Link>
+                    <Link href="https://ethbeat.org/">{chunks}</Link>
                   ),
                 }
               )}

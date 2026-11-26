@@ -1,6 +1,6 @@
 ---
-title: 沃克尔树
-description: 关于沃克尔树及其将如何用于升级以太坊的高级概述
+title: "沃克尔树"
+description: "关于沃克尔树及其将如何用于升级以太坊的高级概述"
 lang: zh
 template: roadmap
 summaryPoints:
@@ -38,9 +38,9 @@ summaryPoints:
 
 ## 沃克尔树的结构是什么？ {#what-is-the-structure-of-a-verkle-tree}
 
-沃克尔树是 `(key,value)` 键值对，其中键是 32 字节的元素，由 31 字节的*主干 (stem)* 和单字节的*后缀 (suffix)* 组成。这些键被组织成*扩展 (extension)* 节点和*内部 (inner)* 节点。扩展节点代表具有不同后缀的 256 个子节点的单个主干。内部节点也有 256 个子节点，但它们可以是其他扩展节点。沃克尔树和默克尔树结构之间的主要区别在于沃克尔树要平坦得多，这意味着连接叶子节点到根的中间节点更少，因此生成证明所需的数据也更少。
+沃克尔树由 `(key,value)` 键值对组成，其中键是 32 字节的元素，由 31 字节的*主干*和单字节的*后缀*组成。这些键被组织成*扩展*节点和*内部*节点。扩展节点代表具有不同后缀的 256 个子节点的单个主干。内部节点也有 256 个子节点，但它们可以是其他扩展节点。沃克尔树和默克尔树结构之间的主要区别在于，沃克尔树要扁平得多，这意味着连接叶子节点到根的中间节点更少，因此生成证明所需的数据也更少。
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [阅读更多关于沃克尔树结构的信息](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

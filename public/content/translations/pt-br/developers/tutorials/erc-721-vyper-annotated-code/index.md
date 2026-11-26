@@ -1,56 +1,52 @@
 ---
 title: "Passo a passo do contrato ERC-721 em Vyper"
-description: "O contrato ERC-721 de Ryuya Nakamura e como ele funciona"
+description: O contrato ERC-721 de Ryuya Nakamura e como ele funciona
 author: Ori Pomerantz
 lang: pt-br
 tags: ["Vyper", "erc-721", "Python"]
 skill: beginner
-breadcrumb: "ERC-721 em Vyper"
+breadcrumb: ERC-721 em Vyper
 published: 2021-04-01
 ---
 
 ## Introdução {#introduction}
 
-O padrão [ERC-721](/developers/docs/standards/tokens/erc-721/) é usado para manter a propriedade de Tokens Não Fungíveis (NFT).
+O padrão [ERC-721](/developers/docs/standards/tokens/erc-721/) é usado para manter a propriedade de tokens não fungíveis (NFT).
 Os tokens [ERC-20](/developers/docs/standards/tokens/erc-20/) se comportam como uma commodity, porque não há diferença entre tokens individuais.
 Em contraste a isso, os tokens ERC-721 são projetados para ativos que são semelhantes, mas não idênticos, como diferentes [desenhos de gatos](https://www.cryptokitties.co/)
 ou títulos de diferentes propriedades imobiliárias.
 
-Neste artigo, analisaremos o [contrato ERC-721 de Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy).
+Neste artigo, analisaremos [o contrato ERC-721 de Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy).
 Este contrato é escrito em [Vyper](https://vyper.readthedocs.io/en/latest/index.html), uma linguagem de contrato semelhante ao Python projetada para tornar mais difícil escrever código inseguro do que na linguagem Solidity.
 
 ## O Contrato {#contract}
 
 ```python
-# @dev Implementação do padrão de token não fungível ERC-721.
+#pragma version >0.3.10
+```
+
+A linha `#pragma version` informa ao compilador para quais versões do Vyper o contrato foi escrito. `>0.3.10` aceita qualquer versão mais recente que 0.3.10, mas este contrato, de fato, precisa do Vyper 0.4.1 ou posterior: ele registra eventos com argumentos de palavra-chave (por exemplo, `log IERC721.Transfer(...)`), um recurso adicionado no Vyper 0.4.1, portanto, não compila na versão 0.4.0.
+
+```python
+# @dev Implementação do padrão de token não fungível (NFT) ERC-721.
 # @author Ryuya Nakamura (@nrryuya)
 # Modificado de: https://github.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
 ```
 
-Os comentários em Vyper, assim como em Python, começam com um hash (`ethereum.ercs`) e continuam até o final da linha. Comentários que incluem
+Os comentários em Vyper, assim como em Python, começam com um hash (`#`) e continuam até o final da linha. Os comentários que incluem
 `@<keyword>` são usados pelo [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) para produzir documentação legível por humanos.
 
 ```python
-from vyper.interfaces import ERC721
+from ethereum.ercs import IERC165
+from ethereum.ercs import IERC721
 
-implements: ERC721
+implements: IERC721
+implements: IERC165
 ```
 
-A interface ERC-721 é integrada à linguagem Vyper.
-[Você pode ver a definição do código aqui](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py).
-A definição da interface é escrita em Python, em vez de Vyper, porque as interfaces são usadas não apenas dentro da
-blockchain, mas também ao enviar à blockchain uma transação de um cliente externo, que pode ser escrito em
-Python.
+As interfaces ERC-165 e ERC-721 vêm com o compilador Vyper, então as importamos de `ethereum.ercs` em vez de escrevê-las nós mesmos. [Você pode ver a definição da interface ERC-721 aqui](https://github.com/vyperlang/vyper/blob/master/vyper/builtins/interfaces/IERC721.vyi).
+As linhas `implements:` declaram que este contrato fornece ambas as interfaces, e o compilador verifica se cada função exigida por elas está definida abaixo.
 
-A primeira linha importa a interface, e a segunda especifica que a estamos implementando aqui.
-
-```python
-#pragma version >0.3.10
-```
-
-```python
-#pragma version >0.3.10
-```
 ### A Interface ERC721Receiver {#receiver-interface}
 
 ```python
@@ -61,8 +57,11 @@ interface ERC721Receiver:
 
 O ERC-721 suporta dois tipos de transferência:
 
-- `transferFrom`, que permite ao remetente especificar qualquer endereço de destino e coloca a responsabilidade pela transferência no remetente. Isso significa que você pode transferir para um endereço inválido, caso em que o NFT é perdido para sempre.
-- `safeTransferFrom`, que verifica se o endereço de destino é um contrato. Se for, o contrato ERC-721 pergunta ao contrato receptor se ele deseja receber o NFT.
+- `transferFrom`, que permite ao remetente especificar qualquer endereço de destino e coloca a responsabilidade
+  pela transferência no remetente. Isso significa que você pode transferir para um endereço inválido, caso em que
+  o NFT é perdido para sempre.
+- `safeTransferFrom`, que verifica se o endereço de destino é um contrato. Se for, o contrato ERC-721
+  pergunta ao contrato receptor se ele deseja receber o NFT.
 
 Para responder às solicitações `safeTransferFrom`, um contrato receptor deve implementar `ERC721Receiver`.
 
@@ -71,13 +70,16 @@ Para responder às solicitações `safeTransferFrom`, um contrato receptor deve 
             _from: address,
 ```
 
-O endereço `_from` é o proprietário atual do token. O endereço `_operator` é aquele que solicitou a transferência (esses dois podem não ser os mesmos, devido a permissões). Por convenção, a maioria dos parâmetros de função neste contrato começa com um sublinhado (`_`).
+O endereço `_from` é o proprietário atual do token. O endereço `_operator` é aquele que
+solicitou a transferência (esses dois podem não ser os mesmos, devido a permissões). Por convenção, a maioria dos parâmetros de função
+neste contrato começa com um sublinhado (`_`).
 
 ```python
             _tokenId: uint256,
 ```
 
-Os IDs de token ERC-721 têm 256 bits. Normalmente, eles são criados por meio da geração de hash de uma descrição do que quer que o token represente.
+Os IDs de token ERC-721 têm 256 bits. Normalmente, eles são criados pela geração de hash de uma descrição do que quer que
+o token represente.
 
 ```python
             _data: Bytes[1024]
@@ -89,39 +91,43 @@ A solicitação pode ter até 1024 bytes de dados do usuário.
         ) -> bytes4: nonpayable
 ```
 
-Para evitar casos em que um contrato aceite acidentalmente uma transferência, o valor de retorno não é um booleano, mas um valor específico de quatro bytes, o seletor de função de `onERC721Received`. A função é `nonpayable` porque um contrato receptor pode alterar seu próprio estado quando aceita um token.
+Para evitar casos em que um contrato acidentalmente aceita uma transferência, o valor de retorno não é um booleano,
+mas um valor específico de quatro bytes, o seletor de função de `onERC721Received`. A função é `nonpayable` porque um
+contrato receptor pode alterar seu próprio estado quando aceita um token.
+
 ### Eventos {#events}
 
 [Eventos](/developers/docs/smart-contracts/anatomy/#events-and-logs)
-são emitidos para informar usuários e servidores fora da blockchain sobre acontecimentos. Observe que o conteúdo dos eventos
+são emitidos para informar usuários e servidores fora da blockchain sobre eventos. Observe que o conteúdo dos eventos
 não está disponível para contratos na blockchain. Os três eventos ERC-721 são definidos pela interface `IERC721` que
 importamos, portanto, este contrato não os declara por si só; ele os emite com `log IERC721.<Event>(...)`, como veremos
 nas funções de transferência abaixo.
 
 `Transfer` (`sender`, `receiver`, `token_id`) relata uma mudança na propriedade de um NFT. Isso é semelhante ao
-evento Transfer do ERC-20, exceto que relatamos um `token_id` em vez de um valor. Ninguém é dono do endereço zero, então, por
-convenção, o usamos para relatar a criação e destruição de tokens. A única exceção é a criação de contratos, durante a
-qual qualquer número de NFTs pode ser criado e atribuído sem emitir `Transfer`.
+evento Transfer do ERC-20, exceto que relatamos um `token_id` em vez de uma quantia. Ninguém possui o endereço zero, então, por
+convenção, o usamos para relatar a criação e destruição de tokens. A única exceção é a criação de contratos, durante
+a qual qualquer número de NFTs pode ser criado e atribuído sem emitir `Transfer`.
 
 Uma aprovação ERC-721 é semelhante a uma permissão ERC-20: um endereço específico tem permissão para transferir um token específico,
 e `Approval` (`owner`, `approved`, `token_id`) é emitido sempre que esse endereço aprovado é definido ou reafirmado.
-Isso fornece um mecanismo para que os contratos respondam quando aceitam um token. Os contratos não podem escutar eventos, então, se
-você apenas transferir o token para eles, eles não "saberão" disso. Dessa forma, o proprietário primeiro envia uma aprovação e
-depois envia uma solicitação ao contrato: "Eu aprovei para você transferir o token X, por favor, faça...". Esta é uma escolha de design
+Isso fornece um mecanismo para os contratos responderem quando aceitam um token. Os contratos não podem escutar eventos, então, se
+você apenas transferir o token para eles, eles não "saberão" sobre isso. Dessa forma, o proprietário primeiro envia uma aprovação e
+depois envia uma solicitação ao contrato: "Eu aprovei que você transfira o token X, por favor, faça...". Esta é uma escolha de design
 para tornar o padrão ERC-721 semelhante ao padrão ERC-20. Como os tokens ERC-721 não são fungíveis, um
 contrato também pode identificar que obteve um token específico observando a propriedade do token.
 
-Por fim, `ApprovalForAll` (`owner`, `operator`, `approved`) é emitido quando um _operador_ é ativado ou desativado para
+Finalmente, `ApprovalForAll` (`owner`, `operator`, `approved`) é emitido quando um _operador_ é ativado ou desativado para
 um proprietário. Às vezes, é útil ter um operador que possa gerenciar todos os tokens de uma conta de um tipo específico
 (aqueles que são gerenciados por um contrato específico), semelhante a uma procuração. Por exemplo, eu posso querer dar
-esse poder a um contrato que verifica se eu não o contatei por seis meses e, se for o caso, distribui meus ativos aos
-meus herdeiros (se um deles solicitar, os contratos não podem fazer nada sem serem chamados por uma transação). No ERC-20
-podemos simplesmente dar uma permissão alta a um contrato de herança, mas isso não funciona para o ERC-721 porque os tokens
+tal poder a um contrato que verifica se eu não o contatei por seis meses e, se for o caso, distribui meus ativos aos
+meus herdeiros (se um deles pedir, os contratos não podem fazer nada sem serem chamados por uma transação). No ERC-20
+podemos apenas dar uma alta permissão a um contrato de herança, mas isso não funciona para o ERC-721 porque os tokens
 não são fungíveis. Este é o equivalente. O valor `approved` nos diz se o evento é para uma aprovação ou para a
 retirada de uma aprovação.
+
 ### Variáveis de Estado {#state-vars}
 
-Estas variáveis contêm o estado atual dos tokens: quais estão disponíveis e quem os possui. A maioria delas
+Essas variáveis contêm o estado atual dos tokens: quais estão disponíveis e quem os possui. A maioria deles
 são objetos `HashMap`, [mapeamentos unidirecionais que existem entre dois tipos](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
 ```python
@@ -133,7 +139,7 @@ idToApprovals: HashMap[uint256, address]
 ```
 
 As identidades de usuários e contratos no Ethereum são representadas por endereços de 160 bits. Essas duas variáveis mapeiam
-os IDs de token para seus proprietários e aqueles aprovados para transferi-los (no máximo um para cada). No Ethereum,
+de IDs de token para seus proprietários e aqueles aprovados para transferi-los (no máximo um para cada). No Ethereum,
 dados não inicializados são sempre zero, portanto, se não houver proprietário ou transferidor aprovado, o valor para esse token
 será zero.
 
@@ -142,7 +148,7 @@ será zero.
 ownerToNFTokenCount: HashMap[address, uint256]
 ```
 
-Esta variável mantém a contagem de tokens para cada proprietário. Não há mapeamento de proprietários para tokens, portanto,
+Esta variável mantém a contagem de tokens para cada proprietário. Não há mapeamento de proprietários para tokens, então
 a única maneira de identificar os tokens que um proprietário específico possui é olhar para trás no histórico de eventos da blockchain
 e ver os eventos `Transfer` apropriados. Podemos usar essa variável para saber quando temos todos os NFTs e não
 precisamos olhar ainda mais para trás no tempo.
@@ -155,10 +161,10 @@ não pode ler eventos passados.
 ownerToOperators: HashMap[address, HashMap[address, bool]]
 ```
 
-Uma conta pode ter mais de um único operador. Um `HashMap` simples é insuficiente para
+Uma conta pode ter mais de um único operador. Um simples `HashMap` é insuficiente para
 rastreá-los, porque cada chave leva a um único valor. Em vez disso, você pode usar
 `HashMap[address, bool]` como o valor. Por padrão, o valor para cada endereço é `False`, o que significa que não
-é um operador. Você pode definir os valores como `True` conforme necessário.
+é um operador. Você pode definir valores para `True` conforme necessário.
 
 ```python
 # @dev Endereço do cunhador, que pode cunhar um token
@@ -166,22 +172,23 @@ minter: address
 ```
 
 Novos tokens precisam ser criados de alguma forma. Neste contrato, há uma única entidade que tem permissão para fazer isso, o
-`minter` (cunhador). Isso provavelmente é suficiente para um jogo, por exemplo. Para outros fins, pode ser necessário
+`minter`. Isso provavelmente será suficiente para um jogo, por exemplo. Para outros fins, pode ser necessário
 criar uma lógica de negócios mais complicada.
 
 ```python
-# @dev Lista estática de IDs de interface ERC165 suportados
+# @dev Lista estática de IDs de interface ERC-165 suportados
 SUPPORTED_INTERFACES: constant(bytes4[2]) = [
-    # ID de interface ERC165 do ERC165
+    # ID de interface ERC-165 do ERC-165
     0x01ffc9a7,
-    # ID de interface ERC165 do ERC721
+    # ID de interface ERC-165 do ERC-721
     0x80ac58cd,
 ]
 ```
 
 O [ERC-165](https://eips.ethereum.org/EIPS/eip-165) especifica um mecanismo para um contrato divulgar como os aplicativos
-podem se comunicar com ele, a quais ERCs ele está em conformidade. `SUPPORTED_INTERFACES` é uma lista constante dos dois
-IDs de interface de quatro bytes aos quais este contrato está em conformidade: o próprio ERC-165 e o ERC-721.
+podem se comunicar com ele, a quais ERCs ele está em conformidade. `SUPPORTED_INTERFACES` é uma lista constante dos dois IDs de interface de quatro bytes
+aos quais este contrato está em conformidade: o próprio ERC-165 e o ERC-721.
+
 ### Funções {#functions}
 
 Estas são as funções que realmente implementam o ERC-721.
@@ -193,8 +200,8 @@ Estas são as funções que realmente implementam o ERC-721.
 def __init__():
 ```
 
-No Vyper, assim como no Python, a função do construtor é chamada de `__init__`. Ela é marcada com a decoração `@deploy`,
-o que significa que é executada uma vez, quando o contrato é implantado.
+Em Vyper, assim como em Python, a função do construtor é chamada `__init__`. Ela é marcada com a decoração `@deploy`,
+o que significa que ela é executada uma vez, quando o contrato é implantado.
 
 ```python
     """
@@ -202,7 +209,7 @@ o que significa que é executada uma vez, quando o contrato é implantado.
     """
 ```
 
-No Python e no Vyper, você também pode criar um comentário especificando uma string de várias linhas (que começa e termina
+Em Python e em Vyper, você também pode criar um comentário especificando uma string de várias linhas (que começa e termina
 com `"""`) e não a usando de forma alguma. Esses comentários também podem incluir
 [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html).
 
@@ -210,12 +217,13 @@ com `"""`) e não a usando de forma alguma. Esses comentários também podem inc
     self.minter = msg.sender
 ```
 
-Para acessar variáveis de estado, você usa `self.<nome da variável>` (novamente, o mesmo que no Python). O construtor registra a
-conta que implantou o contrato como o `minter` (cunhador).
+Para acessar variáveis de estado, você usa `self.<variable name>` (novamente, o mesmo que em Python). O construtor registra a
+conta que implantou o contrato como o `minter`.
+
 #### Funções de Visualização {#views}
 
-Estas são funções que não modificam o estado da blockchain e, portanto, podem ser executadas
-gratuitamente se forem chamadas externamente. Se as funções de visualização forem chamadas por um contrato, elas ainda terão que ser executadas em
+Estas são funções que não modificam o estado da blockchain e, portanto, podem ser executadas gratuitamente
+se forem chamadas externamente. Se as funções de visualização forem chamadas por um contrato, elas ainda terão que ser executadas em
 cada nó e, portanto, custarão gás.
 
 ```python
@@ -224,7 +232,7 @@ cada nó e, portanto, custarão gás.
 ```
 
 Essas palavras-chave antes de uma definição de função que começam com um sinal de arroba (`@`) são chamadas de _decorações_. Elas
-especificam as circunstâncias em que uma função pode ser chamada.
+especificam as circunstâncias nas quais uma função pode ser chamada.
 
 - `@view` especifica que esta função é uma visualização.
 - `@external` especifica que esta função em particular pode ser chamada por transações e por outros contratos.
@@ -239,7 +247,7 @@ Você não pode declarar uma variável ou um parâmetro de função sem identifi
 ```python
     """
     @dev A identificação da interface é especificada no ERC-165.
-    @param interface_id Id da interface
+    @param interface_id ID da interface
     """
     return interface_id in SUPPORTED_INTERFACES
 ```
@@ -258,13 +266,13 @@ Estas são as funções de visualização que disponibilizam informações sobre
 def balanceOf(_owner: address) -> uint256:
     """
     @dev Retorna o número de NFTs de propriedade de `_owner`.
-         Lança um erro se `_owner` for o endereço zero. NFTs atribuídos ao endereço zero são considerados inválidos.
+         Reverte se `_owner` for o endereço zero. NFTs atribuídos ao endereço zero são considerados inválidos.
     @param _owner Endereço para o qual consultar o saldo.
     """
     assert _owner != empty(address)
 ```
 
-Esta linha [afirma (assert)](https://vyper.readthedocs.io/en/latest/statements.html#assert) que `_owner` não é
+Esta linha [afirma](https://vyper.readthedocs.io/en/latest/statements.html#assert) que `_owner` não é
 o endereço zero, escrito como `empty(address)`. Se for, há um erro e a operação é revertida.
 
 ```python
@@ -275,11 +283,11 @@ o endereço zero, escrito como `empty(address)`. Se for, há um erro e a operaç
 def ownerOf(_tokenId: uint256) -> address:
     """
     @dev Retorna o endereço do proprietário do NFT.
-         Lança um erro se `_tokenId` não for um NFT válido.
+         Reverte se `_tokenId` não for um NFT válido.
     @param _tokenId O identificador de um NFT.
     """
     owner: address = self.idToOwner[_tokenId]
-    # Lança um erro se `_tokenId` não for um NFT válido
+    # Reverte se `_tokenId` não for um NFT válido
     assert owner != empty(address)
     return owner
 ```
@@ -294,10 +302,10 @@ caso, a função é revertida.
 def getApproved(_tokenId: uint256) -> address:
     """
     @dev Obtém o endereço aprovado para um único NFT.
-         Lança um erro se `_tokenId` não for um NFT válido.
+         Reverte se `_tokenId` não for um NFT válido.
     @param _tokenId ID do NFT para consultar a aprovação.
     """
-    # Lança um erro se `_tokenId` não for um NFT válido
+    # Reverte se `_tokenId` não for um NFT válido
     assert self.idToOwner[_tokenId] != empty(address)
     return self.idToApprovals[_tokenId]
 ```
@@ -319,13 +327,14 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Esta função verifica se `_operator` tem permissão para gerenciar todos os tokens de `_owner` neste contrato.
 Como pode haver vários operadores, este é um HashMap de dois níveis.
+
 #### Funções Auxiliares de Transferência {#transfer-helpers}
 
-Estas funções implementam operações que fazem parte da transferência ou gerenciamento de tokens.
+Essas funções implementam operações que fazem parte da transferência ou gerenciamento de tokens.
 
 ```python
 
-### AUXILIARES DE FUNÇÃO DE TRANSFERÊNCIA ###
+### AUXILIARES DA FUNÇÃO DE TRANSFERÊNCIA ###
 
 @view
 @internal
@@ -341,7 +350,7 @@ def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
     @param spender endereço do gastador a ser consultado
     @param tokenId uint256 ID do token a ser transferido
     @return bool se o msg.sender está aprovado para o ID de token fornecido,
-        é um operador do proprietário ou é o proprietário do token
+        é um operador do proprietário, ou é o proprietário do token
     """
     owner: address = self.idToOwner[_tokenId]
     spenderIsOwner: bool = owner == _spender
@@ -363,10 +372,10 @@ função que _possa_ ser uma visualização _deve_ ser uma visualização.
 @internal
 def _addTokenTo(_to: address, _tokenId: uint256):
     """
-    @dev Adiciona um NFT a um determinado endereço
-         Lança um erro se `_tokenId` for de propriedade de alguém.
+    @dev Adiciona um NFT a um endereço fornecido
+         Reverte se `_tokenId` for de propriedade de alguém.
     """
-    # Lança um erro se `_tokenId` for de propriedade de alguém
+    # Reverte se `_tokenId` for de propriedade de alguém
     assert self.idToOwner[_tokenId] == empty(address)
     # Altera o proprietário
     self.idToOwner[_tokenId] = _to
@@ -377,10 +386,10 @@ def _addTokenTo(_to: address, _tokenId: uint256):
 @internal
 def _removeTokenFrom(_from: address, _tokenId: uint256):
     """
-    @dev Remove um NFT de um determinado endereço
-         Lança um erro se `_from` não for o proprietário atual.
+    @dev Remove um NFT de um endereço fornecido
+         Reverte se `_from` não for o proprietário atual.
     """
-    # Lança um erro se `_from` não for o proprietário atual
+    # Reverte se `_from` não for o proprietário atual
     assert self.idToOwner[_tokenId] == _from
     # Altera o proprietário
     self.idToOwner[_tokenId] = empty(address)
@@ -394,10 +403,10 @@ Quando há um problema com uma transferência, revertemos a chamada.
 @internal
 def _clearApproval(_owner: address, _tokenId: uint256):
     """
-    @dev Limpa uma aprovação de um determinado endereço
-         Lança um erro se `_owner` não for o proprietário atual.
+    @dev Limpa uma aprovação de um endereço fornecido
+         Reverte se `_owner` não for o proprietário atual.
     """
-    # Lança um erro se `_owner` não for o proprietário atual
+    # Reverte se `_owner` não for o proprietário atual
     assert self.idToOwner[_tokenId] == _owner
     if self.idToApprovals[_tokenId] != empty(address):
         # Redefine as aprovações
@@ -406,7 +415,7 @@ def _clearApproval(_owner: address, _tokenId: uint256):
 
 Altere o valor apenas se necessário. As variáveis de estado vivem no armazenamento. Escrever no armazenamento é
 uma das operações mais caras que a EVM (Máquina Virtual Ethereum) faz (em termos de
-[gás](/developers/docs/gas/)). Portanto, é uma boa ideia minimizá-la, pois até mesmo escrever o
+[gás](/developers/docs/gas/)). Portanto, é uma boa ideia minimizá-lo, pois até mesmo escrever o
 valor existente tem um custo alto.
 
 ```python
@@ -414,11 +423,11 @@ valor existente tem um custo alto.
 def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: address):
     """
     @dev Executa a transferência de um NFT.
-         Lança um erro a menos que `msg.sender` seja o proprietário atual, um operador autorizado ou o endereço
+         Reverte a menos que `msg.sender` seja o proprietário atual, um operador autorizado ou o endereço
          aprovado para este NFT. (NOTA: `msg.sender` não é permitido em função privada, então passe `_sender`.)
-         Lança um erro se `_to` for o endereço zero.
-         Lança um erro se `_from` não for o proprietário atual.
-         Lança um erro se `_tokenId` não for um NFT válido.
+         Reverte se `_to` for o endereço zero.
+         Reverte se `_from` não for o proprietário atual.
+         Reverte se `_tokenId` não for um NFT válido.
     """
 ```
 
@@ -428,11 +437,11 @@ queremos apenas um único local no código onde fazemos isso para facilitar a au
 ```python
     # Verifica os requisitos
     assert self._isApprovedOrOwner(_sender, _tokenId)
-    # Lança um erro se `_to` for o endereço zero
+    # Reverte se `_to` for o endereço zero
     assert _to != empty(address)
-    # Limpa a aprovação. Lança um erro se `_from` não for o proprietário atual
+    # Limpa a aprovação. Reverte se `_from` não for o proprietário atual
     self._clearApproval(_from, _tokenId)
-    # Remove o NFT. Lança um erro se `_tokenId` não for um NFT válido
+    # Remove o NFT. Reverte se `_tokenId` não for um NFT válido
     self._removeTokenFrom(_from, _tokenId)
     # Adiciona o NFT
     self._addTokenTo(_to, _tokenId)
@@ -440,9 +449,10 @@ queremos apenas um único local no código onde fazemos isso para facilitar a au
     log IERC721.Transfer(sender=_from, receiver=_to, token_id=_tokenId)
 ```
 
-Para emitir um evento no Vyper, você usa uma instrução `log` ([veja aqui para mais detalhes](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
-Como os eventos pertencem à interface importada, nós nos referimos a eles como `IERC721.Transfer` e passamos seus campos por
+Para emitir um evento em Vyper, você usa uma instrução `log` ([veja aqui para mais detalhes](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
+Como os eventos pertencem à interface importada, nos referimos a eles como `IERC721.Transfer` e passamos seus campos por
 palavra-chave.
+
 #### Funções de Transferência {#transfer-funs}
 
 ```python
@@ -453,11 +463,11 @@ palavra-chave.
 @payable
 def transferFrom(_from: address, _to: address, _tokenId: uint256):
     """
-    @dev Lança um erro a menos que `msg.sender` seja o proprietário atual, um operador autorizado ou o endereço
+    @dev Reverte a menos que `msg.sender` seja o proprietário atual, um operador autorizado ou o endereço
          aprovado para este NFT.
-         Lança um erro se `_from` não for o proprietário atual.
-         Lança um erro se `_to` for o endereço zero.
-         Lança um erro se `_tokenId` não for um NFT válido.
+         Reverte se `_from` não for o proprietário atual.
+         Reverte se `_to` for o endereço zero.
+         Reverte se `_tokenId` não for um NFT válido.
     @notice O chamador é responsável por confirmar que `_to` é capaz de receber NFTs ou então
             eles podem ser perdidos permanentemente.
     @param _from O proprietário atual do NFT.
@@ -471,7 +481,7 @@ Esta função permite que você transfira para um endereço arbitrário. A menos
 saiba como transferir tokens, qualquer token que você transferir ficará preso nesse endereço e será inútil.
 
 A decoração `@payable` está aqui porque a interface `IERC721` declara `transferFrom`, `safeTransferFrom` e
-`approve` como pagáveis (payable), então um contrato que implementa a interface tem que corresponder a essas assinaturas.
+`approve` como pagáveis, então um contrato que implementa a interface deve corresponder a essas assinaturas.
 
 ```python
 @external
@@ -484,12 +494,12 @@ def safeTransferFrom(
     ):
     """
     @dev Transfere a propriedade de um NFT de um endereço para outro endereço.
-         Lança um erro a menos que `msg.sender` seja o proprietário atual, um operador autorizado ou o
+         Reverte a menos que `msg.sender` seja o proprietário atual, um operador autorizado ou o
          endereço aprovado para este NFT.
-         Lança um erro se `_from` não for o proprietário atual.
-         Lança um erro se `_to` for o endereço zero.
-         Lança um erro se `_tokenId` não for um NFT válido.
-         Se `_to` for um contrato inteligente, ele chama `onERC721Received` em `_to` e lança um erro se
+         Reverte se `_from` não for o proprietário atual.
+         Reverte se `_to` for o endereço zero.
+         Reverte se `_tokenId` não for um NFT válido.
+         Se `_to` for um contrato inteligente, ele chama `onERC721Received` em `_to` e reverte se
          o valor de retorno não for `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`.
     @param _from O proprietário atual do NFT.
     @param _to O novo proprietário.
@@ -507,8 +517,8 @@ então tudo o que foi feito na chamada será cancelado.
 ```
 
 Primeiro, verifique se o endereço é um contrato (se ele tem código). Se não, assuma que é um endereço de usuário
-e o usuário poderá usar o token ou transferi-lo. Mas não deixe que isso o iluda com
-uma falsa sensação de segurança. Você pode perder tokens, mesmo com `safeTransferFrom`, se os transferir
+e o usuário poderá usar o token ou transferi-lo. Mas não deixe que isso o iluda
+com uma falsa sensação de segurança. Você pode perder tokens, mesmo com `safeTransferFrom`, se os transferir
 para um endereço para o qual ninguém conhece a chave privada.
 
 ```python
@@ -519,7 +529,7 @@ Chame o contrato de destino para ver se ele pode receber tokens ERC-721. O Vyper
 sejam marcadas, portanto, a chamada é prefixada com `extcall`.
 
 ```python
-        # Lança um erro se o destino da transferência for um contrato que não implementa 'onERC721Received'
+        # Reverte se o destino da transferência for um contrato que não implementa 'onERC721Received'
         assert returnValue == method_id("onERC721Received(address,address,uint256,bytes)", output_type=bytes4)
 ```
 
@@ -532,16 +542,16 @@ transferência em particular), reverta.
 def approve(_approved: address, _tokenId: uint256):
     """
     @dev Define ou reafirma o endereço aprovado para um NFT. O endereço zero indica que não há endereço aprovado.
-         Lança um erro a menos que `msg.sender` seja o proprietário atual do NFT ou um operador autorizado do proprietário atual.
-         Lança um erro se `_tokenId` não for um NFT válido. (NOTA: Isso não está escrito na EIP)
-         Lança um erro se `_approved` for o proprietário atual. (NOTA: Isso não está escrito na EIP)
-    @param _approved Endereço a ser aprovado para o ID do NFT fornecido.
+         Reverte a menos que `msg.sender` seja o proprietário atual do NFT, ou um operador autorizado do proprietário atual.
+         Reverte se `_tokenId` não for um NFT válido. (NOTA: Isso não está escrito no EIP)
+         Reverte se `_approved` for o proprietário atual. (NOTA: Isso não está escrito no EIP)
+    @param _approved Endereço a ser aprovado para o ID de NFT fornecido.
     @param _tokenId ID do token a ser aprovado.
     """
     owner: address = self.idToOwner[_tokenId]
-    # Lança um erro se `_tokenId` não for um NFT válido
+    # Reverte se `_tokenId` não for um NFT válido
     assert owner != empty(address)
-    # Lança um erro se `_approved` for o proprietário atual
+    # Reverte se `_approved` for o proprietário atual
     assert _approved != owner
 ```
 
@@ -565,18 +575,19 @@ Para definir uma aprovação, você pode ser o proprietário ou um operador auto
 @external
 def setApprovalForAll(_operator: address, _approved: bool):
     """
-    @dev Ativa ou desativa a aprovação para um terceiro ("operador") gerenciar todos os
-         ativos de `msg.sender`. Também emite o evento ApprovalForAll.
-         Lança um erro se `_operator` for o `msg.sender`. (NOTA: Isso não está escrito na EIP)
+    @dev Habilita ou desabilita a aprovação para um terceiro ("operador") gerenciar todos os
+         ativos do `msg.sender`. Também emite o evento ApprovalForAll.
+         Reverte se `_operator` for o `msg.sender`. (NOTA: Isso não está escrito no EIP)
     @notice Isso funciona mesmo se o remetente não possuir nenhum token no momento.
-    @param _operator Endereço a ser adicionado ao conjunto de operadores autorizados.
-    @param _approved True se os operadores forem aprovados, false para revogar a aprovação.
+    @param _operator Endereço para adicionar ao conjunto de operadores autorizados.
+    @param _approved Verdadeiro se os operadores forem aprovados, falso para revogar a aprovação.
     """
-    # Lança um erro se `_operator` for o `msg.sender`
+    # Reverte se `_operator` for o `msg.sender`
     assert _operator != msg.sender
     self.ownerToOperators[msg.sender][_operator] = _approved
     log IERC721.ApprovalForAll(owner=msg.sender, operator=_operator, approved=_approved)
 ```
+
 #### Cunhar Novos Tokens e Destruir os Existentes {#mint-burn}
 
 A conta que criou o contrato é o `minter`, o superusuário que está autorizado a cunhar
@@ -599,7 +610,7 @@ Esta função sempre retorna `True`, porque se a operação falhar, ela é rever
          Reverte se `_to` for o endereço zero.
          Reverte se `_tokenId` for de propriedade de alguém.
     @param _to O endereço que receberá os tokens cunhados.
-    @param _tokenId O id do token a ser cunhado.
+    @param _tokenId O ID do token a ser cunhado.
     @return Um booleano que indica se a operação foi bem-sucedida.
     """
     # Reverte se `msg.sender` não for o cunhador
@@ -613,10 +624,10 @@ os privilégios de cunhador para outra pessoa.
 
 ```python
     # Reverte se `_to` for o endereço zero
-    assert _to != ZERO_ADDRESS
+    assert _to != empty(address)
     # Adiciona o NFT. Reverte se `_tokenId` for de propriedade de alguém
     self._addTokenTo(_to, _tokenId)
-    log Transfer(ZERO_ADDRESS, _to, _tokenId)
+    log IERC721.Transfer(sender=empty(address), receiver=_to, token_id=_tokenId)
     return True
 ```
 
@@ -631,16 +642,16 @@ def burn(_tokenId: uint256):
          Reverte a menos que `msg.sender` seja o proprietário atual, um operador autorizado ou o endereço
          aprovado para este NFT.
          Reverte se `_tokenId` não for um NFT válido.
-    @param _tokenId uint256 id do token ERC-721 a ser queimado.
+    @param _tokenId uint256 ID do token ERC-721 a ser queimado.
     """
     # Verifica os requisitos
     assert self._isApprovedOrOwner(msg.sender, _tokenId)
     owner: address = self.idToOwner[_tokenId]
     # Reverte se `_tokenId` não for um NFT válido
-    assert owner != ZERO_ADDRESS
+    assert owner != empty(address)
     self._clearApproval(owner, _tokenId)
     self._removeTokenFrom(owner, _tokenId)
-    log Transfer(owner, ZERO_ADDRESS, _tokenId)
+    log IERC721.Transfer(sender=owner, receiver=empty(address), token_id=_tokenId)
 ```
 
 Qualquer pessoa que tenha permissão para transferir um token tem permissão para queimá-lo. Embora uma queima pareça equivalente à
@@ -668,6 +679,6 @@ Para revisão, aqui estão algumas das ideias mais importantes neste contrato:
   ou ser um operador para todos os tokens do proprietário.
 - Eventos passados são visíveis apenas fora da blockchain. O código em execução dentro da blockchain não pode visualizá-los.
 
-Agora vá e implemente contratos seguros em Vyper.
+Agora vá e implemente contratos Vyper seguros.
 
 [Veja aqui mais do meu trabalho](https://cryptodocguy.pro/).

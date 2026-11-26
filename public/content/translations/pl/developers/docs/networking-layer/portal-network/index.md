@@ -1,89 +1,55 @@
 ---
 title: Portal Network
-description: "Przegląd Portal Network – będącej w fazie rozwoju sieci zaprojektowanej do obsługi klientów o niskich zasobach."
+description: "Przegląd Portal Network, sieci peer-to-peer, która zapewnia dostępność historii Ethereum, gdy klienty przestają przechowywać ją w całości."
 lang: pl
 ---
 
-[Ethereum](/) to sieć składająca się z komputerów, na których działa oprogramowanie klienta Ethereum. Każdy z tych komputerów nazywany jest „węzłem” (ang. node). Oprogramowanie klienta pozwala węzłowi wysyłać i odbierać dane w sieci Ethereum oraz weryfikuje dane zgodnie z regułami protokołu Ethereum. Węzły przechowują wiele danych historycznych na swoich dyskach i dodają do nich nowe pakiety informacji, znane jako bloki, otrzymywane od innych węzłów w sieci. Jest to niezbędne, aby zawsze sprawdzać, czy węzeł ma informacje spójne z resztą sieci. Oznacza to, że uruchomienie węzła może wymagać dużej ilości miejsca na dysku. Niektóre operacje węzła mogą również wymagać dużej ilości pamięci RAM.
+[Ethereum](/) to sieć składająca się z komputerów, na których działa oprogramowanie klienta Ethereum. Każdy z tych komputerów nazywany jest „węzłem”. Oprogramowanie klienta pozwala węzłowi wysyłać i odbierać dane w sieci Ethereum oraz weryfikuje dane zgodnie z regułami protokołu Ethereum. Węzły przechowują wiele danych historycznych na swoich dyskach i dodają do nich nowe pakiety informacji, znane jako bloki, otrzymywane od innych węzłów w sieci. Jest to niezbędne, aby zawsze móc sprawdzić, czy węzeł posiada informacje spójne z resztą sieci. Oznacza to, że uruchomienie węzła może wymagać dużej ilości miejsca na dysku. Niektóre operacje węzła mogą również wymagać dużej ilości pamięci RAM.
 
-Aby obejść ten problem z miejscem na dysku, opracowano „lekkie węzły” (ang. light nodes), które żądają informacji od pełnych węzłów, zamiast przechowywać je w całości samodzielnie. Oznacza to jednak, że lekki węzeł nie weryfikuje informacji niezależnie i zamiast tego ufa innemu węzłowi. Oznacza to również, że pełne węzły muszą podjąć dodatkową pracę, aby obsłużyć te lekkie węzły.
+Klienty warstwy wykonawczej nie muszą już przechowywać wszystkich tych danych. Od lipca 2025 r. mogą one odrzucać ciała i pokwitowania bloków sprzed [The Merge](/roadmap/merge/), a mapa drogowa Ethereum zakłada z czasem odrzucanie coraz większej części historii łańcucha. Historia ta musi jednak pozostać dostępna dla każdego, kto jej potrzebuje, np. dla eksploratorów bloków, indeksatorów lub portfeli wyszukujących stare transakcje.
 
-Portal Network to nowy projekt sieciowy dla Ethereum, który ma na celu rozwiązanie problemu dostępności danych (DA) dla „lekkich” węzłów bez konieczności ufania pełnym węzłom lub nakładania na nie dodatkowego obciążenia, poprzez udostępnianie niezbędnych danych w małych fragmentach w całej sieci.
+Portal Network zapewnia dostępność tej historii, udostępniając ją w małych fragmentach w wielu węzłach. Żaden węzeł nie musi przechowywać jej w całości, a każdy węzeł może pobrać dowolny fragment i sprawdzić go z danymi, które już posiada, bez konieczności ufania węzłowi, który go wysłał.
 
 Więcej o [węzłach i klientach](/developers/docs/nodes-and-clients/)
 
 ## Dlaczego potrzebujemy Portal Network {#why-do-we-need-portal-network}
 
-Węzły Ethereum przechowują własną pełną lub częściową kopię blockchaina Ethereum. Ta lokalna kopia służy do walidacji transakcji i upewnienia się, że węzeł podąża za właściwym łańcuchem. Te lokalnie przechowywane dane pozwalają węzłom niezależnie weryfikować, czy przychodzące dane są ważne i poprawne, bez konieczności ufania jakiemukolwiek innemu podmiotowi.
+Węzły Ethereum przechowują własną pełną lub częściową kopię blockchaina Ethereum. Ta lokalna kopia służy do walidacji transakcji i upewnienia się, że węzeł podąża za właściwym łańcuchem. Te lokalnie przechowywane dane pozwalają węzłom na niezależną weryfikację, czy przychodzące dane są ważne i poprawne, bez konieczności ufania jakiemukolwiek innemu podmiotowi.
 
-Ta lokalna kopia blockchaina oraz powiązane dane stanu i pokwitowań zajmują dużo miejsca na dysku twardym węzła. Na przykład do uruchomienia węzła przy użyciu [Geth](https://geth.ethereum.org) w połączeniu z klientem konsensusu zalecany jest dysk twardy o pojemności 2 TB. Korzystając z synchronizacji snap (snap sync), która przechowuje tylko dane łańcucha ze stosunkowo niedawnego zestawu bloków, Geth zazwyczaj zajmuje około 650 GB miejsca na dysku, ale rośnie w tempie około 14 GB tygodniowo (można okresowo przycinać węzeł z powrotem do 650 GB).
+Ta lokalna kopia blockchaina oraz powiązane z nią dane stanu i pokwitowań zajmują dużo miejsca na dysku twardym węzła. Na przykład do uruchomienia węzła używającego [Geth](https://geth.ethereum.org) w parze z klientem konsensusu zalecany jest dysk SSD o pojemności 4 TB. Z pełną historią łańcucha Geth zajmuje ponad 1,8 TB miejsca na dysku (stan na wrzesień 2026 r.), a wartość ta stale rośnie wraz z łańcuchem.
 
-Oznacza to, że uruchamianie węzłów może być kosztowne, ponieważ duża ilość miejsca na dysku musi być dedykowana dla Ethereum. Na mapie drogowej Ethereum znajduje się kilka rozwiązań tego problemu, w tym [wygasanie historii](/roadmap/statelessness/#history-expiry), [wygasanie stanu](/roadmap/statelessness/#state-expiry) i [bezstanowość](/roadmap/statelessness/). Jednak prawdopodobnie minie jeszcze kilka lat, zanim zostaną one wdrożone. Istnieją również [lekkie węzły](/developers/docs/nodes-and-clients/light-clients/), które nie zapisują własnej kopii danych łańcucha, lecz żądają potrzebnych im danych od pełnych węzłów. Oznacza to jednak, że lekkie węzły muszą ufać pełnym węzłom, że dostarczą uczciwe dane, a także obciąża to pełne węzły, które muszą obsługiwać dane potrzebne lekkim węzłom.
+Oznacza to, że uruchamianie węzłów może być kosztowne, ponieważ dużą ilość miejsca na dysku trzeba przeznaczyć na Ethereum. [Wygasanie historii](/roadmap/statelessness/#history-expiry) zmniejsza to zapotrzebowanie, pozwalając klientom na usuwanie starych danych bloków, których nie potrzebują do podążania za łańcuchem: od czasu [częściowego wygasania historii](https://blog.ethereum.org/2025/07/08/partial-history-exp) w lipcu 2025 r. klienty warstwy wykonawczej mogą odrzucać ciała i pokwitowania każdego bloku sprzed The Merge. [Wygasanie stanu](/roadmap/statelessness/#state-expiry) i [bezstanowość](/roadmap/statelessness/) to kolejne rozwiązania, które wciąż są badane.
 
-Portal Network ma na celu zapewnienie alternatywnego sposobu pozyskiwania danych przez lekkie węzły, który nie wymaga zaufania ani znacznego zwiększania pracy, jaką muszą wykonać pełne węzły. Sposobem na to będzie wprowadzenie nowego sposobu udostępniania danych w sieci przez węzły Ethereum.
+Gdy węzły przestaną przechowywać starą historię, nie będą mogły jej już udostępniać innym. Archiwa, torrenty i dostawcy przechowują jej kopie; Portal Network rozprasza ją w wielu węzłach, dzięki czemu pozostaje ona dostępna bez polegania na żadnym z nich.
 
 ## Jak działa Portal Network? {#how-does-portal-network-work}
 
-Węzły Ethereum mają ścisłe protokoły, które określają, w jaki sposób komunikują się ze sobą. Klienty warstwy wykonawczej komunikują się za pomocą zestawu podprotokołów znanych jako [devp2p](/developers/docs/networking-layer/#devp2p), podczas gdy klienty konsensusu używają innego stosu podprotokołów zwanego [libp2p](/developers/docs/networking-layer/#libp2p). Definiują one rodzaje danych, które mogą być przekazywane między węzłami.
+Węzły Ethereum mają rygorystyczne protokoły, które określają, w jaki sposób komunikują się ze sobą. Klienty warstwy wykonawczej komunikują się za pomocą zestawu podprotokołów znanych jako [devp2p](/developers/docs/networking-layer/#devp2p), podczas gdy klienty konsensusu używają innego stosu podprotokołów zwanego [libp2p](/developers/docs/networking-layer/#libp2p). Protokół devp2p pozwala węzłowi żądać ciał bloków i pokwitowań od swoich węzłów równorzędnych, ale węzeł równorzędny, który odrzucił starą historię, nie może jej udostępnić. Aplikacje i portfele mogą również pobierać dane z węzła za pośrednictwem [interfejsu programowania aplikacji (API) JSON-RPC](/developers/docs/apis/json-rpc/), ale opiera się to na jednym węźle lub dostawcy przechowującym dane i na zaufaniu do jego uczciwości.
 
-![devP2P and libP2P](portal-network-devp2p-libp2p.png)
+Portal Network to oddzielna sieć peer-to-peer zbudowana w celu udostępniania historii. Działa ona w oparciu o [discv5](https://github.com/ethereum/devp2p/blob/master/discv5/discv5.md), protokół odkrywania węzłów, którego klienty konsensusu używają również do znajdowania węzłów równorzędnych, i organizuje swoje węzły w postaci [rozproszonej tablicy hashów (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table), podobnie jak w sieci BitTorrent. Każdy węzeł ma identyfikator węzła (node ID), a każdy fragment treści, taki jak pokwitowania jednego bloku, ma identyfikator treści (content ID) w tej samej przestrzeni identyfikatorów, pochodzący od numeru bloku. Każdy węzeł przechowuje treść, której identyfikatory są najbliższe jego własnemu identyfikatorowi, aż do wybranej przez siebie odległości, zwanej jego promieniem. Aby pobrać fragment treści, węzeł pyta znane mu węzły równorzędne, które są najbliżej identyfikatora treści. Węzły równorzędne, które go nie posiadają, odpowiadają węzłami, które są jeszcze bliżej, dopóki żądanie nie dotrze do węzła, który go przechowuje.
 
-Węzły mogą również udostępniać określone dane za pośrednictwem [API JSON-RPC](/developers/docs/apis/json-rpc/), w ten sposób aplikacje i portfele wymieniają informacje z węzłami Ethereum. Jednak żaden z nich nie jest idealnym protokołem do udostępniania danych lekkim klientom.
+<PortalHistoryDiagram />
 
-Lekkie klienty nie mogą obecnie żądać określonych fragmentów danych łańcucha przez devp2p lub libp2p, ponieważ te protokoły są zaprojektowane tylko w celu umożliwienia synchronizacji łańcucha oraz rozgłaszania (gossiping) bloków i transakcji. Lekkie klienty nie chcą pobierać tych informacji, ponieważ przestałyby być „lekkie”.
+Węzeł nigdy nie musi ufać otrzymywanym danym. Przechowuje on każdy nagłówek bloku, a każdy nagłówek zatwierdza transakcje i pokwitowania swojego bloku poprzez korzenie (roots), takie jak `transactionsRoot` i `receiptsRoot`. Przed ich użyciem węzeł sprawdza ciało bloku lub pokwitowania bloku z tymi korzeniami.
 
-API JSON-RPC również nie jest idealnym wyborem dla żądań danych lekkich klientów, ponieważ opiera się na połączeniu z określonym pełnym węzłem lub scentralizowanym dostawcą RPC, który może udostępniać dane. Oznacza to, że lekki klient musi ufać temu konkretnemu węzłowi/dostawcy, że jest uczciwy, a ponadto pełny węzeł może musieć obsługiwać wiele żądań od wielu lekkich klientów, co zwiększa jego wymagania dotyczące przepustowości.
+### Sieci Portal Network {#the-portal-networks}
 
-Celem Portal Network jest przemyślenie całego projektu, budowanie specjalnie pod kątem lekkości, poza ograniczeniami projektowymi istniejących klientów Ethereum.
+Portal Network został początkowo zaprojektowany jako kilka podsieci, które pozwoliłyby lekkim klientom podążać za łańcuchem bez ufania pełnemu węzłowi: sieć lekkich klientów Beacon Chain, sieć stanu, sieć plotkowania o transakcjach (transaction gossip network) i sieć historii. W 2025 r. specyfikacje wszystkich z nich z wyjątkiem jednej zostały przeniesione do starszych wersji (legacy), a rozwój skupia się teraz na **sieci historii** (History network), która przechowuje ciała i pokwitowania przeszłych bloków dla klientów warstwy wykonawczej, którzy zachowują każdy nagłówek bloku, ale odrzucili resztę historii.
 
-Główną ideą Portal Network jest wykorzystanie najlepszych elementów obecnego stosu sieciowego poprzez umożliwienie udostępniania informacji potrzebnych lekkim klientom, takich jak dane historyczne i tożsamość obecnego szczytu łańcucha (head of the chain), za pośrednictwem lekkiej, zdecentralizowanej sieci peer-to-peer w stylu devp2p, wykorzystującej [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (podobnie jak w sieci BitTorrent).
+## Klienty Portal Network {#client-diversity-as-default}
 
-Pomysł polega na dodaniu do każdego węzła małych części całkowitych danych historycznych Ethereum i pewnych specyficznych obowiązków węzła. Następnie żądania są obsługiwane poprzez wyszukiwanie węzłów przechowujących określone dane, o które poproszono, i pobieranie ich od nich.
+Kilka zespołów zbudowało klienty Portal Network:
 
-Odwraca to normalny model lekkich węzłów, które znajdują pojedynczy węzeł i żądają od niego filtrowania i udostępniania dużych ilości danych; zamiast tego szybko filtrują dużą sieć węzłów, z których każdy obsługuje niewielkie ilości danych.
-
-Celem jest umożliwienie zdecentralizowanej sieci lekkich klientów Portal na:
-
-- śledzenie szczytu łańcucha
-- synchronizację najnowszych i historycznych danych łańcucha
-- pobieranie danych stanu
-- rozgłaszanie transakcji
-- wykonywanie transakcji przy użyciu [EVM](/developers/docs/evm/)
-
-Korzyści z takiego projektu sieci to:
-
-- zmniejszenie zależności od scentralizowanych dostawców
-- zmniejszenie zużycia przepustowości Internetu
-- zminimalizowana lub zerowa synchronizacja
-- dostępność dla urządzeń o ograniczonych zasobach (\<1 GB RAM, \<100 MB miejsca na dysku, 1 CPU)
-
-Poniższa tabela przedstawia funkcje istniejących klientów, które mogą być dostarczane przez Portal Network, umożliwiając użytkownikom dostęp do tych funkcji na urządzeniach o bardzo niskich zasobach.
-
-### Sieci Portal {#the-portal-networks}
-
-| Lekki klient Beacon | Sieć stanu                   | Rozgłaszanie transakcji | Sieć historii   | Kanoniczny indeks transakcji |
-| ------------------- | ---------------------------- | ----------------------- | --------------- | ---------------------------- |
-| Lekki łańcuch Beacon| Pamięć kont i kontraktów     | Lekki mempool           | Nagłówki        | TxHash > Hash, Indeks        |
-| Dane protokołu      |                              |                         | Ciała bloków    |                              |
-|                     |                              |                         | Pokwitowania    |                              |
-
-## Różnorodność klientów domyślnie {#client-diversity-as-default}
-
-Deweloperzy Portal Network podjęli również decyzję projektową o zbudowaniu czterech oddzielnych klientów Portal Network od pierwszego dnia.
-
-Klienty Portal Network to:
-
-- [Trin](https://github.com/ethereum/trin): napisany w języku Rust
-- [Fluffy](https://fluffy.guide): napisany w języku Nim
-- [Ultralight](https://github.com/ethereumjs/ultralight): napisany w języku TypeScript
-- [Shisui](https://github.com/zen-eth/shisui): napisany w języku Go
-
-Posiadanie wielu niezależnych implementacji klientów zwiększa odporność i decentralizację sieci Ethereum.
-
-Jeśli jeden klient napotka problemy lub luki w zabezpieczeniach, inne klienty mogą nadal działać płynnie, zapobiegając pojedynczemu punktowi awarii. Ponadto różnorodne implementacje klientów sprzyjają innowacjom i konkurencji, napędzając ulepszenia i zmniejszając ryzyko monokultury w ekosystemie.
+- [Klient Nimbus Portal](https://fluffy.guide) (wcześniej Fluffy): napisany w języku Nim i wciąż aktywnie rozwijany
+- [Trin](https://github.com/ethereum/trin): napisany w języku Rust, nie jest już utrzymywany
+- [Ultralight](https://github.com/ethereumjs/ultralight): napisany w języku TypeScript, bez aktualizacji od połowy 2025 r.
+- [Shisui](https://github.com/zen-eth/shisui): napisany w języku Go, bez aktualizacji od połowy 2025 r.
 
 ## Dalsza lektura {#further-reading}
 
-- [Portal Network (Piper Merriam na Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
+- [Specyfikacje Portal Network](https://github.com/ethereum/portal-network-specs)
+- [Wykorzystanie protokołu Portal Network do wygasania historii](https://ethresear.ch/t/using-portal-network-protocol-for-history-expiry/22658)
+- [Częściowe wygasanie historii](https://blog.ethereum.org/2025/07/08/partial-history-exp)
+- [Portal Network (Piper Merriam na Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA)
 - [Discord Portal Network](https://discord.gg/CFFnmE7Hbs)
 - [Strona internetowa Portal Network](https://www.ethportal.net/)

@@ -1,20 +1,36 @@
 ---
 title: "Chương trình Dịch thuật"
 lang: vi
-description: "Thông tin về Chương trình Dịch thuật của ethereum.org"
+description: "Giúp dịch Ethereum bằng cách xem xét các thuật ngữ bằng ngôn ngữ của bạn trên ETHGlossary. Các thuật ngữ bạn chấp thuận là những thuật ngữ mà ethereum.org sử dụng."
 ---
 
-Chương trình Dịch thuật từng là một nỗ lực hợp tác nhằm dịch ethereum.org sang các ngôn ngữ khác nhau, giúp hàng tỷ người không nói tiếng Anh trên toàn thế giới có thể tiếp cận trang web này dễ dàng hơn.
+Ethereum nên được đọc một cách tự nhiên trong mọi ngôn ngữ. Cách tốt nhất để giúp đỡ ngay bây giờ là [ETHGlossary](https://glossary.ethereum.org/), một bảng thuật ngữ Ethereum được cộng đồng xem xét và chia sẻ bằng 24 ngôn ngữ.
+
+**Các thuật ngữ bạn chấp thuận là những thuật ngữ mà ethereum.org sử dụng trong ngôn ngữ của bạn.** Các nhóm phát triển ví, ứng dụng và tài liệu cũng có thể sử dụng chúng thông qua Giao diện Lập trình Ứng dụng (API) mở của bảng thuật ngữ.
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  Xem xét các thuật ngữ bằng ngôn ngữ của bạn
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## Cách thức hoạt động {#how-it-works}
+
+1. **Chọn ngôn ngữ của bạn.** Mỗi ngôn ngữ đều có cùng một bộ thuật ngữ Ethereum, mỗi thuật ngữ đều có một bản dịch nháp.
+2. **Xem xét một thuật ngữ.** Chấp thuận thuật ngữ đó, đề xuất một giải pháp thay thế tốt hơn hoặc thêm ngữ cảnh về cách thuật ngữ đó được sử dụng trong cộng đồng của bạn.
+3. **Phát hành.** Các thuật ngữ đã được xem xét sẽ định hướng cho các bản dịch của ethereum.org và được xuất bản thông qua Giao diện Lập trình Ứng dụng (API) của ETHGlossary.
+
+Không có bất kỳ cam kết nào. Việc xem xét một thuật ngữ duy nhất chỉ mất vài phút.
+
+**Ngôn ngữ:** Tiếng Ả Rập, Tiếng Bengal, Tiếng Trung (Giản thể và Phồn thể), Tiếng Séc, Tiếng Pháp, Tiếng Đức, Tiếng Hindi, Tiếng Indonesia, Tiếng Ý, Tiếng Nhật, Tiếng Hàn, Tiếng Marathi, Tiếng Ba Lan, Tiếng Bồ Đào Nha (Brazil), Tiếng Nga, Tiếng Tây Ban Nha, Tiếng Swahili, Tiếng Tamil, Tiếng Telugu, Tiếng Thổ Nhĩ Kỳ, Tiếng Ukraina, Tiếng Urdu và Tiếng Việt.
+
 ## Trạng thái chương trình {#program-status}
 
-Chương trình Dịch thuật của ethereum.org đang dần khép lại và không còn tiếp nhận dịch giả mới nữa. Dự án Crowdin đang được đóng lại và chúng tôi không chấp nhận các bản dịch mới gửi qua nền tảng này.
+Việc dịch toàn bộ trang thông qua Crowdin đang bị tạm dừng và chúng tôi không chấp nhận các bản dịch mới gửi lên đó. Trong thời gian này, xem xét các thuật ngữ trên [ETHGlossary](https://glossary.ethereum.org/) là cách để đóng góp.
 
-Chúng tôi vô cùng biết ơn hàng ngàn dịch giả trong cộng đồng đã giúp ethereum.org có mặt bằng hàng chục ngôn ngữ trong những năm qua—các tác phẩm của họ vẫn đang hiện diện trên trang web, và sự ghi nhận dành cho họ trên các trang [lời cảm ơn](/contributing/translation-program/acknowledgements/) và [người đóng góp](/contributing/translation-program/contributors/) vẫn được giữ nguyên.
+Chúng tôi vô cùng biết ơn hàng ngàn dịch giả cộng đồng đã giúp ethereum.org có mặt bằng hàng chục ngôn ngữ trong những năm qua—công việc của họ vẫn đang hiện diện trên trang web, và sự ghi nhận dành cho họ trên các trang [lời cảm ơn](/contributing/translation-program/acknowledgements/) và [người đóng góp](/contributing/translation-program/contributors/) vẫn được giữ nguyên.
 
-Nếu bạn phát hiện lỗi trong một bản dịch hiện có, vui lòng [mở một issue trên GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+Nếu bạn phát hiện lỗi trong bản dịch hiện tại, vui lòng [mở một vấn đề trên GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 _Tham gia [Discord của ethereum.org](/discord/) để đặt câu hỏi hoặc chia sẻ phản hồi._
 

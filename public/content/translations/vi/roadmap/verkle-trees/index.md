@@ -1,6 +1,6 @@
 ---
-title: Cây Verkle
-description: Mô tả tổng quan về cây Verkle và cách chúng sẽ được sử dụng để nâng cấp Ethereum
+title: "Cây Verkle"
+description: "Mô tả tổng quan về cây Verkle và cách chúng sẽ được sử dụng để nâng cấp Ethereum"
 lang: vi
 template: roadmap
 summaryPoints:
@@ -38,9 +38,9 @@ Kích thước bằng chứng dữ liệu thay đổi tùy thuộc vào số lư
 
 ## Cấu trúc của một cây Verkle là gì? {#what-is-the-structure-of-a-verkle-tree}
 
-Cây Verkle là các cặp `(key,value)` trong đó các khóa là các phần tử 32 byte bao gồm một _thân_ (stem) 31 byte và một _hậu tố_ (suffix) 1 byte. Các khóa này được tổ chức thành các nút _mở rộng_ (extension) và các nút _bên trong_ (inner). Các nút mở rộng đại diện cho một thân duy nhất cho 256 nút con với các hậu tố khác nhau. Các nút bên trong cũng có 256 nút con, nhưng chúng có thể là các nút mở rộng khác. Sự khác biệt chính giữa cấu trúc cây Verkle và cây Merkle là cây Verkle phẳng hơn nhiều, nghĩa là có ít nút trung gian liên kết một lá với gốc hơn, và do đó cần ít dữ liệu hơn để tạo ra một bằng chứng.
+Cây Verkle là các cặp `(key,value)` trong đó các khóa là các phần tử 32 byte bao gồm một _thân_ 31 byte và một _hậu tố_ một byte. Các khóa này được tổ chức thành các nút _mở rộng_ và các nút _bên trong_. Các nút mở rộng đại diện cho một thân duy nhất cho 256 nút con với các hậu tố khác nhau. Các nút bên trong cũng có 256 nút con, nhưng chúng có thể là các nút mở rộng khác. Sự khác biệt chính giữa cấu trúc cây Verkle và cây Merkle là cây Verkle phẳng hơn nhiều, nghĩa là có ít nút trung gian liên kết một lá với gốc hơn, và do đó cần ít dữ liệu hơn để tạo ra một bằng chứng.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Đọc thêm về cấu trúc của cây Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

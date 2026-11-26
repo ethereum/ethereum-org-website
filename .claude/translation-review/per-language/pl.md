@@ -1,5 +1,15 @@
 # Polish (pl) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: klient warstwy wykonawczej x4, typos falzywych/przesylaja, mining to kopanie (SQL), klientow konsensusu. Open: wsad vs partia split across zk/optimistic pages, walidatory/walidatorzy, tu/impersonal mix in erc-721.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.8/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: pokwitowania replacing paragony (22 forms), ekwiwokacja. Open: missing `few` plural in 2 keys, gossip five ways, storage slot vs memory.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.8/10
@@ -192,3 +202,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - echidna:413 `f` switches to feminine (`wycofana`) vs neuter on L411 -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `kierują tłumaczeniami` shifts "guide"; `Wdrożenie.` bare noun in a step list.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

@@ -53,6 +53,7 @@ export const EXACT_PATH_NAMESPACE_MAP: Record<string, string> = {
 }
 
 export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
+  ["/courses/", "page-courses"],
   ["/staking/deposit-contract/", "page-staking-deposit-contract"],
   ["/staking/", "page-staking"],
   ["/layer-2/networks/", "page-layer-2-networks"],
@@ -98,6 +99,7 @@ const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
 }
 
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
+  ["/courses/", ["component-account"]],
   ["/developers/docs/scaling/", ["page-layer-2"]],
   ["/developers/tools/", ["page-developers-tools-descriptions"]],
   ["/gas/", ["page-gas", "page-community"]],

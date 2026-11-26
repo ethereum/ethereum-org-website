@@ -107,7 +107,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       ),
       label: t("page-organizations-enterprise-l2s-stat-uops"),
       ...L2BEAT_SOURCE,
-      sourceUrl: "https://l2beat.com/scaling/activity",
+      sourceUrl: "https://ethbeat.org/layer2s/activity",
     },
   ]
 

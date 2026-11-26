@@ -28,6 +28,8 @@ import { extractComments } from "./llm/code-block-extractor"
 import {
   FENCED_BLOCK_RE,
   fenceLanguage,
+  inlineCodeDrift,
+  PLACEHOLDER_RESIDUE_RE,
   PROSE_FENCE_TAGS,
   proseLineMask,
   replaceOutsideInlineCode,
@@ -48,6 +50,12 @@ export type Finding = {
   check: string
   detail: string
   severity: Severity
+  /**
+   * The locale fence a finding is about, as `fenceIdentities` names it, so the
+   * gate can recognize a fence the locale already had wrong after English
+   * renumbered it.
+   */
+  key?: string
 }
 
 // --- helpers ---------------------------------------------------------------
@@ -151,6 +159,23 @@ const fenceBody = (body: string, language: string) =>
     .map((l) => l.replace(/[ \t]+$/, ""))
     .filter((l) => l !== "")
     .join("\n")
+
+/** A fence as its language tag, then its code (see `fenceBody`). */
+const fenceIdentity = (f: Fence) =>
+  `${f.language}\n${fenceBody(f.body, f.language)}`
+
+/** Every fence, in document order. */
+export const fenceIdentities = (src: string) =>
+  fenceBlocks(src).map(fenceIdentity)
+
+/** Every fence the model never translates, in document order. */
+export const fenceCode = (src: string) =>
+  fenceBlocks(src)
+    .filter((f) => !PROSE_FENCE_TAGS.has(f.language))
+    .map(fenceIdentity)
+
+/** Headings outside fenced code. */
+export const headingCount = (src: string) => headings(src).length
 const hrefs = (src: string) => all(src, /(?:\]\(|href=")(\/[^)"\s]*)/g)
 const altText = (src: string) => all(src, /!\[([^\]]*)\]/g)
 const attrValues = (src: string, attr: string) =>
@@ -179,8 +204,12 @@ export function verifyMarkdown(
   file: string
 ): Finding[] {
   const f: Finding[] = []
-  const add = (check: string, detail: string, severity: Severity = "error") =>
-    f.push({ file, check, detail, severity })
+  const add = (
+    check: string,
+    detail: string,
+    severity: Severity = "error",
+    key?: string
+  ) => f.push({ file, check, detail, severity, ...(key ? { key } : {}) })
 
   const eh = headings(enSrc)
   const th = headings(trSrc)
@@ -227,6 +256,23 @@ export function verifyMarkdown(
   const hrefDiff = diffMultiset(hrefs(enSrc), hrefs(trSrc))
   if (hrefDiff.length) add("internal-href", hrefDiff.join(", "))
 
+  // Inline code is copied, not translated. A warning, so the gate ships the
+  // file and the translation review restores the span from English.
+  const code = inlineCodeDrift(enSrc, trSrc)
+  const listed = (label: string, spans: string[]) => [
+    ...spans.slice(0, 5).map((c) => `${label} ${c}`),
+    ...(spans.length > 5 ? [`(+${spans.length - 5} more ${label})`] : []),
+  ]
+  if (code.missing.length || code.extra.length)
+    add(
+      "inline-code",
+      [
+        ...listed("missing", code.missing),
+        ...listed("unexpected", code.extra),
+      ].join(", "),
+      "warn"
+    )
+
   // Code fences must survive untouched.
   const ef = fences(enSrc)
   const tf = fences(trSrc)
@@ -244,7 +290,9 @@ export function verifyMarkdown(
         if (eb[i].language !== tb[i].language) {
           add(
             "code-fence-lang",
-            `fence ${i + 1}: en=\`${eb[i].language || "(none)"}\` tr=\`${tb[i].language || "(none)"}\``
+            `fence ${i + 1}: en=\`${eb[i].language || "(none)"}\` tr=\`${tb[i].language || "(none)"}\``,
+            "error",
+            fenceIdentity(tb[i])
           )
           continue
         }
@@ -253,7 +301,9 @@ export function verifyMarkdown(
         if (fenceBody(eb[i].body, lang) !== fenceBody(tb[i].body, lang))
           add(
             "code-fence-content",
-            `fence ${i + 1} (\`${eb[i].language || "untagged"}\`) body differs from English`
+            `fence ${i + 1} (\`${eb[i].language || "untagged"}\`) body differs from English`,
+            "error",
+            fenceIdentity(tb[i])
           )
       }
     }
@@ -368,7 +418,7 @@ export function verifyMarkdown(
   }
 
   // Placeholder residue must never reach shipped output.
-  const residue = trSrc.match(/HTML-PLACEHOLDER-[A-Z]+-[0-9a-f]+/g)
+  const residue = trSrc.match(PLACEHOLDER_RESIDUE_RE)
   if (residue) add("placeholder-residue", [...new Set(residue)].join(", "))
 
   // Empty {#} anchors break the MDX parser (KB pattern 23). Scoped to prose:
@@ -642,7 +692,7 @@ export function verifyJson(
         add("json-tag-unbalanced", k)
     }
 
-    if (trStr.includes("HTML-PLACEHOLDER")) add("placeholder-residue", k)
+    if (/HTML-PLACEHOLDER/i.test(trStr)) add("placeholder-residue", k)
   }
   return f
 }

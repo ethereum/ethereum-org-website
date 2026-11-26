@@ -1,5 +1,15 @@
 # Russian (ru) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: Ethereum to Efirium (79 sites, optimistic-rollups regression), equivocation to ekvivokatsiya, blob to blob x3. Open: uninflected Glamsterdam x~10, Predposylki vs Predvaritelnye trebovaniya, DevP2P casing.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: ekvivokaciya, sleshing. Open: seed rendered as seed-phrase and derive as vyvesti in key-derivation diagram, head four ways, decimal comma.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 8.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values` + full `scaling/plasma/index.md` retranslation.
 
@@ -157,3 +167,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Fixed in this branch:**
 
 - echidna:344 `counter` "may cause an overflow" -> `может переполниться` (can overflow)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.2/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- The agent filed #101 as a warning; it is critical (see PR #19901). `Тейлор будет зачислено` grammar.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

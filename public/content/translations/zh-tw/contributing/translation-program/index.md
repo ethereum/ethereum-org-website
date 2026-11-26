@@ -1,20 +1,36 @@
 ---
 title: "翻譯計畫"
 lang: zh-tw
-description: "關於 ethereum.org 翻譯計畫的資訊"
+description: "透過在 ETHGlossary 上審查您語言的術語，協助翻譯以太坊。您授權的術語將會是 ethereum.org 所使用的術語。"
 ---
 
-翻譯計畫曾是一項協作工作，旨在將 ethereum.org 翻譯成不同的語言，讓全球數十億非英語母語人士更容易使用該網站。
+以太坊在每種語言中都應該讀起來自然流暢。目前最好的協助方式是 [ETHGlossary](https://glossary.ethereum.org/)，這是一個由社群審查的共享以太坊術語表，支援 24 種語言。
+
+**您授權的術語將會是 ethereum.org 在您語言中所使用的術語。** 錢包、應用程式和文件團隊也可以透過該術語表的開放應用程式介面 (API) 來使用這些術語。
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  審查您語言的術語
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## 運作方式 {#how-it-works}
+
+1. **選擇您的語言。** 每種語言都有同一套以太坊術語，每個術語都有草稿翻譯。
+2. **審查術語。** 授權該術語、提出更好的替代方案，或補充該術語在您社群中的使用情境。
+3. **發布。** 經過審查的術語將指引 ethereum.org 的翻譯，並透過 ETHGlossary 應用程式介面 (API) 發布。
+
+這不需要任何承諾。審查單一術語只需要幾分鐘的時間。
+
+**語言：** 阿拉伯文、孟加拉文、中文（簡體與繁體）、捷克文、法文、德文、印地文、印尼文、義大利文、日文、韓文、馬拉地文、波蘭文、葡萄牙文（巴西）、俄文、西班牙文、斯瓦希里文、坦米爾文、泰盧固文、土耳其文、烏克蘭文、烏爾都文和越南文。
+
 ## 計畫狀態 {#program-status}
 
-ethereum.org 翻譯計畫即將結束，不再為新譯者提供入門引導。Crowdin 專案即將關閉，我們不再透過該專案接受新的翻譯提交。
+透過 Crowdin 進行的全頁翻譯目前已暫停，我們不再於該平台接受新的翻譯提交。在此期間，在 [ETHGlossary](https://glossary.ethereum.org/) 上審查術語是貢獻的方式。
 
-我們非常感謝數千名社群譯者多年來將 ethereum.org 翻譯成數十種語言——他們的作品將繼續保留在網站上，並且在[致謝](/contributing/translation-program/acknowledgements/)和[貢獻者](/contributing/translation-program/contributors/)頁面上的表彰也會保留。
+我們非常感謝數千名社群譯者多年來讓 ethereum.org 支援數十種語言——他們的作品仍保留在網站上，且在[致謝](/contributing/translation-program/acknowledgements/)和[貢獻者](/contributing/translation-program/contributors/)頁面上的表彰也將繼續保留。
 
-如果您在現有翻譯中發現錯誤，請[在 GitHub 上開啟 issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)。
+如果您在現有的翻譯中發現錯誤，請[在 GitHub 上建立問題 (issue)](https://github.com/ethereum/ethereum-org-website/issues/new/choose)。
 
 _加入 [ethereum.org Discord](/discord/) 提問或分享回饋。_
 

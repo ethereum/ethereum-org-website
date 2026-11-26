@@ -1,5 +1,15 @@
 # German (de) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.2/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+0 critical. Open: ABI/API/MEV over-expansion (#80), Offchain/offchain casing, Basis-Gasgebuehr vs Grundgebuehr, geburnt, tag Daten und Analytik vs Analysen.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 7.8/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas inline code, Attestierung, Prioritaetsgebuehr. Open: du/Sie split across the diagram namespace (needs one policy), head Spitze/Kopf/Head, Aufnahme vs Einbindung, hyphenation of compounds.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.2/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -178,3 +188,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - echidna: glossary `rückgängig machen` for revert reads as overflows/contracts being "undone" (L340, L422; L415 unchanged); the glossary note allows `Revert` -- native call (known-patterns #96)
 - ABI/EVM spelled out where English leaves them bare (#80, prose -> warning)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` rendered with the glossary term would repeat the priority fee; left as is.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)
