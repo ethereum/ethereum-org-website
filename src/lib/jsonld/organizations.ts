@@ -274,11 +274,12 @@ export const KNOWN_ORGANIZATIONS = {
   l2beat: {
     "@type": "Organization" as const,
     "@id": "https://ethereum.org/#l2beat",
-    name: "L2BEAT",
-    url: "https://l2beat.com/",
+    name: "ETHBEAT",
+    alternateName: "L2BEAT",
+    url: "https://ethbeat.org/",
     sameAs: [
       "https://github.com/l2beat",
-      "https://x.com/l2beat",
+      "https://x.com/ethbeat_org",
       "https://linkedin.com/company/l2beat",
     ],
   },

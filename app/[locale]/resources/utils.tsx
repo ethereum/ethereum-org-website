@@ -29,6 +29,7 @@ import IconEipsInsight from "@/public/images/resources/eipsinsight.png"
 import IconEthGlyphBlack from "@/public/images/resources/eth-glyph-black.png"
 import IconEthGlyphBlueCircle from "@/public/images/resources/eth-glyph-blue-circle.png"
 import IconEthGlyphEOrg from "@/public/images/resources/eth-glyph-e-org.png"
+import IconEthbeat from "@/public/images/resources/ethbeat.png"
 import IconEtherealize from "@/public/images/resources/etherealize.png"
 import IconEtherscan from "@/public/images/resources/etherscan.png"
 import IconEthproofs from "@/public/images/resources/ethproofs.png"
@@ -37,7 +38,6 @@ import IconForkcast from "@/public/images/resources/forkcast.png"
 import IconGasTracker from "@/public/images/resources/gas.png"
 import IconGrowthepie from "@/public/images/resources/growthepie.png"
 import IconJiffyScan from "@/public/images/resources/jiffyscan.png"
-import IconL2beat from "@/public/images/resources/l2beat.png"
 import IconLuckyStaker from "@/public/images/resources/lucky-staker.png"
 import IconNftgo from "@/public/images/resources/nftgo.png"
 import IconNodewatch from "@/public/images/resources/nodewatch.png"
@@ -101,10 +101,10 @@ export const getResources = async ({
       ),
       items: [
         {
-          title: "L2 Beat",
+          title: "ETHBEAT",
           description: t("page-resources-network-layer2-l2beat-description"),
-          href: "https://l2beat.com/",
-          imgSrc: IconL2beat,
+          href: "https://ethbeat.org/",
+          imgSrc: IconEthbeat,
         },
         {
           title: "growthepie",
@@ -124,7 +124,7 @@ export const getResources = async ({
           title: "L2Safety",
           description: t("page-resources-network-layer2-l2safety-description"),
           href: "https://l2safety.info",
-          imgSrc: IconL2beat,
+          imgSrc: IconEthbeat,
         },
       ],
     },
@@ -580,10 +580,10 @@ export const getResources = async ({
           imgSrc: IconEthproofs,
         },
         {
-          title: "L2beat - ZK Catalog",
+          title: "ETHBEAT ZK Catalog",
           description: t("page-resources-zk-adoption-l2beat-description"),
-          href: "https://l2beat.com/zk-catalog",
-          imgSrc: IconL2beat,
+          href: "https://ethbeat.org/zk-catalog",
+          imgSrc: IconEthbeat,
         },
       ],
     },

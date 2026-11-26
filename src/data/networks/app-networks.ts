@@ -14,7 +14,7 @@ export interface AppNetwork {
 
 // App-only networks: referenced by apps (e.g. games) for display purposes.
 // Kept separate from layer2Data so they do NOT appear on /layer-2/* pages,
-// which have a higher quality bar and require L2Beat/GrowThePie coverage.
+// which have a higher quality bar and require ETHBEAT/GrowThePie coverage.
 export const appOnlyNetworks: AppNetwork[] = [
   {
     name: "Abstract",

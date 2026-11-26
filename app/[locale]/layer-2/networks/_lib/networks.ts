@@ -32,7 +32,7 @@ export const getNetworks = cache(async () => {
     ]
   )
 
-  if (!l2beat) throw new Error("Failed to fetch L2beat data")
+  if (!l2beat) throw new Error("Failed to fetch ETHBEAT data")
   if (!growThePie) throw new Error("Failed to fetch GrowThePie data")
   if (!marketcap) throw new Error("Failed to fetch Ethereum marketcap data")
 

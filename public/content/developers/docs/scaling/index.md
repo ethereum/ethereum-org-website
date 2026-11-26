@@ -100,7 +100,7 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all offch
 ## Further reading {#further-reading}
 
 - [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
-- [Up-to-date analytics on Layer 2 scaling solutions for Ethereum](https://www.l2beat.com/)
+- [Up-to-date analytics on Layer 2 scaling solutions for Ethereum](https://ethbeat.org/)
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [An Incomplete Guide to Rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum-powered ZK-Rollups: World Beaters](https://hackmd.io/@canti/rkUT0BD8K)
