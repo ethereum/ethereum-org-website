@@ -28,7 +28,7 @@ Aina zote mbili za akaunti zina uwezo wa:
 
 - Kuunda akaunti hakugharimu chochote
 - Inaweza kuanzisha miamala
-- Miamala kati ya akaunti zinazomilikiwa nje inaweza tu kuwa uhamishaji wa ETH/tokeni
+- Miamala kati ya akaunti zinazomilikiwa nje inaweza tu kuwa uhamishaji wa ETH, isipokuwa mpokeaji amekaimisha kwa msimbo wa mkataba (tazama `codeHash` hapa chini)
 - Imeundwa na jozi ya funguo za kriptografia: funguo za umma na za siri zinazodhibiti shughuli za akaunti
 
 **Mkataba**
@@ -38,17 +38,16 @@ Aina zote mbili za akaunti zina uwezo wa:
 - Miamala kutoka kwa akaunti ya nje kwenda kwa akaunti ya mkataba inaweza kuanzisha msimbo ambao unaweza kutekeleza vitendo vingi tofauti, kama vile kuhamisha tokeni au hata kuunda mkataba mpya
 - Akaunti za mkataba hazina funguo za siri. Badala yake, zinadhibitiwa na mantiki ya msimbo wa mkataba mahiri
 
-## Uchunguzi wa akaunti {#an-account-examined}
+## Akaunti iliyochunguzwa {#an-account-examined}
 
 Akaunti za Ethereum zina sehemu nne:
 
-- `nonce` – Kihesabu kinachoonyesha idadi ya miamala iliyotumwa kutoka kwa akaunti inayomilikiwa nje au idadi ya mikataba iliyoundwa na akaunti ya mkataba. Muamala mmoja tu wenye nonsi fulani unaweza kutekelezwa kwa kila akaunti, ikilinda dhidi ya mashambulizi ya kurudia ambapo miamala iliyosainiwa inatangazwa mara kwa mara na kutekelezwa tena.
-- `balance` – Idadi ya Wei inayomilikiwa na anwani hii. Wei ni kiasi cha ETH na kuna Wei 1e+18 kwa kila ETH.
-- `codeHash` – Heshi hii inarejelea _msimbo_ wa akaunti kwenye Mashine Pepe ya Ethereum (EVM). Akaunti za mkataba zina vipande vya msimbo vilivyopangwa ndani ambavyo vinaweza kufanya shughuli tofauti. Msimbo huu wa EVM hutekelezwa ikiwa akaunti itapata mwito wa ujumbe. Hauwezi kubadilishwa, tofauti na sehemu zingine za akaunti. Vipande vyote vya msimbo kama hivyo vimo kwenye hifadhidata ya hali chini ya heshi zao zinazolingana kwa ajili ya kurejeshwa baadaye. Thamani hii ya heshi inajulikana kama codeHash. Kwa akaunti zinazomilikiwa nje, sehemu ya codeHash ni heshi ya mfuatano tupu.
-- `storageRoot` – Wakati mwingine inajulikana kama heshi ya hifadhi. Heshi ya biti 256 ya nodi ya mzizi ya [Trie ya Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) inayosimba yaliyomo kwenye hifadhi ya akaunti (upangaji kati ya thamani za nambari kamili za biti 256), iliyosimbwa kwenye trie kama upangaji kutoka kwa heshi ya biti 256 ya Keccak ya funguo za nambari kamili za biti 256 hadi thamani za nambari kamili za biti 256 zilizosimbwa kwa Kiambishi Awali cha Urefu Kijirudiacho (RLP). Trie hii inasimba heshi ya yaliyomo kwenye hifadhi ya akaunti hii, na kwa chaguo-msingi huwa tupu.
+- `nonce` – Kihesabu kinachoonyesha idadi ya miamala iliyotumwa kutoka kwa akaunti inayomilikiwa nje au, kwa akaunti ya mkataba, moja zaidi ya idadi ya mikataba ambayo imeunda (nonsi za mkataba huanza na 1, kulingana na [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Kila idhini ya [EIP-7702](/roadmap/pectra/7702/) inayotumika pia huongeza nonsi ya akaunti inayoidhinisha. Muamala mmoja tu wenye nonsi fulani unaweza kutekelezwa kwa kila akaunti, ikilinda dhidi ya mashambulizi ya kurudia ambapo miamala iliyosainiwa inatangazwa mara kwa mara na kutekelezwa tena.
+- `balance` – Idadi ya Wei inayomilikiwa na anwani hii. Wei ni kipimo cha ETH na kuna Wei 1e+18 kwa kila ETH.
+- `codeHash` – Heshi hii inarejelea _msimbo_ wa akaunti kwenye Mashine Pepe ya Ethereum (EVM). Akaunti za mkataba zina vipande vya msimbo vilivyopangwa ndani ambavyo vinaweza kufanya shughuli tofauti. Msimbo huu wa EVM hutekelezwa ikiwa akaunti itapata mwito wa ujumbe. Msimbo wa mkataba hauwezi kubadilishwa mara tu unaposambazwa, tofauti na sehemu zingine za akaunti. Vipande vyote vya msimbo kama huo vimo kwenye hifadhidata ya hali chini ya heshi zao zinazolingana kwa ajili ya kurejeshwa baadaye. Thamani hii ya heshi inajulikana kama codeHash. Kwa akaunti zinazomilikiwa nje, sehemu ya codeHash ni heshi ya mfuatano tupu, isipokuwa akaunti imekaimisha kwa mkataba mahiri na [EIP-7702](/roadmap/pectra/7702/). Msimbo wa akaunti kisha unakuwa kiashiria cha ukaimishaji (`0xef0100` ikifuatiwa na anwani ya mkataba), ambacho akaunti inaweza kubadilisha au kufuta kwa idhini mpya.
+- `storageRoot` – Wakati mwingine inajulikana kama heshi ya hifadhi. Heshi ya biti 256 ya nodi ya mzizi ya [Trie ya Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) inayosimba yaliyomo kwenye hifadhi ya akaunti (upangaji kati ya thamani za nambari kamili za biti 256), iliyosimbwa kwenye trie kama upangaji kutoka kwa heshi ya Keccak ya biti 256 ya funguo za nambari kamili za biti 256 hadi thamani za nambari kamili za biti 256 zilizosimbwa kwa Kiambishi Awali cha Urefu Kijirudiacho (RLP). Trie hii inasimba heshi ya yaliyomo kwenye hifadhi ya akaunti hii, na ni tupu kwa chaguo-msingi.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Mchoro umechukuliwa kutoka [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Akaunti zinazomilikiwa nje na jozi za funguo {#externally-owned-accounts-and-key-pairs}
 

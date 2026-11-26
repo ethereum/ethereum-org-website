@@ -1,22 +1,38 @@
 ---
 title: "Übersetzungsprogramm"
 lang: de
-description: "Informationen über das ethereum.org-Übersetzungsprogramm"
+description: "Helfen Sie bei der Übersetzung von Ethereum, indem Sie Begriffe in Ihrer Sprache auf ETHGlossary überprüfen. Die Begriffe, die Sie genehmigen, sind diejenigen, die ethereum.org verwendet."
 ---
 
-Das Übersetzungsprogramm war eine gemeinschaftliche Initiative, um ethereum.org in verschiedene Sprachen zu übersetzen und die Website für Milliarden von nicht englischsprachigen Menschen auf der ganzen Welt zugänglicher zu machen.
+Ethereum sollte sich in jeder Sprache natürlich lesen. Der beste Weg, jetzt zu helfen, ist [ETHGlossary](https://glossary.ethereum.org/), ein gemeinsames, von der Community überprüftes Glossar mit Ethereum-Begriffen in 24 Sprachen.
+
+**Die Begriffe, die Sie genehmigen, sind die Begriffe, die ethereum.org in Ihrer Sprache verwendet.** Wallets, Apps und Dokumentationsteams können sie ebenfalls über die offene Programmierschnittstelle (API) des Glossars nutzen.
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  Begriffe in Ihrer Sprache überprüfen
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## Wie es funktioniert {#how-it-works}
+
+1. **Wählen Sie Ihre Sprache.** Jede Sprache verfügt über denselben Satz an Ethereum-Begriffen, jeweils mit einem Übersetzungsentwurf.
+2. **Überprüfen Sie einen Begriff.** Genehmigen Sie ihn, schlagen Sie eine bessere Alternative vor oder fügen Sie Kontext hinzu, wie er in Ihrer Community verwendet wird.
+3. **Es wird veröffentlicht.** Überprüfte Begriffe dienen als Leitfaden für die Übersetzungen von ethereum.org und werden über die Programmierschnittstelle (API) von ETHGlossary veröffentlicht.
+
+Es gibt keine Verpflichtung. Die Überprüfung eines einzelnen Begriffs dauert nur ein paar Minuten.
+
+**Sprachen:** Arabisch, Bengalisch, Chinesisch (vereinfacht und traditionell), Tschechisch, Französisch, Deutsch, Hindi, Indonesisch, Italienisch, Japanisch, Koreanisch, Marathi, Polnisch, Portugiesisch (Brasilien), Russisch, Spanisch, Swahili, Tamil, Telugu, Türkisch, Ukrainisch, Urdu und Vietnamesisch.
+
 ## Programmstatus {#program-status}
 
-Das ethereum.org-Übersetzungsprogramm läuft aus und führt kein Onboarding für neue Übersetzer mehr durch. Das Crowdin-Projekt wird geschlossen und wir nehmen darüber keine neuen Übersetzungsbeiträge mehr an.
+Die Übersetzung ganzer Seiten über Crowdin ist pausiert, und wir nehmen dort keine neuen Übersetzungseinreichungen an. Die Überprüfung von Begriffen auf [ETHGlossary](https://glossary.ethereum.org/) ist in der Zwischenzeit die Möglichkeit, einen Beitrag zu leisten.
 
-Wir sind den Tausenden von Community-Übersetzern zutiefst dankbar, die ethereum.org im Laufe der Jahre in Dutzenden von Sprachen verfügbar gemacht haben – ihre Arbeit bleibt auf der Website live und ihre Anerkennung auf den Seiten [Danksagungen](/contributing/translation-program/acknowledgements/) und [Mitwirkende](/contributing/translation-program/contributors/) bleibt bestehen.
+Wir sind den Tausenden von Community-Übersetzern zutiefst dankbar, die ethereum.org im Laufe der Jahre in Dutzenden von Sprachen verfügbar gemacht haben – ihre Arbeit bleibt auf der Website live, und ihre Anerkennung auf den Seiten [Danksagungen](/contributing/translation-program/acknowledgements/) und [Mitwirkende](/contributing/translation-program/contributors/) bleibt bestehen.
 
 Wenn Sie einen Fehler in einer bestehenden Übersetzung entdecken, [eröffnen Sie bitte ein Issue auf GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-_Treten Sie dem [ethereum.org Discord](/discord/) bei, um Fragen zu stellen oder Feedback zu geben._
+_Treten Sie dem [ethereum.org Discord](/discord/) bei, um Fragen zu stellen oder Feedback zu teilen._
 
 ## Über das Übersetzungsprogramm {#about-us}
 

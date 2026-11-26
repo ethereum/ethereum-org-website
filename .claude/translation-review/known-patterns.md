@@ -1,7 +1,8 @@
 # Known Translation Patterns & Issues
 
 > This is a living document. Updated after each language review.
-> Last updated: 2026-10-15 (PR #19486, 24 langs: networks/index.md quarantine release -- a full re-translation of a released file regresses dev-correct wording; ar enterprise JSON repeats #86; fleet avg 9.3)
+> Last updated: 2026-11-25 (PR #19902, 24 langs, 8 re-translated pages: retranslation regressed dev-correct glossary forms across the fleet, /filter misses inflected forms, actor/property polysemes recur, stray CJK punctuation in bn/ur)
+> Previous: 2026-10-15 (PR #19486, 24 langs: networks/index.md quarantine release -- a full re-translation of a released file regresses dev-correct wording; ar enterprise JSON repeats #86; fleet avg 9.3)
 > Previous: 2026-08-20 (PR #19034 full pipeline, 24 langs: **bracket-placeholder blanks are a coverage gap `verify-structure` cannot see** (11 locales), character-level generation corruption in 3 locales, the semantic-translation-of-an-org-name split, `soundness`/`test harness` as glossary gaps, the ar `validator` glossary entry breaking NFC, and the rule that a dominant-but-wrong tree form must be fixed globally or not at all; fleet avg 8.67)
 > Previous: 2026-08-14 (PR #19076 find-wallet JSON, 24 langs: **ETHGlossary's own term data is the defect source** for lowercased acronym parentheticals and non-Western numerals, runtime-composed fragment keys forcing per-locale agreement guesses, the check-the-tree-before-fixing-a-term-of-art hygiene rule, and three glossary coverage gaps; fleet avg 9.35)
 > Previous: 2026-07-29 (PR #18938 full pipeline, 24 langs: Indic loaded-polyseme bloc failure, sanitizer frontmatter-guard newline bug corrupting `uploadDate`, `/videos` frontmatter bypassing ETHGlossary, split-sentence `-strong` keys, partial-update manifest drift; fleet avg 8.9 -- lowest in months)
@@ -291,6 +292,30 @@ ETHGlossary frequently has multiple entries for one base term that differ by sur
 - cs: "zero-knowledge proof" -> "důkaz s nulovou znalostí" flagged against bare `zero-knowledge => s nulovým vědomím`, but glossary has `zero-knowledge proof => důkaz s nulovou znalostí`. Translator correctly used the bare form for "zero-knowledge tooling/language" and the proof form for "zero-knowledge proof" (the vi agent caught this split; the cs agent missed it).
 
 **Rule:** when a flagged term has adjacent qualifier words in English (X Mainnet, X proof, X layer), grep the glossary JSON for the multi-word entry before treating it as critical. The `/filter` output already includes both forms.
+
+### 104. Re-translation regresses glossary forms that dev already had right (CRITICAL -- confirmed PR #19902)
+
+`execution client` (pl, mr, te), `optimistic rollup` (id, te, vi, zh), `slot` (es, vi, ta), `blob` (ja, ru, ta), `deploy` (mr, ta), `epoch` (hi, mr, te, ru), `Fondazione Ethereum` (it), `block proposer` compound (tr, pt-br), and `Ethereum` to bare Latin across ~80 sites in ru optimistic-rollups. Diff changed lines against dev and grep the locale tree for the dominant form of every cross-linked term before accepting a new synonym.
+
+### 105. ETHGlossary /filter misses inflected and plural forms (PROCESS -- confirmed PR #19902)
+
+`equivocating`/`equivocated` (id, ur, ru, mr), `blobs`, `block explorers`, `execution clients` never came back from /filter. Spot-check recurring terms with `GET /translations/{lang}/{id}` and grep the tree for transliterated forms.
+
+### 106. `actor`/`property`/`claim`/`at stake` polysemes recur (CRITICAL -- confirmed PR #19902)
+
+`actor` as performer (hi, mr, te, ta, bn, ur); `property` as wealth (hi); `claim` as token-claim or billing sense (ja, uk, vi); `at stake` as staking (tr, it, ja, vi, zh-tw). Glossary-literal substitution corrupts idioms.
+
+### 107. Stray CJK punctuation and word joiners in non-CJK locales (CRITICAL -- confirmed PR #19902)
+
+U+3002 closing translated docstring comments in bn and ur erc-721 (also pre-existing in ur erc-1363); U+2060 around Latin runs in bn frontmatter. Sweep with `grep -P '\x{3002}|\x{2060}'`.
+
+### 108. CJK emphasis flanking: `**` beside full-width punctuation (CRITICAL -- confirmed PR #19902)
+
+zh: closing `**` after a full-width bracket before a CJK char, or opening `**` after a CJK char before a curly quote, renders literal asterisks. Use `<strong>` at that site (extends #89 beyond underscores).
+
+### 109. Acronym over-expansion and dropped bidi wrappers (WARNING -- confirmed PR #19902)
+
+Bare `API`/`ABI`/`MEV`/`NFT` expanded in link text and prose (de, es, cs, it, id, tr, bn, zh, te); #80 recurrence. ar verifying lost all 24 `span dir="ltr"` wrappers; compare wrapper counts against dev for RTL locales.
 
 ## Per-Language Notes
 
@@ -1146,11 +1171,15 @@ PR #19556: the same regression happened without any quarantine release. `smart-c
 
 PR #19568: drift detection hashes only translatable leaves (prose and code comments; `lib/llm/content-normalizer.ts`), so an English edit that only changes a fence language tag or a non-comment code line never marks the section stale. The tutorial repairs added `sh` tags (hello-world, sending-transactions) and changed `npm install dotenv --save` to `npm install dotenv`; all 23 locales kept the old code while their manifests were stamped current. The fix is mechanical: compare fence info strings and non-comment code lines between English and the locale, and restore them from English while keeping translated comments. Until the pipeline syncs code deterministically, run that comparison on every review.
 
+Since #99: a section whose fence code or tag changed goes to the model, which gets English's fences back verbatim with translated comments. A file whose only English change is a fence tag is still never picked up, because the manifest hash leaves tags out.
+
 ### 93. Indented code converted to a fence is duplicated (CRITICAL -- pipeline bug)
 
 PR #19568: English Step 5 of how-to-write-and-deploy-an-nft turned a 4-space-indented inline-code line into a fenced `json` block. In the 21 locales updated incrementally, the old indented line survived in place and the lifted fence was restored at the end of the section, directly against the next heading with no blank line. A fence-count check passes, because the stale copy is not a fence. Detect it by grepping each locale for the English fence body occurring twice, or for a 4-space-indented code line English no longer has. Locales that were retranslated in full (ar, te) were correct.
 
 PR #19608: ur was quarantined during #19568. When its quarantine was released, it ran incrementally and hit the same defect. The fix in #19568 does not carry over to locales that were quarantined at that time, so check #93 again on every quarantine release of this file.
+
+Since #99 the step that appended an added fence to the end of its section is gone: a fence English adds sends the whole section to the model instead.
 
 ### 94. Unescaped `dir="ltr"` quotes break the ur JSON reply (INFORMATIONAL -- pipeline)
 
@@ -1180,3 +1209,44 @@ Feeding every English page through normalize -> reconstruct -> sanitize -> gates
 
 The sweep also showed two sanitizer false positives that silently corrupted correct text in every locale without failing a gate, because the gates don't compare external URLs or inline code: `fixDroppedAutolinkClose` inserted `>)` into autolinks that continue after a parenthesised segment (`kauri.io/...-(java-ethereum)/5dfa...`, `...PayPal-(1).pdf`; `design-and-ux`, `programming-languages/java`, `energy-consumption`), and `fixCrowdinSplitBackticks` merged two adjacent correct spans (`` `withdraw()` in `Victim` `` -> `` `withdraw() in `Victim` ``, `` `QUANTITY` `1` `` in json-rpc). The autolink fix now requires that no `>` follows in the same URL, and the split-span fix only touches lines with an odd backtick count. The sweep now also fails when sanitizing English alters any link target or code span. Over all 7,848 committed translations the fixed sanitizer changes 151 files, every one a repair (213 Card lines, 96 links, 8 code spans). Positional recovery now only counts a token as missing if it was in the prose sent to the model, so tokens held inside another extraction don't block it. Run `pnpm intl:identity-sweep` (about 30 seconds) before merging any change to the normalizer, reconstruction, sanitizer or gates; it should report 0 failing.
 
+### 99. Incremental failures and silent drops from pipeline code, caught by the pair sweep (INFORMATIONAL -- pipeline, fixed)
+
+`pnpm intl:identity-sweep --pairs` dry-runs the next run: every pair whose English moved is merged with the model replaced by the planner's own section bodies, then sanitized and gated. On `dev` merged into `intl/pending-dev` (2026-11-23) it failed 58 of 3,577 pairs whatever the model returned, and sent 511 to full translation. Review then found pairs that passed every check while losing their English change: 48 in that dispatch, and 70 of 834 single-value edits (inline code, link URLs, inline attributes) mutated into real `de` pages. Causes:
+
+- **Routing missed edits.** A parent section's own prose edit is reported as an element (`setup/prose:0`) and was routed under that id, which no section has (app-plasma `#stage-2`, roadmap/privacy `#private-writes`). Fence code, fence tags, and inert values whose element id repeats after a fence (`link:0` again; all-you-can-cache, uniswap-v2-annotated-code) had no change entry or no step applying it. A changed value occurring twice in a section was rewritten in both places (videos/ethereum-staking-withdrawals `0x00`). Instead of more per-case rules, routing now runs the deterministic steps once with English-A standing in for the locale; any section that doesn't come out as English-B's goes to the model.
+- **Sections the diff doesn't report.** A subsection added under a former leaf is not in `diff().added` (clear-signing `### Add a test file`), so new anchors are found by comparing the trees. A new first section (translation-program) is inserted before the next section the locale has.
+- **Headings without an anchor split sections two ways.** The merge ended a section at any heading, but the planner and the content tree end one only at an anchored heading. So `##### Geth` went to the model as part of `#run` while the merge spliced the reply in before it. Sections now end at an anchored heading or any h1-h4. A reply opening with a deeper heading is no longer taken for an echoed section heading (uniswap `#pair-update-internal`).
+- **Old defects reported as new** (`secret-state` 23 locales, `app-plasma` 2, zh `optimistic-rollups`). The incremental gate compared the old locale with current English. When English added fences above a fence the locale had broken long ago, the numbers shifted and the old defect looked new; a deleted English section did the same for a heading zh was already missing. Fence findings are now matched by content (tag and code) against the locale's fences that no fence of its own English matches (`baselineEnglish`, the manifest's commit), or against any English-B fence (subsections English reordered). The heading count is matched by its gap to that English. Stale fence code used to pass when no fence moved; it now fails.
+- **Backstop.** `findStructuralRegressions` also compares fence tag and code, sections out of English order (the merge reorders h2 only), and every inline code span English changed outside the retranslated sections: the locale must change it as often, which catches a substitution that found nothing to rewrite because the locale words the span differently. A section sent to the model that the locale doesn't have is reported too (evm/opcodes in de lost its only heading, so the edit had nowhere to go). Each sends the pair to full translation.
+- **Assembly.**
+  - A removed component was matched on every attribute value, translated `title` included, so on the locale nothing matched (roadmap/security's card stayed in de, ja and ur). It is now matched on its untranslated attributes only.
+  - A new section was inserted with its English heading, because the reply carries body text only (264 sections in this dispatch). The planner now sends the heading of a section the locale lacks as part of its content.
+  - When English empties a section's own body, the locale keeps its heading instead of getting the English one.
+- **Sanitizer.** `fixUnclosedParagraphTags` closed a bare `<p>` whose next line opened with a link, leaving an orphan `</p>` (`zero-knowledge-proofs`, 8 locales). `fixTranslatedJsonPlaceholders` renamed arguments by position, which swapped a value with repeated arguments (tr `verkle-tree-description`, itself a model error for review). Over all 9,864 committed translations the only change is the 8 `<p>` repairs.
+- **CRLF English** (`gasless-token`). The content tree finds no headings in CRLF text, so a merge kept the old locale text or wrote English over it, passing every gate. Such a pair now falls back to full translation.
+
+After the fixes, on the same data: 0 failing and 29 pairs to full translation (what-is-ether/supply, whose manifest commit is gone, and 5 nodes-and-clients locales that lack a section English has). 0 of 834 mutated edits are lost in each of de, ja, ur and ko, and 127 of 127 component removals reach de. A reply-faithful stand-in (fences lifted and restored as `main.ts` does) agrees with the sweep on every pair. Run `--pairs` with pending merged in before each large dispatch.
+
+Still open: components English added that older runs dropped stay missing until their section changes again: 57 locale files on pos (`QuizWidget`), glamsterdam (`EipTag`), optimistic-rollups and zk-rollups (`VideoWatch`) on 2026-11-24, fixed by running those pages with `mode: full`. And an English heading's text never reaches the locale incrementally. The reply carries section bodies only, and `diff()` reports a heading edit as no drift at all. A heading edit inside inline code now falls back to full translation; other heading edits are silently kept old. 49 pairs on 3 pages had one on 2026-11-23 (portal-network, smart-contracts/verifying, learn-foundational-ethereum-topics-with-sql); run those with `mode: full` or fix the heading in review.
+
+Also stale with an up-to-date manifest: `developers/tutorials/erc-721-vyper-annotated-code` in all 24 locales. A July run stamped the manifests at the Vyper 0.4 English without applying its code (the locales still import `ERC721` from `vyper.interfaces`), so no run sees drift; run it with `mode: full`. A scan of every up-to-date locale page on 2026-11-24 found no other stale code. The routing check costs some extra model calls: on dev's manifests (2026-11-24) it added 576 of 8,088 routed sections, on 12 pages, where the deterministic merge would have come out wrong. Copying a repeated value by position, or `intl-content-tree` numbering inline ids per section (an unpublished 0.5.0 branch), would merge some of those without the model; neither is needed for correctness.
+
+### 100. ICU placeholders rebound to the wrong slot in `component-diagrams.json` (CRITICAL -- wrong numbers rendered; confirmed PR #19815)
+
+Placeholder names and counts survive but are bound to the wrong words after the translator reorders the sentence (SOV/head-final locales most affected: ja, ko, mr, ta, te, tr, ur, zh, zh-tw, hi, bn). The set-equality placeholder gate cannot see it. Recurring keys: `peer-das-erasure-caption` (`{needed}`/`{total}` swapped), `peer-das-definition-subnet` and `peer-das-subnets-description` (`{first}`/`{last}` reversed; `{balance}`/`{columns}` swapped), `verkle-tree-description` (`{levels}`/`{merkleLevels}`), `validator-keys-description` (`{stake}`/`{max}`/`{amount}`/`{compounding}`). Review method: for every key with 3+ distinct arguments, read the English and the locale side by side and check which word each argument sits beside, not just that the set matches.
+
+### 101. Inline code spans translated in re-translated pages (CRITICAL -- confirmed PR #19815)
+
+`gas/index.md` `` `max fee - (base fee + tip)` `` (bn, de, es, fr, it, te, tr, vi) and `verkle-trees/index.md` `` `(key,value)` `` (cs, es, it, pt-br, tr). Both were correct before the re-translation; the pipeline's inline-code backstop did not catch the substitution. Check every inline span in changed lines against English. Recurred in PR #19901: the same gas page lost every `` `base fee` ``, `` `priority fee` ``, the `` `units of gas used * (base fee + priority fee)` `` formula and the `` `21,000 * (10 + 2) = 252,000 gwei` `` / `` `current base fee * 112.5%` `` examples in 23 of 24 locales (also `Gwei` re-cased inside spans and number separators localized). Review agents split on severity (one filed it as a warning); it is CRITICAL. Fix by mapping each span in changed lines to the English span by index; where English has `` `priority` `` followed by plain "fee", keep `` `priority` `` plus the locale's fee word.
+
+### 102. The same glossary misses recur across locales on the same English lines (WARNING -> CRITICAL per glossary -- confirmed PR #19815)
+
+`mev/index.md` "priority tips" (tip -> fee, not gratuity/hint) and "equivocation" (rendered as ambiguity/dual-meaning in ~16 locales); `attestations/index.md` "fork choice algorithm"; `networking-layer/index.md` "slashings"/"slots". When one locale shows a miss on a line, grep the same line in the other 23.
+
+### 103. English moved after the PR head, so locales lag (INFORMATIONAL -- confirmed PR #19815)
+
+Merging latest `dev` into the review worktree brings newer English (`<BaseFeeDiagram />`, 60M-gas table, Verkle EIP-6800/7864 links, 257 extra `component-diagrams` keys). Compare locale files against the English at the PR head (`git show <PR head>:<path>`), not the worktree, or every locale reports phantom missing keys and tags.
+
+### 110. Inline code lost or altered by the model (WARNING -- pipeline, retried)
+
+The full path swaps inline code for `<HTML-PLACEHOLDER-CODE-* />` tags; a reply that dropped one shipped with only a log line, and a repeated one was not even logged. The incremental path sent code as is, so the model could also translate it (`` `randomness beacon` ``, `` `[shift] + scroll` ``) or unescape it (`` `a \|\| b` `` in a table). PR #19901 showed the scale (and #101 on #19815): the gas page lost `` `base fee` ``, `` `priority fee` `` and the fee formula in 23 of 24 locales. The incremental planner now lifts inline code into numbered `<HTML-PLACEHOLDER-CODE-n />` tags as the full path does, and restores them before the checks and assembly, so the model never sees the code. Both paths also re-send with a note, up to 3 attempts: full when any tag's count differs, incremental when an English span the section sent is missing from its reply, a code tag comes back twice, a placeholder tag is left over (an unknown index, a wrapper form, or a tag in a section that sent none), or a `<!-- CODE_BLOCK_n -->` marker isn't kept exactly once. Backticks the model only adds outside the lifted spans are style and are not re-asked. Each section keeps the reply that lost the least, counting copies, not tags. A lost fence marker or leftover tag (incremental) or a lost link, image or component placeholder (full) outranks any lost inline code, since those fail the file. A re-send whose call fails ships the reply in hand (the run fuse still stops the run). So lost inline code alone never fails a file; a fence marker or leftover tag in every reply still does. `verify-structure` reports what is left as an `inline-code` warning, which `/review-translations` repairs on the lines the PR changed. On up-to-date locale pages (2026-11-24), of about 7,000 sections with inline code, 53 had lost or altered English code (ja had the most, 10) and about 100 only added backticks.

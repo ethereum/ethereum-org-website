@@ -2,6 +2,28 @@
   "version": 1,
   "entries": [
     {
+      "file": "public/content/developers/docs/consensus-mechanisms/pos/attestations/index.md",
+      "locale": "ko",
+      "englishHash": "81e43bc1d3db",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ko/developers/docs/consensus-mechanisms/pos/attestations/index.md: 1 check(s) failed -- structure jsx-tags: AttestationsDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-17T08:33:43.981Z",
+      "lastSeen": "2026-11-17T08:33:43.981Z",
+      "expiresAt": "2026-12-01T08:33:43.981Z"
+    },
+    {
+      "file": "public/content/developers/docs/consensus-mechanisms/pos/attestations/index.md",
+      "locale": "tr",
+      "englishHash": "81e43bc1d3db",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/tr/developers/docs/consensus-mechanisms/pos/attestations/index.md: 1 check(s) failed -- structure jsx-tags: AttestationsDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-17T08:35:08.572Z",
+      "lastSeen": "2026-11-17T08:35:08.572Z",
+      "expiresAt": "2026-12-01T08:35:08.572Z"
+    },
+    {
       "file": "public/content/developers/docs/frameworks/index.md",
       "locale": "ar",
       "englishHash": "54f5aaea285c",
@@ -11,6 +33,94 @@
       "firstSeen": "2026-10-21T21:44:36.327Z",
       "lastSeen": "2026-10-21T21:44:36.327Z",
       "expiresAt": "2026-11-04T21:44:36.327Z"
+    },
+    {
+      "file": "public/content/developers/docs/networking-layer/portal-network/index.md",
+      "locale": "ja",
+      "englishHash": "65bd66688cd5",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ja/developers/docs/networking-layer/portal-network/index.md: 1 check(s) failed -- structure jsx-tags: PortalHistoryDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T09:53:44.080Z",
+      "lastSeen": "2026-11-25T09:53:44.080Z",
+      "expiresAt": "2026-12-09T09:53:44.080Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/optimistic-rollups/index.md",
+      "locale": "ar",
+      "englishHash": "8ec6c61b4d46",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ar/developers/docs/scaling/optimistic-rollups/index.md: 1 check(s) failed -- structure jsx-tags: OptimisticRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:13:28.741Z",
+      "lastSeen": "2026-11-25T10:13:28.741Z",
+      "expiresAt": "2026-12-09T10:13:28.741Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/optimistic-rollups/index.md",
+      "locale": "bn",
+      "englishHash": "8ec6c61b4d46",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/bn/developers/docs/scaling/optimistic-rollups/index.md: 1 check(s) failed -- structure jsx-tags: OptimisticRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:14:02.410Z",
+      "lastSeen": "2026-11-25T10:14:02.410Z",
+      "expiresAt": "2026-12-09T10:14:02.410Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "ar",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ar/developers/docs/scaling/zk-rollups/index.md: 3 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0), Alert (en=2 tr=0), AlertEmoji (en=1 tr=0), AlertContent (en=2 tr=0), AlertTitle (en=2 tr=0), AlertDescription (en=2 tr=0), ",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:20:40.804Z",
+      "lastSeen": "2026-11-25T10:20:40.804Z",
+      "expiresAt": "2026-12-09T10:20:40.804Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "fr",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/fr/developers/docs/scaling/zk-rollups/index.md: 1 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:21:39.937Z",
+      "lastSeen": "2026-11-25T10:21:39.937Z",
+      "expiresAt": "2026-12-09T10:21:39.937Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "sw",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/sw/developers/docs/scaling/zk-rollups/index.md: 2 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0), Alert (en=2 tr=0), AlertEmoji (en=1 tr=0), AlertContent (en=2 tr=0), AlertTitle (en=2 tr=0), AlertDescription (en=2 tr=0), ",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:29:41.982Z",
+      "lastSeen": "2026-11-25T10:29:41.982Z",
+      "expiresAt": "2026-12-09T10:29:41.982Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "tr",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/tr/developers/docs/scaling/zk-rollups/index.md: 2 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0), Alert (en=2 tr=0), AlertEmoji (en=1 tr=0), AlertContent (en=2 tr=0), AlertTitle (en=2 tr=0), AlertDescription (en=2 tr=0), ",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:25:55.482Z",
+      "lastSeen": "2026-11-25T10:25:55.482Z",
+      "expiresAt": "2026-12-09T10:25:55.482Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "ur",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ur/developers/docs/scaling/zk-rollups/index.md: 2 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0), Alert (en=2 tr=0), AlertEmoji (en=1 tr=0), AlertContent (en=2 tr=0), AlertTitle (en=2 tr=0), AlertDescription (en=2 tr=0), ",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:26:14.246Z",
+      "lastSeen": "2026-11-25T10:26:14.246Z",
+      "expiresAt": "2026-12-09T10:26:14.246Z"
     },
     {
       "file": "public/content/developers/docs/smart-contracts/security/index.md",
@@ -79,268 +189,301 @@
       "expiresAt": "2026-11-04T21:58:56.766Z"
     },
     {
+      "file": "public/content/developers/docs/smart-contracts/verifying/index.md",
+      "locale": "pl",
+      "englishHash": "7b6b9fb6fae2",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/pl/developers/docs/smart-contracts/verifying/index.md: 1 check(s) failed -- structure internal-href: /developers/docs/smart-contracts/compiling/#web-applications (en=1 tr=2)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T09:57:59.439Z",
+      "lastSeen": "2026-11-25T09:57:59.439Z",
+      "expiresAt": "2026-12-09T09:57:59.439Z"
+    },
+    {
+      "file": "public/content/developers/docs/smart-contracts/verifying/index.md",
+      "locale": "te",
+      "englishHash": "7b6b9fb6fae2",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/te/developers/docs/smart-contracts/verifying/index.md: 1 check(s) failed -- structure jsx-tags: SourceVerifyDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:00:25.306Z",
+      "lastSeen": "2026-11-25T10:00:25.306Z",
+      "expiresAt": "2026-12-09T10:00:25.306Z"
+    },
+    {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "ar",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/ar/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/ar/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:16:44.779Z",
-      "lastSeen": "2026-11-17T03:16:44.779Z",
-      "expiresAt": "2026-12-01T03:16:44.779Z"
+      "lastSeen": "2026-11-23T07:17:51.096Z",
+      "expiresAt": "2026-12-07T07:17:51.096Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "bn",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/bn/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/bn/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:16:11.343Z",
-      "lastSeen": "2026-11-17T03:16:11.343Z",
-      "expiresAt": "2026-12-01T03:16:11.343Z"
+      "lastSeen": "2026-11-23T07:17:34.823Z",
+      "expiresAt": "2026-12-07T07:17:34.823Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "cs",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/cs/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/cs/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:15:29.512Z",
-      "lastSeen": "2026-11-17T03:15:29.512Z",
-      "expiresAt": "2026-12-01T03:15:29.512Z"
+      "lastSeen": "2026-11-23T07:19:57.907Z",
+      "expiresAt": "2026-12-07T07:19:57.907Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "de",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/de/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/de/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:16:32.837Z",
-      "lastSeen": "2026-11-17T03:16:32.837Z",
-      "expiresAt": "2026-12-01T03:16:32.837Z"
+      "lastSeen": "2026-11-23T07:17:11.989Z",
+      "expiresAt": "2026-12-07T07:17:11.989Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "es",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/es/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/es/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:15:48.428Z",
-      "lastSeen": "2026-11-17T03:15:48.428Z",
-      "expiresAt": "2026-12-01T03:15:48.428Z"
+      "lastSeen": "2026-11-23T07:16:47.002Z",
+      "expiresAt": "2026-12-07T07:16:47.002Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "fr",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/fr/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/fr/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:16:32.180Z",
-      "lastSeen": "2026-11-17T03:16:32.180Z",
-      "expiresAt": "2026-12-01T03:16:32.180Z"
+      "lastSeen": "2026-11-23T07:17:09.222Z",
+      "expiresAt": "2026-12-07T07:17:09.222Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "hi",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/hi/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/hi/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:16:19.693Z",
-      "lastSeen": "2026-11-17T03:16:19.693Z",
-      "expiresAt": "2026-12-01T03:16:19.693Z"
+      "lastSeen": "2026-11-23T07:17:22.403Z",
+      "expiresAt": "2026-12-07T07:17:22.403Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "id",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/id/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/id/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:15:45.135Z",
-      "lastSeen": "2026-11-17T03:15:45.135Z",
-      "expiresAt": "2026-12-01T03:15:45.135Z"
+      "lastSeen": "2026-11-23T07:15:38.982Z",
+      "expiresAt": "2026-12-07T07:15:38.982Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "it",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/it/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/it/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:18:32.642Z",
-      "lastSeen": "2026-11-17T03:18:32.642Z",
-      "expiresAt": "2026-12-01T03:18:32.642Z"
+      "lastSeen": "2026-11-23T07:17:15.040Z",
+      "expiresAt": "2026-12-07T07:17:15.040Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "ja",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/ja/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/ja/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:20:03.153Z",
-      "lastSeen": "2026-11-17T03:20:03.153Z",
-      "expiresAt": "2026-12-01T03:20:03.153Z"
+      "lastSeen": "2026-11-23T07:17:05.806Z",
+      "expiresAt": "2026-12-07T07:17:05.806Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "ko",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/ko/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/ko/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:24:45.838Z",
-      "lastSeen": "2026-11-17T03:24:45.838Z",
-      "expiresAt": "2026-12-01T03:24:45.838Z"
+      "lastSeen": "2026-11-23T07:17:05.095Z",
+      "expiresAt": "2026-12-07T07:17:05.095Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "mr",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/mr/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/mr/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:19:44.269Z",
-      "lastSeen": "2026-11-17T03:19:44.269Z",
-      "expiresAt": "2026-12-01T03:19:44.269Z"
+      "lastSeen": "2026-11-23T07:17:06.562Z",
+      "expiresAt": "2026-12-07T07:17:06.562Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "pl",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/pl/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/pl/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:19:52.471Z",
-      "lastSeen": "2026-11-17T03:19:52.471Z",
-      "expiresAt": "2026-12-01T03:19:52.471Z"
+      "lastSeen": "2026-11-23T07:16:50.193Z",
+      "expiresAt": "2026-12-07T07:16:50.193Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "pt-br",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/pt-br/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body diffe",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/pt-br/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:19:34.566Z",
-      "lastSeen": "2026-11-17T03:19:34.566Z",
-      "expiresAt": "2026-12-01T03:19:34.566Z"
+      "lastSeen": "2026-11-23T07:16:38.942Z",
+      "expiresAt": "2026-12-07T07:16:38.942Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "ru",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/ru/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/ru/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:20:34.398Z",
-      "lastSeen": "2026-11-17T03:20:34.398Z",
-      "expiresAt": "2026-12-01T03:20:34.398Z"
+      "lastSeen": "2026-11-23T07:16:58.026Z",
+      "expiresAt": "2026-12-07T07:16:58.026Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "sw",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/sw/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/sw/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:20:46.944Z",
-      "lastSeen": "2026-11-17T03:20:46.944Z",
-      "expiresAt": "2026-12-01T03:20:46.944Z"
+      "lastSeen": "2026-11-23T07:17:33.150Z",
+      "expiresAt": "2026-12-07T07:17:33.150Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "ta",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/ta/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/ta/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:21:38.469Z",
-      "lastSeen": "2026-11-17T03:21:38.469Z",
-      "expiresAt": "2026-12-01T03:21:38.469Z"
+      "lastSeen": "2026-11-23T07:22:12.653Z",
+      "expiresAt": "2026-12-07T07:22:12.653Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "te",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/te/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/te/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:21:50.550Z",
-      "lastSeen": "2026-11-17T03:21:50.550Z",
-      "expiresAt": "2026-12-01T03:21:50.550Z"
+      "lastSeen": "2026-11-23T07:22:14.767Z",
+      "expiresAt": "2026-12-07T07:22:14.767Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "tr",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/tr/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/tr/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:22:23.726Z",
-      "lastSeen": "2026-11-17T03:22:23.726Z",
-      "expiresAt": "2026-12-01T03:22:23.726Z"
+      "lastSeen": "2026-11-23T07:23:13.075Z",
+      "expiresAt": "2026-12-07T07:23:13.075Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "uk",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/uk/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/uk/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:22:28.631Z",
-      "lastSeen": "2026-11-17T03:22:28.631Z",
-      "expiresAt": "2026-12-01T03:22:28.631Z"
+      "lastSeen": "2026-11-23T07:23:32.756Z",
+      "expiresAt": "2026-12-07T07:23:32.756Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "ur",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/ur/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/ur/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:22:26.041Z",
-      "lastSeen": "2026-11-17T03:22:26.041Z",
-      "expiresAt": "2026-12-01T03:22:26.041Z"
+      "lastSeen": "2026-11-23T07:24:09.448Z",
+      "expiresAt": "2026-12-07T07:24:09.448Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "vi",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/vi/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/vi/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:22:24.374Z",
-      "lastSeen": "2026-11-17T03:22:24.374Z",
-      "expiresAt": "2026-12-01T03:22:24.374Z"
+      "lastSeen": "2026-11-23T07:23:30.353Z",
+      "expiresAt": "2026-12-07T07:23:30.353Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "zh",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/zh/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs ",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/zh/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-con",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:22:24.979Z",
-      "lastSeen": "2026-11-17T03:22:24.979Z",
-      "expiresAt": "2026-12-01T03:22:24.979Z"
+      "lastSeen": "2026-11-23T07:22:34.883Z",
+      "expiresAt": "2026-12-07T07:22:34.883Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
       "locale": "zh-tw",
       "englishHash": "e8148306c475",
       "class": "gate",
-      "reason": "[gate] public/content/translations/zh-tw/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 5 check(s) failed -- structure jsx-tags: HTML (en=0 tr=1); structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body diffe",
-      "attempts": 1,
+      "reason": "[gate] public/content/translations/zh-tw/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md: 3 check(s) failed -- structure code-fence-content: fence 25 (`tsx`) body differs from English; structure code-fence-content: fence 28 (`tsx`) body differs from English; structure code-fence-",
+      "attempts": 2,
       "firstSeen": "2026-11-17T03:22:52.974Z",
-      "lastSeen": "2026-11-17T03:22:52.974Z",
-      "expiresAt": "2026-12-01T03:22:52.974Z"
+      "lastSeen": "2026-11-23T07:22:45.047Z",
+      "expiresAt": "2026-12-07T07:22:45.047Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md",
+      "locale": "zh",
+      "englishHash": "81a940ef598d",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/zh/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md: 1 check(s) failed -- structure internal-href: /developers/docs/evm/ (en=2 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:02:04.042Z",
+      "lastSeen": "2026-11-25T10:02:04.042Z",
+      "expiresAt": "2026-12-09T10:02:04.042Z"
     },
     {
       "file": "src/intl/en/page-developers-tools-descriptions.json",

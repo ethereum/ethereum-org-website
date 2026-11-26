@@ -41,6 +41,12 @@ const dialogVariant = tv({
       unstyled: {
         content: "block p-0 rounded-none bg-none gap",
       },
+      // Close on its own top row, so a long or translated title gets the
+      // full width instead of wrapping around it
+      stacked: {
+        header: "flex flex-col pe-0",
+        close: "static order-first self-end",
+      },
     },
   },
   defaultVariants: {

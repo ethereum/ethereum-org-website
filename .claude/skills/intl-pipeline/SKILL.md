@@ -15,7 +15,7 @@ The rule is NOT "never edit locales." It IS "don't hand-propagate English update
 
 - **Allowed:** Fixing a translation error when the English side hasn't moved (review-time corrections, sanitizer follow-ups). The manifest's English-to-locale map stays valid.
 - **Not allowed:** Editing a locale to reflect a new English value (URL change, attribute change, restructured paragraph). The manifest map becomes wrong.
-- **If English-to-locale sync is genuinely urgent** (build-breaking structural change with no pending PR open): make the English edit, then trigger `intl-pipeline.yml` with `stamp_only: true` to refresh manifests without translation. Safe only when no `intl/pending-{base}` branch exists for that base.
+- **If English-to-locale sync is genuinely urgent**: run the pipeline on just that file (`target_path`). `stamp_only: true` is not a sync: it rewrites `source.json` from current English for pairs whose English changed and touches no locale file, so any locale you didn't fix by hand stays stale while its manifest claims it is current. Use it only after hand-fixing every affected locale, with no `intl/pending-{base}` branch open; procedure in `references/non-english-edits.md`.
 
 **Deletions go through English too.** To remove a string — including an orphaned key code no longer references — delete it from the English source only; the pipeline propagates the removal on its next run. Hand-deleting the locale copies is hand-propagation.
 
@@ -52,6 +52,8 @@ Healthy runs average 4k–9k input tokens per call; the input:output ratio is NO
 The pipeline creates `intl/pending-{base}` on first run, commits translations to it, opens a PR against `{base}`. Subsequent runs MERGE `{base}` into pending first, then translate the delta. After the pending PR is merged, the branch is deleted; the next run creates a fresh one.
 
 Do NOT rebase, squash, or force-push `intl/pending-{base}`. The pipeline depends on its history.
+
+Before dispatching a run over many files, dry-run it: check out `{base}` with `intl/pending-{base}` merged in (what the run itself starts from) and run `pnpm intl:identity-sweep --pairs`. It merges every pair whose English moved with the model replaced by the planner's own section bodies, then runs the sanitizer and gates, so a failure it lists fails on the real run whatever the model returns. It also lists the pairs that will fall back to full translation, the expensive part of a run, with the reason.
 
 ### SOV-language inline element reordering
 
@@ -127,6 +129,7 @@ Before opening a PR that touches the pipeline:
 - [ ] Sanitizer test suite passes (`npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/`)
 - [ ] Pipeline test suite passes (`npx playwright test --project=unit tests/unit/intl-pipeline/`)
 - [ ] `pnpm intl:identity-sweep` reports 0 failing pages (normalizer, reconstruction, sanitizer or gate changes: English through the pipeline with an echo model must pass every gate)
+- [ ] `pnpm intl:identity-sweep --pairs` reports 0 failing pairs (incremental merge, routing or gate changes; run with `intl/pending-dev` merged in)
 - [ ] No hand-edits to `public/content/translations/` or `src/intl/{non-en}/` files
 - [ ] No manual changes to manifest files under `.manifests/`
 - [ ] If renaming workflow / config paths, all doc references updated (search for old names)

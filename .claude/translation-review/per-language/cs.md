@@ -1,5 +1,15 @@
 # Czech (cs) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.4/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: výběr forku to volba forku (pos heading + 2 body sites). Open: limit plynu vs gas (queue 13), validátor animacy, acronym expansion in link text, o lžící straně.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.8/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: verkle inline code, glossary (fork choice, kontrakt, prioritni poplatek, ekvivokace, vystup, hledac, stvrzenka replacing ucenka). Open: gas/plyn policy, validator client word order, head block.
+
 > **PR:** #18344 (latest/ builder blog, 3 posts)
 > **Date:** 2026-06-03
 > **Quality Score:** 8.8/10
@@ -198,3 +208,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 - echidna:605 `odstranena` -> `odstraněna`
 - multi-client:23 case agreement `použitím` -> `použití`
 - multi-client:35 `v frameworcích` -> `ve frameworcích`; "a major reason" overstated -> `jeden z hlavních důvodů`
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `limit plynu` (glossary compound) vs the cs `gas` = `gas` rule: decide for the whole file, not only changed lines (queue item 13); gas:107 `max fee` span was already translated on dev (out of scope, same #101).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

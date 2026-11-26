@@ -10,14 +10,13 @@ Virtuální stroj Etherea (Ethereum Virtual Machine – EVM) je decentralizovan�
 
 K pochopení EVM je nezbytná základní znalost běžné terminologie z oblasti informatiky, jako jsou [bajty](https://wikipedia.org/wiki/Byte), [paměť](https://wikipedia.org/wiki/Computer_memory) a [zásobník](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Užitečná je také orientace v konceptech kryptografie a blockchainu, jako jsou [hashovací funkce](https://wikipedia.org/wiki/Cryptographic_hash_function) a [Merkleův strom](https://wikipedia.org/wiki/Merkle_tree).
 
-## Od účetní knihy ke stavovému automatu {#from-ledger-to-state-machine}
+## Od účetní knihy ke stavovému stroji {#from-ledger-to-state-machine}
 
-K popisu blockchainů, jako je Bitcoin, které umožňují fungování decentralizované měny pomocí základních nástrojů kryptografie, se často používá analogie „distribuované účetní knihy“. Tato účetní kniha udržuje záznamy o aktivitách, které musí dodržovat soubor pravidel určujících, co lze a nelze udělat pro její úpravu. Například bitcoinová adresa nemůže utratit více bitcoinů, než kolik dříve přijala. Tato pravidla jsou základem všech transakcí na Bitcoinu a mnoha dalších blockchainech.
+Analogie „distribuované účetní knihy“ se často používá k popisu blockchainů, jako je Bitcoin, které umožňují decentralizovanou měnu pomocí základních nástrojů kryptografie. Účetní kniha udržuje záznam o aktivitě, který musí dodržovat soubor pravidel určujících, co někdo může a nemůže udělat pro úpravu účetní knihy. Například bitcoinová adresa nemůže utratit více bitcoinů, než kolik dříve přijala. Tato pravidla jsou základem všech transakcí na Bitcoinu a mnoha dalších blockchainech.
 
-Zatímco Ethereum má svou vlastní nativní kryptoměnu (ether), která se řídí téměř přesně stejnými intuitivními pravidly, umožňuje také mnohem mocnější funkci: [chytré kontrakty](/developers/docs/smart-contracts/). Pro tuto složitější funkci je zapotřebí sofistikovanější analogie. Místo distribuované účetní knihy je Ethereum distribuovaný [stavový automat](https://wikipedia.org/wiki/Finite-state_machine). Stav Etherea je rozsáhlá datová struktura, která neuchovává pouze všechny účty a zůstatky, ale také _stav stroje_, který se může měnit blok od bloku podle předem definovaného souboru pravidel a který dokáže spouštět libovolný strojový kód. Konkrétní pravidla pro změnu stavu mezi bloky definuje EVM.
+Zatímco Ethereum má svou vlastní nativní kryptoměnu (ether), která se řídí téměř přesně stejnými intuitivními pravidly, umožňuje také mnohem mocnější funkci: [chytré kontrakty](/developers/docs/smart-contracts/). Pro tuto složitější funkci je zapotřebí sofistikovanější analogie. Místo distribuované účetní knihy je Ethereum distribuovaný [stavový stroj](https://wikipedia.org/wiki/Finite-state_machine). Stav Etherea je rozsáhlá datová struktura, která neuchovává pouze všechny účty a zůstatky, ale také _stav stroje_, který se může měnit blok od bloku podle předem definovaného souboru pravidel a který může spouštět libovolný strojový kód. Specifická pravidla pro změnu stavu z bloku na blok jsou definována EVM.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_Diagram upraven podle [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## Funkce přechodu stavu Etherea {#the-ethereum-state-transition-function}
 
@@ -55,10 +54,9 @@ Kontrakty obsahují Merkle-Patricia _strom úložiště_ (jako pole slov adresov
 
 ### Operační kódy {#opcodes}
 
-Zkompilovaný bajtkód chytrého kontraktu se provádí jako řada [operačních kódů](/developers/docs/evm/opcodes) EVM, které provádějí standardní operace se zásobníkem, jako jsou `XOR`, `AND`, `ADD`, `SUB` atd. EVM také implementuje řadu operací se zásobníkem specifických pro blockchain, jako jsou `ADDRESS`, `BALANCE`, `BLOCKHASH` atd. Sada operačních kódů zahrnuje také `TSTORE` a `TLOAD`, které poskytují přístup k dočasnému úložišti.
+Zkompilovaný bajtkód chytrého kontraktu se spouští jako řada [operačních kódů](/developers/docs/evm/opcodes) EVM, které provádějí standardní operace se zásobníkem, jako jsou `XOR`, `AND`, `ADD`, `SUB` atd. EVM také implementuje řadu operací se zásobníkem specifických pro blockchain, jako jsou `ADDRESS`, `BALANCE`, `BLOCKHASH` atd. Sada operačních kódů zahrnuje také `TSTORE` a `TLOAD`, které poskytují přístup k dočasnému úložišti.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_Diagramy upraveny podle [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## Implementace EVM {#evm-implementations}
 
@@ -68,10 +66,10 @@ Během desetileté historie Etherea prošlo EVM několika revizemi a existuje n�
 
 [Exekuční klienti Etherea](/developers/docs/nodes-and-clients/#execution-clients) obsahují implementaci EVM. Kromě toho existuje několik samostatných implementací, včetně:
 
-- [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
-- [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
-- [revm](https://github.com/bluealloy/revm) - _Rust_
+- [Py-EVM](https://github.com/ethereum/py-evm) – _Python_
+- [evmone](https://github.com/ethereum/evmone) – _C++_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) – _JavaScript_
+- [revm](https://github.com/bluealloy/revm) – _Rust_
 
 ## Další čtení {#further-reading}
 

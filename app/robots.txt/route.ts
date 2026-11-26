@@ -16,6 +16,19 @@ const PRODUCTION = `# Content Signals (https://contentsignals.org). Site content
 User-Agent: *
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
+# Courses are meant to be played by people: keep crawlers off lessons and
+# mastery checks. The hub, course pages and the (noindex) profile stay open.
+Disallow: /courses/*/*/
+Disallow: /*/courses/*/*/
+
+# Link previews: a shared lesson still gets its card
+User-Agent: Twitterbot
+User-Agent: facebookexternalhit
+User-Agent: LinkedInBot
+User-Agent: Slackbot
+User-Agent: Discordbot
+User-Agent: TelegramBot
+Allow: /
 
 Host: ${SITE_URL}
 Sitemap: ${SITE_URL}/sitemap.xml

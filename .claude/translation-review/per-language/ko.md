@@ -1,5 +1,15 @@
 # Korean (ko) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.5/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: truncated non-word 컨트랙 x2 files, opcode 옵코드 to 연산 코드. Open: enter as 입력 (should be 진입), 컴파일 vs 컴파일링, 발신자 vs 송신자, doubled EVM acronym.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in 6 sites across 4 JSON keys, truncated `commitment`, The Merge as meojji. Open: Engine API Latin/Hangul split, History network wording.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -190,3 +200,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 - echidna: glossary noun `되돌리기` verbalized (`되돌리기됩니다`) at 4 sites; natural `되돌려집니다` -- native call (#96)
 - Particle allomorphs after inline code (`config.yaml`를 -> 을, etc.) at ~11 sites -- fluency
 - echidna author `트레일오브비츠` vs Latin in 3 of 5 ko tutorials -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- After the span restore line 34 reads `base fee`(기본 수수료)와 `priority fee`(우선순위 수수료, 팁).
+
+**Open / notes:**
+
+- `단어` for "term" (translation-program:23); gas:69/:75 fluency regressions vs dev.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

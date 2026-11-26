@@ -1,5 +1,15 @@
 # Spanish (es) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: slot (glamsterdam x2), Red principal casing (zk-rollups x5). Open: parent as principal (SQL), English number separators 15.7/2,048, acronym over-expansion, tu/usted split in erc-721.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas/verkle inline code, slot, desplegado for deploy (6 JSON keys). Open: tu/usted split in JSON, relay retransmisor vs rele, compounding composicion.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -149,3 +159,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - ABI/EVM spelled out where English leaves them bare (#80, prose -> warning)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` -> `incentivo` instead of the glossary term (avoids tautology); API spelled out in full twice.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

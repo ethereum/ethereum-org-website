@@ -1,5 +1,15 @@
 # French (fr) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.5/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: EOA comptes detenus en externe (optimistic-rollups L189). Open: gossip rendered potins, parenthetical English glosses in portal-network, sanctionne/reduction slashing mix.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas inline code, choix de fourche, frais de priorite, creneaux. Open: `creneau de stockage` for storage slot (native call), Engine API vs API Engine.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -157,3 +167,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - echidna:340 glossary `annuler` for revert reads as overflows being "cancelled" (L415/L422 unchanged, same issue) -- native call (#96)
 - ABI/EVM spelled out (#80)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Glossary: `frais maximums` -> `frais maximum` (gas L87, L89).
+
+**Open / notes:**
+
+- `suite a un bloc plein` reverses "preceding" (gas:73, dev had `avant`); `telugu` -> `telougou`; `supplement` for tip.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

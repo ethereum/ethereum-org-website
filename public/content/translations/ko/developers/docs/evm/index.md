@@ -12,12 +12,11 @@ EVM을 이해하려면 [바이트](https://wikipedia.org/wiki/Byte), [메모리]
 
 ## 원장에서 상태 머신으로 {#from-ledger-to-state-machine}
 
-'분산 원장'이라는 비유는 암호학의 기본 도구를 사용하여 탈중앙화된 통화를 가능하게 하는 비트코인과 같은 블록체인을 설명하는 데 자주 사용됩니다. 원장은 누군가가 원장을 수정하기 위해 할 수 있는 일과 할 수 없는 일을 규정하는 일련의 규칙을 준수해야 하는 활동 기록을 유지합니다. 예를 들어, 비트코인 주소는 이전에 받은 것보다 더 많은 비트코인을 사용할 수 없습니다. 이러한 규칙은 비트코인 및 기타 여러 블록체인의 모든 트랜잭션을 뒷받침합니다.
+'분산 원장'이라는 비유는 암호학의 기본 도구를 사용하여 탈중앙화된 통화를 가능하게 하는 비트코인과 같은 블록체인을 설명하는 데 종종 사용됩니다. 원장은 누군가가 원장을 수정하기 위해 할 수 있는 것과 할 수 없는 것을 규정하는 일련의 규칙을 준수해야 하는 활동 기록을 유지합니다. 예를 들어, 비트코인 주소는 이전에 받은 것보다 더 많은 비트코인을 사용할 수 없습니다. 이러한 규칙은 비트코인 및 기타 여러 블록체인의 모든 트랜잭션을 뒷받침합니다.
 
-이더리움에는 거의 동일한 직관적인 규칙을 따르는 자체 기본 암호화폐(이더)가 있지만, 훨씬 더 강력한 기능인 [스마트 컨트랙트](/developers/docs/smart-contracts/)도 가능하게 합니다. 이 더 복잡한 기능을 설명하려면 더 정교한 비유가 필요합니다. 분산 원장 대신, 이더리움은 분산 [상태 머신](https://wikipedia.org/wiki/Finite-state_machine)입니다. 이더리움의 상태는 모든 계정과 잔액뿐만 아니라, 미리 정의된 규칙 세트에 따라 블록마다 변경될 수 있고 임의의 기계 코드를 실행할 수 있는 <em>머신 상태(machine state)</em>를 보유하는 대규모 데이터 구조입니다. 블록마다 상태를 변경하는 구체적인 규칙은 EVM에 의해 정의됩니다.
+이더리움은 거의 동일한 직관적인 규칙을 따르는 자체 기본 암호화폐(이더)를 가지고 있지만, 훨씬 더 강력한 기능인 [스마트 컨트랙트](/developers/docs/smart-contracts/)도 가능하게 합니다. 이 더 복잡한 기능을 위해서는 더 정교한 비유가 필요합니다. 분산 원장 대신, 이더리움은 분산 [상태 머신](https://wikipedia.org/wiki/Finite-state_machine)입니다. 이더리움의 상태는 모든 계정과 잔액뿐만 아니라, 미리 정의된 일련의 규칙에 따라 블록마다 변경될 수 있고 임의의 기계 코드를 실행할 수 있는 <em>머신 상태(machine state)</em>를 보유하는 대규모 데이터 구조입니다. 블록마다 상태를 변경하는 구체적인 규칙은 EVM에 의해 정의됩니다.
 
-![A diagram showing the make up of the EVM](./evm.png)
-_다이어그램 출처: [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<EvmZonesDiagram />
 
 ## 이더리움 상태 전환 함수 {#the-ethereum-state-transition-function}
 
@@ -55,22 +54,21 @@ EVM은 1024개 항목의 깊이를 가진 [스택 머신](https://wikipedia.org/
 
 ### 연산 코드 {#opcodes}
 
-컴파일된 스마트 컨트랙트 바이트코드는 `XOR`, `AND`, `ADD`, `SUB` 등과 같은 표준 스택 작업을 수행하는 여러 EVM [연산 코드](/developers/docs/evm/opcodes)로 실행됩니다. EVM은 또한 `ADDRESS`, `BALANCE`, `BLOCKHASH` 등과 같은 여러 블록체인 전용 스택 작업도 구현합니다. 연산 코드 세트에는 임시 스토리지에 대한 접근을 제공하는 `TSTORE` 및 `TLOAD`도 포함되어 있습니다.
+컴파일된 스마트 컨트랙트 바이트코드는 `XOR`, `AND`, `ADD`, `SUB` 등과 같은 표준 스택 연산을 수행하는 여러 EVM [연산 코드](/developers/docs/evm/opcodes)로 실행됩니다. 또한 EVM은 `ADDRESS`, `BALANCE`, `BLOCKHASH` 등과 같은 여러 블록체인 전용 스택 연산도 구현합니다. 연산 코드 세트에는 임시 스토리지에 대한 접근을 제공하는 `TSTORE` 및 `TLOAD`도 포함되어 있습니다.
 
-![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
-_다이어그램 출처: [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 ## EVM 구현 {#evm-implementations}
 
 EVM의 모든 구현은 이더리움 황서에 설명된 사양을 준수해야 합니다.
 
-이더리움의 10년 역사 동안 EVM은 여러 차례 개정되었으며, 다양한 프로그래밍 언어로 된 여러 EVM 구현이 존재합니다.
+이더리움의 10년 역사 동안 EVM은 여러 차례의 개정을 거쳤으며, 다양한 프로그래밍 언어로 작성된 여러 EVM 구현이 존재합니다.
 
 [이더리움 실행 클라이언트](/developers/docs/nodes-and-clients/#execution-clients)에는 EVM 구현이 포함되어 있습니다. 또한 다음과 같은 여러 독립형 구현도 있습니다.
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
-- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [@ethereumjs/evm](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm) - _JavaScript_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## 더 읽을거리 {#further-reading}

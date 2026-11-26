@@ -1,7 +1,7 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/erc-721-vyper-annotated-code/index.md",
-  "generatedAt": "2026-07-22T23:44:32.501Z",
+  "generatedAt": "2026-11-25T09:54:56.425Z",
   "rootHash": "cc9b47afd77b",
   "tree": {
     "contentHash": "68824006cc77",
@@ -1495,5 +1495,5 @@
       "conclusion"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "2a4de29685c0f579e19dadc80da2e7ba58749e3e"
 }

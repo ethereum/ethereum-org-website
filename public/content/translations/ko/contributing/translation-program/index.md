@@ -1,20 +1,36 @@
 ---
 title: "번역 프로그램"
 lang: ko
-description: "ethereum.org 번역 프로그램에 대한 정보"
+description: "ETHGlossary에서 한국어 용어를 검토하여 이더리움 번역에 참여해 보세요. 여러분이 승인한 용어가 ethereum.org에서 사용됩니다."
 ---
 
-번역 프로그램은 전 세계 수십억 명의 비영어권 사용자가 웹사이트에 더 쉽게 접근할 수 있도록 ethereum.org를 다양한 언어로 번역하기 위한 공동의 노력이었습니다.
+이더리움은 모든 언어에서 자연스럽게 읽혀야 합니다. 지금 당장 도움을 줄 수 있는 가장 좋은 방법은 24개 언어로 제공되는 커뮤니티 검토 기반의 공유 이더리움 용어집인 [ETHGlossary](https://glossary.ethereum.org/)에 참여하는 것입니다.
+
+**여러분이 승인한 용어가 ethereum.org의 한국어 번역에 사용됩니다.** 지갑, 앱, 문서화 팀도 용어집의 개방형 애플리케이션 프로그래밍 인터페이스(API)를 통해 이 용어들을 사용할 수 있습니다.
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  한국어 용어 검토하기
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## 작동 방식 {#how-it-works}
+
+1. **언어를 선택하세요.** 모든 언어에는 동일한 이더리움 용어 세트가 있으며, 각각 초안 번역이 제공됩니다.
+2. **용어를 검토하세요.** 용어를 승인하거나, 더 나은 대안을 제안하거나, 커뮤니티에서 해당 용어가 어떻게 사용되는지에 대한 맥락을 추가하세요.
+3. **반영됩니다.** 검토된 용어는 ethereum.org의 번역 가이드라인이 되며 ETHGlossary API를 통해 게시됩니다.
+
+부담 없이 참여할 수 있습니다. 단어 하나를 검토하는 데 몇 분이면 충분합니다.
+
+**지원 언어:** 아랍어, 벵골어, 중국어(간체 및 번체), 체코어, 프랑스어, 독일어, 힌디어, 인도네시아어, 이탈리아어, 일본어, 한국어, 마라티어, 폴란드어, 포르투갈어(브라질), 러시아어, 스페인어, 스와힐리어, 타밀어, 텔루구어, 튀르키예어, 우크라이나어, 우르두어, 베트남어.
+
 ## 프로그램 현황 {#program-status}
 
-ethereum.org 번역 프로그램은 마무리 단계에 있으며 더 이상 새로운 번역가를 온보딩하지 않습니다. Crowdin 프로젝트는 종료될 예정이며, 이를 통한 새로운 번역 제출은 받지 않습니다.
+Crowdin을 통한 전체 페이지 번역은 일시 중지되었으며, 현재 해당 플랫폼에서는 새로운 번역 제출을 받지 않고 있습니다. 당분간은 [ETHGlossary](https://glossary.ethereum.org/)에서 용어를 검토하는 방식으로 기여하실 수 있습니다.
 
-수년 동안 ethereum.org를 수십 개의 언어로 제공할 수 있게 해준 수천 명의 커뮤니티 번역가분들께 깊은 감사를 드립니다. 이들의 작업물은 사이트에 계속 유지되며, [감사 인사](/contributing/translation-program/acknowledgements/) 및 [기여자](/contributing/translation-program/contributors/) 페이지의 기록도 그대로 보존됩니다.
+수년에 걸쳐 수십 개의 언어로 ethereum.org를 이용할 수 있게 해준 수천 명의 커뮤니티 번역가분들께 깊은 감사를 드립니다. 이분들의 작업물은 사이트에 계속 유지되며, [감사 인사](/contributing/translation-program/acknowledgements/) 및 [기여자](/contributing/translation-program/contributors/) 페이지의 기록도 그대로 보존됩니다.
 
-기존 번역에서 오류를 발견하면 [GitHub에 이슈를 등록](https://github.com/ethereum/ethereum-org-website/issues/new/choose)해 주세요.
+기존 번역에서 오류를 발견한 경우, [GitHub에서 이슈를 열어주세요](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 _질문이 있거나 피드백을 공유하려면 [ethereum.org 디스코드](/discord/)에 참여하세요._
 

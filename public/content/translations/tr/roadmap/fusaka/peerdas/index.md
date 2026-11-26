@@ -1,6 +1,6 @@
 ---
 title: PeerDAS
-description: Fusaka Ethereum protokolü güncellemesinin bir parçası olarak PeerDAS hakkında bilgi edinin
+description: "Fusaka Ethereum protokolü güncellemesinin bir parçası olarak PeerDAS hakkında bilgi edinin"
 lang: tr
 authors: ["Nixo", "Mario Havel"]
 ---
@@ -41,31 +41,31 @@ DAS, bunun üzerine inşa edilen ve verilerin hem doğru hem de kullanılabilir 
 
 ## PeerDAS {#peer-das-2}
 
-[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594), Ethereum'da DAS mekanizmasını uygulayan ve muhtemelen Birleşme'den bu yana en büyük güncellemeyi işaret eden özel bir tekliftir. PeerDAS, blob verilerini genişletmek, sütunlara bölmek ve bir alt kümeyi düğümlere dağıtmak için tasarlanmıştır.
+[PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594), Ethereum'da veri kullanılabilirliği örneklemesi (DAS) mekanizmasını uygulayan ve muhtemelen Birleşme'den bu yana en büyük güncellemeyi işaret eden özel bir tekliftir. PeerDAS, blob verilerini genişletmek, sütunlara bölmek ve bir alt kümesini düğümlere dağıtmak için tasarlanmıştır.
 
-Ethereum bunu başarmak için bazı zekice matematiksel yöntemler ödünç alır: blob verilerine Reed-Solomon tarzı silme kodlaması uygular. Blob verileri, katsayıları verileri kodlayan bir polinom olarak temsil edilir, ardından genişletilmiş bir blob oluşturmak için bu polinomu ek noktalarda değerlendirerek değerlendirme sayısını iki katına çıkarır. Eklenen bu yedeklilik, silme kurtarmasını (erasure recovery) mümkün kılar: bazı değerlendirmeler eksik olsa bile, genişletilmiş parçalar da dahil olmak üzere toplam verinin en az yarısı mevcut olduğu sürece orijinal blob yeniden oluşturulabilir.
+Ethereum bunu başarmak için bazı zekice matematiksel yöntemlerden yararlanır: blob verilerine Reed-Solomon tarzı silme kodlaması uygular. Blob verileri, katsayıları verileri kodlayan bir polinom olarak temsil edilir, ardından bu polinom ek noktalarda değerlendirilerek genişletilmiş bir blob oluşturulur ve değerlendirme sayısı iki katına çıkarılır. Eklenen bu yedeklilik, silme kurtarmasını mümkün kılar: bazı değerlendirmeler eksik olsa bile, genişletilmiş parçalar da dahil olmak üzere toplam verinin en az yarısı mevcut olduğu sürece orijinal blob yeniden oluşturulabilir.
 
-![Extended polynomial](./polynomial.png)
+<ErasureCodingDiagram />
 
 Gerçekte, bu polinomun binlerce katsayısı vardır. KZG taahhütleri, tüm düğümler tarafından bilinen, hash gibi birkaç baytlık değerlerdir. Yeterli veri noktasına sahip her düğüm, [tam bir blob veri setini verimli bir şekilde yeniden oluşturabilir](https://arxiv.org/abs/2207.11079). 
 
-> İlginç bilgi: Aynı kodlama tekniği DVD'ler tarafından da kullanılıyordu. Bir DVD'yi çizdiğinizde, polinomun eksik parçalarını ekleyen Reed-Solomon kodlaması sayesinde oynatıcı onu hala okuyabiliyordu. 
+> İlginç bilgi: Aynı kodlama tekniği DVD'ler tarafından da kullanılıyordu. Bir DVD'yi çizerseniz, polinomun eksik parçalarını ekleyen Reed-Solomon kodlaması sayesinde oynatıcı onu hala okuyabiliyordu. 
 
-Tarihsel olarak, blok zincirlerindeki veriler, ister blok ister blob olsun, tüm düğümlere yayınlanırdı. PeerDAS'ın böl ve örnekle yaklaşımıyla, her şeyi herkese yayınlamak artık gerekli değildir. Fusaka sonrasında, mutabakat katmanı ağı dedikodu konuları/alt ağları (gossip topics/subnets) şeklinde düzenlenir: blob sütunları belirli alt ağlara atanır ve her düğüm önceden belirlenmiş alt kümelere abone olur ve yalnızca bu parçaları muhafaza eder.
+Tarihsel olarak, blokzincirlerindeki veriler, ister bloklar ister blob'lar olsun, tüm düğümlere yayınlanırdı. PeerDAS'ın böl ve örnekle yaklaşımıyla, her şeyi herkese yayınlamak artık gerekli değildir. Fusaka sonrasında, mutabakat katmanı ağ iletişimi dedikodu konuları/alt ağları şeklinde düzenlenir: blob sütunları belirli alt ağlara atanır ve her düğüm önceden belirlenmiş alt kümelere abone olur ve yalnızca bu parçaları saklar.
 
-PeerDAS ile genişletilmiş blob verileri, sütun adı verilen 128 parçaya bölünür. Veriler, abone oldukları belirli alt ağlardaki özel bir dedikodu protokolü aracılığıyla bu düğümlere dağıtılır. Ağdaki her normal düğüm, rastgele seçilmiş en az 8 sütun alt ağına katılır. 128 alt ağdan yalnızca 8'inden veri almak, bu varsayılan düğümün tüm verilerin yalnızca 1/16'sını aldığı anlamına gelir, ancak veriler genişletildiği için bu, orijinal verilerin 1/8'idir. 
+PeerDAS ile genişletilmiş blob verileri, sütun adı verilen 128 parçaya bölünür. Veriler, abone oldukları belirli alt ağlardaki özel bir dedikodu protokolü aracılığıyla bu düğümlere dağıtılır. Ağdaki her normal düğüm, rastgele seçilmiş en az 8 sütun alt ağına katılır. 128 alt ağdan yalnızca 8'inden veri almak, bu varsayılan düğümün tüm verilerin yalnızca 1/16'sını aldığı anlamına gelir, ancak veriler genişletildiği için bu, orijinal verilerin 1/8'ine eşittir. 
 
-Bu, mevcut "herkes her şeyi indirir" şemasının 8 katı olan yeni bir teorik ölçeklendirme sınırına olanak tanır. Blob sütunlarına hizmet veren farklı rastgele alt ağlara abone olan düğümlerle, bunların tekdüze bir şekilde dağıtılma olasılığı çok yüksektir ve bu nedenle her veri parçası ağın bir yerinde mevcuttur. Doğrulayıcı çalıştıran düğümlerin, çalıştırdıkları her doğrulayıcı ile daha fazla alt ağa abone olmaları gerekir.
+Bu, mevcut "herkes her şeyi indirir" şemasının 8 katı olan yeni bir teorik ölçeklendirme sınırına olanak tanır. Düğümlerin blob sütunlarına hizmet eden farklı rastgele alt ağlara abone olmasıyla, bunların tekdüze bir şekilde dağıtılma olasılığı çok yüksektir ve bu nedenle her veri parçası ağın bir yerinde mevcuttur. Doğrulayıcı çalıştıran düğümlerin, çalıştırdıkları her doğrulayıcı ile daha fazla alt ağa abone olmaları gerekir.
 
-> Her düğümün rastgele oluşturulmuş benzersiz bir kimliği (ID) vardır, bu normalde bağlantılar için genel kimliği olarak hizmet eder. PeerDAS'ta bu sayı, abone olması gereken rastgele alt ağ kümelerini belirlemek için kullanılır ve bu da tüm blob verilerinin tekdüze rastgele dağılımıyla sonuçlanır.
+> Her düğümün rastgele oluşturulmuş benzersiz bir kimliği (ID) vardır, bu normalde bağlantılar için genel kimliği olarak işlev görür. PeerDAS'ta bu sayı, abone olması gereken rastgele alt ağ kümelerini belirlemek için kullanılır ve bu da tüm blob verilerinin tekdüze rastgele dağılımıyla sonuçlanır.
 
-Bir düğüm orijinal verileri başarıyla yeniden oluşturduğunda, kurtarılan sütunları ağa geri dağıtarak veri boşluklarını aktif olarak iyileştirir ve genel sistem dayanıklılığını artırır. Toplam bakiyesi ≥4096 ETH olan doğrulayıcılara bağlı düğümler bir süper düğüm (supernode) olmalıdır ve bu nedenle tüm veri sütunu alt ağlarına abone olmalı ve tüm sütunları muhafaza etmelidir. Bu süper düğümler veri boşluklarını sürekli olarak iyileştirecektir. Protokolün olasılıksal olarak kendi kendini iyileştiren doğası, verilerin yalnızca bir kısmını tutan ev operatörlerini sınırlamazken güçlü kullanılabilirlik garantilerine olanak tanır. 
+Bir düğüm orijinal verileri başarıyla yeniden oluşturduğunda, kurtarılan sütunları ağa geri dağıtarak veri boşluklarını aktif olarak iyileştirir ve genel sistem dayanıklılığını artırır. Toplam bakiyesi ≥4096 ETH olan doğrulayıcılara bağlı düğümler bir süper düğüm olmalıdır ve bu nedenle tüm veri sütunu alt ağlarına abone olmalı ve tüm sütunları saklamalıdır. Bu süper düğümler veri boşluklarını sürekli olarak iyileştirecektir. Protokolün olasılıksal olarak kendi kendini iyileştiren doğası, verilerin yalnızca bir kısmını tutan ev operatörlerini sınırlamazken güçlü kullanılabilirlik garantilerine olanak tanır. 
 
-![Nodes subscribing to columns distributed via subnets](./subnets.png)
+<ColumnSubnetsDiagram />
 
-Veri kullanılabilirliği, yukarıda açıklanan örnekleme mekanizması sayesinde blob verilerinin yalnızca küçük bir alt kümesini tutan herhangi bir düğüm tarafından onaylanabilir. Bu kullanılabilirlik zorunlu kılınmıştır: doğrulayıcılar yeni çatallanma seçimi (fork-choice) kurallarına uymalıdır, yani blokları yalnızca verilerin kullanılabilirliğini doğruladıktan sonra kabul edecek ve onlar için oy vereceklerdir.
+Yukarıda açıklanan örnekleme mekanizması sayesinde, veri kullanılabilirliği, blob verilerinin yalnızca küçük bir alt kümesini tutan herhangi bir düğüm tarafından doğrulanabilir. Bu kullanılabilirlik zorunlu kılınmıştır: doğrulayıcılar yeni çatallanma seçimi kurallarına uymalıdır, yani blokları ancak verilerin kullanılabilirliğini doğruladıktan sonra kabul edecek ve onlar için oy vereceklerdir.
 
-Kullanıcılar (özellikle l2 kullanıcıları) üzerindeki doğrudan etki daha düşük ücretlerdir. Rollup verileri için 8 kat daha fazla alanla, kullanıcıların kendi zincirlerindeki işlemleri zamanla daha da ucuz hale gelir. Ancak Fusaka sonrası daha düşük ücretler zaman alacaktır ve BPO'lara bağlı olacaktır.
+Kullanıcılar (özellikle katman 2 (l2) kullanıcıları) üzerindeki doğrudan etki daha düşük ücretlerdir. Rollup verileri için 8 kat daha fazla alanla, kullanıcıların kendi zincirlerindeki işlemleri zamanla daha da ucuz hale gelir. Ancak Fusaka sonrasında daha düşük ücretler zaman alacaktır ve BPO'lara bağlı olacaktır.
 
 ## Yalnızca Blob Parametresi (BPO'lar) {#bpo}
 

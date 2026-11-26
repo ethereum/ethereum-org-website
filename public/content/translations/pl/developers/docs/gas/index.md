@@ -17,26 +17,25 @@ Gaz odnosi się do jednostki, która mierzy ilość wysiłku obliczeniowego wyma
 
 Ponieważ każda transakcja w Ethereum wymaga zasobów obliczeniowych do wykonania, za te zasoby trzeba zapłacić, aby upewnić się, że Ethereum nie jest podatne na spam i nie może utknąć w nieskończonych pętlach obliczeniowych. Płatność za obliczenia dokonywana jest w formie opłaty za gaz.
 
-Opłata za gaz to **ilość gazu zużyta do wykonania jakiejś operacji, pomnożona przez koszt jednostki gazu**. Opłata jest uiszczana niezależnie od tego, czy transakcja zakończy się sukcesem, czy nie.
+Opłata za gaz to **ilość gazu zużytego do wykonania jakiejś operacji, pomnożona przez koszt jednostki gazu**. Opłata jest uiszczana niezależnie od tego, czy transakcja się powiedzie, czy nie.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagram zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
 Opłaty za gaz muszą być uiszczane w natywnej walucie Ethereum, etherze (ETH). Ceny gazu są zazwyczaj podawane w gwei, które jest nominałem ETH. Każde gwei jest równe jednej miliardowej ETH (0,000000001 ETH lub 10<sup>-9</sup> ETH).
 
 Na przykład, zamiast mówić, że Twój gaz kosztuje 0,000000001 ethera, możesz powiedzieć, że Twój gaz kosztuje 1 gwei.
 
-Słowo „gwei” to skrót od „giga-wei”, co oznacza „miliard wei”. Jedno gwei jest równe jednemu miliardowi wei. Samo wei (nazwane na cześć [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), twórcy [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) jest najmniejszą jednostką ETH.
+Słowo „gwei” to skrót od „giga-wei”, co oznacza „miliard wei”. Jedno gwei jest równe jednemu miliardowi wei. Samo wei (nazwane na cześć [Wei Daia](https://wikipedia.org/wiki/Wei_Dai), twórcy [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) jest najmniejszą jednostką ETH.
 
 ## Jak obliczane są opłaty za gaz? {#how-are-gas-fees-calculated}
 
-Możesz ustalić ilość gazu, jaką jesteś skłonny zapłacić podczas wysyłania transakcji. Oferując określoną ilość gazu, licytujesz włączenie swojej transakcji do następnego bloku. Jeśli zaoferujesz zbyt mało, walidatory będą mniej skłonne wybrać Twoją transakcję do włączenia, co oznacza, że Twoja transakcja może zostać wykonana z opóźnieniem lub wcale. Jeśli zaoferujesz zbyt dużo, możesz zmarnować trochę ETH. Jak więc określić, ile zapłacić?
+Możesz ustawić ilość gazu, jaką jesteś skłonny zapłacić, podczas wysyłania transakcji. Oferując określoną ilość gazu, licytujesz, aby Twoja transakcja została włączona do następnego bloku. Jeśli zaoferujesz zbyt mało, walidatory będą mniej skłonne do wybrania Twojej transakcji do włączenia, co oznacza, że Twoja transakcja może zostać wykonana z opóźnieniem lub wcale. Jeśli zaoferujesz zbyt dużo, możesz zmarnować trochę ETH. Jak więc określić, ile zapłacić?
 
-Całkowity gaz, który płacisz, dzieli się na dwa składniki: `base fee` (opłata podstawowa) oraz `priority fee` (opłata priorytetowa).
+Cena, którą płacisz za jednostkę gazu, dzieli się na dwa składniki: `base fee` (opłatę podstawową) i `priority fee` (opłatę priorytetową).
 
-`base fee` jest ustalana przez protokół — musisz zapłacić co najmniej tę kwotę, aby Twoja transakcja została uznana za ważną. `priority fee` to opłata priorytetowa, którą dodajesz do opłaty podstawowej, aby Twoja transakcja była atrakcyjna dla walidatorów, tak aby wybrali ją do włączenia w następnym bloku.
+`base fee` jest ustalana przez protokół — musisz zapłacić co najmniej tę kwotę, aby Twoja transakcja została uznana za ważną. `priority fee` to dodatek, który doliczasz do opłaty podstawowej, aby Twoja transakcja była atrakcyjna dla walidatorów, dzięki czemu wybiorą ją do włączenia w następnym bloku.
 
-Transakcja, która opłaca tylko `base fee`, jest technicznie ważna, ale mało prawdopodobne, że zostanie włączona, ponieważ nie oferuje walidatorom żadnej zachęty do wybrania jej zamiast innej transakcji. „Właściwa” opłata `priority` jest określana przez wykorzystanie sieci w momencie wysyłania transakcji — jeśli popyt jest duży, być może będziesz musiał ustawić opłatę `priority` wyżej, ale gdy popyt jest mniejszy, możesz zapłacić mniej.
+Transakcja, która opłaca tylko `base fee`, jest technicznie ważna, ale mało prawdopodobne, że zostanie włączona, ponieważ nie oferuje walidatorom żadnej zachęty do wybrania jej zamiast innej transakcji. „Właściwa” `priority fee` jest określana przez wykorzystanie sieci w momencie wysyłania transakcji — jeśli popyt jest duży, być może będziesz musiał ustawić wyższą `priority fee`, ale gdy popyt jest mniejszy, możesz zapłacić mniej.
 
 Na przykład, powiedzmy, że Jordan musi zapłacić Taylorowi 1 ETH. Transfer ETH wymaga 21 000 jednostek gazu, a opłata podstawowa wynosi 10 gwei. Jordan dołącza opłatę priorytetową w wysokości 2 gwei.
 
@@ -44,40 +43,42 @@ Całkowita opłata byłaby teraz równa:
 
 `units of gas used * (base fee + priority fee)`
 
-gdzie `base fee` to wartość ustalona przez protokół, a `priority fee` to wartość ustalona przez użytkownika jako opłata priorytetowa dla walidatora.
+gdzie `base fee` to wartość ustalana przez protokół, a `priority fee` to wartość ustalana przez użytkownika jako zachęta dla walidatora.
 
 np. `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Kiedy Jordan wyśle pieniądze, z konta Jordana zostanie pobrane 1,000252 ETH. Na konto Taylora wpłynie 1,0000 ETH. Walidator otrzymuje opłatę priorytetową w wysokości 0,000042 ETH. `base fee` w wysokości 0,00021 ETH zostaje spalona.
+Kiedy Jordan wysyła pieniądze, z konta Jordana zostanie pobrane 1,000252 ETH. Na konto Taylora wpłynie 1,0000 ETH. Walidator otrzymuje opłatę priorytetową w wysokości 0,000042 ETH. `base fee` w wysokości 0,00021 ETH zostaje spalona.
 
 ### Opłata podstawowa {#base-fee}
 
-Każdy blok ma opłatę podstawową, która działa jako cena minimalna. Aby kwalifikować się do włączenia do bloku, oferowana cena za gaz musi być co najmniej równa opłacie podstawowej. Opłata podstawowa jest obliczana niezależnie od bieżącego bloku i jest zamiast tego określana przez bloki przed nim, co sprawia, że opłaty transakcyjne są bardziej przewidywalne dla użytkowników. Kiedy blok zostaje utworzony, ta **opłata podstawowa jest „spalana”**, co usuwa ją z obiegu.
+Każdy blok ma opłatę podstawową, która działa jako cena minimalna. Aby kwalifikować się do włączenia do bloku, oferowana cena za gaz musi być co najmniej równa opłacie podstawowej. Opłata podstawowa jest obliczana niezależnie od bieżącego bloku i jest zamiast tego określana przez bloki poprzedzające, co sprawia, że opłaty transakcyjne są bardziej przewidywalne dla użytkowników. Kiedy blok zostaje utworzony, ta **opłata podstawowa jest „spalana”**, co usuwa ją z obiegu.
 
-Opłata podstawowa jest obliczana za pomocą wzoru, który porównuje rozmiar poprzedniego bloku (ilość gazu zużytego na wszystkie transakcje) z rozmiarem docelowym (połowa limitu gazu). Opłata podstawowa wzrośnie lub spadnie o maksymalnie 12,5% na blok, jeśli docelowy rozmiar bloku jest odpowiednio powyżej lub poniżej celu. Ten wykładniczy wzrost sprawia, że utrzymywanie wysokiego rozmiaru bloku w nieskończoność jest ekonomicznie nieopłacalne.
-
-| Numer bloku | Dołączony gaz | Wzrost opłaty | Obecna opłata podstawowa |
-| ------------ | -----------: | -----------: | ---------------: |
-| 1            |          18M |           0% |         100 gwei |
-| 2            |          36M |           0% |         100 gwei |
-| 3            |          36M |        12,5% |       112,5 gwei |
-| 4            |          36M |        12,5% |       126,6 gwei |
-| 5            |          36M |        12,5% |       142,4 gwei |
-| 6            |          36M |        12,5% |       160,2 gwei |
-| 7            |          36M |        12,5% |       180,2 gwei |
-| 8            |          36M |        12,5% |       202,7 gwei |
-
-W powyższej tabeli przedstawiono przykład z wykorzystaniem 36 milionów jako limitu gazu. Zgodnie z tym przykładem, aby utworzyć transakcję w bloku numer 9, portfel poinformuje użytkownika z całą pewnością, że **maksymalna opłata podstawowa**, która zostanie dodana do następnego bloku, wynosi `current base fee * 112.5%` lub `202.7 gwei * 112.5% = 228.1 gwei`.
-
-Należy również zauważyć, że jest mało prawdopodobne, abyśmy zaobserwowali przedłużające się skoki pełnych bloków ze względu na szybkość, z jaką opłata podstawowa rośnie przed pełnym blokiem.
+Opłata podstawowa jest obliczana za pomocą wzoru, który porównuje rozmiar poprzedniego bloku (ilość gazu zużytego na wszystkie transakcje) z rozmiarem docelowym (połowa limitu gazu). Opłata podstawowa wzrośnie lub spadnie o maksymalnie 12,5% na blok, jeśli rozmiar bloku będzie odpowiednio powyżej lub poniżej wartości docelowej. Ten wykładniczy wzrost sprawia, że utrzymywanie się dużego rozmiaru bloku w nieskończoność jest ekonomicznie nieopłacalne.
 
 | Numer bloku | Dołączony gaz | Wzrost opłaty | Obecna opłata podstawowa |
-| ------------ | -----------: | -----------: | ---------------: |
-| 30           |          36M |        12,5% |      2705,6 gwei |
-| ...          |          ... |        12,5% |              ... |
-| 50           |          36M |        12,5% |     28531,3 gwei |
-| ...          |          ... |        12,5% |              ... |
-| 100          |          36M |        12,5% |  10302608,6 gwei |
+| ----------- | ------------: | ------------: | -----------------------: |
+| 1           |           30M |            0% |                 0,1 gwei |
+| 2           |           60M |            0% |                 0,1 gwei |
+| 3           |           60M |         12,5% |              0,1125 gwei |
+| 4           |           60M |         12,5% |              0,1266 gwei |
+| 5           |           60M |         12,5% |              0,1424 gwei |
+| 6           |           60M |         12,5% |              0,1602 gwei |
+| 7           |           60M |         12,5% |              0,1802 gwei |
+| 8           |           60M |         12,5% |              0,2027 gwei |
+
+W powyższej tabeli przedstawiono przykład z wykorzystaniem 60 milionów jako limitu gazu. Zgodnie z tym przykładem, aby utworzyć transakcję w bloku numer 9, portfel poinformuje użytkownika z całą pewnością, że **maksymalna opłata podstawowa**, która zostanie dodana do następnego bloku, wynosi `current base fee * 112.5%` lub `0.2027 gwei * 112.5% = 0.2281 gwei`.
+
+<BaseFeeDiagram />
+
+Ważne jest również, aby zauważyć, że jest mało prawdopodobne, abyśmy zaobserwowali przedłużające się skoki pełnych bloków ze względu na szybkość, z jaką opłata podstawowa rośnie przed pełnym blokiem.
+
+| Numer bloku | Dołączony gaz | Wzrost opłaty | Obecna opłata podstawowa |
+| ----------- | ------------: | ------------: | -----------------------: |
+| 30          |           60M |         12,5% |              2,7056 gwei |
+| ...         |           ... |         12,5% |                      ... |
+| 50          |           60M |         12,5% |             28,5313 gwei |
+| ...         |           ... |         12,5% |                      ... |
+| 100         |           60M |         12,5% |          10302,6083 gwei |
 
 ### Opłata priorytetowa {#priority-fee}
 
@@ -85,7 +86,7 @@ Opłata priorytetowa zachęca walidatory do maksymalizacji liczby transakcji w b
 
 ### Opłata maksymalna {#maxfee}
 
-Aby wykonać transakcję w sieci, użytkownicy mogą określić maksymalny limit, jaki są skłonni zapłacić za wykonanie swojej transakcji. Ten opcjonalny parametr jest znany jako `maxFeePerGas`. Aby transakcja została wykonana, opłata maksymalna musi przekraczać sumę opłaty podstawowej i opłaty priorytetowej. Nadawcy transakcji zwracana jest różnica między opłatą maksymalną a sumą opłaty podstawowej i opłaty priorytetowej.
+Aby wykonać transakcję w sieci, użytkownicy mogą określić maksymalny limit, jaki są skłonni zapłacić za wykonanie swojej transakcji. Ten opcjonalny parametr jest znany jako `maxFeePerGas`. Aby transakcja została wykonana, opłata maksymalna musi być co najmniej równa opłacie podstawowej, a zapłacona opłata priorytetowa jest ograniczona w taki sposób, aby opłata podstawowa plus opłata priorytetowa nigdy nie przekroczyły opłaty maksymalnej. Nadawcy transakcji zwracana jest różnica między opłatą maksymalną a sumą opłaty podstawowej i opłaty priorytetowej.
 
 ### Rozmiar bloku {#block-size}
 
@@ -101,12 +102,11 @@ Możesz wyraźnie określić, ile jesteś skłonny zapłacić za wykonanie swoje
 
 ## Dlaczego istnieją opłaty za gaz? {#why-do-gas-fees-exist}
 
-Krótko mówiąc, opłaty za gaz pomagają utrzymać bezpieczeństwo sieci Ethereum. Wymagając opłaty za każde obliczenie wykonane w sieci, zapobiegamy spamowaniu sieci przez złych aktorów. Aby uniknąć przypadkowych lub wrogich nieskończonych pętli lub innych strat obliczeniowych w kodzie, każda transakcja musi mieć ustawiony limit liczby kroków obliczeniowych wykonania kodu, z których może skorzystać. Podstawową jednostką obliczeniową jest „gaz”.
+Krótko mówiąc, opłaty za gaz pomagają utrzymać bezpieczeństwo sieci Ethereum. Wymagając opłaty za każde obliczenie wykonane w sieci, zapobiegamy spamowaniu sieci przez złośliwych aktorów. Aby uniknąć przypadkowych lub wrogich nieskończonych pętli lub innego marnotrawstwa mocy obliczeniowej w kodzie, każda transakcja musi określać limit liczby kroków obliczeniowych, które może wykorzystać podczas wykonywania kodu. Podstawową jednostką obliczeniową jest „gaz”.
 
 Chociaż transakcja zawiera limit, każdy gaz niewykorzystany w transakcji jest zwracany użytkownikowi (np. zwracane jest `max fee - (base fee + tip)`).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagram zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Czym jest limit gazu? {#what-is-gas-limit}
 
@@ -130,16 +130,10 @@ Skalowanie warstwy 2 (L2) to główna inicjatywa mająca na celu znaczne obniże
 
 Jeśli chcesz monitorować ceny gazu, aby móc wysyłać swoje ETH taniej, możesz skorzystać z wielu różnych narzędzi, takich jak:
 
-- [Etherscan](https://etherscan.io/gastracker) _Estymator ceny gazu transakcji_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estymator ceny gazu transakcji typu open source_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitoruj i śledź ceny gazu w Ethereum oraz L2, aby obniżyć opłaty transakcyjne i zaoszczędzić pieniądze_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Rozszerzenie do przeglądarki Chrome szacujące gaz, obsługujące zarówno starsze transakcje typu 0, jak i transakcje typu 2 EIP-1559._
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Obliczaj opłaty za gaz w lokalnej walucie dla różnych typów transakcji w Sieci głównej, Arbitrum i Polygon._
-
-## Powiązane narzędzia {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API do szacowania gazu zasilane przez globalną platformę danych mempool firmy Blocknative_
-- [Gas Network](https://gas.network) Wyrocznie gazu onchain. Obsługa ponad 35 sieci. 
+- [Etherscan](https://etherscan.io/gastracker) _Estymator cen gazu dla transakcji_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estymator cen gazu dla transakcji typu open source_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitoruj i śledź ceny gazu w Ethereum oraz warstwie 2 (L2), aby zmniejszyć opłaty transakcyjne i zaoszczędzić pieniądze_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Oblicz opłaty za gaz w lokalnej walucie dla różnych typów transakcji w Sieci głównej, Arbitrum i Polygon._
 
 ## Dalsza lektura {#further-reading}
 

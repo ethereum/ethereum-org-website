@@ -38,9 +38,9 @@ Ukubwa wa shahidi hutofautiana kulingana na idadi ya majani anayojumuisha. Kwa k
 
 ## Muundo wa mti wa Verkle ni upi? {#what-is-the-structure-of-a-verkle-tree}
 
-Miti ya Verkle ni jozi za `(key,value)` ambapo funguo ni vipengele vya baiti 32 vinavyoundwa na _shina_ la baiti 31 na _kiambishi tamati_ cha baiti moja. Funguo hizi zimepangwa katika nodi za _upanuzi_ na nodi za _ndani_. Nodi za upanuzi zinawakilisha shina moja kwa watoto 256 wenye viambishi tamati tofauti. Nodi za ndani pia zina watoto 256, lakini zinaweza kuwa nodi zingine za upanuzi. Tofauti kuu kati ya mti wa Verkle na muundo wa mti wa Merkle ni kwamba mti wa Verkle ni tambarare zaidi, ikimaanisha kuna nodi chache za kati zinazounganisha jani kwenye mzizi, na hivyo data kidogo inahitajika ili kuzalisha uthibitisho.
+Miti ya Verkle ni jozi za `(key,value)` ambapo funguo ni vipengele vya baiti 32 vinavyoundwa na _shina_ la baiti 31 na _kiambishi tamati_ cha baiti moja. Funguo hizi zimepangwa katika nodi za _upanuzi_ na nodi za _ndani_. Nodi za upanuzi zinawakilisha shina moja kwa watoto 256 wenye viambishi tamati tofauti. Nodi za ndani pia zina watoto 256, lakini zinaweza kuwa nodi zingine za upanuzi. Tofauti kuu kati ya muundo wa mti wa Verkle na mti wa Merkle ni kwamba mti wa Verkle ni tambarare zaidi, ikimaanisha kuna nodi chache za kati zinazounganisha jani kwenye mzizi, na hivyo data kidogo inahitajika ili kuzalisha uthibitisho.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Soma zaidi kuhusu muundo wa miti ya Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

@@ -1,5 +1,15 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: actor as film actors x3 (#37b recurrence), property as sampatti x2, epoch yugon to epok, opcode spelling, committee to samiti. Open: enshrined as sunishchit, portal heading singular.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.3/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, checkpoint, builder, deploy (tainat), accounts contract regression (anubandh). Open: kadam vs charan, dashed rendered as dharashayi, derive rendered as prapt karen.
+
 (Earlier findings from PR #17101 live in known-patterns.md.)
 
 ## PR #18772 (community-stories.json, 2026-07-10) -- 8.2/10
@@ -194,3 +204,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - echidna:747 relative clause attaches "returns int256" to transactions instead of the function -- native call
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `man` -> `mulya` (value vs price) regression at gas:46; API spelled out.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

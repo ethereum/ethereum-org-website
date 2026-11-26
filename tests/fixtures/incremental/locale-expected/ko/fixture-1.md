@@ -134,13 +134,13 @@ def is_permissive(license_text: str) -> bool:
 
 ### 라이선스 스캐닝 {#license-scanning}
 
-자동화된 라이선스 스캐닝은 모든 CI/CD 파이프라인의 일부가 되어야 합니다. 이는 호환되지 않는 라이선스가 종속성 트리에 들어가기 전에 잡아냅니다.
+자동화된 라이선스 스캐닝은 모든 CI/CD 파이프라인의 일부여야 합니다. 이는 호환되지 않는 라이선스가 종속성 트리에 들어가기 전에 잡아냅니다.
 
 ```bash
-# 프로젝트에서 라이선스 스캔을 실행합니다.
+# 프로젝트에서 라이선스 스캔을 실행합니다
 npx license-checker --production --json > licenses.json
 
-# 프로덕션 의존성에서 카피레프트 라이선스를 확인합니다.
+# 프로덕션 의존성에서 카피레프트 라이선스를 확인합니다
 npx license-checker --production --onlyAllow "MIT;Apache-2.0;BSD-2-Clause;ISC"
 ```
 
@@ -154,6 +154,7 @@ npx license-checker --production --onlyAllow "MIT;Apache-2.0;BSD-2-Clause;ISC"
   }
 }
 ```
+
 ### SBOM 생성 {#sbom-generation}
 
 소프트웨어 자재 명세서(Software Bill of Materials, SBOM)는 소프트웨어의 모든 구성 요소를 나열합니다. 특히 보안에 민감한 산업에서는 규제 준수를 위해 SBOM 생성이 점점 더 요구되고 있습니다.

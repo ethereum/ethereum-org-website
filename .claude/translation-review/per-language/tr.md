@@ -1,5 +1,15 @@
 # Turkish (tr) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.1/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: block proposer to blok teklifcisi (glamsterdam). Open: at stake rendered stake edilen, geçerlliğini typo (fixed in follow-up), bırak- for drop, suffix harmony on code names.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in peer-das and verkle keys, catallanma secimi, inline code (gas, verkle), libp2p casing, cifte imza, oncelik ucreti, onden kosma. Open: hard-coded suffixes after numeric placeholders (`{signedA}'si`), relay naming, `islem` ambiguity.
+
 > **PR:** #18353 (stablecoins-2026-redesign, page-stablecoins.json)
 > **Date:** 2026-06-05
 > **Quality Score:** 9.2/10
@@ -209,3 +219,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - multi-client "files artifacts" -> `dosya eserleri` (eser = creative work); dev had `Dosya Yapıları` -- native call
 - `hala` should be `hâlâ` (multi-client:163, echidna:513) -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` rendered `teşvik` at gas:36, :46 instead of glossary `öncelik ücreti`; left as is (tautology), the review agent called it critical -- native/maintainer call.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

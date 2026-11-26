@@ -28,27 +28,26 @@ Kedua jenis akun memiliki kemampuan untuk:
 
 - Membuat akun tidak memerlukan biaya
 - Dapat memulai transaksi
-- Transaksi antara akun milik eksternal hanya dapat berupa transfer ETH/token
-- Terdiri dari pasangan kunci kriptografi: kunci publik dan kunci privat yang mengendalikan aktivitas akun
+- Transaksi antara akun milik eksternal hanya dapat berupa transfer ETH, kecuali penerima telah mendelegasikan ke kode kontrak (lihat `codeHash` di bawah)
+- Terdiri dari sepasang kunci kriptografi: kunci publik dan privat yang mengendalikan aktivitas akun
 
 **Kontrak**
 
 - Membuat kontrak memerlukan biaya karena Anda menggunakan penyimpanan jaringan
-- Hanya dapat mengirim pesan sebagai respons setelah menerima transaksi
-- Transaksi dari akun eksternal ke akun kontrak dapat memicu kode yang dapat mengeksekusi berbagai tindakan berbeda, seperti mentransfer token atau bahkan membuat kontrak baru
-- Akun kontrak tidak memiliki kunci privat. Sebaliknya, akun ini dikendalikan oleh logika dari kode kontrak pintar
+- Hanya dapat mengirim pesan sebagai respons terhadap penerimaan transaksi
+- Transaksi dari akun eksternal ke akun kontrak dapat memicu kode yang dapat mengeksekusi banyak tindakan berbeda, seperti mentransfer token atau bahkan membuat kontrak baru
+- Akun kontrak tidak memiliki kunci privat. Sebaliknya, akun ini dikendalikan oleh logika kode kontrak pintar
 
-## Memeriksa sebuah akun {#an-account-examined}
+## Pemeriksaan akun {#an-account-examined}
 
 Akun Ethereum memiliki empat bidang:
 
-- `nonce` – Sebuah penghitung yang menunjukkan jumlah transaksi yang dikirim dari akun milik eksternal atau jumlah kontrak yang dibuat oleh akun kontrak. Hanya satu transaksi dengan nonce tertentu yang dapat dieksekusi untuk setiap akun, melindungi dari serangan ulangan (replay attacks) di mana transaksi yang ditandatangani disiarkan dan dieksekusi berulang kali.
+- `nonce` – Sebuah penghitung yang menunjukkan jumlah transaksi yang dikirim dari akun milik eksternal atau, untuk akun kontrak, satu lebih banyak dari jumlah kontrak yang telah dibuatnya (nonce kontrak dimulai dari 1, sesuai [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Setiap otorisasi [EIP-7702](/roadmap/pectra/7702/) yang diterapkan juga meningkatkan nonce akun yang memberikan otorisasi. Hanya satu transaksi dengan nonce tertentu yang dapat dieksekusi untuk setiap akun, melindungi dari serangan pengulangan (replay attacks) di mana transaksi yang ditandatangani disiarkan dan dieksekusi berulang kali.
 - `balance` – Jumlah Wei yang dimiliki oleh alamat ini. Wei adalah denominasi dari ETH dan terdapat 1e+18 Wei per ETH.
-- `codeHash` – Hash ini merujuk pada _kode_ dari sebuah akun di Mesin Virtual Ethereum (EVM). Akun kontrak memiliki fragmen kode yang diprogram di dalamnya yang dapat melakukan berbagai operasi. Kode EVM ini dieksekusi jika akun tersebut mendapatkan panggilan pesan. Kode ini tidak dapat diubah, tidak seperti bidang akun lainnya. Semua fragmen kode tersebut dimuat dalam basis data state di bawah hash yang sesuai untuk diambil kembali nanti. Nilai hash ini dikenal sebagai codeHash. Untuk akun milik eksternal, bidang codeHash adalah hash dari string kosong.
-- `storageRoot` – Terkadang dikenal sebagai hash penyimpanan. Sebuah hash 256-bit dari node akar sebuah [Trie Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) yang menyandikan isi penyimpanan akun (sebuah pemetaan antara nilai integer 256-bit), disandikan ke dalam trie sebagai pemetaan dari hash Keccak-256 bit dari kunci integer 256-bit ke nilai integer 256-bit yang disandikan dengan Awalan Panjang Rekursif (RLP). Trie ini menyandikan hash dari isi penyimpanan akun ini, dan secara bawaan kosong.
+- `codeHash` – Hash ini merujuk pada _kode_ dari sebuah akun di Mesin Virtual Ethereum (EVM). Akun kontrak memiliki fragmen kode yang diprogram di dalamnya yang dapat melakukan berbagai operasi. Kode EVM ini dieksekusi jika akun tersebut mendapatkan panggilan pesan. Kode kontrak tidak dapat diubah setelah disebarkan, tidak seperti bidang akun lainnya. Semua fragmen kode tersebut dimuat dalam basis data state di bawah hash yang sesuai untuk pengambilan nanti. Nilai hash ini dikenal sebagai codeHash. Untuk akun milik eksternal, bidang codeHash adalah hash dari string kosong, kecuali akun tersebut telah mendelegasikan ke kontrak pintar dengan [EIP-7702](/roadmap/pectra/7702/). Kode akun tersebut kemudian menjadi indikator pendelegasian (`0xef0100` diikuti oleh alamat kontrak), yang dapat diubah atau dihapus oleh akun dengan otorisasi baru.
+- `storageRoot` – Terkadang dikenal sebagai hash penyimpanan. Sebuah hash 256-bit dari node akar dari [Trie Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) yang menyandikan isi penyimpanan akun (sebuah pemetaan antara nilai bilangan bulat 256-bit), disandikan ke dalam trie sebagai pemetaan dari hash Keccak-256 dari kunci bilangan bulat 256-bit ke nilai bilangan bulat 256-bit yang disandikan dengan Awalan Panjang Rekursif (RLP). Trie ini menyandikan hash dari isi penyimpanan akun ini, dan secara bawaan kosong.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Diagram diadaptasi dari [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Akun milik eksternal dan pasangan kunci {#externally-owned-accounts-and-key-pairs}
 

@@ -22,18 +22,18 @@ Entrambi i tipi di account hanno la capacità di:
 - Ricevere, detenere e inviare ETH e token
 - Interagire con gli smart contract distribuiti
 
-### Differenze chiave {#key-differences}
+### Differenze principali {#key-differences}
 
 **Di proprietà esterna**
 
-- La creazione di un account non costa nulla
+- Creare un account non costa nulla
 - Può avviare transazioni
-- Le transazioni tra account di proprietà esterna possono essere solo trasferimenti di ETH/token
-- È composto da una coppia di chiavi crittografiche: chiavi pubbliche e private che controllano le attività dell'account
+- Le transazioni tra account di proprietà esterna (EOA) possono essere solo trasferimenti di ETH, a meno che il destinatario non abbia delegato al codice del contratto (vedi `codeHash` di seguito)
+- Composto da una coppia di chiavi crittografiche: chiavi pubbliche e private che controllano le attività dell'account
 
-**Di contratto**
+**Contratto**
 
-- La creazione di un contratto ha un costo perché si utilizza l'archiviazione di rete
+- Creare un contratto ha un costo perché si utilizza lo spazio di archiviazione della rete
 - Può inviare messaggi solo in risposta alla ricezione di una transazione
 - Le transazioni da un account esterno a un account di contratto possono attivare codice che può eseguire molte azioni diverse, come il trasferimento di token o persino la creazione di un nuovo contratto
 - Gli account di contratto non hanno chiavi private. Sono invece controllati dalla logica del codice dello smart contract
@@ -42,13 +42,12 @@ Entrambi i tipi di account hanno la capacità di:
 
 Gli account di Ethereum hanno quattro campi:
 
-- `nonce` – Un contatore che indica il numero di transazioni inviate da un account di proprietà esterna o il numero di contratti creati da un account di contratto. Per ogni account può essere eseguita una sola transazione con un dato nonce, proteggendo dagli attacchi di replay in cui le transazioni firmate vengono ripetutamente trasmesse e rieseguite.
+- `nonce` – Un contatore che indica il numero di transazioni inviate da un account di proprietà esterna (EOA) o, per un account di contratto, uno in più rispetto al numero di contratti che ha creato (i nonce dei contratti partono da 1, secondo la [EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Ogni autorizzazione [EIP-7702](/roadmap/pectra/7702/) applicata incrementa anche il nonce dell'account autorizzante. Per ogni account può essere eseguita solo una transazione con un determinato nonce, proteggendo dagli attacchi di replay in cui le transazioni firmate vengono ripetutamente trasmesse ed eseguite di nuovo.
 - `balance` – Il numero di Wei posseduti da questo indirizzo. Il Wei è una denominazione di ETH e ci sono 1e+18 Wei per ETH.
-- `codeHash` – Questo hash si riferisce al _codice_ di un account sulla Macchina Virtuale di Ethereum (EVM). Gli account di contratto hanno frammenti di codice programmati al loro interno che possono eseguire diverse operazioni. Questo codice della EVM viene eseguito se l'account riceve una chiamata di messaggio. Non può essere modificato, a differenza degli altri campi dell'account. Tutti questi frammenti di codice sono contenuti nel database di stato sotto i loro hash corrispondenti per un successivo recupero. Questo valore di hash è noto come codeHash. Per gli account di proprietà esterna, il campo codeHash è l'hash di una stringa vuota.
-- `storageRoot` – A volte noto come hash di archiviazione. Un hash a 256 bit del nodo radice di un [Merkle Patricia Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) che codifica i contenuti di archiviazione dell'account (una mappatura tra valori interi a 256 bit), codificato nel trie come una mappatura dall'hash Keccak-256 delle chiavi intere a 256 bit ai valori interi a 256 bit codificati in RLP. Questo trie codifica l'hash dei contenuti di archiviazione di questo account ed è vuoto per impostazione predefinita.
+- `codeHash` – Questo hash si riferisce al _codice_ di un account sulla Macchina Virtuale di Ethereum (EVM). Gli account di contratto hanno frammenti di codice programmati al loro interno che possono eseguire diverse operazioni. Questo codice della EVM viene eseguito se l'account riceve una chiamata di messaggio. Il codice di un contratto non può essere modificato una volta distribuito, a differenza degli altri campi dell'account. Tutti questi frammenti di codice sono contenuti nel database di stato sotto i loro hash corrispondenti per un successivo recupero. Questo valore di hash è noto come codeHash. Per gli EOA, il campo codeHash è l'hash di una stringa vuota, a meno che l'account non abbia delegato a uno smart contract con la [EIP-7702](/roadmap/pectra/7702/). Il codice dell'account è quindi un indicatore di delega (`0xef0100` seguito dall'indirizzo del contratto), che l'account può modificare o cancellare con una nuova autorizzazione.
+- `storageRoot` – A volte noto come hash di archiviazione. Un hash a 256 bit del nodo radice di un [Merkle Patricia Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) che codifica i contenuti di archiviazione dell'account (una mappatura tra valori interi a 256 bit), codificato nel trie come una mappatura dall'hash Keccak-256 delle chiavi intere a 256 bit ai valori interi a 256 bit codificati con il Prefisso di Lunghezza Ricorsivo (RLP). Questo trie codifica l'hash dei contenuti di archiviazione di questo account ed è vuoto per impostazione predefinita.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Account di proprietà esterna e coppie di chiavi {#externally-owned-accounts-and-key-pairs}
 

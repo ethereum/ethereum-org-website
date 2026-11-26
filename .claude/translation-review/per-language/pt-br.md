@@ -1,5 +1,15 @@
 # Brazilian Portuguese (pt-br) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.9/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: bare gas to gas accent forms across 3 files, proposer compound propositores. Open: slashed left English, L1/L2 casing, Juntas agreement, frontmatter tag accent.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: buscadores, taxas de prioridade, escolha de fork, penalizacoes, verkle inline code. Open: plural participle in vault key, `Mesma origem`, acronym over-expansion.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -155,3 +165,16 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 **Open / notes:**
 
 - Unchanged frontmatter tag `"tes"` (truncated `testes`) in both files -- not fixed, out of scope
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Bare `gas` -> `gás` on 6 lines (gas L32, L34, L40, L54, L56, table headers); API acronym shortened on translation-program L9, L21.
+
+**Open / notes:**
+
+- Lines this PR did not change (L16-L26) still use `gas`; the glossary says `gás` for the bare term, compounds stay `taxa de gas`.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

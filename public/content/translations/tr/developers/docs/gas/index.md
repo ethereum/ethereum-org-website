@@ -13,30 +13,29 @@ Bu sayfayı daha iyi anlamak için öncelikle [işlemler](/developers/docs/trans
 
 ## Gaz nedir? {#what-is-gas}
 
-Gaz, Ethereum ağında belirli operasyonları yürütmek için gereken hesaplama çabası miktarını ölçen birimi ifade eder.
+Gaz, Ethereum ağında belirli işlemleri yürütmek için gereken hesaplama çabası miktarını ölçen birimi ifade eder.
 
-Her Ethereum işlemi yürütülmek için hesaplama kaynakları gerektirdiğinden, Ethereum'un spamlara karşı savunmasız olmamasını ve sonsuz hesaplama döngülerinde sıkışıp kalmamasını sağlamak için bu kaynakların ödenmesi gerekir. Hesaplama için ödeme, bir gaz ücreti şeklinde yapılır.
+Her Ethereum işlemi yürütülmek için hesaplama kaynakları gerektirdiğinden, Ethereum'un spamlara karşı savunmasız olmamasını ve sonsuz hesaplama döngülerinde sıkışıp kalmamasını sağlamak için bu kaynakların ödenmesi gerekir. Hesaplama için ödeme, gaz ücreti şeklinde yapılır.
 
-Gaz ücreti, **bir işlemi yapmak için kullanılan gaz miktarının birim gaz başına maliyetle çarpımıdır**. Ücret, bir işlemin başarılı veya başarısız olmasından bağımsız olarak ödenir.
+Gaz ücreti, **bazı işlemleri yapmak için kullanılan gaz miktarının, birim gaz başına maliyetle çarpımıdır**. Ücret, bir işlemin başarılı veya başarısız olmasından bağımsız olarak ödenir.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+<GasEvmDiagram />
 
-Gaz ücretleri, Ethereum'un yerel para birimi olan Ether (ETH) cinsinden ödenmelidir. Gas fiyatları genellikle ETH'nin bir alt birimi olan Gwei cinsinden belirtilir. Her bir Gwei, bir ETH'nin milyarda birine (0,000000001 ETH veya 10<sup>-9</sup> ETH) eşittir.
+Gaz ücretleri, Ethereum'un yerel para birimi olan Ether (ETH) cinsinden ödenmelidir. Gas fiyatları genellikle ETH'nin bir alt birimi olan Gwei cinsinden belirtilir. Her Gwei, bir ETH'nin milyarda birine eşittir (0,000000001 ETH veya 10<sup>-9</sup> ETH).
 
-Örneğin, gazınızın 0,000000001 Ether tuttuğunu söylemek yerine, gazınızın 1 Gwei tuttuğunu söyleyebilirsiniz.
+Örneğin, gazınızın 0,000000001 Ether'e mal olduğunu söylemek yerine, gazınızın 1 Gwei'ye mal olduğunu söyleyebilirsiniz.
 
-'Gwei' kelimesi, 'milyar Wei' anlamına gelen 'giga-wei' kelimesinin kısaltmasıdır. Bir Gwei, bir milyar Wei'ye eşittir. Wei'nin kendisi ([b-money](https://www.investopedia.com/terms/b/bmoney.asp) yaratıcısı [Wei Dai](https://wikipedia.org/wiki/Wei_Dai)'nin adını almıştır) ETH'nin en küçük birimidir.
+'Gwei' kelimesi, 'milyar Wei' anlamına gelen 'giga-wei'nin kısaltmasıdır. Bir Gwei, bir milyar Wei'ye eşittir. Wei'nin kendisi ([b-money](https://www.investopedia.com/terms/b/bmoney.asp) yaratıcısı [Wei Dai](https://wikipedia.org/wiki/Wei_Dai)'den adını almıştır) ETH'nin en küçük birimidir.
 
 ## Gaz ücretleri nasıl hesaplanır? {#how-are-gas-fees-calculated}
 
-Bir işlem gönderdiğinizde ödemeye razı olduğunuz gaz miktarını belirleyebilirsiniz. Belirli bir miktar gaz teklif ederek, işleminizin bir sonraki bloka dahil edilmesi için teklif vermiş olursunuz. Çok az teklif ederseniz, doğrulayıcıların işleminizi dahil etmek için seçme olasılığı daha düşüktür, bu da işleminizin geç yürütülebileceği veya hiç yürütülmeyebileceği anlamına gelir. Çok fazla teklif ederseniz, bir miktar ETH israf edebilirsiniz. Peki, ne kadar ödeyeceğinizi nasıl bilebilirsiniz?
+Bir işlem gönderdiğinizde ödemeye razı olduğunuz gaz miktarını ayarlayabilirsiniz. Belirli bir miktar gaz teklif ederek, işleminizin bir sonraki bloka dahil edilmesi için teklif vermiş olursunuz. Çok az teklif verirseniz, doğrulayıcıların işleminizi dahil etmek için seçme olasılığı daha düşüktür, bu da işleminizin geç yürütülebileceği veya hiç yürütülmeyebileceği anlamına gelir. Çok fazla teklif verirseniz, bir miktar ETH israf edebilirsiniz. Peki, ne kadar ödeyeceğinizi nasıl bilebilirsiniz?
 
-Ödediğiniz toplam gaz iki bileşene ayrılır: `base fee` (taban ücret) ve `priority fee` (öncelik ücreti).
+Birim gaz başına ödediğiniz fiyat iki bileşene ayrılır: `base fee` (taban ücret) ve `priority fee` (öncelik ücreti).
 
-`base fee` protokol tarafından belirlenir; işleminizin geçerli sayılması için en az bu tutarı ödemeniz gerekir. `priority fee`, işleminizi doğrulayıcılar için cazip hale getirmek ve böylece bir sonraki bloka dahil edilmek üzere seçmelerini sağlamak için taban ücrete eklediğiniz bir öncelik ücretidir.
+`base fee` protokol tarafından belirlenir; işleminizin geçerli sayılması için en az bu tutarı ödemeniz gerekir. `priority fee`, işleminizi doğrulayıcılar için cazip hale getirmek ve böylece onu bir sonraki bloka dahil etmek üzere seçmelerini sağlamak için taban ücrete eklediğiniz bir teşviktir.
 
-Yalnızca `base fee` ödeyen bir işlem teknik olarak geçerlidir ancak doğrulayıcılara onu başka bir işleme tercih etmeleri için hiçbir teşvik sunmadığından dahil edilme olasılığı düşüktür. 'Doğru' `priority` ücreti, işleminizi gönderdiğiniz andaki ağ kullanımına göre belirlenir; çok fazla talep varsa `priority` ücretinizi daha yüksek ayarlamanız gerekebilir, ancak daha az talep olduğunda daha az ödeyebilirsiniz.
+Yalnızca `base fee` ödeyen bir işlem teknik olarak geçerlidir ancak doğrulayıcılara onu diğer işlemlere tercih etmeleri için hiçbir teşvik sunmadığından dahil edilme olasılığı düşüktür. 'Doğru' `priority` ücreti, işleminizi gönderdiğiniz sıradaki ağ kullanımına göre belirlenir; çok fazla talep varsa `priority` ücretinizi daha yüksek belirlemeniz gerekebilir, ancak daha az talep olduğunda daha az ödeyebilirsiniz.
 
 Örneğin, Jordan'ın Taylor'a 1 ETH ödemesi gerektiğini varsayalım. Bir ETH transferi 21.000 birim gaz gerektirir ve taban ücret 10 Gwei'dir. Jordan 2 Gwei'lik bir öncelik ücreti ekler.
 
@@ -44,7 +43,7 @@ Toplam ücret artık şuna eşit olacaktır:
 
 `units of gas used * (base fee + priority fee)`
 
-burada `base fee` protokol tarafından belirlenen bir değerdir ve `priority fee` kullanıcı tarafından doğrulayıcıya bir öncelik ücreti olarak belirlenen bir değerdir.
+burada `base fee` protokol tarafından belirlenen bir değerdir ve `priority fee` kullanıcı tarafından doğrulayıcıya bir teşvik olarak belirlenen bir değerdir.
 
 örn., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
@@ -52,32 +51,34 @@ Jordan parayı gönderdiğinde, Jordan'ın hesabından 1,000252 ETH düşülecek
 
 ### Taban ücret {#base-fee}
 
-Her blok, bir rezerv fiyatı görevi gören bir taban ücrete sahiptir. Bir bloka dahil edilmeye uygun olmak için, gaz başına teklif edilen fiyatın en az taban ücrete eşit olması gerekir. Taban ücret, mevcut bloktan bağımsız olarak hesaplanır ve bunun yerine ondan önceki bloklar tarafından belirlenir, bu da işlem ücretlerini kullanıcılar için daha öngörülebilir hale getirir. Blok oluşturulduğunda bu **taban ücret "yakılır"** ve dolaşımdan kaldırılır.
+Her blok, bir rezerv fiyatı işlevi gören bir taban ücrete sahiptir. Bir bloka dahil edilmeye uygun olmak için, gaz başına teklif edilen fiyatın en az taban ücrete eşit olması gerekir. Taban ücret, mevcut bloktan bağımsız olarak hesaplanır ve bunun yerine ondan önceki bloklar tarafından belirlenir, bu da işlem ücretlerini kullanıcılar için daha öngörülebilir hale getirir. Blok oluşturulduğunda bu **taban ücret "yakılır"** ve dolaşımdan çıkarılır.
 
-Taban ücret, önceki blokun boyutunu (tüm işlemler için kullanılan gaz miktarı) hedef boyutla (gaz limitinin yarısı) karşılaştıran bir formülle hesaplanır. Hedef blok boyutu hedefin sırasıyla üzerinde veya altındaysa, taban ücret blok başına maksimum %12,5 oranında artacak veya azalacaktır. Bu üstel büyüme, blok boyutunun süresiz olarak yüksek kalmasını ekonomik olarak uygulanamaz hale getirir.
-
-| Blok Numarası | Dahil Edilen Gaz | Ücret Artışı | Mevcut Taban Ücret |
-| ------------ | -----------: | -----------: | ---------------: |
-| 1            |          18M |           0% |         100 Gwei |
-| 2            |          36M |           0% |         100 Gwei |
-| 3            |          36M |        12.5% |       112.5 Gwei |
-| 4            |          36M |        12.5% |       126.6 Gwei |
-| 5            |          36M |        12.5% |       142.4 Gwei |
-| 6            |          36M |        12.5% |       160.2 Gwei |
-| 7            |          36M |        12.5% |       180.2 Gwei |
-| 8            |          36M |        12.5% |       202.7 Gwei |
-
-Yukarıdaki tabloda, gaz limiti olarak 36 milyon kullanılarak bir örnek gösterilmiştir. Bu örneği takiben, 9 numaralı blokta bir işlem oluşturmak için bir cüzdan, kullanıcıya bir sonraki bloka eklenecek **maksimum taban ücretin** `current base fee * 112.5%` veya `202.7 gwei * 112.5% = 228.1 gwei` olduğunu kesin olarak bildirecektir.
-
-Ayrıca, dolu bir bloktan önce taban ücretin artış hızı nedeniyle dolu blokların uzun süreli artışlarını görmemizin pek olası olmadığını belirtmek de önemlidir.
+Taban ücret, önceki blokun boyutunu (tüm işlemler için kullanılan gaz miktarı) hedef boyutla (gaz limitinin yarısı) karşılaştıran bir formülle hesaplanır. Blok boyutu hedefin sırasıyla üzerinde veya altındaysa, taban ücret blok başına maksimum %12,5 oranında artacak veya azalacaktır. Bu üstel büyüme, blok boyutunun süresiz olarak yüksek kalmasını ekonomik olarak olanaksız hale getirir.
 
 | Blok Numarası | Dahil Edilen Gaz | Ücret Artışı | Mevcut Taban Ücret |
 | ------------ | -----------: | -----------: | ---------------: |
-| 30           |          36M |        12.5% |      2705.6 Gwei |
-| ...          |          ... |        12.5% |              ... |
-| 50           |          36M |        12.5% |     28531.3 Gwei |
-| ...          |          ... |        12.5% |              ... |
-| 100          |          36M |        12.5% |  10302608.6 Gwei |
+| 1            |          30M |           %0 |         0,1 Gwei |
+| 2            |          60M |           %0 |         0,1 Gwei |
+| 3            |          60M |        %12,5 |      0,1125 Gwei |
+| 4            |          60M |        %12,5 |      0,1266 Gwei |
+| 5            |          60M |        %12,5 |      0,1424 Gwei |
+| 6            |          60M |        %12,5 |      0,1602 Gwei |
+| 7            |          60M |        %12,5 |      0,1802 Gwei |
+| 8            |          60M |        %12,5 |      0,2027 Gwei |
+
+Yukarıdaki tabloda, gaz limiti olarak 60 milyon kullanılarak bir örnek gösterilmiştir. Bu örneği takiben, 9 numaralı blokta bir işlem oluşturmak için bir cüzdan, kullanıcıya bir sonraki bloka eklenecek **maksimum taban ücretin** `current base fee * 112.5%` veya `0.2027 gwei * 112.5% = 0.2281 gwei` olduğunu kesin olarak bildirecektir.
+
+<BaseFeeDiagram />
+
+Taban ücretin dolu bir bloktan önce artma hızı nedeniyle, dolu bloklarda uzun süreli ani artışlar görmemizin pek olası olmadığını belirtmek de önemlidir.
+
+| Blok Numarası | Dahil Edilen Gaz | Ücret Artışı | Mevcut Taban Ücret |
+| ------------ | -----------: | -----------: | ---------------: |
+| 30           |          60M |        %12,5 |      2,7056 Gwei |
+| ...          |          ... |        %12,5 |              ... |
+| 50           |          60M |        %12,5 |     28,5313 Gwei |
+| ...          |          ... |        %12,5 |              ... |
+| 100          |          60M |        %12,5 |  10302,6083 Gwei |
 
 ### Öncelik ücreti {#priority-fee}
 
@@ -85,7 +86,7 @@ Ayrıca, dolu bir bloktan önce taban ücretin artış hızı nedeniyle dolu blo
 
 ### Maksimum ücret {#maxfee}
 
-Ağda bir işlemi yürütmek için kullanıcılar, işlemlerinin yürütülmesi için ödemeye razı oldukları maksimum bir sınır belirleyebilirler. Bu isteğe bağlı parametre `maxFeePerGas` olarak bilinir. Bir işlemin yürütülmesi için maksimum ücretin, taban ücret ile öncelik ücretinin toplamını aşması gerekir. İşlemi gönderene, maksimum ücret ile taban ücret ve öncelik ücreti toplamı arasındaki fark iade edilir.
+Ağ üzerinde bir işlem yürütmek için kullanıcılar, işlemlerinin yürütülmesi için ödemeye razı oldukları maksimum limiti belirleyebilirler. İsteğe bağlı olan bu parametre `maxFeePerGas` olarak bilinir. Bir işlemin yürütülebilmesi için maksimum ücretin en az taban ücret kadar olması gerekir ve ödenen öncelik ücreti, taban ücret ile öncelik ücretinin toplamı hiçbir zaman maksimum ücreti aşmayacak şekilde sınırlandırılır. İşlemi gönderene, maksimum ücret ile taban ücret ve öncelik ücretinin toplamı arasındaki fark iade edilir.
 
 ### Blok boyutu {#block-size}
 
@@ -101,12 +102,11 @@ Taban ücretin ayarlanma miktarı, mevcut blok boyutunun hedeften ne kadar uzak 
 
 ## Gaz ücretleri neden var? {#why-do-gas-fees-exist}
 
-Kısacası, gaz ücretleri Ethereum ağını güvende tutmaya yardımcı olur. Ağda yürütülen her hesaplama için bir ücret talep ederek, kötü niyetli kişilerin ağa spam göndermesini engelliyoruz. Kodda kazara veya düşmanca sonsuz döngülerden veya diğer hesaplama israflarından kaçınmak için, her işlemin kullanabileceği kod yürütme hesaplama adımlarının sayısına bir sınır koyması gerekir. Temel hesaplama birimi "gaz"dır.
+Kısacası, gaz ücretleri Ethereum ağının güvenli kalmasına yardımcı olur. Ağda yürütülen her hesaplama için bir ücret talep ederek, kötü niyetli kişilerin ağa spam göndermesini engelleriz. Kodda kazara veya kasıtlı sonsuz döngülerden veya diğer hesaplama israflarından kaçınmak için, her işlemin kod yürütmede ne kadar hesaplama adımı kullanabileceğine dair bir sınır belirlemesi gerekir. Temel hesaplama birimi "gaz"dır.
 
-Bir işlem bir limit içerse de, bir işlemde kullanılmayan herhangi bir gaz kullanıcıya iade edilir (örn., `max fee - (base fee + tip)` iade edilir).
+Bir işlem bir sınır içerse de, bir işlemde kullanılmayan gaz kullanıcıya iade edilir (örn., `max fee - (base fee + tip)` iade edilir).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diyagram [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) kaynağından uyarlanmıştır_
+<GasTxDiagram />
 
 ## Gaz limiti nedir? {#what-is-gas-limit}
 
@@ -133,13 +133,7 @@ ETH'nizi daha ucuza gönderebilmek için gas fiyatlarını izlemek istiyorsanız
 - [Etherscan](https://etherscan.io/gastracker) _İşlem gas fiyatı tahmincisi_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Açık kaynaklı işlem gas fiyatı tahmincisi_
 - [ETH Gas Tracker](https://www.ethgastracker.com/) _İşlem ücretlerini azaltmak ve tasarruf etmek için Ethereum ve L2 gas fiyatlarını izleyin ve takip edin_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Hem Tip 0 eski işlemleri hem de Tip 2 EIP-1559 işlemlerini destekleyen gas tahmin eden Chrome uzantısı._
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Ana Ağ, Arbitrum ve Polygon üzerindeki farklı işlem türleri için gaz ücretlerini yerel para biriminizde hesaplayın._
-
-## İlgili araçlar {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Blocknative'in küresel bellek havuzu veri platformu tarafından desteklenen gas tahmini API'si_
-- [Gas Network](https://gas.network) Zincir içi Gas Kâhinleri. 35'ten fazla zincir için destek. 
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Ana Ağ, Arbitrum ve Polygon'daki farklı işlem türleri için gaz ücretlerini yerel para biriminizde hesaplayın._
 
 ## Daha fazla okuma {#further-reading}
 

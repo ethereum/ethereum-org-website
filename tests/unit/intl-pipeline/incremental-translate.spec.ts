@@ -10,6 +10,7 @@ import {
   MAX_PROMPT_BYTES,
   RETRY_NOTE_RESERVE_BYTES,
 } from "@/scripts/intl-pipeline/constants"
+import { RunFuseExceededError } from "@/scripts/intl-pipeline/lib/llm/cost-meter"
 import {
   buildIncrementalPrompt,
   buildSectionList,
@@ -20,6 +21,7 @@ import {
   removeMarkdownSection,
   replaceJsonValues,
   replaceSections,
+  sectionCodeLoss,
   translateBatchWithParseRetry,
 } from "@/scripts/intl-pipeline/lib/llm/incremental-translate"
 import { classifyFailure } from "@/scripts/intl-pipeline/lib/quarantine"
@@ -505,9 +507,12 @@ test.describe("buildSectionList", () => {
   ]
 
   test("marks specified IDs as TRANSLATE, others as CONTEXT", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result).toHaveLength(3)
     expect(result.find((s) => s.id === "intro")!.action).toBe("CONTEXT")
     expect(result.find((s) => s.id === "details")!.action).toBe("TRANSLATE")
@@ -515,36 +520,76 @@ test.describe("buildSectionList", () => {
   })
 
   test("TRANSLATE sections use English content", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result.find((s) => s.id === "details")!.content).toBe(
       "English details."
     )
   })
 
+  test("a section the locale lacks sends its heading for translation", () => {
+    // Nothing else translates a new section's heading: the reply carries body
+    // text only, so it used to land in the locale in English
+    const result = buildSectionList(
+      englishSections,
+      localeSections.slice(0, 2),
+      ["conclusion"],
+      "markdown"
+    )
+    const conclusion = result.find((s) => s.id === "conclusion")!
+    expect(conclusion.content).toBe(
+      "## Conclusion {#conclusion}\n\nEnglish conclusion."
+    )
+    expect(conclusion.headingText).toBeUndefined()
+  })
+
   test("CONTEXT sections use locale content", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result.find((s) => s.id === "intro")!.content).toBe(
       "Intro en espanol."
     )
   })
 
   test("sections without locale match are omitted from CONTEXT", () => {
-    const result = buildSectionList(englishSections, [], ["details"])
+    const result = buildSectionList(
+      englishSections,
+      [],
+      ["details"],
+      "markdown"
+    )
     // intro and conclusion have no locale match, so only TRANSLATE section appears
     expect(result).toHaveLength(1)
     expect(result[0].action).toBe("TRANSLATE")
   })
 
   test("preserves document order", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "conclusion",
-      "intro",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["conclusion", "intro"],
+      "markdown"
+    )
     expect(result.map((s) => s.id)).toEqual(["intro", "details", "conclusion"])
+  })
+
+  test("a new JSON key is sent as its bare value, with no heading", () => {
+    const en = extractJsonSections(
+      JSON.stringify({ old: "Old value", nest: { added: "A new value" } })
+    )
+    const de = extractJsonSections(JSON.stringify({ old: "Alter Wert" }))
+    const [added] = buildSectionList(en, de, ["nest/added"], "json").filter(
+      (s) => s.action === "TRANSLATE"
+    )
+    expect(added.content).toBe("A new value")
   })
 })
 
@@ -782,6 +827,145 @@ test.describe("translateBatchWithParseRetry", () => {
     expect(calls).toBe(PARSE_ATTEMPTS)
   })
 
+  // A check that counts lost `x` spans in a section
+  const loses = (_: string, text: string) => {
+    const lost = 3 - (text.match(/`x`/g) ?? []).length
+    return lost > 0
+      ? { markers: 0, spans: lost, detail: `missing \`x\` x${lost}` }
+      : null
+  }
+  const withX = (n: number) =>
+    `<SECTION id="a-section">\nContenido ${"`x` ".repeat(n)}\n</SECTION>`
+
+  test("re-sends when code was lost, and keeps the cleared reply", async () => {
+    const seen: string[] = []
+    const r = await translateBatchWithParseRetry(
+      batch,
+      (prompt) => {
+        seen.push(prompt)
+        return reply(withX(seen.length === 1 ? 2 : 3))
+      },
+      undefined,
+      loses
+    )
+    expect(seen).toHaveLength(2)
+    expect(r.complaint).toBeNull()
+    expect(r.translations["a-section"]).toContain("`x` `x` `x`")
+    expect(seen[1]).toContain("LOST CODE")
+  })
+
+  test("loss that never clears ships the reply that lost least", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      batch,
+      () => reply(withX([2, 0, 1][calls++])),
+      undefined,
+      loses
+    )
+    expect(calls).toBe(PARSE_ATTEMPTS)
+    expect(r.translations["a-section"]).toContain("`x` `x`")
+    expect(r.complaint).toBe('Section "a-section": missing `x` x1')
+  })
+
+  test("lost code followed by unparsable re-sends ships the first reply", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      batch,
+      () => reply(++calls === 1 ? withX(2) : noEnvelope),
+      undefined,
+      loses
+    )
+    expect(calls).toBe(PARSE_ATTEMPTS)
+    expect(r.translations["a-section"]).toContain("`x` `x`")
+    expect(r.complaint).toBe('Section "a-section": missing `x` x1')
+  })
+
+  test("a re-send whose call fails ships the reply in hand", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      batch,
+      () =>
+        ++calls === 1
+          ? reply(withX(2))
+          : Promise.reject(new Error("finishReason=RECITATION")),
+      undefined,
+      loses
+    )
+    expect(calls).toBe(2)
+    expect(r.translations["a-section"]).toContain("`x` `x`")
+  })
+
+  test("the run fuse still stops a re-send", async () => {
+    let calls = 0
+    const err = await translateBatchWithParseRetry(
+      batch,
+      () =>
+        ++calls === 1
+          ? reply(withX(2))
+          : Promise.reject(
+              new RunFuseExceededError("[cost-guard] aborting run")
+            ),
+      undefined,
+      loses
+    ).catch((e) => e)
+    expect(err).toBeInstanceOf(RunFuseExceededError)
+  })
+
+  test("each section keeps its best reply across re-sends", async () => {
+    const two = { ...batch, translateIds: ["a-section", "b-section"] }
+    const pair = (a: number, b: number) =>
+      `${withX(a)}\n<SECTION id="b-section">\nZwei ${"`x` ".repeat(b)}\n</SECTION>`
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      two,
+      () => reply([pair(3, 1), pair(0, 3)][calls++]),
+      undefined,
+      loses
+    )
+    expect(calls).toBe(2)
+    expect(r.complaint).toBeNull()
+    expect(r.translations["a-section"]).toContain("`x` `x` `x`")
+    expect(r.translations["b-section"]).toContain("Zwei `x` `x` `x`")
+  })
+
+  test("a reply that kept every fence marker beats one that lost any", async () => {
+    const sent = "Use `x` and `y`.\n\n<!-- CODE_BLOCK_0 -->"
+    const replies = [
+      "Nutze beides.\n\n<!-- CODE_BLOCK_0 -->",
+      "Nutze `x` und `y`.",
+      "Nutze `x` und `y`.",
+    ].map((r) => `<SECTION id="a-section">\n${r}\n</SECTION>`)
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      batch,
+      () => reply(replies[calls++]),
+      undefined,
+      (_, text) => sectionCodeLoss(sent, text)
+    )
+    expect(calls).toBe(PARSE_ATTEMPTS)
+    expect(r.translations["a-section"]).toContain("<!-- CODE_BLOCK_0 -->")
+  })
+
+  test("a long complaint is cut to the note's reserve", async () => {
+    const seen: string[] = []
+    await translateBatchWithParseRetry(
+      batch,
+      (prompt) => {
+        seen.push(prompt)
+        return reply(withX(0))
+      },
+      undefined,
+      () => ({
+        markers: 0,
+        spans: 1,
+        detail: "missing `ü-long-span`, ".repeat(200),
+      })
+    )
+    expect(
+      Buffer.byteLength(seen[1], "utf-8") - Buffer.byteLength(batch.prompt)
+    ).toBeLessThanOrEqual(RETRY_NOTE_RESERVE_BYTES)
+  })
+
   test("the quarantine still classifies the exhausted failure as parse", async () => {
     const err = await translateBatchWithParseRetry(batch, () =>
       reply(noEnvelope)
@@ -874,5 +1058,145 @@ test.describe("translateBatchWithParseRetry", () => {
     expect(sent).toContain('<SECTION id="the-section-id">')
     expect(sent).toContain("do not escape quotes or backslashes")
     expect(sent).toContain("PROMPT")
+  })
+})
+
+test.describe("sectionCodeLoss", () => {
+  const sent = "Call `transfer()` with `amount`.\n\n<!-- CODE_BLOCK_0 -->\n"
+
+  test("names English code the reply lost or altered", () => {
+    expect(
+      sectionCodeLoss(
+        sent,
+        "Llama a `transferir()` con `amount`.\n\n<!-- CODE_BLOCK_0 -->\n"
+      )
+    ).toEqual({
+      markers: 0,
+      spans: 1,
+      detail: "missing `transfer()`, not in the English `transferir()`",
+    })
+  })
+
+  test("backticks the reply only added are no loss", () => {
+    expect(
+      sectionCodeLoss(
+        sent,
+        "Llama a `transfer()` con `amount` en `Token`.\n\n<!-- CODE_BLOCK_0 -->\n"
+      )
+    ).toBeNull()
+  })
+
+  test("a fence marker must come back exactly once", () => {
+    const dropped = "Llama a `transfer()` con `amount`.\n"
+    const doubled = `${dropped}<!-- CODE_BLOCK_0 -->\n<!-- CODE_BLOCK_0 -->\n`
+    for (const reply of [dropped, doubled])
+      expect(sectionCodeLoss(sent, reply)).toEqual({
+        markers: 1,
+        spans: 0,
+        detail: "<!-- CODE_BLOCK_0 --> must appear exactly once",
+      })
+  })
+
+  test("spans are checked once restored, and a lost one names its tag", () => {
+    const spans = ["`transfer()`", "`amount`"]
+    const tags =
+      "Llama a <HTML-PLACEHOLDER-CODE-0 /> con <HTML-PLACEHOLDER-CODE-1 />.\n\n<!-- CODE_BLOCK_0 -->\n"
+    expect(sectionCodeLoss(sent, tags, spans)).toBeNull()
+    expect(
+      sectionCodeLoss(
+        sent,
+        tags.replace("<HTML-PLACEHOLDER-CODE-0 />", "transferir"),
+        spans
+      )
+    ).toEqual({
+      markers: 0,
+      spans: 1,
+      detail: "missing <HTML-PLACEHOLDER-CODE-0 /> (`transfer()`)",
+    })
+  })
+
+  test("a leftover placeholder tag ranks with a lost fence marker", () => {
+    const spans = ["`transfer()`", "`amount`"]
+    const tail = "\n\n<!-- CODE_BLOCK_0 -->\n"
+    const unknown = `Llama a <HTML-PLACEHOLDER-CODE-0 /> con <HTML-PLACEHOLDER-CODE-1 /> y <HTML-PLACEHOLDER-CODE-2 />.${tail}`
+    const wrapped = `Llama a <HTML-PLACEHOLDER-CODE-0>transferir</HTML-PLACEHOLDER-CODE-0> con <HTML-PLACEHOLDER-CODE-1 />.${tail}`
+    expect(sectionCodeLoss(sent, unknown, spans)).toMatchObject({ markers: 1 })
+    expect(sectionCodeLoss(sent, wrapped, spans)).toMatchObject({ markers: 1 })
+    // a section with no lifted code still catches a tag copied from another
+    expect(
+      sectionCodeLoss("Plain text.", "Texto <HTML-PLACEHOLDER-CODE-0 />.", [])
+    ).toMatchObject({ markers: 1, spans: 0 })
+  })
+
+  test("bare, escaped or lowercase tag text counts as leftover, as the gate sees it", () => {
+    const spans = ["`transfer()`", "`amount`"]
+    const tail = " con <HTML-PLACEHOLDER-CODE-1 />.\n\n<!-- CODE_BLOCK_0 -->\n"
+    for (const tag of [
+      "HTML-PLACEHOLDER-CODE-0",
+      "&lt;HTML-PLACEHOLDER-CODE-0 /&gt;",
+      "<html-placeholder-code-7 />",
+    ])
+      expect(
+        sectionCodeLoss(sent, `Llama a ${tag}${tail}`, spans)
+      ).toMatchObject({ markers: 1 })
+  })
+
+  test("one tag written for two identical spans is no loss", () => {
+    expect(
+      sectionCodeLoss(
+        "Pay `fee` and `fee`.",
+        "Zahle <HTML-PLACEHOLDER-CODE-0 /> und <HTML-PLACEHOLDER-CODE-0 />.",
+        ["`fee`", "`fee`"]
+      )
+    ).toBeNull()
+  })
+
+  test("a tag written more often than its identical spans is a loss", () => {
+    expect(
+      sectionCodeLoss(
+        "Pay `fee` and `fee`.",
+        "Zahle <HTML-PLACEHOLDER-CODE-0 />, <HTML-PLACEHOLDER-CODE-0 /> und <HTML-PLACEHOLDER-CODE-0 />.",
+        ["`fee`", "`fee`"]
+      )
+    ).toMatchObject({
+      spans: 1,
+      detail: expect.stringContaining("sent 1 extra time(s)"),
+    })
+  })
+
+  test("a translated or sample tag name still counts as leftover", () => {
+    for (const tag of [
+      "<HTML-PLACEHOLDER-CÓDIGO-0 />",
+      "<HTML-PLACEHOLDER-CODE-n />",
+      "<HTML-PLACEHOLDER-CODE-****** />",
+    ])
+      expect(
+        sectionCodeLoss("Pay `fee`.", `Zahle ${tag}.`, ["`fee`"])
+      ).toMatchObject({ markers: 1 })
+  })
+
+  test("a lifted tag sent once but repeated is a loss", () => {
+    const spans = ["`transfer()`", "`amount`"]
+    expect(
+      sectionCodeLoss(
+        sent,
+        "Llama a <HTML-PLACEHOLDER-CODE-0 /> con <HTML-PLACEHOLDER-CODE-1 /> o <HTML-PLACEHOLDER-CODE-1 />.\n\n<!-- CODE_BLOCK_0 -->\n",
+        spans
+      )
+    ).toEqual({
+      markers: 0,
+      spans: 1,
+      detail:
+        "<HTML-PLACEHOLDER-CODE-1 /> (`amount`) sent 1 extra time(s), not in the English `amount`",
+    })
+  })
+
+  test("a new section's heading code counts, as it was sent", () => {
+    expect(
+      sectionCodeLoss(
+        "## The `owner` field {#new}\n\nSet `owner` once.",
+        "## El campo `owner` {#new}\n\nFija `owner` una vez."
+      )
+    ).toBeNull()
   })
 })

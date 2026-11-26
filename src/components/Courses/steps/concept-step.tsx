@@ -1,0 +1,94 @@
+"use client"
+
+import { Fragment, type ReactNode } from "react"
+import { Lightbulb } from "lucide-react"
+import { useLocale, useTranslations } from "next-intl"
+
+import type { ConceptStep as ConceptStepData } from "@/data/courses"
+
+import CourseArt from "../art/lazy-course-art"
+
+// Plain bold: coloured keywords read as links
+const rich = {
+  strong: (chunks: ReactNode) => (
+    <strong className="font-bold">{chunks}</strong>
+  ),
+}
+
+interface ConceptStepProps {
+  step: ConceptStepData
+  keyFor: (suffix: string) => string
+  /** The lesson's visible `h1`, shown under the art on a lesson's first step */
+  title?: ReactNode
+}
+
+const ConceptStep = ({ step, keyFor, title }: ConceptStepProps) => {
+  const t = useTranslations("page-courses")
+  const locale = useLocale()
+  const paragraphs = Array.from(
+    { length: step.paragraphs },
+    (_, i) => `p${i + 1}`
+  )
+
+  const { list } = step
+  const bullets = list && (
+    <ul className="m-0 flex list-disc flex-col gap-2 ps-6 marker:text-(--course)">
+      {Array.from({ length: list.items }, (_, i) => (
+        <li key={i} className="m-0 ps-1">
+          {t.rich(keyFor(`li${i + 1}`), rich)}
+        </li>
+      ))}
+    </ul>
+  )
+
+  if (step.takeaway) {
+    // One paragraph per sentence, so each idea stands on its own
+    const segmenter = new Intl.Segmenter(locale, { granularity: "sentence" })
+    const sentences = paragraphs.flatMap((p) =>
+      Array.from(segmenter.segment(t(keyFor(p))), ({ segment }) =>
+        segment.trim()
+      ).filter(Boolean)
+    )
+    return (
+      <div className="relative overflow-hidden rounded-3xl border-b-8 border-(--course-strong) bg-(--course) p-8 text-white">
+        <Lightbulb
+          aria-hidden
+          className="absolute -end-6 -top-6 size-36 rotate-12 opacity-15"
+        />
+        <p className="m-0 mb-5 flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1 text-sm font-black tracking-widest text-(--course-strong) uppercase">
+          <Lightbulb className="size-5" aria-hidden />
+          {t("page-courses-takeaway")}
+        </p>
+        <div className="flex flex-col gap-4">
+          {sentences.map((sentence, i) => (
+            <p key={i} className="m-0 text-2xl leading-snug font-bold">
+              {sentence}
+            </p>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="flex flex-col gap-6">
+      {step.art && (
+        <div className="rounded-3xl bg-(--course-softer) px-8 pt-6 pb-4">
+          <CourseArt id={step.art} className="mx-auto max-w-44" />
+        </div>
+      )}
+      {title}
+      <div className="flex flex-col gap-4 text-md leading-relaxed">
+        {list?.after === 0 && bullets}
+        {paragraphs.map((p, i) => (
+          <Fragment key={p}>
+            <p className="m-0">{t.rich(keyFor(p), rich)}</p>
+            {list?.after === i + 1 && bullets}
+          </Fragment>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default ConceptStep

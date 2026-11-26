@@ -1,5 +1,15 @@
 # Telugu (te) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: block builder, peer, reorg, execution client x4, deleted paragraph restored (optimistic-rollups), epoch, optimistic rollup x5, actors as performers, dapp. Open: equivocation phrase, event vs ghatana, validated/attested collapsed.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder swaps (peer-das caption, verkle), builder, execution client, fork choice, Ethereum spelling, gas inline code. Open: `saganiki paiga` for each-over-half, compounding sammelanam.
+
 > **PR:** #18739 (intl/pending-privacy-page)
 > **Date:** 2026-07-09
 > **Quality Score:** 8.3/10 (pre-fix) -> ~9.5 (post-fix, semantic fidelity restored)
@@ -189,3 +199,15 @@ Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-clien
 
 - ABI/EVM spelled out (#80); `ఈథీరియం` vs locale `ఎథీరియం` in the EVM expansion (known glossary inconsistency)
 - Unchanged echidna:317 glossary verb pasted into heading; echidna:507 we/our mix -- out of scope
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- API over-expanded after a brand name (translation-program:21).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

@@ -1,20 +1,26 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "zh",
-  "translatedAt": "2026-06-17T23:35:48.999Z",
-  "englishManifestHash": "faab58f04eb3",
+  "translatedAt": "2026-11-25T09:54:56.425Z",
+  "englishManifestHash": "cc9b47afd77b",
   "placeholderOrder": [
     "LINK-b5355b",
     "LINK-fb2e62",
     "LINK-61e707",
     "LINK-a2080c",
     "LINK-9e8f9d",
+    "CODEBLOCK-2e58c1",
+    "CODE-b9c382",
+    "CODE-4f047b",
+    "CODE-8d082b",
     "CODEBLOCK-441fd7",
     "CODE-334359",
     "CODE-b17784",
     "LINK-900adb",
-    "CODEBLOCK-781784",
-    "LINK-671fe7",
+    "CODEBLOCK-3f5d23",
+    "CODE-bd0bdd",
+    "LINK-3bd489",
+    "CODE-453e64",
     "CODEBLOCK-3ea1ad",
     "CODE-b7f373",
     "CODE-9177aa",
@@ -23,15 +29,29 @@
     "CODEBLOCK-12d6be",
     "CODE-fcd38a",
     "CODE-3c3209",
+    "CODE-d2e2ad",
     "CODEBLOCK-a2e507",
     "CODEBLOCK-fe7c51",
-    "CODEBLOCK-1a8af6",
-    "CODE-2bcb43",
+    "CODEBLOCK-354ff4",
+    "CODE-057f50",
+    "CODE-38d891",
     "LINK-97efb8",
-    "CODEBLOCK-02f444",
-    "CODE-ea15d8",
-    "CODEBLOCK-349c2e",
-    "CODEBLOCK-5cadbd",
+    "CODE-05b5a6",
+    "CODE-7608b2",
+    "CODE-dde8be",
+    "CODE-0a367b",
+    "CODE-81bae8",
+    "CODE-ca8868",
+    "CODE-ca8868",
+    "CODE-dde8be",
+    "CODE-147fb8",
+    "CODE-4c1029",
+    "CODE-2687f8",
+    "CODE-ca8868",
+    "CODE-716712",
+    "CODE-4c1029",
+    "CODE-06e55b",
+    "CODE-2687f8",
     "CODE-2687f8",
     "CODE-774aac",
     "LINK-ee3332",
@@ -45,36 +65,39 @@
     "CODE-3cbc87",
     "CODEBLOCK-1434da",
     "CODE-be9677",
-    "CODEBLOCK-e0b0b6",
+    "CODEBLOCK-ed75ec",
     "LINK-18b278",
-    "CODEBLOCK-f93acf",
+    "CODE-94276e",
+    "CODEBLOCK-7be134",
     "CODE-759f8d",
+    "CODE-994027",
     "CODEBLOCK-1ec30a",
     "CODE-b6d267",
     "LINK-900adb",
-    "CODEBLOCK-b2e8ef",
+    "CODEBLOCK-2ce8f0",
     "CODE-dadf6e",
+    "CODE-be9677",
     "CODEBLOCK-718afc",
     "CODE-c3641f",
     "CODE-1f9976",
     "CODE-8b12c3",
-    "CODEBLOCK-885353",
+    "CODEBLOCK-d0e346",
     "LINK-528519",
     "LINK-65fdd0",
-    "CODE-71d982",
-    "LINK-149ae7",
-    "CODE-d2e2ad",
-    "CODEBLOCK-8fb1e1",
-    "CODE-9cf97f",
-    "CODE-759f8d",
+    "CODE-94c9df",
+    "CODEBLOCK-21e74a",
+    "CODE-bfdbe0",
+    "CODE-94276e",
+    "CODE-3cbc87",
     "CODEBLOCK-198e46",
-    "CODEBLOCK-542ae0",
+    "CODEBLOCK-4ff268",
     "LINK-a32206",
     "CODE-a0bcfd",
-    "CODEBLOCK-4de76b",
+    "CODE-d31da3",
+    "CODEBLOCK-1da157",
     "CODE-d31984",
     "CODE-02de6d",
-    "CODEBLOCK-6a7181",
+    "CODEBLOCK-ad93f1",
     "CODE-0b59df",
     "CODE-d954ea",
     "CODEBLOCK-10e49e",
@@ -84,39 +107,50 @@
     "CODE-021f35",
     "CODE-d2e2ad",
     "CODEBLOCK-91d8be",
-    "CODEBLOCK-3da986",
-    "CODEBLOCK-4833aa",
+    "CODEBLOCK-8171a5",
+    "CODEBLOCK-998c62",
     "LINK-9c1fcb",
     "CODEBLOCK-12531d",
-    "CODEBLOCK-ca1cee",
+    "CODEBLOCK-bda485",
     "CODE-836ff1",
     "LINK-cc7e6b",
-    "CODEBLOCK-621454",
-    "CODEBLOCK-3ef7bc",
+    "CODE-23096e",
+    "CODEBLOCK-39c6d9",
+    "CODE-8687e8",
+    "CODE-05b5a6",
+    "CODE-b7f373",
+    "CODE-9177aa",
+    "CODE-74e216",
+    "CODEBLOCK-d5d534",
     "CODEBLOCK-c07531",
     "CODE-9177aa",
-    "CODEBLOCK-52cb8d",
-    "CODEBLOCK-5efdda",
-    "CODEBLOCK-e7f975",
+    "CODEBLOCK-60fef1",
+    "CODE-7f7d01",
+    "CODEBLOCK-6a636a",
+    "CODEBLOCK-5cf3e5",
     "CODEBLOCK-975b6c",
-    "CODEBLOCK-9414b7",
+    "CODEBLOCK-be8d08",
     "CODE-be9677",
     "CODEBLOCK-6fb554",
     "CODE-3cbc87",
     "CODEBLOCK-0c46ec",
-    "CODEBLOCK-2bbcba",
-    "CODEBLOCK-34cd99",
+    "CODEBLOCK-fe2665",
+    "CODEBLOCK-686df6",
     "LINK-f15e64",
     "CODE-38652a",
     "CODE-079132",
     "LINK-f915fb"
   ],
   "placeholderMap": {
+    "CODEBLOCK-2e58c1": {
+      "type": "code-fence",
+      "values": {}
+    },
     "CODEBLOCK-441fd7": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-781784": {
+    "CODEBLOCK-3f5d23": {
       "type": "code-fence",
       "values": {}
     },
@@ -136,19 +170,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-1a8af6": {
-      "type": "code-fence",
-      "values": {}
-    },
-    "CODEBLOCK-02f444": {
-      "type": "code-fence",
-      "values": {}
-    },
-    "CODEBLOCK-349c2e": {
-      "type": "code-fence",
-      "values": {}
-    },
-    "CODEBLOCK-5cadbd": {
+    "CODEBLOCK-354ff4": {
       "type": "code-fence",
       "values": {}
     },
@@ -168,11 +190,11 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-e0b0b6": {
+    "CODEBLOCK-ed75ec": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-f93acf": {
+    "CODEBLOCK-7be134": {
       "type": "code-fence",
       "values": {}
     },
@@ -180,7 +202,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-b2e8ef": {
+    "CODEBLOCK-2ce8f0": {
       "type": "code-fence",
       "values": {}
     },
@@ -188,11 +210,11 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-885353": {
+    "CODEBLOCK-d0e346": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-8fb1e1": {
+    "CODEBLOCK-21e74a": {
       "type": "code-fence",
       "values": {}
     },
@@ -200,15 +222,15 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-542ae0": {
+    "CODEBLOCK-4ff268": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-4de76b": {
+    "CODEBLOCK-1da157": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-6a7181": {
+    "CODEBLOCK-ad93f1": {
       "type": "code-fence",
       "values": {}
     },
@@ -224,11 +246,11 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-3da986": {
+    "CODEBLOCK-8171a5": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-4833aa": {
+    "CODEBLOCK-998c62": {
       "type": "code-fence",
       "values": {}
     },
@@ -236,15 +258,15 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-ca1cee": {
+    "CODEBLOCK-bda485": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-621454": {
+    "CODEBLOCK-39c6d9": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-3ef7bc": {
+    "CODEBLOCK-d5d534": {
       "type": "code-fence",
       "values": {}
     },
@@ -252,15 +274,15 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-52cb8d": {
+    "CODEBLOCK-60fef1": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-5efdda": {
+    "CODEBLOCK-6a636a": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-e7f975": {
+    "CODEBLOCK-5cf3e5": {
       "type": "code-fence",
       "values": {}
     },
@@ -268,7 +290,7 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-9414b7": {
+    "CODEBLOCK-be8d08": {
       "type": "code-fence",
       "values": {}
     },
@@ -280,13 +302,31 @@
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-2bbcba": {
+    "CODEBLOCK-fe2665": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-34cd99": {
+    "CODEBLOCK-686df6": {
       "type": "code-fence",
       "values": {}
+    },
+    "CODE-b9c382": {
+      "type": "inline-code",
+      "values": {
+        "content": "#pragma version"
+      }
+    },
+    "CODE-4f047b": {
+      "type": "inline-code",
+      "values": {
+        "content": ">0.3.10"
+      }
+    },
+    "CODE-8d082b": {
+      "type": "inline-code",
+      "values": {
+        "content": "log IERC721.Transfer(...)"
+      }
     },
     "CODE-334359": {
       "type": "inline-code",
@@ -298,6 +338,18 @@
       "type": "inline-code",
       "values": {
         "content": "@<keyword>"
+      }
+    },
+    "CODE-bd0bdd": {
+      "type": "inline-code",
+      "values": {
+        "content": "ethereum.ercs"
+      }
+    },
+    "CODE-453e64": {
+      "type": "inline-code",
+      "values": {
+        "content": "implements:"
       }
     },
     "CODE-b7f373": {
@@ -330,16 +382,70 @@
         "content": "_operator"
       }
     },
-    "CODE-2bcb43": {
+    "CODE-d2e2ad": {
       "type": "inline-code",
       "values": {
-        "content": "view"
+        "content": "_"
       }
     },
-    "CODE-ea15d8": {
+    "CODE-057f50": {
       "type": "inline-code",
       "values": {
-        "content": "tokenId"
+        "content": "onERC721Received"
+      }
+    },
+    "CODE-38d891": {
+      "type": "inline-code",
+      "values": {
+        "content": "nonpayable"
+      }
+    },
+    "CODE-05b5a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "IERC721"
+      }
+    },
+    "CODE-7608b2": {
+      "type": "inline-code",
+      "values": {
+        "content": "log IERC721.<Event>(...)"
+      }
+    },
+    "CODE-dde8be": {
+      "type": "inline-code",
+      "values": {
+        "content": "Transfer"
+      }
+    },
+    "CODE-0a367b": {
+      "type": "inline-code",
+      "values": {
+        "content": "sender"
+      }
+    },
+    "CODE-81bae8": {
+      "type": "inline-code",
+      "values": {
+        "content": "receiver"
+      }
+    },
+    "CODE-ca8868": {
+      "type": "inline-code",
+      "values": {
+        "content": "token_id"
+      }
+    },
+    "CODE-147fb8": {
+      "type": "inline-code",
+      "values": {
+        "content": "Approval"
+      }
+    },
+    "CODE-4c1029": {
+      "type": "inline-code",
+      "values": {
+        "content": "owner"
       }
     },
     "CODE-2687f8": {
@@ -348,16 +454,22 @@
         "content": "approved"
       }
     },
+    "CODE-716712": {
+      "type": "inline-code",
+      "values": {
+        "content": "ApprovalForAll"
+      }
+    },
+    "CODE-06e55b": {
+      "type": "inline-code",
+      "values": {
+        "content": "operator"
+      }
+    },
     "CODE-774aac": {
       "type": "inline-code",
       "values": {
         "content": "HashMap"
-      }
-    },
-    "CODE-dde8be": {
-      "type": "inline-code",
-      "values": {
-        "content": "Transfer"
       }
     },
     "CODE-860e34": {
@@ -384,10 +496,22 @@
         "content": "minter"
       }
     },
+    "CODE-94276e": {
+      "type": "inline-code",
+      "values": {
+        "content": "SUPPORTED_INTERFACES"
+      }
+    },
     "CODE-759f8d": {
       "type": "inline-code",
       "values": {
         "content": "__init__"
+      }
+    },
+    "CODE-994027": {
+      "type": "inline-code",
+      "values": {
+        "content": "@deploy"
       }
     },
     "CODE-b6d267": {
@@ -420,28 +544,28 @@
         "content": "@external"
       }
     },
-    "CODE-71d982": {
+    "CODE-94c9df": {
       "type": "inline-code",
       "values": {
-        "content": "bytes32"
+        "content": "bytes4"
       }
     },
-    "CODE-d2e2ad": {
+    "CODE-bfdbe0": {
       "type": "inline-code",
       "values": {
-        "content": "_"
-      }
-    },
-    "CODE-9cf97f": {
-      "type": "inline-code",
-      "values": {
-        "content": "self.supportedInterfaces"
+        "content": "interface_id"
       }
     },
     "CODE-a0bcfd": {
       "type": "inline-code",
       "values": {
         "content": "_owner"
+      }
+    },
+    "CODE-d31da3": {
+      "type": "inline-code",
+      "values": {
+        "content": "empty(address)"
       }
     },
     "CODE-d31984": {
@@ -478,6 +602,30 @@
       "type": "inline-code",
       "values": {
         "content": "log"
+      }
+    },
+    "CODE-23096e": {
+      "type": "inline-code",
+      "values": {
+        "content": "IERC721.Transfer"
+      }
+    },
+    "CODE-8687e8": {
+      "type": "inline-code",
+      "values": {
+        "content": "@payable"
+      }
+    },
+    "CODE-74e216": {
+      "type": "inline-code",
+      "values": {
+        "content": "approve"
+      }
+    },
+    "CODE-7f7d01": {
+      "type": "inline-code",
+      "values": {
+        "content": "extcall"
       }
     },
     "CODE-079132": {
@@ -522,10 +670,10 @@
         "url": "https://vyper.readthedocs.io/en/latest/natspec.html"
       }
     },
-    "LINK-671fe7": {
+    "LINK-3bd489": {
       "type": "link",
       "values": {
-        "url": "https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py"
+        "url": "https://github.com/vyperlang/vyper/blob/master/vyper/builtins/interfaces/IERC721.vyi"
       }
     },
     "LINK-97efb8": {
@@ -556,12 +704,6 @@
       "type": "link",
       "values": {
         "url": "https://vyper.readthedocs.io/en/latest/types.html"
-      }
-    },
-    "LINK-149ae7": {
-      "type": "link",
-      "values": {
-        "url": "/developers/docs/evm/"
       }
     },
     "LINK-a32206": {
@@ -597,7 +739,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T23:35:48.999Z",
+      "translatedAt": "2026-11-25T09:54:56.425Z",
       "status": "success"
     }
   }

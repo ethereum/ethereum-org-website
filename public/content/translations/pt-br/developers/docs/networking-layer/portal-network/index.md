@@ -1,14 +1,14 @@
 ---
 title: A Portal Network
-description: "Uma visão geral da Portal Network - uma rede em desenvolvimento projetada para suportar clientes com poucos recursos."
+description: "Uma visão geral da Portal Network, uma rede ponto a ponto que mantém o histórico do Ethereum disponível à medida que os clientes deixam de armazenar tudo."
 lang: pt-br
 ---
 
-[Ethereum](/) é uma rede composta por computadores que executam o software de cliente Ethereum. Cada um desses computadores é chamado de 'nó'. O software cliente permite que um nó envie e receba dados na rede Ethereum, e verifica os dados em relação às regras do protocolo Ethereum. Os nós mantêm muitos dados históricos em seu armazenamento de disco e os adicionam quando recebem novos pacotes de informações, conhecidos como blocos, de outros nós na rede. Isso é necessário para verificar sempre se um nó tem informações consistentes com o resto da rede. Isso significa que executar um nó pode exigir muito espaço em disco. Algumas operações de nó também podem exigir muita memória RAM.
+[Ethereum](/) é uma rede composta por computadores que executam o software de cliente Ethereum. Cada um desses computadores é chamado de 'nó'. O software cliente permite que um nó envie e receba dados na rede Ethereum e verifica os dados em relação às regras do protocolo Ethereum. Os nós mantêm muitos dados históricos em seu armazenamento em disco e os adicionam quando recebem novos pacotes de informações, conhecidos como blocos, de outros nós na rede. Isso é necessário para verificar sempre se um nó tem informações consistentes com o resto da rede. Isso significa que executar um nó pode exigir muito espaço em disco. Algumas operações de nó também podem exigir muita memória RAM.
 
-Para contornar esse problema de armazenamento em disco, foram desenvolvidos nós 'leves' que solicitam informações de nós completos em vez de armazenar tudo por conta própria. No entanto, isso significa que o nó leve não está verificando as informações de forma independente e, em vez disso, está confiando em outro nó. Isso também significa que os nós completos são obrigados a assumir um trabalho extra para atender a esses nós leves.
+Os clientes de execução não precisam mais manter todos esses dados. Desde julho de 2025, eles podem descartar os corpos e recibos de blocos anteriores ao [The Merge](/roadmap/merge/), e o roteiro do Ethereum inclui descartar mais do histórico da cadeia ao longo do tempo. Esse histórico ainda precisa permanecer disponível para quem precisar, como exploradores de blocos, indexadores ou uma carteira procurando uma transação antiga.
 
-A Portal Network é um novo design de rede para o Ethereum que visa resolver o problema de disponibilidade de dados para nós "leves" sem ter que confiar ou colocar pressão extra sobre os nós completos, compartilhando os dados necessários em pequenos pedaços através da rede.
+A Portal Network mantém esse histórico disponível compartilhando-o em pequenos pedaços por muitos nós. Nenhum nó precisa armazenar tudo, e um nó pode buscar qualquer pedaço e verificá-lo em relação aos dados que já possui, sem confiar no nó que o enviou.
 
 Mais sobre [nós e clientes](/developers/docs/nodes-and-clients/)
 
@@ -16,74 +16,40 @@ Mais sobre [nós e clientes](/developers/docs/nodes-and-clients/)
 
 Os nós Ethereum armazenam sua própria cópia completa ou parcial da blockchain do Ethereum. Essa cópia local é usada para validar transações e garantir que o nó esteja seguindo a cadeia correta. Esses dados armazenados localmente permitem que os nós verifiquem de forma independente se os dados recebidos são válidos e corretos, sem precisar confiar em nenhuma outra entidade.
 
-Essa cópia local da blockchain e os dados associados de estado e recibo ocupam muito espaço no disco rígido do nó. Por exemplo, um disco rígido de 2 TB é recomendado para executar um nó usando o [Geth](https://geth.ethereum.org) emparelhado a um cliente de consenso. Usando a sincronização rápida (snap sync), que armazena apenas dados da cadeia de um conjunto relativamente recente de blocos, o Geth normalmente ocupa cerca de 650 GB de espaço em disco, mas cresce a cerca de 14 GB/semana (você pode podar o nó de volta para 650 GB periodicamente).
+Essa cópia local da blockchain e os dados de estado e recibo associados ocupam muito espaço no disco rígido do nó. Por exemplo, um SSD de 4 TB é recomendado para executar um nó usando [Geth](https://geth.ethereum.org) emparelhado a um cliente de consenso. Com o histórico completo da cadeia, o Geth ocupa mais de 1,8 TB de espaço em disco (em setembro de 2026), e isso continua crescendo com a cadeia.
 
-Isso significa que executar nós pode ser caro, porque uma grande quantidade de espaço em disco deve ser dedicada ao Ethereum. Existem várias soluções para esse problema no roteiro do Ethereum, incluindo [expiração de histórico](/roadmap/statelessness/#history-expiry), [expiração de estado](/roadmap/statelessness/#state-expiry) e [ausência de estado](/roadmap/statelessness/). No entanto, é provável que faltem vários anos para que sejam implementadas. Também existem [nós leves](/developers/docs/nodes-and-clients/light-clients/) que não salvam sua própria cópia dos dados da cadeia, eles solicitam os dados de que precisam de nós completos. No entanto, isso significa que os nós leves precisam confiar nos nós completos para fornecer dados honestos e também sobrecarrega os nós completos que precisam fornecer os dados de que os nós leves precisam.
+Isso significa que executar nós pode ser caro, porque uma grande quantidade de espaço em disco deve ser dedicada ao Ethereum. A [expiração de histórico](/roadmap/statelessness/#history-expiry) reduz isso permitindo que os clientes excluam dados de blocos antigos que não precisam para seguir a cadeia: desde a [expiração de histórico parcial](https://blog.ethereum.org/2025/07/08/partial-history-exp) em julho de 2025, os clientes de execução podem descartar os corpos e recibos de todos os blocos antes do The Merge. A [expiração de estado](/roadmap/statelessness/#state-expiry) e a [ausência de estado](/roadmap/statelessness/) são outras soluções que ainda estão sendo pesquisadas.
 
-A Portal Network visa fornecer uma maneira alternativa para os nós leves obterem seus dados que não exija confiar ou adicionar significativamente ao trabalho que deve ser feito pelos nós completos. A maneira como isso será feito é introduzir uma nova maneira para os nós Ethereum compartilharem dados através da rede.
+Quando os nós param de armazenar o histórico antigo, eles não podem mais fornecê-lo a outros. Arquivos, torrents e provedores mantêm cópias dele; a Portal Network o espalha por muitos nós, para que permaneça disponível sem depender de nenhum deles.
 
 ## Como a Portal Network funciona? {#how-does-portal-network-work}
 
-Os nós Ethereum têm protocolos rígidos que definem como eles se comunicam entre si. Os clientes de execução se comunicam usando um conjunto de subprotocolos conhecidos como [devp2p](/developers/docs/networking-layer/#devp2p), enquanto os clientes de consenso usam uma pilha diferente de subprotocolos chamada [libp2p](/developers/docs/networking-layer/#libp2p). Eles definem os tipos de dados que podem ser passados entre os nós.
+Os nós Ethereum têm protocolos rígidos que definem como eles se comunicam entre si. Os clientes de execução se comunicam usando um conjunto de subprotocolos conhecidos como [devp2p](/developers/docs/networking-layer/#devp2p), enquanto os clientes de consenso usam uma pilha diferente de subprotocolos chamada [libp2p](/developers/docs/networking-layer/#libp2p). O devp2p permite que um nó solicite corpos de blocos e recibos de seus pares, mas um par que descartou o histórico antigo não pode fornecê-lo. Aplicativos e carteiras também podem obter dados de um nó por meio da [Interface de Programação de Aplicações (API) JSON-RPC](/developers/docs/apis/json-rpc/), mas isso depende de um nó ou provedor armazenar os dados e de confiar que ele seja honesto.
 
-![devP2P and libP2P](portal-network-devp2p-libp2p.png)
+A Portal Network é uma rede ponto a ponto separada, construída para compartilhar o histórico. Ela é executada no [discv5](https://github.com/ethereum/devp2p/blob/master/discv5/discv5.md), o protocolo de descoberta de nós que os clientes de consenso também usam para encontrar pares, e organiza seus nós como uma [tabela de hash distribuída (DHT)](https://en.wikipedia.org/wiki/Distributed_hash_table), semelhante à do BitTorrent. Cada nó tem um ID de nó, e cada pedaço de conteúdo, como os recibos de um bloco, tem um ID de conteúdo no mesmo espaço de ID, derivado do número do seu bloco. Cada nó armazena o conteúdo cujos IDs estão mais próximos do seu próprio ID, até uma distância que ele escolhe, chamada de raio. Para buscar um pedaço de conteúdo, um nó pergunta aos pares que conhece que estão mais próximos do ID do conteúdo. Os pares que não o têm respondem com nós que estão ainda mais próximos, até que a solicitação chegue a um nó que o armazena.
 
-Os nós também podem fornecer dados específicos por meio da [API JSON-RPC](/developers/docs/apis/json-rpc/), que é como os aplicativos e as carteiras trocam informações com os nós Ethereum. No entanto, nenhum desses são protocolos ideais para fornecer dados a clientes leves.
+<PortalHistoryDiagram />
 
-Atualmente, os clientes leves não podem solicitar partes específicas de dados da cadeia via devp2p ou libp2p porque esses protocolos são projetados apenas para permitir a sincronização da cadeia e a propagação (gossiping) de blocos e transações. Os clientes leves não querem baixar essas informações porque isso os impediria de serem "leves".
+Um nó nunca precisa confiar nos dados que recebe. Ele mantém cada cabeçalho do bloco, e cada cabeçalho se compromete com as transações e recibos do seu bloco por meio de raízes como `transactionsRoot` e `receiptsRoot`. O nó verifica o corpo de um bloco ou os recibos de um bloco em relação a essas raízes antes de usá-los.
 
-A API JSON-RPC também não é uma escolha ideal para solicitações de dados de clientes leves, porque depende de uma conexão com um nó completo específico ou provedor de RPC centralizado que pode fornecer os dados. Isso significa que o cliente leve precisa confiar que esse nó/provedor específico seja honesto e, além disso, o nó completo pode ter que lidar com muitas solicitações de muitos clientes leves, aumentando seus requisitos de largura de banda.
+### As Portal Networks {#the-portal-networks}
 
-O objetivo da Portal Network é repensar todo o design, construindo especificamente para a leveza, fora das restrições de design dos clientes Ethereum existentes.
+A Portal Network foi inicialmente projetada como várias sub-redes que permitiriam que clientes leves seguissem a cadeia sem confiar em um nó completo: uma rede de cliente leve da Beacon Chain, uma rede de estado, uma rede de fofoca (gossip) de transações e uma rede de histórico. Em 2025, as especificações de todas, exceto uma delas, foram movidas para o status de legado, e o desenvolvimento agora se concentra na **rede de Histórico** (History network), que armazena os corpos e recibos de blocos passados para clientes de execução que mantêm cada cabeçalho do bloco, mas descartaram o resto do histórico.
 
-A ideia central da Portal Network é pegar as melhores partes da pilha de rede atual, permitindo que as informações necessárias aos clientes leves, como dados históricos e a identidade do cabeçalho atual da cadeia, sejam fornecidas por meio de uma rede descentralizada ponto a ponto leve no estilo devp2p usando uma [DHT](https://en.wikipedia.org/wiki/Distributed_hash_table) (semelhante ao BitTorrent).
+## Clientes da Portal Network {#client-diversity-as-default}
 
-A ideia é adicionar pequenas partes do total de dados históricos do Ethereum e algumas responsabilidades específicas de nó a cada nó. Em seguida, as solicitações são atendidas buscando os nós que armazenam os dados específicos que foram solicitados e recuperando-os deles.
+Várias equipes construíram clientes da Portal Network:
 
-Isso inverte o modelo normal de nós leves que encontram um único nó e solicitam que ele filtre e forneça grandes volumes de dados; em vez disso, eles filtram rapidamente uma grande rede de nós que lidam com pequenas quantidades de dados cada.
-
-O objetivo é permitir que uma rede descentralizada de clientes leves da Portal Network possa:
-
-- rastrear o cabeçalho da cadeia
-- sincronizar dados recentes e históricos da cadeia
-- recuperar dados de estado
-- transmitir transações
-- executar transações usando a [EVM](/developers/docs/evm/)
-
-Os benefícios desse design de rede são:
-
-- Reduzir a dependência de provedores centralizados
-- Reduzir o uso de largura de banda da Internet
-- Sincronização minimizada ou zero
-- Acessível a dispositivos com recursos limitados (\<1 GB de RAM, \<100 MB de espaço em disco, 1 CPU)
-
-A tabela abaixo mostra as funções dos clientes existentes que podem ser entregues pela Portal Network, permitindo que os usuários acessem essas funções em dispositivos com recursos muito baixos.
-
-### As redes da Portal Network {#the-portal-networks}
-
-| Cliente leve de Beacon | Rede de estado               | Propagação de transações | Rede de histórico | Índice canônico de Txn |
-| ---------------------- | ---------------------------- | ------------------------ | ----------------- | ---------------------- |
-| Cliente leve da Beacon Chain | Armazenamento de contas e contratos | Mempool leve             | Cabeçalhos        | TxHash > Hash, Índice  |
-| Dados do protocolo     |                              |                          | Corpos de blocos  |                        |
-|                        |                              |                          | Recibos           |                        |
-
-## Diversidade de clientes por padrão {#client-diversity-as-default}
-
-Os desenvolvedores da Portal Network também fizeram a escolha de design de construir quatro clientes separados da Portal Network desde o primeiro dia.
-
-Os clientes da Portal Network são:
-
-- [Trin](https://github.com/ethereum/trin): escrito em Rust
-- [Fluffy](https://fluffy.guide): escrito em Nim
-- [Ultralight](https://github.com/ethereumjs/ultralight): escrito em TypeScript
-- [Shisui](https://github.com/zen-eth/shisui): escrito em Go
-
-Ter várias implementações de clientes independentes aumenta a resiliência e a descentralização da rede Ethereum.
-
-Se um cliente apresentar problemas ou vulnerabilidades, outros clientes poderão continuar operando sem problemas, evitando um ponto único de falha. Além disso, diversas implementações de clientes promovem a inovação e a concorrência, impulsionando melhorias e reduzindo o risco de monocultura dentro do ecossistema.
+- [Cliente Nimbus Portal](https://fluffy.guide) (anteriormente Fluffy): escrito em Nim, e o único ainda em desenvolvimento ativo
+- [Trin](https://github.com/ethereum/trin): escrito em Rust, não é mais mantido
+- [Ultralight](https://github.com/ethereumjs/ultralight): escrito em TypeScript, sem atualizações desde meados de 2025
+- [Shisui](https://github.com/zen-eth/shisui): escrito em Go, sem atualizações desde meados de 2025
 
 ## Leitura adicional {#further-reading}
 
-- [A Portal Network (Piper Merriam na Devcon Bogotá)](https://www.youtube.com/watch?v=0stc9jnQLXA).
+- [Especificações da Portal Network](https://github.com/ethereum/portal-network-specs)
+- [Usando o protocolo da Portal Network para expiração de histórico](https://ethresear.ch/t/using-portal-network-protocol-for-history-expiry/22658)
+- [Expiração de histórico parcial](https://blog.ethereum.org/2025/07/08/partial-history-exp)
+- [A Portal Network (Piper Merriam na Devcon Bogotá)](https://www.youtube.com/watch?v=0stc9jnQLXA)
 - [Discord da Portal Network](https://discord.gg/CFFnmE7Hbs)
 - [Site da Portal Network](https://www.ethportal.net/)

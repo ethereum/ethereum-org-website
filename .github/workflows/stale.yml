@@ -41,6 +41,6 @@ jobs:
           days-before-issue-close: 150
           days-before-pr-close: -1
           close-issue-reason: "not_planned"
-          exempt-issue-labels: "pinned 📌,good first issue,help wanted,epic 💪"
+          exempt-issue-labels: "pinned 📌,good first issue,help wanted,epic 💪,needs product review 🕵️"
           exempt-pr-labels: "pinned 📌"
           operations-per-run: 250

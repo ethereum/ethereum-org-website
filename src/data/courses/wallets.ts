@@ -1,0 +1,272 @@
+import type { Course } from "./types"
+
+export const walletsCourse: Course = {
+  id: "wallets",
+  level: "beginner",
+  theme: { hue: 225 },
+  art: "vault",
+  lessons: [
+    {
+      id: "keys",
+      icon: "key",
+      learnMore: "/wallets/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2, art: "vault" },
+        {
+          id: "made",
+          type: "choice",
+          options: ["address", "key", "separate"],
+          correct: ["address"],
+        },
+        { id: "generate", type: "interactive", widget: "key-pair" },
+        {
+          id: "share",
+          type: "choice",
+          options: ["key", "address", "both"],
+          correct: ["address"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "recovery",
+      icon: "scroll",
+      learnMore: "/guides/how-to-create-an-ethereum-account/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "lost",
+          type: "choice",
+          options: ["same", "new", "empty"],
+          correct: ["same"],
+        },
+        { id: "restore", type: "interactive", widget: "restore-wallet" },
+        { id: "storage", type: "interactive", widget: "phrase-sort" },
+        {
+          id: "scam",
+          type: "choice",
+          options: ["type", "half", "close"],
+          correct: ["close"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "signing",
+      icon: "pen",
+      learnMore: "/guides/how-to-use-a-wallet/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "proves",
+          type: "choice",
+          options: ["identity", "key", "secret"],
+          correct: ["key"],
+        },
+        { id: "sign", type: "interactive", widget: "sign-verify" },
+        {
+          id: "blind",
+          type: "choice",
+          options: ["sign", "reject", "padlock"],
+          correct: ["reject"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "addresses",
+      icon: "at",
+      learnMore: "/security/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        { id: "spot", type: "interactive", widget: "address-check" },
+        {
+          id: "poison",
+          type: "choice",
+          options: ["history", "ends", "source"],
+          correct: ["source"],
+        },
+        {
+          id: "wrong",
+          type: "choice",
+          options: ["support", "bounce", "owner"],
+          correct: ["owner"],
+        },
+        {
+          id: "verify",
+          type: "fill",
+          blanks: ["ends", "whole"],
+          extras: ["middle", "key", "short"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "custody",
+      icon: "wallet",
+      learnMore: "/wallets/find-wallet/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "control",
+          type: "choice",
+          options: ["password", "exchange", "phrase"],
+          correct: ["exchange"],
+        },
+        { id: "storage", type: "concept", paragraphs: 2 },
+        { id: "sort", type: "interactive", widget: "custody-sort" },
+        {
+          id: "savings",
+          type: "choice",
+          options: ["exchange", "hardware", "phone"],
+          correct: ["hardware"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "first-eth",
+      icon: "gift",
+      learnMore: "/get-eth/",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "easiest",
+          type: "choice",
+          options: ["friend", "exchange", "app"],
+          correct: ["friend"],
+        },
+        {
+          id: "steps",
+          type: "order",
+          items: ["copy", "share", "test", "check", "rest"],
+        },
+        {
+          id: "exchange",
+          type: "choice",
+          options: ["signup", "id", "freeze", "phrase"],
+          correct: ["signup", "id", "freeze"],
+          multi: true,
+        },
+        {
+          id: "keep",
+          type: "choice",
+          options: ["fee", "open", "bank"],
+          correct: ["fee"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+    {
+      id: "connect",
+      icon: "link",
+      learnMore: "/guides/how-to-use-a-wallet/#connecting-to-projects",
+      steps: [
+        { id: "intro", type: "concept", paragraphs: 2 },
+        {
+          id: "game",
+          type: "choice",
+          options: ["address", "key", "spend"],
+          correct: ["address"],
+        },
+        { id: "sort", type: "interactive", widget: "popup-sort" },
+        {
+          id: "surprise",
+          type: "choice",
+          options: ["approve", "reject", "smaller"],
+          correct: ["reject"],
+        },
+        { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
+      ],
+    },
+  ],
+  exam: [
+    {
+      id: "made",
+      source: "/developers/docs/accounts/#account-creation",
+      type: "choice",
+      options: ["separate", "address", "key"],
+    },
+    {
+      id: "public",
+      source: "/wallets/",
+      type: "choice",
+      options: ["send", "move", "key"],
+    },
+    {
+      id: "restore",
+      source:
+        "/guides/how-to-use-a-wallet/#can-i-use-the-same-address-on-multiple-devices",
+      type: "choice",
+      options: ["new", "same", "empty"],
+    },
+    {
+      id: "website",
+      source: "/security/#protect-private-keys",
+      type: "choice",
+      options: ["type", "close", "part"],
+    },
+    {
+      id: "signature",
+      source: "/guides/how-to-use-a-wallet/#connecting-to-projects",
+      type: "choice",
+      options: ["identity", "key", "reveal", "exact"],
+      multi: true,
+    },
+    {
+      id: "unreadable",
+      source: "/security/#double-check-transactions",
+      type: "choice",
+      options: ["reject", "sign", "padlock"],
+    },
+    {
+      id: "lookalike",
+      source: "/security/",
+      type: "choice",
+      options: ["recent", "trusted", "ends"],
+    },
+    {
+      id: "mistake",
+      source: "/security/",
+      type: "choice",
+      options: ["holder", "support", "bounce"],
+    },
+    {
+      id: "frozen",
+      source:
+        "/guides/how-to-create-an-ethereum-account/#is-having-my-own-wallet-safer-than-keeping-my-funds-on-an-exchange",
+      type: "choice",
+      options: ["password", "phrase", "exchange"],
+    },
+    {
+      id: "savings",
+      source: "/security/#use-hardware-wallet",
+      type: "choice",
+      options: ["phone", "split", "exchange"],
+    },
+    {
+      id: "peer",
+      source: "/get-eth/",
+      type: "choice",
+      options: ["exchange", "app", "friend"],
+    },
+    {
+      id: "signup",
+      source: "/get-eth/",
+      type: "choice",
+      options: ["account", "instant", "phrase"],
+    },
+    {
+      id: "connect",
+      source: "/guides/how-to-use-a-wallet/#connecting-to-projects",
+      type: "choice",
+      options: ["key", "address", "spend"],
+    },
+    {
+      id: "fee",
+      source: "/guides/how-to-use-a-wallet/#send-cryptocurrency",
+      type: "choice",
+      options: ["connect", "sign", "send"],
+    },
+  ],
+}
