@@ -32,7 +32,7 @@ import {
   serializeFrontmatter,
   setFrontmatterFieldText,
 } from "./lib/llm/frontmatter"
-import { TRANSLATABLE_ATTRIBUTES } from "./lib/shared-patterns"
+import { INLINE_CODE_RE, TRANSLATABLE_ATTRIBUTES } from "./lib/shared-patterns"
 import { fenceCode } from "./lib/verify-structure"
 
 /** Pseudo-section id for prose between the frontmatter and the first heading */
@@ -401,8 +401,8 @@ function codeSpans(text: string, skip: Set<string>): Map<string, number> {
     if (startsSection(line))
       section = line.match(/\{#([^}]+)\}\s*$/)?.[1] ?? null
     if (section !== null && skip.has(section)) continue
-    for (const m of line.matchAll(/`([^`\n]+)`/g))
-      counts.set(m[1], (counts.get(m[1]) ?? 0) + 1)
+    for (const [span] of line.matchAll(INLINE_CODE_RE))
+      counts.set(span, (counts.get(span) ?? 0) + 1)
   }
   return counts
 }
@@ -540,7 +540,7 @@ export function findStructuralRegressions(
     if (english !== 0 && locale !== english) {
       out.push({
         kind: "code-span",
-        detail: `\`${span}\` not updated in locale`,
+        detail: `${span} not updated in locale`,
       })
     }
   }

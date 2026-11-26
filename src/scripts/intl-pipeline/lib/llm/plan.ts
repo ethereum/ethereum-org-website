@@ -20,14 +20,17 @@ import {
   type CodeBlock,
   extractCodeFencesOnly,
   extractComments,
+  liftInlineCode,
 } from "./code-block-extractor"
 import { createFileBudget, type FileBudget } from "./cost-meter"
 import {
   batchSections,
   buildIncrementalPrompt,
   buildSectionList,
+  type CodeLoss,
   extractJsonSections,
   extractSections,
+  sectionCodeLoss,
   sectionWireBytes,
 } from "./incremental-translate"
 import { buildCommentPrompt } from "./prompt-builder"
@@ -67,6 +70,10 @@ export interface IncrementalPlan {
    * ones.
    */
   codeBlocks: Map<string, CodeBlock[]>
+  /** Code a TRANSLATE section's reply lost against what was sent; null for JSON */
+  codeLoss: ((id: string, reply: string) => CodeLoss | null) | null
+  /** Inline code spans lifted out of each TRANSLATE section, by tag index */
+  inlineCode: Map<string, string[]>
   /**
    * Prompt bytes for the separate code-comment call, 0 when the lifted fences
    * hold no comments. Rendered from the real prompt and counted in
@@ -128,6 +135,24 @@ export function planIncrementalBatches(
       section.content = prose
       // CONTEXT sections are never returned, so nothing restores into them.
       if (section.action === "TRANSLATE") codeBlocks.set(section.id, blocks)
+    }
+  }
+
+  // What each TRANSLATE section carries before its inline code is lifted: the
+  // reply, once restored, is checked against it.
+  const sentContent = new Map(
+    sectionList
+      .filter((s) => s.action === "TRANSLATE")
+      .map((s) => [s.id, s.content || ""])
+  )
+  const inlineCode = new Map<string, string[]>()
+  if (fileType === "markdown") {
+    for (const section of sectionList) {
+      if (section.action !== "TRANSLATE") continue
+      const { prose, spans } = liftInlineCode(section.content || "")
+      if (spans.length === 0) continue
+      section.content = prose
+      inlineCode.set(section.id, spans)
     }
   }
 
@@ -280,6 +305,15 @@ export function planIncrementalBatches(
     overBudget: projectedBytes > budget.limitBytes,
     tooManyBatches: planned.length > MAX_BATCHES_PER_FILE,
     codeBlocks,
+    codeLoss:
+      fileType === "markdown"
+        ? (id, reply) => {
+            const sent = sentContent.get(id)
+            if (sent === undefined) return null
+            return sectionCodeLoss(sent, reply, inlineCode.get(id))
+          }
+        : null,
+    inlineCode,
     commentPromptBytes,
   }
 }
