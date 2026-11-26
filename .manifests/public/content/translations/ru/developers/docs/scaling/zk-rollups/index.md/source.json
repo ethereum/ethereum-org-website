@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/scaling/zk-rollups/index.md",
-  "generatedAt": "2026-10-14T17:47:22.904Z",
-  "rootHash": "c4690f83039b",
+  "generatedAt": "2026-11-25T10:24:19.207Z",
+  "rootHash": "90fb5581218a",
   "tree": {
-    "contentHash": "4d4502bfd38b",
-    "anchorHash": "8edd18f75aac",
+    "contentHash": "2d53dc3d31bc",
+    "anchorHash": "3c4da6a3c5e6",
     "children": {
       "frontmatter:title": {
         "contentHash": "f72c38cd19cf",
@@ -79,7 +79,7 @@
         ]
       },
       "what-are-zk-rollups": {
-        "contentHash": "65bd40dba267",
+        "contentHash": "966900a35786",
         "anchorHash": "2bf86ce193d0",
         "labelHash": "9cb646dd1362",
         "children": {
@@ -104,7 +104,7 @@
             "anchorHash": "36b0991a1869"
           },
           "prose:8": {
-            "contentHash": "f5e15d95a83e",
+            "contentHash": "949e3bbcc5eb",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
@@ -287,8 +287,8 @@
         ]
       },
       "how-do-zk-rollups-work": {
-        "contentHash": "81808031f2fd",
-        "anchorHash": "ddbacbd9000b",
+        "contentHash": "673a08a0d3c7",
+        "anchorHash": "25745b1c4870",
         "labelHash": "d000aa1ea219",
         "children": {
           "_label": {
@@ -514,8 +514,8 @@
             ]
           },
           "validity-proofs": {
-            "contentHash": "49c4ed902212",
-            "anchorHash": "337d1062dbee",
+            "contentHash": "24c98b9bef37",
+            "anchorHash": "b9616ca8b187",
             "labelHash": "c953230092be",
             "children": {
               "_label": {
@@ -547,12 +547,12 @@
                 "anchorHash": "d9bf42e2db1b"
               },
               "prose:6": {
-                "contentHash": "77416c16d3f3",
+                "contentHash": "aa05d2398736",
                 "anchorHash": "e3b0c44298fc"
               },
               "validity-proofs-in-zk-rollups": {
-                "contentHash": "add2c04bb676",
-                "anchorHash": "e2c84f5cb440",
+                "contentHash": "0fb031639781",
+                "anchorHash": "8f85b9e3b8ea",
                 "labelHash": "3544c2011a22",
                 "children": {
                   "_label": {
@@ -579,8 +579,8 @@
                     ]
                   },
                   "_auto:proof-verification": {
-                    "contentHash": "6dae82f4bbca",
-                    "anchorHash": "4b9f7d802648",
+                    "contentHash": "c20722905b20",
+                    "anchorHash": "f5818652a990",
                     "labelHash": "fea025b7266e",
                     "children": {
                       "_label": {
@@ -590,11 +590,16 @@
                       "prose:0": {
                         "contentHash": "88116693f089",
                         "anchorHash": "e3b0c44298fc"
+                      },
+                      "component:2": {
+                        "contentHash": "e3b0c44298fc",
+                        "anchorHash": "e3b0c44298fc"
                       }
                     },
                     "childrenOrder": [
                       "_label",
-                      "prose:0"
+                      "prose:0",
+                      "component:2"
                     ]
                   }
                 },
@@ -685,7 +690,7 @@
         ]
       },
       "how-do-zk-rollup-fees-work": {
-        "contentHash": "76cf76d11f50",
+        "contentHash": "713ee76a73dd",
         "anchorHash": "cd9ceab34c49",
         "labelHash": "6fd8860ede3c",
         "children": {
@@ -758,7 +763,7 @@
             "anchorHash": "70b6d3bbe669"
           },
           "prose:17": {
-            "contentHash": "7b1adba98bf8",
+            "contentHash": "b3cc0122002d",
             "anchorHash": "e3b0c44298fc"
           },
           "link:8": {
@@ -1110,7 +1115,7 @@
       },
       "further-reading-on-zk-rollups": {
         "contentHash": "f76206f149a0",
-        "anchorHash": "3028564091fc",
+        "anchorHash": "572bdf9a9093",
         "labelHash": "f6f4f51b422d",
         "children": {
           "_label": {
@@ -1179,7 +1184,7 @@
           },
           "link:7": {
             "contentHash": "00a7c3098009",
-            "anchorHash": "8f49a079be9a"
+            "anchorHash": "ff0f70549a03"
           },
           "prose:19": {
             "contentHash": "3973e022e932",
@@ -1303,5 +1308,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+  "sourceCommitSha": "2a4de29685c0f579e19dadc80da2e7ba58749e3e"
 }

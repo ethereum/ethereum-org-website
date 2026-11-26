@@ -1,5 +1,10 @@
 # Swahili (sw) -- Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.5/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: ufungumanisho typo to ufungamanisho, by BALs to na BALs. Open: client regressed kiteja to mteja/wateja, validator plural, Piga simu for call, Kisheria for enshrined, coined terms.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

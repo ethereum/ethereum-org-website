@@ -105,6 +105,8 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
     { getAllWalletSlugs, WALLET_PERSONA_IDS },
     { layer2Data },
     { getNetworkHref },
+    { COURSES },
+    { courseHref },
   ] = await Promise.all([
     import("@/data/apps/categories"),
     import("@/lib/data"),
@@ -113,6 +115,8 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
     import("@/lib/utils/walletData"),
     import("@/data/networks/networks"),
     import("@/lib/utils/networkData"),
+    import("@/data/courses"),
+    import("@/lib/courses/constants"),
   ])
 
   // discoverStaticPages() excludes dynamic segments, so add known
@@ -155,6 +159,9 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
 
   const networkDetailPaths = layer2Data.map(({ slug }) => getNetworkHref(slug))
 
+  // Course overviews only: lessons and exams are kept from crawlers
+  const coursePaths = COURSES.map(({ id }) => courseHref(id))
+
   return [
     ...devToolPaths,
     ...devToolDetailPaths,
@@ -163,6 +170,7 @@ async function getDynamicIntlPagePaths(): Promise<string[]> {
     ...walletPersonaPaths,
     ...walletDetailPaths,
     ...networkDetailPaths,
+    ...coursePaths,
   ]
 }
 

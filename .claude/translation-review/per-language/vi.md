@@ -1,5 +1,10 @@
 # Vietnamese (vi) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: slot to khe (regression), optimistic rollup to Rollup lac quan x4. Open: claim as yeu cau nhan, equivocating as lap lo, tien boa for tip, storage as bo nho, locale-wide casing leak.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

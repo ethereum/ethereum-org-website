@@ -20,6 +20,8 @@ export const ns = [
   "page-about",
   "page-assets",
   "page-community",
+  "page-courses",
+  "component-account",
   "page-gas",
   "page-index",
   "page-learn",

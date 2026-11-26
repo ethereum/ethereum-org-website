@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "vi",
-  "translatedAt": "2026-06-02T16:06:40.604Z",
-  "englishManifestHash": "b85c9cbd95a5",
+  "translatedAt": "2026-11-25T10:12:46.584Z",
+  "englishManifestHash": "58e299a394d9",
   "placeholderOrder": [
     "LINK-54fa0a",
     "LINK-c8fdd8",
@@ -27,7 +27,7 @@
     "LINK-ff40e2",
     "LINK-2a467b",
     "LINK-550ad4",
-    "LINK-3652c8",
+    "LINK-120d95",
     "LINK-23e3bf",
     "LINK-fed9cb",
     "LINK-1ba539",
@@ -182,10 +182,10 @@
         "url": "/roadmap/pectra"
       }
     },
-    "LINK-3652c8": {
+    "LINK-120d95": {
       "type": "link",
       "values": {
-        "url": "https://eips.ethereum.org/EIPS/eip-8080"
+        "url": "https://eips.ethereum.org/EIPS/eip-8061"
       }
     },
     "LINK-23e3bf": {
@@ -275,7 +275,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-02T16:06:40.604Z",
+      "translatedAt": "2026-11-25T10:12:46.584Z",
       "status": "success"
     }
   }

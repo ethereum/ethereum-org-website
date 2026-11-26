@@ -3,7 +3,7 @@ name: Listing research
 description: Sourced research on outside contributors' listing requests in issues, and replies when the author answers a listing check on an issue or PR
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
   issue_comment:
     types: [created]
   workflow_dispatch:
@@ -34,6 +34,9 @@ on:
         EVENT: ${{ github.event_name }}
         ITEM: ${{ github.event.issue.number || inputs.item }}
         COMMENT: ${{ github.event.comment.id }}
+        ACTION: ${{ github.event.action }}
+        SENDER: ${{ github.event.sender.login }}
+        BODY_EDITED: ${{ github.event.changes.body != null }}
         LIVE: ${{ vars.LISTING_RESEARCH_LIVE }}
       run: |
         if [ "$EVENT" = workflow_dispatch ]; then
@@ -41,7 +44,10 @@ on:
           exit 0
         fi
         [ "$LIVE" = true ] || { echo "Set the LISTING_RESEARCH_LIVE variable to true to run on new issues and replies"; exit 1; }
-        if [ "$EVENT" = issues ]; then
+        if [ "$ACTION" = edited ]; then
+          [ "$BODY_EDITED" = true ] || exit 1
+          node .github/scripts/listing-research.mjs match-edit "$ITEM" "$SENDER"
+        elif [ "$EVENT" = issues ]; then
           node .github/scripts/listing-research.mjs match-issue "$ITEM"
         else
           node .github/scripts/listing-research.mjs match-reply "$ITEM" "$COMMENT"
@@ -52,9 +58,9 @@ on:
     - dependabot[bot]
     - ethorg-agent[bot]
 if: needs.pre_activation.outputs.listing_result == 'success'
-# Only the author's replies share a group, so a newer reply replaces an older one and nobody else's comment cancels a run.
+# Only the author's replies and edits share a group, so a newer one replaces an older one and nobody else's activity cancels a run.
 concurrency:
-  group: "gh-aw-${{ github.workflow }}-${{ github.event.issue.number || inputs.item }}-${{ github.event_name == 'issue_comment' && github.event.comment.user.login == github.event.issue.user.login && 'author' || github.run_id }}"
+  group: "gh-aw-${{ github.workflow }}-${{ github.event.issue.number || inputs.item }}-${{ github.event.action != 'opened' && github.event.sender.login == github.event.issue.user.login && 'author' || github.run_id }}"
   cancel-in-progress: true
   job-discriminator: ${{ github.run_id }}
 permissions:
@@ -177,7 +183,7 @@ imports:
 
 Research listing request #${{ github.event.issue.number || inputs.item }} in ${{ github.repository }}, an issue or pull request from someone outside the team, following the "Listing research" instructions.
 
-- If `prior` is set in the saved `issue.json` or `pr.json`, a listing check was already posted and the author has replied since (the last entries of `thread`). Start from `prior.record`: re-check only what the reply changes or adds, fetching any sources it gives, keep the rest as it was, and ask only what is still open.
+- If `prior` is set in the saved `issue.json` or `pr.json`, a listing check was already posted and the author has replied since (the last entries of `thread`) or edited the issue body (`body`). Start from `prior.record`: re-check only what the reply or edit changes or adds, fetching any sources it gives, keep the rest as it was, and ask only what is still open.
 - On a pull request, don't review the code or the entry's wording; the PR review does that.
 - The shell only runs the read-only commands `git ls-files|log|show|grep`, `ls`, `cat`, `grep`, `head`, `tail` and `wc`, with pipes allowed. You start in the repo: never `cd`, and use absolute paths for the saved research. Run one command per call: `;`, `&&`, loops, variables, `echo`, `cd`, `git -C` and `$(...)` are denied. A denial means rewrite the command, not that the shell is unavailable.
 - The product's own pages are already saved in `pages/`; `web-fetch` reaches only the allowlisted independent sources.

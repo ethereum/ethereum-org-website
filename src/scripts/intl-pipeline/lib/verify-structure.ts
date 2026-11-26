@@ -28,6 +28,8 @@ import { extractComments } from "./llm/code-block-extractor"
 import {
   FENCED_BLOCK_RE,
   fenceLanguage,
+  inlineCodeDrift,
+  PLACEHOLDER_RESIDUE_RE,
   PROSE_FENCE_TAGS,
   proseLineMask,
   replaceOutsideInlineCode,
@@ -254,6 +256,23 @@ export function verifyMarkdown(
   const hrefDiff = diffMultiset(hrefs(enSrc), hrefs(trSrc))
   if (hrefDiff.length) add("internal-href", hrefDiff.join(", "))
 
+  // Inline code is copied, not translated. A warning, so the gate ships the
+  // file and the translation review restores the span from English.
+  const code = inlineCodeDrift(enSrc, trSrc)
+  const listed = (label: string, spans: string[]) => [
+    ...spans.slice(0, 5).map((c) => `${label} ${c}`),
+    ...(spans.length > 5 ? [`(+${spans.length - 5} more ${label})`] : []),
+  ]
+  if (code.missing.length || code.extra.length)
+    add(
+      "inline-code",
+      [
+        ...listed("missing", code.missing),
+        ...listed("unexpected", code.extra),
+      ].join(", "),
+      "warn"
+    )
+
   // Code fences must survive untouched.
   const ef = fences(enSrc)
   const tf = fences(trSrc)
@@ -399,7 +418,7 @@ export function verifyMarkdown(
   }
 
   // Placeholder residue must never reach shipped output.
-  const residue = trSrc.match(/HTML-PLACEHOLDER-[A-Z]+-[0-9a-f]+/g)
+  const residue = trSrc.match(PLACEHOLDER_RESIDUE_RE)
   if (residue) add("placeholder-residue", [...new Set(residue)].join(", "))
 
   // Empty {#} anchors break the MDX parser (KB pattern 23). Scoped to prose:
@@ -673,7 +692,7 @@ export function verifyJson(
         add("json-tag-unbalanced", k)
     }
 
-    if (trStr.includes("HTML-PLACEHOLDER")) add("placeholder-residue", k)
+    if (/HTML-PLACEHOLDER/i.test(trStr)) add("placeholder-residue", k)
   }
   return f
 }

@@ -1,5 +1,10 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: equivocating to dogla pan x2 (pos); follow-up fixed erc-721 L169 inversion, U+3002 x3, portal L17 Latin full stop. Open: actor as adakar (verifying), creation bytecode as takhliqi, burn as barn vs jalana, Western digits in prose; erc-1363 U+3002 pre-existing.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

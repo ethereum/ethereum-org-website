@@ -12,6 +12,7 @@ import {
   FENCED_BLOCK_RE,
   fenceLanguage,
   FRONTMATTER_RE,
+  INLINE_CODE_RE,
   PROSE_FENCE_TAGS,
 } from "../shared-patterns"
 
@@ -44,6 +45,9 @@ export interface CodeComment {
 
 const PLACEHOLDER_PREFIX = "<!-- CODE_BLOCK_"
 const PLACEHOLDER_SUFFIX = " -->"
+
+/** Any fence placeholder line a prose reply must keep exactly once. */
+export const CODE_BLOCK_MARKER_RE = /<!-- CODE_BLOCK_\d+ -->/g
 
 function makePlaceholder(index: number): string {
   return `${PLACEHOLDER_PREFIX}${index}${PLACEHOLDER_SUFFIX}`
@@ -121,6 +125,37 @@ export function extractCodeFencesOnly(markdown: string): ExtractionResult {
     prose: restoreCodeBlocks(prose, proseBlocks),
     blocks: blocks.filter((b) => !proseBlocks.includes(b)),
   }
+}
+
+export const inlineCodeTag = (i: number) => `<HTML-PLACEHOLDER-CODE-${i} />`
+const INLINE_CODE_TAG_RE = /<HTML-PLACEHOLDER-CODE-(\d+)\s*\/?>/g
+
+/**
+ * Swap each inline code span outside fences for a numbered placeholder, as the
+ * full path's normalizer does, so the model can't translate or reword code.
+ * `spans[i]` is what tag i stands for.
+ */
+export function liftInlineCode(markdown: string): {
+  prose: string
+  spans: string[]
+} {
+  const spans: string[] = []
+  const lift = (text: string) =>
+    text.replace(INLINE_CODE_RE, (span) => inlineCodeTag(spans.push(span) - 1))
+  let prose = ""
+  let last = 0
+  FENCED_BLOCK_RE.lastIndex = 0
+  for (const m of markdown.matchAll(FENCED_BLOCK_RE)) {
+    prose += lift(markdown.slice(last, m.index)) + m[0]
+    last = m.index + m[0].length
+  }
+  return { prose: prose + lift(markdown.slice(last)), spans }
+}
+
+/** Put lifted spans back; a tag the reply dropped stays lost for the checks to see. */
+export function restoreInlineCode(text: string, spans: string[]): string {
+  if (spans.length === 0) return text
+  return text.replace(INLINE_CODE_TAG_RE, (tag, i) => spans[Number(i)] ?? tag)
 }
 
 /**

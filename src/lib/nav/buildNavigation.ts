@@ -15,7 +15,7 @@ type TranslateFn = (key: string) => string
  * highlight and the breadcrumb IA in step; enforced by tests/unit/routing.
  */
 export const NAV_SECTION_ROOTS: Record<NavSectionKey, string[]> = {
-  learn: ["/learn/", "/values/", "/videos/", "/reports/"],
+  learn: ["/learn/", "/values/", "/videos/", "/reports/", "/courses/"],
   use: ["/start/", "/use-cases/", "/staking/"],
   build: ["/developers/"],
   roadmap: ["/roadmap/"],
@@ -176,6 +176,7 @@ export const buildNavigation = (
             href: "/ethereum-history-founder-and-ownership/",
           },
           { label: t("glossary"), href: "/glossary/" },
+          { label: t("nav-courses-label"), href: "/courses/" },
           { label: t("quizzes"), href: "/quizzes/" },
           { label: t("videos"), href: "/videos/" },
           { label: t("nav-reports-label"), href: "/reports/" },

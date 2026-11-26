@@ -35,6 +35,94 @@
       "expiresAt": "2026-11-04T21:44:36.327Z"
     },
     {
+      "file": "public/content/developers/docs/networking-layer/portal-network/index.md",
+      "locale": "ja",
+      "englishHash": "65bd66688cd5",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ja/developers/docs/networking-layer/portal-network/index.md: 1 check(s) failed -- structure jsx-tags: PortalHistoryDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T09:53:44.080Z",
+      "lastSeen": "2026-11-25T09:53:44.080Z",
+      "expiresAt": "2026-12-09T09:53:44.080Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/optimistic-rollups/index.md",
+      "locale": "ar",
+      "englishHash": "8ec6c61b4d46",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ar/developers/docs/scaling/optimistic-rollups/index.md: 1 check(s) failed -- structure jsx-tags: OptimisticRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:13:28.741Z",
+      "lastSeen": "2026-11-25T10:13:28.741Z",
+      "expiresAt": "2026-12-09T10:13:28.741Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/optimistic-rollups/index.md",
+      "locale": "bn",
+      "englishHash": "8ec6c61b4d46",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/bn/developers/docs/scaling/optimistic-rollups/index.md: 1 check(s) failed -- structure jsx-tags: OptimisticRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:14:02.410Z",
+      "lastSeen": "2026-11-25T10:14:02.410Z",
+      "expiresAt": "2026-12-09T10:14:02.410Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "ar",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ar/developers/docs/scaling/zk-rollups/index.md: 3 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0), Alert (en=2 tr=0), AlertEmoji (en=1 tr=0), AlertContent (en=2 tr=0), AlertTitle (en=2 tr=0), AlertDescription (en=2 tr=0), ",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:20:40.804Z",
+      "lastSeen": "2026-11-25T10:20:40.804Z",
+      "expiresAt": "2026-12-09T10:20:40.804Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "fr",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/fr/developers/docs/scaling/zk-rollups/index.md: 1 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:21:39.937Z",
+      "lastSeen": "2026-11-25T10:21:39.937Z",
+      "expiresAt": "2026-12-09T10:21:39.937Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "sw",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/sw/developers/docs/scaling/zk-rollups/index.md: 2 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0), Alert (en=2 tr=0), AlertEmoji (en=1 tr=0), AlertContent (en=2 tr=0), AlertTitle (en=2 tr=0), AlertDescription (en=2 tr=0), ",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:29:41.982Z",
+      "lastSeen": "2026-11-25T10:29:41.982Z",
+      "expiresAt": "2026-12-09T10:29:41.982Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "tr",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/tr/developers/docs/scaling/zk-rollups/index.md: 2 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0), Alert (en=2 tr=0), AlertEmoji (en=1 tr=0), AlertContent (en=2 tr=0), AlertTitle (en=2 tr=0), AlertDescription (en=2 tr=0), ",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:25:55.482Z",
+      "lastSeen": "2026-11-25T10:25:55.482Z",
+      "expiresAt": "2026-12-09T10:25:55.482Z"
+    },
+    {
+      "file": "public/content/developers/docs/scaling/zk-rollups/index.md",
+      "locale": "ur",
+      "englishHash": "90fb5581218a",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ur/developers/docs/scaling/zk-rollups/index.md: 2 check(s) failed -- structure jsx-tags: ZkRollupDiagram (en=1 tr=0), VideoWatch (en=1 tr=0), Alert (en=2 tr=0), AlertEmoji (en=1 tr=0), AlertContent (en=2 tr=0), AlertTitle (en=2 tr=0), AlertDescription (en=2 tr=0), ",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:26:14.246Z",
+      "lastSeen": "2026-11-25T10:26:14.246Z",
+      "expiresAt": "2026-12-09T10:26:14.246Z"
+    },
+    {
       "file": "public/content/developers/docs/smart-contracts/security/index.md",
       "locale": "bn",
       "englishHash": "26d9305a621c",
@@ -99,6 +187,28 @@
       "firstSeen": "2026-10-21T21:58:56.766Z",
       "lastSeen": "2026-10-21T21:58:56.766Z",
       "expiresAt": "2026-11-04T21:58:56.766Z"
+    },
+    {
+      "file": "public/content/developers/docs/smart-contracts/verifying/index.md",
+      "locale": "pl",
+      "englishHash": "7b6b9fb6fae2",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/pl/developers/docs/smart-contracts/verifying/index.md: 1 check(s) failed -- structure internal-href: /developers/docs/smart-contracts/compiling/#web-applications (en=1 tr=2)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T09:57:59.439Z",
+      "lastSeen": "2026-11-25T09:57:59.439Z",
+      "expiresAt": "2026-12-09T09:57:59.439Z"
+    },
+    {
+      "file": "public/content/developers/docs/smart-contracts/verifying/index.md",
+      "locale": "te",
+      "englishHash": "7b6b9fb6fae2",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/te/developers/docs/smart-contracts/verifying/index.md: 1 check(s) failed -- structure jsx-tags: SourceVerifyDiagram (en=1 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:00:25.306Z",
+      "lastSeen": "2026-11-25T10:00:25.306Z",
+      "expiresAt": "2026-12-09T10:00:25.306Z"
     },
     {
       "file": "public/content/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md",
@@ -363,6 +473,17 @@
       "firstSeen": "2026-11-17T03:22:52.974Z",
       "lastSeen": "2026-11-23T07:22:45.047Z",
       "expiresAt": "2026-12-07T07:22:45.047Z"
+    },
+    {
+      "file": "public/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md",
+      "locale": "zh",
+      "englishHash": "81a940ef598d",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/zh/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md: 1 check(s) failed -- structure internal-href: /developers/docs/evm/ (en=2 tr=0)",
+      "attempts": 1,
+      "firstSeen": "2026-11-25T10:02:04.042Z",
+      "lastSeen": "2026-11-25T10:02:04.042Z",
+      "expiresAt": "2026-12-09T10:02:04.042Z"
     },
     {
       "file": "src/intl/en/page-developers-tools-descriptions.json",

@@ -18,6 +18,8 @@ Examples shipped:
 - SHA `a1f876f8f` — persona modal
 - SHA `355070dc7` — homepage wrapper after upgrade chain
 
+Content swapped in by a click (a lesson's next step): a plain `next/dynamic` shows its `loading` for at least 300 ms even when the chunk is cached, because React holds a revealed Suspense fallback that long. Fetch it ahead and resolve without suspending: `preloadable()` in `src/lib/courses/preloadable.ts` (lesson widgets and course art, PR #19778).
+
 ## Asset weight
 
 - **SVG: optimize + provide dark variants** rather than filter hacks (SHA `33132d2f8`).
@@ -26,6 +28,7 @@ Examples shipped:
 
 Targets: HTML < 500KB, RSC push calls < 70 (preferably < 40).
 
+- **Per-page message filtering** for a namespace that holds many pages' copy: courses pages cut `page-courses` to what each page renders with `pickCourseMessages()` (`src/lib/courses/messages.ts`), about 470 KB down to 20-30 KB (PR #19778). Strings only some visitors need load on demand from a force-static route: the profile's missed-question prompts come per course from `app/api/courses/prompts/[locale]/[courseId]/route.ts`.
 - **Server Component conversion** (PR #17650 — Footer). If a component has `useTranslation` and one trivial `onClick`, split out the interactive piece (e.g., `GoToTopButton.tsx`) and make the parent a server component using `getTranslations` from `next-intl/server`. ~95% less hydration.
 
 Before/after examples from closed PR #17633: `/en/` 843 → 537KB, `/en/staking/` 595 → 282KB.

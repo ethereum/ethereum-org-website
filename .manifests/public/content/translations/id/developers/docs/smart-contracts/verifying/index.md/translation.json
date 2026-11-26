@@ -1,53 +1,56 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "id",
-  "translatedAt": "2026-06-17T23:08:12.618Z",
-  "englishManifestHash": "df964012ae1c",
+  "translatedAt": "2026-11-25T09:57:20.418Z",
+  "englishManifestHash": "7b6b9fb6fae2",
   "placeholderOrder": [
     "LINK-efc0b7",
     "LINK-444a51",
     "LINK-71c926",
     "LINK-f7cb4b",
     "LINK-c3b131",
-    "LINK-651521",
+    "LINK-df356f",
     "LINK-974120",
-    "LINK-68e15e",
+    "LINK-f6e75e",
     "LINK-430500",
     "LINK-3689a8",
     "LINK-a286a5",
     "LINK-924bee",
     "LINK-92170b",
-    "IMAGE-c82a91",
+    "CODE-9074db",
+    "LINK-ed2fbf",
     "LINK-f10d1a",
     "LINK-367dd1",
     "LINK-cca115",
     "LINK-8ac642",
     "LINK-58b463",
+    "LINK-1e948b",
     "LINK-1eba21",
     "LINK-37fd1e",
     "LINK-4b07e0",
     "LINK-febcba",
-    "LINK-5f6209",
+    "LINK-da3a7f",
     "LINK-593d04",
     "LINK-a47c37",
     "LINK-ff3046",
-    "LINK-ad7f85",
-    "LINK-0ea75a",
-    "LINK-541dd0",
-    "LINK-232447",
+    "LINK-799c79",
+    "LINK-51262d",
+    "LINK-93dc2e",
+    "LINK-efdaa1",
+    "LINK-824c8d",
     "LINK-041e10",
     "LINK-b04b60",
-    "LINK-f74f1d",
+    "LINK-780a6b",
     "LINK-ab661f",
     "LINK-6a2370",
-    "LINK-dc69fc",
+    "LINK-06ca9f",
     "LINK-9cc35c"
   ],
   "placeholderMap": {
-    "IMAGE-c82a91": {
-      "type": "image",
+    "CODE-9074db": {
+      "type": "inline-code",
       "values": {
-        "path": "./source-code-verification.png"
+        "content": "eth_getCode"
       }
     },
     "LINK-efc0b7": {
@@ -80,10 +83,10 @@
         "url": "/developers/docs/smart-contracts/languages/"
       }
     },
-    "LINK-651521": {
+    "LINK-df356f": {
       "type": "link",
       "values": {
-        "url": "https://docs.soliditylang.org/en/v0.8.15/metadata.html"
+        "url": "https://docs.soliditylang.org/en/latest/metadata.html"
       }
     },
     "LINK-974120": {
@@ -92,10 +95,10 @@
         "url": "https://playground.sourcify.dev"
       }
     },
-    "LINK-68e15e": {
+    "LINK-f6e75e": {
       "type": "link",
       "values": {
-        "url": "https://docs.sourcify.dev/docs/full-vs-partial-match/"
+        "url": "https://docs.sourcify.dev/docs/exact-match-vs-match/"
       }
     },
     "LINK-430500": {
@@ -128,6 +131,12 @@
         "url": "https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor"
       }
     },
+    "LINK-ed2fbf": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/en/latest/contracts.html#constructor"
+      }
+    },
     "LINK-f10d1a": {
       "type": "link",
       "values": {
@@ -158,6 +167,12 @@
         "url": "https://etherscan.io/contractsVerified/"
       }
     },
+    "LINK-1e948b": {
+      "type": "link",
+      "values": {
+        "url": "https://info.etherscan.com/types-of-contract-verification/"
+      }
+    },
     "LINK-1eba21": {
       "type": "link",
       "values": {
@@ -182,10 +197,10 @@
         "url": "https://eth.blockscout.com/verified-contracts"
       }
     },
-    "LINK-5f6209": {
+    "LINK-da3a7f": {
       "type": "link",
       "values": {
-        "url": "https://sourcify.dev/#/verifier"
+        "url": "https://verify.sourcify.dev"
       }
     },
     "LINK-593d04": {
@@ -206,28 +221,34 @@
         "url": "https://docs.soliditylang.org/en/v0.8.15/natspec-format.html"
       }
     },
-    "LINK-ad7f85": {
+    "LINK-799c79": {
       "type": "link",
       "values": {
         "url": "https://docs.sourcify.dev/docs/repository/"
       }
     },
-    "LINK-0ea75a": {
+    "LINK-51262d": {
       "type": "link",
       "values": {
-        "url": "https://docs.ipfs.io/concepts/what-is-ipfs/#what-is-ipfs"
+        "url": "https://verifieralliance.org/"
       }
     },
-    "LINK-541dd0": {
+    "LINK-93dc2e": {
       "type": "link",
       "values": {
-        "url": "https://docs.storacha.network/concepts/content-addressing/"
+        "url": "https://docs.ipfs.tech/concepts/what-is-ipfs/"
       }
     },
-    "LINK-232447": {
+    "LINK-efdaa1": {
       "type": "link",
       "values": {
-        "url": "https://sourcify.dev/#/verifier"
+        "url": "https://verify.sourcify.dev"
+      }
+    },
+    "LINK-824c8d": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.sourcify.dev/docs/monitoring/"
       }
     },
     "LINK-041e10": {
@@ -242,10 +263,10 @@
         "url": "https://tenderly.co/"
       }
     },
-    "LINK-f74f1d": {
+    "LINK-780a6b": {
       "type": "link",
       "values": {
-        "url": "https://docs.tenderly.co/monitoring/contract-verification"
+        "url": "https://docs.tenderly.co/contract-verification"
       }
     },
     "LINK-ab661f": {
@@ -260,10 +281,10 @@
         "url": "https://docs.tenderly.co/contract-verification/hardhat"
       }
     },
-    "LINK-dc69fc": {
+    "LINK-06ca9f": {
       "type": "link",
       "values": {
-        "url": "https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli"
+        "url": "https://docs.tenderly.co/contract-verification/foundry"
       }
     },
     "LINK-9cc35c": {
@@ -275,7 +296,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-17T23:08:12.618Z",
+      "translatedAt": "2026-11-25T09:57:20.418Z",
       "status": "success"
     }
   }

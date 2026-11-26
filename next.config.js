@@ -14,6 +14,18 @@ const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
+// Written by `pnpm learner-db:prepare` on Netlify: whether this deploy gets
+// the learner database, and a preview's own database name. Absent locally
+const learnerDb = (() => {
+  try {
+    return JSON.parse(
+      require("fs").readFileSync(".netlify/learner-db.json", "utf8")
+    )
+  } catch {
+    return {}
+  }
+})()
+
 const experimental = LIMIT_CPUS
   ? {
       // This option could be enabled in the future when flagged as stable, to speed up builds
@@ -47,6 +59,9 @@ module.exports = (phase) => {
       // (e.g. useStakingProductsCardGrid) can opt out of randomization during
       // visual test builds. Server code reads it from process.env directly.
       IS_VISUAL_TEST: process.env.IS_VISUAL_TEST,
+      LEARNER_DB_ENABLED:
+        learnerDb.enabled === undefined ? "" : String(learnerDb.enabled),
+      LEARNER_DB_NAME: learnerDb.database ?? "",
     },
     webpack: (config) => {
       config.module.rules.push({

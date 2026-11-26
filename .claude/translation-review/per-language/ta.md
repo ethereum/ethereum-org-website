@@ -1,5 +1,10 @@
 # Tamil (ta) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.2/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: commitment to urutippadu, deploy regressed twice (npayanpadutha), actors as performers, clients as customers, state root, private key, blob, slot, block explorer, trade-off. Open: batch vs block both thoguthi, trustless liveness, enshrined as urudhi, bidi isolates in glamsterdam.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.5/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

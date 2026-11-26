@@ -20,6 +20,7 @@ Load this reference when planning a review, splitting work, or debugging "agent 
 - Internal hrefs (translated paths, missing parens, image path corruption)
 - Markdown structure (block count vs English, header hierarchy, code-fence integrity)
 - Code-block content (functional code in English; comments may be translated)
+- Inline code (every English `` `backticked` `` span must survive byte for byte; `verify-structure`'s `inline-code` warnings list the `missing` ones, restored on lines the PR changed)
 - Heading anchor IDs (`{#id}` — must be ASCII, no junk appended)
 
 **Doesn't own:**

@@ -1,5 +1,10 @@
 # Turkish (tr) Translation Review Findings
 
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.1/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: block proposer to blok teklifcisi (glamsterdam). Open: at stake rendered stake edilen, geçerlliğini typo (fixed in follow-up), bırak- for drop, suffix harmony on code names.
+
 ## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
 Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
 

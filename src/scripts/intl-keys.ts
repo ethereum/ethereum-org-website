@@ -313,6 +313,18 @@ function yamlIds(root: string) {
   )
 }
 
+/** `page-courses` lesson and exam keys are `${courseId}-...`, built from course data; tests/unit/courses/strings.spec.ts checks them both ways */
+async function courseIds(root: string): Promise<string[]> {
+  const file = path.join(root, "src/data/courses/index.ts")
+  if (!fs.existsSync(file)) return []
+  const { TRACKS }: typeof import("@/data/courses") = await import(
+    pathToFileURL(file).href
+  )
+  return TRACKS.flatMap(({ courses, upcoming = [] }) =>
+    [...courses, ...upcoming].map(({ id }) => id)
+  )
+}
+
 /** Returns "ns key" for each English key nothing references, directly or through a known key family */
 export async function findOrphanedKeys(root: string) {
   const { refs, literals, looseTemplates, diagramPrefixes } =
@@ -324,6 +336,7 @@ export async function findOrphanedKeys(root: string) {
   const quiz = quizKeys((await import(bankUrl.href)).default)
   const pages = pageSegments(root)
   const docsNav = yamlIds(root)
+  const courses = await courseIds(root)
 
   const direct = new Set<string>()
   const anyNs = new Set<string>()
@@ -351,6 +364,8 @@ export async function findOrphanedKeys(root: string) {
           (/^(language|region)-/.test(key) || pages.has(key))) ||
         (ns === "learn-quizzes" && quiz.has(key)) ||
         docsNav.has(key) ||
+        (ns === "page-courses" &&
+          courses.some((id) => key.startsWith(`${id}-`))) ||
         // getLocalizedDescription: `${prefix}-${slugify(name)}-description`
         (ns.endsWith("-descriptions") && key.endsWith("-description")) ||
         (ns === "component-diagrams" &&

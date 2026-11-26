@@ -267,6 +267,8 @@ The worktree is already set up at: {WORKTREE_PATH}
 
 Read files directly from these paths. Do NOT create worktrees or checkout branches.
 
+Structural agents: first run `npx tsx src/scripts/intl-pipeline/verify-structure.ts {LIST_OF_FILES_FOR_THIS_AGENT_CHUNK}` from {WORKTREE_PATH}. In PR mode, a `missing` span in an `inline-code` finding on a line this PR changed is critical: first confirm the span is in the English at the PR head (`git show <PR head>:<english path>`), since the worktree may carry newer English (#103), then put it back, byte for byte, where the translation dropped it or in place of its altered copy (usually listed as `unexpected`). An `unexpected` span with nothing missing is backticks the translation added: leave it. Never run it with an empty file list: it then checks every file. In standalone mode, report `missing` spans without editing: the file may predate an English edit, and only the pipeline carries English changes into translations.
+
 ## Known Patterns from Prior Reviews
 
 {INJECT_KNOWN_PATTERNS_SUMMARY}
