@@ -114,10 +114,10 @@ export const buildNavigation = (
       href: "/learn/",
     },
     featured: {
-      eyebrow: t("nav-eyebrow-most-read"),
-      label: t("ethereum-whitepaper"),
-      description: t("nav-whitepaper-description"),
-      href: "/whitepaper/",
+      eyebrow: t("nav-eyebrow-new"),
+      label: t("nav-courses-label"),
+      description: t("nav-courses-description"),
+      href: "/courses/",
     },
     groups: [
       {
@@ -170,13 +170,13 @@ export const buildNavigation = (
         id: "learn/library",
         label: t("nav-library-label"),
         items: [
+          { label: t("ethereum-whitepaper"), href: "/whitepaper/" },
           { label: t("nav-stories-label"), href: "/stories/" },
           {
             label: t("nav-history-founders-label"),
             href: "/ethereum-history-founder-and-ownership/",
           },
           { label: t("glossary"), href: "/glossary/" },
-          { label: t("nav-courses-label"), href: "/courses/" },
           { label: t("quizzes"), href: "/quizzes/" },
           { label: t("videos"), href: "/videos/" },
           { label: t("nav-reports-label"), href: "/reports/" },
