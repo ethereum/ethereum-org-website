@@ -1,5 +1,10 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.3/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: none needed. ICU binding, glossary forms (Casper FFG, aggregate/rollup terms) and bidi wrappers fine. Open: wrapper use is uneven (`{step}` isolated in gasper keys only); `كخلايا أيام {days}` word order.
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 

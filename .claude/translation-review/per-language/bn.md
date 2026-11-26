@@ -1,5 +1,10 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: 37 values with glossary-lowercased `(l1)`/`(l2)` uppercased (glossary data, #53/#111). Open: expansion of bare L1/L2 to `লেয়ার ১ (L1)` is heavy.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 

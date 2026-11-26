@@ -1,5 +1,10 @@
 # French (fr) Translation Review Findings
 
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: 35 values with `(l1)`/`(l2)` and bare `la l1` uppercased.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.5/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 

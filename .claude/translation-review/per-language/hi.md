@@ -1,5 +1,10 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: `कॉन्ट्रैक्ट` to the glossary and dominant `अनुबंध` in 14 values (#104 drift; zk keys only). Open: injected English parentheticals `(leaves)`, `(bisection)`, `(calldata)`; `उम्मीदवार रूट` for candidate root.
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 
