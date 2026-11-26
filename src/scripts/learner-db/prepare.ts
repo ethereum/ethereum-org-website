@@ -42,7 +42,7 @@ const PREVIEW_DB_PATHS = [
 ]
 const OUTPUT = ".netlify/learner-db.json"
 
-const { CONTEXT, BRANCH, REVIEW_ID, REPOSITORY_URL } = process.env
+const { CONTEXT, BRANCH, HEAD, REVIEW_ID, REPOSITORY_URL } = process.env
 const migrateUrl = process.env.LEARNER_DB_MIGRATE_URL
 
 const write = (enabled: boolean, database?: string) => {
@@ -167,7 +167,7 @@ const main = async () => {
 
   if (CONTEXT === "deploy-preview") {
     if (!REVIEW_ID || !/^\d+$/.test(REVIEW_ID)) return write(false)
-    if (DATABASE_BRANCHES.includes(BRANCH ?? "")) return write(false)
+    if (DATABASE_BRANCHES.includes(HEAD ?? "")) return write(false)
     const wanted = await previewWantsDb(REVIEW_ID).catch((error) => {
       console.warn(`[learner-db] PR lookup failed, no database: ${error}`)
       return false
