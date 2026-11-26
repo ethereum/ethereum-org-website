@@ -68,7 +68,7 @@ This code does two things:
     - **Yes** Non-ABI calls (0x5E)
       - Is there any call data?
         - **Yes** 0x7C (purpose unknown so far)
-        - **No** ETH transfer (0x64): revert on overflow, otherwise add the call value to Storage[6] (Value\*) and stop
+        - **No** ETH transfer (0x64): revert on overflow, otherwise add the call value to `Storage[6]` (`Value*`) and stop
     - **No** ABI calls (0x0D)
 
 </Flowchart>
@@ -172,7 +172,7 @@ To sum it all up, here's a flowchart for the initial code.
     - **Yes** Non-ABI calls (0x5E)
       - Is there any call data?
         - **Yes** 0x7C (purpose unknown so far)
-        - **No** ETH transfer (0x64): revert on overflow, otherwise add the call value to Storage[6] (Value\*) and stop
+        - **No** ETH transfer (0x64): revert on overflow, otherwise add the call value to `Storage[6]` (`Value*`) and stop
     - **No** ABI calls (0x0D)
 
 </Flowchart>
@@ -286,7 +286,7 @@ So we `REVERT` with the same buffer we used for `RETURN` earlier: 0x80 - 0x80+RE
 
 - Call data one to three bytes long, or an unknown method
   - Proxy handler (0x7C)
-    - Read Storage[3], the proxy address
+    - Read `Storage[3]`, the proxy address
       - Copy the call data to memory
         - `DELEGATECALL` the proxy address
           - Copy the return data to memory
@@ -332,19 +332,19 @@ If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler
 <Flowchart>
 
 - Read the method selector, the first four bytes of the call data (0x0D)
-  - Is the selector below 0x3CD8045E?
+  - Is the selector below `0x3cd8045e`?
     - **Yes** Low selectors (0x43)
-      - Is it 0x1f135823?
+      - Is it `0x1f135823`?
         - **Yes** Function at 0xC4
-        - **No** Is it 0x2eb4a7ab?
+        - **No** Is it `0x2eb4a7ab`?
           - **Yes** `merkleRoot()` at 0xED
           - **No** [Proxy handler (0x7C)](#the-handler-at-0x7c)
     - **No** High selectors (0x1E)
-      - Is it 0x3cd8045e?
+      - Is it `0x3cd8045e`?
         - **Yes** `splitter()` at 0x0103
-        - **No** Is it 0x81e580d3?
+        - **No** Is it `0x81e580d3`?
           - **Yes** Function at 0x0138
-          - **No** Is it 0xba0bafb4?
+          - **No** Is it `0xba0bafb4`?
             - **Yes** `currentWindow()` at 0x0158
             - **No** [Proxy handler (0x7C)](#the-handler-at-0x7c)
 

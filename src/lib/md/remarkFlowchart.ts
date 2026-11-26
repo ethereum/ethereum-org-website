@@ -1,45 +1,63 @@
-import { visit } from "unist-util-visit"
+import type {
+  List,
+  ListItem,
+  Nodes,
+  Paragraph,
+  Parent,
+  PhrasingContent,
+  Root,
+} from "mdast"
 
-type MdNode = {
-  type: string
-  value?: string
-  name?: string | null
-  children?: MdNode[]
-  data?: Record<string, unknown>
+// MDX JSX nodes, typed here because mdast-util-mdx-jsx isn't a direct dependency.
+type JsxNode = Parent & { type: `mdxJsx${string}Element`; name: string | null }
+
+type FlowchartNode = {
+  type: "flowchart"
+  data: { hName: string; hProperties: Record<string, unknown> }
+  children: (FlowchartNode | PhrasingContent)[]
 }
+
+type Warn = (message: string) => void
 
 const element = (
   hName: string,
   className: string[],
-  children: MdNode[],
+  children: FlowchartNode["children"],
   attributes: Record<string, string> = {}
-): MdNode => ({
+): FlowchartNode => ({
   type: "flowchart",
   data: { hName, hProperties: { className, ...attributes } },
   children,
 })
 
-const paragraphOf = (item: MdNode) =>
-  item.children?.[0]?.type === "paragraph" ? item.children[0] : undefined
+const isJsx = (
+  node: { type: string } | undefined,
+  type: string,
+  name: string
+) => node?.type === type && (node as JsxNode).name === name
 
-const hasEdgeLabel = (item: MdNode) =>
-  paragraphOf(item)?.children?.[0]?.type === "strong"
+const paragraphOf = (item: ListItem): Paragraph | undefined =>
+  item.children[0]?.type === "paragraph" ? item.children[0] : undefined
 
-const isLeaf = (item: MdNode) =>
-  !item.children?.some((child) => child.type === "list")
+// The intl sanitizer rewrites `**label**` followed by CJK text to
+// `<strong>label</strong>`, so both forms are labels.
+const isLabel = (node?: PhrasingContent) =>
+  node?.type === "strong" || isJsx(node, "mdxJsxTextElement", "strong")
 
-const toList = (items: MdNode[], className: string[]): MdNode =>
-  element("div", ["flowchart-list", ...className], items.map(toItem), {
-    role: "list",
-  })
+const hasEdgeLabel = (item: ListItem) => isLabel(paragraphOf(item)?.children[0])
 
-const outsOf = (item: MdNode) =>
-  item.children?.find((child) => child.type === "list")?.children ?? []
+// A changed bullet character splits a markdown list in two; read them as one.
+const itemsOf = (node: Parent): ListItem[] =>
+  node.children.flatMap((child) =>
+    child.type === "list" ? (child as List).children : []
+  )
+
+const isLeaf = (item: ListItem) => !itemsOf(item).length
 
 // A decision whose one exit ends at once draws that exit beside it, so chains
 // of checks run down the page instead of spreading sideways.
-const sideExitOf = (item: MdNode) => {
-  const outs = outsOf(item)
+const sideExitOf = (item: ListItem) => {
+  const outs = itemsOf(item)
   return outs.filter(hasEdgeLabel).length === 2 &&
     outs.length === 2 &&
     outs.filter(isLeaf).length === 1
@@ -48,20 +66,37 @@ const sideExitOf = (item: MdNode) => {
 }
 
 // Items drawn off-center: a side-exit decision, or a straight run into one.
-const isShifted = (item: MdNode): boolean => {
-  const outs = outsOf(item)
+const isShifted = (item: ListItem): boolean => {
+  const outs = itemsOf(item)
   return (
     sideExitOf(item) !== undefined || (outs.length === 1 && isShifted(outs[0]))
   )
 }
 
-function toItem(item: MdNode): MdNode {
-  const content = [...(paragraphOf(item)?.children ?? [])]
-  const label = content[0]?.type === "strong" ? content.shift() : undefined
-  if (label && content[0]?.type === "text")
-    content[0] = { ...content[0], value: content[0].value?.trimStart() }
+const toList = (items: ListItem[], className: string[], warn: Warn) =>
+  element(
+    "div",
+    ["flowchart-list", ...className],
+    items.map((item) => toItem(item, warn)),
+    { role: "list" }
+  )
 
-  const outs = outsOf(item)
+function toItem(item: ListItem, warn: Warn): FlowchartNode {
+  const content = [...(paragraphOf(item)?.children ?? [])]
+  const label = isLabel(content[0]) ? content.shift() : undefined
+  if (label && content[0]?.type === "text")
+    content[0] = { ...content[0], value: content[0].value.trimStart() }
+
+  const dropped = item.children.filter(
+    (child, i) =>
+      child.type !== "list" && !(i === 0 && child.type === "paragraph")
+  )
+  if (dropped.length)
+    warn(
+      `<Flowchart> draws only the first paragraph of an item; dropped ${dropped.map((child) => child.type).join(", ")}`
+    )
+
+  const outs = itemsOf(item)
   // Shape comes from structure, never wording, so translations can't break it.
   const isDecision = outs.filter(hasEdgeLabel).length >= 2
   const sideExit = sideExitOf(item)
@@ -71,26 +106,33 @@ function toItem(item: MdNode): MdNode {
     isDecision ? ["flowchart-node", "flowchart-decision"] : ["flowchart-node"],
     content
   )
-  const children: MdNode[] = []
+  const children: FlowchartNode[] = []
   if (label)
-    children.push(element("span", ["flowchart-edge"], label.children ?? []))
+    children.push(
+      element(
+        "span",
+        ["flowchart-edge"],
+        (label as Parent).children as PhrasingContent[]
+      )
+    )
   if (sideExit) {
     children.push(
       element(
         "div",
         ["flowchart-head"],
-        [node, toList([sideExit], ["flowchart-side"])]
+        [node, toList([sideExit], ["flowchart-side"], warn)]
       )
     )
     children.push(
       toList(
         outs.filter((out) => out !== sideExit),
-        []
+        [],
+        warn
       )
     )
   } else {
     children.push(node)
-    if (outs.length) children.push(toList(outs, []))
+    if (outs.length) children.push(toList(outs, [], warn))
   }
   return element(
     "div",
@@ -102,17 +144,52 @@ function toItem(item: MdNode): MdNode {
   )
 }
 
+const isFlowchart = (node: { type: string }): node is JsxNode =>
+  isJsx(node, "mdxJsxFlowElement", "Flowchart")
+
+function rootItemsOf(node: JsxNode) {
+  const items = itemsOf(node)
+  if (!items.length)
+    throw new Error(
+      "<Flowchart> must contain a markdown list (check the blank lines around it)"
+    )
+  return items
+}
+
+const shapeOf = (items: ListItem[], depth = 0): string[] =>
+  items.flatMap((item) => [
+    `${depth}${hasEdgeLabel(item) ? "b" : ""}`,
+    ...shapeOf(itemsOf(item), depth + 1),
+  ])
+
+/**
+ * Each `<Flowchart>`'s list as parsed, item by item: depth plus "b" when it
+ * opens with an edge label. The intl gate compares translations against
+ * English with this, so it sees exactly what the chart is drawn from.
+ */
+export function flowchartShapes(tree: Nodes): string[] {
+  if (isFlowchart(tree)) return [shapeOf(rootItemsOf(tree)).join(" ")]
+  return "children" in tree
+    ? (tree.children as Nodes[]).flatMap(flowchartShapes)
+    : []
+}
+
+// A local walk instead of unist-util-visit: the intl gate (lib/gates.ts) loads
+// this plugin from a CJS build that can't import that ESM-only package.
+function transform(node: Nodes, warn: Warn) {
+  if (isFlowchart(node)) {
+    const chart = toList(rootItemsOf(node), ["flowchart-root"], warn)
+    node.children = [chart as unknown as Paragraph]
+    return
+  }
+  if ("children" in node)
+    (node.children as Nodes[]).forEach((child) => transform(child, warn))
+}
+
 // Turns the nested list inside `<Flowchart>` into boxes and arrows: an item's
 // first line is a box, its nested items are the arrows out of it, and a leading
 // **bold** word labels the arrow. A box with two or more labelled arrows is a
 // decision. The markdown stays a plain list, so it translates and reads as text.
-export function remarkFlowchart() {
-  return (tree: MdNode) => {
-    visit(tree, "mdxJsxFlowElement", (node: MdNode) => {
-      if (node.name !== "Flowchart") return
-      const list = node.children?.find((child) => child.type === "list")
-      if (!list) throw new Error("<Flowchart> must contain a markdown list")
-      node.children = [toList(list.children ?? [], ["flowchart-root"])]
-    })
-  }
+export function remarkFlowchart({ warn = console.warn }: { warn?: Warn } = {}) {
+  return (tree: Root) => transform(tree, warn)
 }
