@@ -18,8 +18,8 @@ import {
 
 /**
  * Fetch ETHGlossary terms that appear anywhere in `fileContent` for `locale`.
- * Returns Map<english, translation>, notes appended in parentheses. Network
- * failure returns an empty map: a run without glossary beats no run.
+ * Returns Map<english, translation>, notes appended in parentheses. A /filter
+ * failure returns an empty map; a style-guide failure (loadTermRoles) throws.
  */
 export async function loadGlossary(
   fileContent: string,
