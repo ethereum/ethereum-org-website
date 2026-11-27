@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Le processus de production du cache implique d'abord de remplir séquentiellement 32 Mo de mémoire, puis d'effectuer deux passages de l'algorithme _RandMemoHash_ de Sergio Demian Lerner issu de [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). La sortie est un ensemble de 524 288 valeurs de 64 octets.
+Le processus de production du cache implique d'abord de remplir séquentiellement 32 Mo de mémoire, puis d'effectuer trois passages (`CACHE_ROUNDS`) de l'algorithme _RandMemoHash_ de Sergio Demian Lerner issu de [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). La sortie est un ensemble de 524288 valeurs de 64 octets.
 
 ## Fonction d'agrégation de données {#date-aggregation-function}
 
@@ -220,7 +220,7 @@ Le code suivant doit être ajouté au début si vous souhaitez exécuter la spé
 ```python
 import sha3, copy
 
-# Suppose un ordre des bits petit-boutiste (comme les architectures Intel)
+# Suppose un ordre des bits en little-endian (comme les architectures Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True
