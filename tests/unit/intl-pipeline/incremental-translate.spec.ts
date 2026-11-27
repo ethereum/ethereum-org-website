@@ -1226,8 +1226,9 @@ test.describe("buildIncrementalPrompt -- glossary and locale notes", () => {
 
   test("carries only the glossary terms the TRANSLATE sections use", () => {
     const p = prompt("es", "Compare L1 alternatives.", "smart contract")
-    // An abbreviation alone matches a "long form (ABBR)" entry, as ETHGlossary does
-    expect(p).toContain('"layer 1 (L1)" ->')
+    // An abbreviation alone matches a "long form (ABBR)" entry, as ETHGlossary
+    // does, and is shown bare (known-patterns 112)
+    expect(p).toContain('"L1" -> "L1"')
     expect(p).not.toContain('"staking" ->')
     // CONTEXT is the existing translation, never a reason to add a term
     expect(p).not.toContain('"smart contract" ->')

@@ -27,7 +27,7 @@ const GROUP_MAP: Record<string, LanguageGroup> = {
   // RTL (transliterate, BiDi considerations)
   ar: "rtl",
   ur: "rtl",
-  // CJK Phonetic (Katakana/Hangul -- transliterate even in tags)
+  // CJK Phonetic (Katakana/Hangul)
   ja: "cjk-phonetic",
   ko: "cjk-phonetic",
   // CJK Semantic (translate by meaning, not sound)
@@ -124,11 +124,11 @@ function groupNotes(
   const common = `
 Site-specific rules for ethereum.org (group-specific overrides below take precedence):
 - Frontmatter tags array: brand-name tags (Solidity, MetaMask, ERC-20) stay in Latin script. Concept tags (smart contracts, testing) should be translated.
-- Code blocks: never translate functional code. Always translate code comments.
+- Code blocks: never translate functional code. Translate code comments, except machine-read directives (SPDX-License-Identifier, solhint-disable, eslint-disable, prettier-ignore, @ts-ignore, #pragma version, #!), which stay exactly as in English.
 - Do not translate (keep in original Latin script): ticker symbols (ETH, BTC, ERC, EIP, BLS), URLs, domains, EVM opcodes (SSTORE, CALL, PUSH), hex values (0x...), cryptographic primitives (SHA-256, Keccak-256, ECDSA, zk-SNARKs), network names (Mainnet, Sepolia, Holesky, Goerli), license identifiers (MIT, Apache-2.0), mathematical notations and formulas.
-- Treat client implementation names (Lighthouse, Prysm, Geth, Nethermind, Besu, Teku, Lodestar, Nimbus) as proper nouns; do not translate them. In non-Latin scripts, phonetic transliteration alongside the Latin name is acceptable.
+- Names of software, clients, wallets, protocols, companies, libraries, programming languages and tools (MetaMask, Uniswap, Chainlink, Coinbase, Lighthouse, Prysm, Geth, Besu, Teku, Nethermind, Slither, Hardhat, Solidity) stay in Latin script exactly as written in English, in every language. Never transliterate or translate them, not even alongside the Latin name, and not even where a glossary entry or existing text uses a native-script form. Only Ethereum, Ether and Bitcoin follow the glossary; a brand with an official native-script name of its own (Binance in Chinese) may use it where the glossary gives that name.
 - Use community glossary terms as provided. In languages with grammatical cases, decline glossary terms to fit the surrounding sentence naturally. If a term in the source text does not match the glossary's intended technical context, ignore the glossary entry and translate according to the general context of the sentence.
-- Glossary terms with an abbreviation in parentheses (e.g., "decentralized application (dapp)" -> "aplicacion descentralizada (dapp)", "layer 2 (L2)") pair a long form with its abbreviation. Follow the English source: where it writes the long form, use the translated long form, adding the abbreviation only if English does; where it writes only the abbreviation (L2, dapp, NFT), write only the abbreviation and never expand it. Abbreviations keep their English capitalization exactly (L1, L2, never l1, l2), even when a glossary entry shows them in lower case. Plural or variant forms in English (e.g., "dapps") take the glossary's spelling of the same form, inflected as the language requires -- do not reproduce informal variants.
+- Glossary terms with an abbreviation in parentheses (e.g., "decentralized application (dapp)" -> "aplicacion descentralizada (dapp)", "layer 2 (L2)") pair a long form with its abbreviation. Follow the English source: where it writes the long form, use the translated long form, adding the abbreviation only if English does; where it writes only the abbreviation (L2, dapp, NFT), write only the abbreviation and never expand it: no long form before it, no parenthetical after it, in prose, headings, link text and frontmatter alike. A glossary line that maps an abbreviation to itself ("L2" -> "L2") means exactly that. Abbreviations keep their English capitalization exactly (L1, L2, never l1, l2), even when a glossary entry shows them in lower case. Plural or variant forms in English (e.g., "dapps") take the glossary's spelling of the same form, inflected as the language requires -- do not reproduce informal variants.
 - Translate English idioms and colloquialisms by meaning, not literally. Use natural target-language expressions that convey the same meaning. Examples: "in the wild" = in actual use/in practice; "under the hood" = internally/how it works technically; "out of the box" = by default/without extra configuration; "a deep dive" = a detailed exploration; "the big picture" = the overall view. If no natural equivalent exists, rephrase plainly rather than producing an awkward literal translation.
 - Do not translate technical concepts or loanwords unless an exact translation is provided in the glossary. If a term is not in the glossary, leave it in English.
 - The word "state" in blockchain context means computational state, not political state.`
@@ -141,14 +141,13 @@ ${rtlBidiRules(fileType)}`
 
     case "cjk-phonetic":
       return `${common}
-- Override: brand-name tags should be transliterated into native script (Katakana/Hangul) for this language group, unlike other groups where they stay Latin.
+- Brand, product and tool names and brand-name tags stay in Latin script here too: never write them in Katakana/Hangul (MetaMask, not メタマスク or 메타마스크), even where neighbouring existing text does. Ethereum, Ether and Bitcoin still take their glossary forms.
 - Keep global acronyms (DeFi, NFT, API) in Latin.`
 
     case "cjk-semantic":
       return `${common}
-- Translate terms by meaning (calque), not by sound. Example: "Smart Contract" = 智能合约.
-- Use officially established translations where they exist (Ethereum = 以太坊).
-- If no official translation exists for a brand, keep it in Latin script.`
+- Translate concept terms by meaning (calque), not by sound. Example: "Smart Contract" = 智能合约.
+- Ethereum, Ether and Bitcoin take their glossary forms. Other brand, product and tool names stay in Latin script, never phonetic Hanzi (MetaMask, not 梅塔马斯克), unless the glossary gives the brand's own official Chinese name.`
 
     case "indic":
       return `${common}
