@@ -56,7 +56,7 @@ contract MyContract is Ownable {
 
 [కూర్పు సామర్థ్యం మరియు పరస్పర అనుసంధానత](/developers/docs/smart-contracts/composability/)ను సులభతరం చేయడానికి, ఎథీరియం కమ్యూనిటీ **ERCs** రూపంలో అనేక ప్రమాణాలను నిర్వచించింది. మీరు వాటి గురించి [ప్రమాణాలు](/developers/docs/standards/) విభాగంలో మరింత చదవవచ్చు.
 
-మీ కాంట్రాక్ట్‌లలో భాగంగా ఒక ERCని చేర్చేటప్పుడు, మీ స్వంతంగా అమలు చేయడానికి ప్రయత్నించే బదులు ప్రామాణిక అమలుల కోసం వెతకడం మంచిది. అనేక స్మార్ట్ కాంట్రాక్ట్ లైబ్రరీలు అత్యంత ప్రజాదరణ పొందిన ERCల కోసం అమలులను కలిగి ఉంటాయి. ఉదాహరణకు, సర్వవ్యాప్తమైన [ERC-20 ఫంజిబుల్ టోకెన్ ప్రమాణాన్ని](/developers/tutorials/understand-the-erc-20-token-smart-contract/) [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) మరియు [ఓపెన్‌జెప్పెలిన్](https://docs.openzeppelin.com/contracts/3.x/erc20)లలో కనుగొనవచ్చు. అదనంగా, కొన్ని ERCలు ERCలో భాగంగానే కానానికల్ అమలులను కూడా అందిస్తాయి.
+మీ కాంట్రాక్ట్‌లలో భాగంగా ఒక ERCని చేర్చేటప్పుడు, మీ స్వంతంగా అమలు చేయడానికి ప్రయత్నించే బదులు ప్రామాణిక అమలుల కోసం వెతకడం మంచిది. అనేక స్మార్ట్ కాంట్రాక్ట్ లైబ్రరీలు అత్యంత ప్రజాదరణ పొందిన ERCల కోసం అమలులను కలిగి ఉంటాయి. ఉదాహరణకు, సర్వవ్యాప్తమైన [ERC-20 ఫంజిబుల్ టోకెన్ ప్రమాణాన్ని](/developers/docs/standards/tokens/erc-20/) [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) మరియు [ఓపెన్‌జెప్పెలిన్](https://docs.openzeppelin.com/contracts/3.x/erc20)లలో కనుగొనవచ్చు. అదనంగా, కొన్ని ERCలు ERCలో భాగంగానే కానానికల్ అమలులను కూడా అందిస్తాయి.
 
 కొన్ని ERCలు స్వతంత్రమైనవి కావు, కానీ ఇతర ERCలకు అదనపు చేర్పులు అని గమనించాలి. ఉదాహరణకు, [ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) దాని వినియోగాన్ని మెరుగుపరచడానికి ERC-20కి ఒక పొడిగింపును (extension) జోడిస్తుంది.
 
@@ -109,8 +109,7 @@ contract MyNFT is ERC721 {
 
 ## సంబంధిత ట్యుటోరియల్స్ {#related-tutorials}
 
-- [ఎథీరియం డెవలపర్‌ల కోసం భద్రతా పరిగణనలు](/developers/docs/smart-contracts/security/) _– లైబ్రరీ వినియోగంతో సహా స్మార్ట్ కాంట్రాక్ట్‌లను నిర్మించేటప్పుడు భద్రతా పరిగణనలపై ఒక ట్యుటోరియల్._
-- [ERC-20 టోకెన్ స్మార్ట్ కాంట్రాక్ట్‌ను అర్థం చేసుకోండి](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- బహుళ లైబ్రరీల ద్వారా అందించబడిన ERC-20 ప్రమాణంపై ట్యుటోరియల్._
+- [ఎథీరియం డెవలపర్‌ల కోసం భద్రతా పరిగణనలు](/developers/docs/smart-contracts/security/) _– లైబ్రరీ వినియోగంతో సహా, స్మార్ట్ కాంట్రాక్ట్‌లను నిర్మించేటప్పుడు తీసుకోవాల్సిన భద్రతా పరిగణనలపై ఒక ట్యుటోరియల్._
 
 ## మరింత పఠనం {#further-reading}
 

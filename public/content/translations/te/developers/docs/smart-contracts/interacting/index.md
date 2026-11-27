@@ -171,16 +171,15 @@ const result = await client.simulateContract({
 
 ## సంబంధిత ట్యుటోరియల్స్ {#related-tutorials}
 
-- [JavaScript నుండి స్మార్ట్ కాంట్రాక్ట్‌ను కాల్ చేయడం](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-- [web3.js మరియు Alchemy ఉపయోగించి లావాదేవీలను పంపడం](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Web3.js మరియు Alchemy ఉపయోగించి లావాదేవీలను పంపడం](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [మీ వాలెట్‌లో మీ NFTని ఎలా చూడాలి](/developers/tutorials/how-to-view-nft-in-metamask/)
 
-## తదుపరి పఠనం {#further-reading}
+## మరింత చదవడానికి {#further-reading}
 
-- [Viem డాక్యుమెంటేషన్: కాంట్రాక్ట్‌లకు చదవడం మరియు వ్రాయడం](https://viem.sh/docs/contract/readContract)
-- [ethers.js డాక్యుమెంటేషన్: కాంట్రాక్ట్‌లు](https://docs.ethers.org/v6/api/contract/)
+- [Viem డాక్యుమెంటేషన్: కాంట్రాక్ట్‌ల నుండి చదవడం మరియు వాటికి రాయడం](https://viem.sh/docs/contract/readContract)
+- [Ethers.js డాక్యుమెంటేషన్: కాంట్రాక్ట్‌లు](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI స్పెసిఫికేషన్](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [ABI అంటే ఏమిటి? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [స్మార్ట్ కాంట్రాక్ట్ ABIలు ఎలా పనిచేస్తాయి? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## సంబంధిత అంశాలు {#related-topics}
 
