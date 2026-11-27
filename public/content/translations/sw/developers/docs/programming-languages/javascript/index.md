@@ -52,14 +52,14 @@ Ikiwa unapendelea kusoma msimbo, JavaScript hii inaweza kuwa mbadala mzuri wa ku
 
 ### Nodi na wateja {#nodes-and-clients}
 
-[Lodestar](https://lodestar.chainsafe.io/) ni mteja wa mwafaka aliye tayari kwa uzalishaji aliyeandikwa katika TypeScript na kudumishwa na ChainSafe. Inajumuisha nodi ya kinara na mteja wa mthibitishaji, na ni mahali pazuri pa kuona jinsi mwafaka wa Uthibitisho wa Dau wa Ethereum unavyofanya kazi katika lugha unayoijua.
+[Lodestar](https://lodestar.chainsafe.io/) ni mteja wa mwafaka aliye tayari kwa uzalishaji aliyeandikwa katika TypeScript na kudumishwa na ChainSafe. Inajumuisha nodi ya kinara na kiteja cha mthibitishaji, na ni mahali pazuri pa kuona jinsi mwafaka wa Uthibitisho wa Dau wa Ethereum unavyofanya kazi katika lugha unayoijua.
 
 **Angalia Lodestar**  
 [`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
 
-Kwa upande wa utekelezaji, mteja wa EthereumJS ameachwa kutumika na kuhifadhiwa, lakini msimbo wake wa chanzo unasalia kupatikana ili kuchunguza jinsi mteja wa Ethereum anavyofanya kazi katika JavaScript.
+Kwa upande wa utekelezaji, kiteja cha EthereumJS kimeachwa kutumika na kuhifadhiwa, lakini msimbo wake wa chanzo unasalia kupatikana ili kuchunguza jinsi kiteja cha Ethereum kinavyofanya kazi katika JavaScript.
 
-**Angalia mteja aliyehifadhiwa**  
+**Angalia kiteja kilichohifadhiwa**  
 [`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Miradi mingine {#other-projects}

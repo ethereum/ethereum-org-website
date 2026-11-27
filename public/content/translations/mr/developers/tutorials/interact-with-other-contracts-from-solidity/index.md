@@ -15,7 +15,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 आपण एक कॉन्ट्रॅक्ट बनवू जे कोणालाही स्वतःचे `Counter` स्मार्ट कॉन्ट्रॅक्ट ठेवण्यास सक्षम करेल, त्यासाठी एक फॅक्टरी तयार करून, त्याचे नाव `CounterFactory` असेल. प्रथम येथे आपल्या सुरुवातीच्या `Counter` स्मार्ट कॉन्ट्रॅक्टचा कोड आहे:
 
 ```solidity
-// SPDX-परवाना-ओळखकर्ता: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {
@@ -105,7 +105,7 @@ Solidity 0.8 पासून, अंकगणित [डीफॉल्टनु
 येथे संपूर्ण कोड आहे:
 
 ```solidity
-// SPDX-परवाना-ओळखकर्ता: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {

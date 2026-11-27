@@ -76,12 +76,12 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### ٹیسٹنگ اور تصدیق {#testing-and-verification}
 
 - **جامع یونٹ ٹیسٹس لکھیں۔** اعلیٰ معیار کا سافٹ ویئر بنانے کے لیے ایک وسیع ٹیسٹ سویٹ بہت ضروری ہے۔
-- **[سلدر](https://github.com/crytic/slither)، [ایکڈنا](https://github.com/crytic/echidna) اور [<span dir="ltr">Medusa</span>](https://github.com/crytic/medusa) کے کسٹم چیکس اور پراپرٹیز لکھیں۔** خودکار ٹولز آپ کے کنٹریکٹ کو محفوظ بنانے میں مدد کریں گے۔ موثر چیکس اور پراپرٹیز لکھنے کا طریقہ سیکھنے کے لیے اس گائیڈ کے باقی حصے کا جائزہ لیں۔
-- **ان ٹولز کو مسلسل انضمام (continuous integration) میں چلائیں۔** ہر پل ریکوئسٹ پر سلدر اور اپنی فزنگ پراپرٹیز کو چلانے سے ریگریشنز کو ضم ہونے سے پہلے ہی پکڑا جا سکتا ہے۔
+- **[<span dir="ltr">Slither</span>](https://github.com/crytic/slither)، [<span dir="ltr">Echidna</span>](https://github.com/crytic/echidna) اور [<span dir="ltr">Medusa</span>](https://github.com/crytic/medusa) کے کسٹم چیکس اور پراپرٹیز لکھیں۔** خودکار ٹولز آپ کے کنٹریکٹ کو محفوظ بنانے میں مدد کریں گے۔ موثر چیکس اور پراپرٹیز لکھنے کا طریقہ سیکھنے کے لیے اس گائیڈ کے باقی حصے کا جائزہ لیں۔
+- **ان ٹولز کو مسلسل انضمام (continuous integration) میں چلائیں۔** ہر پل ریکوئسٹ پر <span dir="ltr">Slither</span> اور اپنی فزنگ پراپرٹیز کو چلانے سے ریگریشنز کو ضم ہونے سے پہلے ہی پکڑا جا سکتا ہے۔
 
 ### <span dir="ltr">Solidity</span> {#solidity}
 
-- **بغیر کسی معلوم سنگین بگز کے حالیہ <span dir="ltr">Solidity 0.8.x</span> ریلیز استعمال کریں۔** <span dir="ltr">Solidity 0.8</span> پہلے سے طے شدہ طور پر اوور فلو اور انڈر فلو کے لیے ریاضی کی جانچ پڑتال کرتا ہے، اور پرانے ورژنز میں نئے کمپائلر سیکیورٹی چیکس موجود نہیں ہوتے ہیں۔ سلدر کی [<span dir="ltr">solc</span> ورژن کی سفارش](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) دیکھیں۔
+- **بغیر کسی معلوم سنگین بگز کے حالیہ <span dir="ltr">Solidity 0.8.x</span> ریلیز استعمال کریں۔** <span dir="ltr">Solidity 0.8</span> پہلے سے طے شدہ طور پر اوور فلو اور انڈر فلو کے لیے ریاضی کی جانچ پڑتال کرتا ہے، اور پرانے ورژنز میں نئے کمپائلر سیکیورٹی چیکس موجود نہیں ہوتے ہیں۔ <span dir="ltr">Slither</span> کی [<span dir="ltr">solc</span> ورژن کی سفارش](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) دیکھیں۔
 - **کمپائل کرنے کے لیے ایک مستحکم ریلیز استعمال کریں؛ وارننگز چیک کرنے کے لیے تازہ ترین ریلیز استعمال کریں۔** چیک کریں کہ آپ کے کوڈ میں تازہ ترین کمپائلر ورژن کے ساتھ کوئی رپورٹ شدہ مسائل نہیں ہیں۔ تاہم، <span dir="ltr">Solidity</span> کا ریلیز سائیکل تیز ہے اور اس میں کمپائلر بگز کی تاریخ موجود ہے، اس لیے صرف چند دن پہلے ریلیز ہونے والے ورژن کے ساتھ تعینات کرنے سے گریز کریں۔ اپنے منتخب کردہ ورژن کے لیے [معلوم کمپائلر بگز کی فہرست](https://docs.soliditylang.org/en/latest/bugs.html) چیک کریں۔
 - **ان لائن اسمبلی استعمال نہ کریں۔** اسمبلی کے لیے <span dir="ltr">EVM</span> کی مہارت درکار ہوتی ہے۔ اگر آپ نے یلو پیپر میں _مہارت_ حاصل نہیں کی ہے تو <span dir="ltr">EVM</span> کوڈ نہ لکھیں۔
 

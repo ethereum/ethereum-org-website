@@ -22,7 +22,7 @@ Chúng tôi là một cộng đồng thân thiện sẽ giúp bạn phát triể
 
 **Nội dung**
 - [Tạo/chỉnh sửa nội dung](/contributing/#how-to-update-content) – Đề xuất các trang mới hoặc thực hiện các tinh chỉnh cho những gì đã có ở đây
-- [Viết một bài viết cho trình xây dựng](/contributing/adding-articles/) - Đóng góp một bài viết cho phần [Mới nhất](/latest/)
+- [Viết một bài viết dành cho người xây dựng](/contributing/adding-articles/) - Đóng góp một bài viết cho phần [Mới nhất](/latest/)
 - [Thêm tài nguyên cộng đồng](/contributing/content-resources/) – Thêm một bài viết hoặc tài nguyên hữu ích vào một trang liên quan
 - [Đề xuất một báo cáo](/contributing/adding-reports/) - Đề xuất một báo cáo nghiên cứu cho trang [Báo cáo](/reports/)
 - [Chia sẻ câu chuyện của bạn](/contributing/adding-community-stories/) - Gửi một câu chuyện về trải nghiệm cá nhân của bạn với các công nghệ mã nguồn mở và công nghệ bảo vệ an toàn, cách hệ sinh thái Ethereum đã tác động đến cuộc sống của bạn, hoặc cách bạn và cộng đồng của bạn sử dụng Ethereum

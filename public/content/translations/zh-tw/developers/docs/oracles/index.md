@@ -399,7 +399,7 @@ contract PriceConsumerV3 {
 
 **[泰勒 (Tellor)](https://tellor.io/)** - _泰勒 (Tellor) 是一個透明且無需許可的預言機協定，讓您的智能合約可以在需要時輕鬆獲取任何資料。_
 
-**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol 是一個跨鏈資料預言機平台，可聚合現實世界的資料和應用程式介面 (API)，並將其連接到智能合約。_
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol 是一個跨鏈資料預言機平台，可聚合現實世界的資料和API，並將其連接到智能合約。_
 
 **[Pyth Network](https://pyth.network/)** - _Pyth 網路是一個第一方金融預言機網路，旨在於防竄改、去中心化且自我維持的環境中，在鏈上發布連續的現實世界資料。_
 

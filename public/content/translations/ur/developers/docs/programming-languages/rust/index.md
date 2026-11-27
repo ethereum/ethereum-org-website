@@ -49,7 +49,7 @@ incomplete: true
 - [<span dir="ltr">Ethers_rs</span>](https://github.com/gakonst/ethers-rs) - _ایتھیریم لائبریری اور والیٹ کا نفاذ_
 - [<span dir="ltr">SewUp</span>](https://github.com/second-state/SewUp) - _ایک لائبریری جو آپ کو <span dir="ltr">Rust</span> کے ساتھ اپنا ایتھیریم <span dir="ltr">WebAssembly</span> کنٹریکٹ بنانے میں مدد کرتی ہے اور بالکل ایک عام بیک اینڈ میں ڈیولپ کرنے کی طرح ہے_
 - [<span dir="ltr">Substreams</span>](https://github.com/streamingfast/substreams) - _متوازی بلاک چین ڈیٹا انڈیکسنگ ٹیکنالوجی_
-- [ریتھ](https://github.com/paradigmxyz/reth) ریتھ (<span dir="ltr">Rust</span> ایتھیریم کا مخفف) ایک نیا ایتھیریم مکمل نوڈ کا نفاذ ہے
+- [<span dir="ltr">Reth</span>](https://github.com/paradigmxyz/reth) <span dir="ltr">Reth</span> (<span dir="ltr">Rust</span> ایتھیریم کا مخفف) ایک نیا ایتھیریم مکمل نوڈ کا نفاذ ہے
 - [<span dir="ltr">Awesome Ethereum Rust</span>](https://github.com/Vid201/awesome-ethereum-rust) - _<span dir="ltr">Rust</span> میں لکھے گئے ایتھیریم ایکو سسٹم میں پروجیکٹس کا ایک منتخب مجموعہ_
 - [<span dir="ltr">Stylus</span>](https://github.com/OffchainLabs/stylus) - _<span dir="ltr">Arbitrum</span> پر سمارٹ کنٹریکٹس بنانے کے لیے <span dir="ltr">Rust SDK</span>_
 

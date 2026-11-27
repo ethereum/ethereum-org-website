@@ -75,8 +75,8 @@ EVM క్వెరీ లాంగ్వేజ్ (EQL) అనేది EVM (�
 ## తదుపరి పఠనం {#further-reading}
 
 - [క్రిప్టో డేటాను అన్వేషించడం I: డేటా ఫ్లో ఆర్కిటెక్చర్‌లు](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [గ్రాఫ్ నెట్‌వర్క్ అవలోకనం](https://thegraph.com/docs/en/about/)
-- [గ్రాఫ్ ఎక్స్‌ప్లోరర్](https://thegraph.com/explorer)
+- [Graph నెట్‌వర్క్ అవలోకనం](https://thegraph.com/docs/en/about/)
+- [Graph ఎక్స్‌ప్లోరర్](https://thegraph.com/explorer)
 - [Etherscanలో API కోడ్ ఉదాహరణలు](https://etherscan.io/apis#contracts)
 - [Blockscoutలో API డాక్యుమెంటేషన్](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in బీకన్ చైన్ ఎక్స్‌ప్లోరర్](https://beaconcha.in)

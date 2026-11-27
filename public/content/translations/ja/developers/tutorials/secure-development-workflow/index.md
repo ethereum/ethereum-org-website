@@ -17,8 +17,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 既知のセキュリティ問題の確認:
 
-- [スリザー](https://github.com/crytic/slither)を使用してコントラクトをレビューします。一般的な脆弱性に対する100以上の組み込みの検出機能があります。新しいコードをチェックインするたびに実行し、クリーンなレポートが得られることを確認します（または、トリアージモードを使用して特定の問題を非表示にします）。
-- GitHubの[slither-action](https://github.com/crytic/slither-action)などを使用してCIでスリザーを実行し、プルリクエストでセキュリティ問題が表面化するようにします。
+- [Slither](https://github.com/crytic/slither)を使用してコントラクトをレビューします。一般的な脆弱性に対する100以上の組み込みの検出機能があります。新しいコードをチェックインするたびに実行し、クリーンなレポートが得られることを確認します（または、トリアージモードを使用して特定の問題を非表示にします）。
+- GitHubの[slither-action](https://github.com/crytic/slither-action)などを使用してCIでSlitherを実行し、プルリクエストでセキュリティ問題が表面化するようにします。
 
 コントラクトの特別な機能の検討:
 
@@ -35,8 +35,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 重要なセキュリティプロパティの文書化と、自動テストジェネレーターを使用した評価:
 
 - [コードのセキュリティプロパティを文書化する](/developers/tutorials/guide-to-smart-contract-security-tools/)方法を学びます。最初は難しいですが、良い結果を得るための最も重要な活動です。また、このチュートリアルの高度なテクニックを使用するための前提条件でもあります。
-- [エキドナ](https://github.com/crytic/echidna)や[Medusa](https://github.com/crytic/medusa)などのファザー、および[hevm](https://hevm.dev/)などのシンボリック実行ツールで使用するために、Solidityでセキュリティプロパティを定義します。状態マシン、アクセス制御、算術演算、外部との相互作用、および標準への準拠に焦点を当てます。
-- [スリザーのPython API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)を使用してセキュリティプロパティを定義します。継承、変数の依存関係、アクセス制御、およびその他の構造的な問題に焦点を当てます。
+- [Echidna](https://github.com/crytic/echidna)や[Medusa](https://github.com/crytic/medusa)などのファザー、および[hevm](https://hevm.dev/)などのシンボリック実行ツールで使用するために、Solidityでセキュリティプロパティを定義します。状態マシン、アクセス制御、算術演算、外部との相互作用、および標準への準拠に焦点を当てます。
+- [SlitherのPython API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)を使用してセキュリティプロパティを定義します。継承、変数の依存関係、アクセス制御、およびその他の構造的な問題に焦点を当てます。
 - チームの全員がテストに合格したことを簡単に確認できるように、CI（GitHub Actionsなど）のすべてのコミットでプロパティテストを実行します。失敗したテストはマージをブロックできます。
 
 最後に、自動化ツールでは簡単に見つけられない問題に注意してください:

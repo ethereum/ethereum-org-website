@@ -1,5 +1,28 @@
 # id Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
+Scope: 76 markdown pages + 20 JSON namespaces (incl. 280 dev-tools descriptions), incremental updates, changed lines; sampled all MD diffs and ~120 JSON keys.
+
+**Fixed in this branch:**
+
+- Bare-abbreviation expansions the JSON fix pass missed (known-patterns 112): `tool-tatum`, `tool-watchdata` (`Antarmuka Pemrograman Aplikasi (API)` -> `API`), `tool-swiftnodes` (`lapisan 2 (L2)-nya` -> `L2-nya`), `tool-web3-ethereum-defi` (`keuangan terdesentralisasi (DeFi)` -> `DeFi`)
+- about:L110 `menyisih` (opt out) -> `memilih keluar`; secure-development-workflow:30 `pihak ke-3` -> `pihak ketiga`
+
+**Open (warnings):**
+
+- Capitalization leak `Pustaka` mid-sentence (~20 sites in tools-descriptions), `Likuiditas` (eth-prices), `Bukti tanpa pengetahuan` capitalized mid-sentence (railgun, rsp)
+- `OperasiPengguna` (fused calque of "user operations") at 5 sites; pre-existing form on dev, English is lowercase prose
+- `dikirimkan sebagai` for "ships as" (Account Kit, GoldRush) and `mengirimkan paket Go`; `melawan percabangan privat` (against -> terhadap); `dan wajibkan` for `require` in coddy-solidity-course
+- ETHGlossary `zero-knowledge proof` = `Bukti tanpa pengetahuan`; `page-learn` `more-on-ethereum-protocol-zero-knowledge-proofs` and `glossary-card-description` use `Zero-knowledge proof`
+- `shielded-pool-term`: `Shielded pool` (glossary.json) vs `Kolam terlindung` (glossary-tooltip.json); `escrow-term` `Escrow` vs `eskro` (page-get-eth); neither term is in ETHGlossary
+- `additional-reading-bridges` uses `Bridge` where the locale uses `jembatan`
+- logging-events-smart-contracts: body moved to `kejadian`/`dikirimkan`, title/L13-15 still `peristiwa`/`dikirimkan`; anatomy still `Memancarkan kejadian`
+- `hadiah staking` (page-get-eth meta description) vs `imbalan` (#56); `mensyaratkan`/`disyaratkan` for "required" in roadmap/user-experience and bug-bounty; `kompilator` vs `kompiler` split
+
+**Notes:**
+
+- L1/L2 casing and `(l1)` expansion drops are clean. Brand/tool names stay Latin in tools-descriptions and markdown. No U+3002, U+2060 or foreign-script hits in the PR's id files. Code/comment translations in tutorials follow English.
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

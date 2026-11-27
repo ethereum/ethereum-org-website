@@ -20,7 +20,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 మనం ఎవరైనా తమ స్వంత `Counter` స్మార్ట్ కాంట్రాక్ట్‌ను కలిగి ఉండటానికి వీలు కల్పించే ఒక కాంట్రాక్ట్‌ను దాని కోసం ఒక ఫ్యాక్టరీని సృష్టించడం ద్వారా తయారు చేస్తాము, దాని పేరు `CounterFactory` అవుతుంది. ముందుగా మన ప్రారంభ `Counter` స్మార్ట్ కాంట్రాక్ట్ యొక్క కోడ్ ఇక్కడ ఉంది:
 
 ```solidity
-// SPDX-లైసెన్స్-ఐడెంటిఫైయర్: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {
@@ -110,7 +110,7 @@ Solidity 0.8 నుండి, అంకగణితం [డిఫాల్ట్
 పూర్తి కోడ్ ఇక్కడ ఉంది:
 
 ```solidity
-// SPDX-లైసెన్స్-ఐడెంటిఫైయర్: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {

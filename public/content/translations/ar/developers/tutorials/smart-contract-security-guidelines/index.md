@@ -73,12 +73,12 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### الاختبار والتحقق {#testing-and-verification}
 
 - **اكتب اختبارات وحدة شاملة.** تعد مجموعة الاختبارات الشاملة أمرًا بالغ الأهمية لبناء برامج عالية الجودة.
-- **اكتب فحوصات وخصائص مخصصة لأدوات [سليذر](https://github.com/crytic/slither) و[إيكيدنا](https://github.com/crytic/echidna) و[<span dir="ltr">Medusa</span>](https://github.com/crytic/medusa).** ستساعد الأدوات الآلية في ضمان أمان عقدك. راجع بقية هذا الدليل لمعرفة كيفية كتابة فحوصات وخصائص فعالة.
-- **قم بتشغيل هذه الأدوات في التكامل المستمر.** يؤدي تشغيل سليذر وخصائص الاختبار العشوائي (<span dir="ltr">fuzzing</span>) الخاصة بك على كل طلب سحب إلى اكتشاف التراجعات قبل دمجها.
+- **اكتب فحوصات وخصائص مخصصة لأدوات [<span dir="ltr">Slither</span>](https://github.com/crytic/slither) و[<span dir="ltr">Echidna</span>](https://github.com/crytic/echidna) و[<span dir="ltr">Medusa</span>](https://github.com/crytic/medusa).** ستساعد الأدوات الآلية في ضمان أمان عقدك. راجع بقية هذا الدليل لمعرفة كيفية كتابة فحوصات وخصائص فعالة.
+- **قم بتشغيل هذه الأدوات في التكامل المستمر.** يؤدي تشغيل <span dir="ltr">Slither</span> وخصائص الاختبار العشوائي (<span dir="ltr">fuzzing</span>) الخاصة بك على كل طلب سحب إلى اكتشاف التراجعات قبل دمجها.
 
 ### Solidity {#solidity}
 
-- **استخدم إصدارًا حديثًا من <span dir="ltr">Solidity 0.8.x</span> بدون أخطاء خطيرة معروفة.** تتحقق <span dir="ltr">Solidity 0.8</span> من العمليات الحسابية بحثًا عن تجاوز السعة ونقص السعة افتراضيًا، وتفتقر الإصدارات الأقدم إلى فحوصات أمان المترجم الأحدث. راجع [توصية إصدار <span dir="ltr">solc</span>](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) الخاصة بأداة سليذر.
+- **استخدم إصدارًا حديثًا من <span dir="ltr">Solidity 0.8.x</span> بدون أخطاء خطيرة معروفة.** تتحقق <span dir="ltr">Solidity 0.8</span> من العمليات الحسابية بحثًا عن تجاوز السعة ونقص السعة افتراضيًا، وتفتقر الإصدارات الأقدم إلى فحوصات أمان المترجم الأحدث. راجع [توصية إصدار <span dir="ltr">solc</span>](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) الخاصة بأداة <span dir="ltr">Slither</span>.
 - **استخدم إصدارًا مستقرًا للتجميع؛ واستخدم أحدث إصدار للتحقق من التحذيرات.** تحقق من أن التعليمات البرمجية الخاصة بك لا تحتوي على مشكلات تم الإبلاغ عنها مع أحدث إصدار من المترجم. ومع ذلك، تتمتع Solidity بدورة إصدار سريعة ولها تاريخ من أخطاء المترجم، لذا تجنب النشر باستخدام إصدار تم إصداره قبل أيام قليلة فقط. تحقق من [قائمة أخطاء المترجم المعروفة](https://docs.soliditylang.org/en/latest/bugs.html) للإصدار الذي تختاره.
 - **لا تستخدم لغة التجميع المضمنة.** تتطلب لغة التجميع خبرة في آلة إيثريوم الافتراضية (EVM). لا تكتب تعليمات برمجية لآلة إيثريوم الافتراضية (EVM) إذا لم تكن قد _أتقنت_ الورقة الصفراء.
 

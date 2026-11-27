@@ -1,5 +1,25 @@
 # Ukrainian (uk) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.0/10
+Scope: 90 files (71 markdown, 19 JSON), incremental updates; all 71 markdown diffs and all 19 JSON diffs read in full against English. Scripted sweeps clean (no U+3002/U+2060, no foreign-script, no Russian-only letters).
+
+**Fixed in this branch:**
+
+- `page-roadmap` `page-roadmap-danksharding-description`: Latin `Danksharding` -> `Данкшардинг` (regression vs dev; every other uk page uses the Cyrillic form)
+- `oracles` L390/L400: link text `Чейнлінк`/`Теллор` restored to `Chainlink`/`Tellor` (regression vs dev)
+- `a-developers-guide-to-ethereum-part-one` L131: `$5.99` -> `$5,99` (English decimal point, known decimal-separator pattern)
+- `interact-with-other-contracts-from-solidity`: U+2019 apostrophes -> ASCII `'` (2 sites)
+
+**Open (warnings):**
+
+- `developers/docs/bridges` L126-L141: reference-list article titles reverted from Ukrainian to English (copied from en); previously translated on dev.
+- `contributing/index.md`: list separators mix `–` and `-` (mirrors en, which mixes them too).
+- `videos/surveillance-silence`: `обмежити ... обмежити` repeated in the social-credit sentence.
+- `Лодстар`/`Лодстар (Lodestar)` and `Рет` (Reth) client names transliterated per ETHGlossary (#113); `Counter`/`лічильник` mixed in the interact tutorial.
+- `src/intl/uk/page-use-cases.json`, `page-what-is-ether.json`: trailing-newline flips vs dev (cosmetic, matches en).
+
+**Notes:** `L1`/`L2` casing normalized to uppercase and bare forms (`ETHBEAT`, `L2`) match English; no placeholder leaks, anchors intact, `<GasperFinalityDiagram />` and other new diagram components present.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `рівні 1 (L1)` / `рівні 2 (L2)` first-mention expansions in 19 diagram values (#112); `Доводжувач` for prover is the glossary form (ru uses `Прувер`); client names transliterated per ETHGlossary (#113).
 

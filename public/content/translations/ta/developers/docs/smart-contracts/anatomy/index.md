@@ -462,11 +462,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
+     * கொடுக்கப்பட்ட வில்லை ID-இன் உரிமையைப் பாதுகாப்பாக மற்றொரு முகவரிக்கு மாற்றுகிறது
+     * இலக்கு முகவரி ஒரு ஒப்பந்தமாக இருந்தால், அது `onERC721Received`-ஐச் செயல்படுத்த வேண்டும்,
+     * இது பாதுகாப்பான பரிமாற்றத்தின் போது அழைக்கப்பட்டு, மேஜிக் மதிப்பை வழங்க வேண்டும்
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * இல்லையெனில், பரிமாற்றம் திரும்பப் பெறப்படும் (reverted).
      */
     function safeTransferFrom(
         address from,
@@ -479,8 +479,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Internal function to invoke `onERC721Received` on a target address
-     * The call is not executed if the target address is not a contract
+     * இலக்கு முகவரியில் `onERC721Received`-ஐத் தூண்டுவதற்கான உள் செயல்பாடு
+     * இலக்கு முகவரி ஒரு ஒப்பந்தமாக இல்லாவிட்டால் அழைப்பு செயல்படுத்தப்படாது
      */
     function _checkOnERC721Received(
         address from,
@@ -501,9 +501,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Burns a Pizza - destroys Token completely
-    // The `external` function modifier means this function is
-    // part of the contract interface and other contracts can call it
+    // ஒரு பீட்சாவை எரிக்கிறது - வில்லையை முழுமையாக அழிக்கிறது
+    // `external` செயல்பாட்டு மாற்றி என்பது இந்த செயல்பாடு
+    // ஒப்பந்த இடைமுகத்தின் ஒரு பகுதியாகும், மேலும் பிற ஒப்பந்தங்கள் இதை அழைக்கலாம்
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -516,26 +516,26 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Returns count of Pizzas by address
+    // முகவரி வாரியாக பீட்சாக்களின் எண்ணிக்கையை வழங்குகிறது
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // Returns owner of the Pizza found by id
+    // id மூலம் கண்டறியப்பட்ட பீட்சாவின் உரிமையாளரை வழங்குகிறது
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // Approves other address to transfer ownership of Pizza
+    // பீட்சாவின் உரிமையை மாற்ற மற்ற முகவரியை அங்கீகரிக்கிறது
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Returns approved address for specific Pizza
+    // குறிப்பிட்ட பீட்சாவிற்கான அங்கீகரிக்கப்பட்ட முகவரியை வழங்குகிறது
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -546,8 +546,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Private function to clear current approval of a given token ID
-     * Reverts if the given address is not indeed the owner of the token
+     * கொடுக்கப்பட்ட வில்லை ID-இன் தற்போதைய அங்கீகாரத்தை அழிக்க தனிப்பட்ட (private) செயல்பாடு
+     * கொடுக்கப்பட்ட முகவரி உண்மையில் வில்லையின் உரிமையாளராக இல்லாவிட்டால் திரும்பப் பெறப்படும்
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -567,7 +567,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Tells whether an operator is approved by a given owner
+    // ஒரு ஆபரேட்டர் கொடுக்கப்பட்ட உரிமையாளரால் அங்கீகரிக்கப்பட்டுள்ளாரா என்பதைக் கூறுகிறது
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -576,27 +576,27 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Takes ownership of Pizza - only for approved users
+    // பீட்சாவின் உரிமையை எடுத்துக்கொள்கிறது - அங்கீகரிக்கப்பட்ட பயனர்களுக்கு மட்டுமே
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Checks if Pizza exists
+    // பீட்சா உள்ளதா என்பதைச் சரிபார்க்கிறது
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // Checks if address is owner or is approved to transfer Pizza
+    // முகவரி உரிமையாளரா அல்லது பீட்சாவை மாற்ற அங்கீகரிக்கப்பட்டுள்ளதா என்பதைச் சரிபார்க்கிறது
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Disable solium check because of
+        // இதன் காரணமாக solium சரிபார்ப்பை முடக்கு
         // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -604,7 +604,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // Check if Pizza is unique and doesn't exist yet
+    // பீட்சா தனித்துவமானதா மற்றும் இன்னும் இல்லையா என்பதைச் சரிபார்க்கவும்
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -620,15 +620,15 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // Returns whether the target address is a contract
+    // இலக்கு முகவரி ஒரு ஒப்பந்தமா என்பதை வழங்குகிறது
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Currently there is no better way to check if there is a contract in an address
-        // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
-        // for more details about how this works.
-        // TODO Check this again before the Serenity release, because all addresses will be
-        // contracts then.
+        // தற்போது ஒரு முகவரியில் ஒப்பந்தம் உள்ளதா எனச் சரிபார்க்க சிறந்த வழி எதுவும் இல்லை
+        // அந்த முகவரியில் உள்ள குறியீட்டின் அளவைச் சரிபார்ப்பதைத் தவிர.
+        // காண்க https://ethereum.stackexchange.com/a/14016/36603
+        // இது எவ்வாறு செயல்படுகிறது என்பது பற்றிய கூடுதல் விவரங்களுக்கு.
+        // TODO செரினிட்டி (Serenity) வெளியீட்டிற்கு முன் இதை மீண்டும் சரிபார்க்கவும், ஏனெனில் அனைத்து முகவரிகளும்
+        // அப்போது ஒப்பந்தங்களாக இருக்கும்.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

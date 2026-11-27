@@ -162,7 +162,7 @@ lang: ko
 - [문서](https://docs.chainstack.com/)
 - [이더리움 API 참조](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**코인베이스 클라우드 노드 -** **_블록체인 인프라 API._**
+**Coinbase 클라우드 노드 -** **_블록체인 인프라 API._**
 
 - [코인베이스 클라우드 노드](https://www.coinbase.com/developer-platform)
 - [문서](https://docs.cdp.coinbase.com/)

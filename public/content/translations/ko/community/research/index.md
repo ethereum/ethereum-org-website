@@ -476,4 +476,4 @@ lang: ko
 #### 최근 연구 {#recent-research-20}
 
 - [스마트 컨트랙트 조합성](/developers/docs/smart-contracts/composability/)
-- [코인베이스: Web3 스택 소개](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)
+- [Coinbase: Web3 스택 소개](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)

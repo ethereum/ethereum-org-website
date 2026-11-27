@@ -45,7 +45,7 @@ lang: ar
 - [لودستار](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): عميل إجماع خفيف بلغة TypeScript
 - [Helios](https://github.com/a16z/helios): عميل خفيف مدمج للتنفيذ والإجماع بلغة Rust
 - [جو إيثريوم (geth)](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): وضع خفيف لعميل التنفيذ (قيد التطوير) بلغة Go
-- [نيمبوس](https://nimbus.guide/el-light-client.html): عميل إجماع خفيف بلغة Nim
+- [<span dir="ltr">Nimbus</span>](https://nimbus.guide/el-light-client.html): عميل إجماع خفيف بلغة Nim
 
 على حد علمنا، لا يُعتبر أي منها جاهزاً للإنتاج بعد.
 

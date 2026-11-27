@@ -367,7 +367,7 @@
   "gas-2-b-label": "Esperar que os preços do gas diminuam",
   "gas-2-b-explanation": "Esperar que os preços do gas diminuam é uma estratégia válida, já que o gas flutua com base na congestão.",
   "gas-2-c-label": "Usar cadeias da camada 2 (L2) para taxas mais baixas",
-  "gas-2-c-explanation": "As soluções de camada 2 (L2) reduzem as taxas e são uma maneira eficaz de economizar no gas.",
+  "gas-2-c-explanation": "As soluções de camada 2 (L2) reduzem as taxas e são uma maneira eficaz de economizar no gás.",
   "gas-2-d-label": "Usar lógica complexa de contrato inteligente que aumenta os requisitos computacionais",
   "gas-2-d-explanation": "A lógica complexa de contratos inteligentes aumenta os custos de gas ao exigir mais computação. Um design eficiente minimiza etapas, armazenamento e operações redundantes para reduzir as taxas.",
   "gas-3-prompt": "O que faz com que as taxas de gas sejam altas?",

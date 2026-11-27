@@ -20,8 +20,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 ज्ञात सुरक्षा समस्या तपासा:
 
-- [स्लिदर](https://github.com/crytic/slither) वापरून तुमच्या कॉन्ट्रॅक्ट्सचे पुनरावलोकन करा. यामध्ये सामान्य असुरक्षांसाठी 100 पेक्षा जास्त अंगभूत डिटेक्टर्स आहेत. नवीन कोडसह प्रत्येक चेक-इनवर ते चालवा आणि त्याला एक त्रुटीमुक्त अहवाल मिळेल याची खात्री करा (किंवा काही समस्या सायलेंस करण्यासाठी ट्रायज मोड वापरा).
-- CI मध्ये स्लिदर चालवा, उदाहरणार्थ GitHub वरील [slither-action](https://github.com/crytic/slither-action) सह, जेणेकरून पुल रिक्वेस्ट्समध्ये सुरक्षा समस्या उघडकीस येतील.
+- [Slither](https://github.com/crytic/slither) वापरून तुमच्या कॉन्ट्रॅक्ट्सचे पुनरावलोकन करा. यामध्ये सामान्य असुरक्षांसाठी 100 पेक्षा जास्त अंगभूत डिटेक्टर्स आहेत. नवीन कोडसह प्रत्येक चेक-इनवर ते चालवा आणि त्याला एक त्रुटीमुक्त अहवाल मिळेल याची खात्री करा (किंवा काही समस्या सायलेंस करण्यासाठी ट्रायज मोड वापरा).
+- CI मध्ये Slither चालवा, उदाहरणार्थ GitHub वरील [slither-action](https://github.com/crytic/slither-action) सह, जेणेकरून पुल रिक्वेस्ट्समध्ये सुरक्षा समस्या उघडकीस येतील.
 
 तुमच्या कॉन्ट्रॅक्टच्या विशेष वैशिष्ट्यांचा विचार करा:
 
@@ -32,8 +32,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 तुमच्या कोडच्या गंभीर सुरक्षा वैशिष्ट्यांची दृश्यमानपणे तपासणी करा:
 
 - स्लिदरच्या [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) प्रिंटरचे पुनरावलोकन करा. अनवधानाने होणारे शॅडोइंग आणि C3 लिनियरायझेशन समस्या टाळा.
-- स्लिदरच्या [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) प्रिंटरचे पुनरावलोकन करा. हे फंक्शन व्हिजिबिलिटी आणि ॲक्सेस कंट्रोल्सचा अहवाल देते.
-- स्लिदरच्या [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) प्रिंटरचे पुनरावलोकन करा. हे स्थिती व्हेरिएबल्सवरील ॲक्सेस कंट्रोल्सचा अहवाल देते.
+- Slither च्या [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) प्रिंटरचे पुनरावलोकन करा. हे फंक्शन व्हिजिबिलिटी आणि ॲक्सेस कंट्रोल्सचा अहवाल देते.
+- Slither च्या [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) प्रिंटरचे पुनरावलोकन करा. हे स्थिती व्हेरिएबल्सवरील ॲक्सेस कंट्रोल्सचा अहवाल देते.
 
 गंभीर सुरक्षा गुणधर्मांचे दस्तऐवजीकरण करा आणि त्यांचे मूल्यांकन करण्यासाठी स्वयंचलित चाचणी जनरेटर्स वापरा:
 

@@ -49,7 +49,7 @@ incomplete: true
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _इथेरियम लायब्ररी आणि वॉलेट अंमलबजावणी_
 - [SewUp](https://github.com/second-state/SewUp) - _Rust सह तुमचे इथेरियम WebAssembly कॉन्ट्रॅक्ट तयार करण्यात मदत करणारी आणि सामान्य बॅकएंडमध्ये डेव्हलप करण्यासारखा अनुभव देणारी एक लायब्ररी_
 - [Substreams](https://github.com/streamingfast/substreams) - _पॅरललाइज्ड ब्लॉकचेन डेटा इंडेक्सिंग तंत्रज्ञान_
-- [रेथ](https://github.com/paradigmxyz/reth) रेथ (Rust इथेरियमचे संक्षिप्त रूप) ही एक नवीन इथेरियम पूर्ण नोड अंमलबजावणी आहे
+- [Reth](https://github.com/paradigmxyz/reth) Reth (Rust इथेरियमचे संक्षिप्त रूप) ही एक नवीन इथेरियम पूर्ण नोड अंमलबजावणी आहे
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rust मध्ये लिहिलेल्या इथेरियम इकोसिस्टममधील प्रोजेक्ट्सचा क्युरेटेड संग्रह_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Arbitrum वर स्मार्ट कॉन्ट्रॅक्ट्स तयार करण्यासाठी Rust SDK_
 

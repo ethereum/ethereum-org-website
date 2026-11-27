@@ -90,7 +90,7 @@ lang: ur
 
 **زیڈ کے اسنارکس**
 
-زیڈ کے اسنارک پروٹوکول کے کام کرنے کے لیے، ایک <span dir="ltr">Common Reference String (CRS)</span> بنانا ضروری ہے: <span dir="ltr">CRS</span> درستگی کے ثبوت کو ثابت کرنے اور تصدیق کرنے کے لیے عوامی پیرامیٹرز فراہم کرتا ہے۔ ثابت کرنے والے نظام کی سیکیورٹی کا انحصار <span dir="ltr">CRS</span> سیٹ اپ پر ہے؛ اگر عوامی پیرامیٹرز بنانے کے لیے استعمال ہونے والی معلومات بدنیتی پر مبنی اداکاروں کے قبضے میں آ جائیں تو وہ غلط درستگی کے ثبوت تیار کرنے کے قابل ہو سکتے ہیں۔
+زیڈ کے اسنارک پروٹوکول کے کام کرنے کے لیے، ایک <span dir="ltr">Common Reference String (CRS)</span> بنانا ضروری ہے: <span dir="ltr">CRS</span> درستگی کے ثبوت کو ثابت کرنے اور تصدیق کرنے کے لیے عوامی پیرامیٹرز فراہم کرتا ہے۔ ثابت کرنے والے نظام کی سیکیورٹی کا انحصار <span dir="ltr">CRS</span> سیٹ اپ پر ہے؛ اگر عوامی پیرامیٹرز بنانے کے لیے استعمال ہونے والی معلومات بدنیتی پر مبنی فریقوں کے قبضے میں آ جائیں تو وہ غلط درستگی کے ثبوت تیار کرنے کے قابل ہو سکتے ہیں۔
 
 کچھ <span dir="ltr">ZK-rollups</span> زیڈ کے اسنارک سرکٹ کے لیے عوامی پیرامیٹرز تیار کرنے کے لیے، قابل اعتماد افراد پر مشتمل ایک [<span dir="ltr">multi-party computation ceremony (MPC)</span>](https://zkproof.org/2021/06/30/setup-ceremonies/amp/) کا استعمال کر کے اس مسئلے کو حل کرنے کی کوشش کرتے ہیں۔ ہر فریق <span dir="ltr">CRS</span> کی تعمیر میں کچھ بے ترتیبی (جسے "زہریلا فضلہ" کہا جاتا ہے) کا حصہ ڈالتا ہے، جسے انہیں فوری طور پر تباہ کرنا ہوگا۔
 
@@ -253,11 +253,11 @@ lang: ur
 
 - **[زی کے سنک](https://docs.zksync.io/)** - _<span dir="ltr">ZKsync Era</span> ایک <span dir="ltr">EVM</span> سے مطابقت رکھنے والا <span dir="ltr">ZK Rollup</span> ہے جسے <span dir="ltr">Matter Labs</span> نے بنایا ہے، جو اس کے اپنے <span dir="ltr">zkEVM</span> سے چلتا ہے۔_
 
-- **[سٹارک نیٹ](https://starkware.co/starknet/)** - _سٹارک نیٹ ایک <span dir="ltr">EVM</span> سے مطابقت رکھنے والا لیئر ۲ (<span dir="ltr">L2</span>) اسکیلنگ حل ہے جسے <span dir="ltr">StarkWare</span> نے بنایا ہے۔_
+- **[<span dir="ltr">Starknet</span>](https://starkware.co/starknet/)** - _<span dir="ltr">Starknet</span> ایک <span dir="ltr">EVM</span> سے مطابقت رکھنے والا لیئر ۲ (<span dir="ltr">L2</span>) اسکیلنگ حل ہے جسے <span dir="ltr">StarkWare</span> نے بنایا ہے۔_
 
 - **[<span dir="ltr">Morph</span>](https://www.morphl2.io/)** - _<span dir="ltr">Morph</span> ایک ہائبرڈ رول اپ اسکیلنگ حل ہے جو لیئر ۲ (<span dir="ltr">L2</span>) حالت کے چیلنج کے مسئلے کو حل کرنے کے لیے <span dir="ltr">zk-proof</span> کا استعمال کرتا ہے۔_
 
-- **[<span dir="ltr">Linea</span>](https://linea.build)** - _<span dir="ltr">Linea</span> ایک ایتھیریم کے مساوی <span dir="ltr">zkEVM</span> لیئر ۲ (<span dir="ltr">L2</span>) ہے جسے کنسینسس نے بنایا ہے، جو ایتھیریم ایکو سسٹم کے ساتھ مکمل طور پر ہم آہنگ ہے۔_
+- **[<span dir="ltr">Linea</span>](https://linea.build)** - _<span dir="ltr">Linea</span> ایک ایتھیریم کے مساوی <span dir="ltr">zkEVM</span> لیئر ۲ (<span dir="ltr">L2</span>) ہے جسے <span dir="ltr">ConsenSys</span> نے بنایا ہے، جو ایتھیریم ایکو سسٹم کے ساتھ مکمل طور پر ہم آہنگ ہے۔_
 
 ## <span dir="ltr">ZK-rollups</span> پر مزید مطالعہ {#further-reading-on-zk-rollups}
 

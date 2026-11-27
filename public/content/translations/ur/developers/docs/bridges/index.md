@@ -124,12 +124,12 @@ lang: ur
 
 - [بلاک چین پل](/bridges/) – <span dir="ltr">ethereum.org</span>
 - [<span dir="ltr">ETHBEAT Bridge Risk Framework</span>](https://ethbeat.org/interop/summary)
-- [بلاک چین پل: کرپٹو نیٹ ورکس کے نیٹ ورکس بنانا](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - <span dir="ltr">Sep 8, 2021</span> – <span dir="ltr">Dmitriy Berenzon</span>
-- [باہمی عمل پذیری کا ٹرائیلیما](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - <span dir="ltr">Oct 1, 2021</span> – <span dir="ltr">Arjun Bhuptani</span>
-- [کلسٹرز: کس طرح قابل اعتماد اور کم از کم اعتماد والے پل ملٹی چین منظر نامے کو تشکیل دیتے ہیں](https://blog.celestia.org/clusters/) - <span dir="ltr">Oct 4, 2021</span> – <span dir="ltr">Mustafa Al-Bassam</span>
-- [<span dir="ltr">LI.FI</span>: پلوں کے ساتھ، اعتماد ایک سپیکٹرم ہے](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - <span dir="ltr">Apr 28, 2022</span> – <span dir="ltr">Arjun Chand</span>
-- [رول اپ کی باہمی عمل پذیری کے سلوشنز کی حالت](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - <span dir="ltr">June 20, 2024</span> – <span dir="ltr">Alex Hook</span>
-- [محفوظ کراس چین باہمی عمل پذیری کے لیے مشترکہ سیکیورٹی کا استعمال: <span dir="ltr">Lagrange State Committees</span> اور اس سے آگے](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - <span dir="ltr">June 12, 2024</span> – <span dir="ltr">Emmanuel Awosika</span>
+- [بلاک چین پل: کرپٹو نیٹ ورکس کے نیٹ ورکس بنانا](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 ستمبر 2021 – <span dir="ltr">Dmitriy Berenzon</span>
+- [باہمی عمل پذیری کا ٹرائیلیما](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 اکتوبر 2021 – <span dir="ltr">Arjun Bhuptani</span>
+- [کلسٹرز: کس طرح قابل اعتماد اور کم از کم اعتماد والے پل ملٹی چین منظر نامے کو تشکیل دیتے ہیں](https://blog.celestia.org/clusters/) - 4 اکتوبر 2021 – <span dir="ltr">Mustafa Al-Bassam</span>
+- [<span dir="ltr">LI.FI</span>: پلوں کے ساتھ، اعتماد ایک سپیکٹرم ہے](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 اپریل 2022 – <span dir="ltr">Arjun Chand</span>
+- [رول اپ کی باہمی عمل پذیری کے سلوشنز کی حالت](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 جون 2024 – <span dir="ltr">Alex Hook</span>
+- [محفوظ کراس چین باہمی عمل پذیری کے لیے مشترکہ سیکیورٹی کا استعمال: <span dir="ltr">Lagrange State Committees</span> اور اس سے آگے](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 جون 2024 – <span dir="ltr">Emmanuel Awosika</span>
 
 مزید برآں، یہاں [<span dir="ltr">James Prestwich</span>](https://twitter.com/_prestwich) کی کچھ بصیرت افروز پیشکشیں ہیں جو پلوں کی گہری سمجھ پیدا کرنے میں مدد کر سکتی ہیں:
 

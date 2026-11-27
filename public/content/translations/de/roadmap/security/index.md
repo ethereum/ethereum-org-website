@@ -75,7 +75,7 @@ Komplexität schafft Möglichkeiten für Fehler und Schwachstellen. Ein Teil der
 
 Bisher ausgeliefert:
 
-- **[Pectra (Mai 2025)](/roadmap/pectra/)**: Führte EIP-7702 ein, das es extern verwalteten Konten ermöglicht, vorübergehend an Smart Contract-Code zu delegieren – ein Sprungbrett in Richtung vollständiger Kontoabstraktion.
+- **[Pectra (Mai 2025)](/roadmap/pectra/)**: Führte EIP-7702 ein, das es externen Konten ermöglicht, vorübergehend an Smart Contract-Code zu delegieren – ein Sprungbrett in Richtung vollständiger Kontoabstraktion.
 - **[Fusaka (Dezember 2025)](/roadmap/fusaka/)**: Implementierte PeerDAS (EIP-7594), das die Arbeitslast der Datenverfügbarkeit über das Netzwerk verteilt. Zudem wurden die Blob-Parameter erhöht, was den Transaktionsdurchsatz für Rollups erweitert.
 - **[Dencun (März 2024)](/roadmap/dencun/)**: Führte Blob-Transaktionen (EIP-4844) für günstigere Rollup-Daten ein und schränkte `SELFDESTRUCT` (EIP-6780) ein, um eine langjährige Komplexitätsquelle zu beseitigen.
 - **[Shapella (April 2023)](/staking/withdrawals/)**: Ermöglichte es Validatoren, gestakte ETH abzuheben (EIP-4895), wodurch eine frühe Einschränkung des [Proof-of-Stake](/glossary/#pos)-Stakings aufgehoben wurde.

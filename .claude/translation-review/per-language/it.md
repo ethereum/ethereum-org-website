@@ -1,5 +1,23 @@
 # it Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.0/10
+Scope: 76 markdown pages (mostly 1-24 changed lines; metadata descriptions, L2BEAT to ETHBEAT, l1/l2 casing) + 20 JSON namespaces incl. 283-line dev-tools descriptions. Read the full changed-line diff of every md page and all non-tools JSON.
+
+**Fixed in this branch (11 sites):**
+
+- `erc-7540` `tesorerie tokenizzate` back to `titoli di stato tokenizzati` ("tokenized treasuries", pattern #87)
+- `glossary.json` `wrapped-token-definition` `(weth)` back to `(WETH)` (#95)
+- `page-learn` `additional-reading-bridges` `Bridge:` to `Ponti:` (glossary, #19474)
+- `page-get-eth` `p2p-trusted-desc` `Concordate` to `Concorda` (person mix inside one imperative chain)
+- `page-trillion-dollar-security` `paragraph-2` `dei L2` to `degli L2`
+- dev-tools descriptions: 11 added long forms where English is bare collapsed (`finanza decentralizzata (DeFi)` x7, `valore totale bloccato (TVL)` x2, `circuiti a conoscenza zero (ZK)`, `Interfacce binarie dell'applicazione (ABI)`); the Gemini fix pass left these in it
+
+**Open (warnings):**
+
+- `a-developers-guide-to-ethereum-part-one` `tagli` for "denominations" (currency, ether units); `nella pool` (mempool) gender vs `nel pool` elsewhere
+- `developers/docs/bridges` reading list reverted to English titles with it-abbreviated dates (matches English; dev had translated titles)
+- `page-what-is-ether.json` lost its final newline (cosmetic)
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

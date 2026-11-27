@@ -96,7 +96,7 @@ _知道有幫助過你的社群資源嗎？編輯此頁面並加入它！_
 
 ## 教學：在以太坊上建立應用程式與前端 {#tutorials}
 
-- [尤尼斯瓦普-v2 合約導覽](/developers/tutorials/uniswap-v2-annotated-code/) _– 尤尼斯瓦普 v2 核心合約的附註導覽，解釋 AMM 的運作方式。_
+- [Uniswap v2 合約導覽](/developers/tutorials/uniswap-v2-annotated-code/) _– Uniswap v2 核心合約的附註導覽，解釋 AMM 的運作方式。_
 - [為你的合約建立使用者介面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– 如何建立一個連接到你智能合約的現代化 React + Wagmi 前端。_
 - [Web3 應用程式的伺服器元件與代理程式](/developers/tutorials/server-components/) _– 如何撰寫監聽區塊鏈事件並以交易回應的 TypeScript 伺服器元件。_
 - [用於去中心化使用者介面的 IPFS](/developers/tutorials/ipfs-decentralized-ui/) _– 如何將你的 dapp 前端託管在 IPFS 上以實現抗審查性。_

@@ -11,16 +11,16 @@ Ethereum.org হলো একটি ওপেন-সোর্স পরিচা
 
 ## অবদান রাখার উপায় {#ways-to-contribute}
 
-**Translations**
+**অনুবাদ**
 - [অনুবাদের ত্রুটি রিপোর্ট করুন](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [অনুবাদ প্রোগ্রাম](/contributing/translation-program/) গুটিয়ে নেওয়া হচ্ছে এবং নতুন অনুবাদকদের আর অনবোর্ডিং করা হচ্ছে না
 
-**Development**
+**ডেভেলপমেন্ট**
 - [একটি ওপেন ইস্যুতে কাজ করুন](https://github.com/ethereum/ethereum-org-website/issues) – আমরা এমন কিছু কাজ চিহ্নিত করেছি যা করা প্রয়োজন
 
-**Design**
+**ডিজাইন**
 - [ওয়েবসাইট ডিজাইনে সাহায্য করুন](/contributing/design/) – ওয়েবসাইট উন্নত করতে সব স্তরের ডিজাইনাররা অবদান রাখতে পারেন
 
-**Content**
+**কন্টেন্ট**
 - [কন্টেন্ট তৈরি/সম্পাদনা করুন](/contributing/#how-to-update-content) – নতুন পেজের পরামর্শ দিন বা এখানে যা আছে তাতে পরিবর্তন আনুন
 - [একটি নির্মাতা আর্টিকেল লিখুন](/contributing/adding-articles/) - [সর্বশেষ](/latest/) সেকশনের জন্য একটি আর্টিকেল দিয়ে অবদান রাখুন
 - [কমিউনিটি রিসোর্স যোগ করুন](/contributing/content-resources/) – একটি প্রাসঙ্গিক পেজে সহায়ক আর্টিকেল বা রিসোর্স যোগ করুন
@@ -31,10 +31,10 @@ Ethereum.org হলো একটি ওপেন-সোর্স পরিচা
 - [একটি ভিডিওর পরামর্শ দিন](/contributing/adding-videos/) – ভিডিও গ্যালারির জন্য একটি শিক্ষামূলক ভিডিওর পরামর্শ দিন
 - [একটি গ্লোসারি শব্দ যোগ করুন](/contributing/adding-glossary-terms/) – [ইথেরিয়াম গ্লোসারি](/glossary/)-তে একটি শব্দ যোগ বা আপডেট করুন
 
-**Feature ideas**
+**ফিচারের আইডিয়া**
 - [একটি ফিচারের অনুরোধ করুন](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – নতুন ফিচার বা ডিজাইনের জন্য আপনার কোনো আইডিয়া থাকলে আমাদের জানান
 
-**Product listings**
+**প্রোডাক্ট লিস্টিং**
 - [একটি এক্সচেঞ্জ যোগ করুন](/contributing/adding-exchanges/) – আমাদের [এক্সচেঞ্জ ফাইন্ডার](/get-eth/#country-picker)-এ একটি এক্সচেঞ্জ যোগ করুন
 - [একটি প্রোডাক্ট যোগ করুন](/contributing/adding-products/) – একটি প্রাসঙ্গিক পেজে একটি বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp) বা ওয়ালেট যোগ করুন
 - [ডেভেলপার টুল যোগ করুন](/contributing/adding-developer-tools/) – একটি প্রাসঙ্গিক পেজে একটি ডেভেলপার টুল যোগ করুন

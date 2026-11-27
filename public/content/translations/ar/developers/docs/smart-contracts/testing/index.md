@@ -298,7 +298,7 @@ function auctionEnd() external {
 
 - [نظرة عامة ومقارنة بين منتجات الاختبار المختلفة](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [كيفية استخدام إيكيدنا لاختبار العقود الذكية](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [كيفية استخدام سليذر للعثور على الأخطاء في العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [كيفية استخدام <span dir="ltr">Slither</span> للعثور على الأخطاء في العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [كيفية محاكاة العقود الذكية بلغة Solidity للاختبار](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [كيفية تشغيل اختبارات الوحدة في Solidity باستخدام Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 

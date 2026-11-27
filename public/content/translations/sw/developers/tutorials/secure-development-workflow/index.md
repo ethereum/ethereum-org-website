@@ -39,7 +39,7 @@ Andika sifa muhimu za usalama na utumie vijenereta vya majaribio vya kiotomatiki
 
 - Jifunze [kuandika sifa za usalama kwa msimbo wako](/developers/tutorials/guide-to-smart-contract-security-tools/). Ni ngumu mwanzoni, lakini ni shughuli muhimu zaidi kwa kufikia matokeo mazuri. Pia ni sharti la kutumia mbinu zozote za hali ya juu katika mafunzo haya.
 - Fafanua sifa za usalama katika Solidity, kwa matumizi na vifazari (fuzzers) kama vile [Echidna](https://github.com/crytic/echidna) na [Medusa](https://github.com/crytic/medusa), na zana za utekelezaji wa kiishara kama vile [hevm](https://hevm.dev/). Zingatia mashine yako ya hali, vidhibiti vya ufikiaji, shughuli za hesabu, mwingiliano wa nje, na ufuataji wa viwango.
-- Fafanua sifa za usalama ukitumia [Kiolesura cha Kupanga Programu Tumizi (API) cha Python cha Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). Zingatia urithi, utegemezi wa vigeu, vidhibiti vya ufikiaji, na matatizo mengine ya kimuundo.
+- Fafanua sifa za usalama ukitumia [API ya Python ya Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). Zingatia urithi, utegemezi wa vigeu, vidhibiti vya ufikiaji, na matatizo mengine ya kimuundo.
 - Endesha majaribio yako ya sifa kwenye kila uwasilishaji (commit) katika CI (kwa mfano, GitHub Actions) ili kila mtu kwenye timu yako aweze kuona kwa urahisi kuwa yamefaulu. Majaribio yanayofeli yanaweza kuzuia miunganisho (merges).
 
 Hatimaye, kuwa mwangalifu na matatizo ambayo zana za kiotomatiki haziwezi kupata kwa urahisi:

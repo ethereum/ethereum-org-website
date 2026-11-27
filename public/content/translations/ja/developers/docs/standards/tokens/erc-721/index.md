@@ -248,4 +248,4 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Vyper ERC-721 コントラクトのウォークスルー](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyperで記述された完全なERC-721 NFTコントラクトの注釈付きウォークスルー。_
 - [NFTの記述とデプロイ方法 (パート 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 初めてのERC-721スマート・コントラクトを記述し、デプロイするためのステップバイステップガイド。_
 - [NFTのミント方法 (パート 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– デプロイされたスマート・コントラクトとWeb3を使用してERC-721 NFTをミントする方法。_
-- [ウォレットでNFTを表示する方法 (パート 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– デプロイ後、ミントしたNFTをメタマスクで表示する方法。_
+- [ウォレットでNFTを表示する方法 (パート 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– デプロイ後、ミントしたNFTをMetaMaskで表示する方法。_

@@ -385,7 +385,7 @@ lang: hi
 
 #### हालिया अनुसंधान {#recent-research-14}
 
-- [रोबस्ट इंसेंटिव्स ग्रुप डेटा विश्लेषण](https://rig.ethereum.org/)
+- [Robust Incentives Group डेटा विश्लेषण](https://rig.ethereum.org/)
 - [ethPandaOps ओपन डेटा](https://ethpandaops.io/data/)
 - [ETHBEAT: स्केलिंग सारांश](https://ethbeat.org/layer2s/summary)
 

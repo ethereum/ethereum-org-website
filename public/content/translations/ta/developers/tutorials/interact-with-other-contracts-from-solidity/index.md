@@ -15,7 +15,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 யார் வேண்டுமானாலும் தங்களுக்கென சொந்தமாக ஒரு `Counter` திறன் ஒப்பந்தத்தை வைத்திருக்க உதவும் வகையில், அதற்கான ஒரு தொழிற்சாலையை (factory) உருவாக்குவதன் மூலம் ஒரு ஒப்பந்தத்தை உருவாக்குவோம், அதன் பெயர் `CounterFactory` ஆக இருக்கும். முதலில், நமது ஆரம்ப `Counter` திறன் ஒப்பந்தத்தின் குறியீடு இங்கே:
 
 ```solidity
-// SPDX-உரிம-அடையாளங்காட்டி: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {
@@ -105,7 +105,7 @@ Solidity 0.8 முதல், எண்கணிதம் [இயல்புந
 முழுமையான குறியீடு இங்கே:
 
 ```solidity
-// SPDX-உரிம-அடையாளங்காட்டி: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {

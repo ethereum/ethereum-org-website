@@ -1,7 +1,7 @@
 ---
 title: "¿Qué son las pruebas de conocimiento cero?"
 metaTitle: Pruebas de conocimiento cero
-description: "¿Qué son las pruebas de conocimiento cero? Una introducción para principiantes sobre cómo las pruebas ZK verifican un reclamo sin revelar los datos, y cómo las utiliza Ethereum."
+description: "¿Qué son las pruebas de conocimiento cero? Una introducción para principiantes sobre cómo las pruebas ZK verifican una afirmación sin revelar los datos, y cómo las utiliza Ethereum."
 lang: es
 ---
 

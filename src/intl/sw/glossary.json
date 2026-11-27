@@ -28,7 +28,7 @@
   "block-term": "Kitalu",
   "block-definition": "Kitalu ni mahali ambapo miamala au vitendo vya kidijitali huhifadhiwa. Pindi kitalu kinapojaa, huunganishwa na kile kilichotangulia, na kuunda mnyororo wa vitalu. <a href=\"/developers/docs/blocks/\">Zaidi kuhusu vitalu</a>.<br /><br />Kitalu ni kitengo cha taarifa kilichofungashwa ambacho kinajumuisha orodha iliyopangwa ya miamala na taarifa zinazohusiana na mwafaka. Vitalu vinapendekezwa na wathibitishaji wa Uthibitisho wa Dau (PoS), ambapo vinashirikiwa kwenye mtandao mzima wa rika-kwa-rika, ambapo vinaweza kuthibitishwa kwa urahisi na kwa kujitegemea na nodi nyingine zote. Sheria za mwafaka hutawala ni yaliyomo yapi ya kitalu yanachukuliwa kuwa halali, na vitalu vyovyote batili hupuuzwa na mtandao. Upangaji wa vitalu hivi na miamala iliyomo huunda mnyororo thabiti wa matukio huku mwisho ukiwakilisha hali ya sasa ya mtandao.",
   "block-builder-term": "Mjenga kizuizi",
-  "block-builder-definition": "Mshiriki anayekusanya miamala kwenye kitalu na kuitoa kwa mthibitishaji anayependekeza sloti hiyo, kwa kawaida akipanga miamala kulingana na ada na malipo inayoleta.",
+  "block-builder-definition": "Mshiriki anayekusanya miamala kwenye kitalu na kukitoa kwa mthibitishaji anayependekeza sloti hiyo, kwa kawaida akipanga miamala kulingana na ada na malipo inayoleta.",
   "block-explorer-term": "Kichunguzi cha bloku",
   "block-explorer-definition": "Kiolesura kinachomruhusu mtumiaji kutafuta taarifa kutoka, na kuhusu, mnyororo wa vitalu. Hii inajumuisha kurejesha miamala binafsi, shughuli zinazohusiana na anwani mahususi na taarifa kuhusu mtandao.",
   "block-header-term": "Kichwa cha kizuizi",

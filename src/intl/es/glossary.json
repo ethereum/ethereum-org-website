@@ -329,7 +329,7 @@
   "sequencer-definition": "Un secuenciador es un programa responsable de ordenar las transacciones en una red de cadena de bloques, particularmente dentro de las soluciones de escalabilidad de capa 2.",
   "shard-term": "Fragmento / cadena de fragmentos",
   "shard-definition": "Las cadenas de fragmentos son secciones discretas de la cadena de bloques total de las que pueden ser responsables subconjuntos de validadores. Originalmente, esta iba a ser la forma en que Ethereum escalaría a millones de transacciones por segundo, pero ahora ha sido reemplazada por el rápido desarrollo de la escalabilidad mediante <a href=\"/glossary/#rollups\">rollups</a>.",
-  "shielded-pool-term": "Shielded pool",
+  "shielded-pool-term": "Fondo blindado",
   "shielded-pool-definition": "Un contrato inteligente que mantiene juntos los fondos de muchos usuarios y utiliza pruebas de conocimiento cero, de modo que se puede demostrar que un retiro es válido sin revelar de qué depósito provino.",
   "sidechain-term": "Cadena lateral",
   "sidechain-definition": "Una solución de escalabilidad que utiliza una cadena separada con <a href=\"/glossary/#consensus-rules\">reglas de consenso</a> diferentes y, a menudo, más rápidas. Se necesita un puente para conectar estas cadenas laterales a la <a href=\"/glossary/#mainnet\">Red principal</a>. Los <a href=\"/glossary/#rollups\">rollups</a> también utilizan cadenas laterales, pero operan en colaboración con la <a href=\"/glossary/#mainnet\">Red principal</a> en su lugar. <a href=\"/developers/docs/scaling/sidechains/\">Más sobre las cadenas laterales</a>.",

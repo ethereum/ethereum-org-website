@@ -563,7 +563,7 @@ contract Attack {
 
 - [如何撰寫安全的智能合約](/developers/tutorials/secure-development-workflow/)
 
-- [如何使用斯立瑟尋找智能合約錯誤](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用 Slither 尋找智能合約錯誤](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [智能合約安全指南](/developers/tutorials/smart-contract-security-guidelines/)
 

@@ -15,7 +15,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ہم ایک ایسا کنٹریکٹ بنائیں گے جو کسی کو بھی اس کے لیے ایک فیکٹری بنا کر اپنا `Counter` سمارٹ کنٹریکٹ رکھنے کے قابل بناتا ہے، اس کا نام `CounterFactory` ہوگا۔ سب سے پہلے یہاں ہمارے ابتدائی `Counter` سمارٹ کنٹریکٹ کا کوڈ ہے:
 
 ```solidity
-// SPDX-لائسنس-شناخت کنندہ: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {
@@ -105,7 +105,7 @@ function increment() public {
 یہاں مکمل کوڈ ہے:
 
 ```solidity
-// SPDX-لائسنس-شناخت کنندہ: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {

@@ -96,7 +96,7 @@ _知道对你有帮助的社区资源吗？编辑本页面并添加它！_
 
 ## 教程：在以太坊上构建应用和前端 {#tutorials}
 
-- [尤尼斯瓦普-v2 合约演练](/developers/tutorials/uniswap-v2-annotated-code/) _– 尤尼斯瓦普 v2 核心合约的带注释的演练，解释自动做市商 (AMM) 的工作原理。_
+- [Uniswap v2 合约演练](/developers/tutorials/uniswap-v2-annotated-code/) _– Uniswap v2 核心合约的带注释的演练，解释自动做市商 (AMM) 的工作原理。_
 - [为你的合约构建用户界面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– 如何构建一个连接到你的智能合约的现代 React + Wagmi 前端。_
 - [Web3 应用的服务器组件和代理](/developers/tutorials/server-components/) _– 如何编写监听区块链事件并以交易响应的 TypeScript 服务器组件。_
 - [用于去中心化用户界面的 IPFS](/developers/tutorials/ipfs-decentralized-ui/) _– 如何将你的去中心化应用 (dapp) 前端托管在 IPFS 上以实现抗审查性。_

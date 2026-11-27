@@ -39,7 +39,7 @@ incomplete: true
 ## Rustのプロジェクトとツール {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _イーサリアムのようなネットワークと対話するためのexternsのコレクション_
-- [Lighthouse (ライトハウス)](https://github.com/sigp/lighthouse) - _高速なイーサリアムのコンセンサス・レイヤークライアント_
+- [Lighthouse](https://github.com/sigp/lighthouse) - _高速なイーサリアムのコンセンサス・レイヤークライアント_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssemblyの決定論的サブセットを使用した、イーサリアムのスマート・コントラクト実行レイヤーの再設計案_
 - [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブのParityクライアントEVMを使用したSolidityスマート・コントラクトのユニットテストハーネス。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rustによるイーサリアム仮想マシン (EVM) の実装_

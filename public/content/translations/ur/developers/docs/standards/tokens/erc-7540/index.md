@@ -177,4 +177,4 @@ event OperatorSet(
 
 - [<span dir="ltr">EIP-7540</span>: غیر ہم آہنگ <span dir="ltr">ERC-4626</span> ٹوکنائزڈ تجوریاں](https://eips.ethereum.org/EIPS/eip-7540)
 - [<span dir="ltr">EIP-4626</span>: ٹوکنائزڈ تجوری کا معیار](https://eips.ethereum.org/EIPS/eip-4626)
-- [اوپن زیپلن <span dir="ltr">ERC-7540</span> کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/token/ERC20/extensions/ERC7540.sol)
+- [<span dir="ltr">OpenZeppelin</span> <span dir="ltr">ERC-7540</span> کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/token/ERC20/extensions/ERC7540.sol)

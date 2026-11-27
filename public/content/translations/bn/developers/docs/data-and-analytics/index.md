@@ -76,7 +76,7 @@ EVM কোয়েরি ল্যাঙ্গুয়েজ (EQL) হলো �
 
 - [ক্রিপ্টো ডেটা এক্সপ্লোরিং I: ডেটা ফ্লো আর্কিটেকচার](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [গ্রাফ নেটওয়ার্ক ওভারভিউ](https://thegraph.com/docs/en/about/)
-- [গ্রাফ এক্সপ্লোরার](https://thegraph.com/explorer)
+- [Graph Explorer](https://thegraph.com/explorer)
 - [Etherscan-এ API কোডের উদাহরণ](https://etherscan.io/apis#contracts)
 - [Blockscout-এ API ডকুমেন্টেশন](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in বিকন চেইন এক্সপ্লোরার](https://beaconcha.in)

@@ -20,7 +20,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 سنقوم بإنشاء عقد يمكّن أي شخص من امتلاك عقد `Counter` الذكي الخاص به عن طريق إنشاء مصنع له، وسيكون اسمه `CounterFactory`. أولاً، إليك كود عقد `Counter` الذكي الأولي الخاص بنا:
 
 ```solidity
-// معرف ترخيص SPDX: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {
@@ -110,7 +110,7 @@ function increment() public {
 إليك الكود الكامل:
 
 ```solidity
-// معرف ترخيص SPDX: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {

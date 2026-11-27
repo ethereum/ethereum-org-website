@@ -15,7 +15,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 हम एक ऐसा अनुबंध बनाएंगे जो किसी को भी इसके लिए एक फैक्ट्री बनाकर अपना खुद का `Counter` स्मार्ट अनुबंध रखने में सक्षम बनाता है, इसका नाम `CounterFactory` होगा। सबसे पहले यहाँ हमारे प्रारंभिक `Counter` स्मार्ट अनुबंध का कोड दिया गया है:
 
 ```solidity
-// SPDX-लाइसेंस-पहचानकर्ता: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {
@@ -105,7 +105,7 @@ Solidity 0.8 के बाद से, अंकगणित [डिफ़ॉल�
 यहाँ पूरा कोड दिया गया है:
 
 ```solidity
-// SPDX-लाइसेंस-पहचानकर्ता: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {

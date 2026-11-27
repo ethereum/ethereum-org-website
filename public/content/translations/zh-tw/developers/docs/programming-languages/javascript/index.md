@@ -52,9 +52,9 @@ JavaScript 是以太坊生態系中最受歡迎的語言之一，從核心協定
 
 ### 節點與客戶端 {#nodes-and-clients}
 
-[洛德斯塔](https://lodestar.chainsafe.io/)是一個可用於生產環境的共識客戶端，以 TypeScript 編寫並由 ChainSafe 維護。它包含一個信標節點與驗證者客戶端，這是一個很好的起點，讓你用熟悉的語言了解以太坊的權益證明共識是如何運作的。
+[Lodestar](https://lodestar.chainsafe.io/)是一個可用於生產環境的共識客戶端，以 TypeScript 編寫並由 ChainSafe 維護。它包含一個信標節點與驗證者客戶端，這是一個很好的起點，讓你用熟悉的語言了解以太坊的權益證明共識是如何運作的。
 
-**查看洛德斯塔**  
+**查看 Lodestar**  
 [`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
 
 在執行層方面，EthereumJS 客戶端已被棄用並封存，但其原始碼仍然可用，供你探索以太坊客戶端在 JavaScript 中是如何運作的。

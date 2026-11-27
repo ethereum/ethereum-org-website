@@ -98,7 +98,7 @@
   "page-get-eth-p2p-escrow-title": "Usa un'app P2P con escrow",
   "page-get-eth-p2p-escrow-desc": "Uno smart contract trattiene le cripto del venditore e te le rilascia una volta confermato il pagamento, così nessuno dei due deve fidarsi dell'altro. Molte app scambiano una stablecoin come USDC, di cui poi fai uno swap per ETH.",
   "page-get-eth-p2p-trusted-title": "Acquista da qualcuno che conosci",
-  "page-get-eth-p2p-trusted-desc": "Amici, familiari o un meetup locale di Ethereum. Concordate un prezzo, condividi l'indirizzo del tuo portafoglio e paga una volta arrivati gli ETH. Inizia con una piccola somma.",
+  "page-get-eth-p2p-trusted-desc": "Amici, familiari o un meetup locale di Ethereum. Concorda un prezzo, condividi l'indirizzo del tuo portafoglio e paga una volta arrivati gli ETH. Inizia con una piccola somma.",
   "page-get-eth-p2p-safety-title": "Rimani al sicuro",
   "page-get-eth-p2p-safety-desc": "Mantieni l'intero scambio all'interno dell'app, non rilasciare mai un pagamento in anticipo e allontanati da chiunque ti contatti per primo o offra un prezzo che sembra troppo bello per essere vero.",
   "page-get-eth-p2p-kyc-note": "L'assenza di KYC sull'app non significa anonimato: la tua banca o app di pagamento sa comunque chi ha inviato il denaro. Controlla le regole per l'acquisto e la vendita di cripto dove vivi.",

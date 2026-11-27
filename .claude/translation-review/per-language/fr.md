@@ -1,5 +1,24 @@
 # French (fr) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.2/10
+Scope: 72 markdown pages + 20 JSON namespaces (incremental updates, dev-tools descriptions); 7 markdown diffs read in full, about 150 JSON keys sampled; scripted sweeps clean for U+3002/U+2060/foreign script; verify-structure: no new errors (`data-and-analytics` heading-count is on dev; 19 img-alt-untranslated warnings).
+
+**Fixed in this branch (about 31 sites):**
+
+- Long form added where English is bare `L1`/`L2` (known-patterns #112; the JSON fix pass did not cover markdown): `couche 1 (L1)`/`couche 2 (L2)` -> `L1`/`L2`/`la L1` in zkevm (8 lines), bridges, developers/docs/bridges (2), roadmap/security:104, zero-knowledge-proofs:103, social-networks:62, fusaka (4), dencun (4 sites), community/research (3), plus JSON `page-resources` gas-ethgastracker/gas-l2fees, `page-organizations-enterprise-privacy-compliance-description`, `tool-ethskills-description`. Where English says "layer 2"/"layer 1" the glossary form `couche 2 (L2)` was kept.
+- `dapp` spelled out where English is bare: bridges:47, `tool-ethskills-description` (also `DeFi`), glossary `transaction-fee-definition` (matches the tooltip file).
+- Glossary EOA: roadmap/security:78 `comptes détenus par des externes` -> `comptes détenus en externe`.
+
+**Open (native call needed):**
+
+- `shielded-pool-term`: `Réserve protégée` in glossary-tooltip vs `Pool masqué` in glossary (same term, two renderings).
+- community/research:173 `ponts de garde` for custodial bridges (carried from #19034).
+- contributing/index.md:28 `technologies sanctuaires` is a literal calque of "sanctuary technologies".
+- single-slot-finality title and `page-roadmap-single-slot-finality-title` `Finalité à slot unique` vs glossary `créneau` (pre-existing on dev).
+- gasper: `réduction` used for slashing alongside `sanctionné` (pre-existing mix).
+
+**Notes:** tu/vous consistent (vous), guillemets and French colon spacing intact, components (`GasperFinalityDiagram`, `VaultDepositDiagram`, ...) restored, tool and brand names stay Latin (RedStone Oracles, Band Protocol, UMA Oracle restored from translated forms).
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

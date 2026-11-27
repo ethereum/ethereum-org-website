@@ -565,7 +565,7 @@ contract Attack {
 
 - [كيفية كتابة عقود ذكية آمنة](/developers/tutorials/secure-development-workflow/)
 
-- [كيفية استخدام سليذر للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [كيفية استخدام <span dir="ltr">Slither</span> للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [إرشادات أمان العقود الذكية](/developers/tutorials/smart-contract-security-guidelines/)
 

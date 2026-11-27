@@ -45,7 +45,7 @@ lang: ur
 - [لوڈسٹار](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): <span dir="ltr">TypeScript</span> میں اتفاق رائے کا لائٹ کلائنٹ
 - [Helios](https://github.com/a16z/helios): <span dir="ltr">Rust</span> میں مشترکہ ایگزیکیوشن اور اتفاق رائے کا لائٹ کلائنٹ
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): <span dir="ltr">Go</span> میں ایگزیکیوشن کلائنٹ کے لیے لائٹ موڈ (زیرِ تکمیل)
-- [نمبس](https://nimbus.guide/el-light-client.html): <span dir="ltr">Nim</span> میں اتفاق رائے کا لائٹ کلائنٹ
+- [<span dir="ltr">Nimbus</span>](https://nimbus.guide/el-light-client.html): <span dir="ltr">Nim</span> میں اتفاق رائے کا لائٹ کلائنٹ
 
 ہمارے علم کے مطابق ان میں سے کسی کو بھی ابھی تک پروڈکشن کے لیے تیار نہیں سمجھا جاتا۔
 

@@ -50,7 +50,7 @@ Jeśli wolisz czytać kod, ten JavaScript może być świetną alternatywą dla 
 **Sprawdź EVM**  
 [`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
-### Węzły i klienty {#nodes-and-clients}
+### Węzły i klienci {#nodes-and-clients}
 
 [Lodestar](https://lodestar.chainsafe.io/) to gotowy do użytku produkcyjnego klient konsensusu napisany w języku TypeScript i utrzymywany przez ChainSafe. Zawiera węzeł Beacon i klienta walidatora, i jest dobrym miejscem, aby zobaczyć, jak działa konsensus dowodu stawki w Ethereum w języku, który znasz.
 

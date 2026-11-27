@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 在此语境下，归档节点是指由面向用户的执行层客户端提供的数据，因为它们处理状态数据库并提供 JSON-RPC 端点。配置选项、同步时间和数据库大小可能因客户端而异。有关详细信息，请参阅客户端提供的文档。
 
-在启动你自己的归档节点之前，请了解客户端之间的差异，尤其是各种[硬件要求](/developers/docs/nodes-and-clients/run-a-node/#requirements)。归档大小因每个客户端的存储设计而异。埃里贡、瑞斯和 Geth（具有基于路径的归档）将主网归档存储在约 2-3TB 的空间中，而贝苏和奈瑟曼德归档需要 12TB 或更多。
+在启动你自己的归档节点之前，请了解客户端之间的差异，尤其是各种[硬件要求](/developers/docs/nodes-and-clients/run-a-node/#requirements)。归档大小因每个客户端的存储设计而异。Erigon、Reth 和 Geth（具有基于路径的归档）将主网归档存储在约 2-3TB 的空间中，而 Besu 和 Nethermind 归档需要 12TB 或更多。
 
 ## 推荐实践 {#recommended-practices}
 

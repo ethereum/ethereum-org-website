@@ -1,6 +1,6 @@
 ---
 title: Puentes
-description: "Una guía para desarrolladores sobre puentes: cómo funcionan la mensajería intercadena y el puenteo de tokens, los tipos de puentes y los supuestos de confianza, y cómo integrarlos en las aplicaciones descentralizadas (dapp)."
+description: "Una guía para desarrolladores sobre puentes: cómo funcionan la mensajería intercadena y el puenteo de tokens, los tipos de puentes y los supuestos de confianza, y cómo integrarlos en las dapps."
 lang: es
 ---
 

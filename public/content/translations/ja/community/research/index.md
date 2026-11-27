@@ -476,4 +476,4 @@ lang: ja
 #### 最近の研究 {#recent-research-20}
 
 - [スマート・コントラクトのコンポーザビリティ](/developers/docs/smart-contracts/composability/)
-- [コインベース: Web3スタック入門](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)
+- [Coinbase: Web3スタック入門](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)

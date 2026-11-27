@@ -1,5 +1,12 @@
 # Vietnamese (vi) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.8/10
+Scope: 75 markdown pages (mostly SEO descriptions, L2BEAT to ETHBEAT, l1/l2 to L1/L2, Verkle to EIP-7864 rewrites, a few full prose passes) + 19 JSON namespaces. Full diff read (all md and JSON), placeholder/tag parity vs en clean, no foreign-script, U+3002 or U+2060, no untranslated English prose.
+
+Fixed: `contributing/index.md:25` `trình xây dựng` (builder tool) -> `người xây dựng` for "builder article"; `formal-verification/index.md:59` curly quotes introduced around the ERC-20 invariant restored to straight quotes.
+
+Open: `glossary-tooltip.json:142` `Pool bảo mật` vs `glossary.json:332` `Hồ chứa ẩn danh` for the same new term (prose uses Latin `shielded pool`); `glossary(-tooltip).json` light-client term `Máy khách nhẹ` but definition says `ứng dụng khách`; `roadmap/zkevm:102` bare `witness` (was `nhân chứng`); `storage:10` Latin `client` among `máy khách`; `interact-with-other-contracts` `chúng tôi` flipped from `chúng ta` at L54/L56; `single-slot-finality` title keeps `slot` while body/description use `khe`; `contributing/index.md:28` `công nghệ bảo vệ an toàn` hedges the en typo `sanctuary technologies`; glossary casing leak (`Chuỗi`, `Phân nhánh`, `Kỷ nguyên`) continues.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical; `Tai trong` is payload, not Get. Open: glossary-capitalized `Giao thuc`, `Thu vien`, `Vi`, `Chuoi khoi` mid-sentence x17 (#113); `trinh tao block` mixes Latin `block` with `khoi` in one value.
 

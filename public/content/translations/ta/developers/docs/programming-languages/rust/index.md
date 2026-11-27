@@ -49,7 +49,7 @@ incomplete: true
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _எத்திரியம் நிரலகம் மற்றும் பணப்பை செயலாக்கம்_
 - [SewUp](https://github.com/second-state/SewUp) - _Rust-ஐப் பயன்படுத்தி உங்கள் எத்திரியம் WebAssembly ஒப்பந்தத்தை உருவாக்கவும், பொதுவான பின்தளத்தில் உருவாக்குவது போல உருவாக்கவும் உதவும் ஒரு நிரலகம்_
 - [Substreams](https://github.com/streamingfast/substreams) - _இணையான தொகுதிச்சங்கிலி தரவு அட்டவணைப்படுத்தல் தொழில்நுட்பம்_
-- [ரெத்](https://github.com/paradigmxyz/reth) ரெத் (Rust எத்திரியம் என்பதன் சுருக்கம்) என்பது ஒரு புதிய எத்திரியம் முழு முனையம் செயலாக்கமாகும்
+- [Reth](https://github.com/paradigmxyz/reth) Reth (Rust எத்திரியம் என்பதன் சுருக்கம்) என்பது ஒரு புதிய எத்திரியம் முழு முனையம் செயலாக்கமாகும்
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rust-இல் எழுதப்பட்ட எத்திரியம் சுற்றுச்சூழல் அமைப்பில் உள்ள திட்டங்களின் தேர்ந்தெடுக்கப்பட்ட தொகுப்பு_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Arbitrum-இல் திறன் ஒப்பந்தங்களை உருவாக்குவதற்கான Rust SDK_
 

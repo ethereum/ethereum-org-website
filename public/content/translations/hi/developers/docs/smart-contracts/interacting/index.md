@@ -179,7 +179,7 @@ const result = await client.simulateContract({
 - [Viem दस्तावेज़: कॉन्ट्रैक्ट को पढ़ना और लिखना](https://viem.sh/docs/contract/readContract)
 - [Ethers.js दस्तावेज़: कॉन्ट्रैक्ट](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI विनिर्देश](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [स्मार्ट कॉन्ट्रैक्ट ABI कैसे काम करते हैं? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
+- [स्मार्ट अनुबंध ABI कैसे काम करते हैं? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## संबंधित विषय {#related-topics}
 

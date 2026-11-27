@@ -73,12 +73,12 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### 測試與驗證 {#testing-and-verification}
 
 - **編寫詳盡的單元測試。** 廣泛的測試套件對於構建高品質軟體至關重要。
-- **編寫 [斯立瑟](https://github.com/crytic/slither)、[埃奇德納](https://github.com/crytic/echidna) 與 [Medusa](https://github.com/crytic/medusa) 的自訂檢查與屬性。** 自動化工具將有助於確保你的合約安全。請查閱本指南的其餘部分，了解如何編寫高效的檢查與屬性。
-- **在持續整合中執行這些工具。** 在每個拉取請求上執行斯立瑟與你的模糊測試屬性，可以在合併之前捕捉到迴歸問題。
+- **編寫 [Slither](https://github.com/crytic/slither)、[Echidna](https://github.com/crytic/echidna) 與 [Medusa](https://github.com/crytic/medusa) 的自訂檢查與屬性。** 自動化工具將有助於確保你的合約安全。請查閱本指南的其餘部分，了解如何編寫高效的檢查與屬性。
+- **在持續整合中執行這些工具。** 在每個拉取請求上執行 Slither 與你的模糊測試屬性，可以在合併之前捕捉到迴歸問題。
 
 ### Solidity {#solidity}
 
-- **使用沒有已知嚴重錯誤的近期 Solidity 0.8.x 版本。** Solidity 0.8 預設會檢查算術的溢位與下溢，而較舊的版本則缺少較新的編譯器安全檢查。請參閱斯立瑟的 [solc 版本建議](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity)。
+- **使用沒有已知嚴重錯誤的近期 Solidity 0.8.x 版本。** Solidity 0.8 預設會檢查算術的溢位與下溢，而較舊的版本則缺少較新的編譯器安全檢查。請參閱 Slither 的 [solc 版本建議](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity)。
 - **使用穩定版本進行編譯；使用最新版本檢查警告。** 檢查你的程式碼在最新編譯器版本中沒有被回報問題。然而，Solidity 的發布週期很快，且有編譯器錯誤的歷史，因此請避免使用幾天前才發布的版本進行部署。請檢查你選擇的版本的[已知編譯器錯誤清單](https://docs.soliditylang.org/en/latest/bugs.html)。
 - **不要使用行內組合語言。** 組合語言需要 EVM 專業知識。如果你還沒有_精通_黃皮書，請不要編寫 EVM 程式碼。
 

@@ -1,5 +1,20 @@
 # Russian (ru) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.1/10
+Scope: 90 ru files (71 markdown, 19 JSON; incremental updates), changed lines only. Sampled ~20 markdown diffs (contributing, adding-layer-2s, anatomy, erc-7540, dencun, roadmap/security, zkevm, oracles, rust, 3 tutorials, bridges, community/research, staking, EIPs/governance) and ~250 JSON keys (glossary, glossary-tooltip, page-get-eth, page-learn, page-roadmap, page-layer-2-*, page-resources, quizzes). Sweeps clean: no U+3002/U+2060/foreign script, all JSON valid, no untranslated sentences.
+
+**Fixed in this branch:**
+
+- `glossary-tooltip.json` `shielded-pool-term` `Экранированный пул` -> `Защищенный пул` (matches `glossary.json`)
+
+**Open (warnings):**
+
+- `page-layer-2-networks-wallets-count`: `{count} кошельков` has no plural forms (rendered via `t.raw`, English is also plain); wrong for 1, 2-4, 21.
+- L1/L2 `уровня 2 (L2)` first-mention expansions persist in markdown (case-only change from `(l2)`); mixed with bare `L2` in the same files (#112).
+- `Правительство Эфириума` for "Ethereum governance" link text (`governance/index.md:185`, pre-existing; glossary `управление`).
+- `Слизер` / `Эхидна` are glossary-sanctioned transliterations of Slither / Echidna (ETHGlossary note says Latin is also common); kept.
+- Period decimal in `0.01 $`; `Эфириум` vs `Ethereum` mix and `Мейннет` vs `основная сеть` unchanged from dev.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `уровне 1 (L1)` / `уровне 2 (L2)` first-mention expansions in 18 diagram values (#112); client names (Besu, Lighthouse, Teku, Reth, ...) transliterated per ETHGlossary (correct, #113); `Разработчики` x179 for builders vs glossary `сборщик` (glossary side is the outlier).
 

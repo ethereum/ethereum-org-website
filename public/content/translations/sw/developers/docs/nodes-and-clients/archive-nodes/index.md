@@ -52,7 +52,7 @@ Kuna [huduma](/developers/docs/nodes-and-clients/nodes-as-a-service/) mbalimbali
 
 Nodi ya kumbukumbu katika muktadha huu inamaanisha data inayotolewa na wateja wa tabaka la utekelezaji wanaowasiliana na watumiaji wanaposhughulikia hifadhidata ya hali na kutoa vituo vya mwisho vya JSON-RPC. Chaguzi za usanidi, muda wa usawazishaji na ukubwa wa hifadhidata vinaweza kutofautiana kulingana na mteja. Kwa maelezo, tafadhali rejelea nyaraka zilizotolewa na mteja wako.
 
-Kabla ya kuanzisha nodi yako mwenyewe ya kumbukumbu, jifunze kuhusu tofauti kati ya wateja na hasa [mahitaji mbalimbali ya maunzi](/developers/docs/nodes-and-clients/run-a-node/#requirements). Ukubwa wa kumbukumbu hutofautiana sana kulingana na muundo wa hifadhi wa kila mteja. Erigon, Reth na Geth (pamoja na kumbukumbu yake inayotegemea njia) huhifadhi kumbukumbu ya Mtandao Mkuu katika takriban 2-3TB, wakati kumbukumbu za Besu na Nethermind zinahitaji 12TB au zaidi.
+Kabla ya kuanzisha nodi yako mwenyewe ya kumbukumbu, jifunze kuhusu tofauti kati ya wateja na hasa [mahitaji mbalimbali ya maunzi](/developers/docs/nodes-and-clients/run-a-node/#requirements). Ukubwa wa kumbukumbu hutofautiana sana kulingana na muundo wa hifadhi wa kila kiteja. Erigon, Reth na Geth (pamoja na kumbukumbu yake inayotegemea njia) huhifadhi kumbukumbu ya Mtandao Mkuu katika takriban 2-3TB, wakati kumbukumbu za Besu na Nethermind zinahitaji 12TB au zaidi.
 
 ## Mapendekezo ya vitendo {#recommended-practices}
 

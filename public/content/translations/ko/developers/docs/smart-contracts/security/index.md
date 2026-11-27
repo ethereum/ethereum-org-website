@@ -99,7 +99,7 @@ contract VendingMachine {
 
 버그 바운티 프로그램을 설정하는 것은 외부 코드 검토를 구현하는 또 다른 접근 방식입니다. 버그 바운티는 애플리케이션에서 취약점을 발견한 개인(주로 화이트햇 해커)에게 주어지는 재정적 보상입니다.
 
-적절하게 사용될 경우, 버그 바운티는 해커 커뮤니티 구성원들이 코드의 치명적인 결함을 검사하도록 동기를 부여합니다. 실제 사례로는 공격자가 이더리움에서 실행되는 [레이어 2 (L2)](/layer-2/) 프로토콜인 [옵티미즘](https://www.optimism.io/)에서 무제한의 이더를 생성할 수 있었던 "무한 돈 버그(infinite money bug)"가 있습니다. 다행히도 한 화이트햇 해커가 [이 결함을 발견](https://www.saurik.com/optimism.html)하여 팀에 알렸고, [그 과정에서 큰 보상금을 받았습니다](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+적절하게 사용될 경우, 버그 바운티는 해커 커뮤니티 구성원들이 코드의 치명적인 결함을 검사하도록 동기를 부여합니다. 실제 사례로는 공격자가 이더리움에서 실행되는 [레이어 2 (L2)](/layer-2/) 프로토콜인 [Optimism](https://www.optimism.io/)에서 무제한의 이더를 생성할 수 있었던 "무한 돈 버그(infinite money bug)"가 있습니다. 다행히도 한 화이트햇 해커가 [이 결함을 발견](https://www.saurik.com/optimism.html)하여 팀에 알렸고, [그 과정에서 큰 보상금을 받았습니다](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 유용한 전략은 버그 바운티 프로그램의 보상금을 위험에 처한 자금의 양에 비례하여 설정하는 것입니다. "[스케일링 버그 바운티(scaling bug bounty)](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)"라고 불리는 이 접근 방식은 개인이 취약점을 악용하는 대신 책임감 있게 공개하도록 재정적 인센티브를 제공합니다.
 

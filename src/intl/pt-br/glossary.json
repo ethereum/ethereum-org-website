@@ -329,7 +329,7 @@
   "sequencer-definition": "Um sequenciador é um programa responsável por ordenar transações em uma rede blockchain, particularmente dentro de soluções de escalabilidade de Camada 2.",
   "shard-term": "Fragmento / cadeia de fragmentos",
   "shard-definition": "As cadeias de fragmentos são seções discretas da blockchain total pelas quais subconjuntos de validadores podem ser responsáveis. Originalmente, essa seria a maneira pela qual o Ethereum escalaria para milhões de transações por segundo, mas agora foi substituída pelo rápido desenvolvimento da escalabilidade usando <a href=\"/glossary/#rollups\">rollups</a>.",
-  "shielded-pool-term": "Pool blindada",
+  "shielded-pool-term": "Pool blindado",
   "shielded-pool-definition": "Um contrato inteligente que mantém os fundos de muitos usuários juntos e usa provas de conhecimento zero, para que um saque possa ser mostrado como válido sem revelar de qual depósito ele veio.",
   "sidechain-term": "Sidechain",
   "sidechain-definition": "Uma solução de escalabilidade que usa uma cadeia separada com <a href=\"/glossary/#consensus-rules\">regras de consenso</a> diferentes e, muitas vezes, mais rápidas. Uma ponte é necessária para conectar essas sidechains à <a href=\"/glossary/#mainnet\">Mainnet</a>. Os <a href=\"/glossary/#rollups\">rollups</a> também usam sidechains, mas operam em colaboração com a <a href=\"/glossary/#mainnet\">Mainnet</a> em vez disso. <a href=\"/developers/docs/scaling/sidechains/\">Mais sobre sidechains</a>.",

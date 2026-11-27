@@ -12,7 +12,7 @@ Ethereum.org 是一个开源项目，拥有 <strong>12 000 多名</strong>贡献
 ## 贡献方式 {#ways-to-contribute}
 
 **翻译**
-- [报告翻译错误](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [翻译计划](/contributing/translation-program/)即将结束，不再进行新译者的用户引导
+- [报告翻译错误](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [翻译计划](/contributing/translation-program/)即将结束，不再为新译者提供入门引导
 
 **开发**
 - [处理开放议题](https://github.com/ethereum/ethereum-org-website/issues) – 我们已确定需要完成的工作

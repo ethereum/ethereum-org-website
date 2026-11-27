@@ -4,7 +4,7 @@ description: "JavaScript tabanlı projeleri ve araçları kullanarak Ethereum i�
 lang: tr
 ---
 
-JavaScript, temel protokol ilkellerinden üretim düzeyinde bir fikir birliği istemcisine kadar her şeyin JavaScript ve TypeScript uygulamalarıyla Ethereum ekosistemindeki en popüler diller arasındadır.
+JavaScript, temel protokol ilkellerinden üretim düzeyinde bir fikir birliği istemcisine kadar her şeyin JavaScript ve TypeScript uygulamalarının bulunduğu, Ethereum ekosistemindeki en popüler dillerden biridir.
 
 [Yığının tüm seviyelerinde](/developers/docs/ethereum-stack/) JavaScript (veya ona yakın bir şey) yazma fırsatları vardır.
 

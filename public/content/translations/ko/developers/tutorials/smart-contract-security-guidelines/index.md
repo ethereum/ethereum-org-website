@@ -73,12 +73,12 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### 테스트 및 검증 {#testing-and-verification}
 
 - **철저한 단위 테스트를 작성하세요.** 고품질 소프트웨어를 빌드하려면 광범위한 테스트 스위트가 필수적입니다.
-- **[슬리더](https://github.com/crytic/slither), [에키드나](https://github.com/crytic/echidna) 및 [Medusa](https://github.com/crytic/medusa) 사용자 지정 검사 및 속성을 작성하세요.** 자동화된 도구는 컨트랙트가 안전한지 확인하는 데 도움이 됩니다. 효율적인 검사 및 속성을 작성하는 방법을 알아보려면 이 가이드의 나머지 부분을 검토하세요.
-- **지속적 통합(CI) 환경에서 이러한 도구를 실행하세요.** 모든 풀 리퀘스트에서 슬리더와 퍼징 속성을 실행하면 코드가 병합되기 전에 회귀(regression)를 포착할 수 있습니다.
+- **[Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) 및 [Medusa](https://github.com/crytic/medusa) 사용자 지정 검사 및 속성을 작성하세요.** 자동화된 도구는 컨트랙트가 안전한지 확인하는 데 도움이 됩니다. 효율적인 검사 및 속성을 작성하는 방법을 알아보려면 이 가이드의 나머지 부분을 검토하세요.
+- **지속적 통합(CI) 환경에서 이러한 도구를 실행하세요.** 모든 풀 리퀘스트에서 Slither와 퍼징 속성을 실행하면 코드가 병합되기 전에 회귀(regression)를 포착할 수 있습니다.
 
 ### Solidity {#solidity}
 
-- **알려진 심각한 버그가 없는 최신 Solidity 0.8.x 릴리스를 사용하세요.** Solidity 0.8은 기본적으로 산술 연산의 오버플로 및 언더플로를 검사하며, 이전 버전에는 최신 컴파일러 보안 검사가 누락되어 있습니다. 슬리더의 [solc 버전 권장 사항](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity)을 참조하세요.
+- **알려진 심각한 버그가 없는 최신 Solidity 0.8.x 릴리스를 사용하세요.** Solidity 0.8은 기본적으로 산술 연산의 오버플로 및 언더플로를 검사하며, 이전 버전에는 최신 컴파일러 보안 검사가 누락되어 있습니다. Slither의 [solc 버전 권장 사항](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity)을 참조하세요.
 - **컴파일에는 안정적인 릴리스를 사용하고, 경고를 확인할 때는 최신 릴리스를 사용하세요.** 최신 컴파일러 버전에서 코드에 보고된 문제가 없는지 확인하세요. 그러나 Solidity는 릴리스 주기가 빠르고 컴파일러 버그가 발생했던 이력이 있으므로, 불과 며칠 전에 릴리스된 버전으로 배포하는 것은 피하세요. 선택한 버전에 대한 [알려진 컴파일러 버그 목록](https://docs.soliditylang.org/en/latest/bugs.html)을 확인하세요.
 - **인라인 어셈블리를 사용하지 마세요.** 어셈블리에는 EVM 전문 지식이 필요합니다. 황서를 <em>완벽히 숙지</em>하지 않았다면 EVM 코드를 작성하지 마세요.
 

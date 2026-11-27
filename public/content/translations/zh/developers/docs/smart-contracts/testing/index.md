@@ -299,8 +299,8 @@ Solidity 智能合约的单元测试框架有不同的语言版本（主要是 J
 ## 相关教程 {#related-tutorials}
 
 - [不同测试产品的概述与比较](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
-- [如何使用埃基德纳测试智能合约](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [如何使用斯莱瑟发现智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用 Echidna 测试智能合约](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
+- [如何使用 Slither 发现智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [如何模拟 Solidity 合约进行测试](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何使用 Foundry 在 Solidity 中运行单元测试](https://www.rareskills.io/post/foundry-testing-solidity)
 

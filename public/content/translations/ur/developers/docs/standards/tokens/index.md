@@ -39,6 +39,6 @@ _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہی�
 ## متعلقہ ٹیوٹوریلز {#related-tutorials}
 
 - [ٹوکن انضمام کی چیک لسٹ](/developers/tutorials/token-integration-checklist/) _– ٹوکنز کے ساتھ تعامل کرتے وقت غور کرنے والی چیزوں کی ایک چیک لسٹ۔_
-- [<span dir="ltr">ERC-20</span> کنٹریکٹ کا جائزہ](/developers/tutorials/erc20-annotated-code/) _– اوپن زیپلن <span dir="ltr">ERC-20</span> کنٹریکٹ کے نفاذ کا لائن بہ لائن تشریحی جائزہ۔_
+- [<span dir="ltr">ERC-20</span> کنٹریکٹ کا جائزہ](/developers/tutorials/erc20-annotated-code/) _– <span dir="ltr">OpenZeppelin</span> <span dir="ltr">ERC-20</span> کنٹریکٹ کے نفاذ کا لائن بہ لائن تشریحی جائزہ۔_
 - [<span dir="ltr">Solidity</span> سمارٹ کنٹریکٹ سے <span dir="ltr">ERC20</span> ٹوکنز کی منتقلی اور منظوری](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– <span dir="ltr">Solidity</span> زبان کا استعمال کرتے ہوئے ٹوکن کے ساتھ تعامل کرنے کے لیے سمارٹ کنٹریکٹ کا استعمال کیسے کریں۔_
 - [<span dir="ltr">ERC721</span> مارکیٹ کا نفاذ [ایک رہنمائی]](/developers/tutorials/how-to-implement-an-erc721-market/) _– لامركزی کلاسیفائیڈ بورڈ پر ٹوکنائزڈ اشیاء کو فروخت کے لیے کیسے پیش کریں۔_

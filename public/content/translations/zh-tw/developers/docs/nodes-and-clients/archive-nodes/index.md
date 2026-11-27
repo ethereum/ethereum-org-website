@@ -52,7 +52,7 @@ sidebarDepth: 2
 
 在此背景下的歸檔節點，是指由面向使用者的執行層用戶端所提供的資料，因為它們處理狀態資料庫並提供 JSON-RPC 端點。設定選項、同步時間和資料庫大小可能因用戶端而異。如需詳細資訊，請參閱您的用戶端所提供的文件。
 
-在啟動您自己的歸檔節點之前，請先了解用戶端之間的差異，特別是各種[硬體要求](/developers/docs/nodes-and-clients/run-a-node/#requirements)。歸檔大小會因每個用戶端的儲存設計而有很大差異。艾瑞貢 (Erigon)、瑞斯 (Reth) 和 Geth（具有基於路徑的歸檔）儲存主網歸檔大約需要 2-3TB，而貝蘇 (Besu) 和奈瑟邁 (Nethermind) 歸檔則需要 12TB 或更多。
+在啟動您自己的歸檔節點之前，請先了解用戶端之間的差異，特別是各種[硬體要求](/developers/docs/nodes-and-clients/run-a-node/#requirements)。歸檔大小會因每個用戶端的儲存設計而有很大差異。Erigon、Reth 和 Geth（具有基於路徑的歸檔）儲存主網歸檔大約需要 2-3TB，而 Besu 和 Nethermind 歸檔則需要 12TB 或更多。
 
 ## 推薦實務 {#recommended-practices}
 

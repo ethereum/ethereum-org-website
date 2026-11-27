@@ -27,7 +27,7 @@ Pertimbangkan fitur khusus dari kontrak Anda:
 
 - Apakah kontrak Anda dapat ditingkatkan (upgradeable)? Tinjau kode peningkatan Anda untuk mencari kelemahan dengan [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks). Kami telah mendokumentasikan 17 cara peningkatan bisa bermasalah.
 - Apakah kontrak Anda dimaksudkan untuk mematuhi ERC? Periksa dengan [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance). Alat ini secara instan mengidentifikasi penyimpangan dari enam spesifikasi umum.
-- Apakah Anda berintegrasi dengan token pihak ke-3? Tinjau [daftar periksa integrasi token](/developers/tutorials/token-integration-checklist/) kami sebelum bergantung pada kontrak eksternal.
+- Apakah Anda berintegrasi dengan token pihak ketiga? Tinjau [daftar periksa integrasi token](/developers/tutorials/token-integration-checklist/) kami sebelum bergantung pada kontrak eksternal.
 
 Periksa secara visual fitur keamanan kritis dari kode Anda:
 

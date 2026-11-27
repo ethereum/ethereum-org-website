@@ -20,8 +20,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 알려진 보안 문제 확인:
 
-- [슬리더](https://github.com/crytic/slither)를 사용하여 컨트랙트를 검토하세요. 일반적인 취약점에 대한 100개 이상의 내장 탐지기가 있습니다. 새 코드를 체크인할 때마다 실행하여 깨끗한 보고서를 받는지 확인하세요(또는 특정 문제를 무시하려면 분류(triage) 모드를 사용하세요).
-- 보안 문제가 풀 리퀘스트(pull request)에 나타나도록 CI에서 슬리더를 실행하세요. 예를 들어 GitHub의 [slither-action](https://github.com/crytic/slither-action)을 사용할 수 있습니다.
+- [Slither](https://github.com/crytic/slither)를 사용하여 컨트랙트를 검토하세요. 일반적인 취약점에 대한 100개 이상의 내장 탐지기가 있습니다. 새 코드를 체크인할 때마다 실행하여 깨끗한 보고서를 받는지 확인하세요(또는 특정 문제를 무시하려면 분류(triage) 모드를 사용하세요).
+- 보안 문제가 풀 리퀘스트(pull request)에 나타나도록 CI에서 Slither를 실행하세요. 예를 들어 GitHub의 [slither-action](https://github.com/crytic/slither-action)을 사용할 수 있습니다.
 
 컨트랙트의 특수 기능 고려:
 
@@ -31,14 +31,14 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 코드의 중요한 보안 기능을 시각적으로 검사:
 
-- 슬리더의 [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) 프린터를 검토하세요. 의도치 않은 섀도잉(shadowing) 및 C3 선형화(linearization) 문제를 피하세요.
-- 슬리더의 [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) 프린터를 검토하세요. 함수 가시성(visibility) 및 접근 제어를 보고합니다.
+- Slither의 [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) 프린터를 검토하세요. 의도치 않은 섀도잉(shadowing) 및 C3 선형화(linearization) 문제를 피하세요.
+- Slither의 [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) 프린터를 검토하세요. 함수 가시성(visibility) 및 접근 제어를 보고합니다.
 - 슬리더의 [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) 프린터를 검토하세요. 상태 변수에 대한 접근 제어를 보고합니다.
 
 중요한 보안 속성을 문서화하고 자동화된 테스트 생성기를 사용하여 평가:
 
 - [코드의 보안 속성을 문서화하는 방법](/developers/tutorials/guide-to-smart-contract-security-tools/)을 알아보세요. 처음에는 어렵지만, 좋은 결과를 얻기 위한 가장 중요한 단일 활동입니다. 또한 이 튜토리얼의 고급 기술을 사용하기 위한 전제 조건이기도 합니다.
-- [에키드나](https://github.com/crytic/echidna) 및 [Medusa](https://github.com/crytic/medusa)와 같은 퍼저(fuzzer)와 [hevm](https://hevm.dev/)과 같은 심볼릭 실행(symbolic execution) 도구에서 사용할 수 있도록 Solidity에서 보안 속성을 정의하세요. 상태 머신, 접근 제어, 산술 연산, 외부 상호 작용 및 표준 준수에 집중하세요.
+- [Echidna](https://github.com/crytic/echidna) 및 [Medusa](https://github.com/crytic/medusa)와 같은 퍼저(fuzzer)와 [hevm](https://hevm.dev/)과 같은 심볼릭 실행(symbolic execution) 도구에서 사용할 수 있도록 Solidity에서 보안 속성을 정의하세요. 상태 머신, 접근 제어, 산술 연산, 외부 상호 작용 및 표준 준수에 집중하세요.
 - [슬리더의 Python API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)를 사용하여 보안 속성을 정의하세요. 상속, 변수 종속성, 접근 제어 및 기타 구조적 문제에 집중하세요.
 - 팀의 모든 사람이 테스트 통과 여부를 쉽게 확인할 수 있도록 CI(예: GitHub Actions)의 모든 커밋에서 속성 테스트를 실행하세요. 실패한 테스트는 병합(merge)을 차단할 수 있습니다.
 

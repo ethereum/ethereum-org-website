@@ -20,8 +20,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 تحقق من المشكلات الأمنية المعروفة:
 
-- راجع عقودك باستخدام [سليذر](https://github.com/crytic/slither). يحتوي على أكثر من 100 كاشف مدمج للثغرات الشائعة. قم بتشغيله عند كل عملية إيداع لرمز جديد وتأكد من حصوله على تقرير نظيف (أو استخدم وضع الفرز لتجاهل مشكلات معينة).
-- قم بتشغيل سليذر في التكامل المستمر (CI)، على سبيل المثال باستخدام [slither-action](https://github.com/crytic/slither-action) على GitHub، بحيث تظهر المشكلات الأمنية في طلبات السحب.
+- راجع عقودك باستخدام [<span dir="ltr">Slither</span>](https://github.com/crytic/slither). يحتوي على أكثر من 100 كاشف مدمج للثغرات الشائعة. قم بتشغيله عند كل عملية إيداع لرمز جديد وتأكد من حصوله على تقرير نظيف (أو استخدم وضع الفرز لتجاهل مشكلات معينة).
+- قم بتشغيل <span dir="ltr">Slither</span> في التكامل المستمر (CI)، على سبيل المثال باستخدام [slither-action](https://github.com/crytic/slither-action) على GitHub، بحيث تظهر المشكلات الأمنية في طلبات السحب.
 
 ضع في اعتبارك الميزات الخاصة لعقدك:
 
@@ -31,15 +31,15 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 افحص بصريًا ميزات الأمان الهامة في الكود الخاص بك:
 
-- راجع أداة طباعة [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) الخاصة بـ سليذر. تجنب مشكلات التظليل غير المقصود ومشكلات التخطيط الخطي <span dir="ltr">C3</span>.
-- راجع أداة طباعة [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) الخاصة بـ سليذر. فهي تبلغ عن رؤية الدوال وعناصر التحكم في الوصول.
+- راجع أداة طباعة [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) الخاصة بـ <span dir="ltr">Slither</span>. تجنب مشكلات التظليل غير المقصود ومشكلات التخطيط الخطي <span dir="ltr">C3</span>.
+- راجع أداة طباعة [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) الخاصة بـ <span dir="ltr">Slither</span>. فهي تبلغ عن رؤية الدوال وعناصر التحكم في الوصول.
 - راجع أداة طباعة [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) الخاصة بـ سليذر. فهي تبلغ عن عناصر التحكم في الوصول على متغيرات الحالة.
 
 قم بتوثيق خصائص الأمان الهامة واستخدم مولدات الاختبار الآلية لتقييمها:
 
 - تعلم كيفية [توثيق خصائص الأمان للكود الخاص بك](/developers/tutorials/guide-to-smart-contract-security-tools/). قد يكون الأمر صعبًا في البداية، ولكنه النشاط الأكثر أهمية لتحقيق نتيجة جيدة. كما أنه شرط أساسي لاستخدام أي من التقنيات المتقدمة في هذا البرنامج التعليمي.
-- حدد خصائص الأمان في Solidity، لاستخدامها مع أدوات الاختبار العشوائي (fuzzers) مثل [إيكيدنا](https://github.com/crytic/echidna) و [Medusa](https://github.com/crytic/medusa)، ومع أدوات التنفيذ الرمزي مثل [hevm](https://hevm.dev/). ركز على آلة الحالة الخاصة بك، وعناصر التحكم في الوصول، والعمليات الحسابية، والتفاعلات الخارجية، والتوافق مع المعايير.
-- حدد خصائص الأمان باستخدام [واجهة برمجة التطبيقات (API) الخاصة بـ Python لـ سليذر](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). ركز على الوراثة، وتبعيات المتغيرات، وعناصر التحكم في الوصول، والمشكلات الهيكلية الأخرى.
+- حدد خصائص الأمان في Solidity، لاستخدامها مع أدوات الاختبار العشوائي (fuzzers) مثل [<span dir="ltr">Echidna</span>](https://github.com/crytic/echidna) و [Medusa](https://github.com/crytic/medusa)، ومع أدوات التنفيذ الرمزي مثل [hevm](https://hevm.dev/). ركز على آلة الحالة الخاصة بك، وعناصر التحكم في الوصول، والعمليات الحسابية، والتفاعلات الخارجية، والتوافق مع المعايير.
+- حدد خصائص الأمان باستخدام [واجهة برمجة التطبيقات (API) الخاصة بـ Python لـ <span dir="ltr">Slither</span>](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). ركز على الوراثة، وتبعيات المتغيرات، وعناصر التحكم في الوصول، والمشكلات الهيكلية الأخرى.
 - قم بتشغيل اختبارات الخصائص الخاصة بك عند كل عملية إيداع في التكامل المستمر (CI) (على سبيل المثال، GitHub Actions) حتى يتمكن الجميع في فريقك من رؤية نجاحها بسهولة. يمكن للاختبارات الفاشلة أن تمنع عمليات الدمج.
 
 أخيرًا، كن على دراية بالمشكلات التي لا يمكن للأدوات الآلية العثور عليها بسهولة:

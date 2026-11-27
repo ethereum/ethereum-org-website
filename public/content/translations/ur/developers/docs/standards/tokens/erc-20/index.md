@@ -184,6 +184,6 @@ print("Addr Balance:", addr_balance)
 - [<span dir="ltr">ERC-7540</span> - ایسنکرونس ٹوکنائزڈ والٹس](/developers/docs/standards/tokens/erc-7540)
 ## ٹیوٹوریلز: ایتھیریم پر <span dir="ltr">ERC-20</span> کے ساتھ تعمیر کریں {#tutorials}
 
-- [<span dir="ltr">ERC-20</span> کنٹریکٹ کا جائزہ](/developers/tutorials/erc20-annotated-code/) _– اوپن زیپلن <span dir="ltr">ERC-20</span> کنٹریکٹ کے نفاذ کا لائن بہ لائن تشریحی جائزہ۔_
+- [<span dir="ltr">ERC-20</span> کنٹریکٹ کا جائزہ](/developers/tutorials/erc20-annotated-code/) _– <span dir="ltr">OpenZeppelin</span> <span dir="ltr">ERC-20</span> کنٹریکٹ کے نفاذ کا لائن بہ لائن تشریحی جائزہ۔_
 - [حفاظتی اقدامات کے ساتھ <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-with-safety-rails/) _– صارفین کو عام غلطیوں سے بچنے میں مدد کے لیے <span dir="ltr">ERC-20</span> ٹوکنز میں حفاظتی اقدامات کیسے شامل کیے جائیں۔_
 - [سکیم ٹوکنز کے ذریعے استعمال ہونے والی کچھ چالیں اور ان کا پتہ کیسے لگایا جائے](/developers/tutorials/scam-token-tricks/) _– سکیم <span dir="ltr">ERC-20</span> ٹوکن پیٹرنز کا تفصیلی جائزہ اور ان کی شناخت کیسے کی جائے۔_

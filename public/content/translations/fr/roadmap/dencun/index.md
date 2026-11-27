@@ -33,7 +33,7 @@ La communauté Ethereum a adopté une approche de sa croissance « centrée sur 
 
 Les réseaux de rollups gèrent le _traitement_ (ou « l'exécution ») des transactions séparément du Réseau principal, puis publient une preuve cryptographique et/ou des données de transaction compressées des résultats sur le Réseau principal pour l'archivage. Le stockage de ces preuves entraîne des frais (sous forme de [gaz](/glossary/#gas)), qui, avant le proto-danksharding, devaient être stockées de manière permanente par tous les opérateurs de nœuds du réseau, ce qui en faisait une tâche coûteuse.
 
-L'introduction du proto-danksharding dans la mise à jour Dencun ajoute un stockage de données moins cher pour ces preuves en n'exigeant des opérateurs de nœuds qu'ils stockent ces données pendant environ 18 jours, après quoi les données peuvent être supprimées en toute sécurité pour éviter l'augmentation des exigences matérielles. Étant donné que les rollups ont généralement une période de retrait de 7 jours, leur modèle de sécurité reste inchangé tant que les blobs sont disponibles sur la couche 1 (L1) pendant cette durée. La fenêtre d'élagage de 18 jours offre une marge de sécurité importante pour cette période.
+L'introduction du proto-danksharding dans la mise à jour Dencun ajoute un stockage de données moins cher pour ces preuves en n'exigeant des opérateurs de nœuds qu'ils stockent ces données pendant environ 18 jours, après quoi les données peuvent être supprimées en toute sécurité pour éviter l'augmentation des exigences matérielles. Étant donné que les rollups ont généralement une période de retrait de 7 jours, leur modèle de sécurité reste inchangé tant que les blobs sont disponibles sur la L1 pendant cette durée. La fenêtre d'élagage de 18 jours offre une marge de sécurité importante pour cette période.
 
 [En savoir plus sur la mise à l'échelle d'Ethereum](/roadmap/scaling/)
 
@@ -83,7 +83,7 @@ Bien qu'il soit théoriquement possible pour les utilisateurs de choisir leur ty
 
 ## L'EIP-4844 réduira-t-il le gaz sur la L1 ? {#l1-fee-impact}
 
-Pas de manière significative. Un nouveau marché du gaz est introduit exclusivement pour l'espace de blobs, à l'usage des fournisseurs de rollups. _Bien que les frais sur la couche 1 (L1) puissent être réduits en déchargeant les données des rollups vers les blobs, cette mise à jour se concentre principalement sur la réduction des frais de la couche 2 (L2). La réduction des frais sur la L1 (Réseau principal) peut se produire comme un effet de second ordre dans une moindre mesure._
+Pas de manière significative. Un nouveau marché du gaz est introduit exclusivement pour l'espace de blobs, à l'usage des fournisseurs de rollups. _Bien que les frais sur la L1 puissent être réduits en déchargeant les données des rollups vers les blobs, cette mise à jour se concentre principalement sur la réduction des frais de la L2. La réduction des frais sur la L1 (Réseau principal) peut se produire comme un effet de second ordre dans une moindre mesure._
 
 - La réduction du gaz sur la L1 sera proportionnelle à l'adoption/l'utilisation des données de blobs par les fournisseurs de rollups
 - Le gaz sur la L1 restera probablement compétitif en raison de l'activité non liée aux rollups

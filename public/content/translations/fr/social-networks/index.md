@@ -59,7 +59,7 @@ Le réseau Ethereum est devenu l'outil privilégié des développeurs créant de
 
 [Mirror](https://mirror.xyz/) est une plateforme d'écriture compatible Web3 qui vise à être décentralisée et détenue par les utilisateurs. Les utilisateurs peuvent lire et écrire gratuitement sur Mirror en connectant simplement leurs portefeuilles. Les utilisateurs peuvent également collectionner des écrits et s'abonner à leurs auteurs préférés.
 
-Les articles publiés sur Mirror sont stockés de manière permanente sur Arweave, une plateforme de stockage décentralisée, et peuvent être frappés sous forme de [jetons non fongibles (NFT)](/nft/) de collection connus sous le nom de Writing NFTs. La création de Writing NFTs est entièrement gratuite pour les auteurs, et la collection se fait sur une [couche 2 (L2)](/glossary/#layer-2) d'Ethereum — rendant les transactions peu coûteuses, rapides et respectueuses de l'environnement.
+Les articles publiés sur Mirror sont stockés de manière permanente sur Arweave, une plateforme de stockage décentralisée, et peuvent être frappés sous forme de [jetons non fongibles (NFT)](/nft/) de collection connus sous le nom de Writing NFTs. La création de Writing NFTs est entièrement gratuite pour les auteurs, et la collection se fait sur une [L2](/glossary/#layer-2) d'Ethereum — rendant les transactions peu coûteuses, rapides et respectueuses de l'environnement.
 
 ### MINDS {#minds}
 

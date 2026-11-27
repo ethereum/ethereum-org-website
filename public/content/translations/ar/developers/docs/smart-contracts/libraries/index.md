@@ -56,7 +56,7 @@ contract MyContract is Ownable {
 
 لتسهيل [قابلية التركيب وقابلية التشغيل البيني](/developers/docs/smart-contracts/composability/)، حدد مجتمع إيثيريوم العديد من المعايير في شكل **ERCs**. يمكنك قراءة المزيد عنها في قسم [المعايير](/developers/docs/standards/).
 
-عند تضمين ERC كجزء من عقودك، من الجيد البحث عن تطبيقات قياسية بدلاً من محاولة إنشاء تطبيقاتك الخاصة. تتضمن العديد من مكتبات العقود الذكية تطبيقات لأكثر ERCs شيوعًا. على سبيل المثال، يمكن العثور على [معيار الرمز القابل للاستبدال <span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/) واسع الانتشار في [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) و [DappSys](https://github.com/dapphub/ds-token/) و [أوبن زبلن](https://docs.openzeppelin.com/contracts/3.x/erc20). بالإضافة إلى ذلك، توفر بعض ERCs أيضًا تطبيقات أساسية كجزء من ERC نفسه.
+عند تضمين ERC كجزء من عقودك، من الجيد البحث عن تطبيقات قياسية بدلاً من محاولة إنشاء تطبيقاتك الخاصة. تتضمن العديد من مكتبات العقود الذكية تطبيقات لأكثر ERCs شيوعًا. على سبيل المثال، يمكن العثور على [معيار الرمز القابل للاستبدال <span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/) واسع الانتشار في [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) و [DappSys](https://github.com/dapphub/ds-token/) و [<span dir="ltr">OpenZeppelin</span>](https://docs.openzeppelin.com/contracts/3.x/erc20). بالإضافة إلى ذلك، توفر بعض ERCs أيضًا تطبيقات أساسية كجزء من ERC نفسه.
 
 تجدر الإشارة إلى أن بعض ERCs ليست مستقلة، بل هي إضافات إلى ERCs أخرى. على سبيل المثال، يضيف [<span dir="ltr">ERC-2612</span>](https://eips.ethereum.org/EIPS/eip-2612) امتدادًا إلى <span dir="ltr">ERC-20</span> لتحسين قابليته للاستخدام.
 

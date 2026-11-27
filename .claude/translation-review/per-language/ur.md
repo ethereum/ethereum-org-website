@@ -1,5 +1,25 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.5/10
+Scope: 70 md pages + 18 JSON namespaces, incremental updates; changed lines only. Sampled 12 md diffs and ~100 JSON keys; scripted sweeps (U+3002/U+2060/CJK, English sentences, isolate balance, glossary-translit names, expansions) clean apart from the items below. Most `(l1)`/`(l2)` diffs are only the sanitizer's capital fix on expansions dev already had.
+
+**Fixed in this branch:**
+
+- English dates left in `<span dir="ltr">` -> Urdu: developers/docs/bridges:127-132, bridges:140, pectra and fusaka descriptions (`May 7, 2025`, `December 3, 2025`).
+- `بدنیتی پر مبنی اداکاروں` ("malicious actors", film actors) -> `فریقوں` at zk-rollups (#106).
+- `// SPDX-License-Identifier: MIT` translated to `// SPDX-لائسنس-شناخت کنندہ: MIT` inside two Solidity fences (interact-with-other-contracts:18,108) -> restored.
+- Developer tools, clients and protocols re-transliterated on 23 changed md lines (Slither, Echidna, OpenZeppelin, Erigon, Nethermind, Nimbus, Lighthouse, Reth, Chainlink, Tellor, Starknet) -> Latin in `<span dir="ltr">` per #113. Reverses the #19556 choice (`سلدر`); policy now says developer tools stay Latin. MetaMask/Coinbase/Uniswap/Discord left.
+- glossary.json `checkpoint-definition`: `(⁦12 seconds⁩)` / `(⁦32 slots⁩)` English units in isolates -> `⁦12⁩ سیکنڈ`, `⁦32⁩ سلاٹس`.
+- ai-agents description: `غیر مرکزی مالیات (DeFi)` expanded where English has bare `DeFi` -> bare (#112).
+
+**Open (warnings):**
+
+- a-developers-guide-part-one: English glosses added where English has none (`(simulate)`, `(dependencies)`, `(denominations)`, `(helper methods)`, `(cents)`, `(tab completion)`); `<span dir="ltr">` dropped around Python/IPython/Web3.py.
+- Person names in bridges further-reading now Latin spans (dev had `دمتری بیرینزون (Dmitriy Berenzon)`).
+- zk-rollups heading `زیرو نالج رول اپس` vs body `صفر علم رول اپس`; `Devcon` Latin in devcon-mumbai while breadcrumb says `ڈیوکون`.
+- Glossary data: `wrapped` = `ریپڈ` (reads as "rapid") in `wrapped-token-definition`, 8 sites; Arabic-kaf `لامركزی` still pervasive (#71).
+- Untranslated image alt text in 17 files.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `لیئر ۱ (L1)` / `لیئر ۲ (L2)` first-mention expansions in 17 diagram values (#112; native numerals are the glossary form); `ZK-rollup` as `زیڈ کے رول اپ`; `لامركزی` with Arabic kaf in dev-tools (glossary data, #71). Western digits and `۔` full stops clean; bidi isolates wrap only Latin runs.
 

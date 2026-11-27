@@ -42,7 +42,7 @@ lang: ja
 
 実行、コンセンサス、および実行とコンセンサスを組み合わせたライト・クライアントなど、いくつかのライト・クライアントが開発中です。このページの執筆時点で私たちが把握しているライト・クライアントの実装は以下の通りです。
 
-- [ロードスター](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScriptで書かれたコンセンサス・ライト・クライアント
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScriptで書かれたコンセンサス・ライト・クライアント
 - [Helios](https://github.com/a16z/helios): Rustで書かれた実行とコンセンサスを組み合わせたライト・クライアント
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Goで書かれた実行クライアントのライトモード（開発中）
 - [ニンバス](https://nimbus.guide/el-light-client.html): Nimで書かれたコンセンサス・ライト・クライアント

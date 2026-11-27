@@ -10,7 +10,7 @@ Mikusanyiko ya sifuri-maarifa (ZK-rollups) ni [masuluhisho ya kuongeza uwezo](/d
 
 Unapaswa kuwa umesoma na kuelewa ukurasa wetu kuhusu [kuongeza uwezo wa Ethereum](/developers/docs/scaling/) na [tabaka la 2 (L2)](/layer-2).
 
-## Mikusanyiko ya maarifa sifuri ni nini? {#what-are-zk-rollups}
+## Mikusanyiko ya sifuri-maarifa ni nini? {#what-are-zk-rollups}
 
 **Mikusanyiko ya maarifa sifuri (ZK-rollups)** hukusanya (au 'kujumuisha') miamala katika mafungu ambayo hutekelezwa nje ya mnyororo. Ukokotoaji wa nje ya mnyororo hupunguza kiasi cha data kinachopaswa kuchapishwa kwenye mnyororo wa vitalu. Waendeshaji wa ZK-rollup huwasilisha muhtasari wa mabadiliko yanayohitajika ili kuwakilisha miamala yote katika fungu badala ya kutuma kila muamala mmoja mmoja. Pia huzalisha [uthibitisho wa uhalali](/glossary/#validity-proof) ili kuthibitisha usahihi wa mabadiliko yao.
 
@@ -84,7 +84,7 @@ Mzizi mpya wa hali ambao mwendeshaji wa ZK-rollup huwasilisha kwenye mkataba wa 
 
 Lakini mkataba wa rollup hautakubali kiotomatiki ufungamanisho wa hali uliopendekezwa hadi mwendeshaji athibitishe kuwa mzizi mpya wa Merkle ulitokana na masasisho sahihi kwenye hali ya rollup. Mwendeshaji wa ZK-rollup hufanya hivi kwa kuzalisha uthibitisho wa uhalali, ufungamanisho mfupi wa kriptografia unaohakiki usahihi wa miamala iliyokusanywa katika mafungu.
 
-ZK-rollups hutumia uthibitisho mfupi wa uhalali ili kuthibitisha kuwa mabadiliko ya hali ya nje ya mnyororo yalikokotolewa kwa usahihi. Ufupi huweka uthibitisho kuwa thabiti na uhakiki kuwa mzuri kulingana na ukokotoaji wa msingi, ikiruhusu Ethereum kuhakiki mabadiliko ya hali bila kutekeleza upya kila muamala. Mfumo wa uthibitisho unaweza pia kutoa maarifa sifuri, ikimaanisha uthibitisho wake haufichui taarifa yoyote kuhusu pembejeo za faragha zaidi ya kile kinachofuata kutoka kwa taarifa ya umma. Hizi ni sifa tofauti: kutumia uthibitisho wa uhalali kwa kuongeza uwezo hakufanyi, peke yake, miamala ya rollup kuwa ya siri. Uthibitisho huu unaweza kuja katika mfumo wa [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) au [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
+ZK-rollups hutumia uthibitisho mfupi wa uhalali ili kuthibitisha kuwa mabadiliko ya hali ya nje ya mnyororo yalikokotolewa kwa usahihi. Ufupi huweka uthibitisho kuwa thabiti na uhakiki kuwa mzuri kulingana na ukokotoaji wa msingi, ikiruhusu Ethereum kuhakiki mabadiliko ya hali bila kutekeleza upya kila muamala. Mfumo wa uthibitisho unaweza pia kutoa sifuri-maarifa, ikimaanisha uthibitisho wake haufichui taarifa yoyote kuhusu pembejeo za faragha zaidi ya kile kinachofuata kutoka kwa taarifa ya umma. Hizi ni sifa tofauti: kutumia uthibitisho wa uhalali kwa kuongeza uwezo hakufanyi, peke yake, miamala ya rollup kuwa ya siri. Uthibitisho huu unaweza kuja katika mfumo wa [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) au [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
 
 SNARKs na STARKs zote husaidia kuthibitisha uadilifu wa ukokotoaji wa nje ya mnyororo katika ZK-rollups, ingawa kila aina ya uthibitisho ina vipengele tofauti.
 
@@ -100,7 +100,7 @@ Tukiweka kando dhana za uaminifu, ZK-SNARKs ni maarufu kwa ukubwa wao mdogo wa u
 
 **ZK-STARKs**
 
-Kama ZK-SNARKs, ZK-STARKs humruhusu mhakiki kuthibitisha uhalali wa ukokotoaji wa nje ya mnyororo bila kuutekeleza upya, na zinaweza kuficha pembejeo za faragha za mthibitishaji ambapo mfumo unatekeleza sifa ya maarifa sifuri. Katika rollup, data inayohitajika ili kuunda upya hali ya mnyororo bado inachapishwa kwenye Ethereum. ZK-STARKs huchukuliwa kama uboreshaji wa ZK-SNARKs kwa sababu ya uwezo wao wa kuongezeka na uwazi.
+Kama ZK-SNARKs, ZK-STARKs humruhusu mhakiki kuthibitisha uhalali wa ukokotoaji wa nje ya mnyororo bila kuutekeleza upya, na zinaweza kuficha pembejeo za faragha za mthibitishaji ambapo mfumo unatekeleza sifa ya sifuri-maarifa. Katika rollup, data inayohitajika ili kuunda upya hali ya mnyororo bado inachapishwa kwenye Ethereum. ZK-STARKs huchukuliwa kama uboreshaji wa ZK-SNARKs kwa sababu ya uwezo wao wa kuongezeka na uwazi.
 
 ZK-STARKs ni 'wazi', kwani zinaweza kufanya kazi bila usanidi unaoaminika wa Mfuatano wa Marejeleo wa Kawaida (CRS). Badala yake, ZK-STARKs hutegemea unasibu unaoweza kuhakikiwa hadharani ili kuweka vigezo vya kuzalisha na kuhakiki uthibitisho.
 

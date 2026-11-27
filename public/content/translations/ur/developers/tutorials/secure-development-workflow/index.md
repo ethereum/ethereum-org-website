@@ -20,8 +20,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 معلوم سیکیورٹی مسائل کی جانچ کریں:
 
-- [سلدر](https://github.com/crytic/slither) کے ساتھ اپنے کنٹریکٹس کا جائزہ لیں۔ اس میں عام کمزوریوں کے لیے <span dir="ltr">100</span> سے زیادہ بلٹ ان ڈیٹیکٹرز ہیں۔ اسے نئے کوڈ کے ساتھ ہر چیک ان پر چلائیں اور یقینی بنائیں کہ اسے کلین رپورٹ ملے (یا کچھ مسائل کو خاموش کرنے کے لیے ٹرائیج موڈ استعمال کریں)۔
-- سلدر کو CI میں چلائیں، مثال کے طور پر GitHub پر [slither-action](https://github.com/crytic/slither-action) کے ساتھ، تاکہ پل ریکوئسٹس میں سیکیورٹی مسائل سامنے آئیں۔
+- [<span dir="ltr">Slither</span>](https://github.com/crytic/slither) کے ساتھ اپنے کنٹریکٹس کا جائزہ لیں۔ اس میں عام کمزوریوں کے لیے <span dir="ltr">100</span> سے زیادہ بلٹ ان ڈیٹیکٹرز ہیں۔ اسے نئے کوڈ کے ساتھ ہر چیک ان پر چلائیں اور یقینی بنائیں کہ اسے کلین رپورٹ ملے (یا کچھ مسائل کو خاموش کرنے کے لیے ٹرائیج موڈ استعمال کریں)۔
+- <span dir="ltr">Slither</span> کو CI میں چلائیں، مثال کے طور پر GitHub پر [slither-action](https://github.com/crytic/slither-action) کے ساتھ، تاکہ پل ریکوئسٹس میں سیکیورٹی مسائل سامنے آئیں۔
 
 اپنے کنٹریکٹ کی خصوصی خصوصیات پر غور کریں:
 
@@ -32,14 +32,14 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 اپنے کوڈ کی اہم سیکیورٹی خصوصیات کا بصری طور پر معائنہ کریں:
 
 - سلدر کے [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) پرنٹر کا جائزہ لیں۔ نادانستہ شیڈونگ اور <span dir="ltr">C3</span> لینیئرائزیشن کے مسائل سے بچیں۔
-- سلدر کے [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) پرنٹر کا جائزہ لیں۔ یہ فنکشن کی مرئیت اور رسائی کے کنٹرولز کی رپورٹ کرتا ہے۔
-- سلدر کے [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) پرنٹر کا جائزہ لیں۔ یہ حالت کے متغیرات پر رسائی کے کنٹرولز کی رپورٹ کرتا ہے۔
+- <span dir="ltr">Slither</span> کے [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) پرنٹر کا جائزہ لیں۔ یہ فنکشن کی مرئیت اور رسائی کے کنٹرولز کی رپورٹ کرتا ہے۔
+- <span dir="ltr">Slither</span> کے [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) پرنٹر کا جائزہ لیں۔ یہ حالت کے متغیرات پر رسائی کے کنٹرولز کی رپورٹ کرتا ہے۔
 
 اہم سیکیورٹی خصوصیات کو دستاویزی شکل دیں اور ان کا جائزہ لینے کے لیے خودکار ٹیسٹ جنریٹرز کا استعمال کریں:
 
 - [اپنے کوڈ کے لیے سیکیورٹی خصوصیات کو دستاویزی شکل دینا](/developers/tutorials/guide-to-smart-contract-security-tools/) سیکھیں۔ یہ شروع میں مشکل ہے، لیکن یہ ایک اچھے نتیجے کے حصول کے لیے سب سے اہم سرگرمی ہے۔ یہ اس ٹیوٹوریل میں کسی بھی جدید تکنیک کو استعمال کرنے کے لیے ایک شرط بھی ہے۔
-- [ایکڈنا](https://github.com/crytic/echidna) اور [Medusa](https://github.com/crytic/medusa) جیسے فزرز، اور [hevm](https://hevm.dev/) جیسے علامتی عمل درآمد کے ٹولز کے ساتھ استعمال کے لیے، Solidity میں سیکیورٹی خصوصیات کی وضاحت کریں۔ اپنی حالت کی مشین، رسائی کے کنٹرولز، ریاضیاتی آپریشنز، بیرونی تعاملات، اور معیارات کی مطابقت پر توجہ مرکوز کریں۔
-- [سلدر کے Python API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) کے ساتھ سیکیورٹی خصوصیات کی وضاحت کریں۔ وراثت، متغیر انحصار، رسائی کے کنٹرولز، اور دیگر ساختی مسائل پر توجہ مرکوز کریں۔
+- [<span dir="ltr">Echidna</span>](https://github.com/crytic/echidna) اور [Medusa](https://github.com/crytic/medusa) جیسے فزرز، اور [hevm](https://hevm.dev/) جیسے علامتی عمل درآمد کے ٹولز کے ساتھ استعمال کے لیے، Solidity میں سیکیورٹی خصوصیات کی وضاحت کریں۔ اپنی حالت کی مشین، رسائی کے کنٹرولز، ریاضیاتی آپریشنز، بیرونی تعاملات، اور معیارات کی مطابقت پر توجہ مرکوز کریں۔
+- [<span dir="ltr">Slither</span> کے Python API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) کے ساتھ سیکیورٹی خصوصیات کی وضاحت کریں۔ وراثت، متغیر انحصار، رسائی کے کنٹرولز، اور دیگر ساختی مسائل پر توجہ مرکوز کریں۔
 - CI میں ہر کمٹ پر اپنے پراپرٹی ٹیسٹ چلائیں (مثال کے طور پر، GitHub Actions) تاکہ آپ کی ٹیم میں ہر کوئی آسانی سے دیکھ سکے کہ وہ پاس ہو گئے ہیں۔ ناکام ٹیسٹ مرجز کو روک سکتے ہیں۔
 
 آخر میں، ان مسائل سے آگاہ رہیں جنہیں خودکار ٹولز آسانی سے نہیں ڈھونڈ سکتے:

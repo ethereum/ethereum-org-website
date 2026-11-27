@@ -563,7 +563,7 @@ DEX کی قیمتیں اکثر درست ہوتی ہیں، جس کی بڑی وج�
 
 - [محفوظ سمارٹ کنٹریکٹس کیسے لکھیں](/developers/tutorials/secure-development-workflow/)
 
-- [سمارٹ کنٹریکٹ کے بگز تلاش کرنے کے لیے سلدر کا استعمال کیسے کریں](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [سمارٹ کنٹریکٹ کے بگز تلاش کرنے کے لیے <span dir="ltr">Slither</span> کا استعمال کیسے کریں](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [سمارٹ کنٹریکٹ سیکیورٹی کے رہنما خطوط](/developers/tutorials/smart-contract-security-guidelines/)
 

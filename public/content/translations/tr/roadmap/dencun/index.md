@@ -53,7 +53,7 @@ _Geçmiş_ blob verileri çeşitli nedenlerle istenebilir ve çeşitli merkeziye
 - **Rollup sağlayıcıları**, kendi Rollup'larının kullanıcı deneyimini geliştirmek için bu verileri depolamaya teşvik edilir.
 - **Blok gezginleri** genellikle, kullanıcıların bir web arayüzü aracılığıyla erişebileceği, kolay geçmiş referansı için tüm bu bilgileri endeksleyen ve depolayan arşiv Düğümleri çalıştırır.
 
-Geçmiş durumu kurtarmanın **1-of-N güven modeli** üzerinde çalıştığını belirtmek önemlidir. Bu, ağın mevcut durumunu kullanarak doğruluğunu teyit etmek için yalnızca _tek bir güvenilir kaynaktan_ gelen verilere ihtiyacınız olduğu anlamına gelir.
+Geçmiş durumu kurtarmanın **N'de 1 güven modeli** üzerinde çalıştığını belirtmek önemlidir. Bu, ağın mevcut durumunu kullanarak doğruluğunu teyit etmek için yalnızca _tek bir güvenilir kaynaktan_ gelen verilere ihtiyacınız olduğu anlamına gelir.
 
 ## Bu güncelleme daha geniş Ethereum yol haritasına nasıl katkıda bulunuyor? {#roadmap-impact}
 

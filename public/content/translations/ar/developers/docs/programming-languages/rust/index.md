@@ -39,7 +39,7 @@ incomplete: true
 ## مشاريع وأدوات <span dir="ltr">Rust</span> {#rust-projects-and-tools}
 
 - [<span dir="ltr">pwasm-ethereum</span>](https://github.com/paritytech/pwasm-ethereum) - _مجموعة من العناصر الخارجية للتفاعل مع شبكة تشبه إيثيريوم_
-- [لايتهاوس](https://github.com/sigp/lighthouse) - _عميل سريع لطبقة الإجماع في إيثيريوم_
+- [<span dir="ltr">Lighthouse</span>](https://github.com/sigp/lighthouse) - _عميل سريع لطبقة الإجماع في إيثيريوم_
 - [<span dir="ltr">Ethereum WebAssembly</span>](https://ewasm.readthedocs.io/en/mkdocs/) - _إعادة تصميم مقترحة لطبقة التنفيذ الخاصة بالعقود الذكية في إيثيريوم باستخدام مجموعة فرعية حتمية من <span dir="ltr">WebAssembly</span>_
 - [<span dir="ltr">Solaris</span>](https://github.com/paritytech/sol-rs) - _بيئة اختبار الوحدة للعقود الذكية بلغة <span dir="ltr">Solidity</span> باستخدام آلة إيثريوم الافتراضية (<span dir="ltr">EVM</span>) الأصلية لعميل <span dir="ltr">Parity</span>._
 - [<span dir="ltr">SputnikVM</span>](https://github.com/rust-blockchain/evm) - _تنفيذ آلة إيثريوم الافتراضية (<span dir="ltr">EVM</span>) بلغة <span dir="ltr">Rust</span>_

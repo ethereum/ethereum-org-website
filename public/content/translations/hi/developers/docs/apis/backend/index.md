@@ -162,9 +162,9 @@ lang: hi
 - [दस्तावेज़ीकरण](https://docs.chainstack.com/)
 - [इथेरियम API संदर्भ](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**कॉइनबेस Cloud Node -** **_ब्लॉकचेन इन्फ्रास्ट्रक्चर API।_**
+**Coinbase Cloud Node -** **_ब्लॉकचेन इन्फ्रास्ट्रक्चर API।_**
 
-- [कॉइनबेस Cloud Node](https://www.coinbase.com/developer-platform)
+- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [दस्तावेज़ीकरण](https://docs.cdp.coinbase.com/)
 
 **Figment द्वारा DataHub -** **_इथेरियम मेननेट और टेस्टनेट के साथ Web3 API सेवाएं।_**

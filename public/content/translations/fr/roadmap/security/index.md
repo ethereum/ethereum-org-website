@@ -75,7 +75,7 @@ La complexité crée des opportunités pour les bugs et les vulnérabilités. Un
 
 Livré jusqu'à présent :
 
-- **[Pectra (mai 2025)](/roadmap/pectra/)** : A introduit l'EIP-7702, qui permet aux comptes détenus par des externes de déléguer temporairement au code d'un contrat intelligent, un tremplin vers une abstraction de compte complète.
+- **[Pectra (mai 2025)](/roadmap/pectra/)** : A introduit l'EIP-7702, qui permet aux comptes détenus en externe de déléguer temporairement au code d'un contrat intelligent, un tremplin vers une abstraction de compte complète.
 - **[Fusaka (décembre 2025)](/roadmap/fusaka/)** : A déployé PeerDAS (EIP-7594), qui distribue la charge de travail de disponibilité des données sur le réseau. A également augmenté les paramètres des blobs, augmentant le débit de données pour les rollups.
 - **[Dencun (mars 2024)](/roadmap/dencun/)** : A introduit les transactions de blob (EIP-4844) pour des données de rollup moins chères et a restreint `SELFDESTRUCT` (EIP-6780) pour supprimer une source de complexité de longue date.
 - **[Shapella (avril 2023)](/staking/withdrawals/)** : A permis aux validateurs de retirer leurs ETH mis en jeu (EIP-4895), supprimant une contrainte initiale du staking en [preuve d'enjeu (PoS)](/glossary/#pos).
@@ -101,7 +101,7 @@ Aucune partie de ce travail n'est terminée, et tous les délais sont des estima
 ## Lectures complémentaires {#further-reading}
 
 - [Forkcast : Suivi des mises à jour du réseau Ethereum](https://forkcast.org)
-- [Strawmap : une ébauche de la feuille de route de la couche 1 (L1) d'Ethereum](https://strawmap.org) - _EF Architecture_
+- [Strawmap : une ébauche de la feuille de route L1 d'Ethereum](https://strawmap.org) - _EF Architecture_
 - [Ethereum post-quantique](https://pq.ethereum.org) - _Fondation Ethereum_
 - [Suivi de la feuille de route Lean Ethereum](https://leanroadmap.org) - _ReamLabs_
 - [Preuve d'enjeu (PoS) et finalité](/developers/docs/consensus-mechanisms/pos/#finality)

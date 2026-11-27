@@ -348,13 +348,13 @@ contract CryptoPizza is IERC721, ERC165 {
     // Pizza structs का एक खाली ऐरे (array) बनाता है
     Pizza[] public pizzas;
 
-    // पिज़्ज़ा ID से उसके मालिक के पता तक मैपिंग
+    // पिज़्ज़ा ID से उसके मालिक के पते तक मैपिंग
     mapping(uint256 => address) public pizzaToOwner;
 
-    // मालिक के पता से स्वामित्व वाले टोकन की संख्या तक मैपिंग
+    // मालिक के पते से स्वामित्व वाले टोकन की संख्या तक मैपिंग
     mapping(address => uint256) public ownerPizzaCount;
 
-    // टोकन ID से स्वीकृत पता तक मैपिंग
+    // टोकन ID से स्वीकृत पते तक मैपिंग
     mapping(uint256 => address) pizzaApprovals;
 
     // आप मैपिंग को नेस्ट कर सकते हैं, यह उदाहरण मालिक को ऑपरेटर की स्वीकृतियों से मैप करता है
@@ -395,7 +395,7 @@ contract CryptoPizza is IERC721, ERC165 {
         _createPizza(_name, randDna);
     }
 
-    // स्ट्रिंग (नाम) और मालिक (निर्माता) के पता से यादृच्छिक DNA उत्पन्न करता है
+    // स्ट्रिंग (नाम) और मालिक (निर्माता) के पते से यादृच्छिक DNA उत्पन्न करता है
     function generateRandomDna(string memory _str, address _owner)
         public
         // `pure` के रूप में चिह्नित फ़ंक्शंस स्थिति को न पढ़ने या संशोधित न करने का वादा करते हैं
@@ -403,7 +403,7 @@ contract CryptoPizza is IERC721, ERC165 {
         pure
         returns (uint256)
     {
-        // स्ट्रिंग (नाम) + पता (मालिक) से यादृच्छिक uint उत्पन्न करता है
+        // स्ट्रिंग (नाम) + पते (मालिक) से यादृच्छिक uint उत्पन्न करता है
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Pizza और स्वामित्व को अन्य पता पर स्थानांतरित करता है
+    // Pizza और स्वामित्व को अन्य पते पर स्थानांतरित करता है
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -449,7 +449,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * दिए गए टोकन ID के स्वामित्व को सुरक्षित रूप से किसी अन्य पता पर स्थानांतरित करता है
+     * दिए गए टोकन ID के स्वामित्व को सुरक्षित रूप से किसी अन्य पते पर स्थानांतरित करता है
      * यदि लक्ष्य पता एक अनुबंध है, तो इसे `onERC721Received` लागू करना चाहिए,
      * जिसे सुरक्षित स्थानांतरण पर कॉल किया जाता है, और जादुई मान
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` लौटाना चाहिए;
@@ -463,7 +463,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * दिए गए टोकन ID के स्वामित्व को सुरक्षित रूप से किसी अन्य पता पर स्थानांतरित करता है
+     * दिए गए टोकन ID के स्वामित्व को सुरक्षित रूप से किसी अन्य पते पर स्थानांतरित करता है
      * यदि लक्ष्य पता एक अनुबंध है, तो इसे `onERC721Received` लागू करना चाहिए,
      * जिसे सुरक्षित स्थानांतरण पर कॉल किया जाता है, और जादुई मान
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` लौटाना चाहिए;
@@ -480,7 +480,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * लक्ष्य पता पर `onERC721Received` को लागू करने के लिए आंतरिक फ़ंक्शन
+     * लक्ष्य पते पर `onERC721Received` को लागू करने के लिए आंतरिक फ़ंक्शन
      * यदि लक्ष्य पता एक अनुबंध नहीं है तो कॉल निष्पादित नहीं की जाती है
      */
     function _checkOnERC721Received(
@@ -517,7 +517,7 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // पता के अनुसार Pizzas की संख्या लौटाता है
+    // पते के अनुसार Pizzas की संख्या लौटाता है
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
@@ -529,7 +529,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return owner;
     }
 
-    // Pizza के स्वामित्व को स्थानांतरित करने के लिए अन्य पता को स्वीकृति देता है
+    // Pizza के स्वामित्व को स्थानांतरित करने के लिए अन्य पते को स्वीकृति देता है
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
@@ -624,8 +624,8 @@ contract CryptoPizza is IERC721, ERC165 {
     // लौटाता है कि क्या लक्ष्य पता एक अनुबंध है
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // वर्तमान में यह जांचने का कोई बेहतर तरीका नहीं है कि किसी पता में कोई अनुबंध है या नहीं
-        // बजाय इसके कि उस पता पर कोड के आकार की जांच की जाए।
+        // वर्तमान में यह जांचने का कोई बेहतर तरीका नहीं है कि किसी पते में कोई अनुबंध है या नहीं
+        // बजाय इसके कि उस पते पर कोड के आकार की जांच की जाए।
         // देखें https://ethereum.stackexchange.com/a/14016/36603
         // यह कैसे काम करता है, इसके बारे में अधिक जानकारी के लिए।
         // TODO Serenity रिलीज़ से पहले इसे फिर से जांचें, क्योंकि तब सभी पते

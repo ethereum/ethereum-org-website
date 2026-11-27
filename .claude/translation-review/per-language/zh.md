@@ -1,5 +1,11 @@
 # Simplified Chinese (zh) Translation Review Findings
 
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 9.0/10
+Scope: 72 md pages + 19 JSON namespaces (incremental updates), changed lines only; sampled 6 md diffs and ~45 JSON keys, plus scripted sweeps (emphasis flanking clean, no U+3002/U+2060 issues).
+
+Fixed (critical): transliterated tool names on changed md lines restored to Latin with CJK spacing (Slither, Echidna, Uniswap, Reth, Erigon, Besu, Nethermind; 20 lines in archive-nodes, secure-development-workflow, smart-contract-security-guidelines, security, testing, dapps, rust); `以太坊虚拟机 (EVM)` over bare `EVM` (rust, security-guidelines); contributing `新译者的用户引导` (user onboarding) to `入门引导`.
+Open: `斑点` for blob follows ETHGlossary but reads as "spots" (glossary); `Reth`/`瑞斯` gloss hybrid kept in rust; `二层网络 (L2)` / bare `L2` mixed within pages (dev had `(l2)`); `您`/`你` mix in bug-bounty and secure-development-workflow; `gas 上限` lowercase.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.3/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical; full-width punctuation clean, no `**` flanking cases. Open: `gas 上限` lowercase beside `Gas` in `base-fee-label-limit`/`base-fee-description`; `node-clients-network-engine` is `Engine API` while its siblings use `引擎 API`.
 

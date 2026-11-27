@@ -42,10 +42,10 @@ lang: ta
 
 செயலாக்க, ஒருமித்த கருத்து மற்றும் ஒருங்கிணைந்த செயலாக்க/ஒருமித்த கருத்து இலகுரக கிளையண்ட்கள் உட்பட பல இலகுரக கிளையண்ட்கள் மேம்பாட்டில் உள்ளன. இந்தப் பக்கத்தை எழுதும் நேரத்தில் எங்களுக்குத் தெரிந்த இலகுரக கிளையண்ட் செயலாக்கங்கள் இவை:
 
-- [லோட்ஸ்டார்](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript-இல் உள்ள ஒருமித்த கருத்து இலகுரக கிளையண்ட்
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript-இல் உள்ள ஒருமித்த கருத்து இலகுரக கிளையண்ட்
 - [Helios](https://github.com/a16z/helios): Rust-இல் உள்ள ஒருங்கிணைந்த செயலாக்க மற்றும் ஒருமித்த கருத்து இலகுரக கிளையண்ட்
-- [கெத்](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go-இல் உள்ள செயலாக்கக் கிளையண்டிற்கான இலகுரக பயன்முறை (மேம்பாட்டில் உள்ளது)
-- [நிம்பஸ்](https://nimbus.guide/el-light-client.html): Nim-இல் உள்ள ஒருமித்த கருத்து இலகுரக கிளையண்ட்
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go-இல் உள்ள செயலாக்கக் கிளையண்டிற்கான இலகுரக பயன்முறை (மேம்பாட்டில் உள்ளது)
+- [Nimbus](https://nimbus.guide/el-light-client.html): Nim-இல் உள்ள ஒருமித்த கருத்து இலகுரக கிளையண்ட்
 
 எங்களுக்குத் தெரிந்தவரை, இவற்றில் எதுவும் இன்னும் உற்பத்திக்குத் தயாராகக் கருதப்படவில்லை.
 

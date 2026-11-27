@@ -110,7 +110,7 @@
   "page-roadmap-fusaka-bpo-item-2": "Umožňuje rychlejší přizpůsobení potřebám škálování na L2 bez nutnosti čekat na koordinované hard forky",
   "page-roadmap-fusaka-gas-title": "Limit plynu a ochrana proti DoS",
   "page-roadmap-fusaka-gas-item-1": "Zastropování limitu plynu na 16,7 milionu gasu na transakci",
-  "page-roadmap-fusaka-gas-item-2": "Zvýšení výchozího limitu plynu na 60 milionů, což zvyšuje kapacitu provádění na L1",
+  "page-roadmap-fusaka-gas-item-2": "Zvýšení výchozího limitu gasu na 60 milionů, což zvyšuje kapacitu provádění na L1",
   "page-roadmap-glamsterdam-epbs-title": "Zabudované oddělení navrhovatele a tvůrce (PBS)",
   "page-roadmap-glamsterdam-epbs-item-1": "Odděluje schvalování bloků od jejich zpracování, což pomáhá škálovat L1 tím, že umožňuje validátorům zpracovávat více dat",
   "page-roadmap-glamsterdam-epbs-item-2": "Nativně integruje tvůrce, takže validátoři mohou bezpečně outsourcovat sestavování bloků, aniž by museli důvěřovat externímu softwaru",

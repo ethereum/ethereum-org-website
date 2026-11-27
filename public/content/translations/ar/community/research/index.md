@@ -385,7 +385,7 @@ lang: ar
 
 #### الأبحاث الحديثة {#recent-research-14}
 
-- [تحليل بيانات مجموعة الحوافز القوية](https://rig.ethereum.org/)
+- [تحليل بيانات Robust Incentives Group](https://rig.ethereum.org/)
 - [البيانات المفتوحة لـ <span dir="ltr">ethPandaOps</span>](https://ethpandaops.io/data/)
 - [<span dir="ltr">ETHBEAT</span>: ملخص التوسع](https://ethbeat.org/layer2s/summary)
 

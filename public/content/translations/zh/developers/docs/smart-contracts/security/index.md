@@ -565,7 +565,7 @@ DEX 价格通常是准确的，这在很大程度上归功于套利者恢复了�
 
 - [如何编写安全的智能合约](/developers/tutorials/secure-development-workflow/)
 
-- [如何使用斯莱瑟寻找智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用 Slither 寻找智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [智能合约安全指南](/developers/tutorials/smart-contract-security-guidelines/)
 

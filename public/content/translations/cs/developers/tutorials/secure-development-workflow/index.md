@@ -36,7 +36,7 @@ Zdokumentujte kritické bezpečnostní vlastnosti a k jejich vyhodnocení použi
 
 - Naučte se [dokumentovat bezpečnostní vlastnosti vašeho kódu](/developers/tutorials/guide-to-smart-contract-security-tools/). Zpočátku je to těžké, ale je to ta nejdůležitější činnost pro dosažení dobrého výsledku. Je to také předpoklad pro použití jakýchkoli pokročilých technik v tomto tutoriálu.
 - Definujte bezpečnostní vlastnosti v Solidity pro použití s fuzzery, jako jsou [Echidna](https://github.com/crytic/echidna) a [Medusa](https://github.com/crytic/medusa), a s nástroji pro symbolické spouštění, jako je [hevm](https://hevm.dev/). Zaměřte se na svůj stavový automat, řízení přístupu, aritmetické operace, externí interakce a shodu se standardy.
-- Definujte bezpečnostní vlastnosti pomocí [rozhraní pro programování aplikací (API) nástroje Slither pro Python](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). Zaměřte se na dědičnost, závislosti proměnných, řízení přístupu a další strukturální problémy.
+- Definujte bezpečnostní vlastnosti pomocí [Python API nástroje Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). Zaměřte se na dědičnost, závislosti proměnných, řízení přístupu a další strukturální problémy.
 - Spouštějte své testy vlastností při každém commitu v CI (například GitHub Actions), aby každý ve vašem týmu snadno viděl, že procházejí. Selhávající testy mohou zablokovat slučování.
 
 Nakonec pamatujte na problémy, které automatizované nástroje nemohou snadno odhalit:

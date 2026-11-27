@@ -409,7 +409,7 @@ Ethereum merkeziyetsiz uygulamanıza (dapp) entegre edebileceğiniz birden fazla
 
 **[DIA](https://www.diadata.org/)** - Tüm büyük varlık sınıflarında 20.000'den fazla varlık için doğrulanabilir veri beslemeleri sunan zincirler arası bir kâhin ağıdır. DIA, ham ticaret verilerini doğrudan 100'den fazla birincil piyasadan alır ve zincir içinde hesaplayarak, her türlü kullanım senaryosu için özel yapılandırmalarla tam veri şeffaflığı ve doğrulanabilirliği sağlar.
 
-**[Stork](https://stork.network)** - Stork, sürekli işlem piyasaları, borç verme protokolleri ve DeFi ekosistemleri dâhil olmak üzere çok çeşitli kullanım senaryolarını destekleyerek ultra düşük gecikme süresiyle fiyat verileri sunar ve yeni varlıklar listelendiğinde hızla desteklenir.
+**[Stork](https://stork.network)** - Stork, sürekli vadeli işlem piyasaları, borç verme protokolleri ve DeFi ekosistemleri dâhil olmak üzere çok çeşitli kullanım senaryolarını destekleyerek ultra düşük gecikme süresiyle fiyat verileri sunar ve yeni varlıklar listelendiğinde hızla desteklenir.
 
 ## Daha fazla bilgi {#further-reading}
 

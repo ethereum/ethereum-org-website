@@ -1,5 +1,11 @@
 # Korean (ko) Translation Review Findings
 
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.8/10
+Scope: 71 md pages + 20 JSON namespaces (incremental updates), changed lines only; sampled 6 md diffs and ~45 JSON keys, plus scripted sweeps.
+
+Fixed (critical): hybrid `한글(Latin)` tool/brand names in `page-developers-tools-descriptions.json` collapsed to Latin (Lighthouse, Lodestar, Nethermind, Nimbus, Prysm, MetaMask, Coinbase, Optimism, Uniswap, Aave, Chainlink; 17 values); expansions of bare `DeFi`/`API`/`L2` (5 values, particles re-checked); md: transliterated clients/tools on changed lines restored to Latin (archive-nodes, light-clients, javascript, secure-development-workflow, smart-contract-security-guidelines, dapps, security, social-networks; ~20 lines); `이더리움 가상 머신 (EVM)` over bare `EVM` in pectra/security; attestations particle `0`로 to `0`으로.
+Open: `레이어 2 (L2) 체인(L2)` doubled acronym in trillion-dollar-security; `fusaka-gas-item-2` present tense for English `Raised`; `비디오` over `동영상` (matches dev's dominant form); 100+ untouched dev lines still transliterate tool names.
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

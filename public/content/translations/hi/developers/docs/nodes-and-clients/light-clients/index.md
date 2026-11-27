@@ -42,10 +42,10 @@ lang: hi
 
 विकास के चरण में कई लाइट क्लाइंट्स हैं, जिनमें निष्पादन, सर्वसम्मति और संयुक्त निष्पादन/सर्वसम्मति लाइट क्लाइंट्स शामिल हैं। इस पृष्ठ को लिखते समय हमें इन लाइट क्लाइंट कार्यान्वयनों के बारे में जानकारी है:
 
-- [लोडस्टार](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript में सर्वसम्मति लाइट क्लाइंट
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript में सर्वसम्मति लाइट क्लाइंट
 - [Helios](https://github.com/a16z/helios): Rust में संयुक्त निष्पादन और सर्वसम्मति लाइट क्लाइंट
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go में निष्पादन क्लाइंट के लिए लाइट मोड (विकास के चरण में)
-- [निम्बस](https://nimbus.guide/el-light-client.html): Nim में सर्वसम्मति लाइट क्लाइंट
+- [Nimbus](https://nimbus.guide/el-light-client.html): Nim में सर्वसम्मति लाइट क्लाइंट
 
 हमारी जानकारी के अनुसार इनमें से किसी को भी अभी तक उत्पादन के लिए तैयार नहीं माना गया है।
 

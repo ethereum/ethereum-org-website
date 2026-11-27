@@ -52,9 +52,9 @@ JavaScript 개발자로서 자신만의 스마트 컨트랙트를 작성하고 �
 
 ### 노드 및 클라이언트 {#nodes-and-clients}
 
-[로드스타](https://lodestar.chainsafe.io/)는 TypeScript로 작성되고 ChainSafe에서 유지 관리하는 프로덕션 준비가 완료된 합의 클라이언트입니다. 여기에는 비콘 노드와 검증자 클라이언트가 포함되어 있으며, 익숙한 언어로 이더리움의 지분 증명 합의가 어떻게 작동하는지 확인하기에 좋은 곳입니다.
+[Lodestar](https://lodestar.chainsafe.io/)는 TypeScript로 작성되고 ChainSafe에서 유지 관리하는 프로덕션 준비가 완료된 합의 클라이언트입니다. 여기에는 비콘 노드와 검증자 클라이언트가 포함되어 있으며, 익숙한 언어로 이더리움의 지분 증명 합의가 어떻게 작동하는지 확인하기에 좋은 곳입니다.
 
-**로드스타 확인해 보기**  
+**Lodestar 확인해 보기**  
 [`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
 
 실행 측면에서 EthereumJS 클라이언트는 더 이상 사용되지 않으며 보관 처리되었지만, JavaScript에서 이더리움 클라이언트가 어떻게 작동하는지 탐색할 수 있도록 소스 코드는 계속 제공됩니다.

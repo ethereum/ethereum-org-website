@@ -1,5 +1,11 @@
 # Traditional Chinese (zh-tw) Translation Review Findings
 
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.8/10
+Scope: 71 md pages + 18 JSON namespaces (incremental updates), changed lines only; sampled 6 md diffs and ~40 JSON keys, plus scripted sweeps.
+
+Fixed (critical): transliterated tool names on changed md lines restored to Latin with CJK spacing (Slither, Lodestar, Lighthouse, Reth, Erigon, Nethermind, Besu, Uniswap; ~22 lines; `Lighthouse (Lighthouse)` and `Reth (Reth)` dupes collapsed); expansions over bare `API`/`EVM` (oracles L402, secure-development-workflow L42, rust L44, pectra L80). `埃奇德納` Echidna and `曼蒂科爾` forms on unchanged lines left.
+Open: `您`/`你` mix (secure-development-workflow, bug-bounty); `時槽` vs `時隙`; `零知識卷疊` vs `匯總`; mainland vocabulary (`運行`, `輸出工具`) persists; `邊境` for Frontier.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical; full-width punctuation clean. Open: `應用程式介面 (API)` expanded x7 where English has bare `API` (#112); `發佈` (22) and `發布` (18) both used in one file; rollup is `匯總` in most labels but `零知識卷疊` for ZK (glossary split, #113).
 

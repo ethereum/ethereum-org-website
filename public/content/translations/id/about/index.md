@@ -127,7 +127,7 @@ Situs web ethereum.org adalah sumber terbuka dan dibangun di bawah [Lisensi MIT]
 
 ## Privasi Anda {#your-privacy}
 
-ethereum.org menggunakan Matomo untuk analitik yang menjaga privasi, dan Anda dapat menyisih kapan saja. Baca [kebijakan cookie](/cookie-policy/) dan [kebijakan privasi](/privacy-policy/) kami untuk detailnya.
+ethereum.org menggunakan Matomo untuk analitik yang menjaga privasi, dan Anda dapat memilih keluar kapan saja. Baca [kebijakan cookie](/cookie-policy/) dan [kebijakan privasi](/privacy-policy/) kami untuk detailnya.
 
 ## Lowongan pekerjaan {#open-jobs}
 

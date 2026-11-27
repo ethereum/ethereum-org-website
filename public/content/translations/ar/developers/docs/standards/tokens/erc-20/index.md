@@ -184,6 +184,6 @@ print("Addr Balance:", addr_balance)
 - [<span dir="ltr">ERC-7540</span> - الخزائن المرمزة غير المتزامنة](/developers/docs/standards/tokens/erc-7540)
 ## البرامج التعليمية: البناء باستخدام <span dir="ltr">ERC-20</span> على إيثيريوم {#tutorials}
 
-- [جولة تفصيلية في عقد <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-annotated-code/) _– جولة تفصيلية مشروحة سطرًا بسطر لتنفيذ عقد <span dir="ltr">ERC-20</span> من أوبن زبلن._
+- [جولة تفصيلية في عقد <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-annotated-code/) _– جولة تفصيلية مشروحة سطرًا بسطر لتنفيذ عقد <span dir="ltr">ERC-20</span> من <span dir="ltr">OpenZeppelin</span>._
 - [<span dir="ltr">ERC-20</span> مع حواجز الأمان](/developers/tutorials/erc20-with-safety-rails/) _– كيفية إضافة ضمانات إلى الرموز المميزة <span dir="ltr">ERC-20</span> لمساعدة المستخدمين على تجنب الأخطاء الشائعة._
 - [بعض الحيل التي تستخدمها الرموز المميزة الاحتيالية وكيفية اكتشافها](/developers/tutorials/scam-token-tricks/) _– استكشاف مفصل لأنماط الرموز المميزة <span dir="ltr">ERC-20</span> الاحتيالية وكيفية التعرف عليها._

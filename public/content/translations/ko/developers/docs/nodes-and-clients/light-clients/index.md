@@ -42,10 +42,10 @@ lang: ko
 
 실행, 합의 및 실행/합의 결합 경량 클라이언트를 포함하여 여러 경량 클라이언트가 개발 중입니다. 이 페이지를 작성하는 시점에 알려진 경량 클라이언트 구현은 다음과 같습니다.
 
-- [로드스타](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript로 작성된 합의 경량 클라이언트
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript로 작성된 합의 경량 클라이언트
 - [Helios](https://github.com/a16z/helios): Rust로 작성된 실행 및 합의 결합 경량 클라이언트
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go로 작성된 실행 클라이언트용 경량 모드(개발 중)
-- [님버스](https://nimbus.guide/el-light-client.html): Nim으로 작성된 합의 경량 클라이언트
+- [Nimbus](https://nimbus.guide/el-light-client.html): Nim으로 작성된 합의 경량 클라이언트
 
 우리가 아는 한, 이들 중 아직 프로덕션 환경에서 사용할 준비가 된 것은 없습니다.
 

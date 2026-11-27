@@ -42,7 +42,7 @@ lang: zh-tw
 
 目前有幾個輕客戶端正在開發中，包括執行客戶端、共識客戶端以及結合執行與共識的輕客戶端。以下是我們在撰寫本頁面時所知的輕客戶端實作：
 
-- [洛德斯塔 (Lodestar)](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client)：使用 TypeScript 編寫的共識輕客戶端
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client)：使用 TypeScript 編寫的共識輕客戶端
 - [Helios](https://github.com/a16z/helios)：使用 Rust 編寫的結合執行與共識輕客戶端
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light)：使用 Go 編寫的執行客戶端輕量模式（開發中）
 - [寧布斯 (Nimbus)](https://nimbus.guide/el-light-client.html)：使用 Nim 編寫的共識輕客戶端

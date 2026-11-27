@@ -4,7 +4,7 @@ description: "Un guide pour les développeurs sur les ponts : comment fonctionne
 lang: fr
 ---
 
-Avec la prolifération des chaînes de blocs de couche 1 (L1) et des solutions de [mise à l'échelle](/developers/docs/scaling/) de couche 2 (L2), ainsi qu'un nombre toujours croissant d'applications décentralisées (dapp) devenant inter-chaînes, le besoin de communication et de mouvement d'actifs entre les chaînes est devenu une partie essentielle de l'infrastructure du réseau. Différents types de ponts existent pour rendre cela possible.
+Avec la prolifération des chaînes de blocs L1 et des solutions de [mise à l'échelle](/developers/docs/scaling/) L2, ainsi qu'un nombre toujours croissant d'applications décentralisées (dapp) devenant inter-chaînes, le besoin de communication et de mouvement d'actifs entre les chaînes est devenu une partie essentielle de l'infrastructure du réseau. Différents types de ponts existent pour rendre cela possible.
 
 ## Besoin de ponts {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Pour les développeurs, les ponts permettent ce qui suit :
 
 - le transfert de toutes données, informations et actifs de manière inter-chaîne.
 - le déblocage de nouvelles fonctionnalités et de nouveaux cas d'utilisation pour les protocoles, car les ponts élargissent l'espace de conception de ce que les protocoles peuvent offrir. Par exemple, un protocole d'agriculture de rendement initialement déployé sur le [réseau principal Ethereum](/) peut offrir des pools de liquidité sur toutes les chaînes compatibles EVM.
-- l'opportunité de tirer parti des forces de différentes chaînes de blocs. Par exemple, les développeurs peuvent bénéficier des frais réduits offerts par les différentes solutions de couche 2 (L2) en déployant leurs dapps sur des rollups et des chaînes latérales (sidechains), et les utilisateurs peuvent utiliser des ponts pour passer de l'une à l'autre.
+- l'opportunité de tirer parti des forces de différentes chaînes de blocs. Par exemple, les développeurs peuvent bénéficier des frais réduits offerts par les différentes solutions L2 en déployant leurs dapps sur des rollups et des chaînes latérales (sidechains), et les utilisateurs peuvent utiliser des ponts pour passer de l'une à l'autre.
 - la collaboration entre les développeurs de divers écosystèmes de chaînes de blocs pour créer de nouveaux produits.
 - l'attraction d'utilisateurs et de communautés de divers écosystèmes vers leurs dapps.
 

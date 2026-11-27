@@ -74,7 +74,7 @@ L'EIP-7918 fixe un prix de réserve proportionnel sous chaque blob. Lorsque la r
 - [Spécification technique de l'EIP-7918](https://eips.ethereum.org/EIPS/eip-7918)
 - [Explication Storybook](https://notes.ethereum.org/@anderselowsson/AIG)
 
-### Mise à l'échelle de la couche 1 (L1) {#scale-l1}
+### Mise à l'échelle de la L1 {#scale-l1}
 
 #### Expiration de l'historique et reçus simplifiés {#history-expiry}
 
@@ -161,7 +161,7 @@ Cette fonctionnalité ajoute une petite instruction EVM, le **comptage des zéro
 
 #### Précompilé pour la prise en charge de la courbe secp256r1 {#secp256r1-precompile}
 
-Introduit un vérificateur de signature secp256r1 (P-256) intégré, de type clé d'accès, à l'adresse fixe `0x100` en utilisant le même format d'appel déjà adopté par de nombreuses couches 2 et en corrigeant les cas extrêmes, de sorte que les contrats écrits pour ces environnements fonctionnent sur la couche 1 (L1) sans modification.
+Introduit un vérificateur de signature secp256r1 (P-256) intégré, de type clé d'accès, à l'adresse fixe `0x100` en utilisant le même format d'appel déjà adopté par de nombreuses couches 2 et en corrigeant les cas extrêmes, de sorte que les contrats écrits pour ces environnements fonctionnent sur la L1 sans modification.
 
 Mise à niveau de l'expérience utilisateur ! Pour les utilisateurs, cela débloque la signature native sur l'appareil et les clés d'accès. Les portefeuilles peuvent exploiter directement Apple Secure Enclave, le magasin de clés Android, les modules de sécurité matériels (HSM) et FIDO2/WebAuthn - pas de phrase secrète, une intégration plus fluide et des flux d'authentification multifacteur qui ressemblent aux applications modernes. Cela se traduit par une meilleure expérience utilisateur, une récupération plus facile et des modèles d'abstraction de compte qui correspondent à ce que font déjà des milliards d'appareils.
 
@@ -205,7 +205,7 @@ Le zèbre est la « mascotte » choisie par les développeurs pour Fusaka car se
 
 La Fusion en 2022 [a utilisé un panda](https://x.com/hwwonx/status/1431970802040127498) comme mascotte pour signaler la jonction des couches d'exécution et de consensus. Depuis lors, des mascottes ont été choisies de manière informelle pour chaque fork et apparaissent sous forme d'art ASCII dans les journaux des clients au moment de la mise à jour. C'est juste une façon amusante de célébrer.
 
-### Quelles améliorations sont incluses pour la mise à l'échelle des couches 2 (L2) ? {#what-improvements-are-included-for-l2-scaling}
+### Quelles améliorations sont incluses pour la mise à l'échelle des L2 ? {#what-improvements-are-included-for-l2-scaling}
 
 [PeerDAS](/roadmap/fusaka/peerdas) est la fonctionnalité principale du fork. Il implémente l'échantillonnage de la disponibilité des données (DAS) qui débloque plus d'évolutivité pour les rollups, mettant théoriquement à l'échelle l'espace des blobs jusqu'à 8 fois sa taille actuelle. Le marché des frais de blob sera également amélioré pour réagir efficacement à la congestion et garantir que les couches 2 paient des frais significatifs pour le calcul et l'espace que les blobs imposent aux nœuds.
 
@@ -228,7 +228,7 @@ Exemple de ce à quoi cela pourrait ressembler :
 
 ### Cela réduira-t-il les frais sur Ethereum (couche 1) {#will-this-lower-gas}
 
-Cette mise à jour ne réduit pas les frais de gaz sur la couche 1 (L1), du moins pas directement. L'objectif principal est d'offrir plus d'espace de blob pour les données de rollup, réduisant ainsi les frais sur la couche 2. Cela pourrait avoir quelques effets secondaires sur le marché des frais de la couche 1, mais aucun changement significatif n'est attendu.
+Cette mise à jour ne réduit pas les frais de gaz sur la L1, du moins pas directement. L'objectif principal est d'offrir plus d'espace de blob pour les données de rollup, réduisant ainsi les frais sur la couche 2. Cela pourrait avoir quelques effets secondaires sur le marché des frais de la L1, mais aucun changement significatif n'est attendu.
 
 ### En tant que staker, que dois-je faire pour la mise à jour ? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
 

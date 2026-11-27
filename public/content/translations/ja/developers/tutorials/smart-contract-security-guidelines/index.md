@@ -73,12 +73,12 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### テストと検証 {#testing-and-verification}
 
 - **徹底的な単体テストを書く。** 高品質なソフトウェアを構築するには、広範なテストスイートが不可欠です。
-- **[スリザー](https://github.com/crytic/slither)、[エキドナ](https://github.com/crytic/echidna)、[Medusa](https://github.com/crytic/medusa)のカスタムチェックとプロパティを書く。** 自動化ツールは、コントラクトの安全性を確保するのに役立ちます。効率的なチェックとプロパティの書き方を学ぶには、このガイドの残りの部分を確認してください。
-- **これらのツールを継続的インテグレーションで実行する。** すべてのプルリクエストでスリザーとファジングプロパティを実行することで、マージされる前にリグレッションを検出できます。
+- **[Slither](https://github.com/crytic/slither)、[Echidna](https://github.com/crytic/echidna)、[Medusa](https://github.com/crytic/medusa)のカスタムチェックとプロパティを書く。** 自動化ツールは、コントラクトの安全性を確保するのに役立ちます。効率的なチェックとプロパティの書き方を学ぶには、このガイドの残りの部分を確認してください。
+- **これらのツールを継続的インテグレーションで実行する。** すべてのプルリクエストでSlitherとファジングプロパティを実行することで、マージされる前にリグレッションを検出できます。
 
 ### Solidity {#solidity}
 
-- **既知の深刻なバグがない、最近のSolidity 0.8.xリリースを使用する。** Solidity 0.8はデフォルトで算術演算のオーバーフローとアンダーフローをチェックしますが、古いバージョンでは新しいコンパイラのセキュリティチェックが欠落しています。スリザーの[solcバージョンの推奨事項](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity)を参照してください。
+- **既知の深刻なバグがない、最近のSolidity 0.8.xリリースを使用する。** Solidity 0.8はデフォルトで算術演算のオーバーフローとアンダーフローをチェックしますが、古いバージョンでは新しいコンパイラのセキュリティチェックが欠落しています。Slitherの[solcバージョンの推奨事項](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity)を参照してください。
 - **コンパイルには安定版リリースを使用し、警告のチェックには最新リリースを使用する。** 最新のコンパイラバージョンでコードに問題が報告されていないことを確認してください。ただし、Solidityのリリースサイクルは早く、コンパイラのバグの歴史があるため、数日前にリリースされたばかりのバージョンでのデプロイは避けてください。選択したバージョンの[既知のコンパイラバグのリスト](https://docs.soliditylang.org/en/latest/bugs.html)を確認してください。
 - **インラインアセンブリを使用しない。** アセンブリにはEVMの専門知識が必要です。イエロー・ペーパーを_完全に理解_していない場合は、EVMコードを書かないでください。
 

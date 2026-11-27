@@ -20,7 +20,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 আমরা এমন একটি কন্ট্রাক্ট তৈরি করব যা যে কাউকে তার নিজস্ব `Counter` স্মার্ট কন্ট্রাক্ট তৈরি করতে সক্ষম করবে এর জন্য একটি ফ্যাক্টরি তৈরি করার মাধ্যমে, এর নাম হবে `CounterFactory`। প্রথমে এখানে আমাদের প্রাথমিক `Counter` স্মার্ট কন্ট্রাক্টের কোড দেওয়া হলো:
 
 ```solidity
-// SPDX-লাইসেন্স-শনাক্তকারী: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {
@@ -110,7 +110,7 @@ Solidity 0.8 থেকে, পাটিগণিত [ডিফল্টভাব
 এখানে সম্পূর্ণ কোড দেওয়া হলো:
 
 ```solidity
-// SPDX-লাইসেন্স-শনাক্তকারী: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
 contract Counter {

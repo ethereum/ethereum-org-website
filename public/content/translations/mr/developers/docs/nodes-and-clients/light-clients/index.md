@@ -40,12 +40,12 @@ lang: mr
 
 ## लाइट क्लायंटच्या विकासाची सद्यस्थिती काय आहे? {#current-state-of-development}
 
-अंमलबजावणी, एकमत आणि एकत्रित अंमलबजावणी/एकमत लाइट क्लायंट्ससह अनेक लाइट क्लायंट्स विकसित होत आहेत. हे पृष्ठ लिहिताना आम्हाला माहित असलेल्या लाइट क्लायंट अंमलबजावणी खालीलप्रमाणे आहेत:
+अंमलबजावणी, सहमती आणि एकत्रित अंमलबजावणी/सहमती लाइट क्लायंट्ससह अनेक लाइट क्लायंट्स विकसित होत आहेत. हे पृष्ठ लिहिताना आम्हाला माहित असलेल्या लाइट क्लायंट अंमलबजावणी खालीलप्रमाणे आहेत:
 
-- [लोडस्टार](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript मधील एकमत लाइट क्लायंट
-- [हेलिओस](https://github.com/a16z/helios): Rust मधील एकत्रित अंमलबजावणी आणि एकमत लाइट क्लायंट
-- [गेथ](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go मधील अंमलबजावणी क्लायंटसाठी लाइट मोड (विकासाधीन)
-- [निंबस](https://nimbus.guide/el-light-client.html): Nim मधील एकमत लाइट क्लायंट
+- [लोडस्टार (Lodestar)](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript मधील सहमती लाइट क्लायंट
+- [हेलिओस (Helios)](https://github.com/a16z/helios): Rust मधील एकत्रित अंमलबजावणी आणि सहमती लाइट क्लायंट
+- [गेथ (Geth)](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go मधील अंमलबजावणी क्लायंटसाठी लाइट मोड (विकासाधीन)
+- [निंबस (Nimbus)](https://nimbus.guide/el-light-client.html): Nim मधील सहमती लाइट क्लायंट
 
 आमच्या माहितीनुसार यापैकी कोणतेही अद्याप उत्पादनासाठी तयार मानले जात नाही.
 

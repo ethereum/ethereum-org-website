@@ -1,5 +1,12 @@
 # Czech (cs) Translation Review Findings
 
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.9/10
+Scope: 91 cs files (71 markdown, 20 JSON incl. 277 rewritten dev-tools descriptions), changed lines only; 16 markdown diffs read, 60+ JSON keys sampled. No U+3002/U+2060/foreign-script hits in the PR files.
+
+Fixed (12 criticals): `Můstky` -> `Mosty` (adding-layer-2s:45, bridge term regression); `důkazy s nulovým vědomím` -> `nulovou znalostí` (page-learn `glossary-card-description`, `more-on-ethereum-protocol-zero-knowledge-proofs`); `plynu`/`plyn` -> `gasu`/`gas` on changed lines (page-roadmap `page-roadmap-fusaka-gas-item-2`, page-what-is-the-ethereum-network `layer-2s-section-description-1`); added long forms on bare English abbreviations: Slither API (secure-development-workflow:39), DeFi x3 (dev-tools `tool-pendle-ai`, `tool-updraft`, `tool-web3-ethereum-defi`), GUI (`tool-stereum`), NFT (`tool-railgun-wallet-sdk`); `web3.py` casing; typo `reprodukovovat` (a-developers-guide-to-ethereum-part-one:28).
+
+Open (warnings): glossary.json `byzantium-fork-definition` lost a comma/`a` ("EIP-649 Metropolis odložení"); `technologiemi útočiště` for "sanctuary technologies" (contributing:28; dev had `bezpečnými`); dev bridges link texts now English (dev had Czech titles); `rollup` undeclined in page-resources l2beat description; `nacenit` (tool-1inch-ai); `odkaz supervětšiny` vs prior `spojení`; `glosář` (contributing) vs `slovníček` (page-learn).
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

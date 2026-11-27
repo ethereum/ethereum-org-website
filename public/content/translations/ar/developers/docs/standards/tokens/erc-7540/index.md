@@ -177,4 +177,4 @@ event OperatorSet(
 
 - [<span dir="ltr">EIP-7540</span>: أقبية <span dir="ltr">ERC-4626</span> المرمزة غير المتزامنة](https://eips.ethereum.org/EIPS/eip-7540)
 - [<span dir="ltr">EIP-4626</span>: معيار القبو المرمز](https://eips.ethereum.org/EIPS/eip-4626)
-- [تنفيذ أوبن زبلن لمعيار <span dir="ltr">ERC-7540</span>](https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/token/ERC20/extensions/ERC7540.sol)
+- [تنفيذ <span dir="ltr">OpenZeppelin</span> لمعيار <span dir="ltr">ERC-7540</span>](https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/token/ERC20/extensions/ERC7540.sol)

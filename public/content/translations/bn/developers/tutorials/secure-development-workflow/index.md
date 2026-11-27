@@ -20,8 +20,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 পরিচিত নিরাপত্তা সমস্যাগুলো পরীক্ষা করুন:
 
-- [স্লিদার](https://github.com/crytic/slither) দিয়ে আপনার কন্ট্রাক্টগুলো পর্যালোচনা করুন। সাধারণ দুর্বলতাগুলোর জন্য এতে 100-এর বেশি বিল্ট-ইন ডিটেক্টর রয়েছে। নতুন কোডের সাথে প্রতিটি চেক-ইনে এটি চালান এবং নিশ্চিত করুন যে এটি একটি ক্লিন রিপোর্ট পায় (বা নির্দিষ্ট সমস্যাগুলো সাইলেন্স করতে ট্রায়াজ মোড ব্যবহার করুন)।
-- CI-তে স্লিদার চালান, উদাহরণস্বরূপ GitHub-এ [slither-action](https://github.com/crytic/slither-action) দিয়ে, যাতে পুল রিকোয়েস্টগুলোতে নিরাপত্তা সমস্যাগুলো সামনে আসে।
+- [Slither](https://github.com/crytic/slither) দিয়ে আপনার কন্ট্রাক্টগুলো পর্যালোচনা করুন। সাধারণ দুর্বলতাগুলোর জন্য এতে 100-এর বেশি বিল্ট-ইন ডিটেক্টর রয়েছে। নতুন কোডের সাথে প্রতিটি চেক-ইনে এটি চালান এবং নিশ্চিত করুন যে এটি একটি ক্লিন রিপোর্ট পায় (বা নির্দিষ্ট সমস্যাগুলো সাইলেন্স করতে ট্রায়াজ মোড ব্যবহার করুন)।
+- CI-তে Slither চালান, উদাহরণস্বরূপ GitHub-এ [slither-action](https://github.com/crytic/slither-action) দিয়ে, যাতে পুল রিকোয়েস্টগুলোতে নিরাপত্তা সমস্যাগুলো সামনে আসে।
 
 আপনার কন্ট্রাক্টের বিশেষ বৈশিষ্ট্যগুলো বিবেচনা করুন:
 
@@ -31,15 +31,15 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 আপনার কোডের গুরুত্বপূর্ণ নিরাপত্তা বৈশিষ্ট্যগুলো দৃশ্যত পরিদর্শন করুন:
 
-- স্লিদারের [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) প্রিন্টার পর্যালোচনা করুন। অসাবধানতাবশত শ্যাডোয়িং এবং C3 লিনিয়ারাইজেশন সমস্যাগুলো এড়িয়ে চলুন।
-- স্লিদারের [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) প্রিন্টার পর্যালোচনা করুন। এটি ফাংশন ভিজিবিলিটি এবং অ্যাক্সেস কন্ট্রোল রিপোর্ট করে।
-- স্লিদারের [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) প্রিন্টার পর্যালোচনা করুন। এটি স্টেট ভেরিয়েবলগুলোতে অ্যাক্সেস কন্ট্রোল রিপোর্ট করে।
+- Slither-এর [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) প্রিন্টার পর্যালোচনা করুন। অসাবধানতাবশত শ্যাডোয়িং এবং C3 লিনিয়ারাইজেশন সমস্যাগুলো এড়িয়ে চলুন।
+- Slither-এর [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) প্রিন্টার পর্যালোচনা করুন। এটি ফাংশন ভিজিবিলিটি এবং অ্যাক্সেস কন্ট্রোল রিপোর্ট করে।
+- Slither-এর [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) প্রিন্টার পর্যালোচনা করুন। এটি স্টেট ভেরিয়েবলগুলোতে অ্যাক্সেস কন্ট্রোল রিপোর্ট করে।
 
 গুরুত্বপূর্ণ নিরাপত্তা প্রপার্টিগুলো নথিভুক্ত করুন এবং সেগুলো মূল্যায়ন করতে স্বয়ংক্রিয় টেস্ট জেনারেটর ব্যবহার করুন:
 
 - [আপনার কোডের জন্য নিরাপত্তা প্রপার্টিগুলো নথিভুক্ত করতে](/developers/tutorials/guide-to-smart-contract-security-tools/) শিখুন। এটি প্রথমে কঠিন মনে হতে পারে, তবে একটি ভালো ফলাফল অর্জনের জন্য এটি সবচেয়ে গুরুত্বপূর্ণ কাজ। এই টিউটোরিয়ালের যেকোনো উন্নত কৌশল ব্যবহার করার জন্যও এটি একটি পূর্বশর্ত।
-- [একিডনা](https://github.com/crytic/echidna) এবং [Medusa](https://github.com/crytic/medusa)-এর মতো ফাজারগুলোর সাথে এবং [hevm](https://hevm.dev/)-এর মতো সিম্বলিক এক্সিকিউশন টুলগুলোর সাথে ব্যবহারের জন্য Solidity-তে নিরাপত্তা প্রপার্টিগুলো সংজ্ঞায়িত করুন। আপনার স্টেট মেশিন, অ্যাক্সেস কন্ট্রোল, গাণিতিক ক্রিয়াকলাপ, বাহ্যিক মিথস্ক্রিয়া এবং স্ট্যান্ডার্ড কনফরম্যান্সের ওপর ফোকাস করুন।
-- [স্লিদারের Python API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) দিয়ে নিরাপত্তা প্রপার্টিগুলো সংজ্ঞায়িত করুন। ইনহেরিট্যান্স, ভেরিয়েবল ডিপেন্ডেন্সি, অ্যাক্সেস কন্ট্রোল এবং অন্যান্য কাঠামোগত সমস্যার ওপর ফোকাস করুন।
+- [Echidna](https://github.com/crytic/echidna) এবং [Medusa](https://github.com/crytic/medusa)-এর মতো ফাজারগুলোর সাথে এবং [hevm](https://hevm.dev/)-এর মতো সিম্বলিক এক্সিকিউশন টুলগুলোর সাথে ব্যবহারের জন্য Solidity-তে নিরাপত্তা প্রপার্টিগুলো সংজ্ঞায়িত করুন। আপনার স্টেট মেশিন, অ্যাক্সেস কন্ট্রোল, গাণিতিক ক্রিয়াকলাপ, বাহ্যিক মিথস্ক্রিয়া এবং স্ট্যান্ডার্ড কনফরম্যান্সের ওপর ফোকাস করুন।
+- [Slither-এর Python API](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/) দিয়ে নিরাপত্তা প্রপার্টিগুলো সংজ্ঞায়িত করুন। ইনহেরিট্যান্স, ভেরিয়েবল ডিপেন্ডেন্সি, অ্যাক্সেস কন্ট্রোল এবং অন্যান্য কাঠামোগত সমস্যার ওপর ফোকাস করুন।
 - CI-তে (উদাহরণস্বরূপ, GitHub Actions) প্রতিটি কমিটে আপনার প্রপার্টি টেস্টগুলো চালান যাতে আপনার টিমের সবাই সহজেই দেখতে পারে যে সেগুলো পাস করেছে। ব্যর্থ টেস্টগুলো মার্জ ব্লক করতে পারে।
 
 সবশেষে, এমন সমস্যাগুলোর বিষয়ে সচেতন থাকুন যা স্বয়ংক্রিয় টুলগুলো সহজে খুঁজে পায় না:

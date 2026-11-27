@@ -25,7 +25,7 @@ Předpoklady:
 - Napsali jste už pár řádků kódu v Pythonu,
 - Máte na svém počítači nainstalovaný Python verze 3.10 nebo novější (důrazně doporučujeme použít [virtuální prostředí](https://realpython.com/effective-python-environment/#virtual-environments)) a
 - použili jste `pip`, instalátor balíčků pro Python.
-  Opakuji, pokud něco z toho není pravda, nebo neplánujete reprodukovovat kód z tohoto článku, pravděpodobně i tak nebudete mít problém sledovat výklad.
+  Opakuji, pokud něco z toho není pravda, nebo neplánujete reprodukovat kód z tohoto článku, pravděpodobně i tak nebudete mít problém sledovat výklad.
 
 ## Blockchainy ve stručnosti {#blockchains-briefly}
 

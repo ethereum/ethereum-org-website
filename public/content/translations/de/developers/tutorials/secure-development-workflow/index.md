@@ -36,7 +36,7 @@ Dokumentieren Sie kritische Sicherheitseigenschaften und verwenden Sie automatis
 
 - Lernen Sie, [Sicherheitseigenschaften für Ihren Code zu dokumentieren](/developers/tutorials/guide-to-smart-contract-security-tools/). Es ist anfangs schwierig, aber es ist die wichtigste Aktivität, um ein gutes Ergebnis zu erzielen. Es ist auch eine Voraussetzung für die Verwendung der fortgeschrittenen Techniken in diesem Tutorial.
 - Definieren Sie Sicherheitseigenschaften in Solidity zur Verwendung mit Fuzzern wie [Echidna](https://github.com/crytic/echidna) und [Medusa](https://github.com/crytic/medusa) sowie mit Tools zur symbolischen Ausführung wie [hevm](https://hevm.dev/). Konzentrieren Sie sich auf Ihre Zustandsmaschine, Zugriffskontrollen, arithmetische Operationen, externe Interaktionen und die Einhaltung von Standards.
-- Definieren Sie Sicherheitseigenschaften mit der [Python-Programmierschnittstelle (API) von Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). Konzentrieren Sie sich auf Vererbung, Variablenabhängigkeiten, Zugriffskontrollen und andere strukturelle Probleme.
+- Definieren Sie Sicherheitseigenschaften mit der [Python-API von Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). Konzentrieren Sie sich auf Vererbung, Variablenabhängigkeiten, Zugriffskontrollen und andere strukturelle Probleme.
 - Führen Sie Ihre Eigenschaftstests bei jedem Commit in der CI (zum Beispiel GitHub Actions) aus, damit jeder in Ihrem Team leicht sehen kann, dass sie erfolgreich sind. Fehlschlagende Tests können Merges blockieren.
 
 Achten Sie schließlich auf Probleme, die automatisierte Tools nicht leicht finden können:

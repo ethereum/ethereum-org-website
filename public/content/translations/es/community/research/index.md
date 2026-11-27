@@ -160,7 +160,7 @@ Ahora hay varios protocolos de capa 2 (L2) que escalan Ethereum utilizando difer
 
 - [Introducción a la capa 2](/layer-2/)
 - [ETHBEAT: resumen de escalabilidad](https://ethbeat.org/layer2s/summary)
-- [Una hoja de ruta de Ethereum centrada en los rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [Una hoja de ruta de Ethereum centrada en los rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Investigación reciente {#recent-research-2}
 

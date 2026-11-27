@@ -5,7 +5,7 @@ description: "Qu'est-ce qu'un pont de chaîne de blocs ? Découvrez comment les 
 lang: fr
 ---
 
-_Le Web3 a évolué vers un écosystème de chaînes de blocs de couche 1 (L1) et de solutions de mise à l'échelle de couche 2 (L2), chacune conçue avec des capacités et des compromis uniques. À mesure que le nombre de protocoles de chaîne de blocs augmente, la demande pour déplacer des actifs entre les chaînes augmente également. Pour répondre à cette demande, nous avons besoin de ponts._
+_Le Web3 a évolué vers un écosystème de chaînes de blocs L1 et de solutions de mise à l'échelle L2, chacune conçue avec des capacités et des compromis uniques. À mesure que le nombre de protocoles de chaîne de blocs augmente, la demande pour déplacer des actifs entre les chaînes augmente également. Pour répondre à cette demande, nous avons besoin de ponts._
 
 <Divider />
 
@@ -44,7 +44,7 @@ Voici quelques scénarios dans lesquels vous pouvez utiliser un pont :
 
 ### Frais de transaction réduits {#transaction-fees}
 
-Supposons que vous ayez des ETH sur le réseau principal Ethereum, mais que vous souhaitiez des frais de transaction moins élevés pour explorer différentes applications décentralisées (dapps). En transférant vos ETH du réseau principal vers un rollup L2 d'Ethereum via un pont, vous pouvez profiter de frais de transaction réduits.
+Supposons que vous ayez des ETH sur le réseau principal Ethereum, mais que vous souhaitiez des frais de transaction moins élevés pour explorer différentes dapps. En transférant vos ETH du réseau principal vers un rollup L2 d'Ethereum via un pont, vous pouvez profiter de frais de transaction réduits.
 
 ### Dapps sur d'autres chaînes de blocs {#dapps-other-chains}
 

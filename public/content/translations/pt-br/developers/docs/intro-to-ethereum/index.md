@@ -1,6 +1,6 @@
 ---
 title: "Introdução técnica ao Ethereum"
-description: "Uma introdução técnica ao Ethereum para desenvolvedores: blockchains, contas, transações, a EVM, gas e contratos inteligentes, explicados passo a passo."
+description: "Uma introdução técnica ao Ethereum para desenvolvedores: blockchains, contas, transações, a EVM, gás e contratos inteligentes, explicados passo a passo."
 lang: pt-br
 ---
 

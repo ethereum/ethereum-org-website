@@ -96,7 +96,7 @@ _役に立ったコミュニティリソースをご存知ですか？このペ�
 
 ## チュートリアル: イーサリアムでのアプリとフロントエンドの構築 {#tutorials}
 
-- [ユニスワップv2コントラクトのウォークスルー](/developers/tutorials/uniswap-v2-annotated-code/) _– AMMの仕組みを説明する、ユニスワップv2のコアコントラクトの注釈付きウォークスルー。_
+- [Uniswap v2コントラクトのウォークスルー](/developers/tutorials/uniswap-v2-annotated-code/) _– AMMの仕組みを説明する、Uniswap v2のコアコントラクトの注釈付きウォークスルー。_
 - [コントラクトのユーザーインターフェースの構築](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– スマート・コントラクトに接続する最新のReact + Wagmiフロントエンドを構築する方法。_
 - [Web3アプリのサーバーコンポーネントとエージェント](/developers/tutorials/server-components/) _– ブロックチェーンのイベントをリッスンし、トランザクションで応答するTypeScriptサーバーコンポーネントの記述方法。_
 - [分散型ユーザーインターフェースのためのIPFS](/developers/tutorials/ipfs-decentralized-ui/) _– 検閲耐性を持たせるために、dappのフロントエンドをIPFSでホストする方法。_

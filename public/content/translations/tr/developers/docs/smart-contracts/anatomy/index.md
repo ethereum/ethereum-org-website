@@ -314,8 +314,8 @@ contract Token {
 ```solidity
 pragma solidity ^0.5.10;
 
-// Diğer dosyalardaki sembolleri mevcut Sözleşme içine aktarır.
-// Bu durumda, OpenZeppelin'den bir dizi yardımcı Sözleşme.
+// Diğer dosyalardaki sembolleri mevcut sözleşmeye içe aktarır.
+// Bu durumda, OpenZeppelin'den bir dizi yardımcı sözleşme.
 // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -323,65 +323,65 @@ import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// `is` anahtar kelimesi, harici Sözleşme'lerden fonksiyonları ve anahtar kelimeleri miras almak için kullanılır.
-// Bu durumda, `CryptoPizza`, `IERC721` ve `ERC165` Sözleşme'lerinden miras alır.
+// `is` anahtar kelimesi, harici sözleşmelerden işlevleri ve anahtar kelimeleri devralmak için kullanılır.
+// Bu durumda, `CryptoPizza`, `IERC721` ve `ERC165` sözleşmelerinden devralır.
 // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Aritmetik işlemleri güvenli bir şekilde gerçekleştirmek için OpenZeppelin'in SafeMath kütüphanesini kullanır.
     // Daha fazla bilgi edinin: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
-    // Solidity içindeki sabit durum değişkenleri diğer dillere benzerdir
+    // Solidity'deki sabit durum değişkenleri diğer dillere benzer
     // ancak derleme zamanında sabit olan bir ifadeden atama yapmalısınız.
     // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Struct (yapı) türleri kendi türünüzü tanımlamanıza olanak tanır
+    // Yapı türleri kendi türünüzü tanımlamanıza olanak tanır
     // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Pizza struct'larından oluşan boş bir dizi oluşturur
+    // Pizza yapılarından oluşan boş bir dizi oluşturur
     Pizza[] public pizzas;
 
-    // Pizza kimliğinden sahibinin Adres bilgisine eşleme
+    // Pizza kimliğinden sahibinin adresine eşleme
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Sahibinin Adres bilgisinden sahip olunan Token sayısına eşleme
+    // Sahibinin adresinden sahip olunan Token sayısına eşleme
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Token kimliğinden onaylı Adres bilgisine eşleme
+    // Token kimliğinden onaylı adrese eşleme
     mapping(uint256 => address) pizzaApprovals;
 
-    // Eşlemeleri iç içe yerleştirebilirsiniz, bu örnek sahibini operatör onaylarına eşler
+    // Eşlemeleri iç içe yerleştirebilirsiniz, bu örnek sahibini operatör onaylarıyla eşler
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Dize (isim) ve DNA'dan rastgele bir Pizza oluşturmak için dahili fonksiyon
+    // Dize (isim) ve DNA'dan rastgele bir Pizza oluşturmak için dahili işlev
     function _createPizza(string memory _name, uint256 _dna)
-        // `internal` anahtar kelimesi, bu fonksiyonun yalnızca
-        // bu Sözleşme ve bu Sözleşme'den türetilen Sözleşme'ler içinde görünür olduğu anlamına gelir
+        // `internal` anahtar kelimesi, bu işlevin yalnızca
+        // bu sözleşme ve bu sözleşmeden türetilen sözleşmeler içinde görünür olduğu anlamına gelir
         // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique`, pizzanın zaten var olup olmadığını kontrol eden bir fonksiyon değiştiricisidir
+        // `isUnique`, pizzanın zaten var olup olmadığını kontrol eden bir işlev değiştiricisidir
         // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Pizza'yı Pizzalar dizisine ekler ve kimliği (id) alır
+        // Pizzayı Pizzalar dizisine ekler ve kimliği alır
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
         // Pizza sahibinin mevcut kullanıcıyla aynı olup olmadığını kontrol eder
         // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // address(0)'ın sıfır Adres olduğuna dikkat edin,
+        // address(0)'ın sıfır adresi olduğunu unutmayın,
         // bu, pizza[id]'nin henüz belirli bir kullanıcıya tahsis edilmediğini gösterir.
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Pizza'yı sahibine eşler
+        // Pizzayı sahibine eşler
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -395,15 +395,15 @@ contract CryptoPizza is IERC721, ERC165 {
         _createPizza(_name, randDna);
     }
 
-    // Dize (isim) ve sahibinin (oluşturanın) Adres bilgisinden rastgele DNA üretir
+    // Dizeden (isim) ve sahibinin (oluşturanın) adresinden rastgele DNA üretir
     function generateRandomDna(string memory _str, address _owner)
         public
-        // `pure` olarak işaretlenen fonksiyonlar durum bilgisini okumayacağını veya değiştirmeyeceğini taahhüt eder
+        // `pure` olarak işaretlenen işlevler, durumu okumamayı veya değiştirmemeyi taahhüt eder
         // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // Dize (isim) + Adres (sahip) bilgisinden rastgele uint üretir
+        // Dize (isim) + adresten (sahip) rastgele uint üretir
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
@@ -413,13 +413,13 @@ contract CryptoPizza is IERC721, ERC165 {
     // Sahibi tarafından bulunan Pizzaların dizisini döndürür
     function getPizzasByOwner(address _owner)
         public
-        // `view` olarak işaretlenen fonksiyonlar durum bilgisini değiştirmeyeceğini taahhüt eder
+        // `view` olarak işaretlenen işlevler durumu değiştirmemeyi taahhüt eder
         // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Değerleri yalnızca bu fonksiyon çağrısının
-        // yaşam döngüsü boyunca saklamak için `memory` depolama konumunu kullanır.
+        // `memory` depolama konumunu, değerleri yalnızca
+        // bu işlev çağrısının yaşam döngüsü boyunca saklamak için kullanır.
         // Daha fazla bilgi edinin: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Pizza'yı ve sahipliğini diğer Adres bilgisine aktarır
+    // Pizzayı ve sahipliğini diğer adrese aktarır
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -443,15 +443,16 @@ contract CryptoPizza is IERC721, ERC165 {
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // İçe aktarılan IERC721 Sözleşme'sinde tanımlanan olayı yayınlar
+        // İçe aktarılan IERC721 sözleşmesinde tanımlanan olayı yayar
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * Belirli bir Token kimliğinin sahipliğini güvenli bir şekilde başka bir Adres bilgisine aktarır
-     * Hedef Adres bir Sözleşme ise, güvenli bir aktarım üzerine çağrılan `onERC721Received` fonksiyonunu uygulamalı
-     * ve `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))` sihirli değerini döndürmelidir;
+     * Belirli bir Token kimliğinin sahipliğini güvenli bir şekilde başka bir adrese aktarır
+     * Hedef adres bir sözleşme ise, güvenli bir aktarım üzerine çağrılan
+     * `onERC721Received` işlevini uygulamalı ve sihirli değeri döndürmelidir
+     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
      * aksi takdirde aktarım geri alınır.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
@@ -462,11 +463,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
+     * Belirli bir Token kimliğinin sahipliğini güvenli bir şekilde başka bir adrese aktarır
+     * Hedef adres bir sözleşme ise, güvenli bir aktarım üzerine çağrılan
+     * `onERC721Received` işlevini uygulamalı ve sihirli değeri döndürmelidir
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * aksi takdirde aktarım geri alınır.
      */
     function safeTransferFrom(
         address from,
@@ -479,8 +480,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Internal function to invoke `onERC721Received` on a target address
-     * The call is not executed if the target address is not a contract
+     * Hedef adreste `onERC721Received` işlevini çağırmak için dahili işlev
+     * Hedef adres bir sözleşme değilse çağrı yürütülmez
      */
     function _checkOnERC721Received(
         address from,
@@ -501,9 +502,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Burns a Pizza - destroys Token completely
-    // The `external` function modifier means this function is
-    // part of the contract interface and other contracts can call it
+    // Bir Pizzayı yakar - Token'ı tamamen yok eder
+    // `external` işlev değiştiricisi, bu işlevin
+    // sözleşme arayüzünün bir parçası olduğu ve diğer sözleşmelerin onu çağırabileceği anlamına gelir
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -516,26 +517,26 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Returns count of Pizzas by address
+    // Adrese göre Pizza sayısını döndürür
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // Returns owner of the Pizza found by id
+    // Kimliğe göre bulunan Pizzanın sahibini döndürür
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // Approves other address to transfer ownership of Pizza
+    // Pizzanın sahipliğini aktarmak için diğer adresi onaylar
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Returns approved address for specific Pizza
+    // Belirli bir Pizza için onaylı adresi döndürür
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -546,8 +547,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Private function to clear current approval of a given token ID
-     * Reverts if the given address is not indeed the owner of the token
+     * Belirli bir Token kimliğinin mevcut onayını temizlemek için özel işlev
+     * Verilen adres gerçekten Token'ın sahibi değilse geri alınır
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,7 +560,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /*
      * Belirli bir operatörün onayını ayarlar veya kaldırır
-     * Bir operatörün, göndericinin tüm Token'larını onun adına aktarmasına izin verilir
+     * Bir operatörün, gönderenin tüm Token'larını onun adına aktarmasına izin verilir
      */
     function setApprovalForAll(address to, bool approved) public {
         require(to != msg.sender, "Cannot approve own address");
@@ -567,7 +568,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Tells whether an operator is approved by a given owner
+    // Bir operatörün belirli bir sahip tarafından onaylanıp onaylanmadığını belirtir
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -576,27 +577,27 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Takes ownership of Pizza - only for approved users
+    // Pizzanın sahipliğini alır - yalnızca onaylı kullanıcılar için
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Checks if Pizza exists
+    // Pizzanın var olup olmadığını kontrol eder
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // Checks if address is owner or is approved to transfer Pizza
+    // Adresin sahip olup olmadığını veya Pizzayı aktarmak için onaylanıp onaylanmadığını kontrol eder
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Disable solium check because of
+        // Solium kontrolünü devre dışı bırak, nedeni:
         // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -604,7 +605,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // Check if Pizza is unique and doesn't exist yet
+    // Pizzanın benzersiz olup olmadığını ve henüz var olmadığını kontrol et
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -620,15 +621,15 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // Returns whether the target address is a contract
+    // Hedef adresin bir sözleşme olup olmadığını döndürür
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Currently there is no better way to check if there is a contract in an address
-        // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
-        // for more details about how this works.
-        // TODO Check this again before the Serenity release, because all addresses will be
-        // contracts then.
+        // Şu anda bir adreste bir sözleşme olup olmadığını kontrol etmenin daha iyi bir yolu yoktur
+        // o adresteki kodun boyutunu kontrol etmekten başka.
+        // Bkz. https://ethereum.stackexchange.com/a/14016/36603
+        // bunun nasıl çalıştığı hakkında daha fazla ayrıntı için.
+        // YAPILACAKLAR Serenity sürümünden önce bunu tekrar kontrol edin, çünkü o zaman tüm adresler
+        // sözleşme olacaktır.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

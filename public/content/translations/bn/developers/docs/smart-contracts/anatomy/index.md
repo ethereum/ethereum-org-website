@@ -453,7 +453,7 @@ contract CryptoPizza is IERC721, ERC165 {
      * যদি টার্গেট ঠিকানাটি একটি কন্ট্রাক্ট হয়, তবে এটিকে অবশ্যই `onERC721Received` ইমপ্লিমেন্ট করতে হবে,
      * যা একটি নিরাপদ ট্রান্সফারের সময় কল করা হয়, এবং ম্যাজিক ভ্যালু রিটার্ন করে
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * অন্যথায়, ট্রান্সফারটি রিভার্ট করা হয়。
+     * অন্যথায়, ট্রান্সফারটি রিভার্ট করা হয়।
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -467,7 +467,7 @@ contract CryptoPizza is IERC721, ERC165 {
      * যদি টার্গেট ঠিকানাটি একটি কন্ট্রাক্ট হয়, তবে এটিকে অবশ্যই `onERC721Received` ইমপ্লিমেন্ট করতে হবে,
      * যা একটি নিরাপদ ট্রান্সফারের সময় কল করা হয়, এবং ম্যাজিক ভ্যালু রিটার্ন করে
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * অন্যথায়, ট্রান্সফারটি রিভার্ট করা হয়。
+     * অন্যথায়, ট্রান্সফারটি রিভার্ট করা হয়।
      */
     function safeTransferFrom(
         address from,
@@ -597,7 +597,7 @@ contract CryptoPizza is IERC721, ERC165 {
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // সোলিয়াম চেক নিষ্ক্রিয় করুন কারণ
+        // Solium চেক নিষ্ক্রিয় করুন কারণ
         // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||

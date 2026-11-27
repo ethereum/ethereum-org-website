@@ -57,7 +57,7 @@ La couche d'exécution concerne l'exécution des transactions, le fonctionnement
 - l'expiration de l'historique que les nœuds n'ont plus besoin de fournir ;
 - les listes d'accès au niveau du bloc qui permettent de valider les transactions en parallèle ;
 - les marchés de frais multidimensionnels qui fixent séparément le prix de l'état, des données et du calcul ;
-- et la preuve de l'exécution des blocs de couche 1 (L1) avec un zkEVM.
+- et la preuve de l'exécution des blocs L1 avec un zkEVM.
 
 #### Lectures de base {#background-reading-1}
 
@@ -128,7 +128,7 @@ Un nœud Ethereum doit exécuter deux logiciels :
 1. un client de consensus pour suivre la tête de la chaîne de blocs, propager les blocs et gérer la logique de consensus
 2. un client d'exécution pour prendre en charge la machine virtuelle Ethereum et exécuter les transactions et les contrats intelligents
 
-De nouvelles classes de clients sont en cours de prototypage aux côtés de ces deux-là, notamment des clients qui prouvent l'exécution des blocs de couche 1 (L1) et des clients de consensus allégés construits autour de signatures post-quantiques.
+De nouvelles classes de clients sont en cours de prototypage aux côtés de ces deux-là, notamment des clients qui prouvent l'exécution des blocs L1 et des clients de consensus allégés construits autour de signatures post-quantiques.
 
 Consultez la [page des nœuds et des clients](/developers/docs/nodes-and-clients/) pour plus de détails sur les nœuds et les clients et pour obtenir une liste de toutes les implémentations de clients actuelles. Vous pouvez également trouver un historique de toutes les mises à jour d'Ethereum sur la [page d'historique](/ethereum-forks/).
 
@@ -226,7 +226,7 @@ La sécurité est un vaste sujet qui peut inclure la prévention du spam et des 
 
 ### Cryptographie et ZKP {#cryptography--zkp}
 
-Les preuves à divulgation nulle de connaissance (ZKP) et la cryptographie sont essentielles pour intégrer la confidentialité et la sécurité dans Ethereum et ses applications. La preuve à divulgation nulle de connaissance est passée de la recherche à l'infrastructure de production : les prouveurs qui prouvent de vrais blocs Ethereum sont désormais évalués publiquement sur la latence, le coût et la solidité. Les problèmes ouverts ont évolué en conséquence, vers la preuve des blocs de couche 1 (L1) assez rapidement pour le faire en temps réel, la prise en compte rigoureuse de la sécurité des systèmes de preuve utilisés, et la préparation à la cryptographie post-quantique.
+Les preuves à divulgation nulle de connaissance (ZKP) et la cryptographie sont essentielles pour intégrer la confidentialité et la sécurité dans Ethereum et ses applications. La preuve à divulgation nulle de connaissance est passée de la recherche à l'infrastructure de production : les prouveurs qui prouvent de vrais blocs Ethereum sont désormais évalués publiquement sur la latence, le coût et la solidité. Les problèmes ouverts ont évolué en conséquence, vers la preuve des blocs L1 assez rapidement pour le faire en temps réel, la prise en compte rigoureuse de la sécurité des systèmes de preuve utilisés, et la préparation à la cryptographie post-quantique.
 
 #### Lectures de base {#background-reading-6}
 

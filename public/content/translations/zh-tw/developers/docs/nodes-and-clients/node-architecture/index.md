@@ -12,7 +12,7 @@ lang: zh-tw
 
 <NodeArchitectureDiagram />
 
-_執行客戶端有多種選擇，包括艾瑞貢 (Erigon)、奈瑟邁 (Nethermind) 和 Besu_。
+_執行客戶端有多種選擇，包括 Erigon、Nethermind 和 Besu_。
 
 為了讓這種雙客戶端結構運作，共識客戶端必須將交易包傳遞給執行客戶端。執行客戶端在本地執行交易，以驗證交易沒有違反任何以太坊規則，並且提議的以太坊狀態更新是正確的。當節點被選為區塊生產者時，其共識客戶端實例會向執行客戶端請求交易包，以包含在新區塊中並執行它們來更新全域狀態。共識客戶端透過使用 [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的本地 RPC 連線來驅動執行客戶端。
 

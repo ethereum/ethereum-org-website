@@ -42,7 +42,7 @@ _Jiná řešení škálování, která nevyužívají Ethereum pro dostupnost da
 
 - Dostupnost dat je důležitým rozlišovacím faktorem mezi ostatními řešeními škálování a vrstvou 2. Aby mohl být projekt zvážen k zařazení, **musí** pro dostupnost dat využívat Ethereum Mainnet.
 
-**Můstky**
+**Mosty**
 
 - Jak mohou uživatelé přejít na vrstvu 2?
 

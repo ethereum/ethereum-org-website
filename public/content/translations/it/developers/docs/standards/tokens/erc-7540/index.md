@@ -10,7 +10,7 @@ L'ERC-7540 estende lo [Standard per i vault tokenizzati ERC-4626](/developers/do
 
 Ciò è necessario quando un vault non può effettuare il regolamento istantaneamente in un'unica transazione, ad esempio:
 
-- Protocolli di asset del mondo reale (RWA) come tesorerie tokenizzate, credito privato e altri asset con cicli di regolamento T+1 o T+2
+- Protocolli di asset del mondo reale (RWA) come titoli di stato tokenizzati, credito privato e altri asset con cicli di regolamento T+1 o T+2
 - Prestito sottocollateralizzato in cui le valutazioni del credito avvengono offchain
 - Strategie di vault cross-chain in cui il bridging introduce ritardi
 - Token di liquid staking con periodi di svincolo
