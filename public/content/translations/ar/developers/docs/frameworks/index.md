@@ -94,7 +94,7 @@ lang: ar
 - [GitHub](https://github.com/chainstack)
 - [ديسكورد](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_منصة تطوير Web3 على مستوى المؤسسات، تتيح لك بناء تطبيقات الرموز غير القابلة للاستبدال (NFTs) على جميع السلاسل الرئيسية وسلاسل آلة إيثريوم الافتراضية (EVM) (وغيرها)._**
+**Crossmint -** **_منصة تطوير Web3 على مستوى المؤسسات، تتيح لك بناء تطبيقات الرموز غير القابلة للاستبدال (NFTs) على جميع السلاسل الرئيسية وسلاسل EVM (وغيرها)._**
 
 - [الموقع الإلكتروني](https://www.crossmint.com)
 - [الوثائق](https://docs.crossmint.com)
@@ -106,7 +106,7 @@ lang: ar
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie غير مدعوم حاليًا**
 
-**أوبن زبلن SDK -** **_مجموعة أدوات العقود الذكية المثالية: مجموعة من الأدوات لمساعدتك في تطوير وتجميع وترقية ونشر والتفاعل مع العقود الذكية._**
+**<span dir="ltr">OpenZeppelin</span> SDK -** **_مجموعة أدوات العقود الذكية المثالية: مجموعة من الأدوات لمساعدتك في تطوير وتجميع وترقية ونشر والتفاعل مع العقود الذكية._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [منتدى المجتمع](https://forum.openzeppelin.com/c/support/17)

@@ -98,7 +98,7 @@ sidebarDepth: 2
     - HTTPおよびセキュアなWebSockets経由のJSON-RPC
     - 3つのチェーンをサポート
     - SLA、24時間365日のAWSサポート
-    - Go-ethereumおよびライトハウス
+    - Go-ethereumおよびLighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [ドキュメント](https://docs.ankr.com/)
@@ -222,7 +222,7 @@ sidebarDepth: 2
   - 機能
     - 無料のスターター枠
     - ワンクリックでのイーサリアムノードのデプロイ
-    - カスタマイズ可能なクライアントとアルゴリズム（Geth、Quorum、ベス || PoA、IBFT、Raft）
+    - カスタマイズ可能なクライアントとアルゴリズム（Geth、Quorum、Besu || PoA、IBFT、Raft）
     - 500以上の管理およびサービスAPI
     - イーサリアムトランザクション送信用のRESTfulインターフェース（Apache Kafkaバックエンド）
     - イベント配信用の送信ストリーム（Apache Kafkaバックエンド）
@@ -274,7 +274,7 @@ sidebarDepth: 2
 - [**NodeFlare**](https://nodeflare.app/)
   - [ドキュメント](https://nodeflare.app/docs/quick-start)
   - 機能
-    - イーサリアム、Base、Arbitrum One、オプティミズム、Unichainを含む17のEVMチェーン
+    - イーサリアム、Base、Arbitrum One、Optimism、Unichainを含む17のEVMチェーン
     - フランクフルト、ロンドン、アッシュバーン、シカゴ、ロサンゼルス、シンガポールにゲートウェイを持つ独自のベアメタルノード
     - 無料のパブリックエンドポイント（APIキー不要、IPあたり10秒間に50リクエスト）
     - クレジットカード不要で、月間300万コンピュートユニットと1秒あたり10リクエストが可能な無料APIキー
@@ -315,7 +315,7 @@ sidebarDepth: 2
   - 機能
     - 24時間365日のテクニカルサポートと開発者のディスコードコミュニティ
     - ジオバランス、マルチクラウド/メタル、低遅延のネットワーク
-    - マルチチェーン対応（オプティミズム、アービトラム、ポリゴン、その他11チェーン）
+    - マルチチェーン対応（Optimism、Arbitrum、Polygon、その他11チェーン）
     - 速度と安定性のためのミドルレイヤー（コールルーティング、キャッシュ、インデックス作成）
     - Webhookによるスマート・コントラクトのモニタリング
     - 直感的なダッシュボード、分析スイート、RPCコンポーザー
@@ -365,7 +365,7 @@ sidebarDepth: 2
     - トランザクションのシミュレーション
     - 使用状況の分析とフィルタリング
     - 簡単なアクセスキー管理
-    - チャット、メール、およびディスコードによる専用のエンジニアリングサポート
+    - チャット、メール、およびDiscordによる専用のエンジニアリングサポート
 
 - [**Tokenview**](https://services.tokenview.io/)
   - [ドキュメント](https://services.tokenview.io/docs?type=nodeService)

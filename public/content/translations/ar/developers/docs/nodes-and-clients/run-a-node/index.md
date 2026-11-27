@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | العميل | حجم القرص (عقدة كاملة) | حجم القرص (أرشيف كامل) |
 | ---------- | --------------------- | ------------------------ |
-| بيسو | <span dir="ltr">1.8TB+</span> | <span dir="ltr">12TB+</span> |
-| إريغون | <span dir="ltr">1.7TB+</span> | <span dir="ltr">2.7TB+</span> |
-| جو إيثريوم (geth) | <span dir="ltr">1.8TB+</span> | <span dir="ltr">2TB+</span> |
-| نيذرميند | <span dir="ltr">1.7TB+</span> | <span dir="ltr">14TB+</span> |
-| ريث | <span dir="ltr">2.2TB+</span> | <span dir="ltr">2.8TB+</span> |
+| <span dir="ltr">Besu</span> | <span dir="ltr">1.8TB+</span> | <span dir="ltr">12TB+</span> |
+| <span dir="ltr">Erigon</span> | <span dir="ltr">1.7TB+</span> | <span dir="ltr">2.7TB+</span> |
+| <span dir="ltr">Geth</span> | <span dir="ltr">1.8TB+</span> | <span dir="ltr">2TB+</span> |
+| <span dir="ltr">Nethermind</span> | <span dir="ltr">1.7TB+</span> | <span dir="ltr">14TB+</span> |
+| <span dir="ltr">Reth</span> | <span dir="ltr">2.2TB+</span> | <span dir="ltr">2.8TB+</span> |
 
-- ملاحظة: تحتفظ أحجام العقدة الكاملة بسجل السلسلة الكامل وتم قياسها في سبتمبر 2026 بواسطة [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). يحتاج العملاء الذين يدعمون انتهاء صلاحية السجل إلى مساحة أقل: حوالي <span dir="ltr">1.2-1.4TB</span> مع سجل ما بعد الدمج فقط، أو حوالي <span dir="ltr">400-650GB</span> مع انتهاء الصلاحية المتجدد (غير مدعوم حتى الآن بواسطة جو إيثريوم (geth)).
-- ملاحظة: أحجام الأرشيف مأخوذة من وثائق كل عميل ([بيسو](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)، [إريغون](https://docs.erigon.tech/get-started/hardware-requirements)، [جو إيثريوم (geth)](https://geth.ethereum.org/docs/fundamentals/archive)، [نيذرميند](https://docs.nethermind.io/get-started/system-requirements)، [ريث](https://reth.rs/run/system-requirements)). الرقم الخاص بـ جو إيثريوم (geth) مخصص لأرشيفه القائم على المسار؛ الاحتفاظ بسجل trie أيضًا يستغرق حوالي <span dir="ltr">6.5TB</span>. يعود الرقم الخاص بـ نيذرميند إلى يوليو 2023 وقد نما منذ ذلك الحين.
+- ملاحظة: تحتفظ أحجام العقدة الكاملة بسجل السلسلة الكامل وتم قياسها في سبتمبر 2026 بواسطة [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). يحتاج العملاء الذين يدعمون انتهاء صلاحية السجل إلى مساحة أقل: حوالي <span dir="ltr">1.2-1.4TB</span> مع سجل ما بعد الدمج فقط، أو حوالي <span dir="ltr">400-650GB</span> مع انتهاء الصلاحية المتجدد (غير مدعوم حتى الآن بواسطة <span dir="ltr">Geth</span>).
+- ملاحظة: أحجام الأرشيف مأخوذة من وثائق كل عميل ([<span dir="ltr">Besu</span>](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)، [<span dir="ltr">Erigon</span>](https://docs.erigon.tech/get-started/hardware-requirements)، [<span dir="ltr">Geth</span>](https://geth.ethereum.org/docs/fundamentals/archive)، [<span dir="ltr">Nethermind</span>](https://docs.nethermind.io/get-started/system-requirements)، [<span dir="ltr">Reth</span>](https://reth.rs/run/system-requirements)). الرقم الخاص بـ <span dir="ltr">Geth</span> مخصص لأرشيفه القائم على المسار؛ الاحتفاظ بسجل trie أيضًا يستغرق حوالي <span dir="ltr">6.5TB</span>. يعود الرقم الخاص بـ <span dir="ltr">Nethermind</span> إلى يوليو 2023 وقد نما منذ ذلك الحين.
 
 بالنسبة لعملاء الإجماع، تعتمد متطلبات المساحة أيضًا على تنفيذ العميل والميزات الممكنة (على سبيل المثال، مُقْتَطِع المُدَقِّق) ولكن بشكل عام احسب <span dir="ltr">15-90GB</span> أخرى لبيانات سلسلة المنارة (beacon)، بالإضافة إلى حوالي <span dir="ltr">500GB</span> من بيانات كتلة البيانات (blob) إذا كنت تقوم بتشغيل عقدة فائقة (supernode). مع وجود عدد كبير من المُدَقِّقين، ينمو حمل النطاق الترددي أيضًا. يمكنك العثور على [تفاصيل حول متطلبات عميل الإجماع في هذا التحليل](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
@@ -157,10 +157,10 @@ sidebarDepth: 2
 ##### عملاء التنفيذ
 
 - [بيسو](https://github.com/hyperledger/besu/releases)
-- [إريغون](https://github.com/ledgerwatch/erigon/releases)
-- [جو إيثريوم (geth)](https://geth.ethereum.org/downloads)
-- [نيذرميند](https://downloads.nethermind.io/)
-- [ريث](https://reth.rs/installation/installation.html)
+- [<span dir="ltr">Erigon</span>](https://github.com/ledgerwatch/erigon/releases)
+- [<span dir="ltr">Geth</span>](https://geth.ethereum.org/downloads)
+- [<span dir="ltr">Nethermind</span>](https://downloads.nethermind.io/)
+- [<span dir="ltr">Reth</span>](https://reth.rs/installation/installation.html)
 
 تجدر الإشارة أيضًا إلى أن تنوع العملاء يمثل [مشكلة في طبقة التنفيذ](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). يوصى بأن يفكر القراء في تشغيل عميل تنفيذ يمثل أقلية.
 

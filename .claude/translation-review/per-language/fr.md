@@ -1,5 +1,14 @@
 # French (fr) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.0/10
+Scope: 15 markdown files, changed lines; 7 diffs read in full (ethash, data-structures x3, frameworks, run-a-node, transactions) plus statelessness and privacy.
+
+**Fixed in this branch (7 critical, #112):** patricia-merkle-trie `interface de programmation d'application (API) JSON-RPC` -> `API JSON-RPC`; run-a-node `Processeur (CPU)` -> `CPU` (2 bullets); ethrex `couche 1 (L1)` / `couche 2 (L2)` -> `L1` / `(L2)`; statelessness `couche 1 (L1)` -> `verification L1` and `organisation autonome decentralisee (DAO)` -> `DAO`; privacy `organisations autonomes decentralisees (DAO)` -> `DAO`.
+
+**Open:** storage slot rendered `creneau` (ETHGlossary `slot` = `creneau` is the consensus-slot sense; `emplacement de stockage` reads better, dev already used `creneau de stockage` x2); `(PBS)` appended to `separation proposant-constructeur` (3 sites); patricia-merkle-trie last link text `Understanding the Ethereum trie` left in English (dev identical).
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.2/10
 Scope: 72 markdown pages + 20 JSON namespaces (incremental updates, dev-tools descriptions); 7 markdown diffs read in full, about 150 JSON keys sampled; scripted sweeps clean for U+3002/U+2060/foreign script; verify-structure: no new errors (`data-and-analytics` heading-count is on dev; 19 img-alt-untranslated warnings).
 

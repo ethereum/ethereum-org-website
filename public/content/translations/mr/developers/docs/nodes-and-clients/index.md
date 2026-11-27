@@ -135,12 +135,12 @@ sidebarDepth: 2
 
 | क्लायंट                                                                   | भाषा   | ऑपरेटिंग सिस्टीम्स     | नेटवर्क्स                | समक्रमण रणनीती                                            | स्थिती प्रूनिंग   |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [गेथ (Geth)](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Archive, Pruned |
-| [नेदरमाइंड](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Snap](#snap-sync), Fast, [Full](#full-sync)               | Archive, Pruned |
-| [बेसू](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync) | Archive, Pruned |
-| [एरिगॉन](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Archive, Pruned |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Snap](#snap-sync), Fast, [Full](#full-sync)               | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync) | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
 | [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | मुख्यनेट, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Pruned          |
-| [रेथ](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | मुख्यनेट, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
 
 समर्थित नेटवर्क्सबद्दल अधिक माहितीसाठी, [इथेरियम नेटवर्क्स](/developers/docs/networks/) वर वाचा.
 
@@ -154,7 +154,7 @@ Hyperledger बेसू हा सार्वजनिक आणि परव�
 
 ### एरिगॉन {#erigon}
 
-एरिगॉन, पूर्वी टर्बो-गेथ (Turbo-Geth) म्हणून ओळखले जाणारे, वेग आणि डिस्क-स्पेस कार्यक्षमतेकडे लक्ष केंद्रित करून गो इथेरियमचा (Go Ethereum) फोर्क म्हणून सुरू झाले. एरिगॉन हे इथेरियमचे पूर्णपणे पुनर्रचित अंमलबजावणी आहे, जे सध्या Go मध्ये लिहिलेले आहे परंतु इतर भाषांमधील अंमलबजावणी विकासाधीन आहेत. एरिगॉनचे ध्येय इथेरियमचे अधिक वेगवान, अधिक मॉड्यूलर आणि अधिक ऑप्टिमाइझ केलेले अंमलबजावणी प्रदान करणे आहे. हे 3 दिवसांपेक्षा कमी वेळात, 3TB पेक्षा कमी डिस्क स्पेस वापरून पूर्ण अर्काईव्ह नोड समक्रमण करू शकते.
+Erigon, पूर्वी Turbo-Geth म्हणून ओळखले जाणारे, वेग आणि डिस्क-स्पेस कार्यक्षमतेकडे लक्ष केंद्रित करून गो इथेरियमचा (Go Ethereum) फोर्क म्हणून सुरू झाले. Erigon हे इथेरियमचे पूर्णपणे पुनर्रचित अंमलबजावणी आहे, जे सध्या Go मध्ये लिहिलेले आहे परंतु इतर भाषांमधील अंमलबजावणी विकासाधीन आहेत. Erigon चे ध्येय इथेरियमचे अधिक वेगवान, अधिक मॉड्यूलर आणि अधिक ऑप्टिमाइझ केलेले अंमलबजावणी प्रदान करणे आहे. हे 3 दिवसांपेक्षा कमी वेळात, 3TB पेक्षा कमी डिस्क स्पेस वापरून पूर्ण अर्काईव्ह नोड समक्रमण करू शकते.
 
 ### ethrex {#ethrex}
 
@@ -206,9 +206,9 @@ ethrex हा Rust मध्ये लिहिलेला आणि LambdaClas
 
 ### लोडस्टार {#lodestar}
 
-लोडस्टार हे Apache-2.0 परवान्याअंतर्गत TypeScript मध्ये लिहिलेले उत्पादन-सज्ज (production-ready) सहमती क्लायंट अंमलबजावणी आहे. हे ChainSafe Systems द्वारे राखले जाते आणि सोलो-स्टेकर्स, विकसक आणि संशोधकांसाठी सहमती क्लायंटपैकी सर्वात नवीन आहे. लोडस्टारमध्ये इथेरियम प्रोटोकॉलच्या JavaScript अंमलबजावणीद्वारे समर्थित बीकन नोड आणि प्रमाणक क्लायंटचा समावेश आहे. लोडस्टारचे उद्दिष्ट लाइट क्लायंटसह इथेरियमची उपयोगिता सुधारणे, विकसकांच्या मोठ्या गटासाठी प्रवेशयोग्यता वाढवणे आणि इकोसिस्टमच्या विविधतेमध्ये अधिक योगदान देणे हे आहे.
+Lodestar हे Apache-2.0 परवान्याअंतर्गत TypeScript मध्ये लिहिलेले उत्पादन-सज्ज (production-ready) सहमती क्लायंट अंमलबजावणी आहे. हे ChainSafe Systems द्वारे राखले जाते आणि सोलो-स्टेकर्स, विकसक आणि संशोधकांसाठी सहमती क्लायंटपैकी सर्वात नवीन आहे. Lodestar मध्ये इथेरियम प्रोटोकॉलच्या JavaScript अंमलबजावणीद्वारे समर्थित बीकन नोड आणि प्रमाणक क्लायंटचा समावेश आहे. Lodestar चे उद्दिष्ट लाइट क्लायंटसह इथेरियमची उपयोगिता सुधारणे, विकसकांच्या मोठ्या गटासाठी प्रवेशयोग्यता वाढवणे आणि इकोसिस्टमच्या विविधतेमध्ये अधिक योगदान देणे हे आहे.
 
-अधिक माहिती [लोडस्टार वेबसाइटवर](https://lodestar.chainsafe.io/) आढळू शकते.
+अधिक माहिती [Lodestar वेबसाइटवर](https://lodestar.chainsafe.io/) आढळू शकते.
 
 ### निंबस {#nimbus}
 

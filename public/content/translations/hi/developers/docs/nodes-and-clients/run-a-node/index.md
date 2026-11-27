@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | क्लाइंट | डिस्क आकार (पूर्ण नोड) | डिस्क आकार (पूर्ण आर्काइव) |
 | ---------- | --------------------- | ------------------------ |
-| बेसु | 1.8TB+ | 12TB+ |
-| एरिगोन | 1.7TB+ | 2.7TB+ |
-| geth | 1.8TB+ | 2TB+ |
-| नेदरमाइंड | 1.7TB+ | 14TB+ |
-| रेथ | 2.2TB+ | 2.8TB+ |
+| Besu | 1.8TB+ | 12TB+ |
+| Erigon | 1.7TB+ | 2.7TB+ |
+| Geth | 1.8TB+ | 2TB+ |
+| Nethermind | 1.7TB+ | 14TB+ |
+| Reth | 2.2TB+ | 2.8TB+ |
 
-- नोट: पूर्ण नोड आकार संपूर्ण चेन इतिहास रखते हैं और सितंबर 2026 में [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) द्वारा मापे गए थे। इतिहास समाप्ति का समर्थन करने वाले क्लाइंट को कम आवश्यकता होती है: केवल पोस्ट-मर्ज इतिहास के साथ लगभग 1.2-1.4TB, या रोलिंग समाप्ति के साथ लगभग 400-650GB (अभी तक geth द्वारा समर्थित नहीं है)।
-- नोट: आर्काइव आकार प्रत्येक क्लाइंट के दस्तावेज़ ([बेसु](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [एरिगोन](https://docs.erigon.tech/get-started/hardware-requirements), [geth](https://geth.ethereum.org/docs/fundamentals/archive), [नेदरमाइंड](https://docs.nethermind.io/get-started/system-requirements), [रेथ](https://reth.rs/run/system-requirements)) से आते हैं। geth का आंकड़ा इसके पथ-आधारित आर्काइव के लिए है; ट्राई (trie) इतिहास को भी रखने में लगभग 6.5TB लगता है। नेदरमाइंड का आंकड़ा जुलाई 2023 का है और तब से बढ़ गया है।
+- नोट: पूर्ण नोड आकार संपूर्ण चेन इतिहास रखते हैं और सितंबर 2026 में [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) द्वारा मापे गए थे। इतिहास समाप्ति का समर्थन करने वाले क्लाइंट को कम आवश्यकता होती है: केवल पोस्ट-मर्ज इतिहास के साथ लगभग 1.2-1.4TB, या रोलिंग समाप्ति के साथ लगभग 400-650GB (अभी तक Geth द्वारा समर्थित नहीं है)।
+- नोट: आर्काइव आकार प्रत्येक क्लाइंट के दस्तावेज़ ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)) से आते हैं। Geth का आंकड़ा इसके पथ-आधारित आर्काइव के लिए है; ट्राई (trie) इतिहास को भी रखने में लगभग 6.5TB लगता है। Nethermind का आंकड़ा जुलाई 2023 का है और तब से बढ़ गया है।
 
 सर्वसम्मति क्लाइंट के लिए, स्थान की आवश्यकता क्लाइंट कार्यान्वयन और सक्षम सुविधाओं (जैसे, सत्यापक कटौतीकर्ता) पर भी निर्भर करती है, लेकिन आम तौर पर बीकन डेटा के लिए 15-90GB और यदि सुपरनोड चला रहे हैं तो लगभग 500GB ब्लॉब डेटा की गणना करें। बड़ी संख्या में सत्यापकों के साथ, बैंडविड्थ लोड भी बढ़ता है। आप [इस विश्लेषण में सर्वसम्मति क्लाइंट आवश्यकताओं पर विवरण](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc) पा सकते हैं।
 

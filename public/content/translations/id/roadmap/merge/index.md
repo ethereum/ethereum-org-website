@@ -164,7 +164,7 @@ Bukti Kepemilikan (PoS) memperkenalkan konsep finalitas transaksi yang sebelumny
 title="Kesalahpahaman: &quot;The Merge memungkinkan penarikan staking.&quot;"
 contentPreview="Salah, tetapi penarikan staking sejak saat itu telah diaktifkan melalui peningkatan Shanghai/Capella.">
 
-Awalnya setelah The Merge, pelaku staking hanya dapat mengakses tip biaya dan Nilai Ekstrak Maksimal (MEV) yang diperoleh sebagai hasil dari usulan blok. Hadiah ini dikreditkan ke akun non-staking yang dikendalikan oleh validator (dikenal sebagai <em>penerima biaya</em>), dan tersedia dengan segera. Hadiah ini terpisah dari hadiah protokol untuk melakukan tugas validator.
+Awalnya setelah The Merge, pelaku staking hanya dapat mengakses tip biaya dan MEV yang diperoleh sebagai hasil dari usulan blok. Hadiah ini dikreditkan ke akun non-staking yang dikendalikan oleh validator (dikenal sebagai <em>penerima biaya</em>), dan tersedia dengan segera. Hadiah ini terpisah dari hadiah protokol untuk melakukan tugas validator.
 
 Sejak peningkatan jaringan Shanghai/Capella, pelaku staking sekarang dapat menunjuk <em>alamat penarikan</em> untuk mulai menerima pembayaran otomatis dari setiap kelebihan saldo staking (ETH di atas 32 dari hadiah protokol). Peningkatan ini juga memungkinkan kemampuan bagi validator untuk membuka kunci dan mengklaim kembali seluruh saldonya saat keluar dari jaringan.
 

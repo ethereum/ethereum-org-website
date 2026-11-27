@@ -136,11 +136,11 @@ sidebarDepth: 2
 | 客戶端                                                                   | 語言   | 作業系統     | 網路                | 同步策略                                            | 狀態修剪   |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
 | [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [完整 (Full)](#full-sync)                     | 歸檔, 修剪 |
-| [奈瑟邁 (Nethermind)](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), 快速 (Fast), [完整 (Full)](#full-sync)               | 歸檔, 修剪 |
-| [貝蘇 (Besu)](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [快速 (Fast)](#fast-sync), [完整 (Full)](#full-sync) | 歸檔, 修剪 |
-| [艾瑞貢 (Erigon)](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [完整 (Full)](#full-sync)                                         | 歸檔, 修剪 |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), 快速 (Fast), [完整 (Full)](#full-sync)               | 歸檔, 修剪 |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [快速 (Fast)](#fast-sync), [完整 (Full)](#full-sync) | 歸檔, 修剪 |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [完整 (Full)](#full-sync)                                         | 歸檔, 修剪 |
 | [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | 主網, Sepolia, Hoodi | [快照 (Snap)](#snap-sync), [完整 (Full)](#full-sync)                     | 修剪          |
-| [瑞斯 (Reth)](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [完整 (Full)](#full-sync)                                         | 歸檔, 修剪 |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | 主網, Sepolia, Hoodi | [完整 (Full)](#full-sync)                                         | 歸檔, 修剪 |
 
 有關支援網路的更多資訊，請閱讀[以太坊網路](/developers/docs/networks/)。
 
@@ -152,13 +152,13 @@ Hyperledger Besu 是一個適用於公共和許可制網路的企業級以太坊
 
 貝蘇廣泛的[文件](https://besu.hyperledger.org/en/stable/)將引導你了解其功能和設定的所有細節。
 
-### 艾瑞貢 (Erigon) {#erigon}
+### Erigon {#erigon}
 
-艾瑞貢 (Erigon) 以前稱為 Turbo-Geth，最初是 Go 以太坊 (Geth) 的一個分叉，致力於提高速度和磁碟空間效率。Erigon 是一個完全重新架構的以太坊實作，目前用 Go 編寫，但其他語言的實作正在開發中。Erigon 的目標是提供一個更快、更模組化且更最佳化的以太坊實作。它可以在不到 3 天的時間內，使用不到 3TB 的磁碟空間執行完整的歸檔節點同步。
+Erigon 以前稱為 Turbo-Geth，最初是 Go Ethereum 的一個分叉，致力於提高速度和磁碟空間效率。Erigon 是一個完全重新架構的以太坊實作，目前用 Go 編寫，但其他語言的實作正在開發中。Erigon 的目標是提供一個更快、更模組化且更最佳化的以太坊實作。它可以在不到 3 天的時間內，使用不到 3TB 的磁碟空間執行完整的歸檔節點同步。
 
 ### ethrex {#ethrex}
 
-ethrex 是一個極簡、模組化的以太坊執行客戶端，以 Rust 編寫並由 LambdaClass 開發。它的建構考量了零知識證明，且相同的程式碼庫既可以作為第一層 (L1) 執行客戶端執行，也可以作為多證明者 ZK 匯總（第二層 (L2)）執行。它在 Apache 2.0 和 MIT 授權下獲得雙重授權。
+ethrex 是一個極簡、模組化的以太坊執行客戶端，以 Rust 編寫並由 LambdaClass 開發。它的建構考量了零知識證明，且相同的程式碼庫既可以作為L1 執行客戶端執行，也可以作為多證明者 ZK 匯總（L2）執行。它在 Apache 2.0 和 MIT 授權下獲得雙重授權。
 
 透過閱讀 [ethrex 文件](https://docs.ethrex.xyz/)或查看 [ethrex GitHub 儲存庫](https://github.com/lambdaclass/ethrex)了解更多資訊。
 ### Go 以太坊 (Geth) {#geth}
@@ -204,9 +204,9 @@ Go 以太坊（簡稱 Geth）是以太坊協定的最初實作之一。目前，
 
 文件可以在 [Lighthouse Book](https://lighthouse-book.sigmaprime.io/) 中找到
 
-### 洛德斯塔 (Lodestar) {#lodestar}
+### Lodestar {#lodestar}
 
-洛德斯塔 (Lodestar) 是一個生產就緒的共識客戶端實作，在 Apache-2.0 授權下使用 TypeScript 編寫。它由 ChainSafe Systems 維護，是為獨立質押者、開發者和研究人員提供的最新共識客戶端。Lodestar 由信標節點和驗證者客戶端組成，由以太坊協定的 JavaScript 實作提供支援。Lodestar 旨在透過輕客戶端提高以太坊的可用性，擴大對更多開發者的可及性，並進一步為生態系統的多樣性做出貢獻。
+Lodestar 是一個生產就緒的共識客戶端實作，在 Apache-2.0 授權下使用 TypeScript 編寫。它由 ChainSafe Systems 維護，是為獨立質押者、開發者和研究人員提供的最新共識客戶端。Lodestar 由信標節點和驗證者客戶端組成，由以太坊協定的 JavaScript 實作提供支援。Lodestar 旨在透過輕客戶端提高以太坊的可用性，擴大對更多開發者的可及性，並進一步為生態系統的多樣性做出貢獻。
 
 更多資訊可以在 [Lodestar 網站](https://lodestar.chainsafe.io/)上找到。
 

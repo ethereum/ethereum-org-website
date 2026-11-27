@@ -206,7 +206,7 @@ Hay un trie de estado global, y se actualiza cada vez que un cliente procesa un 
 
 ### Trie de almacenamiento {#storage-trie}
 
-El trie de almacenamiento es donde residen _todos_ los datos del contrato. Hay un trie de almacenamiento separado para cada cuenta. Para recuperar valores en posiciones de almacenamiento específicas en una dirección dada, se requieren la dirección de almacenamiento, la posición entera de los datos almacenados en el almacenamiento y el ID del bloque. Estos luego se pueden pasar como argumentos a `eth_getStorageAt` definido en la interfaz de programación de aplicaciones (API) JSON-RPC, por ejemplo, para recuperar los datos en el slot de almacenamiento 0 para la dirección `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+El trie de almacenamiento es donde residen _todos_ los datos del contrato. Hay un trie de almacenamiento separado para cada cuenta. Para recuperar valores en posiciones de almacenamiento específicas en una dirección dada, se requieren la dirección de almacenamiento, la posición entera de los datos almacenados en el almacenamiento y el ID del bloque. Estos luego se pueden pasar como argumentos a `eth_getStorageAt` definido en la API JSON-RPC, por ejemplo, para recuperar los datos en el slot de almacenamiento 0 para la dirección `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -218,7 +218,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 Aquí intervienen dos tipos diferentes de "clave", y es útil mantenerlos separados:
 
 1. **El slot de almacenamiento.** Esta es la clave de 32 bytes que un contrato lee y escribe con los códigos de operación `SLOAD` y `SSTORE`, y es lo que `eth_getStorageAt` toma como su segundo parámetro. Al protocolo no le importa cómo un contrato elige sus slots. Eso lo decide el diseño de almacenamiento del compilador (consulte el [diseño de almacenamiento de Solidity](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
-2. **La ruta en el trie de almacenamiento.** Al igual que el trie de estado, el trie de almacenamiento nunca usa el slot directamente como su ruta. La ruta siempre es `keccak256(slot)`, y el valor almacenado allí es la codificación de prefijo de longitud recursiva (RLP) del valor del slot sin los ceros a la izquierda. Aplicar hashing a la clave mantiene las rutas distribuidas uniformemente, por lo que nadie puede crear claves que hagan que el trie sea inusualmente profundo. Los clientes aplican este hash ellos mismos, por lo que quienes llaman a `eth_getStorageAt` solo pasan el slot.
+2. **La ruta en el trie de almacenamiento.** Al igual que el trie de estado, el trie de almacenamiento nunca usa el slot directamente como su ruta. La ruta siempre es `keccak256(slot)`, y el valor almacenado allí es la codificación RLP del valor del slot sin los ceros a la izquierda. Aplicar hashing a la clave mantiene las rutas distribuidas uniformemente, por lo que nadie puede crear claves que hagan que el trie sea inusualmente profundo. Los clientes aplican este hash ellos mismos, por lo que quienes llaman a `eth_getStorageAt` solo pasan el slot.
 
 Las variables de estado simples residen en los slots que el compilador les asigna en orden (`0`, `1`, ...), con tipos pequeños a veces empaquetados juntos en un solo slot, como en el ejemplo anterior. Los valores dentro de una estructura dinámica necesitan que su slot se calcule primero. Por ejemplo, Solidity almacena el valor para la clave `k` de un `mapping` declarado en el slot `p` en el slot `keccak256(pad32(k) ++ pad32(p))`. Si el contrato en `0x295a70b2de5e3953354a6a8344e616ed314d7251` declara un `mapping(address => uint)` en el slot 1, el slot que contiene la entrada para la clave `0x391694e7e0b0cce554cb130d723a9d27458f9298` es:
 
@@ -226,7 +226,7 @@ Las variables de estado simples residen en los slots que el compilador les asign
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-Este hashing proviene del diseño de almacenamiento de Solidity (calculado por el contrato en tiempo de ejecución), no del trie. En una consola de Go Ethereum (Geth), esto se puede calcular de la siguiente manera:
+Este hashing proviene del diseño de almacenamiento de Solidity (calculado por el contrato en tiempo de ejecución), no del trie. En una consola de Geth, esto se puede calcular de la siguiente manera:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"

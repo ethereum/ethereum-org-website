@@ -42,7 +42,7 @@ Nguvu hizi mbili huamua ikiwa ugavi wa Ethereum unakua (mfumuko wa bei) au unapu
 
 Mfumo wa Uthibitisho wa Dau (PoS) wa Ethereum umepunguza kwa kiasi kikubwa utoaji wa ETH ikilinganishwa na mtindo wake wa awali wa Uthibitisho wa Kazi (PoW). Wathibitishaji—ambao huweka dhamana ya ETH ili kulinda mtandao—hupata ETH kama zawadi. Unaweza kuona kiwango cha sasa cha utoaji kwenye [Ultrasound Money](https://ultrasound.money).
 
-Hata hivyo, nambari hii inabadilika. Shukrani kwa EIP-1559, wakati shughuli za mtandao ziko juu, viwango vya kuteketeza ETH vinaweza kuzidi utoaji, na kuunda athari ya upungufu wa bei. Kwa mfano, wakati wa vipindi vya mahitaji makubwa, kama vile uzinduzi wa tokani isiyobadilishika (NFT) au shughuli za fedha zilizogatuliwa (DeFi), ETH nyingi zaidi zinaweza kuteketezwa kuliko kutolewa.
+Hata hivyo, nambari hii inabadilika. Shukrani kwa EIP-1559, wakati shughuli za mtandao ziko juu, viwango vya kuteketeza ETH vinaweza kuzidi utoaji, na kuunda athari ya upungufu wa bei. Kwa mfano, wakati wa vipindi vya mahitaji makubwa, kama vile uzinduzi wa NFT au shughuli za DeFi, ETH nyingi zaidi zinaweza kuteketezwa kuliko kutolewa.
 
 ### Zana za Kufuatilia Ugavi na Utoaji wa ETH: {#tools-to-track-eth-supply-and-issuance}
 - [Ultrasound Money](https://ultrasound.money) - Ufuatiliaji wa wakati halisi wa ugavi wa ETH, utoaji, na viwango vya kuteketeza

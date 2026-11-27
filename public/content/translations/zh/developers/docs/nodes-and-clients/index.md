@@ -92,7 +92,7 @@ sidebarDepth: 2
 运行你自己的节点使你能够以私密、自给自足且无须信任的方式使用以太坊。你不需要信任网络，因为你可以使用自己的客户端自行验证数据。“不要信任，要验证”是一句流行的区块链格言。
 
 - 你的节点会自行根据共识规则验证所有交易和区块。这意味着你不必依赖网络中的任何其他节点或完全信任它们。
-- 你可以将以太坊钱包与你自己的节点一起使用。你可以更安全、更私密地使用去中心化应用 (dapp)，因为你不必向中介泄露你的地址和余额。一切都可以用你自己的客户端进行检查。[梅塔马斯克 (MetaMask)](https://metamask.io)、[Frame](https://frame.sh/) 以及[许多其他钱包](/wallets/find-wallet/)提供 RPC 导入功能，允许它们使用你的节点。
+- 你可以将以太坊钱包与你自己的节点一起使用。你可以更安全、更私密地使用去中心化应用 (dapp)，因为你不必向中介泄露你的地址和余额。一切都可以用你自己的客户端进行检查。[MetaMask](https://metamask.io)、[Frame](https://frame.sh/) 以及[许多其他钱包](/wallets/find-wallet/)提供 RPC 导入功能，允许它们使用你的节点。
 - 你可以运行和自托管其他依赖以太坊数据的服务。例如，这可能是信标链验证者、二层网络 (L2) 等软件、基础设施、区块浏览器、支付处理器等。
 - 你可以提供自己的自定义 [RPC 端点](/developers/docs/apis/json-rpc/)。你甚至可以向社区公开提供这些端点，以帮助他们避开大型中心化提供商。
 - 你可以使用**进程间通信 (IPC)** 连接到你的节点，或者重写节点以将你的程序作为插件加载。这提供了低延迟，这在很多情况下非常有帮助，例如，当使用 Web3 库处理大量数据时，或者当你需要尽可能快地替换交易时（即抢跑）。
@@ -135,12 +135,12 @@ sidebarDepth: 2
 
 | 客户端 | 语言 | 操作系统 | 网络 | 同步策略 | 状态修剪 |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [Go以太坊 (Geth)](https://geth.ethereum.org/) | Go | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、[全同步](#full-sync) | 归档、修剪 |
-| [奈瑟曼德 (Nethermind)](https://www.nethermind.io/) | C#、.NET | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、快速、[全同步](#full-sync) | 归档、修剪 |
-| [贝苏 (Besu)](https://besu.hyperledger.org/en/stable/) | Java | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、[快速](#fast-sync)、[全同步](#full-sync) | 归档、修剪 |
-| [埃里贡 (Erigon)](https://github.com/ledgerwatch/erigon) | Go | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [全同步](#full-sync) | 归档、修剪 |
+| [Geth](https://geth.ethereum.org/) | Go | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、[全同步](#full-sync) | 归档、修剪 |
+| [Nethermind](https://www.nethermind.io/) | C#、.NET | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、快速、[全同步](#full-sync) | 归档、修剪 |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、[快速](#fast-sync)、[全同步](#full-sync) | 归档、修剪 |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [全同步](#full-sync) | 归档、修剪 |
 | [ethrex](https://ethrex.xyz/) | Rust | Linux、macOS | Mainnet、Sepolia、Hoodi | [Snap](#snap-sync)、[全同步](#full-sync) | 修剪 |
-| [瑞斯 (Reth)](https://reth.rs/) | Rust | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [全同步](#full-sync) | 归档、修剪 |
+| [Reth](https://reth.rs/) | Rust | Linux、Windows、macOS | Mainnet、Sepolia、Hoodi | [全同步](#full-sync) | 归档、修剪 |
 
 有关支持的网络的更多信息，请阅读[以太坊网络](/developers/docs/networks/)。
 
@@ -154,11 +154,11 @@ Hyperledger Besu 是一个用于公共和许可型网络的企业级以太坊客
 
 ### 埃里贡 {#erigon}
 
-埃里贡 (Erigon)（以前称为 Turbo-Geth）最初是 Go以太坊 (Geth) 的一个分叉，致力于提高速度和磁盘空间效率。埃里贡 (Erigon) 是以太坊的一种完全重新架构的实现，目前用 Go 编写，但其他语言的实现正在开发中。埃里贡 (Erigon) 的目标是提供更快、更模块化和更优化的以太坊实现。它可以在不到 3 天的时间内使用不到 3TB 的磁盘空间执行完整的归档节点同步。
+Erigon（以前称为 Turbo-Geth）最初是 Go Ethereum 的一个分叉，致力于提高速度和磁盘空间效率。Erigon 是以太坊的一种完全重新架构的实现，目前用 Go 编写，但其他语言的实现正在开发中。Erigon 的目标是提供更快、更模块化和更优化的以太坊实现。它可以在不到 3 天的时间内使用不到 3TB 的磁盘空间执行完整的归档节点同步。
 
 ### ethrex {#ethrex}
 
-ethrex 是一个极简、模块化的以太坊执行客户端，由 LambdaClass 使用 Rust 编写。它的构建考虑了零知识证明，并且相同的代码库既可以作为一层网络 (L1) 执行客户端运行，也可以作为多证明者 ZK-Rollup（二层网络 (L2)）运行。它在 Apache 2.0 和 MIT 许可证下获得双重许可。
+ethrex 是一个极简、模块化的以太坊执行客户端，由 LambdaClass 使用 Rust 编写。它的构建考虑了零知识证明，并且相同的代码库既可以作为L1 执行客户端运行，也可以作为多证明者 ZK-Rollup（L2）运行。它在 Apache 2.0 和 MIT 许可证下获得双重许可。
 
 通过阅读 [ethrex 文档](https://docs.ethrex.xyz/)或查看 [ethrex GitHub 仓库](https://github.com/lambdaclass/ethrex)了解更多信息。
 ### Go以太坊 (Geth) {#geth}
@@ -181,7 +181,7 @@ Go以太坊 (Geth)（简称 Geth）是以太坊协议的最初实现之一。目
 
 瑞斯（Rust Ethereum 的缩写）是一个以太坊全节点实现，专注于用户友好、高度模块化、快速和高效。瑞斯最初由 Paradigm 构建和推动，并根据 Apache 和 MIT 许可证获得许可。
 
-瑞斯已准备好投入生产，适用于关键任务环境，例如质押或高正常运行时间服务。在需要具有巨大余量的高性能的用例中表现良好，例如 RPC、最大可提取价值 (MEV)、索引、模拟和点对点活动。
+Reth 已准备好投入生产，适用于关键任务环境，例如质押或高正常运行时间服务。在需要具有巨大余量的高性能的用例中表现良好，例如 RPC、MEV、索引、模拟和点对点活动。
 
 通过查看 [Reth Book](https://reth.rs/) 或 [Reth GitHub 仓库](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth)了解更多信息。
 
@@ -206,9 +206,9 @@ Go以太坊 (Geth)（简称 Geth）是以太坊协议的最初实现之一。目
 
 ### 洛德斯塔 {#lodestar}
 
-洛德斯塔 (Lodestar) 是一个用 TypeScript 编写的、可用于生产的共识客户端实现，采用 Apache-2.0 许可证。它由 ChainSafe Systems 维护，是面向独立质押者、开发者和研究人员的最新共识客户端。洛德斯塔 (Lodestar) 由信标节点和验证者客户端组成，由以太坊协议的 JavaScript 实现提供支持。洛德斯塔 (Lodestar) 旨在通过轻客户端提高以太坊的可用性，扩大对更多开发者的可访问性，并进一步促进生态系统的多样性。
+Lodestar 是一个用 TypeScript 编写的、可用于生产的共识客户端实现，采用 Apache-2.0 许可证。它由 ChainSafe Systems 维护，是面向独立质押者、开发者和研究人员的最新共识客户端。Lodestar 由信标节点和验证者客户端组成，由以太坊协议的 JavaScript 实现提供支持。Lodestar 旨在通过轻客户端提高以太坊的可用性，扩大对更多开发者的可访问性，并进一步促进生态系统的多样性。
 
-更多信息可以在[洛德斯塔 (Lodestar) 网站](https://lodestar.chainsafe.io/)上找到
+更多信息可以在[Lodestar 网站](https://lodestar.chainsafe.io/)上找到
 
 ### 尼姆巴斯 {#nimbus}
 

@@ -1,5 +1,12 @@
 # Russian (ru) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.5/10
+Scope: 15 markdown files (statelessness/privacy/merge/verkle, nodes-and-clients x3, frameworks, glossary, supply, transactions, data-structures x3, ethash), changed lines only; no JSON. Sweeps clean. 10 diffs read.
+
+**Fixed in this branch (~20 critical):** #113 tool/brand names back to Latin on changed lines: `nodes-and-clients/index.md` `МетаМаск`:95, `Эригон` x3:157, `Лодстар` x3:209; `run-a-node` table + note `Бесу/Эригон/Незермайнд/Рет` -> `Besu/Erigon/Nethermind/Reth` (98-105); `frameworks:109` `ОпенЗеппелин SDK` -> `OpenZeppelin SDK`; `statelessness:29` `Портал Нетворк` -> `Portal Network`. #112 long forms where English is bare: `nodes-and-clients:161` `уровня 1 (L1)`/`уровень 2 (L2)` -> `L1`/`L2`; `frameworks:59,64,133` `децентрализованных приложений (dapp)` -> `dapp` (dev had bare `dapp` at 64 and 133: regression); `nodes-as-a-service:62,323,378` `невзаимозаменяемых токенов (NFT)` -> `NFT`; `statelessness:29` `(DAO)`, `:81` `уровне 1 (L1)`.
+
+**Open (warnings):** `(EOA)` x3 and `(DA)` added to English long forms (`transactions:15,25,26,224`); `уровня 2 (L2)` kept where English says "layer 2"; glossary-capitalized mid-sentence `Газ`, `Протокола`, `Роллапов`, `Аккаунт`, `Блокчейне` (`merge`, `supply`, `run-a-node`; `Протокол` pre-existing on dev); period decimals (`1.8 ТБ`); `Обрезанная` -> `Очищенная` for pruned in the client table; `Предложение ETH` for supply; `чаевые` for fee tips is glossary-sanctioned (kept); unchanged lines still carry `Эригон`/`Бесу`/`Незермайнд`/`Лайтхаус`/`Теку`/`Нимбус` (client-diversity, archive-nodes, run-a-node body).
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.1/10
 Scope: 90 ru files (71 markdown, 19 JSON; incremental updates), changed lines only. Sampled ~20 markdown diffs (contributing, adding-layer-2s, anatomy, erc-7540, dencun, roadmap/security, zkevm, oracles, rust, 3 tutorials, bridges, community/research, staking, EIPs/governance) and ~250 JSON keys (glossary, glossary-tooltip, page-get-eth, page-learn, page-roadmap, page-layer-2-*, page-resources, quizzes). Sweeps clean: no U+3002/U+2060/foreign script, all JSON valid, no untranslated sentences.
 

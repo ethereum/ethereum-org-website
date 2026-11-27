@@ -69,7 +69,7 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [Webové stránky](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Vývojová platforma pro Web3, která umožňuje blockchainovým vývojářům vytvářet, testovat, ladit, monitorovat a provozovat chytré kontrakty a zlepšovat UX decentralizovaných aplikací (dapp)._**
+**Tenderly -** **_Vývojová platforma pro Web3, která umožňuje blockchainovým vývojářům vytvářet, testovat, ladit, monitorovat a provozovat chytré kontrakty a zlepšovat UX dapp._**
 
 - [Webové stránky](https://tenderly.co/)
 - [Dokumentace](https://docs.tenderly.co/)
@@ -102,7 +102,7 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Podniková vývojová platforma pro Web3, která vám umožňuje vytvářet aplikace pro nezaměnitelné tokeny (NFT) na všech hlavních řetězcích EVM (a dalších)._**
+**Crossmint -** **_Podniková vývojová platforma pro Web3, která vám umožňuje vytvářet aplikace NFT na všech hlavních řetězcích EVM (a dalších)._**
 
 - [Webové stránky](https://www.crossmint.com)
 - [Dokumentace](https://docs.crossmint.com)
@@ -124,7 +124,7 @@ Než se ponoříte do frameworků, doporučujeme vám nejprve si přečíst ná�
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (poháněno Covalent) -** **_GoldRush nabízí nejkomplexnější sadu rozhraní pro programování aplikací (API) pro blockchainová data pro vývojáře, analytiky a podniky. Ať už vytváříte řídicí panel pro decentralizované finance (DeFi), peněženku, obchodního bota, AI agenta nebo platformu pro dodržování předpisů, datová API poskytují rychlý, přesný a pro vývojáře přívětivý přístup k nezbytným onchain datům, která potřebujete._**
+**GoldRush (poháněno Covalent) -** **_GoldRush nabízí nejkomplexnější sadu API pro blockchainová data pro vývojáře, analytiky a podniky. Ať už vytváříte řídicí panel DeFi, peněženku, obchodního bota, AI agenta nebo platformu pro dodržování předpisů, datová API poskytují rychlý, přesný a pro vývojáře přívětivý přístup k nezbytným onchain datům, která potřebujete._**
 
 - [Webové stránky](https://goldrush.dev/)
 - [Dokumentace](https://goldrush.dev/docs/chains/ethereum)

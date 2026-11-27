@@ -158,7 +158,7 @@ Erigon, sebelumnya dikenal sebagai Turbo-Geth, dimulai sebagai percabangan dari 
 
 ### ethrex {#ethrex}
 
-ethrex adalah klien eksekusi Ethereum yang minimalis dan modular, ditulis dalam Rust dan dikembangkan oleh LambdaClass. Ini dibangun dengan mempertimbangkan pembuktian zero-knowledge, dan basis kode yang sama dapat berjalan baik sebagai klien eksekusi lapisan 1 (L1) maupun sebagai ZK-Rollup multi-pembukti (lapisan 2 (L2)). Ini memiliki lisensi ganda di bawah lisensi Apache 2.0 dan MIT.
+ethrex adalah klien eksekusi Ethereum yang minimalis dan modular, ditulis dalam Rust dan dikembangkan oleh LambdaClass. Ini dibangun dengan mempertimbangkan pembuktian zero-knowledge, dan basis kode yang sama dapat berjalan baik sebagai klien eksekusi L1 maupun sebagai ZK-Rollup multi-pembukti (L2). Ini memiliki lisensi ganda di bawah lisensi Apache 2.0 dan MIT.
 
 Pelajari lebih lanjut dengan membaca [dokumentasi ethrex](https://docs.ethrex.xyz/) atau memeriksa [repo GitHub ethrex](https://github.com/lambdaclass/ethrex).
 ### Go Ethereum {#geth}

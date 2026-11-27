@@ -164,7 +164,7 @@ Bằng chứng cổ phần đã giới thiệu khái niệm tính chung cuộc c
 title="Quan niệm sai lầm: &quot;The Merge đã cho phép rút tiền đặt cọc.&quot;"
 contentPreview="Sai, nhưng việc rút tiền đặt cọc kể từ đó đã được kích hoạt thông qua bản nâng cấp Thượng Hải/Capella.">
 
-Ban đầu sau The Merge, những người đặt cọc chỉ có thể truy cập tiền boa phí và MEV kiếm được nhờ các đề xuất khối. Những phần thưởng này được ghi có vào một tài khoản không đặt cọc do trình xác thực kiểm soát (được gọi là <em>người nhận phí</em>) và có sẵn ngay lập tức. Những phần thưởng này tách biệt với phần thưởng giao thức cho việc thực hiện các nhiệm vụ của trình xác thực.
+Ban đầu sau The Merge, những người đặt cọc chỉ có thể truy cập phí ưu tiên và MEV kiếm được nhờ các đề xuất khối. Những phần thưởng này được ghi có vào một tài khoản không đặt cọc do trình xác thực kiểm soát (được gọi là <em>người nhận phí</em>) và có sẵn ngay lập tức. Những phần thưởng này tách biệt với phần thưởng giao thức cho việc thực hiện các nhiệm vụ của trình xác thực.
 
 Kể từ bản nâng cấp mạng lưới Thượng Hải/Capella, những người đặt cọc hiện có thể chỉ định một <em>địa chỉ rút tiền</em> để bắt đầu nhận các khoản thanh toán tự động cho bất kỳ số dư đặt cọc vượt mức nào (ETH trên 32 từ phần thưởng giao thức). Bản nâng cấp này cũng cho phép trình xác thực mở khóa và lấy lại toàn bộ số dư của mình khi thoát khỏi mạng lưới.
 

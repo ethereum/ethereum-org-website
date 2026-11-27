@@ -56,7 +56,7 @@ Bir düğüm hizmeti kullanarak ürününüzün altyapı yönünü merkezileşti
   - Özellikler
     - Ayda 300 milyon işlem birimi (\~30 milyon getLatestBlock isteği) ile en geniş ücretsiz katman
     - Polygon, Starknet, Optimism, Arbitrum için çoklu zincir desteği
-    - En büyük Ethereum merkeziyetsiz uygulamalarının (dapp) ve DeFi işlem hacminin yaklaşık %70'ine güç sağlar
+    - En büyük Ethereum dapp'lerinin ve DeFi işlem hacminin yaklaşık %70'ine güç sağlar
     - Alchemy Notify aracılığıyla gerçek zamanlı webhook uyarıları
     - Sınıfının en iyisi destek ve güvenilirlik / kararlılık
     - Alchemy'nin NFT API'si

@@ -59,7 +59,7 @@ sidebarDepth: 2
     - 為約 70% 最大的以太坊去中心化應用程式 (dapp) 和去中心化金融 (DeFi) 交易量提供動力
     - 透過 Alchemy Notify 提供即時 Webhook 警報
     - 一流的支援與可靠性/穩定性
-    - Alchemy 的非同質化代幣 (NFT) API
+    - Alchemy 的 NFT API
     - 包含請求瀏覽器 (Request Explorer)、記憶體池觀察器 (Mempool Watcher) 和 Composer 的儀表板
     - 整合的測試網水龍頭存取權限
     - 擁有 1.8 萬名使用者的活躍 Discord 建構者社群
@@ -98,7 +98,7 @@ sidebarDepth: 2
     - 透過 HTTP 和安全 WebSockets 的 JSON-RPC
     - 支援 3 條鏈
     - SLA，AWS 24/7 支援
-    - Go 以太坊 (Geth) 和萊特豪斯
+    - Go-ethereum 和 Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [文件](https://docs.ankr.com/)
@@ -222,7 +222,7 @@ sidebarDepth: 2
   - 功能
     - 免費入門方案
     - 一鍵部署以太坊節點
-    - 可自訂的客戶端和演算法（Geth、Quorum 和貝蘇 || PoA、IBFT 和 Raft）
+    - 可自訂的客戶端和演算法（Geth、Quorum 和 Besu || PoA、IBFT 和 Raft）
     - 超過 500 個管理和服務 API
     - 用於提交以太坊交易的 RESTful 介面（由 Apache Kafka 支援）
     - 用於事件傳遞的出站串流（由 Apache Kafka 支援）

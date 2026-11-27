@@ -77,7 +77,7 @@ Tous les clients prennent en charge les principaux systèmes d'exploitation : Li
 
 ##### Exigences minimales
 
-- Processeur (CPU) avec 2 cœurs ou plus
+- CPU avec 2 cœurs ou plus
 - 16 Go de RAM (32 Go recommandés pour la stabilité)
 - SSD NVMe de 4 To (couvre un nœud avec l'historique complet de la chaîne plus de l'espace pour la croissance, voir les tailles de disque des clients ci-dessous ; en savoir plus sur les [Bons et moins bons SSD pour les nœuds Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Bande passante de 25+ Mbit/s
@@ -86,7 +86,7 @@ Tous les clients prennent en charge les principaux systèmes d'exploitation : Li
 
 Les recommandations matérielles actuelles pour les opérateurs de nœuds sont identifiées dans l'[EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Pour un nœud complet, il est recommandé :
 
-- Processeur (CPU) rapide avec 4 cœurs ou plus (8 cœurs ou plus en cas de validation)
+- CPU rapide avec 4 cœurs ou plus (8 cœurs ou plus en cas de validation)
 - 32 Go de RAM (64 Go recommandés en cas de validation pour assurer la stabilité)
 - SSD NVMe de 4 To (les disques sans DRAM et QLC sont déconseillés)
 - Bande passante de 50 Mbit/s en téléchargement / 15+ Mbit/s en envoi (25+ Mbit/s en envoi en cas de validation)

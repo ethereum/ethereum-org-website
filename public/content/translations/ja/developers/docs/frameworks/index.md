@@ -51,7 +51,7 @@ lang: ja
 - [例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [ディスコード](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_1つのコマンドでイーサリアムを利用したアプリを作成できます。幅広いUIフレームワークと分散型金融 (DeFi) テンプレートから選択できます。_**
+**Create Eth App -** **_1つのコマンドでイーサリアムを利用したアプリを作成できます。幅広いUIフレームワークとDeFi テンプレートから選択できます。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [テンプレート](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
@@ -116,7 +116,7 @@ lang: ja
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (powered by Covalent) -** **_GoldRushは、開発者、アナリスト、企業向けに最も包括的なブロックチェーンデータAPIスイートを提供します。分散型金融 (DeFi) ダッシュボード、ウォレット、トレーディングボット、AI・エージェント、コンプライアンスプラットフォームのいずれを構築する場合でも、データAPIは必要な不可欠なオンチェーンデータへの高速で正確、かつ開発者フレンドリーなアクセスを提供します。_**
+**GoldRush (powered by Covalent) -** **_GoldRushは、開発者、アナリスト、企業向けに最も包括的なブロックチェーンデータAPIスイートを提供します。DeFi ダッシュボード、ウォレット、トレーディングボット、AI・エージェント、コンプライアンスプラットフォームのいずれを構築する場合でも、データAPIは必要な不可欠なオンチェーンデータへの高速で正確、かつ開発者フレンドリーなアクセスを提供します。_**
 
 - [ウェブサイト](https://goldrush.dev/)
 - [ドキュメント](https://goldrush.dev/docs/chains/ethereum)

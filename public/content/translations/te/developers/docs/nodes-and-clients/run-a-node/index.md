@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | క్లయింట్ | డిస్క్ పరిమాణం (పూర్తి నోడ్) | డిస్క్ పరిమాణం (పూర్తి ఆర్కైవ్) |
 | ---------- | --------------------- | ------------------------ |
-| బేసు | 1.8TB+ | 12TB+ |
-| ఎరిగోన్ | 1.7TB+ | 2.7TB+ |
-| గెత్ | 1.8TB+ | 2TB+ |
-| నెథర్‌మైండ్ | 1.7TB+ | 14TB+ |
-| రెత్ | 2.2TB+ | 2.8TB+ |
+| Besu | 1.8TB+ | 12TB+ |
+| Erigon | 1.7TB+ | 2.7TB+ |
+| Geth | 1.8TB+ | 2TB+ |
+| Nethermind | 1.7TB+ | 14TB+ |
+| Reth | 2.2TB+ | 2.8TB+ |
 
-- గమనిక: పూర్తి నోడ్ పరిమాణాలు పూర్తి చైన్ చరిత్రను ఉంచుతాయి మరియు సెప్టెంబర్ 2026లో [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) ద్వారా కొలవబడ్డాయి. చరిత్ర గడువు ముగింపుకు మద్దతు ఇచ్చే క్లయింట్‌లకు తక్కువ అవసరం: పోస్ట్-మెర్జ్ చరిత్రతో మాత్రమే సుమారు 1.2-1.4TB, లేదా రోలింగ్ గడువు ముగింపుతో సుమారు 400-650GB (గెత్ ద్వారా ఇంకా మద్దతు లేదు).
-- గమనిక: ఆర్కైవ్ పరిమాణాలు ప్రతి క్లయింట్ డాక్యుమెంటేషన్ నుండి వస్తాయి ([బేసు](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [ఎరిగోన్](https://docs.erigon.tech/get-started/hardware-requirements), [గెత్](https://geth.ethereum.org/docs/fundamentals/archive), [నెథర్‌మైండ్](https://docs.nethermind.io/get-started/system-requirements), [రెత్](https://reth.rs/run/system-requirements)). గెత్ యొక్క సంఖ్య దాని పాత్-ఆధారిత ఆర్కైవ్ కోసం; ట్రై చరిత్రను కూడా ఉంచడానికి సుమారు 6.5TB పడుతుంది. నెథర్‌మైండ్ యొక్క సంఖ్య జూలై 2023 నాటిది మరియు అప్పటి నుండి పెరిగింది.
+- గమనిక: పూర్తి నోడ్ పరిమాణాలు పూర్తి చైన్ చరిత్రను ఉంచుతాయి మరియు సెప్టెంబర్ 2026లో [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) ద్వారా కొలవబడ్డాయి. చరిత్ర గడువు ముగింపుకు మద్దతు ఇచ్చే క్లయింట్‌లకు తక్కువ అవసరం: పోస్ట్-మెర్జ్ చరిత్రతో మాత్రమే సుమారు 1.2-1.4TB, లేదా రోలింగ్ గడువు ముగింపుతో సుమారు 400-650GB (Geth ద్వారా ఇంకా మద్దతు లేదు).
+- గమనిక: ఆర్కైవ్ పరిమాణాలు ప్రతి క్లయింట్ డాక్యుమెంటేషన్ నుండి వస్తాయి ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Geth యొక్క సంఖ్య దాని పాత్-ఆధారిత ఆర్కైవ్ కోసం; ట్రై చరిత్రను కూడా ఉంచడానికి సుమారు 6.5TB పడుతుంది. Nethermind యొక్క సంఖ్య జూలై 2023 నాటిది మరియు అప్పటి నుండి పెరిగింది.
 
 ఏకాభిప్రాయ క్లయింట్‌ల కోసం, స్థల అవసరం క్లయింట్ అమలు మరియు ప్రారంభించబడిన లక్షణాలపై (ఉదా., ధృవీకర్త స్లాషర్) కూడా ఆధారపడి ఉంటుంది, అయితే సాధారణంగా బీకాన్ డేటా కోసం మరో 15-90GB, అలాగే సూపర్‌నోడ్‌ను నడుపుతున్నట్లయితే సుమారు 500GB బ్లాబ్ డేటాతో లెక్కించండి. పెద్ద సంఖ్యలో ధృవీకర్తలతో, బ్యాండ్‌విడ్త్ లోడ్ కూడా పెరుగుతుంది. మీరు [ఈ విశ్లేషణలో ఏకాభిప్రాయ క్లయింట్ అవసరాలపై వివరాలను](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc) కనుగొనవచ్చు.
 

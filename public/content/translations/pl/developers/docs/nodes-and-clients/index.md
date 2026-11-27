@@ -9,7 +9,7 @@ sidebarDepth: 2
 
 ## Wymagania wstępne {#prerequisites}
 
-Zanim zagłębisz się w temat i uruchomisz własną instancję klienta Ethereum, powinieneś zrozumieć koncepcję sieci peer-to-peer oraz [podstawy Maszyny Wirtualnej Ethereum (EVM)](/developers/docs/evm/). Zapoznaj się z naszym [wprowadzeniem do Ethereum](/developers/docs/intro-to-ethereum/).
+Zanim zagłębisz się w temat i uruchomisz własną instancję klienta Ethereum, powinieneś zrozumieć koncepcję sieci peer-to-peer oraz [podstawy EVM](/developers/docs/evm/). Zapoznaj się z naszym [wprowadzeniem do Ethereum](/developers/docs/intro-to-ethereum/).
 
 Jeśli jesteś nowy w temacie węzłów, zalecamy najpierw zapoznać się z naszym przystępnym wprowadzeniem do [uruchamiania węzła Ethereum](/run-a-node).
 
@@ -92,7 +92,7 @@ Uruchomienie węzła pozwala na bezpośrednie, niewymagające zaufania i prywatn
 Uruchomienie własnego węzła umożliwia korzystanie z Ethereum w sposób prywatny, samowystarczalny i niewymagający zaufania. Nie musisz ufać sieci, ponieważ możesz samodzielnie zweryfikować dane za pomocą swojego klienta. „Nie ufaj, weryfikuj” to popularna mantra w świecie blockchaina.
 
 - Twój węzeł samodzielnie weryfikuje wszystkie transakcje i bloki zgodnie z zasadami konsensusu. Oznacza to, że nie musisz polegać na żadnych innych węzłach w sieci ani w pełni im ufać.
-- Możesz używać portfela Ethereum z własnym węzłem. Możesz korzystać ze zdecentralizowanych aplikacji (dapp) bezpieczniej i prywatniej, ponieważ nie będziesz musiał ujawniać swoich adresów i sald pośrednikom. Wszystko można sprawdzić za pomocą własnego klienta. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) i [wiele innych portfeli](/wallets/find-wallet/) oferuje importowanie RPC, co pozwala im na korzystanie z Twojego węzła.
+- Możesz używać portfela Ethereum z własnym węzłem. Możesz korzystać z dappów bezpieczniej i prywatniej, ponieważ nie będziesz musiał ujawniać swoich adresów i sald pośrednikom. Wszystko można sprawdzić za pomocą własnego klienta. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) i [wiele innych portfeli](/wallets/find-wallet/) oferuje importowanie RPC, co pozwala im na korzystanie z Twojego węzła.
 - Możesz uruchamiać i samodzielnie hostować inne usługi, które zależą od danych z Ethereum. Na przykład może to być walidator Beacon Chain, oprogramowanie takie jak warstwa 2 (L2), infrastruktura, eksploratory bloków, procesory płatności itp.
 - Możesz udostępniać własne, niestandardowe [punkty końcowe RPC](/developers/docs/apis/json-rpc/). Możesz nawet zaoferować te punkty końcowe publicznie społeczności, aby pomóc im uniknąć dużych, scentralizowanych dostawców.
 - Możesz połączyć się ze swoim węzłem za pomocą **komunikacji międzyprocesowej (IPC)** lub przepisać węzeł, aby załadować swój program jako wtyczkę. Zapewnia to niskie opóźnienia, co bardzo pomaga, np. podczas przetwarzania dużej ilości danych przy użyciu bibliotek Web3 lub gdy musisz jak najszybciej zastąpić swoje transakcje (tj. frontrunning).
@@ -182,7 +182,7 @@ Nethermind posiada również [szczegółową dokumentację](https://docs.netherm
 
 Reth (skrót od Rust Ethereum) to implementacja pełnego węzła Ethereum, która koncentruje się na byciu przyjazną dla użytkownika, wysoce modułową, szybką i wydajną. Reth został pierwotnie zbudowany i rozwijany przez Paradigm i jest licencjonowany na warunkach licencji Apache i MIT.
 
-Reth jest gotowy do produkcji i nadaje się do użytku w środowiskach o znaczeniu krytycznym, takich jak staking lub usługi o wysokiej dostępności. Sprawdza się dobrze w przypadkach użycia, w których wymagana jest wysoka wydajność z dużymi marginesami, takich jak RPC, maksymalna wartość do wyodrębnienia (MEV), indeksowanie, symulacje i działania peer-to-peer.
+Reth jest gotowy do produkcji i nadaje się do użytku w środowiskach o znaczeniu krytycznym, takich jak staking lub usługi o wysokiej dostępności. Sprawdza się dobrze w przypadkach użycia, w których wymagana jest wysoka wydajność z dużymi marginesami, takich jak RPC, MEV, indeksowanie, symulacje i działania peer-to-peer.
 
 Dowiedz się więcej, sprawdzając [Reth Book](https://reth.rs/) lub [repozytorium Reth na GitHubie](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 

@@ -98,7 +98,7 @@ sidebarDepth: 2
     - HTTP आणि सुरक्षित WebSockets वर जेसॉन-आरपीसी
     - 3 चेन्सना सपोर्ट करते
     - SLAs, AWS सपोर्ट 24/7
-    - Go-ethereum आणि लाइटहाऊस
+    - Go-ethereum आणि Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [दस्तऐवज](https://docs.ankr.com/)
@@ -222,7 +222,7 @@ sidebarDepth: 2
   - वैशिष्ट्ये
     - विनामूल्य स्टार्टर स्तर
     - वन-क्लिक इथेरियम नोड प्रस्थापना
-    - सानुकूल करण्यायोग्य क्लायंट्स आणि अल्गोरिदम (Geth, Quorum आणि बेसू || PoA, IBFT आणि Raft)
+    - सानुकूल करण्यायोग्य क्लायंट्स आणि अल्गोरिदम (Geth, Quorum आणि Besu || PoA, IBFT आणि Raft)
     - 500+ प्रशासकीय आणि सेवा APIs
     - इथेरियम व्यवहार सबमिशनसाठी RESTful इंटरफेस (Apache Kafka बॅक्ड)
     - घटना वितरणासाठी आउटबाउंड स्ट्रीम्स (Apache Kafka बॅक्ड)

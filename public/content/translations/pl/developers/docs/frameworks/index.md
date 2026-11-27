@@ -64,12 +64,12 @@ Przed zagłębieniem się we frameworki, zalecamy najpierw przeczytać nasze wpr
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Szablony](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem i RainbowKit z wybranym przez Ciebie Hardhat lub Foundry: przeładowywanie kontraktów na żywo (hot reload), niestandardowe hooki React, portfel jednorazowy (burner wallet) i lokalny kranik oraz moduły rozszerzeń do tworzenia zdecentralizowanych aplikacji (dapp) typu full-stack._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem i RainbowKit z wybranym przez Ciebie Hardhat lub Foundry: przeładowywanie kontraktów na żywo (hot reload), niestandardowe hooki React, portfel jednorazowy (burner wallet) i lokalny kranik oraz moduły rozszerzeń do tworzenia dappów typu full-stack._**
 
 - [Strona internetowa](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Platforma programistyczna Web3, która umożliwia programistom blockchain budowanie, testowanie, debugowanie, monitorowanie i obsługę inteligentnych kontraktów oraz poprawę UX zdecentralizowanych aplikacji (dapp)._**
+**Tenderly -** **_Platforma programistyczna Web3, która umożliwia programistom blockchain budowanie, testowanie, debugowanie, monitorowanie i obsługę inteligentnych kontraktów oraz poprawę UX dappów._**
 
 - [Strona internetowa](https://tenderly.co/)
 - [Dokumentacja](https://docs.tenderly.co/)
@@ -102,7 +102,7 @@ Przed zagłębieniem się we frameworki, zalecamy najpierw przeczytać nasze wpr
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Platforma programistyczna Web3 klasy korporacyjnej, która pozwala na budowanie aplikacji z niewymiennymi tokenami (NFT) na wszystkich głównych łańcuchach EVM (i innych)._**
+**Crossmint -** **_Platforma programistyczna Web3 klasy korporacyjnej, która pozwala na budowanie aplikacji NFT na wszystkich głównych łańcuchach EVM (i innych)._**
 
 - [Strona internetowa](https://www.crossmint.com)
 - [Dokumentacja](https://docs.crossmint.com)

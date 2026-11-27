@@ -61,7 +61,7 @@ lang: ko
 - [웹사이트](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_블록체인 개발자가 스마트 컨트랙트를 구축, 테스트, 디버깅, 모니터링 및 운영하고 탈중앙화 애플리케이션 (dapp) UX를 개선할 수 있도록 지원하는 Web3 개발 플랫폼입니다._**
+**Tenderly -** **_블록체인 개발자가 스마트 컨트랙트를 구축, 테스트, 디버깅, 모니터링 및 운영하고 dapp UX를 개선할 수 있도록 지원하는 Web3 개발 플랫폼입니다._**
 
 - [웹사이트](https://tenderly.co/)
 - [문서](https://docs.tenderly.co/)
@@ -116,7 +116,7 @@ lang: ko
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (Covalent 제공) -** **_GoldRush는 개발자, 분석가 및 기업을 위한 가장 포괄적인 블록체인 데이터 애플리케이션 프로그래밍 인터페이스 (API) 제품군을 제공합니다. 탈중앙화 금융 (DeFi) 대시보드, 지갑, 트레이딩 봇, AI 에이전트 또는 규정 준수 플랫폼 등 무엇을 구축하든, 데이터 API는 필요한 필수 온체인 데이터에 빠르고 정확하며 개발자 친화적인 액세스를 제공합니다._**
+**GoldRush (Covalent 제공) -** **_GoldRush는 개발자, 분석가 및 기업을 위한 가장 포괄적인 블록체인 데이터 애플리케이션 프로그래밍 인터페이스 (API) 제품군을 제공합니다. DeFi 대시보드, 지갑, 트레이딩 봇, AI 에이전트 또는 규정 준수 플랫폼 등 무엇을 구축하든, 데이터 API는 필요한 필수 온체인 데이터에 빠르고 정확하며 개발자 친화적인 액세스를 제공합니다._**
 
 - [웹사이트](https://goldrush.dev/)
 - [문서](https://goldrush.dev/docs/chains/ethereum)

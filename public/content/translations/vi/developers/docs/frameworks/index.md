@@ -51,12 +51,12 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 - [Ví dụ](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Tạo các ứng dụng được hỗ trợ bởi Ethereum bằng một lệnh. Đi kèm với nhiều framework giao diện người dùng và các mẫu tài chính phi tập trung (DeFi) để lựa chọn._**
+**Create Eth App -** **_Tạo các ứng dụng được hỗ trợ bởi Ethereum bằng một lệnh. Đi kèm với nhiều framework giao diện người dùng và các mẫu DeFi để lựa chọn._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Mẫu](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem và RainbowKit với sự lựa chọn của bạn giữa Hardhat hoặc Foundry: tải lại nóng hợp đồng, các hook React tùy chỉnh, một ví dùng một lần và vòi cục bộ, cùng các mô-đun mở rộng để phát triển ứng dụng phi tập trung (dapp) toàn diện._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem và RainbowKit với sự lựa chọn của bạn giữa Hardhat hoặc Foundry: tải lại nóng hợp đồng, các hook React tùy chỉnh, một ví dùng một lần và vòi cục bộ, cùng các mô-đun mở rộng để phát triển dapp toàn diện._**
 
 - [Trang web](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
@@ -94,7 +94,7 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Nền tảng phát triển Web3 cấp doanh nghiệp, cho phép bạn xây dựng các ứng dụng token không thể thay thế (NFT) trên tất cả các chuỗi chính, Chuỗi EVM (và các chuỗi khác)._**
+**Crossmint -** **_Nền tảng phát triển Web3 cấp doanh nghiệp, cho phép bạn xây dựng các ứng dụng NFT trên tất cả các chuỗi chính, Chuỗi EVM (và các chuỗi khác)._**
 
 - [Trang web](https://www.crossmint.com)
 - [Tài liệu](https://docs.crossmint.com)
@@ -116,7 +116,7 @@ Trước khi đi sâu vào các framework, chúng tôi khuyên bạn trước ti
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (được cung cấp bởi Covalent) -** **_GoldRush cung cấp bộ Giao diện Lập trình Ứng dụng (API) dữ liệu chuỗi khối toàn diện nhất cho các nhà phát triển, nhà phân tích và doanh nghiệp. Cho dù bạn đang xây dựng một bảng điều khiển tài chính phi tập trung (DeFi), một ví, một bot giao dịch, một tác nhân AI hay một nền tảng tuân thủ, các API dữ liệu cung cấp quyền truy cập nhanh chóng, chính xác và thân thiện với nhà phát triển vào dữ liệu trên chuỗi thiết yếu mà bạn cần_**
+**GoldRush (được cung cấp bởi Covalent) -** **_GoldRush cung cấp bộ API dữ liệu chuỗi khối toàn diện nhất cho các nhà phát triển, nhà phân tích và doanh nghiệp. Cho dù bạn đang xây dựng một bảng điều khiển DeFi, một ví, một bot giao dịch, một tác nhân AI hay một nền tảng tuân thủ, các API dữ liệu cung cấp quyền truy cập nhanh chóng, chính xác và thân thiện với nhà phát triển vào dữ liệu trên chuỗi thiết yếu mà bạn cần_**
 
 - [Trang web](https://goldrush.dev/)
 - [Tài liệu](https://goldrush.dev/docs/chains/ethereum)

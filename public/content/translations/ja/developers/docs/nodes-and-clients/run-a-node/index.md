@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | クライアント | ディスクサイズ（フル・ノード） | ディスクサイズ（フルアーカイブ） |
 | ---------- | --------------------- | ------------------------ |
-| Besu（ベス） | 1.8TB以上 | 12TB以上 |
-| Erigon（エリゴン） | 1.7TB以上 | 2.7TB以上 |
-| Geth（ゲス） | 1.8TB以上 | 2TB以上 |
-| Nethermind（ネザーマインド） | 1.7TB以上 | 14TB以上 |
-| Reth（レス） | 2.2TB以上 | 2.8TB以上 |
+| Besu | 1.8TB以上 | 12TB以上 |
+| Erigon | 1.7TB以上 | 2.7TB以上 |
+| Geth | 1.8TB以上 | 2TB以上 |
+| Nethermind | 1.7TB以上 | 14TB以上 |
+| Reth | 2.2TB以上 | 2.8TB以上 |
 
-- 注：フル・ノードのサイズは完全なチェーン履歴を保持したものであり、2026年9月に[Eth Docker](https://ethdocker.com/Usage/ResourceUsage)によって測定されました。履歴の失効をサポートするクライアントでは、マージ後の履歴のみで約1.2〜1.4TB、ローリング失効（Geth（ゲス）では未サポート）で約400〜650GBと、より少ない容量で済みます。
-- 注：アーカイブのサイズは、各クライアントのドキュメント（[Besu（ベス）](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)、[Erigon（エリゴン）](https://docs.erigon.tech/get-started/hardware-requirements)、[Geth（ゲス）](https://geth.ethereum.org/docs/fundamentals/archive)、[Nethermind（ネザーマインド）](https://docs.nethermind.io/get-started/system-requirements)、[Reth（レス）](https://reth.rs/run/system-requirements)）に基づいています。Geth（ゲス）の数値はパスベースのアーカイブのものです。トライの履歴も保持する場合は約6.5TBになります。Nethermind（ネザーマインド）の数値は2023年7月時点のものであり、それ以降増加しています。
+- 注：フル・ノードのサイズは完全なチェーン履歴を保持したものであり、2026年9月に[Eth Docker](https://ethdocker.com/Usage/ResourceUsage)によって測定されました。履歴の失効をサポートするクライアントでは、マージ後の履歴のみで約1.2〜1.4TB、ローリング失効（Gethでは未サポート）で約400〜650GBと、より少ない容量で済みます。
+- 注：アーカイブのサイズは、各クライアントのドキュメント（[Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)、[Erigon](https://docs.erigon.tech/get-started/hardware-requirements)、[Geth](https://geth.ethereum.org/docs/fundamentals/archive)、[Nethermind](https://docs.nethermind.io/get-started/system-requirements)、[Reth](https://reth.rs/run/system-requirements)）に基づいています。Gethの数値はパスベースのアーカイブのものです。トライの履歴も保持する場合は約6.5TBになります。Nethermindの数値は2023年7月時点のものであり、それ以降増加しています。
 
 コンセンサス・クライアントの場合、必要な容量はクライアントの実装や有効になっている機能（バリデータ・スラッシャーなど）によっても異なりますが、一般的にはビーコンデータ用にさらに15〜90GB、スーパーノードを実行している場合はブロブデータ用に約500GBを見込んでください。バリデータの数が多いと、帯域幅の負荷も増加します。[コンセンサス・クライアントの要件の詳細については、こちらの分析](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)をご覧ください。
 

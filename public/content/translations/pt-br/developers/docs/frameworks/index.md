@@ -67,7 +67,7 @@ Antes de mergulhar nos frameworks, recomendamos que você leia primeiro nossa in
 - [Site](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Plataforma de desenvolvimento Web3 que permite aos desenvolvedores de blockchain construir, testar, depurar, monitorar e operar contratos inteligentes e melhorar a experiência do usuário (UX) de dapps._**
+**Tenderly -** **_Plataforma de desenvolvimento Web3 que permite aos desenvolvedores de blockchain construir, testar, depurar, monitorar e operar contratos inteligentes e melhorar a UX de dapps._**
 
 - [Site](https://tenderly.co/)
 - [Documentação](https://docs.tenderly.co/)

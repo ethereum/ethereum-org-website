@@ -42,7 +42,7 @@ Hai lực lượng này quyết định liệu nguồn cung của Ethereum sẽ 
 
 Hệ thống Bằng chứng cổ phần (PoS) của Ethereum đã giảm đáng kể lượng phát hành ETH so với mô hình Bằng chứng công việc (PoW) trước đó. Các trình xác thực—những người khóa ETH để bảo vệ mạng lưới—kiếm được ETH như phần thưởng. Bạn có thể xem tỷ lệ phát hành hiện tại trên [Ultrasound Money](https://ultrasound.money).
 
-Tuy nhiên, con số này là động. Nhờ EIP-1559, khi hoạt động mạng lưới cao, tỷ lệ đốt ETH có thể vượt qua lượng phát hành, tạo ra hiệu ứng giảm phát. Ví dụ, trong những giai đoạn nhu cầu cao, như ra mắt token không thể thay thế (NFT) hoặc hoạt động tài chính phi tập trung (DeFi), lượng ETH bị đốt có thể nhiều hơn lượng phát hành.
+Tuy nhiên, con số này là động. Nhờ EIP-1559, khi hoạt động mạng lưới cao, tỷ lệ đốt ETH có thể vượt qua lượng phát hành, tạo ra hiệu ứng giảm phát. Ví dụ, trong những giai đoạn nhu cầu cao, như ra mắt NFT hoặc hoạt động DeFi, lượng ETH bị đốt có thể nhiều hơn lượng phát hành.
 
 ### Các công cụ để theo dõi Nguồn cung và Lượng phát hành ETH: {#tools-to-track-eth-supply-and-issuance}
 - [Ultrasound Money](https://ultrasound.money) - Theo dõi thời gian thực về nguồn cung, lượng phát hành và tỷ lệ đốt ETH

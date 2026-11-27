@@ -1,5 +1,12 @@
 # id Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.6/10
+Scope: 15 markdown files (roadmap statelessness/privacy/merge/verkle, nodes-and-clients x3, frameworks, glossary, supply, transactions, data-structures x3, ethash), changed lines only; no JSON in this PR. Sweeps clean (U+3002, U+2060, foreign script, English leftovers). 12 diffs read.
+
+**Fixed in this branch (3 critical, #112):** long forms added where English is bare: `merge:167` `Nilai Ekstrak Maksimal (MEV)` -> `MEV`; `statelessness:29` `organisasi otonom terdesentralisasi (DAO)` -> `DAO`; `nodes-and-clients:161` `lapisan 1 (L1)` / `(lapisan 2 (L2))` -> `L1` / `(L2)`.
+
+**Open (warnings):** `lapisan 2 (L2)` / `lapisan 1 (L1)` glossary expansions kept where English writes the long form (dev had them lowercase); `(PBS)` / `(RLP)` / `(EOA)`-style parentheticals added to English long forms (`statelessness:79`); `Recursive Length Prefix (RLP)` translated at `transactions:102` but left English at `:218`; `memerlukan` -> `mewajibkan` / `diwajibkan` churn for "requires" (`transactions`, `merge`); `Miskonsepsi` -> `Kesalahpahaman` and `MBit/dtk` -> `MBit/s` churn, `1 dtk` kept in nodes-as-a-service.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
 Scope: 76 markdown pages + 20 JSON namespaces (incl. 280 dev-tools descriptions), incremental updates, changed lines; sampled all MD diffs and ~120 JSON keys.
 

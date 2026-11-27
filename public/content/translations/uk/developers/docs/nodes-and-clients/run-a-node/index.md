@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | Клієнт     | Розмір диска (повний вузол) | Розмір диска (повний архів) |
 | ---------- | --------------------------- | --------------------------- |
-| Бесу       | 1.8 ТБ+                     | 12 ТБ+                      |
-| Ерігон     | 1.7 ТБ+                     | 2.7 ТБ+                     |
+| Besu       | 1.8 ТБ+                     | 12 ТБ+                      |
+| Erigon     | 1.7 ТБ+                     | 2.7 ТБ+                     |
 | Geth       | 1.8 ТБ+                     | 2 ТБ+                       |
-| Незермайнд | 1.7 ТБ+                     | 14 ТБ+                      |
-| Рет        | 2.2 ТБ+                     | 2.8 ТБ+                     |
+| Nethermind | 1.7 ТБ+                     | 14 ТБ+                      |
+| Reth       | 2.2 ТБ+                     | 2.8 ТБ+                     |
 
 - Примітка: Розміри повного вузла зберігають повну історію ланцюга і були виміряні у вересні 2026 року [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Клієнти, які підтримують експірацію історії, потребують менше: близько 1.2-1.4 ТБ лише з історією після Злиття, або близько 400-650 ГБ з ковзною експірацією (ще не підтримується Geth).
-- Примітка: Розміри архіву взяті з документації кожного клієнта ([Бесу](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Ерігон](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Незермайнд](https://docs.nethermind.io/get-started/system-requirements), [Рет](https://reth.rs/run/system-requirements)). Показник Geth стосується його архіву на основі шляхів (path-based); збереження історії trie також займає близько 6.5 ТБ. Показник Незермайнд датується липнем 2023 року і з того часу зріс.
+- Примітка: Розміри архіву взяті з документації кожного клієнта ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Показник Geth стосується його архіву на основі шляхів (path-based); збереження історії trie також займає близько 6.5 ТБ. Показник Nethermind датується липнем 2023 року і з того часу зріс.
 
 Для клієнтів консенсусу вимоги до простору також залежать від реалізації клієнта та ввімкнених функцій (наприклад, слешер валідатора), але загалом розраховуйте на додаткові 15-90 ГБ для даних beacon, плюс близько 500 ГБ даних блобів, якщо ви запускаєте супервузол. З великою кількістю валідаторів навантаження на пропускну здатність також зростає. Ви можете знайти [деталі щодо вимог до клієнтів консенсусу в цьому аналізі](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 

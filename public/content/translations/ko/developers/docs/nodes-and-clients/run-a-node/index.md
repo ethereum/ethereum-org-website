@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | 클라이언트 | 디스크 크기(풀 노드) | 디스크 크기(전체 아카이브) |
 | ---------- | --------------------- | ------------------------ |
-| 베수       | 1.8TB 이상            | 12TB 이상                |
-| 에리곤     | 1.7TB 이상            | 2.7TB 이상               |
+| Besu       | 1.8TB 이상            | 12TB 이상                |
+| Erigon     | 1.7TB 이상            | 2.7TB 이상               |
 | geth       | 1.8TB 이상            | 2TB 이상                 |
-| 네더마인드 | 1.7TB 이상            | 14TB 이상                |
-| 레스       | 2.2TB 이상            | 2.8TB 이상               |
+| Nethermind | 1.7TB 이상            | 14TB 이상                |
+| Reth       | 2.2TB 이상            | 2.8TB 이상               |
 
 - 참고: 풀 노드 크기는 전체 체인 기록을 유지하며 2026년 9월에 [Eth Docker](https://ethdocker.com/Usage/ResourceUsage)에서 측정했습니다. 기록 만료를 지원하는 클라이언트는 더 적은 공간이 필요합니다. 머지 이후 기록만 있는 경우 약 1.2\~1.4TB, 롤링 만료(geth에서는 아직 지원하지 않음)의 경우 약 400\~650GB가 필요합니다.
-- 참고: 아카이브 크기는 각 클라이언트의 문서([베수](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [에리곤](https://docs.erigon.tech/get-started/hardware-requirements), [geth](https://geth.ethereum.org/docs/fundamentals/archive), [네더마인드](https://docs.nethermind.io/get-started/system-requirements), [레스](https://reth.rs/run/system-requirements))를 참조했습니다. geth의 수치는 경로 기반 아카이브에 대한 것이며, 트라이(trie) 기록까지 유지하면 약 6.5TB가 필요합니다. 네더마인드의 수치는 2023년 7월 기준이며 이후 더 증가했습니다.
+- 참고: 아카이브 크기는 각 클라이언트의 문서([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements))를 참조했습니다. geth의 수치는 경로 기반 아카이브에 대한 것이며, 트라이(trie) 기록까지 유지하면 약 6.5TB가 필요합니다. Nethermind의 수치는 2023년 7월 기준이며 이후 더 증가했습니다.
 
 합의 클라이언트의 경우 공간 요구 사항은 클라이언트 구현 및 활성화된 기능(예: 검증자 슬래셔)에 따라 다르지만, 일반적으로 비콘 데이터에 15\~90GB가 추가로 필요하며 슈퍼노드를 실행하는 경우 약 500GB의 블롭 데이터가 추가로 필요합니다. 검증자 수가 많아지면 대역폭 부하도 증가합니다. [이 분석에서 합의 클라이언트 요구 사항에 대한 세부 정보](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)를 확인할 수 있습니다.
 

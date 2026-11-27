@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | Клиент     | Размер диска (полный узел) | Размер диска (полный архив) |
 | ---------- | -------------------------- | --------------------------- |
-| Бесу       | 1.8 ТБ+                    | 12 ТБ+                      |
-| Эригон     | 1.7 ТБ+                    | 2.7 ТБ+                     |
+| Besu       | 1.8 ТБ+                    | 12 ТБ+                      |
+| Erigon     | 1.7 ТБ+                    | 2.7 ТБ+                     |
 | Geth       | 1.8 ТБ+                    | 2 ТБ+                       |
-| Незермайнд | 1.7 ТБ+                    | 14 ТБ+                      |
-| Рет        | 2.2 ТБ+                    | 2.8 ТБ+                     |
+| Nethermind | 1.7 ТБ+                    | 14 ТБ+                      |
+| Reth       | 2.2 ТБ+                    | 2.8 ТБ+                     |
 
 - Примечание: Размеры полных узлов включают полную историю цепи и были измерены в сентябре 2026 года проектом [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Клиентам, поддерживающим экспирацию истории, требуется меньше: около 1.2–1.4 ТБ только с историей после слияния или около 400–650 ГБ со скользящей экспирацией (пока не поддерживается Geth).
-- Примечание: Размеры архивов взяты из документации каждого клиента ([Бесу](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Эригон](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Незермайнд](https://docs.nethermind.io/get-started/system-requirements), [Рет](https://reth.rs/run/system-requirements)). Цифра для Geth относится к его архиву на основе путей (path-based); сохранение истории префиксного дерева (trie) также занимает около 6.5 ТБ. Цифра для Незермайнд датируется июлем 2023 года и с тех пор увеличилась.
+- Примечание: Размеры архивов взяты из документации каждого клиента ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Цифра для Geth относится к его архиву на основе путей (path-based); сохранение истории префиксного дерева (trie) также занимает около 6.5 ТБ. Цифра для Nethermind датируется июлем 2023 года и с тех пор увеличилась.
 
 Для клиентов консенсуса требования к пространству также зависят от реализации клиента и включенных функций (например, слэшера валидатора), но в целом рассчитывайте еще на 15–90 ГБ для данных сигнальной цепи, плюс около 500 ГБ данных блобов при запуске суперузла. При большом количестве валидаторов нагрузка на пропускную способность также возрастает. Вы можете найти [подробности о требованиях к клиентам консенсуса в этом анализе](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 

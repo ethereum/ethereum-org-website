@@ -206,7 +206,7 @@ Il y a un trie d'état global, et il est mis à jour chaque fois qu'un client tr
 
 ### Trie de stockage {#storage-trie}
 
-Le trie de stockage est l'endroit où résident _toutes_ les données de contrat. Il y a un trie de stockage distinct pour chaque compte. Pour récupérer des valeurs à des positions de stockage spécifiques à une adresse donnée, l'adresse de stockage, la position entière des données stockées dans le stockage et l'ID du bloc sont requis. Ceux-ci peuvent ensuite être passés comme arguments à `eth_getStorageAt` défini dans l'interface de programmation d'application (API) JSON-RPC, par exemple, pour récupérer les données dans le créneau de stockage 0 pour l'adresse `0x295a70b2de5e3953354a6a8344e616ed314d7251` :
+Le trie de stockage est l'endroit où résident _toutes_ les données de contrat. Il y a un trie de stockage distinct pour chaque compte. Pour récupérer des valeurs à des positions de stockage spécifiques à une adresse donnée, l'adresse de stockage, la position entière des données stockées dans le stockage et l'ID du bloc sont requis. Ceux-ci peuvent ensuite être passés comme arguments à `eth_getStorageAt` défini dans l'API JSON-RPC, par exemple, pour récupérer les données dans le créneau de stockage 0 pour l'adresse `0x295a70b2de5e3953354a6a8344e616ed314d7251` :
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545

@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | 客户端 | 磁盘大小（全节点） | 磁盘大小（完整归档） |
 | ---------- | --------------------- | ------------------------ |
-| 贝苏 | 1.8TB+ | 12TB+ |
-| 埃里贡 | 1.7TB+ | 2.7TB+ |
+| Besu | 1.8TB+ | 12TB+ |
+| Erigon | 1.7TB+ | 2.7TB+ |
 | Geth | 1.8TB+ | 2TB+ |
-| 奈瑟曼德 | 1.7TB+ | 14TB+ |
-| 瑞斯 | 2.2TB+ | 2.8TB+ |
+| Nethermind | 1.7TB+ | 14TB+ |
+| Reth | 2.2TB+ | 2.8TB+ |
 
 - 注意：全节点大小保留了完整的链历史记录，由 [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) 在 2026 年 9 月测量。支持历史数据过期的客户端需要的空间较少：仅包含合并后历史记录的约为 1.2-1.4TB，或者具有滚动过期的约为 400-650GB（Geth 尚不支持）。
-- 注意：归档大小来自每个客户端的文档（[贝苏](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)、[埃里贡](https://docs.erigon.tech/get-started/hardware-requirements)、[Geth](https://geth.ethereum.org/docs/fundamentals/archive)、[奈瑟曼德](https://docs.nethermind.io/get-started/system-requirements)、[瑞斯](https://reth.rs/run/system-requirements)）。Geth 的数据是针对其基于路径的归档；如果同时保留前缀树历史记录，则大约需要 6.5TB。奈瑟曼德的数据可追溯到 2023 年 7 月，此后有所增长。
+- 注意：归档大小来自每个客户端的文档（[Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)、[Erigon](https://docs.erigon.tech/get-started/hardware-requirements)、[Geth](https://geth.ethereum.org/docs/fundamentals/archive)、[Nethermind](https://docs.nethermind.io/get-started/system-requirements)、[Reth](https://reth.rs/run/system-requirements)）。Geth 的数据是针对其基于路径的归档；如果同时保留前缀树历史记录，则大约需要 6.5TB。Nethermind 的数据可追溯到 2023 年 7 月，此后有所增长。
 
 对于共识客户端，空间要求还取决于客户端实现和启用的功能（例如，验证者罚没者），但通常需要额外的 15-90GB 用于信标数据，如果运行超级节点，还需要大约 500GB 的斑点数据。随着验证者数量的增加，带宽负载也会增加。你可以在[此分析中找到有关共识客户端要求的详细信息](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 

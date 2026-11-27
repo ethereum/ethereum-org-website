@@ -95,14 +95,14 @@ sidebarDepth: 2
 
 | کلائنٹ | ڈسک کا سائز (مکمل نوڈ) | ڈسک کا سائز (مکمل آرکائیو) |
 | ---------- | --------------------- | ------------------------ |
-| بیسو | <span dir="ltr">1.8TB+</span> | <span dir="ltr">12TB+</span> |
-| ایریگون | <span dir="ltr">1.7TB+</span> | <span dir="ltr">2.7TB+</span> |
+| Besu | <span dir="ltr">1.8TB+</span> | <span dir="ltr">12TB+</span> |
+| Erigon | <span dir="ltr">1.7TB+</span> | <span dir="ltr">2.7TB+</span> |
 | Geth | <span dir="ltr">1.8TB+</span> | <span dir="ltr">2TB+</span> |
-| نیدر مائنڈ | <span dir="ltr">1.7TB+</span> | <span dir="ltr">14TB+</span> |
-| ریتھ | <span dir="ltr">2.2TB+</span> | <span dir="ltr">2.8TB+</span> |
+| Nethermind | <span dir="ltr">1.7TB+</span> | <span dir="ltr">14TB+</span> |
+| Reth | <span dir="ltr">2.2TB+</span> | <span dir="ltr">2.8TB+</span> |
 
-- نوٹ: مکمل نوڈ کے سائز مکمل چین کی ہسٹری کو محفوظ رکھتے ہیں اور انہیں <span dir="ltr">September 2026</span> میں [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) کے ذریعے ماپا گیا تھا۔ وہ کلائنٹس جو ہسٹری ایکسپائری کو سپورٹ کرتے ہیں انہیں کم جگہ درکار ہوتی ہے: صرف انضمام کے بعد کی ہسٹری کے ساتھ تقریباً <span dir="ltr">1.2-1.4TB</span>، یا رولنگ ایکسپائری کے ساتھ تقریباً <span dir="ltr">400-650GB</span> (جسے ابھی تک Geth سپورٹ نہیں کرتا)۔
-- نوٹ: آرکائیو کے سائز ہر کلائنٹ کی دستاویزات سے لیے گئے ہیں ([بیسو](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)، [ایریگون](https://docs.erigon.tech/get-started/hardware-requirements)، [Geth](https://geth.ethereum.org/docs/fundamentals/archive)، [نیدر مائنڈ](https://docs.nethermind.io/get-started/system-requirements)، [ریتھ](https://reth.rs/run/system-requirements))۔ Geth کا ہندسہ اس کے پاتھ پر مبنی آرکائیو کے لیے ہے؛ ٹرائی (trie) ہسٹری کو بھی محفوظ رکھنے میں تقریباً <span dir="ltr">6.5TB</span> لگتے ہیں۔ نیدر مائنڈ کا ہندسہ <span dir="ltr">July 2023</span> کا ہے اور اس کے بعد سے بڑھ گیا ہے۔
+- نوٹ: مکمل نوڈ کے سائز مکمل چین کی ہسٹری کو محفوظ رکھتے ہیں اور انہیں ستمبر 2026 میں [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) کے ذریعے ماپا گیا تھا۔ وہ کلائنٹس جو ہسٹری ایکسپائری کو سپورٹ کرتے ہیں انہیں کم جگہ درکار ہوتی ہے: صرف انضمام کے بعد کی ہسٹری کے ساتھ تقریباً <span dir="ltr">1.2-1.4TB</span>، یا رولنگ ایکسپائری کے ساتھ تقریباً <span dir="ltr">400-650GB</span> (جسے ابھی تک Geth سپورٹ نہیں کرتا)۔
+- نوٹ: آرکائیو کے سائز ہر کلائنٹ کی دستاویزات سے لیے گئے ہیں ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)، [Erigon](https://docs.erigon.tech/get-started/hardware-requirements)، [Geth](https://geth.ethereum.org/docs/fundamentals/archive)، [Nethermind](https://docs.nethermind.io/get-started/system-requirements)، [Reth](https://reth.rs/run/system-requirements))۔ Geth کا ہندسہ اس کے پاتھ پر مبنی آرکائیو کے لیے ہے؛ ٹرائی (trie) ہسٹری کو بھی محفوظ رکھنے میں تقریباً <span dir="ltr">6.5TB</span> لگتے ہیں۔ Nethermind کا ہندسہ جولائی 2023 کا ہے اور اس کے بعد سے بڑھ گیا ہے۔
 
 اتفاقِ رائے کے کلائنٹس کے لیے، جگہ کی ضرورت کلائنٹ کے نفاذ اور فعال خصوصیات (جیسے، توثیق کار کٹوتی کنندہ) پر بھی منحصر ہے لیکن عام طور پر بیکن ڈیٹا کے لیے مزید <span dir="ltr">15-90GB</span>، اور اگر سپر نوڈ چلا رہے ہیں تو تقریباً <span dir="ltr">500GB</span> بلاب ڈیٹا کا شمار کریں۔ توثیق کاروں کی ایک بڑی تعداد کے ساتھ، بینڈوتھ کا بوجھ بھی بڑھ جاتا ہے۔ آپ [اس تجزیے میں اتفاقِ رائے کے کلائنٹ کے تقاضوں کی تفصیلات](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc) تلاش کر سکتے ہیں۔
 

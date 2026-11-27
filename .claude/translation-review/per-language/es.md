@@ -1,5 +1,14 @@
 # Spanish (es) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.9/10
+Scope: 15 markdown files, changed lines; 8 diffs read in full, sweeps over all 15.
+
+**Fixed in this branch (7 critical, #112):** patricia-merkle-trie `interfaz de programacion de aplicaciones (API) JSON-RPC` -> `API JSON-RPC`, `codificacion de prefijo de longitud recursiva (RLP)` -> `codificacion RLP`, `Go Ethereum (Geth)` -> `Geth` (English bare in all three); ethrex `capa 1 (L1)` / `capa 2 (L2)` expansions -> `L1` / `(L2)`; statelessness `zkEVM para la verificacion de la capa 1 (L1)` -> `verificacion L1` and `organizacion autonoma descentralizada (DAO)` -> `DAO`; supply `finanzas descentralizadas (DeFi)` -> `DeFi`.
+
+**Open:** `(PBS)` appended to `separacion proponente-constructor` (3 sites); `Red principal` for Mainnet in the clients table is the dev convention; `tarifa`/`comision` for fee not unified in transactions.
+
+**Notes:** run-a-node keeps the informal `tu` register of dev while nodes-and-clients uses `usted` (per-file, unchanged). Sweeps clean for U+3002, U+2060, foreign scripts, SPDX.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
 Scope: 71 markdown pages + 20 JSON namespaces, incremental updates of outdated content, changed lines only (full diff read; sweeps for U+3002/U+2060/foreign script clean; verify-structure shows only pre-existing errors).
 

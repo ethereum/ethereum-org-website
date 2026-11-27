@@ -1,5 +1,12 @@
 # Tamil (ta) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.4/10
+Scope: 15 markdown pages, changed lines only; read 6 diffs (nodes-and-clients, run-a-node, supply, privacy, transactions, nodes-as-a-service name lines) plus scripted sweeps over all 15. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): client names Latin in run-a-node table/notes (`பெசு/எரிகான்/கெத்/நெதர்மைண்ட்/ரெத்`, suffix `Geth-இன்`) and nodes-and-clients table rows, headings `எரிகான் (Erigon)`/`லோட்ஸ்டார் (Lodestar)`, Erigon/Lodestar paragraphs, nodes-as-a-service `பெசு` L225 and `லைட்ஹவுஸ்` L101 (113); privacy: English left in link text and prose (`EIP-8141 (Frame Transactions)` x2, `EIP-7805 (Fork-Choice Enforced Inclusion Lists, ...)`, `EIP-8250 (Keyed Nonces ...)` x2, `EIP-8182 (Private ETH and ERC-20 Transfers)`, `EIP-8182 (Protocol-Level Shielded Pools)`) translated; transactions L~70 `கோ எத்திரியம் (கெத்)` -> Geth; supply `மதிப்பீட்டாளர்` (evaluators) x6 -> glossary `சரிபார்ப்பான்` (same on dev; tree uses glossary form in 90 files vs 15).
+
+Open (warnings): `ஸ்மார்ட் ஒப்பந்தம்` x6 vs glossary/dominant `திறன் ஒப்பந்தம்` (unchanged from dev); `ஜேசன்-ஆர்பிசி` for JSON-RPC is tree-dominant and glossary-sanctioned (left); expansions kept under the ta first-mention allowance (`பதிலீடு செய்ய முடியாத டோக்கன் (NFT)`, `பரவலாக்கப்பட்ட நிதி (DeFi)`, `பயன்பாட்டு நிரலாக்க இடைமுகம் (API)`, `பரவலாக்கப்பட்ட செயலி (dapp)` x2 in frameworks where the second should be bare, MEV in merge, PBS/DAO); other nodes-and-clients lines keep `நிம்பஸ்/ப்ரிஸ்ம்/டெகு/லைட்ஹவுஸ்` on unchanged lines; `Optimistic sync` gloss on an unchanged heading.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.3/10
 Scope: 90 ta files (71 md, 19 JSON), changed lines only; read 12 md diffs and about 150 changed JSON keys (glossary, glossary-tooltip, learn-quizzes, page-roadmap, page-community, page-get-eth, page-layer-2-*, page-resources, page-bug-bounty and others).
 

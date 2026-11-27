@@ -1,5 +1,12 @@
 # Vietnamese (vi) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.7/10
+Scope: 15 markdown files, changed lines only; no JSON. Sweeps clean. 8 diffs read.
+
+**Fixed in this branch (~12 critical):** #112 long forms where English is bare: `(DeFi)` x3, `(dapp)` x2, `(NFT)` x2, `Giao diện Lập trình Ứng dụng (API)` (`frameworks:54,59,97,119`, `nodes-and-clients:95`, `supply:45`); `lớp 1 (L1)` / `(lớp 2 (L2))` (`nodes-and-clients:161`); `Giá trị có thể trích xuất tối đa (MEV)` (`nodes-and-clients:185`); `(DAO)` (`privacy:122`, `statelessness:29`); `lớp 1 (L1)` (`statelessness:81`). Glossary: `tiền boa phí` (gratuity) -> `phí ưu tiên` (`merge:167`).
+
+**Open (warnings):** `lớp 2 (L2)` kept where English says the long form; `(PBS)` added to English long form (`statelessness:68,91`); glossary-capitalized mid-sentence `Chuỗi khối`, `Ví`, `Giao thức`, `Nút`, `Mạng chính` (about 20 sites, `nodes-and-clients`, `verkle-trees`, `supply`); `bằng chứng dữ liệu` for "witness".
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.8/10
 Scope: 75 markdown pages (mostly SEO descriptions, L2BEAT to ETHBEAT, l1/l2 to L1/L2, Verkle to EIP-7864 rewrites, a few full prose passes) + 19 JSON namespaces. Full diff read (all md and JSON), placeholder/tag parity vs en clean, no foreign-script, U+3002 or U+2060, no untranslated English prose.
 

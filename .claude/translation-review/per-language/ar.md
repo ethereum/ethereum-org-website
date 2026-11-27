@@ -1,5 +1,21 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.6/10
+Scope: 13 md pages (ethash, data-structures trio, frameworks, nodes-as-a-service, run-a-node, transactions, glossary, merge, statelessness, verkle-trees, what-is-ether/supply), changed lines only; all 13 diffs read. Sweeps (U+3002/U+2060/CJK/Cyrillic/Indic, SPDX, isolate and span balance, English months, expansions) clean apart from the items below.
+
+**Fixed in this branch:**
+
+- merge:3 frontmatter `⁦September 2022⁩` (English date left in isolates) -> `سبتمبر 2022`.
+- nodes-as-a-service: `واجهة برمجة التطبيقات (API)` added where English has bare `API` at ~25 bullets (and bare `API` already on L28/L34) -> bare `API`; `(لآلة إيثريوم الافتراضية (EVM)، وTendermint)` and `17 سلسلة لآلة إيثريوم الافتراضية (EVM)` -> bare `EVM` (#112). frameworks:97 second-mention `EVM` expansion -> bare.
+- Tools re-transliterated on changed lines -> Latin in `<span dir="ltr">` (#113): OpenZeppelin SDK (frameworks:109), Geth/Besu/Erigon/Nethermind/Reth in run-a-node table and both size notes, nodes-as-a-service:225, patricia-merkle-trie Geth console, verkle-trees Geth default.
+
+**Open (warnings):**
+
+- transactions: sanitizer-era tanween/case drift on changed lines (`سيكون هذا حساب مملوك خارجياً`, `إذا كان حساب مملوك خارجياً`, `وليس عقد`; accusative `حسابًا مملوكًا خارجيًا`/`عقدًا` required); `ـًا` -> `اً` style switch.
+- English glosses added where English has none: `(terminal)`, `(beacon)`, `(blob)` (run-a-node), `(dapps)` (frameworks).
+- frameworks:113 `أوبن زبلن SDK` and Geth in unchanged lines still glossary-transliterated, so the pages now mix forms.
+- `الذي يُرغب في دفعها` (maxFeePerGas) drops the user as subject; ethash comment `ذو النهاية الصغرى` mis-cased.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.7/10
 Scope: 72 md pages + 20 JSON namespaces (incl. 277 dev-tools descriptions), incremental updates; changed lines only. Sampled 12 md diffs and ~100 JSON keys; scripted sweeps (U+3002/U+2060/CJK/Cyrillic/Indic, English sentences, isolate balance, abbreviation expansions, glossary-translit names) clean apart from the items below.
 

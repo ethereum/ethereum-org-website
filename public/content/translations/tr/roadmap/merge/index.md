@@ -164,7 +164,7 @@ Hisse Kanıtı, daha önce var olmayan işlem kesinliği kavramını tanıttı. 
 title="Yanılgı: &quot;Birleşme, staking çekim işlemlerini etkinleştirdi.&quot;"
 contentPreview="Yanlış, ancak staking çekim işlemleri o zamandan beri Şanghay/Capella yükseltmesi aracılığıyla etkinleştirildi.">
 
-Birleşme'den sonraki ilk zamanlarda, staker'lar yalnızca blok önerileri sonucunda kazanılan ücret bahşişlerine ve MEV'ye erişebiliyordu. Bu ödüller, doğrulayıcı tarafından kontrol edilen (<em>ücret alıcısı</em> olarak bilinen) staking dışı bir hesaba yatırılır ve anında kullanılabilir. Bu ödüller, doğrulayıcı görevlerini yerine getirmek için verilen protokol ödüllerinden ayrıdır.
+Birleşme'den sonraki ilk zamanlarda, staker'lar yalnızca blok önerileri sonucunda kazanılan öncelik ücretlerine ve MEV'ye erişebiliyordu. Bu ödüller, doğrulayıcı tarafından kontrol edilen (<em>ücret alıcısı</em> olarak bilinen) staking dışı bir hesaba yatırılır ve anında kullanılabilir. Bu ödüller, doğrulayıcı görevlerini yerine getirmek için verilen protokol ödüllerinden ayrıdır.
 
 Şanghay/Capella ağ yükseltmesinden bu yana, staker'lar artık herhangi bir fazla staking bakiyesinin (protokol ödüllerinden gelen 32'nin üzerindeki ETH) otomatik ödemelerini almaya başlamak için bir <em>çekim adresi</em> belirleyebilirler. Bu yükseltme ayrıca, bir doğrulayıcının ağdan çıkış yapması üzerine tüm bakiyesinin kilidini açma ve geri alma yeteneğini de etkinleştirdi.
 

@@ -1,5 +1,12 @@
 # Swahili (sw) -- Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 7.9/10
+Scope: 15 markdown files, changed lines only; no JSON. Sweeps clean. 8 diffs read.
+
+**Fixed in this branch (~16 critical):** #112 long forms where English is bare: `Kiolesura cha Kupanga Programu Tumizi (API)` -> `API` (`patricia-merkle-trie:209`, `frameworks:121`), `Kiambishi Awali cha Urefu Kijirudiacho (RLP)` -> `RLP` (`patricia:221`), `(DeFi)` x4, `(dapp)`, `(NFT)` (`frameworks`, `nodes-as-a-service:59`, `supply:45`), `tabaka la 1 (L1)` / `(tabaka la 2 (L2))` (`nodes-and-clients:161`, `statelessness:81`), `Thamani ya Juu Inayoweza Kutolewa (MEV)` (`merge:167`), `(DAO)` (`statelessness:29`, `privacy:122`). #113 `Potal Netwoki` -> `Portal Network` (`statelessness:29,33`). Glossary: `vidokezo vya ada` (hints) -> `ada za kipaumbele` for "fee tips" (`merge:167`).
+
+**Open (warnings):** `tabaka la 2 (L2)` / `tabaka la 1 (L1)` kept where English says the long form; `Kiambishi Awali cha Urefu Kijirudiacho (RLP)` at `transactions:102` (English long form); `Wajenga kizuizi` for block builders (glossary, `kizuizi` = obstruction; `privacy:44,58`); `imesafirishwa` for "shipped"; mixed `mteja`/`kiteja` for client.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.4/10
 Scope: 74 markdown (docs, tutorials, roadmap, staking, descriptions) + 19 JSON namespaces, changed lines only. 0 scripted-sweep hits (no U+3002/U+2060/foreign script in changed files).
 

@@ -98,7 +98,7 @@ sidebarDepth: 2
     - 基于 HTTP 和安全 WebSockets 的 JSON-RPC
     - 支持 3 条链
     - SLA，AWS 24/7 支持
-    - Go-ethereum 和莱特豪斯
+    - Go-ethereum 和 Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [文档](https://docs.ankr.com/)
@@ -222,7 +222,7 @@ sidebarDepth: 2
   - 功能
     - 免费入门层级
     - 一键式以太坊节点部署
-    - 可定制的客户端和算法（Geth、Quorum 和贝苏 || PoA、IBFT 和 Raft）
+    - 可定制的客户端和算法（Geth、Quorum 和 Besu || PoA、IBFT 和 Raft）
     - 500 多个管理和服务 API
     - 用于以太坊交易提交的 RESTful 接口（由 Apache Kafka 支持）
     - 用于事件交付的出站流（由 Apache Kafka 支持）
@@ -336,7 +336,7 @@ sidebarDepth: 2
     - 专用和共享节点
     - 仪表板
     - 在拉丁美洲不同地点的多个托管提供商上脱离 AWS 托管
-    - 普莱斯姆和莱特豪斯客户端
+    - Prysm 和 Lighthouse 客户端
 
 - [**SettleMint**](https://console.settlemint.com/)
   - [文档](https://docs.settlemint.com/)

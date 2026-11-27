@@ -158,7 +158,7 @@ Erigon, iliyojulikana zamani kama Turbo-Geth, ilianza kama mchepuo wa Go Ethereu
 
 ### ethrex {#ethrex}
 
-ethrex ni kiteja cha utekelezaji cha Ethereum rahisi na cha moduli kilichoandikwa katika Rust na kutengenezwa na LambdaClass. Kimejengwa kwa kuzingatia uthibitishaji wa sifuri-maarifa, na msingi huo huo wa msimbo unaweza kufanya kazi kama kiteja cha utekelezaji cha tabaka la 1 (L1) na kama ZK-Rollup ya wathibitishaji wengi (tabaka la 2 (L2)). Kina leseni mbili chini ya leseni za Apache 2.0 na MIT.
+ethrex ni kiteja cha utekelezaji cha Ethereum rahisi na cha moduli kilichoandikwa katika Rust na kutengenezwa na LambdaClass. Kimejengwa kwa kuzingatia uthibitishaji wa sifuri-maarifa, na msingi huo huo wa msimbo unaweza kufanya kazi kama kiteja cha utekelezaji cha L1 na kama ZK-Rollup ya wathibitishaji wengi (L2). Kina leseni mbili chini ya leseni za Apache 2.0 na MIT.
 
 Jifunze zaidi kwa kusoma [nyaraka za ethrex](https://docs.ethrex.xyz/) au kuangalia [hifadhi ya GitHub ya ethrex](https://github.com/lambdaclass/ethrex).
 ### Go Ethereum {#geth}

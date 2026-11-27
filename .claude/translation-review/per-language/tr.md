@@ -1,5 +1,12 @@
 # Turkish (tr) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.8/10
+Scope: 15 markdown files, changed lines only; no JSON. Sweeps clean. 9 diffs read.
+
+**Fixed in this branch (6 critical):** #112 `Özyineli Uzunluk Öneki (RLP) kodlamasıdır` -> `RLP kodlamasıdır` (`patricia:221`); `katman 1 (L1)` / `(katman 2 (L2))` -> `L1` / `(L2)` (`nodes-and-clients:161`); `merkeziyetsiz uygulamalarının (dapp)` -> `dapp'lerinin` (`nodes-as-a-service:59`); `(DAO)` (`privacy:122`, `statelessness:29`). Glossary: `ücret bahşişlerine` -> `öncelik ücretlerine` (`merge:167`, glossary tip = öncelik ücreti).
+
+**Open (warnings):** `katman 2 (L2)` kept where English says the long form; `(PBS)` added to English long form (`statelessness:68,91`); mid-sentence `Gaz`, `Blokzincir`, `Cüzdanlar`, `Protokol` capitalized (`transactions:152`, `run-a-node:68,463`, `verkle-trees:21`); `bahşiş` still on unchanged lines `merge:70,74`.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.8/10
 Scope: 73 markdown pages + 19 JSON namespaces, mostly small incremental updates (dev-tools descriptions not in this list). Sampled ~25 markdown diffs and ~90 changed JSON keys; scripted sweeps (U+3002, U+2060, foreign scripts, English leftovers, ICU/tag parity, anchors, component parity).
 

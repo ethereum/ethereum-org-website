@@ -92,7 +92,7 @@ sidebarDepth: 2
 자체 노드를 실행하면 프라이버시를 유지하며 자급자족하고 무신뢰 방식으로 이더리움을 사용할 수 있습니다. 클라이언트를 통해 데이터를 직접 검증할 수 있으므로 네트워크를 신뢰할 필요가 없습니다. "신뢰하지 말고 검증하라(Don't trust, verify)"는 유명한 블록체인 격언입니다.
 
 - 노드는 합의 규칙에 따라 모든 트랜잭션과 블록을 스스로 검증합니다. 즉, 네트워크의 다른 노드에 의존하거나 전적으로 신뢰할 필요가 없습니다.
-- 자체 노드와 함께 이더리움 지갑을 사용할 수 있습니다. 중개자에게 주소와 잔액을 노출할 필요가 없으므로 탈중앙화 애플리케이션 (dapp)을 더 안전하고 프라이버시를 유지하며 사용할 수 있습니다. 모든 것은 자체 클라이언트로 확인할 수 있습니다. [메타마스크](https://metamask.io), [Frame](https://frame.sh/) 및 [기타 여러 지갑](/wallets/find-wallet/)은 RPC 가져오기를 제공하여 사용자의 노드를 사용할 수 있게 해줍니다.
+- 자체 노드와 함께 이더리움 지갑을 사용할 수 있습니다. 중개자에게 주소와 잔액을 노출할 필요가 없으므로 탈중앙화 애플리케이션 (dapp)을 더 안전하고 프라이버시를 유지하며 사용할 수 있습니다. 모든 것은 자체 클라이언트로 확인할 수 있습니다. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) 및 [기타 여러 지갑](/wallets/find-wallet/)은 RPC 가져오기를 제공하여 사용자의 노드를 사용할 수 있게 해줍니다.
 - 이더리움의 데이터에 의존하는 다른 서비스를 실행하고 자체 호스팅할 수 있습니다. 예를 들어, 비콘 체인 검증자, 레이어 2 (L2)와 같은 소프트웨어, 인프라, 블록 탐색기, 결제 프로세서 등이 될 수 있습니다.
 - 자체 사용자 지정 [RPC 엔드포인트](/developers/docs/apis/json-rpc/)를 제공할 수 있습니다. 커뮤니티가 대규모 중앙화된 제공업체를 피할 수 있도록 이러한 엔드포인트를 공개적으로 제공할 수도 있습니다.
 - <strong>프로세스 간 통신(IPC)</strong>을 사용하여 노드에 연결하거나 프로그램을 플러그인으로 로드하도록 노드를 다시 작성할 수 있습니다. 이는 지연 시간을 줄여주어, Web3 라이브러리를 사용하여 많은 데이터를 처리하거나 트랜잭션을 가능한 한 빨리 교체해야 할 때(예: 프론트러닝) 큰 도움이 됩니다.
@@ -136,11 +136,11 @@ sidebarDepth: 2
 | 클라이언트                                                               | 언어       | 운영 체제             | 네트워크                | 동기화 전략                                                | 상태 프루닝     |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
 | [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Archive, Pruned |
-| [네더마인드](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Fast, [Full](#full-sync)               | Archive, Pruned |
-| [베수](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync) | Archive, Pruned |
-| [에리곤](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Fast, [Full](#full-sync)               | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync) | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
 | [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                     | Pruned          |
-| [레스](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                         | Archive, Pruned |
 
 지원되는 네트워크에 대한 자세한 내용은 [이더리움 네트워크](/developers/docs/networks/)를 읽어보세요.
 
@@ -154,11 +154,11 @@ Hyperledger 베수는 퍼블릭 및 허가형 네트워크를 위한 엔터프�
 
 ### 에리곤 {#erigon}
 
-이전에 Turbo-Geth로 알려졌던 에리곤(Erigon)은 속도와 디스크 공간 효율성을 지향하는 고 이더리움 (geth)의 포크로 시작되었습니다. 에리곤은 완전히 재설계된 이더리움 구현체로, 현재 Go로 작성되었지만 다른 언어로 된 구현체도 개발 중입니다. 에리곤의 목표는 더 빠르고, 더 모듈화되고, 더 최적화된 이더리움 구현체를 제공하는 것입니다. 3TB 미만의 디스크 공간을 사용하여 3일 이내에 전체 아카이브 노드 동기화를 수행할 수 있습니다.
+이전에 Turbo-Geth로 알려졌던 Erigon은 속도와 디스크 공간 효율성을 지향하는 Go Ethereum의 포크로 시작되었습니다. Erigon은 완전히 재설계된 이더리움 구현체로, 현재 Go로 작성되었지만 다른 언어로 된 구현체도 개발 중입니다. Erigon의 목표는 더 빠르고, 더 모듈화되고, 더 최적화된 이더리움 구현체를 제공하는 것입니다. 3TB 미만의 디스크 공간을 사용하여 3일 이내에 전체 아카이브 노드 동기화를 수행할 수 있습니다.
 
 ### ethrex {#ethrex}
 
-ethrex는 Rust로 작성되고 LambdaClass에서 개발한 미니멀하고 모듈화된 이더리움 실행 클라이언트입니다. 영지식 증명을 염두에 두고 구축되었으며, 동일한 코드베이스가 레이어 1 (L1) 실행 클라이언트와 다중 증명자 ZK-롤업(레이어 2 (L2))으로 모두 실행될 수 있습니다. Apache-2.0 및 MIT 라이선스에 따라 이중 라이선스가 부여됩니다.
+ethrex는 Rust로 작성되고 LambdaClass에서 개발한 미니멀하고 모듈화된 이더리움 실행 클라이언트입니다. 영지식 증명을 염두에 두고 구축되었으며, 동일한 코드베이스가 L1 실행 클라이언트와 다중 증명자 ZK-롤업(L2)으로 모두 실행될 수 있습니다. Apache-2.0 및 MIT 라이선스에 따라 이중 라이선스가 부여됩니다.
 
 자세한 내용은 [ethrex 문서](https://docs.ethrex.xyz/)를 읽거나 [ethrex GitHub 리포지토리](https://github.com/lambdaclass/ethrex)를 확인하여 알아보세요.
 ### 고 이더리움 (geth) {#geth}
@@ -206,9 +206,9 @@ ethrex는 Rust로 작성되고 LambdaClass에서 개발한 미니멀하고 모�
 
 ### 로드스타 {#lodestar}
 
-로드스타(Lodestar)는 Apache-2.0 라이선스에 따라 TypeScript로 작성된 프로덕션 준비가 완료된 합의 클라이언트 구현체입니다. ChainSafe Systems에서 유지 관리하며 솔로 스테이킹 사용자, 개발자 및 연구원을 위한 가장 최신의 합의 클라이언트입니다. 로드스타는 이더리움 프로토콜의 JavaScript 구현체로 구동되는 비콘 노드와 검증자 클라이언트로 구성됩니다. 로드스타는 경량 클라이언트를 통해 이더리움 사용성을 개선하고, 더 많은 개발자 그룹으로 접근성을 확대하며, 생태계 다양성에 더욱 기여하는 것을 목표로 합니다.
+Lodestar는 Apache-2.0 라이선스에 따라 TypeScript로 작성된 프로덕션 준비가 완료된 합의 클라이언트 구현체입니다. ChainSafe Systems에서 유지 관리하며 솔로 스테이킹 사용자, 개발자 및 연구원을 위한 가장 최신의 합의 클라이언트입니다. Lodestar는 이더리움 프로토콜의 JavaScript 구현체로 구동되는 비콘 노드와 검증자 클라이언트로 구성됩니다. Lodestar는 경량 클라이언트를 통해 이더리움 사용성을 개선하고, 더 많은 개발자 그룹으로 접근성을 확대하며, 생태계 다양성에 더욱 기여하는 것을 목표로 합니다.
 
-자세한 내용은 [로드스타 웹사이트](https://lodestar.chainsafe.io/)에서 확인할 수 있습니다.
+자세한 내용은 [Lodestar 웹사이트](https://lodestar.chainsafe.io/)에서 확인할 수 있습니다.
 
 ### 님버스 {#nimbus}
 

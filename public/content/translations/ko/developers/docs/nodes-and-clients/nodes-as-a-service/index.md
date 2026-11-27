@@ -98,7 +98,7 @@ sidebarDepth: 2
     - HTTP 및 보안 WebSocket을 통한 JSON-RPC
     - 3개 체인 지원
     - SLA, 연중무휴 AWS 지원
-    - 고 이더리움(geth) 및 라이트하우스
+    - Go-ethereum 및 Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [문서](https://docs.ankr.com/)
@@ -222,7 +222,7 @@ sidebarDepth: 2
   - 기능
     - 무료 스타터 티어
     - 원클릭 이더리움 노드 배포
-    - 사용자 정의 가능한 클라이언트 및 알고리즘(고 이더리움(geth), Quorum 및 베수 || 권위 증명(PoA), IBFT 및 Raft)
+    - 사용자 정의 가능한 클라이언트 및 알고리즘(Geth, Quorum 및 Besu || 권위 증명(PoA), IBFT 및 Raft)
     - 500개 이상의 관리 및 서비스 API
     - 이더리움 트랜잭션 제출을 위한 RESTful 인터페이스(Apache Kafka 기반)
     - 이벤트 전달을 위한 아웃바운드 스트림(Apache Kafka 기반)
@@ -274,7 +274,7 @@ sidebarDepth: 2
 - [**NodeFlare**](https://nodeflare.app/)
   - [문서](https://nodeflare.app/docs/quick-start)
   - 기능
-    - 이더리움, Base, 아비트럼 원, 옵티미즘 및 Unichain을 포함한 17개의 EVM 체인
+    - 이더리움, Base, Arbitrum One, Optimism 및 Unichain을 포함한 17개의 EVM 체인
     - 프랑크푸르트, 런던, 애슈번, 시카고, 로스앤젤레스 및 싱가포르에 게이트웨이가 있는 자체 베어메탈 노드
     - 무료 퍼블릭 엔드포인트(API 키 없음, IP당 10초마다 50건의 요청)
     - 월 300만 컴퓨팅 유닛 및 초당 10건의 요청을 제공하는 무료 API 키, 신용카드 불필요

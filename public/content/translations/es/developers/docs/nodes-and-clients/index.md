@@ -158,7 +158,7 @@ Erigon, anteriormente conocido como Turbo-Geth, comenzó como una bifurcación d
 
 ### ethrex {#ethrex}
 
-ethrex es un cliente de ejecución de Ethereum minimalista y modular escrito en Rust y desarrollado por LambdaClass. Está construido pensando en las pruebas de conocimiento cero, y la misma base de código puede ejecutarse tanto como un cliente de ejecución de capa 1 (L1) como un rollup de conocimiento cero (ZK-Rollup) de capa 2 (L2) de múltiples probadores. Tiene licencia dual bajo las licencias Apache-2.0 y MIT.
+ethrex es un cliente de ejecución de Ethereum minimalista y modular escrito en Rust y desarrollado por LambdaClass. Está construido pensando en las pruebas de conocimiento cero, y la misma base de código puede ejecutarse tanto como un cliente de ejecución L1 como un ZK-Rollup de múltiples probadores (L2). Tiene licencia dual bajo las licencias Apache-2.0 y MIT.
 
 Obtenga más información leyendo la [documentación de ethrex](https://docs.ethrex.xyz/) o consultando el [repositorio de GitHub de ethrex](https://github.com/lambdaclass/ethrex).
 

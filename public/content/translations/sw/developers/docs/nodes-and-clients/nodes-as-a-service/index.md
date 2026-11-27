@@ -56,7 +56,7 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
   - Vipengele
     - Kiwango kikubwa zaidi cha bure chenye vitengo vya kompyuta milioni 300 kwa mwezi (takriban maombi milioni 30 ya getLatestBlock)
     - Usaidizi wa minyororo mingi kwa Polygon, Starknet, Optimism, Arbitrum
-    - Inawezesha takriban 70% ya programu tumizi zilizogatuliwa (dapps) kubwa zaidi za Ethereum na kiasi cha miamala ya fedha zilizogatuliwa (DeFi)
+    - Inawezesha takriban 70% ya programu tumizi zilizogatuliwa (dapps) kubwa zaidi za Ethereum na kiasi cha miamala ya DeFi
     - Arifa za webhook za wakati halisi kupitia Alchemy Notify
     - Usaidizi bora zaidi katika darasa lake na kutegemewa / uthabiti
     - API ya NFT ya Alchemy

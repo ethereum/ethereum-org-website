@@ -59,7 +59,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Pohání ~70 % největších decentralizovaných aplikací (dapp) na Ethereu a objemu transakcí v decentralizovaných financích (DeFi)
     - Upozornění webhooků v reálném čase přes Alchemy Notify
     - Nejlepší podpora a spolehlivost / stabilita ve své třídě
-    - API pro nezaměnitelné tokeny (NFT) od Alchemy
+    - API NFT od Alchemy
     - Ovládací panel s Request Explorer, Mempool Watcher a Composer
     - Integrovaný přístup k testnetovému faucetu
     - Aktivní komunita tvůrců na Discordu s 18 tisíci uživateli
@@ -320,7 +320,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Monitorování chytrých kontraktů přes Webhooky
     - Intuitivní ovládací panel, analytická sada, RPC composer
     - Pokročilé bezpečnostní funkce (JWT, maskování, whitelisting)
-    - API pro data a analytiku nezaměnitelných tokenů (NFT)
+    - API pro data a analytiku NFT
     - [Certifikace SOC2](https://www.quicknode.com/security)
     - Vhodné pro vývojáře i podniky
 
@@ -375,7 +375,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
     - Koncové body RPC i WSS jsou otevřené k použití
     - Neomezený přístup k API archivních dat
     - Ovládací panel s Request Explorer a Mempool Watcher
-    - API pro data nezaměnitelných tokenů (NFT) a upozornění Webhook
+    - API pro data NFT a upozornění Webhook
     - Platba v kryptu
     - Externí podpora pro dodatečné požadavky na chování
 
@@ -405,7 +405,7 @@ Zde je seznam některých z nejoblíbenějších poskytovatelů uzlů Etherea, n
   - Funkce
     - No-code automatizační platforma podnikové třídy poskytující nasazení, monitorování a správu uzlů a sítí blockchainu
     - Více než 30 podporovaných protokolů a integrací a další přibývají
-    - Služby infrastruktury Web3 s přidanou hodnotou, jako je decentralizované úložiště, decentralizovaná identita (DID) a datová API blockchainové účetní knihy pro reálné případy použití
+    - Služby infrastruktury Web3 s přidanou hodnotou, jako je decentralizované úložiště, decentralizovaná identita a datová API blockchainové účetní knihy pro reálné případy použití
     - Podpora 24/7 a proaktivní monitorování neustále zajišťují zdraví uzlů.
     - Koncové body RPC nabízejí ověřený přístup k API, bezproblémovou správu s intuitivním ovládacím panelem a analytikou.
     - Poskytuje na výběr možnosti spravovaného cloudu i vlastního cloudu a podporuje všechny hlavní poskytovatele cloudu, jako jsou AWS, Azure, Google Cloud, Digital Ocean a on-premise.

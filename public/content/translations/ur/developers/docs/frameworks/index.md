@@ -106,7 +106,7 @@ lang: ur
 - [<span dir="ltr">GitHub</span>](https://github.com/eth-brownie/brownie)
 - **<span dir="ltr">Brownie</span> فی الحال غیر زیرِ انتظام (unmaintained) ہے**
 
-**اوپن زیپلن <span dir="ltr">SDK</span> -** **_حتمی سمارٹ کنٹریکٹ ٹول کٹ: سمارٹ کنٹریکٹس کو تیار کرنے، مرتب کرنے، اپ گریڈ کرنے، تعینات کرنے اور ان کے ساتھ تعامل کرنے میں آپ کی مدد کرنے کے لیے ٹولز کا ایک مجموعہ۔_**
+**<span dir="ltr">OpenZeppelin SDK</span> -** **_حتمی سمارٹ کنٹریکٹ ٹول کٹ: سمارٹ کنٹریکٹس کو تیار کرنے، مرتب کرنے، اپ گریڈ کرنے، تعینات کرنے اور ان کے ساتھ تعامل کرنے میں آپ کی مدد کرنے کے لیے ٹولز کا ایک مجموعہ۔_**
 
 - [<span dir="ltr">GitHub</span>](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [کمیونٹی فورم](https://forum.openzeppelin.com/c/support/17)

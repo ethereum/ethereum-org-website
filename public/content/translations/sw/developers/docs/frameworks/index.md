@@ -53,12 +53,12 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 - [Mifano](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Unda programu zinazoendeshwa na Ethereum kwa amri moja. Inakuja na toleo pana la mifumo ya UI na violezo vya fedha zilizogatuliwa (DeFi) vya kuchagua._**
+**Create Eth App -** **_Unda programu zinazoendeshwa na Ethereum kwa amri moja. Inakuja na toleo pana la mifumo ya UI na violezo vya DeFi vya kuchagua._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Violezo](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem na RainbowKit kwa chaguo lako la Hardhat au Foundry: upakiaji upya wa mkataba wa haraka, ndoano maalum za React, mkoba wa kuchoma na bomba la ndani, na moduli za ugani kwa uundaji wa programu tumizi iliyogatuliwa (dapp) ya mrundikano kamili._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem na RainbowKit kwa chaguo lako la Hardhat au Foundry: upakiaji upya wa mkataba wa haraka, ndoano maalum za React, mkoba wa kuchoma na bomba la ndani, na moduli za ugani kwa uundaji wa dapp ya mrundikano kamili._**
 
 - [Tovuti](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
@@ -96,7 +96,7 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Jukwaa la uundaji la Web3 la kiwango cha biashara, ambalo linakuruhusu kujenga programu tumizi za tokani isiyobadilishika (NFT) kwenye minyororo yote mikuu ya Minyororo ya EVM (na mingine)._**
+**Crossmint -** **_Jukwaa la uundaji la Web3 la kiwango cha biashara, ambalo linakuruhusu kujenga programu tumizi za NFT kwenye minyororo yote mikuu ya Minyororo ya EVM (na mingine)._**
 
 - [Tovuti](https://www.crossmint.com)
 - [Nyaraka](https://docs.crossmint.com)
@@ -118,7 +118,7 @@ Kabla ya kuzama kwenye mifumo, tunapendekeza usome kwanza utangulizi wetu wa [da
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (inayoendeshwa na Covalent) -** **_GoldRush inatoa mkusanyiko wa Kiolesura cha Kupanga Programu Tumizi (API) wa data ya mnyororo wa vitalu wa kina zaidi kwa waundaji, wachambuzi, na biashara. Iwe unajenga dashibodi ya fedha zilizogatuliwa (DeFi), mkoba, boti ya biashara, ajenti wa akili bandia au jukwaa la kufuata, API za data hutoa ufikiaji wa haraka, sahihi, na rafiki kwa waundaji kwa data muhimu ya mnyororoni unayohitaji_**
+**GoldRush (inayoendeshwa na Covalent) -** **_GoldRush inatoa mkusanyiko wa API wa data ya mnyororo wa vitalu wa kina zaidi kwa waundaji, wachambuzi, na biashara. Iwe unajenga dashibodi ya DeFi, mkoba, boti ya biashara, ajenti wa akili bandia au jukwaa la kufuata, API za data hutoa ufikiaji wa haraka, sahihi, na rafiki kwa waundaji kwa data muhimu ya mnyororoni unayohitaji_**
 
 - [Tovuti](https://goldrush.dev/)
 - [Nyaraka](https://goldrush.dev/docs/chains/ethereum)

@@ -158,7 +158,7 @@ Eski adıyla Turbo-Geth olarak bilinen Erigon, hız ve disk alanı verimliliğin
 
 ### ethrex {#ethrex}
 
-ethrex, Rust ile yazılmış ve LambdaClass tarafından geliştirilmiş minimalist, modüler bir Ethereum yürütme istemcisidir. Sıfır bilgi ispatı göz önünde bulundurularak oluşturulmuştur ve aynı kod tabanı hem bir katman 1 (L1) yürütme istemcisi hem de çoklu kanıtlayıcılı bir ZK-Rollup (katman 2 (L2)) olarak çalışabilir. Apache 2.0 ve MIT lisansları altında çift lisanslıdır.
+ethrex, Rust ile yazılmış ve LambdaClass tarafından geliştirilmiş minimalist, modüler bir Ethereum yürütme istemcisidir. Sıfır bilgi ispatı göz önünde bulundurularak oluşturulmuştur ve aynı kod tabanı hem bir L1 yürütme istemcisi hem de çoklu kanıtlayıcılı bir ZK-Rollup (L2) olarak çalışabilir. Apache 2.0 ve MIT lisansları altında çift lisanslıdır.
 
 [ethrex belgelerini](https://docs.ethrex.xyz/) okuyarak veya [ethrex GitHub deposuna](https://github.com/lambdaclass/ethrex) göz atarak daha fazla bilgi edinin.
 ### Go Ethereum {#geth}

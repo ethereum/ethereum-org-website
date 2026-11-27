@@ -164,7 +164,7 @@ Uthibitisho wa Dau ulianzisha dhana ya ukamilifu wa muamala ambayo haikuwepo hap
 title="Dhana potofu: &quot;Unganisho uliwezesha utoaji wa dhamana.&quot;"
 contentPreview="Si kweli, lakini utoaji wa dhamana umewezeshwa tangu wakati huo kupitia uboreshaji wa Shanghai/Capella.">
 
-Hapo awali baada ya Unganisho, waweka dhamana wangeweza tu kufikia vidokezo vya ada na Thamani ya Juu Inayoweza Kutolewa (MEV) ambazo zilipatikana kutokana na mapendekezo ya kitalu. Tuzo hizi huwekwa kwenye akaunti isiyo ya uwekaji dhamana inayodhibitiwa na mthibitishaji (inayojulikana kama <em>mpokeaji wa ada</em>), na zinapatikana mara moja. Tuzo hizi ni tofauti na tuzo za itifaki kwa kutekeleza majukumu ya mthibitishaji.
+Hapo awali baada ya Unganisho, waweka dhamana wangeweza tu kufikia ada za kipaumbele na MEV ambazo zilipatikana kutokana na mapendekezo ya kitalu. Tuzo hizi huwekwa kwenye akaunti isiyo ya uwekaji dhamana inayodhibitiwa na mthibitishaji (inayojulikana kama <em>mpokeaji wa ada</em>), na zinapatikana mara moja. Tuzo hizi ni tofauti na tuzo za itifaki kwa kutekeleza majukumu ya mthibitishaji.
 
 Tangu uboreshaji wa mtandao wa Shanghai/Capella, waweka dhamana sasa wanaweza kuteua <em>anwani ya utoaji</em> ili kuanza kupokea malipo ya kiotomatiki ya salio lolote la ziada la uwekaji dhamana (ETH zaidi ya 32 kutoka kwenye tuzo za itifaki). Uboreshaji huu pia uliwezesha uwezo wa mthibitishaji kufungua na kudai salio lake lote anapojitoa kwenye mtandao.
 

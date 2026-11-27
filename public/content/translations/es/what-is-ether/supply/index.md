@@ -42,7 +42,7 @@ Estas dos fuerzas determinan si el suministro de Ethereum crece (inflacionario) 
 
 El sistema de prueba de participación (PoS) de Ethereum ha reducido drásticamente la emisión de ETH en comparación con su modelo anterior de prueba de trabajo (PoW). Los validadores (que bloquean ETH para proteger la red) ganan ETH como recompensa. Puede ver la tasa de emisión actual en [Ultrasound Money](https://ultrasound.money).
 
-Sin embargo, este número es dinámico. Gracias a la EIP-1559, cuando la actividad de la red es alta, las tasas de quema de ETH pueden superar la emisión, creando un efecto deflacionario. Por ejemplo, durante períodos de alta demanda, como los lanzamientos de NFT o la actividad de las finanzas descentralizadas (DeFi), es posible que se queme más ETH del que se emite.
+Sin embargo, este número es dinámico. Gracias a la EIP-1559, cuando la actividad de la red es alta, las tasas de quema de ETH pueden superar la emisión, creando un efecto deflacionario. Por ejemplo, durante períodos de alta demanda, como los lanzamientos de NFT o la actividad de DeFi, es posible que se queme más ETH del que se emite.
 
 ### Herramientas para rastrear el suministro y la emisión de ETH: {#tools-to-track-eth-supply-and-issuance}
 - [Ultrasound Money](https://ultrasound.money): seguimiento en tiempo real del suministro, la emisión y las tasas de quema de ETH.

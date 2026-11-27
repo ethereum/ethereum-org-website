@@ -42,7 +42,7 @@ Te dwie siły decydują o tym, czy podaż Ethereum z czasem rośnie (inflacja), 
 
 System dowodu stawki (PoS) Ethereum drastycznie zmniejszył emisję ETH w porównaniu do wcześniejszego modelu dowodu pracy (PoW). Walidatorzy – którzy blokują ETH, aby zabezpieczyć sieć – zarabiają ETH jako nagrody. Obecny wskaźnik emisji można sprawdzić na stronie [Ultrasound Money](https://ultrasound.money).
 
-Jednak ta liczba jest dynamiczna. Dzięki EIP-1559, gdy aktywność sieci jest wysoka, wskaźniki spalania ETH mogą przewyższyć emisję, tworząc efekt deflacyjny. Na przykład w okresach wysokiego popytu, takich jak premiery niewymiennych tokenów (NFT) lub aktywność w zdecentralizowanych finansach (DeFi), może zostać spalone więcej ETH, niż wyemitowano.
+Jednak ta liczba jest dynamiczna. Dzięki EIP-1559, gdy aktywność sieci jest wysoka, wskaźniki spalania ETH mogą przewyższyć emisję, tworząc efekt deflacyjny. Na przykład w okresach wysokiego popytu, takich jak premiery NFT lub aktywność w DeFi, może zostać spalone więcej ETH, niż wyemitowano.
 
 ### Narzędzia do śledzenia podaży i emisji ETH: {#tools-to-track-eth-supply-and-issuance}
 - [Ultrasound Money](https://ultrasound.money) – Śledzenie w czasie rzeczywistym podaży, emisji i wskaźników spalania ETH

@@ -16,7 +16,7 @@ Das Gesamtangebot an ETH ist dynamisch und ändert sich aufgrund von zwei Hauptf
 1. **Proof-of-Stake (PoS)-Emission**: Neue ETH werden als Belohnungen für Validatoren erstellt, die das Netzwerk sichern
 2. **EIP-1559-Verbrennung**: Ein Teil der Transaktionsgebühren wird dauerhaft aus dem Verkehr gezogen
 
-Du kannst das aktuelle Angebot und diese Änderungen in Echtzeit auf Plattformen wie [Ultrasound Money](https://ultrasound.money) verfolgen.
+Sie können das aktuelle Angebot und diese Änderungen in Echtzeit auf Plattformen wie [Ultrasound Money](https://ultrasound.money) verfolgen.
 
 Das Angebot und die Emission von Ethereum sind wesentliche Metriken, um die Gesundheit und Zukunft des Netzwerks zu verstehen. Aber was genau bedeutet ETH-Emission? Schauen wir uns das genauer an.
 
@@ -40,7 +40,7 @@ Diese beiden Kräfte bestimmen, ob das Angebot von Ethereum im Laufe der Zeit w�
 
 ## ETH-Angebot und -Emission heute {#eth-supply-today}
 
-Das Proof-of-Stake (PoS)-System von Ethereum hat die ETH-Emission im Vergleich zu seinem früheren Proof-of-Work (PoW)-Modell drastisch reduziert. Validatoren – die ETH sperren, um das Netzwerk zu sichern – verdienen ETH als Belohnungen. Du kannst die aktuelle Emissionsrate auf [Ultrasound Money](https://ultrasound.money) sehen.
+Das Proof-of-Stake (PoS)-System von Ethereum hat die ETH-Emission im Vergleich zu seinem früheren Proof-of-Work (PoW)-Modell drastisch reduziert. Validatoren – die ETH sperren, um das Netzwerk zu sichern – verdienen ETH als Belohnungen. Sie können die aktuelle Emissionsrate auf [Ultrasound Money](https://ultrasound.money) sehen.
 
 Diese Zahl ist jedoch dynamisch. Dank EIP-1559 können die ETH-Verbrennungsraten bei hoher Netzwerkaktivität die Emission übersteigen, was einen deflationären Effekt erzeugt. Zum Beispiel können in Zeiten hoher Nachfrage, wie bei NFT-Starts oder DeFi-Aktivitäten, mehr ETH verbrannt als emittiert werden.
 
@@ -67,11 +67,11 @@ Das zukünftige Angebot von Ethereum ist nicht festgelegt – es hängt von mehr
 
 ## Zusammenfassung: ETH-Angebot, Emission und wie es weitergeht {#recap}
 
-Hier ist eine kurze Zusammenfassung dessen, was du über das ETH-Angebot und die Emission wissen musst:
+Hier ist eine kurze Zusammenfassung dessen, was Sie über das ETH-Angebot und die Emission wissen müssen:
 
 - **ETH-Angebot**: Dynamisch und sich ständig ändernd, in Echtzeit verfolgbar durch Tools wie [Ultrasound Money](https://ultrasound.money)
 - **Emission unter PoS**: Im Vergleich zu PoW deutlich reduziert, wobei die Belohnungen an Validatoren gehen. Siehe aktuelle Raten auf [Ultrasound Money](https://ultrasound.money)
 - **Die Rolle von EIP-1559**: Die ETH-Verbrennung kann das Netzwerk in Zeiten hoher Aktivität deflationär machen
 - **Zukünftige Trends**: Staking-Teilnahme, Netzwerknachfrage und Protokoll-Updates werden alle das ETH-Angebot prägen
 
-Das Verständnis der ETH-Emission hilft dabei, den Wert von Ethereum und sein Potenzial als deflationäres, dezentrales Asset zu entmystifizieren. Für detailliertere Informationen darüber, wie sich der Merge auf das ETH-Angebot ausgewirkt hat, sieh dir unsere [detaillierte Aufschlüsselung](/roadmap/merge/issuance/) an. Neugierig auf die Zukunft von ETH? Tauche tiefer ein mit Tools wie [Ultrasound Money](https://ultrasound.money) oder erkunde unsere [Staking-Leitfäden](/staking/).
+Das Verständnis der ETH-Emission hilft dabei, den Wert von Ethereum und sein Potenzial als deflationäres, dezentrales Asset zu entmystifizieren. Für detailliertere Informationen darüber, wie sich der Merge auf das ETH-Angebot ausgewirkt hat, sehen Sie sich unsere [detaillierte Aufschlüsselung](/roadmap/merge/issuance/) an. Neugierig auf die Zukunft von ETH? Tauchen Sie tiefer ein mit Tools wie [Ultrasound Money](https://ultrasound.money) oder erkunden Sie unsere [Staking-Leitfäden](/staking/).

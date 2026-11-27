@@ -42,7 +42,7 @@ Tyto dvě síly určují, zda nabídka Etherea v průběhu času roste (inflačn
 
 Systém důkazu podílem (PoS) Etherea drasticky snížil emisi ETH ve srovnání s dřívějším modelem důkazu prací (PoW). Validátoři – kteří uzamykají ETH, aby zabezpečili síť – získávají ETH jako odměny. Aktuální míru emise můžete vidět na [Ultrasound Money](https://ultrasound.money).
 
-Toto číslo je však dynamické. Díky EIP-1559 může při vysoké aktivitě sítě míra spalování ETH překonat emisi, což vytváří deflační efekt. Například v obdobích vysoké poptávky, jako jsou spuštění nezaměnitelných tokenů (NFT) nebo aktivita v decentralizovaných financích (DeFi), může být spáleno více ETH, než je emitováno.
+Toto číslo je však dynamické. Díky EIP-1559 může při vysoké aktivitě sítě míra spalování ETH překonat emisi, což vytváří deflační efekt. Například v obdobích vysoké poptávky, jako jsou spuštění NFT nebo aktivita DeFi, může být spáleno více ETH, než je emitováno.
 
 ### Nástroje pro sledování nabídky a emise ETH: {#tools-to-track-eth-supply-and-issuance}
 - [Ultrasound Money](https://ultrasound.money) – Sledování nabídky, emise a míry spalování ETH v reálném čase

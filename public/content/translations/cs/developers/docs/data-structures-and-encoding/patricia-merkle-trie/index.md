@@ -206,7 +206,7 @@ Existuje jedna globální stavová trie a ta se aktualizuje pokaždé, když kli
 
 ### Strom úložiště {#storage-trie}
 
-Strom úložiště je místo, kde se nacházejí _všechna_ data kontraktu. Pro každý účet existuje samostatný strom úložiště. K získání hodnot na konkrétních pozicích úložiště na dané adrese je vyžadována adresa úložiště, celočíselná pozice uložených dat v úložišti a ID bloku. Ty pak mohou být předány jako argumenty do `eth_getStorageAt` definovaného v rozhraní pro programování aplikací (API) JSON-RPC, např. pro získání dat ve slotu úložiště 0 pro adresu `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Strom úložiště je místo, kde se nacházejí _všechna_ data kontraktu. Pro každý účet existuje samostatný strom úložiště. K získání hodnot na konkrétních pozicích úložiště na dané adrese je vyžadována adresa úložiště, celočíselná pozice uložených dat v úložišti a ID bloku. Ty pak mohou být předány jako argumenty do `eth_getStorageAt` definovaného v API JSON-RPC, např. pro získání dat ve slotu úložiště 0 pro adresu `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545

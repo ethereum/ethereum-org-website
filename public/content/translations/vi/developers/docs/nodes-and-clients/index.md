@@ -92,7 +92,7 @@ Việc chạy một nút cho phép bạn sử dụng Ethereum một cách trực
 Việc chạy nút của riêng bạn cho phép bạn sử dụng Ethereum một cách riêng tư, tự túc và không cần tin cậy. Bạn không cần phải tin tưởng mạng lưới vì bạn có thể tự mình xác minh dữ liệu bằng máy khách của mình. "Đừng tin tưởng, hãy xác minh" là một câu thần chú phổ biến trong Chuỗi khối.
 
 - Nút của bạn tự xác minh tất cả các giao dịch và khối dựa trên các quy tắc đồng thuận. Điều này có nghĩa là bạn không phải dựa vào bất kỳ nút nào khác trong mạng lưới hoặc hoàn toàn tin tưởng chúng.
-- Bạn có thể sử dụng Ví Ethereum với nút của riêng mình. Bạn có thể sử dụng các ứng dụng phi tập trung (dapp) một cách an toàn và riêng tư hơn vì bạn sẽ không phải rò rỉ địa chỉ và số dư của mình cho các bên trung gian. Mọi thứ đều có thể được kiểm tra bằng máy khách của riêng bạn. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) và [nhiều Ví khác](/wallets/find-wallet/) cung cấp tính năng nhập RPC, cho phép chúng sử dụng nút của bạn.
+- Bạn có thể sử dụng Ví Ethereum với nút của riêng mình. Bạn có thể sử dụng các dapp một cách an toàn và riêng tư hơn vì bạn sẽ không phải rò rỉ địa chỉ và số dư của mình cho các bên trung gian. Mọi thứ đều có thể được kiểm tra bằng máy khách của riêng bạn. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) và [nhiều Ví khác](/wallets/find-wallet/) cung cấp tính năng nhập RPC, cho phép chúng sử dụng nút của bạn.
 - Bạn có thể chạy và tự lưu trữ các dịch vụ khác phụ thuộc vào dữ liệu từ Ethereum. Ví dụ: đây có thể là trình xác thực Chuỗi Beacon, phần mềm như lớp 2 (L2), cơ sở hạ tầng, trình khám phá khối, bộ xử lý thanh toán, v.v.
 - Bạn có thể cung cấp các [điểm cuối RPC](/developers/docs/apis/json-rpc/) tùy chỉnh của riêng mình. Bạn thậm chí có thể cung cấp các điểm cuối này một cách công khai cho cộng đồng để giúp họ tránh các nhà cung cấp tập trung lớn.
 - Bạn có thể kết nối với nút của mình bằng cách sử dụng **Giao tiếp liên tiến trình (IPC)** hoặc viết lại nút để tải chương trình của bạn dưới dạng plugin. Điều này mang lại độ trễ thấp, giúp ích rất nhiều, ví dụ: khi xử lý nhiều dữ liệu bằng các thư viện Web3 hoặc khi bạn cần thay thế các giao dịch của mình càng nhanh càng tốt (tức là chạy trước - frontrunning).
@@ -158,7 +158,7 @@ Erigon, trước đây được gọi là Turbo-Geth, bắt đầu như một b�
 
 ### ethrex {#ethrex}
 
-ethrex là một máy khách thực thi Ethereum tối giản, theo mô-đun được viết bằng Rust và được phát triển bởi LambdaClass. Nó được xây dựng với mục tiêu chứng minh không tri thức và cùng một cơ sở mã có thể chạy cả dưới dạng máy khách thực thi lớp 1 (L1) và dưới dạng rollup không tri thức (ZK-Rollup) đa trình chứng minh (lớp 2 (L2)). Nó được cấp phép kép theo giấy phép Apache 2.0 và MIT.
+ethrex là một máy khách thực thi Ethereum tối giản, theo mô-đun được viết bằng Rust và được phát triển bởi LambdaClass. Nó được xây dựng với mục tiêu chứng minh không tri thức và cùng một cơ sở mã có thể chạy cả dưới dạng máy khách thực thi L1 và dưới dạng rollup không tri thức (ZK-Rollup) đa trình chứng minh (L2). Nó được cấp phép kép theo giấy phép Apache 2.0 và MIT.
 
 Tìm hiểu thêm bằng cách đọc [tài liệu ethrex](https://docs.ethrex.xyz/) hoặc xem [kho lưu trữ GitHub của ethrex](https://github.com/lambdaclass/ethrex).
 
@@ -182,7 +182,7 @@ Nethermind cũng có [tài liệu chi tiết](https://docs.nethermind.io), hỗ 
 
 Reth (viết tắt của Rust Ethereum) là một bản triển khai nút đầy đủ Ethereum tập trung vào tính thân thiện với người dùng, tính mô-đun cao, nhanh chóng và hiệu quả. Reth ban đầu được xây dựng và thúc đẩy bởi Paradigm, và được cấp phép theo giấy phép Apache và MIT.
 
-Reth đã sẵn sàng cho sản xuất và phù hợp để sử dụng trong các môi trường quan trọng như đặt cọc hoặc các dịch vụ có thời gian hoạt động cao. Hoạt động tốt trong các trường hợp sử dụng yêu cầu hiệu suất cao với biên độ lớn như RPC, Giá trị có thể trích xuất tối đa (MEV), lập chỉ mục, mô phỏng và các hoạt động P2P.
+Reth đã sẵn sàng cho sản xuất và phù hợp để sử dụng trong các môi trường quan trọng như đặt cọc hoặc các dịch vụ có thời gian hoạt động cao. Hoạt động tốt trong các trường hợp sử dụng yêu cầu hiệu suất cao với biên độ lớn như RPC, MEV, lập chỉ mục, mô phỏng và các hoạt động P2P.
 
 Tìm hiểu thêm bằng cách xem [Sách Reth](https://reth.rs/) hoặc [kho lưu trữ GitHub của Reth](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
