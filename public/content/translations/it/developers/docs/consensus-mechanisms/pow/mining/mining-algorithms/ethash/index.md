@@ -83,12 +83,12 @@ Ora, specifichiamo la funzione per produrre una cache:
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Produci sequenzialmente il dataset iniziale
+    # Produce sequenzialmente il dataset iniziale
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Usa una versione con pochi round di randmemohash
+    # Usa una versione a basso numero di round di randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Il processo di produzione della cache prevede prima il riempimento sequenziale di 32 MB di memoria, quindi l'esecuzione di due passaggi dell'algoritmo _RandMemoHash_ di Sergio Demian Lerner da [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). L'output è un set di 524288 valori da 64 byte.
+Il processo di produzione della cache prevede prima il riempimento sequenziale di 32 MB di memoria, quindi l'esecuzione di tre passaggi (`CACHE_ROUNDS`) dell'algoritmo _RandMemoHash_ di Sergio Demian Lerner tratto da [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). L'output è un insieme di 524288 valori da 64 byte.
 
 ## Funzione di aggregazione dei dati {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Appendice {#appendix}
 
-Il seguente codice dovrebbe essere anteposto se si è interessati a eseguire le specifiche Python di cui sopra come codice.
+Il seguente codice dovrebbe essere anteposto se si è interessati a eseguire la specifica Python di cui sopra come codice.
 
 ```python
 import sha3, copy
 
-# Presume l'ordinamento dei bit little-endian (lo stesso delle architetture Intel)
+# Assume l'ordinamento dei bit little endian (lo stesso delle architetture Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# funzione di hash sha3, restituisce 64 byte
+# Funzione di hash sha3, restituisce 64 byte
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True
