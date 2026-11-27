@@ -1,6 +1,6 @@
 ---
 title: Struktury danych i kodowanie
-description: "Przegląd podstawowych struktur danych Ethereum."
+description: "Przegląd podstawowych struktur danych i kodowań Ethereum, w tym drzew Patricia Merkle, RLP i SSZ, oraz sposobu, w jaki przechowują i weryfikują stan."
 lang: pl
 sidebarDepth: 2
 ---
