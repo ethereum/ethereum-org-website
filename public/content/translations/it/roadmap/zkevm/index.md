@@ -1,6 +1,6 @@
 ---
 title: zkEVM per la verifica dei blocchi del L1
-description: Scopri come le prove a conoscenza zero possono verificare l'esecuzione dei blocchi di Ethereum, consentendo una maggiore capacità transazionale e requisiti inferiori per i validatori.
+description: "Scopri come le prove a conoscenza zero possono verificare l'esecuzione dei blocchi di Ethereum, consentendo una maggiore capacità transazionale e requisiti inferiori per i validatori."
 lang: it
 template: roadmap
 ---
@@ -12,7 +12,7 @@ La zkEVM è una tecnologia che utilizza le [prove a conoscenza zero](/zero-knowl
 <AlertContent>
 <AlertTitle>Da non confondere con i rollup zkEVM</AlertTitle>
 <AlertDescription>
-Questa pagina discute l'utilizzo della zkEVM per verificare l'esecuzione dei blocchi del layer 1 (l1) di Ethereum. Per i rollup zkEVM che utilizzano le prove ZK per scalare Ethereum come soluzioni di layer 2 (l2), consulta i [rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/).
+Questa pagina discute l'utilizzo della zkEVM per verificare l'esecuzione dei blocchi del layer 1 (L1) di Ethereum. Per i rollup zkEVM che utilizzano le prove ZK per scalare Ethereum come soluzioni di layer 2 (L2), consulta i [rollup a conoscenza zero](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -42,7 +42,7 @@ Le zkEVM sono classificate in tipi in base alla loro compatibilità con Ethereum
 - **Tipo 1**: Completamente equivalenti a Ethereum. Nessuna modifica all'EVM, quindi qualsiasi blocco di Ethereum può essere provato esattamente così com'è
 - **Tipo 2-4**: Accettano vari compromessi, modificando il comportamento dell'EVM per facilitare la generazione delle prove
 
-Per la verifica del layer 1 (l1), il Tipo 1 è essenziale. La zkEVM deve essere in grado di provare qualsiasi blocco valido di Ethereum, inclusi i casi limite e i blocchi storici. Qualsiasi deviazione dal comportamento esatto di Ethereum creerebbe problemi di consenso.
+Per la verifica del layer 1 (L1), il Tipo 1 è essenziale. La zkEVM deve essere in grado di provare qualsiasi blocco valido di Ethereum, inclusi i casi limite e i blocchi storici. Qualsiasi deviazione dal comportamento esatto di Ethereum creerebbe problemi di consenso.
 
 La ricerca sulla zkEVM della Fondazione Ethereum si concentra sulle implementazioni di Tipo 1 che sono completamente compatibili con l'attuale esecuzione di Ethereum.
 
@@ -99,10 +99,10 @@ Queste utilizzano macchine virtuali basate su RISC-V per eseguire il bytecode de
 
 La verifica del L1 tramite zkEVM si collega a diversi altri elementi della roadmap di Ethereum:
 
-- **[Alberi di Verkle](/roadmap/verkle-trees/)**: Consentono witness più piccoli per la verifica in assenza di stato, riducendo i dati con cui i prover devono lavorare
-- **[Assenza di stato](/roadmap/statelessness/)**: La zkEVM è un fattore abilitante chiave: con le prove ZK di esecuzione, i nodi non hanno bisogno dello stato completo per verificare i blocchi
-- **[Separazione proponente-costruttore (PBS)](/roadmap/pbs/)**: I costruttori di blocchi potrebbero potenzialmente integrare la generazione delle prove, oppure potrebbe emergere un mercato dei prover separato
-- **[Finalità a singolo slot](/roadmap/single-slot-finality/)**: Una generazione più rapida delle prove potrebbe consentire la finalità a singolo slot con garanzie crittografiche
+- **Nuovo albero di stato**: Un albero binario unificato ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), proposto al posto del precedente design dell'[albero di Verkle](/roadmap/verkle-trees/), consentirebbe witness più piccoli per la verifica in assenza di stato ed è progettato per essere più facile da provare
+- **[Assenza di stato](/roadmap/statelessness/)**: La zkEVM è un fattore abilitante chiave: con le prove ZK dell'esecuzione, i nodi non hanno bisogno dell'intero stato per verificare i blocchi
+- **[PBS](/roadmap/pbs/)**: I costruttori di blocchi potrebbero potenzialmente integrare la generazione delle prove, oppure potrebbe emergere un mercato separato dei prover
+- **[Finalità a singolo slot](/roadmap/single-slot-finality/)**: Una generazione più rapida delle prove potrebbe abilitare la finalità a singolo slot con garanzie crittografiche
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />

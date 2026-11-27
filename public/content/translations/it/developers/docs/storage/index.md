@@ -5,11 +5,11 @@ lang: it
 authors: ["Patrick Collins"]
 ---
 
-A differenza di un server centralizzato gestito da una singola azienda o organizzazione, i sistemi di archiviazione decentralizzata consistono in una rete peer-to-peer di utenti-operatori che detengono una porzione dei dati complessivi, creando un sistema di condivisione dell'archiviazione di file resiliente. Questi possono trovarsi in un'applicazione basata su blockchain o in qualsiasi rete basata su peer-to-peer.
+A differenza di un server centralizzato gestito da una singola azienda o organizzazione, i sistemi di archiviazione decentralizzata consistono in una rete peer-to-peer di utenti-operatori che detengono una porzione dei dati complessivi, creando un sistema di condivisione e archiviazione di file resiliente. Questi possono trovarsi in un'applicazione basata su blockchain o in qualsiasi rete basata su peer-to-peer.
 
-Ethereum stesso può essere utilizzato come sistema di archiviazione decentralizzata, e lo è quando si tratta di archiviare il codice in tutti i contratti intelligenti (smart contract). Tuttavia, quando si tratta di grandi quantità di dati, non è per questo che Ethereum è stato progettato. La catena è in costante crescita, ma al momento della stesura, la catena di Ethereum è di circa 500 GB - 1 TB ([a seconda del client](https://etherscan.io/chartsync/chaindefault)), e ogni nodo sulla rete deve essere in grado di archiviare tutti i dati. Se la catena dovesse espandersi a grandi quantità di dati (diciamo 5 TB) non sarebbe fattibile per tutti i nodi continuare a funzionare. Inoltre, il costo di distribuzione di una tale quantità di dati sulla Mainnet sarebbe proibitivo a causa delle commissioni del [gas](/developers/docs/gas).
+Ethereum stesso può essere utilizzato come sistema di archiviazione decentralizzata, e lo è quando si tratta dell'archiviazione del codice in tutti gli smart contract. Tuttavia, quando si tratta di grandi quantità di dati, non è per questo che Ethereum è stato progettato. La catena è in costante crescita, ma al momento della stesura di questo documento, la catena di Ethereum è di circa 1-2 TB ([a seconda del client](https://etherscan.io/chartsync/chaindefault)), e ogni nodo sulla rete deve essere in grado di archiviare tutti i dati. Se la catena dovesse espandersi a grandi quantità di dati (diciamo 5 TB) non sarebbe fattibile per tutti i nodi continuare a funzionare. Inoltre, il costo per distribuire questa quantità di dati sulla Mainnet sarebbe proibitivo a causa delle commissioni del [gas](/developers/docs/gas).
 
-A causa di questi vincoli, abbiamo bisogno di una catena o metodologia diversa per archiviare grandi quantità di dati in modo decentralizzato.
+A causa di questi vincoli, abbiamo bisogno di una catena o di una metodologia diversa per archiviare grandi quantità di dati in modo decentralizzato.
 
 Quando si esaminano le opzioni di archiviazione decentralizzata (dStorage), ci sono alcune cose che un utente deve tenere a mente.
 

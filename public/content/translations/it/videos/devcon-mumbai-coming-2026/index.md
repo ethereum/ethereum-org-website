@@ -1,6 +1,6 @@
 ---
-title: "Devcon Mumbai - In arrivo dal 3 al 6 novembre 2026"
-description: "Il trailer ufficiale di annuncio per la Devcon, la conferenza di punta della community della Fondazione Ethereum, in arrivo a Mumbai, India, a novembre 2026."
+title: "Trailer di annuncio della Devcon Mumbai (3-6 nov 2026)"
+description: "Il trailer ufficiale di annuncio della Devcon, la principale conferenza della community della Fondazione Ethereum, in programma a Mumbai, in India, dal 3 al 6 novembre 2026."
 lang: it
 youtubeId: "st_A7rRr9tk"
 uploadDate: 2025-11-21
@@ -13,6 +13,6 @@ author: Ethereum Foundation
 breadcrumb: "Devcon Mumbai"
 ---
 
-Il trailer ufficiale di annuncio per la **Devcon 8**, la conferenza di punta della Fondazione Ethereum per sviluppatori e builder, in programma dal 3 al 6 novembre 2026 a Mumbai, India.
+Il trailer ufficiale di annuncio della **Devcon 8**, la principale conferenza della Fondazione Ethereum per sviluppatori e builder, in programma dal 3 al 6 novembre 2026 a Mumbai, in India.
 
 *Non è disponibile alcuna trascrizione per questo video. Guarda il [video originale](https://www.youtube.com/watch?v=st_A7rRr9tk) pubblicato dalla Fondazione Ethereum su YouTube.*

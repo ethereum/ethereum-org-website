@@ -1,6 +1,6 @@
 ---
 title: Introduzione tecnica alle dapp
-description:
+description: "Un'introduzione tecnica alle dapp: come le applicazioni decentralizzate combinano gli smart contract su Ethereum con un frontend e come differiscono dalle app web."
 lang: it
 ---
 
@@ -48,6 +48,7 @@ Uno smart contract è un codice che risiede sulla blockchain di Ethereum e viene
 <VideoWatch slug="what-is-a-dapp" />
 
 ## Strumenti per creare dapp {#dapp-tools}
+
 **Scaffold-ETH 2 _- Sperimenta rapidamente con Solidity utilizzando un frontend che si adatta al tuo smart contract._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
@@ -94,10 +95,9 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 - [Introduzione allo stack di Ethereum](/developers/docs/ethereum-stack/)
 - [Framework di sviluppo](/developers/docs/frameworks/)
 
-## Tutorial: Costruire app e frontend su Ethereum {#tutorials}
+## Tutorial: creare app e frontend su Ethereum {#tutorials}
 
-- [Guida ai contratti di Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Una guida annotata dei contratti principali di Uniswap v2 che spiega come funziona il market maker automatizzato (AMM)._
-- [Costruire un'interfaccia utente per il tuo contratto](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Come costruire un frontend moderno con React + Wagmi che si connette al tuo smart contract._
-- [Smart Contract Hello World per principianti – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Tutorial end-to-end: scrivi, distribuisci e costruisci un frontend per un semplice smart contract._
-- [Componenti server e agenti per app Web3](/developers/tutorials/server-components/) _– Come scrivere componenti server TypeScript che ascoltano gli eventi della blockchain e rispondono con transazioni._
+- [Analisi guidata dei contratti di Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Un'analisi guidata e annotata dei contratti principali di Uniswap v2 che spiega come funziona l'AMM._
+- [Creare un'interfaccia utente per il tuo contratto](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Come creare un frontend moderno in React + Wagmi che si connette al tuo smart contract._
+- [Componenti server e agenti per app Web3](/developers/tutorials/server-components/) _– Come scrivere componenti server in TypeScript che ascoltano gli eventi della blockchain e rispondono con transazioni._
 - [IPFS per interfacce utente decentralizzate](/developers/tutorials/ipfs-decentralized-ui/) _– Come ospitare il frontend della tua dapp su IPFS per la resistenza alla censura._

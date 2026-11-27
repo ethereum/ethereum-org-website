@@ -1,6 +1,6 @@
 ---
 title: Come revocare l'accesso degli smart contract ai tuoi fondi crypto
-description: Una guida pratica su come revocare l'accesso ai token da parte di smart contract malevoli
+description: "Una guida passo passo per revocare le approvazioni dei token: scopri quali smart contract possono spendere le tue criptovalute e rimuovi l'accesso per proteggere i tuoi fondi."
 lang: it
 ---
 

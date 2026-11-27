@@ -1,7 +1,7 @@
 ---
 title: Pagamenti su Ethereum
 metaTitle: Pagamenti su Ethereum
-description: Una panoramica sui pagamenti su Ethereum
+description: Come funzionano i pagamenti su Ethereum? Scopri come inviare denaro a livello globale con ETH e stablecoin, spesso in pochi secondi e a basso costo, senza una banca di mezzo.
 lang: it
 template: use-cases
 sidebarDepth: 2
@@ -99,7 +99,7 @@ Queste carte si collegano direttamente a portafogli non-custodial o a smart acco
 
 ## Micropagamenti per siti web e agenti (x402) {#x402}
 
-[x402](https://www.x402.org/) è uno standard di pagamento aperto che porta sul web i pagamenti nativi in base all'uso. Utilizzando le [stablecoin](/stablecoins/) su [reti layer 2 (l2) di Ethereum](/layer-2/) a basso costo, lo standard x402 rende economico per esseri umani e macchine pagare direttamente per una singola azione, come leggere un articolo di giornale o chiamare un'API, piuttosto che gestire chiavi API, abbonamenti o "pagare" prestando attenzione alla pubblicità.
+[x402](https://www.x402.org/) è uno standard di pagamento aperto che porta sul web i pagamenti nativi in base all'uso. Utilizzando le [stablecoin](/stablecoins/) su [reti layer 2 (L2) di Ethereum](/layer-2/) a basso costo, lo standard x402 rende economico per esseri umani e macchine pagare direttamente per una singola azione, come leggere un articolo di giornale o chiamare un'API, piuttosto che gestire chiavi API, abbonamenti o "pagare" prestando attenzione alla pubblicità.
 
 - **Rimozione di paywall e accessi:** Invece di creare un account e condividere informazioni personali per leggere un articolo di giornale, il tuo portafoglio può pagare i pochi centesimi necessari per sbloccarlo.
 - **Pagamenti per agenti IA:** x402 consente ai software autonomi ("Agenti IA") di pagare per i dati e le chiamate API di cui hanno bisogno per funzionare, senza l'intervento umano.

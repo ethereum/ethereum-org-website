@@ -1,6 +1,6 @@
 ---
 title: Staking liquido e in pool
-description: Una panoramica dello staking liquido e in pool su Ethereum
+description: "Cos'è lo staking liquido? Scopri come le pool di staking ti consentono di ottenere ricompense in ETH con qualsiasi importo di ETH, ricevendo spesso un token liquido che puoi ancora utilizzare."
 lang: it
 template: staking
 image: /images/staking/leslie-pool.png

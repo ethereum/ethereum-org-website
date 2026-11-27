@@ -39,6 +39,6 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 ## Tutorial correlati {#related-tutorials}
 
 - [Lista di controllo per l'integrazione dei token](/developers/tutorials/token-integration-checklist/) _– Una lista di controllo delle cose da considerare quando si interagisce con i token._
-- [Comprendere lo smart contract del token ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Un'introduzione alla distribuzione del tuo primo smart contract su una rete di prova di Ethereum._
-- [Trasferimenti e approvazione di token ERC20 da uno smart contract in Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Come usare uno smart contract per interagire con un token usando il linguaggio Solidity._
-- [Implementare un mercato ERC721 [una guida pratica]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Come mettere in vendita oggetti tokenizzati su una bacheca di annunci decentralizzata._
+- [Guida passo passo al contratto ERC-20](/developers/tutorials/erc20-annotated-code/) _– Una guida passo passo annotata riga per riga dell'implementazione del contratto ERC-20 di OpenZeppelin._
+- [Trasferimenti e approvazione di token ERC-20 da uno smart contract in Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Come usare uno smart contract per interagire con un token usando il linguaggio Solidity._
+- [Implementare un mercato ERC-721 [una guida pratica]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Come mettere in vendita oggetti tokenizzati su una bacheca di annunci decentralizzata._

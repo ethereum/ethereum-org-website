@@ -41,13 +41,13 @@ Per gli utenti, la [definitività](/glossary/#finality) è il momento in cui una
 
 ## Validatori resilienti {#resilient-validators}
 
-Un validatore è solitamente una singola macchina che detiene una chiave di firma. La **tecnologia dei validatori distribuiti (DVT)** sostituisce quella singola macchina con un comitato di macchine che condividono la chiave e firmano insieme, in modo che il guasto di un computer o il furto di una chiave non mettano fuori uso il validatore. La DVT è attiva in produzione e utilizzata dagli operatori di staking su larga scala. A gennaio 2026, Vitalik Buterin ha presentato una proposta per una variante semplificata a livello di protocollo chiamata DVT-lite; si tratta di una proposta iniziale senza alcun fork programmato.
+Un validatore è solitamente una singola macchina che detiene una chiave di firma. La **tecnologia dei validatori distribuiti (DVT)** sostituisce quella singola macchina con un comitato di macchine che condividono la chiave e firmano insieme, in modo che il guasto di un computer o il furto di una chiave non metta fuori uso il validatore. La DVT è attiva in produzione e utilizzata dagli operatori di staking su larga scala. A gennaio 2026, Vitalik Buterin ha proposto una variante semplificata a livello di protocollo chiamata DVT-lite; si tratta di una proposta iniziale senza alcun fork programmato.
 
-La rete si protegge anche attraverso la [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/): Ethereum funziona su diverse implementazioni software create in modo indipendente, quindi un bug in un client lascia in piedi il resto della rete.
+La rete si protegge anche attraverso la [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/): Ethereum viene eseguito su diverse implementazioni software create in modo indipendente, in modo che un bug in un client lasci in piedi il resto della rete.
 
-Due precedenti idee di ricerca, la fusione delle viste (view-merge) e l'elezione segreta del leader, non sono più elementi attivi della roadmap.
+Due precedenti idee di ricerca, view-merge e l'[elezione segreta del leader](/roadmap/secret-leader-election/), non sono più elementi attivi della roadmap.
 
-<ButtonLink variant="outline" href="/staking/dvt/">Maggiori informazioni sulla tecnologia dei validatori distribuiti (DVT)</ButtonLink>
+<ButtonLink variant="outline" href="/staking/dvt/">Maggiori informazioni sulla tecnologia dei validatori distribuiti</ButtonLink>
 
 ## Resistenza quantistica {#quantum-resistance}
 
@@ -69,23 +69,23 @@ No. Oggi nessun computer quantistico può violare la crittografia di Ethereum. I
 
 <ButtonLink variant="outline" href="/roadmap/security/quantum-resistance/">Maggiori informazioni sulla resistenza quantistica</ButtonLink>
 
-## Protocollo più semplice ed efficiente {#simpler-and-more-efficient-protocol}
+## Protocollo più semplice e più efficiente {#simpler-and-more-efficient-protocol}
 
-La complessità crea opportunità per bug e vulnerabilità. Parte della roadmap si concentra sulla **semplificazione di Ethereum e sulla rimozione del debito tecnico**, in modo che il protocollo sia più facile da mantenere, controllare e analizzare. Un protocollo più semplice offre inoltre agli aggressori una superficie minore da sondare.
+La complessità crea opportunità per bug e vulnerabilità. Parte della roadmap si concentra sulla **semplificazione di Ethereum e sulla rimozione del debito tecnico**, in modo che il protocollo sia più facile da mantenere, controllare e comprendere. Un protocollo più semplice offre inoltre agli aggressori una superficie minore da sondare.
 
-Consegnati finora:
+Rilasciati finora:
 
-- **[Pectra (maggio 2025)](/roadmap/pectra/)**: ha introdotto l'EIP-7702, che consente agli account di proprietà esterna di delegare temporaneamente al codice di uno smart contract, un trampolino di lancio verso la completa astrazione dell'account.
-- **[Fusaka (dicembre 2025)](/roadmap/fusaka/)**: ha implementato PeerDAS (EIP-7594), che distribuisce il carico di lavoro della disponibilità dei dati (DA) su tutta la rete. Ha inoltre aumentato i parametri dei blob, espandendo la capacità transazionale dei dati per i rollup.
-- **[Dencun (marzo 2024)](/roadmap/dencun/)**: ha introdotto le transazioni blob (EIP-4844) per dati di rollup più economici e ha limitato `SELFDESTRUCT` (EIP-6780) per rimuovere una fonte di complessità di lunga data.
-- **[Shapella (aprile 2023)](/staking/withdrawals/)**: ha consentito ai validatori di prelevare gli ETH in staking (EIP-4895), rimuovendo un vincolo iniziale dello staking [Proof-of-Stake (PoS)](/glossary/#pos).
-- **London (agosto 2021)**: ha revisionato il prezzo del gas con l'EIP-1559, introducendo una commissione di base e un meccanismo per bruciare le commissioni (burn) per costi di transazione più prevedibili.
+- **[Pectra (maggio 2025)](/roadmap/pectra/)**: ha introdotto l'EIP-7702, che consente agli account di proprietà esterna di delegare temporaneamente al codice degli smart contract, un trampolino di lancio verso la completa astrazione dell'account.
+- **[Fusaka (dicembre 2025)](/roadmap/fusaka/)**: ha implementato PeerDAS (EIP-7594), che distribuisce il carico di lavoro della disponibilità dei dati attraverso la rete. Ha inoltre aumentato i parametri dei blob, espandendo la capacità transazionale dei dati per i rollup.
+- **[Dencun (marzo 2024)](/roadmap/dencun/)**: ha introdotto le transazioni blob (EIP-4844) per dati dei rollup più economici e ha limitato `SELFDESTRUCT` (EIP-6780) per rimuovere una fonte di complessità di lunga data.
+- **[Shapella (aprile 2023)](/staking/withdrawals/)**: ha consentito ai validatori di prelevare gli ETH in staking (EIP-4895), rimuovendo un vincolo iniziale dello staking [Proof-of-Stake](/glossary/#pos).
+- **London (agosto 2021)**: ha revisionato il prezzo del gas con l'EIP-1559, introducendo una commissione di base e un meccanismo per bruciare le commissioni, per costi di transazione più prevedibili.
 
 In corso:
 
-- **Glamsterdam (previsto per il 2026)**: i punti salienti sono l'ePBS (EIP-7732) e le liste di accesso a livello di blocco (EIP-7928), con la valutazione anche di un riprezzamento del gas.
+- **Glamsterdam (previsto per il 2026)**: i punti salienti sono l'ePBS (EIP-7732) e le liste di accesso a livello di blocco (EIP-7928), con la revisione dei prezzi del gas anch'essa in fase di valutazione.
 - **Hegotá (previsto per il 2027)**: FOCIL (EIP-7805) è il punto saliente del livello di consenso. In fase di valutazione per l'inclusione: EIP-8141 (astrazione dell'account nativa).
-- **In corso**: gli sforzi per semplificare l'[EVM](/developers/docs/evm/), armonizzare le implementazioni dei client ed eliminare gradualmente le funzionalità deprecate continuano in tutti i team dei client. Il lavoro sull'assenza di stato (che consente ai partecipanti di verificare la catena senza memorizzare tutti i suoi dati) è in fase di riprogettazione attorno ad alberi di hash binari quantum-safe, con l'approccio finale ancora da confermare.
+- **In corso**: gli sforzi per semplificare la [EVM](/developers/docs/evm/), armonizzare le implementazioni dei client ed eliminare gradualmente le funzionalità deprecate continuano in tutti i team dei client. Il lavoro sull'[assenza di stato](/roadmap/statelessness/) (che consente ai partecipanti di verificare la catena senza memorizzare tutti i suoi dati) è in fase di riprogettazione attorno ad alberi di hash binari quantum-safe, che sostituirebbero il precedente design dell'[albero di Verkle](/roadmap/verkle-trees/). L'approccio finale deve ancora essere confermato.
 
 ## Progressi attuali {#current-progress}
 

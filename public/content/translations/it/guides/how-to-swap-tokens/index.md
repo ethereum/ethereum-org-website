@@ -1,6 +1,6 @@
 ---
 title: Come fare lo swap di token
-description: Una guida su come fare lo swap di token su Ethereum.
+description: "Una guida passo passo per fare lo swap di token su Ethereum: connetti il tuo portafoglio a un exchange decentralizzato, controlla le commissioni e lo slittamento, e conferma lo scambio."
 lang: it
 ---
 

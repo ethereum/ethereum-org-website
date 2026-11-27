@@ -1,6 +1,6 @@
 ---
-title: Finalità a singolo slot
-description: Spiegazione della finalità a singolo slot
+title: "Finalità a singolo slot"
+description: "La finalità a singolo slot potrebbe ridurre il tempo di definitività di Ethereum da circa 15 minuti a un singolo slot. Scopri come funziona e i compromessi coinvolti."
 lang: it
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Il problema dello scalare l'aggregazione aumentando il numero di validatori per 
 
 ## Progressi attuali {#current-progress}
 
-La SSF è in fase di ricerca. Non si prevede che venga rilasciata per diversi anni, probabilmente dopo altri aggiornamenti sostanziali come gli [alberi di Verkle](/roadmap/verkle-trees/) e il [danksharding](/roadmap/danksharding/).
+La SSF è in fase di ricerca. Non si prevede che venga rilasciata prima di diversi anni, probabilmente dopo altri aggiornamenti sostanziali come un nuovo albero di stato (attualmente proposto come albero binario nella [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) e il [danksharding](/roadmap/danksharding/).
 
 ## Letture consigliate {#further-reading}
 

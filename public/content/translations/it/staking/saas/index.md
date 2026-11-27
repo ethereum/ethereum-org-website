@@ -1,6 +1,6 @@
 ---
 title: Staking delegato (staking come servizio)
-description: Una panoramica su come iniziare con lo staking delegato
+description: "Cos'è lo staking come servizio? Scopri come depositare 32 ETH mentre un operatore di nodi gestisce il tuo validatore, e i compromessi rispetto allo staking domestico o allo staking in pool."
 lang: it
 template: staking
 image: /images/staking/leslie-saas.png
