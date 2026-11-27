@@ -1,5 +1,14 @@
 # Czech (cs) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.9/10
+Scope: 15 markdown files (nodes-and-clients + subpages, frameworks, data structures, transactions, glossary, roadmap, supply), changed lines; 7 diffs read in full, sweeps over all 15.
+
+**Fixed in this branch (15 critical, #112):** `(API)` in patricia-merkle-trie (JSON-RPC API), `(NFT)` long form x6 (nodes-as-a-service x3, frameworks Crossmint, supply), `(DID)` in nodes-as-a-service, GoldRush `rozhrani ... (API)` and `(DeFi)` (frameworks, supply), `(DAO)` long form in statelessness, `vrstve 1 (L1)` in statelessness (English `L1` bare), `(dapp)` long forms in nodes-and-clients and the Tenderly UX line.
+
+**Open:** `(PBS)` appended to the proposer-builder separation long form in statelessness (3 sites; English has no `(PBS)`); `plyn` vs `gas` mixed in transactions; `Verkle stromy` vs `Verkleuv strom` between roadmap pages; `operacnich kodu (opcodes)` in patricia-merkle-trie.
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX and directive comments, untranslated English sentences.
+
 ## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.9/10
 Scope: 91 cs files (71 markdown, 20 JSON incl. 277 rewritten dev-tools descriptions), changed lines only; 16 markdown diffs read, 60+ JSON keys sampled. No U+3002/U+2060/foreign-script hits in the PR files.
 

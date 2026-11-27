@@ -1,5 +1,11 @@
 # Simplified Chinese (zh) Translation Review Findings
 
+## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 9.0/10
+Scope: 15 md pages, markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX; emphasis flanking not re-checked beyond the changed lines read).
+
+Fixed (critical): transliterated names on changed lines restored to Latin with CJK spacing (Nethermind, Reth, Besu, Erigon, Lighthouse, Lodestar, Prysm, MetaMask; ~28 lines; `X (Latin)` hybrids collapsed; `Go以太坊 (Geth)` to `Geth`/`Go Ethereum`); `最大可提取价值 (MEV)` to `MEV` (2); `卡佩拉 (Capella)` to `Capella` (3, matches line 216); added `一层网络 (L1)` / `（二层网络 (L2)）` in ethrex reduced to bare `L1`/`L2`.
+Open: `Gas`/`gas` casing mixed; `斑点` for blob (glossary); 100+ untouched lines still transliterate client names (`尼姆巴斯`, `普莱斯姆`, `泰库`); English typo `Dankrad Fiest` not present in zh text.
+
 ## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 9.0/10
 Scope: 72 md pages + 19 JSON namespaces (incremental updates), changed lines only; sampled 6 md diffs and ~45 JSON keys, plus scripted sweeps (emphasis flanking clean, no U+3002/U+2060 issues).
 

@@ -83,12 +83,12 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Послідовно створити початковий набір даних
+    # Послідовно згенерувати початковий набір даних
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Використати версію randmemohash із малою кількістю раундів
+    # Використати версію randmemohash з малою кількістю раундів
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Процес створення кешу передбачає спочатку послідовне заповнення 32 МБ пам'яті, а потім виконання двох проходів алгоритму _RandMemoHash_ Серхіо Деміана Лернера з [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). На виході отримуємо набір із 524288 64-байтових значень.
+Процес створення кешу передбачає спочатку послідовне заповнення 32 МБ пам'яті, а потім виконання трьох проходів (`CACHE_ROUNDS`) алгоритму _RandMemoHash_ Серхіо Деміана Лернера з роботи [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Результатом є набір із 524288 64-байтових значень.
 
 ## Функція агрегації даних {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _Знаєте ресурс спільноти, який вам допоміг? �
 
 ## Додаток {#appendix}
 
-Наведений нижче код слід додати на початок, якщо ви зацікавлені в запуску вищенаведеної специфікації Python як коду.
+Наведений нижче код слід додати на початок, якщо ви хочете запустити вищенаведену специфікацію Python як код.
 
 ```python
 import sha3, copy
 
-# Припускається зворотний порядок бітів (як в архітектурах Intel)
+# Передбачає порядок бітів little endian (як в архітектурах Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# хеш-функція sha3, виводить 64 байти
+# хеш-функція sha3, повертає 64 байти
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

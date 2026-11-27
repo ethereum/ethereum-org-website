@@ -1,6 +1,6 @@
 ---
-title: Kendi Ethereum düğümünüzü çalıştırın
-description: Kendi Ethereum istemci örneğinizi çalıştırmaya genel bir giriş.
+title: "Kendi Ethereum düğümünüzü çalıştırın"
+description: "Kendi Ethereum istemci örneğinizi çalıştırmaya genel bir giriş."
 lang: tr
 sidebarDepth: 2
 ---
@@ -21,15 +21,15 @@ Düğümünüzü çalıştırmanın ilk adımı yaklaşımınızı seçmektir. G
 
 Bu sayfa, bu kararlarda size rehberlik edecek ve Ethereum örneğinizi çalıştırmanın en uygun yolunu bulmanıza yardımcı olacaktır.
 
-İstemci uygulamaları arasından seçim yapmak için, mevcut tüm Ana Ağ'a hazır [yürütme istemcilerini](/developers/docs/nodes-and-clients/#execution-clients), [fikir birliği istemcilerini](/developers/docs/nodes-and-clients/#consensus-clients) görün ve [istemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity) hakkında bilgi edinin.
+İstemci uygulamaları arasından seçim yapmak için, mevcut tüm Ana Ağ için hazır [yürütme istemcilerine](/developers/docs/nodes-and-clients/#execution-clients), [fikir birliği istemcilerine](/developers/docs/nodes-and-clients/#consensus-clients) bakın ve [istemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity) hakkında bilgi edinin.
 
 İstemcilerin [gereksinimlerini](#requirements) göz önünde bulundurarak, yazılımı kendi [donanımınızda mı yoksa bulutta mı](#local-vs-cloud) çalıştıracağınıza karar verin.
 
 Ortamı hazırladıktan sonra, seçilen istemcileri [yeni başlayanlar için uygun bir arayüzle](#automatized-setup) veya gelişmiş seçeneklere sahip bir terminal kullanarak [manuel olarak](#manual-setup) kurun.
 
-Düğüm çalışırken ve eşzamanlama yaparken, onu [kullanmaya](#using-the-node) hazırsınız demektir, ancak [bakımına](#operating-the-node) dikkat ettiğinizden emin olun.
+Düğüm çalışırken ve eşzamanlama yaparken, onu [kullanmaya](#using-the-node) hazırsınız demektir, ancak [bakımını](#operating-the-node) gözden kaçırmadığınızdan emin olun.
 
-![İstemci kurulumu](./diagram.png)
+<ClientSetupDiagram />
 
 ### Ortam ve donanım {#environment-and-hardware}
 
@@ -61,11 +61,11 @@ Kendi donanımınızı kullanmak çok kolay olabilir. Daha teknik kişiler için
 
 #### Gereksinimler {#requirements}
 
-Donanım gereksinimleri istemciye göre değişir, ancak düğümün yalnızca eşzamanlı kalması gerektiğinden genellikle o kadar yüksek değildir. Bunu, çok daha fazla bilgi işlem gücü gerektiren madencilik ile karıştırmayın. Ancak eşzamanlama süresi ve performans, daha güçlü donanımlarla iyileşir.
+Donanım gereksinimleri istemciye göre farklılık gösterir ancak düğümün yalnızca eşzamanlanmış kalması gerektiğinden genellikle o kadar yüksek değildir. Bunu, çok daha fazla hesaplama gücü gerektiren madencilik ile karıştırmayın. Ancak eşzamanlama süresi ve performans, daha güçlü donanımlarla iyileşir.
 
 Herhangi bir istemciyi kurmadan önce, lütfen bilgisayarınızın onu çalıştırmak için yeterli kaynağa sahip olduğundan emin olun. Minimum ve önerilen gereksinimleri aşağıda bulabilirsiniz.
 
-Donanımınız için darboğaz çoğunlukla disk alanıdır. Ethereum Blokzincir'ini eşzamanlamak çok fazla girdi/çıktı yoğunlukludur ve çok fazla alan gerektirir. Eşzamanlamadan sonra bile yüzlerce GB boş alana sahip bir **katı hal sürücüsüne (SSD)** sahip olmak en iyisidir.
+Donanımınız için darboğaz çoğunlukla disk alanıdır. Ethereum Blokzincirini eşzamanlamak çok fazla girdi/çıktı yoğunlukludur ve çok fazla alan gerektirir. Eşzamanlamadan sonra bile yüzlerce GB boş alana sahip bir **katı hal sürücüsüne (SSD)** sahip olmak en iyisidir.
 
 Veritabanının boyutu ve ilk eşzamanlamanın hızı, seçilen istemciye, yapılandırmasına ve [eşzamanlama stratejisine](/developers/docs/nodes-and-clients/#sync-modes) bağlıdır.
 
@@ -79,12 +79,12 @@ Tüm istemciler başlıca işletim sistemlerini destekler - Linux, macOS, Window
 
 - 2+ çekirdekli CPU
 - 16 GB RAM (kararlılık için 32 GB önerilir)
-- 2 TB NVMe SSD (muhtemelen 2027'ye kadar aşılacaktır, [Ethereum düğümleri için harika ve daha az harika SSD'ler](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) hakkında daha fazla bilgi edinin)
+- 4 TB NVMe SSD (tam zincir geçmişine sahip bir düğümü ve büyüme payını kapsar, aşağıdaki istemci disk boyutlarına bakın; [Ethereum düğümleri için harika ve daha az harika SSD'ler](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) hakkında daha fazla bilgi edinin)
 - 25+ MBit/s bant genişliği
 
 ##### Önerilen özellikler
 
-Düğüm operatörleri için mevcut donanım kılavuzu [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) içinde tanımlanmıştır. Tam düğüm için şunları önerir:
+Düğüm operatörleri için mevcut donanım rehberliği [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) içinde tanımlanmıştır. Bir tam düğüm için şunları önerir:
 
 - 4+ çekirdekli hızlı CPU (doğrulama yapılıyorsa 8+ çekirdek)
 - 32 GB RAM (kararlılığı sağlamak için doğrulama yapılıyorsa 64 GB önerilir)
@@ -93,17 +93,18 @@ Düğüm operatörleri için mevcut donanım kılavuzu [EIP-7870](https://eips.e
 
 Seçtiğiniz eşzamanlama modu ve istemci alan gereksinimlerini etkileyecektir, ancak aşağıda her bir istemci için ihtiyaç duyacağınız disk alanını tahmin ettik.
 
-| İstemci    | Disk boyutu (anlık eşzamanlama) | Disk boyutu (tam arşiv) |
-| ---------- | ------------------------------- | ----------------------- |
-| Besu       | 800GB+                          | 12TB+                   |
-| Erigon     | N/A                             | 2.5TB+                  |
-| Geth       | 500GB+                          | 12TB+                   |
-| Nethermind | 500GB+                          | 12TB+                   |
-| Reth       | N/A                             | 2.2TB+                  |
+| İstemci    | Disk boyutu (tam düğüm) | Disk boyutu (tam arşiv) |
+| ---------- | ----------------------- | ----------------------- |
+| Besu       | 1.8TB+                  | 12TB+                   |
+| Erigon     | 1.7TB+                  | 2.7TB+                  |
+| Geth       | 1.8TB+                  | 2TB+                    |
+| Nethermind | 1.7TB+                  | 14TB+                   |
+| Reth       | 2.2TB+                  | 2.8TB+                  |
 
-- Not: Erigon ve Reth anlık eşzamanlama sunmaz, ancak Tam Budama (Full Pruning) mümkündür (Erigon için ~2TB, Reth için ~1.2TB)
+- Not: Tam düğüm boyutları tüm zincir geçmişini tutar ve Eylül 2026'da [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) tarafından ölçülmüştür. Geçmiş sonlanmasını destekleyen istemciler daha azına ihtiyaç duyar: yalnızca birleşme sonrası geçmişle yaklaşık 1.2-1.4TB veya sürekli sonlanma ile yaklaşık 400-650GB (henüz Geth tarafından desteklenmemektedir).
+- Not: Arşiv boyutları her istemcinin belgelerinden alınmıştır ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Geth'in rakamı yol tabanlı arşivi içindir; trie geçmişini de tutmak yaklaşık 6.5TB sürer. Nethermind'ın rakamı Temmuz 2023'e aittir ve o zamandan beri büyümüştür.
 
-Fikir birliği istemcileri için alan gereksinimi ayrıca istemci uygulamasına ve etkinleştirilen özelliklere (ör. doğrulayıcı kesici) bağlıdır, ancak genel olarak işaret verileri için 200 GB daha gerektiğini hesaba katın. Çok sayıda Doğrulayıcı ile bant genişliği yükü de artar. [Fikir birliği istemcisi gereksinimleriyle ilgili ayrıntıları bu analizde](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc) bulabilirsiniz.
+Fikir birliği istemcileri için alan gereksinimi ayrıca istemci uygulamasına ve etkinleştirilen özelliklere (örneğin, doğrulayıcı kesici) bağlıdır, ancak genel olarak işaret verileri için 15-90GB daha ve bir süper düğüm çalıştırılıyorsa yaklaşık 500GB blob verisi hesaba katılmalıdır. Çok sayıda doğrulayıcı ile bant genişliği yükü de artar. [Fikir birliği istemcisi gereksinimleriyle ilgili ayrıntıları bu analizde](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc) bulabilirsiniz.
 
 #### Tak ve çalıştır çözümleri {#plug-and-play}
 
@@ -459,7 +460,7 @@ Her istemci uygulaması, eşler arası protokolde kullanılan ancak komut satır
 
 #### Ek hizmetler çalıştırma {#running-additional-services}
 
-Kendi düğümünüzü çalıştırmak, Ethereum istemcisi RPC'sine doğrudan erişim gerektiren hizmetleri kullanmanıza olanak tanır. Bunlar, [katman 2 (l2) çözümleri](/developers/docs/scaling/#layer-2-scaling), Cüzdanlar için arka uç, blok gezginleri, geliştirici araçları ve diğer Ethereum altyapısı gibi Ethereum üzerine inşa edilmiş hizmetlerdir.
+Kendi düğümünüzü çalıştırmak, Ethereum istemcisi RPC'sine doğrudan erişim gerektiren hizmetleri kullanmanıza olanak tanır. Bunlar, [katman 2 (L2) çözümleri](/developers/docs/scaling/#layer-2-scaling), Cüzdanlar için arka uç, blok gezginleri, geliştirici araçları ve diğer Ethereum altyapısı gibi Ethereum üzerine inşa edilmiş hizmetlerdir.
 
 #### Düğümü izleme {#monitoring-the-node}
 

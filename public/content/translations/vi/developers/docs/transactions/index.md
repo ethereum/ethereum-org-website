@@ -14,28 +14,27 @@ Các giao dịch là những chỉ thị được ký bằng mật mã từ các
 
 Một giao dịch Ethereum đề cập đến một hành động được khởi tạo bởi một tài khoản thuộc sở hữu bên ngoài, nói cách khác là một tài khoản do con người quản lý, không phải là một hợp đồng. Ví dụ, nếu Bob gửi cho Alice 1 ETH, tài khoản của Bob phải bị trừ tiền và tài khoản của Alice phải được cộng tiền. Hành động thay đổi trạng thái này diễn ra trong một giao dịch.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Sơ đồ được phỏng theo [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
 Các giao dịch, vốn làm thay đổi trạng thái của EVM, cần được phát sóng đến toàn bộ mạng lưới. Bất kỳ nút nào cũng có thể phát sóng một yêu cầu để một giao dịch được thực thi trên EVM; sau khi điều này xảy ra, một trình xác thực sẽ thực thi giao dịch và truyền bá sự thay đổi trạng thái kết quả đến phần còn lại của mạng lưới.
 
-Các giao dịch yêu cầu một khoản phí và phải được đưa vào một khối đã được xác thực. Để làm cho phần tổng quan này đơn giản hơn, chúng tôi sẽ đề cập đến phí gas và việc xác thực ở phần khác.
+Các giao dịch yêu cầu một khoản phí và phải được đưa vào một khối đã được xác thực. Để làm cho tổng quan này đơn giản hơn, chúng tôi sẽ đề cập đến phí gas và việc xác thực ở phần khác.
 
 Một giao dịch được gửi bao gồm các thông tin sau:
 
 - `from` – địa chỉ của người gửi, người sẽ ký giao dịch. Đây sẽ là một tài khoản thuộc sở hữu bên ngoài vì các tài khoản hợp đồng không thể gửi giao dịch
-- `to` – địa chỉ nhận (nếu là tài khoản thuộc sở hữu bên ngoài, giao dịch sẽ chuyển giá trị. Nếu là tài khoản hợp đồng, giao dịch sẽ thực thi mã hợp đồng)
+- `to` – địa chỉ nhận (nếu là một tài khoản thuộc sở hữu bên ngoài, giao dịch sẽ chuyển giá trị. Nếu là một tài khoản hợp đồng, giao dịch sẽ thực thi mã hợp đồng)
 - `signature` – định danh của người gửi. Điều này được tạo ra khi khóa riêng tư của người gửi ký giao dịch và xác nhận người gửi đã ủy quyền cho giao dịch này
 - `nonce` - một bộ đếm tăng dần tuần tự cho biết số thứ tự giao dịch từ tài khoản
 - `value` – số lượng ETH cần chuyển từ người gửi đến người nhận (được tính bằng Wei, trong đó 1 ETH bằng 1e+18 Wei)
 - `input data` – trường tùy chọn để bao gồm dữ liệu tùy ý
 - `gasLimit` – số lượng đơn vị Gas tối đa có thể được tiêu thụ bởi giao dịch. [EVM](/developers/docs/evm/opcodes) chỉ định các đơn vị Gas cần thiết cho mỗi bước tính toán
-- `maxPriorityFeePerGas` - giá tối đa của Gas đã tiêu thụ được bao gồm như một khoản phí ưu tiên cho trình xác thực
-- `maxFeePerGas` - mức phí tối đa trên mỗi đơn vị Gas sẵn sàng trả cho giao dịch (bao gồm cả `baseFeePerGas` và `maxPriorityFeePerGas`)
+- `maxPriorityFeePerGas` - mức giá tối đa của Gas đã tiêu thụ để được bao gồm như một khoản phí ưu tiên cho trình xác thực
+- `maxFeePerGas` - mức phí tối đa cho mỗi đơn vị Gas sẵn sàng trả cho giao dịch (bao gồm `baseFeePerGas` và `maxPriorityFeePerGas`)
 
 Gas là một tham chiếu đến tính toán cần thiết để xử lý giao dịch bởi một trình xác thực. Người dùng phải trả một khoản phí cho tính toán này. `gasLimit` và `maxPriorityFeePerGas` xác định phí giao dịch tối đa được trả cho trình xác thực. [Tìm hiểu thêm về Gas](/developers/docs/gas/).
 
-Đối tượng giao dịch sẽ trông giống như thế này:
+Đối tượng giao dịch sẽ trông hơi giống thế này:
 
 ```js
 {
@@ -49,7 +48,7 @@ Gas là một tham chiếu đến tính toán cần thiết để xử lý giao 
 }
 ```
 
-Nhưng một đối tượng giao dịch cần được ký bằng khóa riêng tư của người gửi. Điều này chứng minh rằng giao dịch chỉ có thể đến từ người gửi và không bị gửi một cách gian lận.
+Nhưng một đối tượng giao dịch cần được ký bằng khóa riêng tư của người gửi. Điều này chứng minh rằng giao dịch chỉ có thể đến từ người gửi và không được gửi một cách gian lận.
 
 Một máy khách Ethereum như Geth sẽ xử lý quá trình ký này.
 
@@ -100,10 +99,10 @@ Ví dụ về phản hồi:
 }
 ```
 
-- `raw` là giao dịch đã ký ở dạng mã hóa [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- `raw` là giao dịch đã ký ở dạng được mã hóa [Tiền tố độ dài đệ quy (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` là giao dịch đã ký ở dạng JSON
 
-Với mã băm chữ ký, giao dịch có thể được chứng minh bằng mật mã rằng nó đến từ người gửi và được gửi đến mạng lưới.
+Với mã băm chữ ký, giao dịch có thể được chứng minh bằng mật mã rằng nó đến từ người gửi và được gửi lên mạng lưới.
 
 ### Trường dữ liệu {#the-data-field}
 
@@ -150,9 +149,9 @@ Trên Ethereum có một vài loại giao dịch khác nhau:
 
 ### Về Gas {#on-gas}
 
-Như đã đề cập, các giao dịch tốn [Gas](/developers/docs/gas/) để thực thi. Các giao dịch chuyển đơn giản yêu cầu 21000 đơn vị Gas.
+Như đã đề cập, các giao dịch tốn [Gas](/developers/docs/gas/) để thực thi. Các giao dịch chuyển tiền đơn giản yêu cầu 21000 đơn vị Gas.
 
-Vì vậy, để Bob gửi cho Alice 1 ETH với `baseFeePerGas` là 190 Gwei và `maxPriorityFeePerGas` là 10 Gwei, Bob sẽ cần phải trả mức phí sau:
+Vì vậy, để Bob gửi cho Alice 1 ETH với `baseFeePerGas` là 190 Gwei và `maxPriorityFeePerGas` là 10 Gwei, Bob sẽ cần phải trả khoản phí sau:
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -169,10 +168,9 @@ Phí cơ sở sẽ bị đốt **-0.00399 ETH**
 Trình xác thực giữ lại phí ưu tiên **+0.000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Sơ đồ được phỏng theo [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
-Bất kỳ lượng Gas nào không được sử dụng trong một giao dịch sẽ được hoàn trả vào tài khoản người dùng.
+Bất kỳ lượng Gas nào không được sử dụng trong một giao dịch đều được hoàn lại vào tài khoản người dùng.
 
 ### Tương tác với hợp đồng thông minh {#smart-contract-interactions}
 
@@ -223,7 +221,7 @@ Dựa trên giá trị `TransactionType`, một giao dịch có thể được p
 
 3. **Giao dịch Loại 2**, thường được gọi là giao dịch EIP-1559, là các giao dịch được giới thiệu trong [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), trong [bản nâng cấp London](/ethereum-forks/#london) của Ethereum. Chúng đã trở thành loại giao dịch tiêu chuẩn trên mạng lưới Ethereum. Các giao dịch này giới thiệu một cơ chế thị trường phí mới giúp cải thiện khả năng dự đoán bằng cách tách phí giao dịch thành phí cơ sở và phí ưu tiên. Chúng bắt đầu bằng byte `0x02` và bao gồm các trường như `maxPriorityFeePerGas` và `maxFeePerGas`. Giao dịch Loại 2 hiện là mặc định do tính linh hoạt và hiệu quả của chúng, đặc biệt được ưa chuộng trong các giai đoạn tắc nghẽn mạng lưới cao vì khả năng giúp người dùng quản lý phí giao dịch một cách dễ dự đoán hơn. Giá trị TransactionType cho các giao dịch này là `0x2`.
 
-4. **Giao dịch Loại 3 (Khối dữ liệu)** được giới thiệu trong [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) như một phần của [bản nâng cấp Dencun](/ethereum-forks/#dencun) của Ethereum. Các giao dịch này được thiết kế để xử lý dữ liệu "khối dữ liệu" (Đối tượng nhị phân lớn) hiệu quả hơn, đặc biệt mang lại lợi ích cho các bản cuộn lớp 2 (l2) bằng cách cung cấp một cách để đăng dữ liệu lên mạng lưới Ethereum với chi phí thấp hơn. Các giao dịch khối dữ liệu bao gồm các trường bổ sung như `blobVersionedHashes`, `maxFeePerBlobGas` và `blobGasPrice`. Chúng bắt đầu bằng byte `0x03` và giá trị TransactionType của chúng là `0x3`. Các giao dịch khối dữ liệu đại diện cho một sự cải thiện đáng kể về tính khả dụng của dữ liệu và khả năng mở rộng của Ethereum.
+4. **Giao dịch Loại 3 (Khối dữ liệu)** được giới thiệu trong [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) như một phần của [bản nâng cấp Dencun](/ethereum-forks/#dencun) của Ethereum. Các giao dịch này được thiết kế để xử lý dữ liệu "khối dữ liệu" (Đối tượng nhị phân lớn) hiệu quả hơn, đặc biệt mang lại lợi ích cho các bản cuộn lớp 2 (L2) bằng cách cung cấp một cách để đăng dữ liệu lên mạng lưới Ethereum với chi phí thấp hơn. Các giao dịch khối dữ liệu bao gồm các trường bổ sung như `blobVersionedHashes`, `maxFeePerBlobGas` và `blobGasPrice`. Chúng bắt đầu bằng byte `0x03` và giá trị TransactionType của chúng là `0x3`. Các giao dịch khối dữ liệu đại diện cho một sự cải thiện đáng kể về tính khả dụng của dữ liệu và khả năng mở rộng của Ethereum.
 
 5. **Giao dịch Loại 4** được giới thiệu trong [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) như một phần của [bản nâng cấp Pectra](/roadmap/pectra/) của Ethereum. Các giao dịch này được thiết kế để tương thích chuyển tiếp với trừu tượng hóa tài khoản. Chúng cho phép các EOA tạm thời hoạt động giống như các tài khoản hợp đồng thông minh mà không làm tổn hại đến chức năng ban đầu của chúng. Chúng bao gồm một tham số `authorization_list`, chỉ định hợp đồng thông minh mà EOA ủy quyền. Sau giao dịch, trường mã của EOA sẽ có địa chỉ của hợp đồng thông minh được ủy quyền.
 

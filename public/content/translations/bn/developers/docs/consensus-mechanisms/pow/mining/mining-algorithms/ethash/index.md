@@ -75,20 +75,20 @@ def get_full_size(block_number):
 
 ডেটাসেট এবং ক্যাশে আকারের মানগুলোর টেবিল পরিশিষ্টে দেওয়া হয়েছে।
 
-## ক্যাশে তৈরি {#cache-generation}
+## ক্যাশে তৈরি করা {#cache-generation}
 
-এখন, আমরা একটি ক্যাশে তৈরি করার ফাংশন নির্দিষ্ট করি:
+এখন, আমরা একটি ক্যাশে তৈরি করার জন্য ফাংশনটি নির্দিষ্ট করছি:
 
 ```python
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # পর্যায়ক্রমিকভাবে প্রাথমিক ডেটাসেট তৈরি করুন
+    # ধারাবাহিকভাবে প্রাথমিক ডেটাসেট তৈরি করুন
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # randmemohash-এর একটি লো-রাউন্ড সংস্করণ ব্যবহার করুন
+    # randmemohash এর একটি কম-রাউন্ডের সংস্করণ ব্যবহার করুন
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-ক্যাশে উৎপাদন প্রক্রিয়ার মধ্যে প্রথমে ক্রমানুসারে 32 MB মেমরি পূরণ করা জড়িত, তারপর [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) থেকে Sergio Demian Lerner-এর _RandMemoHash_ অ্যালগরিদমের দুটি পাস সম্পাদন করা হয়। আউটপুট হলো 524288 টি 64-বাইট মানের একটি সেট।
+ক্যাশে তৈরি করার প্রক্রিয়ায় প্রথমে ক্রমানুসারে 32 MB মেমরি পূরণ করা হয়, তারপর [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) থেকে Sergio Demian Lerner-এর _RandMemoHash_ অ্যালগরিদমের তিনটি পাস (`CACHE_ROUNDS`) সম্পাদন করা হয়। এর আউটপুট হলো 524288 টি 64-বাইট মানের একটি সেট।
 
 ## ডেটা অ্যাগ্রিগেশন ফাংশন {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _আপনাকে সাহায্য করেছে এমন কোনো
 
 ## পরিশিষ্ট {#appendix}
 
-আপনি যদি উপরের Python স্পেকটি কোড হিসেবে চালাতে আগ্রহী হন তবে নিচের কোডটি আগে যুক্ত করা উচিত।
+আপনি যদি উপরের Python স্পেকটি কোড হিসেবে চালাতে আগ্রহী হন, তবে নিচের কোডটি আগে যুক্ত করতে হবে।
 
 ```python
 import sha3, copy
 
-# লিটল এন্ডিয়ান বিট অর্ডারিং ধরে নেওয়া হয়েছে (ইন্টেল আর্কিটেকচারের মতো একই)
+# লিটল এন্ডিয়ান বিট অর্ডারিং ধরে নেয় (ইন্টেল আর্কিটেকচারের মতো একই)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 হ্যাশ ফাংশন, ৬৪ বাইট আউটপুট দেয়
+# sha3 হ্যাশ ফাংশন, 64 বাইট আউটপুট দেয়
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

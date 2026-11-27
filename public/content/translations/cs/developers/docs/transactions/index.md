@@ -12,26 +12,25 @@ Pro lepší pochopení této stránky doporučujeme nejprve si přečíst o [ú�
 
 ## Co je to transakce? {#whats-a-transaction}
 
-Transakce na Ethereu označuje akci iniciovanou externě vlastněným účtem (externally-owned account, EOA), jinými slovy účtem spravovaným člověkem, nikoli kontraktem. Pokud například Bob pošle Alici 1 ETH, Bobův účet musí být zatížen a účet Alice musí být připsán. Tato akce měnící stav probíhá v rámci transakce.
+Transakce na Ethereu označuje akci iniciovanou externě vlastněným účtem, jinými slovy účtem spravovaným člověkem, nikoli kontraktem. Pokud například Bob pošle Alici 1 ETH, z Bobova účtu se musí částka odečíst a na Alicin účet připsat. Tato akce měnící stav probíhá v rámci transakce.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Diagram upraven podle [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
-Transakce, které mění stav EVM, musí být vysílány do celé sítě. Jakýkoli uzel může vysílat požadavek na provedení transakce v EVM; poté validátor transakci provede a rozšíří výslednou změnu stavu do zbytku sítě.
+Transakce, které mění stav EVM, musí být vysílány do celé sítě. Jakýkoli uzel může vysílat požadavek na provedení transakce ve virtuálním stroji Etherea (EVM); jakmile se tak stane, validátor transakci provede a rozšíří výslednou změnu stavu do zbytku sítě.
 
-Transakce vyžadují poplatek a musí být zahrnuty do ověřeného bloku. Abychom tento přehled zjednodušili, poplatky za gas (gas fees) a validaci probereme jinde.
+Transakce vyžadují poplatek a musí být zahrnuty do ověřeného bloku. Abychom tento přehled zjednodušili, poplatkům za plyn a ověřování se budeme věnovat jinde.
 
 Odeslaná transakce obsahuje následující informace:
 
 - `from` – adresa odesílatele, který bude transakci podepisovat. Bude se jednat o externě vlastněný účet, protože kontraktové účty nemohou odesílat transakce.
-- `to` – přijímací adresa (pokud jde o externě vlastněný účet, transakce provede převod hodnoty. Pokud jde o kontraktový účet, transakce spustí kód kontraktu).
+- `to` – adresa příjemce (pokud jde o externě vlastněný účet, transakce převede hodnotu. Pokud jde o kontraktový účet, transakce provede kód kontraktu).
 - `signature` – identifikátor odesílatele. Generuje se, když soukromý klíč odesílatele podepíše transakci a potvrdí, že odesílatel tuto transakci autorizoval.
 - `nonce` – sekvenčně se zvyšující počítadlo, které udává číslo transakce z daného účtu.
 - `value` – množství ETH k převodu od odesílatele k příjemci (vyjádřeno ve Wei, kde 1 ETH se rovná 1e+18 Wei).
 - `input data` – volitelné pole pro zahrnutí libovolných dat.
 - `gasLimit` – maximální množství jednotek gasu, které může transakce spotřebovat. [EVM](/developers/docs/evm/opcodes) specifikuje jednotky gasu požadované pro každý výpočetní krok.
-- `maxPriorityFeePerGas` – maximální cena spotřebovaného gasu, která má být zahrnuta jako prioritní poplatek validátorovi.
-- `maxFeePerGas` – maximální poplatek za jednotku gasu, který je odesílatel ochoten za transakci zaplatit (zahrnuje `baseFeePerGas` a `maxPriorityFeePerGas`).
+- `maxPriorityFeePerGas` – maximální cena spotřebovaného gasu, která má být zahrnuta jako prioritní poplatek pro validátora.
+- `maxFeePerGas` – maximální poplatek za jednotku gasu, který je odesílatel ochoten za transakci zaplatit (včetně `baseFeePerGas` a `maxPriorityFeePerGas`).
 
 Gas je odkaz na výpočetní výkon potřebný ke zpracování transakce validátorem. Uživatelé musí za tento výpočet zaplatit poplatek. `gasLimit` a `maxPriorityFeePerGas` určují maximální transakční poplatek placený validátorovi. [Více o gasu](/developers/docs/gas/).
 
@@ -51,7 +50,7 @@ Objekt transakce bude vypadat zhruba takto:
 
 Objekt transakce však musí být podepsán pomocí soukromého klíče odesílatele. To dokazuje, že transakce mohla pocházet pouze od odesílatele a nebyla odeslána podvodně.
 
-Tento proces podepisování obstará klient Etherea, jako je Go Ethereum (Geth).
+Tento proces podepisování obstará klient Etherea, jako je například Geth.
 
 Příklad volání [JSON-RPC](/developers/docs/apis/json-rpc):
 
@@ -100,7 +99,7 @@ Příklad odpovědi:
 }
 ```
 
-- `raw` je podepsaná transakce ve formátu kódování [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp).
+- `raw` je podepsaná transakce ve formátu zakódovaném pomocí [rekurzivní předpony délky (RLP)](/developers/docs/data-structures-and-encoding/rlp).
 - `tx` je podepsaná transakce ve formátu JSON.
 
 Pomocí hashe podpisu lze kryptograficky dokázat, že transakce pochází od odesílatele a byla odeslána do sítě.
@@ -150,27 +149,26 @@ Na Ethereu existuje několik různých typů transakcí:
 
 ### O gasu {#on-gas}
 
-Jak již bylo zmíněno, provedení transakcí stojí [gas](/developers/docs/gas/). Jednoduché transakce převodu vyžadují 21 000 jednotek gasu.
+Jak již bylo zmíněno, provedení transakcí stojí [gas](/developers/docs/gas/). Jednoduché transakce převodu vyžadují 21000 jednotek gasu.
 
-Aby tedy Bob mohl poslat Alici 1 ETH při `baseFeePerGas` (základním poplatku) 190 Gwei a `maxPriorityFeePerGas` (prioritním poplatku) 10 Gwei, bude muset zaplatit následující poplatek:
+Aby tedy Bob mohl poslat Alici 1 ETH při `baseFeePerGas` 190 Gwei a `maxPriorityFeePerGas` 10 Gwei, bude muset zaplatit následující poplatek:
 
 ```
-(190 + 10) * 21000 = 4 200 000 Gwei
---nebo--
-0,0042 ETH
+(190 + 10) * 21000 = 4,200,000 gwei
+--or--
+0.0042 ETH
 ```
 
-Bobův účet bude zatížen částkou **-1,0042 ETH** (1 ETH pro Alici + 0,0042 ETH na poplatcích za gas).
+Z Bobova účtu bude odečteno **-1,0042 ETH** (1 ETH pro Alici + 0,0042 ETH na poplatcích za plyn).
 
-Na účet Alice bude připsáno **+1,0 ETH**.
+Na Alicin účet bude připsáno **+1,0 ETH**.
 
 Základní poplatek bude spálen **-0,00399 ETH**.
 
 Validátor si ponechá prioritní poplatek **+0,000210 ETH**.
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Diagram upraven podle [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 Veškerý gas, který nebyl v transakci využit, se vrací na uživatelský účet.
 

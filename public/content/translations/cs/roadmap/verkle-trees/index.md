@@ -1,22 +1,24 @@
 ---
 title: Verkle stromy
-description: "Obecný popis Verkle stromů a toho, jak budou použity k aktualizaci Etherea"
+description: "Obecný popis Verkle stromů a důvodů, proč se plány Etherea ohledně stavového stromu přesunuly k binárnímu stromu"
 lang: cs
 template: roadmap
 summaryPoints:
   - Zjistěte, co jsou Verkle stromy
-  - Přečtěte si, proč jsou Verkle stromy užitečnou aktualizací pro Ethereum
+  - Přečtěte si, proč byly Verkle stromy odloženy ve prospěch binárního stromu
 ---
 
-Verkle stromy (složenina z „vektorový závazek“ (Vector commitment) a „Merkleův strom“ (Merkle tree)) jsou datová struktura, kterou lze použít k aktualizaci uzlů [Etherea](/) tak, aby mohly přestat ukládat velké množství stavových dat, aniž by ztratily schopnost validovat bloky.
+Verkle stromy (složenina slov „Vector commitment“ a „Merkle Trees“) jsou datová struktura, kterou lze použít k aktualizaci uzlů sítě [Ethereum](/), aby mohly přestat ukládat velké množství stavových dat, aniž by ztratily schopnost validovat bloky.
+
+Verkle stromy byly navrženy jako další stavový strom Etherea v [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), ale tento návrh nyní stagnuje a byl odložen ve prospěch sjednoceného binárního stromu ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)). Binární strom sleduje stejný cíl, kterým jsou malí svědci pro bezstavové klienty. Tato stránka vysvětluje, jak Verkle stromy fungují a proč se výzkum přesunul k binárnímu stromu.
 
 ## Bezstavovost {#statelessness}
 
-Verkle stromy jsou kritickým krokem na cestě k bezstavovým klientům Etherea. Bezstavoví klienti jsou ti, kteří nemusí ukládat celou stavovou databázi, aby mohli validovat příchozí bloky. Místo použití vlastní lokální kopie stavu Etherea k ověření bloků používají bezstavoví klienti „svědka“ stavových dat, který dorazí s blokem. Svědek je sbírka jednotlivých částí stavových dat, které jsou nutné k provedení určité sady transakcí, a kryptografický důkaz, že svědek je skutečně součástí úplných dat. Svědek se používá _místo_ stavové databáze. Aby to fungovalo, musí být svědci velmi malí, aby mohli být bezpečně vysíláni po síti včas, aby je validátoři stihli zpracovat během 12sekundového slotu. Současná struktura stavových dat není vhodná, protože svědci jsou příliš velcí. Verkle stromy tento problém řeší tím, že umožňují malé svědky, čímž odstraňují jednu z hlavních překážek pro bezstavové klienty.
+Verkle stromy byly navrženy jako krok na cestě k bezstavovým klientům Etherea. Bezstavoví klienti jsou ti, kteří nemusí ukládat celou stavovou databázi, aby mohli validovat příchozí bloky. Místo použití vlastní lokální kopie stavu Etherea k ověřování bloků používají bezstavoví klienti „svědka“ stavových dat, který dorazí s blokem. Svědek je soubor jednotlivých částí stavových dat, které jsou nutné k provedení určité sady transakcí, a kryptografický důkaz, že svědek je skutečně součástí úplných dat. Svědek se používá _místo_ stavové databáze. Aby to fungovalo, musí být svědci velmi malí, aby mohli být bezpečně vysíláni po síti včas, aby je validátoři stihli zpracovat během 12sekundového slotu. Současná struktura stavových dat není vhodná, protože svědci jsou příliš velcí. Verkle stromy tento problém řeší tím, že umožňují malé svědky, čímž odstraňují jednu z hlavních překážek pro bezstavové klienty.
 
 <ExpandableCard title="Proč chceme bezstavové klienty?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
-Klienti Etherea v současnosti používají k ukládání svých stavových dat datovou strukturu známou jako Patricia Merkle Trie. Informace o jednotlivých účtech jsou uloženy jako listy v trii a páry listů jsou opakovaně hashovány, dokud nezůstane pouze jediný hash. Tento konečný hash je známý jako „kořen“ (root). K ověření bloků klienti Etherea provedou všechny transakce v bloku a aktualizují svou lokální stavovou trii. Blok je považován za platný, pokud je kořen lokálního stromu identický s tím, který poskytl navrhovatel bloku, protože jakékoli rozdíly ve výpočtu provedeném navrhovatelem bloku a validujícím uzlem by způsobily, že by se kořenový hash zcela lišil. Problém s tímto přístupem je, že ověřování blockchainu vyžaduje, aby každý klient ukládal celou stavovou trii pro hlavní blok (head block) a několik historických bloků (výchozí nastavení v Geth je uchovávat stavová data pro 128 bloků za hlavním blokem). To vyžaduje, aby klienti měli přístup k velkému množství diskového prostoru, což je překážkou pro provozování plných uzlů na levném hardwaru s nízkým výkonem. Řešením je aktualizovat stavovou trii na efektivnější strukturu (Verkle strom), kterou lze shrnout pomocí malého „svědka“ dat, jenž může být sdílen místo úplných stavových dat. Přeformátování stavových dat do Verkle stromu je odrazovým můstkem pro přechod na bezstavové klienty.
+Klienti Etherea v současnosti používají k ukládání svých stavových dat datovou strukturu známou jako Patricia Merkle Trie. Informace o jednotlivých účtech jsou uloženy v listech trie a každý uzel větve, který může mít až 16 potomků, je hashován společně s hashi svých potomků, úroveň po úrovni, dokud nezůstane pouze jediný hash. Tento konečný hash je známý jako „kořen“. K ověření bloků klienti Etherea provedou všechny transakce v bloku a aktualizují svou lokální stavovou trii. Blok je považován za platný, pokud je kořen lokálního stromu identický s tím, který poskytl navrhovatel bloku, protože jakékoli rozdíly ve výpočtu provedeném navrhovatelem bloku a validujícím uzlem by způsobily, že by se kořenový hash zcela lišil. Problém s tímto přístupem je, že ověřování blockchainu vyžaduje, aby každý klient ukládal celou stavovou trii pro nejnovější blok (head block) a několik historických bloků (výchozí nastavení v Geth je uchovávat stavová data pro 128 bloků za nejnovějším blokem). To vyžaduje, aby klienti měli přístup k velkému množství místa na disku, což je překážkou pro provozování plných uzlů na levném hardwaru s nízkým výkonem. Řešením je aktualizovat stavovou trii na efektivnější strukturu (jako je Verkle strom nebo binární strom), kterou lze shrnout pomocí malého „svědka“ dat, jenž může být sdílen místo úplných stavových dat. Přeformátování stavových dat do nové stromové struktury je odrazovým můstkem pro přechod na bezstavové klienty.
 
 </ExpandableCard>
 
@@ -46,9 +48,9 @@ Verkle stromy jsou páry `(key,value)`, kde klíče jsou 32bajtové prvky slože
 
 ## Současný pokrok {#current-progress}
 
-Testnety Verkle stromů jsou již v provozu, ale stále existují podstatné nevyřízené aktualizace klientů, které jsou nutné pro podporu Verkle stromů. Pokrok můžete pomoci urychlit nasazením kontraktů na testnety nebo spuštěním testnetových klientů.
+[EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), návrh na přesun stavu Etherea do sjednoceného Verkle stromu, nyní stagnuje. Výzkum se přesunul k [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864), který místo toho navrhuje sjednocený binární strom. EIP-7864 je koncept a nebyl pro něj naplánován žádný upgrade sítě.
 
-[Podívejte se, jak Guillaume Ballet vysvětluje testnet Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (všimněte si, že testnet Condrieu byl důkaz prací (PoW) a nyní byl nahrazen testnetem Verkle Gen Devnet 6).
+EIP-7864 uvádí dva hlavní důvody pro tuto změnu. Verkle stromy spoléhají na kryptografii eliptických křivek, která není bezpečná proti kvantovým počítačům, takže by nakonec musely být nahrazeny, zatímco binární strom spoléhá pouze na hashovací funkce. Pokrok v dokazovacích systémech také snižuje potřebu malých, rychle generovatelných důkazů, které byly hlavní výhodou Verkle stromů. Protože každý uzel v binárním stromu má pouze dva potomky, jeho důkazy jsou také mnohem menší než důkazy z dnešní šestnáctkové trie.
 
 ## Další čtení {#further-reading}
 
@@ -57,9 +59,11 @@ Testnety Verkle stromů jsou již v provozu, ale stále existují podstatné nev
 - [Verkle stromy pro nás ostatní](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
 - [Anatomie Verkle důkazu](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet vysvětluje Verkle stromy na ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
-- [„Jak Verkle stromy dělají Ethereum štíhlým a efektivním“ od Guillauma Balleta na Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
+- [„Jak Verkle stromy dělají Ethereum efektivním a výkonným“ od Guillaumea Balleta na Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam o bezstavových klientech z ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Feist vysvětluje Verkle stromy a bezstavovost v podcastu Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin o Verkle stromech](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist o Verkle stromech](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Dokumentace EIP k Verkle stromům](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [EIP-6800: Stav Etherea pomocí sjednoceného Verkle stromu](https://eips.ethereum.org/EIPS/eip-6800)
+- [EIP-7864: Stav Etherea pomocí sjednoceného binárního stromu](https://eips.ethereum.org/EIPS/eip-7864)

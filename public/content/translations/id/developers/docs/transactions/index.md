@@ -12,28 +12,27 @@ Untuk membantu Anda memahami halaman ini dengan lebih baik, kami sarankan Anda m
 
 ## Apa itu transaksi? {#whats-a-transaction}
 
-Transaksi Ethereum merujuk pada tindakan yang diinisiasi oleh akun yang dimiliki secara eksternal (externally-owned account), dengan kata lain akun yang dikelola oleh manusia, bukan kontrak. Misalnya, jika Bob mengirimkan 1 ETH kepada Alice, akun Bob harus didebit dan akun Alice harus dikredit. Tindakan yang mengubah state ini terjadi di dalam sebuah transaksi.
+Transaksi Ethereum merujuk pada tindakan yang diinisiasi oleh akun milik eksternal, dengan kata lain akun yang dikelola oleh manusia, bukan kontrak. Sebagai contoh, jika Bob mengirimkan 1 ETH kepada Alice, akun Bob harus didebit dan akun Alice harus dikredit. Tindakan yang mengubah state ini terjadi di dalam sebuah transaksi.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Diagram diadaptasi dari [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
-Transaksi, yang mengubah state EVM, perlu disiarkan ke seluruh jaringan. Setiap node dapat menyiarkan permintaan agar transaksi dieksekusi di EVM; setelah ini terjadi, validator akan mengeksekusi transaksi dan menyebarkan perubahan state yang dihasilkan ke seluruh jaringan.
+Transaksi, yang mengubah state EVM, perlu disiarkan ke seluruh jaringan. Setiap node dapat menyiarkan permintaan agar transaksi dieksekusi pada EVM; setelah ini terjadi, validator akan mengeksekusi transaksi dan menyebarkan perubahan state yang dihasilkan ke seluruh jaringan.
 
-Transaksi memerlukan biaya dan harus disertakan dalam blok yang divalidasi. Untuk membuat gambaran umum ini lebih sederhana, kami akan membahas biaya gas dan validasi di tempat lain.
+Transaksi mewajibkan biaya dan harus disertakan dalam blok yang divalidasi. Untuk membuat gambaran umum ini lebih sederhana, kami akan membahas biaya gas dan validasi di tempat lain.
 
 Transaksi yang dikirimkan mencakup informasi berikut:
 
-- `from` – alamat pengirim, yang akan menandatangani transaksi. Ini akan menjadi akun yang dimiliki secara eksternal karena akun kontrak tidak dapat mengirim transaksi
-- `to` – alamat penerima (jika akun yang dimiliki secara eksternal, transaksi akan mentransfer nilai. Jika akun kontrak, transaksi akan mengeksekusi kode kontrak)
+- `from` – alamat pengirim, yang akan menandatangani transaksi. Ini akan menjadi akun milik eksternal karena akun kontrak tidak dapat mengirim transaksi
+- `to` – alamat penerima (jika akun milik eksternal, transaksi akan mentransfer nilai. Jika akun kontrak, transaksi akan mengeksekusi kode kontrak)
 - `signature` – pengidentifikasi pengirim. Ini dihasilkan ketika kunci privat pengirim menandatangani transaksi dan mengonfirmasi bahwa pengirim telah mengotorisasi transaksi ini
 - `nonce` - penghitung yang meningkat secara berurutan yang menunjukkan nomor transaksi dari akun tersebut
 - `value` – jumlah ETH yang akan ditransfer dari pengirim ke penerima (dalam denominasi Wei, di mana 1 ETH sama dengan 1e+18 Wei)
 - `input data` – bidang opsional untuk menyertakan data arbitrer
-- `gasLimit` – jumlah maksimum unit gas yang dapat dikonsumsi oleh transaksi. [EVM](/developers/docs/evm/opcodes) menentukan unit gas yang diperlukan oleh setiap langkah komputasi
-- `maxPriorityFeePerGas` - harga maksimum dari gas yang dikonsumsi untuk disertakan sebagai tip kepada validator
+- `gasLimit` – jumlah maksimum unit gas yang dapat dikonsumsi oleh transaksi. [EVM](/developers/docs/evm/opcodes) menentukan unit gas yang diwajibkan oleh setiap langkah komputasi
+- `maxPriorityFeePerGas` - harga maksimum gas yang dikonsumsi untuk disertakan sebagai tip kepada validator
 - `maxFeePerGas` - biaya maksimum per unit gas yang bersedia dibayarkan untuk transaksi (termasuk `baseFeePerGas` dan `maxPriorityFeePerGas`)
 
-Gas adalah referensi ke komputasi yang diperlukan untuk memproses transaksi oleh validator. Pengguna harus membayar biaya untuk komputasi ini. `gasLimit`, dan `maxPriorityFeePerGas` menentukan biaya transaksi maksimum yang dibayarkan kepada validator. [Lebih lanjut tentang Gas](/developers/docs/gas/).
+Gas adalah referensi ke komputasi yang diwajibkan untuk memproses transaksi oleh validator. Pengguna harus membayar biaya untuk komputasi ini. `gasLimit`, dan `maxPriorityFeePerGas` menentukan biaya transaksi maksimum yang dibayarkan kepada validator. [Lebih lanjut tentang Gas](/developers/docs/gas/).
 
 Objek transaksi akan terlihat sedikit seperti ini:
 
@@ -100,7 +99,7 @@ Contoh respons:
 }
 ```
 
-- `raw` adalah transaksi yang ditandatangani dalam bentuk yang dienkode [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- `raw` adalah transaksi yang ditandatangani dalam bentuk yang dienkode [Awalan Panjang Rekursif (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` adalah transaksi yang ditandatangani dalam bentuk JSON
 
 Dengan hash tanda tangan, transaksi dapat dibuktikan secara kriptografis bahwa itu berasal dari pengirim dan dikirimkan ke jaringan.
@@ -150,7 +149,7 @@ Di Ethereum ada beberapa jenis transaksi yang berbeda:
 
 ### Tentang gas {#on-gas}
 
-Seperti yang disebutkan, transaksi memerlukan biaya [gas](/developers/docs/gas/) untuk dieksekusi. Transaksi transfer sederhana memerlukan 21000 unit Gas.
+Seperti yang disebutkan, transaksi memerlukan biaya [gas](/developers/docs/gas/) untuk dieksekusi. Transaksi transfer sederhana mewajibkan 21000 unit Gas.
 
 Jadi agar Bob dapat mengirimkan 1 ETH kepada Alice dengan `baseFeePerGas` sebesar 190 Gwei dan `maxPriorityFeePerGas` sebesar 10 Gwei, Bob harus membayar biaya berikut:
 
@@ -169,8 +168,7 @@ Biaya dasar akan dibakar **-0,00399 ETH**
 Validator menyimpan tip **+0,000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Diagram diadaptasi dari [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 Setiap gas yang tidak digunakan dalam transaksi akan dikembalikan ke akun pengguna.
 
@@ -223,7 +221,7 @@ Berdasarkan nilai `TransactionType`, transaksi dapat diklasifikasikan sebagai:
 
 3. **Transaksi Tipe 2**, umumnya disebut sebagai transaksi EIP-1559, adalah transaksi yang diperkenalkan dalam [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), pada [Pembaruan London](/ethereum-forks/#london) Ethereum. Transaksi ini telah menjadi jenis transaksi standar di jaringan Ethereum. Transaksi ini memperkenalkan mekanisme pasar biaya baru yang meningkatkan prediktabilitas dengan memisahkan biaya transaksi menjadi biaya dasar dan biaya prioritas. Transaksi ini dimulai dengan bita `0x02` dan menyertakan bidang seperti `maxPriorityFeePerGas` dan `maxFeePerGas`. Transaksi Tipe 2 sekarang menjadi default karena fleksibilitas dan efisiensinya, terutama disukai selama periode kemacetan jaringan yang tinggi karena kemampuannya membantu pengguna mengelola biaya transaksi dengan lebih dapat diprediksi. Nilai TransactionType untuk transaksi ini adalah `0x2`.
 
-4. **Transaksi Tipe 3 (Blob)** diperkenalkan dalam [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) sebagai bagian dari [pembaruan Dencun](/ethereum-forks/#dencun) Ethereum. Transaksi ini dirancang untuk menangani data "blob" (Binary Large Objects) dengan lebih efisien, khususnya menguntungkan rollup lapisan 2 (l2) dengan menyediakan cara untuk memposting data ke jaringan Ethereum dengan biaya yang lebih rendah. Transaksi blob menyertakan bidang tambahan seperti `blobVersionedHashes`, `maxFeePerBlobGas`, dan `blobGasPrice`. Transaksi ini dimulai dengan bita `0x03`, dan nilai TransactionType-nya adalah `0x3`. Transaksi blob mewakili peningkatan signifikan dalam ketersediaan data dan kemampuan penskalaan Ethereum.
+4. **Transaksi Tipe 3 (Blob)** diperkenalkan dalam [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) sebagai bagian dari [pembaruan Dencun](/ethereum-forks/#dencun) Ethereum. Transaksi ini dirancang untuk menangani data "blob" (Binary Large Objects) dengan lebih efisien, khususnya menguntungkan rollup lapisan 2 (L2) dengan menyediakan cara untuk memposting data ke jaringan Ethereum dengan biaya yang lebih rendah. Transaksi blob menyertakan bidang tambahan seperti `blobVersionedHashes`, `maxFeePerBlobGas`, dan `blobGasPrice`. Transaksi ini dimulai dengan bita `0x03`, dan nilai TransactionType-nya adalah `0x3`. Transaksi blob mewakili peningkatan signifikan dalam ketersediaan data dan kemampuan penskalaan Ethereum.
 
 5. **Transaksi Tipe 4** diperkenalkan dalam [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) sebagai bagian dari [Pembaruan Pectra](/roadmap/pectra/) Ethereum. Transaksi ini dirancang agar kompatibel ke depan dengan abstraksi akun. Transaksi ini memungkinkan EOA untuk sementara berperilaku seperti akun kontrak pintar tanpa mengorbankan fungsionalitas aslinya. Transaksi ini menyertakan parameter `authorization_list`, yang menentukan kontrak pintar tempat EOA mendelegasikan otoritasnya. Setelah transaksi, bidang kode EOA akan memiliki alamat kontrak pintar yang didelegasikan.
 

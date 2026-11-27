@@ -88,7 +88,7 @@ def mkcache(cache_size, seed):
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # randmemohashの低ラウンド版を使用する
+    # 低ラウンド版のrandmemohashを使用する
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-キャッシュ生成プロセスでは、まず32 MBのメモリを順次埋め、次に[_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf)のSergio Demian Lernerによる_RandMemoHash_アルゴリズムを2パス実行します。出力は、524288個の64バイト値のセットになります。
+キャッシュの生成プロセスでは、まず32 MBのメモリを順次満たし、次に[_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf)に記載されているSergio Demian Lernerの_RandMemoHash_アルゴリズムを3パス（`CACHE_ROUNDS`）実行します。出力は、524288個の64バイト値のセットになります。
 
 ## データ集約関数 {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _役に立つコミュニティ・リソースをご存知ですか？このペ�
 
 ## 付録 {#appendix}
 
-上記のPython仕様をコードとして実行することに関心がある場合は、以下のコードを先頭に追加する必要があります。
+上記のPython仕様をコードとして実行したい場合は、以下のコードを先頭に追加する必要があります。
 
 ```python
 import sha3, copy
 
-# リトル・エンディアンのビット順序を想定する（Intelアーキテクチャと同様）
+# リトルエンディアンのビット順序を前提とする（Intelアーキテクチャと同じ）
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

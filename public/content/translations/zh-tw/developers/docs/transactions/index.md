@@ -12,28 +12,27 @@ lang: zh-tw
 
 ## 什麼是交易？ {#whats-a-transaction}
 
-以太坊交易是指由外部擁有帳戶（externally-owned account，EOA）發起的動作，換句話說，是由人類而非合約管理的帳戶。例如，如果 Bob 發送 1 ETH 給 Alice，Bob 的帳戶必須扣款，而 Alice 的帳戶必須入帳。這個改變狀態的動作發生在交易之內。
+以太坊交易是指由外部擁有的帳戶（換句話說，由人類而非合約管理的帳戶）所發起的動作。例如，如果 Bob 發送 1 ETH 給 Alice，Bob 的帳戶必須被扣款，而 Alice 的帳戶必須被入帳。這個改變狀態的動作發生在交易中。
 
-![Diagram showing a transaction cause state change](./tx.png)
-_圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
-改變 EVM 狀態的交易需要廣播到整個網路。任何節點都可以廣播在 EVM 上執行交易的請求；發生這種情況後，驗證者將執行該交易，並將產生的狀態變更傳播到網路的其餘部分。
+會改變 EVM 狀態的交易需要被廣播到整個網路。任何節點都可以廣播在 EVM 上執行交易的請求；在此之後，驗證者將執行該交易，並將產生的狀態變更傳播到網路的其餘部分。
 
-交易需要手續費，並且必須包含在已驗證的區塊中。為了讓這篇概覽更簡單，我們將在其他地方介紹 Gas 費和驗證。
+交易要求支付手續費，並且必須被包含在已驗證的區塊中。為了讓本概覽更簡單，我們將在其他地方介紹 Gas 費和驗證。
 
 提交的交易包含以下資訊：
 
-- `from` – 發送者的地址，將簽署該交易。這將是一個外部擁有帳戶，因為合約帳戶無法發送交易
-- `to` – 接收地址（如果是外部擁有帳戶，交易將轉帳價值。如果是合約帳戶，交易將執行合約程式碼）
+- `from` – 發送者的地址，將簽署該交易。這將是一個外部擁有的帳戶，因為合約帳戶無法發送交易
+- `to` – 接收地址（如果是外部擁有的帳戶，交易將轉帳價值。如果是合約帳戶，交易將執行合約程式碼）
 - `signature` – 發送者的識別碼。這是在發送者的私鑰簽署交易時產生的，並確認發送者已授權此交易
-- `nonce` - 一個循序遞增的計數器，表示來自該帳戶的交易編號（隨機數）
+- `nonce` - 一個循序遞增的計數器，指示來自該帳戶的交易編號
 - `value` – 從發送者轉帳到接收者的 ETH 數量（以 Wei 為單位，其中 1 ETH 等於 1e+18 Wei）
 - `input data` – 包含任意資料的選填欄位
-- `gasLimit` – 交易可消耗的最大燃料單位數量（Gas 限制）。[EVM](/developers/docs/evm/opcodes) 指定了每個運算步驟所需的燃料單位
-- `maxPriorityFeePerGas` - 作為給驗證者的小費，所消耗燃料的最高價格
-- `maxFeePerGas` - 願意為交易支付的每單位燃料最高費用（包含 `baseFeePerGas` 和 `maxPriorityFeePerGas`）
+- `gasLimit` – 交易可消耗的最大燃料單位數量。[EVM](/developers/docs/evm/opcodes) 指定了每個運算步驟要求的燃料單位
+- `maxPriorityFeePerGas` - 作為給驗證者的小費而包含的已消耗燃料的最高價格
+- `maxFeePerGas` - 願意為交易支付的每單位燃料的最高費用（包含 `baseFeePerGas` 和 `maxPriorityFeePerGas`）
 
-燃料（Gas）是指驗證者處理交易所需的運算量。使用者必須為此運算支付費用。`gasLimit` 和 `maxPriorityFeePerGas` 決定了支付給驗證者的最高交易手續費。[更多關於燃料的資訊](/developers/docs/gas/)。
+燃料是指驗證者處理交易要求的運算量。使用者必須為此運算支付手續費。`gasLimit` 和 `maxPriorityFeePerGas` 決定了支付給驗證者的最高交易手續費。[更多關於燃料的資訊](/developers/docs/gas/)。
 
 交易物件看起來會像這樣：
 
@@ -49,7 +48,7 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 }
 ```
 
-但交易物件需要使用發送者的私鑰進行簽署。這證明了交易只能來自發送者，而不是被欺詐性地發送。
+但是交易物件需要使用發送者的私鑰進行簽署。這證明了交易只能來自發送者，而不是被欺詐性地發送。
 
 像 Geth 這樣的以太坊用戶端將處理這個簽署過程。
 
@@ -100,8 +99,8 @@ _圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downlo
 }
 ```
 
-- `raw` 是以[遞迴長度前綴（RLP）](/developers/docs/data-structures-and-encoding/rlp)編碼形式表示的已簽署交易
-- `tx` 是 JSON 形式的已簽署交易
+- `raw` 是以[遞迴長度前綴 (RLP)](/developers/docs/data-structures-and-encoding/rlp) 編碼形式表示的已簽署交易
+- `tx` 是以 JSON 形式表示的已簽署交易
 
 透過簽章雜湊，可以在密碼學上證明該交易來自發送者並已提交到網路。
 
@@ -150,9 +149,9 @@ ERC-7730 規範使用交易描述符（通常結構化為 JSON 檔案）來豐�
 
 ### 關於燃料 {#on-gas}
 
-如前所述，執行交易需要花費[燃料](/developers/docs/gas/)。簡單的轉帳交易需要 21000 單位的燃料。
+如前所述，執行交易需要花費[燃料](/developers/docs/gas/)。簡單的轉帳交易要求 21000 單位的燃料。
 
-因此，如果 Bob 要以 190 Gwei 的 `baseFeePerGas`（基礎費用）和 10 Gwei 的 `maxPriorityFeePerGas`（優先費）發送 1 ETH 給 Alice，Bob 將需要支付以下費用：
+因此，如果 Bob 要以 190 Gwei 的 `baseFeePerGas` 和 10 Gwei 的 `maxPriorityFeePerGas` 發送 1 ETH 給 Alice，Bob 將需要支付以下費用：
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -169,10 +168,9 @@ Alice 的帳戶將入帳 **+1.0 ETH**
 驗證者保留小費 **+0.000210 ETH**
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_圖表改編自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
-交易中未使用的任何燃料都會退還給使用者帳戶。
+交易中未使用的任何燃料都會退還到使用者帳戶。
 
 ### 智能合約互動 {#smart-contract-interactions}
 

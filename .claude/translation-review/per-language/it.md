@@ -1,5 +1,14 @@
 # it Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.2/10
+Scope: 15 markdown files, changed lines; 7 diffs read in full (ethash, data-structures x3, frameworks, run-a-node, transactions).
+
+**Fixed in this branch (2 critical, #112):** statelessness `organizzazione autonoma decentralizzata (DAO)` -> `DAO` and `layer 1 (L1)` -> `verifica L1` (English bare `L1`).
+
+**Open:** `(PBS)` appended to `separazione proponente-costruttore` (3 sites); decimal separators mixed in run-a-node (`1.8TB+` with period vs `-1,0042 ETH` in transactions); `in genere calcola altri 15-90GB` (imperative; `prevedi`).
+
+**Notes:** tu register consistent. Sweeps clean for U+3002, U+2060, foreign scripts, SPDX.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.0/10
 Scope: 76 markdown pages (mostly 1-24 changed lines; metadata descriptions, L2BEAT to ETHBEAT, l1/l2 casing) + 20 JSON namespaces incl. 283-line dev-tools descriptions. Read the full changed-line diff of every md page and all non-tools JSON.
 

@@ -1,10 +1,10 @@
 ---
 title: The Merge
-description: Scopri The Merge, il momento in cui la Mainnet di Ethereum ha adottato la Proof-of-Stake.
+description: "Scopri di più su The Merge, quando la Mainnet di Ethereum è passata dalla Prova di lavoro (PoW) alla Proof-of-Stake (PoS) nel settembre 2022, riducendo il suo consumo energetico di circa il 99,95%."
 lang: it
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "La Mainnet di Ethereum utilizza la Proof-of-Stake, ma non è sempre stato così."
   - "L'aggiornamento dal meccanismo originale di Prova di lavoro (PoW) alla Proof-of-Stake è stato chiamato The Merge."
@@ -119,69 +119,69 @@ The Merge ha segnato la fine della Prova di lavoro (PoW) per Ethereum e ha dato 
 
 The Merge ha anche posto le basi per ulteriori aggiornamenti di scalabilità non possibili con la Prova di lavoro (PoW), portando Ethereum un passo più vicino al raggiungimento della piena scalabilità, sicurezza e sostenibilità verso cui [la sua roadmap](/roadmap/) è orientata.
 
-## Idee sbagliate su The Merge {#misconceptions}
+## Falsi miti su The Merge {#misconceptions}
 
 <ExpandableCard
-title="Falso mito: &quot;Gestire un nodo richiede di mettere in staking 32 ETH.&quot;"
-contentPreview="Falso. Chiunque è libero di sincronizzare la propria copia auto-verificata di Ethereum (ovvero, gestire un nodo). Non è richiesto alcun ETH: né prima di The Merge, né dopo The Merge, né mai.">
+title="Falso mito: &quot;Eseguire un nodo richiede di mettere in staking 32 ETH.&quot;"
+contentPreview="Falso. Chiunque è libero di sincronizzare la propria copia auto-verificata di Ethereum (ovvero, eseguire un nodo). Non è richiesto alcun ETH: né prima di The Merge, né dopo The Merge, né mai.">
 
 Esistono due tipi di nodi Ethereum: i nodi che possono proporre blocchi e i nodi che non possono farlo.
 
-I nodi che propongono blocchi sono solo un piccolo numero dei nodi totali su Ethereum. Questa categoria include i nodi di minaggio nella Prova di lavoro (PoW) e i nodi validatori nella Proof-of-Stake (PoS). Questa categoria richiede l'impegno di risorse economiche (come la potenza di hash delle GPU nella Prova di lavoro o ETH in staking nella Proof-of-Stake) in cambio della capacità di proporre occasionalmente il blocco successivo e guadagnare ricompense del protocollo.
+I nodi che propongono blocchi sono solo un piccolo numero dei nodi totali su Ethereum. Questa categoria include i nodi di minaggio con la Prova di lavoro (PoW) e i nodi validatori con la Proof-of-Stake (PoS). Questa categoria richiede l'impegno di risorse economiche (come la potenza di hash delle GPU nella Prova di lavoro o gli ETH in staking nella Proof-of-Stake) in cambio della possibilità di proporre occasionalmente il blocco successivo e guadagnare le ricompense del protocollo.
 
-Agli altri nodi della rete (cioè la maggioranza) non è richiesto di impegnare alcuna risorsa economica oltre a un computer di livello consumer con 1-2 TB di spazio di archiviazione disponibile e una connessione internet. Questi nodi non propongono blocchi, ma svolgono comunque un ruolo critico nella protezione della rete, ritenendo responsabili tutti i propositori di blocchi ascoltando i nuovi blocchi e verificandone la validità all'arrivo secondo le regole del consenso della rete. Se il blocco è valido, il nodo continua a propagarlo attraverso la rete. Se il blocco non è valido per qualsiasi motivo, il software del nodo lo ignorerà come non valido e ne interromperà la propagazione.
+Agli altri nodi della rete (ovvero la maggioranza) non è richiesto di impegnare alcuna risorsa economica oltre a un computer di livello consumer con 4 TB di spazio di archiviazione disponibile e una connessione a Internet. Questi nodi non propongono blocchi, ma svolgono comunque un ruolo fondamentale nel proteggere la rete, responsabilizzando tutti i propositori di blocchi mettendosi in ascolto di nuovi blocchi e verificandone la validità all'arrivo secondo le regole del consenso della rete. Se il blocco è valido, il nodo continua a propagarlo attraverso la rete. Se il blocco non è valido per qualsiasi motivo, il software del nodo lo ignorerà in quanto non valido e ne interromperà la propagazione.
 
-L'esecuzione di un nodo che non produce blocchi è possibile per chiunque con entrambi i meccanismi di consenso (Prova di lavoro o Proof-of-Stake); è <em>fortemente incoraggiata</em> per tutti gli utenti se ne hanno i mezzi. Eseguire un nodo è immensamente prezioso per Ethereum e offre vantaggi aggiuntivi a chiunque ne esegua uno, come maggiore sicurezza, privacy e resistenza alla censura.
+Eseguire un nodo che non produce blocchi è possibile per chiunque con entrambi i meccanismi di consenso (Prova di lavoro o Proof-of-Stake); è <em>fortemente incoraggiato</em> per tutti gli utenti se ne hanno i mezzi. Eseguire un nodo è immensamente prezioso per Ethereum e offre vantaggi aggiuntivi a chiunque ne esegua uno, come una migliore sicurezza, privacy e resistenza alla censura.
 
-La capacità di chiunque di eseguire il proprio nodo è <em>assolutamente essenziale</em> per mantenere la decentralizzazione della rete Ethereum.
+La possibilità per chiunque di eseguire il proprio nodo è <em>assolutamente essenziale</em> per mantenere la decentralizzazione della rete Ethereum.
 
-[Maggiori informazioni sull'esecuzione del proprio nodo](/run-a-node/)
+[Scopri di più sull'esecuzione del tuo nodo](/run-a-node/)
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Falso mito: &quot;The Merge non è riuscito a ridurre le commissioni del gas.&quot;"
-contentPreview="Falso. The Merge è stato un cambiamento del meccanismo di consenso, non un'espansione della capacità della rete, e non è mai stato inteso per abbassare le commissioni del gas.">
+contentPreview="Falso. The Merge è stato un cambiamento del meccanismo di consenso, non un'espansione della capacità della rete, e non è mai stato concepito per abbassare le commissioni del gas.">
 
-Le commissioni del gas sono un prodotto della domanda della rete rispetto alla capacità della rete stessa. The Merge ha deprecato l'uso della Prova di lavoro (PoW), passando alla Proof-of-Stake per il consenso, ma non ha modificato in modo significativo alcun parametro che influenzi direttamente la capacità della rete o la capacità transazionale.
+Le commissioni del gas sono un prodotto della domanda della rete rispetto alla capacità della rete stessa. The Merge ha deprecato l'uso della Prova di lavoro, passando alla Proof-of-Stake per il consenso, ma non ha modificato in modo significativo alcun parametro che influenzi direttamente la capacità della rete o la capacità transazionale.
 
-Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">roadmap incentrata sui rollup</a>, gli sforzi si stanno concentrando sulla scalabilità dell'attività degli utenti al [layer 2 (l2)](/layer-2/), abilitando al contempo la Mainnet di layer 1 (l1) come livello di regolamento decentralizzato e sicuro ottimizzato per l'archiviazione dei dati dei rollup per contribuire a rendere le transazioni dei rollup esponenzialmente più economiche. La transizione alla Proof-of-Stake è un precursore critico per realizzare questo. [Maggiori informazioni su gas e commissioni.](/developers/docs/gas/)
-
-</ExpandableCard>
-
-<ExpandableCard
-title="Falso mito: &quot;Le transazioni sono state accelerate sostanzialmente da The Merge.&quot;"
-contentPreview="Falso. Sebbene esistano alcuni lievi cambiamenti, la velocità delle transazioni è per lo più la stessa sul layer 1 ora come lo era prima di The Merge.">
-La "velocità" di una transazione può essere misurata in diversi modi, tra cui il tempo per essere inclusa in un blocco e il tempo per la finalizzazione. Entrambi questi aspetti cambiano leggermente, ma non in un modo che gli utenti noteranno.
-
-Storicamente, nella Prova di lavoro (PoW), l'obiettivo era avere un nuovo blocco ogni circa 13,3 secondi. Con la Proof-of-Stake, gli slot si verificano esattamente ogni 12 secondi, ognuno dei quali è un'opportunità per un validatore di pubblicare un blocco. La maggior parte degli slot ha blocchi, ma non necessariamente tutti (ad es., un validatore è offline). Nella Proof-of-Stake, i blocchi vengono prodotti circa il 10% più frequentemente rispetto alla Prova di lavoro. Questo è stato un cambiamento abbastanza insignificante ed è improbabile che venga notato dagli utenti.
-
-La Proof-of-Stake ha introdotto il concetto di definitività delle transazioni che prima non esisteva. Nella Prova di lavoro, la capacità di invertire un blocco diventa esponenzialmente più difficile con ogni blocco minato sopra una transazione, ma non raggiunge mai del tutto lo zero. Con la Proof-of-Stake, i blocchi sono raggruppati in epoche (intervalli di tempo di 6,4 minuti contenenti 32 possibilità per i blocchi) su cui i validatori esprimono un voto. Quando un'epoca finisce, i validatori votano se considerare l'epoca 'giustificata'. Se i validatori concordano nel giustificare l'epoca, questa viene finalizzata nell'epoca successiva. Annullare le transazioni finalizzate è economicamente impraticabile in quanto richiederebbe l'ottenimento e la bruciatura di oltre un terzo del totale degli ETH in staking.
+Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">roadmap incentrata sui rollup</a>, gli sforzi si stanno concentrando sulla scalabilità dell'attività degli utenti sul [layer 2](/layer-2/), abilitando al contempo la Mainnet del layer 1 come un livello di regolamento decentralizzato e sicuro, ottimizzato per l'archiviazione dei dati dei rollup per contribuire a rendere le transazioni dei rollup esponenzialmente più economiche. La transizione alla Proof-of-Stake è un precursore fondamentale per realizzare tutto questo. [Scopri di più su gas e commissioni.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Falso mito: &quot;The Merge ha abilitato i prelievi di staking.&quot;"
-contentPreview="Falso, ma i prelievi di staking sono stati da allora abilitati tramite l'aggiornamento Shanghai/Capella.">
+title="Falso mito: &quot;Le transazioni sono state accelerate in modo sostanziale da The Merge.&quot;"
+contentPreview="Falso. Sebbene esistano alcuni lievi cambiamenti, la velocità delle transazioni è per lo più la stessa sul layer 1 ora rispetto a prima di The Merge.">
+La "velocità" di una transazione può essere misurata in diversi modi, tra cui il tempo necessario per essere inclusa in un blocco e il tempo per la definitività. Entrambi questi aspetti cambiano leggermente, ma non in un modo che gli utenti noteranno.
 
-Inizialmente dopo The Merge, gli staker potevano accedere solo alle mance sulle commissioni e al MEV guadagnati come risultato delle proposte di blocco. Queste ricompense vengono accreditate su un account non di staking controllato dal validatore (noto come <em>destinatario delle commissioni</em>) e sono disponibili immediatamente. Queste ricompense sono separate dalle ricompense del protocollo per l'esecuzione dei compiti del validatore.
+Storicamente, con la Prova di lavoro, l'obiettivo era avere un nuovo blocco ogni ~13,3 secondi. Con la Proof-of-Stake, gli slot si verificano esattamente ogni 12 secondi, ognuno dei quali è un'opportunità per un validatore di pubblicare un blocco. La maggior parte degli slot ha dei blocchi, ma non necessariamente tutti (ad es. se un validatore è offline). Nella Proof-of-Stake, i blocchi vengono prodotti con una frequenza superiore di circa il 10% rispetto alla Prova di lavoro. Si è trattato di un cambiamento piuttosto insignificante ed è improbabile che venga notato dagli utenti.
 
-Dall'aggiornamento della rete Shanghai/Capella, gli staker possono ora designare un <em>indirizzo di prelievo</em> per iniziare a ricevere pagamenti automatici di qualsiasi saldo di staking in eccesso (ETH oltre i 32 derivanti dalle ricompense del protocollo). Questo aggiornamento ha anche abilitato la capacità per un validatore di sbloccare e reclamare il suo intero saldo all'uscita dalla rete.
+La Proof-of-Stake ha introdotto il concetto di definitività delle transazioni che in precedenza non esisteva. Nella Prova di lavoro, la capacità di annullare un blocco diventa esponenzialmente più difficile con ogni blocco minato sopra una transazione, ma non raggiunge mai del tutto lo zero. Con la Proof-of-Stake, i blocchi sono raggruppati in epoche (archi di tempo di 6,4 minuti contenenti 32 possibilità per i blocchi) su cui i validatori votano. Quando un'epoca finisce, i validatori votano se considerare l'epoca 'giustificata'. Se i validatori concordano nel giustificare l'epoca, questa viene finalizzata nell'epoca successiva. Annullare le transazioni finalizzate è economicamente impraticabile in quanto richiederebbe di ottenere e bruciare oltre un terzo degli ETH totali in staking.
 
-[Maggiori informazioni sui prelievi di staking](/staking/withdrawals/)
+</ExpandableCard>
+
+<ExpandableCard
+title="Falso mito: &quot;The Merge ha abilitato i prelievi dallo staking.&quot;"
+contentPreview="Falso, ma i prelievi dallo staking sono stati successivamente abilitati tramite l'aggiornamento Shanghai/Capella.">
+
+Inizialmente dopo The Merge, gli staker potevano accedere solo alle mance sulle commissioni e al MEV guadagnati come risultato delle proposte di blocchi. Queste ricompense vengono accreditate su un account non di staking controllato dal validatore (noto come <em>fee recipient</em>) e sono disponibili immediatamente. Queste ricompense sono separate dalle ricompense del protocollo per l'esecuzione dei compiti del validatore.
+
+Dall'aggiornamento di rete Shanghai/Capella, gli staker possono ora designare un <em>indirizzo di prelievo</em> per iniziare a ricevere pagamenti automatici di qualsiasi saldo di staking in eccesso (gli ETH oltre i 32 derivanti dalle ricompense del protocollo). Questo aggiornamento ha anche abilitato la possibilità per un validatore di sbloccare e reclamare il suo intero saldo all'uscita dalla rete.
+
+[Scopri di più sui prelievi dallo staking](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Falso mito: &quot;Ora che The Merge è completo e i prelievi sono abilitati, gli staker potrebbero uscire tutti in una volta.&quot;"
-contentPreview="Falso. Le uscite dei validatori sono soggette a limiti di frequenza per motivi di sicurezza.">
-Poiché l'aggiornamento Shanghai/Capella ha abilitato i prelievi, i validatori sono incentivati a prelevare il loro saldo di staking superiore a 32 ETH, poiché questi fondi non si aggiungono al rendimento e sono altrimenti bloccati. A seconda dell'APR (determinato dal totale degli ETH in staking), potrebbero essere incentivati a uscire dal loro validatore (o validatori) per reclamare l'intero saldo o potenzialmente mettere in staking ancora di più utilizzando le loro ricompense per guadagnare più rendimento.
+contentPreview="Falso. Le uscite dei validatori sono limitate nella frequenza per motivi di sicurezza.">
+Poiché l'aggiornamento Shanghai/Capella ha abilitato i prelievi, i validatori sono incentivati a prelevare il loro saldo di staking superiore a 32 ETH, in quanto questi fondi non si aggiungono al rendimento e sarebbero altrimenti bloccati. A seconda dell'APR (determinato dagli ETH totali in staking), potrebbero essere incentivati a far uscire i propri validatori per reclamare il loro intero saldo o potenzialmente mettere in staking ancora di più utilizzando le loro ricompense per guadagnare un rendimento maggiore.
 
-Un avvertimento importante qui: le uscite complete dei validatori sono limitate in frequenza dal protocollo e solo un certo numero di validatori può uscire per epoca (ogni 6,4 minuti). Questo limite fluttua a seconda del numero di validatori attivi, ma risulta che circa lo 0,33% del totale degli ETH in staking può uscire dalla rete in un solo giorno.
+Un avvertimento importante in questo caso: le uscite complete dei validatori sono limitate nella frequenza dal protocollo e solo un certo numero di validatori può uscire per epoca (ogni 6,4 minuti). Questo limite fluttua a seconda del numero di validatori attivi, ma si traduce in circa lo 0,33% degli ETH totali in staking che può uscire dalla rete in un solo giorno.
 
-Questo previene un esodo di massa dei fondi in staking. Inoltre, impedisce a un potenziale attaccante con accesso a un'ampia porzione del totale degli ETH in staking di commettere un'infrazione passibile di slashing e di uscire/prelevare tutti i saldi dei validatori colpevoli nella stessa epoca prima che il protocollo possa applicare la penalizzazione di slashing.
+Questo previene un esodo di massa dei fondi in staking. Inoltre, impedisce a un potenziale attaccante con accesso a un'ampia porzione degli ETH totali in staking di commettere un'infrazione passibile di slashing e di uscire/prelevare tutti i saldi dei validatori colpevoli nella stessa epoca prima che il protocollo possa applicare la penalità di slashing.
 
-L'APR è anche intenzionalmente dinamico, consentendo a un mercato di staker di bilanciare quanto sono disposti a essere pagati per aiutare a proteggere la rete. Se il tasso è troppo basso, i validatori usciranno a un tasso limitato dal protocollo. Gradualmente questo aumenterà l'APR per tutti coloro che rimangono, attirando ancora una volta staker nuovi o di ritorno.
+L'APR è anche intenzionalmente dinamico, consentendo a un mercato di staker di bilanciare quanto sono disposti a essere pagati per aiutare a proteggere la rete. Se il tasso è troppo basso, i validatori usciranno a una frequenza limitata dal protocollo. Gradualmente questo aumenterà l'APR per tutti coloro che rimangono, attirando ancora una volta staker nuovi o di ritorno.
 </ExpandableCard>
 
 ## Che fine ha fatto 'Eth2'? {#eth2}
@@ -219,9 +219,9 @@ Per i più curiosi, scoprite di più su [Cosa succede dopo The Merge](https://yo
 
 ### The Merge e lo sharding {#merge-and-data-sharding}
 
-Inizialmente, il piano era di lavorare sullo sharding prima di The Merge per affrontare la scalabilità. Tuttavia, con il boom delle [soluzioni di scalabilità di layer 2 (l2)](/layer-2/), la priorità si è spostata prima sul passaggio dalla Prova di lavoro (PoW) alla Proof-of-Stake.
+Inizialmente, il piano era di lavorare sullo sharding prima di The Merge per affrontare la scalabilità. Tuttavia, con il boom delle [soluzioni di scalabilità di layer 2 (L2)](/layer-2/), la priorità si è spostata prima sul passaggio dalla Prova di lavoro (PoW) alla Proof-of-Stake.
 
-I piani per lo sharding si stanno evolvendo rapidamente, ma dato l'aumento e il successo delle tecnologie di layer 2 (l2) per scalare l'esecuzione delle transazioni, i piani di sharding si sono spostati sulla ricerca del modo più ottimale per distribuire l'onere dell'archiviazione dei dati di chiamata compressi dai contratti di rollup, consentendo una crescita esponenziale della capacità della rete. Questo non sarebbe possibile senza prima passare alla Proof-of-Stake.
+I piani per lo sharding si stanno evolvendo rapidamente, ma dato l'aumento e il successo delle tecnologie di layer 2 (L2) per scalare l'esecuzione delle transazioni, i piani di sharding si sono spostati sulla ricerca del modo più ottimale per distribuire l'onere dell'archiviazione dei dati di chiamata compressi dai contratti di rollup, consentendo una crescita esponenziale della capacità della rete. Questo non sarebbe possibile senza prima passare alla Proof-of-Stake.
 
 <ButtonLink href="/roadmap/danksharding/">
   Sharding

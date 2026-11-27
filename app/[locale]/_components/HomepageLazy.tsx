@@ -28,16 +28,6 @@ export const KPISection = dynamic(
   }
 )
 
-export const SavingsCarousel = dynamic(
-  () => import("@/components/Homepage/SavingsCarousel"),
-  {
-    ssr: false,
-    loading: () => (
-      <Skeleton heightClass="h-[1000px] md:h-[700px]" className="py-12" />
-    ),
-  }
-)
-
 export const SimulatorSection = dynamic(
   () => import("@/components/Homepage/SimulatorSection"),
   {

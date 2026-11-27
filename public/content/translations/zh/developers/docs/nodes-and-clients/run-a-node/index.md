@@ -1,6 +1,6 @@
 ---
-title: 启动你自己的以太坊节点
-description: 运行你自己的以太坊客户端实例的总体介绍。
+title: "启动你自己的以太坊节点"
+description: "运行你自己的以太坊客户端实例的总体介绍。"
 lang: zh
 sidebarDepth: 2
 ---
@@ -15,21 +15,21 @@ sidebarDepth: 2
 
 如果你是运行节点的新手，或者正在寻找技术门槛较低的途径，我们建议你首先查看我们关于[运行以太坊节点](/run-a-node)的用户友好型介绍。
 
-## 选择一种方法 {#choosing-approach}
+## 选择方法 {#choosing-approach}
 
 启动节点的第一步是选择你的方法。根据要求和各种可能性，你必须选择客户端实现（包括执行客户端和共识客户端）、环境（硬件、系统）以及客户端设置的参数。
 
-本页面将指导你完成这些决策，并帮助你找到运行以太坊实例的最合适方式。
+本页面将引导你完成这些决策，并帮助你找到运行以太坊实例的最合适方法。
 
-要从客户端实现中进行选择，请查看所有可用于主网的[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)、[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)，并了解[客户端多样性](/developers/docs/nodes-and-clients/client-diversity)。
+要从客户端实现中进行选择，请查看所有可用的、已为主网做好准备的[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)、[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)，并了解[客户端多样性](/developers/docs/nodes-and-clients/client-diversity)。
 
 考虑到客户端的[要求](#requirements)，决定是在你自己的[硬件上还是在云端](#local-vs-cloud)运行该软件。
 
-准备好环境后，使用[对初学者友好的界面](#automatized-setup)或使用带有高级选项的终端[手动](#manual-setup)安装所选的客户端。
+准备好环境后，可以使用[对初学者友好的界面](#automatized-setup)或使用带有高级选项的终端[手动](#manual-setup)安装所选的客户端。
 
-当节点正在运行并同步时，你就可以[使用它](#using-the-node)了，但请务必留意其[维护](#operating-the-node)。
+当节点正在运行并同步时，你就可以[使用它](#using-the-node)了，但请务必关注其[维护](#operating-the-node)。
 
-![客户端设置](./diagram.png)
+<ClientSetupDiagram />
 
 ### 环境和硬件 {#environment-and-hardware}
 
@@ -61,11 +61,11 @@ sidebarDepth: 2
 
 #### 要求 {#requirements}
 
-硬件要求因客户端而异，但通常不是很高，因为节点只需要保持同步。不要将其与挖矿混淆，后者需要更多的计算能力。不过，更强大的硬件确实能缩短同步时间并提高性能。
+硬件要求因客户端而异，但通常不会太高，因为节点只需要保持同步。不要将其与挖矿混淆，后者需要更多的计算能力。然而，更强大的硬件确实能缩短同步时间并提高性能。
 
-在安装任何客户端之前，请确保你的计算机有足够的资源来运行它。你可以在下面找到最低和推荐要求。
+在安装任何客户端之前，请确保你的计算机有足够的资源来运行它。你可以在下面找到最低和推荐的要求。
 
-硬件的瓶颈主要是磁盘空间。同步以太坊区块链是非常密集的输入/输出操作，需要大量空间。最好有一个**固态硬盘 (SSD)**，即使在同步之后也有数百 GB 的可用空间。
+硬件的瓶颈主要是磁盘空间。同步以太坊区块链是非常密集的输入/输出操作，并且需要大量空间。最好拥有一个**固态硬盘 (SSD)**，即使在同步之后也能留出数百 GB 的可用空间。
 
 数据库的大小和初始同步的速度取决于所选的客户端、其配置和[同步策略](/developers/docs/nodes-and-clients/#sync-modes)。
 
@@ -73,37 +73,38 @@ sidebarDepth: 2
 
 ##### 操作系统
 
-所有客户端都支持主流操作系统——Linux、macOS、Windows。这意味着你可以在具有最适合你的操作系统 (OS) 的常规桌面或服务器机器上运行节点。确保你的操作系统是最新的，以避免潜在的问题和安全漏洞。
+所有客户端都支持主流操作系统——Linux、macOS、Windows。这意味着你可以在常规桌面或服务器机器上运行节点，并使用最适合你的操作系统 (OS)。确保你的操作系统是最新的，以避免潜在的问题和安全漏洞。
 
 ##### 最低要求
 
 - 2 核以上的 CPU
-- 16 GB RAM（为了稳定性推荐 32 GB）
-- 2 TB NVMe SSD（到 2027 年可能会超出，阅读更多关于[适合以太坊节点的优秀和一般 SSD](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) 的信息）
+- 16 GB 内存（为了稳定性推荐 32 GB）
+- 4 TB NVMe SSD（涵盖具有完整链历史记录的节点以及增长空间，请参阅下面的客户端磁盘大小；阅读有关[适合以太坊节点的优秀和较差 SSD](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038) 的更多信息）
 - 25+ MBit/s 带宽
 
 ##### 推荐规格
 
-节点运营商当前的硬件指南在 [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) 中有说明。对于全节点，它推荐：
+当前针对节点操作员的硬件指南在 [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) 中有所说明。对于全节点，它推荐：
 
-- 4 核以上的快速 CPU（如果进行验证则需要 8 核以上）
-- 32 GB RAM（如果进行验证，推荐 64 GB 以确保稳定性）
+- 4 核以上的快速 CPU（如果进行验证，则为 8 核以上）
+- 32 GB 内存（如果进行验证，推荐 64 GB 以确保稳定性）
 - 4 TB NVMe SSD（不建议使用无 DRAM 和 QLC 驱动器）
-- 50 MBit/s 下载 / 15+ MBit/s 上传带宽（如果进行验证则需要 25+ MBit/s 上传）
+- 50 MBit/s 下载 / 15+ MBit/s 上传带宽（如果进行验证，则为 25+ MBit/s 上传）
 
-你选择的同步模式和客户端会影响空间要求，但我们在下面估算了每个客户端所需的磁盘空间。
+你选择的同步模式和客户端将影响空间要求，但我们在下面估算了每个客户端所需的磁盘空间。
 
-| 客户端 | 磁盘大小（快照同步） | 磁盘大小（完整归档） |
+| 客户端 | 磁盘大小（全节点） | 磁盘大小（完整归档） |
 | ---------- | --------------------- | ------------------------ |
-| 贝苏       | 800GB+                | 12TB+                    |
-| 埃里贡       | N/A                   | 2.5TB+                   |
-| Go以太坊 (Geth)       | 500GB+                | 12TB+                    |
-| 奈瑟曼德 | 500GB+                | 12TB+                    |
-| 瑞斯       | N/A                   | 2.2TB+                   |
+| Besu | 1.8TB+ | 12TB+ |
+| Erigon | 1.7TB+ | 2.7TB+ |
+| Geth | 1.8TB+ | 2TB+ |
+| Nethermind | 1.7TB+ | 14TB+ |
+| Reth | 2.2TB+ | 2.8TB+ |
 
-- 注意：埃里贡和瑞斯不提供快照同步，但可以进行完全修剪（埃里贡约为 2TB，瑞斯约为 1.2TB）
+- 注意：全节点大小保留了完整的链历史记录，由 [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) 在 2026 年 9 月测量。支持历史数据过期的客户端需要的空间较少：仅包含合并后历史记录的约为 1.2-1.4TB，或者具有滚动过期的约为 400-650GB（Geth 尚不支持）。
+- 注意：归档大小来自每个客户端的文档（[Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)、[Erigon](https://docs.erigon.tech/get-started/hardware-requirements)、[Geth](https://geth.ethereum.org/docs/fundamentals/archive)、[Nethermind](https://docs.nethermind.io/get-started/system-requirements)、[Reth](https://reth.rs/run/system-requirements)）。Geth 的数据是针对其基于路径的归档；如果同时保留前缀树历史记录，则大约需要 6.5TB。Nethermind 的数据可追溯到 2023 年 7 月，此后有所增长。
 
-对于共识客户端，空间要求还取决于客户端实现和启用的功能（例如，验证者罚没者），但通常信标数据还需要额外的 200GB。随着验证者数量的增加，带宽负载也会增加。你可以在[此分析中找到有关共识客户端要求的详细信息](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
+对于共识客户端，空间要求还取决于客户端实现和启用的功能（例如，验证者罚没者），但通常需要额外的 15-90GB 用于信标数据，如果运行超级节点，还需要大约 500GB 的斑点数据。随着验证者数量的增加，带宽负载也会增加。你可以在[此分析中找到有关共识客户端要求的详细信息](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 
 #### 即插即用解决方案 {#plug-and-play}
 
@@ -459,7 +460,7 @@ _这不适用于共识层验证者节点。_ 使你的节点离线将影响所�
 
 #### 运行其他服务 {#running-additional-services}
 
-运行你自己的节点让你能够使用需要直接访问以太坊客户端 RPC 的服务。这些是构建在以太坊之上的服务，例如[二层网络 (l2) 解决方案](/developers/docs/scaling/#layer-2-scaling)、钱包后端、区块浏览器、开发人员工具和其他以太坊基础设施。
+运行你自己的节点让你能够使用需要直接访问以太坊客户端 RPC 的服务。这些是构建在以太坊之上的服务，例如[二层网络 (L2) 解决方案](/developers/docs/scaling/#layer-2-scaling)、钱包后端、区块浏览器、开发人员工具和其他以太坊基础设施。
 
 #### 监控节点 {#monitoring-the-node}
 

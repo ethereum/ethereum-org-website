@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/data-structures-and-encoding/ssz/index.md",
-  "generatedAt": "2026-06-29T23:56:07.623Z",
-  "rootHash": "0ab4146a5d54",
+  "generatedAt": "2026-11-27T14:44:29.062Z",
+  "rootHash": "14f9b0841292",
   "tree": {
     "contentHash": "684b85d7188f",
-    "anchorHash": "4e7d53dac98b",
+    "anchorHash": "ca82a0d543af",
     "children": {
       "frontmatter:title": {
         "contentHash": "4b7e7bfb94fb",
@@ -37,7 +37,7 @@
       },
       "how-does-ssz-work": {
         "contentHash": "43f4776441ec",
-        "anchorHash": "88467dfc9552",
+        "anchorHash": "9ed889998e7e",
         "labelHash": "d061b52a16e1",
         "children": {
           "_label": {
@@ -46,7 +46,7 @@
           },
           "serialization": {
             "contentHash": "983c33971f39",
-            "anchorHash": "ec6d7ef5d5d6",
+            "anchorHash": "7a95cb9e7a7f",
             "labelHash": "ae017bb2f2c8",
             "children": {
               "_label": {
@@ -91,7 +91,7 @@
               },
               "link:1": {
                 "contentHash": "280da0aed304",
-                "anchorHash": "0aba46780cb2"
+                "anchorHash": "0c96e590d6ba"
               },
               "prose:4": {
                 "contentHash": "cdb4ee2aea69",
@@ -224,7 +224,7 @@
       },
       "multiproofs": {
         "contentHash": "dc3b753a4fc2",
-        "anchorHash": "f111a38f14f3",
+        "anchorHash": "a19978ef76da",
         "labelHash": "47f7a4d8a72a",
         "children": {
           "_label": {
@@ -237,7 +237,7 @@
           },
           "link:0": {
             "contentHash": "fcec91509759",
-            "anchorHash": "745220fe34fd"
+            "anchorHash": "ba606887da7c"
           },
           "prose:2": {
             "contentHash": "e1c37bd487b9",
@@ -326,5 +326,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "e1842064dd65585ac4ee544d57ed98f2215f78ff"
 }

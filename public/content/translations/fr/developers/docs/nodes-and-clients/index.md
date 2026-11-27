@@ -17,13 +17,12 @@ Si vous découvrez le sujet des nœuds, nous vous recommandons de consulter d'ab
 
 Un « nœud » est toute instance de logiciel client Ethereum connectée à d'autres ordinateurs exécutant également le logiciel Ethereum, formant ainsi un réseau. Un client est une implémentation d'Ethereum qui vérifie les données par rapport aux règles du protocole et maintient la sécurité du réseau. Un nœud doit exécuter deux clients : un client de consensus et un client d'exécution.
 
-- Le client d'exécution (également connu sous le nom de moteur d'exécution, client EL ou anciennement client Eth1) écoute les nouvelles transactions diffusées sur le réseau, les exécute dans l'EVM et conserve le dernier état ainsi que la base de données de toutes les données Ethereum actuelles.
+- Le client d'exécution (également connu sous le nom de moteur d'exécution, client EL ou anciennement client Eth1) écoute les nouvelles transactions diffusées sur le réseau, les exécute dans l'EVM et conserve le dernier état et la base de données de toutes les données Ethereum actuelles.
 - Le client de consensus (également connu sous le nom de nœud balise, client CL ou anciennement client Eth2) implémente l'algorithme de consensus de preuve d'enjeu (PoS), qui permet au réseau de parvenir à un accord basé sur les données validées par le client d'exécution. Il existe également un troisième logiciel, appelé « validateur », qui peut être ajouté au client de consensus, permettant à un nœud de participer à la sécurisation du réseau.
 
-Ces clients travaillent ensemble pour garder une trace de la tête de la chaîne Ethereum et permettre aux utilisateurs d'interagir avec le réseau Ethereum. La conception modulaire avec plusieurs logiciels fonctionnant ensemble est appelée [complexité encapsulée](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Cette approche a facilité l'exécution de [La Fusion](/roadmap/merge) de manière transparente, rend les logiciels clients plus faciles à maintenir et à développer, et permet la réutilisation de clients individuels, par exemple, dans l'écosystème de [couche 2 (l2)](/layer-2/).
+Ces clients travaillent ensemble pour garder une trace de la tête de la chaîne Ethereum et permettre aux utilisateurs d'interagir avec le réseau Ethereum. La conception modulaire avec plusieurs logiciels fonctionnant ensemble est appelée [complexité encapsulée](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Cette approche a facilité l'exécution de [La Fusion](/roadmap/merge) de manière transparente, rend les logiciels clients plus faciles à maintenir et à développer, et permet la réutilisation de clients individuels, par exemple, dans l'[écosystème de couche 2](/layer-2/).
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-Schéma simplifié d'un client d'exécution et de consensus couplés.
+<NodeClientsDiagram />
 
 ### Diversité des clients {#client-diversity}
 
@@ -88,18 +87,18 @@ Ethereum ne prend pas encore en charge une grande population de nœuds légers, 
 
 L'exécution d'un nœud vous permet d'utiliser Ethereum directement, sans tiers de confiance et en toute confidentialité, tout en soutenant le réseau en le gardant plus robuste et décentralisé.
 
-### Avantages pour vous {#benefits-to-you}
+### Vos avantages {#benefits-to-you}
 
-L'exécution de votre propre nœud vous permet d'utiliser Ethereum de manière privée, autonome et sans tiers de confiance. Vous n'avez pas besoin de faire confiance au réseau car vous pouvez vérifier les données vous-même avec votre client. « Ne faites pas confiance, vérifiez » est un mantra populaire de la chaîne de blocs.
+Exécuter votre propre nœud vous permet d'utiliser Ethereum de manière privée, autonome et sans tiers de confiance. Vous n'avez pas besoin de faire confiance au réseau car vous pouvez vérifier les données vous-même avec votre client. « Ne faites pas confiance, vérifiez » (Don't trust, verify) est un mantra populaire de la chaîne de blocs.
 
 - Votre nœud vérifie lui-même toutes les transactions et tous les blocs par rapport aux règles de consensus. Cela signifie que vous n'avez pas à dépendre d'autres nœuds du réseau ni à leur faire entièrement confiance.
-- Vous pouvez utiliser un portefeuille Ethereum avec votre propre nœud. Vous pouvez utiliser des applications décentralisées (dapps) de manière plus sécurisée et confidentielle, car vous n'aurez pas à divulguer vos adresses et vos soldes à des intermédiaires. Tout peut être vérifié avec votre propre client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) et de [nombreux autres portefeuilles](/wallets/find-wallet/) offrent l'importation RPC, leur permettant d'utiliser votre nœud.
-- Vous pouvez exécuter et auto-héberger d'autres services qui dépendent des données d'Ethereum. Par exemple, il peut s'agir d'un validateur de la chaîne balise, de logiciels comme la couche 2 (l2), d'infrastructures, d'explorateurs de blocs, de processeurs de paiement, etc.
-- Vous pouvez fournir vos propres [points de terminaison RPC](/developers/docs/apis/json-rpc/) personnalisés. Vous pourriez même offrir ces points de terminaison publiquement à la communauté pour l'aider à éviter les grands fournisseurs centralisés.
-- Vous pouvez vous connecter à votre nœud en utilisant les **communications inter-processus (IPC)** ou réécrire le nœud pour charger votre programme en tant que plugin. Cela accorde une faible latence, ce qui aide beaucoup, par exemple, lors du traitement de nombreuses données à l'aide de bibliothèques Web3 ou lorsque vous devez remplacer vos transactions aussi vite que possible (c'est-à-dire le frontrunning).
+- Vous pouvez utiliser un portefeuille Ethereum avec votre propre nœud. Vous pouvez utiliser des dapps de manière plus sécurisée et privée, car vous n'aurez pas à divulguer vos adresses et vos soldes à des intermédiaires. Tout peut être vérifié avec votre propre client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) et [de nombreux autres portefeuilles](/wallets/find-wallet/) proposent l'importation RPC, ce qui leur permet d'utiliser votre nœud.
+- Vous pouvez exécuter et auto-héberger d'autres services qui dépendent des données d'Ethereum. Par exemple, il peut s'agir d'un validateur de la chaîne balise, de logiciels comme la couche 2, d'infrastructures, d'explorateurs de blocs, de processeurs de paiement, etc.
+- Vous pouvez fournir vos propres [points de terminaison RPC](/developers/docs/apis/json-rpc/) personnalisés. Vous pourriez même proposer ces points de terminaison publiquement à la communauté pour l'aider à éviter les grands fournisseurs centralisés.
+- Vous pouvez vous connecter à votre nœud en utilisant les **communications inter-processus (IPC)** ou réécrire le nœud pour charger votre programme en tant que plugin. Cela garantit une faible latence, ce qui aide beaucoup, par exemple, lors du traitement de nombreuses données à l'aide de bibliothèques Web3 ou lorsque vous devez remplacer vos transactions le plus rapidement possible (c'est-à-dire le frontrunning).
 - Vous pouvez directement staker des ETH pour sécuriser le réseau et gagner des récompenses. Consultez le [staking en solo](/staking/solo/) pour commencer.
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### Avantages pour le réseau {#network-benefits}
 
@@ -130,22 +129,22 @@ D'un autre côté, si vous exécutez un client, vous pouvez le partager avec vos
 
 ## Clients d'exécution {#execution-clients}
 
-La communauté Ethereum maintient plusieurs clients d'exécution open source (précédemment connus sous le nom de « clients Eth1 », ou simplement « clients Ethereum »), développés par différentes équipes utilisant différents langages de programmation. Cela rend le réseau plus fort et plus [diversifié](/developers/docs/nodes-and-clients/client-diversity/). L'objectif idéal est d'atteindre la diversité sans qu'aucun client ne domine afin de réduire tout point de défaillance unique.
+La communauté Ethereum maintient plusieurs clients d'exécution open source (anciennement connus sous le nom de « clients Eth1 », ou simplement « clients Ethereum »), développés par différentes équipes utilisant différents langages de programmation. Cela rend le réseau plus fort et plus [diversifié](/developers/docs/nodes-and-clients/client-diversity/). L'objectif idéal est d'atteindre la diversité sans qu'aucun client ne domine afin de réduire tout point de défaillance unique.
 
-Ce tableau résume les différents clients. Tous passent les [tests de clients](https://github.com/ethereum/tests) et sont activement maintenus pour rester à jour avec les mises à jour du réseau.
+Ce tableau résume les différents clients. Tous réussissent les [tests de clients](https://github.com/ethereum/tests) et sont activement maintenus pour rester à jour avec les mises à niveau du réseau.
 
 | Client                                                                   | Langage    | Systèmes d'exploitation | Réseaux                 | Stratégies de synchronisation                              | Élagage d'état  |
 | ------------------------------------------------------------------------ | ---------- | ----------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Snap](#snap-sync), [Complet](#full-sync)                     | Archive, Élagué |
-| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Snap](#snap-sync), Rapide, [Complet](#full-sync)               | Archive, Élagué |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Snap](#snap-sync), [Rapide](#fast-sync), [Complet](#full-sync) | Archive, Élagué |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Complet](#full-sync)                                         | Archive, Élagué |
-| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Complet](#full-sync)                                         | Archive, Élagué |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(bêta)_ | TypeScript | Linux, Windows, macOS   | Sepolia, Hoodi          | [Complet](#full-sync)                                         | Élagué          |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Snap](#snap-sync), [Complète](#full-sync)                 | Archive, Élagué |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Snap](#snap-sync), Rapide, [Complète](#full-sync)         | Archive, Élagué |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Snap](#snap-sync), [Rapide](#fast-sync), [Complète](#full-sync) | Archive, Élagué |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Complète](#full-sync)                                     | Archive, Élagué |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS            | Réseau principal, Sepolia, Hoodi | [Snap](#snap-sync), [Complète](#full-sync)                 | Élagué          |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS   | Réseau principal, Sepolia, Hoodi | [Complète](#full-sync)                                     | Archive, Élagué |
 
-Pour en savoir plus sur les réseaux pris en charge, lisez la section sur les [réseaux Ethereum](/developers/docs/networks/).
+Pour en savoir plus sur les réseaux pris en charge, lisez la page sur les [réseaux Ethereum](/developers/docs/networks/).
 
-Chaque client a des cas d'utilisation et des avantages uniques, vous devez donc en choisir un en fonction de vos propres préférences. La diversité permet aux implémentations de se concentrer sur différentes fonctionnalités et publics d'utilisateurs. Vous voudrez peut-être choisir un client en fonction des fonctionnalités, du support, du langage de programmation ou des licences.
+Chaque client a des cas d'utilisation et des avantages uniques, vous devez donc en choisir un en fonction de vos propres préférences. La diversité permet aux implémentations de se concentrer sur différentes fonctionnalités et différents publics d'utilisateurs. Vous pouvez choisir un client en fonction de ses fonctionnalités, de son support, de son langage de programmation ou de ses licences.
 
 ### Besu {#besu}
 
@@ -155,12 +154,11 @@ La [documentation](https://besu.hyperledger.org/en/stable/) complète de Besu vo
 
 ### Erigon {#erigon}
 
-Erigon, anciennement connu sous le nom de Turbo-Geth, a commencé comme un fork de Go Ethereum orienté vers la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation d'Ethereum entièrement repensée, actuellement écrite en Go mais avec des implémentations dans d'autres langages en cours de développement. L'objectif d'Erigon est de fournir une implémentation d'Ethereum plus rapide, plus modulaire et plus optimisée. Il peut effectuer une synchronisation complète de nœud d'archive en utilisant environ 2 To d'espace disque, en moins de 3 jours.
-
+Erigon, anciennement connu sous le nom de Turbo-Geth, a commencé comme un fork de Go Ethereum orienté vers la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation d'Ethereum dont l'architecture a été entièrement repensée, actuellement écrite en Go mais avec des implémentations dans d'autres langages en cours de développement. L'objectif d'Erigon est de fournir une implémentation d'Ethereum plus rapide, plus modulaire et plus optimisée. Il peut effectuer une synchronisation complète d'un nœud d'archive en utilisant moins de 3 To d'espace disque, en moins de 3 jours.
 
 ### ethrex {#ethrex}
 
-ethrex est un client d'exécution Ethereum minimaliste et modulaire écrit en Rust et développé par LambdaClass. Il a été conçu en gardant à l'esprit les preuves à divulgation nulle de connaissance, et la même base de code peut fonctionner à la fois comme un client d'exécution de couche 1 (l1) et comme un rollup ZK multi-prouveurs de couche 2 (l2). Il est sous double licence Apache-2.0 et MIT.
+ethrex est un client d'exécution Ethereum minimaliste et modulaire écrit en Rust et développé par LambdaClass. Il a été conçu en gardant à l'esprit les preuves à divulgation nulle de connaissance, et la même base de code peut fonctionner à la fois comme un client d'exécution L1 et comme un rollup ZK multi-prouveurs (L2). Il est sous double licence Apache-2.0 et MIT.
 
 Pour en savoir plus, lisez la [documentation d'ethrex](https://docs.ethrex.xyz/) ou consultez le [dépôt GitHub d'ethrex](https://github.com/lambdaclass/ethrex).
 ### Go Ethereum {#geth}
@@ -187,16 +185,6 @@ Reth est prêt pour la production et convient à une utilisation dans des enviro
 
 En savoir plus en consultant le [livre Reth](https://reth.rs/) ou le [dépôt GitHub de Reth](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
-### En développement {#execution-in-development}
-
-Ces clients sont encore aux premiers stades de développement et ne sont pas encore recommandés pour une utilisation en production.
-
-#### EthereumJS {#ethereumjs}
-
-Le client d'exécution EthereumJS (EthereumJS) est écrit en TypeScript et composé d'un certain nombre de paquets, y compris les primitives de base d'Ethereum représentées par les classes Block, Transaction et Merkle-Patricia Trie, ainsi que les composants de base du client, y compris une implémentation de la machine virtuelle Ethereum (EVM), une classe de chaîne de blocs et la pile réseau devp2p.
-
-Apprenez-en plus à ce sujet en lisant sa [documentation](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
-
 ## Clients de consensus {#consensus-clients}
 
 Il existe plusieurs clients de consensus (précédemment connus sous le nom de clients « Eth2 ») pour prendre en charge les [mises à jour de consensus](/roadmap/beacon-chain/). Ils sont responsables de toute la logique liée au consensus, y compris l'algorithme de choix de fork, le traitement des attestations et la gestion des récompenses et des pénalités de la [preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos).
@@ -218,9 +206,9 @@ La documentation se trouve dans le [livre Lighthouse](https://lighthouse-book.si
 
 ### Lodestar {#lodestar}
 
-Lodestar est une implémentation de client de consensus prête pour la production, écrite en TypeScript sous licence LGPL-3.0. Il est maintenu par ChainSafe Systems et est le plus récent des clients de consensus pour les stakers en solo, les développeurs et les chercheurs. Lodestar se compose d'un nœud balise et d'un client validateur alimentés par des implémentations JavaScript des protocoles Ethereum. Lodestar vise à améliorer la convivialité d'Ethereum avec des clients légers, à élargir l'accessibilité à un plus grand groupe de développeurs et à contribuer davantage à la diversité de l'écosystème.
+Lodestar est une implémentation de client de consensus prête pour la production, écrite en TypeScript sous licence Apache-2.0. Il est maintenu par ChainSafe Systems et est le plus récent des clients de consensus pour les stakers en solo, les développeurs et les chercheurs. Lodestar se compose d'un nœud balise et d'un client validateur alimentés par des implémentations JavaScript des protocoles Ethereum. Lodestar vise à améliorer la convivialité d'Ethereum avec des clients légers, à élargir l'accessibilité à un plus grand groupe de développeurs et à contribuer davantage à la diversité de l'écosystème.
 
-Plus d'informations peuvent être trouvées sur le [site Web de Lodestar](https://lodestar.chainsafe.io/)
+Pour plus d'informations, consultez le [site Web de Lodestar](https://lodestar.chainsafe.io/)
 
 ### Nimbus {#nimbus}
 
@@ -300,7 +288,7 @@ Le mode client léger télécharge tous les en-têtes de bloc, les données de b
 
 La synchronisation optimiste est une stratégie de synchronisation post-fusion conçue pour être facultative et rétrocompatible, permettant aux nœuds d'exécution de se synchroniser via des méthodes établies. Le moteur d'exécution peut importer _de manière optimiste_ des blocs balises sans les vérifier entièrement, trouver la dernière tête, puis commencer à synchroniser la chaîne avec les méthodes ci-dessus. Ensuite, une fois que le client d'exécution a rattrapé son retard, il informera le client de consensus de la validité des transactions dans la chaîne balise.
 
-[En savoir plus sur la synchronisation optimiste](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[En savoir plus sur la synchronisation optimiste](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### Synchronisation par point de contrôle {#checkpoint-sync}
 
@@ -322,4 +310,4 @@ En savoir plus sur la [synchronisation par point de contrôle](https://notes.eth
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Transformez votre Raspberry Pi 4 en nœud validateur simplement en flashant la carte MicroSD – Guide d'installation](/developers/tutorials/run-node-raspberry-pi/) _– Flashez votre Raspberry Pi 4, branchez un câble Ethernet, connectez le disque SSD et allumez l'appareil pour transformer le Raspberry Pi 4 en un nœud complet Ethereum exécutant la couche d'exécution (réseau principal) et/ou la couche de consensus (chaîne balise / validateur)._
+- [Transformez votre Raspberry Pi 5 en nœud validateur simplement en flashant la carte MicroSD – Guide d'installation](/developers/tutorials/run-node-raspberry-pi/) _– Flashez votre Raspberry Pi 5, branchez un câble Ethernet, connectez le disque NVMe et allumez l'appareil pour transformer le Raspberry Pi 5 en un nœud Ethereum complet exécutant la couche d'exécution (Réseau principal) et/ou la couche de consensus (chaîne balise / validateur)._

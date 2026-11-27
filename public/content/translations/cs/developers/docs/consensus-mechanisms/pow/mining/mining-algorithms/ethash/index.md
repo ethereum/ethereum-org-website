@@ -83,7 +83,7 @@ Nyní specifikujeme funkci pro vytvoření mezipaměti:
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Sekvenčně vytvořit počáteční datovou sadu
+    # Sekvenčně vygenerovat počáteční datovou sadu
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Proces tvorby mezipaměti zahrnuje nejprve sekvenční zaplnění 32 MB paměti a poté provedení dvou průchodů algoritmu _RandMemoHash_ od Sergia Demiana Lernera z [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Výstupem je sada 524 288 64bajtových hodnot.
+Proces vytváření mezipaměti zahrnuje nejprve sekvenční zaplnění 32 MB paměti a poté provedení tří průchodů (`CACHE_ROUNDS`) algoritmu _RandMemoHash_ od Sergia Demiana Lernera z dokumentu [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Výstupem je sada 524288 64bajtových hodnot.
 
 ## Funkce agregace dat {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 
 ## Příloha {#appendix}
 
-Následující kód by měl být přidán na začátek, pokud máte zájem spustit výše uvedenou specifikaci v Pythonu jako kód.
+Pokud máte zájem spustit výše uvedenou specifikaci v Pythonu jako kód, měli byste na začátek přidat následující kód.
 
 ```python
 import sha3, copy
 
-# Předpokládá uspořádání bitů little-endian (stejné jako u architektur Intel)
+# Předpokládá uspořádání bitů little endian (stejné jako u architektur Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# hashovací funkce sha3, výstup 64 bajtů
+# Funkce hash sha3, výstup 64 bajtů
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

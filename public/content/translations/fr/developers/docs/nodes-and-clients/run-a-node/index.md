@@ -1,6 +1,6 @@
 ---
-title: Lancer votre propre nœud Ethereum
-description: Introduction générale à l'exécution de votre propre instance d'un client Ethereum.
+title: "Lancer votre propre nœud Ethereum"
+description: "Introduction générale à l'exécution de votre propre instance d'un client Ethereum."
 lang: fr
 sidebarDepth: 2
 ---
@@ -25,11 +25,11 @@ Pour choisir parmi les implémentations de clients, consultez tous les [clients 
 
 Décidez si vous souhaitez exécuter le logiciel sur votre propre [matériel ou dans le cloud](#local-vs-cloud), en tenant compte des [exigences](#requirements) des clients.
 
-Après avoir préparé l'environnement, installez les clients choisis soit avec une [interface adaptée aux débutants](#automatized-setup), soit [manuellement](#manual-setup) en utilisant un terminal avec des options avancées.
+Après avoir préparé l'environnement, installez les clients choisis soit avec une [interface conviviale pour les débutants](#automatized-setup), soit [manuellement](#manual-setup) en utilisant un terminal avec des options avancées.
 
 Lorsque le nœud est en cours d'exécution et de synchronisation, vous êtes prêt à [l'utiliser](#using-the-node), mais assurez-vous de garder un œil sur sa [maintenance](#operating-the-node).
 
-![Configuration du client](./diagram.png)
+<ClientSetupDiagram />
 
 ### Environnement et matériel {#environment-and-hardware}
 
@@ -61,49 +61,50 @@ Utiliser votre propre matériel peut être très facile. Il existe de nombreuses
 
 #### Exigences {#requirements}
 
-Les exigences matérielles diffèrent selon le client mais ne sont généralement pas si élevées puisque le nœud a juste besoin de rester synchronisé. Ne confondez pas cela avec le minage, qui nécessite beaucoup plus de puissance de calcul. Le temps de synchronisation et les performances s'améliorent cependant avec un matériel plus puissant.
+Les exigences matérielles diffèrent selon le client, mais ne sont généralement pas si élevées puisque le nœud a juste besoin de rester synchronisé. Ne confondez pas cela avec le minage, qui nécessite beaucoup plus de puissance de calcul. Le temps de synchronisation et les performances s'améliorent cependant avec un matériel plus puissant.
 
-Avant d'installer un client, veuillez vous assurer que votre ordinateur dispose de suffisamment de ressources pour l'exécuter. Vous pouvez trouver les exigences minimales et recommandées ci-dessous.
+Avant d'installer un client, veuillez vous assurer que votre ordinateur dispose de suffisamment de ressources pour l'exécuter. Vous trouverez ci-dessous les exigences minimales et recommandées.
 
-Le goulot d'étranglement pour votre matériel est principalement l'espace disque. La synchronisation de la chaîne de blocs Ethereum est très intensive en entrées/sorties et nécessite beaucoup d'espace. Il est préférable d'avoir un **disque à semi-conducteurs (SSD)** avec des centaines de Go d'espace libre à revendre même après la synchronisation.
+Le goulot d'étranglement pour votre matériel est principalement l'espace disque. La synchronisation de la chaîne de blocs Ethereum est très intensive en entrées/sorties et nécessite beaucoup d'espace. Il est préférable d'avoir un **disque à semi-conducteurs (SSD)** avec des centaines de Go d'espace libre, même après la synchronisation.
 
 La taille de la base de données et la vitesse de la synchronisation initiale dépendent du client choisi, de sa configuration et de sa [stratégie de synchronisation](/developers/docs/nodes-and-clients/#sync-modes).
 
-Assurez-vous également que votre connexion Internet n'est pas limitée par un [plafond de bande passante](https://wikipedia.org/wiki/Data_cap). Il est recommandé d'utiliser une connexion non mesurée car la synchronisation initiale et les données diffusées sur le réseau pourraient dépasser votre limite.
+Assurez-vous également que votre connexion Internet n'est pas limitée par un [plafond de bande passante](https://wikipedia.org/wiki/Data_cap). Il est recommandé d'utiliser une connexion illimitée, car la synchronisation initiale et les données diffusées sur le réseau pourraient dépasser votre limite.
 
 ##### Système d'exploitation
 
-Tous les clients prennent en charge les principaux systèmes d'exploitation - Linux, macOS, Windows. Cela signifie que vous pouvez exécuter des nœuds sur des machines de bureau ou des serveurs classiques avec le système d'exploitation (OS) qui vous convient le mieux. Assurez-vous que votre système d'exploitation est à jour pour éviter les problèmes potentiels et les vulnérabilités de sécurité.
+Tous les clients prennent en charge les principaux systèmes d'exploitation : Linux, macOS, Windows. Cela signifie que vous pouvez exécuter des nœuds sur des ordinateurs de bureau ou des serveurs classiques avec le système d'exploitation (OS) qui vous convient le mieux. Assurez-vous que votre système d'exploitation est à jour pour éviter les problèmes potentiels et les failles de sécurité.
 
 ##### Exigences minimales
 
 - CPU avec 2 cœurs ou plus
 - 16 Go de RAM (32 Go recommandés pour la stabilité)
-- SSD NVMe de 2 To (probablement dépassé d'ici 2027, en savoir plus sur les [Bons et moins bons SSD pour les nœuds Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
-- Bande passante de 25+ MBit/s
+- SSD NVMe de 4 To (couvre un nœud avec l'historique complet de la chaîne plus de l'espace pour la croissance, voir les tailles de disque des clients ci-dessous ; en savoir plus sur les [Bons et moins bons SSD pour les nœuds Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- Bande passante de 25+ Mbit/s
 
 ##### Spécifications recommandées
 
 Les recommandations matérielles actuelles pour les opérateurs de nœuds sont identifiées dans l'[EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Pour un nœud complet, il est recommandé :
 
-- CPU rapide avec 4 cœurs ou plus (8 cœurs ou plus si vous validez)
-- 32 Go de RAM (64 Go recommandés si vous validez pour assurer la stabilité)
+- CPU rapide avec 4 cœurs ou plus (8 cœurs ou plus en cas de validation)
+- 32 Go de RAM (64 Go recommandés en cas de validation pour assurer la stabilité)
 - SSD NVMe de 4 To (les disques sans DRAM et QLC sont déconseillés)
-- Bande passante de 50 MBit/s en téléchargement / 15+ MBit/s en envoi (25+ MBit/s en envoi si vous validez)
+- Bande passante de 50 Mbit/s en téléchargement / 15+ Mbit/s en envoi (25+ Mbit/s en envoi en cas de validation)
 
 Le mode de synchronisation et le client que vous choisissez affecteront les exigences d'espace, mais nous avons estimé l'espace disque dont vous aurez besoin pour chaque client ci-dessous.
 
-| Client     | Taille du disque (synchronisation snap) | Taille du disque (archive complète) |
-| ---------- | --------------------------------------- | ----------------------------------- |
-| Besu       | 800 Go+                                 | 12 To+                              |
-| Erigon     | N/A                                     | 2,5 To+                             |
-| Geth       | 500 Go+                                 | 12 To+                              |
-| Nethermind | 500 Go+                                 | 12 To+                              |
-| Reth       | N/A                                     | 2,2 To+                             |
+| Client     | Taille du disque (nœud complet) | Taille du disque (archive complète) |
+| ---------- | ------------------------------- | ----------------------------------- |
+| Besu       | 1,8 To+                         | 12 To+                              |
+| Erigon     | 1,7 To+                         | 2,7 To+                             |
+| Geth       | 1,8 To+                         | 2 To+                               |
+| Nethermind | 1,7 To+                         | 14 To+                              |
+| Reth       | 2,2 To+                         | 2,8 To+                             |
 
-- Remarque : Erigon et Reth n'offrent pas de synchronisation snap, mais un élagage complet (Full Pruning) est possible (~2 To pour Erigon, ~1,2 To pour Reth)
+- Remarque : Les tailles de nœud complet conservent l'historique complet de la chaîne et ont été mesurées en septembre 2026 par [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Les clients qui prennent en charge l'expiration de l'historique nécessitent moins d'espace : environ 1,2 à 1,4 To avec uniquement l'historique post-fusion, ou environ 400 à 650 Go avec une expiration continue (pas encore pris en charge par Geth).
+- Remarque : Les tailles d'archive proviennent de la documentation de chaque client ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Le chiffre de Geth correspond à son archive basée sur les chemins ; conserver également l'historique du trie nécessite environ 6,5 To. Le chiffre de Nethermind date de juillet 2023 et a augmenté depuis.
 
-Pour les clients de consensus, les besoins en espace dépendent également de l'implémentation du client et des fonctionnalités activées (par exemple, le sanctionneur de validateur), mais comptez généralement 200 Go supplémentaires nécessaires pour les données de la chaîne balise. Avec un grand nombre de validateurs, la charge de la bande passante augmente également. Vous pouvez trouver des [détails sur les exigences des clients de consensus dans cette analyse](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Pour les clients de consensus, les exigences d'espace dépendent également de l'implémentation du client et des fonctionnalités activées (par exemple, le sanctionneur de validateur), mais comptez généralement entre 15 et 90 Go supplémentaires pour les données de la chaîne balise, plus environ 500 Go de données de blob si vous exécutez un supernœud. Avec un grand nombre de validateurs, la charge de la bande passante augmente également. Vous pouvez trouver des [détails sur les exigences des clients de consensus dans cette analyse](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Solutions prêtes à l'emploi (Plug-and-play) {#plug-and-play}
 

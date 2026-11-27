@@ -12,12 +12,11 @@ lang: ko
 
 ## 트랜잭션이란 무엇인가요? {#whats-a-transaction}
 
-이더리움 트랜잭션은 외부 소유 계정, 즉 컨트랙트가 아닌 사람이 관리하는 계정에 의해 시작된 작업을 의미합니다. 예를 들어, Bob이 Alice에게 1 ETH를 전송하면 Bob의 계정에서는 차감되고 Alice의 계정에는 입금되어야 합니다. 이러한 상태 변경 작업은 트랜잭션 내에서 발생합니다.
+이더리움 트랜잭션은 외부 소유 계정, 즉 컨트랙트가 아닌 사람이 관리하는 계정에 의해 시작된 작업을 의미합니다. 예를 들어, Bob이 Alice에게 1 ETH를 전송하는 경우 Bob의 계정에서는 차감되고 Alice의 계정에는 입금되어야 합니다. 이러한 상태 변경 작업은 트랜잭션 내에서 발생합니다.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)에서 발췌한 다이어그램_
+<TxApplyDiagram />
 
-EVM의 상태를 변경하는 트랜잭션은 전체 네트워크에 브로드캐스트되어야 합니다. 모든 노드는 EVM에서 트랜잭션이 실행되도록 요청을 브로드캐스트할 수 있습니다. 이 작업이 발생한 후, 검증자는 트랜잭션을 실행하고 그 결과로 발생한 상태 변경을 네트워크의 나머지 부분에 전파합니다.
+EVM의 상태를 변경하는 트랜잭션은 전체 네트워크에 브로드캐스트되어야 합니다. 모든 노드는 EVM에서 트랜잭션이 실행되도록 요청을 브로드캐스트할 수 있습니다. 이 작업이 발생한 후 검증자는 트랜잭션을 실행하고 결과적인 상태 변경을 네트워크의 나머지 부분에 전파합니다.
 
 트랜잭션에는 수수료가 필요하며 검증된 블록에 포함되어야 합니다. 이 개요를 더 간단하게 만들기 위해 가스비와 검증에 대해서는 다른 곳에서 다루겠습니다.
 
@@ -26,16 +25,16 @@ EVM의 상태를 변경하는 트랜잭션은 전체 네트워크에 브로드�
 - `from` – 트랜잭션에 서명할 발신자의 주소입니다. 컨트랙트 계정은 트랜잭션을 보낼 수 없으므로 이는 외부 소유 계정이 됩니다.
 - `to` – 수신 주소입니다(외부 소유 계정인 경우 트랜잭션은 가치를 전송합니다. 컨트랙트 계정인 경우 트랜잭션은 컨트랙트 코드를 실행합니다).
 - `signature` – 발신자의 식별자입니다. 이는 발신자의 개인 키가 트랜잭션에 서명할 때 생성되며 발신자가 이 트랜잭션을 승인했음을 확인합니다.
-- `nonce` - 계정에서 발생한 트랜잭션 번호를 나타내는 순차적으로 증가하는 카운터입니다.
+- `nonce` - 계정의 트랜잭션 번호를 나타내는 순차적으로 증가하는 카운터입니다.
 - `value` – 발신자에서 수신자로 전송할 ETH의 양입니다(Wei 단위로 표시되며, 1ETH는 1e+18wei와 같습니다).
 - `input data` – 임의의 데이터를 포함할 수 있는 선택적 필드입니다.
-- `gasLimit` – 트랜잭션에서 소비할 수 있는 가스 단위의 최대량인 가스 한도입니다. [EVM](/developers/docs/evm/opcodes)은 각 계산 단계에 필요한 가스 단위를 지정합니다.
+- `gasLimit` – 트랜잭션에서 소비할 수 있는 가스 단위의 최대량입니다. [EVM](/developers/docs/evm/opcodes)은 각 계산 단계에 필요한 가스 단위를 지정합니다.
 - `maxPriorityFeePerGas` - 검증자에게 팁으로 포함될 소비된 가스의 최대 가격입니다.
-- `maxFeePerGas` - 트랜잭션을 위해 지불할 의사가 있는 가스 단위당 최대 수수료입니다(`baseFeePerGas` 및 `maxPriorityFeePerGas` 포함).
+- `maxFeePerGas` - 트랜잭션에 대해 지불할 의향이 있는 가스 단위당 최대 수수료입니다(`baseFeePerGas` 및 `maxPriorityFeePerGas` 포함).
 
-가스는 검증자가 트랜잭션을 처리하는 데 필요한 계산을 나타냅니다. 사용자는 이 계산에 대한 수수료를 지불해야 합니다. `gasLimit` 및 `maxPriorityFeePerGas`는 검증자에게 지불되는 최대 트랜잭션 수수료를 결정합니다. [가스에 대해 더 알아보기](/developers/docs/gas/).
+가스는 검증자가 트랜잭션을 처리하는 데 필요한 계산을 나타냅니다. 사용자는 이 계산에 대한 수수료를 지불해야 합니다. `gasLimit` 및 `maxPriorityFeePerGas`는 검증자에게 지불되는 최대 트랜잭션 수수료를 결정합니다. [가스에 대해 자세히 알아보기](/developers/docs/gas/).
 
-트랜잭션 객체는 다음과 같은 형태를 띱니다.
+트랜잭션 객체는 다음과 같이 생겼습니다.
 
 ```js
 {
@@ -49,11 +48,11 @@ EVM의 상태를 변경하는 트랜잭션은 전체 네트워크에 브로드�
 }
 ```
 
-하지만 트랜잭션 객체는 발신자의 개인 키를 사용하여 서명되어야 합니다. 이는 트랜잭션이 발신자로부터만 올 수 있었으며 부정하게 전송되지 않았음을 증명합니다.
+하지만 트랜잭션 객체는 발신자의 개인 키를 사용하여 서명되어야 합니다. 이는 트랜잭션이 발신자로부터만 올 수 있었으며 사기성으로 전송되지 않았음을 증명합니다.
 
 Geth와 같은 이더리움 클라이언트가 이 서명 프로세스를 처리합니다.
 
-[JSON-RPC](/developers/docs/apis/json-rpc) 호출 예시:
+예시 [JSON-RPC](/developers/docs/apis/json-rpc) 호출:
 
 ```json
 {
@@ -75,7 +74,7 @@ Geth와 같은 이더리움 클라이언트가 이 서명 프로세스를 처리
 }
 ```
 
-응답 예시:
+예시 응답:
 
 ```json
 {
@@ -100,10 +99,10 @@ Geth와 같은 이더리움 클라이언트가 이 서명 프로세스를 처리
 }
 ```
 
-- `raw`는 [RLP(Recursive Length Prefix)](/developers/docs/data-structures-and-encoding/rlp) 인코딩 형식의 서명된 트랜잭션입니다.
+- `raw`는 [재귀 길이 접두사 (RLP)](/developers/docs/data-structures-and-encoding/rlp) 인코딩 형식의 서명된 트랜잭션입니다.
 - `tx`는 JSON 형식의 서명된 트랜잭션입니다.
 
-서명 해시를 통해 트랜잭션이 발신자로부터 와서 네트워크에 제출되었음을 암호화 방식으로 증명할 수 있습니다.
+서명 해시를 통해 트랜잭션이 발신자로부터 왔으며 네트워크에 제출되었음을 암호화 방식으로 증명할 수 있습니다.
 
 ### 데이터 필드 {#the-data-field}
 
@@ -152,7 +151,7 @@ ERC-7730 사양은 트랜잭션 설명자(종종 JSON 파일로 구성됨)를 �
 
 앞서 언급했듯이 트랜잭션을 실행하려면 [가스](/developers/docs/gas/)가 필요합니다. 단순 전송 트랜잭션에는 21000 단위의 가스가 필요합니다.
 
-따라서 Bob이 190 Gwei의 `baseFeePerGas`와 10 Gwei의 `maxPriorityFeePerGas`로 Alice에게 1 ETH를 전송하려면 Bob은 다음 수수료를 지불해야 합니다.
+따라서 Bob이 `baseFeePerGas` 190 Gwei 및 `maxPriorityFeePerGas` 10 Gwei로 Alice에게 1 ETH를 전송하려면 Bob은 다음 수수료를 지불해야 합니다.
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -164,13 +163,12 @@ Bob의 계정에서 <strong>-1.0042 ETH</strong>가 차감됩니다(Alice를 위
 
 Alice의 계정에 <strong>+1.0 ETH</strong>가 입금됩니다.
 
-기본 수수료는 소각됩니다 **-0.00399 ETH**.
+기본 수수료는 소각됩니다(**-0.00399 ETH**).
 
-검증자는 팁을 가집니다 **+0.000210 ETH**.
+검증자는 팁을 갖습니다(**+0.000210 ETH**).
 
 
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_[Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)에서 발췌한 다이어그램_
+<GasTxDiagram />
 
 트랜잭션에서 사용되지 않은 가스는 사용자 계정으로 환불됩니다.
 

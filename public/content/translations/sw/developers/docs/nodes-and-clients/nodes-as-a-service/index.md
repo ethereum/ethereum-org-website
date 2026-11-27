@@ -54,9 +54,9 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
 - [**Alchemy**](https://alchemy.com/)
   - [Nyaraka](https://www.alchemy.com/docs/)
   - Vipengele
-    - Kiwango kikubwa zaidi cha bure chenye vitengo vya kompyuta 300M kwa mwezi (\~maombi 30M ya getLatestBlock)
+    - Kiwango kikubwa zaidi cha bure chenye vitengo vya kompyuta milioni 300 kwa mwezi (takriban maombi milioni 30 ya getLatestBlock)
     - Usaidizi wa minyororo mingi kwa Polygon, Starknet, Optimism, Arbitrum
-    - Inawezesha ~70% ya programu tumizi zilizogatuliwa (dapps) kubwa zaidi za Ethereum na kiasi cha miamala ya fedha zilizogatuliwa (DeFi)
+    - Inawezesha takriban 70% ya programu tumizi zilizogatuliwa (dapps) kubwa zaidi za Ethereum na kiasi cha miamala ya DeFi
     - Arifa za webhook za wakati halisi kupitia Alchemy Notify
     - Usaidizi bora zaidi katika darasa lake na kutegemewa / uthabiti
     - API ya NFT ya Alchemy
@@ -75,7 +75,7 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
     - Picha za minyororo ya vitalu 100+ kwenye [PublicNode](https://www.publicnode.com/snapshots)
     - Usaidizi wa kiufundi wa 24/7 na SLA ya muda wa kufanya kazi wa 99.90%-99.98% (inategemea mpango).
     - Bei ya kulipa kwa saa
-    - Lipa kwa Kadi ya Mkopo, PayPal au Kripto
+    - Lipa kwa Kadi ya Mkopo, PayPal au kripto
 
 - [**All That Node**](https://allthatnode.com/)
   - [Nyaraka](https://docs.allthatnode.com/)
@@ -103,7 +103,7 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
 - [**Ankr**](https://www.ankr.com/)
   - [Nyaraka](https://docs.ankr.com/)
   - Vipengele
-    - Itifaki ya Ankr - ufikiaji wazi kwa vituo vya mwisho vya API ya RPC ya Umma kwa minyororo 8+
+    - Itifaki ya Ankr - ufikiaji wazi wa vituo vya mwisho vya API ya RPC ya Umma kwa minyororo 8+
     - Usawazishaji wa mzigo na ufuatiliaji wa afya ya nodi kwa lango la haraka na la kutegemewa kwa nodi iliyo karibu inayopatikana
     - Kiwango cha malipo kinachowezesha kituo cha mwisho cha WSS na kikomo cha kiwango kisicho na kikomo
     - Usambazaji wa nodi kamili na nodi ya mthibitishaji kwa mbofyo mmoja kwa minyororo 40+
@@ -132,7 +132,7 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
   - [Nyaraka](https://ubiquity.docs.blockdaemon.com/)
   - Faida
     - Dashibodi
-    - Kwa msingi wa kila nodi
+    - Kwa msingi wa nodi
     - Uchanganuzi
 
 - [**BlockPI**](https://blockpi.io/)
@@ -140,7 +140,7 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
   - Vipengele
     - Muundo thabiti na uliosambazwa wa nodi
     - Hadi vituo vya mwisho 40 vya HTTPS na WSS
-    - Kifurushi cha bure cha kujisajili na kifurushi cha kila mwezi
+    - Kifurushi cha kujisajili bila malipo na kifurushi cha kila mwezi
     - Mbinu ya kufuatilia + Usaidizi wa data ya kumbukumbu
     - Vifurushi vyenye uhalali wa hadi siku 90
     - Mpango maalum na malipo ya kulipa kadiri unavyotumia
@@ -150,17 +150,17 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
 - [**Chainbase**](https://www.chainbase.com/)
   - [Nyaraka](https://docs.chainbase.com)
   - Vipengele
-    - Huduma ya RPC inayopatikana kwa urahisi, ya haraka, na inayoweza kupanuka
+    - Huduma ya RPC inayopatikana kwa urahisi, ya haraka, na inayoweza kuongezwa
     - Usaidizi wa minyororo mingi
     - Ushuru wa bure
-    - Dashibodi inayofaa mtumiaji
-    - Inatoa huduma za data za mnyororo wa vitalu zaidi ya RPC
+    - Dashibodi inayofaa kwa mtumiaji
+    - Hutoa huduma za data za mnyororo wa vitalu zaidi ya RPC
 
 - [**Chainstack**](https://chainstack.com/)
   - [Nyaraka](https://docs.chainstack.com/)
   - Vipengele
-    - Nodi za bure zinazoshirikiwa
-    - Nodi za kumbukumbu zinazoshirikiwa
+    - Nodi za pamoja za bure
+    - Nodi za kumbukumbu za pamoja
     - Usaidizi wa GraphQL
     - Vituo vya mwisho vya RPC na WSS
     - Nodi maalum kamili na za kumbukumbu
@@ -178,11 +178,11 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
     - Ufikiaji wa kimataifa na makundi tisa (9) ya kijiografia
     - Mfumo wa usawazishaji wa mzigo unaoendeshwa na AI
     - Bei bapa ya kulipa kadiri unavyotumia—hakuna ongezeko, hakuna kuisha muda, hakuna kufungiwa
-    - Funguo zisizo na kikomo, marekebisho madogo ya funguo, majukumu ya timu, ulinzi wa mbele
+    - Funguo zisizo na kikomo, marekebisho ya kina ya funguo, majukumu ya timu, ulinzi wa mbele
     - Kiwango bapa cha mbinu kwa vitengo 20 vya kompyuta (CUs) kwa kila mbinu
     - [Orodha ya minyororo ya kituo cha mwisho cha umma](https://drpc.org/chainlist)
     - [Kikokotoo cha bei](https://drpc.org/pricing#calculator)
-  - NodeCore: mrundikano wa chanzo huria kwa mashirika yanayotaka udhibiti kamili
+  - NodeCore: rundo la chanzo wazi kwa mashirika yanayotaka udhibiti kamili
 
 - [**GetBlock**](https://getblock.io/)
   - [Nyaraka](https://getblock.io/docs/get-started/authentication-with-api-key/)
@@ -191,7 +191,7 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
     - Maombi 40K ya bure ya kila siku
     - Idadi isiyo na kikomo ya funguo za API
     - Kasi ya juu ya muunganisho kwa 1GB/sekunde
-    - Fuatilia+Kumbukumbu
+    - Kufuatilia+Kumbukumbu
     - Uchanganuzi wa hali ya juu
     - Masasisho ya kiotomatiki
     - Usaidizi wa kiufundi
@@ -220,30 +220,30 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
 - [**Kaleido**](https://kaleido.io/)
   - [Nyaraka](https://docs.kaleido.io/)
   - Vipengele
-    - Kiwango cha bure cha kuanzia
+    - Kiwango cha kuanzia cha bure
     - Usambazaji wa nodi ya Ethereum kwa mbofyo mmoja
     - Wateja na algoriti zinazoweza kubinafsishwa (Geth, Quorum & Besu || PoA, IBFT & Raft)
     - API 500+ za usimamizi na huduma
     - Kiolesura cha RESTful cha uwasilishaji wa muamala wa Ethereum (inayoungwa mkono na Apache Kafka)
-    - Mitiririko ya nje kwa uwasilishaji wa matukio (inayoungwa mkono na Apache Kafka)
+    - Mitiririko ya nje kwa uwasilishaji wa tukio (inayoungwa mkono na Apache Kafka)
     - Mkusanyiko wa kina wa huduma za "nje ya mnyororo" na huduma za ziada (k.m., usafirishaji wa ujumbe uliosimbwa kwa njia mbili)
     - Uingizaji wa mtandao wa moja kwa moja na utawala na udhibiti wa ufikiaji kulingana na jukumu
-    - Usimamizi wa hali ya juu wa watumiaji kwa wasimamizi na watumiaji wa mwisho
-    - Miundombinu inayoweza kupanuka sana, thabiti, ya kiwango cha biashara
+    - Usimamizi wa kisasa wa mtumiaji kwa wasimamizi na watumiaji wa mwisho
+    - Miundombinu inayoweza kuongezwa sana, thabiti, ya kiwango cha biashara
     - Usimamizi wa ufunguo wa siri wa Cloud HSM
     - Uunganishaji wa Mtandao Mkuu wa Ethereum
     - Vyeti vya ISO 27k na SOC 2, Aina ya 2
     - Usanidi wa wakati wa utekelezaji unaobadilika (k.m., kuongeza miunganisho ya wingu, kubadilisha viingilio vya nodi, n.k.)
-    - Usaidizi wa mipangilio ya usambazaji wa wingu nyingi, kanda nyingi na mseto
+    - Usaidizi wa upangaji wa usambazaji wa wingu nyingi, kanda nyingi na mseto
     - Bei rahisi ya kila saa kulingana na SaaS
-    - SLA na usaidi wa 24x7
+    - SLA na usaidizi wa 24x7
 
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [Nyaraka](https://docs.lavanet.xyz/)
   - Vipengele
     - Matumizi ya Bure ya Mtandao wa Majaribio
-    - Uziada Uliogatuliwa kwa Muda wa Juu wa Kufanya Kazi
-    - Chanzo huria
+    - Upunguzaji Uliogatuliwa kwa Muda wa Juu wa Kufanya Kazi
+    - Chanzo wazi
     - SDK Iliyogatuliwa Kikamilifu
     - Ujumuishaji wa Ethers.js
     - Kiolesura cha Usimamizi wa Mradi Kinachoeleweka
@@ -253,32 +253,32 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
 - [**Moralis**](https://moralis.io/)
   - [Nyaraka](https://docs.moralis.io/)
   - Vipengele
-    - Nodi za bure zinazoshirikiwa
-    - Nodi za kumbukumbu za bure zinazoshirikiwa
+    - Nodi za pamoja za bure
+    - Nodi za kumbukumbu za pamoja za bure
     - Inayozingatia faragha (sera ya kutokuwa na kumbukumbu)
     - Usaidizi wa minyororo mtambuka
     - Ongeza kadiri unavyoendelea
     - Dashibodi
-    - SDK ya Kipekee ya Ethereum
+    - SDK ya kipekee ya Ethereum
     - Vituo vya mwisho vya kipekee vya API
     - Usaidizi wa moja kwa moja, wa kiufundi
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [Nyaraka](https://docs.nodereal.io/docs/introduction)
   - Vipengele
-    - Huduma za API za RPC zinazotegemewa, za haraka na zinazoweza kupanuka
-    - API iliyoboreshwa kwa wasanidi wa Web3
+    - Huduma za API za RPC zinazotegemewa, za haraka na zinazoweza kuongezwa
+    - API iliyoboreshwa kwa wajenzi wa Web3
     - Usaidizi wa minyororo mingi
     - Anza bila malipo
 
 - [**NodeFlare**](https://nodeflare.app/)
   - [Nyaraka](https://nodeflare.app/docs/quick-start)
   - Vipengele
-    - Minyororo 23 ya EVM ikijumuisha Ethereum, Base, Arbitrum One & Nova, Optimism, Linea, na Unichain
-    - Kanda 5 (Ulaya, Uingereza, Asia, Marekani-Mashariki, Marekani-Magharibi) na ubadilishaji kiotomatiki hadi nodi yenye afya iliyo karibu
-    - Kituo cha mwisho cha umma cha bure (hakuna ufunguo wa API) + mpango wa bure wenye vitengo 3M vya kompyuta/mwezi
-    - Utozaji wa Kitengo cha Kompyuta — lipa tu kwa kile unachotumia, simu nzito zinagharimu zaidi
-    - Hakuna ubanaji kwenye mipango inayolipiwa
+    - Minyororo 17 ya EVM ikijumuisha Ethereum, Base, Arbitrum One, Optimism, na Unichain
+    - Nodi zake za chuma tupu, zenye malango huko Frankfurt, London, Ashburn, Chicago, Los Angeles, na Singapore
+    - Kituo cha mwisho cha umma cha bure (hakuna ufunguo wa API, maombi 50 kwa sekunde 10 kwa kila IP)
+    - Ufunguo wa API wa bure wenye vitengo vya kompyuta milioni 3/mwezi na maombi 10/sekunde, hakuna kadi ya mkopo
+    - Malipo ya kitengo cha kompyuta — simu nzito zinagharimu zaidi
 
 - [**NOWNodes**](https://nownodes.io/)
   - Vipengele
@@ -288,41 +288,41 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
     - Muda wa Kujibu wa API ⩽ sekunde 1
     - Timu ya Usaidizi ya 24/7
     - Meneja wa Akaunti ya Kibinafsi
-    - Nodi zinazoshirikiwa, za kumbukumbu, za chelezo na maalum
+    - Nodi za pamoja, za kumbukumbu, za chelezo na maalum
 
 - [**Pocket Network**](https://www.pokt.network/)
   - [Nyaraka](https://docs.pokt.network/)
   - Vipengele
     - Itifaki ya RPC Iliyogatuliwa na Soko
-    - Kiwango cha Bure cha Maombi 1M Kwa Siku (kwa kila kituo cha mwisho, upeo 2)
-    - Mpango wa Pre-Stake+ (ikiwa unahitaji zaidi ya maombi 1M kwa siku)
+    - Kiwango cha Bure cha Maombi Milioni 1 Kwa Siku (kwa kila kituo cha mwisho, upeo 2)
+    - Mpango wa Pre-Stake+ (ikiwa unahitaji zaidi ya maombi milioni 1 kwa siku)
     - Minyororo ya vitalu 15+ Inayotumika
-    - Nodi 6400+ zinazopata POKT kwa kuhudumia programu
-    - Nodi ya Kumbukumbu, Nodi ya Kumbukumbu yenye Ufuatiliaji, na Usaidizi wa Nodi ya Mtandao wa Majaribio
+    - Nodi 6400+ zinazopata POKT kwa kuhudumia programu tumizi
+    - Nodi ya Kumbukumbu, Nodi ya Kumbukumbu yenye Kufuatilia, na Usaidizi wa Nodi ya Mtandao wa Majaribio
     - Anuwai ya Wateja wa Nodi ya Mtandao Mkuu wa Ethereum
     - Hakuna Sehemu Moja ya Kushindwa
-    - Muda Sifuri wa Kutofanya Kazi
-    - Uchumi wa Tokeni wa Karibu na Sifuri wa Gharama Nafuu (weka dhamana ya POKT mara moja kwa kipimo data cha mtandao)
+    - Hakuna Muda wa Kupumzika
+    - Tokenomics ya Gharama Nafuu Inayokaribia Sifuri (weka dhamana ya POKT mara moja kwa kipimo data cha mtandao)
     - Hakuna gharama za kila mwezi zilizozama, geuza miundombinu yako kuwa rasilimali
     - Usawazishaji wa Mzigo uliojengwa ndani ya Itifaki
     - Ongeza idadi ya maombi kwa siku na nodi kwa saa bila kikomo kadiri unavyoendelea
     - Chaguo la faragha zaidi, linalostahimili udhibiti
-    - Usaidizi wa vitendo wa msanidi
+    - Usaidizi wa vitendo wa mjenzi
     - Dashibodi na uchanganuzi wa [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 
 - [**QuickNode**](https://www.quicknode.com)
   - [Nyaraka](https://www.quicknode.com/docs/)
   - Vipengele
-    - Usaidizi wa kiufundi wa 24/7 na jumuiya ya wasanidi kwenye Discord
+    - Usaidizi wa kiufundi wa 24/7 na jumuiya ya wajenzi kwenye Discord
     - Mtandao uliosawazishwa kijiografia, wingu/chuma nyingi, wa ucheleweshaji mdogo
-    - Usaidizi wa minyororo mingi (Optimism, Arbitrum, Polygon + 11 zingine)
-    - Tabaka za kati kwa kasi na uthabiti (uelekezaji wa simu, kache, uwekaji faharasa)
+    - Usaidizi wa minyororo mingi (Optimism, Arbitrum, Polygon + zingine 11)
+    - Tabaka za kati kwa kasi na uthabiti (uelekezaji wa simu, kache, uwekaji faharisi)
     - Ufuatiliaji wa Mkataba Mahiri kupitia Webhooks
     - Dashibodi inayoeleweka, kitengo cha uchanganuzi, kitunzi cha RPC
-    - Vipengele vya usalama vya hali ya juu (JWT, ufunikaji, uorodheshaji mweupe)
+    - Vipengele vya usalama vya hali ya juu (JWT, kuficha, kuorodhesha)
     - Data ya NFT na API ya uchanganuzi
     - [Imethibitishwa na SOC2](https://www.quicknode.com/security)
-    - Inafaa kwa Wasanidi hadi Biashara
+    - Inafaa kwa Wajenzi hadi Biashara
 
 - [**Rivet**](https://rivet.cloud/)
   - [Nyaraka](https://rivet.readthedocs.io/en/latest/)
@@ -333,9 +333,9 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
 - [**SenseiNode**](https://senseinode.com)
   - [Nyaraka](https://docs.senseinode.com/)
   - Vipengele
-    - Nodi Maalum na Zinazoshirikiwa
+    - Nodi Maalum na za Pamoja
     - Dashibodi
-    - Upangishaji nje ya AWS kwa watoa huduma wengi wa upangishaji katika maeneo tofauti katika Amerika ya Kusini
+    - Upangishaji nje ya AWS kwa watoa huduma wengi wa upangishaji katika maeneo tofauti Amerika ya Kusini
     - Wateja wa Prysm na Lighthouse
 
 - [**SettleMint**](https://console.settlemint.com/)
@@ -357,12 +357,12 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
   - Vipengele
     - Kiwango cha bure ikijumuisha Vitengo milioni 25 vya Tenderly kwa mwezi
     - Ufikiaji wa bure wa data ya kihistoria
-    - Hadi 8x haraka kwa mizigo ya kazi nzito ya kusoma
-    - Ufikiaji wa kusoma thabiti wa 100%
+    - Hadi mara 8 kwa kasi zaidi kwa mizigo ya kazi nzito ya kusoma
+    - Ufikiaji wa kusoma thabiti kwa 100%
     - Vituo vya mwisho vya JSON-RPC
-    - Mjenzi wa maombi ya RPC kulingana na UI na onyesho la awali la maombi
+    - Kijenzi cha maombi cha RPC kulingana na UI na onyesho la kukagua maombi
     - Imeunganishwa kwa karibu na zana za ukuzaji, utatuzi, na majaribio za Tenderly
-    - Uigaji wa miamala
+    - Uigaji wa muamala
     - Uchanganuzi wa matumizi na uchujaji
     - Usimamizi rahisi wa ufunguo wa ufikiaji
     - Usaidizi maalum wa uhandisi kupitia soga, barua pepe, na Discord
@@ -370,9 +370,9 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
 - [**Tokenview**](https://services.tokenview.io/)
   - [Nyaraka](https://services.tokenview.io/docs?type=nodeService)
   - Vipengele
-    - Usaidizi wa kiufundi wa 24/7 na jumuiya ya Wasanidi kwenye Telegram
+    - Usaidizi wa kiufundi wa 24/7 na jumuiya ya Wajenzi kwenye Telegram
     - Usaidizi wa minyororo mingi (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Asilia)
-    - Vituo vya mwisho vya RPC na WSS viko wazi kutumika
+    - Vituo vyote vya mwisho vya RPC na WSS viko wazi kutumika
     - Ufikiaji usio na kikomo wa API ya data ya kumbukumbu
     - Dashibodi yenye Kichunguzi cha Maombi na Kifuatiliaji cha mempool
     - API ya data ya NFT na arifa ya Webhook
@@ -383,33 +383,34 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
   - [Nyaraka](https://docs.watchdata.io/)
   - Vipengele
     - Kutegemewa kwa data
-    - Muunganisho usiokatizwa bila muda wa kutofanya kazi
-    - Uendeshaji kiotomatiki wa mchakato
+    - Muunganisho usiokatizwa bila muda wa kupumzika
+    - Uendeshaji wa mchakato kiotomatiki
     - Ushuru wa bure
     - Vikomo vya juu vinavyofaa mtumiaji yeyote
     - Usaidizi kwa nodi mbalimbali
-    - Upanuzi wa rasilimali
+    - Uongezaji wa rasilimali
     - Kasi ya juu ya usindikaji
 
 - [**ZMOK**](https://zmok.io/)
   - [Nyaraka](https://docs.zmok.io/)
   - Vipengele
     - Utangulizaji muamala kama huduma
-    - Mempool ya miamala ya kimataifa yenye mbinu za utafutaji/uchujaji
-    - Ada ya TX isiyo na kikomo na Gesi isiyo na kikomo kwa kutuma miamala
+    - Mempool ya miamala ya kimataifa yenye mbinu za kutafuta/kuchuja
+    - Ada isiyo na kikomo ya TX na Gesi isiyo na kikomo kwa kutuma miamala
     - Kupata kitalu kipya kwa haraka zaidi na kusoma mnyororo wa vitalu
     - Dhamana ya bei nzuri zaidi kwa kila simu ya API
 
 - [**Zeeve**](https://www.zeeve.io/)
   - [Nyaraka](https://www.zeeve.io/docs/)
   - Vipengele
-    - Jukwaa la uendeshaji kiotomatiki lisilo na msimbo la kiwango cha biashara linalotoa usambazaji, ufuatiliaji na usimamizi wa nodi na mitandao ya Mnyororo wa vitalu
+    - Jukwaa la kiotomatiki la kiwango cha biashara lisilo na msimbo linalotoa usambazaji, ufuatiliaji na usimamizi wa nodi na mitandao ya Mnyororo wa vitalu
     - Itifaki na Miunganisho 30+ Inayotumika, na kuongeza zaidi
     - Huduma za miundombinu ya Web3 zilizoongezwa thamani kama vile hifadhi iliyogatuliwa, utambulisho uliogatuliwa na API za data za Leja ya Mnyororo wa vitalu kwa matukio ya matumizi ya ulimwengu halisi
     - Usaidizi wa 24/7 na ufuatiliaji makini huhakikisha afya ya nodi wakati wote.
-    - Vituo vya mwisho vya RPC vinatoa ufikiaji ulioidhinishwa kwa API, usimamizi usio na usumbufu na dashibodi inayoeleweka na uchanganuzi.
-    - Inatoa chaguo zote mbili za wingu linalosimamiwa na kuleta wingu lako mwenyewe za kuchagua na inasaidia watoa huduma wote wakuu wa wingu kama AWS, Azure, Google Cloud, Digital Ocean na kwenye eneo.
+    - Vituo vya mwisho vya RPC hutoa ufikiaji ulioidhinishwa kwa API, usimamizi usio na usumbufu na dashibodi inayoeleweka na uchanganuzi.
+    - Hutoa chaguo zote mbili za wingu linalosimamiwa na kuleta wingu lako mwenyewe za kuchagua na inasaidia watoa huduma wote wakuu wa wingu kama AWS, Azure, Google Cloud, Digital Ocean na kwenye majengo.
     - Tunatumia uelekezaji mahiri kufikia nodi iliyo karibu zaidi na mtumiaji wako kila wakati
+
 ## Usomaji zaidi {#further-reading}
 
 - [Orodha ya huduma za nodi za Ethereum](https://ethereumnodes.com/)
@@ -420,5 +421,4 @@ Hapa kuna orodha ya baadhi ya watoa huduma maarufu wa nodi za Ethereum, jisikie 
 
 ## Mafunzo yanayohusiana {#related-tutorials}
 
-- [Kuanza na ukuzaji wa Ethereum kwa kutumia Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Mwongozo wa kutuma miamala kwa kutumia Web3 na Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

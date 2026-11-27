@@ -1,6 +1,6 @@
 ---
 title: "数据结构与编码"
-description: "以太坊基础数据结构概述。"
+description: "以太坊核心数据结构和编码概述，包括帕特里夏默克尔前缀树、RLP 和 SSZ，以及它们如何存储和验证状态。"
 lang: zh
 sidebarDepth: 2
 ---

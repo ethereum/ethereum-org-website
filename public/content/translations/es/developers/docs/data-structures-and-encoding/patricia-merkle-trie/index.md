@@ -5,13 +5,13 @@ lang: es
 sidebarDepth: 2
 ---
 
-El estado de [Ethereum](/) (la totalidad de todas las cuentas, saldos y contratos inteligentes) se codifica en una versión especial de la estructura de datos conocida generalmente en informática como árbol de Merkle. Esta estructura es útil para muchas aplicaciones en criptografía porque crea una relación verificable entre todas las piezas individuales de datos entrelazadas en el árbol, lo que da como resultado un único valor **raíz** que se puede utilizar para demostrar cosas sobre los datos.
+El estado de [Ethereum](/) (la totalidad de todas las cuentas, saldos y contratos inteligentes) se codifica en una versión especial de la estructura de datos conocida generalmente en informática como árbol de Merkle. Esta estructura es útil para muchas aplicaciones en criptografía porque crea una relación verificable entre todas las piezas individuales de datos entrelazadas en el árbol, lo que da como resultado un único valor **raíz** que se puede utilizar para probar cosas sobre los datos.
 
 La estructura de datos de Ethereum es un "trie de Merkle Patricia modificado", llamado así porque toma prestadas algunas características de PATRICIA (el algoritmo práctico para recuperar información codificada en alfanumérico, por sus siglas en inglés) y porque está diseñado para la recuperación (re**trie**val) eficiente de datos de los elementos que componen el estado de Ethereum.
 
-Un trie de Merkle Patricia es determinista y criptográficamente verificable: la única forma de generar una raíz de estado es calculándola a partir de cada pieza individual del estado, y se puede demostrar fácilmente que dos estados son idénticos comparando el hash raíz y los hashes que condujeron a él (_una prueba de Merkle_). Por el contrario, no hay forma de crear dos estados diferentes con el mismo hash raíz, y cualquier intento de modificar el estado con valores diferentes dará como resultado un hash raíz de estado diferente. Teóricamente, esta estructura proporciona el "santo grial" de la eficiencia `O(log(n))` para inserciones, búsquedas y eliminaciones.
+Un trie de Merkle Patricia es determinista y criptográficamente verificable: la única forma de generar una raíz de estado es calculándola a partir de cada pieza individual del estado, y se puede probar fácilmente que dos estados que son idénticos lo son comparando el hash raíz y los hashes que condujeron a él (_una prueba de Merkle_). Por el contrario, no hay forma de crear dos estados diferentes con el mismo hash raíz, y cualquier intento de modificar el estado con valores diferentes dará como resultado un hash raíz de estado diferente. Teóricamente, esta estructura proporciona el "santo grial" de la eficiencia `O(log(n))` para inserciones, búsquedas y eliminaciones.
 
-En un futuro próximo, Ethereum planea migrar a una estructura de [árbol de Verkle](/roadmap/verkle-trees), lo que abrirá muchas nuevas posibilidades para futuras mejoras del protocolo.
+Ethereum planea reemplazar este trie con un nuevo árbol de estado, actualmente propuesto como un árbol binario unificado en la [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864). Una propuesta anterior para usar un [árbol de Verkle](/roadmap/verkle-trees/) ha sido descartada.
 
 ## Requisitos previos {#prerequisites}
 
@@ -206,7 +206,7 @@ Hay un trie de estado global, y se actualiza cada vez que un cliente procesa un 
 
 ### Trie de almacenamiento {#storage-trie}
 
-El trie de almacenamiento es donde residen _todos_ los datos del contrato. Hay un trie de almacenamiento separado para cada cuenta. Para recuperar valores en posiciones de almacenamiento específicas en una dirección dada, se requieren la dirección de almacenamiento, la posición entera de los datos almacenados en el almacenamiento y el ID del bloque. Estos luego se pueden pasar como argumentos al `eth_getStorageAt` definido en la API JSON-RPC, por ejemplo, para recuperar los datos en el slot de almacenamiento 0 para la dirección `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+El trie de almacenamiento es donde residen _todos_ los datos del contrato. Hay un trie de almacenamiento separado para cada cuenta. Para recuperar valores en posiciones de almacenamiento específicas en una dirección dada, se requieren la dirección de almacenamiento, la posición entera de los datos almacenados en el almacenamiento y el ID del bloque. Estos luego se pueden pasar como argumentos a `eth_getStorageAt` definido en la API JSON-RPC, por ejemplo, para recuperar los datos en el slot de almacenamiento 0 para la dirección `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Recuperar otros elementos en el almacenamiento es un poco más complejo porque primero se debe calcular la posición en el trie de almacenamiento. La posición se calcula como el hash `keccak256` de la dirección y la posición de almacenamiento, ambos rellenados a la izquierda con ceros hasta una longitud de 32 bytes. Por ejemplo, la posición para los datos en el slot de almacenamiento 1 para la dirección `0x391694e7e0b0cce554cb130d723a9d27458f9298` es:
+Aquí intervienen dos tipos diferentes de "clave", y es útil mantenerlos separados:
+
+1. **El slot de almacenamiento.** Esta es la clave de 32 bytes que un contrato lee y escribe con los códigos de operación `SLOAD` y `SSTORE`, y es lo que `eth_getStorageAt` toma como su segundo parámetro. Al protocolo no le importa cómo un contrato elige sus slots. Eso lo decide el diseño de almacenamiento del compilador (consulte el [diseño de almacenamiento de Solidity](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **La ruta en el trie de almacenamiento.** Al igual que el trie de estado, el trie de almacenamiento nunca usa el slot directamente como su ruta. La ruta siempre es `keccak256(slot)`, y el valor almacenado allí es la codificación RLP del valor del slot sin los ceros a la izquierda. Aplicar hashing a la clave mantiene las rutas distribuidas uniformemente, por lo que nadie puede crear claves que hagan que el trie sea inusualmente profundo. Los clientes aplican este hash ellos mismos, por lo que quienes llaman a `eth_getStorageAt` solo pasan el slot.
+
+Las variables de estado simples residen en los slots que el compilador les asigna en orden (`0`, `1`, ...), con tipos pequeños a veces empaquetados juntos en un solo slot, como en el ejemplo anterior. Los valores dentro de una estructura dinámica necesitan que su slot se calcule primero. Por ejemplo, Solidity almacena el valor para la clave `k` de un `mapping` declarado en el slot `p` en el slot `keccak256(pad32(k) ++ pad32(p))`. Si el contrato en `0x295a70b2de5e3953354a6a8344e616ed314d7251` declara un `mapping(address => uint)` en el slot 1, el slot que contiene la entrada para la clave `0x391694e7e0b0cce554cb130d723a9d27458f9298` es:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-En una consola de Geth, esto se puede calcular de la siguiente manera:
+Este hashing proviene del diseño de almacenamiento de Solidity (calculado por el contrato en tiempo de ejecución), no del trie. En una consola de Geth, esto se puede calcular de la siguiente manera:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-El `path` es por lo tanto `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Esto ahora se puede usar para recuperar los datos del trie de almacenamiento como antes:
+Por lo tanto, el slot de almacenamiento es `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`, y su ruta en el trie de almacenamiento es `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. El slot ahora se puede pasar a `eth_getStorageAt` como antes, y el cliente le aplica un hash para encontrar el valor en el trie:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545

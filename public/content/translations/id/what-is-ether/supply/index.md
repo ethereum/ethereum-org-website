@@ -7,14 +7,14 @@ lang: id
 
 ## Prasyarat {#prerequisites}
 
-Artikel ini ditulis untuk pemula tanpa pengetahuan sebelumnya. Namun, untuk sepenuhnya memahami topik ini, akan sangat membantu jika Anda memiliki pemahaman dasar tentang konsep-konsep seperti [Proposal Peningkatan Ethereum (EIP)](/eips/#introduction-to-ethereum-improvement-proposals), [Bukti Kerja (PoW)](/developers/docs/consensus-mechanisms/pow/), [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos/), dan [Pembaruan London](/ethereum-forks/#london).
+Artikel ini ditulis untuk pemula tanpa pengetahuan sebelumnya. Namun, untuk sepenuhnya memahami topik ini, akan sangat membantu jika Anda memiliki pemahaman dasar tentang konsep-konsep seperti [Proposal Peningkatan Ethereum (EIP)](/eips/), [Bukti Kerja (PoW)](/developers/docs/consensus-mechanisms/pow/), [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos/), dan [Peningkatan London](/ethereum-forks/#london).
 
-## Berapa Banyak Token ETH yang Ada Saat Ini? {#current-eth-supply}
+## Ada Berapa Banyak Token ETH Saat Ini? {#current-eth-supply}
 
 Total pasokan ETH bersifat dinamis dan terus berubah karena dua faktor utama:
 
 1. **Penerbitan Bukti Kepemilikan (PoS)**: ETH baru dibuat sebagai imbalan bagi validator yang mengamankan jaringan
-2. **Pembakaran EIP-1559**: Sebagian dari biaya transaksi dihapus secara permanen dari peredaran
+2. **Pembakaran EIP-1559**: Sebagian biaya transaksi dihapus secara permanen dari peredaran
 
 Anda dapat melacak pasokan saat ini dan perubahan ini secara waktu nyata di platform seperti [Ultrasound Money](https://ultrasound.money).
 
@@ -34,7 +34,7 @@ Penerbitan ETH mengacu pada proses pembuatan ETH baru sebagai imbalan bagi valid
 
 ### Secara sederhana: {#in-simple-terms}
 - **Penerbitan** menambahkan ETH baru ke jaringan.
-- **Pembakaran** (diperkenalkan oleh EIP-1559) menghapus ETH dari jaringan dengan menghancurkan sebagian dari biaya transaksi.
+- **Pembakaran** (diperkenalkan oleh EIP-1559) menghapus ETH dari jaringan dengan menghancurkan sebagian biaya transaksi.
 
 Kedua kekuatan ini menentukan apakah pasokan Ethereum tumbuh (inflasi) atau menyusut (deflasi) dari waktu ke waktu.
 
@@ -42,7 +42,7 @@ Kedua kekuatan ini menentukan apakah pasokan Ethereum tumbuh (inflasi) atau meny
 
 Sistem Bukti Kepemilikan (PoS) Ethereum telah secara drastis mengurangi penerbitan ETH dibandingkan dengan model Bukti Kerja (PoW) sebelumnya. Validator—yang mengunci ETH untuk mengamankan jaringan—mendapatkan ETH sebagai imbalan. Anda dapat melihat tingkat penerbitan saat ini di [Ultrasound Money](https://ultrasound.money).
 
-Namun, angka ini bersifat dinamis. Berkat EIP-1559, ketika aktivitas jaringan tinggi, tingkat pembakaran ETH dapat melampaui penerbitan, menciptakan efek deflasi. Misalnya, selama periode permintaan tinggi, seperti peluncuran NFT atau aktivitas keuangan terdesentralisasi (DeFi), lebih banyak ETH yang mungkin dibakar daripada diterbitkan.
+Namun, angka ini bersifat dinamis. Berkat EIP-1559, ketika aktivitas jaringan tinggi, tingkat pembakaran ETH dapat melampaui penerbitan, menciptakan efek deflasi. Misalnya, selama periode permintaan tinggi, seperti peluncuran NFT atau aktivitas DeFi, lebih banyak ETH yang mungkin dibakar daripada diterbitkan.
 
 ### Alat untuk Melacak Pasokan dan Penerbitan ETH: {#tools-to-track-eth-supply-and-issuance}
 - [Ultrasound Money](https://ultrasound.money) - Pelacakan waktu nyata dari pasokan, penerbitan, dan tingkat pembakaran ETH
@@ -50,7 +50,7 @@ Namun, angka ini bersifat dinamis. Berkat EIP-1559, ketika aktivitas jaringan ti
 
 ## Faktor-faktor yang Memengaruhi Pasokan dan Penerbitan ETH di Masa Depan {#future-eth-supply}
 
-Pasokan masa depan Ethereum tidak tetap—itu bergantung pada beberapa variabel:
+Pasokan masa depan Ethereum tidak tetap—ini bergantung pada beberapa variabel:
 
 1. **Partisipasi Staking**: 
    - Lebih banyak validator yang bergabung dengan jaringan berarti lebih banyak imbalan ETH yang didistribusikan.
@@ -59,9 +59,9 @@ Pasokan masa depan Ethereum tidak tetap—itu bergantung pada beberapa variabel:
 
 2. **Aktivitas Jaringan**:
    - Volume transaksi yang tinggi menyebabkan lebih banyak ETH yang dibakar, berpotensi mengimbangi atau melampaui penerbitan.
-   - Baca tentang [biaya gas](/developers/docs/gas/) dan bagaimana hal itu memengaruhi pembakaran.
+   - Baca tentang [biaya gas](/developers/docs/gas/) dan bagaimana hal tersebut memengaruhi pembakaran.
 
-3. **Pembaruan Protokol**:
+3. **Peningkatan Protokol**:
    - Perubahan masa depan pada kode Ethereum dapat menyesuaikan imbalan staking atau mekanisme pembakaran, yang selanjutnya membentuk dinamika pasokan.
    - Tetap perbarui informasi dengan [peta jalan Ethereum](/roadmap/).
 

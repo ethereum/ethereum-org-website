@@ -88,7 +88,7 @@ def mkcache(cache_size, seed):
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Tumia toleo lenye mizunguko michache ya randmemohash
+    # Tumia toleo lenye mizunguko michache la randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Mchakato wa uzalishaji wa kache unahusisha kwanza kujaza kwa mfuatano MB 32 za kumbukumbu, kisha kufanya mapitio mawili ya algoriti ya _RandMemoHash_ ya Sergio Demian Lerner kutoka [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Toleo ni seti ya thamani 524288 za baiti 64.
+Mchakato wa uzalishaji wa kache unahusisha kwanza kujaza kwa mfuatano MB 32 za kumbukumbu, kisha kufanya mapitio matatu (`CACHE_ROUNDS`) ya algoriti ya _RandMemoHash_ ya Sergio Demian Lerner kutoka kwenye [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Toleo ni seti ya thamani 524288 za baiti 64.
 
 ## Chaguo la kukokotoa la ujumuishaji wa data {#date-aggregation-function}
 
@@ -220,7 +220,7 @@ Msimbo ufuatao unapaswa kuongezwa mwanzoni ikiwa una nia ya kuendesha vipimo vya
 ```python
 import sha3, copy
 
-# Inachukulia mpangilio wa biti wa kianzia-kidogo (sawa na usanifu wa Intel)
+# Inachukulia mpangilio wa biti wa little endian (sawa na usanifu wa Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# Kitendakazi cha heshi cha sha3, hutoa baiti 64
+# kitendakazi cha heshi cha sha3, hutoa baiti 64
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

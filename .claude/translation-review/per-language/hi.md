@@ -1,5 +1,12 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.5/10
+Scope: 15 markdown pages (adds nodes-and-clients index), changed lines only; read 9 diffs (run-a-node, nodes-and-clients, ethash, patricia, statelessness, verkle, supply, privacy, nodes-as-a-service) plus scripted sweeps. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): `actor` as stage performer (known-patterns 37b/106): privacy L60 `केंद्रीय अभिनेता (actor)` -> `केंद्रीय पक्ष`, statelessness L29 `परोपकारी अभिनेता` -> `परोपकारी प्रतिभागी`; client names in run-a-node table/notes (`बेसु/एरिगोन/geth/नेदरमाइंड/रेथ` -> Latin, lowercase `geth` too) and nodes-and-clients table rows, Erigon/Lodestar paragraphs, `टर्बो-गेथ` -> Turbo-Geth, nodes-as-a-service `लाइटहाउस` L101; `जेसन-आरपीसी` -> JSON-RPC (patricia, statelessness, nodes-as-a-service); long forms added where English is bare (112): `विकेंद्रीकृत एप्लिकेशन (dapp)`, `विकेंद्रीकृत स्वायत्त संगठन (DAO)` x2, `लेयर 1 (L1)` link text, `कोहाकू (Kohaku)` -> Kohaku; `वैलिडेटर(्स)` -> glossary `सत्यापक` (statelessness 4, supply 6; same on dev, tree uses सत्यापक in 89 files); patricia `कॉन्ट्रैक्ट` -> `अनुबंध` x5 (glossary `स्मार्ट अनुबंध`, dev form, #104).
+
+Open (warnings): hi nodes-and-clients table cells `Mainnet`/`Archive, Pruned` localized (`मेननेट`, `आर्काइव, प्रून`) where dev kept Latin; other nodes-and-clients lines still carry `प्रिज़्म/निम्बस/टेकु/लाइटहाउस/गेथ` on unchanged lines; `पहला कदम भेज दिया गया है` (shipped) in statelessness; `स्टेट रूट`/`स्टेट ट्री` vs glossary `स्थिति` in patricia; privacy L40 `अभिनेता` (pre-existing, unchanged line); `सर्जियो डेमियन लर्नर` person name transliterated in ethash; merge `कॉन्ट्रैक्ट` x5 unchanged from dev.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
 Scope: 71 md pages + 20 JSON namespaces incremental updates (dev-tools descriptions, glossary, page-*). Sampled ~35 md diffs and ~120 JSON keys, changed lines only.
 

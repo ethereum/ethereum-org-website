@@ -5,13 +5,13 @@ lang: sw
 sidebarDepth: 2
 ---
 
-Hali ya [Ethereum](/) (jumla ya akaunti zote, salio, na mikataba mahiri), imesimbwa katika toleo maalum la muundo wa data unaojulikana kwa ujumla katika sayansi ya kompyuta kama mti wa Merkle. Muundo huu ni muhimu kwa matumizi mengi katika kriptografia kwa sababu unaunda uhusiano unaoweza kuthibitishwa kati ya vipande vyote vya data vilivyounganishwa kwenye mti, na kusababisha thamani moja ya **mzizi** ambayo inaweza kutumika kuthibitisha mambo kuhusu data.
+Hali ya [Ethereum](/) (jumla ya akaunti zote, salio, na mikataba mahiri), imesimbwa katika toleo maalum la muundo wa data unaojulikana kwa ujumla katika sayansi ya kompyuta kama Mti wa Merkle. Muundo huu ni muhimu kwa matumizi mengi katika kriptografia kwa sababu unaunda uhusiano unaoweza kuthibitishwa kati ya vipande vyote vya data vilivyounganishwa kwenye mti, na kusababisha thamani moja ya **mzizi** ambayo inaweza kutumika kuthibitisha mambo kuhusu data.
 
-Muundo wa data wa Ethereum ni 'Trie ya Merkle-Patricia iliyobadilishwa', iliyopewa jina hilo kwa sababu inachukua baadhi ya vipengele vya PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric), na kwa sababu imeundwa kwa ajili ya urejeshaji (re**trie**val) mzuri wa data wa vipengee vinavyounda hali ya Ethereum.
+Muundo wa data wa Ethereum ni 'Trie ya Merkle Patricia iliyorekebishwa', iliyopewa jina hilo kwa sababu inaazima baadhi ya vipengele vya PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric), na kwa sababu imeundwa kwa ajili ya urejeshaji (re**trie**val) mzuri wa data wa vipengee vinavyounda hali ya Ethereum.
 
-Trie ya Merkle-Patricia ni thabiti na inaweza kuthibitishwa kikriptografia: Njia pekee ya kuzalisha mzizi wa hali ni kwa kuukokotoa kutoka kwa kila kipande cha hali, na hali mbili zinazofanana zinaweza kuthibitishwa kwa urahisi kwa kulinganisha heshi ya mzizi na heshi zilizosababisha (_uthibitisho wa Merkle_). Kinyume chake, hakuna njia ya kuunda hali mbili tofauti zenye heshi ya mzizi sawa, na jaribio lolote la kurekebisha hali kwa thamani tofauti litasababisha heshi tofauti ya mzizi wa hali. Kinadharia, muundo huu unatoa 'kikombe kitakatifu' cha ufanisi wa `O(log(n))` kwa uwekaji, utafutaji na ufutaji.
+Trie ya Merkle Patricia ni thabiti na inaweza kuthibitishwa kwa njia ya kriptografia: Njia pekee ya kuzalisha mzizi wa hali ni kwa kuukokotoa kutoka kwa kila kipande cha hali, na hali mbili zinazofanana zinaweza kuthibitishwa kwa urahisi kwa kulinganisha heshi ya mzizi na heshi zilizosababisha (_uthibitisho wa Merkle_). Kinyume chake, hakuna njia ya kuunda hali mbili tofauti zenye heshi ya mzizi sawa, na jaribio lolote la kurekebisha hali kwa thamani tofauti litasababisha heshi tofauti ya mzizi wa hali. Kinadharia, muundo huu unatoa 'suluhisho kamilifu' la ufanisi wa `O(log(n))` kwa uwekaji, utafutaji na ufutaji.
 
-Katika siku za usoni, Ethereum inapanga kuhamia kwenye muundo wa [Mti wa Verkle](/roadmap/verkle-trees), ambao utafungua uwezekano mwingi mpya wa maboresho ya itifaki ya baadaye.
+Ethereum inapanga kubadilisha trie hii na mti mpya wa hali, ambao kwa sasa unapendekezwa kama mti wa jozi uliounganishwa katika [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864). Pendekezo la awali la kutumia [mti wa Verkle](/roadmap/verkle-trees/) limewekwa kando.
 
 ## Mahitaji ya Awali {#prerequisites}
 
@@ -206,7 +206,7 @@ Kuna trie moja ya hali ya kimataifa, na inasasishwa kila wakati mteja anapochaka
 
 ### Trie ya Hifadhi {#storage-trie}
 
-Trie ya hifadhi ni mahali ambapo data _yote_ ya mkataba inakaa. Kuna trie tofauti ya hifadhi kwa kila akaunti. Ili kurejesha thamani katika nafasi maalum za hifadhi kwenye anwani fulani, anwani ya hifadhi, nafasi ya nambari kamili ya data iliyohifadhiwa katika hifadhi, na kitambulisho cha kitalu vinahitajika. Hizi zinaweza kupitishwa kama hoja kwa `eth_getStorageAt` iliyofafanuliwa katika API ya JSON-RPC, k.m., kurejesha data katika sloti ya hifadhi 0 kwa anwani `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Trie ya hifadhi ni mahali ambapo data _zote_ za mkataba zinakaa. Kuna trie ya hifadhi tofauti kwa kila akaunti. Ili kurejesha thamani katika nafasi maalum za hifadhi kwenye anwani fulani, anwani ya hifadhi, nafasi ya nambari kamili ya data iliyohifadhiwa katika hifadhi, na kitambulisho cha kitalu zinahitajika. Hizi zinaweza kupitishwa kama hoja kwenye `eth_getStorageAt` iliyofafanuliwa katika API ya JSON-RPC, k.m., kurejesha data katika sloti ya hifadhi 0 kwa anwani `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Kurejesha vipengele vingine katika hifadhi kunahusisha zaidi kidogo kwa sababu nafasi katika trie ya hifadhi lazima ikokotolewe kwanza. Nafasi inakokotolewa kama heshi ya `keccak256` ya anwani na nafasi ya hifadhi, zote zikiwa zimejazwa sufuri upande wa kushoto hadi urefu wa baiti 32. Kwa mfano, nafasi ya data katika sloti ya hifadhi 1 kwa anwani `0x391694e7e0b0cce554cb130d723a9d27458f9298` ni:
+Kuna aina mbili tofauti za "ufunguo" zinazohusika hapa, na inasaidia kuziweka tofauti:
+
+1. **Sloti ya hifadhi.** Huu ni ufunguo wa baiti 32 ambao mkataba unasoma na kuandika kwa kutumia opcodes za `SLOAD` na `SSTORE`, na ndicho ambacho `eth_getStorageAt` inachukua kama kigezo chake cha pili. Itifaki haijali jinsi mkataba unavyochagua sloti zake. Hilo linaamuliwa na mpangilio wa hifadhi wa kikusanyaji (tazama [mpangilio wa Solidity katika hifadhi](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **Njia katika trie ya hifadhi.** Kama trie ya hali, trie ya hifadhi haitumii kamwe sloti moja kwa moja kama njia yake. Njia daima ni `keccak256(slot)`, na thamani iliyohifadhiwa hapo ni usimbaji wa RLP wa thamani ya sloti huku sufuri za mwanzo zikiondolewa. Uheshiji wa ufunguo huweka njia zikiwa zimesambazwa kwa usawa, kwa hivyo hakuna mtu anayeweza kuunda funguo zinazofanya trie kuwa na kina kisicho cha kawaida. Wateja hutumia heshi hii wenyewe, kwa hivyo wapigaji wa `eth_getStorageAt` hupitisha tu sloti.
+
+Vigeu rahisi vya hali hukaa katika sloti ambazo kikusanyaji huwapa kwa mpangilio (`0`, `1`, ...), huku aina ndogo wakati mwingine zikiwa zimefungwa pamoja katika sloti moja, kama katika mfano hapo juu. Thamani ndani ya muundo unaobadilika zinahitaji sloti yao ikokotolewe kwanza. Kwa mfano, Solidity huhifadhi thamani kwa ufunguo `k` wa `mapping` uliotangazwa kwenye sloti `p` katika sloti `keccak256(pad32(k) ++ pad32(p))`. Ikiwa mkataba kwenye `0x295a70b2de5e3953354a6a8344e616ed314d7251` unatangaza `mapping(address => uint)` kwenye sloti 1, sloti inayoshikilia ingizo la ufunguo `0x391694e7e0b0cce554cb130d723a9d27458f9298` ni:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-Katika kiweko cha Geth, hii inaweza kukokotolewa kama ifuatavyo:
+Uheshiji huu unatokana na mpangilio wa hifadhi wa Solidity (uliokokotolewa na mkataba wakati wa utekelezaji), sio kutoka kwa trie. Katika kiweko cha Geth, hii inaweza kukokotolewa kama ifuatavyo:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Kwa hivyo `path` ni `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Hii sasa inaweza kutumika kurejesha data kutoka kwa trie ya hifadhi kama hapo awali:
+Kwa hivyo sloti ya hifadhi ni `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`, na njia yake katika trie ya hifadhi ni `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. Sloti sasa inaweza kupitishwa kwa `eth_getStorageAt` kama hapo awali, na mteja huiheshi ili kupata thamani katika trie:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
@@ -238,7 +243,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-Kumbuka: `storageRoot` kwa akaunti ya Ethereum ni tupu kwa chaguo-msingi ikiwa si akaunti ya mkataba.
+Kumbuka: `storageRoot` kwa akaunti ya Ethereum ni tupu kwa chaguo-msingi ikiwa sio akaunti ya mkataba.
 
 ### Trie ya Miamala {#transaction-trie}
 

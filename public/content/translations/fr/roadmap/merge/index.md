@@ -1,10 +1,10 @@
 ---
 title: La Fusion
-description: "Découvrez La Fusion - le moment où le réseau principal Ethereum a adopté la preuve d'enjeu."
+description: "Découvrez La Fusion, lorsque le réseau principal Ethereum est passé de la preuve de travail à la preuve d'enjeu en septembre 2022, réduisant sa consommation d'énergie d'environ 99,95 %."
 lang: fr
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas."
   - "La mise à niveau du mécanisme original de preuve de travail vers la preuve d'enjeu a été appelée La Fusion."
@@ -123,17 +123,17 @@ La Fusion a également préparé le terrain pour d'autres mises à niveau de sca
 
 <ExpandableCard
 title="Idée reçue : &quot;Exécuter un nœud nécessite de staker 32 ETH.&quot;"
-contentPreview="Faux. Tout le monde est libre de synchroniser sa propre copie auto-vérifiée d'Ethereum (c'est-à-dire exécuter un nœud). Aucun ETH n'est requis — ni avant La Fusion, ni après La Fusion, ni jamais.">
+contentPreview="Faux. Tout le monde est libre de synchroniser sa propre copie auto-vérifiée d'Ethereum (c'est-à-dire d'exécuter un nœud). Aucun ETH n'est requis — ni avant La Fusion, ni après La Fusion, ni jamais.">
 
-Il existe deux types de nœuds Ethereum : les nœuds qui peuvent proposer des blocs et les nœuds qui ne le peuvent pas.
+Il existe deux types de nœuds Ethereum : les nœuds qui peuvent proposer des blocs et ceux qui ne le peuvent pas.
 
-Les nœuds qui proposent des blocs ne représentent qu'un petit nombre du total des nœuds sur Ethereum. Cette catégorie comprend les nœuds de minage sous la preuve de travail (PoW) et les nœuds validateurs sous la preuve d'enjeu (PoS). Cette catégorie nécessite d'engager des ressources économiques (telles que la puissance de hachage des GPU dans la preuve de travail ou des ETH stakés dans la preuve d'enjeu) en échange de la possibilité de proposer occasionnellement le bloc suivant et de gagner des récompenses du protocole.
+Les nœuds qui proposent des blocs ne représentent qu'un petit nombre du total des nœuds sur Ethereum. Cette catégorie comprend les nœuds de minage sous la preuve de travail (PoW) et les nœuds validateurs sous la preuve d'enjeu (PoS). Cette catégorie nécessite d'engager des ressources économiques (telles que la puissance de hachage des GPU dans la preuve de travail ou des ETH stakés dans la preuve d'enjeu) en échange de la capacité de proposer occasionnellement le bloc suivant et de gagner des récompenses du protocole.
 
-Les autres nœuds du réseau (c'est-à-dire la majorité) ne sont pas tenus d'engager des ressources économiques au-delà d'un ordinateur grand public avec 1 à 2 To de stockage disponible et une connexion Internet. Ces nœuds ne proposent pas de blocs, mais ils jouent tout de même un rôle essentiel dans la sécurisation du réseau en tenant tous les proposeurs de blocs responsables, en écoutant les nouveaux blocs et en vérifiant leur validité à l'arrivée selon les règles de consensus du réseau. Si le bloc est valide, le nœud continue de le propager sur le réseau. Si le bloc est invalide pour quelque raison que ce soit, le logiciel du nœud l'ignorera comme invalide et arrêtera sa propagation.
+Les autres nœuds du réseau (c'est-à-dire la majorité) ne sont pas tenus d'engager des ressources économiques au-delà d'un ordinateur grand public avec 4 To de stockage disponible et d'une connexion Internet. Ces nœuds ne proposent pas de blocs, mais ils jouent tout de même un rôle essentiel dans la sécurisation du réseau en responsabilisant tous les proposeurs de blocs, en écoutant les nouveaux blocs et en vérifiant leur validité à leur arrivée selon les règles de consensus du réseau. Si le bloc est valide, le nœud continue de le propager à travers le réseau. Si le bloc est invalide pour une raison quelconque, le logiciel du nœud le rejettera comme invalide et arrêtera sa propagation.
 
 L'exécution d'un nœud ne produisant pas de blocs est possible pour quiconque sous l'un ou l'autre des mécanismes de consensus (preuve de travail ou preuve d'enjeu) ; cela est <em>fortement encouragé</em> pour tous les utilisateurs s'ils en ont les moyens. L'exécution d'un nœud est extrêmement précieuse pour Ethereum et offre des avantages supplémentaires à toute personne qui en exécute un, tels qu'une sécurité, une confidentialité et une résistance à la censure améliorées.
 
-La possibilité pour quiconque d'exécuter son propre nœud est <em>absolument essentielle</em> pour maintenir la décentralisation du réseau Ethereum.
+La capacité pour quiconque d'exécuter son propre nœud est <em>absolument essentielle</em> pour maintenir la décentralisation du réseau Ethereum.
 
 [En savoir plus sur l'exécution de votre propre nœud](/run-a-node/)
 
@@ -143,20 +143,20 @@ La possibilité pour quiconque d'exécuter son propre nœud est <em>absolument e
 title="Idée reçue : &quot;La Fusion n'a pas réussi à réduire les frais de gaz.&quot;"
 contentPreview="Faux. La Fusion était un changement de mécanisme de consensus, et non une expansion de la capacité du réseau, et n'a jamais eu pour but de réduire les frais de gaz.">
 
-Les frais de gaz sont le produit de la demande du réseau par rapport à la capacité du réseau. La Fusion a abandonné l'utilisation de la preuve de travail, passant à la preuve d'enjeu pour le consensus, mais n'a pas modifié de manière significative les paramètres qui influencent directement la capacité ou le débit du réseau.
+Les frais de gaz sont le produit de la demande du réseau par rapport à la capacité du réseau. La Fusion a rendu obsolète l'utilisation de la preuve de travail, passant à la preuve d'enjeu pour le consensus, mais n'a pas modifié de manière significative les paramètres qui influencent directement la capacité ou le débit du réseau.
 
-Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">feuille de route centrée sur les rollups</a>, les efforts se concentrent sur la mise à l'échelle de l'activité des utilisateurs sur la [couche 2 (l2)](/layer-2/), tout en permettant au réseau principal de couche 1 (l1) de servir de couche de règlement décentralisée et sécurisée, optimisée pour le stockage des données des rollups afin de rendre les transactions des rollups exponentiellement moins chères. La transition vers la preuve d'enjeu est un précurseur essentiel pour y parvenir. [En savoir plus sur le gaz et les frais.](/developers/docs/gas/)
+Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">feuille de route centrée sur les rollups</a>, les efforts se concentrent sur la mise à l'échelle de l'activité des utilisateurs sur la [couche 2](/layer-2/), tout en permettant au réseau principal de couche 1 de servir de couche de règlement décentralisée et sécurisée, optimisée pour le stockage des données des rollups afin de rendre les transactions des rollups exponentiellement moins chères. La transition vers la preuve d'enjeu est un précurseur essentiel pour y parvenir. [En savoir plus sur le gaz et les frais.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Idée reçue : &quot;Les transactions ont été considérablement accélérées par La Fusion.&quot;"
 contentPreview="Faux. Bien qu'il y ait quelques légers changements, la vitesse des transactions est globalement la même sur la couche 1 aujourd'hui qu'avant La Fusion.">
-La « vitesse » d'une transaction peut être mesurée de plusieurs manières, notamment le temps nécessaire pour être incluse dans un bloc et le temps de finalisation. Ces deux éléments changent légèrement, mais pas d'une manière que les utilisateurs remarqueront.
+La « vitesse » d'une transaction peut être mesurée de plusieurs manières, notamment le temps nécessaire pour être incluse dans un bloc et le temps jusqu'à la finalisation. Ces deux éléments changent légèrement, mais pas d'une manière que les utilisateurs remarqueront.
 
-Historiquement, sur la preuve de travail, l'objectif était d'avoir un nouveau bloc toutes les ~13,3 secondes. Sous la preuve d'enjeu, les créneaux se produisent précisément toutes les 12 secondes, chacun d'eux étant une opportunité pour un validateur de publier un bloc. La plupart des créneaux ont des blocs, mais pas nécessairement tous (par exemple, si un validateur est hors ligne). Dans la preuve d'enjeu, les blocs sont produits environ 10 % plus fréquemment que sur la preuve de travail. Il s'agissait d'un changement assez insignifiant et il est peu probable qu'il soit remarqué par les utilisateurs.
+Historiquement, sur la preuve de travail, l'objectif était d'avoir un nouveau bloc toutes les ~13,3 secondes. Sous la preuve d'enjeu, les créneaux se produisent précisément toutes les 12 secondes, chacun étant une opportunité pour un validateur de publier un bloc. La plupart des créneaux ont des blocs, mais pas nécessairement tous (par exemple, si un validateur est hors ligne). Dans la preuve d'enjeu, les blocs sont produits environ 10 % plus fréquemment que sur la preuve de travail. Il s'agit d'un changement assez insignifiant qui a peu de chances d'être remarqué par les utilisateurs.
 
-La preuve d'enjeu a introduit le concept de finalité des transactions qui n'existait pas auparavant. Dans la preuve de travail, la capacité d'annuler un bloc devient exponentiellement plus difficile avec chaque bloc miné au-dessus d'une transaction, mais elle n'atteint jamais tout à fait zéro. Sous la preuve d'enjeu, les blocs sont regroupés en époques (des périodes de 6,4 minutes contenant 32 chances pour des blocs) sur lesquelles les validateurs votent. Lorsqu'une époque se termine, les validateurs votent pour déterminer s'il faut considérer l'époque comme « justifiée ». Si les validateurs acceptent de justifier l'époque, elle est finalisée lors de l'époque suivante. L'annulation de transactions finalisées est économiquement non viable car cela nécessiterait d'obtenir et de brûler plus d'un tiers du total des ETH stakés.
+La preuve d'enjeu a introduit le concept de finalité des transactions qui n'existait pas auparavant. Dans la preuve de travail, la capacité d'annuler un bloc devient exponentiellement plus difficile avec chaque bloc miné par-dessus une transaction, mais elle n'atteint jamais tout à fait zéro. Sous la preuve d'enjeu, les blocs sont regroupés en époques (des périodes de 6,4 minutes contenant 32 opportunités de blocs) sur lesquelles les validateurs votent. Lorsqu'une époque se termine, les validateurs votent pour déterminer s'ils considèrent l'époque comme « justifiée ». Si les validateurs acceptent de justifier l'époque, elle est finalisée lors de l'époque suivante. Annuler des transactions finalisées est économiquement non viable car cela nécessiterait d'obtenir et de brûler plus d'un tiers du total des ETH stakés.
 
 </ExpandableCard>
 
@@ -164,7 +164,7 @@ La preuve d'enjeu a introduit le concept de finalité des transactions qui n'exi
 title="Idée reçue : &quot;La Fusion a activé les retraits de staking.&quot;"
 contentPreview="Faux, mais les retraits de staking ont depuis été activés via la mise à niveau Shanghai/Capella.">
 
-Initialement après La Fusion, les stakers ne pouvaient accéder qu'aux pourboires de frais et à la MEV gagnés à la suite de propositions de blocs. Ces récompenses sont créditées sur un compte non lié au staking contrôlé par le validateur (connu sous le nom de <em>bénéficiaire des frais</em>), et sont disponibles immédiatement. Ces récompenses sont distinctes des récompenses du protocole pour l'exécution des tâches de validateur.
+Initialement après La Fusion, les stakers ne pouvaient accéder qu'aux pourboires sur les frais et à la MEV gagnés suite aux propositions de blocs. Ces récompenses sont créditées sur un compte non lié au staking contrôlé par le validateur (connu sous le nom de <em>bénéficiaire des frais</em>), et sont disponibles immédiatement. Ces récompenses sont distinctes des récompenses du protocole pour l'exécution des tâches de validateur.
 
 Depuis la mise à niveau du réseau Shanghai/Capella, les stakers peuvent désormais désigner une <em>adresse de retrait</em> pour commencer à recevoir des paiements automatiques de tout solde de staking excédentaire (les ETH au-delà de 32 provenant des récompenses du protocole). Cette mise à niveau a également permis à un validateur de débloquer et de récupérer l'intégralité de son solde lors de sa sortie du réseau.
 
@@ -175,13 +175,13 @@ Depuis la mise à niveau du réseau Shanghai/Capella, les stakers peuvent désor
 <ExpandableCard
 title="Idée reçue : &quot;Maintenant que La Fusion est terminée et que les retraits sont activés, les stakers pourraient tous sortir en même temps.&quot;"
 contentPreview="Faux. Les sorties de validateurs sont limitées en fréquence pour des raisons de sécurité.">
-Depuis que la mise à niveau Shanghai/Capella a activé les retraits, les validateurs sont incités à retirer leur solde de staking supérieur à 32 ETH, car ces fonds n'ajoutent pas de rendement et sont autrement verrouillés. En fonction de l'APR (déterminé par le total des ETH stakés), ils peuvent être incités à sortir leur(s) validateur(s) pour récupérer l'intégralité de leur solde ou potentiellement staker encore plus en utilisant leurs récompenses pour gagner plus de rendement.
+Depuis que la mise à niveau Shanghai/Capella a activé les retraits, les validateurs sont incités à retirer leur solde de staking supérieur à 32 ETH, car ces fonds ne génèrent pas de rendement supplémentaire et sont autrement bloqués. Selon l'APR (déterminé par le total des ETH stakés), ils peuvent être incités à sortir leur(s) validateur(s) pour récupérer l'intégralité de leur solde ou potentiellement staker encore plus en utilisant leurs récompenses pour générer plus de rendement.
 
-Une mise en garde importante ici : les sorties complètes de validateurs sont limitées en fréquence par le protocole, et seul un certain nombre de validateurs peuvent sortir par époque (toutes les 6,4 minutes). Cette limite fluctue en fonction du nombre de validateurs actifs, mais revient à environ 0,33 % du total des ETH stakés pouvant être sortis du réseau en une seule journée.
+Une mise en garde importante ici : les sorties complètes de validateurs sont limitées en fréquence par le protocole, et seul un certain nombre de validateurs peuvent sortir par époque (toutes les 6,4 minutes). Cette limite fluctue en fonction du nombre de validateurs actifs, mais équivaut à environ 0,33 % du total des ETH stakés pouvant être retirés du réseau en une seule journée.
 
 Cela empêche un exode massif des fonds stakés. De plus, cela empêche un attaquant potentiel ayant accès à une grande partie du total des ETH stakés de commettre une infraction passible de réduction et de sortir/retirer tous les soldes des validateurs fautifs dans la même époque avant que le protocole ne puisse appliquer la pénalité de réduction.
 
-L'APR est également intentionnellement dynamique, permettant à un marché de stakers d'équilibrer combien ils sont prêts à être payés pour aider à sécuriser le réseau. Si le taux est trop bas, les validateurs sortiront à un rythme limité par le protocole. Progressivement, cela augmentera l'APR pour tous ceux qui restent, attirant à nouveau de nouveaux stakers ou ceux qui reviennent.
+L'APR est également intentionnellement dynamique, permettant à un marché de stakers d'équilibrer combien ils sont prêts à être payés pour aider à sécuriser le réseau. Si le taux est trop bas, les validateurs sortiront à un rythme limité par le protocole. Progressivement, cela augmentera l'APR pour tous ceux qui restent, attirant de nouveaux stakers ou le retour d'anciens stakers.
 </ExpandableCard>
 
 ## Qu'est-il arrivé à « Eth2 » ? {#eth2}
@@ -219,9 +219,9 @@ Pour les curieux, apprenez-en davantage sur [ce qui se passe après La Fusion](h
 
 ### La Fusion et les chaînes de fragments {#merge-and-data-sharding}
 
-À l'origine, le plan était de travailler sur les chaînes de fragments avant La Fusion pour aborder la scalabilité. Cependant, avec l'essor des [solutions de mise à l'échelle de couche 2 (l2)](/layer-2/), la priorité est passée au remplacement de la preuve de travail par la preuve d'enjeu en premier.
+À l'origine, le plan était de travailler sur les chaînes de fragments avant La Fusion pour aborder la scalabilité. Cependant, avec l'essor des [solutions de mise à l'échelle de couche 2 (L2)](/layer-2/), la priorité est passée au remplacement de la preuve de travail par la preuve d'enjeu en premier.
 
-Les plans pour les chaînes de fragments évoluent rapidement, mais compte tenu de l'essor et du succès des technologies de couche 2 (l2) pour mettre à l'échelle l'exécution des transactions, les plans de chaînes de fragments se sont orientés vers la recherche du moyen le plus optimal de répartir la charge de stockage des données d'appel compressées provenant des contrats de rollups, permettant une croissance exponentielle de la capacité du réseau. Cela ne serait pas possible sans une transition préalable vers la preuve d'enjeu.
+Les plans pour les chaînes de fragments évoluent rapidement, mais compte tenu de l'essor et du succès des technologies de couche 2 (L2) pour mettre à l'échelle l'exécution des transactions, les plans de chaînes de fragments se sont orientés vers la recherche du moyen le plus optimal de répartir la charge de stockage des données d'appel compressées provenant des contrats de rollups, permettant une croissance exponentielle de la capacité du réseau. Cela ne serait pas possible sans une transition préalable vers la preuve d'enjeu.
 
 <ButtonLink href="/roadmap/danksharding/">
   Chaînes de fragments

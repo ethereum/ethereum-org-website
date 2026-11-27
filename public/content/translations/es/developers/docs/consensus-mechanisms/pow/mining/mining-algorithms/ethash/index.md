@@ -83,12 +83,12 @@ Ahora, especificamos la función para producir un caché:
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Producir secuencialmente el conjunto de datos inicial
+    # Produce secuencialmente el conjunto de datos inicial
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Usar una versión de pocas rondas de randmemohash
+    # Usa una versión de pocas rondas de randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-El proceso de producción de caché implica primero llenar secuencialmente 32 MB de memoria, luego realizar dos pasadas del algoritmo _RandMemoHash_ de Sergio Demian Lerner de [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). La salida es un conjunto de 524288 valores de 64 bytes.
+El proceso de producción de caché implica primero llenar secuencialmente 32 MB de memoria, luego realizar tres pasadas (`CACHE_ROUNDS`) del algoritmo _RandMemoHash_ de Sergio Demian Lerner de [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). La salida es un conjunto de 524288 valores de 64 bytes.
 
 ## Función de agregación de datos {#date-aggregation-function}
 
@@ -220,7 +220,7 @@ El siguiente código debe anteponerse si está interesado en ejecutar la especif
 ```python
 import sha3, copy
 
-# Asume un ordenamiento de bits little-endian (igual que las arquitecturas de Intel)
+# Asume el orden de bits little endian (igual que las arquitecturas Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# Función hash sha3, produce 64 bytes
+# función hash sha3, genera 64 bytes
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

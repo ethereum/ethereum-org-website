@@ -17,19 +17,19 @@ Jika Anda baru mengenal topik menjalankan node, atau mencari jalur yang tidak te
 
 ## Memilih pendekatan {#choosing-approach}
 
-Langkah pertama dalam menjalankan node Anda adalah memilih pendekatan Anda. Berdasarkan persyaratan dan berbagai kemungkinan, Anda harus memilih implementasi klien (baik klien eksekusi maupun konsensus), lingkungan (perangkat keras, sistem), dan parameter untuk pengaturan klien.
+Langkah pertama dalam menjalankan node Anda adalah memilih pendekatan Anda. Berdasarkan persyaratan dan berbagai kemungkinan, Anda harus memilih implementasi klien (baik klien eksekusi maupun klien konsensus), lingkungan (perangkat keras, sistem), dan parameter untuk pengaturan klien.
 
 Halaman ini akan memandu Anda melalui keputusan-keputusan ini dan membantu Anda menemukan cara yang paling sesuai untuk menjalankan instans Ethereum Anda.
 
-Untuk memilih dari implementasi klien, lihat semua [klien eksekusi](/developers/docs/nodes-and-clients/#execution-clients) dan [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients) yang siap untuk Mainnet, serta pelajari tentang [keragaman klien](/developers/docs/nodes-and-clients/client-diversity).
+Untuk memilih dari implementasi klien, lihat semua [klien eksekusi](/developers/docs/nodes-and-clients/#execution-clients) dan [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients) yang siap untuk Mainnet yang tersedia, dan pelajari tentang [keragaman klien](/developers/docs/nodes-and-clients/client-diversity).
 
 Putuskan apakah akan menjalankan perangkat lunak pada [perangkat keras Anda sendiri atau di cloud](#local-vs-cloud), dengan mempertimbangkan [persyaratan](#requirements) klien.
 
 Setelah menyiapkan lingkungan, instal klien yang dipilih baik dengan [antarmuka yang ramah pemula](#automatized-setup) atau [secara manual](#manual-setup) menggunakan terminal dengan opsi lanjutan.
 
-Saat node berjalan dan melakukan sinkronisasi, Anda siap untuk [menggunakannya](#using-the-node), tetapi pastikan untuk terus memantau [pemeliharaannya](#operating-the-node).
+Ketika node berjalan dan melakukan sinkronisasi, Anda siap untuk [menggunakannya](#using-the-node), tetapi pastikan untuk terus memantau [pemeliharaannya](#operating-the-node).
 
-![Pengaturan klien](./diagram.png)
+<ClientSetupDiagram />
 
 ### Lingkungan dan perangkat keras {#environment-and-hardware}
 
@@ -61,7 +61,7 @@ Menggunakan perangkat keras Anda sendiri bisa sangat mudah. Ada banyak opsi sede
 
 #### Persyaratan {#requirements}
 
-Persyaratan perangkat keras berbeda menurut klien tetapi umumnya tidak terlalu tinggi karena node hanya perlu tetap tersinkronisasi. Jangan bingung dengan penambangan, yang membutuhkan lebih banyak daya komputasi. Namun, waktu sinkronisasi dan kinerja memang meningkat dengan perangkat keras yang lebih kuat.
+Persyaratan perangkat keras berbeda-beda menurut klien tetapi umumnya tidak terlalu tinggi karena node hanya perlu tetap tersinkronisasi. Jangan bingung dengan penambangan, yang membutuhkan daya komputasi yang jauh lebih besar. Namun, waktu sinkronisasi dan kinerja memang meningkat dengan perangkat keras yang lebih kuat.
 
 Sebelum menginstal klien apa pun, pastikan komputer Anda memiliki sumber daya yang cukup untuk menjalankannya. Anda dapat menemukan persyaratan minimum dan yang disarankan di bawah ini.
 
@@ -79,8 +79,8 @@ Semua klien mendukung sistem operasi utama - Linux, macOS, Windows. Ini berarti 
 
 - CPU dengan 2+ inti
 - RAM 16 GB (disarankan 32 GB untuk stabilitas)
-- SSD NVMe 2 TB (kemungkinan akan terlampaui pada tahun 2027, baca lebih lanjut tentang [SSD yang bagus dan kurang bagus untuk node Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
-- Bandwidth 25+ MBit/dtk
+- SSD NVMe 4 TB (mencakup node dengan riwayat rantai penuh ditambah ruang untuk berkembang, lihat ukuran disk klien di bawah; baca lebih lanjut tentang [SSD yang bagus dan kurang bagus untuk node Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- Bandwidth 25+ MBit/s
 
 ##### Spesifikasi yang disarankan
 
@@ -89,21 +89,22 @@ Panduan perangkat keras saat ini untuk operator node diidentifikasi dalam [EIP-7
 - CPU cepat dengan 4+ inti (8+ inti jika memvalidasi)
 - RAM 32 GB (disarankan 64 GB jika memvalidasi untuk memastikan stabilitas)
 - SSD NVMe 4 TB (drive tanpa DRAM dan QLC tidak disarankan)
-- Bandwidth unduh 50 MBit/dtk / unggah 15+ MBit/dtk (unggah 25+ MBit/dtk jika memvalidasi)
+- Bandwidth unduh 50 MBit/s / unggah 15+ MBit/s (unggah 25+ MBit/s jika memvalidasi)
 
 Mode sinkronisasi dan klien yang Anda pilih akan memengaruhi persyaratan ruang, tetapi kami telah memperkirakan ruang disk yang Anda perlukan untuk setiap klien di bawah ini.
 
-| Klien      | Ukuran disk (sinkronisasi snap) | Ukuran disk (arsip penuh) |
-| ---------- | ------------------------------- | ------------------------- |
-| Besu       | 800GB+                          | 12TB+                     |
-| Erigon     | N/A                             | 2.5TB+                    |
-| Geth       | 500GB+                          | 12TB+                     |
-| Nethermind | 500GB+                          | 12TB+                     |
-| Reth       | N/A                             | 2.2TB+                    |
+| Klien      | Ukuran disk (full node) | Ukuran disk (arsip penuh) |
+| ---------- | ----------------------- | ------------------------- |
+| Besu       | 1.8TB+                  | 12TB+                     |
+| Erigon     | 1.7TB+                  | 2.7TB+                    |
+| Geth       | 1.8TB+                  | 2TB+                      |
+| Nethermind | 1.7TB+                  | 14TB+                     |
+| Reth       | 2.2TB+                  | 2.8TB+                    |
 
-- Catatan: Erigon dan Reth tidak menawarkan sinkronisasi snap, tetapi Pemangkasan Penuh (Full Pruning) dimungkinkan (~2TB untuk Erigon, ~1.2TB untuk Reth)
+- Catatan: Ukuran full node menyimpan riwayat rantai lengkap dan diukur pada September 2026 oleh [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Klien yang mendukung kedaluwarsa riwayat membutuhkan lebih sedikit: sekitar 1,2-1,4TB dengan riwayat pasca-Merge saja, atau sekitar 400-650GB dengan kedaluwarsa bergulir (belum didukung oleh Geth).
+- Catatan: Ukuran arsip berasal dari dokumentasi masing-masing klien ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Angka Geth adalah untuk arsip berbasis jalurnya; menyimpan riwayat trie juga membutuhkan sekitar 6,5TB. Angka Nethermind berasal dari Juli 2023 dan telah berkembang sejak saat itu.
 
-Untuk klien konsensus, persyaratan ruang juga bergantung pada implementasi klien dan fitur yang diaktifkan (misalnya, pemotong validator) tetapi umumnya perhitungkan tambahan 200GB yang diperlukan untuk data suar. Dengan sejumlah besar validator, beban bandwidth juga bertambah. Anda dapat menemukan [detail tentang persyaratan klien konsensus dalam analisis ini](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Untuk klien konsensus, persyaratan ruang juga bergantung pada implementasi klien dan fitur yang diaktifkan (misalnya, pemotong validator) tetapi umumnya perhitungkan tambahan 15-90GB untuk data suar, ditambah sekitar 500GB data blob jika menjalankan supernode. Dengan sejumlah besar validator, beban bandwidth juga bertambah. Anda dapat menemukan [detail tentang persyaratan klien konsensus dalam analisis ini](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Solusi plug-and-play {#plug-and-play}
 
@@ -459,7 +460,7 @@ Setiap implementasi klien memiliki string versi yang dapat dibaca manusia yang d
 
 #### Menjalankan layanan tambahan {#running-additional-services}
 
-Menjalankan node Anda sendiri memungkinkan Anda menggunakan layanan yang memerlukan akses langsung ke RPC klien Ethereum. Ini adalah layanan yang dibangun di atas Ethereum seperti [solusi lapisan 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend untuk dompet, penjelajah blok, alat pengembang, dan infrastruktur Ethereum lainnya.
+Menjalankan node Anda sendiri memungkinkan Anda menggunakan layanan yang memerlukan akses langsung ke RPC klien Ethereum. Ini adalah layanan yang dibangun di atas Ethereum seperti [solusi lapisan 2 (L2)](/developers/docs/scaling/#layer-2-scaling), backend untuk dompet, penjelajah blok, alat pengembang, dan infrastruktur Ethereum lainnya.
 
 #### Memantau node {#monitoring-the-node}
 

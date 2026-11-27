@@ -1,18 +1,18 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/frameworks/index.md",
-  "generatedAt": "2026-10-21T21:44:17.139Z",
-  "rootHash": "54f5aaea285c",
+  "generatedAt": "2026-11-27T14:35:18.646Z",
+  "rootHash": "67073e0cb3da",
   "tree": {
-    "contentHash": "fab39b026bf3",
-    "anchorHash": "e2e5513917f6",
+    "contentHash": "02b221a39b61",
+    "anchorHash": "cf027bd2a2fb",
     "children": {
       "frontmatter:title": {
         "contentHash": "25722936ae1c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "ea9a827175a6",
+        "contentHash": "3ef391c4df6f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -78,8 +78,8 @@
         ]
       },
       "available-frameworks": {
-        "contentHash": "5bb23e6afc19",
-        "anchorHash": "3beaa73f371e",
+        "contentHash": "d781a16c236f",
+        "anchorHash": "43570116454a",
         "labelHash": "9614ca59209d",
         "children": {
           "_label": {
@@ -259,8 +259,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:21": {
-            "contentHash": "c26982b1425d",
-            "anchorHash": "5b1a502974e3"
+            "contentHash": "c205924de0fe",
+            "anchorHash": "7ba558541d6f"
           },
           "prose:78": {
             "contentHash": "53390ef6ad49",
@@ -695,8 +695,8 @@
         ]
       },
       "tutorials": {
-        "contentHash": "bde2387a1f86",
-        "anchorHash": "bf597ef771b0",
+        "contentHash": "3e6cce808df3",
+        "anchorHash": "422d8a6efe9d",
         "labelHash": "57c97d3a57d1",
         "children": {
           "_label": {
@@ -708,11 +708,11 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "72d0cd97d6d3",
-            "anchorHash": "2bb31db58ede"
+            "contentHash": "1c6c5c2b5d0c",
+            "anchorHash": "ee6b3a042e7d"
           },
           "prose:2": {
-            "contentHash": "a2705f7eed4d",
+            "contentHash": "2e44c62394b8",
             "anchorHash": "e3b0c44298fc"
           }
         },
@@ -736,5 +736,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
+  "sourceCommitSha": "e1842064dd65585ac4ee544d57ed98f2215f78ff"
 }

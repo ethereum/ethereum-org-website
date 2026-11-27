@@ -1,22 +1,24 @@
 ---
 title: "Verkle Ağaçları"
-description: "Verkle Ağaçlarının üst düzey bir açıklaması ve Ethereum'u güncellemek için nasıl kullanılacakları"
+description: "Verkle Ağaçlarının üst düzey bir açıklaması ve Ethereum'un durum ağacı planlarının neden ikili bir ağaca geçtiği"
 lang: tr
 template: roadmap
 summaryPoints:
   - Verkle Ağaçlarının ne olduğunu keşfedin
-  - Verkle Ağaçlarının Ethereum için neden faydalı bir güncelleme olduğunu okuyun
+  - Verkle Ağaçlarının neden ikili bir ağaç lehine bir kenara bırakıldığını okuyun
 ---
 
-Verkle Ağaçları ("Vektör taahhüdü" ve "Merkle Ağaçları" kelimelerinin birleşimi), [Ethereum](/) düğümlerini güncellemek için kullanılabilecek bir veri yapısıdır; böylece blokları doğrulama yeteneklerini kaybetmeden büyük miktarda durum verisi depolamayı bırakabilirler.
+Verkle Ağaçları ("Vektör taahhüdü" (Vector commitment) ve "Merkle Ağaçları"nın (Merkle Trees) birleşimi), [Ethereum](/) düğümlerini blokları doğrulama yeteneklerini kaybetmeden büyük miktarda durum verisi depolamayı bırakabilmeleri için yükseltmek amacıyla kullanılabilecek bir veri yapısıdır.
+
+Verkle Ağaçları, [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800) içinde Ethereum'un bir sonraki durum ağacı olarak teklif edildi, ancak bu teklif şu anda durgun ve birleşik bir ikili ağaç ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) lehine bir kenara bırakıldı. İkili ağaç, durumsuz istemciler için küçük tanıklar sağlama şeklindeki aynı hedefi takip eder. Bu sayfa, Verkle Ağaçlarının nasıl çalıştığını ve araştırmanın neden ikili bir ağaca kaydığını açıklamaktadır.
 
 ## Durumsuzluk {#statelessness}
 
-Verkle Ağaçları, durumsuz Ethereum istemcilerine giden yolda kritik bir adımdır. Durumsuz istemciler, gelen blokları doğrulamak için tüm durum veritabanını depolamak zorunda olmayan istemcilerdir. Durumsuz istemciler, blokları doğrulamak için Ethereum'un durumunun kendi yerel kopyalarını kullanmak yerine, blokla birlikte gelen durum verilerine ait bir "tanık" kullanırlar. Bir tanık, belirli bir işlem kümesini yürütmek için gereken durum verilerinin tek tek parçalarının bir koleksiyonu ve tanığın gerçekten tam verinin bir parçası olduğuna dair kriptografik bir kanıttır. Tanık, durum veritabanının _yerine_ kullanılır. Bunun çalışması için tanıkların çok küçük olması gerekir, böylece doğrulayıcıların onları 12 saniyelik bir slot içinde işleyebilmesi için ağ üzerinden güvenli bir şekilde zamanında yayınlanabilirler. Mevcut durum veri yapısı uygun değildir çünkü tanıklar çok büyüktür. Verkle Ağaçları, küçük tanıklara olanak tanıyarak bu sorunu çözer ve durumsuz istemcilerin önündeki ana engellerden birini ortadan kaldırır.
+Verkle Ağaçları, durumsuz Ethereum istemcilerine giden yolda bir adım olarak tasarlandı. Durumsuz istemciler, gelen blokları doğrulamak için tüm durum veritabanını depolamak zorunda olmayan istemcilerdir. Durumsuz istemciler, blokları doğrulamak için Ethereum'un durumunun kendi yerel kopyalarını kullanmak yerine, blokla birlikte gelen durum verilerine ait bir "tanık" kullanırlar. Bir tanık, belirli bir işlem kümesini yürütmek için gereken durum verilerinin tek tek parçalarının bir koleksiyonu ve tanığın gerçekten tam verinin bir parçası olduğuna dair kriptografik bir kanıttır. Tanık, durum veritabanı _yerine_ kullanılır. Bunun çalışması için, tanıkların çok küçük olması gerekir, böylece doğrulayıcıların onları 12 saniyelik bir slot içinde işleyebilmesi için ağ üzerinden zamanında güvenli bir şekilde yayınlanabilirler. Mevcut durum veri yapısı uygun değildir çünkü tanıklar çok büyüktür. Verkle Ağaçları, küçük tanıklara olanak tanıyarak bu sorunu çözer ve durumsuz istemcilerin önündeki ana engellerden birini ortadan kaldırır.
 
 <ExpandableCard title="Neden durumsuz istemciler istiyoruz?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
-Ethereum istemcileri şu anda durum verilerini depolamak için Patricia Merkle Ağacı olarak bilinen bir veri yapısı kullanır. Bireysel hesaplar hakkındaki bilgiler ağaçta yapraklar olarak depolanır ve yaprak çiftleri, geriye yalnızca tek bir hash kalana kadar art arda hash'lenir. Bu son hash "kök" olarak bilinir. Blokları doğrulamak için Ethereum istemcileri bir bloktaki tüm işlemleri yürütür ve yerel durum ağaçlarını günceller. Yerel ağacın kökü, blok teklifçisi tarafından sağlananla aynıysa blok geçerli kabul edilir, çünkü blok teklifçisi ve doğrulayıcı düğüm tarafından yapılan hesaplamadaki herhangi bir farklılık kök hash'inin tamamen farklı olmasına neden olur. Bununla ilgili sorun, Blokzinciri doğrulamanın her istemcinin baş blok ve birkaç geçmiş blok için tüm durum ağacını depolamasını gerektirmesidir (Geth'teki varsayılan ayar, başın 128 blok gerisine kadar durum verilerini tutmaktır). Bu, istemcilerin büyük miktarda disk alanına erişiminin olmasını gerektirir ve bu da ucuz, düşük güçlü donanımlarda tam düğümleri çalıştırmanın önünde bir engeldir. Bunun bir çözümü, durum ağacını, tam durum verileri yerine paylaşılabilecek verilere ait küçük bir "tanık" kullanılarak özetlenebilen daha verimli bir yapıya (Verkle Ağacı) güncellemektir. Durum verilerini bir Verkle Ağacı olarak yeniden biçimlendirmek, durumsuz istemcilere geçiş için bir basamaktır.
+Ethereum istemcileri şu anda durum verilerini depolamak için Patricia Merkle Ağacı (Patricia Merkle Trie) olarak bilinen bir veri yapısı kullanmaktadır. Bireysel hesaplar hakkındaki bilgiler ağaçtaki yapraklarda saklanır ve 16'ya kadar alt öğesi olabilen her bir dal düğümü, yalnızca tek bir hash kalana kadar seviye seviye alt öğelerinin hash'leriyle birlikte hash'lenir. Bu son hash "kök" olarak bilinir. Blokları doğrulamak için Ethereum istemcileri bir bloktaki tüm işlemleri yürütür ve yerel durum ağaçlarını günceller. Yerel ağacın kökü, blok teklifçisi tarafından sağlananla aynıysa blok geçerli kabul edilir, çünkü blok teklifçisi ve doğrulayan düğüm tarafından yapılan hesaplamadaki herhangi bir farklılık kök hash'inin tamamen farklı olmasına neden olur. Bununla ilgili sorun, Blokzinciri doğrulamanın her istemcinin baş blok ve birkaç geçmiş blok için tüm durum ağacını depolamasını gerektirmesidir (Geth'teki varsayılan, durum verilerini başın 128 blok gerisine kadar tutmaktır). Bu, istemcilerin büyük miktarda disk alanına erişiminin olmasını gerektirir ve bu da ucuz, düşük güçlü donanımlarda tam düğümleri çalıştırmanın önünde bir engeldir. Buna bir çözüm, durum ağacını tam durum verisi yerine paylaşılabilecek verilere ait küçük bir "tanık" kullanılarak özetlenebilen daha verimli bir yapıya (Verkle ağacı veya ikili ağaç gibi) güncellemektir. Durum verilerini yeni bir ağaç yapısında yeniden biçimlendirmek, durumsuz istemcilere geçiş için bir basamaktır.
 
 </ExpandableCard>
 
@@ -46,20 +48,22 @@ Verkle Ağaçları, anahtarların 31 baytlık bir _gövde_ ve tek baytlık bir _
 
 ## Mevcut ilerleme {#current-progress}
 
-Verkle Ağacı test ağları halihazırda çalışır durumdadır, ancak Verkle Ağaçlarını desteklemek için istemcilerde yapılması gereken önemli güncellemeler hala mevcuttur. Test ağlarına sözleşmeler dağıtarak veya test ağı istemcilerini çalıştırarak ilerlemeyi hızlandırmaya yardımcı olabilirsiniz.
+Ethereum'un durumunu birleşik bir Verkle ağacına taşıma teklifi olan [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800) şu anda durgun. Araştırmalar, bunun yerine birleşik bir ikili ağaç öneren [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)'e kaydı. EIP-7864 bir taslaktır ve bunun için herhangi bir ağ yükseltmesi planlanmamıştır.
 
-[Guillaume Ballet'nin Condrieu Verkle test ağını açıklamasını izleyin](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (Condrieu test ağının İş Kanıtı (PoW) olduğunu ve artık yerini Verkle Gen Devnet 6 test ağının aldığını unutmayın).
+EIP-7864, bu değişiklik için iki ana neden sunar. Verkle Ağaçları, kuantum bilgisayarlara karşı güvenli olmayan eliptik eğri kriptografisine dayanır, bu nedenle eninde sonunda değiştirilmeleri gerekecektir; oysa ikili bir ağaç yalnızca hash fonksiyonlarına dayanır. Kanıtlama sistemlerindeki ilerleme, Verkle Ağaçlarının ana avantajı olan küçük, hızlı üretilen kanıtlara olan ihtiyacı da azaltır. İkili bir ağaçtaki her düğümün yalnızca iki alt öğesi olduğundan, kanıtları günümüzün on altılı (hexary) ağacından elde edilen kanıtlardan çok daha küçüktür.
 
 ## Daha fazla bilgi {#further-reading}
 
 - [Durumsuzluk için Verkle Ağaçları](https://verkle.info/)
-- [Dankrad Feist, PEEPanEIP'te Verkle Ağaçlarını açıklıyor](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
+- [Dankrad Feist, PEEPanEIP'de Verkle Ağaçlarını açıklıyor](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Geri Kalanımız İçin Verkle Ağaçları](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
 - [Bir Verkle Kanıtının Anatomisi](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet, ETHGlobal'da Verkle Ağaçlarını açıklıyor](https://www.youtube.com/watch?v=f7bEtX3Z57o)
-- [Devcon 6'da Guillaume Ballet'den "Verkle Ağaçları Ethereum'u nasıl daha yalın ve güçlü hale getiriyor"](https://www.youtube.com/watch?v=Q7rStTKwuYs)
+- [Devcon 6'da Guillaume Ballet'den "Verkle Ağaçları Ethereum'u nasıl yalın ve güçlü kılıyor"](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [ETHDenver 2020'den Piper Merriam durumsuz istemciler üzerine](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest, Zero Knowledge podcast'inde Verkle Ağaçlarını ve durumsuzluğu açıklıyor](https://zeroknowledge.fm/podcast/202/)
+- [Dankrad Feist, Zero Knowledge podcast'inde Verkle Ağaçlarını ve durumsuzluğu açıklıyor](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin Verkle Ağaçları üzerine](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist Verkle Ağaçları üzerine](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
-- [Verkle Ağacı EIP belgeleri](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [Verkle ağacı EIP belgeleri](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [EIP-6800: Birleşik bir verkle ağacı kullanan Ethereum durumu](https://eips.ethereum.org/EIPS/eip-6800)
+- [EIP-7864: Birleşik bir ikili ağaç kullanan Ethereum durumu](https://eips.ethereum.org/EIPS/eip-7864)

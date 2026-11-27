@@ -1,6 +1,6 @@
 ---
-title: Uruchom swój własny węzeł Ethereum
-description: Ogólne wprowadzenie do uruchamiania własnej instancji klienta Ethereum.
+title: "Uruchom swój własny węzeł Ethereum"
+description: "Ogólne wprowadzenie do uruchamiania własnej instancji klienta Ethereum."
 lang: pl
 sidebarDepth: 2
 ---
@@ -17,19 +17,19 @@ Jeśli jesteś nowy w temacie uruchamiania węzła lub szukasz mniej technicznej
 
 ## Wybór podejścia {#choosing-approach}
 
-Pierwszym krokiem w uruchamianiu węzła jest wybór podejścia. W oparciu o wymagania i różne możliwości musisz wybrać implementację klienta (zarówno klienta warstwy wykonawczej, jak i klienta konsensusu), środowisko (sprzęt, system) oraz parametry ustawień klienta.
+Pierwszym krokiem przy uruchamianiu węzła jest wybór podejścia. W oparciu o wymagania i różne możliwości musisz wybrać implementację klienta (zarówno klienta warstwy wykonawczej, jak i klienta konsensusu), środowisko (sprzęt, system) oraz parametry ustawień klienta.
 
 Ta strona poprowadzi Cię przez te decyzje i pomoże znaleźć najbardziej odpowiedni sposób na uruchomienie Twojej instancji Ethereum.
 
-Aby wybrać spośród implementacji klientów, zobacz wszystkie dostępne [klienty warstwy wykonawczej](/developers/docs/nodes-and-clients/#execution-clients) i [klienty konsensusu](/developers/docs/nodes-and-clients/#consensus-clients) gotowe na Sieć główną (Mainnet) oraz dowiedz się o [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity).
+Aby wybrać spośród implementacji klientów, zobacz wszystkie dostępne, gotowe na Sieć główną [klienty warstwy wykonawczej](/developers/docs/nodes-and-clients/#execution-clients), [klienty konsensusu](/developers/docs/nodes-and-clients/#consensus-clients) i dowiedz się o [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity).
 
-Zdecyduj, czy uruchomić oprogramowanie na własnym [sprzęcie, czy w chmurze](#local-vs-cloud), biorąc pod uwagę [wymagania](#requirements) klientów.
+Zdecyduj, czy chcesz uruchomić oprogramowanie na własnym [sprzęcie, czy w chmurze](#local-vs-cloud), biorąc pod uwagę [wymagania](#requirements) klientów.
 
 Po przygotowaniu środowiska zainstaluj wybrane klienty za pomocą [przyjaznego dla początkujących interfejsu](#automatized-setup) lub [ręcznie](#manual-setup), używając terminala z zaawansowanymi opcjami.
 
-Kiedy węzeł działa i się synchronizuje, jesteś gotowy, aby [go używać](#using-the-node), ale pamiętaj, aby mieć oko na jego [konserwację](#operating-the-node).
+Kiedy węzeł działa i synchronizuje się, jesteś gotowy, aby [z niego korzystać](#using-the-node), ale pamiętaj, aby mieć oko na jego [konserwację](#operating-the-node).
 
-![Konfiguracja klienta](./diagram.png)
+<ClientSetupDiagram />
 
 ### Środowisko i sprzęt {#environment-and-hardware}
 
@@ -69,41 +69,42 @@ Wąskim gardłem dla Twojego sprzętu jest głównie przestrzeń dyskowa. Synchr
 
 Rozmiar bazy danych i szybkość początkowej synchronizacji zależą od wybranego klienta, jego konfiguracji i [strategii synchronizacji](/developers/docs/nodes-and-clients/#sync-modes).
 
-Upewnij się również, że Twoje połączenie internetowe nie jest ograniczone przez [limit przepustowości](https://wikipedia.org/wiki/Data_cap). Zaleca się korzystanie z nielimitowanego połączenia, ponieważ początkowa synchronizacja i dane przesyłane do sieci mogą przekroczyć Twój limit.
+Upewnij się również, że Twoje połączenie internetowe nie jest ograniczone [limitem transferu danych](https://wikipedia.org/wiki/Data_cap). Zaleca się korzystanie z nielimitowanego połączenia, ponieważ początkowa synchronizacja i dane przesyłane do sieci mogą przekroczyć Twój limit.
 
 ##### System operacyjny
 
-Wszystkie klienty obsługują główne systemy operacyjne – Linux, macOS, Windows. Oznacza to, że możesz uruchamiać węzły na zwykłych komputerach stacjonarnych lub serwerach z systemem operacyjnym (OS), który najbardziej Ci odpowiada. Upewnij się, że Twój system operacyjny jest aktualny, aby uniknąć potencjalnych problemów i luk w zabezpieczeniach.
+Wszystkie klienty obsługują główne systemy operacyjne - Linux, macOS, Windows. Oznacza to, że możesz uruchamiać węzły na zwykłych komputerach stacjonarnych lub serwerach z systemem operacyjnym (OS), który najbardziej Ci odpowiada. Upewnij się, że Twój system operacyjny jest aktualny, aby uniknąć potencjalnych problemów i luk w zabezpieczeniach.
 
 ##### Minimalne wymagania
 
-- Procesor z 2+ rdzeniami
+- Procesor z co najmniej 2 rdzeniami
 - 16 GB RAM (32 GB zalecane dla stabilności)
-- 2 TB NVMe SSD (prawdopodobnie zostanie przekroczone do 2027 r., przeczytaj więcej o [świetnych i mniej świetnych dyskach SSD dla węzłów Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- Dysk SSD NVMe o pojemności 4 TB (wystarczy na węzeł z pełną historią łańcucha plus miejsce na rozwój, zobacz rozmiary dysków dla klientów poniżej; przeczytaj więcej o [świetnych i mniej świetnych dyskach SSD dla węzłów Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Przepustowość 25+ MBit/s
 
-##### Zalecane specyfikacje
+##### Zalecana specyfikacja
 
-Obecne wytyczne sprzętowe dla operatorów węzłów są określone w [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Dla pełnego węzła zaleca się:
+Obecne wytyczne sprzętowe dla operatorów węzłów zostały określone w [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Dla pełnego węzła zaleca się:
 
-- Szybki procesor z 4+ rdzeniami (8+ rdzeni w przypadku walidacji)
+- Szybki procesor z co najmniej 4 rdzeniami (8+ rdzeni w przypadku walidacji)
 - 32 GB RAM (64 GB zalecane w przypadku walidacji w celu zapewnienia stabilności)
-- 4 TB NVMe SSD (dyski bez pamięci DRAM i QLC są odradzane)
+- Dysk SSD NVMe o pojemności 4 TB (odradza się dyski bez pamięci DRAM oraz dyski QLC)
 - Przepustowość 50 MBit/s pobierania / 15+ MBit/s wysyłania (25+ MBit/s wysyłania w przypadku walidacji)
 
 Wybrany tryb synchronizacji i klient wpłyną na wymagania dotyczące miejsca, ale poniżej oszacowaliśmy przestrzeń dyskową, której będziesz potrzebować dla każdego klienta.
 
-| Klient     | Rozmiar dysku (snap sync) | Rozmiar dysku (pełne archiwum) |
-| ---------- | ------------------------- | ------------------------------ |
-| Besu       | 800GB+                    | 12TB+                          |
-| Erigon     | N/A                       | 2.5TB+                         |
-| Geth       | 500GB+                    | 12TB+                          |
-| Nethermind | 500GB+                    | 12TB+                          |
-| Reth       | N/A                       | 2.2TB+                         |
+| Klient     | Rozmiar dysku (pełny węzeł) | Rozmiar dysku (pełne archiwum) |
+| ---------- | --------------------------- | ------------------------------ |
+| Besu       | 1.8TB+                      | 12TB+                          |
+| Erigon     | 1.7TB+                      | 2.7TB+                         |
+| Geth       | 1.8TB+                      | 2TB+                           |
+| Nethermind | 1.7TB+                      | 14TB+                          |
+| Reth       | 2.2TB+                      | 2.8TB+                         |
 
-- Uwaga: Erigon i Reth nie oferują synchronizacji snap (snap sync), ale możliwe jest pełne przycinanie (Full Pruning) (~2 TB dla Erigon, ~1,2 TB dla Reth)
+- Uwaga: Rozmiary pełnego węzła obejmują kompletną historię łańcucha i zostały zmierzone we wrześniu 2026 r. przez [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Klienty obsługujące wygasanie historii potrzebują mniej miejsca: około 1,2-1,4 TB tylko z historią po The Merge lub około 400-650 GB z kroczącym wygasaniem (jeszcze nieobsługiwane przez Geth).
+- Uwaga: Rozmiary archiwum pochodzą z dokumentacji każdego klienta ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Wartość dla Geth dotyczy jego archiwum opartego na ścieżkach (path-based); zachowanie również historii drzewa (trie) zajmuje około 6,5 TB. Wartość dla Nethermind pochodzi z lipca 2023 r. i od tego czasu wzrosła.
 
-W przypadku klientów konsensusu wymagania dotyczące miejsca zależą również od implementacji klienta i włączonych funkcji (np. slasher walidatora), ale ogólnie należy liczyć się z kolejnymi 200 GB potrzebnymi na dane Beacon. Przy dużej liczbie walidatorów rośnie również obciążenie przepustowości. Możesz znaleźć [szczegóły dotyczące wymagań klientów konsensusu w tej analizie](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+W przypadku klientów konsensusu wymagania dotyczące miejsca zależą również od implementacji klienta i włączonych funkcji (np. slasher walidatora), ale ogólnie należy liczyć się z dodatkowymi 15-90 GB na dane łańcucha śledzącego (beacon data), plus około 500 GB na dane blob w przypadku uruchamiania superwęzła. Przy dużej liczbie walidatorów rośnie również obciążenie przepustowości. Możesz znaleźć [szczegóły dotyczące wymagań klientów konsensusu w tej analizie](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Rozwiązania plug-and-play {#plug-and-play}
 

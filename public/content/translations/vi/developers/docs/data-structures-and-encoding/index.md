@@ -1,6 +1,6 @@
 ---
 title: "Cấu trúc dữ liệu và mã hóa"
-description: "Tổng quan về các cấu trúc dữ liệu cơ bản của Ethereum."
+description: "Tổng quan về các cấu trúc dữ liệu và mã hóa cốt lõi của Ethereum, bao gồm Patricia Merkle trie, RLP và SSZ, cũng như cách chúng lưu trữ và xác minh trạng thái."
 lang: vi
 sidebarDepth: 2
 ---

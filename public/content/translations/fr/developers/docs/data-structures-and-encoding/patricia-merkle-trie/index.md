@@ -5,13 +5,13 @@ lang: fr
 sidebarDepth: 2
 ---
 
-L'état d'[Ethereum](/) (la totalité de tous les comptes, soldes et contrats intelligents) est encodé dans une version spéciale de la structure de données généralement connue en informatique sous le nom d'arbre de Merkle. Cette structure est utile pour de nombreuses applications en cryptographie car elle crée une relation vérifiable entre toutes les données individuelles intriquées dans l'arbre, ce qui donne une valeur **racine** unique qui peut être utilisée pour prouver des choses sur les données.
+L'état d'[Ethereum](/) (la totalité de tous les comptes, soldes et contrats intelligents) est encodé dans une version spéciale de la structure de données généralement connue en informatique sous le nom d'arbre de Merkle. Cette structure est utile pour de nombreuses applications en cryptographie car elle crée une relation vérifiable entre toutes les données individuelles entrelacées dans l'arbre, ce qui donne une valeur **racine** unique qui peut être utilisée pour prouver des choses sur les données.
 
 La structure de données d'Ethereum est un « trie de Merkle Patricia modifié », nommé ainsi car il emprunte certaines caractéristiques de PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric), et parce qu'il est conçu pour une récupération (re**trie**val) efficace des éléments de données qui composent l'état d'Ethereum.
 
-Un trie de Merkle Patricia est déterministe et cryptographiquement vérifiable : la seule façon de générer une racine d'état est de la calculer à partir de chaque élément individuel de l'état, et il est facile de prouver que deux états sont identiques en comparant le hash racine et les hashs qui y ont conduit (_une preuve de Merkle_). À l'inverse, il n'y a aucun moyen de créer deux états différents avec le même hash racine, et toute tentative de modifier l'état avec des valeurs différentes entraînera un hash de racine d'état différent. Théoriquement, cette structure offre le « Saint Graal » de l'efficacité `O(log(n))` pour les insertions, les recherches et les suppressions.
+Un trie de Merkle Patricia est déterministe et vérifiable cryptographiquement : la seule façon de générer une racine d'état est de la calculer à partir de chaque élément individuel de l'état, et il est facile de prouver que deux états sont identiques en comparant le hash racine et les hashs qui y ont conduit (_une preuve de Merkle_). Inversement, il n'y a aucun moyen de créer deux états différents avec le même hash racine, et toute tentative de modifier l'état avec des valeurs différentes entraînera un hash de racine d'état différent. Théoriquement, cette structure offre le « Saint Graal » de l'efficacité `O(log(n))` pour les insertions, les recherches et les suppressions.
 
-Dans un avenir proche, Ethereum prévoit de migrer vers une structure d'[arbre de Verkle](/roadmap/verkle-trees), ce qui ouvrira de nombreuses nouvelles possibilités pour les futures améliorations du protocole.
+Ethereum prévoit de remplacer ce trie par un nouvel arbre d'état, actuellement proposé sous la forme d'un arbre binaire unifié dans l'[EIP-7864](https://eips.ethereum.org/EIPS/eip-7864). Une proposition antérieure d'utiliser un [arbre de Verkle](/roadmap/verkle-trees/) a été mise de côté.
 
 ## Prérequis {#prerequisites}
 
@@ -206,7 +206,7 @@ Il y a un trie d'état global, et il est mis à jour chaque fois qu'un client tr
 
 ### Trie de stockage {#storage-trie}
 
-Le trie de stockage est l'endroit où résident _toutes_ les données de contrat. Il y a un trie de stockage séparé pour chaque compte. Pour récupérer des valeurs à des positions de stockage spécifiques à une adresse donnée, l'adresse de stockage, la position entière des données stockées dans le stockage et l'ID du bloc sont requis. Ceux-ci peuvent ensuite être passés comme arguments à `eth_getStorageAt` défini dans l'API JSON-RPC, par exemple, pour récupérer les données dans le créneau de stockage 0 pour l'adresse `0x295a70b2de5e3953354a6a8344e616ed314d7251` :
+Le trie de stockage est l'endroit où résident _toutes_ les données de contrat. Il y a un trie de stockage distinct pour chaque compte. Pour récupérer des valeurs à des positions de stockage spécifiques à une adresse donnée, l'adresse de stockage, la position entière des données stockées dans le stockage et l'ID du bloc sont requis. Ceux-ci peuvent ensuite être passés comme arguments à `eth_getStorageAt` défini dans l'API JSON-RPC, par exemple, pour récupérer les données dans le créneau de stockage 0 pour l'adresse `0x295a70b2de5e3953354a6a8344e616ed314d7251` :
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-La récupération d'autres éléments dans le stockage est un peu plus complexe car la position dans le trie de stockage doit d'abord être calculée. La position est calculée comme le hash `keccak256` de l'adresse et de la position de stockage, tous deux complétés à gauche par des zéros jusqu'à une longueur de 32 octets. Par exemple, la position pour les données dans le créneau de stockage 1 pour l'adresse `0x391694e7e0b0cce554cb130d723a9d27458f9298` est :
+Deux types différents de « clé » sont impliqués ici, et il est utile de les distinguer :
+
+1. **Le créneau de stockage.** Il s'agit de la clé de 32 octets qu'un contrat lit et écrit avec les opcodes `SLOAD` et `SSTORE`, et c'est ce que `eth_getStorageAt` prend comme deuxième paramètre. Le protocole ne se soucie pas de la façon dont un contrat choisit ses créneaux. Cela est décidé par la disposition de stockage du compilateur (voir [la disposition de Solidity dans le stockage](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **Le chemin dans le trie de stockage.** Comme le trie d'état, le trie de stockage n'utilise jamais le créneau directement comme chemin. Le chemin est toujours `keccak256(slot)`, et la valeur qui y est stockée est l'encodage RLP de la valeur du créneau avec les zéros non significatifs supprimés. Le hachage de la clé maintient les chemins uniformément distribués, de sorte que personne ne peut créer de clés qui rendent le trie inhabituellement profond. Les clients appliquent ce hash eux-mêmes, de sorte que les appelants de `eth_getStorageAt` ne passent jamais que le créneau.
+
+Les variables d'état simples résident dans les créneaux que le compilateur leur attribue dans l'ordre (`0`, `1`, ...), avec de petits types parfois regroupés dans un seul créneau, comme dans l'exemple ci-dessus. Les valeurs à l'intérieur d'une structure dynamique nécessitent que leur créneau soit calculé en premier. Par exemple, Solidity stocke la valeur pour la clé `k` d'un `mapping` déclaré au créneau `p` dans le créneau `keccak256(pad32(k) ++ pad32(p))`. Si le contrat à `0x295a70b2de5e3953354a6a8344e616ed314d7251` déclare un `mapping(address => uint)` au créneau 1, le créneau contenant l'entrée pour la clé `0x391694e7e0b0cce554cb130d723a9d27458f9298` est :
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-Dans une console Geth, cela peut être calculé comme suit :
+Ce hachage provient de la disposition de stockage de Solidity (calculée par le contrat à l'exécution), et non du trie. Dans une console Geth, cela peut être calculé comme suit :
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Le `path` est donc `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Cela peut maintenant être utilisé pour récupérer les données du trie de stockage comme auparavant :
+Le créneau de stockage est donc `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`, et son chemin dans le trie de stockage est `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. Le créneau peut maintenant être passé à `eth_getStorageAt` comme auparavant, et le client le hache pour trouver la valeur dans le trie :
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545

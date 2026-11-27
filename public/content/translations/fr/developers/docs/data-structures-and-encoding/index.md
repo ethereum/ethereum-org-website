@@ -1,6 +1,6 @@
 ---
 title: "Structures de données et encodage"
-description: "Un aperçu des structures de données fondamentales d'Ethereum."
+description: "Un aperçu des structures de données et des encodages fondamentaux d'Ethereum, y compris les tries de Merkle Patricia, RLP et SSZ, et de la manière dont ils stockent et vérifient l'état."
 lang: fr
 sidebarDepth: 2
 ---

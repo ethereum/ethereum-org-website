@@ -1,5 +1,11 @@
 # Japanese (ja) Translation Review Findings
 
+## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 8.8/10
+Scope: 15 md pages (nodes-and-clients + subpages, frameworks, glossary, roadmap privacy/merge/statelessness/verkle, supply, data-structures, transactions, ethash), markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX or untranslated sentences).
+
+Fixed (critical): client/brand names transliterated on changed lines restored to Latin (Geth, Nethermind, Besu, Erigon, Reth, Lighthouse, Lodestar, Nimbus, Prysm, Teku, MetaMask, Discord, Optimism, Arbitrum, Polygon; ~45 lines, `Besu（ベス）` hybrids collapsed, `ゴー・イーサリアム（略称ゲス）` to `Go Ethereum（略称Geth）`); long forms over bare English `DeFi`, `MEV`, `DAO` removed; glossary forms `ブロック・プロポーザー`, `ブロック・ビルダー`, `バリデータ`, `フル・ノード` restored on 7 lines.
+Open: 100+ untouched dev lines still katakana client names; `dapp` keeps the dev `分散型アプリケーション (dapp)` form; `ブロックヘッダー` etc. fine; English typo `Dankrad Fiest` in verkle-trees is mirrored.
+
 ## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.9/10
 Scope: 70 md pages + 20 JSON namespaces (incremental updates), changed lines only; sampled 7 md diffs and ~45 JSON keys, plus scripted sweeps (acronym parentheticals, brand names, tags, placeholders, Latin leftovers).
 
