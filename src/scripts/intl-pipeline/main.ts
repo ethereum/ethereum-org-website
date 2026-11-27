@@ -59,6 +59,7 @@ import {
 } from "./lib/llm/manifest-adapter"
 import { openRouterKeyStatus } from "./lib/llm/openrouter"
 import { planIncrementalBatches } from "./lib/llm/plan"
+import { loadGlossary } from "./lib/llm/prompt-builder"
 import { classifyFailure, Quarantine } from "./lib/quarantine"
 import { generateTempBranchName } from "./lib/utils/branch-naming"
 import type { TaskResult } from "./lib/utils/task-pool"
@@ -138,60 +139,6 @@ function getManifestPath(
   type: "source" | "translation"
 ): string {
   return path.join(MANIFESTS_DIR, destPath, `${type}.json`)
-}
-
-/**
- * Fetch glossary terms from ETHGlossary API, filtered to terms
- * that appear in the source content for a given language.
- * Returns Map<english, translation> for prompt injection.
- * Includes term notes as parenthetical context when available.
- */
-async function loadGlossary(
-  fileContent: string,
-  locale: string
-): Promise<Map<string, string>> {
-  try {
-    const res = await fetch(`${GLOSSARY_API_URL}/filter`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ content: fileContent, language: locale }),
-    })
-    if (!res.ok) {
-      console.warn(
-        `[glossary] API returned ${res.status} for ${locale}, continuing without glossary`
-      )
-      return new Map()
-    }
-    const data = (await res.json()) as {
-      terms: Array<{
-        english: string
-        translation: string
-        note?: string
-      }>
-    }
-    // Sanitize all glossary fields to prevent prompt injection
-    // eslint-disable-next-line no-control-regex
-    const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
-    const sanitize = (s: string, maxLen: number) =>
-      s.replace(controlCharRe, "").replace(/\n/g, " ").slice(0, maxLen)
-
-    const map = new Map<string, string>()
-    for (const term of data.terms) {
-      const safeEnglish = sanitize(term.english, 200)
-      const safeTranslation = sanitize(term.translation, 500)
-      const safeNote = term.note ? sanitize(term.note, 200) : ""
-      const value = safeNote
-        ? `${safeTranslation} (${safeNote})`
-        : safeTranslation
-      map.set(safeEnglish, value)
-    }
-    return map
-  } catch (err) {
-    console.warn(
-      `[glossary] Failed to fetch for ${locale}: ${err instanceof Error ? err.message : String(err)}`
-    )
-    return new Map()
-  }
 }
 
 /**
@@ -366,7 +313,12 @@ async function buildGeminiTranslator(
     ? (langEntry as { code: string; name: string }).name
     : locale
 
-  const glossaryTerms = await loadGlossary(englishContent, locale)
+  const glossaryTerms = await loadGlossary(
+    englishContent,
+    fileType,
+    locale,
+    GLOSSARY_API_URL
+  )
   if (config.verbose && glossaryTerms.size > 0) {
     log(`  Glossary: ${glossaryTerms.size} terms for ${locale}`)
   }
@@ -584,7 +536,12 @@ async function runFullTranslation(
 ): Promise<TaskResult> {
   log(`[${locale}] ${file.path}: full translation...`)
 
-  const glossaryTerms = await loadGlossary(file.content, locale)
+  const glossaryTerms = await loadGlossary(
+    file.content,
+    file.type,
+    locale,
+    GLOSSARY_API_URL
+  )
   if (config.verbose && glossaryTerms.size > 0) {
     log(`[${locale}] Glossary: ${glossaryTerms.size} terms`)
   }
@@ -809,7 +766,12 @@ async function runIncremental(
   if (file.type === "markdown") {
     const leaves = extractAttributeLeaves(file.content)
     if (leaves.length > 0) {
-      const glossaryTerms = await loadGlossary(file.content, locale)
+      const glossaryTerms = await loadGlossary(
+        file.content,
+        "markdown",
+        locale,
+        GLOSSARY_API_URL
+      )
       const attrResult = await translateJsxAttributes({
         leaves,
         localeContent: finalContent,

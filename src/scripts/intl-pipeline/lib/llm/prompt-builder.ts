@@ -16,6 +16,169 @@ import {
   type LanguageGroup,
 } from "./language-groups"
 
+/**
+ * Fetch ETHGlossary terms that appear anywhere in `fileContent` for `locale`.
+ * Returns Map<english, translation>, notes appended in parentheses. Network
+ * failure returns an empty map: a run without glossary beats no run.
+ */
+export async function loadGlossary(
+  fileContent: string,
+  fileType: "markdown" | "json",
+  locale: string,
+  apiUrl: string
+): Promise<FileGlossary> {
+  try {
+    // Without fileType, /filter reads JSON as markdown and matches its keys
+    const res = await fetch(`${apiUrl}/filter`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        content: fileContent,
+        language: locale,
+        fileType,
+      }),
+    })
+    if (!res.ok) {
+      console.warn(
+        `[glossary] API returned ${res.status} for ${locale}, continuing without glossary`
+      )
+      return new FileGlossary()
+    }
+    const data = (await res.json()) as {
+      terms: Array<{
+        english: string
+        translation: string
+        note?: string
+        occurrences?: number
+      }>
+    }
+    // Sanitize all glossary fields to prevent prompt injection
+    // eslint-disable-next-line no-control-regex
+    const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
+    const sanitize = (s: string, maxLen: number) =>
+      s.replace(controlCharRe, "").replace(/\n/g, " ").slice(0, maxLen)
+
+    const map = new FileGlossary()
+    const occurrences = new Map<string, number>()
+    for (const term of data.terms) {
+      const safeEnglish = sanitize(term.english, 200)
+      const safeTranslation = sanitize(term.translation, 500)
+      const safeNote = term.note ? sanitize(term.note, 200) : ""
+      const value = safeNote
+        ? `${safeTranslation} (${safeNote})`
+        : safeTranslation
+      map.set(safeEnglish, value)
+      occurrences.set(safeEnglish, term.occurrences ?? 0)
+    }
+    return map.attribute(fileContent, fileType, occurrences)
+  } catch (err) {
+    console.warn(
+      `[glossary] Failed to fetch for ${locale}: ${err instanceof Error ? err.message : String(err)}`
+    )
+    return new FileGlossary()
+  }
+}
+
+/**
+ * ETHGlossary terms for one file+locale. `/filter` also matches aliases
+ * ("ZK-rollups" -> "zero-knowledge rollup") that local forms cannot place; a
+ * term it counted more often than local forms do rides in every prompt.
+ */
+export class FileGlossary extends Map<string, string> {
+  readonly unattributed = new Set<string>()
+
+  attribute(
+    fileContent: string,
+    fileType: "markdown" | "json",
+    occurrences = new Map<string, number>()
+  ) {
+    const haystack = matchForms(countableText(fileContent, fileType))
+    for (const en of this.keys()) {
+      const local = localCount(en, haystack)
+      if (local === 0 || local < (occurrences.get(en) ?? 0)) {
+        this.unattributed.add(en)
+      }
+    }
+    return this
+  }
+}
+
+/** The text /filter scans (ETHGlossary extractSourceText) */
+function countableText(content: string, fileType: "markdown" | "json"): string {
+  if (fileType === "json") {
+    try {
+      const parsed: unknown = JSON.parse(content)
+      if (parsed && typeof parsed === "object") {
+        return Object.values(parsed)
+          .filter((v) => typeof v === "string")
+          .join(" ")
+      }
+    } catch {
+      return content
+    }
+  }
+  return content
+    .replace(/^---[\s\S]*?---\n?/, "")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/`[^`]+`/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\{#[^}]+\}/g, "")
+}
+
+const stemWords = (t: string) =>
+  t
+    .replace(/\b([a-z]{2,})ies\b/g, "$1y")
+    .replace(/\b([a-z]{3,}?)(?:ing|ed|es|s|e)\b/g, "$1")
+
+/** Spaced, separator-free and stemmed lower-case forms of `text` */
+function matchForms(text: string): string[] {
+  const spaced = text.toLowerCase().replace(/[-\s]+/g, " ")
+  return [spaced, spaced.replace(/ /g, ""), stemWords(spaced)]
+}
+
+/** A "long form (ABBR)" entry's two parts, or the entry itself */
+function termForms(en: string): string[][] {
+  const parts = en
+    .split(/\s*\(([^)]*)\)\s*/)
+    .map((f) => f.trim())
+    .filter(Boolean)
+  return parts.map(matchForms)
+}
+
+function termMatches(en: string, haystack: string[]): boolean {
+  return termForms(en).some((needles) =>
+    needles.some((needle, i) => haystack[i].includes(needle))
+  )
+}
+
+/** Mentions local forms find in `haystack`, by the most generous variant */
+function localCount(en: string, haystack: string[]): number {
+  const forms = termForms(en)
+  return Math.max(
+    ...haystack.map((hay, i) =>
+      forms.reduce((sum, needles) => sum + hay.split(needles[i]).length - 1, 0)
+    )
+  )
+}
+
+/** The glossary terms `text` uses, plus any its file could not attribute */
+export function relevantGlossary(
+  terms: Map<string, string>,
+  text: string
+): Map<string, string> {
+  const haystack = matchForms(countableText(text, "markdown"))
+  const unattributed =
+    terms instanceof FileGlossary ? terms.unattributed : new Set<string>()
+  const relevant = new Map<string, string>()
+  for (const [en, translated] of terms) {
+    if (unattributed.has(en) || termMatches(en, haystack)) {
+      relevant.set(en, translated)
+    }
+  }
+  return relevant
+}
+
 interface PromptOptions {
   filePath: string
   fileContent: string
@@ -50,7 +213,9 @@ export function buildCommentPrompt(options: {
   })
 
   const glossaryLines: string[] = []
-  glossaryTerms.forEach((loc, en) => glossaryLines.push(`  ${en} = ${loc}`))
+  relevantGlossary(glossaryTerms, comments.join("\n")).forEach((loc, en) =>
+    glossaryLines.push(`  ${en} = ${loc}`)
+  )
   const glossaryHint =
     glossaryLines.length > 0
       ? `\nUse these exact translations for glossary terms:\n${glossaryLines.slice(0, 30).join("\n")}`
@@ -77,8 +242,8 @@ export function buildTranslationPrompt(options: PromptOptions): string {
   } = options
 
   const group = getLanguageGroup(targetLanguage)
-  const siteNotes = getSiteSpecificNotes(group, fileType)
-  const glossarySection = formatGlossary(glossaryTerms)
+  const siteNotes = getSiteSpecificNotes(group, fileType, targetLanguage)
+  const glossarySection = formatGlossary(glossaryTerms, fileContent)
   const formatRules = normalized
     ? getNormalizedFormatRules(fileType, group, targetLanguage)
     : getFormatRules(fileType, group, targetLanguage, htmlExtracted)
@@ -210,10 +375,15 @@ This content has been pre-processed. Non-translatable elements have been replace
 5. The text between wrapper tags is the only translatable content associated with that placeholder.`
 }
 
-function formatGlossary(terms: Map<string, string>): string {
-  if (terms.size === 0) return ""
+/** Glossary block for a prompt, limited to the terms `sourceText` uses */
+export function formatGlossary(
+  terms: Map<string, string>,
+  sourceText: string
+): string {
+  const relevant = relevantGlossary(terms, sourceText)
+  if (relevant.size === 0) return ""
 
-  const lines = Array.from(terms.entries())
+  const lines = Array.from(relevant.entries())
     .map(([en, translated]) => `- "${en}" -> "${translated}"`)
     .join("\n")
 

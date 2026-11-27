@@ -48,10 +48,10 @@ export const OUTPUT_RATE_USD_PER_1M = 12.0
 // wrong". Override with INTL_MAX_COST_USD.
 export const RUN_FUSE_USD = Number(process.env.INTL_MAX_COST_USD || 100)
 
-// Thinking tokens billed as output on every call, roughly constant whatever the
-// prompt size. Measured across 24 locales on run 31745 (Gemini 3.1 Pro via
-// OpenRouter). Used by the estimator and by the in-flight reservation.
-export const REASONING_TOKENS_PER_CALL = 5_200
+// Reasoning tokens (billed as output) per call = BASE + PER_OUTPUT_TOKEN x
+// visible output tokens; fit in runbooks/cost-guard-tripped.md.
+export const REASONING_BASE_TOKENS = 500
+export const REASONING_PER_OUTPUT_TOKEN = 2.25
 
 // Deterministic-failure quarantine: pairs that failed the same way against the
 // same English are skipped for a while instead of retried every run. Lives

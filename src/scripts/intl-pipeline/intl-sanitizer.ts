@@ -60,6 +60,7 @@ const BLOCK_MDX_COMPONENTS = [
   "InfoBanner",
   "Tabs",
   "TabItem",
+  "Flowchart",
 ]
 
 function listFiles(
@@ -715,6 +716,55 @@ function fixTickerTranspositions(content: string): {
     }
   }
 
+  return { content: parts.join(""), fixCount }
+}
+
+/**
+ * Restore capitals on digit-bearing acronyms (L1, L2s, ERC20) that English
+ * writes in capitals and never in lower case (known-patterns #53, #111).
+ */
+function fixLowercasedAcronyms(
+  translated: string,
+  english: string
+): { content: string; fixCount: number } {
+  const lowerRe = (acronym: string) =>
+    new RegExp(
+      `(?<![A-Za-z0-9_/#.={"\\-])${escapeRegex(acronym.toLowerCase())}(s?)(?![A-Za-z0-9_/]|[-.][A-Za-z0-9])`,
+      "g"
+    )
+  const englishProse = english
+    .split(CODE_SPLIT_RE)
+    .filter((_, i) => i % 2 === 0)
+    .join("\n")
+  const acronyms = [
+    ...new Set(
+      [
+        ...englishProse.matchAll(
+          /(?<![A-Za-z0-9])([A-Z]+[0-9][A-Z0-9]*)s?(?![A-Za-z0-9])/g
+        ),
+      ].map((m) => m[1])
+    ),
+  ].filter((acronym) => !lowerRe(acronym).test(englishProse))
+
+  let fixCount = 0
+  const parts = translated.split(CODE_SPLIT_RE)
+  for (let i = 0; i < parts.length; i += 2) {
+    for (const acronym of acronyms) {
+      parts[i] = parts[i].replace(lowerRe(acronym), (_, plural) => {
+        fixCount++
+        return acronym + plural
+      })
+    }
+    // ETHGlossary's `layer 2 (l2)` entries inject the parenthetical even where
+    // English has no acronym; a lowercase one is never right.
+    parts[i] = parts[i].replace(
+      /([(（])l([1-3])([)）])/g,
+      (_, open, n, close) => {
+        fixCount++
+        return `${open}L${n}${close}`
+      }
+    )
+  }
   return { content: parts.join(""), fixCount }
 }
 
@@ -5025,6 +5075,14 @@ function processMarkdownFile(
     content = brandResult.content
     issues.push(...brandResult.warnings)
 
+    const acronymResult = fixLowercasedAcronyms(content, englishMd)
+    if (acronymResult.fixCount > 0) {
+      issues.push(
+        `Restored capitals on ${acronymResult.fixCount} lowercased acronym(s)`
+      )
+    }
+    content = acronymResult.content
+
     // Restore abbreviations stripped from parentheses
     const abbrevResult = restoreStrippedAbbreviations(content, englishMd)
     if (abbrevResult.content !== content) {
@@ -5332,6 +5390,34 @@ function convertSpansToJsonBidi(content: string): {
   return { content: fixed, fixCount }
 }
 
+/** fixLowercasedAcronyms per value, against the same key's English */
+function fixJsonLowercasedAcronyms(
+  translatedJson: string,
+  englishJson: string
+): { content: string; fixCount: number } {
+  let trObj: Record<string, unknown>
+  let enObj: Record<string, unknown>
+  try {
+    trObj = JSON.parse(translatedJson)
+    enObj = JSON.parse(englishJson)
+  } catch {
+    return { content: translatedJson, fixCount: 0 }
+  }
+
+  let fixCount = 0
+  for (const [key, value] of Object.entries(trObj)) {
+    const enVal = enObj[key]
+    if (typeof value !== "string" || typeof enVal !== "string") continue
+    const result = fixLowercasedAcronyms(value, enVal)
+    if (result.fixCount === 0) continue
+    trObj[key] = result.content
+    fixCount += result.fixCount
+  }
+
+  if (fixCount === 0) return { content: translatedJson, fixCount }
+  return { content: JSON.stringify(trObj, null, 2) + "\n", fixCount }
+}
+
 function processJsonFile(
   jsonPath: string,
   providedContent?: string,
@@ -5397,6 +5483,16 @@ function processJsonFile(
       content = punctResult.content
       issues.push(
         `Replaced ${punctResult.fixCount} CJK ideographic full stop(s) with locale-appropriate punctuation`
+      )
+    }
+  }
+
+  if (englishContent) {
+    const acronymResult = fixJsonLowercasedAcronyms(content, englishContent)
+    if (acronymResult.fixCount > 0) {
+      content = acronymResult.content
+      issues.push(
+        `Restored capitals on ${acronymResult.fixCount} lowercased acronym(s)`
       )
     }
   }
@@ -5838,6 +5934,8 @@ export const _testOnly = {
   removeStaleComponents,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
+  fixLowercasedAcronyms,
+  fixJsonLowercasedAcronyms,
   fixBrandCapitalization,
   fixMisplacedBacktickAroundJsxFragment,
   escapeMdxAngleBrackets,

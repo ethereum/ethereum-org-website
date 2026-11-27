@@ -621,6 +621,17 @@ test.describe("Standalone Fixes", () => {
   })
 
   test.describe("fixBlockComponentLineBreaks", () => {
+    test("splits a Flowchart squashed onto its list", () => {
+      // The Flowchart build throws "<Flowchart> must contain a markdown list"
+      // when a translation collapses the tag and its list onto one line.
+      const { content } = fixBlockComponentLineBreaks(
+        "<Flowchart>- Punto de entrada (0x00)\n  - ¿Datos cortos?</Flowchart>"
+      )
+      expect(content).toBe(
+        "<Flowchart>\n- Punto de entrada (0x00)\n  - ¿Datos cortos?\n</Flowchart>"
+      )
+    })
+
     test("splits a closer that follows inline code", () => {
       const { content } = fixBlockComponentLineBreaks(
         "<Alert>\n\nRun `npm i`</Alert>"

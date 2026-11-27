@@ -20,6 +20,8 @@ import {
   type TranslatableAttribute,
 } from "../shared-patterns"
 
+import { relevantGlossary } from "./prompt-builder"
+
 const ALLOWED_ATTRIBUTES = new Set<string>(TRANSLATABLE_ATTRIBUTES)
 
 /**
@@ -108,10 +110,12 @@ export function buildAttributePrompt(
     .join("\n")
 
   const glossaryLines: string[] = []
-  if (glossary.size > 0) {
-    for (const [en, tr] of glossary) {
-      glossaryLines.push(`- "${en}" -> "${tr}"`)
-    }
+  const relevant = relevantGlossary(
+    glossary,
+    leaves.map((l) => l.englishValue).join("\n")
+  )
+  for (const [en, tr] of relevant) {
+    glossaryLines.push(`- "${en}" -> "${tr}"`)
   }
   const glossaryBlock = glossaryLines.length
     ? `\n\nGlossary (use these translations for terms when they appear):\n${glossaryLines.join("\n")}`

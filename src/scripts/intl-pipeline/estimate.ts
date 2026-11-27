@@ -13,8 +13,9 @@
  *
  * Reads the same local inputs as the pipeline (working tree, .manifests/, git
  * history for the manifest's source commit) and shares its planner, so the
- * numbers are the run's numbers. No LLM calls; the only network call is
- * ETHGlossary, which is ours and free.
+ * numbers are the run's numbers. No LLM calls; the only network calls are
+ * ETHGlossary lookups (one per file+locale needing a plan), which is ours and
+ * free.
  */
 
 import { execFileSync } from "child_process"
@@ -28,17 +29,15 @@ import {
   chunkProse,
   PROSE_SIZE_THRESHOLD,
 } from "./lib/llm/code-block-extractor"
-import { resetMeter } from "./lib/llm/cost-meter"
+import { reasoningTokensFor, resetMeter } from "./lib/llm/cost-meter"
 import { chunkJson } from "./lib/llm/json-batcher"
 import { hasEnglishChanged } from "./lib/llm/manifest-adapter"
-import {
-  chunksNeeded,
-  isIrreducibleChunk,
-  planIncrementalBatches,
-} from "./lib/llm/plan"
+import { isIrreducibleChunk, planIncrementalBatches } from "./lib/llm/plan"
+import { loadGlossary } from "./lib/llm/prompt-builder"
 import {
   config,
   getExcludedReason,
+  GLOSSARY_API_URL,
   normalizeTargetPath,
   validateTargetPath,
 } from "./config"
@@ -47,7 +46,8 @@ import {
   MANIFESTS_DIR,
   MAX_PROMPT_BYTES,
   OUTPUT_RATE_USD_PER_1M,
-  REASONING_TOKENS_PER_CALL,
+  REASONING_BASE_TOKENS,
+  REASONING_PER_OUTPUT_TOKEN,
 } from "./constants"
 import { getLlmSectionIds } from "./pipeline"
 
@@ -70,20 +70,13 @@ const LATIN_LOCALES = new Set([
 const bytesPerToken = (locale: string) =>
   LATIN_LOCALES.has(locale) ? 4.0 : 2.65
 
-// Translated output runs longer than its English source in tokens, badly so in
-// non-Latin scripts: the tokenizer is less efficient there. Ratio of output
-// tokens to English source bytes, measured across all 24 locales on run
-// 31745 (page-wallets-find-wallet.json).
+// Visible output tokens per English source byte; calibration in
+// runbooks/cost-guard-tripped.md.
 const outputTokensPerSourceByte = (locale: string) =>
-  LATIN_LOCALES.has(locale) ? 0.35 : 0.45
+  LATIN_LOCALES.has(locale) ? 0.27 : 0.35
 
-// Gemini 3.1 Pro thinks before answering, and OpenRouter bills thinking as
-// output. That cost is per call and barely varies with how much text is being
-// translated: the run above averaged ~5,200 reasoning tokens per call while
-// translating 2KB of English. It dominates the output bill for small
-// incremental updates, so it is modelled per call rather than per byte.
-// Both transports now report thinking: OpenRouter inside completion_tokens,
-// Gemini via thoughtsTokenCount, so this applies to either.
+// Output tokens of <SECTION id="..."> envelope per returned section
+const ENVELOPE_TOKENS_PER_SECTION = 18
 
 interface Row {
   file: string
@@ -176,11 +169,12 @@ function planFull(
   // property of the chunk, not of how many chunks the file produced.
   const chunkIrreducible = isIrreducibleChunk(largestChunkBytes)
   const inputTokens = Math.round(plannedBytes / bytesPerToken(locale))
-  // Full translation renders the whole file, plus thinking per chunk.
+  // Full translation renders the whole file, plus thinking for each chunk.
+  const visibleTokens =
+    Buffer.byteLength(file.content, "utf-8") * outputTokensPerSourceByte(locale)
   const outputTokens = Math.round(
-    Buffer.byteLength(file.content, "utf-8") *
-      outputTokensPerSourceByte(locale) +
-      REASONING_TOKENS_PER_CALL * chunks
+    visibleTokens +
+      chunks * reasoningTokensFor(visibleTokens / Math.max(chunks, 1))
   )
   return {
     file: file.path,
@@ -221,118 +215,128 @@ async function main() {
   )
 
   for (const file of files) {
-    for (const locale of locales) {
-      const destPath = getDestinationFromPath(file.path, locale)
-      const manifestPath = path.join(
-        process.cwd(),
-        MANIFESTS_DIR,
-        destPath,
-        "source.json"
-      )
-      const localePath =
-        file.type === "markdown"
-          ? path.join(process.cwd(), destPath)
-          : path.join(
-              process.cwd(),
-              `src/intl/${locale}/${path.basename(file.path)}`
-            )
+    // Plans are synchronous; only the glossary lookups overlap.
+    await Promise.all(
+      locales.map(async (locale) => {
+        const destPath = getDestinationFromPath(file.path, locale)
+        const manifestPath = path.join(
+          process.cwd(),
+          MANIFESTS_DIR,
+          destPath,
+          "source.json"
+        )
+        const localePath =
+          file.type === "markdown"
+            ? path.join(process.cwd(), destPath)
+            : path.join(
+                process.cwd(),
+                `src/intl/${locale}/${path.basename(file.path)}`
+              )
 
-      const hasLocale = fs.existsSync(localePath)
-      const hasManifest = fs.existsSync(manifestPath)
+        const hasLocale = fs.existsSync(localePath)
+        const hasManifest = fs.existsSync(manifestPath)
 
-      if (simulatedMode === "full" || !hasLocale || !hasManifest) {
-        rows.push(planFull(file, locale))
-        continue
-      }
+        if (simulatedMode === "full" || !hasLocale || !hasManifest) {
+          rows.push(planFull(file, locale))
+          return
+        }
 
-      const sourceManifestJson = fs.readFileSync(manifestPath, "utf-8")
-      if (!hasEnglishChanged(file.content, sourceManifestJson, file.type)) {
-        continue
-      }
+        const sourceManifestJson = fs.readFileSync(manifestPath, "utf-8")
+        if (!hasEnglishChanged(file.content, sourceManifestJson, file.type)) {
+          return
+        }
 
-      // Old English from the manifest's commit -- same lookup the pipeline does.
-      let englishA: string
-      try {
-        const sha = JSON.parse(sourceManifestJson).sourceCommitSha
-        if (!/^[0-9a-f]{40}$/i.test(sha || "")) throw new Error("bad sha")
-        englishA = execFileSync("git", ["show", `${sha}:${file.path}`], {
-          encoding: "utf-8",
-          maxBuffer: 1 << 28,
-        })
-      } catch {
-        rows.push(planFull(file, locale))
-        continue
-      }
-      // CRLF English is translated in full (see runIncremental)
-      if (englishA.includes("\r\n") || file.content.includes("\r\n")) {
-        rows.push(planFull(file, locale))
-        continue
-      }
+        // Old English from the manifest's commit -- same lookup the pipeline does.
+        let englishA: string
+        try {
+          const sha = JSON.parse(sourceManifestJson).sourceCommitSha
+          if (!/^[0-9a-f]{40}$/i.test(sha || "")) throw new Error("bad sha")
+          englishA = execFileSync("git", ["show", `${sha}:${file.path}`], {
+            encoding: "utf-8",
+            maxBuffer: 1 << 28,
+          })
+        } catch {
+          rows.push(planFull(file, locale))
+          return
+        }
+        // CRLF English is translated in full (see runIncremental)
+        if (englishA.includes("\r\n") || file.content.includes("\r\n")) {
+          rows.push(planFull(file, locale))
+          return
+        }
 
-      const sectionIds = getLlmSectionIds(englishA, file.content, file.type)
-      if (sectionIds.length === 0) continue
+        const sectionIds = getLlmSectionIds(englishA, file.content, file.type)
+        if (sectionIds.length === 0) return
 
-      const langEntry = i18nConfig.find(
-        (l: { code: string }) => l.code === locale
-      )
-      let planned
-      try {
-        planned = planIncrementalBatches({
-          filePath: file.path,
-          fileType: file.type,
+        const langEntry = i18nConfig.find(
+          (l: { code: string }) => l.code === locale
+        )
+        // Glossary bytes decide the batch count, so fetch what the run fetches
+        const glossaryTerms = await loadGlossary(
+          file.content,
+          file.type,
           locale,
-          languageName: langEntry?.name ?? locale,
-          englishContent: file.content,
-          localeContent: fs.readFileSync(localePath, "utf-8"),
-          sectionIds,
-          // Glossary omitted: it adds a few KB per prompt and thousands of API
-          // calls to an estimate. Noted in the footer as unmodelled, and it
-          // means batch sizes here are lower bounds.
-          glossaryTerms: new Map(),
-        })
-      } catch (err) {
-        // The planner refuses plans the pipeline would refuse (over budget,
-        // unfittable under the per-call ceiling). Report, don't crash.
+          GLOSSARY_API_URL
+        )
+        let planned
+        try {
+          planned = planIncrementalBatches({
+            filePath: file.path,
+            fileType: file.type,
+            locale,
+            languageName: langEntry?.name ?? locale,
+            englishContent: file.content,
+            localeContent: fs.readFileSync(localePath, "utf-8"),
+            sectionIds,
+            glossaryTerms,
+          })
+        } catch (err) {
+          // The planner refuses plans the pipeline would refuse (over budget,
+          // unfittable under the per-call ceiling). Report, don't crash.
+          rows.push({
+            file: file.path,
+            locale,
+            mode: "incremental",
+            calls: 0,
+            chunks: 0,
+            plannedBytes: 0,
+            budgetBytes: null,
+            inputTokens: 0,
+            costUsd: 0,
+            verdict: "REFUSED",
+            note: err instanceof Error ? err.message : String(err),
+          })
+          return
+        }
+        if (!planned) return
+
+        const inputTokens = Math.round(
+          planned.projectedBytes / bytesPerToken(locale)
+        )
+        const visibleTokens =
+          planned.translatableContentBytes * outputTokensPerSourceByte(locale) +
+          planned.translateCount * ENVELOPE_TOKENS_PER_SECTION
+        const calls = planned.batches.length
+        const outputTokens = Math.round(
+          visibleTokens + calls * reasoningTokensFor(visibleTokens / calls)
+        )
         rows.push({
           file: file.path,
           locale,
           mode: "incremental",
-          calls: 0,
-          chunks: 0,
-          plannedBytes: 0,
-          budgetBytes: null,
-          inputTokens: 0,
-          costUsd: 0,
-          verdict: "REFUSED",
-          note: err instanceof Error ? err.message : String(err),
+          calls: planned.batches.length,
+          chunks: planned.budget.chunks,
+          plannedBytes: planned.projectedBytes,
+          budgetBytes: planned.budget.limitBytes,
+          inputTokens,
+          costUsd:
+            (inputTokens / 1_000_000) * INPUT_RATE_USD_PER_1M +
+            (outputTokens / 1_000_000) * OUTPUT_RATE_USD_PER_1M,
+          verdict:
+            planned.overBudget || planned.tooManyBatches ? "REFUSED" : "ok",
         })
-        continue
-      }
-      if (!planned) continue
-
-      const inputTokens = Math.round(
-        planned.projectedBytes / bytesPerToken(locale)
-      )
-      const outputTokens = Math.round(
-        planned.translatableContentBytes * outputTokensPerSourceByte(locale) +
-          REASONING_TOKENS_PER_CALL * planned.batches.length
-      )
-      rows.push({
-        file: file.path,
-        locale,
-        mode: "incremental",
-        calls: planned.batches.length,
-        chunks: chunksNeeded(planned.translatableBytes),
-        plannedBytes: planned.projectedBytes,
-        budgetBytes: planned.budget.limitBytes,
-        inputTokens,
-        costUsd:
-          (inputTokens / 1_000_000) * INPUT_RATE_USD_PER_1M +
-          (outputTokens / 1_000_000) * OUTPUT_RATE_USD_PER_1M,
-        verdict:
-          planned.overBudget || planned.tooManyBatches ? "REFUSED" : "ok",
       })
-    }
+    )
   }
 
   if (rows.length === 0) {
@@ -340,6 +344,9 @@ async function main() {
     return 0
   }
 
+  rows.sort(
+    (a, b) => a.file.localeCompare(b.file) || a.locale.localeCompare(b.locale)
+  )
   const fmt = (n: number) => n.toLocaleString("en-US")
   const refused = rows.filter((r) => r.verdict === "REFUSED")
 
@@ -385,7 +392,7 @@ async function main() {
     `\n  ${fmt(rows.length)} file+locale plan(s), ${fmt(totalCalls)} LLM request(s), ${fmt(totalInput)} est. input tokens, ${fmt(Math.round(totalInput / Math.max(totalCalls, 1)))} per request`
   )
   console.log(
-    `  Rates: $${INPUT_RATE_USD_PER_1M}/1M input, $${OUTPUT_RATE_USD_PER_1M}/1M output. Token counts are byte-derived estimates including ~${REASONING_TOKENS_PER_CALL.toLocaleString("en-US")} reasoning tokens per call; glossary bytes not modelled.`
+    `  Rates: $${INPUT_RATE_USD_PER_1M}/1M input, $${OUTPUT_RATE_USD_PER_1M}/1M output. Token counts are byte-derived estimates; reasoning is modelled as ${REASONING_BASE_TOKENS} + ${REASONING_PER_OUTPUT_TOKEN} x visible output tokens per call.`
   )
 
   if (refused.length > 0) {

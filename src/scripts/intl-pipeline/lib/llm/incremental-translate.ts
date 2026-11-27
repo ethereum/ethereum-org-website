@@ -28,6 +28,7 @@ import {
   parseFrontmatterDoc,
 } from "./frontmatter"
 import { getLanguageGroup, getSiteSpecificNotes } from "./language-groups"
+import { formatGlossary } from "./prompt-builder"
 
 // Types for section-level translation
 interface SectionForPrompt {
@@ -54,7 +55,7 @@ interface IncrementalTranslateOptions {
   languageName: string
   /** Sections in document order with action tags */
   sections: SectionForPrompt[]
-  /** Filtered glossary terms for this file */
+  /** Glossary terms for the whole file; each prompt keeps the ones it uses */
   glossaryTerms: Map<string, string>
 }
 
@@ -110,12 +111,16 @@ export function buildIncrementalPrompt(
   } = options
 
   const group = getLanguageGroup(targetLanguage)
-  const siteNotes = getSiteSpecificNotes(group, fileType)
-  const glossarySection = formatGlossary(glossaryTerms)
+  const siteNotes = getSiteSpecificNotes(group, fileType, targetLanguage)
+  const translateSections = sections.filter((s) => s.action === "TRANSLATE")
+  const glossarySection = formatGlossary(
+    glossaryTerms,
+    translateSections
+      .map((s) => `${s.headingText ?? ""}\n${s.content}`)
+      .join("\n")
+  )
 
-  const translateIds = sections
-    .filter((s) => s.action === "TRANSLATE")
-    .map((s) => s.id)
+  const translateIds = translateSections.map((s) => s.id)
 
   const sectionBlocks = sections.map(renderSectionBlock).join("\n\n")
 
@@ -816,18 +821,6 @@ function findFrontmatterEnd(lines: string[]): number {
     if (lines[i].trim() === "---") return i + 1
   }
   return 0
-}
-
-function formatGlossary(terms: Map<string, string>): string {
-  if (terms.size === 0) return ""
-
-  const entries: string[] = []
-  terms.forEach((translated, en) => {
-    entries.push(`- "${en}" -> "${translated}"`)
-  })
-
-  return `Community-voted glossary (use these exact translations):
-${entries.join("\n")}`
 }
 
 // ---------------------------------------------------------------------------

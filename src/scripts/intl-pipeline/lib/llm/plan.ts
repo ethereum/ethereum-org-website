@@ -57,7 +57,7 @@ export interface IncrementalPlan {
   translatableBytes: number
   /** Content bytes only, no envelope -- what the model actually renders */
   translatableContentBytes: number
-  /** Rules + glossary bytes carried by every call for this file+locale */
+  /** Rules and scaffolding bytes every call carries; glossary terms vary per batch */
   overheadBytes: number
   translateCount: number
   budget: FileBudget
@@ -229,9 +229,9 @@ export function planIncrementalBatches(
     if (contentBudget <= MIN_CONTENT_BUDGET_BYTES) break
   }
 
-  // Overhead is what every call carries regardless of content: rules, the
-  // glossary, and the prompt scaffolding. Reported so a run can see why its
-  // content budget shrank.
+  // Overhead is what every call carries regardless of content: rules and the
+  // prompt scaffolding (each batch adds only the glossary terms it uses).
+  // Reported so a run can see why its content budget shrank.
   const overheadBytes = Buffer.byteLength(
     buildIncrementalPrompt({
       filePath,
@@ -248,7 +248,7 @@ export function planIncrementalBatches(
     throw new Error(
       `[cost-guard] ${filePath} (${locale}): cannot fit batches under the ` +
         `${MAX_PLANNED_PROMPT_BYTES.toLocaleString("en-US")}-byte planning ceiling. Prompt overhead is ` +
-        `${overheadBytes.toLocaleString("en-US")} bytes (rules + ${glossaryTerms.size} glossary terms) ` +
+        `${overheadBytes.toLocaleString("en-US")} bytes of rules, plus each batch's share of ${glossaryTerms.size} glossary terms, ` +
         `and context is capped at ${MAX_CONTEXT_BYTES.toLocaleString("en-US")}. Refusing to send.`
     )
   }
@@ -326,9 +326,4 @@ export function planIncrementalBatches(
  */
 export function isIrreducibleChunk(chunkBytes: number): boolean {
   return chunkBytes > MAX_CHUNK_BYTES
-}
-
-/** Chunks the translatable content genuinely needs, for reporting. */
-export function chunksNeeded(translatableBytes: number): number {
-  return Math.max(1, Math.ceil(translatableBytes / MAX_CHUNK_BYTES))
 }

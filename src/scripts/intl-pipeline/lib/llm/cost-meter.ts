@@ -17,7 +17,8 @@ import {
   MAX_PROMPT_BYTES,
   MIN_CONTENT_BUDGET_BYTES,
   OUTPUT_RATE_USD_PER_1M,
-  REASONING_TOKENS_PER_CALL,
+  REASONING_BASE_TOKENS,
+  REASONING_PER_OUTPUT_TOKEN,
   RUN_FUSE_USD,
 } from "../../constants"
 
@@ -94,18 +95,27 @@ export function runFuseUsd(): number {
 /** Bytes per token for the English-heavy prompts the pipeline sends. */
 const BYTES_PER_TOKEN = 3
 
+/** Reasoning tokens a call spends writing `visibleOutputTokens` of answer */
+export function reasoningTokensFor(visibleOutputTokens: number): number {
+  return (
+    REASONING_BASE_TOKENS + REASONING_PER_OUTPUT_TOKEN * visibleOutputTokens
+  )
+}
+
 /**
- * Upper-bound cost of one call from its prompt size: the prompt as input, an
- * output of the same size (a translation), and the per-call reasoning. Sized
- * from the prompt actually being sent, not the ceiling: a run at concurrency
- * 16 used to reserve 16 x $0.31 = $4.89 of ceiling before it had spent a cent,
- * which made any fuse under $5 trip on reservations alone (run 35252423844).
+ * Upper-bound cost of one call from its prompt size: the prompt as input, and
+ * as output its translation (one chunk at most, unless the call is past the
+ * ceiling and so irreducible) plus its reasoning. Run 35252423844.
  */
 export function callReserveUsd(promptBytes: number): number {
   const promptTokens = promptBytes / BYTES_PER_TOKEN
+  const outputTokens =
+    promptBytes > MAX_PROMPT_BYTES
+      ? promptTokens
+      : Math.min(promptTokens, MAX_CHUNK_BYTES / BYTES_PER_TOKEN)
   return (
     (promptTokens / 1_000_000) * INPUT_RATE_USD_PER_1M +
-    ((promptTokens + REASONING_TOKENS_PER_CALL) / 1_000_000) *
+    ((outputTokens + reasoningTokensFor(outputTokens)) / 1_000_000) *
       OUTPUT_RATE_USD_PER_1M
   )
 }
@@ -178,6 +188,8 @@ export interface FileBudget {
   spend(bytes: number, detail: string): void
   limitBytes: number
   spentBytes: number
+  /** Chunks of translatable content the budget was sized for */
+  chunks: number
 }
 
 /**
@@ -212,6 +224,7 @@ export function createFileBudget(
 
   return {
     limitBytes,
+    chunks,
     get spentBytes() {
       return spentBytes
     },
