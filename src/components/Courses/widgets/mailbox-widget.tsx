@@ -46,7 +46,7 @@ const MailboxWidget = ({ onComplete }: WidgetProps) => {
   const [open, setOpen] = useState(false)
   const [hover, setHover] = useState<string | null>(null)
   const [outcome, setOutcome] = useState<Outcome>({ kind: "start" })
-  const [seen, setSeen] = useState({ posted: false, opened: false })
+  const [seen, setSeen] = useState({ wrong: false, opened: false })
   const [done, setDone] = useState(false)
   // Focus target after a tile or button leaves the page, so keyboard users
   // aren't dropped at the top of the document
@@ -54,13 +54,15 @@ const MailboxWidget = ({ onComplete }: WidgetProps) => {
   const paymentsRef = useRef<HTMLUListElement>(null)
   const statusRef = useRef<HTMLParagraphElement>(null)
 
-  // Wrong keys are optional: posting a payment and opening the door is enough
+  const allPosted = posted.length === SENDERS.length
+
+  // The explanation refers to every payment going in and a wrong key failing
   useEffect(() => {
-    if (!done && seen.posted && seen.opened) {
+    if (!done && allPosted && seen.wrong && seen.opened) {
       setDone(true)
       onComplete()
     }
-  }, [done, seen, onComplete])
+  }, [done, allPosted, seen, onComplete])
 
   useEffect(() => {
     if (!refocus) return
@@ -78,14 +80,16 @@ const MailboxWidget = ({ onComplete }: WidgetProps) => {
     if (target !== SLOT) return
     setPosted((list) => [...list, sender])
     setOutcome({ kind: "posted" })
-    setSeen((s) => ({ ...s, posted: true }))
     setRefocus(true)
   }
 
   const tryKey = (key: KeyId, target = LOCK) => {
     if (target === SLOT) return setOutcome({ kind: "key-in-slot" })
     if (target !== LOCK || open) return
-    if (key !== "yours") return setOutcome({ kind: "wrong", key })
+    if (key !== "yours") {
+      setSeen((s) => ({ ...s, wrong: true }))
+      return setOutcome({ kind: "wrong", key })
+    }
     setOpen(true)
     setOutcome({ kind: "opened" })
     setSeen((s) => ({ ...s, opened: true }))
@@ -112,7 +116,11 @@ const MailboxWidget = ({ onComplete }: WidgetProps) => {
           key: keyName(outcome.key),
         })
       case "opened":
-        return t("page-courses-widget-mailbox-opened")
+        return t(
+          seen.wrong
+            ? "page-courses-widget-mailbox-opened"
+            : "page-courses-widget-mailbox-opened-next"
+        )
       case "relocked":
         return t("page-courses-widget-mailbox-relocked")
     }

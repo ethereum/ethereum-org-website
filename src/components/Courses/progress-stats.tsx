@@ -19,8 +19,10 @@ import {
 import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
+import SignInDialog from "../Account/sign-in-dialog"
 import { useAccount } from "../Account/use-account"
 
+import { syncProgress } from "./account-sync"
 import { getActiveStreak, isStreakExtendedToday } from "./streak"
 import { statChip as chip } from "./theme"
 import { useCourseProgress } from "./useCourseProgress"
@@ -143,11 +145,26 @@ export const ProgressNote = ({ privacy = true }: { privacy?: boolean }) => {
     >
       {privacy && (
         <p className="m-0 text-sm text-body-medium">
-          {t(
-            account === "signed-in"
-              ? "page-courses-stats-privacy-account"
-              : "page-courses-stats-privacy"
-          )}
+          {account === "signed-in"
+            ? t("page-courses-stats-privacy-account")
+            : account === "unavailable"
+              ? t("page-courses-stats-privacy")
+              : t.rich("page-courses-progress-saved-sync", {
+                  // While the account loads, the same line without the link
+                  signin: (chunks) =>
+                    account === "signed-out" ? (
+                      <SignInDialog
+                        onSignedIn={() => void syncProgress(true)}
+                        trigger={
+                          <Button variant="link" className="!px-0 text-sm">
+                            {chunks}
+                          </Button>
+                        }
+                      />
+                    ) : (
+                      chunks
+                    ),
+                })}
         </p>
       )}
       {/* Signed in, the next sync would refill it; deleting the account

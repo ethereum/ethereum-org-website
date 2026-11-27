@@ -59,8 +59,8 @@ const ClientBugWidget = ({ onComplete }: WidgetProps) => {
     const next = bug === idx ? null : idx
     setBug(next)
     if (next === null) return
-    tried.current.add(network.id)
-    // Comparing two networks shows that the share, not the bug, decides
+    if (next === 0) tried.current.add(network.id)
+    // The biggest client in two networks: each gives a different outcome
     if (tried.current.size >= 2 && !done.current) {
       done.current = true
       onComplete()

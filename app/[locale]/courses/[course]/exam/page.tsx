@@ -62,6 +62,7 @@ const Page = async (props: { params: Promise<ExamPageParams> }) => {
         key={courseId}
         courseId={courseId}
         questions={course.exam}
+        lessonIds={course.lessons.map(({ id }) => id)}
         nextCourseId={nextCourseId}
         sources={sources}
       />

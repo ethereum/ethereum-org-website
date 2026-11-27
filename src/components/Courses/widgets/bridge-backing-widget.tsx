@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Layers, RotateCcw, Skull, Vault, Wallet } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -33,7 +33,7 @@ const initial = {
 /**
  * ETH locked on Ethereum backs the bridged ETH on another network. Redeem
  * some, let attackers drain the bridge, then try to redeem again. Trying
- * after the exploit unlocks Continue.
+ * after the exploit, having redeemed before it, unlocks Continue.
  */
 const BridgeBackingWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
@@ -42,8 +42,11 @@ const BridgeBackingWidget = ({ onComplete }: WidgetProps) => {
   const [outcome, setOutcome] = useState<Outcome>("start")
   const [done, setDone] = useState(false)
 
+  // The explanation compares a redeem before the exploit with one after it
+  const redeemedBefore = useRef(false)
+
   useEffect(() => {
-    if (!done && outcome === "failed") {
+    if (!done && outcome === "failed" && redeemedBefore.current) {
       setDone(true)
       onComplete()
     }
@@ -64,6 +67,7 @@ const BridgeBackingWidget = ({ onComplete }: WidgetProps) => {
       yours: s.yours - REDEEM,
       wallet: s.wallet + REDEEM,
     }))
+    redeemedBefore.current = true
     setOutcome("redeemed")
   }
 
@@ -73,6 +77,7 @@ const BridgeBackingWidget = ({ onComplete }: WidgetProps) => {
   }
 
   const reset = () => {
+    redeemedBefore.current = false
     setState(initial)
     setOutcome("start")
   }

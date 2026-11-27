@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { CircleCheck, Hourglass, TriangleAlert } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -26,6 +26,7 @@ type Action = "new" | "late" | "fix"
 /**
  * Sandbox: nonce 7 offers less than the base fee, so 8 and 9 wait behind it.
  * Sending more or tipping a later one changes nothing; replacing 7 clears it.
+ * Replacing unlocks once both dead ends have been tried.
  */
 const NonceQueueWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
@@ -34,6 +35,14 @@ const NonceQueueWidget = ({ onComplete }: WidgetProps) => {
   const [late, setLate] = useState(false)
   const [fixed, setFixed] = useState(false)
   const [last, setLast] = useState<Action | null>(null)
+  const hintId = useId()
+  const fixLocked = !extra || !late
+  const fixRef = useRef<HTMLButtonElement>(null)
+
+  // The button just pressed is now disabled, so focus moves to the fix
+  useEffect(() => {
+    if (!fixLocked) fixRef.current?.focus()
+  }, [fixLocked])
 
   const txs = [
     { nonce: STUCK, offer: fixed ? FIXED_OFFER : LOW_OFFER },
@@ -135,14 +144,21 @@ const NonceQueueWidget = ({ onComplete }: WidgetProps) => {
             {t("page-courses-widget-nonce-speed", { number: n(9) })}
           </Button>
           <Button
+            ref={fixRef}
             variant="ghost"
             onClick={() => act("fix")}
-            disabled={fixed}
+            disabled={fixed || fixLocked}
+            aria-describedby={fixLocked ? hintId : undefined}
             className={buttonClass}
           >
             {t("page-courses-widget-nonce-speed", { number: n(STUCK) })}
           </Button>
         </div>
+        {fixLocked && (
+          <p id={hintId} className="m-0 text-sm text-body-medium">
+            {t("page-courses-widget-nonce-fix-locked", { stuck: n(STUCK) })}
+          </p>
+        )}
       </div>
 
       <p role="status" className="m-0">
