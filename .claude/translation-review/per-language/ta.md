@@ -1,5 +1,8 @@
 # Tamil (ta) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `ZK-rollup` rendered with the letters spelled out (`ஜிகே-ரோலப்`, ZK dropped from 4 values); `disputed` as `விவாதிக்கப்பட்ட` (debated) in the optimistic-rollup labels; `ரோல்அப்`/`ரோலப்` spelling split inside one diagram (both glossary forms).
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 

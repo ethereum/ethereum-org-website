@@ -1,5 +1,8 @@
 # Russian (ru) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `уровне 1 (L1)` / `уровне 2 (L2)` first-mention expansions in 18 diagram values (#112); client names (Besu, Lighthouse, Teku, Reth, ...) transliterated per ETHGlossary (correct, #113); `Разработчики` x179 for builders vs glossary `сборщик` (glossary side is the outlier).
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 

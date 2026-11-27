@@ -1,5 +1,8 @@
 # Ukrainian (uk) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `рівні 1 (L1)` / `рівні 2 (L2)` first-mention expansions in 19 diagram values (#112); `Доводжувач` for prover is the glossary form (ru uses `Прувер`); client names transliterated per ETHGlossary (#113).
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 

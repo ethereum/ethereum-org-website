@@ -1,5 +1,8 @@
 # Brazilian Portuguese (pt-br) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `Maquina Virtual Ethereum (EVM)` expanded in 16 dev-tools values where English has bare `EVM` (#112); `bond` kept English in labels.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.9/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 

@@ -1,5 +1,8 @@
 # Turkish (tr) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: batch is `yigin` in 8 optimistic-rollup labels and `parti` in the zk-rollup set and in `optimistic-rollup-title`; glossary-capitalized `Protokol` mid-sentence x6; `(subgraphs)`/`(seedless)` English parentheticals added in dev-tools.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.1/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 

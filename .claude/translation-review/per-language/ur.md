@@ -1,5 +1,8 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `لیئر ۱ (L1)` / `لیئر ۲ (L2)` first-mention expansions in 17 diagram values (#112; native numerals are the glossary form); `ZK-rollup` as `زیڈ کے رول اپ`; `لامركزی` with Arabic kaf in dev-tools (glossary data, #71). Western digits and `۔` full stops clean; bidi isolates wrap only Latin runs.
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 
