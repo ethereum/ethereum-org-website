@@ -42,16 +42,16 @@ Os clientes leves também poderiam ser usados para atualizar as carteiras do Eth
 
 Existem vários clientes leves em desenvolvimento, incluindo clientes leves de execução, de consenso e combinados de execução/consenso. Estas são as implementações de clientes leves que conhecemos no momento em que escrevemos esta página:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): cliente de consenso leve em TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): cliente leve de consenso em TypeScript
 - [Helios](https://github.com/a16z/helios): cliente leve combinado de execução e consenso em Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): modo leve para cliente de execução (em desenvolvimento) em Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): cliente de consenso leve em Nim
+- [Nimbus](https://nimbus.guide/el-light-client.html): cliente leve de consenso em Nim
 
 Até onde sabemos, nenhum deles é considerado pronto para produção ainda.
 
-Também há muito trabalho sendo feito para melhorar as maneiras pelas quais os clientes leves podem acessar os dados do Ethereum. Atualmente, os clientes leves dependem de solicitações RPC para nós completos usando um modelo cliente/servidor, mas no futuro os dados poderiam ser solicitados de uma forma mais descentralizada usando uma rede dedicada, como a [Portal Network](https://www.ethportal.net/), que poderia servir os dados para clientes leves usando um protocolo de fofoca ponto a ponto.
+Também há muito trabalho sendo feito para melhorar as maneiras pelas quais os clientes leves podem acessar os dados do Ethereum. Atualmente, os clientes leves dependem de solicitações RPC para nós completos usando um modelo cliente/servidor. A [Portal Network](/developers/docs/networking-layer/portal-network/) foi inicialmente projetada para fornecer esses dados a clientes leves em uma rede ponto a ponto, mas seu desenvolvimento agora se concentra em fornecer o histórico de blocos passados.
 
-Outros itens do [roteiro](/roadmap/), como [árvores Verkle](/roadmap/verkle-trees/) e [ausência de estado](/roadmap/statelessness/), eventualmente trarão as garantias de segurança dos clientes leves para o mesmo nível das dos clientes completos.
+Outros itens do [roteiro](/roadmap/), como uma nova árvore de estado (atualmente proposta como uma árvore binária na [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) e a [ausência de estado](/roadmap/statelessness/), eventualmente trarão as garantias de segurança dos clientes leves para o mesmo nível das dos clientes completos.
 
 ## Leitura adicional {#further-reading}
 

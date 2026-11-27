@@ -158,14 +158,14 @@ lang: ja
 
 #### 背景知識のリーディング {#background-reading-2}
 
-- [レイヤー2 (L2) の紹介](/layer-2/)
-- [L2BEAT: スケーリングの概要](https://l2beat.com/scaling/summary)
+- [レイヤー2の紹介](/layer-2/)
+- [ETHBEAT: スケーリングの概要](https://ethbeat.org/layer2s/summary)
 - [ロールアップ中心のイーサリアム・ロードマップ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### 最近の研究 {#recent-research-2}
 
-- [Ethresear.ch レイヤー2 (L2)](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: オンチェーン・コスト](https://l2beat.com/scaling/costs)
+- [Ethresear.ch レイヤー2](https://ethresear.ch/c/layer-2/32)
+- [ETHBEAT: オンチェーン・コスト](https://ethbeat.org/layer2s/costs)
 - [2026年のイーサリアムでの構築: 何が変わったか](/latest/building-on-ethereum-in-2026/)
 
 ### インターオペラビリティ {#interoperability}
@@ -385,9 +385,9 @@ lang: ja
 
 #### 最近の研究 {#recent-research-14}
 
-- [ロバスト・インセンティブ・グループのデータ分析](https://rig.ethereum.org/)
+- [Robust Incentives Groupのデータ分析](https://rig.ethereum.org/)
 - [ethPandaOpsのオープンデータ](https://ethpandaops.io/data/)
-- [L2BEAT: スケーリングの概要](https://l2beat.com/scaling/summary)
+- [ETHBEAT: スケーリングの概要](https://ethbeat.org/layer2s/summary)
 
 ## アプリとツール {#apps-and-tooling}
 
@@ -476,4 +476,4 @@ lang: ja
 #### 最近の研究 {#recent-research-20}
 
 - [スマート・コントラクトのコンポーザビリティ](/developers/docs/smart-contracts/composability/)
-- [コインベース: Web3スタック入門](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)
+- [Coinbase: Web3スタック入門](https://www.coinbase.com/blog/a-simple-guide-to-the-web3-stack)

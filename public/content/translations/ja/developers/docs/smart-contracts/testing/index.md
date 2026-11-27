@@ -165,7 +165,7 @@ Solidityスマート・コントラクト用の単体テストフレームワー
 
 静的アナライザーは、スマート・コントラクトのソースコードを入力として受け取り、コントラクトがプロパティを満たしているかどうかを宣言する結果を出力します。動的解析とは異なり、静的解析ではコントラクトを実行して正確性を分析することはありません。代わりに、静的解析は、スマート・コントラクトが実行時にたどる可能性のあるすべてのパスを推論します（つまり、ソースコードの構造を調べて、実行時のコントラクトの操作にとってそれが何を意味するかを判断します）。
 
-[リンティング](https://www.perforce.com/blog/qac/what-is-linting)と[静的テスト](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)は、コントラクトで静的解析を実行するための一般的な方法です。どちらも、コンパイラによって出力される[抽象構文木](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)や[制御フローグラフ](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)など、コントラクトの実行の低レベルの表現を分析する必要があります。
+[リンティング](https://www.perforce.com/blog/qac/what-is-linting)と[静的テスト](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)は、コントラクトで静的解析を実行するための一般的な方法です。どちらも、コンパイラによって出力される[抽象構文木](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)や[制御フローグラフ](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/)など、コントラクトの実行の低レベルの表現を分析する必要があります。
 
 ほとんどの場合、静的解析は、安全でない構造の使用、構文エラー、コントラクトのコードにおけるコーディング標準の違反などの安全上の問題を検出するのに役立ちます。ただし、静的アナライザーは一般に、より深い脆弱性の検出には不完全であることが知られており、過剰な誤検知を生成する可能性があります。
 
@@ -238,7 +238,7 @@ Solidityスマート・コントラクト用の単体テストフレームワー
 
 前述のように、厳密なテストを行ってもコントラクトにバグがないことを保証できることはめったにありません。形式的検証アプローチは正確性のより強力な保証を提供できますが、現在は使用が難しく、かなりのコストがかかります。
 
-それでも、独立したコードレビューを受けることで、コントラクトの脆弱性を発見する可能性をさらに高めることができます。[スマート・コントラクトの監査](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/)と[バグバウンティ](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)は、他の人にコントラクトを分析してもらうための2つの方法です。
+それでも、独立したコードレビューを受けることで、コントラクトの脆弱性を発見する可能性をさらに高めることができます。[スマート・コントラクトの監査](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/)と[バグバウンティ](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)は、他の人にコントラクトを分析してもらうための2つの方法です。
 
 監査は、スマート・コントラクトのセキュリティ上の欠陥や不適切な開発手法の事例を見つける経験が豊富な監査人によって実行されます。監査には通常、テスト（および場合によっては形式的検証）と、コードベース全体の手動レビューが含まれます。
 
@@ -276,7 +276,7 @@ Solidityスマート・コントラクト用の単体テストフレームワー
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Solidityスマート・コントラクトプログラミング言語のスタイルとセキュリティのベストプラクティスを適用するためのリンター。_
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Web3スマート・コントラクトのセキュリティと開発のために特別に設計されたRustベースの静的アナライザー。_
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Web3スマート・コントラクトのセキュリティと開発のために特別に設計されたRustベースの静的アナライザー。_
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _脆弱性およびコード品質の検出器、コードから有用な情報を抽出するためのプリンター、およびカスタムサブモジュールの作成のサポートを備えたPythonベースの静的解析フレームワーク。_
 
@@ -298,7 +298,6 @@ Solidityスマート・コントラクト用の単体テストフレームワー
 
 - [さまざまなテスト製品の概要と機能比較](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [エキドナを使用してスマート・コントラクトをテストする方法](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [マンティコアを使用してスマート・コントラクトのバグを見つける方法](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [スリザーを使用してスマート・コントラクトのバグを見つける方法](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [テスト用にSolidityコントラクトをモックする方法](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Foundryを使用してSolidityで単体テストを実行する方法](https://www.rareskills.io/post/foundry-testing-solidity)

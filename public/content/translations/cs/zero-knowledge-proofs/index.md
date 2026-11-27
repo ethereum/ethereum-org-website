@@ -1,7 +1,7 @@
 ---
 title: "Co jsou důkazy s nulovou znalostí?"
 metaTitle: "Důkazy s nulovou znalostí"
-description: "Netechnický úvod do důkazů s nulovou znalostí pro začátečníky."
+description: "Co jsou důkazy s nulovou znalostí? Úvod pro začátečníky do toho, jak ZK důkazy ověřují nárok bez odhalení dat a jak je Ethereum využívá."
 lang: cs
 ---
 
@@ -100,7 +100,7 @@ Zde přicházejí na řadu ověřitelné výpočty. Když uzel provede transakci
 
 [Zero-knowledge rollupy](/developers/docs/scaling/zk-rollups) a [validia](/developers/docs/scaling/validium/) jsou dvě offchain řešení škálování, která používají důkazy platnosti k zajištění bezpečné škálovatelnosti. Tyto protokoly provádějí tisíce transakcí offchain a předkládají důkazy k ověření na Ethereu. Tyto výsledky lze aplikovat okamžitě po ověření důkazu, což Ethereu umožňuje zpracovat více transakcí bez zvýšení výpočetní zátěže na základní vrstvě.
 
-Kromě škálování na vrstvě 2 (l2) mohou důkazy s nulovou znalostí také ověřovat samotné provádění bloků na vrstvě 1 (l1) Etherea. [zkEVM pro ověřování na l1](/roadmap/zkevm/) by validátorům umožnilo ověřovat bloky kontrolou důkazu namísto opětovného provádění všech transakcí – což by umožnilo vyšší limity gasu bez zvýšení hardwarových požadavků na validátory.
+Kromě škálování na vrstvě 2 (L2) mohou důkazy s nulovou znalostí také ověřovat samotné provádění bloků na vrstvě 1 (L1) Etherea. [zkEVM pro ověřování na L1](/roadmap/zkevm/) by validátorům umožnilo ověřovat bloky kontrolou důkazu namísto opětovného provádění všech transakcí – což by umožnilo vyšší limity gasu bez zvýšení hardwarových požadavků na validátory.
 
 ### Snížení úplatkářství a tajných dohod při onchain hlasování {#secure-blockchain-voting}
 

@@ -1,7 +1,7 @@
 ---
 title: "Değiştirilemez token'lar (NFT)"
 metaTitle: "NFT'ler nedir? | Faydaları ve kullanımı"
-description: "Ethereum'daki NFT'lere genel bir bakış"
+description: "NFT'ler nedir? Değiştirilemez token'ların Ethereum üzerinde dijital sanat eserlerinin, koleksiyon ürünlerinin, biletlerin ve daha fazlasının sahipliğini nasıl kanıtladığını ve bunları kullanırken nasıl güvende kalacağınızı öğrenin."
 lang: tr
 template: use-cases
 sidebarDepth: 2

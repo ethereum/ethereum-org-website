@@ -7,7 +7,7 @@ alt: "Roteiro do Ethereum"
 template: roadmap
 ---
 
-O Ethereum é escalado usando [camadas 2 (l2)](/layer-2/#rollups) (também conhecidas como rollups), que agrupam transações e enviam o resultado para o Ethereum. Embora os rollups sejam até oito vezes mais baratos que a Rede Principal do Ethereum, é possível otimizar ainda mais os rollups para reduzir os custos para os usuários finais. Os rollups também dependem de alguns componentes centralizados que os desenvolvedores podem remover à medida que os rollups amadurecem.
+O Ethereum é escalado usando [camadas 2 (L2)](/layer-2/learn/#how-does-layer-2-work) (também conhecidas como rollups), que agrupam transações e enviam o resultado para o Ethereum. Embora os rollups sejam até oito vezes mais baratos que a Rede Principal do Ethereum, é possível otimizar ainda mais os rollups para reduzir os custos para os usuários finais. Os rollups também dependem de alguns componentes centralizados que os desenvolvedores podem remover à medida que os rollups amadurecem.
 
 <Alert variant="update">
 <AlertContent>
@@ -15,7 +15,7 @@ O Ethereum é escalado usando [camadas 2 (l2)](/layer-2/#rollups) (também conhe
   Custos de transação
 </AlertTitle>
   <ul style={{ marginBottom: 0 }}>
-    <li>Os rollups de hoje são <strong>\~5-20x</strong> mais baratos que a camada 1 (l1) do Ethereum</li>
+    <li>Os rollups de hoje são <strong>\~5-20x</strong> mais baratos que a camada 1 (L1) do Ethereum</li>
     <li>Os ZK-rollups em breve reduzirão as taxas em <strong>\~40-100x</strong></li>
     <li>As próximas mudanças no Ethereum fornecerão mais <strong>\~100-1000x</strong> de escalabilidade</li>
  <li style={{ marginBottom: 0 }}>Os usuários devem se beneficiar de transações <strong>custando menos de US$ 0,001</strong></li>
@@ -43,9 +43,15 @@ Esta segunda etapa é conhecida como ["danksharding"](/roadmap/danksharding/). O
 
 ## Descentralizando os rollups {#decentralizing-rollups}
 
-Os [rollups](/layer-2) já estão escalando o Ethereum. Um [rico ecossistema de projetos de rollup](https://l2beat.com/scaling/tvs) está permitindo que os usuários façam transações de forma rápida e barata, com uma série de garantias de segurança. No entanto, os rollups foram iniciados usando sequenciadores centralizados (computadores que fazem todo o processamento e agregação de transações antes de enviá-las para o Ethereum). Isso é vulnerável à censura, porque os operadores do sequenciador podem ser sancionados, subornados ou comprometidos de alguma outra forma. Ao mesmo tempo, os [rollups variam](https://l2beat.com/scaling/summary) na forma como validam os dados recebidos. A melhor maneira é que os "provadores" (provers) enviem [provas de fraude](/glossary/#fraud-proof) ou provas de validade, mas nem todos os rollups chegaram lá ainda. Mesmo os rollups que usam provas de validade/fraude usam um pequeno grupo de provadores conhecidos. Portanto, o próximo passo crítico na escalabilidade do Ethereum é distribuir a responsabilidade pela execução de sequenciadores e provadores entre mais pessoas.
+Os [rollups](/layer-2) já estão escalando o Ethereum. Um [rico ecossistema de projetos de rollup](https://ethbeat.org/layer2s/tvs) está permitindo que os usuários façam transações de forma rápida e barata, com uma série de garantias de segurança. No entanto, os rollups foram iniciados usando sequenciadores centralizados (computadores que fazem todo o processamento e agregação de transações antes de enviá-las para o Ethereum). Isso é vulnerável à censura, porque os operadores do sequenciador podem ser sancionados, subornados ou comprometidos de alguma outra forma. Ao mesmo tempo, os [rollups variam](https://ethbeat.org/layer2s/summary) na forma como validam os dados recebidos. A melhor maneira é que os "provadores" (provers) enviem [provas de fraude](/glossary/#fraud-proof) ou provas de validade, mas nem todos os rollups chegaram lá ainda. Mesmo os rollups que usam provas de validade/fraude usam um pequeno grupo de provadores conhecidos. Portanto, o próximo passo crítico na escalabilidade do Ethereum é distribuir a responsabilidade pela execução de sequenciadores e provadores entre mais pessoas.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Mais sobre rollups</ButtonLink>
+
+## Escalando a Rede Principal do Ethereum com zkEVMs {#zkevm}
+
+Os rollups não são o único caminho para escalar. Hoje, cada [validador](/glossary/#validator) reexecuta cada transação em cada bloco, o que limita o quanto a Rede Principal do Ethereum pode processar sem aumentar os requisitos de hardware. Com uma zkEVM, um único provador executa o bloco e gera uma [prova de conhecimento zero](/zero-knowledge-proofs/) de que a execução foi correta, e os validadores, em vez disso, verificam essa prova. Verificar uma prova é muito mais barato do que reexecutar, então a Mainnet pode processar mais transações sem forçar os validadores a usar hardware caro.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">Mais sobre zkEVM</ButtonLink>
 
 ## Progresso atual {#current-progress}
 

@@ -1,5 +1,27 @@
 # Telugu (te) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.4/10
+Scope: 19 JSON namespaces + 76 incremental markdown pages; changed lines only, ~110 JSON keys and ~30 md files read against English. Reported-speech `-మని` negation flip did not recur.
+
+**Fixed in this branch (9 criticals):**
+
+- `interact-with-other-contracts-from-solidity` lines 23, 113: `// SPDX-లైసెన్స్-ఐడెంటిఫైయర్: MIT` -> `// SPDX-License-Identifier: MIT` (machine-parsed code comment translated).
+- `glossary.json` `liquid-staking-tokens-definition`: added `వికేంద్రీకృత ఫైనాన్స్ (DeFi)` where English has bare DeFi -> `DeFi` (#112).
+- `verifying`: `అప్లికేషన్ బైనరీ ఇంటర్‌ఫేస్ (ABI)` and 2x `అప్లికేషన్ ప్రోగ్రామింగ్ ఇంటర్‌ఫేస్ (API)` -> bare `ABI` / `API` (#112); "Verifiers can also compare" rendered `ధృవీకర్తలు` (validators, glossary polyseme) -> `ధృవీకరించేవారు`.
+- `staking/saas` description: `స్టాకింగ్` ("stacking", recurrence of the #19115 glossary misspelling) -> `స్టేకింగ్`.
+- `videos/devcon-mumbai-coming-2026` title, description, body: `దేవ్‌కాన్` -> `డెవ్‌కాన్` (PR #19142 form, matches the breadcrumb).
+- `programming-languages/rust`: `ఈథీరియం వర్చువల్ మెషీన్` -> locale spelling `ఎథీరియం వర్చువల్ మెషిన్` (dev form); `Awesome ఎథీరియం Rust` -> repo name `Awesome Ethereum Rust`.
+- `data-and-analytics`: reference links `గ్రాఫ్ నెట్‌వర్క్ అవలోకనం` / `గ్రాఫ్ ఎక్స్‌ప్లోరర్` -> `Graph ...` (body and dev use Latin `The Graph`).
+
+**Open (warnings):**
+
+- Ethereum client names (`ఎరిగోన్`, `రెత్`, `గెత్`, `బేసు`, `నెథర్‌మైండ్`, `లోడ్‌స్టార్`) transliterated in archive-nodes/light-clients/rust per ETHGlossary rows, against the "clients stay Latin" policy; glossary decision needed, not fixed.
+- event rendered `ఘటన` (ETHGlossary) mixed with `ఈవెంట్` inside one page (logging-events-smart-contracts, oracles, erc-7540); `ఘటనను విడుదల చేస్తుంది` for emit in anatomy comments.
+- verifying: `contract instance` -> `కాంట్రాక్ట్ ఉదాహరణ` (example) and `deterministic` -> `నిర్ణయాత్మకమైనది` (decisive); `ఇన్‌స్టాన్స్` was correct on dev.
+- contributing/index: `విజ్ఞానశాస్త్రంకి` missing sandhi; research: `లేయర్ 1 (L1)` expansion pattern is the locale standard (kept).
+- defi description: `వికేంద్రీకృత ఫైనాన్స్ (DeFi)` expansion where English says "decentralized finance on Ethereum" (new parenthetical, left).
+- Pre-existing, not touched: U+2066/U+2069 isolates remain in frontmatter titles (erc-7540, pectra, dao metaTitle); `ఈథీరియం` vs `ఎథీరియం` in the glossary EVM row.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `అప్లికేషన్ ప్రోగ్రామింగ్ ఇంటర్‌ఫేస్ (API)` expanded x10 where English has bare `API` (#112); `ZK-rollup` spelled out as `జీకే-రోలప్`; product names in dev-tools mixed (transliterated for Coinbase/MetaMask per glossary, Latin for Arbitrum/Optimism/Lido per glossary).
 

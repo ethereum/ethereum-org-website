@@ -40,18 +40,18 @@ Les clients légers pourraient également être utilisés pour mettre à niveau 
 
 ## Quel est l'état actuel du développement des clients légers ? {#current-state-of-development}
 
-Il y a plusieurs clients légers en cours de développement, y compris des clients d'exécution, de consensus et des clients légers combinés d'exécution/consensus. Voici les implémentations de clients légers dont nous avons connaissance au moment de la rédaction de cette page :
+Plusieurs clients légers sont en cours de développement, notamment des clients légers d'exécution, de consensus et combinés exécution/consensus. Voici les implémentations de clients légers dont nous avons connaissance au moment de la rédaction de cette page :
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client) : client de consensus léger en TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client) : client léger de consensus en TypeScript
 - [Helios](https://github.com/a16z/helios) : client léger combiné d'exécution et de consensus en Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light) : mode léger pour le client d'exécution (en développement) en Go
-- [Nimbus](https://nimbus.guide/el-light-client.html) : client de consensus léger en Nim
+- [Nimbus](https://nimbus.guide/el-light-client.html) : client léger de consensus en Nim
 
 À notre connaissance, aucun d'entre eux n'est encore considéré comme prêt pour la production.
 
-Beaucoup de travail est également en cours pour améliorer les façons dont les clients légers peuvent accéder aux données d'Ethereum. Actuellement, les clients légers s'appuient sur des requêtes RPC vers des nœuds complets en utilisant un modèle client/serveur, mais à l'avenir, les données pourraient être demandées de manière plus décentralisée en utilisant un réseau dédié tel que le [Portal Network](https://www.ethportal.net/) qui pourrait servir les données aux clients légers en utilisant un protocole de commérage pair à pair.
+De nombreux travaux sont également en cours pour améliorer la façon dont les clients légers peuvent accéder aux données d'Ethereum. Actuellement, les clients légers s'appuient sur des requêtes RPC vers des nœuds complets en utilisant un modèle client/serveur. Le [Portal Network](/developers/docs/networking-layer/portal-network/) a d'abord été conçu pour fournir ces données aux clients légers sur un réseau pair à pair, mais son développement se concentre désormais sur la fourniture de l'historique des blocs passés.
 
-D'autres éléments de la [feuille de route](/roadmap/) tels que les [arbres Verkle](/roadmap/verkle-trees/) et l'[absence d'état](/roadmap/statelessness/) finiront par rendre les garanties de sécurité des clients légers égales à celles des clients complets.
+D'autres éléments de la [feuille de route](/roadmap/) tels qu'un nouvel arbre d'état (actuellement proposé comme un arbre binaire dans l'[EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) et l'[absence d'état](/roadmap/statelessness/) finiront par apporter aux clients légers des garanties de sécurité égales à celles des clients complets.
 
 ## Lectures complémentaires {#further-reading}
 

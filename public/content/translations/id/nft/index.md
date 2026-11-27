@@ -1,7 +1,7 @@
 ---
 title: Token non-fungible (NFT)
 metaTitle: Apa itu NFT? | Manfaat dan kegunaan
-description: Gambaran umum tentang NFT di Ethereum
+description: Apa itu NFT? Pelajari bagaimana token yang tidak dapat dipertukarkan membuktikan kepemilikan seni digital, barang koleksi, tiket, dan lainnya di Ethereum, serta cara tetap aman saat menggunakannya.
 lang: id
 template: use-cases
 sidebarDepth: 2

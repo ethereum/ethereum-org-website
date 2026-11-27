@@ -1,5 +1,24 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
+Scope: 71 md pages + 20 JSON namespaces incremental updates (dev-tools descriptions, glossary, page-*). Sampled ~35 md diffs and ~120 JSON keys, changed lines only.
+
+**Fixed in this branch:**
+
+- anatomy: `पता` left in direct case before postpositions (`पता पर/को/से/तक/में/के अनुसार`) on 14 changed code-comment lines -> `पते`
+- interact-with-other-contracts: `// SPDX-License-Identifier: MIT` translated to `SPDX-लाइसेंस-पहचानकर्ता` x2 (known-patterns #92) -> restored
+- Latin names restored: `Robust Incentives Group` (community/research:388, #19034 recurrence), `Coinbase Cloud Node` (apis/backend x2, hybrid `कॉइनबेस Cloud Node`), `Lodestar`/`Nimbus` (light-clients, javascript), `Erigon, Nethermind` (node-architecture caption), `AaveKit Aave`, `जेसन-आरपीसी` -> `JSON-RPC` x8 in tools descriptions (unchanged dev lines left)
+- `डेवकॉन` restored in devcon-mumbai-coming-2026 title/description/body (the PR flipped to Latin `Devcon`, #19142); `YouTube` kept Latin
+- `कॉन्ट्रैक्ट` -> `अनुबंध` (storage:10, interacting link text); `London` -> `लंदन` (roadmap/security:82)
+- glossary.json `block-builder-term` left as English `Block builder` -> `ब्लॉक निर्माता`; page-get-eth meta-description `रिवॉर्ड` -> `पुरस्कार`, `साथियों` -> `पीयर`
+
+**Open (warnings):**
+
+- Slither/Echidna/Manticore stay transliterated (`स्लिथर`, `एकिड्ना`) in the Trail of Bits tutorials: pre-existing dev convention, not normalized.
+- Injected English parentheticals in anatomy code comments (`(constant)`, `(expression)`, `(array)`, `(modifier)`, `(revert)`, `(unique)`), `करप्शन (corruption)`, `जेनेसिस (genesis)`.
+- bridges: further-reading link titles shipped in English (dev had Hindi); `फ़ैक्टरी` -> `फैक्ट्री` drift in interact-with-other-contracts; `ईथेरियम` spelling in eips description.
+- oracles: `स्मार्ट कॉन्ट्रैक्ट` still used in 5 changed lines (present on dev, not normalized).
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

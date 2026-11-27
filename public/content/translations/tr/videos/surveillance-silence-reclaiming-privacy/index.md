@@ -19,7 +19,7 @@ breadcrumb: "Gizliliği Geri Kazanmak"
 
 ### İki bölümlük konuşma: uyarı + çözüm (00:00) {#two-part-talk-warning-solution-0000}
 
-**Naomi:** Harika. Herkese hoş geldiniz. Burada olduğunuz için teşekkür ederim. Bu, iki bölümlük bir konuşma olacak. ilk bölümde, işler biraz yoğunlaşabilir. Gizlilik ve gözetim konuşmaları söz konusu olduğunda oldukça hararetli olduğum bilinir. ikinci bölüm biraz daha farklı bir tonda olacak. Yani ilk bölümde size bir hikaye anlatacağım ve ikinci bölümde dünyayı kurtaracağız. Eğer hepiniz için uygunsa başlayabiliriz. 
+**Naomi:** Harika. Hepiniz hoş geldiniz. Burada olduğunuz için teşekkür ederim. Bu iki bölümlük bir konuşma olacak. İlk bölüm biraz hararetli geçebilir. Gizlilik ve gözetim konuşmaları söz konusu olduğunda oldukça hararetli olduğum bilinir. İkinci bölüm biraz daha farklı bir tonda olacak. Yani ilk bölümde size bir hikaye anlatacağım ve ikinci bölümde dünyayı kurtaracağız. Eğer hepiniz için uygunsa başlayabiliriz.
 
 ### İmparatorun yeni giysileri (00:44) {#the-emperors-new-clothes-0044}
 
@@ -43,9 +43,9 @@ Bir gizlilik politikasına göz attığımızda ve onu dikkatlice okumamız gere
 
 ### Mevcut durum ne kadar kötü? (05:12) {#how-bad-is-the-status-quo-0512}
 
-Peki mevcut durum ne kadar kötü? Bu işler gerçekten ne kadar kötü? Ya da belki de bunu konuşmalıyız çünkü bazı insanlar bunun sadece şirketlerin bize daha iyi bir çift ayakkabı satmaya çalışmasından ibaret olduğunu düşünüyor. Bu sadece tüketiciyle ilgili bir şey, değil mi? Ya da belki de sadece sosyal medya şirketlerinin daha ince ayarlanmış bir algoritma oluşturmak için hakkımızda bilgi edinmesiyle ilgilidir, değil mi? Bu o kadar da vahim görünmüyor. Tüm bunlardaki sorun ne?
+Peki statüko ne kadar kötü? Bunlar gerçekten ne kadar kötü olabilir? Ya da belki de bunu konuşmalıyız çünkü bazı insanlar bunun sadece şirketlerin bize daha iyi bir çift ayakkabı satmaya çalışmasından ibaret olduğunu düşünüyor. Bu sadece tüketiciyle ilgili bir şey, değil mi? Ya da belki de sadece sosyal medya şirketlerinin daha hassas ayarlanmış bir algoritma oluşturmak için hakkımızda bilgi edinmesiyle ilgilidir, değil mi? Bu o kadar da vahim görünmüyor. Tüm bunlardaki sorun ne?
 
-Ancak şu anda hepimiz, hayatımızın her özel alanını sessizce işgal eden yaygın bir gözetim makinesine rıza gösteriyoruz. Şimdi, otoriter rejimler gibi bazı yerlerde bu makine, potansiyel olarak sorunlu kişileri bir protesto hareketine katılma olasılığı daha yüksek olarak işaretleyip ardından bu kişileri hedef alarak muhalefeti daha gerçekleşmeden kontrol etmek için kullanılıyor. Bazen bu makine, kamuoyunun duyarlılığını şekillendirmek, fikirleri etkilemek, seçimleri yönlendirmek veya tüm toplumları, o grupların kendilerinden nefret ettiğine ikna ederek belirli insan türlerinden nefret etmelerini sağlamak için kullanılır. Ve bir de sosyal kredi puanları düşen vatandaşlar hakkındaki bilgileri kamuoyuna yayınlayan ve ardından bu puanları seyahatleri kısıtlamak, istihdamlarını sınırlamak, çocuklarının belirli okullara gitmesini engellemek veya onları fırsatlardan tamamen mahrum bırakmak için kullanan ülkeler var.
+Ancak şu anda hepimiz, hayatımızın her mahrem alanını sessizce işgal eden, her yere nüfuz eden bir gözetim makinesine rıza gösteriyoruz. Şimdi, otoriter rejimler gibi bazı yerlerde bu makine, potansiyel olarak sorunlu kişileri bir protesto hareketine katılma olasılığı daha yüksek olarak işaretleyip ardından bu kişileri hedef alarak muhalefeti daha gerçekleşmeden kontrol etmek için kullanılıyor. Bazen bu makine kamuoyunu şekillendirmek, fikirleri etkilemek, seçimleri yönlendirmek veya tüm toplumların belirli insan türlerinden nefret etmesini sağlamak için onları o grupların kendilerinden nefret ettiğine inandırmak amacıyla kullanılıyor. Ve sonra sosyal kredi puanları düşen vatandaşlar hakkında bilgileri kamuoyuna yayınlayan ve ardından bu puanları seyahatleri kısıtlamak, istihdamlarını sınırlamak, çocuklarının belirli okullara gitmesini engellemek veya onları fırsatlardan tamamen mahrum bırakmak için kullanan ülkeler var.
 
 ### Trilyon dolarlık ölçekte veri toplama (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  

@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-bug-bounty.json",
-  "generatedAt": "2026-10-21T21:35:19.515Z",
-  "rootHash": "290fab27f6fd",
+  "generatedAt": "2026-11-27T09:57:56.788Z",
+  "rootHash": "200d91ef579d",
   "tree": {
-    "contentHash": "4f8fbc717e76",
+    "contentHash": "c0dfb6f1bcfb",
     "anchorHash": "5427f291b811",
     "children": {
       "fcr-scope": {
@@ -308,7 +308,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-points-payout-desc": {
-        "contentHash": "468c2bfb3e2a",
+        "contentHash": "b111b8a4109d",
         "anchorHash": "e3b0c44298fc"
       },
       "page-upgrades-bug-bounty-points-point": {
@@ -618,15 +618,15 @@
         "anchorHash": "e3b0c44298fc"
       },
       "bug-bounty-faq-q3-contentPreview": {
-        "contentHash": "1a16061a6382",
+        "contentHash": "d3c2b182b0f5",
         "anchorHash": "e3b0c44298fc"
       },
       "bug-bounty-faq-q3-content-1": {
-        "contentHash": "b166369b14b9",
+        "contentHash": "7b8979ecf594",
         "anchorHash": "4b9f7d802648",
         "children": {
           "prose:0": {
-            "contentHash": "c71c61c42d57",
+            "contentHash": "30d37960fb50",
             "anchorHash": "e3b0c44298fc"
           }
         }
@@ -664,7 +664,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "bug-bounty-faq-q6-content-1": {
-        "contentHash": "c2b25c473fb2",
+        "contentHash": "09408b47b5b7",
         "anchorHash": "e3b0c44298fc"
       },
       "bug-bounty-faq-q6-content-2": {
@@ -1102,5 +1102,5 @@
       "page-upgrades-bug-bounty-not-included-li-10"
     ]
   },
-  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

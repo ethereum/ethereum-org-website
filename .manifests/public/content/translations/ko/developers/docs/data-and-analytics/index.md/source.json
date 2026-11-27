@@ -1,18 +1,18 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/data-and-analytics/index.md",
-  "generatedAt": "2026-07-22T22:47:53.123Z",
-  "rootHash": "76781cb5e2bb",
+  "generatedAt": "2026-11-27T10:15:42.807Z",
+  "rootHash": "1899730d976c",
   "tree": {
-    "contentHash": "0cb9880c764d",
-    "anchorHash": "c2a1fb8d9507",
+    "contentHash": "6a52b510d9b9",
+    "anchorHash": "e6b34339324b",
     "children": {
       "frontmatter:title": {
         "contentHash": "1dc274ed4d69",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "f49fdd952f17",
+        "contentHash": "16b18236c627",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -593,8 +593,8 @@
         ]
       },
       "further-reading": {
-        "contentHash": "aadaf36e5aa4",
-        "anchorHash": "e225b59a670f",
+        "contentHash": "ef6725289220",
+        "anchorHash": "2b7453b75fca",
         "labelHash": "bd2e42f237b3",
         "children": {
           "_label": {
@@ -622,8 +622,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "8a797c6fc040",
-            "anchorHash": "1ad6cec8926e"
+            "contentHash": "8f8dcbf346d2",
+            "anchorHash": "8f2c8932c837"
           },
           "prose:13": {
             "contentHash": "3973e022e932",
@@ -756,5 +756,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

@@ -1,5 +1,26 @@
 # Tamil (ta) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.3/10
+Scope: 90 ta files (71 md, 19 JSON), changed lines only; read 12 md diffs and about 150 changed JSON keys (glossary, glossary-tooltip, learn-quizzes, page-roadmap, page-community, page-get-eth, page-layer-2-*, page-resources, page-bug-bounty and others).
+
+**Fixed in this branch (9 criticals):**
+
+- Exchange platform regressed from glossary `பரிமாற்றகம்` to swap `பரிமாற்றம்`: page-get-eth (find-exchange-title, find-exchange-desc, meta-description, p2p-desc), glossary kyc-definition and p2p-trading-definition, contributing/index.md L38 and L104.
+- `wrapped-token-definition` token `டோக்கன்` -> glossary `வில்லை` (3 sites; dev had `வில்லை`).
+- page-resources `l2safety-description` trade-offs `பரிமாற்றங்களின்` -> `சமரசங்களின்` (known-patterns #21).
+- Solidity `// SPDX-License-Identifier: MIT` had been translated to `SPDX-உரிம-அடையாளங்காட்டி` in interact-with-other-contracts-from-solidity (2 code blocks); restored.
+- smart-contracts/anatomy: about 25 translated code comments reverted to English in the ERC-721 block; Tamil restored from dev (Solium URL kept as English now has it).
+- erc-7540: 3 headings reverted to English (`Introduction`, `ERC-4626 vs ERC-7540`, `ERC-7540 Functions and Features`); Tamil restored, anchors untouched.
+- Developer/client names newly transliterated -> Latin: Erigon/Reth/Geth/Besu/Nethermind (archive-nodes L55, node-architecture L15), Lodestar/Geth/Nimbus (light-clients), Reth (rust), Lodestar (javascript L55/L57), Medusa (security-guidelines), OpenZeppelin (tokens/index L42), Chainlink/Tellor (oracles L390/L400).
+- adding-layer-2s: `அடுக்கு 2 (L2)` repeats collapsed to the first mention (line 15).
+
+**Open (native call needed):**
+
+- Tree-wide transliterated tool names remain on untouched lines (Chainlink/Erigon/Slither/Echidna/OpenZeppelin); in-file consistency kept.
+- `shielded-pool-term`: glossary.json `பாதுகாக்கப்பட்ட குளம்` vs glossary-tooltip.json `பாதுகாக்கப்பட்ட தொகுப்பு`.
+- `ஒற்றை ஸ்லாட்` / `ஸ்லாட்` vs glossary `நேரப்பகுதி`; `ஒருமித்த கருத்து` vs `கருத்தொருமிப்பு` drift in roadmap/security; `நாங்கள்`/`நமது` mixed in tutorials.
+- Added English parentheticals in anatomy comments (`(inherit)`, `(Mapping)`, `(function modifier)`, `(reverted)`).
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `ZK-rollup` rendered with the letters spelled out (`ஜிகே-ரோலப்`, ZK dropped from 4 values); `disputed` as `விவாதிக்கப்பட்ட` (debated) in the optimistic-rollup labels; `ரோல்அப்`/`ரோலப்` spelling split inside one diagram (both glossary forms).
 

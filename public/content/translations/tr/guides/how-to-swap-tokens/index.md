@@ -1,6 +1,6 @@
 ---
 title: "Token takası nasıl yapılır"
-description: "Ethereum'da token takasının nasıl yapılacağına dair bir rehber."
+description: "Ethereum'da token takası yapmak için adım adım rehber: cüzdanınızı bir merkeziyetsiz borsaya bağlayın, ücretleri ve fiyat kaymasını gözden geçirin ve işlemi onaylayın."
 lang: tr
 ---
 

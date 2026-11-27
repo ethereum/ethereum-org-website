@@ -4,13 +4,13 @@ description: "Ethereum düğümlerinin nasıl organize edildiğine dair giriş."
 lang: tr
 ---
 
-Bir Ethereum düğümü iki istemciden oluşur: bir [yürütme istemcisi](/developers/docs/nodes-and-clients/#execution-clients) ve bir [fikir birliği istemcisi](/developers/docs/nodes-and-clients/#consensus-clients). Bir düğümün yeni bir blok teklif edebilmesi için ayrıca bir [doğrulayıcı istemcisi](#validators) çalıştırması gerekir.
+Bir Ethereum düğümü iki istemciden oluşur: bir [yürütme istemcisi](/developers/docs/nodes-and-clients/#execution-clients) ve bir [fikir birliği istemcisi](/developers/docs/nodes-and-clients/#consensus-clients). Bir düğümün yeni bir blok teklif edebilmesi için aynı zamanda bir [doğrulayıcı istemcisi](#validators) çalıştırması gerekir.
 
 Ethereum [İş Kanıtı (PoW)](/developers/docs/consensus-mechanisms/pow/) kullanırken, tam bir Ethereum düğümü çalıştırmak için bir yürütme istemcisi yeterliydi. Ancak, [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos/) uygulandığından beri, yürütme istemcisi [fikir birliği istemcisi](/developers/docs/nodes-and-clients/#consensus-clients) adı verilen başka bir yazılımla birlikte kullanılmalıdır.
 
-Aşağıdaki diyagram, iki Ethereum istemcisi arasındaki ilişkiyi göstermektedir. İki istemci kendi eşler arası (P2P) ağlarına bağlanır. Yürütme istemcileri kendi P2P ağları üzerinden işlemleri yayarak (gossip) yerel işlem havuzlarını yönetirken, fikir birliği istemcileri kendi P2P ağları üzerinden blokları yayarak mutabakatı ve zincir büyümesini sağladığı için ayrı P2P ağlarına ihtiyaç duyulur.
+Aşağıdaki diyagram, iki Ethereum istemcisi arasındaki ilişkiyi göstermektedir. İki istemci kendi eşler arası (P2P) ağlarına bağlanır. Yürütme istemcileri kendi P2P ağları üzerinden işlemleri yayarak yerel işlem havuzlarını yönetirken, fikir birliği istemcileri kendi P2P ağları üzerinden blokları yayarak mutabakatı ve zincir büyümesini sağladığı için ayrı P2P ağlarına ihtiyaç duyulur.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _Yürütme istemcisi için Erigon, Nethermind ve Besu dahil olmak üzere çeşitli seçenekler vardır_.
 

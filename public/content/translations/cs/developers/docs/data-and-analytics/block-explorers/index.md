@@ -21,12 +21,13 @@ Měli byste rozumět základním konceptům Etherea, abyste se vyznali v datech,
 
 ## Služby {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) – Soukromý prohlížeč Etherea. Také pro třídění a filtrování dat (mempool). Dostupný ve španělštině, francouzštině, italštině, nizozemštině, portugalštině, ruštině, čínštině a perštině
+- [Blockchair](https://blockchair.com/ethereum) - Soukromý prohlížeč Etherea. Také pro třídění a filtrování dat (mempool). K dispozici ve španělštině, francouzštině, italštině, nizozemštině, portugalštině, ruštině, čínštině a perštině
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Etherscan](https://etherscan.io/) – Dostupný také v čínštině, korejštině, ruštině a japonštině
-- [Ethplorer](https://ethplorer.io/) – Prohlížeč bloků se zaměřením na tokeny. Dostupný také v čínštině, španělštině, francouzštině, turečtině, ruštině, korejštině a vietnamštině
+- [Etherscan](https://etherscan.io/) - K dispozici také v čínštině, korejštině, ruštině a japonštině
+- [Ethplorer](https://ethplorer.io/) - Prohlížeč bloků se zaměřením na tokeny. K dispozici také v čínštině, španělštině, francouzštině, turečtině, ruštině, korejštině a vietnamštině
+- [Ethscanner](https://ethscanner.io/) - Od Routescan. Přispívá ověřenými kontrakty do otevřené datové sady Verifier Alliance a zobrazuje meziřetězcové transakce
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

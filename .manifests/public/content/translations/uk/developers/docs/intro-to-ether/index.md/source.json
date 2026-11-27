@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/intro-to-ether/index.md",
-  "generatedAt": "2026-06-17T21:55:04.746Z",
-  "rootHash": "6d056af4576e",
+  "generatedAt": "2026-11-27T09:59:11.762Z",
+  "rootHash": "4bc5a8158ef8",
   "tree": {
-    "contentHash": "3e0f9184471f",
+    "contentHash": "a3ea04e67921",
     "anchorHash": "9c072b38e6a8",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "4c9dcfed183e",
+        "contentHash": "74c2d8a08b0a",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -391,5 +391,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

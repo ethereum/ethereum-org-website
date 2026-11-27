@@ -78,7 +78,7 @@ contract VendingMachine {
 
 لسوء الحظ، يكون اختبار الوحدة فعالاً بشكل ضئيل في تحسين أمان العقد الذكي عند استخدامه بمعزل عن غيره. قد يثبت اختبار الوحدة أن الدالة تُنفذ بشكل صحيح للبيانات الوهمية، لكن اختبارات الوحدة تكون فعالة فقط بقدر جودة الاختبارات المكتوبة. هذا يجعل من الصعب اكتشاف الحالات الطرفية (edge cases) المفقودة ونقاط الضعف التي يمكن أن تكسر أمان عقدك الذكي.
 
-النهج الأفضل هو الجمع بين اختبار الوحدة والاختبار القائم على الخصائص الذي يتم إجراؤه باستخدام [التحليل الثابت والديناميكي](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). يعتمد التحليل الثابت على تمثيلات منخفضة المستوى، مثل [رسوم تدفق التحكم (control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) و[أشجار النحو المجردة (abstract syntax trees)](https://deepsource.io/glossary/ast/) لتحليل حالات البرنامج والمسارات التنفيذية التي يمكن الوصول إليها. في غضون ذلك، تقوم تقنيات التحليل الديناميكي، مثل [اختبار التشويش (fuzzing) للعقود الذكية](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)، بتنفيذ كود العقد بقيم إدخال عشوائية لاكتشاف العمليات التي تنتهك خصائص الأمان.
+النهج الأفضل هو الجمع بين اختبار الوحدة والاختبار القائم على الخصائص الذي يتم إجراؤه باستخدام [التحليل الثابت والديناميكي](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). يعتمد التحليل الثابت على تمثيلات منخفضة المستوى، مثل [رسوم تدفق التحكم (control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) و[أشجار النحو المجردة (abstract syntax trees)](https://deepsource.io/glossary/ast/) لتحليل حالات البرنامج والمسارات التنفيذية التي يمكن الوصول إليها. في غضون ذلك، تقوم تقنيات التحليل الديناميكي، مثل [اختبار التشويش (fuzzing) للعقود الذكية](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)، بتنفيذ كود العقد بقيم إدخال عشوائية لاكتشاف العمليات التي تنتهك خصائص الأمان.
 
 يعد [التحقق الشكلي](/developers/docs/smart-contracts/formal-verification) تقنية أخرى للتحقق من خصائص الأمان في العقود الذكية. على عكس الاختبار العادي، يمكن للتحقق الشكلي أن يثبت بشكل قاطع عدم وجود أخطاء في العقد الذكي. يتم تحقيق ذلك من خلال إنشاء مواصفات شكلية تلتقط خصائص الأمان المطلوبة وإثبات أن النموذج الشكلي للعقود يلتزم بهذه المواصفات.
 
@@ -463,9 +463,9 @@ contract Attack {
 
 - **[أدوات التحقق الشكلي](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _أدوات للتحقق من الصحة الوظيفية في العقود الذكية والتحقق من الثوابت._
 
-- **[خدمات تدقيق العقود الذكية](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _قائمة بالمؤسسات التي تقدم خدمات تدقيق العقود الذكية لمشاريع تطوير إيثيريوم._
+- **[خدمات تدقيق العقود الذكية](#smart-contract-auditing-services)** - _قائمة بالمؤسسات التي تقدم خدمات تدقيق العقود الذكية لمشاريع تطوير إيثيريوم._
 
-- **[منصات مكافآت اكتشاف الثغرات](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _منصات لتنسيق مكافآت اكتشاف الثغرات ومكافأة الإفصاح المسؤول عن نقاط الضعف الحرجة في العقود الذكية._
+- **[منصات مكافآت اكتشاف الثغرات](#bug-bounty-platforms)** - _منصات لتنسيق مكافآت اكتشاف الثغرات ومكافأة الإفصاح المسؤول عن نقاط الضعف الحرجة في العقود الذكية._
 
 - **[<span dir="ltr">Fork Checker</span>](https://forkchecker.hashex.org/)** - _أداة مجانية عبر الإنترنت للتحقق من جميع المعلومات المتاحة بخصوص عقد متفرع._
 
@@ -561,16 +561,14 @@ contract Attack {
 
 - **[تعلم أمن وتدقيق العقود الذكية](https://updraft.cyfrin.io/courses/security)** - _الدورة التدريبية الشاملة لأمن وتدقيق العقود الذكية، تم إنشاؤها لمطوري العقود الذكية الذين يتطلعون إلى الارتقاء بأفضل ممارساتهم الأمنية ليصبحوا باحثين أمنيين._
 
-### دروس تعليمية حول أمن العقود الذكية {#tutorials-on-smart-contract-security}
+### دروس تعليمية حول أمان العقود الذكية {#tutorials-on-smart-contract-security}
 
 - [كيفية كتابة عقود ذكية آمنة](/developers/tutorials/secure-development-workflow/)
 
-- [كيفية استخدام سليذر (<span dir="ltr">Slither</span>) للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [كيفية استخدام مانتيكور (<span dir="ltr">Manticore</span>) للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [كيفية استخدام <span dir="ltr">Slither</span> للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [إرشادات أمان العقود الذكية](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [كيفية دمج عقد الرمز المميز الخاص بك بأمان مع رموز مميزة عشوائية](/developers/tutorials/token-integration-checklist/)
 
-- [<span dir="ltr">Cyfrin Updraft</span> - دورة كاملة في أمن وتدقيق العقود الذكية](https://updraft.cyfrin.io/courses/security)
+- [<span dir="ltr">Cyfrin Updraft</span> - دورة كاملة حول أمان وتدقيق العقود الذكية](https://updraft.cyfrin.io/courses/security)

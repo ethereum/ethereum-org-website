@@ -1,6 +1,6 @@
 ---
-title: Bezpečnost Etherea a prevence podvodů
-description: Jak zůstat v bezpečí na Ethereu
+title: "Bezpečnost Etherea a prevence podvodů"
+description: "Jak zůstat v bezpečí na Ethereu: chraňte svou peněženku a obnovovací frázi, rozpoznejte běžné krypto podvody a phishing a zjistěte, co dělat, když se něco pokazí."
 lang: cs
 ---
 

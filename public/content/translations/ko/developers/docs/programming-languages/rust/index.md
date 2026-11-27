@@ -40,17 +40,16 @@ incomplete: true
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _이더리움과 유사한 네트워크와 상호 작용하기 위한 externs 모음_
 - [라이트하우스](https://github.com/sigp/lighthouse) - _빠른 이더리움 합의 레이어 클라이언트_
-- [이더리움 WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _결정론적 WebAssembly 하위 집합을 사용한 이더리움 스마트 컨트랙트 실행 계층의 재설계 제안_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API 참조_
+- [이더리움 WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _결정론적 WebAssembly 하위 집합을 사용하여 이더리움 스마트 컨트랙트 실행 계층을 재설계하려는 제안_
 - [Solaris](https://github.com/paritytech/sol-rs) - _네이티브 Parity 클라이언트 EVM을 사용하는 Solidity 스마트 컨트랙트 단위 테스트 하네스._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust 이더리움 가상 머신 구현_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust 이더리움 가상 머신 (EVM) 구현_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust로 작성된 Wavelet 스마트 컨트랙트_
 - [Foundry](https://github.com/foundry-rs/foundry) - _이더리움 애플리케이션 개발을 위한 툴킷_
 - [Alloy](https://alloy.rs) - _이더리움 및 기타 EVM 기반 체인과 상호 작용하기 위한 고성능의 잘 테스트되고 문서화된 라이브러리._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _이더리움 라이브러리 및 지갑 구현_
 - [SewUp](https://github.com/second-state/SewUp) - _일반적인 백엔드에서 개발하는 것처럼 Rust로 이더리움 WebAssembly 컨트랙트를 구축할 수 있도록 돕는 라이브러리_
 - [Substreams](https://github.com/streamingfast/substreams) - _병렬화된 블록체인 데이터 인덱싱 기술_
-- [레스](https://github.com/paradigmxyz/reth) 레스(Rust Ethereum의 약자)는 새로운 이더리움 풀 노드 구현입니다.
+- [레스](https://github.com/paradigmxyz/reth) 레스(Rust 이더리움의 약자)는 새로운 이더리움 풀 노드 구현입니다.
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rust로 작성된 이더리움 생태계 프로젝트의 엄선된 모음_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Arbitrum에서 스마트 컨트랙트를 구축하기 위한 Rust SDK_
 

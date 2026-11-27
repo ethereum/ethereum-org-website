@@ -1,6 +1,6 @@
 ---
 title: Pengantar teknis ke ether
-description: Pengantar pengembang ke mata uang kripto ether.
+description: "Pengantar teknis ke ether (ETH): untuk apa ia digunakan, bagaimana ia didenominasi dalam Wei dan Gwei, serta bagaimana ia dicetak, dibakar, dan ditransfer."
 lang: id
 ---
 

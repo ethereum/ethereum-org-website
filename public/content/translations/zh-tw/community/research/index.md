@@ -159,14 +159,14 @@ lang: zh-tw
 #### 背景閱讀 {#background-reading-2}
 
 - [第二層 (L2) 簡介](/layer-2/)
-- [L2BEAT：擴容摘要](https://l2beat.com/scaling/summary)
+- [ETHBEAT：擴容摘要](https://ethbeat.org/layer2s/summary)
 - [以匯總為中心的以太坊路線圖](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### 近期研究 {#recent-research-2}
 
 - [Ethresear.ch 第二層 (L2)](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT：鏈上成本](https://l2beat.com/scaling/costs)
-- [2026 年在以太坊上建構：發生了什麼變化](/latest/building-on-ethereum-in-2026/)
+- [ETHBEAT：鏈上成本](https://ethbeat.org/layer2s/costs)
+- [2026 年在以太坊上建構：有什麼改變](/latest/building-on-ethereum-in-2026/)
 
 ### 互操作性 {#interoperability}
 
@@ -385,9 +385,9 @@ lang: zh-tw
 
 #### 近期研究 {#recent-research-14}
 
-- [穩健誘因小組資料分析](https://rig.ethereum.org/)
+- [Robust Incentives Group 資料分析](https://rig.ethereum.org/)
 - [ethPandaOps 開放資料](https://ethpandaops.io/data/)
-- [L2BEAT：擴容摘要](https://l2beat.com/scaling/summary)
+- [ETHBEAT：擴容摘要](https://ethbeat.org/layer2s/summary)
 
 ## 應用程式與工具 {#apps-and-tooling}
 

@@ -4,9 +4,9 @@ description: "Naučte se vyvíjet pro Ethereum pomocí projektů a nástrojů za
 lang: cs
 ---
 
-JavaScript patří mezi nejoblíbenější jazyky v ekosystému Etherea. Ve skutečnosti existuje [tým](https://github.com/ethereumjs), který se věnuje tomu, aby do JavaScriptu přinesl co nejvíce z Etherea.
+JavaScript patří mezi nejoblíbenější jazyky v ekosystému Etherea, s implementacemi v JavaScriptu a TypeScriptu všeho od základních primitiv protokolu až po produkčního konsensuálního klienta.
 
-Existují příležitosti psát v JavaScriptu (nebo v něčem podobném) na [všech úrovních technologického stacku](/developers/docs/ethereum-stack/).
+Existují příležitosti psát v JavaScriptu (nebo v něčem podobném) na [všech úrovních zásobníku](/developers/docs/ethereum-stack/).
 
 ## Interakce s Ethereem {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ Pokud dáváte přednost čtení kódu, tento JavaScript by mohl být skvělou a
 
 ### Uzly a klienti {#nodes-and-clients}
 
-Klient EthereumJS je v aktivním vývoji a umožňuje vám proniknout do toho, jak klienti Etherea fungují, v jazyce, kterému rozumíte; v JavaScriptu!
+[Lodestar](https://lodestar.chainsafe.io/) je konsensuální klient připravený pro produkční nasazení, napsaný v TypeScriptu a spravovaný společností ChainSafe. Obsahuje uzel Beacon a klienta validátoru a je to dobré místo, kde můžete vidět, jak funguje konsensus Etherea založený na důkazu podílem (PoS) v jazyce, který znáte.
 
-**Podívejte se na klienta**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Podívejte se na Lodestar**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+Na exekuční straně je klient EthereumJS zastaralý a archivovaný, ale jeho zdrojový kód zůstává k dispozici pro prozkoumání toho, jak funguje klient Etherea v JavaScriptu.
+
+**Podívejte se na archivovaného klienta**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Další projekty {#other-projects}
 

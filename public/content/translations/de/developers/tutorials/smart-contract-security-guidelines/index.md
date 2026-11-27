@@ -23,7 +23,7 @@ Die Dokumentation kann auf verschiedenen Ebenen verfasst werden und sollte währ
 
 - **Eine allgemeinverständliche Beschreibung des Systems**, die erklärt, was die Verträge tun, sowie alle Annahmen zur Codebasis.
 - **Schema- und Architekturdiagramme**, einschließlich der Vertragsinteraktionen und der Zustandsmaschine des Systems. [Slither-Printer](https://github.com/crytic/slither/wiki/Printer-documentation) können helfen, diese Schemata zu generieren.
-- **Gründliche Code-Dokumentation**, für Solidity kann das [NatSpec-Format](https://docs.soliditylang.org/en/develop/natspec-format.html) verwendet werden.
+- **Gründliche Code-Dokumentation**, für Solidity kann das [NatSpec-Format](https://docs.soliditylang.org/en/latest/natspec-format.html) verwendet werden.
 
 ### Onchain- vs. offchain-Berechnungen {#onchain-vs-offchain-computation}
 
@@ -70,16 +70,16 @@ Die Architektur Ihrer Codebasis sollte es einfach machen, Ihren Code zu überpr�
 - **Verwenden Sie gut getestete Bibliotheken.** Das Importieren von Code aus gut getesteten Bibliotheken verringert die Wahrscheinlichkeit, dass Sie fehlerhaften Code schreiben. Wenn Sie einen ERC-20-Vertrag schreiben möchten, verwenden Sie [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
 - **Verwenden Sie einen Abhängigkeitsmanager; vermeiden Sie das Kopieren und Einfügen von Code.** Wenn Sie sich auf eine externe Quelle verlassen, müssen Sie diese mit der Originalquelle auf dem neuesten Stand halten.
 
-### Tests und Verifizierung {#testing-and-verification}
+### Testen und Verifizieren {#testing-and-verification}
 
-- **Schreiben Sie gründliche Unit-Tests.** Eine umfangreiche Test-Suite ist entscheidend für die Entwicklung hochwertiger Software.
-- **Schreiben Sie benutzerdefinierte Prüfungen und Eigenschaften für [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) und [Manticore](https://github.com/trailofbits/manticore).** Automatisierte Tools helfen dabei, die Sicherheit Ihres Vertrags zu gewährleisten. Lesen Sie den Rest dieses Leitfadens, um zu erfahren, wie Sie effiziente Prüfungen und Eigenschaften schreiben.
-- **Verwenden Sie [crytic.io](https://crytic.io/).** Crytic lässt sich in GitHub integrieren, bietet Zugriff auf private Slither-Detektoren und führt benutzerdefinierte Eigenschaftsprüfungen von Echidna aus.
+- **Schreiben Sie gründliche Unit-Tests.** Eine umfangreiche Test-Suite ist entscheidend, um qualitativ hochwertige Software zu entwickeln.
+- **Schreiben Sie benutzerdefinierte Prüfungen und Eigenschaften für [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) und [Medusa](https://github.com/crytic/medusa).** Automatisierte Tools helfen dabei, sicherzustellen, dass Ihr Vertrag sicher ist. Lesen Sie den Rest dieses Leitfadens, um zu erfahren, wie Sie effiziente Prüfungen und Eigenschaften schreiben.
+- **Führen Sie diese Tools in der Continuous Integration aus.** Das Ausführen von Slither und Ihren Fuzzing-Eigenschaften bei jedem Pull-Request fängt Regressionen ab, bevor sie zusammengeführt werden.
 
 ### Solidity {#solidity}
 
-- **Bevorzugen Sie Solidity 0.5 gegenüber 0.4 und 0.6.** Unserer Meinung nach ist Solidity 0.5 sicherer und verfügt über bessere integrierte Praktiken als 0.4. Solidity 0.6 hat sich für den produktiven Einsatz als zu instabil erwiesen und benötigt Zeit, um zu reifen.
-- **Verwenden Sie eine stabile Version zum Kompilieren; verwenden Sie die neueste Version, um auf Warnungen zu prüfen.** Stellen Sie sicher, dass Ihr Code mit der neuesten Compiler-Version keine gemeldeten Probleme aufweist. Solidity hat jedoch einen schnellen Veröffentlichungszyklus und eine Historie von Compiler-Bugs, weshalb wir die neueste Version nicht für die Bereitstellung empfehlen (siehe Slithers [solc-Versionsempfehlung](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)).
+- **Verwenden Sie eine aktuelle Solidity 0.8.x-Version ohne bekannte schwerwiegende Fehler.** Solidity 0.8 prüft die Arithmetik standardmäßig auf Überlauf und Unterlauf, und älteren Versionen fehlen neuere Sicherheitsprüfungen des Compilers. Siehe Slithers [solc-Versionsempfehlung](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity).
+- **Verwenden Sie eine stabile Version zum Kompilieren; verwenden Sie die neueste Version, um auf Warnungen zu prüfen.** Stellen Sie sicher, dass Ihr Code mit der neuesten Compiler-Version keine gemeldeten Probleme aufweist. Solidity hat jedoch einen schnellen Veröffentlichungszyklus und eine Historie von Compiler-Fehlern. Vermeiden Sie es daher, mit einer Version bereitzustellen, die erst vor wenigen Tagen veröffentlicht wurde. Überprüfen Sie die [Liste der bekannten Compiler-Fehler](https://docs.soliditylang.org/en/latest/bugs.html) für die von Ihnen gewählte Version.
 - **Verwenden Sie kein Inline-Assembly.** Assembly erfordert EVM-Fachwissen. Schreiben Sie keinen EVM-Code, wenn Sie das Yellow Paper nicht _gemeistert_ haben.
 
 ## Bereitstellungsrichtlinien {#deployment-guidelines}

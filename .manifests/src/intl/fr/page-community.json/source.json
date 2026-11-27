@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-community.json",
-  "generatedAt": "2026-07-29T05:40:34.674Z",
-  "rootHash": "f2518dbf3879",
+  "generatedAt": "2026-11-27T09:53:53.396Z",
+  "rootHash": "7591b15f3ec5",
   "tree": {
-    "contentHash": "89c761ec9a82",
-    "anchorHash": "a848111844f1",
+    "contentHash": "b49d3462426d",
+    "anchorHash": "47b7a0f71e0f",
     "children": {
       "page-community-card-1-title": {
         "contentHash": "db4c80f82c55",
@@ -85,6 +85,30 @@
       },
       "page-community-open-source": {
         "contentHash": "e19476e28fa0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-more-title": {
+        "contentHash": "014415946a38",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-more-support": {
+        "contentHash": "111d5a875726",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-more-research": {
+        "contentHash": "54144186c8d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-more-language-resources": {
+        "contentHash": "51b44abaf74c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-more-code-of-conduct": {
+        "contentHash": "337376950ef0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-community-more-10-years": {
+        "contentHash": "b18d83e30874",
         "anchorHash": "e3b0c44298fc"
       },
       "page-community-try-ethereum": {
@@ -282,6 +306,12 @@
       "page-community-meta-title",
       "page-community-meta-description",
       "page-community-open-source",
+      "page-community-more-title",
+      "page-community-more-support",
+      "page-community-more-research",
+      "page-community-more-language-resources",
+      "page-community-more-code-of-conduct",
+      "page-community-more-10-years",
       "page-community-try-ethereum",
       "page-community-why-get-involved-title",
       "page-community-why-get-involved-card-1-title",
@@ -319,5 +349,5 @@
       "page-community-contribute-count"
     ]
   },
-  "sourceCommitSha": "bff6b26a8b30b949a9a730f3427af6918af7bb68"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

@@ -40,18 +40,18 @@ lang: ja
 
 ## ライト・クライアント開発の現状は？ {#current-state-of-development}
 
-実行、コンセンサス、および実行/コンセンサスを組み合わせたライト・クライアントなど、いくつかのライト・クライアントが開発中です。このページを執筆している時点で私たちが把握しているライト・クライアントの実装は以下の通りです。
+実行、コンセンサス、および実行とコンセンサスを組み合わせたライト・クライアントなど、いくつかのライト・クライアントが開発中です。このページの執筆時点で私たちが把握しているライト・クライアントの実装は以下の通りです。
 
-- [ロードスター](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): TypeScriptで書かれたコンセンサス・ライト・クライアント
-- [Helios](https://github.com/a16z/helios): Rustで書かれた実行およびコンセンサスを組み合わせたライト・クライアント
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Goで書かれた実行クライアントのライト・モード（開発中）
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScriptで書かれたコンセンサス・ライト・クライアント
+- [Helios](https://github.com/a16z/helios): Rustで書かれた実行とコンセンサスを組み合わせたライト・クライアント
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Goで書かれた実行クライアントのライトモード（開発中）
 - [ニンバス](https://nimbus.guide/el-light-client.html): Nimで書かれたコンセンサス・ライト・クライアント
 
-私たちの知る限り、これらの中でまだ本番環境の準備が整っていると見なされているものはありません。
+私たちの知る限り、これらの中で本番環境で利用可能と見なされているものはまだありません。
 
-ライト・クライアントがイーサリアムのデータにアクセスする方法を改善するための多くの作業も行われています。現在、ライト・クライアントはクライアント/サーバー・モデルを使用してフル・ノードへのRPCリクエストに依存していますが、将来的には、ピア・ツー・ピアのゴシップ・プロトコルを使用してライト・クライアントにデータを提供できる[ポータル・ネットワーク](https://www.ethportal.net/)などの専用ネットワークを使用して、より分散化された方法でデータを要求できるようになる可能性があります。
+また、ライト・クライアントがイーサリアムのデータにアクセスする方法を改善するための取り組みも数多く行われています。現在、ライト・クライアントはクライアント/サーバーモデルを使用し、フル・ノードへのRPCリクエストに依存しています。[ポータル・ネットワーク](/developers/docs/networking-layer/portal-network/)は当初、ピア・ツー・ピア・ネットワーク上でライト・クライアントにこのデータを提供するために設計されましたが、現在その開発は過去のブロックの履歴を提供することに焦点を当てています。
 
-[ヴァークル・ツリー](/roadmap/verkle-trees/)や[ステートレス性](/roadmap/statelessness/)などの他の[ロードマップ](/roadmap/)の項目は、最終的にライト・クライアントのセキュリティ保証をフル・クライアントと同等にするでしょう。
+新しい状態ツリー（現在[EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)でバイナリツリーとして提案されています）や[ステートレス性](/roadmap/statelessness/)などの他の[ロードマップ](/roadmap/)項目により、最終的にライト・クライアントのセキュリティ保証はフル・クライアントと同等になるでしょう。
 
 ## 参考文献 {#further-reading}
 

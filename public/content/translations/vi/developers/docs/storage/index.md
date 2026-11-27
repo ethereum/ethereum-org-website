@@ -5,16 +5,16 @@ lang: vi
 authors: ["Patrick Collins"]
 ---
 
-Khác với một máy chủ tập trung được vận hành bởi một công ty hoặc tổ chức duy nhất, các hệ thống lưu trữ phi tập trung bao gồm một mạng lưới ngang hàng của những người dùng-vận hành nắm giữ một phần của toàn bộ dữ liệu, tạo ra một hệ thống chia sẻ lưu trữ tệp có khả năng phục hồi. Chúng có thể nằm trong một ứng dụng dựa trên chuỗi khối hoặc bất kỳ mạng lưới dựa trên ngang hàng nào.
+Không giống như một máy chủ tập trung được vận hành bởi một công ty hoặc tổ chức duy nhất, các hệ thống lưu trữ phi tập trung bao gồm một mạng lưới ngang hàng của những người dùng kiêm người vận hành, những người nắm giữ một phần của toàn bộ dữ liệu, tạo ra một hệ thống chia sẻ lưu trữ tệp có khả năng phục hồi. Chúng có thể nằm trong một ứng dụng dựa trên chuỗi khối hoặc bất kỳ mạng lưới dựa trên nền tảng ngang hàng nào.
 
-Bản thân Ethereum có thể được sử dụng như một hệ thống lưu trữ phi tập trung, và nó thực sự là như vậy khi nói đến việc lưu trữ mã trong tất cả các hợp đồng thông minh. Tuy nhiên, khi nói đến lượng dữ liệu lớn, đó không phải là mục đích mà Ethereum được thiết kế. Chuỗi đang phát triển đều đặn, nhưng tại thời điểm viết bài, chuỗi Ethereum có dung lượng khoảng 500GB - 1TB ([tùy thuộc vào máy khách](https://etherscan.io/chartsync/chaindefault)), và mọi nút trên mạng lưới cần phải có khả năng lưu trữ tất cả dữ liệu. Nếu chuỗi mở rộng đến lượng dữ liệu lớn (ví dụ 5TB), sẽ không khả thi để tất cả các nút tiếp tục chạy. Ngoài ra, chi phí triển khai lượng dữ liệu lớn như vậy lên Mạng chính sẽ cực kỳ đắt đỏ do phí [Gas](/developers/docs/gas).
+Bản thân Ethereum có thể được sử dụng như một hệ thống lưu trữ phi tập trung, và thực tế là như vậy khi nói đến việc lưu trữ mã trong tất cả các hợp đồng thông minh. Tuy nhiên, khi nói đến lượng dữ liệu lớn, đó không phải là mục đích mà Ethereum được thiết kế. Chuỗi đang phát triển đều đặn, nhưng tại thời điểm viết bài, chuỗi Ethereum có kích thước khoảng 1-2TB ([tùy thuộc vào client](https://etherscan.io/chartsync/chaindefault)), và mọi nút trên mạng lưới cần phải có khả năng lưu trữ tất cả dữ liệu. Nếu chuỗi mở rộng đến lượng dữ liệu lớn (ví dụ 5TB), sẽ không khả thi để tất cả các nút tiếp tục chạy. Ngoài ra, chi phí triển khai lượng dữ liệu lớn như vậy lên Mạng chính sẽ đắt đỏ đến mức không thể chấp nhận được do phí [Gas](/developers/docs/gas).
 
-Do những hạn chế này, chúng ta cần một chuỗi hoặc phương pháp luận khác để lưu trữ lượng lớn dữ liệu theo cách phi tập trung.
+Do những hạn chế này, chúng ta cần một chuỗi hoặc phương pháp khác để lưu trữ lượng dữ liệu lớn theo cách phi tập trung.
 
 Khi xem xét các tùy chọn lưu trữ phi tập trung (dStorage), có một vài điều người dùng phải ghi nhớ.
 
 - Cơ chế lưu trữ lâu dài / cấu trúc khuyến khích
-- Thực thi việc lưu giữ dữ liệu
+- Thực thi lưu giữ dữ liệu
 - Tính phi tập trung
 - Đồng thuận
 

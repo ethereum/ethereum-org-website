@@ -1,6 +1,6 @@
 ---
 title: Jinsi ya kubadilisha tokeni
-description: Mwongozo wa jinsi ya kubadilisha tokeni kwenye Ethereum.
+description: "Mwongozo wa hatua kwa hatua wa kubadilisha tokeni kwenye Ethereum: unganisha mkoba wako kwenye soko la ubadilishanaji lililogatuliwa, kagua ada na tofauti ya utekelezaji, na uthibitishe biashara."
 lang: sw
 ---
 

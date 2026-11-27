@@ -1,6 +1,6 @@
 ---
 title: Nyaraka za uendelezaji wa Ethereum
-description: Kutambulisha nyaraka za msanidi programu za ethereum.org.
+description: "Nyaraka za uendelezaji wa Ethereum: jifunze mambo ya msingi, stack ya Ethereum, mikataba mahiri, nodi na uongezaji uwezo, pamoja na miongozo ya kujenga dapp yako ya kwanza."
 lang: sw
 ---
 

@@ -1,5 +1,12 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.3/10
+Scope: 72 markdown pages + 20 JSON namespaces (incremental updates, dev-tools descriptions), changed lines only; read 10 md diffs (contributing, erc-7540, anatomy, bridges, data/oracles/nodes docs, tutorials, roadmap, security, videos) and ~120 JSON keys (glossary, glossary-tooltip, learn-quizzes, page-learn, page-get-eth, page-community, page-roadmap, page-developers-tools-descriptions).
+
+Fixed (critical): contributing/index.md six bold section headings left in English (Translations, Development, Design, Content, Feature ideas, Product listings) restored to dev forms; roadmap/fusaka junk token `যায়্বা যায় না` -> `যায় না`; security/index.md stray `>)` left after the social-engineering link; SPDX-License-Identifier comment translated in interact-with-other-contracts (2 code blocks) restored; Latin tool names transliterated in changed lines (Slither/Echidna/Medusa in secure-development-workflow and smart-contract-security-guidelines, Lodestar in programming-languages/javascript, Erigon/Reth/Besu/Nethermind in archive-nodes and node-architecture, Graph Explorer, Solium comment, YouTube); 5 added `অ্যাপ্লিকেশন বাইনারি ইন্টারফেস (এবিআই)` expansions in tools-descriptions -> bare `ABI`; page-learn `জিরো-নলেজ প্রুফ` hybrid (2 keys) -> `শূন্য-জ্ঞান প্রমাণ`; page-layer-2-learn `লেয়ার 2` digit mixed with `লেয়ার ২`.
+
+Open: tools-descriptions mixes `API`/`RPC` Latin with `এপিআই`/`জেসন-আরপিসি` (glossary-sanctioned but inconsistent); `ইথেরিয়াম উন্নয়ন প্রস্তাবনা` (eips description) vs `ইমপ্রুভমেন্ট প্রপোজাল` (title); Devcon rendered `ডেভকন` and `Devcon 8` in the same video page; other pre-existing transliterated tool names (স্লিদার/ম্যান্টিকোর/একিডনা across other tutorials, ইউনিসোয়াপ, টেলর) remain outside this PR's lines; `শব্দকোষ` (page-learn) vs `গ্লোসারি` (contributing) for glossary.
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

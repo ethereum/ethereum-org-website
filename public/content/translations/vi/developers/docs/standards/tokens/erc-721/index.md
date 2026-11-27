@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## Hướng dẫn: Xây dựng với các token không thể thay thế (ERC-721) trên Ethereum {#tutorials}
 
-- [Hướng dẫn chi tiết Hợp đồng ERC-721 bằng Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Hướng dẫn chi tiết có chú thích về một hợp đồng NFT ERC-721 hoàn chỉnh được viết bằng Vyper._
+- [Hướng dẫn chi tiết về hợp đồng ERC-721 bằng Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Hướng dẫn chi tiết có chú thích về một hợp đồng NFT ERC-721 hoàn chỉnh được viết bằng Vyper._
 - [Cách viết và triển khai một NFT (Phần 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Hướng dẫn từng bước để viết và triển khai hợp đồng thông minh ERC-721 đầu tiên của bạn._
 - [Cách đúc một NFT (Phần 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Cách đúc một NFT ERC-721 bằng cách sử dụng hợp đồng thông minh đã triển khai của bạn và Web3._
-- [Cách xem NFT trong Ví của bạn (Phần 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Cách hiển thị NFT đã đúc của bạn trong MetaMask sau khi triển khai._
-- [Hướng dẫn tạo công cụ đúc NFT](/developers/tutorials/nft-minter/) _– Xây dựng một dapp đúc NFT full-stack với frontend React, MetaMask và Alchemy._
+- [Cách xem NFT trong ví của bạn (Phần 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Cách hiển thị NFT đã đúc của bạn trong MetaMask sau khi triển khai._

@@ -42,16 +42,16 @@ I client leggeri potrebbero anche essere utilizzati per aggiornare i portafogli 
 
 Ci sono diversi client leggeri in fase di sviluppo, inclusi client leggeri di esecuzione, di consenso e combinati di esecuzione/consenso. Queste sono le implementazioni di client leggeri di cui siamo a conoscenza al momento della stesura di questa pagina:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): client di consenso leggero in TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): client leggero di consenso in TypeScript
 - [Helios](https://github.com/a16z/helios): client leggero combinato di esecuzione e consenso in Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): modalità leggera per il client di esecuzione (in sviluppo) in Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): client di consenso leggero in Nim
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): modalità leggera per il client di esecuzione (in fase di sviluppo) in Go
+- [Nimbus](https://nimbus.guide/el-light-client.html): client leggero di consenso in Nim
 
 Per quanto ne sappiamo, nessuno di questi è ancora considerato pronto per la produzione.
 
-Si sta anche lavorando molto per migliorare i modi in cui i client leggeri possono accedere ai dati di Ethereum. Attualmente, i client leggeri si affidano a richieste RPC ai nodi completi utilizzando un modello client/server, ma in futuro i dati potrebbero essere richiesti in modo più decentralizzato utilizzando una rete dedicata come il [Portal Network](https://www.ethportal.net/) che potrebbe servire i dati ai client leggeri utilizzando un protocollo gossip peer-to-peer.
+Si sta anche lavorando molto per migliorare i modi in cui i client leggeri possono accedere ai dati di Ethereum. Attualmente, i client leggeri si affidano a richieste RPC ai nodi completi utilizzando un modello client/server. Il [Portal Network](/developers/docs/networking-layer/portal-network/) è stato inizialmente progettato per servire questi dati ai client leggeri su una rete peer-to-peer, ma il suo sviluppo ora si concentra sul servire la cronologia dei blocchi passati.
 
-Altri elementi della [roadmap](/roadmap/) come gli [alberi di Verkle](/roadmap/verkle-trees/) e l'[assenza di stato](/roadmap/statelessness/) porteranno infine le garanzie di sicurezza dei client leggeri a essere pari a quelle dei client completi.
+Altre voci della [roadmap](/roadmap/) come un nuovo albero di stato (attualmente proposto come albero binario nella [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) e l'[assenza di stato](/roadmap/statelessness/) porteranno infine le garanzie di sicurezza dei client leggeri a essere pari a quelle dei client completi.
 
 ## Letture consigliate {#further-reading}
 

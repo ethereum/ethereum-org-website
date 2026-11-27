@@ -17,15 +17,15 @@ Alors, vous avez entendu parler de ce truc appelé Ethereum et vous êtes prêt 
 
 ## Prérequis (flexibles) {#soft-prerequisites}
 
-Cet article se veut accessible à un large éventail de développeurs. Des [outils Python](/developers/docs/programming-languages/python/) seront utilisés, mais ils ne sont qu'un moyen de transmettre les idées : aucun problème si vous n'êtes pas un développeur Python. Je ferai cependant quelques suppositions sur ce que vous savez déjà, afin que nous puissions passer rapidement aux éléments spécifiques à Ethereum.
+Cet article se veut accessible à un large éventail de développeurs. Des [outils Python](/developers/docs/programming-languages/python/) seront utilisés, mais ils ne sont qu'un moyen de transmettre les idées – ce n'est pas un problème si vous n'êtes pas un développeur Python. Je vais cependant faire quelques suppositions sur ce que vous savez déjà, afin que nous puissions passer rapidement aux éléments spécifiques à Ethereum.
 
 Suppositions :
 
 - Vous savez vous débrouiller dans un terminal,
 - Vous avez écrit quelques lignes de code Python,
-- La version 3.6 ou supérieure de Python est installée sur votre machine (l'utilisation d'un [environnement virtuel](https://realpython.com/effective-python-environment/#virtual-environments) est fortement encouragée), et
+- La version 3.10 ou supérieure de Python est installée sur votre machine (l'utilisation d'un [environnement virtuel](https://realpython.com/effective-python-environment/#virtual-environments) est fortement encouragée), et
 - vous avez utilisé `pip`, le gestionnaire de paquets de Python.
-  Encore une fois, si l'une de ces conditions n'est pas remplie, ou si vous ne prévoyez pas de reproduire le code de cet article, vous pourrez probablement tout de même suivre sans problème.
+  Encore une fois, si l'une de ces affirmations est fausse, ou si vous ne prévoyez pas de reproduire le code de cet article, vous pourrez probablement suivre sans problème.
 
 ## Les chaînes de blocs, en bref {#blockchains-briefly}
 
@@ -79,7 +79,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 ## Installation {#installation}
 
-Dans ce tutoriel, nous travaillerons uniquement dans un interpréteur Python. Nous ne créerons aucun répertoire, fichier, classe ou fonction.
+Dans ce tutoriel, nous travaillerons uniquement dans un interpréteur Python. Nous ne créerons pas de répertoires, de fichiers, de classes ou de fonctions.
 
 <FeaturedText>Remarque : Dans les exemples ci-dessous, les commandes qui commencent par `$` sont destinées à être exécutées dans le terminal. (Ne tapez pas le `$`, il indique simplement le début de la ligne.)</FeaturedText>
 
@@ -102,8 +102,6 @@ pip install 'web3[tester]'
 ```
 
 Vous êtes prêt à commencer !
-
-Remarque : Le paquet `web3[tester]` fonctionne jusqu'à Python 3.10.xx
 
 ## Lancer un bac à sable {#spin-up-a-sandbox}
 
@@ -129,12 +127,12 @@ In [1]: from web3 import Web3
 
 En plus d'être une passerelle vers Ethereum, le module [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) offre quelques fonctions pratiques. Explorons-en quelques-unes.
 
-Dans une application Ethereum, vous aurez souvent besoin de convertir des dénominations de devises. Le module Web3 fournit quelques méthodes d'aide juste pour cela : [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) et [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
+Dans une application Ethereum, vous aurez souvent besoin de convertir des dénominations de devises. Le module Web3 fournit quelques méthodes d'aide spécialement pour cela : [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) et [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
-Remarque : Les ordinateurs sont notoirement mauvais pour gérer les mathématiques décimales. Pour contourner ce problème, les développeurs stockent souvent les montants en dollars sous forme de centimes. Par exemple, un article au prix de 5,99 $ peut être stocké dans la base de données sous la valeur 599.
+Remarque : Les ordinateurs sont notoirement mauvais pour gérer les calculs décimaux. Pour contourner ce problème, les développeurs stockent souvent les montants en dollars sous forme de centimes. Par exemple, un article dont le prix est de 5,99 $ peut être stocké dans la base de données sous la valeur 599.
 
-Un modèle similaire est utilisé lors du traitement des transactions en <b>ether</b>. Cependant, au lieu de deux décimales, l'ether en a 18 ! La plus petite dénomination de l'ether s'appelle le <b>Wei</b>, c'est donc la valeur spécifiée lors de l'envoi de transactions.
+Un modèle similaire est utilisé lors du traitement des transactions en <b>ether</b>. Cependant, au lieu de deux décimales, l'ether en a 18 ! La plus petite dénomination d'ether s'appelle le <b>Wei</b>, c'est donc la valeur spécifiée lors de l'envoi de transactions.
 
 1 ether = 1000000000000000000 Wei
 
@@ -142,7 +140,7 @@ Un modèle similaire est utilisé lors du traitement des transactions en <b>ethe
 
 </FeaturedText>
 
-Essayez de convertir quelques valeurs en Wei et inversement. Notez qu'[il existe des noms pour de nombreuses dénominations](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) entre l'ether et le Wei. L'une des plus connues d'entre elles est le **gwei**, car c'est souvent ainsi que les frais de transaction sont représentés.
+Essayez de convertir certaines valeurs en Wei et inversement. Notez qu'[il existe des noms pour de nombreuses dénominations](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) entre l'ether et le Wei. L'une des plus connues d'entre elles est le **gwei**, car c'est souvent ainsi que les frais de transaction sont représentés.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -152,7 +150,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-D'autres méthodes utilitaires du module Web3 incluent des convertisseurs de format de données (par ex., [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), des aides pour les adresses (par ex., [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) et des fonctions de hachage (par ex., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Beaucoup d'entre elles seront abordées plus tard dans la série. Pour voir toutes les méthodes et propriétés disponibles, utilisez la saisie semi-automatique d'IPython en tapant `Web3`. et en appuyant deux fois sur la touche de tabulation après le point.
+D'autres méthodes utilitaires du module Web3 incluent des convertisseurs de format de données (par ex., [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), des aides pour les adresses (par ex., [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)) et des fonctions de hash (par ex., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Beaucoup d'entre elles seront abordées plus tard dans la série. Pour afficher toutes les méthodes et propriétés disponibles, utilisez la saisie semi-automatique d'IPython en tapant `Web3`. et en appuyant deux fois sur la touche Tab après le point.
 
 ## Parler à la chaîne {#talk-to-the-chain}
 
@@ -172,7 +170,7 @@ Bien qu'il s'agisse d'une « vraie » façon de procéder, le processus de synch
 
 _L'EthereumTesterProvider se connecte à un nœud simulé et est pratique pour les environnements de développement rapides._
 
-Ce nœud simulé s'appelle [eth-tester](https://github.com/ethereum/eth-tester) et nous l'avons installé dans le cadre de la commande `pip install web3[tester]`. Configurer Web3.py pour utiliser ce fournisseur de test est aussi simple que :
+Ce nœud simulé s'appelle [eth-tester](https://github.com/ApeWorX/eth-tester) et nous l'avons installé dans le cadre de la commande `pip install web3[tester]`. Configurer Web3.py pour utiliser ce fournisseur de test est aussi simple que :
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -294,10 +292,10 @@ Out[13]: 1000003000000000000000000
 
 Ce dernier semble correct ! Le solde est passé de 1 000 000 à 1 000 003 ethers. Mais qu'est-il arrivé au premier compte ? Il semble avoir perdu un peu plus de trois ethers. Hélas, rien n'est gratuit dans la vie, et l'utilisation du réseau public Ethereum exige que vous rémunériez vos pairs pour leur rôle de soutien. De petits frais de transaction ont été déduits du compte qui a soumis la transaction - ces frais correspondent à la quantité de gaz brûlé (21 000 unités de gaz pour un transfert d'ETH) multipliée par des frais de base qui varient en fonction de l'activité du réseau, plus des frais de priorité qui reviennent au validateur qui inclut la transaction dans un bloc.
 
-En savoir plus sur le [gaz](/developers/docs/gas/#post-london)
+En savoir plus sur le [gaz](/developers/docs/gas/)
 
 <FeaturedText>Remarque : Sur le réseau public, les frais de transaction sont variables en fonction de la demande du réseau et de la rapidité avec laquelle vous souhaitez qu'une transaction soit traitée. Si vous êtes intéressé par une analyse détaillée de la façon dont les frais sont calculés, consultez mon article précédent sur <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">la façon dont les transactions sont incluses dans un bloc</a>.</FeaturedText>
 
 ## Et respirez {#and-breathe}
 
-Nous y sommes depuis un moment, cela semble donc être le bon moment pour faire une pause. Le terrier du lapin continue, et nous poursuivrons notre exploration dans la deuxième partie de cette série. Quelques concepts à venir : la connexion à un vrai nœud, les contrats intelligents et les jetons. Vous avez d'autres questions ? Faites-le-moi savoir ! Vos retours influenceront la direction que nous prendrons à partir d'ici. Les demandes sont les bienvenues via [Twitter](https://twitter.com/wolovim).
+Nous y sommes depuis un moment, cela semble donc être le bon moment pour faire une pause. Le terrier du lapin continue, et nous poursuivrons notre exploration dans la deuxième partie de cette série. Quelques concepts à venir : la connexion à un vrai nœud, les contrats intelligents et les jetons. Vous avez d'autres questions ? Faites-le-moi savoir ! Vos retours influenceront la direction que nous prendrons à partir d'ici. Les demandes sont les bienvenues via [Twitter](https://x.com/wolovim).

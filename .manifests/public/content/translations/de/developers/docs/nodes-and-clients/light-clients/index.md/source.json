@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/nodes-and-clients/light-clients/index.md",
-  "generatedAt": "2026-06-19T18:34:58.762Z",
-  "rootHash": "7a640a4a1ddc",
+  "generatedAt": "2026-11-27T10:19:08.638Z",
+  "rootHash": "0902a2011b5a",
   "tree": {
-    "contentHash": "1a5f8398bb9d",
-    "anchorHash": "d7e8d16f5c4d",
+    "contentHash": "ab3b5ba8f79b",
+    "anchorHash": "bf3a1d856746",
     "children": {
       "frontmatter:title": {
         "contentHash": "499190d80be6",
@@ -118,8 +118,8 @@
         ]
       },
       "current-state-of-development": {
-        "contentHash": "967af13a5d54",
-        "anchorHash": "5c6c7b81eb6d",
+        "contentHash": "4abe038543b7",
+        "anchorHash": "5c89d3f65f99",
         "labelHash": "96f4091057cd",
         "children": {
           "_label": {
@@ -132,7 +132,7 @@
           },
           "link:0": {
             "contentHash": "ebcd9aca2aa3",
-            "anchorHash": "3a75f604dfb7"
+            "anchorHash": "871e4010fb7e"
           },
           "prose:9": {
             "contentHash": "bfa1c256123f",
@@ -159,15 +159,15 @@
             "anchorHash": "98d73e5f8fc8"
           },
           "prose:12": {
-            "contentHash": "3566bc163fa5",
+            "contentHash": "c76fb52a8d99",
             "anchorHash": "e3b0c44298fc"
           },
           "link:4": {
             "contentHash": "a7fb80b8d6bf",
-            "anchorHash": "1166474d5cea"
+            "anchorHash": "af821ca0e75f"
           },
           "prose:13": {
-            "contentHash": "8394e9196063",
+            "contentHash": "22ce175538d1",
             "anchorHash": "e3b0c44298fc"
           },
           "link:5": {
@@ -175,15 +175,15 @@
             "anchorHash": "0d9f7701bb4e"
           },
           "prose:14": {
-            "contentHash": "89919b8ae90c",
+            "contentHash": "a76ab70d9c7e",
             "anchorHash": "e3b0c44298fc"
           },
           "link:6": {
-            "contentHash": "fdf6b8b2922f",
-            "anchorHash": "dbd9c3cd11b2"
+            "contentHash": "f7b332825bb2",
+            "anchorHash": "d95e7bf1ea74"
           },
           "prose:15": {
-            "contentHash": "6201111b83a0",
+            "contentHash": "177e9e7313d9",
             "anchorHash": "e3b0c44298fc"
           },
           "link:7": {
@@ -286,5 +286,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

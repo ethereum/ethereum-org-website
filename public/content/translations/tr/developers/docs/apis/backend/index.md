@@ -66,7 +66,7 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 **Infura -** **_Hizmet olarak Ethereum API'si._**
 
 - [infura.io](https://infura.io)
-- [Belgeler](https://docs.infura.io/api)
+- [Belgeler](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Uygun maliyetli Ethereum Sanal Makinesi (EVM) JSON-RPC sağlayıcısı_**
@@ -77,7 +77,7 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 **NOWNodes - _Tam Düğümler ve Blok Gezginleri._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Belgeler](https://nownodes.gitbook.io/documentation)
+- [Belgeler](https://docs.nownodes.io/)
 
 **QuickNode -** **_Hizmet Olarak Blokzincir Altyapısı._**
 
@@ -176,11 +176,10 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 
 - [moralis.io](https://moralis.io)
 - [Belgeler](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
-**NFTPort -** **_Ethereum Veri ve Basım (Mint) API'leri._**
+**NFTPort -** **_Ethereum Veri ve Basım API'leri._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Belgeler](https://docs.nftport.xyz/)
@@ -199,7 +198,7 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 - [Belgeler](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_Düzinelerce ağda gerçek zamanlı, zenginleştirilmiş blokzincir veri API'si._**
+**Codex -** **_Düzinelerce zincirde gerçek zamanlı, zenginleştirilmiş blokzincir veri API'si._**
 
 - [codex.io](https://www.codex.io/)
 - [Belgeler](https://docs.codex.io)
@@ -207,13 +206,12 @@ Bu kütüphaneler, doğrudan bir Ethereum düğümüyle etkileşime girmenin kar
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent -** **_200'den fazla Ağ için zenginleştirilmiş blokzincir API'leri._**
+**Covalent -** **_200'den fazla zincir için zenginleştirilmiş blokzincir API'leri._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Belgeler](https://www.covalenthq.com/docs/api/)
+- [Belgeler](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Daha fazla okuma {#further-reading}
 
@@ -226,5 +224,4 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 
 ## İlgili eğitimler {#related-tutorials}
 
-- [JavaScript'te Ethereum blokzincirini kullanmak için Web3.js'i kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde Web3.js'i kurmak için talimatlar._
-- [JavaScript'ten bir akıllı sözleşme çağırmak](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI token'ını kullanarak, JavaScript ile sözleşme işlevlerinin nasıl çağrılacağını görün._
+- [Web3 uygulamaları için sunucu bileşenleri ve aracıları](/developers/tutorials/server-components/) _– Blokzincir olaylarını dinleyen ve işlemlerle yanıt veren TypeScript sunucu bileşenleri nasıl yazılır._

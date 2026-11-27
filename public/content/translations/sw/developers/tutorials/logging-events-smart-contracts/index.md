@@ -7,8 +7,6 @@ skill: intermediate
 breadcrumb: Uwekaji logi wa matukio
 lang: sw
 published: 2020-04-03
-source: EthereumDev
-sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
@@ -16,33 +14,34 @@ Katika Solidity, [matukio](/developers/docs/smart-contracts/anatomy/#events-and-
 
 ## Matukio {#events}
 
-Tukio la kawaida zaidi kwenye mnyororo wa vitalu wa Ethereum wakati wa kuandika makala haya ni tukio la Transfer ambalo hutolewa na tokeni za ERC-20 wakati mtu anafanya hamisho la tokeni.
+Moja ya matukio ya kawaida kwenye mnyororo wa vitalu wa Ethereum ni tukio la `Transfer` ambalo hutolewa na tokeni za ERC-20 wakati mtu anapohamisha tokeni.
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Sahihi ya tukio inatangazwa ndani ya msimbo wa mkataba na inaweza kutolewa kwa neno kuu la emit. Kwa mfano, tukio la transfer linaweka logi ya nani aliyetuma hamisho (_from_), kwa nani (_to_) na kiasi gani cha tokeni zilihamishwa (_value_).
+Sahihi ya tukio hutangazwa ndani ya msimbo wa mkataba na inaweza kutolewa kwa neno kuu la emit. Kwa mfano, tukio la hamisho huweka logi ya nani aliyetuma hamisho (_from_), kwa nani (_to_) na kiasi gani cha tokeni zilizohamishwa (_value_).
 
-Tukirudi kwenye mkataba mahiri wetu wa Counter na kuamua kuweka logi kila wakati thamani inapobadilishwa. Kwa kuwa mkataba huu haukusudiwi kusambazwa bali kutumika kama msingi wa kujenga mkataba mwingine kwa kuupanua: unaitwa mkataba dhahania (abstract contract). Katika mfano wetu wa counter, ingeonekana hivi:
+Hebu turudi kwenye mkataba mahiri wa `Counter` kutoka kwenye [kusambaza mkataba wako mahiri wa kwanza](/developers/tutorials/deploying-your-first-smart-contract/) na kuweka logi kila wakati thamani inapobadilishwa. Ingeonekana hivi:
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
-    event ValueChanged(uint oldValue, uint256 newValue);
+    event ValueChanged(uint256 oldValue, uint256 newValue);
 
-    // Kibadili cha kibinafsi cha aina ya unsigned int ili kuhifadhi idadi ya hesabu
-    uint256 private count = 0;
+    // Kibadilika cha umma cha aina ya unsigned int ili kuhifadhi idadi ya hesabu
+    uint256 public count = 0;
 
-    // Kitendaji kinachoongeza kihesabu chetu
+    // Fankisheni inayoongeza kihesabio chetu
     function increment() public {
         count += 1;
         emit ValueChanged(count - 1, count);
     }
 
-    // Kipataji ili kupata thamani ya hesabu
+    // Getter isiyo ya lazima ili kupata thamani ya hesabu
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -52,12 +51,12 @@ contract Counter {
 
 Kumbuka kwamba:
 
-- **Mstari wa 5**: tunatangaza tukio letu na kile linachojumuisha, thamani ya zamani na thamani mpya.
+- **Mstari wa 6**: tunatangaza tukio letu na kile linachojumuisha, thamani ya zamani na thamani mpya.
 
-- **Mstari wa 13**: Tunapoongeza kigezo chetu cha count, tunatoa tukio.
+- **Mstari wa 14**: Tunapoongeza kigezo chetu cha kuhesabu, tunatoa tukio.
 
-Ikiwa sasa tutasambaza mkataba na kuita kipengele cha increment, tutaona kwamba Remix itaionyesha kiotomatiki ukibofya kwenye muamala mpya ndani ya safu inayoitwa logs.
+Ikiwa sasa tutasambaza mkataba na kuita kipengele cha kuongeza, tutaona kwamba Remix itaionyesha kiotomatiki ukibofya kwenye muamala mpya ndani ya safu inayoitwa logi.
 
-![Remix screenshot](./remix-screenshot.png)
+![Picha ya skrini ya Remix](./remix-screenshot.png)
 
-Logi ni muhimu sana kwa kutatua hitilafu kwenye mikataba mahiri yako lakini pia ni muhimu ikiwa unaunda programu zinazotumiwa na watu tofauti na kurahisisha kufanya uchanganuzi ili kufuatilia na kuelewa jinsi mkataba mahiri wako unavyotumika. Logi zinazozalishwa na miamala zinaonyeshwa kwenye vivinjari maarufu vya vitalu na unaweza pia kwa mfano kuzitumia kuunda hati za nje ya mnyororo kwa ajili ya kusikiliza matukio mahususi na kuchukua hatua yanapotokea.
+Logi ni muhimu sana kwa kutatua hitilafu kwenye mikataba yako mahiri lakini pia ni muhimu ikiwa unaunda programu zinazotumiwa na watu tofauti na kurahisisha kufanya uchanganuzi ili kufuatilia na kuelewa jinsi mkataba wako mahiri unavyotumika. Logi zinazozalishwa na miamala huonyeshwa kwenye vivinjari maarufu vya vitalu na unaweza pia kwa mfano kuzitumia kuunda hati za nje ya mnyororo kwa ajili ya kusikiliza matukio mahususi na kuchukua hatua yanapotokea.

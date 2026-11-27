@@ -1,7 +1,7 @@
 ---
-title: イーサリアムガバナンスの紹介
-metaTitle: イーサリアムガバナンス
-description: イーサリアムに関する意思決定がどのように行われるかについての紹介。
+title: "イーサリアムガバナンスの紹介"
+metaTitle: "イーサリアムガバナンス"
+description: "イーサリアムに関する意思決定はどのように行われるのでしょうか？開発者、ノードオペレーター、そしてコミュニティによって、プロトコルの変更がどのように提案、議論、採用されるのかを学びましょう。"
 lang: ja
 ---
 
@@ -71,7 +71,7 @@ _注: 1人の個人がこれらのグループの複数に属することもあ�
 
 1. **コアEIPの提案**: [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips)に記載されているように、イーサリアムへの変更を公式に提案するための最初のステップは、それをコアEIPに詳細に記述することです。これは、承認された場合にプロトコル開発者が実装するEIPの公式な仕様として機能します。
 
-2. **プロトコル開発者へのEIPの提示**: コミュニティの意見を集めたコアEIPができたら、それをプロトコル開発者に提示する必要があります。これは、[AllCoreDevsコール](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status)での議論のために提案することで行えます。おそらく、[Ethereum Magiciansフォーラム](https://ethereum-magicians.org/)や[イーサリアムR&Dのディスコード](https://discord.gg/mncqtgVSVw)で、すでに非同期的にいくつかの議論が行われていることでしょう。
+2. **プロトコル開発者へのEIPの提示**: コミュニティの意見を集めたコアEIPができたら、それをプロトコル開発者に提示する必要があります。これは、[AllCoreDevsコール](https://eips.ethereum.org/EIPS/eip-7723)での議論のために提案することで行えます。おそらく、[Ethereum Magiciansフォーラム](https://ethereum-magicians.org/)や[イーサリアムR&Dのディスコード](https://discord.gg/mncqtgVSVw)で、すでに非同期的にいくつかの議論が行われていることでしょう。
 
 > この段階での潜在的な結果は以下の通りです。
 

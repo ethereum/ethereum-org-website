@@ -1,7 +1,7 @@
 ---
 title: Agen AI
 metaTitle: Agen AI | Agen AI di Ethereum
-description: Gambaran umum tentang agen AI di Ethereum
+description: Apa itu agen AI di Ethereum? Pelajari bagaimana agen otonom menyimpan aset, berdagang, menggunakan DeFi, dan saling membayar secara onchain, serta risiko yang perlu diwaspadai.
 lang: id
 template: use-cases
 sidebarDepth: 2

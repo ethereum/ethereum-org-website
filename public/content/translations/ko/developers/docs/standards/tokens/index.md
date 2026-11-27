@@ -39,6 +39,6 @@ _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 �
 ## 관련 튜토리얼 {#related-tutorials}
 
 - [토큰 통합 체크리스트](/developers/tutorials/token-integration-checklist/) _– 토큰과 상호작용할 때 고려해야 할 사항들의 체크리스트입니다._
-- [ERC20 토큰 스마트 컨트랙트 이해하기](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– 이더리움 테스트 네트워크에 첫 스마트 컨트랙트를 배포하는 방법에 대한 소개입니다._
-- [Solidity 스마트 컨트랙트에서 ERC20 토큰 전송 및 승인](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity 언어를 사용하여 스마트 컨트랙트로 토큰과 상호작용하는 방법입니다._
-- [ERC721 마켓 구현하기 [방법 안내]](/developers/tutorials/how-to-implement-an-erc721-market/) _– 탈중앙화된 광고 게시판에 토큰화된 아이템을 판매용으로 올리는 방법입니다._
+- [ERC-20 컨트랙트 살펴보기](/developers/tutorials/erc20-annotated-code/) _– 오픈제플린 ERC-20 컨트랙트 구현을 줄 단위로 주석과 함께 살펴봅니다._
+- [Solidity 스마트 컨트랙트에서 ERC-20 토큰 전송 및 승인](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity 언어를 사용하여 스마트 컨트랙트로 토큰과 상호작용하는 방법입니다._
+- [ERC-721 마켓 구현하기 [방법 가이드]](/developers/tutorials/how-to-implement-an-erc721-market/) _– 탈중앙화된 거래 게시판에 토큰화된 아이템을 판매용으로 등록하는 방법입니다._

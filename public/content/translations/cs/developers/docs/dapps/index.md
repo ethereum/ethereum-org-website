@@ -1,6 +1,6 @@
 ---
 title: "Technický úvod do dapp"
-description:
+description: "Technický úvod do dapp: jak decentralizované aplikace kombinují chytré kontrakty na Ethereu s frontendem a jak se liší od webových aplikací."
 lang: cs
 ---
 
@@ -94,10 +94,9 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 - [Úvod do technologického zásobníku Etherea](/developers/docs/ethereum-stack/)
 - [Vývojové frameworky](/developers/docs/frameworks/)
 
-## Návody: Tvorba aplikací a frontendů na Ethereu {#tutorials}
+## Návody: Vytvářejte aplikace a frontendy na Ethereu {#tutorials}
 
-- [Průvodce kontrakty Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Komentovaný průvodce hlavními kontrakty Uniswap v2 vysvětlující, jak funguje automatizovaný tvůrce trhu (AMM)._
+- [Průvodce kontrakty Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Komentovaný průvodce hlavními kontrakty Uniswap v2, který vysvětluje, jak funguje AMM._
 - [Tvorba uživatelského rozhraní pro váš kontrakt](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Jak vytvořit moderní frontend pomocí React + Wagmi, který se připojí k vašemu chytrému kontraktu._
-- [Chytrý kontrakt Hello World pro začátečníky – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Komplexní návod: napište, nasaďte a vytvořte frontend pro jednoduchý chytrý kontrakt._
-- [Serverové komponenty a agenti pro aplikace Web3](/developers/tutorials/server-components/) _– Jak psát serverové komponenty v TypeScriptu, které naslouchají událostem na blockchainu a reagují transakcemi._
-- [IPFS pro decentralizovaná uživatelská rozhraní](/developers/tutorials/ipfs-decentralized-ui/) _– Jak hostovat frontend vaší dapp na IPFS pro odolnost vůči cenzuře._
+- [Serverové komponenty a agenti pro Web3 aplikace](/developers/tutorials/server-components/) _– Jak psát serverové komponenty v TypeScriptu, které naslouchají událostem na blockchainu a reagují transakcemi._
+- [IPFS pro decentralizovaná uživatelská rozhraní](/developers/tutorials/ipfs-decentralized-ui/) _– Jak hostovat frontend vaší dapp na IPFS pro zajištění odolnosti vůči cenzuře._

@@ -56,7 +56,7 @@ Un altro esempio popolare è [SafeMath](https://docs.openzeppelin.com/contracts/
 
 Per facilitare la [componibilità e interoperabilità](/developers/docs/smart-contracts/composability/), la community di Ethereum ha definito diversi standard sotto forma di **ERC**. Puoi leggere di più al riguardo nella sezione degli [standard](/developers/docs/standards/).
 
-Quando includi un ERC come parte dei tuoi contratti, è una buona idea cercare implementazioni standard piuttosto che cercare di crearne di tue. Molte librerie di smart contract includono implementazioni per gli ERC più popolari. Ad esempio, l'onnipresente [standard per token fungibile ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) può essere trovato in [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) e [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Inoltre, alcuni ERC forniscono anche implementazioni canoniche come parte dell'ERC stesso.
+Quando includi un ERC come parte dei tuoi contratti, è una buona idea cercare implementazioni standard piuttosto che cercare di crearne di tue. Molte librerie di smart contract includono implementazioni per gli ERC più popolari. Ad esempio, l'onnipresente [standard per token fungibile ERC-20](/developers/docs/standards/tokens/erc-20/) può essere trovato in [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) e [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Inoltre, alcuni ERC forniscono anche implementazioni canoniche come parte dell'ERC stesso.
 
 Vale la pena menzionare che alcuni ERC non sono a sé stanti, ma sono aggiunte ad altri ERC. Ad esempio, l'[ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) aggiunge un'estensione all'ERC-20 per migliorarne l'usabilità.
 
@@ -109,8 +109,7 @@ Infine, quando decidi se includere una libreria, considera il suo utilizzo compl
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Considerazioni sulla sicurezza per gli sviluppatori di Ethereum](/developers/docs/smart-contracts/security/) _– Un tutorial sulle considerazioni di sicurezza durante la creazione di smart contract, incluso l'uso delle librerie._
-- [Comprendere lo smart contract del token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Tutorial sullo standard ERC-20, fornito da diverse librerie._
+- [Considerazioni sulla sicurezza per gli sviluppatori di Ethereum](/developers/docs/smart-contracts/security/) _– Un tutorial sulle considerazioni sulla sicurezza durante la creazione di smart contract, incluso l'uso delle librerie._
 
 ## Letture consigliate {#further-reading}
 

@@ -66,7 +66,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 **Infura -** **_Die Ethereum-API als Service._**
 
 - [infura.io](https://infura.io)
-- [Dokumentation](https://docs.infura.io/api)
+- [Dokumentation](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Kostengünstiger JSON-RPC-Anbieter für die Virtuelle Ethereum-Maschine (EVM)_**
@@ -77,7 +77,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 **NOWNodes - _Vollständige Knoten und Block-Explorer._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Dokumentation](https://nownodes.gitbook.io/documentation)
+- [Dokumentation](https://docs.nownodes.io/)
 
 **QuickNode -** **_Blockchain-Infrastruktur als Service._**
 
@@ -176,7 +176,6 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 
 - [moralis.io](https://moralis.io)
 - [Dokumentation](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
@@ -199,7 +198,7 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 - [Dokumentation](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_Echtzeit-API für angereicherte Blockchain-Daten über Dutzende von Chains hinweg._**
+**Codex -** **_Angereicherte Echtzeit-Blockchain-Daten-API über Dutzende von Chains hinweg._**
 
 - [codex.io](https://www.codex.io/)
 - [Dokumentation](https://docs.codex.io)
@@ -210,10 +209,9 @@ Diese Bibliotheken abstrahieren einen Großteil der Komplexität der direkten In
 **Covalent -** **_Angereicherte Blockchain-APIs für über 200 Chains._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Dokumentation](https://www.covalenthq.com/docs/api/)
+- [Dokumentation](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Weiterführende Literatur {#further-reading}
 
@@ -226,5 +224,4 @@ _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie die
 
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Web3.js einrichten, um die Ethereum-Blockchain in JavaScript zu nutzen](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Anleitung zur Einrichtung von Web3.js in Ihrem Projekt._
-- [Einen Smart Contract aus JavaScript aufrufen](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Sehen Sie am Beispiel des DAI-Tokens, wie man Vertragsfunktionen mit JavaScript aufruft._
+- [Serverkomponenten und Agenten für Web3-Apps](/developers/tutorials/server-components/) _– Wie man TypeScript-Serverkomponenten schreibt, die auf Blockchain-Ereignisse hören und mit Transaktionen antworten._

@@ -40,18 +40,18 @@ Lekkie klienty mogłyby również posłużyć do ulepszenia portfeli Ethereum. Z
 
 ## Jaki jest obecny stan rozwoju lekkich klientów? {#current-state-of-development}
 
-W fazie rozwoju znajduje się kilka lekkich klientów, w tym lekkie klienty warstwy wykonawczej, konsensusu oraz połączone lekkie klienty warstwy wykonawczej i konsensusu. Oto implementacje lekkich klientów, o których wiemy w momencie pisania tej strony:
+W fazie rozwoju znajduje się kilka lekkich klientów, w tym klienty warstwy wykonawczej, konsensusu oraz połączone lekkie klienty warstwy wykonawczej i konsensusu. Oto implementacje lekkich klientów, o których wiemy w momencie pisania tej strony:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): lekki klient konsensusu w języku TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): lekki klient konsensusu w języku TypeScript
 - [Helios](https://github.com/a16z/helios): połączony lekki klient warstwy wykonawczej i konsensusu w języku Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): tryb lekki dla klienta warstwy wykonawczej (w fazie rozwoju) w języku Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): lekki klient konsensusu w języku Nim
 
-Zgodnie z naszą wiedzą, żaden z nich nie jest jeszcze uważany za gotowy do wdrożenia produkcyjnego.
+Zgodnie z naszą wiedzą, żaden z nich nie jest jeszcze uważany za gotowy do użytku produkcyjnego.
 
-Trwa również wiele prac nad ulepszeniem sposobów, w jakie lekkie klienty mogą uzyskiwać dostęp do danych Ethereum. Obecnie lekkie klienty opierają się na żądaniach RPC do pełnych węzłów przy użyciu modelu klient-serwer, ale w przyszłości dane mogłyby być żądane w bardziej zdecentralizowany sposób przy użyciu dedykowanej sieci, takiej jak [Portal Network](https://www.ethportal.net/), która mogłaby dostarczać dane do lekkich klientów za pomocą protokołu plotkowania peer-to-peer.
+Trwa również wiele prac nad ulepszeniem sposobów, w jakie lekkie klienty mogą uzyskiwać dostęp do danych Ethereum. Obecnie lekkie klienty opierają się na żądaniach RPC do pełnych węzłów przy użyciu modelu klient-serwer. Sieć [Portal Network](/developers/docs/networking-layer/portal-network/) została pierwotnie zaprojektowana do dostarczania tych danych do lekkich klientów za pośrednictwem sieci peer-to-peer, ale jej rozwój skupia się teraz na udostępnianiu historii przeszłych bloków.
 
-Inne elementy [mapy drogowej](/roadmap/), takie jak [drzewa Verkle](/roadmap/verkle-trees/) i [bezstanowość](/roadmap/statelessness/), ostatecznie zrównają gwarancje bezpieczeństwa lekkich klientów z gwarancjami pełnych klientów.
+Inne elementy [mapy drogowej](/roadmap/), takie jak nowe drzewo stanu (obecnie proponowane jako drzewo binarne w [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) oraz [bezstanowość](/roadmap/statelessness/), ostatecznie zrównają gwarancje bezpieczeństwa lekkich klientów z gwarancjami pełnych klientów.
 
 ## Dalsza lektura {#further-reading}
 

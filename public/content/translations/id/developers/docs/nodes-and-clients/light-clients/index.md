@@ -40,18 +40,18 @@ Klien ringan juga dapat digunakan untuk meningkatkan dompet Ethereum. Alih-alih 
 
 ## Bagaimana status pengembangan klien ringan saat ini? {#current-state-of-development}
 
-Ada beberapa klien ringan dalam pengembangan, termasuk klien eksekusi, konsensus, dan klien ringan gabungan eksekusi/konsensus. Berikut adalah implementasi klien ringan yang kami ketahui pada saat penulisan halaman ini:
+Ada beberapa klien ringan yang sedang dalam pengembangan, termasuk klien ringan eksekusi, konsensus, dan gabungan eksekusi/konsensus. Berikut adalah implementasi klien ringan yang kami ketahui pada saat penulisan halaman ini:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): klien konsensus ringan dalam TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): klien ringan konsensus dalam TypeScript
 - [Helios](https://github.com/a16z/helios): klien ringan gabungan eksekusi dan konsensus dalam Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): mode ringan untuk klien eksekusi (dalam pengembangan) dalam Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): klien konsensus ringan dalam Nim
+- [Nimbus](https://nimbus.guide/el-light-client.html): klien ringan konsensus dalam Nim
 
-Sepengetahuan kami, belum ada satu pun dari klien ini yang dianggap siap produksi.
+Sepengetahuan kami, belum ada satu pun dari implementasi ini yang dianggap siap untuk produksi.
 
-Ada juga banyak pekerjaan yang sedang dilakukan untuk meningkatkan cara klien ringan dapat mengakses data Ethereum. Saat ini, klien ringan bergantung pada permintaan RPC ke full node menggunakan model klien/server, tetapi di masa depan data dapat diminta dengan cara yang lebih terdesentralisasi menggunakan jaringan khusus seperti [Portal Network](https://www.ethportal.net/) yang dapat menyajikan data ke klien ringan menggunakan protokol gosip peer-to-peer.
+Ada juga banyak pekerjaan yang sedang dilakukan untuk meningkatkan cara klien ringan dapat mengakses data Ethereum. Saat ini, klien ringan bergantung pada permintaan RPC ke full node menggunakan model klien/server. [Portal Network](/developers/docs/networking-layer/portal-network/) pada awalnya dirancang untuk menyajikan data ini kepada klien ringan melalui jaringan peer-to-peer, tetapi pengembangannya sekarang berfokus pada penyajian riwayat blok masa lalu.
 
-Item [peta jalan](/roadmap/) lainnya seperti [Pohon Verkle](/roadmap/verkle-trees/) dan [ketiadaan state](/roadmap/statelessness/) pada akhirnya akan membawa jaminan keamanan klien ringan setara dengan klien penuh.
+Item [peta jalan](/roadmap/) lainnya seperti pohon state baru (saat ini diusulkan sebagai pohon biner dalam [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) dan [ketiadaan state](/roadmap/statelessness/) pada akhirnya akan membawa jaminan keamanan klien ringan setara dengan klien penuh.
 
 ## Bacaan lebih lanjut {#further-reading}
 

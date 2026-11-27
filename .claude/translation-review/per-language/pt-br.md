@@ -1,5 +1,25 @@
 # Brazilian Portuguese (pt-br) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.8/10
+Scope: 71 markdown pages + 19 JSON namespaces (incremental updates, changed lines only; sampled ~25 pages and all JSON diffs). 3 critical, 0 build-breakers; verify-structure errors (data-and-analytics heading-count, anatomy python fences, erc-4626 heading-count) all pre-exist on dev.
+
+**Fixed in this branch:**
+
+- Bare `gas` -> `gás` (glossary): intro-to-ethereum description, `learn-quizzes.json` gas-2-c-explanation (`economizar no gás`), `page-resources.json` ethgastracker (`preços do gás`)
+- `glossary.json` `shielded-pool-term` `Pool blindada` -> `Pool blindado` (matches glossary-tooltip and the `pools blindados` tree form)
+
+**Open (native call needed):**
+
+- `glossary.json` byzantium-fork-definition `o EIP-649` (masculine) vs the tree's `a EIP`
+- bridges docs `podem fazer bridge entre eles` (glossary lists `fazer bridge` as a note-level alternative to `transferir via ponte`)
+- `page-get-eth-p2p-trusted-desc` mixes `Concordem` (plural) with `compartilhe`/`pague` (singular)
+- `Ethereum` gender drifts (`da Ethereum` in fusaka description vs `do Ethereum` elsewhere)
+- 19 untranslated image alts (pre-existing; verify-structure `img-alt-untranslated`)
+
+**Notes:**
+
+- No U+3002, U+2060 or foreign-script hits. No added long-form acronym expansions (`camada 2 (L2)` is the glossary form with capitals restored). Tool names (ETHBEAT, Lodestar, Slither, Echidna) stay Latin.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `Maquina Virtual Ethereum (EVM)` expanded in 16 dev-tools values where English has bare `EVM` (#112); `bond` kept English in labels.
 

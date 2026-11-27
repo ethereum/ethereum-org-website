@@ -1,7 +1,7 @@
 ---
-title: Ethereum yönetişimine giriş
-metaTitle: Ethereum Yönetişimi
-description: Ethereum hakkındaki kararların nasıl alındığına dair bir giriş.
+title: "Ethereum yönetişimine giriş"
+metaTitle: "Ethereum Yönetişimi"
+description: "Ethereum hakkındaki kararlar nasıl alınıyor? Protokol değişikliklerinin geliştiriciler, düğüm operatörleri ve topluluk tarafından nasıl önerildiğini, tartışıldığını ve kabul edildiğini öğrenin."
 lang: tr
 ---
 
@@ -71,7 +71,7 @@ Ethereum protokolünde değişiklikler yapmak için resmi süreç aşağıdaki g
 
 1. **Bir Çekirdek EIP Önerin**: [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips)'de açıklandığı gibi, Ethereum'da resmi olarak bir değişiklik önermenin ilk adımı, bunu bir Çekirdek EIP'de detaylandırmaktır. Bu, kabul edildiği takdirde Protokol Geliştiricilerinin uygulayacağı bir EIP için resmi spesifikasyon görevi görecektir.
 
-2. **EIP'nizi Protokol Geliştiricilerine Sunun**: topluluktan geri bildirim topladığınız bir Çekirdek EIP'niz olduğunda, bunu Protokol Geliştiricilerine sunmalısınız. Bunu, bir [AllCoreDevs çağrısında](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status) tartışmaya sunarak yapabilirsiniz. Muhtemelen bazı tartışmalar [Ethereum Magicians forumunda](https://ethereum-magicians.org/) veya [Ethereum Ar-Ge Discord'unda](https://discord.gg/mncqtgVSVw) eşzamansız olarak zaten gerçekleşmiş olacaktır.
+2. **EIP'nizi Protokol Geliştiricilerine Sunun**: topluluktan geri bildirim topladığınız bir Çekirdek EIP'niz olduğunda, bunu Protokol Geliştiricilerine sunmalısınız. Bunu, bir [AllCoreDevs çağrısında](https://eips.ethereum.org/EIPS/eip-7723) tartışmaya sunarak yapabilirsiniz. Muhtemelen bazı tartışmalar [Ethereum Magicians forumunda](https://ethereum-magicians.org/) veya [Ethereum Ar-Ge Discord'unda](https://discord.gg/mncqtgVSVw) eşzamansız olarak zaten gerçekleşmiş olacaktır.
 
 > Bu aşamanın olası sonuçları şunlardır:
 

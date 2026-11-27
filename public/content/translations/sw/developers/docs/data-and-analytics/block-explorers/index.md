@@ -21,12 +21,13 @@ Unapaswa kuelewa dhana za msingi za Ethereum ili uweze kuelewa data ambayo kichu
 
 ## Huduma {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - Kichunguzi cha faragha cha Ethereum. Pia kwa kupanga na kuchuja data ya (mempool). Inapatikana kwa Kihispania, Kifaransa, Kiitaliano, Kiholanzi, Kireno, Kirusi, Kichina, na Kifarsi
+- [Blockchair](https://blockchair.com/ethereum) - Kichunguzi cha faragha cha Ethereum. Pia kwa ajili ya kupanga na kuchuja data ya (mempool). Inapatikana kwa Kihispania, Kifaransa, Kiitaliano, Kiholanzi, Kireno, Kirusi, Kichina, na Kifarsi
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - Pia inapatikana kwa Kichina, Kikorea, Kirusi, na Kijapani
 - [Ethplorer](https://ethplorer.io/) - Kichunguzi cha bloku kinacholenga tokeni. Pia inapatikana kwa Kichina, Kihispania, Kifaransa, Kituruki, Kirusi, Kikorea na Kivietinamu
+- [Ethscanner](https://ethscanner.io/) - Imeundwa na Routescan. Huchangia mikataba iliyothibitishwa kwenye seti ya data wazi ya Verifier Alliance na kuonyesha miamala ya mtambuko-mnyororo
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

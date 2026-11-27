@@ -171,16 +171,15 @@ Les [bibliothèques de portefeuilles et les outils de connexion](/developers/doc
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Appeler un contrat intelligent depuis JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Envoyer des transactions en utilisant Web3.js et Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Comment voir votre NFT dans votre portefeuille](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Lectures complémentaires {#further-reading}
 
 - [Documentation de Viem : Lire et écrire dans des contrats](https://viem.sh/docs/contract/readContract)
-- [Documentation d'ethers.js : Contrats](https://docs.ethers.org/v6/api/contract/)
+- [Documentation d'Ethers.js : Contrats](https://docs.ethers.org/v6/api/contract/)
 - [Spécification de l'ABI Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [Qu'est-ce qu'une ABI ? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Comment fonctionnent les ABI de contrats intelligents ? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Sujets connexes {#related-topics}
 

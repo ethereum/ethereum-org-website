@@ -1,14 +1,14 @@
 ---
 title: Adicionando camadas 2
-description: A política que usamos ao adicionar uma camada 2 ao ethereum.org
+description: "A política que usamos ao adicionar uma camada 2 ao ethereum.org"
 lang: pt-br
 ---
 
-Queremos garantir que listamos os melhores recursos possíveis para que os usuários possam navegar no espaço da camada 2 (l2) de maneira segura e confiante.
+Queremos garantir que listamos os melhores recursos possíveis para que os usuários possam navegar no espaço da camada 2 (L2) de maneira segura e confiante.
 
 Qualquer pessoa é livre para sugerir a adição de uma camada 2 no ethereum.org. Se houver uma camada 2 que deixamos passar, **[por favor, sugira-a](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-Atualmente, listamos l2s nas seguintes páginas:
+Atualmente, listamos L2s nas seguintes páginas:
 
 - [Rollups otimistas](/developers/docs/scaling/optimistic-rollups/)
 - [Rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/)
@@ -20,10 +20,10 @@ A camada 2 é um paradigma relativamente novo e empolgante para o Ethereum. Tent
 
 ### Critérios de inclusão: os requisitos obrigatórios {#criteria-for-inclusion-the-must-haves}
 
-**Listagem no L2BEAT**
+**Listagem no ETHBEAT**
 
-- Para ser considerado, este projeto deve estar listado no [L2BEAT](https://l2beat.com). O L2BEAT fornece uma avaliação de risco robusta de projetos de camada 2 na qual nos baseamos para avaliar projetos de l2. **Se o projeto não estiver em destaque no L2BEAT, não o listaremos como uma l2 no ethereum.org.**
-- [Aprenda como adicionar seu projeto de l2 ao L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Para ser considerado, este projeto deve estar listado no [ETHBEAT](https://ethbeat.org). O ETHBEAT fornece uma avaliação de risco robusta de projetos de camada 2 na qual nos baseamos para avaliar projetos de L2. **Se o projeto não estiver em destaque no ETHBEAT, não o listaremos como uma L2 no ethereum.org.**
+- [Aprenda como adicionar seu projeto de L2 ao ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Código aberto**
 
@@ -40,15 +40,15 @@ _Não consideramos outras soluções de escalabilidade que não usam o Ethereum 
 
 **Ethereum para disponibilidade de dados**
 
-- A disponibilidade de dados é um importante fator de diferenciação entre outras soluções de escalabilidade e a camada 2. Um projeto **deve** usar a Rede Principal do Ethereum para disponibilidade de dados para ser considerado para listagem.
+- A disponibilidade de dados é um fator de diferenciação importante entre outras soluções de escalabilidade e a camada 2. Um projeto **deve** usar a Rede Principal do Ethereum para disponibilidade de dados para ser considerado para listagem.
 
 **Pontes**
 
 - Como os usuários conseguem ingressar na camada 2?
 
-**Data em que o projeto foi lançado**
+**Data em que o projeto entrou no ar**
 
-- Uma camada 2 que está "ativa" na Mainnet há mais de 6 meses
+- Uma camada 2 que esteja "ativa" na Mainnet há mais de 6 meses
 
 - Projetos mais recentes que não foram testados na prática pelos usuários têm menos probabilidade de serem listados.
 
@@ -84,7 +84,7 @@ _Não consideramos outras soluções de escalabilidade que não usam o Ethereum 
 
 **Suporte nativo de carteira**
 
-- Alguma carteira suporta a l2 nativamente?
+- Alguma carteira suporta a L2 nativamente?
 
 ## Adicione sua camada 2 {#add-exchange}
 

@@ -39,13 +39,13 @@ Dla użytkowników [ostateczność](/glossary/#finality) to moment, w którym tr
 
 <ButtonLink variant="outline" href="/roadmap/single-slot-finality/">Więcej o badaniach nad szybszą ostatecznością</ButtonLink>
 
-## Odporni walidatorzy {#resilient-validators}
+## Odporne walidatory {#resilient-validators}
 
-Walidator to zazwyczaj jedna maszyna przechowująca jeden klucz do podpisywania. **Technologia rozproszonych walidatorów (DVT)** zastępuje tę pojedynczą maszynę komitetem maszyn, które współdzielą klucz i wspólnie składają podpis, dzięki czemu awaria jednego komputera lub kradzież jednego klucza nie powoduje wyłączenia walidatora. DVT działa w środowisku produkcyjnym i jest używane przez operatorów stakingu na dużą skalę. W styczniu 2026 roku Vitalik Buterin przedstawił uproszczony wariant na poziomie protokołu o nazwie DVT-lite; jest to wczesna propozycja bez zaplanowanego rozwidlenia.
+Walidator to zazwyczaj jedna maszyna przechowująca jeden klucz do podpisywania. **Technologia rozproszonych walidatorów (DVT)** zastępuje tę pojedynczą maszynę komitetem maszyn, które współdzielą klucz i podpisują wspólnie, dzięki czemu awaria jednego komputera lub kradzież jednego klucza nie powoduje wyłączenia walidatora. DVT działa w środowisku produkcyjnym i jest używana przez operatorów stakingu na dużą skalę. W styczniu 2026 roku Vitalik Buterin zaproponował uproszczony wariant na poziomie protokołu o nazwie DVT-lite; jest to wczesna propozycja bez zaplanowanego rozwidlenia.
 
-Sieć chroni się również poprzez [różnorodność klientów](/developers/docs/nodes-and-clients/client-diversity/): Ethereum działa na kilku niezależnie zbudowanych implementacjach oprogramowania, więc błąd w jednym kliencie nie powoduje awarii reszty sieci.
+Sieć chroni się również poprzez [różnorodność klientów](/developers/docs/nodes-and-clients/client-diversity/): Ethereum działa na kilku niezależnie zbudowanych implementacjach oprogramowania, więc błąd w jednym kliencie nie wpływa na działanie reszty sieci.
 
-Dwa wcześniejsze pomysły badawcze, view-merge i tajny wybór lidera, nie są już aktywnymi elementami mapy drogowej.
+Dwa wcześniejsze pomysły badawcze, view-merge i [tajny wybór lidera](/roadmap/secret-leader-election/), nie są już aktywnymi elementami mapy drogowej.
 
 <ButtonLink variant="outline" href="/staking/dvt/">Więcej o technologii rozproszonych walidatorów</ButtonLink>
 
@@ -71,21 +71,21 @@ Nie. Obecnie żaden komputer kwantowy nie jest w stanie złamać kryptografii Et
 
 ## Prostszy i bardziej wydajny protokół {#simpler-and-more-efficient-protocol}
 
-Złożoność stwarza okazje do powstawania błędów i luk w zabezpieczeniach. Część mapy drogowej skupia się na **uproszczeniu Ethereum i usunięciu długu technologicznego**, aby protokół był łatwiejszy w utrzymaniu, audytowaniu i analizowaniu. Prostszy protokół daje również atakującym mniejszą powierzchnię do badania.
+Złożoność stwarza okazje do powstawania błędów i luk w zabezpieczeniach. Część mapy drogowej skupia się na **upraszczaniu Ethereum i usuwaniu długu technologicznego**, aby protokół był łatwiejszy w utrzymaniu, audytowaniu i zrozumieniu. Prostszy protokół daje również atakującym mniejszą powierzchnię do badania.
 
 Dostarczone do tej pory:
 
-- **[Pectra (maj 2025)](/roadmap/pectra/)**: Wprowadzono EIP-7702, który pozwala kontom zewnętrznym tymczasowo delegować uprawnienia do kodu inteligentnego kontraktu, co jest krokiem w kierunku pełnej abstrakcji konta.
-- **[Fusaka (grudzień 2025)](/roadmap/fusaka/)**: Wdrożono PeerDAS (EIP-7594), który rozdziela obciążenie związane z dostępnością danych w całej sieci. Zwiększono również parametry blobów, zwiększając przepustowość danych dla rollupów.
-- **[Dencun (marzec 2024)](/roadmap/dencun/)**: Wprowadzono transakcje typu blob (EIP-4844) w celu obniżenia kosztów danych rollupów oraz ograniczono `SELFDESTRUCT` (EIP-6780), aby usunąć długotrwałe źródło złożoności.
-- **[Shapella (kwiecień 2023)](/staking/withdrawals/)**: Umożliwiono walidatorom wypłatę stakowanego ETH (EIP-4895), usuwając wczesne ograniczenie stakingu opartego na [dowodzie stawki (PoS)](/glossary/#pos).
+- **[Pectra (maj 2025)](/roadmap/pectra/)**: Wprowadzono EIP-7702, który pozwala kontom zewnętrznym na tymczasowe delegowanie do kodu inteligentnego kontraktu, co jest krokiem w kierunku pełnej abstrakcji konta.
+- **[Fusaka (grudzień 2025)](/roadmap/fusaka/)**: Wdrożono PeerDAS (EIP-7594), który rozkłada obciążenie związane z dostępnością danych w całej sieci. Zwiększono również parametry blobów, zwiększając przepustowość danych dla rollupów.
+- **[Dencun (marzec 2024)](/roadmap/dencun/)**: Wprowadzono transakcje z blobami (EIP-4844) w celu obniżenia kosztów danych rollupów oraz ograniczono `SELFDESTRUCT` (EIP-6780), aby usunąć długotrwałe źródło złożoności.
+- **[Shapella (kwiecień 2023)](/staking/withdrawals/)**: Umożliwiono walidatorom wypłacanie stakowanego ETH (EIP-4895), usuwając wczesne ograniczenie stakingu w [dowodzie stawki (PoS)](/glossary/#pos).
 - **London (sierpień 2021)**: Przebudowano wycenę gazu za pomocą EIP-1559, wprowadzając opłatę podstawową i mechanizm spalania w celu uzyskania bardziej przewidywalnych kosztów transakcji.
 
 W toku:
 
-- **Glamsterdam (planowane na 2026)**: Głównymi elementami są ePBS (EIP-7732) i listy dostępu na poziomie bloku (EIP-7928), rozważana jest również zmiana wyceny gazu.
-- **Hegotá (planowane na 2027)**: FOCIL (EIP-7805) jest głównym elementem warstwy konsensusu. Rozważane do włączenia: EIP-8141 (natywna abstrakcja konta).
-- **Trwające**: Wysiłki mające na celu uproszczenie [EVM](/developers/docs/evm/), harmonizację implementacji klientów i wycofywanie przestarzałych funkcji są kontynuowane przez zespoły klientów. Prace nad bezstanowością (pozwalającą uczestnikom na weryfikację łańcucha bez przechowywania wszystkich jego danych) są przeprojektowywane w oparciu o odporne na ataki kwantowe binarne drzewa hashy, a ostateczne podejście nie zostało jeszcze potwierdzone.
+- **Glamsterdam (planowana na 2026 rok)**: Głównymi elementami są ePBS (EIP-7732) i listy dostępu na poziomie bloku (EIP-7928), rozważana jest również zmiana wyceny gazu.
+- **Hegotá (planowana na 2027 rok)**: FOCIL (EIP-7805) to główny element warstwy konsensusu. Rozważane do włączenia: EIP-8141 (natywna abstrakcja konta).
+- **Bieżące**: Wysiłki mające na celu uproszczenie [EVM](/developers/docs/evm/), harmonizację implementacji klientów i wycofywanie przestarzałych funkcji są kontynuowane przez zespoły klientów. Prace nad [bezstanowością](/roadmap/statelessness/) (pozwalającą uczestnikom na weryfikację łańcucha bez przechowywania wszystkich jego danych) są przeprojektowywane w oparciu o bezpieczne kwantowo binarne drzewa hashów, które zastąpiłyby wcześniejszy projekt [drzewa Verkle](/roadmap/verkle-trees/). Ostateczne podejście nie zostało jeszcze potwierdzone.
 
 ## Obecny postęp {#current-progress}
 

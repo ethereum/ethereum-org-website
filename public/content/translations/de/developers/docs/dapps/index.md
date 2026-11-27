@@ -1,6 +1,6 @@
 ---
 title: "Technische Einführung in Dapps"
-description: 
+description: "Eine technische Einführung in Dapps: wie dezentrale Anwendungen Smart Contracts auf Ethereum mit einem Frontend kombinieren und wie sie sich von Web-Apps unterscheiden."
 lang: de
 ---
 
@@ -97,8 +97,7 @@ _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie die
 
 ## Tutorials: Apps und Frontends auf Ethereum erstellen {#tutorials}
 
-- [Uniswap-v2 Contract Walk-Through](/developers/tutorials/uniswap-v2-annotated-code/) _– Ein kommentierter Durchlauf der Uniswap v2 Core-Verträge, der erklärt, wie der Automatisierte Market Maker (AMM) funktioniert._
-- [Erstellen einer Benutzeroberfläche für Ihren Vertrag](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Wie man ein modernes React + Wagmi-Frontend erstellt, das sich mit Ihrem Smart Contract verbindet._
-- [Hello World Smart Contract für Anfänger – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– End-to-End-Tutorial: Schreiben, Bereitstellen und Erstellen eines Frontends für einen einfachen Smart Contract._
-- [Serverkomponenten und Agenten für Web3-Apps](/developers/tutorials/server-components/) _– Wie man TypeScript-Serverkomponenten schreibt, die auf Blockchain-Ereignisse hören und mit Transaktionen reagieren._
-- [IPFS für dezentrale Benutzeroberflächen](/developers/tutorials/ipfs-decentralized-ui/) _– Wie Sie das Frontend Ihrer Dapp auf IPFS hosten, um Zensurresistenz zu erreichen._
+- [Walkthrough für Uniswap-v2-Verträge](/developers/tutorials/uniswap-v2-annotated-code/) _– Ein kommentierter Walkthrough der Uniswap-v2-Kernverträge, der erklärt, wie der AMM funktioniert._
+- [Erstellen einer Benutzeroberfläche für Ihren Vertrag](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Wie man ein modernes React- und Wagmi-Frontend erstellt, das sich mit Ihrem Smart Contract verbindet._
+- [Serverkomponenten und Agenten für Web3-Apps](/developers/tutorials/server-components/) _– Wie man TypeScript-Serverkomponenten schreibt, die auf Blockchain-Ereignisse lauschen und mit Transaktionen reagieren._
+- [IPFS für dezentrale Benutzeroberflächen](/developers/tutorials/ipfs-decentralized-ui/) _– Wie Sie das Frontend Ihrer Dapp für Zensurresistenz auf IPFS hosten._

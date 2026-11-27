@@ -1,5 +1,29 @@
 # Polish (pl) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.1/10
+Scope: 19 JSON namespaces (diffs read in full) + 71 markdown pages (diffs read in full, changed lines only). 6 critical fixed, 0 open critical.
+
+**Fixed in this branch:**
+
+- `glossary.json` `byzantium-fork-definition`: English fragment `Difficulty Bomb Delay and Block Reward Reduction` left in the Polish sentence -> `czyli opóźnienie bomby trudności i zmniejszenie nagrody za blok`
+- `glossary.json` `shielded-pool-term` `Pula osłonięta` -> `Osłonięta pula` (matches glossary-tooltip.json)
+- `page-layer-2-networks.json` `page-layer-2-networks-main-network` `Główna sieć` -> `Sieć główna` (ETHGlossary mainnet)
+- `verifying/index.md`: `binarnego interfejsu aplikacji (ABI)` and 2x `interfejsu programowania aplikacji (API)` expansions reverted to bare `ABI` / `API` (English is bare)
+- `programming-languages/javascript/index.md` heading `klienty` -> `klienci`
+- `page-get-eth.json` `page-get-eth-p2p-trusted-desc` `Ustalcie` (2nd plural) -> `Ustal` (rest of sentence is 2nd singular)
+
+**Open (warnings):**
+
+- `walidatory`/`walidatorzy` wobble: `roadmap/security` heading `Odporne walidatory` (was `Odporni walidatorzy`)
+- `developers/docs/bridges` reading list: external article titles reverted from Polish to the English originals (matches en)
+- `about/index.md` `Śledź postępy w Figma` (was `w Figmie`, uninflected); `a-developers-guide-to-ethereum-part-one` `Na twoim komputerze` lowercase `twoim`
+- `contributing/index.md` `technologiami open-source i sanctuary` leaves `sanctuary` bare
+
+**Notes:**
+
+- ETHGlossary `non-fungible token` = `niewymienny token` vs `fungible token` = `token zamienny` (inconsistent pair); the repo uses both `niewymienny` (glossary, nft page) and `niezamienny` (older pages). Not changed.
+- No U+3002, U+2060 or foreign-script characters in changed lines.
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `pretendent` for challenger (claimant sense; `kwestionujacy` reads better), `Wszystkie {steps} krokow ... jest` agreement, `Budowniczowie` per glossary `budowniczy`.
 

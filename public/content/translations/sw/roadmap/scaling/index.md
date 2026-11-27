@@ -7,7 +7,7 @@ alt: "Ramani ya njia ya Ethereum"
 template: roadmap
 ---
 
-Uwezo wa Ethereum unaongezwa kwa kutumia [matabaka ya 2](/layer-2/#rollups) (pia inajulikana kama mikusanyiko), ambayo huweka miamala pamoja na kutuma matokeo kwenye Ethereum. Ingawa mikusanyiko ni nafuu hadi mara nane zaidi ya Mtandao Mkuu wa Ethereum, inawezekana kuboresha mikusanyiko zaidi ili kupunguza gharama kwa watumiaji wa mwisho. Mikusanyiko pia inategemea baadhi ya vijenzi vilivyowekwa kati ambavyo wasanidi wanaweza kuviondoa kadiri mikusanyiko inavyokomaa.
+Uwezo wa Ethereum unaongezwa kwa kutumia [matabaka ya 2](/layer-2/learn/#how-does-layer-2-work) (pia inajulikana kama mikusanyiko), ambayo huweka miamala pamoja na kutuma matokeo kwenye Ethereum. Ingawa mikusanyiko ni nafuu hadi mara nane zaidi ya Mtandao Mkuu wa Ethereum, inawezekana kuboresha mikusanyiko zaidi ili kupunguza gharama kwa watumiaji wa mwisho. Mikusanyiko pia inategemea baadhi ya vijenzi vilivyowekwa kati ambavyo wasanidi wanaweza kuviondoa kadiri mikusanyiko inavyokomaa.
 
 <Alert variant="update">
 <AlertContent>
@@ -43,9 +43,15 @@ Hatua hii ya pili inajulikana kama ["danksharding"](/roadmap/danksharding/). Kaz
 
 ## Kugawa madaraka ya mikusanyiko {#decentralizing-rollups}
 
-[Mikusanyiko](/layer-2) tayari inaongeza uwezo wa Ethereum. [Mfumo ikolojia tajiri wa miradi ya rollup](https://l2beat.com/scaling/tvs) unawawezesha watumiaji kufanya miamala haraka na kwa bei nafuu, kukiwa na anuwai ya hakikisho la usalama. Hata hivyo, mikusanyiko imeanzishwa kwa kutumia mipangaji iliyowekwa kati (kompyuta zinazofanya uchakataji wote wa miamala na ujumuishaji kabla ya kuiwasilisha kwenye Ethereum). Hii iko hatarini kudhibitiwa, kwa sababu waendeshaji wa mpangaji wanaweza kuwekewa vikwazo, kuhongwa au kuathiriwa kwa njia nyingine. Wakati huo huo, [mikusanyiko inatofautiana](https://l2beat.com/scaling/summary) katika jinsi inavyothibitisha data inayoingia. Njia bora ni kwa "wathibitishaji" kuwasilisha [uthibitisho wa ulaghai](/glossary/#fraud-proof) au uthibitisho wa uhalali, lakini si mikusanyiko yote imefikia hapo bado. Hata ile mikusanyiko inayotumia uthibitisho wa uhalali/ulaghai hutumia kundi dogo la wathibitishaji wanaojulikana. Kwa hivyo, hatua muhimu inayofuata katika kuongeza uwezo wa Ethereum ni kusambaza jukumu la kuendesha mipangaji na wathibitishaji kwa watu wengi zaidi.
+[Mikusanyiko](/layer-2) tayari inaongeza uwezo wa Ethereum. [Mfumo ikolojia tajiri wa miradi ya rollup](https://ethbeat.org/layer2s/tvs) unawawezesha watumiaji kufanya miamala haraka na kwa bei nafuu, kukiwa na anuwai ya hakikisho la usalama. Hata hivyo, mikusanyiko imeanzishwa kwa kutumia mipangaji iliyowekwa kati (kompyuta zinazofanya uchakataji wote wa miamala na ujumuishaji kabla ya kuiwasilisha kwenye Ethereum). Hii iko hatarini kudhibitiwa, kwa sababu waendeshaji wa mpangaji wanaweza kuwekewa vikwazo, kuhongwa au kuathiriwa kwa njia nyingine. Wakati huo huo, [mikusanyiko inatofautiana](https://ethbeat.org/layer2s/summary) katika jinsi inavyothibitisha data inayoingia. Njia bora ni kwa "wathibitishaji" kuwasilisha [uthibitisho wa ulaghai](/glossary/#fraud-proof) au uthibitisho wa uhalali, lakini si mikusanyiko yote imefikia hapo bado. Hata ile mikusanyiko inayotumia uthibitisho wa uhalali/ulaghai hutumia kundi dogo la wathibitishaji wanaojulikana. Kwa hivyo, hatua muhimu inayofuata katika kuongeza uwezo wa Ethereum ni kusambaza jukumu la kuendesha mipangaji na wathibitishaji kwa watu wengi zaidi.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Zaidi kuhusu mikusanyiko</ButtonLink>
+
+## Kuongeza Uwezo wa Mtandao Mkuu wa Ethereum kwa zkEVM {#zkevm}
+
+Mikusanyiko sio njia pekee ya kuongeza uwezo. Leo kila [mthibitishaji](/glossary/#validator) hutekeleza upya kila muamala katika kila kitalu, jambo ambalo linazuia kiasi ambacho Mtandao Mkuu wa Ethereum unaweza kuchakata bila kuongeza mahitaji ya maunzi. Kwa zkEVM, mthibitishaji mmoja hutekeleza kitalu na kuzalisha [uthibitisho wa maarifa-sifuri](/zero-knowledge-proofs/) kwamba utekelezaji ulikuwa sahihi, na wathibitishaji hukagua uthibitisho huo badala yake. Kukagua uthibitisho ni nafuu zaidi kuliko kutekeleza upya, kwa hivyo Mtandao Mkuu unaweza kuchakata miamala zaidi bila kuwalazimu wathibitishaji kutumia maunzi ghali.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">Zaidi kuhusu zkEVM</ButtonLink>
 
 ## Maendeleo ya sasa {#current-progress}
 

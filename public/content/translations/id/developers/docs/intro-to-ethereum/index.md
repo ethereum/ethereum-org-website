@@ -1,6 +1,6 @@
 ---
 title: Pengantar teknis ke Ethereum
-description: Pengantar konsep inti Ethereum untuk pengembang dapp.
+description: "Pengantar teknis ke Ethereum untuk pengembang: rantai blok, akun, transaksi, EVM, gas, dan kontrak pintar, dijelaskan langkah demi langkah."
 lang: id
 ---
 

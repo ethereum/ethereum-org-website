@@ -1,7 +1,7 @@
 ---
 title: "Cách tạo tài khoản Ethereum"
 metaTitle: "Cách \"tạo\" tài khoản Ethereum"
-description: "Hướng dẫn từng bước về cách tạo tài khoản Ethereum bằng ví."
+description: "Hướng dẫn từng bước để tạo tài khoản Ethereum: chọn ví, sao lưu an toàn cụm từ khôi phục và nhận địa chỉ Ethereum đầu tiên của bạn."
 lang: vi
 ---
 

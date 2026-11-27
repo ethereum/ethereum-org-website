@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/design-and-ux/index.md",
-  "generatedAt": "2026-06-16T22:44:22.554Z",
-  "rootHash": "7aa2e490f8f6",
+  "generatedAt": "2026-11-27T09:59:38.851Z",
+  "rootHash": "e3cf068e5d78",
   "tree": {
-    "contentHash": "164c820be732",
+    "contentHash": "e5a39ab36d80",
     "anchorHash": "f72d9eb8e78d",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "0f1fb4639e1e",
+        "contentHash": "239d7736ba5b",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -801,5 +801,5 @@
       "design-systems-and-resources"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

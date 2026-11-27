@@ -1,7 +1,7 @@
 ---
 title: Co je to DAO?
 metaTitle: "Co je to DAO? | Decentralizovaná autonomní organizace"
-description: "Přehled DAO na Ethereu"
+description: "Co je to DAO? Zjistěte, jak decentralizované autonomní organizace využívají chytré kontrakty a tokeny k rozhodování a správě sdílených prostředků na Ethereu."
 lang: cs
 template: use-cases
 sidebarDepth: 2

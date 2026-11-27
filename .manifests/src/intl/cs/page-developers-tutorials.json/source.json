@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-developers-tutorials.json",
-  "generatedAt": "2026-06-29T23:48:12.078Z",
-  "rootHash": "fd027f3ae511",
+  "generatedAt": "2026-11-27T09:56:24.430Z",
+  "rootHash": "01d6015dff9e",
   "tree": {
-    "contentHash": "5218ea974a7b",
-    "anchorHash": "44c78b62089d",
+    "contentHash": "2e24f2bd9632",
+    "anchorHash": "087638480653",
     "children": {
       "comp-tutorial-metadata-minute-read": {
         "contentHash": "6b28e739783c",
@@ -144,6 +144,10 @@
       "page-tutorial-filtering-by": {
         "contentHash": "4879962894bf",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-tutorial-removed-notice": {
+        "contentHash": "da48e1c755c4",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -171,8 +175,9 @@
       "page-tutorial-all",
       "page-tutorial-topics",
       "page-tutorial-search-placeholder",
-      "page-tutorial-filtering-by"
+      "page-tutorial-filtering-by",
+      "page-tutorial-removed-notice"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

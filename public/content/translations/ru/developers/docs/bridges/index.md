@@ -1,10 +1,10 @@
 ---
 title: "Мосты"
-description: "Обзор мостов для разработчиков"
+description: "Руководство для разработчиков по мостам: как работают обмен кроссчейн-сообщениями и перевод токенов через мосты, типы мостов и допущения о доверии, а также как интегрировать их в dapp."
 lang: ru
 ---
 
-С распространением блокчейнов уровня 1 (l1) и решений для [масштабирования](/developers/docs/scaling/) уровня 2 (l2), наряду с постоянно растущим числом децентрализованных приложений (dapp), переходящих в кроссчейн, потребность в связи и перемещении активов между цепями стала неотъемлемой частью сетевой инфраструктуры. Существуют различные типы мостов, которые помогают сделать это возможным.
+С распространением блокчейнов уровня 1 (L1) и решений для [масштабирования](/developers/docs/scaling/) уровня 2 (L2), наряду с постоянно растущим числом децентрализованных приложений (dapp), переходящих в кроссчейн, потребность в связи и перемещении активов между цепями стала неотъемлемой частью сетевой инфраструктуры. Существуют различные типы мостов, которые помогают сделать это возможным.
 
 ## Потребность в мостах {#need-for-bridges}
 
@@ -24,7 +24,7 @@ lang: ru
 
 - перевод любых данных, информации и активов между цепями.
 - открытие новых функций и вариантов использования для протоколов, поскольку мосты расширяют пространство для проектирования того, что могут предложить протоколы. Например, протокол для фарминга доходности, изначально развернутый в основной сети Ethereum, может предлагать пулы ликвидности во всех EVM-совместимых цепях.
-- возможность использовать сильные стороны различных блокчейнов. Например, разработчики могут извлечь выгоду из более низких комиссий, предлагаемых различными решениями уровня 2 (l2), развертывая свои dapp в роллапах и сайдчейнах, а пользователи могут использовать мосты для перехода между ними.
+- возможность использовать сильные стороны различных блокчейнов. Например, разработчики могут извлечь выгоду из более низких комиссий, предлагаемых различными решениями уровня 2 (L2), развертывая свои dapp в роллапах и сайдчейнах, а пользователи могут использовать мосты для перехода между ними.
 - сотрудничество между разработчиками из различных экосистем блокчейнов для создания новых продуктов.
 - привлечение пользователей и сообществ из различных экосистем в свои dapp.
 
@@ -123,16 +123,16 @@ lang: ru
 ## Дополнительная литература {#further-reading}
 
 - [Блокчейн-мосты](/bridges/) — ethereum.org
-- [Структура рисков мостов от L2BEAT](https://l2beat.com/bridges/summary)
-- [Блокчейн-мосты: создание сетей криптосетей](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) — 8 сентября 2021 г., Дмитрий Берензон (Dmitriy Berenzon)
-- [Трилемма интероперабельности](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) — 1 октября 2021 г., Арджун Бхуптани (Arjun Bhuptani)
-- [Кластеры: как доверенные мосты и мосты с минимизированным доверием формируют мультичейн-ландшафт](https://blog.celestia.org/clusters/) — 4 октября 2021 г., Мустафа Аль-Бассам (Mustafa Al-Bassam)
-- [LI.FI: с мостами доверие — это спектр](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) — 28 апреля 2022 г., Арджун Чанд (Arjun Chand)
-- [Состояние решений для интероперабельности роллапов](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) — 20 июня 2024 г., Алекс Хук (Alex Hook)
-- [Использование общей безопасности для безопасной кроссчейн-интероперабельности: комитеты состояния Lagrange и не только](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) — 12 июня 2024 г., Эммануэль Авосика (Emmanuel Awosika)
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
+- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) — 8 сентября 2021 г. — Dmitriy Berenzon
+- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) — 1 октября 2021 г. — Arjun Bhuptani
+- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) — 4 октября 2021 г. — Mustafa Al-Bassam
+- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) — 28 апреля 2022 г. — Arjun Chand
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) — 20 июня 2024 г. — Alex Hook
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) — 12 июня 2024 г. — Emmanuel Awosika
 
-Кроме того, вот несколько познавательных презентаций от [James Prestwich](https://twitter.com/_prestwich), которые могут помочь глубже понять мосты:
+Кроме того, вот несколько полезных презентаций от [James Prestwich](https://twitter.com/_prestwich), которые помогут глубже понять работу мостов:
 
-- [Строим мосты, а не огороженные сады](https://youtu.be/ZQJWMiX4hT0)
-- [Разбор мостов](https://youtu.be/b0mC-ZqN8Oo)
-- [Почему горят мосты](https://youtu.be/c7cm2kd20j8)
+- [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
+- [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)
+- [Why are the Bridges Burning](https://youtu.be/c7cm2kd20j8)

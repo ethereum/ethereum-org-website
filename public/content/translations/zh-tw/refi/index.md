@@ -1,6 +1,6 @@
 ---
 title: "再生金融 (ReFi)"
-description: "再生金融 (ReFi) 及其目前使用案例的概述。"
+description: "什麼是再生金融 (ReFi)？了解以太坊工具如何資助公共財、氣候行動與社群專案，從而創造持久的正面影響。"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2

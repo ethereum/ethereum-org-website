@@ -4,13 +4,13 @@ description: Introduzione a come sono organizzati i nodi di Ethereum.
 lang: it
 ---
 
-Un nodo di Ethereum è composto da due client: un [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e un [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients). Affinché un nodo possa proporre un nuovo blocco, deve anche eseguire un [client validatore](#validators).
+Un nodo Ethereum è composto da due client: un [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e un [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients). Affinché un nodo possa proporre un nuovo blocco, deve anche eseguire un [client validatore](#validators).
 
-Quando Ethereum utilizzava la [Prova di lavoro (PoW)](/developers/docs/consensus-mechanisms/pow/), un client di esecuzione era sufficiente per eseguire un nodo completo di Ethereum. Tuttavia, dall'implementazione della [Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos/), il client di esecuzione deve essere utilizzato insieme a un altro software chiamato [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients).
+Quando Ethereum utilizzava la [Prova di lavoro (PoW)](/developers/docs/consensus-mechanisms/pow/), un client di esecuzione era sufficiente per eseguire un nodo Ethereum completo. Tuttavia, dall'implementazione della [Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos/), il client di esecuzione deve essere utilizzato insieme a un altro software chiamato [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Il diagramma sottostante mostra la relazione tra i due client di Ethereum. I due client si connettono alle rispettive reti peer-to-peer (P2P). Sono necessarie reti P2P separate poiché i client di esecuzione diffondono le transazioni sulla loro rete P2P, consentendo loro di gestire la propria pool di transazioni locale, mentre i client di consenso diffondono i blocchi sulla loro rete P2P, consentendo il consenso e la crescita della catena.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _Ci sono diverse opzioni per il client di esecuzione, tra cui Erigon, Nethermind e Besu_.
 

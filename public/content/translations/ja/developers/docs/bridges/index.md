@@ -1,6 +1,6 @@
 ---
 title: "ブリッジ"
-description: "開発者向けのブリッジの概要"
+description: "ブリッジに関する開発者向けガイド: クロスチェーンメッセージングとトークンブリッジングの仕組み、ブリッジの種類とトラスト前提、およびそれらをdappに統合する方法。"
 lang: ja
 ---
 
@@ -121,8 +121,8 @@ dappがブリッジまたはアグリゲーターを統合するルートを進�
 
 ## 参考文献 {#further-reading}
 
-- [ブロックチェーン・ブリッジ](/bridges/) – ethereum.org
-- [L2Beat Bridge Risk Framework](https://l2beat.com/bridges/summary)
+- [ブロックチェーンブリッジ](/bridges/) – ethereum.org
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 2021年9月8日 – Dmitriy Berenzon
 - [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 2021年10月1日 – Arjun Bhuptani
 - [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 2021年10月4日 – Mustafa Al-Bassam
@@ -130,7 +130,7 @@ dappがブリッジまたはアグリゲーターを統合するルートを進�
 - [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 2024年6月20日 – Alex Hook
 - [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 2024年6月12日 – Emmanuel Awosika
 
-さらに、ブリッジの理解を深めるのに役立つ、[James Prestwich](https://twitter.com/_prestwich)による洞察に満ちたプレゼンテーションをいくつか紹介します。
+さらに、ブリッジについての理解を深めるのに役立つ、[James Prestwich](https://twitter.com/_prestwich)による洞察に満ちたプレゼンテーションをいくつか紹介します。
 
 - [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
 - [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)

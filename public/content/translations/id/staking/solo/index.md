@@ -1,6 +1,6 @@
 ---
 title: Staking ETH Anda dari rumah
-description: Gambaran umum tentang cara memulai staking ETH Anda dari rumah
+description: "Cara melakukan staking ETH Anda dari rumah: jalankan validator Ethereum Anda sendiri dengan 32 ETH, dapatkan imbalan langsung dari protokol dan bantu amankan jaringan."
 lang: id
 template: staking
 image: /images/staking/leslie-solo.png
@@ -104,7 +104,7 @@ Jika Anda menjalankan beberapa validator, Anda dapat mengonsolidasikannya menjad
 
 ## Mulai di Staking Launchpad {#get-started-on-the-staking-launchpad}
 
-Staking Launchpad adalah aplikasi sumber terbuka yang akan membantu Anda menjadi seorang staker. Ini akan memandu Anda dalam memilih klien Anda, membuat kunci Anda, dan mendepositkan ETH Anda ke kontrak deposit staking. Sebuah daftar periksa disediakan untuk memastikan Anda telah mencakup semuanya agar validator Anda diatur dengan aman.
+Staking Launchpad adalah aplikasi sumber terbuka yang akan membantu Anda menjadi seorang staker. Aplikasi ini akan memandu Anda dalam memilih klien Anda, membuat kunci Anda, dan mendepositkan ETH Anda ke [kontrak deposit staking](/staking/deposit-contract/). Sebuah daftar periksa disediakan untuk memastikan Anda telah menyelesaikan semuanya untuk menyiapkan validator Anda dengan aman.
 
 <StakingLaunchpadWidget />
 

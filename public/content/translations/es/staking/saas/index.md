@@ -1,6 +1,6 @@
 ---
 title: Staking delegado (staking como servicio)
-description: Una descripción general de cómo empezar con el staking delegado
+description: "¿Qué es el staking como servicio? Aprenda a depositar 32 ETH mientras un operador de nodo ejecuta su validador, y las ventajas y desventajas frente al staking en solitario o el staking conjunto."
 lang: es
 template: staking
 image: /images/staking/leslie-saas.png

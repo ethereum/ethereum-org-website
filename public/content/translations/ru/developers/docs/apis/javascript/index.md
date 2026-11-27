@@ -300,9 +300,7 @@ _Знаете ресурс сообщества, который вам помо�
 
 ## Связанные руководства {#related-tutorials}
 
-- [Настройка Web3js для использования блокчейна Эфириума в JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _— Инструкции по настройке Web3.js в вашем проекте._
-- [Вызов смарт-контракта из JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _— На примере токена DAI узнайте, как вызывать функции контрактов с помощью JavaScript._
-- [Отправка транзакций с использованием Web3 и Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _— Пошаговое руководство по отправке транзакций из бэкенда._
+- [Отправка транзакций с использованием Web3 и Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _— Пошаговое руководство по отправке транзакций с бэкенда._
 
 ## Руководства: JavaScript API и WebSockets в Эфириуме {#tutorials}
 

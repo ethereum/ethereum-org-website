@@ -1,7 +1,7 @@
 ---
 title: "ブロックチェーン・ブリッジ"
 metaTitle: "ブロックチェーン・ブリッジの紹介"
-description: "ブリッジを使用すると、ユーザーは異なるブロックチェーン間で資金を移動できます"
+description: "ブロックチェーン・ブリッジとは？ブリッジがイーサリアム、レイヤー2、その他のチェーン間でトークンを移動させる仕組み、ブリッジの種類、考慮すべきリスクについて学びましょう。"
 lang: ja
 ---
 
@@ -103,8 +103,8 @@ _Web3は、それぞれ独自の機能とトレードオフを持つレイヤー
 
 ブリッジを使用すると、異なるブロックチェーン間で資産を移動させることができます。ブリッジを見つけて使用するのに役立つリソースをいくつか紹介します。
 
-- **[L2BEAT ブリッジ概要](https://l2beat.com/bridges/summary) & [L2BEAT ブリッジ・リスク分析](https://l2beat.com/bridges/summary)**: 市場シェア、ブリッジの種類、宛先チェーンの詳細を含む、さまざまなブリッジの包括的な概要です。L2BEATにはブリッジのリスク分析もあり、ユーザーがブリッジを選択する際に情報に基づいた決定を下すのに役立ちます。
-- **[DefiLlama ブリッジ概要](https://defillama.com/bridges/Ethereum)**: イーサリアム・ネットワーク全体のブリッジ・ボリュームの概要です。
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: 市場シェア、ブリッジの種類、宛先チェーンなどの詳細を含む、さまざまなブリッジの包括的な概要です。ETHBEATにはブリッジのリスク分析もあり、ユーザーがブリッジを選択する際に情報に基づいた決定を下すのに役立ちます。
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: イーサリアム・ネットワーク全体のブリッジ・ボリュームの概要です。
 
 <Divider />
 
@@ -137,9 +137,10 @@ _Web3は、それぞれ独自の機能とトレードオフを持つレイヤー
 ## 参考文献 {#further-reading}
 
 - [EIP-5164: クロスチェーン実行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022年6月18日 - Brendan Asselstine_
-- [L2Bridge リスク・フレームワーク](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022年7月5日 - Bartek Kiepuszewski_
+- [L2Bridge リスク・フレームワーク](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _2022年7月5日 - Bartek Kiepuszewski_
 - [「未来はマルチチェーンになるが、クロスチェーンにはならない理由」](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022年1月8日 - Vitalik Buterin_
 - [安全なクロスチェーン・インターオペラビリティのために共有セキュリティを活用する：Lagrange状態委員会とその先](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024年6月12日 - Emmanuel Awosika_
 - [ロールアップ・インターオペラビリティ・ソリューションの現状](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024年6月20日 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

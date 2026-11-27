@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## 服务 {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - 保护隐私的以太坊浏览器。也可用于排序和过滤（内存池）数据。提供西班牙语、法语、意大利语、荷兰语、葡萄牙语、俄语、中文和波斯语版本
+- [Blockchair](https://blockchair.com/ethereum) - 注重隐私的以太坊浏览器。也可用于排序和过滤（内存池）数据。支持西班牙语、法语、意大利语、荷兰语、葡萄牙语、俄语、中文和波斯语
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru 区块浏览器](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Etherscan](https://etherscan.io/) - 也提供中文、韩文、俄文和日文版本
-- [Ethplorer](https://ethplorer.io/) - 一个专注于代币的区块浏览器。也提供中文、西班牙文、法文、土耳其文、俄文、韩文和越南文版本
+- [Etherscan](https://etherscan.io/) - 也支持中文、韩文、俄文和日文
+- [Ethplorer](https://ethplorer.io/) - 专注于代币的区块浏览器。也支持中文、西班牙文、法文、土耳其文、俄文、韩文和越南文
+- [Ethscanner](https://ethscanner.io/) - 由 Routescan 提供。向 Verifier Alliance 的开放数据集贡献已验证的合约，并显示跨链交易
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

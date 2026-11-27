@@ -7,8 +7,6 @@ skill: intermediate
 breadcrumb: Log de eventos
 lang: pt-br
 published: 2020-04-03
-source: EthereumDev
-sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
@@ -16,7 +14,7 @@ Na Solidity, [eventos](/developers/docs/smart-contracts/anatomy/#events-and-logs
 
 ## Eventos {#events}
 
-O evento mais comum na blockchain do Ethereum no momento em que este artigo foi escrito é o evento Transfer, que é emitido por tokens ERC-20 quando alguém transfere tokens.
+Um dos eventos mais comuns na blockchain do Ethereum é o evento `Transfer` que é emitido por tokens ERC-20 quando alguém transfere tokens.
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -24,17 +22,18 @@ event Transfer(address indexed from, address indexed to, uint256 value);
 
 A assinatura do evento é declarada dentro do código do contrato e pode ser emitida com a palavra-chave emit. Por exemplo, o evento transfer faz o log de quem enviou a transferência (_from_), para quem (_to_) e quantos tokens foram transferidos (_value_).
 
-Se voltarmos ao nosso contrato inteligente Counter e decidirmos fazer um log toda vez que o valor for alterado. Como este contrato não se destina a ser implantado, mas sim a servir como base para a construção de outro contrato ao estendê-lo: ele é chamado de contrato abstrato. No caso do nosso exemplo de contador, ficaria assim:
+Vamos voltar ao contrato inteligente `Counter` de [implantando seu primeiro contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) e fazer o log toda vez que o valor for alterado. Ficaria assim:
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
-    event ValueChanged(uint oldValue, uint256 newValue);
+    event ValueChanged(uint256 oldValue, uint256 newValue);
 
-    // Variável privada do tipo unsigned int para manter o número de contagens
-    uint256 private count = 0;
+    // Variável pública do tipo unsigned int para guardar o número de contagens
+    uint256 public count = 0;
 
     // Função que incrementa nosso contador
     function increment() public {
@@ -42,7 +41,7 @@ contract Counter {
         emit ValueChanged(count - 1, count);
     }
 
-    // Getter para obter o valor da contagem
+    // Getter desnecessário para obter o valor da contagem
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -52,12 +51,12 @@ contract Counter {
 
 Observe que:
 
-- **Linha 5**: declaramos nosso evento e o que ele contém, o valor antigo e o novo valor.
+- **Linha 6**: declaramos nosso evento e o que ele contém, o valor antigo e o novo valor.
 
-- **Linha 13**: Quando incrementamos nossa variável count, emitimos o evento.
+- **Linha 14**: Quando incrementamos nossa variável de contagem, emitimos o evento.
 
-Se agora implantarmos o contrato e chamarmos a função increment, veremos que o Remix a exibirá automaticamente se você clicar na nova transação dentro de um array chamado logs.
+Se agora implantarmos o contrato e chamarmos a função de incremento, veremos que o Remix o exibirá automaticamente se você clicar na nova transação dentro de um array chamado logs.
 
-![Remix screenshot](./remix-screenshot.png)
+![Captura de tela do Remix](./remix-screenshot.png)
 
-Os logs são muito úteis para depurar seus contratos inteligentes, mas também são importantes se você criar aplicativos usados por pessoas diferentes e facilitam a criação de análises para rastrear e entender como seu contrato inteligente é usado. Os logs gerados por transações são exibidos em exploradores de blocos populares e você também pode, por exemplo, usá-los para criar scripts offchain para escutar eventos específicos e tomar medidas quando eles ocorrerem.
+Os logs são muito úteis para depurar seus contratos inteligentes, mas também são importantes se você constrói aplicativos usados por diferentes pessoas, pois facilitam a criação de análises para rastrear e entender como seu contrato inteligente é usado. Os logs gerados por transações são exibidos em exploradores de blocos populares e você também pode, por exemplo, usá-los para criar scripts offchain para escutar eventos específicos e tomar medidas quando eles ocorrerem.

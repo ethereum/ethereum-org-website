@@ -23,7 +23,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 - **평이한 언어로 작성된 시스템 설명**, 컨트랙트가 수행하는 작업과 코드베이스에 대한 모든 가정을 설명합니다.
 - **스키마 및 아키텍처 다이어그램**, 컨트랙트 상호 작용 및 시스템의 상태 머신을 포함합니다. [슬리더(Slither) 프린터](https://github.com/crytic/slither/wiki/Printer-documentation)를 사용하면 이러한 스키마를 생성하는 데 도움이 될 수 있습니다.
-- **철저한 코드 문서화**, Solidity에는 [NatSpec 형식](https://docs.soliditylang.org/en/develop/natspec-format.html)을 사용할 수 있습니다.
+- **철저한 코드 문서화**, Solidity에는 [NatSpec 형식](https://docs.soliditylang.org/en/latest/natspec-format.html)을 사용할 수 있습니다.
 
 ### 온체인 대 오프체인 연산 {#onchain-vs-offchain-computation}
 
@@ -72,15 +72,15 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 ### 테스트 및 검증 {#testing-and-verification}
 
-- **철저한 단위 테스트를 작성하세요.** 고품질 소프트웨어를 빌드하려면 광범위한 테스트 스위트가 중요합니다.
-- **[슬리더](https://github.com/crytic/slither), [에키드나](https://github.com/crytic/echidna) 및 [맨티코어](https://github.com/trailofbits/manticore) 사용자 지정 검사 및 속성을 작성하세요.** 자동화된 도구는 컨트랙트가 안전한지 확인하는 데 도움이 됩니다. 효율적인 검사 및 속성을 작성하는 방법을 알아보려면 이 가이드의 나머지 부분을 검토하세요.
-- **[crytic.io](https://crytic.io/)를 사용하세요.** Crytic은 GitHub와 통합되어 비공개 슬리더 탐지기에 대한 액세스를 제공하고 에키드나에서 사용자 지정 속성 검사를 실행합니다.
+- **철저한 단위 테스트를 작성하세요.** 고품질 소프트웨어를 빌드하려면 광범위한 테스트 스위트가 필수적입니다.
+- **[Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) 및 [Medusa](https://github.com/crytic/medusa) 사용자 지정 검사 및 속성을 작성하세요.** 자동화된 도구는 컨트랙트가 안전한지 확인하는 데 도움이 됩니다. 효율적인 검사 및 속성을 작성하는 방법을 알아보려면 이 가이드의 나머지 부분을 검토하세요.
+- **지속적 통합(CI) 환경에서 이러한 도구를 실행하세요.** 모든 풀 리퀘스트에서 Slither와 퍼징 속성을 실행하면 코드가 병합되기 전에 회귀(regression)를 포착할 수 있습니다.
 
 ### Solidity {#solidity}
 
-- **0.4 및 0.6보다 Solidity 0.5를 선호하세요.** 우리의 의견으로는 Solidity 0.5가 0.4보다 더 안전하고 더 나은 내장 사례를 가지고 있습니다. Solidity 0.6은 프로덕션 환경에서 사용하기에는 너무 불안정하며 성숙할 시간이 필요합니다.
-- **컴파일에는 안정적인 릴리스를 사용하고, 경고를 확인하려면 최신 릴리스를 사용하세요.** 최신 컴파일러 버전에서 코드에 보고된 문제가 없는지 확인하세요. 그러나 Solidity는 릴리스 주기가 빠르고 컴파일러 버그의 역사가 있으므로 배포에 최신 버전을 권장하지 않습니다(슬리더의 [solc 버전 권장 사항](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) 참조).
-- **인라인 어셈블리를 사용하지 마세요.** 어셈블리에는 EVM 전문 지식이 필요합니다. 황서를 <em>마스터</em>하지 않았다면 EVM 코드를 작성하지 마세요.
+- **알려진 심각한 버그가 없는 최신 Solidity 0.8.x 릴리스를 사용하세요.** Solidity 0.8은 기본적으로 산술 연산의 오버플로 및 언더플로를 검사하며, 이전 버전에는 최신 컴파일러 보안 검사가 누락되어 있습니다. Slither의 [solc 버전 권장 사항](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity)을 참조하세요.
+- **컴파일에는 안정적인 릴리스를 사용하고, 경고를 확인할 때는 최신 릴리스를 사용하세요.** 최신 컴파일러 버전에서 코드에 보고된 문제가 없는지 확인하세요. 그러나 Solidity는 릴리스 주기가 빠르고 컴파일러 버그가 발생했던 이력이 있으므로, 불과 며칠 전에 릴리스된 버전으로 배포하는 것은 피하세요. 선택한 버전에 대한 [알려진 컴파일러 버그 목록](https://docs.soliditylang.org/en/latest/bugs.html)을 확인하세요.
+- **인라인 어셈블리를 사용하지 마세요.** 어셈블리에는 EVM 전문 지식이 필요합니다. 황서를 <em>완벽히 숙지</em>하지 않았다면 EVM 코드를 작성하지 마세요.
 
 ## 배포 가이드라인 {#deployment-guidelines}
 

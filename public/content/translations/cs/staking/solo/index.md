@@ -1,6 +1,6 @@
 ---
-title: Domácí staking vašeho ETH
-description: Přehled toho, jak začít se stakingem ETH z domova
+title: "Domácí staking vašeho ETH"
+description: "Jak stakovat ETH z domova: provozujte svůj vlastní validátor sítě Ethereum s 32 ETH, získávejte odměny přímo z protokolu a pomozte zabezpečit síť."
 lang: cs
 template: staking
 image: /images/staking/leslie-solo.png
@@ -104,7 +104,7 @@ Pokud provozujete více validátorů, můžete je konsolidovat do jednoho valid�
 
 ## Začněte na Staking Launchpadu {#get-started-on-the-staking-launchpad}
 
-Staking Launchpad je open source aplikace, která vám pomůže stát se stakerem. Provede vás výběrem vašich klientů, vygenerováním vašich klíčů a vložením vašeho ETH do stakingového vkladového kontraktu. K dispozici je kontrolní seznam, abyste se ujistili, že jste pokryli vše pro bezpečné nastavení vašeho validátora.
+Staking Launchpad je open source aplikace, která vám pomůže stát se stakerem. Provede vás výběrem klientů, vygenerováním klíčů a vložením vašeho ETH do [kontraktu pro stakingový vklad](/staking/deposit-contract/). K dispozici je kontrolní seznam, díky kterému se ujistíte, že jste splnili vše potřebné pro bezpečné nastavení vašeho validátora.
 
 <StakingLaunchpadWidget />
 

@@ -300,9 +300,7 @@ _役に立ったコミュニティリソースをご存知ですか？このペ�
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [JavaScriptでイーサリアムのブロックチェーンを使用するためのWeb3jsのセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトでweb3.jsをセットアップするための手順。_
-- [JavaScriptからのスマート・コントラクトの呼び出し](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAIトークンを使用して、JavaScriptでコントラクトの関数を呼び出す方法を確認します。_
-- [Web3とAlchemyを使用したトランザクションの送信](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– バックエンドからトランザクションを送信するためのステップバイステップのウォークスルー。_
+- [Web3とAlchemyを使用したトランザクションの送信](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– バックエンドからトランザクションを送信するためのステップバイステップの解説。_
 
 ## チュートリアル：イーサリアム上のJavaScript APIとWebSocket {#tutorials}
 

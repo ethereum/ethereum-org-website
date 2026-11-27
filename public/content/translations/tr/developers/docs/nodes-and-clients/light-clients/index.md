@@ -40,18 +40,18 @@ Hafif istemciler Ethereum cüzdanlarını yükseltmek için de kullanılabilir. 
 
 ## Hafif istemci geliştirmenin mevcut durumu nedir? {#current-state-of-development}
 
-Yürütme, fikir birliği ve birleşik yürütme/fikir birliği hafif istemcileri de dahil olmak üzere geliştirilmekte olan birkaç hafif istemci vardır. Bu sayfayı yazdığımız sırada bildiğimiz hafif istemci uygulamaları şunlardır:
+Yürütme, mutabakat ve birleşik yürütme/mutabakat hafif istemcileri de dâhil olmak üzere geliştirilmekte olan birkaç hafif istemci vardır. Bu sayfayı yazdığımız sırada bildiğimiz hafif istemci uygulamaları şunlardır:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): TypeScript dilinde fikir birliği hafif istemcisi
-- [Helios](https://github.com/a16z/helios): Rust dilinde birleşik yürütme ve fikir birliği hafif istemcisi
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go dilinde yürütme istemcisi için hafif mod (geliştirme aşamasında)
-- [Nimbus](https://nimbus.guide/el-light-client.html): Nim dilinde fikir birliği hafif istemcisi
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): TypeScript ile yazılmış mutabakat hafif istemcisi
+- [Helios](https://github.com/a16z/helios): Rust ile yazılmış birleşik yürütme ve mutabakat hafif istemcisi
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Go ile yazılmış yürütme istemcisi için hafif mod (geliştirme aşamasında)
+- [Nimbus](https://nimbus.guide/el-light-client.html): Nim ile yazılmış mutabakat hafif istemcisi
 
-Bildiğimiz kadarıyla bunların hiçbiri henüz üretime hazır olarak değerlendirilmiyor.
+Bildiğimiz kadarıyla bunların hiçbiri henüz üretime hazır olarak değerlendirilmemektedir.
 
-Hafif istemcilerin Ethereum verilerine erişim yollarını iyileştirmek için de pek çok çalışma yapılıyor. Şu anda hafif istemciler, bir istemci/sunucu modeli kullanarak tam düğümlere yapılan RPC isteklerine güveniyor, ancak gelecekte veriler, eşler arası bir dedikodu protokolü kullanarak verileri hafif istemcilere sunabilen [Portal Ağı](https://www.ethportal.net/) gibi özel bir ağ kullanılarak daha merkeziyetsiz bir şekilde talep edilebilir.
+Hafif istemcilerin Ethereum verilerine erişim yollarını iyileştirmek için de pek çok çalışma yapılmaktadır. Şu anda hafif istemciler, bir istemci/sunucu modeli kullanarak tam düğümlere yapılan RPC isteklerine dayanmaktadır. [Portal Ağı](/developers/docs/networking-layer/portal-network/) ilk olarak bu verileri eşler arası bir ağ üzerinden hafif istemcilere sunmak için tasarlanmıştı, ancak gelişimi artık geçmiş blokların tarihçesini sunmaya odaklanıyor.
 
-[Verkle Ağaçları](/roadmap/verkle-trees/) ve [durumsuzluk](/roadmap/statelessness/) gibi diğer [yol haritası](/roadmap/) öğeleri, eninde sonunda hafif istemcilerin güvenlik garantilerini tam istemcilerinkine eşit hale getirecektir.
+Yeni bir durum ağacı (şu anda [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) içinde bir ikili ağaç olarak önerilmektedir) ve [durumsuzluk](/roadmap/statelessness/) gibi diğer [yol haritası](/roadmap/) öğeleri, eninde sonunda hafif istemcilerin güvenlik garantilerini tam istemcilerinkine eşit hâle getirecektir.
 
 ## Daha fazla bilgi {#further-reading}
 

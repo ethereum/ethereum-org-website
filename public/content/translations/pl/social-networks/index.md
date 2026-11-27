@@ -1,6 +1,6 @@
 ---
 title: "Zdecentralizowane sieci społecznościowe"
-description: "Przegląd zdecentralizowanych sieci społecznościowych na Ethereum"
+description: "Czym są zdecentralizowane sieci społecznościowe? Dowiedz się, jak aplikacje społecznościowe oparte na Ethereum pozwalają Ci zachować własność nad swoją tożsamością, treściami i odbiorcami, zamiast oddawać ją platformie."
 lang: pl
 template: use-cases
 sidebarDepth: 2

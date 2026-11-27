@@ -1,6 +1,6 @@
 ---
 title: Fedha za Ufufuaji (ReFi)
-description: Muhtasari wa ReFi na matumizi yake ya sasa.
+description: Fedha za ufufuaji (ReFi) ni nini? Jifunze jinsi zana za Ethereum zinavyofadhili bidhaa za umma, hatua za tabianchi na miradi ya kijamii inayounda athari chanya ya kudumu.
 lang: sw
 template: use-cases
 sidebarDepth: 2

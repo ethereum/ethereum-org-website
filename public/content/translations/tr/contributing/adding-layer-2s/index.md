@@ -1,6 +1,6 @@
 ---
 title: Katman 2'leri ekleme
-description: ethereum.org'a bir katman 2 eklerken kullandığımız politika
+description: "ethereum.org'a bir katman 2 eklerken kullandığımız politika"
 lang: tr
 ---
 
@@ -20,10 +20,10 @@ Katman 2, Ethereum için nispeten yeni ve heyecan verici bir paradigmadır. ethe
 
 ### Dahil edilme kriterleri: olmazsa olmazlar {#criteria-for-inclusion-the-must-haves}
 
-**L2BEAT üzerinde listelenme**
+**ETHBEAT'te listelenme**
 
-- Değerlendirmeye alınabilmesi için bu projenin [L2BEAT](https://l2beat.com) üzerinde listelenmiş olması gerekir. L2BEAT, L2 projelerini değerlendirirken dayandığımız, katman 2 projelerinin sağlam bir risk değerlendirmesini sunar. **Proje L2BEAT'te yer almıyorsa, onu ethereum.org'da bir L2 olarak listelemeyeceğiz.**
-- [L2 projenizi L2BEAT'e nasıl ekleyeceğinizi öğrenin](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Dikkate alınması için bu projenin [ETHBEAT](https://ethbeat.org) üzerinde listelenmiş olması gerekir. ETHBEAT, L2 projelerini değerlendirirken dayandığımız, katman 2 projelerinin sağlam bir risk değerlendirmesini sunar. **Proje ETHBEAT'te yer almıyorsa, onu ethereum.org'da bir L2 olarak listelemeyeceğiz.**
+- [L2 projenizi ETHBEAT'e nasıl ekleyeceğinizi öğrenin](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Açık kaynak**
 
@@ -40,25 +40,25 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum'u kullanmayan diğer ö
 
 **Veri kullanılabilirliği için Ethereum**
 
-- Veri kullanılabilirliği, diğer ölçeklendirme çözümleri ile katman 2 arasında önemli bir ayırt edici faktördür. Bir projenin listelenmek üzere değerlendirilebilmesi için veri kullanılabilirliği amacıyla Ethereum Ana Ağı'nı kullanması **gerekir**.
+- Veri kullanılabilirliği, diğer ölçeklendirme çözümleri ile katman 2 arasında önemli bir ayırt edici faktördür. Bir projenin listelenmek üzere dikkate alınması için veri kullanılabilirliği amacıyla Ethereum Ana Ağı'nı kullanması **gerekir**.
 
 **Köprüler**
 
 - Kullanıcılar katman 2'ye nasıl katılabiliyor?
 
-**Projenin yayına girdiği tarih**
+**Projenin yayına girme tarihi**
 
 - Ana Ağ üzerinde 6 aydan uzun süredir "yayında" olan bir katman 2
 
-- Kullanıcılar tarafından henüz savaş testinden geçmemiş daha yeni projelerin listelenme olasılığı daha düşüktür.
+- Kullanıcılar tarafından henüz zorlu testlerden geçmemiş daha yeni projelerin listelenme olasılığı daha düşüktür.
 
 **Harici güvenlik denetimi**
 
-- İster denetim, ister dahili bir güvenlik ekibi veya başka bir yöntemle olsun, ürününüzün güvenliği güvenilir bir şekilde test edilmelidir. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı bize gösterir.
+- İster denetim, ister dahili bir güvenlik ekibi veya başka bir yöntemle olsun, ürününüzün güvenliği güvenilir bir şekilde test edilmiş olmalıdır. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı bize gösterir.
 
 **Sürdürülebilir kullanıcı tabanı**
 
-- Kilitlenmiş toplam değer (TVL) geçmişi, işlem istatistikleri ve bilinen şirketler veya projeler tarafından kullanılıp kullanılmadığı gibi metrikleri dikkate alacağız.
+- TVL geçmişi, işlem istatistikleri ve bilinen şirketler veya projeler tarafından kullanılıp kullanılmadığı gibi metrikleri dikkate alacağız
 
 **Aktif geliştirme ekibi**
 
@@ -66,7 +66,7 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum'u kullanmayan diğer ö
 
 **Blok gezgini**
 
-- Listelenen projeler, kullanıcıların Zincir üzerinde kolayca gezinmesini sağlamak için çalışan bir blok gezgini gerektirir.
+- Listelenen projeler, kullanıcıların zincirde kolayca gezinmesini sağlamak için çalışan bir blok gezgini gerektirir.
 
 ### Diğer kriterler: olsa iyi olurlar {#nice-to-haves}
 

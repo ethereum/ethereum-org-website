@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: "Fusaka protokol güncellemesi hakkında bilgi edinin"
+description: "Fusaka 3 Aralık 2025'te yayına girdi. Daha ucuz katman 2 işlemleri için blob'ları ölçeklendiren PeerDAS da dahil olmak üzere, bu Ethereum güncellemesinin neleri değiştirdiğini öğrenin."
 lang: tr
 template: upgrade
 authors: ["Nixo", "Mario Havel"]

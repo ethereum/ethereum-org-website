@@ -1,7 +1,7 @@
 ---
 title: "Nezastupitelné tokeny (NFT)"
 metaTitle: "Co jsou to NFT? | Výhody a využití"
-description: "Přehled NFT na Ethereu"
+description: "Co jsou to NFT? Zjistěte, jak nezaměnitelné tokeny prokazují vlastnictví digitálního umění, sběratelských předmětů, vstupenek a dalších věcí na Ethereu a jak zůstat v bezpečí při jejich používání."
 lang: cs
 template: use-cases
 sidebarDepth: 2

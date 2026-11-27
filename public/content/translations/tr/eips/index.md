@@ -1,7 +1,7 @@
 ---
-title: Ethereum Geliştirme Tekliflerine (EIP'ler) Giriş
-metaTitle: Ethereum Geliştirme Teklifleri (EIP'ler)
-description: EIP'leri anlamak için ihtiyacınız olan temel bilgiler
+title: "Ethereum Geliştirme Tekliflerine (EIP'ler) Giriş"
+metaTitle: "Ethereum Geliştirme Teklifleri (EIP'ler)"
+description: "Ethereum Geliştirme Önerileri (EIP'ler) nedir? Ethereum'daki değişikliklerin nasıl teklif edildiğini, tartışıldığını ve benimsendiğini ve bu sürece nasıl katılabileceğinizi öğrenin."
 lang: tr
 ---
 
@@ -15,7 +15,7 @@ Ethereum topluluğundaki herkes bir EIP oluşturma yeteneğine sahiptir. EIP yaz
 
 EIP'ler, Ethereum'da değişikliklerin nasıl gerçekleştiği ve belgelendiği konusunda merkezi bir rol oynar. İnsanların değişiklikleri önerme, tartışma ve benimseme yoludur. Mutabakatı etkileyen ve [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) gibi bir ağ yükseltmesi gerektiren düşük seviyeli protokol değişiklikleri için çekirdek EIP'ler ve [EIP-20](https://eips.ethereum.org/EIPS/eip-20) ile [EIP-721](https://eips.ethereum.org/EIPS/eip-721) gibi uygulama standartları için ERC'ler dahil olmak üzere [farklı EIP türleri](https://eips.ethereum.org/EIPS/eip-1#eip-types) vardır.
 
-Her ağ yükseltmesi, ağdaki her [Ethereum istemcisi](/learn/#clients-and-nodes) tarafından uygulanması gereken bir dizi EIP'den oluşur. Bu, Ethereum Ana Ağı üzerindeki diğer istemcilerle mutabakat içinde kalmak için istemci geliştiricilerinin gerekli tüm EIP'leri uyguladıklarından emin olmaları gerektiği anlamına gelir.
+Her ağ yükseltmesi, ağdaki her [Ethereum istemcisi](/developers/docs/nodes-and-clients/) tarafından uygulanması gereken bir dizi EIP'den oluşur. Bu, Ethereum Ana Ağı üzerindeki diğer istemcilerle mutabakat içinde kalmak için istemci geliştiricilerinin gerekli tüm EIP'leri uyguladıklarından emin olmaları gerektiği anlamına gelir.
 
 Değişiklikler için teknik bir spesifikasyon sağlamanın yanı sıra EIP'ler, Ethereum'da yönetişimin etrafında şekillendiği birimdir: herkes bir tane önermekte özgürdür ve ardından topluluktaki çeşitli paydaşlar, bunun bir standart olarak benimsenip benimsenmeyeceğini veya bir ağ yükseltmesine dahil edilip edilmeyeceğini belirlemek için tartışırlar. Çekirdek olmayan EIP'lerin tüm uygulamalar tarafından benimsenmesi gerekmediğinden (örneğin, EIP-20 uygulamayan bir misli token oluşturmak mümkündür), ancak çekirdek EIP'lerin yaygın olarak benimsenmesi gerektiğinden (çünkü tüm düğümler aynı ağın parçası olarak kalmak için yükseltme yapmalıdır), çekirdek EIP'ler topluluk içinde çekirdek olmayan EIP'lere göre daha geniş bir mutabakat gerektirir.
 

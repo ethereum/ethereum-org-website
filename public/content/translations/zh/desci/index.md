@@ -1,6 +1,6 @@
 ---
 title: "去中心化科学 (DeSci)"
-description: "以太坊上的去中心化科学概述"
+description: "什么是去中心化科学？了解 DeSci 如何利用以太坊资助研究、公开共享数据并奖励科学家，从而让科学变得更易于获取。"
 lang: zh
 template: use-cases
 sidebarDepth: 2

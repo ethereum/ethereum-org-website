@@ -1,11 +1,11 @@
 ---
 title: Puentes de cadenas de bloques
 metaTitle: "Introducción a los puentes de cadenas de bloques"
-description: "Los puentes permiten a los usuarios mover sus fondos a través de diferentes cadenas de bloques"
+description: "¿Qué es un puente de cadena de bloques? Aprende cómo los puentes mueven tokens entre Ethereum, las capas 2 y otras cadenas, los tipos de puentes y los riesgos a considerar."
 lang: es
 ---
 
-_La Web3 ha evolucionado hacia un ecosistema de cadenas de bloques de capa 1 (l1) y soluciones de escalabilidad de capa 2 (l2), cada una diseñada con capacidades y concesiones únicas. A medida que aumenta el número de protocolos de cadenas de bloques, también lo hace la demanda de mover activos entre cadenas. Para satisfacer esta demanda, necesitamos puentes._
+_La Web3 ha evolucionado hacia un ecosistema de cadenas de bloques de capa 1 (L1) y soluciones de escalabilidad de capa 2 (L2), cada una diseñada con capacidades y concesiones únicas. A medida que aumenta el número de protocolos de cadenas de bloques, también lo hace la demanda de mover activos entre cadenas. Para satisfacer esta demanda, necesitamos puentes._
 
 <Divider />
 
@@ -21,7 +21,7 @@ Pero, ¿qué haces si quieres hacer un intercambio similar para usar una [cadena
 
 ## ¿Por qué necesitamos puentes? {#why-do-we-need-bridges}
 
-Todas las cadenas de bloques tienen sus limitaciones. Para que Ethereum escale y se mantenga al día con la demanda, ha requerido [rollups](/glossary/#rollups). Alternativamente, las l1 como Solana y Avalanche están diseñadas de manera diferente para permitir una mayor capacidad de procesamiento, pero a costa de la descentralización.
+Todas las cadenas de bloques tienen sus limitaciones. Para que Ethereum escale y se mantenga al día con la demanda, ha requerido [rollups](/glossary/#rollups). Alternativamente, las L1 como Solana y Avalanche están diseñadas de manera diferente para permitir una mayor capacidad de procesamiento, pero a costa de la descentralización.
 
 Sin embargo, todas las cadenas de bloques se desarrollan en entornos aislados y tienen diferentes reglas y mecanismos de [consenso](/glossary/#consensus). Esto significa que no pueden comunicarse de forma nativa y los tokens no pueden moverse libremente entre las cadenas de bloques.
 
@@ -34,7 +34,7 @@ Los puentes existen para conectar cadenas de bloques, permitiendo la transferenc
 - que los usuarios accedan a nuevas plataformas y aprovechen los beneficios de diferentes cadenas.
 - que los desarrolladores de diferentes ecosistemas de cadenas de bloques colaboren y construyan nuevas plataformas para los usuarios.
 
-[Cómo transferir tokens a través de un puente hacia la capa 2 (l2)](/guides/how-to-use-a-bridge/)
+[Cómo transferir tokens a través de un puente hacia la capa 2 (L2)](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -44,7 +44,7 @@ Los siguientes son algunos escenarios en los que puedes usar un puente:
 
 ### Tarifas de transacción más bajas {#transaction-fees}
 
-Digamos que tienes ETH en la red principal de Ethereum pero quieres tarifas de transacción más baratas para explorar diferentes dapps. Al transferir tu ETH desde la Red principal a un rollup de l2 de Ethereum a través de un puente, puedes disfrutar de tarifas de transacción más bajas.
+Digamos que tienes ETH en la red principal de Ethereum pero quieres tarifas de transacción más baratas para explorar diferentes dapps. Al transferir tu ETH desde la Red principal a un rollup de L2 de Ethereum a través de un puente, puedes disfrutar de tarifas de transacción más bajas.
 
 ### Dapps en otras cadenas de bloques {#dapps-other-chains}
 
@@ -52,7 +52,7 @@ Si has estado usando Aave en la red principal de Ethereum para suministrar USDT,
 
 ### Explorar ecosistemas de cadenas de bloques {#explore-ecosystems}
 
-Si tienes ETH en la red principal de Ethereum y quieres explorar una l1 alternativa para probar sus dapps nativas. Puedes usar un puente para realizar una transferencia de tu ETH desde la red principal de Ethereum a la l1 alternativa.
+Si tienes ETH en la red principal de Ethereum y quieres explorar una L1 alternativa para probar sus dapps nativas. Puedes usar un puente para realizar una transferencia de tu ETH desde la red principal de Ethereum a la L1 alternativa.
 
 ### Poseer criptoactivos nativos {#own-native}
 
@@ -101,10 +101,10 @@ Muchas soluciones de puentes adoptan modelos entre estos dos extremos con divers
 
 ## Usar puentes {#use-bridge}
 
-El uso de puentes te permite mover tus activos a través de diferentes cadenas de bloques. Aquí hay algunos recursos que pueden ayudarte a encontrar y usar puentes:
+Usar puentes te permite mover tus activos entre diferentes cadenas de bloques. Aquí hay algunos recursos que pueden ayudarte a encontrar y usar puentes:
 
-- **[Resumen de puentes de L2BEAT](https://l2beat.com/bridges/summary) y [Análisis de riesgo de puentes de L2BEAT](https://l2beat.com/bridges/summary)**: un resumen completo de varios puentes, que incluye detalles sobre la cuota de mercado, el tipo de puente y las cadenas de destino. L2BEAT también tiene un análisis de riesgo para los puentes, lo que ayuda a los usuarios a tomar decisiones informadas al seleccionar un puente.
-- **[Resumen de puentes de DefiLlama](https://defillama.com/bridges/Ethereum)**: un resumen de los volúmenes de los puentes en las redes de Ethereum.
+- **[Resumen de interoperabilidad de ETHBEAT](https://ethbeat.org/interop/summary)**: Un resumen completo de varios puentes, que incluye detalles sobre la cuota de mercado, el tipo de puente y las cadenas de destino. ETHBEAT también tiene un análisis de riesgo para los puentes, lo que ayuda a los usuarios a tomar decisiones informadas al seleccionar un puente.
+- **[Resumen de puentes de DefiLlama](https://defillama.com/bridges/Ethereum)**: Un resumen de los volúmenes de los puentes en las redes de Ethereum.
 
 <Divider />
 
@@ -130,16 +130,17 @@ Los fondos del usuario están en riesgo si:
 
 Un hackeo reciente fue el del puente Wormhole de Solana, [donde se robaron 120 mil wETH ($325 millones de USD) durante el hackeo](https://rekt.news/wormhole-rekt/). Muchos de los [principales hackeos en cadenas de bloques involucraron puentes](https://rekt.news/leaderboard/).
 
-Los puentes son cruciales para la incorporación de usuarios a las l2 de Ethereum, e incluso para los usuarios que desean explorar diferentes ecosistemas. Sin embargo, dados los riesgos que implica interactuar con los puentes, los usuarios deben comprender las concesiones que estos hacen. Estas son algunas [estrategias para la seguridad intercadena](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
+Los puentes son cruciales para la incorporación de usuarios a las L2 de Ethereum, e incluso para los usuarios que desean explorar diferentes ecosistemas. Sin embargo, dados los riesgos que implica interactuar con los puentes, los usuarios deben comprender las concesiones que estos hacen. Estas son algunas [estrategias para la seguridad intercadena](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
 
 <Divider />
 
 ## Más información {#further-reading}
 
 - [EIP-5164: Ejecución intercadena](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 de junio de 2022 - Brendan Asselstine_
-- [Marco de riesgo de L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 de julio de 2022 - Bartek Kiepuszewski_
+- [Marco de riesgo de L2Bridge](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _5 de julio de 2022 - Bartek Kiepuszewski_
 - ["Por qué el futuro será multicadena, pero no intercadena".](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 de enero de 2022 - Vitalik Buterin_
 - [Aprovechamiento de la seguridad compartida para una interoperabilidad intercadena segura: comités de estado de Lagrange y más allá](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 de junio de 2024 - Emmanuel Awosika_
 - [El estado de las soluciones de interoperabilidad de rollups](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 de junio de 2024 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

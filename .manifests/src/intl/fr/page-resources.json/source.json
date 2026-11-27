@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-resources.json",
-  "generatedAt": "2026-09-30T18:15:16.135Z",
-  "rootHash": "ec76908d88e8",
+  "generatedAt": "2026-11-27T09:54:07.357Z",
+  "rootHash": "e8bf341c0179",
   "tree": {
-    "contentHash": "9601c3a5896b",
-    "anchorHash": "33d949285a08",
+    "contentHash": "995478615ee7",
+    "anchorHash": "50c7c3a9f4e8",
     "children": {
       "page-resources-network-title": {
         "contentHash": "1b32d67cd02d",
@@ -36,7 +36,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-network-layer2-l2beat-description": {
-        "contentHash": "b5347c89616d",
+        "contentHash": "edaf31c4d49f",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-network-layer2-growthepie-description": {
@@ -109,10 +109,6 @@
       },
       "page-resources-gas-ethgastracker-description": {
         "contentHash": "1656d356f969",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-resources-gas-blocknative-description": {
-        "contentHash": "695d21c70b57",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-gas-l2fees-description": {
@@ -348,7 +344,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-zk-adoption-l2beat-description": {
-        "contentHash": "5aa5e8dcd707",
+        "contentHash": "3528f739b63f",
         "anchorHash": "e3b0c44298fc"
       },
       "page-resources-mempool-title": {
@@ -443,7 +439,6 @@
       "page-resources-gas-title",
       "page-resources-gas-etherscan-description",
       "page-resources-gas-ethgastracker-description",
-      "page-resources-gas-blocknative-description",
       "page-resources-gas-l2fees-description",
       "page-resources-defi-title",
       "page-resources-defi-defillama-description",
@@ -521,5 +516,5 @@
       "page-resources-share-feedback"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

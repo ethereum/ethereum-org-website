@@ -387,31 +387,29 @@ Một số mạng lưới nguồn cấp dữ liệu phi tập trung cung cấp c
 
 Có nhiều ứng dụng nguồn cấp dữ liệu mà bạn có thể tích hợp vào dapp Ethereum của mình:
 
-**[Chainlink](https://chain.link/)** - _Các mạng lưới nguồn cấp dữ liệu phi tập trung của Chainlink cung cấp các đầu vào, đầu ra và tính toán chống giả mạo để hỗ trợ các hợp đồng thông minh tiên tiến trên bất kỳ Chuỗi khối nào._
+**[Chainlink](https://chain.link/)** - _Các mạng lưới nguồn cấp dữ liệu phi tập trung Chainlink cung cấp các đầu vào, đầu ra và tính toán chống giả mạo để hỗ trợ các hợp đồng thông minh tiên tiến trên bất kỳ Chuỗi khối nào._
 
-**[Nguồn cấp dữ liệu RedStone](https://redstone.finance/)** - _RedStone là một nguồn cấp dữ liệu mô-đun phi tập trung cung cấp các nguồn cấp dữ liệu được tối ưu hóa Gas. Nó chuyên cung cấp các nguồn cấp giá cho các tài sản mới nổi, chẳng hạn như token staking thanh khoản (LST), token đặt cọc lại thanh khoản (LRT) và các công cụ phái sinh đặt cọc Bitcoin._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone là một nguồn cấp dữ liệu mô-đun phi tập trung cung cấp các luồng dữ liệu được tối ưu hóa Gas. Nó chuyên cung cấp các nguồn cấp giá cho các tài sản mới nổi, chẳng hạn như token staking thanh khoản (LST), token đặt cọc lại thanh khoản (LRT) và các công cụ phái sinh đặt cọc Bitcoin._
 
 **[Chronicle](https://chroniclelabs.org/)** - _Chronicle khắc phục những hạn chế hiện tại của việc truyền dữ liệu trên chuỗi bằng cách phát triển các nguồn cấp dữ liệu thực sự có thể mở rộng, tiết kiệm chi phí, phi tập trung và có thể xác minh._
 
-**[Witnet](https://witnet.io/)** - _Witnet là một nguồn cấp dữ liệu không cần cấp phép, phi tập trung và chống kiểm duyệt giúp các hợp đồng thông minh phản ứng với các sự kiện trong thế giới thực với các đảm bảo kinh tế tiền mã hóa mạnh mẽ._
+**[Witnet](https://witnet.io/)** - _Witnet là một nguồn cấp dữ liệu không cần cấp phép, phi tập trung và kháng kiểm duyệt, giúp các hợp đồng thông minh phản ứng với các sự kiện trong thế giới thực với các đảm bảo kinh tế mã hóa mạnh mẽ._
 
-**[Nguồn cấp dữ liệu UMA](https://uma.xyz)** - _Nguồn cấp dữ liệu lạc quan của UMA cho phép các hợp đồng thông minh nhanh chóng nhận được bất kỳ loại dữ liệu nào cho các ứng dụng khác nhau, bao gồm bảo hiểm, các công cụ phái sinh tài chính và các thị trường dự đoán._
+**[UMA Oracle](https://uma.xyz)** - _Nguồn cấp dữ liệu lạc quan của UMA cho phép các hợp đồng thông minh nhanh chóng nhận bất kỳ loại dữ liệu nào cho các ứng dụng khác nhau, bao gồm bảo hiểm, phái sinh tài chính và các thị trường dự đoán._
 
 **[Tellor](https://tellor.io/)** - _Tellor là một giao thức nguồn cấp dữ liệu minh bạch và không cần cấp phép để hợp đồng thông minh của bạn dễ dàng lấy bất kỳ dữ liệu nào bất cứ khi nào nó cần._
 
-**[Giao thức Band](https://bandprotocol.com/)** - _Giao thức Band là một nền tảng nguồn cấp dữ liệu chuỗi chéo tổng hợp và kết nối dữ liệu thế giới thực và các API với các hợp đồng thông minh._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol là một nền tảng nguồn cấp dữ liệu chuỗi chéo tổng hợp và kết nối dữ liệu trong thế giới thực và các API với các hợp đồng thông minh._
 
-**[Mạng lưới Pyth](https://pyth.network/)** - _Mạng lưới Pyth là một mạng lưới nguồn cấp dữ liệu tài chính của bên thứ nhất được thiết kế để xuất bản dữ liệu thế giới thực liên tục trên chuỗi trong một môi trường chống giả mạo, phi tập trung và tự duy trì._
+**[Pyth Network](https://pyth.network/)** - _Mạng lưới Pyth là một mạng lưới nguồn cấp dữ liệu tài chính của bên thứ nhất được thiết kế để xuất bản dữ liệu liên tục trong thế giới thực trên chuỗi trong một môi trường chống giả mạo, phi tập trung và tự duy trì._
 
 **[API3 DAO](https://api3.org/)** - _API3 DAO đang cung cấp các giải pháp nguồn cấp dữ liệu của bên thứ nhất mang lại tính minh bạch, bảo mật và khả năng mở rộng nguồn lớn hơn trong một giải pháp phi tập trung cho các hợp đồng thông minh_
 
-**[Supra](https://supra.com/)** - Một bộ công cụ tích hợp theo chiều dọc của các giải pháp chuỗi chéo liên kết tất cả các Chuỗi khối, công khai (L1 và L2) hoặc riêng tư (doanh nghiệp), cung cấp các nguồn cấp giá phi tập trung có thể được sử dụng cho các trường hợp sử dụng trên chuỗi và ngoài chuỗi. 
+**[Supra](https://supra.com/)** - Một bộ công cụ tích hợp theo chiều dọc của các giải pháp chuỗi chéo liên kết tất cả các Chuỗi khối, công khai (L1 và L2) hoặc riêng tư (doanh nghiệp), cung cấp các nguồn cấp giá phi tập trung có thể được sử dụng cho các trường hợp sử dụng trên chuỗi và ngoài chuỗi.
 
-**[Mạng lưới Gas](https://gas.network/)** - Một nền tảng nguồn cấp dữ liệu phân tán cung cấp dữ liệu giá gas theo thời gian thực trên Chuỗi khối. Bằng cách đưa dữ liệu từ các nhà cung cấp dữ liệu giá gas hàng đầu lên chuỗi, Mạng lưới Gas đang giúp thúc đẩy khả năng tương tác. Mạng lưới Gas hỗ trợ dữ liệu cho hơn 35 chuỗi, bao gồm Mạng chính Ethereum và nhiều L2 hàng đầu.
+**[DIA](https://www.diadata.org/)** - Một mạng lưới nguồn cấp dữ liệu chuỗi chéo cung cấp các luồng dữ liệu có thể xác minh cho hơn 20.000 tài sản trên tất cả các loại tài sản chính. DIA lấy dữ liệu giao dịch thô trực tiếp từ hơn 100 thị trường sơ cấp và tính toán nó trên chuỗi, đảm bảo tính minh bạch và khả năng xác minh dữ liệu hoàn toàn với các cấu hình tùy chỉnh cho bất kỳ trường hợp sử dụng nào.
 
-**[DIA](https://www.diadata.org/)** - Một mạng lưới nguồn cấp dữ liệu chuỗi chéo cung cấp các nguồn cấp dữ liệu có thể xác minh cho hơn 20.000 tài sản trên tất cả các loại tài sản chính. DIA lấy dữ liệu giao dịch thô trực tiếp từ hơn 100 thị trường sơ cấp và tính toán nó trên chuỗi, đảm bảo tính minh bạch và khả năng xác minh dữ liệu hoàn toàn với các cấu hình tùy chỉnh cho bất kỳ trường hợp sử dụng nào.
-
-**[Stork](https://stork.network)** - Stork cung cấp dữ liệu giá ở độ trễ cực thấp, hỗ trợ nhiều trường hợp sử dụng bao gồm các thị trường vĩnh viễn, các giao thức cho vay và các hệ sinh thái DeFi, với các tài sản mới được hỗ trợ nhanh chóng khi niêm yết.
+**[Stork](https://stork.network)** - Stork cung cấp dữ liệu giá với độ trễ cực thấp, hỗ trợ nhiều trường hợp sử dụng bao gồm các thị trường hợp đồng tương lai vĩnh cửu, các giao thức cho vay và các hệ sinh thái DeFi, với các tài sản mới được hỗ trợ nhanh chóng khi niêm yết.
 
 ## Đọc thêm {#further-reading}
 

@@ -1,7 +1,7 @@
 ---
-title: Giới thiệu về quản trị Ethereum
-metaTitle: Quản trị Ethereum
-description: Giới thiệu về cách các quyết định liên quan đến Ethereum được đưa ra.
+title: "Giới thiệu về quản trị Ethereum"
+metaTitle: "Quản trị Ethereum"
+description: "Các quyết định về Ethereum được đưa ra như thế nào? Tìm hiểu cách các thay đổi Giao thức được đề xuất, thảo luận và áp dụng bởi các nhà phát triển, người vận hành nút và cộng đồng."
 lang: vi
 ---
 
@@ -71,7 +71,7 @@ Quy trình chính thức để giới thiệu các thay đổi đối với Giao
 
 1. **Đề xuất một EIP Cốt lõi**: như được mô tả trong [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), bước đầu tiên để chính thức đề xuất một thay đổi đối với Ethereum là trình bày chi tiết nó trong một EIP Cốt lõi. Điều này sẽ hoạt động như một đặc tả chính thức cho một EIP mà các Nhà phát triển Giao thức sẽ triển khai nếu được chấp nhận.
 
-2. **Trình bày EIP của bạn với các Nhà phát triển Giao thức**: khi bạn có một EIP Cốt lõi mà bạn đã thu thập ý kiến đóng góp từ cộng đồng, bạn nên trình bày nó với các Nhà phát triển Giao thức. Bạn có thể làm như vậy bằng cách đề xuất nó để thảo luận trong một [cuộc gọi AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Rất có thể một số cuộc thảo luận đã diễn ra không đồng bộ trên [diễn đàn Ethereum Magicians](https://ethereum-magicians.org/) hoặc trong [Discord R&D của Ethereum](https://discord.gg/mncqtgVSVw).
+2. **Trình bày EIP của bạn với các Nhà phát triển Giao thức**: khi bạn có một EIP Cốt lõi mà bạn đã thu thập ý kiến đóng góp từ cộng đồng, bạn nên trình bày nó với các Nhà phát triển Giao thức. Bạn có thể làm như vậy bằng cách đề xuất nó để thảo luận trong một [cuộc gọi AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). Rất có thể một số cuộc thảo luận đã diễn ra không đồng bộ trên [diễn đàn Ethereum Magicians](https://ethereum-magicians.org/) hoặc trong [Discord R&D của Ethereum](https://discord.gg/mncqtgVSVw).
 
 > Các kết quả tiềm năng của giai đoạn này là:
 

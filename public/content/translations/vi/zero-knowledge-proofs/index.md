@@ -1,7 +1,7 @@
 ---
 title: "Bằng chứng không kiến thức là gì?"
 metaTitle: "Bằng chứng không kiến thức"
-description: "Giới thiệu phi kỹ thuật về bằng chứng không kiến thức dành cho người mới bắt đầu."
+description: "Bằng chứng không kiến thức là gì? Bài giới thiệu dễ hiểu cho người mới bắt đầu về cách bằng chứng ZK xác minh một khẳng định mà không tiết lộ dữ liệu, và cách Ethereum sử dụng chúng."
 lang: vi
 ---
 
@@ -100,7 +100,7 @@ Chuỗi cần một cách để xác thực các giao dịch ngoài chuỗi mà 
 
 [Bản cuộn không tri thức](/developers/docs/scaling/zk-rollups) và [validium](/developers/docs/scaling/validium/) là hai giải pháp mở rộng quy mô ngoài chuỗi sử dụng bằng chứng tính hợp lệ để cung cấp khả năng mở rộng an toàn. Các giao thức này thực thi hàng ngàn giao dịch ngoài chuỗi và gửi bằng chứng để xác minh trên Ethereum. Những kết quả đó có thể được áp dụng ngay lập tức sau khi bằng chứng được xác minh, cho phép Ethereum xử lý nhiều giao dịch hơn mà không làm tăng tính toán trên lớp cơ sở.
 
-Vượt ra ngoài việc mở rộng quy mô lớp 2 (l2), bằng chứng không kiến thức cũng có thể tự xác minh việc thực thi khối Ethereum L1. [zkEVM cho xác minh L1](/roadmap/zkevm/) sẽ cho phép các trình xác thực xác minh các khối bằng cách kiểm tra một bằng chứng thay vì thực thi lại tất cả các giao dịch—cho phép giới hạn Gas cao hơn mà không làm tăng yêu cầu phần cứng của trình xác thực.
+Vượt ra ngoài việc mở rộng quy mô lớp 2 (L2), bằng chứng không kiến thức cũng có thể tự xác minh việc thực thi khối Ethereum L1. [zkEVM cho xác minh L1](/roadmap/zkevm/) sẽ cho phép các trình xác thực xác minh các khối bằng cách kiểm tra một bằng chứng thay vì thực thi lại tất cả các giao dịch—cho phép giới hạn Gas cao hơn mà không làm tăng yêu cầu phần cứng của trình xác thực.
 
 ### Giảm thiểu hối lộ và thông đồng trong bỏ phiếu trên chuỗi {#secure-blockchain-voting}
 

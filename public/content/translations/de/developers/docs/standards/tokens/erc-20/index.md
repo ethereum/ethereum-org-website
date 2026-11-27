@@ -176,14 +176,14 @@ Einige alternative Standards sind aus diesem Problem hervorgegangen, wie z. B. [
 - [Alchemy - Leitfaden zu Solidity-ERC20-Token](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Weitere Standards für fungible Token {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenisierte Vaults](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 - Asynchrone tokenisierte Vaults](/developers/docs/standards/tokens/erc-7540)
-## Tutorials: Bauen mit ERC-20 auf Ethereum {#tutorials}
+## Tutorials: Entwickeln mit ERC-20 auf Ethereum {#tutorials}
 
-- [ERC-20-Vertrag-Walkthrough](/developers/tutorials/erc20-annotated-code/) _– Ein zeilenweise kommentierter Durchgang durch die ERC-20-Vertragsimplementierung von OpenZeppelin._
-- [ERC-20 mit Sicherheitsvorkehrungen](/developers/tutorials/erc20-with-safety-rails/) _– Wie man ERC-20-Token mit Schutzmechanismen versieht, um Benutzern zu helfen, häufige Fehler zu vermeiden._
-- [Senden von Token mit Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Ein anfängerfreundlicher Leitfaden zum Transferieren von ERC-20-Token mit Ethers.js._
-- [Einige Tricks von Betrugs-Token und wie man sie erkennt](/developers/tutorials/scam-token-tricks/) _– Ein tiefer Einblick in die Muster von betrügerischen ERC-20-Token und wie man sie identifiziert._
+- [Schritt-für-Schritt-Anleitung für einen ERC-20-Vertrag](/developers/tutorials/erc20-annotated-code/) _– Eine zeilenweise kommentierte Anleitung zur Implementierung des ERC-20-Vertrags von OpenZeppelin._
+- [ERC-20 mit Sicherheitsvorkehrungen](/developers/tutorials/erc20-with-safety-rails/) _– Wie man Schutzmechanismen zu ERC-20-Token hinzufügt, um Benutzern zu helfen, häufige Fehler zu vermeiden._
+- [Einige Tricks von Betrugs-Token und wie man sie erkennt](/developers/tutorials/scam-token-tricks/) _– Eine ausführliche Analyse von Betrugsmustern bei ERC-20-Token und wie man sie identifiziert._

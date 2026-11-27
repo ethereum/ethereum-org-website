@@ -1,7 +1,7 @@
 ---
-title: Úvod do chytrých kontraktů
+title: "Úvod do chytrých kontraktů"
 metaTitle: "Chytré kontrakty: Co to je a jaké mají výhody"
-description: Netechnický úvod do chytrých kontraktů
+description: "Co jsou to chytré kontrakty? Netechnický úvod do programů, které běží na Ethereu a pohánějí aplikace jako DeFi, NFT a DAO bez prostředníků."
 lang: cs
 ---
 

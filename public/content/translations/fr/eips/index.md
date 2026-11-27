@@ -1,7 +1,7 @@
 ---
-title: Introduction aux propositions d'amélioration d'Ethereum (EIP)
-metaTitle: Propositions d'amélioration d'Ethereum (EIP)
-description: Les informations de base dont vous avez besoin pour comprendre les EIP
+title: "Introduction aux propositions d'amélioration d'Ethereum (EIP)"
+metaTitle: "Propositions d'amélioration d'Ethereum (EIP)"
+description: "Que sont les propositions d'amélioration d'Ethereum (EIP) ? Découvrez comment les modifications apportées à Ethereum sont proposées, discutées et adoptées, et comment vous pouvez y participer."
 lang: fr
 ---
 
@@ -15,7 +15,7 @@ N'importe qui au sein de la communauté Ethereum a la possibilité de créer une
 
 Les EIP jouent un rôle central dans la façon dont les changements se produisent et sont documentés sur Ethereum. Elles constituent le moyen pour les personnes de proposer, de débattre et d'adopter des changements. Il existe [différents types d'EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), y compris les EIP de base (core) pour les modifications de protocole de bas niveau qui affectent le consensus et nécessitent une mise à niveau du réseau comme l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), et les ERC pour les normes d'application comme l'[EIP-20](https://eips.ethereum.org/EIPS/eip-20) et l'[EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Chaque mise à niveau du réseau se compose d'un ensemble d'EIP qui doivent être implémentées par chaque [client Ethereum](/learn/#clients-and-nodes) sur le réseau. Cela signifie que pour rester en consensus avec les autres clients sur le réseau principal Ethereum, les développeurs de clients doivent s'assurer qu'ils ont tous implémenté les EIP requises.
+Chaque mise à niveau du réseau se compose d'un ensemble d'EIP qui doivent être implémentées par chaque [client Ethereum](/developers/docs/nodes-and-clients/) sur le réseau. Cela signifie que pour rester en consensus avec les autres clients sur le réseau principal Ethereum, les développeurs de clients doivent s'assurer qu'ils ont tous implémenté les EIP requises.
 
 En plus de fournir une spécification technique pour les changements, les EIP sont l'unité autour de laquelle s'articule la gouvernance dans Ethereum : n'importe qui est libre d'en proposer une, puis diverses parties prenantes de la communauté débattront pour déterminer si elle doit être adoptée comme norme ou incluse dans une mise à niveau du réseau. Étant donné que les EIP non essentielles (non-core) n'ont pas à être adoptées par toutes les applications (par exemple, il est possible de créer un jeton fongible qui n'implémente pas l'EIP-20), mais que les EIP de base (core) doivent être largement adoptées (car tous les nœuds doivent se mettre à niveau pour continuer à faire partie du même réseau), les EIP de base nécessitent un consensus plus large au sein de la communauté que les EIP non essentielles.
 

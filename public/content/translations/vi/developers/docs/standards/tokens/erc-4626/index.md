@@ -51,7 +51,7 @@ Hàm này trả về địa chỉ của token cơ sở được sử dụng cho 
 function totalAssets() public view returns (uint256)
 ```
 
-Hàm này trả về tổng số lượng tài sản cơ sở được giữ bởi kho tiền.
+Hàm này trả về tổng số lượng tài sản cơ sở được quản lý bởi kho tiền, bao gồm cả những tài sản đã được đưa vào sử dụng ở nơi khác và sau khi trừ đi mọi khoản phí.
 
 #### convertToShares {#convertoshares}
 
@@ -181,9 +181,9 @@ function balanceOf(address owner) public view returns (uint256)
 
 Trả về tổng số lượng cổ phần kho tiền mà `owner` hiện đang có.
 
-### Bản đồ giao diện {#mapoftheinterface}
+### Sơ đồ giao diện {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Các sự kiện {#events}
 

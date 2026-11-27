@@ -1,6 +1,6 @@
 ---
 title: "Zdecentralizowana tożsamość"
-description: "Czym jest zdecentralizowana tożsamość i dlaczego ma znaczenie?"
+description: "Czym jest zdecentralizowana tożsamość? Dowiedz się, jak Ethereum pozwala Ci posiadać i kontrolować swoją tożsamość, poświadczenia i dane bez polegania na centralnym dostawcy."
 lang: pl
 template: use-cases
 sidebarDepth: 2

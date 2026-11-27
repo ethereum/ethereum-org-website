@@ -6,11 +6,11 @@ lang: vi
 
 Một nút Ethereum bao gồm hai máy khách: một [máy khách thực thi](/developers/docs/nodes-and-clients/#execution-clients) và một [ứng dụng khách đồng thuận](/developers/docs/nodes-and-clients/#consensus-clients). Để một nút đề xuất một khối mới, nó cũng phải chạy một [máy khách trình xác thực](#validators).
 
-Khi Ethereum sử dụng [Bằng chứng công việc (PoW)](/developers/docs/consensus-mechanisms/pow/), một máy khách thực thi là đủ để chạy một nút Ethereum đầy đủ. Tuy nhiên, kể từ khi triển khai [Bằng chứng cổ phần (PoS)](/developers/docs/consensus-mechanisms/pos/), máy khách thực thi phải được sử dụng cùng với một phần mềm khác gọi là [ứng dụng khách đồng thuận](/developers/docs/nodes-and-clients/#consensus-clients).
+Khi Ethereum sử dụng [Bằng chứng công việc](/developers/docs/consensus-mechanisms/pow/), một máy khách thực thi là đủ để chạy một nút Ethereum đầy đủ. Tuy nhiên, kể từ khi triển khai [Bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/), máy khách thực thi phải được sử dụng cùng với một phần mềm khác được gọi là [ứng dụng khách đồng thuận](/developers/docs/nodes-and-clients/#consensus-clients).
 
-Biểu đồ dưới đây cho thấy mối quan hệ giữa hai máy khách Ethereum. Hai máy khách này kết nối với các mạng lưới ngang hàng (P2P) tương ứng của riêng chúng. Cần có các mạng lưới P2P riêng biệt vì các máy khách thực thi truyền bá các giao dịch qua mạng lưới P2P của chúng, cho phép chúng quản lý bể giao dịch cục bộ, trong khi các ứng dụng khách đồng thuận truyền bá các khối qua mạng lưới P2P của chúng, cho phép đạt được sự đồng thuận và phát triển Chuỗi.
+Sơ đồ dưới đây cho thấy mối quan hệ giữa hai máy khách Ethereum. Hai máy khách này kết nối với các mạng lưới ngang hàng (P2P) tương ứng của riêng chúng. Cần có các mạng lưới P2P riêng biệt vì các máy khách thực thi truyền bá giao dịch qua mạng lưới P2P của chúng, cho phép chúng quản lý bể giao dịch cục bộ, trong khi các ứng dụng khách đồng thuận truyền bá khối qua mạng lưới P2P của chúng, cho phép sự đồng thuận và sự phát triển của Chuỗi.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _Có một số tùy chọn cho máy khách thực thi bao gồm Erigon, Nethermind và Besu_.
 

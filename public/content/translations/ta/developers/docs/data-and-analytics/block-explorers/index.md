@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## சேவைகள் {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - தனிப்பட்ட எத்திரியம் ஆராய்வி. தரவுகளை (மெம்பூல்) வரிசைப்படுத்தவும் வடிகட்டவும் பயன்படுகிறது. ஸ்பானிஷ், பிரெஞ்சு, இத்தாலியன், டச்சு, போர்த்துகீசியம், ரஷ்யன், சீனம் மற்றும் ஃபார்ஸி மொழிகளில் கிடைக்கிறது
+- [Blockchair](https://blockchair.com/ethereum) - தனியார் எத்திரியம் ஆராய்வி. (மெம்பூல்) தரவை வரிசைப்படுத்தவும் வடிகட்டவும் பயன்படுகிறது. ஸ்பானிஷ், பிரெஞ்சு, இத்தாலியன், டச்சு, போர்த்துகீசியம், ரஷ்யன், சீனம் மற்றும் ஃபார்ஸி மொழிகளில் கிடைக்கிறது
 - [Chainlens](https://www.chainlens.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
+- [DexGuru தொகுதி ஆராய்வி](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - சீனம், கொரியன், ரஷ்யன் மற்றும் ஜப்பானிய மொழிகளிலும் கிடைக்கிறது
 - [Ethplorer](https://ethplorer.io/) - வில்லைகளை மையமாகக் கொண்ட ஒரு தொகுதி ஆராய்வி. சீனம், ஸ்பானிஷ், பிரெஞ்சு, துருக்கியம், ரஷ்யன், கொரியன் மற்றும் வியட்நாமிய மொழிகளிலும் கிடைக்கிறது
+- [Ethscanner](https://ethscanner.io/) - Routescan ஆல் வழங்கப்படுகிறது. சரிபார்ப்பி கூட்டணியின் (Verifier Alliance) திறந்த தரவுத்தொகுப்பிற்கு சரிபார்க்கப்பட்ட ஒப்பந்தங்களை வழங்குகிறது மற்றும் குறுக்கு-சங்கிலி பரிவர்த்தனைகளைக் காட்டுகிறது
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

@@ -1,7 +1,7 @@
 ---
 title: "ethereum.orgについて"
 metaTitle: "私たちについて"
-description: "ethereum.orgのチーム、コミュニティ、ミッションについて"
+description: "ethereum.orgを支えるチームとコミュニティについて: 私たちのミッション、サイトがどのようにオープンに構築・ガバナンスされているか、そしてあなたがどのように改善に貢献できるかをご紹介します。"
 lang: ja
 ---
 
@@ -107,9 +107,11 @@ ethereum.orgは、誰もが貢献できる[イーサリアム](/)コミュニテ
 
 ## デザインシステム {#design-system}
 
-機能をより迅速にリリースし、コミュニティメンバーがethereum.orgのオープンなデザインに参加できるように、[デザインシステム](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)を構築して公開しました。
+私たちは、機能をより迅速にリリースし、コミュニティメンバーがethereum.orgのオープンなデザインに参加できるように、[デザインシステム](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)を構築して公開しました。
 
-参加したいですか？ [Figmaでフォロー](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)し、私たちの[#design ディスコードチャンネル](/discord/)での会話に参加してください。
+参加したいですか？ [Figmaでフォロー](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)し、[ディスコードの#designチャンネル](/discord/)での会話に参加してください。
+
+ロゴ、イラスト、その他のブランドファイルをお探しですか？ [アセットページ](/assets/)からダウンロードしてください。
 
 ## スタイルガイド {#style-guide}
 
@@ -122,6 +124,10 @@ ethereum.orgは、誰もが貢献できる[イーサリアム](/)コミュニテ
 ## ライセンス {#license}
 
 ethereum.orgのウェブサイトはオープンソースであり、特に明記されていない限り[MITライセンス](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE)の下で構築されています。ethereum.orgの[利用規約](/terms-of-use/)の詳細はこちらをご覧ください。
+
+## あなたのプライバシー {#your-privacy}
+
+ethereum.orgは、プライバシーを保護する分析のためにMatomoを使用しており、いつでもオプトアウトできます。詳細については、[クッキーポリシー](/cookie-policy/)と[プライバシーポリシー](/privacy-policy/)をお読みください。
 
 ## 募集中の職種 {#open-jobs}
 

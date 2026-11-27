@@ -1,7 +1,7 @@
 ---
 title: "关于 ethereum.org"
 metaTitle: "关于我们"
-description: "关于 ethereum.org 的团队、社区和使命"
+description: "认识 ethereum.org 背后的团队和社区：我们的使命、网站是如何公开构建和治理的，以及你如何帮助改进它。"
 lang: zh
 ---
 
@@ -107,9 +107,11 @@ ethereum.org 是一个面向[以太坊](/)社区的公共开源资源，任何�
 
 ## 设计系统 {#design-system}
 
-我们构建并发布了一个[设计系统](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)，以便更快地交付功能，并让社区成员参与 ethereum.org 的开放设计。
+我们构建并发布了一个[设计系统](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)，以便更快地交付功能，并让社区成员参与 ethereum.org 的公开设计。
 
-想要参与其中？[在 Figma 中关注](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)并加入我们 [#design Discord 频道](/discord/)的对话。
+想要参与其中？[在 Figma 中关注](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)并加入我们 [#design Discord 频道](/discord/)中的讨论。
+
+正在寻找徽标、插图或其他品牌文件？请从我们的[资产页面](/assets/)下载。
 
 ## 风格指南 {#style-guide}
 
@@ -122,6 +124,10 @@ ethereum.org 是一个面向[以太坊](/)社区的公共开源资源，任何�
 ## 许可证 {#license}
 
 除非另有说明，ethereum.org 网站是开源的，并基于 [MIT 许可证](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE)构建。了解更多关于 ethereum.org 的[使用条款](/terms-of-use/)。
+
+## 你的隐私 {#your-privacy}
+
+ethereum.org 使用 Matomo 进行保护隐私的分析，你可以随时选择退出。请阅读我们的 [Cookie 政策](/cookie-policy/)和[隐私政策](/privacy-policy/)了解详情。
 
 ## 招聘职位 {#open-jobs}
 

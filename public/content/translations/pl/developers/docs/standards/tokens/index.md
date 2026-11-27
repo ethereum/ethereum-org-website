@@ -39,6 +39,6 @@ _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!
 ## Powiązane samouczki {#related-tutorials}
 
 - [Lista kontrolna integracji tokenów](/developers/tutorials/token-integration-checklist/) _– Lista rzeczy do rozważenia podczas interakcji z tokenami._
-- [Zrozumienie inteligentnego kontraktu tokena ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Wprowadzenie do wdrażania pierwszego inteligentnego kontraktu w sieci testowej Ethereum._
-- [Transfery i zatwierdzanie tokenów ERC20 z inteligentnego kontraktu w Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Jak używać inteligentnego kontraktu do interakcji z tokenem przy użyciu języka Solidity._
-- [Wdrażanie rynku ERC721 [poradnik]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Jak wystawić stokenizowane przedmioty na sprzedaż na zdecentralizowanej tablicy ogłoszeń._
+- [Przewodnik po kontrakcie ERC-20](/developers/tutorials/erc20-annotated-code/) _– Opatrzony komentarzami przewodnik linijka po linijce po implementacji kontraktu ERC-20 od OpenZeppelin._
+- [Transfery i zatwierdzanie tokenów ERC-20 z inteligentnego kontraktu w Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Jak użyć inteligentnego kontraktu do interakcji z tokenem przy użyciu języka Solidity._
+- [Implementacja rynku ERC-721 [poradnik]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Jak wystawić stokenizowane przedmioty na sprzedaż na zdecentralizowanej tablicy ogłoszeń._

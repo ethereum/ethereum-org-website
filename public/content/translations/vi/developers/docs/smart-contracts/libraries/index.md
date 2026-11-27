@@ -56,7 +56,7 @@ Một ví dụ phổ biến khác là [SafeMath](https://docs.openzeppelin.com/c
 
 Để tạo điều kiện thuận lợi cho [khả năng kết hợp và khả năng tương tác](/developers/docs/smart-contracts/composability/), cộng đồng Ethereum đã định nghĩa một số tiêu chuẩn dưới dạng các **ERC**. Bạn có thể đọc thêm về chúng trong phần [tiêu chuẩn](/developers/docs/standards/).
 
-Khi đưa một ERC vào làm một phần trong các hợp đồng của bạn, bạn nên tìm kiếm các bản triển khai tiêu chuẩn thay vì cố gắng tự xây dựng. Nhiều thư viện hợp đồng thông minh bao gồm các bản triển khai cho những ERC phổ biến nhất. Ví dụ, [tiêu chuẩn token có thể thay thế ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) phổ biến ở khắp mọi nơi có thể được tìm thấy trong [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) và [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Ngoài ra, một số ERC cũng cung cấp các bản triển khai chuẩn mực như một phần của chính ERC đó.
+Khi đưa một ERC vào làm một phần trong các hợp đồng của bạn, bạn nên tìm kiếm các bản triển khai tiêu chuẩn thay vì cố gắng tự xây dựng. Nhiều thư viện hợp đồng thông minh bao gồm các bản triển khai cho những ERC phổ biến nhất. Ví dụ, [tiêu chuẩn token có thể thay thế ERC-20](/developers/docs/standards/tokens/erc-20/) phổ biến ở khắp mọi nơi có thể được tìm thấy trong [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) và [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Ngoài ra, một số ERC cũng cung cấp các bản triển khai chuẩn mực như một phần của chính ERC đó.
 
 Đáng chú ý là một số ERC không hoạt động độc lập mà là các phần bổ sung cho các ERC khác. Ví dụ, [ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) thêm một tiện ích mở rộng vào ERC-20 để cải thiện khả năng sử dụng của nó.
 
@@ -109,8 +109,7 @@ Cuối cùng, khi quyết định xem có nên đưa vào một thư viện hay 
 
 ## Các hướng dẫn liên quan {#related-tutorials}
 
-- [Các cân nhắc về bảo mật dành cho nhà phát triển Ethereum](/developers/docs/smart-contracts/security/) _– Một hướng dẫn về các cân nhắc bảo mật khi xây dựng hợp đồng thông minh, bao gồm cả việc sử dụng thư viện._
-- [Tìm hiểu về hợp đồng thông minh token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Hướng dẫn về tiêu chuẩn ERC-20, được cung cấp bởi nhiều thư viện._
+- [Các cân nhắc về bảo mật cho nhà phát triển Ethereum](/developers/docs/smart-contracts/security/) _– Một hướng dẫn về các cân nhắc bảo mật khi xây dựng hợp đồng thông minh, bao gồm cả việc sử dụng thư viện._
 
 ## Đọc thêm {#further-reading}
 

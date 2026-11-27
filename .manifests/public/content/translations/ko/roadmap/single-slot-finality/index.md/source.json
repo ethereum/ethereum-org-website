@@ -1,18 +1,18 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/single-slot-finality/index.md",
-  "generatedAt": "2026-07-23T22:50:18.781Z",
-  "rootHash": "9bb8f5a5f505",
+  "generatedAt": "2026-11-27T10:06:36.280Z",
+  "rootHash": "548833d03c77",
   "tree": {
-    "contentHash": "cd76e7c935a4",
-    "anchorHash": "725a23f7e9d8",
+    "contentHash": "3a16ef2df13d",
+    "anchorHash": "da000f44d55a",
     "children": {
       "frontmatter:title": {
         "contentHash": "26be487ae07f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "0ee533f97767",
+        "contentHash": "8c5bc0354a6e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -209,8 +209,8 @@
         ]
       },
       "current-progress": {
-        "contentHash": "ad92ca67a3ba",
-        "anchorHash": "e2fd227870ae",
+        "contentHash": "5251d2f61326",
+        "anchorHash": "b6324f942723",
         "labelHash": "46814fcae9de",
         "children": {
           "_label": {
@@ -218,15 +218,15 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:2": {
-            "contentHash": "3b5c65ff1414",
+            "contentHash": "05190739095c",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "fdf6b8b2922f",
-            "anchorHash": "dbd9c3cd11b2"
+            "contentHash": "f7b332825bb2",
+            "anchorHash": "d95e7bf1ea74"
           },
           "prose:3": {
-            "contentHash": "6201111b83a0",
+            "contentHash": "177e9e7313d9",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
@@ -300,5 +300,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "9fbda251935a99d698459c3ce514c22fdce5a065"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

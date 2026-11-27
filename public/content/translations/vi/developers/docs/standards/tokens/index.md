@@ -38,7 +38,7 @@ _Bạn biết một tài nguyên cộng đồng nào đó hữu ích? Hãy chỉ
 - [Những nguy hiểm của việc tích hợp token (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _OpenZeppelin_
 ## Các hướng dẫn liên quan {#related-tutorials}
 
-- [Danh sách kiểm tra tích hợp token](/developers/tutorials/token-integration-checklist/) _– Một danh sách các điều cần xem xét khi tương tác với các token._
-- [Hiểu về hợp đồng thông minh token ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Giới thiệu về việc triển khai hợp đồng thông minh đầu tiên của bạn trên một mạng lưới thử nghiệm Ethereum._
-- [Chuyển nhượng và phê duyệt token ERC20 từ một hợp đồng thông minh Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Cách sử dụng một hợp đồng thông minh để tương tác với một token bằng ngôn ngữ Solidity._
-- [Triển khai một thị trường ERC721 [hướng dẫn cách làm]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Cách đưa các mặt hàng đã được token hóa lên bán trên một bảng rao vặt phi tập trung._
+- [Danh sách kiểm tra tích hợp token](/developers/tutorials/token-integration-checklist/) _– Danh sách kiểm tra những điều cần cân nhắc khi tương tác với các token._
+- [Hướng dẫn chi tiết hợp đồng ERC-20](/developers/tutorials/erc20-annotated-code/) _– Hướng dẫn chi tiết từng dòng có chú thích về việc triển khai hợp đồng ERC-20 của OpenZeppelin._
+- [Chuyển và phê duyệt các token ERC-20 từ một hợp đồng thông minh Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Cách sử dụng một hợp đồng thông minh để tương tác với một token bằng ngôn ngữ Solidity._
+- [Triển khai một thị trường ERC-721 [hướng dẫn cách làm]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Cách đưa các mặt hàng đã được token hóa lên bán trên một bảng rao vặt phi tập trung._

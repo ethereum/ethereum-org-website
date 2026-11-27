@@ -1,6 +1,6 @@
 ---
 title: "Ethereum geliştirme belgeleri"
-description: "ethereum.org geliştirici belgelerine giriş."
+description: "Ethereum geliştirici belgeleri: ilk dapp'inizi oluşturma rehberleriyle birlikte temelleri, Ethereum yığınını, akıllı sözleşmeleri, düğümleri ve ölçeklendirmeyi öğrenin."
 lang: tr
 ---
 

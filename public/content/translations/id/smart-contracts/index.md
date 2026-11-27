@@ -1,7 +1,7 @@
 ---
 title: Pengantar kontrak pintar
 metaTitle: "Kontrak pintar: Apa itu dan apa manfaatnya"
-description: Pengantar non-teknis tentang kontrak pintar
+description: Apa itu kontrak pintar? Pengantar non-teknis tentang program yang berjalan di Ethereum dan menggerakkan aplikasi seperti DeFi, NFT, dan DAO tanpa perantara.
 lang: id
 ---
 

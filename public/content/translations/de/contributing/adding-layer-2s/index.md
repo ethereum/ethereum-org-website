@@ -1,6 +1,6 @@
 ---
-title: Layer 2 hinzufügen
-description: Die Richtlinie, die wir beim Hinzufügen eines Layer 2 zu ethereum.org anwenden
+title: "Layer 2 hinzufügen"
+description: "Die Richtlinie, die wir beim Hinzufügen eines Layer 2 zu ethereum.org anwenden"
 lang: de
 ---
 
@@ -20,10 +20,10 @@ Layer 2 ist ein relativ neues und spannendes Paradigma für Ethereum. Wir haben 
 
 ### Kriterien für die Aufnahme: die Must-haves {#criteria-for-inclusion-the-must-haves}
 
-**Auflistung auf L2BEAT**
+**Listung auf ETHBEAT**
 
-- Um berücksichtigt zu werden, muss dieses Projekt auf [L2BEAT](https://l2beat.com) gelistet sein. L2BEAT bietet eine robuste Risikobewertung von Layer-2-Projekten, auf die wir uns bei der Bewertung von L2-Projekten stützen. **Wenn das Projekt nicht auf L2BEAT aufgeführt ist, werden wir es nicht als L2 auf ethereum.org auflisten.**
-- [Erfahre, wie du dein L2-Projekt zu L2BEAT hinzufügst](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Um berücksichtigt zu werden, muss dieses Projekt auf [ETHBEAT](https://ethbeat.org) gelistet sein. ETHBEAT bietet eine robuste Risikobewertung von Layer-2-Projekten, auf die wir uns bei der Bewertung von L2-Projekten stützen. **Wenn das Projekt nicht auf ETHBEAT vertreten ist, werden wir es nicht als L2 auf ethereum.org auflisten.**
+- [Erfahre, wie du dein L2-Projekt zu ETHBEAT hinzufügst](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Open Source**
 
@@ -38,27 +38,27 @@ Wir betrachten derzeit die folgenden als Layer-2-Lösungen:
 
 _Wir betrachten andere Skalierungslösungen, die Ethereum nicht für die Datenverfügbarkeit oder Sicherheit nutzen, nicht als Layer 2._
 
-**Ethereum für die Datenverfügbarkeit**
+**Ethereum für Datenverfügbarkeit**
 
-- Die Datenverfügbarkeit ist ein wichtiges Unterscheidungsmerkmal zwischen anderen Skalierungslösungen und Layer 2. Ein Projekt **muss** das Ethereum Mainnet für die Datenverfügbarkeit nutzen, um für eine Auflistung in Betracht gezogen zu werden.
+- Datenverfügbarkeit ist ein wichtiges Unterscheidungsmerkmal zwischen anderen Skalierungslösungen und Layer 2. Ein Projekt **muss** das Ethereum Mainnet für die Datenverfügbarkeit nutzen, um für eine Listung in Betracht gezogen zu werden.
 
 **Bridges**
 
-- Wie können Benutzer auf den Layer 2 gelangen?
+- Wie können Benutzer auf den Layer 2 wechseln?
 
 **Datum, an dem das Projekt live ging**
 
 - Ein Layer 2, der seit über 6 Monaten auf dem Mainnet „live“ ist
 
-- Neuere Projekte, die noch nicht von Benutzern in der Praxis erprobt wurden, werden seltener gelistet.
+- Neuere Projekte, die sich noch nicht in der Praxis bewährt haben, werden mit geringerer Wahrscheinlichkeit gelistet.
 
 **Externes Sicherheitsaudit**
 
-- Ob durch ein Audit, ein internes Sicherheitsteam oder eine andere Methode – die Sicherheit deines Produkts muss zuverlässig getestet sein. Dies verringert das Risiko für unsere Benutzer und zeigt uns, dass du Sicherheit ernst nimmst.
+- Ob durch ein Audit, ein internes Sicherheitsteam oder eine andere Methode, die Sicherheit deines Produkts muss zuverlässig getestet sein. Dies verringert das Risiko für unsere Benutzer und zeigt uns, dass du Sicherheit ernst nimmst.
 
-**Nachhaltige Nutzerbasis**
+**Nachhaltige Benutzerbasis**
 
-- Wir berücksichtigen Metriken wie den Verlauf des gesamten gebundenen Werts (TVL), Transaktionsstatistiken und ob es von bekannten Unternehmen oder Projekten genutzt wird
+- Wir berücksichtigen Metriken wie den TVL-Verlauf, Transaktionsstatistiken und ob es von bekannten Unternehmen oder Projekten genutzt wird
 
 **Aktives Entwicklungsteam**
 
@@ -66,7 +66,7 @@ _Wir betrachten andere Skalierungslösungen, die Ethereum nicht für die Datenve
 
 **Block-Explorer**
 
-- Gelistete Projekte erfordern einen funktionierenden Block-Explorer, damit Benutzer problemlos auf der Chain navigieren können.
+- Gelistete Projekte erfordern einen funktionierenden Block-Explorer, damit Benutzer einfach auf der Chain navigieren können.
 
 ### Weitere Kriterien: die Nice-to-haves {#nice-to-haves}
 

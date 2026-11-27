@@ -1,6 +1,6 @@
 ---
 title: Staking likuid & gabungan
-description: Gambaran umum tentang staking likuid dan gabungan di Ethereum
+description: Apa itu staking likuid? Pelajari bagaimana pool staking memungkinkan Anda mendapatkan imbalan ETH dengan jumlah ETH berapa pun, sering kali menerima token likuid yang masih dapat Anda gunakan.
 lang: id
 template: staking
 image: /images/staking/leslie-pool.png

@@ -1,7 +1,7 @@
 ---
 title: Agentes de IA
 metaTitle: Agentes de IA | Agentes de IA en Ethereum
-description: "Una descripción general de los agentes de IA en Ethereum"
+description: "¿Qué son los agentes de IA en Ethereum? Aprende cómo los agentes autónomos poseen activos, operan, utilizan las DeFi y se pagan entre sí en cadena, además de los riesgos que debes tener en cuenta."
 lang: es
 template: use-cases
 sidebarDepth: 2

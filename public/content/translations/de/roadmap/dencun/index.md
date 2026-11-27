@@ -1,7 +1,7 @@
 ---
 title: Cancun-Deneb (Dencun)
 metaTitle: Cancun-Deneb (Dencun) FAQ
-description: Häufig gestellte Fragen zum Cancun-Deneb (Dencun) Netzwerk-Upgrade
+description: "Häufig gestellte Fragen zum Cancun-Deneb (Dencun) Netzwerk-Upgrade"
 lang: de
 template: upgrade
 ---
@@ -39,22 +39,21 @@ Die Einführung von Proto-Danksharding im Dencun-Upgrade fügt einen günstigere
 
 ## Wie wird auf alte Blob-Daten zugegriffen? {#historical-access}
 
-Während reguläre Ethereum-Knoten immer den _aktuellen Zustand_ des Netzwerks speichern, können historische Blob-Daten etwa 18 Tage nach ihrer Einführung verworfen werden. Bevor diese Daten verworfen werden, stellt Ethereum sicher, dass sie allen Netzwerkteilnehmern zur Verfügung gestellt wurden, sodass Zeit bleibt für:
+Während reguläre Ethereum-Knoten immer den _aktuellen Zustand_ des Netzwerks speichern, können historische Blob-Daten etwa 18 Tage nach ihrer Einführung verworfen werden. Bevor diese Daten verworfen werden, stellt Ethereum sicher, dass sie allen Netzwerkteilnehmern zur Verfügung gestellt wurden, was ausreichend Zeit bietet für:
 
-- Interessierte Parteien, um die Daten herunterzuladen und zu speichern.
-- Den Abschluss aller Rollup-Challenge-Perioden.
-- Die Finalisierung der Rollup-Transaktionen.
+- das Herunterladen und Speichern der Daten durch interessierte Parteien.
+- den Abschluss aller Rollup-Challenge-Perioden.
+- die Finalisierung der Rollup-Transaktionen.
 
-_Historische_ Blob-Daten können aus verschiedenen Gründen gewünscht sein und können mithilfe mehrerer dezentraler Protokolle gespeichert und abgerufen werden:
+_Historische_ Blob-Daten können aus verschiedenen Gründen gewünscht sein und über mehrere dezentrale Protokolle gespeichert und abgerufen werden:
 
-- **Indexierungsprotokolle von Drittanbietern**, wie The Graph, speichern diese Daten über ein dezentrales Netzwerk von Knotenbetreibern, die durch kryptoökonomische Mechanismen motiviert werden.
+- **Indexierungsprotokolle von Drittanbietern** wie The Graph speichern diese Daten über ein dezentrales Netzwerk von Knotenbetreibern, die durch kryptoökonomische Mechanismen incentiviert werden.
 - **BitTorrent** ist ein dezentrales Protokoll, bei dem Freiwillige diese Daten speichern und an andere verteilen können.
-- Das **[Ethereum-Portal-Netzwerk](/developers/docs/networking-layer/portal-network/)** zielt darauf ab, den Zugriff auf alle Ethereum-Daten über ein dezentrales Netzwerk von Knotenbetreibern zu ermöglichen, indem Daten ähnlich wie bei BitTorrent unter den Teilnehmern verteilt werden.
-- **Einzelne Benutzer** können jederzeit eigene Kopien beliebiger Daten für historische Referenzen speichern.
+- **Einzelne Benutzer** können jederzeit ihre eigenen Kopien beliebiger Daten für historische Referenzzwecke speichern.
 - **Rollup-Anbieter** haben einen Anreiz, diese Daten zu speichern, um die Benutzererfahrung ihres Rollups zu verbessern.
-- **Block-Explorer** betreiben in der Regel Archivknoten, die all diese Informationen für eine einfache historische Referenz indizieren und speichern und für Benutzer über eine Weboberfläche zugänglich sind.
+- **Block-Explorer** betreiben in der Regel Archivknoten, die all diese Informationen für eine einfache historische Referenz indexieren und speichern und für Benutzer über eine Weboberfläche zugänglich machen.
 
-Es ist wichtig zu beachten, dass die Wiederherstellung des historischen Zustands auf einem **1-von-N-Vertrauensmodell** basiert. Das bedeutet, dass Sie nur Daten aus _einer einzigen vertrauenswürdigen Quelle_ benötigen, um deren Richtigkeit anhand des aktuellen Zustands des Netzwerks zu überprüfen.
+Es ist wichtig zu beachten, dass die Wiederherstellung des historischen Zustands auf einem **1-von-N-Vertrauensmodell** basiert. Das bedeutet, dass Sie nur Daten von _einer einzigen vertrauenswürdigen Quelle_ benötigen, um deren Richtigkeit anhand des aktuellen Zustands des Netzwerks zu überprüfen.
 
 ## Wie trägt dieses Upgrade zur breiteren Ethereum-Roadmap bei? {#roadmap-impact}
 

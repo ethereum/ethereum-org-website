@@ -1,7 +1,7 @@
 ---
 title: Utangulizi wa mikataba mahiri
 metaTitle: "Mikataba mahiri: Ni nini na faida zake"
-description: Utangulizi usio wa kiufundi wa mikataba mahiri
+description: Mikataba mahiri ni nini? Utangulizi usio wa kiufundi wa programu zinazoendeshwa kwenye Ethereum na kuwezesha programu tumizi kama DeFi, NFTs na DAOs bila wapatanishi.
 lang: sw
 ---
 

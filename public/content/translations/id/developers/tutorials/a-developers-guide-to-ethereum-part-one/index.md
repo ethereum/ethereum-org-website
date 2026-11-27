@@ -15,17 +15,17 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Jadi, Anda sudah mendengar tentang Ethereum ini dan siap untuk menjelajah lebih dalam? Postingan ini akan membahas secara singkat beberapa dasar rantai blok, lalu mengajak Anda berinteraksi dengan node Ethereum yang disimulasikan – membaca data blok, memeriksa saldo akun, dan mengirim transaksi. Sepanjang jalan, kami akan menyoroti perbedaan antara cara tradisional dalam membangun aplikasi dan paradigma terdesentralisasi yang baru ini.
 
-## Prasyarat (ringan) {#soft-prerequisites}
+## Prasyarat (lunak) {#soft-prerequisites}
 
-Postingan ini diharapkan dapat diakses oleh berbagai macam pengembang. [Alat-alat Python](/developers/docs/programming-languages/python/) akan dilibatkan, tetapi itu hanyalah sarana untuk menyampaikan ide – tidak masalah jika Anda bukan seorang pengembang Python. Namun, saya akan membuat beberapa asumsi tentang apa yang sudah Anda ketahui, sehingga kita dapat dengan cepat beralih ke bagian khusus Ethereum.
+Postingan ini diharapkan dapat diakses oleh berbagai macam pengembang. [Alat Python](/developers/docs/programming-languages/python/) akan dilibatkan, tetapi alat tersebut hanyalah sarana untuk menyampaikan ide – tidak masalah jika Anda bukan seorang pengembang Python. Namun, saya akan membuat beberapa asumsi tentang apa yang sudah Anda ketahui, sehingga kita dapat dengan cepat beralih ke bagian khusus Ethereum.
 
 Asumsi:
 
-- Anda dapat menggunakan terminal,
+- Anda terbiasa menggunakan terminal,
 - Anda pernah menulis beberapa baris kode Python,
-- Python versi 3.6 atau yang lebih baru telah terinstal di mesin Anda (penggunaan [lingkungan virtual](https://realpython.com/effective-python-environment/#virtual-environments) sangat disarankan), dan
+- Python versi 3.10 atau yang lebih baru telah terinstal di mesin Anda (penggunaan [lingkungan virtual](https://realpython.com/effective-python-environment/#virtual-environments) sangat disarankan), dan
 - Anda pernah menggunakan `pip`, penginstal paket Python.
-  Sekali lagi, jika ada dari hal-hal ini yang tidak benar, atau Anda tidak berencana untuk mereproduksi kode dalam artikel ini, Anda kemungkinan besar masih dapat mengikutinya dengan baik.
+  Sekali lagi, jika salah satu dari hal ini tidak benar, atau Anda tidak berencana untuk mereproduksi kode dalam artikel ini, Anda kemungkinan besar masih dapat mengikutinya dengan baik.
 
 ## Rantai blok, secara singkat {#blockchains-briefly}
 
@@ -83,7 +83,7 @@ Dalam panduan ini, kita hanya akan bekerja di dalam interpreter Python. Kita tid
 
 <FeaturedText>Catatan: Dalam contoh di bawah ini, perintah yang dimulai dengan `$` dimaksudkan untuk dijalankan di terminal. (Jangan ketik `$`, itu hanya menandakan awal baris.)</FeaturedText>
 
-Pertama, instal [IPython](https://ipython.org/) untuk lingkungan yang ramah pengguna guna menjelajah. IPython menawarkan penyelesaian tab (tab completion), di antara fitur-fitur lainnya, sehingga jauh lebih mudah untuk melihat apa yang mungkin dilakukan di dalam Web3.py.
+Pertama, instal [IPython](https://ipython.org/) untuk lingkungan yang ramah pengguna guna melakukan eksplorasi. IPython menawarkan penyelesaian tab, di antara fitur-fitur lainnya, sehingga jauh lebih mudah untuk melihat apa yang mungkin dilakukan di dalam Web3.py.
 
 ```bash
 pip install ipython
@@ -95,15 +95,13 @@ Web3.py dipublikasikan dengan nama `web3`. Instal seperti ini:
 pip install web3
 ```
 
-Satu hal lagi – kita akan menyimulasikan rantai blok nanti, yang membutuhkan beberapa dependensi lagi. Anda dapat menginstalnya melalui:
+Satu hal lagi – kita akan menyimulasikan rantai blok nanti, yang memerlukan beberapa dependensi lagi. Anda dapat menginstalnya melalui:
 
 ```bash
 pip install 'web3[tester]'
 ```
 
 Anda sudah siap untuk memulai!
-
-Catatan: Paket `web3[tester]` berfungsi hingga Python 3.10.xx
 
 ## Menjalankan kotak pasir (sandbox) {#spin-up-a-sandbox}
 
@@ -142,7 +140,7 @@ Pola serupa digunakan saat menangani transaksi dalam <b>ether</b>. Namun, alih-a
 
 </FeaturedText>
 
-Coba konversikan beberapa nilai ke dan dari Wei. Perhatikan bahwa [ada nama untuk banyak denominasi](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) di antara ether dan Wei. Salah satu yang lebih dikenal di antaranya adalah **Gwei**, karena sering kali begitulah biaya transaksi direpresentasikan.
+Cobalah mengonversi beberapa nilai ke dan dari Wei. Perhatikan bahwa [ada nama untuk banyak denominasi](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) di antara ether dan Wei. Salah satu yang lebih dikenal di antaranya adalah **Gwei**, karena sering kali begitulah biaya transaksi direpresentasikan.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -152,7 +150,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Metode utilitas lain pada modul Web3 mencakup pengonversi format data (mis., [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), pembantu alamat (mis., [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), dan fungsi hash (mis., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Banyak dari ini akan dibahas nanti dalam seri ini. Untuk melihat semua metode dan properti yang tersedia, manfaatkan pelengkapan otomatis (auto-complete) IPython dengan mengetik `Web3`. dan menekan tombol tab dua kali setelah titik.
+Metode utilitas lainnya pada modul Web3 mencakup pengonversi format data (mis., [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), pembantu alamat (mis., [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)), dan fungsi hash (mis., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Banyak dari metode ini akan dibahas nanti dalam seri ini. Untuk melihat semua metode dan properti yang tersedia, manfaatkan pelengkapan otomatis IPython dengan mengetik `Web3`. dan menekan tombol tab dua kali setelah titik.
 
 ## Berbicara dengan rantai {#talk-to-the-chain}
 
@@ -172,7 +170,7 @@ Meskipun ini adalah salah satu cara "nyata" untuk melakukannya, proses sinkronis
 
 _EthereumTesterProvider terhubung ke node yang disimulasikan dan berguna untuk lingkungan pengembangan yang cepat._
 
-Node yang disimulasikan itu disebut [eth-tester](https://github.com/ethereum/eth-tester) dan kita menginstalnya sebagai bagian dari perintah `pip install web3[tester]`. Mengonfigurasi Web3.py untuk menggunakan penyedia penguji ini semudah:
+Node yang disimulasikan itu disebut [eth-tester](https://github.com/ApeWorX/eth-tester) dan kita menginstalnya sebagai bagian dari perintah `pip install web3[tester]`. Mengonfigurasi Web3.py untuk menggunakan penyedia penguji ini semudah:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -294,10 +292,10 @@ Out[13]: 1000003000000000000000000
 
 Yang terakhir terlihat bagus! Saldonya naik dari 1.000.000 menjadi 1.000.003 ether. Tetapi apa yang terjadi pada akun pertama? Tampaknya akun tersebut kehilangan sedikit lebih dari tiga ether. Sayangnya, tidak ada yang gratis dalam hidup ini, dan menggunakan jaringan publik Ethereum mengharuskan Anda memberikan kompensasi kepada rekanan Anda atas peran pendukung mereka. Biaya transaksi kecil dipotong dari akun yang mengirimkan transaksi - biaya ini adalah jumlah gas yang dibakar (21000 unit gas untuk transfer ETH) dikalikan dengan biaya dasar yang bervariasi sesuai dengan aktivitas jaringan ditambah tip yang diberikan kepada validator yang memasukkan transaksi ke dalam blok.
 
-Lebih lanjut tentang [gas](/developers/docs/gas/#post-london)
+Lebih lanjut tentang [gas](/developers/docs/gas/)
 
 <FeaturedText>Catatan: Di jaringan publik, biaya transaksi bervariasi berdasarkan permintaan jaringan dan seberapa cepat Anda ingin transaksi diproses. Jika Anda tertarik dengan rincian tentang bagaimana biaya dihitung, lihat postingan saya sebelumnya tentang <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">bagaimana transaksi dimasukkan ke dalam blok</a>.</FeaturedText>
 
 ## Dan bernapaslah {#and-breathe}
 
-Kita sudah melakukan ini cukup lama, jadi ini sepertinya tempat yang tepat untuk beristirahat. Penjelajahan ini masih berlanjut, dan kita akan terus mengeksplorasi di bagian kedua dari seri ini. Beberapa konsep yang akan datang: menghubungkan ke node nyata, kontrak pintar (smart contracts), dan token. Punya pertanyaan lanjutan? Beri tahu saya! Umpan balik Anda akan memengaruhi ke mana kita akan melangkah dari sini. Permintaan diterima melalui [Twitter](https://twitter.com/wolovim).
+Kita sudah melakukan ini cukup lama, jadi ini sepertinya tempat yang tepat untuk beristirahat. Penjelajahan ini masih berlanjut, dan kita akan terus mengeksplorasi di bagian kedua dari seri ini. Beberapa konsep yang akan datang: menghubungkan ke node nyata, kontrak pintar (smart contracts), dan token. Punya pertanyaan lanjutan? Beri tahu saya! Umpan balik Anda akan memengaruhi ke mana kita akan melangkah dari sini. Permintaan diterima melalui [Twitter](https://x.com/wolovim).

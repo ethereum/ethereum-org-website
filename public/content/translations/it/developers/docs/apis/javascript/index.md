@@ -238,6 +238,7 @@ ethers.utils.formatEther(balance)
 - [Funzioni di utilità di Ethers](https://docs.ethers.org/v6/api/utils/)
 
 ## Librerie disponibili {#available-libraries}
+
 **Web3.js -** **_API JavaScript per Ethereum._**
 
 - [Documentazione](https://docs.web3js.org)
@@ -299,9 +300,7 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Configurare Web3js per usare la blockchain di Ethereum in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per configurare web3.js nel tuo progetto._
-- [Chiamare uno smart contract da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token DAI, scopri come chiamare le funzioni dei contratti usando JavaScript._
-- [Inviare transazioni usando Web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Guida passo passo per l'invio di transazioni dal backend._
+- [Inviare transazioni usando Web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Guida passo passo per inviare transazioni dal backend._
 
 ## Tutorial: API JavaScript e WebSocket su Ethereum {#tutorials}
 

@@ -7,7 +7,7 @@ alt: "Peta jalan Ethereum"
 template: roadmap
 ---
 
-Ethereum diskalakan menggunakan [lapisan 2](/layer-2/#rollups) (juga dikenal sebagai rollup), yang menggabungkan transaksi dan mengirimkan outputnya ke Ethereum. Meskipun rollup hingga delapan kali lebih murah daripada Mainnet Ethereum, rollup masih dapat dioptimalkan lebih lanjut untuk mengurangi biaya bagi pengguna akhir. Rollup juga bergantung pada beberapa komponen terpusat yang dapat dihapus oleh pengembang seiring dengan semakin matangnya rollup tersebut.
+Ethereum diskalakan menggunakan [lapisan 2](/layer-2/learn/#how-does-layer-2-work) (juga dikenal sebagai rollup), yang menggabungkan transaksi dan mengirimkan outputnya ke Ethereum. Meskipun rollup hingga delapan kali lebih murah daripada Mainnet Ethereum, rollup masih dapat dioptimalkan lebih lanjut untuk mengurangi biaya bagi pengguna akhir. Rollup juga bergantung pada beberapa komponen terpusat yang dapat dihapus oleh pengembang seiring dengan semakin matangnya rollup tersebut.
 
 <Alert variant="update">
 <AlertContent>
@@ -43,9 +43,15 @@ Langkah kedua ini dikenal sebagai ["danksharding"](/roadmap/danksharding/). Peke
 
 ## Mendesentralisasikan rollup {#decentralizing-rollups}
 
-[Rollup](/layer-2) telah menskalakan Ethereum. Sebuah [ekosistem proyek rollup yang kaya](https://l2beat.com/scaling/tvs) memungkinkan pengguna untuk bertransaksi dengan cepat dan murah, dengan berbagai jaminan keamanan. Namun, rollup telah dimulai menggunakan sekuenser terpusat (komputer yang melakukan semua pemrosesan dan agregasi transaksi sebelum mengirimkannya ke Ethereum). Hal ini rentan terhadap penyensoran, karena operator sekuenser dapat disanksi, disuap, atau disusupi. Pada saat yang sama, [rollup bervariasi](https://l2beat.com/scaling/summary) dalam cara mereka memvalidasi data yang masuk. Cara terbaik adalah agar "pembukti" mengirimkan [bukti penipuan](/glossary/#fraud-proof) atau bukti validitas, tetapi belum semua rollup mencapai tahap tersebut. Bahkan rollup yang menggunakan bukti validitas/penipuan menggunakan sekelompok kecil pembukti yang dikenal. Oleh karena itu, langkah penting berikutnya dalam menskalakan Ethereum adalah mendistribusikan tanggung jawab untuk menjalankan sekuenser dan pembukti ke lebih banyak orang.
+[Rollup](/layer-2) telah menskalakan Ethereum. Sebuah [ekosistem proyek rollup yang kaya](https://ethbeat.org/layer2s/tvs) memungkinkan pengguna untuk bertransaksi dengan cepat dan murah, dengan berbagai jaminan keamanan. Namun, rollup telah dimulai menggunakan sekuenser terpusat (komputer yang melakukan semua pemrosesan dan agregasi transaksi sebelum mengirimkannya ke Ethereum). Hal ini rentan terhadap penyensoran, karena operator sekuenser dapat disanksi, disuap, atau disusupi. Pada saat yang sama, [rollup bervariasi](https://ethbeat.org/layer2s/summary) dalam cara mereka memvalidasi data yang masuk. Cara terbaik adalah agar "pembukti" mengirimkan [bukti penipuan](/glossary/#fraud-proof) atau bukti validitas, tetapi belum semua rollup mencapai tahap tersebut. Bahkan rollup yang menggunakan bukti validitas/penipuan menggunakan sekelompok kecil pembukti yang dikenal. Oleh karena itu, langkah penting berikutnya dalam menskalakan Ethereum adalah mendistribusikan tanggung jawab untuk menjalankan sekuenser dan pembukti ke lebih banyak orang.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Lebih lanjut tentang rollup</ButtonLink>
+
+## Menskalakan Mainnet Ethereum dengan zkEVM {#zkevm}
+
+Rollup bukanlah satu-satunya jalan untuk menskalakan. Saat ini setiap [validator](/glossary/#validator) mengeksekusi ulang setiap transaksi di setiap blok, yang membatasi seberapa banyak yang dapat diproses oleh Mainnet Ethereum tanpa meningkatkan persyaratan perangkat keras. Dengan zkEVM, satu pembukti mengeksekusi blok dan menghasilkan [bukti tanpa pengetahuan](/zero-knowledge-proofs/) bahwa eksekusi tersebut benar, dan sebagai gantinya validator memeriksa bukti tersebut. Memeriksa bukti jauh lebih murah daripada mengeksekusi ulang, sehingga Mainnet dapat memproses lebih banyak transaksi tanpa memaksa validator menggunakan perangkat keras yang mahal.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">Lebih lanjut tentang zkEVM</ButtonLink>
 
 ## Kemajuan saat ini {#current-progress}
 

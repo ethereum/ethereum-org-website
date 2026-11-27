@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## Посібники: Створення з використанням невзаємозамінних токенів (ERC-721) в Етеріумі {#tutorials}
 
-- [Огляд контракту ERC-721 на Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _— Анотований огляд повного контракту NFT ERC-721, написаного на Vyper._
-- [Як написати та розгорнути NFT (Частина 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _— Покроковий посібник із написання та розгортання вашого першого смарт-контракту ERC-721._
-- [Як карбувати NFT (Частина 2/3)](/developers/tutorials/how-to-mint-an-nft/) _— Як карбувати NFT ERC-721 за допомогою розгорнутого смарт-контракту та Web3._
-- [Як переглянути свій NFT у гаманці (Частина 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _— Як відобразити викарбуваний NFT у МетаМаск після розгортання._
-- [Посібник зі створення карбувальника NFT](/developers/tutorials/nft-minter/) _— Створіть повноцінний децентралізований застосунок (dapp) для карбування NFT із фронтендом на React, МетаМаск та Alchemy._
+- [Огляд контракту ERC-721 на Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Анотований огляд повного контракту NFT ERC-721, написаного на Vyper._
+- [Як написати та розгорнути NFT (Частина 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Покроковий посібник із написання та розгортання вашого першого смарт-контракту ERC-721._
+- [Як карбувати NFT (Частина 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Як карбувати NFT ERC-721 за допомогою розгорнутого смарт-контракту та Web3._
+- [Як переглянути свій NFT у гаманці (Частина 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Як відобразити викарбуваний NFT у МетаМаск після розгортання._

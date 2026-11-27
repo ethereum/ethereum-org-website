@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: "Dowiedz się więcej o aktualizacji protokołu Pectra"
+description: "Pectra została uruchomiona 7 maja 2025 r. Dowiedz się, co zmieniła ta aktualizacja Ethereum, w tym inteligentne konta EIP-7702 i maksymalne saldo walidatora wynoszące 2048 ETH."
 lang: pl
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -75,9 +75,9 @@ Nowy prekompilat dodaje każdemu deweloperowi możliwość łatwego, wydajnego i
 
 ### Udostępnianie historycznych hashów bloków ze stanu {#2935}
 
-EVM obecnie udostępnia kod operacji `BLOCKHASH`, który umożliwia deweloperom kontraktów pobranie hasha bloku bezpośrednio w warstwie wykonawczej. Jest to jednak ograniczone tylko do ostatnich 256 bloków i może stać się problematyczne dla bezstanowych klientów w przyszłości.
+EVM obecnie udostępnia kod operacji `BLOCKHASH`, który umożliwia deweloperom kontraktów pobranie hasha bloku bezpośrednio w warstwie wykonawczej. Jest to jednak ograniczone tylko do ostatnich 256 bloków i może w przyszłości stać się problematyczne dla klientów bezstanowych.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) tworzy nowy kontrakt systemowy, który może udostępniać ostatnie 8192 hashe bloków jako sloty pamięci masowej. Pomaga to zabezpieczyć protokół na przyszłość pod kątem bezstanowego wykonywania i staje się bardziej wydajne po przyjęciu drzew Verkle. Jednak poza tym, rollupy mogą z tego skorzystać od razu, ponieważ mogą bezpośrednio odpytywać kontrakt z dłuższym oknem historycznym.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) tworzy nowy kontrakt systemowy, który może udostępniać ostatnie 8192 hashe bloków jako sloty pamięci. Pomaga to zabezpieczyć protokół na przyszłość pod kątem wykonywania bezstanowego. Poza tym rollupy mogą z tego skorzystać od razu, ponieważ mogą bezpośrednio odpytywać kontrakt z dłuższym oknem historycznym.
 
 ### Przeniesienie indeksu komitetu poza poświadczenie {#7549}
 

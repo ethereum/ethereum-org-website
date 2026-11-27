@@ -7,7 +7,7 @@ alt: "Ethereum-Roadmap"
 template: roadmap
 ---
 
-Ethereum wird mithilfe von [Layer 2s](/layer-2/#rollups) (auch bekannt als Rollups) skaliert, die Transaktionen bündeln und die Ausgabe an Ethereum senden. Obwohl Rollups bis zu achtmal günstiger sind als das Ethereum Mainnet, ist es möglich, Rollups weiter zu optimieren, um die Kosten für Endnutzer zu senken. Rollups stützen sich auch auf einige zentralisierte Komponenten, die Entwickler mit zunehmender Reife der Rollups entfernen können.
+Ethereum wird mithilfe von [Layer 2s](/layer-2/learn/#how-does-layer-2-work) (auch bekannt als Rollups) skaliert, die Transaktionen bündeln und die Ausgabe an Ethereum senden. Obwohl Rollups bis zu achtmal günstiger sind als das Ethereum Mainnet, ist es möglich, Rollups weiter zu optimieren, um die Kosten für Endnutzer zu senken. Rollups stützen sich auch auf einige zentralisierte Komponenten, die Entwickler mit zunehmender Reife der Rollups entfernen können.
 
 <Alert variant="update">
 <AlertContent>
@@ -43,9 +43,15 @@ Dieser zweite Schritt ist als [„Danksharding“](/roadmap/danksharding/) bekan
 
 ## Rollups dezentralisieren {#decentralizing-rollups}
 
-[Rollups](/layer-2) skalieren Ethereum bereits. Ein [vielfältiges Ökosystem von Rollup-Projekten](https://l2beat.com/scaling/tvs) ermöglicht es Nutzern, schnell und günstig Transaktionen durchzuführen, mit einer Reihe von Sicherheitsgarantien. Rollups wurden jedoch mit zentralisierten Sequencern (Computer, die die gesamte Transaktionsverarbeitung und -aggregation durchführen, bevor sie an Ethereum übermittelt werden) gestartet. Dies ist anfällig für Zensur, da die Sequencer-Betreiber sanktioniert, bestochen oder anderweitig kompromittiert werden können. Gleichzeitig [unterscheiden sich Rollups](https://l2beat.com/scaling/summary) in der Art und Weise, wie sie eingehende Daten validieren. Der beste Weg ist, dass „Prover“ [Fraud Proofs](/glossary/#fraud-proof) oder Validity Proofs einreichen, aber noch nicht alle Rollups sind so weit. Selbst die Rollups, die Validity-/Fraud-Proofs verwenden, nutzen einen kleinen Pool bekannter Prover. Daher ist der nächste entscheidende Schritt bei der Skalierung von Ethereum, die Verantwortung für den Betrieb von Sequencern und Provern auf mehr Personen zu verteilen.
+[Rollups](/layer-2) skalieren Ethereum bereits. Ein [vielfältiges Ökosystem von Rollup-Projekten](https://ethbeat.org/layer2s/tvs) ermöglicht es Nutzern, schnell und günstig Transaktionen durchzuführen, mit einer Reihe von Sicherheitsgarantien. Rollups wurden jedoch mit zentralisierten Sequencern (Computer, die die gesamte Transaktionsverarbeitung und -aggregation durchführen, bevor sie an Ethereum übermittelt werden) gestartet. Dies ist anfällig für Zensur, da die Sequencer-Betreiber sanktioniert, bestochen oder anderweitig kompromittiert werden können. Gleichzeitig [unterscheiden sich Rollups](https://ethbeat.org/layer2s/summary) in der Art und Weise, wie sie eingehende Daten validieren. Der beste Weg ist, dass „Prover“ [Fraud Proofs](/glossary/#fraud-proof) oder Validity Proofs einreichen, aber noch nicht alle Rollups sind so weit. Selbst die Rollups, die Validity-/Fraud-Proofs verwenden, nutzen einen kleinen Pool bekannter Prover. Daher ist der nächste entscheidende Schritt bei der Skalierung von Ethereum, die Verantwortung für den Betrieb von Sequencern und Provern auf mehr Personen zu verteilen.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Mehr zu Rollups</ButtonLink>
+
+## Skalierung des Ethereum Mainnet mit zkEVMs {#zkevm}
+
+Rollups sind nicht der einzige Weg zur Skalierung. Heute führt jeder [Validator](/glossary/#validator) jede Transaktion in jedem Block erneut aus, was einschränkt, wie viel das Ethereum Mainnet verarbeiten kann, ohne die Hardwareanforderungen zu erhöhen. Mit einer zkEVM führt ein einzelner Beweiser den Block aus und generiert einen [Zero-Knowledge-Beweis](/zero-knowledge-proofs/) dafür, dass die Ausführung korrekt war, und Validatoren überprüfen stattdessen diesen Beweis. Die Überprüfung eines Beweises ist weitaus günstiger als die erneute Ausführung, sodass das Mainnet mehr Transaktionen verarbeiten kann, ohne dass Validatoren auf teure Hardware umsteigen müssen.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">Mehr zu zkEVM</ButtonLink>
 
 ## Aktueller Fortschritt {#current-progress}
 

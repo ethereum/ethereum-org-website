@@ -15,17 +15,17 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Vậy là bạn đã nghe nói về Ethereum và sẵn sàng khám phá sâu hơn? Bài viết này sẽ nhanh chóng đề cập đến một số kiến thức cơ bản về chuỗi khối, sau đó hướng dẫn bạn tương tác với một nút Ethereum mô phỏng – đọc dữ liệu khối, kiểm tra số dư tài khoản và gửi giao dịch. Trong quá trình đó, chúng tôi sẽ làm nổi bật sự khác biệt giữa các cách xây dựng ứng dụng truyền thống và mô hình phi tập trung mới này.
 
-## Các điều kiện tiên quyết (cơ bản) {#soft-prerequisites}
+## Điều kiện tiên quyết (cơ bản) {#soft-prerequisites}
 
-Bài viết này mong muốn có thể tiếp cận được với nhiều nhà phát triển. [Các công cụ Python](/developers/docs/programming-languages/python/) sẽ được sử dụng, nhưng chúng chỉ là phương tiện để truyền tải ý tưởng – không vấn đề gì nếu bạn không phải là nhà phát triển Python. Tuy nhiên, tôi sẽ đưa ra một vài giả định về những gì bạn đã biết, để chúng ta có thể nhanh chóng chuyển sang các phần dành riêng cho Ethereum.
+Bài viết này mong muốn có thể tiếp cận được với nhiều đối tượng nhà phát triển. [Các công cụ Python](/developers/docs/programming-languages/python/) sẽ được sử dụng, nhưng chúng chỉ là phương tiện để truyền tải ý tưởng – không có vấn đề gì nếu bạn không phải là nhà phát triển Python. Tuy nhiên, tôi sẽ đưa ra một vài giả định về những gì bạn đã biết, để chúng ta có thể nhanh chóng chuyển sang các phần dành riêng cho Ethereum.
 
 Các giả định:
 
-- Bạn có thể sử dụng thành thạo terminal,
-- Bạn đã viết một vài dòng mã Python,
-- Python phiên bản 3.6 trở lên đã được cài đặt trên máy của bạn (chúng tôi đặc biệt khuyến khích sử dụng [môi trường ảo](https://realpython.com/effective-python-environment/#virtual-environments)), và
+- Bạn có thể thao tác cơ bản trong terminal,
+- Bạn đã từng viết một vài dòng mã Python,
+- Python phiên bản 3.10 trở lên đã được cài đặt trên máy của bạn (chúng tôi đặc biệt khuyến khích sử dụng [môi trường ảo](https://realpython.com/effective-python-environment/#virtual-environments)), và
 - bạn đã sử dụng `pip`, trình cài đặt gói của Python.
-  Một lần nữa, nếu bất kỳ điều nào trong số này không đúng, hoặc bạn không định chạy lại mã trong bài viết này, bạn có thể vẫn theo dõi tốt.
+  Một lần nữa, nếu bất kỳ điều nào trong số này không đúng, hoặc bạn không có ý định chạy lại mã trong bài viết này, bạn vẫn hoàn toàn có thể theo dõi bài viết một cách dễ dàng.
 
 ## Tóm tắt về chuỗi khối {#blockchains-briefly}
 
@@ -79,9 +79,9 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 ## Cài đặt {#installation}
 
-Trong hướng dẫn này, chúng ta sẽ chỉ làm việc trong trình thông dịch Python. Chúng ta sẽ không tạo bất kỳ thư mục, tệp, lớp hoặc hàm nào.
+Trong bài hướng dẫn này, chúng ta sẽ chỉ làm việc trong trình thông dịch Python. Chúng ta sẽ không tạo bất kỳ thư mục, tệp, lớp hay hàm nào.
 
-<FeaturedText>Lưu ý: Trong các ví dụ bên dưới, các lệnh bắt đầu bằng `$` được thiết kế để chạy trong terminal. (Đừng gõ `$`, nó chỉ biểu thị sự bắt đầu của dòng.)</FeaturedText>
+<FeaturedText>Lưu ý: Trong các ví dụ bên dưới, các lệnh bắt đầu bằng `$` được dùng để chạy trong terminal. (Đừng gõ `$`, nó chỉ biểu thị sự bắt đầu của dòng.)</FeaturedText>
 
 Đầu tiên, hãy cài đặt [IPython](https://ipython.org/) để có một môi trường thân thiện với người dùng để khám phá. IPython cung cấp tính năng tự động hoàn thành bằng phím tab, cùng với các tính năng khác, giúp bạn dễ dàng xem những gì có thể thực hiện được trong Web3.py.
 
@@ -89,21 +89,19 @@ Trong hướng dẫn này, chúng ta sẽ chỉ làm việc trong trình thông 
 pip install ipython
 ```
 
-Web3.py được xuất bản dưới tên `web3`. Cài đặt nó như sau:
+Web3.py được xuất bản dưới tên `web3`. Hãy cài đặt nó như sau:
 
 ```bash
 pip install web3
 ```
 
-Một điều nữa – chúng ta sẽ mô phỏng một chuỗi khối sau, điều này yêu cầu thêm một vài phần phụ thuộc. Bạn có thể cài đặt chúng thông qua:
+Một điều nữa – sau này chúng ta sẽ mô phỏng một chuỗi khối, điều này yêu cầu thêm một vài phần phụ thuộc. Bạn có thể cài đặt chúng thông qua:
 
 ```bash
 pip install 'web3[tester]'
 ```
 
 Bạn đã thiết lập xong và sẵn sàng bắt đầu!
-
-Lưu ý: Gói `web3[tester]` hoạt động với Python lên đến phiên bản 3.10.xx
 
 ## Khởi chạy môi trường thử nghiệm (sandbox) {#spin-up-a-sandbox}
 
@@ -125,14 +123,14 @@ Bây giờ bạn đang xem một shell Python tương tác. Về cơ bản, nó 
 In [1]: from web3 import Web3
 ```
 
-## Giới thiệu mô-đun Web3 {#introducing-the-web3-module}
+## Giới thiệu về mô-đun Web3 {#introducing-the-web3-module}
 
-Bên cạnh việc là một cổng kết nối với Ethereum, mô-đun [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) còn cung cấp một vài hàm tiện ích. Hãy cùng khám phá một vài hàm trong số đó.
+Bên cạnh việc là một cổng kết nối với Ethereum, mô-đun [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) còn cung cấp một vài hàm tiện ích. Hãy cùng khám phá một số hàm.
 
 Trong một ứng dụng Ethereum, bạn sẽ thường xuyên cần chuyển đổi các mệnh giá tiền tệ. Mô-đun Web3 cung cấp một vài phương thức trợ giúp dành riêng cho việc này: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) và [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
-Lưu ý: Máy tính nổi tiếng là kém trong việc xử lý toán học thập phân. Để khắc phục điều này, các nhà phát triển thường lưu trữ số tiền đô la dưới dạng xu (cent). Ví dụ: một mặt hàng có giá $5.99 có thể được lưu trữ trong cơ sở dữ liệu là 599.
+Lưu ý: Máy tính nổi tiếng là xử lý toán học thập phân rất kém. Để khắc phục điều này, các nhà phát triển thường lưu trữ số tiền đô la dưới dạng xu (cent). Ví dụ: một mặt hàng có giá $5.99 có thể được lưu trữ trong cơ sở dữ liệu là 599.
 
 Một mô hình tương tự được sử dụng khi xử lý các giao dịch bằng <b>ether</b>. Tuy nhiên, thay vì hai chữ số thập phân, ether có tới 18! Mệnh giá nhỏ nhất của ether được gọi là <b>Wei</b>, vì vậy đó là giá trị được chỉ định khi gửi giao dịch.
 
@@ -152,7 +150,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Các phương thức tiện ích khác trên mô-đun Web3 bao gồm các bộ chuyển đổi định dạng dữ liệu (ví dụ: [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), các trình trợ giúp địa chỉ (ví dụ: [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) và các hàm băm (ví dụ: [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Nhiều phương thức trong số này sẽ được đề cập sau trong loạt bài viết. Để xem tất cả các phương thức và thuộc tính có sẵn, hãy sử dụng tính năng tự động hoàn thành của IPython bằng cách gõ `Web3`. và nhấn phím tab hai lần sau dấu chấm.
+Các phương thức tiện ích khác trên mô-đun Web3 bao gồm các trình chuyển đổi định dạng dữ liệu (ví dụ: [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), các trình trợ giúp địa chỉ (ví dụ: [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)), và các hàm băm (ví dụ: [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Nhiều phương thức trong số này sẽ được đề cập sau trong loạt bài viết. Để xem tất cả các phương thức và thuộc tính có sẵn, hãy sử dụng tính năng tự động hoàn thành của IPython bằng cách gõ `Web3`. và nhấn phím tab hai lần sau dấu chấm.
 
 ## Giao tiếp với chuỗi {#talk-to-the-chain}
 
@@ -172,7 +170,7 @@ Mặc dù đây là một cách “thực tế” để thực hiện, nhưng qu
 
 _EthereumTesterProvider kết nối với một nút mô phỏng và rất tiện lợi cho các môi trường phát triển nhanh._
 
-Nút mô phỏng đó được gọi là [eth-tester](https://github.com/ethereum/eth-tester) và chúng ta đã cài đặt nó như một phần của lệnh `pip install web3[tester]`. Việc cấu hình Web3.py để sử dụng nhà cung cấp thử nghiệm này đơn giản như sau:
+Nút mô phỏng đó được gọi là [eth-tester](https://github.com/ApeWorX/eth-tester) và chúng ta đã cài đặt nó như một phần của lệnh `pip install web3[tester]`. Việc cấu hình Web3.py để sử dụng nhà cung cấp thử nghiệm này đơn giản như sau:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -294,10 +292,10 @@ Out[13]: 1000003000000000000000000
 
 Tài khoản sau có vẻ ổn! Số dư đã tăng từ 1.000.000 lên 1.000.003 ether. Nhưng chuyện gì đã xảy ra với tài khoản đầu tiên? Nó dường như đã mất nhiều hơn ba ether một chút. Than ôi, không có gì trên đời là miễn phí và việc sử dụng mạng lưới công khai Ethereum yêu cầu bạn phải bồi thường cho các nút ngang hàng vì vai trò hỗ trợ của họ. Một khoản phí giao dịch nhỏ đã được khấu trừ từ tài khoản đã gửi giao dịch - khoản phí này là lượng Gas đã đốt (21000 đơn vị Gas cho một lần chuyển ETH) nhân với phí cơ sở thay đổi theo hoạt động của mạng lưới cộng với phí ưu tiên dành cho trình xác thực đưa giao dịch vào một khối.
 
-Tìm hiểu thêm về [Gas](/developers/docs/gas/#post-london)
+Tìm hiểu thêm về [Gas](/developers/docs/gas/)
 
 <FeaturedText>Lưu ý: Trên mạng lưới công khai, phí giao dịch có thể thay đổi dựa trên nhu cầu của mạng lưới và tốc độ bạn muốn giao dịch được xử lý. Nếu bạn quan tâm đến bảng phân tích chi tiết về cách tính phí, hãy xem bài viết trước của tôi về <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">cách các giao dịch được đưa vào một khối</a>.</FeaturedText>
 
 ## Và thư giãn {#and-breathe}
 
-Chúng ta đã làm việc này được một lúc rồi, vì vậy đây có vẻ là một điểm dừng chân lý tưởng để nghỉ ngơi. Hành trình khám phá vẫn còn tiếp tục và chúng ta sẽ tiếp tục tìm hiểu trong phần hai của loạt bài này. Một số khái niệm sắp tới: kết nối với một nút thực, hợp đồng thông minh và token. Bạn có câu hỏi nào tiếp theo không? Hãy cho tôi biết! Phản hồi của bạn sẽ ảnh hưởng đến hướng đi tiếp theo của chúng ta. Rất hoan nghênh các yêu cầu qua [Twitter](https://twitter.com/wolovim).
+Chúng ta đã làm việc này được một lúc rồi, vì vậy đây có vẻ là một điểm dừng chân lý tưởng để nghỉ ngơi. Hành trình khám phá vẫn còn tiếp tục và chúng ta sẽ tiếp tục tìm hiểu trong phần hai của loạt bài này. Một số khái niệm sắp tới: kết nối với một nút thực, hợp đồng thông minh và token. Bạn có câu hỏi nào tiếp theo không? Hãy cho tôi biết! Phản hồi của bạn sẽ ảnh hưởng đến hướng đi tiếp theo của chúng ta. Rất hoan nghênh các yêu cầu qua [Twitter](https://x.com/wolovim).

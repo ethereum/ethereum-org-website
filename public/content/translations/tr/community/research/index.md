@@ -57,7 +57,7 @@ Yürütme katmanı, işlemleri yürütmek, [Ethereum sanal makinesini (EVM)](/de
 - düğümlerin artık sunmasına gerek kalmayan geçmiş sonlanması;
 - işlemlerin paralel olarak doğrulanmasına olanak tanıyan blok düzeyinde erişim listeleri;
 - durum, veri ve hesaplamayı ayrı ayrı fiyatlandıran çok boyutlu ücret piyasaları;
-- ve katman 1 (l1) bloklarının yürütülmesini bir zkEVM ile kanıtlamak.
+- ve katman 1 (L1) bloklarının yürütülmesini bir zkEVM ile kanıtlamak.
 
 #### Arka plan okuması {#background-reading-1}
 
@@ -128,7 +128,7 @@ Bir Ethereum düğümünün iki yazılım parçasını çalıştırması gerekir
 1. blokzincirin başını takip etmek, blokları yaymak ve mutabakat mantığını işlemek için bir fikir birliği istemcisi
 2. Ethereum Sanal Makinesi'ni desteklemek ve işlemleri ve akıllı sözleşmeleri yürütmek için bir yürütme istemcisi
 
-Bu ikisinin yanı sıra, katman 1 (l1) bloklarının yürütülmesini kanıtlayan istemciler ve kuantum sonrası imzalar etrafında oluşturulmuş yalın fikir birliği istemcileri de dahil olmak üzere yeni istemci sınıflarının prototipleri oluşturulmaktadır.
+Bu ikisinin yanı sıra, katman 1 (L1) bloklarının yürütülmesini kanıtlayan istemciler ve kuantum sonrası imzalar etrafında oluşturulmuş yalın fikir birliği istemcileri de dahil olmak üzere yeni istemci sınıflarının prototipleri oluşturulmaktadır.
 
 Düğümler ve istemciler hakkında daha fazla ayrıntı ve mevcut tüm istemci uygulamalarının bir listesi için [düğümler ve istemciler sayfasına](/developers/docs/nodes-and-clients/) bakın. Ayrıca tüm Ethereum yükseltmelerinin geçmişini [geçmiş sayfasında](/ethereum-forks/) bulabilirsiniz.
 
@@ -150,27 +150,27 @@ Düğümler ve istemciler hakkında daha fazla ayrıntı ve mevcut tüm istemci 
 
 ## Ölçeklendirme ve performans {#scaling-and-performance}
 
-Ethereum'u ölçeklendirmek, Ethereum araştırmacıları için büyük bir odak alanıdır ve aynı anda iki yolda ilerler: katman 1'in (l1) kendi işlem kapasitesini artırmak ve yürütmeyi verilerini Ethereum'a gönderen toplamalar (rollups) üzerine taşımak. Mevcut çalışmalar arasında blok gaz limitini artırmak, durum büyümesini yeniden fiyatlandırmak, Rollup verileri için blob kapasitesini genişletmek ve bir düğümün depolaması ve doğrulaması gerekenleri azaltmak yer alıyor. Ethereum'u ölçeklendirme hakkında giriş niteliğindeki bilgiler [ölçeklendirme sayfamızda](/developers/docs/scaling/) ve [ölçeklendirme yol haritasında](/roadmap/scaling/) mevcuttur.
+Ethereum'u ölçeklendirmek, Ethereum araştırmacıları için büyük bir odak alanıdır ve aynı anda iki yolda ilerler: katman 1'in (L1) kendi işlem kapasitesini artırmak ve yürütmeyi verilerini Ethereum'a gönderen toplamalar (rollups) üzerine taşımak. Mevcut çalışmalar arasında blok gaz limitini artırmak, durum büyümesini yeniden fiyatlandırmak, Rollup verileri için blob kapasitesini genişletmek ve bir düğümün depolaması ve doğrulaması gerekenleri azaltmak yer alıyor. Ethereum'u ölçeklendirme hakkında giriş niteliğindeki bilgiler [ölçeklendirme sayfamızda](/developers/docs/scaling/) ve [ölçeklendirme yol haritasında](/roadmap/scaling/) mevcuttur.
 
 ### Katman 2 {#layer-2}
 
-Artık işlemleri toplu işleme (batching) ve bunları Ethereum katman 1 (l1) üzerinde güvence altına alma konusunda farklı teknikler kullanarak Ethereum'u ölçeklendiren çeşitli katman 2 (l2) protokolleri bulunmaktadır. Açık araştırmalar, kanıtlamanın gecikmesini ve maliyetini azaltmayı, bir işlemin güven gerektirmeyen kesinliğe ulaşması için geçen süreyi kısaltmayı ve kullanıcılara birçok Rollup genelinde tek bir tutarlı deneyim sunmayı içerir.
+Artık işlemleri toplu işleme (batching) ve bunları Ethereum katman 1 (L1) üzerinde güvence altına alma konusunda farklı teknikler kullanarak Ethereum'u ölçeklendiren çeşitli katman 2 (L2) protokolleri bulunmaktadır. Açık araştırmalar, kanıtlamanın gecikmesini ve maliyetini azaltmayı, bir işlemin güven gerektirmeyen kesinliğe ulaşması için geçen süreyi kısaltmayı ve kullanıcılara birçok Rollup genelinde tek bir tutarlı deneyim sunmayı içerir.
 
 #### Arka plan okuması {#background-reading-2}
 
 - [Katman 2'ye giriş](/layer-2/)
-- [L2BEAT: ölçeklendirme özeti](https://l2beat.com/scaling/summary)
-- [Rollup merkezli bir ethereum yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [ETHBEAT: ölçeklendirme özeti](https://ethbeat.org/layer2s/summary)
+- [Rollup odaklı bir Ethereum yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Son araştırmalar {#recent-research-2}
 
 - [Ethresear.ch Katman 2](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: zincir içi maliyetler](https://l2beat.com/scaling/costs)
-- [2026'da Ethereum üzerinde inşa etmek: neler değişti](/latest/building-on-ethereum-in-2026/)
+- [ETHBEAT: zincir içi maliyetler](https://ethbeat.org/layer2s/costs)
+- [2026'da Ethereum üzerinde geliştirme yapmak: neler değişti](/latest/building-on-ethereum-in-2026/)
 
 ### Birlikte çalışabilirlik {#interoperability}
 
-Kullanıcılar ve varlıklar Ethereum katman 1 (l1) ve birçok katman 2 (l2) üzerine yayılmıştır ve araştırma problemi, bir aracıya güvenmeden bu zincirler arası hareket etmelerine ve işlem yapmalarına izin vermektir. Buradaki çalışmalar, niyet odaklı transferleri, standartlaştırılmış zincirler arası adresleme ve isimlendirmeyi, genel mesaj iletimini ve cüzdan düzeyinde zincir soyutlamasını kapsar. Bu, emanetçi köprülerin varlıkları tuttuğu bir modelin yerini alır ve köprüler tarihsel olarak ekosistemdeki en büyük kayıp kaynaklarından biri olmuştur, bu nedenle herhangi bir zincirler arası mekanizmanın güvenliği merkezi bir endişe olmaya devam etmektedir.
+Kullanıcılar ve varlıklar Ethereum katman 1 (L1) ve birçok katman 2 (L2) üzerine yayılmıştır ve araştırma problemi, bir aracıya güvenmeden bu zincirler arası hareket etmelerine ve işlem yapmalarına izin vermektir. Buradaki çalışmalar, niyet odaklı transferleri, standartlaştırılmış zincirler arası adresleme ve isimlendirmeyi, genel mesaj iletimini ve cüzdan düzeyinde zincir soyutlamasını kapsar. Bu, emanetçi köprülerin varlıkları tuttuğu bir modelin yerini alır ve köprüler tarihsel olarak ekosistemdeki en büyük kayıp kaynaklarından biri olmuştur, bu nedenle herhangi bir zincirler arası mekanizmanın güvenliği merkezi bir endişe olmaya devam etmektedir.
 
 #### Arka plan okuması {#background-reading-3}
 
@@ -226,7 +226,7 @@ Güvenlik; spam ve dolandırıcılığı önleme, cüzdan güvenliği, donanım 
 
 ### Kriptografi ve ZKP {#cryptography--zkp}
 
-Sıfır bilgi ispatı (ZKP) ve kriptografi, Ethereum ve uygulamalarına gizlilik ve güvenlik inşa etmek için kritik öneme sahiptir. Sıfır bilgi kanıtlama, araştırmadan üretim altyapısına geçmiştir: gerçek Ethereum bloklarını kanıtlayan kanıtlayıcılar artık gecikme, maliyet ve sağlamlık açısından halka açık olarak kıyaslanmaktadır. Açık problemler de buna bağlı olarak, katman 1 (l1) bloklarını gerçek zamanlı yapacak kadar hızlı kanıtlamaya, kullanımda olan ispat sistemlerinin güvenliğini titizlikle hesaba katmaya ve kuantum sonrası kriptografiye hazırlanmaya doğru kaymıştır.
+Sıfır bilgi ispatı (ZKP) ve kriptografi, Ethereum ve uygulamalarına gizlilik ve güvenlik inşa etmek için kritik öneme sahiptir. Sıfır bilgi kanıtlama, araştırmadan üretim altyapısına geçmiştir: gerçek Ethereum bloklarını kanıtlayan kanıtlayıcılar artık gecikme, maliyet ve sağlamlık açısından halka açık olarak kıyaslanmaktadır. Açık problemler de buna bağlı olarak, katman 1 (L1) bloklarını gerçek zamanlı yapacak kadar hızlı kanıtlamaya, kullanımda olan ispat sistemlerinin güvenliğini titizlikle hesaba katmaya ve kuantum sonrası kriptografiye hazırlanmaya doğru kaymıştır.
 
 #### Arka plan okuması {#background-reading-6}
 
@@ -385,9 +385,9 @@ Ethereum'daki etkinlik ve ağın sağlığı hakkında ayrıntılı bilgi veren 
 
 #### Son araştırmalar {#recent-research-14}
 
-- [Sağlam Teşvikler Grubu Veri Analizi](https://rig.ethereum.org/)
+- [Robust Incentives Group Veri Analizi](https://rig.ethereum.org/)
 - [ethPandaOps açık verileri](https://ethpandaops.io/data/)
-- [L2BEAT: ölçeklendirme özeti](https://l2beat.com/scaling/summary)
+- [ETHBEAT: ölçeklendirme özeti](https://ethbeat.org/layer2s/summary)
 
 ## Uygulamalar ve araçlar {#apps-and-tooling}
 

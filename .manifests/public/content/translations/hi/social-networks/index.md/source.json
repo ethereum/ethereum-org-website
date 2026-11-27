@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/social-networks/index.md",
-  "generatedAt": "2026-09-30T18:34:01.304Z",
-  "rootHash": "ffaae271d9fb",
+  "generatedAt": "2026-11-27T10:01:52.492Z",
+  "rootHash": "be0a60fbd80c",
   "tree": {
-    "contentHash": "9f4c0651581c",
+    "contentHash": "24802f575a4e",
     "anchorHash": "473580fbc673",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "7018df4f1607",
+        "contentHash": "518c71b8814b",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -862,5 +862,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

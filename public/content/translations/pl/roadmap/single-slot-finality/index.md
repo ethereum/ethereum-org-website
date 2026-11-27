@@ -1,6 +1,6 @@
 ---
-title: Ostateczność w pojedynczym slocie
-description: Wyjaśnienie ostateczności w pojedynczym slocie
+title: "Ostateczność w pojedynczym slocie"
+description: "Ostateczność w pojedynczym slocie może skrócić czas do ostateczności Ethereum z około 15 minut do pojedynczego slotu. Dowiedz się, jak to działa i z jakimi kompromisami się wiąże."
 lang: pl
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Problem ze skalowaniem agregacji poprzez zwiększanie liczby walidatorów na pod
 
 ## Obecny postęp {#current-progress}
 
-SSF jest w fazie badań. Nie oczekuje się, że zostanie wdrożony przez kilka lat, prawdopodobnie po innych istotnych aktualizacjach, takich jak [drzewa Verkle](/roadmap/verkle-trees/) i [danksharding](/roadmap/danksharding/).
+SSF znajduje się w fazie badań. Jego wdrożenie nie jest spodziewane przez kilka najbliższych lat, prawdopodobnie nastąpi po innych istotnych aktualizacjach, takich jak nowe drzewo stanu (obecnie proponowane jako drzewo binarne w [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) oraz [danksharding](/roadmap/danksharding/).
 
 ## Dalsza lektura {#further-reading}
 

@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Scopri l'aggiornamento del protocollo Pectra
+description: "Pectra è stato attivato il 7 maggio 2025. Scopri cosa ha cambiato questo aggiornamento di Ethereum, inclusi gli smart account dell'EIP-7702 e un saldo massimo del validatore di 2048 ETH."
 lang: it
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -75,9 +75,9 @@ Il nuovo precompilato aggiunge la capacità per ogni sviluppatore di eseguire in
 
 ### Fornire gli hash dei blocchi storici dallo stato {#2935}
 
-L'EVM attualmente fornisce il codice operativo (opcode) `BLOCKHASH` che consente agli sviluppatori di contratti di recuperare l'hash di un blocco direttamente nel livello di esecuzione. Tuttavia, questo è limitato solo agli ultimi 256 blocchi e potrebbe diventare problematico per i client senza stato in futuro.
+La EVM attualmente fornisce l'opcode `BLOCKHASH` che consente agli sviluppatori di contratti di recuperare l'hash di un blocco direttamente nel livello di esecuzione. Tuttavia, questo è limitato solo agli ultimi 256 blocchi e potrebbe diventare problematico per i client stateless in futuro.
 
-L'[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) crea un nuovo contratto di sistema che può fornire gli ultimi 8192 hash dei blocchi come slot di archiviazione. Questo aiuta a rendere il protocollo a prova di futuro per l'esecuzione senza stato e diventa più efficiente quando verranno adottati i verkle trie. Tuttavia, a parte questo, i rollup possono trarne vantaggio fin da subito, poiché possono interrogare direttamente il contratto con una finestra storica più lunga.
+L'[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) crea un nuovo contratto di sistema che può fornire gli hash degli ultimi 8192 blocchi come slot di archiviazione. Questo aiuta a rendere il protocollo a prova di futuro per l'esecuzione stateless. Tuttavia, a parte questo, i rollup possono trarne vantaggio fin da subito, poiché possono interrogare il contratto direttamente con una finestra storica più lunga.
 
 ### Spostare l'indice del comitato fuori dall'Attestazione {#7549}
 

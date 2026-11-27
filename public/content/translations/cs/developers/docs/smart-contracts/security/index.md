@@ -78,7 +78,7 @@ Obvyklou metodou je psaní malých jednotkových testů (unit tests) pomocí sim
 
 Bohužel, jednotkové testování je při izolovaném použití minimálně efektivní pro zlepšení bezpečnosti chytrých kontraktů. Jednotkový test může prokázat, že se funkce správně provede pro simulovaná data, ale jednotkové testy jsou jen tak efektivní, jak dobře jsou napsány. To ztěžuje detekci opomenutých okrajových případů (edge cases) a zranitelností, které by mohly narušit bezpečnost vašeho chytrého kontraktu.
 
-Lepším přístupem je kombinovat jednotkové testování s testováním založeným na vlastnostech (property-based testing) prováděným pomocí [statické a dynamické analýzy](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Statická analýza se spoléhá na nízkoúrovňové reprezentace, jako jsou [grafy toku řízení (control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) a [abstraktní syntaktické stromy](https://deepsource.io/glossary/ast/), k analýze dosažitelných stavů programu a cest provádění. Techniky dynamické analýzy, jako je [fuzzing chytrých kontraktů](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), mezitím spouštějí kód kontraktu s náhodnými vstupními hodnotami, aby detekovaly operace, které porušují bezpečnostní vlastnosti.
+Lepším přístupem je kombinovat jednotkové testování s testováním založeným na vlastnostech (property-based testing) prováděným pomocí [statické a dynamické analýzy](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). Statická analýza se spoléhá na nízkoúrovňové reprezentace, jako jsou [grafy toku řízení (control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) a [abstraktní syntaktické stromy](https://deepsource.io/glossary/ast/), k analýze dosažitelných stavů programu a cest provádění. Techniky dynamické analýzy, jako je [fuzzing chytrých kontraktů](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), mezitím spouštějí kód kontraktu s náhodnými vstupními hodnotami, aby detekovaly operace, které porušují bezpečnostní vlastnosti.
 
 [Formální verifikace](/developers/docs/smart-contracts/formal-verification) je další technikou pro ověřování bezpečnostních vlastností v chytrých kontraktech. Na rozdíl od běžného testování může formální verifikace průkazně dokázat absenci chyb v chytrém kontraktu. Toho je dosaženo vytvořením formální specifikace, která zachycuje požadované bezpečnostní vlastnosti, a dokázáním, že formální model kontraktů tuto specifikaci dodržuje.
 
@@ -99,7 +99,7 @@ Přesto byste se měli vyvarovat toho, abyste audity považovali za všelék. Au
 
 Zavedení programu odměn za nalezení chyb (bug bounty) je dalším přístupem k implementaci externích kontrol kódu. Bug bounty je finanční odměna udělovaná jednotlivcům (obvykle etickým hackerům - whitehats), kteří objeví zranitelnosti v aplikaci.
 
-Při správném použití dávají programy bug bounty členům hackerské komunity motivaci zkoumat váš kód a hledat kritické chyby. Příkladem z reálného života je „chyba nekonečných peněz“ (infinite money bug), která by útočníkovi umožnila vytvořit neomezené množství etheru na [Optimism](https://www.optimism.io/), protokolu [vrstvy 2 (l2)](/layer-2/) běžícím na Ethereu. Naštěstí etický hacker [tuto chybu objevil](https://www.saurik.com/optimism.html) a upozornil tým, [čímž si vysloužil velkou odměnu](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Při správném použití dávají programy bug bounty členům hackerské komunity motivaci zkoumat váš kód a hledat kritické chyby. Příkladem z reálného života je „chyba nekonečných peněz“ (infinite money bug), která by útočníkovi umožnila vytvořit neomezené množství etheru na [Optimism](https://www.optimism.io/), protokolu [vrstvy 2 (L2)](/layer-2/) běžícím na Ethereu. Naštěstí etický hacker [tuto chybu objevil](https://www.saurik.com/optimism.html) a upozornil tým, [čímž si vysloužil velkou odměnu](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Užitečnou strategií je nastavit výplatu programu bug bounty úměrně k množství ohrožených prostředků. Tento přístup, označovaný jako „[škálující se bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)“, poskytuje jednotlivcům finanční pobídky k zodpovědnému odhalení zranitelností namísto jejich zneužití.
 
@@ -463,9 +463,9 @@ Pokud plánujete dotazovat onchain orákulum na ceny aktiv, zvažte použití ta
 
 - **[Nástroje pro formální verifikaci](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Nástroje pro ověřování funkční správnosti v chytrých kontraktech a kontrolu invariantů._
 
-- **[Služby auditu chytrých kontraktů](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Seznam organizací poskytujících služby auditu chytrých kontraktů pro vývojové projekty na Ethereu._
+- **[Služby auditu chytrých kontraktů](#smart-contract-auditing-services)** - _Seznam organizací poskytujících služby auditu chytrých kontraktů pro vývojové projekty na Ethereu._
 
-- **[Platformy pro bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Platformy pro koordinaci odměn za nalezení chyb (bug bounty) a odměňování zodpovědného odhalení kritických zranitelností v chytrých kontraktech._
+- **[Platformy pro bug bounty](#bug-bounty-platforms)** - _Platformy pro koordinaci odměn za nalezení chyb (bug bounty) a odměňování zodpovědného odhalení kritických zranitelností v chytrých kontraktech._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Bezplatný online nástroj pro kontrolu všech dostupných informací týkajících se forknutého kontraktu._
 
@@ -566,8 +566,6 @@ Pokud plánujete dotazovat onchain orákulum na ceny aktiv, zvažte použití ta
 - [Jak psát bezpečné chytré kontrakty](/developers/tutorials/secure-development-workflow/)
 
 - [Jak používat Slither k hledání chyb v chytrých kontraktech](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [Jak používat Manticore k hledání chyb v chytrých kontraktech](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [Pokyny pro bezpečnost chytrých kontraktů](/developers/tutorials/smart-contract-security-guidelines/)
 

@@ -50,9 +50,9 @@ Kuna [huduma](/developers/docs/nodes-and-clients/nodes-as-a-service/) mbalimbali
 
 ## Utekelezaji na matumizi {#implementations-and-usage}
 
-Nodi ya kumbukumbu katika muktadha huu inamaanisha data inayotolewa na wateja wa tabaka la utekelezaji wanaokabiliana na mtumiaji wanaposhughulikia hifadhidata ya hali na kutoa vituo vya mwisho vya JSON-RPC. Chaguzi za usanidi, muda wa usawazishaji na ukubwa wa hifadhidata zinaweza kutofautiana kulingana na mteja. Kwa maelezo, tafadhali rejelea nyaraka zilizotolewa na mteja wako.
+Nodi ya kumbukumbu katika muktadha huu inamaanisha data inayotolewa na wateja wa tabaka la utekelezaji wanaowasiliana na watumiaji wanaposhughulikia hifadhidata ya hali na kutoa vituo vya mwisho vya JSON-RPC. Chaguzi za usanidi, muda wa usawazishaji na ukubwa wa hifadhidata vinaweza kutofautiana kulingana na mteja. Kwa maelezo, tafadhali rejelea nyaraka zilizotolewa na mteja wako.
 
-Kabla ya kuanzisha nodi yako ya kumbukumbu, jifunze kuhusu tofauti kati ya wateja na hasa [mahitaji mbalimbali ya maunzi](/developers/docs/nodes-and-clients/run-a-node/#requirements). Wateja wengi hawajaboreshwa kwa kipengele hiki na kumbukumbu zao zinahitaji zaidi ya 12TB ya nafasi. Kinyume chake, utekelezaji kama Erigon unaweza kuhifadhi data sawa katika chini ya 3TB ambayo inawafanya kuwa njia bora zaidi ya kuendesha nodi ya kumbukumbu.
+Kabla ya kuanzisha nodi yako mwenyewe ya kumbukumbu, jifunze kuhusu tofauti kati ya wateja na hasa [mahitaji mbalimbali ya maunzi](/developers/docs/nodes-and-clients/run-a-node/#requirements). Ukubwa wa kumbukumbu hutofautiana sana kulingana na muundo wa hifadhi wa kila kiteja. Erigon, Reth na Geth (pamoja na kumbukumbu yake inayotegemea njia) huhifadhi kumbukumbu ya Mtandao Mkuu katika takriban 2-3TB, wakati kumbukumbu za Besu na Nethermind zinahitaji 12TB au zaidi.
 
 ## Mapendekezo ya vitendo {#recommended-practices}
 
@@ -60,14 +60,14 @@ Mbali na [mapendekezo ya jumla ya kuendesha nodi](/developers/docs/nodes-and-cli
 
 ### Maunzi {#hardware}
 
-Hakikisha kila wakati unathibitisha mahitaji ya maunzi kwa hali fulani katika nyaraka za mteja.
-Hitaji kubwa zaidi kwa nodi za kumbukumbu ni nafasi ya diski. Kulingana na mteja, inatofautiana kutoka 3TB hadi 12TB. Hata kama HDD inaweza kuchukuliwa kuwa suluhisho bora kwa kiasi kikubwa cha data, kuisawazisha na kusasisha mara kwa mara kichwa cha mnyororo itahitaji diski za SSD. Diski za [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) ni nzuri vya kutosha lakini zinapaswa kuwa za ubora wa kuaminika, angalau [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Diski zinaweza kuwekwa kwenye kompyuta ya mezani au seva yenye nafasi za kutosha. Vifaa kama hivyo vilivyojitolea ni bora kwa kuendesha nodi yenye muda mwingi wa kufanya kazi. Inawezekana kabisa kuiendesha kwenye kompyuta mpakato lakini uwezo wa kubebeka utakuja kwa gharama ya ziada.
+Daima hakikisha unathibitisha mahitaji ya maunzi kwa hali fulani katika nyaraka za mteja.
+Hitaji kubwa zaidi kwa nodi za kumbukumbu ni nafasi ya diski. Kulingana na mteja, inatofautiana kutoka takriban 2TB hadi zaidi ya 12TB. Hata kama HDD inaweza kuchukuliwa kuwa suluhisho bora kwa kiasi kikubwa cha data, kuisawazisha na kusasisha mara kwa mara kichwa cha mnyororo kutahitaji diski za SSD. Diski za [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) zinatosha lakini zinapaswa kuwa za ubora wa kuaminika, angalau [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Diski zinaweza kuwekwa kwenye kompyuta ya mezani au seva yenye nafasi za kutosha. Vifaa kama hivyo vilivyotengwa ni bora kwa kuendesha nodi inayofanya kazi muda wote. Inawezekana kabisa kuiendesha kwenye kompyuta mpakato lakini uwezo wa kuibeba utakuja na gharama ya ziada.
 
-Data yote inahitaji kutoshea katika kiasi kimoja, kwa hivyo diski zinapaswa kuunganishwa, k.m., na [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) au LVM. Inaweza pia kuwa na thamani ya kufikiria kutumia [ZFS](https://en.wikipedia.org/wiki/ZFS) kwani inasaidia "Copy-on-write" ambayo inahakikisha data imeandikwa kwa usahihi kwenye diski bila makosa yoyote ya kiwango cha chini.
+Data yote inahitaji kutoshea katika sehemu moja ya hifadhi, kwa hivyo diski lazima ziunganishwe, k.m., kwa [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) au LVM. Inaweza pia kuwa vyema kufikiria kutumia [ZFS](https://en.wikipedia.org/wiki/ZFS) kwani inasaidia "Copy-on-write" ambayo inahakikisha data inaandikwa kwa usahihi kwenye diski bila makosa yoyote ya kiwango cha chini.
 
 Kwa uthabiti na usalama zaidi katika kuzuia uharibifu wa hifadhidata kwa bahati mbaya, hasa katika usanidi wa kitaalamu, fikiria kutumia [kumbukumbu ya ECC](https://en.wikipedia.org/wiki/ECC_memory) ikiwa mfumo wako unaiunga mkono. Ukubwa wa RAM kwa ujumla unashauriwa kuwa sawa na wa nodi kamili lakini RAM zaidi inaweza kusaidia kuharakisha usawazishaji.
 
-Wakati wa usawazishaji wa awali, wateja katika hali ya kumbukumbu watatekeleza kila muamala tangu mwanzo (genesis). Kasi ya utekelezaji mara nyingi inazuiwa na CPU, kwa hivyo CPU yenye kasi inaweza kusaidia kwa muda wa usawazishaji wa awali. Kwenye kompyuta ya wastani ya mtumiaji, usawazishaji wa awali unaweza kuchukua hadi mwezi mmoja.
+Wakati wa usawazishaji wa awali, wateja katika hali ya kumbukumbu watatekeleza kila muamala tangu mwanzo (genesis). Kasi ya utekelezaji mara nyingi inazuiwa na CPU, kwa hivyo CPU yenye kasi zaidi inaweza kusaidia kwa muda wa usawazishaji wa awali. Kwenye kompyuta ya kawaida ya mtumiaji, usawazishaji wa awali unaweza kuchukua hadi mwezi mmoja.
 
 ## Usomaji zaidi {#further-reading}
 

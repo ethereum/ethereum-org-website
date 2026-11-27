@@ -1,6 +1,6 @@
 ---
 title: "Dữ liệu và phân tích"
-description: "Cách lấy dữ liệu và phân tích trên chuỗi để sử dụng trong các ứng dụng phi tập trung (dapp) của bạn"
+description: "Cách lấy dữ liệu trên chuỗi cho dapp của bạn: trình lập chỉ số, đồ thị con, trình khám phá khối, nền tảng phân tích SQL và API để truy vấn và phân tích dữ liệu Ethereum."
 lang: vi
 ---
 
@@ -75,9 +75,9 @@ Ngôn ngữ truy vấn EVM (EQL) là một ngôn ngữ giống SQL được thi�
 ## Đọc thêm {#further-reading}
 
 - [Khám phá dữ liệu tiền mã hóa I: Kiến trúc luồng dữ liệu](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Tổng quan về Mạng lưới The Graph](https://thegraph.com/docs/en/about/)
-- [Sân chơi truy vấn The Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [Các ví dụ về mã API trên Etherscan](https://etherscan.io/apis#contracts)
+- [Tổng quan về Mạng lưới Graph](https://thegraph.com/docs/en/about/)
+- [Trình khám phá Graph](https://thegraph.com/explorer)
+- [Ví dụ về mã API trên Etherscan](https://etherscan.io/apis#contracts)
 - [Tài liệu API trên Blockscout](https://docs.blockscout.com/devs/apis)
 - [Trình khám phá Chuỗi Beacon Beaconcha.in](https://beaconcha.in)
 - [Cơ bản về Dune](https://docs.dune.com/#dune-basics)

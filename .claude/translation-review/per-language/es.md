@@ -1,5 +1,24 @@
 # Spanish (es) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
+Scope: 71 markdown pages + 20 JSON namespaces, incremental updates of outdated content, changed lines only (full diff read; sweeps for U+3002/U+2060/foreign script clean; verify-structure shows only pre-existing errors).
+
+**Fixed in this branch:**
+
+- `bridges` description: `aplicaciones descentralizadas (dapp)` -> `dapps` (English bare, meta slot, #80/#112)
+- `page-developers-tools-descriptions`: `interfaces binarias de aplicación (ABI)` -> `ABI` (loop-decoder), `capa 2 (L2)` expansion removed + `rollup` -> `rollups` (l2beat)
+- `glossary.json` `shielded-pool-term` English `Shielded pool` -> `Fondo blindado` (matches `glossary-tooltip.json`)
+- `zero-knowledge-proofs` description: `reclamo` -> `afirmacion` for claim (known-patterns #75)
+- `community/research` link text `centrada en los rollup` -> `rollups` (plural regressed)
+
+**Open (native call needed):**
+
+- tu/usted split in meta descriptions (Aprende vs Aprenda/Descubra, same section) and body (decentralized-identity, defi, governance usted; about, desci, nft tu)
+- `El EIP` vs `La EIP` mixed (pectra EIP-2935 `El`; tree 36 `el` / 81 `la`)
+- `escrow` term kept English in `glossary.json` while `page-get-eth` uses `deposito en garantia`; `tesorerias` for tokenized treasuries (erc-7540); `Recorrido` vs `Guia paso a paso` for the same ERC-20 tutorial link text (erc-20 vs tokens/index)
+- English decimal/thousand separators in gasper (`44.4 millones`, `1,700 dolares`) vs `12 000` house style
+- `page-what-is-ether.json` lost its final newline (cosmetic); pre-existing 14 `(DeFi)` expansions in dev-tools descriptions (untouched lines)
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

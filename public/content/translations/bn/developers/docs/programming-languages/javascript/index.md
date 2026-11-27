@@ -4,7 +4,7 @@ description: "JavaScript-ভিত্তিক প্রজেক্ট এব�
 lang: bn
 ---
 
-ইথেরিয়াম ইকোসিস্টেমে JavaScript অন্যতম জনপ্রিয় ভাষা। বস্তুত, ইথেরিয়ামের যতটা সম্ভব অংশ JavaScript-এ নিয়ে আসার জন্য একটি নিবেদিত [টিম](https://github.com/ethereumjs) রয়েছে।
+ইথেরিয়াম ইকোসিস্টেমে JavaScript অন্যতম জনপ্রিয় ভাষা, যেখানে কোর প্রোটোকল প্রিমিটিভ থেকে শুরু করে একটি প্রোডাকশন কনসেনসাস ক্লায়েন্ট পর্যন্ত সবকিছুরই JavaScript এবং TypeScript ইমপ্লিমেন্টেশন রয়েছে।
 
 [স্ট্যাকের সব স্তরেই](/developers/docs/ethereum-stack/) JavaScript (বা এর কাছাকাছি কিছু) লেখার সুযোগ রয়েছে।
 
@@ -52,10 +52,15 @@ lang: bn
 
 ### নোড এবং ক্লায়েন্ট {#nodes-and-clients}
 
-একটি EthereumJS ক্লায়েন্ট সক্রিয় ডেভেলপমেন্টের মধ্যে রয়েছে যা আপনাকে আপনার বোধগম্য একটি ভাষায় ইথেরিয়াম ক্লায়েন্টগুলো কীভাবে কাজ করে তা গভীরভাবে জানার সুযোগ দেয়; আর তা হলো JavaScript!
+[Lodestar](https://lodestar.chainsafe.io/) হলো TypeScript-এ লেখা এবং ChainSafe দ্বারা পরিচালিত একটি প্রোডাকশন-রেডি কনসেনসাস ক্লায়েন্ট। এতে একটি বিকন নোড এবং ভ্যালিডেটর ক্লায়েন্ট অন্তর্ভুক্ত রয়েছে এবং আপনার পরিচিত একটি ভাষায় ইথেরিয়ামের প্রুফ-অফ-স্টেক ঐক্যমত কীভাবে কাজ করে তা দেখার জন্য এটি একটি ভালো জায়গা।
 
-**ক্লায়েন্টটি দেখে নিন**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Lodestar দেখে নিন**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+এক্সিকিউশনের ক্ষেত্রে, EthereumJS ক্লায়েন্টটি ডেপ্রিকেটেড এবং আর্কাইভ করা হয়েছে, তবে JavaScript-এ একটি ইথেরিয়াম ক্লায়েন্ট কীভাবে কাজ করে তা এক্সপ্লোর করার জন্য এর সোর্স কোড এখনও উপলব্ধ রয়েছে।
+
+**আর্কাইভ করা ক্লায়েন্টটি দেখে নিন**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## অন্যান্য প্রজেক্ট {#other-projects}
 

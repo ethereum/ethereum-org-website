@@ -23,7 +23,7 @@ Dokumentacja może być pisana na różnych poziomach i powinna być aktualizowa
 
 - **Opis systemu w prostym języku**, opisujący, co robią kontrakty i wszelkie założenia dotyczące bazy kodu.
 - **Schematy i diagramy architektoniczne**, w tym interakcje kontraktów i maszyna stanu systemu. [Drukarki Slither](https://github.com/crytic/slither/wiki/Printer-documentation) mogą pomóc w wygenerowaniu tych schematów.
-- **Dokładna dokumentacja kodu**, dla języka Solidity można użyć [formatu NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html).
+- **Dokładna dokumentacja kodu**, dla języka Solidity można użyć [formatu NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html).
 
 ### Obliczenia onchain a pozałańcuchowe {#onchain-vs-offchain-computation}
 
@@ -73,14 +73,14 @@ Architektura Twojej bazy kodu powinna ułatwiać jego przegląd. Unikaj wyborów
 ### Testowanie i weryfikacja {#testing-and-verification}
 
 - **Pisz dokładne testy jednostkowe.** Rozbudowany zestaw testów ma kluczowe znaczenie dla tworzenia oprogramowania wysokiej jakości.
-- **Pisz niestandardowe kontrole i właściwości dla narzędzi [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) i [Manticore](https://github.com/trailofbits/manticore).** Zautomatyzowane narzędzia pomogą upewnić się, że Twój kontrakt jest bezpieczny. Przejrzyj resztę tego przewodnika, aby dowiedzieć się, jak pisać wydajne kontrole i właściwości.
-- **Używaj [crytic.io](https://crytic.io/).** Crytic integruje się z GitHub, zapewnia dostęp do prywatnych detektorów Slither i uruchamia niestandardowe kontrole właściwości z narzędzia Echidna.
+- **Pisz niestandardowe sprawdzenia i właściwości dla narzędzi [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) i [Medusa](https://github.com/crytic/medusa).** Zautomatyzowane narzędzia pomogą zapewnić bezpieczeństwo Twojego kontraktu. Przejrzyj resztę tego przewodnika, aby dowiedzieć się, jak pisać skuteczne sprawdzenia i właściwości.
+- **Uruchamiaj te narzędzia w ramach ciągłej integracji.** Uruchamianie narzędzia Slither i właściwości fuzzingu przy każdym pull requeście pozwala wychwycić regresje przed ich scaleniem.
 
 ### Solidity {#solidity}
 
-- **Preferuj Solidity 0.5 zamiast 0.4 i 0.6.** Naszym zdaniem Solidity 0.5 jest bezpieczniejsze i ma lepsze wbudowane praktyki niż 0.4. Wersja Solidity 0.6 okazała się zbyt niestabilna do zastosowań produkcyjnych i potrzebuje czasu, aby dojrzeć.
-- **Używaj stabilnej wersji do kompilacji; używaj najnowszej wersji do sprawdzania ostrzeżeń.** Sprawdź, czy Twój kod nie ma zgłoszonych problemów w najnowszej wersji kompilatora. Jednak Solidity ma szybki cykl wydawniczy i historię błędów kompilatora, dlatego nie zalecamy najnowszej wersji do wdrożenia (zobacz [rekomendację wersji solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) narzędzia Slither).
-- **Nie używaj wstawek w asemblerze (inline assembly).** Asembler wymaga wiedzy eksperckiej na temat EVM. Nie pisz kodu EVM, jeśli nie _opanowałeś_ żółtej księgi.
+- **Używaj jednej z nowszych wersji Solidity 0.8.x bez znanych poważnych błędów.** Solidity 0.8 domyślnie sprawdza operacje arytmetyczne pod kątem przepełnienia i niedomiaru, a starsze wersje nie mają nowszych weryfikacji bezpieczeństwa kompilatora. Zobacz [rekomendację dotyczącą wersji solc](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) narzędzia Slither.
+- **Używaj stabilnej wersji do kompilacji; używaj najnowszej wersji do sprawdzania ostrzeżeń.** Sprawdź, czy Twój kod nie ma zgłoszonych problemów w najnowszej wersji kompilatora. Jednakże Solidity ma szybki cykl wydawniczy i historię błędów kompilatora, więc unikaj wdrażania z wersją wydaną zaledwie kilka dni temu. Sprawdź [listę znanych błędów kompilatora](https://docs.soliditylang.org/en/latest/bugs.html) dla wybranej wersji.
+- **Nie używaj wstawek w asemblerze.** Asembler wymaga eksperckiej wiedzy na temat EVM. Nie pisz kodu EVM, jeśli nie _opanowałeś_ żółtej księgi.
 
 ## Wytyczne dotyczące wdrożenia {#deployment-guidelines}
 

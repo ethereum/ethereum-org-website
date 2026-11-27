@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## Руководства: Создание с использованием невзаимозаменяемых токенов (ERC-721) в Эфириуме {#tutorials}
 
-- [Пошаговое руководство по контракту ERC-721 на Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _— Аннотированное пошаговое руководство по полному контракту NFT ERC-721, написанному на Vyper._
-- [Как написать и развернуть NFT (Часть 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _— Пошаговое руководство по написанию и развертыванию вашего первого смарт-контракта ERC-721._
-- [Как чеканить NFT (Часть 2/3)](/developers/tutorials/how-to-mint-an-nft/) _— Как чеканить NFT ERC-721 с использованием вашего развернутого смарт-контракта и Web3._
-- [Как просмотреть свой NFT в кошельке (Часть 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _— Как отобразить ваш отчеканенный NFT в МетаМаск после развертывания._
-- [Руководство по чеканке NFT](/developers/tutorials/nft-minter/) _— Создание полнофункционального децентрализованного приложения (dapp) для чеканки NFT с фронтендом на React, МетаМаск и Alchemy._
+- [Пошаговое руководство по контракту ERC-721 на Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _— разбор с комментариями полного контракта NFT стандарта ERC-721, написанного на Vyper._
+- [Как написать и развернуть NFT (Часть 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _— пошаговое руководство по написанию и развертыванию вашего первого смарт-контракта ERC-721._
+- [Как чеканить NFT (Часть 2/3)](/developers/tutorials/how-to-mint-an-nft/) _— как чеканить NFT стандарта ERC-721 с использованием развернутого смарт-контракта и Web3._
+- [Как просмотреть NFT в вашем кошельке (Часть 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _— как отобразить отчеканенный NFT в МетаМаск после развертывания._

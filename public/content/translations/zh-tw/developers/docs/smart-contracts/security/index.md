@@ -78,7 +78,7 @@ contract VendingMachine {
 
 不幸的是，如果單獨使用，單元測試在提高智能合約安全性方面的效果微乎其微。單元測試可能證明函式對於模擬資料能正確執行，但單元測試的有效性僅取決於所編寫的測試。這使得很難偵測到可能破壞智能合約安全性的遺漏邊緣情況和漏洞。
 
-更好的方法是將單元測試與使用[靜態和動態分析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)執行的基於屬性的測試結合起來。靜態分析依賴於低階表示法，例如[控制流程圖](https://en.wikipedia.org/wiki/Control-flow_graph)和[抽象語法樹](https://deepsource.io/glossary/ast/)，來分析可達的程式狀態和執行路徑。同時，動態分析技術（例如[智能合約模糊測試](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)）使用隨機輸入值執行合約程式碼，以偵測違反安全屬性的操作。
+更好的方法是將單元測試與使用[靜態和動態分析](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts)執行的基於屬性的測試結合起來。靜態分析依賴於低階表示法，例如[控制流程圖](https://en.wikipedia.org/wiki/Control-flow_graph)和[抽象語法樹](https://deepsource.io/glossary/ast/)，來分析可達的程式狀態和執行路徑。同時，動態分析技術（例如[智能合約模糊測試](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)）使用隨機輸入值執行合約程式碼，以偵測違反安全屬性的操作。
 
 [形式化驗證](/developers/docs/smart-contracts/formal-verification)是另一種驗證智能合約中安全屬性的技術。與常規測試不同，形式化驗證可以確鑿地證明智能合約中沒有錯誤。這是透過建立一個捕捉所需安全屬性的形式化規範，並證明合約的形式化模型遵守該規範來實現的。
 
@@ -461,9 +461,9 @@ contract Attack {
 
 - **[形式化驗證工具](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _用於驗證智能合約功能正確性與檢查不變量 (invariants) 的工具。_
 
-- **[智能合約稽核服務](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _為以太坊開發專案提供智能合約稽核服務的組織列表。_
+- **[智能合約稽核服務](#smart-contract-auditing-services)** - _為以太坊開發專案提供智能合約稽核服務的組織列表。_
 
-- **[漏洞賞金平台](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _用於協調漏洞賞金並獎勵負責任地揭露智能合約中嚴重漏洞的平台。_
+- **[漏洞賞金平台](#bug-bounty-platforms)** - _用於協調漏洞賞金並獎勵負責任地揭露智能合約中嚴重漏洞的平台。_
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _一個免費的線上工具，用於檢查有關分叉合約的所有可用資訊。_
 
@@ -563,9 +563,7 @@ contract Attack {
 
 - [如何撰寫安全的智能合約](/developers/tutorials/secure-development-workflow/)
 
-- [如何使用斯立瑟尋找智能合約漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [如何使用曼蒂科爾尋找智能合約漏洞](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [如何使用 Slither 尋找智能合約錯誤](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [智能合約安全指南](/developers/tutorials/smart-contract-security-guidelines/)
 

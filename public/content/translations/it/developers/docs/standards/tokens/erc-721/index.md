@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## Tutorial: Sviluppare con i token non fungibili (ERC-721) su Ethereum {#tutorials}
 
-- [Guida al contratto ERC-721 in Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Una guida annotata di un contratto NFT ERC-721 completo scritto in Vyper._
+- [Guida al contratto ERC-721 in Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Una guida commentata a un contratto NFT ERC-721 completo scritto in Vyper._
 - [Come scrivere e distribuire un NFT (Parte 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Guida passo passo per scrivere e distribuire il tuo primo smart contract ERC-721._
-- [Come coniare un NFT (Parte 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Come coniare un NFT ERC-721 utilizzando il tuo smart contract distribuito e Web3._
+- [Come coniare un NFT (Parte 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Come coniare un NFT ERC-721 utilizzando il tuo smart contract distribuito e il Web3._
 - [Come visualizzare il tuo NFT nel tuo portafoglio (Parte 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Come visualizzare il tuo NFT coniato in MetaMask dopo la distribuzione._
-- [Tutorial per il conio di NFT](/developers/tutorials/nft-minter/) _– Crea una dapp full-stack per il conio di NFT con un frontend React, MetaMask e Alchemy._

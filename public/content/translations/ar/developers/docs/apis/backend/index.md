@@ -66,7 +66,7 @@ lang: ar
 **<span dir="ltr">Infura</span> -** **_واجهة برمجة تطبيقات (API) إيثيريوم كخدمة._**
 
 - [<span dir="ltr">infura.io</span>](https://infura.io)
-- [التوثيق](https://docs.infura.io/api)
+- [التوثيق](https://docs.infura.io/)
 - [<span dir="ltr">GitHub</span>](https://github.com/INFURA)
 
 **<span dir="ltr">Node RPC</span> - _مزود <span dir="ltr">JSON-RPC</span> لآلة إيثريوم الافتراضية (EVM) فعال من حيث التكلفة_**
@@ -77,7 +77,7 @@ lang: ar
 **<span dir="ltr">NOWNodes</span> - _عقد كاملة ومستكشفات الكتل._**
 
 - [<span dir="ltr">NOWNodes.io</span>](https://nownodes.io/)
-- [التوثيق](https://nownodes.gitbook.io/documentation)
+- [التوثيق](https://docs.nownodes.io/)
 
 **<span dir="ltr">QuickNode</span> -** **_البنية التحتية لسلسلة الكتل كخدمة._**
 
@@ -162,7 +162,7 @@ lang: ar
 - [التوثيق](https://docs.chainstack.com/)
 - [مرجع واجهة برمجة تطبيقات (API) إيثيريوم](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**عقدة كوين بيس السحابية -** **_واجهة برمجة تطبيقات (API) البنية التحتية لسلسلة الكتل._**
+**عقدة كوين بيس السحابية -** **_واجهة برمجة تطبيقات (API) للبنية التحتية لسلسلة الكتل._**
 
 - [عقدة كوين بيس السحابية](https://www.coinbase.com/developer-platform)
 - [التوثيق](https://docs.cdp.coinbase.com/)
@@ -172,11 +172,10 @@ lang: ar
 - [<span dir="ltr">DataHub</span>](https://www.figment.io/)
 - [التوثيق](https://docs.figment.io/)
 
-**<span dir="ltr">Moralis</span> -** **_مزود واجهة برمجة تطبيقات (API) لآلة إيثيريوم الافتراضية (EVM) على مستوى المؤسسات._**
+**<span dir="ltr">Moralis</span> -** **_مزود واجهة برمجة تطبيقات (API) لآلة إيثريوم الافتراضية (EVM) على مستوى المؤسسات._**
 
 - [<span dir="ltr">moralis.io</span>](https://moralis.io)
 - [التوثيق](https://docs.moralis.io/)
-- [<span dir="ltr">GitHub</span>](https://github.com/MoralisWeb3)
 - [ديسكورد](https://moralis.io/joindiscord/)
 - [المنتدى](https://forum.moralis.io/)
 
@@ -187,19 +186,19 @@ lang: ar
 - [<span dir="ltr">GitHub</span>](https://github.com/nftport/)
 - [ديسكورد](https://discord.com/invite/K8nNrEgqhE)
 
-**<span dir="ltr">Tokenview</span> -** **_منصة واجهات برمجة تطبيقات (API) لسلسلة الكتل متعددة الكريبتو العامة._**
+**<span dir="ltr">Tokenview</span> -** **_منصة واجهات برمجة تطبيقات (API) عامة لسلاسل الكتل متعددة الكريبتو._**
 
 - [<span dir="ltr">services.tokenview.io</span>](https://services.tokenview.io/)
 - [التوثيق](https://services.tokenview.io/docs?type=api)
 - [<span dir="ltr">GitHub</span>](https://github.com/Tokenview)
 
-**<span dir="ltr">Watchdata</span> -** **_توفير وصول بسيط وموثوق لواجهة برمجة تطبيقات (API) إلى سلسلة كتل إيثيريوم._**
+**<span dir="ltr">Watchdata</span> -** **_توفير وصول بسيط وموثوق عبر واجهة برمجة التطبيقات (API) إلى سلسلة كتل إيثيريوم._**
 
 - [<span dir="ltr">Watchdata</span>](https://watchdata.io/)
 - [التوثيق](https://docs.watchdata.io/)
 - [ديسكورد](https://discord.com/invite/TZRJbZ6bdn)
 
-**<span dir="ltr">Codex</span> -** **_واجهة برمجة تطبيقات (API) لبيانات سلسلة الكتل المثرية في الوقت الفعلي عبر عشرات السلاسل._**
+**<span dir="ltr">Codex</span> -** **_واجهة برمجة تطبيقات (API) لبيانات سلسلة الكتل غنية وفي الوقت الفعلي عبر عشرات السلاسل._**
 
 - [<span dir="ltr">codex.io</span>](https://www.codex.io/)
 - [التوثيق](https://docs.codex.io)
@@ -207,13 +206,12 @@ lang: ar
 - [<span dir="ltr">GitHub</span>](https://github.com/Codex-Data)
 - [ديسكورد](https://discord.com/invite/mFpUhT3vAq)
 
-**<span dir="ltr">Covalent</span> -** **_واجهات برمجة تطبيقات (API) مثرية لسلسلة الكتل لأكثر من <span dir="ltr">200</span> سلسلة._**
+**<span dir="ltr">Covalent</span> -** **_واجهات برمجة تطبيقات (API) غنية لسلسلة الكتل لأكثر من <span dir="ltr">200</span> سلسلة._**
 
 - [<span dir="ltr">covalenthq.com</span>](https://www.covalenthq.com/)
-- [التوثيق](https://www.covalenthq.com/docs/api/)
+- [التوثيق](https://goldrush.dev/docs/)
 - [<span dir="ltr">GitHub</span>](https://github.com/covalenthq)
 - [ديسكورد](https://www.covalenthq.com/discord/)
-
 
 ## قراءة إضافية {#further-reading}
 
@@ -226,5 +224,4 @@ _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذ
 
 ## برامج تعليمية ذات صلة {#related-tutorials}
 
-- [إعداد <span dir="ltr">Web3.js</span> لاستخدام سلسلة كتل إيثيريوم في <span dir="ltr">JavaScript</span>](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– إرشادات لإعداد <span dir="ltr">Web3.js</span> في مشروعك._
-- [استدعاء عقد ذكي من <span dir="ltr">JavaScript</span>](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– باستخدام الرمز المميز <span dir="ltr">DAI</span>، تعرف على كيفية استدعاء وظيفة العقود باستخدام <span dir="ltr">JavaScript</span>._
+- [مكونات الخادم والوكلاء لتطبيقات <span dir="ltr">Web3</span>](/developers/tutorials/server-components/) _– كيفية كتابة مكونات خادم <span dir="ltr">TypeScript</span> تستمع إلى أحداث سلسلة الكتل وتستجيب بمعاملات._

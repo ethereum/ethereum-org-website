@@ -50,9 +50,9 @@ Ada berbagai [layanan](/developers/docs/nodes-and-clients/nodes-as-a-service/) g
 
 ## Implementasi dan penggunaan {#implementations-and-usage}
 
-Node arsip dalam konteks ini berarti data yang disajikan oleh klien lapisan eksekusi yang menghadap pengguna karena mereka menangani basis data state dan menyediakan titik akhir JSON-RPC. Opsi konfigurasi, waktu sinkronisasi, dan ukuran basis data dapat bervariasi menurut klien. Untuk detailnya, silakan merujuk ke dokumentasi yang disediakan oleh klien Anda.
+Node arsip dalam konteks ini berarti data yang disajikan oleh klien lapisan eksekusi yang berhadapan dengan pengguna karena mereka menangani basis data state dan menyediakan titik akhir JSON-RPC. Opsi konfigurasi, waktu sinkronisasi, dan ukuran basis data dapat bervariasi berdasarkan klien. Untuk detailnya, silakan merujuk ke dokumentasi yang disediakan oleh klien Anda.
 
-Sebelum memulai node arsip Anda sendiri, pelajari tentang perbedaan antara klien dan terutama berbagai [persyaratan perangkat keras](/developers/docs/nodes-and-clients/run-a-node/#requirements). Sebagian besar klien tidak dioptimalkan untuk fitur ini dan arsip mereka membutuhkan lebih dari 12TB ruang. Sebaliknya, implementasi seperti Erigon dapat menyimpan data yang sama di bawah 3TB yang menjadikannya cara paling efektif untuk menjalankan node arsip.
+Sebelum memulai node arsip Anda sendiri, pelajari tentang perbedaan antara klien dan terutama berbagai [persyaratan perangkat keras](/developers/docs/nodes-and-clients/run-a-node/#requirements). Ukuran arsip sangat bervariasi dengan desain penyimpanan masing-masing klien. Erigon, Reth, dan Geth (dengan arsip berbasis jalurnya) menyimpan arsip Mainnet dalam sekitar 2-3TB, sementara arsip Besu dan Nethermind membutuhkan 12TB atau lebih.
 
 ## Praktik yang disarankan {#recommended-practices}
 
@@ -61,13 +61,13 @@ Terlepas dari [rekomendasi umum untuk menjalankan node](/developers/docs/nodes-a
 ### Perangkat keras {#hardware}
 
 Selalu pastikan untuk memverifikasi persyaratan perangkat keras untuk mode tertentu dalam dokumentasi klien.
-Persyaratan terbesar untuk node arsip adalah ruang disk. Bergantung pada klien, ini bervariasi dari 3TB hingga 12TB. Meskipun HDD mungkin dianggap sebagai solusi yang lebih baik untuk data dalam jumlah besar, menyinkronkannya dan terus memperbarui head dari rantai akan membutuhkan drive SSD. Drive [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sudah cukup baik tetapi harus memiliki kualitas yang andal, setidaknya [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disk dapat dipasang ke komputer desktop atau server dengan slot yang cukup. Perangkat khusus semacam itu ideal untuk menjalankan node dengan waktu aktif (uptime) yang tinggi. Sangat mungkin untuk menjalankannya di laptop tetapi portabilitasnya akan membutuhkan biaya tambahan.
+Persyaratan terbesar untuk node arsip adalah ruang disk. Bergantung pada klien, ini bervariasi dari sekitar 2TB hingga lebih dari 12TB. Meskipun HDD mungkin dianggap sebagai solusi yang lebih baik untuk data dalam jumlah besar, melakukan sinkronisasi dan terus memperbarui head dari rantai akan membutuhkan drive SSD. Drive [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sudah cukup baik tetapi harus memiliki kualitas yang andal, setidaknya [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disk dapat dipasang ke komputer desktop atau server dengan slot yang cukup. Perangkat khusus semacam itu ideal untuk menjalankan node dengan uptime tinggi. Sangat mungkin untuk menjalankannya di laptop tetapi portabilitasnya akan memakan biaya tambahan.
 
 Semua data harus muat dalam satu volume, oleh karena itu disk harus digabungkan, misalnya, dengan [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) atau LVM. Mungkin juga patut dipertimbangkan untuk menggunakan [ZFS](https://en.wikipedia.org/wiki/ZFS) karena mendukung "Copy-on-write" yang memastikan data ditulis dengan benar ke disk tanpa kesalahan tingkat rendah.
 
-Untuk stabilitas dan keamanan yang lebih baik dalam mencegah kerusakan basis data yang tidak disengaja, terutama dalam pengaturan profesional, pertimbangkan untuk menggunakan [memori ECC](https://en.wikipedia.org/wiki/ECC_memory) jika sistem Anda mendukungnya. Ukuran RAM umumnya disarankan sama dengan full node tetapi lebih banyak RAM dapat membantu mempercepat sinkronisasi.
+Untuk stabilitas dan keamanan yang lebih baik dalam mencegah kerusakan basis data yang tidak disengaja, terutama dalam penyiapan profesional, pertimbangkan untuk menggunakan [memori ECC](https://en.wikipedia.org/wiki/ECC_memory) jika sistem Anda mendukungnya. Ukuran RAM umumnya disarankan sama dengan full node tetapi RAM yang lebih besar dapat membantu mempercepat sinkronisasi.
 
-Selama sinkronisasi awal, klien dalam mode arsip akan mengeksekusi setiap transaksi sejak genesis. Kecepatan eksekusi sebagian besar dibatasi oleh CPU, sehingga CPU yang lebih cepat dapat membantu waktu sinkronisasi awal. Pada komputer konsumen rata-rata, sinkronisasi awal dapat memakan waktu hingga satu bulan.
+Selama sinkronisasi awal, klien dalam mode arsip akan mengeksekusi setiap transaksi sejak genesis. Kecepatan eksekusi sebagian besar dibatasi oleh CPU, sehingga CPU yang lebih cepat dapat membantu mempersingkat waktu sinkronisasi awal. Pada komputer konsumen rata-rata, sinkronisasi awal dapat memakan waktu hingga satu bulan.
 
 ## Bacaan lebih lanjut {#further-reading}
 

@@ -12,36 +12,37 @@ Wir sind eine einladende Community, die dir dabei hilft, im [Ethereum](/)-Ökosy
 ## Möglichkeiten zur Mitwirkung {#ways-to-contribute}
 
 **Übersetzungen**
-- [Einen Übersetzungsfehler melden](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Das [Übersetzungsprogramm](/contributing/translation-program/) läuft aus und führt kein Onboarding neuer Übersetzer mehr durch
+- [Einen Übersetzungsfehler melden](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Das [Übersetzungsprogramm](/contributing/translation-program/) läuft aus und es findet kein Onboarding neuer Übersetzer mehr statt
 
 **Entwicklung**
-- [An einem offenen Issue arbeiten](https://github.com/ethereum/ethereum-org-website/issues) – Aufgaben, die wir als notwendig identifiziert haben
+- [An einem offenen Issue arbeiten](https://github.com/ethereum/ethereum-org-website/issues) – Aufgaben, die wir identifiziert haben und die erledigt werden müssen
 
 **Design**
-- [Beim Design der Website helfen](/contributing/design/) – Designer aller Erfahrungsstufen können zur Verbesserung der Website beitragen
+- [Hilf bei der Gestaltung der Website](/contributing/design/) – Designer aller Erfahrungsstufen können dazu beitragen, die Website zu verbessern
 
 **Inhalt**
 - [Inhalte erstellen/bearbeiten](/contributing/#how-to-update-content) – Schlage neue Seiten vor oder nimm Anpassungen an bereits vorhandenen Inhalten vor
-- [Einen Ersteller-Artikel schreiben](/contributing/adding-articles/) - Steuere einen Artikel für den Bereich [Aktuelles](/latest/) bei
+- [Einen Builder-Artikel schreiben](/contributing/adding-articles/) - Steuere einen Artikel für den Bereich [Aktuelles](/latest/) bei
 - [Community-Ressourcen hinzufügen](/contributing/content-resources/) – Füge einer relevanten Seite einen hilfreichen Artikel oder eine Ressource hinzu
 - [Einen Bericht vorschlagen](/contributing/adding-reports/) - Schlage einen Forschungsbericht für die Seite [Berichte](/reports/) vor
 - [Teile deine Geschichte](/contributing/adding-community-stories/) - Reiche eine Geschichte über deine persönlichen Erfahrungen mit Open-Source- und Sanctuary-Technologien ein, wie das Ethereum-Ökosystem dein Leben beeinflusst hat oder wie du und deine Community Ethereum nutzen
 - [Quizze](/contributing/quizzes/) – Füge Fragenkataloge für Quizze auf einer relevanten Seite hinzu, aktualisiere oder lösche sie
 - [Eine Design-Ressource vorschlagen](/contributing/design/adding-design-resources/) – Füge hilfreiche Design-Ressourcen hinzu, aktualisiere oder lösche sie
 - [Ein Video vorschlagen](/contributing/adding-videos/) – Schlage ein Lehrvideo für die Videogalerie vor
+- [Einen Glossarbegriff hinzufügen](/contributing/adding-glossary-terms/) – Füge einen Begriff im [Ethereum-Glossar](/glossary/) hinzu oder aktualisiere ihn
 
 **Feature-Ideen**
 - [Ein Feature anfragen](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Lass uns wissen, wenn du Ideen für ein neues Feature oder Design hast
 
-**Produktlistungen**
+**Produktauflistungen**
 - [Eine Börse hinzufügen](/contributing/adding-exchanges/) – Füge eine Börse zu unserer [Börsensuche](/get-eth/#country-picker) hinzu
-- [Ein Produkt hinzufügen](/contributing/adding-products/) – Füge einer relevanten Seite eine dezentrale Anwendung (Dapp) oder Wallet hinzu
-- [Entwicklertools hinzufügen](/contributing/adding-developer-tools/) – Füge einer relevanten Seite ein Entwicklertool hinzu
-- [Eine Layer 2 hinzufügen](/contributing/adding-layer-2s/) – Füge einer relevanten Seite eine Layer 2 (L2) hinzu
-- [Ein Staking-Produkt oder einen Service hinzufügen](/contributing/adding-staking-products/) – Füge ein Projekt hinzu, das Solo Staking, Pooled Staking oder Staking as a Service erleichtert
+- [Ein Produkt hinzufügen](/contributing/adding-products/) – Füge eine Dapp oder Wallet zu einer relevanten Seite hinzu
+- [Entwicklertools hinzufügen](/contributing/adding-developer-tools/) – Füge ein Entwicklertool zu einer relevanten Seite hinzu
+- [Einen Layer 2 (L2) hinzufügen](/contributing/adding-layer-2s/) – Füge einen Layer 2 (L2) zu einer relevanten Seite hinzu
+- [Ein Staking-Produkt oder einen Staking-Dienst hinzufügen](/contributing/adding-staking-products/) – Füge ein Projekt hinzu, das Solo Staking, Pooled Staking oder Staking as a Service erleichtert
 - [Eine Wallet hinzufügen](/contributing/adding-wallets/) – Füge eine Wallet für die Seite [Wallets finden](/wallets/find-wallet/) hinzu
-- [Ein Projekt für unsere DeSci-Seite vorschlagen](/contributing/adding-desci-projects/) – Füge ein auf Ethereum basierendes Projekt hinzu, das zur dezentralisierten Wissenschaft (DeSci) beiträgt
-- [Eine Ressource hinzufügen](/contributing/adding-resources/) – Füge einer relevanten Seite eine nützliche Ressource hinzu
+- [Ein Projekt für unsere DeSci-Seite vorschlagen](/contributing/adding-desci-projects/) – Füge ein auf Ethereum basierendes Projekt hinzu, das zur Dezentralisierten Wissenschaft (DeSci) beiträgt
+- [Eine Ressource hinzufügen](/contributing/adding-resources/) – Füge eine nützliche Ressource zu einer relevanten Seite hinzu
 
 Noch Fragen? 🤔 Tritt unserem [Discord-Server](/discord/) bei
 
@@ -102,17 +103,7 @@ Wenn dein Beitrag in ethereum.org zusammengeführt wird, hast du die Möglichkei
 
 Du solltest nur Wallets mit Eigenverwahrung verwenden, um OATs zu beanspruchen. Verwende keine Börsenkonten oder andere Konten, für die du nicht die privaten Schlüssel besitzt, da du mit diesen nicht auf deine OATs zugreifen und sie verwalten kannst.
 
-## Beanspruche dein GitPOAP {#claim-gitpoap}
-
-GitPOAP wird deinen zusammengeführten Beitrag ebenfalls automatisch erkennen und dir ermöglichen, ein separates, einzigartiges Mitwirkenden-POAP direkt auf ihrer Plattform zu prägen!
-
-
-### So beanspruchst du es {#how-to-claim-2}
-
-1. Besuche [GitPOAP](https://www.gitpoap.io).
-2. Verbinde dich mit deiner Wallet oder sogar mit deiner E-Mail-Adresse über die Anmeldeoption.
-3. Suche nach deinem GitHub-Benutzernamen, deiner ETH-Adresse, deinen ENS-Namen oder einem beliebigen GitPOAP, um zu prüfen, ob du berechtigt bist.
-4. Wenn dein GitHub-Konto berechtigt ist, kannst du ein GitPOAP prägen!
+<LinkWithArrow href="/collectibles/">Sieh dir deine ethereum.org-Sammlerstücke an</LinkWithArrow>
 
 ## Mitwirkende {#contributors}
 

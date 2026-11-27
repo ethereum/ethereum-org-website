@@ -1,7 +1,7 @@
 ---
 title: "Gerçek dünya varlıkları (RWA'lar)"
 metaTitle: "RWA'lar nedir? | Gerçek Dünya Varlıklarının Faydaları ve Kullanımı"
-description: "Ethereum'daki gerçek dünya varlıklarına genel bir bakış"
+description: "Gerçek dünya varlıkları (RWA'lar) nedir? Hazine bonoları, gayrimenkul ve emtialar gibi varlıkların Ethereum üzerinde nasıl tokenlaştırıldığını, faydalarını ve risklerini öğrenin."
 lang: tr
 template: use-cases
 image: /images/man-and-dog-playing.png

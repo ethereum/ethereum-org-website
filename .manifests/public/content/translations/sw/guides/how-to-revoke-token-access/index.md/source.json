@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/guides/how-to-revoke-token-access/index.md",
-  "generatedAt": "2026-06-30T00:50:57.625Z",
-  "rootHash": "89b4e4c2a323",
+  "generatedAt": "2026-11-27T09:58:15.660Z",
+  "rootHash": "f550d7428c3f",
   "tree": {
-    "contentHash": "5abf9bde5051",
+    "contentHash": "ff76cdaf9cb1",
     "anchorHash": "51f122f1108b",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "1b38c36b6d97",
+        "contentHash": "8050bdd021af",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -364,5 +364,5 @@
       "frequently-asked-questions"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

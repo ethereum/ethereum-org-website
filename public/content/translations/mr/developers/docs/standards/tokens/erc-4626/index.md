@@ -53,7 +53,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-हे फंक्शन तिजोरीत असलेल्या अंतर्निहित मालमत्तेची एकूण रक्कम परत करते.
+हे फंक्शन तिजोरीद्वारे व्यवस्थापित केलेल्या अंतर्निहित मालमत्तेची एकूण रक्कम परत करते, ज्यामध्ये तिजोरीने इतरत्र कामाला लावलेल्या कोणत्याही मालमत्तेचा समावेश असतो आणि ती कोणत्याही शुल्कानंतरची असते.
 
 #### convertToShares {#convertoshares}
 
@@ -141,7 +141,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-हे फंक्शन `owner` मधून `shares` बर्न करते आणि तिजोरीतून `receiver` ला अचूक `assets` टोकन पाठवते.
+हे फंक्शन `owner` मधून `shares` बर्न करते आणि तिजोरीतून `receiver` ला अचूक `assets` टोकन्स पाठवते.
 
 #### maxRedeem {#maxredeem}
 
@@ -185,7 +185,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### इंटरफेसचा नकाशा {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### घटना {#events}
 

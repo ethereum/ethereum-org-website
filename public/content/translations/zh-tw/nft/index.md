@@ -1,7 +1,7 @@
 ---
 title: "非同質化代幣 (NFT)"
 metaTitle: "什麼是 NFT？ | 優勢與用途"
-description: "以太坊上的 NFT 概覽"
+description: "什麼是 NFT？了解非同質化代幣 (NFT) 如何在以太坊上證明數位藝術品、收藏品、門票等的所有權，以及如何安全地使用它們。"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2

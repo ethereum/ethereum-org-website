@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/consensus-mechanisms/pos/gasper/index.md",
-  "generatedAt": "2026-06-16T22:10:17.435Z",
-  "rootHash": "871a4a5e1fa5",
+  "generatedAt": "2026-11-27T10:36:27.650Z",
+  "rootHash": "9bb64b05cbc4",
   "tree": {
-    "contentHash": "e1ff3d6859b2",
-    "anchorHash": "cb2c3c0f1328",
+    "contentHash": "b0d98e224013",
+    "anchorHash": "3a7875935694",
     "children": {
       "frontmatter:title": {
         "contentHash": "d143a4908b25",
@@ -72,16 +72,24 @@
         ]
       },
       "what-is-finality": {
-        "contentHash": "094399f2c09c",
-        "anchorHash": "05955e8287f5",
+        "contentHash": "7fcad4f59cba",
+        "anchorHash": "5647bed9a65e",
         "labelHash": "b6383fcc764b",
         "children": {
           "_label": {
             "contentHash": "b6383fcc764b",
             "anchorHash": "e3b0c44298fc"
           },
+          "prose:0": {
+            "contentHash": "2e69d98e8a80",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
           "prose:1": {
-            "contentHash": "7c8846b94562",
+            "contentHash": "dfcf484206e5",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
@@ -93,7 +101,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "incentives-and-slashing": {
-            "contentHash": "49c91066267b",
+            "contentHash": "e317836e620f",
             "anchorHash": "4b9f7d802648",
             "labelHash": "2ecb80f349cb",
             "children": {
@@ -102,7 +110,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "prose:0": {
-                "contentHash": "3bb3b6bc7ed0",
+                "contentHash": "2e94cb25f6ae",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -162,6 +170,8 @@
         },
         "childrenOrder": [
           "_label",
+          "prose:0",
+          "component:2",
           "prose:1",
           "link:0",
           "prose:2",
@@ -216,5 +226,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

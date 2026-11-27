@@ -23,7 +23,7 @@ La documentazione può essere scritta a diversi livelli e dovrebbe essere aggior
 
 - **Una descrizione del sistema in linguaggio semplice**, che descriva cosa fanno i contratti e qualsiasi presupposto sulla base di codice.
 - **Schemi e diagrammi architetturali**, incluse le interazioni del contratto e la macchina a stati del sistema. I [printer di Slither](https://github.com/crytic/slither/wiki/Printer-documentation) possono aiutare a generare questi schemi.
-- **Documentazione approfondita del codice**, il [formato NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) può essere utilizzato per Solidity.
+- **Documentazione approfondita del codice**, il [formato NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html) può essere utilizzato per Solidity.
 
 ### Calcolo onchain vs offchain {#onchain-vs-offchain-computation}
 
@@ -72,15 +72,15 @@ L'architettura della tua base di codice dovrebbe rendere il tuo codice facile da
 
 ### Test e verifica {#testing-and-verification}
 
-- **Scrivi unit test approfonditi.** Una suite di test estesa è cruciale per creare software di alta qualità.
-- **Scrivi controlli e proprietà personalizzati per [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) e [Manticore](https://github.com/trailofbits/manticore).** Gli strumenti automatizzati aiuteranno a garantire che il tuo contratto sia sicuro. Rivedi il resto di questa guida per imparare a scrivere controlli e proprietà efficienti.
-- **Usa [crytic.io](https://crytic.io/).** Crytic si integra con GitHub, fornisce accesso ai rilevatori privati di Slither ed esegue controlli di proprietà personalizzati da Echidna.
+- **Scrivi unit test approfonditi.** Una suite di test estesa è fondamentale per creare software di alta qualità.
+- **Scrivi controlli e proprietà personalizzati per [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) e [Medusa](https://github.com/crytic/medusa).** Gli strumenti automatizzati aiuteranno a garantire che il tuo contratto sia sicuro. Esamina il resto di questa guida per imparare a scrivere controlli e proprietà efficienti.
+- **Esegui questi strumenti in integrazione continua.** L'esecuzione di Slither e delle tue proprietà di fuzzing su ogni pull request intercetta le regressioni prima che vengano integrate.
 
 ### Solidity {#solidity}
 
-- **Preferisci Solidity 0.5 rispetto a 0.4 e 0.6.** A nostro avviso, Solidity 0.5 è più sicuro e ha migliori pratiche integrate rispetto a 0.4. Solidity 0.6 si è dimostrato troppo instabile per la produzione e ha bisogno di tempo per maturare.
-- **Usa una versione stabile per compilare; usa l'ultima versione per controllare gli avvisi.** Verifica che il tuo codice non abbia problemi segnalati con l'ultima versione del compilatore. Tuttavia, Solidity ha un ciclo di rilascio rapido e una storia di bug del compilatore, quindi non raccomandiamo l'ultima versione per la distribuzione (vedi la [raccomandazione sulla versione di solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) di Slither).
-- **Non usare l'assembly inline.** L'assembly richiede esperienza con l'EVM. Non scrivere codice EVM se non hai _padroneggiato_ lo yellow paper.
+- **Usa una versione recente di Solidity 0.8.x senza bug gravi noti.** Solidity 0.8 controlla l'aritmetica per overflow e underflow per impostazione predefinita, e le versioni precedenti mancano dei controlli di sicurezza più recenti del compilatore. Consulta i [consigli sulla versione di solc](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) di Slither.
+- **Usa una versione stabile per compilare; usa l'ultima versione per controllare gli avvisi.** Verifica che il tuo codice non presenti problemi segnalati con l'ultima versione del compilatore. Tuttavia, Solidity ha un ciclo di rilascio rapido e una storia di bug del compilatore, quindi evita di distribuire con una versione rilasciata solo pochi giorni fa. Controlla l'[elenco dei bug noti del compilatore](https://docs.soliditylang.org/en/latest/bugs.html) per la versione che scegli.
+- **Non usare l'assembly inline.** L'assembly richiede esperienza con la EVM. Non scrivere codice EVM se non hai _padroneggiato_ lo yellow paper.
 
 ## Linee guida per la distribuzione {#deployment-guidelines}
 

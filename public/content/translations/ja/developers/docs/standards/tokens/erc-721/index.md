@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## チュートリアル: イーサリアム上で非代替性トークン（ERC-721）を使用して構築する {#tutorials}
 
-- [Vyper ERC-721 コントラクトのウォークスルー](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyperで書かれた完全なERC-721 NFTコントラクトの注釈付きウォークスルー。_
-- [NFTの書き方とデプロイ方法（パート1/3）](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 初めてのERC-721スマート・コントラクトを書いてデプロイするためのステップバイステップガイド。_
-- [NFTをミントする方法（パート2/3）](/developers/tutorials/how-to-mint-an-nft/) _– デプロイされたスマート・コントラクトとWeb3を使用してERC-721 NFTをミントする方法。_
-- [ウォレットでNFTを表示する方法（パート3/3）](/developers/tutorials/how-to-view-nft-in-metamask/) _– デプロイ後、ミントしたNFTをメタマスクで表示する方法。_
-- [NFTミンターチュートリアル](/developers/tutorials/nft-minter/) _– Reactフロントエンド、メタマスク、Alchemyを使用して、フルスタックのNFTミンティングdappを構築します。_
+- [Vyper ERC-721 コントラクトのウォークスルー](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyperで記述された完全なERC-721 NFTコントラクトの注釈付きウォークスルー。_
+- [NFTの記述とデプロイ方法 (パート 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 初めてのERC-721スマート・コントラクトを記述し、デプロイするためのステップバイステップガイド。_
+- [NFTのミント方法 (パート 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– デプロイされたスマート・コントラクトとWeb3を使用してERC-721 NFTをミントする方法。_
+- [ウォレットでNFTを表示する方法 (パート 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– デプロイ後、ミントしたNFTをMetaMaskで表示する方法。_

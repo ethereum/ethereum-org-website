@@ -1,6 +1,6 @@
 ---
 title: "データと分析"
-description: "分散型アプリケーション (dapp) で使用するオンチェーンの分析とデータを取得する方法"
+description: "dappのオンチェーンデータを取得する方法: イーサリアムのデータをクエリおよび分析するためのインデクサー、サブグラフ、ブロックエクスプローラー、SQL分析プラットフォーム、API。"
 lang: ja
 ---
 
@@ -79,13 +79,13 @@ EVM Query Language (EQL) は、EVM (イーサリアム仮想マシン) チェー
 ## 参考文献 {#further-reading}
 
 - [暗号資産データの探索 I: データフローアーキテクチャ](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [The Graphネットワークの概要](https://thegraph.com/docs/en/about/)
-- [Graphクエリプレイグラウンド](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [EtherScanのAPIコード例](https://etherscan.io/apis#contracts)
+- [Graphネットワークの概要](https://thegraph.com/docs/en/about/)
+- [Graphエクスプローラー](https://thegraph.com/explorer)
+- [EtherscanのAPIコード例](https://etherscan.io/apis#contracts)
 - [BlockscoutのAPIドキュメント](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in ビーコン・チェーンエクスプローラー](https://beaconcha.in)
 - [Duneの基礎](https://docs.dune.com/#dune-basics)
-- [SubQuery イーサリアムクイックスタートガイド](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [SubQuery イーサリアム・クイックスタートガイド](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQDネットワークの概要](https://docs.sqd.dev/)
 - [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 

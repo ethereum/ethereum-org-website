@@ -1,21 +1,21 @@
 ---
-title: Padrão de Cofre Tokenizado Assíncrono ERC-7540
-description: Uma extensão do ERC-4626 que adiciona fluxos assíncronos de depósito e resgate para cofres tokenizados.
+title: "Padrão de Cofre Tokenizado Assíncrono ERC-7540"
+description: "Uma extensão do ERC-4626 que adiciona fluxos assíncronos de depósito e resgate para cofres tokenizados."
 lang: pt-br
 ---
 
 ## Introdução {#introduction}
 
-O ERC-7540 estende o [Padrão de Cofre Tokenizado ERC-4626](/developers/docs/standards/tokens/erc-4626/) adicionando suporte para fluxos assíncronos de depósito e resgate. Ele introduz um padrão de solicitar-e-reivindicar (request-then-claim): os usuários primeiro enviam uma solicitação (bloqueando seus ativos ou cotas) e, em seguida, reivindicam o resultado após o cofre tê-lo processado.
+O ERC-7540 estende o [Padrão de Cofre Tokenizado ERC-4626](/developers/docs/standards/tokens/erc-4626/) adicionando suporte para fluxos assíncronos de depósito e resgate. Ele introduz um padrão de solicitar e reivindicar (request-then-claim): os usuários primeiro enviam uma solicitação (entregando seus ativos ou cotas ao cofre) e depois reivindicam o resultado após o cofre processá-la.
 
-Isso é necessário quando um cofre não pode realizar a liquidação instantaneamente em uma única transação, por exemplo:
+Isso é necessário quando um cofre não pode ser liquidado instantaneamente em uma única transação, por exemplo:
 
-- Protocolos de ativos do mundo real (RWA), como tesourarias tokenizadas, crédito privado e outros ativos com ciclos de liquidação T+1 ou T+2
+- Protocolos de ativos do mundo real (RWA), como títulos do tesouro tokenizados, crédito privado e outros ativos com ciclos de liquidação T+1 ou T+2
 - Empréstimo subcolateralizado onde as avaliações de crédito ocorrem offchain
-- Estratégias de cofre cross-chain onde as pontes (bridges) introduzem atrasos
-- Tokens de staking líquido (LST) com períodos de desvinculação (unbonding)
+- Estratégias de cofre cross-chain onde o uso de pontes (bridging) introduz atrasos
+- Tokens de staking líquido com períodos de desvinculação
 
-Os cofres podem escolher ser assíncronos apenas em depósitos, apenas em resgates ou em ambos. Essa flexibilidade permite que os desenvolvedores de cofres adicionem fluxos assíncronos apenas onde a estratégia subjacente exigir, mantendo o outro lado síncrono.
+Os cofres podem escolher ser assíncronos apenas para depósitos, apenas para resgates, ou ambos. Essa flexibilidade permite que os desenvolvedores de cofres adicionem fluxos assíncronos apenas onde a estratégia subjacente exigir, mantendo o outro lado síncrono.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -25,21 +25,21 @@ Para entender melhor esta página, recomendamos que você leia primeiro sobre [p
 
 No ERC-4626, um depósito é liquidado atomicamente: o investidor envia ativos e recebe cotas de volta em uma única transação.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-O ERC-7540 divide isso em duas etapas. O investidor primeiro chama `requestDeposit()` para bloquear ativos e, em seguida, aguarda o gerente do cofre processar a solicitação. Uma vez atendida, o investidor chama `deposit()` para reivindicar suas cotas. As taxas de câmbio são determinadas no momento do atendimento, não no momento da solicitação.
+O ERC-7540 divide isso em duas etapas. O investidor primeiro chama `requestDeposit()`, que transfere seus ativos para o cofre, e então aguarda o cofre processar a solicitação. Como e quando isso acontece depende do cofre, por exemplo, quando uma liquidação offchain é concluída. Uma vez atendida, o investidor chama `deposit()` para reivindicar suas cotas. A taxa de câmbio não é fixada no momento da solicitação: o cofre a define, normalmente quando atende à solicitação, de modo que as cotas recebidas podem diferir do que `convertToShares()` retornou quando a solicitação foi feita.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-O fluxo de resgate funciona da mesma maneira: `requestRedeem()` bloqueia as cotas e, uma vez atendido, o investidor chama `redeem()` para reivindicar os ativos.
+O fluxo de resgate funciona da mesma maneira: `requestRedeem()` retira as cotas do investidor e, uma vez atendida, o investidor chama `redeem()` para reivindicar os ativos.
 
 ## Funções e Recursos do ERC-7540 {#body}
 
 O ERC-7540 herda a interface completa do ERC-4626, mas reaproveita `deposit`/`mint`/`withdraw`/`redeem` como funções de reivindicação. As novas funções `requestDeposit` e `requestRedeem` lidam com a etapa inicial de solicitação.
 
-Cada solicitação passa por três estados: pendente (enviada, aguardando processamento), reivindicável (atendida e precificada) e reivindicada (o investidor coletou suas cotas ou ativos).
+Cada solicitação passa por três estados: pendente (enviada, aguardando processamento), reivindicável (atendida e precificada) e reivindicada (o investidor coletou suas cotas ou ativos). Um cofre pode tornar uma solicitação reivindicável imediatamente, pulando o estado pendente, mas a reivindicação é sempre uma chamada separada. O padrão não define nenhum evento para quando uma solicitação se torna reivindicável.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Fluxo de solicitação de depósito {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Uma vez que uma solicitação de depósito se torna reivindicável, o usuário c
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Bloqueia `shares` de `owner` e envia uma solicitação de resgate. O endereço `controller` recebe o controle da solicitação.
+Assume o controle de `shares` de `owner` e envia uma solicitação de resgate. O cofre pode reter as cotas até que a solicitação seja reivindicada ou queimá-las imediatamente. O endereço `controller` recebe o controle da solicitação.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

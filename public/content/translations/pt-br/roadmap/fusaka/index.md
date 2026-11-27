@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: "Aprenda sobre a atualização do protocolo Fusaka"
+description: "A Fusaka foi lançada em 3 de dezembro de 2025. Saiba o que essa atualização da Ethereum mudou, incluindo o PeerDAS, que escala os blobs para transações da camada 2 mais baratas."
 lang: pt-br
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -27,11 +27,11 @@ A atualização Fusaka é apenas um único passo nos objetivos de desenvolviment
 
 #### PeerDAS {#peerdas}
 
-Esta é a _atração principal_ da bifurcação Fusaka, o principal recurso adicionado nesta atualização. As camadas 2 (l2) atualmente publicam seus dados na Ethereum em blobs, o tipo de dados efêmero criado especificamente para as camadas 2 (l2). Antes da Fusaka, cada nó completo tinha que armazenar cada blob para garantir que os dados existissem. À medida que a vazão de blobs aumenta, ter que baixar todos esses dados torna-se insustentavelmente intensivo em recursos.
+Esta é a _atração principal_ da bifurcação Fusaka, o principal recurso adicionado nesta atualização. As camadas 2 (L2) atualmente publicam seus dados na Ethereum em blobs, o tipo de dados efêmero criado especificamente para as camadas 2 (L2). Antes da Fusaka, cada nó completo tinha que armazenar cada blob para garantir que os dados existissem. À medida que a vazão de blobs aumenta, ter que baixar todos esses dados torna-se insustentavelmente intensivo em recursos.
 
 Com a [amostragem de disponibilidade de dados (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice), em vez de ter que armazenar todos os dados do blob, cada nó será responsável por um subconjunto dos dados do blob. Os blobs são distribuídos de forma uniformemente aleatória entre os nós na rede, com cada nó completo mantendo apenas 1/8 dos dados, permitindo, portanto, uma escala teórica de até 8x. Para garantir a disponibilidade dos dados, qualquer parte dos dados pode ser reconstruída a partir de qualquer 50% existente do todo com métodos que reduzem a probabilidade de dados incorretos ou ausentes a um nível criptograficamente insignificante (\~um em 10<sup>20</sup> a um em 10<sup>24</sup>).
 
-Isso mantém os requisitos de hardware e largura de banda para os nós sustentáveis, ao mesmo tempo em que permite a escalabilidade de blobs, resultando em mais escala com taxas menores para as camadas 2 (l2).
+Isso mantém os requisitos de hardware e largura de banda para os nós sustentáveis, ao mesmo tempo em que permite a escalabilidade de blobs, resultando em mais escala com taxas menores para as camadas 2 (L2).
 
 [Saiba mais sobre o PeerDAS](/roadmap/fusaka/peerdas/)
 
@@ -43,11 +43,11 @@ Isso mantém os requisitos de hardware e largura de banda para os nós sustentá
 
 #### Bifurcações apenas de parâmetros de blob {#blob-parameter-only-forks}
 
-As camadas 2 (l2) escalam a Ethereum - à medida que suas redes crescem, elas precisam publicar mais dados na Ethereum. Isso significa que a Ethereum precisará aumentar o número de blobs disponíveis para elas com o passar do tempo. Embora o PeerDAS permita escalar os dados de blob, isso precisa ser feito de forma gradual e segura.
+As camadas 2 (L2) escalam a Ethereum - à medida que suas redes crescem, elas precisam publicar mais dados na Ethereum. Isso significa que a Ethereum precisará aumentar o número de blobs disponíveis para elas com o passar do tempo. Embora o PeerDAS permita escalar os dados de blob, isso precisa ser feito de forma gradual e segura.
 
 Como a Ethereum é um código executado em milhares de nós independentes que exigem acordo sobre as mesmas regras, não podemos simplesmente introduzir mudanças como aumentar a contagem de blobs da mesma forma que você implanta uma atualização de site. Qualquer mudança de regra deve ser uma atualização coordenada onde cada nó, cliente e software validador é atualizado antes do mesmo bloco predeterminado.
 
-Essas atualizações coordenadas geralmente incluem muitas mudanças, exigem muitos testes e isso leva tempo. Para se adaptar mais rapidamente às mudanças nas necessidades de blobs da camada 2 (l2), as bifurcações apenas de parâmetros de blob introduzem um mecanismo para aumentar os blobs sem ter que esperar por esse cronograma de atualização.
+Essas atualizações coordenadas geralmente incluem muitas mudanças, exigem muitos testes e isso leva tempo. Para se adaptar mais rapidamente às mudanças nas necessidades de blobs da camada 2 (L2), as bifurcações apenas de parâmetros de blob introduzem um mecanismo para aumentar os blobs sem ter que esperar por esse cronograma de atualização.
 
 As bifurcações apenas de parâmetros de blob podem ser definidas pelos clientes, de forma semelhante a outras configurações como o limite de gas. Entre as principais atualizações da Ethereum, os clientes podem concordar em aumentar os blobs `target` e `max` para, por exemplo, 9 e 12 e, em seguida, os operadores de nós atualizarão para participar dessa pequena bifurcação. Essas bifurcações apenas de parâmetros de blob podem ser configuradas a qualquer momento.
 
@@ -61,12 +61,12 @@ Fonte do gráfico: [Ethereum Blobs - @hildobby, Dune Analytics](https://dune.com
 
 #### Taxa básica de blob limitada pelos custos de execução {#blob-base-fee-bounded-by-execution-costs}
 
-As camadas 2 (l2) pagam duas contas quando publicam dados: a taxa de blob e o gás de execução necessário para verificar esses blobs. Se o gás de execução dominar, o leilão da taxa de blob pode cair para 1 Wei e deixar de ser um sinal de preço.
+As camadas 2 (L2) pagam duas contas quando publicam dados: a taxa de blob e o gás de execução necessário para verificar esses blobs. Se o gás de execução dominar, o leilão da taxa de blob pode cair para 1 Wei e deixar de ser um sinal de preço.
 
 A EIP-7918 fixa um preço de reserva proporcional sob cada blob. Quando a reserva é maior que a taxa básica nominal do blob, o algoritmo de ajuste de taxa trata o bloco como acima da meta e para de empurrar a taxa para baixo, permitindo que ela aumente normalmente. Como resultado:
 
 - o mercado de taxa de blob sempre reage ao congestionamento
-- as camadas 2 (l2) pagam pelo menos uma fatia significativa da computação que forçam nos nós
+- as camadas 2 (L2) pagam pelo menos uma fatia significativa da computação que forçam nos nós
 - picos de taxa básica na camada de execução (EL) não podem mais prender a taxa de blob em 1 Wei
 
 **Recursos**:
@@ -74,7 +74,7 @@ A EIP-7918 fixa um preço de reserva proporcional sob cada blob. Quando a reserv
 - [Especificação técnica da EIP-7918](https://eips.ethereum.org/EIPS/eip-7918)
 - [Explicação no Storybook](https://notes.ethereum.org/@anderselowsson/AIG)
 
-### Escalar a camada 1 (l1) {#scale-l1}
+### Escalar a camada 1 (L1) {#scale-l1}
 
 #### Expiração de histórico e recibos mais simples {#history-expiry}
 
@@ -161,11 +161,11 @@ Este recurso adiciona uma pequena instrução EVM, **contagem de zeros à esquer
 
 #### Pré-compilado para suporte à curva secp256r1 {#secp256r1-precompile}
 
-Introduz um verificador de assinatura secp256r1 (P-256) embutido, no estilo chave de acesso, no endereço fixo `0x100` usando o mesmo formato de chamada já adotado por muitas camadas 2 (l2) e corrigindo casos extremos, para que os contratos escritos para esses ambientes funcionem na camada 1 (l1) sem alterações.
+Introduz um verificador de assinatura secp256r1 (P-256) embutido, no estilo chave de acesso, no endereço fixo `0x100` usando o mesmo formato de chamada já adotado por muitas camadas 2 (L2) e corrigindo casos extremos, para que os contratos escritos para esses ambientes funcionem na camada 1 (L1) sem alterações.
 
 Atualização de UX! Para os usuários, isso desbloqueia a assinatura nativa do dispositivo e chaves de acesso. As carteiras podem acessar o Apple Secure Enclave, o Android Keystore, módulos de segurança de hardware (HSMs) e FIDO2/WebAuthn diretamente - sem frase semente, integração mais suave e fluxos multifatoriais que parecem aplicativos modernos. Isso resulta em melhor UX, recuperação mais fácil e padrões de abstração de conta que correspondem ao que bilhões de dispositivos já fazem.
 
-Para os desenvolvedores, ele recebe uma entrada de 160 bytes e retorna uma saída de 32 bytes, facilitando a portabilidade de bibliotecas existentes e contratos de camada 2 (l2). Internamente, ele inclui verificações de ponto no infinito e comparação modular para eliminar casos extremos complicados sem quebrar chamadores válidos.
+Para os desenvolvedores, ele recebe uma entrada de 160 bytes e retorna uma saída de 32 bytes, facilitando a portabilidade de bibliotecas existentes e contratos de camada 2 (L2). Internamente, ele inclui verificações de ponto no infinito e comparação modular para eliminar casos extremos complicados sem quebrar chamadores válidos.
 
 **Recursos**:
 
@@ -205,9 +205,9 @@ Uma zebra é o "mascote" escolhido pelos desenvolvedores para a Fusaka porque su
 
 The Merge em 2022 [usou um panda](https://x.com/hwwonx/status/1431970802040127498) como seu mascote para sinalizar a união das camadas de execução e consenso. Desde então, mascotes têm sido escolhidos informalmente para cada bifurcação e aparecem como arte ASCII nos logs do cliente no momento da atualização. É apenas uma maneira divertida de comemorar.
 
-### Quais melhorias estão incluídas para a escalabilidade da camada 2 (l2)? {#what-improvements-are-included-for-l2-scaling}
+### Quais melhorias estão incluídas para a escalabilidade da camada 2 (L2)? {#what-improvements-are-included-for-l2-scaling}
 
-O [PeerDAS](/roadmap/fusaka/peerdas) é o principal recurso da bifurcação. Ele implementa a amostragem de disponibilidade de dados (DAS) que desbloqueia mais escalabilidade para rollups, escalando teoricamente o espaço de blob em até 8 vezes o tamanho atual. O mercado de taxa de blob também será melhorado para reagir eficientemente ao congestionamento e garantir que as camadas 2 (l2) paguem uma taxa significativa pela computação e espaço que os blobs impõem aos nós.
+O [PeerDAS](/roadmap/fusaka/peerdas) é o principal recurso da bifurcação. Ele implementa a amostragem de disponibilidade de dados (DAS) que desbloqueia mais escalabilidade para rollups, escalando teoricamente o espaço de blob em até 8 vezes o tamanho atual. O mercado de taxa de blob também será melhorado para reagir eficientemente ao congestionamento e garantir que as camadas 2 (L2) paguem uma taxa significativa pela computação e espaço que os blobs impõem aos nós.
 
 ### Como as bifurcações BPO são diferentes? {#how-are-bpo-forks-different}
 
@@ -226,9 +226,9 @@ Exemplo de como pode ser:
 - BPO1, algumas semanas após a ativação da Fusaka: meta 10, máximo 15, aumentando em dois terços
 - BPO2, algumas semanas após o BPO1: meta 14, máximo 21
 
-### Isso reduzirá as taxas na Ethereum (camada 1 (l1)) {#will-this-lower-gas}
+### Isso reduzirá as taxas na Ethereum (camada 1 (L1)) {#will-this-lower-gas}
 
-Esta atualização não reduz as taxas de gás na camada 1 (l1), pelo menos não diretamente. O foco principal é mais espaço de blob para dados de rollup, reduzindo assim as taxas na camada 2 (l2). Isso pode ter alguns efeitos colaterais no mercado de taxas da camada 1 (l1), mas nenhuma mudança significativa é esperada.
+Esta atualização não reduz as taxas de gás na camada 1 (L1), pelo menos não diretamente. O foco principal é mais espaço de blob para dados de rollup, reduzindo assim as taxas na camada 2 (L2). Isso pode ter alguns efeitos colaterais no mercado de taxas da camada 1 (L1), mas nenhuma mudança significativa é esperada.
 
 ### Como um staker, o que preciso fazer para a atualização? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
 

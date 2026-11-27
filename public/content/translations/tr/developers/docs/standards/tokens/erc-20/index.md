@@ -176,14 +176,14 @@ Bu sorundan dolayı [ERC-223](/developers/docs/standards/tokens/erc-223) veya [E
 - [Alchemy - Solidity ERC20 Token'ları Rehberi](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Diğer misli token standartları {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenlaştırılmış kasalar](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 - Asenkron tokenlaştırılmış kasalar](/developers/docs/standards/tokens/erc-7540)
-## Eğitimler: Ethereum üzerinde ERC-20 ile Geliştirme {#tutorials}
+## Eğitimler: Ethereum üzerinde ERC-20 ile geliştirme {#tutorials}
 
-- [ERC-20 Sözleşmesi İncelemesi](/developers/tutorials/erc20-annotated-code/) _– OpenZeppelin ERC-20 sözleşme uygulamasının satır satır açıklamalı bir incelemesi._
-- [Güvenlik Korkulukları ile ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– Kullanıcıların yaygın hatalardan kaçınmasına yardımcı olmak için ERC-20 Token'larına nasıl korumalar ekleneceği._
-- [Ethers.js Kullanarak Token Gönderme](/developers/tutorials/send-token-ethersjs/) _– Ethers.js kullanarak ERC-20 Token'larını transfer etmeye yönelik başlangıç dostu bir rehber._
-- [Dolandırıcı Token'lar tarafından kullanılan bazı hileler ve bunların nasıl tespit edileceği](/developers/tutorials/scam-token-tricks/) _– Dolandırıcı ERC-20 Token modellerine ve bunların nasıl belirleneceğine dair detaylı bir inceleme._
+- [ERC-20 Sözleşmesi İncelemesi](/developers/tutorials/erc20-annotated-code/) _– OpenZeppelin ERC-20 Sözleşme uygulamasının satır satır açıklamalı bir incelemesi._
+- [Güvenlik Önlemli ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– Kullanıcıların yaygın hatalardan kaçınmasına yardımcı olmak için ERC-20 Token'larına nasıl korumalar ekleneceği._
+- [Dolandırıcı Token'lar tarafından kullanılan bazı hileler ve bunların nasıl tespit edileceği](/developers/tutorials/scam-token-tricks/) _– Dolandırıcı ERC-20 Token kalıplarına ve bunların nasıl belirleneceğine dair detaylı bir inceleme._

@@ -1,6 +1,6 @@
 ---
 title: "데이터 및 분석"
-description: "dapp에서 사용할 온체인 분석 및 데이터를 얻는 방법"
+description: "dapp을 위한 온체인 데이터를 얻는 방법: 이더리움 데이터를 쿼리하고 분석하기 위한 인덱서, 서브그래프, 블록 탐색기, SQL 분석 플랫폼 및 API."
 lang: ko
 ---
 
@@ -80,8 +80,8 @@ EVM 쿼리 언어(EQL)는 EVM(이더리움 가상 머신) 체인을 쿼리하도
 
 - [암호화폐 데이터 탐색 I: 데이터 흐름 아키텍처](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph 네트워크 개요](https://thegraph.com/docs/en/about/)
-- [Graph 쿼리 플레이그라운드](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [Etherscan의 API 코드 예제](https://etherscan.io/apis#contracts)
+- [Graph 탐색기](https://thegraph.com/explorer)
+- [EtherScan의 API 코드 예제](https://etherscan.io/apis#contracts)
 - [Blockscout의 API 문서](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in 비콘 체인 탐색기](https://beaconcha.in)
 - [Dune 기초](https://docs.dune.com/#dune-basics)

@@ -383,35 +383,33 @@ Einige dezentrale Orakel-Netzwerke bieten Automatisierungsdienste an, die es off
 
 Das [Keeper-Netzwerk](https://chain.link/keepers) von Chainlink bietet Optionen für Smart Contracts, um regelmäßige Wartungsaufgaben auf vertrauensminimierte und dezentrale Weise auszulagern. Lesen Sie die offizielle [Keeper-Dokumentation](https://docs.chain.link/docs/chainlink-keepers/introduction/) für Informationen darüber, wie Sie Ihren Vertrag Keeper-kompatibel machen und den Upkeep-Dienst nutzen können.
 
-## Wie man Blockchain-Orakel verwendet {#use-blockchain-oracles}
+## Wie man Blockchain-Orakel nutzt {#use-blockchain-oracles}
 
 Es gibt mehrere Orakel-Anwendungen, die Sie in Ihre Ethereum-Dapp integrieren können:
 
-**[Chainlink](https://chain.link/)** - _Dezentrale Orakel-Netzwerke von Chainlink bieten manipulationssichere Eingaben, Ausgaben und Berechnungen zur Unterstützung fortschrittlicher Smart Contracts auf jeder Blockchain._
+**[Chainlink](https://chain.link/)** - _Dezentrale Orakel-Netzwerke von Chainlink bieten manipulationssichere Eingaben, Ausgaben und Berechnungen, um fortschrittliche Smart Contracts auf jeder Blockchain zu unterstützen._
 
-**[RedStone Oracles](https://redstone.finance/)** - _RedStone ist ein dezentrales modulares Orakel, das gasoptimierte Daten-Feeds bereitstellt. Es ist darauf spezialisiert, Preis-Feeds für aufstrebende Vermögenswerte wie Liquid-Staking-Token (LSTs), Liquid-Restaking-Token (LRTs) und Bitcoin-Staking-Derivate anzubieten._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone ist ein dezentrales, modulares Orakel, das gasoptimierte Daten-Feeds bereitstellt. Es ist darauf spezialisiert, Preis-Feeds für aufstrebende Vermögenswerte wie Liquid-Staking-Token (LSTs), Liquid-Restaking-Token (LRTs) und Bitcoin-Staking-Derivate anzubieten._
 
-**[Chronicle](https://chroniclelabs.org/)** - _Chronicle überwindet die aktuellen Einschränkungen bei der Übertragung von Daten Onchain durch die Entwicklung wirklich skalierbarer, kosteneffizienter, dezentraler und verifizierbarer Orakel._
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle überwindet die aktuellen Einschränkungen bei der Onchain-Datenübertragung durch die Entwicklung wirklich skalierbarer, kosteneffizienter, dezentraler und verifizierbarer Orakel._
 
 **[Witnet](https://witnet.io/)** - _Witnet ist ein erlaubnisfreies, dezentrales und zensurresistentes Orakel, das Smart Contracts hilft, mit starken kryptoökonomischen Garantien auf reale Ereignisse zu reagieren._
 
 **[UMA Oracle](https://uma.xyz)** - _Das optimistische Orakel von UMA ermöglicht es Smart Contracts, schnell jede Art von Daten für verschiedene Anwendungen zu empfangen, einschließlich Versicherungen, Finanzderivaten und Prognosemärkten._
 
-**[Tellor](https://tellor.io/)** - _Tellor ist ein transparentes und erlaubnisfreies Orakel-Protokoll für Ihren Smart Contract, um jederzeit problemlos beliebige Daten zu erhalten._
+**[Tellor](https://tellor.io/)** - _Tellor ist ein transparentes und erlaubnisfreies Orakel-Protokoll für Ihren Smart Contract, um problemlos alle Daten zu erhalten, wann immer er sie benötigt._
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol ist eine kettenübergreifende Daten-Orakel-Plattform, die reale Daten und APIs aggregiert und mit Smart Contracts verbindet._
 
-**[Pyth Network](https://pyth.network/)** - _Das Pyth-Netzwerk ist ein First-Party-Finanz-Orakel-Netzwerk, das entwickelt wurde, um kontinuierliche reale Daten Onchain in einer manipulationssicheren, dezentralen und selbsttragenden Umgebung zu veröffentlichen._
+**[Pyth Network](https://pyth.network/)** - _Das Pyth-Netzwerk ist ein First-Party-Finanz-Orakel-Netzwerk, das entwickelt wurde, um kontinuierlich reale Daten Onchain in einer manipulationssicheren, dezentralen und selbsttragenden Umgebung zu veröffentlichen._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO liefert First-Party-Orakel-Lösungen, die eine größere Quellentransparenz, Sicherheit und Skalierbarkeit in einer dezentralen Lösung für Smart Contracts bieten._
+**[API3 DAO](https://api3.org/)** - _API3 DAO liefert First-Party-Orakel-Lösungen, die eine größere Quelltransparenz, Sicherheit und Skalierbarkeit in einer dezentralen Lösung für Smart Contracts bieten._
 
 **[Supra](https://supra.com/)** - Ein vertikal integriertes Toolkit kettenübergreifender Lösungen, das alle Blockchains, ob öffentlich (L1s und L2s) oder privat (Unternehmen), miteinander verbindet und dezentrale Orakel-Preis-Feeds bereitstellt, die für Onchain- und offchain Anwendungsfälle genutzt werden können. 
 
-**[Gas Network](https://gas.network/)** - Eine verteilte Orakel-Plattform, die Echtzeit-Gaspreisdaten über Blockchains hinweg bereitstellt. Indem Daten von führenden Gaspreisdatenanbietern Onchain gebracht werden, trägt Gas Network dazu bei, die Interoperabilität voranzutreiben. Gas Network unterstützt Daten für über 35 Chains, einschließlich Ethereum Mainnet und vielen führenden L2s.
+**[DIA](https://www.diadata.org/)** - Ein kettenübergreifendes Orakel-Netzwerk, das verifizierbare Daten-Feeds für über 20.000 Vermögenswerte über alle wichtigen Anlageklassen hinweg liefert. DIA bezieht rohe Handelsdaten direkt von über 100 Primärmärkten und berechnet sie Onchain, wodurch vollständige Datentransparenz und Verifizierbarkeit mit benutzerdefinierten Konfigurationen für jeden Anwendungsfall gewährleistet werden.
 
-**[DIA](https://www.diadata.org/)** - Ein kettenübergreifendes Orakel-Netzwerk, das verifizierbare Daten-Feeds für über 20.000 Vermögenswerte in allen wichtigen Anlageklassen liefert. DIA bezieht rohe Handelsdaten direkt von über 100 Primärmärkten und berechnet sie Onchain, wodurch vollständige Datentransparenz und Verifizierbarkeit mit benutzerdefinierten Konfigurationen für jeden Anwendungsfall gewährleistet werden.
-
-**[Stork](https://stork.network)** - Stork liefert Preisdaten mit extrem niedriger Latenz und unterstützt eine Vielzahl von Anwendungsfällen, einschließlich Perpetuals-Märkten, Kreditvergabeprotokollen und DeFi-Ökosystemen, wobei neue Vermögenswerte bei der Listung schnell unterstützt werden.
+**[Stork](https://stork.network)** - Stork liefert Preisdaten mit extrem niedriger Latenz und unterstützt eine breite Palette von Anwendungsfällen, einschließlich Perpetuals-Märkten, Kreditvergabe-Protokollen und DeFi-Ökosystemen, wobei neue Vermögenswerte bei der Listung schnell unterstützt werden.
 
 ## Weiterführende Literatur {#further-reading}
 

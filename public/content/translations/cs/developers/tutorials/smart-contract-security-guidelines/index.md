@@ -23,7 +23,7 @@ Dokumentace může být psána na různých úrovních a měla by být aktualizo
 
 - **Popis systému v běžném jazyce**, který popisuje, co kontrakty dělají, a jakékoli předpoklady o kódové základně.
 - **Schémata a architektonické diagramy**, včetně interakcí kontraktů a stavového automatu systému. S generováním těchto schémat mohou pomoci [tiskárny Slither](https://github.com/crytic/slither/wiki/Printer-documentation).
-- **Důkladná dokumentace kódu**, pro Solidity lze použít [formát NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html).
+- **Důkladná dokumentace kódu**, pro Solidity lze použít [formát NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html).
 
 ### Výpočty onchain vs offchain {#onchain-vs-offchain-computation}
 
@@ -72,14 +72,14 @@ Architektura vaší kódové základny by měla usnadňovat revizi kódu. Vyhně
 
 ### Testování a ověřování {#testing-and-verification}
 
-- **Pište důkladné jednotkové testy (unit testy).** Rozsáhlá sada testů je pro tvorbu vysoce kvalitního softwaru klíčová.
-- **Pište vlastní kontroly a vlastnosti pro [Slither](https://github.com/crytic/slither), [Echidnu](https://github.com/crytic/echidna) a [Manticore](https://github.com/trailofbits/manticore).** Automatizované nástroje pomohou zajistit bezpečnost vašeho kontraktu. Projděte si zbytek tohoto průvodce, abyste se naučili, jak psát efektivní kontroly a vlastnosti.
-- **Používejte [crytic.io](https://crytic.io/).** Crytic se integruje s GitHubem, poskytuje přístup k soukromým detektorům nástroje Slither a spouští vlastní kontroly vlastností z Echidny.
+- **Pište důkladné jednotkové testy.** Rozsáhlá sada testů je klíčová pro tvorbu vysoce kvalitního softwaru.
+- **Pište vlastní kontroly a vlastnosti pro [Slither](https://github.com/crytic/slither), [Echidnu](https://github.com/crytic/echidna) a [Medusu](https://github.com/crytic/medusa).** Automatizované nástroje pomohou zajistit bezpečnost vašeho kontraktu. Projděte si zbytek tohoto průvodce, abyste se naučili, jak psát efektivní kontroly a vlastnosti.
+- **Spouštějte tyto nástroje v rámci kontinuální integrace.** Spouštění Slitheru a vašich fuzzingových vlastností při každém pull requestu zachytí regrese ještě před jejich sloučením.
 
 ### Solidity {#solidity}
 
-- **Upřednostňujte Solidity 0.5 před 0.4 a 0.6.** Podle našeho názoru je Solidity 0.5 bezpečnější a má lepší vestavěné postupy než 0.4. Solidity 0.6 se ukázalo jako příliš nestabilní pro produkci a potřebuje čas na dozrání.
-- **Ke kompilaci používejte stabilní verzi; ke kontrole varování používejte nejnovější verzi.** Zkontrolujte, zda váš kód nemá s nejnovější verzí kompilátoru žádné hlášené problémy. Solidity má však rychlý cyklus vydávání a historii chyb v kompilátoru, proto nedoporučujeme nejnovější verzi pro nasazení (viz [doporučení verze solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) od nástroje Slither).
+- **Používejte nedávné vydání Solidity 0.8.x bez známých závažných chyb.** Solidity 0.8 ve výchozím nastavení kontroluje aritmetiku na přetečení a podtečení a starším verzím chybí novější bezpečnostní kontroly kompilátoru. Podívejte se na [doporučení verze solc](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) od Slitheru.
+- **Ke kompilaci používejte stabilní vydání; ke kontrole varování používejte nejnovější vydání.** Zkontrolujte, zda váš kód nevykazuje žádné nahlášené problémy s nejnovější verzí kompilátoru. Solidity má však rychlý cyklus vydávání a historii chyb v kompilátoru, proto se vyhněte nasazování s verzí vydanou teprve před několika dny. Zkontrolujte [seznam známých chyb kompilátoru](https://docs.soliditylang.org/en/latest/bugs.html) pro vámi zvolenou verzi.
 - **Nepoužívejte inline assembly.** Assembly vyžaduje odborné znalosti EVM. Nepište kód pro EVM, pokud jste _neovládli_ yellow paper.
 
 ## Pokyny pro nasazení {#deployment-guidelines}

@@ -1,7 +1,7 @@
 ---
 title: "O que são provas de conhecimento zero?"
 metaTitle: Provas de conhecimento zero
-description: "Uma introdução não técnica às provas de conhecimento zero para iniciantes."
+description: "O que são provas de conhecimento zero? Uma introdução acessível para iniciantes sobre como as provas ZK verificam uma reivindicação sem revelar os dados, e como o Ethereum as utiliza."
 lang: pt-br
 ---
 
@@ -100,7 +100,7 @@ A cadeia precisa de uma maneira de validar transações offchain sem reexecutá-
 
 Os [rollups de conhecimento zero](/developers/docs/scaling/zk-rollups) e os [validiums](/developers/docs/scaling/validium/) são duas soluções de escalabilidade offchain que usam provas de validade para fornecer escalabilidade segura. Esses protocolos executam milhares de transações offchain e enviam provas para verificação no Ethereum. Esses resultados podem ser aplicados imediatamente assim que a prova for verificada, permitindo que o Ethereum processe mais transações sem aumentar a computação na camada base.
 
-Além da escalabilidade da camada 2 (l2), as provas de conhecimento zero também podem verificar a própria execução do bloco da camada 1 (l1) do Ethereum. A [zkEVM para verificação da l1](/roadmap/zkevm/) permitiria que os validadores verificassem os blocos checando uma prova em vez de reexecutar todas as transações — permitindo limites de gás mais altos sem aumentar os requisitos de hardware do validador.
+Além da escalabilidade da camada 2 (L2), as provas de conhecimento zero também podem verificar a própria execução do bloco da camada 1 (L1) do Ethereum. A [zkEVM para verificação da L1](/roadmap/zkevm/) permitiria que os validadores verificassem os blocos checando uma prova em vez de reexecutar todas as transações — permitindo limites de gás mais altos sem aumentar os requisitos de hardware do validador.
 
 ### Reduzindo o suborno e o conluio na votação onchain {#secure-blockchain-voting}
 

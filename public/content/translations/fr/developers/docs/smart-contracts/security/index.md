@@ -78,7 +78,7 @@ La méthode habituelle consiste à écrire de petits tests unitaires en utilisan
 
 Malheureusement, les tests unitaires sont peu efficaces pour améliorer la sécurité des contrats intelligents lorsqu'ils sont utilisés de manière isolée. Un test unitaire peut prouver qu'une fonction s'exécute correctement pour des données fictives, mais les tests unitaires ne sont aussi efficaces que les tests qui sont écrits. Cela rend difficile la détection des cas limites manqués et des vulnérabilités qui pourraient compromettre la sécurité de votre contrat intelligent.
 
-Une meilleure approche consiste à combiner les tests unitaires avec des tests basés sur les propriétés effectués à l'aide d'une [analyse statique et dynamique](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). L'analyse statique s'appuie sur des représentations de bas niveau, telles que les [graphes de flux de contrôle](https://en.wikipedia.org/wiki/Control-flow_graph) et les [arbres syntaxiques abstraits](https://deepsource.io/glossary/ast/) pour analyser les états de programme et les chemins d'exécution accessibles. Pendant ce temps, les techniques d'analyse dynamique, telles que le [fuzzing de contrats intelligents](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), exécutent le code du contrat avec des valeurs d'entrée aléatoires pour détecter les opérations qui violent les propriétés de sécurité.
+Une meilleure approche consiste à combiner les tests unitaires avec des tests basés sur les propriétés effectués à l'aide d'une [analyse statique et dynamique](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). L'analyse statique s'appuie sur des représentations de bas niveau, telles que les [graphes de flux de contrôle](https://en.wikipedia.org/wiki/Control-flow_graph) et les [arbres syntaxiques abstraits](https://deepsource.io/glossary/ast/) pour analyser les états de programme et les chemins d'exécution accessibles. Pendant ce temps, les techniques d'analyse dynamique, telles que le [fuzzing de contrats intelligents](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), exécutent le code du contrat avec des valeurs d'entrée aléatoires pour détecter les opérations qui violent les propriétés de sécurité.
 
 La [vérification formelle](/developers/docs/smart-contracts/formal-verification) est une autre technique pour vérifier les propriétés de sécurité dans les contrats intelligents. Contrairement aux tests réguliers, la vérification formelle peut prouver de manière concluante l'absence d'erreurs dans un contrat intelligent. Ceci est réalisé en créant une spécification formelle qui capture les propriétés de sécurité souhaitées et en prouvant qu'un modèle formel des contrats adhère à cette spécification.
 
@@ -99,7 +99,7 @@ Cela dit, vous devriez éviter de considérer les audits comme une solution mira
 
 La mise en place d'un programme de primes aux bugs est une autre approche pour mettre en œuvre des révisions de code externes. Une prime aux bugs est une récompense financière accordée aux individus (généralement des hackers éthiques) qui découvrent des vulnérabilités dans une application.
 
-Lorsqu'elles sont utilisées correctement, les primes aux bugs incitent les membres de la communauté des hackers à inspecter votre code à la recherche de failles critiques. Un exemple concret est le « bug de l'argent infini » qui aurait permis à un attaquant de créer une quantité illimitée d'ether sur [Optimism](https://www.optimism.io/), un protocole de [couche 2 (l2)](/layer-2/) fonctionnant sur Ethereum. Heureusement, un hacker éthique a [découvert la faille](https://www.saurik.com/optimism.html) et a informé l'équipe, [gagnant ainsi une récompense importante au passage](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Lorsqu'elles sont utilisées correctement, les primes aux bugs incitent les membres de la communauté des hackers à inspecter votre code à la recherche de failles critiques. Un exemple concret est le « bug de l'argent infini » qui aurait permis à un attaquant de créer une quantité illimitée d'ether sur [Optimism](https://www.optimism.io/), un protocole de [couche 2 (L2)](/layer-2/) fonctionnant sur Ethereum. Heureusement, un hacker éthique a [découvert la faille](https://www.saurik.com/optimism.html) et a informé l'équipe, [gagnant ainsi une récompense importante au passage](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Une stratégie utile consiste à fixer le paiement d'un programme de primes aux bugs proportionnellement au montant des fonds en jeu. Décrite comme la « [prime aux bugs évolutive](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) », cette approche offre des incitations financières aux individus pour qu'ils divulguent les vulnérabilités de manière responsable au lieu de les exploiter.
 
@@ -463,9 +463,9 @@ Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envis
 
 - **[Outils de vérification formelle](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Outils pour vérifier l'exactitude fonctionnelle des contrats intelligents et contrôler les invariants._
 
-- **[Services d'audit de contrats intelligents](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Liste des organisations fournissant des services d'audit de contrats intelligents pour les projets de développement Ethereum._
+- **[Services d'audit de contrats intelligents](#smart-contract-auditing-services)** - _Liste des organisations fournissant des services d'audit de contrats intelligents pour les projets de développement Ethereum._
 
-- **[Plateformes de primes aux bugs](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Plateformes pour coordonner les primes aux bugs et récompenser la divulgation responsable des vulnérabilités critiques dans les contrats intelligents._
+- **[Plateformes de primes aux bugs](#bug-bounty-platforms)** - _Plateformes pour coordonner les primes aux bugs et récompenser la divulgation responsable des vulnérabilités critiques dans les contrats intelligents._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Un outil en ligne gratuit pour vérifier toutes les informations disponibles concernant un contrat ayant fait l'objet d'un fork._
 
@@ -567,9 +567,7 @@ Si vous prévoyez d'interroger un oracle onchain pour les prix des actifs, envis
 
 - [Comment utiliser Slither pour trouver des bugs dans les contrats intelligents](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [Comment utiliser Manticore pour trouver des bugs dans les contrats intelligents](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
-- [Directives de sécurité des contrats intelligents](/developers/tutorials/smart-contract-security-guidelines/)
+- [Directives de sécurité pour les contrats intelligents](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Comment intégrer en toute sécurité votre contrat de jeton avec des jetons arbitraires](/developers/tutorials/token-integration-checklist/)
 

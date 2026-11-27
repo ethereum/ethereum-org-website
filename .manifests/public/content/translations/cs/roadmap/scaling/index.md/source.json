@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/scaling/index.md",
-  "generatedAt": "2026-06-30T00:52:56.548Z",
-  "rootHash": "17c9457f3974",
+  "generatedAt": "2026-11-27T10:10:13.066Z",
+  "rootHash": "2cabed973737",
   "tree": {
-    "contentHash": "3f1f87ed8319",
-    "anchorHash": "b3e0e789d9ee",
+    "contentHash": "a1cb7ab982e0",
+    "anchorHash": "c6baeee8cfdb",
     "children": {
       "frontmatter:title": {
         "contentHash": "0c9caed20ed3",
@@ -37,7 +37,7 @@
       },
       "link:0": {
         "contentHash": "82773549b8c1",
-        "anchorHash": "36e3c993af37"
+        "anchorHash": "b02bb33485f5"
       },
       "prose:2": {
         "contentHash": "c8a55c253a06",
@@ -229,7 +229,7 @@
       },
       "decentralizing-rollups": {
         "contentHash": "b47f94d168e3",
-        "anchorHash": "49f868d210f3",
+        "anchorHash": "36606dec4e18",
         "labelHash": "dd0515626bfc",
         "children": {
           "_label": {
@@ -246,7 +246,7 @@
           },
           "link:1": {
             "contentHash": "5e7191cd9f9b",
-            "anchorHash": "30204b35ac5b"
+            "anchorHash": "b079e3ada231"
           },
           "prose:6": {
             "contentHash": "d1a845efadea",
@@ -254,7 +254,7 @@
           },
           "link:2": {
             "contentHash": "5eca205bd25f",
-            "anchorHash": "cdbcac4645a5"
+            "anchorHash": "112763b8aaba"
           },
           "prose:7": {
             "contentHash": "339024ab2df1",
@@ -284,6 +284,50 @@
           "link:3",
           "prose:8",
           "html-tag:4"
+        ]
+      },
+      "zkevm": {
+        "contentHash": "f3d638331d5b",
+        "anchorHash": "0d3031363ee2",
+        "labelHash": "451a0bac5d83",
+        "children": {
+          "_label": {
+            "contentHash": "451a0bac5d83",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "1b1be4aadae2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f82af32160bc",
+            "anchorHash": "f52970490a20"
+          },
+          "prose:4": {
+            "contentHash": "d33e7c87e55c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "0b9d675a9a13",
+            "anchorHash": "79d9777883e2"
+          },
+          "prose:5": {
+            "contentHash": "52626d82cecc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:2": {
+            "contentHash": "0cc0ef478fd0",
+            "anchorHash": "7d2fbdcbef3c"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "link:0",
+          "prose:4",
+          "link:1",
+          "prose:5",
+          "html-tag:2"
         ]
       },
       "current-progress": {
@@ -335,8 +379,9 @@
       "component:9",
       "making-data-cheaper",
       "decentralizing-rollups",
+      "zkevm",
       "current-progress"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

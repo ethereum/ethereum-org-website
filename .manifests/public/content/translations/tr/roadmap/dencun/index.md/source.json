@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/dencun/index.md",
-  "generatedAt": "2026-07-23T00:16:30.183Z",
-  "rootHash": "05db0700d49f",
+  "generatedAt": "2026-11-27T10:18:26.470Z",
+  "rootHash": "0ec217c4c98c",
   "tree": {
-    "contentHash": "5f1193b26d81",
-    "anchorHash": "3151e9d4b74f",
+    "contentHash": "7d16122ab18d",
+    "anchorHash": "051d19cd2546",
     "children": {
       "frontmatter:title": {
         "contentHash": "5c987ca90176",
@@ -135,32 +135,22 @@
         ]
       },
       "historical-access": {
-        "contentHash": "07889e3a644c",
-        "anchorHash": "91787bd5acb9",
+        "contentHash": "bc866e94ec5a",
+        "anchorHash": "4b9f7d802648",
         "labelHash": "297eb8bdafb2",
         "children": {
           "_label": {
             "contentHash": "297eb8bdafb2",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:1": {
-            "contentHash": "f4987828ce5b",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:0": {
-            "contentHash": "c164c4d72ba4",
-            "anchorHash": "af821ca0e75f"
-          },
-          "prose:2": {
-            "contentHash": "a7bb75bd1c7b",
+          "prose:0": {
+            "contentHash": "8c55a66fda8a",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:1",
-          "link:0",
-          "prose:2"
+          "prose:0"
         ]
       },
       "roadmap-impact": {
@@ -469,5 +459,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

@@ -1,6 +1,6 @@
 ---
-title: 委托质押（质押即服务）
-description: 关于如何开始委托质押的概述
+title: "委托质押（质押即服务）"
+description: "什么是质押即服务？了解如何存入 32 个 ETH 并由节点运营商运行你的验证者，以及与家庭质押或联合质押相比的权衡。"
 lang: zh
 template: staking
 image: /images/staking/leslie-saas.png

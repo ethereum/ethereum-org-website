@@ -1,5 +1,18 @@
 # Marathi (mr) Translation Review Findings
 
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.3/10
+Scope: 91 mr files (71 markdown incremental updates, 20 JSON namespaces, 486 changed keys incl. dev-tools descriptions); sampled 20+ markdown diffs and ~100 JSON keys; scripted placeholder/tag/href/key-order check over all changed keys (clean) and anchor/component/fence check over all md (only pre-existing missing `{#mobula}`/`{#envio}` headings in data-and-analytics).
+
+Fixed: `SPDX-License-Identifier` translated inside two Solidity code blocks (interact-with-other-contracts-from-solidity, now restored); light-clients dropped the Latin `(Lodestar)/(Helios)/(Geth)/(Nimbus)` parentheticals dev had and swapped `सहमती` -> `एकमत` for consensus client (both reverted); `Slither` -> Latin on 4 changed lines of secure-development-workflow, `Erigon, Nethermind` (node-architecture) and `Reth` (rust) Latin; devcon-mumbai video keeps `डेवकॉन` (known-patterns #74 resolved form; dev still had Latin); storage `डिप्लॉय` -> `प्रस्थापित` (glossary); `शिल्डेड` -> `शील्डेड` in glossary-tooltip to match glossary.json; AaveKit left as is (see below).
+
+Open (native call / glossary-driven):
+
+- ETHGlossary mandates Devanagari for `Aave` (`आवे`), `Polygon`, `Chainlink`, `Uniswap`, `JSON-RPC` (`जेसॉन-आरपीसी`), `Lodestar/Nimbus/Teku/Prysm/Nethermind/Besu/Erigon/Reth` and `OpenZeppelin` (`ओपनझेपलिन`), which conflicts with the Latin-for-dev-tools policy; dev-tools descriptions (`tool-aavekit-description` x4 `आवे`, `tool-bankr-skills-description`, 8 `जेसॉन-आरपीसी`) and prose such as `स्लिदर` (2 unchanged lines in secure-development-workflow), `एरिगॉन/रेथ/गेथ/बेसू` (archive-nodes) follow it.
+- Glossary splits `इथरियम व्हर्च्युअल मशीन (EVM)` (roadmap/security, rust SputnikVM, Moralis) vs `इथेरियम` everywhere else; EVM long-form added on first mention (allowed for mr) plus `इथरियम सुधारणा प्रस्ताव` in eips description.
+- Pipeline adds Latin glosses beside already-translated terms (`(import)`, `(inherit)`, `(revert)`, `(consensus)`, `(canonical)`, `(epoch-boundary)`, `(externally owned accounts)`) in anatomy, gasper, roadmap/security; harmless but noisy.
+- `स्तर २ (L2)` Devanagari numeral split continues (see #53); `स्तर २ (L2)s` in `tool-drpc-description`; `कॉइनबेस् चे` (stray space) in `tool-base-account-sdk-description`.
+- `एकमत` vs `सहमती` vs `एक्झिक्यूशन` mixed for consensus/execution in tool descriptions; `उघडपणे` ("openly governed") in about description recalls the #48 `उघडपणा` issue; `निर्देशांक` for "index" in dencun.
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

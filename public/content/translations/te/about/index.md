@@ -1,7 +1,7 @@
 ---
 title: "ethereum.org గురించి"
 metaTitle: "మా గురించి"
-description: "ethereum.org బృందం, కమ్యూనిటీ మరియు లక్ష్యం గురించి"
+description: "ethereum.org వెనుక ఉన్న బృందం మరియు కమ్యూనిటీని కలవండి: మా లక్ష్యం, సైట్ ఎలా నిర్మించబడింది మరియు బహిరంగంగా ఎలా నిర్వహించబడుతుంది మరియు దాన్ని మెరుగుపరచడంలో మీరు ఎలా సహాయపడగలరు."
 lang: te
 ---
 
@@ -107,9 +107,11 @@ ethereum.org అనేది [ఎథీరియం](/) కమ్యూనిట
 
 ## డిజైన్ సిస్టమ్ {#design-system}
 
-మేము ఫీచర్లను మరింత త్వరగా అందించడానికి మరియు ethereum.org యొక్క ఓపెన్ డిజైన్‌లో కమ్యూనిటీ సభ్యులు పాల్గొనడానికి ఒక [డిజైన్ సిస్టమ్‌](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)ను నిర్మించి విడుదల చేసాము.
+ఫీచర్‌లను మరింత త్వరగా అందించడానికి మరియు ethereum.org యొక్క ఓపెన్ డిజైన్‌లో కమ్యూనిటీ సభ్యులు పాల్గొనడానికి మేము ఒక [డిజైన్ సిస్టమ్‌ను](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) నిర్మించాము మరియు విడుదల చేసాము.
 
-పాలుపంచుకోవాలనుకుంటున్నారా? [Figmaలో అనుసరించండి](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) మరియు [మా #design డిస్కార్డ్ ఛానెల్‌](/discord/)లో సంభాషణలో చేరండి.
+పాలుపంచుకోవాలనుకుంటున్నారా? [Figmaలో అనుసరించండి](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) మరియు మా [#design డిస్కార్డ్ ఛానెల్‌లో](/discord/) సంభాషణలో చేరండి.
+
+లోగోలు, ఇలస్ట్రేషన్‌లు లేదా ఇతర బ్రాండ్ ఫైల్‌ల కోసం చూస్తున్నారా? వాటిని మా [ఆస్తుల పేజీ](/assets/) నుండి డౌన్‌లోడ్ చేసుకోండి.
 
 ## స్టైల్ గైడ్ {#style-guide}
 
@@ -122,6 +124,10 @@ ethereum.org అనేది [ఎథీరియం](/) కమ్యూనిట
 ## లైసెన్స్ {#license}
 
 ప్రత్యేకంగా పేర్కొనకపోతే ethereum.org వెబ్‌సైట్ ఓపెన్ సోర్స్ మరియు [MIT లైసెన్స్](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) కింద నిర్మించబడింది. ethereum.org యొక్క [ఉపయోగ నిబంధనల](/terms-of-use/) గురించి మరింత.
+
+## మీ గోప్యత {#your-privacy}
+
+ethereum.org గోప్యతను సంరక్షించే విశ్లేషణల కోసం Matomoని ఉపయోగిస్తుంది మరియు మీరు ఎప్పుడైనా నిష్క్రమించవచ్చు. వివరాల కోసం మా [కుకీ విధానం](/cookie-policy/) మరియు [గోప్యతా విధానం](/privacy-policy/) చదవండి.
 
 ## ఓపెన్ ఉద్యోగాలు {#open-jobs}
 

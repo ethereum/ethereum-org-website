@@ -1,6 +1,6 @@
 ---
-title: Staking liquide et mutualisé
-description: Un aperçu du staking liquide et mutualisé sur Ethereum
+title: "Staking liquide et mutualisé"
+description: "Qu'est-ce que le staking liquide ? Découvrez comment les pools de staking vous permettent de gagner des récompenses en ETH avec n'importe quel montant d'ETH, en recevant souvent un jeton liquide que vous pouvez toujours utiliser."
 lang: fr
 template: staking
 image: /images/staking/leslie-pool.png

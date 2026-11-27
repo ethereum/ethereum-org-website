@@ -1,7 +1,7 @@
 ---
-title: Introdução à governança do Ethereum
-metaTitle: Governança do Ethereum
-description: Uma introdução sobre como as decisões sobre o Ethereum são tomadas.
+title: "Introdução à governança do Ethereum"
+metaTitle: "Governança do Ethereum"
+description: "Como as decisões sobre o Ethereum são tomadas? Aprenda como as mudanças no protocolo são propostas, debatidas e adotadas por desenvolvedores, operadores de nós e pela comunidade."
 lang: pt-br
 ---
 
@@ -71,7 +71,7 @@ O processo formal para introduzir mudanças no protocolo do Ethereum é o seguin
 
 1. **Propor uma EIP Principal (Core EIP)**: conforme descrito na [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), o primeiro passo para propor formalmente uma mudança no Ethereum é detalhá-la em uma EIP Principal. Isso atuará como a especificação oficial para uma EIP que os Desenvolvedores de Protocolo implementarão se for aceita.
 
-2. **Apresentar sua EIP aos Desenvolvedores de Protocolo**: assim que você tiver uma EIP Principal para a qual reuniu a opinião da comunidade, você deve apresentá-la aos Desenvolvedores de Protocolo. Você pode fazer isso propondo-a para discussão em uma [chamada AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). É provável que algumas discussões já tenham acontecido de forma assíncrona no [fórum Ethereum Magicians](https://ethereum-magicians.org/) ou no [Discord de P&D do Ethereum](https://discord.gg/mncqtgVSVw).
+2. **Apresentar sua EIP aos Desenvolvedores de Protocolo**: assim que você tiver uma EIP Principal para a qual reuniu a opinião da comunidade, você deve apresentá-la aos Desenvolvedores de Protocolo. Você pode fazer isso propondo-a para discussão em uma [chamada AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). É provável que algumas discussões já tenham acontecido de forma assíncrona no [fórum Ethereum Magicians](https://ethereum-magicians.org/) ou no [Discord de P&D do Ethereum](https://discord.gg/mncqtgVSVw).
 
 > Os possíveis resultados desta etapa são:
 

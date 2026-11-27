@@ -1,6 +1,6 @@
 ---
 title: Pengantar teknis untuk dapp
-description:
+description: "Pengantar teknis untuk dapp: bagaimana aplikasi terdesentralisasi menggabungkan kontrak pintar di Ethereum dengan frontend, dan bagaimana perbedaannya dengan aplikasi web."
 lang: id
 ---
 
@@ -96,8 +96,7 @@ _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
 ## Tutorial: Membangun aplikasi dan frontend di Ethereum {#tutorials}
 
-- [Panduan Kontrak Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Panduan beranotasi dari kontrak inti Uniswap v2 yang menjelaskan cara kerja pembuat pasar otomatis (AMM)._
+- [Panduan Kontrak Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Panduan beranotasi dari kontrak inti Uniswap v2 yang menjelaskan cara kerja AMM._
 - [Membangun antarmuka pengguna untuk kontrak Anda](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Cara membangun frontend React + Wagmi modern yang terhubung ke kontrak pintar Anda._
-- [Kontrak Pintar Hello World untuk Pemula – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Tutorial ujung-ke-ujung: menulis, menyebarkan, dan membangun frontend untuk kontrak pintar sederhana._
-- [Komponen server dan agen untuk aplikasi Web3](/developers/tutorials/server-components/) _– Cara menulis komponen server TypeScript yang mendengarkan peristiwa rantai blok dan merespons dengan transaksi._
-- [IPFS untuk antarmuka pengguna terdesentralisasi](/developers/tutorials/ipfs-decentralized-ui/) _– Cara menghosting frontend dapp Anda di IPFS untuk ketahanan terhadap penyensoran._
+- [Komponen server dan agen untuk aplikasi Web3](/developers/tutorials/server-components/) _– Cara menulis komponen server TypeScript yang mendengarkan kejadian rantai blok dan merespons dengan transaksi._
+- [IPFS untuk antarmuka pengguna terdesentralisasi](/developers/tutorials/ipfs-decentralized-ui/) _– Cara meng-host frontend dapp Anda di IPFS untuk ketahanan terhadap penyensoran._

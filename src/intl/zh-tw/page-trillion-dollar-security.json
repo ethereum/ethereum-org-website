@@ -115,7 +115,7 @@
   "page-trillion-dollar-security-section-3-1-list-desc-2": "這些系統中的錯誤或錯誤配置可能會拖延或阻止最終確定，或者允許錯誤狀態更新的最終確定，從而導致使用者資金損失。",
   "page-trillion-dollar-security-section-3-1-list-title-3": "安全委員會是由金鑰持有者組成的團體，作為升級第二層 (L2) 軟體或應對某些緊急情況的「備用」機制",
   "page-trillion-dollar-security-section-3-1-list-desc-3": "安全委員會本身也構成風險，因為成員之間的妥協或共謀可能會使使用者資金面臨風險或凍結資產。",
-  "page-trillion-dollar-security-section-3-1-paragraph-2": "請參閱 <a>L2BEAT</a> 以獲取評估和比較第二層 (L2) 效能與安全性的詳細框架和監控儀表板。",
+  "page-trillion-dollar-security-section-3-1-paragraph-2": "請參閱 <a>ETHBEAT</a>，以了解用於評估和比較 L2 效能與安全性的詳細框架和監控儀表板。",
   "page-trillion-dollar-security-section-3-2-title": "3.2 RPC 與節點基礎設施",
   "page-trillion-dollar-security-section-3-2-paragraph-1": "以太坊應用程式依賴少數基礎設施提供商來獲取 RPC 存取、API 和節點服務。這包括加密貨幣專用的基礎設施提供商，以及通常用於託管節點的傳統雲端服務（例如 AWS、Cloudflare、Hetzner）。",
   "page-trillion-dollar-security-section-3-2-paragraph-2": "如果這些基礎設施提供商離線或試圖審查或限制存取，許多使用者可能會被阻止透過其錢包或應用程式存取以太坊，直到他們能夠遷移到新的 RPC 或其他基礎設施提供商。其中一些提供商以前曾暫停或關閉與區塊鏈活動相關的帳戶，引發了人們對其在去中心化應用程式中長期可靠性的擔憂。",

@@ -1,6 +1,6 @@
 ---
 title: Ethereum-Entwicklerdokumentation
-description: "Einführung in die Entwicklerdokumentation von ethereum.org."
+description: "Ethereum-Entwicklerdokumentation: Lerne die Grundlagen, den Ethereum-Stack, Smart Contracts, Knoten und Skalierung kennen, mit Anleitungen zur Entwicklung deiner ersten Dapp."
 lang: de
 ---
 

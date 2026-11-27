@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/guides/how-to-create-an-ethereum-account/index.md",
-  "generatedAt": "2026-06-30T00:50:24.796Z",
-  "rootHash": "1f4936c262da",
+  "generatedAt": "2026-11-27T10:00:08.558Z",
+  "rootHash": "463063d9a321",
   "tree": {
-    "contentHash": "cb966f34335d",
+    "contentHash": "7f36165cabb3",
     "anchorHash": "9b67befd47f3",
     "children": {
       "frontmatter:title": {
@@ -16,7 +16,7 @@
         "anchorHash": "f434d7dbb52e"
       },
       "frontmatter:description": {
-        "contentHash": "86cd5cff009c",
+        "contentHash": "db2eab31b57d",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -384,5 +384,5 @@
       "frequently-asked-questions"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

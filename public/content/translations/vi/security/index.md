@@ -1,6 +1,6 @@
 ---
-title: Bảo mật Ethereum và phòng chống lừa đảo
-description: Giữ an toàn trên Ethereum
+title: "Bảo mật Ethereum và phòng chống lừa đảo"
+description: "Cách giữ an toàn trên Ethereum: bảo vệ ví và cụm từ khôi phục của bạn, nhận biết các trò lừa đảo tiền mã hóa và tấn công giả mạo phổ biến, cũng như biết phải làm gì nếu có sự cố xảy ra."
 lang: vi
 ---
 

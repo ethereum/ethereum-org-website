@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: "Pectra protokol güncellemesi hakkında bilgi edinin"
+description: "Pectra, 7 Mayıs 2025'te yayına girdi. EIP-7702 akıllı hesapları ve 2048 ETH maksimum doğrulayıcı bakiyesi dahil olmak üzere bu Ethereum güncellemesinin neleri değiştirdiğini öğrenin."
 lang: tr
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -75,9 +75,9 @@ Yeni ön derleme, her geliştiriciye bu eğriyi kullanarak kriptografik işlemle
 
 ### Geçmiş blok hash'lerini durumdan sunma {#2935}
 
-EVM şu anda, sözleşme geliştiricilerinin bir bloğun hash'ini doğrudan yürütme katmanında almasını sağlayan `BLOCKHASH` işlem kodunu sağlamaktadır. Ancak bu, yalnızca son 256 blokla sınırlıdır ve gelecekte durumsuz istemciler için sorunlu hale gelebilir.
+EVM şu anda, sözleşme geliştiricilerinin bir bloğun hash'ini doğrudan yürütme katmanında almasını sağlayan `BLOCKHASH` işlem kodunu sağlar. Ancak bu, yalnızca son 256 blokla sınırlıdır ve gelecekte durumsuz istemciler için sorunlu hale gelebilir.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935), son 8192 blok hash'ini depolama yuvaları olarak sunabilen yeni bir sistem sözleşmesi oluşturur. Bu, protokolü durumsuz yürütme için geleceğe hazırlamaya yardımcı olur ve verkle ağaçları (verkle tries) benimsendiğinde daha verimli hale gelir. Ancak bunun dışında, sözleşmeyi daha uzun bir geçmiş penceresiyle doğrudan sorgulayabildikleri için toplamalar bundan hemen faydalanabilir.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935), son 8192 blok hash'ini depolama yuvaları olarak sunabilen yeni bir sistem sözleşmesi oluşturur. Bu, protokolü durumsuz yürütme için geleceğe hazırlamaya yardımcı olur. Ancak bunun dışında, toplamalar sözleşmeyi daha uzun bir geçmiş penceresiyle doğrudan sorgulayabildikleri için bundan hemen faydalanabilirler.
 
 ### Komite endeksini Onay dışına taşıma {#7549}
 

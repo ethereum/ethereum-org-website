@@ -57,7 +57,7 @@ Tabaka la utekelezaji linahusika na kutekeleza miamala, kuendesha [mashine pepe 
 - ukomo wa historia ambayo nodi hazihitaji tena kuhudumia;
 - orodha za ufikiaji za kiwango cha kitalu zinazoruhusu miamala kuthibitishwa kwa usambamba;
 - masoko ya ada ya pande nyingi ambayo hupanga bei ya hali, data na ukokotoaji kando;
-- na kuthibitisha utekelezaji wa vitalu vya tabaka la 1 (l1) kwa kutumia zkEVM.
+- na kuthibitisha utekelezaji wa vitalu vya tabaka la 1 (L1) kwa kutumia zkEVM.
 
 #### Usomaji wa usuli {#background-reading-1}
 
@@ -72,7 +72,7 @@ Tabaka la utekelezaji linahusika na kutekeleza miamala, kuendesha [mashine pepe 
 - [EIP-8037: Ongezeko la gharama ya gesi ya uundaji wa hali](https://eips.ethereum.org/EIPS/eip-8037)
 - [EIP-7999: Soko la ada la pande nyingi lililounganishwa](https://eips.ethereum.org/EIPS/eip-7999)
 - [EIP-7642: eth/69, ukomo wa historia na risiti rahisi zaidi](https://eips.ethereum.org/EIPS/eip-7642)
-- [Kusafirisha zkEVM ya tabaka la 1 (l1): uthibitishaji wa wakati halisi](https://blog.ethereum.org/2025/07/10/realtime-proving)
+- [Kusafirisha zkEVM ya tabaka la 1 (L1): uthibitishaji wa wakati halisi](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
 ### Upinzani wa udhibiti na ujenzi wa kitalu {#censorship-resistance-and-block-building}
 
@@ -128,7 +128,7 @@ Nodi ya Ethereum inahitajika kuendesha vipande viwili vya programu:
 1. mteja wa mwafaka ili kufuatilia kichwa cha mnyororo wa vitalu, kusambaza vitalu na kushughulikia mantiki ya mwafaka
 2. kiteja cha utekelezaji ili kusaidia Mashine Pepe ya Ethereum na kutekeleza miamala na mikataba mahiri
 
-Madaraja mapya ya wateja yanatengenezwa kama mifano pamoja na hayo mawili, ikiwa ni pamoja na wateja wanaothibitisha utekelezaji wa vitalu vya tabaka la 1 (l1) na wateja wepesi wa mwafaka waliojengwa karibu na sahihi za baada ya kwanta.
+Madaraja mapya ya wateja yanatengenezwa kama mifano pamoja na hayo mawili, ikiwa ni pamoja na wateja wanaothibitisha utekelezaji wa vitalu vya tabaka la 1 (L1) na wateja wepesi wa mwafaka waliojengwa karibu na sahihi za baada ya kwanta.
 
 Tazama [ukurasa wa nodi na wateja](/developers/docs/nodes-and-clients/) kwa maelezo zaidi kuhusu nodi na wateja na kwa orodha ya utekelezaji wote wa sasa wa mteja. Unaweza pia kupata historia ya maboresho yote ya Ethereum kwenye [ukurasa wa historia](/ethereum-forks/).
 
@@ -146,31 +146,31 @@ Tazama [ukurasa wa nodi na wateja](/developers/docs/nodes-and-clients/) kwa mael
 
 - [zkEVM](/roadmap/zkevm/)
 - [Ethproofs](https://ethproofs.org/)
-- [Kusafirisha zkEVM ya tabaka la 1 (l1): misingi ya usalama](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Kusafirisha zkEVM ya tabaka la 1 (L1): misingi ya usalama](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## Ukuaji na utendaji {#scaling-and-performance}
 
-Kukuza Ethereum ni eneo kubwa la kuzingatiwa kwa watafiti wa Ethereum, na linaendeshwa kwa njia mbili kwa wakati mmoja: kuongeza uwezo wa upitishaji wa tabaka la 1 (l1) lenyewe, na kuhamisha utekelezaji kwenye mikusanyiko ambayo huchapisha data zao kwenye Ethereum. Kazi ya sasa inajumuisha kuongeza kikomo cha gesi cha kitalu, kupanga upya bei ya ukuaji wa hali, kupanua uwezo wa blobu kwa data ya rollup, na kupunguza kile ambacho nodi inapaswa kuhifadhi na kuthibitisha. Taarifa za utangulizi kuhusu kukuza Ethereum zinapatikana kwenye [ukurasa wetu wa kukuza](/developers/docs/scaling/) na [ramani ya njia ya kukuza](/roadmap/scaling/).
+Kukuza Ethereum ni eneo kubwa la kuzingatiwa kwa watafiti wa Ethereum, na linaendeshwa kwa njia mbili kwa wakati mmoja: kuongeza uwezo wa upitishaji wa tabaka la 1 (L1) lenyewe, na kuhamisha utekelezaji kwenye mikusanyiko ambayo huchapisha data zao kwenye Ethereum. Kazi ya sasa inajumuisha kuongeza kikomo cha gesi cha kitalu, kupanga upya bei ya ukuaji wa hali, kupanua uwezo wa blobu kwa data ya rollup, na kupunguza kile ambacho nodi inapaswa kuhifadhi na kuthibitisha. Taarifa za utangulizi kuhusu kukuza Ethereum zinapatikana kwenye [ukurasa wetu wa kukuza](/developers/docs/scaling/) na [ramani ya njia ya kukuza](/roadmap/scaling/).
 
 ### Tabaka la 2 {#layer-2}
 
-Sasa kuna itifaki kadhaa za Tabaka la 2 (l2) zinazokuza Ethereum kwa kutumia mbinu tofauti za ukusanyaji wa mafungu ya miamala na kuilinda kwenye tabaka la 1 (l1) la Ethereum. Utafiti wazi unajumuisha kupunguza ucheleweshaji na gharama ya kuthibitisha, kufupisha muda unaochukua kwa muamala kufikia ukamilifu bila hitaji la uaminifu, na kuwapa watumiaji uzoefu mmoja unaoshikamana katika mikusanyiko mingi.
+Sasa kuna itifaki kadhaa za Tabaka la 2 (L2) zinazokuza Ethereum kwa kutumia mbinu tofauti za ukusanyaji wa mafungu ya miamala na kuilinda kwenye tabaka la 1 (L1) la Ethereum. Utafiti wazi unajumuisha kupunguza ucheleweshaji na gharama ya kuthibitisha, kufupisha muda unaochukua kwa muamala kufikia ukamilifu bila hitaji la uaminifu, na kuwapa watumiaji uzoefu mmoja unaoshikamana katika mikusanyiko mingi.
 
 #### Usomaji wa usuli {#background-reading-2}
 
-- [Utangulizi wa tabaka la 2 (l2)](/layer-2/)
-- [L2BEAT: muhtasari wa kukuza](https://l2beat.com/scaling/summary)
-- [Ramani ya njia ya ethereum inayozingatia rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [Utangulizi wa tabaka la 2](/layer-2/)
+- [ETHBEAT: muhtasari wa ukuaji](https://ethbeat.org/layer2s/summary)
+- [Ramani ya njia ya Ethereum inayozingatia rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Utafiti wa hivi karibuni {#recent-research-2}
 
-- [Tabaka la 2 (l2) la Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: gharama za mnyororoni](https://l2beat.com/scaling/costs)
-- [Kujenga kwenye Ethereum mnamo 2026: nini kimebadilika](/latest/building-on-ethereum-in-2026/)
+- [Tabaka la 2 la Ethresear.ch](https://ethresear.ch/c/layer-2/32)
+- [ETHBEAT: gharama za mnyororoni](https://ethbeat.org/layer2s/costs)
+- [Kujenga kwenye Ethereum mwaka wa 2026: nini kimebadilika](/latest/building-on-ethereum-in-2026/)
 
 ### Mwingiliano {#interoperability}
 
-Watumiaji na mali zimeenea katika tabaka la 1 (l1) la Ethereum na matabaka ya 2 (l2) mengi, na tatizo la utafiti ni kuwaruhusu kusonga na kutenda katika minyororo hiyo bila kuamini mpatanishi. Kazi hapa inahusu uhamisho unaotegemea nia, anwani na utoaji majina wa mtambuko-mnyororo uliosanifiwa, upitishaji wa ujumbe wa jumla, na udhanifu wa mnyororo katika kiwango cha mkoba. Hii inachukua nafasi ya muundo ambao madaraja ya ulezi yalishikilia mali, na madaraja kihistoria yamekuwa mojawapo ya vyanzo vikubwa vya hasara katika ikolojia, kwa hivyo usalama wa utaratibu wowote wa mtambuko-mnyororo unasalia kuwa jambo kuu la kuzingatia.
+Watumiaji na mali zimeenea katika tabaka la 1 (L1) la Ethereum na matabaka ya 2 (L2) mengi, na tatizo la utafiti ni kuwaruhusu kusonga na kutenda katika minyororo hiyo bila kuamini mpatanishi. Kazi hapa inahusu uhamisho unaotegemea nia, anwani na utoaji majina wa mtambuko-mnyororo uliosanifiwa, upitishaji wa ujumbe wa jumla, na udhanifu wa mnyororo katika kiwango cha mkoba. Hii inachukua nafasi ya muundo ambao madaraja ya ulezi yalishikilia mali, na madaraja kihistoria yamekuwa mojawapo ya vyanzo vikubwa vya hasara katika ikolojia, kwa hivyo usalama wa utaratibu wowote wa mtambuko-mnyororo unasalia kuwa jambo kuu la kuzingatia.
 
 #### Usomaji wa usuli {#background-reading-3}
 
@@ -226,7 +226,7 @@ Usalama ni mada pana ambayo inaweza kujumuisha uzuiaji wa barua taka na ulaghai,
 
 ### Kriptografia & ZKP {#cryptography--zkp}
 
-Uthibitisho wa maarifa-sifuri (ZKP) na kriptografia ni muhimu kwa kujenga faragha na usalama katika Ethereum na programu zake. Uthibitishaji wa sifuri-maarifa umehamia kutoka kwenye utafiti hadi kwenye miundombinu ya uzalishaji: wathibitishaji wanaothibitisha vitalu halisi vya Ethereum sasa wanapimwa hadharani kuhusu ucheleweshaji, gharama na uimara. Matatizo wazi yamebadilika ipasavyo, kuelekea kuthibitisha vitalu vya tabaka la 1 (l1) haraka vya kutosha kufanya hivyo kwa wakati halisi, kuhesabu kwa uthabiti usalama wa mifumo ya uthibitisho inayotumika, na kujiandaa kwa kriptografia ya baada ya kwanta.
+Uthibitisho wa maarifa-sifuri (ZKP) na kriptografia ni muhimu kwa kujenga faragha na usalama katika Ethereum na programu zake. Uthibitishaji wa sifuri-maarifa umehamia kutoka kwenye utafiti hadi kwenye miundombinu ya uzalishaji: wathibitishaji wanaothibitisha vitalu halisi vya Ethereum sasa wanapimwa hadharani kuhusu ucheleweshaji, gharama na uimara. Matatizo wazi yamebadilika ipasavyo, kuelekea kuthibitisha vitalu vya tabaka la 1 (L1) haraka vya kutosha kufanya hivyo kwa wakati halisi, kuhesabu kwa uthabiti usalama wa mifumo ya uthibitisho inayotumika, na kujiandaa kwa kriptografia ya baada ya kwanta.
 
 #### Usomaji wa usuli {#background-reading-6}
 
@@ -239,7 +239,7 @@ Uthibitisho wa maarifa-sifuri (ZKP) na kriptografia ni muhimu kwa kujenga faragh
 - [ZK ya Ethresear.ch](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Kriptografia ya Ethresear.ch](https://ethresear.ch/c/cryptography/28)
 - [Kikokotoo cha uimara kwa mifumo ya uthibitisho ya zkEVM inayotegemea heshi](https://github.com/ethereum/soundcalc)
-- [Kusafirisha zkEVM ya tabaka la 1 (l1): misingi ya usalama](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Kusafirisha zkEVM ya tabaka la 1 (L1): misingi ya usalama](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Mikoba {#wallets}
 
@@ -386,8 +386,8 @@ Kuna haja ya zana zaidi za uchambuzi wa data na dashibodi zinazotoa taarifa za k
 #### Utafiti wa hivi karibuni {#recent-research-14}
 
 - [Uchambuzi wa Data wa Robust Incentives Group](https://rig.ethereum.org/)
-- [Data wazi ya ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: muhtasari wa kukuza](https://l2beat.com/scaling/summary)
+- [Data wazi za ethPandaOps](https://ethpandaops.io/data/)
+- [ETHBEAT: muhtasari wa ukuaji](https://ethbeat.org/layer2s/summary)
 
 ## Programu na zana {#apps-and-tooling}
 

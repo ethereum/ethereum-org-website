@@ -1,7 +1,7 @@
 ---
 title: "Các tác nhân AI"
 metaTitle: "Các tác nhân AI | Các tác nhân AI trên Ethereum"
-description: "Tổng quan về các tác nhân AI trên Ethereum"
+description: "Các tác nhân AI trên Ethereum là gì? Tìm hiểu cách các tác nhân tự trị nắm giữ tài sản, giao dịch, sử dụng DeFi và thanh toán cho nhau trên chuỗi, cùng với những rủi ro cần lưu ý."
 lang: vi
 template: use-cases
 sidebarDepth: 2

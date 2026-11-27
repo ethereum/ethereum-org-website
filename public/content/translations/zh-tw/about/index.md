@@ -1,7 +1,7 @@
 ---
 title: "關於 ethereum.org"
 metaTitle: "關於我們"
-description: "關於 ethereum.org 的團隊、社群與使命"
+description: "認識 ethereum.org 背後的團隊與社群：我們的使命、網站如何公開建立與治理，以及你可以如何協助改善它。"
 lang: zh-tw
 ---
 
@@ -107,9 +107,11 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 
 ## 設計系統 {#design-system}
 
-我們建立並發布了一個[設計系統](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)，以便更快速地推出功能，並讓社群成員參與 ethereum.org 的開放設計。
+我們建立並發布了一個[設計系統](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)，以便更快速地推出功能，並讓社群成員參與 ethereum.org 的公開設計。
 
 想要參與其中嗎？[在 Figma 上關注我們](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)，並加入我們 [#design Discord 頻道](/discord/)的討論。
+
+正在尋找標誌、插圖或其他品牌檔案嗎？請從我們的[資產頁面](/assets/)下載。
 
 ## 風格指南 {#style-guide}
 
@@ -122,6 +124,10 @@ ethereum.org 是一個為 [以太坊](/) 社群提供的公開、開源資源，
 ## 授權條款 {#license}
 
 除非另有說明，ethereum.org 網站是開源的，並在 [MIT 授權條款](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) 下建立。更多關於 ethereum.org 的 [使用條款](/terms-of-use/)。
+
+## 你的隱私 {#your-privacy}
+
+ethereum.org 使用 Matomo 進行保護隱私的分析，你可以隨時選擇退出。請閱讀我們的 [Cookie 政策](/cookie-policy/)與[隱私權政策](/privacy-policy/)以了解詳情。
 
 ## 職缺 {#open-jobs}
 

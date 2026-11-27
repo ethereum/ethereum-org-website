@@ -78,7 +78,7 @@ Il metodo abituale consiste nello scrivere piccoli test unitari utilizzando dati
 
 Sfortunatamente, il test unitario è minimamente efficace per migliorare la sicurezza degli smart contract se utilizzato in isolamento. Un test unitario potrebbe dimostrare che una funzione viene eseguita correttamente per i dati fittizi, ma i test unitari sono efficaci solo quanto i test che vengono scritti. Ciò rende difficile rilevare casi limite trascurati e vulnerabilità che potrebbero compromettere la sicurezza del tuo smart contract.
 
-Un approccio migliore consiste nel combinare i test unitari con test basati sulle proprietà eseguiti utilizzando l'[analisi statica e dinamica](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). L'analisi statica si basa su rappresentazioni di basso livello, come i [grafi del flusso di controllo](https://en.wikipedia.org/wiki/Control-flow_graph) e gli [alberi sintattici astratti](https://deepsource.io/glossary/ast/), per analizzare gli stati del programma raggiungibili e i percorsi di esecuzione. Nel frattempo, le tecniche di analisi dinamica, come il [fuzzing degli smart contract](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), eseguono il codice del contratto con valori di input casuali per rilevare operazioni che violano le proprietà di sicurezza.
+Un approccio migliore consiste nel combinare i test unitari con test basati sulle proprietà eseguiti utilizzando l'[analisi statica e dinamica](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). L'analisi statica si basa su rappresentazioni di basso livello, come i [grafi del flusso di controllo](https://en.wikipedia.org/wiki/Control-flow_graph) e gli [alberi sintattici astratti](https://deepsource.io/glossary/ast/), per analizzare gli stati del programma raggiungibili e i percorsi di esecuzione. Nel frattempo, le tecniche di analisi dinamica, come il [fuzzing degli smart contract](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), eseguono il codice del contratto con valori di input casuali per rilevare operazioni che violano le proprietà di sicurezza.
 
 La [verifica formale](/developers/docs/smart-contracts/formal-verification) è un'altra tecnica per verificare le proprietà di sicurezza negli smart contract. A differenza dei test regolari, la verifica formale può dimostrare in modo conclusivo l'assenza di errori in uno smart contract. Ciò si ottiene creando una specifica formale che cattura le proprietà di sicurezza desiderate e dimostrando che un modello formale dei contratti aderisce a questa specifica.
 
@@ -99,7 +99,7 @@ Detto questo, dovresti evitare di considerare gli audit come una soluzione mirac
 
 L'istituzione di un programma di bug bounty è un altro approccio per implementare revisioni esterne del codice. Un bug bounty è una ricompensa finanziaria data a individui (di solito hacker whitehat) che scoprono vulnerabilità in un'applicazione.
 
-Se utilizzati correttamente, i bug bounty incentivano i membri della comunità di hacker a ispezionare il tuo codice alla ricerca di difetti critici. Un esempio reale è il "bug dei soldi infiniti" che avrebbe permesso a un aggressore di creare una quantità illimitata di ether su [Optimism](https://www.optimism.io/), un protocollo [layer 2 (l2)](/layer-2/) in esecuzione su Ethereum. Fortunatamente, un hacker whitehat [ha scoperto la falla](https://www.saurik.com/optimism.html) e ha informato il team, [guadagnando un cospicuo compenso nel processo](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Se utilizzati correttamente, i bug bounty incentivano i membri della comunità di hacker a ispezionare il tuo codice alla ricerca di difetti critici. Un esempio reale è il "bug dei soldi infiniti" che avrebbe permesso a un aggressore di creare una quantità illimitata di ether su [Optimism](https://www.optimism.io/), un protocollo [layer 2 (L2)](/layer-2/) in esecuzione su Ethereum. Fortunatamente, un hacker whitehat [ha scoperto la falla](https://www.saurik.com/optimism.html) e ha informato il team, [guadagnando un cospicuo compenso nel processo](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Una strategia utile è quella di impostare il compenso di un programma di bug bounty in proporzione alla quantità di fondi in gioco. Descritto come "[bug bounty scalabile](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", questo approccio fornisce incentivi finanziari agli individui per divulgare responsabilmente le vulnerabilità invece di sfruttarle.
 
@@ -463,9 +463,9 @@ Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, co
 
 - **[Strumenti di verifica formale](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Strumenti per verificare la correttezza funzionale negli smart contract e controllare gli invarianti._
 
-- **[Servizi di auditing degli smart contract](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Elenco di organizzazioni che forniscono servizi di auditing degli smart contract per i progetti di sviluppo su Ethereum._
+- **[Servizi di auditing degli smart contract](#smart-contract-auditing-services)** - _Elenco di organizzazioni che forniscono servizi di auditing degli smart contract per i progetti di sviluppo su Ethereum._
 
-- **[Piattaforme di bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Piattaforme per coordinare i bug bounty e ricompensare la divulgazione responsabile di vulnerabilità critiche negli smart contract._
+- **[Piattaforme di bug bounty](#bug-bounty-platforms)** - _Piattaforme per coordinare i bug bounty e ricompensare la divulgazione responsabile di vulnerabilità critiche negli smart contract._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Uno strumento online gratuito per controllare tutte le informazioni disponibili riguardo a un contratto sottoposto a fork._
 
@@ -567,9 +567,7 @@ Se hai intenzione di interrogare un oracolo onchain per i prezzi degli asset, co
 
 - [Come usare Slither per trovare bug negli smart contract](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [Come usare Manticore per trovare bug negli smart contract](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
-- [Linee guida sulla sicurezza degli smart contract](/developers/tutorials/smart-contract-security-guidelines/)
+- [Linee guida per la sicurezza degli smart contract](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Come integrare in modo sicuro il tuo contratto di token con token arbitrari](/developers/tutorials/token-integration-checklist/)
 

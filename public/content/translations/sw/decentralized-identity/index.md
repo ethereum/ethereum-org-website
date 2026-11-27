@@ -1,6 +1,6 @@
 ---
 title: Utambulisho uliogatuliwa
-description: Utambulisho uliogatuliwa ni nini, na kwa nini ni muhimu?
+description: Utambulisho uliogatuliwa ni nini? Jifunze jinsi Ethereum inavyokuruhusu kumiliki na kudhibiti utambulisho wako, stakabadhi na data bila kutegemea mtoa huduma mkuu.
 lang: sw
 template: use-cases
 sidebarDepth: 2

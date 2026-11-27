@@ -171,16 +171,15 @@ const result = await client.simulateContract({
 
 ## متعلقہ ٹیوٹوریلز {#related-tutorials}
 
-- [JavaScript سے سمارٹ کنٹریکٹ کو کال کرنا](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-- [web3.js اور Alchemy کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنا](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [<span dir="ltr">Web3.js</span> اور Alchemy کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنا](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [اپنے والیٹ میں اپنا <span dir="ltr">NFT</span> کیسے دیکھیں](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## مزید مطالعہ {#further-reading}
 
-- [Viem کی دستاویزات: کنٹریکٹس سے پڑھنا اور ان میں لکھنا](https://viem.sh/docs/contract/readContract)
-- [ethers.js کی دستاویزات: کنٹریکٹس](https://docs.ethers.org/v6/api/contract/)
-- [Solidity ABI کی تفصیلات](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [<span dir="ltr">ABI</span> کیا ہے؟ - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Viem کی دستاویزات: کنٹریکٹس میں پڑھنا اور لکھنا](https://viem.sh/docs/contract/readContract)
+- [<span dir="ltr">ethers.js</span> کی دستاویزات: کنٹریکٹس](https://docs.ethers.org/v6/api/contract/)
+- [Solidity کی <span dir="ltr">ABI</span> کی تفصیلات](https://docs.soliditylang.org/en/latest/abi-spec.html)
+- [سمارٹ کنٹریکٹ کی <span dir="ltr">ABIs</span> کیسے کام کرتی ہیں؟ - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## متعلقہ موضوعات {#related-topics}
 

@@ -1,5 +1,28 @@
 # German (de) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.0/10
+Scope: 91 changed files (71 markdown, 20 JSON incl. `page-developers-tools-descriptions.json` +~200 `tool-*` keys), changed lines only; all markdown diffs read, ~60 JSON keys sampled. Brand 10 | Technical 9 | Semantic 9 | Consistency 8.5 | Tone 8.5.
+
+**Fixed in this branch (4 critical):**
+
+- `roadmap/security/index.md:78` EOA `extern verwalteten Konten` -> `externen Konten` (ETHGlossary `Externes Konto (EOA)`; the pre-PR line matched)
+- `developers/tutorials/secure-development-workflow/index.md:39` `Python-Programmierschnittstelle (API)` -> `Python-API` (added expansion of a bare English API, #80/#112)
+- `page-developers-tools-descriptions.json` `tool-l2beat-description` `Layer 2-Netzwerken` -> `Layer-2-Netzwerken` (compound hyphenation)
+- `page-get-eth.json` `page-get-eth-p2p-trusted-desc` `Einigt euch ..., teile deine` (plural/singular imperative mix) -> `Einige dich mit der Person auf einen Preis, teile deine`
+
+**Open (native call needed):**
+
+- Meta `description` register: `dao`, `real-world-assets` (du) vs Sie bodies; `bridges`/`defi`/`desci`/`decentralized-identity` (Sie) fine. Pipeline wrote each description in a register picked independently of the body.
+- `tool-mev-boost-description` / `tool-mev-boost-relay-flashbots-description` add `(PBS)` where English has none; `tool-tenderly-cli-description` `Continuous-Integration-Job`; `contributing/index.md:44` `Layer 2 (L2)` (pre-existing form, English is bare `layer 2`).
+- `logging-events-smart-contracts:27` link text `Deinen ersten Smart Contract bereitstellen` (capital Deinen, not the Sie/du of the file's own link title).
+- `roadmap/scaling` new zkEVM paragraph `Beweiser` (glossary) vs `Prover` 10 lines above in the same file; `Tests auf Testnets` vs `Testnetz` elsewhere; `Schatzkammer-Operationen` (Fireblocks, corporate treasury sense; glossary form but DAO-sense).
+- Code comments in `smart-contracts/anatomy` flip from `Sie` to impersonal `man`/imperative `beachte` in one comment (`// beachte, dass ...`) inside a Sie document.
+
+**Notes:**
+
+- Tools descriptions: `Ersteller` for builders is glossary-conformant (ETHGlossary `builder`); keep despite the `Creator` collision from #18942.
+- Sweeps clean: U+3002, U+2060, ZWSP/BOM, foreign scripts, untranslated English sentences in changed lines.
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.4/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

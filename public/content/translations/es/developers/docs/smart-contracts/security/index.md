@@ -78,7 +78,7 @@ El método habitual es escribir pequeñas pruebas unitarias utilizando datos sim
 
 Desafortunadamente, las pruebas unitarias son mínimamente efectivas para mejorar la seguridad de los contratos inteligentes cuando se usan de forma aislada. Una prueba unitaria podría demostrar que una función se ejecuta correctamente para datos simulados, pero las pruebas unitarias solo son tan efectivas como las pruebas que se escriben. Esto hace que sea difícil detectar casos extremos omitidos y vulnerabilidades que podrían romper la seguridad de su contrato inteligente.
 
-Un mejor enfoque es combinar las pruebas unitarias con pruebas basadas en propiedades realizadas mediante [análisis estático y dinámico](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). El análisis estático se basa en representaciones de bajo nivel, como [gráficos de flujo de control](https://en.wikipedia.org/wiki/Control-flow_graph) y [árboles de sintaxis abstracta](https://deepsource.io/glossary/ast/) para analizar los estados del programa y las rutas de ejecución alcanzables. Mientras tanto, las técnicas de análisis dinámico, como el [fuzzing de contratos inteligentes](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), ejecutan el código del contrato con valores de entrada aleatorios para detectar operaciones que violan las propiedades de seguridad.
+Un mejor enfoque es combinar las pruebas unitarias con pruebas basadas en propiedades realizadas mediante [análisis estático y dinámico](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). El análisis estático se basa en representaciones de bajo nivel, como [gráficos de flujo de control](https://en.wikipedia.org/wiki/Control-flow_graph) y [árboles de sintaxis abstracta](https://deepsource.io/glossary/ast/) para analizar los estados del programa y las rutas de ejecución alcanzables. Mientras tanto, las técnicas de análisis dinámico, como el [fuzzing de contratos inteligentes](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), ejecutan el código del contrato con valores de entrada aleatorios para detectar operaciones que violan las propiedades de seguridad.
 
 La [verificación formal](/developers/docs/smart-contracts/formal-verification) es otra técnica para verificar las propiedades de seguridad en los contratos inteligentes. A diferencia de las pruebas regulares, la verificación formal puede probar de manera concluyente la ausencia de errores en un contrato inteligente. Esto se logra creando una especificación formal que captura las propiedades de seguridad deseadas y demostrando que un modelo formal de los contratos se adhiere a esta especificación.
 
@@ -463,9 +463,9 @@ Si planea consultar un oráculo en cadena para conocer los precios de los activo
 
 - **[Herramientas de verificación formal](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Herramientas para verificar la corrección funcional en contratos inteligentes y comprobar invariantes._
 
-- **[Servicios de auditoría de contratos inteligentes](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Lista de organizaciones que proporcionan servicios de auditoría de contratos inteligentes para proyectos de desarrollo de Ethereum._
+- **[Servicios de auditoría de contratos inteligentes](#smart-contract-auditing-services)** - _Lista de organizaciones que proporcionan servicios de auditoría de contratos inteligentes para proyectos de desarrollo de Ethereum._
 
-- **[Plataformas de recompensas por errores](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Plataformas para coordinar recompensas por errores y recompensar la divulgación responsable de vulnerabilidades críticas en contratos inteligentes._
+- **[Plataformas de recompensas por errores](#bug-bounty-platforms)** - _Plataformas para coordinar recompensas por errores y recompensar la divulgación responsable de vulnerabilidades críticas en contratos inteligentes._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Una herramienta en línea gratuita para comprobar toda la información disponible sobre un contrato bifurcado._
 
@@ -567,10 +567,8 @@ Si planea consultar un oráculo en cadena para conocer los precios de los activo
 
 - [Cómo usar Slither para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [Cómo usar Manticore para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
 - [Pautas de seguridad para contratos inteligentes](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Cómo integrar de forma segura su contrato de token con tokens arbitrarios](/developers/tutorials/token-integration-checklist/)
 
-- [Cyfrin Updraft: Curso completo de seguridad y auditoría de contratos inteligentes](https://updraft.cyfrin.io/courses/security)
+- [Cyfrin Updraft - Curso completo de seguridad y auditoría de contratos inteligentes](https://updraft.cyfrin.io/courses/security)

@@ -1,12 +1,12 @@
 ---
 title: Kankun-Deneb (Dencun)
 metaTitle: Kankun-Deneb (Dencun) SSS
-description: Kankun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular
+description: "Kankun-Deneb (Dencun) ağ güncellemesi hakkında sıkça sorulan sorular"
 lang: tr
 template: upgrade
 ---
 
-Kankun-Deneb (Dencun), daha ucuz [katman 2 (l2)](/glossary/#layer-2) Rollup depolaması için geçici veri **blob**'ları sunan **Proto-Danksharding (EIP-4844)**'i etkinleştiren bir Ethereum ağ güncellemesidir.
+Kankun-Deneb (Dencun), daha ucuz [katman 2 (L2)](/glossary/#layer-2) Rollup depolaması için geçici veri **blob**'ları sunan **Proto-Danksharding (EIP-4844)**'i etkinleştiren bir Ethereum ağ güncellemesidir.
 
 Yeni bir işlem türü, Rollup sağlayıcılarının verileri "blob" olarak bilinen yapılarda daha uygun maliyetli bir şekilde depolamasına olanak tanır. Blob'ların ağda yaklaşık 18 gün (daha kesin bir ifadeyle 4096 [Dönem](/glossary/#epoch)) boyunca erişilebilir olması garanti edilir. Bu sürenin ardından blob'lar ağdan budanır, ancak uygulamalar kanıtları kullanarak verilerinin geçerliliğini doğrulamaya devam edebilir. 
 
@@ -33,26 +33,25 @@ Ethereum topluluğu, büyümesi için katman 2 toplamalarını daha fazla kullan
 
 Rollup ağları, işlemlerin _işlenmesini_ (veya "yürütülmesini") Ana Ağ'dan ayrı olarak gerçekleştirir ve ardından sonuçların kriptografik bir kanıtını ve/veya sıkıştırılmış işlem verilerini kayıt tutulması için Ana Ağ'da yayınlar. Bu kanıtları depolamak, Proto-Danksharding'den önce tüm ağ Düğüm operatörleri tarafından kalıcı olarak depolanması gereken ve bu nedenle pahalı bir görev olan bir masraf ([Gaz](/glossary/#gas) şeklinde) getirir.
 
-Dencun güncellemesinde Proto-Danksharding'in sunulması, Düğüm operatörlerinin bu verileri yalnızca yaklaşık 18 gün boyunca depolamasını gerektirerek bu kanıtlar için daha ucuz veri depolaması ekler; bu sürenin ardından donanım gereksinimlerinin artmasını önlemek için veriler güvenli bir şekilde kaldırılabilir. Toplamalar genellikle 7 günlük bir çekim süresine sahip olduğundan, blob'lar bu süre boyunca l1'de mevcut olduğu sürece güvenlik modelleri değişmez. 18 günlük budama penceresi, bu süre için önemli bir tampon sağlar.
+Dencun güncellemesinde Proto-Danksharding'in sunulması, Düğüm operatörlerinin bu verileri yalnızca yaklaşık 18 gün boyunca depolamasını gerektirerek bu kanıtlar için daha ucuz veri depolaması ekler; bu sürenin ardından donanım gereksinimlerinin artmasını önlemek için veriler güvenli bir şekilde kaldırılabilir. Toplamalar genellikle 7 günlük bir çekim süresine sahip olduğundan, blob'lar bu süre boyunca L1'de mevcut olduğu sürece güvenlik modelleri değişmez. 18 günlük budama penceresi, bu süre için önemli bir tampon sağlar.
 
 [Ethereum'u ölçeklendirme hakkında daha fazlası](/roadmap/scaling/)
 
 ## Eski blob verilerine nasıl erişilir? {#historical-access}
 
-Normal Ethereum düğümleri her zaman ağın _mevcut durumunu_ tutacak olsa da, geçmiş blob verileri sunulduktan yaklaşık 18 gün sonra atılabilir. Bu verileri atmadan önce Ethereum, verilerin tüm ağ katılımcılarına sunulduğundan emin olarak şunlar için zaman tanır:
+Normal Ethereum Düğümleri ağın _mevcut durumunu_ her zaman tutacak olsa da, geçmiş blob verileri kullanıma sunulduktan yaklaşık 18 gün sonra atılabilir. Ethereum, bu verileri atmadan önce tüm ağ katılımcılarının kullanımına sunulduğundan emin olarak şunlar için zaman tanır:
 
 - İlgili tarafların verileri indirmesi ve depolaması.
 - Tüm Rollup itiraz sürelerinin tamamlanması.
 - Rollup işlemlerinin kesinleşmesi.
 
-_Geçmiş_ blob verileri çeşitli nedenlerle istenebilir ve çeşitli merkeziyetsiz protokoller kullanılarak depolanabilir ve erişilebilir:
+_Geçmiş_ blob verileri çeşitli nedenlerle istenebilir ve çeşitli merkeziyetsiz Protokoller kullanılarak depolanabilir ve bunlara erişilebilir:
 
-- The Graph gibi **üçüncü taraf endeksleme protokolleri**, bu verileri kripto-ekonomik mekanizmalarla teşvik edilen merkeziyetsiz bir Düğüm operatörleri ağı aracılığıyla depolar.
-- **BitTorrent**, gönüllülerin bu verileri tutabileceği ve başkalarına dağıtabileceği merkeziyetsiz bir protokoldür.
-- **[Ethereum Portal Ağı](/developers/docs/networking-layer/portal-network/)**, verileri BitTorrent'e benzer şekilde katılımcılar arasında dağıtarak merkeziyetsiz bir Düğüm operatörleri ağı aracılığıyla tüm Ethereum verilerine erişim sağlamayı amaçlar.
-- **Bireysel kullanıcılar**, geçmişe dönük referans için istedikleri herhangi bir verinin kendi kopyalarını depolamakta her zaman özgürdür.
-- **Rollup sağlayıcıları**, Rollup'larının kullanıcı deneyimini geliştirmek için bu verileri depolamaya teşvik edilir.
-- **Blok gezginleri** genellikle, kullanıcıların bir web arayüzü aracılığıyla erişebileceği, kolay geçmiş referansı için tüm bu bilgileri endeksleyen ve depolayan arşiv düğümleri çalıştırır.
+- The Graph gibi **üçüncü taraf endeksleme Protokolleri**, bu verileri kripto-ekonomik mekanizmalarla teşvik edilen merkeziyetsiz bir Düğüm operatörleri ağı aracılığıyla depolar.
+- **BitTorrent**, gönüllülerin bu verileri tutabileceği ve başkalarına dağıtabileceği merkeziyetsiz bir Protokoldür.
+- **Bireysel kullanıcılar**, geçmişe dönük referans olması amacıyla istedikleri herhangi bir verinin kendi kopyalarını depolamakta her zaman özgürdür.
+- **Rollup sağlayıcıları**, kendi Rollup'larının kullanıcı deneyimini geliştirmek için bu verileri depolamaya teşvik edilir.
+- **Blok gezginleri** genellikle, kullanıcıların bir web arayüzü aracılığıyla erişebileceği, kolay geçmiş referansı için tüm bu bilgileri endeksleyen ve depolayan arşiv Düğümleri çalıştırır.
 
 Geçmiş durumu kurtarmanın **N'de 1 güven modeli** üzerinde çalıştığını belirtmek önemlidir. Bu, ağın mevcut durumunu kullanarak doğruluğunu teyit etmek için yalnızca _tek bir güvenilir kaynaktan_ gelen verilere ihtiyacınız olduğu anlamına gelir.
 
@@ -76,20 +75,20 @@ Mutabakat istemcileri, tümü güncellemeyi barındıracak şekilde güncellenmi
 
 ## L2'lerdeki tüm işlemler artık geçici blob alanını mı kullanacak, yoksa seçim yapabilecek misiniz? {#calldata-vs-blobs}
 
-Ethereum'un Katman 2'sindeki (l2) Rollup işlemleri iki tür veri depolama kullanma seçeneğine sahiptir: geçici blob alanı veya kalıcı Akıllı sözleşme çağrı verisi. Blob alanı, daha düşük maliyetle geçici depolama sağlayan ekonomik bir seçimdir. Gerekli tüm itiraz süreleri için veri kullanılabilirliğini garanti eder. Öte yandan, Akıllı sözleşme çağrı verisi kalıcı depolama sunar ancak daha pahalıdır.
+Ethereum'un Katman 2'sindeki (L2) Rollup işlemleri iki tür veri depolama kullanma seçeneğine sahiptir: geçici blob alanı veya kalıcı Akıllı sözleşme çağrı verisi. Blob alanı, daha düşük maliyetle geçici depolama sağlayan ekonomik bir seçimdir. Gerekli tüm itiraz süreleri için veri kullanılabilirliğini garanti eder. Öte yandan, Akıllı sözleşme çağrı verisi kalıcı depolama sunar ancak daha pahalıdır.
 
 Blob alanı veya çağrı verisi kullanma arasındaki karar öncelikle Rollup sağlayıcıları tarafından verilir. Bu kararı blob alanına olan mevcut talebe dayandırırlar. Blob alanına yüksek talep varsa, toplamalar verilerin zamanında yayınlanmasını sağlamak için çağrı verisini tercih edebilir.
 
 Kullanıcıların tercih ettikleri depolama türünü seçmeleri teorik olarak mümkün olsa da, bu seçimi genellikle Rollup sağlayıcıları yönetir. Bu seçeneği kullanıcılara sunmak, özellikle uygun maliyetli paketleme işlemlerinde karmaşıklık katacaktır. Bu seçimle ilgili belirli ayrıntılar için kullanıcılar, bireysel Rollup sağlayıcıları tarafından sağlanan belgelere başvurmalıdır.
 
-## 4844, l1 Gazını azaltacak mı? {#l1-fee-impact}
+## 4844, L1 Gazını azaltacak mı? {#l1-fee-impact}
 
-Önemli ölçüde değil. Rollup sağlayıcılarının kullanımı için özel olarak blob alanına yönelik yeni bir Gaz piyasası sunulmuştur. _Rollup verilerinin blob'lara aktarılmasıyla l1'deki ücretler azaltılabilse de, bu güncelleme öncelikle l2 ücretlerinin azaltılmasına odaklanmaktadır. L1'deki (Ana Ağ) ücretlerin düşmesi, daha az ölçüde ikinci dereceden bir etki olarak ortaya çıkabilir._
+Önemli ölçüde değil. Rollup sağlayıcılarının kullanımı için özel olarak blob alanına yönelik yeni bir Gaz piyasası sunulmuştur. _Rollup verilerinin blob'lara aktarılmasıyla L1'deki ücretler azaltılabilse de, bu güncelleme öncelikle L2 ücretlerinin azaltılmasına odaklanmaktadır. L1'deki (Ana Ağ) ücretlerin düşmesi, daha az ölçüde ikinci dereceden bir etki olarak ortaya çıkabilir._
 
 - L1 Gazındaki azalma, Rollup sağlayıcıları tarafından blob verilerinin benimsenmesi/kullanımı ile orantılı olacaktır
 - L1 Gazının, Rollup ile ilgili olmayan faaliyetlerden dolayı rekabetçi kalması muhtemeldir
-- Blob alanının kullanımını benimseyen toplamalar daha az l1 Gazı talep edecek ve bu da yakın vadede l1 Gaz ücretlerini aşağı çekmeye yardımcı olacaktır
-- Blob alanı hala sınırlıdır, bu nedenle bir Blok içindeki blob'lar doygunluğa ulaşırsa/dolarsa, toplamaların bu süre zarfında verilerini kalıcı veri olarak yayınlaması gerekebilir ve bu da l1 ve l2 Gaz fiyatlarını yukarı çekecektir
+- Blob alanının kullanımını benimseyen toplamalar daha az L1 Gazı talep edecek ve bu da yakın vadede L1 Gaz ücretlerini aşağı çekmeye yardımcı olacaktır
+- Blob alanı hala sınırlıdır, bu nedenle bir Blok içindeki blob'lar doygunluğa ulaşırsa/dolarsa, toplamaların bu süre zarfında verilerini kalıcı veri olarak yayınlaması gerekebilir ve bu da L1 ve L2 Gaz fiyatlarını yukarı çekecektir
 
 ## Bu, diğer EVM katman 1 blokzincirlerindeki ücretleri azaltacak mı? {#alt-l1-fee-impact}
 

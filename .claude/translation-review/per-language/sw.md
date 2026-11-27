@@ -1,5 +1,23 @@
 # Swahili (sw) -- Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.4/10
+Scope: 74 markdown (docs, tutorials, roadmap, staking, descriptions) + 19 JSON namespaces, changed lines only. 0 scripted-sweep hits (no U+3002/U+2060/foreign script in changed files).
+
+**Fixed in this branch:**
+
+- `glossary.json` block-builder-definition: `kuitoa` -> `kukitoa` (object is `kitalu`, class 7; the tooltip copy had it right)
+- zk-rollups: three new `maarifa sifuri` (heading + 2 body sites) -> `sifuri-maarifa`, matching the file's own form
+- programming-languages/javascript:60-62 software client rendered `mteja` (customer) -> `kiteja` (EthereumJS execution client, archived client label, validator client at L55); `mteja wa mwafaka` for Lodestar left (glossary)
+- archive-nodes:55 new `kila mteja` -> `kila kiteja`
+- secure-development-workflow:39 `Kiolesura cha Kupanga Programu Tumizi (API)` expansion of bare English `API` -> `API` (known-patterns #112, markdown not covered by the JSON fix pass)
+
+**Open (native call needed):**
+
+- `shielded pool`: tooltip `Bwawa lililokingiwa` vs glossary.json `Dimbwi fiche` vs organizations `Mabwawa ya faragha`; no ETHGlossary entry
+- `tabaka la 2 (L2)` / `tabaka la 1 (L1)` parenthetical added/uppercased on ~150 changed lines where English is bare `Layer 2` (the pipeline only changed case from `(l2)`; pre-existing expansion)
+- `block builder` glossary `mjenga kizuizi` (kizuizi = obstruction; known #113); `Wavinjari wa kitalu` for block explorers (glossary `kichunguzi`); `hamisho` for `uhamisho` in several new lines; `kipengele` used for `function` in interact-with-other-contracts (glossary-silent, KB prefers `kitendaji`); code comments `Fankisheni`/`Getter` in logging-events
+- erc-721 `tokani zisizobadilishika` vs glossary `tokheni mbadala`; ETHBEAT ranking text `muhtasari wa ukuaji` for scaling
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.6/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `Kiolesura cha Kupanga Programu Tumizi (API)` expanded x24 where English has bare `API`, and `tabaka la 1 (L1)` expansions in 17 diagram values (#112); `mjenga kizuizi` for block builder comes from the glossary but `kizuizi` means obstruction (block is `kitalu`, #113); prover = `mthibitishaji` collides with validator.
 

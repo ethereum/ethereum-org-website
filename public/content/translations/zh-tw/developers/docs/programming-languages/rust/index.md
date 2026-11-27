@@ -38,23 +38,22 @@ incomplete: true
 
 ## Rust 專案與工具 {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _用於與類以太坊網路互動的外部函式集合_
-- [萊特豪斯](https://github.com/sigp/lighthouse) - _快速的以太坊共識層客戶端_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _與類以太坊網路互動的外部函式庫集合_
+- [Lighthouse](https://github.com/sigp/lighthouse) - _快速的以太坊共識層客戶端_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _提議使用 WebAssembly 的確定性子集重新設計以太坊智能合約執行層_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API 參考文件_
-- [Solaris](https://github.com/paritytech/sol-rs) - _使用原生 Parity 客戶端 EVM 的 Solidity 智能合約單元測試框架。_
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust 以太坊虛擬機實作_
+- [Solaris](https://github.com/paritytech/sol-rs) - _使用原生 Parity 客戶端EVM 的 Solidity 智能合約單元測試框架。_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust 以太坊虛擬機 (EVM) 實作_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _使用 Rust 撰寫的 Wavelet 智能合約_
 - [Foundry](https://github.com/foundry-rs/foundry) - _以太坊應用程式開發工具包_
-- [Alloy](https://alloy.rs) - _高效能、經過充分測試且文件齊全的函式庫，用於與以太坊及其他基於 EVM 的區塊鏈互動。_
+- [Alloy](https://alloy.rs) - _高效能、經過充分測試且文件齊全的函式庫，用於與以太坊及其他基於 EVM 的鏈進行互動。_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _以太坊函式庫與錢包實作_
-- [SewUp](https://github.com/second-state/SewUp) - _一個幫助你使用 Rust 建立以太坊 WebAssembly 合約的函式庫，就像在一般後端開發一樣_
+- [SewUp](https://github.com/second-state/SewUp) - _協助你使用 Rust 建立以太坊 WebAssembly 合約的函式庫，就像在一般後端開發一樣_
 - [Substreams](https://github.com/streamingfast/substreams) - _平行化區塊鏈資料索引技術_
-- [瑞斯](https://github.com/paradigmxyz/reth) 瑞斯（Reth，Rust Ethereum 的縮寫）是一個新的以太坊全節點實作
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _以太坊生態系中以 Rust 撰寫的精選專案集合_
+- [Reth](https://github.com/paradigmxyz/reth) Reth (Rust Ethereum 的縮寫) 是一個新的以太坊全節點實作
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _以 Rust 撰寫的以太坊生態系專案精選集合_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _用於在 Arbitrum 上建立智能合約的 Rust SDK_
 
-正在尋找更多資源嗎？請查看 [ethereum.org/developers。](/developers/)
+正在尋找更多資源嗎？請查看 [ethereum.org/developers](/developers/)。
 
 ## Rust 社群貢獻者 {#rust-community-contributors}
 

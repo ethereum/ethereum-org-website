@@ -37,6 +37,6 @@ _क्या आप किसी ऐसे सामुदायिक सं�
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 
 - [टोकन एकीकरण चेकलिस्ट](/developers/tutorials/token-integration-checklist/) _– टोकन के साथ इंटरैक्ट करते समय विचार करने योग्य बातों की एक चेकलिस्ट।_
-- [ERC20 टोकन स्मार्ट अनुबंध को समझें](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– इथेरियम टेस्ट नेटवर्क पर अपना पहला स्मार्ट अनुबंध तैनात करने का एक परिचय।_
+- [ERC-20 अनुबंध वॉक-थ्रू](/developers/tutorials/erc20-annotated-code/) _– ओपनजेपेलिन ERC-20 अनुबंध कार्यान्वयन का एक लाइन-बाय-लाइन एनोटेटेड वॉकथ्रू।_
 - [Solidity स्मार्ट अनुबंध से ERC20 टोकन का स्थानांतरण और अनुमोदन](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity भाषा का उपयोग करके टोकन के साथ इंटरैक्ट करने के लिए स्मार्ट अनुबंध का उपयोग कैसे करें।_
 - [एक ERC721 बाज़ार लागू करना [एक कैसे-करें मार्गदर्शिका]](/developers/tutorials/how-to-implement-an-erc721-market/) _– विकेंद्रीकृत क्लासिफाइड बोर्ड पर बिक्री के लिए टोकनयुक्त आइटम कैसे रखें।_

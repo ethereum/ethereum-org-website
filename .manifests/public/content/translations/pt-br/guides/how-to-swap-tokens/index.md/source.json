@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/guides/how-to-swap-tokens/index.md",
-  "generatedAt": "2026-06-30T00:50:59.563Z",
-  "rootHash": "cefbe3c2eca6",
+  "generatedAt": "2026-11-27T09:57:21.088Z",
+  "rootHash": "81c9d8f525da",
   "tree": {
-    "contentHash": "b56bcef5c6f5",
+    "contentHash": "d7f4b7747763",
     "anchorHash": "1a07e7ccd2b9",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "b122e0ba8bc3",
+        "contentHash": "ea887e0f4006",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -359,5 +359,5 @@
       "frequently-asked-questions"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

@@ -1,7 +1,7 @@
 ---
 title: Cosa sono le prove a conoscenza zero?
 metaTitle: Prove a conoscenza zero
-description: Un'introduzione non tecnica alle prove a conoscenza zero per principianti.
+description: Cosa sono le prove a conoscenza zero? Un'introduzione per principianti su come le prove ZK verificano un'affermazione senza rivelare i dati e su come Ethereum le utilizza.
 lang: it
 ---
 

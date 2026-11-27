@@ -17,15 +17,15 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 ## （緩やかな）前提条件 {#soft-prerequisites}
 
-この記事は、幅広い開発者が理解できるように書かれています。[Pythonツール](/developers/docs/programming-languages/python/)を使用しますが、これらはアイデアを伝えるための手段にすぎません。Python開発者でなくても問題ありません。ただし、イーサリアム特有の部分にすぐに移れるように、あなたがすでに知っていることについていくつか前提を置きます。
+この記事は、幅広い開発者に理解してもらえることを目指しています。[Pythonツール](/developers/docs/programming-languages/python/)を使用しますが、これらはアイデアを伝えるための手段にすぎないため、Python開発者でなくても問題ありません。ただし、イーサリアム特有の話題に早く移れるよう、読者がすでに知っていることについていくつか前提を置かせていただきます。
 
 前提条件：
 
-- ターミナルを操作できること
+- ターミナルで基本的な操作ができること
 - Pythonコードを数行書いたことがあること
-- マシンにPythonバージョン3.6以上がインストールされていること（[仮想環境](https://realpython.com/effective-python-environment/#virtual-environments)の使用を強く推奨します）
+- マシンにPythonバージョン3.10以上がインストールされていること（[仮想環境](https://realpython.com/effective-python-environment/#virtual-environments)の使用を強く推奨します）
 - Pythonのパッケージインストーラーである`pip`を使用したことがあること
-  繰り返しになりますが、これらのいずれかに当てはまらない場合や、この記事のコードを再現する予定がない場合でも、おそらく問題なく読み進めることができます。
+  繰り返しになりますが、これらの条件に当てはまらない場合や、この記事のコードを再現する予定がない場合でも、おそらく問題なく読み進めることができます。
 
 ## ブロックチェーンの概要 {#blockchains-briefly}
 
@@ -79,11 +79,11 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 ## インストール {#installation}
 
-このチュートリアルでは、Pythonインタープリター内でのみ作業します。ディレクトリ、ファイル、クラス、関数は作成しません。
+このチュートリアルでは、Pythonインタープリター内でのみ作業します。ディレクトリ、ファイル、クラス、関数などは作成しません。
 
-<FeaturedText>注：以下の例では、`$`で始まるコマンドはターミナルで実行することを意図しています。（`$`は入力しないでください。これは単に行の始まりを示しているだけです。）</FeaturedText>
+<FeaturedText>注：以下の例で、`$`で始まるコマンドはターミナルで実行することを意図しています。（`$`は行の始まりを示しているだけなので、入力しないでください。）</FeaturedText>
 
-まず、探索しやすいユーザーフレンドリーな環境のために[IPython](https://ipython.org/)をインストールします。IPythonはタブ補完などの機能を提供しており、Web3.py内で何が可能かをはるかに簡単に確認できます。
+まず、探索しやすいユーザーフレンドリーな環境を構築するために[IPython](https://ipython.org/)をインストールします。IPythonはタブ補完などの機能を提供しており、Web3.pyで何ができるかを確認するのがはるかに簡単になります。
 
 ```bash
 pip install ipython
@@ -95,15 +95,13 @@ Web3.pyは`web3`という名前で公開されています。次のようにイ�
 pip install web3
 ```
 
-もう1つ、後でブロックチェーンをシミュレートしますが、これにはさらにいくつかの依存関係が必要です。これらは次のようにインストールできます。
+もう1つ、後でブロックチェーンをシミュレートしますが、そのためにはさらにいくつかの依存関係が必要です。これらは次のようにインストールできます。
 
 ```bash
 pip install 'web3[tester]'
 ```
 
-これで準備完了です！
-
-注：`web3[tester]`パッケージはPython 3.10.xxまで動作します。
+これで準備は完了です！
 
 ## サンドボックスの立ち上げ {#spin-up-a-sandbox}
 
@@ -127,22 +125,22 @@ In [1]: from web3 import Web3
 
 ## Web3モジュールの紹介 {#introducing-the-web3-module}
 
-イーサリアムへのゲートウェイであることに加えて、[Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api)モジュールはいくつかの便利な機能を提供します。いくつか見てみましょう。
+イーサリアムへのゲートウェイであることに加えて、[Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api)モジュールはいくつかの便利な機能を提供しています。そのうちのいくつかを見てみましょう。
 
-イーサリアムアプリケーションでは、通常、通貨の単位を変換する必要があります。Web3モジュールは、まさにこのためのヘルパーメソッドをいくつか提供しています。[from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei)と[to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei)です。
+イーサリアムアプリケーションでは、通貨の単位を変換する必要がよくあります。Web3モジュールは、まさにこのためのヘルパーメソッドとして、[from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei)と[to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei)を提供しています。
 
 <FeaturedText>
-注：コンピューターは小数の計算が苦手なことで有名です。これを回避するために、開発者はしばしばドル金額をセントで保存します。たとえば、価格が5.99ドルのアイテムは、データベースに599として保存される場合があります。
+注：コンピューターは小数の計算が苦手なことで知られています。これを回避するため、開発者はドル金額をセント単位で保存することがよくあります。たとえば、5.99ドルの商品はデータベースに599として保存されることがあります。
 
-<b>イーサ</b>でのトランザクションを処理する場合にも、同様のパターンが使用されます。ただし、イーサには小数点以下2桁ではなく、18桁あります！イーサの最小単位は<b>Wei</b>と呼ばれるため、トランザクションを送信する際に指定されるのはこの値です。
+<b>イーサ</b>でトランザクションを処理する場合も、同様のパターンが使用されます。ただし、イーサの小数点以下の桁数は2桁ではなく18桁です！イーサの最小単位は<b>Wei</b>と呼ばれ、トランザクションを送信する際にはこの値が指定されます。
 
-1イーサ = 1000000000000000000 Wei
+1 イーサ = 1000000000000000000 Wei
 
-1 Wei = 0.000000000000000001イーサ
+1 Wei = 0.000000000000000001 イーサ
 
 </FeaturedText>
 
-いくつかの値をWeiに、またはWeiから変換してみてください。イーサとWeiの間の[多くの単位には名前がある](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)ことに注意してください。その中でよく知られているものの1つが**Gwei**です。これは、トランザクション手数料がしばしばこの単位で表されるためです。
+いくつかの値をWeiに変換したり、Weiから変換したりしてみてください。イーサとWeiの間にある[多くの単位には名前が付けられている](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)ことに注意してください。その中でよく知られているものの1つが**Gwei**で、トランザクション手数料を表す際によく使用されます。
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -152,7 +150,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Web3モジュールのその他のユーティリティメソッドには、データ形式コンバーター（例：[`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)）、アドレスヘルパー（例：[`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)）、およびハッシュ関数（例：[`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）が含まれます。これらの多くは、このシリーズの後半で取り上げます。利用可能なすべてのメソッドとプロパティを表示するには、`Web3`.と入力し、ピリオドの後にTabキーを2回押してIPythonの自動補完を利用します。
+Web3モジュールのその他のユーティリティメソッドには、データ形式コンバーター（例：[`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)）、アドレスヘルパー（例：[`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)）、ハッシュ関数（例：[`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）などがあります。これらの多くについては、このシリーズの後半で説明します。利用可能なすべてのメソッドとプロパティを表示するには、IPythonの自動補完を利用して、`Web3`. と入力し、ピリオドの後にTabキーを2回押します。
 
 ## チェーンとの対話 {#talk-to-the-chain}
 
@@ -172,7 +170,7 @@ Web3モジュールのその他のユーティリティメソッドには、デ�
 
 _EthereumTesterProviderはシミュレートされたノードに接続し、迅速な開発環境に便利です。_
 
-そのシミュレートされたノードは[eth-tester](https://github.com/ethereum/eth-tester)と呼ばれ、`pip install web3[tester]`コマンドの一部としてインストールしました。このテスタープロバイダーを使用するようにWeb3.pyを構成するのは、次のように簡単です。
+そのシミュレートされたノードは[eth-tester](https://github.com/ApeWorX/eth-tester)と呼ばれ、`pip install web3[tester]`コマンドの一部としてインストールしました。このテスタープロバイダーを使用するようにWeb3.pyを構成するのは、次のように簡単です。
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -294,10 +292,10 @@ Out[13]: 1000003000000000000000000
 
 後者は良さそうです！残高が1,000,000イーサから1,000,003イーサになりました。しかし、最初のアカウントはどうなったのでしょうか？3イーサよりわずかに多く失っているようです。悲しいかな、人生に無料のものはなく、イーサリアムのパブリックネットワークを使用するには、ピアのサポートの役割に対して報酬を支払う必要があります。トランザクションを送信したアカウントから少額のトランザクション手数料が差し引かれました。この手数料は、消費されたガス量（ETH送金の場合は21000単位のガス）に、ネットワークのアクティビティに応じて変動する基本料金と、トランザクションをブロックに含めるバリデータに支払われるチップを足したものを掛けた金額です。
 
-[ガス](/developers/docs/gas/#post-london)の詳細
+[ガス](/developers/docs/gas/)の詳細
 
 <FeaturedText>注：パブリックネットワークでは、トランザクション手数料はネットワークの需要とトランザクションをどれだけ早く処理したいかに基づいて変動します。手数料の計算方法の内訳に興味がある場合は、<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">トランザクションがブロックにどのように含まれるか</a>に関する私の以前の記事を参照してください。</FeaturedText>
 
 ## 一息つきましょう {#and-breathe}
 
-しばらく続けてきたので、この辺りで休憩するのが良さそうです。奥深い世界はまだ続いており、このシリーズのパート2で引き続き探索していきます。今後登場する概念：実際のノードへの接続、スマートコントラクト、トークン。追加の質問はありますか？ぜひ教えてください！あなたのフィードバックが、今後の方向性に影響を与えます。[ツイッター](https://twitter.com/wolovim)でのリクエストも歓迎します。
+しばらく続けてきたので、この辺りで休憩するのが良さそうです。奥深い世界はまだ続いており、このシリーズのパート2で引き続き探索していきます。今後登場する概念：実際のノードへの接続、スマートコントラクト、トークン。追加の質問はありますか？ぜひ教えてください！あなたのフィードバックが、今後の方向性に影響を与えます。[ツイッター](https://x.com/wolovim)でのリクエストも歓迎します。

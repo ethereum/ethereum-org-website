@@ -1,6 +1,6 @@
 ---
 title: "Danh tính phi tập trung"
-description: "Danh tính phi tập trung là gì và tại sao nó lại quan trọng?"
+description: "Danh tính phi tập trung là gì? Tìm hiểu cách Ethereum cho phép bạn sở hữu và kiểm soát danh tính, thông tin xác thực và dữ liệu của mình mà không cần phụ thuộc vào một nhà cung cấp tập trung."
 lang: vi
 template: use-cases
 sidebarDepth: 2

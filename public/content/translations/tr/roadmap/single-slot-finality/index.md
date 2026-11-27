@@ -1,6 +1,6 @@
 ---
-title: Tek slot kesinliği
-description: Tek slot kesinliğinin açıklaması
+title: "Tek slot kesinliği"
+description: "Tek slot kesinliği, Ethereum'un kesinlik süresini yaklaşık 15 dakikadan tek bir slota indirebilir. Nasıl çalıştığını ve içerdiği ödünleşimleri öğrenin."
 lang: tr
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Alt ağ başına doğrulayıcı sayısını artırarak birleştirmeyi ölçeklen
 
 ## Mevcut ilerleme {#current-progress}
 
-SSF araştırma aşamasındadır. Birkaç yıl boyunca, muhtemelen [Verkle Ağaçları](/roadmap/verkle-trees/) ve [danksharding](/roadmap/danksharding/) gibi diğer önemli yükseltmelerden sonra kullanıma sunulması beklenmemektedir.
+SSF araştırma aşamasındadır. Birkaç yıl daha kullanıma sunulması beklenmemektedir; muhtemelen yeni bir durum ağacı (şu anda [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) kapsamında bir ikili ağaç olarak önerilmektedir) ve [danksharding](/roadmap/danksharding/) gibi diğer önemli yükseltmelerden sonra gerçekleşecektir.
 
 ## Daha fazla bilgi {#further-reading}
 

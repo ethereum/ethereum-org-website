@@ -39,6 +39,6 @@ _Je, unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 ## Mafunzo yanayohusiana {#related-tutorials}
 
 - [Orodha ya ukaguzi ya ujumuishaji wa tokeni](/developers/tutorials/token-integration-checklist/) _– Orodha ya ukaguzi ya mambo ya kuzingatia wakati wa kuingiliana na tokeni._
-- [Kuelewa mkataba mahiri wa tokeni ya ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Utangulizi wa kusambaza mkataba wako mahiri wa kwanza kwenye mtandao wa majaribio wa Ethereum._
-- [Uhamishaji na idhini ya tokeni za ERC20 kutoka kwenye mkataba mahiri wa Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Jinsi ya kutumia mkataba mahiri kuingiliana na tokeni kwa kutumia lugha ya Solidity._
-- [Kutekeleza soko la ERC721 [mwongozo wa jinsi ya kufanya]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Jinsi ya kuweka bidhaa zilizofanywa kuwa tokeni kwa ajili ya kuuzwa kwenye ubao wa matangazo uliogatuliwa._
+- [Mwongozo wa mkataba wa ERC-20](/developers/tutorials/erc20-annotated-code/) _– Mwongozo uliofafanuliwa mstari kwa mstari wa utekelezaji wa mkataba wa ERC-20 wa OpenZeppelin._
+- [Uhamishaji na uidhinishaji wa tokeni za ERC-20 kutoka kwenye mkataba mahiri wa Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Jinsi ya kutumia mkataba mahiri kuingiliana na tokeni kwa kutumia lugha ya Solidity._
+- [Kutekeleza soko la ERC-721 [mwongozo wa jinsi ya kufanya]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Jinsi ya kuweka bidhaa zilizofanywa kuwa tokeni kwa ajili ya kuuzwa kwenye ubao wa matangazo uliogatuliwa._

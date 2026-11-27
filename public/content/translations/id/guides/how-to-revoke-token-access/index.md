@@ -1,6 +1,6 @@
 ---
 title: Cara mencabut akses kontrak pintar ke dana kripto Anda
-description: Panduan tentang cara mencabut akses token kontrak pintar yang eksploitatif
+description: "Panduan langkah demi langkah untuk mencabut persetujuan token: temukan kontrak pintar mana yang dapat membelanjakan kripto Anda dan hapus akses untuk melindungi dana Anda."
 lang: id
 ---
 

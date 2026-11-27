@@ -1,5 +1,11 @@
 # Japanese (ja) Translation Review Findings
 
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.9/10
+Scope: 70 md pages + 20 JSON namespaces (incremental updates), changed lines only; sampled 7 md diffs and ~45 JSON keys, plus scripted sweeps (acronym parentheticals, brand names, tags, placeholders, Latin leftovers).
+
+Fixed (critical): `glossary.json:p2p-trading-definition` carried an extra `<a href="/glossary/#smart-contract">` not in English (removed); transliterated tool/brand names on changed md lines restored to Latin (Lodestar, Nethermind, Erigon, Reth, Geth, Besu, Slither, Echidna, Chainlink, Uniswap, MetaMask, Coinbase; 15 lines); `page-developers-tools-descriptions.json` アーベ/コインベース/メタマスク to Aave/Coinbase/MetaMask (4 values); `分散型金融 (DeFi)` over bare English `DeFi` (1 value); `Lighthouse (ライトハウス)` hybrid collapsed in rust.
+Open: roadmap/security list items switched from full-width `：` to `: `; `ベス`/`ゲス` etc. still katakana in 100+ untouched lines (tree convention conflicts with #113); `ERC-4626 vs ERC-7540` heading left English; mixed `<strong>`/`**` in dencun.
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

@@ -6,7 +6,7 @@ lang: id
 template: upgrade
 ---
 
-Cancun-Deneb (Dencun) adalah pembaruan pada jaringan Ethereum, yang mengaktifkan **Proto-Danksharding (EIP-4844)**, memperkenalkan **blob** data sementara untuk penyimpanan rollup [lapisan 2 (l2)](/glossary/#layer-2) yang lebih murah.
+Cancun-Deneb (Dencun) adalah pembaruan pada jaringan Ethereum, yang mengaktifkan **Proto-Danksharding (EIP-4844)**, memperkenalkan **blob** data sementara untuk penyimpanan rollup [lapisan 2 (L2)](/glossary/#layer-2) yang lebih murah.
 
 Jenis transaksi baru memungkinkan penyedia rollup untuk menyimpan data dengan lebih hemat biaya dalam apa yang dikenal sebagai "blob". Blob dijamin tersedia di jaringan selama sekitar 18 hari (lebih tepatnya, 4096 [Epok](/glossary/#epoch)). Setelah periode ini, blob dipangkas dari jaringan, tetapi aplikasi masih dapat memverifikasi validitas datanya menggunakan bukti (proof). 
 
@@ -29,19 +29,19 @@ Hal ini secara signifikan mengurangi biaya rollup, membatasi pertumbuhan rantai,
 
 Dencun terutama mengatasi **skalabilitas** (menangani lebih banyak pengguna dan lebih banyak transaksi) dengan **biaya yang terjangkau**, sambil **mempertahankan desentralisasi** jaringan.
 
-Komunitas Ethereum telah mengambil pendekatan "berpusat pada rollup" untuk pertumbuhannya, yang menempatkan rollup lapisan 2 (l2) sebagai sarana utama untuk mendukung lebih banyak pengguna dengan aman.
+Komunitas Ethereum telah mengambil pendekatan "berpusat pada rollup" untuk pertumbuhannya, yang menempatkan rollup lapisan 2 (L2) sebagai sarana utama untuk mendukung lebih banyak pengguna dengan aman.
 
 Jaringan rollup menangani _pemrosesan_ (atau "eksekusi") transaksi secara terpisah dari Mainnet dan kemudian memublikasikan bukti kriptografi dan/atau data transaksi terkompresi dari hasilnya kembali ke Mainnet untuk pencatatan. Menyimpan bukti-bukti ini membawa biaya (dalam bentuk [gas](/glossary/#gas)), yang, sebelum Proto-Danksharding, harus disimpan secara permanen oleh semua operator node jaringan, menjadikannya tugas yang mahal.
 
-Pengenalan Proto-Danksharding dalam pembaruan Dencun menambahkan penyimpanan data yang lebih murah untuk bukti-bukti ini dengan hanya mewajibkan operator node untuk menyimpan data ini selama sekitar 18 hari, setelah itu data dapat dihapus dengan aman untuk mencegah perluasan persyaratan perangkat keras. Karena rollup biasanya memiliki periode penarikan selama 7 hari, model keamanan mereka tidak berubah selama blob tersedia di lapisan 1 (l1) untuk durasi ini. Jendela pemangkasan 18 hari memberikan penyangga yang signifikan untuk periode ini.
+Pengenalan Proto-Danksharding dalam pembaruan Dencun menambahkan penyimpanan data yang lebih murah untuk bukti-bukti ini dengan hanya mewajibkan operator node untuk menyimpan data ini selama sekitar 18 hari, setelah itu data dapat dihapus dengan aman untuk mencegah perluasan persyaratan perangkat keras. Karena rollup biasanya memiliki periode penarikan selama 7 hari, model keamanan mereka tidak berubah selama blob tersedia di lapisan 1 (L1) untuk durasi ini. Jendela pemangkasan 18 hari memberikan penyangga yang signifikan untuk periode ini.
 
 [Lebih lanjut tentang penskalaan Ethereum](/roadmap/scaling/)
 
 ## Bagaimana data blob lama diakses? {#historical-access}
 
-Meskipun node Ethereum reguler akan selalu menyimpan _state saat ini_ dari jaringan, data blob historis dapat dibuang sekitar 18 hari setelah pengenalannya. Sebelum membuang data ini, Ethereum memastikan bahwa data tersebut telah tersedia untuk semua peserta jaringan, memberikan waktu untuk:
+Meskipun node Ethereum reguler akan selalu menyimpan _state saat ini_ dari jaringan, data blob historis dapat dibuang sekitar 18 hari setelah diperkenalkan. Sebelum membuang data ini, Ethereum memastikan bahwa data tersebut telah tersedia bagi semua peserta jaringan, memberikan waktu untuk:
 
-- Pihak yang berkepentingan untuk mengunduh dan menyimpan data.
+- Pihak yang berkepentingan untuk mengunduh dan menyimpan data tersebut.
 - Penyelesaian semua periode tantangan rollup.
 - Finalisasi transaksi rollup.
 
@@ -49,10 +49,9 @@ Data blob _historis_ mungkin diinginkan karena berbagai alasan dan dapat disimpa
 
 - **Protokol pengindeksan pihak ketiga**, seperti The Graph, menyimpan data ini melalui jaringan operator node terdesentralisasi yang diberi insentif oleh mekanisme ekonomi kripto.
 - **BitTorrent** adalah protokol terdesentralisasi di mana sukarelawan dapat menyimpan dan mendistribusikan data ini kepada orang lain.
-- **[Portal Network Ethereum](/developers/docs/networking-layer/portal-network/)** bertujuan untuk menyediakan akses ke semua data Ethereum melalui jaringan operator node terdesentralisasi dengan mendistribusikan data di antara peserta yang mirip dengan BitTorrent.
-- **Pengguna individu** selalu bebas untuk menyimpan salinan data mereka sendiri yang mereka inginkan untuk referensi historis.
+- **Pengguna individu** selalu bebas untuk menyimpan salinan data apa pun yang mereka inginkan untuk referensi historis.
 - **Penyedia rollup** diberi insentif untuk menyimpan data ini guna meningkatkan pengalaman pengguna rollup mereka.
-- **Penjelajah blok (block explorer)** biasanya menjalankan node arsip yang mengindeks dan menyimpan semua informasi ini untuk referensi historis yang mudah, dapat diakses oleh pengguna melalui antarmuka web.
+- **Penjelajah blok** biasanya menjalankan node arsip yang mengindeks dan menyimpan semua informasi ini untuk referensi historis yang mudah, dapat diakses oleh pengguna melalui antarmuka web.
 
 Penting untuk dicatat bahwa memulihkan state historis beroperasi pada **model kepercayaan 1-dari-N**. Ini berarti Anda hanya memerlukan data dari _satu sumber tepercaya_ untuk memverifikasi kebenarannya menggunakan state jaringan saat ini.
 
@@ -76,24 +75,24 @@ Klien konsensus menangani perangkat lunak _Validator_, yang semuanya telah diper
 
 ## Apakah semua transaksi di L2 sekarang akan menggunakan ruang blob sementara, atau apakah Anda dapat memilih? {#calldata-vs-blobs}
 
-Transaksi rollup di lapisan 2 (l2) Ethereum memiliki opsi untuk menggunakan dua jenis penyimpanan data: ruang blob sementara atau data panggilan (calldata) kontrak pintar permanen. Ruang blob adalah pilihan yang ekonomis, menyediakan penyimpanan sementara dengan biaya lebih rendah. Ini menjamin ketersediaan data untuk semua periode tantangan yang diperlukan. Di sisi lain, data panggilan kontrak pintar menawarkan penyimpanan permanen tetapi lebih mahal.
+Transaksi rollup di lapisan 2 (L2) Ethereum memiliki opsi untuk menggunakan dua jenis penyimpanan data: ruang blob sementara atau data panggilan (calldata) kontrak pintar permanen. Ruang blob adalah pilihan yang ekonomis, menyediakan penyimpanan sementara dengan biaya lebih rendah. Ini menjamin ketersediaan data untuk semua periode tantangan yang diperlukan. Di sisi lain, data panggilan kontrak pintar menawarkan penyimpanan permanen tetapi lebih mahal.
 
 Keputusan antara menggunakan ruang blob atau data panggilan terutama dibuat oleh penyedia rollup. Mereka mendasarkan keputusan ini pada permintaan ruang blob saat ini. Jika ruang blob sangat diminati, rollup dapat memilih data panggilan untuk memastikan data diposting tepat waktu.
 
 Meskipun secara teoretis pengguna dapat memilih jenis penyimpanan pilihan mereka, penyedia rollup biasanya mengelola pilihan ini. Menawarkan opsi ini kepada pengguna akan menambah kompleksitas, terutama dalam transaksi penggabungan (bundling) yang hemat biaya. Untuk detail spesifik tentang pilihan ini, pengguna harus merujuk pada dokumentasi yang disediakan oleh masing-masing penyedia rollup.
 
-## Apakah 4844 akan mengurangi gas lapisan 1 (l1)? {#l1-fee-impact}
+## Apakah 4844 akan mengurangi gas lapisan 1 (L1)? {#l1-fee-impact}
 
-Tidak secara signifikan. Pasar gas baru diperkenalkan secara eksklusif untuk ruang blob, untuk digunakan oleh penyedia rollup. _Meskipun biaya di lapisan 1 (l1) dapat dikurangi dengan mengalihkan data rollup ke blob, pembaruan ini terutama berfokus pada pengurangan biaya lapisan 2 (l2). Pengurangan biaya di lapisan 1 (l1) (Mainnet) dapat terjadi sebagai efek orde kedua pada tingkat yang lebih rendah._
+Tidak secara signifikan. Pasar gas baru diperkenalkan secara eksklusif untuk ruang blob, untuk digunakan oleh penyedia rollup. _Meskipun biaya di lapisan 1 (L1) dapat dikurangi dengan mengalihkan data rollup ke blob, pembaruan ini terutama berfokus pada pengurangan biaya lapisan 2 (L2). Pengurangan biaya di lapisan 1 (L1) (Mainnet) dapat terjadi sebagai efek orde kedua pada tingkat yang lebih rendah._
 
-- Pengurangan gas lapisan 1 (l1) akan sebanding dengan adopsi/penggunaan data blob oleh penyedia rollup
-- Gas lapisan 1 (l1) kemungkinan akan tetap kompetitif dari aktivitas yang tidak terkait dengan rollup
-- Rollup yang mengadopsi penggunaan ruang blob akan menuntut lebih sedikit gas lapisan 1 (l1), membantu mendorong biaya gas lapisan 1 (l1) ke bawah dalam waktu dekat
-- Ruang blob masih terbatas, jadi jika blob di dalam blok jenuh/penuh, maka rollup mungkin diharuskan untuk memposting data mereka sebagai data permanen untuk sementara waktu, yang akan mendorong harga gas lapisan 1 (l1) dan lapisan 2 (l2) naik
+- Pengurangan gas lapisan 1 (L1) akan sebanding dengan adopsi/penggunaan data blob oleh penyedia rollup
+- Gas lapisan 1 (L1) kemungkinan akan tetap kompetitif dari aktivitas yang tidak terkait dengan rollup
+- Rollup yang mengadopsi penggunaan ruang blob akan menuntut lebih sedikit gas lapisan 1 (L1), membantu mendorong biaya gas lapisan 1 (L1) ke bawah dalam waktu dekat
+- Ruang blob masih terbatas, jadi jika blob di dalam blok jenuh/penuh, maka rollup mungkin diharuskan untuk memposting data mereka sebagai data permanen untuk sementara waktu, yang akan mendorong harga gas lapisan 1 (L1) dan lapisan 2 (L2) naik
 
-## Apakah ini akan mengurangi biaya pada blockchain lapisan 1 (l1) EVM lainnya? {#alt-l1-fee-impact}
+## Apakah ini akan mengurangi biaya pada blockchain lapisan 1 (L1) EVM lainnya? {#alt-l1-fee-impact}
 
-Tidak. Manfaat Proto-Danksharding khusus untuk rollup lapisan 2 (l2) Ethereum yang menyimpan buktinya di lapisan 1 (l1) (Mainnet).
+Tidak. Manfaat Proto-Danksharding khusus untuk rollup lapisan 2 (L2) Ethereum yang menyimpan buktinya di lapisan 1 (L1) (Mainnet).
 
 Hanya dengan kompatibel dengan Mesin Virtual Ethereum (EVM) tidak berarti bahwa suatu jaringan akan melihat manfaat apa pun dari pembaruan ini. Jaringan yang beroperasi secara independen dari Ethereum (baik kompatibel dengan EVM atau tidak) tidak menyimpan datanya di Ethereum dan tidak akan melihat manfaat apa pun dari pembaruan ini.
 

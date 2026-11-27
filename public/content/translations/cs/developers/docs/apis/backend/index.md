@@ -66,7 +66,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 **Infura -** **_API Etherea jako služba._**
 
 - [infura.io](https://infura.io)
-- [Dokumentace](https://docs.infura.io/api)
+- [Dokumentace](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Cenově dostupný poskytovatel EVM JSON-RPC_**
@@ -77,7 +77,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 **NOWNodes - _Plné uzly a prohlížeče bloků._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Dokumentace](https://nownodes.gitbook.io/documentation)
+- [Dokumentace](https://docs.nownodes.io/)
 
 **QuickNode -** **_Blockchainová infrastruktura jako služba._**
 
@@ -145,7 +145,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 
 ### Blockchainové služby {#blockchain-services}
 
-**BlockCypher -** **_Webová API pro Ethereum._**
+**BlockCypher -** **_Webová API Etherea._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Dokumentace](https://www.blockcypher.com/dev/ethereum/)
@@ -162,32 +162,31 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 - [Dokumentace](https://docs.chainstack.com/)
 - [Reference API Etherea](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_API pro blockchainovou infrastrukturu._**
+**Coinbase Cloud Node -** **_API blockchainové infrastruktury._**
 
 - [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Dokumentace](https://docs.cdp.coinbase.com/)
 
-**DataHub od Figment -** **_Služby API Web3 s Ethereum Mainnet a testovacími sítěmi._**
+**DataHub od Figment -** **_Služby API Web3 s Ethereum Mainnetem a testovacími sítěmi._**
 
 - [DataHub](https://www.figment.io/)
 - [Dokumentace](https://docs.figment.io/)
 
-**Moralis -** **_Poskytovatel podnikového EVM API._**
+**Moralis -** **_Poskytovatel podnikového API pro EVM._**
 
 - [moralis.io](https://moralis.io)
 - [Dokumentace](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Fórum](https://forum.moralis.io/)
 
-**NFTPort -** **_API pro data a ražení na Ethereu._**
+**NFTPort -** **_API pro data Etherea a ražení._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Dokumentace](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_Obecná platforma pro multi-krypto blockchainová API._**
+**Tokenview -** **_Obecná multi-krypto platforma pro blockchainová API._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Dokumentace](https://services.tokenview.io/docs?type=api)
@@ -199,7 +198,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 - [Dokumentace](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_Obohacené API pro blockchainová data v reálném čase napříč desítkami sítí._**
+**Codex -** **_API pro obohacená blockchainová data v reálném čase napříč desítkami sítí._**
 
 - [codex.io](https://www.codex.io/)
 - [Dokumentace](https://docs.codex.io)
@@ -210,10 +209,9 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 **Covalent -** **_Obohacená blockchainová API pro více než 200 sítí._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Dokumentace](https://www.covalenthq.com/docs/api/)
+- [Dokumentace](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Další čtení {#further-reading}
 
@@ -226,5 +224,4 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 
 ## Související návody {#related-tutorials}
 
-- [Nastavení Web3.js pro použití blockchainu Etherea v JavaScriptu](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Pokyny pro nastavení Web3.js ve vašem projektu._
-- [Volání chytrého kontraktu z JavaScriptu](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Podívejte se, jak pomocí tokenu DAI volat funkce kontraktů pomocí JavaScriptu._
+- [Serverové komponenty a agenti pro aplikace Web3](/developers/tutorials/server-components/) _– Jak psát serverové komponenty v TypeScriptu, které naslouchají událostem na blockchainu a reagují transakcemi._

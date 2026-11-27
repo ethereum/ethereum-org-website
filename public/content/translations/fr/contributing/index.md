@@ -12,35 +12,36 @@ Nous sommes une communauté accueillante qui vous aidera à vous développer et 
 ## Façons de contribuer {#ways-to-contribute}
 
 **Traductions**
-- [Signaler une erreur de traduction](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Le [Programme de traduction](/contributing/translation-program/) touche à sa fin et n'intègre plus de nouveaux traducteurs
+- [Signaler une erreur de traduction](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – Le [programme de traduction](/contributing/translation-program/) touche à sa fin et n'intègre plus de nouveaux traducteurs
 
 **Développement**
-- [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) – Les tâches que nous avons identifiées et qui doivent être accomplies
+- [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) – Tâches que nous avons identifiées et qui doivent être accomplies
 
 **Design**
 - [Aider à concevoir le site Web](/contributing/design/) – Les designers de tous niveaux peuvent contribuer à l'amélioration du site Web
 
 **Contenu**
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) – Suggérer de nouvelles pages ou apporter des modifications à ce qui existe déjà
-- [Rédiger un article de constructeur](/contributing/adding-articles/) - Contribuer en rédigeant un article pour la section [Actualités](/latest/)
+- [Rédiger un article de constructeur](/contributing/adding-articles/) - Contribuer en rédigeant un article pour la section [Dernières actualités](/latest/)
 - [Ajouter des ressources communautaires](/contributing/content-resources/) – Ajouter un article ou une ressource utile à une page pertinente
 - [Suggérer un rapport](/contributing/adding-reports/) - Suggérer un rapport de recherche pour la page [Rapports](/reports/)
-- [Partager votre histoire](/contributing/adding-community-stories/) - Soumettre une histoire sur vos expériences personnelles avec l'open source et les technologies de sanctuaire, sur la façon dont l'écosystème Ethereum a eu un impact sur votre vie, ou sur la façon dont vous et votre communauté utilisez Ethereum
+- [Partager votre histoire](/contributing/adding-community-stories/) - Soumettre une histoire sur vos expériences personnelles avec l'open source et les technologies sanctuaires, sur la façon dont l'écosystème Ethereum a eu un impact sur votre vie, ou sur la façon dont vous et votre communauté utilisez Ethereum
 - [Quiz](/contributing/quizzes/) – Ajouter, mettre à jour et supprimer des banques de questions de quiz pour une page pertinente
 - [Suggérer une ressource de design](/contributing/design/adding-design-resources/) – Ajouter, mettre à jour et supprimer des ressources de design utiles
 - [Suggérer une vidéo](/contributing/adding-videos/) – Suggérer une vidéo éducative pour la galerie vidéo
+- [Ajouter un terme au glossaire](/contributing/adding-glossary-terms/) – Ajouter ou mettre à jour un terme dans le [glossaire Ethereum](/glossary/)
 
 **Idées de fonctionnalités**
 - [Demander une fonctionnalité](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Faites-nous part de vos idées pour une nouvelle fonctionnalité ou un nouveau design
 
 **Listes de produits**
 - [Ajouter une plateforme d'échange](/contributing/adding-exchanges/) – Ajouter une plateforme d'échange à notre [outil de recherche de plateformes d'échange](/get-eth/#country-picker)
-- [Ajouter un produit](/contributing/adding-products/) – Ajouter une application décentralisée (dapp) ou un portefeuille à une page pertinente
+- [Ajouter un produit](/contributing/adding-products/) – Ajouter une dapp ou un portefeuille à une page pertinente
 - [Ajouter des outils de développement](/contributing/adding-developer-tools/) – Ajouter un outil de développement à une page pertinente
-- [Ajouter une couche 2 (l2)](/contributing/adding-layer-2s/) – Ajouter une couche 2 (l2) à une page pertinente
+- [Ajouter une couche 2](/contributing/adding-layer-2s/) – Ajouter une couche 2 à une page pertinente
 - [Ajouter un produit ou service de staking](/contributing/adding-staking-products/) – Ajouter un projet qui facilite le staking en solo, le staking mutualisé ou le staking en tant que service
 - [Ajouter un portefeuille](/contributing/adding-wallets/) – Ajouter un portefeuille pour la [page de recherche de portefeuilles](/wallets/find-wallet/)
-- [Suggérer un projet pour notre page DeSci](/contributing/adding-desci-projects/) – Ajouter un projet construit sur Ethereum qui contribue à la science décentralisée (DeSci)
+- [Suggérer un projet pour notre page DeSci](/contributing/adding-desci-projects/) – Ajouter un projet construit sur Ethereum qui contribue à la science décentralisée
 - [Ajouter une ressource](/contributing/adding-resources/) – Ajouter une ressource utile à n'importe quelle page pertinente
 
 Des questions ? 🤔 Rejoignez notre [serveur Discord](/discord/)
@@ -100,19 +101,9 @@ Si votre contribution est fusionnée dans ethereum.org, vous aurez la possibilit
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre OAT.
 4. Réclamez votre OAT !
 
-Vous ne devez utiliser que des portefeuilles en auto-garde pour réclamer des OAT. N'utilisez pas de comptes de plateforme d'échange ou d'autres comptes dont vous ne détenez pas les clés privées, car ceux-ci ne vous permettront pas d'accéder à vos OAT et de les gérer.
+Vous ne devez utiliser que des portefeuilles à auto-garde pour réclamer des OAT. N'utilisez pas de comptes de plateforme d'échange ou d'autres comptes dont vous ne détenez pas les clés privées, car ceux-ci ne vous permettront pas d'accéder à vos OAT et de les gérer.
 
-## Réclamer votre GitPOAP {#claim-gitpoap}
-
-GitPOAP reconnaîtra également automatiquement votre contribution fusionnée et vous permettra de frapper un POAP de contributeur unique et distinct sur leur propre plateforme !
-
-
-### Comment réclamer {#how-to-claim-2}
-
-1. Visitez [GitPOAP](https://www.gitpoap.io).
-2. Connectez-vous avec votre portefeuille ou même avec votre adresse e-mail via l'option de connexion.
-3. Recherchez votre nom d'utilisateur GitHub, votre adresse ETH, vos noms du Service de Noms Ethereum (ENS) ou tout GitPOAP pour vérifier si vous êtes éligible.
-4. Si votre compte GitHub est éligible, vous pourrez alors frapper un GitPOAP !
+<LinkWithArrow href="/collectibles/">Voir vos objets de collection ethereum.org</LinkWithArrow>
 
 ## Contributeurs {#contributors}
 

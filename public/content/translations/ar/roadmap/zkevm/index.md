@@ -95,20 +95,20 @@ template: roadmap
 
 تستخدم هذه الأجهزة الافتراضية القائمة على <span dir="ltr">RISC-V</span> لتنفيذ رمز البايت الخاص بآلة إيثيريوم الافتراضية (<span dir="ltr">EVM</span>)، ثم تقوم بإنشاء إثباتات المعرفة الصفرية (<span dir="ltr">ZK</span>) للتنفيذ الصحيح. يتم تتبع نتائج الاختبارات والتقدم المحدث في [متتبع <span dir="ltr">zkVM</span> التابع لمؤسسة إيثيريوم](https://zkevm.ethereum.foundation/zkvm-tracker).
 
-## كيف تتناسب <span dir="ltr">zkEVM</span> مع الترقيات الأخرى {#related-upgrades}
+## كيف تتوافق <span dir="ltr">zkEVM</span> مع الترقيات الأخرى {#related-upgrades}
 
 يرتبط التحقق من <span dir="ltr">zkEVM</span> في الطبقة 1 (<span dir="ltr">L1</span>) بالعديد من عناصر خارطة طريق إيثيريوم الأخرى:
 
-- **[أشجار فيركل](/roadmap/verkle-trees/)**: تتيح شهوداً أصغر للتحقق من انعدام الحالة، مما يقلل من البيانات التي يحتاج المُثبِتون للعمل معها
-- **[انعدام الحالة](/roadmap/statelessness/)**: تعد <span dir="ltr">zkEVM</span> عامل تمكين رئيسي—مع إثباتات المعرفة الصفرية (<span dir="ltr">ZK</span>) للتنفيذ، لا تحتاج العقد إلى حالة كاملة للتحقق من الكتل
-- **[فصل المقترح عن الباني (PBS)](/roadmap/pbs/)**: يمكن لبناة الكتل دمج إنشاء الإثباتات، أو قد يظهر سوق مُثبِتين منفصل
+- **شجرة حالة جديدة**: شجرة ثنائية موحدة ([<span dir="ltr">EIP-7864</span>](https://eips.ethereum.org/EIPS/eip-7864))، مقترحة بدلاً من تصميم [شجرة فيركل](/roadmap/verkle-trees/) السابق، ستمكن من استخدام شهود أصغر للتحقق في ظل انعدام الحالة وهي مصممة لتكون أسهل في الإثبات
+- **[انعدام الحالة](/roadmap/statelessness/)**: تعد <span dir="ltr">zkEVM</span> عامل تمكين رئيسي—مع إثباتات المعرفة الصفرية (<span dir="ltr">ZK</span>) للتنفيذ، لا تحتاج العقد إلى الحالة الكاملة للتحقق من الكتل
+- **[<span dir="ltr">PBS</span>](/roadmap/pbs/)**: يمكن لبناة الكتل دمج إنشاء الإثباتات، أو قد يظهر سوق منفصل للمُثبِتين
 - **[نهائية الخانة الواحدة](/roadmap/single-slot-finality/)**: يمكن أن يتيح إنشاء الإثباتات بشكل أسرع نهائية الخانة الواحدة مع ضمانات تشفيرية
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-التحقق من <span dir="ltr">zkEVM</span> في الطبقة 1 (<span dir="ltr">L1</span>) قيد البحث النشط ولم يتم دمجه بعد في عملاء إيثيريوم في مرحلة الإنتاج.
+لا يزال التحقق من <span dir="ltr">zkEVM</span> في الطبقة 1 (<span dir="ltr">L1</span>) قيد البحث النشط ولم يتم دمجه بعد في عملاء إيثيريوم في مرحلة الإنتاج.
 </AlertDescription>
 </AlertContent>
 </Alert>

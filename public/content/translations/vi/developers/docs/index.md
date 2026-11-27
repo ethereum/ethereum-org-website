@@ -1,6 +1,6 @@
 ---
 title: "Tài liệu phát triển Ethereum"
-description: "Giới thiệu tài liệu dành cho nhà phát triển của ethereum.org."
+description: "Tài liệu phát triển Ethereum: tìm hiểu các kiến thức nền tảng, ngăn xếp Ethereum, hợp đồng thông minh, các nút và mở rộng quy mô, cùng với các hướng dẫn để xây dựng dapp đầu tiên của bạn."
 lang: vi
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Pontes de blockchain
 metaTitle: "Introdução às pontes de blockchain"
-description: "As pontes permitem que os usuários movam seus fundos entre diferentes blockchains"
+description: "O que é uma ponte de blockchain? Aprenda como as pontes movem tokens entre o Ethereum, as camadas 2 e outras cadeias, os tipos de pontes e os riscos a serem considerados."
 lang: pt-br
 ---
 
-_A Web3 evoluiu para um ecossistema de blockchains de camada 1 (l1) e soluções de escalabilidade de camada 2 (l2), cada uma projetada com capacidades e compensações únicas. À medida que o número de protocolos de blockchain aumenta, também aumenta a demanda para mover ativos entre cadeias. Para atender a essa demanda, precisamos de pontes._
+_A Web3 evoluiu para um ecossistema de blockchains de camada 1 (L1) e soluções de escalabilidade de camada 2 (L2), cada uma projetada com capacidades e compensações únicas. À medida que o número de protocolos de blockchain aumenta, também aumenta a demanda para mover ativos entre cadeias. Para atender a essa demanda, precisamos de pontes._
 
 <Divider />
 
@@ -21,7 +21,7 @@ Mas, o que você faz se quiser fazer uma troca semelhante para usar uma [blockch
 
 ## Por que precisamos de pontes? {#why-do-we-need-bridges}
 
-Todas as blockchains têm suas limitações. Para que o Ethereum escale e acompanhe a demanda, ele exigiu [rollups](/glossary/#rollups). Alternativamente, l1s como Solana e Avalanche são projetadas de forma diferente para permitir maior vazão, mas ao custo da descentralização.
+Todas as blockchains têm suas limitações. Para que o Ethereum escale e acompanhe a demanda, ele exigiu [rollups](/glossary/#rollups). Alternativamente, L1s como Solana e Avalanche são projetadas de forma diferente para permitir maior vazão, mas ao custo da descentralização.
 
 No entanto, todas as blockchains são desenvolvidas em ambientes isolados e têm regras e mecanismos de [consenso](/glossary/#consensus) diferentes. Isso significa que elas não podem se comunicar nativamente, e os tokens não podem se mover livremente entre as blockchains.
 
@@ -34,7 +34,7 @@ As pontes existem para conectar blockchains, permitindo a transferência de info
 - que os usuários acessem novas plataformas e aproveitem os benefícios de diferentes cadeias.
 - que desenvolvedores de diferentes ecossistemas de blockchain colaborem e construam novas plataformas para os usuários.
 
-[Como transferir tokens via ponte para a camada 2 (l2)](/guides/how-to-use-a-bridge/)
+[Como transferir tokens via ponte para a camada 2 (L2)](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -44,7 +44,7 @@ A seguir estão alguns cenários onde você pode usar uma ponte:
 
 ### Taxas de transação mais baixas {#transaction-fees}
 
-Digamos que você tenha ETH na Rede Principal do Ethereum, mas queira taxas de transação mais baratas para explorar diferentes dapps. Ao transferir via ponte seu ETH da Mainnet para um rollup de l2 do Ethereum, você pode desfrutar de taxas de transação mais baixas.
+Digamos que você tenha ETH na Rede Principal do Ethereum, mas queira taxas de transação mais baratas para explorar diferentes dapps. Ao transferir via ponte seu ETH da Mainnet para um rollup de L2 do Ethereum, você pode desfrutar de taxas de transação mais baixas.
 
 ### Dapps em outras blockchains {#dapps-other-chains}
 
@@ -52,7 +52,7 @@ Se você tem usado a Aave na Rede Principal do Ethereum para fornecer USDT, mas 
 
 ### Explorar ecossistemas de blockchain {#explore-ecosystems}
 
-Se você tem ETH na Rede Principal do Ethereum e deseja explorar uma l1 alternativa para experimentar seus dapps nativos. Você pode usar uma ponte para fazer a transferência do seu ETH da Rede Principal do Ethereum para a l1 alternativa.
+Se você tem ETH na Rede Principal do Ethereum e deseja explorar uma L1 alternativa para experimentar seus dapps nativos. Você pode usar uma ponte para fazer a transferência do seu ETH da Rede Principal do Ethereum para a L1 alternativa.
 
 ### Possuir ativos cripto nativos {#own-native}
 
@@ -103,8 +103,8 @@ Muitas soluções de ponte adotam modelos entre esses dois extremos com graus va
 
 Usar pontes permite que você mova seus ativos entre diferentes blockchains. Aqui estão alguns recursos que podem ajudá-lo a encontrar e usar pontes:
 
-- **[Resumo de Pontes do L2BEAT](https://l2beat.com/bridges/summary) e [Análise de Risco de Pontes do L2BEAT](https://l2beat.com/bridges/summary)**: Um resumo abrangente de várias pontes, incluindo detalhes sobre participação de mercado, tipo de ponte e cadeias de destino. O L2BEAT também possui uma análise de risco para pontes, ajudando os usuários a tomar decisões informadas ao selecionar uma ponte.
-- **[Resumo de Pontes do DefiLlama](https://defillama.com/bridges/Ethereum)**: Um resumo dos volumes de pontes nas redes Ethereum.
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: Um resumo abrangente de várias pontes, incluindo detalhes sobre participação de mercado, tipo de ponte e cadeias de destino. O ETHBEAT também possui uma análise de risco para pontes, ajudando os usuários a tomar decisões informadas ao selecionar uma ponte.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: Um resumo dos volumes de pontes nas redes Ethereum.
 
 <Divider />
 
@@ -130,16 +130,17 @@ Os fundos do usuário estão em risco se:
 
 Um hack recente foi na ponte Wormhole da Solana, [onde 120 mil wETH (US$ 325 milhões) foram roubados durante o hack](https://rekt.news/wormhole-rekt/). Muitos dos [principais hacks em blockchains envolveram pontes](https://rekt.news/leaderboard/).
 
-As pontes são cruciais para a integração de usuários nas l2s do Ethereum, e até mesmo para usuários que desejam explorar diferentes ecossistemas. No entanto, dados os riscos envolvidos na interação com pontes, os usuários devem entender as compensações que as pontes estão fazendo. Estas são algumas [estratégias para segurança cross-chain](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
+As pontes são cruciais para a integração de usuários nas L2s do Ethereum, e até mesmo para usuários que desejam explorar diferentes ecossistemas. No entanto, dados os riscos envolvidos na interação com pontes, os usuários devem entender as compensações que as pontes estão fazendo. Estas são algumas [estratégias para segurança cross-chain](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
 
 <Divider />
 
 ## Leitura adicional {#further-reading}
 
 - [EIP-5164: Execução Cross-Chain](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 de junho de 2022 - Brendan Asselstine_
-- [Estrutura de Risco de L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 de julho de 2022 - Bartek Kiepuszewski_
+- [Estrutura de Risco de L2Bridge](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _5 de julho de 2022 - Bartek Kiepuszewski_
 - ["Por que o futuro será multi-chain, mas não será cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 de janeiro de 2022 - Vitalik Buterin_
 - [Aproveitando a Segurança Compartilhada para Interoperabilidade Cross-Chain Segura: Comitês de Estado Lagrange e Além](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 de junho de 2024 - Emmanuel Awosika_
 - [O Estado das Soluções de Interoperabilidade de Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 de junho de 2024 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

@@ -1,7 +1,7 @@
 ---
 title: "富薩卡 🦓"
 metaTitle: "Fulu-Osaka (富薩卡)"
-description: "了解富薩卡協定升級"
+description: "富薩卡已於 2025 年 12 月 3 日上線。了解這次以太坊升級帶來了哪些改變，包括 PeerDAS，它擴展了資料塊以實現更便宜的第二層 (L2) 交易。"
 lang: zh-tw
 template: upgrade
 authors: ["Nixo", "馬里奧·哈維爾"]

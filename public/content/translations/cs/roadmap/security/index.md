@@ -39,13 +39,13 @@ Pro uživatele je [finalita](/glossary/#finality) okamžikem, kdy se transakce s
 
 <ButtonLink variant="outline" href="/roadmap/single-slot-finality/">Více o výzkumu rychlejší finality</ButtonLink>
 
-## Odolní validátoři {#resilient-validators}
+## Odolné validátory {#resilient-validators}
 
-Validátor je obvykle jeden stroj, který drží jeden podpisový klíč. **Technologie distribuovaných validátorů (DVT)** nahrazuje tento jediný stroj výborem strojů, které sdílejí klíč a podepisují společně, takže selhání jednoho počítače nebo krádež jednoho klíče nevyřadí validátor z provozu. DVT je v produkčním provozu a je ve velkém měřítku využívána operátory stakingu. V lednu 2026 navrhl Vitalik Buterin zjednodušenou variantu na úrovni protokolu zvanou DVT-lite; jedná se o raný návrh bez naplánovaného forku.
+Validátor je obvykle jeden stroj, který drží jeden podepisovací klíč. **Technologie distribuovaných validátorů (DVT)** nahrazuje tento jediný stroj výborem strojů, které sdílejí klíč a podepisují společně, takže selhání jednoho počítače nebo krádež jednoho klíče nevyřadí validátor z provozu. DVT je v produkčním provozu a ve velkém měřítku ji využívají operátoři stakingu. V lednu 2026 navrhl Vitalik Buterin zjednodušenou variantu na úrovni protokolu nazvanou DVT-lite; jedná se o raný návrh bez naplánovaného forku.
 
-Síť se také chrání prostřednictvím [klientské diverzity](/developers/docs/nodes-and-clients/client-diversity/): Ethereum běží na několika nezávisle vytvořených softwarových implementacích, takže chyba v jednom klientovi neohrozí zbytek sítě.
+Síť se také chrání prostřednictvím [klientské diverzity](/developers/docs/nodes-and-clients/client-diversity/): Ethereum běží na několika nezávisle vytvořených softwarových implementacích, takže chyba v jednom klientovi ponechá zbytek sítě v chodu.
 
-Dva dřívější výzkumné nápady, view-merge a tajná volba lídra, již nejsou aktivními položkami plánu vývoje.
+Dvě dřívější výzkumné myšlenky, view-merge a [tajná volba lídra](/roadmap/secret-leader-election/), již nejsou aktivními položkami plánu vývoje.
 
 <ButtonLink variant="outline" href="/staking/dvt/">Více o technologii distribuovaných validátorů</ButtonLink>
 
@@ -71,21 +71,21 @@ Ne. Žádný kvantový počítač dnes nedokáže prolomit kryptografii Etherea.
 
 ## Jednodušší a efektivnější protokol {#simpler-and-more-efficient-protocol}
 
-Složitost vytváří příležitosti pro chyby a zranitelnosti. Část plánu vývoje se zaměřuje na **zjednodušení Etherea a odstranění technického dluhu**, aby se protokol snáze udržoval, auditoval a dalo se o něm lépe uvažovat. Jednodušší protokol také poskytuje útočníkům menší prostor pro zkoumání.
+Složitost vytváří příležitosti pro chyby a zranitelnosti. Část plánu vývoje se zaměřuje na **zjednodušení Etherea a odstranění technického dluhu**, aby se protokol snáze udržoval, auditoval a dalo se o něm lépe uvažovat. Jednodušší protokol také poskytuje útočníkům menší prostor pro útoky.
 
-Dosud dodáno:
+Dosud realizováno:
 
 - **[Pectra (květen 2025)](/roadmap/pectra/)**: Zavedla EIP-7702, který umožňuje externě vlastněným účtům dočasně delegovat na kód chytrého kontraktu, což je odrazový můstek k plné abstrakci účtu.
 - **[Fusaka (prosinec 2025)](/roadmap/fusaka/)**: Nasadila PeerDAS (EIP-7594), který distribuuje zátěž dostupnosti dat napříč sítí. Také zvýšila parametry blobů, čímž rozšířila datovou propustnost pro rollupy.
 - **[Dencun (březen 2024)](/roadmap/dencun/)**: Zavedl blob transakce (EIP-4844) pro levnější data rollupů a omezil `SELFDESTRUCT` (EIP-6780), aby odstranil dlouhodobý zdroj složitosti.
-- **[Shapella (duben 2023)](/staking/withdrawals/)**: Umožnila validátorům vybírat stakované ETH (EIP-4895), čímž odstranila dřívější omezení stakingu typu [důkaz podílem (PoS)](/glossary/#pos).
-- **London (srpen 2021)**: Přepracoval oceňování gasu pomocí EIP-1559, zavedl základní poplatek a mechanismus pro spálení pro předvídatelnější transakční náklady.
+- **[Shapella (duben 2023)](/staking/withdrawals/)**: Umožnila validátorům vybírat stakované ETH (EIP-4895), čímž odstranila dřívější omezení stakingu pomocí [důkazu podílem (PoS)](/glossary/#pos).
+- **London (srpen 2021)**: Přepracoval oceňování gasu pomocí EIP-1559, zavedl základní poplatek a mechanismus spalování pro předvídatelnější transakční náklady.
 
 Probíhá:
 
 - **Glamsterdam (plánováno na rok 2026)**: Hlavními body jsou ePBS (EIP-7732) a seznamy přístupů na úrovni bloků (EIP-7928), přičemž se zvažuje také přecenění gasu.
 - **Hegotá (plánováno na rok 2027)**: FOCIL (EIP-7805) je hlavním bodem vrstvy konsensu. Zvažuje se zahrnutí: EIP-8141 (nativní abstrakce účtu).
-- **Průběžně**: Snahy o zjednodušení [EVM](/developers/docs/evm/), harmonizaci klientských implementací a postupné vyřazování zastaralých funkcí pokračují napříč klientskými týmy. Práce na bezstavovosti (umožňující účastníkům ověřovat řetězec bez ukládání všech jeho dat) se přepracovává s využitím kvantově bezpečných binárních hashovacích stromů, přičemž konečný přístup ještě nebyl potvrzen.
+- **Průběžně**: Snahy o zjednodušení [EVM](/developers/docs/evm/), harmonizaci klientských implementací a postupné vyřazení zastaralých funkcí pokračují napříč klientskými týmy. Práce na [bezstavovosti](/roadmap/statelessness/) (umožňující účastníkům ověřovat řetězec bez ukládání všech jeho dat) se přepracovává s využitím kvantově bezpečných binárních hashovacích stromů, které by nahradily dřívější návrh [Verkle stromů](/roadmap/verkle-trees/). Konečný přístup zatím nebyl potvrzen.
 
 ## Současný pokrok {#current-progress}
 
@@ -101,7 +101,7 @@ K polovině roku 2026:
 ## Další čtení {#further-reading}
 
 - [Forkcast: Sledování upgradů sítě Ethereum](https://forkcast.org)
-- [Strawmap: návrh plánu vývoje Etherea na vrstvě 1 (l1)](https://strawmap.org) - _EF Architecture_
+- [Strawmap: návrh plánu vývoje Etherea na vrstvě 1 (L1)](https://strawmap.org) - _EF Architecture_
 - [Postkvantové Ethereum](https://pq.ethereum.org) - _Nadace Ethereum_
 - [Sledování plánu vývoje Lean Ethereum](https://leanroadmap.org) - _ReamLabs_
 - [Důkaz podílem (PoS) a finalita](/developers/docs/consensus-mechanisms/pos/#finality)

@@ -41,11 +41,11 @@ Para los usuarios, la [finalidad](/glossary/#finality) es el momento en que una 
 
 ## Validadores resilientes {#resilient-validators}
 
-Un validador suele ser una máquina que contiene una clave de firma. La **tecnología de validador distribuido (DVT)** reemplaza esa única máquina con un comité de máquinas que comparten la clave y firman juntas, por lo que si una computadora falla o se roba una clave, el validador no se cae. DVT está en vivo en producción y es utilizado por operadores de staking a gran escala. En enero de 2026, Vitalik Buterin propuso una variante simplificada a nivel de protocolo llamada DVT-lite; es una propuesta temprana sin una bifurcación programada.
+Un validador suele ser una máquina que posee una clave de firma. La **tecnología de validador distribuido (DVT)** reemplaza esa única máquina con un comité de máquinas que comparten la clave y firman juntas, de modo que si una computadora falla o se roba una clave, no hace caer al validador. DVT está activa en producción y es utilizada por operadores de staking a gran escala. En enero de 2026, Vitalik Buterin propuso una variante simplificada a nivel de protocolo llamada DVT-lite; es una propuesta temprana sin bifurcación programada.
 
 La red también se protege a sí misma a través de la [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/): Ethereum se ejecuta en varias implementaciones de software construidas de forma independiente, por lo que un error en un cliente deja al resto de la red en pie.
 
-Dos ideas de investigación anteriores, view-merge y la elección secreta de líder, ya no son elementos activos de la hoja de ruta.
+Dos ideas de investigación anteriores, view-merge y la [elección secreta de líder](/roadmap/secret-leader-election/), ya no son elementos activos de la hoja de ruta.
 
 <ButtonLink variant="outline" href="/staking/dvt/">Más sobre la tecnología de validador distribuido</ButtonLink>
 
@@ -71,21 +71,21 @@ No. Ninguna computadora cuántica actual puede romper la criptografía de Ethere
 
 ## Protocolo más simple y eficiente {#simpler-and-more-efficient-protocol}
 
-La complejidad crea oportunidades para errores y vulnerabilidades. Parte de la hoja de ruta se centra en **simplificar Ethereum y eliminar la deuda técnica** para que el protocolo sea más fácil de mantener, auditar y analizar. Un protocolo más simple también ofrece a los atacantes menos superficie para explorar.
+La complejidad crea oportunidades para errores y vulnerabilidades. Parte de la hoja de ruta se centra en **simplificar Ethereum y eliminar la deuda técnica** para que el protocolo sea más fácil de mantener, auditar y comprender. Un protocolo más simple también ofrece a los atacantes una menor superficie para explorar.
 
-Entregado hasta ahora:
+Implementado hasta ahora:
 
 - **[Pectra (mayo de 2025)](/roadmap/pectra/)**: Introdujo EIP-7702, que permite a las cuentas de propiedad externa delegar temporalmente en el código de un contrato inteligente, un paso hacia la abstracción de cuentas completa.
-- **[Fusaka (diciembre de 2025)](/roadmap/fusaka/)**: Implementó PeerDAS (EIP-7594), que distribuye la carga de trabajo de disponibilidad de datos a través de la red. También aumentó los parámetros de los blobs, expandiendo la capacidad de procesamiento de datos para los rollups.
-- **[Dencun (marzo de 2024)](/roadmap/dencun/)**: Introdujo transacciones de blobs (EIP-4844) para datos de rollup más baratos y restringió `SELFDESTRUCT` (EIP-6780) para eliminar una fuente de complejidad de larga data.
+- **[Fusaka (diciembre de 2025)](/roadmap/fusaka/)**: Implementó PeerDAS (EIP-7594), que distribuye la carga de trabajo de disponibilidad de datos en toda la red. También aumentó los parámetros de los blobs, expandiendo la capacidad de procesamiento de datos para los rollups.
+- **[Dencun (marzo de 2024)](/roadmap/dencun/)**: Introdujo las transacciones de blobs (EIP-4844) para obtener datos de rollups más baratos y restringió `SELFDESTRUCT` (EIP-6780) para eliminar una fuente de complejidad de larga data.
 - **[Shapella (abril de 2023)](/staking/withdrawals/)**: Permitió a los validadores retirar ETH en staking (EIP-4895), eliminando una restricción inicial del staking de [prueba de participación](/glossary/#pos).
-- **London (agosto de 2021)**: Revisó los precios del gas con EIP-1559, introduciendo una tarifa base y un mecanismo para quemar con el fin de lograr costos de transacción más predecibles.
+- **London (agosto de 2021)**: Renovó el sistema de precios del gas con EIP-1559, introduciendo una tarifa base y un mecanismo de quema para lograr costos de transacción más predecibles.
 
 En progreso:
 
-- **Glamsterdam (prevista para 2026)**: Las características principales son ePBS (EIP-7732) y las listas de acceso a nivel de bloque (EIP-7928), y también se está considerando la revisión de precios del gas.
+- **Glamsterdam (prevista para 2026)**: Las características principales son ePBS (EIP-7732) y las listas de acceso a nivel de bloque (EIP-7928), y también se está considerando el reajuste de precios del gas.
 - **Hegotá (prevista para 2027)**: FOCIL (EIP-7805) es la característica principal de la capa de consenso. Se está considerando para su inclusión: EIP-8141 (abstracción de cuentas nativa).
-- **En curso**: Los esfuerzos para simplificar la [EVM](/developers/docs/evm/), armonizar las implementaciones de clientes y eliminar gradualmente las funciones obsoletas continúan en todos los equipos de clientes. El trabajo sobre la ausencia de estado (permitir a los participantes verificar la cadena sin almacenar todos sus datos) se está rediseñando en torno a árboles hash binarios seguros contra la computación cuántica, y el enfoque final aún está por confirmarse.
+- **En curso**: Los esfuerzos para simplificar la [EVM](/developers/docs/evm/), armonizar las implementaciones de clientes y eliminar gradualmente las características obsoletas continúan en todos los equipos de clientes. El trabajo sobre la [ausencia de estado](/roadmap/statelessness/) (que permite a los participantes verificar la cadena sin almacenar todos sus datos) se está rediseñando en torno a árboles hash binarios seguros contra la computación cuántica, que reemplazarían el diseño anterior del [árbol Verkle](/roadmap/verkle-trees/). El enfoque final aún no se ha confirmado.
 
 ## Progreso actual {#current-progress}
 
@@ -101,7 +101,7 @@ Ninguna parte de este trabajo está terminada, y todos los plazos son estimacion
 ## Lecturas adicionales {#further-reading}
 
 - [Forkcast: Rastreador de actualizaciones de la red Ethereum](https://forkcast.org)
-- [Strawmap: un borrador de la hoja de ruta de la capa 1 (l1) de Ethereum](https://strawmap.org) - _EF Architecture_
+- [Strawmap: un borrador de la hoja de ruta de la capa 1 (L1) de Ethereum](https://strawmap.org) - _EF Architecture_
 - [Ethereum poscuántico](https://pq.ethereum.org) - _Fundación Ethereum_
 - [Rastreador de la hoja de ruta de Lean Ethereum](https://leanroadmap.org) - _ReamLabs_
 - [Prueba de participación y finalidad](/developers/docs/consensus-mechanisms/pos/#finality)

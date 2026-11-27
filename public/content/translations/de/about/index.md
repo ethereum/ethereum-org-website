@@ -1,7 +1,7 @@
 ---
 title: "Über ethereum.org"
 metaTitle: "Über uns"
-description: "Über das Team, die Community und die Mission von ethereum.org"
+description: "Lerne das Team und die Community hinter ethereum.org kennen: unsere Mission, wie die Website offen entwickelt und verwaltet wird und wie du helfen kannst, sie zu verbessern."
 lang: de
 ---
 
@@ -107,9 +107,11 @@ Wir verwenden eine Reihe von [Designprinzipien](/contributing/design-principles/
 
 ## Designsystem {#design-system}
 
-Wir haben ein [Designsystem](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) entwickelt und veröffentlicht, um Funktionen schneller bereitzustellen und Community-Mitgliedern die Teilnahme am offenen Design von ethereum.org zu ermöglichen.
+Wir haben ein [Designsystem](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) entwickelt und veröffentlicht, um Funktionen schneller bereitzustellen und Community-Mitgliedern die Möglichkeit zu geben, sich an der offenen Gestaltung von ethereum.org zu beteiligen.
 
-Möchtest du dich einbringen? [Verfolge es in Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) und nimm an der Unterhaltung in unserem [#design Discord-Kanal](/discord/) teil.
+Möchtest du dich einbringen? [Verfolge unsere Arbeit in Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) und nimm an der Unterhaltung in unserem [#design Discord-Kanal](/discord/) teil.
+
+Suchst du nach Logos, Illustrationen oder anderen Marken-Dateien? Lade sie von unserer [Assets-Seite](/assets/) herunter.
 
 ## Styleguide {#style-guide}
 
@@ -122,6 +124,10 @@ Wir freuen uns über Feedback zu unseren Designprinzipien, dem Designsystem und 
 ## Lizenz {#license}
 
 Die Website ethereum.org ist Open Source und wird unter einer [MIT-Lizenz](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) erstellt, sofern nicht anders angegeben. Mehr zu den [Nutzungsbedingungen](/terms-of-use/) von ethereum.org.
+
+## Deine Privatsphäre {#your-privacy}
+
+ethereum.org verwendet Matomo für datenschutzfreundliche Analysen, und du kannst dem jederzeit widersprechen. Lies unsere [Cookie-Richtlinie](/cookie-policy/) und [Datenschutzrichtlinie](/privacy-policy/) für weitere Details.
 
 ## Offene Stellen {#open-jobs}
 

@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/pectra/index.md",
-  "generatedAt": "2026-09-30T18:32:25.980Z",
-  "rootHash": "8964e2310baf",
+  "generatedAt": "2026-11-27T10:12:54.119Z",
+  "rootHash": "50dae5d66d5c",
   "tree": {
-    "contentHash": "adeb870b4ee3",
+    "contentHash": "e211db842cbb",
     "anchorHash": "500b130761bb",
     "children": {
       "frontmatter:title": {
@@ -16,7 +16,7 @@
         "anchorHash": "9b75987cae35"
       },
       "frontmatter:description": {
-        "contentHash": "a46156bd81ea",
+        "contentHash": "c38689f060e3",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -127,7 +127,7 @@
         ]
       },
       "new-improvements": {
-        "contentHash": "1fa34f62dfdd",
+        "contentHash": "260b1640391f",
         "anchorHash": "8c615bf7a97b",
         "labelHash": "4550a0dc2eee",
         "children": {
@@ -191,7 +191,7 @@
             ]
           },
           "2935": {
-            "contentHash": "d9fa30a99355",
+            "contentHash": "3123750f6dcd",
             "anchorHash": "73b389e3b01b",
             "labelHash": "904314594dac",
             "children": {
@@ -216,7 +216,7 @@
                 "anchorHash": "47fe877e83f8"
               },
               "prose:4": {
-                "contentHash": "526d9bdc76f2",
+                "contentHash": "2f677c33a4f2",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -841,5 +841,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

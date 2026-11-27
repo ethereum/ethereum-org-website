@@ -1,7 +1,7 @@
 ---
 title: "イーサリアムでの支払い"
 metaTitle: "イーサリアムでの支払い"
-description: "イーサリアムでの支払いの概要"
+description: "イーサリアムでの支払いはどのように機能するのでしょうか？銀行を介さずに、ETHやステーブルコインを使って、多くの場合数秒かつ低コストで世界中に送金する方法を学びましょう。"
 lang: ja
 template: use-cases
 sidebarDepth: 2

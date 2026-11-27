@@ -115,7 +115,7 @@
   "page-trillion-dollar-security-section-3-1-list-desc-2": "これらのシステムのバグや設定ミスは、ファイナリティの停滞や妨害を引き起こしたり、誤った状態更新のファイナリティを許容してユーザーの資金喪失につながる可能性があります。",
   "page-trillion-dollar-security-section-3-1-list-title-3": "セキュリティ評議会は、L2ソフトウェアのアップグレードや特定の緊急事態に対応するための「バックアップ」メカニズムとして機能する鍵保有者のグループである",
   "page-trillion-dollar-security-section-3-1-list-desc-3": "セキュリティ評議会自体もリスクをもたらします。メンバー間の妥協や共謀により、ユーザーの資金が危険にさらされたり、資産が凍結されたりする可能性があるためです。",
-  "page-trillion-dollar-security-section-3-1-paragraph-2": "L2のパフォーマンスとセキュリティを評価および比較する詳細なフレームワークと監視ダッシュボードについては、<a>L2BEAT</a>を参照してください。",
+  "page-trillion-dollar-security-section-3-1-paragraph-2": "L2のパフォーマンスとセキュリティを評価・比較する詳細なフレームワークおよび監視ダッシュボードについては、<a>ETHBEAT</a>を参照してください。",
   "page-trillion-dollar-security-section-3-2-title": "3.2 RPCおよびノードインフラ",
   "page-trillion-dollar-security-section-3-2-paragraph-1": "イーサリアムのアプリケーションは、RPCアクセス、API、およびノードサービスにおいて少数のインフラプロバイダーに依存しています。これには、暗号資産特有のインフラプロバイダーだけでなく、ノードのホストに一般的に使用される従来のクラウドサービス（AWS、Cloudflare、Hetznerなど）も含まれます。",
   "page-trillion-dollar-security-section-3-2-paragraph-2": "これらのインフラプロバイダーがオフラインになったり、アクセスを検閲または制限しようとした場合、多くのユーザーは新しいRPCや他のインフラプロバイダーに移行できるまで、ウォレットやアプリケーションを通じてイーサリアムにアクセスできなくなる可能性があります。これらのプロバイダーの一部は、過去にブロックチェーン活動に関連するアカウントを停止または閉鎖したことがあり、分散型アプリケーションに対する長期的な信頼性に懸念が生じています。",

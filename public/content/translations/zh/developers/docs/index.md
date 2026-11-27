@@ -1,6 +1,6 @@
 ---
 title: "以太坊开发文档"
-description: "ethereum.org 开发者文档介绍。"
+description: "以太坊开发者文档：学习基础知识、以太坊技术栈、智能合约、节点和扩容，以及构建首个去中心化应用 (dapp) 的指南。"
 lang: zh
 ---
 

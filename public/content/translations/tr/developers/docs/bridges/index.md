@@ -1,6 +1,6 @@
 ---
 title: "Köprüler"
-description: "Geliştiriciler için köprülemeye genel bir bakış"
+description: "Köprülere dair bir geliştirici rehberi: zincirler arası mesajlaşma ve token köprülemenin nasıl çalıştığı, köprü türleri ve güven varsayımları ve bunların dapp'lere nasıl entegre edileceği."
 lang: tr
 ---
 
@@ -120,19 +120,19 @@ Zincirler arası sözleşme faaliyetlerini izlemek için geliştiriciler, akıll
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## Daha fazla bilgi {#further-reading}
+## İleri okuma {#further-reading}
 
 - [Blokzincir Köprüleri](/bridges/) – ethereum.org
-- [L2BEAT Köprü Risk Çerçevesi](https://l2beat.com/bridges/summary)
-- [Blokzincir Köprüleri: Kripto Ağlarının Ağlarını Kurmak](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 Eyl 2021 – Dmitriy Berenzon
-- [Birlikte Çalışabilirlik Açmazı (Trilemma)](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 Eki 2021 – Arjun Bhuptani
-- [Kümeler: Güvenilir ve Güveni Minimize Edilmiş Köprüler Çoklu Zincir Ortamını Nasıl Şekillendiriyor](https://blog.celestia.org/clusters/) - 4 Eki 2021 – Mustafa Al-Bassam
-- [LI.FI: Köprülerde Güven Bir Spektrumdur](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 Nis 2022 – Arjun Chand
-- [Rollup Birlikte Çalışabilirlik Çözümlerinin Durumu](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Haz 2024 – Alex Hook
-- [Güvenli Zincirler Arası Birlikte Çalışabilirlik İçin Paylaşılan Güvenlikten Yararlanma: Lagrange Durum Komiteleri ve Ötesi](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Haz 2024 – Emmanuel Awosika
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
+- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 Eylül 2021 – Dmitriy Berenzon
+- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 Ekim 2021 – Arjun Bhuptani
+- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4 Ekim 2021 – Mustafa Al-Bassam
+- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 Nisan 2022 – Arjun Chand
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Haziran 2024 – Alex Hook
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Haziran 2024 – Emmanuel Awosika
 
-Ek olarak, köprüler hakkında daha derin bir anlayış geliştirmeye yardımcı olabilecek [James Prestwich](https://twitter.com/_prestwich) tarafından yapılan bazı ufuk açıcı sunumlar şunlardır:
+Ek olarak, köprüler hakkında daha derin bir anlayış geliştirmeye yardımcı olabilecek, [James Prestwich](https://twitter.com/_prestwich) tarafından yapılan bazı bilgilendirici sunumlar şunlardır:
 
-- [Duvarlarla Çevrili Bahçeler Değil, Köprüler İnşa Etmek](https://youtu.be/ZQJWMiX4hT0)
-- [Köprüleri Çözümlemek](https://youtu.be/b0mC-ZqN8Oo)
-- [Köprüler Neden Yanıyor](https://youtu.be/c7cm2kd20j8)
+- [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
+- [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)
+- [Why are the Bridges Burning](https://youtu.be/c7cm2kd20j8)

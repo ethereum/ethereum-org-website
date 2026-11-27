@@ -8,13 +8,13 @@ Węzeł Ethereum składa się z dwóch klientów: [klienta warstwy wykonawczej](
 
 Kiedy Ethereum korzystało z [dowodu pracy (PoW)](/developers/docs/consensus-mechanisms/pow/), klient warstwy wykonawczej wystarczał do uruchomienia pełnego węzła Ethereum. Jednak od czasu wdrożenia [dowodu stawki (PoS)](/developers/docs/consensus-mechanisms/pos/), klient warstwy wykonawczej musi być używany wraz z innym oprogramowaniem zwanym [klientem konsensusu](/developers/docs/nodes-and-clients/#consensus-clients).
 
-Poniższy diagram przedstawia relację między dwoma klientami Ethereum. Obaj klienci łączą się z własnymi sieciami peer-to-peer (P2P). Oddzielne sieci P2P są potrzebne, ponieważ klienci warstwy wykonawczej rozgłaszają transakcje w swojej sieci P2P, co pozwala im zarządzać lokalną pulą transakcji, podczas gdy klienci konsensusu rozgłaszają bloki w swojej sieci P2P, umożliwiając osiągnięcie konsensusu i rozwój łańcucha.
+Poniższy diagram przedstawia relację między dwoma klientami Ethereum. Obaj klienci łączą się z własnymi sieciami peer-to-peer (P2P). Oddzielne sieci P2P są potrzebne, ponieważ klienci warstwy wykonawczej rozgłaszają transakcje w swojej sieci P2P, co pozwala im zarządzać lokalną pulą transakcji, podczas gdy klienci konsensusu rozgłaszają bloki w swojej sieci P2P, umożliwiając konsensus i rozwój łańcucha.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _Istnieje kilka opcji dla klienta warstwy wykonawczej, w tym Erigon, Nethermind i Besu_.
 
-Aby ta dwuklientowa struktura działała, klienci konsensusu muszą przekazywać pakiety transakcji do klienta warstwy wykonawczej. Klient warstwy wykonawczej wykonuje transakcje lokalnie, aby zweryfikować, czy nie naruszają one żadnych zasad Ethereum i czy proponowana aktualizacja stanu Ethereum jest poprawna. Kiedy węzeł zostaje wybrany na producenta bloku, jego instancja klienta konsensusu żąda pakietów transakcji od klienta warstwy wykonawczej, aby włączyć je do nowego bloku i wykonać w celu aktualizacji globalnego stanu. Klient konsensusu steruje klientem warstwy wykonawczej za pośrednictwem lokalnego połączenia RPC przy użyciu [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Aby ta dwuklientowa struktura działała, klienci konsensusu muszą przekazywać pakiety transakcji do klienta warstwy wykonawczej. Klient warstwy wykonawczej wykonuje transakcje lokalnie, aby zweryfikować, czy nie naruszają one żadnych zasad Ethereum i czy proponowana aktualizacja stanu Ethereum jest poprawna. Kiedy węzeł zostaje wybrany na producenta bloku, jego instancja klienta konsensusu żąda pakietów transakcji od klienta warstwy wykonawczej, aby włączyć je do nowego bloku i wykonać w celu aktualizacji stanu globalnego. Klient konsensusu steruje klientem warstwy wykonawczej za pośrednictwem lokalnego połączenia RPC przy użyciu [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Co robi klient warstwy wykonawczej? {#execution-client}
 

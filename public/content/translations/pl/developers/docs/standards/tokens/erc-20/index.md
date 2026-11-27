@@ -176,6 +176,7 @@ Z powodu tego problemu powstały pewne alternatywne standardy, takie jak [ERC-22
 - [Alchemy - Przewodnik po tokenach ERC-20 w Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Inne standardy tokenów zamiennych {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -184,6 +185,5 @@ Z powodu tego problemu powstały pewne alternatywne standardy, takie jak [ERC-22
 ## Samouczki: Budowanie z ERC-20 na Ethereum {#tutorials}
 
 - [Przewodnik po kontrakcie ERC-20](/developers/tutorials/erc20-annotated-code/) _– Opatrzony komentarzami przewodnik linijka po linijce po implementacji kontraktu ERC-20 od OpenZeppelin._
-- [ERC-20 z barierami ochronnymi](/developers/tutorials/erc20-with-safety-rails/) _– Jak dodać zabezpieczenia do tokenów ERC-20, aby pomóc użytkownikom uniknąć typowych błędów._
-- [Wysyłanie tokenów za pomocą Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Przyjazny dla początkujących przewodnik po transferze tokenów ERC-20 za pomocą Ethers.js._
-- [Sztuczki stosowane przez fałszywe tokeny i jak je wykryć](/developers/tutorials/scam-token-tricks/) _– Szczegółowe omówienie wzorców oszukańczych tokenów ERC-20 i sposobów ich identyfikacji._
+- [ERC-20 z zabezpieczeniami](/developers/tutorials/erc20-with-safety-rails/) _– Jak dodać zabezpieczenia do tokenów ERC-20, aby pomóc użytkownikom unikać typowych błędów._
+- [Sztuczki stosowane przez fałszywe tokeny i jak je wykryć](/developers/tutorials/scam-token-tricks/) _– Szczegółowa analiza wzorców fałszywych tokenów ERC-20 i sposobów ich identyfikacji._

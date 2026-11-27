@@ -1,6 +1,6 @@
 ---
 title: "ڈیٹا اور تجزیات"
-description: "اپنی غیر مرکزی ایپلی کیشنز (⁦dapps⁩) میں استعمال کے لیے آن چین تجزیات اور ڈیٹا کیسے حاصل کریں"
+description: "اپنی ⁦dapp⁩ کے لیے آن چین ڈیٹا حاصل کرنے کا طریقہ: ایتھیریم ڈیٹا کو استفسار کرنے اور اس کا تجزیہ کرنے کے لیے انڈیکسرز، سب گرافس، بلاک ایکسپلوررز، ⁦SQL⁩ اینالیٹکس پلیٹ فارمز اور ⁦APIs⁩۔"
 lang: ur
 ---
 
@@ -62,6 +62,7 @@ The Graph کے ساتھ، ڈیولپرز ان چیزوں سے فائدہ اٹھ�
 
 
 ## Mobula {#mobula}
+
 [Mobula](https://mobula.io/) ایک اعلیٰ کارکردگی کا کرپٹو ڈیٹا API ہے جو <span dir="ltr">90+</span> بلاک چینز پر ریئل ٹائم اور تاریخی مارکیٹ ڈیٹا، ٹوکن میٹا ڈیٹا، والیٹ پورٹ فولیوز، اور آن چین تجزیات فراہم کرتا ہے۔ ڈیولپرز اپنا بنیادی ڈھانچہ چلائے بغیر ٹوکن کی قیمتوں، مارکیٹ کیپس، ٹریڈنگ کے حجم، سیالیت کے ڈیٹا، اور ملٹی چین والیٹ بیلنسز کے لیے REST اور GraphQL اینڈ پوائنٹس تک رسائی حاصل کر سکتے ہیں۔ Mobula پروڈکشن ایپلی کیشنز کے لیے مفت (<span dir="ltr">100K</span> درخواستیں/مہینہ) اور ادا شدہ پلانز دونوں پیش کرتا ہے۔
 
 شروع کرنے کے لیے، [دستاویزات](https://docs.mobula.io) دیکھیں، [API حوالہ](https://docs.mobula.io/reference/) دریافت کریں، یا [ڈیش بورڈ](https://mobula.io/) پر سائن اپ کریں۔
@@ -71,21 +72,22 @@ EVM Query Language (EQL) ایک SQL جیسی زبان ہے جسے EVM (ایتھ�
 
 
 ## Envio {#envio}
+
 [Envio](https://envio.dev/) ایک انڈیکسنگ فریم ورک ہے جو آن چین ایونٹس کو قابل استفسار GraphQL API میں تبدیل کرتا ہے۔ یہ ایتھیریم اور کسی بھی EVM سے مطابقت رکھنے والی چین کو سپورٹ کرتا ہے۔ ڈیولپرز تنظیمِ نو کی سپورٹ، ملٹی چین انڈیکسنگ، اور Envio Cloud پر مینیجڈ ہوسٹنگ یا سیلف ہوسٹنگ کے ساتھ ریئل ٹائم اور تاریخی ڈیٹا پیش کرنے کے لیے TypeScript، JavaScript، یا ReScript میں ایونٹ ہینڈلرز لکھتے ہیں۔
 
 شروع کرنے کے لیے، ایک انڈیکسر بنانے، تعینات کرنے، اور استفسار کرنے کے لیے [HyperIndex کوئیک اسٹارٹ](https://docs.envio.dev/docs/HyperIndex/quickstart) پر عمل کریں۔
 ## مزید مطالعہ {#further-reading}
 
-- [کرپٹو ڈیٹا کی تلاش I: ڈیٹا فلو آرکیٹیکچرز](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Graph نیٹ ورک کا جائزہ](https://thegraph.com/docs/en/about/)
-- [Graph استفسار کا پلے گراؤنڈ](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [EtherScan پر API کوڈ کی مثالیں](https://etherscan.io/apis#contracts)
-- [Blockscout پر API کی دستاویزات](https://docs.blockscout.com/devs/apis)
-- [Beaconcha.in بیکن چین ایکسپلورر](https://beaconcha.in)
-- [Dune کی بنیادی باتیں](https://docs.dune.com/#dune-basics)
-- [SubQuery ایتھیریم کوئیک اسٹارٹ گائیڈ](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
-- [SQD نیٹ ورک کا جائزہ](https://docs.sqd.dev/)
-- [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
+- [کرپٹو ڈیٹا کی کھوج <span dir="ltr">I</span>: ڈیٹا فلو آرکیٹیکچرز](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [گراف نیٹ ورک کا جائزہ](https://thegraph.com/docs/en/about/)
+- [گراف ایکسپلورر](https://thegraph.com/explorer)
+- [<span dir="ltr">Etherscan</span> پر <span dir="ltr">API</span> کوڈ کی مثالیں](https://etherscan.io/apis#contracts)
+- [<span dir="ltr">Blockscout</span> پر <span dir="ltr">API</span> کی دستاویزات](https://docs.blockscout.com/devs/apis)
+- [<span dir="ltr">Beaconcha.in</span> بیکن چین ایکسپلورر](https://beaconcha.in)
+- [<span dir="ltr">Dune</span> کی بنیادی باتیں](https://docs.dune.com/#dune-basics)
+- [<span dir="ltr">SubQuery</span> ایتھیریم کوئیک اسٹارٹ گائیڈ](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [<span dir="ltr">SQD</span> نیٹ ورک کا جائزہ](https://docs.sqd.dev/)
+- [<span dir="ltr">EVM Query Language</span>](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## ٹیوٹوریلز: ڈیٹا اور تجزیات / ایتھیریم پر SQL {#tutorials}
 

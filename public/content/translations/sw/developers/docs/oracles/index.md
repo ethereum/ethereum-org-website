@@ -383,35 +383,33 @@ Baadhi ya mitandao ya orakeli iliyogatuliwa hutoa huduma za kiotomatiki, ambazo 
 
 [Mtandao wa Keeper](https://chain.link/keepers) wa Chainlink hutoa chaguo kwa mikataba mahiri kutoa kazi za kawaida za matengenezo kwa njia iliyopunguzwa uaminifu na iliyogatuliwa. Soma [nyaraka rasmi za Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) kwa taarifa kuhusu kufanya mkataba wako uendane na Keeper na kutumia huduma ya Upkeep.
 
-## Jinsi ya kutumia orako za mnyororo wa vitalu {#use-blockchain-oracles}
+## Jinsi ya kutumia orakeli za mnyororo wa vitalu {#use-blockchain-oracles}
 
 Kuna programu nyingi za orakeli unazoweza kuunganisha kwenye dapp yako ya Ethereum:
 
-**[Chainlink](https://chain.link/)** - _Mitandao ya orakeli iliyogatuliwa ya Chainlink hutoa maingizo, matokeo, na ukokotoaji usioingiliwa ili kusaidia mikataba mahiri ya hali ya juu kwenye mnyororo wowote wa vitalu._
+**[Chainlink](https://chain.link/)** - _Mitandao ya orakeli iliyogatuliwa ya Chainlink hutoa pembejeo, matokeo, na ukokotoaji usioingiliwa ili kusaidia mikataba mahiri ya hali ya juu kwenye mnyororo wowote wa vitalu._
 
-**[Orakeli za RedStone](https://redstone.finance/)** - _RedStone ni orakeli ya kawaida iliyogatuliwa inayotoa milisho ya data iliyoboreshwa kwa gesi. Inajishughulisha na kutoa milisho ya bei kwa mali zinazoibuka, kama vile tokani ya uwekaji amana wenye ukwasi (lst), tokeni za uwekaji dhamana upya wenye ukwasi (LRTs), na bidhaa zinazotokana na uwekaji dhamana wa Bitcoin._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone ni orakeli ya msimu iliyogatuliwa ambayo hutoa milisho ya data iliyoboreshwa kwa gesi. Inajikita katika kutoa milisho ya bei kwa mali zinazoibuka, kama vile tokani za uwekaji amana wenye ukwasi (LSTs), tokeni za uwekaji dhamana upya zenye ukwasi (LRTs), na bidhaa zinazotokana na uwekaji dhamana wa Bitcoin._
 
-**[Chronicle](https://chroniclelabs.org/)** - _Chronicle inashinda mapungufu ya sasa ya kuhamisha data mnyororoni kwa kuunda orakeli zinazoweza kupanuka kweli, zenye ufanisi wa gharama, zilizogatuliwa, na zinazoweza kuthibitishwa._
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle inashinda mapungufu ya sasa ya kuhamisha data mnyororoni kwa kutengeneza orakeli zinazoweza kupanuka kweli, zenye gharama nafuu, zilizogatuliwa, na zinazothibitishwa._
 
-**[Witnet](https://witnet.io/)** - _Witnet ni orakeli isiyo na ruhusa, iliyogatuliwa, na inayostahimili udhibiti inayosaidia mikataba mahiri kujibu matukio ya ulimwengu halisi kwa dhamana dhabiti za kiuchumi za kripto._
+**[Witnet](https://witnet.io/)** - _Witnet ni orakeli isiyohitaji ruhusa, iliyogatuliwa, na inayostahimili udhibiti inayosaidia mikataba mahiri kujibu matukio ya ulimwengu halisi kwa dhamana dhabiti za kiuchumi za kripto._
 
-**[Orakeli ya UMA](https://uma.xyz)** - _Orakeli yenye matumaini ya UMA inaruhusu mikataba mahiri kupokea haraka aina yoyote ya data kwa programu tofauti, ikiwa ni pamoja na bima, bidhaa zinazotokana na fedha, na masoko ya ubashiri._
+**[UMA Oracle](https://uma.xyz)** - _Orakeli yenye matumaini ya UMA inaruhusu mikataba mahiri kupokea haraka aina yoyote ya data kwa programu tofauti, ikiwa ni pamoja na bima, bidhaa zinazotokana na fedha, na masoko ya ubashiri._
 
-**[Tellor](https://tellor.io/)** - _Tellor ni itifaki ya orakeli iliyo wazi na isiyo na ruhusa kwa mkataba wako mahiri kupata kwa urahisi data yoyote wakati wowote inapoihitaji._
+**[Tellor](https://tellor.io/)** - _Tellor ni itifaki ya orakeli iliyo wazi na isiyohitaji ruhusa kwa mkataba wako mahiri kupata kwa urahisi data yoyote wakati wowote inapoihitaji._
 
-**[Itifaki ya Band](https://bandprotocol.com/)** - _Itifaki ya Band ni jukwaa la orakeli ya data ya mtambuko-mnyororo inayojumlisha na kuunganisha data ya ulimwengu halisi na API kwenye mikataba mahiri._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol ni jukwaa la orakeli la data la mtambuko-mnyororo ambalo hukusanya na kuunganisha data ya ulimwengu halisi na API kwenye mikataba mahiri._
 
-**[Mtandao wa Pyth](https://pyth.network/)** - _Mtandao wa Pyth ni mtandao wa orakeli ya kifedha wa upande wa kwanza ulioundwa kuchapisha data endelevu ya ulimwengu halisi mnyororoni katika mazingira yanayostahimili kuchezewa, yaliyogatuliwa, na yanayojitegemea._
+**[Pyth Network](https://pyth.network/)** - _Mtandao wa Pyth ni mtandao wa orakeli wa kifedha wa upande wa kwanza ulioundwa kuchapisha data endelevu ya ulimwengu halisi mnyororoni katika mazingira yasiyoingiliwa, yaliyogatuliwa, na yanayojitegemea._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO inatoa suluhu za orakeli za upande wa kwanza zinazotoa uwazi mkubwa wa chanzo, usalama na uwezo wa kupanuka katika suluhu iliyogatuliwa kwa mikataba mahiri_
+**[API3 DAO](https://api3.org/)** - _API3 DAO inatoa suluhu za orakeli za upande wa kwanza zinazotoa uwazi zaidi wa chanzo, usalama na upanuzi katika suluhu iliyogatuliwa kwa mikataba mahiri_
 
-**[Supra](https://supra.com/)** - Zana iliyounganishwa kiwima ya suluhu za mtambuko-mnyororo zinazounganisha minyororo yote ya vitalu, ya umma (L1s na L2s) au ya kibinafsi (makampuni), ikitoa milisho ya bei ya orakeli iliyogatuliwa inayoweza kutumika kwa matumizi ya mnyororoni na nje ya mnyororo. 
+**[Supra](https://supra.com/)** - Zana iliyounganishwa kiwima ya suluhu za mtambuko-mnyororo zinazounganisha minyororo yote ya vitalu, ya umma (L1s na L2s) au ya kibinafsi (mashirika), ikitoa milisho ya bei ya orakeli iliyogatuliwa inayoweza kutumika kwa matumizi ya mnyororoni na nje ya mnyororo. 
 
-**[Mtandao wa Gesi](https://gas.network/)** - Jukwaa la orakeli lililosambazwa linalotoa data ya bei ya gesi ya wakati halisi kwenye mnyororo wa vitalu. Kwa kuleta data kutoka kwa watoa data wakuu wa bei ya gesi mnyororoni, Mtandao wa Gesi unasaidia kuendesha mwingiliano. Mtandao wa Gesi unasaidia data kwa zaidi ya minyororo 35, ikiwa ni pamoja na Mtandao Mkuu wa Ethereum na L2 nyingi zinazoongoza.
+**[DIA](https://www.diadata.org/)** - Mtandao wa orakeli wa mtambuko-mnyororo unaotoa milisho ya data inayothibitishwa kwa mali 20,000+ katika madaraja yote makuu ya mali. DIA hupata data ghafi ya biashara moja kwa moja kutoka kwenye masoko ya msingi 100+ na kuikokotoa mnyororoni, ikihakikisha uwazi kamili wa data na uthibitishaji kwa mipangilio maalum kwa matumizi yoyote.
 
-**[DIA](https://www.diadata.org/)** - Mtandao wa orakeli wa mtambuko-mnyororo unaotoa milisho ya data inayoweza kuthibitishwa kwa mali 20,000+ katika madaraja yote makuu ya mali. DIA hupata data ghafi ya biashara moja kwa moja kutoka masoko ya msingi 100+ na kuikokotoa mnyororoni, ikihakikisha uwazi kamili wa data na uwezo wa kuthibitishwa kwa usanidi maalum kwa matumizi yoyote.
-
-**[Stork](https://stork.network)** - Stork inatoa data ya bei kwa ucheleweshaji wa chini sana, ikisaidia anuwai ya matumizi ikiwa ni pamoja na masoko ya kudumu, itifaki za ukopeshaji, na mifumo ikolojia ya DeFi, huku mali mpya zikisaidiwa haraka kwenye uorodheshaji.
+**[Stork](https://stork.network)** - Stork inatoa data ya bei kwa ucheleweshaji mdogo sana, ikisaidia anuwai ya matumizi ikiwa ni pamoja na masoko ya kudumu, itifaki za ukopeshaji, na mifumo ya ikolojia ya DeFi, huku mali mpya zikisaidiwa haraka wakati wa kuorodheshwa.
 
 ## Usomaji zaidi {#further-reading}
 

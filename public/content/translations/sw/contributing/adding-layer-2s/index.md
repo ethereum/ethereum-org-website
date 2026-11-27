@@ -8,7 +8,7 @@ Tunataka kuhakikisha tunaorodhesha rasilimali bora iwezekanavyo ili watumiaji wa
 
 Mtu yeyote yuko huru kupendekeza kuongeza tabaka la 2 kwenye ethereum.org. Ikiwa kuna tabaka la 2 ambalo tumelikosa, **[tafadhali lipendekeze](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-Kwa sasa tunaorodhesha l2 kwenye kurasa zifuatazo:
+Kwa sasa tunaorodhesha L2 kwenye kurasa zifuatazo:
 
 - [Rollup za optimistic](/developers/docs/scaling/optimistic-rollups/)
 - [Mikusanyiko ya maarifa sifuri](/developers/docs/scaling/zk-rollups/)
@@ -20,10 +20,10 @@ Tabaka la 2 ni dhana mpya na ya kusisimua kwa Ethereum. Tumejaribu kuunda mfumo 
 
 ### Vigezo vya kujumuishwa: mambo ya lazima {#criteria-for-inclusion-the-must-haves}
 
-**Kuorodheshwa kwenye L2BEAT**
+**Kuorodheshwa kwenye ETHBEAT**
 
-- Ili mradi uzingatiwe, lazima uwe umeorodheshwa kwenye [L2BEAT](https://l2beat.com). L2BEAT inatoa tathmini thabiti ya hatari ya miradi ya tabaka la 2 ambayo tunaitegemea kutathmini miradi ya l2. **Ikiwa mradi haujaangaziwa kwenye L2BEAT, hatutauorodhesha kama l2 kwenye ethereum.org.**
-- [Jifunze jinsi ya kuongeza mradi wako wa l2 kwenye L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Ili kuzingatiwa, mradi huu lazima uorodheshwe kwenye [ETHBEAT](https://ethbeat.org). ETHBEAT hutoa tathmini thabiti ya hatari ya miradi ya tabaka la 2 ambayo tunaitegemea kutathmini miradi ya L2. **Ikiwa mradi haujaangaziwa kwenye ETHBEAT, hatutauorodhesha kama L2 kwenye ethereum.org.**
+- [Jifunze jinsi ya kuongeza mradi wako wa L2 kwenye ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Chanzo wazi**
 
@@ -36,19 +36,19 @@ Kwa sasa tunazingatia yafuatayo kuwa suluhisho za tabaka la 2:
 - Rollup ya optimistic
 - Mkusanyiko wa maarifa sifuri
 
-_Hatuzingatii suluhisho zingine za kuongeza viwango ambazo hazitumii Ethereum kwa upatikanaji wa data au usalama kuwa tabaka la 2._
+_Hatuzingatii suluhisho zingine za kuongeza ukubwa ambazo hazitumii Ethereum kwa upatikanaji wa data au usalama kuwa tabaka la 2._
 
 **Ethereum kwa upatikanaji wa data**
 
-- Upatikanaji wa data ni sababu muhimu ya kutofautisha kati ya suluhisho zingine za kuongeza viwango na tabaka la 2. Mradi **lazima** utumie Mtandao Mkuu wa Ethereum kwa upatikanaji wa data ili uzingatiwe kuorodheshwa.
+- Upatikanaji wa data ni sababu muhimu ya kutofautisha kati ya suluhisho zingine za kuongeza ukubwa na tabaka la 2. Mradi **lazima** utumie Mtandao Mkuu wa Ethereum kwa upatikanaji wa data ili uzingatiwe kuorodheshwa.
 
 **Madaraja**
 
-- Watumiaji wanawezaje kujiunga kwenye tabaka la 2?
+- Je, watumiaji wanawezaje kujiunga kwenye tabaka la 2?
 
-**Tarehe ambayo mradi ulianza kufanya kazi**
+**Tarehe ambayo mradi ulianza kutumika**
 
-- Tabaka la 2 ambalo limekuwa "live" kwenye Mtandao Mkuu kwa zaidi ya miezi 6
+- Tabaka la 2 ambalo limekuwa "likitumika" kwenye Mtandao Mkuu kwa zaidi ya miezi 6
 
 - Miradi mipya ambayo haijajaribiwa kikamilifu na watumiaji ina uwezekano mdogo wa kuorodheshwa.
 
@@ -60,9 +60,9 @@ _Hatuzingatii suluhisho zingine za kuongeza viwango ambazo hazitumii Ethereum kw
 
 - Tutazingatia vipimo kama vile historia ya jumla ya thamani iliyofungwa (tvl), takwimu za muamala, na ikiwa inatumiwa na kampuni au miradi inayojulikana
 
-**Timu inayoendeleza kwa vitendo**
+**Timu tendaji ya maendeleo**
 
-- Hatutaorodhesha tabaka la 2 ambalo halina timu inayoendeleza mradi kwa vitendo.
+- Hatutaorodhesha tabaka la 2 ambalo halina timu tendaji inayofanyia kazi mradi.
 
 **Kichunguzi cha bloku**
 
@@ -84,7 +84,7 @@ _Hatuzingatii suluhisho zingine za kuongeza viwango ambazo hazitumii Ethereum kw
 
 **Usaidizi wa mkoba asili**
 
-- Je, kuna mikoba yoyote inayoauni l2 kiasili?
+- Je, kuna mikoba yoyote inayoauni L2 kiasili?
 
 ## Ongeza tabaka la 2 lako {#add-exchange}
 

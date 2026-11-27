@@ -165,7 +165,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 靜態分析器將智能合約的原始碼作為輸入，並輸出宣告合約是否滿足屬性的結果。與動態分析不同，靜態分析不涉及執行合約來分析其正確性。相反，靜態分析會推論智能合約在執行期間可能採取的所有路徑（即透過檢查原始碼的結構來確定它在執行時對合約運作的意義）。
 
-[Linting](https://www.perforce.com/blog/qac/what-is-linting) 和[靜態測試](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)是對合約執行靜態分析的常見方法。兩者都需要分析合約執行的低階表示，例如編譯器輸出的[抽象語法樹](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)和[控制流程圖](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)。
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) 和[靜態測試](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)是對合約執行靜態分析的常見方法。兩者都需要分析合約執行的低階表示，例如編譯器輸出的[抽象語法樹](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)和[控制流程圖](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/)。
 
 在大多數情況下，靜態分析有助於檢測安全問題，例如在合約程式碼中使用不安全的結構、語法錯誤或違反編碼標準。然而，眾所周知，靜態分析器在檢測更深層次的漏洞時通常不夠完善，並且可能會產生過多的偽陽性。
 
@@ -238,7 +238,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 如前所述，嚴格的測試很少能保證合約中沒有錯誤；形式化驗證方法可以提供更強的正確性保證，但目前難以使用且會產生可觀的成本。
 
-儘管如此，你可以透過獲得獨立的程式碼審查來進一步增加捕捉合約漏洞的可能性。[智能合約稽核](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/)和[漏洞賞金](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)是讓其他人分析你的合約的兩種方法。
+儘管如此，你可以透過獲得獨立的程式碼審查來進一步增加捕捉合約漏洞的可能性。[智能合約稽核](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/)和[漏洞賞金](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)是讓其他人分析你的合約的兩種方法。
 
 稽核由在尋找智能合約安全漏洞和不良開發實踐案例方面經驗豐富的稽核員執行。稽核通常包括測試（可能還有形式化驗證）以及對整個程式碼庫的手動審查。
 
@@ -276,7 +276,7 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _用於強制執行 Solidity 智能合約程式語言的樣式和安全最佳實踐的 Linter。_
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _專為 Web3 智能合約安全和開發設計的基於 Rust 的靜態分析器。_
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _專為 Web3 智能合約安全和開發設計的基於 Rust 的靜態分析器。_
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _基於 Python 的靜態分析框架，具有漏洞和程式碼品質檢測器、用於從程式碼中提取有用資訊的印表機，並支援編寫自訂子模組。_
 
@@ -296,9 +296,8 @@ Solidity 智能合約的單元測試框架有不同的語言版本（主要是 J
 
 ## 相關教學 {#related-tutorials}
 
-- [不同測試產品的概覽與比較](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
+- [不同測試產品的概述與比較](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [如何使用埃奇德納 (Echidna) 測試智能合約](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [如何使用曼蒂科爾 (Manticore) 尋找智能合約錯誤](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [如何使用斯立瑟 (Slither) 尋找智能合約錯誤](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [如何模擬 Solidity 合約進行測試](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何使用 Foundry 在 Solidity 中執行單元測試](https://www.rareskills.io/post/foundry-testing-solidity)

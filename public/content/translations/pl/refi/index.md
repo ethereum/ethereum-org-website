@@ -1,6 +1,6 @@
 ---
 title: Finanse regeneracyjne (ReFi)
-description: "Przegląd ReFi i jego obecnych przypadków użycia."
+description: "Czym są finanse regeneracyjne (ReFi)? Dowiedz się, jak narzędzia Ethereum finansują dobra publiczne, działania na rzecz klimatu i projekty społecznościowe, które tworzą trwały, pozytywny wpływ."
 lang: pl
 template: use-cases
 sidebarDepth: 2

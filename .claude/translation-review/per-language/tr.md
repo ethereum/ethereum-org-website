@@ -1,5 +1,26 @@
 # Turkish (tr) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.8/10
+Scope: 73 markdown pages + 19 JSON namespaces, mostly small incremental updates (dev-tools descriptions not in this list). Sampled ~25 markdown diffs and ~90 changed JSON keys; scripted sweeps (U+3002, U+2060, foreign scripts, English leftovers, ICU/tag parity, anchors, component parity).
+
+**Fixed in this branch (5 critical):**
+
+- `developers/docs/smart-contracts/anatomy/index.md`: 60 code-comment lines regressed (about 25 comments left in English, `Sözleşme`/`Adres bilgisi` mid-sentence capitals, `işlev` -> `fonksiyon` drift). English only changed two URLs, so file restored from dev and the two URLs (OpenZeppelin 3.x SafeMath, Ethlint issue) applied.
+- `programming-languages/javascript/index.md:7`: garbled opening sentence rewritten.
+- `a-developers-guide-to-ethereum-part-one:151`: `` `Web3.` `` code span split from its period (`` `Web3`. ``) restored.
+- `roadmap/dencun`: `1-of-N güven modeli` -> `N'de 1 güven modeli` (earlier wording).
+- `oracles`: Stork `sürekli işlem piyasaları` -> `sürekli vadeli işlem piyasaları` (perpetuals). `payments` meta description `sabit paralarla` -> `sabitcoin'lerle` (locale convention).
+
+**Open (warnings):**
+
+- `developers/docs/bridges` further-reading titles now English (was translated); `ETHBEAT Bridge Risk Framework` etc.
+- Glossary-driven mid-sentence capitals: `Protokoller`, `Düğümler`, `Gaz` (dencun), `Likiditeyi` (page-stablecoins-tools-pharos-description), `Ana ağ` vs `Ana Ağ` (page-layer-2-networks-main-network).
+- `Harici olarak sahip olunan hesapların` (roadmap/security:78) for EOA vs glossary `harici sahipli hesap` (prior PR #19556 flag).
+- `teklifçi` vs `teklif edici` mixed within attestations; `gaz`/`gas` mixed across docs; `değiştirilemez token` (erc-721 heading) vs corpus `misli olmayan`.
+- Pre-existing, not this PR: data-and-analytics lacks `{#mobula}` and `{#envio}` anchors vs English.
+
+**Notes:** none of tr's historical failure modes recurred (istemci, Ana Ağ, no katillik/MeFi/EHT/BSL, no cross-script).
+
 ## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
 Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: batch is `yigin` in 8 optimistic-rollup labels and `parti` in the zk-rollup set and in `optimistic-rollup-title`; glossary-capitalized `Protokol` mid-sentence x6; `(subgraphs)`/`(seedless)` English parentheticals added in dev-tools.
 

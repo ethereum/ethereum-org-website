@@ -1,6 +1,6 @@
 ---
 title: "مقدمة فنية عن التطبيقات اللامركزية (dapps)"
-description: 
+description: "مقدمة فنية عن التطبيقات اللامركزية (dapps): كيف تجمع التطبيقات اللامركزية بين العقود الذكية على إيثيريوم وواجهة أمامية، وكيف تختلف عن تطبيقات الويب."
 lang: ar
 ---
 
@@ -96,8 +96,7 @@ _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذ
 
 ## برامج تعليمية: بناء التطبيقات والواجهات الأمامية على إيثيريوم {#tutorials}
 
-- [جولة في عقد يونيسواب الإصدار الثاني (Uniswap-v2)](/developers/tutorials/uniswap-v2-annotated-code/) _– جولة مشروحة في العقود الأساسية ليونيسواب الإصدار الثاني تشرح كيف يعمل صانع السوق الآلي (AMM)._
-- [بناء واجهة مستخدم لعقدك](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– كيفية بناء واجهة أمامية حديثة باستخدام React + Wagmi تتصل بعقدك الذكي._
-- [عقد ذكي "Hello World" للمبتدئين – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– برنامج تعليمي شامل: كتابة ونشر وبناء واجهة أمامية لعقد ذكي بسيط._
+- [جولة في عقد <span dir="ltr">Uniswap-v2</span>](/developers/tutorials/uniswap-v2-annotated-code/) _– جولة مشروحة في عقود يونيسواب الأساسية للإصدار الثاني (<span dir="ltr">v2</span>) تشرح كيف يعمل صانع السوق الآلي (AMM)._
+- [بناء واجهة مستخدم لعقدك](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– كيفية بناء واجهة أمامية حديثة باستخدام <span dir="ltr">React + wagmi</span> تتصل بعقدك الذكي._
 - [مكونات الخادم والوكلاء لتطبيقات Web3](/developers/tutorials/server-components/) _– كيفية كتابة مكونات خادم TypeScript تستمع إلى أحداث سلسلة الكتل وتستجيب بالمعاملات._
 - [IPFS لواجهات المستخدم اللامركزية](/developers/tutorials/ipfs-decentralized-ui/) _– كيفية استضافة الواجهة الأمامية لتطبيقك اللامركزي (dapp) على IPFS لمقاومة الرقابة._

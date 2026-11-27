@@ -17,9 +17,9 @@ Un keynote di **Naomi Brockwell** a EthBoulder 2026 sull'erosione della privacy 
 
 *Questa trascrizione è una copia accessibile della [trascrizione originale del video](https://www.youtube.com/watch?v=nvJSFR1Q_JE) pubblicata da EthBoulder. È stata leggermente modificata per facilitarne la lettura.*
 
-### Discorso in due parti: avvertimento + soluzione (00:00) {#two-part-talk-warning-solution-0000}
+### Un discorso in due parti: avvertimento + soluzione (00:00) {#two-part-talk-warning-solution-0000}
 
-**Naomi:** Meraviglioso. Benvenuti a tutti. Grazie per essere qui. Quindi, questo sarà un discorso in due parti. nella prima parte, potrebbe diventare un po' intenso. Sono nota per diventare piuttosto intensa quando si tratta di discorsi sulla privacy e sulla sorveglianza. la seconda parte avrà un tono un po' diverso. Quindi nella prima parte vi racconterò una storia e nella seconda parte salveremo il mondo. Quindi, se per voi va bene, possiamo iniziare.
+**Naomi:** Meraviglioso. Benvenuti a tutti. Grazie per essere qui. Dunque, questo sarà un discorso in due parti. Nella prima parte, potrebbe diventare un po' intenso. Sono nota per diventare piuttosto intensa quando si tratta di discorsi sulla privacy e sulla sorveglianza. La seconda parte avrà un tono un po' diverso. Quindi, nella prima parte vi racconterò una storia e nella seconda parte salveremo il mondo. Quindi, se per voi va bene, possiamo iniziare.
 
 ### I vestiti nuovi dell'imperatore (00:44) {#the-emperors-new-clothes-0044}
 
@@ -43,9 +43,9 @@ Sentiamo che c'è qualcosa che non va quando diamo una rapida occhiata a un'info
 
 ### Quanto è grave lo status quo? (05:12) {#how-bad-is-the-status-quo-0512}
 
-Quindi, quanto è grave lo status quo? Quanto sono gravi davvero queste cose? O forse dovremmo parlarne perché alcune persone pensano che si tratti solo di aziende che cercano di venderci un paio di scarpe migliore. È solo una questione di consumismo, giusto? O forse si tratta solo di aziende di social media che imparano a conoscerci per creare un algoritmo più preciso, vero? Non sembra così terribile. Qual è il problema in tutto questo?
+Quindi, quanto è grave lo status quo? Quanto sono gravi queste cose in realtà? O forse dovremmo parlarne perché alcune persone pensano che si tratti solo di aziende che cercano di venderci un paio di scarpe migliore. È solo una questione di consumatori, giusto? O forse si tratta solo di aziende di social media che imparano a conoscerci per creare un algoritmo più preciso, giusto? Non sembra così terribile. Qual è il problema in tutto questo?
 
-Ma in questo momento, stiamo tutti acconsentendo a una macchina di sorveglianza pervasiva che sta silenziosamente invadendo ogni area privata delle nostre vite. Ora, in alcuni luoghi come i regimi autoritari, questa macchina viene utilizzata per controllare il dissenso prima che si verifichi, segnalando le persone potenzialmente problematiche come più propense a unirsi a un movimento di protesta e prendendole poi di mira. A volte questa macchina viene utilizzata per plasmare il sentimento pubblico, influenzare le opinioni, condizionare le elezioni o spingere intere popolazioni a odiare determinati tipi di persone, convincendole che quei gruppi le odiano. E poi ci sono paesi che trasmettono pubblicamente informazioni sui cittadini i cui punteggi di credito sociale sono diminuiti, per poi utilizzare tali punteggi per limitare i viaggi, restringere l'occupazione, impedire ai loro figli di frequentare determinate scuole o tagliarli fuori del tutto dalle opportunità.
+Ma in questo momento, stiamo tutti acconsentendo a una macchina di sorveglianza pervasiva che sta silenziosamente invadendo ogni area privata delle nostre vite. Ora, in alcuni luoghi come i regimi autoritari, questa macchina viene utilizzata per controllare il dissenso prima che si verifichi, segnalando persone potenzialmente problematiche come più propense a unirsi a un movimento di protesta e poi prendendo di mira quelle persone. A volte questa macchina viene utilizzata per plasmare il sentimento pubblico o influenzare le opinioni o condizionare le elezioni o spingere intere popolazioni a odiare determinati tipi di persone convincendole che quei gruppi le odiano. E poi ci sono paesi che trasmettono pubblicamente informazioni sui cittadini i cui punteggi di credito sociale sono diminuiti e poi usano quei punteggi per limitare i viaggi, per limitare la loro occupazione, per bloccare i loro figli da determinate scuole o per tagliarli fuori completamente dalle opportunità.
 
 ### Raccolta dati su una scala da mille miliardi di dollari (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  

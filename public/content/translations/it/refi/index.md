@@ -1,6 +1,6 @@
 ---
 title: Finanza rigenerativa (ReFi)
-description: Una panoramica sulla ReFi e i suoi attuali casi d'uso.
+description: "Cos'è la finanza rigenerativa (ReFi)? Scopri come gli strumenti di Ethereum finanziano beni pubblici, azioni per il clima e progetti comunitari che creano un impatto positivo duraturo."
 lang: it
 template: use-cases
 sidebarDepth: 2

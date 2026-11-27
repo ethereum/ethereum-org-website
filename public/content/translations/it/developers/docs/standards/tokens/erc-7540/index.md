@@ -6,14 +6,14 @@ lang: it
 
 ## Introduzione {#introduction}
 
-L'ERC-7540 estende lo [Standard per i vault tokenizzati ERC-4626](/developers/docs/standards/tokens/erc-4626/) aggiungendo il supporto per i flussi di deposito e rimborso asincroni. Introduce un modello di richiesta-e-riscatto (request-then-claim): gli utenti inviano prima una richiesta (bloccando i propri asset o quote), quindi riscattano il risultato dopo che il vault lo ha elaborato.
+L'ERC-7540 estende lo [Standard per i vault tokenizzati ERC-4626](/developers/docs/standards/tokens/erc-4626/) aggiungendo il supporto per i flussi di deposito e rimborso asincroni. Introduce un modello di richiesta-e-riscatto: gli utenti inviano prima una richiesta (consegnando i propri asset o quote al vault), quindi riscattano il risultato dopo che il vault l'ha elaborata.
 
 Ciò è necessario quando un vault non può effettuare il regolamento istantaneamente in un'unica transazione, ad esempio:
 
 - Protocolli di asset del mondo reale (RWA) come titoli di stato tokenizzati, credito privato e altri asset con cicli di regolamento T+1 o T+2
 - Prestito sottocollateralizzato in cui le valutazioni del credito avvengono offchain
 - Strategie di vault cross-chain in cui il bridging introduce ritardi
-- Token di liquid staking (LST) con periodi di svincolo
+- Token di liquid staking con periodi di svincolo
 
 I vault possono scegliere di essere asincroni solo sui depositi, solo sui rimborsi o su entrambi. Questa flessibilità consente agli sviluppatori di vault di aggiungere flussi asincroni solo dove la strategia sottostante lo richiede, mantenendo l'altro lato sincrono.
 
@@ -23,23 +23,23 @@ Per comprendere meglio questa pagina, ti consigliamo di leggere prima gli [stand
 
 ## ERC-4626 vs ERC-7540 {#comparison}
 
-Nell'ERC-4626, un deposito viene regolato atomicamente: l'investitore invia gli asset e riceve in cambio le quote in un'unica transazione.
+Nell'ERC-4626, un deposito viene regolato in modo atomico: l'investitore invia gli asset e riceve in cambio le quote in un'unica transazione.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-L'ERC-7540 divide questo processo in due fasi. L'investitore chiama prima `requestDeposit()` per bloccare gli asset, quindi attende che il gestore del vault elabori la richiesta. Una volta soddisfatta, l'investitore chiama `deposit()` per riscattare le proprie quote. I tassi di cambio vengono determinati al momento del soddisfacimento, non al momento della richiesta.
+L'ERC-7540 divide questo processo in due passaggi. L'investitore chiama prima `requestDeposit()`, che trasferisce i suoi asset nel vault, quindi attende che il vault elabori la richiesta. Come e quando ciò avvenga dipende dal vault, ad esempio quando viene completato un regolamento offchain. Una volta soddisfatta, l'investitore chiama `deposit()` per riscattare le proprie quote. Il tasso di cambio non è fisso al momento della richiesta: il vault lo imposta, in genere quando soddisfa la richiesta, quindi le quote ricevute possono differire da ciò che `convertToShares()` ha restituito quando è stata effettuata la richiesta.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-Il flusso di rimborso funziona allo stesso modo: `requestRedeem()` blocca le quote e, una volta soddisfatta la richiesta, l'investitore chiama `redeem()` per riscattare gli asset.
+Il flusso di rimborso funziona allo stesso modo: `requestRedeem()` prende le quote dall'investitore e, una volta soddisfatta, l'investitore chiama `redeem()` per riscattare gli asset.
 
 ## Funzioni e caratteristiche dell'ERC-7540 {#body}
 
-L'ERC-7540 eredita l'intera interfaccia dell'ERC-4626 ma riadatta `deposit`/`mint`/`withdraw`/`redeem` come funzioni di riscatto. Le nuove funzioni `requestDeposit` e `requestRedeem` gestiscono la fase iniziale della richiesta.
+L'ERC-7540 eredita l'intera interfaccia dell'ERC-4626 ma riadatta `deposit`/`mint`/`withdraw`/`redeem` come funzioni di riscatto. Le nuove funzioni `requestDeposit` e `requestRedeem` gestiscono il passaggio iniziale della richiesta.
 
-Ogni richiesta passa attraverso tre stati: in sospeso (inviata, in attesa di elaborazione), riscattabile (soddisfatta e prezzata) e riscattata (l'investitore ha ritirato le proprie quote o asset).
+Ogni richiesta passa attraverso tre stati: in sospeso (inviata, in attesa di elaborazione), riscattabile (soddisfatta e prezzata) e riscattata (l'investitore ha ritirato le proprie quote o asset). Un vault può rendere una richiesta riscattabile immediatamente, saltando lo stato in sospeso, ma il riscatto è sempre una chiamata separata. Lo standard non definisce alcun evento per quando una richiesta diventa riscattabile.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Flusso di richiesta di deposito {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Una volta che una richiesta di deposito diventa riscattabile, l'utente chiama la
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Blocca le `shares` da `owner` e invia una richiesta di rimborso. L'indirizzo `controller` riceve il controllo della richiesta.
+Prende il controllo di `shares` da `owner` e invia una richiesta di rimborso. Il vault può trattenere le quote finché la richiesta non viene riscattata o bruciarle immediatamente. L'indirizzo `controller` riceve il controllo della richiesta.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

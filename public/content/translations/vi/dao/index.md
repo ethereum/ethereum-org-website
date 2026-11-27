@@ -1,7 +1,7 @@
 ---
 title: "DAO là gì?"
 metaTitle: "DAO là gì? | Tổ chức tự trị phi tập trung"
-description: "Tổng quan về các DAO trên Ethereum"
+description: "DAO là gì? Tìm hiểu cách các tổ chức tự trị phi tập trung sử dụng các hợp đồng thông minh và token để đưa ra quyết định và quản lý quỹ chung trên Ethereum."
 lang: vi
 template: use-cases
 sidebarDepth: 2

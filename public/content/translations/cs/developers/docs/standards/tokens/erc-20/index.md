@@ -176,6 +176,7 @@ Z tohoto problému vzešly některé alternativní standardy, jako je [ERC-223](
 - [Alchemy - Průvodce tokeny ERC-20 v Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Další standardy zaměnitelných tokenů {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -184,6 +185,5 @@ Z tohoto problému vzešly některé alternativní standardy, jako je [ERC-223](
 ## Návody: Vývoj s ERC-20 na Ethereu {#tutorials}
 
 - [Průvodce kontraktem ERC-20](/developers/tutorials/erc20-annotated-code/) _– Komentovaný průvodce implementací kontraktu ERC-20 od OpenZeppelin řádek po řádku._
-- [ERC-20 s bezpečnostními pojistkami](/developers/tutorials/erc20-with-safety-rails/) _– Jak přidat ochranné prvky k tokenům ERC-20, které uživatelům pomohou vyhnout se běžným chybám._
-- [Odesílání tokenů pomocí Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Průvodce převodem tokenů ERC-20 pomocí Ethers.js pro začátečníky._
-- [Některé triky používané podvodnými tokeny a jak je odhalit](/developers/tutorials/scam-token-tricks/) _– Detailní pohled na vzorce podvodných tokenů ERC-20 a jak je identifikovat._
+- [ERC-20 s bezpečnostními prvky](/developers/tutorials/erc20-with-safety-rails/) _– Jak přidat ochranné prvky k tokenům ERC-20, aby se uživatelé vyhnuli běžným chybám._
+- [Některé triky používané podvodnými tokeny a jak je odhalit](/developers/tutorials/scam-token-tricks/) _– Detailní rozbor vzorců podvodných tokenů ERC-20 a jak je identifikovat._

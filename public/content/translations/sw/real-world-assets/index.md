@@ -1,7 +1,7 @@
 ---
 title: Rasilimali za ulimwengu halisi (RWA)
 metaTitle: RWA ni nini? | Faida na Matumizi ya Rasilimali za ulimwengu halisi
-description: Muhtasari wa Rasilimali za ulimwengu halisi kwenye Ethereum
+description: Rasilimali za ulimwengu halisi (RWA) ni nini? Jifunze jinsi rasilimali kama vile dhamana za serikali, mali isiyohamishika na bidhaa zinavyofanyiwa uundaji wa tokeni kwenye Ethereum, pamoja na faida na hatari zake.
 lang: sw
 template: use-cases
 image: /images/man-and-dog-playing.png

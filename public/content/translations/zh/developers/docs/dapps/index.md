@@ -1,6 +1,6 @@
 ---
 title: "去中心化应用 (dapp) 技术简介"
-description:
+description: "去中心化应用 (dapp) 技术简介：去中心化应用如何将以太坊上的智能合约与前端相结合，以及它们与 Web 应用有何不同。"
 lang: zh
 ---
 
@@ -48,6 +48,7 @@ dapp 可以使用任何语言编写前端代码和用户界面（就像传统应
 <VideoWatch slug="what-is-a-dapp" />
 
 ## 创建去中心化应用 (dapp) 的工具 {#dapp-tools}
+
 **Scaffold-ETH 2 _- 使用可适应你的智能合约的前端快速试验 Solidity。_**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
@@ -93,10 +94,9 @@ _知道对你有帮助的社区资源吗？编辑本页面并添加它！_
 - [以太坊技术栈简介](/developers/docs/ethereum-stack/)
 - [开发框架](/developers/docs/frameworks/)
 
-## 教程：在以太坊上构建应用程序和前端 {#tutorials}
+## 教程：在以太坊上构建应用和前端 {#tutorials}
 
-- [尤尼斯瓦普-v2 合约演练](/developers/tutorials/uniswap-v2-annotated-code/) _– 尤尼斯瓦普 v2 核心合约的带注释演练，解释了自动做市商 (AMM) 的工作原理。_
+- [Uniswap v2 合约演练](/developers/tutorials/uniswap-v2-annotated-code/) _– Uniswap v2 核心合约的带注释的演练，解释自动做市商 (AMM) 的工作原理。_
 - [为你的合约构建用户界面](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– 如何构建一个连接到你的智能合约的现代 React + Wagmi 前端。_
-- [面向初学者的 Hello World 智能合约 – 全栈](/developers/tutorials/hello-world-smart-contract-fullstack/) _– 端到端教程：为一个简单的智能合约编写、部署并构建前端。_
-- [Web3 应用程序的服务器组件和代理](/developers/tutorials/server-components/) _– 如何编写监听区块链事件并以交易响应的 TypeScript 服务器组件。_
-- [用于去中心化用户界面的 IPFS](/developers/tutorials/ipfs-decentralized-ui/) _– 如何将你的 dapp 前端托管在 IPFS 上以实现抗审查性。_
+- [Web3 应用的服务器组件和代理](/developers/tutorials/server-components/) _– 如何编写监听区块链事件并以交易响应的 TypeScript 服务器组件。_
+- [用于去中心化用户界面的 IPFS](/developers/tutorials/ipfs-decentralized-ui/) _– 如何将你的去中心化应用 (dapp) 前端托管在 IPFS 上以实现抗审查性。_

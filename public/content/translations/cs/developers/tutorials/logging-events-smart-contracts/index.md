@@ -11,8 +11,6 @@ skill: intermediate
 breadcrumb: "Logování událostí"
 lang: cs
 published: 2020-04-03
-source: EthereumDev
-sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
@@ -20,25 +18,26 @@ V Solidity jsou [události](/developers/docs/smart-contracts/anatomy/#events-and
 
 ## Události {#events}
 
-Nejběžnější událostí na blockchainu Etherea v době psaní tohoto článku je událost Transfer, kterou emitují tokeny ERC-20, když někdo provede převod tokenů.
+Jednou z nejběžnějších událostí na blockchainu Etherea je událost `Transfer`, kterou emitují tokeny ERC-20, když někdo provede převod tokenů.
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Podpis události je deklarován uvnitř kódu kontraktu a může být emitován pomocí klíčového slova emit. Například událost transfer loguje, kdo převod odeslal (_from_), komu (_to_) a kolik tokenů bylo převedeno (_value_).
+Podpis události je deklarován uvnitř kódu kontraktu a může být emitován pomocí klíčového slova emit. Například událost převodu loguje, kdo převod odeslal (_from_), komu (_to_) a kolik tokenů bylo převedeno (_value_).
 
-Pokud se vrátíme k našemu chytrému kontraktu Counter a rozhodneme se logovat každou změnu hodnoty. Jelikož tento kontrakt není určen k tomu, aby byl nasazen, ale slouží jako základ pro budování dalšího kontraktu jeho rozšířením: nazývá se abstraktní kontrakt. V případě našeho příkladu s počítadlem by to vypadalo takto:
+Vraťme se k chytrému kontraktu `Counter` z [nasazení vašeho prvního chytrého kontraktu](/developers/tutorials/deploying-your-first-smart-contract/) a logujme každou změnu hodnoty. Vypadalo by to takto:
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
-    event ValueChanged(uint oldValue, uint256 newValue);
+    event ValueChanged(uint256 oldValue, uint256 newValue);
 
-    // Privátní proměnná typu unsigned int pro uchování počtu
-    uint256 private count = 0;
+    // Veřejná proměnná typu unsigned int pro uchování počtu
+    uint256 public count = 0;
 
     // Funkce, která inkrementuje náš čítač
     function increment() public {
@@ -46,7 +45,7 @@ contract Counter {
         emit ValueChanged(count - 1, count);
     }
 
-    // Getter pro získání hodnoty počtu
+    // Nepotřebný getter pro získání hodnoty počtu
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -56,12 +55,12 @@ contract Counter {
 
 Všimněte si, že:
 
-- **Řádek 5**: deklarujeme naši událost a co obsahuje, starou hodnotu a novou hodnotu.
+- **Řádek 6**: deklarujeme naši událost a co obsahuje, starou hodnotu a novou hodnotu.
 
-- **Řádek 13**: Když inkrementujeme naši proměnnou count, emitujeme událost.
+- **Řádek 14**: Když inkrementujeme naši proměnnou count, emitujeme událost.
 
-Pokud nyní nasadíme kontrakt a zavoláme funkci increment, uvidíme, že Remix ji automaticky zobrazí, pokud kliknete na novou transakci uvnitř pole s názvem logs.
+Pokud nyní nasadíme kontrakt a zavoláme funkci increment, uvidíme, že ji Remix automaticky zobrazí, pokud kliknete na novou transakci uvnitř pole s názvem logs.
 
-![Remix screenshot](./remix-screenshot.png)
+![Snímek obrazovky Remix](./remix-screenshot.png)
 
-Logy jsou opravdu užitečné pro ladění vašich chytrých kontraktů, ale jsou také důležité, pokud budujete aplikace používané různými lidmi, a usnadňují tvorbu analytiky pro sledování a pochopení toho, jak je váš chytrý kontrakt používán. Logy generované transakcemi se zobrazují v populárních prohlížečích bloků a můžete je například také použít k vytvoření offchain skriptů pro naslouchání specifickým událostem a provádění akcí, když nastanou.
+Logy jsou opravdu užitečné pro ladění vašich chytrých kontraktů, ale jsou také důležité, pokud budujete aplikace používané různými lidmi, a usnadňují tvorbu analytiky pro sledování a pochopení toho, jak je váš chytrý kontrakt používán. Logy generované transakcemi se zobrazují v populárních prohlížečích bloků a můžete je také například použít k vytvoření offchain skriptů pro naslouchání specifickým událostem a provádění akcí, když nastanou.

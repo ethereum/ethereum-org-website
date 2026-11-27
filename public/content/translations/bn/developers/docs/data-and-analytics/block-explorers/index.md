@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## পরিষেবা {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - প্রাইভেট ইথেরিয়াম এক্সপ্লোরার। এটি (মেমপুল) ডেটা সাজানো এবং ফিল্টার করার জন্যও ব্যবহৃত হয়। স্প্যানিশ, ফ্রেঞ্চ, ইতালীয়, ডাচ, পর্তুগিজ, রাশিয়ান, চাইনিজ এবং ফার্সি ভাষায় উপলব্ধ
+- [Blockchair](https://blockchair.com/ethereum) - প্রাইভেট ইথেরিয়াম এক্সপ্লোরার। এটি (মেমপুল) ডেটা বাছাই এবং ফিল্টার করার জন্যও ব্যবহৃত হয়। স্প্যানিশ, ফ্রেঞ্চ, ইতালীয়, ডাচ, পর্তুগিজ, রাশিয়ান, চাইনিজ এবং ফার্সি ভাষায় উপলব্ধ
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - চাইনিজ, কোরিয়ান, রাশিয়ান এবং জাপানি ভাষায়ও উপলব্ধ
 - [Ethplorer](https://ethplorer.io/) - টোকেনের ওপর ফোকাস করা একটি ব্লক এক্সপ্লোরার। চাইনিজ, স্প্যানিশ, ফ্রেঞ্চ, তুর্কি, রাশিয়ান, কোরিয়ান এবং ভিয়েতনামী ভাষায়ও উপলব্ধ
+- [Ethscanner](https://ethscanner.io/) - Routescan দ্বারা তৈরি। Verifier Alliance-এর ওপেন ডেটাসেটে যাচাইকৃত কন্ট্রাক্ট প্রদান করে এবং ক্রস-চেইন ট্রানজ্যাকশন দেখায়
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

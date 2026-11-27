@@ -165,7 +165,7 @@ Entegrasyon testi, sözleşmeniz modüler bir mimari benimsiyorsa veya yürütme
 
 Bir statik analizör, bir akıllı sözleşmenin kaynak kodunu girdi olarak alır ve bir sözleşmenin bir özelliği sağlayıp sağlamadığını beyan eden sonuçlar çıkarır. Dinamik analizin aksine statik analiz, bir sözleşmeyi doğruluk açısından analiz etmek için onu yürütmeyi içermez. Bunun yerine statik analiz, bir akıllı sözleşmenin yürütme sırasında alabileceği tüm olası yollar hakkında akıl yürütür (yani, sözleşmenin çalışma zamanındaki (runtime) işleyişi için ne anlama geleceğini belirlemek üzere kaynak kodun yapısını inceleyerek).
 
-[Linting](https://www.perforce.com/blog/qac/what-is-linting) ve [statik test](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis), sözleşmeler üzerinde statik analiz çalıştırmak için yaygın yöntemlerdir. Her ikisi de, derleyici tarafından çıktı olarak verilen [soyut sözdizimi ağaçları (abstract syntax trees)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) ve [kontrol akış grafikleri](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) gibi bir sözleşmenin yürütülmesinin düşük seviyeli temsillerini analiz etmeyi gerektirir.
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) ve [statik test](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis), sözleşmeler üzerinde statik analiz çalıştırmak için yaygın yöntemlerdir. Her ikisi de, derleyici tarafından çıktı olarak verilen [soyut sözdizimi ağaçları (abstract syntax trees)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) ve [kontrol akış grafikleri](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) gibi bir sözleşmenin yürütülmesinin düşük seviyeli temsillerini analiz etmeyi gerektirir.
 
 Çoğu durumda statik analiz, güvensiz yapıların kullanımı, sözdizimi hataları veya bir sözleşme kodundaki kodlama standartlarının ihlalleri gibi güvenlik sorunlarını tespit etmek için kullanışlıdır. Ancak statik analizörlerin daha derin güvenlik açıklarını tespit etmede genel olarak yetersiz kaldığı bilinmektedir ve aşırı sayıda yanlış pozitif üretebilirler.
 
@@ -238,7 +238,7 @@ Testin aksine, biçimsel doğrulama bir akıllı sözleşmenin yürütülmesinin
 
 Belirtildiği gibi sıkı bir test süreci, bir sözleşmede hataların olmadığını nadiren garanti edebilir; biçimsel doğrulama yaklaşımları doğruluk konusunda daha güçlü güvenceler sağlayabilir ancak şu anda kullanımları zordur ve önemli maliyetlere neden olurlar.
 
-Yine de, bağımsız bir kod incelemesi alarak sözleşmedeki güvenlik açıklarını yakalama olasılığını daha da artırabilirsiniz. [Akıllı sözleşme denetimleri](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) ve [hata ödülleri (bug bounties)](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7), sözleşmelerinizi başkalarına analiz ettirmenin iki yoludur.
+Yine de, bağımsız bir kod incelemesi alarak sözleşmedeki güvenlik açıklarını yakalama olasılığını daha da artırabilirsiniz. [Akıllı sözleşme denetimleri](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) ve [hata ödülleri (bug bounties)](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7), sözleşmelerinizi başkalarına analiz ettirmenin iki yoludur.
 
 Denetimler, akıllı sözleşmelerdeki güvenlik açıklarını ve zayıf geliştirme pratiklerini bulma konusunda deneyimli denetçiler tarafından gerçekleştirilir. Bir denetim genellikle testlerin (ve muhtemelen biçimsel doğrulamanın) yanı sıra tüm kod tabanının manuel olarak incelenmesini de içerir.
 
@@ -276,7 +276,7 @@ En büyük fark, hata ödülü programlarının daha geniş bir geliştirici/hac
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Solidity akıllı sözleşme programlama dili için biçim ve güvenlik açısından en iyi uygulamaları zorunlu kılan linter aracıdır._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Özellikle Web3 akıllı sözleşme güvenliği ve geliştirmesi için tasarlanmış Rust tabanlı statik analizördür._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Özellikle Web3 akıllı sözleşme güvenliği ve geliştirmesi için tasarlanmış Rust tabanlı statik analizördür._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Güvenlik açığı ve kod kalitesi algılayıcıları, koddan yararlı bilgileri ayıklamak için yazdırıcılar ve özel alt modüller (submodules) yazma desteğine sahip Python tabanlı statik analiz çerçevesidir._
 
@@ -296,11 +296,10 @@ En büyük fark, hata ödülü programlarının daha geniş bir geliştirici/hac
 
 ## İlgili öğreticiler {#related-tutorials}
 
-- [Farklı test ürünlerine genel bir bakış ve karşılaştırma](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
+- [Farklı test ürünlerine genel bakış ve karşılaştırma](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır?](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Akıllı sözleşme hatalarını bulmak için Manticore nasıl kullanılır?](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır?](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [Test amaçlı Solidity sözleşmeleri nasıl mock'lanır (taklit edilir)?](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [Test için Solidity sözleşmeleri nasıl mock'lanır (taklit edilir)?](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Foundry kullanarak Solidity'de birim testleri nasıl çalıştırılır?](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Daha fazla bilgi {#further-reading}

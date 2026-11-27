@@ -39,6 +39,6 @@ _Знаєте ресурс спільноти, який вам допоміг? �
 ## Пов'язані посібники {#related-tutorials}
 
 - [Контрольний список інтеграції токенів](/developers/tutorials/token-integration-checklist/) _— контрольний список речей, які слід враховувати під час взаємодії з токенами._
-- [Розуміння смарт-контракту токена ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _— вступ до розгортання вашого першого смарт-контракту в тестовій мережі Етеріуму._
-- [Перекази та схвалення токенів ERC20 зі смарт-контракту Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _— як використовувати смарт-контракт для взаємодії з токеном за допомогою мови Solidity._
-- [Реалізація ринку ERC721 [практичний посібник]](/developers/tutorials/how-to-implement-an-erc721-market/) _— як виставити токенізовані предмети на продаж на децентралізованій дошці оголошень._
+- [Огляд контракту ERC-20](/developers/tutorials/erc20-annotated-code/) _— детальний огляд реалізації контракту ERC-20 від ОупенЗеппелін з поясненням кожного рядка._
+- [Передача та схвалення токенів ERC-20 зі смарт-контракту на Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _— як використовувати смарт-контракт для взаємодії з токеном за допомогою мови Solidity._
+- [Реалізація ринку ERC-721 [практичний посібник]](/developers/tutorials/how-to-implement-an-erc721-market/) _— як виставити токенізовані предмети на продаж на децентралізованій дошці оголошень._

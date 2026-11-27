@@ -154,18 +154,18 @@ Scalare Ethereum è un'ampia area di interesse per i ricercatori di Ethereum e p
 
 ### Layer 2 {#layer-2}
 
-Ora ci sono diversi protocolli layer 2 (l2) che scalano Ethereum utilizzando diverse tecniche per il batching delle transazioni e per metterle in sicurezza sul layer 1 di Ethereum. La ricerca aperta include la riduzione della latenza e del costo della dimostrazione, l'abbreviazione del tempo necessario affinché una transazione raggiunga la definitività trustless e l'offerta agli utenti di un'unica esperienza coerente attraverso molti rollup.
+Ora ci sono diversi protocolli layer 2 (L2) che scalano Ethereum utilizzando diverse tecniche per il batching delle transazioni e per metterle in sicurezza sul layer 1 di Ethereum. La ricerca aperta include la riduzione della latenza e del costo della dimostrazione, l'abbreviazione del tempo necessario affinché una transazione raggiunga la definitività trustless e l'offerta agli utenti di un'unica esperienza coerente attraverso molti rollup.
 
 #### Letture di base {#background-reading-2}
 
-- [Introduzione ai layer 2](/layer-2/)
-- [L2BEAT: riepilogo della scalabilità](https://l2beat.com/scaling/summary)
+- [Introduzione al layer 2](/layer-2/)
+- [ETHBEAT: riepilogo della scalabilità](https://ethbeat.org/layer2s/summary)
 - [Una roadmap di Ethereum incentrata sui rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Ricerca recente {#recent-research-2}
 
 - [Layer 2 su Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: costi onchain](https://l2beat.com/scaling/costs)
+- [ETHBEAT: costi onchain](https://ethbeat.org/layer2s/costs)
 - [Costruire su Ethereum nel 2026: cosa è cambiato](/latest/building-on-ethereum-in-2026/)
 
 ### Interoperabilità {#interoperability}
@@ -387,7 +387,7 @@ C'è bisogno di più strumenti di analisi dei dati e dashboard che forniscano in
 
 - [Analisi dei dati del Robust Incentives Group](https://rig.ethereum.org/)
 - [Dati aperti di ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: riepilogo della scalabilità](https://l2beat.com/scaling/summary)
+- [ETHBEAT: riepilogo della scalabilità](https://ethbeat.org/layer2s/summary)
 
 ## App e strumenti {#apps-and-tooling}
 

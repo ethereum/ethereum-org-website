@@ -1,6 +1,6 @@
 ---
 title: "リジェネラティブ・ファイナンス (ReFi)"
-description: "ReFiの概要と現在のユースケース。"
+description: "リジェネラティブ・ファイナンス (ReFi) とは？イーサリアムのツールが、持続的なプラスの影響を生み出す公共財、気候変動対策、コミュニティプロジェクトにどのように資金を提供しているかについて学びましょう。"
 lang: ja
 template: use-cases
 sidebarDepth: 2

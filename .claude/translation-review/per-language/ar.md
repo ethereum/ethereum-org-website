@@ -1,5 +1,25 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.7/10
+Scope: 72 md pages + 20 JSON namespaces (incl. 277 dev-tools descriptions), incremental updates; changed lines only. Sampled 12 md diffs and ~100 JSON keys; scripted sweeps (U+3002/U+2060/CJK/Cyrillic/Indic, English sentences, isolate balance, abbreviation expansions, glossary-translit names) clean apart from the items below.
+
+**Fixed in this branch:**
+
+- English dates left in `<span dir="ltr">` -> Arabic: developers/docs/bridges:127-132 (Sep 8, 2021 ... June 12, 2024), bridges:140 (July 5, 2022), roadmap/pectra description (`May 7, 2025`). Recurrence of #18772/#19556.
+- `Robust Incentives Group` semantically translated (`مجموعة الحوافز القوية`) with no English kept at community/research:388 -> Latin (#69).
+- `// SPDX-License-Identifier: MIT` translated to `// معرف ترخيص SPDX: MIT` inside two Solidity fences (interact-with-other-contracts:23,113): the compiler reads this comment -> restored.
+- Developer tools and clients re-transliterated on 19 changed md lines (Slither, Echidna, OpenZeppelin, Erigon, Reth, Nethermind, Nimbus, Lighthouse, Chainlink) -> Latin in `<span dir="ltr">` per #113 (glossary forms were `سليذر`, `إيكيدنا`, `أوبن زبلن`...). MetaMask/Coinbase/Uniswap/Discord left as established consumer forms.
+- ai-agents description: `التمويل اللامركزي (DeFi)` expanded where English has bare `DeFi` -> bare (#112).
+- page-roadmap.json: `التمهيد لـ الدمج` -> `التمهيد للدمج`, `للـ مُدَقِّقين` -> `للمُدَقِّقين` (detached clitic).
+
+**Open (warnings):**
+
+- anatomy comments retranslated in full (~40 lines): `الكلمة المفتاحية` -> `الكلمة الرئيسية`, `uint` as `عدد صحيح موجب` (unsigned is not positive); tanween style switched `ـًا` -> `اً`.
+- zk-rollups lost `<span dir="ltr">` around bare numbers (10, 16 gas); `لشحن الميزات` (about) calques "ship features".
+- dev-tools descriptions repeat `واجهة برمجة تطبيقات (API)` x35, `(EVM)` x15, `(ABI)` x13 in every card (allowed on first mention per string, but heavy); added `(CI)`, `(EVM)` x3 in rust, `(NFT)` x4 in erc-721.
+- Untranslated image alt text in 17 files (img-alt-untranslated); `June 18, 2022`/`January 8, 2022` still English at bridges/index.md:139,141 (unchanged lines).
+- `Devcon` stays Latin in devcon-mumbai title/description while breadcrumb says `ديفكون` (#74).
+
 ## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.3/10
 Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
 

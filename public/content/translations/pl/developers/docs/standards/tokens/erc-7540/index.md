@@ -1,21 +1,21 @@
 ---
 title: Standard asynchronicznego stokenizowanego skarbca ERC-7540
-description: Rozszerzenie ERC-4626, które dodaje asynchroniczne przepływy depozytów i umorzeń dla stokenizowanych skarbców.
+description: "Rozszerzenie ERC-4626, które dodaje asynchroniczne przepływy depozytów i umorzeń dla stokenizowanych skarbców."
 lang: pl
 ---
 
 ## Wprowadzenie {#introduction}
 
-ERC-7540 rozszerza [standard stokenizowanego skarbca ERC-4626](/developers/docs/standards/tokens/erc-4626/), dodając obsługę asynchronicznych przepływów depozytów i umorzeń. Wprowadza wzorzec żądania, a następnie odbioru (request-then-claim): użytkownicy najpierw przesyłają żądanie (blokując swoje aktywa lub udziały), a następnie odbierają wynik po jego przetworzeniu przez skarbiec.
+ERC-7540 rozszerza [standard stokenizowanego skarbca ERC-4626](/developers/docs/standards/tokens/erc-4626/), dodając obsługę asynchronicznych przepływów depozytów i umorzeń. Wprowadza wzorzec żądania, a następnie odbioru (request-then-claim): użytkownicy najpierw przesyłają żądanie (przekazując swoje aktywa lub udziały do skarbca), a następnie odbierają wynik po jego przetworzeniu przez skarbiec.
 
 Jest to potrzebne, gdy skarbiec nie może dokonać natychmiastowego rozrachunku w jednej transakcji, na przykład:
 
 - Protokoły aktywów świata rzeczywistego (RWA), takie jak stokenizowane obligacje skarbowe, kredyty prywatne i inne aktywa z cyklami rozrachunku T+1 lub T+2
-- Pożyczanie z niepełnym zabezpieczeniem, gdzie ocena zdolności kredytowej odbywa się w sposób pozałańcuchowy
-- Międzyłańcuchowe strategie skarbców, w których mostowanie wprowadza opóźnienia
-- Tokeny płynnego stakingu (LST) z okresami odblokowania
+- Pożyczanie z niepełnym zabezpieczeniem, gdzie ocena zdolności kredytowej odbywa się pozałańcuchowo
+- Międzyłańcuchowe strategie skarbca, gdzie mostowanie wprowadza opóźnienia
+- Tokeny płynnego stakingu (LST) z okresami odwiązania
 
-Skarbce mogą być asynchroniczne tylko dla depozytów, tylko dla umorzeń lub dla obu tych operacji. Ta elastyczność pozwala programistom skarbców dodawać przepływy asynchroniczne tylko tam, gdzie wymaga tego bazowa strategia, zachowując synchroniczność drugiej strony.
+Skarbce mogą zdecydować się na asynchroniczność tylko dla depozytów, tylko dla umorzeń lub dla obu. Ta elastyczność pozwala deweloperom skarbców dodawać przepływy asynchroniczne tylko tam, gdzie wymaga tego bazowa strategia, zachowując drugą stronę jako synchroniczną.
 
 ## Wymagania wstępne {#prerequisites}
 
@@ -23,23 +23,23 @@ Aby lepiej zrozumieć tę stronę, zalecamy najpierw przeczytać o [standardach 
 
 ## ERC-4626 a ERC-7540 {#comparison}
 
-W ERC-4626 rozrachunek depozytu następuje atomowo: inwestor wysyła aktywa i otrzymuje udziały z powrotem w jednej transakcji.
+W ERC-4626 rozrachunek depozytu następuje atomowo: inwestor wysyła aktywa i otrzymuje z powrotem udziały w pojedynczej transakcji.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 dzieli to na dwa etapy. Inwestor najpierw wywołuje `requestDeposit()`, aby zablokować aktywa, a następnie czeka, aż menedżer skarbca przetworzy żądanie. Po jego zrealizowaniu inwestor wywołuje `deposit()`, aby odebrać swoje udziały. Kursy wymiany są ustalane w momencie realizacji, a nie w momencie żądania.
+ERC-7540 dzieli to na dwa kroki. Inwestor najpierw wywołuje `requestDeposit()`, co transferuje jego aktywa do skarbca, a następnie czeka, aż skarbiec przetworzy żądanie. To, jak i kiedy to nastąpi, zależy od skarbca, na przykład po zakończeniu pozałańcuchowego rozrachunku. Po zrealizowaniu, inwestor wywołuje `deposit()`, aby odebrać swoje udziały. Kurs wymiany nie jest ustalony w momencie żądania: skarbiec ustala go, zazwyczaj w momencie realizacji żądania, więc otrzymane udziały mogą różnić się od tego, co zwróciło `convertToShares()` w momencie składania żądania.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-Przepływ umorzenia działa w ten sam sposób: `requestRedeem()` blokuje udziały, a po zrealizowaniu inwestor wywołuje `redeem()`, aby odebrać aktywa.
+Przepływ umorzenia działa w ten sam sposób: `requestRedeem()` pobiera udziały od inwestora, a po zrealizowaniu inwestor wywołuje `redeem()`, aby odebrać aktywa.
 
 ## Funkcje i cechy ERC-7540 {#body}
 
-ERC-7540 dziedziczy pełny interfejs ERC-4626, ale zmienia przeznaczenie `deposit`/`mint`/`withdraw`/`redeem` na funkcje roszczeń (odbioru). Nowe funkcje `requestDeposit` i `requestRedeem` obsługują początkowy etap żądania.
+ERC-7540 dziedziczy pełny interfejs ERC-4626, ale zmienia przeznaczenie `deposit`/`mint`/`withdraw`/`redeem` na funkcje odbioru. Nowe funkcje `requestDeposit` i `requestRedeem` obsługują początkowy krok żądania.
 
-Każde żądanie przechodzi przez trzy stany: oczekujące (przesłane, czekające na przetworzenie), możliwe do odebrania (zrealizowane i wycenione) oraz odebrane (inwestor odebrał swoje udziały lub aktywa).
+Każde żądanie przechodzi przez trzy stany: oczekujące (przesłane, oczekujące na przetworzenie), możliwe do odebrania (zrealizowane i wycenione) oraz odebrane (inwestor odebrał swoje udziały lub aktywa). Skarbiec może sprawić, że żądanie będzie możliwe do odebrania natychmiast, pomijając stan oczekiwania, ale odbiór jest zawsze oddzielnym wywołaniem. Standard nie definiuje żadnego zdarzenia dla momentu, w którym żądanie staje się możliwe do odebrania.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Przepływ żądania depozytu {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Gdy żądanie depozytu staje się możliwe do odebrania, użytkownik wywołuje s
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Blokuje `shares` z `owner` i przesyła żądanie umorzenia. Adres `controller` otrzymuje kontrolę nad żądaniem.
+Przejmuje kontrolę nad `shares` od `owner` i przesyła żądanie umorzenia. Skarbiec może zatrzymać udziały do momentu odebrania żądania lub spalić je od razu. Adres `controller` otrzymuje kontrolę nad żądaniem.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

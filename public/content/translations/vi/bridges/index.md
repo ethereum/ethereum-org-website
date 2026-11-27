@@ -1,11 +1,11 @@
 ---
 title: "Cầu nối chuỗi khối"
 metaTitle: "Giới thiệu về cầu nối chuỗi khối"
-description: "Cầu nối cho phép người dùng chuyển tiền của họ qua các chuỗi khối khác nhau"
+description: "Cầu nối chuỗi khối là gì? Tìm hiểu cách các cầu nối chuyển token giữa Ethereum, các lớp 2 và các chuỗi khác, các loại cầu nối và những rủi ro cần xem xét."
 lang: vi
 ---
 
-_Web3 đã phát triển thành một hệ sinh thái gồm các chuỗi khối lớp 1 (l1) và các giải pháp mở rộng quy mô lớp 2 (l2), mỗi giải pháp được thiết kế với các khả năng và sự đánh đổi riêng. Khi số lượng các giao thức chuỗi khối tăng lên, nhu cầu chuyển tài sản qua các chuỗi cũng tăng theo. Để đáp ứng nhu cầu này, chúng ta cần các cầu nối._
+_Web3 đã phát triển thành một hệ sinh thái gồm các chuỗi khối lớp 1 (L1) và các giải pháp mở rộng quy mô lớp 2 (L2), mỗi giải pháp được thiết kế với các khả năng và sự đánh đổi riêng. Khi số lượng các giao thức chuỗi khối tăng lên, nhu cầu chuyển tài sản qua các chuỗi cũng tăng theo. Để đáp ứng nhu cầu này, chúng ta cần các cầu nối._
 
 <Divider />
 
@@ -21,7 +21,7 @@ Nhưng, bạn sẽ làm gì nếu muốn thực hiện một giao dịch trao đ
 
 ## Tại sao chúng ta cần cầu nối? {#why-do-we-need-bridges}
 
-Tất cả các chuỗi khối đều có những hạn chế riêng. Để Ethereum mở rộng quy mô và theo kịp nhu cầu, nó đã yêu cầu các [bản cuộn](/glossary/#rollups). Mặt khác, các lớp 1 (l1) như Solana và Avalanche được thiết kế khác biệt để cho phép thông lượng cao hơn nhưng phải đánh đổi bằng sự phi tập trung.
+Tất cả các chuỗi khối đều có những hạn chế riêng. Để Ethereum mở rộng quy mô và theo kịp nhu cầu, nó đã yêu cầu các [bản cuộn](/glossary/#rollups). Mặt khác, các lớp 1 (L1) như Solana và Avalanche được thiết kế khác biệt để cho phép thông lượng cao hơn nhưng phải đánh đổi bằng sự phi tập trung.
 
 Tuy nhiên, tất cả các chuỗi khối đều được phát triển trong các môi trường biệt lập và có các quy tắc cũng như cơ chế [đồng thuận](/glossary/#consensus) khác nhau. Điều này có nghĩa là chúng không thể giao tiếp nguyên bản và các token không thể di chuyển tự do giữa các chuỗi khối.
 
@@ -34,7 +34,7 @@ Các cầu nối tồn tại để kết nối các chuỗi khối, cho phép ch
 - người dùng truy cập các nền tảng mới và tận dụng lợi ích của các chuỗi khác nhau.
 - các nhà phát triển từ các hệ sinh thái chuỗi khối khác nhau hợp tác và xây dựng các nền tảng mới cho người dùng.
 
-[Cách chuyển token sang lớp 2 (l2)](/guides/how-to-use-a-bridge/)
+[Cách chuyển token sang lớp 2 (L2)](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -44,7 +44,7 @@ Dưới đây là một số kịch bản mà bạn có thể sử dụng cầu 
 
 ### Phí giao dịch thấp hơn {#transaction-fees}
 
-Giả sử bạn có ETH trên Mạng chính Ethereum nhưng muốn phí giao dịch rẻ hơn để khám phá các dapp khác nhau. Bằng cách chuyển ETH của bạn từ Mạng chính sang một bản cuộn lớp 2 (l2) của Ethereum, bạn có thể tận hưởng mức phí giao dịch thấp hơn.
+Giả sử bạn có ETH trên Mạng chính Ethereum nhưng muốn phí giao dịch rẻ hơn để khám phá các dapp khác nhau. Bằng cách chuyển ETH của bạn từ Mạng chính sang một bản cuộn lớp 2 (L2) của Ethereum, bạn có thể tận hưởng mức phí giao dịch thấp hơn.
 
 ### Các dapp trên các chuỗi khối khác {#dapps-other-chains}
 
@@ -52,7 +52,7 @@ Nếu bạn đang sử dụng Aave trên Mạng chính Ethereum để cung cấp
 
 ### Khám phá các hệ sinh thái chuỗi khối {#explore-ecosystems}
 
-Nếu bạn có ETH trên Mạng chính Ethereum và bạn muốn khám phá một l1 thay thế để dùng thử các dapp gốc của họ. Bạn có thể sử dụng một cầu nối để chuyển ETH của mình từ Mạng chính Ethereum sang l1 thay thế đó.
+Nếu bạn có ETH trên Mạng chính Ethereum và bạn muốn khám phá một L1 thay thế để dùng thử các dapp gốc của họ. Bạn có thể sử dụng một cầu nối để chuyển ETH của mình từ Mạng chính Ethereum sang L1 thay thế đó.
 
 ### Sở hữu tài sản tiền mã hóa gốc {#own-native}
 
@@ -101,10 +101,10 @@ Nhiều giải pháp cầu nối áp dụng các mô hình nằm giữa hai thá
 
 ## Sử dụng cầu nối {#use-bridge}
 
-Việc sử dụng cầu nối cho phép bạn chuyển tài sản của mình qua các chuỗi khối khác nhau. Dưới đây là một số tài nguyên có thể giúp bạn tìm và sử dụng các cầu nối:
+Sử dụng các cầu nối cho phép bạn chuyển tài sản của mình qua các chuỗi khối khác nhau. Dưới đây là một số tài nguyên có thể giúp bạn tìm và sử dụng các cầu nối:
 
-- **[Tóm tắt các cầu nối của L2BEAT](https://l2beat.com/bridges/summary) & [Phân tích rủi ro các cầu nối của L2BEAT](https://l2beat.com/bridges/summary)**: Một bản tóm tắt toàn diện về các cầu nối khác nhau, bao gồm thông tin chi tiết về thị phần, loại cầu nối và các chuỗi đích. L2BEAT cũng có một bản phân tích rủi ro cho các cầu nối, giúp người dùng đưa ra quyết định sáng suốt khi lựa chọn một cầu nối.
-- **[Tóm tắt cầu nối của DefiLlama](https://defillama.com/bridges/Ethereum)**: Một bản tóm tắt về khối lượng giao dịch qua cầu nối trên các mạng lưới Ethereum.
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: Một bản tóm tắt toàn diện về các cầu nối khác nhau, bao gồm thông tin chi tiết về thị phần, loại cầu nối và các chuỗi đích. ETHBEAT cũng có phân tích rủi ro cho các cầu nối, giúp người dùng đưa ra quyết định sáng suốt khi chọn một cầu nối.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: Bản tóm tắt về khối lượng qua cầu nối trên các mạng lưới Ethereum.
 
 <Divider />
 
@@ -130,16 +130,17 @@ Tiền của người dùng sẽ gặp rủi ro nếu:
 
 Một vụ hack gần đây là cầu nối Wormhole của Solana, [nơi 120 nghìn wETH (325 triệu USD) đã bị đánh cắp trong vụ hack](https://rekt.news/wormhole-rekt/). Nhiều [vụ hack lớn nhất trong các chuỗi khối có liên quan đến cầu nối](https://rekt.news/leaderboard/).
 
-Cầu nối rất quan trọng đối với việc tiếp nhận người dùng vào các lớp 2 (l2) của Ethereum, và ngay cả đối với những người dùng muốn khám phá các hệ sinh thái khác nhau. Tuy nhiên, với những rủi ro liên quan đến việc tương tác với các cầu nối, người dùng phải hiểu được những sự đánh đổi mà các cầu nối đang thực hiện. Dưới đây là một số [chiến lược cho bảo mật chuỗi chéo](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
+Cầu nối rất quan trọng đối với việc tiếp nhận người dùng vào các lớp 2 (L2) của Ethereum, và ngay cả đối với những người dùng muốn khám phá các hệ sinh thái khác nhau. Tuy nhiên, với những rủi ro liên quan đến việc tương tác với các cầu nối, người dùng phải hiểu được những sự đánh đổi mà các cầu nối đang thực hiện. Dưới đây là một số [chiến lược cho bảo mật chuỗi chéo](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
 
 <Divider />
 
 ## Đọc thêm {#further-reading}
 
 - [EIP-5164: Thực thi chuỗi chéo](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 tháng 6, 2022 - Brendan Asselstine_
-- [Khung rủi ro L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 tháng 7, 2022 - Bartek Kiepuszewski_
+- [Khung rủi ro L2Bridge](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _5 tháng 7, 2022 - Bartek Kiepuszewski_
 - ["Tại sao tương lai sẽ là đa chuỗi, nhưng sẽ không phải là chuỗi chéo."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 tháng 1, 2022 - Vitalik Buterin_
 - [Khai thác bảo mật chia sẻ cho khả năng tương tác chuỗi chéo an toàn: Các ủy ban trạng thái Lagrange và hơn thế nữa](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 tháng 6, 2024 - Emmanuel Awosika_
 - [Trạng thái của các giải pháp khả năng tương tác Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 tháng 6, 2024 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

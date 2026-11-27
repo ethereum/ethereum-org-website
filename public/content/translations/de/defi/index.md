@@ -1,7 +1,7 @@
 ---
 title: Dezentralisierte Finanzen (DeFi)
 metaTitle: Was ist DeFi? | Vorteile und Nutzung von dezentralisierten Finanzen
-description: "Ein Überblick über DeFi auf Ethereum"
+description: "Was ist DeFi? Erfahren Sie, wie Dezentralisierte Finanzen auf Ethereum es jedem ermöglichen, ohne Banken Kredite zu vergeben, Kredite aufzunehmen, zu handeln und Zinsen zu verdienen, und welche Risiken damit verbunden sind."
 lang: de
 template: use-cases
 image: /images/use-cases/defi.png

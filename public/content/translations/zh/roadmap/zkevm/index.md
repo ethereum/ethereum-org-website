@@ -1,6 +1,6 @@
 ---
-title: 用于一层网络 (l1) 区块验证的 zkEVM
-description: 了解零知识证明如何验证以太坊区块执行，从而实现更高的吞吐量并降低验证者硬件要求。
+title: "用于一层网络 (L1) 区块验证的 zkEVM"
+description: "了解零知识证明如何验证以太坊区块执行，从而实现更高的吞吐量并降低验证者硬件要求。"
 lang: zh
 template: roadmap
 ---
@@ -12,7 +12,7 @@ zkEVM 是一种使用[零知识证明](/zero-knowledge-proofs/)来验证以太�
 <AlertContent>
 <AlertTitle>不要与 zkEVM 汇总混淆</AlertTitle>
 <AlertDescription>
-本页面讨论的是使用 zkEVM 验证以太坊一层网络 (l1) 区块执行。对于使用 ZK 证明作为二层网络 (l2) 解决方案来扩容以太坊的 zkEVM 汇总，请参阅[零知识汇总](/developers/docs/scaling/zk-rollups/)。
+本页面讨论的是使用 zkEVM 验证以太坊一层网络 (L1) 区块执行。对于使用 ZK 证明作为二层网络 (L2) 解决方案来扩容以太坊的 zkEVM 汇总，请参阅[零知识汇总](/developers/docs/scaling/zk-rollups/)。
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -25,7 +25,7 @@ zkEVM 是一种使用[零知识证明](/zero-knowledge-proofs/)来验证以太�
 
 zkEVM 提供了一种摆脱这种权衡的方法。通过从“每个人都重新执行”转变为“一人证明，所有人验证”，以太坊可以安全地提高 gas 上限，而无需提高验证者的硬件要求。
 
-## zkEVM 一层网络 (l1) 验证的工作原理 {#how-it-works}
+## zkEVM 一层网络 (L1) 验证的工作原理 {#how-it-works}
 
 zkEVM 验证将区块验证转变为“N 分之 1”模型：
 
@@ -42,7 +42,7 @@ zkEVM 根据其与以太坊的兼容性分为不同类型：
 - **类型 1**：完全等效于以太坊。不对 EVM 进行任何修改，因此可以完全按原样证明任何以太坊区块
 - **类型 2-4**：做出各种权衡，修改 EVM 行为以使证明更容易
 
-对于一层网络 (l1) 验证，类型 1 是必不可少的。zkEVM 必须能够证明任何有效的以太坊区块，包括边缘情况和历史区块。任何偏离以太坊确切行为的情况都会产生共识问题。
+对于一层网络 (L1) 验证，类型 1 是必不可少的。zkEVM 必须能够证明任何有效的以太坊区块，包括边缘情况和历史区块。任何偏离以太坊确切行为的情况都会产生共识问题。
 
 以太坊基金会的 zkEVM 研究侧重于与现有以太坊执行完全兼容的类型 1 实现。
 
@@ -64,7 +64,7 @@ zkEVM 根据其与以太坊的兼容性分为不同类型：
 
 ## 实时证明挑战 {#realtime-proving}
 
-zkEVM 一层网络 (l1) 验证的主要挑战是速度。以太坊区块每 12 秒生成一次，这意味着证明需要在类似的时间范围内生成，才能对共识有用。
+zkEVM 一层网络 (L1) 验证的主要挑战是速度。以太坊区块每 12 秒生成一次，这意味着证明需要在类似的时间范围内生成，才能对共识有用。
 
 当前的 zkEVM 实现可能需要几分钟到几个小时才能证明单个区块。研究重点是通过以下方式缩小这一差距：
 
@@ -95,20 +95,20 @@ zkEVM 一层网络 (l1) 验证的主要挑战是速度。以太坊区块每 12 �
 
 这些实现使用基于 RISC-V 的虚拟机来执行 EVM 字节码，然后生成正确执行的 ZK 证明。最新的测试结果和进度在[以太坊基金会的 zkVM 跟踪器](https://zkevm.ethereum.foundation/zkvm-tracker)中进行跟踪。
 
-## zkEVM 如何与其他升级相配合 {#related-upgrades}
+## zkEVM 如何与其他升级相契合 {#related-upgrades}
 
-zkEVM 一层网络 (l1) 验证与以太坊路线图中的其他几个项目相关联：
+zkEVM 一层网络 (L1) 验证与以太坊路线图中的其他几个项目相关联：
 
-- **[沃克尔树](/roadmap/verkle-trees/)**：为无状态验证启用更小的见证数据，减少证明者需要处理的数据量
-- **[无状态](/roadmap/statelessness/)**：zkEVM 是一个关键的促成因素——有了执行的 ZK 证明，节点不需要完整状态即可验证区块
-- **[提议者-构建者分离 (PBS)](/roadmap/pbs/)**：区块构建者可能会集成证明生成，或者可能会出现一个独立的证明者市场
+- **新状态树**：统一的二叉树（[EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)）被提议用来取代早期的 [Verkle 树](/roadmap/verkle-trees/)设计，它将为无状态验证提供更小的见证数据，并且在设计上更容易证明
+- **[无状态](/roadmap/statelessness/)**：zkEVM 是一个关键的推动因素——有了执行的 ZK 证明，节点不需要完整状态即可验证区块
+- **[提议者-构建者分离 (PBS)](/roadmap/pbs/)**：区块构建者可能会整合证明生成，或者可能会出现一个独立的证明者市场
 - **[单槽最终性](/roadmap/single-slot-finality/)**：更快的证明生成可以通过密码学保证实现单槽最终性
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-zkEVM 一层网络 (l1) 验证正处于积极研究阶段，尚未集成到生产环境的以太坊客户端中。
+zkEVM 一层网络 (L1) 验证正处于积极研究阶段，尚未集成到生产环境的以太坊客户端中。
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -117,7 +117,7 @@ zkEVM 一层网络 (l1) 验证正处于积极研究阶段，尚未集成到生�
 
 - [zkEVM Foundation](https://zkevm.ethereum.foundation) - 官方以太坊基金会 zkEVM 研究中心
 - [Ethproofs](https://ethproofs.org/) - 跟踪实时证明以太坊的竞赛
-- [zkevm.fyi](https://zkevm.fyi) - 关于一层网络 (l1) zkEVM 的技术书籍
+- [zkevm.fyi](https://zkevm.fyi) - 关于一层网络 (L1) zkEVM 的技术书籍
 - [PSE zkEVM 规范](https://github.com/privacy-scaling-explorations/zkevm-specs) - 技术规范
 - [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html) - Vitalik 对验证改进的概述
 - [以太坊基金会 zkEVM 博客](https://zkevm.ethereum.foundation/blog) - 来自以太坊基金会团队的性能分析

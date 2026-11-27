@@ -1,7 +1,7 @@
 ---
 title: O ethereum.org
 metaTitle: O nas
-description: "O zespole, społeczności i misji ethereum.org"
+description: "Poznaj zespół i społeczność tworzące ethereum.org: naszą misję, sposób, w jaki witryna jest otwarcie budowana i zarządzana, oraz jak możesz pomóc w jej ulepszaniu."
 lang: pl
 ---
 
@@ -107,9 +107,11 @@ Korzystamy z zestawu [zasad projektowania](/contributing/design-principles/), kt
 
 ## System projektowania {#design-system}
 
-Zbudowaliśmy i udostępniliśmy [system projektowania](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1), aby szybciej dostarczać funkcje i umożliwić członkom społeczności uczestnictwo w otwartym projektowaniu ethereum.org.
+Zbudowaliśmy i udostępniliśmy [system projektowania](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1), aby szybciej dostarczać nowe funkcje i umożliwić członkom społeczności uczestnictwo w otwartym projektowaniu ethereum.org.
 
-Chcesz się zaangażować? [Śledź nas w Figmie](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) i dołącz do rozmowy na naszym [kanale #design na Discordzie](/discord/).
+Chcesz się zaangażować? [Śledź postępy w Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) i dołącz do dyskusji na naszym [kanale #design na Discordzie](/discord/).
+
+Szukasz logo, ilustracji lub innych plików związanych z marką? Pobierz je z naszej [strony z zasobami](/assets/).
 
 ## Przewodnik po stylu {#style-guide}
 
@@ -122,6 +124,10 @@ Chętnie przyjmiemy opinie na temat naszych zasad projektowania, systemu projekt
 ## Licencja {#license}
 
 Witryna ethereum.org jest open-source i została zbudowana na [licencji MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), chyba że określono inaczej. Więcej o [warunkach korzystania](/terms-of-use/) z ethereum.org.
+
+## Twoja prywatność {#your-privacy}
+
+ethereum.org używa Matomo do analityki chroniącej prywatność, z której możesz zrezygnować w dowolnym momencie. Przeczytaj naszą [politykę plików cookie](/cookie-policy/) i [politykę prywatności](/privacy-policy/), aby uzyskać szczegółowe informacje.
 
 ## Oferty pracy {#open-jobs}
 

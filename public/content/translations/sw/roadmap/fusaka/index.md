@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Jifunze kuhusu sasisho la itifaki ya Fusaka
+description: Fusaka ilianza kutumika tarehe 3 Desemba 2025. Jifunze kile ambacho sasisho hili la Ethereum lilibadilisha, ikiwa ni pamoja na PeerDAS, ambayo huongeza mablobu kwa miamala ya bei nafuu ya tabaka la 2 (L2).
 lang: sw
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -27,11 +27,11 @@ Sasisho la Fusaka ni hatua moja tu katika malengo ya maendeleo ya muda mrefu ya 
 
 #### PeerDAS {#peerdas}
 
-Hiki ndicho _kivutio kikuu_ cha mchepuo wa Fusaka, kipengele kikuu kilichoongezwa katika sasisho hili. Matabaka ya 2 (l2) kwa sasa huchapisha data zao kwenye Ethereum katika mablobu, aina ya data ya muda mfupi iliyoundwa mahususi kwa ajili ya matabaka ya 2 (l2). Kabla ya Fusaka, kila nodi kamili inapaswa kuhifadhi kila blobu ili kuhakikisha kuwa data ipo. Kadiri uwezo wa upitishaji wa blobu unavyoongezeka, kulazimika kupakua data hii yote kunakuwa na matumizi makubwa ya rasilimali yasiyoweza kuvumilika.
+Hiki ndicho _kivutio kikuu_ cha mchepuo wa Fusaka, kipengele kikuu kilichoongezwa katika sasisho hili. Matabaka ya 2 (L2) kwa sasa huchapisha data zao kwenye Ethereum katika mablobu, aina ya data ya muda mfupi iliyoundwa mahususi kwa ajili ya matabaka ya 2 (L2). Kabla ya Fusaka, kila nodi kamili inapaswa kuhifadhi kila blobu ili kuhakikisha kuwa data ipo. Kadiri uwezo wa upitishaji wa blobu unavyoongezeka, kulazimika kupakua data hii yote kunakuwa na matumizi makubwa ya rasilimali yasiyoweza kuvumilika.
 
 Pamoja na [uchukuaji sampuli wa upatikanaji wa data](https://notes.ethereum.org/@fradamt/das-fork-choice) , badala ya kulazimika kuhifadhi data zote za blobu, kila nodi itawajibika kwa sehemu ndogo ya data ya blobu. Mablobu yanasambazwa kwa usawa na kwa nasibu kwenye nodi katika mtandao huku kila nodi kamili ikishikilia 1/8 tu ya data, hivyo kuwezesha uwezo wa kuongezeka kinadharia hadi mara 8. Ili kuhakikisha upatikanaji wa data, sehemu yoyote ya data inaweza kujengwa upya kutoka kwa 50% yoyote iliyopo ya jumla kwa mbinu zinazopunguza uwezekano wa data isiyo sahihi au inayokosekana hadi kiwango kidogo sana cha kifumbaji (\~moja katika 10<sup>20</sup> hadi moja katika 10<sup>24</sup>).
 
-Hii huweka mahitaji ya maunzi na kipimo data kwa nodi kuwa yanayowezekana huku ikiwezesha kuongezeka kwa blobu na kusababisha uwezo zaidi wa kuongezeka kwa ada ndogo kwa matabaka ya 2 (l2).
+Hii huweka mahitaji ya maunzi na kipimo data kwa nodi kuwa yanayowezekana huku ikiwezesha kuongezeka kwa blobu na kusababisha uwezo zaidi wa kuongezeka kwa ada ndogo kwa matabaka ya 2 (L2).
 
 [Jifunze zaidi kuhusu PeerDAS](/roadmap/fusaka/peerdas/)
 
@@ -43,11 +43,11 @@ Hii huweka mahitaji ya maunzi na kipimo data kwa nodi kuwa yanayowezekana huku i
 
 #### Michepuo ya Kigezo-cha-Blobu-Pekee {#blob-parameter-only-forks}
 
-Matabaka ya 2 (l2) huongeza Ethereum - kadiri mitandao yao inavyokua, yanahitaji kuchapisha data zaidi kwenye Ethereum. Hii inamaanisha kuwa Ethereum itahitaji kuongeza idadi ya mablobu yanayopatikana kwao kadiri muda unavyosonga. Ingawa PeerDAS inawezesha kuongeza data ya blobu, inahitaji kufanywa hatua kwa hatua na kwa usalama.
+Matabaka ya 2 (L2) huongeza Ethereum - kadiri mitandao yao inavyokua, yanahitaji kuchapisha data zaidi kwenye Ethereum. Hii inamaanisha kuwa Ethereum itahitaji kuongeza idadi ya mablobu yanayopatikana kwao kadiri muda unavyosonga. Ingawa PeerDAS inawezesha kuongeza data ya blobu, inahitaji kufanywa hatua kwa hatua na kwa usalama.
 
 Kwa sababu Ethereum ni msimbo unaoendeshwa kwenye maelfu ya nodi zinazojitegemea ambazo zinahitaji mwafaka juu ya sheria sawa, hatuwezi tu kuanzisha mabadiliko kama vile kuongeza idadi ya blobu kwa njia unayosambaza sasisho la tovuti. Mabadiliko yoyote ya sheria lazima yawe sasisho lililoratibiwa ambapo kila nodi, mteja na programu ya mthibitishaji inasasishwa kabla ya kitalu kile kile kilichoamuliwa mapema.
 
-Masasisho haya yaliyoratibiwa kwa ujumla yanajumuisha mabadiliko mengi, yanahitaji majaribio mengi, na hilo huchukua muda. Ili kukabiliana haraka na mabadiliko ya mahitaji ya blobu ya tabaka la 2 (l2), michepuo ya kigezo cha blobu pekee huanzisha utaratibu wa kuongeza mablobu bila kulazimika kusubiri ratiba hiyo ya sasisho.
+Masasisho haya yaliyoratibiwa kwa ujumla yanajumuisha mabadiliko mengi, yanahitaji majaribio mengi, na hilo huchukua muda. Ili kukabiliana haraka na mabadiliko ya mahitaji ya blobu ya tabaka la 2 (L2), michepuo ya kigezo cha blobu pekee huanzisha utaratibu wa kuongeza mablobu bila kulazimika kusubiri ratiba hiyo ya sasisho.
 
 Michepuo ya kigezo cha blobu pekee inaweza kuwekwa na wateja, sawa na usanidi mwingine kama kikomo cha gesi. Kati ya masasisho makuu ya Ethereum, wateja wanaweza kukubaliana kuongeza mablobu ya `target` na `max` hadi k.m. 9 na 12 na kisha waendeshaji wa nodi watasasisha ili kushiriki katika mchepuo huo mdogo. Michepuo hii ya kigezo cha blobu pekee inaweza kusanidiwa wakati wowote.
 
@@ -61,12 +61,12 @@ Chanzo cha grafu: [Mablobu ya Ethereum - @hildobby, Dune Analytics](https://dune
 
 #### Ada ya msingi ya blobu inayofungwa na gharama za utekelezaji {#blob-base-fee-bounded-by-execution-costs}
 
-Matabaka ya 2 (l2) hulipa bili mbili yanapochapisha data: ada ya blob na gesi ya utekelezaji inayohitajika kuthibitisha mablobu hayo. Ikiwa gesi ya utekelezaji inatawala, mnada wa ada ya blob unaweza kushuka hadi Wei 1 na kuacha kuwa ishara ya bei.
+Matabaka ya 2 (L2) hulipa bili mbili yanapochapisha data: ada ya blob na gesi ya utekelezaji inayohitajika kuthibitisha mablobu hayo. Ikiwa gesi ya utekelezaji inatawala, mnada wa ada ya blob unaweza kushuka hadi Wei 1 na kuacha kuwa ishara ya bei.
 
 EIP-7918 huweka bei ya akiba sawia chini ya kila blobu. Wakati akiba iko juu kuliko ada ya msingi ya blobu ya kawaida, algoriti ya kurekebisha ada huchukulia kitalu kama kilichozidi lengo na kuacha kusukuma ada chini na kuiruhusu kuongezeka kwa kawaida. Kama matokeo:
 
 - soko la ada ya blob daima hujibu msongamano
-- matabaka ya 2 (l2) hulipa angalau sehemu yenye maana ya ukokotoaji wanaolazimisha kwenye nodi
+- matabaka ya 2 (L2) hulipa angalau sehemu yenye maana ya ukokotoaji wanaolazimisha kwenye nodi
 - kupanda kwa ada ya msingi kwenye tabaka la utekelezaji (EL) hakuwezi tena kukwaza ada ya blob kwa Wei 1
 
 **Rasilimali**:
@@ -161,11 +161,11 @@ Kipengele hiki kinaongeza maagizo madogo ya EVM, **kuhesabu sifuri zinazoongoza 
 
 #### Prikampaili kwa Usaidizi wa Curve ya secp256r1 {#secp256r1-precompile}
 
-Inaanzisha kikagua sahihi cha secp256r1 (P-256) kilichojengewa ndani, cha mtindo wa kifunguo kwenye anwani isiyobadilika `0x100` kwa kutumia muundo sawa wa wito ambao tayari umepitishwa na matabaka ya 2 (l2) mengi na kurekebisha visa vya ukingoni, kwa hivyo mikataba iliyoandikwa kwa mazingira hayo inafanya kazi kwenye tabaka la 1 (l1) bila mabadiliko.
+Inaanzisha kikagua sahihi cha secp256r1 (P-256) kilichojengewa ndani, cha mtindo wa kifunguo kwenye anwani isiyobadilika `0x100` kwa kutumia muundo sawa wa wito ambao tayari umepitishwa na matabaka ya 2 (L2) mengi na kurekebisha visa vya ukingoni, kwa hivyo mikataba iliyoandikwa kwa mazingira hayo inafanya kazi kwenye tabaka la 1 (L1) bila mabadiliko.
 
 Sasisho la UX! Kwa watumiaji, hii inafungua usaini wa asili wa kifaa na vifunguo. Pochi zinaweza kutumia Apple Secure Enclave, Hifadhi ya funguo ya Android, moduli za usalama za maunzi (HSMs), na FIDO2/WebAuthn moja kwa moja - hakuna kirai cha mbegu, uingizaji rahisi zaidi, na mtiririko wa vipengele vingi unaohisi kama programu za kisasa. Hii inasababisha UX bora, urejeshaji rahisi, na mifumo ya udhanifu wa akaunti inayolingana na kile ambacho mabilioni ya vifaa tayari yanafanya.
 
-Kwa wasanidi, inachukua ingizo la baiti 160 na kurudisha towe la baiti 32, na kuifanya iwe rahisi kuhamisha maktaba zilizopo na mikataba ya tabaka la 2 (l2). Kwa ndani, inajumuisha ukaguzi wa pointi-kwenye-ukomo na ulinganisho wa moduli ili kuondoa visa vya ukingoni vyenye hila bila kuvunja wapigaji halali.
+Kwa wasanidi, inachukua ingizo la baiti 160 na kurudisha towe la baiti 32, na kuifanya iwe rahisi kuhamisha maktaba zilizopo na mikataba ya tabaka la 2 (L2). Kwa ndani, inajumuisha ukaguzi wa pointi-kwenye-ukomo na ulinganisho wa moduli ili kuondoa visa vya ukingoni vyenye hila bila kuvunja wapigaji halali.
 
 **Rasilimali**:
 
@@ -207,7 +207,7 @@ Unganisho mnamo 2022 [lilitumia panda](https://x.com/hwwonx/status/1431970802040
 
 ### Ni maboresho gani yamejumuishwa kwa Kuongeza L2? {#what-improvements-are-included-for-l2-scaling}
 
-[PeerDAS](/roadmap/fusaka/peerdas) ndicho kipengele kikuu cha mchepuo. Inatekeleza uchukuaji sampuli wa upatikanaji wa data (DAS) ambao unafungua uwezo zaidi wa kuongezeka kwa mikusanyiko, kinadharia kuongeza nafasi ya blobu hadi mara 8 ya ukubwa wa sasa. Soko la ada ya blob pia litaboreshwa ili kujibu kwa ufanisi msongamano na kuhakikisha matabaka ya 2 (l2) yanalipa ada yenye maana kwa ukokotoaji na nafasi ambayo mablobu huweka kwenye nodi.
+[PeerDAS](/roadmap/fusaka/peerdas) ndicho kipengele kikuu cha mchepuo. Inatekeleza uchukuaji sampuli wa upatikanaji wa data (DAS) ambao unafungua uwezo zaidi wa kuongezeka kwa mikusanyiko, kinadharia kuongeza nafasi ya blobu hadi mara 8 ya ukubwa wa sasa. Soko la ada ya blob pia litaboreshwa ili kujibu kwa ufanisi msongamano na kuhakikisha matabaka ya 2 (L2) yanalipa ada yenye maana kwa ukokotoaji na nafasi ambayo mablobu huweka kwenye nodi.
 
 ### Je, michepuo ya BPO ni tofauti vipi? {#how-are-bpo-forks-different}
 
@@ -228,7 +228,7 @@ Mfano wa jinsi inavyoweza kuonekana:
 
 ### Je, hii itapunguza ada kwenye Ethereum (tabaka la 1) {#will-this-lower-gas}
 
-Sasisho hili halipunguzi ada za gesi kwenye tabaka la 1 (l1), angalau si moja kwa moja. Lengo kuu ni nafasi zaidi ya blobu kwa data ya rollup, kwa hivyo kupunguza ada kwenye tabaka la 2 (l2). Hii inaweza kuwa na athari fulani kwenye soko la ada la tabaka la 1 (l1) lakini hakuna mabadiliko makubwa yanayotarajiwa.
+Sasisho hili halipunguzi ada za gesi kwenye tabaka la 1 (L1), angalau si moja kwa moja. Lengo kuu ni nafasi zaidi ya blobu kwa data ya rollup, kwa hivyo kupunguza ada kwenye tabaka la 2 (L2). Hii inaweza kuwa na athari fulani kwenye soko la ada la tabaka la 1 (L1) lakini hakuna mabadiliko makubwa yanayotarajiwa.
 
 ### Kama mweka dhamana, ninahitaji kufanya nini kwa sasisho? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
 

@@ -1,7 +1,7 @@
 ---
 title: "以太坊支付"
 metaTitle: "以太坊上的支付"
-description: "以太坊支付概覽"
+description: "以太坊上的支付是如何運作的？了解如何使用 ETH 和穩定幣在全球匯款，通常只需幾秒鐘且成本低廉，無需透過銀行。"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2
