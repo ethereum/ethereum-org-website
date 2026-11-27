@@ -53,7 +53,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-Ця функція повертає загальну суму базових активів, що зберігаються у сховищі.
+Ця функція повертає загальну суму базових активів, якими управляє сховище, включаючи ті, що були задіяні в інших місцях, і після вирахування будь-яких комісій.
 
 #### convertToShares {#convertoshares}
 
@@ -185,7 +185,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### Карта інтерфейсу {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Події {#events}
 

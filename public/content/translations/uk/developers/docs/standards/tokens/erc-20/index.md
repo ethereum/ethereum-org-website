@@ -182,9 +182,8 @@ print("Addr Balance:", addr_balance)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 — Токенізовані сховища](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 — Асинхронні токенізовані сховища](/developers/docs/standards/tokens/erc-7540)
-## Посібники: Створення з ERC-20 в Етеріумі {#tutorials}
+## Посібники: розробка з ERC-20 в Етеріумі {#tutorials}
 
-- [Огляд контракту ERC-20](/developers/tutorials/erc20-annotated-code/) _— Порядковий анотований огляд реалізації контракту ERC-20 від ОупенЗеппелін._
-- [ERC-20 із запобіжниками](/developers/tutorials/erc20-with-safety-rails/) _— Як додати запобіжні заходи до токенів ERC-20, щоб допомогти користувачам уникнути поширених помилок._
-- [Надсилання токенів за допомогою Ethers.js](/developers/tutorials/send-token-ethersjs/) _— Посібник для початківців із переказу токенів ERC-20 за допомогою Ethers.js._
-- [Деякі хитрощі, які використовують шахрайські токени, і як їх виявити](/developers/tutorials/scam-token-tricks/) _— Детальний огляд патернів шахрайських токенів ERC-20 та способів їх ідентифікації._
+- [Покроковий розбір контракту ERC-20](/developers/tutorials/erc20-annotated-code/) _– Порядковий анотований розбір реалізації контракту ERC-20 від ОупенЗеппелін._
+- [ERC-20 із захисними механізмами](/developers/tutorials/erc20-with-safety-rails/) _– Як додати захисні механізми до токенів ERC-20, щоб допомогти користувачам уникнути поширених помилок._
+- [Деякі хитрощі, які використовують шахрайські токени, та як їх виявити](/developers/tutorials/scam-token-tricks/) _– Детальне дослідження патернів шахрайських токенів ERC-20 та способів їх розпізнавання._

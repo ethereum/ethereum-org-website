@@ -4,9 +4,9 @@ description: "Дізнайтеся, як розробляти для Етері�
 lang: uk
 ---
 
-JavaScript є однією з найпопулярніших мов в екосистемі Етеріуму. Насправді існує [команда](https://github.com/ethereumjs), яка прагне перенести якомога більше можливостей Етеріуму в JavaScript.
+JavaScript є однією з найпопулярніших мов в екосистемі Етеріуму, з реалізаціями на JavaScript та TypeScript усього: від базових примітивів протоколу до робочого клієнта консенсусу.
 
-Є можливості писати на JavaScript (або чомусь схожому) на [всіх рівнях стека](/developers/docs/ethereum-stack/).
+Існують можливості писати на JavaScript (або чомусь схожому) на [всіх рівнях стека](/developers/docs/ethereum-stack/).
 
 ## Взаємодія з Етеріумом {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ JavaScript є однією з найпопулярніших мов в екос�
 
 ### Вузли та клієнти {#nodes-and-clients}
 
-Клієнт EthereumJS перебуває в активній розробці, що дозволяє вам заглибитися в те, як працюють клієнти Етеріуму, зрозумілою вам мовою — JavaScript!
+[Лодстар](https://lodestar.chainsafe.io/) — це готовий до використання клієнт консенсусу, написаний на TypeScript і підтримуваний ChainSafe. Він включає маяковий вузол і клієнт валідатора, і це гарне місце, щоб побачити, як працює консенсус доказу частки (PoS) в Етеріумі мовою, яку ви знаєте.
 
-**Ознайомтеся з клієнтом**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Ознайомтеся з Лодстар**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+На рівні виконання клієнт EthereumJS застарів і перенесений в архів, але його вихідний код залишається доступним для вивчення того, як працює клієнт Етеріуму на JavaScript.
+
+**Ознайомтеся з архівованим клієнтом**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Інші проєкти {#other-projects}
 

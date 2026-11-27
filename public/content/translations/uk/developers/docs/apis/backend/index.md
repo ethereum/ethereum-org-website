@@ -66,7 +66,7 @@ lang: uk
 **Infura —** **_API Етеріуму як послуга._**
 
 - [infura.io](https://infura.io)
-- [Документація](https://docs.infura.io/api)
+- [Документація](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC — _Економічно вигідний провайдер JSON-RPC для віртуальної машини Ethereum (EVM)_**
@@ -77,7 +77,7 @@ lang: uk
 **NOWNodes — _Повні вузли та оглядачі блоків._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Документація](https://nownodes.gitbook.io/documentation)
+- [Документація](https://docs.nownodes.io/)
 
 **QuickNode —** **_Блокчейн-інфраструктура як послуга._**
 
@@ -172,11 +172,10 @@ lang: uk
 - [DataHub](https://www.figment.io/)
 - [Документація](https://docs.figment.io/)
 
-**Moralis —** **_Провайдер EVM API корпоративного рівня._**
+**Moralis —** **_Провайдер API EVM корпоративного рівня._**
 
 - [moralis.io](https://moralis.io)
 - [Документація](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Форум](https://forum.moralis.io/)
 
@@ -187,19 +186,19 @@ lang: uk
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview —** **_Загальна платформа блокчейн-API для багатьох крипто._**
+**Tokenview —** **_Універсальна мульти-крипто платформа блокчейн-API._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Документація](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata —** **_Надає простий та надійний доступ до API блокчейну Етеріуму._**
+**Watchdata —** **_Надає простий та надійний доступ через API до блокчейну Етеріуму._**
 
 - [Watchdata](https://watchdata.io/)
 - [Документація](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex —** **_API збагачених даних блокчейну в реальному часі для десятків мереж._**
+**Codex —** **_API збагачених блокчейн-даних у реальному часі для десятків мереж._**
 
 - [codex.io](https://www.codex.io/)
 - [Документація](https://docs.codex.io)
@@ -210,10 +209,9 @@ lang: uk
 **Covalent —** **_Збагачені блокчейн-API для понад 200 мереж._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Документація](https://www.covalenthq.com/docs/api/)
+- [Документація](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Додаткова література {#further-reading}
 
@@ -226,5 +224,4 @@ _Знаєте ресурс спільноти, який вам допоміг? �
 
 ## Пов'язані посібники {#related-tutorials}
 
-- [Налаштування Web3.js для використання блокчейну Етеріуму в JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _— Інструкції з налаштування Web3.js у вашому проєкті._
-- [Виклик смарт-контракту з JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _— На прикладі токена DAI дізнайтеся, як викликати функцію контракту за допомогою JavaScript._
+- [Серверні компоненти та агенти для застосунків Web3](/developers/tutorials/server-components/) _– Як писати серверні компоненти на TypeScript, які прослуховують події блокчейну та відповідають транзакціями._
