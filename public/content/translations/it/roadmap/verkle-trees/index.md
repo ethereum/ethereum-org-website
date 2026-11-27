@@ -1,22 +1,24 @@
 ---
 title: Alberi di Verkle
-description: Una descrizione ad alto livello degli alberi di Verkle e di come verranno utilizzati per aggiornare Ethereum
+description: "Una descrizione ad alto livello degli alberi di Verkle e del perché i piani per l'albero di stato di Ethereum sono passati a un albero binario"
 lang: it
 template: roadmap
 summaryPoints:
   - Scopri cosa sono gli alberi di Verkle
-  - Leggi perché gli alberi di Verkle sono un utile aggiornamento per Ethereum
+  - Leggi perché gli alberi di Verkle sono stati accantonati in favore di un albero binario
 ---
 
 Gli alberi di Verkle (una parola macedonia tra "Vector commitment" e "Merkle Trees") sono una struttura dati che può essere utilizzata per aggiornare i nodi di [Ethereum](/) in modo che possano smettere di archiviare grandi quantità di dati di stato senza perdere la capacità di convalidare i blocchi.
 
+Gli alberi di Verkle sono stati proposti come il prossimo albero di stato di Ethereum nella [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), ma tale proposta è ora stagnante ed è stata accantonata in favore di un albero binario unificato ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)). L'albero binario persegue lo stesso obiettivo di avere testimoni di piccole dimensioni per i client senza stato. Questa pagina spiega come funzionano gli alberi di Verkle e perché la ricerca si è spostata verso un albero binario.
+
 ## Assenza di stato {#statelessness}
 
-Gli alberi di Verkle sono un passo fondamentale nel percorso verso i client Ethereum senza stato. I client senza stato sono quelli che non devono archiviare l'intero database di stato per convalidare i blocchi in arrivo. Invece di utilizzare la propria copia locale dello stato di Ethereum per verificare i blocchi, i client senza stato utilizzano un "testimone" per i dati di stato che arriva con il blocco. Un testimone è una raccolta di singoli frammenti dei dati di stato necessari per eseguire un particolare insieme di transazioni e una prova crittografica che il testimone fa realmente parte dei dati completi. Il testimone viene utilizzato _al posto_ del database di stato. Affinché ciò funzioni, i testimoni devono essere molto piccoli, in modo da poter essere trasmessi in modo sicuro attraverso la rete in tempo utile affinché i validatori li elaborino entro uno slot di 12 secondi. L'attuale struttura dei dati di stato non è adatta perché i testimoni sono troppo grandi. Gli alberi di Verkle risolvono questo problema consentendo testimoni di piccole dimensioni, rimuovendo una delle barriere principali ai client senza stato.
+Gli alberi di Verkle sono stati progettati come un passo sul percorso verso i client Ethereum senza stato. I client senza stato sono quelli che non devono archiviare l'intero database di stato per convalidare i blocchi in arrivo. Invece di utilizzare la propria copia locale dello stato di Ethereum per verificare i blocchi, i client senza stato utilizzano un "testimone" dei dati di stato che arriva con il blocco. Un testimone è una raccolta di singoli frammenti dei dati di stato necessari per eseguire un particolare insieme di transazioni e una prova crittografica che il testimone fa realmente parte dei dati completi. Il testimone viene utilizzato _al posto_ del database di stato. Affinché ciò funzioni, i testimoni devono essere molto piccoli, in modo da poter essere trasmessi in modo sicuro attraverso la rete in tempo utile affinché i validatori li elaborino entro uno slot di 12 secondi. L'attuale struttura dei dati di stato non è adatta perché i testimoni sono troppo grandi. Gli alberi di Verkle risolvono questo problema consentendo testimoni di piccole dimensioni, rimuovendo uno dei principali ostacoli ai client senza stato.
 
 <ExpandableCard title="Perché vogliamo client senza stato?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
-I client Ethereum attualmente utilizzano una struttura dati nota come Patricia Merkle Trie per archiviare i propri dati di stato. Le informazioni sui singoli account sono archiviate come foglie sul trie e le coppie di foglie vengono sottoposte a hash ripetutamente finché non rimane un solo hash. Questo hash finale è noto come "radice". Per verificare i blocchi, i client Ethereum eseguono tutte le transazioni in un blocco e aggiornano il loro trie di stato locale. Il blocco è considerato valido se la radice dell'albero locale è identica a quella fornita dal proponente del blocco, perché qualsiasi differenza nel calcolo eseguito dal proponente del blocco e dal nodo di convalida farebbe sì che l'hash radice sia completamente diverso. Il problema è che la verifica della blockchain richiede che ogni client archivi l'intero trie di stato per il blocco di testa e per diversi blocchi storici (l'impostazione predefinita in Geth è mantenere i dati di stato per 128 blocchi dietro la testa). Ciò richiede che i client abbiano accesso a una grande quantità di spazio su disco, il che rappresenta un ostacolo all'esecuzione di nodi completi su hardware economico e a basso consumo. Una soluzione a questo problema è aggiornare il trie di stato a una struttura più efficiente (albero di Verkle) che può essere riassunta utilizzando un piccolo "testimone" dei dati che può essere condiviso al posto dei dati di stato completi. La riformattazione dei dati di stato in un albero di Verkle è un trampolino di lancio per passare ai client senza stato.
+I client Ethereum attualmente utilizzano una struttura dati nota come Patricia Merkle Trie per archiviare i propri dati di stato. Le informazioni sui singoli account sono archiviate nelle foglie del trie e ogni nodo ramo, che può avere fino a 16 figli, viene sottoposto a hash insieme agli hash dei suoi figli, livello per livello, finché non rimane un solo hash. Questo hash finale è noto come "radice". Per verificare i blocchi, i client Ethereum eseguono tutte le transazioni in un blocco e aggiornano il loro trie di stato locale. Il blocco è considerato valido se la radice dell'albero locale è identica a quella fornita dal proponente del blocco, perché qualsiasi differenza nel calcolo eseguito dal proponente del blocco e dal nodo validatore farebbe sì che l'hash radice sia completamente diverso. Il problema è che la verifica della blockchain richiede che ogni client archivi l'intero trie di stato per il blocco di testa e per diversi blocchi storici (l'impostazione predefinita in Geth è mantenere i dati di stato per 128 blocchi dietro la testa). Ciò richiede che i client abbiano accesso a una grande quantità di spazio su disco, il che rappresenta un ostacolo all'esecuzione di nodi completi su hardware economico e a basso consumo. Una soluzione a questo problema è aggiornare il trie di stato a una struttura più efficiente (come un albero di Verkle o un albero binario) che può essere riassunta utilizzando un piccolo "testimone" dei dati che può essere condiviso al posto dei dati di stato completi. La riformattazione dei dati di stato in una nuova struttura ad albero è un trampolino di lancio per passare ai client senza stato.
 
 </ExpandableCard>
 
@@ -46,9 +48,9 @@ Gli alberi di Verkle sono coppie `(key,value)` in cui le chiavi sono elementi da
 
 ## Progressi attuali {#current-progress}
 
-Le testnet degli alberi di Verkle sono già attive e funzionanti, ma ci sono ancora sostanziali aggiornamenti in sospeso per i client che sono necessari per supportare gli alberi di Verkle. Puoi contribuire ad accelerare i progressi distribuendo contratti sulle testnet o eseguendo client di testnet.
+La [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), la proposta per spostare lo stato di Ethereum in un albero di Verkle unificato, è ora stagnante. La ricerca si è spostata sulla [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864), che propone invece un albero binario unificato. La EIP-7864 è una bozza e non è stato programmato alcun aggiornamento della rete per essa.
 
-[Guarda Guillaume Ballet spiegare la testnet Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (nota che la testnet Condrieu era basata sulla Prova di lavoro (PoW) ed è ora stata sostituita dalla testnet Verkle Gen Devnet 6).
+La EIP-7864 fornisce due ragioni principali per il cambiamento. Gli alberi di Verkle si basano sulla crittografia a curva ellittica che non è sicura contro i computer quantistici, quindi alla fine dovrebbero essere sostituiti, mentre un albero binario si basa solo su funzioni di hash. I progressi nei sistemi di prova riducono anche la necessità di prove piccole e veloci da generare che erano il vantaggio principale degli alberi di Verkle. Poiché ogni nodo in un albero binario ha solo due figli, le sue prove sono anche molto più piccole rispetto alle prove dell'odierno trie esadecimale.
 
 ## Letture consigliate {#further-reading}
 
@@ -59,7 +61,9 @@ Le testnet degli alberi di Verkle sono già attive e funzionanti, ma ci sono anc
 - [Guillaume Ballet spiega gli alberi di Verkle a ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Come gli alberi di Verkle rendono Ethereum snello ed efficiente" di Guillaume Ballet alla Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sui client senza stato all'ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest spiega gli alberi di Verkle e l'assenza di stato sul podcast Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
+- [Dankrad Feist spiega gli alberi di Verkle e l'assenza di stato sul podcast Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin sugli alberi di Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist sugli alberi di Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
-- [Documentazione EIP dell'albero di Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [Documentazione della EIP sull'albero di Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [EIP-6800: Stato di Ethereum utilizzando un albero di Verkle unificato](https://eips.ethereum.org/EIPS/eip-6800)
+- [EIP-7864: Stato di Ethereum utilizzando un albero binario unificato](https://eips.ethereum.org/EIPS/eip-7864)

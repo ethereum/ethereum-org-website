@@ -1,6 +1,6 @@
 ---
 title: "去中心化应用 (dapp) 开发框架"
-description: "探索框架的优势并比较可用选项。"
+description: "比较 Foundry 和 Hardhat 等以太坊开发框架。了解框架能为你编译、测试和部署智能合约提供哪些帮助。"
 lang: zh
 ---
 
@@ -34,12 +34,12 @@ lang: zh
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_面向 Python 开发者、数据科学家和安全专业人士的智能合约开发工具。_**
+**Ape -** **_面向 Python 开发者、数据科学家和安全专业人员的智能合约开发工具。_**
 
 - [文档](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_在 JVM 上开发区块链应用程序的平台。_**
+**Web3j -** **_在 JVM 上开发区块链应用的平台。_**
 
 - [主页](https://www.web3labs.com/web3j-sdk)
 - [文档](https://docs.web3j.io)
@@ -51,17 +51,17 @@ lang: zh
 - [示例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_只需一条命令即可创建由以太坊驱动的应用程序。提供多种 UI 框架和去中心化金融 (DeFi) 模板可供选择。_**
+**Create Eth App -** **_只需一条命令即可创建由以太坊驱动的应用。提供多种 UI 框架和 DeFi 模板可供选择。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [模板](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_结合 Next.js、Wagmi、Viem 和 RainbowKit，并可选择 Hardhat 或 Foundry：支持合约热重载、自定义 React 钩子、一次性钱包和本地水龙头，以及用于全栈去中心化应用 (dapp) 开发的扩展模块。_**
+**Scaffold-ETH 2 -** **_结合了 Next.js、Wagmi、Viem 和 RainbowKit，并可选择 Hardhat 或 Foundry：支持合约热重载、自定义 React 钩子、一次性钱包和本地水龙头，以及用于全栈 dapp 开发的扩展模块。_**
 
 - [网站](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3 开发平台，使区块链开发者能够构建、测试、调试、监控和操作智能合约，并改善去中心化应用 (dapp) 的用户体验。_**
+**Tenderly -** **_Web3 开发平台，使区块链开发者能够构建、测试、调试、监控和运行智能合约，并改善 dapp 用户体验。_**
 
 - [网站](https://tenderly.co/)
 - [文档](https://docs.tenderly.co/)
@@ -69,7 +69,7 @@ lang: zh
 **The Graph -** **_用于高效查询区块链数据的 The Graph。_**
 
 - [网站](https://thegraph.com/)
-- [教程](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [文档](https://thegraph.com/docs/en/)
 
 **Alchemy -** **_以太坊开发平台。_**
 
@@ -83,7 +83,7 @@ lang: zh
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_使用我们强大的 SDK 和 CLI 构建可与你的智能合约交互的 Web3 应用程序。_**
+**thirdweb SDK -** **_使用我们强大的 SDK 和 CLI 构建能够与你的智能合约交互的 Web3 应用。_**
 
 - [文档](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -94,7 +94,7 @@ lang: zh
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_企业级 Web3 开发平台，允许你在所有主要链、EVM 链（及其他链）上构建非同质化代币 (NFT) 应用程序。_**
+**Crossmint -** **_企业级 Web3 开发平台，允许你在所有主要链、EVM 链（及其他链）上构建 NFT 应用。_**
 
 - [网站](https://www.crossmint.com)
 - [文档](https://docs.crossmint.com)
@@ -112,25 +112,25 @@ lang: zh
 - [社区论坛](https://forum.openzeppelin.com/c/support/17)
 - **欧本齐柏林 SDK 的开发已结束**
 
-**Catapulta -** **_多链智能合约部署工具，在区块浏览器中自动进行验证，跟踪已部署的智能合约并共享部署报告，支持 Foundry 和 Hardhat 项目的即插即用。_**
+**Catapulta -** **_多链智能合约部署工具，在区块浏览器中自动进行验证，跟踪已部署的智能合约并共享部署报告，为 Foundry 和 Hardhat 项目提供即插即用的支持。_**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush（由 Covalent 提供支持）-** **_GoldRush 为开发者、分析师和企业提供最全面的区块链数据应用程序编程接口 (API) 套件。无论你是构建去中心化金融 (DeFi) 仪表板、钱包、交易机器人、AI 代理还是合规平台，数据 API 都能提供快速、准确且对开发者友好的方式，以访问你所需的基本链上数据_**
+**GoldRush（由 Covalent 提供支持）-** **_GoldRush 为开发者、分析师和企业提供最全面的区块链数据 API 套件。无论你是构建 DeFi 仪表板、钱包、交易机器人、AI 代理还是合规平台，这些数据 API 都能为你提供快速、准确且对开发者友好的方式，以访问你所需的基本链上数据_**
 
 - [网站](https://goldrush.dev/)
 - [文档](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_用于合约测试、模糊测试、部署、漏洞扫描和代码导航的一体化 Python 框架。_**
+**Wake -** **_用于合约测试、模糊测试、部署、漏洞扫描和代码导航的一站式 Python 框架。_**
 
 - [主页](https://getwake.io/)
 - [文档](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code 扩展](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_开源、模块化且与平台无关的框架，使去中心化应用 (dapp) 开发者能够轻松地将去中心化身份和可验证凭证构建到他们的应用程序中。_**
+**Veramo -** **_开源、模块化且与平台无关的框架，使去中心化应用开发者能够轻松地将去中心化身份和可验证凭证构建到他们的应用中。_**
 
 - [主页](https://veramo.io/)
 - [文档](https://veramo.io/docs/basics/introduction)
@@ -153,4 +153,4 @@ _知道对你有帮助的社区资源吗？编辑本页面并添加它！_
 
 ## 教程：以太坊上的开发框架 {#tutorials}
 
-- [面向初学者的 Hello World 智能合约 – 全栈](/developers/tutorials/hello-world-smart-contract-fullstack/) _– 使用 Hardhat 构建并部署一个 Hello World 智能合约，然后将其连接到前端。_
+- [适合初学者的 Hello World 智能合约](/developers/tutorials/hello-world-smart-contract/) _– 使用 Hardhat 构建并部署一个 Hello World 智能合约。_

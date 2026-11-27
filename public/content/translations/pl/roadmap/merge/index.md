@@ -1,10 +1,10 @@
 ---
 title: The Merge
-description: "Dowiedz się o The Merge – kiedy sieć główna Ethereum przeszła na dowód stawki (PoS)."
+description: "Dowiedz się o The Merge, kiedy to sieć główna Ethereum przeszła z dowodu pracy na dowód stawki we wrześniu 2022 roku, zmniejszając swoje zużycie energii o około 99,95%."
 lang: pl
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - Sieć główna Ethereum wykorzystuje dowód stawki (PoS), ale nie zawsze tak było.
   - Aktualizacja z oryginalnego mechanizmu dowodu pracy (PoW) do dowodu stawki (PoS) została nazwana The Merge.
@@ -123,15 +123,15 @@ The Merge przygotowało również grunt pod dalsze aktualizacje skalowalności, 
 
 <ExpandableCard
 title="Błędne przekonanie: &quot;Uruchomienie węzła wymaga stakowania 32 ETH.&quot;"
-contentPreview="Fałsz. Każdy może swobodnie zsynchronizować własną, zweryfikowaną przez siebie kopię Ethereum (tj. uruchomić węzeł). Żadne ETH nie jest wymagane — ani przed The Merge, ani po The Merge, ani nigdy.">
+contentPreview="Fałsz. Każdy może zsynchronizować własną, samodzielnie zweryfikowaną kopię Ethereum (tj. uruchomić węzeł). Nie jest do tego wymagane żadne ETH — ani przed The Merge, ani po The Merge, ani kiedykolwiek.">
 
 Istnieją dwa rodzaje węzłów Ethereum: węzły, które mogą proponować bloki, oraz węzły, które tego nie robią.
 
-Węzły proponujące bloki stanowią tylko niewielką część wszystkich węzłów w Ethereum. Kategoria ta obejmuje węzły kopiące w ramach dowodu pracy (PoW) oraz węzły walidatorów w ramach dowodu stawki (PoS). Kategoria ta wymaga zaangażowania zasobów ekonomicznych (takich jak moc obliczeniowa GPU w dowodzie pracy lub stakowane ETH w dowodzie stawki) w zamian za możliwość okazjonalnego zaproponowania następnego bloku i zdobycia nagród z protokołu.
+Węzły, które proponują bloki, stanowią tylko niewielką część wszystkich węzłów w Ethereum. Kategoria ta obejmuje węzły kopiące w ramach dowodu pracy (PoW) oraz węzły walidatorów w ramach dowodu stawki (PoS). Kategoria ta wymaga zaangażowania zasobów ekonomicznych (takich jak moc obliczeniowa GPU w dowodzie pracy lub stakowane ETH w dowodzie stawki) w zamian za możliwość okazjonalnego zaproponowania następnego bloku i zdobycia nagród z protokołu.
 
-Pozostałe węzły w sieci (czyli większość) nie muszą angażować żadnych zasobów ekonomicznych poza komputerem klasy konsumenckiej z 1-2 TB dostępnej pamięci masowej i połączeniem z internetem. Węzły te nie proponują bloków, ale nadal odgrywają kluczową rolę w zabezpieczaniu sieci, pociągając wszystkich proponujących bloki do odpowiedzialności poprzez nasłuchiwanie nowych bloków i weryfikowanie ich ważności po przybyciu zgodnie z zasadami konsensusu sieci. Jeśli blok jest ważny, węzeł kontynuuje jego propagację w sieci. Jeśli blok jest nieważny z jakiegokolwiek powodu, oprogramowanie węzła zignoruje go jako nieważny i zatrzyma jego propagację.
+Pozostałe węzły w sieci (czyli większość) nie muszą angażować żadnych zasobów ekonomicznych poza komputerem klasy konsumenckiej z 4 TB dostępnej pamięci masowej i połączeniem internetowym. Węzły te nie proponują bloków, ale nadal odgrywają kluczową rolę w zabezpieczaniu sieci, pociągając wszystkich proponujących bloki do odpowiedzialności poprzez nasłuchiwanie nowych bloków i weryfikowanie ich ważności po otrzymaniu zgodnie z zasadami konsensusu sieci. Jeśli blok jest ważny, węzeł kontynuuje jego propagację w sieci. Jeśli blok jest nieważny z jakiegokolwiek powodu, oprogramowanie węzła zignoruje go jako nieważny i zatrzyma jego propagację.
 
-Uruchomienie węzła nieprodukującego bloków jest możliwe dla każdego w ramach dowolnego mechanizmu konsensusu (dowodu pracy lub dowodu stawki); jest to <em>zdecydowanie zalecane</em> dla wszystkich użytkowników, jeśli mają ku temu środki. Prowadzenie węzła jest niezwykle cenne dla Ethereum i daje dodatkowe korzyści każdej osobie, która go prowadzi, takie jak zwiększone bezpieczeństwo, prywatność i odporność na cenzurę.
+Uruchomienie węzła nieprodukującego bloków jest możliwe dla każdego w ramach dowolnego mechanizmu konsensusu (dowodu pracy lub dowodu stawki); jest to <em>zdecydowanie zalecane</em> dla wszystkich użytkowników, jeśli mają ku temu środki. Uruchomienie węzła jest niezwykle cenne dla Ethereum i daje dodatkowe korzyści każdej osobie, która go uruchamia, takie jak zwiększone bezpieczeństwo, prywatność i odporność na cenzurę.
 
 Możliwość uruchomienia własnego węzła przez każdego jest <em>absolutnie niezbędna</em> do utrzymania decentralizacji sieci Ethereum.
 
@@ -141,47 +141,47 @@ Możliwość uruchomienia własnego węzła przez każdego jest <em>absolutnie n
 
 <ExpandableCard
 title="Błędne przekonanie: &quot;The Merge nie obniżyło opłat za gaz.&quot;"
-contentPreview="Fałsz. The Merge było zmianą mechanizmu konsensusu, a nie rozszerzeniem przepustowości sieci, i nigdy nie miało na celu obniżenia opłat za gaz.">
+contentPreview="Fałsz. The Merge było zmianą mechanizmu konsensusu, a nie zwiększeniem przepustowości sieci, i nigdy nie miało na celu obniżenia opłat za gaz.">
 
 Opłaty za gaz są wynikiem popytu w sieci w stosunku do jej przepustowości. The Merge wycofało użycie dowodu pracy, przechodząc na dowód stawki w celu osiągnięcia konsensusu, ale nie zmieniło znacząco żadnych parametrów, które bezpośrednio wpływają na pojemność lub przepustowość sieci.
 
-Dzięki <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">mapie drogowej skoncentrowanej na rollupach</a>, wysiłki skupiają się na skalowaniu aktywności użytkowników w [warstwie 2 (L2)](/layer-2/), jednocześnie umożliwiając sieci głównej w warstwie 1 (L1) działanie jako bezpieczna, zdecentralizowana warstwa rozrachunku zoptymalizowana pod kątem przechowywania danych rollupów, aby pomóc w wykładniczym obniżeniu kosztów transakcji rollupów. Przejście na dowód stawki jest kluczowym krokiem poprzedzającym realizację tego celu. [Więcej o gazie i opłatach.](/developers/docs/gas/)
+Dzięki <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">mapie drogowej skoncentrowanej na rollupach</a>, wysiłki skupiają się na skalowaniu aktywności użytkowników w [warstwie 2 (L2)](/layer-2/), podczas gdy sieć główna warstwy 1 (L1) staje się bezpieczną, zdecentralizowaną warstwą rozrachunku zoptymalizowaną pod kątem przechowywania danych rollupów, aby pomóc w wykładniczym obniżeniu kosztów transakcji w rollupach. Przejście na dowód stawki jest kluczowym krokiem poprzedzającym realizację tego celu. [Więcej o gazie i opłatach.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Błędne przekonanie: &quot;Transakcje zostały znacznie przyspieszone przez The Merge.&quot;"
-contentPreview="Fałsz. Chociaż istnieją pewne niewielkie zmiany, prędkość transakcji na warstwie 1 jest obecnie w większości taka sama, jak przed The Merge.">
-„Szybkość” transakcji można mierzyć na kilka sposobów, w tym czas do włączenia do bloku i czas do ostateczności. Oba te parametry uległy niewielkiej zmianie, ale nie w sposób zauważalny dla użytkowników.
+contentPreview="Fałsz. Chociaż istnieją pewne niewielkie zmiany, szybkość transakcji w warstwie 1 (L1) jest obecnie w większości taka sama, jak przed The Merge.">
+„Szybkość” transakcji można mierzyć na kilka sposobów, w tym jako czas do włączenia do bloku i czas do sfinalizowania. Oba te parametry uległy niewielkim zmianom, ale nie w sposób zauważalny dla użytkowników.
 
-Historycznie, w dowodzie pracy, celem było tworzenie nowego bloku co około 13,3 sekundy. W ramach dowodu stawki sloty występują dokładnie co 12 sekund, z których każdy jest okazją dla walidatora do opublikowania bloku. Większość slotów ma bloki, ale niekoniecznie wszystkie (np. gdy walidator jest offline). W dowodzie stawki bloki są produkowane o około 10% częściej niż w dowodzie pracy. Była to dość nieznaczna zmiana i jest mało prawdopodobne, aby została zauważona przez użytkowników.
+Historycznie, w dowodzie pracy, celem było tworzenie nowego bloku co około 13,3 sekundy. W dowodzie stawki sloty występują dokładnie co 12 sekund, a każdy z nich jest okazją dla walidatora do opublikowania bloku. Większość slotów zawiera bloki, ale niekoniecznie wszystkie (np. gdy walidator jest offline). W dowodzie stawki bloki są produkowane o około 10% częściej niż w dowodzie pracy. Była to dość nieznaczna zmiana i jest mało prawdopodobne, aby została zauważona przez użytkowników.
 
-Dowód stawki wprowadził koncepcję ostateczności transakcji, która wcześniej nie istniała. W dowodzie pracy możliwość odwrócenia bloku staje się wykładniczo trudniejsza z każdym kolejnym blokiem wykopanym na wierzchu transakcji, ale nigdy nie spada całkowicie do zera. W ramach dowodu stawki bloki są grupowane w epoki (6,4-minutowe przedziały czasu zawierające 32 szanse na bloki), nad którymi głosują walidatory. Kiedy epoka dobiega końca, walidatory oddają głos na to, czy uznać epokę za „uzasadnioną”. Jeśli walidatory zgodzą się uzasadnić epokę, zostaje ona sfinalizowana w następnej epoce. Cofnięcie sfinalizowanych transakcji jest ekonomicznie nieopłacalne, ponieważ wymagałoby uzyskania i spalenia ponad jednej trzeciej całkowitego stakowanego ETH.
+Dowód stawki wprowadził koncepcję ostateczności transakcji, która wcześniej nie istniała. W dowodzie pracy możliwość odwrócenia bloku staje się wykładniczo trudniejsza z każdym kolejnym wykopanym blokiem dodanym po transakcji, ale nigdy nie spada całkowicie do zera. W dowodzie stawki bloki są grupowane w epoki (odcinki czasu trwające 6,4 minuty, zawierające 32 szanse na bloki), nad którymi głosują walidatorzy. Kiedy epoka dobiega końca, walidatorzy oddają głos, czy uznać epokę za „uzasadnioną”. Jeśli walidatorzy zgodzą się uzasadnić epokę, zostaje ona sfinalizowana w następnej epoce. Cofnięcie sfinalizowanych transakcji jest ekonomicznie nieopłacalne, ponieważ wymagałoby zdobycia i spalenia ponad jednej trzeciej wszystkich stakowanych ETH.
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Błędne przekonanie: &quot;The Merge umożliwiło wypłaty ze stakingu.&quot;"
-contentPreview="Fałsz, ale wypłaty ze stakingu zostały od tego czasu włączone poprzez aktualizację Szanghaj/Capella.">
+contentPreview="Fałsz, ale wypłaty ze stakingu zostały od tego czasu włączone dzięki aktualizacji Szanghaj/Capella.">
 
-Początkowo po The Merge stakerzy mieli dostęp tylko do napiwków z opłat i MEV, które zostały zarobione w wyniku propozycji bloków. Nagrody te są dopisywane do konta niestakującego kontrolowanego przez walidatora (znanego jako <em>odbiorca opłat</em>) i są dostępne natychmiast. Nagrody te są oddzielone od nagród z protokołu za wykonywanie obowiązków walidatora.
+Początkowo po The Merge stakerzy mieli dostęp tylko do napiwków z opłat i MEV, które zostały zarobione w wyniku propozycji bloków. Nagrody te są przypisywane do konta niestakującego kontrolowanego przez walidatora (znanego jako <em>odbiorca opłat</em>) i są dostępne natychmiast. Nagrody te są niezależne od nagród z protokołu za wykonywanie obowiązków walidatora.
 
-Od czasu aktualizacji sieci Szanghaj/Capella stakerzy mogą teraz wyznaczyć <em>adres wypłaty</em>, aby zacząć otrzymywać automatyczne wypłaty wszelkich nadwyżek salda stakowania (ETH powyżej 32 z nagród z protokołu). Aktualizacja ta umożliwiła również walidatorowi odblokowanie i odzyskanie całego salda po wyjściu z sieci.
+Od czasu aktualizacji sieci Szanghaj/Capella stakerzy mogą teraz wyznaczyć <em>adres wypłaty</em>, aby zacząć otrzymywać automatyczne wypłaty wszelkich nadwyżek salda stakingu (ETH powyżej 32 z nagród z protokołu). Aktualizacja ta umożliwiła również walidatorowi odblokowanie i odzyskanie całego swojego salda po wyjściu z sieci.
 
-[Więcej o wypłatach ze stakowania](/staking/withdrawals/)
+[Więcej o wypłatach ze stakingu](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Błędne przekonanie: &quot;Teraz, gdy The Merge zostało zakończone, a wypłaty są włączone, wszyscy stakerzy mogliby wyjść naraz.&quot;"
-contentPreview="Fałsz. Wyjścia walidatorów są limitowane ze względów bezpieczeństwa.">
-Ponieważ aktualizacja Szanghaj/Capella umożliwiła wypłaty, walidatory są zachęcane do wypłacania swojego salda stakowania powyżej 32 ETH, ponieważ środki te nie zwiększają zysku i w przeciwnym razie są zablokowane. W zależności od APR (określanego przez całkowitą ilość stakowanego ETH), mogą być zachęcani do wyjścia ze swojego walidatora (lub walidatorów), aby odzyskać całe saldo lub potencjalnie stakować jeszcze więcej, wykorzystując swoje nagrody do uzyskania większego zysku.
+title="Błędne przekonanie: &quot;Teraz, gdy The Merge zostało zakończone, a wypłaty są włączone, wszyscy stakerzy mogliby wyjść jednocześnie.&quot;"
+contentPreview="Fałsz. Wyjścia walidatorów są ograniczone pod względem częstotliwości ze względów bezpieczeństwa.">
+Ponieważ aktualizacja Szanghaj/Capella umożliwiła wypłaty, walidatorzy są zachęcani do wypłacania swojego salda stakingu powyżej 32 ETH, ponieważ środki te nie zwiększają zysku i w przeciwnym razie są zablokowane. W zależności od APR (określanego przez całkowitą ilość stakowanych ETH), mogą oni być zachęcani do wyjścia ze swojego walidatora (lub walidatorów), aby odzyskać całe swoje saldo, lub potencjalnie stakować jeszcze więcej, wykorzystując swoje nagrody do uzyskania większego zysku.
 
-Ważne zastrzeżenie: pełne wyjścia walidatorów są ograniczone przez protokół i tylko określona liczba walidatorów może wyjść w każdej epoce (co 6,4 minuty). Limit ten waha się w zależności od liczby aktywnych walidatorów, ale wynosi w przybliżeniu 0,33% całkowitego stakowanego ETH, które może zostać wycofane z sieci w ciągu jednego dnia.
+Ważnym zastrzeżeniem jest to, że pełne wyjścia walidatorów są ograniczone przez protokół pod względem częstotliwości i tylko określona liczba walidatorów może wyjść w każdej epoce (co 6,4 minuty). Limit ten waha się w zależności od liczby aktywnych walidatorów, ale ostatecznie wynosi około 0,33% całkowitego stakowanego ETH, które może zostać wycofane z sieci w ciągu jednego dnia.
 
-Zapobiega to masowemu odpływowi stakowanych środków. Ponadto zapobiega to sytuacji, w której potencjalny atakujący z dostępem do dużej części całkowitego stakowanego ETH popełnia wykroczenie podlegające cięciu (slashing) i wychodzi/wypłaca wszystkie salda naruszających zasady walidatorów w tej samej epoce, zanim protokół zdąży wyegzekwować karę cięcia.
+Zapobiega to masowemu odpływowi stakowanych środków. Ponadto zapobiega to sytuacji, w której potencjalny atakujący z dostępem do dużej części całkowitego stakowanego ETH popełnia wykroczenie podlegające cięciu i wychodzi/wypłaca wszystkie salda winnych walidatorów w tej samej epoce, zanim protokół zdąży wyegzekwować karę cięcia.
 
-APR jest również celowo dynamiczne, co pozwala rynkowi stakerów zrównoważyć to, ile chcą otrzymać za pomoc w zabezpieczaniu sieci. Jeśli stawka jest zbyt niska, walidatory będą wychodzić w tempie ograniczonym przez protokół. Stopniowo podniesie to APR dla wszystkich, którzy pozostaną, ponownie przyciągając nowych lub powracających stakerów.
+APR jest również celowo dynamiczne, co pozwala rynkowi stakerów na zrównoważenie tego, ile chcą otrzymywać za pomoc w zabezpieczaniu sieci. Jeśli stawka jest zbyt niska, walidatorzy będą wychodzić w tempie ograniczonym przez protokół. Stopniowo podniesie to APR dla wszystkich, którzy pozostaną, ponownie przyciągając nowych lub powracających stakerów.
 </ExpandableCard>
 
 ## Co się stało z „Eth2”? {#eth2}

@@ -1,5 +1,11 @@
 # Korean (ko) Translation Review Findings
 
+## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 9.0/10
+Scope: 15 md pages, markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX).
+
+Fixed (critical): clipped word `**프로토콜 업그레이**` to `**프로토콜 업그레이드**` (roadmap/privacy L116); hangul client/brand names on changed lines restored to Latin (Nethermind, Besu, Erigon, Reth, Lodestar, Lighthouse, MetaMask, Optimism, Arbitrum One; `에리곤(Erigon)` hybrids collapsed; `고 이더리움 (geth)` to `Geth`/`Go Ethereum`); added long forms over bare English `L1`/`L2` (ethrex), `DeFi`, `dapp UX`, `DAO` removed.
+Open: English parentheticals added after terms (`쉴드 풀(shielded pool)`, `익명성 세트(anonymity set)`, `연산 코드(opcode)`); English typo `Dankrad Fiest` mirrored; `레이어 2 (L2)` where English says `layer 2` kept (glossary form).
+
 ## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.8/10
 Scope: 71 md pages + 20 JSON namespaces (incremental updates), changed lines only; sampled 6 md diffs and ~45 JSON keys, plus scripted sweeps.
 

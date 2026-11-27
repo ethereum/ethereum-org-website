@@ -13,17 +13,6 @@
       "expiresAt": "2026-12-11T10:11:35.553Z"
     },
     {
-      "file": "public/content/developers/docs/frameworks/index.md",
-      "locale": "ar",
-      "englishHash": "54f5aaea285c",
-      "class": "parse",
-      "reason": "Failed to parse incremental translation response: Expected ',' or '}' after property value in JSON at position 2215 (line 2 column 2214)\nRaw response (first 500 chars): ```json\n{\n  \"available-frameworks\": \"## الأطر المتاحة\\n\\n**<span dir=\\\"ltr\\\">Foundry</span>** - **_مجموعة أدوات سريعة للغاية ومحمول",
-      "attempts": 1,
-      "firstSeen": "2026-10-21T21:44:36.327Z",
-      "lastSeen": "2026-10-21T21:44:36.327Z",
-      "expiresAt": "2026-11-04T21:44:36.327Z"
-    },
-    {
       "file": "public/content/developers/docs/networking-layer/portal-network/index.md",
       "locale": "ja",
       "englishHash": "65bd66688cd5",
@@ -297,6 +286,17 @@
       "firstSeen": "2026-11-17T03:22:52.974Z",
       "lastSeen": "2026-11-23T07:22:45.047Z",
       "expiresAt": "2026-12-07T07:22:45.047Z"
+    },
+    {
+      "file": "public/content/roadmap/privacy/index.md",
+      "locale": "ar",
+      "englishHash": "b9948e9f8a37",
+      "class": "gate",
+      "reason": "[gate] public/content/translations/ar/roadmap/privacy/index.md: 2 check(s) failed -- structure nested-tag-in-attr:  title=\"كيف تتيح معاملات الإطار (<span dir=\"ltr\"; mdx Unexpected character `\"` (U+0022) in attribute name, expected an attribute name character such as letters, digits, `$`, or `_`; `=`",
+      "attempts": 1,
+      "firstSeen": "2026-11-27T14:26:54.352Z",
+      "lastSeen": "2026-11-27T14:26:54.352Z",
+      "expiresAt": "2026-12-11T14:26:54.352Z"
     }
   ]
 }

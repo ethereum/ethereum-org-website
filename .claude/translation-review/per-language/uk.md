@@ -1,5 +1,12 @@
 # Ukrainian (uk) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.5/10
+Scope: 15 markdown files, changed lines only; no JSON. Sweeps clean. 8 diffs read.
+
+**Fixed in this branch (~22 critical):** #113 Latin names restored on changed lines: `МетаМаск`:95, `Ерігон` x3:157, `Лодстар` x3:209 (`nodes-and-clients/index.md`); `run-a-node` table + note `Бесу/Ерігон/Незермайнд/Рет` -> `Besu/Erigon/Nethermind/Reth`; `nodes-as-a-service:225` `Бесу`; `statelessness:29,33` `Портал Нетворк` -> `Portal Network`. #112 long forms where English is bare: `frameworks:59,64` `(dapp)`; `nodes-and-clients:95` `(dapps)`, `:161` `рівня 1 (L1)`/`(рівень 2 (L2))`; `statelessness:29` `(DAO)`, `:81` `(L1)`; `privacy:122` `(DAO)`; `supply:45` `(NFT)`/`(DeFi)`. Glossary: `чайових з комісій` -> `пріоритетних комісій` (`merge:167`, glossary tip = пріоритетна комісія).
+
+**Open (warnings):** `(EOA)` x2 added to the English long form (`transactions:15,25`); `рівня 2 (L2)` kept where English says the long form; `чайових`/`чайові` on unchanged `merge:70,74` (pre-existing glossary deviation); unchanged lines still carry `Німбус`-style client transliterations.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.0/10
 Scope: 90 files (71 markdown, 19 JSON), incremental updates; all 71 markdown diffs and all 19 JSON diffs read in full against English. Scripted sweeps clean (no U+3002/U+2060, no foreign-script, no Russian-only letters).
 

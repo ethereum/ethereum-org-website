@@ -1,24 +1,24 @@
 ---
-title: ETH arzı ve ihracı
-metaTitle: ETH Arzını ve İhracını Anlamak
-description: EIP'ler, PoS ve EIP-1559 gibi temel kavramları kapsayan, ETH arzı ve ihracı hakkında yeni başlayanlar için uygun bir rehber.
+title: "ETH arzı ve ihracı"
+metaTitle: "ETH Arzını ve İhracını Anlamak"
+description: "EIP'ler, PoS ve EIP-1559 gibi temel kavramları kapsayan, ETH arzı ve ihracı hakkında yeni başlayanlara uygun bir rehber."
 lang: tr
 ---
 
 ## Ön Koşullar {#prerequisites}
 
-Bu makale, ön bilgisi olmayan yeni başlayanlar için yazılmıştır. Ancak konuyu tam olarak anlamak için [Ethereum İyileştirme Önerileri (EIP'ler)](/eips/#introduction-to-ethereum-improvement-proposals), [İş Kanıtı (PoW)](/developers/docs/consensus-mechanisms/pow/), [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos/) ve [Londra Güncellemesi](/ethereum-forks/#london) gibi kavramlar hakkında temel bir anlayışa sahip olmak faydalı olacaktır.
+Bu makale, ön bilgisi olmayan yeni başlayanlar için yazılmıştır. Ancak konuyu tam olarak anlamak için [Ethereum Geliştirme Önerileri (EIP'ler)](/eips/), [İş Kanıtı (PoW)](/developers/docs/consensus-mechanisms/pow/), [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos/) ve [Londra Güncellemesi](/ethereum-forks/#london) gibi kavramlar hakkında temel bir anlayışa sahip olmak faydalı olacaktır.
 
 ## Bugün Ne Kadar ETH Token'ı Var? {#current-eth-supply}
 
-Toplam ETH arzı dinamiktir ve iki ana faktörden dolayı sürekli değişir:
+ETH'nin toplam arzı dinamiktir ve iki ana faktörden dolayı sürekli değişir:
 
 1. **Hisse Kanıtı (PoS) İhracı**: Ağı güvence altına alan doğrulayıcılar için ödül olarak yeni ETH yaratılır
 2. **EIP-1559 Yakımı**: İşlem ücretlerinin bir kısmı kalıcı olarak dolaşımdan çıkarılır
 
 Mevcut arzı ve bu değişiklikleri [Ultrasound Money](https://ultrasound.money) gibi platformlarda gerçek zamanlı olarak takip edebilirsiniz.
 
-Ethereum'un arzı ve ihracı, ağın sağlığını ve geleceğini anlamak için temel metriklerdir. Peki ETH ihracı tam olarak ne anlama geliyor? Gelin bunu detaylandıralım.
+Ethereum'un arzı ve ihracı, ağın sağlığını ve geleceğini anlamak için temel ölçütlerdir. Peki ETH ihracı tam olarak ne anlama geliyor? Gelin bunu ayrıntılı olarak inceleyelim.
 
 ## ETH Arzı ve İhracı Neden Önemlidir? {#why-eth-supply-matters}
 
@@ -36,17 +36,17 @@ ETH ihracı, Ethereum ağını güvence altına alan doğrulayıcılar için öd
 - **İhraç**, ağa yeni ETH ekler.
 - **Yakım** (EIP-1559 ile tanıtılmıştır), işlem ücretlerinin bir kısmını yok ederek ağdan ETH çıkarır.
 
-Bu iki güç, Ethereum arzının zaman içinde büyüyüp (enflasyonist) büyümeyeceğini veya küçülüp (deflasyonist) küçülmeyeceğini belirler.
+Bu iki güç, Ethereum arzının zaman içinde büyüyeceğini (enflasyonist) veya küçüleceğini (deflasyonist) belirler.
 
 ## Günümüzde ETH Arzı ve İhracı {#eth-supply-today}
 
-Ethereum'un Hisse Kanıtı (PoS) sistemi, önceki İş Kanıtı (PoW) modeline kıyasla ETH ihracını büyük ölçüde azalttı. Ağı güvence altına almak için ETH kilitleyen doğrulayıcılar, ödül olarak ETH kazanırlar. Mevcut ihraç oranını [Ultrasound Money](https://ultrasound.money) üzerinde görebilirsiniz.
+Ethereum'un Hisse Kanıtı (PoS) sistemi, önceki İş Kanıtı (PoW) modeline kıyasla ETH ihracını büyük ölçüde azaltmıştır. Ağı güvence altına almak için ETH kilitleyen doğrulayıcılar, ödül olarak ETH kazanırlar. Mevcut ihraç oranını [Ultrasound Money](https://ultrasound.money) üzerinde görebilirsiniz.
 
-Ancak bu sayı dinamiktir. EIP-1559 sayesinde, ağ etkinliği yüksek olduğunda ETH yakım oranları ihracı aşarak deflasyonist bir etki yaratabilir. Örneğin, NFT lansmanları veya merkeziyetsiz finans (DeFi) etkinliği gibi yüksek talep dönemlerinde, ihraç edilenden daha fazla ETH yakılabilir.
+Ancak bu sayı dinamiktir. EIP-1559 sayesinde, ağ etkinliği yüksek olduğunda ETH yakım oranları ihracı aşarak deflasyonist bir etki yaratabilir. Örneğin, NFT lansmanları veya DeFi etkinliği gibi yüksek talep dönemlerinde, ihraç edilenden daha fazla ETH yakılabilir.
 
 ### ETH Arzını ve İhracını Takip Etme Araçları: {#tools-to-track-eth-supply-and-issuance}
 - [Ultrasound Money](https://ultrasound.money) - ETH arzı, ihracı ve yakım oranlarının gerçek zamanlı takibi
-- [Etherscan](https://etherscan.io) - Arz metriklerine sahip blok gezgini
+- [Etherscan](https://etherscan.io) - Arz ölçümlerine sahip blok gezgini
 
 ## Gelecekteki ETH Arzını ve İhracını Etkileyen Faktörler {#future-eth-supply}
 
@@ -70,8 +70,8 @@ Ethereum'un gelecekteki arzı sabit değildir; çeşitli değişkenlere bağlıd
 ETH arzı ve ihracı hakkında bilmeniz gerekenlerin kısa bir özeti:
 
 - **ETH Arzı**: Dinamik ve sürekli değişen bir yapıdadır, [Ultrasound Money](https://ultrasound.money) gibi araçlar aracılığıyla gerçek zamanlı olarak takip edilebilir
-- **PoS Altında İhraç**: PoW'a kıyasla önemli ölçüde azaltılmıştır ve ödüller doğrulayıcılara gider. Mevcut oranları [Ultrasound Money](https://ultrasound.money) üzerinde görebilirsiniz
-- **EIP-1559'un Rolü**: ETH yakımı, yüksek etkinlik dönemlerinde ağı deflasyonist hâle getirebilir
-- **Gelecekteki Eğilimler**: Staking katılımı, ağ talebi ve Protokol güncellemeleri ETH arzını şekillendirecektir
+- **PoS Altında İhraç**: PoW'a kıyasla önemli ölçüde azalmıştır ve ödüller doğrulayıcılara gider. Mevcut oranları [Ultrasound Money](https://ultrasound.money) üzerinde görebilirsiniz
+- **EIP-1559'un Rolü**: ETH yakımı, yüksek etkinlik dönemlerinde ağı deflasyonist hale getirebilir
+- **Gelecekteki Eğilimler**: Staking katılımı, ağ talebi ve protokol güncellemeleri ETH arzını şekillendirecektir
 
-ETH ihracını anlamak, Ethereum'un değerini ve deflasyonist, merkeziyetsiz bir varlık olarak potansiyelini aydınlatmaya yardımcı olur. Birleşme'nin ETH arzını nasıl etkilediği hakkında daha ayrıntılı bilgi için [detaylı incelememize](/roadmap/merge/issuance/) göz atın. ETH'nin geleceğini merak mı ediyorsunuz? [Ultrasound Money](https://ultrasound.money) gibi araçlarla daha derinlere inin veya [staking rehberlerimizi](/staking/) keşfedin.
+ETH ihracını anlamak, Ethereum'un değerini ve deflasyonist, merkeziyetsiz bir varlık olarak potansiyelini aydınlatmaya yardımcı olur. Birleşme'nin ETH arzını nasıl etkilediği hakkında daha ayrıntılı bilgi için [ayrıntılı dökümümüze](/roadmap/merge/issuance/) göz atın. ETH'nin geleceğini merak mı ediyorsunuz? [Ultrasound Money](https://ultrasound.money) gibi araçlarla daha derinlere inin veya [staking rehberlerimizi](/staking/) keşfedin.

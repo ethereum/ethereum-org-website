@@ -80,7 +80,7 @@ Esto sigue siendo una simplificación: los enteros y ceros en los esquemas anter
 
 Por lo tanto, los valores reales para los tipos de longitud variable se almacenan en un montículo al final del objeto serializado con sus desplazamientos almacenados en sus posiciones correctas en la lista ordenada de campos.
 
-También hay algunos casos especiales que requieren un tratamiento específico, como el tipo `BitList` que requiere que se agregue un límite de longitud durante la serialización y se elimine durante la deserialización. Los detalles completos están disponibles en la [especificación de SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
+También hay algunos casos especiales que requieren un tratamiento específico, como el tipo `BitList` que requiere que se agregue un límite de longitud durante la serialización y se elimine durante la deserialización. Los detalles completos están disponibles en la [especificación de SSZ](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/simple-serialize.md).
 
 ### Deserialización {#deserialization}
 
@@ -121,7 +121,7 @@ Esta representación produce un índice de nodo para cada fragmento de datos en 
 
 ## Multipruebas {#multiproofs}
 
-Proporcionar la lista de índices generalizados que representan un elemento específico nos permite verificarlo contra la raíz del árbol hash. Esta raíz es nuestra versión aceptada de la realidad. Cualquier dato que se nos proporcione puede verificarse contra esa realidad insertándolo en el lugar correcto en el árbol de Merkle (determinado por su índice generalizado) y observando que la raíz permanece constante. Hay funciones en la especificación [aquí](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) que muestran cómo calcular el conjunto mínimo de nodos requeridos para verificar el contenido de un conjunto particular de índices generalizados.
+Proporcionar la lista de índices generalizados que representan un elemento específico nos permite verificarlo contra la raíz del árbol hash. Esta raíz es nuestra versión aceptada de la realidad. Cualquier dato que se nos proporcione puede verificarse contra esa realidad insertándolo en el lugar correcto en el árbol de Merkle (determinado por su índice generalizado) y observando que la raíz permanece constante. Hay funciones en la especificación [aquí](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/merkle-proofs.md#merkle-multiproofs) que muestran cómo calcular el conjunto mínimo de nodos requeridos para verificar el contenido de un conjunto particular de índices generalizados.
 
 Por ejemplo, para verificar los datos en el índice 9 en el árbol a continuación, necesitamos el hash de los datos en los índices 8, 9, 5, 3, 1.
 El hash de (8,9) debería ser igual al hash (4), que se somete a hashing con 5 para producir 2, que se somete a hashing con 3 para producir la raíz del árbol 1. Si se proporcionaran datos incorrectos para 9, la raíz cambiaría: detectaríamos esto y no podríamos verificar la rama.

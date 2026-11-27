@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/data-structures-and-encoding/index.md",
-  "generatedAt": "2026-06-16T22:28:21.640Z",
-  "rootHash": "296f46770e92",
+  "generatedAt": "2026-11-27T14:43:20.229Z",
+  "rootHash": "5a958b871203",
   "tree": {
-    "contentHash": "74a940e0ed29",
+    "contentHash": "ba78bca9dc95",
     "anchorHash": "4994e9c3af79",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "6745017675b9",
+        "contentHash": "a6c061f2cbeb",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -176,5 +176,5 @@
       "data-structures"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "e1842064dd65585ac4ee544d57ed98f2215f78ff"
 }

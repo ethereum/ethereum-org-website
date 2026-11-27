@@ -1,22 +1,24 @@
 ---
 title: "沃克尔树"
-description: "关于沃克尔树及其将如何用于升级以太坊的高级概述"
+description: "沃克尔树的高级概述，以及为什么以太坊的状态树计划转向了二叉树"
 lang: zh
 template: roadmap
 summaryPoints:
   - 了解什么是沃克尔树
-  - 了解为什么沃克尔树对以太坊来说是一次有用的升级
+  - 阅读为什么沃克尔树被搁置而转向二叉树
 ---
 
-沃克尔树（Verkle trees，由“向量承诺 (Vector commitment)”和“默克尔树 (Merkle Trees)”组合而成的词）是一种数据结构，可用于升级[以太坊](/)节点，使其能够停止存储大量状态数据，同时又不会失去验证区块的能力。
+沃克尔树（Verkle trees，由“向量承诺（Vector commitment）”和“默克尔树（Merkle Trees）”组合而成）是一种数据结构，可用于升级[以太坊](/)节点，使它们能够停止存储大量状态数据，同时又不会失去验证区块的能力。
+
+沃克尔树曾在 [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800) 中被提议作为以太坊的下一个状态树，但该提案目前处于停滞状态，并已被搁置，转而支持统一的二叉树（[EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)）。二叉树追求相同的目标，即为无状态客户端提供较小的见证数据。本页面解释了沃克尔树的工作原理以及为什么研究转向了二叉树。
 
 ## 无状态 {#statelessness}
 
-沃克尔树是迈向无状态以太坊客户端的关键一步。无状态客户端是指无需存储整个状态数据库即可验证传入区块的客户端。无状态客户端不使用其本地的以太坊状态副本来验证区块，而是使用随区块到达的状态数据的“见证数据”。见证数据是执行特定一组交易所需的状态数据的各个片段的集合，以及证明该见证数据确实是完整数据一部分的密码学证明。见证数据被用来*代替*状态数据库。为了实现这一点，见证数据需要非常小，以便它们能够及时在网络中安全广播，让验证者在一个 12 秒的时隙内处理它们。当前的状态数据结构并不合适，因为见证数据太大了。沃克尔树通过实现小型见证数据解决了这个问题，消除了无状态客户端的主要障碍之一。
+沃克尔树被设计为通向无状态以太坊客户端道路上的一步。无状态客户端是指不需要存储整个状态数据库即可验证传入区块的客户端。无状态客户端不使用其本地的以太坊状态副本来验证区块，而是使用随区块到达的状态数据的“见证数据”。见证数据是执行特定一组交易所需的状态数据各个片段的集合，以及证明该见证数据确实是完整数据一部分的密码学证明。见证数据被用来*代替*状态数据库。为了使其发挥作用，见证数据需要非常小，以便它们可以在网络上安全地广播，并让验证者有足够的时间在一个 12 秒的时隙内处理它们。当前的状态数据结构并不合适，因为见证数据太大了。沃克尔树通过实现较小的见证数据解决了这个问题，消除了无状态客户端的主要障碍之一。
 
 <ExpandableCard title="为什么我们需要无状态客户端？" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
-以太坊客户端目前使用一种称为帕特里夏默克尔树 (Patricia Merkle Trie) 的数据结构来存储其状态数据。有关各个账户的信息作为叶子节点存储在树上，并且成对的叶子节点被反复哈希，直到只剩下一个哈希。这个最终的哈希被称为“根”。为了验证区块，以太坊客户端执行区块中的所有交易并更新其本地状态树。如果本地树的根与区块提议者提供的根相同，则该区块被认为是有效的，因为区块提议者和验证节点所做计算的任何差异都会导致根哈希完全不同。这样做的问题在于，验证区块链需要每个客户端存储头部区块和几个历史区块的整个状态树（Geth 中的默认设置是保留头部之后 128 个区块的状态数据）。这要求客户端拥有大量的磁盘空间，这是在廉价、低功耗硬件上运行全节点的障碍。解决这个问题的方法是将状态树更新为更高效的结构（沃克尔树），该结构可以使用数据的微小“见证数据”进行汇总，从而可以共享见证数据而不是完整的状态数据。将状态数据重新格式化为沃克尔树是向无状态客户端过渡的垫脚石。
+以太坊客户端目前使用一种称为帕特里夏默克尔树（Patricia Merkle Trie）的数据结构来存储其状态数据。有关各个账户的信息存储在树的叶子节点中，每个分支节点（最多可以有 16 个子节点）与其子节点的哈希逐层一起进行哈希计算，直到只剩下一个哈希。这个最终的哈希被称为“根”。为了验证区块，以太坊客户端执行区块中的所有交易并更新其本地状态树。如果本地树的根与区块提议者提供的根相同，则该区块被认为是有效的，因为区块提议者和验证节点所做计算的任何差异都会导致根哈希完全不同。这样做的问题在于，验证区块链需要每个客户端存储头部区块和几个历史区块的整个状态树（Geth 中的默认设置是保留头部之后 128 个区块的状态数据）。这要求客户端能够访问大量的磁盘空间，这是在廉价、低功耗硬件上运行全节点的障碍。解决这个问题的方法是将状态树更新为更高效的结构（例如沃克尔树或二叉树），该结构可以使用数据的较小“见证数据”进行汇总，并且可以共享该见证数据而不是完整的状态数据。将状态数据重新格式化为新的树结构是向无状态客户端过渡的垫脚石。
 
 </ExpandableCard>
 
@@ -46,20 +48,22 @@ summaryPoints:
 
 ## 当前进展 {#current-progress}
 
-沃克尔树测试网已经启动并运行，但客户端仍需要进行大量未完成的更新才能支持沃克尔树。你可以通过将合约部署到测试网或运行测试网客户端来帮助加快进度。
+[EIP-6800](https://eips.ethereum.org/EIPS/eip-6800)（将以太坊状态转移到统一沃克尔树的提案）目前处于停滞状态。研究已转向 [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)，该提案转而提出了一种统一的二叉树。EIP-7864 是一项草案，尚未为其安排网络升级。
 
-[观看 Guillaume Ballet 解释 Condrieu 沃克尔测试网](https://www.youtube.com/watch?v=cPLHFBeC0Vg)（请注意，Condrieu 测试网是工作量证明 (PoW) 网络，现已被 Verkle Gen Devnet 6 测试网取代）。
+EIP-7864 给出了这一改变的两个主要原因。沃克尔树依赖于椭圆曲线密码学，这种密码学无法抵御量子计算机的攻击，因此它们最终需要被替换，而二叉树仅依赖于哈希函数。证明系统的进步也减少了对小巧、快速生成的证明的需求，而这正是沃克尔树的主要优势。因为二叉树中的每个节点只有两个子节点，所以它的证明也比当今十六叉树的证明小得多。
 
 ## 延伸阅读 {#further-reading}
 
-- [实现无状态的沃克尔树 (Verkle Trees for Statelessness)](https://verkle.info/)
+- [用于无状态的沃克尔树](https://verkle.info/)
 - [Dankrad Feist 在 PEEPanEIP 上解释沃克尔树](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [写给普通人的沃克尔树 (Verkle Trees For The Rest Of Us)](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
-- [沃克尔证明剖析 (Anatomy of A Verkle Proof)](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
+- [写给普通人的沃克尔树指南](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
+- [沃克尔证明剖析](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet 在 ETHGlobal 上解释沃克尔树](https://www.youtube.com/watch?v=f7bEtX3Z57o)
-- [Guillaume Ballet 在 Devcon 6 上的演讲：“沃克尔树如何让以太坊变得精简而强大”](https://www.youtube.com/watch?v=Q7rStTKwuYs)
+- [Guillaume Ballet 在 Devcon 6 上的演讲：“沃克尔树如何让以太坊变得精简高效”](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam 在 ETHDenver 2020 上关于无状态客户端的演讲](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Feist 在零知识播客上解释沃克尔树和无状态](https://zeroknowledge.fm/podcast/202/)
-- [维塔利克·布特林谈沃克尔树](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
+- [Dankrad Feist 在 Zero Knowledge 播客上解释沃克尔树和无状态](https://zeroknowledge.fm/podcast/202/)
+- [维塔利克·布特林 (Vitalik Buterin) 谈沃克尔树](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist 谈沃克尔树](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [沃克尔树 EIP 文档](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [EIP-6800：使用统一沃克尔树的以太坊状态](https://eips.ethereum.org/EIPS/eip-6800)
+- [EIP-7864：使用统一二叉树的以太坊状态](https://eips.ethereum.org/EIPS/eip-7864)

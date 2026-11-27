@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/glossary/index.md",
-  "generatedAt": "2026-06-08T09:39:01.668Z",
-  "rootHash": "7db93bc5fb48",
+  "generatedAt": "2026-11-27T14:40:17.874Z",
+  "rootHash": "ced9f0208a06",
   "tree": {
-    "contentHash": "9b6c3dcedf9d",
-    "anchorHash": "e1b89729bcd0",
+    "contentHash": "a8bbd0a07353",
+    "anchorHash": "b56e5212ce55",
     "children": {
       "frontmatter:title": {
         "contentHash": "4c4e436f9a45",
@@ -182,8 +182,8 @@
         ]
       },
       "section-b": {
-        "contentHash": "d8027b0fc6b7",
-        "anchorHash": "fe12c8f1b25f",
+        "contentHash": "5c416ca7eba0",
+        "anchorHash": "ca67bcc3624a",
         "labelHash": "df7e70e50215",
         "children": {
           "_label": {
@@ -232,6 +232,16 @@
           },
           "component:5": {
             "contentHash": "4b9f7d802648",
+            "anchorHash": "9702160df4a7",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "effcd8b94194"
+              }
+            }
+          },
+          "component:6": {
+            "contentHash": "4b9f7d802648",
             "anchorHash": "dec6e29a4bc0",
             "children": {
               "attr:term": {
@@ -240,7 +250,7 @@
               }
             }
           },
-          "component:6": {
+          "component:7": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "3aa1150490b5",
             "children": {
@@ -250,7 +260,7 @@
               }
             }
           },
-          "component:7": {
+          "component:8": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "113491b55f75",
             "children": {
@@ -260,7 +270,7 @@
               }
             }
           },
-          "component:8": {
+          "component:9": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "ef6d70b39295",
             "children": {
@@ -270,7 +280,7 @@
               }
             }
           },
-          "component:9": {
+          "component:10": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "a516ffba2707",
             "children": {
@@ -280,7 +290,7 @@
               }
             }
           },
-          "component:10": {
+          "component:11": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "eb4ab4969f5c",
             "children": {
@@ -290,7 +300,7 @@
               }
             }
           },
-          "component:11": {
+          "component:12": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "480c75ce78c4",
             "children": {
@@ -300,7 +310,7 @@
               }
             }
           },
-          "component:12": {
+          "component:13": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "9270c019aa39",
             "children": {
@@ -310,7 +320,7 @@
               }
             }
           },
-          "component:13": {
+          "component:14": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "6057c2e824b0",
             "children": {
@@ -320,7 +330,7 @@
               }
             }
           },
-          "component:14": {
+          "component:15": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "a3f2f5dab3e2",
             "children": {
@@ -330,7 +340,7 @@
               }
             }
           },
-          "component:15": {
+          "component:16": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "e616788fdd2a",
             "children": {
@@ -340,7 +350,7 @@
               }
             }
           },
-          "component:16": {
+          "component:17": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "ee28ecf74330",
             "children": {
@@ -350,7 +360,7 @@
               }
             }
           },
-          "component:17": {
+          "component:18": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "a9a999f40a84",
             "children": {
@@ -360,7 +370,7 @@
               }
             }
           },
-          "component:18": {
+          "component:19": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -384,12 +394,13 @@
           "component:15",
           "component:16",
           "component:17",
-          "component:18"
+          "component:18",
+          "component:19"
         ]
       },
       "section-c": {
-        "contentHash": "4342466959c7",
-        "anchorHash": "182ee31a3338",
+        "contentHash": "187979665bc7",
+        "anchorHash": "74a694e8e504",
         "labelHash": "6b23c0d5f35d",
         "children": {
           "_label": {
@@ -408,6 +419,16 @@
           },
           "component:2": {
             "contentHash": "4b9f7d802648",
+            "anchorHash": "68b7a27ed6e8",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "9a139df4b9da"
+              }
+            }
+          },
+          "component:3": {
+            "contentHash": "4b9f7d802648",
             "anchorHash": "e0e8a4101fdc",
             "children": {
               "attr:term": {
@@ -416,7 +437,7 @@
               }
             }
           },
-          "component:3": {
+          "component:4": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "9fc8fdb68e10",
             "children": {
@@ -426,7 +447,7 @@
               }
             }
           },
-          "component:4": {
+          "component:5": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "64ef8eb87cc3",
             "children": {
@@ -436,7 +457,7 @@
               }
             }
           },
-          "component:5": {
+          "component:6": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "f507e449c629",
             "children": {
@@ -446,7 +467,7 @@
               }
             }
           },
-          "component:6": {
+          "component:7": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "aeff341a3db6",
             "children": {
@@ -456,7 +477,7 @@
               }
             }
           },
-          "component:7": {
+          "component:8": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "daa7973bb475",
             "children": {
@@ -466,7 +487,7 @@
               }
             }
           },
-          "component:8": {
+          "component:9": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "9d0db4289bc8",
             "children": {
@@ -476,7 +497,7 @@
               }
             }
           },
-          "component:9": {
+          "component:10": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "d04f3bd507bf",
             "children": {
@@ -486,7 +507,7 @@
               }
             }
           },
-          "component:10": {
+          "component:11": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "95e0c8e070b9",
             "children": {
@@ -496,7 +517,7 @@
               }
             }
           },
-          "component:11": {
+          "component:12": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "a1c3db456d62",
             "children": {
@@ -506,7 +527,7 @@
               }
             }
           },
-          "component:12": {
+          "component:13": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "8de1fa324427",
             "children": {
@@ -516,7 +537,7 @@
               }
             }
           },
-          "component:13": {
+          "component:14": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "3a3659c77ce9",
             "children": {
@@ -526,7 +547,7 @@
               }
             }
           },
-          "component:14": {
+          "component:15": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "177fd8b7eceb",
             "children": {
@@ -536,7 +557,7 @@
               }
             }
           },
-          "component:15": {
+          "component:16": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -557,7 +578,8 @@
           "component:12",
           "component:13",
           "component:14",
-          "component:15"
+          "component:15",
+          "component:16"
         ]
       },
       "section-d": {
@@ -756,8 +778,8 @@
         ]
       },
       "section-e": {
-        "contentHash": "25979ba1fbe3",
-        "anchorHash": "9906d15e8d1f",
+        "contentHash": "feb1c8837088",
+        "anchorHash": "0d3150c8f391",
         "labelHash": "a9f51566bd67",
         "children": {
           "_label": {
@@ -926,6 +948,16 @@
           },
           "component:17": {
             "contentHash": "4b9f7d802648",
+            "anchorHash": "ad8da976e9fc",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "a8437843cad2"
+              }
+            }
+          },
+          "component:18": {
+            "contentHash": "4b9f7d802648",
             "anchorHash": "e52cb5836e3a",
             "children": {
               "attr:term": {
@@ -934,7 +966,7 @@
               }
             }
           },
-          "component:18": {
+          "component:19": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "b1cf75ca8364",
             "children": {
@@ -944,7 +976,7 @@
               }
             }
           },
-          "component:19": {
+          "component:20": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "98d185e29ad2",
             "children": {
@@ -954,7 +986,7 @@
               }
             }
           },
-          "component:20": {
+          "component:21": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "eddd663455df",
             "children": {
@@ -964,7 +996,7 @@
               }
             }
           },
-          "component:21": {
+          "component:22": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "5bfa7c0fc4b0",
             "children": {
@@ -974,7 +1006,7 @@
               }
             }
           },
-          "component:22": {
+          "component:23": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -1002,7 +1034,8 @@
           "component:19",
           "component:20",
           "component:21",
-          "component:22"
+          "component:22",
+          "component:23"
         ]
       },
       "section-f": {
@@ -1346,8 +1379,8 @@
         ]
       },
       "section-k": {
-        "contentHash": "7b46891783f4",
-        "anchorHash": "e115f5679c47",
+        "contentHash": "966c9aacba5c",
+        "anchorHash": "bfd9900548d1",
         "labelHash": "86be9a55762d",
         "children": {
           "_label": {
@@ -1395,6 +1428,16 @@
             }
           },
           "component:5": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "eaafd5a3ff7e",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "84a9ceb1ee3a"
+              }
+            }
+          },
+          "component:6": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -1405,12 +1448,13 @@
           "component:2",
           "component:3",
           "component:4",
-          "component:5"
+          "component:5",
+          "component:6"
         ]
       },
       "section-l": {
-        "contentHash": "c51ecdbc74f0",
-        "anchorHash": "4ae0d1552b7a",
+        "contentHash": "e54e2fd455cf",
+        "anchorHash": "1ea972ed089f",
         "labelHash": "72dfcfb0c470",
         "children": {
           "_label": {
@@ -1459,6 +1503,16 @@
           },
           "component:5": {
             "contentHash": "4b9f7d802648",
+            "anchorHash": "f7fd9df68d97",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "4fcc70b6614a"
+              }
+            }
+          },
+          "component:6": {
+            "contentHash": "4b9f7d802648",
             "anchorHash": "3d58e06f384f",
             "children": {
               "attr:term": {
@@ -1467,7 +1521,7 @@
               }
             }
           },
-          "component:6": {
+          "component:7": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "3b0e450ef072",
             "children": {
@@ -1477,7 +1531,7 @@
               }
             }
           },
-          "component:7": {
+          "component:8": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "2c0d088db170",
             "children": {
@@ -1487,7 +1541,7 @@
               }
             }
           },
-          "component:8": {
+          "component:9": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -1501,12 +1555,13 @@
           "component:5",
           "component:6",
           "component:7",
-          "component:8"
+          "component:8",
+          "component:9"
         ]
       },
       "section-m": {
-        "contentHash": "8469bb631fd2",
-        "anchorHash": "389c8688a9c8",
+        "contentHash": "cafb63f5ae06",
+        "anchorHash": "b301c6497189",
         "labelHash": "08f271887ce9",
         "children": {
           "_label": {
@@ -1535,6 +1590,16 @@
           },
           "component:3": {
             "contentHash": "4b9f7d802648",
+            "anchorHash": "4a2079a6382d",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "b3ef9b748e9b"
+              }
+            }
+          },
+          "component:4": {
+            "contentHash": "4b9f7d802648",
             "anchorHash": "2107a318f76e",
             "children": {
               "attr:term": {
@@ -1543,7 +1608,7 @@
               }
             }
           },
-          "component:4": {
+          "component:5": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "7b9a725a9bf3",
             "children": {
@@ -1553,7 +1618,7 @@
               }
             }
           },
-          "component:5": {
+          "component:6": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "79d3416706df",
             "children": {
@@ -1563,7 +1628,7 @@
               }
             }
           },
-          "component:6": {
+          "component:7": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "d8b32a0a1090",
             "children": {
@@ -1573,7 +1638,7 @@
               }
             }
           },
-          "component:7": {
+          "component:8": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "0a371514b01a",
             "children": {
@@ -1583,7 +1648,7 @@
               }
             }
           },
-          "component:8": {
+          "component:9": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "512e01a51f31",
             "children": {
@@ -1593,7 +1658,7 @@
               }
             }
           },
-          "component:9": {
+          "component:10": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "90a4f4d63d85",
             "children": {
@@ -1603,7 +1668,7 @@
               }
             }
           },
-          "component:10": {
+          "component:11": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "63cec1cb12c2",
             "children": {
@@ -1613,7 +1678,7 @@
               }
             }
           },
-          "component:11": {
+          "component:12": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "6aa960096a21",
             "children": {
@@ -1623,7 +1688,7 @@
               }
             }
           },
-          "component:12": {
+          "component:13": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -1641,7 +1706,8 @@
           "component:9",
           "component:10",
           "component:11",
-          "component:12"
+          "component:12",
+          "component:13"
         ]
       },
       "section-n": {
@@ -1793,8 +1859,8 @@
         ]
       },
       "section-p": {
-        "contentHash": "cafb63f5ae06",
-        "anchorHash": "e9b57b2b6c48",
+        "contentHash": "2cf126bd149b",
+        "anchorHash": "ac5f943fb120",
         "labelHash": "5c62e091b8c0",
         "children": {
           "_label": {
@@ -1823,6 +1889,16 @@
           },
           "component:3": {
             "contentHash": "4b9f7d802648",
+            "anchorHash": "287fa2114a07",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e087885fbb3b"
+              }
+            }
+          },
+          "component:4": {
+            "contentHash": "4b9f7d802648",
             "anchorHash": "bba2bbb23470",
             "children": {
               "attr:term": {
@@ -1831,7 +1907,7 @@
               }
             }
           },
-          "component:4": {
+          "component:5": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "828388339de2",
             "children": {
@@ -1841,7 +1917,7 @@
               }
             }
           },
-          "component:5": {
+          "component:6": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "6fbb07442108",
             "children": {
@@ -1851,7 +1927,7 @@
               }
             }
           },
-          "component:6": {
+          "component:7": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "e295e0370b71",
             "children": {
@@ -1861,7 +1937,7 @@
               }
             }
           },
-          "component:7": {
+          "component:8": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "dd921a92557f",
             "children": {
@@ -1871,7 +1947,7 @@
               }
             }
           },
-          "component:8": {
+          "component:9": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "a22dd2122e9c",
             "children": {
@@ -1881,7 +1957,7 @@
               }
             }
           },
-          "component:9": {
+          "component:10": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "101138224105",
             "children": {
@@ -1891,7 +1967,7 @@
               }
             }
           },
-          "component:10": {
+          "component:11": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "5b5d100a1640",
             "children": {
@@ -1901,7 +1977,7 @@
               }
             }
           },
-          "component:11": {
+          "component:12": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "553ef8e06f0b",
             "children": {
@@ -1911,7 +1987,7 @@
               }
             }
           },
-          "component:12": {
+          "component:13": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "601e193d83c6",
             "children": {
@@ -1921,7 +1997,7 @@
               }
             }
           },
-          "component:13": {
+          "component:14": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -1940,7 +2016,38 @@
           "component:10",
           "component:11",
           "component:12",
-          "component:13"
+          "component:13",
+          "component:14"
+        ]
+      },
+      "section-q": {
+        "contentHash": "3378543f00d8",
+        "anchorHash": "b703efa940c8",
+        "labelHash": "4ae81572f06e",
+        "children": {
+          "_label": {
+            "contentHash": "4ae81572f06e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "cb17fee9b225",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d91fc250791e"
+              }
+            }
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "component:2"
         ]
       },
       "section-r": {
@@ -2029,8 +2136,8 @@
         ]
       },
       "section-s": {
-        "contentHash": "52883cd22f40",
-        "anchorHash": "395d48f6b70e",
+        "contentHash": "1cfc44df25b7",
+        "anchorHash": "d42328e1a93c",
         "labelHash": "8de0b3c47f11",
         "children": {
           "_label": {
@@ -2089,6 +2196,16 @@
           },
           "component:6": {
             "contentHash": "4b9f7d802648",
+            "anchorHash": "efb75b174561",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "000f2c62fc1d"
+              }
+            }
+          },
+          "component:7": {
+            "contentHash": "4b9f7d802648",
             "anchorHash": "a59b7a430ba5",
             "children": {
               "attr:term": {
@@ -2097,7 +2214,7 @@
               }
             }
           },
-          "component:7": {
+          "component:8": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "bbae9122687b",
             "children": {
@@ -2107,7 +2224,7 @@
               }
             }
           },
-          "component:8": {
+          "component:9": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "2525ed0ba389",
             "children": {
@@ -2117,7 +2234,7 @@
               }
             }
           },
-          "component:9": {
+          "component:10": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "db2398c1b8c7",
             "children": {
@@ -2127,7 +2244,17 @@
               }
             }
           },
-          "component:10": {
+          "component:11": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "42b2c417aa8f",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "a3b274d0baf9"
+              }
+            }
+          },
+          "component:12": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "9af7c6e3b5e8",
             "children": {
@@ -2137,7 +2264,7 @@
               }
             }
           },
-          "component:11": {
+          "component:13": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "8c06ad1b37a7",
             "children": {
@@ -2147,7 +2274,7 @@
               }
             }
           },
-          "component:12": {
+          "component:14": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "68a51b0951ce",
             "children": {
@@ -2157,7 +2284,7 @@
               }
             }
           },
-          "component:13": {
+          "component:15": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "640eff53825c",
             "children": {
@@ -2167,7 +2294,7 @@
               }
             }
           },
-          "component:14": {
+          "component:16": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "f2234c9b7f7d",
             "children": {
@@ -2177,7 +2304,7 @@
               }
             }
           },
-          "component:15": {
+          "component:17": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "3dd0bc640ad1",
             "children": {
@@ -2187,7 +2314,7 @@
               }
             }
           },
-          "component:16": {
+          "component:18": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "473c025a9877",
             "children": {
@@ -2197,7 +2324,7 @@
               }
             }
           },
-          "component:17": {
+          "component:19": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "f4c88afb57f0",
             "children": {
@@ -2207,7 +2334,7 @@
               }
             }
           },
-          "component:18": {
+          "component:20": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "b795bad9549c",
             "children": {
@@ -2217,7 +2344,7 @@
               }
             }
           },
-          "component:19": {
+          "component:21": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "aef1136632b8",
             "children": {
@@ -2227,7 +2354,7 @@
               }
             }
           },
-          "component:20": {
+          "component:22": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "bb11add0630f",
             "children": {
@@ -2237,7 +2364,7 @@
               }
             }
           },
-          "component:21": {
+          "component:23": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "8d68ffe2f6b1",
             "children": {
@@ -2247,7 +2374,17 @@
               }
             }
           },
-          "component:22": {
+          "component:24": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "3140b9050464",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "d263ca5bf75d"
+              }
+            }
+          },
+          "component:25": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "afbd84ebd846",
             "children": {
@@ -2257,7 +2394,7 @@
               }
             }
           },
-          "component:23": {
+          "component:26": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "87ead3433f8f",
             "children": {
@@ -2267,7 +2404,7 @@
               }
             }
           },
-          "component:24": {
+          "component:27": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "7b369f9320a3",
             "children": {
@@ -2277,7 +2414,7 @@
               }
             }
           },
-          "component:25": {
+          "component:28": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "8e13bb39c826",
             "children": {
@@ -2287,7 +2424,7 @@
               }
             }
           },
-          "component:26": {
+          "component:29": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "ad6671584538",
             "children": {
@@ -2297,7 +2434,7 @@
               }
             }
           },
-          "component:27": {
+          "component:30": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -2330,7 +2467,10 @@
           "component:24",
           "component:25",
           "component:26",
-          "component:27"
+          "component:27",
+          "component:28",
+          "component:29",
+          "component:30"
         ]
       },
       "section-t": {
@@ -2526,8 +2666,8 @@
         ]
       },
       "section-w": {
-        "contentHash": "7b46891783f4",
-        "anchorHash": "73bc4750294e",
+        "contentHash": "966c9aacba5c",
+        "anchorHash": "0d84808b56e9",
         "labelHash": "fcb5f40df9be",
         "children": {
           "_label": {
@@ -2546,6 +2686,16 @@
           },
           "component:2": {
             "contentHash": "4b9f7d802648",
+            "anchorHash": "49d4f4dead90",
+            "children": {
+              "attr:term": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "146d3146edc9"
+              }
+            }
+          },
+          "component:3": {
+            "contentHash": "4b9f7d802648",
             "anchorHash": "58746e9495dc",
             "children": {
               "attr:term": {
@@ -2554,7 +2704,7 @@
               }
             }
           },
-          "component:3": {
+          "component:4": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "a27b5cbe8041",
             "children": {
@@ -2564,7 +2714,7 @@
               }
             }
           },
-          "component:4": {
+          "component:5": {
             "contentHash": "4b9f7d802648",
             "anchorHash": "a1390fd94164",
             "children": {
@@ -2574,7 +2724,7 @@
               }
             }
           },
-          "component:5": {
+          "component:6": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
@@ -2585,7 +2735,8 @@
           "component:2",
           "component:3",
           "component:4",
-          "component:5"
+          "component:5",
+          "component:6"
         ]
       },
       "section-z": {
@@ -2731,6 +2882,7 @@
       "section-n",
       "section-o",
       "section-p",
+      "section-q",
       "section-r",
       "section-s",
       "section-t",
@@ -2741,5 +2893,5 @@
       "contribute-to-this-page"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "e1842064dd65585ac4ee544d57ed98f2215f78ff"
 }

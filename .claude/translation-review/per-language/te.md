@@ -1,5 +1,12 @@
 # Telugu (te) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.4/10
+Scope: 15 markdown pages, changed lines only; read 8 diffs (nodes-and-clients, run-a-node, statelessness, privacy, supply, patricia, frameworks via sweeps, nodes-as-a-service) plus scripted sweeps. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): client names Latin in run-a-node table/notes (`బేసు/ఎరిగోన్/గెత్/నెథర్‌మైండ్/రెత్`, `Nethermind యొక్క`) and nodes-and-clients table rows, Erigon/Lodestar paragraphs, `టర్బో-గెత్` -> Turbo-Geth, nodes-as-a-service `బేసు` L225, patricia/verkle `గెత్` -> Geth, `Geth (Geth)` -> Geth; long forms added where English is bare (112): `వికేంద్రీకృత ఫైనాన్స్ (DeFi)` x2, `వికేంద్రీకృత అప్లికేషన్ (dapp)`, `నాన్-ఫంజిబుల్ టోకెన్ (NFT)` x4, `అప్లికేషన్ ప్రోగ్రామింగ్ ఇంటర్‌ఫేస్ (API)`, `వికేంద్రీకృత స్వయంప్రతిపత్త సంస్థ (DAO)` x2, `ప్రూఫ్-ఆఫ్-అథారిటీ (PoA)`, `లేయర్ 1 (L1)` (nodes-and-clients L161), `మైక్రోఎస్‌డి (MicroSD)`; `వాలిడేటర్‌లు` -> glossary `ధృవీకర్తలు` (statelessness 4, supply 6; same on dev, tree uses the glossary form in 98 files).
+
+Open (warnings): `జేసన్-ఆర్‌పీసీ` for JSON-RPC is tree-dominant (left); `(Async)`/`(Pythonic)` Latin glosses beside translated words in frameworks; `నెథర్‌మైండ్`, `లోడ్‌స్టార్`, `ప్రిజమ్`, `నింబస్`, `టెకు`, `లైట్‌హౌస్` on unchanged nodes-and-clients lines; `టర్బో-Geth` fixed but other mixed-script compounds may remain; nodes-and-clients L108 lacks the `pos/#what-is-pos` link (unchanged from dev, verify-structure error).
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.4/10
 Scope: 19 JSON namespaces + 76 incremental markdown pages; changed lines only, ~110 JSON keys and ~30 md files read against English. Reported-speech `-మని` negation flip did not recur.
 

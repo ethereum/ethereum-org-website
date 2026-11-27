@@ -83,12 +83,12 @@ Sekarang, kami menentukan fungsi untuk menghasilkan cache:
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Hasilkan dataset awal secara berurutan
+    # Menghasilkan dataset awal secara berurutan
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Gunakan versi putaran rendah dari randmemohash
+    # Menggunakan versi putaran rendah dari randmemohash
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Proses produksi cache melibatkan pengisian memori 32 MB secara berurutan terlebih dahulu, kemudian melakukan dua lintasan algoritma _RandMemoHash_ karya Sergio Demian Lerner dari [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Outputnya adalah sekumpulan 524288 nilai 64-byte.
+Proses produksi cache melibatkan pengisian memori 32 MB secara berurutan terlebih dahulu, kemudian melakukan tiga putaran (`CACHE_ROUNDS`) dari algoritma _RandMemoHash_ milik Sergio Demian Lerner dari [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Outputnya adalah sekumpulan 524288 nilai 64-byte.
 
 ## Fungsi agregasi data {#date-aggregation-function}
 
@@ -220,7 +220,7 @@ Kode berikut harus ditambahkan di awal jika Anda tertarik untuk menjalankan spes
 ```python
 import sha3, copy
 
-# Mengasumsikan pengurutan bit little-endian (sama seperti arsitektur Intel)
+# Mengasumsikan pengurutan bit little endian (sama seperti arsitektur Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# fungsi hash sha3, menghasilkan 64 byte
+# Fungsi hash sha3, menghasilkan output 64 byte
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

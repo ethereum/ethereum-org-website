@@ -1,5 +1,23 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.2/10
+Scope: 16 md pages (ethash, data-structures trio, frameworks, nodes-and-clients index/nodes-as-a-service/run-a-node, transactions, glossary, merge, privacy, statelessness, verkle-trees, supply), changed lines only; all diffs read. Sweeps clean (U+3002/U+2060/CJK, SPDX, isolates, span balance, Eastern-Arabic digits in identifiers) apart from below.
+
+**Fixed in this branch:**
+
+- English dates in `<span dir="ltr">`/isolates: merge:3 (`September 2022`), statelessness:10/33/91 (`September 2026`, `July 2025` x2), run-a-node:104-105 (`September 2026`, `July 2023`) -> `ستمبر`/`جولائی`.
+- NaaS:288 `⩽ 1 sec` unit left English in the span -> `<span dir="ltr">⩽ 1</span> سیکنڈ`.
+- Expansions of bare English acronyms (#112): `ایتھیریم ورچوئل مشین (EVM)` x2 (nodes-and-clients), `تھرڈ پارٹی ایپلیکیشن پروگرامنگ انٹرفیس (API)` and `پبلک ... (API)` (nodes-and-clients:124,126), `زیادہ سے زیادہ قابل اخراج قدر (MEV)` x4 (merge, nodes-and-clients) -> bare/dev forms.
+- Tools re-transliterated on changed lines -> Latin (#113): OpenZeppelin SDK (frameworks:109), Geth in patricia-merkle-trie, NaaS:225 (Geth/Besu), run-a-node size table and notes, nodes-and-clients client tables and ~14 paragraph lines (Geth, Besu, Erigon, Nethermind, Reth, Lighthouse, Lodestar, Nimbus, Prysm, Teku).
+
+**Open (warnings):**
+
+- nodes-and-clients tables now carry `Mainnet, Sepolia, Hoodi` / `Beacon Chain` in Latin where dev had Urdu (matches English cells; native call).
+- transactions:55,77 `مثالی` ("ideal") for "Example"; `Gwei` where English writes `gwei`.
+- English glosses added where English has none: `(trie)`, `(opcodes)`, `(arguments)`, `(spec)`, `(draft)`, `(hexary trie)`, `(proving systems)`, `(bottleneck)`, `(cryptographic proof)`.
+- `Capella` Latin vs `کیپیلا` elsewhere in merge; `(PoW)`/`(PoA)` parentheticals dropped; many `dir="ltr"` spans around `24/7` removed (cosmetic).
+- Unchanged lines still transliterate clients (run-a-node:159-163, 244-308; nodes-and-clients paragraphs), so pages mix forms; Arabic-kaf `لامركزی` (#71) persists.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.5/10
 Scope: 70 md pages + 18 JSON namespaces, incremental updates; changed lines only. Sampled 12 md diffs and ~100 JSON keys; scripted sweeps (U+3002/U+2060/CJK, English sentences, isolate balance, glossary-translit names, expansions) clean apart from the items below. Most `(l1)`/`(l2)` diffs are only the sanitizer's capital fix on expansions dev already had.
 

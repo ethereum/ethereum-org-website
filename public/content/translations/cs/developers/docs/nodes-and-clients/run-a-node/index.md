@@ -1,6 +1,6 @@
 ---
-title: Spusťte si svůj vlastní uzel Etherea
-description: Obecný úvod do provozování vlastní instance klienta Etherea.
+title: "Spusťte si svůj vlastní uzel Etherea"
+description: "Obecný úvod do provozování vlastní instance klienta Etherea."
 lang: cs
 sidebarDepth: 2
 ---
@@ -17,19 +17,19 @@ Pokud jste v tématu provozování uzlu nováčkem nebo hledáte méně technick
 
 ## Výběr přístupu {#choosing-approach}
 
-Prvním krokem při spouštění uzlu je výběr přístupu. Na základě požadavků a různých možností musíte vybrat implementaci klienta (jak exekučního, tak konsensuálního klienta), prostředí (hardware, systém) a parametry pro nastavení klienta.
+Prvním krokem při spouštění vašeho uzlu je výběr přístupu. Na základě požadavků a různých možností musíte vybrat implementaci klienta (jak exekučního, tak konsensuálního klienta), prostředí (hardware, systém) a parametry pro nastavení klienta.
 
 Tato stránka vás provede těmito rozhodnutími a pomůže vám najít nejvhodnější způsob, jak provozovat vaši instanci Etherea.
 
-Chcete-li si vybrat z implementací klientů, podívejte se na všechny dostupné [exekuční klienty](/developers/docs/nodes-and-clients/#execution-clients) a [konsensuální klienty](/developers/docs/nodes-and-clients/#consensus-clients) připravené pro Mainnet a zjistěte více o [klientské diverzitě](/developers/docs/nodes-and-clients/client-diversity).
+Chcete-li si vybrat z implementací klientů, podívejte se na všechny dostupné [exekuční klienty](/developers/docs/nodes-and-clients/#execution-clients) a [konsensuální klienty](/developers/docs/nodes-and-clients/#consensus-clients) připravené pro Mainnet a přečtěte si o [klientské diverzitě](/developers/docs/nodes-and-clients/client-diversity).
 
 Rozhodněte se, zda budete software provozovat na vlastním [hardwaru nebo v cloudu](#local-vs-cloud), s ohledem na [požadavky](#requirements) klientů.
 
-Po přípravě prostředí nainstalujte vybrané klienty buď pomocí [rozhraní přívětivého pro začátečníky](#automatized-setup), nebo [manuálně](#manual-setup) pomocí terminálu s pokročilými možnostmi.
+Po přípravě prostředí nainstalujte vybrané klienty buď pomocí [uživatelsky přívětivého rozhraní pro začátečníky](#automatized-setup), nebo [manuálně](#manual-setup) pomocí terminálu s pokročilými možnostmi.
 
-Když uzel běží a probíhá synchronizace, jste připraveni jej [používat](#using-the-node), ale nezapomeňte dohlížet na jeho [údržbu](#operating-the-node).
+Když uzel běží a synchronizuje se, jste připraveni jej [používat](#using-the-node), ale nezapomeňte dohlížet na jeho [údržbu](#operating-the-node).
 
-![Nastavení klienta](./diagram.png)
+<ClientSetupDiagram />
 
 ### Prostředí a hardware {#environment-and-hardware}
 
@@ -63,13 +63,13 @@ Použití vlastního hardwaru může být velmi snadné. Existuje mnoho jednoduc
 
 Hardwarové požadavky se liší podle klienta, ale obecně nejsou tak vysoké, protože uzel potřebuje pouze zůstat synchronizovaný. Nezaměňujte to s těžbou, která vyžaduje mnohem více výpočetního výkonu. Doba synchronizace a výkon se však s výkonnějším hardwarem zlepšují.
 
-Před instalací jakéhokoli klienta se prosím ujistěte, že váš počítač má dostatek prostředků k jeho spuštění. Minimální a doporučené požadavky naleznete níže.
+Před instalací jakéhokoli klienta se prosím ujistěte, že váš počítač má dostatek prostředků k jeho spuštění. Níže naleznete minimální a doporučené požadavky.
 
-Úzkým hrdlem vašeho hardwaru je většinou místo na disku. Synchronizace blockchainu Etherea je velmi náročná na vstupy/výstupy a vyžaduje spoustu místa. Nejlepší je mít **SSD disk (solid-state drive)** se stovkami GB volného místa k dispozici i po synchronizaci.
+Úzkým hrdlem vašeho hardwaru je většinou místo na disku. Synchronizace blockchainu Etherea je velmi náročná na vstupy/výstupy a vyžaduje spoustu místa. Nejlepší je mít **SSD disk (solid-state drive)** se stovkami GB volného místa, které zbydou i po synchronizaci.
 
 Velikost databáze a rychlost počáteční synchronizace závisí na zvoleném klientovi, jeho konfiguraci a [strategii synchronizace](/developers/docs/nodes-and-clients/#sync-modes).
 
-Také se ujistěte, že vaše internetové připojení není omezeno [datovým limitem](https://wikipedia.org/wiki/Data_cap). Doporučuje se používat neomezené připojení, protože počáteční synchronizace a data vysílaná do sítě by mohla váš limit překročit.
+Také se ujistěte, že vaše internetové připojení není omezeno [datovým limitem](https://wikipedia.org/wiki/Data_cap). Doporučuje se používat neomezené připojení, protože počáteční synchronizace a data vysílaná do sítě by mohly překročit váš limit.
 
 ##### Operační systém
 
@@ -79,31 +79,32 @@ Všichni klienti podporují hlavní operační systémy – Linux, macOS, Window
 
 - CPU se 2 a více jádry
 - 16 GB RAM (pro stabilitu se doporučuje 32 GB)
-- 2 TB NVMe SSD (pravděpodobně bude překročeno do roku 2027, přečtěte si více o [skvělých a méně skvělých SSD pro uzly Etherea](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- 4 TB NVMe SSD (pokryje uzel s plnou historií řetězce a prostorem pro růst, viz velikosti disků klientů níže; přečtěte si více o [Skvělých a méně skvělých SSD pro uzly Etherea](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Šířka pásma 25+ MBit/s
 
 ##### Doporučené specifikace
 
-Aktuální hardwarové pokyny pro provozovatele uzlů jsou uvedeny v [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Pro plný uzel se doporučuje:
+Aktuální hardwarové pokyny pro provozovatele uzlů jsou definovány v [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Pro plný uzel se doporučuje:
 
 - Rychlý CPU se 4 a více jádry (8 a více jader při validaci)
 - 32 GB RAM (pro zajištění stability se při validaci doporučuje 64 GB)
-- 4 TB NVMe SSD (disky bez DRAM a QLC se nedoporučují)
-- Šířka pásma 50 MBit/s pro stahování / 15+ MBit/s pro odesílání (25+ MBit/s pro odesílání při validaci)
+- 4 TB NVMe SSD (nedoporučují se disky bez DRAM a QLC disky)
+- Šířka pásma 50 MBit/s pro stahování / 15+ MBit/s pro nahrávání (25+ MBit/s pro nahrávání při validaci)
 
 Režim synchronizace a klient, kterého si vyberete, ovlivní požadavky na prostor, ale níže jsme odhadli místo na disku, které budete pro každého klienta potřebovat.
 
-| Klient     | Velikost disku (snap sync) | Velikost disku (plný archiv) |
+| Klient     | Velikost disku (plný uzel) | Velikost disku (plný archiv) |
 | ---------- | -------------------------- | ---------------------------- |
-| Besu       | 800GB+                     | 12TB+                        |
-| Erigon     | N/A                        | 2.5TB+                       |
-| Geth       | 500GB+                     | 12TB+                        |
-| Nethermind | 500GB+                     | 12TB+                        |
-| Reth       | N/A                        | 2.2TB+                       |
+| Besu       | 1,8 TB+                    | 12 TB+                       |
+| Erigon     | 1,7 TB+                    | 2,7 TB+                      |
+| Geth       | 1,8 TB+                    | 2 TB+                        |
+| Nethermind | 1,7 TB+                    | 14 TB+                       |
+| Reth       | 2,2 TB+                    | 2,8 TB+                      |
 
-- Poznámka: Erigon a Reth nenabízejí snap sync, ale je možné plné prořezávání (Full Pruning) (~2TB pro Erigon, ~1.2TB pro Reth)
+- Poznámka: Velikosti plných uzlů uchovávají kompletní historii řetězce a byly měřeny v září 2026 projektem [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Klienti, kteří podporují exspiraci historie, potřebují méně: přibližně 1,2–1,4 TB pouze s historií po Merge, nebo přibližně 400–650 GB s průběžnou exspirací (Geth zatím nepodporuje).
+- Poznámka: Velikosti archivů vycházejí z dokumentace jednotlivých klientů ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Údaj pro Geth platí pro jeho archiv založený na cestách (path-based); uchovávání historie trie navíc zabere přibližně 6,5 TB. Údaj pro Nethermind pochází z července 2023 a od té doby vzrostl.
 
-U konsensuálních klientů závisí požadavek na prostor také na implementaci klienta a povolených funkcích (např. slasher validátoru), ale obecně počítejte s dalšími 200 GB potřebnými pro data uzlu Beacon. S velkým počtem validátorů roste také zatížení šířky pásma. [Podrobnosti o požadavcích na konsensuálního klienta najdete v této analýze](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+U konsensuálních klientů závisí požadavek na prostor také na implementaci klienta a povolených funkcích (např. slasher validátoru), ale obecně počítejte s dalšími 15–90 GB pro data beacon chainu, plus přibližně 500 GB dat blobů, pokud provozujete superuzel. S velkým počtem validátorů rostou také nároky na šířku pásma. [Podrobnosti o požadavcích na konsensuální klienty najdete v této analýze](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Řešení Plug-and-play {#plug-and-play}
 
@@ -459,7 +460,7 @@ Každá implementace klienta má lidsky čitelný řetězec verze používaný v
 
 #### Provozování dalších služeb {#running-additional-services}
 
-Provozování vlastního uzlu vám umožňuje využívat služby, které vyžadují přímý přístup k RPC klienta Etherea. Jedná se o služby postavené na Ethereu, jako jsou [řešení vrstvy 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend pro peněženky, průzkumníky bloků, vývojářské nástroje a další infrastruktura Etherea.
+Provozování vlastního uzlu vám umožňuje využívat služby, které vyžadují přímý přístup k RPC klienta Etherea. Jedná se o služby postavené na Ethereu, jako jsou [řešení vrstvy 2 (L2)](/developers/docs/scaling/#layer-2-scaling), backend pro peněženky, průzkumníky bloků, vývojářské nástroje a další infrastruktura Etherea.
 
 #### Monitorování uzlu {#monitoring-the-node}
 

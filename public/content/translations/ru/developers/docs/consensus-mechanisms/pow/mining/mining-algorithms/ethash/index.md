@@ -83,7 +83,7 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Последовательно создать начальный набор данных
+    # Последовательно создать исходный набор данных
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Процесс создания кеша включает в себя сначала последовательное заполнение 32 МБ памяти, а затем выполнение двух проходов алгоритма Серхио Демиана Лернера (Sergio Demian Lerner) _RandMemoHash_ из [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). На выходе получается набор из 524288 64-байтовых значений.
+Процесс создания кеша включает в себя сначала последовательное заполнение 32 МБ памяти, а затем выполнение трех проходов (`CACHE_ROUNDS`) алгоритма _RandMemoHash_ Серджио Демиана Лернера из [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Результатом является набор из 524288 64-байтовых значений.
 
 ## Функция агрегации данных {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _Знаете ресурс сообщества, который вам помо�
 
 ## Приложение {#appendix}
 
-Следующий код должен быть добавлен в начало, если вы заинтересованы в запуске приведенной выше спецификации Python в виде кода.
+Следующий код следует добавить в начало, если вы хотите запустить приведенную выше спецификацию на Python в виде кода.
 
 ```python
 import sha3, copy
 
-# Предполагает обратный порядок битов (как в архитектурах Intel)
+# Предполагает порядок битов little endian (как в архитектурах Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# хеш-функция sha3, выводит 64 байта
+# Хеш-функция sha3, выводит 64 байта
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

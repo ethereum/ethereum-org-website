@@ -1,10 +1,10 @@
 ---
 title: The Merge
-description: "Aprenda sobre The Merge - quando a Mainnet do Ethereum adotou a Prova de Participação (PoS)."
+description: "Aprenda sobre The Merge, quando a Rede Principal do Ethereum mudou da Prova de Trabalho para a Prova de Participação em setembro de 2022, reduzindo seu consumo de energia em cerca de 99,95%."
 lang: pt-br
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "A Rede Principal do Ethereum usa a Prova de Participação (PoS), mas nem sempre foi assim."
   - "A atualização do mecanismo original de Prova de Trabalho (PoW) para a Prova de Participação (PoS) foi chamada de The Merge."
@@ -122,16 +122,16 @@ The Merge também preparou o terreno para futuras atualizações de escalabilida
 ## Equívocos sobre The Merge {#misconceptions}
 
 <ExpandableCard
-title="Equívoco: &quot;Executar um nó exige o staking de 32 ETH.&quot;"
-contentPreview="Falso. Qualquer pessoa é livre para sincronizar sua própria cópia autoverificada do Ethereum (ou seja, executar um nó). Nenhum ETH é exigido — nem antes de The Merge, nem depois de The Merge, nem nunca.">
+title="Equívoco: &quot;Executar um nó exige fazer staking de 32 ETH.&quot;"
+contentPreview="Falso. Qualquer pessoa é livre para sincronizar sua própria cópia autoverificada do Ethereum (ou seja, executar um nó). Nenhum ETH é exigido — nem antes do The Merge, nem depois do The Merge, nunca.">
 
 Existem dois tipos de nós do Ethereum: nós que podem propor blocos e nós que não podem.
 
-Os nós que propõem blocos são apenas um pequeno número do total de nós no Ethereum. Esta categoria inclui nós de mineração sob a Prova de Trabalho (PoW) e nós validadores sob a Prova de Participação (PoS). Esta categoria exige o comprometimento de recursos econômicos (como poder de hash de GPU na Prova de Trabalho ou ETH em staking na Prova de Participação) em troca da capacidade de ocasionalmente propor o próximo bloco e ganhar recompensas do protocolo.
+Os nós que propõem blocos são apenas um pequeno número do total de nós no Ethereum. Essa categoria inclui nós de mineração sob a Prova de Trabalho (PoW) e nós validadores sob a Prova de Participação (PoS). Essa categoria exige o comprometimento de recursos econômicos (como poder de hash de GPU na Prova de Trabalho ou ETH em staking na Prova de Participação) em troca da capacidade de propor ocasionalmente o próximo bloco e ganhar recompensas do protocolo.
 
-Os outros nós na rede (ou seja, a maioria) não são obrigados a comprometer quaisquer recursos econômicos além de um computador de nível de consumidor com 1-2 TB de armazenamento disponível e uma conexão com a internet. Esses nós não propõem blocos, mas ainda desempenham um papel crítico na proteção da rede, responsabilizando todos os proponentes de blocos ao ouvir novos blocos e verificar sua validade na chegada, de acordo com as regras de consenso da rede. Se o bloco for válido, o nó continua propagando-o pela rede. Se o bloco for inválido por qualquer motivo, o software do nó o desconsiderará como inválido e interromperá sua propagação.
+Os outros nós da rede (ou seja, a maioria) não são obrigados a comprometer nenhum recurso econômico além de um computador de nível de consumidor com 4 TB de armazenamento disponível e uma conexão com a internet. Esses nós não propõem blocos, mas ainda desempenham um papel crítico na segurança da rede, responsabilizando todos os proponentes de blocos ao ouvir novos blocos e verificar sua validade na chegada, de acordo com as regras de consenso da rede. Se o bloco for válido, o nó continua propagando-o pela rede. Se o bloco for inválido por qualquer motivo, o software do nó o desconsiderará como inválido e interromperá sua propagação.
 
-A execução de um nó que não produz blocos é possível para qualquer pessoa sob qualquer mecanismo de consenso (Prova de Trabalho ou Prova de Participação); é <em>fortemente encorajado</em> para todos os usuários, se tiverem os meios. Executar um nó é imensamente valioso para o Ethereum e oferece benefícios adicionais a qualquer indivíduo que o execute, como maior segurança, privacidade e resistência à censura.
+Executar um nó que não produz blocos é possível para qualquer pessoa sob qualquer mecanismo de consenso (Prova de Trabalho ou Prova de Participação); é <em>fortemente encorajado</em> para todos os usuários, se tiverem os meios. Executar um nó é imensamente valioso para o Ethereum e oferece benefícios adicionais a qualquer indivíduo que o execute, como maior segurança, privacidade e resistência à censura.
 
 A capacidade de qualquer pessoa executar seu próprio nó é <em>absolutamente essencial</em> para manter a descentralização da rede Ethereum.
 
@@ -140,23 +140,23 @@ A capacidade de qualquer pessoa executar seu próprio nó é <em>absolutamente e
 </ExpandableCard>
 
 <ExpandableCard
-title="Equívoco: &quot;The Merge falhou em reduzir as taxas de gás.&quot;"
+title="Equívoco: &quot;The Merge não conseguiu reduzir as taxas de gás.&quot;"
 contentPreview="Falso. The Merge foi uma mudança no mecanismo de consenso, não uma expansão da capacidade da rede, e nunca teve a intenção de reduzir as taxas de gás.">
 
-As taxas de gás são um produto da demanda da rede em relação à capacidade da rede. The Merge descontinuou o uso da Prova de Trabalho (PoW), fazendo a transição para a Prova de Participação (PoS) para o consenso, mas não alterou significativamente nenhum parâmetro que influencie diretamente a capacidade ou a vazão da rede.
+As taxas de gás são um produto da demanda da rede em relação à capacidade da rede. The Merge descontinuou o uso da Prova de Trabalho, fazendo a transição para a Prova de Participação para o consenso, mas não alterou significativamente nenhum parâmetro que influencie diretamente a capacidade ou a vazão da rede.
 
-Com um <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">roteiro centrado em rollup</a>, os esforços estão focados em escalar a atividade do usuário na [camada 2 (l2)](/layer-2/), enquanto habilita a Mainnet da camada 1 (l1) como uma camada de liquidação descentralizada segura otimizada para armazenamento de dados de rollup para ajudar a tornar as transações de rollup exponencialmente mais baratas. A transição para a Prova de Participação (PoS) é um precursor crítico para a realização disso. [Mais sobre gás e taxas.](/developers/docs/gas/)
+Com um <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">roteiro centrado em rollups</a>, os esforços estão concentrados em escalar a atividade do usuário na [camada 2](/layer-2/), enquanto habilita a Mainnet da camada 1 como uma camada de liquidação descentralizada e segura, otimizada para armazenamento de dados de rollup para ajudar a tornar as transações de rollup exponencialmente mais baratas. A transição para a Prova de Participação é um precursor crítico para a realização disso. [Mais sobre gás e taxas.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Equívoco: &quot;As transações foram aceleradas substancialmente por The Merge.&quot;"
-contentPreview="Falso. Embora existam algumas pequenas mudanças, a velocidade das transações é basicamente a mesma na camada 1 agora como era antes de The Merge.">
-A "velocidade" de uma transação pode ser medida de algumas maneiras, incluindo o tempo para ser incluída em um bloco e o tempo para a finalidade. Ambos mudam ligeiramente, mas não de uma forma que os usuários percebam.
+title="Equívoco: &quot;As transações foram aceleradas substancialmente pelo The Merge.&quot;"
+contentPreview="Falso. Embora existam algumas pequenas mudanças, a velocidade da transação é basicamente a mesma na camada 1 agora como era antes do The Merge.">
+A "velocidade" de uma transação pode ser medida de algumas maneiras, incluindo o tempo para ser incluída em um bloco e o tempo para finalização. Ambos mudam ligeiramente, mas não de uma forma que os usuários percebam.
 
-Historicamente, na Prova de Trabalho (PoW), a meta era ter um novo bloco a cada ~13,3 segundos. Sob a Prova de Participação (PoS), os slots ocorrem precisamente a cada 12 segundos, cada um dos quais é uma oportunidade para um validador publicar um bloco. A maioria dos slots tem blocos, mas não necessariamente todos (ou seja, um validador está offline). Na Prova de Participação (PoS), os blocos são produzidos ~10% mais frequentemente do que na Prova de Trabalho (PoW). Esta foi uma mudança bastante insignificante e é improvável que seja notada pelos usuários.
+Historicamente, na Prova de Trabalho, a meta era ter um novo bloco a cada ~13,3 segundos. Sob a Prova de Participação, os slots ocorrem precisamente a cada 12 segundos, cada um dos quais é uma oportunidade para um validador publicar um bloco. A maioria dos slots tem blocos, mas não necessariamente todos (ou seja, um validador está offline). Na Prova de Participação, os blocos são produzidos com uma frequência ~10% maior do que na Prova de Trabalho. Essa foi uma mudança bastante insignificante e é improvável que seja notada pelos usuários.
 
-A Prova de Participação (PoS) introduziu o conceito de finalidade de transação que não existia anteriormente. Na Prova de Trabalho (PoW), a capacidade de reverter um bloco fica exponencialmente mais difícil a cada bloco minerado em cima de uma transação, mas nunca chega a zero. Sob a Prova de Participação (PoS), os blocos são agrupados em épocas (períodos de 6,4 minutos contendo 32 chances para blocos) nas quais os validadores votam. Quando uma época termina, os validadores votam se devem considerar a época 'justificada'. Se os validadores concordarem em justificar a época, ela será finalizada na próxima época. Desfazer transações finalizadas é economicamente inviável, pois exigiria obter e queimar mais de um terço do total de ETH em staking.
+A Prova de Participação introduziu o conceito de finalidade de transação que não existia anteriormente. Na Prova de Trabalho, a capacidade de reverter um bloco fica exponencialmente mais difícil a cada bloco minerado em cima de uma transação, mas nunca chega a zero. Sob a Prova de Participação, os blocos são agrupados em épocas (intervalos de tempo de 6,4 minutos contendo 32 chances para blocos) nas quais os validadores votam. Quando uma época termina, os validadores votam se devem considerar a época 'justificada'. Se os validadores concordarem em justificar a época, ela será finalizada na próxima época. Desfazer transações finalizadas é economicamente inviável, pois exigiria obter e queimar mais de um terço do total de ETH em staking.
 
 </ExpandableCard>
 
@@ -164,20 +164,20 @@ A Prova de Participação (PoS) introduziu o conceito de finalidade de transaç�
 title="Equívoco: &quot;The Merge habilitou os saques de staking.&quot;"
 contentPreview="Falso, mas os saques de staking foram habilitados desde então por meio da atualização Shanghai/Capella.">
 
-Inicialmente após The Merge, os stakers só podiam acessar gorjetas de taxas e MEV que foram ganhos como resultado de propostas de blocos. Essas recompensas são creditadas em uma conta sem staking controlada pelo validador (conhecida como <em>recebedor de taxas</em>) e estão disponíveis imediatamente. Essas recompensas são separadas das recompensas do protocolo por realizar as funções de validador.
+Inicialmente após The Merge, os stakers só podiam acessar gorjetas de taxas e MEV que foram ganhos como resultado de propostas de blocos. Essas recompensas são creditadas em uma conta sem staking controlada pelo validador (conhecida como <em>fee recipient</em>) e estão disponíveis imediatamente. Essas recompensas são separadas das recompensas do protocolo por realizar as funções de validador.
 
-Desde a atualização da rede Shanghai/Capella, os stakers agora podem designar um <em>endereço de saque</em> para começar a receber pagamentos automáticos de qualquer saldo de staking excedente (ETH acima de 32 das recompensas do protocolo). Esta atualização também permitiu a capacidade de um validador desbloquear e recuperar todo o seu saldo ao sair da rede.
+Desde a atualização da rede Shanghai/Capella, os stakers agora podem designar um <em>endereço de saque</em> para começar a receber pagamentos automáticos de qualquer saldo de staking excedente (ETH acima de 32 das recompensas do protocolo). Essa atualização também habilitou a capacidade de um validador desbloquear e recuperar todo o seu saldo ao sair da rede.
 
 [Mais sobre saques de staking](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Equívoco: &quot;Agora que The Merge está concluído e os saques estão habilitados, os stakers poderiam sair todos de uma vez.&quot;"
-contentPreview="Falso. As saídas de validadores são limitadas por taxa por motivos de segurança.">
-Como a atualização Shanghai/Capella permitiu saques, os validadores são incentivados a sacar seu saldo de staking acima de 32 ETH, pois esses fundos não aumentam o rendimento e, de outra forma, ficam bloqueados. Dependendo da APR (determinada pelo total de ETH em staking), eles podem ser incentivados a sair de seu(s) validador(es) para recuperar todo o seu saldo ou potencialmente fazer staking de ainda mais usando suas recompensas para ganhar mais rendimento.
+title="Equívoco: &quot;Agora que The Merge está concluído e os saques estão habilitados, todos os stakers poderiam sair de uma vez.&quot;"
+contentPreview="Falso. As saídas de validadores têm limite de taxa por motivos de segurança.">
+Como a atualização Shanghai/Capella habilitou os saques, os validadores são incentivados a sacar seu saldo de staking acima de 32 ETH, pois esses fundos não aumentam o rendimento e, de outra forma, ficam bloqueados. Dependendo da APR (determinada pelo total de ETH em staking), eles podem ser incentivados a sair de seu(s) validador(es) para recuperar todo o seu saldo ou potencialmente fazer ainda mais staking usando suas recompensas para ganhar mais rendimento.
 
-Uma ressalva importante aqui: as saídas completas de validadores são limitadas por taxa pelo protocolo, e apenas um certo número de validadores pode sair por época (a cada 6,4 minutos). Esse limite flutua dependendo do número de validadores ativos, mas chega a aproximadamente 0,33% do total de ETH em staking que pode sair da rede em um único dia.
+Uma ressalva importante aqui, as saídas completas de validadores têm limite de taxa pelo protocolo, e apenas um certo número de validadores pode sair por época (a cada 6,4 minutos). Esse limite flutua dependendo do número de validadores ativos, mas resulta em aproximadamente 0,33% do total de ETH em staking que pode sair da rede em um único dia.
 
 Isso evita um êxodo em massa de fundos em staking. Além disso, evita que um invasor em potencial com acesso a uma grande parte do total de ETH em staking cometa uma ofensa passível de penalização e saia/saque todos os saldos dos validadores infratores na mesma época antes que o protocolo possa aplicar a penalização.
 
@@ -219,9 +219,9 @@ Para os curiosos, saiba mais sobre [O que acontece após The Merge](https://yout
 
 ### The Merge e a cadeia de fragmentos {#merge-and-data-sharding}
 
-Originalmente, o plano era trabalhar na cadeia de fragmentos antes do The Merge para lidar com a escalabilidade. No entanto, com o boom das [soluções de escalabilidade da camada 2 (l2)](/layer-2/), a prioridade mudou para trocar a Prova de Trabalho (PoW) pela Prova de Participação (PoS) primeiro.
+Originalmente, o plano era trabalhar na cadeia de fragmentos antes do The Merge para lidar com a escalabilidade. No entanto, com o boom das [soluções de escalabilidade da camada 2 (L2)](/layer-2/), a prioridade mudou para trocar a Prova de Trabalho (PoW) pela Prova de Participação (PoS) primeiro.
 
-Os planos para a cadeia de fragmentos estão evoluindo rapidamente, mas dado o aumento e o sucesso das tecnologias da camada 2 (l2) para escalar a execução de transações, os planos da cadeia de fragmentos mudaram para encontrar a maneira mais ideal de distribuir o fardo de armazenar dados de chamada compactados de contratos de rollup, permitindo um crescimento exponencial na capacidade da rede. Isso não seria possível sem primeiro fazer a transição para a Prova de Participação (PoS).
+Os planos para a cadeia de fragmentos estão evoluindo rapidamente, mas dado o aumento e o sucesso das tecnologias da camada 2 (L2) para escalar a execução de transações, os planos da cadeia de fragmentos mudaram para encontrar a maneira mais ideal de distribuir o fardo de armazenar dados de chamada compactados de contratos de rollup, permitindo um crescimento exponencial na capacidade da rede. Isso não seria possível sem primeiro fazer a transição para a Prova de Participação (PoS).
 
 <ButtonLink href="/roadmap/danksharding/">
   Cadeia de fragmentos

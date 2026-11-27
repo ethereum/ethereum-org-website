@@ -83,7 +83,7 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # إنتاج مجموعة البيانات الأولية بشكل تسلسلي
+    # إنتاج مجموعة البيانات الأولية بالتسلسل
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-تتضمن عملية إنتاج الذاكرة المؤقتة أولاً ملء <span dir="ltr">32 MB</span> من الذاكرة بالتسلسل، ثم إجراء تمريرتين لخوارزمية _RandMemoHash_ الخاصة بـ Sergio Demian Lerner من [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). المخرجات عبارة عن مجموعة من <span dir="ltr">524,288</span> قيمة بحجم <span dir="ltr">64-byte</span>.
+تتضمن عملية إنتاج الذاكرة المؤقتة أولاً ملء <span dir="ltr">32 MB</span> من الذاكرة بشكل متسلسل، ثم إجراء ثلاث تمريرات (`CACHE_ROUNDS`) لخوارزمية _RandMemoHash_ الخاصة بـ Sergio Demian Lerner من [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). الناتج هو مجموعة من 524288 قيمة بحجم <span dir="ltr">64-byte</span>.
 
 ## دالة تجميع البيانات {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذ
 
 ## الملحق {#appendix}
 
-يجب إلحاق الكود التالي في البداية إذا كنت مهتمًا بتشغيل مواصفات Python أعلاه ككود.
+يجب إضافة الكود التالي في البداية إذا كنت مهتمًا بتشغيل مواصفات Python أعلاه ككود.
 
 ```python
 import sha3, copy
 
-# يفترض ترتيب البتات بنظام النهاية الصغرى (نفس معماريات Intel)
+# يفترض ترتيب البتات ذو النهاية الصغرى (نفس معماريات Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# دالة التجزئة sha3، تنتج 64 بايت
+# دالة تجزئة sha3، تنتج 64 بايت
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

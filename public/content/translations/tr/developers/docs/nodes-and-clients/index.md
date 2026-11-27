@@ -13,17 +13,16 @@ Daha derine inmeden ve kendi Ethereum istemcinizi çalıştırmadan önce eşler
 
 Düğümler konusuna yeniyseniz, öncelikle [bir Ethereum düğümü çalıştırma](/run-a-node) hakkındaki kullanıcı dostu giriş bölümümüze göz atmanızı öneririz.
 
-## Düğümler ve istemciler nelerdir? {#what-are-nodes-and-clients}
+## Düğümler ve istemciler nedir? {#what-are-nodes-and-clients}
 
-Bir "düğüm", Ethereum yazılımı çalıştıran diğer bilgisayarlara bağlı olan ve bir ağ oluşturan herhangi bir Ethereum istemci yazılımı örneğidir. Bir istemci, verileri protokol kurallarına göre doğrulayan ve ağı güvenli tutan bir Ethereum uygulamasıdır. Bir düğüm iki istemci çalıştırmalıdır: bir fikir birliği istemcisi ve bir yürütme istemcisi.
+Bir "düğüm", Ethereum yazılımı çalıştıran diğer bilgisayarlara bağlı olan ve bir ağ oluşturan herhangi bir Ethereum istemci yazılımı örneğidir. Bir istemci, verileri protokol kurallarına göre doğrulayan ve ağı güvenli tutan bir Ethereum uygulamasıdır. Bir düğüm iki istemci çalıştırmak zorundadır: bir fikir birliği istemcisi ve bir yürütme istemcisi.
 
 - Yürütme istemcisi (Yürütme Motoru, EL istemcisi veya eski adıyla Eth1 istemcisi olarak da bilinir) ağda yayınlanan yeni işlemleri dinler, bunları EVM'de yürütür ve tüm mevcut Ethereum verilerinin en son durumunu ve veritabanını tutar.
-- Fikir birliği istemcisi (İşaret Düğümü, CL istemcisi veya eski adıyla Eth2 istemcisi olarak da bilinir), ağın yürütme istemcisinden gelen doğrulanmış verilere dayanarak anlaşmaya varmasını sağlayan Hisse Kanıtı (PoS) mutabakat algoritmasını uygular. Ayrıca, fikir birliği istemcisine eklenebilen ve bir düğümün ağın güvenliğini sağlamaya katılmasına olanak tanıyan 'doğrulayıcı' olarak bilinen üçüncü bir yazılım parçası da vardır.
+- Fikir birliği istemcisi (İşaret Düğümü, CL istemcisi veya eski adıyla Eth2 istemcisi olarak da bilinir), ağın yürütme istemcisinden gelen doğrulanmış verilere dayanarak mutabakata varmasını sağlayan Hisse Kanıtı (PoS) mutabakat algoritmasını uygular. Ayrıca, fikir birliği istemcisine eklenebilen ve bir düğümün ağın güvenliğini sağlamaya katılmasına olanak tanıyan 'doğrulayıcı' olarak bilinen üçüncü bir yazılım parçası da vardır.
 
-Bu istemciler, Ethereum zincirinin başını takip etmek ve kullanıcıların Ethereum ağıyla etkileşime girmesine izin vermek için birlikte çalışır. Birlikte çalışan birden fazla yazılım parçasından oluşan modüler tasarıma [kapsüllenmiş karmaşıklık](https://vitalik.eth.limo/general/2022/02/28/complexity.html) denir. Bu yaklaşım, [Birleşme](/roadmap/merge)'nin sorunsuz bir şekilde yürütülmesini kolaylaştırdı, istemci yazılımının bakımını ve geliştirilmesini kolaylaştırır ve örneğin [katman 2 (l2) ekosisteminde](/layer-2/) bireysel istemcilerin yeniden kullanılmasını sağlar.
+Bu istemciler, Ethereum zincirinin başını takip etmek ve kullanıcıların Ethereum ağıyla etkileşime girmesine izin vermek için birlikte çalışır. Birlikte çalışan birden fazla yazılım parçasına sahip modüler tasarıma [kapsüllenmiş karmaşıklık](https://vitalik.eth.limo/general/2022/02/28/complexity.html) denir. Bu yaklaşım, [Birleşme](/roadmap/merge)'yi sorunsuz bir şekilde yürütmeyi kolaylaştırdı, istemci yazılımının bakımını ve geliştirilmesini kolaylaştırır ve örneğin [katman 2 ekosisteminde](/layer-2/) bireysel istemcilerin yeniden kullanılmasını sağlar.
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-Birleştirilmiş bir yürütme ve fikir birliği istemcisinin basitleştirilmiş diyagramı.
+<NodeClientsDiagram />
 
 ### İstemci çeşitliliği {#client-diversity}
 
@@ -90,16 +89,16 @@ Bir düğüm çalıştırmak, ağı daha sağlam ve merkeziyetsiz tutarak destek
 
 ### Size faydaları {#benefits-to-you}
 
-Kendi düğümünüzü çalıştırmak, Ethereum'u gizli, kendi kendine yeten ve güven gerektirmeyen bir şekilde kullanmanızı sağlar. Ağa güvenmenize gerek yoktur çünkü verileri istemcinizle kendiniz doğrulayabilirsiniz. "Güvenme, doğrula" popüler bir blokzincir mantrasıdır.
+Kendi düğümünüzü çalıştırmak, Ethereum'u özel, kendi kendine yeten ve güven gerektirmeyen bir şekilde kullanmanızı sağlar. Ağa güvenmeniz gerekmez çünkü verileri istemcinizle kendiniz doğrulayabilirsiniz. "Güvenme, doğrula" popüler bir blokzincir mantrasıdır.
 
-- Düğümünüz tüm işlemleri ve blokları mutabakat kurallarına göre kendi başına doğrular. Bu, ağdaki diğer düğümlere güvenmek veya onlara tamamen itimat etmek zorunda olmadığınız anlamına gelir.
-- Kendi düğümünüzle bir Ethereum cüzdanı kullanabilirsiniz. Adreslerinizi ve bakiyelerinizi aracılara sızdırmak zorunda kalmayacağınız için merkeziyetsiz uygulamaları (dapp'ler) daha güvenli ve gizli bir şekilde kullanabilirsiniz. Her şey kendi istemcinizle kontrol edilebilir. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) ve [diğer birçok cüzdan](/wallets/find-wallet/), düğümünüzü kullanmalarına olanak tanıyan RPC içe aktarma özelliği sunar.
-- Ethereum'dan gelen verilere bağlı olan diğer hizmetleri çalıştırabilir ve kendi sunucunuzda barındırabilirsiniz. Örneğin, bu bir İşaret Zinciri doğrulayıcısı, katman 2 (l2) gibi yazılımlar, altyapı, blok gezginleri, ödeme işlemcileri vb. olabilir.
+- Düğümünüz tüm işlemleri ve blokları mutabakat kurallarına göre kendi başına doğrular. Bu, ağdaki diğer düğümlere bel bağlamak veya onlara tamamen güvenmek zorunda olmadığınız anlamına gelir.
+- Kendi düğümünüzle bir Ethereum cüzdanı kullanabilirsiniz. Adreslerinizi ve bakiyelerinizi aracılara sızdırmak zorunda kalmayacağınız için dapp'leri daha güvenli ve gizli bir şekilde kullanabilirsiniz. Her şey kendi istemcinizle kontrol edilebilir. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) ve [diğer birçok cüzdan](/wallets/find-wallet/), düğümünüzü kullanmalarına olanak tanıyan RPC içe aktarma özelliği sunar.
+- Ethereum'dan gelen verilere bağlı olan diğer hizmetleri çalıştırabilir ve kendi sunucunuzda barındırabilirsiniz. Örneğin, bu bir İşaret Zinciri doğrulayıcısı, katman 2 gibi bir yazılım, altyapı, blok gezginleri, ödeme işlemcileri vb. olabilir.
 - Kendi özel [RPC uç noktalarınızı](/developers/docs/apis/json-rpc/) sağlayabilirsiniz. Hatta bu uç noktaları, büyük merkezi sağlayıcılardan kaçınmalarına yardımcı olmak için topluluğa açık olarak sunabilirsiniz.
-- **Süreçler Arası İletişim (IPC)** kullanarak düğümünüze bağlanabilir veya programınızı bir eklenti olarak yüklemek için düğümü yeniden yazabilirsiniz. Bu, örneğin Web3 kütüphanelerini kullanarak çok fazla veri işlerken veya işlemlerinizi olabildiğince hızlı bir şekilde değiştirmeniz gerektiğinde (yani önden koşma/frontrunning) çok yardımcı olan düşük gecikme süresi sağlar.
-- Ağı güvence altına almak ve ödüller kazanmak için doğrudan ETH stake edebilirsiniz. Başlamak için [bireysel staking](/staking/solo/) bölümüne bakın.
+- **Süreçler Arası İletişim (IPC)** kullanarak düğümünüze bağlanabilir veya programınızı bir eklenti olarak yüklemek için düğümü yeniden yazabilirsiniz. Bu, örneğin Web3 kütüphanelerini kullanarak çok fazla veri işlerken veya işlemlerinizi olabildiğince hızlı bir şekilde değiştirmeniz gerektiğinde (yani frontrunning) çok yardımcı olan düşük gecikme süresi sağlar.
+- Ağın güvenliğini sağlamak ve ödüller kazanmak için doğrudan ETH stake edebilirsiniz. Başlamak için [bireysel staking](/staking/solo/) bölümüne bakın.
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### Ağ faydaları {#network-benefits}
 
@@ -130,22 +129,22 @@ Topluluğunuzda birisi herkese açık bir API ile bir Ethereum düğümü çalı
 
 ## Yürütme istemcileri {#execution-clients}
 
-Ethereum topluluğu, farklı programlama dilleri kullanılarak farklı ekipler tarafından geliştirilen birden fazla açık kaynaklı yürütme istemcisini (önceden 'Eth1 istemcileri' veya sadece 'Ethereum istemcileri' olarak bilinirdi) sürdürmektedir. Bu, ağı daha güçlü ve daha [çeşitli](/developers/docs/nodes-and-clients/client-diversity/) hale getirir. İdeal hedef, herhangi bir tek hata noktasını azaltmak için herhangi bir istemcinin hakimiyeti olmadan çeşitliliğe ulaşmaktır.
+Ethereum topluluğu, farklı ekipler tarafından farklı programlama dilleri kullanılarak geliştirilen birden fazla açık kaynaklı yürütme istemcisini (önceden 'Eth1 istemcileri' veya sadece 'Ethereum istemcileri' olarak bilinirdi) sürdürmektedir. Bu, ağı daha güçlü ve daha [çeşitli](/developers/docs/nodes-and-clients/client-diversity/) hale getirir. İdeal hedef, herhangi bir tek hata noktasını azaltmak için hiçbir istemcinin baskın olmadığı bir çeşitliliğe ulaşmaktır.
 
 Bu tablo farklı istemcileri özetlemektedir. Hepsi [istemci testlerini](https://github.com/ethereum/tests) geçer ve ağ yükseltmeleriyle güncel kalmak için aktif olarak sürdürülür.
 
-| İstemci                                                                   | Dil   | İşletim sistemleri     | Ağlar                | Eşzamanlama stratejileri                                            | Durum budama   |
+| İstemci                                                                  | Dil        | İşletim sistemleri    | Ağlar                   | Eşzamanlama stratejileri                                   | Durum budama    |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Tam](#full-sync)                     | Arşiv, Budanmış |
-| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Hızlı, [Tam](#full-sync)               | Arşiv, Budanmış |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Hızlı](#fast-sync), [Tam](#full-sync) | Arşiv, Budanmış |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Tam](#full-sync)                                         | Arşiv, Budanmış |
-| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Tam](#full-sync)                                         | Arşiv, Budanmış |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Tam](#full-sync)                                         | Budanmış          |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Ana Ağ, Sepolia, Hoodi  | [Snap](#snap-sync), [Tam](#full-sync)                      | Arşiv, Budanmış |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Ana Ağ, Sepolia, Hoodi  | [Snap](#snap-sync), Hızlı, [Tam](#full-sync)               | Arşiv, Budanmış |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Ana Ağ, Sepolia, Hoodi  | [Snap](#snap-sync), [Hızlı](#fast-sync), [Tam](#full-sync) | Arşiv, Budanmış |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Ana Ağ, Sepolia, Hoodi  | [Tam](#full-sync)                                          | Arşiv, Budanmış |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Ana Ağ, Sepolia, Hoodi  | [Snap](#snap-sync), [Tam](#full-sync)                      | Budanmış        |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Ana Ağ, Sepolia, Hoodi  | [Tam](#full-sync)                                          | Arşiv, Budanmış |
 
 Desteklenen ağlar hakkında daha fazla bilgi için [Ethereum ağları](/developers/docs/networks/) bölümünü okuyun.
 
-Her istemcinin benzersiz kullanım durumları ve avantajları vardır, bu nedenle kendi tercihlerinize göre birini seçmelisiniz. Çeşitlilik, uygulamaların farklı özelliklere ve kullanıcı kitlelerine odaklanmasını sağlar. Özelliklere, desteğe, programlama diline veya lisanslara göre bir istemci seçmek isteyebilirsiniz.
+Her istemcinin benzersiz kullanım durumları ve avantajları vardır, bu nedenle kendi tercihlerinize göre birini seçmelisiniz. Çeşitlilik, uygulamaların farklı özelliklere ve kullanıcı kitlelerine odaklanmasına olanak tanır. Özelliklere, desteğe, programlama diline veya lisanslara göre bir istemci seçmek isteyebilirsiniz.
 
 ### Besu {#besu}
 
@@ -155,12 +154,11 @@ Besu'nun kapsamlı [belgeleri](https://besu.hyperledger.org/en/stable/), özelli
 
 ### Erigon {#erigon}
 
-Eskiden Turbo-Geth olarak bilinen Erigon, hız ve disk alanı verimliliğine yönelik bir Go Ethereum çatallanması olarak başladı. Erigon, şu anda Go ile yazılmış ancak diğer dillerdeki uygulamaları geliştirilmekte olan, tamamen yeniden mimarilendirilmiş bir Ethereum uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. Yaklaşık 2 TB disk alanı kullanarak 3 günden kısa bir sürede tam bir arşiv düğümü eşzamanlaması gerçekleştirebilir.
-
+Eski adıyla Turbo-Geth olarak bilinen Erigon, hız ve disk alanı verimliliğine odaklanan bir Go Ethereum çatallanması olarak başladı. Erigon, şu anda Go ile yazılmış ancak diğer dillerdeki uygulamaları geliştirilme aşamasında olan, tamamen yeniden mimarilendirilmiş bir Ethereum uygulamasıdır. Erigon'un amacı, Ethereum'un daha hızlı, daha modüler ve daha optimize edilmiş bir uygulamasını sağlamaktır. 3 günden daha kısa bir sürede, 3 TB'tan daha az disk alanı kullanarak tam bir arşiv düğümü eşzamanlaması gerçekleştirebilir.
 
 ### ethrex {#ethrex}
 
-ethrex, Rust ile yazılmış ve LambdaClass tarafından geliştirilmiş minimalist, modüler bir Ethereum yürütme istemcisidir. Sıfır bilgi ispatı göz önünde bulundurularak oluşturulmuştur ve aynı kod tabanı hem bir katman 1 (l1) yürütme istemcisi hem de çoklu kanıtlayıcılı bir ZK-Rollup (katman 2 (l2)) olarak çalışabilir. Apache 2.0 ve MIT lisansları altında çift lisanslıdır.
+ethrex, Rust ile yazılmış ve LambdaClass tarafından geliştirilmiş minimalist, modüler bir Ethereum yürütme istemcisidir. Sıfır bilgi ispatı göz önünde bulundurularak oluşturulmuştur ve aynı kod tabanı hem bir L1 yürütme istemcisi hem de çoklu kanıtlayıcılı bir ZK-Rollup (L2) olarak çalışabilir. Apache 2.0 ve MIT lisansları altında çift lisanslıdır.
 
 [ethrex belgelerini](https://docs.ethrex.xyz/) okuyarak veya [ethrex GitHub deposuna](https://github.com/lambdaclass/ethrex) göz atarak daha fazla bilgi edinin.
 ### Go Ethereum {#geth}
@@ -187,16 +185,6 @@ Reth üretime hazırdır ve staking veya yüksek çalışma süresine sahip hizm
 
 [Reth Kitabı](https://reth.rs/)'na veya [Reth GitHub deposuna](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth) göz atarak daha fazla bilgi edinin.
 
-### Geliştirme aşamasında {#execution-in-development}
-
-Bu istemciler henüz geliştirmenin erken aşamalarındadır ve henüz üretim kullanımı için önerilmemektedir.
-
-#### EthereumJS {#ethereumjs}
-
-EthereumJS Yürütme İstemcisi (EthereumJS) TypeScript ile yazılmıştır ve Blok, İşlem ve Merkle-Patricia Trie sınıfları tarafından temsil edilen temel Ethereum ilkelleri ile Ethereum Sanal Makinesi (EVM) uygulaması, bir blokzincir sınıfı ve devp2p ağ yığını dahil olmak üzere temel istemci bileşenlerini içeren bir dizi paketten oluşur.
-
-[Belgelerini](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master) okuyarak bu konuda daha fazla bilgi edinin
-
 ## Fikir birliği istemcileri {#consensus-clients}
 
 [Mutabakat yükseltmelerini](/roadmap/beacon-chain/) desteklemek için birden fazla fikir birliği istemcisi (önceden 'Eth2' istemcileri olarak bilinirdi) vardır. Çatallanma seçimi algoritması, onaylamaların işlenmesi ve [Hisse Kanıtı (PoS)](/developers/docs/consensus-mechanisms/pos) ödüllerinin ve cezalarının yönetilmesi dahil olmak üzere mutabakatla ilgili tüm mantıktan sorumludurlar.
@@ -218,7 +206,7 @@ Belgeler [Lighthouse Kitabı](https://lighthouse-book.sigmaprime.io/)'nda buluna
 
 ### Lodestar {#lodestar}
 
-Lodestar, LGPL-3.0 lisansı altında Typescript ile yazılmış, üretime hazır bir fikir birliği istemcisi uygulamasıdır. ChainSafe Systems tarafından sürdürülmektedir ve bireysel staker'lar, geliştiriciler ve araştırmacılar için fikir birliği istemcilerinin en yenisidir. Lodestar, Ethereum protokollerinin JavaScript uygulamaları tarafından desteklenen bir işaret düğümü ve doğrulayıcı istemcisinden oluşur. Lodestar, hafif istemcilerle Ethereum kullanılabilirliğini iyileştirmeyi, daha büyük bir geliştirici grubuna erişilebilirliği genişletmeyi ve ekosistem çeşitliliğine daha fazla katkıda bulunmayı amaçlamaktadır.
+Lodestar, Apache-2.0 lisansı altında TypeScript ile yazılmış, üretime hazır bir fikir birliği istemcisi uygulamasıdır. ChainSafe Systems tarafından sürdürülmektedir ve bireysel staker'lar, geliştiriciler ve araştırmacılar için fikir birliği istemcilerinin en yenisidir. Lodestar, Ethereum protokollerinin JavaScript uygulamaları tarafından desteklenen bir işaret düğümü ve doğrulayıcı istemcisinden oluşur. Lodestar, hafif istemcilerle Ethereum kullanılabilirliğini iyileştirmeyi, daha büyük bir geliştirici grubuna erişilebilirliği genişletmeyi ve ekosistem çeşitliliğine daha fazla katkıda bulunmayı amaçlamaktadır.
 
 Daha fazla bilgi [Lodestar web sitesinde](https://lodestar.chainsafe.io/) bulunabilir
 
@@ -300,7 +288,7 @@ Hafif istemci modu tüm blok başlıklarını, blok verilerini indirir ve bazıl
 
 İyimser eşzamanlama, yürütme düğümlerinin yerleşik yöntemlerle eşzamanlanmasına olanak tanıyan, isteğe bağlı ve geriye dönük uyumlu olacak şekilde tasarlanmış bir birleşme sonrası eşzamanlama stratejisidir. Yürütme motoru, işaret bloklarını tam olarak doğrulamadan _iyimser bir şekilde_ içe aktarabilir, en son başı bulabilir ve ardından yukarıdaki yöntemlerle zinciri eşzamanlamaya başlayabilir. Ardından, yürütme istemcisi arayı kapattıktan sonra, İşaret Zincirindeki işlemlerin geçerliliği hakkında fikir birliği istemcisini bilgilendirecektir.
 
-[İyimser eşzamanlama hakkında daha fazlası](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[İyimser eşzamanlama hakkında daha fazlası](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### Kontrol noktası eşzamanlaması {#checkpoint-sync}
 
@@ -322,4 +310,4 @@ Uygulamada bu, düğümünüzün son kesinleşmiş durumları indirmek için uza
 
 ## İlgili eğitimler {#related-tutorials}
 
-- [Sadece MicroSD kartı flaşlayarak Raspberry Pi 4'ünüzü bir doğrulayıcı düğümüne dönüştürün – Kurulum kılavuzu](/developers/tutorials/run-node-raspberry-pi/) _– Raspberry Pi 4'ünüzü flaşlayın, bir ethernet kablosu takın, SSD diskini bağlayın ve Raspberry Pi 4'ü yürütme katmanını (Ana Ağ) ve / veya mutabakat katmanını (İşaret Zinciri / doğrulayıcı) çalıştıran tam bir Ethereum düğümüne dönüştürmek için cihazı açın._
+- [Sadece MicroSD kartı flaşlayarak Raspberry Pi 5'inizi bir doğrulayıcı düğümüne dönüştürün – Kurulum kılavuzu](/developers/tutorials/run-node-raspberry-pi/) _– Raspberry Pi 5'inizi flaşlayın, bir ethernet kablosu takın, NVMe diskini bağlayın ve Raspberry Pi 5'i yürütme katmanını (Ana Ağ) ve / veya mutabakat katmanını (İşaret Zinciri / doğrulayıcı) çalıştıran tam bir Ethereum düğümüne dönüştürmek için cihazı çalıştırın._

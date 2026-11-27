@@ -83,12 +83,12 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # 按顺序生成初始数据集
+    # 顺序生成初始数据集
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # 使用低轮数的 randmemohash 版本
+    # 使用 randmemohash 的低轮数版本
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-缓存生成过程包括首先按顺序填满 32 MB 内存，然后执行两次 Sergio Demian Lerner 在 [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) 中提出的 _RandMemoHash_ 算法。输出是一组 524288 个 64 字节的值。
+缓存生成过程包括首先按顺序填满 32 MB 的内存，然后对 Sergio Demian Lerner 在 [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) 中提出的 _RandMemoHash_ 算法执行三次遍历 (`CACHE_ROUNDS`)。输出是一组 524288 个 64 字节的值。
 
 ## 数据聚合函数 {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _知道对您有帮助的社区资源吗？编辑本页面并添加它！_
 
 ## 附录 {#appendix}
 
-如果您有兴趣将上述 Python 规范作为代码运行，则应在前面添加以下代码。
+如果你有兴趣将上述 Python 规范作为代码运行，则应在前面添加以下代码。
 
 ```python
 import sha3, copy
 
-# 假设使用小端序位排序（与 Intel 架构相同）
+# 假设为小端位序（与 Intel 架构相同）
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

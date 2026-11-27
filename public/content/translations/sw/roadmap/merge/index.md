@@ -1,10 +1,10 @@
 ---
 title: Unganisho
-description: Jifunze kuhusu Unganisho - wakati Mtandao Mkuu wa Ethereum ulipopitisha Uthibitisho wa Dau (PoS).
+description: Jifunze kuhusu Unganisho, wakati Mtandao Mkuu wa Ethereum ulipohamia kutoka kwenye Uthibitisho wa Kazi kwenda kwenye Uthibitisho wa Dau mnamo Septemba 2022, na kupunguza matumizi yake ya nishati kwa takriban 99.95%.
 lang: sw
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "Mtandao Mkuu wa Ethereum unatumia Uthibitisho wa Dau (PoS), lakini haikuwa hivi kila wakati."
   - "Uboreshaji kutoka kwenye utaratibu wa asili wa Uthibitisho wa Kazi (PoW) kwenda kwenye Uthibitisho wa Dau uliitwa Unganisho."
@@ -122,66 +122,66 @@ Unganisho pia uliweka msingi wa uboreshaji zaidi wa uwezo wa kuongezeka ambao ha
 ## Dhana potofu kuhusu Unganisho {#misconceptions}
 
 <ExpandableCard
-title="Dhana potofu: &quot;Kuendesha nodi kunahitaji kuweka dhamana ya ETH 32.&quot;"
-contentPreview="Si kweli. Mtu yeyote yuko huru kufanya usawazishaji wa nakala yake mwenyewe iliyothibitishwa ya Ethereum (yaani, kuendesha nodi). Hakuna ETH inayohitajika—sio kabla ya Unganisho, sio baada ya Unganisho, sio kamwe.">
+title="Dhana potofu: &quot;Kuendesha nodi kunahitaji kuweka dhamana ya 32 ETH.&quot;"
+contentPreview="Si kweli. Mtu yeyote yuko huru kusawazisha nakala yake mwenyewe iliyothibitishwa ya Ethereum (yaani, kuendesha nodi). Hakuna ETH inayohitajika—sio kabla ya Unganisho, sio baada ya Unganisho, sio kamwe.">
 
 Kuna aina mbili za nodi za Ethereum: nodi zinazoweza kupendekeza vitalu na nodi ambazo hazipendekezi.
 
-Nodi zinazopendekeza vitalu ni idadi ndogo tu ya nodi zote kwenye Ethereum. Kitengo hiki kinajumuisha nodi za uchimbaji chini ya Uthibitisho wa Kazi (PoW) na nodi za mthibitishaji chini ya Uthibitisho wa Dau (PoS). Kitengo hiki kinahitaji kuweka rasilimali za kiuchumi (kama vile nguvu ya heshi ya GPU katika Uthibitisho wa Kazi au ETH iliyowekwa dhamana katika Uthibitisho wa Dau) badala ya uwezo wa kupendekeza kitalu kinachofuata mara kwa mara na kupata tuzo za itifaki.
+Nodi zinazopendekeza vitalu ni idadi ndogo tu ya nodi zote kwenye Ethereum. Kundi hili linajumuisha nodi za uchimbaji chini ya Uthibitisho wa Kazi (PoW) na nodi za mthibitishaji chini ya Uthibitisho wa Dau (PoS). Kundi hili linahitaji kuweka rasilimali za kiuchumi (kama vile nguvu ya heshi ya GPU katika Uthibitisho wa Kazi au ETH iliyowekwa dhamana katika Uthibitisho wa Dau) badala ya uwezo wa kupendekeza kitalu kinachofuata mara kwa mara na kupata tuzo za itifaki.
 
-Nodi zingine kwenye mtandao (yaani, idadi kubwa) hazihitajiki kuweka rasilimali zozote za kiuchumi zaidi ya kompyuta ya kiwango cha mtumiaji yenye TB 1-2 ya hifadhi inayopatikana na muunganisho wa intaneti. Nodi hizi hazipendekezi vitalu, lakini bado zina jukumu muhimu katika kulinda mtandao kwa kuwafanya wapendekezaji wote wa vitalu kuwajibika kwa kusikiliza vitalu vipya na kuthibitisha uhalali wao vinapowasili kulingana na sheria za mwafaka za mtandao. Ikiwa kitalu ni halali, nodi inaendelea kukisambaza kupitia mtandao. Ikiwa kitalu ni batili kwa sababu yoyote ile, programu ya nodi itakipuuza kama batili na kusimamisha usambazaji wake.
+Nodi zingine kwenye mtandao (yaani, walio wengi) hazihitajiki kuweka rasilimali zozote za kiuchumi zaidi ya kompyuta ya kiwango cha mtumiaji yenye hifadhi inayopatikana ya TB 4 na muunganisho wa intaneti. Nodi hizi hazipendekezi vitalu, lakini bado zina jukumu muhimu katika kulinda mtandao kwa kuwafanya wapendekezaji wote wa vitalu kuwajibika kwa kusikiliza vitalu vipya na kuthibitisha uhalali wao vinapowasili kulingana na sheria za mwafaka za mtandao. Ikiwa kitalu ni halali, nodi inaendelea kukisambaza kupitia mtandao. Ikiwa kitalu si halali kwa sababu yoyote ile, programu ya nodi itakipuuza kama si halali na kusimamisha usambazaji wake.
 
-Kuendesha nodi isiyozalisha vitalu inawezekana kwa mtu yeyote chini ya utaratibu wowote wa makubaliano (Uthibitisho wa Kazi au Uthibitisho wa Dau); <em>inashauriwa sana</em> kwa watumiaji wote ikiwa wana uwezo. Kuendesha nodi ni muhimu sana kwa Ethereum na inatoa faida za ziada kwa mtu yeyote anayeiendesha, kama vile usalama ulioboreshwa, faragha na upinzani wa udhibiti.
+Kuendesha nodi isiyozalisha kitalu kunawezekana kwa mtu yeyote chini ya utaratibu wowote wa makubaliano (Uthibitisho wa Kazi au Uthibitisho wa Dau); <em>inapendekezwa sana</em> kwa watumiaji wote ikiwa wana uwezo. Kuendesha nodi kuna thamani kubwa kwa Ethereum na kunatoa faida za ziada kwa mtu yeyote anayeiendesha, kama vile usalama ulioboreshwa, faragha na upinzani dhidi ya udhibiti.
 
-Uwezo wa mtu yeyote kuendesha nodi yake mwenyewe ni <em>muhimu kabisa</em> katika kudumisha ugatuzi wa mtandao wa Ethereum.
+Uwezo wa mtu yeyote kuendesha nodi yake mwenyewe ni <em>muhimu sana</em> katika kudumisha ugatuzi wa mtandao wa Ethereum.
 
 [Zaidi kuhusu kuendesha nodi yako mwenyewe](/run-a-node/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: &quot;Unganisho limeshindwa kupunguza ada za gesi.&quot;"
-contentPreview="Si kweli. Unganisho lilikuwa mabadiliko ya utaratibu wa makubaliano, sio upanuzi wa uwezo wa mtandao, na halikukusudiwa kamwe kupunguza ada za gesi.">
+title="Dhana potofu: &quot;Unganisho ulishindwa kupunguza ada za gesi.&quot;"
+contentPreview="Si kweli. Unganisho ulikuwa mabadiliko ya utaratibu wa makubaliano, sio upanuzi wa uwezo wa mtandao, na haukuwahi kukusudiwa kupunguza ada za gesi.">
 
-Ada za gesi ni zao la mahitaji ya mtandao kulingana na uwezo wa mtandao. Unganisho uliondoa matumizi ya Uthibitisho wa Kazi, ukihamia kwenye Uthibitisho wa Dau kwa mwafaka, lakini haukubadilisha kwa kiasi kikubwa vigezo vyovyote vinavyoathiri moja kwa moja uwezo wa mtandao au uwezo wa upitishaji.
+Ada za gesi ni zao la mahitaji ya mtandao kulingana na uwezo wa mtandao. Unganisho uliondoa matumizi ya Uthibitisho wa Kazi, ukihamia kwenye Uthibitisho wa Dau kwa ajili ya mwafaka, lakini haukubadilisha kwa kiasi kikubwa vigezo vyovyote vinavyoathiri moja kwa moja uwezo wa mtandao au uwezo wa upitishaji.
 
-Pamoja na <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">ramani ya njia inayozingatia rollup</a>, juhudi zinaelekezwa katika kuongeza shughuli za watumiaji kwenye [tabaka la 2 (l2)](/layer-2/), huku ikiwezesha Mtandao Mkuu wa tabaka la 1 (l1) kama tabaka salama la ukamilishaji lililogatuliwa lililoboreshwa kwa hifadhi ya data ya rollup ili kusaidia kufanya miamala ya rollup kuwa nafuu zaidi. Mpito kwenda kwenye Uthibitisho wa Dau ni mtangulizi muhimu katika kutambua hili. [Zaidi kuhusu gesi na ada.](/developers/docs/gas/)
+Kwa <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">ramani ya njia inayozingatia rollup</a>, juhudi zinaelekezwa katika kuongeza shughuli za watumiaji kwenye [tabaka la 2 (L2)](/layer-2/), huku ikiwezesha Mtandao Mkuu wa tabaka la 1 (L1) kama tabaka salama la ukamilishaji lililogatuliwa lililoboreshwa kwa ajili ya uhifadhi wa data za rollup ili kusaidia kufanya miamala ya rollup kuwa nafuu zaidi. Mpito kwenda kwenye Uthibitisho wa Dau ni mtangulizi muhimu katika kufanikisha hili. [Zaidi kuhusu gesi na ada.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Dhana potofu: &quot;Miamala iliharakishwa kwa kiasi kikubwa na Unganisho.&quot;"
-contentPreview="Si kweli. Ingawa kuna mabadiliko madogo, kasi ya muamala ni karibu sawa kwenye tabaka la 1 (l1) sasa kama ilivyokuwa kabla ya Unganisho.">
-"Kasi" ya muamala inaweza kupimwa kwa njia chache, ikijumuisha muda wa kujumuishwa kwenye kitalu na muda wa ukamilifu. Yote haya yanabadilika kidogo, lakini si kwa njia ambayo watumiaji wataona.
+contentPreview="Si kweli. Ingawa kuna mabadiliko madogo, kasi ya muamala kwa kiasi kikubwa ni sawa kwenye tabaka la 1 (L1) sasa kama ilivyokuwa kabla ya Unganisho.">
+"Kasi" ya muamala inaweza kupimwa kwa njia chache, ikiwa ni pamoja na muda wa kujumuishwa kwenye kitalu na muda wa ukamilifu. Yote haya yanabadilika kidogo, lakini si kwa njia ambayo watumiaji wataigundua.
 
-Kihistoria, kwenye Uthibitisho wa Kazi, lengo lilikuwa kuwa na kitalu kipya kila baada ya sekunde ~13.3. Chini ya Uthibitisho wa Dau, sloti hutokea kwa usahihi kila sekunde 12, ambapo kila moja ni fursa kwa mthibitishaji kuchapisha kitalu. Sloti nyingi zina vitalu, lakini si lazima zote (yaani, mthibitishaji yuko nje ya mtandao). Katika Uthibitisho wa Dau, vitalu vinazalishwa ~10% mara kwa mara zaidi kuliko kwenye Uthibitisho wa Kazi. Hili lilikuwa badiliko dogo sana na hakuna uwezekano wa kuonekana na watumiaji.
+Kihistoria, kwenye Uthibitisho wa Kazi, lengo lilikuwa kuwa na kitalu kipya kila baada ya sekunde ~13.3. Chini ya Uthibitisho wa Dau, sloti hutokea kwa usahihi kila baada ya sekunde 12, ambapo kila moja ni fursa kwa mthibitishaji kuchapisha kitalu. Sloti nyingi zina vitalu, lakini si lazima zote (yaani, mthibitishaji yuko nje ya mtandao). Katika Uthibitisho wa Dau, vitalu huzalishwa ~10% mara kwa mara zaidi kuliko kwenye Uthibitisho wa Kazi. Hili lilikuwa badiliko dogo sana na hakuna uwezekano wa kugunduliwa na watumiaji.
 
-Uthibitisho wa Dau ulianzisha dhana ya ukamilifu wa muamala ambayo haikuwepo hapo awali. Katika Uthibitisho wa Kazi, uwezo wa kubadilisha kitalu unakuwa mgumu zaidi kwa kila kitalu kinachopita kinachochimbwa juu ya muamala, lakini haufikii sifuri kabisa. Chini ya Uthibitisho wa Dau, vitalu vinawekwa pamoja katika vipindi (muda wa dakika 6.4 wenye nafasi 32 za vitalu) ambavyo wathibitishaji wanapigia kura. Kipindi kinapoisha, wathibitishaji wanapiga kura kama watakichukulia kipindi hicho kama 'iliyohalalishwa'. Ikiwa wathibitishaji wanakubali kuhalalisha kipindi, kinakamilishwa katika kipindi kinachofuata. Kutengua miamala iliyokamilishwa haiwezekani kiuchumi kwani itahitaji kupata na kuteketeza zaidi ya theluthi moja ya jumla ya ETH iliyowekwa dhamana.
-
-</ExpandableCard>
-
-<ExpandableCard
-title="Dhana potofu: &quot;Unganisho liliwezesha utoaji wa dhamana.&quot;"
-contentPreview="Si kweli, lakini utoaji wa dhamana umewezeshwa tangu wakati huo kupitia sasisho la Shanghai/Capella.">
-
-Hapo awali baada ya Unganisho, waweka dhamana wangeweza tu kupata vidokezo vya ada na MEV ambavyo vilipatikana kutokana na mapendekezo ya kitalu. Tuzo hizi zinawekwa kwenye akaunti isiyo ya kuweka dhamana inayodhibitiwa na mthibitishaji (inayojulikana kama <em>mpokeaji wa ada</em>), na zinapatikana mara moja. Tuzo hizi ni tofauti na tuzo za itifaki kwa kufanya majukumu ya mthibitishaji.
-
-Tangu uboreshaji wa mtandao wa Shanghai/Capella, waweka dhamana sasa wanaweza kuteua <em>anwani ya utoaji</em> ili kuanza kupokea malipo ya kiotomatiki ya salio lolote la ziada la uwekaji dhamana (ETH zaidi ya 32 kutoka kwa tuzo za itifaki). Uboreshaji huu pia uliwezesha uwezo wa mthibitishaji kufungua na kudai salio lake lote anapojitoa kwenye mtandao.
-
-[Zaidi kuhusu utoaji wa uwekaji dhamana](/staking/withdrawals/)
+Uthibitisho wa Dau ulianzisha dhana ya ukamilifu wa muamala ambayo haikuwepo hapo awali. Katika Uthibitisho wa Kazi, uwezo wa kubatilisha kitalu unakuwa mgumu zaidi kwa kila kitalu kinachopita kinachochimbwa juu ya muamala, lakini haufikii sifuri kamwe. Chini ya Uthibitisho wa Dau, vitalu huunganishwa katika vipindi (muda wa dakika 6.4 unaojumuisha nafasi 32 za vitalu) ambavyo wathibitishaji hupigia kura. Kipindi kinapoisha, wathibitishaji hupiga kura kuhusu kama wakichukulie kipindi hicho kama 'kiliyohalalishwa'. Ikiwa wathibitishaji watakubali kuhalalisha kipindi, kinakamilishwa katika kipindi kinachofuata. Kubatilisha miamala iliyokamilishwa haiwezekani kiuchumi kwani itahitaji kupata na kuteketeza zaidi ya theluthi moja ya jumla ya ETH iliyowekwa dhamana.
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Dhana potofu: &quot;Kwa kuwa sasa Unganisho limekamilika, na utoaji umewezeshwa, waweka dhamana wote wanaweza kujitoa kwa wakati mmoja.&quot;"
-contentPreview="Si kweli. Kujitoa kwa wathibitishaji kumewekewa kikomo cha kasi kwa sababu za kiusalama.">
-Kwa kuwa uboreshaji wa Shanghai/Capella uliwezesha utoaji, wathibitishaji wanahamasishwa kutoa salio lao la uwekaji dhamana zaidi ya 32 ETH, kwani fedha hizi haziongezi faida na vinginevyo zimefungwa. Kulingana na APR (inayoamuliwa na jumla ya ETH iliyowekwa dhamana), wanaweza kuhamasishwa kujitoa kwa mthibitishaji wao ili kudai salio lao lote au kuweka dhamana zaidi kwa kutumia tuzo zao ili kupata faida zaidi.
+title="Dhana potofu: &quot;Unganisho uliwezesha utoaji wa dhamana.&quot;"
+contentPreview="Si kweli, lakini utoaji wa dhamana umewezeshwa tangu wakati huo kupitia uboreshaji wa Shanghai/Capella.">
 
-Tahadhari muhimu hapa, kujitoa kamili kwa mthibitishaji kunadhibitiwa na itifaki, na ni wathibitishaji wachache tu wanaoweza kujitoa kwa kila kipindi (kila dakika 6.4). Kikomo hiki kinabadilika kulingana na idadi ya wathibitishaji wanaofanya kazi, lakini inakuja kwa takriban 0.33% ya jumla ya ETH iliyowekwa dhamana inaweza kutolewa kwenye mtandao kwa siku moja.
+Hapo awali baada ya Unganisho, waweka dhamana wangeweza tu kufikia ada za kipaumbele na MEV ambazo zilipatikana kutokana na mapendekezo ya kitalu. Tuzo hizi huwekwa kwenye akaunti isiyo ya uwekaji dhamana inayodhibitiwa na mthibitishaji (inayojulikana kama <em>mpokeaji wa ada</em>), na zinapatikana mara moja. Tuzo hizi ni tofauti na tuzo za itifaki kwa kutekeleza majukumu ya mthibitishaji.
 
-Hii inazuia utokaji mkubwa wa fedha zilizowekwa dhamana. Zaidi ya hayo, inazuia mshambuliaji anayeweza kuwa na ufikiaji wa sehemu kubwa ya jumla ya ETH iliyowekwa dhamana kufanya kosa la ukataji na kujitoa/kutoa salio lote la mthibitishaji anayekosa katika kipindi hicho hicho kabla ya itifaki kutekeleza adhabu ya ukataji.
+Tangu uboreshaji wa mtandao wa Shanghai/Capella, waweka dhamana sasa wanaweza kuteua <em>anwani ya utoaji</em> ili kuanza kupokea malipo ya kiotomatiki ya salio lolote la ziada la uwekaji dhamana (ETH zaidi ya 32 kutoka kwenye tuzo za itifaki). Uboreshaji huu pia uliwezesha uwezo wa mthibitishaji kufungua na kudai salio lake lote anapojitoa kwenye mtandao.
 
-APR pia inabadilika kwa makusudi, ikiruhusu soko la waweka dhamana kusawazisha kiasi gani wako tayari kulipwa ili kusaidia kulinda mtandao. Ikiwa kiwango ni cha chini sana, basi wathibitishaji watajitoa kwa kiwango kinachodhibitiwa na itifaki. Hatua kwa hatua hii itaongeza APR kwa kila mtu anayebaki, na kuvutia waweka dhamana wapya au wanaorudi tena.
+[Zaidi kuhusu utoaji wa dhamana](/staking/withdrawals/)
+
+</ExpandableCard>
+
+<ExpandableCard
+title="Dhana potofu: &quot;Kwa kuwa sasa Unganisho umekamilika, na utoaji umewezeshwa, waweka dhamana wote wanaweza kujitoa kwa wakati mmoja.&quot;"
+contentPreview="Si kweli. Kujitoa kwa mthibitishaji kuna kikomo cha kiwango kwa sababu za kiusalama.">
+Kwa kuwa uboreshaji wa Shanghai/Capella uliwezesha utoaji, wathibitishaji wanahamasishwa kutoa salio lao la uwekaji dhamana lililo juu ya 32 ETH, kwani fedha hizi haziongezi faida na vinginevyo zimefungwa. Kulingana na APR (inayoamuliwa na jumla ya ETH iliyowekwa dhamana), wanaweza kuhamasishwa kujitoa kwenye mthibitishaji wao ili kudai salio lao lote au kuweka dhamana zaidi kwa kutumia tuzo zao ili kupata faida zaidi.
+
+Tahadhari muhimu hapa, kujitoa kamili kwa mthibitishaji kuna kikomo cha kiwango na itifaki, na ni wathibitishaji wachache tu wanaoweza kujitoa kwa kila kipindi (kila baada ya dakika 6.4). Kikomo hiki hubadilika kulingana na idadi ya wathibitishaji wanaofanya kazi, lakini inakadiriwa kuwa takriban 0.33% ya jumla ya ETH iliyowekwa dhamana inaweza kutolewa kwenye mtandao kwa siku moja.
+
+Hii inazuia utoaji mkubwa wa fedha zilizowekwa dhamana. Zaidi ya hayo, inazuia mshambuliaji anayeweza kufikia sehemu kubwa ya jumla ya ETH iliyowekwa dhamana kufanya kosa linaloweza kusababisha ukataji na kujitoa/kutoa masalio yote ya mthibitishaji anayekosa katika kipindi hicho hicho kabla ya itifaki kutekeleza adhabu ya ukataji.
+
+APR pia inabadilika kwa makusudi, ikiruhusu soko la waweka dhamana kusawazisha kiasi wanachokuwa tayari kulipwa ili kusaidia kulinda mtandao. Ikiwa kiwango ni cha chini sana, basi wathibitishaji watajitoa kwa kiwango kilichowekewa kikomo na itifaki. Hatua kwa hatua hii itaongeza APR kwa kila mtu anayebaki, na kuvutia waweka dhamana wapya au wanaorudi tena.
 </ExpandableCard>
 
 ## Nini kilitokea kwa 'Eth2'? {#eth2}
@@ -219,9 +219,9 @@ Kwa wale wanaotaka kujua, jifunze zaidi kuhusu [Nini Kinatokea Baada ya Unganish
 
 ### Unganisho na shadi {#merge-and-data-sharding}
 
-Hapo awali, mpango ulikuwa kufanyia kazi shadi kabla ya Unganisho ili kushughulikia uwezo wa kuongezeka. Hata hivyo, kutokana na kuongezeka kwa [suluhu za kuongeza uwezo za tabaka la 2 (l2)](/layer-2/), kipaumbele kilibadilika na kuwa kubadilisha Uthibitisho wa Kazi kwenda kwenye Uthibitisho wa Dau kwanza.
+Hapo awali, mpango ulikuwa kufanyia kazi shadi kabla ya Unganisho ili kushughulikia uwezo wa kuongezeka. Hata hivyo, kutokana na kuongezeka kwa [suluhu za kuongeza uwezo za tabaka la 2 (L2)](/layer-2/), kipaumbele kilibadilika na kuwa kubadilisha Uthibitisho wa Kazi kwenda kwenye Uthibitisho wa Dau kwanza.
 
-Mipango ya shadi inabadilika kwa kasi, lakini kutokana na kuongezeka na mafanikio ya teknolojia za tabaka la 2 (l2) ili kuongeza uwezo wa utekelezaji wa miamala, mipango ya shadi imebadilika na kutafuta njia bora zaidi ya kusambaza mzigo wa kuhifadhi data za mwito zilizobanwa kutoka kwenye mikataba ya rollup, kuruhusu ukuaji mkubwa katika uwezo wa mtandao. Hili lisingewezekana bila kwanza kuhamia kwenye Uthibitisho wa Dau.
+Mipango ya shadi inabadilika kwa kasi, lakini kutokana na kuongezeka na mafanikio ya teknolojia za tabaka la 2 (L2) ili kuongeza uwezo wa utekelezaji wa miamala, mipango ya shadi imebadilika na kutafuta njia bora zaidi ya kusambaza mzigo wa kuhifadhi data za mwito zilizobanwa kutoka kwenye mikataba ya rollup, kuruhusu ukuaji mkubwa katika uwezo wa mtandao. Hili lisingewezekana bila kwanza kuhamia kwenye Uthibitisho wa Dau.
 
 <ButtonLink href="/roadmap/danksharding/">
   Shadi

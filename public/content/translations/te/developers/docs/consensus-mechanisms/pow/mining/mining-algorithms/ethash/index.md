@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-కాష్ ఉత్పత్తి ప్రక్రియలో మొదట 32 MB మెమరీని వరుసగా నింపడం, ఆపై [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) నుండి సెర్గియో డెమియన్ లెర్నర్ యొక్క _RandMemoHash_ అల్గారిథమ్ యొక్క రెండు పాస్‌లను నిర్వహించడం ఉంటుంది. అవుట్‌పుట్ అనేది 524288 64-బైట్ విలువల సమితి.
+కాష్ ఉత్పత్తి ప్రక్రియలో మొదట 32 MB మెమరీని వరుసగా నింపడం, ఆపై [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) నుండి సెర్గియో డెమియన్ లెర్నర్ యొక్క _RandMemoHash_ అల్గారిథమ్ యొక్క మూడు పాస్‌లను (`CACHE_ROUNDS`) నిర్వహించడం ఉంటాయి. అవుట్‌పుట్ అనేది 524288 64-బైట్ విలువల సమితి.
 
 ## డేటా అగ్రిగేషన్ ఫంక్షన్ {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _మీకు సహాయపడిన కమ్యూనిటీ వనరు 
 
 ## అనుబంధం {#appendix}
 
-మీరు పై Python స్పెక్స్‌ను కోడ్‌గా రన్ చేయడానికి ఆసక్తి కలిగి ఉంటే ఈ క్రింది కోడ్ ముందుగా చేర్చబడాలి.
+మీరు పై Python స్పెక్స్‌ను కోడ్‌గా రన్ చేయడానికి ఆసక్తి కలిగి ఉంటే, కింది కోడ్‌ను ముందుగా చేర్చాలి.
 
 ```python
 import sha3, copy
 
-# లిటిల్-ఎండియన్ బిట్ ఆర్డరింగ్‌ను ఊహిస్తుంది (ఇంటెల్ ఆర్కిటెక్చర్‌ల మాదిరిగానే)
+# లిటిల్ ఎండియన్ బిట్ ఆర్డరింగ్‌ను ఊహిస్తుంది (ఇంటెల్ ఆర్కిటెక్చర్‌ల మాదిరిగానే)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 హాష్ ఫంక్షన్, 64 బైట్లను అవుట్‌పుట్ చేస్తుంది
+# sha3 హాష్ ఫంక్షన్, 64 బైట్‌లను అవుట్‌పుట్ చేస్తుంది
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

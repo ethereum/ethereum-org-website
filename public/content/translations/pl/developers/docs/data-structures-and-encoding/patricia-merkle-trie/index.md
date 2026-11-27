@@ -5,13 +5,13 @@ lang: pl
 sidebarDepth: 2
 ---
 
-Stan [Ethereum](/) (ogół wszystkich kont, sald i inteligentnych kontraktów) jest zakodowany w specjalnej wersji struktury danych znanej ogólnie w informatyce jako drzewo Merklego. Struktura ta jest przydatna w wielu zastosowaniach w kryptografii, ponieważ tworzy weryfikowalną relację między wszystkimi pojedynczymi fragmentami danych powiązanymi w drzewie, co daje pojedynczą wartość **korzenia** (root), która może być użyta do udowodnienia informacji o danych.
+Stan [Ethereum](/) (ogół wszystkich kont, sald i inteligentnych kontraktów) jest zakodowany w specjalnej wersji struktury danych znanej ogólnie w informatyce jako drzewo Merklego. Struktura ta jest przydatna w wielu zastosowaniach w kryptografii, ponieważ tworzy weryfikowalną relację między wszystkimi pojedynczymi fragmentami danych powiązanymi w drzewie, co daje pojedynczą wartość **korzenia** (root), która może być użyta do udowodnienia faktów na temat tych danych.
 
 Struktura danych Ethereum to „zmodyfikowane drzewo Merkle Patricia”, nazwane tak, ponieważ zapożycza niektóre cechy algorytmu PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric) i ponieważ jest zaprojektowana do wydajnego odzyskiwania (re**trie**val) danych elementów, które składają się na stan Ethereum.
 
-Drzewo Merkle Patricia jest deterministyczne i kryptograficznie weryfikowalne: jedynym sposobem na wygenerowanie korzenia stanu jest obliczenie go z każdego pojedynczego fragmentu stanu, a to, że dwa stany są identyczne, można łatwo udowodnić, porównując hash korzenia i hashe, które do niego doprowadziły (_dowód Merklego_). Z drugiej strony, nie ma możliwości utworzenia dwóch różnych stanów z tym samym hashem korzenia, a każda próba modyfikacji stanu za pomocą innych wartości spowoduje powstanie innego hasha korzenia stanu. Teoretycznie struktura ta zapewnia „świętego Graala” wydajności `O(log(n))` dla wstawiania, wyszukiwania i usuwania.
+Drzewo Merkle Patricia jest deterministyczne i kryptograficznie weryfikowalne: jedynym sposobem na wygenerowanie korzenia stanu jest obliczenie go z każdego pojedynczego elementu stanu, a dwa identyczne stany można łatwo udowodnić, porównując hash korzenia i hashe, które do niego doprowadziły (_dowód Merklego_). Z drugiej strony, nie ma możliwości utworzenia dwóch różnych stanów z tym samym hashem korzenia, a każda próba modyfikacji stanu za pomocą innych wartości spowoduje powstanie innego hasha korzenia stanu. Teoretycznie struktura ta zapewnia „świętego Graala” wydajności `O(log(n))` dla wstawiania, wyszukiwania i usuwania.
 
-W niedalekiej przyszłości Ethereum planuje migrację do struktury [drzewa Verkle](/roadmap/verkle-trees), co otworzy wiele nowych możliwości dla przyszłych ulepszeń protokołu.
+Ethereum planuje zastąpić to drzewo trie nowym drzewem stanu, obecnie proponowanym jako zunifikowane drzewo binarne w [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864). Wcześniejsza propozycja użycia [drzewa Verkle](/roadmap/verkle-trees/) została odłożona na bok.
 
 ## Wymagania wstępne {#prerequisites}
 
@@ -206,7 +206,7 @@ Istnieje jedno globalne drzewo stanu i jest ono aktualizowane za każdym razem, 
 
 ### Drzewo trie pamięci {#storage-trie}
 
-Drzewo trie pamięci to miejsce, w którym znajdują się _wszystkie_ dane kontraktu. Dla każdego konta istnieje oddzielne drzewo trie pamięci. Aby pobrać wartości na określonych pozycjach pamięci pod danym adresem, wymagany jest adres pamięci, całkowita pozycja przechowywanych danych w pamięci oraz identyfikator bloku. Można je następnie przekazać jako argumenty do `eth_getStorageAt` zdefiniowanego w API JSON-RPC, np. aby pobrać dane w slocie pamięci 0 dla adresu `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Drzewo trie pamięci to miejsce, w którym znajdują się _wszystkie_ dane kontraktu. Dla każdego konta istnieje oddzielne drzewo trie pamięci. Aby odzyskać wartości na określonych pozycjach pamięci pod danym adresem, wymagany jest adres pamięci, całkowitoliczbowa pozycja przechowywanych danych w pamięci oraz identyfikator bloku. Mogą one zostać następnie przekazane jako argumenty do `eth_getStorageAt` zdefiniowanego w interfejsie JSON-RPC API, np. aby odzyskać dane w slocie pamięci 0 dla adresu `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Pobieranie innych elementów z pamięci jest nieco bardziej skomplikowane, ponieważ najpierw należy obliczyć pozycję w drzewie trie pamięci. Pozycja jest obliczana jako hash `keccak256` adresu i pozycji w pamięci, oba dopełnione z lewej strony zerami do długości 32 bajtów. Na przykład pozycja dla danych w slocie pamięci 1 dla adresu `0x391694e7e0b0cce554cb130d723a9d27458f9298` to:
+Występują tu dwa różne rodzaje „klucza” i warto je od siebie odróżniać:
+
+1. **Slot pamięci.** Jest to 32-bajtowy klucz, który kontrakt odczytuje i zapisuje za pomocą kodów operacji `SLOAD` i `SSTORE`, i jest to to, co `eth_getStorageAt` przyjmuje jako swój drugi parametr. Protokół nie dba o to, jak kontrakt wybiera swoje sloty. Decyduje o tym układ pamięci kompilatora (zobacz [układ pamięci w Solidity](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **Ścieżka w drzewie trie pamięci.** Podobnie jak drzewo stanu, drzewo trie pamięci nigdy nie używa slotu bezpośrednio jako swojej ścieżki. Ścieżka to zawsze `keccak256(slot)`, a przechowywana tam wartość to kodowanie RLP wartości slotu z usuniętymi wiodącymi zerami. Haszowanie klucza utrzymuje równomierny rozkład ścieżek, więc nikt nie może spreparować kluczy, które sprawią, że drzewo trie będzie niezwykle głębokie. Klienci sami stosują ten hash, więc wywołujący `eth_getStorageAt` zawsze przekazują tylko slot.
+
+Proste zmienne stanu znajdują się w slotach, które kompilator przypisuje im po kolei (`0`, `1`, ...), przy czym małe typy są czasami pakowane razem w jeden slot, jak w powyższym przykładzie. Wartości wewnątrz dynamicznej struktury wymagają najpierw obliczenia ich slotu. Na przykład Solidity przechowuje wartość dla klucza `k` z `mapping` zadeklarowanego w slocie `p` w slocie `keccak256(pad32(k) ++ pad32(p))`. Jeśli kontrakt pod adresem `0x295a70b2de5e3953354a6a8344e616ed314d7251` deklaruje `mapping(address => uint)` w slocie 1, slot przechowujący wpis dla klucza `0x391694e7e0b0cce554cb130d723a9d27458f9298` to:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-W konsoli Geth można to obliczyć w następujący sposób:
+To haszowanie wynika z układu pamięci Solidity (obliczanego przez kontrakt w czasie wykonywania), a nie z drzewa trie. W konsoli Geth można to obliczyć w następujący sposób:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-`path` to zatem `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Można to teraz wykorzystać do pobrania danych z drzewa trie pamięci, tak jak poprzednio:
+Zatem slot pamięci to `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`, a jego ścieżka w drzewie trie pamięci to `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. Slot można teraz przekazać do `eth_getStorageAt` jak wcześniej, a klient haszuje go, aby znaleźć wartość w drzewie trie:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545

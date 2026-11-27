@@ -80,7 +80,7 @@ Ví dụ dưới đây minh họa cách hoạt động của độ lệch đối
 
 Vì vậy, các giá trị thực tế cho các kiểu có độ dài thay đổi được lưu trữ trong một heap ở cuối đối tượng đã được tuần tự hóa với các độ lệch của chúng được lưu trữ ở đúng vị trí trong danh sách các trường đã được sắp xếp.
 
-Cũng có một số trường hợp đặc biệt yêu cầu xử lý cụ thể, chẳng hạn như kiểu `BitList` yêu cầu thêm giới hạn độ dài trong quá trình tuần tự hóa và loại bỏ trong quá trình giải tuần tự hóa. Chi tiết đầy đủ có sẵn trong [đặc tả SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
+Cũng có một số trường hợp đặc biệt yêu cầu xử lý cụ thể, chẳng hạn như kiểu `BitList` yêu cầu thêm giới hạn độ dài trong quá trình tuần tự hóa và loại bỏ trong quá trình giải tuần tự hóa. Chi tiết đầy đủ có sẵn trong [đặc tả SSZ](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/simple-serialize.md).
 
 Để giải tuần tự hóa đối tượng này, cần có <b>lược đồ</b>. Lược đồ xác định bố cục chính xác của dữ liệu đã được tuần tự hóa để mỗi phần tử cụ thể có thể được giải tuần tự hóa từ một khối dữ liệu byte thành một đối tượng có ý nghĩa với các phần tử có đúng kiểu, giá trị, kích thước và vị trí. Chính lược đồ sẽ cho bộ giải tuần tự hóa biết giá trị nào là giá trị thực tế và giá trị nào là độ lệch. Tất cả các tên trường đều biến mất khi một đối tượng được tuần tự hóa, nhưng được khởi tạo lại khi giải tuần tự hóa theo lược đồ.
 ## Merkle hóa {#merkleization}
@@ -119,7 +119,7 @@ Biểu diễn này mang lại một chỉ số nút cho mỗi phần dữ liệu
 
 ## Đa bằng chứng (Multiproofs) {#multiproofs}
 
-Việc cung cấp danh sách các chỉ số tổng quát đại diện cho một phần tử cụ thể cho phép chúng ta xác minh nó dựa trên gốc cây băm. Gốc này là phiên bản thực tế được chấp nhận của chúng ta. Bất kỳ dữ liệu nào chúng ta được cung cấp đều có thể được xác minh dựa trên thực tế đó bằng cách chèn nó vào đúng vị trí trong cây Merkle (được xác định bởi chỉ số tổng quát của nó) và quan sát thấy rằng gốc vẫn không đổi. Có các hàm trong đặc tả [tại đây](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) cho thấy cách tính toán tập hợp các nút tối thiểu được yêu cầu để xác minh nội dung của một tập hợp các chỉ số tổng quát cụ thể.
+Việc cung cấp danh sách các chỉ số tổng quát đại diện cho một phần tử cụ thể cho phép chúng ta xác minh nó dựa trên gốc cây băm. Gốc này là phiên bản thực tế được chấp nhận của chúng ta. Bất kỳ dữ liệu nào chúng ta được cung cấp đều có thể được xác minh dựa trên thực tế đó bằng cách chèn nó vào đúng vị trí trong cây Merkle (được xác định bởi chỉ số tổng quát của nó) và quan sát thấy rằng gốc vẫn không đổi. Có các hàm trong đặc tả [tại đây](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/merkle-proofs.md#merkle-multiproofs) cho thấy cách tính toán tập hợp các nút tối thiểu được yêu cầu để xác minh nội dung của một tập hợp các chỉ số tổng quát cụ thể.
 
 Ví dụ, để xác minh dữ liệu ở chỉ số 9 trong cây bên dưới, chúng ta cần mã băm của dữ liệu ở các chỉ số 8, 9, 5, 3, 1.
 Mã băm của (8,9) phải bằng mã băm (4), mã băm này băm với 5 để tạo ra 2, sau đó băm với 3 để tạo ra gốc cây 1. Nếu dữ liệu không chính xác được cung cấp cho 9, gốc sẽ thay đổi - chúng ta sẽ phát hiện ra điều này và không thể xác minh nhánh đó.

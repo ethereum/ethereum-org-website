@@ -1,6 +1,6 @@
 ---
 title: Strutture dati e codifica
-description: Una panoramica delle strutture dati fondamentali di Ethereum.
+description: Una panoramica delle strutture dati e delle codifiche principali di Ethereum, inclusi i trie di Patricia Merkle, RLP e SSZ, e di come archiviano e verificano lo stato.
 lang: it
 sidebarDepth: 2
 ---

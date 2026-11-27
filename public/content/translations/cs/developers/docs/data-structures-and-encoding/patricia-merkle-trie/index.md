@@ -5,13 +5,13 @@ lang: cs
 sidebarDepth: 2
 ---
 
-Stav [Etherea](/) (souhrn všech účtů, zůstatků a chytrých kontraktů) je zakódován do speciální verze datové struktury, která je v informatice obecně známá jako Merkleův strom. Tato struktura je užitečná pro mnoho aplikací v kryptografii, protože vytváří ověřitelný vztah mezi všemi jednotlivými částmi dat propletenými ve stromu, což vede k jediné hodnotě **kořene** (root), kterou lze použít k dokazování skutečností o těchto datech.
+Stav [Etherea](/) (souhrn všech účtů, zůstatků a chytrých kontraktů) je zakódován do speciální verze datové struktury, která je v informatice obecně známá jako Merkleův strom. Tato struktura je užitečná pro mnoho aplikací v kryptografii, protože vytváří ověřitelný vztah mezi všemi jednotlivými částmi dat propletenými ve stromu, což vede k jediné **kořenové** hodnotě (root), kterou lze použít k dokazování skutečností o těchto datech.
 
-Datová struktura Etherea je „modifikovaná Merkle-Patricia trie“, pojmenovaná tak proto, že si vypůjčuje některé vlastnosti algoritmu PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric), a protože je navržena pro efektivní získávání (re**trie**val) datových položek, které tvoří stav Etherea.
+Datová struktura Etherea je „upravená Merkle-Patricia trie“, pojmenovaná tak proto, že si vypůjčuje některé vlastnosti z PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric) a protože je navržena pro efektivní získávání (re**trie**val) datových položek, které tvoří stav Etherea.
 
-Merkle-Patricia trie je deterministická a kryptograficky ověřitelná: Jediný způsob, jak vygenerovat kořen stavu, je vypočítat jej z každé jednotlivé části stavu, a to, že jsou dva stavy identické, lze snadno dokázat porovnáním kořenového hashe a hashů, které k němu vedly (_Merkleův důkaz_). Naopak neexistuje způsob, jak vytvořit dva různé stavy se stejným kořenovým hashem, a jakýkoli pokus o úpravu stavu s jinými hodnotami povede k jinému kořenovému hashi stavu. Teoreticky tato struktura poskytuje „svatý grál“ efektivity `O(log(n))` pro vkládání, vyhledávání a mazání.
+Merkle-Patricia trie je deterministická a kryptograficky ověřitelná: Jediný způsob, jak vygenerovat kořen stavu (state root), je vypočítat jej z každé jednotlivé části stavu, a o dvou identických stavech to lze snadno dokázat porovnáním kořenového hashe a hashů, které k němu vedly (_Merkleův důkaz_). Naopak neexistuje způsob, jak vytvořit dva různé stavy se stejným kořenovým hashem, a jakýkoli pokus o úpravu stavu s jinými hodnotami bude mít za následek jiný kořenový hash stavu. Teoreticky tato struktura poskytuje „svatý grál“ efektivity `O(log(n))` pro vkládání, vyhledávání a mazání.
 
-V blízké budoucnosti plánuje Ethereum přejít na strukturu [Verkle Tree](/roadmap/verkle-trees), což otevře mnoho nových možností pro budoucí vylepšení protokolu.
+Ethereum plánuje nahradit tuto trii novým stavovým stromem, který je v současnosti navržen jako sjednocený binární strom v [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864). Dřívější návrh na použití [Verkleova stromu](/roadmap/verkle-trees/) byl odložen.
 
 ## Předpoklady {#prerequisites}
 
@@ -206,7 +206,7 @@ Existuje jedna globální stavová trie a ta se aktualizuje pokaždé, když kli
 
 ### Strom úložiště {#storage-trie}
 
-Strom úložiště je místo, kde se nacházejí _všechna_ data kontraktu. Pro každý účet existuje samostatný strom úložiště. K získání hodnot na konkrétních pozicích úložiště na dané adrese je vyžadována adresa úložiště, celočíselná pozice uložených dat v úložišti a ID bloku. Ty pak mohou být předány jako argumenty do `eth_getStorageAt` definovaného v JSON-RPC API, např. pro získání dat ve slotu úložiště 0 pro adresu `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Strom úložiště je místo, kde se nacházejí _všechna_ data kontraktu. Pro každý účet existuje samostatný strom úložiště. K získání hodnot na konkrétních pozicích úložiště na dané adrese je vyžadována adresa úložiště, celočíselná pozice uložených dat v úložišti a ID bloku. Ty pak mohou být předány jako argumenty do `eth_getStorageAt` definovaného v API JSON-RPC, např. pro získání dat ve slotu úložiště 0 pro adresu `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Získávání dalších prvků v úložišti je o něco složitější, protože nejprve musí být vypočítána pozice ve stromu úložiště. Pozice se vypočítá jako hash `keccak256` adresy a pozice v úložišti, obojí doplněné zleva nulami na délku 32 bajtů. Například pozice pro data ve slotu úložiště 1 pro adresu `0x391694e7e0b0cce554cb130d723a9d27458f9298` je:
+Zde se používají dva různé druhy „klíčů“ a je užitečné je od sebe odlišovat:
+
+1. **Slot úložiště.** Toto je 32bajtový klíč, který kontrakt čte a zapisuje pomocí operačních kódů (opcodes) `SLOAD` a `SSTORE`, a je to to, co `eth_getStorageAt` přijímá jako svůj druhý parametr. Protokol se nestará o to, jak si kontrakt vybírá své sloty. O tom rozhoduje rozložení úložiště kompilátoru (viz [rozložení úložiště v Solidity](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **Cesta ve stromu úložiště.** Stejně jako stavová trie, ani strom úložiště nikdy nepoužívá slot přímo jako svou cestu. Cesta je vždy `keccak256(slot)` a hodnota tam uložená je kódování RLP hodnoty slotu s odstraněnými úvodními nulami. Hashování klíče udržuje cesty rovnoměrně rozložené, takže nikdo nemůže vytvořit klíče, které by trii udělaly neobvykle hlubokou. Klienti aplikují tento hash sami, takže volající `eth_getStorageAt` vždy předávají pouze slot.
+
+Jednoduché stavové proměnné se nacházejí ve slotech, které jim kompilátor postupně přiřadí (`0`, `1`, ...), přičemž malé typy jsou někdy sbaleny dohromady do jednoho slotu, jako ve výše uvedeném příkladu. U hodnot uvnitř dynamické struktury je nutné nejprve vypočítat jejich slot. Například Solidity ukládá hodnotu pro klíč `k` z `mapping` deklarovaného ve slotu `p` do slotu `keccak256(pad32(k) ++ pad32(p))`. Pokud kontrakt na adrese `0x295a70b2de5e3953354a6a8344e616ed314d7251` deklaruje `mapping(address => uint)` ve slotu 1, slot obsahující záznam pro klíč `0x391694e7e0b0cce554cb130d723a9d27458f9298` je:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-V konzoli Geth to lze vypočítat následovně:
+Toto hashování vychází z rozložení úložiště Solidity (vypočítaného kontraktem za běhu), nikoli z trie. V konzoli Geth to lze vypočítat následovně:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-`path` je tedy `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. To lze nyní použít k získání dat ze stromu úložiště jako dříve:
+Takže slot úložiště je `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9` a jeho cesta ve stromu úložiště je `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. Slot lze nyní předat do `eth_getStorageAt` jako dříve a klient jej zahashuje, aby našel hodnotu v trii:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545

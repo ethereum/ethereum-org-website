@@ -1,5 +1,14 @@
 # German (de) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.1/10
+Scope: 15 markdown files, changed lines; 7 diffs read in full (nodes-and-clients, ethash, patricia-merkle-trie, ssz, frameworks, transactions, verkle-trees), sweeps over all 15.
+
+**Fixed in this branch (5 critical):** `what-is-ether/supply` full re-translation switched to informal `du` (4 sites: `Du kannst`, `was du ... musst`, `sieh dir`, `Tauche`/`erkunde`) where dev and the rest of the de tree use `Sie`; normalised to `Sie`. `roadmap/statelessness` `Dezentrale autonome Organisation (DAO)` -> `DAO` (English bare; dev had bare `DAO`).
+
+**Open:** `(PBS)` appended to `Proposer-Builder-Trennung` (3 sites, English has no `(PBS)`); transactions `Gas ist ein Bezug auf die Berechnung` (literal "a reference to"; dev had `Mass fuer`); Veramo `ueberpruefbare Anmeldeinformationen` vs glossary-style `Nachweise`; glossary page last line keeps `du` (`Erfahre mehr ...`, unchanged from dev).
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX and directive comments.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.0/10
 Scope: 91 changed files (71 markdown, 20 JSON incl. `page-developers-tools-descriptions.json` +~200 `tool-*` keys), changed lines only; all markdown diffs read, ~60 JSON keys sampled. Brand 10 | Technical 9 | Semantic 9 | Consistency 8.5 | Tone 8.5.
 

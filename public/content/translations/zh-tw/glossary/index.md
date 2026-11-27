@@ -1,7 +1,7 @@
 ---
-title: 詞彙表
-metaTitle: 以太坊詞彙表
-description: 關於以太坊技術與非技術術語的非完整詞彙表
+title: "詞彙表"
+metaTitle: "以太坊詞彙表"
+description: "關於以太坊技術與非技術術語的非完整詞彙表"
 lang: zh-tw
 authors: ["安德烈亞斯·安東諾普洛斯"]
 ---
@@ -44,6 +44,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 
 <GlossaryDefinition term="block" />
 
+<GlossaryDefinition term="block-builder" />
+
 <GlossaryDefinition term="block-explorer" />
 
 <GlossaryDefinition term="block-header" />
@@ -75,6 +77,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 ## C {#section-c}
 
 <GlossaryDefinition term="casper-ffg" />
+
+<GlossaryDefinition term="cfi" />
 
 <GlossaryDefinition term="checkpoint" />
 
@@ -174,6 +178,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 
 <GlossaryDefinition term="erc-1155" />
 
+<GlossaryDefinition term="escrow" />
+
 <GlossaryDefinition term="ethash" />
 
 <GlossaryDefinition term="ether" />
@@ -260,6 +266,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 
 <GlossaryDefinition term="keccak-256" />
 
+<GlossaryDefinition term="kyc" />
+
 <Divider />
 
 ## L {#section-l}
@@ -271,6 +279,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 <GlossaryDefinition term="library" />
 
 <GlossaryDefinition term="light-client" />
+
+<GlossaryDefinition term="liquid-staking-tokens" />
 
 <GlossaryDefinition term="liquidity" />
 
@@ -285,6 +295,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 <GlossaryDefinition term="mainnet" />
 
 <GlossaryDefinition term="max-fee-per-gas" />
+
+<GlossaryDefinition term="mempool" />
 
 <GlossaryDefinition term="merkle-patricia-tree" />
 
@@ -340,6 +352,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 
 <GlossaryDefinition term="peer-to-peer-network" />
 
+<GlossaryDefinition term="p2p-trading" />
+
 <GlossaryDefinition term="permissionless" />
 
 <GlossaryDefinition term="plasma" />
@@ -359,6 +373,12 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 <GlossaryDefinition term="public-goods" />
 
 <GlossaryDefinition term="public-key" />
+
+<Divider />
+
+## Q {#section-q}
+
+<GlossaryDefinition term="quadratic-voting" />
 
 <Divider />
 
@@ -390,6 +410,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 
 <GlossaryDefinition term="shard" />
 
+<GlossaryDefinition term="shielded-pool" />
+
 <GlossaryDefinition term="sidechain" />
 
 <GlossaryDefinition term="signing" />
@@ -397,6 +419,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 <GlossaryDefinition term="singleton" />
 
 <GlossaryDefinition term="slasher" />
+
+<GlossaryDefinition term="slippage" />
 
 <GlossaryDefinition term="slot" />
 
@@ -421,6 +445,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 <GlossaryDefinition term="state" />
 
 <GlossaryDefinition term="state-channels" />
+
+<GlossaryDefinition term="stealth-address" />
 
 <GlossaryDefinition term="supermajority" />
 
@@ -473,6 +499,8 @@ authors: ["安德烈亞斯·安東諾普洛斯"]
 ## W {#section-w}
 
 <GlossaryDefinition term="wallet" />
+
+<GlossaryDefinition term="web2" />
 
 <GlossaryDefinition term="web3" />
 

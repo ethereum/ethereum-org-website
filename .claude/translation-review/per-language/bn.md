@@ -1,5 +1,12 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.6/10
+Scope: 14 markdown pages (ethash, data-structures, patricia-merkle-trie, ssz, frameworks, nodes-as-a-service, run-a-node, transactions, glossary, roadmap merge/privacy/statelessness/verkle-trees, supply), changed lines only; read 8 diffs in full (run-a-node, transactions, privacy, supply, merge, statelessness, nodes-as-a-service, glossary) plus scripted sweeps over all 14. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): run-a-node client table and both notes: `বেসু/এরিগন/নেদারমাইন্ড/রেথ` -> Besu/Erigon/Nethermind/Reth (known-patterns 113); nodes-as-a-service: about 35 `এপিআই`/`আরপিসি`/`জেসন-আরপিসি` -> `API`/`RPC`/`JSON-RPC` (dev had Latin 22 and 14 times, regression of dev form), `বেসু` -> Besu (L225); long forms added where English is bare (112): `বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp)`, `বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi)`, `প্রুফ-অফ-অথরিটি (PoA)`, `নন-ফাঞ্জিবল টোকেন (NFT)` x4, `বিকেন্দ্রীভূত স্বায়ত্তশাসিত সংস্থা (DAO)`, `লেয়ার ১ (L1)` link text (statelessness L81), `ইথেরিয়াম ভার্চুয়াল মেশিন (EVM)` x2 (transactions L19, L31); Bengali digits in `লেয়ার ২/১` and `ইথ১` -> Western digits (merge, transactions, run-a-node).
+
+Open (warnings): `রিকার্সিভ লেংথ প্রিফিক্স (আরএলপি)` (transactions L102, English writes `(RLP)`); `বাহ্যিকভাবে মালিকানাধীন অ্যাকাউন্ট (EOA)` (English has the long form, `(EOA)` added; harmless); `Hegotá` kept Latin; merge still has 4 pre-existing lines with Bengali digits; person names (Sergio Demian Lerner etc.) transliterated.
+
 ## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.3/10
 Scope: 72 markdown pages + 20 JSON namespaces (incremental updates, dev-tools descriptions), changed lines only; read 10 md diffs (contributing, erc-7540, anatomy, bridges, data/oracles/nodes docs, tutorials, roadmap, security, videos) and ~120 JSON keys (glossary, glossary-tooltip, learn-quizzes, page-learn, page-get-eth, page-community, page-roadmap, page-developers-tools-descriptions).
 

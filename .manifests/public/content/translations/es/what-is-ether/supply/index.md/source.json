@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/what-is-ether/supply/index.md",
-  "generatedAt": "2026-06-08T09:08:45.650Z",
-  "rootHash": "54ca69e2cfb0",
+  "generatedAt": "2026-11-27T14:42:12.801Z",
+  "rootHash": "57e373bd75a9",
   "tree": {
     "contentHash": "154e5afc4f2f",
-    "anchorHash": "7e85bc56fb55",
+    "anchorHash": "b697023976c9",
     "children": {
       "frontmatter:title": {
         "contentHash": "5d73cf97791a",
@@ -25,7 +25,7 @@
       },
       "prerequisites": {
         "contentHash": "bc461835d6bc",
-        "anchorHash": "9c2fb015995c",
+        "anchorHash": "dfe0de653811",
         "labelHash": "865514682d01",
         "children": {
           "_label": {
@@ -38,7 +38,7 @@
           },
           "link:0": {
             "contentHash": "f56b9841cfbb",
-            "anchorHash": "38bd8ce2b030"
+            "anchorHash": "8665fcadefe5"
           },
           "prose:5": {
             "contentHash": "d03502c43d74",
@@ -371,5 +371,5 @@
       "recap"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "e1842064dd65585ac4ee544d57ed98f2215f78ff"
 }

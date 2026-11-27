@@ -1,5 +1,14 @@
 # Brazilian Portuguese (pt-br) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.1/10
+Scope: 15 markdown files, changed lines; 6 diffs read in full (ethash, data-structures x3, frameworks, transactions), sweeps over all 15.
+
+**Fixed in this branch (3 critical, #112):** ethrex `camada 1 (L1)` / `(camada 2 (L2))` -> `L1` / `(L2)`; privacy `organizacao autonoma descentralizada (DAO)` -> `DAOs`; frameworks Tenderly `experiencia do usuario (UX) de dapps` -> `UX de dapps`.
+
+**Open:** `taxas de gas` vs `gas` mixed in transactions (dev has both); `(PBS)` not added in pt-br statelessness.
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.8/10
 Scope: 71 markdown pages + 19 JSON namespaces (incremental updates, changed lines only; sampled ~25 pages and all JSON diffs). 3 critical, 0 build-breakers; verify-structure errors (data-and-analytics heading-count, anatomy python fences, erc-4626 heading-count) all pre-exist on dev.
 

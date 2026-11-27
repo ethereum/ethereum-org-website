@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "it",
-  "translatedAt": "2026-06-19T18:32:50.249Z",
-  "englishManifestHash": "5042c9fc6d76",
+  "translatedAt": "2026-11-27T14:37:15.016Z",
+  "englishManifestHash": "2f0d353491f5",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-f404d0",
@@ -11,7 +11,6 @@
     "LINK-cc4298",
     "LINK-21141b",
     "LINK-0858be",
-    "IMAGE-0bcbc3",
     "LINK-791d9a",
     "LINK-0eec89",
     "LINK-1ed7a5",
@@ -37,7 +36,6 @@
     "LINK-232e32",
     "LINK-a5af27",
     "LINK-2d5d7a",
-    "IMAGE-752c60",
     "LINK-4e62dd",
     "LINK-8fba5e",
     "LINK-21b689",
@@ -57,17 +55,19 @@
     "LINK-2e4bf1",
     "LINK-032efb",
     "LINK-2e4bf1",
-    "LINK-da5fe9",
+    "LINK-d0b01c",
+    "LINK-c8c901",
     "LINK-2e4bf1",
-    "LINK-766356",
+    "LINK-da5fe9",
     "LINK-2e4bf1",
     "LINK-d1f55c",
     "LINK-ee5651",
+    "LINK-dc51a9",
+    "LINK-cc0382",
     "LINK-91127d",
     "LINK-0130de",
     "LINK-c51020",
     "LINK-c6c08b",
-    "LINK-e98c6c",
     "LINK-671415",
     "LINK-c705fb",
     "LINK-6deea9",
@@ -86,7 +86,7 @@
     "LINK-61123f",
     "LINK-42ee4f",
     "LINK-14aa12",
-    "LINK-d6b92f",
+    "LINK-ec980a",
     "LINK-fe7d36",
     "LINK-8d60af",
     "LINK-6a7b8f",
@@ -94,21 +94,9 @@
     "LINK-5ce839",
     "LINK-6318b4",
     "LINK-65c4de",
-    "LINK-db1a75"
+    "LINK-69811f"
   ],
   "placeholderMap": {
-    "IMAGE-0bcbc3": {
-      "type": "image",
-      "values": {
-        "path": "./eth1eth2client.png"
-      }
-    },
-    "IMAGE-752c60": {
-      "type": "image",
-      "values": {
-        "path": "./nodes.png"
-      }
-    },
     "LINK-a21a82": {
       "type": "link",
       "values": {
@@ -385,16 +373,16 @@
         "url": "https://github.com/ledgerwatch/erigon"
       }
     },
+    "LINK-d0b01c": {
+      "type": "link",
+      "values": {
+        "url": "https://ethrex.xyz/"
+      }
+    },
     "LINK-da5fe9": {
       "type": "link",
       "values": {
         "url": "https://reth.rs/"
-      }
-    },
-    "LINK-766356": {
-      "type": "link",
-      "values": {
-        "url": "https://github.com/ethereumjs/ethereumjs-monorepo"
       }
     },
     "LINK-d1f55c": {
@@ -407,6 +395,18 @@
       "type": "link",
       "values": {
         "url": "https://besu.hyperledger.org/en/stable/"
+      }
+    },
+    "LINK-dc51a9": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.ethrex.xyz/"
+      }
+    },
+    "LINK-cc0382": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/lambdaclass/ethrex"
       }
     },
     "LINK-91127d": {
@@ -431,12 +431,6 @@
       "type": "link",
       "values": {
         "url": "https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth"
-      }
-    },
-    "LINK-e98c6c": {
-      "type": "link",
-      "values": {
-        "url": "https://github.com/ethereumjs/ethereumjs-monorepo/tree/master"
       }
     },
     "LINK-671415": {
@@ -541,10 +535,10 @@
         "url": "/developers/docs/nodes-and-clients/light-clients/"
       }
     },
-    "LINK-d6b92f": {
+    "LINK-ec980a": {
       "type": "link",
       "values": {
-        "url": "https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md"
+        "url": "https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md"
       }
     },
     "LINK-fe7d36": {
@@ -589,7 +583,7 @@
         "url": "/developers/docs/networks/"
       }
     },
-    "LINK-db1a75": {
+    "LINK-69811f": {
       "type": "link",
       "values": {
         "url": "/developers/tutorials/run-node-raspberry-pi/"
@@ -598,7 +592,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T18:32:50.249Z",
+      "translatedAt": "2026-11-27T14:37:15.016Z",
       "status": "success"
     }
   }

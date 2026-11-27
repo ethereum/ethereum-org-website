@@ -5,13 +5,13 @@ lang: vi
 sidebarDepth: 2
 ---
 
-Trạng thái của [Ethereum](/) (tổng thể của tất cả các Tài khoản, số dư và hợp đồng thông minh), được mã hóa thành một phiên bản đặc biệt của cấu trúc dữ liệu thường được biết đến trong khoa học máy tính là cây Merkle. Cấu trúc này hữu ích cho nhiều ứng dụng trong mật mã học vì nó tạo ra một mối quan hệ có thể xác minh giữa tất cả các phần dữ liệu riêng lẻ được liên kết trong cây, dẫn đến một giá trị **gốc** (root) duy nhất có thể được sử dụng để chứng minh các thông tin về dữ liệu.
+Trạng thái của [Ethereum](/) (tổng thể tất cả các tài khoản, số dư và hợp đồng thông minh), được mã hóa thành một phiên bản đặc biệt của cấu trúc dữ liệu thường được biết đến trong khoa học máy tính là cây Merkle. Cấu trúc này hữu ích cho nhiều ứng dụng trong mật mã học vì nó tạo ra một mối quan hệ có thể xác minh giữa tất cả các phần dữ liệu riêng lẻ được liên kết trong cây, dẫn đến một giá trị **gốc** duy nhất có thể được sử dụng để chứng minh các điều về dữ liệu.
 
-Cấu trúc dữ liệu của Ethereum là một 'cây tiền tố Merkle Patricia được sửa đổi', được đặt tên như vậy vì nó mượn một số tính năng của PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric - Thuật toán thực tế để truy xuất thông tin được mã hóa bằng chữ và số), và vì nó được thiết kế để truy xuất (re**trie**val) dữ liệu hiệu quả cho các mục cấu thành nên trạng thái Ethereum.
+Cấu trúc dữ liệu của Ethereum là một 'cây tiền tố Merkle Patricia sửa đổi' (modified Merkle-Patricia Trie), được đặt tên như vậy vì nó mượn một số tính năng của PATRICIA (Thuật toán Thực tế để Truy xuất Thông tin được Mã hóa bằng Chữ và Số - Practical Algorithm To Retrieve Information Coded in Alphanumeric), và vì nó được thiết kế để truy xuất (re**trie**val) dữ liệu hiệu quả cho các mục cấu thành trạng thái Ethereum.
 
-Cây tiền tố Merkle Patricia có tính tất định và có thể xác minh bằng mật mã học: Cách duy nhất để tạo ra một gốc trạng thái là tính toán nó từ từng phần riêng lẻ của trạng thái, và hai trạng thái giống hệt nhau có thể dễ dàng được chứng minh bằng cách so sánh mã băm gốc và các mã băm dẫn đến nó (_một bằng chứng Merkle_). Ngược lại, không có cách nào để tạo ra hai trạng thái khác nhau với cùng một mã băm gốc, và bất kỳ nỗ lực nào nhằm sửa đổi trạng thái với các giá trị khác nhau sẽ dẫn đến một mã băm gốc trạng thái khác. Về mặt lý thuyết, cấu trúc này cung cấp 'chén thánh' về hiệu suất `O(log(n))` cho các thao tác chèn, tra cứu và xóa.
+Một cây tiền tố Merkle Patricia có tính tất định và có thể xác minh bằng mật mã học: Cách duy nhất để tạo ra một gốc trạng thái là tính toán nó từ từng phần riêng lẻ của trạng thái, và hai trạng thái giống hệt nhau có thể dễ dàng được chứng minh như vậy bằng cách so sánh mã băm gốc và các mã băm dẫn đến nó (_một bằng chứng Merkle_). Ngược lại, không có cách nào để tạo ra hai trạng thái khác nhau với cùng một mã băm gốc, và bất kỳ nỗ lực nào nhằm sửa đổi trạng thái với các giá trị khác nhau sẽ dẫn đến một mã băm gốc trạng thái khác. Về mặt lý thuyết, cấu trúc này cung cấp 'chén thánh' về hiệu quả `O(log(n))` cho các thao tác chèn, tra cứu và xóa.
 
-Trong tương lai gần, Ethereum có kế hoạch chuyển sang cấu trúc [cây Verkle](/roadmap/verkle-trees), điều này sẽ mở ra nhiều khả năng mới cho các cải tiến giao thức trong tương lai.
+Ethereum có kế hoạch thay thế cây tiền tố này bằng một cây trạng thái mới, hiện được đề xuất dưới dạng một cây nhị phân hợp nhất trong [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864). Một đề xuất trước đó về việc sử dụng [cây Verkle](/roadmap/verkle-trees/) đã bị gác lại.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
@@ -206,7 +206,7 @@ Có một trie trạng thái toàn cục duy nhất, và nó được cập nh�
 
 ### Trie lưu trữ {#storage-trie}
 
-Trie lưu trữ là nơi chứa _tất cả_ dữ liệu hợp đồng. Có một trie lưu trữ riêng biệt cho mỗi Tài khoản. Để truy xuất các giá trị tại các vị trí lưu trữ cụ thể ở một Địa chỉ nhất định, cần có địa chỉ lưu trữ, vị trí số nguyên của dữ liệu được lưu trữ trong bộ lưu trữ và ID khối. Sau đó, chúng có thể được truyền dưới dạng đối số cho `eth_getStorageAt` được định nghĩa trong API JSON-RPC, ví dụ: để truy xuất dữ liệu trong khe lưu trữ 0 cho Địa chỉ `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Trie lưu trữ là nơi chứa _tất cả_ dữ liệu hợp đồng. Có một trie lưu trữ riêng biệt cho mỗi tài khoản. Để truy xuất các giá trị tại các vị trí lưu trữ cụ thể ở một địa chỉ nhất định, cần có địa chỉ lưu trữ, vị trí số nguyên của dữ liệu được lưu trữ trong bộ lưu trữ và ID khối. Sau đó, chúng có thể được truyền dưới dạng đối số cho `eth_getStorageAt` được định nghĩa trong API JSON-RPC, ví dụ: để truy xuất dữ liệu trong khe lưu trữ 0 cho địa chỉ `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Việc truy xuất các phần tử khác trong bộ lưu trữ phức tạp hơn một chút vì trước tiên phải tính toán vị trí trong trie lưu trữ. Vị trí được tính bằng mã băm `keccak256` của Địa chỉ và vị trí lưu trữ, cả hai đều được đệm bằng các số 0 ở bên trái để có độ dài 32 byte. Ví dụ: vị trí cho dữ liệu trong khe lưu trữ 1 cho Địa chỉ `0x391694e7e0b0cce554cb130d723a9d27458f9298` là:
+Có hai loại "khóa" khác nhau liên quan ở đây và việc phân biệt chúng sẽ rất hữu ích:
+
+1. **Khe lưu trữ.** Đây là khóa 32 byte mà một hợp đồng đọc và ghi bằng các opcode `SLOAD` và `SSTORE`, và nó là những gì `eth_getStorageAt` nhận làm tham số thứ hai của nó. Giao thức không quan tâm đến cách một hợp đồng chọn các khe của nó. Điều đó được quyết định bởi bố cục lưu trữ của trình biên dịch (xem [bố cục lưu trữ của Solidity](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **Đường dẫn trong trie lưu trữ.** Giống như trie trạng thái, trie lưu trữ không bao giờ sử dụng trực tiếp khe làm đường dẫn của nó. Đường dẫn luôn là `keccak256(slot)`, và giá trị được lưu trữ ở đó là mã hóa RLP của giá trị của khe với các số 0 ở đầu đã bị loại bỏ. Quá trình băm khóa giữ cho các đường dẫn được phân phối đồng đều, vì vậy không ai có thể tạo ra các khóa làm cho cây tiền tố sâu một cách bất thường. Các client tự áp dụng mã băm này, vì vậy những người gọi `eth_getStorageAt` chỉ cần truyền khe.
+
+Các biến trạng thái đơn giản nằm trong các khe mà trình biên dịch gán cho chúng theo thứ tự (`0`, `1`, ...), với các kiểu nhỏ đôi khi được đóng gói cùng nhau vào một khe duy nhất, như trong ví dụ trên. Các giá trị bên trong một cấu trúc động cần được tính toán khe của chúng trước. Ví dụ, Solidity lưu trữ giá trị cho khóa `k` của một `mapping` được khai báo tại khe `p` trong khe `keccak256(pad32(k) ++ pad32(p))`. Nếu hợp đồng tại `0x295a70b2de5e3953354a6a8344e616ed314d7251` khai báo một `mapping(address => uint)` tại khe 1, khe chứa mục nhập cho khóa `0x391694e7e0b0cce554cb130d723a9d27458f9298` là:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-Trong bảng điều khiển Geth, điều này có thể được tính toán như sau:
+Quá trình băm này đến từ bố cục lưu trữ của Solidity (được tính toán bởi hợp đồng trong thời gian chạy), không phải từ cây tiền tố. Trong bảng điều khiển Geth, điều này có thể được tính toán như sau:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Do đó, `path` là `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Bây giờ, nó có thể được sử dụng để truy xuất dữ liệu từ trie lưu trữ như trước:
+Vì vậy, khe lưu trữ là `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`, và đường dẫn của nó trong trie lưu trữ là `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. Khe bây giờ có thể được truyền cho `eth_getStorageAt` như trước, và client băm nó để tìm giá trị trong cây tiền tố:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
@@ -238,7 +243,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-Lưu ý: `storageRoot` cho một Tài khoản Ethereum mặc định là trống nếu nó không phải là một tài khoản hợp đồng.
+Lưu ý: `storageRoot` cho một tài khoản Ethereum mặc định là trống nếu nó không phải là một tài khoản hợp đồng.
 
 ### Trie giao dịch {#transaction-trie}
 

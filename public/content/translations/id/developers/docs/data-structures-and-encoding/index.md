@@ -1,6 +1,6 @@
 ---
 title: Struktur data dan pengodean
-description: Gambaran umum tentang struktur data dasar Ethereum.
+description: Gambaran umum tentang struktur data dan pengodean inti Ethereum, termasuk trie Patricia Merkle, RLP, dan SSZ, serta bagaimana struktur tersebut menyimpan dan memverifikasi state.
 lang: id
 sidebarDepth: 2
 ---

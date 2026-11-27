@@ -1,5 +1,12 @@
 # Marathi (mr) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.4/10
+Scope: 15 markdown pages, changed lines only; read 8 diffs (nodes-and-clients, run-a-node, transactions, merge, privacy, supply, statelessness, patricia) plus scripted sweeps. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): client names Latin in run-a-node table/notes (`बेसू/एरिगॉन/गेथ/नेदरमाइंड/रेथ`, suffix spaced: `Geth चा`) and nodes-and-clients table rows, `टर्बो-गेथ (Turbo-Geth)`, Erigon/Lodestar paragraphs and link text, nodes-as-a-service `बेसू` L225 and `लाइटहाऊस` L101; `जेसॉन-आरपीसी` -> JSON-RPC (patricia, statelessness); `व्हॅलिडेटर्स` -> glossary `प्रमाणक` (statelessness 4, supply 6; same on dev, tree uses प्रमाणक in 90 files).
+
+Open (warnings): `मुख्यनेट` (glossary) in the nodes-and-clients table vs `मेननेट` in merge description (`इथरियम मेननेट`); `स्तर २` Devanagari numerals on changed lines (merge, privacy, nodes-and-clients, run-a-node; locale-wide, needs a separate sweep per the #18942 note); added Latin glosses `(post-merge)`, `(path-based)`, `(production-ready)`, `(implementation)`; `WEI`/`1ETH`/`1e+18wei` spacing and case in transactions `value` line; `ॲप्लिकेशन प्रोग्रामिंग इंटरफेस` expansion kept (mr allows first mention); `खाजगी लेखन` for "private writes" reads as private writing.
+
 ## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.3/10
 Scope: 91 mr files (71 markdown incremental updates, 20 JSON namespaces, 486 changed keys incl. dev-tools descriptions); sampled 20+ markdown diffs and ~100 JSON keys; scripted placeholder/tag/href/key-order check over all changed keys (clean) and anchor/component/fence check over all md (only pre-existing missing `{#mobula}`/`{#envio}` headings in data-and-analytics).
 

@@ -83,12 +83,12 @@ Veri kümesi ve önbellek boyutu değerlerinin tabloları ekte verilmiştir.
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Başlangıç veri kümesini sırayla üret
+    # Başlangıç veri setini sıralı olarak üret
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # Randmemohash'in düşük turlu bir sürümünü kullan
+    # randmemohash'in düşük turlu bir versiyonunu kullan
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Önbellek üretim süreci, önce 32 MB belleğin sırayla doldurulmasını, ardından Sergio Demian Lerner'ın [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) adlı eserindeki _RandMemoHash_ algoritmasının iki geçişinin gerçekleştirilmesini içerir. Çıktı, 524288 adet 64 baytlık değerden oluşan bir kümedir.
+Önbellek üretim süreci, ilk olarak 32 MB'lık belleğin sırayla doldurulmasını, ardından Sergio Demian Lerner'ın [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) adlı eserindeki _RandMemoHash_ algoritmasının üç geçişinin (`CACHE_ROUNDS`) gerçekleştirilmesini içerir. Çıktı, 524288 adet 64 baytlık değerden oluşan bir kümedir.
 
 ## Veri toplama işlevi {#date-aggregation-function}
 
@@ -220,7 +220,7 @@ Yukarıdaki Python spesifikasyonunu kod olarak çalıştırmakla ilgileniyorsan�
 ```python
 import sha3, copy
 
-# Küçük uçlu bit sıralamasını varsayar (Intel mimarileriyle aynı)
+# Little endian bit sıralamasını varsayar (Intel mimarileriyle aynı)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# sha3 hash işlevi, 64 bayt çıktı verir
+# sha3 hash fonksiyonu, 64 bayt çıktı verir
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

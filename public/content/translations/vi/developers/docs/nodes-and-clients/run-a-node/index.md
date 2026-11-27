@@ -1,6 +1,6 @@
 ---
-title: Khởi chạy nút Ethereum của riêng bạn
-description: Giới thiệu chung về việc chạy phiên bản máy khách Ethereum của riêng bạn.
+title: "Khởi chạy nút Ethereum của riêng bạn"
+description: "Giới thiệu chung về việc chạy phiên bản máy khách Ethereum của riêng bạn."
 lang: vi
 sidebarDepth: 2
 ---
@@ -17,19 +17,19 @@ Nếu bạn mới làm quen với chủ đề chạy một nút, hoặc đang t�
 
 ## Chọn một phương pháp tiếp cận {#choosing-approach}
 
-Bước đầu tiên trong việc khởi chạy nút của bạn là chọn phương pháp tiếp cận. Dựa trên các yêu cầu và nhiều khả năng khác nhau, bạn phải chọn việc triển khai máy khách (của cả máy khách thực thi và ứng dụng khách đồng thuận), môi trường (phần cứng, hệ thống) và các tham số cho cài đặt máy khách.
+Bước đầu tiên trong việc khởi chạy nút của bạn là chọn phương pháp tiếp cận. Dựa trên các yêu cầu và nhiều khả năng khác nhau, bạn phải chọn triển khai máy khách (của cả máy khách thực thi và ứng dụng khách đồng thuận), môi trường (phần cứng, hệ thống) và các tham số cho cài đặt máy khách.
 
 Trang này sẽ hướng dẫn bạn qua các quyết định này và giúp bạn tìm ra cách phù hợp nhất để chạy phiên bản Ethereum của mình.
 
-Để chọn từ các triển khai máy khách, hãy xem tất cả các [máy khách thực thi](/developers/docs/nodes-and-clients/#execution-clients), [ứng dụng khách đồng thuận](/developers/docs/nodes-and-clients/#consensus-clients) đã sẵn sàng cho Mạng chính và tìm hiểu về [sự đa dạng máy khách](/developers/docs/nodes-and-clients/client-diversity).
+Để chọn từ các triển khai máy khách, hãy xem tất cả các [máy khách thực thi](/developers/docs/nodes-and-clients/#execution-clients), [ứng dụng khách đồng thuận](/developers/docs/nodes-and-clients/#consensus-clients) đã sẵn sàng cho Mạng chính hiện có và tìm hiểu về [sự đa dạng máy khách](/developers/docs/nodes-and-clients/client-diversity).
 
-Quyết định xem có nên chạy phần mềm trên [phần cứng của riêng bạn hay trên đám mây](#local-vs-cloud), có xem xét đến các [yêu cầu](#requirements) của máy khách.
+Quyết định xem nên chạy phần mềm trên [phần cứng của riêng bạn hay trên đám mây](#local-vs-cloud), có cân nhắc đến các [yêu cầu](#requirements) của máy khách.
 
 Sau khi chuẩn bị môi trường, hãy cài đặt các máy khách đã chọn bằng [giao diện thân thiện với người mới bắt đầu](#automatized-setup) hoặc [thủ công](#manual-setup) bằng cách sử dụng terminal với các tùy chọn nâng cao.
 
 Khi nút đang chạy và đồng bộ hóa, bạn đã sẵn sàng để [sử dụng nó](#using-the-node), nhưng hãy đảm bảo để mắt đến việc [bảo trì](#operating-the-node) nó.
 
-![Thiết lập máy khách](./diagram.png)
+<ClientSetupDiagram />
 
 ### Môi trường và phần cứng {#environment-and-hardware}
 
@@ -61,49 +61,50 @@ Việc sử dụng phần cứng của riêng bạn có thể rất dễ dàng. 
 
 #### Yêu cầu {#requirements}
 
-Các yêu cầu về phần cứng khác nhau tùy theo máy khách nhưng nhìn chung không quá cao vì nút chỉ cần duy trì trạng thái đồng bộ hóa. Đừng nhầm lẫn nó với việc khai thác, vốn đòi hỏi nhiều sức mạnh tính toán hơn. Tuy nhiên, thời gian đồng bộ hóa và hiệu suất sẽ cải thiện với phần cứng mạnh mẽ hơn.
+Yêu cầu phần cứng khác nhau tùy theo máy khách nhưng nhìn chung không quá cao vì nút chỉ cần duy trì đồng bộ hóa. Đừng nhầm lẫn nó với việc khai thác, vốn yêu cầu sức mạnh tính toán lớn hơn nhiều. Tuy nhiên, thời gian đồng bộ hóa và hiệu suất sẽ cải thiện với phần cứng mạnh mẽ hơn.
 
 Trước khi cài đặt bất kỳ máy khách nào, vui lòng đảm bảo máy tính của bạn có đủ tài nguyên để chạy nó. Bạn có thể tìm thấy các yêu cầu tối thiểu và được khuyến nghị bên dưới.
 
-Nút thắt cổ chai đối với phần cứng của bạn chủ yếu là dung lượng ổ đĩa. Việc đồng bộ hóa Chuỗi khối Ethereum đòi hỏi rất nhiều thao tác đọc/ghi (input/output) và cần nhiều dung lượng. Tốt nhất là có một **ổ cứng thể rắn (SSD)** với hàng trăm GB dung lượng trống để dự phòng ngay cả sau khi đồng bộ hóa.
+Nút thắt cổ chai đối với phần cứng của bạn chủ yếu là dung lượng ổ đĩa. Việc đồng bộ hóa Chuỗi khối Ethereum đòi hỏi cường độ đầu vào/đầu ra rất cao và yêu cầu nhiều dung lượng. Tốt nhất là có một **ổ cứng thể rắn (SSD)** với hàng trăm GB dung lượng trống để dự phòng ngay cả sau khi đồng bộ hóa.
 
-Kích thước của cơ sở dữ liệu và tốc độ đồng bộ hóa ban đầu phụ thuộc vào máy khách được chọn, cấu hình của nó và [chiến lược đồng bộ hóa](/developers/docs/nodes-and-clients/#sync-modes).
+Kích thước của cơ sở dữ liệu và tốc độ đồng bộ hóa ban đầu phụ thuộc vào máy khách đã chọn, cấu hình của nó và [chiến lược đồng bộ hóa](/developers/docs/nodes-and-clients/#sync-modes).
 
-Ngoài ra, hãy đảm bảo kết nối internet của bạn không bị giới hạn bởi [giới hạn băng thông](https://wikipedia.org/wiki/Data_cap). Bạn nên sử dụng kết nối không giới hạn dung lượng vì quá trình đồng bộ hóa ban đầu và dữ liệu được phát sóng lên mạng lưới có thể vượt quá giới hạn của bạn.
+Đồng thời đảm bảo kết nối internet của bạn không bị giới hạn bởi [giới hạn băng thông](https://wikipedia.org/wiki/Data_cap). Bạn nên sử dụng kết nối không giới hạn dung lượng vì quá trình đồng bộ hóa ban đầu và dữ liệu được phát sóng lên mạng lưới có thể vượt quá giới hạn của bạn.
 
 ##### Hệ điều hành
 
-Tất cả các máy khách đều hỗ trợ các hệ điều hành chính - Linux, macOS, Windows. Điều này có nghĩa là bạn có thể chạy các nút trên máy tính để bàn hoặc máy chủ thông thường với hệ điều hành (OS) phù hợp với bạn nhất. Đảm bảo hệ điều hành của bạn được cập nhật để tránh các sự cố tiềm ẩn và lỗ hổng bảo mật.
+Tất cả các máy khách đều hỗ trợ các hệ điều hành chính - Linux, macOS, Windows. Điều này có nghĩa là bạn có thể chạy các nút trên máy tính để bàn hoặc máy chủ thông thường với hệ điều hành (OS) phù hợp nhất với bạn. Đảm bảo hệ điều hành của bạn được cập nhật để tránh các sự cố tiềm ẩn và lỗ hổng bảo mật.
 
 ##### Yêu cầu tối thiểu
 
 - CPU có 2 lõi trở lên
-- 16 GB RAM (khuyến nghị 32 GB để đảm bảo tính ổn định)
-- 2 TB NVMe SSD (có khả năng bị vượt quá vào năm 2027, đọc thêm về [Các ổ SSD tốt và kém tốt hơn cho các nút Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- RAM 16 GB (khuyến nghị 32 GB để đảm bảo tính ổn định)
+- SSD NVMe 4 TB (đủ cho một nút có toàn bộ lịch sử Chuỗi cộng với không gian để phát triển, xem kích thước ổ đĩa của máy khách bên dưới; đọc thêm về [Các ổ SSD tốt và kém tốt hơn cho các nút Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Băng thông 25+ MBit/s
 
 ##### Thông số kỹ thuật được khuyến nghị
 
 Hướng dẫn phần cứng hiện tại cho các nhà điều hành nút được xác định trong [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Đối với một nút đầy đủ, nó khuyến nghị:
 
-- CPU nhanh với 4 lõi trở lên (8 lõi trở lên nếu đang làm trình xác thực)
-- 32 GB RAM (khuyến nghị 64 GB nếu đang làm trình xác thực để đảm bảo tính ổn định)
-- 4 TB NVMe SSD (không khuyến khích sử dụng ổ đĩa không có DRAM và QLC)
+- CPU nhanh có 4 lõi trở lên (8 lõi trở lên nếu đang làm trình xác thực)
+- RAM 32 GB (khuyến nghị 64 GB nếu đang làm trình xác thực để đảm bảo tính ổn định)
+- SSD NVMe 4 TB (không khuyến khích sử dụng ổ đĩa không có DRAM và ổ QLC)
 - Băng thông tải xuống 50 MBit/s / tải lên 15+ MBit/s (tải lên 25+ MBit/s nếu đang làm trình xác thực)
 
-Chế độ đồng bộ hóa và máy khách bạn chọn sẽ ảnh hưởng đến các yêu cầu về dung lượng, nhưng chúng tôi đã ước tính dung lượng ổ đĩa bạn sẽ cần cho mỗi máy khách bên dưới.
+Chế độ đồng bộ hóa và máy khách bạn chọn sẽ ảnh hưởng đến yêu cầu về dung lượng, nhưng chúng tôi đã ước tính dung lượng ổ đĩa bạn sẽ cần cho mỗi máy khách bên dưới.
 
-| Máy khách  | Kích thước ổ đĩa (đồng bộ hóa snap) | Kích thước ổ đĩa (lưu trữ đầy đủ) |
-| ---------- | ----------------------------------- | --------------------------------- |
-| Besu       | 800GB+                              | 12TB+                             |
-| Erigon     | N/A                                 | 2.5TB+                            |
-| Geth       | 500GB+                              | 12TB+                             |
-| Nethermind | 500GB+                              | 12TB+                             |
-| Reth       | N/A                                 | 2.2TB+                            |
+| Máy khách  | Kích thước ổ đĩa (nút đầy đủ) | Kích thước ổ đĩa (lưu trữ đầy đủ) |
+| ---------- | ----------------------------- | --------------------------------- |
+| Besu       | 1.8TB+                        | 12TB+                             |
+| Erigon     | 1.7TB+                        | 2.7TB+                            |
+| Geth       | 1.8TB+                        | 2TB+                              |
+| Nethermind | 1.7TB+                        | 14TB+                             |
+| Reth       | 2.2TB+                        | 2.8TB+                            |
 
-- Lưu ý: Erigon và Reth không cung cấp đồng bộ hóa snap, nhưng có thể Cắt tỉa Đầy đủ (Full Pruning) (~2TB cho Erigon, ~1.2TB cho Reth)
+- Lưu ý: Kích thước nút đầy đủ giữ lại toàn bộ lịch sử Chuỗi và được đo lường vào tháng 9 năm 2026 bởi [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Các máy khách hỗ trợ hết hạn lịch sử cần ít dung lượng hơn: khoảng 1.2-1.4TB nếu chỉ có lịch sử sau The Merge, hoặc khoảng 400-650GB với tính năng hết hạn cuốn chiếu (chưa được Geth hỗ trợ).
+- Lưu ý: Kích thước lưu trữ được lấy từ tài liệu của từng máy khách ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Con số của Geth là dành cho kho lưu trữ dựa trên đường dẫn của nó; việc giữ lại cả lịch sử trie sẽ chiếm khoảng 6.5TB. Con số của Nethermind có từ tháng 7 năm 2023 và đã tăng lên kể từ đó.
 
-Đối với các ứng dụng khách đồng thuận, yêu cầu về dung lượng cũng phụ thuộc vào việc triển khai máy khách và các tính năng được bật (ví dụ: người cắt giảm trình xác thực) nhưng nhìn chung cần thêm 200GB cho dữ liệu beacon. Với số lượng lớn các trình xác thực, tải băng thông cũng tăng lên. Bạn có thể tìm thấy [chi tiết về các yêu cầu của ứng dụng khách đồng thuận trong phân tích này](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Đối với các ứng dụng khách đồng thuận, yêu cầu về dung lượng cũng phụ thuộc vào việc triển khai máy khách và các tính năng được bật (ví dụ: người cắt giảm trình xác thực) nhưng nhìn chung hãy tính thêm 15-90GB cho dữ liệu beacon, cộng với khoảng 500GB khối dữ liệu nếu chạy một siêu nút. Với số lượng lớn trình xác thực, tải băng thông cũng tăng lên. Bạn có thể tìm thấy [chi tiết về các yêu cầu của ứng dụng khách đồng thuận trong phân tích này](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Các giải pháp cắm và chạy (Plug-and-play) {#plug-and-play}
 
@@ -460,7 +461,7 @@ Mỗi triển khai máy khách có một chuỗi phiên bản mà con người c
 
 #### Chạy các dịch vụ bổ sung {#running-additional-services}
 
-Việc chạy nút của riêng bạn cho phép bạn sử dụng các dịch vụ yêu cầu quyền truy cập trực tiếp vào RPC của máy khách Ethereum. Đây là các dịch vụ được xây dựng trên Ethereum như [các giải pháp lớp 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend cho ví, trình khám phá khối, công cụ dành cho nhà phát triển và cơ sở hạ tầng Ethereum khác.
+Việc chạy nút của riêng bạn cho phép bạn sử dụng các dịch vụ yêu cầu quyền truy cập trực tiếp vào RPC của máy khách Ethereum. Đây là các dịch vụ được xây dựng trên Ethereum như [các giải pháp lớp 2 (L2)](/developers/docs/scaling/#layer-2-scaling), backend cho ví, trình khám phá khối, công cụ dành cho nhà phát triển và cơ sở hạ tầng Ethereum khác.
 
 #### Giám sát nút {#monitoring-the-node}
 

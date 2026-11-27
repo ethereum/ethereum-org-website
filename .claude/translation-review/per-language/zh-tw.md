@@ -1,5 +1,11 @@
 # Traditional Chinese (zh-tw) Translation Review Findings
 
+## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 8.9/10
+Scope: 15 md pages, markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX).
+
+Fixed (critical): transliterated names on changed lines restored to Latin with CJK spacing (Nethermind, Reth, Besu, Erigon, Lodestar, Lighthouse; ~20 lines; `X (Latin)` hybrids collapsed; `Go 以太坊 (Geth)` to `Go Ethereum`/`Geth`); `非同質化代幣 (NFT)` to `NFT`; ethrex `第一層 (L1)`/`（第二層 (L2)）` to bare `L1`/`L2`; `區塊提議者` to `區塊提案者`, `區塊建構者` to `區塊構建者` (glossary).
+Open: `Gas 費` (2) vs glossary `燃料` (dev uses both: 455 `燃料`, 50 `Gas 費`); `提案者與建構者分離` vs `構建者`; `您`/`你` mix; English typo `Dankrad Fiest` mirrored in verkle-trees L64; untouched lines still transliterate (`寧布斯`, `普萊斯姆`, `泰庫`).
+
 ## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.8/10
 Scope: 71 md pages + 18 JSON namespaces (incremental updates), changed lines only; sampled 6 md diffs and ~40 JSON keys, plus scripted sweeps.
 

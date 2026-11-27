@@ -56,13 +56,13 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
   - Características
     - El nivel gratuito más grande con 300 millones de unidades de cómputo por mes (\~30 millones de solicitudes getLatestBlock)
     - Soporte multicadena para Polygon, Starknet, Optimism, Arbitrum
-    - Impulsa ~70 % de las aplicaciones descentralizadas (dapps) de Ethereum más grandes y del volumen de transacciones de finanzas descentralizadas (DeFi)
+    - Impulsa ~70% de las dapps de Ethereum más grandes y el volumen de transacciones DeFi
     - Alertas de webhook en tiempo real a través de Alchemy Notify
-    - Soporte y confiabilidad/estabilidad de primera clase
+    - El mejor soporte y confiabilidad / estabilidad de su clase
     - API de NFT de Alchemy
     - Panel de control con Request Explorer, Mempool Watcher y Composer
     - Acceso integrado a faucet de red de prueba
-    - Comunidad activa de constructores en Discord con 18 mil usuarios
+    - Comunidad activa de constructores en Discord con 18k usuarios
 
 - [**Allnodes**](https://www.allnodes.com/)
   - [Documentación](https://docs.allnodes.com/)
@@ -73,21 +73,21 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
     - Nodos de archivo dedicados para más de 30 cadenas de bloques
     - Disponible en 3 regiones (EE. UU., UE, Asia)
     - Instantáneas para más de 100 cadenas de bloques en [PublicNode](https://www.publicnode.com/snapshots)
-    - Soporte técnico 24/7 con un SLA de tiempo de actividad del 99,90 % al 99,98 % (depende del plan).
-    - Precios por hora
+    - Soporte técnico 24/7 con SLA de tiempo de actividad del 99,90% al 99,98% (depende del plan).
+    - Precios de pago por hora
     - Pague con tarjeta de crédito, PayPal o cripto
 
 - [**All That Node**](https://allthatnode.com/)
   - [Documentación](https://docs.allthatnode.com/)
   - Características
-    - 50 000 solicitudes por día con el nivel gratuito
+    - 50.000 solicitudes por día con nivel gratuito
     - Soporte para más de 40 protocolos
-    - Soporte para API JSON-RPC (EVM, Tendermint), REST y Websocket
+    - API JSON-RPC (EVM, Tendermint), REST y Websocket compatibles
     - Acceso ilimitado a datos de archivo
-    - Soporte técnico 24/7 y más del 99,9 % de tiempo de actividad
+    - Soporte técnico 24/7 y más del 99,9% de tiempo de actividad
     - Faucet disponible en múltiples cadenas
-    - Acceso ilimitado a puntos de conexión con un número ilimitado de claves de API
-    - Soporte para API de rastreo/depuración
+    - Acceso ilimitado a puntos de conexión con un número ilimitado de claves API
+    - API de Trace/Debug compatible
     - Actualizaciones automatizadas
 
 - [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
@@ -95,7 +95,7 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
   - Características
     - Nodos de Ethereum totalmente administrados
     - Disponible en seis regiones
-    - JSON-RPC a través de HTTP y WebSockets seguros
+    - JSON-RPC sobre HTTP y WebSockets seguros
     - Soporta 3 cadenas
     - SLA, soporte de AWS 24/7
     - Go-ethereum y Lighthouse
@@ -116,16 +116,16 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
 - [**Blast**](https://blastapi.io/)
   - [Documentación](https://docs.blastapi.io/)
   - Características
-    - Soporte para RPC y WSS
+    - Soporte RPC y WSS
     - Alojamiento de nodos en múltiples regiones
     - Infraestructura descentralizada
     - API pública
     - Plan gratuito dedicado
     - Soporte multicadena (más de 17 cadenas de bloques)
     - Nodos de archivo
-    - Soporte 24/7 en Discord
+    - Soporte de Discord 24/7
     - Monitoreo y alertas 24/7
-    - Un SLA general del 99,9 %
+    - Un SLA general del 99,9%
     - Pague en cripto
 
 - [**BlockDaemon**](https://blockdaemon.com/)
@@ -138,11 +138,11 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
 - [**BlockPI**](https://blockpi.io/)
   - [Documentación](https://docs.blockpi.io/)
   - Características
-    - Estructura de nodos robusta y distribuida
+    - Estructura de nodo robusta y distribuida
     - Hasta 40 puntos de conexión HTTPS y WSS
     - Paquete de registro gratuito y paquete mensual
-    - Método de rastreo + soporte de datos de archivo
-    - Paquetes con validez de hasta 90 días
+    - Método Trace + soporte de datos de archivo
+    - Paquetes de hasta 90 días de validez
     - Plan personalizado y pago por uso
     - Pague en cripto
     - Soporte directo y soporte técnico
@@ -150,7 +150,7 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
 - [**Chainbase**](https://www.chainbase.com/)
   - [Documentación](https://docs.chainbase.com)
   - Características
-    - Servicio RPC de alta disponibilidad, rápido y escalable
+    - Servicio RPC altamente disponible, rápido y escalable
     - Soporte multicadena
     - Tarifas gratuitas
     - Panel de control fácil de usar
@@ -161,17 +161,17 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
   - Características
     - Nodos compartidos gratuitos
     - Nodos de archivo compartidos
-    - Soporte para GraphQL
+    - Soporte de GraphQL
     - Puntos de conexión RPC y WSS
     - Nodos completos y de archivo dedicados
     - Tiempo de sincronización rápido para despliegues dedicados
-    - Traiga su propia nube
-    - Precios por hora
+    - Traiga su nube
+    - Precios de pago por hora
     - Soporte directo 24/7
 
 - [**dRPC**](https://drpc.org/)
   - [Documentación](https://drpc.org/docs)
-  - NodeCloud: infraestructura RPC lista para usar desde $10 (USD): velocidad máxima, sin límites
+  - NodeCloud: Infraestructura RPC plug-n-play desde $10 (USD): velocidad máxima, sin límites
   - Características de NodeCloud:
     - Soporte de API para 185 redes
     - Grupo distribuido de más de 40 proveedores
@@ -188,10 +188,10 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
   - [Documentación](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Características
     - Acceso a más de 40 nodos de cadena de bloques
-    - 40 mil solicitudes diarias gratuitas
-    - Número ilimitado de claves de API
-    - Alta velocidad de conexión a 1 GB/s
-    - Rastreo+Archivo
+    - 40K solicitudes diarias gratuitas
+    - Número ilimitado de claves API
+    - Alta velocidad de conexión a 1GB/seg
+    - Trace+Archive
     - Análisis avanzado
     - Actualizaciones automatizadas
     - Soporte técnico
@@ -223,20 +223,20 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
     - Nivel inicial gratuito
     - Despliegue de nodo de Ethereum con un solo clic
     - Clientes y algoritmos personalizables (Geth, Quorum y Besu || PoA, IBFT y Raft)
-    - Más de 500 API administrativas y de servicio
-    - Interfaz RESTful para el envío de transacciones de Ethereum (respaldada por Apache Kafka)
-    - Flujos de salida para la entrega de eventos (respaldados por Apache Kafka)
-    - Amplia colección de servicios fuera de la cadena y auxiliares (por ejemplo, transporte de mensajería cifrada bilateral)
+    - Más de 500 API administrativas y de servicios
+    - Interfaz RESTful para el envío de transacciones de Ethereum (respaldado por Apache Kafka)
+    - Flujos salientes para la entrega de eventos (respaldado por Apache Kafka)
+    - Colección profunda de servicios "fuera de la cadena" y auxiliares (por ejemplo, transporte de mensajería cifrada bilateral)
     - Incorporación de red sencilla con gobernanza y control de acceso basado en roles
     - Gestión de usuarios sofisticada tanto para administradores como para usuarios finales
     - Infraestructura de nivel empresarial altamente escalable y resistente
-    - Gestión de claves privadas en Cloud HSM
+    - Gestión de claves privadas Cloud HSM
     - Anclaje a la red principal de Ethereum
     - Certificaciones ISO 27k y SOC 2, Tipo 2
     - Configuración dinámica en tiempo de ejecución (por ejemplo, agregar integraciones en la nube, alterar los ingresos de los nodos, etc.)
     - Soporte para orquestaciones de despliegue multinube, multirregión e híbridas
-    - Precios simples por hora basados en SaaS
-    - SLA y soporte 24/7
+    - Precios simples basados en SaaS por hora
+    - SLA y soporte 24x7
 
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [Documentación](https://docs.lavanet.xyz/)
@@ -246,8 +246,8 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
     - Código abierto
     - SDK totalmente descentralizado
     - Integración con Ethers.js
-    - Interfaz intuitiva de gestión de proyectos
-    - Integridad de datos basada en consenso
+    - Interfaz de gestión de proyectos intuitiva
+    - Integridad de datos basada en el consenso
     - Soporte multicadena
 
 - [**Moralis**](https://moralis.io/)
@@ -274,16 +274,16 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
 - [**NodeFlare**](https://nodeflare.app/)
   - [Documentación](https://nodeflare.app/docs/quick-start)
   - Características
-    - 23 cadenas EVM, incluidas Ethereum, Base, Arbitrum One y Nova, Optimism, Linea y Unichain
-    - 5 regiones (Europa, Reino Unido, Asia, EE. UU. Este, EE. UU. Oeste) con conmutación por error automática al nodo en buen estado más cercano
-    - Punto de conexión público gratuito (sin clave de API) + plan gratuito con 3 millones de unidades de cómputo/mes
-    - Facturación por unidad de cómputo: pague solo por lo que usa, las llamadas más pesadas cuestan más
-    - Sin limitación en los planes de pago
+    - 17 cadenas EVM, incluidas Ethereum, Base, Arbitrum One, Optimism y Unichain
+    - Nodos bare-metal propios, con puertas de enlace en Frankfurt, Londres, Ashburn, Chicago, Los Ángeles y Singapur
+    - Punto de conexión público gratuito (sin clave API, 50 solicitudes por cada 10 segundos por IP)
+    - Clave API gratuita con 3 millones de unidades de cómputo/mes y 10 solicitudes/segundo, sin tarjeta de crédito
+    - Facturación por unidad de cómputo: las llamadas más pesadas cuestan más
 
 - [**NOWNodes**](https://nownodes.io/)
   - Características
     - Acceso a más de 50 nodos de cadena de bloques
-    - Clave de API gratuita
+    - Clave API gratuita
     - Exploradores de bloques
     - Tiempo de respuesta de la API ⩽ 1 seg
     - Equipo de soporte 24/7
@@ -298,11 +298,11 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
     - Programa Pre-Stake+ (si necesita más de 1 millón de solicitudes por día)
     - Más de 15 cadenas de bloques compatibles
     - Más de 6400 nodos que ganan POKT por servir aplicaciones
-    - Soporte para nodo de archivo, nodo de archivo con rastreo y nodo de red de prueba
+    - Soporte de nodo de archivo, nodo de archivo con rastreo y nodo de red de prueba
     - Diversidad de clientes de nodos de la red principal de Ethereum
     - Sin punto único de falla
     - Cero tiempo de inactividad
-    - Tokenómica rentable cercana a cero (haga staking de POKT una vez para obtener ancho de banda de red)
+    - Tokenómica rentable casi nula (haga staking de POKT una vez para el ancho de banda de la red)
     - Sin costos hundidos mensuales, convierta su infraestructura en un activo
     - Equilibrio de carga integrado en el protocolo
     - Escale infinitamente la cantidad de solicitudes por día y nodos por hora a medida que avanza
@@ -314,14 +314,14 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
   - [Documentación](https://www.quicknode.com/docs/)
   - Características
     - Soporte técnico 24/7 y comunidad de desarrolladores en Discord
-    - Red de baja latencia, multinube/metal y geobalanceada
-    - Soporte multicadena (Optimism, Arbitrum, Polygon + otras 11)
+    - Red de baja latencia, geobalanceada, multinube/metal
+    - Soporte multicadena (Optimism, Arbitrum, Polygon + otros 11)
     - Capas intermedias para velocidad y estabilidad (enrutamiento de llamadas, caché, indexación)
-    - Monitoreo de contratos inteligentes a través de webhooks
+    - Monitoreo de contratos inteligentes a través de Webhooks
     - Panel de control intuitivo, suite de análisis, compositor RPC
     - Funciones de seguridad avanzadas (JWT, enmascaramiento, listas blancas)
     - API de datos y análisis de NFT
-    - [Certificación SOC2](https://www.quicknode.com/security)
+    - [Certificado SOC2](https://www.quicknode.com/security)
     - Adecuado para desarrolladores y empresas
 
 - [**Rivet**](https://rivet.cloud/)
@@ -343,24 +343,24 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
   - Características
     - Prueba gratuita
     - Escale a medida que avanza
-    - Soporte para GraphQL
+    - Soporte de GraphQL
     - Puntos de conexión RPC y WSS
     - Nodos completos dedicados
-    - Traiga su propia nube
+    - Traiga su nube
     - Herramientas de análisis
     - Panel de control
-    - Precios por hora
+    - Precios de pago por hora
     - Soporte directo
 
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Documentación](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Características
-    - Nivel gratuito que incluye 25 millones de unidades de Tenderly por mes
+    - Nivel gratuito que incluye 25 millones de unidades Tenderly por mes
     - Acceso gratuito a datos históricos
-    - Cargas de trabajo con muchas lecturas hasta 8 veces más rápidas
-    - Acceso de lectura 100 % consistente
+    - Cargas de trabajo con mucha lectura hasta 8 veces más rápidas
+    - Acceso de lectura 100% consistente
     - Puntos de conexión JSON-RPC
-    - Generador de solicitudes RPC basado en interfaz de usuario y vista previa de solicitudes
+    - Creador de solicitudes RPC basado en la interfaz de usuario y vista previa de solicitudes
     - Estrechamente integrado con las herramientas de desarrollo, depuración y prueba de Tenderly
     - Simulaciones de transacciones
     - Análisis de uso y filtrado
@@ -375,7 +375,7 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
     - Tanto los puntos de conexión RPC como WSS están abiertos para su uso
     - Acceso ilimitado a la API de datos de archivo
     - Panel de control con Request Explorer y Mempool Watcher
-    - API de datos de NFT y notificación de webhook
+    - API de datos de NFT y notificación de Webhook
     - Pague en cripto
     - Soporte externo para requisitos de comportamiento adicionales
 
@@ -386,7 +386,7 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
     - Conexión ininterrumpida sin tiempo de inactividad
     - Automatización de procesos
     - Tarifas gratuitas
-    - Límites altos que se adaptan a cualquier usuario
+    - Altos límites que se adaptan a cualquier usuario
     - Soporte para varios nodos
     - Escalado de recursos
     - Altas velocidades de procesamiento
@@ -396,20 +396,21 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
   - Características
     - Front-running como servicio
     - Mempool de transacciones globales con métodos de búsqueda/filtrado
-    - Tarifa de transacción ilimitada y gas infinito para enviar transacciones
+    - Tarifa de TX ilimitada y gas infinito para enviar transacciones
     - Obtención más rápida del nuevo bloque y lectura de la cadena de bloques
     - Garantía del mejor precio por llamada a la API
 
 - [**Zeeve**](https://www.zeeve.io/)
   - [Documentación](https://www.zeeve.io/docs/)
   - Características
-    - Plataforma de automatización sin código de nivel empresarial que proporciona despliegue, monitoreo y gestión de nodos y redes de cadenas de bloques
-    - Más de 30 protocolos e integraciones compatibles, y sumando más
+    - Plataforma de automatización sin código de nivel empresarial que proporciona despliegue, monitoreo y gestión de nodos y redes de cadena de bloques
+    - Más de 30 protocolos e integraciones compatibles, y agregando más
     - Servicios de infraestructura Web3 de valor agregado como almacenamiento descentralizado, identidad descentralizada y API de datos de libro mayor de cadena de bloques para casos de uso del mundo real
-    - El soporte 24/7 y el monitoreo proactivo garantizan el estado de los nodos en todo momento.
+    - El soporte 24/7 y el monitoreo proactivo garantizan la salud de los nodos en todo momento.
     - Los puntos de conexión RPC ofrecen acceso autenticado a las API, gestión sin complicaciones con un panel de control intuitivo y análisis.
-    - Proporciona opciones de nube administrada y de traer su propia nube para elegir, y es compatible con los principales proveedores de nube como AWS, Azure, Google Cloud, Digital Ocean y en las instalaciones.
-    - Utilizamos enrutamiento inteligente para llegar al nodo más cercano a su usuario en todo momento
+    - Proporciona opciones de nube administrada y traiga su propia nube para elegir y es compatible con los principales proveedores de nube como AWS, Azure, Google Cloud, Digital Ocean y en las instalaciones.
+    - Usamos enrutamiento inteligente para llegar al nodo más cercano a su usuario en todo momento
+
 ## Lecturas adicionales {#further-reading}
 
 - [Lista de servicios de nodos de Ethereum](https://ethereumnodes.com/)
@@ -420,5 +421,4 @@ Aquí hay una lista de algunos de los proveedores de nodos de Ethereum más popu
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Introducción al desarrollo de Ethereum usando Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Guía para enviar transacciones usando Web3 y Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Guía para enviar transacciones usando web3 y Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

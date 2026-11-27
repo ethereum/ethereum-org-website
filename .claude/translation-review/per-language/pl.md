@@ -1,5 +1,14 @@
 # Polish (pl) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.9/10
+Scope: 15 markdown files, changed lines; 7 diffs read in full (nodes-and-clients, ethash, data-structures x3, frameworks, transactions).
+
+**Fixed in this branch (12 critical, #112):** `(NFT)` long form x2 (frameworks Crossmint, supply); `(DeFi)` x2 (GoldRush, supply); `(dapp)` long forms x3 (nodes-and-clients, Scaffold-ETH, Tenderly) -> `dapp`/`dappow`; nodes-and-clients `Maszyny Wirtualnej Ethereum (EVM)` -> `EVM`, `maksymalna wartosc do wyodrebnienia (MEV)` -> `MEV`; statelessness `zdecentralizowana organizacja autonomiczna (DAO)` -> `DAO` and `warstwy 1 (L1)` -> `weryfikacji L1`; privacy `zdecentralizowanych organizacjach autonomicznych (DAO)` -> `DAO`.
+
+**Open:** `(PBS)` appended to `separacja proponujacego i budujacego` (3 sites); `konto posiadane zewnetrznie` is the ETHGlossary EOA form; table row for ethrex misaligned (renders fine); `blockchain` vs `blockchain-a` declension in nodes-and-clients.
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX.
+
 ## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.1/10
 Scope: 19 JSON namespaces (diffs read in full) + 71 markdown pages (diffs read in full, changed lines only). 6 critical fixed, 0 open critical.
 
