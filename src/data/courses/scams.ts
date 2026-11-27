@@ -24,6 +24,13 @@ export const scamsCourse: Course = {
           options: ["sign", "stop", "free"],
           correct: ["stop"],
         },
+        {
+          id: "marks",
+          type: "choice",
+          options: ["hurry", "good", "fear", "ask"],
+          correct: ["hurry", "fear", "ask"],
+          multi: true,
+        },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
     },
@@ -79,6 +86,13 @@ export const scamsCourse: Course = {
         { id: "intro", type: "concept", paragraphs: 1 },
         { id: "spot", type: "interactive", widget: "claim-site" },
         { id: "trail", type: "concept", paragraphs: 2 },
+        {
+          id: "handover",
+          type: "choice",
+          options: ["connect", "sign", "open", "approve"],
+          correct: ["sign", "approve"],
+          multi: true,
+        },
         {
           id: "signed",
           type: "choice",
