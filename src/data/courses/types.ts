@@ -246,7 +246,8 @@ export interface PageLink {
 }
 
 /**
- * What a course may assume and use. Beginner: ages 10 to 12, analogies first,
+ * What a course may assume and use. Beginner: newcomers aged 13 and up, never
+ * written as if the reader is a child; analogies first,
  * no numbers, units, formulas or timings. Intermediate: numbers and mechanics.
  * Advanced: internals. Strings: `page-courses-level-{level}`.
  */
