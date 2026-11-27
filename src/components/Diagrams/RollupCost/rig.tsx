@@ -1,6 +1,6 @@
 "use client"
 
-import { memo, type ReactNode, useMemo } from "react"
+import { memo, type ReactNode, useId, useMemo } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -103,6 +103,7 @@ function RollupCostRig({
   })
 
   const bar = barWidths(view)
+  const barClipId = useId()
   const dataW = Math.max(1, view.count * L1_DATA_PER_TX * PARCEL_SCALE)
 
   const spots = useMemo<AnatomyLabelSpot[]>(() => {
@@ -283,7 +284,6 @@ function RollupCostRig({
               width={OVERHEAD_W}
               height={PARCEL_H}
               rx={3}
-              strokeDasharray="3 3"
               style={{ fill: "transparent" }}
               className="stroke-diagram-line-faint"
             />
@@ -296,41 +296,66 @@ function RollupCostRig({
           width={BAR.w}
           height={BAR.h}
           rx={4}
-          strokeDasharray="3 3"
+          stroke="none"
           style={{ fill: anatomyFill("neutral", "top") }}
-          className="pointer-events-none stroke-diagram-line-faint"
+          className="pointer-events-none"
         />
-        <g {...part("share")}>
-          <rect
-            x={BAR.x}
-            y={BAR.y}
-            width={BAR.w}
-            height={BAR.h}
-            style={{
-              fill: view.split
-                ? anatomyStrong("gas")
-                : anatomyFill("gas", "end", state("share")),
-              transform: `scaleX(${bar.share / BAR.w})`,
-            }}
-            className={cn(anatomyStroke("gas", state("share")), GROW)}
-          />
+        <clipPath id={barClipId}>
+          <rect x={BAR.x} y={BAR.y} width={BAR.w} height={BAR.h} rx={4} />
+        </clipPath>
+        <g clipPath={`url(#${barClipId})`}>
+          <g {...part("share")}>
+            <rect
+              x={BAR.x}
+              y={BAR.y}
+              width={BAR.w}
+              height={BAR.h}
+              stroke="none"
+              style={{
+                fill: view.split
+                  ? anatomyStrong("gas")
+                  : anatomyFill("gas", "end", state("share")),
+                transform: `scaleX(${bar.share / BAR.w})`,
+              }}
+              className={GROW}
+            />
+          </g>
+          <g {...part("execution")}>
+            <rect
+              x={BAR.x}
+              y={BAR.y}
+              width={bar.execution}
+              height={BAR.h}
+              stroke="none"
+              style={{
+                fill: anatomyFill(
+                  "gas",
+                  "end",
+                  state("execution") === "hover" ? "hover" : "lit"
+                ),
+                transform: `translateX(${bar.share}px)`,
+              }}
+              className="transition-transform duration-700 ease-out motion-reduce:transition-none"
+            />
+          </g>
         </g>
-        <g {...part("execution")}>
-          <rect
-            x={BAR.x}
-            y={BAR.y}
-            width={bar.execution}
-            height={BAR.h}
-            style={{
-              fill: anatomyFill("gas", "end", "lit"),
-              transform: `translateX(${bar.share}px)`,
-            }}
-            className={cn(
-              anatomyStroke("gas", state("execution")),
-              "transition-transform duration-700 ease-out motion-reduce:transition-none"
-            )}
-          />
-        </g>
+        <rect
+          x={BAR.x}
+          y={BAR.y}
+          width={BAR.w}
+          height={BAR.h}
+          rx={4}
+          fill="none"
+          className={cn(
+            "pointer-events-none",
+            anatomyStroke(
+              "gas",
+              state("share") === "hover" || state("execution") === "hover"
+                ? "hover"
+                : "rest"
+            )
+          )}
+        />
       </svg>
 
       {seatNote && (
@@ -353,6 +378,8 @@ function RollupCostRig({
         labels={labels}
         definitions={definitions}
         litId={view.litPart}
+        leaders={false}
+        tooltips
       />
     </div>
   )

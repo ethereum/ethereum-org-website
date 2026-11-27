@@ -50,7 +50,7 @@ export function RollupCostPlayer({
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [count, setCount] = useState<BatchSize>(initialPreset)
-  const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
+  const { step, atEnd, advance, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
     last: ROLLUP_COST_LAST_STEP,
     initial: initialStep,
@@ -88,6 +88,7 @@ export function RollupCostPlayer({
 
   return (
     <InteractiveDiagram
+      layout="stacked"
       className={className}
       caption={t("rollup-cost-caption")}
       description={t("rollup-cost-description", {
@@ -98,12 +99,7 @@ export function RollupCostPlayer({
       })}
       fig={fig}
       title={t("rollup-cost-title")}
-      status={t(`rollup-cost-status-${view.motion}`)}
       parts={parts}
-      legend={[
-        { hue: "entity", label: t("rollup-cost-legend-transactions") },
-        { hue: "gas", label: t("rollup-cost-legend-cost") },
-      ]}
       inViewRef={inView.ref}
       paused={!inView.visible}
       illustration={
@@ -124,6 +120,7 @@ export function RollupCostPlayer({
       }
       presets={
         <DiagramPresets
+          inline
           label={t("rollup-cost-presets-label")}
           options={BATCH_SIZES.map((id) => ({
             id: String(id),
@@ -136,11 +133,14 @@ export function RollupCostPlayer({
       }
       transport={
         <DiagramTransport
+          inline
           primary={{
-            label: t("rollup-cost-run"),
+            label:
+              view.step === IDLE_STEP || atEnd
+                ? t("rollup-cost-run")
+                : t("diagram-next-step"),
             icon: <Bus />,
-            onClick: run,
-            disabled: isRunning,
+            onClick: advance,
           }}
           current={view.step}
           total={ROLLUP_COST_LAST_STEP}
