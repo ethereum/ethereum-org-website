@@ -1,7 +1,7 @@
 ---
 title: Qu'est-ce qu'une DAO ?
 metaTitle: "Qu'est-ce qu'une DAO ? | Organisation Autonome Décentralisée"
-description: "Un aperçu des DAO sur Ethereum"
+description: "Qu'est-ce qu'une DAO ? Découvrez comment les organisations autonomes décentralisées utilisent les contrats intelligents et les jetons pour prendre des décisions et gérer des fonds partagés sur Ethereum."
 lang: fr
 template: use-cases
 sidebarDepth: 2

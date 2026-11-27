@@ -1,21 +1,21 @@
 ---
-title: Norme de coffre-fort tokenisé asynchrone ERC-7540
-description: Une extension de l'ERC-4626 qui ajoute des flux de dépôt et de rachat asynchrones pour les coffres-forts tokenisés.
+title: "Norme de coffre-fort tokenisé asynchrone ERC-7540"
+description: "Une extension de l'ERC-4626 qui ajoute des flux de dépôt et de rachat asynchrones pour les coffres-forts tokenisés."
 lang: fr
 ---
 
 ## Introduction {#introduction}
 
-L'ERC-7540 étend la [norme de coffre-fort tokenisé ERC-4626](/developers/docs/standards/tokens/erc-4626/) en ajoutant la prise en charge des flux de dépôt et de rachat asynchrones. Il introduit un modèle de demande-puis-réclamation : les utilisateurs soumettent d'abord une demande (verrouillant leurs actifs ou leurs parts), puis réclament le résultat une fois que le coffre-fort l'a traité.
+L'ERC-7540 étend la [norme de coffre-fort tokenisé ERC-4626](/developers/docs/standards/tokens/erc-4626/) en ajoutant la prise en charge des flux de dépôt et de rachat asynchrones. Il introduit un modèle de demande puis réclamation : les utilisateurs soumettent d'abord une demande (en remettant leurs actifs ou leurs parts au coffre-fort), puis réclament le résultat une fois que le coffre-fort l'a traité.
 
 Cela est nécessaire lorsqu'un coffre-fort ne peut pas effectuer de règlement instantanément en une seule transaction, par exemple :
 
-- Les protocoles d'actifs du monde réel (RWA) tels que les bons du Trésor tokenisés, le crédit privé et d'autres actifs avec des cycles de règlement à J+1 ou J+2
+- Les protocoles d'actifs du monde réel (RWA) comme les bons du Trésor tokenisés, le crédit privé et d'autres actifs avec des cycles de règlement à J+1 ou J+2
 - Le prêt sous-collatéralisé où les évaluations de crédit se font hors chaîne
 - Les stratégies de coffre-fort inter-chaîne où l'utilisation de ponts introduit des délais
 - Les jetons de staking liquide (LST) avec des périodes de déblocage
 
-Les coffres-forts peuvent choisir d'être asynchrones uniquement sur les dépôts, uniquement sur les rachats, ou les deux. Cette flexibilité permet aux développeurs de coffres-forts d'ajouter des flux asynchrones uniquement là où la stratégie sous-jacente l'exige, tout en gardant l'autre côté synchrone.
+Les coffres-forts peuvent choisir d'être asynchrones uniquement pour les dépôts, uniquement pour les rachats, ou les deux. Cette flexibilité permet aux développeurs de coffres-forts d'ajouter des flux asynchrones uniquement là où la stratégie sous-jacente l'exige, tout en gardant l'autre côté synchrone.
 
 ## Prérequis {#prerequisites}
 
@@ -23,23 +23,23 @@ Pour mieux comprendre cette page, nous vous recommandons de lire d'abord les inf
 
 ## ERC-4626 vs ERC-7540 {#comparison}
 
-Dans l'ERC-4626, un dépôt se règle de manière atomique : l'investisseur envoie des actifs et reçoit des parts en retour lors d'une seule transaction.
+Dans l'ERC-4626, un dépôt est réglé de manière atomique : l'investisseur envoie des actifs et reçoit des parts en retour en une seule transaction.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-L'ERC-7540 divise cela en deux étapes. L'investisseur appelle d'abord `requestDeposit()` pour verrouiller les actifs, puis attend que le gestionnaire du coffre-fort traite la demande. Une fois satisfaite, l'investisseur appelle `deposit()` pour réclamer ses parts. Les taux de change sont déterminés au moment de la réalisation, et non au moment de la demande.
+L'ERC-7540 divise cela en deux étapes. L'investisseur appelle d'abord `requestDeposit()`, ce qui transfère ses actifs dans le coffre-fort, puis attend que le coffre-fort traite la demande. La manière et le moment où cela se produit dépendent du coffre-fort, par exemple lorsqu'un règlement hors chaîne est terminé. Une fois la demande satisfaite, l'investisseur appelle `deposit()` pour réclamer ses parts. Le taux de change n'est pas fixé au moment de la demande : le coffre-fort le définit, généralement lorsqu'il satisfait la demande, de sorte que les parts reçues peuvent différer de ce que `convertToShares()` a renvoyé au moment où la demande a été faite.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-Le flux de rachat fonctionne de la même manière : `requestRedeem()` verrouille les parts, et une fois la demande satisfaite, l'investisseur appelle `redeem()` pour réclamer les actifs.
+Le flux de rachat fonctionne de la même manière : `requestRedeem()` prend les parts de l'investisseur, et une fois la demande satisfaite, l'investisseur appelle `redeem()` pour réclamer des actifs.
 
 ## Fonctions et caractéristiques de l'ERC-7540 {#body}
 
 L'ERC-7540 hérite de l'interface complète de l'ERC-4626 mais réutilise `deposit`/`mint`/`withdraw`/`redeem` comme fonctions de réclamation. Les nouvelles fonctions `requestDeposit` et `requestRedeem` gèrent l'étape de demande initiale.
 
-Chaque demande passe par trois états : en attente (soumise, en attente de traitement), réclamable (satisfaite et valorisée), et réclamée (l'investisseur a récupéré ses parts ou ses actifs).
+Chaque demande passe par trois états : en attente (soumise, en attente de traitement), réclamable (satisfaite et valorisée), et réclamée (l'investisseur a récupéré ses parts ou ses actifs). Un coffre-fort peut rendre une demande réclamable immédiatement, en ignorant l'état en attente, mais la réclamation nécessite toujours un appel séparé. La norme ne définit aucun événement pour le moment où une demande devient réclamable.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Flux de demande de dépôt {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Une fois qu'une demande de dépôt devient réclamable, l'utilisateur appelle la
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Verrouille `shares` depuis `owner` et soumet une demande de rachat. L'adresse `controller` reçoit le contrôle de la demande.
+Prend le contrôle de `shares` depuis `owner` et soumet une demande de rachat. Le coffre-fort peut conserver les parts jusqu'à ce que la demande soit réclamée ou les brûler immédiatement. L'adresse `controller` reçoit le contrôle de la demande.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

@@ -4,9 +4,9 @@ description: "Apprenez à développer pour Ethereum en utilisant des projets et 
 lang: fr
 ---
 
-JavaScript est l'un des langages les plus populaires de l'écosystème Ethereum. En fait, il y a une [équipe](https://github.com/ethereumjs) dédiée à apporter autant d'Ethereum que possible à JavaScript.
+JavaScript est l'un des langages les plus populaires de l'écosystème Ethereum, avec des implémentations JavaScript et TypeScript allant des primitives de base du protocole jusqu'à un client de consensus de production.
 
-Il y a des opportunités d'écrire du JavaScript (ou quelque chose de proche) à [tous les niveaux de la pile](/developers/docs/ethereum-stack/).
+Il y a des opportunités d'écrire du JavaScript (ou un langage proche) à [tous les niveaux de la pile](/developers/docs/ethereum-stack/).
 
 ## Interagir avec Ethereum {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ Si vous préférez lire du code, ce JavaScript pourrait être une excellente alt
 
 ### Nœuds et clients {#nodes-and-clients}
 
-Un client EthereumJS est en développement actif et vous permet d'approfondir le fonctionnement des clients Ethereum dans un langage que vous comprenez : JavaScript !
+[Lodestar](https://lodestar.chainsafe.io/) est un client de consensus prêt pour la production, écrit en TypeScript et maintenu par ChainSafe. Il inclut un nœud balise et un client validateur, et constitue un bon endroit pour voir comment fonctionne le consensus de preuve d'enjeu d'Ethereum dans un langage que vous connaissez.
 
-**Découvrez le client**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Découvrez Lodestar**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+Du côté de l'exécution, le client EthereumJS est déprécié et archivé, mais son code source reste disponible pour explorer le fonctionnement d'un client Ethereum en JavaScript.
+
+**Découvrez le client archivé**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Autres projets {#other-projects}
 

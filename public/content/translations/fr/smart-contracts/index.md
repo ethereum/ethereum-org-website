@@ -1,7 +1,7 @@
 ---
 title: Introduction aux contrats intelligents
 metaTitle: "Contrats intelligents : Que sont-ils et quels sont leurs avantages"
-description: Une introduction non technique aux contrats intelligents
+description: "Que sont les contrats intelligents ? Une introduction non technique aux programmes qui s'exécutent sur Ethereum et alimentent des applications comme la DeFi, les NFT et les DAO sans intermédiaires."
 lang: fr
 ---
 

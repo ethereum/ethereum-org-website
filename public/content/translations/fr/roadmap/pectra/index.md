@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: "Découvrez la mise à jour du protocole Pectra"
+description: "Pectra a été activée le 7 mai 2025. Découvrez ce que cette mise à jour d'Ethereum a changé, y compris les comptes intelligents de l'EIP-7702 et un solde maximum de validateur de 2048 ETH."
 lang: fr
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -77,7 +77,7 @@ Le nouveau précompilé ajoute la capacité pour chaque développeur d'effectuer
 
 L'EVM fournit actuellement le code d'opération `BLOCKHASH` qui permet aux développeurs de contrats de récupérer le hash d'un bloc directement dans la couche d'exécution. Cependant, cela est limité uniquement aux 256 derniers blocs et pourrait devenir problématique pour les clients sans état à l'avenir.
 
-L'[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) crée un nouveau contrat système qui peut fournir les 8192 derniers hashs de blocs en tant qu'emplacements de stockage. Cela aide à pérenniser le protocole pour une exécution sans état et devient plus efficace lorsque les arbres de Verkle sont adoptés. Cependant, en dehors de cela, les rollups peuvent en bénéficier immédiatement, car ils peuvent interroger le contrat directement avec une fenêtre historique plus longue.
+L'[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) crée un nouveau contrat système qui peut fournir les 8192 derniers hashs de blocs sous forme d'emplacements de stockage. Cela aide à pérenniser le protocole pour une exécution sans état. Cependant, au-delà de cela, les rollups peuvent en bénéficier immédiatement, car ils peuvent interroger le contrat directement avec une fenêtre historique plus longue.
 
 ### Déplacer l'indice du comité en dehors de l'attestation {#7549}
 

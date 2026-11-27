@@ -39,6 +39,6 @@ _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette p
 ## Tutoriels connexes {#related-tutorials}
 
 - [Liste de contrôle pour l'intégration de jetons](/developers/tutorials/token-integration-checklist/) _– Une liste de contrôle des éléments à prendre en compte lors de l'interaction avec des jetons._
-- [Comprendre le contrat intelligent de jeton ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Une introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum._
+- [Explication détaillée du contrat ERC-20](/developers/tutorials/erc20-annotated-code/) _– Une explication détaillée et annotée ligne par ligne de l'implémentation du contrat ERC-20 d'OpenZeppelin._
 - [Transferts et approbation de jetons ERC-20 à partir d'un contrat intelligent Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Comment utiliser un contrat intelligent pour interagir avec un jeton en utilisant le langage Solidity._
-- [Implémenter un marché ERC-721 [un guide pratique]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Comment mettre en vente des articles tokenisés sur un tableau de petites annonces décentralisé._
+- [Implémentation d'un marché ERC-721 [un guide pratique]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Comment mettre en vente des articles sous forme de jetons sur un tableau de petites annonces décentralisé._

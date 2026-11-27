@@ -1,7 +1,7 @@
 ---
 title: "À propos d'ethereum.org"
 metaTitle: "À propos de nous"
-description: "À propos de l'équipe, de la communauté et de la mission d'ethereum.org"
+description: "Rencontrez l'équipe et la communauté derrière ethereum.org : notre mission, comment le site est construit et gouverné de manière ouverte, et comment vous pouvez aider à l'améliorer."
 lang: fr
 ---
 
@@ -109,7 +109,9 @@ Nous utilisons un ensemble de [principes de conception](/contributing/design-pri
 
 Nous avons créé et publié un [système de conception](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) pour déployer des fonctionnalités plus rapidement et permettre aux membres de la communauté de participer à la conception ouverte d'ethereum.org.
 
-Vous souhaitez vous impliquer ? [Suivez-nous sur Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) et rejoignez la conversation dans notre [canal Discord #design](/discord/).
+Vous souhaitez vous impliquer ? [Suivez-nous sur Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) et rejoignez la conversation sur notre [canal Discord #design](/discord/).
+
+Vous cherchez des logos, des illustrations ou d'autres fichiers de marque ? Téléchargez-les depuis notre [page de ressources](/assets/).
 
 ## Guide de style {#style-guide}
 
@@ -122,6 +124,10 @@ Nous accueillons avec plaisir les retours sur nos principes de conception, notre
 ## Licence {#license}
 
 Le site Web ethereum.org est open source et construit sous une [licence MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) sauf indication contraire. En savoir plus sur les [conditions d'utilisation](/terms-of-use/) d'ethereum.org.
+
+## Votre confidentialité {#your-privacy}
+
+ethereum.org utilise Matomo pour des analyses respectueuses de la confidentialité, et vous pouvez vous désinscrire à tout moment. Lisez notre [politique en matière de cookies](/cookie-policy/) et notre [politique de confidentialité](/privacy-policy/) pour plus de détails.
 
 ## Offres d'emploi {#open-jobs}
 

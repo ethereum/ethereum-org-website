@@ -1,6 +1,6 @@
 ---
-title: Staking délégué (staking en tant que service)
-description: Un aperçu de la façon de démarrer avec le staking délégué
+title: "Staking délégué (staking en tant que service)"
+description: "Qu'est-ce que le staking en tant que service ? Découvrez comment déposer 32 ETH pendant qu'un opérateur de nœud gère votre validateur, ainsi que les compromis par rapport au staking à domicile ou mutualisé."
 lang: fr
 template: staking
 image: /images/staking/leslie-saas.png

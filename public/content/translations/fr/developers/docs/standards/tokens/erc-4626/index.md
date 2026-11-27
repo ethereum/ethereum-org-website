@@ -53,7 +53,7 @@ Cette fonction renvoie l'adresse du jeton sous-jacent utilisé pour le coffre-fo
 function totalAssets() public view returns (uint256)
 ```
 
-Cette fonction renvoie le montant total des actifs sous-jacents détenus par le coffre-fort.
+Cette fonction renvoie le montant total des actifs sous-jacents gérés par le coffre-fort, y compris ceux qu'il a mis à profit ailleurs et après déduction des frais.
 
 #### convertToShares {#convertoshares}
 
@@ -141,7 +141,7 @@ Cette fonction permet aux utilisateurs de simuler les effets de leur retrait au 
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Cette fonction brûle `shares` de `owner` et envoie exactement `assets` jeton du coffre-fort à `receiver`.
+Cette fonction brûle `shares` de `owner` et envoie exactement `assets` jetons du coffre-fort à `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -185,7 +185,7 @@ Renvoie le montant total de parts de coffre-fort que le `owner` possède actuell
 
 ### Carte de l'interface {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Événements {#events}
 

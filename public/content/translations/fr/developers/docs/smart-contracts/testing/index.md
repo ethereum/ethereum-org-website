@@ -165,7 +165,7 @@ L'**analyse statique** et l'**analyse dynamique** sont deux techniques courantes
 
 Un analyseur statique prend en entrée le code source d'un contrat intelligent et produit des résultats déclarant si un contrat satisfait ou non à une propriété. Contrairement à l'analyse dynamique, l'analyse statique n'implique pas l'exécution d'un contrat pour analyser son exactitude. L'analyse statique raisonne plutôt sur tous les chemins possibles qu'un contrat intelligent pourrait emprunter pendant l'exécution (c.-à-d. en examinant la structure du code source pour déterminer ce que cela signifierait pour le fonctionnement du contrat à l'exécution).
 
-Le [linting](https://www.perforce.com/blog/qac/what-is-linting) et les [tests statiques](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) sont des méthodes courantes pour exécuter une analyse statique sur les contrats. Les deux nécessitent l'analyse de représentations de bas niveau de l'exécution d'un contrat, telles que les [arbres syntaxiques abstraits](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) et les [graphes de flux de contrôle](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) générés par le compilateur.
+Le [linting](https://www.perforce.com/blog/qac/what-is-linting) et les [tests statiques](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) sont des méthodes courantes pour exécuter une analyse statique sur les contrats. Les deux nécessitent l'analyse de représentations de bas niveau de l'exécution d'un contrat, telles que les [arbres syntaxiques abstraits](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) et les [graphes de flux de contrôle](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) générés par le compilateur.
 
 Dans la plupart des cas, l'analyse statique est utile pour détecter des problèmes de sécurité tels que l'utilisation de constructions non sécurisées, des erreurs de syntaxe ou des violations des normes de codage dans le code d'un contrat. Cependant, les analyseurs statiques sont connus pour être généralement peu fiables pour détecter des vulnérabilités plus profondes et peuvent produire des faux positifs excessifs.
 
@@ -238,7 +238,7 @@ Contrairement aux tests, la vérification formelle peut être utilisée pour vé
 
 Comme mentionné, des tests rigoureux peuvent rarement garantir l'absence de bogues dans un contrat ; les approches de vérification formelle peuvent fournir des assurances d'exactitude plus fortes, mais sont actuellement difficiles à utiliser et entraînent des coûts considérables.
 
-Néanmoins, vous pouvez encore augmenter la possibilité de détecter les vulnérabilités d'un contrat en obtenant une révision de code indépendante. Les [audits de contrats intelligents](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) et les [primes aux bogues (bug bounties)](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) sont deux façons de demander à d'autres d'analyser vos contrats.
+Néanmoins, vous pouvez encore augmenter la possibilité de détecter les vulnérabilités d'un contrat en obtenant une révision de code indépendante. Les [audits de contrats intelligents](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) et les [primes aux bogues (bug bounties)](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) sont deux façons de demander à d'autres d'analyser vos contrats.
 
 Les audits sont réalisés par des auditeurs expérimentés dans la recherche de failles de sécurité et de mauvaises pratiques de développement dans les contrats intelligents. Un audit comprendra généralement des tests (et éventuellement une vérification formelle) ainsi qu'un examen manuel de l'ensemble de la base de code.
 
@@ -276,7 +276,7 @@ La différence majeure est que les programmes de primes aux bogues sont ouverts 
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter pour appliquer les meilleures pratiques de style et de sécurité pour le langage de programmation de contrats intelligents Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Analyseur statique basé sur Rust spécialement conçu pour la sécurité et le développement de contrats intelligents Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Analyseur statique basé sur Rust spécialement conçu pour la sécurité et le développement de contrats intelligents Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Framework d'analyse statique basé sur Python avec des détecteurs de vulnérabilité et de qualité de code, des imprimantes pour extraire des informations utiles du code et un support pour l'écriture de sous-modules personnalisés._
 
@@ -297,11 +297,10 @@ La différence majeure est que les programmes de primes aux bogues sont ouverts 
 ## Tutoriels connexes {#related-tutorials}
 
 - [Un aperçu et une comparaison de différents produits de test](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
-- [Comment utiliser Echidna pour tester les contrats intelligents](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Comment utiliser Manticore pour trouver des bogues dans les contrats intelligents](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [Comment utiliser Slither pour trouver des bogues dans les contrats intelligents](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Comment utiliser Echidna pour tester des contrats intelligents](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
+- [Comment utiliser Slither pour trouver des bugs dans les contrats intelligents](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Comment simuler (mock) des contrats Solidity pour les tests](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Comment exécuter des tests unitaires en Solidity à l'aide de Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
+- [Comment exécuter des tests unitaires en Solidity avec Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Lectures complémentaires {#further-reading}
 

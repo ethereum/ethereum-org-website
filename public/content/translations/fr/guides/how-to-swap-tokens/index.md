@@ -1,6 +1,6 @@
 ---
 title: "Comment échanger des jetons"
-description: "Un guide sur la façon d'échanger des jetons sur Ethereum."
+description: "Un guide étape par étape pour échanger des jetons sur Ethereum : connectez votre portefeuille à un échange décentralisé, passez en revue les frais et le glissement, et confirmez la transaction."
 lang: fr
 ---
 

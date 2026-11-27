@@ -1,12 +1,12 @@
 ---
 title: Cancun-Deneb (Dencun)
 metaTitle: FAQ sur Cancun-Deneb (Dencun)
-description: Foire aux questions concernant la mise à jour du réseau Cancun-Deneb (Dencun)
+description: "Foire aux questions concernant la mise à jour du réseau Cancun-Deneb (Dencun)"
 lang: fr
 template: upgrade
 ---
 
-Cancun-Deneb (Dencun) est une mise à jour du réseau Ethereum qui active le **proto-danksharding (EIP-4844)**, introduisant des **blobs** de données temporaires pour un stockage moins cher des rollups de [couche 2 (l2)](/glossary/#layer-2).
+Cancun-Deneb (Dencun) est une mise à jour du réseau Ethereum qui active le **proto-danksharding (EIP-4844)**, introduisant des **blobs** de données temporaires pour un stockage moins cher des rollups de [couche 2 (L2)](/glossary/#layer-2).
 
 Un nouveau type de transaction permet aux fournisseurs de rollups de stocker des données de manière plus rentable dans ce que l'on appelle des « blobs ». Il est garanti que les blobs seront disponibles sur le réseau pendant environ 18 jours (plus précisément, 4096 [époques](/glossary/#epoch)). Après cette période, les blobs sont élagués du réseau, mais les applications peuvent toujours vérifier la validité de leurs données à l'aide de preuves. 
 
@@ -29,32 +29,31 @@ Cela réduit considérablement le coût des rollups, limite la croissance de la 
 
 Dencun aborde principalement la **scalabilité** (gérer plus d'utilisateurs et plus de transactions) avec des **frais abordables**, tout en **maintenant la décentralisation** du réseau.
 
-La communauté Ethereum a adopté une approche de sa croissance « centrée sur les rollups », qui place les rollups de couche 2 (l2) comme le principal moyen de prendre en charge davantage d'utilisateurs en toute sécurité.
+La communauté Ethereum a adopté une approche de sa croissance « centrée sur les rollups », qui place les rollups de couche 2 (L2) comme le principal moyen de prendre en charge davantage d'utilisateurs en toute sécurité.
 
 Les réseaux de rollups gèrent le _traitement_ (ou « l'exécution ») des transactions séparément du Réseau principal, puis publient une preuve cryptographique et/ou des données de transaction compressées des résultats sur le Réseau principal pour l'archivage. Le stockage de ces preuves entraîne des frais (sous forme de [gaz](/glossary/#gas)), qui, avant le proto-danksharding, devaient être stockées de manière permanente par tous les opérateurs de nœuds du réseau, ce qui en faisait une tâche coûteuse.
 
-L'introduction du proto-danksharding dans la mise à jour Dencun ajoute un stockage de données moins cher pour ces preuves en n'exigeant des opérateurs de nœuds qu'ils stockent ces données pendant environ 18 jours, après quoi les données peuvent être supprimées en toute sécurité pour éviter l'augmentation des exigences matérielles. Étant donné que les rollups ont généralement une période de retrait de 7 jours, leur modèle de sécurité reste inchangé tant que les blobs sont disponibles sur la couche 1 (l1) pendant cette durée. La fenêtre d'élagage de 18 jours offre une marge de sécurité importante pour cette période.
+L'introduction du proto-danksharding dans la mise à jour Dencun ajoute un stockage de données moins cher pour ces preuves en n'exigeant des opérateurs de nœuds qu'ils stockent ces données pendant environ 18 jours, après quoi les données peuvent être supprimées en toute sécurité pour éviter l'augmentation des exigences matérielles. Étant donné que les rollups ont généralement une période de retrait de 7 jours, leur modèle de sécurité reste inchangé tant que les blobs sont disponibles sur la couche 1 (L1) pendant cette durée. La fenêtre d'élagage de 18 jours offre une marge de sécurité importante pour cette période.
 
 [En savoir plus sur la mise à l'échelle d'Ethereum](/roadmap/scaling/)
 
 ## Comment accède-t-on aux anciennes données de blobs ? {#historical-access}
 
-Bien que les nœuds Ethereum réguliers conservent toujours l'_état actuel_ du réseau, les données historiques des blobs peuvent être supprimées environ 18 jours après leur introduction. Avant de supprimer ces données, Ethereum s'assure qu'elles ont été mises à la disposition de tous les participants du réseau, laissant le temps pour :
+Alors que les nœuds Ethereum classiques conserveront toujours l'_état actuel_ du réseau, les données historiques des blobs peuvent être supprimées environ 18 jours après leur introduction. Avant de supprimer ces données, Ethereum s'assure qu'elles ont été mises à la disposition de tous les participants du réseau, ce qui laisse le temps pour :
 
-- Aux parties intéressées de télécharger et de stocker les données.
+- Le téléchargement et le stockage des données par les parties intéressées.
 - L'achèvement de toutes les périodes de contestation des rollups.
 - La finalisation des transactions des rollups.
 
-Les données _historiques_ des blobs peuvent être souhaitées pour diverses raisons et peuvent être stockées et consultées à l'aide de plusieurs protocoles décentralisés :
+Les données _historiques_ des blobs peuvent être utiles pour diverses raisons et peuvent être stockées et consultées à l'aide de plusieurs protocoles décentralisés :
 
 - **Les protocoles d'indexation tiers**, tels que The Graph, stockent ces données via un réseau décentralisé d'opérateurs de nœuds incités par des mécanismes crypto-économiques.
-- **BitTorrent** est un protocole décentralisé où des bénévoles peuvent conserver et distribuer ces données à d'autres.
-- **[Le Portal Network d'Ethereum](/developers/docs/networking-layer/portal-network/)** vise à fournir un accès à toutes les données d'Ethereum via un réseau décentralisé d'opérateurs de nœuds en distribuant les données entre les participants, à l'instar de BitTorrent.
-- **Les utilisateurs individuels** sont toujours libres de stocker leurs propres copies de toutes les données qu'ils souhaitent pour référence historique.
+- **BitTorrent** est un protocole décentralisé où des volontaires peuvent conserver et distribuer ces données à d'autres.
+- **Les utilisateurs individuels** sont toujours libres de stocker leurs propres copies de toutes les données qu'ils souhaitent à des fins de référence historique.
 - **Les fournisseurs de rollups** sont incités à stocker ces données pour améliorer l'expérience utilisateur de leur rollup.
-- **Les explorateurs de blocs** exécutent généralement des nœuds d'archive qui indexent et stockent toutes ces informations pour une référence historique facile, accessible aux utilisateurs via une interface web.
+- **Les explorateurs de blocs** exécutent généralement des nœuds d'archive qui indexent et stockent toutes ces informations pour faciliter la référence historique, accessibles aux utilisateurs via une interface web.
 
-Il est important de noter que la récupération de l'état historique fonctionne sur un **modèle de confiance 1-sur-N**. Cela signifie que vous n'avez besoin des données que d'une _seule source digne de confiance_ pour vérifier leur exactitude à l'aide de l'état actuel du réseau.
+Il est important de noter que la récupération de l'état historique fonctionne sur un **modèle de confiance 1-parmi-N**. Cela signifie que vous n'avez besoin des données que d'une _seule source digne de confiance_ pour vérifier leur exactitude à l'aide de l'état actuel du réseau.
 
 ## Comment cette mise à jour contribue-t-elle à la feuille de route plus large d'Ethereum ? {#roadmap-impact}
 
@@ -76,7 +75,7 @@ Les clients de consensus gèrent le logiciel _Validateur_, qui a été entièrem
 
 ## Toutes les transactions sur les L2 utiliseront-elles désormais l'espace de blobs temporaire, ou pourrez-vous choisir ? {#calldata-vs-blobs}
 
-Les transactions de rollups sur la couche 2 (l2) d'Ethereum ont la possibilité d'utiliser deux types de stockage de données : l'espace de blobs temporaire ou les données d'appel (calldata) permanentes des contrats intelligents. L'espace de blobs est un choix économique, offrant un stockage temporaire à moindre coût. Il garantit la disponibilité des données pour toutes les périodes de contestation nécessaires. D'autre part, les données d'appel des contrats intelligents offrent un stockage permanent mais sont plus chères.
+Les transactions de rollups sur la couche 2 (L2) d'Ethereum ont la possibilité d'utiliser deux types de stockage de données : l'espace de blobs temporaire ou les données d'appel (calldata) permanentes des contrats intelligents. L'espace de blobs est un choix économique, offrant un stockage temporaire à moindre coût. Il garantit la disponibilité des données pour toutes les périodes de contestation nécessaires. D'autre part, les données d'appel des contrats intelligents offrent un stockage permanent mais sont plus chères.
 
 La décision d'utiliser l'espace de blobs ou les données d'appel est principalement prise par les fournisseurs de rollups. Ils basent cette décision sur la demande actuelle d'espace de blobs. Si l'espace de blobs est très demandé, les rollups peuvent opter pour les données d'appel afin de s'assurer que les données sont publiées en temps opportun.
 
@@ -84,7 +83,7 @@ Bien qu'il soit théoriquement possible pour les utilisateurs de choisir leur ty
 
 ## L'EIP-4844 réduira-t-il le gaz sur la L1 ? {#l1-fee-impact}
 
-Pas de manière significative. Un nouveau marché du gaz est introduit exclusivement pour l'espace de blobs, à l'usage des fournisseurs de rollups. _Bien que les frais sur la couche 1 (l1) puissent être réduits en déchargeant les données des rollups vers les blobs, cette mise à jour se concentre principalement sur la réduction des frais de la couche 2 (l2). La réduction des frais sur la L1 (Réseau principal) peut se produire comme un effet de second ordre dans une moindre mesure._
+Pas de manière significative. Un nouveau marché du gaz est introduit exclusivement pour l'espace de blobs, à l'usage des fournisseurs de rollups. _Bien que les frais sur la couche 1 (L1) puissent être réduits en déchargeant les données des rollups vers les blobs, cette mise à jour se concentre principalement sur la réduction des frais de la couche 2 (L2). La réduction des frais sur la L1 (Réseau principal) peut se produire comme un effet de second ordre dans une moindre mesure._
 
 - La réduction du gaz sur la L1 sera proportionnelle à l'adoption/l'utilisation des données de blobs par les fournisseurs de rollups
 - Le gaz sur la L1 restera probablement compétitif en raison de l'activité non liée aux rollups
@@ -93,7 +92,7 @@ Pas de manière significative. Un nouveau marché du gaz est introduit exclusive
 
 ## Cela réduira-t-il les frais sur d'autres blockchains de couche 1 compatibles EVM ? {#alt-l1-fee-impact}
 
-Non. Les avantages du proto-danksharding sont spécifiques aux rollups de couche 2 (l2) d'Ethereum qui stockent leurs preuves sur la couche 1 (l1) (Réseau principal).
+Non. Les avantages du proto-danksharding sont spécifiques aux rollups de couche 2 (L2) d'Ethereum qui stockent leurs preuves sur la couche 1 (L1) (Réseau principal).
 
 Le simple fait d'être compatible avec la machine virtuelle Ethereum (EVM) ne signifie pas qu'un réseau tirera un quelconque avantage de cette mise à jour. Les réseaux qui fonctionnent indépendamment d'Ethereum (qu'ils soient compatibles EVM ou non) ne stockent pas leurs données sur Ethereum et ne tireront aucun avantage de cette mise à jour.
 

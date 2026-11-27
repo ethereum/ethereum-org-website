@@ -1,6 +1,6 @@
 ---
 title: "Données et analyses"
-description: "Comment obtenir des analyses et des données onchain à utiliser dans vos applications décentralisées (dapps)"
+description: "Comment obtenir des données onchain pour votre dapp : indexeurs, sous-graphes, explorateurs de blocs, plateformes d'analyse SQL et API pour interroger et analyser les données Ethereum."
 lang: fr
 ---
 
@@ -75,11 +75,11 @@ Pour commencer, suivez le [guide de démarrage rapide d'HyperIndex](https://docs
 ## Lectures complémentaires {#further-reading}
 
 - [Explorer les données crypto I : Architectures de flux de données](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Aperçu du réseau The Graph](https://thegraph.com/docs/en/about/)
-- [Terrain de jeu de requêtes The Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [Exemples de code API sur Etherscan](https://etherscan.io/apis#contracts)
+- [Aperçu du réseau Graph](https://thegraph.com/docs/en/about/)
+- [Explorateur Graph](https://thegraph.com/explorer)
+- [Exemples de code d'API sur Etherscan](https://etherscan.io/apis#contracts)
 - [Documentation de l'API sur Blockscout](https://docs.blockscout.com/devs/apis)
-- [Explorateur de la chaîne balise Beaconcha.in](https://beaconcha.in)
+- [Explorateur de chaîne balise Beaconcha.in](https://beaconcha.in)
 - [Les bases de Dune](https://docs.dune.com/#dune-basics)
 - [Guide de démarrage rapide Ethereum de SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Aperçu du réseau SQD](https://docs.sqd.dev/)

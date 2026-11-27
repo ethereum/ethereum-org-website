@@ -1,7 +1,7 @@
 ---
 title: "Hegotá"
 metaTitle: "Heze-Bogotá (Hegotá)"
-description: "En savoir plus sur la mise à niveau du protocole Hegotá"
+description: "Hegotá est la mise à niveau d'Ethereum prévue après Glamsterdam. Découvrez sa fonctionnalité principale FOCIL pour la résistance à la censure et les transactions Frame pour les comptes."
 lang: fr
 template: upgrade
 ---

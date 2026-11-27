@@ -1,6 +1,6 @@
 ---
 title: Introduction technique aux dapps
-description:
+description: "Une introduction technique aux dapps : comment les applications décentralisées combinent des contrats intelligents sur Ethereum avec un front-end, et en quoi elles diffèrent des applications web."
 lang: fr
 ---
 
@@ -48,6 +48,7 @@ Un contrat intelligent est un code qui réside sur la chaîne de blocs Ethereum 
 <VideoWatch slug="what-is-a-dapp" />
 
 ## Outils pour créer des applications décentralisées (dapps) {#dapp-tools}
+
 **Scaffold-ETH 2 _- Expérimentez rapidement avec Solidity à l'aide d'un front-end qui s'adapte à votre contrat intelligent._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
@@ -95,8 +96,7 @@ _Vous connaissez une ressource communautaire qui vous a aidé ? Modifiez cette p
 
 ## Tutoriels : Créer des applications et des front-ends sur Ethereum {#tutorials}
 
-- [Parcours du contrat Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Un parcours annoté des contrats de base d'Uniswap v2 expliquant le fonctionnement du teneur de marché automatisé (AMM)._
-- [Créer une interface utilisateur pour votre contrat](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Comment créer un front-end moderne React + Wagmi qui se connecte à votre contrat intelligent._
-- [Contrat intelligent Hello World pour les débutants – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Tutoriel de bout en bout : écrire, déployer et créer un front-end pour un contrat intelligent simple._
-- [Composants serveur et agents pour les applications Web3](/developers/tutorials/server-components/) _– Comment écrire des composants serveur TypeScript qui écoutent les événements de la chaîne de blocs et répondent par des transactions._
+- [Examen détaillé du contrat Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Un examen détaillé et annoté des contrats principaux d'Uniswap v2 expliquant le fonctionnement du teneur de marché automatisé (AMM)._
+- [Créer une interface utilisateur pour votre contrat](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Comment créer un front-end moderne avec React + Wagmi qui se connecte à votre contrat intelligent._
+- [Composants serveur et agents pour les applications Web3](/developers/tutorials/server-components/) _– Comment écrire des composants serveur en TypeScript qui écoutent les événements de la chaîne de blocs et répondent par des transactions._
 - [IPFS pour les interfaces utilisateur décentralisées](/developers/tutorials/ipfs-decentralized-ui/) _– Comment héberger le front-end de votre dapp sur IPFS pour résister à la censure._

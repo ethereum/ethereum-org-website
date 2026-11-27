@@ -246,8 +246,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## Tutoriels : Construire avec des jetons non fongibles (ERC-721) sur Ethereum {#tutorials}
 
-- [Tutoriel sur le contrat ERC-721 avec Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Une présentation annotée d'un contrat NFT ERC-721 complet écrit en Vyper._
+- [Guide pas à pas d'un contrat ERC-721 en Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Un guide pas à pas annoté d'un contrat NFT ERC-721 complet écrit en Vyper._
 - [Comment écrire et déployer un NFT (Partie 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Guide étape par étape pour écrire et déployer votre premier contrat intelligent ERC-721._
 - [Comment frapper un NFT (Partie 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Comment frapper un NFT ERC-721 en utilisant votre contrat intelligent déployé et Web3._
 - [Comment voir votre NFT dans votre portefeuille (Partie 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Comment afficher votre NFT frappé dans MetaMask après le déploiement._
-- [Tutoriel de frappe de NFT](/developers/tutorials/nft-minter/) _– Créez une application décentralisée (dapp) complète de frappe de NFT avec une interface React, MetaMask et Alchemy._

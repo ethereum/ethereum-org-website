@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: "Découvrez la mise à jour du protocole Fusaka"
+description: "Fusaka a été déployée le 3 décembre 2025. Découvrez ce que cette mise à jour d'Ethereum a changé, y compris PeerDAS, qui met à l'échelle les blobs pour des transactions de couche 2 moins chères."
 lang: fr
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -27,7 +27,7 @@ La mise à jour Fusaka n'est qu'une étape parmi les objectifs de développement
 
 #### PeerDAS {#peerdas}
 
-C'est la _tête d'affiche_ du fork Fusaka, la fonctionnalité principale ajoutée dans cette mise à jour. Les couches 2 (l2) publient actuellement leurs données sur Ethereum sous forme de blobs, le type de données éphémère créé spécifiquement pour les couches 2. Avant Fusaka, chaque nœud complet devait stocker chaque blob pour s'assurer que les données existaient. À mesure que le débit des blobs augmente, devoir télécharger toutes ces données devient insoutenable en termes de ressources.
+C'est la _tête d'affiche_ du fork Fusaka, la fonctionnalité principale ajoutée dans cette mise à jour. Les couches 2 (L2) publient actuellement leurs données sur Ethereum sous forme de blobs, le type de données éphémère créé spécifiquement pour les couches 2. Avant Fusaka, chaque nœud complet devait stocker chaque blob pour s'assurer que les données existaient. À mesure que le débit des blobs augmente, devoir télécharger toutes ces données devient insoutenable en termes de ressources.
 
 Avec l'[échantillonnage de la disponibilité des données](https://notes.ethereum.org/@fradamt/das-fork-choice), au lieu de devoir stocker toutes les données des blobs, chaque nœud sera responsable d'un sous-ensemble des données de blob. Les blobs sont distribués de manière uniformément aléatoire sur les nœuds du réseau, chaque nœud complet ne détenant qu'un huitième (1/8) des données, ce qui permet une mise à l'échelle théorique jusqu'à 8x. Pour garantir la disponibilité des données, n'importe quelle portion des données peut être reconstruite à partir de n'importe quel 50 % existant de l'ensemble, avec des méthodes qui réduisent la probabilité de données erronées ou manquantes à un niveau cryptographiquement négligeable (\~une sur 10<sup>20</sup> à une sur 10<sup>24</sup>).
 
@@ -74,7 +74,7 @@ L'EIP-7918 fixe un prix de réserve proportionnel sous chaque blob. Lorsque la r
 - [Spécification technique de l'EIP-7918](https://eips.ethereum.org/EIPS/eip-7918)
 - [Explication Storybook](https://notes.ethereum.org/@anderselowsson/AIG)
 
-### Mise à l'échelle de la couche 1 (l1) {#scale-l1}
+### Mise à l'échelle de la couche 1 (L1) {#scale-l1}
 
 #### Expiration de l'historique et reçus simplifiés {#history-expiry}
 
@@ -161,7 +161,7 @@ Cette fonctionnalité ajoute une petite instruction EVM, le **comptage des zéro
 
 #### Précompilé pour la prise en charge de la courbe secp256r1 {#secp256r1-precompile}
 
-Introduit un vérificateur de signature secp256r1 (P-256) intégré, de type clé d'accès, à l'adresse fixe `0x100` en utilisant le même format d'appel déjà adopté par de nombreuses couches 2 et en corrigeant les cas extrêmes, de sorte que les contrats écrits pour ces environnements fonctionnent sur la couche 1 (l1) sans modification.
+Introduit un vérificateur de signature secp256r1 (P-256) intégré, de type clé d'accès, à l'adresse fixe `0x100` en utilisant le même format d'appel déjà adopté par de nombreuses couches 2 et en corrigeant les cas extrêmes, de sorte que les contrats écrits pour ces environnements fonctionnent sur la couche 1 (L1) sans modification.
 
 Mise à niveau de l'expérience utilisateur ! Pour les utilisateurs, cela débloque la signature native sur l'appareil et les clés d'accès. Les portefeuilles peuvent exploiter directement Apple Secure Enclave, le magasin de clés Android, les modules de sécurité matériels (HSM) et FIDO2/WebAuthn - pas de phrase secrète, une intégration plus fluide et des flux d'authentification multifacteur qui ressemblent aux applications modernes. Cela se traduit par une meilleure expérience utilisateur, une récupération plus facile et des modèles d'abstraction de compte qui correspondent à ce que font déjà des milliards d'appareils.
 
@@ -228,7 +228,7 @@ Exemple de ce à quoi cela pourrait ressembler :
 
 ### Cela réduira-t-il les frais sur Ethereum (couche 1) {#will-this-lower-gas}
 
-Cette mise à jour ne réduit pas les frais de gaz sur la couche 1 (l1), du moins pas directement. L'objectif principal est d'offrir plus d'espace de blob pour les données de rollup, réduisant ainsi les frais sur la couche 2. Cela pourrait avoir quelques effets secondaires sur le marché des frais de la couche 1, mais aucun changement significatif n'est attendu.
+Cette mise à jour ne réduit pas les frais de gaz sur la couche 1 (L1), du moins pas directement. L'objectif principal est d'offrir plus d'espace de blob pour les données de rollup, réduisant ainsi les frais sur la couche 2. Cela pourrait avoir quelques effets secondaires sur le marché des frais de la couche 1, mais aucun changement significatif n'est attendu.
 
 ### En tant que staker, que dois-je faire pour la mise à jour ? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
 
