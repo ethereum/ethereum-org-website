@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/roadmap/privacy/index.md",
-  "generatedAt": "2026-09-30T18:33:30.545Z",
-  "rootHash": "f51f3a14db86",
+  "generatedAt": "2026-11-27T14:29:09.178Z",
+  "rootHash": "b9948e9f8a37",
   "tree": {
-    "contentHash": "e1d0bb1ffe28",
+    "contentHash": "2a69542f7caf",
     "anchorHash": "3f53fd7b853f",
     "children": {
       "frontmatter:title": {
@@ -113,7 +113,7 @@
         ]
       },
       "private-writes": {
-        "contentHash": "802118b627d7",
+        "contentHash": "1f39a673db61",
         "anchorHash": "ba57c1890fee",
         "labelHash": "1743e72a35d6",
         "children": {
@@ -138,7 +138,7 @@
             "anchorHash": "54e7ad503c0f"
           },
           "prose:7": {
-            "contentHash": "1033c785e8a4",
+            "contentHash": "48bfd21d9a9e",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
@@ -146,7 +146,7 @@
             "anchorHash": "54e7ad503c0f"
           },
           "prose:8": {
-            "contentHash": "592d0f7dc8a5",
+            "contentHash": "0431d1b69774",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
@@ -198,7 +198,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:3": {
-            "contentHash": "d790d02b9bf4",
+            "contentHash": "88738bbf9f74",
             "anchorHash": "e3b0c44298fc"
           },
           "component:17": {
@@ -216,7 +216,7 @@
             "anchorHash": "e3b0c44298fc"
           },
           "private-payments": {
-            "contentHash": "4bce7523de65",
+            "contentHash": "6e1f8c7e335a",
             "anchorHash": "b5fb0f6ac2dc",
             "labelHash": "733d71b37118",
             "children": {
@@ -233,7 +233,7 @@
                 "anchorHash": "1193d980de9e"
               },
               "prose:2": {
-                "contentHash": "fe9d2bdcd401",
+                "contentHash": "7ea2851fd2c3",
                 "anchorHash": "e3b0c44298fc"
               }
             },
@@ -380,7 +380,7 @@
         ]
       },
       "current-progress": {
-        "contentHash": "b35e3e75d994",
+        "contentHash": "7b2693095a89",
         "anchorHash": "d1cf341a6d87",
         "labelHash": "e40ec557f711",
         "children": {
@@ -397,7 +397,7 @@
             "anchorHash": "0da9960e70bd"
           },
           "prose:6": {
-            "contentHash": "66d32a9d876f",
+            "contentHash": "249692362807",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
@@ -413,7 +413,7 @@
             "anchorHash": "932587649fdb"
           },
           "prose:8": {
-            "contentHash": "ff46c0825ecc",
+            "contentHash": "d0aba872f9e1",
             "anchorHash": "e3b0c44298fc"
           },
           "link:3": {
@@ -571,5 +571,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "e1842064dd65585ac4ee544d57ed98f2215f78ff"
 }

@@ -1,10 +1,10 @@
 ---
 title: The Merge
-description: "Tìm hiểu về The Merge - khi Mạng chính Ethereum áp dụng bằng chứng cổ phần (PoS)."
+description: "Tìm hiểu về The Merge, khi Mạng chính Ethereum chuyển từ bằng chứng công việc sang bằng chứng cổ phần vào tháng 9 năm 2022, cắt giảm khoảng 99,95% mức sử dụng năng lượng."
 lang: vi
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "Mạng chính Ethereum sử dụng bằng chứng cổ phần (PoS), nhưng không phải lúc nào cũng như vậy."
   - "Bản nâng cấp từ cơ chế bằng chứng công việc (PoW) ban đầu sang bằng chứng cổ phần (PoS) được gọi là The Merge."
@@ -125,13 +125,13 @@ The Merge cũng tạo tiền đề cho các bản nâng cấp khả năng mở r
 title="Quan niệm sai lầm: &quot;Chạy một nút yêu cầu đặt cọc 32 ETH.&quot;"
 contentPreview="Sai. Bất kỳ ai cũng có thể tự do đồng bộ hóa bản sao Ethereum tự xác minh của riêng họ (tức là chạy một nút). Không yêu cầu ETH—không phải trước The Merge, không phải sau The Merge, không bao giờ.">
 
-Có hai loại nút Ethereum: các nút có thể đề xuất khối và các nút không thể.
+Có hai loại nút Ethereum: nút có thể đề xuất khối và nút không thể.
 
-Các nút đề xuất khối chỉ chiếm một số lượng nhỏ trong tổng số các nút trên Ethereum. Danh mục này bao gồm các nút khai thác theo bằng chứng công việc (PoW) và các nút trình xác thực theo bằng chứng cổ phần (PoS). Danh mục này yêu cầu cam kết các nguồn lực kinh tế (chẳng hạn như sức mạnh Mã băm của GPU trong bằng chứng công việc (PoW) hoặc ETH đã đặt cọc trong bằng chứng cổ phần (PoS)) để đổi lấy khả năng thỉnh thoảng đề xuất khối tiếp theo và kiếm được phần thưởng Giao thức.
+Các nút đề xuất khối chỉ chiếm một số lượng nhỏ trong tổng số các nút trên Ethereum. Danh mục này bao gồm các nút khai thác theo bằng chứng công việc (PoW) và các nút trình xác thực theo bằng chứng cổ phần (PoS). Danh mục này yêu cầu cam kết các nguồn lực kinh tế (chẳng hạn như sức mạnh mã băm của GPU trong bằng chứng công việc hoặc ETH đã đặt cọc trong bằng chứng cổ phần) để đổi lấy khả năng thỉnh thoảng đề xuất khối tiếp theo và kiếm được phần thưởng giao thức.
 
-Các nút khác trên mạng lưới (tức là phần lớn) không bắt buộc phải cam kết bất kỳ nguồn lực kinh tế nào ngoài một máy tính cấp độ người tiêu dùng với 1-2 TB dung lượng lưu trữ khả dụng và kết nối internet. Các nút này không đề xuất khối, nhưng chúng vẫn đóng vai trò quan trọng trong việc bảo mật mạng lưới bằng cách buộc tất cả những người đề xuất khối phải chịu trách nhiệm thông qua việc lắng nghe các khối mới và xác minh tính hợp lệ của chúng khi đến theo các quy tắc đồng thuận của mạng lưới. Nếu khối hợp lệ, nút sẽ tiếp tục truyền bá nó qua mạng lưới. Nếu khối không hợp lệ vì bất kỳ lý do gì, phần mềm nút sẽ coi nó là không hợp lệ và ngừng truyền bá nó.
+Các nút khác trên mạng lưới (tức là phần lớn) không bị yêu cầu cam kết bất kỳ nguồn lực kinh tế nào ngoài một máy tính cấp tiêu dùng có 4 TB dung lượng lưu trữ khả dụng và kết nối internet. Các nút này không đề xuất khối, nhưng chúng vẫn đóng vai trò quan trọng trong việc bảo mật mạng lưới bằng cách buộc tất cả những người đề xuất khối phải chịu trách nhiệm thông qua việc lắng nghe các khối mới và xác minh tính hợp lệ của chúng khi đến theo các quy tắc đồng thuận của mạng lưới. Nếu khối hợp lệ, nút sẽ tiếp tục truyền bá nó qua mạng lưới. Nếu khối không hợp lệ vì bất kỳ lý do gì, phần mềm nút sẽ coi nó là không hợp lệ và ngừng truyền bá nó.
 
-Bất kỳ ai cũng có thể chạy một nút không sản xuất khối theo một trong hai cơ chế đồng thuận (bằng chứng công việc (PoW) hoặc bằng chứng cổ phần (PoS)); điều này được <em>khuyến khích mạnh mẽ</em> đối với tất cả người dùng nếu họ có đủ phương tiện. Việc chạy một nút có giá trị to lớn đối với Ethereum và mang lại những lợi ích bổ sung cho bất kỳ cá nhân nào chạy nó, chẳng hạn như cải thiện bảo mật, quyền riêng tư và khả năng chống kiểm duyệt.
+Bất kỳ ai cũng có thể chạy một nút không sản xuất khối theo một trong hai cơ chế đồng thuận (bằng chứng công việc hoặc bằng chứng cổ phần); điều này được <em>khuyến khích mạnh mẽ</em> đối với tất cả người dùng nếu họ có đủ phương tiện. Việc chạy một nút có giá trị to lớn đối với Ethereum và mang lại những lợi ích bổ sung cho bất kỳ cá nhân nào chạy nó, chẳng hạn như cải thiện bảo mật, quyền riêng tư và khả năng chống kiểm duyệt.
 
 Khả năng bất kỳ ai cũng có thể chạy nút của riêng họ là <em>hoàn toàn cần thiết</em> để duy trì sự phi tập trung của mạng lưới Ethereum.
 
@@ -140,23 +140,23 @@ Khả năng bất kỳ ai cũng có thể chạy nút của riêng họ là <em>
 </ExpandableCard>
 
 <ExpandableCard
-title="Quan niệm sai lầm: &quot;The Merge đã không làm giảm phí Gas.&quot;"
+title="Quan niệm sai lầm: &quot;The Merge đã không thể giảm phí Gas.&quot;"
 contentPreview="Sai. The Merge là sự thay đổi về cơ chế đồng thuận, không phải là sự mở rộng dung lượng mạng lưới và chưa bao giờ nhằm mục đích giảm phí Gas.">
 
-Phí Gas là sản phẩm của nhu cầu mạng lưới so với công suất của mạng lưới. The Merge đã loại bỏ việc sử dụng bằng chứng công việc (PoW), chuyển sang bằng chứng cổ phần (PoS) để đồng thuận, nhưng không thay đổi đáng kể bất kỳ thông số nào ảnh hưởng trực tiếp đến công suất hoặc thông lượng của mạng lưới.
+Phí Gas là sản phẩm của nhu cầu mạng lưới so với dung lượng của mạng lưới. The Merge đã loại bỏ việc sử dụng bằng chứng công việc, chuyển sang bằng chứng cổ phần để đồng thuận, nhưng không thay đổi đáng kể bất kỳ thông số nào ảnh hưởng trực tiếp đến dung lượng hoặc thông lượng của mạng lưới.
 
-Với một <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">lộ trình tập trung vào Rollup</a>, các nỗ lực đang được tập trung vào việc mở rộng quy mô hoạt động của người dùng ở [lớp 2 (l2)](/layer-2/), đồng thời cho phép Mạng chính lớp 1 (l1) hoạt động như một lớp quyết toán phi tập trung an toàn được tối ưu hóa cho việc lưu trữ dữ liệu Rollup để giúp các giao dịch Rollup rẻ hơn theo cấp số nhân. Việc chuyển đổi sang bằng chứng cổ phần (PoS) là một tiền đề quan trọng để hiện thực hóa điều này. [Tìm hiểu thêm về Gas và phí.](/developers/docs/gas/)
+Với <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">lộ trình lấy Rollup làm trung tâm</a>, các nỗ lực đang được tập trung vào việc mở rộng quy mô hoạt động của người dùng ở [lớp 2](/layer-2/), đồng thời cho phép Mạng chính lớp 1 hoạt động như một lớp quyết toán phi tập trung an toàn được tối ưu hóa cho việc lưu trữ dữ liệu Rollup để giúp các giao dịch Rollup rẻ hơn theo cấp số nhân. Việc chuyển đổi sang bằng chứng cổ phần là một tiền đề quan trọng để hiện thực hóa điều này. [Tìm hiểu thêm về Gas và phí.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Quan niệm sai lầm: &quot;Các giao dịch đã được tăng tốc đáng kể bởi The Merge.&quot;"
+title="Quan niệm sai lầm: &quot;Các giao dịch đã được tăng tốc đáng kể nhờ The Merge.&quot;"
 contentPreview="Sai. Mặc dù có một số thay đổi nhỏ, tốc độ giao dịch trên lớp 1 hiện tại hầu như vẫn giống như trước The Merge.">
-"Tốc độ" của một giao dịch có thể được đo lường theo một số cách, bao gồm thời gian để được đưa vào một khối và thời gian để đạt tính chung cuộc. Cả hai điều này đều thay đổi một chút, nhưng không theo cách mà người dùng sẽ nhận thấy.
+"Tốc độ" của một giao dịch có thể được đo lường theo một vài cách, bao gồm thời gian để được đưa vào một khối và thời gian để đạt tính chung cuộc. Cả hai điều này đều thay đổi một chút, nhưng không theo cách mà người dùng sẽ nhận thấy.
 
-Về mặt lịch sử, trên bằng chứng công việc (PoW), mục tiêu là có một khối mới sau mỗi ~13,3 giây. Theo bằng chứng cổ phần (PoS), các khe xảy ra chính xác sau mỗi 12 giây, mỗi khe là một cơ hội để một trình xác thực xuất bản một khối. Hầu hết các khe đều có khối, nhưng không nhất thiết là tất cả (ví dụ: một trình xác thực đang ngoại tuyến). Trong bằng chứng cổ phần (PoS), các khối được tạo ra thường xuyên hơn ~10% so với trên bằng chứng công việc (PoW). Đây là một thay đổi khá không đáng kể và người dùng khó có thể nhận thấy.
+Về mặt lịch sử, trên bằng chứng công việc, mục tiêu là có một khối mới sau mỗi ~13,3 giây. Theo bằng chứng cổ phần, các khe xảy ra chính xác sau mỗi 12 giây, mỗi khe là một cơ hội để trình xác thực xuất bản một khối. Hầu hết các khe đều có khối, nhưng không nhất thiết là tất cả (tức là một trình xác thực đang ngoại tuyến). Trong bằng chứng cổ phần, các khối được sản xuất thường xuyên hơn ~10% so với bằng chứng công việc. Đây là một thay đổi khá không đáng kể và người dùng khó có thể nhận thấy.
 
-Bằng chứng cổ phần (PoS) đã giới thiệu khái niệm tính chung cuộc của giao dịch mà trước đây không tồn tại. Trong bằng chứng công việc (PoW), khả năng đảo ngược một khối trở nên khó khăn hơn theo cấp số nhân với mỗi khối trôi qua được khai thác trên một giao dịch, nhưng nó không bao giờ hoàn toàn đạt đến mức không. Theo bằng chứng cổ phần (PoS), các khối được gộp thành các Kỷ nguyên (khoảng thời gian 6,4 phút chứa 32 cơ hội cho các khối) mà các trình xác thực bỏ phiếu. Khi một Kỷ nguyên kết thúc, các trình xác thực bỏ phiếu về việc có coi Kỷ nguyên đó là 'đã được chứng minh hợp lệ' hay không. Nếu các trình xác thực đồng ý chứng minh Kỷ nguyên đó hợp lệ, nó sẽ được chung cuộc trong Kỷ nguyên tiếp theo. Việc hoàn tác các giao dịch đã chung cuộc là không khả thi về mặt kinh tế vì nó sẽ yêu cầu thu thập và đốt hơn một phần ba tổng số ETH đã đặt cọc.
+Bằng chứng cổ phần đã giới thiệu khái niệm tính chung cuộc của giao dịch mà trước đây không tồn tại. Trong bằng chứng công việc, khả năng đảo ngược một khối trở nên khó khăn hơn theo cấp số nhân với mỗi khối trôi qua được khai thác trên một giao dịch, nhưng nó không bao giờ hoàn toàn bằng không. Theo bằng chứng cổ phần, các khối được gộp thành các kỷ nguyên (khoảng thời gian 6,4 phút chứa 32 cơ hội cho các khối) mà các trình xác thực bỏ phiếu. Khi một kỷ nguyên kết thúc, các trình xác thực bỏ phiếu về việc có coi kỷ nguyên đó là 'đã được chứng minh hợp lệ' hay không. Nếu các trình xác thực đồng ý chứng minh hợp lệ kỷ nguyên, nó sẽ được chung cuộc trong kỷ nguyên tiếp theo. Việc hoàn tác các giao dịch đã chung cuộc là không khả thi về mặt kinh tế vì nó sẽ yêu cầu thu thập và đốt hơn một phần ba tổng số ETH đã đặt cọc.
 
 </ExpandableCard>
 
@@ -164,24 +164,24 @@ Bằng chứng cổ phần (PoS) đã giới thiệu khái niệm tính chung cu
 title="Quan niệm sai lầm: &quot;The Merge đã cho phép rút tiền đặt cọc.&quot;"
 contentPreview="Sai, nhưng việc rút tiền đặt cọc kể từ đó đã được kích hoạt thông qua bản nâng cấp Thượng Hải/Capella.">
 
-Ban đầu sau The Merge, những người đặt cọc chỉ có thể truy cập tiền boa phí và MEV kiếm được nhờ các đề xuất khối. Những phần thưởng này được ghi có vào một Tài khoản không đặt cọc do trình xác thực kiểm soát (được gọi là <em>người nhận phí</em>) và có sẵn ngay lập tức. Những phần thưởng này tách biệt với phần thưởng Giao thức cho việc thực hiện các nhiệm vụ của trình xác thực.
+Ban đầu sau The Merge, những người đặt cọc chỉ có thể truy cập tiền boa phí và MEV kiếm được nhờ các đề xuất khối. Những phần thưởng này được ghi có vào một tài khoản không đặt cọc do trình xác thực kiểm soát (được gọi là <em>người nhận phí</em>) và có sẵn ngay lập tức. Những phần thưởng này tách biệt với phần thưởng giao thức cho việc thực hiện các nhiệm vụ của trình xác thực.
 
-Kể từ bản nâng cấp mạng lưới Thượng Hải/Capella, những người đặt cọc hiện có thể chỉ định một <em>Địa chỉ rút tiền</em> để bắt đầu nhận các khoản thanh toán tự động cho bất kỳ số dư đặt cọc vượt mức nào (ETH trên 32 từ phần thưởng Giao thức). Bản nâng cấp này cũng cho phép trình xác thực mở khóa và lấy lại toàn bộ số dư của mình khi thoát khỏi mạng lưới.
+Kể từ bản nâng cấp mạng lưới Thượng Hải/Capella, những người đặt cọc hiện có thể chỉ định một <em>địa chỉ rút tiền</em> để bắt đầu nhận các khoản thanh toán tự động cho bất kỳ số dư đặt cọc vượt mức nào (ETH trên 32 từ phần thưởng giao thức). Bản nâng cấp này cũng cho phép trình xác thực mở khóa và lấy lại toàn bộ số dư của mình khi thoát khỏi mạng lưới.
 
 [Tìm hiểu thêm về việc rút tiền đặt cọc](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Quan niệm sai lầm: &quot;Bây giờ The Merge đã hoàn tất và việc rút tiền đã được kích hoạt, tất cả người đặt cọc có thể thoát cùng một lúc.&quot;"
+title="Quan niệm sai lầm: &quot;Bây giờ The Merge đã hoàn tất và việc rút tiền đã được kích hoạt, tất cả những người đặt cọc có thể thoát cùng một lúc.&quot;"
 contentPreview="Sai. Việc thoát của trình xác thực bị giới hạn tỷ lệ vì lý do bảo mật.">
-Kể từ khi bản nâng cấp Thượng Hải/Capella cho phép rút tiền, các trình xác thực được khuyến khích rút số dư đặt cọc của họ trên 32 ETH, vì những khoản tiền này không làm tăng thêm lợi suất và nếu không sẽ bị khóa. Tùy thuộc vào APR (được xác định bởi tổng số ETH đã đặt cọc), họ có thể được khuyến khích thoát trình xác thực của mình để lấy lại toàn bộ số dư hoặc có khả năng đặt cọc nhiều hơn nữa bằng cách sử dụng phần thưởng của họ để kiếm thêm lợi suất.
+Kể từ khi bản nâng cấp Thượng Hải/Capella kích hoạt việc rút tiền, các trình xác thực được khuyến khích rút số dư đặt cọc của họ trên 32 ETH, vì những khoản tiền này không làm tăng thêm lợi suất và nếu không sẽ bị khóa. Tùy thuộc vào APR (được xác định bởi tổng số ETH đã đặt cọc), họ có thể được khuyến khích thoát (các) trình xác thực của mình để lấy lại toàn bộ số dư hoặc có khả năng đặt cọc nhiều hơn nữa bằng cách sử dụng phần thưởng của họ để kiếm thêm lợi suất.
 
-Một lưu ý quan trọng ở đây là việc thoát hoàn toàn của trình xác thực bị giới hạn tỷ lệ bởi Giao thức và chỉ có một số lượng trình xác thực nhất định có thể thoát trong mỗi Kỷ nguyên (mỗi 6,4 phút). Giới hạn này dao động tùy thuộc vào số lượng trình xác thực đang hoạt động, nhưng tính ra khoảng 0,33% tổng số ETH đã đặt cọc có thể được thoát khỏi mạng lưới trong một ngày.
+Một lưu ý quan trọng ở đây, việc thoát hoàn toàn của trình xác thực bị giới hạn tỷ lệ bởi giao thức và chỉ có một số lượng trình xác thực nhất định có thể thoát mỗi kỷ nguyên (mỗi 6,4 phút). Giới hạn này dao động tùy thuộc vào số lượng trình xác thực đang hoạt động, nhưng tính ra khoảng 0,33% tổng số ETH đã đặt cọc có thể được thoát khỏi mạng lưới trong một ngày.
 
-Điều này ngăn chặn một cuộc di cư hàng loạt của các khoản tiền đã đặt cọc. Hơn nữa, nó ngăn chặn một kẻ tấn công tiềm năng có quyền truy cập vào một phần lớn tổng số ETH đã đặt cọc thực hiện một hành vi vi phạm có thể bị phạt cắt giảm và thoát/rút toàn bộ số dư của trình xác thực vi phạm trong cùng một Kỷ nguyên trước khi Giao thức có thể thực thi hình phạt cắt giảm.
+Điều này ngăn chặn một cuộc di cư hàng loạt của các khoản tiền đã đặt cọc. Hơn nữa, nó ngăn chặn một kẻ tấn công tiềm năng có quyền truy cập vào một phần lớn tổng số ETH đã đặt cọc thực hiện một hành vi vi phạm có thể bị phạt cắt giảm và thoát/rút toàn bộ số dư của trình xác thực vi phạm trong cùng một kỷ nguyên trước khi giao thức có thể thực thi hình phạt cắt giảm.
 
-APR cũng được cố ý thiết kế linh hoạt, cho phép một thị trường những người đặt cọc cân bằng mức thù lao mà họ sẵn sàng nhận để giúp bảo mật mạng lưới. Nếu tỷ lệ này quá thấp, thì các trình xác thực sẽ thoát ở một tỷ lệ bị giới hạn bởi Giao thức. Dần dần, điều này sẽ làm tăng APR cho tất cả những người ở lại, thu hút những người đặt cọc mới hoặc những người quay trở lại một lần nữa.
+APR cũng được cố ý làm cho linh hoạt, cho phép một thị trường những người đặt cọc cân bằng số tiền họ sẵn sàng được trả để giúp bảo mật mạng lưới. Nếu tỷ lệ quá thấp, thì các trình xác thực sẽ thoát ở một tỷ lệ bị giới hạn bởi giao thức. Dần dần điều này sẽ làm tăng APR cho tất cả những người ở lại, thu hút những người đặt cọc mới hoặc quay trở lại một lần nữa.
 </ExpandableCard>
 
 ## Chuyện gì đã xảy ra với 'Eth2'? {#eth2}
@@ -219,9 +219,9 @@ Thay vào đó, các khối được đề xuất bởi các nút xác thực đ
 
 ### The Merge và phân mảnh {#merge-and-data-sharding}
 
-Ban đầu, kế hoạch là làm việc trên phân mảnh trước The Merge để giải quyết khả năng mở rộng. Tuy nhiên, với sự bùng nổ của [các giải pháp mở rộng quy mô lớp 2 (l2)](/layer-2/), ưu tiên đã chuyển sang việc hoán đổi bằng chứng công việc (PoW) sang bằng chứng cổ phần (PoS) trước.
+Ban đầu, kế hoạch là làm việc trên phân mảnh trước The Merge để giải quyết khả năng mở rộng. Tuy nhiên, với sự bùng nổ của [các giải pháp mở rộng quy mô lớp 2 (L2)](/layer-2/), ưu tiên đã chuyển sang việc hoán đổi bằng chứng công việc (PoW) sang bằng chứng cổ phần (PoS) trước.
 
-Các kế hoạch cho phân mảnh đang phát triển nhanh chóng, nhưng với sự gia tăng và thành công của các công nghệ lớp 2 (l2) để mở rộng quy mô thực thi giao dịch, các kế hoạch phân mảnh đã chuyển sang việc tìm ra cách tối ưu nhất để phân bổ gánh nặng lưu trữ dữ liệu lệnh gọi nén từ các hợp đồng Rollup, cho phép tăng trưởng theo cấp số nhân về công suất mạng lưới. Điều này sẽ không thể thực hiện được nếu không chuyển đổi sang bằng chứng cổ phần (PoS) trước.
+Các kế hoạch cho phân mảnh đang phát triển nhanh chóng, nhưng với sự gia tăng và thành công của các công nghệ lớp 2 (L2) để mở rộng quy mô thực thi giao dịch, các kế hoạch phân mảnh đã chuyển sang việc tìm ra cách tối ưu nhất để phân bổ gánh nặng lưu trữ dữ liệu lệnh gọi nén từ các hợp đồng Rollup, cho phép tăng trưởng theo cấp số nhân về công suất mạng lưới. Điều này sẽ không thể thực hiện được nếu không chuyển đổi sang bằng chứng cổ phần (PoS) trước.
 
 <ButtonLink href="/roadmap/danksharding/">
   Phân mảnh

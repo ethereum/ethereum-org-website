@@ -83,7 +83,7 @@ Bây giờ, chúng ta chỉ định hàm để tạo ra một bộ nhớ đệm:
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Tạo tuần tự tập dữ liệu ban đầu
+    # Tuần tự tạo ra tập dữ liệu ban đầu
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Quá trình tạo bộ nhớ đệm bao gồm việc đầu tiên là lấp đầy tuần tự 32 MB bộ nhớ, sau đó thực hiện hai lượt chạy thuật toán _RandMemoHash_ của Sergio Demian Lerner từ [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Đầu ra là một tập hợp gồm 524288 giá trị 64-byte.
+Quá trình tạo bộ nhớ đệm bao gồm việc đầu tiên là lấp đầy tuần tự 32 MB bộ nhớ, sau đó thực hiện ba lượt (`CACHE_ROUNDS`) thuật toán _RandMemoHash_ của Sergio Demian Lerner từ [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Đầu ra là một tập hợp gồm 524288 giá trị 64-byte.
 
 ## Hàm tổng hợp dữ liệu {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho b�
 
 ## Phụ lục {#appendix}
 
-Đoạn mã sau nên được thêm vào đầu nếu bạn quan tâm đến việc chạy thông số kỹ thuật Python ở trên dưới dạng mã.
+Đoạn mã sau đây nên được thêm vào đầu nếu bạn quan tâm đến việc chạy đặc tả Python ở trên dưới dạng mã.
 
 ```python
 import sha3, copy
 
-# Giả định thứ tự bit little-endian (giống như các kiến trúc Intel)
+# Giả định thứ tự bit little endian (giống với các kiến trúc Intel)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -248,7 +248,7 @@ def serialize_cache(ds):
 
 serialize_dataset = serialize_cache
 
-# hàm băm sha3, xuất ra 64 byte
+# Hàm băm sha3, xuất ra 64 byte
 def sha3_512(x):
     return hash_words(lambda v: sha3.sha3_512(v).digest(), 64, x)
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True
