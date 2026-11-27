@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useId, useState } from "react"
 import {
   Ban,
   Check,
@@ -73,6 +73,7 @@ const outcomes = (rules: Rules) => {
  */
 const AccountRulesWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
+  const uid = useId()
   const amount = numberFormat(useLocale()).format(LIMIT_ETH)
   const [rules, setRules] = useState<Rules>(OFF)
   const situations = outcomes(rules)
@@ -106,6 +107,8 @@ const AccountRulesWidget = ({ onAnswer, locked }: WidgetProps) => {
                 <Button
                   variant="ghost"
                   aria-pressed={on}
+                  aria-labelledby={`${uid}-${id}-label`}
+                  aria-describedby={`${uid}-${id}-note`}
                   disabled={locked}
                   onClick={() => toggle(id)}
                   className={cn(
@@ -126,14 +129,20 @@ const AccountRulesWidget = ({ onAnswer, locked }: WidgetProps) => {
                     {on && <Check className="size-4" />}
                   </span>
                   <span className="flex flex-col gap-0.5">
-                    <span className="flex items-center gap-2 font-bold">
+                    <span
+                      id={`${uid}-${id}-label`}
+                      className="flex items-center gap-2 font-bold"
+                    >
                       <Icon
                         className={cn("size-4 shrink-0", courseText)}
                         aria-hidden
                       />
                       {t(`page-courses-widget-account-rules-rule-${id}`)}
                     </span>
-                    <span className="text-sm font-normal text-body-medium">
+                    <span
+                      id={`${uid}-${id}-note`}
+                      className="text-sm font-normal text-body-medium"
+                    >
                       {t(`page-courses-widget-account-rules-rule-${id}-note`, {
                         amount,
                       })}

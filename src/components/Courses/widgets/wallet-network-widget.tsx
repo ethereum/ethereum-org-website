@@ -16,8 +16,8 @@ const PARTS = ["account", "network", "address", "balance", "to"] as const
 type Part = (typeof PARTS)[number]
 const ANSWER: Part = "network"
 
-const Hex = ({ children }: { children: string }) => (
-  <span dir="ltr" className="font-mono">
+const Hex = ({ id, children }: { id?: string; children: string }) => (
+  <span id={id} dir="ltr" className="font-mono">
     {children}
   </span>
 )
@@ -36,7 +36,8 @@ const rowClasses = cn(
  */
 const WalletNetworkWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
   const t = useTranslations("page-courses")
-  const titleId = useId()
+  const uid = useId()
+  const titleId = `${uid}-title`
   const [picked, setPicked] = useState<Part | "">("")
 
   const resultFor = (id: Part): PickResult | undefined => {
@@ -77,8 +78,10 @@ const WalletNetworkWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
     ),
     to: (
       <span className="flex flex-wrap items-center gap-x-2">
-        {t("page-courses-widget-wallet-network-to-value")}
-        <Hex>0x2c7a…5f73</Hex>
+        <span id={`${uid}-to-text`}>
+          {t("page-courses-widget-wallet-network-to-value")}
+        </span>
+        <Hex id={`${uid}-to-address`}>0x2c7a…5f73</Hex>
       </span>
     ),
   }
@@ -111,6 +114,9 @@ const WalletNetworkWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
             value={id}
             className={rowClasses}
             data-result={resultFor(id)}
+            aria-labelledby={
+              id === "to" ? `${uid}-to-text ${uid}-to-address` : undefined
+            }
           >
             <span className="flex min-w-0 items-center justify-between gap-2 text-md text-body">
               {values[id]}

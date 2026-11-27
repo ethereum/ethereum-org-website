@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { Coins, KeyRound, Lock, LockOpen, Mailbox } from "lucide-react"
 import { useTranslations } from "next-intl"
 
@@ -41,6 +41,7 @@ type Outcome =
  */
 const MailboxWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
+  const uid = useId()
   const [posted, setPosted] = useState<Sender[]>([])
   const [open, setOpen] = useState(false)
   const [hover, setHover] = useState<string | null>(null)
@@ -192,27 +193,33 @@ const MailboxWidget = ({ onComplete }: WidgetProps) => {
           {t("page-courses-widget-mailbox-letters-title")}
         </h3>
         {waiting.length ? (
-          <ul ref={paymentsRef} className="m-0 flex list-none flex-wrap gap-2">
-            {waiting.map((sender) => (
-              <li key={sender} className="m-0">
-                <DraggableTile
-                  onClick={() => post(sender)}
-                  onPlace={(target) => post(sender, target)}
-                  onHover={setHover}
-                  className={tile}
-                >
-                  <Coins
-                    className={cn("size-5 shrink-0", courseText)}
-                    aria-hidden
-                  />
-                  {senderName(sender)}
-                  <span className="sr-only">
-                    {t("page-courses-widget-mailbox-post-hint")}
-                  </span>
-                </DraggableTile>
-              </li>
-            ))}
-          </ul>
+          <>
+            <p id={`${uid}-post-hint`} className="sr-only">
+              {t("page-courses-widget-mailbox-post-hint")}
+            </p>
+            <ul
+              ref={paymentsRef}
+              className="m-0 flex list-none flex-wrap gap-2"
+            >
+              {waiting.map((sender) => (
+                <li key={sender} className="m-0">
+                  <DraggableTile
+                    aria-describedby={`${uid}-post-hint`}
+                    onClick={() => post(sender)}
+                    onPlace={(target) => post(sender, target)}
+                    onHover={setHover}
+                    className={tile}
+                  >
+                    <Coins
+                      className={cn("size-5 shrink-0", courseText)}
+                      aria-hidden
+                    />
+                    {senderName(sender)}
+                  </DraggableTile>
+                </li>
+              ))}
+            </ul>
+          </>
         ) : (
           <p className="m-0 text-body-medium">
             {t("page-courses-widget-mailbox-all-posted")}
@@ -224,12 +231,16 @@ const MailboxWidget = ({ onComplete }: WidgetProps) => {
         <h3 className="m-0 text-md font-bold">
           {t("page-courses-widget-mailbox-keys")}
         </h3>
+        <p id={`${uid}-key-hint`} className="sr-only">
+          {t("page-courses-widget-mailbox-key-hint")}
+        </p>
         {/* aria-disabled, not disabled, so a focused key keeps focus on open */}
         <ul className="m-0 flex list-none flex-wrap gap-2">
           {KEYS.map((key) => (
             <li key={key} className="m-0">
               <DraggableTile
                 aria-disabled={open}
+                aria-describedby={`${uid}-key-hint`}
                 onClick={() => tryKey(key)}
                 onPlace={(target) => tryKey(key, target)}
                 onHover={setHover}
@@ -240,9 +251,6 @@ const MailboxWidget = ({ onComplete }: WidgetProps) => {
                   aria-hidden
                 />
                 {keyName(key)}
-                <span className="sr-only">
-                  {t("page-courses-widget-mailbox-key-hint")}
-                </span>
               </DraggableTile>
             </li>
           ))}

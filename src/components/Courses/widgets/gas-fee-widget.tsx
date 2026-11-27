@@ -56,7 +56,7 @@ const GasFeeWidget = ({ onAnswer, locked }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label htmlFor={sliderId} className="flex justify-between font-bold">
           <span>{t("page-courses-widget-gas-price")}</span>
-          <span className={courseText}>
+          <span aria-hidden className={courseText}>
             {t("page-courses-widget-gas-unit", { value: int.format(price) })}
           </span>
         </label>

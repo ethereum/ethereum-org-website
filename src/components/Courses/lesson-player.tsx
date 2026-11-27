@@ -717,7 +717,7 @@ const LessonPlayer = ({
             <span
               className={cn(
                 "flex shrink-0 items-center gap-1 font-bold tabular-nums transition-colors",
-                combo > 0 ? courseText : "text-disabled"
+                combo > 0 ? courseText : "text-body-medium"
               )}
               aria-hidden
             >

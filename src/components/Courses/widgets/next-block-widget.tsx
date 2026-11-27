@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useId, useState } from "react"
 import { Box, Check, Coins } from "lucide-react"
 import { useTranslations } from "next-intl"
 
@@ -38,6 +38,7 @@ const BEST = [...LINE]
 
 const NextBlockWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
+  const uid = useId()
   const [picked, setPicked] = useState<PaymentId[]>([])
 
   const name = (id: PaymentId) => t(`page-courses-widget-next-block-name-${id}`)
@@ -102,6 +103,7 @@ const NextBlockWidget = ({ onAnswer, locked }: WidgetProps) => {
                   onClick={() => toggle(id)}
                   disabled={locked || (full && !inBlock)}
                   aria-pressed={inBlock}
+                  aria-labelledby={`${uid}-${id}-name ${uid}-${id}-tip`}
                   className={cn(
                     chunkyTile,
                     "flex h-full w-full items-center justify-between gap-3 p-3 text-start text-body disabled:opacity-50 hover-link:!text-body",
@@ -110,8 +112,13 @@ const NextBlockWidget = ({ onAnswer, locked }: WidgetProps) => {
                   )}
                 >
                   <span className="flex flex-col gap-1">
-                    <span className="font-bold">{name(id)}</span>
-                    <span className="text-sm font-semibold text-body-medium">
+                    <span id={`${uid}-${id}-name`} className="font-bold">
+                      {name(id)}
+                    </span>
+                    <span
+                      id={`${uid}-${id}-tip`}
+                      className="text-sm font-semibold text-body-medium"
+                    >
                       {t(`page-courses-widget-next-block-tip-${TIPS[tip]}`)}
                     </span>
                   </span>

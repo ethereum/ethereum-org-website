@@ -97,7 +97,7 @@ const PoolSwapWidget = ({ onComplete }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label htmlFor={sliderId} className="flex flex-col gap-1 font-bold">
           <span>{t(key("label"))}</span>
-          <span className={cn("text-xl", courseText)}>
+          <span aria-hidden className={cn("text-xl", courseText)}>
             {t(key(`size-${size}`))}
           </span>
         </label>

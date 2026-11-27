@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useId, useState } from "react"
 import { Calculator } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -66,6 +66,7 @@ const evaluate = (entries: Entry[]) => {
  */
 const SlotCalcWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
+  const uid = useId()
   const locale = useLocale()
   const int = numberFormat(locale)
   const result = numberFormat(locale, { maximumFractionDigits: 2 })
@@ -138,6 +139,7 @@ const SlotCalcWidget = ({ onAnswer, locked }: WidgetProps) => {
               key={id}
               type="button"
               disabled={locked}
+              aria-labelledby={`${uid}-${id}-value ${uid}-${id}-label`}
               onClick={() => pickValue(id)}
               className={cn(
                 chunkyTile,
@@ -145,10 +147,16 @@ const SlotCalcWidget = ({ onAnswer, locked }: WidgetProps) => {
                 "disabled:cursor-default disabled:opacity-60 disabled:active:translate-y-0 disabled:active:border-b-4"
               )}
             >
-              <span className="text-xl font-bold tabular-nums">
+              <span
+                id={`${uid}-${id}-value`}
+                className="text-xl font-bold tabular-nums"
+              >
                 {int.format(value)}
               </span>
-              <span className="text-sm text-body-medium">
+              <span
+                id={`${uid}-${id}-label`}
+                className="text-sm text-body-medium"
+              >
                 {t(`page-courses-widget-slot-calc-key-${id}`)}
               </span>
             </button>

@@ -28,7 +28,8 @@ const RiskSpotWidget = ({
   locked,
 }: WidgetProps & { config: RiskSpotConfig }) => {
   const t = useTranslations("page-courses")
-  const titleId = useId()
+  const uid = useId()
+  const titleId = `${uid}-title`
   const [flagged, setFlagged] = useState<string[]>([])
   const key = (suffix: string) => `page-courses-widget-${name}-${suffix}`
 
@@ -74,6 +75,8 @@ const RiskSpotWidget = ({
                 <button
                   type="button"
                   aria-pressed={on}
+                  aria-labelledby={`${uid}-${id}-label ${uid}-${id}-value`}
+                  aria-describedby={locked ? `${uid}-${id}-note` : undefined}
                   disabled={locked}
                   onClick={() => toggle(id)}
                   className={cn(
@@ -89,10 +92,16 @@ const RiskSpotWidget = ({
                   )}
                 >
                   <span className="flex min-w-0 flex-1 flex-col">
-                    <span className="text-sm text-body-medium">
+                    <span
+                      id={`${uid}-${id}-label`}
+                      className="text-sm text-body-medium"
+                    >
                       {t(key(`row-${id}-label`))}
                     </span>
-                    <span className="font-semibold break-words">
+                    <span
+                      id={`${uid}-${id}-value`}
+                      className="font-semibold break-words"
+                    >
                       {t(key(`row-${id}-value`))}
                     </span>
                   </span>
@@ -111,6 +120,7 @@ const RiskSpotWidget = ({
                 </button>
                 {locked && (
                   <p
+                    id={`${uid}-${id}-note`}
                     className={cn(
                       "m-0 ps-3 text-sm",
                       risky ? "text-body" : "text-body-medium"

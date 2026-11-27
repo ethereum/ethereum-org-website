@@ -32,7 +32,8 @@ const FIELDS = ["from", "kind", "does"] as const
 
 const DelegationCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
   const t = useTranslations("page-courses")
-  const listLabelId = useId()
+  const uid = useId()
+  const listLabelId = `${uid}-list`
   const [picked, setPicked] = useState<RequestId | "">("")
 
   const resultFor = (id: RequestId): PickResult | undefined => {
@@ -67,64 +68,91 @@ const DelegationCheckWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
         disabled={locked}
         onValueChange={(id) => pick(id as RequestId)}
       >
-        {REQUESTS.map(({ id, contract, allNetworks }, idx) => (
-          <RadioGroup.Item
-            key={id}
-            value={id}
-            className={cn(
-              chunkyTile,
-              "group/option flex w-full cursor-pointer items-start gap-3 p-3 text-start focus-visible:outline-4 focus-visible:outline-(--course-soft)",
-              pickedTile,
-              "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
-            )}
-            data-result={resultFor(id)}
-          >
-            <Center
-              aria-hidden
+        {REQUESTS.map(({ id, contract, allNetworks }, idx) => {
+          const partId = (row: string, part: "label" | "value") =>
+            `${uid}-${id}-${row}-${part}`
+          const rows = [
+            ...FIELDS,
+            ...(contract ? ["contract"] : []),
+            "networks",
+          ]
+          return (
+            <RadioGroup.Item
+              key={id}
+              value={id}
+              aria-labelledby={rows
+                .flatMap((row) => [partId(row, "label"), partId(row, "value")])
+                .join(" ")}
               className={cn(
-                "size-8 shrink-0 rounded-full",
-                pickedMarker(resultFor(id))
+                chunkyTile,
+                "group/option flex w-full cursor-pointer items-start gap-3 p-3 text-start focus-visible:outline-4 focus-visible:outline-(--course-soft)",
+                pickedTile,
+                "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
               )}
+              data-result={resultFor(id)}
             >
-              {String.fromCharCode(65 + idx)}
-            </Center>
-            <span className="grid min-w-0 flex-1 grid-cols-1 gap-x-3 gap-y-0.5 sm:grid-cols-[auto_1fr]">
-              {FIELDS.map((field) => (
-                <Fragment key={field}>
-                  <span className="text-sm text-body-medium">
-                    {t(`page-courses-widget-delegation-field-${field}`)}
-                  </span>
-                  <span className="font-semibold">
-                    {t(`page-courses-widget-delegation-${id}-${field}`)}
-                  </span>
-                </Fragment>
-              ))}
-              {contract && (
-                <>
-                  <span className="text-sm text-body-medium">
-                    {t("page-courses-widget-delegation-field-contract")}
-                  </span>
-                  <span className="font-semibold">
-                    <span dir="ltr" className="font-mono text-sm">
-                      {contract}
-                    </span>{" "}
-                    {t("page-courses-widget-delegation-unknown")}
-                  </span>
-                </>
-              )}
-              <span className="text-sm text-body-medium">
-                {t("page-courses-widget-delegation-field-networks")}
-              </span>
-              <span className="font-semibold">
-                {t(
-                  allNetworks
-                    ? "page-courses-widget-delegation-networks-all"
-                    : "page-courses-widget-delegation-networks-one"
+              <Center
+                aria-hidden
+                className={cn(
+                  "size-8 shrink-0 rounded-full",
+                  pickedMarker(resultFor(id))
                 )}
+              >
+                {String.fromCharCode(65 + idx)}
+              </Center>
+              <span className="grid min-w-0 flex-1 grid-cols-1 gap-x-3 gap-y-0.5 sm:grid-cols-[auto_1fr]">
+                {FIELDS.map((field) => (
+                  <Fragment key={field}>
+                    <span
+                      id={partId(field, "label")}
+                      className="text-sm text-body-medium"
+                    >
+                      {t(`page-courses-widget-delegation-field-${field}`)}
+                    </span>
+                    <span id={partId(field, "value")} className="font-semibold">
+                      {t(`page-courses-widget-delegation-${id}-${field}`)}
+                    </span>
+                  </Fragment>
+                ))}
+                {contract && (
+                  <>
+                    <span
+                      id={partId("contract", "label")}
+                      className="text-sm text-body-medium"
+                    >
+                      {t("page-courses-widget-delegation-field-contract")}
+                    </span>
+                    <span
+                      id={partId("contract", "value")}
+                      className="font-semibold"
+                    >
+                      <span dir="ltr" className="font-mono text-sm">
+                        {contract}
+                      </span>{" "}
+                      {t("page-courses-widget-delegation-unknown")}
+                    </span>
+                  </>
+                )}
+                <span
+                  id={partId("networks", "label")}
+                  className="text-sm text-body-medium"
+                >
+                  {t("page-courses-widget-delegation-field-networks")}
+                </span>
+                <span
+                  id={partId("networks", "value")}
+                  className="font-semibold"
+                >
+                  {t(
+                    allNetworks
+                      ? "page-courses-widget-delegation-networks-all"
+                      : "page-courses-widget-delegation-networks-one"
+                  )}
+                </span>
               </span>
-            </span>
-          </RadioGroup.Item>
-        ))}
+            </RadioGroup.Item>
+          )
+        })}
       </RadioGroup.Root>
 
       {locked && (
