@@ -20,7 +20,6 @@ import externalTutorials from "@/data/externalTutorials.json"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import TutorialSubmitModal from "./_components/modal"
-import TutorialCard from "./_components/tutorial-card"
 import TutorialsList from "./_components/tutorials"
 import TutorialsPageJsonLD from "./page-jsonld"
 
@@ -79,15 +78,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           className="mx-auto my-page w-full max-w-screen-lg shadow-xl"
           dir={dir}
         >
-          <TutorialsList
-            tutorials={tutorials}
-            cards={Object.fromEntries(
-              tutorials.map((tutorial) => [
-                tutorial.href,
-                <TutorialCard key={tutorial.href} tutorial={tutorial} />,
-              ])
-            )}
-          />
+          <TutorialsList tutorials={tutorials} />
         </MainArticle>
       </I18nProvider>
 

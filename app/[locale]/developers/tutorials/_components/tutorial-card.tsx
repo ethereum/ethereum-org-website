@@ -26,7 +26,7 @@ const TutorialCard = ({ tutorial }: { tutorial: ITutorial }) => {
   return (
     <BaseLink
       href={tutorial.href}
-      className="flow block border-b px-page py-8 no-underline duration-100 hover:bg-background-highlight"
+      className="flow block border-b px-page py-8 no-underline duration-100 [contain-intrinsic-size:auto_16rem] [content-visibility:auto] hover:bg-background-highlight"
       hideArrow
     >
       <Flex className="items-start justify-between gap-4 max-md:flex-col">

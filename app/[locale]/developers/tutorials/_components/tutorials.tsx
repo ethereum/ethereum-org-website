@@ -1,6 +1,6 @@
 "use client"
 
-import { Fragment, type ReactNode, useEffect, useMemo, useState } from "react"
+import { type ReactNode, useEffect, useMemo, useState } from "react"
 import {
   ArchiveX,
   Code,
@@ -32,6 +32,8 @@ import TagFilter from "@/components/ui/tag-filter"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTagCounts } from "@/lib/utils/tags"
 
+import TutorialCard from "./tutorial-card"
+
 const MAX_DEFAULT_TAGS = 12
 
 const SKILL_ICONS: Record<string, ReactNode> = {
@@ -43,11 +45,9 @@ const SKILL_ICONS: Record<string, ReactNode> = {
 
 type TutorialsListProps = {
   tutorials: ITutorial[]
-  // Server-rendered card per tutorial, keyed by href
-  cards: Record<string, ReactNode>
 }
 
-const TutorialsList = ({ tutorials, cards }: TutorialsListProps) => {
+const TutorialsList = ({ tutorials }: TutorialsListProps) => {
   const t = useTranslations("page-developers-tutorials")
   const tCommon = useTranslations("common")
 
@@ -329,8 +329,8 @@ const TutorialsList = ({ tutorials, cards }: TutorialsListProps) => {
         <h2 className="sr-only">{t("page-tutorials-available")}</h2>
       )}
 
-      {filteredTutorials.map(({ href }) => (
-        <Fragment key={href}>{cards[href]}</Fragment>
+      {filteredTutorials.map((tutorial) => (
+        <TutorialCard key={tutorial.href} tutorial={tutorial} />
       ))}
     </>
   )
