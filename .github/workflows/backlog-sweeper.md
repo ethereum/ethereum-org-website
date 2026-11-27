@@ -66,6 +66,7 @@ safe-outputs:
   noop:
     report-as-issue: false
   report-failure-as-issue: false
+  report-failed-jobs: false
   threat-detection:
     engine:
       id: claude
