@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { Check, ChevronDown, LayoutList } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
 
@@ -92,6 +92,7 @@ const TrackNav = ({
   shown: CatalogTrack[]
 }) => {
   const t = useTranslations("page-courses")
+  const uid = useId()
   const locale = useLocale()
   const format = numberFormat(locale).format
   const isClient = useIsClient()
@@ -192,6 +193,9 @@ const TrackNav = ({
             <a
               href={`#${id}`}
               aria-current={id === active ? "location" : undefined}
+              aria-labelledby={
+                count ? `${uid}-${id}-title ${uid}-${id}-count` : undefined
+              }
               onClick={(event) => {
                 event.preventDefault()
                 scrollToTrack(id)
@@ -205,8 +209,12 @@ const TrackNav = ({
               )}
             >
               <TrackRing share={share} />
-              {title}
-              <span className="sr-only">{count}</span>
+              <span id={`${uid}-${id}-title`}>{title}</span>
+              {count && (
+                <span id={`${uid}-${id}-count`} className="sr-only">
+                  {count}
+                </span>
+              )}
             </a>
           </li>
         ))}
@@ -235,16 +243,28 @@ const TrackNav = ({
             <DropdownMenuItem
               key={id}
               onSelect={() => scrollToTrack(id)}
+              aria-labelledby={
+                count
+                  ? `${uid}-${id}-menu-title ${uid}-${id}-menu-count`
+                  : undefined
+              }
               className={cn("gap-3", id === active && "text-primary")}
             >
               {/* Holds the ring's place so the names line up */}
               <span className="grid size-6 shrink-0 place-items-center">
                 <TrackRing share={share} />
               </span>
-              <span className="flex-1">{title}</span>
-              <span className="text-sm text-body-medium tabular-nums">
-                {count}
+              <span id={`${uid}-${id}-menu-title`} className="flex-1">
+                {title}
               </span>
+              {count && (
+                <span
+                  id={`${uid}-${id}-menu-count`}
+                  className="text-sm text-body-medium tabular-nums"
+                >
+                  {count}
+                </span>
+              )}
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>

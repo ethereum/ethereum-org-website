@@ -162,7 +162,9 @@ const FeeMeterWidget = ({ onComplete }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label htmlFor={sliderId} className="flex flex-col gap-1 font-bold">
           <span>{t("page-courses-widget-fee-meter-offer")}</span>
-          <span className={cn("text-xl", courseText)}>{offerLabel(offer)}</span>
+          <span aria-hidden className={cn("text-xl", courseText)}>
+            {offerLabel(offer)}
+          </span>
         </label>
         <input
           id={sliderId}

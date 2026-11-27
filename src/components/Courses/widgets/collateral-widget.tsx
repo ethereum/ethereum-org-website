@@ -44,7 +44,9 @@ const Slider = <Id extends string>({
     <div className="flex flex-col gap-1">
       <label htmlFor={id} className="flex flex-col gap-1 font-bold">
         <span>{label}</span>
-        <span className={cn("text-lg", courseText)}>{valueLabel(value)}</span>
+        <span aria-hidden className={cn("text-lg", courseText)}>
+          {valueLabel(value)}
+        </span>
       </label>
       <input
         id={id}

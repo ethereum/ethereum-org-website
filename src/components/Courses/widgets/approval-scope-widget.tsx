@@ -101,7 +101,7 @@ const ApprovalScopeWidget = ({ onAnswer, locked }: WidgetProps) => {
         <div className="flex flex-col gap-2">
           <label htmlFor={sliderId} className="flex flex-col gap-1 font-bold">
             <span>{t("page-courses-widget-approval-label")}</span>
-            <span className={cn("text-xl", courseText)}>
+            <span aria-hidden className={cn("text-xl", courseText)}>
               {amountLabel(stop)}
             </span>
           </label>

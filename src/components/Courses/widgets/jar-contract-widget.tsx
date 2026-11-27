@@ -84,6 +84,7 @@ const JarContractWidget = ({ onComplete }: WidgetProps) => {
               {JAR_ADDRESS}
             </span>
           </p>
+          <p className="m-0 text-sm text-body-medium">{t(key("disclaimer"))}</p>
         </div>
 
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">

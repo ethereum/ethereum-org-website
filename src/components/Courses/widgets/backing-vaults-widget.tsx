@@ -61,7 +61,9 @@ const BackingVaultsWidget = ({ onComplete }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label htmlFor={sliderId} className="flex flex-col gap-1 font-bold">
           <span>{t("page-courses-widget-backing-vaults-price")}</span>
-          <span className={cn("text-xl", courseText)}>{priceLabel(stop)}</span>
+          <span aria-hidden className={cn("text-xl", courseText)}>
+            {priceLabel(stop)}
+          </span>
         </label>
         <input
           id={sliderId}

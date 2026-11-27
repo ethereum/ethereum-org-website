@@ -149,6 +149,19 @@ const promoteLocale = async (
   if ((await countByLanguage(source, locale)) === 0)
     failures.push(`no documents tagged language:=${locale}`)
 
+  // A warning, not a refusal: these links break on the next deploy, but a refusal
+  // would keep serving an index with just as many.
+  const radix = await radixAnchors(source).catch((error) => {
+    console.log(
+      `::warning::${locale}: radix anchor check failed: ${(error as Error).message}`
+    )
+    return { count: 0, sample: [] as string[] }
+  })
+  if (radix.count)
+    console.log(
+      `::warning::${locale}: ${radix.count} records anchored to per-build Radix ids, e.g. ${radix.sample.join(", ")} -- give those headings a stable id (docs/site-search.md)`
+    )
+
   // Relevance last: it is the slowest check, and there is no point scoring an index that
   // already failed a structural one.
   if (!failures.length && !args.skipRelevance) {
@@ -236,6 +249,35 @@ const hitAtOne = async (collection: string, locale: string) => {
     if (top && normalizePath(top) === normalizePath(correct!)) hits++
   }
   return hits / queries.length
+}
+
+/** Records whose anchor is a Radix `useId`, which changes every build. */
+const radixAnchors = async (collection: string) => {
+  const urls: string[] = []
+  for (let page = 1; ; page++) {
+    const params = new URLSearchParams({
+      q: "*",
+      query_by: "hierarchy.lvl1",
+      // Token-based prefix match also hits ids like `basic-radix-tries`; the exact
+      // check is the `startsWith` below.
+      filter_by: "anchor:radix*",
+      include_fields: "anchor,url",
+      per_page: "250",
+      page: String(page),
+    })
+    const result = await api<{
+      hits: { document: { anchor?: string; url: string } }[]
+    }>("GET", `/collections/${collection}/documents/search?${params}`, {
+      key: SEARCH_KEY,
+    })
+    for (const { document } of result.hits)
+      if (document.anchor?.startsWith("radix-")) urls.push(document.url)
+    if (result.hits.length < 250) break
+  }
+  const pages = [
+    ...new Set(urls.map((u) => u.replace(SITE_ORIGIN, "").split("#")[0])),
+  ]
+  return { count: urls.length, sample: pages.slice(0, 5) }
 }
 
 /** Drop superseded collections for a locale, newest-first, never touching the live one. */

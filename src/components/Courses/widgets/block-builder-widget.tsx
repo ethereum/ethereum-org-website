@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useId, useState } from "react"
 import { Check, Coins } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { useLocale, useTranslations } from "next-intl"
@@ -47,6 +47,7 @@ const corner = (x: number, y: number) =>
 
 const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
   const t = useTranslations("page-courses")
+  const uid = useId()
   const locale = useLocale()
   const reduceMotion = useReducedMotion()
   const int = numberFormat(locale)
@@ -195,7 +196,9 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
                   hit ? "text-green-700 dark:text-green-400" : "text-body"
                 )}
               >
-                {int.format(tips)}
+                {t("page-courses-widget-block-tips-value", {
+                  value: int.format(tips),
+                })}
               </span>
             </div>
             <div className="h-3 overflow-hidden rounded-full bg-background">
@@ -218,6 +221,7 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
             {POOL.map((tx) => {
               const inBlock = picked.includes(tx.id)
               const fits = inBlock || gasUsed + tx.gas <= GAS_LIMIT
+              const partId = (part: string) => `${uid}-${tx.id}-${part}`
               return (
                 <li key={tx.id} className="m-0">
                   <Button
@@ -225,6 +229,13 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
                     onClick={() => toggle(tx.id)}
                     disabled={locked || !fits}
                     aria-pressed={inBlock}
+                    aria-labelledby={[
+                      partId("gas"),
+                      partId("tip"),
+                      !fits && partId("full"),
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
                     className={cn(
                       chunkyTile,
                       "flex h-full w-full flex-col items-start gap-2 p-3 text-start text-body disabled:opacity-50 hover-link:!text-body",
@@ -233,7 +244,7 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
                     )}
                   >
                     <span className="flex w-full items-center justify-between gap-2">
-                      <span className="text-sm font-bold">
+                      <span id={partId("gas")} className="text-sm font-bold">
                         {t("page-courses-widget-block-tx-gas", {
                           gas: int.format(tx.gas),
                         })}
@@ -251,14 +262,20 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
                       className="h-2 rounded-full bg-(--course)"
                       style={{ width: `${(tx.gas / 150_000) * 100}%` }}
                     />
-                    <span className="flex items-center gap-1 text-sm font-semibold text-yellow-700 dark:text-yellow-400">
+                    <span
+                      id={partId("tip")}
+                      className="flex items-center gap-1 text-sm font-semibold text-yellow-700 dark:text-yellow-400"
+                    >
                       <Coins className="size-4" aria-hidden />
                       {t("page-courses-widget-block-tx-tip", {
                         tip: int.format(tipOf(tx)),
                       })}
                     </span>
                     {!fits && (
-                      <span className="text-sm font-bold text-error dark:text-red-400">
+                      <span
+                        id={partId("full")}
+                        className="text-sm font-bold text-error dark:text-red-400"
+                      >
                         {t("page-courses-widget-block-full")}
                       </span>
                     )}

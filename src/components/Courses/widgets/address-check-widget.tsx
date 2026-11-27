@@ -91,7 +91,8 @@ const AddressCheckWidget = ({
     return wrong ? "incorrect" : undefined
   }
   const [full, setFull] = useState(false)
-  const listLabelId = useId()
+  const uid = useId()
+  const listLabelId = `${uid}-list`
   // Once solved, show every address in full with its differences marked
   const showFull = site || full || locked
 
@@ -163,6 +164,12 @@ const AddressCheckWidget = ({
                 "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
               )}
               data-result={resultFor(id)}
+              aria-labelledby={`${uid}-${id}-address`}
+              aria-describedby={
+                site && locked && id !== "exact"
+                  ? `${uid}-${id}-why`
+                  : undefined
+              }
             >
               <Center
                 aria-hidden
@@ -174,7 +181,10 @@ const AddressCheckWidget = ({
                 {String.fromCharCode(65 + idx)}
               </Center>
               <span className="flex min-w-0 flex-col gap-1">
-                <span className="font-mono text-sm break-all">
+                <span
+                  id={`${uid}-${id}-address`}
+                  className="font-mono text-sm break-all"
+                >
                   <span dir="ltr">
                     {!showFull ? (
                       shorten(address)
@@ -186,7 +196,10 @@ const AddressCheckWidget = ({
                   </span>
                 </span>
                 {site && locked && id !== "exact" && (
-                  <span className="text-sm text-body-medium">
+                  <span
+                    id={`${uid}-${id}-why`}
+                    className="text-sm text-body-medium"
+                  >
                     {t(`${prefix}-why-${id}`)}
                   </span>
                 )}

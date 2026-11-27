@@ -88,7 +88,9 @@ const UnitConverterWidget = ({ onAnswer, locked }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label htmlFor={sliderId} className="flex flex-col gap-1 font-bold">
           <span>{t("page-courses-widget-units-label")}</span>
-          <span className={cn("text-xl", courseText)}>{ethLabel(stop)}</span>
+          <span aria-hidden className={cn("text-xl", courseText)}>
+            {ethLabel(stop)}
+          </span>
         </label>
         <input
           id={sliderId}

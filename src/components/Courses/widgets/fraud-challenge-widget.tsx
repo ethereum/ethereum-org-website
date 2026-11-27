@@ -73,7 +73,8 @@ const WINDOW = 7
 const FraudChallengeWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
-  const labelId = useId()
+  const uid = useId()
+  const labelId = `${uid}-label`
   // A passed step comes back locked: show its answer
   const [picked, setPicked] = useState(locked ? ANSWER : "")
 
@@ -137,58 +138,83 @@ const FraudChallengeWidget = ({ onAnswer, locked, wrong }: WidgetProps) => {
         disabled={locked}
         onValueChange={pick}
       >
-        {BATCHES.map(({ id, tx, rows }, idx) => (
-          <RadioGroup.Item
-            key={id}
-            value={id}
-            data-result={resultFor(id)}
-            className={cn(
-              chunkyTile,
-              "group/option flex w-full cursor-pointer items-start gap-3 p-3 text-start focus-visible:outline-4 focus-visible:outline-(--course-soft)",
-              pickedTile,
-              "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
-            )}
-          >
-            <Center
-              aria-hidden
+        {BATCHES.map(({ id, tx, rows }, idx) => {
+          const partId = (part: string) => `${uid}-${id}-${part}`
+          return (
+            <RadioGroup.Item
+              key={id}
+              value={id}
+              data-result={resultFor(id)}
+              aria-labelledby={[
+                partId("tx"),
+                ...rows.flatMap(({ who }) => [
+                  partId(`${who}-name`),
+                  partId("before"),
+                  partId(`${who}-before`),
+                  partId("claimed"),
+                  partId(`${who}-claimed`),
+                ]),
+              ].join(" ")}
               className={cn(
-                "size-8 shrink-0 rounded-full",
-                pickedMarker(resultFor(id))
+                chunkyTile,
+                "group/option flex w-full cursor-pointer items-start gap-3 p-3 text-start focus-visible:outline-4 focus-visible:outline-(--course-soft)",
+                pickedTile,
+                "disabled:cursor-default disabled:active:translate-y-0 disabled:active:border-b-4"
               )}
             >
-              {String.fromCharCode(65 + idx)}
-            </Center>
-            <span className="flex min-w-0 flex-1 flex-col gap-2">
-              <span className="font-bold">
-                {t("page-courses-widget-replay-tx", {
-                  from: name(tx.from),
-                  to: name(tx.to),
-                  amount: eth(tx.amount),
-                })}
-              </span>
-              <span className="grid grid-cols-[auto_1fr_1fr] gap-x-4 gap-y-1 text-sm">
-                <span />
-                <span className="text-end font-bold text-body-medium">
-                  {t("page-courses-widget-challenge-before")}
+              <Center
+                aria-hidden
+                className={cn(
+                  "size-8 shrink-0 rounded-full",
+                  pickedMarker(resultFor(id))
+                )}
+              >
+                {String.fromCharCode(65 + idx)}
+              </Center>
+              <span className="flex min-w-0 flex-1 flex-col gap-2">
+                <span id={partId("tx")} className="font-bold">
+                  {t("page-courses-widget-replay-tx", {
+                    from: name(tx.from),
+                    to: name(tx.to),
+                    amount: eth(tx.amount),
+                  })}
                 </span>
-                <span className="text-end font-bold text-body-medium">
-                  {t("page-courses-widget-challenge-claimed")}
-                </span>
-                {rows.map(({ who, before, claimed }) => (
-                  <span key={who} className="contents">
-                    <span>{name(who)}</span>
-                    <span className="text-end font-mono tabular-nums">
-                      {eth(before)}
-                    </span>
-                    <span className="text-end font-mono tabular-nums">
-                      {eth(claimed)}
-                    </span>
+                <span className="grid grid-cols-[auto_1fr_1fr] gap-x-4 gap-y-1 text-sm">
+                  <span />
+                  <span
+                    id={partId("before")}
+                    className="text-end font-bold text-body-medium"
+                  >
+                    {t("page-courses-widget-challenge-before")}
                   </span>
-                ))}
+                  <span
+                    id={partId("claimed")}
+                    className="text-end font-bold text-body-medium"
+                  >
+                    {t("page-courses-widget-challenge-claimed")}
+                  </span>
+                  {rows.map(({ who, before, claimed }) => (
+                    <span key={who} className="contents">
+                      <span id={partId(`${who}-name`)}>{name(who)}</span>
+                      <span
+                        id={partId(`${who}-before`)}
+                        className="text-end font-mono tabular-nums"
+                      >
+                        {eth(before)}
+                      </span>
+                      <span
+                        id={partId(`${who}-claimed`)}
+                        className="text-end font-mono tabular-nums"
+                      >
+                        {eth(claimed)}
+                      </span>
+                    </span>
+                  ))}
+                </span>
               </span>
-            </span>
-          </RadioGroup.Item>
-        ))}
+            </RadioGroup.Item>
+          )
+        })}
       </RadioGroup.Root>
 
       {locked && (

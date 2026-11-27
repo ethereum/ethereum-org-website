@@ -63,7 +63,8 @@ const SnackMachineWidget = ({ onComplete }: WidgetProps) => {
   const key = (name: string) => `page-courses-widget-vending-${name}`
   const locale = useLocale()
   const int = numberFormat(locale)
-  const payId = useId()
+  const uid = useId()
+  const payId = `${uid}-pay`
 
   const [balance, setBalance] = useState(START_BALANCE)
   const [held, setHeld] = useState(0)
@@ -141,6 +142,7 @@ const SnackMachineWidget = ({ onComplete }: WidgetProps) => {
         price: int.format(price),
         priceCount: price,
         amount: int.format(outcome.paid),
+        paidCount: outcome.paid,
       })
     }
     return t("page-courses-widget-vending-reject-stock", { item })
@@ -179,6 +181,7 @@ const SnackMachineWidget = ({ onComplete }: WidgetProps) => {
                 <Button
                   variant="ghost"
                   aria-pressed={active}
+                  aria-labelledby={`${uid}-${id}-name ${uid}-${id}-price ${uid}-${id}-stock`}
                   onClick={() => setSelected(id)}
                   className={cn(
                     chunkyTile,
@@ -192,9 +195,17 @@ const SnackMachineWidget = ({ onComplete }: WidgetProps) => {
                     aria-hidden
                   />
                   <span className="flex flex-col gap-0.5">
-                    <span className="font-bold">{itemName(id)}</span>
-                    <span className="text-sm font-semibold">{eth(price)}</span>
+                    <span id={`${uid}-${id}-name`} className="font-bold">
+                      {itemName(id)}
+                    </span>
                     <span
+                      id={`${uid}-${id}-price`}
+                      className="text-sm font-semibold"
+                    >
+                      {eth(price)}
+                    </span>
+                    <span
+                      id={`${uid}-${id}-stock`}
                       className={cn(
                         "text-sm font-semibold",
                         stock[id] === 0

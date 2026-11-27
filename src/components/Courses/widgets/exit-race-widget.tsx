@@ -43,7 +43,8 @@ const TRUST: Record<Route, string[]> = {
 const ExitRaceWidget = ({ onComplete }: WidgetProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
-  const sliderId = useId()
+  const uid = useId()
+  const sliderId = `${uid}-slider`
   const [route, setRoute] = useState<Route>("own")
   const [stop, setStop] = useState(0)
   const [arrived, setArrived] = useState<Record<Route, boolean>>({
@@ -102,6 +103,7 @@ const ExitRaceWidget = ({ onComplete }: WidgetProps) => {
             key={id}
             variant="ghost"
             aria-pressed={route === id}
+            aria-labelledby={`${uid}-${id}-label ${uid}-${id}-fee`}
             onClick={() => update(id, stop)}
             className={cn(
               chunkyTile,
@@ -112,10 +114,13 @@ const ExitRaceWidget = ({ onComplete }: WidgetProps) => {
           >
             <Icon className={cn("size-6 shrink-0", courseText)} aria-hidden />
             <span className="flex flex-col">
-              <span className="font-bold">
+              <span id={`${uid}-${id}-label`} className="font-bold">
                 {t(`page-courses-widget-exit-route-${id}`)}
               </span>
-              <span className="text-sm font-normal text-body-medium">
+              <span
+                id={`${uid}-${id}-fee`}
+                className="text-sm font-normal text-body-medium"
+              >
                 {id === "fast"
                   ? t("page-courses-widget-exit-fee", { fee: eth(FAST_FEE) })
                   : t("page-courses-widget-exit-no-fee")}
@@ -128,7 +133,9 @@ const ExitRaceWidget = ({ onComplete }: WidgetProps) => {
       <div className="flex flex-col gap-2">
         <label htmlFor={sliderId} className="flex justify-between font-bold">
           <span>{t("page-courses-widget-exit-time")}</span>
-          <span className={courseText}>{timeLabel(at)}</span>
+          <span aria-hidden className={courseText}>
+            {timeLabel(at)}
+          </span>
         </label>
         <input
           id={sliderId}
