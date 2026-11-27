@@ -56,7 +56,7 @@ Bir başka popüler örnek [SafeMath](https://docs.openzeppelin.com/contracts/3.
 
 [Birleştirilebilirlik ve birlikte çalışabilirliği](/developers/docs/smart-contracts/composability/) kolaylaştırmak için Ethereum topluluğu, **ERC'ler** biçiminde çeşitli standartlar tanımlamıştır. Bunlar hakkında daha fazla bilgiyi [standartlar](/developers/docs/standards/) bölümünde okuyabilirsiniz.
 
-Sözleşmelerinizin bir parçası olarak bir ERC'yi dahil ederken, kendi uygulamanızı oluşturmaya çalışmak yerine standart uygulamaları aramak iyi bir fikirdir. Birçok akıllı sözleşme kütüphanesi, en popüler ERC'ler için uygulamalar içerir. Örneğin, her yerde bulunan [ERC-20 misli token standardı](/developers/tutorials/understand-the-erc-20-token-smart-contract/) [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) ve [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20) içinde bulunabilir. Ek olarak, bazı ERC'ler ERC'nin kendisinin bir parçası olarak kurallı uygulamalar da sağlar.
+Sözleşmelerinizin bir parçası olarak bir ERC'yi dahil ederken, kendi uygulamanızı oluşturmaya çalışmak yerine standart uygulamaları aramak iyi bir fikirdir. Birçok akıllı sözleşme kütüphanesi, en popüler ERC'ler için uygulamalar içerir. Örneğin, her yerde bulunan [ERC-20 misli token standardı](/developers/docs/standards/tokens/erc-20/) [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) ve [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20) içinde bulunabilir. Ek olarak, bazı ERC'ler ERC'nin kendisinin bir parçası olarak kurallı uygulamalar da sağlar.
 
 Bazı ERC'lerin bağımsız olmadığını, diğer ERC'lere eklemeler olduğunu belirtmekte fayda var. Örneğin, [ERC-2612](https://eips.ethereum.org/EIPS/eip-2612), kullanılabilirliğini artırmak için ERC-20'ye bir uzantı ekler.
 
@@ -109,8 +109,7 @@ Son olarak, bir kütüphaneyi dahil edip etmemeye karar verirken genel kullanım
 
 ## İlgili eğitimler {#related-tutorials}
 
-- [Ethereum geliştiricileri için güvenlik hususları](/developers/docs/smart-contracts/security/) _– Kütüphane kullanımı da dahil olmak üzere akıllı sözleşmeler oluştururken dikkat edilmesi gereken güvenlik hususları üzerine bir eğitim._
-- [ERC-20 token akıllı sözleşmesini anlayın](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Birden fazla kütüphane tarafından sağlanan ERC-20 standardı üzerine eğitim._
+- [Ethereum geliştiricileri için güvenlik hususları](/developers/docs/smart-contracts/security/) _– Kütüphane kullanımı da dahil olmak üzere akıllı sözleşmeler oluştururken dikkat edilmesi gereken güvenlik hususları hakkında bir eğitim._
 
 ## Daha fazla bilgi {#further-reading}
 

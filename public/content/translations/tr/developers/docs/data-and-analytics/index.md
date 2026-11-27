@@ -1,6 +1,6 @@
 ---
 title: Veri ve analitik
-description: "Merkeziyetsiz uygulamalarınızda (dapp'ler) kullanmak üzere zincir içi analitik ve verilerin nasıl elde edileceği"
+description: "dapp'iniz için zincir içi verileri nasıl alırsınız: Ethereum verilerini sorgulamak ve analiz etmek için endeksleyiciler, alt grafikler, blok gezginleri, SQL analitik platformları ve API'ler."
 lang: tr
 ---
 
@@ -76,10 +76,10 @@ Başlamak için, bir endeksleyici oluşturmak, dağıtmak ve sorgulamak üzere [
 
 - [Kripto Verilerini Keşfetmek I: Veri Akışı Mimarileri](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph Ağına Genel Bakış](https://thegraph.com/docs/en/about/)
-- [Graph Sorgu Oyun Alanı](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [EtherScan'de API kod örnekleri](https://etherscan.io/apis#contracts)
+- [Graph Gezgini](https://thegraph.com/explorer)
+- [Etherscan'de API kod örnekleri](https://etherscan.io/apis#contracts)
 - [Blockscout'ta API belgeleri](https://docs.blockscout.com/devs/apis)
-- [Beaconcha.in İşaret Zinciri gezgini](https://beaconcha.in)
+- [Beaconcha.in İşaret zinciri gezgini](https://beaconcha.in)
 - [Dune Temelleri](https://docs.dune.com/#dune-basics)
 - [SubQuery Ethereum Hızlı Başlangıç Kılavuzu](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [SQD Ağına Genel Bakış](https://docs.sqd.dev/)

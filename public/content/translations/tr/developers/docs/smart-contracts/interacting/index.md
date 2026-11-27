@@ -171,16 +171,15 @@ Bir merkeziyetsiz uygulamada (dapp), kullanıcının cüzdanı (MetaMask, Rainbo
 
 ## İlgili eğitimler {#related-tutorials}
 
-- [JavaScript'ten bir akıllı sözleşmeyi çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [web3.js ve Alchemy kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [Cüzdanınızda NFT'nizi nasıl görüntüleyebilirsiniz](/developers/tutorials/how-to-view-nft-in-metamask/)
+- [NFT'nizi cüzdanınızda nasıl görüntüleyebilirsiniz](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Daha fazla bilgi {#further-reading}
 
-- [Viem belgeleri: Sözleşmelere okuma ve yazma](https://viem.sh/docs/contract/readContract)
+- [Viem belgeleri: Sözleşmelerden okuma ve sözleşmelere yazma](https://viem.sh/docs/contract/readContract)
 - [ethers.js belgeleri: Sözleşmeler](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI spesifikasyonu](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [ABI nedir? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Akıllı sözleşme ABI'leri nasıl çalışır? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## İlgili konular {#related-topics}
 

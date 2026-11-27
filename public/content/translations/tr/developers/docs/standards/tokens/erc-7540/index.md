@@ -1,21 +1,21 @@
 ---
-title: ERC-7540 Asenkron Tokenleştirilmiş Kasa Standardı
-description: Tokenleştirilmiş kasalar için asenkron yatırma ve itfa akışları ekleyen bir ERC-4626 uzantısı.
+title: "ERC-7540 Asenkron Tokenleştirilmiş Kasa Standardı"
+description: "Tokenleştirilmiş kasalar için asenkron yatırma ve itfa akışları ekleyen bir ERC-4626 uzantısı."
 lang: tr
 ---
 
 ## Giriş {#introduction}
 
-ERC-7540, asenkron yatırma ve itfa akışları için destek ekleyerek [ERC-4626 Tokenleştirilmiş Kasa Standardını](/developers/docs/standards/tokens/erc-4626/) genişletir. Bir istek-sonra-talep modeli sunar: kullanıcılar önce bir istek gönderir (varlıklarını veya paylarını kilitleyerek), ardından kasa bunu işledikten sonra sonucu talep ederler.
+ERC-7540, asenkron yatırma ve itfa akışları için destek ekleyerek [ERC-4626 Tokenleştirilmiş Kasa Standardı](/developers/docs/standards/tokens/erc-4626/)'nı genişletir. Bir istek-sonra-talep modeli sunar: kullanıcılar önce bir istek gönderir (varlıklarını veya paylarını kasaya teslim eder), ardından kasa bunu işledikten sonra sonucu talep ederler.
 
 Bu, bir kasa tek bir işlemde anında uzlaşma sağlayamadığında gereklidir, örneğin:
 
-- Tokenleştirilmiş hazineler, özel krediler ve T+1 veya T+2 uzlaşma döngülerine sahip diğer varlıklar gibi gerçek dünya varlıkları (RWA) protokolleri
+- Tokenleştirilmiş hazine bonoları, özel kredi ve T+1 veya T+2 uzlaşma döngülerine sahip diğer varlıklar gibi gerçek dünya varlıkları (RWA) protokolleri
 - Kredi değerlendirmelerinin zincir dışı gerçekleştiği eksik teminatlandırılmış borç verme
 - Köprülemenin gecikmelere yol açtığı zincirler arası kasa stratejileri
-- Kilit açma süreleri olan likit staking tokenleri (LST)
+- Kilit açma süreleri olan likit staking tokenleri
 
-Kasalar yalnızca yatırma işlemlerinde, yalnızca itfa işlemlerinde veya her ikisinde asenkron olmayı seçebilir. Bu esneklik, kasa geliştiricilerinin asenkron akışları yalnızca temel strateji gerektirdiğinde eklemesine olanak tanırken, diğer tarafı senkron tutar.
+Kasalar yalnızca yatırmalarda, yalnızca itfalarda veya her ikisinde de asenkron olmayı seçebilir. Bu esneklik, kasa geliştiricilerinin diğer tarafı senkron tutarken yalnızca temel stratejinin gerektirdiği yerlerde asenkron akışlar eklemesine olanak tanır.
 
 ## Ön Koşullar {#prerequisites}
 
@@ -23,23 +23,23 @@ Bu sayfayı daha iyi anlamak için öncelikle [token standartları](/developers/
 
 ## ERC-4626 ve ERC-7540 Karşılaştırması {#comparison}
 
-ERC-4626'da bir yatırma işlemi atomik olarak uzlaşır: yatırımcı varlıkları gönderir ve tek bir işlemde paylarını geri alır.
+ERC-4626'da bir yatırma işlemi atomik olarak uzlaşır: yatırımcı varlıkları gönderir ve tek bir işlemde payları geri alır.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 bunu iki adıma ayırır. Yatırımcı önce varlıkları kilitlemek için `requestDeposit()` çağrısı yapar, ardından kasa yöneticisinin isteği işlemesini bekler. Yerine getirildiğinde, yatırımcı paylarını talep etmek için `deposit()` çağrısı yapar. Döviz kurları istek anında değil, yerine getirilme anında belirlenir.
+ERC-7540 bunu iki adıma böler. Yatırımcı önce varlıklarını kasaya transfer eden `requestDeposit()` fonksiyonunu çağırır, ardından kasanın isteği işlemesini bekler. Bunun nasıl ve ne zaman gerçekleşeceği kasaya bağlıdır, örneğin bir zincir dışı uzlaşma tamamlandığında. Yerine getirildiğinde, yatırımcı paylarını talep etmek için `deposit()` fonksiyonunu çağırır. Döviz kuru istek anında sabitlenmez: kasa bunu genellikle isteği yerine getirdiğinde belirler, bu nedenle alınan paylar istek yapıldığında `convertToShares()` fonksiyonunun döndürdüğünden farklı olabilir.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-İtfa akışı da aynı şekilde çalışır: `requestRedeem()` payları kilitler ve yerine getirildiğinde yatırımcı varlıkları talep etmek için `redeem()` çağrısı yapar.
+İtfa akışı da aynı şekilde çalışır: `requestRedeem()` yatırımcıdan payları alır ve yerine getirildiğinde yatırımcı varlıkları talep etmek için `redeem()` fonksiyonunu çağırır.
 
 ## ERC-7540 Fonksiyonları ve Özellikleri {#body}
 
 ERC-7540, tam ERC-4626 arayüzünü devralır ancak `deposit`/`mint`/`withdraw`/`redeem` fonksiyonlarını talep fonksiyonları olarak yeniden amaçlandırır. Yeni `requestDeposit` ve `requestRedeem` fonksiyonları ilk istek adımını yönetir.
 
-Her istek üç durumdan geçer: beklemede (gönderildi, işlenmeyi bekliyor), talep edilebilir (yerine getirildi ve fiyatlandırıldı) ve talep edildi (yatırımcı paylarını veya varlıklarını aldı).
+Her istek üç durumdan geçer: beklemede (gönderildi, işlenmeyi bekliyor), talep edilebilir (yerine getirildi ve fiyatlandırıldı) ve talep edildi (yatırımcı paylarını veya varlıklarını aldı). Bir kasa, bekleme durumunu atlayarak bir isteği anında talep edilebilir hale getirebilir, ancak talep etmek her zaman ayrı bir çağrıdır. Standart, bir isteğin ne zaman talep edilebilir hale geldiğine dair hiçbir olay tanımlamaz.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Yatırma isteği akışı {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Bir yatırma isteği talep edilebilir hale geldiğinde, kullanıcı paylarını 
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-`owner` adresinden `shares` kilitler ve itfa isteği gönderir. `controller` adresi isteğin kontrolünü alır.
+`owner` adresinden `shares` kontrolünü alır ve itfa etmek için bir istek gönderir. Kasa, istek talep edilene kadar payları elinde tutabilir veya anında yakım yapabilir. `controller` adresi isteğin kontrolünü alır.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

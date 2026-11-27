@@ -41,11 +41,11 @@ Kullanıcılar için [kesinlik](/glossary/#finality), bir işlemin kalıcı hale
 
 ## Dirençli doğrulayıcılar {#resilient-validators}
 
-Bir doğrulayıcı genellikle bir imzalama anahtarı tutan tek bir makinedir. **Dağıtık doğrulayıcı teknolojisi (DVT)**, bu tek makineyi anahtarı paylaşan ve birlikte imzalayan bir makineler komitesi ile değiştirir, böylece bir bilgisayarın arızalanması veya bir anahtarın çalınması doğrulayıcıyı çökertmez. DVT üretimde aktiftir ve staking operatörleri tarafından geniş ölçekte kullanılmaktadır. Ocak 2026'da Vitalik Buterin, DVT-lite adında basitleştirilmiş bir protokol düzeyinde varyant önerdi; bu, planlanmış bir çatallanması olmayan erken aşama bir tekliftir.
+Bir doğrulayıcı genellikle bir imzalama anahtarı tutan tek bir makinedir. **Dağıtık doğrulayıcı teknolojisi (DVT)**, bu tek makineyi anahtarı paylaşan ve birlikte imzalayan bir makine komitesiyle değiştirir, böylece bir bilgisayarın arızalanması veya bir anahtarın çalınması doğrulayıcıyı devre dışı bırakmaz. DVT üretim ortamında yayındadır ve staking operatörleri tarafından geniş ölçekte kullanılmaktadır. Ocak 2026'da Vitalik Buterin, DVT-lite adı verilen basitleştirilmiş bir protokol düzeyi varyantı önerdi; bu, henüz planlanmış bir çatallanması olmayan erken aşama bir tekliftir.
 
-Ağ ayrıca [istemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/) yoluyla da kendini korur: Ethereum bağımsız olarak oluşturulmuş birkaç yazılım uygulaması üzerinde çalışır, bu nedenle bir istemcideki bir hata ağın geri kalanını ayakta bırakır.
+Ağ ayrıca [istemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/) yoluyla kendini korur: Ethereum bağımsız olarak oluşturulmuş birkaç yazılım uygulaması üzerinde çalışır, bu nedenle bir istemcideki bir hata ağın geri kalanının ayakta kalmasını sağlar.
 
-Daha önceki iki araştırma fikri olan görünüm birleştirme (view-merge) ve gizli lider seçimi, artık aktif yol haritası öğeleri değildir.
+Daha önceki iki araştırma fikri olan view-merge ve [gizli lider seçimi](/roadmap/secret-leader-election/), artık aktif yol haritası öğeleri değildir.
 
 <ButtonLink variant="outline" href="/staking/dvt/">Dağıtık doğrulayıcı teknolojisi hakkında daha fazla bilgi</ButtonLink>
 
@@ -71,21 +71,21 @@ Hayır. Bugün hiçbir kuantum bilgisayar Ethereum'un kriptografisini kıramaz. 
 
 ## Daha basit ve daha verimli protokol {#simpler-and-more-efficient-protocol}
 
-Karmaşıklık, hatalar ve güvenlik açıkları için fırsatlar yaratır. Yol haritasının bir kısmı, protokolün bakımını, denetimini ve üzerinde akıl yürütmeyi kolaylaştırmak için **Ethereum'u basitleştirmeye ve teknik borcu ortadan kaldırmaya** odaklanmaktadır. Daha basit bir protokol aynı zamanda saldırganlara inceleyebilecekleri daha az yüzey alanı sunar.
+Karmaşıklık, hatalar ve güvenlik açıkları için fırsatlar yaratır. Yol haritasının bir kısmı, protokolün bakımını, denetimini ve üzerinde düşünülmesini kolaylaştırmak için **Ethereum'u basitleştirmeye ve teknik borcu ortadan kaldırmaya** odaklanmaktadır. Daha basit bir protokol aynı zamanda saldırganlara inceleyebilecekleri daha az yüzey alanı sağlar.
 
-Şimdiye kadar sunulanlar:
+Şu ana kadar sunulanlar:
 
-- **[Pectra (Mayıs 2025)](/roadmap/pectra/)**: Dışarıdan sahipli hesapların geçici olarak akıllı sözleşme koduna yetki devretmesine olanak tanıyan ve tam hesap soyutlamaya doğru bir atlama taşı olan EIP-7702'yi tanıttı.
-- **[Fusaka (Aralık 2025)](/roadmap/fusaka/)**: Veri kullanılabilirliği iş yükünü ağ genelinde dağıtan PeerDAS'ı (EIP-7594) devreye aldı. Ayrıca blob parametrelerini artırarak toplamalar için veri işlem kapasitesini genişletti.
-- **[Dencun (Mart 2024)](/roadmap/dencun/)**: Daha ucuz Rollup verileri için blob işlemlerini (EIP-4844) tanıttı ve uzun süredir devam eden bir karmaşıklık kaynağını ortadan kaldırmak için `SELFDESTRUCT`'yi (EIP-6780) kısıtladı.
-- **[Şapella (Nisan 2023)](/staking/withdrawals/)**: Doğrulayıcıların stake edilmiş ETH'leri çekmesine (EIP-4895) olanak tanıyarak [hisse kanıtı (PoS)](/glossary/#pos) staking'inin erken dönem kısıtlamalarından birini ortadan kaldırdı.
+- **[Pectra (Mayıs 2025)](/roadmap/pectra/)**: Harici olarak sahip olunan hesapların geçici olarak akıllı sözleşme koduna yetki devretmesine olanak tanıyan ve tam hesap soyutlamaya doğru bir atlama taşı olan EIP-7702'yi tanıttı.
+- **[Fusaka (Aralık 2025)](/roadmap/fusaka/)**: Veri kullanılabilirliği iş yükünü ağa dağıtan PeerDAS'ı (EIP-7594) devreye aldı. Ayrıca blob parametrelerini artırarak toplamalar için veri işlem kapasitesini genişletti.
+- **[Dencun (Mart 2024)](/roadmap/dencun/)**: Daha ucuz Rollup verileri için blob işlemlerini (EIP-4844) tanıttı ve uzun süredir devam eden bir karmaşıklık kaynağını ortadan kaldırmak için `SELFDESTRUCT`'u (EIP-6780) kısıtladı.
+- **[Şapella (Nisan 2023)](/staking/withdrawals/)**: Doğrulayıcıların stake edilmiş ETH'leri çekmesini sağlayarak (EIP-4895), [Hisse Kanıtı (PoS)](/glossary/#pos) staking'inin erken dönem bir kısıtlamasını ortadan kaldırdı.
 - **London (Ağustos 2021)**: EIP-1559 ile gaz fiyatlandırmasını elden geçirdi, daha öngörülebilir işlem maliyetleri için bir taban ücret ve yakım mekanizması getirdi.
 
 Devam edenler:
 
 - **Glamsterdam (2026 için hedefleniyor)**: Öne çıkan özellikler ePBS (EIP-7732) ve blok düzeyinde erişim listeleridir (EIP-7928), ayrıca gazın yeniden fiyatlandırılması da değerlendirilmektedir.
 - **Hegotá (2027 için hedefleniyor)**: FOCIL (EIP-7805), mutabakat katmanında öne çıkan özelliktir. Dahil edilmesi düşünülenler: EIP-8141 (yerel hesap soyutlama).
-- **Devam eden**: [EVM](/developers/docs/evm/)'yi basitleştirme, istemci uygulamalarını uyumlu hale getirme ve kullanımdan kaldırılan özellikleri aşamalı olarak sonlandırma çabaları istemci ekipleri genelinde devam etmektedir. Durumsuzluk (katılımcıların zinciri tüm verilerini depolamadan doğrulayabilmesi) üzerindeki çalışmalar, kuantum güvenli ikili hash ağaçları etrafında yeniden tasarlanmaktadır ve nihai yaklaşım henüz onaylanmamıştır.
+- **Devam eden**: [EVM'yi](/developers/docs/evm/) basitleştirme, istemci uygulamalarını uyumlu hale getirme ve kullanımdan kaldırılan özellikleri aşamalı olarak sonlandırma çabaları istemci ekipleri genelinde devam etmektedir. [Durumsuzluk](/roadmap/statelessness/) (katılımcıların zinciri tüm verilerini depolamadan doğrulamasına izin verme) üzerindeki çalışmalar, önceki [Verkle ağacı](/roadmap/verkle-trees/) tasarımının yerini alacak olan kuantum güvenli ikili hash ağaçları etrafında yeniden tasarlanmaktadır. Nihai yaklaşım henüz onaylanmamıştır.
 
 ## Mevcut ilerleme {#current-progress}
 

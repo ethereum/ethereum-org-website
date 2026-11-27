@@ -23,5 +23,6 @@
   "page-tutorial-all": "Tümü",
   "page-tutorial-topics": "Konular",
   "page-tutorial-search-placeholder": "Eğitimlerde ara...",
-  "page-tutorial-filtering-by": "Şuna göre filtreleniyor:"
+  "page-tutorial-filtering-by": "Şuna göre filtreleniyor:",
+  "page-tutorial-removed-notice": "İstediğiniz eğitim artık mevcut değil. Aşağıdaki güncel eğitimlere göz atın."
 }

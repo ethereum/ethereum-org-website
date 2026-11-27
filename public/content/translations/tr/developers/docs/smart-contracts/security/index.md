@@ -78,7 +78,7 @@ Olağan yöntem, sözleşmenin kullanıcılardan alması beklenen sahte (mock) v
 
 Ne yazık ki, birim testi tek başına kullanıldığında akıllı sözleşme güvenliğini artırmada asgari düzeyde etkilidir. Bir birim testi, bir fonksiyonun sahte veriler için düzgün bir şekilde yürütüldüğünü kanıtlayabilir, ancak birim testleri yalnızca yazılan testler kadar etkilidir. Bu, akıllı sözleşmenizin güvenliğini bozabilecek gözden kaçan uç durumları ve güvenlik açıklarını tespit etmeyi zorlaştırır.
 
-Daha iyi bir yaklaşım, birim testini [statik ve dinamik analiz](/developers/docs/smart-contracts/testing/#static-dynamic-analysis) kullanılarak gerçekleştirilen özellik tabanlı testlerle birleştirmektir. Statik analiz, ulaşılabilir program durumlarını ve yürütme yollarını analiz etmek için [kontrol akış grafikleri](https://en.wikipedia.org/wiki/Control-flow_graph) ve [soyut sözdizimi ağaçları](https://deepsource.io/glossary/ast/) gibi düşük seviyeli temsillere dayanır. Bu arada, [akıllı sözleşme fuzzing'i](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry) gibi dinamik analiz teknikleri, güvenlik özelliklerini ihlal eden işlemleri tespit etmek için sözleşme kodunu rastgele girdi değerleriyle yürütür.
+Daha iyi bir yaklaşım, birim testini [statik ve dinamik analiz](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts) kullanılarak gerçekleştirilen özellik tabanlı testlerle birleştirmektir. Statik analiz, ulaşılabilir program durumlarını ve yürütme yollarını analiz etmek için [kontrol akış grafikleri](https://en.wikipedia.org/wiki/Control-flow_graph) ve [soyut sözdizimi ağaçları](https://deepsource.io/glossary/ast/) gibi düşük seviyeli temsillere dayanır. Bu arada, [akıllı sözleşme fuzzing'i](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry) gibi dinamik analiz teknikleri, güvenlik özelliklerini ihlal eden işlemleri tespit etmek için sözleşme kodunu rastgele girdi değerleriyle yürütür.
 
 [Biçimsel doğrulama](/developers/docs/smart-contracts/formal-verification), akıllı sözleşmelerdeki güvenlik özelliklerini doğrulamak için başka bir tekniktir. Normal testlerin aksine, biçimsel doğrulama bir akıllı sözleşmede hataların olmadığını kesin olarak kanıtlayabilir. Bu, istenen güvenlik özelliklerini yakalayan biçimsel bir şartname oluşturarak ve sözleşmelerin biçimsel bir modelinin bu şartnameye bağlı kaldığını kanıtlayarak elde edilir.
 
@@ -435,7 +435,7 @@ contract Attack {
 
 ##### Tamsayı taşmaları nasıl önlenir
 
-0.8.0 sürümünden itibaren Solidity derleyicisi, tamsayı alt taşmaları ve taşmalarıyla sonuçlanan kodu reddeder. Ancak, daha düşük bir derleyici sürümüyle derlenen sözleşmeler, aritmetik işlemleri içeren fonksiyonlarda kontroller gerçekleştirmeli veya alt taşma/taşma kontrolü yapan bir kütüphane (örneğin, [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) kullanmalıdır.
+0.8.0 sürümünden itibaren Solidity derleyicisi, tamsayı alt taşmaları ve taşmalarıyla sonuçlanan kodu reddeder. Ancak, daha düşük bir derleyici sürümüyle derlenen sözleşmeler, aritmetik işlemleri içeren fonksiyonlarda kontroller gerçekleştirmeli veya alt taşma/taşma kontrolü yapan bir kütüphane (örneğin, [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math)) kullanmalıdır.
 
 #### Kâhin (Oracle) manipülasyonu {#oracle-manipulation}
 
@@ -463,9 +463,9 @@ Varlık fiyatları için zincir içi bir kâhini sorgulamayı planlıyorsanız, 
 
 - **[Biçimsel doğrulama araçları](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Akıllı sözleşmelerdeki işlevsel doğruluğu onaylamak ve değişmezleri kontrol etmek için araçlar._
 
-- **[Akıllı sözleşme denetim hizmetleri](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Ethereum geliştirme projeleri için akıllı sözleşme denetim hizmetleri sağlayan organizasyonların listesi._
+- **[Akıllı sözleşme denetim hizmetleri](#smart-contract-auditing-services)** - _Ethereum geliştirme projeleri için akıllı sözleşme denetim hizmetleri sağlayan organizasyonların listesi._
 
-- **[Hata ödül platformları](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Hata ödüllerini koordine etmek ve akıllı sözleşmelerdeki kritik güvenlik açıklarının sorumlu bir şekilde ifşa edilmesini ödüllendirmek için platformlar._
+- **[Hata ödül platformları](#bug-bounty-platforms)** - _Hata ödüllerini koordine etmek ve akıllı sözleşmelerdeki kritik güvenlik açıklarının sorumlu bir şekilde ifşa edilmesini ödüllendirmek için platformlar._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Çatallanmış bir sözleşme ile ilgili mevcut tüm bilgileri kontrol etmek için ücretsiz bir çevrim içi araç._
 
@@ -567,10 +567,8 @@ Varlık fiyatları için zincir içi bir kâhini sorgulamayı planlıyorsanız, 
 
 - [Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [Akıllı sözleşme hatalarını bulmak için Manticore nasıl kullanılır](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
 - [Akıllı sözleşme güvenlik yönergeleri](/developers/tutorials/smart-contract-security-guidelines/)
 
-- [Token sözleşmenizi rastgele token'larla güvenli bir şekilde nasıl entegre edersiniz](/developers/tutorials/token-integration-checklist/)
+- [Token sözleşmenizi herhangi bir token ile güvenli bir şekilde nasıl entegre edersiniz](/developers/tutorials/token-integration-checklist/)
 
 - [Cyfrin Updraft - Akıllı sözleşme güvenliği ve denetimi tam kursu](https://updraft.cyfrin.io/courses/security)

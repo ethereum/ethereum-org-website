@@ -14,11 +14,11 @@ Sıfır bilgi toplamaları (ZK-rollup'lar), hesaplama ve durum depolamayı zinci
 
 **Sıfır bilgi toplamaları (ZK-rollup'lar)**, işlemleri zincir dışı yürütülen toplu işlemler halinde bir araya getirir (veya 'toplar'). Zincir dışı hesaplama, blokzincire gönderilmesi gereken veri miktarını azaltır. ZK-rollup operatörleri, her bir işlemi ayrı ayrı göndermek yerine, bir toplu işlemdeki tüm işlemleri temsil etmek için gereken değişikliklerin bir özetini sunar. Ayrıca, değişikliklerinin doğruluğunu kanıtlamak için [geçerlilik kanıtları](/glossary/#validity-proof) üretirler.
 
-ZK-rollup'ın durumu, Ethereum ağında dağıtılan bir akıllı sözleşme tarafından sürdürülür. Bu durumu güncellemek için ZK-rollup düğümleri, doğrulama için bir geçerlilik kanıtı sunmalıdır. Belirtildiği gibi, geçerlilik kanıtı, rollup tarafından önerilen durum değişikliğinin gerçekten verilen işlem toplu işleminin yürütülmesinin bir sonucu olduğuna dair kriptografik bir güvencedir. Bu, ZK-rollup'ların, durum geçişini kesinleştiren şey geçerlilik kanıtı olduğu için, [iyimser toplamaların](/developers/docs/scaling/optimistic-rollups/) yaptığı gibi tüm işlem verilerini zincir içi yayınlamasına gerek olmadığı anlamına gelir. Yine de, aşağıda açıklandığı gibi rollup'ın durumunu yeniden oluşturmak için gereken verileri yayınlarlar.
+ZK-rollup'ın durumu, Ethereum ağında dağıtılan bir akıllı sözleşme tarafından sürdürülür. Bu durumu güncellemek için ZK-rollup düğümleri doğrulama için bir geçerlilik kanıtı sunmalıdır. Belirtildiği gibi, geçerlilik kanıtı, rollup tarafından önerilen durum değişikliğinin gerçekten verilen işlem toplu işleminin yürütülmesinin bir sonucu olduğuna dair kriptografik bir güvencedir. Bu, durum geçişini kesinleştiren şey geçerlilik kanıtı olduğu için, ZK-rollup'ların [iyimser toplamaların](/developers/docs/scaling/optimistic-rollups/) yaptığı gibi tüm işlem verilerini zincir içi yayınlamasına gerek olmadığı anlamına gelir. Aşağıda açıklandığı gibi, rollup'ın durumunu yeniden oluşturmak için gereken verileri yine de yayınlarlar.
 
-Fonları bir ZK-rollup'tan Ethereum'a taşırken herhangi bir gecikme olmaz çünkü çıkış işlemleri, ZK-rollup sözleşmesi geçerlilik kanıtını doğruladığında yürütülür. Aksine, iyimser toplamalardan fon çekmek, herkesin çıkış işlemine bir [sahtekarlık kanıtı](/glossary/#fraud-proof) ile itiraz etmesine olanak tanımak için bir gecikmeye tabidir.
+Bir ZK-rollup'tan Ethereum'a fon taşırken herhangi bir itiraz süresi yoktur: çıkış işlemleri, ZK-rollup sözleşmesi onları kapsayan geçerlilik kanıtını doğruladığında yürütülür, bu nedenle bekleme süresi yalnızca bu kanıtı oluşturmak ve doğrulamak için geçen süre kadardır (bazı ZK-rollup'lar kendi kısa gecikmelerini ekler). Aksine, iyimser toplamalardan fon çekmek, herkesin çıkış işlemine bir [sahtekarlık kanıtı](/glossary/#fraud-proof) ile itiraz etmesine olanak tanımak için bir gecikmeye tabidir.
 
-ZK-rollup'lar işlemleri Ethereum'a `calldata` olarak veya [blob'lar](/roadmap/danksharding/) içinde yazar. `calldata`, akıllı sözleşme işlevlerine yapılan harici çağrılara dahil edilen verilerin depolandığı yerdir. Her iki durumda da veriler blokzincirde yayınlanarak herkesin rollup'ın durumunu bağımsız olarak yeniden oluşturmasına olanak tanır. ZK-rollup'lar işlem verilerini azaltmak için sıkıştırma teknikleri kullanır; örneğin, hesaplar bir adres yerine bir endeks ile temsil edilir, bu da 28 bayt veri tasarrufu sağlar. Zincir içi veri yayını, rollup'lar için önemli bir maliyettir, bu nedenle veri sıkıştırma kullanıcılar için ücretleri azaltabilir.
+ZK-rollup'lar işlemleri Ethereum'a `calldata` olarak veya [blob'lar](/roadmap/danksharding/) içinde yazar. `calldata`, akıllı sözleşme işlevlerine yapılan harici çağrılara dahil edilen verilerin depolandığı yerdir. Her iki durumda da veriler blokzincirde yayınlanarak herkesin rollup'ın durumunu bağımsız olarak yeniden oluşturmasına olanak tanır. ZK-rollup'lar işlem verilerini azaltmak için sıkıştırma teknikleri kullanır; örneğin, hesaplar bir adres yerine bir endeks ile temsil edilir, bu da 28 bayt veri tasarrufu sağlar. Zincir içi veri yayını rollup'lar için önemli bir maliyettir, bu nedenle veri sıkıştırma kullanıcılar için ücretleri azaltabilir.
 
 ## ZK-rollup'lar Ethereum ile nasıl etkileşime girer? {#zk-rollups-and-ethereum}
 
@@ -80,75 +80,77 @@ Durum köklerini hesaplamanın yanı sıra, ZK-rollup operatörü ayrıca bir to
 
 ### Geçerlilik kanıtları {#validity-proofs}
 
-ZK-rollup operatörünün L1 sözleşmesine sunduğu yeni durum kökü, rollup'ın durumuna yapılan güncellemelerin sonucudur. Diyelim ki Alice Bob'a 10 Token gönderiyor, operatör sadece Alice'in bakiyesini 10 azaltır ve Bob'un bakiyesini 10 artırır. Operatör daha sonra güncellenen hesap verilerini hashler, rollup'ın Merkle ağacını yeniden oluşturur ve yeni Merkle kökünü zincir içi sözleşmeye sunar.
+ZK-rollup operatörünün L1 sözleşmesine sunduğu yeni durum kökü, rollup'ın durumundaki güncellemelerin sonucudur. Diyelim ki Alice Bob'a 10 Token gönderiyor, operatör sadece Alice'in bakiyesini 10 azaltır ve Bob'un bakiyesini 10 artırır. Operatör daha sonra güncellenen hesap verilerini hashler, rollup'ın Merkle ağacını yeniden oluşturur ve yeni Merkle kökünü zincir içi sözleşmeye sunar.
 
-Ancak rollup sözleşmesi, operatör yeni Merkle kökünün rollup'ın durumuna yapılan doğru güncellemelerden kaynaklandığını kanıtlayana kadar önerilen durum taahhüdünü otomatik olarak kabul etmeyecektir. ZK-rollup operatörü bunu, toplu işlemlerin doğruluğunu doğrulayan kısa bir kriptografik taahhüt olan bir geçerlilik kanıtı üreterek yapar.
+Ancak rollup sözleşmesi, operatör yeni Merkle kökünün rollup'ın durumundaki doğru güncellemelerden kaynaklandığını kanıtlayana kadar önerilen durum taahhüdünü otomatik olarak kabul etmeyecektir. ZK-rollup operatörü bunu, toplu işlemlerin doğruluğunu doğrulayan kısa bir kriptografik taahhüt olan bir geçerlilik kanıtı üreterek yapar.
 
-Geçerlilik kanıtları, tarafların bir ifadenin doğruluğunu ifadenin kendisini açıklamadan kanıtlamasına olanak tanır; bu nedenle bunlara sıfır bilgi ispatları da denir. ZK-rollup'lar, işlemleri Ethereum'da yeniden yürütmek zorunda kalmadan zincir dışı durum geçişlerinin doğruluğunu onaylamak için geçerlilik kanıtlarını kullanır. Bu kanıtlar bir [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Sıfır Bilgi Kısa Etkileşimsiz Bilgi Argümanı) veya [ZK-STARK](https://eprint.iacr.org/2018/046) (Sıfır Bilgi Ölçeklenebilir Şeffaf Bilgi Argümanı) biçiminde olabilir.
+ZK-rollup'lar, zincir dışı durum geçişlerinin doğru bir şekilde hesaplandığını belirlemek için kısa geçerlilik kanıtları kullanır. Kısalık, kanıtları kompakt ve doğrulamayı temel hesaplamaya göre verimli tutarak Ethereum'un her işlemi yeniden yürütmeden durum geçişlerini doğrulamasına olanak tanır. Bir kanıt sistemi ek olarak sıfır bilgi sağlayabilir, bu da kanıtlarının genel ifadeden çıkanların ötesinde özel girdiler hakkında hiçbir bilgi ortaya koymadığı anlamına gelir. Bunlar ayrı özelliklerdir: ölçeklendirme için geçerlilik kanıtlarını kullanmak, tek başına bir rollup'ın işlemlerini gizli yapmaz. Bu kanıtlar bir [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Sıfır Bilgi Kısa Etkileşimsiz Bilgi Argümanı) veya [ZK-STARK](https://eprint.iacr.org/2018/046) (Sıfır Bilgi Ölçeklenebilir Şeffaf Bilgi Argümanı) biçiminde olabilir.
 
-Her iki kanıt türünün de kendine özgü özellikleri olmasına rağmen, hem SNARK'lar hem de STARK'lar ZK-rollup'larda zincir dışı hesaplamanın bütünlüğünü doğrulamaya yardımcı olur.
+Hem SNARK'lar hem de STARK'lar, her kanıt türünün kendine özgü özellikleri olmasına rağmen, ZK-rollup'larda zincir dışı hesaplamanın bütünlüğünü doğrulamaya yardımcı olur.
 
 **ZK-SNARK'lar**
 
-ZK-SNARK protokolünün çalışması için bir Ortak Referans Dizisi (CRS) oluşturmak gereklidir: CRS, geçerlilik kanıtlarını kanıtlamak ve doğrulamak için açık parametreler sağlar. Kanıtlama sisteminin güvenliği CRS kurulumuna bağlıdır; açık parametreler oluşturmak için kullanılan bilgiler kötü niyetli aktörlerin eline geçerse, sahte geçerlilik kanıtları üretebilirler.
+ZK-SNARK protokolünün çalışması için bir Ortak Referans Dizisi (CRS) oluşturmak gereklidir: CRS, geçerlilik kanıtlarını kanıtlamak ve doğrulamak için genel parametreler sağlar. Kanıtlama sisteminin güvenliği CRS kurulumuna bağlıdır; genel parametreleri oluşturmak için kullanılan bilgiler kötü niyetli aktörlerin eline geçerse, sahte geçerlilik kanıtları üretebilirler.
 
-Bazı ZK-rollup'lar, ZK-SNARK devresi için açık parametreler oluşturmak amacıyla güvenilir bireyleri içeren bir [çok partili hesaplama seremonisi (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/) kullanarak bu sorunu çözmeye çalışır. Her taraf, CRS'yi oluşturmak için derhal yok etmeleri gereken bir miktar rastgelelik ("toksik atık" olarak adlandırılır) katkısında bulunur.
+Bazı ZK-rollup'lar, ZK-SNARK devresi için genel parametreler oluşturmak amacıyla güvenilir bireyleri içeren bir [çok partili hesaplama seremonisi (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/) kullanarak bu sorunu çözmeye çalışır. Her taraf, CRS'yi oluşturmak için derhal yok etmeleri gereken bir miktar rastgelelik ("toksik atık" olarak adlandırılır) katkısında bulunur.
 
-Güvenilir kurulumlar, CRS kurulumunun güvenliğini artırdıkları için kullanılır. Dürüst bir katılımcı girdisini yok ettiği sürece, ZK-SNARK sisteminin güvenliği garanti altındadır. Yine de bu yaklaşım, dahil olanların örneklenmiş rastgeleliklerini sileceklerine ve sistemin güvenlik garantilerini zayıflatmayacaklarına güvenmeyi gerektirir.
+Güvenilir kurulumlar, CRS kurulumunun güvenliğini artırdıkları için kullanılır. Dürüst bir katılımcı girdisini yok ettiği sürece, ZK-SNARK sisteminin güvenliği garanti edilir. Yine de bu yaklaşım, dahil olanların örneklenmiş rastgeleliklerini sileceklerine ve sistemin güvenlik garantilerini zayıflatmayacaklarına güvenmeyi gerektirir.
 
-Güven varsayımları bir yana, ZK-SNARK'lar küçük kanıt boyutları ve sabit zamanlı doğrulamaları nedeniyle popülerdir. L1'de kanıt doğrulaması bir ZK-rollup'ı çalıştırmanın daha büyük maliyetini oluşturduğundan, L2'ler Ana Ağ'da hızlı ve ucuz bir şekilde doğrulanabilen kanıtlar üretmek için ZK-SNARK'ları kullanır.
+Güven varsayımları bir yana, ZK-SNARK'lar küçük kanıt boyutları ve sabit zamanlı doğrulamaları nedeniyle popülerdir. L1'de kanıt doğrulaması bir ZK-rollup çalıştırmanın daha büyük maliyetini oluşturduğundan, L2'ler Ana Ağ'da hızlı ve ucuz bir şekilde doğrulanabilen kanıtlar oluşturmak için ZK-SNARK'ları kullanır.
 
 **ZK-STARK'lar**
 
-ZK-SNARK'lar gibi, ZK-STARK'lar da girdileri açıklamadan zincir dışı hesaplamanın geçerliliğini kanıtlar. Ancak ZK-STARK'lar, ölçeklenebilirlikleri ve şeffaflıkları nedeniyle ZK-SNARK'lara göre bir gelişme olarak kabul edilir.
+ZK-SNARK'lar gibi, ZK-STARK'lar da bir doğrulayıcının zincir dışı hesaplamanın geçerliliğini yeniden yürütmeden onaylamasına izin verir ve bir sistemin sıfır bilgi özelliğini uyguladığı durumlarda bir kanıtlayıcının özel girdilerini gizleyebilir. Bir rollup'ta, zincirin durumunu yeniden oluşturmak için gereken veriler hala Ethereum'da yayınlanır. ZK-STARK'lar, ölçeklenebilirlikleri ve şeffaflıkları nedeniyle ZK-SNARK'lara göre bir gelişme olarak kabul edilir.
 
-ZK-STARK'lar 'şeffaftır', çünkü bir Ortak Referans Dizisinin (CRS) güvenilir kurulumu olmadan çalışabilirler. Bunun yerine ZK-STARK'lar, kanıtlar üretmek ve doğrulamak için parametreler ayarlamak üzere herkese açık olarak doğrulanabilir rastgeleliğe güvenir.
+ZK-STARK'lar, bir Ortak Referans Dizisinin (CRS) güvenilir kurulumu olmadan çalışabildikleri için 'şeffaftır'. Bunun yerine ZK-STARK'lar, kanıtları oluşturmak ve doğrulamak için parametreleri ayarlamak üzere herkese açık olarak doğrulanabilir rastgeleliğe güvenir.
 
-ZK-STARK'lar ayrıca daha fazla ölçeklenebilirlik sağlar çünkü geçerlilik kanıtlarını kanıtlamak ve doğrulamak için gereken süre, temel hesaplamanın karmaşıklığına bağlı olarak _yarı doğrusal (quasilinearly)_ olarak artar. ZK-SNARK'larda, kanıtlama ve doğrulama süreleri temel hesaplamanın boyutuna bağlı olarak _doğrusal_ olarak ölçeklenir. Bu, büyük veri kümeleri söz konusu olduğunda ZK-STARK'ların kanıtlama ve doğrulama için ZK-SNARK'lardan daha az zaman gerektirdiği anlamına gelir ve bu da onları yüksek hacimli uygulamalar için kullanışlı hale getirir.
+ZK-STARK'lar ayrıca iyi ölçeklenir: bir kanıt oluşturmak için gereken süre, temel hesaplamanın boyutuyla _yarı doğrusal (quasilinearly)_ olarak artarken, onu doğrulamak için gereken süre yalnızca _polilogaritmik_ olarak artar. ZK-STARK kanıtlayıcıları, büyük hesaplamalar için genellikle ZK-SNARK kanıtlayıcılarından daha hızlıdır, bu da onları yüksek hacimli uygulamalar için kullanışlı hale getirir. Bunun ödünleşimi, STARK kanıtlarının daha büyük olması ve L1'de doğrulamanın daha maliyetli olmasıdır, oysa ZK-SNARK doğrulaması hesaplamanın boyutundan bağımsız olarak sabit zaman alır.
 
-ZK-STARK'lar ayrıca kuantum bilgisayarlara karşı da güvenlidir, oysa ZK-SNARK'larda kullanılan Eliptik Eğri Kriptografisinin (ECC) kuantum hesaplama saldırılarına karşı duyarlı olduğuna yaygın olarak inanılmaktadır. ZK-STARK'ların dezavantajı, Ethereum'da doğrulanması daha pahalı olan daha büyük kanıt boyutları üretmeleridir.
+ZK-STARK'lar ayrıca kuantum bilgisayarlara karşı güvenliyken, ZK-SNARK'larda kullanılan Eliptik Eğri Kriptografisinin (ECC) kuantum hesaplama saldırılarına karşı duyarlı olduğuna yaygın olarak inanılmaktadır. ZK-STARK'ların dezavantajı, Ethereum'da doğrulanması daha pahalı olan daha büyük kanıt boyutları üretmeleridir.
 
 #### ZK-rollup'larda geçerlilik kanıtları nasıl çalışır? {#validity-proofs-in-zk-rollups}
 
-##### Kanıt üretimi
+##### Kanıt oluşturma
 
 İşlemleri kabul etmeden önce operatör olağan kontrolleri gerçekleştirecektir. Bu, aşağıdakilerin onaylanmasını içerir:
 
-- Gönderen ve alıcı hesaplarının durum ağacının bir parçası olduğu.
-- Gönderenin işlemi gerçekleştirmek için yeterli fona sahip olduğu.
-- İşlemin doğru olduğu ve rollup üzerindeki gönderenin açık anahtarıyla eşleştiği.
-- Gönderenin nonce değerinin doğru olduğu vb.
+- Gönderici ve alıcı hesaplarının durum ağacının bir parçası olduğu.
+- Göndericinin işlemi gerçekleştirmek için yeterli fonu olduğu.
+- İşlemin doğru olduğu ve rollup üzerindeki göndericinin açık anahtarıyla eşleştiği.
+- Göndericinin nonce değerinin doğru olduğu vb.
 
-ZK-rollup düğümü yeterli işleme sahip olduğunda, bunları bir toplu işlemde bir araya getirir ve kanıtlama devresinin kısa bir ZK-kanıtı halinde derlemesi için girdileri derler. Bu şunları içerir:
+ZK-rollup düğümü yeterli işleme sahip olduğunda, bunları bir toplu işlemde birleştirir ve kanıtlama devresinin kısa bir ZK kanıtına derlemesi için girdileri derler. Bu şunları içerir:
 
 - Toplu işlemdeki tüm işlemleri içeren bir Merkle ağacı kökü.
-- İşlemlerin toplu işleme dahil edildiğini kanıtlamak için Merkle kanıtları.
-- Bu hesapların rollup'ın durum ağacının bir parçası olduğunu kanıtlamak için işlemlerdeki her gönderen-alıcı çifti için Merkle kanıtları.
-- Her işlem için durum güncellemelerini uyguladıktan sonra (yani gönderen hesaplarını azaltmak ve alıcı hesaplarını artırmak) durum kökünün güncellenmesinden türetilen bir dizi ara durum kökü.
+- Toplu işleme dahil edildiklerini kanıtlamak için işlemler için Merkle kanıtları.
+- Bu hesapların rollup'ın durum ağacının bir parçası olduğunu kanıtlamak için işlemlerdeki her gönderici-alıcı çifti için Merkle kanıtları.
+- Her işlem için durum güncellemelerini uyguladıktan sonra durum kökünün güncellenmesinden (yani, gönderici hesaplarını azaltmak ve alıcı hesaplarını artırmak) türetilen bir dizi ara durum kökü.
 
-Kanıtlama devresi, her işlem üzerinde "döngü" yaparak ve operatörün işlemi işlemeden önce tamamladığı aynı kontrolleri gerçekleştirerek geçerlilik kanıtını hesaplar. İlk olarak, sağlanan Merkle kanıtını kullanarak gönderenin hesabının mevcut durum kökünün bir parçası olduğunu doğrular. Ardından gönderenin bakiyesini azaltır, nonce değerini artırır, güncellenen hesap verilerini hashler ve yeni bir Merkle kökü oluşturmak için bunu Merkle kanıtıyla birleştirir.
+Kanıtlama devresi, her işlem üzerinde "döngü" yaparak ve operatörün işlemi işlemeden önce tamamladığı aynı kontrolleri gerçekleştirerek geçerlilik kanıtını hesaplar. İlk olarak, sağlanan Merkle kanıtını kullanarak göndericinin hesabının mevcut durum kökünün bir parçası olduğunu doğrular. Ardından göndericinin bakiyesini azaltır, nonce değerini artırır, güncellenen hesap verilerini hashler ve yeni bir Merkle kökü oluşturmak için bunu Merkle kanıtıyla birleştirir.
 
-Bu Merkle kökü, ZK-rollup'ın durumundaki tek değişikliği yansıtır: gönderenin bakiyesinde ve nonce değerinde bir değişiklik. Bu mümkündür çünkü hesabın varlığını kanıtlamak için kullanılan Merkle kanıtı, yeni durum kökünü türetmek için kullanılır.
+Bu Merkle kökü, ZK-rollup'ın durumundaki tek değişikliği yansıtır: göndericinin bakiyesinde ve nonce değerinde bir değişiklik. Bu mümkündür çünkü hesabın varlığını kanıtlamak için kullanılan Merkle kanıtı, yeni durum kökünü türetmek için kullanılır.
 
 Kanıtlama devresi aynı işlemi alıcının hesabında da gerçekleştirir. Alıcının hesabının ara durum kökü altında var olup olmadığını (Merkle kanıtını kullanarak) kontrol eder, bakiyesini artırır, hesap verilerini yeniden hashler ve yeni bir durum kökü oluşturmak için bunu Merkle kanıtıyla birleştirir.
 
-İşlem her işlem için tekrarlanır; her "döngü", gönderenin hesabının güncellenmesinden yeni bir durum kökü ve alıcının hesabının güncellenmesinden sonraki yeni bir kök oluşturur. Açıklandığı gibi, durum köküne yapılan her güncelleme, rollup'ın durum ağacının bir bölümünün değişmesini temsil eder.
+İşlem her işlem için tekrarlanır; her "döngü", göndericinin hesabının güncellenmesinden yeni bir durum kökü ve alıcının hesabının güncellenmesinden sonraki yeni bir kök oluşturur. Açıklandığı gibi, durum köküne yapılan her güncelleme, rollup'ın durum ağacının bir bölümünün değişmesini temsil eder.
 
-ZK-kanıtlama devresi, son işlem yürütüldükten sonra nihai bir durum köküyle sonuçlanan güncelleme dizisini doğrulayarak tüm işlem toplu işlemi üzerinde yinelenir. Hesaplanan son Merkle kökü, ZK-rollup'ın en yeni kurallı durum kökü haline gelir.
+ZK kanıtlama devresi, son işlem yürütüldükten sonra nihai bir durum köküyle sonuçlanan güncelleme dizisini doğrulayarak tüm işlem toplu işlemi üzerinde yinelenir. Hesaplanan son Merkle kökü, ZK-rollup'ın en yeni kurallı durum kökü olur.
 
 ##### Kanıt doğrulaması
 
-Kanıtlama devresi durum güncellemelerinin doğruluğunu doğruladıktan sonra, L2 operatörü hesaplanan geçerlilik kanıtını L1'deki doğrulayıcı sözleşmesine sunar. Sözleşmenin doğrulama devresi kanıtın geçerliliğini doğrular ve ayrıca kanıtın bir parçasını oluşturan açık girdileri kontrol eder:
+Kanıtlama devresi durum güncellemelerinin doğruluğunu doğruladıktan sonra, L2 operatörü hesaplanan geçerlilik kanıtını L1'deki doğrulayıcı sözleşmesine sunar. Sözleşmenin doğrulama devresi kanıtın geçerliliğini doğrular ve ayrıca kanıtın bir parçasını oluşturan genel girdileri kontrol eder:
 
 - **Ön durum kökü (Pre-state root)**: ZK-rollup'ın eski durum kökü (yani, toplu işlemler yürütülmeden önce), L2 zincirinin bilinen son geçerli durumunu yansıtır.
 
 - **Son durum kökü (Post-state root)**: ZK-rollup'ın yeni durum kökü (yani, toplu işlemlerin yürütülmesinden sonra), L2 zincirinin en yeni durumunu yansıtır. Son durum kökü, kanıtlama devresinde durum güncellemeleri uygulandıktan sonra türetilen nihai köktür.
 
-- **Toplu işlem kökü (Batch root)**: Toplu işlemdeki işlemlerin _merklelaştırılması_ ve ağacın kökünün hashlenmesiyle türetilen toplu işlemin Merkle kökü.
+- **Toplu işlem kökü (Batch root)**: Toplu işlemdeki işlemlerin _merklelaştırılması (merklizing)_ ve ağacın kökünün hashlenmesiyle türetilen toplu işlemin Merkle kökü.
 
 - **İşlem girdileri**: Sunulan toplu işlemin bir parçası olarak yürütülen işlemlerle ilişkili veriler.
 
-Kanıt devreyi tatmin ederse (yani geçerliyse), bu, rollup'ı önceki durumdan (ön durum kökü tarafından kriptografik olarak parmak izi alınmış) yeni bir duruma (son durum kökü tarafından kriptografik olarak parmak izi alınmış) geçiren geçerli işlemler dizisinin var olduğu anlamına gelir. Ön durum kökü rollup sözleşmesinde depolanan kökle eşleşirse ve kanıt geçerliyse, rollup sözleşmesi kanıttan son durum kökünü alır ve rollup'ın değişen durumunu yansıtmak için durum ağacını günceller.
+Kanıt devreyi karşılıyorsa (yani geçerliyse), bu, rollup'ı önceki durumdan (ön durum kökü tarafından kriptografik olarak parmak izi alınmış) yeni bir duruma (son durum kökü tarafından kriptografik olarak parmak izi alınmış) geçiren bir dizi geçerli işlemin var olduğu anlamına gelir. Ön durum kökü rollup sözleşmesinde depolanan kökle eşleşiyorsa ve kanıt geçerliyse, rollup sözleşmesi kanıttan son durum kökünü alır ve rollup'ın değişen durumunu yansıtmak için durum ağacını günceller.
+
+<ZkRollupDiagram />
 
 ### Girişler ve çıkışlar {#entries-and-exits}
 
@@ -184,11 +186,11 @@ Kullanıcıların ZK-rollup'lardaki işlemler için ne kadar ödeyeceği, tıpk�
 
 1. **Durum yazma**: Ethereum'un durumuna yazmanın (yani, Ethereum blokzincirinde bir işlem sunmanın) sabit bir maliyeti vardır. ZK-rollup'lar, işlemleri toplu işleyerek ve sabit maliyetleri birden fazla kullanıcıya yayarak bu maliyeti azaltır.
 
-2. **Veri yayını**: ZK-rollup'lar, her işlem için durum verilerini Ethereum'da `calldata` olarak veya [blob'lar](/roadmap/danksharding/) içinde yayınlar. `calldata` için temel gaz tarifesi, sıfır olmayan bayt başına 16 gaz ve sıfır olan bayt başına 4 gaz ücretlendirir; bu, [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) tarafından getirilen bir indirimdir; [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), bayt tarifesinin kendisinden ziyade birim gaz başına ödenen fiyatı yönetir. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) ek olarak veri yoğun işlemlere bir taban maliyet uygular, böylece `calldata` ağırlıklı bir işlem standart tarifeden daha fazlasını ödeyebilirken, hesaplama ağırlıklı işlemler etkilenmez. Her işlemde ödenen maliyet, onun için zincir içi ne kadar veri yayınlanması gerektiğinden etkilenir.
+2. **Veri yayını**: ZK-rollup'lar her işlem için durum verilerini Ethereum'a `calldata` olarak veya [blob'lar](/roadmap/danksharding/) içinde yayınlar. `calldata` için içsel gaz tarifesi, sıfır olmayan bayt başına 16 gaz ve sıfır bayt başına 4 gaz ücretlendirir; bu, [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) tarafından getirilen bir indirimdir; [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), bayt tarifesinin kendisinden ziyade gaz birimi başına ödenen fiyatı yönetir. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) ek olarak veri yoğun işlemlere bir taban maliyet uygular, bu nedenle `calldata` ağırlıklı bir işlem standart tarifeden daha fazlasını ödeyebilirken, hesaplama yoğun işlemler etkilenmez. Her işlemde ödenen maliyet, bunun için zincir içi ne kadar veri gönderilmesi gerektiğinden etkilenir.
 
-3. **L2 operatör ücretleri**: Bu, tıpkı Ethereum Ana Ağı'ndaki [işlem "öncelik ücretleri (bahşişler)"](/developers/docs/gas/#how-are-gas-fees-calculated) gibi, işlemleri işlerken ortaya çıkan hesaplama maliyetlerinin telafisi olarak rollup operatörüne ödenen miktardır.
+3. **L2 operatör ücretleri**: Bu, Ethereum Ana Ağı'ndaki [işlem "öncelik ücretleri (bahşişler)"](/developers/docs/gas/#how-are-gas-fees-calculated) gibi, işlemleri işlerken ortaya çıkan hesaplama maliyetlerinin telafisi olarak rollup operatörüne ödenen miktardır.
 
-4. **Kanıt oluşturma ve doğrulama**: ZK-rollup operatörleri, işlem toplu işlemleri için geçerlilik kanıtları üretmelidir ve bu kaynak yoğundur. Ana Ağ'da sıfır bilgi ispatlarını doğrulamak da gaz maliyetine neden olur (~ 500.000 gaz).
+4. **Kanıt oluşturma ve doğrulama**: ZK-rollup operatörleri, kaynak yoğun olan işlem toplu işlemleri için geçerlilik kanıtları üretmelidir. Ana Ağ'da sıfır bilgi ispatlarını doğrulamak da kanıt sistemine bağlı olarak bir ZK-SNARK için birkaç yüz bin gazdan bir ZK-STARK için birkaç milyona kadar gaz maliyetine neden olur.
 
 İşlemleri toplu işlemenin yanı sıra, ZK-rollup'lar işlem verilerini sıkıştırarak kullanıcılar için ücretleri azaltır. Ethereum ZK-rollup'larını kullanmanın ne kadara mal olduğuna dair [gerçek zamanlı bir genel bakış görebilirsiniz](https://l2fees.info/).
 
@@ -266,7 +268,7 @@ zkEVM'ler üzerinde çalışan projeler şunları içerir:
 - [zkEVM nedir?](https://www.alchemy.com/overviews/zkevm)
 - [ZK-EVM türleri: Ethereum eşdeğeri, EVM eşdeğeri, Tip 1, Tip 4 ve diğer şifreli moda sözcükler](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [zkEVM'ye Giriş](https://hackmd.io/@yezhang/S1_KMMbGt)
-- [ZK-EVM L2'leri nelerdir?](https://linea.mirror.xyz/qD18IaQ4BROn_Y40EBMTUTdJHYghUtdECscSWyMvm8M)
+- [ZK-EVM L2'leri nelerdir?](https://web.archive.org/web/20250519165831/https://linea.mirror.xyz/qD18IaQ4BROn_Y40EBMTUTdJHYghUtdECscSWyMvm8M)
 - [Harika zkEVM kaynakları](https://github.com/LuozhuZhang/awesome-zkevm)
 - [Teknik detaylarıyla ZK-SNARK'lar](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [SNARK'lar nasıl mümkün oluyor?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

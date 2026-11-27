@@ -1,6 +1,6 @@
 ---
 title: Merkeziyetsiz bilim (DeSci)
-description: "Ethereum üzerinde merkeziyetsiz bilime genel bir bakış"
+description: "Merkeziyetsiz bilim nedir? DeSci'ın araştırmaları fonlamak, verileri açıkça paylaşmak ve bilim insanlarını ödüllendirmek için Ethereum'u nasıl kullandığını ve bilimi daha erişilebilir hale getirdiğini öğrenin."
 lang: tr
 template: use-cases
 sidebarDepth: 2

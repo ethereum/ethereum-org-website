@@ -1,7 +1,7 @@
 ---
 title: "Hegotá"
 metaTitle: "Heze-Bogotá (Hegotá)"
-description: "Hegotá protokol yükseltmesi hakkında bilgi edinin"
+description: "Hegotá, Glamsterdam'dan sonra planlanan Ethereum yükseltmesidir. Sansür direncine yönelik ana özelliği FOCIL ve hesaplar için çerçeve işlemleri hakkında bilgi edinin."
 lang: tr
 template: upgrade
 ---

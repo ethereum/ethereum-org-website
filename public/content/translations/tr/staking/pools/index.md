@@ -1,6 +1,6 @@
 ---
 title: Likit ve havuzlu staking
-description: Ethereum'da likit ve havuzlu staking'e genel bir bakış
+description: "Likit staking nedir? Staking havuzlarının herhangi bir miktarda ETH ile ETH ödülleri kazanmanıza ve genellikle kullanmaya devam edebileceğiniz likit bir token almanıza nasıl olanak tanıdığını öğrenin."
 lang: tr
 template: staking
 image: /images/staking/leslie-pool.png

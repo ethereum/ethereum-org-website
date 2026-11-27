@@ -1,6 +1,6 @@
 ---
 title: Merkeziyetsiz kimlik
-description: "Merkeziyetsiz kimlik nedir ve neden önemlidir?"
+description: "Merkeziyetsiz kimlik nedir? Ethereum'un merkezi bir sağlayıcıya bağlı kalmadan kimliğinize, kimlik bilgilerinize ve verilerinize sahip olmanızı ve bunları kontrol etmenizi nasıl sağladığını öğrenin."
 lang: tr
 template: use-cases
 sidebarDepth: 2

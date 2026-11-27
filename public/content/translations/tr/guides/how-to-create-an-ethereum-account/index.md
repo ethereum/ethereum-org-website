@@ -1,7 +1,7 @@
 ---
 title: "Bir Ethereum hesabı nasıl oluşturulur"
 metaTitle: "Bir Ethereum hesabı nasıl \"oluşturulur\""
-description: "Bir cüzdan kullanarak adım adım Ethereum hesabı oluşturma rehberi."
+description: "Bir Ethereum hesabı oluşturmak için adım adım rehber: bir cüzdan seçin, kurtarma ifadenizi güvenli bir şekilde yedekleyin ve ilk Ethereum adresinizi alın."
 lang: tr
 ---
 

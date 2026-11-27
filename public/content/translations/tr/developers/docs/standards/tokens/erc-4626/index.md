@@ -53,7 +53,7 @@ Bu işlev, muhasebe, para yatırma ve çekim işlemleri için kasa için kullan�
 function totalAssets() public view returns (uint256)
 ```
 
-Bu işlev, kasa tarafından tutulan dayanak varlıkların toplam miktarını döndürür.
+Bu işlev, kasanın başka bir yerde değerlendirdiği varlıklar dahil olmak üzere ve tüm ücretler düşüldükten sonra, kasa tarafından yönetilen toplam dayanak varlık miktarını döndürür.
 
 #### convertToShares {#convertoshares}
 
@@ -141,7 +141,7 @@ Bu işlev, kullanıcıların mevcut blokta çekim işlemlerinin etkilerini simü
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Bu işlev, `owner` adresinden `shares` yakar ve kasadan `receiver` adresine tam olarak `assets` token gönderir.
+Bu işlev, `owner` adresinden `shares` yakar ve kasadan `receiver` adresine tam olarak `assets` Token gönderir.
 
 #### maxRedeem {#maxredeem}
 
@@ -185,7 +185,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### Arayüz haritası {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Olaylar {#events}
 
