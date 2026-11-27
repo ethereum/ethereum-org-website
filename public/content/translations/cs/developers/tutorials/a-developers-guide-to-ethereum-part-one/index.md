@@ -15,17 +15,17 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Takže jste slyšeli o tom Ethereu a jste připraveni vydat se do králičí nory? Tento článek rychle projde některé základy blockchainu a poté vás nechá interagovat se simulovaným uzlem Etherea – číst data bloků, kontrolovat zůstatky na účtech a odesílat transakce. Během toho zdůrazníme rozdíly mezi tradičními způsoby tvorby aplikací a tímto novým decentralizovaným paradigmatem.
 
-## (Mírné) prerekvizity {#soft-prerequisites}
+## (Doporučené) předpoklady {#soft-prerequisites}
 
-Tento článek si klade za cíl být přístupný široké škále vývojářů. Budou zde zapojeny [nástroje Pythonu](/developers/docs/programming-languages/python/), ale ty jsou pouze prostředkem pro předání myšlenek – nevadí, pokud nejste vývojář v Pythonu. Budu však předpokládat několik věcí, které už znáte, abychom se mohli rychle přesunout k částem specifickým pro Ethereum.
+Tento článek si klade za cíl být přístupný široké škále vývojářů. Budeme používat [nástroje pro Python](/developers/docs/programming-languages/python/), ale ty slouží jen jako prostředek k předání myšlenek – nevadí, pokud nejste vývojář v Pythonu. Budu však předpokládat, že už máte určité znalosti, abychom se mohli rychle přesunout k částem specifickým pro Ethereum.
 
 Předpoklady:
 
 - Umíte se pohybovat v terminálu,
 - Napsali jste už pár řádků kódu v Pythonu,
-- Na vašem počítači je nainstalován Python verze 3.6 nebo novější (důrazně doporučujeme použít [virtuální prostředí](https://realpython.com/effective-python-environment/#virtual-environments)) a
+- Máte na svém počítači nainstalovaný Python verze 3.10 nebo novější (důrazně doporučujeme použít [virtuální prostředí](https://realpython.com/effective-python-environment/#virtual-environments)) a
 - použili jste `pip`, instalátor balíčků pro Python.
-  Znovu opakuji, pokud něco z toho není pravda, nebo neplánujete reprodukovat kód v tomto článku, pravděpodobně i tak budete moci bez problémů sledovat výklad.
+  Opakuji, pokud něco z toho není pravda, nebo neplánujete reprodukovovat kód z tohoto článku, pravděpodobně i tak nebudete mít problém sledovat výklad.
 
 ## Blockchainy ve stručnosti {#blockchains-briefly}
 
@@ -81,7 +81,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 V tomto průvodci budeme pracovat pouze v interpretu Pythonu. Nebudeme vytvářet žádné adresáře, soubory, třídy ani funkce.
 
-<FeaturedText>Poznámka: V níže uvedených příkladech jsou příkazy začínající na `$` určeny ke spuštění v terminálu. (Nezadávejte `$`, pouze to označuje začátek řádku.)</FeaturedText>
+<FeaturedText>Poznámka: V níže uvedených příkladech jsou příkazy začínající na `$` určeny ke spuštění v terminálu. (Znak `$` nepište, označuje pouze začátek řádku.)</FeaturedText>
 
 Nejprve si nainstalujte [IPython](https://ipython.org/), abyste získali uživatelsky přívětivé prostředí pro zkoumání. IPython nabízí mimo jiné doplňování pomocí tabulátoru, což značně usnadňuje zjišťování, co všechno je ve Web3.py možné.
 
@@ -89,7 +89,7 @@ Nejprve si nainstalujte [IPython](https://ipython.org/), abyste získali uživat
 pip install ipython
 ```
 
-Web3.py je publikováno pod názvem `web3`. Nainstalujte jej takto:
+Web3.py je publikováno pod názvem `web3`. Nainstalujete jej takto:
 
 ```bash
 pip install web3
@@ -102,8 +102,6 @@ pip install 'web3[tester]'
 ```
 
 Vše je připraveno a můžeme začít!
-
-Poznámka: Balíček `web3[tester]` funguje do verze Pythonu 3.10.xx
 
 ## Spuštění sandboxu {#spin-up-a-sandbox}
 
@@ -127,14 +125,14 @@ In [1]: from web3 import Web3
 
 ## Představení modulu Web3 {#introducing-the-web3-module}
 
-Kromě toho, že je bránou do Etherea, nabízí modul [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) několik užitečných funkcí. Pojďme si jich pár prozkoumat.
+Kromě toho, že slouží jako brána k Ethereu, nabízí modul [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) několik užitečných funkcí. Pojďme si jich pár prozkoumat.
 
-V aplikaci na Ethereu budete běžně potřebovat převádět nominální hodnoty měny. Modul Web3 poskytuje několik pomocných metod přesně pro tento účel: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) a [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
+V aplikaci pro Ethereum budete běžně potřebovat převádět nominální hodnoty měny. Modul Web3 pro tento účel poskytuje několik pomocných metod: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) a [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
 Poznámka: Počítače jsou notoricky špatné ve zpracování desetinné matematiky. Aby se tomu vývojáři vyhnuli, často ukládají částky v dolarech jako centy. Například položka s cenou 5,99 $ může být v databázi uložena jako 599.
 
-Podobný vzor se používá při zpracování transakcí v <b>etheru</b>. Nicméně místo dvou desetinných míst má ether 18! Nejmenší nominální hodnota etheru se nazývá <b>Wei</b>, takže to je hodnota, která se zadává při odesílání transakcí.
+Podobný vzor se používá při zpracování transakcí v <b>etheru</b>. Nicméně místo dvou desetinných míst jich má ether 18! Nejmenší nominální hodnota etheru se nazývá <b>Wei</b>, takže to je hodnota, která se zadává při odesílání transakcí.
 
 1 ether = 1000000000000000000 Wei
 
@@ -142,7 +140,7 @@ Podobný vzor se používá při zpracování transakcí v <b>etheru</b>. Nicmé
 
 </FeaturedText>
 
-Zkuste převést některé hodnoty do a z Wei. Všimněte si, že [existují názvy pro mnoho nominálních hodnot](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) mezi etherem a Wei. Jednou z nejznámějších z nich je **Gwei**, protože se tak často vyjadřují transakční poplatky.
+Zkuste si převést některé hodnoty na Wei a zpět. Všimněte si, že [existují názvy pro mnoho nominálních hodnot](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) mezi etherem a Wei. Jednou z nejznámějších z nich je **Gwei**, protože se v ní často vyjadřují transakční poplatky.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -152,7 +150,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Další užitečné metody v modulu Web3 zahrnují převodníky datových formátů (např. [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), pomocníky pro adresy (např. [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) a hashovací funkce (např. [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Mnohými z nich se budeme zabývat později v této sérii. Chcete-li zobrazit všechny dostupné metody a vlastnosti, využijte automatické doplňování v IPythonu tak, že napíšete `Web3`. a po tečce dvakrát stisknete klávesu Tab.
+Mezi další užitečné metody modulu Web3 patří převodníky datových formátů (např. [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), pomocné funkce pro adresy (např. [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)) a hashovací funkce (např. [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Mnohými z nich se budeme zabývat později v této sérii. Chcete-li zobrazit všechny dostupné metody a vlastnosti, využijte automatické doplňování v IPythonu tak, že napíšete `Web3`. a po tečce dvakrát stisknete klávesu Tab.
 
 ## Komunikace s řetězcem {#talk-to-the-chain}
 
@@ -172,7 +170,7 @@ Ačkoli je to jeden ze „skutečných“ způsobů, jak to udělat, proces sync
 
 _EthereumTesterProvider se připojuje k simulovanému uzlu a je užitečný pro rychlá vývojová prostředí._
 
-Tento simulovaný uzel se nazývá [eth-tester](https://github.com/ethereum/eth-tester) a nainstalovali jsme jej jako součást příkazu `pip install web3[tester]`. Konfigurace Web3.py pro použití tohoto testovacího poskytovatele je takto jednoduchá:
+Tento simulovaný uzel se nazývá [eth-tester](https://github.com/ApeWorX/eth-tester) a nainstalovali jsme jej jako součást příkazu `pip install web3[tester]`. Konfigurace Web3.py pro použití tohoto testovacího poskytovatele je takto jednoduchá:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -294,10 +292,10 @@ Out[13]: 1000003000000000000000000
 
 To druhé vypadá dobře! Zůstatek se zvýšil z 1 000 000 na 1 000 003 etherů. Ale co se stalo s prvním účtem? Zdá se, že ztratil o něco více než tři ethery. Bohužel, nic v životě není zadarmo a používání veřejné sítě Ethereum vyžaduje, abyste kompenzovali ostatní uzly za jejich podpůrnou roli. Z účtu, který transakci odeslal, byl stržen malý transakční poplatek – tento poplatek je množství spáleného gasu (21000 jednotek gasu pro převod ETH) vynásobené základním poplatkem, který se mění podle aktivity sítě, plus prioritní poplatek, který jde validátorovi, jenž transakci zahrne do bloku.
 
-Více o [gasu](/developers/docs/gas/#post-london)
+Více o [gasu](/developers/docs/gas/)
 
 <FeaturedText>Poznámka: Ve veřejné síti jsou transakční poplatky variabilní na základě poptávky v síti a toho, jak rychle chcete, aby byla transakce zpracována. Pokud vás zajímá rozpis toho, jak se poplatky počítají, podívejte se na můj dřívější článek o tom, <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">jak jsou transakce zahrnuty do bloku</a>.</FeaturedText>
 
 ## A vydechněte {#and-breathe}
 
-Už se tomu věnujeme nějakou dobu, takže se zdá, že je to dobré místo na přestávku. Králičí nora pokračuje dál a my budeme v průzkumu pokračovat ve druhé části této série. Některé z nadcházejících konceptů: připojení ke skutečnému uzlu, chytré kontrakty a tokeny. Máte doplňující otázky? Dejte mi vědět! Vaše zpětná vazba ovlivní, kam se odsud vydáme. Požadavky jsou vítány přes [Twitter](https://twitter.com/wolovim).
+Už se tomu věnujeme nějakou dobu, takže se zdá, že je to dobré místo na přestávku. Králičí nora pokračuje dál a my budeme v průzkumu pokračovat ve druhé části této série. Některé z nadcházejících konceptů: připojení ke skutečnému uzlu, chytré kontrakty a tokeny. Máte doplňující otázky? Dejte mi vědět! Vaše zpětná vazba ovlivní, kam se odsud vydáme. Požadavky jsou vítány přes [Twitter](https://x.com/wolovim).

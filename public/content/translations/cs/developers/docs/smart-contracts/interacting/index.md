@@ -169,18 +169,17 @@ V decentralizované aplikaci (dapp) řeší podepisování uživatelova peněže
 
 [Knihovny peněženek a nástroje pro připojení](/developers/docs/apis/javascript/) toto abstrahují, takže se můžete soustředit na budování logiky vaší aplikace.
 
-## Související návody {#related-tutorials}
+## Související tutoriály {#related-tutorials}
 
-- [Volání chytrého kontraktu z JavaScriptu](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Odesílání transakcí pomocí Web3.js a Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Jak si zobrazit NFT ve své peněžence](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Další čtení {#further-reading}
 
-- [Dokumentace Viem: Čtení a zápis do kontraktů](https://viem.sh/docs/contract/readContract)
-- [Dokumentace ethers.js: Kontrakty](https://docs.ethers.org/v6/api/contract/)
-- [Specifikace Solidity ABI](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [Co je to ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Dokumentace Viem: Čtení z kontraktů a zápis do nich](https://viem.sh/docs/contract/readContract)
+- [Dokumentace Ethers.js: Kontrakty](https://docs.ethers.org/v6/api/contract/)
+- [Specifikace ABI pro Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
+- [Jak fungují ABI chytrých kontraktů? – Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Související témata {#related-topics}
 

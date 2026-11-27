@@ -387,9 +387,9 @@ Některé decentralizované sítě orákul nabízejí automatizační služby, k
 
 Existuje několik aplikací orákul, které můžete integrovat do své dapp na Ethereu:
 
-**[Chainlink](https://chain.link/)** - _Decentralizované sítě orákul Chainlink poskytují vstupy, výstupy a výpočty odolné proti manipulaci na podporu pokročilých chytrých kontraktů na jakémkoli blockchainu._
+**[Chainlink](https://chain.link/)** - _Decentralizované sítě orákul Chainlink poskytují vstupy, výstupy a výpočty odolné proti manipulaci pro podporu pokročilých chytrých kontraktů na jakémkoli blockchainu._
 
-**[RedStone Oracles](https://redstone.finance/)** - _RedStone je decentralizované modulární orákulum, které poskytuje datové toky optimalizované pro gas. Specializuje se na nabídku cenových zdrojů pro nově vznikající aktiva, jako jsou tokeny likvidního stakingu (LST), tokeny likvidního restakingu (LRT) a deriváty stakingu Bitcoinu._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone je decentralizované modulární orákulum, které poskytuje datové zdroje optimalizované pro gas. Specializuje se na nabídku cenových zdrojů pro nově vznikající aktiva, jako jsou tokeny likvidního stakingu (LST), tokeny likvidního restakingu (LRT) a deriváty pro staking Bitcoinu._
 
 **[Chronicle](https://chroniclelabs.org/)** - _Chronicle překonává současná omezení přenosu dat onchain vývojem skutečně škálovatelných, nákladově efektivních, decentralizovaných a ověřitelných orákul._
 
@@ -399,19 +399,17 @@ Existuje několik aplikací orákul, které můžete integrovat do své dapp na 
 
 **[Tellor](https://tellor.io/)** - _Tellor je transparentní protokol orákula nevyžadující povolení, díky kterému může váš chytrý kontrakt snadno získat jakákoli data, kdykoli je potřebuje._
 
-**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol je platforma meziřetězcového datového orákula, která agreguje a propojuje data z reálného světa a API s chytrými kontrakty._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol je meziřetězcová platforma datových orákul, která agreguje a propojuje data z reálného světa a API s chytrými kontrakty._
 
-**[Pyth Network](https://pyth.network/)** - _Síť Pyth je síť finančních orákul první strany navržená k publikování nepřetržitých dat z reálného světa onchain v prostředí odolném proti manipulaci, decentralizovaném a soběstačném._
+**[Pyth Network](https://pyth.network/)** - _Síť Pyth je síť finančních orákul první strany navržená k nepřetržitému publikování dat z reálného světa onchain v prostředí odolném proti manipulaci, decentralizovaném a soběstačném._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO dodává řešení orákul první strany, která poskytují větší transparentnost zdrojů, bezpečnost a škálovatelnost v decentralizovaném řešení pro chytré kontrakty_
+**[API3 DAO](https://api3.org/)** - _API3 DAO dodává řešení orákul první strany, která poskytují větší transparentnost zdrojů, bezpečnost a škálovatelnost v decentralizovaném řešení pro chytré kontrakty._
 
-**[Supra](https://supra.com/)** - Vertikálně integrovaná sada nástrojů meziřetězcových řešení, která propojuje všechny blockchainy, veřejné (L1 a L2) nebo soukromé (podnikové), a poskytuje decentralizované cenové zdroje orákul, které lze použít pro onchain a offchain případy užití. 
+**[Supra](https://supra.com/)** - Vertikálně integrovaná sada nástrojů meziřetězcových řešení, která propojuje všechny blockchainy, veřejné (L1 a L2) nebo soukromé (podnikové), a poskytuje decentralizované cenové zdroje orákul, které lze použít pro onchain i offchain případy užití. 
 
-**[Gas Network](https://gas.network/)** - Distribuovaná platforma orákula poskytující data o ceně plynu v reálném čase napříč blockchainem. Přenesením dat od předních poskytovatelů dat o ceně plynu onchain pomáhá Gas Network podporovat interoperabilitu. Gas Network podporuje data pro více než 35 řetězců, včetně Ethereum Mainnet a mnoha předních L2.
+**[DIA](https://www.diadata.org/)** - Meziřetězcová síť orákul poskytující ověřitelné datové zdroje pro více než 20 000 aktiv napříč všemi hlavními třídami aktiv. DIA získává surová obchodní data přímo z více než 100 primárních trhů a zpracovává je onchain, čímž zajišťuje úplnou transparentnost a ověřitelnost dat s vlastními konfiguracemi pro jakýkoli případ užití.
 
-**[DIA](https://www.diadata.org/)** - Meziřetězcová síť orákul poskytující ověřitelné datové toky pro více než 20 000 aktiv napříč všemi hlavními třídami aktiv. DIA získává surová obchodní data přímo z více než 100 primárních trhů a vypočítává je onchain, čímž zajišťuje úplnou transparentnost a ověřitelnost dat s vlastními konfiguracemi pro jakýkoli případ užití.
-
-**[Stork](https://stork.network)** - Stork dodává cenová data s ultra nízkou latencí, čímž podporuje širokou škálu případů užití včetně trhů s perpetuálními kontrakty, protokolů pro půjčování a ekosystémů DeFi, přičemž nová aktiva jsou podporována rychle po zalistování.
+**[Stork](https://stork.network)** - Stork dodává cenová data s ultra nízkou latencí, čímž podporuje širokou škálu případů užití včetně trhů s perpetuálními kontrakty, protokolů pro půjčování a ekosystémů DeFi, přičemž nová aktiva jsou podporována rychle po jejich zalistování.
 
 ## Další čtení {#further-reading}
 

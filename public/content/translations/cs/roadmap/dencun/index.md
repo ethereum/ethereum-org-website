@@ -1,12 +1,12 @@
 ---
-title: Cancún-Deneb (Dencun)
-metaTitle: Cancún-Deneb (Dencun) FAQ
-description: Často kladené dotazy týkající se aktualizace sítě Cancún-Deneb (Dencun)
+title: "Cancún-Deneb (Dencun)"
+metaTitle: "Cancún-Deneb (Dencun) FAQ"
+description: "Často kladené dotazy týkající se aktualizace sítě Cancún-Deneb (Dencun)"
 lang: cs
 template: upgrade
 ---
 
-Cancún-Deneb (Dencun) je aktualizace sítě Ethereum, která aktivuje **proto-danksharding (EIP-4844)** a zavádí dočasné datové **bloby** pro levnější úložiště rollupů na [vrstvě 2 (l2)](/glossary/#layer-2).
+Cancún-Deneb (Dencun) je aktualizace sítě Ethereum, která aktivuje **proto-danksharding (EIP-4844)** a zavádí dočasné datové **bloby** pro levnější úložiště rollupů na [vrstvě 2 (L2)](/glossary/#layer-2).
 
 Nový typ transakce umožňuje poskytovatelům rollupů ukládat data nákladově efektivněji do takzvaných „blobů“. U blobů je zaručeno, že budou pro síť dostupné po dobu přibližně 18 dnů (přesněji 4096 [epoch](/glossary/#epoch)). Po uplynutí této doby jsou bloby ze sítě odstraněny, ale aplikace mohou stále ověřovat platnost svých dat pomocí důkazů. 
 
@@ -29,32 +29,31 @@ To významně snižuje náklady na rollupy, omezuje růst řetězce a pomáhá p
 
 Dencun primárně řeší **škálovatelnost** (zvládnutí více uživatelů a více transakcí) s **dostupnými poplatky**, a to při **zachování decentralizace** sítě.
 
-Komunita Etherea zaujala ke svému růstu přístup „zaměřený na rollupy“, který staví rollupy na vrstvě 2 (l2) do pozice primárního prostředku pro bezpečné podporování více uživatelů.
+Komunita Etherea zaujala ke svému růstu přístup „zaměřený na rollupy“, který staví rollupy na vrstvě 2 (L2) do pozice primárního prostředku pro bezpečné podporování více uživatelů.
 
 Sítě rollupů zpracovávají (neboli „provádějí“) transakce odděleně od Mainnetu a poté publikují kryptografický důkaz a/nebo komprimovaná transakční data s výsledky zpět na Mainnet pro účely uchování záznamů. Ukládání těchto důkazů s sebou nese náklady (ve formě [gasu](/glossary/#gas)), které před zavedením proto-dankshardingu museli trvale ukládat všichni provozovatelé uzlů v síti, což z toho činilo nákladný úkol.
 
-Zavedení proto-dankshardingu v aktualizaci Dencun přidává levnější datové úložiště pro tyto důkazy tím, že od provozovatelů uzlů vyžaduje uchovávání těchto dat pouze po dobu přibližně 18 dnů, po které mohou být data bezpečně odstraněna, aby se zabránilo nárůstu hardwarových požadavků. Protože rollupy mají obvykle lhůtu pro výběr 7 dnů, jejich bezpečnostní model zůstává nezměněn, dokud jsou bloby dostupné na vrstvě 1 (l1) po tuto dobu. Osmnáctidenní okno pro prořezávání (pruning) poskytuje pro toto období významnou rezervu.
+Zavedení proto-dankshardingu v aktualizaci Dencun přidává levnější datové úložiště pro tyto důkazy tím, že od provozovatelů uzlů vyžaduje uchovávání těchto dat pouze po dobu přibližně 18 dnů, po které mohou být data bezpečně odstraněna, aby se zabránilo nárůstu hardwarových požadavků. Protože rollupy mají obvykle lhůtu pro výběr 7 dnů, jejich bezpečnostní model zůstává nezměněn, dokud jsou bloby dostupné na vrstvě 1 (L1) po tuto dobu. Osmnáctidenní okno pro prořezávání (pruning) poskytuje pro toto období významnou rezervu.
 
 [Více o škálování Etherea](/roadmap/scaling/)
 
 ## Jak se přistupuje ke starým datům blobů? {#historical-access}
 
-Zatímco běžné uzly Etherea budou vždy uchovávat _aktuální stav_ sítě, historická data blobů mohou být zahozena přibližně 18 dní po jejich zavedení. Před zahozením těchto dat Ethereum zajišťuje, že byla zpřístupněna všem účastníkům sítě, což poskytuje čas na:
+Zatímco běžné uzly Etherea budou vždy uchovávat _aktuální stav_ sítě, historická data blobů mohou být odstraněna přibližně 18 dní po jejich zavedení. Před odstraněním těchto dat Ethereum zajišťuje, že byla zpřístupněna všem účastníkům sítě, což poskytuje čas na:
 
 - Stažení a uložení dat zainteresovanými stranami.
-- Dokončení všech lhůt pro zpochybnění (challenge periods) rollupů.
+- Dokončení všech lhůt pro zpochybnění rollupů.
 - Finalizaci transakcí rollupů.
 
 _Historická_ data blobů mohou být žádoucí z různých důvodů a lze je ukládat a přistupovat k nim pomocí několika decentralizovaných protokolů:
 
 - **Indexovací protokoly třetích stran**, jako je The Graph, ukládají tato data prostřednictvím decentralizované sítě provozovatelů uzlů motivovaných kryptoekonomickými mechanismy.
-- **BitTorrent** je decentralizovaný protokol, kde dobrovolníci mohou tato data uchovávat a distribuovat ostatním.
-- **[Portal Network Etherea](/developers/docs/networking-layer/portal-network/)** si klade za cíl poskytovat přístup ke všem datům Etherea prostřednictvím decentralizované sítě provozovatelů uzlů distribucí dat mezi účastníky podobně jako BitTorrent.
-- **Jednotliví uživatelé** si mohou vždy svobodně ukládat vlastní kopie jakýchkoli dat, která si přejí uchovat pro historické účely.
-- **Poskytovatelé rollupů** jsou motivováni k ukládání těchto dat, aby zlepšili uživatelský zážitek ze svého rollupu.
-- **Průzkumníci bloků (block explorers)** obvykle provozují archivní uzly, které indexují a ukládají všechny tyto informace pro snadné historické vyhledávání, přístupné uživatelům přes webové rozhraní.
+- **BitTorrent** je decentralizovaný protokol, kde dobrovolníci mohou uchovávat a distribuovat tato data ostatním.
+- **Jednotliví uživatelé** mohou vždy svobodně ukládat své vlastní kopie jakýchkoli dat, která si přejí, pro historické účely.
+- **Poskytovatelé rollupů** jsou motivováni k ukládání těchto dat, aby zlepšili uživatelskou zkušenost svého rollupu.
+- **Průzkumníci bloků** obvykle provozují archivní uzly, které indexují a ukládají všechny tyto informace pro snadné historické vyhledávání, přístupné uživatelům přes webové rozhraní.
 
-Je důležité si uvědomit, že obnova historického stavu funguje na **modelu důvěry 1 z N**. To znamená, že k ověření správnosti pomocí aktuálního stavu sítě potřebujete data pouze z _jednoho důvěryhodného zdroje_.
+Je důležité si uvědomit, že obnova historického stavu funguje na **modelu důvěry 1 z N**. To znamená, že k ověření správnosti pomocí aktuálního stavu sítě potřebujete data pouze z _jediného důvěryhodného zdroje_.
 
 ## Jak tato aktualizace přispívá k širší roadmapě Etherea? {#roadmap-impact}
 
@@ -76,7 +75,7 @@ Klienti konsensu spravují software _validátoru_, který byl kompletně aktuali
 
 ## Budou nyní všechny transakce na L2 využívat dočasný prostor blobů, nebo si budete moci vybrat? {#calldata-vs-blobs}
 
-Transakce rollupů na vrstvě 2 (l2) Etherea mají možnost využívat dva typy ukládání dat: dočasný prostor blobů nebo trvalá data volání (calldata) chytrých kontraktů. Prostor blobů je ekonomická volba, která poskytuje dočasné úložiště za nižší cenu. Zaručuje dostupnost dat pro všechny nezbytné lhůty pro zpochybnění. Na druhou stranu data volání chytrých kontraktů nabízejí trvalé úložiště, ale jsou dražší.
+Transakce rollupů na vrstvě 2 (L2) Etherea mají možnost využívat dva typy ukládání dat: dočasný prostor blobů nebo trvalá data volání (calldata) chytrých kontraktů. Prostor blobů je ekonomická volba, která poskytuje dočasné úložiště za nižší cenu. Zaručuje dostupnost dat pro všechny nezbytné lhůty pro zpochybnění. Na druhou stranu data volání chytrých kontraktů nabízejí trvalé úložiště, ale jsou dražší.
 
 Rozhodnutí mezi použitím prostoru blobů nebo dat volání činí primárně poskytovatelé rollupů. Toto rozhodnutí zakládají na aktuální poptávce po prostoru blobů. Pokud je po prostoru blobů vysoká poptávka, rollupy se mohou rozhodnout pro data volání, aby zajistily včasné odeslání dat.
 
@@ -84,7 +83,7 @@ Ačkoli je teoreticky možné, aby si uživatelé vybrali preferovaný typ úlo�
 
 ## Sníží EIP-4844 gas na L1? {#l1-fee-impact}
 
-Ne nijak významně. Zavádí se nový trh s gasem výhradně pro prostor blobů, který budou využívat poskytovatelé rollupů. _Ačkoli se poplatky na vrstvě 1 (l1) mohou snížit přesunutím dat rollupů do blobů, tato aktualizace se primárně zaměřuje na snížení poplatků na vrstvě 2 (l2). Ke snížení poplatků na L1 (Mainnet) může dojít v menší míře jako k efektu druhého řádu._
+Ne nijak významně. Zavádí se nový trh s gasem výhradně pro prostor blobů, který budou využívat poskytovatelé rollupů. _Ačkoli se poplatky na vrstvě 1 (L1) mohou snížit přesunutím dat rollupů do blobů, tato aktualizace se primárně zaměřuje na snížení poplatků na vrstvě 2 (L2). Ke snížení poplatků na L1 (Mainnet) může dojít v menší míře jako k efektu druhého řádu._
 
 - Snížení gasu na L1 bude úměrné přijetí/využívání dat blobů poskytovateli rollupů
 - Gas na L1 pravděpodobně zůstane konkurenční kvůli aktivitám nesouvisejícím s rollupy
@@ -93,7 +92,7 @@ Ne nijak významně. Zavádí se nový trh s gasem výhradně pro prostor blobů
 
 ## Sníží to poplatky na jiných EVM blockchainech na vrstvě 1? {#alt-l1-fee-impact}
 
-Ne. Výhody proto-dankshardingu jsou specifické pro rollupy na vrstvě 2 (l2) Etherea, které ukládají své důkazy na vrstvě 1 (Mainnet).
+Ne. Výhody proto-dankshardingu jsou specifické pro rollupy na vrstvě 2 (L2) Etherea, které ukládají své důkazy na vrstvě 1 (Mainnet).
 
 Pouhá kompatibilita s virtuálním strojem Etherea (EVM) neznamená, že síť z této aktualizace získá nějaký prospěch. Sítě, které fungují nezávisle na Ethereu (ať už jsou kompatibilní s EVM, nebo ne), neukládají svá data na Ethereu a z této aktualizace nebudou mít žádný užitek.
 

@@ -52,7 +52,7 @@ Existují různé bezplatné [služby](/developers/docs/nodes-and-clients/nodes-
 
 Archivní uzel v tomto kontextu znamená data poskytovaná klienty exekuční vrstvy orientovanými na uživatele, protože spravují databázi stavů a poskytují koncové body JSON-RPC. Možnosti konfigurace, doba synchronizace a velikost databáze se mohou u jednotlivých klientů lišit. Podrobnosti naleznete v dokumentaci poskytované vaším klientem.
 
-Před spuštěním vlastního archivního uzlu se seznamte s rozdíly mezi klienty a zejména s různými [hardwarovými požadavky](/developers/docs/nodes-and-clients/run-a-node/#requirements). Většina klientů není pro tuto funkci optimalizována a jejich archivy vyžadují více než 12 TB prostoru. Naproti tomu implementace jako Erigon dokážou uložit stejná data na méně než 3 TB, což z nich dělá nejefektivnější způsob provozování archivního uzlu.
+Před spuštěním vlastního archivního uzlu se seznamte s rozdíly mezi klienty a zejména s různými [hardwarovými požadavky](/developers/docs/nodes-and-clients/run-a-node/#requirements). Velikost archivu se značně liší v závislosti na návrhu úložiště každého klienta. Erigon, Reth a Geth (se svým archivem založeným na cestách) ukládají archiv Mainnetu do zhruba 2–3 TB, zatímco archivy Besu a Nethermind vyžadují 12 TB nebo více.
 
 ## Doporučené postupy {#recommended-practices}
 
@@ -61,13 +61,13 @@ Kromě obecných [doporučení pro provozování uzlu](/developers/docs/nodes-an
 ### Hardware {#hardware}
 
 Vždy se ujistěte, že jste si ověřili hardwarové požadavky pro daný režim v dokumentaci klienta.
-Největším požadavkem pro archivní uzly je místo na disku. V závislosti na klientovi se pohybuje od 3 TB do 12 TB. I když by HDD mohl být považován za lepší řešení pro velké množství dat, jeho synchronizace a neustálá aktualizace vrcholu řetězce bude vyžadovat SSD disky. Disky [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) jsou dostatečně dobré, ale měly by být spolehlivé kvality, alespoň [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disky lze namontovat do stolního počítače nebo serveru s dostatkem slotů. Taková vyhrazená zařízení jsou ideální pro provozování uzlu s vysokou dostupností. Je naprosto možné jej provozovat na notebooku, ale přenositelnost bude spojena s dodatečnými náklady.
+Největším požadavkem pro archivní uzly je místo na disku. V závislosti na klientovi se pohybuje od přibližně 2 TB do více než 12 TB. I když by HDD mohl být považován za lepší řešení pro velké množství dat, jeho synchronizace a neustálá aktualizace vrcholu řetězce bude vyžadovat SSD disky. Disky [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) jsou dostatečně dobré, ale měly by být spolehlivé kvality, alespoň [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disky lze namontovat do stolního počítače nebo serveru s dostatkem slotů. Taková dedikovaná zařízení jsou ideální pro provozování uzlu s vysokou dostupností. Je naprosto možné jej provozovat na notebooku, ale přenositelnost bude znamenat dodatečné náklady.
 
-Všechna data se musí vejít na jeden svazek, proto musí být disky spojeny, např. pomocí [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) nebo LVM. Možná by také stálo za zvážení použití [ZFS](https://en.wikipedia.org/wiki/ZFS), protože podporuje „Copy-on-write“, což zajišťuje, že data jsou správně zapsána na disk bez jakýchkoli chyb na nízké úrovni.
+Všechna data se musí vejít na jeden svazek, proto musí být disky spojeny, např. pomocí [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) nebo LVM. Může také stát za zvážení použití [ZFS](https://en.wikipedia.org/wiki/ZFS), protože podporuje „Copy-on-write“, což zajišťuje, že data jsou správně zapsána na disk bez jakýchkoli chyb na nízké úrovni.
 
-Pro větší stabilitu a bezpečnost při prevenci náhodného poškození databáze, zejména v profesionálním nastavení, zvažte použití [paměti ECC](https://en.wikipedia.org/wiki/ECC_memory), pokud ji váš systém podporuje. Velikost paměti RAM se obecně doporučuje stejná jako u plného uzlu, ale více paměti RAM může pomoci urychlit synchronizaci.
+Pro větší stabilitu a bezpečnost při prevenci náhodného poškození databáze, zejména v profesionálním nastavení, zvažte použití [paměti ECC](https://en.wikipedia.org/wiki/ECC_memory), pokud ji váš systém podporuje. Velikost RAM se obecně doporučuje stejná jako pro plný uzel, ale více RAM může pomoci urychlit synchronizaci.
 
-Během počáteční synchronizace klienti v archivním režimu provedou každou transakci od genesis. Rychlost provádění je většinou omezena procesorem (CPU), takže rychlejší CPU může pomoci zkrátit dobu počáteční synchronizace. Na průměrném spotřebitelském počítači může počáteční synchronizace trvat až měsíc.
+Během počáteční synchronizace klienti v archivním režimu provedou každou transakci od genesis. Rychlost provádění je většinou omezena CPU, takže rychlejší CPU může pomoci s dobou počáteční synchronizace. Na průměrném spotřebitelském počítači může počáteční synchronizace trvat až měsíc.
 
 ## Další čtení {#further-reading}
 

@@ -1,6 +1,6 @@
 ---
-title: Likvidní a společný staking
-description: Přehled likvidního a společného stakingu na Ethereu
+title: "Likvidní a společný staking"
+description: "Co je to likvidní staking? Zjistěte, jak vám stakingové pooly umožňují získávat odměny v ETH s jakýmkoli množstvím ETH, přičemž často obdržíte likvidní token, který můžete nadále používat."
 lang: cs
 template: staking
 image: /images/staking/leslie-pool.png

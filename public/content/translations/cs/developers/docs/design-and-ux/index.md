@@ -1,6 +1,6 @@
 ---
 title: Design a UX ve Web3
-description: "Úvod do UX designu a výzkumu v prostoru Web3 a Etherea"
+description: "Úvod do designu a UX ve Web3: výzkum, vzory a zdroje, které vám pomohou vytvářet aplikace pro Ethereum, jež se snadno, bezpečně a srozumitelně používají."
 lang: cs
 ---
 

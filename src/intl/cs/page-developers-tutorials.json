@@ -23,5 +23,6 @@
   "page-tutorial-all": "Vše",
   "page-tutorial-topics": "Témata",
   "page-tutorial-search-placeholder": "Hledat tutoriály...",
-  "page-tutorial-filtering-by": "Filtrováno podle:"
+  "page-tutorial-filtering-by": "Filtrováno podle:",
+  "page-tutorial-removed-notice": "Požadovaný tutoriál již není k dispozici. Projděte si udržované tutoriály níže."
 }

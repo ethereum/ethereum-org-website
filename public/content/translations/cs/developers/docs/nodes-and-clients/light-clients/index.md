@@ -40,18 +40,18 @@ Lehcí klienti by také mohli být použiti k vylepšení peněženek Etherea. M
 
 ## Jaký je současný stav vývoje lehkých klientů? {#current-state-of-development}
 
-Ve vývoji je několik lehkých klientů, včetně exekučních, konsensuálních a kombinovaných exekučních/konsensuálních lehkých klientů. Toto jsou implementace lehkých klientů, o kterých víme v době psaní této stránky:
+Ve vývoji je několik lehkých klientů, včetně exekučních lehkých klientů, lehkých klientů pro konsensus a kombinovaných lehkých klientů pro exekuci a konsensus. Toto jsou implementace lehkých klientů, o kterých víme v době psaní této stránky:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): konsensuální lehký klient v TypeScriptu
-- [Helios](https://github.com/a16z/helios): kombinovaný exekuční a konsensuální lehký klient v Rustu
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): lehký klient pro konsensus v TypeScriptu
+- [Helios](https://github.com/a16z/helios): kombinovaný lehký klient pro exekuci a konsensus v Rustu
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): lehký režim pro exekučního klienta (ve vývoji) v Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): konsensuální lehký klient v Nimu
+- [Nimbus](https://nimbus.guide/el-light-client.html): lehký klient pro konsensus v Nimu
 
 Pokud víme, žádný z nich zatím není považován za připravený pro produkční nasazení.
 
-Probíhá také spousta práce na zlepšení způsobů, jakými mohou lehcí klienti přistupovat k datům Etherea. V současné době se lehcí klienti spoléhají na požadavky RPC na plné uzly pomocí modelu klient/server, ale v budoucnu by data mohla být vyžadována decentralizovanějším způsobem pomocí vyhrazené sítě, jako je [Portal Network](https://www.ethportal.net/), která by mohla data lehkým klientům poskytovat pomocí peer-to-peer gossip protokolu.
+Pracuje se také na mnoha vylepšeních způsobů, jakými mohou lehcí klienti přistupovat k datům Etherea. V současné době se lehcí klienti spoléhají na RPC požadavky na plné uzly pomocí modelu klient/server. [Portal Network](/developers/docs/networking-layer/portal-network/) byla původně navržena tak, aby tato data poskytovala lehkým klientům přes peer-to-peer síť, ale její vývoj se nyní zaměřuje na poskytování historie minulých bloků.
 
-Další položky [roadmapy](/roadmap/), jako jsou [Verkle stromy](/roadmap/verkle-trees/) a [bezstavovost](/roadmap/statelessness/), nakonec přinesou bezpečnostní záruky lehkých klientů na úroveň plných klientů.
+Další položky [plánu vývoje](/roadmap/), jako je nový strom stavu (v současnosti navrhovaný jako binární strom v [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) a [bezstavovost](/roadmap/statelessness/), nakonec přinesou lehkým klientům stejné bezpečnostní záruky, jaké mají plní klienti.
 
 ## Další čtení {#further-reading}
 

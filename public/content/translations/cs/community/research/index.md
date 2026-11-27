@@ -158,14 +158,14 @@ Nyní existuje několik protokolů vrstvy 2 (L2), které škálují Ethereum pom
 
 #### Doporučená četba {#background-reading-2}
 
-- [Úvod do vrstvy 2 (L2)](/layer-2/)
-- [L2BEAT: shrnutí škálování](https://l2beat.com/scaling/summary)
+- [Úvod do vrstvy 2](/layer-2/)
+- [ETHBEAT: shrnutí škálování](https://ethbeat.org/layer2s/summary)
 - [Plán vývoje Etherea zaměřený na rollupy](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Nedávný výzkum {#recent-research-2}
 
-- [Vrstva 2 na Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: onchain náklady](https://l2beat.com/scaling/costs)
+- [Ethresear.ch vrstva 2](https://ethresear.ch/c/layer-2/32)
+- [ETHBEAT: onchain náklady](https://ethbeat.org/layer2s/costs)
 - [Budování na Ethereu v roce 2026: co se změnilo](/latest/building-on-ethereum-in-2026/)
 
 ### Interoperabilita {#interoperability}
@@ -385,9 +385,9 @@ Je potřeba více nástrojů pro analýzu dat a řídicích panelů (dashboards)
 
 #### Nedávný výzkum {#recent-research-14}
 
-- [Analýza dat Skupiny pro robustní pobídky](https://rig.ethereum.org/)
+- [Analýza dat Robust Incentives Group](https://rig.ethereum.org/)
 - [Otevřená data ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: shrnutí škálování](https://l2beat.com/scaling/summary)
+- [ETHBEAT: shrnutí škálování](https://ethbeat.org/layer2s/summary)
 
 ## Aplikace a nástroje {#apps-and-tooling}
 

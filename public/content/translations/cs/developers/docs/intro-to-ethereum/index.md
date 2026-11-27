@@ -1,6 +1,6 @@
 ---
 title: "Technický úvod do Etherea"
-description: "Úvod do základních konceptů Etherea pro vývojáře dapp."
+description: "Technický úvod do Etherea pro vývojáře: blockchainy, účty, transakce, EVM, gas a chytré kontrakty, vysvětleno krok za krokem."
 lang: cs
 ---
 

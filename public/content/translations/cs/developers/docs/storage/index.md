@@ -5,13 +5,13 @@ lang: cs
 authors: ["Patrick Collins"]
 ---
 
-Na rozdíl od centralizovaného serveru provozovaného jedinou společností nebo organizací se systémy decentralizovaného úložiště skládají z peer-to-peer sítě uživatelů-provozovatelů, kteří uchovávají část celkových dat, čímž vytvářejí odolný systém pro sdílení a ukládání souborů. Ty mohou být součástí aplikace založené na blockchainu nebo jakékoli sítě založené na peer-to-peer.
+Na rozdíl od centralizovaného serveru provozovaného jedinou společností nebo organizací se systémy decentralizovaného úložiště skládají z peer-to-peer sítě uživatelů-provozovatelů, kteří uchovávají část celkových dat, čímž vytvářejí odolný systém pro sdílení a ukládání souborů. Ty mohou být součástí aplikace založené na blockchainu nebo jakékoli sítě na bázi peer-to-peer.
 
-Samotné Ethereum lze použít jako systém decentralizovaného úložiště, a také jím je, pokud jde o ukládání kódu ve všech chytrých kontraktech. Pokud však jde o velké objemy dat, k tomu Ethereum nebylo navrženo. Řetězec neustále roste, ale v době psaní tohoto textu má řetězec Etherea přibližně 500 GB – 1 TB ([v závislosti na klientovi](https://etherscan.io/chartsync/chaindefault)) a každý uzel v síti musí být schopen uložit všechna data. Pokud by se řetězec rozšířil na velké objemy dat (řekněme 5 TB), nebylo by pro všechny uzly proveditelné nadále fungovat. Navíc by náklady na nasazení takového množství dat na Mainnet byly kvůli poplatkům za [gas](/developers/docs/gas) neúnosně vysoké.
+Samotné Ethereum lze použít jako systém decentralizovaného úložiště, a také jím je, pokud jde o ukládání kódu ve všech chytrých kontraktech. Pokud však jde o velké objemy dat, k tomu Ethereum nebylo navrženo. Řetězec neustále roste, ale v době psaní tohoto textu má řetězec Etherea přibližně 1–2 TB ([v závislosti na klientovi](https://etherscan.io/chartsync/chaindefault)) a každý uzel v síti musí být schopen uložit všechna data. Pokud by se řetězec rozšířil na velké objemy dat (řekněme 5 TB), nebylo by pro všechny uzly reálné nadále fungovat. Navíc by náklady na nasazení takového množství dat na Mainnet byly neúnosně drahé kvůli poplatkům za [gas](/developers/docs/gas).
 
 Kvůli těmto omezením potřebujeme jiný řetězec nebo metodiku pro ukládání velkého množství dat decentralizovaným způsobem.
 
-Při zvažování možností decentralizovaného úložiště (dStorage) je několik věcí, které musí mít uživatel na paměti.
+Při zkoumání možností decentralizovaného úložiště (dStorage) je několik věcí, které by měl mít uživatel na paměti.
 
 - Mechanismus perzistence / struktura pobídek
 - Vynucování uchovávání dat

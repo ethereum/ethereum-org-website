@@ -1,7 +1,7 @@
 ---
 title: "Aktiva reálného světa (RWA)"
 metaTitle: "Co jsou RWA? | Výhody a využití aktiv reálného světa"
-description: "Přehled aktiv reálného světa na Ethereu"
+description: "Co jsou aktiva reálného světa (RWA)? Zjistěte, jak se aktiva jako státní dluhopisy, nemovitosti a komodity tokenizují na Ethereu, a jaké to přináší výhody a rizika."
 lang: cs
 template: use-cases
 image: /images/man-and-dog-playing.png
