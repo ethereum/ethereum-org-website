@@ -195,7 +195,9 @@ const BlockBuilderWidget = ({ onAnswer, locked }: WidgetProps) => {
                   hit ? "text-green-700 dark:text-green-400" : "text-body"
                 )}
               >
-                {int.format(tips)}
+                {t("page-courses-widget-block-tips-value", {
+                  value: int.format(tips),
+                })}
               </span>
             </div>
             <div className="h-3 overflow-hidden rounded-full bg-background">

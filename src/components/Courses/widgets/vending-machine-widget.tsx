@@ -141,6 +141,7 @@ const SnackMachineWidget = ({ onComplete }: WidgetProps) => {
         price: int.format(price),
         priceCount: price,
         amount: int.format(outcome.paid),
+        paidCount: outcome.paid,
       })
     }
     return t("page-courses-widget-vending-reject-stock", { item })
