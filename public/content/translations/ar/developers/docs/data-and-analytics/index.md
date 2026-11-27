@@ -1,6 +1,6 @@
 ---
 title: "البيانات والتحليلات"
-description: "كيفية الحصول على التحليلات والبيانات على السلسلة لاستخدامها في تطبيقاتك اللامركزية (dapps)"
+description: "كيفية الحصول على بيانات على السلسلة لـ ⁦dapp⁩ الخاص بك: المفهرسات، والرسومات البيانية الفرعية، ومستكشفات الكتل، ومنصات تحليلات ⁦SQL⁩، و⁦APIs⁩ للاستعلام عن بيانات إيثيريوم وتحليلها."
 lang: ar
 ---
 
@@ -72,12 +72,12 @@ lang: ar
 [Envio](https://envio.dev/) هو إطار عمل للفهرسة يحول الأحداث على السلسلة إلى واجهة برمجة تطبيقات (API) من نوع GraphQL قابلة للاستعلام. وهو يدعم إيثيريوم وأي سلسلة متوافقة مع EVM. يكتب المطورون معالجات الأحداث بلغة TypeScript أو JavaScript أو ReScript لتقديم بيانات في الوقت الفعلي وتاريخية، مع دعم إعادة التنظيم، والفهرسة متعددة السلاسل، والاستضافة المدارة على Envio Cloud أو الاستضافة الذاتية.
 
 للبدء، اتبع [دليل البدء السريع لـ HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) لإنشاء ونشر والاستعلام عن مفهرس.
-## قراءة إضافية {#further-reading}
+## قراءات إضافية {#further-reading}
 
-- [استكشاف بيانات الكريبتو 1: معماريات تدفق البيانات](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [استكشاف بيانات الكريبتو 1: بنيات تدفق البيانات](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [نظرة عامة على شبكة Graph](https://thegraph.com/docs/en/about/)
-- [ساحة لعب استعلامات Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [أمثلة على أكواد API على Etherscan](https://etherscan.io/apis#contracts)
+- [مستكشف Graph](https://thegraph.com/explorer)
+- [أمثلة على التعليمات البرمجية لـ API على Etherscan](https://etherscan.io/apis#contracts)
 - [وثائق API على Blockscout](https://docs.blockscout.com/devs/apis)
 - [مستكشف سلسلة المنارة Beaconcha.in](https://beaconcha.in)
 - [أساسيات Dune](https://docs.dune.com/#dune-basics)

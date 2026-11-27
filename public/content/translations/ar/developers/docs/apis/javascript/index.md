@@ -298,9 +298,7 @@ _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذ
 
 ## برامج تعليمية ذات صلة {#related-tutorials}
 
-- [إعداد <span dir="ltr">Web3js</span> لاستخدام سلسلة الكتل لإيثيريوم في <span dir="ltr">JavaScript</span>](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– إرشادات لإعداد <span dir="ltr">Web3.js</span> في مشروعك._
-- [استدعاء عقد ذكي من <span dir="ltr">JavaScript</span>](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– باستخدام الرمز المميز <span dir="ltr">DAI</span>، تعرف على كيفية استدعاء وظيفة العقود باستخدام <span dir="ltr">JavaScript</span>._
-- [إرسال المعاملات باستخدام <span dir="ltr">Web3</span> و<span dir="ltr">Alchemy</span>](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– إرشادات خطوة بخطوة لإرسال المعاملات من الواجهة الخلفية._
+- [إرسال المعاملات باستخدام <span dir="ltr">Web3</span> و<span dir="ltr">Alchemy</span>](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– دليل تفصيلي خطوة بخطوة لإرسال المعاملات من الواجهة الخلفية._
 
 ## برامج تعليمية: واجهات برمجة تطبيقات <span dir="ltr">JavaScript</span> و<span dir="ltr">WebSockets</span> على إيثيريوم {#tutorials}
 

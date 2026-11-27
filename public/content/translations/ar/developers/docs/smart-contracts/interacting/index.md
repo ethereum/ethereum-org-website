@@ -171,16 +171,15 @@ const result = await client.simulateContract({
 
 ## برامج تعليمية ذات صلة {#related-tutorials}
 
-- [استدعاء عقد ذكي من JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [إرسال المعاملات باستخدام Web3.js وAlchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [كيفية عرض الرمز غير القابل للاستبدال (NFT) الخاص بك في محفظتك](/developers/tutorials/how-to-view-nft-in-metamask/)
+- [كيفية عرض الرمز غير القابل للاستبدال (<span dir="ltr">NFT</span>) الخاص بك في محفظتك](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## قراءة إضافية {#further-reading}
 
-- [وثائق Viem: القراءة والكتابة إلى العقود](https://viem.sh/docs/contract/readContract)
+- [وثائق Viem: القراءة من العقود والكتابة إليها](https://viem.sh/docs/contract/readContract)
 - [وثائق Ethers.js: العقود](https://docs.ethers.org/v6/api/contract/)
-- [مواصفات واجهة التطبيق الثنائية (ABI) للغة Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [ما هي واجهة التطبيق الثنائية (ABI)؟ - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [مواصفات واجهة التطبيق الثنائية (<span dir="ltr">ABI</span>) للغة Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
+- [كيف تعمل واجهات التطبيق الثنائية (<span dir="ltr">ABIs</span>) للعقود الذكية؟ - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## مواضيع ذات صلة {#related-topics}
 

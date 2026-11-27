@@ -165,7 +165,7 @@ function auctionEnd() external {
 
 يأخذ المحلل الثابت كمدخل الكود المصدري لعقد ذكي ويخرج نتائج تعلن ما إذا كان العقد يلبي خاصية أم لا. على عكس التحليل الديناميكي، لا يتضمن التحليل الثابت تنفيذ عقد لتحليله للتأكد من صحته. بدلاً من ذلك، يستنتج التحليل الثابت جميع المسارات الممكنة التي يمكن أن يتخذها العقد الذكي أثناء التنفيذ (أي من خلال فحص بنية الكود المصدري لتحديد ما سيعنيه ذلك لعملية العقد في وقت التشغيل).
 
-يعد [فحص الكود (Linting)](https://www.perforce.com/blog/qac/what-is-linting) و[الاختبار الثابت](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) من الطرق الشائعة لتشغيل التحليل الثابت على العقود. يتطلب كلاهما تحليل تمثيلات منخفضة المستوى لتنفيذ العقد مثل [أشجار بناء الجملة المجردة](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) و[الرسوم البيانية لتدفق التحكم](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) التي يخرجها المترجم.
+يعد [فحص الكود (Linting)](https://www.perforce.com/blog/qac/what-is-linting) و[الاختبار الثابت](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) من الطرق الشائعة لتشغيل التحليل الثابت على العقود. يتطلب كلاهما تحليل تمثيلات منخفضة المستوى لتنفيذ العقد مثل [أشجار بناء الجملة المجردة](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) و[الرسوم البيانية لتدفق التحكم](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) التي يخرجها المترجم.
 
 في معظم الحالات، يكون التحليل الثابت مفيدًا لاكتشاف مشكلات السلامة مثل استخدام بنيات غير آمنة، أو أخطاء في بناء الجملة، أو انتهاكات لمعايير الترميز في كود العقد. ومع ذلك، من المعروف أن المحللات الثابتة غير سليمة بشكل عام في اكتشاف الثغرات الأمنية العميقة، وقد تنتج نتائج إيجابية خاطئة مفرطة.
 
@@ -238,7 +238,7 @@ function auctionEnd() external {
 
 كما ذكرنا، نادرًا ما يضمن الاختبار الصارم عدم وجود أخطاء في العقد؛ يمكن أن توفر نُهج التحقق الشكلي ضمانات أقوى للصحة ولكن يصعب استخدامها حاليًا وتتكبد تكاليف كبيرة.
 
-ومع ذلك، يمكنك زيادة إمكانية اكتشاف الثغرات الأمنية في العقد من خلال الحصول على مراجعة مستقلة للكود. تعد [عمليات تدقيق العقود الذكية](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) و[مكافآت اكتشاف الأخطاء](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) طريقتين لجعل الآخرين يحللون عقودك.
+ومع ذلك، يمكنك زيادة إمكانية اكتشاف الثغرات الأمنية في العقد من خلال الحصول على مراجعة مستقلة للكود. تعد [عمليات تدقيق العقود الذكية](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) و[مكافآت اكتشاف الأخطاء](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) طريقتين لجعل الآخرين يحللون عقودك.
 
 يتم إجراء عمليات التدقيق بواسطة مدققين ذوي خبرة في العثور على حالات العيوب الأمنية وممارسات التطوير السيئة في العقود الذكية. عادةً ما تتضمن عملية التدقيق الاختبار (وربما التحقق الشكلي) بالإضافة إلى مراجعة يدوية لقاعدة الكود بأكملها.
 
@@ -276,7 +276,7 @@ function auctionEnd() external {
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _أداة فحص كود (Linter) لفرض أفضل ممارسات الأسلوب والأمان للغة برمجة العقود الذكية Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _محلل ثابت قائم على Rust مصمم خصيصًا لأمان وتطوير العقود الذكية في Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _محلل ثابت قائم على Rust مصمم خصيصًا لأمان وتطوير العقود الذكية في Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _إطار عمل تحليل ثابت قائم على Python مع كاشفات للثغرات الأمنية وجودة الكود، وطابعات لاستخراج معلومات مفيدة من الكود ودعم لكتابة وحدات فرعية مخصصة._
 
@@ -298,9 +298,8 @@ function auctionEnd() external {
 
 - [نظرة عامة ومقارنة بين منتجات الاختبار المختلفة](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [كيفية استخدام إيكيدنا لاختبار العقود الذكية](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [كيفية استخدام مانتيكور للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [كيفية استخدام سليذر للعثور على أخطاء العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [كيفية محاكاة عقود Solidity للاختبار](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [كيفية استخدام سليذر للعثور على الأخطاء في العقود الذكية](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [كيفية محاكاة العقود الذكية بلغة Solidity للاختبار](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [كيفية تشغيل اختبارات الوحدة في Solidity باستخدام Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## قراءة إضافية {#further-reading}

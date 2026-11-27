@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## برامج تعليمية: البناء باستخدام الرموز غير القابلة للاستبدال (<span dir="ltr">ERC-721</span>) على إيثيريوم {#tutorials}
 
-- [جولة إرشادية لعقد <span dir="ltr">ERC-721</span> بلغة Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– جولة إرشادية مشروحة لعقد رمز غير قابل للاستبدال <span dir="ltr">ERC-721</span> كامل مكتوب بلغة Vyper._
-- [كيفية كتابة ونشر رمز غير قابل للاستبدال (الجزء 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– دليل خطوة بخطوة لكتابة ونشر أول عقد ذكي <span dir="ltr">ERC-721</span> لك._
-- [كيفية سك رمز غير قابل للاستبدال (الجزء 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– كيفية سك رمز غير قابل للاستبدال <span dir="ltr">ERC-721</span> باستخدام عقدك الذكي المنشور وWeb3._
-- [كيفية عرض الرمز غير القابل للاستبدال الخاص بك في محفظتك (الجزء 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– كيفية عرض الرمز غير القابل للاستبدال الذي تم سكه في ميتاماسك بعد النشر._
-- [برنامج تعليمي لسك الرموز غير القابلة للاستبدال](/developers/tutorials/nft-minter/) _– بناء تطبيق لامركزي (dapp) متكامل لسك الرموز غير القابلة للاستبدال مع واجهة أمامية باستخدام React، وميتاماسك، وAlchemy._
+- [جولة إرشادية في عقد <span dir="ltr">ERC-721</span> بلغة Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– جولة إرشادية مشروحة لعقد رمز غير قابل للاستبدال (NFT) كامل بمعيار <span dir="ltr">ERC-721</span> مكتوب بلغة Vyper._
+- [كيفية كتابة ونشر رمز غير قابل للاستبدال (الجزء <span dir="ltr">1/3</span>)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– دليل خطوة بخطوة لكتابة ونشر أول عقد ذكي لك بمعيار <span dir="ltr">ERC-721</span>._
+- [كيفية سك رمز غير قابل للاستبدال (الجزء <span dir="ltr">2/3</span>)](/developers/tutorials/how-to-mint-an-nft/) _– كيفية سك رمز غير قابل للاستبدال (NFT) بمعيار <span dir="ltr">ERC-721</span> باستخدام عقدك الذكي المنشور و<span dir="ltr">Web3</span>._
+- [كيفية عرض الرمز غير القابل للاستبدال الخاص بك في محفظتك (الجزء <span dir="ltr">3/3</span>)](/developers/tutorials/how-to-view-nft-in-metamask/) _– كيفية عرض الرمز غير القابل للاستبدال (NFT) الذي قمت بسكه في ميتاماسك بعد النشر._

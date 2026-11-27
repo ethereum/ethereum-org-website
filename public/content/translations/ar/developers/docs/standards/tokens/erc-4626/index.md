@@ -51,7 +51,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-تُرجع هذه الدالة إجمالي مبلغ الأصول الأساسية التي يحتفظ بها القبو.
+تُرجع هذه الدالة إجمالي مقدار الأصول الأساسية التي يديرها القبو، بما في ذلك أي أصول قام بتشغيلها في مكان آخر وبعد خصم أي رسوم.
 
 #### convertToShares {#convertoshares}
 
@@ -139,7 +139,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-تقوم هذه الدالة بحرق `shares` من `owner` وإرسال `assets` بالضبط من الرموز المميزة من القبو إلى `receiver`.
+تقوم هذه الدالة بحرق `shares` من `owner` وترسل بالضبط `assets` من الرموز المميزة من القبو إلى `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -183,7 +183,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### خريطة الواجهة {#mapoftheinterface}
 
-![Map of the <span dir="ltr">ERC-4626</span> interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### الأحداث {#events}
 

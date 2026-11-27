@@ -38,20 +38,19 @@ incomplete: true
 
 ## مشاريع وأدوات <span dir="ltr">Rust</span> {#rust-projects-and-tools}
 
-- [<span dir="ltr">pwasm-ethereum</span>](https://github.com/paritytech/pwasm-ethereum) - _مجموعة من <span dir="ltr">externs</span> للتفاعل مع شبكة تشبه إيثيريوم_
-- [لايتهاوس](https://github.com/sigp/lighthouse) - _عميل طبقة الإجماع السريع لإيثيريوم_
-- [<span dir="ltr">Ethereum WebAssembly</span>](https://ewasm.readthedocs.io/en/mkdocs/) - _إعادة تصميم مقترحة لطبقة التنفيذ للعقود الذكية في إيثيريوم باستخدام مجموعة فرعية حتمية من <span dir="ltr">WebAssembly</span>_
-- [<span dir="ltr">oasis_std</span>](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _مرجع <span dir="ltr">OASIS API</span>_
-- [<span dir="ltr">Solaris</span>](https://github.com/paritytech/sol-rs) - _أداة اختبار الوحدة للعقود الذكية بلغة <span dir="ltr">Solidity</span> باستخدام <span dir="ltr">EVM</span> الأصلي لعميل <span dir="ltr">Parity</span>._
-- [<span dir="ltr">SputnikVM</span>](https://github.com/rust-blockchain/evm) - _تنفيذ آلة إيثيريوم الافتراضية بلغة <span dir="ltr">Rust</span>_
+- [<span dir="ltr">pwasm-ethereum</span>](https://github.com/paritytech/pwasm-ethereum) - _مجموعة من العناصر الخارجية للتفاعل مع شبكة تشبه إيثيريوم_
+- [لايتهاوس](https://github.com/sigp/lighthouse) - _عميل سريع لطبقة الإجماع في إيثيريوم_
+- [<span dir="ltr">Ethereum WebAssembly</span>](https://ewasm.readthedocs.io/en/mkdocs/) - _إعادة تصميم مقترحة لطبقة التنفيذ الخاصة بالعقود الذكية في إيثيريوم باستخدام مجموعة فرعية حتمية من <span dir="ltr">WebAssembly</span>_
+- [<span dir="ltr">Solaris</span>](https://github.com/paritytech/sol-rs) - _بيئة اختبار الوحدة للعقود الذكية بلغة <span dir="ltr">Solidity</span> باستخدام آلة إيثريوم الافتراضية (<span dir="ltr">EVM</span>) الأصلية لعميل <span dir="ltr">Parity</span>._
+- [<span dir="ltr">SputnikVM</span>](https://github.com/rust-blockchain/evm) - _تنفيذ آلة إيثريوم الافتراضية (<span dir="ltr">EVM</span>) بلغة <span dir="ltr">Rust</span>_
 - [<span dir="ltr">Wavelet</span>](https://github.com/perlin-network/smart-contract-rs) - _عقد ذكي لـ <span dir="ltr">Wavelet</span> بلغة <span dir="ltr">Rust</span>_
 - [<span dir="ltr">Foundry</span>](https://github.com/foundry-rs/foundry) - _مجموعة أدوات لتطوير تطبيقات إيثيريوم_
-- [<span dir="ltr">Alloy</span>](https://alloy.rs) - _مكتبات عالية الأداء ومختبرة وموثقة جيدًا للتفاعل مع إيثيريوم والسلاسل الأخرى المعتمدة على <span dir="ltr">EVM</span>._
+- [<span dir="ltr">Alloy</span>](https://alloy.rs) - _مكتبات عالية الأداء ومختبرة وموثقة جيدًا للتفاعل مع إيثيريوم والسلاسل الأخرى المعتمدة على آلة إيثريوم الافتراضية (<span dir="ltr">EVM</span>)._
 - [<span dir="ltr">Ethers_rs</span>](https://github.com/gakonst/ethers-rs) - _مكتبة إيثيريوم وتنفيذ محفظة_
-- [<span dir="ltr">SewUp</span>](https://github.com/second-state/SewUp) - _مكتبة لمساعدتك في بناء عقد <span dir="ltr">webassembly</span> الخاص بك على إيثيريوم باستخدام <span dir="ltr">Rust</span> تمامًا مثل التطوير في الواجهة الخلفية الشائعة_
+- [<span dir="ltr">SewUp</span>](https://github.com/second-state/SewUp) - _مكتبة لمساعدتك في بناء عقد <span dir="ltr">WebAssembly</span> الخاص بك على إيثيريوم باستخدام <span dir="ltr">Rust</span> تمامًا مثل التطوير في واجهة خلفية شائعة_
 - [<span dir="ltr">Substreams</span>](https://github.com/streamingfast/substreams) - _تقنية فهرسة بيانات سلسلة الكتل المتوازية_
 - [ريث](https://github.com/paradigmxyz/reth) ريث (اختصار لـ <span dir="ltr">Rust Ethereum</span>) هو تنفيذ جديد لعقدة كاملة في إيثيريوم
-- [<span dir="ltr">Awesome Ethereum Rust</span>](https://github.com/Vid201/awesome-ethereum-rust) - _مجموعة منسقة من المشاريع في نظام إيثيريوم البيئي المكتوبة بلغة <span dir="ltr">Rust</span>_
+- [<span dir="ltr">Awesome Ethereum Rust</span>](https://github.com/Vid201/awesome-ethereum-rust) - _مجموعة منتقاة من المشاريع في نظام إيثيريوم البيئي المكتوبة بلغة <span dir="ltr">Rust</span>_
 - [<span dir="ltr">Stylus</span>](https://github.com/OffchainLabs/stylus) - _حزمة تطوير البرمجيات (<span dir="ltr">SDK</span>) بلغة <span dir="ltr">Rust</span> لبناء العقود الذكية على <span dir="ltr">Arbitrum</span>_
 
 هل تبحث عن المزيد من الموارد؟ تحقق من [<span dir="ltr">ethereum.org/developers</span>.](/developers/)

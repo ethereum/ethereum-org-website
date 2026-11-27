@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/interact-with-other-contracts-from-solidity/index.md",
-  "generatedAt": "2026-06-17T00:19:38.039Z",
-  "rootHash": "7653790aeb91",
+  "generatedAt": "2026-11-27T10:34:40.087Z",
+  "rootHash": "16d5a18ca011",
   "tree": {
-    "contentHash": "835726e553ed",
-    "anchorHash": "c665c4840b03",
+    "contentHash": "097465d265ad",
+    "anchorHash": "5ca0bfbc0ba7",
     "children": {
       "frontmatter:title": {
         "contentHash": "8f3c76ee7afd",
@@ -68,52 +68,44 @@
         "contentHash": "e3b0c44298fc",
         "anchorHash": "9ec95904a9ee"
       },
-      "frontmatter:source": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "f26cb6fb8ba7"
-      },
-      "frontmatter:sourceUrl": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "e21d51bb8515"
-      },
       "frontmatter:address": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "9ef597f45aba"
       },
       "prose:6": {
-        "contentHash": "d0d5509b8f41",
+        "contentHash": "7c19f1358e5a",
         "anchorHash": "e3b0c44298fc"
       },
       "link:0": {
-        "contentHash": "52405081f52a",
-        "anchorHash": "0b3ef66f0d24"
+        "contentHash": "3302287db515",
+        "anchorHash": "49f1a7863a0e"
       },
       "prose:7": {
-        "contentHash": "35f62080e5bc",
+        "contentHash": "b5fa6d1ad744",
         "anchorHash": "e3b0c44298fc"
       },
       "link:1": {
         "contentHash": "0d88cc9434fa",
-        "anchorHash": "f4381c2ae511"
+        "anchorHash": "7ca17a259255"
       },
       "prose:8": {
-        "contentHash": "529f0e6593fe",
+        "contentHash": "ff7a165b1a17",
         "anchorHash": "e3b0c44298fc"
       },
       "link:2": {
         "contentHash": "adadb2d0f377",
-        "anchorHash": "6eff41ff88be"
+        "anchorHash": "cfb23fe1a995"
       },
       "prose:9": {
-        "contentHash": "18f893499fb8",
+        "contentHash": "44359e21492d",
         "anchorHash": "e3b0c44298fc"
       },
       "inline-code:3": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "f679230253e5"
+        "anchorHash": "8151151c2dfd"
       },
       "prose:10": {
-        "contentHash": "5a5d163377e9",
+        "contentHash": "d0d5509b8f41",
         "anchorHash": "e3b0c44298fc"
       },
       "inline-code:4": {
@@ -132,9 +124,13 @@
         "contentHash": "68e8346a942c",
         "anchorHash": "e3b0c44298fc"
       },
-      "code-fence:24": {
+      "code-comment:22": {
+        "contentHash": "adcef9d88762",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:23": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "9160a0bb6fbd"
+        "anchorHash": "4da4782e7622"
       },
       "prose:2": {
         "contentHash": "23f49fc4c1b9",
@@ -145,52 +141,52 @@
         "anchorHash": "f967abcd5ad0"
       },
       "prose:3": {
-        "contentHash": "166638c7b0f8",
+        "contentHash": "f5fda82ce746",
         "anchorHash": "e3b0c44298fc"
       },
       "inline-code:1": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "8151151c2dfd"
+        "anchorHash": "83d4baace1fa"
       },
       "prose:4": {
-        "contentHash": "93273080013a",
+        "contentHash": "28a6862b2727",
         "anchorHash": "e3b0c44298fc"
       },
-      "code-fence:30": {
+      "code-fence:29": {
         "contentHash": "e3b0c44298fc",
         "anchorHash": "e1debf03f9ff"
-      },
-      "prose:0": {
-        "contentHash": "f93ab89c2e0b",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "code-fence:32": {
-        "contentHash": "e3b0c44298fc",
-        "anchorHash": "b9416dedd00f"
       },
       "prose:1": {
         "contentHash": "09ef5b5083d9",
         "anchorHash": "e3b0c44298fc"
       },
-      "code-fence:36": {
+      "code-fence:33": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "550c04f7e602"
+        "anchorHash": "0843a20f9000"
+      },
+      "code-fence:39": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "48b7e6b3f67e"
       },
       "prose:5": {
-        "contentHash": "44359e21492d",
+        "contentHash": "641cf7bd6bdb",
         "anchorHash": "e3b0c44298fc"
       },
       "inline-code:2": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "a78cfdf4acfc"
+        "anchorHash": "5c3d82fc24a5"
       },
-      "code-fence:48": {
+      "code-fence:51": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "8015652eaed8"
+        "anchorHash": "2d78eaec200b"
       },
-      "code-fence:56": {
+      "code-comment:63": {
+        "contentHash": "adcef9d88762",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-fence:64": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "6f9e23598ce5"
+        "anchorHash": "6d2f2faa8942"
       },
       "image:0": {
         "contentHash": "a40ff8cc511b",
@@ -206,8 +202,6 @@
       "frontmatter:breadcrumb",
       "frontmatter:lang",
       "frontmatter:published",
-      "frontmatter:source",
-      "frontmatter:sourceUrl",
       "frontmatter:address",
       "prose:6",
       "link:0",
@@ -222,19 +216,24 @@
       "prose:11",
       "inline-code:5",
       "prose:12",
-      "code-fence:24",
+      "code-comment:22",
+      "code-fence:23",
       "prose:2",
       "inline-code:0",
       "prose:3",
       "inline-code:1",
       "prose:4",
-      "code-fence:30",
-      "prose:0",
-      "code-fence:32",
+      "code-fence:29",
       "prose:1",
-      "inline-code:0",
+      "link:0",
       "prose:2",
-      "code-fence:36",
+      "code-fence:33",
+      "prose:2",
+      "inline-code:0",
+      "prose:3",
+      "inline-code:1",
+      "prose:4",
+      "code-fence:39",
       "prose:5",
       "inline-code:0",
       "prose:6",
@@ -246,19 +245,24 @@
       "prose:9",
       "inline-code:4",
       "prose:10",
-      "code-fence:48",
-      "prose:3",
-      "link:0",
-      "prose:4",
-      "inline-code:1",
+      "code-fence:51",
       "prose:5",
-      "inline-code:2",
+      "link:0",
       "prose:6",
-      "code-fence:56",
+      "inline-code:1",
+      "prose:7",
+      "inline-code:2",
+      "prose:8",
+      "inline-code:3",
+      "prose:9",
+      "inline-code:4",
+      "prose:10",
+      "code-comment:63",
+      "code-fence:64",
       "prose:1",
       "image:0",
       "prose:2"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

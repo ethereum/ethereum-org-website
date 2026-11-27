@@ -1,6 +1,6 @@
 ---
-title: التخزين السائل والمجمع
-description: نظرة عامة على التخزين السائل والمجمع على إيثيريوم
+title: "التخزين السائل والمجمع"
+description: "ما هو التخزين السائل؟ تعرف على كيف تتيح لك مجمعات التخزين كسب مكافآت ⁦ETH⁩ بأي مبلغ من ⁦ETH⁩، مع الحصول غالبًا على رمز مميز سائل لا يزال بإمكانك استخدامه."
 lang: ar
 template: staking
 image: /images/staking/leslie-pool.png
@@ -166,6 +166,6 @@ summaryPoints:
 - [دليل تخزين إيثيريوم](https://www.staking.directory/) - _Eridian و Spacesider_
 - [مخاطر مشتقات التخزين السائل](https://notes.ethereum.org/@djrtwo/risks-of-lsd) - _Danny Ryan_
 - [ما هو التخزين السائل؟](https://chain.link/education-hub/liquid-staking) - _Chainlink_
-- [EIP-7002: عمليات السحب القابلة للتشغيل من طبقة التنفيذ](https://eips.ethereum.org/EIPS/eip-7002) - _مقترحات تحسين إيثيريوم_
+- [<span dir="ltr">EIP-7002</span>: عمليات السحب القابلة للتشغيل من طبقة التنفيذ](https://eips.ethereum.org/EIPS/eip-7002) - _مقترحات تحسين إيثيريوم_
 - [تقييمات مجمعات تخزين إيثيريوم](https://explorer.rated.network/) - _Rated Network Explorer_
 - [ما الفرق بين رمز إعادة التخزين السائل (LRT) ورمز التخزين السائل (LST)؟](https://liquidcollective.io/lst-vs-lrt/) - _Liquid Collective_

@@ -4,7 +4,7 @@ description: "تعلم كيفية التطوير لإيثيريوم باستخد
 lang: ar
 ---
 
-تعد JavaScript من بين اللغات الأكثر شيوعًا في نظام إيثيريوم البيئي. في الواقع، هناك [فريق](https://github.com/ethereumjs) مخصص لجلب أكبر قدر ممكن من إيثيريوم إلى JavaScript.
+تعد JavaScript من بين اللغات الأكثر شيوعًا في نظام إيثيريوم البيئي، مع وجود تنفيذات بـ JavaScript وTypeScript لكل شيء بدءًا من الأساسيات الجوهرية للبروتوكول وحتى عميل إجماع جاهز للإنتاج.
 
 هناك فرص لكتابة JavaScript (أو شيء قريب منها) في [جميع مستويات الحزمة](/developers/docs/ethereum-stack/).
 
@@ -52,10 +52,15 @@ lang: ar
 
 ### العقد والعملاء {#nodes-and-clients}
 
-يوجد عميل EthereumJS قيد التطوير النشط يتيح لك التعمق في كيفية عمل عملاء إيثيريوم بلغة تفهمها؛ JavaScript!
+[لودستار](https://lodestar.chainsafe.io/) هو عميل إجماع جاهز للإنتاج مكتوب بلغة TypeScript وتتم صيانته بواسطة ChainSafe. يتضمن عقدة المنارة وعميل مُدَقِّق، وهو مكان جيد لمعرفة كيف يعمل إجماع إثبات الحصة في إيثيريوم بلغة تعرفها.
 
-**تحقق من العميل**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**تحقق من لودستار**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+على جانب التنفيذ، تم إيقاف دعم عميل EthereumJS وأرشفته، ولكن كود المصدر الخاص به لا يزال متاحًا لاستكشاف كيفية عمل عميل إيثيريوم بلغة JavaScript.
+
+**تحقق من العميل المؤرشف**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## مشاريع أخرى {#other-projects}
 
