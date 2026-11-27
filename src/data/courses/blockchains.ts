@@ -20,6 +20,7 @@ export const blockchainsCourse: Course = {
         {
           id: "predict",
           type: "choice",
+          predict: true,
           options: ["one", "few", "most"],
           correct: ["most"],
         },

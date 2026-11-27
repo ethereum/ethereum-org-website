@@ -171,6 +171,8 @@ export interface ChoiceStep extends StepBase {
   options: string[]
   correct: string[]
   multi?: boolean
+  /** Ungraded prediction, asked before the answer is taught; single answer */
+  predict?: boolean
 }
 
 /** Tap-to-order. `items` is the correct order. Keys: `-prompt`, `-item-{id}`, `-explain` */
@@ -232,7 +234,7 @@ export interface Lesson {
  * `{course}-exam-{id}`: `-prompt`, `-opt-{id}`, `-explain`. Which options are
  * right is in the encrypted key the server grades with (`exam-key.ts`).
  */
-export interface ExamStep extends Omit<ChoiceStep, "correct"> {
+export interface ExamStep extends Omit<ChoiceStep, "correct" | "predict"> {
   /** ethereum.org page (path, optional `#anchor`) that backs the answer */
   source: string
 }
