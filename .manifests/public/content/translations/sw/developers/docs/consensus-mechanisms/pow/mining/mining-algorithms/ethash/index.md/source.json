@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md",
-  "generatedAt": "2026-06-17T21:42:06.623Z",
-  "rootHash": "6811ff56cfd6",
+  "generatedAt": "2026-11-27T14:46:55.647Z",
+  "rootHash": "de278b12c48c",
   "tree": {
-    "contentHash": "67dbcc6cab0d",
-    "anchorHash": "a3a680adf624",
+    "contentHash": "a8c11417944f",
+    "anchorHash": "1433582742c3",
     "children": {
       "frontmatter:title": {
         "contentHash": "cc606cfb1ec5",
@@ -242,8 +242,8 @@
         ]
       },
       "cache-generation": {
-        "contentHash": "e5783b311174",
-        "anchorHash": "735473c370e7",
+        "contentHash": "5d44aabcd7e6",
+        "anchorHash": "2eb3f81f1da3",
         "labelHash": "857675945064",
         "children": {
           "_label": {
@@ -266,15 +266,23 @@
             "contentHash": "e3b0c44298fc",
             "anchorHash": "5cffe37d460f"
           },
-          "prose:1": {
-            "contentHash": "67887569569b",
+          "prose:2": {
+            "contentHash": "b73b347fb0a6",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:0": {
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b710629b8ae4"
+          },
+          "prose:3": {
+            "contentHash": "69bf77fcfd7a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
             "contentHash": "82c0cf9cd649",
             "anchorHash": "e5d506eded02"
           },
-          "prose:2": {
+          "prose:4": {
             "contentHash": "d7475fceea8c",
             "anchorHash": "e3b0c44298fc"
           }
@@ -285,9 +293,11 @@
           "code-comment:2",
           "code-comment:3",
           "code-fence:4",
-          "prose:1",
-          "link:0",
-          "prose:2"
+          "prose:2",
+          "inline-code:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
         ]
       },
       "date-aggregation-function": {
@@ -527,7 +537,7 @@
       },
       "appendix": {
         "contentHash": "30ae14f42d49",
-        "anchorHash": "1885075f5f16",
+        "anchorHash": "407b2b945162",
         "labelHash": "2d4b3e2813c6",
         "children": {
           "_label": {
@@ -548,7 +558,7 @@
           },
           "code-fence:4": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "a3a8b1337619"
+            "anchorHash": "51e5960d55ba"
           },
           "data-sizes": {
             "contentHash": "915a8a6b74c4",
@@ -608,5 +618,5 @@
       "appendix"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "e1842064dd65585ac4ee544d57ed98f2215f78ff"
 }
