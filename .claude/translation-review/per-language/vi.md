@@ -1,5 +1,8 @@
 # Vietnamese (vi) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical; `Tai trong` is payload, not Get. Open: glossary-capitalized `Giao thuc`, `Thu vien`, `Vi`, `Chuoi khoi` mid-sentence x17 (#113); `trinh tao block` mixes Latin `block` with `khoi` in one value.
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 

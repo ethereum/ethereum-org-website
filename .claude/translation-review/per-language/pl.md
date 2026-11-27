@@ -1,5 +1,8 @@
 # Polish (pl) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `pretendent` for challenger (claimant sense; `kwestionujacy` reads better), `Wszystkie {steps} krokow ... jest` agreement, `Budowniczowie` per glossary `budowniczy`.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 

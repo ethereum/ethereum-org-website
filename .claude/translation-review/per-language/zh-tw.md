@@ -1,5 +1,8 @@
 # Traditional Chinese (zh-tw) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical; full-width punctuation clean. Open: `應用程式介面 (API)` expanded x7 where English has bare `API` (#112); `發佈` (22) and `發布` (18) both used in one file; rollup is `匯總` in most labels but `零知識卷疊` for ZK (glossary split, #113).
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 

@@ -1,5 +1,8 @@
 # Simplified Chinese (zh) Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.3/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical; full-width punctuation clean, no `**` flanking cases. Open: `gas 上限` lowercase beside `Gas` in `base-fee-label-limit`/`base-fee-description`; `node-clients-network-engine` is `Engine API` while its siblings use `引擎 API`.
+
 ## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
 Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
 

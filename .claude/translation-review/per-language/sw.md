@@ -1,5 +1,8 @@
 # Swahili (sw) -- Translation Review Findings
 
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.6/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `Kiolesura cha Kupanga Programu Tumizi (API)` expanded x24 where English has bare `API`, and `tabaka la 1 (L1)` expansions in 17 diagram values (#112); `mjenga kizuizi` for block builder comes from the glossary but `kizuizi` means obstruction (block is `kitalu`, #113); prover = `mthibitishaji` collides with validator.
+
 ## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.5/10
 Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
 
