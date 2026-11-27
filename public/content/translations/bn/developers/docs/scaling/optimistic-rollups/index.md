@@ -253,6 +253,8 @@ ii. অপটিমিস্টিক রোলআপ ব্যবহারক�
 
 ভিজ্যুয়াল লার্নার? Finematics-এর অপটিমিস্টিক রোলআপের ব্যাখ্যা দেখুন:
 
+<VideoWatch slug="rollups-scaling-strategy" startTime="263" />
+
 ## অপটিমিস্টিক রোলআপ সম্পর্কে আরও পড়ুন {#further-reading-on-optimistic-rollups}
 
 - [অপটিমিস্টিক রোলআপগুলো কীভাবে কাজ করে (সম্পূর্ণ গাইড)](https://www.alchemy.com/overviews/optimistic-rollups)

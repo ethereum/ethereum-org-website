@@ -54,7 +54,7 @@
   "page-resources-blobs-metric-total-label": "斑点总数",
   "page-resources-blobs-metric-fee-label": "平均 blob 费用",
   "page-resources-blobs-blobscan-description": "全面的斑点扫描器。",
-  "page-resources-blobs-blobsguru-description": "以太坊斑点浏览器：分析二层网络 (L2) 交易和 EIP-4844 数据。",
+  "page-resources-blobs-blobsguru-description": "以太坊斑点浏览器：分析 L2 交易和 EIP-4844 数据。",
   "page-resources-nodes-title": "节点",
   "page-resources-nodes-nodewatch-description": "节点概览。",
   "page-resources-nodes-ethernodes-description": "以太坊主网统计数据。",

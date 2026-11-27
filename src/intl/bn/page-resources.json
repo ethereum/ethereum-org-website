@@ -54,7 +54,7 @@
   "page-resources-blobs-metric-total-label": "মোট ব্লব",
   "page-resources-blobs-metric-fee-label": "গড় ব্লব ফি",
   "page-resources-blobs-blobscan-description": "বিস্তৃত ব্লব স্ক্যানার।",
-  "page-resources-blobs-blobsguru-description": "ইথেরিয়াম ব্লব এক্সপ্লোরার: লেয়ার 2 (L2) ট্রানজ্যাকশন এবং EIP-4844 ডেটা বিশ্লেষণ করুন।",
+  "page-resources-blobs-blobsguru-description": "ইথেরিয়াম ব্লব এক্সপ্লোরার: L2 ট্রানজ্যাকশন এবং EIP-4844 ডেটা বিশ্লেষণ করুন।",
   "page-resources-nodes-title": "নোড",
   "page-resources-nodes-nodewatch-description": "নোডগুলোর ওভারভিউ।",
   "page-resources-nodes-ethernodes-description": "ইথেরিয়াম মেইননেট পরিসংখ্যান।",

@@ -54,7 +54,7 @@
   "page-resources-blobs-metric-total-label": "Jumla ya mablobu",
   "page-resources-blobs-metric-fee-label": "Wastani wa Ada ya Blob",
   "page-resources-blobs-blobscan-description": "Kichunguzi cha kina cha blobu.",
-  "page-resources-blobs-blobsguru-description": "Kichunguzi cha Mablobu ya Ethereum: Changanua miamala ya Tabaka la 2 (L2) na data ya EIP-4844.",
+  "page-resources-blobs-blobsguru-description": "Kichunguzi cha Mablobu ya Ethereum: Changanua miamala ya L2 na data ya EIP-4844.",
   "page-resources-nodes-title": "Nodi",
   "page-resources-nodes-nodewatch-description": "Muhtasari wa nodi.",
   "page-resources-nodes-ethernodes-description": "Takwimu za Mtandao Mkuu wa Ethereum.",

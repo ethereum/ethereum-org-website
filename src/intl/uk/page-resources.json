@@ -54,7 +54,7 @@
   "page-resources-blobs-metric-total-label": "Усього блобів",
   "page-resources-blobs-metric-fee-label": "Середня комісія за блоб",
   "page-resources-blobs-blobscan-description": "Комплексний сканер блобів.",
-  "page-resources-blobs-blobsguru-description": "Оглядач блобів Етеріуму: аналізуйте транзакції рівня 2 (L2) та дані EIP-4844.",
+  "page-resources-blobs-blobsguru-description": "Оглядач блобів Етеріуму: аналізуйте транзакції L2 та дані EIP-4844.",
   "page-resources-nodes-title": "Вузли",
   "page-resources-nodes-nodewatch-description": "Огляд вузлів.",
   "page-resources-nodes-ethernodes-description": "Статистика головної мережі Ethereum.",

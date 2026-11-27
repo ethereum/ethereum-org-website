@@ -54,7 +54,7 @@
   "page-resources-blobs-metric-total-label": "Total des blobs",
   "page-resources-blobs-metric-fee-label": "Frais de blob moyens",
   "page-resources-blobs-blobscan-description": "Scanner de blobs complet.",
-  "page-resources-blobs-blobsguru-description": "Explorateur de blobs Ethereum : analysez les transactions de couche 2 (L2) et les données de l'EIP-4844.",
+  "page-resources-blobs-blobsguru-description": "Explorateur de blobs Ethereum : analysez les transactions L2 et les données de l'EIP-4844.",
   "page-resources-nodes-title": "Nœuds",
   "page-resources-nodes-nodewatch-description": "Aperçu des nœuds.",
   "page-resources-nodes-ethernodes-description": "Statistiques du réseau principal Ethereum.",

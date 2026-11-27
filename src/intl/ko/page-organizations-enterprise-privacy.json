@@ -53,7 +53,7 @@
   "page-organizations-enterprise-privacy-problems-title": "프라이빗 체인의 문제점",
   "page-organizations-enterprise-privacy-problems-vendor-description": "프라이빗 체인은 단일 회사에 의해 구축되고 유지 관리됩니다. 그들이 전략을 바꾸거나, 인수되거나, 실패할 경우 귀하의 정산 계층이 위험에 처하게 됩니다. 이는 기술 스택의 가장 중요한 계층에서 발생하는 공급업체 종속(vendor lock-in)입니다.",
   "page-organizations-enterprise-privacy-problems-vendor-title": "단일 공급업체 의존성",
-  "page-organizations-enterprise-privacy-solutions-description": "프라이버시는 사이드체인이나 고립된 시스템이 아닙니다. 이는 규제, 리스크 및 감사 요건을 충족하도록 설계되어 레이어 1 (L1) 또는 레이어 2 (L2)에서 조합 가능한 개방형 표준의 집합입니다. 이더리움 생태계는 기관의 프라이버시를 위한 다양한 접근 방식을 제공하며, 각각 다른 사용 사례를 다룹니다.",
+  "page-organizations-enterprise-privacy-solutions-description": "프라이버시는 사이드체인이나 고립된 시스템이 아닙니다. 이는 규제, 리스크 및 감사 요건을 충족하도록 설계되어 L1 또는 L2에서 조합 가능한 개방형 표준의 집합입니다. 이더리움 생태계는 기관의 프라이버시를 위한 다양한 접근 방식을 제공하며, 각각 다른 사용 사례를 다룹니다.",
   "page-organizations-enterprise-privacy-solutions-examples-label": "예시",
   "page-organizations-enterprise-privacy-solutions-pools-description": "전체 트랜잭션 내역을 공개하지 않고도 자금의 출처가 깨끗함을 증명합니다. 처음부터 규제 문제를 해결하기 위해 설계되었습니다. 기관이 전체 데이터를 공개하는 대신 암호학적 증명을 통해 AML 규제 준수를 입증할 수 있도록 합니다.",
   "page-organizations-enterprise-privacy-solutions-pools-title": "규제 준수 우선 풀",

@@ -54,7 +54,7 @@
   "page-resources-blobs-metric-total-label": "Всего блобов",
   "page-resources-blobs-metric-fee-label": "Средняя комиссия за блоб",
   "page-resources-blobs-blobscan-description": "Комплексный сканер блобов.",
-  "page-resources-blobs-blobsguru-description": "Обозреватель блобов Эфириума: анализируйте транзакции уровня 2 (L2) и данные EIP-4844.",
+  "page-resources-blobs-blobsguru-description": "Обозреватель блобов Эфириума: анализируйте транзакции L2 и данные EIP-4844.",
   "page-resources-nodes-title": "Узлы",
   "page-resources-nodes-nodewatch-description": "Обзор узлов.",
   "page-resources-nodes-ethernodes-description": "Статистика основной сети Ethereum.",
