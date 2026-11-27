@@ -49,16 +49,16 @@ sidebarDepth: 2
 
 ## 인기 있는 노드 서비스 {#popular-node-services}
 
-다음은 가장 인기 있는 이더리움 노드 제공업체 목록입니다. 누락된 업체가 있다면 자유롭게 추가해 주세요! 각 노드 서비스는 무료 또는 유료 등급 외에도 다양한 이점과 기능을 제공하므로, 결정하기 전에 어떤 서비스가 여러분의 요구에 가장 적합한지 조사해야 합니다.
+다음은 가장 인기 있는 이더리움 노드 제공업체 목록입니다. 누락된 업체가 있다면 자유롭게 추가해 주세요! 각 노드 서비스는 무료 또는 유료 티어 외에도 다양한 이점과 기능을 제공하므로, 결정을 내리기 전에 어떤 서비스가 여러분의 요구에 가장 적합한지 조사해야 합니다.
 
 - [**Alchemy**](https://alchemy.com/)
   - [문서](https://www.alchemy.com/docs/)
   - 기능
-    - 월 3억 개의 컴퓨팅 유닛(약 3천만 개의 getLatestBlock 요청)을 제공하는 가장 큰 무료 등급
+    - 월 3억 개의 컴퓨팅 유닛(약 3천만 개의 getLatestBlock 요청)을 제공하는 가장 큰 무료 티어
     - 폴리곤, 스타크넷, 옵티미즘, 아비트럼을 위한 멀티체인 지원
-    - 가장 큰 이더리움 탈중앙화 애플리케이션 (dapp) 및 탈중앙화 금융 (DeFi) 트랜잭션 볼륨의 약 70%를 처리
+    - 가장 큰 이더리움 dapp 및 DeFi 트랜잭션 볼륨의 약 70%를 구동
     - Alchemy Notify를 통한 실시간 웹훅 알림
-    - 업계 최고 수준의 지원 및 신뢰성/안정성
+    - 동급 최고의 지원 및 신뢰성/안정성
     - Alchemy의 NFT API
     - Request Explorer, Mempool Watcher 및 Composer가 포함된 대시보드
     - 통합된 테스트넷 포싯 접근
@@ -68,19 +68,19 @@ sidebarDepth: 2
   - [문서](https://docs.allnodes.com/)
   - 기능
     - Allnodes 포트폴리오 페이지에서 생성된 PublicNode 토큰으로 속도 제한 없음.
-    - [PublicNode](https://www.publicnode.com)에서 프라이버시에 중점을 둔 무료 RPC 엔드포인트(100개 이상의 블록체인) 제공
+    - [PublicNode](https://www.publicnode.com)에서 프라이버시에 중점을 둔 무료 RPC 엔드포인트(100개 이상의 블록체인)
     - 90개 이상의 블록체인에 대한 속도 제한 없는 전용 노드
     - 30개 이상의 블록체인에 대한 전용 아카이브 노드
     - 3개 지역(미국, 유럽, 아시아)에서 사용 가능
-    - [PublicNode](https://www.publicnode.com/snapshots)에서 100개 이상의 블록체인에 대한 스냅샷 제공
-    - 99.90%-99.98% 가동 시간 SLA(플랜에 따라 다름)를 갖춘 연중무휴 기술 지원.
+    - [PublicNode](https://www.publicnode.com/snapshots)에서 100개 이상의 블록체인에 대한 스냅샷
+    - 99.90%-99.98% 가동 시간 SLA(플랜에 따라 다름)를 제공하는 연중무휴 기술 지원.
     - 시간당 요금제
-    - 신용카드, 페이팔 또는 암호화폐로 결제 가능
+    - 신용카드, 페이팔 또는 암호화폐로 결제
 
 - [**All That Node**](https://allthatnode.com/)
   - [문서](https://docs.allthatnode.com/)
   - 기능
-    - 무료 등급으로 일일 50,000건의 요청 제공
+    - 무료 티어로 일일 50,000건의 요청
     - 40개 이상의 프로토콜 지원
     - JSON-RPC(EVM, Tendermint), REST 및 Websocket API 지원
     - 아카이브 데이터에 대한 무제한 접근
@@ -96,16 +96,16 @@ sidebarDepth: 2
     - 완전 관리형 이더리움 노드
     - 6개 지역에서 사용 가능
     - HTTP 및 보안 WebSocket을 통한 JSON-RPC
-    - 3개의 체인 지원
+    - 3개 체인 지원
     - SLA, 연중무휴 AWS 지원
-    - 고 이더리움 (geth) 및 라이트하우스
+    - Go-ethereum 및 Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [문서](https://docs.ankr.com/)
   - 기능
-    - Ankr 프로토콜 - 8개 이상의 체인에 대한 퍼블릭 RPC API 엔드포인트에 대한 공개 접근
+    - Ankr 프로토콜 - 8개 이상의 체인에 대한 퍼블릭 RPC API 엔드포인트에 대한 개방형 접근
     - 가장 가까운 가용 노드로의 빠르고 안정적인 게이트웨이를 위한 로드 밸런싱 및 노드 상태 모니터링
-    - WSS 엔드포인트 및 무제한 속도 제한을 지원하는 프리미엄 등급
+    - WSS 엔드포인트 및 무제한 속도 제한을 지원하는 프리미엄 티어
     - 40개 이상의 체인에 대한 원클릭 풀 노드 및 검증자 노드 배포
     - 사용량에 따른 확장
     - 분석 도구
@@ -125,14 +125,14 @@ sidebarDepth: 2
     - 아카이브 노드
     - 연중무휴 디스코드 지원
     - 연중무휴 모니터링 및 알림
-    - 전반적인 99.9%의 SLA
+    - 99.9%의 전반적인 SLA
     - 암호화폐로 결제
 
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [문서](https://ubiquity.docs.blockdaemon.com/)
   - 이점
     - 대시보드
-    - 노드 단위
+    - 노드별 기준
     - 분석
 
 - [**BlockPI**](https://blockpi.io/)
@@ -142,7 +142,7 @@ sidebarDepth: 2
     - 최대 40개의 HTTPS 및 WSS 엔드포인트
     - 무료 가입 패키지 및 월간 패키지
     - Trace 메서드 + 아카이브 데이터 지원
-    - 최대 90일 유효 기간의 패키지
+    - 최대 90일 유효 패키지
     - 맞춤형 플랜 및 종량제 결제
     - 암호화폐로 결제
     - 직접 지원 및 기술 지원
@@ -150,7 +150,7 @@ sidebarDepth: 2
 - [**Chainbase**](https://www.chainbase.com/)
   - [문서](https://docs.chainbase.com)
   - 기능
-    - 고가용성의 빠르고 확장 가능한 RPC 서비스
+    - 고가용성, 빠르고 확장 가능한 RPC 서비스
     - 멀티체인 지원
     - 무료 요금제
     - 사용자 친화적인 대시보드
@@ -177,9 +177,9 @@ sidebarDepth: 2
     - 40개 이상의 제공업체로 구성된 분산 풀
     - 9개의 지리적 클러스터를 통한 글로벌 커버리지
     - AI 기반 로드 밸런싱 시스템
-    - 종량제 정액 요금제 — 인상, 만료, 락인(lock-in) 없음
+    - 종량제 정액 요금제 — 인상 없음, 만료 없음, 락인 없음
     - 무제한 키, 세분화된 키 조정, 팀 역할, 프론트엔드 보호
-    - 메서드당 20 컴퓨팅 유닛(CU)의 정액 요금
+    - 메서드당 20 컴퓨팅 유닛(CU)의 메서드 정액 요금
     - [퍼블릭 엔드포인트 체인 목록](https://drpc.org/chainlist)
     - [요금 계산기](https://drpc.org/pricing#calculator)
   - NodeCore: 완전한 제어를 원하는 조직을 위한 오픈 소스 스택
@@ -188,7 +188,7 @@ sidebarDepth: 2
   - [문서](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - 기능
     - 40개 이상의 블록체인 노드에 대한 접근
-    - 일일 4만 건의 무료 요청
+    - 일일 40,000건의 무료 요청
     - 무제한 API 키
     - 1GB/sec의 높은 연결 속도
     - Trace+Archive
@@ -198,7 +198,7 @@ sidebarDepth: 2
 
 - [**InfStones**](https://infstones.com/)
   - 기능
-    - 무료 등급 옵션
+    - 무료 티어 옵션
     - 사용량에 따른 확장
     - 분석
     - 대시보드
@@ -209,9 +209,9 @@ sidebarDepth: 2
     - 50개 이상의 블록체인 노드에 대한 접근
 
 - [**Infura**](https://infura.io/)
-  - [문서](https://infura.io/docs)
+  - [문서](https://docs.infura.io/)
   - 기능
-    - 무료 등급 옵션
+    - 무료 티어 옵션
     - 사용량에 따른 확장
     - 유료 아카이브 데이터
     - 직접 지원
@@ -220,20 +220,20 @@ sidebarDepth: 2
 - [**Kaleido**](https://kaleido.io/)
   - [문서](https://docs.kaleido.io/)
   - 기능
-    - 무료 스타터 등급
+    - 무료 스타터 티어
     - 원클릭 이더리움 노드 배포
-    - 사용자 정의 가능한 클라이언트 및 알고리즘(Geth, Quorum 및 베수 || 권위 증명(PoA), IBFT 및 Raft)
+    - 사용자 정의 가능한 클라이언트 및 알고리즘(Geth, Quorum 및 Besu || 권위 증명(PoA), IBFT 및 Raft)
     - 500개 이상의 관리 및 서비스 API
     - 이더리움 트랜잭션 제출을 위한 RESTful 인터페이스(Apache Kafka 기반)
     - 이벤트 전달을 위한 아웃바운드 스트림(Apache Kafka 기반)
     - "오프체인" 및 보조 서비스의 심층 컬렉션(예: 양방향 암호화 메시징 전송)
     - 거버넌스 및 역할 기반 접근 제어를 통한 간단한 네트워크 온보딩
-    - 관리자와 최종 사용자 모두를 위한 정교한 사용자 관리
-    - 확장성과 복원력이 뛰어난 엔터프라이즈급 인프라
+    - 관리자 및 최종 사용자를 위한 정교한 사용자 관리
+    - 확장성이 뛰어나고 복원력이 있는 엔터프라이즈급 인프라
     - 클라우드 HSM 개인 키 관리
     - 이더리움 메인넷 테더링
     - ISO 27k 및 SOC 2, Type 2 인증
-    - 동적 런타임 구성(예: 클라우드 통합 추가, 노드 인그레스 변경 등)
+    - 동적 런타임 구성(예: 클라우드 통합 추가, 노드 수신 변경 등)
     - 멀티 클라우드, 다중 지역 및 하이브리드 배포 오케스트레이션 지원
     - 간단한 시간당 SaaS 기반 요금제
     - SLA 및 연중무휴 지원
@@ -255,7 +255,7 @@ sidebarDepth: 2
   - 기능
     - 무료 공유 노드
     - 무료 공유 아카이브 노드
-    - 프라이버시 중심(노로그 정책)
+    - 프라이버시 중심(노 로그 정책)
     - 크로스 체인 지원
     - 사용량에 따른 확장
     - 대시보드
@@ -274,11 +274,11 @@ sidebarDepth: 2
 - [**NodeFlare**](https://nodeflare.app/)
   - [문서](https://nodeflare.app/docs/quick-start)
   - 기능
-    - 이더리움, Base, 아비트럼 One 및 Nova, 옵티미즘, Linea, Unichain을 포함한 23개의 EVM 체인
-    - 가장 가까운 정상 노드로 자동 장애 조치되는 5개 지역(유럽, 영국, 아시아, 미국 동부, 미국 서부)
-    - 무료 퍼블릭 엔드포인트(API 키 없음) + 월 300만 컴퓨팅 유닛의 무료 플랜
-    - 컴퓨팅 유닛 청구 — 사용한 만큼만 지불하며, 무거운 호출일수록 비용이 더 듦
-    - 유료 플랜에서는 스로틀링 없음
+    - 이더리움, Base, Arbitrum One, Optimism 및 Unichain을 포함한 17개의 EVM 체인
+    - 프랑크푸르트, 런던, 애슈번, 시카고, 로스앤젤레스 및 싱가포르에 게이트웨이가 있는 자체 베어메탈 노드
+    - 무료 퍼블릭 엔드포인트(API 키 없음, IP당 10초마다 50건의 요청)
+    - 월 300만 컴퓨팅 유닛 및 초당 10건의 요청을 제공하는 무료 API 키, 신용카드 불필요
+    - 컴퓨팅 유닛 청구 — 무거운 호출일수록 비용이 더 많이 듦
 
 - [**NOWNodes**](https://nownodes.io/)
   - 기능
@@ -294,20 +294,20 @@ sidebarDepth: 2
   - [문서](https://docs.pokt.network/)
   - 기능
     - 탈중앙화된 RPC 프로토콜 및 마켓플레이스
-    - 일일 100만 건의 요청 무료 등급(엔드포인트당, 최대 2개)
+    - 일일 100만 건의 요청 무료 티어(엔드포인트당, 최대 2개)
     - Pre-Stake+ 프로그램(일일 100만 건 이상의 요청이 필요한 경우)
     - 15개 이상의 블록체인 지원
-    - 애플리케이션을 서비스하여 POKT를 얻는 6,400개 이상의 노드
+    - 애플리케이션을 서비스하여 POKT를 얻는 6400개 이상의 노드
     - 아카이브 노드, 트레이싱이 포함된 아카이브 노드 및 테스트넷 노드 지원
     - 이더리움 메인넷 노드 클라이언트 다양성
     - 단일 장애점 없음
-    - 다운타임 제로
+    - 제로 다운타임
     - 비용 효율적인 제로에 가까운 토크노믹스(네트워크 대역폭을 위해 POKT를 한 번 스테이킹)
     - 월별 매몰 비용 없이 인프라를 자산으로 전환
     - 프로토콜에 내장된 로드 밸런싱
     - 사용량에 따라 일일 요청 수와 시간당 노드 수를 무한대로 확장
-    - 가장 프라이버시가 보장되고 검열에 저항하는 옵션
-    - 실무적인 개발자 지원
+    - 가장 프라이버시가 보장되고 검열 저항적인 옵션
+    - 실무 개발자 지원
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 대시보드 및 분석
 
 - [**QuickNode**](https://www.quicknode.com)
@@ -327,7 +327,7 @@ sidebarDepth: 2
 - [**Rivet**](https://rivet.cloud/)
   - [문서](https://rivet.readthedocs.io/en/latest/)
   - 기능
-    - 무료 등급 옵션
+    - 무료 티어 옵션
     - 사용량에 따른 확장
 
 - [**SenseiNode**](https://senseinode.com)
@@ -355,9 +355,9 @@ sidebarDepth: 2
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [문서](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - 기능
-    - 월 2,500만 Tenderly 유닛이 포함된 무료 등급
+    - 월 2,500만 Tenderly 유닛이 포함된 무료 티어
     - 과거 데이터에 대한 무료 접근
-    - 읽기 작업이 많은 워크로드에서 최대 8배 빠른 속도
+    - 읽기 작업이 많은 워크로드에서 최대 8배 더 빠른 속도
     - 100% 일관된 읽기 접근
     - JSON-RPC 엔드포인트
     - UI 기반 RPC 요청 빌더 및 요청 미리보기
@@ -394,9 +394,9 @@ sidebarDepth: 2
 - [**ZMOK**](https://zmok.io/)
   - [문서](https://docs.zmok.io/)
   - 기능
-    - 서비스로서의 프론트러닝
-    - 검색/필터링 메서드가 포함된 글로벌 트랜잭션 멤풀
-    - 트랜잭션 전송을 위한 무제한 TX 수수료 및 무한 가스
+    - 서비스형 프론트러닝
+    - 검색/필터링 메서드가 있는 글로벌 트랜잭션 멤풀
+    - 트랜잭션 전송을 위한 무제한 트랜잭션 수수료 및 무한 가스
     - 가장 빠른 새 블록 획득 및 블록체인 읽기
     - API 호출당 최적의 가격 보장
 
@@ -405,11 +405,12 @@ sidebarDepth: 2
   - 기능
     - 블록체인 노드 및 네트워크의 배포, 모니터링 및 관리를 제공하는 엔터프라이즈급 노코드 자동화 플랫폼
     - 30개 이상의 지원되는 프로토콜 및 통합, 지속적인 추가
-    - 실제 사용 사례를 위한 탈중앙화 스토리지, 탈중앙화 신원증명 (DID) 및 블록체인 원장 데이터 API와 같은 부가가치 Web3 인프라 서비스
+    - 실제 사용 사례를 위한 탈중앙화 스토리지, 탈중앙화 신원증명(DID) 및 블록체인 원장 데이터 API와 같은 부가가치 Web3 인프라 서비스
     - 연중무휴 지원 및 사전 모니터링을 통해 항상 노드의 상태를 보장합니다.
     - RPC 엔드포인트는 API에 대한 인증된 접근, 직관적인 대시보드 및 분석을 통한 번거로움 없는 관리를 제공합니다.
     - 관리형 클라우드 및 자체 클라우드 사용 옵션을 모두 제공하며 AWS, Azure, Google Cloud, Digital Ocean 및 온프레미스와 같은 모든 주요 클라우드 제공업체를 지원합니다.
     - 지능형 라우팅을 사용하여 매번 사용자에게 가장 가까운 노드에 연결합니다.
+
 ## 더 읽을거리 {#further-reading}
 
 - [이더리움 노드 서비스 목록](https://ethereumnodes.com/)
@@ -420,5 +421,4 @@ sidebarDepth: 2
 
 ## 관련 튜토리얼 {#related-tutorials}
 
-- [Alchemy를 사용한 이더리움 개발 시작하기](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Web3 및 Alchemy를 사용하여 트랜잭션을 전송하는 가이드](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

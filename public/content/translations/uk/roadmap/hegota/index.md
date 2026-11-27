@@ -1,7 +1,7 @@
 ---
 title: "Hegotá"
 metaTitle: "Heze-Bogotá (Hegotá)"
-description: "Дізнайтеся про оновлення протоколу Hegotá"
+description: "Hegotá — це оновлення Етеріуму, заплановане після Гламстердаму. Дізнайтеся про його головне нововведення FOCIL для стійкості до цензури та фрейм-транзакції для акаунтів."
 lang: uk
 template: upgrade
 ---

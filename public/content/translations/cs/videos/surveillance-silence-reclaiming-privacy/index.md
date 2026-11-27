@@ -19,7 +19,7 @@ Hlavní přednáška **Naomi Brockwell** na EthBoulder 2026 o narušování digi
 
 ### Dvoudílná přednáška: varování + řešení (00:00) {#two-part-talk-warning-solution-0000}
 
-**Naomi:** Skvělé. Vítejte všichni. Děkuji, že jste tady. Takže, toto bude dvoudílná přednáška. V první části to může být trochu intenzivní. Jsem známá tím, že dokážu být docela intenzivní, když přijde na přednášky o soukromí a sledování. Druhá část se ponese v trochu jiném duchu. Takže v první části vám budu vyprávět příběh a ve druhé části zachráníme svět. Takže pokud s tím všichni souhlasíte, můžeme začít.
+**Naomi:** Skvělé. Vítejte všichni. Děkuji, že jste tady. Takže, tohle bude dvoudílná přednáška. V první části to možná bude trochu intenzivní. Jsem známá tím, že když přijde na přednášky o soukromí a sledování, dokážu být docela intenzivní. Druhá část se ponese v trochu jiném duchu. Takže v první části vám budu vyprávět příběh a ve druhé části zachráníme svět. Takže pokud s tím všichni souhlasíte, můžeme začít.
 
 ### Císařovy nové šaty (00:44) {#the-emperors-new-clothes-0044}
 
@@ -41,11 +41,11 @@ Je to nepříjemný pocit, že? A cítíme to, když aplikace žádá o přístu
 
 Cítíme, že je něco špatně, když jen tak prolétneme zásady ochrany osobních údajů a víme, že bychom si je měli přečíst pozorně. Pravděpodobně tam jsou nějaké důležité věci. A vlastně je tam černé na bílém napsáno, že ano, naprosto jistě budou sdílet tato intimní data, a my ani nevíme s kým, ale stejně klikneme na souhlasím, protože to přece nemůže být tak hrozné, jinak by přijímání těchto věcí nebylo běžnou praxí, že? Kdyby to bylo tak špatné, nedělali by to přece všichni.
 
-### Jak špatný je status quo? (05:12) {#how-bad-is-the-status-quo-0512}
+### Jak špatný je současný stav? (05:12) {#how-bad-is-the-status-quo-0512}
 
-Takže jak špatný je status quo? Jak špatné to vlastně je? Nebo bychom o tom možná měli mluvit, protože někteří lidé si myslí, že jde jen o to, že se nám společnosti snaží prodat lepší pár bot. Je to prostě jen spotřebitelská záležitost, že? Nebo možná jde jen o to, že se o nás společnosti provozující sociální sítě učí, aby vytvořily lépe vyladěný algoritmus, že? To nevypadá tak hrozivě. V čem je s tím vším problém?
+Takže jak špatný je současný stav? Jak zlé to vlastně je? Nebo bychom o tom možná měli mluvit, protože někteří lidé si myslí, že jde jen o to, že se nám společnosti snaží prodat lepší boty. Je to prostě jen spotřebitelská záležitost, že? Nebo možná jde jen o to, že nás společnosti provozující sociální sítě poznávají, aby vytvořily lépe vyladěný algoritmus, že? To nezní tak hrozně. Co je na tom všem vlastně špatného?
 
-Ale právě teď všichni dáváme souhlas všudypřítomné sledovací mašinérii, která tiše proniká do každé soukromé oblasti našich životů. Někde, například v autoritářských režimech, se tato mašinérie používá ke kontrole disentu ještě předtím, než k němu dojde, a to tak, že označí potenciálně problémové lidi jako ty, u nichž je větší pravděpodobnost, že se připojí k protestnímu hnutí, a na tyto lidi se pak zaměří. Někdy se tato mašinérie používá k formování nálad veřejnosti, ovlivňování názorů, zvrácení voleb nebo k tomu, aby přiměla celé populace nenávidět určité typy lidí tím, že je přesvědčí, že tyto skupiny nenávidí je. A pak jsou země, které veřejně šíří informace o občanech, jejichž sociální kredit klesl, a pak toto skóre používají k omezení cestování, omezení jejich zaměstnání, k zablokování přístupu jejich dětí do určitých škol nebo k jejich úplnému odříznutí od příležitostí.
+Ale právě teď všichni dáváme souhlas všudypřítomné sledovací mašinérii, která tiše proniká do každé soukromé oblasti našich životů. V některých místech, jako jsou autoritářské režimy, se tato mašinérie používá k potlačení disentu ještě předtím, než k němu dojde, tím, že označí potenciálně problematické lidi jako ty, u kterých je pravděpodobnější, že se připojí k protestnímu hnutí, a pak se na tyto lidi zaměří. Někdy se tato mašinérie používá k formování nálad veřejnosti, ovlivňování názorů, manipulaci voleb nebo k tomu, aby celé populace začaly nenávidět určité typy lidí tím, že je přesvědčí, že tyto skupiny nenávidí je. A pak jsou tu země, které veřejně vysílají informace o občanech, jejichž skóre sociálního kreditu kleslo, a pak tato skóre používají k omezení cestování, omezení jejich zaměstnání, zablokování přístupu jejich dětí do určitých škol nebo k jejich úplnému odříznutí od příležitostí.
 
 ### Sběr dat v bilionovém měřítku (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  

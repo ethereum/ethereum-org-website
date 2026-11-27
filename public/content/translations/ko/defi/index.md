@@ -1,7 +1,7 @@
 ---
 title: "탈중앙화 금융 (DeFi)"
 metaTitle: "DeFi란 무엇인가요? | 탈중앙화 금융의 이점과 활용"
-description: "이더리움의 탈중앙화 금융(DeFi) 개요"
+description: "DeFi란 무엇일까요? 이더리움의 탈중앙화 금융을 통해 은행 없이도 누구나 대출, 차입, 거래, 이자 수익을 창출하는 방법과 그에 따른 위험성에 대해 알아보세요."
 lang: ko
 template: use-cases
 image: /images/use-cases/defi.png

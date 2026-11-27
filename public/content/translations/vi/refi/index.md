@@ -1,6 +1,6 @@
 ---
 title: "Tài chính tái tạo (ReFi)"
-description: "Tổng quan về ReFi và các trường hợp sử dụng hiện tại của nó."
+description: "Tài chính tái tạo (ReFi) là gì? Tìm hiểu cách các công cụ Ethereum tài trợ cho hàng hóa công cộng, hành động vì khí hậu và các dự án cộng đồng tạo ra tác động tích cực lâu dài."
 lang: vi
 template: use-cases
 sidebarDepth: 2

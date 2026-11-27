@@ -159,13 +159,13 @@ Es gibt mittlerweile mehrere Layer-2-Protokolle, die Ethereum skalieren, indem s
 #### Hintergrundlektüre {#background-reading-2}
 
 - [Einführung in Layer 2](/layer-2/)
-- [L2BEAT: Skalierungszusammenfassung](https://l2beat.com/scaling/summary)
+- [ETHBEAT: Skalierungszusammenfassung](https://ethbeat.org/layer2s/summary)
 - [Eine Rollup-zentrierte Ethereum-Roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Aktuelle Forschung {#recent-research-2}
 
 - [Ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: Onchain-Kosten](https://l2beat.com/scaling/costs)
+- [ETHBEAT: Onchain-Kosten](https://ethbeat.org/layer2s/costs)
 - [Bauen auf Ethereum im Jahr 2026: Was sich geändert hat](/latest/building-on-ethereum-in-2026/)
 
 ### Interoperabilität {#interoperability}
@@ -386,8 +386,8 @@ Es besteht Bedarf an mehr Datenanalyse-Tools und Dashboards, die detaillierte In
 #### Aktuelle Forschung {#recent-research-14}
 
 - [Datenanalyse der Robust Incentives Group](https://rig.ethereum.org/)
-- [ethPandaOps Open Data](https://ethpandaops.io/data/)
-- [L2BEAT: Skalierungszusammenfassung](https://l2beat.com/scaling/summary)
+- [Offene Daten von ethPandaOps](https://ethpandaops.io/data/)
+- [ETHBEAT: Skalierungszusammenfassung](https://ethbeat.org/layer2s/summary)
 
 ## Apps und Tooling {#apps-and-tooling}
 

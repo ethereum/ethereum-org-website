@@ -385,33 +385,31 @@ A [Keeper Network](https://chain.link/keepers) da Chainlink oferece opções par
 
 ## Como usar oráculos de blockchain {#use-blockchain-oracles}
 
-Existem vários aplicativos de oráculo que você pode integrar ao seu dapp do Ethereum:
+Existem vários aplicativos de oráculo que você pode integrar ao seu dapp Ethereum:
 
-**[Chainlink](https://chain.link/)** - _As redes de oráculos descentralizadas da Chainlink fornecem entradas, saídas e cálculos à prova de adulteração para dar suporte a contratos inteligentes avançados em qualquer blockchain._
+**[Chainlink](https://chain.link/)** - _As redes de oráculos descentralizadas da Chainlink fornecem entradas, saídas e computações à prova de adulteração para dar suporte a contratos inteligentes avançados em qualquer blockchain._
 
-**[RedStone Oracles](https://redstone.finance/)** - _A RedStone é um oráculo modular descentralizado que fornece feeds de dados otimizados para gás. É especializada em oferecer feeds de preços para ativos emergentes, como tokens de staking líquido (LSTs), tokens de restaking líquido (LRTs) e derivativos de staking de Bitcoin._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone é um oráculo modular descentralizado que fornece feeds de dados otimizados para gás. É especializado em oferecer feeds de preços para ativos emergentes, como tokens de staking líquido (LSTs), tokens de restaking líquido (LRTs) e derivativos de staking de Bitcoin._
 
 **[Chronicle](https://chroniclelabs.org/)** - _A Chronicle supera as limitações atuais de transferência de dados onchain desenvolvendo oráculos verdadeiramente escaláveis, econômicos, descentralizados e verificáveis._
 
-**[Witnet](https://witnet.io/)** - _A Witnet é um oráculo não permissionado, descentralizado e resistente à censura que ajuda os contratos inteligentes a reagir a eventos do mundo real com fortes garantias criptoeconômicas._
+**[Witnet](https://witnet.io/)** - _Witnet é um oráculo sem permissão, descentralizado e resistente à censura que ajuda contratos inteligentes a reagir a eventos do mundo real com fortes garantias criptoeconômicas._
 
-**[UMA Oracle](https://uma.xyz)** - _O oráculo otimista da UMA permite que os contratos inteligentes recebam rapidamente qualquer tipo de dados para diferentes aplicativos, incluindo seguros, derivativos financeiros e mercados de previsão._
+**[UMA Oracle](https://uma.xyz)** - _O oráculo otimista da UMA permite que contratos inteligentes recebam rapidamente qualquer tipo de dados para diferentes aplicativos, incluindo seguros, derivativos financeiros e mercados de previsão._
 
-**[Tellor](https://tellor.io/)** - _A Tellor é um protocolo de oráculo transparente e não permissionado para que seu contrato inteligente obtenha facilmente quaisquer dados sempre que precisar._
+**[Tellor](https://tellor.io/)** - _Tellor é um protocolo de oráculo transparente e sem permissão para que seu contrato inteligente obtenha facilmente qualquer dado sempre que precisar._
 
-**[Band Protocol](https://bandprotocol.com/)** - _O Band Protocol é uma plataforma de oráculo de dados cross-chain que agrega e conecta dados do mundo real e APIs a contratos inteligentes._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol é uma plataforma de oráculo de dados cross-chain que agrega e conecta dados do mundo real e APIs a contratos inteligentes._
 
-**[Pyth Network](https://pyth.network/)** - _A rede Pyth é uma rede de oráculos financeiros primários projetada para publicar dados contínuos do mundo real onchain em um ambiente resistente a adulterações, descentralizado e autossustentável._
+**[Pyth Network](https://pyth.network/)** - _A rede Pyth é uma rede de oráculos financeiros de primeira parte projetada para publicar dados contínuos do mundo real onchain em um ambiente resistente a adulterações, descentralizado e autossustentável._
 
-**[API3 DAO](https://api3.org/)** - _A API3 DAO está fornecendo soluções de oráculos primários que oferecem maior transparência de fonte, segurança e escalabilidade em uma solução descentralizada para contratos inteligentes_
+**[API3 DAO](https://api3.org/)** - _A API3 DAO está fornecendo soluções de oráculos de primeira parte que oferecem maior transparência de origem, segurança e escalabilidade em uma solução descentralizada para contratos inteligentes._
 
-**[Supra](https://supra.com/)** - Um kit de ferramentas verticalmente integrado de soluções cross-chain que interligam todas as blockchains, públicas (L1s e L2s) ou privadas (empresas), fornecendo feeds de preços de oráculos descentralizados que podem ser usados para casos de uso onchain e offchain. 
+**[Supra](https://supra.com/)** - Um kit de ferramentas verticalmente integrado de soluções cross-chain que interligam todas as blockchains, públicas (L1s e L2s) ou privadas (empresariais), fornecendo feeds de preços de oráculos descentralizados que podem ser usados para casos de uso onchain e offchain. 
 
-**[Gas Network](https://gas.network/)** - Uma plataforma de oráculo distribuída que fornece dados de preço do gás em tempo real em toda a blockchain. Ao trazer dados dos principais provedores de dados de preço do gás onchain, a Gas Network está ajudando a impulsionar a interoperabilidade. A Gas Network oferece suporte a dados para mais de 35 cadeias, incluindo a Rede Principal do Ethereum e muitas L2s líderes.
+**[DIA](https://www.diadata.org/)** - Uma rede de oráculos cross-chain que fornece feeds de dados verificáveis para mais de 20.000 ativos em todas as principais classes de ativos. A DIA obtém dados brutos de negociação diretamente de mais de 100 mercados primários e os computa onchain, garantindo total transparência e verificabilidade de dados com configurações personalizadas para qualquer caso de uso.
 
-**[DIA](https://www.diadata.org/)** - Uma rede de oráculos cross-chain que fornece feeds de dados verificáveis para mais de 20.000 ativos em todas as principais classes de ativos. A DIA obtém dados brutos de negociação diretamente de mais de 100 mercados primários e os calcula onchain, garantindo total transparência e verificabilidade de dados com configurações personalizadas para qualquer caso de uso.
-
-**[Stork](https://stork.network)** - A Stork fornece dados de preços com latência ultrabaixa, suportando uma ampla gama de casos de uso, incluindo mercados perpétuos, protocolos de empréstimo e ecossistemas DeFi, com novos ativos suportados rapidamente na listagem.
+**[Stork](https://stork.network)** - A Stork fornece dados de preços com latência ultrabaixa, suportando uma ampla gama de casos de uso, incluindo mercados perpétuos, protocolos de empréstimo e ecossistemas DeFi, com novos ativos suportados rapidamente após a listagem.
 
 ## Leitura adicional {#further-reading}
 

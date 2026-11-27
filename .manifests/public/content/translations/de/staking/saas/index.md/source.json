@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/staking/saas/index.md",
-  "generatedAt": "2026-08-19T20:44:55.349Z",
-  "rootHash": "b669ee358809",
+  "generatedAt": "2026-11-27T10:00:36.044Z",
+  "rootHash": "f5fb1ea5d537",
   "tree": {
-    "contentHash": "ca3a9109616d",
+    "contentHash": "48dd1e9be119",
     "anchorHash": "62e951381e7a",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "0c6a24dc0632",
+        "contentHash": "932f32ca7361",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -803,5 +803,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "9638e1f9f88c9e74ab4d15a11f3f6d1e782ff7f5"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

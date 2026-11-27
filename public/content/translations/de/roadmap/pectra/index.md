@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: "Erfahre mehr über das Pectra-Protokoll-Upgrade"
+description: "Pectra ging am 7. Mai 2025 live. Erfahre, was dieses Ethereum-Upgrade geändert hat, einschließlich EIP-7702-Smart-Konten und einem maximalen Validator-Guthaben von 2048 ETH."
 lang: de
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -75,9 +75,9 @@ Die neue Vorkompilierung fügt für jeden Entwickler die Fähigkeit hinzu, krypt
 
 ### Bereitstellung historischer Block-Hashes aus dem Zustand {#2935}
 
-Die EVM stellt derzeit den Opcode `BLOCKHASH` bereit, der es Vertragsentwicklern ermöglicht, den Hash eines Blocks direkt in der Ausführungsschicht abzurufen. Dies ist jedoch auf die letzten 256 Blöcke beschränkt und könnte in Zukunft für zustandslose Clients problematisch werden.
+Die EVM bietet derzeit den Opcode `BLOCKHASH`, der es Vertragsentwicklern ermöglicht, den Hash eines Blocks direkt in der Ausführungsschicht abzurufen. Dies ist jedoch auf die letzten 256 Blöcke beschränkt und könnte in Zukunft für zustandslose Clients problematisch werden.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) erstellt einen neuen Systemvertrag, der die letzten 8192 Block-Hashes als Speicher-Slots bereitstellen kann. Dies hilft, das Protokoll für die zustandslose Ausführung zukunftssicher zu machen, und wird effizienter, wenn Verkle Tries übernommen werden. Abgesehen davon können Rollups jedoch sofort davon profitieren, da sie den Vertrag direkt mit einem längeren historischen Fenster abfragen können.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) erstellt einen neuen Systemvertrag, der die letzten 8192 Block-Hashes als Speicherplätze bereitstellen kann. Dies hilft, das Protokoll für eine zustandslose Ausführung zukunftssicher zu machen. Abgesehen davon können Rollups jedoch sofort davon profitieren, da sie den Vertrag direkt mit einem längeren historischen Fenster abfragen können.
 
 ### Verschiebung des Komitee-Index außerhalb der Attestierung {#7549}
 

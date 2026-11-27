@@ -1,11 +1,11 @@
 ---
 title: "Blockchainové mosty"
 metaTitle: "Úvod do blockchainových mostů"
-description: "Mosty umožňují uživatelům přesouvat své prostředky mezi různými blockchainy"
+description: "Co je to blockchainový most? Zjistěte, jak mosty přesouvají tokeny mezi Ethereem, vrstvami 2 a dalšími řetězci, jaké jsou typy mostů a jaká rizika je třeba zvážit."
 lang: cs
 ---
 
-_Web3 se vyvinul v ekosystém blockchainů vrstvy 1 (l1) a řešení škálování vrstvy 2 (l2), z nichž každé je navrženo s jedinečnými schopnostmi a kompromisy. S rostoucím počtem blockchainových protokolů roste i poptávka po přesunu aktiv mezi řetězci. K uspokojení této poptávky potřebujeme mosty._
+_Web3 se vyvinul v ekosystém blockchainů vrstvy 1 (L1) a řešení škálování vrstvy 2 (L2), z nichž každé je navrženo s jedinečnými schopnostmi a kompromisy. S rostoucím počtem blockchainových protokolů roste i poptávka po přesunu aktiv mezi řetězci. K uspokojení této poptávky potřebujeme mosty._
 
 <Divider />
 
@@ -21,7 +21,7 @@ Co ale uděláte, pokud chcete provést podobnou výměnu, abyste mohli použít
 
 ## Proč potřebujeme mosty? {#why-do-we-need-bridges}
 
-Všechny blockchainy mají svá omezení. Aby Ethereum mohlo škálovat a držet krok s poptávkou, vyžadovalo [rollupy](/glossary/#rollups). Alternativně jsou blockchainy vrstvy 1 (l1) jako Solana a Avalanche navrženy odlišně, aby umožnily vyšší propustnost, ale za cenu nižší decentralizace.
+Všechny blockchainy mají svá omezení. Aby Ethereum mohlo škálovat a držet krok s poptávkou, vyžadovalo [rollupy](/glossary/#rollups). Alternativně jsou blockchainy vrstvy 1 (L1) jako Solana a Avalanche navrženy odlišně, aby umožnily vyšší propustnost, ale za cenu nižší decentralizace.
 
 Všechny blockchainy jsou však vyvíjeny v izolovaných prostředích a mají odlišná pravidla a mechanismy [konsensu](/glossary/#consensus). To znamená, že spolu nemohou nativně komunikovat a tokeny se nemohou volně pohybovat mezi blockchainy.
 
@@ -34,7 +34,7 @@ Mosty existují k propojení blockchainů, což umožňuje převod informací a 
 - uživatelům přístup k novým platformám a využití výhod různých řetězců.
 - vývojářům z různých blockchainových ekosystémů spolupracovat a budovat nové platformy pro uživatele.
 
-[Jak přemostit tokeny na vrstvu 2 (l2)](/guides/how-to-use-a-bridge/)
+[Jak přemostit tokeny na vrstvu 2 (L2)](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -44,7 +44,7 @@ Níže jsou uvedeny některé scénáře, kdy můžete využít most:
 
 ### Nižší transakční poplatky {#transaction-fees}
 
-Řekněme, že máte ETH na Ethereum Mainnetu, ale chcete levnější transakční poplatky pro prozkoumání různých decentralizovaných aplikací (dapp). Přemostěním vašeho ETH z Mainnetu na Ethereum l2 rollup si můžete užívat nižších transakčních poplatků.
+Řekněme, že máte ETH na Ethereum Mainnetu, ale chcete levnější transakční poplatky pro prozkoumání různých decentralizovaných aplikací (dapp). Přemostěním vašeho ETH z Mainnetu na Ethereum L2 rollup si můžete užívat nižších transakčních poplatků.
 
 ### Dapps na jiných blockchainech {#dapps-other-chains}
 
@@ -52,7 +52,7 @@ Pokud jste používali Aave na Ethereum Mainnetu k poskytování USDT, ale úrok
 
 ### Prozkoumávání blockchainových ekosystémů {#explore-ecosystems}
 
-Pokud máte ETH na Ethereum Mainnetu a chcete prozkoumat alternativní vrstvu 1 (l1), abyste si vyzkoušeli její nativní dapps. Můžete použít most k převodu vašeho ETH z Ethereum Mainnetu na alternativní l1.
+Pokud máte ETH na Ethereum Mainnetu a chcete prozkoumat alternativní vrstvu 1 (L1), abyste si vyzkoušeli její nativní dapps. Můžete použít most k převodu vašeho ETH z Ethereum Mainnetu na alternativní L1.
 
 ### Vlastnictví nativních krypto aktiv {#own-native}
 
@@ -101,10 +101,10 @@ Mnoho řešení přemostění přijímá modely mezi těmito dvěma extrémy s r
 
 ## Používání mostů {#use-bridge}
 
-Používání mostů vám umožňuje přesouvat vaše aktiva mezi různými blockchainy. Zde jsou některé zdroje, které vám mohou pomoci najít a používat mosty:
+Používání mostů vám umožňuje přesouvat aktiva napříč různými blockchainy. Zde jsou některé zdroje, které vám pomohou najít a používat mosty:
 
-- **[Shrnutí mostů na L2BEAT](https://l2beat.com/bridges/summary) a [Analýza rizik mostů na L2BEAT](https://l2beat.com/bridges/summary)**: Komplexní shrnutí různých mostů, včetně podrobností o podílu na trhu, typu mostu a cílových řetězcích. L2BEAT má také analýzu rizik pro mosty, která uživatelům pomáhá činit informovaná rozhodnutí při výběru mostu.
-- **[Shrnutí mostů na DefiLlama](https://defillama.com/bridges/Ethereum)**: Shrnutí objemů mostů napříč sítěmi Etherea.
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: Komplexní přehled různých mostů, včetně podrobností o podílu na trhu, typu mostu a cílových řetězcích. ETHBEAT také obsahuje analýzu rizik pro mosty, která uživatelům pomáhá činit informovaná rozhodnutí při výběru mostu.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: Přehled objemů mostů napříč sítěmi Etherea.
 
 <Divider />
 
@@ -130,16 +130,17 @@ Prostředky uživatele jsou ohroženy, pokud:
 
 Jedním z nedávných hacků byl most Wormhole na síti Solana, [kde bylo během hacku ukradeno 120 tisíc wETH (325 milionů USD)](https://rekt.news/wormhole-rekt/). Mnoho z [největších hacků v blockchainech se týkalo mostů](https://rekt.news/leaderboard/).
 
-Mosty jsou klíčové pro onboarding uživatelů na vrstvy 2 (l2) Etherea a dokonce i pro uživatele, kteří chtějí prozkoumat různé ekosystémy. Vzhledem k rizikům spojeným s interakcí s mosty však uživatelé musí rozumět kompromisům, které mosty dělají. Zde jsou některé [strategie pro meziřetězcovou bezpečnost](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
+Mosty jsou klíčové pro onboarding uživatelů na vrstvy 2 (L2) Etherea a dokonce i pro uživatele, kteří chtějí prozkoumat různé ekosystémy. Vzhledem k rizikům spojeným s interakcí s mosty však uživatelé musí rozumět kompromisům, které mosty dělají. Zde jsou některé [strategie pro meziřetězcovou bezpečnost](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
 
 <Divider />
 
 ## Další čtení {#further-reading}
 
 - [EIP-5164: Meziřetězcové provádění](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18. června 2022 - Brendan Asselstine_
-- [Rámec rizik L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5. července 2022 - Bartek Kiepuszewski_
+- [Rámec rizik L2Bridge](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _5. července 2022 - Bartek Kiepuszewski_
 - ["Proč bude budoucnost víceřetězcová, ale nebude meziřetězcová."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8. ledna 2022 - Vitalik Buterin_
 - [Využití sdílené bezpečnosti pro bezpečnou meziřetězcovou interoperabilitu: Výbory pro stav Lagrange a dále](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12. června 2024 - Emmanuel Awosika_
 - [Stav řešení interoperability rollupů](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20. června 2024 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

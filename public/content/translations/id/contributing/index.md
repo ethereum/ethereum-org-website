@@ -15,32 +15,33 @@ Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar 
 - [Laporkan kesalahan terjemahan](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [Program Terjemahan](/contributing/translation-program/) sedang dihentikan secara bertahap dan tidak lagi melakukan orientasi penerjemah baru
 
 **Pengembangan**
-- [Kerjakan masalah (issue) yang terbuka](https://github.com/ethereum/ethereum-org-website/issues) – Pekerjaan yang telah kami identifikasi dan perlu diselesaikan
+- [Kerjakan masalah (issue) terbuka](https://github.com/ethereum/ethereum-org-website/issues) – Pekerjaan yang telah kami identifikasi perlu dilakukan
 
 **Desain**
 - [Bantu mendesain situs web](/contributing/design/) – Desainer dari semua tingkatan dapat berkontribusi untuk meningkatkan situs web
 
 **Konten**
-- [Buat/edit konten](/contributing/#how-to-update-content) – Sarankan halaman baru atau lakukan penyesuaian pada apa yang sudah ada di sini
+- [Buat/edit konten](/contributing/#how-to-update-content) – Sarankan halaman baru atau buat penyesuaian pada apa yang sudah ada di sini
 - [Tulis artikel pembangun](/contributing/adding-articles/) - Kontribusikan artikel untuk bagian [Terbaru](/latest/)
 - [Tambahkan sumber daya komunitas](/contributing/content-resources/) – Tambahkan artikel atau sumber daya yang bermanfaat ke halaman yang relevan
 - [Sarankan laporan](/contributing/adding-reports/) - Sarankan laporan penelitian untuk halaman [Laporan](/reports/)
-- [Bagikan kisah Anda](/contributing/adding-community-stories/) - Kirimkan cerita tentang pengalaman pribadi Anda dengan teknologi sumber terbuka dan perlindungan, bagaimana ekosistem Ethereum telah memengaruhi hidup Anda, atau bagaimana Anda dan komunitas Anda menggunakan Ethereum
+- [Bagikan cerita Anda](/contributing/adding-community-stories/) - Kirimkan cerita tentang pengalaman pribadi Anda dengan teknologi sumber terbuka dan perlindungan, bagaimana ekosistem Ethereum telah memengaruhi hidup Anda, atau bagaimana Anda dan komunitas Anda menggunakan Ethereum
 - [Kuis](/contributing/quizzes/) – Tambahkan, perbarui, dan hapus bank soal kuis untuk halaman yang relevan
 - [Sarankan sumber daya desain](/contributing/design/adding-design-resources/) – Tambahkan, perbarui, dan hapus sumber daya desain yang bermanfaat
 - [Sarankan video](/contributing/adding-videos/) – Sarankan video edukasi untuk galeri video
+- [Tambahkan istilah glosarium](/contributing/adding-glossary-terms/) – Tambahkan atau perbarui istilah di [Glosarium Ethereum](/glossary/)
 
 **Ide fitur**
 - [Minta fitur](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Beri tahu kami tentang ide apa pun yang Anda miliki untuk fitur atau desain baru
 
 **Daftar produk**
 - [Tambahkan bursa](/contributing/adding-exchanges/) – Tambahkan bursa ke [pencari bursa](/get-eth/#country-picker) kami
-- [Tambahkan produk](/contributing/adding-products/) – Tambahkan aplikasi terdesentralisasi (dapp) atau dompet ke halaman yang relevan
+- [Tambahkan produk](/contributing/adding-products/) – Tambahkan dapp atau dompet ke halaman yang relevan
 - [Tambahkan alat pengembang](/contributing/adding-developer-tools/) – Tambahkan alat pengembang ke halaman yang relevan
-- [Tambahkan lapisan 2 (l2)](/contributing/adding-layer-2s/) – Tambahkan lapisan 2 (l2) ke halaman yang relevan
+- [Tambahkan lapisan 2](/contributing/adding-layer-2s/) – Tambahkan lapisan 2 ke halaman yang relevan
 - [Tambahkan produk atau layanan staking](/contributing/adding-staking-products/) – Tambahkan proyek yang membantu memfasilitasi staking mandiri, staking gabungan, atau staking sebagai layanan
-- [Tambahkan dompet](/contributing/adding-wallets/) – Tambahkan dompet untuk [halaman cari dompet](/wallets/find-wallet/)
-- [Sarankan proyek untuk halaman DeSci kami](/contributing/adding-desci-projects/) – Tambahkan proyek yang dibangun di atas Ethereum yang berkontribusi pada sains terdesentralisasi (desci)
+- [Tambahkan dompet](/contributing/adding-wallets/) – Tambahkan dompet untuk [halaman temukan dompet](/wallets/find-wallet/)
+- [Sarankan proyek untuk halaman DeSci kami](/contributing/adding-desci-projects/) – Tambahkan proyek yang dibangun di Ethereum yang berkontribusi pada sains terdesentralisasi
 - [Tambahkan sumber daya](/contributing/adding-resources/) – Tambahkan sumber daya yang berguna ke halaman relevan mana pun
 
 Ada pertanyaan? 🤔 Bergabunglah dengan [server Discord](/discord/) kami
@@ -102,17 +103,7 @@ Jika kontribusi Anda digabungkan ke dalam ethereum.org, Anda akan memiliki kesem
 
 Anda hanya boleh menggunakan dompet kustodian mandiri untuk mengklaim OAT. Jangan gunakan akun bursa atau akun lain yang kunci privatnya tidak Anda pegang, karena ini tidak akan memungkinkan Anda untuk mengakses dan mengelola OAT Anda.
 
-## Klaim GitPOAP Anda {#claim-gitpoap}
-
-GitPOAP juga akan secara otomatis mengenali kontribusi Anda yang digabungkan dan memungkinkan Anda mencetak POAP kontributor unik yang terpisah di platform mereka sendiri!
-
-
-### Cara mengklaim {#how-to-claim-2}
-
-1. Kunjungi [GitPOAP](https://www.gitpoap.io).
-2. Hubungkan dengan dompet Anda atau bahkan dengan email Anda melalui opsi masuk.
-3. Cari nama pengguna GitHub, alamat ETH, nama Layanan Nama Ethereum (ENS), atau GitPOAP apa pun untuk memeriksa apakah Anda memenuhi syarat.
-4. Jika akun GitHub Anda memenuhi syarat, maka Anda akan dapat mencetak GitPOAP!
+<LinkWithArrow href="/collectibles/">Lihat barang koleksi ethereum.org Anda</LinkWithArrow>
 
 ## Kontributor {#contributors}
 

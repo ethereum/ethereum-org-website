@@ -1,7 +1,7 @@
 ---
 title: "AI 에이전트"
 metaTitle: "AI 에이전트 | 이더리움의 AI 에이전트"
-description: "이더리움의 AI 에이전트 개요"
+description: "이더리움의 AI 에이전트란 무엇인가요? 자율 에이전트가 자산을 보유하고, 거래하며, 탈중앙화 금융(DeFi)을 사용하고, 온체인에서 서로 결제하는 방법과 주의해야 할 리스크에 대해 알아보세요."
 lang: ko
 template: use-cases
 sidebarDepth: 2

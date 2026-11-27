@@ -1,6 +1,6 @@
 ---
 title: Jak swapovat tokeny
-description: "Průvodce, jak swapovat tokeny na Ethereu."
+description: "Průvodce swapováním tokenů na Ethereu krok za krokem: připojte svou peněženku k decentralizované burze, zkontrolujte poplatky a cenový skluz a potvrďte obchod."
 lang: cs
 ---
 

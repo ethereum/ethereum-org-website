@@ -21,12 +21,13 @@ Powinieneś zrozumieć podstawowe koncepcje Ethereum, aby móc zinterpretować d
 
 ## Usługi {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) – Prywatny eksplorator Ethereum. Służy również do sortowania i filtrowania danych (mempool). Dostępny w języku hiszpańskim, francuskim, włoskim, holenderskim, portugalskim, rosyjskim, chińskim i perskim
+- [Blockchair](https://blockchair.com/ethereum) – Prywatny eksplorator Ethereum. Pozwala również na sortowanie i filtrowanie danych (mempool). Dostępny w języku hiszpańskim, francuskim, włoskim, niderlandzkim, portugalskim, rosyjskim, chińskim i perskim
 - [Chainlens](https://www.chainlens.com/)
-- [Eksplorator bloków DexGuru](https://ethereum.dex.guru/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) – Dostępny również w języku chińskim, koreańskim, rosyjskim i japońskim
 - [Ethplorer](https://ethplorer.io/) – Eksplorator bloków skupiający się na tokenach. Dostępny również w języku chińskim, hiszpańskim, francuskim, tureckim, rosyjskim, koreańskim i wietnamskim
+- [Ethscanner](https://ethscanner.io/) – Stworzony przez Routescan. Przekazuje zweryfikowane kontrakty do otwartego zbioru danych Verifier Alliance i pokazuje transakcje międzyłańcuchowe
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

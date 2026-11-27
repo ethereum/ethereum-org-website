@@ -1,6 +1,6 @@
 ---
-title: Jednoslotová finalita
-description: Vysvětlení jednoslotové finality
+title: "Jednoslotová finalita"
+description: "Jednoslotová finalita by mohla zkrátit čas do finality Etherea z přibližně 15 minut na jediný slot. Zjistěte, jak funguje a jaké kompromisy s sebou přináší."
 lang: cs
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Problém se škálováním agregace prostřednictvím zvyšování počtu valid�
 
 ## Současný pokrok {#current-progress}
 
-SSF je ve fázi výzkumu. Neočekává se, že bude nasazena dříve než za několik let, pravděpodobně až po dalších podstatných upgradech, jako jsou [Verkle stromy](/roadmap/verkle-trees/) a [danksharding](/roadmap/danksharding/).
+SSF je ve fázi výzkumu. Její nasazení se neočekává dříve než za několik let, pravděpodobně až po dalších podstatných vylepšeních, jako je nový stavový strom (v současnosti navrhovaný jako binární strom v [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) a [danksharding](/roadmap/danksharding/).
 
 ## Další čtení {#further-reading}
 

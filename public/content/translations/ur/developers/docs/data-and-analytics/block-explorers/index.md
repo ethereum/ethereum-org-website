@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## خدمات {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - نجی ایتھیریم ایکسپلورر۔ ڈیٹا (میم پول) کو ترتیب دینے اور فلٹر کرنے کے لیے بھی۔ ہسپانوی، فرانسیسی، اطالوی، ڈچ، پرتگالی، روسی، چینی اور فارسی میں دستیاب ہے
+- [Blockchair](https://blockchair.com/ethereum) - پرائیویٹ ایتھیریم ایکسپلورر۔ یہ (میم پول) ڈیٹا کو ترتیب دینے اور فلٹر کرنے کے لیے بھی استعمال ہوتا ہے۔ ہسپانوی، فرانسیسی، اطالوی، ڈچ، پرتگالی، روسی، چینی اور فارسی میں دستیاب ہے
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - چینی، کوریائی، روسی اور جاپانی میں بھی دستیاب ہے
-- [Ethplorer](https://ethplorer.io/) - ٹوکنز پر توجہ مرکوز کرنے والا ایک بلاک ایکسپلورر۔ چینی، ہسپانوی، فرانسیسی، ترکی، روسی، کوریائی اور ویتنامی میں بھی دستیاب ہے
+- [Ethplorer](https://ethplorer.io/) - ایک بلاک ایکسپلورر جس کی توجہ ٹوکنز پر ہے۔ چینی، ہسپانوی، فرانسیسی، ترکی، روسی، کوریائی اور ویتنامی میں بھی دستیاب ہے
+- [Ethscanner](https://ethscanner.io/) - Routescan کی جانب سے۔ Verifier Alliance کے اوپن ڈیٹاسیٹ میں تصدیق شدہ کنٹریکٹس کا حصہ ڈالتا ہے اور کراس چین ٹرانزیکشنز دکھاتا ہے
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

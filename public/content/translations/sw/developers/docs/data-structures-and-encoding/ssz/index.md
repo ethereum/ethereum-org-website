@@ -80,7 +80,7 @@ Huu bado ni urahisishaji - nambari kamili na sufuri katika michoro hapo juu kwa 
 
 Kwa hivyo thamani halisi za aina zenye urefu unaobadilika huhifadhiwa kwenye lundo mwishoni mwa kipengee kilichosanjariwa huku vifidia vyake vikihifadhiwa katika nafasi zake sahihi katika orodha iliyopangwa ya nyanja.
 
-Pia kuna baadhi ya matukio maalum ambayo yanahitaji matibabu maalum, kama vile aina ya `BitList` ambayo inahitaji kikomo cha urefu kuongezwa wakati wa usanjari na kuondolewa wakati wa kutoa kwenye usanjari. Maelezo kamili yanapatikana katika [vipimo vya SSZ](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md).
+Pia kuna baadhi ya matukio maalum ambayo yanahitaji matibabu maalum, kama vile aina ya `BitList` ambayo inahitaji kikomo cha urefu kuongezwa wakati wa usanjari na kuondolewa wakati wa kutoa kwenye usanjari. Maelezo kamili yanapatikana katika [vipimo vya SSZ](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/simple-serialize.md).
 
 ### Kutoa kwenye usanjari {#deserialization}
 
@@ -121,7 +121,7 @@ Uwakilishi huu hutoa faharisi ya nodi kwa kila kipande cha data katika mti wa Me
 
 ## Uthibitisho mwingi (Multiproofs) {#multiproofs}
 
-Kutoa orodha ya faharisi za jumla zinazowakilisha kipengele maalum huturuhusu kukithibitisha dhidi ya mzizi wa mti wa heshi. Mzizi huu ndio toleo letu linalokubalika la uhalisia. Data yoyote tunayopewa inaweza kuthibitishwa dhidi ya uhalisia huo kwa kuiingiza mahali sahihi katika mti wa Merkle (inayobainishwa na faharisi yake ya jumla) na kuchunguza kwamba mzizi unabaki kuwa wa kudumu. Kuna vipengele vya utendaji katika vipimo [hapa](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs) vinavyoonyesha jinsi ya kukokotoa seti ya chini zaidi ya nodi zinazohitajika ili kuthibitisha yaliyomo katika seti fulani ya faharisi za jumla.
+Kutoa orodha ya faharisi za jumla zinazowakilisha kipengele maalum huturuhusu kukithibitisha dhidi ya mzizi wa mti wa heshi. Mzizi huu ndio toleo letu linalokubalika la uhalisia. Data yoyote tunayopewa inaweza kuthibitishwa dhidi ya uhalisia huo kwa kuiingiza mahali sahihi katika mti wa Merkle (inayobainishwa na faharisi yake ya jumla) na kuchunguza kwamba mzizi unabaki kuwa wa kudumu. Kuna vipengele vya utendaji katika vipimo [hapa](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/merkle-proofs.md#merkle-multiproofs) vinavyoonyesha jinsi ya kukokotoa seti ya chini zaidi ya nodi zinazohitajika ili kuthibitisha yaliyomo katika seti fulani ya faharisi za jumla.
 
 Kwa mfano, ili kuthibitisha data katika faharisi ya 9 katika mti ulio hapa chini, tunahitaji heshi ya data katika faharisi za 8, 9, 5, 3, 1.
 Heshi ya (8,9) inapaswa kuwa sawa na heshi (4), ambayo huheshiji na 5 ili kuzalisha 2, ambayo huheshiji na 3 ili kuzalisha mzizi wa mti 1. Ikiwa data isiyo sahihi ilitolewa kwa 9, mzizi ungebadilika - tungegundua hili na kushindwa kuthibitisha tawi.

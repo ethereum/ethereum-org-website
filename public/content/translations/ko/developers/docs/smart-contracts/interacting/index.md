@@ -171,8 +171,7 @@ const result = await client.simulateContract({
 
 ## 관련 튜토리얼 {#related-tutorials}
 
-- [JavaScript에서 스마트 컨트랙트 호출하기](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-- [Web3.js 및 Alchemy를 사용하여 트랜잭션 보내기](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Web3.js와 Alchemy를 사용하여 트랜잭션 보내기](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [지갑에서 NFT를 보는 방법](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## 더 읽을거리 {#further-reading}
@@ -180,7 +179,7 @@ const result = await client.simulateContract({
 - [Viem 문서: 컨트랙트 읽기 및 쓰기](https://viem.sh/docs/contract/readContract)
 - [ethers.js 문서: 컨트랙트](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI 사양](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [ABI란 무엇인가? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [스마트 컨트랙트 ABI는 어떻게 작동하나요? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## 관련 주제 {#related-topics}
 

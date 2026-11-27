@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -29,11 +29,9 @@ import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-n
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-what-is-the-ethereum-network")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(
       "what-is-the-ethereum-network",
       locale as Lang
@@ -66,17 +64,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{
-              slug: "learn/what-is-the-ethereum-network",
-              startDepth: 1,
-            }}
+            breadcrumbs={{ slug: "what-is-the-ethereum-network" }}
             heroImg={heroImg}
             title={t("page-what-is-ethereum-network-title")}
             description={
@@ -369,7 +364,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               "page-what-is-ethereum-network-layer-2s-section-description-6",
               {
                 l2beat: (chunks) => (
-                  <Link href="https://l2beat.com/scaling/summary">
+                  <Link href="https://ethbeat.org/layer2s/summary">
                     {chunks}
                   </Link>
                 ),
@@ -521,7 +516,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 "page-what-is-ethereum-network-live-network-data-section-description-13",
                 {
                   l2beat: (chunks) => (
-                    <Link href="https://l2beat.com/">{chunks}</Link>
+                    <Link href="https://ethbeat.org/">{chunks}</Link>
                   ),
                 }
               )}
@@ -620,8 +615,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-what-is-the-ethereum-network")
 

@@ -56,7 +56,7 @@ contract MyContract is Ownable {
 
 [संयोजकता और अंतर-संचालनीयता](/developers/docs/smart-contracts/composability/) को सुविधाजनक बनाने के लिए, इथेरियम समुदाय ने **ERCs** के रूप में कई मानकों को परिभाषित किया है। आप उनके बारे में [मानक](/developers/docs/standards/) अनुभाग में अधिक पढ़ सकते हैं।
 
-अपने अनुबंधों के हिस्से के रूप में ERC को शामिल करते समय, अपना स्वयं का कार्यान्वयन बनाने की कोशिश करने के बजाय मानक कार्यान्वयन की तलाश करना एक अच्छा विचार है। कई स्मार्ट अनुबंध लाइब्रेरी में सबसे लोकप्रिय ERCs के कार्यान्वयन शामिल हैं। उदाहरण के लिए, सर्वव्यापी [ERC-20 विनिमेय टोकन मानक](/developers/tutorials/understand-the-erc-20-token-smart-contract/) [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) और [ओपनजेपेलिन](https://docs.openzeppelin.com/contracts/3.x/erc20) में पाया जा सकता है। इसके अतिरिक्त, कुछ ERCs स्वयं ERC के हिस्से के रूप में विहित (canonical) कार्यान्वयन भी प्रदान करते हैं।
+अपने अनुबंधों के हिस्से के रूप में ERC को शामिल करते समय, अपना स्वयं का कार्यान्वयन बनाने की कोशिश करने के बजाय मानक कार्यान्वयन की तलाश करना एक अच्छा विचार है। कई स्मार्ट अनुबंध लाइब्रेरी में सबसे लोकप्रिय ERCs के कार्यान्वयन शामिल हैं। उदाहरण के लिए, सर्वव्यापी [ERC-20 विनिमेय टोकन मानक](/developers/docs/standards/tokens/erc-20/) [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) और [ओपनजेपेलिन](https://docs.openzeppelin.com/contracts/3.x/erc20) में पाया जा सकता है। इसके अतिरिक्त, कुछ ERCs स्वयं ERC के हिस्से के रूप में विहित (canonical) कार्यान्वयन भी प्रदान करते हैं।
 
 यह उल्लेख करने योग्य है कि कुछ ERCs स्टैंडअलोन नहीं हैं, बल्कि अन्य ERCs के अतिरिक्त हैं। उदाहरण के लिए, [ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) इसकी उपयोगिता में सुधार के लिए ERC-20 में एक एक्सटेंशन जोड़ता है।
 
@@ -110,7 +110,6 @@ contract MyNFT is ERC721 {
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 
 - [इथेरियम डेवलपर्स के लिए सुरक्षा संबंधी विचार](/developers/docs/smart-contracts/security/) _– स्मार्ट अनुबंध बनाते समय सुरक्षा संबंधी विचारों पर एक ट्यूटोरियल, जिसमें लाइब्रेरी का उपयोग शामिल है।_
-- [ERC-20 टोकन स्मार्ट अनुबंध को समझें](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- कई लाइब्रेरी द्वारा प्रदान किए गए ERC-20 मानक पर ट्यूटोरियल।_
 
 ## आगे की पढ़ाई {#further-reading}
 

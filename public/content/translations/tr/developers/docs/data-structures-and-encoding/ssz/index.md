@@ -80,7 +80,7 @@ Bu hala bir basitleştirmedir; yukarıdaki şemalardaki tam sayılar ve sıfırl
 
 Yani değişken uzunluklu türlerin gerçek değerleri, serileştirilmiş nesnenin sonundaki bir yığında saklanırken, sapmaları sıralı alanlar listesindeki doğru konumlarında saklanır.
 
-Serileştirme sırasında bir uzunluk sınırının eklenmesini ve serileştirmeden çıkarma sırasında kaldırılmasını gerektiren `BitList` türü gibi özel işlem gerektiren bazı özel durumlar da vardır. Tüm detaylar [SSZ spesifikasyonunda](https://github.com/ethereum/consensus-specs/blob/master/ssz/simple-serialize.md) mevcuttur.
+Serileştirme sırasında bir uzunluk sınırının eklenmesini ve serileştirmeden çıkarma sırasında kaldırılmasını gerektiren `BitList` türü gibi özel işlem gerektiren bazı özel durumlar da vardır. Tüm detaylar [SSZ spesifikasyonunda](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/simple-serialize.md) mevcuttur.
 
 ### Serileştirmeden çıkarma {#deserialization}
 
@@ -121,7 +121,7 @@ Bu temsil, Merkle ağacındaki her bir veri parçası için bir düğüm endeksi
 
 ## Çoklu kanıtlar (Multiproofs) {#multiproofs}
 
-Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlamak, onu hash ağacı köküne karşı doğrulamamıza olanak tanır. Bu kök, bizim kabul ettiğimiz gerçeklik versiyonudur. Bize sağlanan herhangi bir veri, Merkle ağacında doğru yere (genelleştirilmiş endeksi tarafından belirlenir) yerleştirilerek ve kökün sabit kaldığı gözlemlenerek bu gerçekliğe karşı doğrulanabilir. Spesifikasyonda [burada](https://github.com/ethereum/consensus-specs/blob/master/ssz/merkle-proofs.md#merkle-multiproofs), belirli bir genelleştirilmiş endeks kümesinin içeriğini doğrulamak için gereken minimum düğüm kümesinin nasıl hesaplanacağını gösteren işlevler bulunmaktadır.
+Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlamak, onu hash ağacı köküne karşı doğrulamamıza olanak tanır. Bu kök, bizim kabul ettiğimiz gerçeklik versiyonudur. Bize sağlanan herhangi bir veri, Merkle ağacında doğru yere (genelleştirilmiş endeksi tarafından belirlenir) yerleştirilerek ve kökün sabit kaldığı gözlemlenerek bu gerçekliğe karşı doğrulanabilir. Spesifikasyonda [burada](https://github.com/ethereum/consensus-specs/blob/v1.6.1/ssz/merkle-proofs.md#merkle-multiproofs), belirli bir genelleştirilmiş endeks kümesinin içeriğini doğrulamak için gereken minimum düğüm kümesinin nasıl hesaplanacağını gösteren işlevler bulunmaktadır.
 
 Örneğin, aşağıdaki ağaçta 9. endeksteki verileri doğrulamak için 8, 9, 5, 3, 1 endekslerindeki verilerin hash'ine ihtiyacımız var.
 (8,9)'un hash'i, 2'yi üretmek için 5 ile hashlenen ve ağaç kökü 1'i üretmek için 3 ile hashlenen hash (4)'e eşit olmalıdır. 9 için yanlış veri sağlanmış olsaydı, kök değişirdi; bunu tespit ederdik ve dalı doğrulayamazdık.

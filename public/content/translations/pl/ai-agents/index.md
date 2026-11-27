@@ -1,7 +1,7 @@
 ---
 title: Agenci AI
 metaTitle: Agenci AI | Agenci AI w Ethereum
-description: "Przegląd agentów AI w Ethereum"
+description: "Czym są agenci AI w Ethereum? Dowiedz się, jak autonomiczni agenci przechowują aktywa, handlują, korzystają z DeFi i płacą sobie nawzajem onchain, a także na jakie ryzyka należy uważać."
 lang: pl
 template: use-cases
 sidebarDepth: 2

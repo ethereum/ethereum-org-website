@@ -6,15 +6,15 @@ lang: ko
 
 이더리움 노드는 [실행 클라이언트](/developers/docs/nodes-and-clients/#execution-clients)와 [합의 클라이언트](/developers/docs/nodes-and-clients/#consensus-clients)라는 두 가지 클라이언트로 구성됩니다. 노드가 새로운 블록을 제안하려면 [검증자 클라이언트](#validators)도 실행해야 합니다.
 
-이더리움이 [작업증명 (PoW)](/developers/docs/consensus-mechanisms/pow/)을 사용했을 때는 실행 클라이언트만으로도 전체 이더리움 노드를 실행하기에 충분했습니다. 하지만 [지분 증명 (PoS)](/developers/docs/consensus-mechanisms/pos/)을 도입한 이후부터는 실행 클라이언트를 [합의 클라이언트](/developers/docs/nodes-and-clients/#consensus-clients)라는 다른 소프트웨어와 함께 사용해야 합니다.
+이더리움이 [작업증명 (PoW)](/developers/docs/consensus-mechanisms/pow/)을 사용했을 때는 실행 클라이언트만으로도 풀 이더리움 노드를 실행하기에 충분했습니다. 하지만 [지분 증명 (PoS)](/developers/docs/consensus-mechanisms/pos/)을 구현한 이후에는 실행 클라이언트를 [합의 클라이언트](/developers/docs/nodes-and-clients/#consensus-clients)라는 다른 소프트웨어와 함께 사용해야 합니다.
 
-아래 다이어그램은 두 이더리움 클라이언트 간의 관계를 보여줍니다. 두 클라이언트는 각각 자체 피어 투 피어(P2P) 네트워크에 연결됩니다. 실행 클라이언트는 P2P 네트워크를 통해 트랜잭션을 가십(gossip)하여 로컬 트랜잭션 풀을 관리할 수 있게 하고, 합의 클라이언트는 P2P 네트워크를 통해 블록을 가십하여 합의 및 체인 성장을 가능하게 하므로 별도의 P2P 네트워크가 필요합니다.
+아래 다이어그램은 두 이더리움 클라이언트 간의 관계를 보여줍니다. 두 클라이언트는 각각 자체 피어 투 피어(P2P) 네트워크에 연결됩니다. 실행 클라이언트는 P2P 네트워크를 통해 트랜잭션을 가십하여 로컬 트랜잭션 풀을 관리할 수 있게 하고, 합의 클라이언트는 P2P 네트워크를 통해 블록을 가십하여 합의와 체인 성장을 가능하게 하므로 별도의 P2P 네트워크가 필요합니다.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _실행 클라이언트에는 에리곤, 네더마인드, Besu를 포함한 여러 가지 옵션이 있습니다._
 
-이 두 클라이언트 구조가 작동하려면 합의 클라이언트가 트랜잭션 묶음을 실행 클라이언트에 전달해야 합니다. 실행 클라이언트는 트랜잭션을 로컬에서 실행하여 트랜잭션이 이더리움 규칙을 위반하지 않는지, 제안된 이더리움 상태 업데이트가 올바른지 검증합니다. 노드가 블록 생성자로 선택되면 해당 노드의 합의 클라이언트 인스턴스는 새 블록에 포함할 트랜잭션 묶음을 실행 클라이언트에 요청하고, 이를 실행하여 글로벌 상태를 업데이트합니다. 합의 클라이언트는 [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)를 사용하는 로컬 RPC 연결을 통해 실행 클라이언트를 구동합니다.
+이러한 두 클라이언트 구조가 작동하려면 합의 클라이언트가 트랜잭션 번들을 실행 클라이언트에 전달해야 합니다. 실행 클라이언트는 트랜잭션을 로컬에서 실행하여 트랜잭션이 이더리움 규칙을 위반하지 않는지, 제안된 이더리움 상태 업데이트가 올바른지 검증합니다. 노드가 블록 생성자로 선택되면 해당 노드의 합의 클라이언트 인스턴스는 새 블록에 포함할 트랜잭션 번들을 실행 클라이언트에 요청하고, 이를 실행하여 글로벌 상태를 업데이트합니다. 합의 클라이언트는 [엔진 API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)를 사용하는 로컬 RPC 연결을 통해 실행 클라이언트를 구동합니다.
 
 ## 실행 클라이언트는 무슨 일을 하나요? {#execution-client}
 

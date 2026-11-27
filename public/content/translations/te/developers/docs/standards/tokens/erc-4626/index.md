@@ -5,6 +5,7 @@ lang: te
 ---
 
 ## పరిచయం {#introduction}
+
 ERC-4626 అనేది రాబడిని అందించే ఖజానాల (yield-bearing vaults) సాంకేతిక పారామితులను ఆప్టిమైజ్ చేయడానికి మరియు ఏకీకృతం చేయడానికి ఒక ప్రమాణం. ఇది ఒకే అంతర్లీన ERC-20 టోకెన్ యొక్క షేర్లను సూచించే టోకనైజ్ చేయబడిన రాబడిని అందించే ఖజానాల కోసం ప్రామాణిక APIని అందిస్తుంది. ERC-4626 అనేది ERC-20ని ఉపయోగించే టోకనైజ్ చేయబడిన ఖజానాల కోసం ఒక ఐచ్ఛిక పొడిగింపును కూడా వివరిస్తుంది, ఇది టోకెన్‌లను డిపాజిట్ చేయడానికి, ఉపసంహరించుకోవడానికి మరియు బ్యాలెన్స్‌లను చదవడానికి ప్రాథమిక కార్యాచరణను అందిస్తుంది.
 
 **రాబడిని అందించే ఖజానాలలో ERC-4626 పాత్ర**
@@ -52,7 +53,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-ఈ ఫంక్షన్ ఖజానా వద్ద ఉన్న మొత్తం అంతర్లీన ఆస్తుల మొత్తాన్ని అందిస్తుంది.
+ఈ ఫంక్షన్ ఖజానా ద్వారా నిర్వహించబడే అంతర్లీన ఆస్తుల మొత్తం మొత్తాన్ని అందిస్తుంది, ఇందులో అది మరెక్కడైనా పని చేయడానికి పెట్టినవి మరియు ఏవైనా ఫీజుల తర్వాత ఉన్నవి కూడా ఉంటాయి.
 
 #### convertToShares {#convertoshares}
 
@@ -140,7 +141,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-ఈ ఫంక్షన్ `owner` నుండి `shares`ని బర్న్ చేస్తుంది మరియు ఖజానా నుండి `receiver`కి ఖచ్చితంగా `assets` టోకెన్‌ను పంపుతుంది.
+ఈ ఫంక్షన్ `owner` నుండి `shares` ని బర్న్ చేస్తుంది మరియు ఖజానా నుండి `receiver` కి ఖచ్చితంగా `assets` టోకెన్‌లను పంపుతుంది.
 
 #### maxRedeem {#maxredeem}
 
@@ -184,7 +185,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### ఇంటర్‌ఫేస్ యొక్క మ్యాప్ {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### ఈవెంట్‌లు {#events}
 

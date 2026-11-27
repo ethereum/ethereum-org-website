@@ -300,9 +300,7 @@ _知道对你有帮助的社区资源吗？编辑本页面并添加它！_
 
 ## 相关教程 {#related-tutorials}
 
-- [设置 Web3.js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _——在项目中设置 Web3.js 的说明。_
-- [从 JavaScript 调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _——使用 DAI 代币，了解如何使用 JavaScript 调用合约函数。_
-- [使用 Web3 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _——从后端发送交易的分步演练。_
+- [使用 Web3 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _——从后端发送交易的分步指南。_
 
 ## 教程：以太坊上的 JavaScript API 和 WebSocket {#tutorials}
 

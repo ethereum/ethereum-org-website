@@ -314,7 +314,7 @@ contract Token {
 ```solidity
 pragma solidity ^0.5.10;
 
-// 從其他檔案將符號匯入到當前合約中。
+// 將其他檔案中的符號匯入到目前的合約中。
 // 在這個例子中，是來自 OpenZeppelin 的一系列輔助合約。
 // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
@@ -323,60 +323,60 @@ import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// `is` 關鍵字用於從外部合約繼承函式和關鍵字。
-// 在這個例子中，`CryptoPizza` 繼承了 `IERC721` 和 `ERC165` 合約。
+// `is` 關鍵字用於從外部合約繼承函式與關鍵字。
+// 在這個例子中，`CryptoPizza` 繼承了 `IERC721` 與 `ERC165` 合約。
 // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // 使用 OpenZeppelin 的 SafeMath 函式庫來安全地執行算術運算。
-    // 了解更多：https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // 了解更多：https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
     // Solidity 中的常數狀態變數與其他語言類似
-    // 但你必須從一個在編譯時為常數的表達式進行賦值。
+    // 但你必須從編譯時為常數的表達式進行賦值。
     // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Struct（結構）型別讓你定義自己的型別
+    // 結構 (Struct) 類型讓你能夠定義自己的類型
     // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // 創建一個空的 Pizza 結構陣列
+    // 建立一個空的 Pizza 結構陣列
     Pizza[] public pizzas;
 
     // 從 pizza ID 映射到其擁有者的地址
     mapping(uint256 => address) public pizzaToOwner;
 
-    // 從擁有者的地址映射到擁有的代幣數量
+    // 從擁有者的地址映射到所擁有的代幣數量
     mapping(address => uint256) public ownerPizzaCount;
 
     // 從代幣 ID 映射到已授權的地址
     mapping(uint256 => address) pizzaApprovals;
 
-    // 你可以巢狀映射，這個例子將擁有者映射到操作員的授權
+    // 你可以巢狀化映射，這個例子將擁有者映射到操作者的授權
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // 從字串（名稱）和 DNA 創建隨機 Pizza 的內部函式
+    // 從字串 (名稱) 與 DNA 建立隨機 Pizza 的內部函式
     function _createPizza(string memory _name, uint256 _dna)
         // `internal` 關鍵字表示此函式僅在
-        // 此合約以及衍生自此合約的合約內可見
+        // 此合約以及繼承此合約的合約內可見
         // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
         // `isUnique` 是一個函式修飾子，用於檢查 pizza 是否已經存在
         // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // 將 Pizza 加入到 Pizzas 陣列並取得 id
+        // 將 Pizza 加入 Pizza 陣列並取得 id
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // 檢查 Pizza 擁有者是否與當前使用者相同
+        // 檢查 Pizza 擁有者是否與目前使用者相同
         // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // 注意 address(0) 是零地址，
+        // 請注意 address(0) 是零地址，
         // 表示 pizza[id] 尚未分配給特定使用者。
 
         assert(pizzaToOwner[id] == address(0));
@@ -389,13 +389,13 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // 從字串（名稱）創建一個隨機的 Pizza
+    // 從字串 (名稱) 建立隨機 Pizza
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // 從字串（名稱）和擁有者（創建者）的地址生成隨機 DNA
+    // 從字串 (名稱) 與擁有者 (建立者) 的地址產生隨機 DNA
     function generateRandomDna(string memory _str, address _owner)
         public
         // 標記為 `pure` 的函式承諾不會讀取或修改狀態
@@ -403,14 +403,14 @@ contract CryptoPizza is IERC721, ERC165 {
         pure
         returns (uint256)
     {
-        // 從字串（名稱）+ 地址（擁有者）生成隨機 uint
+        // 從字串 (名稱) + 地址 (擁有者) 產生隨機 uint
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // 回傳由擁有者找到的 Pizzas 陣列
+    // 回傳依擁有者尋獲的 Pizza 陣列
     function getPizzasByOwner(address _owner)
         public
         // 標記為 `view` 的函式承諾不會修改狀態
@@ -419,7 +419,7 @@ contract CryptoPizza is IERC721, ERC165 {
         returns (uint256[] memory)
     {
         // 使用 `memory` 儲存位置來儲存僅在
-        // 此函式呼叫生命週期內的數值。
+        // 此函式呼叫生命週期內的值。
         // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // 將 Pizza 及其所有權轉移到其他地址
+    // 將 Pizza 與擁有權轉移到其他地址
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -443,15 +443,15 @@ contract CryptoPizza is IERC721, ERC165 {
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // 發出在匯入的 IERC721 合約中定義的事件
+        // 觸發在匯入的 IERC721 合約中定義的事件
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * 安全地將給定代幣 ID 的所有權轉移到另一個地址
+     * 安全地將給定代幣 ID 的擁有權轉移到另一個地址
      * 如果目標地址是一個合約，它必須實作 `onERC721Received`，
-     * 該函式會在安全轉移時被呼叫，並回傳魔術數值
+     * 該函式會在安全轉移時被呼叫，並回傳魔術值
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`；
      * 否則，轉移將被還原。
     */
@@ -463,9 +463,9 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * 安全地將給定代幣 ID 的所有權轉移到另一個地址
+     * 安全地將給定代幣 ID 的擁有權轉移到另一個地址
      * 如果目標地址是一個合約，它必須實作 `onERC721Received`，
-     * 該函式會在安全轉移時被呼叫，並回傳魔術數值
+     * 該函式會在安全轉移時被呼叫，並回傳魔術值
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`；
      * 否則，轉移將被還原。
      */
@@ -502,9 +502,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // 銷毀一個 Pizza - 完全摧毀代幣
+    // 銷毀 Pizza - 完全摧毀代幣
     // `external` 函式修飾子表示此函式是
-    // 合約介面的一部分，其他合約可以呼叫它
+    // 合約介面的一部分，且其他合約可以呼叫它
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -517,19 +517,19 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // 依地址回傳 Pizzas 的數量
+    // 回傳依地址計算的 Pizza 數量
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // 回傳依 id 找到的 Pizza 的擁有者
+    // 回傳依 id 尋獲的 Pizza 擁有者
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // 授權其他地址轉移 Pizza 的所有權
+    // 授權其他地址轉移 Pizza 的擁有權
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
@@ -547,7 +547,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * 清除給定代幣 ID 當前授權的私有函式
+     * 清除給定代幣 ID 目前授權的私有函式
      * 如果給定地址確實不是代幣的擁有者，則還原
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
@@ -559,8 +559,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * 設定或取消設定給定操作員的授權
-     * 操作員被允許代表發送者轉移其所有代幣
+     * 設定或取消設定給定操作者的授權
+     * 操作者被允許代表發送者轉移其所有代幣
      */
     function setApprovalForAll(address to, bool approved) public {
         require(to != msg.sender, "Cannot approve own address");
@@ -568,7 +568,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // 告知操作員是否已獲得給定擁有者的授權
+    // 告知操作者是否已獲得給定擁有者的授權
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,7 +577,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // 取得 Pizza 的所有權 - 僅限已授權的使用者
+    // 取得 Pizza 的擁有權 - 僅限已授權的使用者
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
@@ -598,7 +598,7 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // 停用 solium 檢查，因為
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
@@ -624,7 +624,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // 回傳目標地址是否為合約
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // 目前沒有更好的方法來檢查一個地址中是否有合約
+        // 目前沒有更好的方法來檢查地址中是否有合約
         // 只能檢查該地址的程式碼大小。
         // 請參閱 https://ethereum.stackexchange.com/a/14016/36603
         // 以了解有關其運作方式的更多詳細資訊。

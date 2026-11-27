@@ -39,6 +39,6 @@ _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 ## Tutorial terkait {#related-tutorials}
 
 - [Daftar periksa integrasi token](/developers/tutorials/token-integration-checklist/) _– Daftar periksa hal-hal yang perlu dipertimbangkan saat berinteraksi dengan token._
-- [Memahami kontrak pintar token ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Pengantar untuk menerapkan kontrak pintar pertama Anda di jaringan uji Ethereum._
-- [Transfer dan persetujuan token ERC20 dari kontrak pintar Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Cara menggunakan kontrak pintar untuk berinteraksi dengan token menggunakan bahasa Solidity._
-- [Menerapkan pasar ERC721 [panduan cara]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Cara menempatkan barang yang ditokenisasi untuk dijual di papan iklan baris terdesentralisasi._
+- [Panduan kontrak ERC-20](/developers/tutorials/erc20-annotated-code/) _– Panduan beranotasi baris demi baris dari implementasi kontrak ERC-20 OpenZeppelin._
+- [Transfer dan persetujuan token ERC-20 dari kontrak pintar Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Cara menggunakan kontrak pintar untuk berinteraksi dengan token menggunakan bahasa Solidity._
+- [Mengimplementasikan pasar ERC-721 [panduan cara]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Cara menjual barang yang ditokenisasi di papan iklan baris terdesentralisasi._

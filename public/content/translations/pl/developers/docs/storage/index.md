@@ -5,9 +5,9 @@ lang: pl
 authors: ["Patrick Collins"]
 ---
 
-W przeciwieństwie do scentralizowanego serwera obsługiwanego przez jedną firmę lub organizację, zdecentralizowane systemy przechowywania danych składają się z sieci peer-to-peer użytkowników-operatorów, którzy przechowują część wszystkich danych, tworząc odporny system udostępniania i przechowywania plików. Mogą one znajdować się w aplikacji opartej na technologii blockchain lub dowolnej sieci opartej na architekturze peer-to-peer.
+W przeciwieństwie do scentralizowanego serwera obsługiwanego przez jedną firmę lub organizację, zdecentralizowane systemy przechowywania danych składają się z sieci peer-to-peer użytkowników-operatorów, którzy przechowują część wszystkich danych, tworząc odporny system udostępniania i przechowywania plików. Mogą one działać w ramach aplikacji opartej na technologii blockchain lub dowolnej sieci opartej na architekturze peer-to-peer.
 
-Samo Ethereum może być używane jako zdecentralizowany system przechowywania danych i tak właśnie jest w przypadku przechowywania kodu we wszystkich inteligentnych kontraktach. Jednak jeśli chodzi o duże ilości danych, Ethereum nie zostało do tego zaprojektowane. Łańcuch stale rośnie, ale w momencie pisania tego tekstu łańcuch Ethereum ma około 500 GB - 1 TB ([w zależności od klienta](https://etherscan.io/chartsync/chaindefault)), a każdy węzeł w sieci musi być w stanie przechowywać wszystkie dane. Gdyby łańcuch miał się rozrosnąć do ogromnych ilości danych (powiedzmy 5 TB), dalsze działanie wszystkich węzłów nie byłoby wykonalne. Ponadto koszt wdrożenia tak dużej ilości danych w Sieci głównej byłby zaporowo wysoki ze względu na opłaty za [gaz](/developers/docs/gas).
+Samo Ethereum może być używane jako zdecentralizowany system przechowywania danych i tak właśnie jest w przypadku przechowywania kodu we wszystkich inteligentnych kontraktach. Jednak jeśli chodzi o duże ilości danych, Ethereum nie zostało do tego zaprojektowane. Łańcuch stale rośnie, ale w momencie pisania tego tekstu łańcuch Ethereum ma około 1-2 TB ([w zależności od klienta](https://etherscan.io/chartsync/chaindefault)), a każdy węzeł w sieci musi być w stanie przechowywać wszystkie dane. Gdyby łańcuch miał się rozrosnąć do dużych ilości danych (powiedzmy 5 TB), dalsze działanie wszystkich węzłów nie byłoby wykonalne. Ponadto koszt wdrożenia tak dużej ilości danych w Sieci głównej byłby zaporowo wysoki ze względu na opłaty za [gaz](/developers/docs/gas).
 
 Ze względu na te ograniczenia potrzebujemy innego łańcucha lub metodologii, aby przechowywać duże ilości danych w sposób zdecentralizowany.
 
@@ -142,7 +142,7 @@ Oparte na dowodzie stawki (PoS):
 **Arweave – _Arweave to platforma dStorage do przechowywania danych._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Dokumentacja](https://docs.arweave.org/info/)
+- [Dokumentacja](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs – _Züs to platforma dStorage oparta na dowodzie stawki (PoS) z shardingiem i blobberami._**

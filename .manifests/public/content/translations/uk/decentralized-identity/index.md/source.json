@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/decentralized-identity/index.md",
-  "generatedAt": "2026-06-17T21:36:12.945Z",
-  "rootHash": "e18c3194a289",
+  "generatedAt": "2026-11-27T10:01:19.511Z",
+  "rootHash": "ed29562e3685",
   "tree": {
-    "contentHash": "991b0cc211e7",
+    "contentHash": "16c2df5c35d4",
     "anchorHash": "94d09880039e",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "b50ee471ff0b",
+        "contentHash": "ca174359c900",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -1076,5 +1076,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f26be930391cbd4b6e0fa6c38957c436ace60c17"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

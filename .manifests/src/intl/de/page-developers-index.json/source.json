@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-developers-index.json",
-  "generatedAt": "2026-07-22T22:35:18.037Z",
-  "rootHash": "ccc44c0e8d7e",
+  "generatedAt": "2026-11-25T09:06:14.662Z",
+  "rootHash": "4dea6ca6757c",
   "tree": {
-    "contentHash": "ff917be5de93",
-    "anchorHash": "d6fa43f7fd49",
+    "contentHash": "4699c2ab1387",
+    "anchorHash": "0ec2319d2d27",
     "children": {
       "page-developer-meta-title": {
         "contentHash": "dc4543bddb68",
@@ -115,6 +115,10 @@
       },
       "page-developers-explore-documentation": {
         "contentHash": "218012b043fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-docs-overview": {
+        "contentHash": "0f339df9b01b",
         "anchorHash": "e3b0c44298fc"
       },
       "page-developers-frameworks-desc": {
@@ -409,6 +413,10 @@
         "contentHash": "d2942a52dc02",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-developers-view-tools": {
+        "contentHash": "554ad2685a8f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-developers-video-courses-title": {
         "contentHash": "ed7e9c278756",
         "anchorHash": "e3b0c44298fc"
@@ -653,6 +661,7 @@
       "page-developers-evm-desc",
       "page-developers-evm-link",
       "page-developers-explore-documentation",
+      "page-developers-docs-overview",
       "page-developers-frameworks-desc",
       "page-developers-frameworks-link",
       "page-developers-fundamentals",
@@ -726,6 +735,7 @@
       "page-developers-resources-desc",
       "page-developers-tutorials-title",
       "page-developers-tutorials-desc",
+      "page-developers-view-tools",
       "page-developers-video-courses-title",
       "page-developers-video-courses-desc",
       "page-developers-docs-section-desc",
@@ -781,5 +791,5 @@
       "page-developers-blog-view-all"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "8d24885edc8472556ee52a1994415b6680634e20"
 }

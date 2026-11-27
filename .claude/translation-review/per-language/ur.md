@@ -1,5 +1,61 @@
 # Urdu (ur) -- Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.2/10
+Scope: 16 md pages (ethash, data-structures trio, frameworks, nodes-and-clients index/nodes-as-a-service/run-a-node, transactions, glossary, merge, privacy, statelessness, verkle-trees, supply), changed lines only; all diffs read. Sweeps clean (U+3002/U+2060/CJK, SPDX, isolates, span balance, Eastern-Arabic digits in identifiers) apart from below.
+
+**Fixed in this branch:**
+
+- English dates in `<span dir="ltr">`/isolates: merge:3 (`September 2022`), statelessness:10/33/91 (`September 2026`, `July 2025` x2), run-a-node:104-105 (`September 2026`, `July 2023`) -> `ستمبر`/`جولائی`.
+- NaaS:288 `⩽ 1 sec` unit left English in the span -> `<span dir="ltr">⩽ 1</span> سیکنڈ`.
+- Expansions of bare English acronyms (#112): `ایتھیریم ورچوئل مشین (EVM)` x2 (nodes-and-clients), `تھرڈ پارٹی ایپلیکیشن پروگرامنگ انٹرفیس (API)` and `پبلک ... (API)` (nodes-and-clients:124,126), `زیادہ سے زیادہ قابل اخراج قدر (MEV)` x4 (merge, nodes-and-clients) -> bare/dev forms.
+- Tools re-transliterated on changed lines -> Latin (#113): OpenZeppelin SDK (frameworks:109), Geth in patricia-merkle-trie, NaaS:225 (Geth/Besu), run-a-node size table and notes, nodes-and-clients client tables and ~14 paragraph lines (Geth, Besu, Erigon, Nethermind, Reth, Lighthouse, Lodestar, Nimbus, Prysm, Teku).
+
+**Open (warnings):**
+
+- nodes-and-clients tables now carry `Mainnet, Sepolia, Hoodi` / `Beacon Chain` in Latin where dev had Urdu (matches English cells; native call).
+- transactions:55,77 `مثالی` ("ideal") for "Example"; `Gwei` where English writes `gwei`.
+- English glosses added where English has none: `(trie)`, `(opcodes)`, `(arguments)`, `(spec)`, `(draft)`, `(hexary trie)`, `(proving systems)`, `(bottleneck)`, `(cryptographic proof)`.
+- `Capella` Latin vs `کیپیلا` elsewhere in merge; `(PoW)`/`(PoA)` parentheticals dropped; many `dir="ltr"` spans around `24/7` removed (cosmetic).
+- Unchanged lines still transliterate clients (run-a-node:159-163, 244-308; nodes-and-clients paragraphs), so pages mix forms; Arabic-kaf `لامركزی` (#71) persists.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.5/10
+Scope: 70 md pages + 18 JSON namespaces, incremental updates; changed lines only. Sampled 12 md diffs and ~100 JSON keys; scripted sweeps (U+3002/U+2060/CJK, English sentences, isolate balance, glossary-translit names, expansions) clean apart from the items below. Most `(l1)`/`(l2)` diffs are only the sanitizer's capital fix on expansions dev already had.
+
+**Fixed in this branch:**
+
+- English dates left in `<span dir="ltr">` -> Urdu: developers/docs/bridges:127-132, bridges:140, pectra and fusaka descriptions (`May 7, 2025`, `December 3, 2025`).
+- `بدنیتی پر مبنی اداکاروں` ("malicious actors", film actors) -> `فریقوں` at zk-rollups (#106).
+- `// SPDX-License-Identifier: MIT` translated to `// SPDX-لائسنس-شناخت کنندہ: MIT` inside two Solidity fences (interact-with-other-contracts:18,108) -> restored.
+- Developer tools, clients and protocols re-transliterated on 23 changed md lines (Slither, Echidna, OpenZeppelin, Erigon, Nethermind, Nimbus, Lighthouse, Reth, Chainlink, Tellor, Starknet) -> Latin in `<span dir="ltr">` per #113. Reverses the #19556 choice (`سلدر`); policy now says developer tools stay Latin. MetaMask/Coinbase/Uniswap/Discord left.
+- glossary.json `checkpoint-definition`: `(⁦12 seconds⁩)` / `(⁦32 slots⁩)` English units in isolates -> `⁦12⁩ سیکنڈ`, `⁦32⁩ سلاٹس`.
+- ai-agents description: `غیر مرکزی مالیات (DeFi)` expanded where English has bare `DeFi` -> bare (#112).
+
+**Open (warnings):**
+
+- a-developers-guide-part-one: English glosses added where English has none (`(simulate)`, `(dependencies)`, `(denominations)`, `(helper methods)`, `(cents)`, `(tab completion)`); `<span dir="ltr">` dropped around Python/IPython/Web3.py.
+- Person names in bridges further-reading now Latin spans (dev had `دمتری بیرینزون (Dmitriy Berenzon)`).
+- zk-rollups heading `زیرو نالج رول اپس` vs body `صفر علم رول اپس`; `Devcon` Latin in devcon-mumbai while breadcrumb says `ڈیوکون`.
+- Glossary data: `wrapped` = `ریپڈ` (reads as "rapid") in `wrapped-token-definition`, 8 sites; Arabic-kaf `لامركزی` still pervasive (#71).
+- Untranslated image alt text in 17 files.
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `لیئر ۱ (L1)` / `لیئر ۲ (L2)` first-mention expansions in 17 diagram values (#112; native numerals are the glossary form); `ZK-rollup` as `زیڈ کے رول اپ`; `لامركزی` with Arabic kaf in dev-tools (glossary data, #71). Western digits and `۔` full stops clean; bidi isolates wrap only Latin runs.
+
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: `get-eth-description` `اپنے پتہ پر` -> `اپنے پتے پر` (glossary citation form not inflected). Open: `account-name-reserved` `کے لیے استعمال ہو سکتا ہے` reads as 'could be used for', not 'could pass for'; `account-sessions-hint` `یہ کبھی نہیں کہ` is clipped; `account-name-edit` `مدون کریں` for 'edit' (`ترمیم کریں`).
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: equivocating to dogla pan x2 (pos); follow-up fixed erc-721 L169 inversion, U+3002 x3, portal L17 Latin full stop. Open: actor as adakar (verifying), creation bytecode as takhliqi, burn as barn vs jalana, Western digits in prose; erc-1363 U+3002 pre-existing.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap (isolates preserved), transaction fee, builder and searcher across the MEV-Boost diagram, PoS in attestations description. Open: qadam vs marhala, polynomial, relay as `rileez`.
+
 ## PR #18868 (full pipeline import, 2026-07-22) -- 8.4/10 (lowest in fleet)
 - CRIT (NOT hand-fixed, needs pipeline re-pass): `gaming/index.md` -- two whole sections (`## Gaming on Ethereum`, `## Ethereum's gaming ecosystem overview`) verbatim English between translated sections. `developers/tutorials/yellow-paper-evm/index.md` -- ~half the explanatory prose (sec 9, 9.3, 9.4, 9.4.2, 9.4.3, Opcode cost, Expanding memory cost) left English. Block-matching coverage gap, not laziness.
 - WARN: "trade-off" -> تبادلہ (glossary's *swap* term) on single-slot-finality; zkEVM correctly used سمجھوتہ. Prefer سمجھوتہ / loanword ٹریڈ آف.
@@ -163,3 +219,97 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `EF Blog` -> `EF بلاگ` (2x, regression); `Chain Platform`/`Google Cloud` restored to Latin inside `dir="ltr"` spans.
 - Open: `ہم مرتبہ افراد` adds "persons" to peers; "you write" dropped L29; `آپٹیمسٹک` spelling split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 7.8/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:3 Ethereum transliterate (`محفوظ ⁦Ethereum⁩ سمارٹ` -> `محفوظ ایتھیریم سمارٹ`)
+- security:9 Ethereum transliterate (`[Ethereum](/)` -> `[ایتھیریم](/)`)
+- security:13 Ethereum transliterate (`یہ گائیڈ Ethereum ڈیولپرز` -> `یہ گائیڈ ایتھیریم ڈیولپرز`)
+- security:500,506,510,512,526,544 Web3 always_latin (`ویب 3` -> `Web3`)
+- security:102 Optimism transliterate (`[Optimism]` -> `[آپٹیمزم]`)
+- security:118 Slither transliterate (`Mythril اور Slither` -> `Mythril اور سلدر`)
+- security:566 Slither transliterate (`<span dir="ltr">Slither</span>` -> `سلدر`)
+- security:226,482 OpenZeppelin transliterate (`[OpenZeppelin Contracts]` -> `[اوپن زیپلن کنٹریکٹس]`)
+- security:496 OpenZeppelin transliterate (`[OpenZeppelin]` -> `[اوپن زیپلن]`)
+- security:486 ConsenSys transliterate (`[ConsenSys Diligence]` -> `[کنسینسس ڈیلیجنس]`)
+- security:532 ConsenSys transliterate + English title (`[ConsenSys: Smart Contract Known Attacks]` -> `[کنسینسس: سمارٹ کنٹریکٹ کے معلوم حملے]`)
+- security:550 ConsenSys transliterate + English title (`[ConsenSys: Ethereum Smart Contract Security Best ` -> `[کنسینسس: ایتھیریم سمارٹ کنٹریکٹ سیکیورٹی کے بہتری`)
+- security:11 English in LTR span (`<span dir="ltr">$1 billion</span>` -> `<span dir="ltr">$1</span> بلین`)
+- security:23 untranslated English (`<span dir="ltr">externally owned accounts (EOAs)</` -> `بیرونی ملکیت والے اکاؤنٹس (EOAs)`)
+- security:267 untranslated English (`کسی externally owned account (EOA) سے` -> `کسی بیرونی ملکیت والے اکاؤنٹ (EOA) سے`)
+- security:27 heading reverted to English (`#### Ownable pattern {#ownable-pattern}` -> `#### Ownable پیٹرن {#ownable-pattern}`)
+- security:25 untranslated bold terms (`**Ownable pattern** اور **role-based control**` -> `**Ownable پیٹرن** اور **رول پر مبنی کنٹرول**`)
+- app-plasma:1228 split L2s bidi span (`L<span dir="ltr">2s</span>` -> `<span dir="ltr">L2s</span>`)
+- scam-token-tricks:82 English date (`<span dir="ltr">May 19th, 2023</span>` -> `19 مئی 2023`)
+- issuance:87 English month (`<span dir="ltr">September 2022</span>` -> `ستمبر <span dir="ltr">2022</span>`)
+- security: `اسمارٹ کانٹریکٹ`/`کانٹریکٹ` -> `سمارٹ کنٹریکٹ`/`کنٹریکٹ` restored (196 sites)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:29, 33, 134, 136, 142, 150, 218, 262, 26: "address" spelled differently from the glossary (dev had پتہ 20 times; the glossary rule is "translate") (`ایڈریس` -> `پتہ` / `پتے` (inflect)`)
+- developers/docs/smart-contracts/security/index.md:7, 35, 202, 214, 216, 444, 452 (9 uses): "decentralized" spelled differently from the glossary (dev had لامركزی; the glossary rule is "translate") (`ڈی سینٹرلائزڈ` / `ڈی سینٹرلائز` -> `لامركزی` / `لامرکزی بنانا`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Most files are clean and follow the glossary. The score is pulled down by security/index.md, which was translated again in full because of two English link changes and undid dozens of correct dev forms. Restoring that file from dev and re-applying the two links fixes most of the critical list.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score n/a (2 files)
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None
+
+**Notes:**
+
+- 4 tasks quarantined (unescaped `dir="ltr"`; #94). Warning: `ٹیسٹ نیٹ` vs glossary `آزمائشی نیٹ ورک`.
+
+## PR #19608 (intl/pending-dev, run 1023-1817) -- 2026-10-23 -- Score 9.4/10
+Scope: how-to-write-and-deploy-an-nft (released from quarantine and fully reworked) and hello-world (small edit). Changed lines only.
+
+**Fixed in this branch:**
+
+- how-to-write-and-deploy-an-nft:58-67: the `json` response block was duplicated and placed after the next paragraph, and the old indented line was left in (known-patterns #93)
+
+**Notes:**
+
+- The testnet drift from #19568 is fixed (`آزمائشی نیٹ ورک`). The `console` fence is correct. Code matches English byte for byte, and all 124 `dir="ltr"` spans are balanced.
+- 3 tasks were still quarantined after the second attempt (#94).
+
+**Open (warnings):**
+
+- nft:274 comment translates `PRIVATE_KEY` as `نجی کلید` while keeping `API_URL` in Latin
+- nft:348 `دلائل` (arguments in the debate sense) is used for function arguments; prefer `آرگیومنٹس`/`پیرامیٹرز`
+- nft:342 `مثالیں` (examples) is used for object instances; prefer `انسٹینسز`
+- nft:226, 290 `ماحولیاتی` (ecological) is used for env file/variable; prefer `انوائرنمنٹ`
+- The step-6 heading and the word for installation differ between hello-world and the NFT tutorial
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.0/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:16/602 `Echidna 2.3.3` / `Echidna 2.3.0` left Latin inside the ltr span; glossary transliterates -> `ایکڈنا <span dir="ltr">2.3.3</span>` (critical)
+- multi-client:99/163 dropped token noun made `1000 منٹ` read as "1000 minutes" -> `1000 ٹوکن منٹ`
+- echidna:317 heading lost its `(assert)` clarifier vs dev -> restored
+
+**Open / notes:**
+
+- echidna:66 `نامانوس` (unfamiliar) for invalid; multi-client:205 `متضاد` (contradictory) for heterogeneous -- both pre-existing wording on changed lines, native call
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.4/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Only the two formula spans at gas L44 and L69 needed restoring (the review agent reported none).
+
+**Open / notes:**
+
+- `paused` lost its temporary sense (translation-program:29).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

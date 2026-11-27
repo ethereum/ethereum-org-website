@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/zero-knowledge-proofs/index.md",
-  "generatedAt": "2026-08-07T06:17:47.721Z",
-  "rootHash": "0d9d6fac7a4e",
+  "generatedAt": "2026-11-27T10:01:30.708Z",
+  "rootHash": "0b7d10a5ca42",
   "tree": {
-    "contentHash": "84486fcad21d",
+    "contentHash": "f58e2683dce3",
     "anchorHash": "9408bb65c845",
     "children": {
       "frontmatter:title": {
@@ -16,7 +16,7 @@
         "anchorHash": "ae5bb240b17e"
       },
       "frontmatter:description": {
-        "contentHash": "1a3be5504777",
+        "contentHash": "a86001854668",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -945,5 +945,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

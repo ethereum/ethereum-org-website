@@ -38,7 +38,9 @@
   h4,
   h5,
   h6,
-  section {
+  section,
+  figure,
+  li[id] {
     @apply scroll-mt-32;
   }
 
@@ -204,7 +206,7 @@
      the indent (flow is base-layer and can't override the utility `ms-6`). */
   :where(.flow) :is(ul, ol) {
     @apply mb-0;
-}
+  }
 
   :where(.flow) li {
     @apply mb-0;

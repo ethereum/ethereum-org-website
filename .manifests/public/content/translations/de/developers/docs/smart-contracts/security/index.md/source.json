@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/security/index.md",
-  "generatedAt": "2026-10-14T21:59:13.574Z",
-  "rootHash": "b217db3738e7",
+  "generatedAt": "2026-11-27T10:07:54.529Z",
+  "rootHash": "64038c4b8bea",
   "tree": {
-    "contentHash": "07c19dfd6f04",
-    "anchorHash": "2b60bcfd8bfb",
+    "contentHash": "521948ab94ad",
+    "anchorHash": "a3fef175ee08",
     "children": {
       "frontmatter:title": {
         "contentHash": "ed145638d4ff",
@@ -86,7 +86,7 @@
       },
       "smart-contract-security-guidelines": {
         "contentHash": "56cea14a9c81",
-        "anchorHash": "a2fda03a54c1",
+        "anchorHash": "98ad326e2cf8",
         "labelHash": "5642ed2a3ca9",
         "children": {
           "_label": {
@@ -383,7 +383,7 @@
           },
           "test-smart-contracts-and-verify-code-correctness": {
             "contentHash": "e029425127cc",
-            "anchorHash": "a4fd61a75d11",
+            "anchorHash": "31354c17ed78",
             "labelHash": "18f4f0fcb2e5",
             "children": {
               "_label": {
@@ -412,7 +412,7 @@
               },
               "link:2": {
                 "contentHash": "42c01febdacb",
-                "anchorHash": "49dc5079e7df"
+                "anchorHash": "69b2071ca940"
               },
               "prose:10": {
                 "contentHash": "3d287819ca03",
@@ -1050,7 +1050,7 @@
           },
           "mitigate-common-smart-contract-vulnerabilities": {
             "contentHash": "f9e7d1221242",
-            "anchorHash": "19f5197d862d",
+            "anchorHash": "c228767828a7",
             "labelHash": "259ef8ccf19c",
             "children": {
               "_label": {
@@ -1357,7 +1357,7 @@
               },
               "integer-underflows-and-overflows": {
                 "contentHash": "37e601f4997d",
-                "anchorHash": "bc5760f44555",
+                "anchorHash": "39edb0b85767",
                 "labelHash": "f0c9f278b279",
                 "children": {
                   "_label": {
@@ -1442,7 +1442,7 @@
                   },
                   "_auto:how-to-prevent-integer-underflows-and-overflows": {
                     "contentHash": "ec50c831c6ec",
-                    "anchorHash": "466efe7015bb",
+                    "anchorHash": "b8d9a3f7d51b",
                     "labelHash": "1631f8ceb8c1",
                     "children": {
                       "_label": {
@@ -1455,7 +1455,7 @@
                       },
                       "link:0": {
                         "contentHash": "6c9790d19e98",
-                        "anchorHash": "3f3baf8ecc7d"
+                        "anchorHash": "e85d30fb7cfc"
                       },
                       "prose:2": {
                         "contentHash": "7a90f57f824a",
@@ -1591,8 +1591,8 @@
         ]
       },
       "smart-contract-security-resources-for-developers": {
-        "contentHash": "b5bb7ddd9c1f",
-        "anchorHash": "8ed0ced4aab4",
+        "contentHash": "73ee861482dd",
+        "anchorHash": "d75fd6e16d08",
         "labelHash": "345a39cf8a5f",
         "children": {
           "_label": {
@@ -1601,7 +1601,7 @@
           },
           "code-analysis-tools": {
             "contentHash": "6ef1fd6bda13",
-            "anchorHash": "32025a38f9c5",
+            "anchorHash": "b261f5f6f8b3",
             "labelHash": "66aceb17292b",
             "children": {
               "_label": {
@@ -1630,7 +1630,7 @@
               },
               "link:2": {
                 "contentHash": "91500a0a7de7",
-                "anchorHash": "c4da9d2bec61"
+                "anchorHash": "0a5d528f3140"
               },
               "prose:10": {
                 "contentHash": "d9bb2688bce4",
@@ -1638,7 +1638,7 @@
               },
               "link:3": {
                 "contentHash": "17c1fd67d328",
-                "anchorHash": "b9f6f3787824"
+                "anchorHash": "59dbcfdb3604"
               },
               "prose:11": {
                 "contentHash": "871bc0c8c0b7",
@@ -2202,15 +2202,15 @@
             ]
           },
           "tutorials-on-smart-contract-security": {
-            "contentHash": "575b7c148a8f",
-            "anchorHash": "8926fe984352",
+            "contentHash": "05a28b84a5f8",
+            "anchorHash": "2495c626c147",
             "labelHash": "1e977f42d2c5",
             "children": {
               "_label": {
                 "contentHash": "1e977f42d2c5",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:6": {
+              "prose:5": {
                 "contentHash": "3973e022e932",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -2218,7 +2218,7 @@
                 "contentHash": "74d61889604f",
                 "anchorHash": "c990ad8e2ff1"
               },
-              "prose:7": {
+              "prose:6": {
                 "contentHash": "3973e022e932",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -2226,53 +2226,43 @@
                 "contentHash": "ff7d77e592df",
                 "anchorHash": "bc36220245c1"
               },
-              "prose:8": {
+              "prose:7": {
                 "contentHash": "3973e022e932",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:2": {
-                "contentHash": "bc6611d70ce4",
-                "anchorHash": "fb728c09e67f"
+                "contentHash": "1ca096049f10",
+                "anchorHash": "3933c8105e81"
+              },
+              "prose:8": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "26720b7f2a48",
+                "anchorHash": "9ab01219b4c7"
               },
               "prose:9": {
                 "contentHash": "3973e022e932",
                 "anchorHash": "e3b0c44298fc"
               },
-              "link:3": {
-                "contentHash": "1ca096049f10",
-                "anchorHash": "3933c8105e81"
-              },
-              "prose:10": {
-                "contentHash": "3973e022e932",
-                "anchorHash": "e3b0c44298fc"
-              },
               "link:4": {
-                "contentHash": "26720b7f2a48",
-                "anchorHash": "9ab01219b4c7"
-              },
-              "prose:11": {
-                "contentHash": "3973e022e932",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "link:5": {
                 "contentHash": "8234355163d8",
                 "anchorHash": "8a2211af7492"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:6",
+              "prose:5",
               "link:0",
-              "prose:7",
+              "prose:6",
               "link:1",
-              "prose:8",
+              "prose:7",
               "link:2",
-              "prose:9",
+              "prose:8",
               "link:3",
-              "prose:10",
-              "link:4",
-              "prose:11",
-              "link:5"
+              "prose:9",
+              "link:4"
             ]
           }
         },
@@ -2308,5 +2298,5 @@
       "smart-contract-security-resources-for-developers"
     ]
   },
-  "sourceCommitSha": "0ea6355466d19ecfa05d5436cb9bdb5b5464e5a4"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

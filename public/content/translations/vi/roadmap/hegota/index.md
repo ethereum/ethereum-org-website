@@ -1,7 +1,7 @@
 ---
 title: "Hegotá"
 metaTitle: "Heze-Bogotá (Hegotá)"
-description: "Tìm hiểu về bản nâng cấp giao thức Hegotá"
+description: "Hegotá là bản nâng cấp Ethereum dự kiến sau Glamsterdam. Tìm hiểu về tính năng chính FOCIL giúp chống kiểm duyệt và giao dịch khung cho các tài khoản."
 lang: vi
 template: upgrade
 ---

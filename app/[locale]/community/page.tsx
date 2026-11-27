@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { HandCoins, MessageCircleHeart, Sparkles } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -12,6 +8,7 @@ import ChecklistGrid, {
   type ChecklistGridItem,
 } from "@/components/ChecklistGrid"
 import ContentFeedback from "@/components/ContentFeedback"
+import DocLink from "@/components/DocLink"
 import { HubHero } from "@/components/Hero"
 import FloatingCard from "@/components/Homepage/FloatingCard"
 import I18nProvider from "@/components/I18nProvider"
@@ -59,8 +56,6 @@ import contributeImg from "@/public/images/three-people-cat-butterflies-petting-
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const { contributors } = await getAppPageContributorInfo(
     "community",
@@ -148,7 +143,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
       <HubHero
         heroImg={heroImg}
-        title={t("page-community-hero-title")}
+        breadcrumbs={{ slug: "community" }}
         header={t("page-community-hero-header")}
         description={t("page-community-hero-subtitle")}
       />
@@ -402,6 +397,28 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </SectionContent>
           </Section>
 
+          {/* More from the community */}
+          <Section id="more-from-the-community">
+            <h2 className="md:text-center">{t("page-community-more-title")}</h2>
+            <div className="flow max-w-3xl md:mx-auto">
+              <DocLink href="/community/support/">
+                {t("page-community-more-support")}
+              </DocLink>
+              <DocLink href="/community/research/">
+                {t("page-community-more-research")}
+              </DocLink>
+              <DocLink href="/community/language-resources/">
+                {t("page-community-more-language-resources")}
+              </DocLink>
+              <DocLink href="/community/code-of-conduct/">
+                {t("page-community-more-code-of-conduct")}
+              </DocLink>
+              <DocLink href="/10years/">
+                {t("page-community-more-10-years")}
+              </DocLink>
+            </div>
+          </Section>
+
           {/* Try Ethereum */}
           <Section id="try-ethereum">
             <h2>{t("page-community-try-ethereum")}</h2>
@@ -442,8 +459,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-community")
   return await getMetadata({

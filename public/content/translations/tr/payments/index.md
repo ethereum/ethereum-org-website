@@ -1,7 +1,7 @@
 ---
 title: "Ethereum Ödemeleri"
 metaTitle: "Ethereum'da Ödemeler"
-description: "Ethereum'daki ödemelere genel bir bakış"
+description: "Ethereum'da ödemeler nasıl çalışır? Aracı bir banka olmadan, ETH ve sabitcoin'lerle küresel olarak, genellikle saniyeler içinde ve düşük maliyetle nasıl para göndereceğinizi öğrenin."
 lang: tr
 template: use-cases
 sidebarDepth: 2

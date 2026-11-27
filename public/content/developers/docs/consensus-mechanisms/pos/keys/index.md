@@ -10,7 +10,7 @@ Ethereum's keys are generated using [elliptic-curve cryptography](https://en.wik
 
 However, when Ethereum switched from [proof-of-work](/developers/docs/consensus-mechanisms/pow) to [proof-of-stake](/developers/docs/consensus-mechanisms/pos) a new type of key was added to Ethereum. The original keys still work exactly the same as before—there were no changes to the elliptic-curve-based keys securing accounts. However, users needed a new type of key for participating in proof-of-stake by staking ETH and running validators. This need arose from scalability challenges associated with many messages passing between large numbers of validators that required a cryptographic method that could easily be aggregated to reduce the amount of communication required for the network to come to consensus.
 
-This new type of key uses the [**Boneh-Lynn-Shacham (BLS)** signature scheme](https://wikipedia.org/wiki/BLS_digital_signature). BLS enables a very efficient aggregation of signatures but also allows reverse engineering of aggregated individual validator keys and is ideal for managing actions between validators.
+This new type of key uses the [**Boneh-Lynn-Shacham (BLS)** signature scheme](https://wikipedia.org/wiki/BLS_digital_signature). BLS signatures from many validators can be aggregated into one signature that is verified in a single check, which keeps consensus messages small. BLS is not quantum-safe, so the [post-quantum roadmap](/roadmap/security/quantum-resistance/) plans to replace validator BLS keys with hash-based keys.
 
 ## The two types of validator keys {#two-types-of-keys}
 
@@ -37,9 +37,9 @@ The **validator public key** is included in the transaction data when a user dep
 
 ### Withdrawal credentials {#withdrawal-credentials}
 
-Every validator has a property known as _withdrawal credentials_. The first byte of this 32-byte field identifies the account type: `0x00` represents original BLS (pre-Shapella, non-withdrawable) credentials, `0x01` represents legacy credentials that point to an execution address, and `0x02` represents the modern compounding credential type.
+Every validator has a property known as _withdrawal credentials_. The first byte of this 32-byte field identifies the account type: `0x00` represents legacy BLS (pre-Shapella, non-withdrawable) credentials, `0x01` represents legacy credentials that point to an execution address, and `0x02` represents the modern compounding credential type.
 
-Validators with `0x00` BLS keys must update these credentials to point to an execution address in order to activate excess balance payments or full withdrawal from staking. This can be done by providing an execution address in the deposit data during initial key generation, _OR_ by using the withdrawal key at a later time to sign and broadcast a `BLSToExecutionChange` message.
+Validators with `0x00` BLS keys must update these credentials to point to an execution address in order to activate excess balance payments or full withdrawal from staking. This can be done by providing an execution address in the deposit data during initial key generation, _OR_ by using the withdrawal key at a later time to sign and broadcast a `BLSToExecutionChange` message. Proposals to phase out `0x00` credentials ahead of the post-quantum transition are under discussion, so validators still on `0x00` should convert now.
 
 [More on validator withdrawal credentials](/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/)
 
@@ -54,22 +54,22 @@ Just like the validator keys, the withdrawal keys also consist of two components
 
 Losing this key before updating withdrawal credentials to `0x01` type means losing access to the validator balance. The validator can still sign attestations and blocks since these actions require the validator's private key, however there is little to no incentive if the withdrawal keys are lost.
 
-Separating the validator keys from the Ethereum account keys enables multiple validators to be run by a single user.
+Separating the validator keys from the Ethereum account keys enables multiple validators to be run by a single user. With `0x02` credentials, one validator can hold up to 2,048 ETH, so a larger stake no longer needs to be split across many validators.
 
-![validator key schematic](validator-key-schematic.png)
+<ValidatorKeysDiagram />
 
-**Note**: Exiting from staking duties and withdrawing a validator's balance currently requires signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. However, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) is a proposal that will allow a user to trigger a validator's exit and withdrawals its balance by signing exit messages with the withdrawal key in the future. This will reduce trust assumptions by enabling stakers who delegate ETH to [staking-as-a-service providers](/staking/saas/#what-is-staking-as-a-service) to remain in control of their funds.
+**Note**: A validator can exit by signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. Since the Pectra upgrade, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) also lets the withdrawal address trigger a validator's exit, and partial withdrawals for `0x02` validators. This reduces trust assumptions by letting stakers who delegate ETH to [staking-as-a-service providers](/staking/saas/#what-is-staking-as-a-service) remain in control of their funds.
 
 ## Deriving keys from a seed phrase {#deriving-keys-from-seed}
 
 If every 32 ETH staked required a new set of 2 completely independent keys, key management would quickly become unwieldy, especially for users running multiple validators. Instead, multiple validator keys can be derived from a single common secret and storing that single secret allows access to multiple validator keys.
 
-[Mnemonics](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) and paths are prominent features that users often encounter when [they access](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) their wallets. The mnemonic is a sequence of words that act as an initial seed for a private key. When combined with additional data, the mnemonic generates a hash known as the 'master key'. This can be thought of as the root of a tree. Branches from this root can then be derived using a hierarchical path so that child nodes can exist as combinations of their parent node's hash and their index in the tree. Read about [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) and [BIP-19](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) standards for mnemonic-based key generation.
+[Mnemonics](https://en.bitcoinwiki.org/wiki/Mnemonic_phrase) and paths are prominent features that users often encounter when [they access](https://ethereum.stackexchange.com/questions/19055/what-is-the-difference-between-m-44-60-0-0-and-m-44-60-0) their wallets. The mnemonic is a sequence of words that act as an initial seed for a private key. When combined with additional data, the mnemonic generates a hash known as the 'master key'. This can be thought of as the root of a tree. Branches from this root can then be derived using a hierarchical path so that child nodes can exist as combinations of their parent node's hash and their index in the tree. Read about [BIP-32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) and [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) standards for mnemonic-based key generation.
 
 These paths have the following structure, which will be familiar to users who have interacted with hardware wallets:
 
 ```
-m/44'/60'/0'/0`
+m/44'/60'/0'/0
 ```
 
 The slashes in this path separate components of the private key as follows:
@@ -90,9 +90,9 @@ This logic enables users to attach as many validators as possible to a single **
       [m / 2]
 ```
 
-Each branch is separated by a `/` so `m/2` means start with the master key and follow branch 2. In the schematic below a single mnemonic phrase is used to store three withdrawal keys, each with two associated validators.
+Each branch is separated by a `/` so `m/2` means start with the master key and follow branch 2. Validator keys follow [EIP-2334](https://eips.ethereum.org/EIPS/eip-2334): validator `i` gets its withdrawal key at `m/12381/3600/i/0` and its signing key at `m/12381/3600/i/0/0` (12381 identifies the BLS12-381 curve, 3600 the coin type for consensus-layer keys).
 
-![validator key logic](multiple-keys.png)
+<KeyDerivationDiagram />
 
 ## Further reading {#further-reading}
 

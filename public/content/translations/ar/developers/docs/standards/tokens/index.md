@@ -38,7 +38,7 @@ _هل تعرف موردًا مجتمعيًا ساعدك؟ قم بتعديل هذ
 - [مخاطر دمج الرموز المميزة (<span dir="ltr">PDF</span>)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _أوبن زبلن_
 ## برامج تعليمية ذات صلة {#related-tutorials}
 
-- [قائمة التحقق من دمج الرموز المميزة](/developers/tutorials/token-integration-checklist/) _– قائمة بالأشياء التي يجب مراعاتها عند التفاعل مع الرموز المميزة._
-- [فهم العقد الذكي للرمز المميز <span dir="ltr">ERC20</span>](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– مقدمة لنشر عقدك الذكي الأول على شبكة اختبار إيثيريوم._
-- [تحويلات والموافقة على الرموز المميزة <span dir="ltr">ERC20</span> من عقد ذكي بلغة <span dir="ltr">Solidity</span>](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– كيفية استخدام عقد ذكي للتفاعل مع رمز مميز باستخدام لغة <span dir="ltr">Solidity</span>._
+- [قائمة التحقق من دمج الرموز المميزة](/developers/tutorials/token-integration-checklist/) _– قائمة تحقق بالأشياء التي يجب مراعاتها عند التفاعل مع الرموز المميزة._
+- [جولة إرشادية في عقد <span dir="ltr">ERC-20</span>](/developers/tutorials/erc20-annotated-code/) _– جولة إرشادية مشروحة سطرًا بسطر لتنفيذ عقد <span dir="ltr">ERC-20</span> من <span dir="ltr">OpenZeppelin</span>._
+- [تحويلات وموافقات رموز <span dir="ltr">ERC20</span> المميزة من عقد ذكي بلغة <span dir="ltr">Solidity</span>](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– كيفية استخدام عقد ذكي للتفاعل مع رمز مميز باستخدام لغة <span dir="ltr">Solidity</span>._
 - [تنفيذ سوق <span dir="ltr">ERC721</span> [دليل إرشادي]](/developers/tutorials/how-to-implement-an-erc721-market/) _– كيفية عرض العناصر المرمزة للبيع على لوحة إعلانات مبوبة لامركزية._

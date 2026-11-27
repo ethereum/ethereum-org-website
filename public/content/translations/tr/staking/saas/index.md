@@ -1,6 +1,6 @@
 ---
-title: Yetki devredilmiş staking (hizmet olarak staking)
-description: Yetki devredilmiş staking'e nasıl başlanacağına dair genel bir bakış
+title: "Yetki devredilmiş staking (hizmet olarak staking)"
+description: "Hizmet olarak staking nedir? Bir düğüm operatörü doğrulayıcınızı çalıştırırken nasıl 32 ETH yatıracağınızı ve evde veya havuzlu staking'e kıyasla avantaj ve dezavantajlarını öğrenin."
 lang: tr
 template: staking
 image: /images/staking/leslie-saas.png

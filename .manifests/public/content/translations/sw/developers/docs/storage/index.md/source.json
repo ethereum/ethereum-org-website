@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/storage/index.md",
-  "generatedAt": "2026-06-19T19:30:01.367Z",
-  "rootHash": "cbcfe34b35f4",
+  "generatedAt": "2026-11-27T10:17:40.605Z",
+  "rootHash": "1e0cc874ad46",
   "tree": {
-    "contentHash": "b3396bbf1525",
-    "anchorHash": "272d2e61e960",
+    "contentHash": "77ee2865b524",
+    "anchorHash": "d93fc2d8c2ef",
     "children": {
       "frontmatter:title": {
         "contentHash": "1cf2a51b857a",
@@ -30,7 +30,7 @@
         }
       },
       "prose:2": {
-        "contentHash": "79d8bffde442",
+        "contentHash": "c37d3cc46fb1",
         "anchorHash": "e3b0c44298fc"
       },
       "link:0": {
@@ -394,7 +394,7 @@
       },
       "related-tools": {
         "contentHash": "0f74d81e86ab",
-        "anchorHash": "580285185da7",
+        "anchorHash": "f7de0e262ecb",
         "labelHash": "3da6e153ee8c",
         "children": {
           "_label": {
@@ -511,7 +511,7 @@
           },
           "link:13": {
             "contentHash": "c205924de0fe",
-            "anchorHash": "f17d14686cda"
+            "anchorHash": "accb45067034"
           },
           "prose:62": {
             "contentHash": "3973e022e932",
@@ -967,5 +967,5 @@
       "related-topics"
     ]
   },
-  "sourceCommitSha": "f81744420359dc1f7c24ec7290b16ff6591fd2e0"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

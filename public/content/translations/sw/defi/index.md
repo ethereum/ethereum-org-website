@@ -1,7 +1,7 @@
 ---
 title: Fedha zilizogatuliwa (DeFi)
 metaTitle: DeFi ni nini? | Faida na Matumizi ya Fedha Zilizogatuliwa
-description: Muhtasari wa DeFi kwenye Ethereum
+description: DeFi ni nini? Jifunze jinsi fedha zilizogatuliwa (DeFi) kwenye Ethereum zinavyomruhusu mtu yeyote kukopesha, kukopa, kufanya biashara na kupata riba bila benki, na hatari zinazohusika.
 lang: sw
 template: use-cases
 image: /images/use-cases/defi.png

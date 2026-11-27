@@ -1,11 +1,11 @@
 ---
 title: Jembatan rantai blok
 metaTitle: Pengantar jembatan rantai blok
-description: Jembatan memungkinkan pengguna untuk memindahkan dana mereka melintasi berbagai rantai blok yang berbeda
+description: Apa itu jembatan rantai blok? Pelajari bagaimana jembatan memindahkan token antara Ethereum, lapisan 2, dan rantai lainnya, jenis-jenis jembatan, serta risiko yang perlu dipertimbangkan.
 lang: id
 ---
 
-_Web3 telah berkembang menjadi ekosistem rantai blok lapisan 1 (l1) dan solusi penskalaan lapisan 2 (l2), masing-masing dirancang dengan kemampuan dan kompromi yang unik. Seiring bertambahnya jumlah protokol rantai blok, permintaan untuk memindahkan aset lintas rantai juga meningkat. Untuk memenuhi permintaan ini, kita membutuhkan jembatan._
+_Web3 telah berkembang menjadi ekosistem rantai blok lapisan 1 (L1) dan solusi penskalaan lapisan 2 (L2), masing-masing dirancang dengan kemampuan dan kompromi yang unik. Seiring bertambahnya jumlah protokol rantai blok, permintaan untuk memindahkan aset lintas rantai juga meningkat. Untuk memenuhi permintaan ini, kita membutuhkan jembatan._
 
 <Divider />
 
@@ -21,7 +21,7 @@ Namun, apa yang Anda lakukan jika Anda ingin melakukan pertukaran serupa untuk m
 
 ## Mengapa kita membutuhkan jembatan? {#why-do-we-need-bridges}
 
-Semua rantai blok memiliki keterbatasannya masing-masing. Agar Ethereum dapat berskala dan mengimbangi permintaan, ia membutuhkan [rollup](/glossary/#rollups). Sebagai alternatif, l1 seperti Solana dan Avalanche dirancang secara berbeda untuk memungkinkan laju pemrosesan yang lebih tinggi tetapi dengan mengorbankan desentralisasi.
+Semua rantai blok memiliki keterbatasannya masing-masing. Agar Ethereum dapat berskala dan mengimbangi permintaan, ia membutuhkan [rollup](/glossary/#rollups). Sebagai alternatif, L1 seperti Solana dan Avalanche dirancang secara berbeda untuk memungkinkan laju pemrosesan yang lebih tinggi tetapi dengan mengorbankan desentralisasi.
 
 Namun, semua rantai blok dikembangkan di lingkungan yang terisolasi dan memiliki aturan serta mekanisme [konsensus](/glossary/#consensus) yang berbeda. Ini berarti mereka tidak dapat berkomunikasi secara bawaan, dan token tidak dapat bergerak bebas antar rantai blok.
 
@@ -34,7 +34,7 @@ Jembatan ada untuk menghubungkan rantai blok, memungkinkan transfer informasi da
 - pengguna untuk mengakses platform baru dan memanfaatkan manfaat dari berbagai rantai yang berbeda.
 - pengembang dari berbagai ekosistem rantai blok untuk berkolaborasi dan membangun platform baru bagi pengguna.
 
-[Cara menjembatani token ke lapisan 2 (l2)](/guides/how-to-use-a-bridge/)
+[Cara menjembatani token ke lapisan 2 (L2)](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -44,7 +44,7 @@ Berikut adalah beberapa skenario di mana Anda dapat menggunakan jembatan:
 
 ### Biaya transaksi yang lebih rendah {#transaction-fees}
 
-Katakanlah Anda memiliki ETH di Mainnet Ethereum tetapi menginginkan biaya transaksi yang lebih murah untuk menjelajahi berbagai dapp. Dengan menjembatani ETH Anda dari Mainnet ke rollup l2 Ethereum, Anda dapat menikmati biaya transaksi yang lebih rendah.
+Katakanlah Anda memiliki ETH di Mainnet Ethereum tetapi menginginkan biaya transaksi yang lebih murah untuk menjelajahi berbagai dapp. Dengan menjembatani ETH Anda dari Mainnet ke rollup L2 Ethereum, Anda dapat menikmati biaya transaksi yang lebih rendah.
 
 ### Dapp di rantai blok lain {#dapps-other-chains}
 
@@ -52,7 +52,7 @@ Jika Anda telah menggunakan Aave di Mainnet Ethereum untuk memasok USDT tetapi s
 
 ### Menjelajahi ekosistem rantai blok {#explore-ecosystems}
 
-Jika Anda memiliki ETH di Mainnet Ethereum dan Anda ingin menjelajahi l1 alternatif untuk mencoba dapp bawaan mereka. Anda dapat menggunakan jembatan untuk mentransfer ETH Anda dari Mainnet Ethereum ke l1 alternatif tersebut.
+Jika Anda memiliki ETH di Mainnet Ethereum dan Anda ingin menjelajahi L1 alternatif untuk mencoba dapp bawaan mereka. Anda dapat menggunakan jembatan untuk mentransfer ETH Anda dari Mainnet Ethereum ke L1 alternatif tersebut.
 
 ### Memiliki aset kripto bawaan {#own-native}
 
@@ -101,10 +101,10 @@ Banyak solusi penjembatanan mengadopsi model di antara kedua ekstrem ini dengan 
 
 ## Menggunakan jembatan {#use-bridge}
 
-Menggunakan jembatan memungkinkan Anda untuk memindahkan aset Anda melintasi berbagai rantai blok yang berbeda. Berikut adalah beberapa sumber daya yang dapat membantu Anda menemukan dan menggunakan jembatan:
+Menggunakan jembatan memungkinkan Anda untuk memindahkan aset Anda melintasi berbagai rantai blok. Berikut adalah beberapa sumber daya yang dapat membantu Anda menemukan dan menggunakan jembatan:
 
-- **[Ringkasan Jembatan L2BEAT](https://l2beat.com/bridges/summary) & [Analisis Risiko Jembatan L2BEAT](https://l2beat.com/bridges/summary)**: Ringkasan komprehensif dari berbagai jembatan, termasuk detail tentang pangsa pasar, jenis jembatan, dan rantai tujuan. L2BEAT juga memiliki analisis risiko untuk jembatan, membantu pengguna membuat keputusan yang tepat saat memilih jembatan.
-- **[Ringkasan Jembatan DefiLlama](https://defillama.com/bridges/Ethereum)**: Ringkasan volume jembatan di seluruh jaringan Ethereum.
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: Ringkasan komprehensif dari berbagai jembatan, termasuk detail tentang pangsa pasar, jenis jembatan, dan rantai tujuan. ETHBEAT juga memiliki analisis risiko untuk jembatan, membantu pengguna membuat keputusan yang tepat saat memilih jembatan.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: Ringkasan volume jembatan di seluruh jaringan Ethereum.
 
 <Divider />
 
@@ -130,16 +130,17 @@ Dana pengguna berisiko jika:
 
 Salah satu peretasan baru-baru ini adalah jembatan Wormhole Solana, [di mana 120 ribu wETH ($325 juta USD) dicuri selama peretasan](https://rekt.news/wormhole-rekt/). Banyak dari [peretasan teratas dalam rantai blok melibatkan jembatan](https://rekt.news/leaderboard/).
 
-Jembatan sangat penting untuk orientasi pengguna ke l2 Ethereum, dan bahkan bagi pengguna yang ingin menjelajahi ekosistem yang berbeda. Namun, mengingat risiko yang terlibat dalam berinteraksi dengan jembatan, pengguna harus memahami kompromi yang dibuat oleh jembatan tersebut. Berikut adalah beberapa [strategi untuk keamanan lintas rantai](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
+Jembatan sangat penting untuk orientasi pengguna ke L2 Ethereum, dan bahkan bagi pengguna yang ingin menjelajahi ekosistem yang berbeda. Namun, mengingat risiko yang terlibat dalam berinteraksi dengan jembatan, pengguna harus memahami kompromi yang dibuat oleh jembatan tersebut. Berikut adalah beberapa [strategi untuk keamanan lintas rantai](https://debridge.com/learn/blog/10-strategies-for-cross-chain-security/).
 
 <Divider />
 
 ## Bacaan lebih lanjut {#further-reading}
 
 - [EIP-5164: Eksekusi Lintas Rantai](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 Juni 2022 - Brendan Asselstine_
-- [Kerangka Kerja Risiko L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 Juli 2022 - Bartek Kiepuszewski_
+- [Kerangka Kerja Risiko L2Bridge](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _5 Juli 2022 - Bartek Kiepuszewski_
 - ["Mengapa masa depan akan menjadi multi-rantai, tetapi tidak akan menjadi lintas rantai."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 Januari 2022 - Vitalik Buterin_
 - [Memanfaatkan Keamanan Bersama Untuk Interoperabilitas Lintas Rantai yang Aman: Komite State Lagrange Dan Seterusnya](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 Juni 2024 - Emmanuel Awosika_
 - [Keadaan Solusi Interoperabilitas Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 Juni 2024 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

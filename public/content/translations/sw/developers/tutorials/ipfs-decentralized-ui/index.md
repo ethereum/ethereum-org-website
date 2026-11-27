@@ -12,7 +12,7 @@ lang: sw
 published: 2024-06-29
 ---
 
-Umeandika programu tumizi iliyogatuliwa (dapp) mpya na nzuri sana. Umeandika hata [kiolesura cha mtumiaji](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) kwa ajili yake. Lakini sasa unahofia kwamba mtu atajaribu kuidhibiti kwa kuangusha kiolesura chako cha mtumiaji, ambacho ni seva moja tu kwenye wingu. Katika mafunzo haya utajifunza jinsi ya kuepuka udhibiti kwa kuweka kiolesura chako cha mtumiaji kwenye **[mfumo wa faili kati ya sayari (IPFS)](https://ipfs.tech/developers/)** ili mtu yeyote anayevutiwa aweze kuibandika kwenye seva kwa ufikiaji wa baadaye.
+Umeandika programu tumizi iliyogatuliwa (dapp) mpya na nzuri sana. Umeandika hata [kiolesura cha mtumiaji](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) kwa ajili yake. Lakini sasa unahofia kwamba mtu atajaribu kuidhibiti kwa kuangusha kiolesura chako cha mtumiaji, ambacho ni seva moja tu kwenye wingu. Katika mafunzo haya utajifunza jinsi ya kuepuka udhibiti kwa kuweka kiolesura chako cha mtumiaji kwenye **[mfumo wa faili kati ya sayari (IPFS)](https://docs.ipfs.tech/)** ili mtu yeyote anayevutiwa aweze kuibandika kwenye seva kwa ufikiaji wa baadaye.
 
 Unaweza kutumia huduma ya wahusika wengine kama vile [Fleek](https://resources.fleek.xyz/docs/) kufanya kazi yote. Mafunzo haya ni kwa ajili ya watu wanaotaka kufanya vya kutosha ili kuelewa kile wanachofanya hata kama ni kazi zaidi.
 

@@ -244,10 +244,9 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [OpenZeppelin - ERC-721 Uygulaması](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
 
-## Eğitimler: Ethereum'da misli olmayan token'lar (ERC-721) ile geliştirin {#tutorials}
+## Eğitimler: Ethereum'da değiştirilemez token'lar (ERC-721) ile geliştirme {#tutorials}
 
 - [Vyper ERC-721 Sözleşmesi İncelemesi](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper ile yazılmış tam bir ERC-721 NFT sözleşmesinin açıklamalı incelemesi._
 - [Bir NFT Nasıl Yazılır ve Dağıtılır (Bölüm 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– İlk ERC-721 akıllı sözleşmenizi yazmak ve dağıtmak için adım adım rehber._
 - [Bir NFT Nasıl Basılır (Bölüm 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Dağıtılmış akıllı sözleşmenizi ve Web3'ü kullanarak bir ERC-721 NFT'si nasıl basılır._
 - [Cüzdanınızda NFT'nizi Nasıl Görüntülersiniz (Bölüm 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Dağıtımdan sonra bastığınız NFT'yi MetaMask'te nasıl görüntüleyebilirsiniz._
-- [NFT Basım Eğitimi](/developers/tutorials/nft-minter/) _– React ön yüzü, MetaMask ve Alchemy ile tam yığın bir NFT basım merkeziyetsiz uygulaması (dapp) oluşturun._

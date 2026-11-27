@@ -1,22 +1,24 @@
 ---
 title: Drzewa Verkle
-description: Opis wysokiego poziomu drzew Verkle i tego, jak zostaną wykorzystane do aktualizacji Ethereum
+description: "Ogólny opis drzew Verkle i powodów, dla których plany dotyczące drzewa stanu Ethereum zmieniły się na drzewo binarne"
 lang: pl
 template: roadmap
 summaryPoints:
   - Dowiedz się, czym są drzewa Verkle
-  - Przeczytaj, dlaczego drzewa Verkle są przydatną aktualizacją dla Ethereum
+  - Przeczytaj, dlaczego drzewa Verkle zostały odłożone na bok na rzecz drzewa binarnego
 ---
 
-Drzewa Verkle (zbitka wyrazowa od „Vector commitment” – zobowiązanie wektorowe i „Merkle Trees” – drzewa Merklego) to struktura danych, która może zostać użyta do aktualizacji węzłów [Ethereum](/), aby mogły przestać przechowywać duże ilości danych stanu bez utraty zdolności do walidacji bloków.
+Drzewa Verkle (zbitka wyrazowa od „Vector commitment” i „Merkle Trees”) to struktura danych, która może zostać użyta do aktualizacji węzłów [Ethereum](/), aby mogły przestać przechowywać duże ilości danych stanu bez utraty zdolności do walidacji bloków.
+
+Drzewa Verkle zostały zaproponowane jako następne drzewo stanu Ethereum w [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), ale ta propozycja jest obecnie w stagnacji i została odłożona na bok na rzecz zunifikowanego drzewa binarnego ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)). Drzewo binarne dąży do tego samego celu, jakim są mali świadkowie dla klientów bezstanowych. Ta strona wyjaśnia, jak działają drzewa Verkle i dlaczego badania przeniosły się na drzewo binarne.
 
 ## Bezstanowość {#statelessness}
 
-Drzewa Verkle są kluczowym krokiem na drodze do bezstanowych klientów Ethereum. Klienci bezstanowi to tacy, którzy nie muszą przechowywać całej bazy danych stanu, aby walidować przychodzące bloki. Zamiast używać własnej lokalnej kopii stanu Ethereum do weryfikacji bloków, klienci bezstanowi używają „świadka” (ang. witness) danych stanu, który przybywa wraz z blokiem. Świadek to zbiór pojedynczych fragmentów danych stanu, które są wymagane do wykonania określonego zestawu transakcji, oraz dowód kryptograficzny, że świadek jest w rzeczywistości częścią pełnych danych. Świadek jest używany _zamiast_ bazy danych stanu. Aby to zadziałało, świadkowie muszą być bardzo mali, aby można ich było bezpiecznie rozgłaszać w sieci na tyle szybko, by walidatorzy zdążyli ich przetworzyć w ciągu 12-sekundowego slotu. Obecna struktura danych stanu nie jest odpowiednia, ponieważ świadkowie są zbyt duzi. Drzewa Verkle rozwiązują ten problem, umożliwiając tworzenie małych świadków, co usuwa jedną z głównych barier dla klientów bezstanowych.
+Drzewa Verkle zostały zaprojektowane jako krok na drodze do bezstanowych klientów Ethereum. Klienci bezstanowi to tacy, którzy nie muszą przechowywać całej bazy danych stanu, aby walidować przychodzące bloki. Zamiast używać własnej lokalnej kopii stanu Ethereum do weryfikacji bloków, klienci bezstanowi używają „świadka” danych stanu, który przybywa wraz z blokiem. Świadek to zbiór pojedynczych fragmentów danych stanu, które są wymagane do wykonania określonego zestawu transakcji, oraz dowód kryptograficzny, że świadek jest w rzeczywistości częścią pełnych danych. Świadek jest używany _zamiast_ bazy danych stanu. Aby to zadziałało, świadkowie muszą być bardzo mali, aby mogli być bezpiecznie rozgłaszani w sieci na czas, by walidatorzy mogli ich przetworzyć w ciągu 12-sekundowego slotu. Obecna struktura danych stanu nie jest odpowiednia, ponieważ świadkowie są zbyt duzi. Drzewa Verkle rozwiązują ten problem, umożliwiając tworzenie małych świadków, usuwając jedną z głównych barier dla klientów bezstanowych.
 
 <ExpandableCard title="Dlaczego chcemy klientów bezstanowych?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
-Klienci Ethereum używają obecnie struktury danych znanej jako drzewo Patricia Merkle (Patricia Merkle Trie) do przechowywania danych stanu. Informacje o poszczególnych kontach są przechowywane jako liście w drzewie, a pary liści są wielokrotnie hashowane, aż pozostanie tylko jeden hash. Ten końcowy hash jest znany jako „korzeń” (root). Aby zweryfikować bloki, klienci Ethereum wykonują wszystkie transakcje w bloku i aktualizują swoje lokalne drzewo stanu. Blok jest uważany za ważny, jeśli korzeń lokalnego drzewa jest identyczny z tym dostarczonym przez proponującego blok, ponieważ jakiekolwiek różnice w obliczeniach wykonanych przez proponującego blok i węzeł walidujący spowodowałyby, że hash korzenia byłby całkowicie inny. Problem polega na tym, że weryfikacja blockchaina wymaga od każdego klienta przechowywania całego drzewa stanu dla bloku na szczycie (head block) i kilku bloków historycznych (domyślnie w Geth przechowuje się dane stanu dla 128 bloków wstecz). Wymaga to od klientów dostępu do dużej ilości miejsca na dysku, co stanowi barierę w uruchamianiu pełnych węzłów na tanim sprzęcie o niskiej mocy. Rozwiązaniem tego problemu jest aktualizacja drzewa stanu do bardziej wydajnej struktury (drzewa Verkle), którą można podsumować za pomocą małego „świadka” danych, który może być udostępniany zamiast pełnych danych stanu. Przeformatowanie danych stanu na drzewo Verkle jest krokiem milowym w kierunku przejścia na klientów bezstanowych.
+Klienci Ethereum używają obecnie struktury danych znanej jako drzewo Patricia Merkle (Patricia Merkle Trie) do przechowywania danych stanu. Informacje o poszczególnych kontach są przechowywane w liściach drzewa, a każdy węzeł gałęzi, który może mieć do 16 dzieci, jest hashowany razem z hashami swoich dzieci, poziom po poziomie, aż pozostanie tylko jeden hash. Ten końcowy hash jest znany jako „korzeń”. Aby zweryfikować bloki, klienci Ethereum wykonują wszystkie transakcje w bloku i aktualizują swoje lokalne drzewo stanu. Blok jest uważany za ważny, jeśli korzeń lokalnego drzewa jest identyczny z tym dostarczonym przez proponującego blok, ponieważ jakiekolwiek różnice w obliczeniach wykonanych przez proponującego blok i węzeł walidujący spowodowałyby, że hash korzenia byłby całkowicie inny. Problem polega na tym, że weryfikacja blockchaina wymaga od każdego klienta przechowywania całego drzewa stanu dla bloku czołowego (head block) i kilku bloków historycznych (domyślnie w Geth przechowuje się dane stanu dla 128 bloków wstecz od bloku czołowego). Wymaga to od klientów dostępu do dużej ilości miejsca na dysku, co stanowi barierę w uruchamianiu pełnych węzłów na tanim sprzęcie o niskim poborze mocy. Rozwiązaniem tego problemu jest aktualizacja drzewa stanu do bardziej wydajnej struktury (takiej jak drzewo Verkle lub drzewo binarne), którą można podsumować za pomocą małego „świadka” danych, który może być udostępniany zamiast pełnych danych stanu. Przeformatowanie danych stanu w nową strukturę drzewa jest odskocznią do przejścia na klientów bezstanowych.
 
 </ExpandableCard>
 
@@ -38,17 +40,17 @@ Rozmiar świadka różni się w zależności od liczby liści, które obejmuje. 
 
 ## Jaka jest struktura drzewa Verkle? {#what-is-the-structure-of-a-verkle-tree}
 
-Drzewa Verkle to pary `(key,value)`, w których klucze są 32-bajtowymi elementami złożonymi z 31-bajtowego _rdzenia_ (stem) i jednobajtowego _sufiksu_. Klucze te są zorganizowane w węzły _rozszerzeń_ (extension nodes) i węzły _wewnętrzne_ (inner nodes). Węzły rozszerzeń reprezentują pojedynczy rdzeń dla 256 dzieci z różnymi sufiksami. Węzły wewnętrzne również mają 256 dzieci, ale mogą to być inne węzły rozszerzeń. Główną różnicą między strukturą drzewa Verkle a drzewa Merklego jest to, że drzewo Verkle jest znacznie bardziej płaskie, co oznacza, że istnieje mniej węzłów pośrednich łączących liść z korzeniem, a zatem potrzeba mniej danych do wygenerowania dowodu.
+Drzewa Verkle to pary `(key,value)`, w których klucze są 32-bajtowymi elementami składającymi się z 31-bajtowego _rdzenia_ i jednobajtowego _sufiksu_. Klucze te są zorganizowane w węzły _rozszerzeń_ i węzły _wewnętrzne_. Węzły rozszerzeń reprezentują pojedynczy rdzeń dla 256 dzieci z różnymi sufiksami. Węzły wewnętrzne również mają 256 dzieci, ale mogą to być inne węzły rozszerzeń. Główną różnicą między strukturą drzewa Verkle a strukturą drzewa Merklego jest to, że drzewo Verkle jest znacznie bardziej płaskie, co oznacza, że istnieje mniej węzłów pośrednich łączących liść z korzeniem, a zatem potrzeba mniej danych do wygenerowania dowodu.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Przeczytaj więcej o strukturze drzew Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
 ## Obecny postęp {#current-progress}
 
-Sieci testowe drzew Verkle już działają, ale wciąż istnieją znaczne zaległe aktualizacje klientów, które są wymagane do obsługi drzew Verkle. Możesz pomóc przyspieszyć postęp, wdrażając kontrakty w sieciach testowych lub uruchamiając klientów sieci testowej.
+[EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), propozycja przeniesienia stanu Ethereum do zunifikowanego drzewa Verkle, jest obecnie w stagnacji. Badania przeniosły się na [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864), który zamiast tego proponuje zunifikowane drzewo binarne. EIP-7864 jest szkicem i nie zaplanowano dla niego żadnej aktualizacji sieci.
 
-[Obejrzyj, jak Guillaume Ballet wyjaśnia sieć testową Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (zauważ, że sieć testowa Condrieu opierała się na dowodzie pracy (PoW) i została teraz zastąpiona przez sieć testową Verkle Gen Devnet 6).
+EIP-7864 podaje dwa główne powody tej zmiany. Drzewa Verkle opierają się na kryptografii krzywych eliptycznych, która nie jest bezpieczna przed komputerami kwantowymi, więc ostatecznie musiałyby zostać zastąpione, podczas gdy drzewo binarne opiera się tylko na funkcjach hashujących. Postęp w systemach dowodzenia zmniejsza również potrzebę małych, szybkich do wygenerowania dowodów, które były główną zaletą drzew Verkle. Ponieważ każdy węzeł w drzewie binarnym ma tylko dwoje dzieci, jego dowody są również znacznie mniejsze niż dowody z dzisiejszego drzewa szesnastkowego (hexary trie).
 
 ## Dalsza lektura {#further-reading}
 
@@ -63,3 +65,5 @@ Sieci testowe drzew Verkle już działają, ale wciąż istnieją znaczne zaleg�
 - [Vitalik Buterin o drzewach Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist o drzewach Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Dokumentacja EIP drzewa Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [EIP-6800: Stan Ethereum przy użyciu zunifikowanego drzewa Verkle](https://eips.ethereum.org/EIPS/eip-6800)
+- [EIP-7864: Stan Ethereum przy użyciu zunifikowanego drzewa binarnego](https://eips.ethereum.org/EIPS/eip-7864)

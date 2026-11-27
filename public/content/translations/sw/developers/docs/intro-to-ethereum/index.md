@@ -1,6 +1,6 @@
 ---
 title: Utangulizi wa kiufundi wa Ethereum
-description: Utangulizi wa msanidi wa dapp kuhusu dhana kuu za Ethereum.
+description: "Utangulizi wa kiufundi wa Ethereum kwa wasanidi programu: minyororo ya vitalu, akaunti, miamala, EVM, gesi na mikataba mahiri, vikifafanuliwa hatua kwa hatua."
 lang: sw
 ---
 

@@ -1,0 +1,415 @@
+/* FLOWCHART
+   Draws the markup remarkFlowchart (src/lib/md/remarkFlowchart.ts) makes from
+   the list inside <Flowchart>: each .flowchart-item is a box, its
+   .flowchart-list the arrows leaving it. Narrow containers get an indented
+   outline instead, so wide charts never scroll sideways.
+
+   @layer base, like base.css, so utilities passed via className win; here
+   `components` sorts below base. Colors use hsla(var(--*)) because
+   @theme inline only emits the --color-* variables something else uses. */
+
+@layer base {
+  .flowchart {
+    --fc-line: hsla(var(--body-medium));
+    --fc-stem: 1rem;
+    --fc-side: 8.5rem;
+    --fc-dir: 1;
+    container-type: inline-size;
+    margin-block: 2rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .flowchart-list {
+    position: relative;
+    display: flex;
+    justify-content: safe center;
+  }
+
+  .flowchart-item {
+    --fc-gap: 1.25rem;
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--fc-gap) 0.125rem 0;
+  }
+
+  .flowchart-item:has(> .flowchart-edge) {
+    --fc-gap: 2.5rem;
+  }
+
+  .flowchart-root > .flowchart-item {
+    padding-top: 0;
+  }
+
+  .flowchart-node {
+    position: relative;
+    min-width: min-content;
+    max-width: 9rem;
+    padding: 0.5rem;
+    border: 1px solid hsla(var(--border-high-contrast));
+    border-radius: 0.375rem;
+    background: hsla(var(--background));
+    color: hsla(var(--body));
+    text-align: center;
+    overflow-wrap: break-word;
+    unicode-bidi: plaintext;
+  }
+
+  .flowchart-node code {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .flowchart-decision {
+    border-color: hsla(var(--primary));
+    border-radius: 1.25rem;
+    background: hsla(var(--primary-low-contrast));
+  }
+
+  .flowchart-edge {
+    position: absolute;
+    top: calc(var(--fc-gap) / 2);
+    left: 50%;
+    z-index: 1;
+    translate: -50% -50%;
+    padding-inline: 0.375rem;
+    background: hsla(var(--background));
+    color: hsla(var(--body-medium));
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* Connectors: a stem below the parent, a bar across the children, a drop to
+     each child ending in an arrowhead. Logical sides keep it right in RTL. */
+  .flowchart-list:not(.flowchart-root) {
+    padding-top: var(--fc-stem);
+  }
+
+  .flowchart-list:not(.flowchart-root)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    inset-inline-start: 50%;
+    height: var(--fc-stem);
+    border-inline-start: 1px solid var(--fc-line);
+  }
+
+  .flowchart-list:not(.flowchart-root) > .flowchart-item::before,
+  .flowchart-list:not(.flowchart-root) > .flowchart-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: var(--fc-gap);
+    border-top: 1px solid var(--fc-line);
+  }
+
+  .flowchart-list:not(.flowchart-root) > .flowchart-item::before {
+    inset-inline-end: 50%;
+  }
+
+  .flowchart-list:not(.flowchart-root) > .flowchart-item::after {
+    inset-inline-start: 50%;
+    border-inline-start: 1px solid var(--fc-line);
+  }
+
+  .flowchart-list:not(.flowchart-root) > .flowchart-item:first-child::before,
+  .flowchart-list:not(.flowchart-root) > .flowchart-item:last-child::after {
+    border-top: 0;
+  }
+
+  .flowchart-list:not(.flowchart-root)
+    > .flowchart-item
+    > .flowchart-node::before,
+  .flowchart-list:not(.flowchart-root)
+    > .flowchart-item
+    > .flowchart-head
+    > .flowchart-node::before {
+    content: "";
+    position: absolute;
+    top: -0.375rem;
+    left: 50%;
+    translate: -50% 0;
+    border: 0.3125rem solid transparent;
+    border-top-color: var(--fc-line);
+    border-bottom: 0;
+  }
+
+  /* Side exit: a decision whose one exit ends at once puts that exit in a column
+     at the inline end. The decision is centered in the first column, so its
+     arrows sit --fc-side / 2 off the item's center; a chain of such decisions
+     spans both columns and shares the one side column instead of widening. */
+  .flowchart:dir(rtl) {
+    --fc-dir: -1;
+  }
+
+  .flowchart-item:has(> .flowchart-head) {
+    display: grid;
+    grid-template-columns: auto var(--fc-side);
+    align-content: start;
+    justify-items: center;
+  }
+
+  .flowchart-head {
+    display: contents;
+  }
+
+  .flowchart-head > .flowchart-node {
+    z-index: 1;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  /* Grid items of the decision's row (the head is display: contents): a line
+     from the decision out to the side column, and the stem through the row. */
+  .flowchart-head::before,
+  .flowchart-head::after {
+    content: "";
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .flowchart-head::before {
+    align-self: center;
+    justify-self: end;
+    width: 50%;
+    border-top: 1px solid var(--fc-line);
+  }
+
+  .flowchart-head::after {
+    align-self: stretch;
+    border-inline-start: 1px solid var(--fc-line);
+  }
+
+  .flowchart-item:has(> .flowchart-head)
+    > .flowchart-list:not(.flowchart-side) {
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: stretch;
+  }
+
+  .flowchart-item:has(> .flowchart-head)
+    > .flowchart-list:has(> .flowchart-shift) {
+    grid-column: 1 / -1;
+  }
+
+  .flowchart-list:not(.flowchart-root):has(
+      > .flowchart-shift:only-child
+    )::before {
+    inset-inline-start: calc(50% - var(--fc-side) / 2);
+  }
+
+  .flowchart-shift:not(:has(> .flowchart-head)) > .flowchart-node {
+    translate: calc(var(--fc-side) / -2 * var(--fc-dir)) 0;
+  }
+
+  .flowchart-list:not(.flowchart-root) > .flowchart-shift::before {
+    inset-inline-end: calc(50% + var(--fc-side) / 2);
+    width: auto;
+    inset-inline-start: 0;
+  }
+
+  .flowchart-list:not(.flowchart-root) > .flowchart-shift::after {
+    inset-inline-start: calc(50% - var(--fc-side) / 2);
+    width: auto;
+    inset-inline-end: 0;
+  }
+
+  .flowchart-shift > .flowchart-edge {
+    left: calc(50% - var(--fc-side) / 2 * var(--fc-dir));
+  }
+
+  .flowchart-list.flowchart-side {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: start;
+    display: block;
+    padding: 0;
+  }
+
+  .flowchart-list.flowchart-side::before {
+    content: none;
+  }
+
+  .flowchart-side > .flowchart-item {
+    align-items: start;
+    padding: 0;
+    padding-inline-start: 2.25rem;
+  }
+
+  .flowchart-list.flowchart-side > .flowchart-item:first-child::before {
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+    top: 50%;
+    width: 2.25rem;
+    height: 0;
+    border-top: 1px solid var(--fc-line);
+  }
+
+  .flowchart-list.flowchart-side > .flowchart-item:last-child::after {
+    content: none;
+  }
+
+  .flowchart-side .flowchart-node {
+    max-width: calc(var(--fc-side) - 2.25rem);
+  }
+
+  .flowchart-list.flowchart-side > .flowchart-item > .flowchart-node::before {
+    top: 50%;
+    left: auto;
+    inset-inline-start: -0.375rem;
+    translate: 0 -50%;
+    border: 0.3125rem solid transparent;
+    border-inline-start-color: var(--fc-line);
+    border-inline-end: 0;
+  }
+
+  .flowchart-side .flowchart-edge {
+    top: calc(50% - 0.75rem);
+    left: auto;
+    inset-inline-start: 0.25rem;
+    translate: 0 -50%;
+    padding-inline: 0.125rem;
+  }
+
+  @container (max-width: 46rem) {
+    /* Outline: children indent under their parent, a straight run stays in
+       line, and each branch gets its own vertical segment and tick. */
+    .flowchart-list,
+    .flowchart-item,
+    .flowchart-item:has(> .flowchart-head),
+    .flowchart-head,
+    .flowchart-list.flowchart-side {
+      display: block;
+      justify-items: normal;
+    }
+
+    .flowchart-list:not(.flowchart-root) {
+      padding-top: 0;
+      margin-inline-start: 0.75rem;
+    }
+
+    .flowchart-item {
+      padding: 0.625rem 0 0;
+      padding-inline-start: 1.25rem;
+    }
+
+    .flowchart-root > .flowchart-item {
+      padding: 0;
+    }
+
+    .flowchart-list:not(.flowchart-root)::before,
+    .flowchart-head::before,
+    .flowchart-head::after,
+    .flowchart-list:not(.flowchart-root)
+      > .flowchart-item
+      > .flowchart-node::before,
+    .flowchart-list:not(.flowchart-root)
+      > .flowchart-item
+      > .flowchart-head
+      > .flowchart-node::before,
+    .flowchart-list.flowchart-side > .flowchart-item > .flowchart-node::before {
+      content: none;
+    }
+
+    .flowchart-list:not(.flowchart-root) > .flowchart-item::before,
+    .flowchart-list:not(.flowchart-root) > .flowchart-item:first-child::before,
+    .flowchart-list:not(.flowchart-root) > .flowchart-shift::before,
+    .flowchart-list.flowchart-side > .flowchart-item:first-child::before {
+      inset-inline-start: 0;
+      inset-inline-end: auto;
+      top: var(--fc-tick, 1.625rem);
+      width: 1rem;
+      height: 0;
+      border-top: 1px solid var(--fc-line);
+    }
+
+    .flowchart-list:not(.flowchart-root) > .flowchart-item::after,
+    .flowchart-list:not(.flowchart-root) > .flowchart-item:last-child::after,
+    .flowchart-list:not(.flowchart-root) > .flowchart-shift::after,
+    .flowchart-list.flowchart-side > .flowchart-item:last-child::after {
+      content: "";
+      inset-inline-start: 0;
+      inset-inline-end: auto;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      height: auto;
+      border-top: 0;
+      border-inline-start: 1px solid var(--fc-line);
+    }
+
+    .flowchart-list:not(.flowchart-root) > .flowchart-item:last-child::after {
+      bottom: auto;
+      height: var(--fc-tick, 1.625rem);
+    }
+
+    .flowchart-list.flowchart-side + .flowchart-list > .flowchart-item::after {
+      top: 0;
+    }
+
+    .flowchart-item:has(> .flowchart-edge) {
+      --fc-tick: 2.75rem;
+    }
+
+    .flowchart-list:not(.flowchart-root):has(> .flowchart-item:only-child):not(
+        :has(> .flowchart-item > .flowchart-edge)
+      ) {
+      margin-inline-start: 0;
+    }
+
+    .flowchart-list:not(.flowchart-root):has(> .flowchart-item:only-child):not(
+        :has(> .flowchart-item > .flowchart-edge)
+      )
+      > .flowchart-item {
+      padding-inline-start: 0;
+      padding-top: 1.25rem;
+    }
+
+    .flowchart-list:not(.flowchart-root):has(> .flowchart-item:only-child):not(
+        :has(> .flowchart-item > .flowchart-edge)
+      )
+      > .flowchart-item::before {
+      content: none;
+    }
+
+    .flowchart-list:not(.flowchart-root):has(> .flowchart-item:only-child):not(
+        :has(> .flowchart-item > .flowchart-edge)
+      )
+      > .flowchart-item::after {
+      inset-inline-start: 1rem;
+      bottom: auto;
+      height: 1.25rem;
+    }
+
+    .flowchart-list.flowchart-side {
+      margin-inline-start: 0.75rem;
+    }
+
+    .flowchart-edge,
+    .flowchart-side .flowchart-edge,
+    .flowchart-shift > .flowchart-edge {
+      position: static;
+      display: block;
+      translate: none;
+      padding: 0 0 0.25rem;
+      background: none;
+      text-align: start;
+    }
+
+    .flowchart-shift:not(:has(> .flowchart-head)) > .flowchart-node {
+      translate: none;
+    }
+
+    .flowchart-node,
+    .flowchart-side .flowchart-node {
+      width: fit-content;
+      max-width: 100%;
+      text-align: start;
+    }
+  }
+}

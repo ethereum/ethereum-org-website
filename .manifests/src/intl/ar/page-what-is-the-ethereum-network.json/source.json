@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-what-is-the-ethereum-network.json",
-  "generatedAt": "2026-05-26T07:08:50.545Z",
-  "rootHash": "3582b2b356f1",
+  "generatedAt": "2026-11-27T09:55:39.074Z",
+  "rootHash": "bedb72443155",
   "tree": {
-    "contentHash": "32256024dc56",
+    "contentHash": "ac12bd735012",
     "anchorHash": "d71102eb9016",
     "children": {
       "page-what-is-ethereum-network-meta-title": {
@@ -480,11 +480,11 @@
         }
       },
       "page-what-is-ethereum-network-live-network-data-section-description-13": {
-        "contentHash": "e40d2d82f711",
+        "contentHash": "d63c7f6cfdb0",
         "anchorHash": "4b9f7d802648",
         "children": {
           "prose:0": {
-            "contentHash": "2093dc5650c0",
+            "contentHash": "2f424926972c",
             "anchorHash": "e3b0c44298fc"
           }
         }
@@ -632,5 +632,5 @@
       "page-what-is-ethereum-network-live-network-data-section-description-20"
     ]
   },
-  "sourceCommitSha": "2b6a038be7d8898383a4f0c64b2494eda62e06db"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

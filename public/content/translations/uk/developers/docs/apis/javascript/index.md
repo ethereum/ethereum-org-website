@@ -300,8 +300,6 @@ _Знаєте ресурс спільноти, який вам допоміг? �
 
 ## Пов'язані посібники {#related-tutorials}
 
-- [Налаштування Web3.js для використання блокчейну Етеріум у JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _— Інструкції з налаштування Web3.js у вашому проєкті._
-- [Виклик смарт-контракту з JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _— На прикладі токена DAI дізнайтеся, як викликати функції контрактів за допомогою JavaScript._
 - [Надсилання транзакцій за допомогою Web3 та Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _— Покроковий посібник із надсилання транзакцій із бекенду._
 
 ## Посібники: JavaScript API та WebSockets в Етеріум {#tutorials}

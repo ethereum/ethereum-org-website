@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/anatomy/index.md",
-  "generatedAt": "2026-06-30T00:01:41.564Z",
-  "rootHash": "4d02d87351b8",
+  "generatedAt": "2026-11-27T10:05:32.835Z",
+  "rootHash": "41a9027f1dba",
   "tree": {
-    "contentHash": "4b5ddd81ffcc",
-    "anchorHash": "15910e82d886",
+    "contentHash": "7c806746553e",
+    "anchorHash": "876e0056b21d",
     "children": {
       "frontmatter:title": {
         "contentHash": "5b68622f4a3f",
@@ -701,8 +701,8 @@
         ]
       },
       "annotated-examples": {
-        "contentHash": "f0fb018c5d9b",
-        "anchorHash": "8f927bec0b8d",
+        "contentHash": "8d1673eefb0d",
+        "anchorHash": "8d3a5cc9f472",
         "labelHash": "4d0401e9e46e",
         "children": {
           "_label": {
@@ -985,8 +985,8 @@
             ]
           },
           "unique-digital-asset": {
-            "contentHash": "7eaec0979efa",
-            "anchorHash": "e032f61f2299",
+            "contentHash": "cd89cea8bb4e",
+            "anchorHash": "5b9b0d512805",
             "labelHash": "575f0960aae3",
             "children": {
               "_label": {
@@ -1022,7 +1022,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "code-comment:8": {
-                "contentHash": "661ea1f6d4f0",
+                "contentHash": "dc9a13ce2b27",
                 "anchorHash": "e3b0c44298fc"
               },
               "code-comment:9": {
@@ -1218,7 +1218,7 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "code-comment:57": {
-                "contentHash": "4342384a5e33",
+                "contentHash": "57e71b2385c8",
                 "anchorHash": "e3b0c44298fc"
               },
               "code-comment:58": {
@@ -1263,7 +1263,7 @@
               },
               "code-fence:68": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "904205c08c90"
+                "anchorHash": "79e7c2e7feee"
               }
             },
             "childrenOrder": [
@@ -1483,5 +1483,5 @@
       "related-tutorials"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

@@ -50,9 +50,9 @@ Istnieją różne darmowe [usługi](/developers/docs/nodes-and-clients/nodes-as-
 
 ## Implementacje i użycie {#implementations-and-usage}
 
-Węzeł archiwalny w tym kontekście oznacza dane serwowane przez klientów warstwy wykonawczej skierowanych do użytkownika, ponieważ obsługują oni bazę danych stanu i udostępniają punkty końcowe JSON-RPC. Opcje konfiguracji, czas synchronizacji i rozmiar bazy danych mogą się różnić w zależności od klienta. Aby uzyskać szczegółowe informacje, zapoznaj się z dokumentacją dostarczoną przez Twojego klienta.
+Węzeł archiwalny w tym kontekście oznacza dane serwowane przez klientów warstwy wykonawczej, z którymi komunikuje się użytkownik, ponieważ to oni zarządzają bazą danych stanu i udostępniają punkty końcowe JSON-RPC. Opcje konfiguracji, czas synchronizacji i rozmiar bazy danych mogą się różnić w zależności od klienta. Aby uzyskać szczegółowe informacje, zapoznaj się z dokumentacją danego klienta.
 
-Przed uruchomieniem własnego węzła archiwalnego zapoznaj się z różnicami między klientami, a w szczególności z różnymi [wymaganiami sprzętowymi](/developers/docs/nodes-and-clients/run-a-node/#requirements). Większość klientów nie jest zoptymalizowana pod kątem tej funkcji, a ich archiwa wymagają ponad 12 TB przestrzeni. W przeciwieństwie do nich, implementacje takie jak Erigon mogą przechowywać te same dane na mniej niż 3 TB, co czyni je najbardziej efektywnym sposobem na uruchomienie węzła archiwalnego.
+Przed uruchomieniem własnego węzła archiwalnego zapoznaj się z różnicami między klientami, a w szczególności z różnymi [wymaganiami sprzętowymi](/developers/docs/nodes-and-clients/run-a-node/#requirements). Rozmiar archiwum różni się znacznie w zależności od architektury przechowywania danych danego klienta. Erigon, Reth i Geth (z archiwum opartym na ścieżkach) przechowują archiwum Sieci głównej na około 2-3 TB, podczas gdy archiwa Besu i Nethermind wymagają 12 TB lub więcej.
 
 ## Zalecane praktyki {#recommended-practices}
 
@@ -60,14 +60,14 @@ Oprócz ogólnych [zaleceń dotyczących uruchamiania węzła](/developers/docs/
 
 ### Sprzęt {#hardware}
 
-Zawsze upewnij się, że zweryfikowałeś wymagania sprzętowe dla danego trybu w dokumentacji klienta.
-Największym wymaganiem dla węzłów archiwalnych jest przestrzeń dyskowa. W zależności od klienta waha się ona od 3 TB do 12 TB. Nawet jeśli dyski HDD mogą być uważane za lepsze rozwiązanie dla dużych ilości danych, ich synchronizacja i ciągłe aktualizowanie szczytu łańcucha będą wymagały dysków SSD. Dyski [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) są wystarczająco dobre, ale powinny być niezawodnej jakości, co najmniej [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Dyski można zamontować w komputerze stacjonarnym lub serwerze z wystarczającą liczbą gniazd. Takie dedykowane urządzenia są idealne do uruchamiania węzła o wysokim czasie dostępności (uptime). Całkowicie możliwe jest uruchomienie go na laptopie, ale przenośność będzie wiązała się z dodatkowymi kosztami.
+Zawsze sprawdzaj wymagania sprzętowe dla danego trybu w dokumentacji klienta.
+Największym wymaganiem dla węzłów archiwalnych jest przestrzeń dyskowa. W zależności od klienta waha się ona od około 2 TB do ponad 12 TB. Nawet jeśli dyski HDD mogą wydawać się lepszym rozwiązaniem dla dużych ilości danych, synchronizacja i ciągłe aktualizowanie szczytu łańcucha będą wymagały dysków SSD. Dyski [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) są wystarczająco dobre, ale powinny być niezawodnej jakości, co najmniej [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Dyski można zamontować w komputerze stacjonarnym lub serwerze z odpowiednią liczbą złączy. Takie dedykowane urządzenia są idealne do prowadzenia węzła o wysokiej dostępności. Uruchomienie go na laptopie jest w pełni możliwe, ale przenośność będzie wiązać się z dodatkowymi kosztami.
 
-Wszystkie dane muszą zmieścić się na jednym woluminie, dlatego dyski muszą zostać połączone, np. za pomocą [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) lub LVM. Warto również rozważyć użycie [ZFS](https://en.wikipedia.org/wiki/ZFS), ponieważ obsługuje on mechanizm „Copy-on-write”, który zapewnia prawidłowe zapisywanie danych na dysku bez żadnych błędów niskiego poziomu.
+Wszystkie dane muszą zmieścić się na jednym woluminie, dlatego dyski muszą zostać połączone, np. za pomocą [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) lub LVM. Warto również rozważyć użycie systemu [ZFS](https://en.wikipedia.org/wiki/ZFS), ponieważ obsługuje on mechanizm „Copy-on-write”, który zapewnia prawidłowe zapisywanie danych na dysku bez błędów niskiego poziomu.
 
-Aby uzyskać większą stabilność i bezpieczeństwo w zapobieganiu przypadkowemu uszkodzeniu bazy danych, zwłaszcza w profesjonalnej konfiguracji, rozważ użycie pamięci [ECC](https://en.wikipedia.org/wiki/ECC_memory), jeśli Twój system ją obsługuje. Ogólnie zaleca się, aby rozmiar pamięci RAM był taki sam jak w przypadku pełnego węzła, ale większa ilość pamięci RAM może pomóc przyspieszyć synchronizację.
+Dla większej stabilności i bezpieczeństwa, aby zapobiec przypadkowemu uszkodzeniu bazy danych, zwłaszcza w profesjonalnej konfiguracji, rozważ użycie [pamięci ECC](https://en.wikipedia.org/wiki/ECC_memory), jeśli Twój system ją obsługuje. Zaleca się, aby ilość pamięci RAM była na ogół taka sama jak w przypadku pełnego węzła, ale większa ilość RAM-u może pomóc przyspieszyć synchronizację.
 
-Podczas początkowej synchronizacji klienci w trybie archiwalnym wykonają każdą transakcję od bloku genezy. Szybkość wykonywania jest w dużej mierze ograniczona przez procesor, więc szybszy procesor może pomóc skrócić czas początkowej synchronizacji. Na przeciętnym komputerze konsumenckim początkowa synchronizacja może potrwać nawet miesiąc.
+Podczas początkowej synchronizacji klienci w trybie archiwalnym wykonają każdą transakcję od bloku genezy (genesis). Szybkość wykonywania jest w dużej mierze ograniczona przez procesor, więc szybszy procesor może pomóc skrócić czas początkowej synchronizacji. Na przeciętnym komputerze konsumenckim początkowa synchronizacja może potrwać nawet miesiąc.
 
 ## Dalsza lektura {#further-reading}
 

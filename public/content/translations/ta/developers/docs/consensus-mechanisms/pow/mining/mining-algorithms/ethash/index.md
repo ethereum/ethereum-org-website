@@ -88,7 +88,7 @@ def mkcache(cache_size, seed):
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # randmemohash இன் குறைந்த-சுற்று பதிப்பைப் பயன்படுத்தவும்
+    # randmemohash-இன் குறைந்த சுற்று பதிப்பைப் பயன்படுத்தவும்
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-தற்காலிக சேமிப்பு உற்பத்தி செயல்முறையானது முதலில் 32 MB நினைவகத்தை வரிசையாக நிரப்புவதை உள்ளடக்குகிறது, பின்னர் [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) இலிருந்து Sergio Demian Lerner-இன் _RandMemoHash_ அல்காரிதத்தின் இரண்டு பாஸ்களைச் (passes) செய்கிறது. வெளியீடு என்பது 524288 64-பைட் மதிப்புகளின் தொகுப்பாகும்.
+தற்காலிக சேமிப்பு உருவாக்கும் செயல்முறையானது, முதலில் 32 MB நினைவகத்தை வரிசையாக நிரப்புவதையும், பின்னர் [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) என்பதிலிருந்து செர்ஜியோ டெமியன் லெர்னரின் (Sergio Demian Lerner) _RandMemoHash_ அல்காரிதத்தின் மூன்று சுற்றுகளை (`CACHE_ROUNDS`) செயல்படுத்துவதையும் உள்ளடக்கியது. இதன் வெளியீடு 524288 64-பைட் மதிப்புகளின் தொகுப்பாகும்.
 
 ## தரவு ஒருங்கிணைப்பு செயல்பாடு {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _உங்களுக்கு உதவிய சமூக வளம் பற
 
 ## பின்னிணைப்பு {#appendix}
 
-மேலே உள்ள Python விவரக்குறிப்பைக் குறியீடாக இயக்க நீங்கள் ஆர்வமாக இருந்தால், பின்வரும் குறியீடு முன்னொட்டாகச் சேர்க்கப்பட வேண்டும்.
+மேற்கண்ட Python விவரக்குறிப்பைக் குறியீடாக இயக்க நீங்கள் விரும்பினால், பின்வரும் குறியீட்டை முன்பாகச் சேர்க்க வேண்டும்.
 
 ```python
 import sha3, copy
 
-# லிட்டில்-எண்டியன் பிட் வரிசையைக் கருதுகிறது (இன்டெல் கட்டமைப்புகளைப் போலவே)
+# லிட்டில் எண்டியன் பிட் வரிசைமுறையைக் கருதுகிறது (இன்டெல் கட்டமைப்புகளைப் போலவே)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

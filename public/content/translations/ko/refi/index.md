@@ -1,6 +1,6 @@
 ---
 title: "재생 금융(ReFi)"
-description: "재생 금융(ReFi)과 현재 사용 사례에 대한 개요입니다."
+description: "재생 금융(ReFi)이란 무엇일까요? 이더리움 도구가 어떻게 공공재, 기후 행동, 그리고 지속적으로 긍정적인 영향을 창출하는 커뮤니티 프로젝트에 자금을 지원하는지 알아보세요."
 lang: ko
 template: use-cases
 sidebarDepth: 2

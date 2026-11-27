@@ -23,7 +23,7 @@ Dokumentasi dapat ditulis pada tingkat yang berbeda, dan harus diperbarui saat m
 
 - **Deskripsi sistem dalam bahasa yang sederhana**, menjelaskan apa yang dilakukan kontrak dan asumsi apa pun pada basis kode.
 - **Skema dan diagram arsitektur**, termasuk interaksi kontrak dan mesin state dari sistem. [Printer Slither](https://github.com/crytic/slither/wiki/Printer-documentation) dapat membantu menghasilkan skema ini.
-- **Dokumentasi kode yang menyeluruh**, [format NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) dapat digunakan untuk Solidity.
+- **Dokumentasi kode yang menyeluruh**, [format NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html) dapat digunakan untuk Solidity.
 
 ### Komputasi onchain vs offchain {#onchain-vs-offchain-computation}
 
@@ -73,14 +73,14 @@ Arsitektur basis kode Anda harus membuat kode Anda mudah ditinjau. Hindari pilih
 ### Pengujian dan verifikasi {#testing-and-verification}
 
 - **Tulis pengujian unit yang menyeluruh.** Rangkaian pengujian yang ekstensif sangat penting untuk membangun perangkat lunak berkualitas tinggi.
-- **Tulis pemeriksaan dan properti kustom [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna), dan [Manticore](https://github.com/trailofbits/manticore).** Alat otomatis akan membantu memastikan kontrak Anda aman. Tinjau sisa panduan ini untuk mempelajari cara menulis pemeriksaan dan properti yang efisien.
-- **Gunakan [crytic.io](https://crytic.io/).** Crytic terintegrasi dengan GitHub, menyediakan akses ke detektor Slither privat, dan menjalankan pemeriksaan properti kustom dari Echidna.
+- **Tulis pemeriksaan dan properti kustom [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna), dan [Medusa](https://github.com/crytic/medusa).** Alat otomatis akan membantu memastikan kontrak Anda aman. Tinjau sisa panduan ini untuk mempelajari cara menulis pemeriksaan dan properti yang efisien.
+- **Jalankan alat-alat ini dalam integrasi berkelanjutan.** Menjalankan Slither dan properti fuzzing Anda pada setiap pull request akan menangkap regresi sebelum digabungkan.
 
 ### Solidity {#solidity}
 
-- **Lebih mengutamakan Solidity 0.5 daripada 0.4 dan 0.6.** Menurut pendapat kami, Solidity 0.5 lebih aman dan memiliki praktik bawaan yang lebih baik daripada 0.4. Solidity 0.6 telah terbukti terlalu tidak stabil untuk produksi dan membutuhkan waktu untuk matang.
-- **Gunakan rilis stabil untuk mengompilasi; gunakan rilis terbaru untuk memeriksa peringatan.** Periksa apakah kode Anda tidak memiliki masalah yang dilaporkan dengan versi kompiler terbaru. Namun, Solidity memiliki siklus rilis yang cepat dan memiliki riwayat bug kompiler, jadi kami tidak merekomendasikan versi terbaru untuk penyebaran (lihat [rekomendasi versi solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) Slither).
-- **Jangan gunakan assembly sebaris (inline assembly).** Assembly membutuhkan keahlian EVM. Jangan menulis kode EVM jika Anda belum _menguasai_ kertas kuning.
+- **Gunakan rilis Solidity 0.8.x terbaru tanpa bug parah yang diketahui.** Solidity 0.8 memeriksa aritmatika untuk limpahan dan underflow secara default, dan versi yang lebih lama tidak memiliki pemeriksaan keamanan kompilator yang lebih baru. Lihat [rekomendasi versi solc](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) dari Slither.
+- **Gunakan rilis stabil untuk mengompilasi; gunakan rilis terbaru untuk memeriksa peringatan.** Periksa apakah kode Anda tidak memiliki masalah yang dilaporkan dengan versi kompilator terbaru. Namun, Solidity memiliki siklus rilis yang cepat dan memiliki riwayat bug kompilator, jadi hindari menyebarkan dengan versi yang baru dirilis beberapa hari yang lalu. Periksa [daftar bug kompilator yang diketahui](https://docs.soliditylang.org/en/latest/bugs.html) untuk versi yang Anda pilih.
+- **Jangan gunakan assembly sebaris.** Assembly membutuhkan keahlian EVM. Jangan menulis kode EVM jika Anda belum _menguasai_ kertas kuning.
 
 ## Panduan penyebaran {#deployment-guidelines}
 

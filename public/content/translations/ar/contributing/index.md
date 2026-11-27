@@ -12,10 +12,10 @@ lang: ar
 ## طرق المساهمة {#ways-to-contribute}
 
 **الترجمات**
-- [الإبلاغ عن خطأ في الترجمة](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [برنامج الترجمة](/contributing/translation-program/) في مراحله الأخيرة ولم يعد يقوم بتهيئة مترجمين جدد
+- [الإبلاغ عن خطأ في الترجمة](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [برنامج الترجمة](/contributing/translation-program/) في طور الإغلاق ولم يعد يقوم بتهيئة مترجمين جدد
 
 **التطوير**
-- [العمل على مشكلة مفتوحة](https://github.com/ethereum/ethereum-org-website/issues) – أعمال حددناها وتحتاج إلى إنجاز
+- [العمل على مشكلة مفتوحة](https://github.com/ethereum/ethereum-org-website/issues) – الأعمال التي حددناها والتي تحتاج إلى إنجاز
 
 **التصميم**
 - [المساعدة في تصميم الموقع](/contributing/design/) – يمكن للمصممين من جميع المستويات المساهمة في تحسين الموقع
@@ -23,24 +23,25 @@ lang: ar
 **المحتوى**
 - [إنشاء/تعديل المحتوى](/contributing/#how-to-update-content) – اقتراح صفحات جديدة أو إجراء تعديلات على ما هو موجود بالفعل
 - [كتابة مقال باني](/contributing/adding-articles/) - المساهمة بمقال في قسم [الأحدث](/latest/)
-- [إضافة موارد مجتمعية](/contributing/content-resources/) – إضافة مقال أو مورد مفيد إلى صفحة ذات صلة
+- [إضافة موارد المجتمع](/contributing/content-resources/) – إضافة مقال أو مورد مفيد إلى صفحة ذات صلة
 - [اقتراح تقرير](/contributing/adding-reports/) - اقتراح تقرير بحثي لصفحة [التقارير](/reports/)
-- [شارك قصتك](/contributing/adding-community-stories/) - أرسل قصة حول تجاربك الشخصية مع التقنيات مفتوحة المصدر وتقنيات الملاذ الآمن، وكيف أثر نظام إيثيريوم البيئي على حياتك، أو كيف تستخدم أنت ومجتمعك إيثيريوم
+- [مشاركة قصتك](/contributing/adding-community-stories/) - إرسال قصة حول تجاربك الشخصية مع التقنيات مفتوحة المصدر وتقنيات الملاذ الآمن، وكيف أثر نظام إيثيريوم البيئي على حياتك، أو كيف تستخدم أنت ومجتمعك إيثيريوم
 - [الاختبارات](/contributing/quizzes/) – إضافة وتحديث وحذف بنوك أسئلة الاختبارات لصفحة ذات صلة
 - [اقتراح مورد تصميم](/contributing/design/adding-design-resources/) – إضافة وتحديث وحذف موارد التصميم المفيدة
 - [اقتراح مقطع فيديو](/contributing/adding-videos/) – اقتراح مقطع فيديو تعليمي لمعرض مقاطع الفيديو
+- [إضافة مصطلح إلى مسرد المصطلحات](/contributing/adding-glossary-terms/) – إضافة أو تحديث مصطلح في [مسرد مصطلحات إيثيريوم](/glossary/)
 
 **أفكار الميزات**
 - [طلب ميزة](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – أخبرنا بأي أفكار لديك لميزة أو تصميم جديد
 
 **قوائم المنتجات**
 - [إضافة منصة تداول](/contributing/adding-exchanges/) – إضافة منصة تداول إلى [أداة البحث عن منصات التداول](/get-eth/#country-picker) الخاصة بنا
-- [إضافة منتج](/contributing/adding-products/) – إضافة تطبيق لامركزي (dapp) أو محفظة إلى صفحة ذات صلة
+- [إضافة منتج](/contributing/adding-products/) – إضافة <span dir="ltr">dapp</span> أو محفظة إلى صفحة ذات صلة
 - [إضافة أدوات المطورين](/contributing/adding-developer-tools/) – إضافة أداة مطور إلى صفحة ذات صلة
-- [إضافة طبقة 2 (L2)](/contributing/adding-layer-2s/) – إضافة طبقة 2 (L2) إلى صفحة ذات صلة
+- [إضافة طبقة 2](/contributing/adding-layer-2s/) – إضافة طبقة 2 إلى صفحة ذات صلة
 - [إضافة منتج أو خدمة تخزين](/contributing/adding-staking-products/) – إضافة مشروع يساعد في تسهيل التخزين الفردي، أو التخزين المجمع، أو التحصيص كخدمة
 - [إضافة محفظة](/contributing/adding-wallets/) – إضافة محفظة لصفحة [البحث عن المحافظ](/wallets/find-wallet/)
-- [اقتراح مشروع لصفحة العلم اللامركزي (DeSci) الخاصة بنا](/contributing/adding-desci-projects/) – إضافة مشروع مبني على إيثيريوم يساهم في العلم اللامركزي
+- [اقتراح مشروع لصفحة <span dir="ltr">DeSci</span> الخاصة بنا](/contributing/adding-desci-projects/) – إضافة مشروع مبني على إيثيريوم يساهم في العلم اللامركزي
 - [إضافة مورد](/contributing/adding-resources/) – إضافة مورد مفيد إلى أي صفحة ذات صلة
 
 هل لديك أي أسئلة؟ 🤔 انضم إلى [خادم ديسكورد](/discord/) الخاص بنا
@@ -97,22 +98,12 @@ lang: ar
 
 1. انضم إلى [خادم ديسكورد](/discord/) الخاص بنا.
 2. الصق رابطًا لمساهمتك في قناة `#🥇 | proof-of-contribution`.
-3. انتظر حتى يرسل لك أحد أعضاء فريقنا رابطًا لرمز OAT الخاص بك.
-4. طالب برمز OAT الخاص بك!
+3. انتظر حتى يرسل لك أحد أعضاء فريقنا رابطًا لرمز <span dir="ltr">OAT</span> الخاص بك.
+4. طالب برمز <span dir="ltr">OAT</span> الخاص بك!
 
-يجب عليك فقط استخدام محافظ الحفظ الذاتي للمطالبة برموز OAT. لا تستخدم حسابات منصات التداول أو الحسابات الأخرى التي لا تمتلك مفاتيحها الخاصة، حيث لن تسمح لك هذه الحسابات بالوصول إلى رموز OAT الخاصة بك وإدارتها.
+يجب عليك فقط استخدام محافظ حفظ ذاتي للمطالبة برموز <span dir="ltr">OAT</span>. لا تستخدم حسابات منصات التداول أو الحسابات الأخرى التي لا تمتلك المفاتيح الخاصة بها، حيث لن تسمح لك هذه الحسابات بالوصول إلى رموز <span dir="ltr">OAT</span> الخاصة بك وإدارتها.
 
-## المطالبة بـ <span dir="ltr">GitPOAP</span> الخاص بك {#claim-gitpoap}
-
-سيتعرف <span dir="ltr">GitPOAP</span> أيضًا تلقائيًا على مساهمتك المدمجة ويتيح لك سك <span dir="ltr">POAP</span> فريد ومنفصل للمساهمين على منصتهم نفسها!
-
-
-### كيفية المطالبة {#how-to-claim-2}
-
-1. قم بزيارة [<span dir="ltr">GitPOAP</span>](https://www.gitpoap.io).
-2. اتصل بمحفظتك أو حتى ببريدك الإلكتروني من خلال خيار تسجيل الدخول.
-3. ابحث عن اسم مستخدم <span dir="ltr">GitHub</span> الخاص بك، أو عنوان <span dir="ltr">ETH</span>، أو أسماء خدمة أسماء إيثيريوم (ENS)، أو أي <span dir="ltr">GitPOAP</span> للتحقق مما إذا كنت مؤهلاً.
-4. إذا كان حساب <span dir="ltr">GitHub</span> الخاص بك مؤهلاً، فستتمكن من سك <span dir="ltr">GitPOAP</span>!
+<LinkWithArrow href="/collectibles/">عرض مقتنيات <span dir="ltr">ethereum.org</span> الخاصة بك</LinkWithArrow>
 
 ## المساهمون {#contributors}
 

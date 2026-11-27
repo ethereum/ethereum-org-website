@@ -1,6 +1,6 @@
 ---
-title: Cüzdan ekleme
-description: ethereum.org'a bir cüzdan eklerken kullandığımız politika
+title: "Cüzdan ekleme"
+description: "ethereum.org'a bir cüzdan eklerken kullandığımız politika"
 lang: tr
 ---
 
@@ -56,9 +56,9 @@ Ethereum'da cüzdanlar hızla değişiyor. ethereum.org'da değerlendirme için 
 - **Özel destek ekibi** - cüzdanınızın, kullanıcıların sorun yaşadıklarında başvurabilecekleri özel bir destek ekibi vardır.
 - **Eğitim kaynakları/belgeler** - ürününüz, kullanıcılara yardımcı olmak ve onları eğitmek için iyi tasarlanmış bir sisteme katılım deneyimine sahip olmalıdır. Veya makaleler ya da videolar gibi nasıl yapılır içeriklerinin kanıtı olmalıdır.
 
-## Cüzdan ekleme {#adding-a-wallet}
+## Bir cüzdan ekleme {#adding-a-wallet}
 
-ethereum.org'a bir cüzdan eklemek istiyorsanız, GitHub'da bir sorun (issue) oluşturun.
+ethereum.org'a bir cüzdan eklemek istiyorsanız, GitHub'da bir sorun (issue) oluşturun. Sorunda (issue) belirttiğiniz cüzdan açıklaması cüzdanın sayfasında gösterilir, bu nedenle açıklamayı bir veya iki nesnel cümleyle sınırlı tutun.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Bir sorun (issue) oluşturun

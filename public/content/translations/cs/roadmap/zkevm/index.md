@@ -1,6 +1,6 @@
 ---
-title: zkEVM pro verifikaci bloků na vrstvě 1
-description: Zjistěte, jak mohou důkazy s nulovou znalostí verifikovat provádění bloků Etherea, což umožňuje vyšší propustnost a nižší požadavky na validátory.
+title: "zkEVM pro verifikaci bloků na vrstvě 1"
+description: "Zjistěte, jak mohou důkazy s nulovou znalostí verifikovat provádění bloků Etherea, což umožňuje vyšší propustnost a nižší požadavky na validátory."
 lang: cs
 template: roadmap
 ---
@@ -12,7 +12,7 @@ zkEVM je technologie, která využívá [důkazy s nulovou znalostí](/zero-know
 <AlertContent>
 <AlertTitle>Nezaměňovat se zkEVM rollupy</AlertTitle>
 <AlertDescription>
-Tato stránka se zabývá využitím zkEVM k verifikaci provádění bloků na vrstvě 1 (l1) Etherea. Pro zkEVM rollupy, které používají ZK důkazy ke škálování Etherea jako řešení na vrstvě 2 (l2), viz [rollupy s nulovým vědomím](/developers/docs/scaling/zk-rollups/).
+Tato stránka se zabývá využitím zkEVM k verifikaci provádění bloků na vrstvě 1 (L1) Etherea. Pro zkEVM rollupy, které používají ZK důkazy ke škálování Etherea jako řešení na vrstvě 2 (L2), viz [rollupy s nulovým vědomím](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -42,7 +42,7 @@ zkEVM se dělí na typy na základě jejich kompatibility s Ethereem:
 - **Typ 1**: Plně ekvivalentní Ethereu. Žádné úpravy EVM, takže jakýkoli blok Etherea může být dokázán přesně tak, jak je.
 - **Typ 2-4**: Dělají různé kompromisy a upravují chování EVM, aby usnadnily dokazování.
 
-Pro verifikaci na vrstvě 1 (l1) je typ 1 nezbytný. zkEVM musí být schopen dokázat jakýkoli platný blok Etherea, včetně okrajových případů a historických bloků. Jakákoli odchylka od přesného chování Etherea by způsobila problémy s konsensem.
+Pro verifikaci na vrstvě 1 (L1) je typ 1 nezbytný. zkEVM musí být schopen dokázat jakýkoli platný blok Etherea, včetně okrajových případů a historických bloků. Jakákoli odchylka od přesného chování Etherea by způsobila problémy s konsensem.
 
 Výzkum zkEVM Nadace Ethereum se zaměřuje na implementace typu 1, které jsou plně kompatibilní se stávajícím prováděním Etherea.
 
@@ -97,11 +97,11 @@ Tyto implementace používají virtuální stroje založené na RISC-V k provád
 
 ## Jak zkEVM zapadá do dalších vylepšení {#related-upgrades}
 
-Verifikace zkEVM na vrstvě 1 se propojuje s několika dalšími položkami v roadmapě Etherea:
+Verifikace zkEVM na vrstvě 1 souvisí s několika dalšími body plánu Etherea:
 
-- **[Verkle stromy](/roadmap/verkle-trees/)**: Umožňují menší svědky pro bezstavovou verifikaci, čímž snižují množství dat, se kterými musí dokazovatelé pracovat.
-- **[Bezstavovost](/roadmap/statelessness/)**: zkEVM je klíčovým předpokladem – se ZK důkazy o provedení uzly nepotřebují plný stav k verifikaci bloků.
-- **[Oddělení navrhovatele a tvůrce (PBS)](/roadmap/pbs/)**: Tvůrci bloků by mohli potenciálně integrovat generování důkazů, nebo by mohl vzniknout samostatný trh dokazovatelů.
+- **Nový stavový strom**: Sjednocený binární strom ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), navržený namísto dřívějšího návrhu [Verkle stromu](/roadmap/verkle-trees/), by umožnil menší svědky pro bezstavovou verifikaci a je navržen tak, aby bylo snazší jej dokázat.
+- **[Bezstavovost](/roadmap/statelessness/)**: zkEVM je klíčovým předpokladem – díky ZK důkazům o provedení uzly nepotřebují k verifikaci bloků úplný stav.
+- **[PBS](/roadmap/pbs/)**: Tvůrci bloků by mohli potenciálně integrovat generování důkazů, nebo by mohl vzniknout samostatný trh dokazovatelů.
 - **[Jednoslotová finalita](/roadmap/single-slot-finality/)**: Rychlejší generování důkazů by mohlo umožnit jednoslotovou finalitu s kryptografickými zárukami.
 
 <Alert variant="warning">

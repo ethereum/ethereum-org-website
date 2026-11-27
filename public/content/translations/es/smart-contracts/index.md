@@ -1,7 +1,7 @@
 ---
-title: Introducción a los contratos inteligentes
+title: "Introducción a los contratos inteligentes"
 metaTitle: "Contratos inteligentes: qué son y sus beneficios"
-description: Una introducción no técnica a los contratos inteligentes
+description: "¿Qué son los contratos inteligentes? Una introducción no técnica a los programas que se ejecutan en Ethereum e impulsan aplicaciones como DeFi, NFT y DAO sin intermediarios."
 lang: es
 ---
 

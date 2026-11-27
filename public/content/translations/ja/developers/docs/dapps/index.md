@@ -1,6 +1,6 @@
 ---
 title: "dappの技術的概要"
-description:
+description: "dappの技術的概要：分散型アプリケーションがイーサリアム上のスマート・コントラクトとフロントエンドをどのように組み合わせているか、またWebアプリとどう違うのかについて説明します。"
 lang: ja
 ---
 
@@ -96,8 +96,7 @@ _役に立ったコミュニティリソースをご存知ですか？このペ�
 
 ## チュートリアル: イーサリアムでのアプリとフロントエンドの構築 {#tutorials}
 
-- [ユニスワップ-v2 コントラクトのウォークスルー](/developers/tutorials/uniswap-v2-annotated-code/) _– 自動マーケットメーカー (AMM) の仕組みを説明する、ユニスワップ v2 コアコントラクトの注釈付きウォークスルー。_
+- [Uniswap v2コントラクトのウォークスルー](/developers/tutorials/uniswap-v2-annotated-code/) _– AMMの仕組みを説明する、Uniswap v2のコアコントラクトの注釈付きウォークスルー。_
 - [コントラクトのユーザーインターフェースの構築](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– スマート・コントラクトに接続する最新のReact + Wagmiフロントエンドを構築する方法。_
-- [初心者のためのHello Worldスマート・コントラクト – フルスタック](/developers/tutorials/hello-world-smart-contract-fullstack/) _– エンドツーエンドのチュートリアル: シンプルなスマート・コントラクトの作成、デプロイ、およびフロントエンドの構築。_
 - [Web3アプリのサーバーコンポーネントとエージェント](/developers/tutorials/server-components/) _– ブロックチェーンのイベントをリッスンし、トランザクションで応答するTypeScriptサーバーコンポーネントの記述方法。_
-- [分散型ユーザーインターフェースのためのIPFS](/developers/tutorials/ipfs-decentralized-ui/) _– 検閲耐性のためにdappのフロントエンドをIPFSでホストする方法。_
+- [分散型ユーザーインターフェースのためのIPFS](/developers/tutorials/ipfs-decentralized-ui/) _– 検閲耐性を持たせるために、dappのフロントエンドをIPFSでホストする方法。_

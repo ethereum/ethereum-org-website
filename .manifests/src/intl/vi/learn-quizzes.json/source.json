@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/learn-quizzes.json",
-  "generatedAt": "2026-09-30T18:06:16.149Z",
-  "rootHash": "1002430679c2",
+  "generatedAt": "2026-11-27T09:53:43.342Z",
+  "rootHash": "2c76b4be2e1c",
   "tree": {
-    "contentHash": "d5780789b99e",
+    "contentHash": "5d06c6db57f5",
     "anchorHash": "1dcd1f31bc9c",
     "children": {
       "add-quiz": {
@@ -2335,7 +2335,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "run-a-node-4-b-label": {
-        "contentHash": "7ef1b45deadb",
+        "contentHash": "040f8ad1efa3",
         "anchorHash": "e3b0c44298fc"
       },
       "run-a-node-4-b-explanation": {
@@ -2343,11 +2343,11 @@
         "anchorHash": "e3b0c44298fc"
       },
       "run-a-node-4-c-label": {
-        "contentHash": "c5ee18948447",
+        "contentHash": "c9bccb92804e",
         "anchorHash": "e3b0c44298fc"
       },
       "run-a-node-4-c-explanation": {
-        "contentHash": "8fa98a571a12",
+        "contentHash": "7749859c90f1",
         "anchorHash": "e3b0c44298fc"
       },
       "run-a-node-4-d-label": {
@@ -2355,7 +2355,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "run-a-node-4-d-explanation": {
-        "contentHash": "6a4813635f9f",
+        "contentHash": "bf7c025c05b8",
         "anchorHash": "e3b0c44298fc"
       },
       "run-a-node-5-prompt": {
@@ -6675,5 +6675,5 @@
       "proof-of-stake-6-d-explanation"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

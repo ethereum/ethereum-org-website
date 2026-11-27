@@ -1,5 +1,34 @@
 # Bengali (bn) -- Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.6/10
+Scope: 14 markdown pages (ethash, data-structures, patricia-merkle-trie, ssz, frameworks, nodes-as-a-service, run-a-node, transactions, glossary, roadmap merge/privacy/statelessness/verkle-trees, supply), changed lines only; read 8 diffs in full (run-a-node, transactions, privacy, supply, merge, statelessness, nodes-as-a-service, glossary) plus scripted sweeps over all 14. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): run-a-node client table and both notes: `বেসু/এরিগন/নেদারমাইন্ড/রেথ` -> Besu/Erigon/Nethermind/Reth (known-patterns 113); nodes-as-a-service: about 35 `এপিআই`/`আরপিসি`/`জেসন-আরপিসি` -> `API`/`RPC`/`JSON-RPC` (dev had Latin 22 and 14 times, regression of dev form), `বেসু` -> Besu (L225); long forms added where English is bare (112): `বিকেন্দ্রীকৃত অ্যাপ্লিকেশন (dapp)`, `বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi)`, `প্রুফ-অফ-অথরিটি (PoA)`, `নন-ফাঞ্জিবল টোকেন (NFT)` x4, `বিকেন্দ্রীভূত স্বায়ত্তশাসিত সংস্থা (DAO)`, `লেয়ার ১ (L1)` link text (statelessness L81), `ইথেরিয়াম ভার্চুয়াল মেশিন (EVM)` x2 (transactions L19, L31); Bengali digits in `লেয়ার ২/১` and `ইথ১` -> Western digits (merge, transactions, run-a-node).
+
+Open (warnings): `রিকার্সিভ লেংথ প্রিফিক্স (আরএলপি)` (transactions L102, English writes `(RLP)`); `বাহ্যিকভাবে মালিকানাধীন অ্যাকাউন্ট (EOA)` (English has the long form, `(EOA)` added; harmless); `Hegotá` kept Latin; merge still has 4 pre-existing lines with Bengali digits; person names (Sergio Demian Lerner etc.) transliterated.
+
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.3/10
+Scope: 72 markdown pages + 20 JSON namespaces (incremental updates, dev-tools descriptions), changed lines only; read 10 md diffs (contributing, erc-7540, anatomy, bridges, data/oracles/nodes docs, tutorials, roadmap, security, videos) and ~120 JSON keys (glossary, glossary-tooltip, learn-quizzes, page-learn, page-get-eth, page-community, page-roadmap, page-developers-tools-descriptions).
+
+Fixed (critical): contributing/index.md six bold section headings left in English (Translations, Development, Design, Content, Feature ideas, Product listings) restored to dev forms; roadmap/fusaka junk token `যায়্বা যায় না` -> `যায় না`; security/index.md stray `>)` left after the social-engineering link; SPDX-License-Identifier comment translated in interact-with-other-contracts (2 code blocks) restored; Latin tool names transliterated in changed lines (Slither/Echidna/Medusa in secure-development-workflow and smart-contract-security-guidelines, Lodestar in programming-languages/javascript, Erigon/Reth/Besu/Nethermind in archive-nodes and node-architecture, Graph Explorer, Solium comment, YouTube); 5 added `অ্যাপ্লিকেশন বাইনারি ইন্টারফেস (এবিআই)` expansions in tools-descriptions -> bare `ABI`; page-learn `জিরো-নলেজ প্রুফ` hybrid (2 keys) -> `শূন্য-জ্ঞান প্রমাণ`; page-layer-2-learn `লেয়ার 2` digit mixed with `লেয়ার ২`.
+
+Open: tools-descriptions mixes `API`/`RPC` Latin with `এপিআই`/`জেসন-আরপিসি` (glossary-sanctioned but inconsistent); `ইথেরিয়াম উন্নয়ন প্রস্তাবনা` (eips description) vs `ইমপ্রুভমেন্ট প্রপোজাল` (title); Devcon rendered `ডেভকন` and `Devcon 8` in the same video page; other pre-existing transliterated tool names (স্লিদার/ম্যান্টিকোর/একিডনা across other tutorials, ইউনিসোয়াপ, টেলর) remain outside this PR's lines; `শব্দকোষ` (page-learn) vs `গ্লোসারি` (contributing) for glossary.
+
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: 37 values with glossary-lowercased `(l1)`/`(l2)` uppercased (glossary data, #53/#111). Open: expansion of bare L1/L2 to `লেয়ার ১ (L1)` is heavy.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: junk-syllable negation corruption (pos L46), bad actors as film actors, যতক্ষণ না inversion (verifying), zero-knowledge proof hybrid regressed (6 sites zk-rollups), U+3002 x6 and U+2060 x6 in erc-721. Open: equivocation ইক্যুইভোকেশন vs দ্ব্যর্থবোধক, ZK-rollup Latin, taka for currency, API over-expansion.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption placeholder swap, gas inline code, attestation/equivocation/fork-choice/consensus-client forms, withdrawal/signing/builder across the diagram JSON. Open: stray BiDi isolates in networking-layer and peerdas frontmatter, detached postpositions.
+
 ## PR #18772 (community-stories.json, 2026-07-10) -- 9.4/10
 - CRIT fixed: "Web2" left Latin in story-sebastian -> ওয়েব২ per ETHGlossary (web2 => ওয়েব২). Watch web2/web3 script split: glossary transliterates web2 but keeps Web3 Latin.
 - WARN: "transfer" rendered both ট্রান্সফার and হস্তান্তর within story-nico-bolivia (glossary: হস্তান্তর; ট্রান্সফার common in speech).
@@ -143,3 +172,62 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: stray U+2066/U+2069 isolates around `ETH` in description (LTR page).
 - Open: `deprecated` -> `অবচয়িত` (depreciation sense) vs dev `বাতিলকৃত`, needs native check; bare "EVM networks" expanded (#80).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.1/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:1216 dropped link (`ডেটার জন্য অনুরোধ করা হলে ভুল তথ্য` -> `ডেটার জন্য [অনুরোধ করা হলে](https://github.com/qbz`)
+- app-plasma:966 Solidity always_latin (`সলিডিটি যাচাইকারী (solidity verifier)` -> `Solidity যাচাইকারী`)
+- app-plasma:200 ETH always_latin (`মিলি-ইটিএইচ` -> `milliETH`)
+- app-plasma:558 ETH always_latin (`ইটিএইচ এর` -> `ETH-এর`)
+
+**Open (native call needed):**
+
+- developers/tutorials/app-plasma/index.md:294: The text uses a hybrid of the bare "zero-knowledge" entry and a translated head noun. The glossary has a compound entry: `zk-proof` is `শূন্য-জ্ঞান প্রমাণ` (translate, confidence high). The rest of th (`জিরো-নলেজ প্রমাণের অংশ` -> `শূন্য-জ্ঞান প্রমাণের অংশ`)
+- developers/tutorials/app-plasma/index.md:296: Same zk-proof hybrid, 3 occurrences on this line. Replace all of them. Flag for a human. (`জিরো-নলেজ প্রমাণের` -> `শূন্য-জ্ঞান প্রমাণের`)
+- developers/tutorials/app-plasma/index.md:738: Same zk-proof hybrid. Flag for a human. (`জিরো-নলেজ প্রমাণের ভেতরে` -> `শূন্য-জ্ঞান প্রমাণের ভেতরে`)
+- developers/tutorials/scam-token-tricks/index.md:462: DeFi is transliterated as a hybrid that is not in the glossary. The `decentralized-finance-defi` entry is "translate", and its ui/tag form is `DeFi` with note "Acronym preferred in all contexts". dev  (`ডিফাই (DeFi)` -> `DeFi`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Good fluency overall, with the prediction-markets rewrite reading well. The defects are concentrated in the full app-plasma retranslation, which regressed wording that was correct on dev, and in three founders tags that shipped in English after the key rename.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `transactions` concept tag restored to `ট্রানজ্যাকশন`; literal `\n` at the end of the description removed (sending)
+
+**Notes:**
+
+- Warnings: doubled ABI expansion (mint:38); `[Ethers plugin]` left untranslated; native and Western numerals mixed in part references. Glossary returns `(weth)` lowercase (#95).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- echidna:682 dropped the two-space hard line break -- cosmetic
+- Kurtosis labels (files artifacts, user services) mix Latin and transliteration -- defensible, informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- Glossary `transaction fee` = `লেনদেন ফি` conflicts with `transaction` = `ট্রানজ্যাকশন` in the glossary itself (gas:54); anglicism drift `ইনসেনটিভ`/`সার্কুলেশন`; `কমিটমেন্ট` used for non-cryptographic commitment.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

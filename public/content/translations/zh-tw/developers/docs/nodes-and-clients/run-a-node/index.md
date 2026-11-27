@@ -1,6 +1,6 @@
 ---
-title: 啟動你自己的以太坊節點
-description: 執行你自己的以太坊客戶端實例的一般介紹。
+title: "啟動你自己的以太坊節點"
+description: "執行你自己的以太坊客戶端實例的一般介紹。"
 lang: zh-tw
 sidebarDepth: 2
 ---
@@ -17,19 +17,19 @@ sidebarDepth: 2
 
 ## 選擇方法 {#choosing-approach}
 
-啟動節點的第一步是選擇你的方法。根據需求和各種可能性，你必須選擇客戶端實作（包括執行客戶端和共識客戶端）、環境（硬體、系統）以及客戶端設定的參數。
+啟動節點的第一步是選擇你的方法。根據要求和各種可能性，你必須選擇客戶端實作（包括執行客戶端和共識客戶端）、環境（硬體、系統）以及客戶端設定的參數。
 
-本頁面將引導你完成這些決策，並幫助你找到執行以太坊實例最適合的方式。
+本頁面將引導你完成這些決策，並幫助你找到執行以太坊實例最合適的方法。
 
-要從客戶端實作中進行選擇，請查看所有可用於主網的[執行客戶端](/developers/docs/nodes-and-clients/#execution-clients)、[共識客戶端](/developers/docs/nodes-and-clients/#consensus-clients)，並了解[客戶端多樣性](/developers/docs/nodes-and-clients/client-diversity)。
+要從客戶端實作中進行選擇，請查看所有可用且支援主網的[執行客戶端](/developers/docs/nodes-and-clients/#execution-clients)、[共識客戶端](/developers/docs/nodes-and-clients/#consensus-clients)，並了解[客戶端多樣性](/developers/docs/nodes-and-clients/client-diversity)。
 
-考慮客戶端的[要求](#requirements)，決定是在你自己的[硬體還是雲端](#local-vs-cloud)上執行軟體。
+考慮到客戶端的[要求](#requirements)，決定要在自己的[硬體還是雲端](#local-vs-cloud)上執行軟體。
 
-準備好環境後，可以使用[適合初學者的介面](#automatized-setup)，或使用終端機透過進階選項[手動](#manual-setup)安裝所選的客戶端。
+準備好環境後，可以使用[對初學者友善的介面](#automatized-setup)或使用帶有進階選項的終端機[手動](#manual-setup)安裝所選的客戶端。
 
 當節點正在執行並同步時，你就可以準備[使用它](#using-the-node)了，但請務必留意其[維護](#operating-the-node)。
 
-![客戶端設定](./diagram.png)
+<ClientSetupDiagram />
 
 ### 環境與硬體 {#environment-and-hardware}
 
@@ -61,49 +61,50 @@ sidebarDepth: 2
 
 #### 要求 {#requirements}
 
-硬體要求因客戶端而異，但通常不會太高，因為節點只需要保持同步。請不要將其與挖礦混淆，挖礦需要多得多的運算能力。不過，更強大的硬體確實能改善同步時間和效能。
+硬體要求因客戶端而異，但通常不會太高，因為節點只需要保持同步。不要將其與挖礦混淆，挖礦需要更多的運算能力。然而，同步時間和效能確實會隨著更強大的硬體而提升。
 
 在安裝任何客戶端之前，請確保你的電腦有足夠的資源來執行它。你可以在下方找到最低和建議的要求。
 
-硬體的瓶頸通常是磁碟空間。同步以太坊區塊鏈是非常密集的輸入/輸出操作，並且需要大量空間。最好擁有一個**固態硬碟 (SSD)**，即使在同步之後，仍有數百 GB 的可用空間。
+硬體的瓶頸主要在於磁碟空間。同步以太坊區塊鏈是非常密集的輸入/輸出操作，並且需要大量空間。最好擁有一個**固態硬碟 (SSD)**，即使在同步之後，仍有數百 GB 的可用空間。
 
 資料庫的大小和初始同步的速度取決於所選的客戶端、其設定以及[同步策略](/developers/docs/nodes-and-clients/#sync-modes)。
 
-此外，請確保你的網際網路連線不受[頻寬上限](https://wikipedia.org/wiki/Data_cap)的限制。建議使用不限流量的連線，因為初始同步和廣播到網路的資料可能會超過你的限制。
+此外，請確保你的網際網路連線不受[頻寬上限](https://wikipedia.org/wiki/Data_cap)的限制。建議使用不計量的連線，因為初始同步和廣播到網路的資料可能會超過你的限制。
 
 ##### 作業系統
 
-所有客戶端都支援主要的作業系統 - Linux、macOS、Windows。這意味著你可以在一般桌上型電腦或伺服器機器上，使用最適合你的作業系統 (OS) 來執行節點。請確保你的作業系統保持在最新狀態，以避免潛在的問題和安全漏洞。
+所有客戶端都支援主要的作業系統：Linux、macOS、Windows。這意味著你可以在一般桌上型電腦或伺服器機器上，使用最適合你的作業系統 (OS) 來執行節點。請確保你的作業系統是最新的，以避免潛在的問題和安全漏洞。
 
 ##### 最低要求
 
 - 2 核心以上的 CPU
-- 16 GB RAM（為了穩定性建議使用 32 GB）
-- 2 TB NVMe SSD（到 2027 年可能會超過此需求，閱讀更多關於[適合與不適合以太坊節點的 SSD](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038)）
+- 16 GB RAM（為了穩定性，建議使用 32 GB）
+- 4 TB NVMe SSD（足以容納具有完整鏈歷史記錄的節點以及未來的增長空間，請參閱下方的客戶端磁碟大小；閱讀更多關於[適合與不適合以太坊節點的 SSD](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038)）
 - 25+ MBit/s 頻寬
 
 ##### 建議規格
 
-目前針對節點營運者的硬體指南已在 [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) 中確立。對於全節點，建議如下：
+目前針對節點營運者的硬體指南已在 [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) 中確定。對於全節點，建議如下：
 
-- 4 核心以上的快速 CPU（如果進行驗證則需要 8 核心以上）
+- 4 核心以上的快速 CPU（如果進行驗證，則為 8 核心以上）
 - 32 GB RAM（如果進行驗證，建議使用 64 GB 以確保穩定性）
 - 4 TB NVMe SSD（不建議使用無 DRAM 和 QLC 硬碟）
-- 50 MBit/s 下載 / 15+ MBit/s 上傳頻寬（如果進行驗證則需要 25+ MBit/s 上傳）
+- 50 MBit/s 下載 / 15+ MBit/s 上傳頻寬（如果進行驗證，則為 25+ MBit/s 上傳）
 
-你選擇的同步模式和客戶端會影響空間要求，但我們在下方估算了每個客戶端所需的磁碟空間。
+你選擇的同步模式和客戶端將會影響空間要求，但我們在下方估算了每個客戶端所需的磁碟空間。
 
-| 客戶端     | 磁碟大小（快照同步） | 磁碟大小（完整歸檔） |
+| 客戶端 | 磁碟大小（全節點） | 磁碟大小（完整歸檔） |
 | ---------- | --------------------- | ------------------------ |
-| 貝蘇 (Besu)       | 800GB+                | 12TB+                    |
-| 艾瑞貢 (Erigon)     | 不適用                   | 2.5TB+                   |
-| Go 以太坊 (Geth)       | 500GB+                | 12TB+                    |
-| 奈瑟邁 (Nethermind) | 500GB+                | 12TB+                    |
-| 瑞斯 (Reth)       | 不適用                   | 2.2TB+                   |
+| Besu | 1.8TB+ | 12TB+ |
+| Erigon | 1.7TB+ | 2.7TB+ |
+| Geth | 1.8TB+ | 2TB+ |
+| Nethermind | 1.7TB+ | 14TB+ |
+| Reth | 2.2TB+ | 2.8TB+ |
 
-- 注意：艾瑞貢 (Erigon) 和瑞斯 (Reth) 不提供快照同步，但可以進行完整修剪（艾瑞貢約需 2TB，瑞斯約需 1.2TB）
+- 注意：全節點大小保留了完整的鏈歷史記錄，並由 [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) 在 2026 年 9 月進行測量。支援歷史記錄過期的客戶端需要的空間較少：僅包含合併後歷史記錄約需 1.2-1.4TB，或者使用滾動過期（Geth 尚未支援）約需 400-650GB。
+- 注意：歸檔大小來自各個客戶端的說明文件（[Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats)、[Erigon](https://docs.erigon.tech/get-started/hardware-requirements)、[Geth](https://geth.ethereum.org/docs/fundamentals/archive)、[Nethermind](https://docs.nethermind.io/get-started/system-requirements)、[Reth](https://reth.rs/run/system-requirements)）。Geth 的數據是針對其基於路徑的歸檔；如果同時保留 Trie 歷史記錄，則大約需要 6.5TB。Nethermind 的數據可追溯至 2023 年 7 月，此後有所增長。
 
-對於共識客戶端，空間要求也取決於客戶端實作和啟用的功能（例如驗證者罰沒者），但通常信標資料還需要額外 200GB。隨著驗證者數量的增加，頻寬負載也會隨之增長。你可以在[這份分析中找到有關共識客戶端要求的詳細資訊](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
+對於共識客戶端，空間要求也取決於客戶端實作和啟用的功能（例如驗證者罰沒者），但通常需要額外 15-90GB 用於信標資料，如果執行超級節點，則還需要大約 500GB 的資料塊資料。隨著驗證者數量的增加，頻寬負載也會隨之增長。你可以在[這份分析中找到有關共識客戶端要求的詳細資訊](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 
 #### 隨插即用解決方案 {#plug-and-play}
 

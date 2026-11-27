@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## ट्यूटोरियल: इथेरियम पर गैर-विनिमेय टोकन (ERC-721) के साथ निर्माण करें {#tutorials}
 
-- [Vyper ERC-721 अनुबंध वॉकथ्रू](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper में लिखे गए एक पूर्ण ERC-721 NFT अनुबंध का एनोटेट वॉकथ्रू।_
+- [Vyper ERC-721 अनुबंध वॉकथ्रू](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper में लिखे गए एक पूर्ण ERC-721 NFT अनुबंध का एक एनोटेटेड वॉकथ्रू।_
 - [NFT कैसे लिखें और तैनात करें (भाग 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– अपना पहला ERC-721 स्मार्ट अनुबंध लिखने और तैनात करने के लिए चरण-दर-चरण मार्गदर्शिका।_
-- [NFT कैसे मिंट करें (भाग 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– अपने तैनात स्मार्ट अनुबंध और Web3 का उपयोग करके ERC-721 NFT को मिंट करने का तरीका।_
-- [अपने वॉलेट में अपना NFT कैसे देखें (भाग 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– तैनाती के बाद मेटामास्क में अपने मिंट किए गए NFT को प्रदर्शित करने का तरीका।_
-- [NFT मिंटर ट्यूटोरियल](/developers/tutorials/nft-minter/) _– React फ्रंटएंड, मेटामास्क और Alchemy के साथ एक फुल-स्टैक NFT मिंटिंग विकेंद्रीकृत एप्लिकेशन (dapp) बनाएँ।_
+- [NFT कैसे मिंट करें (भाग 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– अपने तैनात स्मार्ट अनुबंध और Web3 का उपयोग करके ERC-721 NFT कैसे मिंट करें।_
+- [अपने वॉलेट में अपना NFT कैसे देखें (भाग 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– तैनाती के बाद मेटामास्क में अपना मिंट किया गया NFT कैसे प्रदर्शित करें।_

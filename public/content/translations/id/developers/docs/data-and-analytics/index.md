@@ -1,6 +1,6 @@
 ---
 title: Data dan analitik
-description: Cara mendapatkan analitik dan data onchain untuk digunakan dalam dapp Anda
+description: "Cara mendapatkan data onchain untuk dapp Anda: pengindeks, subgraf, penjelajah blok, platform analitik SQL, dan API untuk mengkueri dan menganalisis data Ethereum."
 lang: id
 ---
 
@@ -79,14 +79,14 @@ Untuk memulai, ikuti [panduan mulai cepat HyperIndex](https://docs.envio.dev/doc
 ## Bacaan Lebih Lanjut {#further-reading}
 
 - [Menjelajahi Data Kripto I: Arsitektur Aliran Data](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Ikhtisar Jaringan Graph](https://thegraph.com/docs/en/about/)
-- [Taman Bermain Kueri Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Gambaran Umum Jaringan Graph](https://thegraph.com/docs/en/about/)
+- [Penjelajah Graph](https://thegraph.com/explorer)
 - [Contoh kode API di EtherScan](https://etherscan.io/apis#contracts)
 - [Dokumentasi API di Blockscout](https://docs.blockscout.com/devs/apis)
 - [Penjelajah Rantai suar Beaconcha.in](https://beaconcha.in)
 - [Dasar-dasar Dune](https://docs.dune.com/#dune-basics)
 - [Panduan Mulai Cepat Ethereum SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
-- [Ikhtisar Jaringan SQD](https://docs.sqd.dev/)
+- [Gambaran Umum Jaringan SQD](https://docs.sqd.dev/)
 - [EVM Query Language](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 
 ## Tutorial: Data & analitik / SQL di Ethereum {#tutorials}

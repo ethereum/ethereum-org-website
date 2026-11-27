@@ -38,7 +38,7 @@ _Znáte komunitní zdroj, který vám pomohl? Upravte tuto stránku a přidejte 
 - [Nebezpečí integrace tokenů (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) – _OpenZeppelin_
 ## Související tutoriály {#related-tutorials}
 
-- [Kontrolní seznam pro integraci tokenů](/developers/tutorials/token-integration-checklist/) _– Seznam věcí, které je třeba zvážit při interakci s tokeny._
-- [Porozumění chytrému kontraktu tokenu ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Úvod do nasazení vašeho prvního chytrého kontraktu v testovací síti Etherea._
+- [Kontrolní seznam pro integraci tokenů](/developers/tutorials/token-integration-checklist/) _– Kontrolní seznam věcí, které je třeba zvážit při interakci s tokeny._
+- [Průvodce kontraktem ERC-20](/developers/tutorials/erc20-annotated-code/) _– Průvodce implementací kontraktu ERC-20 od OpenZeppelin s komentářem řádek po řádku._
 - [Převody a schvalování tokenů ERC-20 z chytrého kontraktu v Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Jak použít chytrý kontrakt k interakci s tokenem pomocí jazyka Solidity._
 - [Implementace trhu ERC-721 [návod]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Jak nabídnout tokenizované položky k prodeji na decentralizovaném inzertním portálu._

@@ -5,7 +5,7 @@
   "page-run-a-node-build-your-own-min-ram": "4 - 8 GB RAM",
   "page-run-a-node-build-your-own-ram-note-1": "스테이킹 관련 참고 사항 보기",
   "page-run-a-node-build-your-own-ram-note-2": "Raspberry Pi 관련 참고 사항 보기",
-  "page-run-a-node-build-your-own-min-ssd": "2 TB SSD",
+  "page-run-a-node-build-your-own-min-ssd": "4 TB SSD",
   "page-run-a-node-build-your-own-ssd-note": "필요한 쓰기 속도를 위해 SSD가 필수적입니다.",
   "page-run-a-node-build-your-own-recommended": "권장 사양",
   "page-run-a-node-build-your-own-nuc": "Intel NUC, 7세대 이상",

@@ -1,8 +1,9 @@
 import Image from "next/image"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import MainArticle from "@/components/MainArticle"
 import {
   Card,
@@ -42,8 +43,6 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-trillion-dollar-security")
 
   const { contributors } = await getAppPageContributorInfo(
@@ -68,6 +67,10 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
             className="max-h-[480px] w-full object-cover"
           />
           <div className="px-6 md:px-8">
+            <Breadcrumbs
+              slug="reports/trillion-dollar-security"
+              className="mt-6 [&_ol]:justify-center"
+            />
             <p className="mt-6 mb-2 text-center text-body-medium">
               {t("page-trillion-dollar-security-subtitle")}
             </p>
@@ -566,7 +569,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     "page-trillion-dollar-security-section-3-1-paragraph-2",
                     {
                       a: (chunks) => (
-                        <Link href="https://l2beat.com/">{chunks}</Link>
+                        <Link href="https://ethbeat.org/">{chunks}</Link>
                       ),
                     }
                   )}
@@ -888,8 +891,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-trillion-dollar-security")
 

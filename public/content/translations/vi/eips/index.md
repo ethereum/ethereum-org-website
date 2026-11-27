@@ -1,7 +1,7 @@
 ---
-title: Giới thiệu về Đề xuất Cải tiến Ethereum (EIP)
-metaTitle: Đề xuất Cải tiến Ethereum (EIP)
-description: Những thông tin cơ bản bạn cần biết để hiểu về EIP
+title: "Giới thiệu về Đề xuất Cải tiến Ethereum (EIP)"
+metaTitle: "Đề xuất Cải tiến Ethereum (EIP)"
+description: "Đề xuất Cải tiến Ethereum (EIP) là gì? Tìm hiểu cách các thay đổi đối với Ethereum được đề xuất, thảo luận và áp dụng, cũng như cách bạn có thể tham gia."
 lang: vi
 ---
 
@@ -15,7 +15,7 @@ Bất kỳ ai trong cộng đồng Ethereum đều có khả năng tạo một E
 
 Các EIP đóng vai trò trung tâm trong cách các thay đổi diễn ra và được ghi lại trên Ethereum. Chúng là cách để mọi người đề xuất, tranh luận và áp dụng các thay đổi. Có [nhiều loại EIP khác nhau](https://eips.ethereum.org/EIPS/eip-1#eip-types), bao gồm các EIP cốt lõi (core EIP) cho các thay đổi giao thức cấp thấp ảnh hưởng đến sự đồng thuận và yêu cầu nâng cấp mạng lưới như [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), và các ERC cho các tiêu chuẩn ứng dụng như [EIP-20](https://eips.ethereum.org/EIPS/eip-20) và [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Mỗi bản nâng cấp mạng lưới bao gồm một tập hợp các EIP cần được triển khai bởi mỗi [client Ethereum](/learn/#clients-and-nodes) trên mạng lưới. Điều này có nghĩa là để duy trì sự đồng thuận với các client khác trên Mạng chính Ethereum, các nhà phát triển client cần đảm bảo rằng họ đã triển khai tất cả các EIP được yêu cầu.
+Mỗi bản nâng cấp mạng lưới bao gồm một tập hợp các EIP cần được triển khai bởi mỗi [client Ethereum](/developers/docs/nodes-and-clients/) trên mạng lưới. Điều này có nghĩa là để duy trì sự đồng thuận với các client khác trên Mạng chính Ethereum, các nhà phát triển client cần đảm bảo rằng họ đã triển khai tất cả các EIP được yêu cầu.
 
 Cùng với việc cung cấp đặc tả kỹ thuật cho các thay đổi, các EIP là đơn vị xoay quanh việc quản trị diễn ra trong Ethereum: bất kỳ ai cũng có thể tự do đề xuất một EIP, và sau đó các bên liên quan khác nhau trong cộng đồng sẽ tranh luận để xác định xem nó có nên được áp dụng như một tiêu chuẩn hay được đưa vào một bản nâng cấp mạng lưới hay không. Bởi vì các EIP không cốt lõi không bắt buộc phải được áp dụng bởi tất cả các ứng dụng (ví dụ: có thể tạo ra một token có thể thay thế mà không triển khai EIP-20), nhưng các EIP cốt lõi phải được áp dụng rộng rãi (vì tất cả các node phải nâng cấp để tiếp tục là một phần của cùng một mạng lưới), các EIP cốt lõi yêu cầu sự đồng thuận rộng rãi hơn trong cộng đồng so với các EIP không cốt lõi.
 

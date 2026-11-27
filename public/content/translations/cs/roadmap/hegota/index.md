@@ -1,7 +1,7 @@
 ---
 title: "Hegotá"
 metaTitle: "Heze-Bogotá (Hegotá)"
-description: "Zjistěte více o aktualizaci protokolu Hegotá"
+description: "Hegotá je aktualizace Etherea plánovaná po Glamsterdamu. Zjistěte více o jejím hlavním bodu FOCIL pro odolnost vůči cenzuře a rámcových transakcích pro účty."
 lang: cs
 template: upgrade
 ---

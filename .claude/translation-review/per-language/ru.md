@@ -1,5 +1,40 @@
 # Russian (ru) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.5/10
+Scope: 15 markdown files (statelessness/privacy/merge/verkle, nodes-and-clients x3, frameworks, glossary, supply, transactions, data-structures x3, ethash), changed lines only; no JSON. Sweeps clean. 10 diffs read.
+
+**Fixed in this branch (~20 critical):** #113 tool/brand names back to Latin on changed lines: `nodes-and-clients/index.md` `МетаМаск`:95, `Эригон` x3:157, `Лодстар` x3:209; `run-a-node` table + note `Бесу/Эригон/Незермайнд/Рет` -> `Besu/Erigon/Nethermind/Reth` (98-105); `frameworks:109` `ОпенЗеппелин SDK` -> `OpenZeppelin SDK`; `statelessness:29` `Портал Нетворк` -> `Portal Network`. #112 long forms where English is bare: `nodes-and-clients:161` `уровня 1 (L1)`/`уровень 2 (L2)` -> `L1`/`L2`; `frameworks:59,64,133` `децентрализованных приложений (dapp)` -> `dapp` (dev had bare `dapp` at 64 and 133: regression); `nodes-as-a-service:62,323,378` `невзаимозаменяемых токенов (NFT)` -> `NFT`; `statelessness:29` `(DAO)`, `:81` `уровне 1 (L1)`.
+
+**Open (warnings):** `(EOA)` x3 and `(DA)` added to English long forms (`transactions:15,25,26,224`); `уровня 2 (L2)` kept where English says "layer 2"; glossary-capitalized mid-sentence `Газ`, `Протокола`, `Роллапов`, `Аккаунт`, `Блокчейне` (`merge`, `supply`, `run-a-node`; `Протокол` pre-existing on dev); period decimals (`1.8 ТБ`); `Обрезанная` -> `Очищенная` for pruned in the client table; `Предложение ETH` for supply; `чаевые` for fee tips is glossary-sanctioned (kept); unchanged lines still carry `Эригон`/`Бесу`/`Незермайнд`/`Лайтхаус`/`Теку`/`Нимбус` (client-diversity, archive-nodes, run-a-node body).
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.1/10
+Scope: 90 ru files (71 markdown, 19 JSON; incremental updates), changed lines only. Sampled ~20 markdown diffs (contributing, adding-layer-2s, anatomy, erc-7540, dencun, roadmap/security, zkevm, oracles, rust, 3 tutorials, bridges, community/research, staking, EIPs/governance) and ~250 JSON keys (glossary, glossary-tooltip, page-get-eth, page-learn, page-roadmap, page-layer-2-*, page-resources, quizzes). Sweeps clean: no U+3002/U+2060/foreign script, all JSON valid, no untranslated sentences.
+
+**Fixed in this branch:**
+
+- `glossary-tooltip.json` `shielded-pool-term` `Экранированный пул` -> `Защищенный пул` (matches `glossary.json`)
+
+**Open (warnings):**
+
+- `page-layer-2-networks-wallets-count`: `{count} кошельков` has no plural forms (rendered via `t.raw`, English is also plain); wrong for 1, 2-4, 21.
+- L1/L2 `уровня 2 (L2)` first-mention expansions persist in markdown (case-only change from `(l2)`); mixed with bare `L2` in the same files (#112).
+- `Правительство Эфириума` for "Ethereum governance" link text (`governance/index.md:185`, pre-existing; glossary `управление`).
+- `Слизер` / `Эхидна` are glossary-sanctioned transliterations of Slither / Echidna (ETHGlossary note says Latin is also common); kept.
+- Period decimal in `0.01 $`; `Эфириум` vs `Ethereum` mix and `Мейннет` vs `основная сеть` unchanged from dev.
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `уровне 1 (L1)` / `уровне 2 (L2)` first-mention expansions in 18 diagram values (#112); client names (Besu, Lighthouse, Teku, Reth, ...) transliterated per ETHGlossary (correct, #113); `Разработчики` x179 for builders vs glossary `сборщик` (glossary side is the outlier).
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: Ethereum to Efirium (79 sites, optimistic-rollups regression), equivocation to ekvivokatsiya, blob to blob x3. Open: uninflected Glamsterdam x~10, Predposylki vs Predvaritelnye trebovaniya, DevP2P casing.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: ekvivokaciya, sleshing. Open: seed rendered as seed-phrase and derive as vyvesti in key-derivation diagram, head four ways, decimal comma.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 8.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values` + full `scaling/plasma/index.md` retranslation.
 
@@ -123,3 +158,49 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - `page-organizations-enterprise.json` missing: placeholder-count gate bug (#85).
 - Prividium transliterated `привидиум`; `производственного уровня` for production-grade; glamsterdam `devnets` regressed to English.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 20 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** ETHGlossary filter outputs are saved in `/tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-ru/`.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warning: period decimal separator.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:344 `counter` "may cause an overflow" -> `может переполниться` (can overflow)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.2/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- The agent filed #101 as a warning; it is critical (see PR #19901). `Тейлор будет зачислено` grammar.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

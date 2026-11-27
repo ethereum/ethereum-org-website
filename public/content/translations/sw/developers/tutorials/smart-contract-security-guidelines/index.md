@@ -23,7 +23,7 @@ Nyaraka zinaweza kuandikwa katika viwango tofauti, na zinapaswa kusasishwa wakat
 
 - **Maelezo ya mfumo kwa lugha rahisi**, yakielezea kile ambacho mikataba inafanya na mawazo yoyote kwenye msingi wa msimbo.
 - **Michoro ya mpangilio na usanifu**, ikijumuisha mwingiliano wa mkataba na mashine ya hali ya mfumo. [Printa za Slither](https://github.com/crytic/slither/wiki/Printer-documentation) zinaweza kusaidia kuzalisha mipangilio hii.
-- **Nyaraka za kina za msimbo**, [umbizo la NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) linaweza kutumika kwa Solidity.
+- **Nyaraka za kina za msimbo**, [umbizo la NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html) linaweza kutumika kwa Solidity.
 
 ### Ukokotoaji wa mnyororoni dhidi ya nje ya mnyororo {#onchain-vs-offchain-computation}
 
@@ -72,15 +72,15 @@ Usanifu wa msingi wako wa msimbo unapaswa kufanya msimbo wako uwe rahisi kukagul
 
 ### Majaribio na uthibitishaji {#testing-and-verification}
 
-- **Andika majaribio ya kina ya vipengele.** Kifurushi kikubwa cha majaribio ni muhimu ili kuunda programu ya ubora wa juu.
-- **Andika ukaguzi na sifa maalum za [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) na [Manticore](https://github.com/trailofbits/manticore).** Zana za kiotomatiki zitasaidia kuhakikisha mkataba wako uko salama. Kagua mwongozo huu uliosalia ili kujifunza jinsi ya kuandika ukaguzi na sifa bora.
-- **Tumia [crytic.io](https://crytic.io/).** Crytic inaunganishwa na GitHub, inatoa ufikiaji wa vitambuzi vya kibinafsi vya Slither, na inaendesha ukaguzi wa sifa maalum kutoka kwa Echidna.
+- **Andika majaribio ya kina ya vipengele.** Kundi kubwa la majaribio ni muhimu ili kuunda programu yenye ubora wa juu.
+- **Andika ukaguzi na sifa maalum za [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) na [Medusa](https://github.com/crytic/medusa).** Zana za kiotomatiki zitasaidia kuhakikisha mkataba wako uko salama. Kagua sehemu iliyosalia ya mwongozo huu ili kujifunza jinsi ya kuandika ukaguzi na sifa zinazofaa.
+- **Endesha zana hizi katika ujumuishaji endelevu.** Kuendesha Slither na sifa zako za fuzzing kwenye kila ombi la kuvuta hunasa mizoroto kabla haijaunganishwa.
 
 ### Solidity {#solidity}
 
-- **Pendelea Solidity 0.5 badala ya 0.4 na 0.6.** Kwa maoni yetu, Solidity 0.5 ni salama zaidi na ina mbinu bora zilizojengewa ndani kuliko 0.4. Solidity 0.6 imethibitika kutokuwa thabiti sana kwa uzalishaji na inahitaji muda ili kukomaa.
-- **Tumia toleo thabiti kukusanya; tumia toleo la hivi punde kuangalia maonyo.** Hakikisha kuwa msimbo wako hauna masuala yaliyoripotiwa na toleo la hivi punde la kikusanyaji. Hata hivyo, Solidity ina mzunguko wa haraka wa matoleo na ina historia ya hitilafu za kikusanyaji, kwa hivyo hatupendekezi toleo la hivi punde kwa usambazaji (tazama [pendekezo la toleo la solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) la Slither).
-- **Usitumie assembly ya ndani.** Assembly inahitaji utaalamu wa EVM. Usiandike msimbo wa EVM ikiwa _hujabobea_ kwenye waraka wa manjano.
+- **Tumia toleo la hivi karibuni la Solidity 0.8.x ambalo halina hitilafu kali zinazojulikana.** Solidity 0.8 hukagua hesabu kwa mzidio na upungufu kwa chaguo-msingi, na matoleo ya zamani yanakosa ukaguzi mpya wa usalama wa kikusanyaji. Tazama [pendekezo la toleo la solc](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) la Slither.
+- **Tumia toleo thabiti kukusanya; tumia toleo la hivi punde kuangalia maonyo.** Hakikisha kuwa msimbo wako hauna masuala yaliyoripotiwa na toleo la hivi punde la kikusanyaji. Hata hivyo, Solidity ina mzunguko wa haraka wa kutoa matoleo na ina historia ya hitilafu za kikusanyaji, kwa hivyo epuka kusambaza ukitumia toleo lililotolewa siku chache zilizopita. Angalia [orodha ya hitilafu zinazojulikana za kikusanyaji](https://docs.soliditylang.org/en/latest/bugs.html) kwa toleo unalochagua.
+- **Usitumie inline assembly.** Assembly inahitaji utaalamu wa EVM. Usiandike msimbo wa EVM ikiwa _hujabobea_ kwenye waraka wa manjano.
 
 ## Miongozo ya usambazaji {#deployment-guidelines}
 

@@ -1,6 +1,6 @@
 ---
 title: "Decentralizovaná identita"
-description: "Co je to decentralizovaná identita a proč na ní záleží?"
+description: "Co je to decentralizovaná identita? Zjistěte, jak vám Ethereum umožňuje vlastnit a mít pod kontrolou svou identitu, pověření a data, aniž byste se museli spoléhat na centrálního poskytovatele."
 lang: cs
 template: use-cases
 sidebarDepth: 2

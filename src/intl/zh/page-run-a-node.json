@@ -5,7 +5,7 @@
   "page-run-a-node-build-your-own-min-ram": "4 - 8 GB 内存",
   "page-run-a-node-build-your-own-ram-note-1": "请参阅关于质押的说明",
   "page-run-a-node-build-your-own-ram-note-2": "请参阅关于 Raspberry Pi 的说明",
-  "page-run-a-node-build-your-own-min-ssd": "2 TB SSD",
+  "page-run-a-node-build-your-own-min-ssd": "4 TB SSD",
   "page-run-a-node-build-your-own-ssd-note": "必须使用 SSD 以满足所需的写入速度。",
   "page-run-a-node-build-your-own-recommended": "推荐配置",
   "page-run-a-node-build-your-own-nuc": "Intel NUC，第 7 代或更高版本",

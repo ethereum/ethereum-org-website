@@ -1,6 +1,6 @@
 ---
 title: Ukaimishaji wa uwekaji dhamana (kuweka hisa kama huduma)
-description: Muhtasari wa jinsi ya kuanza na ukaimishaji wa uwekaji dhamana
+description: Kuweka hisa kama huduma ni nini? Jifunze jinsi ya kuweka 32 ETH huku mwendeshaji wa nodi akiendesha mthibitishaji wako, na faida na hasara zake ukilinganisha na uwekaji dhamana wa nyumbani au wa pamoja.
 lang: sw
 template: staking
 image: /images/staking/leslie-saas.png

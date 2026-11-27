@@ -53,7 +53,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-この関数は、ヴォールトが保有する原資産の総量を返します。
+この関数は、ヴォールトが管理する原資産の総量を返します。これには、ヴォールトが他の場所で運用している資産や、手数料を差し引いた後の資産も含まれます。
 
 #### convertToShares {#convertoshares}
 
@@ -141,7 +141,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-この関数は、`owner`から`shares`をバーンし、正確に`assets`のトークンをヴォールトから`receiver`に送信します。
+この関数は、`owner` から `shares` をバーンし、ヴォールトから `receiver` へ正確に `assets` トークンを送信します。
 
 #### maxRedeem {#maxredeem}
 
@@ -185,7 +185,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### インターフェースのマップ {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### イベント {#events}
 

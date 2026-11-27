@@ -6,7 +6,7 @@ import {
   Sparkles,
 } from "lucide-react"
 import type { Metadata } from "next"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -28,7 +28,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
-import { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
 
@@ -37,7 +36,6 @@ import { L2BEAT_SOURCE, sumL2Breakdown } from "@/lib/utils/l2beat"
 import { getMetadata } from "@/lib/utils/metadata"
 import { metricStat } from "@/lib/utils/metrics"
 import { formatLargeUSD, numberFormat } from "@/lib/utils/numbers"
-import { isExternal } from "@/lib/utils/url"
 
 import ChecklistPanel from "../../_components/checklist-panel"
 import ComparisonTable from "../../_components/comparison-table"
@@ -81,8 +79,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-organizations-enterprise-l2s")
 
   const [l2beatData, l2beatActivity, { contributors }] = await Promise.all([
@@ -111,7 +107,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       ),
       label: t("page-organizations-enterprise-l2s-stat-uops"),
       ...L2BEAT_SOURCE,
-      sourceUrl: "https://l2beat.com/scaling/activity",
+      sourceUrl: "https://ethbeat.org/layer2s/activity",
     },
   ]
 
@@ -345,34 +341,41 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <ul className="ms-0 list-none divide-y divide-background">
                 {networks.map(({ key, href, logo }) => (
                   <li key={key} className="py-2 first:pt-0">
-                    <BaseLink
+                    <Card
                       href={href}
-                      hideArrow
-                      data-external={isExternal(href) || undefined}
-                      className="group/link -mx-3 flex flex-wrap items-center gap-4 rounded-2xl p-3 text-body no-underline hover:bg-background/50 hover:text-body"
+                      variant="ghost"
+                      size="sm"
+                      className="-mx-(--card-pad)"
                     >
-                      <Image
-                        src={logo}
-                        alt=""
-                        className="size-14 shrink-0 rounded-md bg-background object-contain p-1 shadow-md"
-                        sizes="56px"
-                      />
-                      <div className="min-w-48 flex-1">
-                        <h3 className="text-h5">
+                      <CardContent
+                        spacing="none"
+                        className="flex flex-wrap items-center gap-4"
+                      >
+                        <Image
+                          src={logo}
+                          alt=""
+                          className="size-14 shrink-0 rounded-md bg-background object-contain p-1 shadow-md"
+                          sizes="56px"
+                        />
+                        <div className="min-w-48 flex-1">
+                          <h3 className="text-h5">
+                            {t(
+                              `page-organizations-enterprise-l2s-deployment-${key}-name`
+                            )}
+                          </h3>
+                          <p className="text-body-medium">
+                            {t(
+                              `page-organizations-enterprise-l2s-deployment-${key}-description`
+                            )}
+                          </p>
+                        </div>
+                        <CardButtonFake variant="outline" size="sm">
                           {t(
-                            `page-organizations-enterprise-l2s-deployment-${key}-name`
+                            "page-organizations-enterprise-l2s-deployment-cta"
                           )}
-                        </h3>
-                        <p className="text-body-medium">
-                          {t(
-                            `page-organizations-enterprise-l2s-deployment-${key}-description`
-                          )}
-                        </p>
-                      </div>
-                      <CardButtonFake variant="outline" size="sm">
-                        {t("page-organizations-enterprise-l2s-deployment-cta")}
-                      </CardButtonFake>
-                    </BaseLink>
+                        </CardButtonFake>
+                      </CardContent>
+                    </Card>
                   </li>
                 ))}
               </ul>
@@ -413,8 +416,6 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-organizations-enterprise-l2s")
 

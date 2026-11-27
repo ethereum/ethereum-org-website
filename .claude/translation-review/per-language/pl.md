@@ -1,5 +1,51 @@
 # Polish (pl) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.9/10
+Scope: 15 markdown files, changed lines; 7 diffs read in full (nodes-and-clients, ethash, data-structures x3, frameworks, transactions).
+
+**Fixed in this branch (12 critical, #112):** `(NFT)` long form x2 (frameworks Crossmint, supply); `(DeFi)` x2 (GoldRush, supply); `(dapp)` long forms x3 (nodes-and-clients, Scaffold-ETH, Tenderly) -> `dapp`/`dappow`; nodes-and-clients `Maszyny Wirtualnej Ethereum (EVM)` -> `EVM`, `maksymalna wartosc do wyodrebnienia (MEV)` -> `MEV`; statelessness `zdecentralizowana organizacja autonomiczna (DAO)` -> `DAO` and `warstwy 1 (L1)` -> `weryfikacji L1`; privacy `zdecentralizowanych organizacjach autonomicznych (DAO)` -> `DAO`.
+
+**Open:** `(PBS)` appended to `separacja proponujacego i budujacego` (3 sites); `konto posiadane zewnetrznie` is the ETHGlossary EOA form; table row for ethrex misaligned (renders fine); `blockchain` vs `blockchain-a` declension in nodes-and-clients.
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.1/10
+Scope: 19 JSON namespaces (diffs read in full) + 71 markdown pages (diffs read in full, changed lines only). 6 critical fixed, 0 open critical.
+
+**Fixed in this branch:**
+
+- `glossary.json` `byzantium-fork-definition`: English fragment `Difficulty Bomb Delay and Block Reward Reduction` left in the Polish sentence -> `czyli opóźnienie bomby trudności i zmniejszenie nagrody za blok`
+- `glossary.json` `shielded-pool-term` `Pula osłonięta` -> `Osłonięta pula` (matches glossary-tooltip.json)
+- `page-layer-2-networks.json` `page-layer-2-networks-main-network` `Główna sieć` -> `Sieć główna` (ETHGlossary mainnet)
+- `verifying/index.md`: `binarnego interfejsu aplikacji (ABI)` and 2x `interfejsu programowania aplikacji (API)` expansions reverted to bare `ABI` / `API` (English is bare)
+- `programming-languages/javascript/index.md` heading `klienty` -> `klienci`
+- `page-get-eth.json` `page-get-eth-p2p-trusted-desc` `Ustalcie` (2nd plural) -> `Ustal` (rest of sentence is 2nd singular)
+
+**Open (warnings):**
+
+- `walidatory`/`walidatorzy` wobble: `roadmap/security` heading `Odporne walidatory` (was `Odporni walidatorzy`)
+- `developers/docs/bridges` reading list: external article titles reverted from Polish to the English originals (matches en)
+- `about/index.md` `Śledź postępy w Figma` (was `w Figmie`, uninflected); `a-developers-guide-to-ethereum-part-one` `Na twoim komputerze` lowercase `twoim`
+- `contributing/index.md` `technologiami open-source i sanctuary` leaves `sanctuary` bare
+
+**Notes:**
+
+- ETHGlossary `non-fungible token` = `niewymienny token` vs `fungible token` = `token zamienny` (inconsistent pair); the repo uses both `niewymienny` (glossary, nft page) and `niezamienny` (older pages). Not changed.
+- No U+3002, U+2060 or foreign-script characters in changed lines.
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `pretendent` for challenger (claimant sense; `kwestionujacy` reads better), `Wszystkie {steps} krokow ... jest` agreement, `Budowniczowie` per glossary `budowniczy`.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: klient warstwy wykonawczej x4, typos falzywych/przesylaja, mining to kopanie (SQL), klientow konsensusu. Open: wsad vs partia split across zk/optimistic pages, walidatory/walidatorzy, tu/impersonal mix in erc-721.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.8/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: pokwitowania replacing paragony (22 forms), ekwiwokacja. Open: missing `few` plural in 2 keys, gossip five ways, storage slot vs memory.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.8/10
@@ -153,3 +199,54 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 - Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
 
 - Warning: enterprise JSON compare-row-auditability `Publiczne i weryfikowalne` should agree with feminine row label (`Publiczna i weryfikowalna`).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.2/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 10 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The Polish output is accurate, idiomatic and consistent with the glossary. The only critical items are three founders tag labels the pipeline left in English across all locales. The rest are word-choice warnings, mainly the false friend `legalny` in scam-token-tricks.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `podpisananą` typo changed to `podpisaną` (sending:202)
+
+**Notes:**
+
+- Warnings: NFT gender drift (mint, neuter vs masculine); MetaMask UI labels given only in Polish.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:35 "a major reason" overstated as `głównym powodem` -> `jednym z głównych powodów`
+
+**Open / notes:**
+
+- echidna:413 `f` switches to feminine (`wycofana`) vs neuter on L411 -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `kierują tłumaczeniami` shifts "guide"; `Wdrożenie.` bare noun in a step list.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

@@ -1,10 +1,10 @@
 ---
 title: "브릿지"
-description: "개발자를 위한 브릿징 개요"
+description: "브릿지에 대한 개발자 가이드: 크로스체인 메시징 및 토큰 브릿징의 작동 방식, 브릿지 유형 및 신뢰 가정, 그리고 이를 탈중앙화 애플리케이션 (dapp)에 통합하는 방법."
 lang: ko
 ---
 
-레이어 1 (l1) 블록체인과 레이어 2 (l2) [확장성](/developers/docs/scaling/) 솔루션이 확산되고 크로스체인으로 전환하는 탈중앙화 애플리케이션 (dapp)의 수가 지속적으로 증가함에 따라, 체인 간 통신 및 자산 이동의 필요성은 네트워크 인프라의 필수적인 부분이 되었습니다. 이를 가능하게 돕는 다양한 유형의 브릿지가 존재합니다.
+레이어 1 (L1) 블록체인과 레이어 2 (L2) [확장성](/developers/docs/scaling/) 솔루션이 확산되고 크로스체인으로 전환하는 탈중앙화 애플리케이션 (dapp)의 수가 지속적으로 증가함에 따라, 체인 간 통신 및 자산 이동의 필요성은 네트워크 인프라의 필수적인 부분이 되었습니다. 이를 가능하게 돕는 다양한 유형의 브릿지가 존재합니다.
 
 ## 브릿지의 필요성 {#need-for-bridges}
 
@@ -24,7 +24,7 @@ lang: ko
 
 - 체인 간 모든 데이터, 정보 및 자산의 전송.
 - 브릿지가 프로토콜이 제공할 수 있는 설계 공간을 확장함에 따라 프로토콜의 새로운 기능과 사용 사례를 열어줍니다. 예를 들어, 원래 [이더리움](/) 메인넷에 배포된 이자 농사 프로토콜은 모든 EVM 호환 체인에 걸쳐 유동성 풀을 제공할 수 있습니다.
-- 다양한 블록체인의 강점을 활용할 수 있는 기회. 예를 들어, 개발자는 롤업과 사이드체인에 탈중앙화 애플리케이션 (dapp)을 배포하여 다양한 레이어 2 (l2) 솔루션이 제공하는 더 낮은 수수료의 이점을 누릴 수 있으며, 사용자는 이들 사이를 브릿지로 연결할 수 있습니다.
+- 다양한 블록체인의 강점을 활용할 수 있는 기회. 예를 들어, 개발자는 롤업과 사이드체인에 탈중앙화 애플리케이션 (dapp)을 배포하여 다양한 레이어 2 (L2) 솔루션이 제공하는 더 낮은 수수료의 이점을 누릴 수 있으며, 사용자는 이들 사이를 브릿지로 연결할 수 있습니다.
 - 새로운 제품을 구축하기 위한 다양한 블록체인 생태계 개발자 간의 협업.
 - 다양한 생태계의 사용자와 커뮤니티를 자신의 탈중앙화 애플리케이션 (dapp)으로 유치.
 
@@ -51,7 +51,7 @@ lang: ko
 
 - **보안 –** 누가 시스템을 검증하나요? 외부 검증자에 의해 보호되는 브릿지는 일반적으로 블록체인의 검증자에 의해 로컬 또는 네이티브로 보호되는 브릿지보다 덜 안전합니다.
 - **편의성 –** 트랜잭션을 완료하는 데 얼마나 걸리며, 사용자가 서명해야 하는 트랜잭션은 몇 개인가요? 개발자의 경우 브릿지를 통합하는 데 얼마나 걸리며, 그 과정은 얼마나 복잡한가요?
-- **연결성 –** 브릿지가 연결할 수 있는 다양한 목적지 체인(예: 롤업, 사이드체인, 기타 레이어 1 (l1) 블록체인 등)은 무엇이며, 새로운 블록체인을 통합하는 것은 얼마나 어려운가요?
+- **연결성 –** 브릿지가 연결할 수 있는 다양한 목적지 체인(예: 롤업, 사이드체인, 기타 레이어 1 (L1) 블록체인 등)은 무엇이며, 새로운 블록체인을 통합하는 것은 얼마나 어려운가요?
 - **더 복잡한 데이터를 전달하는 능력 –** 브릿지가 체인 간에 메시지와 더 복잡한 임의의 데이터를 전송할 수 있나요, 아니면 크로스체인 자산 전송만 지원하나요?
 - **비용 효율성 –** 브릿지를 통해 체인 간에 자산을 전송하는 데 비용이 얼마나 드나요? 일반적으로 브릿지는 가스 비용과 특정 경로의 유동성에 따라 고정 또는 변동 수수료를 부과합니다. 또한 보안을 보장하는 데 필요한 자본을 기반으로 브릿지의 비용 효율성을 평가하는 것도 중요합니다.
 
@@ -120,19 +120,19 @@ lang: ko
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## 더 읽어보기 {#further-reading}
+## 더 읽을거리 {#further-reading}
 
 - [블록체인 브릿지](/bridges/) – ethereum.org
-- [L2BEAT 브릿지 위험 프레임워크](https://l2beat.com/bridges/summary)
-- [블록체인 브릿지: 암호화폐 네트워크의 네트워크 구축(Blockchain Bridges: Building Networks of Cryptonetworks)](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 2021년 9월 8일 – Dmitriy Berenzon
-- [상호운용성 트릴레마(The Interoperability Trilemma)](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 2021년 10월 1일 – Arjun Bhuptani
-- [클러스터: 신뢰 기반 및 신뢰 최소화 브릿지가 멀티체인 환경을 형성하는 방법(Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape)](https://blog.celestia.org/clusters/) - 2021년 10월 4일 – Mustafa Al-Bassam
-- [LI.FI: 브릿지에서 신뢰는 스펙트럼이다(LI.FI: With Bridges, Trust is a Spectrum)](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 2022년 4월 28일 – Arjun Chand
-- [롤업 상호운용성 솔루션의 현황(The State Of Rollup Interoperability Solutions)](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 2024년 6월 20일 – Alex Hook
-- [안전한 크로스체인 상호운용성을 위한 공유 보안 활용: 라그랑주 상태 위원회 및 그 너머(Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond)](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 2024년 6월 12일 – Emmanuel Awosika
+- [ETHBEAT 브릿지 위험 프레임워크](https://ethbeat.org/interop/summary)
+- [블록체인 브릿지: 암호화폐 네트워크의 네트워크 구축](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 2021년 9월 8일 – Dmitriy Berenzon
+- [상호운용성 트릴레마](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 2021년 10월 1일 – Arjun Bhuptani
+- [클러스터: 신뢰 및 신뢰 최소화 브릿지가 멀티체인 환경을 형성하는 방법](https://blog.celestia.org/clusters/) - 2021년 10월 4일 – Mustafa Al-Bassam
+- [LI.FI: 브릿지에서 신뢰는 스펙트럼입니다](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 2022년 4월 28일 – Arjun Chand
+- [롤업 상호운용성 솔루션의 현황](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 2024년 6월 20일 – Alex Hook
+- [안전한 크로스체인 상호운용성을 위한 공유 보안 활용: 라그랑주 상태 위원회와 그 너머](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 2024년 6월 12일 – Emmanuel Awosika
 
 또한, 브릿지에 대한 더 깊은 이해를 돕는 [James Prestwich](https://twitter.com/_prestwich)의 통찰력 있는 프레젠테이션 몇 가지를 소개합니다:
 
-- [장벽이 아닌 브릿지 구축하기(Building Bridges, Not Walled Gardens)](https://youtu.be/ZQJWMiX4hT0)
-- [브릿지 분석(Breaking Down Bridges)](https://youtu.be/b0mC-ZqN8Oo)
-- [왜 브릿지가 불타고 있는가(Why are the Bridges Burning)](https://youtu.be/c7cm2kd20j8)
+- [폐쇄된 생태계가 아닌 브릿지 구축하기](https://youtu.be/ZQJWMiX4hT0)
+- [브릿지 분석하기](https://youtu.be/b0mC-ZqN8Oo)
+- [브릿지가 불타는 이유](https://youtu.be/c7cm2kd20j8)

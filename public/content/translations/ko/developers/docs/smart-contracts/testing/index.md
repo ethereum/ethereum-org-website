@@ -165,7 +165,7 @@ Solidity 스마트 컨트랙트를 위한 단위 테스트 프레임워크는 �
 
 정적 분석기는 스마트 컨트랙트의 소스 코드를 입력으로 받아 컨트랙트가 속성을 충족하는지 여부를 선언하는 결과를 출력합니다. 동적 분석과 달리 정적 분석은 정확성을 분석하기 위해 컨트랙트를 실행하지 않습니다. 대신 정적 분석은 실행 중에 스마트 컨트랙트가 취할 수 있는 모든 가능한 경로에 대해 추론합니다(즉, 소스 코드의 구조를 검사하여 런타임 시 컨트랙트 작업에 어떤 의미가 있는지 결정함).
 
-[린팅(Linting)](https://www.perforce.com/blog/qac/what-is-linting)과 [정적 테스트](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)는 컨트랙트에서 정적 분석을 실행하는 일반적인 방법입니다. 둘 다 컴파일러가 출력하는 [추상 구문 트리(abstract syntax trees)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) 및 [제어 흐름 그래프(control flow graphs)](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)와 같은 컨트랙트 실행의 저수준 표현을 분석해야 합니다.
+[린팅(Linting)](https://www.perforce.com/blog/qac/what-is-linting)과 [정적 테스트](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)는 컨트랙트에서 정적 분석을 실행하는 일반적인 방법입니다. 둘 다 컴파일러가 출력하는 [추상 구문 트리(abstract syntax trees)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) 및 [제어 흐름 그래프(control flow graphs)](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/)와 같은 컨트랙트 실행의 저수준 표현을 분석해야 합니다.
 
 대부분의 경우 정적 분석은 안전하지 않은 구조의 사용, 구문 오류 또는 컨트랙트 코드의 코딩 표준 위반과 같은 안전 문제를 감지하는 데 유용합니다. 그러나 정적 분석기는 일반적으로 더 깊은 취약점을 감지하는 데 불완전한 것으로 알려져 있으며 과도한 오탐을 생성할 수 있습니다.
 
@@ -238,7 +238,7 @@ Solidity 스마트 컨트랙트를 위한 단위 테스트 프레임워크는 �
 
 앞서 언급했듯이 엄격한 테스트가 컨트랙트에 버그가 없음을 보장하는 경우는 거의 없습니다. 정형 검증 접근 방식은 정확성에 대한 더 강력한 보장을 제공할 수 있지만 현재 사용하기 어렵고 상당한 비용이 발생합니다.
 
-그럼에도 불구하고 독립적인 코드 리뷰를 받음으로써 컨트랙트 취약점을 잡을 가능성을 더욱 높일 수 있습니다. [스마트 컨트랙트 감사](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/)와 [버그 바운티](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)는 다른 사람들이 컨트랙트를 분석하도록 하는 두 가지 방법입니다.
+그럼에도 불구하고 독립적인 코드 리뷰를 받음으로써 컨트랙트 취약점을 잡을 가능성을 더욱 높일 수 있습니다. [스마트 컨트랙트 감사](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/)와 [버그 바운티](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)는 다른 사람들이 컨트랙트를 분석하도록 하는 두 가지 방법입니다.
 
 감사는 스마트 컨트랙트의 보안 결함 및 잘못된 개발 관행 사례를 찾는 데 경험이 있는 감사자가 수행합니다. 감사에는 일반적으로 전체 코드베이스에 대한 수동 검토뿐만 아니라 테스트(및 가능한 경우 정형 검증)가 포함됩니다.
 
@@ -276,7 +276,7 @@ Solidity 스마트 컨트랙트를 위한 단위 테스트 프레임워크는 �
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Solidity 스마트 컨트랙트 프로그래밍 언어에 대한 스타일 및 보안 모범 사례를 적용하기 위한 린터입니다._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Web3 스마트 컨트랙트 보안 및 개발을 위해 특별히 설계된 Rust 기반 정적 분석기입니다._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Web3 스마트 컨트랙트 보안 및 개발을 위해 특별히 설계된 Rust 기반 정적 분석기입니다._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _취약점 및 코드 품질 탐지기, 코드에서 유용한 정보를 추출하기 위한 프린터, 사용자 지정 하위 모듈 작성 지원을 갖춘 Python 기반 정적 분석 프레임워크입니다._
 
@@ -298,7 +298,6 @@ Solidity 스마트 컨트랙트를 위한 단위 테스트 프레임워크는 �
 
 - [다양한 테스트 제품의 개요 및 비교](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [에키드나를 사용하여 스마트 컨트랙트를 테스트하는 방법](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [맨티코어를 사용하여 스마트 컨트랙트 버그를 찾는 방법](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [슬리더를 사용하여 스마트 컨트랙트 버그를 찾는 방법](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [테스트를 위해 Solidity 컨트랙트를 모킹(mock)하는 방법](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Foundry를 사용하여 Solidity에서 단위 테스트를 실행하는 방법](https://www.rareskills.io/post/foundry-testing-solidity)

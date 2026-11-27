@@ -1,7 +1,7 @@
 ---
 title: Informazioni su ethereum.org
 metaTitle: Chi siamo
-description: Informazioni sul team, sulla community e sulla missione di ethereum.org
+description: "Incontra il team e la community dietro ethereum.org: la nostra missione, come il sito è costruito e governato apertamente e come puoi aiutare a migliorarlo."
 lang: it
 ---
 
@@ -107,9 +107,11 @@ Utilizziamo un insieme di [principi di design](/contributing/design-principles/)
 
 ## Design system {#design-system}
 
-Abbiamo creato e rilasciato un [design system](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) per distribuire le funzionalità più rapidamente e consentire ai membri della community di partecipare al design aperto di ethereum.org.
+Abbiamo creato e rilasciato un [design system](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) per rilasciare funzionalità più rapidamente e consentire ai membri della community di partecipare al design aperto di ethereum.org.
 
-Vuoi partecipare? [Seguici su Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) e unisciti alla conversazione nel nostro [canale Discord #design](/discord/).
+Vuoi partecipare? [Seguici su Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) e unisciti alla conversazione nel nostro [canale Discord #design](/discord/).
+
+Cerchi loghi, illustrazioni o altri file del brand? Scaricali dalla nostra [pagina degli asset](/assets/).
 
 ## Guida di stile {#style-guide}
 
@@ -122,6 +124,10 @@ Accogliamo con favore i feedback sui nostri principi di design, sul design syste
 ## Licenza {#license}
 
 Il sito web ethereum.org è open source e creato sotto [Licenza MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), se non diversamente specificato. Maggiori informazioni sui [termini di utilizzo](/terms-of-use/) di ethereum.org.
+
+## La tua privacy {#your-privacy}
+
+ethereum.org utilizza Matomo per analisi che preservano la privacy e puoi disattivarlo in qualsiasi momento. Leggi la nostra [informativa sui cookie](/cookie-policy/) e l'[informativa sulla privacy](/privacy-policy/) per i dettagli.
 
 ## Posizioni aperte {#open-jobs}
 

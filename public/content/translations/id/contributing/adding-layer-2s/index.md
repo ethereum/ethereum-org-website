@@ -8,7 +8,7 @@ Kami ingin memastikan bahwa kami mencantumkan sumber daya terbaik yang memungkin
 
 Siapa pun bebas menyarankan penambahan lapisan 2 di ethereum.org. Jika ada lapisan 2 yang terlewatkan oleh kami, **[silakan sarankan](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
-Saat ini kami mencantumkan l2 di halaman berikut:
+Saat ini kami mencantumkan L2 di halaman berikut:
 
 - [Rollup Optimistic](/developers/docs/scaling/optimistic-rollups/)
 - [Rollup tanpa pengetahuan](/developers/docs/scaling/zk-rollups/)
@@ -20,10 +20,10 @@ Lapisan 2 adalah paradigma yang relatif baru dan menarik untuk Ethereum. Kami te
 
 ### Kriteria untuk pencantuman: hal-hal yang wajib ada {#criteria-for-inclusion-the-must-haves}
 
-**Tercantum di L2BEAT**
+**Terdaftar di ETHBEAT**
 
-- Agar dapat dipertimbangkan, proyek ini harus tercantum di [L2BEAT](https://l2beat.com). L2BEAT memberikan penilaian risiko yang kuat terhadap proyek lapisan 2 yang kami andalkan untuk mengevaluasi proyek l2. **Jika proyek tidak ditampilkan di L2BEAT, kami tidak akan mencantumkannya sebagai l2 di ethereum.org.**
-- [Pelajari cara menambahkan proyek l2 Anda ke L2BEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Agar dapat dipertimbangkan, proyek ini harus terdaftar di [ETHBEAT](https://ethbeat.org). ETHBEAT menyediakan penilaian risiko yang kuat terhadap proyek lapisan 2 yang kami andalkan untuk mengevaluasi proyek L2. **Jika proyek tidak ditampilkan di ETHBEAT, kami tidak akan mencantumkannya sebagai L2 di ethereum.org.**
+- [Pelajari cara menambahkan proyek L2 Anda ke ETHBEAT](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Sumber terbuka**
 
@@ -40,25 +40,25 @@ _Kami tidak menganggap solusi penskalaan lain yang tidak menggunakan Ethereum un
 
 **Ethereum untuk ketersediaan data**
 
-- Ketersediaan data adalah faktor pembeda yang penting antara solusi penskalaan lainnya dan lapisan 2. Sebuah proyek **wajib** menggunakan Mainnet Ethereum untuk ketersediaan data agar dapat dipertimbangkan untuk dicantumkan.
+- Ketersediaan data adalah faktor pembeda yang penting antara solusi penskalaan lainnya dan lapisan 2. Sebuah proyek **harus** menggunakan Mainnet Ethereum untuk ketersediaan data agar dapat dipertimbangkan untuk dicantumkan.
 
 **Jembatan**
 
 - Bagaimana pengguna dapat bergabung ke lapisan 2?
 
-**Tanggal proyek ditayangkan**
+**Tanggal proyek mulai tayang**
 
 - Lapisan 2 yang telah "tayang" di Mainnet selama lebih dari 6 bulan
 
-- Proyek yang lebih baru yang belum teruji oleh pengguna memiliki kemungkinan lebih kecil untuk dicantumkan.
+- Proyek yang lebih baru yang belum teruji di lapangan oleh pengguna memiliki kemungkinan lebih kecil untuk dicantumkan.
 
 **Audit keamanan eksternal**
 
-- Baik melalui audit, tim keamanan internal, atau metode lainnya, keamanan produk Anda harus diuji secara andal. Hal ini mengurangi risiko bagi pengguna kami dan menunjukkan kepada kami bahwa Anda menganggap serius masalah keamanan.
+- Baik melalui audit, tim keamanan internal, atau metode lain, keamanan produk Anda harus diuji secara andal. Hal ini mengurangi risiko bagi pengguna kami dan menunjukkan kepada kami bahwa Anda menganggap serius masalah keamanan.
 
 **Basis pengguna yang berkelanjutan**
 
-- Kami akan mempertimbangkan metrik seperti riwayat total nilai terkunci (TVL), statistik transaksi, dan apakah proyek tersebut digunakan oleh perusahaan atau proyek yang dikenal
+- Kami akan mempertimbangkan metrik seperti riwayat TVL, statistik transaksi, dan apakah proyek tersebut digunakan oleh perusahaan atau proyek yang dikenal
 
 **Tim pengembangan yang aktif**
 
@@ -66,7 +66,7 @@ _Kami tidak menganggap solusi penskalaan lain yang tidak menggunakan Ethereum un
 
 **Penjelajah blok**
 
-- Proyek yang dicantumkan mewajibkan adanya penjelajah blok yang berfungsi untuk memungkinkan pengguna menavigasi rantai dengan mudah.
+- Proyek yang dicantumkan mewajibkan penjelajah blok yang berfungsi untuk memungkinkan pengguna menavigasi rantai dengan mudah.
 
 ### Kriteria lainnya: hal-hal yang sebaiknya ada {#nice-to-haves}
 
@@ -84,7 +84,7 @@ _Kami tidak menganggap solusi penskalaan lain yang tidak menggunakan Ethereum un
 
 **Dukungan dompet asli**
 
-- Apakah ada dompet yang mendukung l2 secara asli?
+- Apakah ada dompet yang mendukung L2 secara asli?
 
 ## Tambahkan lapisan 2 Anda {#add-exchange}
 

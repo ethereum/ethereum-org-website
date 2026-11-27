@@ -165,7 +165,7 @@ function auctionEnd() external {
 
 Статичний аналізатор приймає на вхід вихідний код смарт-контракту і видає результати, які вказують, чи задовольняє контракт властивість, чи ні. На відміну від динамічного аналізу, статичний аналіз не передбачає виконання контракту для аналізу його правильності. Натомість статичний аналіз міркує про всі можливі шляхи, якими смарт-контракт може піти під час виконання (тобто шляхом вивчення структури вихідного коду, щоб визначити, що це означатиме для роботи контракту під час виконання).
 
-[Лінтинг](https://www.perforce.com/blog/qac/what-is-linting) та [статичне тестування](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) є поширеними методами виконання статичного аналізу контрактів. Обидва вимагають аналізу низькорівневих представлень виконання контракту, таких як [абстрактні синтаксичні дерева](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) та [графи потоку керування](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/), які виводить компілятор.
+[Лінтинг](https://www.perforce.com/blog/qac/what-is-linting) та [статичне тестування](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) є поширеними методами виконання статичного аналізу контрактів. Обидва вимагають аналізу низькорівневих представлень виконання контракту, таких як [абстрактні синтаксичні дерева](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) та [графи потоку керування](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/), які виводить компілятор.
 
 У більшості випадків статичний аналіз корисний для виявлення проблем безпеки, таких як використання небезпечних конструкцій, синтаксичні помилки або порушення стандартів кодування в коді контракту. Однак відомо, що статичні аналізатори, як правило, ненадійні у виявленні глибших уразливостей і можуть видавати надмірну кількість хибнопозитивних результатів.
 
@@ -238,7 +238,7 @@ function auctionEnd() external {
 
 Як уже згадувалося, ретельне тестування рідко може гарантувати відсутність помилок у контракті; підходи формальної верифікації можуть надати сильніші гарантії правильності, але наразі вони складні у використанні та вимагають значних витрат.
 
-Тим не менш, ви можете ще більше збільшити ймовірність виявлення вразливостей контракту, отримавши незалежну перевірку коду. [Аудити смарт-контрактів](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) та [програми винагород за знайдені помилки (bug bounties)](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) — це два способи залучити інших до аналізу ваших контрактів.
+Тим не менш, ви можете ще більше збільшити ймовірність виявлення вразливостей контракту, отримавши незалежну перевірку коду. [Аудити смарт-контрактів](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) та [програми винагород за знайдені помилки (bug bounties)](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) — це два способи залучити інших до аналізу ваших контрактів.
 
 Аудити проводяться аудиторами, які мають досвід пошуку недоліків безпеки та поганих практик розробки в смарт-контрактах. Аудит зазвичай включає тестування (і, можливо, формальну верифікацію), а також ручну перевірку всієї кодової бази.
 
@@ -276,7 +276,7 @@ function auctionEnd() external {
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** — _Лінтер для забезпечення дотримання найкращих практик стилю та безпеки для мови програмування смарт-контрактів Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** — _Статичний аналізатор на базі Rust, спеціально розроблений для безпеки та розробки смарт-контрактів Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** — _Статичний аналізатор на базі Rust, спеціально розроблений для безпеки та розробки смарт-контрактів Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** — _Фреймворк для статичного аналізу на базі Python із детекторами вразливостей та якості коду, принтерами для вилучення корисної інформації з коду та підтримкою написання власних підмодулів._
 
@@ -298,10 +298,9 @@ function auctionEnd() external {
 
 - [Огляд та порівняння різних продуктів для тестування](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Як використовувати Ехідна для тестування смарт-контрактів](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Як використовувати Мантікора для пошуку помилок у смарт-контрактах](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Як використовувати Слізер для пошуку помилок у смарт-контрактах](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Як створювати макети (mock) контрактів Solidity для тестування](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Як виконувати модульні тести в Solidity за допомогою Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
+- [Як запускати модульні тести в Solidity за допомогою Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Додаткові матеріали {#further-reading}
 

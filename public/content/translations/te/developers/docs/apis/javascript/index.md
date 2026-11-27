@@ -300,9 +300,7 @@ _మీకు సహాయపడిన కమ్యూనిటీ వనరు 
 
 ## సంబంధిత ట్యుటోరియల్స్ {#related-tutorials}
 
-- [JavaScriptలో ఎథీరియం బ్లాక్‌చైన్‌ను ఉపయోగించడానికి Web3jsని సెటప్ చేయండి](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– మీ ప్రాజెక్ట్‌లో web3.jsని సెటప్ చేయడానికి సూచనలు._
-- [JavaScript నుండి స్మార్ట్ కాంట్రాక్ట్‌ను కాల్ చేయడం](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI టోకెన్‌ను ఉపయోగించి, JavaScriptని ఉపయోగించి కాంట్రాక్ట్‌ల ఫంక్షన్‌ను ఎలా కాల్ చేయాలో చూడండి._
-- [web3 మరియు Alchemyని ఉపయోగించి లావాదేవీలను పంపడం](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– బ్యాకెండ్ నుండి లావాదేవీలను పంపడానికి దశల వారీ మార్గదర్శి._
+- [Web3 మరియు Alchemy ఉపయోగించి లావాదేవీలను పంపడం](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– బ్యాకెండ్ నుండి లావాదేవీలను పంపడం కోసం దశలవారీ మార్గదర్శి._
 
 ## ట్యుటోరియల్స్: ఎథీరియంపై JavaScript APIలు & WebSockets {#tutorials}
 

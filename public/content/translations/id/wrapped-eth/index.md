@@ -1,7 +1,7 @@
 ---
 title: Ether terbungkus (WETH)
 metaTitle: Apa itu Ether Terbungkus (WETH)
-description: Pengantar tentang Ether terbungkus (WETH)—pembungkus yang kompatibel dengan ERC-20 untuk ether (ETH). 
+description: "Pengantar tentang Ether terbungkus (WETH)—pembungkus yang kompatibel dengan ERC-20 untuk ether (ETH)."
 lang: id
 ---
 
@@ -31,7 +31,7 @@ Anda dapat membuka bungkus WETH menjadi ETH dengan menggunakan kontrak pintar WE
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Ether Terbungkus (WETH)**                                                                                                                                                                                                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Pasokan     | [Pasokan ETH](/eth/supply/) dikelola oleh protokol [Ethereum](/). [Penerbitan](/roadmap/merge/issuance) ETH ditangani oleh validator Ethereum saat memproses transaksi dan membuat blok.                           | WETH adalah token ERC-20 yang pasokannya dikelola oleh kontrak pintar. Unit baru WETH diterbitkan oleh kontrak setelah menerima setoran ETH dari pengguna, atau unit WETH dibakar ketika pengguna ingin menukarkan WETH dengan ETH.                                                                                                                                        |
+| Pasokan     | [Pasokan ETH](/what-is-ether/supply/) dikelola oleh protokol [Ethereum](/). [Penerbitan](/roadmap/merge/issuance) ETH ditangani oleh validator Ethereum saat memproses transaksi dan membuat blok.                           | WETH adalah token ERC-20 yang pasokannya dikelola oleh kontrak pintar. Unit baru WETH diterbitkan oleh kontrak setelah menerima setoran ETH dari pengguna, atau unit WETH dibakar ketika pengguna ingin menukarkan WETH dengan ETH.                                                                                                                                        |
 | Kepemilikan  | Kepemilikan dikelola oleh protokol Ethereum melalui saldo akun Anda.  | Kepemilikan WETH dikelola oleh kontrak pintar token WETH, yang diamankan oleh protokol Ethereum.                                                                                                                                         |
 | Gas        | Ether (ETH) adalah unit pembayaran yang diterima untuk komputasi di jaringan Ethereum. Biaya gas didenominasi dalam Gwei (sebuah unit dari ether).                                                                                    | Membayar gas dengan token WETH tidak didukung secara bawaan.                                                                                                                                                                                              |
 

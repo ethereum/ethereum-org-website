@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/oracles/index.md",
-  "generatedAt": "2026-06-29T23:58:08.675Z",
-  "rootHash": "de226745eb5f",
+  "generatedAt": "2026-11-27T10:30:35.641Z",
+  "rootHash": "b1c8dd930433",
   "tree": {
-    "contentHash": "7ad8e05b26c1",
-    "anchorHash": "0133b9f713df",
+    "contentHash": "05c7dd3027ea",
+    "anchorHash": "9457e23d088c",
     "children": {
       "frontmatter:title": {
         "contentHash": "8cd7b48f730e",
@@ -1036,15 +1036,15 @@
         ]
       },
       "use-blockchain-oracles": {
-        "contentHash": "407cf7525dce",
-        "anchorHash": "f1a4abd37189",
+        "contentHash": "749ab30bf90b",
+        "anchorHash": "2abf45786d73",
         "labelHash": "7dc90e8ef012",
         "children": {
           "_label": {
             "contentHash": "7dc90e8ef012",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:13": {
+          "prose:12": {
             "contentHash": "bfcf2f477a4b",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1052,7 +1052,7 @@
             "contentHash": "9c98cdba80ab",
             "anchorHash": "56a6d3c80707"
           },
-          "prose:14": {
+          "prose:13": {
             "contentHash": "78a5d0ca17f3",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1060,7 +1060,7 @@
             "contentHash": "a49b93096ec0",
             "anchorHash": "9449955546fb"
           },
-          "prose:15": {
+          "prose:14": {
             "contentHash": "0b45cc21715b",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1068,7 +1068,7 @@
             "contentHash": "619aad1b467a",
             "anchorHash": "4d6ba7df9e62"
           },
-          "prose:16": {
+          "prose:15": {
             "contentHash": "61d4d3a10332",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1076,7 +1076,7 @@
             "contentHash": "b5cfe4c9e16e",
             "anchorHash": "5428f5658ff6"
           },
-          "prose:17": {
+          "prose:16": {
             "contentHash": "5a9d648786a3",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1084,7 +1084,7 @@
             "contentHash": "60d3311fb814",
             "anchorHash": "07c8c5b592a9"
           },
-          "prose:18": {
+          "prose:17": {
             "contentHash": "a2bae41cc8e8",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1092,7 +1092,7 @@
             "contentHash": "f897592a8338",
             "anchorHash": "80938c5bb810"
           },
-          "prose:19": {
+          "prose:18": {
             "contentHash": "7e791c4690fb",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1100,7 +1100,7 @@
             "contentHash": "164bd8036d4c",
             "anchorHash": "6195c957dd25"
           },
-          "prose:20": {
+          "prose:19": {
             "contentHash": "7b9d683a1708",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1108,7 +1108,7 @@
             "contentHash": "9fb7de89a9ec",
             "anchorHash": "6e8f7ffc1e33"
           },
-          "prose:21": {
+          "prose:20": {
             "contentHash": "ca2217965462",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1116,7 +1116,7 @@
             "contentHash": "036a744f6794",
             "anchorHash": "3d75ef7c2b2f"
           },
-          "prose:22": {
+          "prose:21": {
             "contentHash": "56e4788f02cb",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1124,64 +1124,54 @@
             "contentHash": "007278ed28c4",
             "anchorHash": "b360c01c97b5"
           },
-          "prose:23": {
+          "prose:22": {
             "contentHash": "c502146a373d",
             "anchorHash": "e3b0c44298fc"
           },
           "link:10": {
-            "contentHash": "fb8e2d3ff144",
-            "anchorHash": "7a09d1759b8c"
-          },
-          "prose:24": {
-            "contentHash": "5963ed687032",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:11": {
             "contentHash": "a60bb8a213ce",
             "anchorHash": "70e3e90d61b3"
           },
-          "prose:25": {
+          "prose:23": {
             "contentHash": "fa9bb60cd411",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:12": {
+          "link:11": {
             "contentHash": "31379585bc3e",
             "anchorHash": "8fb14b382379"
           },
-          "prose:26": {
+          "prose:24": {
             "contentHash": "266631734ba6",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:13",
+          "prose:12",
           "link:0",
-          "prose:14",
+          "prose:13",
           "link:1",
-          "prose:15",
+          "prose:14",
           "link:2",
-          "prose:16",
+          "prose:15",
           "link:3",
-          "prose:17",
+          "prose:16",
           "link:4",
-          "prose:18",
+          "prose:17",
           "link:5",
-          "prose:19",
+          "prose:18",
           "link:6",
-          "prose:20",
+          "prose:19",
           "link:7",
-          "prose:21",
+          "prose:20",
           "link:8",
-          "prose:22",
+          "prose:21",
           "link:9",
-          "prose:23",
+          "prose:22",
           "link:10",
-          "prose:24",
+          "prose:23",
           "link:11",
-          "prose:25",
-          "link:12",
-          "prose:26"
+          "prose:24"
         ]
       },
       "further-reading": {
@@ -1332,5 +1322,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

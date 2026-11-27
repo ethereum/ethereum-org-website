@@ -1,6 +1,6 @@
 ---
-title: zkEVM para verificação de bloco da l1
-description: Aprenda como as provas de conhecimento zero podem verificar a execução de blocos do Ethereum, permitindo maior vazão e menores requisitos para validadores.
+title: "zkEVM para verificação de bloco da L1"
+description: "Aprenda como as provas de conhecimento zero podem verificar a execução de blocos do Ethereum, permitindo maior vazão e menores requisitos para validadores."
 lang: pt-br
 template: roadmap
 ---
@@ -12,7 +12,7 @@ A zkEVM é uma tecnologia que usa [provas de conhecimento zero](/zero-knowledge-
 <AlertContent>
 <AlertTitle>Não confundir com rollups de zkEVM</AlertTitle>
 <AlertDescription>
-Esta página discute o uso da zkEVM para verificar a execução de blocos da camada 1 (l1) do Ethereum. Para rollups de zkEVM que usam provas ZK para escalar o Ethereum como soluções de camada 2 (l2), consulte [rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/).
+Esta página discute o uso da zkEVM para verificar a execução de blocos da camada 1 (L1) do Ethereum. Para rollups de zkEVM que usam provas ZK para escalar o Ethereum como soluções de camada 2 (L2), consulte [rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -25,7 +25,7 @@ O problema é que a vazão do Ethereum é limitada pelo que o validador médio p
 
 A zkEVM oferece uma saída para esse dilema. Ao mudar de "todos reexecutam" para "um prova, todos verificam", o Ethereum pode aumentar com segurança o limite de gas sem aumentar os requisitos de hardware do validador.
 
-## Como funciona a verificação da l1 com zkEVM {#how-it-works}
+## Como funciona a verificação da L1 com zkEVM {#how-it-works}
 
 A verificação da zkEVM transforma a validação de bloco em um modelo "1-de-N":
 
@@ -42,7 +42,7 @@ As zkEVMs são classificadas em tipos com base em sua compatibilidade com o Ethe
 - **Tipo 1**: Totalmente equivalente ao Ethereum. Sem modificações na EVM, de modo que qualquer bloco do Ethereum pode ser provado exatamente como é
 - **Tipos 2-4**: Fazem várias concessões, modificando o comportamento da EVM para facilitar a prova
 
-Para a verificação da camada 1 (l1), o Tipo 1 é essencial. A zkEVM deve ser capaz de provar qualquer bloco válido do Ethereum, incluindo casos extremos e blocos históricos. Qualquer desvio do comportamento exato do Ethereum criaria problemas de consenso.
+Para a verificação da camada 1 (L1), o Tipo 1 é essencial. A zkEVM deve ser capaz de provar qualquer bloco válido do Ethereum, incluindo casos extremos e blocos históricos. Qualquer desvio do comportamento exato do Ethereum criaria problemas de consenso.
 
 A pesquisa de zkEVM da Fundação Ethereum concentra-se em implementações do Tipo 1 que são totalmente compatíveis com a execução existente do Ethereum.
 
@@ -64,7 +64,7 @@ A verificação de provas opera em tempo constante, independentemente da complex
 
 ## Desafios da prova em tempo real {#realtime-proving}
 
-O principal desafio para a verificação da l1 com zkEVM é a velocidade. Os blocos do Ethereum são produzidos a cada 12 segundos, o que significa que as provas precisam ser geradas em um período semelhante para serem úteis para o consenso.
+O principal desafio para a verificação da L1 com zkEVM é a velocidade. Os blocos do Ethereum são produzidos a cada 12 segundos, o que significa que as provas precisam ser geradas em um período semelhante para serem úteis para o consenso.
 
 As implementações atuais de zkEVM podem levar de minutos a horas para provar um único bloco. A pesquisa concentra-se em fechar essa lacuna por meio de:
 
@@ -97,18 +97,18 @@ Estas usam máquinas virtuais baseadas em RISC-V para executar o bytecode da EVM
 
 ## Como a zkEVM se encaixa com outras atualizações {#related-upgrades}
 
-A verificação da l1 com zkEVM se conecta com vários outros itens do roteiro do Ethereum:
+A verificação da L1 com zkEVM se conecta com vários outros itens do roteiro do Ethereum:
 
-- **[Árvores Verkle](/roadmap/verkle-trees/)**: Permitem testemunhas menores para verificação com ausência de estado, reduzindo os dados com os quais os provadores precisam trabalhar
+- **Nova árvore de estado**: Uma árvore binária unificada ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), proposta no lugar do design anterior da [árvore Verkle](/roadmap/verkle-trees/), permitiria testemunhas menores para verificação sem estado e foi projetada para ser mais fácil de provar
 - **[Ausência de estado](/roadmap/statelessness/)**: A zkEVM é um facilitador fundamental — com provas ZK de execução, os nós não precisam do estado completo para verificar blocos
-- **[Separação propositor-construtor (PBS)](/roadmap/pbs/)**: Os construtores de blocos poderiam potencialmente integrar a geração de provas, ou um mercado de provadores separado poderia surgir
+- **[PBS](/roadmap/pbs/)**: Os construtores de blocos poderiam potencialmente integrar a geração de provas, ou um mercado de provadores separado poderia surgir
 - **[Finalidade de slot único](/roadmap/single-slot-finality/)**: A geração mais rápida de provas poderia permitir a finalidade de slot único com garantias criptográficas
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-A verificação da l1 com zkEVM está em pesquisa ativa e ainda não foi integrada aos clientes de produção do Ethereum.
+A verificação da L1 com zkEVM está em pesquisa ativa e ainda não foi integrada aos clientes de produção do Ethereum.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -117,7 +117,7 @@ A verificação da l1 com zkEVM está em pesquisa ativa e ainda não foi integra
 
 - [zkEVM Foundation](https://zkevm.ethereum.foundation) - Hub oficial de pesquisa de zkEVM da Fundação Ethereum
 - [Ethproofs](https://ethproofs.org/) - Acompanhe a corrida para provar o Ethereum em tempo real
-- [zkevm.fyi](https://zkevm.fyi) - Livro técnico sobre zkEVM para a l1
+- [zkevm.fyi](https://zkevm.fyi) - Livro técnico sobre zkEVM para a L1
 - [Especificações da zkEVM da PSE](https://github.com/privacy-scaling-explorations/zkevm-specs) - Especificações técnicas
 - [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html) - Visão geral de Vitalik sobre as melhorias de verificação
 - [Blog da zkEVM da EF](https://zkevm.ethereum.foundation/blog) - Análise de desempenho da equipe da EF

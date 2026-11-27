@@ -9,7 +9,7 @@ import {
   SquarePlay,
 } from "lucide-react"
 import type { StaticImageData } from "next/image"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -127,11 +127,9 @@ const getDailyAppOrder = <T extends { category: string }>(apps: T[]) => {
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
   const { locale } = params
-  setRequestLocale(locale)
-
   const t = await getTranslations("page-open-source")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("open-source", locale)
 
   // Keyed rather than positional: sections get reordered, and an <h2> rendering
@@ -623,14 +621,14 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{ slug: "open-source", parentSlug: "values" }}
+            breadcrumbs={{ slug: "open-source" }}
             heroImg={heroImg}
             title={t("page-open-source-title")}
             description={
@@ -1326,8 +1324,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-open-source")
 

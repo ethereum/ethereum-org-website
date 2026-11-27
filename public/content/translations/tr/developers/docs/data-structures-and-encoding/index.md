@@ -1,6 +1,6 @@
 ---
 title: "Veri yapıları ve kodlama"
-description: "Temel Ethereum veri yapılarına genel bir bakış."
+description: "Patricia Merkle trie'leri, RLP ve SSZ dahil olmak üzere Ethereum'un temel veri yapıları ve kodlamaları ile bunların durumu nasıl depoladığı ve doğruladığına dair bir genel bakış."
 lang: tr
 sidebarDepth: 2
 ---

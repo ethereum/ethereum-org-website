@@ -1,22 +1,24 @@
 ---
-title: 沃克爾樹
-description: 沃克爾樹的高階描述，以及它們將如何用於升級以太坊
+title: "沃克爾樹"
+description: "關於沃克爾樹的高階描述，以及為什麼以太坊的狀態樹計畫轉向二元樹"
 lang: zh-tw
 template: roadmap
 summaryPoints:
   - 了解什麼是沃克爾樹
-  - 了解為什麼沃克爾樹對以太坊來說是一項有用的升級
+  - 閱讀為什麼沃克爾樹被擱置而轉向二元樹
 ---
 
-沃克爾樹（Verkle trees，由「向量承諾 (Vector commitment)」和「默克爾樹 (Merkle Trees)」組合而成的混成詞）是一種資料結構，可用於升級[以太坊](/)節點，使其能夠停止儲存大量狀態資料，同時又不會失去驗證區塊的能力。
+沃克爾樹（Verkle trees，由「向量承諾 (Vector commitment)」和「默克爾樹 (Merkle Trees)」組合而成的混成詞）是一種資料結構，可用於升級[以太坊](/)節點，使它們能夠停止儲存大量的狀態資料，而不會失去驗證區塊的能力。
+
+沃克爾樹曾在 [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800) 中被提議作為以太坊的下一個狀態樹，但該提案目前處於停滯狀態，並已被擱置，轉而支持統一的二元樹（[EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)）。二元樹追求相同的目標，即為無狀態用戶端提供較小的見證。本頁面將解釋沃克爾樹的運作原理，以及為什麼研究方向轉向了二元樹。
 
 ## 無狀態性 {#statelessness}
 
-沃克爾樹是邁向無狀態以太坊用戶端的重要一步。無狀態用戶端是指不需要儲存整個狀態資料庫即可驗證傳入區塊的用戶端。無狀態用戶端不使用其本地的以太坊狀態副本來驗證區塊，而是使用隨區塊到達的狀態資料「見證」。見證是執行特定一組交易所需之各個狀態資料片段的集合，以及證明該見證確實是完整資料一部分的密碼學證明。見證被用來_取代_狀態資料庫。為了讓這個機制運作，見證必須非常小，以便它們能夠及時在網路上安全地廣播，讓驗證者在 12 秒的時槽內處理它們。目前的狀態資料結構並不適合，因為見證太大了。沃克爾樹透過實現小型見證解決了這個問題，消除了無狀態用戶端的主要障礙之一。
+沃克爾樹被設計為邁向無狀態以太坊用戶端的一步。無狀態用戶端是指不需要儲存整個狀態資料庫即可驗證傳入區塊的用戶端。無狀態用戶端不使用其本地的以太坊狀態副本來驗證區塊，而是使用隨區塊到達的狀態資料「見證」。見證是執行特定一組交易所需的各個狀態資料片段的集合，以及證明該見證確實是完整資料一部分的密碼學證明。見證被用來_取代_狀態資料庫。為了使其發揮作用，見證需要非常小，以便它們能夠及時在網路上安全地廣播，讓驗證者在 12 秒的時槽內處理它們。目前的狀態資料結構並不適合，因為見證太大了。沃克爾樹透過實現較小的見證解決了這個問題，消除了無狀態用戶端的主要障礙之一。
 
-<ExpandableCard title="為什麼我們需要無狀態客戶端？" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
+<ExpandableCard title="為什麼我們需要無狀態用戶端？" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
-以太坊用戶端目前使用一種稱為帕特里夏默克爾樹 (Patricia Merkle Trie) 的資料結構來儲存其狀態資料。有關個別帳戶的資訊儲存為樹上的葉節點，並且成對的葉節點會被重複進行雜湊處理，直到只剩下一個雜湊值。這最後的雜湊值被稱為「根 (root)」。為了驗證區塊，以太坊用戶端會執行區塊中的所有交易並更新其本地狀態樹。如果本地樹的根與區塊提案者提供的根相同，則該區塊被視為有效，因為區塊提案者和驗證節點所做的計算如有任何差異，都會導致根雜湊值完全不同。這個問題在於，驗證區塊鏈需要每個用戶端儲存頂端區塊和幾個歷史區塊的整個狀態樹（Geth 的預設值是保留頂端區塊之後 128 個區塊的狀態資料）。這需要用戶端擁有大量的磁碟空間，這是在廉價、低功耗硬體上執行全節點的障礙。解決這個問題的方法是將狀態樹更新為更有效率的結構（沃克爾樹），該結構可以使用資料的小型「見證」進行總結，並可共用該見證以取代完整的狀態資料。將狀態資料重新格式化為沃克爾樹是邁向無狀態用戶端的墊腳石。
+以太坊用戶端目前使用一種稱為帕特里夏默克爾樹 (Patricia Merkle Trie) 的資料結構來儲存其狀態資料。有關個別帳戶的資訊儲存在樹的葉節點中，而每個分支節點（最多可有 16 個子節點）會與其子節點的雜湊值逐層一起進行雜湊處理，直到只剩下一個雜湊值。這最後的雜湊值被稱為「根」。為了驗證區塊，以太坊用戶端會執行區塊中的所有交易並更新其本地狀態樹。如果本地樹的根與區塊提案者提供的根相同，則該區塊被視為有效，因為區塊提案者和驗證節點所做的計算有任何差異，都會導致根雜湊值完全不同。這帶來的問題是，驗證區塊鏈需要每個用戶端儲存最新區塊和幾個歷史區塊的整個狀態樹（Geth 中的預設設定是保留最新區塊之後 128 個區塊的狀態資料）。這需要用戶端存取大量的磁碟空間，這是在廉價、低功耗硬體上執行全節點的障礙。解決這個問題的方法是將狀態樹更新為更有效率的結構（例如沃克爾樹或二元樹），該結構可以使用資料的小型「見證」進行總結，並可以共享該見證以取代完整的狀態資料。將狀態資料重新格式化為新的樹狀結構是邁向無狀態用戶端的墊腳石。
 
 </ExpandableCard>
 
@@ -38,28 +40,30 @@ summaryPoints:
 
 ## 沃克爾樹的結構是什麼？ {#what-is-the-structure-of-a-verkle-tree}
 
-沃克爾樹是 `(key,value)` 鍵值對，其中鍵是由 31 位元組的_主幹 (stem)_ 和單一位元組的_後綴 (suffix)_ 組成的 32 位元組元素。這些鍵被組織成_擴展 (extension)_ 節點和_內部 (inner)_ 節點。擴展節點代表具有不同後綴的 256 個子節點的單一主幹。內部節點也有 256 個子節點，但它們可以是其他擴展節點。沃克爾樹和默克爾樹結構之間的主要區別在於沃克爾樹要平坦得多，這意味著連接葉節點到根的中間節點更少，因此產生證明所需的資料也更少。
+沃克爾樹是 `(key,value)` 鍵值對，其中鍵是 32 位元組的元素，由 31 位元組的_主幹_和單一位元組的_後綴_組成。這些鍵被組織成_擴展_節點和_內部_節點。擴展節點代表具有不同後綴的 256 個子節點的單一主幹。內部節點也有 256 個子節點，但它們可以是其他擴展節點。沃克爾樹和默克爾樹結構之間的主要區別在於，沃克爾樹要平坦得多，這意味著連接葉節點到根的中間節點更少，因此產生證明所需的資料也更少。
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [閱讀更多關於沃克爾樹結構的資訊](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
 ## 目前進度 {#current-progress}
 
-沃克爾樹測試網已經啟動並運行，但用戶端仍有大量未完成的更新需要進行以支援沃克爾樹。您可以透過將合約部署到測試網或執行測試網用戶端來幫助加快進度。
+[EIP-6800](https://eips.ethereum.org/EIPS/eip-6800)（將以太坊狀態轉移到統一沃克爾樹的提案）目前處於停滯狀態。研究已轉向 [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)，該提案提議改用統一的二元樹。EIP-7864 是一份草案，尚未為其安排網路升級。
 
-[觀看 Guillaume Ballet 解釋 Condrieu 沃克爾測試網](https://www.youtube.com/watch?v=cPLHFBeC0Vg)（請注意，Condrieu 測試網是工作量證明 (PoW)，現在已被 Verkle Gen Devnet 6 測試網取代）。
+EIP-7864 給出了這項改變的兩個主要原因。沃克爾樹依賴於橢圓曲線密碼學，這對量子電腦來說並不安全，因此它們最終需要被替換，而二元樹僅依賴於雜湊函數。證明系統的進步也減少了對小型、可快速產生之證明的需求，而這正是沃克爾樹的主要優勢。因為二元樹中的每個節點只有兩個子節點，所以它的證明也比現今十六叉樹的證明小得多。
 
 ## 進一步閱讀 {#further-reading}
 
-- [用於無狀態性的沃克爾樹](https://verkle.info/)
+- [實現無狀態性的沃克爾樹](https://verkle.info/)
 - [Dankrad Feist 在 PEEPanEIP 上解釋沃克爾樹](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [給我們其他人的沃克爾樹](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
+- [給我們一般人的沃克爾樹介紹](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
 - [沃克爾證明剖析](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
-- [Guillaume Ballet 在 ETHGlobal 解釋沃克爾樹](https://www.youtube.com/watch?v=f7bEtX3Z57o)
+- [Guillaume Ballet 在 ETHGlobal 上解釋沃克爾樹](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [Guillaume Ballet 在 Devcon 6 上的演講：「沃克爾樹如何讓以太坊變得精簡強悍」](https://www.youtube.com/watch?v=Q7rStTKwuYs)
-- [Piper Merriam 在 ETHDenver 2020 談論無狀態用戶端](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Feist 在 Zero Knowledge podcast 上解釋沃克爾樹與無狀態性](https://zeroknowledge.fm/podcast/202/)
-- [維塔利克·布特林談論沃克爾樹](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
-- [Dankrad Feist 談論沃克爾樹](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
+- [Piper Merriam 在 ETHDenver 2020 上談論無狀態用戶端](https://www.youtube.com/watch?v=0yiZJNciIJ4)
+- [Dankrad Fiest 在 Zero Knowledge Podcast 上解釋沃克爾樹與無狀態性](https://zeroknowledge.fm/podcast/202/)
+- [維塔利克·布特林談沃克爾樹](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
+- [Dankrad Feist 談沃克爾樹](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [沃克爾樹 EIP 文件](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [EIP-6800：使用統一沃克爾樹的以太坊狀態](https://eips.ethereum.org/EIPS/eip-6800)
+- [EIP-7864：使用統一二元樹的以太坊狀態](https://eips.ethereum.org/EIPS/eip-7864)

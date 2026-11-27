@@ -1,7 +1,7 @@
 ---
 title: "Hegotá"
 metaTitle: "Heze-Bogotá (Hegotá)"
-description: "了解 Hegotá 協定升級"
+description: "Hegotá 是預計在格蘭斯特丹之後進行的以太坊升級。了解其主打項目——用於抗審查的 FOCIL，以及用於帳戶的框架交易。"
 lang: zh-tw
 template: upgrade
 ---

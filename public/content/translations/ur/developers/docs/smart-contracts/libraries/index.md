@@ -56,7 +56,7 @@ contract MyContract is Ownable {
 
 [ترکیب پذیری اور باہمی عمل پذیری](/developers/docs/smart-contracts/composability/) کو آسان بنانے کے لیے، ایتھیریم کمیونٹی نے <span dir="ltr">**ERCs**</span> کی شکل میں کئی معیارات کی وضاحت کی ہے۔ آپ ان کے بارے میں مزید [معیارات](/developers/docs/standards/) کے سیکشن میں پڑھ سکتے ہیں۔
 
-اپنے کنٹریکٹس کے حصے کے طور پر کسی ERC کو شامل کرتے وقت، یہ ایک اچھا خیال ہے کہ آپ اپنا نفاذ خود بنانے کی کوشش کرنے کے بجائے معیاری نفاذ تلاش کریں۔ بہت سی سمارٹ کنٹریکٹ لائبریریوں میں مقبول ترین ERCs کے نفاذ شامل ہوتے ہیں۔ مثال کے طور پر، ہر جگہ موجود [<span dir="ltr">ERC-20</span> قابل تبادلہ ٹوکن معیار](/developers/tutorials/understand-the-erc-20-token-smart-contract/) کو [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md)، [DappSys](https://github.com/dapphub/ds-token/) اور [اوپن زیپلن](https://docs.openzeppelin.com/contracts/3.x/erc20) میں پایا جا سکتا ہے۔ مزید برآں، کچھ ERCs خود ERC کے حصے کے طور پر مستند نفاذ بھی فراہم کرتے ہیں۔
+اپنے کنٹریکٹس کے حصے کے طور پر کسی ERC کو شامل کرتے وقت، یہ ایک اچھا خیال ہے کہ آپ اپنا نفاذ خود بنانے کی کوشش کرنے کے بجائے معیاری نفاذ تلاش کریں۔ بہت سی سمارٹ کنٹریکٹ لائبریریوں میں مقبول ترین ERCs کے نفاذ شامل ہوتے ہیں۔ مثال کے طور پر، ہر جگہ موجود [<span dir="ltr">ERC-20</span> قابل تبادلہ ٹوکن معیار](/developers/docs/standards/tokens/erc-20/) کو [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md)، [DappSys](https://github.com/dapphub/ds-token/) اور [<span dir="ltr">OpenZeppelin</span>](https://docs.openzeppelin.com/contracts/3.x/erc20) میں پایا جا سکتا ہے۔ مزید برآں، کچھ ERCs خود ERC کے حصے کے طور پر مستند نفاذ بھی فراہم کرتے ہیں۔
 
 یہ بتانا ضروری ہے کہ کچھ ERCs اکیلے نہیں ہوتے، بلکہ دیگر ERCs میں اضافے ہوتے ہیں۔ مثال کے طور پر، [<span dir="ltr">ERC-2612</span>](https://eips.ethereum.org/EIPS/eip-2612) اس کی افادیت کو بہتر بنانے کے لیے <span dir="ltr">ERC-20</span> میں ایک ایکسٹینشن کا اضافہ کرتا ہے۔
 
@@ -109,8 +109,7 @@ contract MyNFT is ERC721 {
 
 ## متعلقہ ٹیوٹوریلز {#related-tutorials}
 
-- [ایتھیریم ڈیولپرز کے لیے سیکیورٹی کے تحفظات](/developers/docs/smart-contracts/security/) _– سمارٹ کنٹریکٹس بناتے وقت سیکیورٹی کے تحفظات پر ایک ٹیوٹوریل، بشمول لائبریری کا استعمال۔_
-- [<span dir="ltr">ERC-20</span> ٹوکن سمارٹ کنٹریکٹ کو سمجھیں](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- متعدد لائبریریوں کے ذریعے فراہم کردہ <span dir="ltr">ERC-20</span> معیار پر ٹیوٹوریل۔_
+- [ایتھیریم ڈیولپرز کے لیے سیکیورٹی کے تحفظات](/developers/docs/smart-contracts/security/) _– سمارٹ کنٹریکٹس بناتے وقت سیکیورٹی کے تحفظات پر ایک ٹیوٹوریل، جس میں لائبریری کا استعمال بھی شامل ہے۔_
 
 ## مزید مطالعہ {#further-reading}
 

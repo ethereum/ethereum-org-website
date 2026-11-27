@@ -1,7 +1,7 @@
 ---
 title: "區塊鏈跨鏈橋"
 metaTitle: "區塊鏈跨鏈橋簡介"
-description: "跨鏈橋允許使用者在不同的區塊鏈之間轉移資金"
+description: "什麼是區塊鏈跨鏈橋？了解跨鏈橋如何在以太坊、第二層 (L2) 和其他鏈之間轉移代幣、跨鏈橋的類型，以及需要考慮的風險。"
 lang: zh-tw
 ---
 
@@ -101,10 +101,10 @@ _Web3 已經發展成為一個由第一層 (L1) 區塊鏈和第二層 (L2) 擴�
 
 ## 使用跨鏈橋 {#use-bridge}
 
-使用跨鏈橋允許你在不同的區塊鏈之間轉移資產。以下是一些可以幫助你尋找和使用跨鏈橋的資源：
+使用跨鏈橋可以讓你在不同的區塊鏈之間轉移資產。以下是一些可以幫助你尋找和使用跨鏈橋的資源：
 
-- **[L2BEAT 跨鏈橋摘要](https://l2beat.com/bridges/summary)與 [L2BEAT 跨鏈橋風險分析](https://l2beat.com/bridges/summary)**：各種跨鏈橋的全面摘要，包含市占率、跨鏈橋類型和目標鏈的詳細資訊。L2BEAT 也提供跨鏈橋的風險分析，幫助使用者在選擇跨鏈橋時做出明智的決定。
-- **[DefiLlama 跨鏈橋摘要](https://defillama.com/bridges/Ethereum)**：以太坊網路上跨鏈橋交易量的摘要。
+- **[ETHBEAT 互通性摘要](https://ethbeat.org/interop/summary)**：各種跨鏈橋的全面摘要，包含市占率、跨鏈橋類型和目標鏈的詳細資訊。ETHBEAT 也提供跨鏈橋的風險分析，幫助使用者在選擇跨鏈橋時做出明智的決定。
+- **[DefiLlama 跨鏈橋摘要](https://defillama.com/bridges/Ethereum)**：以太坊網路中跨鏈橋交易量的摘要。
 
 <Divider />
 
@@ -137,9 +137,10 @@ _Web3 已經發展成為一個由第一層 (L1) 區塊鏈和第二層 (L2) 擴�
 ## 進一步閱讀 {#further-reading}
 
 - [EIP-5164：跨鏈執行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022 年 6 月 18 日 - Brendan Asselstine_
-- [L2Bridge 風險框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022 年 7 月 5 日 - Bartek Kiepuszewski_
+- [L2Bridge 風險框架](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _2022 年 7 月 5 日 - Bartek Kiepuszewski_
 - [「為什麼未來將是多鏈的，但不會是跨鏈的。」](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022 年 1 月 8 日 - Vitalik Buterin_
 - [利用共享安全實現安全的跨鏈互操作性：Lagrange 狀態委員會及其他](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024 年 6 月 12 日 - Emmanuel Awosika_
 - [匯總互操作性解決方案的狀態](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024 年 6 月 20 日 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

@@ -171,16 +171,15 @@ In einer dezentralen Anwendung (Dapp) übernimmt die Wallet des Benutzers (wie M
 
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Aufrufen eines Smart Contracts aus JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-- [Senden von Transaktionen mit Web3.js und Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [So zeigen Sie Ihr NFT in Ihrer Wallet an](/developers/tutorials/how-to-view-nft-in-metamask/)
+- [Transaktionen senden mit Web3.js und Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Wie Sie Ihren NFT in Ihrer Wallet anzeigen](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Weiterführende Literatur {#further-reading}
 
-- [Viem-Dokumentation: Lesen und Schreiben in Verträge](https://viem.sh/docs/contract/readContract)
-- [ethers.js-Dokumentation: Verträge](https://docs.ethers.org/v6/api/contract/)
+- [Viem-Dokumentation: Lesen aus und Schreiben in Verträge](https://viem.sh/docs/contract/readContract)
+- [Ethers.js-Dokumentation: Verträge](https://docs.ethers.org/v6/api/contract/)
 - [Solidity-ABI-Spezifikation](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [Was ist eine ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Wie funktionieren Smart-Contract-ABIs? – Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Verwandte Themen {#related-topics}
 

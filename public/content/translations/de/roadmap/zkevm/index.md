@@ -1,6 +1,6 @@
 ---
-title: zkEVM für die L1-Blockvalidierung
-description: Erfahre, wie Zero-Knowledge-Beweise die Ausführung von Ethereum-Blöcken verifizieren können, was einen höheren Transaktionsdurchsatz und geringere Anforderungen an Validatoren ermöglicht.
+title: "zkEVM für die L1-Blockvalidierung"
+description: "Erfahre, wie Zero-Knowledge-Beweise die Ausführung von Ethereum-Blöcken verifizieren können, was einen höheren Transaktionsdurchsatz und geringere Anforderungen an Validatoren ermöglicht."
 lang: de
 template: roadmap
 ---
@@ -97,12 +97,12 @@ Diese verwenden RISC-V-basierte virtuelle Maschinen, um EVM-Bytecode auszuführe
 
 ## Wie die zkEVM zu anderen Upgrades passt {#related-upgrades}
 
-Die zkEVM-L1-Verifizierung ist mit mehreren anderen Punkten der Ethereum-Roadmap verbunden:
+Die zkEVM-L1-Verifizierung ist mit mehreren anderen Punkten der Ethereum-Roadmap verknüpft:
 
-- **[Verkle-Bäume](/roadmap/verkle-trees/)**: Ermöglichen kleinere Zeugen (Witnesses) für die zustandslose Verifizierung, was die Datenmenge reduziert, mit der Beweiser arbeiten müssen.
+- **Neuer Zustandsbaum**: Ein vereinheitlichter Binärbaum ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), der anstelle des früheren [Verkle-Baum](/roadmap/verkle-trees/)-Designs vorgeschlagen wurde, würde kleinere Witnesses für die zustandslose Verifizierung ermöglichen und ist so konzipiert, dass er leichter zu beweisen ist.
 - **[Zustandslosigkeit](/roadmap/statelessness/)**: Die zkEVM ist ein wichtiger Wegbereiter – mit ZK-Beweisen der Ausführung benötigen Knoten nicht den vollständigen Zustand, um Blöcke zu verifizieren.
-- **[Proposer-Builder-Trennung (PBS)](/roadmap/pbs/)**: Block-Builder könnten potenziell die Beweiserstellung integrieren, oder es könnte ein separater Beweiser-Markt entstehen.
-- **[Single-Slot-Finalität](/roadmap/single-slot-finality/)**: Eine schnellere Beweiserstellung könnte Single-Slot-Finalität mit kryptografischen Garantien ermöglichen.
+- **[PBS](/roadmap/pbs/)**: Block-Builder könnten potenziell die Beweiserstellung integrieren, oder es könnte ein separater Beweiser-Markt entstehen.
+- **[Single-Slot-Finalität](/roadmap/single-slot-finality/)**: Eine schnellere Beweiserstellung könnte die Single-Slot-Finalität mit kryptografischen Garantien ermöglichen.
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />

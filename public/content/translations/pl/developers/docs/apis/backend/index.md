@@ -29,7 +29,7 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_Węzeł jako usługa (Node-as-a-Service)._**
+**All That Node -** **_Węzeł jako usługa._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [Dokumentacja](https://docs.allthatnode.com)
@@ -55,10 +55,10 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 **Etherscan - Eksplorator bloków i API transakcji**
 - [Dokumentacja](https://docs.etherscan.io/)
 
-**Blockscout - Eksplorator bloków o otwartym kodzie źródłowym**
+**Blockscout - Eksplorator bloków open source**
 - [Dokumentacja](https://docs.blockscout.com/)
 
-**GetBlock -** **_Blockchain jako usługa dla rozwoju Web3_**
+**GetBlock -** **_Blockchain jako usługa dla programowania Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Dokumentacja](https://docs.getblock.io/)
@@ -66,7 +66,7 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 **Infura -** **_API Ethereum jako usługa._**
 
 - [infura.io](https://infura.io)
-- [Dokumentacja](https://docs.infura.io/api)
+- [Dokumentacja](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Opłacalny dostawca EVM JSON-RPC_**
@@ -77,7 +77,7 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 **NOWNodes - _Pełne węzły i eksploratory bloków._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Dokumentacja](https://nownodes.gitbook.io/documentation)
+- [Dokumentacja](https://docs.nownodes.io/)
 
 **QuickNode -** **_Infrastruktura blockchain jako usługa._**
 
@@ -91,6 +91,12 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 - [Dokumentacja](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_Infrastruktura EVM JSON-RPC z pełnym, archiwalnym i bezkluczowym dostępem publicznym._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Dokumentacja](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_Zorientowane na szybkość węzły Ethereum jako API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
@@ -100,13 +106,19 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 
 ### Narzędzia programistyczne {#development-tools}
 
+**eth.zig -** **_Biblioteka Zig dla Ethereum, z kodowaniem ABI w czasie kompilacji i powiązaniami kontraktów._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Dokumentacja](https://ethzig.org)
+- [Przykłady](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
 **ethers-kt -** **_Asynchroniczna, wysokowydajna biblioteka Kotlin/Java/Android dla blockchainów opartych na EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Przykłady](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_Biblioteka integracyjna .NET o otwartym kodzie źródłowym dla blockchaina._**
+**Nethereum -** **_Biblioteka integracyjna .NET open source dla blockchaina._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Dokumentacja](https://docs.nethereum.com/docs/getting-started/welcome/)
@@ -164,11 +176,10 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 
 - [moralis.io](https://moralis.io)
 - [Dokumentacja](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
-**NFTPort -** **_API danych Ethereum i wybijania (mint)._**
+**NFTPort -** **_API danych i wybijania na Ethereum._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Dokumentacja](https://docs.nftport.xyz/)
@@ -181,13 +192,13 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 - [Dokumentacja](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_Zapewnia prosty i niezawodny dostęp API do blockchaina Ethereum._**
+**Watchdata -** **_Zapewnia prosty i niezawodny dostęp do API blockchaina Ethereum._**
 
 - [Watchdata](https://watchdata.io/)
 - [Dokumentacja](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_Wzbogacone API danych blockchain w czasie rzeczywistym dla dziesiątek sieci._**
+**Codex -** **_Wzbogacone API danych blockchain w czasie rzeczywistym dla dziesiątek łańcuchów._**
 
 - [codex.io](https://www.codex.io/)
 - [Dokumentacja](https://docs.codex.io)
@@ -195,13 +206,12 @@ Te biblioteki abstrahują od dużej części złożoności bezpośredniej intera
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent -** **_Wzbogacone API blockchain dla ponad 200 sieci._**
+**Covalent -** **_Wzbogacone API blockchain dla ponad 200 łańcuchów._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Dokumentacja](https://www.covalenthq.com/docs/api/)
+- [Dokumentacja](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Dalsza lektura {#further-reading}
 
@@ -214,5 +224,4 @@ _Znasz zasób społeczności, który Ci pomógł? Edytuj tę stronę i dodaj go!
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Skonfiguruj Web3.js, aby korzystać z blockchaina Ethereum w JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukcje dotyczące konfiguracji Web3.js w Twoim projekcie._
-- [Wywoływanie inteligentnego kontraktu z JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Na przykładzie tokena DAI zobacz, jak wywoływać funkcje kontraktów za pomocą JavaScript._
+- [Komponenty serwerowe i agenci dla aplikacji Web3](/developers/tutorials/server-components/) _– Jak pisać komponenty serwerowe w TypeScript, które nasłuchują zdarzeń na blockchainie i odpowiadają transakcjami._

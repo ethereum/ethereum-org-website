@@ -1,10 +1,10 @@
 ---
 title: Puentes
-description: "Una descripción general de los puentes para desarrolladores"
+description: "Una guía para desarrolladores sobre puentes: cómo funcionan la mensajería intercadena y el puenteo de tokens, los tipos de puentes y los supuestos de confianza, y cómo integrarlos en las dapps."
 lang: es
 ---
 
-Con la proliferación de las cadenas de bloques de capa 1 (l1) y las soluciones de [escalado](/developers/docs/scaling/) de capa 2 (l2), junto con un número cada vez mayor de aplicaciones descentralizadas (dapp) que se vuelven intercadena, la necesidad de comunicación y movimiento de activos entre cadenas se ha convertido en una parte esencial de la infraestructura de la red. Existen diferentes tipos de puentes para ayudar a que esto sea posible.
+Con la proliferación de las cadenas de bloques de capa 1 (L1) y las soluciones de [escalado](/developers/docs/scaling/) de capa 2 (L2), junto con un número cada vez mayor de aplicaciones descentralizadas (dapp) que se vuelven intercadena, la necesidad de comunicación y movimiento de activos entre cadenas se ha convertido en una parte esencial de la infraestructura de la red. Existen diferentes tipos de puentes para ayudar a que esto sea posible.
 
 ## Necesidad de los puentes {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Para los desarrolladores, los puentes permiten lo siguiente:
 
 - la transferencia de cualquier dato, información y activos entre cadenas.
 - desbloquear nuevas funciones y casos de uso para los protocolos, ya que los puentes amplían el espacio de diseño de lo que los protocolos pueden ofrecer. Por ejemplo, un protocolo de agricultura de rendimiento desplegado originalmente en la [red principal de Ethereum](/) puede ofrecer fondos de liquidez en todas las cadenas compatibles con la EVM.
-- la oportunidad de aprovechar las fortalezas de diferentes cadenas de bloques. Por ejemplo, los desarrolladores pueden beneficiarse de las tarifas más bajas que ofrecen las diferentes soluciones de capa 2 (l2) al desplegar sus aplicaciones descentralizadas (dapp) en rollup y cadenas laterales, y los usuarios pueden usar puentes entre ellas.
+- la oportunidad de aprovechar las fortalezas de diferentes cadenas de bloques. Por ejemplo, los desarrolladores pueden beneficiarse de las tarifas más bajas que ofrecen las diferentes soluciones de capa 2 (L2) al desplegar sus aplicaciones descentralizadas (dapp) en rollup y cadenas laterales, y los usuarios pueden usar puentes entre ellas.
 - la colaboración entre desarrolladores de varios ecosistemas de cadenas de bloques para crear nuevos productos.
 - atraer usuarios y comunidades de varios ecosistemas a sus dapp.
 
@@ -120,10 +120,10 @@ Para monitorear la actividad de los contratos en múltiples cadenas, los desarro
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## Lecturas adicionales {#further-reading}
+## Más información {#further-reading}
 
 - [Puentes de cadenas de bloques](/bridges/) – ethereum.org
-- [Marco de riesgo de puentes de L2BEAT](https://l2beat.com/bridges/summary)
+- [Marco de riesgo de puentes de ETHBEAT](https://ethbeat.org/interop/summary)
 - [Puentes de cadenas de bloques: Construyendo redes de criptoredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 de septiembre de 2021 – Dmitriy Berenzon
 - [El trilema de la interoperabilidad](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 de octubre de 2021 – Arjun Bhuptani
 - [Clústeres: Cómo los puentes de confianza y de confianza minimizada dan forma al panorama multicadena](https://blog.celestia.org/clusters/) - 4 de octubre de 2021 – Mustafa Al-Bassam

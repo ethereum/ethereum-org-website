@@ -176,14 +176,14 @@ Certaines normes alternatives ont émergé de ce problème, telles que l'[ERC-22
 - [Alchemy - Guide des jetons ERC-20 en Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Autres normes de jetons fongibles {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Coffres tokenisés](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 - Coffres tokenisés asynchrones](/developers/docs/standards/tokens/erc-7540)
-## Tutoriels : Construire avec l'ERC-20 sur Ethereum {#tutorials}
+## Tutoriels : Développer avec l'ERC-20 sur Ethereum {#tutorials}
 
-- [Parcours d'un contrat ERC-20](/developers/tutorials/erc20-annotated-code/) _– Un parcours annoté ligne par ligne de l'implémentation du contrat ERC-20 d'OpenZeppelin._
+- [Analyse détaillée d'un contrat ERC-20](/developers/tutorials/erc20-annotated-code/) _– Une analyse annotée ligne par ligne de l'implémentation du contrat ERC-20 d'OpenZeppelin._
 - [ERC-20 avec garde-fous](/developers/tutorials/erc20-with-safety-rails/) _– Comment ajouter des mesures de sécurité aux jetons ERC-20 pour aider les utilisateurs à éviter les erreurs courantes._
-- [Envoyer des jetons à l'aide d'Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Un guide pour débutants sur le transfert de jetons ERC-20 à l'aide d'Ethers.js._
 - [Quelques astuces utilisées par les jetons frauduleux et comment les détecter](/developers/tutorials/scam-token-tricks/) _– Une exploration détaillée des modèles de jetons ERC-20 frauduleux et comment les identifier._

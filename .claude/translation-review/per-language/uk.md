@@ -1,5 +1,50 @@
 # Ukrainian (uk) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.5/10
+Scope: 15 markdown files, changed lines only; no JSON. Sweeps clean. 8 diffs read.
+
+**Fixed in this branch (~22 critical):** #113 Latin names restored on changed lines: `МетаМаск`:95, `Ерігон` x3:157, `Лодстар` x3:209 (`nodes-and-clients/index.md`); `run-a-node` table + note `Бесу/Ерігон/Незермайнд/Рет` -> `Besu/Erigon/Nethermind/Reth`; `nodes-as-a-service:225` `Бесу`; `statelessness:29,33` `Портал Нетворк` -> `Portal Network`. #112 long forms where English is bare: `frameworks:59,64` `(dapp)`; `nodes-and-clients:95` `(dapps)`, `:161` `рівня 1 (L1)`/`(рівень 2 (L2))`; `statelessness:29` `(DAO)`, `:81` `(L1)`; `privacy:122` `(DAO)`; `supply:45` `(NFT)`/`(DeFi)`. Glossary: `чайових з комісій` -> `пріоритетних комісій` (`merge:167`, glossary tip = пріоритетна комісія).
+
+**Open (warnings):** `(EOA)` x2 added to the English long form (`transactions:15,25`); `рівня 2 (L2)` kept where English says the long form; `чайових`/`чайові` on unchanged `merge:70,74` (pre-existing glossary deviation); unchanged lines still carry `Німбус`-style client transliterations.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.0/10
+Scope: 90 files (71 markdown, 19 JSON), incremental updates; all 71 markdown diffs and all 19 JSON diffs read in full against English. Scripted sweeps clean (no U+3002/U+2060, no foreign-script, no Russian-only letters).
+
+**Fixed in this branch:**
+
+- `page-roadmap` `page-roadmap-danksharding-description`: Latin `Danksharding` -> `Данкшардинг` (regression vs dev; every other uk page uses the Cyrillic form)
+- `oracles` L390/L400: link text `Чейнлінк`/`Теллор` restored to `Chainlink`/`Tellor` (regression vs dev)
+- `a-developers-guide-to-ethereum-part-one` L131: `$5.99` -> `$5,99` (English decimal point, known decimal-separator pattern)
+- `interact-with-other-contracts-from-solidity`: U+2019 apostrophes -> ASCII `'` (2 sites)
+
+**Open (warnings):**
+
+- `developers/docs/bridges` L126-L141: reference-list article titles reverted from Ukrainian to English (copied from en); previously translated on dev.
+- `contributing/index.md`: list separators mix `–` and `-` (mirrors en, which mixes them too).
+- `videos/surveillance-silence`: `обмежити ... обмежити` repeated in the social-credit sentence.
+- `Лодстар`/`Лодстар (Lodestar)` and `Рет` (Reth) client names transliterated per ETHGlossary (#113); `Counter`/`лічильник` mixed in the interact tutorial.
+- `src/intl/uk/page-use-cases.json`, `page-what-is-ether.json`: trailing-newline flips vs dev (cosmetic, matches en).
+
+**Notes:** `L1`/`L2` casing normalized to uppercase and bare forms (`ETHBEAT`, `L2`) match English; no placeholder leaks, anchors intact, `<GasperFinalityDiagram />` and other new diagram components present.
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `рівні 1 (L1)` / `рівні 2 (L2)` first-mention expansions in 19 diagram values (#112); `Доводжувач` for prover is the glossary form (ru uses `Прувер`); client names transliterated per ETHGlossary (#113).
+
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: `account-sign-in-wallet` `з Етеріум` -> `з Етеріумом` (glossary citation form left uninflected; `Етеріумі`/`Етеріуму` inflect elsewhere, known-patterns #96). Open: none.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: claim as zatrebuvannya to tverdzhennia (optimistic-rollups), razgornutym typo. Open: Eteriuma vs Eteriumu genitive drift (12 sites in pos), commitment zobov'iazannia vs fiksatsiia, doubled (PBS).
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.2/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: Etheriumi in attestations description, vyboru forka, eqivokaciya/sleshing, prioritetna komisiya, BLS-pidpys. Open: seed rendered as sid-fraza, `vyprominyuye` for emits.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -148,3 +193,62 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: typo `публіча` -> `публічна` (L200).
 - Open: `[Етеріум](/)-мережі` awkward link compound (dev `Мережі [Етеріуму](/)`).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:45 Ethereum transliterate (`на додаток до підпису Ethereum.` -> `на додаток до підпису Етеріуму.`)
+- app-plasma:337 Ethereum transliterate (`перевіряє підписи Ethereum і відновлює адресу Ethe` -> `перевіряє підписи Етеріуму і відновлює адресу Етер`)
+- app-plasma:374 Ethereum transliterate (`160-бітної адреси Ethereum.` -> `160-бітної адреси Етеріуму.`)
+- app-plasma:617 Ethereum transliterate (`формату підписання Ethereum у` -> `формату підписання Етеріуму у`)
+- app-plasma:617 Ethereum transliterate (`стандартний для Ethereum keccak256` -> `стандартний для Етеріуму keccak256`)
+- app-plasma:701 Ethereum transliterate (`стандартну функцію Ethereum` -> `стандартну функцію Етеріуму`)
+- app-plasma:950 Ethereum transliterate (`Смарт-контракти Ethereum {#stage-3}` -> `Смарт-контракти Етеріуму {#stage-3}`)
+- security:570 Manticore accusative (`Як використовувати Мантікора для` -> `Як використовувати Мантікору для`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 11 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and accurate, especially in the rewritten prediction-markets page and the new wallet descriptions. The criticals are all cases where this run broke wording that was already right on dev: Latin `Ethereum` in app-plasma, the Manticore case ending, and the three English founders tags.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- No Russian contamination. Warnings: decimal separator; MetaMask UI labels given only in Ukrainian.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:54 `Фазер` (singular) with plural verb -> `Фазери`
+- echidna:282 ABI glossary insertion split "ABI signature" -> `підпис двійкового інтерфейсу програми (ABI)`
+
+**Open / notes:**
+
+- multi-client: account as both `обліковими записами` (code comment) and `акаунти` (prose) -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` -> `надбавка`/`заохочення`; `повинна бути принаймні не меншою` says "at least" twice (gas:89); `акаунт` vs `рахунок` in one paragraph.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

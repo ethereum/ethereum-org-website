@@ -1,6 +1,6 @@
 ---
 title: Datenstrukturen und Codierung
-description: "Ein Überblick über die grundlegenden Datenstrukturen von Ethereum."
+description: "Ein Überblick über die zentralen Datenstrukturen und Codierungen von Ethereum, einschließlich Patricia-Merkle-Tries, RLP und SSZ, und wie sie den Zustand speichern und verifizieren."
 lang: de
 sidebarDepth: 2
 ---

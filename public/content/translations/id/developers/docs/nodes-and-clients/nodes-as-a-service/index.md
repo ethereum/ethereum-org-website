@@ -49,14 +49,14 @@ Baca lebih lanjut tentang [manfaat menjalankan node Anda sendiri](/developers/do
 
 ## Layanan node populer {#popular-node-services}
 
-Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan ragu untuk menambahkan jika ada yang terlewat! Setiap layanan node menawarkan manfaat dan fitur yang berbeda selain tingkatan gratis atau berbayar, Anda harus menyelidiki mana yang paling sesuai dengan kebutuhan Anda sebelum membuat keputusan.
+Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan ragu untuk menambahkan jika ada yang terlewat! Setiap layanan node menawarkan manfaat dan fitur yang berbeda selain tingkat gratis atau berbayar, Anda harus menyelidiki mana yang paling sesuai dengan kebutuhan Anda sebelum membuat keputusan.
 
 - [**Alchemy**](https://alchemy.com/)
   - [Dokumentasi](https://www.alchemy.com/docs/)
   - Fitur
     - Tingkat gratis terbesar dengan 300 juta unit komputasi per bulan (\~30 juta permintaan getLatestBlock)
     - Dukungan multirantai untuk Polygon, Starknet, Optimism, Arbitrum
-    - Mendukung ~70% dari aplikasi terdesentralisasi (dapp) Ethereum terbesar dan volume transaksi keuangan terdesentralisasi (DeFi)
+    - Mendukung ~70% dari dapp Ethereum terbesar dan volume transaksi DeFi
     - Peringatan webhook waktu nyata melalui Alchemy Notify
     - Dukungan dan keandalan / stabilitas terbaik di kelasnya
     - API NFT Alchemy
@@ -67,9 +67,9 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
 - [**Allnodes**](https://www.allnodes.com/)
   - [Dokumentasi](https://docs.allnodes.com/)
   - Fitur
-    - Tanpa batas laju dengan token PublicNode yang dibuat di halaman portofolio Allnodes.
+    - Tidak ada batasan laju dengan token PublicNode yang dibuat di halaman portofolio Allnodes.
     - Titik akhir rpc gratis yang berfokus pada privasi (100+ rantai blok) di [PublicNode](https://www.publicnode.com)
-    - Node khusus tanpa batas laju untuk 90+ rantai blok
+    - Node khusus tanpa batasan laju untuk 90+ rantai blok
     - Node arsip khusus untuk 30+ rantai blok
     - Tersedia di 3 wilayah (AS, UE, Asia)
     - Snapshot untuk 100+ rantai blok di [PublicNode](https://www.publicnode.com/snapshots)
@@ -85,7 +85,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Mendukung API JSON-RPC (EVM, Tendermint), REST, dan Websocket
     - Akses tak terbatas ke data arsip
     - Dukungan teknis 24/7 dan waktu aktif lebih dari 99,9%
-    - Faucet tersedia di berbagai rantai
+    - Faucet tersedia di banyak rantai
     - Akses titik akhir tak terbatas dengan jumlah kunci API yang tidak terbatas
     - Mendukung API Trace/Debug
     - Pembaruan otomatis
@@ -105,7 +105,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
   - Fitur
     - Protokol Ankr - akses terbuka ke titik akhir API RPC Publik untuk 8+ rantai
     - Penyeimbangan beban dan pemantauan kesehatan node untuk gateway yang cepat dan andal ke node terdekat yang tersedia
-    - Tingkat premium yang mengaktifkan titik akhir WSS dan batas laju tak terbatas
+    - Tingkat premium yang mengaktifkan titik akhir WSS dan batasan laju yang tidak dibatasi
     - Penyebaran full node dan node validator sekali klik untuk 40+ rantai
     - Skalakan sesuai kebutuhan Anda
     - Alat analitik
@@ -126,7 +126,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Dukungan Discord 24/7
     - Pemantauan dan peringatan 24/7
     - SLA keseluruhan sebesar 99,9%
-    - Bayar dengan kripto
+    - Bayar dalam kripto
 
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Dokumentasi](https://ubiquity.docs.blockdaemon.com/)
@@ -141,10 +141,10 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Struktur node yang kuat & terdistribusi
     - Hingga 40 titik akhir HTTPS dan WSS
     - Paket pendaftaran gratis dan paket bulanan
-    - Metode Trace + Dukungan data arsip
+    - Metode Trace + dukungan data Arsip
     - Paket dengan masa berlaku hingga 90 hari
-    - Paket kustom dan pembayaran sesuai pemakaian
-    - Bayar dengan kripto
+    - Paket khusus dan pembayaran sesuai pemakaian
+    - Bayar dalam kripto
     - Dukungan langsung & Dukungan teknis
 
 - [**Chainbase**](https://www.chainbase.com/)
@@ -164,8 +164,8 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Dukungan GraphQL
     - Titik akhir RPC dan WSS
     - Full node dan node arsip khusus
-    - Waktu sinkronisasi yang cepat untuk penyebaran khusus
-    - Bawa cloud Anda sendiri
+    - Waktu sinkronisasi cepat untuk penyebaran khusus
+    - Bawa cloud Anda
     - Harga bayar per jam
     - Dukungan langsung 24/7
 
@@ -175,9 +175,9 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
   - Fitur NodeCloud:
     - Dukungan API untuk 185 jaringan
     - Kumpulan terdistribusi dari 40+ penyedia
-    - Cakupan global dengan sembilan (9) klaster geografis
+    - Cakupan global dengan sembilan (9) kluster geografis
     - Sistem penyeimbangan beban bertenaga AI
-    - Harga tetap sesuai pemakaian—tanpa kenaikan, tanpa kedaluwarsa, tanpa penguncian
+    - Harga tetap bayar sesuai pemakaian—tanpa kenaikan, tanpa kedaluwarsa, tanpa penguncian
     - Kunci tak terbatas, penyesuaian kunci terperinci, peran tim, perlindungan front-end
     - Tarif tetap metode pada 20 unit komputasi (CU) per metode
     - [Daftar rantai titik akhir publik](https://drpc.org/chainlist)
@@ -190,9 +190,9 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Akses ke 40+ node rantai blok
     - 40 ribu permintaan harian gratis
     - Jumlah kunci API yang tidak terbatas
-    - Kecepatan koneksi tinggi pada 1GB/detik
+    - Kecepatan koneksi tinggi pada 1GB/dtk
     - Trace+Arsip
-    - Analitik tingkat lanjut
+    - Analitik lanjutan
     - Pembaruan otomatis
     - Dukungan teknis
 
@@ -204,12 +204,12 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Dasbor
     - Titik akhir API unik
     - Full node khusus
-    - Waktu sinkronisasi yang cepat untuk penyebaran khusus
+    - Waktu sinkronisasi cepat untuk penyebaran khusus
     - Dukungan langsung 24/7
     - Akses ke 50+ node rantai blok
 
 - [**Infura**](https://infura.io/)
-  - [Dokumentasi](https://infura.io/docs)
+  - [Dokumentasi](https://docs.infura.io/)
   - Fitur
     - Opsi tingkat gratis
     - Skalakan sesuai kebutuhan Anda
@@ -222,11 +222,11 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
   - Fitur
     - Tingkat pemula gratis
     - Penyebaran node Ethereum sekali klik
-    - Klien dan algoritma yang dapat disesuaikan (Geth, Quorum & Besu || bukti otoritas (PoA), IBFT & Raft)
+    - Klien dan algoritma yang dapat disesuaikan (Geth, Quorum & Besu || PoA, IBFT & Raft)
     - 500+ API administratif dan layanan
     - Antarmuka RESTful untuk pengiriman transaksi Ethereum (didukung Apache Kafka)
-    - Aliran keluar untuk pengiriman peristiwa (didukung Apache Kafka)
-    - Koleksi mendalam layanan "offchain" dan tambahan (misalnya, transportasi pesan terenkripsi bilateral)
+    - Aliran keluar untuk pengiriman kejadian (didukung Apache Kafka)
+    - Pengumpulan mendalam layanan "offchain" dan tambahan (misalnya, transportasi pesan terenkripsi bilateral)
     - Orientasi jaringan yang mudah dengan tata kelola dan kontrol akses berbasis peran
     - Manajemen pengguna yang canggih untuk administrator dan pengguna akhir
     - Infrastruktur tingkat perusahaan yang sangat dapat diskalakan dan tangguh
@@ -244,7 +244,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Penggunaan Testnet Gratis
     - Redundansi Terdesentralisasi untuk Waktu Aktif Tinggi
     - Sumber terbuka
-    - SDK Sepenuhnya Terdesentralisasi
+    - SDK yang Sepenuhnya Terdesentralisasi
     - Integrasi Ethers.js
     - Antarmuka Manajemen Proyek yang Intuitif
     - Integritas Data Berbasis Konsensus
@@ -259,8 +259,8 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Dukungan lintas rantai
     - Skalakan sesuai kebutuhan Anda
     - Dasbor
-    - SDK Ethereum yang unik
-    - Titik akhir API yang unik
+    - SDK Ethereum unik
+    - Titik akhir API unik
     - Dukungan teknis langsung
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
@@ -274,18 +274,18 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
 - [**NodeFlare**](https://nodeflare.app/)
   - [Dokumentasi](https://nodeflare.app/docs/quick-start)
   - Fitur
-    - 23 rantai EVM termasuk Ethereum, Base, Arbitrum One & Nova, Optimism, Linea, dan Unichain
-    - 5 wilayah (Eropa, Inggris, Asia, AS-Timur, AS-Barat) dengan failover otomatis ke node sehat terdekat
-    - Titik akhir publik gratis (tanpa kunci API) + paket gratis dengan 3 juta unit komputasi/bulan
-    - Penagihan Unit Komputasi — bayar hanya untuk apa yang Anda gunakan, panggilan yang lebih berat biayanya lebih mahal
-    - Tanpa pembatasan pada paket berbayar
+    - 17 rantai EVM termasuk Ethereum, Base, Arbitrum One, Optimism, dan Unichain
+    - Node bare-metal sendiri, dengan gateway di Frankfurt, London, Ashburn, Chicago, Los Angeles, dan Singapura
+    - Titik akhir publik gratis (tanpa kunci API, 50 permintaan per 10 detik per IP)
+    - Kunci API gratis dengan 3 juta unit komputasi/bulan dan 10 permintaan/detik, tanpa kartu kredit
+    - Penagihan unit komputasi — panggilan yang lebih berat biayanya lebih mahal
 
 - [**NOWNodes**](https://nownodes.io/)
   - Fitur
     - Akses ke 50+ node rantai blok
     - Kunci API Gratis
     - Penjelajah Blok
-    - Waktu Respons API ⩽ 1 detik
+    - Waktu Respons API ⩽ 1 dtk
     - Tim Dukungan 24/7
     - Manajer Akun Pribadi
     - Node bersama, arsip, cadangan, dan khusus
@@ -297,14 +297,14 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Tingkat Gratis 1 Juta Permintaan Per Hari (per titik akhir, maks 2)
     - Program Pre-Stake+ (jika Anda membutuhkan lebih dari 1 juta permintaan per hari)
     - 15+ Rantai Blok Didukung
-    - 6400+ Node yang menghasilkan POKT untuk melayani aplikasi
+    - 6400+ Node menghasilkan POKT untuk melayani aplikasi
     - Dukungan Node Arsip, Node Arsip dengan Tracing, & Node Testnet
     - Keragaman Klien Node Mainnet Ethereum
-    - Tanpa Titik Kegagalan Tunggal
-    - Tanpa Waktu Henti
+    - Tidak Ada Titik Kegagalan Tunggal
+    - Waktu Henti Nol
     - Tokenomik Mendekati Nol yang Hemat Biaya (stake POKT sekali untuk bandwidth jaringan)
-    - Tanpa biaya hangus bulanan, ubah infrastruktur Anda menjadi aset
-    - Penyeimbangan Beban yang terpasang di dalam Protokol
+    - Tidak ada biaya hangus bulanan, ubah infrastruktur Anda menjadi aset
+    - Penyeimbangan Beban yang dibangun ke dalam Protokol
     - Skalakan jumlah permintaan per hari dan node per jam tanpa batas sesuai kebutuhan Anda
     - Opsi paling privat dan tahan sensor
     - Dukungan pengembang langsung
@@ -319,7 +319,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Lapisan menengah untuk kecepatan & stabilitas (perutean panggilan, cache, pengindeksan)
     - Pemantauan Kontrak Pintar melalui Webhook
     - Dasbor intuitif, rangkaian analitik, komposer RPC
-    - Fitur keamanan tingkat lanjut (JWT, masking, whitelisting)
+    - Fitur keamanan lanjutan (JWT, masking, whitelisting)
     - API data dan analitik NFT
     - [Bersertifikat SOC2](https://www.quicknode.com/security)
     - Cocok untuk Pengembang hingga Perusahaan
@@ -346,7 +346,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Dukungan GraphQL
     - Titik akhir RPC dan WSS
     - Full node khusus
-    - Bawa cloud Anda sendiri
+    - Bawa cloud Anda
     - Alat analitik
     - Dasbor
     - Harga bayar per jam
@@ -357,13 +357,13 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
   - Fitur
     - Tingkat gratis termasuk 25 juta Unit Tenderly per bulan
     - Akses gratis ke data historis
-    - Beban kerja padat baca hingga 8x lebih cepat
+    - Beban kerja yang banyak membaca hingga 8x lebih cepat
     - Akses baca 100% konsisten
     - Titik akhir JSON-RPC
     - Pembangun permintaan RPC berbasis UI dan pratinjau permintaan
     - Terintegrasi erat dengan alat pengembangan, debugging, dan pengujian Tenderly
     - Simulasi transaksi
-    - Analitik penggunaan dan pemfilteran
+    - Analitik dan pemfilteran penggunaan
     - Manajemen kunci akses yang mudah
     - Dukungan rekayasa khusus melalui obrolan, email, dan Discord
 
@@ -376,7 +376,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Akses tak terbatas ke API data arsip
     - Dasbor dengan Request Explorer dan Mempool Watcher
     - API data NFT dan pemberitahuan Webhook
-    - Bayar dengan Kripto
+    - Bayar dalam Kripto
     - Dukungan eksternal untuk persyaratan perilaku ekstra
 
 - [**Watchdata**](https://watchdata.io/)
@@ -386,7 +386,7 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
     - Koneksi tanpa gangguan tanpa waktu henti
     - Otomatisasi proses
     - Tarif gratis
-    - Batas tinggi yang sesuai dengan pengguna mana pun
+    - Batasan tinggi yang sesuai dengan pengguna mana pun
     - Dukungan untuk berbagai node
     - Penskalaan sumber daya
     - Kecepatan pemrosesan tinggi
@@ -421,5 +421,4 @@ Berikut adalah daftar beberapa penyedia node Ethereum paling populer, jangan rag
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Memulai pengembangan Ethereum menggunakan Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Panduan mengirim transaksi menggunakan Web3 dan Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

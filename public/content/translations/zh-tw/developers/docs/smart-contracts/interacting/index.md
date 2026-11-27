@@ -171,16 +171,15 @@ const result = await client.simulateContract({
 
 ## 相關教學 {#related-tutorials}
 
-- [從 JavaScript 呼叫智能合約](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [使用 Web3.js 和 Alchemy 發送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [如何在錢包中檢視你的 NFT](/developers/tutorials/how-to-view-nft-in-metamask/)
 
-## 進階閱讀 {#further-reading}
+## 延伸閱讀 {#further-reading}
 
 - [Viem 文件：讀取與寫入合約](https://viem.sh/docs/contract/readContract)
 - [ethers.js 文件：合約](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI 規範](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [什麼是 ABI？ - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [智能合約 ABI 如何運作？ - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## 相關主題 {#related-topics}
 

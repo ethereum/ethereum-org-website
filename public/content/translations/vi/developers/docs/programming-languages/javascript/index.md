@@ -4,7 +4,7 @@ description: "Tìm hiểu cách phát triển cho Ethereum bằng cách sử d�
 lang: vi
 ---
 
-JavaScript là một trong những ngôn ngữ phổ biến nhất trong hệ sinh thái Ethereum. Trên thực tế, có một [nhóm](https://github.com/ethereumjs) chuyên tâm đưa càng nhiều tính năng của Ethereum vào JavaScript càng tốt.
+JavaScript là một trong những ngôn ngữ phổ biến nhất trong hệ sinh thái Ethereum, với các bản triển khai bằng JavaScript và TypeScript cho mọi thứ, từ các nguyên thủy Giao thức cốt lõi cho đến một ứng dụng khách đồng thuận cấp sản xuất.
 
 Có nhiều cơ hội để viết JavaScript (hoặc ngôn ngữ tương tự) ở [mọi cấp độ của ngăn xếp](/developers/docs/ethereum-stack/).
 
@@ -50,12 +50,17 @@ Nếu bạn thích đọc mã nguồn, JavaScript này có thể là một giả
 **Tham khảo EVM**  
 [`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
-### Nút và máy khách {#nodes-and-clients}
+### Các nút và ứng dụng khách {#nodes-and-clients}
 
-Một máy khách EthereumJS đang được tích cực phát triển cho phép bạn tìm hiểu sâu về cách các máy khách Ethereum hoạt động bằng một ngôn ngữ mà bạn hiểu; JavaScript!
+[Lodestar](https://lodestar.chainsafe.io/) là một ứng dụng khách đồng thuận sẵn sàng cho sản xuất được viết bằng TypeScript và được duy trì bởi ChainSafe. Nó bao gồm một nút Beacon và ứng dụng khách trình xác thực, và là một nơi tốt để xem cách đồng thuận Bằng chứng cổ phần của Ethereum hoạt động bằng một ngôn ngữ mà bạn biết.
 
-**Tham khảo máy khách**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Tìm hiểu Lodestar**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+Về phía thực thi, ứng dụng khách EthereumJS đã bị ngừng sử dụng và lưu trữ, nhưng mã nguồn của nó vẫn có sẵn để khám phá cách một ứng dụng khách Ethereum hoạt động bằng JavaScript.
+
+**Tìm hiểu ứng dụng khách đã lưu trữ**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Các dự án khác {#other-projects}
 

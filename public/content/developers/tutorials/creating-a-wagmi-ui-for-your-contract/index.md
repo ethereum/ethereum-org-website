@@ -44,6 +44,12 @@ There is a lot of theory behind how modern UI works, and [a lot of good sites](h
 
 5. Browse to the URL shown by the application. In most cases, that is [http://localhost:5173/](http://localhost:5173/).
 
+   The repository's `package.json` asks for the `latest` version of each package, so `npm install` gets whatever is current. This tutorial was tested with wagmi 3.7.9, viem 2.57.8, React 19.3.1, Vite 8.3.5, and TypeScript 7.0.2 (Vite 8 requires Node.js 20.19 or 22.12 or later). With these versions `npm run dev` works, but `npm run build` (which runs `tsc` first) reports type errors in the repository code. The code in this tutorial already includes the fixes. To apply them to your clone:
+
+   - In `src/App.tsx`, change `onClick={disconnect}` to `onClick={() => disconnect()}`.
+   - In `src/Greeter.tsx`, make the changes shown in [the `Greeter.tsx` walk through](#greeter-tsx): replace `useAccount` with `useConnection`, import `Address` from `viem` instead of `AddressType` from `abitype`, add `as const` after the ABI, and apply the changes to `greeterAddr`, `onLogs`, `greetingChange`, and `simulation.data!.request`.
+   - In `src/wagmi.ts`, remove the unused `webSocket` and `fallback` imports.
+
 6. You can see the contract source code, a modified version of Hardhat's Greeter, [on a blockchain explorer](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA?tab=contract_code).
 
 ### File walk through {#file-walk-through}
@@ -249,14 +255,14 @@ JSX follows the XML standard, which is stricter than HTML. If a tag does not hav
 Here we have two such tags, `<Greeter />` (which actually contains the HTML code that talks to the contract) and [`<hr />` for a horizontal line](https://www.w3schools.com/tags/tag_hr.asp).
 
 ```tsx
-          <button type="button" onClick={disconnect}>
+          <button type="button" onClick={() => disconnect()}>
             Disconnect
           </button>
         </div>
       )}
 ```
 
-If the user clicks this button, call the `disconnect` function.
+If the user clicks this button, call the `disconnect` function. We wrap it in an arrow function because `onClick` would otherwise pass the click event to `disconnect` as its parameter.
 
 ```tsx
       {connection.status !== 'connected' && (
@@ -311,7 +317,7 @@ import {
           useEffect,
        } from 'react'
 import {  useChainId,
-          useAccount,
+          useConnection,
           useReadContract,
           useWriteContract,
           useWatchContractEvent,
@@ -322,10 +328,10 @@ import {  useChainId,
 We use these library functions. Again, they are explained below where they are used.
 
 ```tsx
-import { AddressType } from 'abitype'
+import type { Address } from 'viem'
 ```
 
-[The `abitype` library](https://abitype.dev/) provides us with TypeScript definitions for various Ethereum data types, such as [`AddressType`](https://abitype.dev/config#addresstype).
+[The viem library](https://viem.sh/) provides us with TypeScript definitions for various Ethereum data types, such as [`Address`](https://viem.sh/docs/glossary/types#address).
 
 ```tsx
 let greeterABI = [
@@ -342,11 +348,11 @@ We use [`as const`](https://www.typescriptlang.org/docs/handbook/release-notes/t
 
 ```tsx
 type AddressPerBlockchainType = {
-  [key: number]: AddressType
+  [key: number]: Address
 }
 ```
 
-TypeScript is strongly typed. We use this definition to specify the address where the `Greeter` contract is deployed across different chains. The key is a number (the chainId), and the value is an `AddressType` (an address).
+TypeScript is strongly typed. We use this definition to specify the address where the `Greeter` contract is deployed across different chains. The key is a number (the chainId), and the value is an `Address`.
 
 ```tsx
 const contractAddrs : AddressPerBlockchainType = {
@@ -408,16 +414,16 @@ Finally, we get to define the component.
 
 ```tsx
   const chainId = useChainId()
-  const account = useAccount()
+  const account = useConnection()
 ```
 
-Information about the chain and account we are using, courtesy of [wagmi](https://wagmi.sh/). Because this is a hook (`use...`), the component is re-rendered whenever this information changes.
+Information about the chain and account we are using, courtesy of [wagmi](https://wagmi.sh/) ([`useChainId`](https://wagmi.sh/react/api/hooks/useChainId) and [`useConnection`](https://wagmi.sh/react/api/hooks/useConnection)). Because this is a hook (`use...`), the component is re-rendered whenever this information changes.
 
 ```tsx
-  const greeterAddr = chainId && contractAddrs[chainId] 
+  const greeterAddr: Address | undefined = contractAddrs[chainId]
 ```
 
-The address of the Greeter contract, which is `undefined` if we don't have chain information, or we are on a chain without that contract.
+The address of the Greeter contract, which is `undefined` if we are on a chain without that contract.
 
 ```tsx
   const readResults = useReadContract({
@@ -486,15 +492,17 @@ Listen to `SetGreeting` events.
 
 ```tsx
     onLogs: logs => {
-      const greetingFromContract = logs[0].args.greeting
+      const greetingFromContract = logs[0].args.greeting ?? ""
       setCurrentGreeting(greetingFromContract)
-      setLastSetterAddress(logs[0].args.sender)
+      setLastSetterAddress(logs[0].args.sender ?? "")
       updateStatus("Greeting updated by event")
     },
   })
 ```
 
 When we see logs (which happens when we see a new event), it means that the greeting has been modified. In that case, we can update `currentGreeting` and `lastSetterAddress` to the new values. Also, we want to update the status display.
+
+Because the ABI is declared `as const`, wagmi knows the types of the event fields. It also knows that a log might not include them, so their type is `string | undefined`. The `??` operator ([nullish coalescing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)) replaces `undefined` with an empty string.
 
 ```tsx
   const updateStatus = (newStatus: string) => {
@@ -509,17 +517,17 @@ When we update the status we want to do two things:
 2. Update the time of last status update (`statusTime`) to now.
 
 ```tsx
-  const greetingChange = (evt) =>
+  const greetingChange = (evt: React.ChangeEvent<HTMLInputElement>) =>
     setNewGreeting(evt.target.value)
 ```
 
-This is the event handler for changes to the new greeting input field. We could specify the type of the `evt` parameter, but TypeScript is a type optional language. As this function is called only once, in an HTML event handler, I don't think it is necessary.
+This is the event handler for changes to the new greeting input field. The `evt` parameter is a [change event](https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable) from an `<input>` element. The project's `tsconfig.json` enables strict mode, so TypeScript requires us to specify the type.
 
 ```tsx
   const { writeContractAsync } = useWriteContract()
 ```
 
-The function to write to a contract. It is similar to [`writeContracts`](https://wagmi.sh/core/api/actions/writeContracts#writecontracts), but enables better status updates.
+The function to write to a contract, from [the `useWriteContract` hook](https://wagmi.sh/react/api/hooks/useWriteContract). Unlike `writeContract`, `writeContractAsync` returns a promise, so we can `await` it and update the status when the transaction is sent. (In wagmi 3 the same function is also available as `mutateAsync`.)
 
 ```tsx
   const simulation = useSimulateContract({
@@ -533,11 +541,11 @@ The function to write to a contract. It is similar to [`writeContracts`](https:/
 
 This is the process to submit a blockchain transaction from the client perspective:
 
-1. Send the transaction to a node in the blockchain using [`eth_estimateGas`](https://docs.alchemy.com/reference/eth-estimategas).
+1. Send the transaction to a node in the blockchain using [`eth_estimateGas`](/developers/docs/apis/json-rpc/#eth-estimategas).
 2. Wait for a response from the node.
 3. When the response is received, ask the user to sign the transaction through the wallet. This step _has_ to happen after the node response is received because the user is shown the gas cost of the transaction before signing it.
 4. Wait for the user to approve.
-5. Send the transaction again, this time using [`eth_sendRawTransaction`](https://docs.alchemy.com/reference/eth-sendrawtransaction).
+5. Send the transaction again, this time using [`eth_sendRawTransaction`](/developers/docs/apis/json-rpc/#eth-sendrawtransaction).
 
 Step 2 is likely to take a perceptible amount of time, during which users may wonder whether their command was received by the user interface and why they aren't being asked to sign the transaction yet. That creates a poor user experience (UX).
 
@@ -595,7 +603,7 @@ Only enable the button once we have the information we need to send the transact
 Update the status. At this point, the user needs to confirm in the wallet.
 
 ```tsx
-          await writeContractAsync(simulation.data.request)
+          await writeContractAsync(simulation.data!.request)
           updateStatus("Transaction sent, waiting for greeting to change...")
         }}
       >
@@ -603,6 +611,8 @@ Update the status. At this point, the user needs to confirm in the wallet.
       </button>
 
 ```
+
+The button is only enabled when `simulation.data` exists, but TypeScript cannot know that. The exclamation point tells TypeScript that `simulation.data` is defined here.
 
 `writeContractAsync` only returns after the transaction is actually sent. This lets us show the user how long the transaction has been waiting to be included in the blockchain.
 
@@ -627,7 +637,7 @@ Export the component.
 Finally, various definitions related to wagmi are in `src/wagmi.ts`. I am not going to explain everything here, because most of it is boilerplate you are unlikely to need to change.
 
 ```ts
-import { http, webSocket, createConfig, fallback } from 'wagmi'
+import { http, createConfig } from 'wagmi'
 import { sepolia } from 'wagmi/chains'
 import { injected } from 'wagmi/connectors'
 
@@ -731,7 +741,7 @@ These days there are a lot of [L2 scaling solutions](https://ethereum.org/layer-
       11155420: "0x4dd85791923E9294E934271522f63875EAe5806f",
 
       // Sepolia
-      11155111: "0x7143d5c190F048C8d19fe325b748b081903E3BF0",
+      11155111: "0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA",
     }
     ```
 

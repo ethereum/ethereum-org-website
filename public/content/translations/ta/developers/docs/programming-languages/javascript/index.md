@@ -4,9 +4,9 @@ description: "JavaScript அடிப்படையிலான திட்ட
 lang: ta
 ---
 
-எத்திரியம் சுற்றுச்சூழல் அமைப்பில் மிகவும் பிரபலமான மொழிகளில் JavaScript ஒன்றாகும். உண்மையில், எத்திரியத்தை முடிந்தவரை JavaScript-க்கு கொண்டு வர அர்ப்பணிக்கப்பட்ட ஒரு [குழு](https://github.com/ethereumjs) உள்ளது.
+எத்திரியம் சுற்றுச்சூழல் அமைப்பில் மிகவும் பிரபலமான மொழிகளில் JavaScript-உம் ஒன்றாகும், இதில் முக்கிய நெறிமுறை அடிப்படைகள் முதல் தயாரிப்பு ஒருமித்த கிளையன்ட் வரை அனைத்தின் JavaScript மற்றும் TypeScript செயலாக்கங்கள் உள்ளன.
 
-[அடுக்கின் அனைத்து நிலைகளிலும்](/developers/docs/ethereum-stack/) JavaScript-ஐ (அல்லது அதற்கு நெருக்கமான ஒன்றை) எழுத வாய்ப்புகள் உள்ளன.
+[அடுக்கின் அனைத்து நிலைகளிலும்](/developers/docs/ethereum-stack/) JavaScript-ஐ (அல்லது அதற்கு நெருக்கமான ஒன்றை) எழுதுவதற்கான வாய்ப்புகள் உள்ளன.
 
 ## எத்திரியத்துடன் தொடர்புகொள்ளுங்கள் {#interact-with-ethereum}
 
@@ -50,12 +50,17 @@ lang: ta
 **EVM-ஐப் பாருங்கள்**  
 [`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
-### கணுக்கள் மற்றும் கிளையண்டுகள் {#nodes-and-clients}
+### கணுக்கள் மற்றும் கிளையன்ட்கள் {#nodes-and-clients}
 
-உங்களுக்குப் புரிந்த மொழியான JavaScript-இல் எத்திரியம் கிளையண்டுகள் எவ்வாறு செயல்படுகின்றன என்பதை ஆராய அனுமதிக்கும் ஒரு EthereumJS கிளையண்ட் செயலில் உள்ள மேம்பாட்டில் உள்ளது!
+[Lodestar](https://lodestar.chainsafe.io/) என்பது TypeScript-இல் எழுதப்பட்டு ChainSafe-ஆல் பராமரிக்கப்படும் தயாரிப்புக்குத் தயாரான ஒரு ஒருமித்த கிளையன்ட் ஆகும். இது ஒரு வழிகாட்டி முனை மற்றும் சரிபார்ப்பான் கிளையன்ட்டை உள்ளடக்கியது, மேலும் உங்களுக்குத் தெரிந்த ஒரு மொழியில் எத்திரியத்தின் உரிமைச் சான்று (PoS) ஒருமித்த கருத்து எவ்வாறு செயல்படுகிறது என்பதைப் பார்க்க இது ஒரு சிறந்த இடமாகும்.
 
-**கிளையண்டைப் பாருங்கள்**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Lodestar-ஐப் பாருங்கள்**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+செயலாக்கப் பக்கத்தில், EthereumJS கிளையன்ட் கைவிடப்பட்டு காப்பகப்படுத்தப்பட்டுள்ளது, ஆனால் JavaScript-இல் ஒரு எத்திரியம் கிளையன்ட் எவ்வாறு செயல்படுகிறது என்பதை ஆராய அதன் மூலக் குறியீடு இன்னும் கிடைக்கிறது.
+
+**காப்பகப்படுத்தப்பட்ட கிளையன்ட்டைப் பாருங்கள்**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## பிற திட்டங்கள் {#other-projects}
 

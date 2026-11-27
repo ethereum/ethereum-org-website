@@ -1,7 +1,7 @@
 ---
-title: 智能合约简介
+title: "智能合约简介"
 metaTitle: "智能合约：它们是什么及其优势"
-description: 智能合约的非技术性简介
+description: "什么是智能合约？对在以太坊上运行的程序的非技术性介绍，这些程序在无需中介的情况下为 DeFi、NFT 和 DAO 等应用提供支持。"
 lang: zh
 ---
 

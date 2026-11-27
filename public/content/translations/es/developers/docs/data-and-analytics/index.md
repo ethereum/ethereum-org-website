@@ -1,6 +1,6 @@
 ---
 title: "Datos y análisis"
-description: "Cómo obtener análisis y datos en cadena para usarlos en sus aplicaciones descentralizadas (dapps)"
+description: "Cómo obtener datos en cadena para su dapp: indexadores, subgrafos, exploradores de bloques, plataformas de análisis SQL y API para consultar y analizar datos de Ethereum."
 lang: es
 ---
 
@@ -78,14 +78,14 @@ EVM Query Language (EQL) es un lenguaje similar a SQL diseñado para consultar c
 Para comenzar, siga la [guía de inicio rápido de HyperIndex](https://docs.envio.dev/docs/HyperIndex/quickstart) para crear, desplegar y consultar un indexador.
 ## Lecturas adicionales {#further-reading}
 
-- [Explorando datos cripto I: Arquitecturas de flujo de datos](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Descripción general de Graph Network](https://thegraph.com/docs/en/about/)
-- [Entorno de pruebas de consultas de Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Exploración de datos cripto I: arquitecturas de flujo de datos](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [Descripción general de la red The Graph](https://thegraph.com/docs/en/about/)
+- [Explorador de The Graph](https://thegraph.com/explorer)
 - [Ejemplos de código de API en Etherscan](https://etherscan.io/apis#contracts)
 - [Documentación de la API en Blockscout](https://docs.blockscout.com/devs/apis)
 - [Explorador de la cadena de balizas Beaconcha.in](https://beaconcha.in)
 - [Conceptos básicos de Dune](https://docs.dune.com/#dune-basics)
-- [Guía de inicio rápido de Ethereum en SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [Guía de inicio rápido de Ethereum de SubQuery](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
 - [Descripción general de la red SQD](https://docs.sqd.dev/)
 - [Lenguaje de consulta de EVM](https://web.archive.org/web/20250719151453/https://www.eql.sh/blog/alpha-release-notes)
 

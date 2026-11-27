@@ -26,7 +26,8 @@ sidebarDepth: 3
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - చైనీస్, కొరియన్, రష్యన్ మరియు జపనీస్ భాషలలో కూడా అందుబాటులో ఉంది
-- [Ethplorer](https://ethplorer.io/) - టోకెన్‌లపై దృష్టి సారించే బ్లాక్ ఎక్స్‌ప్లోరర్. చైనీస్, స్పానిష్, ఫ్రెంచ్, టర్కిష్, రష్యన్, కొరియన్ మరియు వియత్నామీస్ భాషలలో కూడా అందుబాటులో ఉంది
+- [Ethplorer](https://ethplorer.io/) - టోకెన్‌లపై దృష్టి సారించిన బ్లాక్ ఎక్స్‌ప్లోరర్. చైనీస్, స్పానిష్, ఫ్రెంచ్, టర్కిష్, రష్యన్, కొరియన్ మరియు వియత్నామీస్ భాషలలో కూడా అందుబాటులో ఉంది
+- [Ethscanner](https://ethscanner.io/) - Routescan ద్వారా. ధృవీకరించబడిన కాంట్రాక్ట్‌లను Verifier Alliance యొక్క ఓపెన్ డేటాసెట్‌కు అందిస్తుంది మరియు క్రాస్-చైన్ లావాదేవీలను చూపుతుంది
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

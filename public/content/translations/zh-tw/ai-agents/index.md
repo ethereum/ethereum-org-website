@@ -1,7 +1,7 @@
 ---
 title: "AI 代理"
 metaTitle: "AI 代理 | 以太坊上的 AI 代理"
-description: "以太坊上的 AI 代理概覽"
+description: "什麼是以太坊上的 AI 代理？了解自主代理如何持有資產、交易、使用 DeFi 並在鏈上互相支付，以及需要注意的風險。"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2

@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "mr",
-  "translatedAt": "2026-06-18T21:44:27.735Z",
-  "englishManifestHash": "93da93b1f18d",
+  "translatedAt": "2026-11-17T08:48:58.174Z",
+  "englishManifestHash": "ce99d0ce28dc",
   "placeholderOrder": [
     "LINK-a21a82",
     "LINK-9117e4",
@@ -38,10 +38,9 @@
     "CODE-151b6d",
     "LINK-b3d945",
     "LINK-3aec22",
-    "CODE-478454",
-    "IMAGE-07bc65",
-    "IMAGE-3d75e4",
-    "LINK-7ad338",
+    "LINK-5cb205",
+    "CODE-c3dff8",
+    "CODE-f57055",
     "LINK-8737ad",
     "LINK-62ca51",
     "LINK-b65afe",
@@ -80,22 +79,16 @@
         "content": "eth2"
       }
     },
-    "CODE-478454": {
+    "CODE-c3dff8": {
       "type": "inline-code",
       "values": {
-        "content": "create block"
+        "content": "engine_forkchoiceUpdated"
       }
     },
-    "IMAGE-07bc65": {
-      "type": "image",
+    "CODE-f57055": {
+      "type": "inline-code",
       "values": {
-        "path": "cons_client_net_layer.png"
-      }
-    },
-    "IMAGE-3d75e4": {
-      "type": "image",
-      "values": {
-        "path": "exe_client_net_layer.png"
+        "content": "engine_getPayload"
       }
     },
     "LINK-a21a82": {
@@ -224,10 +217,10 @@
         "url": "https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md"
       }
     },
-    "LINK-7ad338": {
+    "LINK-5cb205": {
       "type": "link",
       "values": {
-        "url": "https://ethresear.ch/t/eth1-eth2-client-relationship/7248"
+        "url": "/developers/docs/networking-layer/network-addresses/"
       }
     },
     "LINK-62ca51": {
@@ -275,7 +268,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T21:44:27.735Z",
+      "translatedAt": "2026-11-17T08:48:58.174Z",
       "status": "success"
     }
   }

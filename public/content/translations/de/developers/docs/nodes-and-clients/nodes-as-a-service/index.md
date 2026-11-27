@@ -56,13 +56,13 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
   - Funktionen
     - Größter kostenloser Tarif mit 300 Mio. Recheneinheiten pro Monat (\~30 Mio. getLatestBlock-Anfragen)
     - Multichain-Unterstützung für Polygon, Starknet, Optimism, Arbitrum
-    - Unterstützt ~70 % der größten dezentralen Anwendungen (Dapps) auf Ethereum und des Transaktionsvolumens im Bereich dezentralisierte Finanzen (DeFi)
+    - Unterstützt ~70 % der größten Ethereum-Dapps und des DeFi-Transaktionsvolumens
     - Echtzeit-Webhook-Benachrichtigungen über Alchemy Notify
-    - Erstklassiger Support und Zuverlässigkeit/Stabilität
+    - Erstklassiger Support und Zuverlässigkeit / Stabilität
     - NFT-API von Alchemy
     - Dashboard mit Request Explorer, Mempool Watcher und Composer
-    - Integrierter Zugang zu Testnet-Faucets
-    - Aktive Discord-Ersteller-Community mit 18.000 Nutzern
+    - Integrierter Zugang zu Testnetz-Faucets
+    - Aktive Discord-Builder-Community mit 18.000 Benutzern
 
 - [**Allnodes**](https://www.allnodes.com/)
   - [Dokumentation](https://docs.allnodes.com/)
@@ -97,8 +97,8 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Verfügbar in sechs Regionen
     - JSON-RPC über HTTP und sichere WebSockets
     - Unterstützt 3 Chains
-    - SLAs, AWS-Support rund um die Uhr
-    - Go Ethereum (Geth) und Lighthouse
+    - SLAs, AWS-Support 24/7
+    - Go-ethereum und Lighthouse
 
 - [**Ankr**](https://www.ankr.com/)
   - [Dokumentation](https://docs.ankr.com/)
@@ -106,7 +106,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Ankr-Protokoll – offener Zugang zu öffentlichen RPC-API-Endpunkten für 8+ Chains
     - Lastausgleich und Überwachung des Knoten-Zustands für ein schnelles und zuverlässiges Gateway zum nächstgelegenen verfügbaren Knoten
     - Premium-Tarif, der WSS-Endpunkte und unbegrenzte Ratenlimits ermöglicht
-    - Bereitstellung von Full Nodes und Validator-Knoten mit einem Klick für 40+ Chains
+    - 1-Klick-Bereitstellung von Full Nodes und Validator-Knoten für 40+ Chains
     - Skalierung nach Bedarf
     - Analyse-Tools
     - Dashboard
@@ -138,14 +138,14 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**BlockPI**](https://blockpi.io/)
   - [Dokumentation](https://docs.blockpi.io/)
   - Funktionen
-    - Robuste und verteilte Knoten-Struktur
+    - Robuste & verteilte Knoten-Struktur
     - Bis zu 40 HTTPS- und WSS-Endpunkte
     - Kostenloses Anmeldepaket und monatliches Paket
     - Trace-Methode + Unterstützung für Archivdaten
     - Pakete mit bis zu 90 Tagen Gültigkeit
-    - Benutzerdefinierter Tarif und nutzungsbasierte Zahlung
+    - Benutzerdefinierter Tarif und nutzungsbasierte Bezahlung
     - Zahlung in Krypto
-    - Direkter Support und technischer Support
+    - Direkter Support & technischer Support
 
 - [**Chainbase**](https://www.chainbase.com/)
   - [Dokumentation](https://docs.chainbase.com)
@@ -165,7 +165,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - RPC- und WSS-Endpunkte
     - Dedizierte Full Nodes und Archiv-Knoten
     - Schnelle Synchronisierungszeit für dedizierte Bereitstellungen
-    - Bring Your Own Cloud
+    - Bring Your Cloud
     - Stundenweise Abrechnung
     - Direkter 24/7-Support
 
@@ -177,17 +177,17 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Verteilter Pool von 40+ Anbietern
     - Globale Abdeckung mit neun (9) Geo-Clustern
     - KI-gestütztes Lastausgleichssystem
-    - Nutzungsbasierte Pauschalpreise – keine Preiserhöhungen, kein Verfall, keine Bindung
+    - Nutzungsbasierte Pauschalpreise – keine Preiserhöhungen, kein Verfall, keine Vertragsbindung
     - Unbegrenzte Schlüssel, granulare Schlüsselanpassungen, Teamrollen, Front-End-Schutz
     - Methoden-Pauschale von 20 Recheneinheiten (CUs) pro Methode
-    - [Liste öffentlicher Endpunkt-Chains](https://drpc.org/chainlist)
+    - [Chain-Liste öffentlicher Endpunkte](https://drpc.org/chainlist)
     - [Preisrechner](https://drpc.org/pricing#calculator)
   - NodeCore: Open-Source-Stack für Organisationen, die volle Kontrolle wünschen
 
 - [**GetBlock**](https://getblock.io/)
   - [Dokumentation](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Funktionen
-    - Zugang zu 40+ Blockchain-Knoten
+    - Zugriff auf 40+ Blockchain-Knoten
     - 40.000 kostenlose tägliche Anfragen
     - Unbegrenzte Anzahl von API-Schlüsseln
     - Hohe Verbindungsgeschwindigkeit mit 1 GB/s
@@ -206,10 +206,10 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Dedizierte Full Nodes
     - Schnelle Synchronisierungszeit für dedizierte Bereitstellungen
     - Direkter 24/7-Support
-    - Zugang zu 50+ Blockchain-Knoten
+    - Zugriff auf 50+ Blockchain-Knoten
 
 - [**Infura**](https://infura.io/)
-  - [Dokumentation](https://infura.io/docs)
+  - [Dokumentation](https://docs.infura.io/)
   - Funktionen
     - Kostenlose Tarifoption
     - Skalierung nach Bedarf
@@ -221,12 +221,12 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
   - [Dokumentation](https://docs.kaleido.io/)
   - Funktionen
     - Kostenloser Einsteigertarif
-    - Bereitstellung von Ethereum-Knoten mit einem Klick
+    - 1-Klick-Bereitstellung von Ethereum-Knoten
     - Anpassbare Clients und Algorithmen (Geth, Quorum & Besu || PoA, IBFT & Raft)
     - 500+ Verwaltungs- und Service-APIs
     - RESTful-Schnittstelle für die Übermittlung von Ethereum-Transaktionen (unterstützt durch Apache Kafka)
-    - Ausgehende Streams für die Bereitstellung von Ereignissen (unterstützt durch Apache Kafka)
-    - Umfangreiche Sammlung von offchain- und Zusatzdiensten (z. B. bilateraler verschlüsselter Nachrichtentransport)
+    - Ausgehende Streams für die Ereignisbereitstellung (unterstützt durch Apache Kafka)
+    - Umfangreiche Sammlung von „offchain“- und Zusatzdiensten (z. B. bilateraler verschlüsselter Nachrichtentransport)
     - Unkompliziertes Netzwerk-Onboarding mit Governance und rollenbasierter Zugriffskontrolle
     - Ausgefeilte Benutzerverwaltung für Administratoren und Endbenutzer
     - Hochskalierbare, belastbare Infrastruktur auf Unternehmensniveau
@@ -246,7 +246,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Open-Source
     - Vollständig dezentrales SDK
     - Ethers.js-Integration
-    - Intuitive Projektmanagement-Schnittstelle
+    - Intuitive Projektmanagement-Oberfläche
     - Konsensbasierte Datenintegrität
     - Multi-Chain-Unterstützung
 
@@ -255,7 +255,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
   - Funktionen
     - Kostenlose geteilte Knoten
     - Kostenlose geteilte Archiv-Knoten
-    - Auf Privatsphäre ausgerichtet (Keine-Logs-Richtlinie)
+    - Auf Privatsphäre ausgerichtet (No-Logs-Richtlinie)
     - Cross-Chain-Unterstützung
     - Skalierung nach Bedarf
     - Dashboard
@@ -274,15 +274,15 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**NodeFlare**](https://nodeflare.app/)
   - [Dokumentation](https://nodeflare.app/docs/quick-start)
   - Funktionen
-    - 23 EVM-Chains, einschließlich Ethereum, Base, Arbitrum One & Nova, Optimism, Linea und Unichain
-    - 5 Regionen (Europa, Großbritannien, Asien, US-Ost, US-West) mit automatischem Failover zum nächstgelegenen fehlerfreien Knoten
-    - Kostenloser öffentlicher Endpunkt (kein API-Schlüssel) + kostenloser Tarif mit 3 Mio. Recheneinheiten/Monat
-    - Abrechnung nach Recheneinheiten – zahlen Sie nur für das, was Sie nutzen, aufwendigere Aufrufe kosten mehr
-    - Keine Drosselung bei kostenpflichtigen Tarifen
+    - 17 EVM-Chains einschließlich Ethereum, Base, Arbitrum One, Optimism und Unichain
+    - Eigene Bare-Metal-Knoten mit Gateways in Frankfurt, London, Ashburn, Chicago, Los Angeles und Singapur
+    - Kostenloser öffentlicher Endpunkt (kein API-Schlüssel, 50 Anfragen pro 10 Sekunden pro IP)
+    - Kostenloser API-Schlüssel mit 3 Mio. Recheneinheiten/Monat und 10 Anfragen/Sekunde, keine Kreditkarte erforderlich
+    - Abrechnung nach Recheneinheiten – aufwendigere Aufrufe kosten mehr
 
 - [**NOWNodes**](https://nownodes.io/)
   - Funktionen
-    - Zugang zu 50+ Blockchain-Knoten
+    - Zugriff auf 50+ Blockchain-Knoten
     - Kostenloser API-Schlüssel
     - Block-Explorer
     - API-Antwortzeit ⩽ 1 Sek.
@@ -298,7 +298,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Pre-Stake+-Programm (wenn Sie mehr als 1 Mio. Anfragen pro Tag benötigen)
     - 15+ unterstützte Blockchains
     - 6400+ Knoten, die POKT für die Bereitstellung von Anwendungen verdienen
-    - Unterstützung für Archiv-Knoten, Archiv-Knoten mit Tracing und Testnetz-Knoten
+    - Unterstützung für Archiv-Knoten, Archiv-Knoten mit Tracing & Testnetz-Knoten
     - Client-Diversität für Ethereum Mainnet-Knoten
     - Kein Single Point of Failure
     - Keine Ausfallzeiten
@@ -308,16 +308,16 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Unendliche Skalierung der Anzahl von Anfragen pro Tag und Knoten pro Stunde nach Bedarf
     - Die privateste, zensurresistenteste Option
     - Praktischer Entwickler-Support
-    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)-Dashboard und -Analysen
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)-Dashboard und Analysen
 
 - [**QuickNode**](https://www.quicknode.com)
   - [Dokumentation](https://www.quicknode.com/docs/)
   - Funktionen
-    - Technischer 24/7-Support und Entwickler-Discord-Community
+    - Technischer 24/7-Support & Entwickler-Discord-Community
     - Geografisch ausbalanciertes, Multi-Cloud/Metal-Netzwerk mit geringer Latenz
     - Multichain-Unterstützung (Optimism, Arbitrum, Polygon + 11 weitere)
-    - Mittlere Schichten für Geschwindigkeit und Stabilität (Anrufweiterleitung, Cache, Indizierung)
-    - Smart-Contract-Überwachung über Webhooks
+    - Mittlere Schichten für Geschwindigkeit & Stabilität (Anrufweiterleitung, Cache, Indizierung)
+    - Smart Contract-Überwachung über Webhooks
     - Intuitives Dashboard, Analyse-Suite, RPC-Composer
     - Erweiterte Sicherheitsfunktionen (JWT, Maskierung, Whitelisting)
     - NFT-Daten- und Analyse-API
@@ -346,7 +346,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - GraphQL-Unterstützung
     - RPC- und WSS-Endpunkte
     - Dedizierte Full Nodes
-    - Bring Your Own Cloud
+    - Bring Your Cloud
     - Analyse-Tools
     - Dashboard
     - Stundenweise Abrechnung
@@ -360,8 +360,8 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Bis zu 8-mal schnellere leseintensive Workloads
     - 100 % konsistenter Lesezugriff
     - JSON-RPC-Endpunkte
-    - UI-basierter RPC-Anfrage-Ersteller und Anfrage-Vorschau
-    - Eng integriert mit den Entwicklungs-, Debugging- und Test-Tools von Tenderly
+    - UI-basierter RPC-Anfrage-Builder und Anfrage-Vorschau
+    - Eng integriert in die Entwicklungs-, Debugging- und Test-Tools von Tenderly
     - Transaktionssimulationen
     - Nutzungsanalysen und Filterung
     - Einfache Verwaltung von Zugriffsschlüsseln
@@ -370,12 +370,12 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 - [**Tokenview**](https://services.tokenview.io/)
   - [Dokumentation](https://services.tokenview.io/docs?type=nodeService)
   - Funktionen
-    - Technischer 24/7-Support und Entwickler-Telegram-Community
+    - Technischer 24/7-Support & Entwickler-Telegram-Community
     - Multichain-Unterstützung (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
     - Sowohl RPC- als auch WSS-Endpunkte sind offen nutzbar
     - Unbegrenzter Zugriff auf die Archivdaten-API
     - Dashboard mit Request Explorer und Mempool Watcher
-    - NFT-Daten-API und Webhook-Benachrichtigung
+    - NFT-Daten-API und Webhook-Benachrichtigungen
     - Zahlung in Krypto
     - Externer Support für zusätzliche Verhaltensanforderungen
 
@@ -388,7 +388,7 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Kostenlose Tarife
     - Hohe Limits, die für jeden Benutzer geeignet sind
     - Unterstützung für verschiedene Knoten
-    - Ressourcenskalierung
+    - Ressourcen-Skalierung
     - Hohe Verarbeitungsgeschwindigkeiten
 
 - [**ZMOK**](https://zmok.io/)
@@ -397,19 +397,20 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
     - Front-Running as a Service
     - Globaler Transaktions-Mempool mit Such-/Filtermethoden
     - Unbegrenzte TX-Gebühr und unendliches Gas für das Senden von Transaktionen
-    - Schnellstes Abrufen des neuen Blocks und Lesen der Blockchain
+    - Schnellster Abruf des neuen Blocks und Lesen der Blockchain
     - Garantie für den besten Preis pro API-Aufruf
 
 - [**Zeeve**](https://www.zeeve.io/)
   - [Dokumentation](https://www.zeeve.io/docs/)
   - Funktionen
     - No-Code-Automatisierungsplattform auf Unternehmensniveau, die Bereitstellung, Überwachung und Verwaltung von Blockchain-Knoten und -Netzwerken bietet
-    - 30+ unterstützte Protokolle und Integrationen, und es werden mehr
+    - 30+ unterstützte Protokolle & Integrationen, und es werden mehr
     - Mehrwert-Web3-Infrastrukturdienste wie dezentraler Speicher, dezentrale Identität (DID) und Blockchain-Ledger-Daten-APIs für reale Anwendungsfälle
     - 24/7-Support und proaktive Überwachung gewährleisten jederzeit die Gesundheit der Knoten.
     - RPC-Endpunkte bieten authentifizierten Zugriff auf APIs, problemlose Verwaltung mit intuitivem Dashboard und Analysen.
     - Bietet sowohl Managed-Cloud- als auch Bring-Your-Own-Cloud-Optionen zur Auswahl und unterstützt alle großen Cloud-Anbieter wie AWS, Azure, Google Cloud, Digital Ocean und On-Premise.
     - Wir verwenden intelligentes Routing, um jedes Mal den Knoten zu erreichen, der Ihrem Benutzer am nächsten ist
+
 ## Weiterführende Literatur {#further-reading}
 
 - [Liste von Ethereum-Knoten-Diensten](https://ethereumnodes.com/)
@@ -420,5 +421,4 @@ Hier ist eine Liste einiger der beliebtesten Ethereum-Knoten-Anbieter. Fügen Si
 
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Erste Schritte mit der Ethereum-Entwicklung unter Verwendung von Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Leitfaden zum Senden von Transaktionen mit Web3 und Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

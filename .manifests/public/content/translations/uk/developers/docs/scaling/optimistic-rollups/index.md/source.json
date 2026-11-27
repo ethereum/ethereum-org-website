@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/scaling/optimistic-rollups/index.md",
-  "generatedAt": "2026-06-30T00:00:40.533Z",
-  "rootHash": "03702588e0cd",
+  "generatedAt": "2026-11-25T10:18:48.241Z",
+  "rootHash": "8ec6c61b4d46",
   "tree": {
-    "contentHash": "1dae8617e504",
-    "anchorHash": "4a6067ceab13",
+    "contentHash": "e9482f97d70e",
+    "anchorHash": "407fa570b557",
     "children": {
       "frontmatter:title": {
         "contentHash": "be340bc7ade4",
@@ -311,8 +311,8 @@
         ]
       },
       "how-optimistic-rollups-work": {
-        "contentHash": "1386477a04c9",
-        "anchorHash": "a19ad1f67c2c",
+        "contentHash": "9f9835303abb",
+        "anchorHash": "9f58446d8622",
         "labelHash": "4de7d013aab9",
         "children": {
           "_label": {
@@ -558,8 +558,8 @@
             ]
           },
           "fraud-proving": {
-            "contentHash": "65bcbf5d182c",
-            "anchorHash": "e1ffd3e69e7a",
+            "contentHash": "66f7ff9cd628",
+            "anchorHash": "73fac644130e",
             "labelHash": "20be8c369ed2",
             "children": {
               "_label": {
@@ -571,8 +571,8 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "multi-round-interactive-proving": {
-                "contentHash": "c957b47f32a2",
-                "anchorHash": "4b9f7d802648",
+                "contentHash": "b35978e599d1",
+                "anchorHash": "918e1f78a588",
                 "labelHash": "9d2ed41de34e",
                 "children": {
                   "_label": {
@@ -580,12 +580,18 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "prose:0": {
-                    "contentHash": "b4ba39b8a3f1",
+                    "contentHash": "317adb00b48e",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "component:2": {
+                    "contentHash": "e3b0c44298fc",
                     "anchorHash": "e3b0c44298fc"
                   }
                 },
                 "childrenOrder": [
                   "_label",
+                  "prose:0",
+                  "component:2",
                   "prose:0"
                 ]
               },
@@ -1089,35 +1095,6 @@
           "prose:13",
           "link:6"
         ]
-      },
-      "tutorials": {
-        "contentHash": "be4507f79feb",
-        "anchorHash": "b40304d32c33",
-        "labelHash": "7759c0988130",
-        "children": {
-          "_label": {
-            "contentHash": "7759c0988130",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "prose:1": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:0": {
-            "contentHash": "010362b76438",
-            "anchorHash": "c36e8cf5bb0d"
-          },
-          "prose:2": {
-            "contentHash": "fa01b6bf5cef",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "_label",
-          "prose:1",
-          "link:0",
-          "prose:2"
-        ]
       }
     },
     "childrenOrder": [
@@ -1141,9 +1118,8 @@
       "how-optimistic-rollups-work",
       "how-do-optimistic-rollup-fees-work",
       "scaling-ethereum-with-optimistic-rollups",
-      "further-reading-on-optimistic-rollups",
-      "tutorials"
+      "further-reading-on-optimistic-rollups"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "2a4de29685c0f579e19dadc80da2e7ba58749e3e"
 }

@@ -1,6 +1,6 @@
 ---
 title: Utangulizi wa kiufundi wa dapps
-description: 
+description: "Utangulizi wa kiufundi wa dapps: jinsi programu tumizi zilizogatuliwa zinavyochanganya mikataba mahiri kwenye Ethereum na kiolesura cha mbele, na jinsi zinavyotofautiana na programu za wavuti."
 lang: sw
 ---
 
@@ -94,10 +94,9 @@ _Je, unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 - [Utangulizi wa mrundikano wa Ethereum](/developers/docs/ethereum-stack/)
 - [Mifumo ya uundaji](/developers/docs/frameworks/)
 
-## Mafunzo: Unda programu na misimbo ya mbele kwenye Ethereum {#tutorials}
+## Mafunzo: Unda programu na violesura vya mbele kwenye Ethereum {#tutorials}
 
-- [Mapitio ya Mkataba wa Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Mapitio yaliyofafanuliwa ya mikataba ya msingi ya Uniswap v2 yanayoelezea jinsi kitengeneza soko cha kiotomatiki (amm) kinavyofanya kazi._
-- [Kujenga kiolesura cha mtumiaji kwa ajili ya mkataba wako](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Jinsi ya kujenga msimbo wa mbele wa kisasa wa React + Wagmi unaounganishwa na mkataba mahiri wako._
-- [Mkataba Mahiri wa Hello World kwa Wanaoanza – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Mafunzo ya mwanzo hadi mwisho: andika, sambaza, na ujenge msimbo wa mbele kwa ajili ya mkataba mahiri rahisi._
+- [Mwongozo wa Mkataba wa Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Mwongozo uliofafanuliwa wa mikataba ya msingi ya Uniswap v2 unaoelezea jinsi kitengeneza soko cha kiotomatiki (AMM) kinavyofanya kazi._
+- [Kuunda kiolesura cha mtumiaji kwa ajili ya mkataba wako](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Jinsi ya kuunda kiolesura cha mbele cha kisasa cha React + Wagmi kinachounganishwa na mkataba mahiri wako._
 - [Vipengele vya seva na mawakala kwa ajili ya programu za Web3](/developers/tutorials/server-components/) _– Jinsi ya kuandika vipengele vya seva vya TypeScript vinavyosikiliza matukio ya mnyororo wa vitalu na kujibu kwa miamala._
-- [IPFS kwa ajili ya violesura vya mtumiaji vilivyogatuliwa](/developers/tutorials/ipfs-decentralized-ui/) _– Jinsi ya kupangisha msimbo wa mbele wa dapp yako kwenye IPFS kwa ajili ya upinzani dhidi ya udhibiti._
+- [IPFS kwa ajili ya violesura vya mtumiaji vilivyogatuliwa](/developers/tutorials/ipfs-decentralized-ui/) _– Jinsi ya kupangisha kiolesura cha mbele cha dapp yako kwenye IPFS kwa ajili ya upinzani dhidi ya udhibiti._

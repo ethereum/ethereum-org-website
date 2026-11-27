@@ -1,7 +1,7 @@
 ---
 title: "Sıfır bilgi ispatları nedir?"
 metaTitle: "Sıfır bilgi ispatları"
-description: "Yeni başlayanlar için sıfır bilgi ispatlarına teknik olmayan bir giriş."
+description: "Sıfır bilgi ispatları nedir? ZK ispatlarının veriyi açığa çıkarmadan bir talebi nasıl doğruladığına ve Ethereum'un bunları nasıl kullandığına dair yeni başlayanlara uygun bir giriş."
 lang: tr
 ---
 

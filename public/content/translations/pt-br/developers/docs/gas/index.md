@@ -13,71 +13,72 @@ Para entender melhor esta página, recomendamos que você leia primeiro sobre [t
 
 ## O que é gás? {#what-is-gas}
 
-Gás refere-se à unidade que mede a quantidade de esforço computacional necessário para executar operações específicas na rede Ethereum.
+O gas refere-se à unidade que mede a quantidade de esforço computacional necessário para executar operações específicas na rede Ethereum.
 
 Como cada transação na Ethereum exige recursos computacionais para ser executada, esses recursos precisam ser pagos para garantir que a Ethereum não seja vulnerável a spam e não fique presa em loops computacionais infinitos. O pagamento pela computação é feito na forma de uma taxa de gas.
 
-A taxa de gas é **a quantidade de gás usada para realizar alguma operação, multiplicada pelo custo por unidade de gás**. A taxa é paga independentemente de uma transação ser bem-sucedida ou falhar.
+A taxa de gas é **a quantidade de gas usada para realizar alguma operação, multiplicada pelo custo por unidade de gas**. A taxa é paga independentemente de uma transação ser bem-sucedida ou falhar.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-As taxas de gas devem ser pagas na moeda nativa da Ethereum, o ether (ETH). Os preços do gás geralmente são cotados em gwei, que é uma denominação do ETH. Cada gwei é igual a um bilionésimo de um ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
+As taxas de gas devem ser pagas na moeda nativa da Ethereum, o ether (ETH). Os preços do gas geralmente são cotados em gwei, que é uma denominação do ETH. Cada gwei é igual a um bilionésimo de um ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
 
-Por exemplo, em vez de dizer que seu gás custa 0,000000001 ether, você pode dizer que seu gás custa 1 gwei.
+Por exemplo, em vez de dizer que seu gas custa 0,000000001 ether, você pode dizer que seu gas custa 1 gwei.
 
 A palavra 'gwei' é uma contração de 'giga-wei', que significa 'bilhão de Wei'. Um gwei é igual a um bilhão de Wei. O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), criador do [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
 
 ## Como as taxas de gas são calculadas? {#how-are-gas-fees-calculated}
 
-Você pode definir a quantidade de gás que está disposto a pagar ao enviar uma transação. Ao oferecer uma certa quantidade de gás, você está dando um lance para que sua transação seja incluída no próximo bloco. Se você oferecer muito pouco, é menos provável que os validadores escolham sua transação para inclusão, o que significa que sua transação pode ser executada com atraso ou nem ser executada. Se você oferecer muito, pode desperdiçar algum ETH. Então, como você pode saber quanto pagar?
+Você pode definir a quantidade de gás que está disposto a pagar ao enviar uma transação. Ao oferecer uma certa quantidade de gás, você está dando um lance para que sua transação seja incluída no próximo bloco. Se você oferecer muito pouco, é menos provável que os validadores escolham sua transação para inclusão, o que significa que sua transação pode ser executada com atraso ou nem ser executada. Se você oferecer muito, poderá desperdiçar algum ETH. Então, como saber quanto pagar?
 
-O gás total que você paga é dividido em dois componentes: a `base fee` e a `priority fee` (taxa de prioridade).
+O preço que você paga por unidade de gás é dividido em dois componentes: a `base fee` (taxa básica) e a `priority fee` (gorjeta).
 
-A `base fee` é definida pelo protocolo — você deve pagar pelo menos esse valor para que sua transação seja considerada válida. A `priority fee` é uma taxa de prioridade que você adiciona à taxa básica para tornar sua transação atraente para os validadores, para que eles a escolham para inclusão no próximo bloco.
+A `base fee` é definida pelo protocolo — você deve pagar pelo menos esse valor para que sua transação seja considerada válida. A `priority fee` é uma gorjeta que você adiciona à taxa básica para tornar sua transação atraente para os validadores, para que eles a escolham para inclusão no próximo bloco.
 
-Uma transação que paga apenas a `base fee` é tecnicamente válida, mas improvável de ser incluída porque não oferece nenhum incentivo aos validadores para escolhê-la em vez de qualquer outra transação. A taxa de `priority` 'correta' é determinada pelo uso da rede no momento em que você envia sua transação — se houver muita demanda, você pode ter que definir sua taxa de `priority` mais alta, mas quando há menos demanda, você pode pagar menos.
+Uma transação que paga apenas a `base fee` é tecnicamente válida, mas improvável de ser incluída porque não oferece nenhum incentivo aos validadores para escolhê-la em vez de qualquer outra transação. A taxa de `priority` "correta" é determinada pelo uso da rede no momento em que você envia sua transação — se houver muita demanda, você pode ter que definir sua taxa de `priority` mais alta, mas quando há menos demanda, você pode pagar menos.
 
-Por exemplo, digamos que Jordan tenha que pagar a Taylor 1 ETH. Uma transferência de ETH exige 21.000 unidades de gás, e a taxa básica é de 10 gwei. Jordan inclui uma taxa de prioridade de 2 gwei.
+Por exemplo, digamos que Jordan tenha que pagar 1 ETH a Taylor. Uma transferência de ETH exige 21.000 unidades de gás, e a taxa básica é de 10 gwei. Jordan inclui uma taxa de prioridade de 2 gwei.
 
 A taxa total agora seria igual a:
 
 `units of gas used * (base fee + priority fee)`
 
-onde a `base fee` é um valor definido pelo protocolo e a `priority fee` é um valor definido pelo usuário como uma taxa de prioridade para o validador.
+onde a `base fee` é um valor definido pelo protocolo e a `priority fee` é um valor definido pelo usuário como uma gorjeta para o validador.
 
 ex., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
-Quando Jordan envia o dinheiro, 1,000252 ETH será deduzido da conta de Jordan. Taylor receberá o crédito de 1,0000 ETH. O validador recebe a taxa de prioridade de 0,000042 ETH. A `base fee` de 0,00021 ETH é queimada.
+Quando Jordan envia o dinheiro, 1,000252 ETH será deduzido da conta de Jordan. Taylor será creditado com 1,0000 ETH. O validador recebe a taxa de prioridade de 0,000042 ETH. A `base fee` de 0,00021 ETH é queimada.
 
 ### Taxa básica {#base-fee}
 
-Todo bloco tem uma taxa básica que atua como um preço de reserva. Para ser elegível para inclusão em um bloco, o preço oferecido por gás deve ser pelo menos igual à taxa básica. A taxa básica é calculada independentemente do bloco atual e, em vez disso, é determinada pelos blocos anteriores a ele, tornando as taxas de transação mais previsíveis para os usuários. Quando o bloco é criado, essa **taxa básica é "queimada"**, removendo-a de circulação.
+Cada bloco tem uma taxa básica que atua como um preço de reserva. Para ser elegível para inclusão em um bloco, o preço oferecido por gás deve ser pelo menos igual à taxa básica. A taxa básica é calculada independentemente do bloco atual e, em vez disso, é determinada pelos blocos anteriores a ele, tornando as taxas de transação mais previsíveis para os usuários. Quando o bloco é criado, essa **taxa básica é "queimada"**, removendo-a de circulação.
 
-A taxa básica é calculada por uma fórmula que compara o tamanho do bloco anterior (a quantidade de gás usada para todas as transações) com o tamanho alvo (metade do limite de gas). A taxa básica aumentará ou diminuirá em no máximo 12,5% por bloco se o tamanho do bloco alvo estiver acima ou abaixo do alvo, respectivamente. Esse crescimento exponencial torna economicamente inviável que o tamanho do bloco permaneça alto indefinidamente.
+A taxa básica é calculada por uma fórmula que compara o tamanho do bloco anterior (a quantidade de gás usada para todas as transações) com o tamanho alvo (metade do limite de gas). A taxa básica aumentará ou diminuirá em um máximo de 12,5% por bloco se o tamanho do bloco estiver acima ou abaixo do alvo, respectivamente. Esse crescimento exponencial torna economicamente inviável que o tamanho do bloco permaneça alto indefinidamente.
 
-| Número do Bloco | Gás Incluído | Aumento da Taxa | Taxa Básica Atual |
-| --------------- | -----------: | --------------: | ----------------: |
-| 1               |          18M |              0% |          100 gwei |
-| 2               |          36M |              0% |          100 gwei |
-| 3               |          36M |           12,5% |        112,5 gwei |
-| 4               |          36M |           12,5% |        126,6 gwei |
-| 5               |          36M |           12,5% |        142,4 gwei |
-| 6               |          36M |           12,5% |        160,2 gwei |
-| 7               |          36M |           12,5% |        180,2 gwei |
-| 8               |          36M |           12,5% |        202,7 gwei |
+| Número do bloco | Gás incluído | Aumento da taxa | Taxa básica atual |
+| ------------ | -----------: | -----------: | ---------------: |
+| 1            |          30M |           0% |         0,1 gwei |
+| 2            |          60M |           0% |         0,1 gwei |
+| 3            |          60M |        12,5% |      0,1125 gwei |
+| 4            |          60M |        12,5% |      0,1266 gwei |
+| 5            |          60M |        12,5% |      0,1424 gwei |
+| 6            |          60M |        12,5% |      0,1602 gwei |
+| 7            |          60M |        12,5% |      0,1802 gwei |
+| 8            |          60M |        12,5% |      0,2027 gwei |
 
-Na tabela acima, um exemplo é demonstrado usando 36 milhões como o limite de gas. Seguindo este exemplo, para criar uma transação no bloco número 9, uma carteira informará ao usuário com certeza que a **taxa básica máxima** a ser adicionada ao próximo bloco é `current base fee * 112.5%` ou `202.7 gwei * 112.5% = 228.1 gwei`.
+Na tabela acima, um exemplo é demonstrado usando 60 milhões como o limite de gas. Seguindo este exemplo, para criar uma transação no bloco número 9, uma carteira informará ao usuário com certeza que a **taxa básica máxima** a ser adicionada ao próximo bloco é `current base fee * 112.5%` ou `0.2027 gwei * 112.5% = 0.2281 gwei`.
+
+<BaseFeeDiagram />
 
 Também é importante notar que é improvável que vejamos picos prolongados de blocos cheios devido à velocidade com que a taxa básica aumenta antes de um bloco cheio.
 
-| Número do Bloco | Gás Incluído | Aumento da Taxa | Taxa Básica Atual |
-| --------------- | -----------: | --------------: | ----------------: |
-| 30              |          36M |           12,5% |       2705,6 gwei |
-| ...             |          ... |           12,5% |               ... |
-| 50              |          36M |           12,5% |      28531,3 gwei |
-| ...             |          ... |           12,5% |               ... |
-| 100             |          36M |           12,5% |   10302608,6 gwei |
+| Número do bloco | Gás incluído | Aumento da taxa | Taxa básica atual |
+| ------------ | -----------: | -----------: | ---------------: |
+| 30           |          60M |        12,5% |      2,7056 gwei |
+| ...          |          ... |        12,5% |              ... |
+| 50           |          60M |        12,5% |     28,5313 gwei |
+| ...          |          ... |        12,5% |              ... |
+| 100          |          60M |        12,5% |  10302,6083 gwei |
 
 ### Taxa de prioridade {#priority-fee}
 
@@ -85,7 +86,7 @@ A taxa de prioridade incentiva os validadores a maximizar o número de transaç�
 
 ### Taxa máxima {#maxfee}
 
-Para executar uma transação na rede, os usuários podem especificar um limite máximo que estão dispostos a pagar para que sua transação seja executada. Esse parâmetro opcional é conhecido como `maxFeePerGas`. Para que uma transação seja executada, a taxa máxima deve exceder a soma da taxa básica e da taxa de prioridade. O remetente da transação é reembolsado com a diferença entre a taxa máxima e a soma da taxa básica e da taxa de prioridade.
+Para executar uma transação na rede, os usuários podem especificar um limite máximo que estão dispostos a pagar para que sua transação seja executada. Este parâmetro opcional é conhecido como `maxFeePerGas`. Para que uma transação seja executada, a taxa máxima deve ser pelo menos a taxa básica, e a taxa de prioridade paga é limitada para que a taxa básica mais a taxa de prioridade nunca excedam a taxa máxima. O remetente da transação é reembolsado com a diferença entre a taxa máxima e a soma da taxa básica e da taxa de prioridade.
 
 ### Tamanho do bloco {#block-size}
 
@@ -101,12 +102,11 @@ Você pode declarar explicitamente quanto está disposto a pagar para que sua tr
 
 ## Por que as taxas de gas existem? {#why-do-gas-fees-exist}
 
-Em suma, as taxas de gas ajudam a manter a rede Ethereum segura. Ao exigir uma taxa para cada computação executada na rede, evitamos que agentes mal-intencionados enviem spam para a rede. Para evitar loops infinitos acidentais ou hostis ou outros desperdícios computacionais no código, cada transação é obrigada a definir um limite de quantas etapas computacionais de execução de código ela pode usar. A unidade fundamental de computação é o "gás".
+Em resumo, as taxas de gas ajudam a manter a rede Ethereum segura. Ao exigir uma taxa para cada computação executada na rede, evitamos que agentes mal-intencionados enviem spam para a rede. Para evitar loops infinitos acidentais ou hostis, ou outro desperdício computacional no código, cada transação é obrigada a definir um limite de quantas etapas computacionais de execução de código ela pode usar. A unidade fundamental de computação é o "gas".
 
-Embora uma transação inclua um limite, qualquer gás não utilizado em uma transação é devolvido ao usuário (ex., `max fee - (base fee + tip)` é devolvido).
+Embora uma transação inclua um limite, qualquer gas não utilizado em uma transação é devolvido ao usuário (ex., `max fee - (base fee + tip)` é devolvido).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## O que é o limite de gas? {#what-is-gas-limit}
 
@@ -128,18 +128,12 @@ O dimensionamento da camada 2 é uma iniciativa primária para melhorar muito os
 
 ## Monitorando as taxas de gas {#monitoring-gas-fees}
 
-Se você quiser monitorar os preços do gás, para poder enviar seu ETH por menos, você pode usar muitas ferramentas diferentes, como:
+Se você quiser monitorar os preços do gas, para poder enviar seu ETH por menos, você pode usar muitas ferramentas diferentes, como:
 
-- [Etherscan](https://etherscan.io/gastracker) _Estimador de preço do gás de transação_
-- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimador de preço do gás de transação de código aberto_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitore e rastreie os preços do gás da Ethereum e da camada 2 para reduzir as taxas de transação e economizar dinheiro_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extensão do Chrome para estimativa de gás com suporte a transações legadas do Tipo 0 e transações do Tipo 2 EIP-1559._
-- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcule as taxas de gas na sua moeda local para diferentes tipos de transação na Mainnet, Arbitrum e Polygon._
-
-## Ferramentas relacionadas {#related-tools}
-
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API de estimativa de gás alimentada pela plataforma global de dados de mempool da Blocknative_
-- [Gas Network](https://gas.network) Oráculos de gás onchain. Suporte para mais de 35 cadeias. 
+- [Etherscan](https://etherscan.io/gastracker) _Estimador de preço do gas de transação_
+- [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimador de preço do gas de transação de código aberto_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitore e rastreie os preços do gas da Ethereum e da camada 2 (l2) para reduzir as taxas de transação e economizar dinheiro_
+- [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calcule as taxas de gas em sua moeda local para diferentes tipos de transação na Mainnet, Arbitrum e Polygon._
 
 ## Leitura adicional {#further-reading}
 

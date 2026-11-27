@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: Pelajari tentang pembaruan protokol Pectra
+description: Pectra diluncurkan pada 7 Mei 2025. Pelajari apa saja yang diubah oleh pembaruan Ethereum ini, termasuk akun pintar EIP-7702 dan saldo validator maksimum 2048 ETH.
 lang: id
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -75,9 +75,9 @@ Prakompilasi baru ini menambahkan kemampuan bagi setiap pengembang untuk dengan 
 
 ### Menyajikan hash blok historis dari state {#2935}
 
-EVM saat ini menyediakan opcode `BLOCKHASH` yang memungkinkan pengembang kontrak untuk mengambil hash dari sebuah blok secara langsung di lapisan eksekusi. Namun, ini terbatas hanya pada 256 blok terakhir dan mungkin menjadi masalah bagi klien stateless di masa mendatang.
+EVM saat ini menyediakan opcode `BLOCKHASH` yang memungkinkan pengembang kontrak untuk mengambil hash dari sebuah blok secara langsung di lapisan eksekusi. Namun, ini hanya terbatas pada 256 blok terakhir dan mungkin menjadi masalah bagi klien stateless di masa depan.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) membuat kontrak sistem baru yang dapat menyajikan 8192 hash blok terakhir sebagai slot penyimpanan. Ini membantu mempersiapkan protokol untuk masa depan untuk eksekusi stateless dan menjadi lebih efisien ketika verkle tries diadopsi. Namun, terlepas dari ini, rollup dapat langsung memanfaatkannya, karena mereka dapat meminta kontrak secara langsung dengan jendela historis yang lebih panjang.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) membuat kontrak sistem baru yang dapat menyajikan 8192 hash blok terakhir sebagai slot penyimpanan. Hal ini membantu mempersiapkan protokol untuk masa depan bagi eksekusi stateless. Namun, terlepas dari hal ini, rollup dapat langsung merasakan manfaatnya, karena mereka dapat melakukan kueri ke kontrak secara langsung dengan jendela historis yang lebih panjang.
 
 ### Memindahkan indeks komite ke luar Atestasi {#7549}
 

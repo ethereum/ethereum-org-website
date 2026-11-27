@@ -1,12 +1,12 @@
 ---
 title: Cancun-Deneb (Dencun)
-metaTitle: Câu hỏi thường gặp về Cancun-Deneb (Dencun)
-description: Các câu hỏi thường gặp về bản nâng cấp mạng lưới Cancun-Deneb (Dencun)
+metaTitle: "Câu hỏi thường gặp về Cancun-Deneb (Dencun)"
+description: "Các câu hỏi thường gặp về bản nâng cấp mạng lưới Cancun-Deneb (Dencun)"
 lang: vi
 template: upgrade
 ---
 
-Cancun-Deneb (Dencun) là một bản nâng cấp cho mạng lưới Ethereum, kích hoạt **Proto-Danksharding (EIP-4844)**, giới thiệu các **khối dữ liệu** (blob) tạm thời để lưu trữ bản cuộn [lớp 2 (l2)](/glossary/#layer-2) với chi phí rẻ hơn.
+Cancun-Deneb (Dencun) là một bản nâng cấp cho mạng lưới Ethereum, kích hoạt **Proto-Danksharding (EIP-4844)**, giới thiệu các **khối dữ liệu** (blob) tạm thời để lưu trữ bản cuộn [lớp 2 (L2)](/glossary/#layer-2) với chi phí rẻ hơn.
 
 Một loại giao dịch mới cho phép các nhà cung cấp bản cuộn lưu trữ dữ liệu hiệu quả hơn về mặt chi phí trong cái được gọi là "khối dữ liệu". Các khối dữ liệu được đảm bảo sẽ có sẵn trên mạng lưới trong khoảng 18 ngày (chính xác hơn là 4096 [Kỷ nguyên](/glossary/#epoch)). Sau khoảng thời gian này, các khối dữ liệu sẽ bị cắt tỉa khỏi mạng lưới, nhưng các ứng dụng vẫn có thể xác minh tính hợp lệ của dữ liệu bằng cách sử dụng các bằng chứng. 
 
@@ -29,30 +29,29 @@ Một loại giao dịch mới cho phép các nhà cung cấp bản cuộn lưu 
 
 Dencun chủ yếu giải quyết vấn đề **khả năng mở rộng** (xử lý nhiều người dùng và nhiều giao dịch hơn) với **mức phí phải chăng**, trong khi vẫn **duy trì sự phi tập trung** của mạng lưới.
 
-Cộng đồng Ethereum đã và đang thực hiện cách tiếp cận "lấy bản cuộn làm trung tâm" cho sự phát triển của mình, đặt các bản cuộn lớp 2 (l2) làm phương tiện chính để hỗ trợ nhiều người dùng hơn một cách an toàn.
+Cộng đồng Ethereum đã và đang thực hiện cách tiếp cận "lấy bản cuộn làm trung tâm" cho sự phát triển của mình, đặt các bản cuộn lớp 2 (L2) làm phương tiện chính để hỗ trợ nhiều người dùng hơn một cách an toàn.
 
 Các mạng lưới bản cuộn xử lý (hoặc "thực thi") các giao dịch tách biệt với Mạng chính và sau đó công bố một bằng chứng mật mã và/hoặc dữ liệu giao dịch đã nén của các kết quả trở lại Mạng chính để lưu trữ hồ sơ. Việc lưu trữ các bằng chứng này đi kèm với một khoản chi phí (dưới dạng [Gas](/glossary/#gas)), mà trước khi có Proto-Danksharding, phải được lưu trữ vĩnh viễn bởi tất cả các nhà điều hành nút mạng lưới, khiến nó trở thành một tác vụ đắt đỏ.
 
-Việc giới thiệu Proto-Danksharding trong bản nâng cấp Dencun bổ sung khả năng lưu trữ dữ liệu rẻ hơn cho các bằng chứng này bằng cách chỉ yêu cầu các nhà điều hành nút lưu trữ dữ liệu này trong khoảng 18 ngày, sau đó dữ liệu có thể được xóa một cách an toàn để ngăn chặn việc mở rộng các yêu cầu về phần cứng. Bởi vì các bản cuộn thường có thời gian rút tiền là 7 ngày, mô hình bảo mật của chúng không thay đổi miễn là các khối dữ liệu có sẵn trên l1 trong khoảng thời gian này. Khoảng thời gian cắt tỉa 18 ngày cung cấp một bộ đệm đáng kể cho giai đoạn này.
+Việc giới thiệu Proto-Danksharding trong bản nâng cấp Dencun bổ sung khả năng lưu trữ dữ liệu rẻ hơn cho các bằng chứng này bằng cách chỉ yêu cầu các nhà điều hành nút lưu trữ dữ liệu này trong khoảng 18 ngày, sau đó dữ liệu có thể được xóa một cách an toàn để ngăn chặn việc mở rộng các yêu cầu về phần cứng. Bởi vì các bản cuộn thường có thời gian rút tiền là 7 ngày, mô hình bảo mật của chúng không thay đổi miễn là các khối dữ liệu có sẵn trên L1 trong khoảng thời gian này. Khoảng thời gian cắt tỉa 18 ngày cung cấp một bộ đệm đáng kể cho giai đoạn này.
 
 [Tìm hiểu thêm về việc mở rộng quy mô Ethereum](/roadmap/scaling/)
 
 ## Dữ liệu khối dữ liệu cũ được truy cập như thế nào? {#historical-access}
 
-Mặc dù các nút Ethereum thông thường sẽ luôn giữ _trạng thái hiện tại_ của mạng lưới, dữ liệu khối dữ liệu lịch sử có thể bị loại bỏ khoảng 18 ngày sau khi được giới thiệu. Trước khi loại bỏ dữ liệu này, Ethereum đảm bảo rằng nó đã được cung cấp cho tất cả những người tham gia mạng lưới, cho phép có thời gian để:
+Mặc dù các nút Ethereum thông thường sẽ luôn lưu giữ _trạng thái hiện tại_ của mạng lưới, dữ liệu khối dữ liệu lịch sử có thể bị loại bỏ khoảng 18 ngày sau khi được đưa vào. Trước khi loại bỏ dữ liệu này, Ethereum đảm bảo rằng nó đã được cung cấp cho tất cả những người tham gia mạng lưới, cho phép có thời gian để:
 
 - Các bên quan tâm tải xuống và lưu trữ dữ liệu.
 - Hoàn thành tất cả các giai đoạn thử thách của bản cuộn.
-- Hoàn tất các giao dịch bản cuộn.
+- Hoàn tất các giao dịch của bản cuộn.
 
-Dữ liệu khối dữ liệu _lịch sử_ có thể được mong muốn vì nhiều lý do khác nhau và có thể được lưu trữ cũng như truy cập bằng cách sử dụng một số Giao thức phi tập trung:
+Dữ liệu khối dữ liệu _lịch sử_ có thể được mong muốn vì nhiều lý do và có thể được lưu trữ và truy cập bằng cách sử dụng một số giao thức phi tập trung:
 
-- **Các Giao thức lập chỉ số của bên thứ ba**, chẳng hạn như The Graph, lưu trữ dữ liệu này thông qua một mạng lưới phi tập trung gồm các nhà điều hành nút được khuyến khích bởi các cơ chế kinh tế tiền mã hóa.
-- **BitTorrent** là một Giao thức phi tập trung nơi các tình nguyện viên có thể lưu giữ và phân phối dữ liệu này cho những người khác.
-- **[Portal Network của Ethereum](/developers/docs/networking-layer/portal-network/)** nhằm mục đích cung cấp quyền truy cập vào tất cả dữ liệu Ethereum thông qua một mạng lưới phi tập trung gồm các nhà điều hành nút bằng cách phân phối dữ liệu giữa những người tham gia tương tự như BitTorrent.
-- **Người dùng cá nhân** luôn có quyền tự do lưu trữ các bản sao dữ liệu của riêng họ mà họ muốn để tham khảo lịch sử.
+- **Các giao thức lập chỉ mục của bên thứ ba**, chẳng hạn như The Graph, lưu trữ dữ liệu này thông qua một mạng lưới phi tập trung gồm các nhà điều hành nút được khuyến khích bằng các cơ chế kinh tế tiền mã hóa.
+- **BitTorrent** là một giao thức phi tập trung nơi các tình nguyện viên có thể lưu giữ và phân phối dữ liệu này cho những người khác.
+- **Người dùng cá nhân** luôn có quyền tự do lưu trữ các bản sao của riêng họ đối với bất kỳ dữ liệu nào họ muốn để tham khảo lịch sử.
 - **Các nhà cung cấp bản cuộn** được khuyến khích lưu trữ dữ liệu này để nâng cao trải nghiệm người dùng cho bản cuộn của họ.
-- **Các trình khám phá khối** thường chạy các nút lưu trữ để lập chỉ số và lưu trữ tất cả thông tin này nhằm dễ dàng tham khảo lịch sử, người dùng có thể truy cập thông qua giao diện web.
+- **Các trình khám phá khối** thường chạy các nút lưu trữ để lập chỉ mục và lưu trữ tất cả thông tin này nhằm dễ dàng tham khảo lịch sử, người dùng có thể truy cập thông qua giao diện web.
 
 Điều quan trọng cần lưu ý là việc khôi phục trạng thái lịch sử hoạt động dựa trên **mô hình tin cậy 1-trong-N**. Điều này có nghĩa là bạn chỉ cần dữ liệu từ _một nguồn đáng tin cậy duy nhất_ để xác minh tính chính xác của nó bằng cách sử dụng trạng thái hiện tại của mạng lưới.
 
@@ -74,30 +73,30 @@ Các máy khách đồng thuận xử lý phần mềm _trình xác thực_, t�
 - Các nhà phát triển bản cuộn có thể sử dụng các mạng lưới này để thử nghiệm EIP-4844
 - Hầu hết người dùng sẽ hoàn toàn không bị ảnh hưởng bởi thay đổi này đối với mỗi mạng thử nghiệm
 
-## Liệu tất cả các giao dịch trên l2 hiện nay sẽ sử dụng không gian khối dữ liệu tạm thời hay bạn sẽ có thể lựa chọn? {#calldata-vs-blobs}
+## Liệu tất cả các giao dịch trên L2 hiện nay sẽ sử dụng không gian khối dữ liệu tạm thời hay bạn sẽ có thể lựa chọn? {#calldata-vs-blobs}
 
-Các giao dịch bản cuộn trên lớp 2 (l2) của Ethereum có tùy chọn sử dụng hai loại lưu trữ dữ liệu: không gian khối dữ liệu tạm thời hoặc dữ liệu lệnh gọi hợp đồng thông minh vĩnh viễn. Không gian khối dữ liệu là một lựa chọn tiết kiệm, cung cấp khả năng lưu trữ tạm thời với chi phí thấp hơn. Nó đảm bảo tính khả dụng của dữ liệu cho tất cả các giai đoạn thử thách cần thiết. Mặt khác, dữ liệu lệnh gọi hợp đồng thông minh cung cấp khả năng lưu trữ vĩnh viễn nhưng đắt đỏ hơn.
+Các giao dịch bản cuộn trên lớp 2 (L2) của Ethereum có tùy chọn sử dụng hai loại lưu trữ dữ liệu: không gian khối dữ liệu tạm thời hoặc dữ liệu lệnh gọi hợp đồng thông minh vĩnh viễn. Không gian khối dữ liệu là một lựa chọn tiết kiệm, cung cấp khả năng lưu trữ tạm thời với chi phí thấp hơn. Nó đảm bảo tính khả dụng của dữ liệu cho tất cả các giai đoạn thử thách cần thiết. Mặt khác, dữ liệu lệnh gọi hợp đồng thông minh cung cấp khả năng lưu trữ vĩnh viễn nhưng đắt đỏ hơn.
 
 Quyết định giữa việc sử dụng không gian khối dữ liệu hay dữ liệu lệnh gọi chủ yếu do các nhà cung cấp bản cuộn đưa ra. Họ dựa trên quyết định này vào nhu cầu hiện tại đối với không gian khối dữ liệu. Nếu không gian khối dữ liệu có nhu cầu cao, các bản cuộn có thể chọn dữ liệu lệnh gọi để đảm bảo dữ liệu được đăng tải kịp thời.
 
 Mặc dù về mặt lý thuyết, người dùng có thể chọn loại lưu trữ ưa thích của họ, nhưng các nhà cung cấp bản cuộn thường quản lý lựa chọn này. Việc cung cấp tùy chọn này cho người dùng sẽ làm tăng thêm sự phức tạp, đặc biệt là trong các giao dịch gộp hiệu quả về chi phí. Để biết chi tiết cụ thể về lựa chọn này, người dùng nên tham khảo tài liệu do từng nhà cung cấp bản cuộn cung cấp.
 
-## EIP-4844 có làm giảm Gas l1 không? {#l1-fee-impact}
+## EIP-4844 có làm giảm Gas L1 không? {#l1-fee-impact}
 
-Không đáng kể. Một thị trường Gas mới được giới thiệu dành riêng cho không gian khối dữ liệu, để các nhà cung cấp bản cuộn sử dụng. _Mặc dù phí trên l1 có thể giảm bằng cách chuyển dữ liệu bản cuộn sang các khối dữ liệu, bản nâng cấp này chủ yếu tập trung vào việc giảm phí l2. Việc giảm phí trên l1 (Mạng chính) có thể xảy ra như một hiệu ứng thứ cấp ở mức độ thấp hơn._
+Không đáng kể. Một thị trường Gas mới được giới thiệu dành riêng cho không gian khối dữ liệu, để các nhà cung cấp bản cuộn sử dụng. _Mặc dù phí trên L1 có thể giảm bằng cách chuyển dữ liệu bản cuộn sang các khối dữ liệu, bản nâng cấp này chủ yếu tập trung vào việc giảm phí L2. Việc giảm phí trên L1 (Mạng chính) có thể xảy ra như một hiệu ứng thứ cấp ở mức độ thấp hơn._
 
-- Việc giảm Gas l1 sẽ tỷ lệ thuận với việc áp dụng/sử dụng dữ liệu khối dữ liệu của các nhà cung cấp bản cuộn
-- Gas l1 có khả năng vẫn cạnh tranh từ các hoạt động không liên quan đến bản cuộn
-- Các bản cuộn áp dụng việc sử dụng không gian khối dữ liệu sẽ yêu cầu ít Gas l1 hơn, giúp đẩy phí Gas l1 xuống trong thời gian tới
-- Không gian khối dữ liệu vẫn còn hạn chế, vì vậy nếu các khối dữ liệu trong một khối bị bão hòa/đầy, thì các bản cuộn có thể được yêu cầu đăng dữ liệu của họ dưới dạng dữ liệu vĩnh viễn trong thời gian chờ đợi, điều này sẽ đẩy giá Gas l1 và l2 lên cao
+- Việc giảm Gas L1 sẽ tỷ lệ thuận với việc áp dụng/sử dụng dữ liệu khối dữ liệu của các nhà cung cấp bản cuộn
+- Gas L1 có khả năng vẫn cạnh tranh từ các hoạt động không liên quan đến bản cuộn
+- Các bản cuộn áp dụng việc sử dụng không gian khối dữ liệu sẽ yêu cầu ít Gas L1 hơn, giúp đẩy phí Gas L1 xuống trong thời gian tới
+- Không gian khối dữ liệu vẫn còn hạn chế, vì vậy nếu các khối dữ liệu trong một khối bị bão hòa/đầy, thì các bản cuộn có thể được yêu cầu đăng dữ liệu của họ dưới dạng dữ liệu vĩnh viễn trong thời gian chờ đợi, điều này sẽ đẩy giá Gas L1 và L2 lên cao
 
 ## Điều này có làm giảm phí trên các blockchain lớp 1 EVM khác không? {#alt-l1-fee-impact}
 
-Không. Những lợi ích của Proto-Danksharding dành riêng cho các bản cuộn lớp 2 (l2) của Ethereum lưu trữ bằng chứng của chúng trên lớp 1 (Mạng chính).
+Không. Những lợi ích của Proto-Danksharding dành riêng cho các bản cuộn lớp 2 (L2) của Ethereum lưu trữ bằng chứng của chúng trên lớp 1 (Mạng chính).
 
 Việc chỉ tương thích với Máy ảo Ethereum (EVM) không có nghĩa là một mạng lưới sẽ thấy bất kỳ lợi ích nào từ bản nâng cấp này. Các mạng lưới hoạt động độc lập với Ethereum (cho dù có tương thích với EVM hay không) không lưu trữ dữ liệu của chúng trên Ethereum và sẽ không thấy bất kỳ lợi ích nào từ bản nâng cấp này.
 
-[Tìm hiểu thêm về các bản cuộn lớp 2 (l2)](/layer-2/)
+[Tìm hiểu thêm về các bản cuộn lớp 2 (L2)](/layer-2/)
 
 ## Bạn thích học qua hình ảnh hơn? {#visual-learner}
 

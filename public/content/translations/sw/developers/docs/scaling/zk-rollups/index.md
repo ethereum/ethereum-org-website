@@ -4,21 +4,21 @@ description: "Utangulizi wa mikusanyiko ya sifuri-maarifa—suluhisho la kuongez
 lang: sw
 ---
 
-Mikusanyiko ya sifuri-maarifa (ZK-rollups) ni [masuluhisho ya kuongeza uwezo](/developers/docs/scaling/) ya tabaka la 2 (l2) ambayo huongeza uwezo wa upitishaji kwenye Mtandao Mkuu wa [Ethereum](/) kwa kuhamisha ukokotoaji na uhifadhi wa hali nje ya mnyororo. ZK-rollups zinaweza kuchakata maelfu ya miamala katika fungu na kisha kuchapisha tu data ndogo ya muhtasari kwenye Mtandao Mkuu. Data hii ya muhtasari inafafanua mabadiliko ambayo yanapaswa kufanywa kwenye hali ya Ethereum na uthibitisho fulani wa kriptografia kwamba mabadiliko hayo ni sahihi.
+Mikusanyiko ya sifuri-maarifa (ZK-rollups) ni [masuluhisho ya kuongeza uwezo](/developers/docs/scaling/) ya tabaka la 2 (L2) ambayo huongeza uwezo wa upitishaji kwenye Mtandao Mkuu wa [Ethereum](/) kwa kuhamisha ukokotoaji na uhifadhi wa hali nje ya mnyororo. ZK-rollups zinaweza kuchakata maelfu ya miamala katika fungu na kisha kuchapisha tu data ndogo ya muhtasari kwenye Mtandao Mkuu. Data hii ya muhtasari inafafanua mabadiliko ambayo yanapaswa kufanywa kwenye hali ya Ethereum na uthibitisho fulani wa kriptografia kwamba mabadiliko hayo ni sahihi.
 
 ## Mahitaji ya awali {#prerequisites}
 
-Unapaswa kuwa umesoma na kuelewa ukurasa wetu kuhusu [kuongeza uwezo wa Ethereum](/developers/docs/scaling/) na [tabaka la 2 (l2)](/layer-2).
+Unapaswa kuwa umesoma na kuelewa ukurasa wetu kuhusu [kuongeza uwezo wa Ethereum](/developers/docs/scaling/) na [tabaka la 2 (L2)](/layer-2).
 
 ## Mikusanyiko ya sifuri-maarifa ni nini? {#what-are-zk-rollups}
 
 **Mikusanyiko ya maarifa sifuri (ZK-rollups)** hukusanya (au 'kujumuisha') miamala katika mafungu ambayo hutekelezwa nje ya mnyororo. Ukokotoaji wa nje ya mnyororo hupunguza kiasi cha data kinachopaswa kuchapishwa kwenye mnyororo wa vitalu. Waendeshaji wa ZK-rollup huwasilisha muhtasari wa mabadiliko yanayohitajika ili kuwakilisha miamala yote katika fungu badala ya kutuma kila muamala mmoja mmoja. Pia huzalisha [uthibitisho wa uhalali](/glossary/#validity-proof) ili kuthibitisha usahihi wa mabadiliko yao.
 
-Hali ya ZK-rollup hudumishwa na mkataba mahiri uliowekwa kwenye mtandao wa Ethereum. Ili kusasisha hali hii, nodi za ZK-rollup lazima ziwasilishe uthibitisho wa uhalali kwa ajili ya uhakiki. Kama ilivyotajwa, uthibitisho wa uhalali ni hakikisho la kriptografia kwamba mabadiliko ya hali yaliyopendekezwa na rollup ni matokeo halisi ya kutekeleza fungu fulani la miamala. Hii inamaanisha kuwa ZK-rollups hazihitaji kuchapisha data yote ya muamala mnyororoni kama vile [mikusanyiko yenye matumaini](/developers/docs/scaling/optimistic-rollups/) inavyofanya, kwa kuwa uthibitisho wa uhalali ndio unaokamilisha mabadiliko ya hali. Bado huchapisha data inayohitajika ili kuunda upya hali ya rollup, kama ilivyoelezwa hapa chini.
+Hali ya ZK-rollup inasimamiwa na mkataba mahiri uliowekwa kwenye mtandao wa Ethereum. Ili kusasisha hali hii, nodi za ZK-rollup lazima ziwasilishe uthibitisho wa uhalali kwa ajili ya uhakiki. Kama ilivyotajwa, uthibitisho wa uhalali ni hakikisho la kriptografia kwamba mabadiliko ya hali yaliyopendekezwa na rollup kwa kweli ni matokeo ya kutekeleza fungu fulani la miamala. Hii inamaanisha kuwa ZK-rollups hazihitaji kuchapisha data yote ya muamala mnyororoni kama vile [mikusanyiko yenye matumaini](/developers/docs/scaling/optimistic-rollups/) inavyofanya, kwa kuwa uthibitisho wa uhalali ndio unaokamilisha mabadiliko ya hali. Bado huchapisha data inayohitajika ili kuunda upya hali ya rollup, kama ilivyoelezwa hapa chini.
 
-Hakuna ucheleweshaji wakati wa kuhamisha fedha kutoka kwa ZK-rollup kwenda Ethereum kwa sababu miamala ya kujitoa hutekelezwa mara tu mkataba wa ZK-rollup unapohakiki uthibitisho wa uhalali. Kinyume chake, utoaji wa fedha kutoka kwa mikusanyiko yenye matumaini unakabiliwa na ucheleweshaji ili kuruhusu mtu yeyote kupinga muamala wa kujitoa kwa [ushahidi wa udanganyifu](/glossary/#fraud-proof).
+Hakuna kipindi cha kupinga wakati wa kuhamisha fedha kutoka kwenye ZK-rollup kwenda Ethereum: miamala ya kujitoa hutekelezwa mara tu mkataba wa ZK-rollup unapohakiki uthibitisho wa uhalali unaoihusu, kwa hivyo kusubiri ni kwa muda tu unaochukua kuzalisha na kuhakiki uthibitisho huo (baadhi ya ZK-rollups huongeza ucheleweshaji wao wenyewe mfupi). Kinyume chake, kutoa fedha kutoka kwenye mikusanyiko yenye matumaini kunakabiliwa na ucheleweshaji ili kuruhusu mtu yeyote kupinga muamala wa kujitoa kwa [ushahidi wa udanganyifu](/glossary/#fraud-proof).
 
-ZK-rollups huandika miamala kwenye Ethereum kama `calldata` au katika [mablobu](/roadmap/danksharding/). `calldata` ni mahali ambapo data inayojumuishwa katika miito ya nje kwa vitendaji vya mkataba mahiri huhifadhiwa. Kwa vyovyote vile, data huchapishwa kwenye mnyororo wa vitalu, ikiruhusu mtu yeyote kuunda upya hali ya rollup kwa kujitegemea. ZK-rollups hutumia mbinu za kubana ili kupunguza data ya muamala—kwa mfano, akaunti zinawakilishwa na faharisi badala ya anwani, jambo ambalo huokoa baiti 28 za data. Uchapishaji wa data mnyororoni ni gharama kubwa kwa mikusanyiko, kwa hivyo kubana data kunaweza kupunguza ada kwa watumiaji.
+ZK-rollups huandika miamala kwenye Ethereum kama `calldata` au katika [mablobu](/roadmap/danksharding/). `calldata` ni mahali ambapo data inayojumuishwa katika miito ya nje kwa vitendaji vya mkataba mahiri huhifadhiwa. Vyovyote vile, data huchapishwa kwenye mnyororo wa vitalu, ikiruhusu mtu yeyote kuunda upya hali ya rollup kwa kujitegemea. ZK-rollups hutumia mbinu za kubana ili kupunguza data ya muamala—kwa mfano, akaunti huwakilishwa na faharisi badala ya anwani, ambayo huokoa baiti 28 za data. Uchapishaji wa data mnyororoni ni gharama kubwa kwa mikusanyiko, kwa hivyo ubanaji wa data unaweza kupunguza ada kwa watumiaji.
 
 ## ZK-rollups huingiliana vipi na Ethereum? {#zk-rollups-and-ethereum}
 
@@ -26,9 +26,9 @@ Mnyororo wa ZK-rollup ni itifaki ya nje ya mnyororo inayofanya kazi juu ya mnyor
 
 Usanifu wa msingi wa ZK-rollup unajumuisha vipengele vifuatavyo:
 
-1. **Mikataba mnyororoni**: Kama ilivyotajwa, itifaki ya ZK-rollup inadhibitiwa na mikataba mahiri inayoendeshwa kwenye Ethereum. Hii inajumuisha mkataba mkuu ambao huhifadhi vitalu vya rollup, kufuatilia amana, na kufuatilia masasisho ya hali. Mkataba mwingine mnyororoni (mkataba wa mhakiki) huhakiki uthibitisho wa maarifa-sifuri uliowasilishwa na wazalishaji wa vitalu. Kwa hivyo, Ethereum hutumika kama tabaka la msingi au "tabaka la 1 (l1)" kwa ZK-rollup.
+1. **Mikataba mnyororoni**: Kama ilivyotajwa, itifaki ya ZK-rollup inadhibitiwa na mikataba mahiri inayoendeshwa kwenye Ethereum. Hii inajumuisha mkataba mkuu ambao huhifadhi vitalu vya rollup, kufuatilia amana, na kufuatilia masasisho ya hali. Mkataba mwingine mnyororoni (mkataba wa mhakiki) huhakiki uthibitisho wa maarifa-sifuri uliowasilishwa na wazalishaji wa vitalu. Kwa hivyo, Ethereum hutumika kama tabaka la msingi au "tabaka la 1 (L1)" kwa ZK-rollup.
 
-2. **Mashine pepe ya nje ya mnyororo (VM)**: Ingawa itifaki ya ZK-rollup inaishi kwenye Ethereum, utekelezaji wa muamala na uhifadhi wa hali hufanyika kwenye mashine pepe tofauti inayojitegemea kutoka kwa [EVM](/developers/docs/evm/). VM hii ya nje ya mnyororo ni mazingira ya utekelezaji wa miamala kwenye ZK-rollup na hutumika kama tabaka la pili au "tabaka la 2 (l2)" kwa itifaki ya ZK-rollup. Uthibitisho wa uhalali uliohakikiwa kwenye Mtandao Mkuu wa Ethereum unahakikisha usahihi wa mabadiliko ya hali katika VM ya nje ya mnyororo.
+2. **Mashine pepe ya nje ya mnyororo (VM)**: Ingawa itifaki ya ZK-rollup inaishi kwenye Ethereum, utekelezaji wa muamala na uhifadhi wa hali hufanyika kwenye mashine pepe tofauti inayojitegemea kutoka kwa [EVM](/developers/docs/evm/). VM hii ya nje ya mnyororo ni mazingira ya utekelezaji wa miamala kwenye ZK-rollup na hutumika kama tabaka la pili au "tabaka la 2 (L2)" kwa itifaki ya ZK-rollup. Uthibitisho wa uhalali uliohakikiwa kwenye Mtandao Mkuu wa Ethereum unahakikisha usahihi wa mabadiliko ya hali katika VM ya nje ya mnyororo.
 
 ZK-rollups ni "masuluhisho mseto ya kuongeza uwezo"—itifaki za nje ya mnyororo zinazofanya kazi kwa kujitegemea lakini hupata usalama kutoka kwa Ethereum. Hasa, mtandao wa Ethereum unatekeleza uhalali wa masasisho ya hali kwenye ZK-rollup na kuhakikisha upatikanaji wa data nyuma ya kila sasisho kwa hali ya rollup. Kama matokeo, ZK-rollups ni salama zaidi kuliko masuluhisho safi ya kuongeza uwezo ya nje ya mnyororo, kama vile [minyororo ya kando](/developers/docs/scaling/sidechains/), ambayo inawajibika kwa sifa zao za usalama, au [validiums](/developers/docs/scaling/validium/), ambazo pia huhakiki miamala kwenye Ethereum kwa uthibitisho wa uhalali, lakini huhifadhi data ya muamala mahali pengine.
 
@@ -80,33 +80,33 @@ Kando na kukokotoa mizizi ya hali, mwendeshaji wa ZK-rollup pia huunda mzizi wa 
 
 ### Uthibitisho wa uhalali {#validity-proofs}
 
-Mzizi mpya wa hali ambao mwendeshaji wa ZK-rollup anawasilisha kwenye mkataba wa L1 ni matokeo ya masasisho kwenye hali ya rollup. Tuseme Alice anatuma tokeni 10 kwa Bob, mwendeshaji hupunguza tu salio la Alice kwa 10 na kuongeza salio la Bob kwa 10. Kisha mwendeshaji huheshi data ya akaunti iliyosasishwa, hujenga upya mti wa Merkle wa rollup, na kuwasilisha mzizi mpya wa Merkle kwenye mkataba mnyororoni.
+Mzizi mpya wa hali ambao mwendeshaji wa ZK-rollup huwasilisha kwenye mkataba wa L1 ni matokeo ya masasisho kwenye hali ya rollup. Tuseme Alice anatuma tokeni 10 kwa Bob, mwendeshaji hupunguza tu salio la Alice kwa 10 na kuongeza salio la Bob kwa 10. Kisha mwendeshaji huheshi data ya akaunti iliyosasishwa, hujenga upya mti wa Merkle wa rollup, na kuwasilisha mzizi mpya wa Merkle kwenye mkataba mnyororoni.
 
-Lakini mkataba wa rollup hautakubali kiotomatiki ufungamanisho wa hali uliopendekezwa hadi mwendeshaji athibitishe mzizi mpya wa Merkle ulitokana na masasisho sahihi kwenye hali ya rollup. Mwendeshaji wa ZK-rollup hufanya hivi kwa kuzalisha uthibitisho wa uhalali, ufungamanisho mfupi wa kriptografia unaohakiki usahihi wa miamala iliyokusanywa katika mafungu.
+Lakini mkataba wa rollup hautakubali kiotomatiki ufungamanisho wa hali uliopendekezwa hadi mwendeshaji athibitishe kuwa mzizi mpya wa Merkle ulitokana na masasisho sahihi kwenye hali ya rollup. Mwendeshaji wa ZK-rollup hufanya hivi kwa kuzalisha uthibitisho wa uhalali, ufungamanisho mfupi wa kriptografia unaohakiki usahihi wa miamala iliyokusanywa katika mafungu.
 
-Uthibitisho wa uhalali huruhusu pande kuthibitisha usahihi wa taarifa bila kufichua taarifa yenyewe—kwa hivyo, pia huitwa uthibitisho wa maarifa-sifuri. ZK-rollups hutumia uthibitisho wa uhalali kuthibitisha usahihi wa mabadiliko ya hali ya nje ya mnyororo bila kulazimika kutekeleza upya miamala kwenye Ethereum. Uthibitisho huu unaweza kuja katika mfumo wa [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) au [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
+ZK-rollups hutumia uthibitisho mfupi wa uhalali ili kuthibitisha kuwa mabadiliko ya hali ya nje ya mnyororo yalikokotolewa kwa usahihi. Ufupi huweka uthibitisho kuwa thabiti na uhakiki kuwa mzuri kulingana na ukokotoaji wa msingi, ikiruhusu Ethereum kuhakiki mabadiliko ya hali bila kutekeleza upya kila muamala. Mfumo wa uthibitisho unaweza pia kutoa sifuri-maarifa, ikimaanisha uthibitisho wake haufichui taarifa yoyote kuhusu pembejeo za faragha zaidi ya kile kinachofuata kutoka kwa taarifa ya umma. Hizi ni sifa tofauti: kutumia uthibitisho wa uhalali kwa kuongeza uwezo hakufanyi, peke yake, miamala ya rollup kuwa ya siri. Uthibitisho huu unaweza kuja katika mfumo wa [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) au [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
 
 SNARKs na STARKs zote husaidia kuthibitisha uadilifu wa ukokotoaji wa nje ya mnyororo katika ZK-rollups, ingawa kila aina ya uthibitisho ina vipengele tofauti.
 
 **ZK-SNARKs**
 
-Ili itifaki ya ZK-SNARK ifanye kazi, kuunda Mfuatano wa Marejeleo ya Kawaida (CRS) ni muhimu: CRS hutoa vigezo vya umma vya kuthibitisha na kuhakiki uthibitisho wa uhalali. Usalama wa mfumo wa kuthibitisha unategemea usanidi wa CRS; ikiwa taarifa inayotumika kuunda vigezo vya umma itaangukia mikononi mwa watendaji wenye nia mbaya wanaweza kuwa na uwezo wa kuzalisha uthibitisho wa uhalali wa uongo.
+Ili itifaki ya ZK-SNARK ifanye kazi, kuunda Mfuatano wa Marejeleo wa Kawaida (CRS) ni muhimu: CRS hutoa vigezo vya umma kwa ajili ya kuthibitisha na kuhakiki uthibitisho wa uhalali. Usalama wa mfumo wa kuthibitisha unategemea usanidi wa CRS; ikiwa taarifa inayotumika kuunda vigezo vya umma itaangukia mikononi mwa wahusika wenye nia mbaya wanaweza kuzalisha uthibitisho wa uhalali wa uongo.
 
-Baadhi ya ZK-rollups hujaribu kutatua tatizo hili kwa kutumia [sherehe ya ukokotoaji wa pande nyingi (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), inayohusisha watu wanaoaminika, ili kuzalisha vigezo vya umma kwa saketi ya ZK-SNARK. Kila upande huchangia unasibu fulani (unaoitwa "taka zenye sumu") ili kuunda CRS, ambayo lazima waiharibu mara moja.
+Baadhi ya ZK-rollups hujaribu kutatua tatizo hili kwa kutumia [sherehe ya ukokotoaji wa pande nyingi (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), inayohusisha watu wanaoaminika, ili kuzalisha vigezo vya umma kwa ajili ya saketi ya ZK-SNARK. Kila upande huchangia unasibu fulani (unaoitwa "taka zenye sumu") ili kuunda CRS, ambayo lazima waiharibu mara moja.
 
-Usanidi unaoaminika hutumika kwa sababu huongeza usalama wa usanidi wa CRS. Ilimradi mshiriki mmoja mwaminifu anaharibu pembejeo yake, usalama wa mfumo wa ZK-SNARK unahakikishwa. Bado, mbinu hii inahitaji kuwaamini wale wanaohusika kufuta unasibu wao uliotolewa sampuli na kutodhoofisha hakikisho la usalama la mfumo.
+Usanidi unaoaminika hutumiwa kwa sababu huongeza usalama wa usanidi wa CRS. Mradi mshiriki mmoja mwaminifu anaharibu pembejeo yake, usalama wa mfumo wa ZK-SNARK umehakikishwa. Bado, mbinu hii inahitaji kuwaamini wale wanaohusika kufuta unasibu wao uliotolewa sampuli na kutodhoofisha hakikisho la usalama la mfumo.
 
-Tukiweka kando dhana za uaminifu, ZK-SNARKs ni maarufu kwa ukubwa wao mdogo wa uthibitisho na uhakiki wa muda usiobadilika. Kwa kuwa uhakiki wa uthibitisho kwenye L1 unajumuisha gharama kubwa zaidi ya kuendesha ZK-rollup, L2s hutumia ZK-SNARKs kuzalisha uthibitisho unaoweza kuhakikiwa haraka na kwa bei nafuu kwenye Mtandao Mkuu.
+Tukiweka kando dhana za uaminifu, ZK-SNARKs ni maarufu kwa ukubwa wao mdogo wa uthibitisho na uhakiki wa muda usiobadilika. Kwa kuwa uhakiki wa uthibitisho kwenye L1 unajumuisha gharama kubwa zaidi ya kuendesha ZK-rollup, L2 hutumia ZK-SNARKs kuzalisha uthibitisho unaoweza kuhakikiwa haraka na kwa bei nafuu kwenye Mtandao Mkuu.
 
 **ZK-STARKs**
 
-Kama ZK-SNARKs, ZK-STARKs huthibitisha uhalali wa ukokotoaji wa nje ya mnyororo bila kufichua pembejeo. Hata hivyo, ZK-STARKs huchukuliwa kama uboreshaji wa ZK-SNARKs kwa sababu ya uwezo wao wa kuongezeka na uwazi.
+Kama ZK-SNARKs, ZK-STARKs humruhusu mhakiki kuthibitisha uhalali wa ukokotoaji wa nje ya mnyororo bila kuutekeleza upya, na zinaweza kuficha pembejeo za faragha za mthibitishaji ambapo mfumo unatekeleza sifa ya sifuri-maarifa. Katika rollup, data inayohitajika ili kuunda upya hali ya mnyororo bado inachapishwa kwenye Ethereum. ZK-STARKs huchukuliwa kama uboreshaji wa ZK-SNARKs kwa sababu ya uwezo wao wa kuongezeka na uwazi.
 
-ZK-STARKs ni 'wazi', kwani zinaweza kufanya kazi bila usanidi unaoaminika wa Mfuatano wa Marejeleo ya Kawaida (CRS). Badala yake, ZK-STARKs hutegemea unasibu unaoweza kuhakikiwa hadharani ili kuweka vigezo vya kuzalisha na kuhakiki uthibitisho.
+ZK-STARKs ni 'wazi', kwani zinaweza kufanya kazi bila usanidi unaoaminika wa Mfuatano wa Marejeleo wa Kawaida (CRS). Badala yake, ZK-STARKs hutegemea unasibu unaoweza kuhakikiwa hadharani ili kuweka vigezo vya kuzalisha na kuhakiki uthibitisho.
 
-ZK-STARKs pia hutoa uwezo zaidi wa kuongezeka kwa sababu muda unaohitajika kuthibitisha na kuhakiki uthibitisho wa uhalali huongezeka _kwa kiasi cha mstari_ kuhusiana na utata wa ukokotoaji wa msingi. Kwa ZK-SNARKs, muda wa kuthibitisha na kuhakiki huongezeka _kwa mstari_ kuhusiana na ukubwa wa ukokotoaji wa msingi. Hii inamaanisha ZK-STARKs zinahitaji muda mchache kuliko ZK-SNARKs kwa kuthibitisha na kuhakiki wakati seti kubwa za data zinahusika, na kuzifanya ziwe muhimu kwa programu zenye kiasi kikubwa.
+ZK-STARKs pia huongeza uwezo vizuri: muda unaohitajika kuzalisha uthibitisho hukua _kwa mstari nusu_ na ukubwa wa ukokotoaji wa msingi, wakati muda unaohitajika kuuhakiki hukua tu _kwa polilogariti_. Wathibitishaji wa ZK-STARK kwa kawaida ni wa haraka zaidi kuliko wathibitishaji wa ZK-SNARK kwa ukokotoaji mkubwa, na kuwafanya kuwa muhimu kwa programu tumizi zenye kiasi kikubwa. Maelewano ni kwamba uthibitisho wa STARK ni mkubwa zaidi na unagharimu zaidi kuhakiki kwenye L1, ilhali uhakiki wa ZK-SNARK huchukua muda usiobadilika bila kujali ukubwa wa ukokotoaji.
 
-ZK-STARKs pia ni salama dhidi ya kompyuta za kwanta, wakati Kriptografia ya Tao la Duaradufu (ECC) inayotumika katika ZK-SNARKs inaaminika sana kuwa katika hatari ya mashambulizi ya ukokotoaji wa kwanta. Upande wa chini wa ZK-STARKs ni kwamba huzalisha ukubwa mkubwa wa uthibitisho, ambao ni ghali zaidi kuhakiki kwenye Ethereum.
+ZK-STARKs pia ni salama dhidi ya kompyuta za kwanta, wakati Kriptografia ya Tao la Duaradufu (ECC) inayotumika katika ZK-SNARKs inaaminika sana kuwa katika hatari ya mashambulizi ya kompyuta za kwanta. Upande wa chini wa ZK-STARKs ni kwamba huzalisha ukubwa mkubwa zaidi wa uthibitisho, ambao ni ghali zaidi kuhakiki kwenye Ethereum.
 
 #### Uthibitisho wa uhalali hufanyaje kazi katika ZK-rollups? {#validity-proofs-in-zk-rollups}
 
@@ -119,36 +119,38 @@ Kabla ya kukubali miamala, mwendeshaji atafanya ukaguzi wa kawaida. Hii inajumui
 - Muamala ni sahihi na unalingana na ufunguo wa umma wa mtumaji kwenye rollup.
 - Nonsi ya mtumaji ni sahihi, n.k.
 
-Mara tu nodi ya ZK-rollup inapokuwa na miamala ya kutosha, inaikusanya katika fungu na kukusanya pembejeo kwa saketi ya kuthibitisha ili kukusanya katika uthibitisho mfupi wa ZK. Hii inajumuisha:
+Mara tu nodi ya ZK-rollup inapokuwa na miamala ya kutosha, inaikusanya katika fungu na kukusanya pembejeo kwa ajili ya saketi ya kuthibitisha ili kukusanya katika uthibitisho mfupi wa ZK. Hii inajumuisha:
 
 - Mzizi wa mti wa Merkle unaojumuisha miamala yote katika fungu.
 - Ushahidi wa Merkle kwa miamala ili kuthibitisha ujumuishaji katika fungu.
 - Ushahidi wa Merkle kwa kila jozi ya mtumaji-mpokeaji katika miamala ili kuthibitisha akaunti hizo ni sehemu ya mti wa hali wa rollup.
 - Seti ya mizizi ya hali ya kati, inayotokana na kusasisha mzizi wa hali baada ya kutumia masasisho ya hali kwa kila muamala (yaani, kupunguza akaunti za mtumaji na kuongeza akaunti za mpokeaji).
 
-Saketi ya kuthibitisha hukokotoa uthibitisho wa uhalali kwa "kuzunguka" juu ya kila muamala na kufanya ukaguzi ule ule ambao mwendeshaji alikamilisha kabla ya kuchakata muamala. Kwanza, inahakiki akaunti ya mtumaji ni sehemu ya mzizi wa hali uliopo kwa kutumia ushahidi wa Merkle uliotolewa. Kisha inapunguza salio la mtumaji, inaongeza nonsi yao, inaheshi data ya akaunti iliyosasishwa na kuiunganisha na ushahidi wa Merkle ili kuzalisha mzizi mpya wa Merkle.
+Saketi ya kuthibitisha hukokotoa uthibitisho wa uhalali kwa "kuzunguka" kwenye kila muamala na kufanya ukaguzi ule ule ambao mwendeshaji alikamilisha kabla ya kuchakata muamala. Kwanza, inahakiki akaunti ya mtumaji ni sehemu ya mzizi wa hali uliopo kwa kutumia ushahidi wa Merkle uliotolewa. Kisha inapunguza salio la mtumaji, inaongeza nonsi yao, inaheshi data ya akaunti iliyosasishwa na kuiunganisha na ushahidi wa Merkle ili kuzalisha mzizi mpya wa Merkle.
 
 Mzizi huu wa Merkle unaonyesha mabadiliko pekee katika hali ya ZK-rollup: mabadiliko katika salio na nonsi ya mtumaji. Hii inawezekana kwa sababu ushahidi wa Merkle uliotumika kuthibitisha uwepo wa akaunti unatumika kupata mzizi mpya wa hali.
 
 Saketi ya kuthibitisha hufanya mchakato huo huo kwenye akaunti ya mpokeaji. Inakagua ikiwa akaunti ya mpokeaji ipo chini ya mzizi wa hali ya kati (kwa kutumia ushahidi wa Merkle), inaongeza salio lao, inaheshi upya data ya akaunti na kuiunganisha na ushahidi wa Merkle ili kuzalisha mzizi mpya wa hali.
 
-Mchakato unajirudia kwa kila muamala; kila "mzunguko" huunda mzizi mpya wa hali kutokana na kusasisha akaunti ya mtumaji na mzizi mpya unaofuata kutokana na kusasisha akaunti ya mpokeaji. Kama ilivyoelezwa, kila sasisho kwa mzizi wa hali linawakilisha sehemu moja ya mti wa hali wa rollup inayobadilika.
+Mchakato unajirudia kwa kila muamala; kila "mzunguko" huunda mzizi mpya wa hali kutokana na kusasisha akaunti ya mtumaji na mzizi mpya unaofuata kutokana na kusasisha akaunti ya mpokeaji. Kama ilivyoelezwa, kila sasisho kwenye mzizi wa hali linawakilisha sehemu moja ya mti wa hali wa rollup inayobadilika.
 
-Saketi ya kuthibitisha ya ZK inarudia juu ya fungu zima la muamala, ikihakiki mfuatano wa masasisho yanayosababisha mzizi wa mwisho wa hali baada ya muamala wa mwisho kutekelezwa. Mzizi wa mwisho wa Merkle uliokokotolewa unakuwa mzizi mpya zaidi wa hali rasmi wa ZK-rollup.
+Saketi ya kuthibitisha ya ZK hupitia fungu zima la muamala, ikihakiki mfuatano wa masasisho yanayosababisha mzizi wa mwisho wa hali baada ya muamala wa mwisho kutekelezwa. Mzizi wa mwisho wa Merkle uliokokotolewa unakuwa mzizi mpya zaidi wa hali rasmi wa ZK-rollup.
 
 ##### Uhakiki wa uthibitisho
 
-Baada ya saketi ya kuthibitisha kuhakiki usahihi wa masasisho ya hali, mwendeshaji wa L2 huwasilisha uthibitisho wa uhalali uliokokotolewa kwenye mkataba wa mhakiki kwenye L1. Saketi ya uhakiki ya mkataba inahakiki uhalali wa uthibitisho na pia inakagua pembejeo za umma zinazounda sehemu ya uthibitisho:
+Baada ya saketi ya kuthibitisha kuhakiki usahihi wa masasisho ya hali, mwendeshaji wa L2 huwasilisha uthibitisho wa uhalali uliokokotolewa kwenye mkataba wa mhakiki kwenye L1. Saketi ya uhakiki ya mkataba huhakiki uhalali wa uthibitisho na pia hukagua pembejeo za umma zinazounda sehemu ya uthibitisho:
 
 - **Mzizi wa hali ya awali**: Mzizi wa hali ya zamani wa ZK-rollup (yaani, kabla ya miamala iliyokusanywa katika mafungu kutekelezwa), unaoonyesha hali halali ya mwisho inayojulikana ya mnyororo wa L2.
 
 - **Mzizi wa hali ya baada**: Mzizi mpya wa hali wa ZK-rollup (yaani, baada ya utekelezaji wa miamala iliyokusanywa katika mafungu), unaoonyesha hali mpya zaidi ya mnyororo wa L2. Mzizi wa hali ya baada ni mzizi wa mwisho unaopatikana baada ya kutumia masasisho ya hali katika saketi ya kuthibitisha.
 
-- **Mzizi wa fungu**: Mzizi wa Merkle wa fungu, unaopatikana kwa _kumerklize_ miamala katika fungu na kuheshi mzizi wa mti.
+- **Mzizi wa fungu**: Mzizi wa Merkle wa fungu, unaopatikana kwa _kuziweka_ miamala katika fungu _katika muundo wa Merkle_ na kuheshi mzizi wa mti.
 
 - **Pembejeo za muamala**: Data inayohusishwa na miamala iliyotekelezwa kama sehemu ya fungu lililowasilishwa.
 
-Ikiwa uthibitisho unaridhisha saketi (yaani, ni halali), inamaanisha kwamba kuna mfuatano wa miamala halali inayobadilisha rollup kutoka hali ya awali (iliyowekwa alama ya vidole ya kriptografia na mzizi wa hali ya awali) hadi hali mpya (iliyowekwa alama ya vidole ya kriptografia na mzizi wa hali ya baada). Ikiwa mzizi wa hali ya awali unalingana na mzizi uliohifadhiwa katika mkataba wa rollup, na uthibitisho ni halali, mkataba wa rollup huchukua mzizi wa hali ya baada kutoka kwenye uthibitisho na kusasisha mti wake wa hali ili kuonyesha hali iliyobadilika ya rollup.
+Ikiwa uthibitisho unaridhisha saketi (yaani, ni halali), inamaanisha kuwa kuna mfuatano wa miamala halali inayobadilisha rollup kutoka hali ya awali (iliyowekwa alama ya vidole ya kriptografia na mzizi wa hali ya awali) hadi hali mpya (iliyowekwa alama ya vidole ya kriptografia na mzizi wa hali ya baada). Ikiwa mzizi wa hali ya awali unalingana na mzizi uliohifadhiwa katika mkataba wa rollup, na uthibitisho ni halali, mkataba wa rollup huchukua mzizi wa hali ya baada kutoka kwenye uthibitisho na kusasisha mti wake wa hali ili kuonyesha hali iliyobadilika ya rollup.
+
+<ZkRollupDiagram />
 
 ### Kuingia na kujitoa {#entries-and-exits}
 
@@ -180,15 +182,15 @@ Kuanzishwa kwa ZK-rollups zinazotangamana na EVM kunatarajiwa kusaidia wasanidi 
 
 ## Ada za ZK-rollup hufanyaje kazi? {#how-do-zk-rollup-fees-work}
 
-Kiasi ambacho watumiaji hulipa kwa miamala kwenye ZK-rollups kinategemea ada ya gesi, kama ilivyo kwenye Mtandao Mkuu wa Ethereum. Hata hivyo, ada za gesi hufanya kazi tofauti kwenye L2 na huathiriwa na gharama zifuatazo:
+Kiasi ambacho watumiaji hulipa kwa miamala kwenye ZK-rollups kinategemea ada ya gesi, kama tu kwenye Mtandao Mkuu wa Ethereum. Hata hivyo, ada za gesi hufanya kazi tofauti kwenye L2 na huathiriwa na gharama zifuatazo:
 
 1. **Uandishi wa hali**: Kuna gharama isiyobadilika ya kuandika kwenye hali ya Ethereum (yaani, kuwasilisha muamala kwenye mnyororo wa vitalu wa Ethereum). ZK-rollups hupunguza gharama hii kwa kukusanya miamala katika mafungu na kusambaza gharama zisizobadilika kwa watumiaji wengi.
 
-2. **Uchapishaji wa data**: ZK-rollups huchapisha data ya hali kwa kila muamala kwenda Ethereum kama `calldata` au katika [mablobu](/roadmap/danksharding/). Ratiba ya asili ya gesi kwa `calldata` hutoza gesi 16 kwa kila baiti isiyo sifuri na gesi 4 kwa kila baiti sifuri, punguzo lililoletwa na [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028); [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) inasimamia bei inayolipwa kwa kila uniti ya gesi badala ya ratiba ya baiti yenyewe. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) pia inatumia gharama ya chini kwa miamala yenye data nyingi, kwa hivyo muamala unaotawaliwa na `calldata` unaweza kulipa zaidi ya ratiba ya kawaida huku miamala yenye ukokotoaji mwingi haiathiriwi. Gharama inayolipwa kwa kila muamala huathiriwa na kiasi cha data kinachohitaji kuchapishwa mnyororoni kwa ajili yake.
+2. **Uchapishaji wa data**: ZK-rollups huchapisha data ya hali kwa kila muamala kwenye Ethereum kama `calldata` au katika [mablobu](/roadmap/danksharding/). Ratiba ya asili ya gesi kwa `calldata` hutoza gesi 16 kwa kila baiti isiyo sifuri na gesi 4 kwa kila baiti sifuri, punguzo lililoletwa na [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028); [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) inasimamia bei inayolipwa kwa kila uniti ya gesi badala ya ratiba ya baiti yenyewe. [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) pia inatumia gharama ya chini kwa miamala yenye data nyingi, kwa hivyo muamala unaotawaliwa na `calldata` unaweza kulipa zaidi ya ratiba ya kawaida wakati miamala yenye ukokotoaji mwingi haiathiriwi. Gharama inayolipwa kwa kila muamala inaathiriwa na kiasi cha data kinachohitaji kuchapishwa mnyororoni kwa ajili yake.
 
-3. **Ada za mwendeshaji wa L2**: Hiki ni kiasi kinacholipwa kwa mwendeshaji wa rollup kama fidia kwa gharama za ukokotoaji zinazotumika katika kuchakata miamala, sawa na ["ada za kipaumbele (vidokezo)" vya muamala](/developers/docs/gas/#how-are-gas-fees-calculated) kwenye Mtandao Mkuu wa Ethereum.
+3. **Ada za mwendeshaji wa L2**: Hiki ni kiasi kinacholipwa kwa mwendeshaji wa rollup kama fidia kwa gharama za ukokotoaji zilizotumika katika kuchakata miamala, kama vile ["ada za kipaumbele (vidokezo)" vya muamala](/developers/docs/gas/#how-are-gas-fees-calculated) kwenye Mtandao Mkuu wa Ethereum.
 
-4. **Uzalishaji na uhakiki wa uthibitisho**: Waendeshaji wa ZK-rollup lazima wazalishe uthibitisho wa uhalali kwa mafungu ya muamala, jambo ambalo linahitaji rasilimali nyingi. Kuhakiki uthibitisho wa maarifa-sifuri kwenye Mtandao Mkuu pia hugharimu gesi (takriban gesi 500,000).
+4. **Uzalishaji na uhakiki wa uthibitisho**: Waendeshaji wa ZK-rollup lazima wazalishe uthibitisho wa uhalali kwa mafungu ya muamala, ambayo inahitaji rasilimali nyingi. Kuhakiki uthibitisho wa maarifa-sifuri kwenye Mtandao Mkuu pia kunagharimu gesi, kuanzia laki chache za gesi kwa ZK-SNARK hadi mamilioni kadhaa kwa ZK-STARK, kulingana na mfumo wa uthibitisho.
 
 Mbali na kukusanya miamala katika mafungu, ZK-rollups hupunguza ada kwa watumiaji kwa kubana data ya muamala. Unaweza [kuona muhtasari wa wakati halisi](https://l2fees.info/) wa jinsi inavyogharimu kutumia ZK-rollups za Ethereum.
 
@@ -266,7 +268,7 @@ Miradi inayofanyia kazi zkEVMs inajumuisha:
 - [zkEVM ni nini?](https://www.alchemy.com/overviews/zkevm)
 - [Aina za ZK-EVM: Sawa na Ethereum, sawa na EVM, Aina ya 1, Aina ya 4, na maneno mengine ya siri](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Utangulizi wa zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
-- [L2s za ZK-EVM ni nini?](https://linea.mirror.xyz/qD18IaQ4BROn_Y40EBMTUTdJHYghUtdECscSWyMvm8M)
+- [L2s za ZK-EVM ni nini?](https://web.archive.org/web/20250519165831/https://linea.mirror.xyz/qD18IaQ4BROn_Y40EBMTUTdJHYghUtdECscSWyMvm8M)
 - [Rasilimali za Awesome-zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
 - [Jinsi ZK-SNARKS inavyofanya kazi kiufundi](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
 - [SNARKs zinawezekanaje?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

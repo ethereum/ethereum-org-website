@@ -1,7 +1,7 @@
 ---
 title: Ponti della blockchain
 metaTitle: Introduzione ai ponti blockchain
-description: I ponti consentono agli utenti di spostare i propri fondi tra diverse blockchain
+description: "Cos'è un ponte della blockchain? Scopri come i ponti spostano i token tra Ethereum, i layer 2 e altre catene, i tipi di ponti e i rischi da considerare."
 lang: it
 ---
 
@@ -103,8 +103,8 @@ Molte soluzioni di ponte adottano modelli tra questi due estremi con vari gradi 
 
 L'utilizzo dei ponti ti consente di spostare i tuoi asset tra diverse blockchain. Ecco alcune risorse che possono aiutarti a trovare e utilizzare i ponti:
 
-- **[Riepilogo dei ponti di L2BEAT](https://l2beat.com/bridges/summary) e [Analisi dei rischi dei ponti di L2BEAT](https://l2beat.com/bridges/summary)**: un riepilogo completo di vari ponti, inclusi dettagli su quota di mercato, tipo di ponte e catene di destinazione. L2BEAT offre anche un'analisi dei rischi per i ponti, aiutando gli utenti a prendere decisioni informate nella scelta di un ponte.
-- **[Riepilogo dei ponti di DefiLlama](https://defillama.com/bridges/Ethereum)**: un riepilogo dei volumi dei ponti attraverso le reti Ethereum.
+- **[ETHBEAT Interop Summary](https://ethbeat.org/interop/summary)**: un riepilogo completo di vari ponti, inclusi i dettagli sulla quota di mercato, il tipo di ponte e le catene di destinazione. ETHBEAT offre anche un'analisi dei rischi per i ponti, aiutando gli utenti a prendere decisioni informate nella scelta di un ponte.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: un riepilogo dei volumi dei ponti sulle reti di Ethereum.
 
 <Divider />
 
@@ -137,9 +137,10 @@ I ponti sono fondamentali per l'inserimento degli utenti negli L2 di Ethereum e 
 ## Letture di approfondimento {#further-reading}
 
 - [EIP-5164: Esecuzione cross-chain](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 giugno 2022 - Brendan Asselstine_
-- [Framework di rischio per L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 luglio 2022 - Bartek Kiepuszewski_
+- [Framework di rischio per L2Bridge](https://forum.ethbeat.org/t/l2bridge-risk-framework/31) - _5 luglio 2022 - Bartek Kiepuszewski_
 - ["Perché il futuro sarà multi-chain, ma non sarà cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 gennaio 2022 - Vitalik Buterin_
 - [Sfruttare la sicurezza condivisa per un'interoperabilità cross-chain sicura: i comitati di stato di Lagrange e oltre](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 giugno 2024 - Emmanuel Awosika_
 - [Lo stato delle soluzioni di interoperabilità dei rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 giugno 2024 - Alex Hook_
 
 <QuizWidget quizKey="bridges" />
+

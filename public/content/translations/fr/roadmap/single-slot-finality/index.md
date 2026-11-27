@@ -1,6 +1,6 @@
 ---
-title: Finalité à slot unique
-description: Explication de la finalité à slot unique
+title: "Finalité à slot unique"
+description: "La finalité à slot unique pourrait réduire le temps de finalité d'Ethereum d'environ 15 minutes à un seul créneau. Découvrez comment cela fonctionne et les compromis impliqués."
 lang: fr
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Le problème avec la mise à l'échelle de l'agrégation en augmentant le nombre
 
 ## Progrès actuels {#current-progress}
 
-La SSF est en phase de recherche. Son déploiement n'est pas prévu avant plusieurs années, probablement après d'autres mises à niveau substantielles telles que les [arbres Verkle](/roadmap/verkle-trees/) et le [danksharding](/roadmap/danksharding/).
+La SSF est en phase de recherche. Son déploiement n'est pas prévu avant plusieurs années, probablement après d'autres mises à niveau substantielles telles qu'un nouvel arbre d'état (actuellement proposé comme un arbre binaire dans l'[EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) et le [danksharding](/roadmap/danksharding/).
 
 ## Complément d'information {#further-reading}
 

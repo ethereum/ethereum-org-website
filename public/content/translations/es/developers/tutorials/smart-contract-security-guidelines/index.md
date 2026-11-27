@@ -23,7 +23,7 @@ La documentación puede escribirse en diferentes niveles y debe actualizarse mie
 
 - **Una descripción del sistema en lenguaje sencillo**, que describa lo que hacen los contratos y cualquier suposición sobre el código base.
 - **Esquemas y diagramas arquitectónicos**, incluyendo las interacciones del contrato y la máquina de estado del sistema. Los [impresores de Slither](https://github.com/crytic/slither/wiki/Printer-documentation) pueden ayudar a generar estos esquemas.
-- **Documentación exhaustiva del código**, se puede usar el [formato NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) para Solidity.
+- **Documentación exhaustiva del código**, se puede usar el [formato NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html) para Solidity.
 
 ### Computación en cadena frente a fuera de la cadena {#onchain-vs-offchain-computation}
 
@@ -73,14 +73,14 @@ La arquitectura de tu código base debería hacer que tu código sea fácil de r
 ### Pruebas y verificación {#testing-and-verification}
 
 - **Escribe pruebas unitarias exhaustivas.** Un conjunto de pruebas extenso es crucial para construir software de alta calidad.
-- **Escribe comprobaciones y propiedades personalizadas para [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) y [Manticore](https://github.com/trailofbits/manticore).** Las herramientas automatizadas ayudarán a garantizar que tu contrato sea seguro. Revisa el resto de esta guía para aprender a escribir comprobaciones y propiedades eficientes.
-- **Usa [crytic.io](https://crytic.io/).** Crytic se integra con GitHub, proporciona acceso a detectores privados de Slither y ejecuta comprobaciones de propiedades personalizadas desde Echidna.
+- **Escribe comprobaciones y propiedades personalizadas de [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) y [Medusa](https://github.com/crytic/medusa).** Las herramientas automatizadas ayudarán a garantizar que tu contrato sea seguro. Revisa el resto de esta guía para aprender cómo escribir comprobaciones y propiedades eficientes.
+- **Ejecuta estas herramientas en integración continua.** Ejecutar Slither y tus propiedades de fuzzing en cada pull request detecta regresiones antes de que se fusionen.
 
 ### Solidity {#solidity}
 
-- **Favorece Solidity 0.5 sobre 0.4 y 0.6.** En nuestra opinión, Solidity 0.5 es más seguro y tiene mejores prácticas integradas que 0.4. Solidity 0.6 ha demostrado ser demasiado inestable para producción y necesita tiempo para madurar.
-- **Usa una versión estable para compilar; usa la última versión para comprobar si hay advertencias.** Verifica que tu código no tenga problemas reportados con la última versión del compilador. Sin embargo, Solidity tiene un ciclo de lanzamiento rápido y un historial de errores en el compilador, por lo que no recomendamos la última versión para el despliegue (consulta la [recomendación de versión de solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) de Slither).
-- **No uses ensamblador en línea.** El ensamblador requiere experiencia en la EVM. No escribas código de la EVM si no dominas el _Libro Amarillo_.
+- **Usa una versión reciente de Solidity 0.8.x sin errores graves conocidos.** Solidity 0.8 comprueba por defecto la aritmética para evitar el desbordamiento y el desbordamiento inferior, y las versiones más antiguas carecen de las comprobaciones de seguridad más recientes del compilador. Consulta la [recomendación de versión de solc](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) de Slither.
+- **Usa una versión estable para compilar; usa la última versión para comprobar si hay advertencias.** Comprueba que tu código no tenga problemas reportados con la última versión del compilador. Sin embargo, Solidity tiene un ciclo de lanzamiento rápido y un historial de errores en el compilador, así que evita desplegar con una versión lanzada hace solo unos días. Consulta la [lista de errores conocidos del compilador](https://docs.soliditylang.org/en/latest/bugs.html) para la versión que elijas.
+- **No uses ensamblador en línea.** El ensamblador requiere experiencia en la EVM. No escribas código de la EVM si no has _dominado_ el Libro Amarillo.
 
 ## Pautas de despliegue {#deployment-guidelines}
 

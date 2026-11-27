@@ -1,6 +1,6 @@
 ---
-title: Sécurité sur Ethereum et prévention des arnaques
-description: Rester en sécurité sur Ethereum
+title: "Sécurité sur Ethereum et prévention des arnaques"
+description: "Comment rester en sécurité sur Ethereum : protégez votre portefeuille et votre phrase de récupération, repérez les arnaques crypto et l'hameçonnage courants, et sachez quoi faire en cas de problème."
 lang: fr
 ---
 

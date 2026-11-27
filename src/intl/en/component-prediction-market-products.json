@@ -1,11 +1,8 @@
 {
-  "augur-cta": "Dive into Augur",
-  "augur-description": "A fully decentralized prediction market protocol used for predicting price trends. Disclaimer: you will need some technical expertise to start using Augur.",
-  "augur-title": "Augur",
-  "kalshi-cta": "Try Kalshi",
-  "kalshi-description": "A CFTC-compliant platform using Ethereum for USDC deposits. (USA only)",
-  "kalshi-title": "Kalshi",
+  "limitless-cta": "Explore Limitless",
+  "limitless-description": "A prediction market built on Base, an Ethereum layer 2. Trades settle onchain in USDC, and most price markets resolve automatically through onchain price feeds. Not available in every country.",
+  "limitless-title": "Limitless",
   "polymarket-cta": "Explore Polymarket",
-  "polymarket-description": "A popular forecasting market with real-time trading.",
+  "polymarket-description": "One of the largest prediction markets. Trades settle on Polygon, and results are decided through the UMA oracle. Not available in every country.",
   "polymarket-title": "Polymarket"
 }

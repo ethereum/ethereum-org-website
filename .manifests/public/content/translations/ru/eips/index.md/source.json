@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/eips/index.md",
-  "generatedAt": "2026-06-08T08:49:42.317Z",
-  "rootHash": "d404817eb192",
+  "generatedAt": "2026-11-27T09:58:02.388Z",
+  "rootHash": "dd6d7ad293da",
   "tree": {
-    "contentHash": "027684faa7ac",
-    "anchorHash": "9b7a871dd329",
+    "contentHash": "876fdf2ee242",
+    "anchorHash": "b87a579b79ce",
     "children": {
       "frontmatter:title": {
         "contentHash": "0120202d46e4",
@@ -16,7 +16,7 @@
         "anchorHash": "f56b9841cfbb"
       },
       "frontmatter:description": {
-        "contentHash": "d15b78da62b4",
+        "contentHash": "f3b1fa2b419f",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -69,7 +69,7 @@
       },
       "why-do-eips-matter": {
         "contentHash": "a91820df5dca",
-        "anchorHash": "3522eb89b01a",
+        "anchorHash": "828971741b3b",
         "labelHash": "b2e4b647da78",
         "children": {
           "_label": {
@@ -114,7 +114,7 @@
           },
           "link:4": {
             "contentHash": "c17c5b6d12d6",
-            "anchorHash": "4a56dfc112dc"
+            "anchorHash": "94d095604d5e"
           },
           "prose:10": {
             "contentHash": "354e4871205d",
@@ -440,5 +440,5 @@
       "references"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

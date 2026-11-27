@@ -7,7 +7,7 @@ alt: Mapa drogowa Ethereum
 template: roadmap
 ---
 
-Ethereum jest skalowane za pomocą [warstw 2](/layer-2/#rollups) (znanych również jako rollupy), które grupują transakcje i wysyłają ich wynik do Ethereum. Mimo że rollupy są nawet ośmiokrotnie tańsze niż sieć główna Ethereum, możliwe jest ich dalsze zoptymalizowanie w celu obniżenia kosztów dla użytkowników końcowych. Rollupy opierają się również na pewnych scentralizowanych komponentach, które deweloperzy mogą usunąć w miarę ich dojrzewania.
+Ethereum jest skalowane za pomocą [warstw 2](/layer-2/learn/#how-does-layer-2-work) (znanych również jako rollupy), które grupują transakcje i wysyłają ich wynik do Ethereum. Mimo że rollupy są nawet ośmiokrotnie tańsze niż sieć główna Ethereum, możliwe jest ich dalsze zoptymalizowanie w celu obniżenia kosztów dla użytkowników końcowych. Rollupy opierają się również na pewnych scentralizowanych komponentach, które deweloperzy mogą usunąć w miarę ich dojrzewania.
 
 <Alert variant="update">
 <AlertContent>
@@ -43,9 +43,15 @@ Ten drugi krok jest znany jako [„danksharding”](/roadmap/danksharding/). Pra
 
 ## Decentralizacja rollupów {#decentralizing-rollups}
 
-[Rollupy](/layer-2) już teraz skalują Ethereum. [Bogaty ekosystem projektów rollupów](https://l2beat.com/scaling/tvs) umożliwia użytkownikom szybkie i tanie przeprowadzanie transakcji z zachowaniem szeregu gwarancji bezpieczeństwa. Jednak rollupy zostały uruchomione przy użyciu scentralizowanych sekwenserów (komputerów, które wykonują całe przetwarzanie i agregację transakcji przed przesłaniem ich do Ethereum). Jest to podatne na cenzurę, ponieważ operatorzy sekwenserów mogą zostać objęci sankcjami, przekupieni lub w inny sposób skompromitowani. Jednocześnie [rollupy różnią się](https://l2beat.com/scaling/summary) sposobem walidacji przychodzących danych. Najlepszym sposobem jest przesyłanie przez „dowodzących” (ang. provers) [dowodów oszustwa](/glossary/#fraud-proof) lub dowodów ważności, ale nie wszystkie rollupy już to robią. Nawet te rollupy, które używają dowodów ważności/oszustwa, korzystają z małej puli znanych dowodzących. Dlatego kolejnym kluczowym krokiem w skalowaniu Ethereum jest rozdzielenie odpowiedzialności za uruchamianie sekwenserów i dowodzących na większą liczbę osób.
+[Rollupy](/layer-2) już teraz skalują Ethereum. [Bogaty ekosystem projektów rollupów](https://ethbeat.org/layer2s/tvs) umożliwia użytkownikom szybkie i tanie przeprowadzanie transakcji z zachowaniem szeregu gwarancji bezpieczeństwa. Jednak rollupy zostały uruchomione przy użyciu scentralizowanych sekwenserów (komputerów, które wykonują całe przetwarzanie i agregację transakcji przed przesłaniem ich do Ethereum). Jest to podatne na cenzurę, ponieważ operatorzy sekwenserów mogą zostać objęci sankcjami, przekupieni lub w inny sposób skompromitowani. Jednocześnie [rollupy różnią się](https://ethbeat.org/layer2s/summary) sposobem walidacji przychodzących danych. Najlepszym sposobem jest przesyłanie przez „dowodzących” (ang. provers) [dowodów oszustwa](/glossary/#fraud-proof) lub dowodów ważności, ale nie wszystkie rollupy już to robią. Nawet te rollupy, które używają dowodów ważności/oszustwa, korzystają z małej puli znanych dowodzących. Dlatego kolejnym kluczowym krokiem w skalowaniu Ethereum jest rozdzielenie odpowiedzialności za uruchamianie sekwenserów i dowodzących na większą liczbę osób.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Więcej o rollupach</ButtonLink>
+
+## Skalowanie sieci głównej Ethereum za pomocą zkEVM {#zkevm}
+
+Rollupy to nie jedyna droga do skalowania. Obecnie każdy [walidator](/glossary/#validator) ponownie wykonuje każdą transakcję w każdym bloku, co ogranicza to, ile sieć główna Ethereum może przetworzyć bez podnoszenia wymagań sprzętowych. Dzięki zkEVM pojedynczy prover wykonuje blok i generuje [dowód z wiedzą zerową](/zero-knowledge-proofs/) potwierdzający, że wykonanie było poprawne, a walidatorzy zamiast tego sprawdzają ten dowód. Sprawdzenie dowodu jest znacznie tańsze niż ponowne wykonanie, dzięki czemu Sieć główna może przetwarzać więcej transakcji bez zmuszania walidatorów do korzystania z drogiego sprzętu.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">Więcej o zkEVM</ButtonLink>
 
 ## Obecny postęp {#current-progress}
 

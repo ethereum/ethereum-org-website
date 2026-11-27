@@ -1,0 +1,55 @@
+name: PR gate
+
+# Approves PRs that qualify for a bot lane (incl. the bug-bounty data check) and withdraws approvals that no longer do; bot-merge.yml merges.
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
+  issue_comment:
+    types: [created, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    if: >-
+      github.event_name == 'pull_request_target' ||
+      (github.event.issue.pull_request && github.event.comment.user.login == 'ethorg-agent[bot]' &&
+        contains(github.event.comment.body, '<!-- ethorg-review:'))
+    # On the job, so skipped comment events never cancel a run that is approving.
+    concurrency:
+      group: pr-gate-${{ github.event.pull_request.number || github.event.issue.number }}
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Base branch only: the PR is read through the API or fetched as git data, never checked out or run.
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            .github/scripts/pr-gate.mjs
+            .github/scripts/bounty-entry.sh
+            .github/CODEOWNERS
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+
+      - name: Mint app token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ETHORG_AGENT_CLIENT_ID }}
+          private-key: ${{ secrets.ETHORG_AGENT_PRIVATE_KEY }}
+          repositories: ${{ github.event.repository.name }}
+          permission-issues: write
+          permission-pull-requests: write
+
+      - name: Approve or withdraw
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number || github.event.issue.number }}
+          BOT_MERGE_LANES: ${{ vars.BOT_MERGE_LANES }}
+          BOT_MERGE_AUTHORS: ${{ vars.BOT_MERGE_AUTHORS }}
+          BOT_MERGE_DELAY_HOURS: ${{ vars.BOT_MERGE_DELAY_HOURS }}
+          DRY_RUN: ${{ vars.BOT_MERGE_DRY_RUN != 'false' }}
+        run: node .github/scripts/pr-gate.mjs approve "$PR"

@@ -1,6 +1,6 @@
 ---
-title: zkEVM para la verificación de bloques de la capa 1
-description: Aprenda cómo las pruebas de conocimiento cero pueden verificar la ejecución de bloques de Ethereum, permitiendo una mayor capacidad de procesamiento y menores requisitos para los validadores.
+title: "zkEVM para la verificación de bloques de la capa 1"
+description: "Aprenda cómo las pruebas de conocimiento cero pueden verificar la ejecución de bloques de Ethereum, permitiendo una mayor capacidad de procesamiento y menores requisitos para los validadores."
 lang: es
 template: roadmap
 ---
@@ -12,7 +12,7 @@ La zkEVM es una tecnología que utiliza [pruebas de conocimiento cero](/zero-kno
 <AlertContent>
 <AlertTitle>No confundir con los rollups zkEVM</AlertTitle>
 <AlertDescription>
-Esta página trata sobre el uso de la zkEVM para verificar la ejecución de bloques de la capa 1 (l1) de Ethereum. Para los rollups zkEVM que utilizan pruebas ZK para escalar Ethereum como soluciones de capa 2 (l2), consulte los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/).
+Esta página trata sobre el uso de la zkEVM para verificar la ejecución de bloques de la capa 1 (L1) de Ethereum. Para los rollups zkEVM que utilizan pruebas ZK para escalar Ethereum como soluciones de capa 2 (L2), consulte los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -25,7 +25,7 @@ El problema es que la capacidad de procesamiento de Ethereum está limitada por 
 
 La zkEVM ofrece una salida a esta disyuntiva. Al pasar de "todos vuelven a ejecutar" a "uno prueba, todos verifican", Ethereum puede aumentar de forma segura el límite de gas sin elevar los requisitos de hardware de los validadores.
 
-## Cómo funciona la verificación de la l1 con zkEVM {#how-it-works}
+## Cómo funciona la verificación de la L1 con zkEVM {#how-it-works}
 
 La verificación con zkEVM transforma la validación de bloques en un modelo "1 de N":
 
@@ -42,7 +42,7 @@ Las zkEVM se clasifican en tipos según su compatibilidad con Ethereum:
 - **Tipo 1**: Totalmente equivalentes a Ethereum. Sin modificaciones en la EVM, por lo que cualquier bloque de Ethereum se puede probar exactamente tal como es
 - **Tipos 2-4**: Hacen varias concesiones, modificando el comportamiento de la EVM para facilitar la generación de pruebas
 
-Para la verificación de la capa 1 (l1), el Tipo 1 es esencial. La zkEVM debe ser capaz de probar cualquier bloque válido de Ethereum, incluidos los casos extremos y los bloques históricos. Cualquier desviación del comportamiento exacto de Ethereum crearía problemas de consenso.
+Para la verificación de la capa 1 (L1), el Tipo 1 es esencial. La zkEVM debe ser capaz de probar cualquier bloque válido de Ethereum, incluidos los casos extremos y los bloques históricos. Cualquier desviación del comportamiento exacto de Ethereum crearía problemas de consenso.
 
 La investigación sobre zkEVM de la Fundación Ethereum se centra en implementaciones de Tipo 1 que son totalmente compatibles con la ejecución existente de Ethereum.
 
@@ -64,7 +64,7 @@ La verificación de pruebas opera en tiempo constante independientemente de la c
 
 ## Desafíos de la generación de pruebas en tiempo real {#realtime-proving}
 
-El principal desafío para la verificación de la l1 con zkEVM es la velocidad. Los bloques de Ethereum se producen cada 12 segundos, lo que significa que las pruebas deben generarse en un plazo similar para ser útiles para el consenso.
+El principal desafío para la verificación de la L1 con zkEVM es la velocidad. Los bloques de Ethereum se producen cada 12 segundos, lo que significa que las pruebas deben generarse en un plazo similar para ser útiles para el consenso.
 
 Las implementaciones actuales de zkEVM pueden tardar de minutos a horas en probar un solo bloque. La investigación se centra en cerrar esta brecha a través de:
 
@@ -97,18 +97,18 @@ Estas utilizan máquinas virtuales basadas en RISC-V para ejecutar el código de
 
 ## Cómo encaja la zkEVM con otras actualizaciones {#related-upgrades}
 
-La verificación de la l1 con zkEVM se conecta con varios otros elementos de la hoja de ruta de Ethereum:
+La verificación de la L1 con zkEVM se conecta con varios otros elementos de la hoja de ruta de Ethereum:
 
-- **[Árboles Verkle](/roadmap/verkle-trees/)**: Permiten testigos más pequeños para la verificación con ausencia de estado, reduciendo los datos con los que los probadores necesitan trabajar
-- **[Ausencia de estado](/roadmap/statelessness/)**: La zkEVM es un facilitador clave; con las pruebas ZK de ejecución, los nodos no necesitan el estado completo para verificar los bloques
-- **[Separación proponente-constructor (PBS)](/roadmap/pbs/)**: Los constructores de bloques podrían integrar potencialmente la generación de pruebas, o podría surgir un mercado de probadores independiente
+- **Nuevo árbol de estado**: Un árbol binario unificado ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), propuesto en lugar del diseño anterior del [árbol Verkle](/roadmap/verkle-trees/), permitiría testigos más pequeños para la verificación sin estado y está diseñado para ser más fácil de probar
+- **[Ausencia de estado](/roadmap/statelessness/)**: La zkEVM es un facilitador clave: con las pruebas de ejecución ZK, los nodos no necesitan el estado completo para verificar los bloques
+- **[PBS](/roadmap/pbs/)**: Los constructores de bloques podrían integrar potencialmente la generación de pruebas, o podría surgir un mercado de probadores independiente
 - **[Finalidad de un solo slot](/roadmap/single-slot-finality/)**: Una generación de pruebas más rápida podría permitir la finalidad de un solo slot con garantías criptográficas
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-La verificación de la l1 con zkEVM se encuentra en investigación activa y aún no está integrada en los clientes de Ethereum en producción.
+La verificación de la L1 con zkEVM se encuentra en investigación activa y aún no está integrada en los clientes de Ethereum en producción.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -117,7 +117,7 @@ La verificación de la l1 con zkEVM se encuentra en investigación activa y aún
 
 - [Fundación zkEVM](https://zkevm.ethereum.foundation): Centro oficial de investigación sobre zkEVM de la Fundación Ethereum
 - [Ethproofs](https://ethproofs.org/): Siga la carrera para probar Ethereum en tiempo real
-- [zkevm.fyi](https://zkevm.fyi): Libro técnico sobre zkEVM para la l1
+- [zkevm.fyi](https://zkevm.fyi): Libro técnico sobre zkEVM para la L1
 - [Especificaciones de zkEVM de PSE](https://github.com/privacy-scaling-explorations/zkevm-specs): Especificaciones técnicas
 - [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html): Resumen de Vitalik sobre las mejoras de verificación
 - [Blog de zkEVM de la EF](https://zkevm.ethereum.foundation/blog): Análisis de rendimiento del equipo de la Fundación Ethereum (EF)

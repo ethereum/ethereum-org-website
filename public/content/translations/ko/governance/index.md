@@ -1,7 +1,7 @@
 ---
-title: 이더리움 거버넌스 소개
-metaTitle: 이더리움 거버넌스
-description: 이더리움에 관한 의사결정이 어떻게 이루어지는지에 대한 소개입니다.
+title: "이더리움 거버넌스 소개"
+metaTitle: "이더리움 거버넌스"
+description: "이더리움에 대한 의사결정은 어떻게 이루어질까요? 개발자, 노드 운영자 및 커뮤니티가 프로토콜 변경 사항을 제안, 토론 및 채택하는 방법에 대해 알아보세요."
 lang: ko
 ---
 
@@ -57,7 +57,7 @@ _참고: 모든 개인은 이러한 그룹 중 여러 그룹에 속할 수 있�
 
 ## EIP란 무엇인가요? {#what-is-an-eip}
 
-이더리움 거버넌스에서 사용되는 중요한 프로세스 중 하나는 **이더리움 개선 제안(EIP)**을 제안하는 것입니다. EIP는 이더리움의 잠재적인 새로운 기능이나 프로세스를 지정하는 표준입니다. 이더리움 커뮤니티 내의 누구나 EIP를 작성할 수 있습니다. EIP 작성이나 동료 검토 및/또는 거버넌스 참여에 관심이 있다면 다음을 참조하세요.
+이더리움 거버넌스에서 사용되는 중요한 프로세스 중 하나는 <strong>이더리움 개선 제안(EIP)</strong>을 제안하는 것입니다. EIP는 이더리움의 잠재적인 새로운 기능이나 프로세스를 지정하는 표준입니다. 이더리움 커뮤니티 내의 누구나 EIP를 작성할 수 있습니다. EIP 작성이나 동료 검토 및/또는 거버넌스 참여에 관심이 있다면 다음을 참조하세요.
 
 <ButtonLink href="/eips/">
   EIP에 대해 더 알아보기
@@ -71,7 +71,7 @@ _참고: 모든 개인은 이러한 그룹 중 여러 그룹에 속할 수 있�
 
 1. **코어 EIP 제안**: [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips)에 설명된 바와 같이, 이더리움에 대한 변경을 공식적으로 제안하는 첫 번째 단계는 코어 EIP에 이를 자세히 설명하는 것입니다. 이는 채택될 경우 프로토콜 개발자가 구현할 EIP의 공식 사양 역할을 합니다.
 
-2. **프로토콜 개발자에게 EIP 발표**: 커뮤니티의 의견을 수렴한 코어 EIP가 준비되면 이를 프로토콜 개발자에게 발표해야 합니다. [AllCoreDevs 통화](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status)에서 논의를 위해 제안함으로써 이를 수행할 수 있습니다. [Ethereum Magicians 포럼](https://ethereum-magicians.org/)이나 [이더리움 R&D 디스코드](https://discord.gg/mncqtgVSVw)에서 이미 비동기적으로 일부 논의가 진행되었을 가능성이 높습니다.
+2. **프로토콜 개발자에게 EIP 발표**: 커뮤니티의 의견을 수렴한 코어 EIP가 준비되면 이를 프로토콜 개발자에게 발표해야 합니다. [AllCoreDevs 통화](https://eips.ethereum.org/EIPS/eip-7723)에서 논의를 위해 제안함으로써 이를 수행할 수 있습니다. [Ethereum Magicians 포럼](https://ethereum-magicians.org/)이나 [이더리움 R&D 디스코드](https://discord.gg/mncqtgVSVw)에서 이미 비동기적으로 일부 논의가 진행되었을 가능성이 높습니다.
 
 > 이 단계의 잠재적인 결과는 다음과 같습니다.
 

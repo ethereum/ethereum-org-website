@@ -1,5 +1,50 @@
 # id Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.6/10
+Scope: 15 markdown files (roadmap statelessness/privacy/merge/verkle, nodes-and-clients x3, frameworks, glossary, supply, transactions, data-structures x3, ethash), changed lines only; no JSON in this PR. Sweeps clean (U+3002, U+2060, foreign script, English leftovers). 12 diffs read.
+
+**Fixed in this branch (3 critical, #112):** long forms added where English is bare: `merge:167` `Nilai Ekstrak Maksimal (MEV)` -> `MEV`; `statelessness:29` `organisasi otonom terdesentralisasi (DAO)` -> `DAO`; `nodes-and-clients:161` `lapisan 1 (L1)` / `(lapisan 2 (L2))` -> `L1` / `(L2)`.
+
+**Open (warnings):** `lapisan 2 (L2)` / `lapisan 1 (L1)` glossary expansions kept where English writes the long form (dev had them lowercase); `(PBS)` / `(RLP)` / `(EOA)`-style parentheticals added to English long forms (`statelessness:79`); `Recursive Length Prefix (RLP)` translated at `transactions:102` but left English at `:218`; `memerlukan` -> `mewajibkan` / `diwajibkan` churn for "requires" (`transactions`, `merge`); `Miskonsepsi` -> `Kesalahpahaman` and `MBit/dtk` -> `MBit/s` churn, `1 dtk` kept in nodes-as-a-service.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
+Scope: 76 markdown pages + 20 JSON namespaces (incl. 280 dev-tools descriptions), incremental updates, changed lines; sampled all MD diffs and ~120 JSON keys.
+
+**Fixed in this branch:**
+
+- Bare-abbreviation expansions the JSON fix pass missed (known-patterns 112): `tool-tatum`, `tool-watchdata` (`Antarmuka Pemrograman Aplikasi (API)` -> `API`), `tool-swiftnodes` (`lapisan 2 (L2)-nya` -> `L2-nya`), `tool-web3-ethereum-defi` (`keuangan terdesentralisasi (DeFi)` -> `DeFi`)
+- about:L110 `menyisih` (opt out) -> `memilih keluar`; secure-development-workflow:30 `pihak ke-3` -> `pihak ketiga`
+
+**Open (warnings):**
+
+- Capitalization leak `Pustaka` mid-sentence (~20 sites in tools-descriptions), `Likuiditas` (eth-prices), `Bukti tanpa pengetahuan` capitalized mid-sentence (railgun, rsp)
+- `OperasiPengguna` (fused calque of "user operations") at 5 sites; pre-existing form on dev, English is lowercase prose
+- `dikirimkan sebagai` for "ships as" (Account Kit, GoldRush) and `mengirimkan paket Go`; `melawan percabangan privat` (against -> terhadap); `dan wajibkan` for `require` in coddy-solidity-course
+- ETHGlossary `zero-knowledge proof` = `Bukti tanpa pengetahuan`; `page-learn` `more-on-ethereum-protocol-zero-knowledge-proofs` and `glossary-card-description` use `Zero-knowledge proof`
+- `shielded-pool-term`: `Shielded pool` (glossary.json) vs `Kolam terlindung` (glossary-tooltip.json); `escrow-term` `Escrow` vs `eskro` (page-get-eth); neither term is in ETHGlossary
+- `additional-reading-bridges` uses `Bridge` where the locale uses `jembatan`
+- logging-events-smart-contracts: body moved to `kejadian`/`dikirimkan`, title/L13-15 still `peristiwa`/`dikirimkan`; anatomy still `Memancarkan kejadian`
+- `hadiah staking` (page-get-eth meta description) vs `imbalan` (#56); `mensyaratkan`/`disyaratkan` for "required" in roadmap/user-experience and bug-bounty; `kompilator` vs `kompiler` split
+
+**Notes:**
+
+- L1/L2 casing and `(l1)` expansion drops are clean. Brand/tool names stay Latin in tools-descriptions and markdown. No U+3002, U+2060 or foreign-script hits in the PR's id files. Code/comment translations in tutorials follow English.
+
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: 33 values `(l1)`/`l1` uppercased; numeral order (`selama putaran {rounds}` to `selama {rounds} putaran`, `nilai {leaves}`, `sel hari {days}`, `entri {leaves} pertama`, `jejak langkah eksekusi {steps}`). Open: `memperdebatkan` (debate) for dispute.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.4/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: rollup optimis to rollup Optimistic (zk-rollups x5), equivocation to ekivokasi (pos L44). Open: L50 berdalih unchanged line, API/MEV over-expansion, capitalization leaks, mengkueri.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: checkpoint, Bukti Kepemilikan in attestations description, fork choice algorithm, ekivokasi, rantai blok. Open: `dikembalikan` for revert, head/kepala, stem/batang page vs diagram.
+
 ## PR #18925 (privacy roadmap + 2 video transcripts) -- 2026-07-27 -- 9.3/10
 
 **Fixed (critical):** `set anonimitas` -> `himpunan anonimitas` (`roadmap/privacy` L74). The companion video transcript already used the glossary form 3x in the same PR — cross-file disagreement was the tell.
@@ -117,3 +162,55 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - l2/L2 casing split; `Perbendaharaan` for treasuries; Auditabilitas/Kemampuan audit split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.0/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:440-456 `oracle` -> `orakel` restored (16 sites; `masalah oracle`/`oracle blockchain` kept)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:33: ETHGlossary `blockchain` (translate, high) is `rantai blok` (`dari banyak blockchain di` -> `dari banyak rantai blok di`)
+- page-wallet-descriptions.json:35: Same `blockchain` deviation (`untuk banyak blockchain,` -> `untuk banyak rantai blok,`)
+- page-wallet-descriptions.json:42: Same `blockchain` deviation (`di seluruh blockchain` -> `di seluruh rantai blok`)
+- common.json:149: ETHGlossary `fork` (translate, high) is `percabangan`. English: "History of forks". (`"Riwayat fork"` -> `"Riwayat percabangan"`)
+- 15 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** Fluent, structurally clean Indonesian. The main problem is that the security page went back from `orakel` to `oracle`, against the high-confidence glossary entry, plus a few meaning shifts in the new founders and prediction-markets copy.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.0/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: exclusive `kami` mixed with inclusive `kita` in the mint tutorial; `peristiwa` vs glossary `kejadian` (websockets:79).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna: revert rendered passive `dikembalikan` ("is returned") at 3 sites, regressing dev's `mengembalikan (revert)` -> restored with the `(revert)` gloss (#96)
+- echidna:145 `di-deploy` -> glossary `disebarkan`
+- multi-client: non-standard `enklaf` -> `enklave` (6 sites)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- API expanded on L21 after L9.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

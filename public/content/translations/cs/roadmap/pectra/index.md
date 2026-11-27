@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: "Přečtěte si o aktualizaci protokolu Pectra"
+description: "Pectra byla spuštěna 7. května 2025. Zjistěte, co tato aktualizace Etherea změnila, včetně chytrých účtů EIP-7702 a maximálního zůstatku validátora 2048 ETH."
 lang: cs
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -77,7 +77,7 @@ Nový předkompilovaný kontrakt přidává každému vývojáři možnost snadn
 
 EVM v současné době poskytuje operační kód `BLOCKHASH`, který umožňuje vývojářům kontraktů získat hash bloku přímo v exekuční vrstvě. To je však omezeno pouze na posledních 256 bloků a v budoucnu by to mohlo být problematické pro bezstavové klienty.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) vytváří nový systémový kontrakt, který může poskytovat posledních 8192 hashů bloků jako úložné sloty. To pomáhá připravit protokol na budoucnost pro bezstavovou exekuci a stává se efektivnějším při přijetí Verkle stromů. Kromě toho z toho však mohou okamžitě těžit rollupy, protože se mohou dotazovat kontraktu přímo s delším historickým oknem.
+[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) vytváří nový systémový kontrakt, který může poskytovat posledních 8192 hashů bloků jako úložné sloty. To pomáhá připravit protokol na budoucnost pro bezstavovou exekuci. Kromě toho z toho však mohou okamžitě těžit rollupy, protože mohou kontrakt dotazovat přímo s delším historickým oknem.
 
 ### Přesun indexu výboru mimo atestaci {#7549}
 

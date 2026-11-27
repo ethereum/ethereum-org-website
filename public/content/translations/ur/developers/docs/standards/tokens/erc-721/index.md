@@ -243,10 +243,9 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [اوپن زیپلن - <span dir="ltr">ERC-721</span> کا نفاذ](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
 
-## ٹیوٹوریلز: ایتھیریم پر غیر قابل تبادلہ ٹوکنز (<span dir="ltr">ERC-721</span>) کے ساتھ تعمیر کریں {#tutorials}
+## ٹیٹوریلز: ایتھیریم پر غیر متبادل ٹوکنز (<span dir="ltr">ERC-721</span>) کے ساتھ تعمیر کریں {#tutorials}
 
-- [Vyper <span dir="ltr">ERC-721</span> کنٹریکٹ واک تھرو](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper میں لکھے گئے ایک مکمل <span dir="ltr">ERC-721 NFT</span> کنٹریکٹ کا تشریحی جائزہ۔_
-- [ایک NFT کیسے لکھیں اور تعینات کریں (حصہ 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– اپنا پہلا <span dir="ltr">ERC-721</span> سمارٹ کنٹریکٹ لکھنے اور تعینات کرنے کے لیے مرحلہ وار گائیڈ۔_
-- [ایک NFT کیسے ڈھالیں (حصہ 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– اپنے تعینات کردہ سمارٹ کنٹریکٹ اور Web3 کا استعمال کرتے ہوئے <span dir="ltr">ERC-721 NFT</span> کو ڈھالنے کا طریقہ۔_
-- [اپنے والیٹ میں اپنا NFT کیسے دیکھیں (حصہ 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– تعیناتی کے بعد میٹاماسک میں اپنے ڈھالے گئے <span dir="ltr">NFT</span> کو دکھانے کا طریقہ۔_
-- [NFT منٹر ٹیوٹوریل](/developers/tutorials/nft-minter/) _– React فرنٹ اینڈ، میٹاماسک، اور Alchemy کے ساتھ ایک فل اسٹیک <span dir="ltr">NFT</span> ڈھلائی کی غیر مرکزی ایپلی کیشن (dapp) بنائیں۔_
+- [<span dir="ltr">Vyper</span> <span dir="ltr">ERC-721</span> کنٹریکٹ کا جائزہ](/developers/tutorials/erc-721-vyper-annotated-code/) _– <span dir="ltr">Vyper</span> میں لکھے گئے ایک مکمل <span dir="ltr">ERC-721</span> <span dir="ltr">NFT</span> کنٹریکٹ کا تشریحی جائزہ۔_
+- [ایک <span dir="ltr">NFT</span> کیسے لکھیں اور تعینات کریں (حصہ <span dir="ltr">1/3</span>)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– اپنا پہلا <span dir="ltr">ERC-721</span> سمارٹ کنٹریکٹ لکھنے اور تعینات کرنے کے لیے مرحلہ وار گائیڈ۔_
+- [ایک <span dir="ltr">NFT</span> کیسے ڈھالیں (حصہ <span dir="ltr">2/3</span>)](/developers/tutorials/how-to-mint-an-nft/) _– اپنے تعینات کردہ سمارٹ کنٹریکٹ اور <span dir="ltr">Web3</span> کا استعمال کرتے ہوئے ایک <span dir="ltr">ERC-721</span> <span dir="ltr">NFT</span> کیسے ڈھالیں۔_
+- [اپنے والیٹ میں اپنا <span dir="ltr">NFT</span> کیسے دیکھیں (حصہ <span dir="ltr">3/3</span>)](/developers/tutorials/how-to-view-nft-in-metamask/) _– تعیناتی کے بعد اپنے ڈھالے گئے <span dir="ltr">NFT</span> کو میٹاماسک میں کیسے دکھائیں۔_

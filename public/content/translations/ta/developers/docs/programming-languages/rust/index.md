@@ -41,17 +41,16 @@ incomplete: true
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _எத்திரியம் போன்ற பிணையத்துடன் தொடர்புகொள்வதற்கான externs-களின் தொகுப்பு_
 - [லைட்ஹவுஸ்](https://github.com/sigp/lighthouse) - _வேகமான எத்திரியம் கருத்தொருமிப்பு அடுக்கு கிளையண்ட்_
 - [எத்திரியம் WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly-இன் தீர்மானிக்கப்பட்ட துணைக்குழுவைப் பயன்படுத்தி எத்திரியம் திறன் ஒப்பந்த செயலாக்க அடுக்கின் முன்மொழியப்பட்ட மறுவடிவமைப்பு_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API குறிப்பு_
-- [Solaris](https://github.com/paritytech/sol-rs) - _நேட்டிவ் Parity கிளையண்ட் EVM-ஐப் பயன்படுத்தும் Solidity திறன் ஒப்பந்தங்களின் யூனிட் சோதனை கட்டமைப்பு._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust எத்திரியம் மெய்நிகர் இயந்திர செயலாக்கம்_
+- [Solaris](https://github.com/paritytech/sol-rs) - _நேட்டிவ் Parity கிளையண்ட் EVM-ஐப் பயன்படுத்தும் Solidity திறன் ஒப்பந்தங்களின் யூனிட் சோதனை ஹார்னஸ்._
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust எத்தேரியம் மெய்நிகர் இயந்திரம் செயலாக்கம்_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Rust-இல் Wavelet திறன் ஒப்பந்தம்_
-- [Foundry](https://github.com/foundry-rs/foundry) - _எத்திரியம் செயலி உருவாக்கத்திற்கான கருவித்தொகுப்பு_
+- [Foundry](https://github.com/foundry-rs/foundry) - _எத்திரியம் செயலி மேம்பாட்டிற்கான கருவித்தொகுப்பு_
 - [Alloy](https://alloy.rs) - _எத்திரியம் மற்றும் பிற EVM அடிப்படையிலான சங்கிலிகளுடன் தொடர்புகொள்வதற்கான உயர் செயல்திறன் கொண்ட, நன்கு சோதிக்கப்பட்ட மற்றும் ஆவணப்படுத்தப்பட்ட நிரலகங்கள்._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _எத்திரியம் நிரலகம் மற்றும் பணப்பை செயலாக்கம்_
-- [SewUp](https://github.com/second-state/SewUp) - _Rust-ஐக் கொண்டு உங்கள் எத்திரியம் webassembly ஒப்பந்தத்தை உருவாக்கவும், பொதுவான பின்தளத்தில் உருவாக்குவது போல உருவாக்கவும் உதவும் ஒரு நிரலகம்_
+- [SewUp](https://github.com/second-state/SewUp) - _Rust-ஐப் பயன்படுத்தி உங்கள் எத்திரியம் WebAssembly ஒப்பந்தத்தை உருவாக்கவும், பொதுவான பின்தளத்தில் உருவாக்குவது போல உருவாக்கவும் உதவும் ஒரு நிரலகம்_
 - [Substreams](https://github.com/streamingfast/substreams) - _இணையான தொகுதிச்சங்கிலி தரவு அட்டவணைப்படுத்தல் தொழில்நுட்பம்_
-- [ரெத்](https://github.com/paradigmxyz/reth) ரெத் (Rust Ethereum என்பதன் சுருக்கம்) என்பது ஒரு புதிய எத்திரியம் முழு-கணு செயலாக்கமாகும்
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rust-இல் எழுதப்பட்ட எத்திரியம் சுற்றுச்சூழல் அமைப்பில் உள்ள திட்டங்களின் தொகுக்கப்பட்ட தொகுப்பு_
+- [Reth](https://github.com/paradigmxyz/reth) Reth (Rust எத்திரியம் என்பதன் சுருக்கம்) என்பது ஒரு புதிய எத்திரியம் முழு முனையம் செயலாக்கமாகும்
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rust-இல் எழுதப்பட்ட எத்திரியம் சுற்றுச்சூழல் அமைப்பில் உள்ள திட்டங்களின் தேர்ந்தெடுக்கப்பட்ட தொகுப்பு_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Arbitrum-இல் திறன் ஒப்பந்தங்களை உருவாக்குவதற்கான Rust SDK_
 
 மேலும் ஆதாரங்களைத் தேடுகிறீர்களா? [ethereum.org/developers.](/developers/) ஐப் பார்க்கவும்.

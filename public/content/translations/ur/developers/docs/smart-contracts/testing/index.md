@@ -165,7 +165,7 @@ Solidity سمارٹ کنٹریکٹس کے لیے یونٹ ٹیسٹنگ فریم 
 
 ایک جامد تجزیہ کار سمارٹ کنٹریکٹ کے سورس کوڈ کو ان پٹ کے طور پر لیتا ہے اور ایسے نتائج نکالتا ہے جو یہ اعلان کرتے ہیں کہ آیا کوئی کنٹریکٹ کسی پراپرٹی کو پورا کرتا ہے یا نہیں۔ متحرک تجزیہ کے برعکس، جامد تجزیہ میں درستگی کے لیے اس کا تجزیہ کرنے کے لیے کنٹریکٹ کو چلانا شامل نہیں ہے۔ اس کے بجائے جامد تجزیہ ان تمام ممکنہ راستوں کے بارے میں استدلال کرتا ہے جو ایک سمارٹ کنٹریکٹ عمل درآمد کے دوران لے سکتا ہے (یعنی، سورس کوڈ کی ساخت کا جائزہ لے کر یہ تعین کرنے کے لیے کہ رن ٹائم پر کنٹریکٹ کے آپریشن کے لیے اس کا کیا مطلب ہوگا)۔
 
-کنٹریکٹس پر جامد تجزیہ چلانے کے لیے [لنٹنگ (Linting)](https://www.perforce.com/blog/qac/what-is-linting) اور [جامد ٹیسٹنگ](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) عام طریقے ہیں۔ دونوں کے لیے کنٹریکٹ کے عمل درآمد کی نچلی سطح کی نمائندگیوں کا تجزیہ کرنے کی ضرورت ہوتی ہے جیسے کہ کمپائلر کے ذریعے آؤٹ پٹ کیے گئے [ایبسٹریکٹ سنٹیکس ٹریز (abstract syntax trees)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) اور [کنٹرول فلو گرافس](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)۔
+کنٹریکٹس پر جامد تجزیہ چلانے کے لیے [لنٹنگ (Linting)](https://www.perforce.com/blog/qac/what-is-linting) اور [جامد ٹیسٹنگ](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) عام طریقے ہیں۔ دونوں کے لیے کنٹریکٹ کے عمل درآمد کی نچلی سطح کی نمائندگیوں کا تجزیہ کرنے کی ضرورت ہوتی ہے جیسے کہ کمپائلر کے ذریعے آؤٹ پٹ کیے گئے [ایبسٹریکٹ سنٹیکس ٹریز (abstract syntax trees)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) اور [کنٹرول فلو گرافس](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/)۔
 
 زیادہ تر معاملات میں، جامد تجزیہ حفاظتی مسائل کا پتہ لگانے کے لیے مفید ہے جیسے غیر محفوظ تعمیرات کا استعمال، نحو کی غلطیاں (syntax errors)، یا کنٹریکٹ کے کوڈ میں کوڈنگ کے معیارات کی خلاف ورزیاں۔ تاہم، جامد تجزیہ کار عام طور پر گہری کمزوریوں کا پتہ لگانے میں غیر معتبر سمجھے جاتے ہیں، اور ضرورت سے زیادہ غلط مثبت (false positives) پیدا کر سکتے ہیں۔
 
@@ -238,7 +238,7 @@ Solidity سمارٹ کنٹریکٹس کے لیے یونٹ ٹیسٹنگ فریم 
 
 جیسا کہ ذکر کیا گیا ہے، سخت ٹیسٹنگ شاذ و نادر ہی کنٹریکٹ میں بگز کی عدم موجودگی کی ضمانت دے سکتی ہے؛ رسمی تصدیق کے طریقے درستگی کی مضبوط یقین دہانی فراہم کر سکتے ہیں لیکن فی الحال ان کا استعمال مشکل ہے اور ان پر کافی اخراجات آتے ہیں۔
 
-پھر بھی، آپ ایک آزاد کوڈ ریویو حاصل کر کے کنٹریکٹ کی کمزوریوں کو پکڑنے کے امکان کو مزید بڑھا سکتے ہیں۔ [سمارٹ کنٹریکٹ آڈٹ](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) اور [بگ باؤنٹیز](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) دوسروں سے آپ کے کنٹریکٹس کا تجزیہ کروانے کے دو طریقے ہیں۔
+پھر بھی، آپ ایک آزاد کوڈ ریویو حاصل کر کے کنٹریکٹ کی کمزوریوں کو پکڑنے کے امکان کو مزید بڑھا سکتے ہیں۔ [سمارٹ کنٹریکٹ آڈٹ](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) اور [بگ باؤنٹیز](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) دوسروں سے آپ کے کنٹریکٹس کا تجزیہ کروانے کے دو طریقے ہیں۔
 
 آڈٹ ان آڈیٹرز کے ذریعہ انجام دیے جاتے ہیں جو سمارٹ کنٹریکٹس میں سیکیورٹی خامیوں اور ترقی کے ناقص طریقوں کے معاملات تلاش کرنے کا تجربہ رکھتے ہیں۔ ایک آڈٹ میں عام طور پر ٹیسٹنگ (اور ممکنہ طور پر رسمی تصدیق) کے ساتھ ساتھ پورے کوڈ بیس کا دستی جائزہ شامل ہوگا۔
 
@@ -276,7 +276,7 @@ Solidity سمارٹ کنٹریکٹس کے لیے یونٹ ٹیسٹنگ فریم 
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Solidity سمارٹ کنٹریکٹ پروگرامنگ زبان کے لیے اسٹائل اور سیکیورٹی کے بہترین طریقوں کو نافذ کرنے کے لیے لنٹر۔_
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rust پر مبنی جامد تجزیہ کار جو خاص طور پر Web3 سمارٹ کنٹریکٹ سیکیورٹی اور ترقی کے لیے ڈیزائن کیا گیا ہے۔_
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Rust پر مبنی جامد تجزیہ کار جو خاص طور پر Web3 سمارٹ کنٹریکٹ سیکیورٹی اور ترقی کے لیے ڈیزائن کیا گیا ہے۔_
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _کمزوری اور کوڈ کے معیار کے ڈیٹیکٹرز، کوڈ سے مفید معلومات نکالنے کے لیے پرنٹرز اور حسب ضرورت ذیلی ماڈیولز لکھنے کے لیے سپورٹ کے ساتھ Python پر مبنی جامد تجزیہ فریم ورک۔_
 
@@ -298,10 +298,9 @@ Solidity سمارٹ کنٹریکٹس کے لیے یونٹ ٹیسٹنگ فریم 
 
 - [مختلف ٹیسٹنگ پروڈکٹس کا جائزہ اور موازنہ](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [سمارٹ کنٹریکٹس کی ٹیسٹنگ کے لیے ایکڈنا کا استعمال کیسے کریں](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [سمارٹ کنٹریکٹ کے بگز تلاش کرنے کے لیے مینٹیکور کا استعمال کیسے کریں](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [سمارٹ کنٹریکٹ کے بگز تلاش کرنے کے لیے سلدر کا استعمال کیسے کریں](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [ٹیسٹنگ کے لیے Solidity کنٹریکٹس کو موک (mock) کیسے کریں](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Foundry کا استعمال کرتے ہوئے Solidity میں یونٹ ٹیسٹ کیسے چلائیں](https://www.rareskills.io/post/foundry-testing-solidity)
+- [Foundry کا استعمال کرتے ہوئے Solidity میں یونٹ ٹیسٹس کیسے چلائیں](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## مزید مطالعہ {#further-reading}
 

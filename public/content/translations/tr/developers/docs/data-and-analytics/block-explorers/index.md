@@ -21,12 +21,13 @@ Bir blok gezgininin size verdiği verileri anlamlandırabilmek için Ethereum'un
 
 ## Hizmetler {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - Özel Ethereum gezgini. Ayrıca (bellek havuzu) verilerini sıralamak ve filtrelemek içindir. İspanyolca, Fransızca, İtalyanca, Felemenkçe, Portekizce, Rusça, Çince ve Farsça dillerinde mevcuttur
+- [Blockchair](https://blockchair.com/ethereum) - Gizlilik odaklı Ethereum gezgini. Ayrıca (bellek havuzu) verilerini sıralamak ve filtrelemek içindir. İspanyolca, Fransızca, İtalyanca, Felemenkçe, Portekizce, Rusça, Çince ve Farsça dillerinde mevcuttur
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Blok Gezgini](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - Ayrıca Çince, Korece, Rusça ve Japonca dillerinde mevcuttur
-- [Ethplorer](https://ethplorer.io/) - Token odaklı bir blok gezgini. Ayrıca Çince, İspanyolca, Fransızca, Türkçe, Rusça, Korece ve Vietnamca dillerinde mevcuttur
+- [Ethplorer](https://ethplorer.io/) - Token'lara odaklanan bir blok gezgini. Ayrıca Çince, İspanyolca, Fransızca, Türkçe, Rusça, Korece ve Vietnamca dillerinde mevcuttur
+- [Ethscanner](https://ethscanner.io/) - Routescan tarafından. Doğrulanmış sözleşmelerle Verifier Alliance'ın açık veri kümesine katkıda bulunur ve zincirler arası işlemleri gösterir
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

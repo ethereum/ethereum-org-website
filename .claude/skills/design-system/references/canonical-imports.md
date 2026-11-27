@@ -59,7 +59,7 @@ Three import paths. Pick by use case.
 import Modal from "@/components/ui/dialog-modal"
 ```
 
-The high-level convenience: title + content + optional action button, with `size: "md" | "lg" | "xl"` and `variant: "simulator" | "unstyled"`. This is what you want 90% of the time.
+The high-level convenience: title + content + optional action button, with `size: "md" | "lg" | "xl"` and `variant: "simulator" | "unstyled" | "stacked"` (`stacked` puts the close button on its own top row so a long or translated title gets the full width). This is what you want 90% of the time.
 
 ```tsx
 <Modal
@@ -295,13 +295,13 @@ Variants: `simple | minimal | minimal-striped | simple-striped | product | highl
 
 For markdown-rendered tables, `mdxTableComponents` shims the same primitive.
 
-Domain-specific tables (`DataTable`, `Layer2NetworksTable`, `StablecoinsTable`, `ProductTable`) wrap `ui/table` for specific data shapes. Use them only if the data shape matches.
+The domain-specific `StablecoinsTable` wraps `ui/table` for a specific data shape. Use it only if the data shape matches.
 
 ## i18n & Formatting Utilities
 
 For locale-aware number/date formatting, RTL helpers, and directional-icon imports, see `references/i18n-rtl.md`. Quick pointers:
 
-- `numberFormat` / `dateTimeFormat` from `@/lib/utils/numbers` and `@/lib/utils/date`
+- `numberFormat` / `formatDateTime` from `@/lib/utils/numbers` and `@/lib/utils/date`
 - `useRtlFlip` from `@/hooks/useRtlFlip`
 - `ChevronNext` / `ChevronPrev` from `@/components/Chevron` (RTL-aware)
 

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-apps.json",
-  "generatedAt": "2026-09-25T23:18:50.331Z",
-  "rootHash": "712d9728cab2",
+  "generatedAt": "2026-10-21T21:35:12.524Z",
+  "rootHash": "a6f458c274f5",
   "tree": {
-    "contentHash": "4edfc4c4d03e",
-    "anchorHash": "d50c21dcc45f",
+    "contentHash": "72712f62f7ba",
+    "anchorHash": "65ec3be2f1d1",
     "children": {
       "page-apps-all-apps": {
         "contentHash": "01bed311e7d0",
@@ -243,32 +243,6 @@
         "contentHash": "d604310a789a",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-apps-visit-app": {
-        "contentHash": "fdd97f785936",
-        "anchorHash": "99046c58da38",
-        "children": {
-          "prose:1": {
-            "contentHash": "1c8ac867f052",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "icu:0": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "d3d932af628a"
-          }
-        },
-        "childrenOrder": [
-          "prose:1",
-          "icu:0"
-        ]
-      },
-      "page-apps-see-next": {
-        "contentHash": "6e4135961a36",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-apps-info-title": {
-        "contentHash": "170322a32f3c",
-        "anchorHash": "e3b0c44298fc"
-      },
       "page-apps-info-founded": {
         "contentHash": "6520e4488973",
         "anchorHash": "e3b0c44298fc"
@@ -277,111 +251,38 @@
         "contentHash": "88447b83090c",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-apps-info-last-updated": {
-        "contentHash": "382ac5f308f7",
+      "page-apps-info-languages": {
+        "contentHash": "318655cea4bd",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-apps-gallery-title": {
-        "contentHash": "352cfc749e55",
+      "page-apps-info-listing-reviewed": {
+        "contentHash": "06aae7025f56",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-apps-gallery-screenshot-alt": {
-        "contentHash": "3268b7d6f194",
-        "anchorHash": "784bb3691c72",
-        "children": {
-          "prose:2": {
-            "contentHash": "029320ad166c",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "icu:0": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "5a27b480c481"
-          },
-          "prose:3": {
-            "contentHash": "28391d3bc64e",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "icu:1": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "d3d932af628a"
-          },
-          "prose:4": {
-            "contentHash": "19678f067f86",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "prose:2",
-          "icu:0",
-          "prose:3",
-          "icu:1",
-          "prose:4"
-        ]
-      },
-      "page-apps-gallery-modal-title": {
-        "contentHash": "27841eec1a10",
-        "anchorHash": "3f4d94f7864a",
-        "children": {
-          "icu:0": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "d3d932af628a"
-          },
-          "prose:1": {
-            "contentHash": "067348ce6894",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "icu:0",
-          "prose:1"
-        ]
+      "page-apps-info-listing-reviewed-tooltip": {
+        "contentHash": "ed3e0a381bed",
+        "anchorHash": "e3b0c44298fc"
       },
       "page-apps-more-apps-like-this": {
         "contentHash": "5da04a5d9a6e",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-apps-by-company": {
-        "contentHash": "8ba4913c3918",
-        "anchorHash": "bd2eba3faf1b",
+      "page-apps-detail-meta-title": {
+        "contentHash": "911d25caf051",
+        "anchorHash": "1bb7a6278a9b",
         "children": {
           "prose:1": {
-            "contentHash": "a7e2d26e8d15",
+            "contentHash": "193c39fccce9",
             "anchorHash": "e3b0c44298fc"
           },
           "icu:0": {
             "contentHash": "e3b0c44298fc",
-            "anchorHash": "262fb619bef1"
+            "anchorHash": "5e291d7bcb2d"
           }
         },
         "childrenOrder": [
           "prose:1",
           "icu:0"
-        ]
-      },
-      "page-apps-today": {
-        "contentHash": "2b065c7c9ce4",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-apps-one-day-ago": {
-        "contentHash": "961f4ea2623a",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "page-apps-days-ago": {
-        "contentHash": "73d2f9546ba2",
-        "anchorHash": "86f3a92e2330",
-        "children": {
-          "icu:0": {
-            "contentHash": "e3b0c44298fc",
-            "anchorHash": "fe0b96c2ffb2"
-          },
-          "prose:1": {
-            "contentHash": "37dad91df7b2",
-            "anchorHash": "e3b0c44298fc"
-          }
-        },
-        "childrenOrder": [
-          "icu:0",
-          "prose:1"
         ]
       }
     },
@@ -445,21 +346,14 @@
       "page-apps-filter-by",
       "page-apps-filter-all",
       "page-apps-showing",
-      "page-apps-visit-app",
-      "page-apps-see-next",
-      "page-apps-info-title",
       "page-apps-info-founded",
       "page-apps-info-creator",
-      "page-apps-info-last-updated",
-      "page-apps-gallery-title",
-      "page-apps-gallery-screenshot-alt",
-      "page-apps-gallery-modal-title",
+      "page-apps-info-languages",
+      "page-apps-info-listing-reviewed",
+      "page-apps-info-listing-reviewed-tooltip",
       "page-apps-more-apps-like-this",
-      "page-apps-by-company",
-      "page-apps-today",
-      "page-apps-one-day-ago",
-      "page-apps-days-ago"
+      "page-apps-detail-meta-title"
     ]
   },
-  "sourceCommitSha": "027a25f99fe67512f2702ac590d965956a33f462"
+  "sourceCommitSha": "9c82bea6ad613e9a18800c759b53182ae5da2f03"
 }

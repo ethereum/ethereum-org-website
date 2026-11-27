@@ -1,6 +1,6 @@
 ---
 title: "Dapp डेवलपमेंट फ्रेमवर्क"
-description: "फ्रेमवर्क के फायदों का अन्वेषण करें और उपलब्ध विकल्पों की तुलना करें।"
+description: "Foundry और Hardhat जैसे इथेरियम डेवलपमेंट फ्रेमवर्क की तुलना करें। जानें कि एक फ्रेमवर्क आपको स्मार्ट अनुबंधों को संकलित करने, परीक्षण करने और तैनात करने के लिए क्या देता है।"
 lang: hi
 ---
 
@@ -22,19 +22,19 @@ lang: hi
 
 ## उपलब्ध फ्रेमवर्क {#available-frameworks}
 
-**Foundry** - **_Foundry इथेरियम एप्लिकेशन विकास के लिए एक बेहद तेज़, पोर्टेबल और मॉड्यूलर टूलकिट है_**
+**Foundry** - **_Foundry इथेरियम एप्लिकेशन डेवलपमेंट के लिए एक बेहद तेज़, पोर्टेबल और मॉड्यूलर टूलकिट है_**
 
 - [Foundry इंस्टॉल करें](https://book.getfoundry.sh/)
 - [Foundry बुक](https://book.getfoundry.sh/)
 - [टेलीग्राम पर Foundry कम्युनिटी चैट](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Hardhat -** **_पेशेवरों के लिए इथेरियम विकास वातावरण।_**
+**Hardhat -** **_पेशेवरों के लिए इथेरियम डेवलपमेंट वातावरण।_**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Pythonistas, डेटा वैज्ञानिकों और सुरक्षा पेशेवरों के लिए स्मार्ट अनुबंध विकास टूल।_**
+**Ape -** **_Pythonistas, डेटा वैज्ञानिकों और सुरक्षा पेशेवरों के लिए स्मार्ट अनुबंध डेवलपमेंट टूल।_**
 
 - [दस्तावेज़ीकरण](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -51,17 +51,17 @@ lang: hi
 - [उदाहरण](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [डिस्कॉर्ड](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_एक कमांड के साथ इथेरियम-संचालित ऐप बनाएं। चुनने के लिए UI फ्रेमवर्क और विकेंद्रीकृत वित्त (DeFi) टेम्प्लेट की एक विस्तृत पेशकश के साथ आता है।_**
+**Create Eth App -** **_एक कमांड के साथ इथेरियम-संचालित ऐप बनाएं। चुनने के लिए UI फ्रेमवर्क और DeFi टेम्प्लेट की एक विस्तृत पेशकश के साथ आता है।_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [टेम्प्लेट](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Hardhat या Foundry की आपकी पसंद के साथ Next.js, Wagmi, Viem और RainbowKit: अनुबंध हॉट रीलोड, कस्टम React हुक, एक बर्नर वॉलेट और स्थानीय फॉसेट, और फुल-स्टैक विकेंद्रीकृत एप्लिकेशन (dapp) विकास के लिए एक्सटेंशन मॉड्यूल।_**
+**Scaffold-ETH 2 -** **_Hardhat या Foundry की आपकी पसंद के साथ Next.js, Wagmi, Viem और RainbowKit: अनुबंध हॉट रीलोड, कस्टम React हुक, एक बर्नर वॉलेट और स्थानीय फॉसेट, और फुल-स्टैक dapp डेवलपमेंट के लिए एक्सटेंशन मॉड्यूल।_**
 
 - [वेबसाइट](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3 विकास प्लेटफ़ॉर्म जो ब्लॉकचेन डेवलपर्स को स्मार्ट अनुबंध बनाने, परीक्षण करने, डीबग करने, मॉनिटर करने और संचालित करने और dapp UX को बेहतर बनाने में सक्षम बनाता है।_**
+**Tenderly -** **_Web3 डेवलपमेंट प्लेटफ़ॉर्म जो ब्लॉकचेन डेवलपर्स को स्मार्ट अनुबंध बनाने, परीक्षण करने, डीबग करने, मॉनिटर करने और संचालित करने और dapp UX को बेहतर बनाने में सक्षम बनाता है।_**
 
 - [वेबसाइट](https://tenderly.co/)
 - [दस्तावेज़ीकरण](https://docs.tenderly.co/)
@@ -69,15 +69,15 @@ lang: hi
 **The Graph -** **_ब्लॉकचेन डेटा को कुशलतापूर्वक क्वेरी करने के लिए The Graph।_**
 
 - [वेबसाइट](https://thegraph.com/)
-- [ट्यूटोरियल](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [दस्तावेज़ीकरण](https://thegraph.com/docs/en/)
 
-**Alchemy -** **_इथेरियम विकास प्लेटफ़ॉर्म।_**
+**Alchemy -** **_इथेरियम डेवलपमेंट प्लेटफ़ॉर्म।_**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [डिस्कॉर्ड](https://discord.com/invite/alchemyplatform)
 
-**NodeReal -** **_इथेरियम विकास प्लेटफ़ॉर्म।_**
+**NodeReal -** **_इथेरियम डेवलपमेंट प्लेटफ़ॉर्म।_**
 
 - [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
@@ -88,30 +88,29 @@ lang: hi
 - [दस्तावेज़ीकरण](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Web3 (इथेरियम और अन्य) विकास प्लेटफ़ॉर्म।_**
+**Chainstack -** **_Web3 (इथेरियम और अन्य) डेवलपमेंट प्लेटफ़ॉर्म।_**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [डिस्कॉर्ड](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_एंटरप्राइज़-ग्रेड Web3 विकास प्लेटफ़ॉर्म, जो आपको सभी प्रमुख चेनों EVM चेनों (और अन्य) पर NFT एप्लिकेशन बनाने की अनुमति देता है।_**
+**Crossmint -** **_एंटरप्राइज़-ग्रेड Web3 डेवलपमेंट प्लेटफ़ॉर्म, जो आपको सभी प्रमुख चेन EVM चेन (और अन्य) पर NFT एप्लिकेशन बनाने की अनुमति देता है।_**
 
 - [वेबसाइट](https://www.crossmint.com)
 - [दस्तावेज़ीकरण](https://docs.crossmint.com)
 - [डिस्कॉर्ड](https://discord.com/invite/crossmint)
 
-**Brownie -** **_Python-आधारित विकास वातावरण और परीक्षण फ्रेमवर्क।_**
+**Brownie -** **_Python-आधारित डेवलपमेंट वातावरण और परीक्षण फ्रेमवर्क।_**
 
 - [दस्तावेज़ीकरण](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **Brownie का वर्तमान में रखरखाव नहीं किया जा रहा है**
+- **Brownie वर्तमान में अनमेनटेंड (unmaintained) है**
 
-**ओपनजेपेलिन SDK -** **_अल्टीमेट स्मार्ट अनुबंध टूलकिट: स्मार्ट अनुबंधों को विकसित करने, संकलित करने, अपग्रेड करने, तैनात करने और उनके साथ इंटरैक्ट करने में आपकी सहायता करने के लिए टूल का एक सूट।_**
+**ओपनजेपेलिन SDK -** **_अल्टीमेट स्मार्ट अनुबंध टूलकिट: स्मार्ट अनुबंधों को विकसित करने, संकलित करने, अपग्रेड करने, तैनात करने और उनके साथ इंटरैक्ट करने में आपकी मदद करने के लिए टूल का एक सूट।_**
 
-- [ओपनजेपेलिन Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [कम्युनिटी फ़ोरम](https://forum.openzeppelin.com/c/support/17)
-- **ओपनजेपेलिन SDK का विकास समाप्त हो गया है**
+- [कम्युनिटी फोरम](https://forum.openzeppelin.com/c/support/17)
+- **ओपनजेपेलिन SDK का डेवलपमेंट समाप्त हो गया है**
 
 **Catapulta -** **_मल्टी-चेन स्मार्ट अनुबंध तैनाती टूल, ब्लॉक एक्सप्लोरर में सत्यापन को स्वचालित करें, तैनात स्मार्ट अनुबंधों का ट्रैक रखें और तैनाती रिपोर्ट साझा करें, Foundry और Hardhat प्रोजेक्ट्स के लिए प्लग-एन-प्ले।_**
 
@@ -139,10 +138,11 @@ lang: hi
 - [डिस्कॉर्ड](https://discord.com/invite/FRRBdjemHV)
 - [NPM पैकेज](https://www.npmjs.com/package/@veramo/core)
 
-**Moccasin -** **_Titanoboa पर निर्मित, Vyper के लिए एक तेज़, Pythonic स्मार्ट अनुबंध विकास और परीक्षण फ्रेमवर्क।_**
+**Moccasin -** **_Titanoboa पर निर्मित Vyper के लिए एक तेज़, Pythonic स्मार्ट अनुबंध डेवलपमेंट और परीक्षण फ्रेमवर्क।_**
 
 - [दस्तावेज़ीकरण](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## आगे की पढ़ाई {#further-reading}
 
 _क्या आप किसी ऐसे कम्युनिटी संसाधन के बारे में जानते हैं जिसने आपकी मदद की हो? इस पेज को संपादित करें और इसे जोड़ें!_
@@ -151,6 +151,6 @@ _क्या आप किसी ऐसे कम्युनिटी सं�
 
 - [एक स्थानीय विकास वातावरण सेट करें](/developers/local-environment/)
 
-## ट्यूटोरियल: इथेरियम पर विकास फ्रेमवर्क {#tutorials}
+## ट्यूटोरियल: इथेरियम पर डेवलपमेंट फ्रेमवर्क {#tutorials}
 
-- [शुरुआती लोगों के लिए हैलो वर्ल्ड स्मार्ट अनुबंध – फुलस्टैक](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Hardhat का उपयोग करके एक हैलो वर्ल्ड स्मार्ट अनुबंध बनाएं और तैनात करें, फिर इसे फ्रंटएंड से कनेक्ट करें।_
+- [शुरुआती लोगों के लिए हैलो वर्ल्ड स्मार्ट अनुबंध](/developers/tutorials/hello-world-smart-contract/) _– Hardhat का उपयोग करके एक हैलो वर्ल्ड स्मार्ट अनुबंध बनाएं और तैनात करें।_

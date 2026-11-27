@@ -1,11 +1,7 @@
 import { pick } from "lodash"
 import { Timer } from "lucide-react"
 import type { Metadata } from "next"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Story } from "@/lib/types"
 
@@ -35,6 +31,7 @@ import { getVideos } from "@/lib/utils/videos"
 
 import { getVideosByCategory } from "../videos/utils"
 
+import AdoptionMap from "./_components/AdoptionMap"
 import CommunityStories from "./_components/CommunityStories"
 
 import { routing } from "@/i18n/routing"
@@ -44,8 +41,6 @@ const SHARE_STORY_URL = "https://ethereumstory.paperform.co/"
 
 const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
   const { locale } = await props.params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-stories")
 
@@ -120,6 +115,16 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
             </div>
           </Section>
         )}
+
+        <Section id="adoption-map" className="space-y-8 px-4 md:px-8">
+          <div className="mx-auto flex max-w-2xl flex-col gap-3 text-center">
+            <h2>{t("page-stories-map-title")}</h2>
+            <p className="text-lg text-body-medium">
+              {t("page-stories-map-subtitle")}
+            </p>
+          </div>
+          <AdoptionMap locale={locale} />
+        </Section>
 
         <Section id="more-stories" className="space-y-8 px-4 md:px-8">
           <div className="mx-auto flex max-w-2xl flex-col gap-3 text-center">
@@ -216,8 +221,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await props.params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-stories")
 

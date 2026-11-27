@@ -78,7 +78,7 @@ contract VendingMachine {
 
 안타깝게도 단위 테스트만 단독으로 사용할 경우 스마트 컨트랙트 보안을 향상시키는 데는 최소한의 효과만 있습니다. 단위 테스트는 모의 데이터에 대해 함수가 제대로 실행됨을 증명할 수 있지만, 작성된 테스트만큼만 효과적입니다. 이로 인해 스마트 컨트랙트의 안전성을 깨뜨릴 수 있는 놓친 엣지 케이스(edge cases)와 취약점을 발견하기 어렵습니다.
 
-더 나은 접근 방식은 단위 테스트를 [정적 및 동적 분석](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)을 사용하여 수행되는 속성 기반 테스트(property-based testing)와 결합하는 것입니다. 정적 분석은 도달 가능한 프로그램 상태와 실행 경로를 분석하기 위해 [제어 흐름 그래프(control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) 및 [추상 구문 트리(abstract syntax trees)](https://deepsource.io/glossary/ast/)와 같은 저수준 표현에 의존합니다. 한편, [스마트 컨트랙 퍼징(fuzzing)](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)과 같은 동적 분석 기술은 무작위 입력 값으로 컨트랙트 코드를 실행하여 보안 속성을 위반하는 작업을 감지합니다.
+더 나은 접근 방식은 단위 테스트를 [정적 및 동적 분석](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts)을 사용하여 수행되는 속성 기반 테스트(property-based testing)와 결합하는 것입니다. 정적 분석은 도달 가능한 프로그램 상태와 실행 경로를 분석하기 위해 [제어 흐름 그래프(control flow graphs)](https://en.wikipedia.org/wiki/Control-flow_graph) 및 [추상 구문 트리(abstract syntax trees)](https://deepsource.io/glossary/ast/)와 같은 저수준 표현에 의존합니다. 한편, [스마트 컨트랙 퍼징(fuzzing)](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)과 같은 동적 분석 기술은 무작위 입력 값으로 컨트랙트 코드를 실행하여 보안 속성을 위반하는 작업을 감지합니다.
 
 [정형 검증](/developers/docs/smart-contracts/formal-verification)은 스마트 컨트랙트의 보안 속성을 검증하는 또 다른 기술입니다. 일반적인 테스트와 달리 정형 검증은 스마트 컨트랙트에 오류가 없음을 결정적으로 증명할 수 있습니다. 이는 원하는 보안 속성을 포착하는 정형 명세(formal specification)를 생성하고 컨트랙트의 정형 모델이 이 명세를 준수함을 증명함으로써 달성됩니다.
 
@@ -99,7 +99,7 @@ contract VendingMachine {
 
 버그 바운티 프로그램을 설정하는 것은 외부 코드 검토를 구현하는 또 다른 접근 방식입니다. 버그 바운티는 애플리케이션에서 취약점을 발견한 개인(주로 화이트햇 해커)에게 주어지는 재정적 보상입니다.
 
-적절하게 사용될 경우, 버그 바운티는 해커 커뮤니티 구성원들이 코드의 치명적인 결함을 검사하도록 동기를 부여합니다. 실제 사례로는 공격자가 이더리움에서 실행되는 [레이어 2 (l2)](/layer-2/) 프로토콜인 [옵티미즘](https://www.optimism.io/)에서 무제한의 이더를 생성할 수 있었던 "무한 돈 버그(infinite money bug)"가 있습니다. 다행히도 한 화이트햇 해커가 [이 결함을 발견](https://www.saurik.com/optimism.html)하여 팀에 알렸고, [그 과정에서 큰 보상금을 받았습니다](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+적절하게 사용될 경우, 버그 바운티는 해커 커뮤니티 구성원들이 코드의 치명적인 결함을 검사하도록 동기를 부여합니다. 실제 사례로는 공격자가 이더리움에서 실행되는 [레이어 2 (L2)](/layer-2/) 프로토콜인 [Optimism](https://www.optimism.io/)에서 무제한의 이더를 생성할 수 있었던 "무한 돈 버그(infinite money bug)"가 있습니다. 다행히도 한 화이트햇 해커가 [이 결함을 발견](https://www.saurik.com/optimism.html)하여 팀에 알렸고, [그 과정에서 큰 보상금을 받았습니다](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 유용한 전략은 버그 바운티 프로그램의 보상금을 위험에 처한 자금의 양에 비례하여 설정하는 것입니다. "[스케일링 버그 바운티(scaling bug bounty)](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)"라고 불리는 이 접근 방식은 개인이 취약점을 악용하는 대신 책임감 있게 공개하도록 재정적 인센티브를 제공합니다.
 
@@ -433,7 +433,7 @@ contract Attack {
 
 ##### 정수 언더플로 및 오버플로를 방지하는 방법
 
-버전 0.8.0부터 Solidity 컴파일러는 정수 언더플로 및 오버플로를 초래하는 코드를 거부합니다. 그러나 더 낮은 컴파일러 버전으로 컴파일링된 컨트랙트는 산술 연산이 포함된 함수에 대해 확인을 수행하거나 언더플로/오버플로를 확인하는 라이브러리(예: [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math))를 사용해야 합니다.
+버전 0.8.0부터 Solidity 컴파일러는 정수 언더플로 및 오버플로를 초래하는 코드를 거부합니다. 그러나 더 낮은 컴파일러 버전으로 컴파일링된 컨트랙트는 산술 연산이 포함된 함수에 대해 확인을 수행하거나 언더플로/오버플로를 확인하는 라이브러리(예: [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math))를 사용해야 합니다.
 
 #### 오라클 조작 {#oracle-manipulation}
 
@@ -461,9 +461,9 @@ DEX 가격은 주로 차익 거래자들이 시장의 패리티(parity)를 회�
 
 - **[정형 검증 도구](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _스마트 컨트랙트의 기능적 정확성을 검증하고 불변성을 확인하기 위한 도구입니다._
 
-- **[스마트 컨트랙트 감사 서비스](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _이더리움 개발 프로젝트에 스마트 컨트랙트 감사 서비스를 제공하는 조직 목록입니다._
+- **[스마트 컨트랙트 감사 서비스](#smart-contract-auditing-services)** - _이더리움 개발 프로젝트에 스마트 컨트랙트 감사 서비스를 제공하는 조직 목록입니다._
 
-- **[버그 바운티 플랫폼](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _버그 바운티를 조율하고 스마트 컨트랙트의 심각한 취약점을 책임감 있게 공개한 것에 대해 보상하는 플랫폼입니다._
+- **[버그 바운티 플랫폼](#bug-bounty-platforms)** - _버그 바운티를 조율하고 스마트 컨트랙트의 심각한 취약점을 책임감 있게 공개한 것에 대해 보상하는 플랫폼입니다._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _포크된 컨트랙트와 관련된 모든 사용 가능한 정보를 확인할 수 있는 무료 온라인 도구입니다._
 
@@ -561,14 +561,12 @@ DEX 가격은 주로 차익 거래자들이 시장의 패리티(parity)를 회�
 
 ### 스마트 컨트랙트 보안 튜토리얼 {#tutorials-on-smart-contract-security}
 
-- [안전한 스마트 컨트랙트를 작성하는 방법](/developers/tutorials/secure-development-workflow/)
+- [안전한 스마트 컨트랙트 작성 방법](/developers/tutorials/secure-development-workflow/)
 
 - [슬리더를 사용하여 스마트 컨트랙트 버그를 찾는 방법](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [맨티코어를 사용하여 스마트 컨트랙트 버그를 찾는 방법](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
 - [스마트 컨트랙트 보안 가이드라인](/developers/tutorials/smart-contract-security-guidelines/)
 
-- [토큰 컨트랙트를 임의의 토큰과 안전하게 통합하는 방법](/developers/tutorials/token-integration-checklist/)
+- [임의의 토큰과 토큰 컨트랙트를 안전하게 통합하는 방법](/developers/tutorials/token-integration-checklist/)
 
 - [Cyfrin Updraft - 스마트 컨트랙트 보안 및 감사 전체 과정](https://updraft.cyfrin.io/courses/security)

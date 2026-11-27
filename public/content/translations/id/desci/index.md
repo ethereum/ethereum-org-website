@@ -1,6 +1,6 @@
 ---
 title: Sains terdesentralisasi (DeSci)
-description: Gambaran umum tentang sains terdesentralisasi di Ethereum
+description: Apa itu sains terdesentralisasi? Pelajari bagaimana DeSci menggunakan Ethereum untuk mendanai penelitian, berbagi data secara terbuka, dan memberi imbalan kepada ilmuwan, sehingga membuat sains lebih mudah diakses.
 lang: id
 template: use-cases
 sidebarDepth: 2

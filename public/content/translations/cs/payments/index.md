@@ -1,7 +1,7 @@
 ---
 title: Platby na Ethereu
 metaTitle: Platby na Ethereu
-description: "Přehled plateb na Ethereu"
+description: "Jak fungují platby na Ethereu? Zjistěte, jak posílat peníze po celém světě pomocí ETH a stablecoinů, často během několika sekund a s nízkými náklady, bez banky jako prostředníka."
 lang: cs
 template: use-cases
 sidebarDepth: 2

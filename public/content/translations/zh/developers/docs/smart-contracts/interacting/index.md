@@ -171,7 +171,6 @@ const result = await client.simulateContract({
 
 ## 相关教程 {#related-tutorials}
 
-- [从 JavaScript 调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [使用 Web3.js 和 Alchemy 发送交易](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [如何在钱包中查看你的 NFT](/developers/tutorials/how-to-view-nft-in-metamask/)
 
@@ -180,7 +179,7 @@ const result = await client.simulateContract({
 - [Viem 文档：读取和写入合约](https://viem.sh/docs/contract/readContract)
 - [Ethers.js 文档：合约](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI 规范](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [什么是 ABI？ - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [智能合约 ABI 是如何工作的？——Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## 相关主题 {#related-topics}
 

@@ -328,17 +328,17 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Menggunakan pustaka SafeMath dari OpenZeppelin untuk melakukan operasi aritmatika dengan aman.
-    // Pelajari lebih lanjut: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Pelajari lebih lanjut: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
     // Variabel state konstan di Solidity mirip dengan bahasa lain
-    // tetapi Anda harus menetapkan dari ekspresi yang konstan pada saat kompilasi.
+    // tetapi Anda harus menetapkannya dari ekspresi yang konstan pada saat kompilasi.
     // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Tipe Struct memungkinkan Anda mendefinisikan tipe Anda sendiri
+    // Tipe struct memungkinkan Anda mendefinisikan tipe Anda sendiri
     // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
@@ -366,7 +366,7 @@ contract CryptoPizza is IERC721, ERC165 {
         // di dalam kontrak ini dan kontrak yang diturunkan dari kontrak ini
         // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` adalah pengubah fungsi yang memeriksa apakah pizza sudah ada
+        // `isUnique` adalah modifier fungsi yang memeriksa apakah pizza sudah ada
         // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
@@ -410,7 +410,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return rand;
     }
 
-    // Mengembalikan array Pizza yang ditemukan oleh pemilik
+    // Mengembalikan array Pizza yang ditemukan berdasarkan pemilik
     function getPizzasByOwner(address _owner)
         public
         // Fungsi yang ditandai sebagai `view` berjanji untuk tidak memodifikasi state
@@ -418,8 +418,8 @@ contract CryptoPizza is IERC721, ERC165 {
         view
         returns (uint256[] memory)
     {
-        // Menggunakan lokasi penyimpanan `memory` untuk menyimpan nilai hanya untuk
-        // siklus hidup panggilan fungsi ini.
+        // Menggunakan lokasi penyimpanan `memory` untuk menyimpan nilai hanya selama
+        // siklus hidup pemanggilan fungsi ini.
         // Pelajari lebih lanjut: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -443,7 +443,7 @@ contract CryptoPizza is IERC721, ERC165 {
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // Memancarkan peristiwa yang didefinisikan dalam kontrak IERC721 yang diimpor
+        // Memancarkan kejadian yang didefinisikan dalam kontrak IERC721 yang diimpor
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
@@ -453,7 +453,7 @@ contract CryptoPizza is IERC721, ERC165 {
      * Jika alamat target adalah kontrak, ia harus mengimplementasikan `onERC721Received`,
      * yang dipanggil saat transfer aman, dan mengembalikan nilai ajaib
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * jika tidak, transfer akan dikembalikan.
+     * jika tidak, transfer dibatalkan.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -467,7 +467,7 @@ contract CryptoPizza is IERC721, ERC165 {
      * Jika alamat target adalah kontrak, ia harus mengimplementasikan `onERC721Received`,
      * yang dipanggil saat transfer aman, dan mengembalikan nilai ajaib
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * jika tidak, transfer akan dikembalikan.
+     * jika tidak, transfer dibatalkan.
      */
     function safeTransferFrom(
         address from,
@@ -503,7 +503,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     // Membakar Pizza - menghancurkan token sepenuhnya
-    // Pengubah fungsi `external` berarti fungsi ini adalah
+    // Modifier fungsi `external` berarti fungsi ini adalah
     // bagian dari antarmuka kontrak dan kontrak lain dapat memanggilnya
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
@@ -548,7 +548,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * Fungsi privat untuk menghapus persetujuan saat ini dari ID token yang diberikan
-     * Mengembalikan jika alamat yang diberikan memang bukan pemilik token
+     * Dibatalkan jika alamat yang diberikan bukan pemilik token tersebut
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,7 +559,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * Mengatur atau membatalkan persetujuan dari operator yang diberikan
+     * Menetapkan atau membatalkan persetujuan dari operator yang diberikan
      * Seorang operator diizinkan untuk mentransfer semua token pengirim atas nama mereka
      */
     function setApprovalForAll(address to, bool approved) public {
@@ -568,7 +568,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Memberi tahu apakah seorang operator disetujui oleh pemilik yang diberikan
+    // Memberitahu apakah seorang operator disetujui oleh pemilik yang diberikan
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -598,7 +598,7 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // Nonaktifkan pemeriksaan solium karena
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
@@ -624,8 +624,8 @@ contract CryptoPizza is IERC721, ERC165 {
     // Mengembalikan apakah alamat target adalah kontrak
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Saat ini tidak ada cara yang lebih baik untuk memeriksa apakah ada kontrak di sebuah alamat
-        // daripada memeriksa ukuran kode di alamat tersebut.
+        // Saat ini tidak ada cara yang lebih baik untuk memeriksa apakah ada kontrak di suatu alamat
+        // daripada memeriksa ukuran kode pada alamat tersebut.
         // Lihat https://ethereum.stackexchange.com/a/14016/36603
         // untuk detail lebih lanjut tentang cara kerjanya.
         // TODO Periksa ini lagi sebelum rilis Serenity, karena semua alamat akan menjadi

@@ -1,22 +1,24 @@
 ---
-title: Verkle-Bäume
-description: Eine allgemeine Beschreibung von Verkle-Bäumen und wie sie zur Aktualisierung von Ethereum verwendet werden
+title: "Verkle-Bäume"
+description: "Eine allgemeine Beschreibung von Verkle-Bäumen und warum Ethereums Pläne für den Zustandsbaum zu einem binären Baum übergegangen sind"
 lang: de
 template: roadmap
 summaryPoints:
-  - Erfahren Sie, was Verkle-Bäume sind
-  - Lesen Sie, warum Verkle-Bäume ein nützliches Upgrade für Ethereum sind
+  - Entdecken Sie, was Verkle-Bäume sind
+  - Lesen Sie, warum Verkle-Bäume zugunsten eines binären Baums zurückgestellt wurden
 ---
 
-Verkle-Bäume (ein Kofferwort aus „Vector Commitment“ und „Merkle-Bäumen“) sind eine Datenstruktur, die verwendet werden kann, um [Ethereum](/)-Knoten zu aktualisieren, sodass sie keine großen Mengen an Zustandsdaten mehr speichern müssen, ohne die Fähigkeit zur Validierung von Blöcken zu verlieren.
+Verkle-Bäume (ein Kofferwort aus „Vector Commitment“ und „Merkle-Bäumen“) sind eine Datenstruktur, die verwendet werden kann, um [Ethereum](/)-Knoten zu aktualisieren, sodass sie aufhören können, große Mengen an Zustandsdaten zu speichern, ohne die Fähigkeit zu verlieren, Blöcke zu validieren.
+
+Verkle-Bäume wurden als Ethereums nächster Zustandsbaum in [EIP-6800](https://eips.ethereum.org/EIPS/eip-6800) vorgeschlagen, aber dieser Vorschlag stagniert nun und wurde zugunsten eines einheitlichen binären Baums ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) zurückgestellt. Der binäre Baum verfolgt das gleiche Ziel von kleinen Zeugen für zustandslose Clients. Diese Seite erklärt, wie Verkle-Bäume funktionieren und warum die Forschung zu einem binären Baum übergegangen ist.
 
 ## Zustandslosigkeit {#statelessness}
 
-Verkle-Bäume sind ein entscheidender Schritt auf dem Weg zu zustandslosen Ethereum-Clients. Zustandslose Clients sind solche, die nicht die gesamte Zustandsdatenbank speichern müssen, um eingehende Blöcke zu validieren. Anstatt ihre eigene lokale Kopie des Ethereum-Zustands zur Verifizierung von Blöcken zu verwenden, nutzen zustandslose Clients einen „Zeugen“ (Witness) für die Zustandsdaten, der mit dem Block ankommt. Ein Zeuge ist eine Sammlung einzelner Teile der Zustandsdaten, die zur Ausführung einer bestimmten Gruppe von Transaktionen erforderlich sind, sowie ein kryptografischer Beweis, dass der Zeuge wirklich Teil der vollständigen Daten ist. Der Zeuge wird _anstelle_ der Zustandsdatenbank verwendet. Damit dies funktioniert, müssen die Zeugen sehr klein sein, damit sie rechtzeitig sicher über das Netzwerk übertragen werden können, sodass Validatoren sie innerhalb eines 12-Sekunden-Slots verarbeiten können. Die aktuelle Zustandsdatenstruktur ist nicht geeignet, da die Zeugen zu groß sind. Verkle-Bäume lösen dieses Problem, indem sie kleine Zeugen ermöglichen und so eine der Haupthürden für zustandslose Clients beseitigen.
+Verkle-Bäume wurden als ein Schritt auf dem Weg zu zustandslosen Ethereum-Clients entworfen. Zustandslose Clients sind solche, die nicht die gesamte Zustandsdatenbank speichern müssen, um eingehende Blöcke zu validieren. Anstatt ihre eigene lokale Kopie des Zustands von Ethereum zu verwenden, um Blöcke zu verifizieren, verwenden zustandslose Clients einen „Zeugen“ für die Zustandsdaten, der mit dem Block ankommt. Ein Zeuge ist eine Sammlung einzelner Teile der Zustandsdaten, die erforderlich sind, um eine bestimmte Menge von Transaktionen auszuführen, sowie ein kryptographischer Beweis, dass der Zeuge wirklich Teil der vollständigen Daten ist. Der Zeuge wird _anstelle_ der Zustandsdatenbank verwendet. Damit dies funktioniert, müssen die Zeugen sehr klein sein, damit sie sicher und rechtzeitig über das Netzwerk übertragen werden können, damit Validatoren sie innerhalb eines 12-Sekunden-Slots verarbeiten können. Die aktuelle Struktur der Zustandsdaten ist nicht geeignet, da die Zeugen zu groß sind. Verkle-Bäume lösen dieses Problem, indem sie kleine Zeugen ermöglichen und so eine der Haupthürden für zustandslose Clients beseitigen.
 
 <ExpandableCard title="Warum wollen wir zustandslose Clients?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
-Ethereum-Clients verwenden derzeit eine Datenstruktur, die als Patricia-Merkle-Trie bekannt ist, um ihre Zustandsdaten zu speichern. Informationen über einzelne Konten werden als Blätter im Trie gespeichert, und Blattpaare werden wiederholt gehasht, bis nur noch ein einziger Hash übrig bleibt. Dieser finale Hash wird als „Wurzel“ (Root) bezeichnet. Um Blöcke zu verifizieren, führen Ethereum-Clients alle Transaktionen in einem Block aus und aktualisieren ihren lokalen Zustands-Trie. Der Block gilt als gültig, wenn die Wurzel des lokalen Baums mit der vom Block-Proposer bereitgestellten identisch ist, da jegliche Unterschiede in der Berechnung durch den Block-Proposer und den validierenden Knoten dazu führen würden, dass der Root-Hash völlig anders ausfällt. Das Problem dabei ist, dass die Verifizierung der Blockchain erfordert, dass jeder Client den gesamten Zustands-Trie für den Head-Block und mehrere historische Blöcke speichert (die Standardeinstellung in Geth ist, Zustandsdaten für 128 Blöcke hinter dem Head zu behalten). Dies erfordert, dass Clients Zugriff auf eine große Menge an Speicherplatz haben, was eine Hürde für den Betrieb von vollständigen Knoten auf günstiger, stromsparender Hardware darstellt. Eine Lösung hierfür ist die Aktualisierung des Zustands-Tries auf eine effizientere Struktur (Verkle-Baum), die mithilfe eines kleinen „Zeugen“ für die Daten zusammengefasst werden kann, der anstelle der vollständigen Zustandsdaten geteilt werden kann. Die Umformatierung der Zustandsdaten in einen Verkle-Baum ist ein Sprungbrett für den Übergang zu zustandslosen Clients.
+Ethereum-Clients verwenden derzeit eine Datenstruktur, die als Patricia-Merkle-Trie bekannt ist, um ihre Zustandsdaten zu speichern. Informationen über einzelne Konten werden in Blättern des Tries gespeichert, und jeder Verzweigungsknoten, der bis zu 16 Kinder haben kann, wird Ebene für Ebene mit den Hashes seiner Kinder gehasht, bis nur noch ein einziger Hash übrig bleibt. Dieser finale Hash wird als „Root“ bezeichnet. Um Blöcke zu verifizieren, führen Ethereum-Clients alle Transaktionen in einem Block aus und aktualisieren ihren lokalen Zustands-Trie. Der Block gilt als gültig, wenn der Root des lokalen Baums mit dem vom Block-Proposer bereitgestellten identisch ist, da jegliche Unterschiede in der Berechnung durch den Block-Proposer und den validierenden Knoten dazu führen würden, dass der Root-Hash völlig unterschiedlich ist. Das Problem dabei ist, dass die Verifizierung der Blockchain erfordert, dass jeder Client den gesamten Zustands-Trie für den Head-Block und mehrere historische Blöcke speichert (der Standard in Geth ist, Zustandsdaten für 128 Blöcke hinter dem Head zu behalten). Dies erfordert, dass Clients Zugriff auf eine große Menge an Speicherplatz haben, was ein Hindernis für den Betrieb von vollständigen Knoten auf billiger, stromsparender Hardware darstellt. Eine Lösung dafür ist die Aktualisierung des Zustands-Tries auf eine effizientere Struktur (wie einen Verkle-Baum oder einen binären Baum), die mithilfe eines kleinen „Zeugen“ für die Daten zusammengefasst werden kann, der anstelle der vollständigen Zustandsdaten geteilt werden kann. Die Umformatierung der Zustandsdaten in eine neue Baumstruktur ist ein Sprungbrett für den Übergang zu zustandslosen Clients.
 
 </ExpandableCard>
 
@@ -38,28 +40,30 @@ Die Größe des Zeugen variiert je nach Anzahl der enthaltenen Blätter. Angenom
 
 ## Wie ist die Struktur eines Verkle-Baums? {#what-is-the-structure-of-a-verkle-tree}
 
-Verkle-Bäume sind `(key,value)`-Paare, bei denen die Schlüssel 32-Byte-Elemente sind, die aus einem 31-Byte-_Stamm_ (Stem) und einem Einzel-Byte-_Suffix_ bestehen. Diese Schlüssel sind in _Erweiterungsknoten_ (Extension Nodes) und _innere_ Knoten (Inner Nodes) organisiert. Erweiterungsknoten repräsentieren einen einzelnen Stamm für 256 Kinder mit unterschiedlichen Suffixen. Innere Knoten haben ebenfalls 256 Kinder, aber sie können andere Erweiterungsknoten sein. Der Hauptunterschied zwischen der Struktur des Verkle-Baums und des Merkle-Baums besteht darin, dass der Verkle-Baum viel flacher ist, was bedeutet, dass es weniger Zwischenknoten gibt, die ein Blatt mit der Wurzel verbinden, und daher weniger Daten zur Generierung eines Beweises erforderlich sind.
+Verkle-Bäume sind `(key,value)`-Paare, bei denen die Schlüssel 32-Byte-Elemente sind, die aus einem 31-Byte-_Stamm_ und einem Ein-Byte-_Suffix_ bestehen. Diese Schlüssel sind in _Erweiterungs_-Knoten und _inneren_ Knoten organisiert. Erweiterungsknoten repräsentieren einen einzelnen Stamm für 256 Kinder mit unterschiedlichen Suffixen. Innere Knoten haben ebenfalls 256 Kinder, aber diese können andere Erweiterungsknoten sein. Der Hauptunterschied zwischen der Struktur des Verkle-Baums und der des Merkle-Baums besteht darin, dass der Verkle-Baum viel flacher ist. Das bedeutet, dass es weniger Zwischenknoten gibt, die ein Blatt mit der Wurzel verbinden, und daher weniger Daten erforderlich sind, um einen Beweis zu generieren.
 
-![Diagram of a Verkle tree data structure](./verkle.png)
+<VerkleTreeDiagram />
 
 [Lesen Sie mehr über die Struktur von Verkle-Bäumen](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
 ## Aktueller Fortschritt {#current-progress}
 
-Verkle-Baum-Testnetze sind bereits in Betrieb, aber es gibt noch erhebliche ausstehende Updates für Clients, die zur Unterstützung von Verkle-Bäumen erforderlich sind. Sie können helfen, den Fortschritt zu beschleunigen, indem Sie Verträge in den Testnetzen bereitstellen oder Testnetz-Clients ausführen.
+[EIP-6800](https://eips.ethereum.org/EIPS/eip-6800), der Vorschlag, den Zustand von Ethereum in einen einheitlichen Verkle-Baum zu überführen, stagniert nun. Die Forschung ist zu [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) übergegangen, der stattdessen einen einheitlichen binären Baum vorschlägt. EIP-7864 ist ein Entwurf, und es wurde noch kein Netzwerk-Upgrade dafür geplant.
 
-[Sehen Sie sich an, wie Guillaume Ballet das Condrieu-Verkle-Testnetz erklärt](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (beachten Sie, dass das Condrieu-Testnetz auf Proof-of-Work (PoW) basierte und nun durch das Verkle Gen Devnet 6-Testnetz ersetzt wurde).
+EIP-7864 nennt zwei Hauptgründe für die Änderung. Verkle-Bäume basieren auf Kryptographie mit elliptischen Kurven, die nicht sicher gegen Quantencomputer ist, sodass sie letztendlich ersetzt werden müssten, während ein binärer Baum nur auf Hash-Funktionen basiert. Fortschritte bei Beweissystemen verringern auch den Bedarf an kleinen, schnell zu generierenden Beweisen, die der Hauptvorteil von Verkle-Bäumen waren. Da jeder Knoten in einem binären Baum nur zwei Kinder hat, sind seine Beweise auch viel kleiner als Beweise aus dem heutigen hexären Trie.
 
 ## Weiterführende Literatur {#further-reading}
 
-- [Verkle-Bäume für Zustandslosigkeit](https://verkle.info/)
+- [Verkle Trees for Statelessness](https://verkle.info/)
 - [Dankrad Feist erklärt Verkle-Bäume bei PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Verkle-Bäume für den Rest von uns](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
-- [Anatomie eines Verkle-Beweises](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
+- [Verkle Trees For The Rest Of Us](https://web.archive.org/web/20250124132255/https://research.2077.xyz/verkle-trees)
+- [Anatomy of A Verkle Proof](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet erklärt Verkle-Bäume bei ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
-- [„Wie Verkle-Bäume Ethereum schlank und effizient machen“ von Guillaume Ballet auf der Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
+- [„How Verkle trees make Ethereum lean and mean“ von Guillaume Ballet auf der Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam über zustandslose Clients von der ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Feist erklärt Verkle-Bäume und Zustandslosigkeit im Zero-Knowledge-Podcast](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin über Verkle-Bäume](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist über Verkle-Bäume](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [EIP-Dokumentation zu Verkle-Bäumen](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)
+- [EIP-6800: Ethereum-Zustand mit einem einheitlichen Verkle-Baum](https://eips.ethereum.org/EIPS/eip-6800)
+- [EIP-7864: Ethereum-Zustand mit einem einheitlichen binären Baum](https://eips.ethereum.org/EIPS/eip-7864)

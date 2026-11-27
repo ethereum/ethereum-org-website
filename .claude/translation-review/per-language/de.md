@@ -1,5 +1,52 @@
 # German (de) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.1/10
+Scope: 15 markdown files, changed lines; 7 diffs read in full (nodes-and-clients, ethash, patricia-merkle-trie, ssz, frameworks, transactions, verkle-trees), sweeps over all 15.
+
+**Fixed in this branch (5 critical):** `what-is-ether/supply` full re-translation switched to informal `du` (4 sites: `Du kannst`, `was du ... musst`, `sieh dir`, `Tauche`/`erkunde`) where dev and the rest of the de tree use `Sie`; normalised to `Sie`. `roadmap/statelessness` `Dezentrale autonome Organisation (DAO)` -> `DAO` (English bare; dev had bare `DAO`).
+
+**Open:** `(PBS)` appended to `Proposer-Builder-Trennung` (3 sites, English has no `(PBS)`); transactions `Gas ist ein Bezug auf die Berechnung` (literal "a reference to"; dev had `Mass fuer`); Veramo `ueberpruefbare Anmeldeinformationen` vs glossary-style `Nachweise`; glossary page last line keeps `du` (`Erfahre mehr ...`, unchanged from dev).
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX and directive comments.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 9.0/10
+Scope: 91 changed files (71 markdown, 20 JSON incl. `page-developers-tools-descriptions.json` +~200 `tool-*` keys), changed lines only; all markdown diffs read, ~60 JSON keys sampled. Brand 10 | Technical 9 | Semantic 9 | Consistency 8.5 | Tone 8.5.
+
+**Fixed in this branch (4 critical):**
+
+- `roadmap/security/index.md:78` EOA `extern verwalteten Konten` -> `externen Konten` (ETHGlossary `Externes Konto (EOA)`; the pre-PR line matched)
+- `developers/tutorials/secure-development-workflow/index.md:39` `Python-Programmierschnittstelle (API)` -> `Python-API` (added expansion of a bare English API, #80/#112)
+- `page-developers-tools-descriptions.json` `tool-l2beat-description` `Layer 2-Netzwerken` -> `Layer-2-Netzwerken` (compound hyphenation)
+- `page-get-eth.json` `page-get-eth-p2p-trusted-desc` `Einigt euch ..., teile deine` (plural/singular imperative mix) -> `Einige dich mit der Person auf einen Preis, teile deine`
+
+**Open (native call needed):**
+
+- Meta `description` register: `dao`, `real-world-assets` (du) vs Sie bodies; `bridges`/`defi`/`desci`/`decentralized-identity` (Sie) fine. Pipeline wrote each description in a register picked independently of the body.
+- `tool-mev-boost-description` / `tool-mev-boost-relay-flashbots-description` add `(PBS)` where English has none; `tool-tenderly-cli-description` `Continuous-Integration-Job`; `contributing/index.md:44` `Layer 2 (L2)` (pre-existing form, English is bare `layer 2`).
+- `logging-events-smart-contracts:27` link text `Deinen ersten Smart Contract bereitstellen` (capital Deinen, not the Sie/du of the file's own link title).
+- `roadmap/scaling` new zkEVM paragraph `Beweiser` (glossary) vs `Prover` 10 lines above in the same file; `Tests auf Testnets` vs `Testnetz` elsewhere; `Schatzkammer-Operationen` (Fireblocks, corporate treasury sense; glossary form but DAO-sense).
+- Code comments in `smart-contracts/anatomy` flip from `Sie` to impersonal `man`/imperative `beachte` in one comment (`// beachte, dass ...`) inside a Sie document.
+
+**Notes:**
+
+- Tools descriptions: `Ersteller` for builders is glossary-conformant (ETHGlossary `builder`); keep despite the `Creator` collision from #18942.
+- Sweeps clean: U+3002, U+2060, ZWSP/BOM, foreign scripts, untranslated English sentences in changed lines.
+
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.4/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: none needed. Open: `Zustands-Wurzel` (optimistic) vs `Zustandswurzel` (zk) in the same file; the closed form is correct and dominant on dev.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.2/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+0 critical. Open: ABI/API/MEV over-expansion (#80), Offchain/offchain casing, Basis-Gasgebuehr vs Grundgebuehr, geburnt, tag Daten und Analytik vs Analysen.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 7.8/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas inline code, Attestierung, Prioritaetsgebuehr. Open: du/Sie split across the diagram namespace (needs one policy), head Spitze/Kopf/Head, Aufnahme vs Einbindung, hyphenation of compounds.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.2/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -131,3 +178,62 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `Layer 2-Testnetze` -> `Layer-2-Testnetze` (2x, compound hyphenation).
 - Open: colloquial `herumspielen` replaced `ausprobieren`; L174 `anstatt geschützt oder sicher` awkward.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.2/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-mentorship` restored from dev
+- security:292 unbalanced backtick (`withdraw() in `Victim` -> `withdraw()` in `Victim`)
+- app-plasma:121 fabricated links (`[macOS](https://learn.microsoft.com/en-us/windows/` -> `macOS, Linux oder`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: Moves away from ETHGlossary for EOA. The glossary prose form is `externes Konto` and the line before this PR matched it. (`[extern besessenes Konto]` -> `[externes Konto]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA glossary deviation (`[extern besessenen Konto]` -> `[externen Konto]`)
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA glossary deviation (`extern besessene Konten` -> `externe Konten`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA glossary deviation (`extern besessenen Konto` -> `externen Konto`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA glossary deviation (`dieser Besitzer extern besessen ist` -> `dieser Besitzer ein externes Konto ist`)
+- developers/docs/apis/backend/index.md:77: Deviates from ETHGlossary `full node` (= `Full Node`, plural `Full Nodes`, high confidence). English: "Full Nodes and Block Explorers". The line before this PR matched the glossary. (`Vollständige Knoten` -> `Full Nodes`)
+- 18 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** ETHGlossary `/filter` outputs for all 15 English sources and the changed JSON strings are saved in /tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl_de/
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `[Ethereum](/) -Blockchain` stray space removed (mint:18)
+
+**Notes:**
+
+- Warnings: du-imperatives in new code comments inside Sie documents; viem/Viem casing differs between files.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- echidna: glossary `rückgängig machen` for revert reads as overflows/contracts being "undone" (L340, L422; L415 unchanged); the glossary note allows `Revert` -- native call (known-patterns #96)
+- ABI/EVM spelled out where English leaves them bare (#80, prose -> warning)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` rendered with the glossary term would repeat the priority fee; left as is.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

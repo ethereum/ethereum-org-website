@@ -57,7 +57,7 @@ A camada de execução se preocupa em executar transações, rodar a [Máquina V
 - expiração de histórico que os nós não precisam mais servir;
 - listas de acesso em nível de bloco que permitem que as transações sejam validadas em paralelo;
 - mercados de taxas multidimensionais que precificam estado, dados e computação separadamente;
-- e provar a execução de blocos da camada 1 (l1) com uma zkEVM.
+- e provar a execução de blocos da camada 1 (L1) com uma zkEVM.
 
 #### Leitura de base {#background-reading-1}
 
@@ -72,7 +72,7 @@ A camada de execução se preocupa em executar transações, rodar a [Máquina V
 - [EIP-8037: Aumento do custo de gas para criação de estado](https://eips.ethereum.org/EIPS/eip-8037)
 - [EIP-7999: Mercado unificado de taxas multidimensionais](https://eips.ethereum.org/EIPS/eip-7999)
 - [EIP-7642: eth/69, expiração de histórico e recibos mais simples](https://eips.ethereum.org/EIPS/eip-7642)
-- [Lançando uma zkEVM de l1: prova em tempo real](https://blog.ethereum.org/2025/07/10/realtime-proving)
+- [Lançando uma zkEVM de L1: prova em tempo real](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
 ### Resistência à censura e construção de blocos {#censorship-resistance-and-block-building}
 
@@ -128,7 +128,7 @@ Um nó da Ethereum precisa executar dois softwares:
 1. um cliente de consenso para acompanhar o topo da blockchain, propagar blocos e lidar com a lógica de consenso
 2. um cliente de execução para suportar a Máquina Virtual Ethereum e executar transações e contratos inteligentes
 
-Novas classes de clientes estão sendo prototipadas junto com essas duas, incluindo clientes que provam a execução de blocos da camada 1 (l1) e clientes de consenso enxutos construídos em torno de assinaturas pós-quânticas.
+Novas classes de clientes estão sendo prototipadas junto com essas duas, incluindo clientes que provam a execução de blocos da camada 1 (L1) e clientes de consenso enxutos construídos em torno de assinaturas pós-quânticas.
 
 Consulte a [página de nós e clientes](/developers/docs/nodes-and-clients/) para obter mais detalhes sobre nós e clientes e para obter uma lista de todas as implementações de clientes atuais. Você também pode encontrar um histórico de todas as atualizações da Ethereum na [página de histórico](/ethereum-forks/).
 
@@ -146,31 +146,31 @@ Consulte a [página de nós e clientes](/developers/docs/nodes-and-clients/) par
 
 - [zkEVM](/roadmap/zkevm/)
 - [Ethproofs](https://ethproofs.org/)
-- [Lançando uma zkEVM de l1: as bases de segurança](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Lançando uma zkEVM de L1: as bases de segurança](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## Escalabilidade e desempenho {#scaling-and-performance}
 
-Escalar a Ethereum é uma grande área de foco para os pesquisadores da Ethereum, e ocorre em duas frentes ao mesmo tempo: aumentar a vazão da própria camada 1 (l1) e mover a execução para rollups que publicam seus dados na Ethereum. O trabalho atual inclui aumentar o limite de gas do bloco, reprecificar o crescimento do estado, expandir a capacidade de blob para dados de rollup e reduzir o que um nó precisa armazenar e verificar. Informações introdutórias sobre a escalabilidade da Ethereum estão disponíveis em nossa [página de escalabilidade](/developers/docs/scaling/) e no [roteiro de escalabilidade](/roadmap/scaling/).
+Escalar a Ethereum é uma grande área de foco para os pesquisadores da Ethereum, e ocorre em duas frentes ao mesmo tempo: aumentar a vazão da própria camada 1 (L1) e mover a execução para rollups que publicam seus dados na Ethereum. O trabalho atual inclui aumentar o limite de gas do bloco, reprecificar o crescimento do estado, expandir a capacidade de blob para dados de rollup e reduzir o que um nó precisa armazenar e verificar. Informações introdutórias sobre a escalabilidade da Ethereum estão disponíveis em nossa [página de escalabilidade](/developers/docs/scaling/) e no [roteiro de escalabilidade](/roadmap/scaling/).
 
 ### Camada 2 {#layer-2}
 
-Agora existem vários protocolos de camada 2 (l2) que escalam a Ethereum usando diferentes técnicas para o processamento em lote de transações e para protegê-las na camada 1 (l1) da Ethereum. A pesquisa aberta inclui reduzir a latência e o custo da prova, encurtar o tempo que leva para uma transação atingir a finalidade sem necessidade de confiança e dar aos usuários uma experiência única e coerente em muitos rollups.
+Agora existem vários protocolos de camada 2 (L2) que escalam a Ethereum usando diferentes técnicas para o processamento em lote de transações e para protegê-las na camada 1 (L1) da Ethereum. A pesquisa aberta inclui reduzir a latência e o custo da prova, encurtar o tempo que leva para uma transação atingir a finalidade sem necessidade de confiança e dar aos usuários uma experiência única e coerente em muitos rollups.
 
 #### Leitura de base {#background-reading-2}
 
-- [Introdução à camada 2 (l2)](/layer-2/)
-- [L2BEAT: resumo de escalabilidade](https://l2beat.com/scaling/summary)
+- [Introdução à camada 2](/layer-2/)
+- [ETHBEAT: resumo de escalabilidade](https://ethbeat.org/layer2s/summary)
 - [Um roteiro da Ethereum centrado em rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Pesquisa recente {#recent-research-2}
 
 - [Camada 2 no Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: custos onchain](https://l2beat.com/scaling/costs)
+- [ETHBEAT: custos onchain](https://ethbeat.org/layer2s/costs)
 - [Construindo na Ethereum em 2026: o que mudou](/latest/building-on-ethereum-in-2026/)
 
 ### Interoperabilidade {#interoperability}
 
-Usuários e ativos estão espalhados pela camada 1 (l1) da Ethereum e por muitas camadas 2 (l2), e o problema de pesquisa é permitir que eles se movam e atuem nessas cadeias sem confiar em um intermediário. O trabalho aqui abrange transferências baseadas em intenção, endereçamento e nomenclatura cross-chain padronizados, passagem geral de mensagens e abstração de cadeia no nível da carteira. Isso substitui um modelo no qual pontes de custódia mantinham os ativos, e as pontes têm sido historicamente uma das maiores fontes de perdas no ecossistema, portanto, a segurança de qualquer mecanismo cross-chain continua sendo uma preocupação central.
+Usuários e ativos estão espalhados pela camada 1 (L1) da Ethereum e por muitas camadas 2 (L2), e o problema de pesquisa é permitir que eles se movam e atuem nessas cadeias sem confiar em um intermediário. O trabalho aqui abrange transferências baseadas em intenção, endereçamento e nomenclatura cross-chain padronizados, passagem geral de mensagens e abstração de cadeia no nível da carteira. Isso substitui um modelo no qual pontes de custódia mantinham os ativos, e as pontes têm sido historicamente uma das maiores fontes de perdas no ecossistema, portanto, a segurança de qualquer mecanismo cross-chain continua sendo uma preocupação central.
 
 #### Leitura de base {#background-reading-3}
 
@@ -226,7 +226,7 @@ A segurança é um tópico amplo que pode incluir prevenção de spam e golpes, 
 
 ### Criptografia e ZKP {#cryptography--zkp}
 
-As provas de conhecimento zero (ZKP) e a criptografia são essenciais para incorporar privacidade e segurança à Ethereum e a seus aplicativos. A prova de conhecimento zero passou da pesquisa para a infraestrutura de produção: provadores que provam blocos reais da Ethereum agora são avaliados publicamente em termos de latência, custo e solidez. Os problemas em aberto mudaram de acordo, em direção a provar blocos da camada 1 (l1) rápido o suficiente para fazê-lo em tempo real, contabilizando rigorosamente a segurança dos sistemas de prova em uso e preparando-se para a criptografia pós-quântica.
+As provas de conhecimento zero (ZKP) e a criptografia são essenciais para incorporar privacidade e segurança à Ethereum e a seus aplicativos. A prova de conhecimento zero passou da pesquisa para a infraestrutura de produção: provadores que provam blocos reais da Ethereum agora são avaliados publicamente em termos de latência, custo e solidez. Os problemas em aberto mudaram de acordo, em direção a provar blocos da camada 1 (L1) rápido o suficiente para fazê-lo em tempo real, contabilizando rigorosamente a segurança dos sistemas de prova em uso e preparando-se para a criptografia pós-quântica.
 
 #### Leitura de base {#background-reading-6}
 
@@ -239,7 +239,7 @@ As provas de conhecimento zero (ZKP) e a criptografia são essenciais para incor
 - [ZK no Ethresear.ch](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Criptografia no Ethresear.ch](https://ethresear.ch/c/cryptography/28)
 - [Calculadora de solidez para sistemas de prova zkEVM baseados em hash](https://github.com/ethereum/soundcalc)
-- [Lançando uma zkEVM de l1: as bases de segurança](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Lançando uma zkEVM de L1: as bases de segurança](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Carteiras {#wallets}
 
@@ -385,9 +385,9 @@ Há uma necessidade de mais ferramentas de análise de dados e painéis que forn
 
 #### Pesquisa recente {#recent-research-14}
 
-- [Análise de Dados do Grupo de Incentivos Robustos](https://rig.ethereum.org/)
+- [Análise de dados do Robust Incentives Group](https://rig.ethereum.org/)
 - [Dados abertos do ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: resumo de escalabilidade](https://l2beat.com/scaling/summary)
+- [ETHBEAT: resumo de escalabilidade](https://ethbeat.org/layer2s/summary)
 
 ## Aplicativos e ferramentas {#apps-and-tooling}
 

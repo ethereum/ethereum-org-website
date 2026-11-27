@@ -1,6 +1,6 @@
 ---
 title: Data a analytika
-description: "Jak získat onchain analytiku a data pro použití ve vašich decentralizovaných aplikacích (dapp)"
+description: "Jak získat onchain data pro vaši dapp: indexery, podgrafy, průzkumníky bloků, SQL analytické platformy a API pro dotazování a analýzu dat Etherea."
 lang: cs
 ---
 
@@ -76,7 +76,7 @@ Chcete-li začít, postupujte podle [průvodce pro rychlý start HyperIndex](htt
 
 - [Zkoumání krypto dat I: Architektury toku dat](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Přehled sítě Graph](https://thegraph.com/docs/en/about/)
-- [Hřiště pro dotazy Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Graph Explorer](https://thegraph.com/explorer)
 - [Příklady kódu API na Etherscanu](https://etherscan.io/apis#contracts)
 - [Dokumentace API na Blockscoutu](https://docs.blockscout.com/devs/apis)
 - [Průzkumník Beacon chainu Beaconcha.in](https://beaconcha.in)

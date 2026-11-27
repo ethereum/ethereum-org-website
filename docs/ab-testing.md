@@ -56,7 +56,6 @@ Add `ab-code/[code]/page.tsx` **inside** the tested route's directory. It's a th
 // app/[locale]/wallets/ab-code/[code]/page.tsx
 import { generatePermutations, getPrecomputed } from "flags/next"
 import { notFound } from "next/navigation"
-import { setRequestLocale } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
@@ -88,7 +87,6 @@ export default async function PrecomputedWalletsPage({
 }) {
   const { locale, code } = await params
   if (locale !== DEFAULT_LOCALE) notFound()
-  setRequestLocale(locale)
 
   let heroVariant: number
   try {
@@ -128,7 +126,7 @@ const Page = async (props: {
         variantIndex={heroVariant}
         variants={[
           <CurrentHero key="original" />, // index 0 = Original
-          <RedesignedHero key="variant-a" />, // index 1 = first Matomo variation
+          <RedesignedHero key="VariantA" />, // index 1 = first Matomo variation
         ]}
       />
     ) : (
@@ -160,7 +158,7 @@ To remove a finished test: delete the flag, the `abTestRoutes` entry, the coded 
 
 1. **Names match exactly.** `testKey`, the flag's `key`, and the Matomo experiment name are the same string. A mismatch doesn't error — everyone quietly gets the original.
 2. **Order is the contract.** Variants pair with Matomo variations by array index, not by name. Don't insert a variation in the middle of a running experiment.
-3. **Element keys become variation names.** `ABTest` derives the name it reports to Matomo from each variant element's `key`, replacing hyphens with spaces and title-casing. So `key="new-catalog"` reports `"New Catalog"` — if the dashboard variation is `NewCatalog`, the enter events land under a name that doesn't exist. Write the key exactly as the Matomo variation is spelled.
+3. **Element keys become variation names.** `ABTest` derives the name it reports to Matomo from each variant element's `key`, replacing hyphens with spaces and title-casing. Matomo rejects variation names containing whitespace, so use a single PascalCase word with no hyphens: `key="NewCatalog"` reports `"NewCatalog"`, matching a dashboard variation of the same name. A hyphenated key like `new-catalog` reports `"New Catalog"`, which Matomo can't hold, so its enter events never land.
 
 ## Environment variables
 

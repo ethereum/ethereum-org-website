@@ -56,7 +56,7 @@ contract MyContract is Ownable {
 
 Для полегшення [компонованості та інтероперабельності](/developers/docs/smart-contracts/composability/) спільнота Етеріуму визначила кілька стандартів у формі **ERC**. Ви можете дізнатися більше про них у розділі [стандартів](/developers/docs/standards/).
 
-Включаючи ERC як частину ваших контрактів, варто шукати стандартні реалізації, а не намагатися створити власні. Багато бібліотек смарт-контрактів містять реалізації найпопулярніших ERC. Наприклад, повсюдний [стандарт взаємозамінного токена ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) можна знайти в [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) та [ОупенЗеппелін](https://docs.openzeppelin.com/contracts/3.x/erc20). Крім того, деякі ERC також надають канонічні реалізації як частину самого ERC.
+Включаючи ERC як частину ваших контрактів, варто шукати стандартні реалізації, а не намагатися створити власні. Багато бібліотек смарт-контрактів містять реалізації найпопулярніших ERC. Наприклад, повсюдний [стандарт взаємозамінного токена ERC-20](/developers/docs/standards/tokens/erc-20/) можна знайти в [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) та [ОупенЗеппелін](https://docs.openzeppelin.com/contracts/3.x/erc20). Крім того, деякі ERC також надають канонічні реалізації як частину самого ERC.
 
 Варто зазначити, що деякі ERC не є самостійними, а є доповненнями до інших ERC. Наприклад, [ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) додає розширення до ERC-20 для покращення його зручності використання.
 
@@ -109,8 +109,7 @@ contract MyNFT is ERC721 {
 
 ## Пов'язані посібники {#related-tutorials}
 
-- [Міркування щодо безпеки для розробників Етеріуму](/developers/docs/smart-contracts/security/) _— Посібник з міркувань безпеки під час створення смарт-контрактів, включаючи використання бібліотек._
-- [Розуміння смарт-контракту токена ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _— Посібник зі стандарту ERC-20, який надається кількома бібліотеками._
+- [Міркування щодо безпеки для розробників Етеріуму](/developers/docs/smart-contracts/security/) _– Посібник з питань безпеки під час створення смарт-контрактів, зокрема щодо використання бібліотек._
 
 ## Додаткові матеріали {#further-reading}
 

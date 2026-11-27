@@ -5,9 +5,9 @@ lang: id
 authors: ["Patrick Collins"]
 ---
 
-Tidak seperti server terpusat yang dioperasikan oleh satu perusahaan atau organisasi, sistem penyimpanan terdesentralisasi terdiri dari jaringan peer-to-peer dari pengguna-operator yang menyimpan sebagian dari keseluruhan data, menciptakan sistem berbagi penyimpanan file yang tangguh. Ini dapat berupa aplikasi berbasis rantai blok atau jaringan berbasis peer-to-peer apa pun.
+Berbeda dengan server terpusat yang dioperasikan oleh satu perusahaan atau organisasi, sistem penyimpanan terdesentralisasi terdiri dari jaringan peer-to-peer dari pengguna-operator yang menyimpan sebagian dari keseluruhan data, menciptakan sistem berbagi penyimpanan file yang tangguh. Sistem ini dapat berada dalam aplikasi berbasis rantai blok atau jaringan berbasis peer-to-peer mana pun.
 
-Ethereum sendiri dapat digunakan sebagai sistem penyimpanan terdesentralisasi, dan memang demikian halnya dalam hal penyimpanan kode di semua kontrak pintar. Namun, ketika menyangkut jumlah data yang besar, bukan itu tujuan desain Ethereum. Rantai ini terus berkembang, tetapi pada saat penulisan, rantai Ethereum berukuran sekitar 500GB - 1TB ([bergantung pada klien](https://etherscan.io/chartsync/chaindefault)), dan setiap node di jaringan harus dapat menyimpan semua data tersebut. Jika rantai meluas ke jumlah data yang besar (katakanlah 5TB), tidak akan layak bagi semua node untuk terus berjalan. Selain itu, biaya untuk menerapkan data sebanyak ini ke Mainnet akan sangat mahal karena biaya [gas](/developers/docs/gas).
+Ethereum sendiri dapat digunakan sebagai sistem penyimpanan terdesentralisasi, dan memang demikian halnya dalam hal penyimpanan kode di semua kontrak pintar. Namun, ketika menyangkut jumlah data yang besar, bukan itu tujuan desain Ethereum. Rantai ini terus berkembang, tetapi pada saat penulisan, rantai Ethereum berukuran sekitar 1-2TB ([tergantung pada klien](https://etherscan.io/chartsync/chaindefault)), dan setiap node di jaringan harus dapat menyimpan semua data. Jika rantai tersebut meluas ke jumlah data yang besar (katakanlah 5TB), tidak akan layak bagi semua node untuk terus berjalan. Selain itu, biaya untuk menerapkan data sebanyak ini ke Mainnet akan sangat mahal karena biaya [gas](/developers/docs/gas).
 
 Karena kendala ini, kita memerlukan rantai atau metodologi yang berbeda untuk menyimpan data dalam jumlah besar secara terdesentralisasi.
 
@@ -142,7 +142,7 @@ Berbasis Bukti Kepemilikan:
 **Arweave - _Arweave adalah platform dStorage untuk menyimpan data._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Dokumentasi](https://docs.arweave.org/info/)
+- [Dokumentasi](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs adalah platform dStorage Bukti Kepemilikan dengan sharding dan blobber._**

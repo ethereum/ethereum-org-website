@@ -5,13 +5,13 @@ lang: tr
 authors: ["Patrick Collins"]
 ---
 
-Tek bir şirket veya kuruluş tarafından işletilen merkezi bir sunucunun aksine, merkeziyetsiz depolama sistemleri, genel verilerin bir kısmını elinde tutan kullanıcı-operatörlerin oluşturduğu eşler arası bir ağdan oluşur ve dayanıklı bir dosya depolama paylaşım sistemi yaratır. Bunlar blokzincir tabanlı bir uygulamada veya herhangi bir eşler arası tabanlı ağda olabilir.
+Tek bir şirket veya kuruluş tarafından işletilen merkezi bir sunucunun aksine, merkeziyetsiz depolama sistemleri, genel verilerin bir kısmını elinde tutan kullanıcı-operatörlerden oluşan eşler arası bir ağdan oluşur ve dayanıklı bir dosya depolama ve paylaşım sistemi oluşturur. Bunlar blokzincir tabanlı bir uygulamada veya eşler arası tabanlı herhangi bir ağda bulunabilir.
 
-Ethereum'un kendisi merkeziyetsiz bir depolama sistemi olarak kullanılabilir ve tüm akıllı sözleşmelerdeki kod depolaması söz konusu olduğunda öyledir. Ancak, büyük miktarda veri söz konusu olduğunda, Ethereum bunun için tasarlanmamıştır. Zincir istikrarlı bir şekilde büyüyor, ancak bu yazının yazıldığı sırada Ethereum zinciri yaklaşık 500GB - 1TB civarındadır ([istemciye bağlı olarak](https://etherscan.io/chartsync/chaindefault)) ve ağdaki her düğümün tüm verileri depolayabilmesi gerekir. Zincir büyük miktarda veriye (örneğin 5TB) genişleyecek olsaydı, tüm düğümlerin çalışmaya devam etmesi mümkün olmazdı. Ayrıca, bu kadar veriyi Ana Ağ'a dağıtmanın maliyeti, [Gaz](/developers/docs/gas) ücretleri nedeniyle aşırı derecede pahalı olacaktır.
+Ethereum'un kendisi merkeziyetsiz bir depolama sistemi olarak kullanılabilir ve tüm akıllı sözleşmelerdeki kod depolaması söz konusu olduğunda zaten bu şekilde kullanılmaktadır. Ancak büyük miktarda veri söz konusu olduğunda, Ethereum bunun için tasarlanmamıştır. Zincir istikrarlı bir şekilde büyüyor, ancak bu yazının yazıldığı sırada Ethereum zinciri yaklaşık 1-2 TB boyutundadır ([istemciye bağlı olarak](https://etherscan.io/chartsync/chaindefault)) ve ağdaki her düğümün tüm verileri depolayabilmesi gerekir. Zincir büyük miktarda veriye (örneğin 5 TB) genişleyecek olsaydı, tüm düğümlerin çalışmaya devam etmesi mümkün olmazdı. Ayrıca, bu kadar veriyi Ana Ağ'a dağıtmanın maliyeti, [gaz](/developers/docs/gas) ücretleri nedeniyle aşırı derecede pahalı olacaktır.
 
 Bu kısıtlamalar nedeniyle, büyük miktarda veriyi merkeziyetsiz bir şekilde depolamak için farklı bir zincire veya metodolojiye ihtiyacımız var.
 
-Merkeziyetsiz depolama (dStorage) seçeneklerine bakarken, bir kullanıcının aklında tutması gereken birkaç şey vardır.
+Merkeziyetsiz depolama (dStorage) seçeneklerini incelerken, bir kullanıcının aklında bulundurması gereken birkaç şey vardır.
 
 - Kalıcılık mekanizması / teşvik yapısı
 - Veri saklama zorunluluğu
@@ -142,7 +142,7 @@ Hisse Kanıtı tabanlı:
 **Arweave - _Arweave, verileri depolamak için bir dStorage platformudur._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Belgeler](https://docs.arweave.org/info/)
+- [Belgeler](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs, parça zinciri (sharding) ve blobber'lara sahip bir Hisse Kanıtı dStorage platformudur._**

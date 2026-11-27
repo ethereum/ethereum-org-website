@@ -171,16 +171,15 @@ Le [librerie per portafogli e gli strumenti di connessione](/developers/docs/api
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Chiamare uno smart contract da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Inviare transazioni usando Web3.js e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Come visualizzare il tuo NFT nel tuo portafoglio](/developers/tutorials/how-to-view-nft-in-metamask/)
 
-## Letture di approfondimento {#further-reading}
+## Letture consigliate {#further-reading}
 
-- [Documentazione di Viem: Leggere e scrivere sui contratti](https://viem.sh/docs/contract/readContract)
-- [Documentazione di Ethers.js: Contratti](https://docs.ethers.org/v6/api/contract/)
+- [Documentazione di Viem: leggere e scrivere sui contratti](https://viem.sh/docs/contract/readContract)
+- [Documentazione di Ethers.js: contratti](https://docs.ethers.org/v6/api/contract/)
 - [Specifica dell'ABI di Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [Cos'è un'ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Come funzionano le ABI degli smart contract? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Argomenti correlati {#related-topics}
 

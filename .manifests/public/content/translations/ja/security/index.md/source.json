@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/security/index.md",
-  "generatedAt": "2026-06-08T10:54:03.851Z",
-  "rootHash": "7f0456edcad4",
+  "generatedAt": "2026-11-27T10:00:24.924Z",
+  "rootHash": "419a8496744e",
   "tree": {
-    "contentHash": "669df36bb27f",
+    "contentHash": "65408f5df176",
     "anchorHash": "146ebd46eee3",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "2769cac1b79b",
+        "contentHash": "1a7c1ecef8ba",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -1264,5 +1264,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

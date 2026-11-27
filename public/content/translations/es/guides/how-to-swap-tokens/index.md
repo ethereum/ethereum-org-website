@@ -1,6 +1,6 @@
 ---
 title: "Cómo intercambiar tokens"
-description: "Una guía sobre cómo intercambiar tokens en Ethereum."
+description: "Una guía paso a paso para intercambiar tokens en Ethereum: conecta tu billetera a un exchange descentralizado, revisa las tarifas y el deslizamiento, y confirma la transacción."
 lang: es
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: 以太坊治理简介
-metaTitle: 以太坊治理
-description: 介绍以太坊是如何做出决策的。
+title: "以太坊治理简介"
+metaTitle: "以太坊治理"
+description: "关于以太坊的决策是如何做出的？了解开发者、节点运营商和社区是如何提出、讨论和采纳协议变更的。"
 lang: zh
 ---
 
@@ -71,7 +71,7 @@ _注意：任何个人都可以同时属于这些群体中的多个（例如，�
 
 1. **提出核心 EIP**：如 [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips) 中所述，正式提出以太坊变更的第一步是在核心 EIP 中详细说明。这将作为 EIP 的官方规范，如果被接受，协议开发者将实施该规范。
 
-2. **向协议开发者展示你的 EIP**：一旦你拥有了一个收集了社区意见的核心 EIP，你就应该将其展示给协议开发者。你可以通过在 [AllCoreDevs 电话会议](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status)上提议讨论来做到这一点。很可能一些讨论已经在 [Ethereum Magicians 论坛](https://ethereum-magicians.org/)或 [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) 上异步进行了。
+2. **向协议开发者展示你的 EIP**：一旦你拥有了一个收集了社区意见的核心 EIP，你就应该将其展示给协议开发者。你可以通过在 [AllCoreDevs 电话会议](https://eips.ethereum.org/EIPS/eip-7723)上提议讨论来做到这一点。很可能一些讨论已经在 [Ethereum Magicians 论坛](https://ethereum-magicians.org/)或 [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) 上异步进行了。
 
 > 这个阶段的潜在结果是：
 

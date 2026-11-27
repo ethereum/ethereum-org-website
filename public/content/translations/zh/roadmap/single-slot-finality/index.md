@@ -1,6 +1,6 @@
 ---
-title: 单槽最终性
-description: 单槽最终性解释
+title: "单槽最终性"
+description: "单槽最终性可以将以太坊达到最终性的时间从大约 15 分钟缩短到一个时隙。了解它的工作原理以及涉及的权衡。"
 lang: zh
 template: roadmap
 ---
@@ -57,7 +57,7 @@ template: roadmap
 
 ## 当前进展 {#current-progress}
 
-单槽最终性 (SSF) 目前处于研究阶段。预计几年内不会发布，可能会在其他重大升级（如[沃克尔树](/roadmap/verkle-trees/)和[丹克分片](/roadmap/danksharding/)）之后推出。
+SSF 目前处于研究阶段。预计几年内不会发布，可能会在其他重大升级之后推出，例如新的状态树（目前在 [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) 中提议为二叉树）和[丹克分片](/roadmap/danksharding/)。
 
 ## 延伸阅读 {#further-reading}
 

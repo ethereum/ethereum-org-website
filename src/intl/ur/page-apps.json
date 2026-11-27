@@ -58,18 +58,11 @@
   "page-apps-filter-by": "فلٹر کریں بذریعہ",
   "page-apps-filter-all": "تمام",
   "page-apps-showing": "دکھا رہا ہے",
-  "page-apps-visit-app": "⁦{appName}⁩ پر جائیں",
-  "page-apps-see-next": "اگلا دیکھیں",
-  "page-apps-info-title": "معلومات",
   "page-apps-info-founded": "قائم شدہ",
   "page-apps-info-creator": "تخلیق کار",
-  "page-apps-info-last-updated": "آخری اپ ڈیٹ",
-  "page-apps-gallery-title": "گیلری",
-  "page-apps-gallery-screenshot-alt": "⁦{appName}⁩ کا اسکرین شاٹ ⁦{index}⁩ جو ایپلی کیشن کا انٹرفیس دکھا رہا ہے",
-  "page-apps-gallery-modal-title": "⁦{appName}⁩ کے اسکرین شاٹس",
+  "page-apps-info-languages": "زبانیں",
+  "page-apps-info-listing-reviewed": "لسٹنگ کا جائزہ لیا گیا",
+  "page-apps-info-listing-reviewed-tooltip": "جب ⁦ethereum.org⁩ پر اس ایپ کے بارے میں تفصیلات کا آخری بار جائزہ لیا گیا تھا۔ یہ نہیں دکھاتا کہ خود ایپ میں آخری بار کب تبدیلی آئی تھی۔",
   "page-apps-more-apps-like-this": "اس جیسی مزید ایپس",
-  "page-apps-by-company": "از ⁦{company}⁩",
-  "page-apps-today": "آج",
-  "page-apps-one-day-ago": "۱ دن پہلے",
-  "page-apps-days-ago": "⁦{days}⁩ دن پہلے"
+  "page-apps-detail-meta-title": "ایتھیریم ایپس - {name}"
 }

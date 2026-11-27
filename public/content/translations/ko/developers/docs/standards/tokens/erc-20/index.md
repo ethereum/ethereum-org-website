@@ -176,6 +176,7 @@ ERC-20에서 이 문제를 완전히 방지하는 것은 불가능하지만, 최
 - [Alchemy - Solidity ERC20 토큰 가이드](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## 기타 대체 가능 토큰 표준 {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -183,7 +184,6 @@ ERC-20에서 이 문제를 완전히 방지하는 것은 불가능하지만, 최
 - [ERC-7540 - 비동기식 토큰화된 금고](/developers/docs/standards/tokens/erc-7540)
 ## 튜토리얼: 이더리움에서 ERC-20으로 구축하기 {#tutorials}
 
-- [ERC-20 컨트랙트 연습](/developers/tutorials/erc20-annotated-code/) _– 오픈제플린 ERC-20 컨트랙트 구현에 대한 줄 단위 주석이 달린 연습입니다._
+- [ERC-20 컨트랙트 살펴보기](/developers/tutorials/erc20-annotated-code/) _– 오픈제플린 ERC-20 컨트랙트 구현을 한 줄씩 주석과 함께 살펴봅니다._
 - [안전 장치가 있는 ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– 사용자가 흔히 하는 실수를 피할 수 있도록 ERC-20 토큰에 안전 장치를 추가하는 방법입니다._
-- [Ethers.js를 사용하여 토큰 전송하기](/developers/tutorials/send-token-ethersjs/) _– Ethers.js를 사용하여 ERC-20 토큰을 전송하는 초보자 친화적인 가이드입니다._
 - [스캠 토큰이 사용하는 몇 가지 속임수와 이를 감지하는 방법](/developers/tutorials/scam-token-tricks/) _– 스캠 ERC-20 토큰 패턴과 이를 식별하는 방법에 대한 심층 분석입니다._

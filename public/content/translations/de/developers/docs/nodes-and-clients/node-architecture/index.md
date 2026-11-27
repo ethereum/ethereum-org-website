@@ -8,13 +8,13 @@ Ein Ethereum-Knoten besteht aus zwei Clients: einem [Ausführungsclient](/develo
 
 Als Ethereum noch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) verwendete, reichte ein Ausführungsclient aus, um einen vollständigen Ethereum-Knoten zu betreiben. Seit der Implementierung von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) muss der Ausführungsclient jedoch zusammen mit einer weiteren Software, dem sogenannten [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients), verwendet werden.
 
-Das folgende Diagramm zeigt die Beziehung zwischen den beiden Ethereum-Clients. Die beiden Clients verbinden sich mit ihren jeweils eigenen Peer-to-Peer-Netzwerken (P2P). Separate P2P-Netzwerke sind erforderlich, da die Ausführungsclients Transaktionen über ihr P2P-Netzwerk verbreiten (gossip), was es ihnen ermöglicht, ihren lokalen Transaktionspool zu verwalten, während die Konsens-Clients Blöcke über ihr P2P-Netzwerk verbreiten, was den Konsens und das Wachstum der Chain ermöglicht.
+Das folgende Diagramm zeigt die Beziehung zwischen den beiden Ethereum-Clients. Die beiden Clients verbinden sich mit ihren jeweiligen Peer-to-Peer-Netzwerken (P2P). Separate P2P-Netzwerke sind erforderlich, da die Ausführungsclients Transaktionen über ihr P2P-Netzwerk verbreiten, was es ihnen ermöglicht, ihren lokalen Transaktionspool zu verwalten, während die Konsens-Clients Blöcke über ihr P2P-Netzwerk verbreiten, was den Konsens und das Wachstum der Chain ermöglicht.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _Es gibt mehrere Optionen für den Ausführungsclient, darunter Erigon, Nethermind und Besu_.
 
-Damit diese Zwei-Client-Struktur funktioniert, müssen Konsens-Clients Bündel von Transaktionen an den Ausführungsclient weitergeben. Der Ausführungsclient führt die Transaktionen lokal aus, um zu validieren, dass die Transaktionen keine Ethereum-Regeln verletzen und dass die vorgeschlagene Aktualisierung des Zustands von Ethereum korrekt ist. Wenn ein Knoten als Blockproduzent ausgewählt wird, fordert seine Konsens-Client-Instanz Transaktionsbündel vom Ausführungsclient an, um sie in den neuen Block aufzunehmen und auszuführen, um den globalen Zustand zu aktualisieren. Der Konsens-Client steuert den Ausführungsclient über eine lokale RPC-Verbindung unter Verwendung der [Engine-API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Damit diese Zwei-Client-Struktur funktioniert, müssen Konsens-Clients Transaktionsbündel an den Ausführungsclient weitergeben. Der Ausführungsclient führt die Transaktionen lokal aus, um zu validieren, dass die Transaktionen nicht gegen Ethereum-Regeln verstoßen und dass die vorgeschlagene Aktualisierung des Zustands von Ethereum korrekt ist. Wenn ein Knoten als Blockproduzent ausgewählt wird, fordert seine Konsens-Client-Instanz Transaktionsbündel vom Ausführungsclient an, um sie in den neuen Block aufzunehmen und auszuführen, um den globalen Zustand zu aktualisieren. Der Konsens-Client steuert den Ausführungsclient über eine lokale RPC-Verbindung unter Verwendung der [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Was macht der Ausführungsclient? {#execution-client}
 

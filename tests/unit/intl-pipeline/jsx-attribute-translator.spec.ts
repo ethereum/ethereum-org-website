@@ -118,13 +118,18 @@ body
           id: "x",
           componentName: "Card",
           attributeName: "title",
-          englishValue: "Hello",
+          englishValue: "Hello Ethereum",
         },
       ]
-      const glossary = new Map([["Ethereum", "Ethereum"]])
+      const glossary = new Map([
+        ["Ethereum", "Ethereum"],
+        ["staking", "Staking"],
+      ])
       const prompt = buildAttributePrompt(leaves, "German", glossary)
       expect(prompt).toContain("Glossary")
       expect(prompt).toContain('"Ethereum" -> "Ethereum"')
+      // Only terms the attribute values use
+      expect(prompt).not.toContain('"staking"')
     })
 
     test("omits glossary block when empty", () => {

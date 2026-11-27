@@ -83,12 +83,12 @@ def get_full_size(block_number):
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # क्रमाने प्रारंभिक डेटासेट तयार करा
+    # प्रारंभिक डेटासेट क्रमाने तयार करा
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
 
-    # randmemohash ची कमी-राऊंडची आवृत्ती वापरा
+    # randmemohash ची कमी-राउंड आवृत्ती वापरा
     for _ in range(CACHE_ROUNDS):
         for i in range(n):
             v = o[i][0] % n
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-कॅशे उत्पादन प्रक्रियेमध्ये प्रथम 32 MB मेमरी क्रमाने भरणे समाविष्ट आहे, त्यानंतर [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) मधील Sergio Demian Lerner च्या _RandMemoHash_ अल्गोरिदमचे दोन पासेस करणे समाविष्ट आहे. आउटपुट 524288 64-बाइट मूल्यांचा संच आहे.
+कॅशे उत्पादन प्रक्रियेमध्ये प्रथम 32 MB मेमरी क्रमाने भरणे समाविष्ट आहे, त्यानंतर सर्जिओ डेमियन लर्नरच्या [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf) मधील _RandMemoHash_ अल्गोरिदमचे तीन पासेस (`CACHE_ROUNDS`) करणे समाविष्ट आहे. आउटपुट 524288 64-बाइट मूल्यांचा संच आहे.
 
 ## डेटा एकत्रीकरण फंक्शन {#date-aggregation-function}
 
@@ -215,12 +215,12 @@ _तुम्हाला मदत केलेल्या कम्युन�
 
 ## परिशिष्ट {#appendix}
 
-जर तुम्हाला वरील Python स्पेक कोड म्हणून चालवण्यात स्वारस्य असेल तर खालील कोड आधी जोडला जावा.
+जर तुम्हाला वरील Python स्पेक कोड म्हणून चालवण्यात स्वारस्य असेल तर खालील कोड सुरुवातीला जोडला गेला पाहिजे.
 
 ```python
 import sha3, copy
 
-# लिटल-एन्डियन बिट ऑर्डरिंग गृहीत धरते (इंटेल आर्किटेक्चर प्रमाणेच)
+# लिटल एंडियन बिट क्रम गृहीत धरते (इंटेल आर्किटेक्चर प्रमाणेच)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True

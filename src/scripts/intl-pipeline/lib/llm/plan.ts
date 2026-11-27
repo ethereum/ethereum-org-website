@@ -12,7 +12,7 @@ import {
   MAX_BATCHES_PER_FILE,
   MAX_CHUNK_BYTES,
   MAX_CONTEXT_BYTES,
-  MAX_PROMPT_BYTES,
+  MAX_PLANNED_PROMPT_BYTES,
   MIN_CONTENT_BUDGET_BYTES,
 } from "../../constants"
 
@@ -20,14 +20,17 @@ import {
   type CodeBlock,
   extractCodeFencesOnly,
   extractComments,
+  liftInlineCode,
 } from "./code-block-extractor"
 import { createFileBudget, type FileBudget } from "./cost-meter"
 import {
   batchSections,
   buildIncrementalPrompt,
   buildSectionList,
+  type CodeLoss,
   extractJsonSections,
   extractSections,
+  sectionCodeLoss,
   sectionWireBytes,
 } from "./incremental-translate"
 import { buildCommentPrompt } from "./prompt-builder"
@@ -35,7 +38,8 @@ import { buildCommentPrompt } from "./prompt-builder"
 export interface PlannedBatch {
   prompt: string
   bytes: number
-  translateCount: number
+  /** Section ids this batch asks for; the parser requires all of them back. */
+  translateIds: string[]
   /**
    * Carries one section already past the content budget, so no smaller call
    * exists and the per-call ceiling does not apply.
@@ -53,7 +57,7 @@ export interface IncrementalPlan {
   translatableBytes: number
   /** Content bytes only, no envelope -- what the model actually renders */
   translatableContentBytes: number
-  /** Rules + glossary bytes carried by every call for this file+locale */
+  /** Rules and scaffolding bytes every call carries; glossary terms vary per batch */
   overheadBytes: number
   translateCount: number
   budget: FileBudget
@@ -66,6 +70,10 @@ export interface IncrementalPlan {
    * ones.
    */
   codeBlocks: Map<string, CodeBlock[]>
+  /** Code a TRANSLATE section's reply lost against what was sent; null for JSON */
+  codeLoss: ((id: string, reply: string) => CodeLoss | null) | null
+  /** Inline code spans lifted out of each TRANSLATE section, by tag index */
+  inlineCode: Map<string, string[]>
   /**
    * Prompt bytes for the separate code-comment call, 0 when the lifted fences
    * hold no comments. Rendered from the real prompt and counted in
@@ -110,7 +118,8 @@ export function planIncrementalBatches(
   const sectionList = buildSectionList(
     extract(englishContent),
     extract(localeContent),
-    sectionIds
+    sectionIds,
+    fileType
   )
 
   // Lift code fences out before anything measures or sends a section. The
@@ -126,6 +135,24 @@ export function planIncrementalBatches(
       section.content = prose
       // CONTEXT sections are never returned, so nothing restores into them.
       if (section.action === "TRANSLATE") codeBlocks.set(section.id, blocks)
+    }
+  }
+
+  // What each TRANSLATE section carries before its inline code is lifted: the
+  // reply, once restored, is checked against it.
+  const sentContent = new Map(
+    sectionList
+      .filter((s) => s.action === "TRANSLATE")
+      .map((s) => [s.id, s.content || ""])
+  )
+  const inlineCode = new Map<string, string[]>()
+  if (fileType === "markdown") {
+    for (const section of sectionList) {
+      if (section.action !== "TRANSLATE") continue
+      const { prose, spans } = liftInlineCode(section.content || "")
+      if (spans.length === 0) continue
+      section.content = prose
+      inlineCode.set(section.id, spans)
     }
   }
 
@@ -175,9 +202,9 @@ export function planIncrementalBatches(
       return {
         prompt,
         bytes,
-        translateCount: translate.length,
+        translateIds: translate.map((t) => t.id),
         irreducible,
-        overCeiling: !irreducible && bytes > MAX_PROMPT_BYTES,
+        overCeiling: !irreducible && bytes > MAX_PLANNED_PROMPT_BYTES,
       }
     })
   }
@@ -196,15 +223,15 @@ export function planIncrementalBatches(
     )
     contentBudget = Math.max(
       MIN_CONTENT_BUDGET_BYTES,
-      contentBudget - (worst - MAX_PROMPT_BYTES) - 1024
+      contentBudget - (worst - MAX_PLANNED_PROMPT_BYTES) - 1024
     )
     planned = buildPlan(contentBudget)
     if (contentBudget <= MIN_CONTENT_BUDGET_BYTES) break
   }
 
-  // Overhead is what every call carries regardless of content: rules, the
-  // glossary, and the prompt scaffolding. Reported so a run can see why its
-  // content budget shrank.
+  // Overhead is what every call carries regardless of content: rules and the
+  // prompt scaffolding (each batch adds only the glossary terms it uses).
+  // Reported so a run can see why its content budget shrank.
   const overheadBytes = Buffer.byteLength(
     buildIncrementalPrompt({
       filePath,
@@ -220,8 +247,8 @@ export function planIncrementalBatches(
   if (planned.some((b) => b.overCeiling)) {
     throw new Error(
       `[cost-guard] ${filePath} (${locale}): cannot fit batches under the ` +
-        `${MAX_PROMPT_BYTES.toLocaleString("en-US")}-byte per-call ceiling. Prompt overhead is ` +
-        `${overheadBytes.toLocaleString("en-US")} bytes (rules + ${glossaryTerms.size} glossary terms) ` +
+        `${MAX_PLANNED_PROMPT_BYTES.toLocaleString("en-US")}-byte planning ceiling. Prompt overhead is ` +
+        `${overheadBytes.toLocaleString("en-US")} bytes of rules, plus each batch's share of ${glossaryTerms.size} glossary terms, ` +
         `and context is capped at ${MAX_CONTEXT_BYTES.toLocaleString("en-US")}. Refusing to send.`
     )
   }
@@ -278,6 +305,15 @@ export function planIncrementalBatches(
     overBudget: projectedBytes > budget.limitBytes,
     tooManyBatches: planned.length > MAX_BATCHES_PER_FILE,
     codeBlocks,
+    codeLoss:
+      fileType === "markdown"
+        ? (id, reply) => {
+            const sent = sentContent.get(id)
+            if (sent === undefined) return null
+            return sectionCodeLoss(sent, reply, inlineCode.get(id))
+          }
+        : null,
+    inlineCode,
     commentPromptBytes,
   }
 }
@@ -290,9 +326,4 @@ export function planIncrementalBatches(
  */
 export function isIrreducibleChunk(chunkBytes: number): boolean {
   return chunkBytes > MAX_CHUNK_BYTES
-}
-
-/** Chunks the translatable content genuinely needs, for reporting. */
-export function chunksNeeded(translatableBytes: number): number {
-  return Math.max(1, Math.ceil(translatableBytes / MAX_CHUNK_BYTES))
 }

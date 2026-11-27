@@ -26,7 +26,7 @@ ERC-7540 অ্যাসিঙ্ক্রোনাস ব্যবহারে�
 
 ERC-4626 দ্বারা সমর্থিত নয় এমন একটি অনুপস্থিত ব্যবহারের ক্ষেত্র হলো এমন ভল্ট যেগুলোতে একাধিক অ্যাসেট বা এন্ট্রি পয়েন্ট থাকে, যেমন তারল্য প্রদানকারী (LP) টোকেন। ERC-4626 এর নিজেরই একটি ERC-20 হওয়ার প্রয়োজনীয়তার কারণে এগুলো সাধারণত পরিচালনা করা কঠিন বা নন-কমপ্লায়েন্ট হয়ে থাকে।
 
-ERC-7575, ERC-4626 ইমপ্লিমেন্টেশন থেকে ERC-20 টোকেন ইমপ্লিমেন্টেশনকে এক্সটার্নালাইজ করার মাধ্যমে একাধিক অ্যাসেট সহ ভল্টগুলোর জন্য সমর্থন যোগ করে。
+ERC-7575, ERC-4626 ইমপ্লিমেন্টেশন থেকে ERC-20 টোকেন ইমপ্লিমেন্টেশনকে এক্সটার্নালাইজ করার মাধ্যমে একাধিক অ্যাসেট সহ ভল্টগুলোর জন্য সমর্থন যোগ করে।
 
 ERC-7575 এক্সটেনশনটি [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) এ সম্পূর্ণভাবে বর্ণনা করা হয়েছে।
 ## পূর্বশর্ত {#prerequisites}
@@ -51,7 +51,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-এই ফাংশনটি ভল্টে থাকা অন্তর্নিহিত অ্যাসেটের মোট পরিমাণ প্রদান করে।
+এই ফাংশনটি ভল্ট দ্বারা পরিচালিত অন্তর্নিহিত অ্যাসেটের মোট পরিমাণ প্রদান করে, যার মধ্যে অন্য কোথাও কাজে লাগানো যেকোনো অ্যাসেট এবং যেকোনো ফি বাদ দেওয়ার পরের পরিমাণ অন্তর্ভুক্ত থাকে।
 
 #### convertToShares {#convertoshares}
 
@@ -139,7 +139,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-এই ফাংশনটি `owner` থেকে `shares` বার্ন করে এবং ভল্ট থেকে `receiver` কে ঠিক `assets` টোকেন পাঠায়।
+এই ফাংশনটি `owner` থেকে `shares` বার্ন করে এবং ভল্ট থেকে `receiver`-এ ঠিক `assets` টোকেন পাঠায়।
 
 #### maxRedeem {#maxredeem}
 
@@ -183,7 +183,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### ইন্টারফেসের ম্যাপ {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### ইভেন্ট {#events}
 

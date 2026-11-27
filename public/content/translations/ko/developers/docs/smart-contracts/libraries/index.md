@@ -56,7 +56,7 @@ contract MyContract is Ownable {
 
 [조합성 및 상호운용성](/developers/docs/smart-contracts/composability/)을 촉진하기 위해 이더리움 커뮤니티는 **ERC** 형태로 여러 표준을 정의했습니다. 이에 대한 자세한 내용은 [표준](/developers/docs/standards/) 섹션에서 확인할 수 있습니다.
 
-컨트랙트의 일부로 ERC를 포함할 때는 직접 구현하려고 하기보다는 표준 구현체를 찾는 것이 좋습니다. 많은 스마트 컨트랙트 라이브러리에는 가장 인기 있는 ERC에 대한 구현체가 포함되어 있습니다. 예를 들어, 널리 사용되는 [ERC-20 대체 가능 토큰 표준](/developers/tutorials/understand-the-erc-20-token-smart-contract/)은 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) 및 [오픈제플린](https://docs.openzeppelin.com/contracts/3.x/erc20)에서 찾을 수 있습니다. 또한 일부 ERC는 ERC 자체의 일부로 공식 구현체를 제공하기도 합니다.
+컨트랙트의 일부로 ERC를 포함할 때는 직접 구현하려고 하기보다는 표준 구현체를 찾는 것이 좋습니다. 많은 스마트 컨트랙트 라이브러리에는 가장 인기 있는 ERC에 대한 구현체가 포함되어 있습니다. 예를 들어, 널리 사용되는 [ERC-20 대체 가능 토큰 표준](/developers/docs/standards/tokens/erc-20/)은 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) 및 [오픈제플린](https://docs.openzeppelin.com/contracts/3.x/erc20)에서 찾을 수 있습니다. 또한 일부 ERC는 ERC 자체의 일부로 공식 구현체를 제공하기도 합니다.
 
 일부 ERC는 독립적이지 않고 다른 ERC에 추가되는 형태라는 점도 언급할 가치가 있습니다. 예를 들어, [ERC-2612](https://eips.ethereum.org/EIPS/eip-2612)는 사용성을 개선하기 위해 ERC-20에 확장 기능을 추가합니다.
 
@@ -110,7 +110,6 @@ contract MyNFT is ERC721 {
 ## 관련 튜토리얼 {#related-tutorials}
 
 - [이더리움 개발자를 위한 보안 고려 사항](/developers/docs/smart-contracts/security/) _– 라이브러리 사용을 포함하여 스마트 컨트랙트를 구축할 때의 보안 고려 사항에 대한 튜토리얼입니다._
-- [ERC-20 토큰 스마트 컨트랙트 이해하기](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- 여러 라이브러리에서 제공하는 ERC-20 표준에 대한 튜토리얼입니다._
 
 ## 더 읽을거리 {#further-reading}
 

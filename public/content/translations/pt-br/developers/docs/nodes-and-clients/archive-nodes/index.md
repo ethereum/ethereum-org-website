@@ -50,9 +50,9 @@ Existem vários [serviços](/developers/docs/nodes-and-clients/nodes-as-a-servic
 
 ## Implementações e uso {#implementations-and-usage}
 
-Nó de arquivo neste contexto significa dados servidos por clientes da camada de execução voltados para o usuário, pois eles lidam com o banco de dados de estado e fornecem endpoints JSON-RPC. As opções de configuração, o tempo de sincronização e o tamanho do banco de dados podem variar de acordo com o cliente. Para obter detalhes, consulte a documentação fornecida pelo seu cliente.
+Nó de arquivo neste contexto significa dados servidos por clientes da camada de execução voltados para o usuário, à medida que lidam com o banco de dados de estado e fornecem endpoints JSON-RPC. As opções de configuração, o tempo de sincronização e o tamanho do banco de dados podem variar de acordo com o cliente. Para obter detalhes, consulte a documentação fornecida pelo seu cliente.
 
-Antes de iniciar seu próprio nó de arquivo, aprenda sobre as diferenças entre os clientes e, especialmente, os vários [requisitos de hardware](/developers/docs/nodes-and-clients/run-a-node/#requirements). A maioria dos clientes não é otimizada para esse recurso e seus arquivos exigem mais de 12 TB de espaço. Em contraste, implementações como o Erigon podem armazenar os mesmos dados em menos de 3 TB, o que os torna a maneira mais eficaz de executar um nó de arquivo.
+Antes de iniciar seu próprio nó de arquivo, aprenda sobre as diferenças entre os clientes e, especialmente, os vários [requisitos de hardware](/developers/docs/nodes-and-clients/run-a-node/#requirements). O tamanho do arquivo varia muito com o design de armazenamento de cada cliente. O Erigon, o Reth e o Geth (com seu arquivo baseado em caminho) armazenam um arquivo da Mainnet em aproximadamente 2 a 3 TB, enquanto os arquivos do Besu e do Nethermind precisam de 12 TB ou mais.
 
 ## Práticas recomendadas {#recommended-practices}
 
@@ -60,14 +60,14 @@ Além das [recomendações gerais para executar um nó](/developers/docs/nodes-a
 
 ### Hardware {#hardware}
 
-Certifique-se sempre de verificar os requisitos de hardware para um determinado modo na documentação de um cliente.
-O maior requisito para nós de arquivo é o espaço em disco. Dependendo do cliente, varia de 3 TB a 12 TB. Mesmo que o HDD possa ser considerado uma solução melhor para grandes quantidades de dados, sincronizá-lo e atualizar constantemente o topo da cadeia exigirá unidades SSD. Unidades [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) são boas o suficiente, mas devem ser de qualidade confiável, pelo menos [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Os discos podem ser instalados em um computador desktop ou em um servidor com slots suficientes. Tais dispositivos dedicados são ideais para executar um nó de alto tempo de atividade. É totalmente possível executá-lo em um laptop, mas a portabilidade terá um custo adicional.
+Sempre certifique-se de verificar os requisitos de hardware para um determinado modo na documentação de um cliente.
+O maior requisito para nós de arquivo é o espaço em disco. Dependendo do cliente, varia de cerca de 2 TB a mais de 12 TB. Mesmo que o HDD possa ser considerado uma solução melhor para grandes quantidades de dados, sincronizá-lo e atualizar constantemente a ponta da cadeia exigirá unidades SSD. Unidades [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) são boas o suficiente, mas devem ser de qualidade confiável, pelo menos [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Os discos podem ser instalados em um computador desktop ou em um servidor com slots suficientes. Tais dispositivos dedicados são ideais para executar um nó com alto tempo de atividade. É totalmente possível executá-lo em um laptop, mas a portabilidade terá um custo adicional.
 
 Todos os dados precisam caber em um volume, portanto, os discos devem ser unidos, por exemplo, com [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) ou LVM. Também pode valer a pena considerar o uso do [ZFS](https://en.wikipedia.org/wiki/ZFS), pois ele suporta "Copy-on-write" (cópia na gravação), o que garante que os dados sejam gravados corretamente no disco sem erros de baixo nível.
 
-Para maior estabilidade e segurança na prevenção de corrupção acidental do banco de dados, especialmente em uma configuração profissional, considere usar [memória ECC](https://en.wikipedia.org/wiki/ECC_memory) se o seu sistema a suportar. O tamanho da RAM geralmente é aconselhado a ser o mesmo que para um nó completo, mas mais RAM pode ajudar a acelerar a sincronização.
+Para maior estabilidade e segurança na prevenção de corrupção acidental do banco de dados, especialmente em uma configuração profissional, considere usar [memória ECC](https://en.wikipedia.org/wiki/ECC_memory) se o seu sistema a suportar. Geralmente, aconselha-se que o tamanho da RAM seja o mesmo que para um nó completo, mas mais RAM pode ajudar a acelerar a sincronização.
 
-Durante a sincronização inicial, os clientes no modo de arquivo executarão todas as transações desde o bloco gênese. A velocidade de execução é limitada principalmente pela CPU, portanto, uma CPU mais rápida pode ajudar com o tempo de sincronização inicial. Em um computador de consumidor médio, a sincronização inicial pode levar até um mês.
+Durante a sincronização inicial, os clientes no modo de arquivo executarão todas as transações desde o bloco gênese. A velocidade de execução é limitada principalmente pela CPU, portanto, uma CPU mais rápida pode ajudar com o tempo de sincronização inicial. Em um computador de consumo médio, a sincronização inicial pode levar até um mês.
 
 ## Leitura adicional {#further-reading}
 

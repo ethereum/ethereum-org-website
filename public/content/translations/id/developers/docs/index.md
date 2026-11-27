@@ -1,6 +1,6 @@
 ---
 title: Dokumentasi pengembangan Ethereum
-description: Memperkenalkan dokumentasi pengembang ethereum.org.
+description: "Dokumentasi pengembang Ethereum: pelajari dasar-dasarnya, tumpukan Ethereum, kontrak pintar, node dan penskalaan, dengan panduan untuk membangun dapp pertama Anda."
 lang: id
 ---
 

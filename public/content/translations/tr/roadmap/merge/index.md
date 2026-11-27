@@ -1,10 +1,10 @@
 ---
 title: "Birleşme"
-description: "Birleşme hakkında bilgi edinin - Ethereum Ana Ağı'nın Hisse Kanıtı'na (PoS) geçtiği zaman."
+description: "Ethereum Ana Ağı'nın Eylül 2022'de İş Kanıtı'ndan Hisse Kanıtı'na geçerek enerji kullanımını yaklaşık %99,95 oranında azalttığı Birleşme hakkında bilgi edinin."
 lang: tr
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "Ethereum Ana Ağı Hisse Kanıtı (PoS) kullanır, ancak bu her zaman böyle değildi."
   - "Orijinal İş Kanıtı (PoW) mekanizmasından Hisse Kanıtı'na (PoS) geçiş güncellemesine Birleşme adı verildi."
@@ -119,69 +119,69 @@ Birleşme, Ethereum için İş Kanıtı'nın (PoW) sonunu işaret etti ve daha s
 
 Birleşme ayrıca, İş Kanıtı (PoW) altında mümkün olmayan daha fazla ölçeklenebilirlik yükseltmesi için zemin hazırlayarak Ethereum'u [yol haritasının](/roadmap/) inşa ettiği tam ölçek, güvenlik ve sürdürülebilirliğe ulaşmaya bir adım daha yaklaştırdı.
 
-## Birleşme hakkındaki yanlış bilinenler {#misconceptions}
+## Birleşme hakkındaki yanılgılar {#misconceptions}
 
 <ExpandableCard
 title="Yanılgı: &quot;Bir düğüm çalıştırmak 32 ETH stake etmeyi gerektirir.&quot;"
-contentPreview="Yanlış. Herkes kendi doğruladığı Ethereum kopyasını eşzamanlamakta (yani bir düğüm çalıştırmakta) özgürdür. Hiçbir ETH gerekmez; ne Birleşme'den önce, ne Birleşme'den sonra, ne de herhangi bir zaman.">
+contentPreview="Yanlış. Herkes kendi kendi doğruladığı Ethereum kopyasını senkronize etmekte (yani bir düğüm çalıştırmakta) özgürdür. Hiçbir ETH gerekmez; ne Birleşme'den önce, ne Birleşme'den sonra, ne de herhangi bir zaman.">
 
 İki tür Ethereum düğümü vardır: blok önerebilen düğümler ve öneremeyen düğümler.
 
-Blok öneren düğümler, Ethereum'daki toplam düğümlerin yalnızca küçük bir kısmıdır. Bu kategori, İş Kanıtı (PoW) altındaki madencilik düğümlerini ve Hisse Kanıtı (PoS) altındaki doğrulayıcı düğümleri içerir. Bu kategori, ara sıra bir sonraki bloğu önerme ve protokol ödülleri kazanma yeteneği karşılığında ekonomik kaynakların (İş Kanıtı'nda GPU hash gücü veya Hisse Kanıtı'nda stake edilmiş ETH gibi) taahhüt edilmesini gerektirir.
+Blok öneren düğümler, Ethereum'daki toplam düğümlerin yalnızca küçük bir kısmıdır. Bu kategori, İş Kanıtı (PoW) altındaki madencilik düğümlerini ve Hisse Kanıtı (PoS) altındaki doğrulayıcı düğümlerini içerir. Bu kategori, ara sıra bir sonraki bloğu önerme ve protokol ödülleri kazanma yeteneği karşılığında ekonomik kaynaklar (İş Kanıtı'nda GPU hash gücü veya Hisse Kanıtı'nda stake edilmiş ETH gibi) tahsis etmeyi gerektirir.
 
-Ağdaki diğer düğümlerin (yani çoğunluğun), 1-2 TB kullanılabilir depolama alanına ve internet bağlantısına sahip tüketici sınıfı bir bilgisayarın ötesinde herhangi bir ekonomik kaynak taahhüt etmesi gerekmez. Bu düğümler blok önermezler, ancak yeni blokları dinleyerek ve ağ mutabakat kurallarına göre geldiklerinde geçerliliklerini doğrulayarak tüm blok önericilerini sorumlu tutarak ağı güvence altına almada hala kritik bir rol oynarlar. Blok geçerliyse, düğüm onu ağ üzerinden yaymaya devam eder. Blok herhangi bir nedenle geçersizse, düğüm yazılımı onu geçersiz sayar ve yayılmasını durdurur.
+Ağdaki diğer düğümlerin (yani çoğunluğun), 4 TB kullanılabilir depolama alanına sahip tüketici sınıfı bir bilgisayar ve bir internet bağlantısı dışında herhangi bir ekonomik kaynak tahsis etmesi gerekmez. Bu düğümler blok önermezler, ancak yeni blokları dinleyerek ve ağ mutabakat kurallarına göre geldiklerinde geçerliliklerini doğrulayarak tüm blok önericilerini sorumlu tutmak suretiyle ağın güvenliğini sağlamada kritik bir rol oynarlar. Blok geçerliyse, düğüm onu ağ üzerinden yaymaya devam eder. Blok herhangi bir nedenle geçersizse, düğüm yazılımı onu geçersiz sayar ve yayılmasını durdurur.
 
-Blok üretmeyen bir düğüm çalıştırmak, her iki mutabakat mekanizması (İş Kanıtı veya Hisse Kanıtı) altında herkes için mümkündür; imkanları varsa tüm kullanıcılar için <em>şiddetle tavsiye edilir</em>. Bir düğüm çalıştırmak Ethereum için son derece değerlidir ve çalıştıran herhangi bir bireye gelişmiş güvenlik, gizlilik ve sansür direnci gibi ek faydalar sağlar.
+Blok üretmeyen bir düğüm çalıştırmak, her iki mutabakat mekanizması (İş Kanıtı veya Hisse Kanıtı) altında herkes için mümkündür; imkanları varsa tüm kullanıcılar için <em>şiddetle tavsiye edilir</em>. Bir düğüm çalıştırmak Ethereum için son derece değerlidir ve çalıştıran herhangi bir bireye artırılmış güvenlik, gizlilik ve sansür direnci gibi ek faydalar sağlar.
 
-Herkesin kendi düğümünü çalıştırabilmesi, Ethereum ağının merkeziyetsizliğini korumak için <em>kesinlikle gereklidir</em>.
+Herkesin kendi düğümünü çalıştırabilmesi, Ethereum ağının merkeziyetsizliğini korumak için <em>kesinlikle esastır</em>.
 
 [Kendi düğümünüzü çalıştırma hakkında daha fazla bilgi](/run-a-node/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Yanılgı: &quot;Birleşme gaz ücretlerini düşürmede başarısız oldu.&quot;"
+title="Yanılgı: &quot;Birleşme, gaz ücretlerini düşürmede başarısız oldu.&quot;"
 contentPreview="Yanlış. Birleşme, ağ kapasitesinin bir genişlemesi değil, bir mutabakat mekanizması değişikliğiydi ve hiçbir zaman gaz ücretlerini düşürmesi amaçlanmamıştı.">
 
-Gaz ücretleri, ağın kapasitesine göre ağ talebinin bir ürünüdür. Birleşme, mutabakat için Hisse Kanıtı'na (PoS) geçerek İş Kanıtı'nın (PoW) kullanımını kullanımdan kaldırdı, ancak ağ kapasitesini veya işlem kapasitesini doğrudan etkileyen hiçbir parametreyi önemli ölçüde değiştirmedi.
+Gaz ücretleri, ağın kapasitesine kıyasla ağ talebinin bir ürünüdür. Birleşme, İş Kanıtı kullanımını kullanımdan kaldırdı ve mutabakat için Hisse Kanıtı'na geçiş yaptı, ancak ağ kapasitesini veya işlem kapasitesini doğrudan etkileyen hiçbir parametreyi önemli ölçüde değiştirmedi.
 
-<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup merkezli bir yol haritası</a> ile çabalar, kullanıcı etkinliğini [katman 2 (L2)](/layer-2/)'de ölçeklendirmeye odaklanırken, katman 1 (L1) Ana Ağı'nı Rollup işlemlerini katlanarak daha ucuz hale getirmeye yardımcı olmak için Rollup veri depolaması için optimize edilmiş güvenli bir merkeziyetsiz uzlaşma katmanı olarak etkinleştiriyor. Hisse Kanıtı'na geçiş, bunu gerçekleştirmenin kritik bir öncüsüdür. [Gaz ve ücretler hakkında daha fazla bilgi.](/developers/docs/gas/)
+<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup odaklı bir yol haritası</a> ile çabalar, kullanıcı etkinliğini [katman 2'de](/layer-2/) ölçeklendirmeye odaklanırken, katman 1 Ana Ağ'ın, Rollup işlemlerini katlanarak daha ucuz hale getirmeye yardımcı olmak için Rollup veri depolaması için optimize edilmiş güvenli, merkeziyetsiz bir uzlaşma katmanı olarak etkinleştirilmesine odaklanmaktadır. Hisse Kanıtı'na geçiş, bunu gerçekleştirmenin kritik bir öncüsüdür. [Gaz ve ücretler hakkında daha fazla bilgi.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Yanılgı: &quot;İşlemler Birleşme ile önemli ölçüde hızlandı.&quot;"
-contentPreview="Yanlış. Bazı küçük değişiklikler olsa da, katman 1'deki işlem hızı şu anda Birleşme'den öncekiyle çoğunlukla aynıdır.">
+contentPreview="Yanlış. Bazı küçük değişiklikler olsa da, işlem hızı katman 1'de şu anda Birleşme'den öncekiyle çoğunlukla aynıdır.">
 Bir işlemin "hızı", bir bloğa dahil edilme süresi ve kesinleşme süresi dahil olmak üzere birkaç yolla ölçülebilir. Bunların her ikisi de biraz değişir, ancak kullanıcıların fark edeceği bir şekilde değil.
 
-Tarihsel olarak, İş Kanıtı'nda (PoW) hedef her ~13,3 saniyede bir yeni bir bloğa sahip olmaktı. Hisse Kanıtı (PoS) altında, slot'lar tam olarak her 12 saniyede bir gerçekleşir ve bunların her biri bir doğrulayıcının bir blok yayınlaması için bir fırsattır. Çoğu slot'ta bloklar bulunur, ancak hepsinde olması gerekmez (örneğin, bir doğrulayıcı çevrimdışıdır). Hisse Kanıtı'nda bloklar, İş Kanıtı'na göre yaklaşık %10 daha sık üretilir. Bu oldukça önemsiz bir değişiklikti ve kullanıcılar tarafından fark edilmesi pek olası değildir.
+Tarihsel olarak, İş Kanıtı'nda hedef her ~13,3 saniyede bir yeni bir blok elde etmekti. Hisse Kanıtı altında, slotlar tam olarak her 12 saniyede bir gerçekleşir ve bunların her biri bir doğrulayıcının bir blok yayınlaması için bir fırsattır. Çoğu slotta blok bulunur, ancak hepsinde olması gerekmez (örneğin, bir doğrulayıcı çevrimdışıdır). Hisse Kanıtı'nda bloklar, İş Kanıtı'na göre ~%10 daha sık üretilir. Bu oldukça önemsiz bir değişiklikti ve kullanıcılar tarafından fark edilmesi pek olası değildir.
 
-Hisse Kanıtı, daha önce var olmayan işlem kesinliği kavramını tanıttı. İş Kanıtı'nda, bir bloğu tersine çevirme yeteneği, bir işlemin üzerine çıkarılan her geçen blokla katlanarak daha da zorlaşır, ancak asla tam olarak sıfıra ulaşmaz. Hisse Kanıtı altında bloklar, doğrulayıcıların oy kullandığı dönemler (bloklar için 32 şans içeren 6,4 dakikalık zaman dilimleri) halinde paketlenir. Bir dönem sona erdiğinde, doğrulayıcılar dönemin 'gerekçelendirilmiş' sayılıp sayılmayacağına oy verirler. Doğrulayıcılar dönemi gerekçelendirmeyi kabul ederse, bir sonraki dönemde kesinleşmiş olur. Kesinleşmiş işlemleri geri almak, toplam stake edilmiş ETH'nin üçte birinden fazlasını elde etmeyi ve yakımını gerektireceğinden ekonomik olarak uygulanamazdır.
+Hisse Kanıtı, daha önce var olmayan işlem kesinliği kavramını tanıttı. İş Kanıtı'nda, bir bloğu geri alma yeteneği, bir işlemin üzerine madenciliği yapılan her geçen blokla katlanarak daha da zorlaşır, ancak hiçbir zaman tam olarak sıfıra ulaşmaz. Hisse Kanıtı altında bloklar, doğrulayıcıların oy kullandığı dönemler (bloklar için 32 şans içeren 6,4 dakikalık zaman dilimleri) halinde paketlenir. Bir dönem sona erdiğinde, doğrulayıcılar dönemin 'gerekçelendirilmiş' sayılıp sayılmayacağına dair oy kullanırlar. Doğrulayıcılar dönemi gerekçelendirmeyi kabul ederse, bir sonraki dönemde kesinleşmiş olur. Kesinleşmiş işlemleri geri almak, toplam stake edilmiş ETH'nin üçte birinden fazlasını elde etmeyi ve yakımını gerektireceğinden ekonomik olarak uygulanamazdır.
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Yanılgı: &quot;Birleşme staking çekimlerini etkinleştirdi.&quot;"
-contentPreview="Yanlış, ancak staking çekimleri o zamandan beri Şanghay/Capella güncellemesi ile etkinleştirildi.">
+title="Yanılgı: &quot;Birleşme, staking çekim işlemlerini etkinleştirdi.&quot;"
+contentPreview="Yanlış, ancak staking çekim işlemleri o zamandan beri Şanghay/Capella yükseltmesi aracılığıyla etkinleştirildi.">
 
-Birleşme'den hemen sonra, staker'lar yalnızca blok önerileri sonucunda kazanılan ücret bahşişlerine ve MEV'e erişebiliyordu. Bu ödüller, doğrulayıcı tarafından kontrol edilen (<em>ücret alıcısı</em> olarak bilinen) stake edilmeyen bir hesaba yatırılır ve anında kullanılabilir. Bu ödüller, doğrulayıcı görevlerini yerine getirmek için verilen protokol ödüllerinden ayrıdır.
+Birleşme'den sonraki ilk zamanlarda, staker'lar yalnızca blok önerileri sonucunda kazanılan öncelik ücretlerine ve MEV'ye erişebiliyordu. Bu ödüller, doğrulayıcı tarafından kontrol edilen (<em>ücret alıcısı</em> olarak bilinen) staking dışı bir hesaba yatırılır ve anında kullanılabilir. Bu ödüller, doğrulayıcı görevlerini yerine getirmek için verilen protokol ödüllerinden ayrıdır.
 
-Şanghay/Capella ağ yükseltmesinden bu yana, staker'lar artık herhangi bir fazla staking bakiyesinin (protokol ödüllerinden gelen 32'nin üzerindeki ETH) otomatik ödemelerini almaya başlamak için bir <em>çekim adresi</em> belirleyebilirler. Bu yükseltme ayrıca bir doğrulayıcının ağdan çıkış yapması üzerine tüm bakiyesinin kilidini açma ve geri alma yeteneğini de etkinleştirdi.
+Şanghay/Capella ağ yükseltmesinden bu yana, staker'lar artık herhangi bir fazla staking bakiyesinin (protokol ödüllerinden gelen 32'nin üzerindeki ETH) otomatik ödemelerini almaya başlamak için bir <em>çekim adresi</em> belirleyebilirler. Bu yükseltme ayrıca, bir doğrulayıcının ağdan çıkış yapması üzerine tüm bakiyesinin kilidini açma ve geri alma yeteneğini de etkinleştirdi.
 
 [Staking çekim işlemleri hakkında daha fazla bilgi](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Yanılgı: &quot;Artık Birleşme tamamlandığına ve çekimler etkinleştirildiğine göre, staker'ların hepsi aynı anda çıkış yapabilir.&quot;"
-contentPreview="Yanlış. Doğrulayıcı çıkışları güvenlik nedenleriyle hız sınırına tabidir.">
-Şanghay/Capella yükseltmesi çekim işlemlerini etkinleştirdiğinden, doğrulayıcılar 32 ETH'nin üzerindeki staking bakiyelerini çekmeye teşvik edilir, çünkü bu fonlar getiriye katkıda bulunmaz ve aksi takdirde kilitli kalır. APR'ye (stake edilen toplam ETH tarafından belirlenir) bağlı olarak, tüm bakiyelerini geri almak için doğrulayıcılarından çıkış yapmaya veya daha fazla getiri elde etmek için ödüllerini kullanarak potansiyel olarak daha da fazla stake etmeye teşvik edilebilirler.
+title="Yanılgı: &quot;Artık Birleşme tamamlandığına ve çekim işlemleri etkinleştirildiğine göre, staker'ların hepsi aynı anda çıkış yapabilir.&quot;"
+contentPreview="Yanlış. Doğrulayıcı çıkışları güvenlik nedenleriyle oranla sınırlandırılmıştır.">
+Şanghay/Capella yükseltmesi çekim işlemlerini etkinleştirdiğinden, doğrulayıcılar 32 ETH'nin üzerindeki staking bakiyelerini çekmeye teşvik edilir, çünkü bu fonlar getiriye katkıda bulunmaz ve aksi takdirde kilitli kalır. APR'ye (toplam stake edilmiş ETH tarafından belirlenir) bağlı olarak, tüm bakiyelerini geri almak için doğrulayıcılarından çıkış yapmaya veya daha fazla getiri elde etmek için ödüllerini kullanarak potansiyel olarak daha da fazla stake etmeye teşvik edilebilirler.
 
-Burada önemli bir uyarı, tam doğrulayıcı çıkışları protokol tarafından oranla sınırlandırılmıştır ve dönem başına (her 6,4 dakikada bir) yalnızca belirli sayıda doğrulayıcı çıkış yapabilir. Bu sınır, aktif doğrulayıcıların sayısına bağlı olarak dalgalanır, ancak tek bir günde ağdan çıkış yapılabilecek toplam stake edilmiş ETH'nin yaklaşık %0,33'üne denk gelir.
+Burada önemli bir uyarı, tam doğrulayıcı çıkışları protokol tarafından oranla sınırlandırılmıştır ve dönem başına (her 6,4 dakikada bir) yalnızca belirli sayıda doğrulayıcı çıkış yapabilir. Bu sınır, aktif doğrulayıcı sayısına bağlı olarak dalgalanır, ancak tek bir günde ağdan çıkış yapılabilecek toplam stake edilmiş ETH'nin yaklaşık %0,33'üne denk gelir.
 
-Bu, stake edilmiş fonların toplu bir şekilde çıkışını önler. Ayrıca, stake edilen toplam ETH'nin büyük bir kısmına erişimi olan potansiyel bir saldırganın, protokol kesinti cezasını uygulamadan önce aynı dönemde kesinti gerektiren bir suç işlemesini ve suç işleyen tüm doğrulayıcı bakiyelerinden çıkış yapmasını/çekim yapmasını önler.
+Bu, stake edilmiş fonların toplu bir çıkışını önler. Ayrıca, toplam stake edilmiş ETH'nin büyük bir kısmına erişimi olan potansiyel bir saldırganın, kesinti gerektiren bir suç işlemesini ve protokol kesinti cezasını uygulamadan önce aynı dönemde tüm suçlu doğrulayıcı bakiyelerinden çıkış yapmasını/çekim yapmasını önler.
 
-APR ayrıca kasıtlı olarak dinamiktir ve staker'lardan oluşan bir pazarın ağı güvence altına almaya yardımcı olmak için ne kadar ödeme almaya istekli olduklarını dengelemelerine olanak tanır. Oran çok düşükse, doğrulayıcılar protokol tarafından sınırlandırılan bir oranda çıkış yapacaktır. Bu, kademeli olarak kalan herkes için APR'yi yükseltecek ve yeni veya geri dönen staker'ları bir kez daha çekecektir.
+APR ayrıca kasıtlı olarak dinamiktir ve staker'lardan oluşan bir pazarın, ağın güvenliğini sağlamaya yardımcı olmak için ne kadar ödeme almaya istekli olduklarını dengelemelerine olanak tanır. Oran çok düşükse, doğrulayıcılar protokol tarafından sınırlandırılan bir oranda çıkış yapacaktır. Kademeli olarak bu, kalan herkes için APR'yi yükseltecek ve yeni veya geri dönen staker'ları bir kez daha çekecektir.
 </ExpandableCard>
 
 ## 'Eth2'ye ne oldu? {#eth2}

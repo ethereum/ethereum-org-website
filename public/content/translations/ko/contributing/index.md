@@ -15,32 +15,33 @@ Ethereum.org는 웹사이트의 번역, 작성, 디자인 및 유지 관리를 �
 - [번역 오류 제보하기](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [번역 프로그램](/contributing/translation-program/)이 종료 수순을 밟고 있으며 더 이상 새로운 번역가를 온보딩하지 않습니다.
 
 **개발**
-- [오픈 이슈 작업하기](https://github.com/ethereum/ethereum-org-website/issues) – 해결이 필요하다고 파악된 작업입니다.
+- [오픈 이슈 작업하기](https://github.com/ethereum/ethereum-org-website/issues) – 해결이 필요한 것으로 확인된 작업
 
 **디자인**
 - [웹사이트 디자인 돕기](/contributing/design/) – 모든 수준의 디자이너가 웹사이트 개선에 기여할 수 있습니다.
 
 **콘텐츠**
 - [콘텐츠 생성/편집하기](/contributing/#how-to-update-content) – 새로운 페이지를 제안하거나 기존 내용을 수정합니다.
-- [빌더 아티클 작성하기](/contributing/adding-articles/) - [최신](/latest/) 섹션에 아티클을 기고합니다.
+- [빌더 아티클 작성하기](/contributing/adding-articles/) - [최신](/latest/) 섹션에 아티클을 기여합니다.
 - [커뮤니티 리소스 추가하기](/contributing/content-resources/) – 관련 페이지에 유용한 아티클이나 리소스를 추가합니다.
 - [보고서 제안하기](/contributing/adding-reports/) - [보고서](/reports/) 페이지에 연구 보고서를 제안합니다.
-- [스토리 공유하기](/contributing/adding-community-stories/) - 오픈 소스 및 보호(sanctuary) 기술에 대한 개인적인 경험, 이더리움 생태계가 삶에 미친 영향, 또는 여러분과 커뮤니티가 이더리움을 어떻게 사용하는지에 대한 스토리를 제출합니다.
+- [스토리 공유하기](/contributing/adding-community-stories/) - 오픈 소스 및 피난처(sanctuary) 기술에 대한 개인적인 경험, 이더리움 생태계가 삶에 미친 영향, 또는 여러분과 커뮤니티가 이더리움을 사용하는 방법에 대한 스토리를 제출합니다.
 - [퀴즈](/contributing/quizzes/) – 관련 페이지의 퀴즈 문제 은행을 추가, 업데이트 및 삭제합니다.
 - [디자인 리소스 제안하기](/contributing/design/adding-design-resources/) – 유용한 디자인 리소스를 추가, 업데이트 및 삭제합니다.
-- [동영상 제안하기](/contributing/adding-videos/) – 동영상 갤러리에 교육용 동영상을 제안합니다.
+- [비디오 제안하기](/contributing/adding-videos/) – 비디오 갤러리에 교육용 비디오를 제안합니다.
+- [용어집 용어 추가하기](/contributing/adding-glossary-terms/) – [이더리움 용어집](/glossary/)에 용어를 추가하거나 업데이트합니다.
 
 **기능 아이디어**
-- [기능 요청하기](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – 새로운 기능이나 디자인에 대한 아이디어가 있다면 알려주세요.
+- [기능 요청하기](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – 새로운 기능이나 디자인에 대한 아이디어를 알려주세요.
 
 **제품 목록**
 - [거래소 추가하기](/contributing/adding-exchanges/) – [거래소 찾기](/get-eth/#country-picker)에 거래소를 추가합니다.
-- [제품 추가하기](/contributing/adding-products/) – 관련 페이지에 탈중앙화 애플리케이션 (dapp) 또는 지갑을 추가합니다.
+- [제품 추가하기](/contributing/adding-products/) – 관련 페이지에 dapp이나 지갑을 추가합니다.
 - [개발자 도구 추가하기](/contributing/adding-developer-tools/) – 관련 페이지에 개발자 도구를 추가합니다.
-- [레이어 2 (l2) 추가하기](/contributing/adding-layer-2s/) – 관련 페이지에 레이어 2 (l2)를 추가합니다.
+- [레이어 2 추가하기](/contributing/adding-layer-2s/) – 관련 페이지에 레이어 2를 추가합니다.
 - [스테이킹 제품 또는 서비스 추가하기](/contributing/adding-staking-products/) – 솔로 스테이킹, 풀 스테이킹 또는 서비스형 스테이킹을 촉진하는 프로젝트를 추가합니다.
 - [지갑 추가하기](/contributing/adding-wallets/) – [지갑 찾기 페이지](/wallets/find-wallet/)에 지갑을 추가합니다.
-- [탈중앙화 과학 (DeSci) 페이지에 프로젝트 제안하기](/contributing/adding-desci-projects/) – 탈중앙화 과학에 기여하는 이더리움 기반 프로젝트를 추가합니다.
+- [DeSci 페이지에 프로젝트 제안하기](/contributing/adding-desci-projects/) – 탈중앙화 과학에 기여하는 이더리움 기반 프로젝트를 추가합니다.
 - [리소스 추가하기](/contributing/adding-resources/) – 관련 페이지에 유용한 리소스를 추가합니다.
 
 질문이 있으신가요? 🤔 [디스코드 서버](/discord/)에 참여하세요.
@@ -95,24 +96,14 @@ GitHub 리포지토리에는 오픈 소스를 처음 접하는 개발자를 위�
 
 ### 청구 방법 {#how-to-claim}
 
-1. [디스코드 서버](/discord/)에 참여합니다.
-2. `#🥇 | proof-of-contribution` 채널에 기여한 내용의 링크를 붙여넣습니다.
-3. 팀원이 OAT 링크를 보내줄 때까지 기다립니다.
-4. OAT를 청구합니다!
+1. [디스코드 서버](/discord/)에 참여하세요.
+2. `#🥇 | proof-of-contribution` 채널에 기여한 내용의 링크를 붙여넣으세요.
+3. 팀원이 OAT 링크를 보내줄 때까지 기다리세요.
+4. OAT를 청구하세요!
 
-OAT를 청구할 때는 셀프 커스터디 지갑만 사용해야 합니다. 프라이빗 키를 보유하지 않은 거래소 계정이나 기타 계정을 사용하지 마세요. 이러한 계정으로는 OAT에 접근하고 관리할 수 없습니다.
+OAT를 청구할 때는 셀프 커스터디 지갑만 사용해야 합니다. 거래소 계정이나 프라이빗 키를 보유하지 않은 다른 계정을 사용하지 마세요. 이러한 계정으로는 OAT에 접근하고 관리할 수 없습니다.
 
-## GitPOAP 청구하기 {#claim-gitpoap}
-
-GitPOAP 또한 병합된 기여를 자동으로 인식하여 해당 플랫폼에서 고유한 기여자 POAP를 별도로 발행할 수 있게 해줍니다!
-
-
-### 청구 방법 {#how-to-claim-2}
-
-1. [GitPOAP](https://www.gitpoap.io)을 방문합니다.
-2. 로그인 옵션을 통해 지갑이나 이메일로 연결합니다.
-3. GitHub 사용자 이름, ETH 주소, 이더리움 네임 서비스 (ENS) 이름 또는 GitPOAP를 검색하여 자격이 있는지 확인합니다.
-4. GitHub 계정에 자격이 있다면 GitPOAP를 발행할 수 있습니다!
+<LinkWithArrow href="/collectibles/">ethereum.org 수집품 보기</LinkWithArrow>
 
 ## 기여자 {#contributors}
 

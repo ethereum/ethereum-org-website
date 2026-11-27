@@ -5,15 +5,10 @@ import {
   Handshake,
   Presentation,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import DevconIndiaLargeCallout from "@/components/DevconIndia/large-callout"
 import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -54,8 +49,6 @@ import organizerImage from "@/public/images/people-learning.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const _events = (await getEventsData()) ?? []
 
@@ -140,9 +133,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         title={t("page-events-hero-title", { year: getLocaleYear(locale) })}
         description={t("page-events-hero-subtitle")}
       />
-
-      {/* Devcon VIII India callout banner */}
-      <DevconIndiaLargeCallout sourcePage="events" preload />
 
       {/* What's on this page? + TabNav */}
       <StickyContainer className="top-6 space-y-4 p-4 md:top-2 md:p-8">
@@ -494,8 +484,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-community-events")
 

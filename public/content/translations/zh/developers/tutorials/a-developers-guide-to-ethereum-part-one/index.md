@@ -15,15 +15,15 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 ## （软）先决条件 {#soft-prerequisites}
 
-本文旨在让广大开发者都能轻松理解。其中会涉及 [Python 工具](/developers/docs/programming-languages/python/)，但它们只是表达概念的载体——如果你不是 Python 开发者也没关系。不过，我会假设你已经具备一些基础知识，以便我们能快速进入以太坊相关的部分。
+本文旨在让广大开发者都能轻松阅读。虽然会涉及 [Python 工具](/developers/docs/programming-languages/python/)，但它们只是表达思想的载体——如果你不是 Python 开发者也没关系。不过，为了能快速进入以太坊相关的特定内容，我会假设你已经具备了一些基础知识。
 
 假设条件：
 
 - 你能在终端中进行基本操作，
 - 你写过几行 Python 代码，
-- 你的机器上安装了 Python 3.6 或更高版本（强烈建议使用[虚拟环境](https://realpython.com/effective-python-environment/#virtual-environments)），并且
-- 你使用过 Python 的包安装程序 `pip`。
-  再次强调，即使你不满足上述任何条件，或者不打算重现本文中的代码，你也很可能可以毫无障碍地跟上进度。
+- 你的机器上安装了 Python 3.10 或更高版本（强烈建议使用[虚拟环境](https://realpython.com/effective-python-environment/#virtual-environments)），并且
+- 你使用过 Python 的包安装器 `pip`。
+  再次强调，即使你不满足上述任何条件，或者不打算重现本文中的代码，你很可能依然能顺利跟上进度。
 
 ## 区块链简介 {#blockchains-briefly}
 
@@ -79,9 +79,9 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 在本演练中，我们将仅在 Python 解释器中工作。我们不会创建任何目录、文件、类或函数。
 
-<FeaturedText>注意：在下面的示例中，以 `$` 开头的命令旨在在终端中运行。（不要输入 `$`，它只是表示行的开始。）</FeaturedText>
+<FeaturedText>注意：在下面的示例中，以 `$` 开头的命令旨在在终端中运行。（不要输入 `$`，它只是表示行首。）</FeaturedText>
 
-首先，安装 [IPython](https://ipython.org/) 以获得一个用户友好的探索环境。IPython 提供了 Tab 键自动补全等功能，让你更容易了解 Web3.py 中可用的操作。
+首先，安装 [IPython](https://ipython.org/) 以获得一个用户友好的探索环境。IPython 提供了 Tab 键自动补全等功能，让你更容易了解 Web3.py 中可以实现哪些操作。
 
 ```bash
 pip install ipython
@@ -100,8 +100,6 @@ pip install 'web3[tester]'
 ```
 
 一切准备就绪！
-
-注意：`web3[tester]` 包最高支持 Python 3.10.xx 版本。
 
 ## 启动沙盒 {#spin-up-a-sandbox}
 
@@ -123,24 +121,24 @@ In [1]:
 In [1]: from web3 import Web3
 ```
 
-## Web3 模块简介 {#introducing-the-web3-module}
+## 介绍 Web3 模块 {#introducing-the-web3-module}
 
 除了作为通往以太坊的网关之外，[Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) 模块还提供了一些便捷函数。让我们来探索几个。
 
 在以太坊应用程序中，你通常需要转换货币面额。Web3 模块专门为此提供了几个辅助方法：[from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) 和 [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei)。
 
 <FeaturedText>
-注意：众所周知，计算机在处理小数数学运算方面表现不佳。为了解决这个问题，开发者通常以美分为单位存储美元金额。例如，价格为 5.99 美元的商品在数据库中可能存储为 599。
+注意：众所周知，计算机在处理小数运算时表现很差。为了解决这个问题，开发者通常以美分为单位存储美元金额。例如，价格为 5.99 美元的商品在数据库中可能存储为 599。
 
 在处理<b>以太币</b>交易时也使用了类似的模式。然而，以太币不是两位小数，而是 18 位！以太币的最小面额称为 <b>Wei</b>，因此在发送交易时指定的就是这个值。
 
-1 ether = 1000000000000000000 wei
+1 以太币 = 1000000000000000000 Wei
 
-1 wei = 0.000000000000000001 ether
+1 Wei = 0.000000000000000001 以太币
 
 </FeaturedText>
 
-尝试将一些值与 Wei 进行相互转换。请注意，在以太币和 Wei 之间[有许多面额名称](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)。其中最著名的一个是 **Gwei**，因为它通常用于表示交易费。
+尝试将一些值与 Wei 进行相互转换。请注意，在以太币和 Wei 之间[有许多面额名称](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)。其中比较著名的一个是 **Gwei**，因为交易费通常用它来表示。
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -150,7 +148,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Web3 模块上的其他实用方法包括数据格式转换器（例如 [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)）、地址辅助工具（例如 [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)）和哈希函数（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。其中许多内容将在本系列的后续部分中介绍。要查看所有可用的方法和属性，请利用 IPython 的自动补全功能：输入 `Web3`. 并在句点后按两次 Tab 键。
+Web3 模块上的其他实用方法包括数据格式转换器（例如 [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)）、地址辅助函数（例如 [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)）和哈希函数（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。其中许多内容将在本系列的后续部分中介绍。要查看所有可用的方法和属性，请利用 IPython 的自动补全功能，输入 `Web3`. 并在句点后按两次 Tab 键。
 
 ## 与链对话 {#talk-to-the-chain}
 
@@ -170,7 +168,7 @@ Web3 模块上的其他实用方法包括数据格式转换器（例如 [`toHex`
 
 _EthereumTesterProvider 连接到一个模拟节点，非常适合快速搭建开发环境。_
 
-那个模拟节点被称为 [eth-tester](https://github.com/ethereum/eth-tester)，我们在执行 `pip install web3[tester]` 命令时已经安装了它。配置 Web3.py 以使用此测试提供者非常简单：
+那个模拟节点被称为 [eth-tester](https://github.com/ApeWorX/eth-tester)，我们在执行 `pip install web3[tester]` 命令时已经安装了它。配置 Web3.py 以使用此测试提供者非常简单：
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -292,10 +290,10 @@ Out[13]: 1000003000000000000000000
 
 后者看起来不错！余额从 1,000,000 变成了 1,000,003 以太币。但是第一个账户怎么了？它似乎损失了略多于三个以太币。唉，天下没有免费的午餐，使用以太坊公共网络需要你补偿对等节点所提供的支持。提交交易的账户被扣除了一小笔交易费——这笔费用是消耗的 Gas 量（ETH 转账为 21000 单位 Gas）乘以根据网络活动变化的的基础费用，再加上支付给将交易包含在区块中的验证者的优先费。
 
-了解更多关于 [Gas](/developers/docs/gas/#post-london) 的信息
+了解更多关于 [Gas](/developers/docs/gas/) 的信息
 
 <FeaturedText>注意：在公共网络上，交易费是可变的，具体取决于网络需求以及你希望交易被处理的速度。如果你对费用计算的详细分类感兴趣，请参阅我之前关于<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">交易如何被包含在区块中</a>的文章。</FeaturedText>
 
 ## 稍作休息 {#and-breathe}
 
-我们已经进行了一段时间，所以现在似乎是个休息的好时机。探索之旅还在继续，我们将在本系列的第二部分中继续深入。接下来的一些概念包括：连接到真实节点、智能合约和代币。有后续问题吗？请告诉我！你的反馈将影响我们接下来的方向。欢迎通过[推特](https://twitter.com/wolovim)提出请求。
+我们已经进行了一段时间，所以现在似乎是个休息的好时机。探索之旅还在继续，我们将在本系列的第二部分中继续深入。接下来的一些概念包括：连接到真实节点、智能合约和代币。有后续问题吗？请告诉我！你的反馈将影响我们接下来的方向。欢迎通过[推特](https://x.com/wolovim)提出请求。

@@ -1,5 +1,51 @@
 # Hindi (hi) -- Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.5/10
+Scope: 15 markdown pages (adds nodes-and-clients index), changed lines only; read 9 diffs (run-a-node, nodes-and-clients, ethash, patricia, statelessness, verkle, supply, privacy, nodes-as-a-service) plus scripted sweeps. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): `actor` as stage performer (known-patterns 37b/106): privacy L60 `केंद्रीय अभिनेता (actor)` -> `केंद्रीय पक्ष`, statelessness L29 `परोपकारी अभिनेता` -> `परोपकारी प्रतिभागी`; client names in run-a-node table/notes (`बेसु/एरिगोन/geth/नेदरमाइंड/रेथ` -> Latin, lowercase `geth` too) and nodes-and-clients table rows, Erigon/Lodestar paragraphs, `टर्बो-गेथ` -> Turbo-Geth, nodes-as-a-service `लाइटहाउस` L101; `जेसन-आरपीसी` -> JSON-RPC (patricia, statelessness, nodes-as-a-service); long forms added where English is bare (112): `विकेंद्रीकृत एप्लिकेशन (dapp)`, `विकेंद्रीकृत स्वायत्त संगठन (DAO)` x2, `लेयर 1 (L1)` link text, `कोहाकू (Kohaku)` -> Kohaku; `वैलिडेटर(्स)` -> glossary `सत्यापक` (statelessness 4, supply 6; same on dev, tree uses सत्यापक in 89 files); patricia `कॉन्ट्रैक्ट` -> `अनुबंध` x5 (glossary `स्मार्ट अनुबंध`, dev form, #104).
+
+Open (warnings): hi nodes-and-clients table cells `Mainnet`/`Archive, Pruned` localized (`मेननेट`, `आर्काइव, प्रून`) where dev kept Latin; other nodes-and-clients lines still carry `प्रिज़्म/निम्बस/टेकु/लाइटहाउस/गेथ` on unchanged lines; `पहला कदम भेज दिया गया है` (shipped) in statelessness; `स्टेट रूट`/`स्टेट ट्री` vs glossary `स्थिति` in patricia; privacy L40 `अभिनेता` (pre-existing, unchanged line); `सर्जियो डेमियन लर्नर` person name transliterated in ethash; merge `कॉन्ट्रैक्ट` x5 unchanged from dev.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
+Scope: 71 md pages + 20 JSON namespaces incremental updates (dev-tools descriptions, glossary, page-*). Sampled ~35 md diffs and ~120 JSON keys, changed lines only.
+
+**Fixed in this branch:**
+
+- anatomy: `पता` left in direct case before postpositions (`पता पर/को/से/तक/में/के अनुसार`) on 14 changed code-comment lines -> `पते`
+- interact-with-other-contracts: `// SPDX-License-Identifier: MIT` translated to `SPDX-लाइसेंस-पहचानकर्ता` x2 (known-patterns #92) -> restored
+- Latin names restored: `Robust Incentives Group` (community/research:388, #19034 recurrence), `Coinbase Cloud Node` (apis/backend x2, hybrid `कॉइनबेस Cloud Node`), `Lodestar`/`Nimbus` (light-clients, javascript), `Erigon, Nethermind` (node-architecture caption), `AaveKit Aave`, `जेसन-आरपीसी` -> `JSON-RPC` x8 in tools descriptions (unchanged dev lines left)
+- `डेवकॉन` restored in devcon-mumbai-coming-2026 title/description/body (the PR flipped to Latin `Devcon`, #19142); `YouTube` kept Latin
+- `कॉन्ट्रैक्ट` -> `अनुबंध` (storage:10, interacting link text); `London` -> `लंदन` (roadmap/security:82)
+- glossary.json `block-builder-term` left as English `Block builder` -> `ब्लॉक निर्माता`; page-get-eth meta-description `रिवॉर्ड` -> `पुरस्कार`, `साथियों` -> `पीयर`
+
+**Open (warnings):**
+
+- Slither/Echidna/Manticore stay transliterated (`स्लिथर`, `एकिड्ना`) in the Trail of Bits tutorials: pre-existing dev convention, not normalized.
+- Injected English parentheticals in anatomy code comments (`(constant)`, `(expression)`, `(array)`, `(modifier)`, `(revert)`, `(unique)`), `करप्शन (corruption)`, `जेनेसिस (genesis)`.
+- bridges: further-reading link titles shipped in English (dev had Hindi); `फ़ैक्टरी` -> `फैक्ट्री` drift in interact-with-other-contracts; `ईथेरियम` spelling in eips description.
+- oracles: `स्मार्ट कॉन्ट्रैक्ट` still used in 5 changed lines (present on dev, not normalized).
+
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: `कॉन्ट्रैक्ट` to the glossary and dominant `अनुबंध` in 14 values (#104 drift; zk keys only). Open: injected English parentheticals `(leaves)`, `(bisection)`, `(calldata)`; `उम्मीदवार रूट` for candidate root.
+
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: none needed. Open: `account-sessions-hint` `यह कभी नहीं कि यह कौन सा डिवाइस है` is a clipped calque of 'never which device it is'.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: actor as film actors x3 (#37b recurrence), property as sampatti x2, epoch yugon to epok, opcode spelling, committee to samiti. Open: enshrined as sunishchit, portal heading singular.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.3/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, checkpoint, builder, deploy (tainat), accounts contract regression (anubandh). Open: kadam vs charan, dashed rendered as dharashayi, derive rendered as prapt karen.
+
 (Earlier findings from PR #17101 live in known-patterns.md.)
 
 ## PR #18772 (community-stories.json, 2026-07-10) -- 8.2/10
@@ -153,3 +199,56 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: glossary `staker` -> `स्टेकर/स्टेकरों` (3x), `peer` -> `पीयरों` (L17).
 - Open: nukta `फ़ॉसेट` (32x) vs glossary `faucet` = `फॉसेट`; `फ़ॉसेट` is an alias of `testnet faucet`, upstream inconsistency. L122 ब्लॉकचेन gender `करता` -> `करती`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security: `कॉन्ट्रैक्ट` -> `अनुबंध` restored (141 sites; `ओपनजेपेलिन कॉन्ट्रैक्ट्स` kept)
+- app-plasma: `लेनदेन` -> `लेन-देन` restored (56 sites; `लेनदेन हैश` kept)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:442: `oracle` is spelled two ways in one paragraph. The glossary form is `ऑरेकल` (16 other sites use it). (`"ओरेकल समस्या"` -> `"ऑरेकल समस्या"`)
+- developers/docs/smart-contracts/security/index.md:442: Second instance of the same oracle spelling (`ब्लॉकचेन ओरेकल` -> `ब्लॉकचेन ऑरेकल`)
+- 13 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and structurally clean, and the new prediction-markets and wallet copy is accurate. The score is pulled down by two retranslations that went back to non-glossary forms: the security page's contract term (the third time this has happened) and app-plasma's transaction term.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Glossary itself splits एथेरियम (Foundation) and इथेरियम.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna frontmatter `author` transliterated `ट्रेलऑफ़बिट्स`; dev and all other hi Trailofbits tutorials use Latin -> `Trailofbits`
+
+**Open / notes:**
+
+- echidna:747 relative clause attaches "returns int256" to transactions instead of the function -- native call
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `man` -> `mulya` (value vs price) regression at gas:46; API spelled out.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

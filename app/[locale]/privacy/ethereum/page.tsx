@@ -1,5 +1,5 @@
 import { Handshake, Lightbulb } from "lucide-react"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { Lang, ToCItem } from "@/lib/types"
 
@@ -104,11 +104,10 @@ const READING_LINKS: { key: string; href: string }[] = [
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params
   const { locale } = params
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-privacy-ethereum")
 
-  const { contributors, lastEditLocaleTimestamp } =
+  const { contributors, lastEditDate, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("privacy/ethereum", locale)
 
   const tocItems: ToCItem[] = [
@@ -142,14 +141,14 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
     <>
       <PageJsonLD
         locale={locale}
-        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        lastEditDate={lastEditDate}
         contributors={contributors}
       />
 
       <ContentLayout
         heroSection={
           <PageHero
-            breadcrumbs={{ slug: "privacy/ethereum", parentSlug: "values" }}
+            breadcrumbs={{ slug: "privacy/ethereum" }}
             heroImg={heroImg}
             title={t("page-privacy-ethereum-title")}
             description={t("page-privacy-ethereum-hero-description")}
@@ -584,8 +583,6 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-privacy-ethereum")
 

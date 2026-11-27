@@ -15,6 +15,7 @@ import {
   MAX_PROMPT_BYTES,
   MAX_SPLIT_DEPTH,
 } from "../../constants"
+import { wrapperTags } from "../shared-patterns"
 import { delay } from "../workflows/utils"
 
 import {
@@ -31,7 +32,7 @@ import {
   restoreComments,
 } from "./code-block-extractor"
 import { type ContentNode, normalizeContent } from "./content-normalizer"
-import { recordUsage, reserveForCall } from "./cost-meter"
+import { recordUsage, reserveForCall, RunFuseExceededError } from "./cost-meter"
 import {
   chunkJson,
   mergeJsonBatches,
@@ -306,11 +307,13 @@ async function translateNormalizedMarkdown(
   // Step 6: Build placeholderMap from the normalizer tree
   const placeholderMap = buildPlaceholderMap(tree)
 
-  // Step 7: Reconstruct
-  let finalContent = reconstructFromPlaceholders(translatedProse, extractions)
-
-  // Step 8: Restore heading anchor IDs from English source.
-  finalContent = restoreHeadingIds(finalContent, fileContent)
+  // Steps 7-8: Reconstruct, then restore heading anchor IDs from English.
+  let finalContent = restoreNormalizedMarkdown(
+    translatedProse,
+    extractions,
+    normalized,
+    fileContent
+  )
 
   // Step 9: Translate code comments (from normalizer tree)
   const commentNodes = collectCommentNodes(tree)
@@ -473,7 +476,9 @@ function restoreHeadingIds(translated: string, english: string): string {
     if (inFence) continue
     HEADING_RE.lastIndex = 0
     if (HEADING_RE.test(lines[i]) && !lines[i].includes("{#")) {
-      lines[i] = `${lines[i].trimEnd()} ${englishIds[idIndex]}`
+      // Keep a CRLF source's `\r`: trimEnd() would strip it from this line only.
+      const cr = lines[i].endsWith("\r") ? "\r" : ""
+      lines[i] = `${lines[i].trimEnd()} ${englishIds[idIndex]}${cr}`
       idIndex++
     }
   }
@@ -485,6 +490,30 @@ function restoreHeadingIds(translated: string, english: string): string {
   }
 
   return lines.join("\n")
+}
+
+/** Inline-code placeholders the translation dropped or repeated: per tag, and how many copies are off in all. */
+function codePlaceholderIssues(
+  source: string,
+  translated: string
+): { issues: string[]; off: number } {
+  const count = (text: string) => {
+    const m = new Map<string, number>()
+    for (const tag of text.match(/<HTML-PLACEHOLDER-CODE-[a-f0-9]+ \/>/g) ?? [])
+      m.set(tag, (m.get(tag) ?? 0) + 1)
+    return m
+  }
+  const want = count(source)
+  const got = count(translated)
+  const issues: string[] = []
+  let off = 0
+  for (const tag of new Set([...want.keys(), ...got.keys()])) {
+    const w = want.get(tag) ?? 0
+    const g = got.get(tag) ?? 0
+    if (w !== g) issues.push(`${tag} x${g} (expected x${w})`)
+    off += Math.abs(w - g)
+  }
+  return { issues, off }
 }
 
 /**
@@ -503,9 +532,9 @@ function verifyPlaceholders(normalized: string, translated: string): string[] {
     }
   }
 
-  // Self-closing CODEBLOCK (true code) and COMPONENT (childless)
+  // Self-closing CODEBLOCK (true code), COMPONENT and HTMLTAG (childless)
   const selfClosingRe =
-    /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT)-[a-f0-9]+ \/>/g
+    /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT|HTMLTAG)-[a-f0-9]+ \/>/g
   while ((match = selfClosingRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -542,7 +571,7 @@ function verifyPlaceholders(normalized: string, translated: string): string[] {
  */
 /** Placeholder TYPE -> the extraction-key prefix used in the extractions Map. */
 type WrapperType = "LINK" | "HTMLTAG" | "COMPONENT" | "CODEBLOCK"
-type SelfClosingType = "CODE" | "IMAGE" | "CODEBLOCK" | "COMPONENT"
+type SelfClosingType = "CODE" | "IMAGE" | "CODEBLOCK" | "COMPONENT" | "HTMLTAG"
 
 /**
  * Rebuild the final markup for a single wrapper extraction, given the
@@ -562,22 +591,19 @@ function rebuildWrapper(
       if (!urlMatch) return null
       return `[${translatedText}](${urlMatch[1]})`
     }
-    case "HTMLTAG": {
-      const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
-      const closingMatch = original.match(/<\/(\w+)>/)
-      if (!tagMatch || !closingMatch) return null
-      return `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
-    }
+    case "HTMLTAG":
     case "COMPONENT": {
-      const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
-      const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
-      if (!openingTagMatch || !closingTagMatch) return null
-      return `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedText}</${closingTagMatch[1]}>`
+      const tags = wrapperTags(original)
+      return tags ? `${tags.open}${translatedText}${tags.close}` : null
     }
     case "CODEBLOCK": {
       const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
       if (!fenceMatch) return null
-      return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedText.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
+      // Drop the blank lines around the body but keep its first line's indent.
+      const body = translatedText
+        .replace(/^(?:[ \t]*\r?\n)+/, "")
+        .replace(/(?:\n[ \t\r]*)+$/, "")
+      return `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${body}\n${fenceMatch[1]}${fenceMatch[2]}`
     }
   }
 }
@@ -600,7 +626,8 @@ function rebuildWrapper(
 function recoverPlaceholdersByPosition(
   result: string,
   originalTranslated: string,
-  extractions: Map<string, string>
+  extractions: Map<string, string>,
+  sent: string
 ): string {
   const wrapperTypes: WrapperType[] = [
     "LINK",
@@ -613,8 +640,14 @@ function recoverPlaceholdersByPosition(
     "IMAGE",
     "CODEBLOCK",
     "COMPONENT",
+    "HTMLTAG",
   ]
   let recovered = 0
+
+  // Only tokens the model was sent can be missing from its output; one held
+  // inside another extraction (`<hr />` in inline code) never reached it.
+  const missing = (token: string) =>
+    sent.includes(token) && !originalTranslated.includes(token)
 
   // --- Wrapper recovery (open/close tag pairs) ---
   for (const type of wrapperTypes) {
@@ -627,7 +660,7 @@ function recoverPlaceholdersByPosition(
       if (!key.startsWith(prefix)) return
       const hash = key.slice(prefix.length)
       const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
-      if (!originalTranslated.includes(openTag)) unconsumed.push(original)
+      if (missing(openTag)) unconsumed.push(original)
     })
     if (unconsumed.length === 0) continue
 
@@ -682,8 +715,7 @@ function recoverPlaceholdersByPosition(
       const selfCloseRe = new RegExp(
         `^<HTML-PLACEHOLDER-${type}-([A-Za-z0-9]+) />$`
       )
-      if (!selfCloseRe.test(key)) return
-      if (!originalTranslated.includes(key)) unconsumed.push(original)
+      if (selfCloseRe.test(key) && missing(key)) unconsumed.push(original)
     })
     if (unconsumed.length === 0) continue
 
@@ -713,16 +745,35 @@ function recoverPlaceholdersByPosition(
   return result
 }
 
+/**
+ * Model output for normalized prose -> final markdown: placeholders restored
+ * and English heading IDs reattached. The identity sweep runs this exact path.
+ */
+export function restoreNormalizedMarkdown(
+  translatedProse: string,
+  extractions: Map<string, string>,
+  normalized: string,
+  english: string
+): string {
+  return restoreHeadingIds(
+    reconstructFromPlaceholders(translatedProse, extractions, normalized),
+    english
+  )
+}
+
 function reconstructFromPlaceholders(
   translated: string,
-  extractions: Map<string, string>
+  extractions: Map<string, string>,
+  sent: string
 ): string {
   let result = translated
 
   // Block placeholders: replace ALL occurrences with originals.
   // Content-addressed placeholders can appear multiple times when the
   // same inline code/image appears repeatedly (e.g., `base fee` x5).
-  extractions.forEach((original, placeholder) => {
+  // Reverse insertion order: a later pass can capture an earlier placeholder
+  // (inline code `<hr />` holds an HTMLTAG token), so outer expands first.
+  ;[...extractions].reverse().forEach(([placeholder, original]) => {
     if (
       placeholder.startsWith("LINK:") ||
       placeholder.startsWith("HTMLTAG:") ||
@@ -734,108 +785,37 @@ function reconstructFromPlaceholders(
     result = result.split(placeholder).join(original)
   })
 
-  // Wrapper placeholders: LINK
-  // Loop to handle duplicate content-addressed placeholders (same link text+URL)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("LINK:")) return
-    const hash = key.slice(5)
-    const openTag = `<HTML-PLACEHOLDER-LINK-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-LINK-${hash}>`
-    const urlMatch = original.match(/\]\(([^)]+)\)/)
-    if (!urlMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `[${translatedText}](${urlMatch[1]})`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: HTMLTAG
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("HTMLTAG:")) return
-    const hash = key.slice(8)
-    const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
-    const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
-    const closingMatch = original.match(/<\/(\w+)>/)
-    if (!tagMatch || !closingMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: COMPONENT (components with children)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("COMPONENT:")) return
-    const hash = key.slice(10)
-    const openTag = `<HTML-PLACEHOLDER-COMPONENT-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-COMPONENT-${hash}>`
-    const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
-    const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
-    if (!openingTagMatch || !closingTagMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedChildren = result.slice(
-        openIdx + openTag.length,
-        closeIdx
-      )
-      const rebuilt = `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedChildren}</${closingTagMatch[1]}>`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
-
-  // Wrapper placeholders: CODEBLOCK (prose/markdown fences)
-  extractions.forEach((original, key) => {
-    if (!key.startsWith("CODEBLOCK:")) return
-    const hash = key.slice(10)
-    const openTag = `<HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
-    const closeTag = `</HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
-    const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
-    if (!fenceMatch) return
-
-    let openIdx = result.indexOf(openTag)
-    while (openIdx >= 0) {
-      const closeIdx = result.indexOf(closeTag, openIdx)
-      if (closeIdx < 0) break
-      const translatedContent = result.slice(openIdx + openTag.length, closeIdx)
-      const rebuilt = `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedContent.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
-      result =
-        result.slice(0, openIdx) +
-        rebuilt +
-        result.slice(closeIdx + closeTag.length)
-      openIdx = result.indexOf(openTag)
-    }
-  })
+  // Wrapper placeholders, rebuilt around the translated text between them.
+  // Loop per key: content-addressed duplicates share one hash.
+  for (const type of ["LINK", "HTMLTAG", "COMPONENT", "CODEBLOCK"] as const) {
+    extractions.forEach((original, key) => {
+      if (!key.startsWith(`${type}:`)) return
+      const hash = key.slice(type.length + 1)
+      const openTag = `<HTML-PLACEHOLDER-${type}-${hash}>`
+      const closeTag = `</HTML-PLACEHOLDER-${type}-${hash}>`
+      let openIdx = result.indexOf(openTag)
+      while (openIdx >= 0) {
+        const closeIdx = result.indexOf(closeTag, openIdx)
+        if (closeIdx < 0) break
+        const rebuilt = rebuildWrapper(
+          type,
+          original,
+          result.slice(openIdx + openTag.length, closeIdx)
+        )
+        if (rebuilt === null) break
+        result =
+          result.slice(0, openIdx) +
+          rebuilt +
+          result.slice(closeIdx + closeTag.length)
+        openIdx = result.indexOf(openTag)
+      }
+    })
+  }
 
   // Final pass: positional fallback for tokens the exact-hash passes could not
   // restore because Gemini corrupted the hash (e.g. -> 000000). Only fires when
   // residual/unconsumed counts match per type; otherwise leaves residuals as-is.
-  result = recoverPlaceholdersByPosition(result, translated, extractions)
+  result = recoverPlaceholdersByPosition(result, translated, extractions, sent)
 
   return result
 }
@@ -1217,23 +1197,11 @@ async function translateCodeComments(
 
   if (allComments.length === 0) return content
 
-  // Build a compact payload for comment translation
-  const commentPayload: Record<string, string> = {}
-  for (let i = 0; i < allComments.length; i++) {
-    commentPayload[`c${i}`] = allComments[i].text
-  }
-
-  const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
-  const glossaryLines: string[] = []
-  glossaryTerms.forEach((loc, en) => glossaryLines.push(`  ${en} = ${loc}`))
-  const glossaryHint =
-    glossaryLines.length > 0
-      ? `\nUse these exact translations for glossary terms:\n${glossaryLines.slice(0, 30).join("\n")}`
-      : ""
-
-  const commentPrompt = `Translate these code comments to ${languageName}. Return ONLY a JSON object with the same keys and translated values. Do not add explanations.${glossaryHint}
-
-${JSON.stringify(commentPayload, null, 2)}`
+  const commentPrompt = buildCommentPrompt({
+    comments: allComments.map((c) => c.text),
+    languageName: LANGUAGE_NAMES[targetLanguage] || targetLanguage,
+    glossaryTerms,
+  })
 
   const result = await callGeminiRaw(commentPrompt, {
     filePath,
@@ -1286,7 +1254,8 @@ ${JSON.stringify(commentPayload, null, 2)}`
  */
 async function callGemini(
   options: TranslateFileOptions,
-  metadata?: GeminiCallMetadata
+  metadata?: GeminiCallMetadata,
+  raw: typeof callGeminiRaw = callGeminiRaw
 ): Promise<TranslateFileResult> {
   const {
     filePath,
@@ -1299,7 +1268,7 @@ async function callGemini(
   } = options
 
   const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
-  const prompt = buildTranslationPrompt({
+  const basePrompt = buildTranslationPrompt({
     filePath,
     fileContent,
     fileType,
@@ -1309,18 +1278,46 @@ async function callGemini(
     htmlExtracted,
     normalized,
   })
+  let prompt = basePrompt
+  // chunkProse / chunkJson only exceed MAX_CHUNK_BYTES for a unit they cannot
+  // split (one paragraph, one JSON key). Such a chunk is irreducible: there is
+  // no smaller call to make, so the per-call ceiling does not apply to it.
+  const irreducible =
+    metadata?.irreducible ??
+    isIrreducibleChunk(Buffer.byteLength(fileContent, "utf-8"))
+
+  // Every attempt is billed, so its tokens count.
+  const tokensUsed = { input: 0, output: 0 }
+  // The valid reply that lost the least so far: other placeholders first (a
+  // lost link or component fails the gate), then inline-code tags. Lost code
+  // never fails the file: what re-sending can't clear ships for review.
+  let best: {
+    text: string
+    issues: string[]
+    off: number
+    otherLost: number
+  } | null = null
+  const shipBest = (why: string) => {
+    console.warn(
+      `[WARN] ${filePath}: ${why}; shipping the reply that lost the least inline code (${best!.issues.join(", ")}) for review`
+    )
+    return { translatedContent: best!.text, tokensUsed }
+  }
 
   // Retry loop for validation failures (API call retries are in callGeminiRaw)
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    // chunkProse / chunkJson only exceed MAX_CHUNK_BYTES for a unit they cannot
-    // split (one paragraph, one JSON key). Such a chunk is irreducible: there is
-    // no smaller call to make, so the per-call ceiling does not apply to it.
-    const result = await callGeminiRaw(prompt, {
-      ...metadata,
-      irreducible:
-        metadata?.irreducible ??
-        isIrreducibleChunk(Buffer.byteLength(fileContent, "utf-8")),
-    })
+    let result: Awaited<ReturnType<typeof callGeminiRaw>>
+    try {
+      result = await raw(prompt, { ...metadata, irreducible })
+    } catch (error) {
+      if (!best || error instanceof RunFuseExceededError) throw error
+      return shipBest(
+        `re-send failed (${error instanceof Error ? error.message.split("\n")[0] : error})`
+      )
+    }
+
+    tokensUsed.input += result.tokensUsed.input
+    tokensUsed.output += result.tokensUsed.output
 
     let text = result.text
     text = stripCodeBlockWrapping(text, fileType)
@@ -1331,10 +1328,41 @@ async function callGemini(
         : validateTranslatedMarkdown(text, fileContent, targetLanguage)
 
     if (validation.valid) {
-      return {
-        translatedContent: text,
-        tokensUsed: result.tokensUsed,
+      const { issues, off } =
+        normalized && fileType === "markdown"
+          ? codePlaceholderIssues(fileContent, text)
+          : { issues: [], off: 0 }
+      const otherLost =
+        normalized && fileType === "markdown"
+          ? verifyPlaceholders(fileContent, text).filter(
+              (p) => !p.includes("PLACEHOLDER-CODE-")
+            ).length
+          : 0
+      if (
+        !best ||
+        otherLost < best.otherLost ||
+        (otherLost === best.otherLost && off < best.off)
+      )
+        best = { text, issues, off, otherLost }
+      if (!best.issues.length) {
+        return { translatedContent: best.text, tokensUsed }
       }
+      // The same prompt would come back the same at temperature 0
+      const withNote =
+        basePrompt +
+        `\n\nA previous attempt lost or repeated inline-code placeholders (${best.issues.slice(0, 10).join(", ")}${best.issues.length > 10 ? ` (+${best.issues.length - 10} more)` : ""}). Every <HTML-PLACEHOLDER-CODE-****** /> tag must appear exactly as many times as in the source.`
+      if (
+        attempt < MAX_RETRIES &&
+        (irreducible ||
+          Buffer.byteLength(withNote, "utf-8") <= MAX_PROMPT_BYTES)
+      ) {
+        console.warn(
+          `[WARN] ${filePath} attempt ${attempt}: inline code ${best.issues.join(", ")}. Retrying...`
+        )
+        prompt = withNote
+        continue
+      }
+      return shipBest("inline code still differs")
     }
 
     if (attempt < MAX_RETRIES) {
@@ -1344,6 +1372,8 @@ async function callGemini(
       await delay(RETRY_DELAY_MS * attempt)
       continue
     }
+
+    if (best) return shipBest(`re-send failed validation (${validation.error})`)
 
     throw new Error(
       `Output validation failed after ${MAX_RETRIES} attempts: ${validation.error}`
@@ -1422,7 +1452,8 @@ export async function callGeminiRaw(
       // call while it is in flight -- see reserveForCall.
       const settleReservation = reserveForCall(
         `${ctx} (${prompt.length} chars)`,
-        promptBytes
+        promptBytes,
+        metadata?.irreducible ?? false
       )
 
       console.log(
@@ -1547,7 +1578,7 @@ export async function callGeminiRaw(
             // thoughtsTokenCount in. Cost triage can read tokens_out alone.
             `tokens_out=${billableOutput}` +
             (reasoningTokens
-              ? ` (of which reasoning=${reasoningTokens}, visible=${visibleOutput})`
+              ? ` (of which reasoning=${reasoningTokens}, visible=${billableOutput - reasoningTokens})`
               : "") +
             (response.costUsd != null
               ? ` cost=$${response.costUsd.toFixed(6)}`
@@ -1657,4 +1688,6 @@ function stripCodeBlockWrapping(
 /** Test-only exports for internal helpers (not part of the public API). */
 export const _testOnly = {
   reconstructFromPlaceholders,
+  codePlaceholderIssues,
+  callGemini,
 }

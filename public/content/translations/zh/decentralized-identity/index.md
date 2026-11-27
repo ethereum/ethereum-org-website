@@ -1,6 +1,6 @@
 ---
 title: "去中心化身份"
-description: "什么是去中心化身份，为什么它很重要？"
+description: "什么是去中心化身份？了解以太坊如何让你在不依赖中心化提供商的情况下，拥有并控制自己的身份、凭证和数据。"
 lang: zh
 template: use-cases
 sidebarDepth: 2

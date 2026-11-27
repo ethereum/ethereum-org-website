@@ -38,20 +38,20 @@ Los rollup de Ethereum también se beneficiarían de los clientes ligeros. Uno d
 
 Los clientes ligeros también podrían usarse para actualizar las billeteras de Ethereum. En lugar de confiar en los datos proporcionados por un proveedor de RPC, tu billetera podría verificar directamente los datos que se te presentan usando un cliente ligero integrado. Esto añadiría seguridad a tu billetera. Si tu proveedor de RPC fuera deshonesto y te proporcionara datos incorrectos, ¡el cliente ligero integrado podría decírtelo!
 
-## ¿Cuál es el estado actual del desarrollo de clientes ligeros? {#current-state-of-development}
+## ¿Cuál es el estado actual del desarrollo de los clientes ligeros? {#current-state-of-development}
 
-Hay varios clientes ligeros en desarrollo, incluyendo clientes ligeros de ejecución, de consenso y combinados de ejecución/consenso. Estas son las implementaciones de clientes ligeros que conocemos en el momento de escribir esta página:
+Hay varios clientes ligeros en desarrollo, incluyendo clientes ligeros de ejecución, de consenso y combinados de ejecución/consenso. Estas son las implementaciones de clientes ligeros que conocemos al momento de escribir esta página:
 
-- [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): cliente de consenso ligero en TypeScript
+- [Lodestar](https://github.com/ChainSafe/lodestar-prover/tree/main/packages/light-client): cliente ligero de consenso en TypeScript
 - [Helios](https://github.com/a16z/helios): cliente ligero combinado de ejecución y consenso en Rust
 - [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): modo ligero para cliente de ejecución (en desarrollo) en Go
-- [Nimbus](https://nimbus.guide/el-light-client.html): cliente de consenso ligero en Nim
+- [Nimbus](https://nimbus.guide/el-light-client.html): cliente ligero de consenso en Nim
 
 Hasta donde sabemos, ninguno de estos se considera listo para producción todavía.
 
-También se está trabajando mucho para mejorar las formas en que los clientes ligeros pueden acceder a los datos de Ethereum. Actualmente, los clientes ligeros dependen de solicitudes RPC a nodos completos usando un modelo cliente/servidor, pero en el futuro los datos podrían solicitarse de una manera más descentralizada usando una red dedicada como la [Portal Network](https://www.ethportal.net/) que podría servir los datos a los clientes ligeros usando un protocolo gossip entre pares.
+También se está trabajando mucho para mejorar las formas en que los clientes ligeros pueden acceder a los datos de Ethereum. Actualmente, los clientes ligeros dependen de solicitudes RPC a nodos completos utilizando un modelo cliente/servidor. La [Portal Network](/developers/docs/networking-layer/portal-network/) se diseñó inicialmente para servir estos datos a los clientes ligeros a través de una red entre pares, pero su desarrollo ahora se centra en servir el historial de bloques pasados.
 
-Otros elementos de la [hoja de ruta](/roadmap/) como los [árboles Verkle](/roadmap/verkle-trees/) y la [ausencia de estado](/roadmap/statelessness/) eventualmente igualarán las garantías de seguridad de los clientes ligeros a las de los clientes completos.
+Otros elementos de la [hoja de ruta](/roadmap/) como un nuevo árbol de estado (actualmente propuesto como un árbol binario en la [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) y la [ausencia de estado](/roadmap/statelessness/) eventualmente igualarán las garantías de seguridad de los clientes ligeros a las de los clientes completos.
 
 ## Lecturas adicionales {#further-reading}
 

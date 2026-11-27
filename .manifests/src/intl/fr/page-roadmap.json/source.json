@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-roadmap.json",
-  "generatedAt": "2026-09-30T18:16:18.027Z",
-  "rootHash": "4982ae2e333f",
+  "generatedAt": "2026-11-27T09:51:04.368Z",
+  "rootHash": "c3c892cef31e",
   "tree": {
-    "contentHash": "981a8f268b7b",
-    "anchorHash": "62c27c78de6d",
+    "contentHash": "6b412db61954",
+    "anchorHash": "1af06331f09e",
     "children": {
       "page-roadmap-title": {
         "contentHash": "be50ffa0fc02",
@@ -361,6 +361,42 @@
         "contentHash": "78316af9499c",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-roadmap-forks-title": {
+        "contentHash": "a7de3f298025",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-forks-description": {
+        "contentHash": "cb8dccbfd497",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-forks-cta": {
+        "contentHash": "c5287bb93db8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-beacon-chain-pos-title": {
+        "contentHash": "f28d55fa9c01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-beacon-chain-pos-item-1": {
+        "contentHash": "2aa45adefe58",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-beacon-chain-pos-item-2": {
+        "contentHash": "b590c94e7726",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-beacon-chain-merge-title": {
+        "contentHash": "ee5a6e7ae7b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-beacon-chain-merge-item-1": {
+        "contentHash": "7f645250207c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-beacon-chain-merge-item-2": {
+        "contentHash": "e85da156affd",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-roadmap-paris-pos-title": {
         "contentHash": "b8147776d323",
         "anchorHash": "e3b0c44298fc"
@@ -605,6 +641,10 @@
         "contentHash": "b3f2d38039bf",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-roadmap-upgrade-status-target-not-set": {
+        "contentHash": "fa244d87aaae",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-roadmap-upgrade-status-activated": {
         "contentHash": "027a5f5711dd",
         "anchorHash": "e3b0c44298fc"
@@ -617,6 +657,29 @@
         "contentHash": "4fc498f7c3ed",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-roadmap-upgrade-next-milestone": {
+        "contentHash": "cb453bd06563",
+        "anchorHash": "bb4b638846df",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d1305a0aacbc"
+          },
+          "prose:2": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "20cadc1ac13b"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:2",
+          "icu:1"
+        ]
+      },
       "page-roadmap-upgrade-status-track": {
         "contentHash": "fdf181f82d1c",
         "anchorHash": "e3b0c44298fc"
@@ -624,6 +687,34 @@
       "page-roadmap-upgrade-status-phase-planning": {
         "contentHash": "c29f7bd0323c",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-phase-testnet": {
+        "contentHash": "c84ab3ad54ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-status-phase-research": {
+        "contentHash": "2cc534f45ffe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-roadmap-upgrade-eips-scheduled": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "3288c1bb1589",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d4bab5001a2a"
+          }
+        }
+      },
+      "page-roadmap-upgrade-eips-included": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "fe1035dcd7de",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e0ff020e20ec"
+          }
+        }
       },
       "page-roadmap-upgrade-quarter": {
         "contentHash": "674d8568b191",
@@ -763,6 +854,15 @@
       "page-roadmap-release-main-features",
       "page-roadmap-release-learn-more",
       "page-roadmap-release-forkcast",
+      "page-roadmap-forks-title",
+      "page-roadmap-forks-description",
+      "page-roadmap-forks-cta",
+      "page-roadmap-beacon-chain-pos-title",
+      "page-roadmap-beacon-chain-pos-item-1",
+      "page-roadmap-beacon-chain-pos-item-2",
+      "page-roadmap-beacon-chain-merge-title",
+      "page-roadmap-beacon-chain-merge-item-1",
+      "page-roadmap-beacon-chain-merge-item-2",
       "page-roadmap-paris-pos-title",
       "page-roadmap-paris-pos-item-1",
       "page-roadmap-paris-pos-item-2",
@@ -824,11 +924,17 @@
       "page-roadmap-upgrade-status-heading",
       "page-roadmap-upgrade-status-phase-devnet",
       "page-roadmap-upgrade-status-target",
+      "page-roadmap-upgrade-status-target-not-set",
       "page-roadmap-upgrade-status-activated",
       "page-roadmap-upgrade-status-not-confirmed",
       "page-roadmap-upgrade-status-next",
+      "page-roadmap-upgrade-next-milestone",
       "page-roadmap-upgrade-status-track",
       "page-roadmap-upgrade-status-phase-planning",
+      "page-roadmap-upgrade-status-phase-testnet",
+      "page-roadmap-upgrade-status-phase-research",
+      "page-roadmap-upgrade-eips-scheduled",
+      "page-roadmap-upgrade-eips-included",
       "page-roadmap-upgrade-quarter",
       "page-roadmap-upgrade-milestone-devnet",
       "page-roadmap-upgrade-milestone-testnet",
@@ -838,5 +944,5 @@
       "page-roadmap-eip-status-considered"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

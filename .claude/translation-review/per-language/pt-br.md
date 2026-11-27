@@ -1,5 +1,47 @@
 # Brazilian Portuguese (pt-br) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 9.1/10
+Scope: 15 markdown files, changed lines; 6 diffs read in full (ethash, data-structures x3, frameworks, transactions), sweeps over all 15.
+
+**Fixed in this branch (3 critical, #112):** ethrex `camada 1 (L1)` / `(camada 2 (L2))` -> `L1` / `(L2)`; privacy `organizacao autonoma descentralizada (DAO)` -> `DAOs`; frameworks Tenderly `experiencia do usuario (UX) de dapps` -> `UX de dapps`.
+
+**Open:** `taxas de gas` vs `gas` mixed in transactions (dev has both); `(PBS)` not added in pt-br statelessness.
+
+**Notes:** sweeps clean for U+3002, U+2060, foreign scripts, SPDX.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.8/10
+Scope: 71 markdown pages + 19 JSON namespaces (incremental updates, changed lines only; sampled ~25 pages and all JSON diffs). 3 critical, 0 build-breakers; verify-structure errors (data-and-analytics heading-count, anatomy python fences, erc-4626 heading-count) all pre-exist on dev.
+
+**Fixed in this branch:**
+
+- Bare `gas` -> `gás` (glossary): intro-to-ethereum description, `learn-quizzes.json` gas-2-c-explanation (`economizar no gás`), `page-resources.json` ethgastracker (`preços do gás`)
+- `glossary.json` `shielded-pool-term` `Pool blindada` -> `Pool blindado` (matches glossary-tooltip and the `pools blindados` tree form)
+
+**Open (native call needed):**
+
+- `glossary.json` byzantium-fork-definition `o EIP-649` (masculine) vs the tree's `a EIP`
+- bridges docs `podem fazer bridge entre eles` (glossary lists `fazer bridge` as a note-level alternative to `transferir via ponte`)
+- `page-get-eth-p2p-trusted-desc` mixes `Concordem` (plural) with `compartilhe`/`pague` (singular)
+- `Ethereum` gender drifts (`da Ethereum` in fusaka description vs `do Ethereum` elsewhere)
+- 19 untranslated image alts (pre-existing; verify-structure `img-alt-untranslated`)
+
+**Notes:**
+
+- No U+3002, U+2060 or foreign-script hits. No added long-form acronym expansions (`camada 2 (L2)` is the glossary form with capitals restored). Tool names (ETHBEAT, Lodestar, Slither, Echidna) stay Latin.
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `Maquina Virtual Ethereum (EVM)` expanded in 16 dev-tools values where English has bare `EVM` (#112); `bond` kept English in labels.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.9/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: bare gas to gas accent forms across 3 files, proposer compound propositores. Open: slashed left English, L1/L2 casing, Juntas agreement, frontmatter tag accent.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 9.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: buscadores, taxas de prioridade, escolha de fork, penalizacoes, verkle inline code. Open: plural participle in vault key, `Mesma origem`, acronym over-expansion.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.4/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -109,3 +151,62 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `Desenvolvido por` for Powered by; `Tesourarias`; `Valor garantido/assegurado` split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- page-founders.json:18 Ethereum gender (`meetups locais da Ethereum` -> `meetups locais do Ethereum`)
+- page-founders.json:27 Ethereum gender (`que beneficiam a Ethereum` -> `que beneficiam o Ethereum`)
+
+**Open (native call needed):**
+
+- page-wallet-descriptions.json:29: ETHGlossary `swap` gives pt-br `troca`. The loanword was already corrected to `trocas` in PRs #19076 and #19474 (`com swaps, staking` -> `com trocas, staking`)
+- page-wallet-descriptions.json:35: ETHGlossary `swap` = `troca`; the adjective must change to feminine agreement (`com swaps integrados` -> `com trocas integradas`)
+- page-wallet-descriptions.json:37: ETHGlossary `swap` = `troca` (`swaps entre criptomoedas` -> `trocas entre criptomoedas`)
+- page-wallet-descriptions.json:39: ETHGlossary `swap` = `troca`; the article and adjective must change to feminine (`um swap de tokens integrado` -> `uma troca de tokens integrada`)
+- page-wallet-descriptions.json:47: ETHGlossary `swap` = `troca` (`que combina swaps,` -> `que combina trocas,`)
+- page-founders.json:46: ETHGlossary bare `gas` = `gás` (only the compound `gas fee` gives `taxa de gas`) (`"Patrocínio de gas"` -> `"Patrocínio de gás"`)
+- 11 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and has fewer anglicisms than before (security and app-plasma read well), but the new JSON content regressed on glossary use (`swaps`, `gas`, Ethereum's gender) and has three untranslated founders tags.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `(weth)` changed to `(WETH)` (websockets:175)
+
+**Notes:**
+
+- Warnings: a/o Viem gender differs between files; `assinar`/`assinatura` used for "subscribe" (pre-existing). Note: `Rede Principal` (for Ethereum Mainnet) and `Mainnet` are both glossary forms, depending on context.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:99/163 `tem 1000 cunhados para eles` (reads "brothers-in-law") -> `tem 1000 fichas cunhadas para si`
+
+**Open / notes:**
+
+- Unchanged frontmatter tag `"tes"` (truncated `testes`) in both files -- not fixed, out of scope
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Bare `gas` -> `gás` on 6 lines (gas L32, L34, L40, L54, L56, table headers); API acronym shortened on translation-program L9, L21.
+
+**Open / notes:**
+
+- Lines this PR did not change (L16-L26) still use `gas`; the glossary says `gás` for the bare term, compounds stay `taxa de gas`.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

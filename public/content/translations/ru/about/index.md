@@ -1,7 +1,7 @@
 ---
 title: "О сайте ethereum.org"
 metaTitle: "О нас"
-description: "О команде, сообществе и миссии ethereum.org"
+description: "Познакомьтесь с командой и сообществом ethereum.org: наша миссия, как сайт создается и управляется в открытом доступе, и как вы можете помочь его улучшить."
 lang: ru
 ---
 
@@ -107,9 +107,11 @@ ethereum.org — это публичный ресурс с открытым ис
 
 ## Дизайн-система {#design-system}
 
-Мы создали и выпустили [дизайн-систему](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1), чтобы быстрее внедрять новые функции и позволить членам сообщества участвовать в открытом дизайне ethereum.org.
+Мы создали и выпустили [дизайн-систему](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1), чтобы быстрее внедрять новые функции и позволить участникам сообщества участвовать в открытом дизайне ethereum.org.
 
-Хотите присоединиться? [Следите за обновлениями в Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) и присоединяйтесь к обсуждению на нашем [канале #design в Дискорде](/discord/).
+Хотите присоединиться? [Следите за обновлениями в Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) и присоединяйтесь к обсуждению на [нашем канале #design в Дискорде](/discord/).
+
+Ищете логотипы, иллюстрации или другие файлы бренда? Скачайте их на нашей [странице с материалами](/assets/).
 
 ## Руководство по стилю {#style-guide}
 
@@ -122,6 +124,10 @@ ethereum.org — это публичный ресурс с открытым ис
 ## Лицензия {#license}
 
 Веб-сайт ethereum.org имеет открытый исходный код и создан под [лицензией MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), если не указано иное. Подробнее об [условиях использования](/terms-of-use/) ethereum.org.
+
+## Ваша приватность {#your-privacy}
+
+ethereum.org использует Matomo для аналитики с сохранением приватности, и вы можете отказаться от нее в любое время. Ознакомьтесь с нашей [политикой использования файлов cookie](/cookie-policy/) и [политикой приватности](/privacy-policy/) для получения подробной информации.
 
 ## Открытые вакансии {#open-jobs}
 

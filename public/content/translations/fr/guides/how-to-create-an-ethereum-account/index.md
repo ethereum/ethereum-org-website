@@ -1,7 +1,7 @@
 ---
 title: "Comment créer un compte Ethereum"
 metaTitle: "Comment « créer » un compte Ethereum"
-description: "Un guide étape par étape sur la création d'un compte Ethereum à l'aide d'un portefeuille."
+description: "Un guide étape par étape pour créer un compte Ethereum : choisissez un portefeuille, sauvegardez votre phrase de récupération en toute sécurité et obtenez votre première adresse Ethereum."
 lang: fr
 ---
 

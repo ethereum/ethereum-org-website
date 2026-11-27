@@ -1,7 +1,7 @@
 ---
-title: Wprowadzenie do zarządzania Ethereum
-metaTitle: Zarządzanie Ethereum
-description: Wprowadzenie do tego, jak podejmowane są decyzje dotyczące Ethereum.
+title: "Wprowadzenie do zarządzania Ethereum"
+metaTitle: "Zarządzanie Ethereum"
+description: "Jak podejmowane są decyzje dotyczące Ethereum? Dowiedz się, jak zmiany w protokole są proponowane, dyskutowane i przyjmowane przez programistów, operatorów węzłów i społeczność."
 lang: pl
 ---
 
@@ -71,7 +71,7 @@ Formalny proces wprowadzania zmian w protokole Ethereum wygląda następująco:
 
 1. **Zaproponowanie Core EIP**: jak opisano w [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), pierwszym krokiem do formalnego zaproponowania zmiany w Ethereum jest szczegółowe opisanie jej w Core EIP. Będzie to stanowić oficjalną specyfikację dla EIP, którą programiści protokołu wdrożą, jeśli zostanie zaakceptowana.
 
-2. **Przedstawienie EIP programistom protokołu**: gdy masz już Core EIP, dla którego zebrałeś opinie społeczności, powinieneś przedstawić go programistom protokołu. Możesz to zrobić, proponując go do dyskusji podczas [rozmowy AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Prawdopodobnie niektóre dyskusje odbyły się już asynchronicznie na [forum Ethereum Magicians](https://ethereum-magicians.org/) lub na [Discordzie Ethereum R&D](https://discord.gg/mncqtgVSVw).
+2. **Przedstawienie EIP programistom protokołu**: gdy masz już Core EIP, dla którego zebrałeś opinie społeczności, powinieneś przedstawić go programistom protokołu. Możesz to zrobić, proponując go do dyskusji podczas [rozmowy AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). Prawdopodobnie niektóre dyskusje odbyły się już asynchronicznie na [forum Ethereum Magicians](https://ethereum-magicians.org/) lub na [Discordzie Ethereum R&D](https://discord.gg/mncqtgVSVw).
 
 > Potencjalne wyniki tego etapu to:
 

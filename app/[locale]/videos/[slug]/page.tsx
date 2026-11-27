@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { VideoData } from "@/lib/types"
 
@@ -18,6 +18,7 @@ import YouTube from "@/components/YouTube"
 
 import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
+import { slugify } from "@/lib/utils/url"
 import { getVideoData, getVideoSlugs } from "@/lib/utils/videos"
 
 import VideoPageJsonLD from "./page-jsonld"
@@ -28,9 +29,6 @@ const VideoLandingPage = async (props: {
   params: Promise<{ locale: string; slug: string }>
 }) => {
   const { locale, slug } = await props.params
-
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-videos")
 
@@ -44,21 +42,16 @@ const VideoLandingPage = async (props: {
   const { frontmatter } = data
   const transcriptMdx = data.content.trim() || null
 
-  const breadcrumbSlug =
-    "/videos/" + (frontmatter.breadcrumb || slug.replaceAll("-", " "))
-
   return (
     <>
-      <VideoPageJsonLD
-        locale={locale}
-        slug={slug}
-        frontmatter={frontmatter}
-        transcript={transcriptMdx}
-      />
+      <VideoPageJsonLD locale={locale} slug={slug} frontmatter={frontmatter} />
 
       <main className="max-w-4xl p-page pt-hero lg:pt-hero-2x">
         <MainArticle className="flow">
-          <Breadcrumbs slug={breadcrumbSlug} startDepth={1} />
+          <Breadcrumbs
+            slug={`/videos/${slug}`}
+            label={frontmatter.breadcrumb || slug.replaceAll("-", " ")}
+          />
 
           <div className="sticky top-24 z-10 md:static">
             <YouTube
@@ -80,10 +73,14 @@ const VideoLandingPage = async (props: {
           {transcriptMdx && (
             <Accordion type="single" collapsible>
               <AccordionItem value="transcript">
-                <AccordionTrigger className="py-4">
-                  <h2 className="text-h5">
-                    {t("page-videos-view-transcript")}
-                  </h2>
+                <AccordionTrigger
+                  className="py-4 text-h5 font-black"
+                  headingLevel="h2"
+                  headingId={slugify(t("page-videos-view-transcript"), {
+                    unicode: true,
+                  })}
+                >
+                  {t("page-videos-view-transcript")}
                 </AccordionTrigger>
                 <AccordionContent className="flow text-base in-data-[state=closed]:invisible in-data-[state=closed]:h-0">
                   {await renderSimpleMarkdown(transcriptMdx, {
@@ -111,9 +108,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
-
-  // Set locale before next-intl APIs so on-demand renders stay static
-  setRequestLocale(locale)
 
   let data
   try {

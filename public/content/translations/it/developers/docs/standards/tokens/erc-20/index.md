@@ -176,14 +176,14 @@ Da questo problema sono nati alcuni standard alternativi come l'[ERC-223](/devel
 - [Alchemy - Guida ai token ERC-20 in Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Altri standard dei token fungibili {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Vault tokenizzati](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 - Vault tokenizzati asincroni](/developers/docs/standards/tokens/erc-7540)
-## Tutorial: Sviluppare con l'ERC-20 su Ethereum {#tutorials}
+## Tutorial: sviluppare con l'ERC-20 su Ethereum {#tutorials}
 
-- [Guida passo passo al contratto ERC-20](/developers/tutorials/erc20-annotated-code/) _– Una guida annotata riga per riga dell'implementazione del contratto ERC-20 di OpenZeppelin._
+- [Panoramica del contratto ERC-20](/developers/tutorials/erc20-annotated-code/) _– Una panoramica annotata riga per riga dell'implementazione del contratto ERC-20 di OpenZeppelin._
 - [ERC-20 con misure di sicurezza](/developers/tutorials/erc20-with-safety-rails/) _– Come aggiungere salvaguardie ai token ERC-20 per aiutare gli utenti a evitare errori comuni._
-- [Inviare token utilizzando Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Una guida per principianti al trasferimento di token ERC-20 utilizzando Ethers.js._
-- [Alcuni trucchi utilizzati dai token truffa e come rilevarli](/developers/tutorials/scam-token-tricks/) _– Un'analisi dettagliata dei pattern dei token ERC-20 truffa e come identificarli._
+- [Alcuni trucchi usati dai token truffa e come rilevarli](/developers/tutorials/scam-token-tricks/) _– Un'esplorazione dettagliata dei pattern dei token ERC-20 truffa e come identificarli._

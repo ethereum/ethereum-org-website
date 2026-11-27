@@ -171,16 +171,15 @@ W zdecentralizowanej aplikacji (dapp) portfel użytkownika (taki jak MetaMask, R
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Wywoływanie inteligentnego kontraktu z JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-- [Wysyłanie transakcji przy użyciu web3.js i Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [Jak wyświetlić swoje NFT w portfelu](/developers/tutorials/how-to-view-nft-in-metamask/)
+- [Wysyłanie transakcji za pomocą Web3.js i Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Jak wyświetlić swój NFT w portfelu](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Dalsza lektura {#further-reading}
 
 - [Dokumentacja Viem: Odczytywanie i zapisywanie do kontraktów](https://viem.sh/docs/contract/readContract)
-- [Dokumentacja ethers.js: Kontrakty](https://docs.ethers.org/v6/api/contract/)
+- [Dokumentacja Ethers.js: Kontrakty](https://docs.ethers.org/v6/api/contract/)
 - [Specyfikacja ABI Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [Czym jest ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Jak działają ABI inteligentnych kontraktów? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Powiązane tematy {#related-topics}
 

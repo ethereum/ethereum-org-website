@@ -7,8 +7,6 @@ skill: intermediate
 breadcrumb: Event logging
 lang: en
 published: 2020-04-03
-source: EthereumDev
-sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
@@ -16,7 +14,7 @@ In Solidity, [events](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 
 ## Events {#events}
 
-The most common event on the Ethereum blockchain at the time of writing this article is the Transfer event that is emitted by ERC20 tokens when someone transfers tokens.
+One of the most common events on the Ethereum blockchain is the `Transfer` event that is emitted by ERC-20 tokens when someone transfers tokens.
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -24,17 +22,18 @@ event Transfer(address indexed from, address indexed to, uint256 value);
 
 The event signature is declared inside of the contract code and can be emitted with the emit keyword. For example, the transfer event logs who sent the transfer (_from_), to who (_to_) and how much tokens were transferred (_value_).
 
-If we get back to our Counter smart contract and decide to log every time the value is changed. As this contract is not meant to be deployed but serve as a base for building another contract by extending it: it’s called an abstract contract. In the case of our counter example, it would look like this:
+Let’s get back to the `Counter` smart contract from [deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) and log every time the value is changed. It would look like this:
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
-    event ValueChanged(uint oldValue, uint256 newValue);
+    event ValueChanged(uint256 oldValue, uint256 newValue);
 
-    // Private variable of type unsigned int to keep the number of counts
-    uint256 private count = 0;
+    // Public variable of type unsigned int to keep the number of counts
+    uint256 public count = 0;
 
     // Function that increments our counter
     function increment() public {
@@ -42,7 +41,7 @@ contract Counter {
         emit ValueChanged(count - 1, count);
     }
 
-    // Getter to get the count value
+    // Not necessary getter to get the count value
     function getCount() public view returns (uint256) {
         return count;
     }
@@ -52,9 +51,9 @@ contract Counter {
 
 Notice that:
 
-- **Line 5**: we declare our event and what it contains, the old value and the new value.
+- **Line 6**: we declare our event and what it contains, the old value and the new value.
 
-- **Line 13**: When we increment our count variable, we emit the event.
+- **Line 14**: When we increment our count variable, we emit the event.
 
 If we now deploy the contract and call the increment function, we’ll see that Remix will automatically display it if you click on the new transaction inside an array named logs.
 

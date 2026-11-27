@@ -1,7 +1,7 @@
 ---
 title: Malipo ya Ethereum
 metaTitle: Malipo kwenye Ethereum
-description: Muhtasari wa malipo kwenye Ethereum
+description: Malipo yanafanyaje kazi kwenye Ethereum? Jifunze jinsi ya kutuma pesa ulimwenguni kote ukitumia ETH na sarafu dhabiti, mara nyingi ndani ya sekunde chache na kwa gharama nafuu, bila kuhitaji benki katikati.
 lang: sw
 template: use-cases
 sidebarDepth: 2
@@ -99,7 +99,7 @@ Kadi hizi huunganishwa moja kwa moja na mikoba isiyo ya udhamini au akaunti za m
 
 ## Malipo madogo kwa tovuti na mawakala (x402) {#x402}
 
-[x402](https://www.x402.org/) ni kiwango wazi cha malipo kinacholeta malipo ya asili kwa kila matumizi kwenye wavuti. Kwa kutumia [sarafu dhabiti](/stablecoins/) kwenye [mitandao ya tabaka la 2 (l2) ya Ethereum](/layer-2/) ya gharama nafuu, kiwango cha x402 kinafanya iwe nafuu kwa binadamu na mashine kulipa moja kwa moja kwa kitendo kimoja, kama vile kusoma makala ya habari au kuita API, badala ya kusimamia funguo za API, usajili, au "kulipa" kwa kutoa umakini kwenye matangazo.
+[x402](https://www.x402.org/) ni kiwango wazi cha malipo kinacholeta malipo ya asili kwa kila matumizi kwenye wavuti. Kwa kutumia [sarafu dhabiti](/stablecoins/) kwenye [mitandao ya tabaka la 2 (L2) ya Ethereum](/layer-2/) ya gharama nafuu, kiwango cha x402 kinafanya iwe nafuu kwa binadamu na mashine kulipa moja kwa moja kwa kitendo kimoja, kama vile kusoma makala ya habari au kuita API, badala ya kusimamia funguo za API, usajili, au "kulipa" kwa kutoa umakini kwenye matangazo.
 
 - **Kuondoa vizuizi vya malipo na kuingia:** Badala ya kufungua akaunti na kushiriki maelezo ya kibinafsi ili kusoma makala moja ya habari, mkoba wako unaweza kulipa senti chache zinazohitajika kuifungua.
 - **Malipo kwa mawakala wa AI:** x402 inawezesha programu zinazojitegemea ("Mawakala wa AI") kulipia data na miito ya API wanayohitaji ili kufanya kazi, bila uingiliaji wa binadamu.

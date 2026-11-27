@@ -1,6 +1,6 @@
 ---
-title: Đặt cọc ETH tại nhà
-description: Tổng quan về cách bắt đầu đặt cọc ETH tại nhà
+title: "Đặt cọc ETH tại nhà"
+description: "Cách đặt cọc ETH tại nhà: chạy trình xác thực Ethereum của riêng bạn với 32 ETH, nhận phần thưởng trực tiếp từ giao thức và giúp bảo mật mạng lưới."
 lang: vi
 template: staking
 image: /images/staking/leslie-solo.png
@@ -104,7 +104,7 @@ Nếu bạn chạy nhiều trình xác thực, bạn có thể hợp nhất chú
 
 ## Bắt đầu trên Staking Launchpad {#get-started-on-the-staking-launchpad}
 
-Staking Launchpad là một ứng dụng mã nguồn mở sẽ giúp bạn trở thành người đặt cọc. Nó sẽ hướng dẫn bạn cách chọn máy khách, tạo khóa và gửi ETH của bạn vào hợp đồng tiền gửi đặt cọc. Một danh sách kiểm tra được cung cấp để đảm bảo bạn đã bao quát mọi thứ nhằm thiết lập trình xác thực của mình một cách an toàn.
+Staking Launchpad là một ứng dụng mã nguồn mở sẽ giúp bạn trở thành người đặt cọc. Ứng dụng này sẽ hướng dẫn bạn cách chọn máy khách, tạo khóa và gửi ETH của bạn vào [hợp đồng tiền gửi đặt cọc](/staking/deposit-contract/). Một danh sách kiểm tra được cung cấp để đảm bảo bạn đã thực hiện đầy đủ mọi bước nhằm thiết lập trình xác thực của mình một cách an toàn.
 
 <StakingLaunchpadWidget />
 

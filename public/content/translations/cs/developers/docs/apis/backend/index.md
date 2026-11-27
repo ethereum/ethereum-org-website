@@ -52,13 +52,13 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
-**Etherscan - Prohlížeč bloků a API pro transakce**
+**Etherscan - Prohlížeč bloků a transakční API**
 - [Dokumentace](https://docs.etherscan.io/)
 
 **Blockscout - Open source prohlížeč bloků**
 - [Dokumentace](https://docs.blockscout.com/)
 
-**GetBlock -** **_Blockchain jako služba pro vývoj ve Web3_**
+**GetBlock-** **_Blockchain jako služba pro vývoj ve Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Dokumentace](https://docs.getblock.io/)
@@ -66,7 +66,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 **Infura -** **_API Etherea jako služba._**
 
 - [infura.io](https://infura.io)
-- [Dokumentace](https://docs.infura.io/api)
+- [Dokumentace](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Cenově dostupný poskytovatel EVM JSON-RPC_**
@@ -77,7 +77,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 **NOWNodes - _Plné uzly a prohlížeče bloků._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Dokumentace](https://nownodes.gitbook.io/documentation)
+- [Dokumentace](https://docs.nownodes.io/)
 
 **QuickNode -** **_Blockchainová infrastruktura jako služba._**
 
@@ -91,6 +91,12 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 - [Dokumentace](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_Infrastruktura EVM JSON-RPC s plným, archivním a veřejným přístupem bez klíče._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [Dokumentace](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_Rychlostně orientované uzly Etherea jako API JSON-RPC/WebSockets._**
 
 - [zmok.io](https://zmok.io/)
@@ -100,13 +106,19 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 
 ### Vývojové nástroje {#development-tools}
 
+**eth.zig -** **_Knihovna v jazyce Zig pro Ethereum s kódováním aplikačního binárního rozhraní (ABI) v době kompilace a vazbami na kontrakty._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [Dokumentace](https://ethzig.org)
+- [Příklady](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
 **ethers-kt -** **_Asynchronní, vysoce výkonná knihovna v Kotlin/Java/Android pro blockchainy založené na EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Příklady](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_Open source integrační knihovna .NET pro blockchain._**
+**Nethereum -** **_Open source integrační .NET knihovna pro blockchain._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [Dokumentace](https://docs.nethereum.com/docs/getting-started/welcome/)
@@ -115,8 +127,8 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 **Nástroje pro Python -** **_Různé knihovny pro interakci s Ethereem pomocí Pythonu._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
-- [Web3.py GitHub](https://github.com/ethereum/web3.py)
-- [Web3.py Chat](https://gitter.im/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
 **Tatum -** **_Ultimátní platforma pro vývoj na blockchainu._**
 
@@ -125,7 +137,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 - [Dokumentace](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_Integrační knihovna v Java/Android/Kotlin/Scala pro Ethereum._**
+**web3j -** **_Integrační knihovna v Java/Android/Kotlin/Scala pro Ethereum._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [Dokumentace](https://docs.web3j.io/)
@@ -133,7 +145,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 
 ### Blockchainové služby {#blockchain-services}
 
-**BlockCypher -** **_Webová API pro Ethereum._**
+**BlockCypher -** **_Webová API Etherea._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Dokumentace](https://www.blockcypher.com/dev/ethereum/)
@@ -150,32 +162,31 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 - [Dokumentace](https://docs.chainstack.com/)
 - [Reference API Etherea](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Coinbase Cloud Node -** **_API pro blockchainovou infrastrukturu._**
+**Coinbase Cloud Node -** **_API blockchainové infrastruktury._**
 
 - [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Dokumentace](https://docs.cdp.coinbase.com/)
 
-**DataHub od Figment -** **_Služby API Web3 s Ethereum Mainnet a testovacími sítěmi._**
+**DataHub od Figment -** **_Služby API Web3 s Ethereum Mainnetem a testovacími sítěmi._**
 
 - [DataHub](https://www.figment.io/)
 - [Dokumentace](https://docs.figment.io/)
 
-**Moralis -** **_Poskytovatel podnikového EVM API._**
+**Moralis -** **_Poskytovatel podnikového API pro EVM._**
 
 - [moralis.io](https://moralis.io)
 - [Dokumentace](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Fórum](https://forum.moralis.io/)
 
-**NFTPort -** **_API pro data a ražení na Ethereu._**
+**NFTPort -** **_API pro data Etherea a ražení._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Dokumentace](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Discord](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_Obecná platforma pro multi-krypto blockchainová API._**
+**Tokenview -** **_Obecná multi-krypto platforma pro blockchainová API._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Dokumentace](https://services.tokenview.io/docs?type=api)
@@ -187,7 +198,7 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 - [Dokumentace](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_Obohacené API pro blockchainová data v reálném čase napříč desítkami sítí._**
+**Codex -** **_API pro obohacená blockchainová data v reálném čase napříč desítkami sítí._**
 
 - [codex.io](https://www.codex.io/)
 - [Dokumentace](https://docs.codex.io)
@@ -198,10 +209,9 @@ Tyto knihovny abstrahují velkou část složitosti přímé komunikace s uzlem 
 **Covalent -** **_Obohacená blockchainová API pro více než 200 sítí._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Dokumentace](https://www.covalenthq.com/docs/api/)
+- [Dokumentace](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Další čtení {#further-reading}
 
@@ -214,5 +224,4 @@ _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidej
 
 ## Související návody {#related-tutorials}
 
-- [Nastavení Web3.js pro použití blockchainu Etherea v JavaScriptu](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Pokyny pro nastavení Web3.js ve vašem projektu._
-- [Volání chytrého kontraktu z JavaScriptu](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Podívejte se, jak pomocí tokenu DAI volat funkce kontraktů pomocí JavaScriptu._
+- [Serverové komponenty a agenti pro aplikace Web3](/developers/tutorials/server-components/) _– Jak psát serverové komponenty v TypeScriptu, které naslouchají událostem na blockchainu a reagují transakcemi._

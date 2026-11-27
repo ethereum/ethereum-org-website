@@ -1,5 +1,51 @@
 # Tamil (ta) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.4/10
+Scope: 15 markdown pages, changed lines only; read 6 diffs (nodes-and-clients, run-a-node, supply, privacy, transactions, nodes-as-a-service name lines) plus scripted sweeps over all 15. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): client names Latin in run-a-node table/notes (`பெசு/எரிகான்/கெத்/நெதர்மைண்ட்/ரெத்`, suffix `Geth-இன்`) and nodes-and-clients table rows, headings `எரிகான் (Erigon)`/`லோட்ஸ்டார் (Lodestar)`, Erigon/Lodestar paragraphs, nodes-as-a-service `பெசு` L225 and `லைட்ஹவுஸ்` L101 (113); privacy: English left in link text and prose (`EIP-8141 (Frame Transactions)` x2, `EIP-7805 (Fork-Choice Enforced Inclusion Lists, ...)`, `EIP-8250 (Keyed Nonces ...)` x2, `EIP-8182 (Private ETH and ERC-20 Transfers)`, `EIP-8182 (Protocol-Level Shielded Pools)`) translated; transactions L~70 `கோ எத்திரியம் (கெத்)` -> Geth; supply `மதிப்பீட்டாளர்` (evaluators) x6 -> glossary `சரிபார்ப்பான்` (same on dev; tree uses glossary form in 90 files vs 15).
+
+Open (warnings): `ஸ்மார்ட் ஒப்பந்தம்` x6 vs glossary/dominant `திறன் ஒப்பந்தம்` (unchanged from dev); `ஜேசன்-ஆர்பிசி` for JSON-RPC is tree-dominant and glossary-sanctioned (left); expansions kept under the ta first-mention allowance (`பதிலீடு செய்ய முடியாத டோக்கன் (NFT)`, `பரவலாக்கப்பட்ட நிதி (DeFi)`, `பயன்பாட்டு நிரலாக்க இடைமுகம் (API)`, `பரவலாக்கப்பட்ட செயலி (dapp)` x2 in frameworks where the second should be bare, MEV in merge, PBS/DAO); other nodes-and-clients lines keep `நிம்பஸ்/ப்ரிஸ்ம்/டெகு/லைட்ஹவுஸ்` on unchanged lines; `Optimistic sync` gloss on an unchanged heading.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.3/10
+Scope: 90 ta files (71 md, 19 JSON), changed lines only; read 12 md diffs and about 150 changed JSON keys (glossary, glossary-tooltip, learn-quizzes, page-roadmap, page-community, page-get-eth, page-layer-2-*, page-resources, page-bug-bounty and others).
+
+**Fixed in this branch (9 criticals):**
+
+- Exchange platform regressed from glossary `பரிமாற்றகம்` to swap `பரிமாற்றம்`: page-get-eth (find-exchange-title, find-exchange-desc, meta-description, p2p-desc), glossary kyc-definition and p2p-trading-definition, contributing/index.md L38 and L104.
+- `wrapped-token-definition` token `டோக்கன்` -> glossary `வில்லை` (3 sites; dev had `வில்லை`).
+- page-resources `l2safety-description` trade-offs `பரிமாற்றங்களின்` -> `சமரசங்களின்` (known-patterns #21).
+- Solidity `// SPDX-License-Identifier: MIT` had been translated to `SPDX-உரிம-அடையாளங்காட்டி` in interact-with-other-contracts-from-solidity (2 code blocks); restored.
+- smart-contracts/anatomy: about 25 translated code comments reverted to English in the ERC-721 block; Tamil restored from dev (Solium URL kept as English now has it).
+- erc-7540: 3 headings reverted to English (`Introduction`, `ERC-4626 vs ERC-7540`, `ERC-7540 Functions and Features`); Tamil restored, anchors untouched.
+- Developer/client names newly transliterated -> Latin: Erigon/Reth/Geth/Besu/Nethermind (archive-nodes L55, node-architecture L15), Lodestar/Geth/Nimbus (light-clients), Reth (rust), Lodestar (javascript L55/L57), Medusa (security-guidelines), OpenZeppelin (tokens/index L42), Chainlink/Tellor (oracles L390/L400).
+- adding-layer-2s: `அடுக்கு 2 (L2)` repeats collapsed to the first mention (line 15).
+
+**Open (native call needed):**
+
+- Tree-wide transliterated tool names remain on untouched lines (Chainlink/Erigon/Slither/Echidna/OpenZeppelin); in-file consistency kept.
+- `shielded-pool-term`: glossary.json `பாதுகாக்கப்பட்ட குளம்` vs glossary-tooltip.json `பாதுகாக்கப்பட்ட தொகுப்பு`.
+- `ஒற்றை ஸ்லாட்` / `ஸ்லாட்` vs glossary `நேரப்பகுதி`; `ஒருமித்த கருத்து` vs `கருத்தொருமிப்பு` drift in roadmap/security; `நாங்கள்`/`நமது` mixed in tutorials.
+- Added English parentheticals in anatomy comments (`(inherit)`, `(Mapping)`, `(function modifier)`, `(reverted)`).
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.9/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `ZK-rollup` rendered with the letters spelled out (`ஜிகே-ரோலப்`, ZK dropped from 4 values); `disputed` as `விவாதிக்கப்பட்ட` (debated) in the optimistic-rollup labels; `ரோல்அப்`/`ரோலப்` spelling split inside one diagram (both glossary forms).
+
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: none needed. Open: imperative register splits across sibling buttons (bare `அகற்று`/`வெளியேறு`/`நீக்கு`/`சேமி` vs polite `-வும்`/`-ங்கள்` vs literary `உலாவுக`), as in earlier runs.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.2/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: commitment to urutippadu, deploy regressed twice (npayanpadutha), actors as performers, clients as customers, state root, private key, blob, slot, block explorer, trade-off. Open: batch vs block both thoguthi, trustless liveness, enshrined as urudhi, bidi isolates in glamsterdam.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.5/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: attestation description, tip, equivocation, slash, checkpoint, deploy (nilainirutthu) in 7 JSON keys, plus placeholder swaps missed by the review agent (peer-das caption, verkle). Open: 25 mev headings reverted to English (needs pipeline re-run), key terminology vicai/thiravukol.
+
 > **PR:** #18353 (stablecoins-2026-redesign, page-stablecoins.json)
 > **Date:** 2026-06-05
 > **Quality Score:** 9.4/10
@@ -191,3 +237,63 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: "exchanges" `பரிமாற்றங்களும்` (acts of exchange) -> dev `பரிமாற்றகங்களும்`.
 - Open: glossary `testnet faucet` (`சோதனைவலை குழாய்`) vs `faucet` (`பாசெட்`) conflict, upstream.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 7.6/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- prediction-markets:35 odds = contradictions (`சந்தை உந்துதல் முரண்பாடுகள்` -> `சந்தையால் இயக்கப்படும் வாய்ப்புகள்`)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:375: "Deploy TimeLock" became "Use TimeLock". This is a regression and breaks ETHGlossary deploy=நிலைநிறுத்து (translate entry) (`1. TimeLock ஐப் பயன்படுத்தவும்` -> `1. TimeLock ஐ நிலைநிறுத்தவும்`)
+- developers/docs/smart-contracts/security/index.md:376: Same regression: "Deploy" became "use" (`Attack ஐப் பயன்படுத்தவும்` -> `Attack ஐ நிலைநிறுத்தவும்`)
+- common.json:149: Breaks ETHGlossary fork=கவை (the ta tree has about 400 uses of கவை and 8 of ஃபோர்க்) (`ஃபோர்க்குகளின் வரலாறு` -> `கவைகளின் வரலாறு`)
+- page-wallet-descriptions.json:5, 8, 9, 10, 11, 13, 14, 27, 40, 45, 47: Breaks ETHGlossary network=பிணையம். All 13 occurrences in this new file use the transliteration (the src/intl/ta tree has 728 uses of பிணைய)
+- page-wallet-descriptions.json:33, 35, 42: Breaks ETHGlossary blockchain=தொகுதிச்சங்கிலி
+- 20 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** ETHGlossary filter output: /tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-ta/ (aggregated terms in /tmp/claude-1000/-home-wackerow-dev-EF-ethereum-org-website/c16f81d0-e87a-403c-bec0-2dc1cfd4fcf3/scratchpad/gl-ta-terms.tsv)
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 8.8/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `இலசவமாக` typo changed to `இலவசமாக` (websockets:244)
+
+**Notes:**
+
+- Warnings: constructor term drift; எமது/நமது mixed; "call out" mistranslated (write-deploy:374).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.0/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:145 deploy rendered `பயன்படுத்தப்படுகிறது` (used) -> glossary `நிலைநிறுத்தப்படுகிறது` (recurring ta pattern)
+- multi-client:75/130 private/validator keys `திறப்புகள்` -> locale-standard `திறவுகோல்கள்`
+- echidna:506 inclusive/exclusive we mix `நாம் எங்கள்` -> `நாம் நமது`
+
+**Open / notes:**
+
+- echidna:64 invariants as `மாறிலிகள்` (constants), same word used for constants on L46 -- native call
+- multi-client: `கட்டமைப்பு` used for both framework and struct -- native call
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.2/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Glossary: `வாலெட்டுகள்` -> `பணப்பைகள்` (translation-program:9); genitive `ETH-இன்` restored at gas:50.
+
+**Open / notes:**
+
+- `உறுதிப்பாடு` for "no obligation"; literary `செய்க` CTA among polite imperatives.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-get-eth.json",
-  "generatedAt": "2026-07-10T21:00:23.201Z",
-  "rootHash": "ac3f3c3bcb58",
+  "generatedAt": "2026-11-27T09:49:34.556Z",
+  "rootHash": "1cefb54ff30b",
   "tree": {
-    "contentHash": "6bad3f4e3711",
-    "anchorHash": "62ce537fab43",
+    "contentHash": "50fc855e183d",
+    "anchorHash": "e94abecba32d",
     "children": {
       "page-get-eth-hero-title": {
         "contentHash": "40eaa560c322",
@@ -44,15 +44,15 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-exchanges-eyebrow": {
-        "contentHash": "741401982b0c",
+        "contentHash": "ed6fa03d325b",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-find-exchange-title": {
-        "contentHash": "90a72be286c8",
+        "contentHash": "f05238ac1248",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-find-exchange-desc": {
-        "contentHash": "bd4538679d00",
+        "contentHash": "5f7a5e4c20db",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-safety-eyebrow": {
@@ -286,7 +286,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-meta-description": {
-        "contentHash": "7101ab1ebad9",
+        "contentHash": "38e0538252b5",
         "anchorHash": "e3b0c44298fc"
       },
       "page-get-eth-meta-title": {
@@ -416,6 +416,58 @@
       "listing-policy-disclaimer": {
         "contentHash": "8935dd7352e3",
         "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-eyebrow": {
+        "contentHash": "6812ea53ef2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-title": {
+        "contentHash": "b012cfd6a03b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-desc": {
+        "contentHash": "b7b065b6f561",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-escrow-title": {
+        "contentHash": "2f2433724266",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-escrow-desc": {
+        "contentHash": "d731e8f4531a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-trusted-title": {
+        "contentHash": "acdfeef9074b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-trusted-desc": {
+        "contentHash": "0d29553c93a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-safety-title": {
+        "contentHash": "31779211577e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-safety-desc": {
+        "contentHash": "ac8b4776e745",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-kyc-note": {
+        "contentHash": "c7df93f5f0c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-p2p-cta": {
+        "contentHash": "8c87525489d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-exchanges-header-p2p": {
+        "contentHash": "d28d646b45dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-get-eth-exchanges-success-p2p": {
+        "contentHash": "9bb484c15d9c",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
@@ -511,8 +563,21 @@
       "page-get-eth-your-address-wallet-link",
       "listing-policy-raise-issue-link",
       "page-find-wallet-last-updated",
-      "listing-policy-disclaimer"
+      "listing-policy-disclaimer",
+      "page-get-eth-p2p-eyebrow",
+      "page-get-eth-p2p-title",
+      "page-get-eth-p2p-desc",
+      "page-get-eth-p2p-escrow-title",
+      "page-get-eth-p2p-escrow-desc",
+      "page-get-eth-p2p-trusted-title",
+      "page-get-eth-p2p-trusted-desc",
+      "page-get-eth-p2p-safety-title",
+      "page-get-eth-p2p-safety-desc",
+      "page-get-eth-p2p-kyc-note",
+      "page-get-eth-p2p-cta",
+      "page-get-eth-exchanges-header-p2p",
+      "page-get-eth-exchanges-success-p2p"
     ]
   },
-  "sourceCommitSha": "8fb582e503a16a1083fcf3564a9540d962e02712"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

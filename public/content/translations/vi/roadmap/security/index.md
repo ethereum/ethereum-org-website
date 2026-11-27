@@ -39,13 +39,13 @@ FOCIL là điểm nhấn ở lớp đồng thuận của Hegotá, bản nâng c�
 
 <ButtonLink variant="outline" href="/roadmap/single-slot-finality/">Tìm hiểu thêm về nghiên cứu tính chung cuộc nhanh hơn</ButtonLink>
 
-## Trình xác thực kiên cường {#resilient-validators}
+## Trình xác thực có khả năng phục hồi {#resilient-validators}
 
-Một trình xác thực thường là một máy tính giữ một khóa ký. **Công nghệ trình xác thực phân tán (DVT)** thay thế cỗ máy đơn lẻ đó bằng một ủy ban các máy tính chia sẻ khóa và cùng nhau ký, do đó một máy tính bị hỏng hoặc một khóa bị đánh cắp sẽ không làm trình xác thực ngừng hoạt động. DVT đang hoạt động trong thực tế và được các nhà điều hành đặt cọc sử dụng ở quy mô lớn. Vào tháng 1 năm 2026, Vitalik Buterin đã đề xuất một biến thể cấp độ giao thức đơn giản hóa có tên là DVT-lite; đây là một đề xuất ban đầu và chưa có lịch trình phân nhánh.
+Một trình xác thực thường là một máy tính giữ một khóa ký. **Công nghệ trình xác thực phân tán (DVT)** thay thế máy tính đơn lẻ đó bằng một ủy ban các máy tính chia sẻ khóa và cùng nhau ký, do đó một máy tính bị hỏng hoặc một khóa bị đánh cắp sẽ không làm trình xác thực ngừng hoạt động. DVT đang hoạt động trong thực tế và được các nhà điều hành việc đặt cọc sử dụng ở quy mô lớn. Vào tháng 1 năm 2026, Vitalik Buterin đã đề xuất một biến thể cấp giao thức được đơn giản hóa gọi là DVT-lite; đây là một đề xuất ban đầu và chưa có lịch trình phân nhánh.
 
 Mạng lưới cũng tự bảo vệ thông qua [sự đa dạng máy khách](/developers/docs/nodes-and-clients/client-diversity/): Ethereum chạy trên một số triển khai phần mềm được xây dựng độc lập, vì vậy một lỗi trong một máy khách vẫn giúp phần còn lại của mạng lưới hoạt động bình thường.
 
-Hai ý tưởng nghiên cứu trước đây, view-merge và bầu chọn người dẫn đầu bí mật, không còn là các hạng mục lộ trình đang hoạt động.
+Hai ý tưởng nghiên cứu trước đây, view-merge và [bầu chọn người dẫn đầu bí mật](/roadmap/secret-leader-election/), không còn là các mục đang hoạt động trên lộ trình.
 
 <ButtonLink variant="outline" href="/staking/dvt/">Tìm hiểu thêm về công nghệ trình xác thực phân tán</ButtonLink>
 
@@ -71,21 +71,21 @@ Không. Ngày nay không có máy tính lượng tử nào có thể phá vỡ m
 
 ## Giao thức đơn giản và hiệu quả hơn {#simpler-and-more-efficient-protocol}
 
-Sự phức tạp tạo ra cơ hội cho các lỗi và lỗ hổng. Một phần của lộ trình tập trung vào việc **đơn giản hóa Ethereum và loại bỏ nợ kỹ thuật** để giao thức dễ bảo trì, kiểm toán và suy luận hơn. Một giao thức đơn giản hơn cũng khiến những kẻ tấn công có ít bề mặt để thăm dò hơn.
+Sự phức tạp tạo cơ hội cho các lỗi và lỗ hổng. Một phần của lộ trình tập trung vào việc **đơn giản hóa Ethereum và loại bỏ nợ kỹ thuật** để giao thức dễ bảo trì, kiểm toán và suy luận hơn. Một giao thức đơn giản hơn cũng khiến những kẻ tấn công có ít bề mặt để thăm dò hơn.
 
-Đã được phân phối cho đến nay:
+Đã hoàn thành cho đến nay:
 
 - **[Pectra (Tháng 5 năm 2025)](/roadmap/pectra/)**: Đã giới thiệu EIP-7702, cho phép các tài khoản thuộc sở hữu bên ngoài tạm thời ủy quyền cho mã hợp đồng thông minh, một bước đệm hướng tới trừu tượng hóa tài khoản hoàn toàn.
 - **[Fusaka (Tháng 12 năm 2025)](/roadmap/fusaka/)**: Đã triển khai PeerDAS (EIP-7594), giúp phân phối khối lượng công việc về tính khả dụng của dữ liệu trên toàn mạng lưới. Đồng thời tăng các tham số khối dữ liệu, mở rộng thông lượng dữ liệu cho các bản cuộn.
 - **[Dencun (Tháng 3 năm 2024)](/roadmap/dencun/)**: Đã giới thiệu các giao dịch khối dữ liệu (EIP-4844) để có dữ liệu Rollup rẻ hơn và hạn chế `SELFDESTRUCT` (EIP-6780) nhằm loại bỏ một nguồn gây phức tạp tồn tại từ lâu.
 - **[Shapella (Tháng 4 năm 2023)](/staking/withdrawals/)**: Đã cho phép các trình xác thực rút ETH đã đặt cọc (EIP-4895), loại bỏ một hạn chế ban đầu của việc đặt cọc [Bằng chứng cổ phần (PoS)](/glossary/#pos).
-- **London (Tháng 8 năm 2021)**: Đã đại tu việc định giá Gas với EIP-1559, giới thiệu một phí cơ sở và cơ chế đốt để có chi phí giao dịch dễ dự đoán hơn.
+- **London (Tháng 8 năm 2021)**: Đã đại tu việc định giá Gas với EIP-1559, giới thiệu phí cơ sở và cơ chế đốt để có chi phí giao dịch dễ dự đoán hơn.
 
 Đang tiến hành:
 
-- **Glamsterdam (dự kiến vào năm 2026)**: Các điểm nhấn là ePBS (EIP-7732) và danh sách truy cập cấp độ khối (EIP-7928), với việc định giá lại Gas cũng đang được xem xét.
-- **Hegotá (dự kiến vào năm 2027)**: FOCIL (EIP-7805) là điểm nhấn ở lớp đồng thuận. Đang được xem xét để đưa vào: EIP-8141 (trừu tượng hóa tài khoản gốc).
-- **Đang diễn ra**: Những nỗ lực nhằm đơn giản hóa [EVM](/developers/docs/evm/), hài hòa các triển khai máy khách và loại bỏ dần các tính năng không còn được dùng nữa vẫn tiếp tục trên các nhóm máy khách. Công việc về tính phi trạng thái (cho phép những người tham gia xác minh chuỗi mà không cần lưu trữ tất cả dữ liệu của nó) đang được thiết kế lại xoay quanh các cây mã băm nhị phân an toàn lượng tử, với phương pháp cuối cùng vẫn chưa được xác nhận.
+- **Glamsterdam (mục tiêu vào năm 2026)**: Các điểm nhấn là ePBS (EIP-7732) và danh sách truy cập cấp độ khối (EIP-7928), với việc định giá lại Gas cũng đang được xem xét.
+- **Hegotá (mục tiêu vào năm 2027)**: FOCIL (EIP-7805) là điểm nhấn ở lớp đồng thuận. Đang được xem xét để đưa vào: EIP-8141 (trừu tượng hóa tài khoản gốc).
+- **Đang diễn ra**: Những nỗ lực nhằm đơn giản hóa [EVM](/developers/docs/evm/), hài hòa các triển khai máy khách và loại bỏ dần các tính năng không dùng nữa vẫn tiếp tục trên các nhóm máy khách. Công việc về [tính phi trạng thái](/roadmap/statelessness/) (cho phép những người tham gia xác minh chuỗi mà không cần lưu trữ tất cả dữ liệu của nó) đang được thiết kế lại xoay quanh các cây mã băm nhị phân an toàn lượng tử, điều này sẽ thay thế thiết kế [cây Verkle](/roadmap/verkle-trees/) trước đó. Cách tiếp cận cuối cùng vẫn chưa được xác nhận.
 
 ## Tiến độ hiện tại {#current-progress}
 
@@ -101,7 +101,7 @@ Chưa có phần nào của công việc này hoàn tất và tất cả các m�
 ## Đọc thêm {#further-reading}
 
 - [Forkcast: Trình theo dõi nâng cấp mạng lưới Ethereum](https://forkcast.org)
-- [Strawmap: bản dự thảo lộ trình lớp 1 (l1) của Ethereum](https://strawmap.org) - _EF Architecture_
+- [Strawmap: bản dự thảo lộ trình lớp 1 (L1) của Ethereum](https://strawmap.org) - _EF Architecture_
 - [Ethereum Hậu lượng tử](https://pq.ethereum.org) - _Tổ chức Ethereum_
 - [Trình theo dõi lộ trình Lean Ethereum](https://leanroadmap.org) - _ReamLabs_
 - [Bằng chứng cổ phần (PoS) và tính chung cuộc](/developers/docs/consensus-mechanisms/pos/#finality)

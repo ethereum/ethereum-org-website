@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/glossary-tooltip.json",
-  "generatedAt": "2026-06-16T15:09:28.994Z",
-  "rootHash": "8b16ef409c16",
+  "generatedAt": "2026-11-27T09:50:41.989Z",
+  "rootHash": "18074e78e4f1",
   "tree": {
-    "contentHash": "a6159fac8a0e",
-    "anchorHash": "b7a8d3f17d5d",
+    "contentHash": "53b7d29122b3",
+    "anchorHash": "aee6c987ffbb",
     "children": {
       "51%-attack-term": {
         "contentHash": "03ad01db08ac",
@@ -147,6 +147,14 @@
           "html-tag:0",
           "prose:2"
         ]
+      },
+      "block-builder-term": {
+        "contentHash": "6b442d2ef57a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "block-builder-definition": {
+        "contentHash": "311d86aa9b13",
+        "anchorHash": "e3b0c44298fc"
       },
       "blockchain-term": {
         "contentHash": "625da44e4eaf",
@@ -467,7 +475,7 @@
       },
       "epoch-definition": {
         "contentHash": "3ef9e875a6d4",
-        "anchorHash": "69bfc3a632ba",
+        "anchorHash": "d0d6d00ea317",
         "children": {
           "prose:4": {
             "contentHash": "0a47a4b52060",
@@ -499,7 +507,7 @@
           },
           "html-tag:3": {
             "contentHash": "266101847105",
-            "anchorHash": "1d5360e3a7c5"
+            "anchorHash": "b49d9d6ec8ee"
           }
         },
         "childrenOrder": [
@@ -972,6 +980,53 @@
           "prose:2"
         ]
       },
+      "light-client-term": {
+        "contentHash": "f5cd4f7b384d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "light-client-definition": {
+        "contentHash": "4a6cdf2df00c",
+        "anchorHash": "505ad4001d59",
+        "children": {
+          "prose:3": {
+            "contentHash": "407adfa5935b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "ef7797e13d3a",
+            "anchorHash": "db0d5f8fb432"
+          },
+          "prose:4": {
+            "contentHash": "66f590e9987e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "81dc075c3d55",
+            "anchorHash": "4833503675b0"
+          },
+          "prose:5": {
+            "contentHash": "3fe3c2e6bfb6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:2": {
+            "contentHash": "e8d44050873d",
+            "anchorHash": "08f23aa4d2b8"
+          },
+          "prose:6": {
+            "contentHash": "188a95ada28b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:3",
+          "html-tag:0",
+          "prose:4",
+          "html-tag:1",
+          "prose:5",
+          "html-tag:2",
+          "prose:6"
+        ]
+      },
       "liquidity-tokens-term": {
         "contentHash": "ffbb2bdf1ffe",
         "anchorHash": "e3b0c44298fc"
@@ -1006,6 +1061,14 @@
           "html-tag:0",
           "prose:2"
         ]
+      },
+      "mempool-term": {
+        "contentHash": "f2845b922706",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "mempool-definition": {
+        "contentHash": "4ab7f87f10a3",
+        "anchorHash": "e3b0c44298fc"
       },
       "mev-term": {
         "contentHash": "bd1f8c9dfcb8",
@@ -1076,6 +1139,14 @@
           "html-tag:0",
           "prose:2"
         ]
+      },
+      "nonce-term": {
+        "contentHash": "e3697686b990",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nonce-definition": {
+        "contentHash": "4e5eb56144be",
+        "anchorHash": "e3b0c44298fc"
       },
       "ommer-term": {
         "contentHash": "1e74ac73f472",
@@ -1367,6 +1438,22 @@
         "contentHash": "fc7b1b6683f5",
         "anchorHash": "e3b0c44298fc"
       },
+      "shielded-pool-term": {
+        "contentHash": "14770122ef58",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shielded-pool-definition": {
+        "contentHash": "16efc34194a4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "slippage-term": {
+        "contentHash": "d601a6ac7498",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "slippage-definition": {
+        "contentHash": "1db266a68c67",
+        "anchorHash": "e3b0c44298fc"
+      },
       "smart-contract-term": {
         "contentHash": "f5674ec173cb",
         "anchorHash": "e3b0c44298fc"
@@ -1551,6 +1638,14 @@
       },
       "state-definition": {
         "contentHash": "c4d7a7f3b04d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stealth-address-term": {
+        "contentHash": "cdd83c28e867",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stealth-address-definition": {
+        "contentHash": "130d146b2be6",
         "anchorHash": "e3b0c44298fc"
       },
       "sybil-attack-term": {
@@ -1898,6 +1993,8 @@
       "attestation-definition",
       "block-term",
       "block-definition",
+      "block-builder-term",
+      "block-builder-definition",
       "blockchain-term",
       "blockchain-definition",
       "bridge-term",
@@ -1970,10 +2067,14 @@
       "key-definition",
       "layer-2-term",
       "layer-2-definition",
+      "light-client-term",
+      "light-client-definition",
       "liquidity-tokens-term",
       "liquidity-tokens-definition",
       "mainnet-term",
       "mainnet-definition",
+      "mempool-term",
+      "mempool-definition",
       "mev-term",
       "mev-definition",
       "multisig-term",
@@ -1982,6 +2083,8 @@
       "nft-definition",
       "node-term",
       "node-definition",
+      "nonce-term",
+      "nonce-definition",
       "ommer-term",
       "ommer-definition",
       "onchain-term",
@@ -2014,6 +2117,10 @@
       "rpc-definition",
       "sequencer-term",
       "sequencer-definition",
+      "shielded-pool-term",
+      "shielded-pool-definition",
+      "slippage-term",
+      "slippage-definition",
       "smart-contract-term",
       "smart-contract-definition",
       "stablecoin-term",
@@ -2024,6 +2131,8 @@
       "staking-pool-definition",
       "state-term",
       "state-definition",
+      "stealth-address-term",
+      "stealth-address-definition",
       "sybil-attack-term",
       "sybil-attack-definition",
       "terminal-total-difficulty-term",
@@ -2048,5 +2157,5 @@
       "zk-proof-definition"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

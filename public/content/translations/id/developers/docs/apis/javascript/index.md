@@ -300,8 +300,6 @@ _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tam
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Menyiapkan Web3js untuk menggunakan rantai blok Ethereum dalam JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan Web3.js di proyek Anda._
-- [Memanggil kontrak pintar dari JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Menggunakan token DAI, lihat cara memanggil fungsi kontrak menggunakan JavaScript._
 - [Mengirim transaksi menggunakan Web3 dan Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Panduan langkah demi langkah untuk mengirim transaksi dari backend._
 
 ## Tutorial: API JavaScript & WebSocket di Ethereum {#tutorials}

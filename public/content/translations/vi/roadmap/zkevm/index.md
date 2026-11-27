@@ -1,6 +1,6 @@
 ---
-title: zkEVM cho việc xác thực khối L1
-description: Tìm hiểu cách bằng chứng không kiến thức có thể xác minh việc thực thi khối Ethereum, cho phép thông lượng cao hơn và yêu cầu đối với trình xác thực thấp hơn.
+title: "zkEVM cho việc xác thực khối L1"
+description: "Tìm hiểu cách bằng chứng không kiến thức có thể xác minh việc thực thi khối Ethereum, cho phép thông lượng cao hơn và yêu cầu đối với trình xác thực thấp hơn."
 lang: vi
 template: roadmap
 ---
@@ -12,7 +12,7 @@ zkEVM là một công nghệ sử dụng [bằng chứng không kiến thức](/
 <AlertContent>
 <AlertTitle>Đừng nhầm lẫn với các bản cuộn zkEVM</AlertTitle>
 <AlertDescription>
-Trang này thảo luận về việc sử dụng zkEVM để xác minh việc thực thi khối L1 của Ethereum. Đối với các bản cuộn zkEVM sử dụng bằng chứng ZK để mở rộng quy mô Ethereum như các giải pháp lớp 2 (l2), hãy xem [bản cuộn không tri thức](/developers/docs/scaling/zk-rollups/).
+Trang này thảo luận về việc sử dụng zkEVM để xác minh việc thực thi khối L1 của Ethereum. Đối với các bản cuộn zkEVM sử dụng bằng chứng ZK để mở rộng quy mô Ethereum như các giải pháp lớp 2 (L2), hãy xem [bản cuộn không tri thức](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -99,10 +99,10 @@ Những triển khai này sử dụng các máy ảo dựa trên RISC-V để th
 
 Việc xác minh zkEVM L1 kết nối với một số hạng mục khác trong lộ trình Ethereum:
 
-- **[Cây Verkle](/roadmap/verkle-trees/)**: Cho phép các nhân chứng nhỏ hơn cho việc xác minh phi trạng thái, giảm lượng dữ liệu mà các trình chứng minh cần làm việc
-- **[Tính phi trạng thái](/roadmap/statelessness/)**: zkEVM là một yếu tố hỗ trợ chính—với các bằng chứng thực thi ZK, các nút không cần toàn bộ trạng thái để xác minh các khối
-- **[Tách biệt người đề xuất và người xây dựng (PBS)](/roadmap/pbs/)**: Những người xây dựng khối có khả năng tích hợp việc tạo bằng chứng, hoặc một thị trường trình chứng minh riêng biệt có thể xuất hiện
-- **[Tính chung cuộc trong một slot](/roadmap/single-slot-finality/)**: Việc tạo bằng chứng nhanh hơn có thể cho phép tính chung cuộc trong một slot với các đảm bảo mật mã học
+- **Cây trạng thái mới**: Một cây nhị phân hợp nhất ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), được đề xuất thay thế cho thiết kế [cây Verkle](/roadmap/verkle-trees/) trước đó, sẽ cho phép các witness nhỏ hơn cho việc xác minh phi trạng thái và được thiết kế để dễ chứng minh hơn
+- **[Tính phi trạng thái](/roadmap/statelessness/)**: zkEVM là một yếu tố hỗ trợ chính—với các bằng chứng ZK về việc thực thi, các nút không cần toàn bộ trạng thái để xác minh các khối
+- **[PBS](/roadmap/pbs/)**: Những người xây dựng khối có khả năng tích hợp việc tạo bằng chứng, hoặc một thị trường trình chứng minh riêng biệt có thể xuất hiện
+- **[Tính chung cuộc trong một slot](/roadmap/single-slot-finality/)**: Việc tạo bằng chứng nhanh hơn có thể cho phép tính chung cuộc trong một slot với các đảm bảo về mật mã học
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />

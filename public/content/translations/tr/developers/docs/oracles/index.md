@@ -383,33 +383,31 @@ Bazı merkeziyetsiz kâhin ağları, zincir dışı kâhin düğümlerinin kulla
 
 Chainlink'in [Keeper Ağı](https://chain.link/keepers), akıllı sözleşmelerin düzenli bakım görevlerini güveni en aza indirilmiş ve merkeziyetsiz bir şekilde dış kaynaklardan sağlaması için seçenekler sunar. Sözleşmenizi Keeper uyumlu hâle getirme ve Upkeep hizmetini kullanma hakkında bilgi için resmî [Keeper belgelerini](https://docs.chain.link/docs/chainlink-keepers/introduction/) okuyun.
 
-## Blokzincir kâhinleri nasıl kullanılır {#use-blockchain-oracles}
+## Blokzincir kâhinleri nasıl kullanılır? {#use-blockchain-oracles}
 
 Ethereum merkeziyetsiz uygulamanıza (dapp) entegre edebileceğiniz birden fazla kâhin uygulaması vardır:
 
 **[Chainlink](https://chain.link/)** - _Chainlink merkeziyetsiz kâhin ağları, herhangi bir blokzincirdeki gelişmiş akıllı sözleşmeleri desteklemek için kurcalamaya karşı korumalı girdiler, çıktılar ve hesaplamalar sağlar._
 
-**[RedStone Kâhinleri](https://redstone.finance/)** - _RedStone, gas için optimize edilmiş veri beslemeleri sağlayan merkeziyetsiz modüler bir kâhindir. Likit staking tokenleri (LST'ler), likit yeniden staking tokenleri (LRT'ler) ve Bitcoin staking türevleri gibi gelişmekte olan varlıklar için fiyat beslemeleri sunma konusunda uzmanlaşmıştır._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone, gaz için optimize edilmiş veri beslemeleri sağlayan merkeziyetsiz modüler bir kâhindir. Likit staking tokenleri (LST'ler), likit yeniden staking tokenleri (LRT'ler) ve Bitcoin staking türevleri gibi yeni ortaya çıkan varlıklar için fiyat beslemeleri sunma konusunda uzmanlaşmıştır._
 
 **[Chronicle](https://chroniclelabs.org/)** - _Chronicle, gerçekten ölçeklenebilir, uygun maliyetli, merkeziyetsiz ve doğrulanabilir kâhinler geliştirerek verileri zincir içine aktarmanın mevcut sınırlamalarının üstesinden gelir._
 
 **[Witnet](https://witnet.io/)** - _Witnet, akıllı sözleşmelerin güçlü kripto-ekonomik garantilerle gerçek dünya olaylarına tepki vermesine yardımcı olan izinsiz, merkeziyetsiz ve sansüre dirençli bir kâhindir._
 
-**[UMA Kâhini](https://uma.xyz)** - _UMA'nın iyimser kâhini, akıllı sözleşmelerin sigorta, finansal türevler ve tahmin piyasaları dâhil olmak üzere farklı uygulamalar için her türlü veriyi hızlı bir şekilde almasına olanak tanır._
+**[UMA Oracle](https://uma.xyz)** - _UMA'nın iyimser kâhini, akıllı sözleşmelerin sigorta, finansal türevler ve tahmin piyasaları dâhil olmak üzere farklı uygulamalar için her türlü veriyi hızlı bir şekilde almasına olanak tanır._
 
 **[Tellor](https://tellor.io/)** - _Tellor, akıllı sözleşmenizin ihtiyaç duyduğu her an herhangi bir veriyi kolayca alması için şeffaf ve izinsiz bir kâhin protokolüdür._
 
-**[Band Protokolü](https://bandprotocol.com/)** - _Band Protokolü, gerçek dünya verilerini ve API'leri bir araya getiren ve akıllı sözleşmelere bağlayan zincirler arası bir veri kâhini platformudur._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol, gerçek dünya verilerini ve API'leri bir araya getirip akıllı sözleşmelere bağlayan zincirler arası bir veri kâhini platformudur._
 
-**[Pyth Ağı](https://pyth.network/)** - _Pyth ağı, kurcalamaya karşı korumalı, merkeziyetsiz ve kendi kendini idame ettiren bir ortamda sürekli gerçek dünya verilerini zincir içinde yayınlamak için tasarlanmış birinci taraf bir finansal kâhin ağıdır._
+**[Pyth Network](https://pyth.network/)** - _Pyth ağı, kurcalamaya dirençli, merkeziyetsiz ve kendi kendini idame ettiren bir ortamda sürekli gerçek dünya verilerini zincir içinde yayınlamak için tasarlanmış birinci taraf bir finansal kâhin ağıdır._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO, akıllı sözleşmeler için merkeziyetsiz bir çözümde daha fazla kaynak şeffaflığı, güvenlik ve ölçeklenebilirlik sağlayan birinci taraf kâhin çözümleri sunmaktadır_
+**[API3 DAO](https://api3.org/)** - _API3 DAO, akıllı sözleşmeler için merkeziyetsiz bir çözümde daha fazla kaynak şeffaflığı, güvenlik ve ölçeklenebilirlik sunan birinci taraf kâhin çözümleri sunmaktadır_
 
-**[Supra](https://supra.com/)** - Tüm blokzincirleri, halka açık (L1'ler ve L2'ler) veya özel (işletmeler) birbirine bağlayan, zincir içi ve zincir dışı kullanım senaryoları için kullanılabilecek merkeziyetsiz kâhin fiyat beslemeleri sağlayan dikey olarak entegre edilmiş bir zincirler arası çözümler araç takımı. 
+**[Supra](https://supra.com/)** - Herkese açık (L1'ler ve L2'ler) veya özel (kurumsal) tüm blokzincirleri birbirine bağlayan, zincir içi ve zincir dışı kullanım senaryoları için kullanılabilecek merkeziyetsiz kâhin fiyat beslemeleri sağlayan, dikey olarak entegre edilmiş zincirler arası çözümler araç takımıdır. 
 
-**[Gas Ağı](https://gas.network/)** - Blokzincir genelinde gerçek zamanlı gas fiyatı verileri sağlayan dağıtık bir kâhin platformu. Önde gelen gas fiyatı veri sağlayıcılarından gelen verileri zincir içine taşıyarak Gas Ağı, birlikte çalışabilirliği artırmaya yardımcı olmaktadır. Gas Ağı, Ethereum Ana Ağı ve birçok önde gelen L2 dâhil olmak üzere 35'ten fazla zincir için verileri destekler.
-
-**[DIA](https://www.diadata.org/)** - Tüm büyük varlık sınıflarında 20.000'den fazla varlık için doğrulanabilir veri beslemeleri sunan zincirler arası bir kâhin ağı. DIA, ham ticaret verilerini doğrudan 100'den fazla birincil piyasadan alır ve zincir içinde hesaplayarak, herhangi bir kullanım senaryosu için özel yapılandırmalarla tam veri şeffaflığı ve doğrulanabilirliği sağlar.
+**[DIA](https://www.diadata.org/)** - Tüm büyük varlık sınıflarında 20.000'den fazla varlık için doğrulanabilir veri beslemeleri sunan zincirler arası bir kâhin ağıdır. DIA, ham ticaret verilerini doğrudan 100'den fazla birincil piyasadan alır ve zincir içinde hesaplayarak, her türlü kullanım senaryosu için özel yapılandırmalarla tam veri şeffaflığı ve doğrulanabilirliği sağlar.
 
 **[Stork](https://stork.network)** - Stork, sürekli vadeli işlem piyasaları, borç verme protokolleri ve DeFi ekosistemleri dâhil olmak üzere çok çeşitli kullanım senaryolarını destekleyerek ultra düşük gecikme süresiyle fiyat verileri sunar ve yeni varlıklar listelendiğinde hızla desteklenir.
 

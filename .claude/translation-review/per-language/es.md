@@ -1,5 +1,48 @@
 # Spanish (es) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.9/10
+Scope: 15 markdown files, changed lines; 8 diffs read in full, sweeps over all 15.
+
+**Fixed in this branch (7 critical, #112):** patricia-merkle-trie `interfaz de programacion de aplicaciones (API) JSON-RPC` -> `API JSON-RPC`, `codificacion de prefijo de longitud recursiva (RLP)` -> `codificacion RLP`, `Go Ethereum (Geth)` -> `Geth` (English bare in all three); ethrex `capa 1 (L1)` / `capa 2 (L2)` expansions -> `L1` / `(L2)`; statelessness `zkEVM para la verificacion de la capa 1 (L1)` -> `verificacion L1` and `organizacion autonoma descentralizada (DAO)` -> `DAO`; supply `finanzas descentralizadas (DeFi)` -> `DeFi`.
+
+**Open:** `(PBS)` appended to `separacion proponente-constructor` (3 sites); `Red principal` for Mainnet in the clients table is the dev convention; `tarifa`/`comision` for fee not unified in transactions.
+
+**Notes:** run-a-node keeps the informal `tu` register of dev while nodes-and-clients uses `usted` (per-file, unchanged). Sweeps clean for U+3002, U+2060, foreign scripts, SPDX.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.6/10
+Scope: 71 markdown pages + 20 JSON namespaces, incremental updates of outdated content, changed lines only (full diff read; sweeps for U+3002/U+2060/foreign script clean; verify-structure shows only pre-existing errors).
+
+**Fixed in this branch:**
+
+- `bridges` description: `aplicaciones descentralizadas (dapp)` -> `dapps` (English bare, meta slot, #80/#112)
+- `page-developers-tools-descriptions`: `interfaces binarias de aplicación (ABI)` -> `ABI` (loop-decoder), `capa 2 (L2)` expansion removed + `rollup` -> `rollups` (l2beat)
+- `glossary.json` `shielded-pool-term` English `Shielded pool` -> `Fondo blindado` (matches `glossary-tooltip.json`)
+- `zero-knowledge-proofs` description: `reclamo` -> `afirmacion` for claim (known-patterns #75)
+- `community/research` link text `centrada en los rollup` -> `rollups` (plural regressed)
+
+**Open (native call needed):**
+
+- tu/usted split in meta descriptions (Aprende vs Aprenda/Descubra, same section) and body (decentralized-identity, defi, governance usted; about, desci, nft tu)
+- `El EIP` vs `La EIP` mixed (pectra EIP-2935 `El`; tree 36 `el` / 81 `la`)
+- `escrow` term kept English in `glossary.json` while `page-get-eth` uses `deposito en garantia`; `tesorerias` for tokenized treasuries (erc-7540); `Recorrido` vs `Guia paso a paso` for the same ERC-20 tutorial link text (erc-20 vs tokens/index)
+- English decimal/thousand separators in gasper (`44.4 millones`, `1,700 dolares`) vs `12 000` house style
+- `page-what-is-ether.json` lost its final newline (cosmetic); pre-existing 14 `(DeFi)` expansions in dev-tools descriptions (untouched lines)
+
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.0/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: 33 values with bare lowercase `la l1`/`la l2` uppercased.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: slot (glamsterdam x2), Red principal casing (zk-rollups x5). Open: parent as principal (SQL), English number separators 15.7/2,048, acronym over-expansion, tu/usted split in erc-721.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: gas/verkle inline code, slot, desplegado for deploy (6 JSON keys). Open: tu/usted split in JSON, relay retransmisor vs rele, compounding composicion.
+
 ## PR #18942 (intl/pending-dev) -- 2026-08-05 -- Score 9.0/10
 Scope: accounts `CREATE2` + `page-app-descriptions`/`page-apps`/`page-developers-tools-descriptions`/`page-values`.
 
@@ -111,3 +154,53 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 **Open (warnings):**
 
 - `Desarrollado por Ethereum` for Powered by; `Tesorerías` for treasuries; public-sector use-cases on tú vs usted elsewhere.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.8/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+
+**Open (native call needed):**
+
+- developers/docs/smart-contracts/security/index.md:102: ETHGlossary deviation. The `layer-2-l2` entry (high confidence, no script_rule) is `capa 2 (l2)`, with a note to keep it lowercase in body text. This PR changed the old `(l2)` to `(L2)`. The rule is " (`[capa 2 (L2)](/layer-2/)` -> `[capa 2 (l2)](/layer-2/)`)
+- 8 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is accurate and complies with the glossary across a large rewrite of prediction-markets and the plasma tutorial. The fixes needed are three English tag labels in founders and one L2 casing deviation. The rest are tú/usted and terminology consistency issues for a native reviewer.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: `plugin` vs `complemento` differs between files; tú/usted differs between tutorials (pre-existing).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.8/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- ABI/EVM spelled out where English leaves them bare (#80, prose -> warning)
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` -> `incentivo` instead of the glossary term (avoids tautology); API spelled out in full twice.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

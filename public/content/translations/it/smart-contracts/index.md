@@ -1,7 +1,7 @@
 ---
 title: Introduzione agli smart contract
 metaTitle: "Smart contract: cosa sono e i loro vantaggi"
-description: Un'introduzione non tecnica agli smart contract
+description: Cosa sono gli smart contract? Un'introduzione non tecnica ai programmi che vengono eseguiti su Ethereum e alimentano app come DeFi, NFT e DAO senza intermediari.
 lang: it
 ---
 

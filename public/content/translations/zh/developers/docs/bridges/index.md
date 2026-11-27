@@ -1,10 +1,10 @@
 ---
 title: "跨链桥"
-description: "面向开发者的跨链桥概述"
+description: "跨链桥开发者指南：跨链消息传递和代币跨链的工作原理、跨链桥类型和信任假设，以及如何在去中心化应用 (dapp) 中集成它们。"
 lang: zh
 ---
 
-随着一层网络 (l1) 区块链和二层网络 (l2) [扩容](/developers/docs/scaling/)解决方案的激增，以及越来越多去中心化应用 (dapp) 走向跨链，跨链通信和资产转移的需求已成为网络基础设施的重要组成部分。存在不同类型的跨链桥来帮助实现这一目标。
+随着一层网络 (L1) 区块链和二层网络 (L2) [扩容](/developers/docs/scaling/)解决方案的激增，以及越来越多去中心化应用 (dapp) 走向跨链，跨链通信和资产转移的需求已成为网络基础设施的重要组成部分。存在不同类型的跨链桥来帮助实现这一目标。
 
 ## 跨链桥的需求 {#need-for-bridges}
 
@@ -24,7 +24,7 @@ lang: zh
 
 - 跨链转移任何数据、信息和资产。
 - 为协议解锁新功能和用例，因为跨链桥扩展了协议可提供内容的设计空间。例如，最初部署在[以太坊](/)主网上的流动性挖矿协议可以跨所有兼容 EVM 的链提供流动性池。
-- 利用不同区块链优势的机会。例如，开发者可以通过在汇总 (rollups) 和侧链上部署他们的 dapp 来受益于不同二层网络 (l2) 解决方案提供的较低费用，并且用户可以在它们之间进行跨链。
+- 利用不同区块链优势的机会。例如，开发者可以通过在汇总 (rollups) 和侧链上部署他们的 dapp 来受益于不同二层网络 (L2) 解决方案提供的较低费用，并且用户可以在它们之间进行跨链。
 - 来自不同区块链生态系统的开发者之间进行协作以构建新产品。
 - 吸引来自不同生态系统的用户和社区使用他们的 dapp。
 
@@ -123,15 +123,15 @@ lang: zh
 ## 延伸阅读 {#further-reading}
 
 - [区块链跨链桥](/bridges/) – ethereum.org
-- [L2BEAT 跨链桥风险框架](https://l2beat.com/bridges/summary)
+- [ETHBEAT 跨链桥风险框架](https://ethbeat.org/interop/summary)
 - [区块链跨链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 2021 年 9 月 8 日 – Dmitriy Berenzon
-- [互操作性不可能三角](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 2021 年 10 月 1 日 – Arjun Bhuptani
+- [互操作性三难困境](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 2021 年 10 月 1 日 – Arjun Bhuptani
 - [集群：受信任和信任最小化的跨链桥如何塑造多链格局](https://blog.celestia.org/clusters/) - 2021 年 10 月 4 日 – Mustafa Al-Bassam
-- [LI.FI：对于跨链桥，信任是一个光谱](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 2022 年 4 月 28 日 – Arjun Chand
+- [LI.FI：对于跨链桥，信任是一个谱系](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 2022 年 4 月 28 日 – Arjun Chand
 - [Rollup 互操作性解决方案的现状](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 2024 年 6 月 20 日 – Alex Hook
-- [利用共享安全实现安全的跨链互操作性：Lagrange 状态委员会及其他](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 2024 年 6 月 12 日 – Emmanuel Awosika
+- [利用共享安全性实现安全的跨链互操作性：Lagrange 状态委员会及其他](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 2024 年 6 月 12 日 – Emmanuel Awosika
 
-此外，以下是 [James Prestwich](https://twitter.com/_prestwich) 的一些富有洞察力的演讲，可以帮助加深对跨链桥的理解：
+此外，这里有一些由 [James Prestwich](https://twitter.com/_prestwich) 提供的富有洞察力的演示文稿，可以帮助你更深入地了解跨链桥：
 
 - [构建跨链桥，而不是围墙花园](https://youtu.be/ZQJWMiX4hT0)
 - [剖析跨链桥](https://youtu.be/b0mC-ZqN8Oo)

@@ -7,7 +7,7 @@ alt: "Roadmap di Ethereum"
 template: roadmap
 ---
 
-Ethereum viene scalato utilizzando i [layer 2](/layer-2/#rollups) (noti anche come rollup), che raggruppano le transazioni e inviano l'output a Ethereum. Anche se i rollup sono fino a otto volte meno costosi della Mainnet di Ethereum, è possibile ottimizzarli ulteriormente per ridurre i costi per gli utenti finali. I rollup si basano anche su alcuni componenti centralizzati che gli sviluppatori possono rimuovere man mano che i rollup maturano.
+Ethereum viene scalato utilizzando i [layer 2](/layer-2/learn/#how-does-layer-2-work) (noti anche come rollup), che raggruppano le transazioni e inviano l'output a Ethereum. Anche se i rollup sono fino a otto volte meno costosi della Mainnet di Ethereum, è possibile ottimizzarli ulteriormente per ridurre i costi per gli utenti finali. I rollup si basano anche su alcuni componenti centralizzati che gli sviluppatori possono rimuovere man mano che i rollup maturano.
 
 <Alert variant="update">
 <AlertContent>
@@ -43,9 +43,15 @@ Questo secondo passaggio è noto come ["Danksharding"](/roadmap/danksharding/). 
 
 ## Decentralizzare i rollup {#decentralizing-rollups}
 
-I [rollup](/layer-2) stanno già scalando Ethereum. Un [ricco ecosistema di progetti di rollup](https://l2beat.com/scaling/tvs) sta consentendo agli utenti di effettuare transazioni in modo rapido ed economico, con una serie di garanzie di sicurezza. Tuttavia, i rollup sono stati avviati utilizzando sequencer centralizzati (computer che eseguono tutta l'elaborazione e l'aggregazione delle transazioni prima di inviarle a Ethereum). Ciò è vulnerabile alla censura, perché gli operatori dei sequencer possono essere sanzionati, corrotti o altrimenti compromessi. Allo stesso tempo, i [rollup variano](https://l2beat.com/scaling/summary) nel modo in cui convalidano i dati in entrata. Il modo migliore è che i "prover" inviino [prove di frode](/glossary/#fraud-proof) o prove di validità, ma non tutti i rollup ci sono ancora arrivati. Anche quei rollup che utilizzano prove di validità/frode si avvalgono di un piccolo gruppo di prover noti. Pertanto, il prossimo passo fondamentale per scalare Ethereum è distribuire la responsabilità dell'esecuzione di sequencer e prover a un numero maggiore di persone.
+I [rollup](/layer-2) stanno già scalando Ethereum. Un [ricco ecosistema di progetti di rollup](https://ethbeat.org/layer2s/tvs) sta consentendo agli utenti di effettuare transazioni in modo rapido ed economico, con una serie di garanzie di sicurezza. Tuttavia, i rollup sono stati avviati utilizzando sequencer centralizzati (computer che eseguono tutta l'elaborazione e l'aggregazione delle transazioni prima di inviarle a Ethereum). Ciò è vulnerabile alla censura, perché gli operatori dei sequencer possono essere sanzionati, corrotti o altrimenti compromessi. Allo stesso tempo, i [rollup variano](https://ethbeat.org/layer2s/summary) nel modo in cui convalidano i dati in entrata. Il modo migliore è che i "prover" inviino [prove di frode](/glossary/#fraud-proof) o prove di validità, ma non tutti i rollup ci sono ancora arrivati. Anche quei rollup che utilizzano prove di validità/frode si avvalgono di un piccolo gruppo di prover noti. Pertanto, il prossimo passo fondamentale per scalare Ethereum è distribuire la responsabilità dell'esecuzione di sequencer e prover a un numero maggiore di persone.
 
 <ButtonLink variant="outline-color" href="/developers/docs/scaling/">Maggiori informazioni sui rollup</ButtonLink>
+
+## Scalare la Mainnet di Ethereum con le zkEVM {#zkevm}
+
+I rollup non sono l'unico percorso per scalare. Oggi ogni [validatore](/glossary/#validator) riesegue ogni transazione in ogni blocco, il che limita quanto la Mainnet di Ethereum possa elaborare senza aumentare i requisiti hardware. Con una zkEVM, un singolo prover esegue il blocco e genera una [prova a conoscenza zero](/zero-knowledge-proofs/) che attesta che l'esecuzione è stata corretta, e i validatori verificano invece tale prova. Verificare una prova è molto più economico che rieseguire, quindi la Mainnet può elaborare più transazioni senza costringere i validatori a utilizzare hardware costosi.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">Maggiori informazioni sulla zkEVM</ButtonLink>
 
 ## Progressi attuali {#current-progress}
 

@@ -51,7 +51,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-此函数返回金库持有的基础资产总额。
+此函数返回金库管理的基础资产总额，包括其已投入其他地方运作的资产，并已扣除任何费用。
 
 #### convertToShares {#convertoshares}
 
@@ -139,7 +139,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-此函数从 `owner` 销毁 `shares`，并从金库向 `receiver` 发送恰好 `assets` 数量的代币。
+此函数从 `owner` 销毁 `shares`，并从金库向 `receiver` 发送恰好 `assets` 个代币。
 
 #### maxRedeem {#maxredeem}
 
@@ -183,7 +183,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### 接口映射 {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### 事件 {#events}
 

@@ -245,8 +245,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## 教程：在以太坊上使用非同质化代币 (ERC-721) 进行构建 {#tutorials}
 
-- [Vyper ERC-721 合约演练](/developers/tutorials/erc-721-vyper-annotated-code/) _– 用 Vyper 编写的完整 ERC-721 NFT 合约的带注释演练。_
+- [Vyper ERC-721 合约演练](/developers/tutorials/erc-721-vyper-annotated-code/) _– 对使用 Vyper 编写的完整 ERC-721 NFT 合约的带注释演练。_
 - [如何编写和部署 NFT（第 1/3 部分）](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 编写和部署你的第一个 ERC-721 智能合约的分步指南。_
 - [如何铸造 NFT（第 2/3 部分）](/developers/tutorials/how-to-mint-an-nft/) _– 如何使用你部署的智能合约和 Web3 铸造 ERC-721 NFT。_
 - [如何在钱包中查看你的 NFT（第 3/3 部分）](/developers/tutorials/how-to-view-nft-in-metamask/) _– 部署后如何在梅塔马斯克中显示你铸造的 NFT。_
-- [NFT 铸造器教程](/developers/tutorials/nft-minter/) _– 使用 React 前端、梅塔马斯克和 Alchemy 构建全栈 NFT 铸造去中心化应用 (dapp)。_

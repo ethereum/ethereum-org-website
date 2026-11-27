@@ -18,12 +18,11 @@ Ikiwa wewe ni mgeni kwa mada ya nodi, tunapendekeza kwanza uangalie utangulizi w
 "Nodi" ni mfano wowote wa programu ya mteja wa Ethereum ambayo imeunganishwa na kompyuta zingine ambazo pia zinaendesha programu ya Ethereum, na kuunda mtandao. Mteja ni utekelezaji wa Ethereum ambao huthibitisha data dhidi ya sheria za itifaki na kuweka mtandao salama. Nodi inapaswa kuendesha wateja wawili: mteja wa mwafaka na kiteja cha utekelezaji.
 
 - Kiteja cha utekelezaji (pia kinajulikana kama Injini ya Utekelezaji, mteja wa EL au zamani mteja wa Eth1) husikiliza miamala mipya inayotangazwa kwenye mtandao, kuitekeleza katika EVM, na kushikilia hali ya hivi punde na hifadhidata ya data zote za sasa za Ethereum.
-- Mteja wa mwafaka (pia anajulikana kama nodi ya kinara, mteja wa CL au zamani mteja wa Eth2) hutekeleza algoriti ya mwafaka ya Uthibitisho wa Dau (PoS), ambayo huwezesha mtandao kufikia makubaliano kulingana na data iliyothibitishwa kutoka kwa kiteja cha utekelezaji. Pia kuna programu ya tatu, inayojulikana kama 'mthibitishaji' ambayo inaweza kuongezwa kwa mteja wa mwafaka, kuruhusu nodi kushiriki katika kulinda mtandao.
+- Mteja wa mwafaka (pia anajulikana kama Nodi ya Kinara, mteja wa CL au zamani mteja wa Eth2) hutekeleza algoriti ya mwafaka ya Uthibitisho wa Dau (PoS), ambayo huwezesha mtandao kufikia makubaliano kulingana na data iliyothibitishwa kutoka kwa kiteja cha utekelezaji. Pia kuna kipande cha tatu cha programu, kinachojulikana kama 'mthibitishaji' ambacho kinaweza kuongezwa kwa mteja wa mwafaka, kuruhusu nodi kushiriki katika kulinda mtandao.
 
-Wateja hawa hufanya kazi pamoja ili kufuatilia kichwa cha mnyororo wa Ethereum na kuruhusu watumiaji kuingiliana na mtandao wa Ethereum. Muundo wa kawaida wenye vipande vingi vya programu vinavyofanya kazi pamoja unaitwa [utata uliofungwa](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Mbinu hii ilifanya iwe rahisi kutekeleza [Unganisho](/roadmap/merge) bila mshono, hufanya programu ya mteja iwe rahisi kudumisha na kuendeleza, na kuwezesha utumiaji tena wa wateja binafsi, kwa mfano, katika [mfumo wa ikolojia wa tabaka la 2 (l2)](/layer-2/).
+Wateja hawa hufanya kazi pamoja ili kufuatilia kichwa cha mnyororo wa Ethereum na kuruhusu watumiaji kuingiliana na mtandao wa Ethereum. Muundo wa moduli wenye vipande vingi vya programu vinavyofanya kazi pamoja unaitwa [utata uliofungwa](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Mbinu hii ilifanya iwe rahisi kutekeleza [Unganisho](/roadmap/merge) bila mshono, hufanya programu ya mteja iwe rahisi kudumisha na kuendeleza, na kuwezesha utumiaji tena wa wateja binafsi, kwa mfano, katika [mfumo wa ikolojia wa tabaka la 2 (L2)](/layer-2/).
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-Mchoro uliorahisishwa wa kiteja cha utekelezaji na mteja wa mwafaka waliounganishwa.
+<NodeClientsDiagram />
 
 ### Anuwai ya wateja {#client-diversity}
 
@@ -92,14 +91,14 @@ Kuendesha nodi hukuruhusu kutumia Ethereum moja kwa moja, bila hitaji la uaminif
 
 Kuendesha nodi yako mwenyewe hukuwezesha kutumia Ethereum kwa njia ya faragha, ya kujitegemea na bila hitaji la uaminifu. Huhitaji kuamini mtandao kwa sababu unaweza kuthibitisha data wewe mwenyewe na mteja wako. "Usiamini, thibitisha" ni msemo maarufu wa mnyororo wa vitalu.
 
-- Nodi yako huthibitisha miamala na vitalu vyote dhidi ya sheria za mwafaka yenyewe. Hii inamaanisha sio lazima utegemee nodi zingine zozote kwenye mtandao au kuziwekea imani kamili.
-- Unaweza kutumia mkoba wa Ethereum na nodi yako mwenyewe. Unaweza kutumia programu tumizi iliyogatuliwa (dapp) kwa usalama zaidi na kwa faragha kwa sababu hutalazimika kuvujisha anwani na salio lako kwa waamuzi. Kila kitu kinaweza kuangaliwa na mteja wako mwenyewe. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), na [mikoba mingine mingi](/wallets/find-wallet/) hutoa uingizaji wa RPC, na kuwaruhusu kutumia nodi yako.
-- Unaweza kuendesha na kujipangia huduma zingine ambazo zinategemea data kutoka kwa Ethereum. Kwa mfano, hii inaweza kuwa mthibitishaji wa Mnyororo wa Beacon, programu kama tabaka la 2 (l2), miundombinu, wachunguzi wa kitalu, wasindikaji wa malipo, n.k.
-- Unaweza kutoa [ncha za RPC](/developers/docs/apis/json-rpc/) zako maalum. Unaweza hata kutoa ncha hizi hadharani kwa jamii ili kuwasaidia kuepuka watoa huduma wakubwa waliowekwa kati.
-- Unaweza kuunganisha kwenye nodi yako kwa kutumia **Mawasiliano ya Kati ya Michakato (IPC)** au kuandika upya nodi ili kupakia programu yako kama programu-jalizi. Hii inatoa ucheleweshaji mdogo, ambayo husaidia sana, k.m., wakati wa kuchakata data nyingi kwa kutumia maktaba za Web3 au unapohitaji kubadilisha miamala yako haraka iwezekanavyo (yaani, kukimbia mbele).
-- Unaweza kuweka dhamana ya ETH moja kwa moja ili kulinda mtandao na kupata tuzo. Tazama [uwekaji dhamana wa kujitegemea](/staking/solo/) ili kuanza.
+- Nodi yako huthibitisha miamala yote na vitalu dhidi ya sheria za mwafaka yenyewe. Hii inamaanisha sio lazima utegemee nodi zingine zozote kwenye mtandao au kuziamini kikamilifu.
+- Unaweza kutumia mkoba wa Ethereum na nodi yako mwenyewe. Unaweza kutumia dapps kwa usalama zaidi na kwa faragha kwa sababu hutalazimika kuvujisha anwani na salio lako kwa waamuzi. Kila kitu kinaweza kuangaliwa na mteja wako mwenyewe. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), na [mikoba mingine mingi](/wallets/find-wallet/) hutoa uingizaji wa RPC, na kuiruhusu kutumia nodi yako.
+- Unaweza kuendesha na kujipangishia huduma zingine ambazo zinategemea data kutoka Ethereum. Kwa mfano, hii inaweza kuwa mthibitishaji wa Mnyororo wa Beacon, programu kama tabaka la 2 (L2), miundombinu, wavinjari wa kitalu, wasindikaji wa malipo, n.k.
+- Unaweza kutoa [miisho ya RPC](/developers/docs/apis/json-rpc/) yako maalum. Unaweza hata kutoa miisho hii hadharani kwa jumuiya ili kuwasaidia kuepuka watoa huduma wakubwa waliowekwa kati.
+- Unaweza kuunganisha kwenye nodi yako ukitumia **Mawasiliano ya Kati ya Michakato (IPC)** au kuandika upya nodi ili kupakia programu yako kama programu-jalizi. Hii inatoa ucheleweshaji mdogo, ambao husaidia sana, k.m., wakati wa kuchakata data nyingi kwa kutumia maktaba za Web3 au unapohitaji kubadilisha miamala yako haraka iwezekanavyo (yaani, kutangulia).
+- Unaweza kuweka dhamana ya ETH moja kwa moja ili kulinda mtandao na kupata tuzo. Angalia [uwekaji dhamana wa kujitegemea](/staking/solo/) ili kuanza.
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### Faida za mtandao {#network-benefits}
 
@@ -128,24 +127,24 @@ Ikiwa mtu anaendesha nodi ya Ethereum na API ya umma katika jumuiya yako, unawez
 
 Kwa upande mwingine, ikiwa unaendesha mteja, unaweza kushiriki na marafiki zako ambao wanaweza kuihitaji.
 
-## Wateja wa utekelezaji {#execution-clients}
+## Viteja vya utekelezaji {#execution-clients}
 
-Jumuiya ya Ethereum hudumisha wateja wengi wa utekelezaji wa chanzo huria (hapo awali walijulikana kama 'wateja wa Eth1', au tu 'wateja wa Ethereum'), waliotengenezwa na timu tofauti kwa kutumia lugha tofauti za programu. Hii inafanya mtandao kuwa na nguvu na [anuwai](/developers/docs/nodes-and-clients/client-diversity/) zaidi. Lengo kuu ni kufikia anuwai bila mteja yeyote kutawala ili kupunguza hatua zozote za kutofaulu.
+Jumuiya ya Ethereum hudumisha viteja vingi vya utekelezaji vya chanzo wazi (hapo awali vilijulikana kama 'wateja wa Eth1', au 'wateja wa Ethereum' tu), vilivyotengenezwa na timu tofauti kwa kutumia lugha tofauti za programu. Hii inafanya mtandao kuwa na nguvu zaidi na [anuwai](/developers/docs/nodes-and-clients/client-diversity/) zaidi. Lengo kuu ni kufikia anuwai bila mteja yeyote kutawala ili kupunguza hatua zozote za kutofaulu.
 
-Jedwali hili linatoa muhtasari wa wateja tofauti. Wote hupita [majaribio ya wateja](https://github.com/ethereum/tests) na hudumishwa kikamilifu ili kusasishwa na maboresho ya mtandao.
+Jedwali hili linatoa muhtasari wa viteja tofauti. Vyote hupita [majaribio ya mteja](https://github.com/ethereum/tests) na hudumishwa kikamilifu ili kusasishwa na maboresho ya mtandao.
 
-| Mteja                                                                   | Lugha   | Mifumo ya uendeshaji     | Mitandao                | Mikakati ya usawazishaji                                            | Upunguzaji wa hali   |
+| Kiteja                                                                   | Lugha      | Mifumo ya uendeshaji  | Mitandao                | Mikakati ya usawazishaji                                   | Upunguzaji wa hali |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
 | [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mtandao Mkuu, Sepolia, Hoodi | [Snap](#snap-sync), [Kamili](#full-sync)                     | Kumbukumbu, Iliyopunguzwa |
 | [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mtandao Mkuu, Sepolia, Hoodi | [Snap](#snap-sync), Haraka, [Kamili](#full-sync)               | Kumbukumbu, Iliyopunguzwa |
 | [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mtandao Mkuu, Sepolia, Hoodi | [Snap](#snap-sync), [Haraka](#fast-sync), [Kamili](#full-sync) | Kumbukumbu, Iliyopunguzwa |
 | [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mtandao Mkuu, Sepolia, Hoodi | [Kamili](#full-sync)                                         | Kumbukumbu, Iliyopunguzwa |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mtandao Mkuu, Sepolia, Hoodi | [Snap](#snap-sync), [Kamili](#full-sync)                     | Iliyopunguzwa          |
 | [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mtandao Mkuu, Sepolia, Hoodi | [Kamili](#full-sync)                                         | Kumbukumbu, Iliyopunguzwa |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Kamili](#full-sync)                                         | Iliyopunguzwa          |
 
 Kwa zaidi kuhusu mitandao inayotumika, soma kuhusu [mitandao ya Ethereum](/developers/docs/networks/).
 
-Kila mteja ana matukio ya kipekee ya matumizi na faida, kwa hivyo unapaswa kuchagua moja kulingana na mapendeleo yako mwenyewe. Anuwai huruhusu utekelezaji kulenga vipengele tofauti na hadhira ya watumiaji. Unaweza kutaka kuchagua mteja kulingana na vipengele, usaidizi, lugha ya programu, au leseni.
+Kila kiteja kina matukio ya kipekee ya matumizi na faida, kwa hivyo unapaswa kuchagua kimoja kulingana na mapendeleo yako mwenyewe. Anuwai huruhusu utekelezaji kulenga vipengele tofauti na hadhira ya watumiaji. Unaweza kutaka kuchagua kiteja kulingana na vipengele, usaidizi, lugha ya programu, au leseni.
 
 ### Besu {#besu}
 
@@ -155,12 +154,11 @@ Hyperledger Besu ni mteja wa Ethereum wa kiwango cha biashara kwa mitandao ya um
 
 ### Erigon {#erigon}
 
-Erigon, iliyojulikana zamani kama Turbo-Geth, ilianza kama mchepuo wa Go Ethereum iliyoelekezwa kwenye kasi na ufanisi wa nafasi ya diski. Erigon ni utekelezaji uliojengwa upya kabisa wa Ethereum, kwa sasa umeandikwa katika Go lakini na utekelezaji katika lugha zingine zinazoendelezwa. Lengo la Erigon ni kutoa utekelezaji wa haraka, wa kawaida zaidi, na ulioboreshwa zaidi wa Ethereum. Inaweza kufanya usawazishaji kamili wa nodi ya kumbukumbu kwa kutumia karibu 2TB ya nafasi ya diski, chini ya siku 3.
-
+Erigon, iliyojulikana zamani kama Turbo-Geth, ilianza kama mchepuo wa Go Ethereum iliyoelekezwa kwenye kasi na ufanisi wa nafasi ya diski. Erigon ni utekelezaji uliojengwa upya kabisa wa Ethereum, ambao kwa sasa umeandikwa katika Go lakini ukiwa na utekelezaji katika lugha zingine zinazoendelezwa. Lengo la Erigon ni kutoa utekelezaji wa haraka, wa moduli zaidi, na ulioboreshwa zaidi wa Ethereum. Inaweza kufanya usawazishaji kamili wa nodi ya kumbukumbu kwa kutumia chini ya 3TB ya nafasi ya diski, chini ya siku 3.
 
 ### ethrex {#ethrex}
 
-ethrex ni kiteja cha utekelezaji cha Ethereum rahisi na cha moduli kilichoandikwa katika Rust na kutengenezwa na LambdaClass. Kimejengwa kwa kuzingatia uthibitishaji wa sifuri-maarifa, na msingi huo huo wa msimbo unaweza kufanya kazi kama kiteja cha utekelezaji cha tabaka la 1 (l1) na kama ZK-Rollup ya wathibitishaji wengi (tabaka la 2 (l2)). Kina leseni mbili chini ya leseni za Apache 2.0 na MIT.
+ethrex ni kiteja cha utekelezaji cha Ethereum rahisi na cha moduli kilichoandikwa katika Rust na kutengenezwa na LambdaClass. Kimejengwa kwa kuzingatia uthibitishaji wa sifuri-maarifa, na msingi huo huo wa msimbo unaweza kufanya kazi kama kiteja cha utekelezaji cha L1 na kama ZK-Rollup ya wathibitishaji wengi (L2). Kina leseni mbili chini ya leseni za Apache 2.0 na MIT.
 
 Jifunze zaidi kwa kusoma [nyaraka za ethrex](https://docs.ethrex.xyz/) au kuangalia [hifadhi ya GitHub ya ethrex](https://github.com/lambdaclass/ethrex).
 ### Go Ethereum {#geth}
@@ -187,16 +185,6 @@ Reth iko tayari kwa uzalishaji, na inafaa kwa matumizi katika mazingira muhimu y
 
 Jifunze zaidi kwa kuangalia [Kitabu cha Reth](https://reth.rs/), au [hifadhi ya GitHub ya Reth](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
-### Katika maendeleo {#execution-in-development}
-
-Wateja hawa bado wako katika hatua za awali za maendeleo na bado hawapendekezwi kwa matumizi ya uzalishaji.
-
-#### EthereumJS {#ethereumjs}
-
-Kiteja cha Utekelezaji cha EthereumJS (EthereumJS) kimeandikwa katika TypeScript na kinajumuisha idadi ya vifurushi, ikijumuisha misingi ya Ethereum inayowakilishwa na madarasa ya Kitalu, Muamala, na Merkle-Patricia Trie na vipengele vya msingi vya mteja ikijumuisha utekelezaji wa Mashine Pepe ya Ethereum (EVM), darasa la mnyororo wa vitalu, na mrundikano wa mitandao wa devp2p.
-
-Jifunze zaidi kuihusu kwa kusoma [nyaraka](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master) zake
-
 ## Wateja wa mwafaka {#consensus-clients}
 
 Kuna wateja wengi wa mwafaka (hapo awali walijulikana kama wateja wa 'Eth2') kusaidia [maboresho ya mwafaka](/roadmap/beacon-chain/). Wanawajibika kwa mantiki yote inayohusiana na mwafaka ikijumuisha algoriti ya kuchagua mchepuo, kuchakata uthibitisho na kudhibiti tuzo na adhabu za [Uthibitisho wa Dau (PoS)](/developers/docs/consensus-mechanisms/pos).
@@ -218,9 +206,9 @@ Nyaraka zinaweza kupatikana katika [Kitabu cha Lighthouse](https://lighthouse-bo
 
 ### Lodestar {#lodestar}
 
-Lodestar ni utekelezaji wa mteja wa mwafaka ulio tayari kwa uzalishaji ulioandikwa katika TypeScript chini ya leseni ya LGPL-3.0. Inadumishwa na ChainSafe Systems na ndiyo mpya zaidi kati ya wateja wa mwafaka kwa waweka dhamana wa kujitegemea, wasanidi programu na watafiti. Lodestar inajumuisha nodi ya kinara na mteja wa mthibitishaji inayoendeshwa na utekelezaji wa JavaScript wa itifaki za Ethereum. Lodestar inalenga kuboresha utumiaji wa Ethereum na wateja wepesi, kupanua ufikiaji kwa kundi kubwa la wasanidi programu na kuchangia zaidi katika anuwai ya mfumo wa ikolojia.
+Lodestar ni utekelezaji wa mteja wa mwafaka ulio tayari kwa uzalishaji ulioandikwa katika TypeScript chini ya leseni ya Apache-2.0. Inadumishwa na ChainSafe Systems na ndiyo mpya zaidi kati ya wateja wa mwafaka kwa waweka dhamana wa kujitegemea, wasanidi programu na watafiti. Lodestar inajumuisha nodi ya kinara na mteja wa mthibitishaji inayoendeshwa na utekelezaji wa JavaScript wa itifaki za Ethereum. Lodestar inalenga kuboresha utumiaji wa Ethereum na viteja vyepesi, kupanua ufikiaji kwa kundi kubwa la wasanidi programu na kuchangia zaidi katika anuwai ya mfumo wa ikolojia.
 
-Habari zaidi inaweza kupatikana kwenye [tovuti ya Lodestar](https://lodestar.chainsafe.io/)
+Maelezo zaidi yanaweza kupatikana kwenye [tovuti ya Lodestar](https://lodestar.chainsafe.io/)
 
 ### Nimbus {#nimbus}
 
@@ -300,7 +288,7 @@ Hali ya kiteja chepesi hupakua vichwa vyote vya kitalu, data ya kitalu, na kuthi
 
 Usawazishaji wa matumaini ni mkakati wa usawazishaji wa baada ya unganisho ulioundwa kuwa wa hiari na unaoendana nyuma, kuruhusu nodi za utekelezaji kusawazisha kupitia mbinu zilizowekwa. Injini ya utekelezaji inaweza kuingiza _kwa matumaini_ vitalu vya kinara bila kuvithibitisha kikamilifu, kupata kichwa cha hivi punde, na kisha kuanza kusawazisha mnyororo na mbinu zilizo hapo juu. Kisha, baada ya kiteja cha utekelezaji kupata, itamjulisha mteja wa mwafaka kuhusu uhalali wa miamala katika Mnyororo wa Beacon.
 
-[Zaidi kuhusu usawazishaji wa matumaini](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[Zaidi kuhusu usawazishaji wa matumaini](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### Usawazishaji wa kituo cha ukaguzi {#checkpoint-sync}
 
@@ -322,4 +310,4 @@ Zaidi kuhusu [usawazishaji wa kituo cha ukaguzi](https://notes.ethereum.org/@djr
 
 ## Mafunzo yanayohusiana {#related-tutorials}
 
-- [Geuza Raspberry Pi 4 yako kuwa nodi ya mthibitishaji kwa kuwasha tu kadi ya MicroSD - Mwongozo wa usakinishaji](/developers/tutorials/run-node-raspberry-pi/) _- Washa Raspberry Pi 4 yako, chomeka kebo ya ethaneti, unganisha diski ya SSD na uwashe kifaa ili kugeuza Raspberry Pi 4 kuwa nodi kamili ya Ethereum inayoendesha tabaka la utekelezaji (Mtandao Mkuu) na / au tabaka la mwafaka (Mnyororo wa Beacon / mthibitishaji)._
+- [Geuza Raspberry Pi 5 yako kuwa nodi ya mthibitishaji kwa kuandaa tu kadi ya MicroSD – Mwongozo wa usakinishaji](/developers/tutorials/run-node-raspberry-pi/) _– Andaa Raspberry Pi 5 yako, chomeka kebo ya ethaneti, unganisha diski ya NVMe na uwashe kifaa ili kugeuza Raspberry Pi 5 kuwa nodi kamili ya Ethereum inayoendesha tabaka la utekelezaji (Mtandao Mkuu) na / au tabaka la mwafaka (Mnyororo wa Beacon / mthibitishaji)._

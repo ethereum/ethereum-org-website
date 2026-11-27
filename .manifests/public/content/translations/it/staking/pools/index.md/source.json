@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/staking/pools/index.md",
-  "generatedAt": "2026-08-19T20:38:00.627Z",
-  "rootHash": "00724c2a34cb",
+  "generatedAt": "2026-11-27T09:58:21.854Z",
+  "rootHash": "75922b5d4deb",
   "tree": {
-    "contentHash": "a026e3c84ad2",
+    "contentHash": "0f04048daf9e",
     "anchorHash": "3d5eda897598",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "d8d7beadccdb",
+        "contentHash": "756bb9633118",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -768,5 +768,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "9638e1f9f88c9e74ab4d15a11f3f6d1e782ff7f5"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

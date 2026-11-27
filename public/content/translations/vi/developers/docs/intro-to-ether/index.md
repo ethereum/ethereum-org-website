@@ -1,6 +1,6 @@
 ---
 title: "Giới thiệu kỹ thuật về ether"
-description: "Giới thiệu cho nhà phát triển về tiền mã hóa ether."
+description: "Giới thiệu kỹ thuật về ether (ETH): công dụng của nó, cách nó được tính bằng mệnh giá Wei và Gwei, cũng như cách nó được đúc, đốt và chuyển giao."
 lang: vi
 ---
 

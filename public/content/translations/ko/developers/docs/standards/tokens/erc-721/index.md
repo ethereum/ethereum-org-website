@@ -246,8 +246,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## 튜토리얼: 이더리움에서 대체 불가능 토큰(ERC-721)으로 빌드하기 {#tutorials}
 
-- [Vyper ERC-721 컨트랙트 연습](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper로 작성된 전체 ERC-721 NFT 컨트랙트에 대한 주석이 달린 연습입니다._
+- [Vyper ERC-721 컨트랙트 살펴보기](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper로 작성된 전체 ERC-721 NFT 컨트랙트에 대한 주석이 포함된 가이드입니다._
 - [NFT 작성 및 배포 방법 (1/3부)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– 첫 번째 ERC-721 스마트 컨트랙트를 작성하고 배포하는 단계별 가이드입니다._
 - [NFT 발행 방법 (2/3부)](/developers/tutorials/how-to-mint-an-nft/) _– 배포된 스마트 컨트랙트와 Web3를 사용하여 ERC-721 NFT를 발행하는 방법입니다._
 - [지갑에서 NFT를 보는 방법 (3/3부)](/developers/tutorials/how-to-view-nft-in-metamask/) _– 배포 후 메타마스크에 발행된 NFT를 표시하는 방법입니다._
-- [NFT 발행기 튜토리얼](/developers/tutorials/nft-minter/) _– React 프론트엔드, 메타마스크 및 Alchemy를 사용하여 풀스택 NFT 발행 탈중앙화 애플리케이션(dapp)을 빌드합니다._

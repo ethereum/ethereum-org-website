@@ -1,5 +1,61 @@
 # Arabic (ar) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.6/10
+Scope: 13 md pages (ethash, data-structures trio, frameworks, nodes-as-a-service, run-a-node, transactions, glossary, merge, statelessness, verkle-trees, what-is-ether/supply), changed lines only; all 13 diffs read. Sweeps (U+3002/U+2060/CJK/Cyrillic/Indic, SPDX, isolate and span balance, English months, expansions) clean apart from the items below.
+
+**Fixed in this branch:**
+
+- merge:3 frontmatter `⁦September 2022⁩` (English date left in isolates) -> `سبتمبر 2022`.
+- nodes-as-a-service: `واجهة برمجة التطبيقات (API)` added where English has bare `API` at ~25 bullets (and bare `API` already on L28/L34) -> bare `API`; `(لآلة إيثريوم الافتراضية (EVM)، وTendermint)` and `17 سلسلة لآلة إيثريوم الافتراضية (EVM)` -> bare `EVM` (#112). frameworks:97 second-mention `EVM` expansion -> bare.
+- Tools re-transliterated on changed lines -> Latin in `<span dir="ltr">` (#113): OpenZeppelin SDK (frameworks:109), Geth/Besu/Erigon/Nethermind/Reth in run-a-node table and both size notes, nodes-as-a-service:225, patricia-merkle-trie Geth console, verkle-trees Geth default.
+
+**Open (warnings):**
+
+- transactions: sanitizer-era tanween/case drift on changed lines (`سيكون هذا حساب مملوك خارجياً`, `إذا كان حساب مملوك خارجياً`, `وليس عقد`; accusative `حسابًا مملوكًا خارجيًا`/`عقدًا` required); `ـًا` -> `اً` style switch.
+- English glosses added where English has none: `(terminal)`, `(beacon)`, `(blob)` (run-a-node), `(dapps)` (frameworks).
+- frameworks:113 `أوبن زبلن SDK` and Geth in unchanged lines still glossary-transliterated, so the pages now mix forms.
+- `الذي يُرغب في دفعها` (maxFeePerGas) drops the user as subject; ethash comment `ذو النهاية الصغرى` mis-cased.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.7/10
+Scope: 72 md pages + 20 JSON namespaces (incl. 277 dev-tools descriptions), incremental updates; changed lines only. Sampled 12 md diffs and ~100 JSON keys; scripted sweeps (U+3002/U+2060/CJK/Cyrillic/Indic, English sentences, isolate balance, abbreviation expansions, glossary-translit names) clean apart from the items below.
+
+**Fixed in this branch:**
+
+- English dates left in `<span dir="ltr">` -> Arabic: developers/docs/bridges:127-132 (Sep 8, 2021 ... June 12, 2024), bridges:140 (July 5, 2022), roadmap/pectra description (`May 7, 2025`). Recurrence of #18772/#19556.
+- `Robust Incentives Group` semantically translated (`مجموعة الحوافز القوية`) with no English kept at community/research:388 -> Latin (#69).
+- `// SPDX-License-Identifier: MIT` translated to `// معرف ترخيص SPDX: MIT` inside two Solidity fences (interact-with-other-contracts:23,113): the compiler reads this comment -> restored.
+- Developer tools and clients re-transliterated on 19 changed md lines (Slither, Echidna, OpenZeppelin, Erigon, Reth, Nethermind, Nimbus, Lighthouse, Chainlink) -> Latin in `<span dir="ltr">` per #113 (glossary forms were `سليذر`, `إيكيدنا`, `أوبن زبلن`...). MetaMask/Coinbase/Uniswap/Discord left as established consumer forms.
+- ai-agents description: `التمويل اللامركزي (DeFi)` expanded where English has bare `DeFi` -> bare (#112).
+- page-roadmap.json: `التمهيد لـ الدمج` -> `التمهيد للدمج`, `للـ مُدَقِّقين` -> `للمُدَقِّقين` (detached clitic).
+
+**Open (warnings):**
+
+- anatomy comments retranslated in full (~40 lines): `الكلمة المفتاحية` -> `الكلمة الرئيسية`, `uint` as `عدد صحيح موجب` (unsigned is not positive); tanween style switched `ـًا` -> `اً`.
+- zk-rollups lost `<span dir="ltr">` around bare numbers (10, 16 gas); `لشحن الميزات` (about) calques "ship features".
+- dev-tools descriptions repeat `واجهة برمجة تطبيقات (API)` x35, `(EVM)` x15, `(ABI)` x13 in every card (allowed on first mention per string, but heavy); added `(CI)`, `(EVM)` x3 in rust, `(NFT)` x4 in erc-721.
+- Untranslated image alt text in 17 files (img-alt-untranslated); `June 18, 2022`/`January 8, 2022` still English at bridges/index.md:139,141 (unchanged lines).
+- `Devcon` stays Latin in devcon-mumbai title/description while breadcrumb says `ديفكون` (#74).
+
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.3/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: none needed. ICU binding, glossary forms (Casper FFG, aggregate/rollup terms) and bidi wrappers fine. Open: wrapper use is uneven (`{step}` isolated in gasper keys only); `كخلايا أيام {days}` word order.
+
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: hard-coded Eastern digit `٠` in the `zero` branch of `wallet-cta`, `wallet-languages`, `apps-cta-count` -> `{countFormatted}` (ar numerals are Western). Open: none.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.1/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+0 critical. Open: slot as الفترات الزمنية vs خانة (glamsterdam), compiler مترجم vs مُصرّف, builder منشئي vs بُناة, dropped span dir=ltr wrappers in verifying (24 to 0), Ryuya Nakamura Latin in body but transliterated in author.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.6/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: nodes-and-clients English dates and Latin Mainnet/Beacon Chain cells restored to Arabic, slot/attestation/checkpoint glossary forms, Ethereum spelling in attestations description. Open: bytes untranslated in JSON, Verkle singular/plural, `الرمز` vs `الكود`.
+
 > **PR:** #17105
 > **Date:** 2026-03-17
 > **Quality Score:** 5.2/10 (pre-fix)
@@ -257,3 +313,58 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed (JSON, #86): `stat-defi-tvl` -> `⁦DeFi TVL⁩`, `compare-col-private-dlt` -> `⁦DLT⁩ الخاصة`, `meta-description` DLT expansion removed (170 -> 152 chars).
 - Open: CTA/title `(⁦DeFi⁩)`/`(⁦L2s⁩)` appended where English has none; `proprietary` -> `الاحتكارية` (monopolistic), `المملوكة` closer; md L31 definiteness (`المصرح بها`, `المفتوحة`), L21 garbled `سلسلة كتل إنتاج`; faucet labels Latin vs transliterated headings split.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.4/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:1228 split L2s bidi span (`(L<span dir="ltr">2s</span>)` -> `(<span dir="ltr">L2s</span>)`)
+- scam-token-tricks:82 English date (`<span dir="ltr">May 19th, 2023</span>` -> `<span dir="ltr">19</span> مايو <span dir="ltr">202`)
+- prediction-markets:38,68 English dates (`<span dir="ltr">November 2022</span> إلى <span dir` -> `نوفمبر 2022 إلى مارس 2026`)
+- prediction-markets:70 English dates (`<span dir="ltr">February 2024</span> و <span dir="` -> `فبراير 2024 وفبراير 2026`)
+- page-founders.json:34 English month (`⁦October 2026⁩` -> `أكتوبر 2026`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 16 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The glossary handling is solid and none of the old ar failure modes came back (no `الدولة` for state, no Ethereum spelling drift, no garbled brands). The criticals are deterministic regressions: English dates left inside isolates, one split LTR span, and three founders tags left in English. The main warnings are wording choices in the regenerated app-plasma and security pages (code→`رمز`, unsigned, underflow).
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: `حساب` used for "computation" right after the same word for "account" (mint:116); English alt text (write-deploy:32,44); "leave `gas` out" rendered as "leave it empty" (sending:198).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:25 dangling `سوف:` before a list of verbal nouns -> `ستقوم بما يلي:`
+- echidna:414 `John Regehr` reverted to bare Latin -> `جون ريجر (John Regehr)` (dev form)
+
+**Open / notes:**
+
+- echidna:298 "falsify the property" -> `تزييف` (forge); suggested `لإثبات بطلان الخاصية` -- native call
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- Marathi spelling `المراثية` vs `الماراثية` -- native call.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

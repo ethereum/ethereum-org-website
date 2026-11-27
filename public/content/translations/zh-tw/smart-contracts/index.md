@@ -1,7 +1,7 @@
 ---
-title: 智能合約簡介
+title: "智能合約簡介"
 metaTitle: "智能合約：它們是什麼及其好處"
-description: 智能合約的非技術性簡介
+description: "什麼是智能合約？這是一篇非技術性的簡介，介紹在以太坊上運行，並在沒有中介機構的情況下驅動 DeFi、NFT 和 DAO 等應用程式的程式。"
 lang: zh-tw
 ---
 

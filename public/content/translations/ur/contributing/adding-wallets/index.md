@@ -1,6 +1,6 @@
 ---
-title: والیٹس شامل کرنا
-description: ⁦ethereum.org⁩ پر والیٹ شامل کرتے وقت ہم جو پالیسی استعمال کرتے ہیں
+title: "والیٹس شامل کرنا"
+description: "⁦ethereum.org⁩ پر والیٹ شامل کرتے وقت ہم جو پالیسی استعمال کرتے ہیں"
 lang: ur
 ---
 
@@ -58,7 +58,7 @@ lang: ur
 
 ## والیٹ شامل کرنا {#adding-a-wallet}
 
-اگر آپ <span dir="ltr">ethereum.org</span> پر والیٹ شامل کرنا چاہتے ہیں، تو <span dir="ltr">GitHub</span> پر ایک ایشو بنائیں۔
+اگر آپ <span dir="ltr">ethereum.org</span> پر والیٹ شامل کرنا چاہتے ہیں، تو <span dir="ltr">GitHub</span> پر ایک ایشو بنائیں۔ آپ ایشو میں والیٹ کی جو تفصیل فراہم کرتے ہیں وہ والیٹ کے صفحے پر دکھائی جاتی ہے، لہذا اسے ایک یا دو حقائق پر مبنی جملوں تک محدود رکھیں۔
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   ایک ایشو بنائیں

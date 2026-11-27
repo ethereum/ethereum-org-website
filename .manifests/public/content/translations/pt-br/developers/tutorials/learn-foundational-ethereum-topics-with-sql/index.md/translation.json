@@ -1,91 +1,115 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "pt-br",
-  "translatedAt": "2026-06-19T23:00:27.308Z",
-  "englishManifestHash": "44032293caa3",
+  "translatedAt": "2026-11-25T10:01:18.044Z",
+  "englishManifestHash": "81a940ef598d",
   "placeholderOrder": [
-    "LINK-58024a",
+    "LINK-eea440",
+    "LINK-d0b298",
     "LINK-282029",
     "LINK-2abfba",
     "LINK-8a4f66",
     "LINK-401851",
-    "LINK-58024a",
+    "LINK-eea440",
     "LINK-bf0d80",
     "LINK-025d70",
-    "CODEBLOCK-8b766b",
+    "CODE-0bdd02",
+    "CODEBLOCK-0dea3d",
+    "CODE-9936f9",
     "IMAGE-5fd42b",
     "LINK-a7e8fd",
-    "IMAGE-d42916",
+    "IMAGE-efb825",
     "LINK-b49fa8",
     "LINK-eedb51",
     "CODE-8fe215",
     "CODE-3a6eb0",
-    "CODEBLOCK-438825",
+    "CODEBLOCK-82f786",
+    "CODE-a27c22",
     "LINK-6c4cfe",
     "LINK-eedb51",
     "CODE-d04b98",
     "CODE-2dbec1",
     "LINK-3d0e6d",
     "IMAGE-6fb7a9",
-    "LINK-2016eb",
-    "CODEBLOCK-436eed",
+    "CODEBLOCK-df6360",
+    "LINK-da3cd7",
     "LINK-47f23c",
-    "CODEBLOCK-ed31f3",
+    "CODEBLOCK-5619a0",
     "IMAGE-240bce",
     "LINK-6c4cfe",
-    "CODEBLOCK-16c87f",
+    "CODEBLOCK-a41d28",
     "IMAGE-8de478",
     "LINK-3d0e6d",
+    "LINK-da3cd7",
     "IMAGE-37083a",
     "IMAGE-f3fdff",
-    "CODEBLOCK-044101",
+    "CODE-b6af39",
+    "CODEBLOCK-cac389",
+    "CODEBLOCK-159f3a",
+    "LINK-5344f7",
     "LINK-3d0e6d",
     "IMAGE-e87e03",
-    "CODEBLOCK-3a6d03",
+    "CODEBLOCK-7712fe",
     "IMAGE-4fa05d",
-    "CODEBLOCK-2c916d",
+    "CODEBLOCK-d931ce",
     "IMAGE-decc20",
     "IMAGE-72e23b",
-    "CODEBLOCK-00dabd",
+    "CODEBLOCK-1142e8",
     "LINK-b49fa8",
     "LINK-87f099"
   ],
   "placeholderMap": {
-    "CODEBLOCK-8b766b": {
+    "CODEBLOCK-0dea3d": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-438825": {
+    "CODEBLOCK-82f786": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-436eed": {
+    "CODEBLOCK-df6360": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-ed31f3": {
+    "CODEBLOCK-5619a0": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-16c87f": {
+    "CODEBLOCK-a41d28": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-044101": {
+    "CODEBLOCK-cac389": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-3a6d03": {
+    "CODEBLOCK-159f3a": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-2c916d": {
+    "CODEBLOCK-7712fe": {
       "type": "code-fence",
       "values": {}
     },
-    "CODEBLOCK-00dabd": {
+    "CODEBLOCK-d931ce": {
       "type": "code-fence",
       "values": {}
+    },
+    "CODEBLOCK-1142e8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-0bdd02": {
+      "type": "inline-code",
+      "values": {
+        "content": "ethereum.traces"
+      }
+    },
+    "CODE-9936f9": {
+      "type": "inline-code",
+      "values": {
+        "content": "0x..."
+      }
     },
     "CODE-8fe215": {
       "type": "inline-code",
@@ -97,6 +121,12 @@
       "type": "inline-code",
       "values": {
         "content": "data"
+      }
+    },
+    "CODE-a27c22": {
+      "type": "inline-code",
+      "values": {
+        "content": "CAST"
       }
     },
     "CODE-d04b98": {
@@ -111,13 +141,19 @@
         "content": "parent_hash"
       }
     },
+    "CODE-b6af39": {
+      "type": "inline-code",
+      "values": {
+        "content": "WHERE"
+      }
+    },
     "IMAGE-5fd42b": {
       "type": "image",
       "values": {
         "path": "./etherscan_view.png"
       }
     },
-    "IMAGE-d42916": {
+    "IMAGE-efb825": {
       "type": "image",
       "values": {
         "path": "./dune_view.png"
@@ -177,10 +213,16 @@
         "path": "./ef_daily_gas.png"
       }
     },
-    "LINK-58024a": {
+    "LINK-eea440": {
       "type": "link",
       "values": {
         "url": "https://dune.com/"
+      }
+    },
+    "LINK-d0b298": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.dune.com/query-engine/overview"
       }
     },
     "LINK-282029": {
@@ -249,16 +291,22 @@
         "url": "/developers/docs/blocks/"
       }
     },
-    "LINK-2016eb": {
+    "LINK-da3cd7": {
       "type": "link",
       "values": {
-        "url": "https://dune.com/queries/44856/88292"
+        "url": "/roadmap/merge/"
       }
     },
     "LINK-47f23c": {
       "type": "link",
       "values": {
         "url": "https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored"
+      }
+    },
+    "LINK-5344f7": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/#base-fee"
       }
     },
     "LINK-87f099": {
@@ -270,7 +318,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-19T23:00:27.308Z",
+      "translatedAt": "2026-11-25T10:01:18.044Z",
       "status": "success"
     }
   }

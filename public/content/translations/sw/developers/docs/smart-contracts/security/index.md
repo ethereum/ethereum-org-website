@@ -78,7 +78,7 @@ Mbinu ya kawaida ni kuandika majaribio madogo ya vipengele (unit tests) kwa kutu
 
 Kwa bahati mbaya, majaribio ya vipengele yana ufanisi mdogo katika kuboresha usalama wa mkataba mahiri yanapotumika pekee. Jaribio la kipengele linaweza kuthibitisha kuwa kipengele cha utendaji kinatekelezwa ipasavyo kwa data ya majaribio, lakini majaribio ya vipengele yana ufanisi sawa tu na majaribio yaliyoandikwa. Hii inafanya iwe vigumu kugundua hali za kipekee zilizokosekana na udhaifu ambao unaweza kuvunja usalama wa mkataba mahiri wako.
 
-Mbinu bora ni kuchanganya majaribio ya vipengele na majaribio yanayotegemea sifa yanayofanywa kwa kutumia [uchanganuzi tuli na thabiti](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Uchanganuzi tuli unategemea uwakilishi wa kiwango cha chini, kama vile [grafu za mtiririko wa udhibiti](https://en.wikipedia.org/wiki/Control-flow_graph) na [miti dhahania ya sintaksia](https://deepsource.io/glossary/ast/) ili kuchanganua hali za programu zinazofikika na njia za utekelezaji. Wakati huo huo, mbinu za uchanganuzi thabiti, kama vile [fuzzing ya mkataba mahiri](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), hutekeleza msimbo wa mkataba na thamani za uingizaji za nasibu ili kugundua shughuli zinazokiuka sifa za usalama.
+Mbinu bora ni kuchanganya majaribio ya vipengele na majaribio yanayotegemea sifa yanayofanywa kwa kutumia [uchanganuzi tuli na thabiti](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). Uchanganuzi tuli unategemea uwakilishi wa kiwango cha chini, kama vile [grafu za mtiririko wa udhibiti](https://en.wikipedia.org/wiki/Control-flow_graph) na [miti dhahania ya sintaksia](https://deepsource.io/glossary/ast/) ili kuchanganua hali za programu zinazofikika na njia za utekelezaji. Wakati huo huo, mbinu za uchanganuzi thabiti, kama vile [fuzzing ya mkataba mahiri](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), hutekeleza msimbo wa mkataba na thamani za uingizaji za nasibu ili kugundua shughuli zinazokiuka sifa za usalama.
 
 [Uthibitishaji rasmi](/developers/docs/smart-contracts/formal-verification) ni mbinu nyingine ya kuthibitisha sifa za usalama katika mikataba mahiri. Tofauti na majaribio ya kawaida, uthibitishaji rasmi unaweza kuthibitisha kwa uhakika kutokuwepo kwa makosa katika mkataba mahiri. Hili linafikiwa kwa kuunda vipimo rasmi vinavyonasa sifa za usalama zinazohitajika na kuthibitisha kwamba muundo rasmi wa mikataba unazingatia vipimo hivi.
 
@@ -99,7 +99,7 @@ Hata hivyo, unapaswa kuepuka kuchukulia kaguzi kama suluhisho la kila kitu. Kagu
 
 Kuanzisha programu ya zawadi ya kugundua hitilafu ni mbinu nyingine ya kutekeleza ukaguzi wa msimbo wa nje. Zawadi ya kugundua hitilafu ni tuzo ya kifedha inayotolewa kwa watu binafsi (kawaida wadukuzi wema au 'whitehat hackers') wanaogundua udhaifu katika programu.
 
-Inapotumiwa ipasavyo, zawadi za kugundua hitilafu huwapa wanachama wa jumuiya ya wadukuzi motisha ya kukagua msimbo wako kwa dosari muhimu. Mfano halisi ni "hitilafu ya pesa isiyo na kikomo" ambayo ingemruhusu mshambuliaji kuunda kiasi kisicho na kikomo cha Etha kwenye [Optimism](https://www.optimism.io/), itifaki ya [tabaka la 2 (l2)](/layer-2/) inayoendeshwa kwenye Ethereum. Kwa bahati nzuri, mdukuzi mwema [aligundua dosari hiyo](https://www.saurik.com/optimism.html) na kuijulisha timu, [na kupata malipo makubwa katika mchakato huo](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Inapotumiwa ipasavyo, zawadi za kugundua hitilafu huwapa wanachama wa jumuiya ya wadukuzi motisha ya kukagua msimbo wako kwa dosari muhimu. Mfano halisi ni "hitilafu ya pesa isiyo na kikomo" ambayo ingemruhusu mshambuliaji kuunda kiasi kisicho na kikomo cha Etha kwenye [Optimism](https://www.optimism.io/), itifaki ya [tabaka la 2 (L2)](/layer-2/) inayoendeshwa kwenye Ethereum. Kwa bahati nzuri, mdukuzi mwema [aligundua dosari hiyo](https://www.saurik.com/optimism.html) na kuijulisha timu, [na kupata malipo makubwa katika mchakato huo](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Mkakati muhimu ni kuweka malipo ya programu ya zawadi ya kugundua hitilafu kulingana na kiasi cha fedha kilicho hatarini. Ikifafanuliwa kama "[zawadi ya kugundua hitilafu inayoongezeka](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", mbinu hii hutoa motisha ya kifedha kwa watu binafsi kufichua udhaifu kwa kuwajibika badala ya kuutumia vibaya.
 
@@ -433,7 +433,7 @@ contract Attack {
 
 ##### Jinsi ya kuzuia mizidio ya chini na mizidio ya nambari kamili
 
-Kuanzia toleo la 0.8.0, kikusanyaji cha Solidity kinakataa msimbo unaosababisha mizidio ya chini na mizidio ya nambari kamili. Hata hivyo, mikataba iliyokusanywa na toleo la chini la kikusanyaji inapaswa kufanya ukaguzi kwenye vipengele vya utendaji vinavyohusisha operesheni za hesabu au kutumia maktaba (k.m., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) ambayo hukagua mzidio wa chini/mzidio.
+Kuanzia toleo la 0.8.0, kikusanyaji cha Solidity kinakataa msimbo unaosababisha mizidio ya chini na mizidio ya nambari kamili. Hata hivyo, mikataba iliyokusanywa na toleo la chini la kikusanyaji inapaswa kufanya ukaguzi kwenye vipengele vya utendaji vinavyohusisha operesheni za hesabu au kutumia maktaba (k.m., [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math)) ambayo hukagua mzidio wa chini/mzidio.
 
 #### Udanganyifu wa orakeli {#oracle-manipulation}
 
@@ -461,9 +461,9 @@ Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutu
 
 - **[Zana za uthibitishaji rasmi](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Zana za kuthibitisha usahihi wa utendaji katika mikataba mahiri na kuangalia vitu visivyobadilika._
 
-- **[Huduma za ukaguzi wa mkataba mahiri](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Orodha ya mashirika yanayotoa huduma za ukaguzi wa mkataba mahiri kwa miradi ya usanidi wa Ethereum._
+- **[Huduma za ukaguzi wa mkataba mahiri](#smart-contract-auditing-services)** - _Orodha ya mashirika yanayotoa huduma za ukaguzi wa mkataba mahiri kwa miradi ya usanidi wa Ethereum._
 
-- **[Majukwaa ya tuzo za hitilafu](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Majukwaa ya kuratibu tuzo za hitilafu na kutoa tuzo kwa ufichuaji wa kuwajibika wa udhaifu muhimu katika mikataba mahiri._
+- **[Majukwaa ya tuzo za hitilafu](#bug-bounty-platforms)** - _Majukwaa ya kuratibu tuzo za hitilafu na kutoa tuzo kwa ufichuaji wa kuwajibika wa udhaifu muhimu katika mikataba mahiri._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Zana ya mtandaoni isiyolipishwa ya kuangalia taarifa zote zinazopatikana kuhusu mkataba wenye mchepuo._
 
@@ -564,8 +564,6 @@ Ikiwa unapanga kuuliza orakeli ya mnyororoni kwa bei za rasilimali, fikiria kutu
 - [Jinsi ya kuandika mikataba mahiri salama](/developers/tutorials/secure-development-workflow/)
 
 - [Jinsi ya kutumia Slither kupata hitilafu za mkataba mahiri](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [Jinsi ya kutumia Manticore kupata hitilafu za mkataba mahiri](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [Miongozo ya usalama wa mkataba mahiri](/developers/tutorials/smart-contract-security-guidelines/)
 

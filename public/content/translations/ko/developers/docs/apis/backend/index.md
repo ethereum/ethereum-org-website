@@ -35,13 +35,13 @@ lang: ko
 - [문서](https://docs.allthatnode.com)
 - [디스코드](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs의 Blast -** **_이더리움 메인넷 및 테스트넷을 위한 탈중앙화 API._**
+**Bware Labs의 Blast -** **_이더리움 메인넷 및 테스트넷을 위한 탈중앙화 애플리케이션 프로그래밍 인터페이스 (API)._**
 
 - [blastapi.io](https://blastapi.io/)
 - [문서](https://docs.blastapi.io)
 - [디스코드](https://discord.gg/SaRqmRUjjQ)
 
-**BlockPi -** **_더욱 효율적이고 빠른 RPC 서비스 제공_**
+**BlockPi -** **_더 효율적이고 빠른 RPC 서비스 제공_**
 
 - [blockpi.io](https://blockpi.io/)
 - [문서](https://docs.blockpi.io/)
@@ -66,10 +66,10 @@ lang: ko
 **Infura -** **_서비스형 이더리움 API._**
 
 - [infura.io](https://infura.io)
-- [문서](https://docs.infura.io/api)
+- [문서](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _비용 효율적인 EVM JSON-RPC 제공자_**
+**Node RPC - _비용 효율적인 이더리움 가상 머신 (EVM) JSON-RPC 제공자_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [문서](https://docs.noderpc.xyz/node-rpc)
@@ -77,7 +77,7 @@ lang: ko
 **NOWNodes - _풀 노드 및 블록 탐색기._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [문서](https://nownodes.gitbook.io/documentation)
+- [문서](https://docs.nownodes.io/)
 
 **QuickNode -** **_서비스형 블록체인 인프라._**
 
@@ -85,11 +85,17 @@ lang: ko
 - [문서](https://www.quicknode.com/docs/welcome)
 - [디스코드](https://discord.gg/quicknode)
 
-**Rivet -** **_오픈 소스 소프트웨어 기반의 서비스형 이더리움 및 이더리움 클래식 API._**
+**Rivet -** **_오픈 소스 소프트웨어로 구동되는 서비스형 이더리움 및 이더리움 클래식 API._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [문서](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+
+**SolidRPC -** **_풀, 아카이브 및 키 없는 퍼블릭 액세스를 제공하는 EVM JSON-RPC 인프라._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [문서](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
 
 **Zmok -** **_JSON-RPC/WebSockets API 형태의 속도 지향 이더리움 노드._**
 
@@ -100,7 +106,13 @@ lang: ko
 
 ### 개발 도구 {#development-tools}
 
-**ethers-kt -** **_EVM 기반 블록체인을 위한 비동기식 고성능 Kotlin/Java/Android 라이브러리._**
+**eth.zig -** **_컴파일 타임 애플리케이션 바이너리 인터페이스 (ABI) 인코딩 및 컨트랙트 바인딩을 지원하는 이더리움용 Zig 라이브러리._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [문서](https://ethzig.org)
+- [예제](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_이더리움 가상 머신 (EVM) 기반 블록체인을 위한 비동기식 고성능 Kotlin/Java/Android 라이브러리._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [예제](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -150,7 +162,7 @@ lang: ko
 - [문서](https://docs.chainstack.com/)
 - [이더리움 API 참조](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**코인베이스 클라우드 노드(Coinbase Cloud Node) -** **_블록체인 인프라 API._**
+**Coinbase 클라우드 노드 -** **_블록체인 인프라 API._**
 
 - [코인베이스 클라우드 노드](https://www.coinbase.com/developer-platform)
 - [문서](https://docs.cdp.coinbase.com/)
@@ -164,7 +176,6 @@ lang: ko
 
 - [moralis.io](https://moralis.io)
 - [문서](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [디스코드](https://moralis.io/joindiscord/)
 - [포럼](https://forum.moralis.io/)
 
@@ -198,10 +209,9 @@ lang: ko
 **Covalent -** **_200개 이상의 체인을 위한 풍부한 블록체인 API._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [문서](https://www.covalenthq.com/docs/api/)
+- [문서](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [디스코드](https://www.covalenthq.com/discord/)
-
 
 ## 더 읽어보기 {#further-reading}
 
@@ -214,5 +224,4 @@ _도움이 된 커뮤니티 리소스를 알고 계신가요? 이 페이지를 �
 
 ## 관련 튜토리얼 {#related-tutorials}
 
-- [JavaScript에서 이더리움 블록체인을 사용하기 위한 Web3.js 설정](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 프로젝트에 Web3.js를 설정하는 방법에 대한 지침입니다._
-- [JavaScript에서 스마트 컨트랙 호출하기](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI 토큰을 사용하여 JavaScript로 컨트랙트 함수를 호출하는 방법을 알아봅니다._
+- [Web3 앱을 위한 서버 컴포넌트 및 에이전트](/developers/tutorials/server-components/) _– 블록체인 이벤트를 수신하고 트랜잭션으로 응답하는 TypeScript 서버 컴포넌트를 작성하는 방법._

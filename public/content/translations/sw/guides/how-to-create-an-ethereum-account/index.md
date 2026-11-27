@@ -1,7 +1,7 @@
 ---
 title: Jinsi ya kuunda akaunti ya Ethereum
 metaTitle: Jinsi ya "kuunda" akaunti ya Ethereum
-description: Mwongozo wa hatua kwa hatua wa kuunda akaunti ya Ethereum kwa kutumia mkoba.
+description: "Mwongozo wa hatua kwa hatua wa kuunda akaunti ya Ethereum: chagua mkoba, hifadhi kirai chako cha kurejesha kwa usalama na upate anwani yako ya kwanza ya Ethereum."
 lang: sw
 ---
 

@@ -15,15 +15,14 @@ Se você é novo no tópico de nós, recomendamos primeiro conferir nossa introd
 
 ## O que são nós e clientes? {#what-are-nodes-and-clients}
 
-Um "nó" é qualquer instância de software cliente Ethereum que está conectada a outros computadores que também executam o software Ethereum, formando uma rede. Um cliente é uma implementação do Ethereum que verifica os dados em relação às regras do protocolo e mantém a rede segura. Um nó precisa executar dois clientes: um cliente de consenso e um cliente de execução.
+Um "nó" é qualquer instância de software de cliente Ethereum que está conectada a outros computadores que também executam o software Ethereum, formando uma rede. Um cliente é uma implementação do Ethereum que verifica os dados em relação às regras do protocolo e mantém a rede segura. Um nó precisa executar dois clientes: um cliente de consenso e um cliente de execução.
 
-- O cliente de execução (também conhecido como Mecanismo de Execução, cliente EL ou antigamente cliente Eth1) escuta novas transações transmitidas na rede, as executa na EVM e mantém o estado mais recente e o banco de dados de todos os dados atuais do Ethereum.
-- O cliente de consenso (também conhecido como nó do Beacon, cliente CL ou antigamente cliente Eth2) implementa o algoritmo de consenso de Prova de Participação (PoS), que permite que a rede chegue a um acordo com base em dados validados do cliente de execução. Há também um terceiro software, conhecido como 'validador', que pode ser adicionado ao cliente de consenso, permitindo que um nó participe da segurança da rede.
+- O cliente de execução (também conhecido como Mecanismo de Execução, cliente EL ou anteriormente cliente Eth1) escuta novas transações transmitidas na rede, as executa na EVM e mantém o estado mais recente e o banco de dados de todos os dados atuais do Ethereum.
+- O cliente de consenso (também conhecido como nó do Beacon, cliente CL ou anteriormente cliente Eth2) implementa o algoritmo de consenso de Prova de Participação (PoS), que permite que a rede chegue a um acordo com base em dados validados do cliente de execução. Há também um terceiro software, conhecido como 'validador', que pode ser adicionado ao cliente de consenso, permitindo que um nó participe da segurança da rede.
 
-Esses clientes trabalham juntos para acompanhar o topo da cadeia do Ethereum e permitir que os usuários interajam com a rede Ethereum. O design modular com vários softwares trabalhando juntos é chamado de [complexidade encapsulada](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Essa abordagem facilitou a execução do [The Merge](/roadmap/merge) de forma contínua, torna o software cliente mais fácil de manter e desenvolver, e permite a reutilização de clientes individuais, por exemplo, no [ecossistema de camada 2 (l2)](/layer-2/).
+Esses clientes trabalham juntos para acompanhar o topo da cadeia do Ethereum e permitir que os usuários interajam com a rede Ethereum. O design modular com vários softwares trabalhando juntos é chamado de [complexidade encapsulada](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Essa abordagem facilitou a execução do [The Merge](/roadmap/merge) de forma contínua, torna o software do cliente mais fácil de manter e desenvolver e permite a reutilização de clientes individuais, por exemplo, no [ecossistema de camada 2](/layer-2/).
 
-![Coupled execution and consensus clients](./eth1eth2client.png)
-Diagrama simplificado de um cliente de execução e consenso acoplados.
+<NodeClientsDiagram />
 
 ### Diversidade de clientes {#client-diversity}
 
@@ -90,16 +89,16 @@ Executar um nó permite que você use o Ethereum de forma direta, sem necessidad
 
 ### Benefícios para você {#benefits-to-you}
 
-Executar seu próprio nó permite que você use o Ethereum de maneira privada, autossuficiente e sem necessidade de confiança. Você não precisa confiar na rede porque pode verificar os dados você mesmo com seu cliente. "Não confie, verifique" é um mantra popular da blockchain.
+Executar seu próprio nó permite que você use o Ethereum de maneira privada, autossuficiente e sem necessidade de confiança. Você não precisa confiar na rede porque pode verificar os dados por conta própria com seu cliente. "Não confie, verifique" é um mantra popular da blockchain.
 
-- Seu nó verifica todas as transações e blocos em relação às regras de consenso por si só. Isso significa que você não precisa depender de nenhum outro nó na rede ou confiar totalmente neles.
-- Você pode usar uma carteira Ethereum com seu próprio nó. Você pode usar aplicativos descentralizados (dapps) com mais segurança e privacidade porque não precisará vazar seus endereços e saldos para intermediários. Tudo pode ser verificado com seu próprio cliente. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) e [muitas outras carteiras](/wallets/find-wallet/) oferecem importação de RPC, permitindo que usem seu nó.
-- Você pode executar e auto-hospedar outros serviços que dependem de dados do Ethereum. Por exemplo, isso pode ser um validador da Beacon Chain, software como camada 2 (l2), infraestrutura, exploradores de blocos, processadores de pagamento, etc.
-- Você pode fornecer seus próprios [endpoints RPC](/developers/docs/apis/json-rpc/) personalizados. Você poderia até oferecer esses endpoints publicamente para a comunidade para ajudá-los a evitar grandes provedores centralizados.
+- Seu nó verifica todas as transações e blocos em relação às regras de consenso por conta própria. Isso significa que você não precisa depender de nenhum outro nó na rede ou confiar totalmente neles.
+- Você pode usar uma carteira Ethereum com seu próprio nó. Você pode usar dapps com mais segurança e privacidade porque não precisará vazar seus endereços e saldos para intermediários. Tudo pode ser verificado com seu próprio cliente. A [MetaMask](https://metamask.io), o [Frame](https://frame.sh/) e [muitas outras carteiras](/wallets/find-wallet/) oferecem importação de RPC, permitindo que usem seu nó.
+- Você pode executar e auto-hospedar outros serviços que dependem de dados do Ethereum. Por exemplo, pode ser um validador da Beacon Chain, software como camada 2, infraestrutura, exploradores de blocos, processadores de pagamento, etc.
+- Você pode fornecer seus próprios [endpoints RPC](/developers/docs/apis/json-rpc/) personalizados. Você pode até oferecer esses endpoints publicamente para a comunidade para ajudá-los a evitar grandes provedores centralizados.
 - Você pode se conectar ao seu nó usando **Comunicações Interprocessos (IPC)** ou reescrever o nó para carregar seu programa como um plugin. Isso garante baixa latência, o que ajuda muito, por exemplo, ao processar muitos dados usando bibliotecas Web3 ou quando você precisa substituir suas transações o mais rápido possível (ou seja, frontrunning).
-- Você pode fazer staking de ETH diretamente para proteger a rede e ganhar recompensas. Veja [staking solo](/staking/solo/) para começar.
+- Você pode fazer stake de ETH diretamente para proteger a rede e ganhar recompensas. Consulte [staking solo](/staking/solo/) para começar.
 
-![How you access Ethereum via your application and nodes](./nodes.png)
+<NodeAccessDiagram />
 
 ### Benefícios para a rede {#network-benefits}
 
@@ -132,18 +131,18 @@ Por outro lado, se você executar um cliente, poderá compartilhá-lo com seus a
 
 A comunidade Ethereum mantém vários clientes de execução de código aberto (anteriormente conhecidos como 'clientes Eth1', ou apenas 'clientes Ethereum'), desenvolvidos por equipes diferentes usando linguagens de programação diferentes. Isso torna a rede mais forte e mais [diversificada](/developers/docs/nodes-and-clients/client-diversity/). O objetivo ideal é alcançar a diversidade sem que nenhum cliente domine para reduzir quaisquer pontos únicos de falha.
 
-Esta tabela resume os diferentes clientes. Todos eles passam por [testes de cliente](https://github.com/ethereum/tests) e são mantidos ativamente para se manterem atualizados com as atualizações da rede.
+Esta tabela resume os diferentes clientes. Todos eles passam em [testes de cliente](https://github.com/ethereum/tests) e são mantidos ativamente para se manterem atualizados com as atualizações da rede.
 
-| Cliente                                                                   | Linguagem   | Sistemas operacionais     | Redes                | Estratégias de sincronização                                            | Poda de estado   |
+| Cliente                                                                  | Linguagem  | Sistemas operacionais | Redes                   | Estratégias de sincronização                               | Poda de estado  |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ----------------------- | ---------------------------------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Completa](#full-sync)                     | Arquivo, Podado |
-| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Rápida, [Completa](#full-sync)               | Arquivo, Podado |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Completa](#full-sync)                 | Arquivo, Podado |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), Rápida, [Completa](#full-sync)         | Arquivo, Podado |
 | [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Rápida](#fast-sync), [Completa](#full-sync) | Arquivo, Podado |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Completa](#full-sync)                                         | Arquivo, Podado |
-| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Completa](#full-sync)                                         | Arquivo, Podado |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Completa](#full-sync)                                         | Podado          |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Completa](#full-sync)                                     | Arquivo, Podado |
+| [ethrex](https://ethrex.xyz/)                                            | Rust       | Linux, macOS          | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Completa](#full-sync)                 | Podado          |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Completa](#full-sync)                                     | Arquivo, Podado |
 
-Para saber mais sobre as redes suportadas, leia sobre as [redes do Ethereum](/developers/docs/networks/).
+Para saber mais sobre as redes suportadas, leia sobre as [redes Ethereum](/developers/docs/networks/).
 
 Cada cliente tem casos de uso e vantagens exclusivos, portanto, você deve escolher um com base em suas próprias preferências. A diversidade permite que as implementações sejam focadas em diferentes recursos e públicos de usuários. Você pode querer escolher um cliente com base em recursos, suporte, linguagem de programação ou licenças.
 
@@ -155,12 +154,11 @@ A extensa [documentação](https://besu.hyperledger.org/en/stable/) do Besu o gu
 
 ### Erigon {#erigon}
 
-O Erigon, anteriormente conhecido como Turbo-Geth, começou como uma bifurcação do Go Ethereum orientada para velocidade e eficiência de espaço em disco. O Erigon é uma implementação completamente rearquitetada do Ethereum, atualmente escrita em Go, mas com implementações em outras linguagens em desenvolvimento. O objetivo do Erigon é fornecer uma implementação mais rápida, mais modular e mais otimizada do Ethereum. Ele pode realizar uma sincronização completa de nó de arquivo usando cerca de 2 TB de espaço em disco, em menos de 3 dias.
-
+O Erigon, anteriormente conhecido como Turbo-Geth, começou como uma bifurcação do Go Ethereum orientada para velocidade e eficiência de espaço em disco. O Erigon é uma implementação do Ethereum completamente rearquitetada, atualmente escrita em Go, mas com implementações em outras linguagens em desenvolvimento. O objetivo do Erigon é fornecer uma implementação mais rápida, mais modular e mais otimizada do Ethereum. Ele pode realizar uma sincronização completa de nó de arquivo usando menos de 3 TB de espaço em disco, em menos de 3 dias.
 
 ### ethrex {#ethrex}
 
-O ethrex é um cliente de execução do Ethereum minimalista e modular, escrito em Rust e desenvolvido pela LambdaClass. Ele foi desenvolvido com a geração de provas de conhecimento zero em mente, e a mesma base de código pode ser executada tanto como um cliente de execução de camada 1 (l1) quanto como um ZK-Rollup de múltiplos provadores (camada 2 (l2)). Ele possui licenciamento duplo sob as licenças Apache 2.0 e MIT.
+O ethrex é um cliente de execução do Ethereum minimalista e modular, escrito em Rust e desenvolvido pela LambdaClass. Ele foi desenvolvido com a geração de provas de conhecimento zero em mente, e a mesma base de código pode ser executada tanto como um cliente de execução L1 quanto como um ZK-Rollup de múltiplos provadores (L2). Ele possui licenciamento duplo sob as licenças Apache 2.0 e MIT.
 
 Saiba mais lendo a [documentação do ethrex](https://docs.ethrex.xyz/) ou conferindo o [repositório do ethrex no GitHub](https://github.com/lambdaclass/ethrex).
 ### Go Ethereum {#geth}
@@ -187,16 +185,6 @@ O Reth está pronto para produção e é adequado para uso em ambientes de miss�
 
 Saiba mais conferindo o [Reth Book](https://reth.rs/) ou o [repositório do Reth no GitHub](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
-### Em desenvolvimento {#execution-in-development}
-
-Esses clientes ainda estão em estágios iniciais de desenvolvimento e ainda não são recomendados para uso em produção.
-
-#### EthereumJS {#ethereumjs}
-
-O Cliente de Execução EthereumJS (EthereumJS) é escrito em TypeScript e composto por vários pacotes, incluindo primitivas principais do Ethereum representadas pelas classes Block, Transaction e Merkle-Patricia Trie e componentes principais do cliente, incluindo uma implementação da Ethereum Virtual Machine (EVM), uma classe de blockchain e a pilha de rede devp2p.
-
-Saiba mais sobre isso lendo sua [documentação](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
-
 ## Clientes de consenso {#consensus-clients}
 
 Existem vários clientes de consenso (anteriormente conhecidos como clientes 'Eth2') para dar suporte às [atualizações de consenso](/roadmap/beacon-chain/). Eles são responsáveis por toda a lógica relacionada ao consenso, incluindo o algoritmo de escolha de bifurcação, processamento de atestados e gerenciamento de recompensas e penalizações da [Prova de Participação (PoS)](/developers/docs/consensus-mechanisms/pos).
@@ -218,7 +206,7 @@ A documentação pode ser encontrada no [Lighthouse Book](https://lighthouse-boo
 
 ### Lodestar {#lodestar}
 
-O Lodestar é uma implementação de cliente de consenso pronta para produção escrita em TypeScript sob a licença LGPL-3.0. É mantido pela ChainSafe Systems e é o mais novo dos clientes de consenso para stakers solo, desenvolvedores e pesquisadores. O Lodestar consiste em um nó do Beacon e um cliente validador alimentado por implementações em JavaScript dos protocolos Ethereum. O Lodestar visa melhorar a usabilidade do Ethereum com clientes leves, expandir a acessibilidade para um grupo maior de desenvolvedores e contribuir ainda mais para a diversidade do ecossistema.
+O Lodestar é uma implementação de cliente de consenso pronta para produção escrita em TypeScript sob a licença Apache-2.0. Ele é mantido pela ChainSafe Systems e é o mais novo dos clientes de consenso para stakers solo, desenvolvedores e pesquisadores. O Lodestar consiste em um nó do Beacon e um cliente validador alimentados por implementações em JavaScript dos protocolos Ethereum. O Lodestar visa melhorar a usabilidade do Ethereum com clientes leves, expandir a acessibilidade para um grupo maior de desenvolvedores e contribuir ainda mais para a diversidade do ecossistema.
 
 Mais informações podem ser encontradas no [site do Lodestar](https://lodestar.chainsafe.io/)
 
@@ -300,7 +288,7 @@ O modo de cliente leve baixa todos os cabeçalhos de bloco, dados de bloco e ver
 
 A sincronização otimista é uma estratégia de sincronização pós-The Merge projetada para ser opcional e compatível com versões anteriores, permitindo que os nós de execução sincronizem por meio de métodos estabelecidos. O mecanismo de execução pode importar _otimisticamente_ blocos do Beacon sem verificá-los totalmente, encontrar o topo mais recente e, em seguida, começar a sincronizar a cadeia com os métodos acima. Então, depois que o cliente de execução for atualizado, ele informará o cliente de consenso sobre a validade das transações na Beacon Chain.
 
-[Mais sobre sincronização otimista](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[Mais sobre sincronização otimista](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/optimistic-sync.md)
 
 #### Sincronização de ponto de verificação {#checkpoint-sync}
 
@@ -322,4 +310,4 @@ Mais sobre [sincronização de ponto de verificação](https://notes.ethereum.or
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Transforme seu Raspberry Pi 4 em um nó validador apenas gravando o cartão MicroSD – Guia de instalação](/developers/tutorials/run-node-raspberry-pi/) _– Grave seu Raspberry Pi 4, conecte um cabo ethernet, conecte o disco SSD e ligue o dispositivo para transformar o Raspberry Pi 4 em um nó completo do Ethereum executando a camada de execução (Mainnet) e/ou a camada de consenso (Beacon Chain / validador)._
+- [Transforme seu Raspberry Pi 5 em um nó validador apenas gravando o cartão MicroSD – Guia de instalação](/developers/tutorials/run-node-raspberry-pi/) _– Grave seu Raspberry Pi 5, conecte um cabo ethernet, conecte o disco NVMe e ligue o dispositivo para transformar o Raspberry Pi 5 em um nó completo do Ethereum executando a camada de execução (Mainnet) e/ou a camada de consenso (Beacon Chain / validador)._

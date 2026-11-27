@@ -5,9 +5,9 @@ template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
 summaryPoints:
-  - "Získejte finanční pobídky za vytváření přesných předpovědí"
-  - "Vysoce kvalitní předpovědi o budoucích událostech"
-buttons: 
+  - "Obchodujte s výsledky budoucích událostí"
+  - "Ceny fungují jako živý, veřejný odhad pravděpodobnosti, že se něco stane"
+buttons:
   - content: Zjistit více
     toId: how-prediction-markets-work
   - content: Prozkoumat aplikace
@@ -15,39 +15,39 @@ buttons:
     isSecondary: false
 ---
 
-Predikční trhy využívají moudrost davu a finanční pobídky k předpovídání událostí. Nabízejí různorodá, vysoce kvalitní data a získaly na popularitě během voleb v USA v roce 2024.
+Predikční trhy umožňují lidem kupovat a prodávat podíly na výsledku budoucích událostí. Cena podílu ukazuje, jak pravděpodobný se daný výsledek zdá trhu jako celku. Získaly si širokou pozornost během voleb v USA v roce 2024.
 
 ## Jak fungují predikční trhy {#how-prediction-markets-work}
 
-Na rozdíl od tradičních metod předpovídání, které se spoléhají na názory odborníků, omezené vzorky průzkumů nebo historická data, predikční trhy využívají **finanční pobídky v reálném čase** a **moudrost davu** k získávání poznatků týkajících se konkrétní události – voleb, cen krypto aktiv, sportovních výsledků – zkrátka čehokoli. 
+Každý trh klade otázku s jasnou odpovědí, například „Bude zítra v Lisabonu pršet?“. Podíl **Ano** vyplatí 1 $, pokud se ukáže, že odpověď je ano, a nic, pokud ne. Podíl **Ne** funguje přesně naopak.
 
-To umožňuje komukoli vyjádřit podporu konkrétnímu výsledku prostřednictvím finančního závazku.
- 
-Tím, že umožňují sázení na události v reálném světě a upravují ceny podle toho, jak se objevují nové informace, jsou informované názory ceněny výše a přesnost může být odměněna. 
+Pokud se podíly Ano obchodují za 67 centů, trh tím říká, že je zhruba 67% šance na déšť. Kdokoli, kdo si myslí, že skutečná šance je jiná, může nakupovat nebo prodávat, a to hýbe s cenou. Protože lidé, kteří vědí více, mají důvod obchodovat, nové informace se v ceně obvykle projeví rychle. Proto mohou být predikční trhy užitečnými nástroji pro předpovídání. Nejsou však dokonalé.
 
-Teoreticky, protože sázející mohou profitovat z toho, že mají pravdu, mohou predikční trhy předpovídat výsledky s velkou přesností. Predikční trhy založené na blockchainu jsou ještě zajímavější, protože se do předpovídání může zapojit prakticky kdokoli a získat odměny ve formě stablecoinů nebo kryptoměn.
+Každý vítězný podíl je zaplacen někým, kdo držel stranu, která prohrála. Predikční trhy mají **nulový součet**: kromě poplatků platí, že to, co vítězové vydělají, poražení ztratí.
 
 ## Proč na tom záleží? {#why-does-this-matter}
 
-Na rozdíl od tradičního předpovídání jsou predikční trhy založené na blockchainu:
+Predikční trhy založené na blockchainu přidávají několik věcí, které tradiční sázkové weby a burzy nemají:
 
 <Grid>
-  <Card title="S pobídkami" emoji=":money_with_wings:" description="Účastníci stakují skutečné prostředky, což vede k vysoce kvalitním predikcím."/>
-  <Card title="Decentralizace" emoji="🌎" description="Použití blockchainu a chytrých kontraktů zajišťuje transparentní a automatizované výplaty." />
-  <Card title="Trhem řízené kurzy" emoji="🤝" description="Ceny určují obchodníci nákupem a prodejem podílů na výsledcích, namísto toho, aby je předem stanovil centralizovaný bookmaker." />
+  <Card title="Otevřená data" emoji="🔍" description="Každý obchod je zaznamenán onchain, takže kdokoli může zkontrolovat ceny, objemy a to, kdo vyhrál nebo prohrál."/>
+  <Card title="Onchain vypořádání" emoji="🌎" description="Pozice jsou tokeny ve vaší vlastní peněžence a chytré kontrakty vyplatí vítězné podíly, jakmile je nahlášen výsledek." />
+  <Card title="Kurzy řízené trhem" emoji="🤝" description="Ceny jsou určovány obchodníky, kteří kupují a prodávají podíly na výsledku, spíše než aby byly předem stanoveny centralizovaným bookmakerem." />
 </Grid>
 
-I jako pozorovatel trhu můžete vyhodnocovat cenná data, která by jinak byla nedostupná. Představte si to takto:
+Otevřená data mají v praxi význam. Výzkumníci mohli [studovat každý obchod na Polymarketu](https://cepr.org/publications/dp21615), což zahrnovalo více než 2,4 milionu uživatelů od listopadu 2022 do března 2026, protože jeho obchody se vypořádávají na veřejném blockchainu. Taková nezávislá kontrola není možná na centralizovaných platformách, jako je Kalshi, kde obchodování a výplaty probíhají na vlastních systémech společnosti. Neexistuje žádný veřejný záznam k auditu a žádný chytrý kontrakt, který by zaručoval, že vítězné pozice budou vyplaceny.
 
-1. Předpovědi jsou vázány na konkrétní událost (např. nasadí se Beam Chain do roku 2030?).
-2. Účastníci trhu kupují a prodávají podíly na základě své důvěry v jakýkoli výsledek.
-3. Ceny se upravují s tím, jak více účastníků vkládá svůj stake na svá přesvědčení, což odráží poznatky v reálném čase.
-4. Každý, kdo vsadí správně, vydělává úměrně k vloženému staku. 
-5. Pozorovatelé trhu mohou využít otevřená data k podpoře výzkumu nebo diskuse.
+Zde je ukázka toho, jak trh funguje od začátku do konce:
+
+1. Trh je vytvořen kolem otázky s jasnými pravidly, jak se o ní rozhodne.
+2. Obchodníci kupují a prodávají podíly Ano a Ne a cena se pohybuje podle toho, jak obchodují.
+3. Jakmile událost nastane, [orákulum](/developers/docs/oracles/) nahlásí výsledek onchain. Na Polymarketu může kdokoli navrhnout výsledek složením zálohy a kdokoli jiný jej může zpochybnit. Pokud se spor nevyřeší, držitelé tokenu UMA hlasují o výsledku.
+4. Každý vítězný podíl lze vyměnit za 1 $. Prohrávající podíly nemají žádnou hodnotu.
+5. Kdokoli může použít historii cen a údaje o obchodech pro výzkum nebo diskusi.
 
 ## Najděte si predikční trh {#find-a-prediction-market}
 
-K dispozici je několik predikčních trhů založených na Ethereu. Toto jsou některé z nejznámějších současných predikčních trhů:
+Tyto predikční trhy vypořádávají obchody onchain, takže kdokoli může zkontrolovat ceny a historii obchodování:
 
 <PredictionMarketLists />
 
@@ -55,32 +55,36 @@ K dispozici je několik predikčních trhů založených na Ethereu. Toto jsou n
 <AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
- <p className="mt-0"><strong>Mějte na paměti rizika</strong></p>
-  <p className="mt-2">Sázejte pouze to, co si můžete dovolit, a buďte si vědomi možného návykového chování.</p>
+  <p className="mt-0"><strong>Mějte na paměti rizika</strong></p>
+  <p className="mt-2">Většina lidí, kteří obchodují na predikčních trzích, prodělá. Obchodujte pouze s tím, co si můžete dovolit ztratit, a buďte si vědomi možného návykového chování.</p>
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ## Výzvy a rizika {#challenges-and-risks}
 
-Predikční trhy na blockchainu čelí několika výzvám, které mohou ovlivnit spravedlnost, legalitu a přesnost.
+Predikční trhy čelí skutečným výzvám, které ovlivňují spravedlnost, legalitu a přesnost.
 
-⚠️ **Manipulace s trhem** – Bohatí hráči mohou zkreslit výsledky prostřednictvím wash tradingu (fiktivního obchodování).  
-💧 **Problémy s likviditou** – Nízká účast ([nízká likvidita](https://www.investopedia.com/terms/t/thinmarket.asp)) může snížit spolehlivost trhu.  
-🏛 **Regulační nejistota** – Vlády uvalily na některé platformy omezení.
+📉 **Většina obchodníků prodělá** – [Studie každého obchodu na Polymarketu](https://cepr.org/publications/dp21615) od listopadu 2022 do března 2026 zjistila, že asi 69 % uživatelů skončilo ve ztrátě. Mezi uživateli, kteří vydělali peníze, si horní 1 % odneslo 76,5 % zisků. Největšími vítězi byli většinou obchodníci, kteří poskytují likviditu pomocí limitních příkazů, často profesionálně a ve velkém objemu.
 
-Ke zmírnění těchto problémů experimentují vývojáři Etherea s řešeními, jako je futarchie (správa prostřednictvím predikčních trhů) a ověřování decentralizované identity (DID).
+🕵️ **Obchodování zasvěcených osob (insider trading)** – Lidé, kteří znají výsledek předem, mohou profitovat na úkor ostatních obchodníků. [Výzkumníci z Columbia Law School a University of Haifa](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6426778) odhadli, že podezřelí informovaní obchodníci vydělali na Polymarketu mezi únorem 2024 a únorem 2026 přibližně 143 milionů dolarů.
+
+⚖️ **Sporné výsledky** – Chytré kontrakty mohou vyplácet automaticky, ale někdo stále musí nahlásit, co se stalo. Když je otázka formulována volně nebo jsou fakta nejasná, nahlášený výsledek může být zpochybněn.
+
+⚠️ **Manipulace s trhem** – Obchodníci s velkým množstvím peněz mohou hýbat cenami, zejména na malých trzích. Wash trading (obchodování se sebou samým) může způsobit, že trh vypadá rušněji, než ve skutečnosti je.
+
+💧 **Problémy s likviditou** – Nízká účast ([slabá likvidita](https://www.investopedia.com/terms/t/thinmarket.asp)) může způsobit, že ceny budou méně spolehlivé.
+
+🏛 **Regulační nejistota** – Pravidla se liší podle země a rychle se mění. V USA regulační orgány a soudy stále rozhodují o tom, zda se některé kontrakty na události, zejména ve sportu, počítají jako finanční produkty nebo hazardní hry. Mnoho platforem blokuje uživatele v určitých zemích.
 
 ## Experimentování s predikčními trhy {#experimenting-with-prediction-markets}
 
-Predikční trhy mění způsob rozhodování v digitálním věku. Využitím Etherea nabízejí **spravedlivé, otevřené a odměňující způsoby, jak předpovídat budoucnost.**
+Predikční trhy mohou být užitečné i nad rámec obchodování za účelem zisku. Jedna myšlenka, zvaná futarchie, jde ještě dále a využívá trhy k pomoci při rozhodování, nejen k jejich předpovídání.
 
-Existuje mnoho způsobů, jak využít nástroje pro předpovídání mimo finanční zisk. Například v [návrhu na vylepšení DevConu](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) bylo navrženo, aby organizátoři DevConu využili predikční trhy k odhadu účasti na budoucích událostech. 
-
-To by organizátorům pomohlo určit, která lokalita by vedla k největší události, v porovnání s tím, která lokalita by byla mezinárodně nejdostupnější. Výhody toho spočívají v tom, že organizátoři DevConu mohou urychlit čas potřebný k prověření různých vízových politik, dostupnosti letišť a životních nákladů v dané oblasti, a zároveň shromažďovat data o tom, kam by se potenciální účastníci rádi podívali.
+Například [návrh na vylepšení Devconu](https://forum.devcon.org/t/futarchy-decision-markets-for-deciding-next-devcon/5305) (DIP) navrhl, aby organizátoři Devconu využili predikční trhy k předpovědi účasti v možných budoucích lokalitách. To by jim mohlo pomoci zvážit, které město by přilákalo největší událost, v porovnání s tím, které by bylo mezinárodně nejdostupnější. Mohlo by to také ušetřit čas strávený porovnáváním vízových politik, dostupnosti letišť a životních nákladů, a zároveň ukázat, kam by se potenciální účastníci těšili.
 
 ## Další čtení {#further-reading}
 
-[Od predikčních trhů k informačním financím](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) – Vitalik Buterin  
-[Vývoj decentralizovaných predikčních trhů na Ethereu](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
-[Bílá kniha projektu Augur](https://github.com/AugurProject/whitepaper)  
+[Od predikčních trhů k informačním financím](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin  
+[Kdo vyhrává a kdo prohrává na predikčních trzích? Důkazy z Polymarketu](https://cepr.org/publications/dp21615) - Akey, Grégoire, Harvie a Martineau  
+[Bílá kniha projektu Augur](https://github.com/AugurProject/whitepaper)

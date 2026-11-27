@@ -22,13 +22,13 @@ Les deux types de comptes ont la capacité de :
 - Recevoir, détenir et envoyer des ETH et des jetons
 - Interagir avec des contrats intelligents déployés
 
-### Différences clés {#key-differences}
+### Principales différences {#key-differences}
 
 **Détenu en externe**
 
 - La création d'un compte ne coûte rien
 - Peut initier des transactions
-- Les transactions entre des comptes détenus en externe ne peuvent être que des transferts d'ETH ou de jetons
+- Les transactions entre comptes détenus en externe ne peuvent être que des transferts d'ETH, à moins que le destinataire n'ait délégué au code d'un contrat (voir `codeHash` ci-dessous)
 - Composé d'une paire de clés cryptographiques : des clés publiques et privées qui contrôlent les activités du compte
 
 **Contrat**
@@ -40,15 +40,14 @@ Les deux types de comptes ont la capacité de :
 
 ## Examen d'un compte {#an-account-examined}
 
-Les comptes Ethereum comportent quatre champs :
+Les comptes Ethereum ont quatre champs :
 
-- `nonce` – Un compteur qui indique le nombre de transactions envoyées depuis un compte détenu en externe ou le nombre de contrats créés par un compte de contrat. Une seule transaction avec un nonce donné peut être exécutée pour chaque compte, ce qui protège contre les attaques par rejeu où des transactions signées sont diffusées et réexécutées à plusieurs reprises.
+- `nonce` – Un compteur qui indique le nombre de transactions envoyées depuis un compte détenu en externe ou, pour un compte de contrat, un de plus que le nombre de contrats qu'il a créés (les nonces de contrat commencent à 1, selon l'[EIP-161](https://eips.ethereum.org/EIPS/eip-161)). Chaque autorisation [EIP-7702](/roadmap/pectra/7702/) qui est appliquée incrémente également le nonce du compte autorisant. Une seule transaction avec un nonce donné peut être exécutée pour chaque compte, protégeant contre les attaques par rejeu où les transactions signées sont diffusées et réexécutées à plusieurs reprises.
 - `balance` – Le nombre de Wei détenus par cette adresse. Le Wei est une dénomination de l'ETH et il y a 1e+18 Wei par ETH.
-- `codeHash` – Ce hash fait référence au _code_ d'un compte sur la Machine Virtuelle Ethereum (EVM). Les comptes de contrat ont des fragments de code programmés qui peuvent effectuer différentes opérations. Ce code EVM est exécuté si le compte reçoit un appel de message. Il ne peut pas être modifié, contrairement aux autres champs du compte. Tous ces fragments de code sont contenus dans la base de données d'état sous leurs hashs correspondants pour une récupération ultérieure. Cette valeur de hash est connue sous le nom de codeHash. Pour les comptes détenus en externe, le champ codeHash est le hash d'une chaîne vide.
+- `codeHash` – Ce hash fait référence au _code_ d'un compte sur la Machine Virtuelle Ethereum (EVM). Les comptes de contrat ont des fragments de code programmés qui peuvent effectuer différentes opérations. Ce code EVM est exécuté si le compte reçoit un appel de message. Le code d'un contrat ne peut pas être modifié une fois qu'il est déployé, contrairement aux autres champs du compte. Tous ces fragments de code sont contenus dans la base de données d'état sous leurs hashs correspondants pour une récupération ultérieure. Cette valeur de hash est connue sous le nom de codeHash. Pour les comptes détenus en externe, le champ codeHash est le hash d'une chaîne vide, à moins que le compte n'ait délégué à un contrat intelligent avec l'[EIP-7702](/roadmap/pectra/7702/). Le code du compte est alors un indicateur de délégation (`0xef0100` suivi de l'adresse du contrat), que le compte peut modifier ou effacer avec une nouvelle autorisation.
 - `storageRoot` – Parfois connu sous le nom de hash de stockage. Un hash de 256 bits du nœud racine d'un [trie de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) qui encode le contenu de stockage du compte (un mappage entre des valeurs entières de 256 bits), encodé dans le trie comme un mappage du hash Keccak-256 des clés entières de 256 bits vers les valeurs entières de 256 bits encodées en préfixe de longueur récursif (RLP). Ce trie encode le hash du contenu de stockage de ce compte, et est vide par défaut.
 
-![A diagram showing the make up of an account](./accounts.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<AccountsDiagram />
 
 ## Comptes détenus en externe et paires de clés {#externally-owned-accounts-and-key-pairs}
 

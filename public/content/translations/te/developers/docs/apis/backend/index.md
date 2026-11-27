@@ -20,7 +20,7 @@ lang: te
 
 ## అందుబాటులో ఉన్న లైబ్రరీలు {#available-libraries}
 
-### మౌలిక సదుపాయాలు మరియు నోడ్ సేవలు {#infrastructure-and-node-services}
+### ఇన్‌ఫ్రాస్ట్రక్చర్ మరియు నోడ్ సేవలు {#infrastructure-and-node-services}
 
 **Alchemy -** **_ఎథీరియం డెవలప్‌మెంట్ ప్లాట్‌ఫారమ్._**
 
@@ -35,7 +35,7 @@ lang: te
 - [డాక్యుమెంటేషన్](https://docs.allthatnode.com)
 - [డిస్కార్డ్](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs ద్వారా Blast -** **_ఎథీరియం మెయిన్‌నెట్ మరియు టెస్ట్‌నెట్‌ల కోసం వికేంద్రీకృత APIలు._**
+**Bware Labs ద్వారా Blast -** **_ఎథీరియం మెయిన్‌నెట్ మరియు టెస్ట్‌నెట్‌ల కోసం వికేంద్రీకృత అప్లికేషన్ ప్రోగ్రామింగ్ ఇంటర్‌ఫేస్ (API)లు._**
 
 - [blastapi.io](https://blastapi.io/)
 - [డాక్యుమెంటేషన్](https://docs.blastapi.io)
@@ -66,10 +66,10 @@ lang: te
 **Infura -** **_ఎథీరియం API యాజ్ ఎ సర్వీస్._**
 
 - [infura.io](https://infura.io)
-- [డాక్యుమెంటేషన్](https://docs.infura.io/api)
+- [డాక్యుమెంటేషన్](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _ఖర్చు-తక్కువ EVM జేసన్-ఆర్‌పీసీ ప్రొవైడర్_**
+**Node RPC - _ఖర్చు-సమర్థవంతమైన ఈథీరియం వర్చువల్ మెషీన్ (EVM) జేసన్-ఆర్‌పీసీ ప్రొవైడర్_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [డాక్యుమెంటేషన్](https://docs.noderpc.xyz/node-rpc)
@@ -77,7 +77,7 @@ lang: te
 **NOWNodes - _ఫుల్ నోడ్‌లు మరియు బ్లాక్ ఎక్స్‌ప్లోరర్‌లు._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [డాక్యుమెంటేషన్](https://nownodes.gitbook.io/documentation)
+- [డాక్యుమెంటేషన్](https://docs.nownodes.io/)
 
 **QuickNode -** **_బ్లాక్‌చైన్ ఇన్‌ఫ్రాస్ట్రక్చర్ యాజ్ ఎ సర్వీస్._**
 
@@ -91,7 +91,13 @@ lang: te
 - [డాక్యుమెంటేషన్](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
-**Zmok -** **_జేసన్-ఆర్‌పీసీ/WebSockets APIగా వేగ-ఆధారిత ఎథీరియం నోడ్‌లు._**
+**SolidRPC -** **_ఫుల్, ఆర్కైవ్ మరియు కీ-లెస్ పబ్లిక్ యాక్సెస్‌తో EVM జేసన్-ఆర్‌పీసీ ఇన్‌ఫ్రాస్ట్రక్చర్._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [డాక్యుమెంటేషన్](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
+**Zmok -** **_జేసన్-ఆర్‌పీసీ/WebSockets APIగా వేగం-ఆధారిత ఎథీరియం నోడ్‌లు._**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)
@@ -100,13 +106,19 @@ lang: te
 
 ### డెవలప్‌మెంట్ టూల్స్ {#development-tools}
 
-**ethers-kt -** **_EVM-ఆధారిత బ్లాక్‌చైన్‌ల కోసం అసమాన, అధిక-పనితీరు గల Kotlin/Java/Android లైబ్రరీ._**
+**eth.zig -** **_కంపైల్-టైమ్ అప్లికేషన్ బైనరీ ఇంటర్‌ఫేస్ (ABI) ఎన్‌కోడింగ్ మరియు కాంట్రాక్ట్ బైండింగ్‌లతో ఎథీరియం కోసం ఒక Zig లైబ్రరీ._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [డాక్యుమెంటేషన్](https://ethzig.org)
+- [ఉదాహరణలు](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_ఈథీరియం వర్చువల్ మెషీన్ (EVM)-ఆధారిత బ్లాక్‌చైన్‌ల కోసం అసమకాలిక, అధిక-పనితీరు గల Kotlin/Java/Android లైబ్రరీ._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [ఉదాహరణలు](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [డిస్కార్డ్](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_బ్లాక్‌చైన్ కోసం ఓపెన్ సోర్స్ .NET ఇంటిగ్రేషన్ లైబ్రరీ._**
+**Nethereum -** **_బ్లాక్‌చైన్ కోసం ఒక ఓపెన్ సోర్స్ .NET ఇంటిగ్రేషన్ లైబ్రరీ._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [డాక్యుమెంటేషన్](https://docs.nethereum.com/docs/getting-started/welcome/)
@@ -125,7 +137,7 @@ lang: te
 - [డాక్యుమెంటేషన్](https://docs.tatum.io/)
 - [డిస్కార్డ్](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_ఎథీరియం కోసం Java/Android/Kotlin/Scala ఇంటిగ్రేషన్ లైబ్రరీ._**
+**Web3j -** **_ఎథీరియం కోసం ఒక Java/Android/Kotlin/Scala ఇంటిగ్రేషన్ లైబ్రరీ._**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [డాక్స్](https://docs.web3j.io/)
@@ -133,7 +145,7 @@ lang: te
 
 ### బ్లాక్‌చైన్ సేవలు {#blockchain-services}
 
-**BlockCypher -** **_ఎథీరియం వెబ్ APIలు._**
+**BlockCypher -** **_ఎథీరియం Web APIలు._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [డాక్యుమెంటేషన్](https://www.blockcypher.com/dev/ethereum/)
@@ -150,9 +162,9 @@ lang: te
 - [డాక్యుమెంటేషన్](https://docs.chainstack.com/)
 - [ఎథీరియం API రిఫరెన్స్](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**కాయిన్‌బేస్ క్లౌడ్ నోడ్ -** **_బ్లాక్‌చైన్ ఇన్‌ఫ్రాస్ట్రక్చర్ API._**
+**కాయిన్‌బేస్ Cloud Node -** **_బ్లాక్‌చైన్ ఇన్‌ఫ్రాస్ట్రక్చర్ API._**
 
-- [కాయిన్‌బేస్ క్లౌడ్ నోడ్](https://www.coinbase.com/developer-platform)
+- [కాయిన్‌బేస్ Cloud Node](https://www.coinbase.com/developer-platform)
 - [డాక్యుమెంటేషన్](https://docs.cdp.coinbase.com/)
 
 **Figment ద్వారా DataHub -** **_ఎథీరియం మెయిన్‌నెట్ మరియు టెస్ట్‌నెట్‌లతో Web3 API సేవలు._**
@@ -164,30 +176,29 @@ lang: te
 
 - [moralis.io](https://moralis.io)
 - [డాక్యుమెంటేషన్](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [డిస్కార్డ్](https://moralis.io/joindiscord/)
 - [ఫోరమ్](https://forum.moralis.io/)
 
-**NFTPort -** **_ఎథీరియం డేటా మరియు ముద్రించు APIలు._**
+**NFTPort -** **_ఎథీరియం డేటా మరియు మింట్ APIలు._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [డాక్యుమెంటేషన్](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [డిస్కార్డ్](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview -** **_సాధారణ మల్టీ-క్రిప్టో బ్లాక్‌చైన్ APIల ప్లాట్‌ఫారమ్._**
+**Tokenview -** **_జనరల్ మల్టీ-క్రిప్టో బ్లాక్‌చైన్ APIల ప్లాట్‌ఫారమ్._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [డాక్యుమెంటేషన్](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_ఎథీరియం బ్లాక్‌చైన్‌కు సులభమైన మరియు నమ్మదగిన API యాక్సెస్‌ను అందిస్తుంది._**
+**Watchdata -** **_ఎథీరియం బ్లాక్‌చైన్‌కు సులభమైన మరియు నమ్మకమైన API యాక్సెస్‌ను అందిస్తుంది._**
 
 - [Watchdata](https://watchdata.io/)
 - [డాక్యుమెంటేషన్](https://docs.watchdata.io/)
 - [డిస్కార్డ్](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_డజన్ల కొద్దీ చైన్‌లలో రియల్-టైమ్, సుసంపన్నమైన బ్లాక్‌చైన్ డేటా API._**
+**Codex -** **_డజన్ల కొద్దీ చైన్‌లలో రియల్-టైమ్, ఎన్‌రిచ్డ్ బ్లాక్‌చైన్ డేటా API._**
 
 - [codex.io](https://www.codex.io/)
 - [డాక్యుమెంటేషన్](https://docs.codex.io)
@@ -195,13 +206,12 @@ lang: te
 - [GitHub](https://github.com/Codex-Data)
 - [డిస్కార్డ్](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent -** **_200+ చైన్‌ల కోసం సుసంపన్నమైన బ్లాక్‌చైన్ APIలు._**
+**Covalent -** **_200+ చైన్‌ల కోసం ఎన్‌రిచ్డ్ బ్లాక్‌చైన్ APIలు._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [డాక్యుమెంటేషన్](https://www.covalenthq.com/docs/api/)
+- [డాక్యుమెంటేషన్](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [డిస్కార్డ్](https://www.covalenthq.com/discord/)
-
 
 ## తదుపరి పఠనం {#further-reading}
 
@@ -214,5 +224,4 @@ _మీకు సహాయపడిన కమ్యూనిటీ వనరు 
 
 ## సంబంధిత ట్యుటోరియల్స్ {#related-tutorials}
 
-- [JavaScriptలో ఎథీరియం బ్లాక్‌చైన్‌ను ఉపయోగించడానికి Web3.jsని సెటప్ చేయండి](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– మీ ప్రాజెక్ట్‌లో Web3.jsని సెటప్ చేయడానికి సూచనలు._
-- [JavaScript నుండి స్మార్ట్ కాంట్రాక్ట్‌ను కాల్ చేయడం](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI టోకెన్‌ని ఉపయోగించి, JavaScriptని ఉపయోగించి కాంట్రాక్ట్‌ల ఫంక్షన్‌ను ఎలా కాల్ చేయాలో చూడండి._
+- [Web3 యాప్‌ల కోసం సర్వర్ కాంపోనెంట్‌లు మరియు ఏజెంట్‌లు](/developers/tutorials/server-components/) _– బ్లాక్‌చైన్ ఘటనలను వినే మరియు లావాదేవీలతో ప్రతిస్పందించే TypeScript సర్వర్ కాంపోనెంట్‌లను ఎలా వ్రాయాలి._

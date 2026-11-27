@@ -1,6 +1,6 @@
 ---
 title: "Ether'e teknik giriş"
-description: "Geliştiriciler için Ether kripto parasına giriş."
+description: "Ether'e (ETH) teknik giriş: ne için kullanıldığı, Wei ve Gwei cinsinden nasıl ifade edildiği ve nasıl basıldığı, yakıldığı ve transfer edildiği."
 lang: tr
 ---
 

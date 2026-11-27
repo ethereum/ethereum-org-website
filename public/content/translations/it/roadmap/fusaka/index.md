@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Scopri l'aggiornamento del protocollo Fusaka
+description: "Fusaka è stato attivato il 3 dicembre 2025. Scopri cosa ha cambiato questo aggiornamento di Ethereum, incluso PeerDAS, che scala i blob per transazioni dei layer 2 più economiche."
 lang: it
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -27,7 +27,7 @@ L'aggiornamento Fusaka è solo un singolo passo negli obiettivi di sviluppo a lu
 
 #### PeerDAS {#peerdas}
 
-Questo è il _fiore all'occhiello_ del fork Fusaka, la funzionalità principale aggiunta in questo aggiornamento. I layer 2 (l2) attualmente pubblicano i loro dati su Ethereum nei blob, il tipo di dati effimero creato specificamente per i layer 2. Prima di Fusaka, ogni nodo completo doveva archiviare ogni blob per garantire che i dati esistessero. Con l'aumento della capacità transazionale dei blob, dover scaricare tutti questi dati diventa insostenibile in termini di risorse.
+Questo è il _fiore all'occhiello_ del fork Fusaka, la funzionalità principale aggiunta in questo aggiornamento. I layer 2 (L2) attualmente pubblicano i loro dati su Ethereum nei blob, il tipo di dati effimero creato specificamente per i layer 2. Prima di Fusaka, ogni nodo completo doveva archiviare ogni blob per garantire che i dati esistessero. Con l'aumento della capacità transazionale dei blob, dover scaricare tutti questi dati diventa insostenibile in termini di risorse.
 
 Con il [campionamento della disponibilità dei dati](https://notes.ethereum.org/@fradamt/das-fork-choice), invece di dover archiviare tutti i dati dei blob, ogni nodo sarà responsabile di un sottoinsieme dei dati dei blob. I blob sono distribuiti in modo uniforme e casuale tra i nodi della rete, con ogni nodo completo che detiene solo 1/8 dei dati, consentendo quindi una scalabilità teorica fino a 8 volte. Per garantire la disponibilità dei dati, qualsiasi porzione dei dati può essere ricostruita da un qualsiasi 50% esistente del totale con metodi che riducono la probabilità di dati errati o mancanti a un livello crittograficamente trascurabile (da ~uno su 10<sup>20</sup> a uno su 10<sup>24</sup>).
 
@@ -161,11 +161,11 @@ Questa funzionalità aggiunge una piccola istruzione EVM, il **conteggio degli z
 
 #### Precompilato per il supporto della curva secp256r1 {#secp256r1-precompile}
 
-Introduce un verificatore di firma secp256r1 (P-256) integrato in stile passkey all'indirizzo fisso `0x100` utilizzando lo stesso formato di chiamata già adottato da molti layer 2 (l2) e risolvendo i casi limite, in modo che i contratti scritti per quegli ambienti funzionino sul layer 1 (l1) senza modifiche.
+Introduce un verificatore di firma secp256r1 (P-256) integrato in stile passkey all'indirizzo fisso `0x100` utilizzando lo stesso formato di chiamata già adottato da molti layer 2 (L2) e risolvendo i casi limite, in modo che i contratti scritti per quegli ambienti funzionino sul layer 1 (L1) senza modifiche.
 
 Aggiornamento dell'UX! Per gli utenti, questo sblocca la firma nativa del dispositivo e le passkey. I portafogli possono attingere direttamente ad Apple Secure Enclave, Android Keystore, moduli di sicurezza hardware (HSM) e FIDO2/WebAuthn: nessuna frase seme, un inserimento più fluido e flussi multi-fattore che sembrano app moderne. Ciò si traduce in una migliore UX, un recupero più semplice e modelli di astrazione dell'account che corrispondono a ciò che miliardi di dispositivi fanno già.
 
-Per gli sviluppatori, accetta un input di 160 byte e restituisce un output di 32 byte, semplificando il porting di librerie esistenti e contratti dei layer 2 (l2). Internamente, include controlli del punto all'infinito e di confronto modulare per eliminare casi limite insidiosi senza interrompere i chiamanti validi.
+Per gli sviluppatori, accetta un input di 160 byte e restituisce un output di 32 byte, semplificando il porting di librerie esistenti e contratti dei layer 2 (L2). Internamente, include controlli del punto all'infinito e di confronto modulare per eliminare casi limite insidiosi senza interrompere i chiamanti validi.
 
 **Risorse**:
 
@@ -207,7 +207,7 @@ The Merge nel 2022 [ha utilizzato un panda](https://x.com/hwwonx/status/14319708
 
 ### Quali miglioramenti sono inclusi per la scalabilità dei layer 2 (L2)? {#what-improvements-are-included-for-l2-scaling}
 
-[PeerDAS](/roadmap/fusaka/peerdas) è la funzionalità principale del fork. Implementa il campionamento della disponibilità dei dati (DAS) che sblocca maggiore scalabilità per i rollup, scalando teoricamente lo spazio dei blob fino a 8 volte la dimensione attuale. Anche il mercato delle commissioni per i blob sarà migliorato per reagire in modo efficiente alla congestione e garantire che i layer 2 (l2) paghino una commissione significativa per il calcolo e lo spazio che i blob impongono ai nodi.
+[PeerDAS](/roadmap/fusaka/peerdas) è la funzionalità principale del fork. Implementa il campionamento della disponibilità dei dati (DAS) che sblocca maggiore scalabilità per i rollup, scalando teoricamente lo spazio dei blob fino a 8 volte la dimensione attuale. Anche il mercato delle commissioni per i blob sarà migliorato per reagire in modo efficiente alla congestione e garantire che i layer 2 (L2) paghino una commissione significativa per il calcolo e lo spazio che i blob impongono ai nodi.
 
 ### In che modo i fork BPO sono diversi? {#how-are-bpo-forks-different}
 
@@ -228,7 +228,7 @@ Esempio di come potrebbe apparire:
 
 ### Questo abbasserà le commissioni su Ethereum (layer 1)? {#will-this-lower-gas}
 
-Questo aggiornamento non abbassa le commissioni del gas sul layer 1 (l1), almeno non direttamente. L'obiettivo principale è avere più spazio nei blob per i dati dei rollup, abbassando quindi le commissioni sul layer 2 (l2). Ciò potrebbe avere alcuni effetti collaterali sul mercato delle commissioni del layer 1, ma non si prevede alcun cambiamento significativo.
+Questo aggiornamento non abbassa le commissioni del gas sul layer 1 (L1), almeno non direttamente. L'obiettivo principale è avere più spazio nei blob per i dati dei rollup, abbassando quindi le commissioni sul layer 2 (L2). Ciò potrebbe avere alcuni effetti collaterali sul mercato delle commissioni del layer 1, ma non si prevede alcun cambiamento significativo.
 
 ### Come staker, cosa devo fare per l'aggiornamento? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
 

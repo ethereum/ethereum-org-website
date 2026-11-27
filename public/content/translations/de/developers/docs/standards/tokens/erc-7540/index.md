@@ -1,21 +1,21 @@
 ---
 title: "ERC-7540: Standard für asynchrone tokenisierte Tresore"
-description: Eine Erweiterung von ERC-4626, die asynchrone Einzahlungs- und Rücknahmeprozesse für tokenisierte Tresore hinzufügt.
+description: "Eine Erweiterung von ERC-4626, die asynchrone Einzahlungs- und Rücknahmeprozesse für tokenisierte Tresore hinzufügt."
 lang: de
 ---
 
 ## Einführung {#introduction}
 
-ERC-7540 erweitert den [ERC-4626-Standard für tokenisierte Tresore](/developers/docs/standards/tokens/erc-4626/) um die Unterstützung für asynchrone Einzahlungs- und Rücknahmeprozesse. Er führt ein Anfrage-dann-Beanspruchen-Muster (request-then-claim) ein: Benutzer reichen zunächst eine Anfrage ein (wodurch ihre Vermögenswerte oder Anteile gesperrt werden) und beanspruchen dann das Ergebnis, nachdem der Tresor es verarbeitet hat.
+ERC-7540 erweitert den [ERC-4626-Standard für tokenisierte Tresore](/developers/docs/standards/tokens/erc-4626/) um die Unterstützung für asynchrone Einzahlungs- und Rücknahmeprozesse. Er führt ein Anfrage-dann-Beanspruchen-Muster ein: Benutzer reichen zunächst eine Anfrage ein (und übergeben ihre Vermögenswerte oder Anteile an den Tresor) und beanspruchen dann das Ergebnis, nachdem der Tresor es verarbeitet hat.
 
-Dies ist erforderlich, wenn ein Tresor nicht sofort in einer einzigen Transaktion abgewickelt werden kann, zum Beispiel:
+Dies ist erforderlich, wenn ein Tresor nicht sofort in einer einzigen Transaktion abwickeln kann, zum Beispiel:
 
 - Protokolle für reale Vermögenswerte (RWA) wie tokenisierte Staatsanleihen, Privatkredite und andere Vermögenswerte mit T+1- oder T+2-Abwicklungszyklen
 - Unterbesicherte Kreditvergabe, bei der Bonitätsprüfungen offchain stattfinden
-- Kettenübergreifende Tresor-Strategien, bei denen das Bridging Verzögerungen verursacht
+- Kettenübergreifende Tresor-Strategien, bei denen das Bridging Verzögerungen mit sich bringt
 - Liquid-Staking-Token (LST) mit Entbindungsfristen
 
-Tresore können wählen, ob sie nur bei Einzahlungen, nur bei Rücknahmen oder bei beidem asynchron sein möchten. Diese Flexibilität ermöglicht es Tresor-Entwicklern, asynchrone Prozesse nur dort hinzuzufügen, wo die zugrunde liegende Strategie dies erfordert, während die andere Seite synchron bleibt.
+Tresore können wählen, ob sie nur bei Einzahlungen, nur bei Rücknahmen oder bei beidem asynchron sein möchten. Diese Flexibilität ermöglicht es Tresor-Entwicklern, asynchrone Abläufe nur dort hinzuzufügen, wo die zugrunde liegende Strategie dies erfordert, während die andere Seite synchron bleibt.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -25,21 +25,21 @@ Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich zunächst über [T
 
 In ERC-4626 wird eine Einzahlung atomar abgewickelt: Der Investor sendet Vermögenswerte und erhält in einer einzigen Transaktion Anteile zurück.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 teilt dies in zwei Schritte auf. Der Investor ruft zunächst `requestDeposit()` auf, um Vermögenswerte zu sperren, und wartet dann darauf, dass der Tresor-Manager die Anfrage verarbeitet. Sobald diese erfüllt ist, ruft der Investor `deposit()` auf, um seine Anteile zu beanspruchen. Wechselkurse werden zum Zeitpunkt der Erfüllung festgelegt, nicht zum Zeitpunkt der Anfrage.
+ERC-7540 teilt dies in zwei Schritte auf. Der Investor ruft zunächst `requestDeposit()` auf, was seine Vermögenswerte in den Tresor überträgt, und wartet dann darauf, dass der Tresor die Anfrage verarbeitet. Wie und wann das geschieht, bleibt dem Tresor überlassen, zum Beispiel wenn eine Offchain-Abwicklung abgeschlossen ist. Sobald sie erfüllt ist, ruft der Investor `deposit()` auf, um seine Anteile zu beanspruchen. Der Wechselkurs ist zum Zeitpunkt der Anfrage nicht festgelegt: Der Tresor legt ihn fest, typischerweise wenn er die Anfrage erfüllt, sodass die erhaltenen Anteile von dem abweichen können, was `convertToShares()` bei der Stellung der Anfrage zurückgegeben hat.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-Der Rücknahmeprozess funktioniert auf die gleiche Weise: `requestRedeem()` sperrt Anteile, und sobald die Anfrage erfüllt ist, ruft der Investor `redeem()` auf, um Vermögenswerte zu beanspruchen.
+Der Rücknahmeablauf funktioniert auf die gleiche Weise: `requestRedeem()` nimmt die Anteile vom Investor entgegen, und sobald die Anfrage erfüllt ist, ruft der Investor `redeem()` auf, um die Vermögenswerte zu beanspruchen.
 
 ## Funktionen und Merkmale von ERC-7540 {#body}
 
-ERC-7540 erbt die vollständige ERC-4626-Schnittstelle, verwendet jedoch `deposit`/`mint`/`withdraw`/`redeem` als Anspruchsfunktionen (Claim-Funktionen) um. Die neuen Funktionen `requestDeposit` und `requestRedeem` übernehmen den anfänglichen Anfrageschritt.
+ERC-7540 erbt die vollständige ERC-4626-Schnittstelle, verwendet jedoch `deposit`/`mint`/`withdraw`/`redeem` als Anspruchsfunktionen um. Die neuen Funktionen `requestDeposit` und `requestRedeem` übernehmen den anfänglichen Anfrageschritt.
 
-Jede Anfrage durchläuft drei Zustände: ausstehend (eingereicht, wartet auf Verarbeitung), beanspruchbar (erfüllt und bepreist) und beansprucht (Investor hat seine Anteile oder Vermögenswerte abgeholt).
+Jede Anfrage durchläuft drei Zustände: ausstehend (eingereicht, wartet auf Verarbeitung), beanspruchbar (erfüllt und bepreist) und beansprucht (Investor hat seine Anteile oder Vermögenswerte abgeholt). Ein Tresor kann eine Anfrage sofort beanspruchbar machen und den ausstehenden Zustand überspringen, aber das Beanspruchen ist immer ein separater Aufruf. Der Standard definiert kein Ereignis dafür, wann eine Anfrage beanspruchbar wird.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Ablauf der Einzahlungsanfrage {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Sobald eine Einzahlungsanfrage beanspruchbar wird, ruft der Benutzer die Standar
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Sperrt `shares` von `owner` und reicht eine Rücknahmeanfrage ein. Die Adresse `controller` erhält die Kontrolle über die Anfrage.
+Übernimmt die Kontrolle über `shares` von `owner` und reicht eine Rücknahmeanfrage ein. Der Tresor kann die Anteile halten, bis die Anfrage beansprucht wird, oder sie sofort verbrennen. Die Adresse `controller` erhält die Kontrolle über die Anfrage.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

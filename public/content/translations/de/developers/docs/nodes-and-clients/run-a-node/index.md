@@ -1,6 +1,6 @@
 ---
 title: Einen eigenen Ethereum-Knoten aufsetzen
-description: Allgemeine Einführung in den Betrieb einer eigenen Instanz eines Ethereum-Clients.
+description: "Allgemeine Einführung in den Betrieb einer eigenen Instanz eines Ethereum-Clients."
 lang: de
 sidebarDepth: 2
 ---
@@ -15,11 +15,11 @@ Sie sollten verstehen, was ein Ethereum-Knoten ist und warum Sie einen Client be
 
 Wenn das Thema des Betriebs eines Knotens neu für Sie ist oder Sie nach einem weniger technischen Weg suchen, empfehlen wir Ihnen, sich zuerst unsere benutzerfreundliche Einführung zum [Betrieb eines Ethereum-Knotens](/run-a-node) anzusehen.
 
-## Wahl eines Ansatzes {#choosing-approach}
+## Einen Ansatz wählen {#choosing-approach}
 
-Der erste Schritt beim Aufsetzen Ihres Knotens ist die Wahl Ihres Ansatzes. Basierend auf den Anforderungen und verschiedenen Möglichkeiten müssen Sie die Client-Implementierung (sowohl für Ausführungs- als auch für Konsens-Clients), die Umgebung (Hardware, System) und die Parameter für die Client-Einstellungen auswählen.
+Der erste Schritt beim Aufsetzen Ihres Knotens ist die Wahl Ihres Ansatzes. Basierend auf den Anforderungen und verschiedenen Möglichkeiten müssen Sie die Client-Implementierung (sowohl des Ausführungsclients als auch des Konsens-Clients), die Umgebung (Hardware, System) und die Parameter für die Client-Einstellungen auswählen.
 
-Diese Seite wird Sie durch diese Entscheidungen führen und Ihnen helfen, den am besten geeigneten Weg zum Betrieb Ihrer Ethereum-Instanz zu finden.
+Diese Seite führt Sie durch diese Entscheidungen und hilft Ihnen, den am besten geeigneten Weg zum Betrieb Ihrer Ethereum-Instanz zu finden.
 
 Um aus den Client-Implementierungen auszuwählen, sehen Sie sich alle verfügbaren Mainnet-bereiten [Ausführungsclients](/developers/docs/nodes-and-clients/#execution-clients) und [Konsens-Clients](/developers/docs/nodes-and-clients/#consensus-clients) an und erfahren Sie mehr über [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity).
 
@@ -27,9 +27,9 @@ Entscheiden Sie, ob Sie die Software auf Ihrer eigenen [Hardware oder in der Clo
 
 Nach der Vorbereitung der Umgebung installieren Sie die ausgewählten Clients entweder über eine [anfängerfreundliche Oberfläche](#automatized-setup) oder [manuell](#manual-setup) über ein Terminal mit erweiterten Optionen.
 
-Wenn der Knoten läuft und synchronisiert, sind Sie bereit, ihn zu [nutzen](#using-the-node), aber achten Sie darauf, seine [Wartung](#operating-the-node) im Auge zu behalten.
+Wenn der Knoten läuft und synchronisiert, sind Sie bereit, ihn zu [nutzen](#using-the-node), aber behalten Sie auch seine [Wartung](#operating-the-node) im Auge.
 
-![Client-Einrichtung](./diagram.png)
+<ClientSetupDiagram />
 
 ### Umgebung und Hardware {#environment-and-hardware}
 
@@ -65,11 +65,11 @@ Die Hardwareanforderungen unterscheiden sich je nach Client, sind aber im Allgem
 
 Bevor Sie einen Client installieren, stellen Sie bitte sicher, dass Ihr Computer über genügend Ressourcen verfügt, um ihn auszuführen. Die minimalen und empfohlenen Anforderungen finden Sie unten.
 
-Der Engpass für Ihre Hardware ist meistens der Speicherplatz. Die Synchronisierung der Ethereum-Blockchain ist sehr ein-/ausgabeintensiv und erfordert viel Platz. Am besten ist es, ein **Solid-State-Drive (SSD)** mit Hunderten von GB freiem Speicherplatz zu haben, der auch nach der Synchronisierung noch zur Verfügung steht.
+Der Engpass für Ihre Hardware ist meistens der Speicherplatz. Die Synchronisierung der Ethereum-Blockchain ist sehr ein-/ausgabeintensiv und erfordert viel Platz. Am besten ist ein **Solid-State-Drive (SSD)** mit Hunderten von GB freiem Speicherplatz, der auch nach der Synchronisierung noch zur Verfügung steht.
 
 Die Größe der Datenbank und die Geschwindigkeit der anfänglichen Synchronisierung hängen vom gewählten Client, seiner Konfiguration und der [Synchronisierungsstrategie](/developers/docs/nodes-and-clients/#sync-modes) ab.
 
-Stellen Sie außerdem sicher, dass Ihre Internetverbindung nicht durch eine [Bandbreitenbegrenzung](https://wikipedia.org/wiki/Data_cap) eingeschränkt ist. Es wird empfohlen, eine unbegrenzte Verbindung zu verwenden, da die anfängliche Synchronisierung und die an das Netzwerk gesendeten Daten Ihr Limit überschreiten könnten.
+Stellen Sie außerdem sicher, dass Ihre Internetverbindung nicht durch ein [Datenlimit](https://wikipedia.org/wiki/Data_cap) beschränkt ist. Es wird empfohlen, eine Verbindung ohne Volumentarif zu verwenden, da die anfängliche Synchronisierung und die ins Netzwerk übertragenen Daten Ihr Limit überschreiten könnten.
 
 ##### Betriebssystem
 
@@ -79,31 +79,32 @@ Alle Clients unterstützen die gängigen Betriebssysteme – Linux, macOS, Windo
 
 - CPU mit 2+ Kernen
 - 16 GB RAM (32 GB für Stabilität empfohlen)
-- 2 TB NVMe SSD (wird voraussichtlich bis 2027 überschritten, lesen Sie mehr über [Gute und weniger gute SSDs für Ethereum-Knoten](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- 4 TB NVMe SSD (deckt einen Knoten mit vollständiger Chain-Historie plus Platz für Wachstum ab, siehe Client-Speichergrößen unten; lesen Sie mehr über [Gute und weniger gute SSDs für Ethereum-Knoten](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - 25+ MBit/s Bandbreite
 
 ##### Empfohlene Spezifikationen
 
 Aktuelle Hardware-Richtlinien für Knotenbetreiber sind in [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870) festgelegt. Für einen Full Node wird Folgendes empfohlen:
 
-- Schnelle CPU mit 4+ Kernen (8+ Kerne bei Validierung)
-- 32 GB RAM (64 GB bei Validierung empfohlen, um Stabilität zu gewährleisten)
-- 4 TB NVMe SSD (DRAM-lose und QLC-Laufwerke werden nicht empfohlen)
-- 50 MBit/s Download / 15+ MBit/s Upload Bandbreite (25+ MBit/s Upload bei Validierung)
+- Schnelle CPU mit 4+ Kernen (8+ Kerne beim Validieren)
+- 32 GB RAM (64 GB beim Validieren empfohlen, um Stabilität zu gewährleisten)
+- 4 TB NVMe SSD (von DRAM-losen und QLC-Laufwerken wird abgeraten)
+- 50 MBit/s Download- / 15+ MBit/s Upload-Bandbreite (25+ MBit/s Upload beim Validieren)
 
-Der von Ihnen gewählte Synchronisierungsmodus und Client wirken sich auf den Speicherbedarf aus, aber wir haben den benötigten Speicherplatz für jeden Client unten geschätzt.
+Der gewählte Synchronisierungsmodus und Client wirken sich auf den Speicherbedarf aus, aber wir haben den benötigten Speicherplatz für jeden Client unten geschätzt.
 
-| Client     | Speicherplatz (Snap-Synchronisierung) | Speicherplatz (vollständiges Archiv) |
-| ---------- | ------------------------------------- | ------------------------------------ |
-| Besu       | 800GB+                                | 12TB+                                |
-| Erigon     | N/A                                   | 2.5TB+                               |
-| Geth       | 500GB+                                | 12TB+                                |
-| Nethermind | 500GB+                                | 12TB+                                |
-| Reth       | N/A                                   | 2.2TB+                               |
+| Client     | Speichergröße (Full Node) | Speichergröße (vollständiges Archiv) |
+| ---------- | ------------------------- | ------------------------------------ |
+| Besu       | 1,8 TB+                   | 12 TB+                               |
+| Erigon     | 1,7 TB+                   | 2,7 TB+                              |
+| Geth       | 1,8 TB+                   | 2 TB+                                |
+| Nethermind | 1,7 TB+                   | 14 TB+                               |
+| Reth       | 2,2 TB+                   | 2,8 TB+                              |
 
-- Hinweis: Erigon und Reth bieten keine Snap-Synchronisierung an, aber vollständiges Pruning ist möglich (~2TB für Erigon, ~1.2TB für Reth)
+- Hinweis: Full-Node-Größen behalten die komplette Chain-Historie und wurden im September 2026 von [Eth Docker](https://ethdocker.com/Usage/ResourceUsage) gemessen. Clients, die Historienverfall unterstützen, benötigen weniger: etwa 1,2–1,4 TB nur mit Post-Merge-Historie oder etwa 400–650 GB mit rollierendem Verfall (von Geth noch nicht unterstützt).
+- Hinweis: Archivgrößen stammen aus der Dokumentation des jeweiligen Clients ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Der Wert von Geth bezieht sich auf sein pfadbasiertes Archiv; das zusätzliche Beibehalten der Trie-Historie benötigt etwa 6,5 TB. Der Wert von Nethermind stammt vom Juli 2023 und ist seitdem gewachsen.
 
-Für Konsens-Clients hängt der Speicherbedarf auch von der Client-Implementierung und den aktivierten Funktionen (z. B. Validator-Slasher) ab, aber rechnen Sie im Allgemeinen mit weiteren 200 GB, die für Beacon-Daten benötigt werden. Bei einer großen Anzahl von Validatoren steigt auch die Bandbreitenbelastung. Sie finden [Details zu den Anforderungen an Konsens-Clients in dieser Analyse](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Für Konsens-Clients hängt der Speicherbedarf auch von der Client-Implementierung und den aktivierten Funktionen (z. B. Validator-Slasher) ab, aber rechnen Sie im Allgemeinen mit weiteren 15–90 GB für Beacon-Daten sowie etwa 500 GB an Blob-Daten, wenn Sie einen Supernode betreiben. Bei einer großen Anzahl von Validatoren steigt auch die Bandbreitenauslastung. Sie finden [Details zu den Anforderungen an Konsens-Clients in dieser Analyse](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Plug-and-Play-Lösungen {#plug-and-play}
 

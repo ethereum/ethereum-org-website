@@ -22,20 +22,20 @@ lang: ta
 
 ### உள்கட்டமைப்பு மற்றும் கணு சேவைகள் {#infrastructure-and-node-services}
 
-**Alchemy -** **_எத்திரியம் மேம்பாட்டு தளம்._**
+**Alchemy -** **_எத்திரியம் மேம்பாட்டுத் தளம்._**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [ஆவணங்கள்](https://www.alchemy.com/docs/)
 - [GitHub](https://github.com/alchemyplatform)
 - [டிஸ்கார்ட்](https://discord.com/invite/alchemyplatform)
   
-**All That Node -** **_சேவையாக கணு (Node-as-a-Service)._**
+**All That Node -** **_சேவையாக கணு._**
 
 - [All That Node.com](https://www.allthatnode.com/)
 - [ஆவணங்கள்](https://docs.allthatnode.com)
 - [டிஸ்கார்ட்](https://discord.gg/GmcdVEUbJM)
 
-**Bware Labs வழங்கும் Blast -** **_எத்தேரியம் முதன்மை வலைப்பின்னல் மற்றும் சோதனை வலைப்பின்னல்களுக்கான பரவலாக்கப்பட்ட API-கள்._**
+**Bware Labs வழங்கும் Blast -** **_எத்தேரியம் முதன்மை வலைப்பின்னல் மற்றும் சோதனை வலைப்பின்னல்களுக்கான பரவலாக்கப்பட்ட பயன்பாட்டு நிரலாக்க இடைமுகங்கள் (API-கள்)._**
 
 - [blastapi.io](https://blastapi.io/)
 - [ஆவணங்கள்](https://docs.blastapi.io)
@@ -55,7 +55,7 @@ lang: ta
 **Etherscan - தொகுதி ஆராய்வி மற்றும் பரிவர்த்தனை API-கள்**
 - [ஆவணங்கள்](https://docs.etherscan.io/)
 
-**Blockscout - திறந்த மூல தொகுதி ஆராய்வி**
+**Blockscout - திறந்த மூலத் தொகுதி ஆராய்வி**
 - [ஆவணங்கள்](https://docs.blockscout.com/)
 
 **GetBlock-** **_Web3 மேம்பாட்டிற்கான சேவையாக தொகுதிச்சங்கிலி_**
@@ -66,10 +66,10 @@ lang: ta
 **Infura -** **_சேவையாக எத்திரியம் API._**
 
 - [infura.io](https://infura.io)
-- [ஆவணங்கள்](https://docs.infura.io/api)
+- [ஆவணங்கள்](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _செலவு குறைந்த EVM ஜேசன்-ஆர்பிசி வழங்குநர்_**
+**Node RPC - _செலவு குறைந்த எத்தேரியம் மெய்நிகர் இயந்திரம் (EVM) ஜேசன்-ஆர்பிசி வழங்குநர்_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [ஆவணங்கள்](https://docs.noderpc.xyz/node-rpc)
@@ -77,7 +77,7 @@ lang: ta
 **NOWNodes - _முழு கணுக்கள் மற்றும் தொகுதி ஆராய்விகள்._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [ஆவணங்கள்](https://nownodes.gitbook.io/documentation)
+- [ஆவணங்கள்](https://docs.nownodes.io/)
 
 **QuickNode -** **_சேவையாக தொகுதிச்சங்கிலி உள்கட்டமைப்பு._**
 
@@ -91,6 +91,12 @@ lang: ta
 - [ஆவணங்கள்](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**SolidRPC -** **_முழுமையான, காப்பக மற்றும் திறவுகோலற்ற பொது அணுகலுடன் கூடிய EVM ஜேசன்-ஆர்பிசி உள்கட்டமைப்பு._**
+
+- [solidrpc.io](https://solidrpc.io/)
+- [ஆவணங்கள்](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **Zmok -** **_ஜேசன்-ஆர்பிசி/WebSockets API ஆக வேகத்தை மையமாகக் கொண்ட எத்திரியம் கணுக்கள்._**
 
 - [zmok.io](https://zmok.io/)
@@ -98,9 +104,15 @@ lang: ta
 - [ஆவணங்கள்](https://docs.zmok.io/)
 - [டிஸ்கார்ட்](https://discord.gg/fAHeh3ka6s)
 
-### மேம்பாட்டு கருவிகள் {#development-tools}
+### மேம்பாட்டுக் கருவிகள் {#development-tools}
 
-**ethers-kt -** **_EVM அடிப்படையிலான தொகுதிச்சங்கிலிகளுக்கான ஒத்திசைவற்ற, உயர் செயல்திறன் கொண்ட Kotlin/Java/Android நிரலகம்._**
+**eth.zig -** **_தொகுக்கும் நேர பயன்பாட்டு இரும இடைமுகம் (ABI) குறியாக்கம் மற்றும் ஒப்பந்தப் பிணைப்புகளுடன் கூடிய எத்திரியத்திற்கான Zig நிரலகம்._**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [ஆவணங்கள்](https://ethzig.org)
+- [எடுத்துக்காட்டுகள்](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
+**ethers-kt -** **_எத்தேரியம் மெய்நிகர் இயந்திரம் (EVM) அடிப்படையிலான தொகுதிச்சங்கிலிகளுக்கான ஒத்திசைவற்ற, உயர்-செயல்திறன் கொண்ட Kotlin/Java/Android நிரலகம்._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [எடுத்துக்காட்டுகள்](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -112,13 +124,13 @@ lang: ta
 - [ஆவணங்கள்](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [டிஸ்கார்ட்](https://discord.com/invite/jQPrR58FxX)
 
-**Python கருவி -** **_Python மூலம் எத்திரியம் தொடர்புகொள்வதற்கான பல்வேறு நிரலகங்கள்._**
+**Python Tooling -** **_Python மூலம் எத்திரியம் தொடர்புகொள்வதற்கான பல்வேறு நிரலகங்கள்._**
 
 - [py.ethereum.org](https://snakecharmers.ethereum.org/)
 - [Web3.py GitHub](https://github.com/ethereum/web3.py)
 - [Web3.py அரட்டை](https://gitter.im/ethereum/web3.py)
 
-**Tatum -** **_இறுதியான தொகுதிச்சங்கிலி மேம்பாட்டு தளம்._**
+**Tatum -** **_சிறந்த தொகுதிச்சங்கிலி மேம்பாட்டுத் தளம்._**
 
 - [Tatum](https://tatum.io/)
 - [GitHub](https://github.com/tatumio/)
@@ -133,12 +145,12 @@ lang: ta
 
 ### தொகுதிச்சங்கிலி சேவைகள் {#blockchain-services}
 
-**BlockCypher -** **_எத்திரியம் வலை API-கள்._**
+**BlockCypher -** **_எத்திரியம் Web API-கள்._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [ஆவணங்கள்](https://www.blockcypher.com/dev/ethereum/)
 
-**Chainbase -** **_எத்திரியத்திற்கான ஆல்-இன்-ஒன் Web3 தரவு உள்கட்டமைப்பு._**
+**Chainbase -** **_எத்திரியத்திற்கான அனைத்தையும் உள்ளடக்கிய Web3 தரவு உள்கட்டமைப்பு._**
 
 - [chainbase.com](https://chainbase.com/)
 - [ஆவணங்கள்](https://docs.chainbase.com/)
@@ -150,12 +162,12 @@ lang: ta
 - [ஆவணங்கள்](https://docs.chainstack.com/)
 - [எத்திரியம் API குறிப்பு](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**காயின்பேஸ் கிளவுட் கணு -** **_தொகுதிச்சங்கிலி உள்கட்டமைப்பு API._**
+**காயின்பேஸ் Cloud Node -** **_தொகுதிச்சங்கிலி உள்கட்டமைப்பு API._**
 
-- [காயின்பேஸ் கிளவுட் கணு](https://www.coinbase.com/developer-platform)
+- [காயின்பேஸ் Cloud Node](https://www.coinbase.com/developer-platform)
 - [ஆவணங்கள்](https://docs.cdp.coinbase.com/)
 
-**Figment வழங்கும் DataHub -** **_எத்தேரியம் முதன்மை வலைப்பின்னல் மற்றும் சோதனை வலைப்பின்னல்களுடன் Web3 API சேவைகள்._**
+**Figment வழங்கும் DataHub -** **_எத்தேரியம் முதன்மை வலைப்பின்னல் மற்றும் சோதனை வலைப்பின்னல்களுடன் கூடிய Web3 API சேவைகள்._**
 
 - [DataHub](https://www.figment.io/)
 - [ஆவணங்கள்](https://docs.figment.io/)
@@ -164,7 +176,6 @@ lang: ta
 
 - [moralis.io](https://moralis.io)
 - [ஆவணங்கள்](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [டிஸ்கார்ட்](https://moralis.io/joindiscord/)
 - [மன்றம்](https://forum.moralis.io/)
 
@@ -198,10 +209,9 @@ lang: ta
 **Covalent -** **_200+ சங்கிலிகளுக்கான செறிவூட்டப்பட்ட தொகுதிச்சங்கிலி API-கள்._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [ஆவணங்கள்](https://www.covalenthq.com/docs/api/)
+- [ஆவணங்கள்](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [டிஸ்கார்ட்](https://www.covalenthq.com/discord/)
-
 
 ## மேலும் படிக்க {#further-reading}
 
@@ -214,5 +224,4 @@ _உங்களுக்கு உதவிய சமூக வளம் பற
 
 ## தொடர்புடைய பயிற்சிகள் {#related-tutorials}
 
-- [JavaScript-இல் எத்திரியம் தொகுதிச்சங்கிலியைப் பயன்படுத்த Web3.js-ஐ அமைக்கவும்](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– உங்கள் திட்டத்தில் Web3.js-ஐ அமைப்பதற்கான வழிமுறைகள்._
-- [JavaScript-இலிருந்து ஒரு திறன் ஒப்பந்தத்தை அழைத்தல்](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI வில்லையைப் பயன்படுத்தி, JavaScript-ஐப் பயன்படுத்தி ஒப்பந்தங்களின் செயல்பாட்டை எவ்வாறு அழைப்பது என்பதைப் பார்க்கவும்._
+- [Web3 பயன்பாடுகளுக்கான சேவையகக் கூறுகள் மற்றும் முகவர்கள்](/developers/tutorials/server-components/) _– தொகுதிச்சங்கிலி நிகழ்வுகளைக் கேட்டு, பரிவர்த்தனைகளுடன் பதிலளிக்கும் TypeScript சேவையகக் கூறுகளை எவ்வாறு எழுதுவது._

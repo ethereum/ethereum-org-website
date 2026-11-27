@@ -1,6 +1,6 @@
 ---
 title: Data na uchanganuzi
-description: Jinsi ya kupata uchanganuzi na data mnyororoni kwa matumizi katika programu tumizi zilizogatuliwa (dapps) zako
+description: "Jinsi ya kupata data mnyororoni kwa ajili ya dapp yako: wafaharisishaji, grafu ndogo, vichunguzi vya vitalu, majukwaa ya uchanganuzi ya SQL na API za kuuliza na kuchanganua data ya Ethereum."
 lang: sw
 ---
 
@@ -80,7 +80,7 @@ Ili kuanza, fuata [mwongozo wa kuanza haraka wa HyperIndex](https://docs.envio.d
 
 - [Kuchunguza Data ya Kripto I: Usanifu wa Mtiririko wa Data](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Muhtasari wa Mtandao wa Graph](https://thegraph.com/docs/en/about/)
-- [Uwanja wa Kuuliza wa Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
+- [Kichunguzi cha Graph](https://thegraph.com/explorer)
 - [Mifano ya msimbo wa API kwenye EtherScan](https://etherscan.io/apis#contracts)
 - [Nyaraka za API kwenye Blockscout](https://docs.blockscout.com/devs/apis)
 - [Kichunguzi cha Mnyororo wa Beacon cha Beaconcha.in](https://beaconcha.in)

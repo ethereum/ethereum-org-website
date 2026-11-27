@@ -23,7 +23,7 @@ Belgelendirme farklı seviyelerde yazılabilir ve sözleşmeler uygulanırken g�
 
 - **Sistemin sade bir dille açıklaması**, sözleşmelerin ne yaptığını ve kod tabanındaki varsayımları açıklamalıdır.
 - **Şema ve mimari diyagramlar**, sözleşme etkileşimlerini ve sistemin durum (state) makinesini içermelidir. [Slither yazıcıları](https://github.com/crytic/slither/wiki/Printer-documentation) bu şemaları oluşturmaya yardımcı olabilir.
-- **Kapsamlı kod belgelendirmesi**, Solidity için [NatSpec formatı](https://docs.soliditylang.org/en/develop/natspec-format.html) kullanılabilir.
+- **Kapsamlı kod belgelendirmesi**, Solidity için [NatSpec formatı](https://docs.soliditylang.org/en/latest/natspec-format.html) kullanılabilir.
 
 ### Zincir içi ve zincir dışı hesaplama {#onchain-vs-offchain-computation}
 
@@ -72,15 +72,15 @@ Kod tabanınızın mimarisi, kodunuzun incelenmesini kolaylaştırmalıdır. Do�
 
 ### Test ve doğrulama {#testing-and-verification}
 
-- **Kapsamlı birim testleri yazın.** Yüksek kaliteli yazılım oluşturmak için geniş çaplı bir test paketi çok önemlidir.
-- **[Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) ve [Manticore](https://github.com/trailofbits/manticore) özel kontrolleri ve özellikleri yazın.** Otomatik araçlar, sözleşmenizin güvenli olmasını sağlamaya yardımcı olacaktır. Verimli kontrollerin ve özelliklerin nasıl yazılacağını öğrenmek için bu kılavuzun geri kalanını inceleyin.
-- **[crytic.io](https://crytic.io/) kullanın.** Crytic, GitHub ile entegre çalışır, özel Slither dedektörlerine erişim sağlar ve Echidna'dan özel özellik kontrolleri çalıştırır.
+- **Kapsamlı birim testleri yazın.** Yüksek kaliteli yazılım oluşturmak için geniş kapsamlı bir test paketi çok önemlidir.
+- **[Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) ve [Medusa](https://github.com/crytic/medusa) özel kontrolleri ve özellikleri yazın.** Otomatik araçlar, sözleşmenizin güvenli olmasını sağlamaya yardımcı olacaktır. Verimli kontrollerin ve özelliklerin nasıl yazılacağını öğrenmek için bu kılavuzun geri kalanını inceleyin.
+- **Bu araçları sürekli entegrasyonda çalıştırın.** Her çekme isteğinde Slither'ı ve fuzzing özelliklerinizi çalıştırmak, gerilemeleri birleştirilmeden önce yakalar.
 
 ### Solidity {#solidity}
 
-- **Solidity 0.5'i 0.4 ve 0.6'ya tercih edin.** Bize göre Solidity 0.5, 0.4'ten daha güvenlidir ve daha iyi yerleşik uygulamalara sahiptir. Solidity 0.6'nın üretim için çok kararsız olduğu kanıtlanmıştır ve olgunlaşması için zamana ihtiyacı vardır.
-- **Derlemek için kararlı bir sürüm kullanın; uyarıları kontrol etmek için en son sürümü kullanın.** Kodunuzun en son derleyici sürümüyle bildirilen hiçbir sorunu olmadığını kontrol edin. Ancak Solidity'nin hızlı bir sürüm döngüsü ve derleyici hataları geçmişi vardır, bu nedenle dağıtım için en son sürümü önermiyoruz (Slither'ın [solc sürüm önerisine](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) bakın).
-- **Satır içi (inline) assembly kullanmayın.** Assembly, EVM uzmanlığı gerektirir. Sarı Bülten'e (Yellow Paper) _tam anlamıyla hakim_ değilseniz EVM kodu yazmayın.
+- **Bilinen ciddi hataları olmayan güncel bir Solidity 0.8.x sürümü kullanın.** Solidity 0.8, aritmetik işlemleri taşma ve negatif taşma (underflow) açısından varsayılan olarak kontrol eder ve eski sürümler daha yeni derleyici güvenlik kontrollerini içermez. Slither'ın [solc sürüm önerisine](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity) bakın.
+- **Derlemek için kararlı bir sürüm kullanın; uyarıları kontrol etmek için en son sürümü kullanın.** Kodunuzun en son derleyici sürümüyle bildirilen hiçbir sorunu olmadığını kontrol edin. Ancak, Solidity'nin hızlı bir sürüm döngüsü ve derleyici hataları geçmişi vardır, bu nedenle yalnızca birkaç gün önce yayınlanan bir sürümle dağıtım yapmaktan kaçının. Seçtiğiniz sürüm için [bilinen derleyici hataları listesini](https://docs.soliditylang.org/en/latest/bugs.html) kontrol edin.
+- **Satır içi assembly kullanmayın.** Assembly, EVM uzmanlığı gerektirir. Sarı Bülten'e _hakim_ değilseniz EVM kodu yazmayın.
 
 ## Dağıtım yönergeleri {#deployment-guidelines}
 

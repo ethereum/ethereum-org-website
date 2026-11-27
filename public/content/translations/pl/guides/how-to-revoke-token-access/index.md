@@ -1,6 +1,6 @@
 ---
 title: "Jak cofnąć dostęp inteligentnych kontraktów do twoich środków krypto"
-description: "Przewodnik krok po kroku, jak cofnąć dostęp do tokenów dla nieuczciwych inteligentnych kontraktów"
+description: "Przewodnik krok po kroku, jak cofnąć zatwierdzenia tokenów: sprawdź, które inteligentne kontrakty mogą wydawać twoje krypto i usuń dostęp, aby chronić swoje środki."
 lang: pl
 ---
 

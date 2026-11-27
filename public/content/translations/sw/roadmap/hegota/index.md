@@ -1,7 +1,7 @@
 ---
 title: "Hegotá"
 metaTitle: "Heze-Bogotá (Hegotá)"
-description: "Jifunze kuhusu uboreshaji wa itifaki ya Hegotá"
+description: "Hegotá ni uboreshaji wa Ethereum uliopangwa baada ya Glamsterdam. Jifunze kuhusu kipengele chake kikuu FOCIL kwa ajili ya upinzani dhidi ya udhibiti na miamala ya fremu kwa ajili ya akaunti."
 lang: sw
 template: upgrade
 ---

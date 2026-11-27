@@ -1,6 +1,6 @@
 ---
 title: "Datové struktury a kódování"
-description: "Přehled základních datových struktur Etherea."
+description: "Přehled základních datových struktur a kódování Etherea, včetně Patricia Merkle tries, RLP a SSZ, a způsobu, jakým ukládají a ověřují stav."
 lang: cs
 sidebarDepth: 2
 ---

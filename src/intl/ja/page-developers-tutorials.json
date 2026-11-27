@@ -23,5 +23,6 @@
   "page-tutorial-all": "すべて",
   "page-tutorial-topics": "トピック",
   "page-tutorial-search-placeholder": "チュートリアルを検索...",
-  "page-tutorial-filtering-by": "フィルター条件:"
+  "page-tutorial-filtering-by": "フィルター条件:",
+  "page-tutorial-removed-notice": "お探しのチュートリアルは利用できなくなりました。以下のメンテナンスされているチュートリアルをご覧ください。"
 }

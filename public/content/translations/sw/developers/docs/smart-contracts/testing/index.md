@@ -165,7 +165,7 @@ Majaribio yanayotegemea sifa ni mchakato wa kuangalia kuwa mkataba mahiri unakid
 
 Kichanganuzi tuli huchukua kama ingizo msimbo wa chanzo wa mkataba mahiri na kutoa matokeo yanayotangaza ikiwa mkataba unakidhi sifa au la. Tofauti na uchanganuzi thabiti, uchanganuzi tuli hauhusishi kutekeleza mkataba ili kuuchanganua kwa usahihi. Uchanganuzi tuli badala yake hufikiri kuhusu njia zote zinazowezekana ambazo mkataba mahiri unaweza kuchukua wakati wa utekelezaji (yaani, kwa kuchunguza muundo wa msimbo wa chanzo ili kubaini itamaanisha nini kwa uendeshaji wa mkataba wakati wa utekelezaji).
 
-[Linting](https://www.perforce.com/blog/qac/what-is-linting) na [majaribio tuli](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) ni mbinu za kawaida za kuendesha uchanganuzi tuli kwenye mikataba. Zote mbili zinahitaji kuchanganua uwakilishi wa kiwango cha chini wa utekelezaji wa mkataba kama vile [miti ya sintaksia dhahania](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) na [grafu za mtiririko wa udhibiti](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) zinazotolewa na kikusanyaji.
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) na [majaribio tuli](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) ni mbinu za kawaida za kuendesha uchanganuzi tuli kwenye mikataba. Zote mbili zinahitaji kuchanganua uwakilishi wa kiwango cha chini wa utekelezaji wa mkataba kama vile [miti ya sintaksia dhahania](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) na [grafu za mtiririko wa udhibiti](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) zinazotolewa na kikusanyaji.
 
 Katika hali nyingi, uchanganuzi tuli ni muhimu kwa kugundua masuala ya usalama kama vile matumizi ya miundo isiyo salama, makosa ya sintaksia, au ukiukaji wa viwango vya usimbaji katika msimbo wa mkataba. Hata hivyo, vichanganuzi tuli vinajulikana kuwa kwa ujumla si thabiti katika kugundua udhaifu wa kina, na vinaweza kutoa chanya za uongo nyingi kupita kiasi.
 
@@ -238,7 +238,7 @@ Tofauti na majaribio, uthibitishaji rasmi unaweza kutumika kuthibitisha utekelez
 
 Kama ilivyotajwa, majaribio makali mara chache yanaweza kuhakikisha kutokuwepo kwa hitilafu katika mkataba; mbinu za uthibitishaji rasmi zinaweza kutoa hakikisho lenye nguvu zaidi la usahihi lakini kwa sasa ni ngumu kutumia na zinagharimu kiasi kikubwa.
 
-Bado, unaweza kuongeza zaidi uwezekano wa kunasa udhaifu wa mkataba kwa kupata ukaguzi huru wa msimbo. [Ukaguzi wa mkataba mahiri](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) na [zawadi za hitilafu](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) ni njia mbili za kupata wengine kuchanganua mikataba yako.
+Bado, unaweza kuongeza zaidi uwezekano wa kunasa udhaifu wa mkataba kwa kupata ukaguzi huru wa msimbo. [Ukaguzi wa mkataba mahiri](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) na [zawadi za hitilafu](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) ni njia mbili za kupata wengine kuchanganua mikataba yako.
 
 Ukaguzi unafanywa na wakaguzi wenye uzoefu katika kutafuta matukio ya dosari za usalama na mbinu duni za uendelezaji katika mikataba mahiri. Ukaguzi kwa kawaida utajumuisha majaribio (na ikiwezekana uthibitishaji rasmi) pamoja na ukaguzi wa mikono wa msingi mzima wa msimbo.
 
@@ -276,7 +276,7 @@ Tofauti kubwa ni kwamba programu za zawadi za hitilafu ziko wazi kwa jamii pana 
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter kwa ajili ya kutekeleza mtindo na mbinu bora za usalama kwa lugha ya upangaji programu ya mkataba mahiri wa Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Kichanganuzi tuli kinachotegemea Rust kilichoundwa mahususi kwa usalama na uendelezaji wa mkataba mahiri wa Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Kichanganuzi tuli kinachotegemea Rust kilichoundwa mahususi kwa usalama na uendelezaji wa mkataba mahiri wa Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Mfumo wa uchanganuzi tuli unaotegemea Python wenye vigunduzi vya udhaifu na ubora wa msimbo, vichapishaji vya kutoa taarifa muhimu kutoka kwa msimbo na usaidizi wa kuandika moduli ndogo maalum._
 
@@ -298,7 +298,6 @@ Tofauti kubwa ni kwamba programu za zawadi za hitilafu ziko wazi kwa jamii pana 
 
 - [Muhtasari na ulinganisho wa bidhaa tofauti za majaribio](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Jinsi ya kutumia Echidna kujaribu mikataba mahiri](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Jinsi ya kutumia Manticore kupata hitilafu za mkataba mahiri](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Jinsi ya kutumia Slither kupata hitilafu za mkataba mahiri](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Jinsi ya kuiga mikataba ya Solidity kwa majaribio](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Jinsi ya kuendesha majaribio ya kitengo katika Solidity kwa kutumia Foundry](https://www.rareskills.io/post/foundry-testing-solidity)

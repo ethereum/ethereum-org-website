@@ -159,14 +159,14 @@ lang: ar
 #### قراءة في الخلفية {#background-reading-2}
 
 - [مقدمة إلى طبقة 2 (L2)](/layer-2/)
-- [L2BEAT: ملخص التوسع](https://l2beat.com/scaling/summary)
-- [خارطة طريق إيثيريوم تتمحور حول التجميع](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [<span dir="ltr">ETHBEAT</span>: ملخص التوسع](https://ethbeat.org/layer2s/summary)
+- [خارطة طريق إيثيريوم تتمحور حول التجميعات](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### الأبحاث الحديثة {#recent-research-2}
 
-- [طبقة 2 (L2) في <span dir="ltr">Ethresear.ch</span>](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: التكاليف على السلسلة](https://l2beat.com/scaling/costs)
-- [البناء على إيثيريوم في عام <span dir="ltr">2026</span>: ما الذي تغير](/latest/building-on-ethereum-in-2026/)
+- [طبقة 2 (L2) على <span dir="ltr">Ethresear.ch</span>](https://ethresear.ch/c/layer-2/32)
+- [<span dir="ltr">ETHBEAT</span>: التكاليف على السلسلة](https://ethbeat.org/layer2s/costs)
+- [البناء على إيثيريوم في عام 2026: ما الذي تغير](/latest/building-on-ethereum-in-2026/)
 
 ### قابلية التشغيل البيني {#interoperability}
 
@@ -386,8 +386,8 @@ lang: ar
 #### الأبحاث الحديثة {#recent-research-14}
 
 - [تحليل بيانات Robust Incentives Group](https://rig.ethereum.org/)
-- [البيانات المفتوحة لـ ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: ملخص التوسع](https://l2beat.com/scaling/summary)
+- [البيانات المفتوحة لـ <span dir="ltr">ethPandaOps</span>](https://ethpandaops.io/data/)
+- [<span dir="ltr">ETHBEAT</span>: ملخص التوسع](https://ethbeat.org/layer2s/summary)
 
 ## التطبيقات والأدوات {#apps-and-tooling}
 

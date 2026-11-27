@@ -5,11 +5,11 @@ lang: de
 authors: ["Patrick Collins"]
 ---
 
-Im Gegensatz zu einem zentralisierten Server, der von einem einzigen Unternehmen oder einer einzigen Organisation betrieben wird, bestehen dezentrale Speichersysteme aus einem Peer-to-Peer-Netzwerk von Benutzer-Betreibern, die einen Teil der Gesamtdaten halten und so ein widerstandsfähiges System zur gemeinsamen Nutzung von Dateispeichern schaffen. Diese können sich in einer Blockchain-basierten Anwendung oder einem beliebigen Peer-to-Peer-basierten Netzwerk befinden.
+Im Gegensatz zu einem zentralisierten Server, der von einem einzigen Unternehmen oder einer einzigen Organisation betrieben wird, bestehen dezentrale Speichersysteme aus einem Peer-to-Peer-Netzwerk von Benutzer-Betreibern, die einen Teil der Gesamtdaten halten und so ein ausfallsicheres System zur gemeinsamen Dateispeicherung schaffen. Diese können Teil einer Blockchain-basierten Anwendung oder eines beliebigen Peer-to-Peer-basierten Netzwerks sein.
 
-Ethereum selbst kann als dezentrales Speichersystem verwendet werden, und das ist es auch, wenn es um die Speicherung von Code in all den Smart Contracts geht. Wenn es jedoch um große Datenmengen geht, ist Ethereum dafür nicht ausgelegt. Die Chain wächst stetig, aber zum Zeitpunkt des Schreibens ist die Ethereum-Chain etwa 500 GB - 1 TB groß ([abhängig vom Client](https://etherscan.io/chartsync/chaindefault)), und jeder Knoten im Netzwerk muss in der Lage sein, alle Daten zu speichern. Wenn die Chain auf große Datenmengen (sagen wir 5 TB) anwachsen würde, wäre es für alle Knoten nicht mehr machbar, weiterzulaufen. Außerdem wären die Kosten für die Bereitstellung einer so großen Datenmenge im Mainnet aufgrund der [Gas](/developers/docs/gas)-Gebühren unerschwinglich teuer.
+Ethereum selbst kann als dezentrales Speichersystem verwendet werden, und das wird es auch, wenn es um die Codespeicherung in all den Smart Contracts geht. Wenn es jedoch um große Datenmengen geht, ist Ethereum nicht dafür ausgelegt. Die Chain wächst stetig, aber zum Zeitpunkt des Schreibens ist die Ethereum-Chain etwa 1-2 TB groß ([abhängig vom Client](https://etherscan.io/chartsync/chaindefault)), und jeder Knoten im Netzwerk muss in der Lage sein, alle Daten zu speichern. Wenn die Chain auf große Datenmengen (sagen wir 5 TB) anwachsen würde, wäre es für alle Knoten nicht mehr machbar, weiterzulaufen. Außerdem wären die Kosten für die Bereitstellung einer so großen Datenmenge im Mainnet aufgrund der [Gas](/developers/docs/gas)-Gebühren unerschwinglich teuer.
 
-Aufgrund dieser Einschränkungen benötigen wir eine andere Chain oder Methodik, um große Datenmengen dezentral zu speichern.
+Aufgrund dieser Einschränkungen benötigen wir eine andere Chain oder Methodik, um große Datenmengen auf dezentrale Weise zu speichern.
 
 Bei der Betrachtung von Optionen für dezentralen Speicher (dStorage) gibt es einige Dinge, die ein Benutzer beachten muss.
 
@@ -142,7 +142,7 @@ Proof-of-Stake-basiert:
 **Arweave - _Arweave ist eine dStorage-Plattform zur Speicherung von Daten._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Dokumentation](https://docs.arweave.org/info/)
+- [Dokumentation](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs ist eine Proof-of-Stake-dStorage-Plattform mit Sharding und Blobbern._**

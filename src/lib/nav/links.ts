@@ -5,10 +5,13 @@ import type { Lang, LocaleDisplayInfo } from "@/lib/types"
 import type { NavSections } from "@/components/Nav/types"
 
 import { filterRealLocales } from "@/lib/utils/translations"
+import { isUpgradeShipped } from "@/lib/utils/upgrades"
+
+import { upgrades } from "@/data/upgrades"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
-import { buildNavigation } from "@/lib/nav/buildNavigation"
+import { buildNavigation, NAV_UPGRADES } from "@/lib/nav/buildNavigation"
 import { localeToDisplayInfo } from "@/lib/nav/localeToDisplayInfo"
 
 // Pre-filtered locales for server use
@@ -32,10 +35,21 @@ export const getLanguagesDisplayInfo = async (): Promise<
   })
 }
 
+/**
+ * The upgrade on the Roadmap menu's next-upgrade card: the first in
+ * `NAV_UPGRADES` that Forkcast doesn't show as shipped. Resolved here on the
+ * server so the upgrade data stays out of the client bundle.
+ */
+export const getNextUpgradeSlug = () =>
+  NAV_UPGRADES.find(({ slug }) => {
+    const upgrade = slug ? upgrades[slug] : undefined
+    return !!upgrade && !isUpgradeShipped(upgrade)
+  })?.slug
+
 export const getNavigation = async () => {
   const t = await getTranslations("common")
 
-  const linkSections: NavSections = buildNavigation(t)
+  const linkSections: NavSections = buildNavigation(t, getNextUpgradeSlug())
 
   return linkSections
 }

@@ -1,6 +1,6 @@
 ---
 title: Single slot finality
-description: Explanation of single slot finality
+description: "Single slot finality could cut Ethereum's time to finality from about 15 minutes to a single slot. Learn how it works and the tradeoffs involved."
 lang: en
 template: roadmap
 ---
@@ -57,7 +57,7 @@ The problem with scaling aggregation by growing the number of validators per sub
 
 ## Current progress {#current-progress}
 
-SSF is in the research phase. It is not expected to ship for several years, likely after other substantial upgrades such as [Verkle trees](/roadmap/verkle-trees/) and [Danksharding](/roadmap/danksharding/).
+SSF is in the research phase. It is not expected to ship for several years, likely after other substantial upgrades such as a new state tree (currently proposed as a binary tree in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) and [Danksharding](/roadmap/danksharding/).
 
 ## Further reading {#further-reading}
 

@@ -1,5 +1,35 @@
 # Simplified Chinese (zh) Translation Review Findings
 
+## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 9.0/10
+Scope: 15 md pages, markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX; emphasis flanking not re-checked beyond the changed lines read).
+
+Fixed (critical): transliterated names on changed lines restored to Latin with CJK spacing (Nethermind, Reth, Besu, Erigon, Lighthouse, Lodestar, Prysm, MetaMask; ~28 lines; `X (Latin)` hybrids collapsed; `Go以太坊 (Geth)` to `Geth`/`Go Ethereum`); `最大可提取价值 (MEV)` to `MEV` (2); `卡佩拉 (Capella)` to `Capella` (3, matches line 216); added `一层网络 (L1)` / `（二层网络 (L2)）` in ethrex reduced to bare `L1`/`L2`.
+Open: `Gas`/`gas` casing mixed; `斑点` for blob (glossary); 100+ untouched lines still transliterate client names (`尼姆巴斯`, `普莱斯姆`, `泰库`); English typo `Dankrad Fiest` not present in zh text.
+
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 9.0/10
+Scope: 72 md pages + 19 JSON namespaces (incremental updates), changed lines only; sampled 6 md diffs and ~45 JSON keys, plus scripted sweeps (emphasis flanking clean, no U+3002/U+2060 issues).
+
+Fixed (critical): transliterated tool names on changed md lines restored to Latin with CJK spacing (Slither, Echidna, Uniswap, Reth, Erigon, Besu, Nethermind; 20 lines in archive-nodes, secure-development-workflow, smart-contract-security-guidelines, security, testing, dapps, rust); `以太坊虚拟机 (EVM)` over bare `EVM` (rust, security-guidelines); contributing `新译者的用户引导` (user onboarding) to `入门引导`.
+Open: `斑点` for blob follows ETHGlossary but reads as "spots" (glossary); `Reth`/`瑞斯` gloss hybrid kept in rust; `二层网络 (L2)` / bare `L2` mixed within pages (dev had `(l2)`); `您`/`你` mix in bug-bounty and secure-development-workflow; `gas 上限` lowercase.
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.3/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical; full-width punctuation clean, no `**` flanking cases. Open: `gas 上限` lowercase beside `Gas` in `base-fee-label-limit`/`base-fee-description`; `node-clients-network-engine` is `Engine API` while its siblings use `引擎 API`.
+
+## PR #19946 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
+Scope: new `component-account.json` (42 keys) and 19 new `page-start.json` keys.
+
+Fixed: none needed. Open: new account strings use `你`, new page-start strings use `您` (both already mixed on dev).
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: optimistic rollup to 乐观 Rollup x5, two CJK emphasis-flanking defects (strong tags), plus one in verifying. Open: lone 您 in pos, 先决 vs 前提条件, API over-expansion, leaked English glosses in portal-network, Blob vs 斑点.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.7/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: peer-das caption swap, shuangqian for equivocation, youxianfei. Open: di N bu vs buzhou N, plate three ways, custody tuoguan vs baoguan.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -141,3 +171,65 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `**必须**`/`**未**` regressed to `_..._` (literal underscores, known-patterns #89).
 - Warning: Hook/钩子 drift; 求值 -> 计算 drift.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 9.0/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- common.json:15 (l2) added (#86) (`"添加二层网络 (l2)"` -> `"添加二层网络"`)
+- common.json:43 (l2) added (#86) (`"什么是二层网络 (l2)？"` -> `"什么是二层网络？"`)
+- common.json:36 acronym expanded (#80) (`"以太坊改进提案 (EIP)"` -> `"EIP"`)
+- common.json:76 acronym expanded (#80) (`"去中心化自治组织 (DAO)"` -> `"DAO"`)
+- common.json:85 acronym expanded (#80) (`"去中心化金融 (DeFi)"` -> `"DeFi"`)
+- common.json:165 acronym expanded (#80) (`"非同质化代币 (NFT)"` -> `"NFT"`)
+- app-plasma:45 CJK underscore emphasis (#89) (`接收转账的_目标地址_` -> `接收转账的*目标地址*`)
+- app-plasma:46 CJK underscore emphasis (#89) (`转账_金额_` -> `转账*金额*`)
+
+**Open (native call needed):**
+
+- None at critical level.
+- 12 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is high quality and matches the glossary. Every critical comes from the pipeline: renamed keys that shipped in English, acronym expansion in breadcrumb slots, and CJK underscore emphasis. All of them can be fixed by restoring the dev or ETHGlossary ui-context forms.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `梅塔马斯` changed to `梅塔马斯克` (view-nft:40)
+- `_x_` italics next to CJK characters converted to `<em>` (3 sites)
+
+**Notes:**
+
+- Warning: `gas 限制` in code comments vs `gas 上限` in prose.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- echidna:60 `_种子_` underscore emphasis between CJK renders literally -> `*种子*` (#89)
+- multi-client:97/161 minting sentence made the players the minters -> `以确认已为...每个玩家铸造了 1000 个代币`
+
+**Open / notes:**
+
+- echidna title dropped the Latin `(Echidna)` gloss; glossary-correct, but the tool name now appears nowhere in prose while users type `echidna` -- glossary follow-up
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.8/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+- Spaces added around restored spans, as dev had.
+
+**Open / notes:**
+
+- API re-expanded on L21.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

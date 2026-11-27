@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## सेवाएँ {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - निजी इथेरियम एक्सप्लोरर। (मेमपूल) डेटा को छांटने और फ़िल्टर करने के लिए भी। स्पेनिश, फ्रेंच, इतालवी, डच, पुर्तगाली, रूसी, चीनी और फ़ारसी में उपलब्ध है
+- [Blockchair](https://blockchair.com/ethereum) - प्राइवेट इथेरियम एक्सप्लोरर। डेटा (मेमपूल) को सॉर्ट और फ़िल्टर करने के लिए भी। स्पेनिश, फ्रेंच, इतालवी, डच, पुर्तगाली, रूसी, चीनी और फ़ारसी में उपलब्ध है
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Etherscan](https://etherscan.io/) - चीनी, कोरियाई, रूसी और जापानी में भी उपलब्ध है
 - [Ethplorer](https://ethplorer.io/) - टोकन पर केंद्रित एक ब्लॉक एक्सप्लोरर। चीनी, स्पेनिश, फ्रेंच, तुर्की, रूसी, कोरियाई और वियतनामी में भी उपलब्ध है
+- [Ethscanner](https://ethscanner.io/) - Routescan द्वारा। सत्यापनकर्ता एलायंस के ओपन डेटासेट में सत्यापित अनुबंधों का योगदान देता है और क्रॉस-चेन लेन-देन दिखाता है
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

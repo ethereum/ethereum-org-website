@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/dao/index.md",
-  "generatedAt": "2026-06-29T23:55:37.587Z",
-  "rootHash": "963721f4fb1d",
+  "generatedAt": "2026-11-27T10:02:55.977Z",
+  "rootHash": "a8ab38d52865",
   "tree": {
-    "contentHash": "7750509d162b",
+    "contentHash": "6c753be6740a",
     "anchorHash": "a700d166e0b3",
     "children": {
       "frontmatter:title": {
@@ -16,7 +16,7 @@
         "anchorHash": "cb462b836707"
       },
       "frontmatter:description": {
-        "contentHash": "fa12a2303047",
+        "contentHash": "44436cc3eee6",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -977,5 +977,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

@@ -1,6 +1,6 @@
 ---
 title: "Introduction technique à l'ether"
-description: "Une introduction à la cryptomonnaie ether pour les développeurs."
+description: "Une introduction technique à l'ether (ETH) : à quoi il sert, comment il est libellé en Wei et en gwei, et comment il est frappé, brûlé et transféré."
 lang: fr
 ---
 

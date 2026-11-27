@@ -1,12 +1,12 @@
 ---
-title: ERC-7540 비동기 토큰화 볼트 표준
-description: 토큰화 볼트에 비동기 입금 및 상환 흐름을 추가하는 ERC-4626의 확장입니다.
+title: "ERC-7540 비동기 토큰화 볼트 표준"
+description: "토큰화 볼트에 비동기 입금 및 상환 흐름을 추가하는 ERC-4626의 확장입니다."
 lang: ko
 ---
 
 ## 소개 {#introduction}
 
-ERC-7540은 비동기 입금 및 상환 흐름에 대한 지원을 추가하여 [ERC-4626 토큰화 볼트 표준](/developers/docs/standards/tokens/erc-4626/)을 확장합니다. 이 표준은 요청 후 청구(request-then-claim) 패턴을 도입합니다. 사용자는 먼저 요청을 제출하여 자산이나 주식을 잠그고, 볼트가 이를 처리한 후 결과를 청구합니다.
+ERC-7540은 비동기 입금 및 상환 흐름에 대한 지원을 추가하여 [ERC-4626 토큰화 볼트 표준](/developers/docs/standards/tokens/erc-4626/)을 확장합니다. 이 표준은 요청 후 청구(request-then-claim) 패턴을 도입합니다. 사용자는 먼저 요청을 제출하여(자산이나 주식을 볼트에 넘김) 볼트가 이를 처리한 후 결과를 청구합니다.
 
 이는 볼트가 단일 트랜잭션으로 즉시 정산할 수 없는 경우에 필요합니다. 예를 들면 다음과 같습니다.
 
@@ -15,7 +15,7 @@ ERC-7540은 비동기 입금 및 상환 흐름에 대한 지원을 추가하여 
 - 브리징으로 인해 지연이 발생하는 크로스체인 볼트 전략
 - 언본딩(unbonding) 기간이 있는 유동성 스테이킹 토큰 (LST)
 
-볼트는 입금에만, 상환에만, 또는 둘 다에 비동기 방식을 선택할 수 있습니다. 이러한 유연성을 통해 볼트 개발자는 기본 전략에서 요구하는 곳에만 비동기 흐름을 추가하고, 다른 쪽은 동기식으로 유지할 수 있습니다.
+볼트는 입금에만, 상환에만, 또는 둘 다에 비동기 방식을 선택할 수 있습니다. 이러한 유연성을 통해 볼트 개발자는 기본 전략이 요구하는 곳에만 비동기 흐름을 추가하고, 다른 쪽은 동기식으로 유지할 수 있습니다.
 
 ## 전제 조건 {#prerequisites}
 
@@ -23,23 +23,23 @@ ERC-7540은 비동기 입금 및 상환 흐름에 대한 지원을 추가하여 
 
 ## ERC-4626 대 ERC-7540 {#comparison}
 
-ERC-4626에서 입금은 원자적으로 정산됩니다. 투자자는 단일 트랜잭션으로 자산을 보내고 주식을 돌려받습니다.
+ERC-4626에서 입금은 원자적으로(atomically) 정산됩니다. 투자자는 단일 트랜잭션으로 자산을 보내고 주식을 돌려받습니다.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540은 이를 두 단계로 나눕니다. 투자자는 먼저 `requestDeposit()`를 호출하여 자산을 잠근 다음, 볼트 관리자가 요청을 처리할 때까지 기다립니다. 처리가 완료되면 투자자는 `deposit()`를 호출하여 주식을 청구합니다. 환율은 요청 시점이 아닌 처리 완료 시점에 결정됩니다.
+ERC-7540은 이를 두 단계로 나눕니다. 투자자는 먼저 `requestDeposit()`을 호출하여 자산을 볼트로 전송한 다음, 볼트가 요청을 처리할 때까지 기다립니다. 오프체인 정산이 완료될 때와 같이, 처리 방법과 시기는 볼트에 따라 다릅니다. 처리가 완료되면 투자자는 `deposit()`을 호출하여 주식을 청구합니다. 환율은 요청 시점에 고정되지 않습니다. 볼트가 일반적으로 요청을 처리할 때 환율을 설정하므로, 수령하는 주식은 요청 시 `convertToShares()`가 반환한 값과 다를 수 있습니다.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-상환 흐름도 같은 방식으로 작동합니다. `requestRedeem()`는 주식을 잠그고, 처리가 완료되면 투자자는 `redeem()`를 호출하여 자산을 청구합니다.
+상환 흐름도 같은 방식으로 작동합니다. `requestRedeem()`은 투자자로부터 주식을 가져오고, 처리가 완료되면 투자자는 `redeem()`를 호출하여 자산을 청구합니다.
 
 ## ERC-7540 함수 및 기능 {#body}
 
-ERC-7540은 전체 ERC-4626 인터페이스를 상속하지만 `deposit`/`mint`/`withdraw`/`redeem`를 청구 함수로 용도를 변경합니다. 새로운 `requestDeposit` 및 `requestRedeem` 함수는 초기 요청 단계를 처리합니다.
+ERC-7540은 전체 ERC-4626 인터페이스를 상속하지만 `deposit`/`mint`/`withdraw`/`redeem`을 청구 함수로 용도를 변경합니다. 새로운 `requestDeposit` 및 `requestRedeem` 함수는 초기 요청 단계를 처리합니다.
 
-각 요청은 세 가지 상태를 거칩니다. 대기 중(pending, 제출되어 처리를 기다림), 청구 가능(claimable, 처리 완료 및 가격 책정됨), 청구됨(claimed, 투자자가 주식이나 자산을 수령함)입니다.
+각 요청은 대기 중(pending: 제출됨, 처리 대기 중), 청구 가능(claimable: 처리 완료 및 가격 책정됨), 청구됨(claimed: 투자자가 주식이나 자산을 수령함)의 세 가지 상태를 거칩니다. 볼트는 대기 중 상태를 건너뛰고 요청을 즉시 청구 가능하게 만들 수 있지만, 청구는 항상 별도의 호출입니다. 이 표준은 요청이 청구 가능해질 때의 이벤트를 정의하지 않습니다.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### 입금 요청 흐름 {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ function claimableDepositRequest(uint256 requestId, address controller) external
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-`owner`의 `shares`를 잠그고 상환 요청을 제출합니다. `controller` 주소가 요청에 대한 제어권을 받습니다.
+`owner`에서 `shares`에 대한 제어권을 가져와 상환 요청을 제출합니다. 볼트는 요청이 청구될 때까지 주식을 보유하거나 즉시 소각할 수 있습니다. `controller` 주소가 요청에 대한 제어권을 받습니다.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

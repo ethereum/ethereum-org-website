@@ -1,7 +1,7 @@
 ---
 title: "Về ethereum.org"
 metaTitle: "Về chúng tôi"
-description: "Về đội ngũ, cộng đồng và sứ mệnh của ethereum.org"
+description: "Gặp gỡ đội ngũ và cộng đồng đứng sau ethereum.org: sứ mệnh của chúng tôi, cách trang web được xây dựng và quản trị công khai, cũng như cách bạn có thể giúp cải thiện nó."
 lang: vi
 ---
 
@@ -107,9 +107,11 @@ Chúng tôi sử dụng một bộ [nguyên tắc thiết kế](/contributing/de
 
 ## Hệ thống thiết kế {#design-system}
 
-Chúng tôi đã xây dựng và phát hành một [hệ thống thiết kế](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) để triển khai các tính năng nhanh hơn và cho phép các thành viên cộng đồng tham gia vào thiết kế mở của ethereum.org.
+Chúng tôi đã xây dựng và phát hành một [hệ thống thiết kế](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) để triển khai các tính năng nhanh hơn và cho phép các thành viên cộng đồng tham gia vào quá trình thiết kế mở của ethereum.org.
 
-Bạn muốn tham gia? [Theo dõi trên Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) và tham gia trò chuyện trong [kênh Discord #design của chúng tôi](/discord/).
+Bạn muốn tham gia? [Theo dõi trên Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) và tham gia thảo luận trong [kênh Discord #design của chúng tôi](/discord/).
+
+Bạn đang tìm kiếm logo, hình minh họa hoặc các tệp thương hiệu khác? Hãy tải chúng xuống từ [trang tài nguyên của chúng tôi](/assets/).
 
 ## Hướng dẫn văn phong {#style-guide}
 
@@ -122,6 +124,10 @@ Chúng tôi hoan nghênh các phản hồi về các nguyên tắc thiết kế,
 ## Giấy phép {#license}
 
 Trang web ethereum.org là mã nguồn mở và được xây dựng theo [Giấy phép MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) trừ khi có quy định khác. Tìm hiểu thêm về [điều khoản sử dụng](/terms-of-use/) của ethereum.org.
+
+## Quyền riêng tư của bạn {#your-privacy}
+
+ethereum.org sử dụng Matomo để phân tích bảo vệ quyền riêng tư và bạn có thể chọn không tham gia bất kỳ lúc nào. Đọc [chính sách cookie](/cookie-policy/) và [chính sách quyền riêng tư](/privacy-policy/) của chúng tôi để biết thêm chi tiết.
 
 ## Các vị trí đang tuyển dụng {#open-jobs}
 

@@ -1,6 +1,6 @@
 ---
 title: "Web3의 디자인 및 UX"
-description: "Web3 공간 및 이더리움의 UX 디자인 및 리서치 소개"
+description: "Web3의 디자인 및 UX 소개: 쉽고 안전하며 명확하게 사용할 수 있는 이더리움 앱을 구축하는 데 도움이 되는 리서치, 패턴 및 리소스."
 lang: ko
 ---
 

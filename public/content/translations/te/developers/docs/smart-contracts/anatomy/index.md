@@ -309,13 +309,13 @@ contract Token {
 }
 ```
 
-### ప్రత్యేక డిజిటల్ ఆస్తి {#unique-digital-asset}
+### ప్రత్యేకమైన డిజిటల్ ఆస్తి {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
 
-// ఇతర ఫైల్‌ల నుండి ప్రస్తుత కాంట్రాక్ట్‌లోకి సింబల్స్‌ను దిగుమతి చేస్తుంది.
-// ఈ సందర్భంలో, OpenZeppelin నుండి హెల్పర్ కాంట్రాక్ట్‌ల శ్రేణి.
+// ఇతర ఫైల్‌ల నుండి సింబల్స్‌ను ప్రస్తుత కాంట్రాక్ట్‌లోకి దిగుమతి చేస్తుంది.
+// ఈ సందర్భంలో, OpenZeppelin నుండి సహాయక కాంట్రాక్ట్‌ల శ్రేణి.
 // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -323,29 +323,29 @@ import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// బాహ్య కాంట్రాక్ట్‌ల నుండి ఫంక్షన్‌లు మరియు కీవర్డ్‌లను వారసత్వంగా (inherit) పొందడానికి `is` కీవర్డ్ ఉపయోగించబడుతుంది.
+// బాహ్య కాంట్రాక్ట్‌ల నుండి ఫంక్షన్‌లు మరియు కీవర్డ్‌లను వారసత్వంగా పొందడానికి `is` కీవర్డ్ ఉపయోగించబడుతుంది.
 // ఈ సందర్భంలో, `CryptoPizza` అనేది `IERC721` మరియు `ERC165` కాంట్రాక్ట్‌ల నుండి వారసత్వంగా పొందుతుంది.
 // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // అంకగణిత కార్యకలాపాలను సురక్షితంగా నిర్వహించడానికి OpenZeppelin యొక్క SafeMath లైబ్రరీని ఉపయోగిస్తుంది.
-    // మరింత తెలుసుకోండి: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // అంకగణిత ఆపరేషన్లను సురక్షితంగా చేయడానికి OpenZeppelin యొక్క SafeMath లైబ్రరీని ఉపయోగిస్తుంది.
+    // మరింత తెలుసుకోండి: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
-    // Solidityలోని స్థిరమైన (Constant) స్థితి వేరియబుల్స్ ఇతర భాషల మాదిరిగానే ఉంటాయి
+    // Solidity లోని స్థిరమైన స్థితి వేరియబుల్స్ ఇతర భాషల మాదిరిగానే ఉంటాయి
     // కానీ మీరు కంపైల్ సమయంలో స్థిరంగా ఉండే ఎక్స్‌ప్రెషన్ నుండి కేటాయించాలి.
     // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // మీ స్వంత రకాన్ని నిర్వచించడానికి Struct రకాలు మిమ్మల్ని అనుమతిస్తాయి
+    // స్ట్రక్ట్ రకాలు మీ స్వంత రకాన్ని నిర్వచించడానికి మిమ్మల్ని అనుమతిస్తాయి
     // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Pizza స్ట్రక్ట్‌ల ఖాళీ శ్రేణిని (array) సృష్టిస్తుంది
+    // పిజ్జా స్ట్రక్ట్‌ల ఖాళీ శ్రేణిని సృష్టిస్తుంది
     Pizza[] public pizzas;
 
     // పిజ్జా ID నుండి దాని యజమాని చిరునామాకు మ్యాపింగ్
@@ -360,7 +360,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // మీరు మ్యాపింగ్‌లను నెస్ట్ చేయవచ్చు, ఈ ఉదాహరణ యజమానిని ఆపరేటర్ ఆమోదాలకు మ్యాప్ చేస్తుంది
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // స్ట్రింగ్ (పేరు) మరియు DNA నుండి యాదృచ్ఛిక (random) పిజ్జాను సృష్టించడానికి అంతర్గత ఫంక్షన్
+    // స్ట్రింగ్ (పేరు) మరియు DNA నుండి యాదృచ్ఛిక పిజ్జాను సృష్టించడానికి అంతర్గత ఫంక్షన్
     function _createPizza(string memory _name, uint256 _dna)
         // `internal` కీవర్డ్ అంటే ఈ ఫంక్షన్ మాత్రమే కనిపిస్తుంది
         // ఈ కాంట్రాక్ట్ మరియు ఈ కాంట్రాక్ట్ నుండి ఉద్భవించిన కాంట్రాక్ట్‌ల లోపల
@@ -370,14 +370,14 @@ contract CryptoPizza is IERC721, ERC165 {
         // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // పిజ్జాల శ్రేణికి (array) పిజ్జాను జోడిస్తుంది మరియు idని పొందుతుంది
+        // పిజ్జాల శ్రేణికి పిజ్జాను జోడిస్తుంది మరియు id ని పొందుతుంది
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // పిజ్జా యజమాని ప్రస్తుత వినియోగదారుతో సమానంగా ఉన్నారో లేదో తనిఖీ చేస్తుంది
+        // పిజ్జా యజమాని మరియు ప్రస్తుత వినియోగదారు ఒకరే అని తనిఖీ చేస్తుంది
         // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // address(0) అనేది జీరో చిరునామా అని గమనించండి,
-        // ఇది pizza[id] ఇంకా నిర్దిష్ట వినియోగదారుకు కేటాయించబడలేదని సూచిస్తుంది.
+        // address(0) అనేది సున్నా చిరునామా అని గమనించండి,
+        // pizza[id] ఇంకా నిర్దిష్ట వినియోగదారుకు కేటాయించబడలేదని సూచిస్తుంది.
 
         assert(pizzaToOwner[id] == address(0));
 
@@ -395,31 +395,31 @@ contract CryptoPizza is IERC721, ERC165 {
         _createPizza(_name, randDna);
     }
 
-    // స్ట్రింగ్ (పేరు) మరియు యజమాని (సృష్టికర్త) చిరునామా నుండి యాదృచ్ఛిక DNAని ఉత్పత్తి చేస్తుంది
+    // స్ట్రింగ్ (పేరు) మరియు యజమాని (సృష్టికర్త) చిరునామా నుండి యాదృచ్ఛిక DNA ని ఉత్పత్తి చేస్తుంది
     function generateRandomDna(string memory _str, address _owner)
         public
-        // `pure`గా గుర్తించబడిన ఫంక్షన్‌లు స్థితి నుండి చదవవని లేదా సవరించవని వాగ్దానం చేస్తాయి
+        // `pure` గా గుర్తించబడిన ఫంక్షన్‌లు స్థితి నుండి చదవవని లేదా సవరించవని వాగ్దానం చేస్తాయి
         // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // స్ట్రింగ్ (పేరు) + చిరునామా (యజమాని) నుండి యాదృచ్ఛిక uintని ఉత్పత్తి చేస్తుంది
+        // స్ట్రింగ్ (పేరు) + చిరునామా (యజమాని) నుండి యాదృచ్ఛిక uint ని ఉత్పత్తి చేస్తుంది
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // యజమాని కనుగొన్న పిజ్జాల శ్రేణిని (array) తిరిగి ఇస్తుంది
+    // యజమాని కనుగొన్న పిజ్జాల శ్రేణిని అందిస్తుంది
     function getPizzasByOwner(address _owner)
         public
-        // `view`గా గుర్తించబడిన ఫంక్షన్‌లు స్థితిని సవరించవని వాగ్దానం చేస్తాయి
+        // `view` గా గుర్తించబడిన ఫంక్షన్‌లు స్థితిని సవరించవని వాగ్దానం చేస్తాయి
         // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // విలువలను నిల్వ చేయడానికి `memory` స్టోరేజ్ స్థానాన్ని ఉపయోగిస్తుంది, ఇది కేవలం
-        // ఈ ఫంక్షన్ కాల్ యొక్క జీవితచక్రం (lifecycle) కోసం మాత్రమే.
+        // విలువలని నిల్వ చేయడానికి `memory` నిల్వ స్థానాన్ని ఉపయోగిస్తుంది, ఇది కేవలం
+        // ఈ ఫంక్షన్ కాల్ యొక్క జీవితచక్రం వరకు మాత్రమే ఉంటుంది.
         // మరింత తెలుసుకోండి: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -443,17 +443,17 @@ contract CryptoPizza is IERC721, ERC165 {
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // దిగుమతి చేయబడిన IERC721 కాంట్రాక్ట్‌లో నిర్వచించబడిన ఈవెంట్‌ను ఎమిట్ చేస్తుంది
+        // దిగుమతి చేయబడిన IERC721 కాంట్రాక్ట్‌లో నిర్వచించబడిన ఘటనను విడుదల చేస్తుంది
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
      * ఇచ్చిన టోకెన్ ID యొక్క యాజమాన్యాన్ని సురక్షితంగా మరొక చిరునామాకు బదిలీ చేస్తుంది
-     * లక్ష్య చిరునామా కాంట్రాక్ట్ అయితే, అది తప్పనిసరిగా `onERC721Received`ని అమలు చేయాలి,
-     * ఇది సురక్షిత బదిలీపై కాల్ చేయబడుతుంది మరియు మ్యాజిక్ విలువను తిరిగి ఇస్తుంది
+     * లక్ష్య చిరునామా కాంట్రాక్ట్ అయితే, అది తప్పనిసరిగా `onERC721Received` ని అమలు చేయాలి,
+     * ఇది సురక్షిత బదిలీపై పిలువబడుతుంది మరియు మ్యాజిక్ విలువను అందిస్తుంది
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * లేకపోతే, బదిలీ వెనక్కి (revert) తీసుకోబడుతుంది.
+     * లేకపోతే, బదిలీ వెనక్కి తీసుకోబడుతుంది.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -464,10 +464,10 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * ఇచ్చిన టోకెన్ ID యొక్క యాజమాన్యాన్ని సురక్షితంగా మరొక చిరునామాకు బదిలీ చేస్తుంది
-     * లక్ష్య చిరునామా కాంట్రాక్ట్ అయితే, అది తప్పనిసరిగా `onERC721Received`ని అమలు చేయాలి,
-     * ఇది సురక్షిత బదిలీపై కాల్ చేయబడుతుంది మరియు మ్యాజిక్ విలువను తిరిగి ఇస్తుంది
+     * లక్ష్య చిరునామా కాంట్రాక్ట్ అయితే, అది తప్పనిసరిగా `onERC721Received` ని అమలు చేయాలి,
+     * ఇది సురక్షిత బదిలీపై పిలువబడుతుంది మరియు మ్యాజిక్ విలువను అందిస్తుంది
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * లేకపోతే, బదిలీ వెనక్కి (revert) తీసుకోబడుతుంది.
+     * లేకపోతే, బదిలీ వెనక్కి తీసుకోబడుతుంది.
      */
     function safeTransferFrom(
         address from,
@@ -480,7 +480,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * లక్ష్య చిరునామాపై `onERC721Received`ని ప్రారంభించడానికి అంతర్గత ఫంక్షన్
+     * లక్ష్య చిరునామాపై `onERC721Received` ని ప్రారంభించడానికి అంతర్గత ఫంక్షన్
      * లక్ష్య చిరునామా కాంట్రాక్ట్ కాకపోతే కాల్ అమలు చేయబడదు
      */
     function _checkOnERC721Received(
@@ -504,7 +504,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     // పిజ్జాను బర్న్ చేస్తుంది - టోకెన్‌ను పూర్తిగా నాశనం చేస్తుంది
     // `external` ఫంక్షన్ మాడిఫైయర్ అంటే ఈ ఫంక్షన్
-    // కాంట్రాక్ట్ ఇంటర్‌ఫేస్‌లో భాగం మరియు ఇతర కాంట్రాక్ట్‌లు దీనిని కాల్ చేయగలవు
+    // కాంట్రాక్ట్ ఇంటర్‌ఫేస్‌లో భాగం మరియు ఇతర కాంట్రాక్ట్‌లు దీనిని కాల్ చేయవచ్చు
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -517,12 +517,12 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // చిరునామా ద్వారా పిజ్జాల సంఖ్యను తిరిగి ఇస్తుంది
+    // చిరునామా ద్వారా పిజ్జాల సంఖ్యను అందిస్తుంది
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // id ద్వారా కనుగొనబడిన పిజ్జా యజమానిని తిరిగి ఇస్తుంది
+    // id ద్వారా కనుగొనబడిన పిజ్జా యజమానిని అందిస్తుంది
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
@@ -536,7 +536,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // నిర్దిష్ట పిజ్జా కోసం ఆమోదించబడిన చిరునామాను తిరిగి ఇస్తుంది
+    // నిర్దిష్ట పిజ్జా కోసం ఆమోదించబడిన చిరునామాను అందిస్తుంది
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -548,7 +548,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * ఇచ్చిన టోకెన్ ID యొక్క ప్రస్తుత ఆమోదాన్ని క్లియర్ చేయడానికి ప్రైవేట్ ఫంక్షన్
-     * ఇచ్చిన చిరునామా నిజంగా టోకెన్ యజమాని కాకపోతే వెనక్కి (revert) తీసుకుంటుంది
+     * ఇచ్చిన చిరునామా నిజంగా టోకెన్ యజమాని కాకపోతే వెనక్కి తీసుకోబడుతుంది
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -560,7 +560,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /*
      * ఇచ్చిన ఆపరేటర్ ఆమోదాన్ని సెట్ చేస్తుంది లేదా అన్‌సెట్ చేస్తుంది
-     * పంపినవారి తరపున వారి అన్ని టోకెన్‌లను బదిలీ చేయడానికి ఆపరేటర్ అనుమతించబడతారు
+     * పంపినవారి తరపున వారి టోకెన్‌లన్నింటినీ బదిలీ చేయడానికి ఆపరేటర్ అనుమతించబడతారు
      */
     function setApprovalForAll(address to, bool approved) public {
         require(to != msg.sender, "Cannot approve own address");
@@ -598,14 +598,14 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // దీని కారణంగా solium తనిఖీని నిలిపివేయండి
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
             this.isApprovedForAll(owner, spender));
     }
 
-    // పిజ్జా ప్రత్యేకమైనదా మరియు ఇంకా ఉనికిలో లేదో తనిఖీ చేయండి
+    // పిజ్జా ప్రత్యేకమైనదో మరియు ఇంకా ఉనికిలో లేదో తనిఖీ చేయండి
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -621,15 +621,15 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // లక్ష్య చిరునామా కాంట్రాక్ట్ అవునా కాదా అని తిరిగి ఇస్తుంది
+    // లక్ష్య చిరునామా కాంట్రాక్ట్ అవునా కాదా అని అందిస్తుంది
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // ప్రస్తుతం ఒక చిరునామాలో కాంట్రాక్ట్ ఉందో లేదో తనిఖీ చేయడానికి ఇంతకంటే మంచి మార్గం లేదు
+        // ప్రస్తుతం చిరునామాలో కాంట్రాక్ట్ ఉందో లేదో తనిఖీ చేయడానికి ఇంతకంటే మంచి మార్గం లేదు
         // ఆ చిరునామాలోని కోడ్ పరిమాణాన్ని తనిఖీ చేయడం కంటే.
-        // https://ethereum.stackexchange.com/a/14016/36603 చూడండి
+        // చూడండి https://ethereum.stackexchange.com/a/14016/36603
         // ఇది ఎలా పనిచేస్తుందనే దాని గురించి మరిన్ని వివరాల కోసం.
-        // TODO Serenity విడుదలకు ముందు దీన్ని మళ్లీ తనిఖీ చేయండి, ఎందుకంటే అప్పుడు అన్ని చిరునామాలు
-        // కాంట్రాక్ట్‌లు అవుతాయి.
+        // TODO సెరినిటీ (Serenity) విడుదలకు ముందు దీన్ని మళ్లీ తనిఖీ చేయండి, ఎందుకంటే అన్ని చిరునామాలు
+        // అప్పుడు కాంట్రాక్ట్‌లు అవుతాయి.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

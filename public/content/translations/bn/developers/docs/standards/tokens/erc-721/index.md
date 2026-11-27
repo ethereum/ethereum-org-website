@@ -249,5 +249,4 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Vyper ERC-721 কন্ট্রাক্ট ওয়াকথ্রু](/developers/tutorials/erc-721-vyper-annotated-code/) _– Vyper-এ লেখা একটি সম্পূর্ণ ERC-721 NFT কন্ট্রাক্টের টীকাযুক্ত ওয়াকথ্রু।_
 - [কীভাবে একটি NFT লিখতে এবং ডিপ্লয় করতে হয় (পর্ব 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– আপনার প্রথম ERC-721 স্মার্ট কন্ট্রাক্ট লেখা এবং ডিপ্লয় করার ধাপে ধাপে নির্দেশিকা।_
 - [কীভাবে একটি NFT মিন্ট করতে হয় (পর্ব 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– আপনার ডিপ্লয় করা স্মার্ট কন্ট্রাক্ট এবং Web3 ব্যবহার করে কীভাবে একটি ERC-721 NFT মিন্ট করবেন।_
-- [কীভাবে আপনার ওয়ালেটে আপনার NFT দেখবেন (পর্ব 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– ডিপ্লয়মেন্টের পর মেটামাস্ক-এ আপনার মিন্ট করা NFT কীভাবে প্রদর্শন করবেন।_
-- [NFT মিন্টার টিউটোরিয়াল](/developers/tutorials/nft-minter/) _– একটি React ফ্রন্টএন্ড, মেটামাস্ক এবং Alchemy দিয়ে একটি ফুল-স্ট্যাক NFT মিন্টিং dapp তৈরি করুন।_
+- [কীভাবে আপনার ওয়ালেটে আপনার NFT দেখবেন (পর্ব 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– ডিপ্লয়মেন্টের পর মেটামাস্কে আপনার মিন্ট করা NFT কীভাবে প্রদর্শন করবেন।_

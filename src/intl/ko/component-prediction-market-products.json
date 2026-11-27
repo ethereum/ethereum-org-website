@@ -1,11 +1,8 @@
 {
-  "augur-cta": "Augur 살펴보기",
-  "augur-description": "가격 동향을 예측하는 데 사용되는 완전히 탈중앙화된 예측 시장 프로토콜입니다. 면책 조항: Augur를 사용하기 시작하려면 약간의 기술적 전문 지식이 필요합니다.",
-  "augur-title": "Augur",
-  "kalshi-cta": "Kalshi 사용해보기",
-  "kalshi-description": "USDC 입금에 이더리움을 사용하는 CFTC 규정 준수 플랫폼입니다. (미국 전용)",
-  "kalshi-title": "Kalshi",
+  "limitless-cta": "Limitless 둘러보기",
+  "limitless-description": "이더리움 레이어 2 (l2)인 Base에 구축된 예측 시장입니다. 거래는 USDC로 온체인에서 정산되며, 대부분의 가격 시장은 온체인 가격 피드를 통해 자동으로 결과가 확정됩니다. 일부 국가에서는 이용할 수 없습니다.",
+  "limitless-title": "Limitless",
   "polymarket-cta": "Polymarket 둘러보기",
-  "polymarket-description": "실시간 거래를 지원하는 인기 있는 예측 시장입니다.",
+  "polymarket-description": "가장 큰 예측 시장 중 하나입니다. 거래는 폴리곤에서 정산되며, 결과는 UMA 오라클을 통해 결정됩니다. 일부 국가에서는 이용할 수 없습니다.",
   "polymarket-title": "Polymarket"
 }

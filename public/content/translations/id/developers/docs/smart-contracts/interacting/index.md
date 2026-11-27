@@ -171,7 +171,6 @@ Dalam aplikasi terdesentralisasi (dapp), dompet pengguna (seperti MetaMask, Rain
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Memanggil kontrak pintar dari JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Mengirim transaksi menggunakan web3.js dan Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Cara melihat NFT Anda di dompet Anda](/developers/tutorials/how-to-view-nft-in-metamask/)
 
@@ -180,7 +179,7 @@ Dalam aplikasi terdesentralisasi (dapp), dompet pengguna (seperti MetaMask, Rain
 - [Dokumentasi Viem: Membaca dan menulis ke kontrak](https://viem.sh/docs/contract/readContract)
 - [Dokumentasi ethers.js: Kontrak](https://docs.ethers.org/v6/api/contract/)
 - [Spesifikasi ABI Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [Apa itu ABI? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Bagaimana cara kerja ABI kontrak pintar? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Topik terkait {#related-topics}
 

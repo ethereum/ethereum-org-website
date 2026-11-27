@@ -6,20 +6,22 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function OpenSourcePageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-open-source")
-  const tCommon = await getTranslations("common")
 
   const url = normalizeUrlForJsonLd(locale, `/open-source/`)
 
@@ -46,29 +48,7 @@ export default async function OpenSourcePageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: tCommon("values"),
-              item: normalizeUrlForJsonLd(locale, "/values/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: t("page-open-source-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "open-source"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: articleId,
@@ -79,7 +59,7 @@ export default async function OpenSourcePageJsonLD({
         isPartOf: webPageId,
         headline: t("page-open-source-title"),
         description: t("page-open-source-meta-description"),
-        image: "https://ethereum.org/images/doge-computer.png",
+        image: `${SITE_URL}/images/doge-computer.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
@@ -97,7 +77,7 @@ export default async function OpenSourcePageJsonLD({
               "A decentralized platform for applications and digital economies powered by smart contracts",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
     ],
   }

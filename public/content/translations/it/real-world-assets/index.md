@@ -1,7 +1,7 @@
 ---
 title: Asset del mondo reale (RWA)
 metaTitle: Cosa sono gli RWA? | Vantaggi e utilizzo degli asset del mondo reale
-description: Una panoramica degli asset del mondo reale su Ethereum
+description: Cosa sono gli asset del mondo reale (RWA)? Scopri come asset quali titoli di stato, immobili e materie prime vengono tokenizzati su Ethereum, e i relativi vantaggi e rischi.
 lang: it
 template: use-cases
 image: /images/man-and-dog-playing.png

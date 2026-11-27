@@ -1,6 +1,6 @@
 ---
 title: Uwekaji dhamana wenye ukwasi na wa pamoja
-description: Muhtasari wa uwekaji dhamana wenye ukwasi na wa pamoja kwenye Ethereum
+description: Uwekaji dhamana wenye ukwasi ni nini? Jifunze jinsi mabwawa ya uwekaji dhamana yanavyokuruhusu kupata tuzo za ETH kwa kiasi chochote cha ETH, mara nyingi ukipokea tokeni yenye ukwasi ambayo bado unaweza kuitumia.
 lang: sw
 template: staking
 image: /images/staking/leslie-pool.png

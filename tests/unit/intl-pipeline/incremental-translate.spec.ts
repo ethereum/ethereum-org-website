@@ -7,67 +7,222 @@
 import { expect, test } from "@playwright/test"
 
 import {
+  MAX_PROMPT_BYTES,
+  RETRY_NOTE_RESERVE_BYTES,
+} from "@/scripts/intl-pipeline/constants"
+import { RunFuseExceededError } from "@/scripts/intl-pipeline/lib/llm/cost-meter"
+import {
   buildIncrementalPrompt,
   buildSectionList,
   extractJsonSections,
   extractSections,
+  PARSE_ATTEMPTS,
   parseIncrementalResponse,
   removeMarkdownSection,
   replaceJsonValues,
   replaceSections,
+  sectionCodeLoss,
+  translateBatchWithParseRetry,
 } from "@/scripts/intl-pipeline/lib/llm/incremental-translate"
+import { FileGlossary } from "@/scripts/intl-pipeline/lib/llm/prompt-builder"
+import { classifyFailure } from "@/scripts/intl-pipeline/lib/quarantine"
 
 test.describe("parseIncrementalResponse", () => {
-  test("parses valid JSON response", () => {
-    const response = JSON.stringify({
-      "my-section": "Translated content here.",
-      "other-section": "More translated content.",
-    })
-    const result = parseIncrementalResponse(response)
+  const block = (id: string, body: string) =>
+    `<SECTION id="${id}">\n${body}\n</SECTION>`
+
+  test("parses one section per envelope", () => {
+    const result = parseIncrementalResponse(
+      [
+        block("my-section", "Translated content here."),
+        block("other-section", "More translated content."),
+      ].join("\n\n"),
+      ["my-section", "other-section"]
+    )
     expect(result["my-section"]).toBe("Translated content here.")
     expect(result["other-section"]).toBe("More translated content.")
   })
 
-  test("strips markdown json code block wrapping", () => {
-    const response = '```json\n{"my-section": "Translated."}\n```'
-    const result = parseIncrementalResponse(response)
+  test("a quote needs no escaping -- the format this replaced", () => {
+    // The ur shape: every <span dir="ltr"> used to be a \" the model had to
+    // get right inside a JSON string. Here it is just a quote.
+    const body = 'ایک <span dir="ltr">NFT</span> بنایا گیا۔'
+    const result = parseIncrementalResponse(block("a-section", body), [
+      "a-section",
+    ])
+    expect(result["a-section"]).toBe(body)
+  })
+
+  test("a backslash needs no escaping either", () => {
+    const body = 'echo "Error: no test specified" && exit 1 \\ done'
+    const result = parseIncrementalResponse(block("a-section", body), [
+      "a-section",
+    ])
+    expect(result["a-section"]).toBe(body)
+  })
+
+  test("keeps multi-line bodies and their blank lines", () => {
+    const body = "First paragraph.\n\nSecond paragraph.\n\n- item\n- item"
+    const result = parseIncrementalResponse(block("multi", body), ["multi"])
+    expect(result["multi"]).toBe(body)
+  })
+
+  test("tolerates extra attributes on the tag", () => {
+    const result = parseIncrementalResponse(
+      '<SECTION action="TRANSLATE" id="x" heading="## Title">\nBody.\n</SECTION>',
+      ["x"]
+    )
+    expect(result["x"]).toBe("Body.")
+  })
+
+  test("strips markdown code block wrapping", () => {
+    const result = parseIncrementalResponse(
+      "```\n" + block("my-section", "Translated.") + "\n```",
+      ["my-section"]
+    )
     expect(result["my-section"]).toBe("Translated.")
   })
 
-  test("strips plain code block wrapping", () => {
-    const response = '```\n{"my-section": "Translated."}\n```'
-    const result = parseIncrementalResponse(response)
-    expect(result["my-section"]).toBe("Translated.")
-  })
-
-  test("throws on non-object response", () => {
-    expect(() => parseIncrementalResponse('"just a string"')).toThrow(
-      "Expected a JSON object"
+  test("handles leading and trailing whitespace", () => {
+    const result = parseIncrementalResponse(
+      "  \n" + block("my-section", "Content.") + "\n  ",
+      ["my-section"]
     )
-  })
-
-  test("throws on array response", () => {
-    expect(() => parseIncrementalResponse("[]")).toThrow(
-      "Expected a JSON object"
-    )
-  })
-
-  test("throws on non-string values", () => {
-    expect(() => parseIncrementalResponse('{"section": 42}')).toThrow(
-      'Section "section" value is not a string'
-    )
-  })
-
-  test("throws on invalid JSON", () => {
-    expect(() => parseIncrementalResponse("not json at all")).toThrow(
-      "Failed to parse"
-    )
-  })
-
-  test("handles response with whitespace", () => {
-    const response = '  \n{"my-section": "Content."}\n  '
-    const result = parseIncrementalResponse(response)
     expect(result["my-section"]).toBe("Content.")
+  })
+
+  test("throws when the response carries no envelope", () => {
+    expect(() =>
+      parseIncrementalResponse("Here are your translations!", ["x"])
+    ).toThrow(/Failed to parse incremental translation response/)
+  })
+
+  test("throws on the old JSON shape rather than accepting it", () => {
+    // Hard cutover: a JSON body is a failed response, not a second format.
+    expect(() =>
+      parseIncrementalResponse('{"my-section": "Translated."}', ["my-section"])
+    ).toThrow(/no <SECTION/)
+  })
+
+  test("a dropped closing tag fails instead of merging two sections", () => {
+    const response = [
+      '<SECTION id="first">',
+      "First body.",
+      '<SECTION id="second">',
+      "Second body.",
+      "</SECTION>",
+    ].join("\n")
+    expect(() =>
+      parseIncrementalResponse(response, ["first", "second"])
+    ).toThrow(/section "first" is missing its closing tag/)
+  })
+
+  test("an empty id is refused", () => {
+    expect(() =>
+      parseIncrementalResponse('<SECTION id="">\nBody.\n</SECTION>', ["x"])
+    ).toThrow(/carries no id/)
+  })
+
+  test("a truncated response fails instead of half-succeeding", () => {
+    // callGeminiRaw only refuses an entirely empty response, so output that
+    // stopped at a token limit arrives looking like a success. Every block
+    // before the cut parses; the cut one has no closing tag and nothing after
+    // it to trip the swallowed-tag check. Under JSON this never parsed at all.
+    const truncated = [
+      block("first", "Done."),
+      '<SECTION id="second">',
+      "Half a sent",
+    ].join("\n\n")
+    expect(() =>
+      parseIncrementalResponse(truncated, ["first", "second", "third"])
+    ).toThrow(/missing 2 of 3 requested section\(s\): second, third/)
+  })
+
+  test("a response short one section is refused whole", () => {
+    expect(() =>
+      parseIncrementalResponse(block("first", "Done."), ["first", "second"])
+    ).toThrow(/missing 1 of 2 requested section\(s\): second/)
+  })
+
+  test("the missing-id failure is quarantined as parse, not swallowed", () => {
+    const err = (() => {
+      try {
+        parseIncrementalResponse(block("first", "Done."), ["first", "second"])
+      } catch (e) {
+        return e as Error
+      }
+      throw new Error("expected a throw")
+    })()
+    expect(classifyFailure(err.message)).toBe("parse")
+  })
+
+  test("extra sections nobody asked for do not fail the batch", () => {
+    const result = parseIncrementalResponse(
+      [block("first", "Done."), block("bonus", "Extra.")].join("\n\n"),
+      ["first"]
+    )
+    expect(result["first"]).toBe("Done.")
+  })
+
+  test("a > inside a heading attribute stays out of the body", () => {
+    // renderSectionBlock escapes " in the heading but not >, and the model is
+    // apt to copy the attributes back.
+    const result = parseIncrementalResponse(
+      '<SECTION id="stake" heading="## 32 >= limit">\nCuerpo.\n</SECTION>',
+      ["stake"]
+    )
+    expect(result["stake"]).toBe("Cuerpo.")
+  })
+
+  test("strips a CRLF envelope newline, not the content's", () => {
+    const result = parseIncrementalResponse(
+      '<SECTION id="x">\r\nLine one.\r\nLine two.\r\n</SECTION>',
+      ["x"]
+    )
+    expect(result["x"]).toBe("Line one.\r\nLine two.")
+  })
+
+  test("a section id named constructor is not reported present", () => {
+    // erc-721-vyper-annotated-code has "#### Constructor {#constructor}" in
+    // English and 21 translations. On a plain object "constructor" in {} is
+    // true, so the missing-id check would wave a dropped section through and
+    // the lookup downstream would return Object itself instead of falling
+    // back to English.
+    expect(() =>
+      parseIncrementalResponse(block("intro", "Hecho."), [
+        "intro",
+        "constructor",
+      ])
+    ).toThrow(/missing 1 of 2 requested section\(s\): constructor/)
+  })
+
+  test("a section id named constructor round-trips when it is returned", () => {
+    const result = parseIncrementalResponse(block("constructor", "Cuerpo."), [
+      "constructor",
+    ])
+    expect(result["constructor"]).toBe("Cuerpo.")
+  })
+
+  test("the same id twice is refused rather than last-one-wins", () => {
+    const response = [
+      block("a-section", "Primero."),
+      block("a-section", "Segundo."),
+    ].join("\n\n")
+    expect(() => parseIncrementalResponse(response, ["a-section"])).toThrow(
+      /section "a-section" was returned more than once/
+    )
+  })
+
+  test("the quarantine classifies every parse failure the same way", () => {
+    const err = (() => {
+      try {
+        parseIncrementalResponse("not an envelope", ["x"])
+      } catch (e) {
+        return e as Error
+      }
+      throw new Error("expected a throw")
+    })()
+    expect(classifyFailure(err.message)).toBe("parse")
   })
 })
 
@@ -85,6 +240,19 @@ test.describe("buildIncrementalPrompt -- per-file-type BiDi rules", () => {
     ],
     glossaryTerms: new Map<string, string>(),
   }
+
+  test("the prompt asks for envelopes and never for JSON", () => {
+    // The cutover lives in the prompt as much as the parser: if the OUTPUT
+    // FORMAT block drifts back to describing a JSON object, the parser starts
+    // rejecting every response the model sends.
+    const prompt = buildIncrementalPrompt({
+      ...baseOptions,
+      fileType: "markdown",
+    })
+    expect(prompt).toContain('<SECTION id="section-id-1">')
+    expect(prompt).toContain("MUST NOT be escaped")
+    expect(prompt).not.toMatch(/JSON object/)
+  })
 
   test("RTL markdown prompt: span dir=ltr for body, LRI/PDI for frontmatter", () => {
     // Markdown has a dual policy: body uses <span dir="ltr"> (MDX parses HTML
@@ -340,9 +508,12 @@ test.describe("buildSectionList", () => {
   ]
 
   test("marks specified IDs as TRANSLATE, others as CONTEXT", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result).toHaveLength(3)
     expect(result.find((s) => s.id === "intro")!.action).toBe("CONTEXT")
     expect(result.find((s) => s.id === "details")!.action).toBe("TRANSLATE")
@@ -350,36 +521,76 @@ test.describe("buildSectionList", () => {
   })
 
   test("TRANSLATE sections use English content", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result.find((s) => s.id === "details")!.content).toBe(
       "English details."
     )
   })
 
+  test("a section the locale lacks sends its heading for translation", () => {
+    // Nothing else translates a new section's heading: the reply carries body
+    // text only, so it used to land in the locale in English
+    const result = buildSectionList(
+      englishSections,
+      localeSections.slice(0, 2),
+      ["conclusion"],
+      "markdown"
+    )
+    const conclusion = result.find((s) => s.id === "conclusion")!
+    expect(conclusion.content).toBe(
+      "## Conclusion {#conclusion}\n\nEnglish conclusion."
+    )
+    expect(conclusion.headingText).toBeUndefined()
+  })
+
   test("CONTEXT sections use locale content", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "details",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["details"],
+      "markdown"
+    )
     expect(result.find((s) => s.id === "intro")!.content).toBe(
       "Intro en espanol."
     )
   })
 
   test("sections without locale match are omitted from CONTEXT", () => {
-    const result = buildSectionList(englishSections, [], ["details"])
+    const result = buildSectionList(
+      englishSections,
+      [],
+      ["details"],
+      "markdown"
+    )
     // intro and conclusion have no locale match, so only TRANSLATE section appears
     expect(result).toHaveLength(1)
     expect(result[0].action).toBe("TRANSLATE")
   })
 
   test("preserves document order", () => {
-    const result = buildSectionList(englishSections, localeSections, [
-      "conclusion",
-      "intro",
-    ])
+    const result = buildSectionList(
+      englishSections,
+      localeSections,
+      ["conclusion", "intro"],
+      "markdown"
+    )
     expect(result.map((s) => s.id)).toEqual(["intro", "details", "conclusion"])
+  })
+
+  test("a new JSON key is sent as its bare value, with no heading", () => {
+    const en = extractJsonSections(
+      JSON.stringify({ old: "Old value", nest: { added: "A new value" } })
+    )
+    const de = extractJsonSections(JSON.stringify({ old: "Alter Wert" }))
+    const [added] = buildSectionList(en, de, ["nest/added"], "json").filter(
+      (s) => s.action === "TRANSLATE"
+    )
+    expect(added.content).toBe("A new value")
   })
 })
 
@@ -546,5 +757,587 @@ test.describe("replaceJsonValues", () => {
     const json = JSON.stringify({ title: "Hello" }, null, 2)
     const result = replaceJsonValues(json, { title: "Hola" })
     expect(result.endsWith("\n")).toBe(true)
+  })
+})
+
+test.describe("translateBatchWithParseRetry", () => {
+  const ok = '<SECTION id="a-section">\nContenido traducido.\n</SECTION>'
+  const batch = {
+    prompt: "PROMPT",
+    irreducible: false,
+    translateIds: ["a-section"],
+  }
+  const tokens = { input: 10, output: 20 }
+  const reply = (text: string) => Promise.resolve({ text, tokensUsed: tokens })
+
+  // No envelope at all -- the model answered in prose.
+  const noEnvelope = "Sure! Here are the translated sections."
+  // A dropped closing tag, which would silently merge two sections.
+  const droppedTag =
+    '<SECTION id="a-section">\nUno.\n<SECTION id="b-section">\nDos.\n</SECTION>'
+
+  test("returns the first parsable response without re-sending", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(batch, () => {
+      calls++
+      return reply(ok)
+    })
+    expect(calls).toBe(1)
+    expect(r.translations["a-section"]).toBe("Contenido traducido.")
+    expect(r.tokens).toEqual(tokens)
+  })
+
+  test("re-sends a response with no envelope and keeps the retry's result", async () => {
+    const seen: string[] = []
+    let calls = 0
+    const r = await translateBatchWithParseRetry(batch, (prompt) => {
+      seen.push(prompt)
+      return reply(++calls === 1 ? noEnvelope : ok)
+    })
+    expect(calls).toBe(2)
+    expect(r.translations["a-section"]).toBe("Contenido traducido.")
+    expect(seen[0]).toBe("PROMPT")
+    expect(seen[1]).toContain("COULD NOT BE READ")
+  })
+
+  test("re-sends a response whose closing tag was dropped", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(batch, () =>
+      reply(++calls === 1 ? droppedTag : ok)
+    )
+    expect(calls).toBe(2)
+    expect(r.translations["a-section"]).toBe("Contenido traducido.")
+  })
+
+  test("bills every attempt, not just the one that parsed", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(batch, () =>
+      reply(++calls === 1 ? noEnvelope : ok)
+    )
+    expect(r.tokens).toEqual({ input: 20, output: 40 })
+  })
+
+  test("gives up after PARSE_ATTEMPTS and throws the parse error", async () => {
+    let calls = 0
+    await expect(
+      translateBatchWithParseRetry(batch, () => {
+        calls++
+        return reply(noEnvelope)
+      })
+    ).rejects.toThrow(/Failed to parse incremental translation response/)
+    expect(calls).toBe(PARSE_ATTEMPTS)
+  })
+
+  // A check that counts lost `x` spans in a section
+  const loses = (_: string, text: string) => {
+    const lost = 3 - (text.match(/`x`/g) ?? []).length
+    return lost > 0
+      ? { markers: 0, spans: lost, detail: `missing \`x\` x${lost}` }
+      : null
+  }
+  const withX = (n: number) =>
+    `<SECTION id="a-section">\nContenido ${"`x` ".repeat(n)}\n</SECTION>`
+
+  test("re-sends when code was lost, and keeps the cleared reply", async () => {
+    const seen: string[] = []
+    const r = await translateBatchWithParseRetry(
+      batch,
+      (prompt) => {
+        seen.push(prompt)
+        return reply(withX(seen.length === 1 ? 2 : 3))
+      },
+      undefined,
+      loses
+    )
+    expect(seen).toHaveLength(2)
+    expect(r.complaint).toBeNull()
+    expect(r.translations["a-section"]).toContain("`x` `x` `x`")
+    expect(seen[1]).toContain("LOST CODE")
+  })
+
+  test("loss that never clears ships the reply that lost least", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      batch,
+      () => reply(withX([2, 0, 1][calls++])),
+      undefined,
+      loses
+    )
+    expect(calls).toBe(PARSE_ATTEMPTS)
+    expect(r.translations["a-section"]).toContain("`x` `x`")
+    expect(r.complaint).toBe('Section "a-section": missing `x` x1')
+  })
+
+  test("lost code followed by unparsable re-sends ships the first reply", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      batch,
+      () => reply(++calls === 1 ? withX(2) : noEnvelope),
+      undefined,
+      loses
+    )
+    expect(calls).toBe(PARSE_ATTEMPTS)
+    expect(r.translations["a-section"]).toContain("`x` `x`")
+    expect(r.complaint).toBe('Section "a-section": missing `x` x1')
+  })
+
+  test("a re-send whose call fails ships the reply in hand", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      batch,
+      () =>
+        ++calls === 1
+          ? reply(withX(2))
+          : Promise.reject(new Error("finishReason=RECITATION")),
+      undefined,
+      loses
+    )
+    expect(calls).toBe(2)
+    expect(r.translations["a-section"]).toContain("`x` `x`")
+  })
+
+  test("the run fuse still stops a re-send", async () => {
+    let calls = 0
+    const err = await translateBatchWithParseRetry(
+      batch,
+      () =>
+        ++calls === 1
+          ? reply(withX(2))
+          : Promise.reject(
+              new RunFuseExceededError("[cost-guard] aborting run")
+            ),
+      undefined,
+      loses
+    ).catch((e) => e)
+    expect(err).toBeInstanceOf(RunFuseExceededError)
+  })
+
+  test("each section keeps its best reply across re-sends", async () => {
+    const two = { ...batch, translateIds: ["a-section", "b-section"] }
+    const pair = (a: number, b: number) =>
+      `${withX(a)}\n<SECTION id="b-section">\nZwei ${"`x` ".repeat(b)}\n</SECTION>`
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      two,
+      () => reply([pair(3, 1), pair(0, 3)][calls++]),
+      undefined,
+      loses
+    )
+    expect(calls).toBe(2)
+    expect(r.complaint).toBeNull()
+    expect(r.translations["a-section"]).toContain("`x` `x` `x`")
+    expect(r.translations["b-section"]).toContain("Zwei `x` `x` `x`")
+  })
+
+  test("a reply that kept every fence marker beats one that lost any", async () => {
+    const sent = "Use `x` and `y`.\n\n<!-- CODE_BLOCK_0 -->"
+    const replies = [
+      "Nutze beides.\n\n<!-- CODE_BLOCK_0 -->",
+      "Nutze `x` und `y`.",
+      "Nutze `x` und `y`.",
+    ].map((r) => `<SECTION id="a-section">\n${r}\n</SECTION>`)
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      batch,
+      () => reply(replies[calls++]),
+      undefined,
+      (_, text) => sectionCodeLoss(sent, text)
+    )
+    expect(calls).toBe(PARSE_ATTEMPTS)
+    expect(r.translations["a-section"]).toContain("<!-- CODE_BLOCK_0 -->")
+  })
+
+  test("a long complaint is cut to the note's reserve", async () => {
+    const seen: string[] = []
+    await translateBatchWithParseRetry(
+      batch,
+      (prompt) => {
+        seen.push(prompt)
+        return reply(withX(0))
+      },
+      undefined,
+      () => ({
+        markers: 0,
+        spans: 1,
+        detail: "missing `ü-long-span`, ".repeat(200),
+      })
+    )
+    expect(
+      Buffer.byteLength(seen[1], "utf-8") - Buffer.byteLength(batch.prompt)
+    ).toBeLessThanOrEqual(RETRY_NOTE_RESERVE_BYTES)
+  })
+
+  test("the quarantine still classifies the exhausted failure as parse", async () => {
+    const err = await translateBatchWithParseRetry(batch, () =>
+      reply(noEnvelope)
+    ).catch((e: Error) => e)
+    expect(classifyFailure((err as Error).message)).toBe("parse")
+  })
+
+  test("reports each re-send once, never the final failure", async () => {
+    const attempts: number[] = []
+    await translateBatchWithParseRetry(
+      batch,
+      () => reply(noEnvelope),
+      (attempt) => attempts.push(attempt)
+    ).catch(() => {})
+    expect(attempts).toEqual([1, 2])
+  })
+
+  // A prompt the planner would never emit, since it reserves
+  // RETRY_NOTE_RESERVE_BYTES; built here to prove the guard behind that reserve.
+  const flushToCeiling = {
+    prompt: "x".repeat(MAX_PROMPT_BYTES),
+    irreducible: false,
+    translateIds: ["a-section"],
+  }
+
+  test("does not re-send when the note would cross the per-call ceiling", async () => {
+    let calls = 0
+    await expect(
+      translateBatchWithParseRetry(flushToCeiling, () => {
+        calls++
+        return reply(noEnvelope)
+      })
+    ).rejects.toThrow(/Failed to parse incremental translation response/)
+    // Sending it would have earned a cost-guard refusal instead, which
+    // classifies as nothing at all.
+    expect(calls).toBe(1)
+  })
+
+  test("the refused re-send still quarantines as parse", async () => {
+    const err = await translateBatchWithParseRetry(flushToCeiling, () =>
+      reply(noEnvelope)
+    ).catch((e: Error) => e)
+    expect(classifyFailure((err as Error).message)).toBe("parse")
+  })
+
+  test("an irreducible batch is re-sent even past the ceiling", async () => {
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      { ...flushToCeiling, irreducible: true },
+      () => reply(++calls === 1 ? noEnvelope : ok)
+    )
+    expect(calls).toBe(2)
+    expect(r.translations["a-section"]).toBe("Contenido traducido.")
+  })
+
+  test("the note stays within the reserved headroom", async () => {
+    // A parser complaint long enough to blow the reserve if echoed whole: the
+    // offending key is quoted back in the message.
+    const longKey = JSON.stringify({ ["k".repeat(3000)]: 42 })
+    const small = { prompt: "P", irreducible: false, translateIds: ["a"] }
+    let sent = ""
+    await translateBatchWithParseRetry(small, (prompt) => {
+      sent = prompt
+      return reply(longKey)
+    }).catch(() => {})
+    expect(
+      Buffer.byteLength(sent, "utf-8") -
+        Buffer.byteLength(small.prompt, "utf-8")
+    ).toBeLessThanOrEqual(RETRY_NOTE_RESERVE_BYTES)
+  })
+
+  test("re-sends when the response came back a section short", async () => {
+    const short = '<SECTION id="a-section">\nUno.\n</SECTION>'
+    const both = short + '\n\n<SECTION id="b-section">\nDos.\n</SECTION>'
+    let calls = 0
+    const r = await translateBatchWithParseRetry(
+      { ...batch, translateIds: ["a-section", "b-section"] },
+      () => reply(++calls === 1 ? short : both)
+    )
+    expect(calls).toBe(2)
+    expect(r.translations["b-section"]).toBe("Dos.")
+  })
+
+  test("the retry note restates the envelope", async () => {
+    let sent = ""
+    await translateBatchWithParseRetry(batch, (prompt) => {
+      sent = prompt
+      return reply(noEnvelope)
+    }).catch(() => {})
+    expect(sent).toContain('<SECTION id="the-section-id">')
+    expect(sent).toContain("do not escape quotes or backslashes")
+    expect(sent).toContain("PROMPT")
+  })
+})
+
+test.describe("sectionCodeLoss", () => {
+  const sent = "Call `transfer()` with `amount`.\n\n<!-- CODE_BLOCK_0 -->\n"
+
+  test("names English code the reply lost or altered", () => {
+    expect(
+      sectionCodeLoss(
+        sent,
+        "Llama a `transferir()` con `amount`.\n\n<!-- CODE_BLOCK_0 -->\n"
+      )
+    ).toEqual({
+      markers: 0,
+      spans: 1,
+      detail: "missing `transfer()`, not in the English `transferir()`",
+    })
+  })
+
+  test("backticks the reply only added are no loss", () => {
+    expect(
+      sectionCodeLoss(
+        sent,
+        "Llama a `transfer()` con `amount` en `Token`.\n\n<!-- CODE_BLOCK_0 -->\n"
+      )
+    ).toBeNull()
+  })
+
+  test("a fence marker must come back exactly once", () => {
+    const dropped = "Llama a `transfer()` con `amount`.\n"
+    const doubled = `${dropped}<!-- CODE_BLOCK_0 -->\n<!-- CODE_BLOCK_0 -->\n`
+    for (const reply of [dropped, doubled])
+      expect(sectionCodeLoss(sent, reply)).toEqual({
+        markers: 1,
+        spans: 0,
+        detail: "<!-- CODE_BLOCK_0 --> must appear exactly once",
+      })
+  })
+
+  test("spans are checked once restored, and a lost one names its tag", () => {
+    const spans = ["`transfer()`", "`amount`"]
+    const tags =
+      "Llama a <HTML-PLACEHOLDER-CODE-0 /> con <HTML-PLACEHOLDER-CODE-1 />.\n\n<!-- CODE_BLOCK_0 -->\n"
+    expect(sectionCodeLoss(sent, tags, spans)).toBeNull()
+    expect(
+      sectionCodeLoss(
+        sent,
+        tags.replace("<HTML-PLACEHOLDER-CODE-0 />", "transferir"),
+        spans
+      )
+    ).toEqual({
+      markers: 0,
+      spans: 1,
+      detail: "missing <HTML-PLACEHOLDER-CODE-0 /> (`transfer()`)",
+    })
+  })
+
+  test("a leftover placeholder tag ranks with a lost fence marker", () => {
+    const spans = ["`transfer()`", "`amount`"]
+    const tail = "\n\n<!-- CODE_BLOCK_0 -->\n"
+    const unknown = `Llama a <HTML-PLACEHOLDER-CODE-0 /> con <HTML-PLACEHOLDER-CODE-1 /> y <HTML-PLACEHOLDER-CODE-2 />.${tail}`
+    const wrapped = `Llama a <HTML-PLACEHOLDER-CODE-0>transferir</HTML-PLACEHOLDER-CODE-0> con <HTML-PLACEHOLDER-CODE-1 />.${tail}`
+    expect(sectionCodeLoss(sent, unknown, spans)).toMatchObject({ markers: 1 })
+    expect(sectionCodeLoss(sent, wrapped, spans)).toMatchObject({ markers: 1 })
+    // a section with no lifted code still catches a tag copied from another
+    expect(
+      sectionCodeLoss("Plain text.", "Texto <HTML-PLACEHOLDER-CODE-0 />.", [])
+    ).toMatchObject({ markers: 1, spans: 0 })
+  })
+
+  test("bare, escaped or lowercase tag text counts as leftover, as the gate sees it", () => {
+    const spans = ["`transfer()`", "`amount`"]
+    const tail = " con <HTML-PLACEHOLDER-CODE-1 />.\n\n<!-- CODE_BLOCK_0 -->\n"
+    for (const tag of [
+      "HTML-PLACEHOLDER-CODE-0",
+      "&lt;HTML-PLACEHOLDER-CODE-0 /&gt;",
+      "<html-placeholder-code-7 />",
+    ])
+      expect(
+        sectionCodeLoss(sent, `Llama a ${tag}${tail}`, spans)
+      ).toMatchObject({ markers: 1 })
+  })
+
+  test("one tag written for two identical spans is no loss", () => {
+    expect(
+      sectionCodeLoss(
+        "Pay `fee` and `fee`.",
+        "Zahle <HTML-PLACEHOLDER-CODE-0 /> und <HTML-PLACEHOLDER-CODE-0 />.",
+        ["`fee`", "`fee`"]
+      )
+    ).toBeNull()
+  })
+
+  test("a tag written more often than its identical spans is a loss", () => {
+    expect(
+      sectionCodeLoss(
+        "Pay `fee` and `fee`.",
+        "Zahle <HTML-PLACEHOLDER-CODE-0 />, <HTML-PLACEHOLDER-CODE-0 /> und <HTML-PLACEHOLDER-CODE-0 />.",
+        ["`fee`", "`fee`"]
+      )
+    ).toMatchObject({
+      spans: 1,
+      detail: expect.stringContaining("sent 1 extra time(s)"),
+    })
+  })
+
+  test("a translated or sample tag name still counts as leftover", () => {
+    for (const tag of [
+      "<HTML-PLACEHOLDER-CÓDIGO-0 />",
+      "<HTML-PLACEHOLDER-CODE-n />",
+      "<HTML-PLACEHOLDER-CODE-****** />",
+    ])
+      expect(
+        sectionCodeLoss("Pay `fee`.", `Zahle ${tag}.`, ["`fee`"])
+      ).toMatchObject({ markers: 1 })
+  })
+
+  test("a lifted tag sent once but repeated is a loss", () => {
+    const spans = ["`transfer()`", "`amount`"]
+    expect(
+      sectionCodeLoss(
+        sent,
+        "Llama a <HTML-PLACEHOLDER-CODE-0 /> con <HTML-PLACEHOLDER-CODE-1 /> o <HTML-PLACEHOLDER-CODE-1 />.\n\n<!-- CODE_BLOCK_0 -->\n",
+        spans
+      )
+    ).toEqual({
+      markers: 0,
+      spans: 1,
+      detail:
+        "<HTML-PLACEHOLDER-CODE-1 /> (`amount`) sent 1 extra time(s), not in the English `amount`",
+    })
+  })
+
+  test("a new section's heading code counts, as it was sent", () => {
+    expect(
+      sectionCodeLoss(
+        "## The `owner` field {#new}\n\nSet `owner` once.",
+        "## El campo `owner` {#new}\n\nFija `owner` una vez."
+      )
+    ).toBeNull()
+  })
+})
+
+test.describe("buildIncrementalPrompt -- glossary and locale notes", () => {
+  const prompt = (
+    targetLanguage: string,
+    content: string,
+    contextContent = "Texto existente."
+  ) =>
+    buildIncrementalPrompt({
+      filePath: "src/intl/en/page-start.json",
+      fileType: "json",
+      targetLanguage,
+      languageName: targetLanguage,
+      sections: [
+        { id: "a", action: "TRANSLATE" as const, content },
+        { id: "b", action: "CONTEXT" as const, content: contextContent },
+      ],
+      glossaryTerms: new Map([
+        ["layer 1 (L1)", "capa 1 (l1)"],
+        ["staking", "staking"],
+        ["smart contract", "contrato inteligente"],
+      ]),
+    })
+
+  test("carries only the glossary terms the TRANSLATE sections use", () => {
+    const p = prompt("es", "Compare L1 alternatives.", "smart contract")
+    // An abbreviation alone matches a "long form (ABBR)" entry, as ETHGlossary does
+    expect(p).toContain('"layer 1 (L1)" ->')
+    expect(p).not.toContain('"staking" ->')
+    // CONTEXT is the existing translation, never a reason to add a term
+    expect(p).not.toContain('"smart contract" ->')
+  })
+
+  test("matches glossary terms across hyphen and space variants", () => {
+    const p = buildIncrementalPrompt({
+      filePath: "x.md",
+      fileType: "markdown",
+      targetLanguage: "es",
+      languageName: "Spanish",
+      sections: [
+        {
+          id: "a",
+          action: "TRANSLATE" as const,
+          content: "Ethereum uses proof of stake.",
+        },
+      ],
+      glossaryTerms: new Map([
+        ["proof-of-stake (PoS)", "prueba de participación (PoS)"],
+      ]),
+    })
+    expect(p).toContain('"proof-of-stake (PoS)" ->')
+  })
+
+  test("matches a phrase split by link markup", () => {
+    const p = buildIncrementalPrompt({
+      filePath: "x.md",
+      fileType: "markdown",
+      targetLanguage: "es",
+      languageName: "Spanish",
+      sections: [
+        {
+          id: "a",
+          action: "TRANSLATE" as const,
+          content: "[Ethereum](/) Mainnet",
+        },
+      ],
+      glossaryTerms: new Map([
+        ["Ethereum Mainnet", "Red principal de Ethereum"],
+      ]),
+    })
+    expect(p).toContain('"Ethereum Mainnet" ->')
+  })
+
+  test("matches separator-free and stemmed forms", () => {
+    const p = prompt("fr", "Voting off-chain with calldata.")
+    expect(p).not.toContain('"staking" ->')
+    const forms = buildIncrementalPrompt({
+      filePath: "x.json",
+      fileType: "json",
+      targetLanguage: "fr",
+      languageName: "French",
+      sections: [
+        {
+          id: "a",
+          action: "TRANSLATE" as const,
+          content: "Voting off-chain with calldata.",
+        },
+      ],
+      glossaryTerms: new Map([
+        ["vote", "vote"],
+        ["offchain", "hors chaîne"],
+        ["call data", "données d'appel"],
+      ]),
+    })
+    expect(forms).toContain('"vote" ->')
+    expect(forms).toContain('"offchain" ->')
+    expect(forms).toContain('"call data" ->')
+  })
+
+  test("a term the file glossary could not place rides in every prompt", () => {
+    const glossary = new FileGlossary([
+      ["zero-knowledge proof", "preuve à divulgation nulle de connaissance"],
+      ["staking", "staking"],
+    ]).attribute("ZK proofs and staking", "markdown")
+    const p = buildIncrementalPrompt({
+      filePath: "x.json",
+      fileType: "json",
+      targetLanguage: "fr",
+      languageName: "French",
+      sections: [{ id: "a", action: "TRANSLATE" as const, content: "Hello" }],
+      glossaryTerms: glossary,
+    })
+    expect(p).toContain('"zero-knowledge proof" ->')
+    expect(p).not.toContain('"staking" ->')
+  })
+
+  test("a term /filter counted more often than local forms rides everywhere", () => {
+    // zk-rollups/index.md: one "zero-knowledge rollups" heading, ~95 "ZK-rollups"
+    const file =
+      "What are zero-knowledge rollups? ZK-rollups batch. ZK-rollups prove."
+    const glossary = new FileGlossary([
+      ["zero-knowledge rollup", "rollup à divulgation nulle de connaissance"],
+    ]).attribute(file, "markdown", new Map([["zero-knowledge rollup", 3]]))
+    expect(glossary.unattributed.has("zero-knowledge rollup")).toBe(true)
+    const placed = new FileGlossary([
+      ["zero-knowledge rollup", "rollup à divulgation nulle de connaissance"],
+    ]).attribute(file, "markdown", new Map([["zero-knowledge rollup", 1]]))
+    expect(placed.unattributed.size).toBe(0)
+  })
+
+  test("tells the model to keep a bare abbreviation bare, in English case", () => {
+    const p = prompt("es", "Compare L1 alternatives.")
+    expect(p).toContain("never expand it")
+    expect(p).toContain("never l1, l2")
+  })
+
+  test("vi gets the 'Get' is not 'download' note; other locales do not", () => {
+    expect(prompt("vi", "Get a wallet")).toContain('Never "Tải"')
+    expect(prompt("es", "Get a wallet")).not.toContain("Tải")
   })
 })

@@ -17,13 +17,13 @@ Słyszałeś więc o tym całym Ethereum i jesteś gotów wskoczyć do królicze
 
 ## (Miękkie) wymagania wstępne {#soft-prerequisites}
 
-Ten artykuł ma być przystępny dla szerokiego grona programistów. Wykorzystane zostaną [narzędzia Pythona](/developers/docs/programming-languages/python/), ale są one tylko nośnikiem pomysłów – nie ma problemu, jeśli nie jesteś programistą Pythona. Poczynię jednak kilka założeń dotyczących tego, co już wiesz, abyśmy mogli szybko przejść do kwestii specyficznych dla Ethereum.
+Ten artykuł ma być przystępny dla szerokiego grona programistów. Będziemy korzystać z [narzędzi Pythona](/developers/docs/programming-languages/python/), ale są one tylko nośnikiem pomysłów – nie ma problemu, jeśli nie jesteś programistą Pythona. Poczynię jednak kilka założeń dotyczących tego, co już wiesz, abyśmy mogli szybko przejść do kwestii specyficznych dla Ethereum.
 
 Założenia:
 
 - Potrafisz poruszać się w terminalu,
 - Napisałeś kilka linijek kodu w Pythonie,
-- Masz zainstalowanego Pythona w wersji 3.6 lub nowszej (zdecydowanie zaleca się korzystanie ze [środowiska wirtualnego](https://realpython.com/effective-python-environment/#virtual-environments)), oraz
+- Na twoim komputerze jest zainstalowany Python w wersji 3.10 lub nowszej (zdecydowanie zaleca się korzystanie ze [środowiska wirtualnego](https://realpython.com/effective-python-environment/#virtual-environments)), oraz
 - używałeś `pip`, instalatora pakietów Pythona.
   Ponownie, jeśli którekolwiek z tych założeń nie jest prawdziwe lub nie planujesz odtwarzać kodu z tego artykułu, prawdopodobnie i tak bez problemu nadążysz za materiałem.
 
@@ -79,11 +79,11 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 ## Instalacja {#installation}
 
-W tym przewodniku będziemy pracować tylko w interpreterze Pythona. Nie będziemy tworzyć żadnych katalogów, plików, klas ani funkcji.
+W tym przewodniku będziemy pracować wyłącznie w interpreterze Pythona. Nie będziemy tworzyć żadnych katalogów, plików, klas ani funkcji.
 
 <FeaturedText>Uwaga: W poniższych przykładach polecenia zaczynające się od `$` są przeznaczone do uruchomienia w terminalu. (Nie wpisuj `$`, oznacza to tylko początek wiersza).</FeaturedText>
 
-Najpierw zainstaluj [IPython](https://ipython.org/), aby uzyskać przyjazne dla użytkownika środowisko do eksploracji. IPython oferuje między innymi uzupełnianie po wciśnięciu klawisza Tab, co znacznie ułatwia sprawdzenie, co jest możliwe w Web3.py.
+Najpierw zainstaluj [IPython](https://ipython.org/), aby uzyskać przyjazne dla użytkownika środowisko do eksploracji. IPython oferuje między innymi uzupełnianie po naciśnięciu klawisza Tab, co znacznie ułatwia sprawdzenie, co jest możliwe w Web3.py.
 
 ```bash
 pip install ipython
@@ -101,9 +101,7 @@ Jeszcze jedno – później będziemy symulować blockchain, co wymaga kilku dod
 pip install 'web3[tester]'
 ```
 
-Wszystko gotowe!
-
-Uwaga: Pakiet `web3[tester]` działa do wersji Pythona 3.10.xx
+Wszystko gotowe do startu!
 
 ## Uruchomienie piaskownicy {#spin-up-a-sandbox}
 
@@ -142,7 +140,7 @@ Podobny wzorzec jest używany podczas obsługi transakcji w <b>etherze</b>. Jedn
 
 </FeaturedText>
 
-Spróbuj przekonwertować niektóre wartości na i z wei. Zauważ, że [istnieją nazwy dla wielu nominałów](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) pomiędzy etherem a wei. Jednym z lepiej znanych jest **gwei**, ponieważ często w ten sposób reprezentowane są opłaty transakcyjne.
+Spróbuj przeliczyć kilka wartości na i z wei. Zauważ, że [istnieją nazwy dla wielu nominałów](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) pomiędzy etherem a wei. Jednym z lepiej znanych jest **gwei**, ponieważ często w ten sposób reprezentowane są opłaty transakcyjne.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -152,7 +150,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Inne metody narzędziowe w module Web3 obejmują konwertery formatów danych (np. [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), funkcje pomocnicze dla adresów (np. [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) oraz funkcje hashujące (np. [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Wiele z nich zostanie omówionych w dalszej części serii. Aby wyświetlić wszystkie dostępne metody i właściwości, skorzystaj z autouzupełniania IPythona, wpisując `Web3`. i naciskając dwukrotnie klawisz Tab po kropce.
+Inne metody narzędziowe w module Web3 obejmują konwertery formatów danych (np. [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), funkcje pomocnicze dla adresów (np. [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)) oraz funkcje hashujące (np. [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Wiele z nich zostanie omówionych w dalszej części serii. Aby wyświetlić wszystkie dostępne metody i właściwości, skorzystaj z autouzupełniania IPythona, wpisując `Web3`. i naciskając dwukrotnie klawisz Tab po kropce.
 
 ## Rozmowa z łańcuchem {#talk-to-the-chain}
 
@@ -172,7 +170,7 @@ Chociaż jest to jeden z „prawdziwych” sposobów, proces synchronizacji trwa
 
 _EthereumTesterProvider łączy się z symulowanym węzłem i jest przydatny w szybkich środowiskach programistycznych._
 
-Ten symulowany węzeł nazywa się [eth-tester](https://github.com/ethereum/eth-tester) i zainstalowaliśmy go jako część polecenia `pip install web3[tester]`. Skonfigurowanie Web3.py do korzystania z tego dostawcy testowego jest tak proste, jak:
+Ten symulowany węzeł nazywa się [eth-tester](https://github.com/ApeWorX/eth-tester) i zainstalowaliśmy go jako część polecenia `pip install web3[tester]`. Skonfigurowanie Web3.py do korzystania z tego dostawcy testowego jest tak proste, jak:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -294,10 +292,10 @@ Out[13]: 1000003000000000000000000
 
 To drugie wygląda dobrze! Saldo wzrosło z 1 000 000 do 1 000 003 etherów. Ale co stało się z pierwszym kontem? Wygląda na to, że straciło nieco więcej niż trzy ethery. Niestety, w życiu nie ma nic za darmo, a korzystanie z publicznej sieci Ethereum wymaga zrekompensowania innym węzłom ich roli wspierającej. Z konta, które przesłało transakcję, potrącono niewielką opłatę transakcyjną - opłata ta to ilość spalonego gazu (21000 jednostek gazu za transfer ETH) pomnożona przez opłatę podstawową, która różni się w zależności od aktywności sieci, plus opłata priorytetowa, która trafia do walidatora włączającego transakcję do bloku.
 
-Więcej o [gazie](/developers/docs/gas/#post-london)
+Więcej o [gazie](/developers/docs/gas/)
 
 <FeaturedText>Uwaga: W sieci publicznej opłaty transakcyjne są zmienne w zależności od zapotrzebowania sieci i tego, jak szybko chcesz, aby transakcja została przetworzona. Jeśli interesuje cię zestawienie sposobu obliczania opłat, zapoznaj się z moim wcześniejszym artykułem na temat tego, <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">jak transakcje są włączane do bloku</a>.</FeaturedText>
 
 ## I odetchnij {#and-breathe}
 
-Zajmujemy się tym już od jakiegoś czasu, więc wydaje się to równie dobrym miejscem na przerwę, jak każde inne. Królicza nora ciągnie się dalej, a my będziemy kontynuować eksplorację w drugiej części tej serii. Niektóre z nadchodzących koncepcji: łączenie się z prawdziwym węzłem, inteligentne kontrakty i tokeny. Masz dodatkowe pytania? Daj mi znać! Twoja opinia wpłynie na to, w jakim kierunku pójdziemy dalej. Prośby mile widziane za pośrednictwem [Twittera](https://twitter.com/wolovim).
+Zajmujemy się tym już od jakiegoś czasu, więc wydaje się to równie dobrym miejscem na przerwę, jak każde inne. Królicza nora ciągnie się dalej, a my będziemy kontynuować eksplorację w drugiej części tej serii. Niektóre z nadchodzących koncepcji: łączenie się z prawdziwym węzłem, inteligentne kontrakty i tokeny. Masz dodatkowe pytania? Daj mi znać! Twoja opinia wpłynie na to, w jakim kierunku pójdziemy dalej. Prośby mile widziane za pośrednictwem [Twittera](https://x.com/wolovim).

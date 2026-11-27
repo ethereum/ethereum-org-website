@@ -171,16 +171,15 @@ Katika programu tumizi iliyogatuliwa (dapp), mkoba wa mtumiaji (kama MetaMask, R
 
 ## Mafunzo yanayohusiana {#related-tutorials}
 
-- [Kuita mkataba mahiri kutoka kwenye JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
-- [Kutuma miamala kwa kutumia web3.js na Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Kutuma miamala kwa kutumia Web3.js na Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Jinsi ya kutazama NFT yako kwenye mkoba wako](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## Usomaji zaidi {#further-reading}
 
 - [Nyaraka za Viem: Kusoma na kuandika kwenye mikataba](https://viem.sh/docs/contract/readContract)
-- [Nyaraka za ethers.js: Mikataba](https://docs.ethers.org/v6/api/contract/)
+- [Nyaraka za Ethers.js: Mikataba](https://docs.ethers.org/v6/api/contract/)
 - [Uainishaji wa ABI ya Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [ABI ni nini? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [Je, ABI za mkataba mahiri zinafanyaje kazi? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Mada zinazohusiana {#related-topics}
 

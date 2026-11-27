@@ -176,6 +176,7 @@ print("Addr Balance:", addr_balance)
 - [Alchemy - Solidity ERC-20 代币指南](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## 其他同质化代币标准 {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -183,7 +184,6 @@ print("Addr Balance:", addr_balance)
 - [ERC-7540 - 异步代币化金库](/developers/docs/standards/tokens/erc-7540)
 ## 教程：在以太坊上使用 ERC-20 进行构建 {#tutorials}
 
-- [ERC-20 合约演练](/developers/tutorials/erc20-annotated-code/) _– 欧本齐柏林 ERC-20 合约实现的逐行注释演练。_
-- [带有安全护栏的 ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– 如何为 ERC-20 代币添加安全防护，以帮助用户避免常见错误。_
-- [使用 Ethers.js 发送代币](/developers/tutorials/send-token-ethersjs/) _– 使用 Ethers.js 转账 ERC-20 代币的初学者友好指南。_
+- [ERC-20 合约演练](/developers/tutorials/erc20-annotated-code/) _– 逐行注释的欧本齐柏林 ERC-20 合约实现演练。_
+- [带有安全护栏的 ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– 如何为 ERC-20 代币添加安全保障，以帮助用户避免常见错误。_
 - [诈骗代币使用的一些伎俩以及如何检测它们](/developers/tutorials/scam-token-tricks/) _– 深入探讨诈骗 ERC-20 代币模式以及如何识别它们。_

@@ -1,6 +1,6 @@
 ---
-title: Ethereum-Sicherheit und Betrugsprävention
-description: Sicher bleiben auf Ethereum
+title: "Ethereum-Sicherheit und Betrugsprävention"
+description: "So bleiben Sie auf Ethereum sicher: Schützen Sie Ihre Wallet und Wiederherstellungsphrase, erkennen Sie häufige Krypto-Betrugsmaschen und Phishing und erfahren Sie, was zu tun ist, wenn etwas schiefgeht."
 lang: de
 ---
 

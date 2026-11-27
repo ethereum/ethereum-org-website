@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/apis/javascript/index.md",
-  "generatedAt": "2026-07-22T22:44:22.195Z",
-  "rootHash": "b64e56002be3",
+  "generatedAt": "2026-11-27T10:03:38.125Z",
+  "rootHash": "541faf012538",
   "tree": {
-    "contentHash": "81512087147d",
-    "anchorHash": "fc6d9fc96e7d",
+    "contentHash": "4a1604435727",
+    "anchorHash": "f203f3771f14",
     "children": {
       "frontmatter:title": {
         "contentHash": "e0b3e7eb7935",
@@ -849,52 +849,32 @@
         ]
       },
       "related-tutorials": {
-        "contentHash": "eb203afaf03c",
-        "anchorHash": "182ecda7c6c7",
+        "contentHash": "c6f489f739e8",
+        "anchorHash": "62f21a93192e",
         "labelHash": "7f2933b822cc",
         "children": {
           "_label": {
             "contentHash": "7f2933b822cc",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:3": {
+          "prose:1": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "1b8dda4a10f3",
-            "anchorHash": "8d1c6523ecdc"
-          },
-          "prose:4": {
-            "contentHash": "88c5423754c5",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:1": {
-            "contentHash": "613479e69683",
-            "anchorHash": "d511688e127f"
-          },
-          "prose:5": {
-            "contentHash": "75787dd5616c",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:2": {
             "contentHash": "4e0b93c2eba5",
             "anchorHash": "a04fc4065212"
           },
-          "prose:6": {
+          "prose:2": {
             "contentHash": "88f53571d5c6",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:3",
+          "prose:1",
           "link:0",
-          "prose:4",
-          "link:1",
-          "prose:5",
-          "link:2",
-          "prose:6"
+          "prose:2"
         ]
       },
       "tutorials": {
@@ -950,5 +930,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

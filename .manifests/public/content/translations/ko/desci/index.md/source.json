@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "public/content/desci/index.md",
-  "generatedAt": "2026-06-16T21:47:06.061Z",
-  "rootHash": "7c76cb757954",
+  "generatedAt": "2026-11-27T09:58:41.062Z",
+  "rootHash": "47cfcefdad7d",
   "tree": {
-    "contentHash": "d7700189bf0b",
+    "contentHash": "7b966bebbbf5",
     "anchorHash": "482cb8bf0c6b",
     "children": {
       "frontmatter:title": {
@@ -12,7 +12,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "c22c7bae69ce",
+        "contentHash": "5b6f81fb0c8e",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -891,5 +891,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

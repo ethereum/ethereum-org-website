@@ -29,7 +29,7 @@ export const generated = {
       },
     ],
     eips: [],
-    sourceUrl: "https://forkcast.org/upgrade/the-merge",
+    sourceUrl: null,
   },
   shapella: {
     slug: "shapella",
@@ -55,7 +55,7 @@ export const generated = {
       },
     ],
     eips: [],
-    sourceUrl: "https://forkcast.org/upgrade/shapella",
+    sourceUrl: null,
   },
   dencun: {
     slug: "dencun",
@@ -88,7 +88,7 @@ export const generated = {
         decidedAt: null,
       },
     ],
-    sourceUrl: "https://forkcast.org/upgrade/dencun",
+    sourceUrl: null,
   },
   pectra: {
     slug: "pectra",
@@ -329,10 +329,7 @@ export const generated = {
     name: "Glamsterdam",
     status: "upcoming",
     mainnetTarget: {
-      when: {
-        year: 2026,
-        quarter: 4,
-      },
+      when: null,
       confirmed: false,
     },
     milestones: [
@@ -464,30 +461,21 @@ export const generated = {
           month: 10,
           day: 6,
         },
-        status: "confirmed",
-      },
-      {
-        kind: "testnet",
-        network: "Hoodi",
-        when: {
-          year: 2026,
-          month: 10,
-          day: 27,
-        },
-        status: "anticipated",
-      },
-      {
-        kind: "mainnet",
-        when: {
-          year: 2026,
-          quarter: 4,
-        },
-        status: "projected",
+        status: "complete",
       },
     ],
     eips: [
       {
         id: 2780,
+        status: "scheduled",
+        networking: false,
+        decidedAt: {
+          call: null,
+          date: "2026-08-04",
+        },
+      },
+      {
+        id: 7495,
         status: "scheduled",
         networking: false,
         decidedAt: {
@@ -535,6 +523,15 @@ export const generated = {
         decidedAt: {
           call: "acde/236",
           date: "2026-05-07",
+        },
+      },
+      {
+        id: 7916,
+        status: "scheduled",
+        networking: false,
+        decidedAt: {
+          call: null,
+          date: "2026-08-04",
         },
       },
       {
@@ -723,12 +720,39 @@ export const generated = {
         },
       },
       {
+        id: 4758,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
+        id: 5920,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
         id: 7668,
         status: "considered",
         networking: false,
         decidedAt: {
           call: "acde/246",
           date: "2026-09-24",
+        },
+      },
+      {
+        id: 7709,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
         },
       },
       {
@@ -760,11 +784,29 @@ export const generated = {
       },
       {
         id: 8015,
+        status: "scheduled",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
+        },
+      },
+      {
+        id: 8077,
         status: "considered",
         networking: false,
         decidedAt: {
-          call: "acdc/187",
-          date: "2026-09-17",
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
+        id: 8116,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
         },
       },
       {
@@ -786,21 +828,30 @@ export const generated = {
         },
       },
       {
+        id: 8148,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
+        },
+      },
+      {
+        id: 8151,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
         id: 8163,
         status: "considered",
         networking: false,
         decidedAt: {
           call: "acde/246",
           date: "2026-09-24",
-        },
-      },
-      {
-        id: 8198,
-        status: "considered",
-        networking: false,
-        decidedAt: {
-          call: "acdc/188",
-          date: "2026-10-01",
         },
       },
       {
@@ -840,12 +891,57 @@ export const generated = {
         },
       },
       {
+        id: 8298,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
+        id: 8334,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
+        },
+      },
+      {
+        id: 8360,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acde/247",
+          date: "2026-10-08",
+        },
+      },
+      {
         id: 8365,
         status: "considered",
         networking: false,
         decidedAt: {
           call: "acdc/188",
           date: "2026-10-01",
+        },
+      },
+      {
+        id: 8383,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
+        },
+      },
+      {
+        id: 8411,
+        status: "considered",
+        networking: false,
+        decidedAt: {
+          call: "acdc/190",
+          date: "2026-10-29",
         },
       },
     ],

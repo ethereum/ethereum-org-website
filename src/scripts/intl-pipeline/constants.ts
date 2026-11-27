@@ -48,10 +48,10 @@ export const OUTPUT_RATE_USD_PER_1M = 12.0
 // wrong". Override with INTL_MAX_COST_USD.
 export const RUN_FUSE_USD = Number(process.env.INTL_MAX_COST_USD || 100)
 
-// Thinking tokens billed as output on every call, roughly constant whatever the
-// prompt size. Measured across 24 locales on run 31745 (Gemini 3.1 Pro via
-// OpenRouter). Used by the estimator and by the in-flight reservation.
-export const REASONING_TOKENS_PER_CALL = 5_200
+// Reasoning tokens (billed as output) per call = BASE + PER_OUTPUT_TOKEN x
+// visible output tokens; fit in runbooks/cost-guard-tripped.md.
+export const REASONING_BASE_TOKENS = 500
+export const REASONING_PER_OUTPUT_TOKEN = 2.25
 
 // Deterministic-failure quarantine: pairs that failed the same way against the
 // same English are skipped for a while instead of retried every run. Lives
@@ -73,6 +73,15 @@ export const MIN_CONTENT_BUDGET_BYTES = 4_096
 // (MAX_CONTEXT_BYTES) plus <SECTION> envelopes, rules and glossary. Measured
 // worst case on learn-quizzes.json is 49KB, so this leaves ~30% headroom.
 export const MAX_PROMPT_BYTES = 65_536
+
+// Headroom kept inside MAX_PROMPT_BYTES for the re-parse note (see
+// translateBatchWithParseRetry): a batch planned flush against the ceiling
+// could not be re-sent, and the refusal would mask the parse error.
+export const RETRY_NOTE_RESERVE_BYTES = 1_024
+
+// What the planner targets, so every batch it emits leaves room for that note.
+export const MAX_PLANNED_PROMPT_BYTES =
+  MAX_PROMPT_BYTES - RETRY_NOTE_RESERVE_BYTES
 
 // Maximum recursion depth when splitting a failed batch into sub-batches.
 // On retry exhaustion (validation failure or timeout), translateJsonFile

@@ -7,7 +7,7 @@ alt: "Ethereum roadmap"
 template: roadmap
 ---
 
-Ethereum is scaled using [layer 2s](/layer-2/#rollups) (also known as rollups), which batch transactions together and send the output to Ethereum. Even though rollups are up to eight times less expensive than Ethereum Mainnet, it's possible to optimize rollups further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
+Ethereum is scaled using [layer 2s](/layer-2/learn/#how-does-layer-2-work) (also known as rollups), which batch transactions together and send the output to Ethereum. Even though rollups are up to eight times less expensive than Ethereum Mainnet, it's possible to optimize rollups further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
 
 <Alert variant="update">
 <AlertContent>
@@ -43,9 +43,15 @@ This second step is known as ["Danksharding"](/roadmap/danksharding/). Implement
 
 ## Decentralizing rollups {#decentralizing-rollups}
 
-[Rollups](/layer-2) are already scaling Ethereum. A [rich ecosystem of rollup projects](https://l2beat.com/scaling/tvs) is enabling users to transact quickly and cheaply, with a range of security guarantees. However, rollups have been bootstrapped using centralized sequencers (computers that do all the transaction processing and aggregation before submitting them to Ethereum). This is vulnerable to censorship, because the sequencer operators can be sanctioned, bribed or otherwise compromised. At the same time, [rollups vary](https://l2beat.com/scaling/summary) in the way they validate incoming data. The best way is for "provers" to submit [fraud proofs](/glossary/#fraud-proof) or validity proofs, but not all rollups are there yet. Even those rollups that do use validity/fraud proofs use a small pool of known provers. Therefore, the next critical step in scaling Ethereum is to distribute responsibility for running sequencers and provers across more people.
+[Rollups](/layer-2) are already scaling Ethereum. A [rich ecosystem of rollup projects](https://ethbeat.org/layer2s/tvs) is enabling users to transact quickly and cheaply, with a range of security guarantees. However, rollups have been bootstrapped using centralized sequencers (computers that do all the transaction processing and aggregation before submitting them to Ethereum). This is vulnerable to censorship, because the sequencer operators can be sanctioned, bribed or otherwise compromised. At the same time, [rollups vary](https://ethbeat.org/layer2s/summary) in the way they validate incoming data. The best way is for "provers" to submit [fraud proofs](/glossary/#fraud-proof) or validity proofs, but not all rollups are there yet. Even those rollups that do use validity/fraud proofs use a small pool of known provers. Therefore, the next critical step in scaling Ethereum is to distribute responsibility for running sequencers and provers across more people.
 
 <ButtonLink variant="outline" href="/developers/docs/scaling/">More on rollups</ButtonLink>
+
+## Scaling Ethereum Mainnet with zkEVMs {#zkevm}
+
+Rollups are not the only path to scale. Today every [validator](/glossary/#validator) re-executes every transaction in every block, which limits how much Ethereum Mainnet can process without raising hardware requirements. With a zkEVM, a single prover executes the block and generates a [zero-knowledge proof](/zero-knowledge-proofs/) that the execution was correct, and validators check that proof instead. Checking a proof is far cheaper than re-executing, so Mainnet can process more transactions without pushing validators onto expensive hardware.
+
+<ButtonLink variant="outline" href="/roadmap/zkevm/">More on zkEVM</ButtonLink>
 
 ## Current progress {#current-progress}
 

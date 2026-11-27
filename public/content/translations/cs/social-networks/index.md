@@ -1,6 +1,6 @@
 ---
 title: "Decentralizované sociální sítě"
-description: "Přehled decentralizovaných sociálních sítí na Ethereu"
+description: "Co jsou decentralizované sociální sítě? Zjistěte, jak vám sociální aplikace založené na Ethereu umožňují vlastnit svou identitu, obsah a publikum místo platformy."
 lang: cs
 template: use-cases
 sidebarDepth: 2

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/testing/index.md",
-  "generatedAt": "2026-09-23T21:57:02.731Z",
-  "rootHash": "d1d8e1739cb4",
+  "generatedAt": "2026-11-27T10:09:03.163Z",
+  "rootHash": "328c554db277",
   "tree": {
-    "contentHash": "669c001bf9d3",
-    "anchorHash": "5f8e122ee79a",
+    "contentHash": "6d223acdc04c",
+    "anchorHash": "af30b9d3b39b",
     "children": {
       "frontmatter:title": {
         "contentHash": "9163aeb9f46f",
@@ -226,7 +226,7 @@
       },
       "automated-testing-for-smart-contracts": {
         "contentHash": "172c5aa66a88",
-        "anchorHash": "a8da44f97929",
+        "anchorHash": "472f691497af",
         "labelHash": "220bf4eb197d",
         "children": {
           "_label": {
@@ -648,7 +648,7 @@
           },
           "property-based-testing-for-smart-contracts": {
             "contentHash": "026aa3d1fe6c",
-            "anchorHash": "4a59b1a7ce85",
+            "anchorHash": "def57182751d",
             "labelHash": "a618eb3b17c1",
             "children": {
               "_label": {
@@ -661,7 +661,7 @@
               },
               "static-analysis": {
                 "contentHash": "2ff693f6f3da",
-                "anchorHash": "7ad31aba06fd",
+                "anchorHash": "3ff3447771dd",
                 "labelHash": "83976383b3dc",
                 "children": {
                   "_label": {
@@ -698,7 +698,7 @@
                   },
                   "link:3": {
                     "contentHash": "09558de3ae60",
-                    "anchorHash": "238e600de146"
+                    "anchorHash": "6116874dd501"
                   },
                   "prose:8": {
                     "contentHash": "eafa169cba15",
@@ -1018,7 +1018,7 @@
       },
       "testing-vs-audits-bug-bounties": {
         "contentHash": "3b7f8a61eabf",
-        "anchorHash": "2373f586f2eb",
+        "anchorHash": "911c21bcb1ce",
         "labelHash": "ea2e85a74370",
         "children": {
           "_label": {
@@ -1031,7 +1031,7 @@
           },
           "link:0": {
             "contentHash": "e764736514f4",
-            "anchorHash": "293eca05bb2b"
+            "anchorHash": "df7f8c647e10"
           },
           "prose:4": {
             "contentHash": "6201111b83a0",
@@ -1067,7 +1067,7 @@
       },
       "testing-tools-and-libraries": {
         "contentHash": "fb3f3a55c521",
-        "anchorHash": "e26772dc5e4b",
+        "anchorHash": "65e1b8402447",
         "labelHash": "4b070843b4de",
         "children": {
           "_label": {
@@ -1185,7 +1185,7 @@
           },
           "property-based-testing-tools": {
             "contentHash": "984b601ff2c2",
-            "anchorHash": "d210ca95b8e1",
+            "anchorHash": "71e468bdad72",
             "labelHash": "487cf6c51a04",
             "children": {
               "_label": {
@@ -1194,7 +1194,7 @@
               },
               "static-analysis-tools": {
                 "contentHash": "be7280ec0b8e",
-                "anchorHash": "ea2e34fad7ef",
+                "anchorHash": "48342cf1b817",
                 "labelHash": "cae8ee057d57",
                 "children": {
                   "_label": {
@@ -1223,7 +1223,7 @@
                   },
                   "link:2": {
                     "contentHash": "1ec9c86a318f",
-                    "anchorHash": "62fb66fb5b69"
+                    "anchorHash": "efe5ab3712d2"
                   },
                   "prose:8": {
                     "contentHash": "8d7170692213",
@@ -1345,15 +1345,15 @@
         ]
       },
       "related-tutorials": {
-        "contentHash": "d9b1c9ec2e02",
-        "anchorHash": "6ef841f1f8ac",
+        "contentHash": "59496f9b565f",
+        "anchorHash": "2cad1e01bb29",
         "labelHash": "7f2933b822cc",
         "children": {
           "_label": {
             "contentHash": "7f2933b822cc",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:6": {
+          "prose:5": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1361,7 +1361,7 @@
             "contentHash": "44a7df31a428",
             "anchorHash": "de344074f72f"
           },
-          "prose:7": {
+          "prose:6": {
             "contentHash": "102d9145f1fe",
             "anchorHash": "e3b0c44298fc"
           },
@@ -1369,53 +1369,43 @@
             "contentHash": "e2cad7fddc56",
             "anchorHash": "4b7e28d2af24"
           },
-          "prose:8": {
+          "prose:7": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
           "link:2": {
-            "contentHash": "bc6611d70ce4",
-            "anchorHash": "fb728c09e67f"
+            "contentHash": "ff7d77e592df",
+            "anchorHash": "bc36220245c1"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "5f5215a8ea21",
+            "anchorHash": "d4c23e4d15c4"
           },
           "prose:9": {
             "contentHash": "3973e022e932",
             "anchorHash": "e3b0c44298fc"
           },
-          "link:3": {
-            "contentHash": "ff7d77e592df",
-            "anchorHash": "bc36220245c1"
-          },
-          "prose:10": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
           "link:4": {
-            "contentHash": "5f5215a8ea21",
-            "anchorHash": "d4c23e4d15c4"
-          },
-          "prose:11": {
-            "contentHash": "3973e022e932",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:5": {
             "contentHash": "3dea0ef98383",
             "anchorHash": "e49ff9d5fc9b"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:6",
+          "prose:5",
           "link:0",
-          "prose:7",
+          "prose:6",
           "link:1",
-          "prose:8",
+          "prose:7",
           "link:2",
-          "prose:9",
+          "prose:8",
           "link:3",
-          "prose:10",
-          "link:4",
-          "prose:11",
-          "link:5"
+          "prose:9",
+          "link:4"
         ]
       },
       "further-reading": {
@@ -1546,5 +1536,5 @@
       "tutorials"
     ]
   },
-  "sourceCommitSha": "f97a8c8126d8828c2b51a37ec411c198a5ab31b5"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

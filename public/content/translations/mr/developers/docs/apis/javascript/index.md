@@ -300,9 +300,7 @@ _तुम्हाला मदत केलेल्या एखाद्य�
 
 ## संबंधित ट्युटोरियल्स {#related-tutorials}
 
-- [JavaScript मध्ये इथेरियम ब्लॉकचेन वापरण्यासाठी Web3js सेट अप करा](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– तुमच्या प्रोजेक्टमध्ये web3.js सेट अप करण्यासाठी सूचना._
-- [JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट कॉल करणे](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI टोकन वापरून, JavaScript वापरून कॉन्ट्रॅक्ट्स फंक्शन कसे कॉल करायचे ते पहा._
-- [web3 आणि Alchemy वापरून व्यवहार पाठवणे](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– बॅकएंडवरून व्यवहार पाठवण्यासाठी टप्प्याटप्प्याने मार्गदर्शन._
+- [Web3 आणि Alchemy वापरून व्यवहार पाठवणे](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– बॅकएंडवरून व्यवहार पाठवण्यासाठी टप्प्याटप्प्याने मार्गदर्शन._
 
 ## ट्युटोरियल्स: इथेरियमवरील JavaScript APIs आणि WebSockets {#tutorials}
 

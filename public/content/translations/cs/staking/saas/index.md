@@ -1,6 +1,6 @@
 ---
-title: Delegovaný staking (staking jako služba)
-description: Přehled toho, jak začít s delegovaným stakingem
+title: "Delegovaný staking (staking jako služba)"
+description: "Co je staking jako služba? Zjistěte, jak vložit 32 ETH, zatímco provozovatel uzlu zajišťuje chod vašeho validátoru, a jaké jsou kompromisy ve srovnání s domácím nebo společným stakingem."
 lang: cs
 template: staking
 image: /images/staking/leslie-saas.png

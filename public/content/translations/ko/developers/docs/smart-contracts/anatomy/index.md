@@ -315,7 +315,7 @@ contract Token {
 pragma solidity ^0.5.10;
 
 // 다른 파일의 심볼을 현재 컨트랙트로 가져옵니다.
-// 이 경우, OpenZeppelin의 일련의 헬퍼 컨트랙트들입니다.
+// 이 경우, OpenZeppelin의 일련의 헬퍼 컨트랙트입니다.
 // 자세히 알아보기: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -323,15 +323,15 @@ import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
 import "../node_modules/@openzeppelin/contracts/introspection/ERC165.sol";
 import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
-// `is` 키워드는 외부 컨트랙트로부터 함수와 키워드를 상속받는 데 사용됩니다.
-// 이 경우, `CryptoPizza`는 `IERC721` 및 `ERC165` 컨트랙트를 상속받습니다.
+// `is` 키워드는 외부 컨트랙트에서 함수와 키워드를 상속하는 데 사용됩니다.
+// 이 경우, `CryptoPizza`는 `IERC721` 및 `ERC165` 컨트랙트를 상속합니다.
 // 자세히 알아보기: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // 산술 연산을 안전하게 수행하기 위해 OpenZeppelin의 SafeMath 라이브러리를 사용합니다.
-    // 자세히 알아보기: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // OpenZeppelin의 SafeMath 라이브러리를 사용하여 산술 연산을 안전하게 수행합니다.
+    // 자세히 알아보기: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
-    // Solidity의 상수 상태 변수는 다른 언어와 유사하지만
+    // Solidity의 상수 상태 변수는 다른 언어와 유사하지만,
     // 컴파일 타임에 상수인 표현식에서 할당해야 합니다.
     // 자세히 알아보기: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
@@ -360,10 +360,10 @@ contract CryptoPizza is IERC721, ERC165 {
     // 매핑을 중첩할 수 있으며, 이 예제는 소유자를 운영자 승인에 매핑합니다.
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // 문자열(이름)과 DNA로부터 무작위 피자를 생성하는 내부(internal) 함수
+    // 문자열(이름)과 DNA에서 무작위 피자를 생성하는 내부 함수
     function _createPizza(string memory _name, uint256 _dna)
-        // `internal` 키워드는 이 함수가 현재 컨트랙트와
-        // 이 컨트랙트를 상속받는 컨트랙트 내에서만 접근할 수 있음을 의미합니다.
+        // `internal` 키워드는 이 함수가
+        // 이 컨트랙트 및 이 컨트랙트를 파생하는 컨트랙트 내에서만 표시됨을 의미합니다.
         // 자세히 알아보기: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
         // `isUnique`는 피자가 이미 존재하는지 확인하는 함수 제어자(modifier)입니다.
@@ -377,7 +377,7 @@ contract CryptoPizza is IERC721, ERC165 {
         // 자세히 알아보기: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // address(0)은 영(zero) 주소이며,
-        // 이는 pizza[id]가 아직 특정 사용자에게 할당되지 않았음을 나타냅니다.
+        // pizza[id]가 아직 특정 사용자에게 할당되지 않았음을 나타냅니다.
 
         assert(pizzaToOwner[id] == address(0));
 
@@ -389,21 +389,21 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // 문자열(이름)로부터 무작위 피자를 생성합니다.
+    // 문자열(이름)에서 무작위 피자를 생성합니다.
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // 문자열(이름)과 소유자(생성자)의 주소로부터 무작위 DNA를 생성합니다.
+    // 문자열(이름)과 소유자(생성자)의 주소에서 무작위 DNA를 생성합니다.
     function generateRandomDna(string memory _str, address _owner)
         public
-        // `pure`로 표시된 함수는 상태를 읽거나 수정하지 않을 것을 보장합니다.
+        // `pure`로 표시된 함수는 상태를 읽거나 수정하지 않을 것을 약속합니다.
         // 자세히 알아보기: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // 문자열(이름) + 주소(소유자)로부터 무작위 uint를 생성합니다.
+        // 문자열(이름) + 주소(소유자)에서 무작위 uint를 생성합니다.
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
@@ -413,13 +413,13 @@ contract CryptoPizza is IERC721, ERC165 {
     // 소유자가 찾은 피자 배열을 반환합니다.
     function getPizzasByOwner(address _owner)
         public
-        // `view`로 표시된 함수는 상태를 수정하지 않을 것을 보장합니다.
+        // `view`로 표시된 함수는 상태를 수정하지 않을 것을 약속합니다.
         // 자세히 알아보기: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // 이 함수 호출의 수명 주기 동안에만 값을 저장하기 위해
-        // `memory` 스토리지 위치를 사용합니다.
+        // `memory` 저장 위치를 사용하여
+        // 이 함수 호출의 수명 주기 동안에만 값을 저장합니다.
         // 자세히 알아보기: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -450,8 +450,9 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * 주어진 토큰 ID의 소유권을 다른 주소로 안전하게 전송합니다.
-     * 대상 주소가 컨트랙트인 경우, 안전한 전송 시 호출되는 `onERC721Received`를 구현해야 하며,
-     * 매직 값 `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`를 반환해야 합니다.
+     * 대상 주소가 컨트랙트인 경우 `onERC721Received`를 구현해야 하며,
+     * 이는 안전한 전송 시 호출되고 매직 값
+     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`를 반환해야 합니다.
      * 그렇지 않으면 전송이 되돌려집니다.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
@@ -463,8 +464,9 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * 주어진 토큰 ID의 소유권을 다른 주소로 안전하게 전송합니다.
-     * 대상 주소가 컨트랙트인 경우, 안전한 전송 시 호출되는 `onERC721Received`를 구현해야 하며,
-     * 매직 값 `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`를 반환해야 합니다.
+     * 대상 주소가 컨트랙트인 경우 `onERC721Received`를 구현해야 하며,
+     * 이는 안전한 전송 시 호출되고 매직 값
+     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`를 반환해야 합니다.
      * 그렇지 않으면 전송이 되돌려집니다.
      */
     function safeTransferFrom(
@@ -478,7 +480,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * 대상 주소에서 `onERC721Received`를 호출하는 내부 함수입니다.
+     * 대상 주소에서 `onERC721Received`를 호출하는 내부 함수
      * 대상 주소가 컨트랙트가 아닌 경우 호출이 실행되지 않습니다.
      */
     function _checkOnERC721Received(
@@ -527,7 +529,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return owner;
     }
 
-    // 피자의 소유권을 전송할 수 있도록 다른 주소를 승인합니다.
+    // 피자의 소유권을 전송하도록 다른 주소를 승인합니다.
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
@@ -545,8 +547,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * 주어진 토큰 ID의 현재 승인을 지우는 private 함수입니다.
-     * 주어진 주소가 실제로 토큰의 소유자가 아닌 경우 되돌립니다.
+     * 주어진 토큰 ID의 현재 승인을 지우는 비공개 함수
+     * 주어진 주소가 실제로 토큰의 소유자가 아닌 경우 되돌립니다(reverts)
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -566,7 +568,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // 운영자가 주어진 소유자에 의해 승인되었는지 여부를 알려줍니다.
+    // 운영자가 주어진 소유자에게 승인되었는지 여부를 알려줍니다.
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -596,14 +598,14 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // 다음 이유로 solium 검사를 비활성화합니다:
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
             this.isApprovedForAll(owner, spender));
     }
 
-    // 피자가 고유하며 아직 존재하지 않는지 확인합니다.
+    // 피자가 고유하고 아직 존재하지 않는지 확인합니다.
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -622,12 +624,12 @@ contract CryptoPizza is IERC721, ERC165 {
     // 대상 주소가 컨트랙트인지 여부를 반환합니다.
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // 현재 주소에 컨트랙트가 있는지 확인하는 더 나은 방법은
-        // 해당 주소의 코드 크기를 확인하는 것 외에는 없습니다.
-        // https://ethereum.stackexchange.com/a/14016/36603 을 참조하여
-        // 이것이 어떻게 작동하는지에 대한 자세한 내용을 확인하세요.
-        // TODO Serenity 릴리스 전에 이를 다시 확인하세요. 그때는 모든 주소가
-        // 컨트랙트가 될 것이기 때문입니다.
+        // 현재 주소에 컨트랙트가 있는지 확인하는 방법으로
+        // 해당 주소의 코드 크기를 확인하는 것보다 더 나은 방법은 없습니다.
+        // https://ethereum.stackexchange.com/a/14016/36603 에서
+        // 이것이 어떻게 작동하는지에 대한 자세한 내용을 참조하세요.
+        // TODO Serenity 릴리스 전에 이것을 다시 확인하세요. 왜냐하면 모든 주소가
+        // 그때는 컨트랙트가 될 것이기 때문입니다.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

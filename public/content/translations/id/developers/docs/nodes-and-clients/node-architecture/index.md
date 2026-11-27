@@ -6,15 +6,15 @@ lang: id
 
 Sebuah node Ethereum terdiri dari dua klien: [klien eksekusi](/developers/docs/nodes-and-clients/#execution-clients) dan [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients). Agar sebuah node dapat mengusulkan blok baru, node tersebut juga harus menjalankan [klien validator](#validators).
 
-Ketika Ethereum menggunakan [Bukti Kerja (PoW)](/developers/docs/consensus-mechanisms/pow/), klien eksekusi sudah cukup untuk menjalankan node Ethereum penuh. Namun, sejak menerapkan [Bukti Kepemilikan (PoS)](/developers/docs/consensus-mechanisms/pos/), klien eksekusi harus digunakan bersama dengan perangkat lunak lain yang disebut [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients).
+Ketika Ethereum menggunakan [Bukti Kerja](/developers/docs/consensus-mechanisms/pow/), klien eksekusi sudah cukup untuk menjalankan node Ethereum penuh. Namun, sejak menerapkan [Bukti Kepemilikan](/developers/docs/consensus-mechanisms/pos/), klien eksekusi harus digunakan bersama perangkat lunak lain yang disebut [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Diagram di bawah ini menunjukkan hubungan antara kedua klien Ethereum. Kedua klien terhubung ke jaringan peer-to-peer (P2P) mereka masing-masing. Jaringan P2P yang terpisah diperlukan karena klien eksekusi menyebarkan transaksi melalui jaringan P2P mereka, yang memungkinkan mereka untuk mengelola pool transaksi lokal mereka, sementara klien konsensus menyebarkan blok melalui jaringan P2P mereka, yang memungkinkan konsensus dan pertumbuhan rantai.
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _Ada beberapa opsi untuk klien eksekusi termasuk Erigon, Nethermind, dan Besu_.
 
-Agar struktur dua klien ini berfungsi, klien konsensus harus meneruskan bundel transaksi ke klien eksekusi. Klien eksekusi mengeksekusi transaksi secara lokal untuk memvalidasi bahwa transaksi tersebut tidak melanggar aturan Ethereum apa pun dan bahwa pembaruan yang diusulkan pada state Ethereum sudah benar. Ketika sebuah node dipilih menjadi produsen blok, instans klien konsensusnya meminta bundel transaksi dari klien eksekusi untuk disertakan dalam blok baru dan mengeksekusinya untuk memperbarui state global. Klien konsensus menggerakkan klien eksekusi melalui koneksi RPC lokal menggunakan [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Agar struktur dua klien ini berfungsi, klien konsensus harus meneruskan bundel transaksi ke klien eksekusi. Klien eksekusi mengeksekusi transaksi secara lokal untuk memvalidasi bahwa transaksi tersebut tidak melanggar aturan Ethereum apa pun dan bahwa usulan pembaruan pada state Ethereum sudah benar. Ketika sebuah node dipilih menjadi produsen blok, instans klien konsensusnya meminta bundel transaksi dari klien eksekusi untuk disertakan dalam blok baru dan mengeksekusinya untuk memperbarui state global. Klien konsensus mengendalikan klien eksekusi melalui koneksi RPC lokal menggunakan [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Apa yang dilakukan klien eksekusi? {#execution-client}
 

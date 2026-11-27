@@ -1,7 +1,7 @@
 ---
 title: "대체 불가능한 토큰 (NFT)"
 metaTitle: "NFT란 무엇인가요? | 이점 및 사용 사례"
-description: "이더리움의 NFT 개요"
+description: "NFT란 무엇인가요? 대체 불가능 토큰이 이더리움에서 디지털 예술품, 수집품, 티켓 등의 소유권을 증명하는 방법과 이를 안전하게 사용하는 방법에 대해 알아보세요."
 lang: ko
 template: use-cases
 sidebarDepth: 2

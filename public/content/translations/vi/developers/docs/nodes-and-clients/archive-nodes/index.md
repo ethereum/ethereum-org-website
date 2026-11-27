@@ -50,9 +50,9 @@ Có nhiều [dịch vụ](/developers/docs/nodes-and-clients/nodes-as-a-service/
 
 ## Các triển khai và cách sử dụng {#implementations-and-usage}
 
-Nút lưu trữ trong ngữ cảnh này có nghĩa là dữ liệu được phục vụ bởi các máy khách lớp thực thi hướng tới người dùng vì chúng xử lý cơ sở dữ liệu trạng thái và cung cấp các điểm cuối JSON-RPC. Các tùy chọn cấu hình, thời gian đồng bộ hóa và kích thước cơ sở dữ liệu có thể khác nhau tùy theo máy khách. Để biết chi tiết, vui lòng tham khảo tài liệu do máy khách của bạn cung cấp.
+Nút lưu trữ trong ngữ cảnh này có nghĩa là dữ liệu được phục vụ bởi các máy khách lớp thực thi hướng tới người dùng khi chúng xử lý cơ sở dữ liệu trạng thái và cung cấp các điểm cuối JSON-RPC. Các tùy chọn cấu hình, thời gian đồng bộ hóa và kích thước cơ sở dữ liệu có thể khác nhau tùy theo máy khách. Để biết chi tiết, vui lòng tham khảo tài liệu do máy khách của bạn cung cấp.
 
-Trước khi bắt đầu nút lưu trữ của riêng bạn, hãy tìm hiểu về sự khác biệt giữa các máy khách và đặc biệt là các [yêu cầu phần cứng](/developers/docs/nodes-and-clients/run-a-node/#requirements) khác nhau. Hầu hết các máy khách không được tối ưu hóa cho tính năng này và kho lưu trữ của chúng yêu cầu hơn 12TB không gian. Ngược lại, các triển khai như Erigon có thể lưu trữ cùng một dữ liệu trong dưới 3TB, điều này khiến chúng trở thành cách hiệu quả nhất để chạy một nút lưu trữ.
+Trước khi bắt đầu nút lưu trữ của riêng bạn, hãy tìm hiểu về sự khác biệt giữa các máy khách và đặc biệt là các [yêu cầu phần cứng](/developers/docs/nodes-and-clients/run-a-node/#requirements) khác nhau. Kích thước lưu trữ thay đổi rất nhiều tùy thuộc vào thiết kế lưu trữ của mỗi máy khách. Erigon, Reth và Geth (với kho lưu trữ dựa trên đường dẫn của nó) lưu trữ một kho lưu trữ Mạng chính trong khoảng 2-3TB, trong khi các kho lưu trữ Besu và Nethermind cần 12TB trở lên.
 
 ## Các thực tiễn được khuyến nghị {#recommended-practices}
 
@@ -61,13 +61,13 @@ Ngoài các [khuyến nghị chung cho việc chạy một nút](/developers/doc
 ### Phần cứng {#hardware}
 
 Luôn đảm bảo xác minh các yêu cầu phần cứng cho một chế độ nhất định trong tài liệu của máy khách.
-Yêu cầu lớn nhất đối với các nút lưu trữ là không gian ổ đĩa. Tùy thuộc vào máy khách, nó thay đổi từ 3TB đến 12TB. Ngay cả khi HDD có thể được coi là một giải pháp tốt hơn cho lượng dữ liệu lớn, việc đồng bộ hóa nó và liên tục cập nhật phần đầu của chuỗi sẽ yêu cầu ổ đĩa SSD. Các ổ đĩa [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) là đủ tốt nhưng nó phải có chất lượng đáng tin cậy, ít nhất là [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Các ổ đĩa có thể được lắp vào một máy tính để bàn hoặc một máy chủ có đủ khe cắm. Các thiết bị chuyên dụng như vậy là lý tưởng để chạy nút có thời gian hoạt động (uptime) cao. Hoàn toàn có thể chạy nó trên một máy tính xách tay nhưng tính di động sẽ đi kèm với một chi phí bổ sung.
+Yêu cầu lớn nhất đối với các nút lưu trữ là không gian ổ đĩa. Tùy thuộc vào máy khách, nó thay đổi từ khoảng 2TB đến hơn 12TB. Ngay cả khi HDD có thể được coi là một giải pháp tốt hơn cho lượng dữ liệu lớn, việc đồng bộ hóa nó và liên tục cập nhật phần đầu của chuỗi sẽ yêu cầu ổ đĩa SSD. Các ổ đĩa [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) là đủ tốt nhưng nó phải có chất lượng đáng tin cậy, ít nhất là [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Các ổ đĩa có thể được lắp vào một máy tính để bàn hoặc một máy chủ có đủ khe cắm. Các thiết bị chuyên dụng như vậy là lý tưởng để chạy nút có thời gian hoạt động cao. Hoàn toàn có thể chạy nó trên một máy tính xách tay nhưng tính di động sẽ đi kèm với một khoản chi phí bổ sung.
 
-Tất cả dữ liệu cần phải vừa trong một phân vùng (volume), do đó các ổ đĩa phải được ghép lại với nhau, ví dụ: bằng [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) hoặc LVM. Cũng có thể đáng cân nhắc sử dụng [ZFS](https://en.wikipedia.org/wiki/ZFS) vì nó hỗ trợ "Copy-on-write" (Sao chép khi ghi) giúp đảm bảo dữ liệu được ghi chính xác vào ổ đĩa mà không có bất kỳ lỗi cấp thấp nào.
+Tất cả dữ liệu cần phải vừa trong một phân vùng (volume), do đó các ổ đĩa phải được ghép nối, ví dụ: với [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) hoặc LVM. Cũng có thể đáng cân nhắc sử dụng [ZFS](https://en.wikipedia.org/wiki/ZFS) vì nó hỗ trợ "Copy-on-write" (Sao chép khi ghi) đảm bảo dữ liệu được ghi chính xác vào ổ đĩa mà không có bất kỳ lỗi cấp thấp nào.
 
 Để có thêm sự ổn định và bảo mật trong việc ngăn ngừa hỏng cơ sở dữ liệu do vô tình, đặc biệt là trong một thiết lập chuyên nghiệp, hãy cân nhắc sử dụng [bộ nhớ ECC](https://en.wikipedia.org/wiki/ECC_memory) nếu hệ thống của bạn hỗ trợ nó. Kích thước của RAM thường được khuyên là giống như đối với một nút đầy đủ nhưng nhiều RAM hơn có thể giúp tăng tốc độ đồng bộ hóa.
 
-Trong quá trình đồng bộ hóa ban đầu, các máy khách ở chế độ lưu trữ sẽ thực thi mọi giao dịch kể từ khối nguyên thủy. Tốc độ thực thi chủ yếu bị giới hạn bởi CPU, vì vậy một CPU nhanh hơn có thể giúp giảm thời gian đồng bộ hóa ban đầu. Trên một máy tính tiêu dùng trung bình, quá trình đồng bộ hóa ban đầu có thể mất đến một tháng.
+Trong quá trình đồng bộ hóa ban đầu, các máy khách ở chế độ lưu trữ sẽ thực thi mọi giao dịch kể từ khối nguyên thủy (genesis). Tốc độ thực thi chủ yếu bị giới hạn bởi CPU, vì vậy một CPU nhanh hơn có thể giúp giảm thời gian đồng bộ hóa ban đầu. Trên một máy tính tiêu dùng trung bình, quá trình đồng bộ hóa ban đầu có thể mất đến một tháng.
 
 ## Đọc thêm {#further-reading}
 

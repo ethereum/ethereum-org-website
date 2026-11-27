@@ -12,7 +12,7 @@ lang: de
 published: 2024-06-29
 ---
 
-Du hast eine unglaubliche neue dezentrale Anwendung (Dapp) geschrieben. Du hast sogar eine [Benutzeroberfläche](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) dafür entwickelt. Aber jetzt befürchtest du, dass jemand versuchen könnte, sie zu zensieren, indem er deine Benutzeroberfläche offline nimmt, die nur auf einem einzigen Server in der Cloud liegt. In diesem Tutorial lernst du, wie du Zensur vermeidest, indem du deine Benutzeroberfläche im **[Interplanetary File System (IPFS)](https://ipfs.tech/developers/)** bereitstellst, sodass jeder Interessierte sie für den zukünftigen Zugriff auf einem Server anpinnen (pinnen) kann.
+Du hast eine unglaubliche neue dezentrale Anwendung (Dapp) geschrieben. Du hast sogar eine [Benutzeroberfläche](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) dafür entwickelt. Aber jetzt befürchtest du, dass jemand versuchen könnte, sie zu zensieren, indem er deine Benutzeroberfläche offline nimmt, die nur auf einem einzigen Server in der Cloud liegt. In diesem Tutorial lernst du, wie du Zensur vermeidest, indem du deine Benutzeroberfläche im **[Interplanetary File System (IPFS)](https://docs.ipfs.tech/)** bereitstellst, sodass jeder Interessierte sie für den zukünftigen Zugriff auf einem Server anpinnen (pinnen) kann.
 
 Du könntest einen Drittanbieter-Dienst wie [Fleek](https://resources.fleek.xyz/docs/) nutzen, um die ganze Arbeit zu erledigen. Dieses Tutorial richtet sich an Personen, die genug selbst machen möchten, um zu verstehen, was sie tun, auch wenn es mehr Arbeit bedeutet.
 

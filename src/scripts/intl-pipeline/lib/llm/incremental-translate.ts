@@ -5,18 +5,30 @@
  * this module sends ONE batched Gemini call per file with all changed
  * sections marked for translation and unchanged sections as context.
  *
- * Gemini returns translated sections as JSON keyed by section ID,
- * which are surgically placed back into the locale file.
+ * Gemini returns each translated section in the same <SECTION> envelope it
+ * arrived in, which are surgically placed back into the locale file.
  */
 
-import { TRANSLATABLE_ATTRIBUTES } from "../shared-patterns"
+import { MAX_PROMPT_BYTES, RETRY_NOTE_RESERVE_BYTES } from "../../constants"
+import {
+  inlineCodeDrift,
+  PLACEHOLDER_RESIDUE_RE,
+  TRANSLATABLE_ATTRIBUTES,
+} from "../shared-patterns"
 
+import {
+  CODE_BLOCK_MARKER_RE,
+  inlineCodeTag,
+  restoreInlineCode,
+} from "./code-block-extractor"
+import { RunFuseExceededError } from "./cost-meter"
 import {
   FRONTMATTER_PREFIX,
   frontmatterFieldText,
   parseFrontmatterDoc,
 } from "./frontmatter"
 import { getLanguageGroup, getSiteSpecificNotes } from "./language-groups"
+import { formatGlossary } from "./prompt-builder"
 
 // Types for section-level translation
 interface SectionForPrompt {
@@ -43,7 +55,7 @@ interface IncrementalTranslateOptions {
   languageName: string
   /** Sections in document order with action tags */
   sections: SectionForPrompt[]
-  /** Filtered glossary terms for this file */
+  /** Glossary terms for the whole file; each prompt keeps the ones it uses */
   glossaryTerms: Map<string, string>
 }
 
@@ -83,8 +95,8 @@ export function renderSectionBlock(s: {
  * tagged TRANSLATE; unchanged sections are tagged CONTEXT (existing
  * locale translation for voice/tone consistency).
  *
- * Gemini returns only the TRANSLATE sections as a JSON object
- * keyed by section ID.
+ * Gemini returns only the TRANSLATE sections, each in its own <SECTION>
+ * envelope.
  */
 export function buildIncrementalPrompt(
   options: IncrementalTranslateOptions
@@ -99,12 +111,16 @@ export function buildIncrementalPrompt(
   } = options
 
   const group = getLanguageGroup(targetLanguage)
-  const siteNotes = getSiteSpecificNotes(group, fileType)
-  const glossarySection = formatGlossary(glossaryTerms)
+  const siteNotes = getSiteSpecificNotes(group, fileType, targetLanguage)
+  const translateSections = sections.filter((s) => s.action === "TRANSLATE")
+  const glossarySection = formatGlossary(
+    glossaryTerms,
+    translateSections
+      .map((s) => `${s.headingText ?? ""}\n${s.content}`)
+      .join("\n")
+  )
 
-  const translateIds = sections
-    .filter((s) => s.action === "TRANSLATE")
-    .map((s) => s.id)
+  const translateIds = translateSections.map((s) => s.id)
 
   const sectionBlocks = sections.map(renderSectionBlock).join("\n\n")
 
@@ -133,13 +149,17 @@ Wrapper placeholders (translate text between tags): <HTML-PLACEHOLDER-LINK-*****
 You MAY reorder wrapper placeholders to match natural ${targetLanguage} word order.
 
 OUTPUT FORMAT:
-Return a JSON object where each key is a section ID from the TRANSLATE list, and the value is the translated content for that section. Example:
-{
-  "section-id-1": "translated content...",
-  "section-id-2": "translated content..."
-}
+Return one <SECTION> block per section ID in the TRANSLATE list, with the opening and closing tags each on their own line. Carry the id attribute only -- do not repeat action or heading. Example:
 
-Output ONLY the JSON object. No markdown wrapping, no explanations, no XML tags.
+<SECTION id="section-id-1">
+translated content...
+</SECTION>
+
+<SECTION id="section-id-2">
+translated content...
+</SECTION>
+
+Every ID in the TRANSLATE list must appear exactly once; a response missing any of them is discarded in full. Write the translation exactly as it should appear in the file: quotes, backslashes and newlines are literal and MUST NOT be escaped. Return nothing for CONTEXT sections. No JSON, no markdown wrapping, no explanations.
 
 === SECTIONS ===
 ${sectionBlocks}
@@ -151,38 +171,333 @@ ${sectionBlocks}
 // ---------------------------------------------------------------------------
 
 /**
- * Parse Gemini's JSON response into a section ID -> translation map.
+ * One returned section: the opening tag's attributes, then the body up to a
+ * closing tag. Attributes are read as "anything but > or a quoted string", so
+ * a `>` inside a heading value (`heading="## 32 >= limit"`) cannot end the tag
+ * early and bleed the rest of the attribute into the body.
+ */
+const RESPONSE_SECTION_RE =
+  /<SECTION\b((?:[^>"]|"[^"]*")*)>([\s\S]*?)<\/SECTION\s*>/g
+
+const ID_ATTR_RE = /\bid="([^"]*)"/
+
+/**
+ * Parse Gemini's response into a section ID -> translation map.
+ *
+ * The response repeats the <SECTION> envelope the prompt sent, so a quote or
+ * a backslash in the translation is just that character. The format used to
+ * be JSON, which made every `"` in an attribute (RTL files carry ~100
+ * `<span dir="ltr">` wrappers) a `\"` the model had to get right; it did not,
+ * and five tasks a run died on it.
  */
 export function parseIncrementalResponse(
-  responseText: string
+  responseText: string,
+  expectedIds: string[]
 ): Record<string, string> {
   // Strip markdown code block wrapping if present
   let cleaned = responseText.trim()
   if (cleaned.startsWith("```")) {
-    cleaned = cleaned.replace(/^```(?:json)?\s*\n/, "").replace(/\n```\s*$/, "")
+    cleaned = cleaned.replace(/^```[a-zA-Z]*\s*\n/, "").replace(/\n```\s*$/, "")
   }
 
-  try {
-    const parsed = JSON.parse(cleaned)
-    if (
-      typeof parsed !== "object" ||
-      parsed === null ||
-      Array.isArray(parsed)
-    ) {
-      throw new Error("Expected a JSON object with section IDs as keys")
+  // Null prototype: a section id like "constructor" (erc-721-vyper-annotated-code
+  // has one) would otherwise report present on a plain object and read back as
+  // Object itself, defeating both the check below and the English fallback.
+  const translations: Record<string, string> = Object.create(null)
+  for (const m of cleaned.matchAll(RESPONSE_SECTION_RE)) {
+    const id = ID_ATTR_RE.exec(m[1])?.[1]
+    if (!id) {
+      throw fail("a <SECTION> block carries no id", responseText)
     }
-    // Validate all values are strings
-    for (const [key, value] of Object.entries(parsed)) {
-      if (typeof value !== "string") {
-        throw new Error(`Section "${key}" value is not a string`)
-      }
+    if (Object.hasOwn(translations, id)) {
+      throw fail(`section "${id}" was returned more than once`, responseText)
     }
-    return parsed as Record<string, string>
-  } catch (error) {
-    throw new Error(
-      `Failed to parse incremental translation response: ${error instanceof Error ? error.message : String(error)}\nRaw response (first 500 chars): ${responseText.slice(0, 500)}`
+    // A body that swallowed the next opening tag means a closing tag was
+    // dropped. The lazy match would merge two sections into one and lose the
+    // second silently, so fail and let the retry re-send instead.
+    if (m[2].includes("<SECTION")) {
+      throw fail(`section "${id}" is missing its closing tag`, responseText)
+    }
+    // The envelope puts the body on its own lines; those newlines are the
+    // envelope's, not the content's.
+    translations[id] = m[2].replace(/^\r?\n/, "").replace(/\r?\n$/, "")
+  }
+
+  if (Object.keys(translations).length === 0) {
+    throw fail(
+      'no <SECTION id="...">...</SECTION> block found in the response',
+      responseText
     )
   }
+
+  // Output that stops early -- a token limit, a dropped connection -- still
+  // parses, because every block before the cut is well formed. callGeminiRaw
+  // only refuses a response that is entirely empty, so a truncated one arrives
+  // here looking like a success; assembly would fall the absent sections back
+  // to English, commit that, and stamp the manifest, after which no drift is
+  // ever detected again. Demanding every requested id makes that a parse
+  // failure the retry can clear.
+  const missing = expectedIds.filter((id) => !Object.hasOwn(translations, id))
+  if (missing.length > 0) {
+    const shown = missing.slice(0, 5).join(", ")
+    throw fail(
+      `response is missing ${missing.length} of ${expectedIds.length} requested section(s): ${shown}${missing.length > 5 ? ", ..." : ""}`,
+      responseText
+    )
+  }
+
+  return translations
+}
+
+function fail(reason: string, responseText: string): Error {
+  return new Error(
+    `Failed to parse incremental translation response: ${reason}\nRaw response (first 500 chars): ${responseText.slice(0, 500)}`
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Batch call with parse retry
+// ---------------------------------------------------------------------------
+
+/** Attempts allowed for one batch whose response will not parse. */
+export const PARSE_ATTEMPTS = 3
+
+/** Keeps the note inside RETRY_NOTE_RESERVE_BYTES whatever the parser says. */
+const MAX_COMPLAINT_CHARS = 200
+
+function parserComplaint(error: Error): string {
+  return error.message.split("\n")[0].slice(0, MAX_COMPLAINT_CHARS)
+}
+
+/** English code a section's reply lost. A lost fence marker fails the file, so it outranks any number of lost spans. */
+export interface CodeLoss {
+  markers: number
+  spans: number
+  detail: string
+}
+
+/** Whether `a` lost less code than `b`; no loss at all is null. */
+function lostLess(a: CodeLoss | null, b: CodeLoss | null): boolean {
+  const [am, as] = [a?.markers ?? 0, a?.spans ?? 0]
+  const [bm, bs] = [b?.markers ?? 0, b?.spans ?? 0]
+  return am < bm || (am === bm && as < bs)
+}
+
+const CODE_TAG_INDEX_RE = /<HTML-PLACEHOLDER-CODE-(\d+)\s*\/?>/g
+
+/**
+ * Code a section's reply lost, checked once `spans` (its lifted inline code)
+ * are restored: inline spans dropped, altered or tagged twice, fence markers
+ * not kept exactly once, and placeholder tags left over. Leftover tags fail
+ * the gate as a lost marker fails the restore, so they rank alike. Backticks
+ * the model merely added are style, so they alone are no loss.
+ */
+export function sectionCodeLoss(
+  sent: string,
+  reply: string,
+  spans: string[] = []
+): CodeLoss | null {
+  const translated = restoreInlineCode(reply, spans)
+  const { missing, extra } = inlineCodeDrift(sent, translated)
+  const markers = [...new Set(sent.match(CODE_BLOCK_MARKER_RE) ?? [])].filter(
+    (m) => translated.split(m).length !== 2
+  )
+  const residue = translated.match(PLACEHOLDER_RESIDUE_RE) ?? []
+  const residueCount = Math.max(
+    0,
+    residue.length - (sent.match(PLACEHOLDER_RESIDUE_RE)?.length ?? 0)
+  )
+  // Per span text, tags beyond the number of slots that carry it: writing tag
+  // 0 twice for two identical spans restores the English exactly.
+  const tagged = new Map<string, number>()
+  for (const [, i] of reply.matchAll(CODE_TAG_INDEX_RE)) {
+    const span = spans[Number(i)]
+    if (span !== undefined) tagged.set(span, (tagged.get(span) ?? 0) + 1)
+  }
+  const repeated = [...tagged].flatMap(([span, n]) => {
+    const slots = spans.filter((s) => s === span).length
+    return n > slots ? [{ span, extra: n - slots }] : []
+  })
+  if (!missing.length && !markers.length && !residueCount && !repeated.length)
+    return null
+  const label = (span: string) => {
+    const i = spans.indexOf(span)
+    return i < 0 ? span : `${inlineCodeTag(i)} (${span})`
+  }
+  return {
+    markers: markers.length + residueCount,
+    spans: missing.length + repeated.reduce((n, r) => n + r.extra, 0),
+    detail: [
+      ...missing.map((c) => `missing ${label(c)}`),
+      ...markers.map((m) => `${m} must appear exactly once`),
+      ...(residueCount
+        ? [`unknown placeholder ${[...new Set(residue)].join(" ")}`]
+        : []),
+      ...repeated.map((r) => `${label(r.span)} sent ${r.extra} extra time(s)`),
+      ...extra.map((c) => `not in the English ${c}`),
+    ].join(", "),
+  }
+}
+
+/** Sent back with the prompt when a response lost English code. */
+function codeInstruction(complaint: string): string {
+  return [
+    "",
+    "YOUR PREVIOUS RESPONSE LOST CODE.",
+    complaint,
+    "Send every translated section again. Keep every <HTML-PLACEHOLDER-CODE-n /> tag and every <!-- CODE_BLOCK_n --> line exactly once, unchanged, and copy any `backticked` span byte for byte: never translate, drop, merge or repeat code.",
+  ].join("\n")
+}
+
+/** The complaint cut to what fits the note's reserve, on a character boundary. */
+function fitComplaint(complaint: string): string {
+  const room =
+    RETRY_NOTE_RESERVE_BYTES -
+    Buffer.byteLength(codeInstruction(""), "utf-8") -
+    1
+  if (Buffer.byteLength(complaint, "utf-8") <= room) return complaint
+  let out = ""
+  let bytes = 0
+  for (const ch of complaint) {
+    bytes += Buffer.byteLength(ch, "utf-8")
+    if (bytes > room - 4) break
+    out += ch
+  }
+  return `${out} ...`
+}
+
+/**
+ * Sent back with the prompt after a response cannot be read.
+ *
+ * With the envelope format the remaining failure is structural -- a dropped
+ * or malformed tag -- so the note restates the envelope rather than escaping
+ * rules. The model is told what the reader saw.
+ */
+function reparseInstruction(error: Error): string {
+  return [
+    "",
+    "YOUR PREVIOUS RESPONSE COULD NOT BE READ and was discarded.",
+    `The reader reported: ${parserComplaint(error)}`,
+    "Send every translated section again, each in its own envelope:",
+    '- Open with <SECTION id="the-section-id"> on its own line, id only.',
+    "- Close with </SECTION> on its own line.",
+    "- Include every section ID that was asked for, exactly once.",
+    "- Write the translation literally -- do not escape quotes or backslashes.",
+    "- Output the blocks only: no JSON, no markdown fences, no commentary.",
+  ].join("\n")
+}
+
+type BatchCaller = (prompt: string) => Promise<{
+  text: string
+  tokensUsed: { input: number; output: number }
+}>
+
+/** Only what the retry needs of a PlannedBatch. */
+interface RetryableBatch {
+  prompt: string
+  irreducible: boolean
+  /** Every id the response must carry back, or the batch failed. */
+  translateIds: string[]
+}
+
+/**
+ * The batch re-sent with the parser's complaint attached, or null when that
+ * note would push a near-ceiling prompt past what callGeminiRaw will send.
+ * Its refusal would replace the parse error the quarantine classifies on, so
+ * the caller stops with the parse error instead. The planner reserves
+ * RETRY_NOTE_RESERVE_BYTES to keep this from happening in the first place.
+ */
+function retryPrompt(batch: RetryableBatch, note: string): string | null {
+  const prompt = batch.prompt + "\n" + note
+  const fits =
+    batch.irreducible || Buffer.byteLength(prompt, "utf-8") <= MAX_PROMPT_BYTES
+  return fits ? prompt : null
+}
+
+/**
+ * Send one batch, re-sending it when the response will not parse.
+ *
+ * A malformed response is a sampling artifact, not a property of the pair --
+ * the model mis-escapes one character in a multi-KB JSON body and the whole
+ * file+locale task dies. Re-sending with the parser's complaint attached
+ * clears it; the prompt differs each time, so a temperature-0 model does not
+ * simply reproduce the same bad output.
+ *
+ * Tokens from failed attempts are returned too. They were billed.
+ */
+export async function translateBatchWithParseRetry(
+  batch: RetryableBatch,
+  call: BatchCaller,
+  onRetry?: (attempt: number, error: Error) => void,
+  check?: (id: string, translated: string) => CodeLoss | null
+): Promise<{
+  translations: Record<string, string>
+  tokens: { input: number; output: number }
+  /** The code the shipped translations still lose, if re-sending never cleared it. */
+  complaint: string | null
+}> {
+  const tokens = { input: 0, output: 0 }
+  let prompt = batch.prompt
+  let lastError: Error | undefined
+  // Per section, the reply that lost the least code so far. The check never
+  // fails a batch: what it can't clear ships for the translation review.
+  const best = new Map<string, { text: string; loss: CodeLoss | null }>()
+  const complaintOf = () =>
+    [...best]
+      .flatMap(([id, b]) =>
+        b.loss ? [`Section "${id}": ${b.loss.detail}`] : []
+      )
+      .join("\n") || null
+  const settle = () => {
+    const translations: Record<string, string> = Object.create(null)
+    for (const [id, b] of best) translations[id] = b.text
+    return { translations, tokens, complaint: complaintOf() }
+  }
+
+  for (let attempt = 1; attempt <= PARSE_ATTEMPTS; attempt++) {
+    let result: Awaited<ReturnType<BatchCaller>>
+    try {
+      result = await call(prompt)
+    } catch (error) {
+      // A reply in hand beats failing the file over a re-send; the run fuse
+      // still stops the run.
+      if (best.size === 0 || error instanceof RunFuseExceededError) throw error
+      return settle()
+    }
+    tokens.input += result.tokensUsed.input
+    tokens.output += result.tokensUsed.output
+
+    let translations: Record<string, string>
+    try {
+      translations = parseIncrementalResponse(result.text, batch.translateIds)
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error))
+      if (attempt === PARSE_ATTEMPTS) break
+      const next = retryPrompt(batch, reparseInstruction(lastError))
+      if (!next) break
+      prompt = next
+      onRetry?.(attempt, lastError)
+      continue
+    }
+    if (!check) return { translations, tokens, complaint: null }
+
+    for (const [id, text] of Object.entries(translations)) {
+      const loss = check(id, text)
+      const prev = best.get(id)
+      if (!prev || lostLess(loss, prev.loss)) best.set(id, { text, loss })
+    }
+    const complaint = complaintOf()
+    const next =
+      complaint && attempt < PARSE_ATTEMPTS
+        ? retryPrompt(batch, codeInstruction(fitComplaint(complaint)))
+        : null
+    if (!next) return settle()
+    prompt = next
+    onRetry?.(attempt, new Error(complaint ?? ""))
+  }
+
+  if (best.size) return settle()
+  throw lastError
 }
 
 // ---------------------------------------------------------------------------
@@ -400,7 +715,8 @@ export function extractSections(content: string): ExtractedSection[] {
 export function buildSectionList(
   englishSections: ExtractedSection[],
   localeSections: ExtractedSection[],
-  translateIds: string[]
+  translateIds: string[],
+  fileType: "markdown" | "json"
 ): SectionForPrompt[] {
   const localeMap = new Map<string, ExtractedSection>()
   for (const s of localeSections) {
@@ -412,12 +728,21 @@ export function buildSectionList(
 
   for (const section of englishSections) {
     if (translateSet.has(section.id)) {
-      // Changed section: send English content for translation
+      // Changed section: send English content for translation. A markdown
+      // section the locale doesn't have yet sends its heading as content too,
+      // so the reply carries a translated heading; nothing else would translate
+      // it. A JSON key has no heading: its reply is the value itself.
+      const isNew =
+        fileType === "markdown" &&
+        section.level > 0 &&
+        !localeMap.has(section.id)
       result.push({
         id: section.id,
         action: "TRANSLATE",
-        content: section.body,
-        headingText: section.headingText,
+        content: isNew
+          ? `${"#".repeat(section.level)} ${section.headingText} {#${section.id}}\n\n${section.body}`.trimEnd()
+          : section.body,
+        headingText: isNew ? undefined : section.headingText,
         level: section.level,
       })
     } else {
@@ -496,18 +821,6 @@ function findFrontmatterEnd(lines: string[]): number {
     if (lines[i].trim() === "---") return i + 1
   }
   return 0
-}
-
-function formatGlossary(terms: Map<string, string>): string {
-  if (terms.size === 0) return ""
-
-  const entries: string[] = []
-  terms.forEach((translated, en) => {
-    entries.push(`- "${en}" -> "${translated}"`)
-  })
-
-  return `Community-voted glossary (use these exact translations):
-${entries.join("\n")}`
 }
 
 // ---------------------------------------------------------------------------

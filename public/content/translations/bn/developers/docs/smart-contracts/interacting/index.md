@@ -171,16 +171,15 @@ const result = await client.simulateContract({
 
 ## সম্পর্কিত টিউটোরিয়াল {#related-tutorials}
 
-- [JavaScript থেকে একটি স্মার্ট কন্ট্রাক্ট কল করা](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Web3.js এবং Alchemy ব্যবহার করে ট্রানজ্যাকশন পাঠানো](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [কীভাবে আপনার ওয়ালেটে আপনার NFT দেখবেন](/developers/tutorials/how-to-view-nft-in-metamask/)
+- [আপনার ওয়ালেটে কীভাবে আপনার NFT দেখবেন](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## আরও পড়ুন {#further-reading}
 
 - [Viem ডকুমেন্টেশন: কন্ট্রাক্ট থেকে পড়া এবং লেখা](https://viem.sh/docs/contract/readContract)
 - [ethers.js ডকুমেন্টেশন: কন্ট্রাক্ট](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI স্পেসিফিকেশন](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [ABI কী? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [স্মার্ট কন্ট্রাক্ট ABI কীভাবে কাজ করে? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## সম্পর্কিত টপিক {#related-topics}
 

@@ -22,18 +22,22 @@ export const filterTutorialsByLang = (
   })
 
   const externalTutorialsMap = externalTutorials.map<ITutorial>(
-    (tutorial: IExternalTutorial) => ({
-      href: tutorial.url,
-      title: tutorial.title,
-      description: tutorial.description,
-      author: tutorial.author,
-      tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
-      skill: tutorial.skillLevel as Skill,
-      timeToRead: Number(tutorial.timeToRead),
-      published: new Date(tutorial.publishDate).toISOString(),
-      lang: tutorial.lang || "en",
-      isExternal: true,
-    })
+    (tutorial: IExternalTutorial) => {
+      // MM/DD/YYYY parses as local midnight; read it as UTC to match the formatters.
+      const [month, day, year] = tutorial.publishDate.split("/").map(Number)
+      return {
+        href: tutorial.url,
+        title: tutorial.title,
+        description: tutorial.description,
+        author: tutorial.author,
+        tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
+        skill: tutorial.skillLevel as Skill,
+        timeToRead: Number(tutorial.timeToRead),
+        published: new Date(Date.UTC(year, month - 1, day)).toISOString(),
+        lang: tutorial.lang || "en",
+        isExternal: true,
+      }
+    }
   )
 
   const allTutorials: Array<ITutorial> = [

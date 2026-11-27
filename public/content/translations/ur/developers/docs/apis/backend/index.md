@@ -35,7 +35,7 @@ lang: ur
 - [دستاویزات](https://docs.allthatnode.com)
 - [ڈسکارڈ](https://discord.gg/GmcdVEUbJM)
 
-**<span dir="ltr">Bware Labs</span> کی جانب سے Blast -** **_ایتھیریم مین نیٹ اور ٹیسٹ نیٹس کے لیے غیر مرکزی ⁦APIs⁩۔_**
+**<span dir="ltr">Bware Labs</span> کی جانب سے Blast -** **_ایتھیریم مین نیٹ اور ٹیسٹ نیٹس کے لیے ڈی سینٹرلائزڈ ⁦APIs⁩۔_**
 
 - [<span dir="ltr">blastapi.io</span>](https://blastapi.io/)
 - [دستاویزات](https://docs.blastapi.io)
@@ -58,7 +58,7 @@ lang: ur
 **Blockscout - اوپن سورس بلاک ایکسپلورر**
 - [دستاویزات](https://docs.blockscout.com/)
 
-**<span dir="ltr">GetBlock</span>-** **_Web3 ڈیولپمنٹ کے لیے بلاک چین ایز اے سروس (<span dir="ltr">Blockchain-as-a-service</span>)_**
+**<span dir="ltr">GetBlock</span> -** **_Web3 ڈیولپمنٹ کے لیے بلاک چین ایز اے سروس (<span dir="ltr">Blockchain-as-a-service</span>)_**
 
 - [<span dir="ltr">GetBlock.io</span>](https://getblock.io/)
 - [دستاویزات](https://docs.getblock.io/)
@@ -66,7 +66,7 @@ lang: ur
 **Infura -** **_ایتھیریم ⁦API⁩ بطور سروس۔_**
 
 - [<span dir="ltr">infura.io</span>](https://infura.io)
-- [دستاویزات](https://docs.infura.io/api)
+- [دستاویزات](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **<span dir="ltr">Node RPC</span> - _کم لاگت ⁦EVM⁩ جے سن آر پی سی پرووائیڈر_**
@@ -77,9 +77,9 @@ lang: ur
 **<span dir="ltr">NOWNodes</span> - _فل نوڈز اور بلاک ایکسپلوررز۔_**
 
 - [<span dir="ltr">NOWNodes.io</span>](https://nownodes.io/)
-- [دستاویزات](https://nownodes.gitbook.io/documentation)
+- [دستاویزات](https://docs.nownodes.io/)
 
-**QuickNode -** **_بلاک چین انفراسٹرکچر بطور سروس۔_**
+**QuickNode -** **_بلاک چین انفراسٹرکچر ایز اے سروس۔_**
 
 - [<span dir="ltr">quicknode.com</span>](https://quicknode.com)
 - [دستاویزات](https://www.quicknode.com/docs/welcome)
@@ -91,6 +91,12 @@ lang: ur
 - [دستاویزات](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**<span dir="ltr">SolidRPC</span> -** **_فل، آرکائیو، اور کی لیس (<span dir="ltr">keyless</span>) عوامی رسائی کے ساتھ ⁦EVM⁩ جے سن آر پی سی انفراسٹرکچر۔_**
+
+- [<span dir="ltr">solidrpc.io</span>](https://solidrpc.io/)
+- [دستاویزات](https://solidrpc.io/docs)
+- [GitHub](https://github.com/SolidRPC)
+
 **<span dir="ltr">Zmok</span> -** **_رفتار پر مبنی ایتھیریم نوڈز بطور جے سن آر پی سی/ویب ساکٹس (<span dir="ltr">WebSockets</span>) ⁦API⁩۔_**
 
 - [<span dir="ltr">zmok.io</span>](https://zmok.io/)
@@ -100,13 +106,19 @@ lang: ur
 
 ### ڈیولپمنٹ ٹولز {#development-tools}
 
+**<span dir="ltr">eth.zig</span> -** **_ایتھیریم کے لیے ایک <span dir="ltr">Zig</span> لائبریری، جس میں کمپائل ٹائم ایپلیکیشن بائنری انٹرفیس (اے بی آئی) انکوڈنگ اور کنٹریکٹ بائنڈنگز شامل ہیں۔_**
+
+- [GitHub](https://github.com/StrobeLabs/eth.zig)
+- [دستاویزات](https://ethzig.org)
+- [مثالیں](https://github.com/StrobeLabs/eth.zig/tree/main/examples)
+
 **<span dir="ltr">ethers-kt</span> -** **_⁦EVM⁩ پر مبنی بلاک چینز کے لیے غیر مطابقت پذیر (<span dir="ltr">Async</span>)، اعلیٰ کارکردگی والی <span dir="ltr">Kotlin</span>/Java/Android لائبریری۔_**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [مثالیں](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [ڈسکارڈ](https://discord.gg/rx35NzQGSb)
 
-**Nethereum -** **_بلاک چین کے لیے ایک اوپن سورس <span dir="ltr">.NET</span> انضمام لائبریری۔_**
+**Nethereum -** **_بلاک چین کے لیے ایک اوپن سورس <span dir="ltr">.NET</span> انٹیگریشن لائبریری۔_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
 - [دستاویزات](https://docs.nethereum.com/docs/getting-started/welcome/)
@@ -125,7 +137,7 @@ lang: ur
 - [دستاویزات](https://docs.tatum.io/)
 - [ڈسکارڈ](https://discord.gg/EDmW3kjTC9)
 
-**Web3j -** **_ایتھیریم کے لیے ایک Java/Android/<span dir="ltr">Kotlin</span>/<span dir="ltr">Scala</span> انضمام لائبریری۔_**
+**Web3j -** **_ایتھیریم کے لیے ایک Java/Android/<span dir="ltr">Kotlin</span>/<span dir="ltr">Scala</span> انٹیگریشن لائبریری۔_**
 
 - [GitHub](https://github.com/web3j/web3j)
 - [دستاویزات](https://docs.web3j.io/)
@@ -133,12 +145,12 @@ lang: ur
 
 ### بلاک چین سروسز {#blockchain-services}
 
-**<span dir="ltr">BlockCypher</span> -** **_ایتھیریم ویب ⁦APIs⁩۔_**
+**<span dir="ltr">BlockCypher</span> -** **_ایتھیریم Web ⁦APIs⁩۔_**
 
 - [<span dir="ltr">blockcypher.com</span>](https://www.blockcypher.com/)
 - [دستاویزات](https://www.blockcypher.com/dev/ethereum/)
 
-**<span dir="ltr">Chainbase</span> -** **_ایتھیریم کے لیے ہمہ گیر (<span dir="ltr">All-in-one</span>) Web3 ڈیٹا انفراسٹرکچر۔_**
+**<span dir="ltr">Chainbase</span> -** **_ایتھیریم کے لیے آل ان ون (<span dir="ltr">All-in-one</span>) Web3 ڈیٹا انفراسٹرکچر۔_**
 
 - [<span dir="ltr">chainbase.com</span>](https://chainbase.com/)
 - [دستاویزات](https://docs.chainbase.com/)
@@ -164,18 +176,17 @@ lang: ur
 
 - [<span dir="ltr">moralis.io</span>](https://moralis.io)
 - [دستاویزات](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [ڈسکارڈ](https://moralis.io/joindiscord/)
 - [فورم](https://forum.moralis.io/)
 
-**<span dir="ltr">NFTPort</span> -** **_ایتھیریم ڈیٹا اور ڈھالنے (<span dir="ltr">Mint</span>) کی ⁦APIs⁩۔_**
+**<span dir="ltr">NFTPort</span> -** **_ایتھیریم ڈیٹا اور ڈھالنے کی ⁦APIs⁩۔_**
 
 - [<span dir="ltr">nftport.xyz</span>](https://www.nftport.xyz/)
 - [دستاویزات](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [ڈسکارڈ](https://discord.com/invite/K8nNrEgqhE)
 
-**<span dir="ltr">Tokenview</span> -** **_عام ملٹی کرپٹو بلاک چین ⁦APIs⁩ پلیٹ فارم۔_**
+**<span dir="ltr">Tokenview</span> -** **_جنرل ملٹی کرپٹو بلاک چین ⁦APIs⁩ پلیٹ فارم۔_**
 
 - [<span dir="ltr">services.tokenview.io</span>](https://services.tokenview.io/)
 - [دستاویزات](https://services.tokenview.io/docs?type=api)
@@ -198,10 +209,9 @@ lang: ur
 **<span dir="ltr">Covalent</span> -** **_<span dir="ltr">200+</span> چینز کے لیے افزودہ بلاک چین ⁦APIs⁩۔_**
 
 - [<span dir="ltr">covalenthq.com</span>](https://www.covalenthq.com/)
-- [دستاویزات](https://www.covalenthq.com/docs/api/)
+- [دستاویزات](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [ڈسکارڈ](https://www.covalenthq.com/discord/)
-
 
 ## مزید مطالعہ {#further-reading}
 
@@ -214,5 +224,4 @@ _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہی�
 
 ## متعلقہ ٹیوٹوریلز {#related-tutorials}
 
-- [JavaScript میں ایتھیریم بلاک چین استعمال کرنے کے لیے Web3.js سیٹ اپ کریں](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– اپنے پروجیکٹ میں Web3.js سیٹ اپ کرنے کی ہدایات۔_
-- [JavaScript سے سمارٹ کنٹریکٹ کو کال کرنا](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI ٹوکن کا استعمال کرتے ہوئے، دیکھیں کہ JavaScript کا استعمال کر کے کنٹریکٹس فنکشن کو کیسے کال کیا جائے۔_
+- [Web3 ایپس کے لیے سرور کمپوننٹس اور ایجنٹس](/developers/tutorials/server-components/) _– TypeScript سرور کمپوننٹس لکھنے کا طریقہ جو بلاک چین ایونٹس کو سنتے ہیں اور ٹرانزیکشنز کے ساتھ جواب دیتے ہیں۔_

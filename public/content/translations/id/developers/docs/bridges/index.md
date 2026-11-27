@@ -1,10 +1,10 @@
 ---
 title: Jembatan
-description: Gambaran umum tentang jembatan untuk pengembang
+description: "Panduan pengembang untuk jembatan: bagaimana pengiriman pesan lintas rantai dan penjembatanan token bekerja, jenis-jenis jembatan dan asumsi kepercayaan, serta cara mengintegrasikannya ke dalam dapp."
 lang: id
 ---
 
-Dengan menjamurnya rantai blok lapisan 1 (l1) dan solusi [penskalaan](/developers/docs/scaling/) lapisan 2 (l2), bersama dengan jumlah aplikasi terdesentralisasi (dapp) yang terus bertambah yang beralih ke lintas rantai, kebutuhan akan komunikasi dan pergerakan aset di seluruh rantai telah menjadi bagian penting dari infrastruktur jaringan. Berbagai jenis jembatan ada untuk membantu mewujudkan hal ini.
+Dengan menjamurnya rantai blok lapisan 1 (L1) dan solusi [penskalaan](/developers/docs/scaling/) lapisan 2 (L2), bersama dengan jumlah aplikasi terdesentralisasi (dapp) yang terus bertambah yang beralih ke lintas rantai, kebutuhan akan komunikasi dan pergerakan aset di seluruh rantai telah menjadi bagian penting dari infrastruktur jaringan. Berbagai jenis jembatan ada untuk membantu mewujudkan hal ini.
 
 ## Kebutuhan akan jembatan {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Bagi pengembang, jembatan memungkinkan hal-hal berikut:
 
 - transfer data, informasi, dan aset apa pun lintas rantai.
 - membuka fitur dan kasus penggunaan baru untuk protokol karena jembatan memperluas ruang desain untuk apa yang dapat ditawarkan protokol. Misalnya, protokol untuk yield farming yang awalnya disebarkan di Mainnet [Ethereum](/) dapat menawarkan kumpulan likuiditas di semua rantai yang kompatibel dengan EVM.
-- kesempatan untuk memanfaatkan kekuatan dari berbagai rantai blok. Misalnya, pengembang dapat memperoleh manfaat dari biaya yang lebih rendah yang ditawarkan oleh berbagai solusi lapisan 2 (l2) dengan menyebarkan dapp mereka di seluruh rollup, dan sidechain serta pengguna dapat menjembatani di antara mereka.
+- kesempatan untuk memanfaatkan kekuatan dari berbagai rantai blok. Misalnya, pengembang dapat memperoleh manfaat dari biaya yang lebih rendah yang ditawarkan oleh berbagai solusi lapisan 2 (L2) dengan menyebarkan dapp mereka di seluruh rollup, dan sidechain serta pengguna dapat menjembatani di antara mereka.
 - kolaborasi di antara pengembang dari berbagai ekosistem rantai blok untuk membangun produk baru.
 - menarik pengguna dan komunitas dari berbagai ekosistem ke dapp mereka.
 
@@ -123,7 +123,7 @@ Untuk memantau aktivitas kontrak lintas rantai, pengembang dapat menggunakan sub
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Jembatan Rantai Blok](/bridges/) – ethereum.org
-- [Kerangka Kerja Risiko Jembatan L2BEAT](https://l2beat.com/bridges/summary)
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 Sep 2021 – Dmitriy Berenzon
 - [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 Okt 2021 – Arjun Bhuptani
 - [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4 Okt 2021 – Mustafa Al-Bassam
@@ -131,7 +131,7 @@ Untuk memantau aktivitas kontrak lintas rantai, pengembang dapat menggunakan sub
 - [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 Jun 2024 – Alex Hook
 - [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 Jun 2024 – Emmanuel Awosika
 
-Selain itu, berikut adalah beberapa presentasi berwawasan dari [James Prestwich](https://twitter.com/_prestwich) yang dapat membantu mengembangkan pemahaman yang lebih dalam tentang jembatan:
+Selain itu, berikut adalah beberapa presentasi berwawasan dari [James Prestwich](https://twitter.com/_prestwich) yang dapat membantu mengembangkan pemahaman yang lebih mendalam tentang jembatan:
 
 - [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
 - [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)

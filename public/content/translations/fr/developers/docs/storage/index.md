@@ -5,16 +5,16 @@ lang: fr
 authors: ["Patrick Collins"]
 ---
 
-Contrairement à un serveur centralisé exploité par une seule entreprise ou organisation, les systèmes de stockage décentralisés se composent d'un réseau pair à pair d'utilisateurs-opérateurs qui détiennent une partie des données globales, créant ainsi un système de partage de stockage de fichiers résilient. Ceux-ci peuvent se trouver dans une application basée sur une chaîne de blocs ou dans tout réseau basé sur le pair à pair.
+Contrairement à un serveur centralisé exploité par une seule entreprise ou organisation, les systèmes de stockage décentralisés consistent en un réseau pair à pair d'utilisateurs-opérateurs qui détiennent une partie des données globales, créant ainsi un système de partage et de stockage de fichiers résilient. Ils peuvent être intégrés dans une application basée sur une chaîne de blocs ou dans n'importe quel réseau basé sur le pair à pair.
 
-Ethereum lui-même peut être utilisé comme un système de stockage décentralisé, et c'est le cas lorsqu'il s'agit du stockage de code dans tous les contrats intelligents. Cependant, lorsqu'il s'agit de grandes quantités de données, ce n'est pas ce pour quoi Ethereum a été conçu. La chaîne croît régulièrement, mais au moment de la rédaction, la chaîne Ethereum fait environ 500 Go - 1 To ([selon le client](https://etherscan.io/chartsync/chaindefault)), et chaque nœud du réseau doit être capable de stocker toutes les données. Si la chaîne devait s'étendre à de grandes quantités de données (disons 5 To), il ne serait pas faisable pour tous les nœuds de continuer à fonctionner. De plus, le coût de déploiement d'une telle quantité de données sur le Réseau principal serait prohibitif en raison des frais de [gaz](/developers/docs/gas).
+Ethereum lui-même peut être utilisé comme un système de stockage décentralisé, et c'est le cas lorsqu'il s'agit du stockage de code dans tous les contrats intelligents. Cependant, lorsqu'il s'agit de grandes quantités de données, ce n'est pas ce pour quoi Ethereum a été conçu. La chaîne croît régulièrement, mais au moment de la rédaction, la chaîne Ethereum fait environ 1 à 2 To ([selon le client](https://etherscan.io/chartsync/chaindefault)), et chaque nœud du réseau doit être capable de stocker l'intégralité des données. Si la chaîne devait s'étendre à de grandes quantités de données (disons 5 To), il ne serait pas réalisable pour tous les nœuds de continuer à fonctionner. De plus, le coût de déploiement d'une telle quantité de données sur le Réseau principal serait prohibitif en raison des frais de [gaz](/developers/docs/gas).
 
 En raison de ces contraintes, nous avons besoin d'une chaîne ou d'une méthodologie différente pour stocker de grandes quantités de données de manière décentralisée.
 
-Lors de l'examen des options de stockage décentralisé (dStorage), il y a quelques éléments qu'un utilisateur doit garder à l'esprit.
+Lors de l'examen des options de stockage décentralisé (dStorage), un utilisateur doit garder à l'esprit quelques éléments :
 
 - Mécanisme de persistance / structure d'incitation
-- Application de la conservation des données
+- Garantie de la conservation des données
 - Décentralisation
 - Consensus
 
@@ -142,7 +142,7 @@ Basé sur la preuve d'enjeu :
 **Arweave - _Arweave est une plateforme dStorage pour le stockage de données._**
 
 - [Arweave.org](https://www.arweave.org/)
-- [Documentation](https://docs.arweave.org/info/)
+- [Documentation](https://docs.arweave.org/developers)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
 **Züs - _Züs est une plateforme dStorage à preuve d'enjeu (PoS) avec des fragments (sharding) et des blobbers._**

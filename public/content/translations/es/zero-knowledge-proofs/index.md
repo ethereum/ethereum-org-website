@@ -1,7 +1,7 @@
 ---
 title: "¿Qué son las pruebas de conocimiento cero?"
 metaTitle: Pruebas de conocimiento cero
-description: "Una introducción no técnica a las pruebas de conocimiento cero para principiantes."
+description: "¿Qué son las pruebas de conocimiento cero? Una introducción para principiantes sobre cómo las pruebas ZK verifican una afirmación sin revelar los datos, y cómo las utiliza Ethereum."
 lang: es
 ---
 
@@ -100,7 +100,7 @@ Aquí es donde entra en juego la computación verificable. Cuando un nodo ejecut
 
 Los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups) y los [validiums](/developers/docs/scaling/validium/) son dos soluciones de escalado fuera de la cadena que utilizan pruebas de validez para proporcionar una escalabilidad segura. Estos protocolos ejecutan miles de transacciones fuera de la cadena y envían pruebas para su verificación en Ethereum. Esos resultados se pueden aplicar inmediatamente una vez que se verifica la prueba, lo que permite a Ethereum procesar más transacciones sin aumentar la computación en la capa base.
 
-Más allá del escalado de la capa 2 (l2), las pruebas de conocimiento cero también pueden verificar la ejecución del bloque de la capa 1 (l1) de Ethereum en sí. La [zkEVM para la verificación de l1](/roadmap/zkevm/) permitiría a los validadores verificar bloques comprobando una prueba en lugar de volver a ejecutar todas las transacciones, lo que permitiría límites de gas más altos sin aumentar los requisitos de hardware del validador.
+Más allá del escalado de la capa 2 (L2), las pruebas de conocimiento cero también pueden verificar la ejecución del bloque de la capa 1 (L1) de Ethereum en sí. La [zkEVM para la verificación de L1](/roadmap/zkevm/) permitiría a los validadores verificar bloques comprobando una prueba en lugar de volver a ejecutar todas las transacciones, lo que permitiría límites de gas más altos sin aumentar los requisitos de hardware del validador.
 
 ### Reducción del soborno y la colusión en la votación en cadena {#secure-blockchain-voting}
 

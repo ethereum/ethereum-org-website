@@ -17,19 +17,19 @@ Ikiwa wewe ni mgeni kwenye mada ya kuendesha nodi, au unatafuta njia isiyo ya ki
 
 ## Kuchagua mbinu {#choosing-approach}
 
-Hatua ya kwanza katika kuanzisha nodi yako ni kuchagua mbinu yako. Kulingana na mahitaji na uwezekano mbalimbali, lazima uchague utekelezaji wa kiteja (kwa viteja vyote vya utekelezaji na mwafaka), mazingira (vifaa, mfumo), na vigezo vya mipangilio ya kiteja.
+Hatua ya kwanza katika kuanzisha nodi yako ni kuchagua mbinu yako. Kulingana na mahitaji na uwezekano mbalimbali, lazima uchague utekelezaji wa kiteja (kwa viteja vya utekelezaji na wateja wa mwafaka), mazingira (vifaa, mfumo), na vigezo vya mipangilio ya kiteja.
 
 Ukurasa huu utakuongoza kupitia maamuzi haya na kukusaidia kupata njia inayofaa zaidi ya kuendesha mfano wako wa Ethereum.
 
-Ili kuchagua kutoka kwa utekelezaji wa kiteja, angalia [viteja vya utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) vyote vinavyopatikana vilivyo tayari kwa Mtandao Mkuu, [wateja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients) na ujifunze kuhusu [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity).
+Ili kuchagua kutoka kwa utekelezaji wa viteja, angalia [viteja vya utekelezaji](/developers/docs/nodes-and-clients/#execution-clients) vyote vinavyopatikana vilivyo tayari kwa Mtandao Mkuu, [wateja wa mwafaka](/developers/docs/nodes-and-clients/#consensus-clients) na ujifunze kuhusu [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity).
 
-Amua kama utaendesha programu kwenye [vifaa vyako mwenyewe au kwenye wingu](#local-vs-cloud), ukizingatia [mahitaji](#requirements) ya viteja.
+Amua ikiwa utaendesha programu kwenye [vifaa vyako mwenyewe au kwenye wingu](#local-vs-cloud), ukizingatia [mahitaji](#requirements) ya viteja.
 
-Baada ya kuandaa mazingira, sakinisha viteja vilivyochaguliwa ama kwa [kiolesura rafiki kwa wanaoanza](#automatized-setup) au [kwa mikono](#manual-setup) ukitumia terminali iliyo na chaguo za hali ya juu.
+Baada ya kuandaa mazingira, sakinisha viteja vilivyochaguliwa ama kwa [kiolesura rafiki kwa wanaoanza](#automatized-setup) au [kwa mikono](#manual-setup) ukitumia terminali yenye chaguo za hali ya juu.
 
-Wakati nodi inafanya kazi na kusawazisha, uko tayari [kuitumia](#using-the-node), lakini hakikisha unafuatilia [matengenezo](#operating-the-node) yake.
+Wakati nodi inafanya kazi na kusawazisha, uko tayari [kuitumia](#using-the-node), lakini hakikisha unafuatilia [udumishaji](#operating-the-node) wake.
 
-![Usanidi wa kiteja](./diagram.png)
+<ClientSetupDiagram />
 
 ### Mazingira na vifaa {#environment-and-hardware}
 
@@ -61,49 +61,50 @@ Kutumia vifaa vyako mwenyewe inaweza kuwa rahisi sana. Kuna chaguo nyingi rahisi
 
 #### Mahitaji {#requirements}
 
-Mahitaji ya vifaa hutofautiana kwa kila kiteja lakini kwa ujumla si makubwa sana kwa kuwa nodi inahitaji tu kusalia katika usawazishaji. Usichanganye na uchimbaji, ambao unahitaji nguvu zaidi ya kompyuta. Hata hivyo, muda wa usawazishaji na utendakazi huboreka ukiwa na vifaa vyenye nguvu zaidi.
+Mahitaji ya vifaa hutofautiana kulingana na kiteja lakini kwa ujumla si makubwa sana kwa kuwa nodi inahitaji tu kusalia imesawazishwa. Usiichanganye na uchimbaji, ambao unahitaji nguvu zaidi ya kompyuta. Hata hivyo, muda wa usawazishaji na utendaji huboreka ukiwa na vifaa vyenye nguvu zaidi.
 
 Kabla ya kusakinisha kiteja chochote, tafadhali hakikisha kompyuta yako ina rasilimali za kutosha kukiendesha. Unaweza kupata mahitaji ya chini na yaliyopendekezwa hapa chini.
 
-Kikwazo cha vifaa vyako mara nyingi ni nafasi ya diski. Kusawazisha mnyororo wa vitalu wa Ethereum kunahitaji uingizaji/utokaji mwingi na kunahitaji nafasi kubwa. Ni bora kuwa na **hifadhi ya hali thabiti (SSD)** iliyo na mamia ya GB za nafasi ya bure ya kuhifadhi hata baada ya usawazishaji.
+Kikwazo kikubwa kwa vifaa vyako mara nyingi ni nafasi ya diski. Kusawazisha mnyororo wa vitalu wa Ethereum kunatumia sana uingizaji/utoaji na kunahitaji nafasi kubwa. Ni vyema kuwa na **kiendeshi cha hali dhabiti (SSD)** chenye mamia ya GB za nafasi ya ziada hata baada ya usawazishaji.
 
 Ukubwa wa hifadhidata na kasi ya usawazishaji wa awali inategemea kiteja kilichochaguliwa, usanidi wake na [mkakati wa usawazishaji](/developers/docs/nodes-and-clients/#sync-modes).
 
-Pia hakikisha muunganisho wako wa intaneti hauzuiliwi na [kikomo cha kipimo data](https://wikipedia.org/wiki/Data_cap). Inapendekezwa kutumia muunganisho usio na kipimo kwani usawazishaji wa awali na data inayotangazwa kwenye mtandao inaweza kuzidi kikomo chako.
+Pia hakikisha muunganisho wako wa intaneti hauzuiliwi na [kikomo cha kipimo data](https://wikipedia.org/wiki/Data_cap). Inapendekezwa kutumia muunganisho usio na kikomo kwa kuwa usawazishaji wa awali na data inayotangazwa kwenye mtandao inaweza kuzidi kikomo chako.
 
 ##### Mfumo wa uendeshaji
 
-Viteja vyote hutumia mifumo mikuu ya uendeshaji - Linux, macOS, Windows. Hii ina maana unaweza kuendesha nodi kwenye mashine za kawaida za mezani au seva zilizo na mfumo wa uendeshaji (OS) unaokufaa zaidi. Hakikisha OS yako imesasishwa ili kuepuka matatizo yanayoweza kutokea na udhaifu wa kiusalama.
+Viteja vyote vinaauni mifumo mikuu ya uendeshaji - Linux, macOS, Windows. Hii inamaanisha unaweza kuendesha nodi kwenye kompyuta za kawaida za mezani au mashine za seva zilizo na mfumo wa uendeshaji (OS) unaokufaa zaidi. Hakikisha OS yako imesasishwa ili kuepuka matatizo yanayoweza kutokea na udhaifu wa kiusalama.
 
 ##### Mahitaji ya chini
 
-- CPU iliyo na core 2+
+- CPU yenye viini 2+
 - RAM ya GB 16 (GB 32 inapendekezwa kwa uthabiti)
-- SSD ya NVMe ya TB 2 (inawezekana ikapitwa kufikia 2027, soma zaidi kuhusu [SSD nzuri na zisizo nzuri sana kwa nodi za Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- SSD ya NVMe ya TB 4 (inashughulikia nodi yenye historia kamili ya mnyororo pamoja na nafasi ya kukua, angalia ukubwa wa diski za kiteja hapa chini; soma zaidi kuhusu [SSD nzuri na zisizo nzuri sana kwa nodi za Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Kipimo data cha MBit/s 25+
 
 ##### Vipimo vilivyopendekezwa
 
 Mwongozo wa sasa wa vifaa kwa waendeshaji wa nodi umetambuliwa katika [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Kwa nodi kamili inapendekeza:
 
-- CPU yenye kasi iliyo na core 4+ (core 8+ ikiwa inathibitisha)
-- RAM ya GB 32 (GB 64 inapendekezwa ikiwa inathibitisha ili kuhakikisha uthabiti)
-- SSD ya NVMe ya TB 4 (hifadhi zisizo na DRAM na QLC hazipendekezwi)
-- Kipimo data cha 50 MBit/s cha kupakua / 15+ MBit/s cha kupakia (25+ MBit/s cha kupakia ikiwa inathibitisha)
+- CPU yenye kasi iliyo na viini 4+ (viini 8+ ikiwa unathibitisha)
+- RAM ya GB 32 (GB 64 inapendekezwa ikiwa unathibitisha ili kuhakikisha uthabiti)
+- SSD ya NVMe ya TB 4 (viendeshi visivyo na DRAM na QLC havipendekezwi)
+- Kipimo data cha MBit/s 50 cha kupakua / MBit/s 15+ cha kupakia (MBit/s 25+ cha kupakia ikiwa unathibitisha)
 
-Hali ya usawazishaji na kiteja unachochagua kitaathiri mahitaji ya nafasi, lakini tumekadiria nafasi ya diski utayohitaji kwa kila kiteja hapa chini.
+Hali ya usawazishaji na kiteja unachochagua kitaathiri mahitaji ya nafasi, lakini tumekadiria nafasi ya diski utakayohitaji kwa kila kiteja hapa chini.
 
-| Kiteja     | Ukubwa wa diski (usawazishaji wa picha) | Ukubwa wa diski (kumbukumbu kamili) |
-| ---------- | --------------------- | ------------------------ |
-| Besu       | 800GB+                | 12TB+                    |
-| Erigon     | N/A                   | 2.5TB+                   |
-| Geth       | 500GB+                | 12TB+                    |
-| Nethermind | 500GB+                | 12TB+                    |
-| Reth       | N/A                   | 2.2TB+                   |
+| Kiteja     | Ukubwa wa diski (nodi kamili) | Ukubwa wa diski (jalada kamili) |
+| ---------- | ----------------------------- | ------------------------------- |
+| Besu       | 1.8TB+                        | 12TB+                           |
+| Erigon     | 1.7TB+                        | 2.7TB+                          |
+| Geth       | 1.8TB+                        | 2TB+                            |
+| Nethermind | 1.7TB+                        | 14TB+                           |
+| Reth       | 2.2TB+                        | 2.8TB+                          |
 
-- Kumbuka: Erigon na Reth hazitoi usawazishaji wa picha, lakini Upogoaji Kamili unawezekana (~2TB kwa Erigon, ~1.2TB kwa Reth)
+- Kumbuka: Ukubwa wa nodi kamili huweka historia kamili ya mnyororo na ilipimwa mnamo Septemba 2026 na [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Viteja vinavyoauni ukomo wa historia vinahitaji kidogo: takriban 1.2-1.4TB na historia ya baada ya unganisho pekee, au takriban 400-650GB na ukomo unaoendelea (bado haiauniwi na Geth).
+- Kumbuka: Ukubwa wa jalada unatokana na nyaraka za kila kiteja ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). Takwimu ya Geth ni kwa ajili ya jalada lake linalotegemea njia; kuweka historia ya trie pia inachukua takriban 6.5TB. Takwimu ya Nethermind inatoka Julai 2023 na imekua tangu wakati huo.
 
-Kwa wateja wa mwafaka, hitaji la nafasi pia linategemea utekelezaji wa kiteja na vipengele vilivyowezeshwa (k.m., mkataji wa mthibitishaji) lakini kwa ujumla hesabu na GB 200 nyingine zinazohitajika kwa data ya kinara. Kukiwa na idadi kubwa ya wathibitishaji, mzigo wa kipimo data unakua pia. Unaweza kupata [maelezo kuhusu mahitaji ya mteja wa mwafaka katika uchanganuzi huu](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Kwa wateja wa mwafaka, hitaji la nafasi pia linategemea utekelezaji wa mteja na vipengele vilivyowezeshwa (k.m., mkataji wa mthibitishaji) lakini kwa ujumla hesabu na 15-90GB nyingine kwa data ya beacon, pamoja na takriban 500GB ya data ya blobu ikiwa unaendesha nodi kuu. Ukiwa na idadi kubwa ya wathibitishaji, mzigo wa kipimo data unakua pia. Unaweza kupata [maelezo kuhusu mahitaji ya mteja wa mwafaka katika uchanganuzi huu](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Suluhu za chomeka-na-cheza {#plug-and-play}
 
@@ -459,7 +460,7 @@ Kila utekelezaji wa kiteja una kamba ya toleo inayosomeka na binadamu inayotumiw
 
 #### Kuendesha huduma za ziada {#running-additional-services}
 
-Kuendesha nodi yako mwenyewe hukuruhusu kutumia huduma zinazohitaji ufikiaji wa moja kwa moja kwa RPC ya kiteja cha Ethereum. Hizi ni huduma zilizojengwa juu ya Ethereum kama [suluhu za tabaka la 2 (l2)](/developers/docs/scaling/#layer-2-scaling), mazingira ya nyuma ya mikoba, wavumbuzi wa kitalu, zana za wasanidi programu na miundombinu mingine ya Ethereum.
+Kuendesha nodi yako mwenyewe hukuruhusu kutumia huduma zinazohitaji ufikiaji wa moja kwa moja kwa RPC ya kiteja cha Ethereum. Hizi ni huduma zilizojengwa juu ya Ethereum kama [suluhu za tabaka la 2 (L2)](/developers/docs/scaling/#layer-2-scaling), mazingira ya nyuma ya mikoba, wavumbuzi wa kitalu, zana za wasanidi programu na miundombinu mingine ya Ethereum.
 
 #### Kufuatilia nodi {#monitoring-the-node}
 

@@ -4,9 +4,9 @@ description: Jifunze jinsi ya kusanidi Ethereum ukitumia miradi na zana zinazote
 lang: sw
 ---
 
-JavaScript ni miongoni mwa lugha maarufu zaidi katika mfumo wa ikolojia wa Ethereum. Kwa kweli, kuna [timu](https://github.com/ethereumjs) iliyojitolea kuleta kiasi kikubwa cha Ethereum kwenye JavaScript iwezekanavyo.
+JavaScript ni miongoni mwa lugha maarufu zaidi katika mfumo wa ikolojia wa Ethereum, ikiwa na utekelezaji wa JavaScript na TypeScript wa kila kitu kuanzia misingi mikuu ya itifaki hadi mteja wa mwafaka wa uzalishaji.
 
-Kuna fursa za kuandika JavaScript (au kitu kinachokaribiana nayo) katika [viwango vyote vya steki](/developers/docs/ethereum-stack/).
+Kuna fursa za kuandika JavaScript (au kitu kinachokaribiana na hicho) katika [viwango vyote vya mrundikano](/developers/docs/ethereum-stack/).
 
 ## Kuingiliana na Ethereum {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ Ikiwa unapendelea kusoma msimbo, JavaScript hii inaweza kuwa mbadala mzuri wa ku
 
 ### Nodi na wateja {#nodes-and-clients}
 
-Mteja wa EthereumJS yuko katika usanidi unaoendelea ambao unakuruhusu kuchunguza jinsi wateja wa Ethereum wanavyofanya kazi katika lugha unayoielewa; JavaScript!
+[Lodestar](https://lodestar.chainsafe.io/) ni mteja wa mwafaka aliye tayari kwa uzalishaji aliyeandikwa katika TypeScript na kudumishwa na ChainSafe. Inajumuisha nodi ya kinara na kiteja cha mthibitishaji, na ni mahali pazuri pa kuona jinsi mwafaka wa Uthibitisho wa Dau wa Ethereum unavyofanya kazi katika lugha unayoijua.
 
-**Angalia mteja**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Angalia Lodestar**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+Kwa upande wa utekelezaji, kiteja cha EthereumJS kimeachwa kutumika na kuhifadhiwa, lakini msimbo wake wa chanzo unasalia kupatikana ili kuchunguza jinsi kiteja cha Ethereum kinavyofanya kazi katika JavaScript.
+
+**Angalia kiteja kilichohifadhiwa**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Miradi mingine {#other-projects}
 

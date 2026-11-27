@@ -1,6 +1,6 @@
 ---
-title: リキッド・ステーキングとプール・ステーキング
-description: イーサリアムにおけるリキッド・ステーキングとプール・ステーキングの概要
+title: "リキッド・ステーキングとプール・ステーキング"
+description: "リキッド・ステーキングとは？ステーキング・プールを利用して、任意の額のETHでETH報酬を獲得し、多くの場合、引き続き使用可能なリキッド・トークンを受け取る方法について学びましょう。"
 lang: ja
 template: staking
 image: /images/staking/leslie-pool.png

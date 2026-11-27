@@ -1,7 +1,7 @@
 ---
-title: Úvod do návrhů na vylepšení Etherea (EIPs)
-metaTitle: Návrhy na vylepšení Etherea (EIPs)
-description: Základní informace, které potřebujete k pochopení EIP
+title: "Úvod do návrhů na vylepšení Etherea (EIPs)"
+metaTitle: "Návrhy na vylepšení Etherea (EIPs)"
+description: "Co jsou Návrhy na vylepšení Etherea (EIPs)? Zjistěte, jak jsou změny v Ethereu navrhovány, diskutovány a přijímány a jak se můžete zapojit."
 lang: cs
 ---
 
@@ -15,7 +15,7 @@ Kdokoli v komunitě Etherea má možnost vytvořit EIP. Pokyny pro psaní EIP js
 
 EIP hrají ústřední roli v tom, jak na Ethereu probíhají a jak jsou dokumentovány změny. Jsou způsobem, jak mohou lidé navrhovat, diskutovat a přijímat změny. Existují [různé typy EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), včetně hlavních (core) EIP pro nízkoúrovňové změny protokolu, které ovlivňují konsensus a vyžadují upgrade sítě, jako je [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), a ERC pro aplikační standardy, jako jsou [EIP-20](https://eips.ethereum.org/EIPS/eip-20) a [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Každý upgrade sítě se skládá ze sady EIP, které musí implementovat každý [klient Etherea](/learn/#clients-and-nodes) v síti. To znamená, že aby vývojáři klientů zůstali v konsensu s ostatními klienty na síti Ethereum Mainnet, musí se ujistit, že všichni implementovali požadované EIP.
+Každý upgrade sítě se skládá ze sady EIP, které musí implementovat každý [klient Etherea](/developers/docs/nodes-and-clients/) v síti. To znamená, že aby vývojáři klientů zůstali v konsensu s ostatními klienty na síti Ethereum Mainnet, musí se ujistit, že všichni implementovali požadované EIP.
 
 Kromě poskytování technické specifikace pro změny jsou EIP jednotkou, kolem které se v Ethereu odehrává správa: kdokoli může svobodně podat návrh a různé zúčastněné strany v komunitě pak budou diskutovat, aby určily, zda by měl být přijat jako standard nebo zahrnut do upgradu sítě. Protože vedlejší (non-core) EIP nemusí být přijaty všemi aplikacemi (například je možné vytvořit zaměnitelný token, který neimplementuje EIP-20), ale hlavní (core) EIP musí být široce přijaty (protože všechny uzly musí provést upgrade, aby zůstaly součástí stejné sítě), vyžadují hlavní EIP širší konsensus v rámci komunity než vedlejší EIP.
 

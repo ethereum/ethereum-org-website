@@ -58,18 +58,11 @@
   "page-apps-filter-by": "筛选条件",
   "page-apps-filter-all": "全部",
   "page-apps-showing": "显示",
-  "page-apps-visit-app": "访问 {appName}",
-  "page-apps-see-next": "查看下一个",
-  "page-apps-info-title": "信息",
   "page-apps-info-founded": "成立时间",
   "page-apps-info-creator": "创建者",
-  "page-apps-info-last-updated": "最后更新",
-  "page-apps-gallery-title": "图库",
-  "page-apps-gallery-screenshot-alt": "{appName} 的屏幕截图 {index}，展示了应用界面",
-  "page-apps-gallery-modal-title": "{appName} 屏幕截图",
+  "page-apps-info-languages": "语言",
+  "page-apps-info-listing-reviewed": "信息审核时间",
+  "page-apps-info-listing-reviewed-tooltip": "ethereum.org 上关于此应用的详细信息最后一次被审核的时间。它并不表示应用本身最后一次更新的时间。",
   "page-apps-more-apps-like-this": "更多类似应用",
-  "page-apps-by-company": "由 {company} 开发",
-  "page-apps-today": "今天",
-  "page-apps-one-day-ago": "1 天前",
-  "page-apps-days-ago": "{days} 天前"
+  "page-apps-detail-meta-title": "以太坊应用 - {name}"
 }

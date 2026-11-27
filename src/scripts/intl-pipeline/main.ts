@@ -25,7 +25,10 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
-import { restoreCodeBlocksStrict } from "./lib/llm/code-block-extractor"
+import {
+  restoreCodeBlocksStrict,
+  restoreInlineCode,
+} from "./lib/llm/code-block-extractor"
 import {
   callReserveUsd,
   minimumFuseUsd,
@@ -38,7 +41,10 @@ import {
   translateFenceComments,
   translateFile,
 } from "./lib/llm/gemini"
-import { parseIncrementalResponse } from "./lib/llm/incremental-translate"
+import {
+  PARSE_ATTEMPTS,
+  translateBatchWithParseRetry,
+} from "./lib/llm/incremental-translate"
 import {
   extractAttributeLeaves,
   translateJsxAttributes,
@@ -53,6 +59,7 @@ import {
 } from "./lib/llm/manifest-adapter"
 import { openRouterKeyStatus } from "./lib/llm/openrouter"
 import { planIncrementalBatches } from "./lib/llm/plan"
+import { loadGlossary } from "./lib/llm/prompt-builder"
 import { classifyFailure, Quarantine } from "./lib/quarantine"
 import { generateTempBranchName } from "./lib/utils/branch-naming"
 import type { TaskResult } from "./lib/utils/task-pool"
@@ -79,6 +86,7 @@ import {
   LLM_PROVIDER,
   MANIFESTS_DIR,
   MAX_BATCHES_PER_FILE,
+  MAX_PLANNED_PROMPT_BYTES,
   MAX_PROMPT_BYTES,
   MIN_CONTENT_BUDGET_BYTES,
   OUTPUT_RATE_USD_PER_1M,
@@ -131,60 +139,6 @@ function getManifestPath(
   type: "source" | "translation"
 ): string {
   return path.join(MANIFESTS_DIR, destPath, `${type}.json`)
-}
-
-/**
- * Fetch glossary terms from ETHGlossary API, filtered to terms
- * that appear in the source content for a given language.
- * Returns Map<english, translation> for prompt injection.
- * Includes term notes as parenthetical context when available.
- */
-async function loadGlossary(
-  fileContent: string,
-  locale: string
-): Promise<Map<string, string>> {
-  try {
-    const res = await fetch(`${GLOSSARY_API_URL}/filter`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ content: fileContent, language: locale }),
-    })
-    if (!res.ok) {
-      console.warn(
-        `[glossary] API returned ${res.status} for ${locale}, continuing without glossary`
-      )
-      return new Map()
-    }
-    const data = (await res.json()) as {
-      terms: Array<{
-        english: string
-        translation: string
-        note?: string
-      }>
-    }
-    // Sanitize all glossary fields to prevent prompt injection
-    // eslint-disable-next-line no-control-regex
-    const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
-    const sanitize = (s: string, maxLen: number) =>
-      s.replace(controlCharRe, "").replace(/\n/g, " ").slice(0, maxLen)
-
-    const map = new Map<string, string>()
-    for (const term of data.terms) {
-      const safeEnglish = sanitize(term.english, 200)
-      const safeTranslation = sanitize(term.translation, 500)
-      const safeNote = term.note ? sanitize(term.note, 200) : ""
-      const value = safeNote
-        ? `${safeTranslation} (${safeNote})`
-        : safeTranslation
-      map.set(safeEnglish, value)
-    }
-    return map
-  } catch (err) {
-    console.warn(
-      `[glossary] Failed to fetch for ${locale}: ${err instanceof Error ? err.message : String(err)}`
-    )
-    return new Map()
-  }
 }
 
 /**
@@ -359,7 +313,12 @@ async function buildGeminiTranslator(
     ? (langEntry as { code: string; name: string }).name
     : locale
 
-  const glossaryTerms = await loadGlossary(englishContent, locale)
+  const glossaryTerms = await loadGlossary(
+    englishContent,
+    fileType,
+    locale,
+    GLOSSARY_API_URL
+  )
   if (config.verbose && glossaryTerms.size > 0) {
     log(`  Glossary: ${glossaryTerms.size} terms for ${locale}`)
   }
@@ -390,6 +349,8 @@ async function buildGeminiTranslator(
     projectedBytes,
     translateCount,
     codeBlocks,
+    codeLoss,
+    inlineCode,
   } = planned
 
   // A sane incremental update is a handful of batches. Hundreds means the
@@ -410,7 +371,7 @@ async function buildGeminiTranslator(
   if (oversized.length > 0) {
     throw new Error(
       `[cost-guard] ${filePath} (${locale}): ${oversized.length} batch(es) exceed the ` +
-        `${MAX_PROMPT_BYTES}-byte per-call ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
+        `${MAX_PLANNED_PROMPT_BYTES}-byte planning ceiling (largest ${Math.max(...oversized.map((b) => b.bytes))} bytes) ` +
         `despite being splittable. Refusing to send.`
     )
   }
@@ -424,7 +385,9 @@ async function buildGeminiTranslator(
     `  Incremental plan: ${plan.length} batch(es), ${projectedBytes} of ${budget.limitBytes} budgeted prompt bytes`
   )
 
-  const allTranslations: Record<string, string> = {}
+  // Null prototype -- see parseIncrementalResponse; a section id of
+  // "constructor" must not resolve to Object through the chain.
+  const allTranslations: Record<string, string> = Object.create(null)
   let totalInput = 0
   let totalOutput = 0
 
@@ -432,15 +395,8 @@ async function buildGeminiTranslator(
     budget.spend(batch.bytes, `batch ${index + 1}/${plan.length}`)
 
     log(
-      `  Calling LLM: ${batch.translateCount} sections, ${batch.prompt.length} chars`
+      `  Calling LLM: ${batch.translateIds.length} sections, ${batch.prompt.length} chars`
     )
-
-    const result = await callGeminiRaw(batch.prompt, {
-      filePath,
-      targetLanguage: locale,
-      label: "incremental",
-      irreducible: batch.irreducible,
-    })
 
     // A batch that cannot be parsed must fail the task. Continuing would leave
     // its sections untranslated, fall them back to English in assembly, commit
@@ -448,10 +404,35 @@ async function buildGeminiTranslator(
     // English text is permanent in the locale file. Failing here costs this
     // file+locale's calls; every other locale's completed work is already
     // committed to the temp branch and still merges.
-    const translations = parseIncrementalResponse(result.text)
+    //
+    // So the batch is re-sent first: a malformed envelope is a sampling slip
+    // that a fresh sample clears. The file budget is not charged for the
+    // re-sends (see createFileBudget) -- the run fuse still meters them.
+    const { translations, tokens, complaint } =
+      await translateBatchWithParseRetry(
+        batch,
+        (prompt) =>
+          callGeminiRaw(prompt, {
+            filePath,
+            targetLanguage: locale,
+            label: "incremental",
+            irreducible: batch.irreducible,
+          }),
+        (attempt, error) =>
+          log(
+            `  batch ${index + 1}/${plan.length} rejected (attempt ${attempt}/${PARSE_ATTEMPTS}), re-sending: ${error.message.split("\n")[0]}`,
+            "warn"
+          ),
+        codeLoss ?? undefined
+      )
+    if (complaint)
+      log(
+        `  batch ${index + 1}/${plan.length} still loses code; shipping the closest reply for review: ${complaint}`,
+        "warn"
+      )
     Object.assign(allTranslations, translations)
-    totalInput += result.tokensUsed.input
-    totalOutput += result.tokensUsed.output
+    totalInput += tokens.input
+    totalOutput += tokens.output
   }
 
   // Fence bodies never went to the model, so their comments are translated
@@ -475,19 +456,25 @@ async function buildGeminiTranslator(
   )
 
   for (const id of sectionIds) {
-    if (!allTranslations[id]) {
+    if (!Object.hasOwn(allTranslations, id)) {
       console.warn(`  Section "${id}" not returned by LLM`)
     }
   }
 
   return {
     translator: (sectionId: string, englishFallback: string) => {
-      const translated = allTranslations[sectionId]
+      const translated = Object.hasOwn(allTranslations, sectionId)
+        ? allTranslations[sectionId]
+        : undefined
       if (!translated) return englishFallback
-      const blocks = codeBlocks.get(sectionId)
-      if (!blocks || blocks.length === 0) return translated
-      return restoreCodeBlocksStrict(
+      const prose = restoreInlineCode(
         translated,
+        inlineCode.get(sectionId) ?? []
+      )
+      const blocks = codeBlocks.get(sectionId)
+      if (!blocks || blocks.length === 0) return prose
+      return restoreCodeBlocksStrict(
+        prose,
         blocks,
         `${filePath} (${locale}) section "${sectionId}"`
       )
@@ -507,6 +494,7 @@ async function sanitizeAndGate(opts: {
   content: string
   file: FileContext
   baseline?: string
+  baselineEnglish?: string
   mode: "incremental" | "full"
 }): Promise<string> {
   let content = opts.content
@@ -526,6 +514,7 @@ async function sanitizeAndGate(opts: {
     english: opts.file.content,
     output: content,
     baseline: opts.baseline,
+    baselineEnglish: opts.baselineEnglish,
     mode: opts.mode,
   })
   if (!gate.ok) throw new GateError(opts.destPath, gate.failures)
@@ -547,7 +536,12 @@ async function runFullTranslation(
 ): Promise<TaskResult> {
   log(`[${locale}] ${file.path}: full translation...`)
 
-  const glossaryTerms = await loadGlossary(file.content, locale)
+  const glossaryTerms = await loadGlossary(
+    file.content,
+    file.type,
+    locale,
+    GLOSSARY_API_URL
+  )
   if (config.verbose && glossaryTerms.size > 0) {
     log(`[${locale}] Glossary: ${glossaryTerms.size} terms`)
   }
@@ -700,6 +694,23 @@ async function runIncremental(
 
   const englishB = file.content
 
+  // The content tree finds no headings in CRLF text, so the merge would take the
+  // whole page for its preamble and write English over the translation.
+  if (englishA.includes("\r\n") || englishB.includes("\r\n")) {
+    log(
+      `[${locale}] ${file.path}: CRLF English, falling back to full translation`
+    )
+    return runFullTranslation(
+      file,
+      locale,
+      destPath,
+      committer,
+      baseBranchSha,
+      committedFiles,
+      localeContent
+    )
+  }
+
   const llmSectionIds = getLlmSectionIds(englishA, englishB, file.type)
   log(`[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need LLM`)
 
@@ -755,7 +766,12 @@ async function runIncremental(
   if (file.type === "markdown") {
     const leaves = extractAttributeLeaves(file.content)
     if (leaves.length > 0) {
-      const glossaryTerms = await loadGlossary(file.content, locale)
+      const glossaryTerms = await loadGlossary(
+        file.content,
+        "markdown",
+        locale,
+        GLOSSARY_API_URL
+      )
       const attrResult = await translateJsxAttributes({
         leaves,
         localeContent: finalContent,
@@ -782,6 +798,7 @@ async function runIncremental(
     content: finalContent,
     file,
     baseline: localeContent,
+    baselineEnglish: englishA,
     mode: "incremental",
   })
 

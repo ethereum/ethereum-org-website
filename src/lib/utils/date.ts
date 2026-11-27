@@ -1,9 +1,8 @@
 import type { PartialDate } from "@/data/upgrades/types"
 
 import { DEFAULT_LOCALE } from "../constants"
-import type { Lang } from "../types"
 
-import { normalizeIntlSpaces } from "./intl"
+import { normalizeIntlSpaces, safeLocale } from "./intl"
 
 /**
  * A wrapper for Intl.DateTimeFormat that enforces Web3 date standards.
@@ -32,8 +31,21 @@ export function dateTimeFormat(
     ...(numberingSystem && { numberingSystem }),
   }
 
-  return new Intl.DateTimeFormat(locale, finalOptions)
+  return new Intl.DateTimeFormat(safeLocale(locale), finalOptions)
 }
+
+// Use for rendered output: UTC + normalized spaces make SSR and client agree.
+export const formatDateTime = (
+  locale: string,
+  date: Date | number,
+  options?: Intl.DateTimeFormatOptions
+): string =>
+  normalizeIntlSpaces(
+    dateTimeFormat(locale, {
+      ...options,
+      timeZone: options?.timeZone ?? "UTC",
+    }).format(date)
+  )
 
 export const dateToString = (published: Date | string) =>
   new globalThis.Date(published).toISOString().split("T")[0]
@@ -67,14 +79,14 @@ export const formatDate = (
   if (!isValidDate(date)) {
     return ""
   }
-  return normalizeIntlSpaces(
-    dateTimeFormat(locale, {
-      timeZone: "UTC",
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-      ...options,
-    }).format(new Date(date))
+  // Intl rejects dateStyle/timeStyle alongside field options like month
+  const styled = options?.dateStyle || options?.timeStyle
+  return formatDateTime(
+    locale,
+    new Date(date),
+    styled
+      ? options
+      : { month: "long", day: "numeric", year: "numeric", ...options }
   )
 }
 
@@ -100,12 +112,11 @@ export const formatPartialDate = (
   if (quarter) return formatQuarter(quarter, year)
 
   const date = new Date(Date.UTC(year, (month ?? 1) - 1, day ?? 1))
-  return dateTimeFormat(locale, {
-    timeZone: "UTC",
+  return formatDateTime(locale, date, {
     year: "numeric",
     ...(month && { month: "long" }),
     ...(day && { day: "numeric" }),
-  }).format(date)
+  })
 }
 
 export const formatDateRange = (
@@ -123,38 +134,13 @@ export const formatDateRange = (
     }).formatRange(new Date(start), new Date(end || start))
   )
 
-/**
- * Date range split into parts so callers can style them individually (e.g. a
- * lighter year), instead of hand-assembling the string -- which would hard-code
- * English part order. Whitespace is normalized as in `formatDateRange`.
- */
-export const formatDateRangeToParts = (
-  start: Date | string,
-  end: Date | string,
-  locale: string = DEFAULT_LOCALE,
-  options?: Intl.DateTimeFormatOptions
-) =>
-  dateTimeFormat(locale, {
-    timeZone: "UTC",
-    month: "short",
-    day: "numeric",
-    ...options,
-  })
-    .formatRangeToParts(new Date(start), new Date(end))
-    .map(({ type, value }) => ({ type, value: normalizeIntlSpaces(value) }))
-
 export const getLocaleYear = (
   locale: string = "en-US",
   date?: ConstructorParameters<DateConstructor>[0]
 ) =>
-  dateTimeFormat(locale, { year: "numeric" }).format(
-    date ? new Date(date) : new Date()
-  )
-
-export const getLocaleFormattedDate = (locale: Lang, date: string) => {
-  const walletLastUpdatedDate = new Date(date)
-  return dateTimeFormat(locale).format(walletLastUpdatedDate)
-}
+  formatDateTime(locale, date ? new Date(date) : new Date(), {
+    year: "numeric",
+  })
 
 /**
  * Get ISO week number for a given date
@@ -187,4 +173,62 @@ export const getDayOfYear = (date: Date): number => {
   const start = Date.UTC(date.getFullYear(), 0, 0)
   const current = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
   return Math.round((current - start) / 86400000)
+}
+
+/** True for an IANA time zone this runtime knows, e.g. "Europe/Berlin" */
+export const isTimeZone = (timeZone: string) => {
+  try {
+    dateTimeFormat("en", { timeZone })
+    return true
+  } catch {
+    return false
+  }
+}
+
+/** Calendar day (`YYYY-MM-DD`) at `at` in `timeZone`: a key, not display text */
+export const dayInZone = (timeZone: string, at = new Date()) =>
+  dateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(at)
+
+/** How far `timeZone`'s wall clock is ahead of UTC at `at`, in ms */
+const zoneOffsetMs = (timeZone: string, at: number) => {
+  const parts = Object.fromEntries(
+    dateTimeFormat("en-US", {
+      timeZone,
+      hourCycle: "h23",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    })
+      .formatToParts(at)
+      .map(({ type, value }) => [type, Number(value)])
+  )
+  const wall = Date.UTC(
+    parts.year,
+    parts.month - 1,
+    parts.day,
+    parts.hour,
+    parts.minute,
+    parts.second
+  )
+  return wall - Math.floor(at / 1000) * 1000
+}
+
+/**
+ * Midnight in `timeZone` that starts the day `days` after the one at `at`
+ * (0: today's, 1: tomorrow's). Corrected twice for a DST change in between.
+ */
+export const midnightInZone = (timeZone: string, at = new Date(), days = 0) => {
+  const [year, month, day] = dayInZone(timeZone, at).split("-").map(Number)
+  const wall = Date.UTC(year, month - 1, day + days)
+  let utc = wall - zoneOffsetMs(timeZone, wall)
+  utc = wall - zoneOffsetMs(timeZone, utc)
+  return new Date(utc)
 }

@@ -176,6 +176,7 @@ Baadhi ya viwango mbadala vimetokana na suala hili kama vile [ERC-223](/develope
 - [Alchemy - Mwongozo wa Tokeni za ERC20 za Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Viwango vingine vya tokheni mbadala {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -184,6 +185,5 @@ Baadhi ya viwango mbadala vimetokana na suala hili kama vile [ERC-223](/develope
 ## Mafunzo: Jenga na ERC-20 kwenye Ethereum {#tutorials}
 
 - [Mwongozo wa Mkataba wa ERC-20](/developers/tutorials/erc20-annotated-code/) _– Mwongozo uliofafanuliwa mstari kwa mstari wa utekelezaji wa mkataba wa ERC-20 wa OpenZeppelin._
-- [ERC-20 yenye Njia za Usalama](/developers/tutorials/erc20-with-safety-rails/) _– Jinsi ya kuongeza ulinzi kwenye tokeni za ERC-20 ili kusaidia watumiaji kuepuka makosa ya kawaida._
-- [Kutuma Tokeni Kwa Kutumia Ethers.js](/developers/tutorials/send-token-ethersjs/) _– Mwongozo rafiki kwa wanaoanza wa kuhamisha tokeni za ERC-20 kwa kutumia Ethers.js._
-- [Baadhi ya mbinu zinazotumiwa na tokeni za utapeli na jinsi ya kuzigundua](/developers/tutorials/scam-token-tricks/) _– Uchunguzi wa kina kuhusu mifumo ya tokeni za utapeli za ERC-20 na jinsi ya kuzitambua._
+- [ERC-20 yenye Vizuizi vya Usalama](/developers/tutorials/erc20-with-safety-rails/) _– Jinsi ya kuongeza vizuizi vya usalama kwenye tokeni za ERC-20 ili kusaidia watumiaji kuepuka makosa ya kawaida._
+- [Baadhi ya mbinu zinazotumiwa na tokeni za utapeli na jinsi ya kuzigundua](/developers/tutorials/scam-token-tricks/) _– Uchambuzi wa kina kuhusu mifumo ya tokeni za utapeli za ERC-20 na jinsi ya kuzitambua._

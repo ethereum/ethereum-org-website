@@ -53,7 +53,7 @@ Diese Funktion gibt die Adresse des zugrunde liegenden Tokens zurück, der für 
 function totalAssets() public view returns (uint256)
 ```
 
-Diese Funktion gibt den Gesamtbetrag der zugrunde liegenden Vermögenswerte zurück, die vom Tresor gehalten werden.
+Diese Funktion gibt den Gesamtbetrag der zugrunde liegenden Vermögenswerte zurück, die vom Tresor verwaltet werden, einschließlich derer, die er anderweitig eingesetzt hat, und nach Abzug etwaiger Gebühren.
 
 #### convertToShares {#convertoshares}
 
@@ -185,7 +185,7 @@ Gibt die Gesamtmenge an Tresor-Anteilen zurück, die der `owner` derzeit besitzt
 
 ### Übersicht der Schnittstelle {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Ereignisse {#events}
 

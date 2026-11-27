@@ -1,7 +1,7 @@
 ---
 title: "非代替性トークン (NFT)"
 metaTitle: "NFTとは？ | メリットと用途"
-description: "イーサリアム上のNFTの概要"
+description: "NFTとは？イーサリアム上で非代替性トークン（NFT）がデジタルアート、収集品、チケットなどの所有権をどのように証明するのか、そしてそれらを安全に使用する方法について学びましょう。"
 lang: ja
 template: use-cases
 sidebarDepth: 2

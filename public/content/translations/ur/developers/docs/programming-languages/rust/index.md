@@ -40,21 +40,20 @@ incomplete: true
 
 - [<span dir="ltr">pwasm-ethereum</span>](https://github.com/paritytech/pwasm-ethereum) - _ایتھیریم جیسے نیٹ ورک کے ساتھ تعامل کرنے کے لیے <span dir="ltr">externs</span> کا مجموعہ_
 - [لائٹ ہاؤس](https://github.com/sigp/lighthouse) - _تیز ایتھیریم اتفاق رائے کی تہہ کا کلائنٹ_
-- [ایتھیریم <span dir="ltr">WebAssembly</span>](https://ewasm.readthedocs.io/en/mkdocs/) - _<span dir="ltr">WebAssembly</span> کے ایک متعین ذیلی سیٹ کا استعمال کرتے ہوئے ایتھیریم سمارٹ کنٹریکٹ عمل درآمد کی تہہ کا مجوزہ نیا ڈیزائن_
-- [<span dir="ltr">oasis_std</span>](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _<span dir="ltr">OASIS API</span> کا حوالہ_
-- [<span dir="ltr">Solaris</span>](https://github.com/paritytech/sol-rs) - _مقامی <span dir="ltr">Parity</span> کلائنٹ <span dir="ltr">EVM</span> کا استعمال کرتے ہوئے <span dir="ltr">Solidity</span> سمارٹ کنٹریکٹس یونٹ ٹیسٹ ہارنس۔_
+- [ایتھیریم <span dir="ltr">WebAssembly</span>](https://ewasm.readthedocs.io/en/mkdocs/) - _<span dir="ltr">WebAssembly</span> کے ایک متعین ذیلی سیٹ کا استعمال کرتے ہوئے ایتھیریم سمارٹ کنٹریکٹ کی عمل درآمد کی تہہ کا مجوزہ نیا ڈیزائن_
+- [<span dir="ltr">Solaris</span>](https://github.com/paritytech/sol-rs) - _مقامی <span dir="ltr">Parity</span> کلائنٹ <span dir="ltr">EVM</span> کا استعمال کرتے ہوئے <span dir="ltr">Solidity</span> سمارٹ کنٹریکٹس کا یونٹ ٹیسٹ ہارنیس۔_
 - [<span dir="ltr">SputnikVM</span>](https://github.com/rust-blockchain/evm) - _<span dir="ltr">Rust</span> ایتھیریم ورچوئل مشین کا نفاذ_
 - [<span dir="ltr">Wavelet</span>](https://github.com/perlin-network/smart-contract-rs) - _<span dir="ltr">Rust</span> میں <span dir="ltr">Wavelet</span> سمارٹ کنٹریکٹ_
-- [<span dir="ltr">Foundry</span>](https://github.com/foundry-rs/foundry) - _ایتھیریم ایپلی کیشن ڈیولپمنٹ کے لیے ٹول کٹ_
+- [<span dir="ltr">Foundry</span>](https://github.com/foundry-rs/foundry) - _ایتھیریم ایپلیکیشن ڈیولپمنٹ کے لیے ٹول کٹ_
 - [<span dir="ltr">Alloy</span>](https://alloy.rs) - _ایتھیریم اور دیگر <span dir="ltr">EVM</span> پر مبنی چینز کے ساتھ تعامل کے لیے اعلیٰ کارکردگی والی، اچھی طرح سے ٹیسٹ شدہ اور دستاویزی لائبریریاں۔_
 - [<span dir="ltr">Ethers_rs</span>](https://github.com/gakonst/ethers-rs) - _ایتھیریم لائبریری اور والیٹ کا نفاذ_
-- [<span dir="ltr">SewUp</span>](https://github.com/second-state/SewUp) - _ایک لائبریری جو آپ کو <span dir="ltr">Rust</span> کے ساتھ اپنا ایتھیریم <span dir="ltr">webassembly</span> کنٹریکٹ بنانے میں مدد کرتی ہے اور بالکل ایک عام بیک اینڈ میں ڈیولپ کرنے کی طرح ہے_
+- [<span dir="ltr">SewUp</span>](https://github.com/second-state/SewUp) - _ایک لائبریری جو آپ کو <span dir="ltr">Rust</span> کے ساتھ اپنا ایتھیریم <span dir="ltr">WebAssembly</span> کنٹریکٹ بنانے میں مدد کرتی ہے اور بالکل ایک عام بیک اینڈ میں ڈیولپ کرنے کی طرح ہے_
 - [<span dir="ltr">Substreams</span>](https://github.com/streamingfast/substreams) - _متوازی بلاک چین ڈیٹا انڈیکسنگ ٹیکنالوجی_
-- [ریتھ](https://github.com/paradigmxyz/reth) ریتھ (<span dir="ltr">Rust Ethereum</span> کا مخفف) ایک نیا ایتھیریم فل-نوڈ نفاذ ہے
+- [<span dir="ltr">Reth</span>](https://github.com/paradigmxyz/reth) <span dir="ltr">Reth</span> (<span dir="ltr">Rust</span> ایتھیریم کا مخفف) ایک نیا ایتھیریم مکمل نوڈ کا نفاذ ہے
 - [<span dir="ltr">Awesome Ethereum Rust</span>](https://github.com/Vid201/awesome-ethereum-rust) - _<span dir="ltr">Rust</span> میں لکھے گئے ایتھیریم ایکو سسٹم میں پروجیکٹس کا ایک منتخب مجموعہ_
 - [<span dir="ltr">Stylus</span>](https://github.com/OffchainLabs/stylus) - _<span dir="ltr">Arbitrum</span> پر سمارٹ کنٹریکٹس بنانے کے لیے <span dir="ltr">Rust SDK</span>_
 
-مزید وسائل تلاش کر رہے ہیں؟ [<span dir="ltr">ethereum.org/developers</span>۔](/developers/)
+مزید وسائل تلاش کر رہے ہیں؟ [<span dir="ltr">ethereum.org/developers</span>](/developers/) دیکھیں۔
 
 ## <span dir="ltr">Rust</span> کمیونٹی کے تعاون کنندگان {#rust-community-contributors}
 

@@ -4,9 +4,9 @@ description: "了解如何使用基于 JavaScript 的项目和工具进行以太
 lang: zh
 ---
 
-JavaScript 是以太坊生态系统中最受欢迎的语言之一。事实上，有一个[团队](https://github.com/ethereumjs)致力于尽可能多地将以太坊引入 JavaScript。
+JavaScript 是以太坊生态系统中最受欢迎的语言之一，从核心协议原语到生产级共识客户端，都有 JavaScript 和 TypeScript 的实现。
 
-在[技术栈的各个层面](/developers/docs/ethereum-stack/)都有机会编写 JavaScript（或类似的语言）。
+在[技术栈的所有层级](/developers/docs/ethereum-stack/)，都有机会编写 JavaScript（或类似的语言）。
 
 ## 与以太坊交互 {#interact-with-ethereum}
 
@@ -50,12 +50,17 @@ JavaScript 是以太坊生态系统中最受欢迎的语言之一。事实上，
 **查看 EVM**  
 [`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
-### 节点和客户端 {#nodes-and-clients}
+### 节点与客户端 {#nodes-and-clients}
 
-一个 EthereumJS 客户端正在积极开发中，它让你能够用你熟悉的语言——JavaScript，深入了解以太坊客户端的工作原理！
+[Lodestar](https://lodestar.chainsafe.io/) 是一个由 ChainSafe 维护、使用 TypeScript 编写的生产级共识客户端。它包含一个信标节点和验证者客户端，如果你想用自己熟悉的语言来了解以太坊的权益证明共识是如何工作的，这是一个很好的切入点。
 
-**查看客户端**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**查看 Lodestar**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+在执行层方面，EthereumJS 客户端已被弃用并归档，但其源代码仍然可用，供开发者探索以太坊客户端是如何用 JavaScript 运行的。
+
+**查看已归档的客户端**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## 其他项目 {#other-projects}
 

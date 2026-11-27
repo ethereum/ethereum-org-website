@@ -1,6 +1,6 @@
 ---
 title: Keamanan Ethereum dan pencegahan penipuan
-description: Tetap aman di Ethereum
+description: "Cara tetap aman di Ethereum: lindungi dompet dan frasa pemulihan Anda, kenali penipuan kripto dan phishing yang umum, dan ketahui apa yang harus dilakukan jika terjadi kesalahan."
 lang: id
 ---
 

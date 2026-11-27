@@ -1,7 +1,7 @@
 ---
 title: "⁦ethereum.org⁩ کے بارے میں"
 metaTitle: "ہمارے بارے میں"
-description: "ٹیم، کمیونٹی اور ⁦ethereum.org⁩ کے مشن کے بارے میں"
+description: "⁦ethereum.org⁩ کے پیچھے موجود ٹیم اور کمیونٹی سے ملیں: ہمارا مشن، سائٹ کو کس طرح کھلے عام بنایا اور چلایا جاتا ہے، اور آپ اسے بہتر بنانے میں کس طرح مدد کر سکتے ہیں۔"
 lang: ur
 ---
 
@@ -107,9 +107,11 @@ lang: ur
 
 ## ڈیزائن سسٹم {#design-system}
 
-ہم نے فیچرز کو زیادہ تیزی سے پیش کرنے اور کمیونٹی کے اراکین کو <span dir="ltr">ethereum.org</span> کے اوپن ڈیزائن میں حصہ لینے کی اجازت دینے کے لیے ایک [ڈیزائن سسٹم](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) بنایا اور جاری کیا۔
+ہم نے فیچرز کو زیادہ تیزی سے پیش کرنے اور کمیونٹی ممبران کو <span dir="ltr">ethereum.org</span> کے اوپن ڈیزائن میں حصہ لینے کی اجازت دینے کے لیے ایک [ڈیزائن سسٹم](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) بنایا اور جاری کیا ہے۔
 
-شامل ہونا چاہتے ہیں؟ [<span dir="ltr">Figma</span> میں ساتھ چلیں](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) اور ہمارے [<span dir="ltr">#design</span> ڈسکارڈ چینل](/discord/) میں گفتگو میں شامل ہوں۔
+شامل ہونا چاہتے ہیں؟ [Figma میں ساتھ چلیں](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) اور ہمارے [<span dir="ltr">#design</span> ڈسکارڈ چینل](/discord/) میں گفتگو میں شامل ہوں۔
+
+لوگو، عکاسی یا دیگر برانڈ فائلیں تلاش کر رہے ہیں؟ انہیں ہمارے [اثاثوں کے صفحے](/assets/) سے ڈاؤن لوڈ کریں۔
 
 ## اسٹائل گائیڈ {#style-guide}
 
@@ -122,6 +124,10 @@ lang: ur
 ## لائسنس {#license}
 
 <span dir="ltr">ethereum.org</span> ویب سائٹ اوپن سورس ہے اور اسے [<span dir="ltr">MIT License</span>](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) کے تحت بنایا گیا ہے جب تک کہ دوسری صورت میں متعین نہ کیا گیا ہو۔ <span dir="ltr">ethereum.org</span> کے [استعمال کی شرائط](/terms-of-use/) کے بارے میں مزید۔
+
+## آپ کی رازداری {#your-privacy}
+
+<span dir="ltr">ethereum.org</span> رازداری کو محفوظ رکھنے والے تجزیات کے لیے <span dir="ltr">Matomo</span> کا استعمال کرتا ہے، اور آپ کسی بھی وقت آپٹ آؤٹ کر سکتے ہیں۔ تفصیلات کے لیے ہماری [کوکی پالیسی](/cookie-policy/) اور [رازداری کی پالیسی](/privacy-policy/) پڑھیں۔
 
 ## کھلی آسامیاں {#open-jobs}
 

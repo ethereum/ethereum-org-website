@@ -78,7 +78,7 @@ contract VendingMachine {
 
 不幸的是，如果单独使用，单元测试在提高智能合约安全性方面效果甚微。单元测试可能证明函数对于模拟数据执行正确，但单元测试的有效性仅取决于编写的测试。这使得很难检测到可能破坏智能合约安全性的遗漏边缘情况和漏洞。
 
-更好的方法是将单元测试与使用[静态和动态分析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)执行的基于属性的测试相结合。静态分析依赖于底层表示，例如[控制流图](https://en.wikipedia.org/wiki/Control-flow_graph)和[抽象语法树](https://deepsource.io/glossary/ast/)，来分析可达的程序状态和执行路径。同时，动态分析技术（例如[智能合约模糊测试](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)）使用随机输入值执行合约代码，以检测违反安全属性的操作。
+更好的方法是将单元测试与使用[静态和动态分析](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts)执行的基于属性的测试相结合。静态分析依赖于底层表示，例如[控制流图](https://en.wikipedia.org/wiki/Control-flow_graph)和[抽象语法树](https://deepsource.io/glossary/ast/)，来分析可达的程序状态和执行路径。同时，动态分析技术（例如[智能合约模糊测试](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)）使用随机输入值执行合约代码，以检测违反安全属性的操作。
 
 [形式化验证](/developers/docs/smart-contracts/formal-verification)是另一种验证智能合约中安全属性的技术。与常规测试不同，形式化验证可以最终证明智能合约中不存在错误。这是通过创建一个捕获所需安全属性的形式化规范，并证明合约的形式化模型遵守该规范来实现的。
 
@@ -99,7 +99,7 @@ contract VendingMachine {
 
 建立漏洞赏金计划是实施外部代码审查的另一种方法。漏洞赏金是给予发现应用程序漏洞的个人（通常是白帽黑客）的财务奖励。
 
-如果使用得当，漏洞赏金会激励黑客社区的成员检查你的代码是否存在严重缺陷。一个真实的例子是“无限金钱漏洞”，该漏洞本可以让攻击者在 [Optimism](https://www.optimism.io/)（一个在以太坊上运行的[二层网络 (l2)](/layer-2/) 协议）上创建无限数量的以太币。幸运的是，一位白帽黑客[发现了这个缺陷](https://www.saurik.com/optimism.html)并通知了团队，[在此过程中获得了巨额奖金](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/)。
+如果使用得当，漏洞赏金会激励黑客社区的成员检查你的代码是否存在严重缺陷。一个真实的例子是“无限金钱漏洞”，该漏洞本可以让攻击者在 [Optimism](https://www.optimism.io/)（一个在以太坊上运行的[二层网络 (L2)](/layer-2/) 协议）上创建无限数量的以太币。幸运的是，一位白帽黑客[发现了这个缺陷](https://www.saurik.com/optimism.html)并通知了团队，[在此过程中获得了巨额奖金](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/)。
 
 一个有用的策略是根据面临风险的资金数额按比例设置漏洞赏金计划的奖金。这种被称为“[可扩展漏洞赏金](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)”的方法为个人提供了财务激励，鼓励他们负责任地披露漏洞而不是利用它们。
 
@@ -435,7 +435,7 @@ contract Attack {
 
 ##### 如何防止整数下溢和溢出
 
-从 0.8.0 版本开始，Solidity 编译器拒绝导致整数下溢和溢出的代码。但是，使用较低编译器版本编译的合约应该对涉及算术运算的函数执行检查，或者使用检查下溢/溢出的库（例如 [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)）。
+从 0.8.0 版本开始，Solidity 编译器拒绝导致整数下溢和溢出的代码。但是，使用较低编译器版本编译的合约应该对涉及算术运算的函数执行检查，或者使用检查下溢/溢出的库（例如 [SafeMath](https://docs.openzeppelin.com/contracts/3.x/api/math)）。
 
 #### 预言机操纵 {#oracle-manipulation}
 
@@ -463,9 +463,9 @@ DEX 价格通常是准确的，这在很大程度上归功于套利者恢复了�
 
 - **[形式化验证工具](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _用于验证智能合约功能正确性并检查不变量的工具。_
 
-- **[智能合约审计服务](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _为以太坊开发项目提供智能合约审计服务的组织列表。_
+- **[智能合约审计服务](#smart-contract-auditing-services)** - _为以太坊开发项目提供智能合约审计服务的组织列表。_
 
-- **[漏洞赏金平台](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _用于协调漏洞赏金并奖励负责任地披露智能合约中严重漏洞的平台。_
+- **[漏洞赏金平台](#bug-bounty-platforms)** - _用于协调漏洞赏金并奖励负责任地披露智能合约中严重漏洞的平台。_
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _一个免费的在线工具，用于检查有关分叉合约的所有可用信息。_
 
@@ -565,9 +565,7 @@ DEX 价格通常是准确的，这在很大程度上归功于套利者恢复了�
 
 - [如何编写安全的智能合约](/developers/tutorials/secure-development-workflow/)
 
-- [如何使用斯莱瑟查找智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-
-- [如何使用曼蒂科尔查找智能合约漏洞](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [如何使用 Slither 寻找智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [智能合约安全指南](/developers/tutorials/smart-contract-security-guidelines/)
 

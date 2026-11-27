@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: "Aprenda sobre la actualización del protocolo Pectra"
+description: "Pectra se activó el 7 de mayo de 2025. Descubra qué cambió esta actualización de Ethereum, incluidas las cuentas inteligentes del EIP-7702 y un saldo máximo de validador de 2048 ETH."
 lang: es
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -75,9 +75,9 @@ El nuevo precompilado agrega la capacidad para que cada desarrollador realice de
 
 ### Servir hashes de bloques históricos desde el estado {#2935}
 
-La EVM actualmente proporciona el código de operación `BLOCKHASH` que permite a los desarrolladores de contratos recuperar el hash de un bloque directamente en la capa de ejecución. Sin embargo, esto se limita solo a los últimos 256 bloques y podría volverse problemático para los clientes sin estado en el futuro.
+Actualmente, la EVM proporciona el código de operación `BLOCKHASH` que permite a los desarrolladores de contratos recuperar el hash de un bloque directamente en la capa de ejecución. Sin embargo, esto se limita solo a los últimos 256 bloques y podría volverse problemático para los clientes sin estado en el futuro.
 
-[EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) crea un nuevo contrato de sistema que puede servir los últimos 8192 hashes de bloques como ranuras de almacenamiento. Esto ayuda a preparar el protocolo para el futuro para la ejecución sin estado y se vuelve más eficiente cuando se adoptan los árboles verkle. Sin embargo, aparte de esto, los rollups pueden beneficiarse de esto de inmediato, ya que pueden consultar el contrato directamente con una ventana histórica más larga.
+El [EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) crea un nuevo contrato de sistema que puede servir los últimos 8192 hashes de bloques como ranuras de almacenamiento. Esto ayuda a preparar el protocolo para el futuro de cara a la ejecución sin estado. Sin embargo, aparte de esto, los rollups pueden beneficiarse de esto de inmediato, ya que pueden consultar el contrato directamente con una ventana histórica más amplia.
 
 ### Mover el índice del comité fuera de la atestación {#7549}
 

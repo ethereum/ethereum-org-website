@@ -10,7 +10,9 @@ import {
   useState,
 } from "react"
 
+import { useCatalogModal } from "@/components/CatalogDetailModal"
 import FilterableCatalog from "@/components/FilterableCatalog"
+import CatalogFiltersHeader from "@/components/FilterableCatalog/CatalogFiltersHeader"
 import type {
   CatalogFilterState,
   CatalogSelectOption,
@@ -34,7 +36,7 @@ import WalletFilters, {
   LANGUAGE_KEY,
   NETWORKS_KEY,
   PURCHASES_KEY,
-  WalletFiltersHeader,
+  trackFiltersReset,
 } from "./WalletFilters"
 import WalletPersonaCards, {
   type WalletPersonaCard,
@@ -286,7 +288,11 @@ export default function WalletsCatalog({
   const [filtered, setFiltered] = useState(() =>
     wallets.filter((wallet) => filterWallet(wallet, selection, ""))
   )
-  const [openSlug, setOpenSlug] = useState<string | null>(null)
+  const {
+    openId: openSlug,
+    open: openWalletModal,
+    close: closeWalletModal,
+  } = useCatalogModal()
   // Persona pages render only their subset until interaction, so crawlers index it.
   const [revealAll, setRevealAll] = useState(!initialPersonaId)
   const urlRead = useRef(false)
@@ -370,39 +376,6 @@ export default function WalletsCatalog({
     trackEmptyStateReset()
   }, [])
 
-  // The click paints immediately; the Dialog and its tooltips mount in a
-  // transition, like the intercepted route used to.
-  const openWalletModal = useCallback(
-    (slug: string) => startTransition(() => setOpenSlug(slug)),
-    []
-  )
-
-  const closeWalletModal = useCallback(() => {
-    setOpenSlug(null)
-    // Drop the entry we pushed, or Back would have to be pressed twice.
-    if (window.history.state?.walletModal) window.history.back()
-  }, [])
-
-  // Extra entry so Back closes the modal. Pushed a frame late (pushState inside
-  // the click costs +500ms INP) via the native method (Next patches the other).
-  useEffect(() => {
-    if (!openSlug) return
-    const frame = requestAnimationFrame(() => {
-      History.prototype.pushState.call(
-        window.history,
-        { ...window.history.state, walletModal: openSlug },
-        "",
-        window.location.href
-      )
-    })
-    const close = () => setOpenSlug(null)
-    window.addEventListener("popstate", close)
-    return () => {
-      cancelAnimationFrame(frame)
-      window.removeEventListener("popstate", close)
-    }
-  }, [openSlug])
-
   const openWallet = openSlug
     ? wallets.find((wallet) => wallet.slug === openSlug)
     : undefined
@@ -432,10 +405,12 @@ export default function WalletsCatalog({
           labels={labels.catalog}
           onReset={onReset}
           renderSidebarHeader={({ state, setFilter }) => (
-            <WalletFiltersHeader
+            <CatalogFiltersHeader
               state={state}
               setFilter={setFilter}
+              keys={ALL_FILTER_KEYS}
               labels={labels.header}
+              onReset={trackFiltersReset}
             />
           )}
           renderSidebar={({ state, setFilter }) => (

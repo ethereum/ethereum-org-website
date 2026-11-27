@@ -1,7 +1,7 @@
 ---
 title: "Hegotá"
 metaTitle: "Heze-Bogotá (Hegotá)"
-description: "Hegotáプロトコル・アップグレードについて学ぶ"
+description: "Hegotáは、グラムステルダムに続く予定のイーサリアムのアップグレードです。検閲耐性のための目玉機能であるFOCILや、アカウント向けのフレーム・トランザクションについて解説します。"
 lang: ja
 template: upgrade
 ---

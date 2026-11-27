@@ -1,6 +1,6 @@
 ---
-title: Delegowany staking (staking jako usługa)
-description: Przegląd informacji o tym, jak zacząć delegowany staking
+title: "Delegowany staking (staking jako usługa)"
+description: "Czym jest staking jako usługa? Dowiedz się, jak zdeponować 32 ETH, podczas gdy operator węzła obsługuje Twój walidator, oraz poznaj kompromisy w porównaniu ze stakingiem solo lub grupowym."
 lang: pl
 template: staking
 image: /images/staking/leslie-saas.png

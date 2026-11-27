@@ -315,7 +315,7 @@ contract Token {
 pragma solidity ^0.5.10;
 
 // 他のファイルから現在のコントラクトにシンボルをインポートします。
-// この場合、OpenZeppelinの一連のヘルパー・コントラクトです。
+// この場合、OpenZeppelinからの一連のヘルパーコントラクトです。
 // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -327,8 +327,8 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // この場合、`CryptoPizza`は`IERC721`および`ERC165`コントラクトを継承します。
 // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
-    // OpenZeppelinのSafeMathライブラリを使用して、算術演算を安全に実行します。
-    // 詳細はこちら: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // 算術演算を安全に実行するために、OpenZeppelinのSafeMathライブラリを使用します。
+    // 詳細はこちら: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
     // Solidityの定数の状態変数は他の言語と似ていますが、
@@ -338,17 +338,17 @@ contract CryptoPizza is IERC721, ERC165 {
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // 構造体（Struct）型を使用すると、独自の型を定義できます
+    // 構造体型を使用すると、独自の型を定義できます。
     // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Pizza構造体の空の配列を作成します
+    // Pizza構造体の空の配列を作成します。
     Pizza[] public pizzas;
 
-    // ピザのIDからその所有者のアドレスへのマッピング
+    // ピザIDからその所有者のアドレスへのマッピング
     mapping(uint256 => address) public pizzaToOwner;
 
     // 所有者のアドレスから所有するトークン数へのマッピング
@@ -357,23 +357,23 @@ contract CryptoPizza is IERC721, ERC165 {
     // トークンIDから承認されたアドレスへのマッピング
     mapping(uint256 => address) pizzaApprovals;
 
-    // マッピングはネストできます。この例では、所有者からオペレーターの承認へマッピングします
+    // マッピングはネストできます。この例では、所有者をオペレーターの承認にマッピングします。
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
     // 文字列（名前）とDNAからランダムなPizzaを作成する内部関数
     function _createPizza(string memory _name, uint256 _dna)
-        // `internal`キーワードは、この関数がこのコントラクトおよび
-        // このコントラクトを継承するコントラクト内でのみ参照可能であることを意味します
+        // `internal`キーワードは、この関数が
+        // このコントラクトおよびこのコントラクトを継承するコントラクト内でのみ参照可能であることを意味します。
         // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique`は、ピザがすでに存在するかどうかを確認する関数修飾子です
+        // `isUnique`は、ピザがすでに存在するかどうかを確認する関数修飾子です。
         // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Pizzaの配列にPizzaを追加し、IDを取得します
+        // Pizzaの配列にPizzaを追加し、IDを取得します。
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // Pizzaの所有者が現在のユーザーと同じであることを確認します
+        // Pizzaの所有者が現在のユーザーと同じであることを確認します。
         // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
         // address(0)はゼロアドレスであり、
@@ -381,7 +381,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Pizzaを所有者にマッピングします
+        // Pizzaを所有者にマッピングします。
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -389,37 +389,37 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // 文字列（名前）からランダムなPizzaを作成します
+    // 文字列（名前）からランダムなPizzaを作成します。
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // 文字列（名前）と所有者（作成者）のアドレスからランダムなDNAを生成します
+    // 文字列（名前）と所有者（作成者）のアドレスからランダムなDNAを生成します。
     function generateRandomDna(string memory _str, address _owner)
         public
-        // `pure`としてマークされた関数は、状態を読み取ったり変更したりしないことを約束します
+        // `pure`としてマークされた関数は、状態を読み取ったり変更したりしないことを約束します。
         // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // 文字列（名前）+ アドレス（所有者）からランダムなuintを生成します
+        // 文字列（名前）+ アドレス（所有者）からランダムなuintを生成します。
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // 所有者によって見つけられたPizzaの配列を返します
+    // 所有者によって見つけられたPizzaの配列を返します。
     function getPizzasByOwner(address _owner)
         public
-        // `view`としてマークされた関数は、状態を変更しないことを約束します
+        // `view`としてマークされた関数は、状態を変更しないことを約束します。
         // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // `memory`ストレージの場所を使用して、この関数呼び出しの
-        // ライフサイクル中のみ値を保存します。
+        // `memory`ストレージの場所を使用して、
+        // この関数呼び出しのライフサイクル中のみ値を保存します。
         // 詳細はこちら: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Pizzaと所有権を他のアドレスに転送します
+    // Pizzaと所有権を他のアドレスに転送します。
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -443,17 +443,16 @@ contract CryptoPizza is IERC721, ERC165 {
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // インポートされたIERC721コントラクトで定義されたイベントを発行します
+        // インポートされたIERC721コントラクトで定義されたイベントを発行します。
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * 指定されたトークンIDの所有権を別のアドレスに安全に転送します
-     * ターゲットのアドレスがコントラクトの場合、`onERC721Received`を実装している必要があります。
-     * これは安全な転送時に呼び出され、マジックバリュー
-     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`を返す必要があります。
-     * そうでない場合、転送は元に戻されます。
+     * 指定されたトークンIDの所有権を別のアドレスに安全に転送します。
+     * ターゲットのアドレスがコントラクトである場合、安全な転送時に呼び出される`onERC721Received`を実装し、
+     * マジックバリュー`bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`を返す必要があります。
+     * そうでない場合、転送はリバートされます。
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +462,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * 指定されたトークンIDの所有権を別のアドレスに安全に転送します
-     * ターゲットのアドレスがコントラクトの場合、`onERC721Received`を実装している必要があります。
-     * これは安全な転送時に呼び出され、マジックバリュー
-     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`を返す必要があります。
-     * そうでない場合、転送は元に戻されます。
+     * Safely transfers the ownership of a given token ID to another address
+     * If the target address is a contract, it must implement `onERC721Received`,
+     * which is called upon a safe transfer, and return the magic value
+     * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
+     * otherwise, the transfer is reverted.
      */
     function safeTransferFrom(
         address from,
@@ -480,8 +479,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * ターゲットのアドレスで`onERC721Received`を呼び出す内部関数
-     * ターゲットのアドレスがコントラクトでない場合、呼び出しは実行されません
+     * Internal function to invoke `onERC721Received` on a target address
+     * The call is not executed if the target address is not a contract
      */
     function _checkOnERC721Received(
         address from,
@@ -502,9 +501,9 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Pizzaをバーンします - トークンを完全に破壊します
-    // `external`関数修飾子は、この関数が
-    // コントラクトのインターフェースの一部であり、他のコントラクトがそれを呼び出せることを意味します
+    // Burns a Pizza - destroys Token completely
+    // The `external` function modifier means this function is
+    // part of the contract interface and other contracts can call it
     function burn(uint256 _pizzaId) external {
         require(msg.sender != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -517,26 +516,26 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // アドレスごとのPizzaの数を返します
+    // Returns count of Pizzas by address
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // IDで見つけられたPizzaの所有者を返します
+    // Returns owner of the Pizza found by id
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
         require(owner != address(0), "Invalid Pizza ID.");
         return owner;
     }
 
-    // Pizzaの所有権を転送するために他のアドレスを承認します
+    // Approves other address to transfer ownership of Pizza
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // 特定のPizzaの承認されたアドレスを返します
+    // Returns approved address for specific Pizza
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -547,8 +546,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * 指定されたトークンIDの現在の承認をクリアするプライベート関数
-     * 指定されたアドレスが実際にトークンの所有者でない場合は元に戻されます
+     * Private function to clear current approval of a given token ID
+     * Reverts if the given address is not indeed the owner of the token
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,8 +558,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * 指定されたオペレーターの承認を設定または解除します
-     * オペレーターは、送信者に代わって送信者のすべてのトークンを転送することが許可されます
+     * 指定されたオペレーターの承認を設定または解除します。
+     * オペレーターは、送信者に代わって送信者のすべてのトークンを転送することが許可されます。
      */
     function setApprovalForAll(address to, bool approved) public {
         require(to != msg.sender, "Cannot approve own address");
@@ -568,7 +567,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // オペレーターが指定された所有者によって承認されているかどうかを伝えます
+    // Tells whether an operator is approved by a given owner
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -577,35 +576,35 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Pizzaの所有権を取得します - 承認されたユーザーのみ
+    // Takes ownership of Pizza - only for approved users
     function takeOwnership(uint256 _pizzaId) public {
         require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Pizzaが存在するかどうかを確認します
+    // Checks if Pizza exists
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // アドレスが所有者であるか、Pizzaの転送を承認されているかを確認します
+    // Checks if address is owner or is approved to transfer Pizza
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // 以下の理由によりsoliumのチェックを無効にします
-        // https://github.com/duaraghav8/Solium/issues/175
+        // Disable solium check because of
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
             this.isApprovedForAll(owner, spender));
     }
 
-    // Pizzaが一意であり、まだ存在しないかどうかを確認します
+    // Check if Pizza is unique and doesn't exist yet
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -621,15 +620,15 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // ターゲットのアドレスがコントラクトであるかどうかを返します
+    // Returns whether the target address is a contract
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // 現在、アドレスにコントラクトがあるかどうかを確認するより良い方法は、
-        // そのアドレスのコードのサイズを確認すること以外にありません。
-        // https://ethereum.stackexchange.com/a/14016/36603 を参照してください
-        // これがどのように機能するかの詳細について。
-        // TODO: Serenityリリースの前にこれを再確認してください。なぜなら、すべてのアドレスが
-        // その時にはコントラクトになるからです。
+        // Currently there is no better way to check if there is a contract in an address
+        // than to check the size of the code at that address.
+        // See https://ethereum.stackexchange.com/a/14016/36603
+        // for more details about how this works.
+        // TODO Check this again before the Serenity release, because all addresses will be
+        // contracts then.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

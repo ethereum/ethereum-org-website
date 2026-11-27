@@ -1,6 +1,6 @@
 ---
 title: "Onarıcı Finans (ReFi)"
-description: "ReFi'ye ve mevcut kullanım durumlarına genel bir bakış."
+description: "Onarıcı finans (ReFi) nedir? Ethereum araçlarının kalıcı olumlu etki yaratan kamu mallarını, iklim eylemini ve topluluk projelerini nasıl finanse ettiğini öğrenin."
 lang: tr
 template: use-cases
 sidebarDepth: 2

@@ -6,6 +6,7 @@ import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
 import ContentFeedback from "@/components/ContentFeedback"
+import { mdxDiagramComponents } from "@/components/Diagrams/mdx-diagram-components"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FileContributors from "@/components/FileContributors"
@@ -23,6 +24,7 @@ import { getEditPath } from "@/lib/utils/editPath"
 
 export const tutorialsComponents = {
   ...mdxTableComponents,
+  ...mdxDiagramComponents,
   ButtonLink,
   CallToContribute,
   Card: MarkdownCard,
@@ -67,11 +69,8 @@ export const TutorialLayout = ({
       >
         <MainArticle className="flow">
           <Breadcrumbs
-            slug={[
-              ...slug.split("/").slice(0, -1),
-              frontmatter.breadcrumb || slug.split("/").slice(-1),
-            ].join("/")}
-            startDepth={1}
+            slug={slug}
+            label={frontmatter.breadcrumb || frontmatter.title}
           />
           <h1>{frontmatter.title}</h1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />

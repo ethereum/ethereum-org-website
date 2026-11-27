@@ -1,6 +1,6 @@
 ---
 title: Usanifu na UX katika Web3
-description: Utangulizi wa usanifu wa UX na utafiti katika nafasi ya Web3 na Ethereum
+description: "Utangulizi wa usanifu na UX katika Web3: utafiti, ruwaza na rasilimali za kukusaidia kujenga programu za Ethereum ambazo ni rahisi, salama na wazi kutumia."
 lang: sw
 ---
 

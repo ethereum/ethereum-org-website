@@ -1,6 +1,6 @@
 ---
-title: Crie o seu próprio nó do Ethereum
-description: Introdução geral sobre como executar a sua própria instância de um cliente Ethereum.
+title: "Crie o seu próprio nó do Ethereum"
+description: "Introdução geral sobre como executar a sua própria instância de um cliente Ethereum."
 lang: pt-br
 sidebarDepth: 2
 ---
@@ -21,7 +21,7 @@ O primeiro passo para criar o seu nó é escolher a sua abordagem. Com base nos 
 
 Esta página guiará você por essas decisões e ajudará a encontrar a maneira mais adequada de executar a sua instância do Ethereum.
 
-Para escolher entre as implementações de clientes, veja todos os [clientes de execução](/developers/docs/nodes-and-clients/#execution-clients) e [clientes de consenso](/developers/docs/nodes-and-clients/#consensus-clients) disponíveis e prontos para a Mainnet e aprenda sobre a [diversidade de clientes](/developers/docs/nodes-and-clients/client-diversity).
+Para escolher entre as implementações de clientes, veja todos os [clientes de execução](/developers/docs/nodes-and-clients/#execution-clients) e [clientes de consenso](/developers/docs/nodes-and-clients/#consensus-clients) disponíveis e prontos para a Mainnet, e aprenda sobre a [diversidade de clientes](/developers/docs/nodes-and-clients/client-diversity).
 
 Decida se deseja executar o software no seu próprio [hardware ou na nuvem](#local-vs-cloud), considerando os [requisitos](#requirements) dos clientes.
 
@@ -29,7 +29,7 @@ Após preparar o ambiente, instale os clientes escolhidos com uma [interface ami
 
 Quando o nó estiver em execução e sincronizando, você estará pronto para [usá-lo](#using-the-node), mas certifique-se de ficar de olho na sua [manutenção](#operating-the-node).
 
-![Configuração do cliente](./diagram.png)
+<ClientSetupDiagram />
 
 ### Ambiente e hardware {#environment-and-hardware}
 
@@ -69,7 +69,7 @@ O gargalo para o seu hardware é principalmente o espaço em disco. A sincroniza
 
 O tamanho do banco de dados e a velocidade da sincronização inicial dependem do cliente escolhido, da sua configuração e da [estratégia de sincronização](/developers/docs/nodes-and-clients/#sync-modes).
 
-Certifique-se também de que a sua conexão com a internet não seja limitada por um [limite de largura de banda](https://wikipedia.org/wiki/Data_cap). É recomendado usar uma conexão não medida, pois a sincronização inicial e os dados transmitidos para a rede podem exceder o seu limite.
+Certifique-se também de que a sua conexão com a internet não seja limitada por um [limite de largura de banda](https://wikipedia.org/wiki/Data_cap). É recomendado usar uma conexão não medida, já que a sincronização inicial e os dados transmitidos para a rede podem exceder o seu limite.
 
 ##### Sistema operacional
 
@@ -79,12 +79,12 @@ Todos os clientes suportam os principais sistemas operacionais - Linux, macOS, W
 
 - CPU com 2+ núcleos
 - 16 GB de RAM (32 GB recomendados para estabilidade)
-- SSD NVMe de 2 TB (provavelmente excedido até 2027, leia mais sobre [SSDs ótimos e menos ótimos para nós do Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- SSD NVMe de 4 TB (cobre um nó com o histórico completo da cadeia, além de espaço para crescer, veja os tamanhos de disco dos clientes abaixo; leia mais sobre [SSDs ótimos e não tão ótimos para nós do Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
 - Largura de banda de 25+ MBit/s
 
 ##### Especificações recomendadas
 
-A orientação atual de hardware para operadores de nós é identificada na [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Para um nó completo, recomenda-se:
+A orientação atual de hardware para operadores de nós é identificada na [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Para um nó completo, ela recomenda:
 
 - CPU rápida com 4+ núcleos (8+ núcleos se for um validador)
 - 32 GB de RAM (64 GB recomendados se for um validador para garantir a estabilidade)
@@ -93,17 +93,18 @@ A orientação atual de hardware para operadores de nós é identificada na [EIP
 
 O modo de sincronização e o cliente que você escolher afetarão os requisitos de espaço, mas estimamos o espaço em disco que você precisará para cada cliente abaixo.
 
-| Cliente    | Tamanho em disco (sincronização snap) | Tamanho em disco (arquivo completo) |
-| ---------- | ------------------------------------- | ----------------------------------- |
-| Besu       | 800GB+                                | 12TB+                               |
-| Erigon     | N/A                                   | 2.5TB+                              |
-| Geth       | 500GB+                                | 12TB+                               |
-| Nethermind | 500GB+                                | 12TB+                               |
-| Reth       | N/A                                   | 2.2TB+                              |
+| Cliente    | Tamanho do disco (nó completo) | Tamanho do disco (arquivo completo) |
+| ---------- | ------------------------------ | ----------------------------------- |
+| Besu       | 1.8TB+                         | 12TB+                               |
+| Erigon     | 1.7TB+                         | 2.7TB+                              |
+| Geth       | 1.8TB+                         | 2TB+                                |
+| Nethermind | 1.7TB+                         | 14TB+                               |
+| Reth       | 2.2TB+                         | 2.8TB+                              |
 
-- Nota: Erigon e Reth não oferecem sincronização snap, mas a Poda Completa (Full Pruning) é possível (~2TB para Erigon, ~1.2TB para Reth)
+- Nota: Os tamanhos de nó completo mantêm o histórico completo da cadeia e foram medidos em setembro de 2026 pelo [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Clientes que suportam a expiração de histórico precisam de menos: cerca de 1.2-1.4TB apenas com o histórico pós-The Merge, ou cerca de 400-650GB com expiração contínua (ainda não suportado pelo Geth).
+- Nota: Os tamanhos de arquivo vêm da documentação de cada cliente ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). O valor do Geth é para o seu arquivo baseado em caminho; manter o histórico da trie também ocupa cerca de 6.5TB. O valor do Nethermind data de julho de 2023 e cresceu desde então.
 
-Para clientes de consenso, o requisito de espaço também depende da implementação do cliente e dos recursos ativados (por exemplo, penalizador de validador), mas geralmente conte com mais 200 GB necessários para os dados do beacon. Com um grande número de validadores, a carga de largura de banda também cresce. Você pode encontrar [detalhes sobre os requisitos do cliente de consenso nesta análise](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Para clientes de consenso, o requisito de espaço também depende da implementação do cliente e dos recursos ativados (por exemplo, penalizador de validador), mas geralmente conte com mais 15-90GB para dados do beacon, além de cerca de 500GB de dados de blob se estiver executando um supernó. Com um grande número de validadores, a carga de largura de banda também cresce. Você pode encontrar [detalhes sobre os requisitos do cliente de consenso nesta análise](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Soluções plug-and-play {#plug-and-play}
 
@@ -459,7 +460,7 @@ Cada implementação de cliente tem uma string de versão legível por humanos u
 
 #### Executando serviços adicionais {#running-additional-services}
 
-Executar o seu próprio nó permite que você use serviços que exigem acesso direto ao RPC do cliente Ethereum. Estes são serviços construídos sobre o Ethereum, como [soluções de camada 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend para carteiras, exploradores de blocos, ferramentas de desenvolvedor e outras infraestruturas do Ethereum.
+Executar o seu próprio nó permite que você use serviços que exigem acesso direto ao RPC do cliente Ethereum. Estes são serviços construídos sobre o Ethereum, como [soluções de camada 2 (L2)](/developers/docs/scaling/#layer-2-scaling), backend para carteiras, exploradores de blocos, ferramentas de desenvolvedor e outras infraestruturas do Ethereum.
 
 #### Monitorando o nó {#monitoring-the-node}
 

@@ -1,6 +1,6 @@
 ---
 title: Cara menukar token
-description: Panduan tentang cara menukar token di Ethereum.
+description: "Panduan langkah demi langkah untuk menukar token di Ethereum: hubungkan dompet Anda ke bursa terdesentralisasi, tinjau biaya dan selisih harga, dan konfirmasi perdagangan."
 lang: id
 ---
 

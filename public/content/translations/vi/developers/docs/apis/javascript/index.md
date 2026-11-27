@@ -300,9 +300,7 @@ _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho b�
 
 ## Các hướng dẫn liên quan {#related-tutorials}
 
-- [Thiết lập Web3js để sử dụng chuỗi khối Ethereum trong JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Hướng dẫn thiết lập web3.js trong dự án của bạn._
-- [Gọi một hợp đồng thông minh từ JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Sử dụng token DAI, xem cách gọi hàm của hợp đồng bằng JavaScript._
-- [Gửi giao dịch bằng web3 và Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Hướng dẫn từng bước để gửi giao dịch từ backend._
+- [Gửi giao dịch bằng Web3 và Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Hướng dẫn từng bước để gửi giao dịch từ backend._
 
 ## Hướng dẫn: API JavaScript & WebSocket trên Ethereum {#tutorials}
 

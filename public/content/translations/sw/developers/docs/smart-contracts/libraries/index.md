@@ -56,7 +56,7 @@ Mfano mwingine maarufu ni [SafeMath](https://docs.openzeppelin.com/contracts/3.x
 
 Ili kuwezesha [utangamano na mwingiliano](/developers/docs/smart-contracts/composability/), jumuiya ya Ethereum imefafanua viwango kadhaa katika mfumo wa **ERCs**. Unaweza kusoma zaidi kuzihusu katika sehemu ya [viwango](/developers/docs/standards/).
 
-Unapojumuisha ERC kama sehemu ya mikataba yako, ni wazo zuri kutafuta utekelezaji wa kiwango badala ya kujaribu kuunda chako mwenyewe. Maktaba nyingi za mkataba mahiri zinajumuisha utekelezaji wa ERCs maarufu zaidi. Kwa mfano, [kiwango cha tokheni mbadala cha ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) kilichoenea kila mahali kinaweza kupatikana katika [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) na [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Zaidi ya hayo, baadhi ya ERCs pia hutoa utekelezaji wa kikanoniki kama sehemu ya ERC yenyewe.
+Unapojumuisha ERC kama sehemu ya mikataba yako, ni wazo zuri kutafuta utekelezaji wa kiwango badala ya kujaribu kuunda chako mwenyewe. Maktaba nyingi za mkataba mahiri zinajumuisha utekelezaji wa ERCs maarufu zaidi. Kwa mfano, [kiwango cha tokheni mbadala cha ERC-20](/developers/docs/standards/tokens/erc-20/) kilichoenea kila mahali kinaweza kupatikana katika [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) na [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Zaidi ya hayo, baadhi ya ERCs pia hutoa utekelezaji wa kikanoniki kama sehemu ya ERC yenyewe.
 
 Inafaa kutaja kwamba baadhi ya ERCs hazijitegemei, bali ni nyongeza kwa ERCs nyingine. Kwa mfano, [ERC-2612](https://eips.ethereum.org/EIPS/eip-2612) inaongeza kiendelezi kwenye ERC-20 kwa ajili ya kuboresha utumizi wake.
 
@@ -109,8 +109,7 @@ Mwisho, unapoamua kama utajumuisha maktaba, zingatia matumizi yake kwa ujumla. I
 
 ## Mafunzo yanayohusiana {#related-tutorials}
 
-- [Mazingatio ya usalama kwa waundaji wa Ethereum](/developers/docs/smart-contracts/security/) _– Mafunzo kuhusu mazingatio ya usalama wakati wa kuunda mikataba mahiri, ikijumuisha matumizi ya maktaba._
-- [Elewa mkataba mahiri wa tokeni ya ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Mafunzo kuhusu kiwango cha ERC-20, kinachotolewa na maktaba nyingi._
+- [Mazingatio ya usalama kwa waundaji wa Ethereum](/developers/docs/smart-contracts/security/) _– Funzo kuhusu mazingatio ya usalama wakati wa kuunda mikataba mahiri, ikijumuisha matumizi ya maktaba._
 
 ## Usomaji zaidi {#further-reading}
 

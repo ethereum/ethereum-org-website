@@ -13,17 +13,17 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Kwa hivyo, umesikia kuhusu hii kitu inayoitwa Ethereum na uko tayari kuchunguza kwa kina? Chapisho hili litashughulikia kwa haraka baadhi ya misingi ya mnyororo wa vitalu, kisha litakuwezesha kuingiliana na nodi ya Ethereum iliyoigwa – kusoma data ya kitalu, kuangalia salio la akaunti, na kutuma miamala. Njiani, tutaangazia tofauti kati ya njia za kitamaduni za kuunda programu na mtazamo huu mpya uliogatuliwa.
 
-## Mahitaji (Mepesi) ya awali {#soft-prerequisites}
+## Mahitaji (yasiyo ya lazima sana) {#soft-prerequisites}
 
-Chapisho hili linalenga kufikiwa na anuwai ya wasanidi. [Zana za Python](/developers/docs/programming-languages/python/) zitahusika, lakini ni njia tu ya kuwasilisha mawazo – hakuna shida ikiwa wewe si msanidi wa Python. Hata hivyo, nitafanya dhana chache tu kuhusu kile unachojua tayari, ili tuweze kuendelea haraka na sehemu mahususi za Ethereum.
+Chapisho hili linalenga kufikiwa na wasanidi wengi. [Zana za Python](/developers/docs/programming-languages/python/) zitahusika, lakini ni njia tu ya kuwasilisha mawazo – hakuna shida ikiwa wewe si msanidi wa Python. Hata hivyo, nitafanya dhana chache tu kuhusu kile unachojua tayari, ili tuweze kuendelea haraka kwenye sehemu mahususi za Ethereum.
 
 Dhana:
 
 - Unaweza kutumia terminali,
 - Umeandika mistari michache ya msimbo wa Python,
-- Toleo la Python 3.6 au la juu zaidi limesakinishwa kwenye mashine yako (matumizi ya [mazingira pepe](https://realpython.com/effective-python-environment/#virtual-environments) yanahimizwa sana), na
-- umetumia `pip`, kisakinishi cha kifurushi cha Python.
-  Tena, ikiwa yoyote kati ya haya si kweli, au hupangi kurudia msimbo katika makala haya, bado unaweza kufuatilia vizuri tu.
+- Toleo la Python 3.10 au jipya zaidi limesakinishwa kwenye mashine yako (matumizi ya [mazingira pepe](https://realpython.com/effective-python-environment/#virtual-environments) yanapendekezwa sana), na
+- umetumia `pip`, kisakinishi cha vifurushi cha Python.
+  Tena, ikiwa yoyote kati ya haya si kweli, au huna mpango wa kuzalisha tena msimbo katika makala haya, bado unaweza kufuatilia vizuri tu.
 
 ## Minyororo ya vitalu, kwa ufupi {#blockchains-briefly}
 
@@ -79,15 +79,15 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 Katika mwongozo huu, tutakuwa tukifanya kazi ndani ya mkalimani wa Python. Hatutaunda saraka, faili, madarasa au vitendaji vyovyote.
 
-<FeaturedText>Kumbuka: Katika mifano hapa chini, amri zinazoanza na `$` zinakusudiwa kuendeshwa kwenye terminali. (Usiandike `$`, inaashiria tu mwanzo wa mstari.)</FeaturedText>
+<FeaturedText>Kumbuka: Katika mifano iliyo hapa chini, amri zinazoanza na `$` zinakusudiwa kuendeshwa kwenye terminali. (Usiandike `$`, inaashiria tu mwanzo wa mstari.)</FeaturedText>
 
-Kwanza, sakinisha [IPython](https://ipython.org/) kwa mazingira rafiki kwa mtumiaji ya kuchunguza. IPython inatoa ukamilishaji wa kichupo, miongoni mwa vipengele vingine, na kuifanya iwe rahisi zaidi kuona kile kinachowezekana ndani ya Web3.py.
+Kwanza, sakinisha [IPython](https://ipython.org/) kwa mazingira rafiki kwa mtumiaji ya kuchunguza. IPython inatoa ukamilishaji wa kichupo, miongoni mwa vipengele vingine, na kurahisisha sana kuona kile kinachowezekana ndani ya Web3.py.
 
 ```bash
 pip install ipython
 ```
 
-Web3.py imechapishwa chini ya jina `web3`. Isakinishe hivi:
+Web3.py inachapishwa chini ya jina `web3`. Isakinishe hivi:
 
 ```bash
 pip install web3
@@ -100,8 +100,6 @@ pip install 'web3[tester]'
 ```
 
 Uko tayari kuanza!
-
-Kumbuka: Kifurushi cha `web3[tester]` hufanya kazi hadi Python 3.10.xx
 
 ## Anzisha mazingira ya majaribio {#spin-up-a-sandbox}
 
@@ -127,12 +125,12 @@ In [1]: from web3 import Web3
 
 Kando na kuwa lango la Ethereum, moduli ya [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) inatoa vitendaji vichache vya urahisi. Hebu tuchunguze vichache.
 
-Katika programu ya Ethereum, kwa kawaida utahitaji kubadilisha thamani za sarafu. Moduli ya Web3 hutoa mbinu chache za usaidizi kwa ajili ya hili tu: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) na [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
+Katika programu ya Ethereum, utahitaji mara kwa mara kubadilisha viwango vya sarafu. Moduli ya Web3 inatoa mbinu chache za usaidizi kwa ajili ya hili: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) na [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
-Kumbuka: Kompyuta ni mbaya sana katika kushughulikia hesabu za desimali. Ili kuepuka hili, wasanidi mara nyingi huhifadhi kiasi cha dola katika senti. Kwa mfano, bidhaa yenye bei ya $5.99 inaweza kuhifadhiwa kwenye hifadhidata kama 599.
+Kumbuka: Kompyuta zinajulikana kwa kuwa mbaya katika kushughulikia hesabu za desimali. Ili kuepuka hili, wasanidi mara nyingi huhifadhi kiasi cha dola katika senti. Kwa mfano, bidhaa yenye bei ya $5.99 inaweza kuhifadhiwa kwenye hifadhidata kama 599.
 
-Mtindo sawa hutumiwa wakati wa kushughulikia miamala katika <b>Etha</b>. Hata hivyo, badala ya sehemu mbili za desimali, Etha ina 18! Thamani ndogo zaidi ya Etha inaitwa <b>Wei</b>, kwa hivyo hiyo ndiyo thamani inayobainishwa wakati wa kutuma miamala.
+Mtindo sawa hutumiwa wakati wa kushughulikia miamala katika <b>Etha</b>. Hata hivyo, badala ya sehemu mbili za desimali, Etha ina 18! Kiwango kidogo zaidi cha Etha kinaitwa <b>Wei</b>, kwa hivyo hiyo ndiyo thamani inayobainishwa wakati wa kutuma miamala.
 
 Etha 1 = Wei 1000000000000000000
 
@@ -140,7 +138,7 @@ Wei 1 = Etha 0.000000000000000001
 
 </FeaturedText>
 
-Jaribu kubadilisha baadhi ya thamani kwenda na kutoka Wei. Kumbuka kwamba [kuna majina kwa nyingi ya thamani](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) kati ya Etha na Wei. Moja ya zinazojulikana zaidi kati yao ni **Gwei**, kwani mara nyingi ndivyo ada za muamala zinavyowakilishwa.
+Jaribu kubadilisha baadhi ya thamani kwenda na kutoka Wei. Kumbuka kwamba [kuna majina kwa viwango vingi](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) kati ya Etha na Wei. Moja ya inayojulikana zaidi kati yao ni **Gwei**, kwani mara nyingi ndivyo ada za muamala zinavyowakilishwa.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
@@ -150,7 +148,7 @@ In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Mbinu zingine za matumizi kwenye moduli ya Web3 ni pamoja na vibadilishaji vya umbizo la data (k.m., [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), wasaidizi wa anwani (k.m., [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), na vitendaji vya heshi (k.m., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Nyingi ya hizi zitashughulikiwa baadaye katika mfululizo huu. Ili kutazama mbinu na sifa zote zinazopatikana, tumia ukamilishaji otomatiki wa IPython kwa kuandika `Web3`. na kubonyeza kitufe cha tab mara mbili baada ya nukta.
+Mbinu zingine za matumizi kwenye moduli ya Web3 ni pamoja na vibadilishaji vya umbizo la data (k.m., [`to_hex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_hex)), wasaidizi wa anwani (k.m., [`is_address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.is_address)), na vitendaji vya heshi (k.m., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Nyingi kati ya hizi zitashughulikiwa baadaye katika mfululizo huu. Ili kutazama mbinu na sifa zote zinazopatikana, tumia ukamilishaji otomatiki wa IPython kwa kuandika `Web3`. na kubonyeza kitufe cha tab mara mbili baada ya kituo.
 
 ## Wasiliana na mnyororo {#talk-to-the-chain}
 
@@ -170,7 +168,7 @@ Ingawa hii ni njia moja “halisi” ya kufanya hivyo, mchakato wa usawazishaji 
 
 _EthereumTesterProvider huunganisha kwenye nodi iliyoigwa na inafaa kwa mazingira ya haraka ya uundaji._
 
-Nodi hiyo iliyoigwa inaitwa [eth-tester](https://github.com/ethereum/eth-tester) na tuliisakinisha kama sehemu ya amri ya `pip install web3[tester]`. Kusanidi Web3.py kutumia mtoa huduma huyu wa majaribio ni rahisi kama:
+Nodi hiyo iliyoigwa inaitwa [eth-tester](https://github.com/ApeWorX/eth-tester) na tuliisakinisha kama sehemu ya amri ya `pip install web3[tester]`. Kusanidi Web3.py kutumia mtoa huduma huyu wa majaribio ni rahisi kama:
 
 ```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
@@ -292,10 +290,10 @@ Out[13]: 1000003000000000000000000
 
 Ya mwisho inaonekana nzuri! Salio lilitoka Etha 1,000,000 hadi 1,000,003. Lakini nini kilitokea kwa akaunti ya kwanza? Inaonekana imepoteza zaidi kidogo ya Etha tatu. Ala, hakuna kitu maishani kilicho cha bure, na kutumia mtandao wa umma wa Ethereum kunahitaji uwafidie marika wako kwa jukumu lao la kusaidia. Ada ndogo ya muamala ilikatwa kutoka kwa akaunti iliyowasilisha muamala - ada hii ni kiasi cha gesi iliyochomwa (yunit 21000 za gesi kwa hamisho la ETH) ikizidishwa na ada ya msingi ambayo inatofautiana kulingana na shughuli za mtandao pamoja na ada ya kipaumbele inayoenda kwa mthibitishaji anayejumuisha muamala kwenye kitalu.
 
-Zaidi kuhusu [gesi](/developers/docs/gas/#post-london)
+Zaidi kuhusu [gesi](/developers/docs/gas/)
 
 <FeaturedText>Kumbuka: Kwenye mtandao wa umma, ada za muamala zinabadilika kulingana na mahitaji ya mtandao na jinsi unavyotaka muamala uchakatwe haraka. Ikiwa una nia ya mchanganuo wa jinsi ada zinavyokokotolewa, tazama chapisho langu la awali kuhusu <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">jinsi miamala inavyojumuishwa kwenye kitalu</a>.</FeaturedText>
 
 ## Na pumua {#and-breathe}
 
-Tumekuwa tukifanya hivi kwa muda, kwa hivyo hapa panaonekana kuwa mahali pazuri pa kupumzika. Uchunguzi wa kina unaendelea, na tutaendelea kuchunguza katika sehemu ya pili ya mfululizo huu. Baadhi ya dhana zinazokuja: kuunganisha kwenye nodi halisi, mikataba mahiri, na tokeni. Una maswali ya ufuatiliaji? Nijulishe! Maoni yako yataathiri tunakoelekea kutoka hapa. Maombi yanakaribishwa kupitia [Twitter](https://twitter.com/wolovim).
+Tumekuwa tukifanya hivi kwa muda, kwa hivyo hapa panaonekana kuwa mahali pazuri pa kupumzika. Uchunguzi wa kina unaendelea, na tutaendelea kuchunguza katika sehemu ya pili ya mfululizo huu. Baadhi ya dhana zinazokuja: kuunganisha kwenye nodi halisi, mikataba mahiri, na tokeni. Una maswali ya ufuatiliaji? Nijulishe! Maoni yako yataathiri tunakoelekea kutoka hapa. Maombi yanakaribishwa kupitia [Twitter](https://x.com/wolovim).

@@ -1,18 +1,34 @@
 ---
 title: "Programa de traducción"
 lang: es
-description: "Información sobre el Programa de traducción de ethereum.org"
+description: "Ayude a traducir Ethereum revisando términos en su idioma en ETHGlossary. Los términos que apruebe son los que utiliza ethereum.org."
 ---
 
-El Programa de traducción fue un esfuerzo colaborativo para traducir ethereum.org a diferentes idiomas, haciendo que el sitio web sea más accesible para miles de millones de personas que no hablan inglés en todo el mundo.
+Ethereum debería leerse de forma natural en todos los idiomas. La mejor manera de ayudar en este momento es [ETHGlossary](https://glossary.ethereum.org/), un glosario compartido y revisado por la comunidad de términos de Ethereum en 24 idiomas.
+
+**Los términos que apruebe son los términos que ethereum.org utiliza en su idioma.** Las billeteras, las aplicaciones y los equipos de documentación también pueden utilizarlos, a través de la interfaz de programación de aplicaciones (API) abierta del glosario.
+
+<ButtonLink href="https://glossary.ethereum.org/translations">
+  Revisar términos en su idioma
+</ButtonLink>
 
 ![](./enterprise-eth.png)
 
+## Cómo funciona {#how-it-works}
+
+1. **Elija su idioma.** Todos los idiomas tienen el mismo conjunto de términos de Ethereum, cada uno con un borrador de traducción.
+2. **Revise un término.** Apruébelo, proponga una mejor alternativa o agregue contexto sobre cómo se utiliza en su comunidad.
+3. **Se publica.** Los términos revisados guían las traducciones de ethereum.org y se publican a través de la interfaz de programación de aplicaciones (API) de ETHGlossary.
+
+No hay ningún compromiso. Revisar un solo término toma un par de minutos.
+
+**Idiomas:** árabe, bengalí, chino (simplificado y tradicional), checo, francés, alemán, hindi, indonesio, italiano, japonés, coreano, maratí, polaco, portugués (Brasil), ruso, español, suajili, tamil, telugu, turco, ucraniano, urdu y vietnamita.
+
 ## Estado del programa {#program-status}
 
-El Programa de traducción de ethereum.org está llegando a su fin y ya no está realizando la incorporación de nuevos traductores. El proyecto de Crowdin se está cerrando y no aceptamos nuevos envíos de traducciones a través de él.
+La traducción de páginas completas a través de Crowdin está pausada y no estamos aceptando nuevos envíos de traducción allí. Revisar términos en [ETHGlossary](https://glossary.ethereum.org/) es la forma de contribuir mientras tanto.
 
-Estamos profundamente agradecidos con los miles de traductores de la comunidad que hicieron que ethereum.org estuviera disponible en docenas de idiomas a lo largo de los años; su trabajo sigue activo en el sitio y su reconocimiento en las páginas de [agradecimientos](/contributing/translation-program/acknowledgements/) y [colaboradores](/contributing/translation-program/contributors/) se mantiene.
+Estamos profundamente agradecidos con los miles de traductores de la comunidad que hicieron que ethereum.org estuviera disponible en docenas de idiomas a lo largo de los años; su trabajo sigue activo en el sitio, y su reconocimiento en las páginas de [agradecimientos](/contributing/translation-program/acknowledgements/) y [colaboradores](/contributing/translation-program/contributors/) se mantiene.
 
 Si detecta un error en una traducción existente, por favor [abra un issue en GitHub](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

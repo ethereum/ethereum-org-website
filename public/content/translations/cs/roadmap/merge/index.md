@@ -1,10 +1,10 @@
 ---
 title: Merge
-description: "Přečtěte si o Merge – kdy Ethereum Mainnet přešel na důkaz podílem (PoS)."
+description: "Přečtěte si o Merge, kdy Ethereum Mainnet v září 2022 přešel z důkazu prací (PoW) na důkaz podílem (PoS), čímž se jeho spotřeba energie snížila o zhruba 99,95 %."
 lang: cs
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "Ethereum Mainnet využívá důkaz podílem (PoS), ale nebylo tomu tak vždy."
   - "Aktualizace z původního mechanismu důkazu prací (PoW) na důkaz podílem (PoS) se nazývala Merge."
@@ -122,16 +122,16 @@ Merge také připravil půdu pro další aktualizace škálovatelnosti, které n
 ## Mylné představy o Merge {#misconceptions}
 
 <ExpandableCard
-title="Mýtus: &quot;Provozování uzlu vyžaduje staking 32 ETH.&quot;"
+title="Mylná představa: &quot;Provozování uzlu vyžaduje stakování 32 ETH.&quot;"
 contentPreview="Nepravda. Kdokoli si může svobodně synchronizovat vlastní, samostatně ověřenou kopii Etherea (tj. provozovat uzel). Není k tomu potřeba žádné ETH – ani před Merge, ani po Merge, prostě nikdy.">
 
 Existují dva typy uzlů Etherea: uzly, které mohou navrhovat bloky, a uzly, které nemohou.
 
-Uzly, které navrhují bloky, tvoří pouze malý počet z celkového počtu uzlů na Ethereu. Do této kategorie patří těžební uzly v rámci důkazu prací (PoW) a uzly validátorů v rámci důkazu podílem (PoS). Tato kategorie vyžaduje vložení ekonomických zdrojů (jako je hashovací výkon GPU u důkazu prací nebo stakované ETH u důkazu podílem) výměnou za možnost občas navrhnout další blok a získat odměny protokolu.
+Uzly, které navrhují bloky, tvoří pouze malou část z celkového počtu uzlů na Ethereu. Do této kategorie patří těžební uzly v rámci důkazu prací (PoW) a uzly validátorů v rámci důkazu podílem (PoS). Tato kategorie vyžaduje vložení ekonomických zdrojů (jako je výpočetní výkon GPU u důkazu prací nebo stakované ETH u důkazu podílem) výměnou za možnost občas navrhnout další blok a získat odměny protokolu.
 
-Ostatní uzly v síti (tj. většina) nemusí vkládat žádné ekonomické zdroje nad rámec běžného počítače s 1-2 TB dostupného úložiště a připojením k internetu. Tyto uzly nenavrhují bloky, ale přesto hrají klíčovou roli při zabezpečení sítě tím, že volají k odpovědnosti všechny navrhovatele bloků – naslouchají novým blokům a při jejich přijetí ověřují jejich platnost podle pravidel konsenzu sítě. Pokud je blok platný, uzel jej dále šíří sítí. Pokud je blok z jakéhokoli důvodu neplatný, software uzlu jej bude ignorovat jako neplatný a zastaví jeho šíření.
+Ostatní uzly v síti (tj. většina) nemusí vkládat žádné ekonomické zdroje nad rámec běžného počítače se 4 TB dostupného úložiště a připojením k internetu. Tyto uzly nenavrhují bloky, ale přesto hrají klíčovou roli při zabezpečení sítě tím, že dohlížejí na všechny navrhovatele bloků – naslouchají novým blokům a při jejich přijetí ověřují jejich platnost podle pravidel konsenzu sítě. Pokud je blok platný, uzel jej dále šíří sítí. Pokud je blok z jakéhokoli důvodu neplatný, software uzlu jej bude ignorovat jako neplatný a zastaví jeho šíření.
 
-Provozování uzlu, který neprodukuje bloky, je možné pro kohokoli v rámci obou mechanismů konsensu (důkaz prací i důkaz podílem); všem uživatelům se to <em>důrazně doporučuje</em>, pokud k tomu mají prostředky. Provozování uzlu je pro Ethereum nesmírně cenné a každému jednotlivci, který jej provozuje, přináší další výhody, jako je lepší bezpečnost, soukromí a odolnost vůči cenzuře.
+Provozování uzlu, který neprodukuje bloky, je možné pro kohokoli v rámci obou mechanismů konsensu (důkazu prací i důkazu podílem); <em>důrazně se doporučuje</em> všem uživatelům, pokud k tomu mají prostředky. Provozování uzlu je pro Ethereum nesmírně cenné a každému jednotlivci, který jej provozuje, přináší další výhody, jako je lepší bezpečnost, soukromí a odolnost vůči cenzuře.
 
 Možnost kohokoli provozovat vlastní uzel je <em>naprosto nezbytná</em> pro zachování decentralizace sítě Ethereum.
 
@@ -140,48 +140,48 @@ Možnost kohokoli provozovat vlastní uzel je <em>naprosto nezbytná</em> pro za
 </ExpandableCard>
 
 <ExpandableCard
-title="Mýtus: &quot;Merge nesnížil poplatky za gas.&quot;"
-contentPreview="Nepravda. Merge byl změnou mechanismu konsensu, nikoli rozšířením kapacity sítě, a nikdy neměl za cíl snížit poplatky za gas.">
+title="Mylná představa: &quot;Merge nesnížil poplatky za gas.&quot;"
+contentPreview="Nepravda. Merge byl změnou mechanismu konsensu, nikoli rozšířením kapacity sítě, a nikdy nebyl zamýšlen ke snížení poplatků za gas.">
 
-Poplatky za gas jsou produktem poptávky v síti v poměru k její kapacitě. Merge ukončil používání důkazu prací (PoW) a přešel na důkaz podílem (PoS) pro konsensus, ale nijak významně nezměnil žádné parametry, které by přímo ovlivňovaly kapacitu nebo propustnost sítě.
+Poplatky za gas jsou výsledkem poptávky v síti v poměru k její kapacitě. Merge ukončil používání důkazu prací a přešel na důkaz podílem pro konsensus, ale nijak významně nezměnil žádné parametry, které by přímo ovlivňovaly kapacitu nebo propustnost sítě.
 
-S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">roadmapou zaměřenou na rollupy</a> se úsilí soustředí na škálování uživatelské aktivity na [vrstvě 2 (l2)](/layer-2/), přičemž vrstva 1 (l1) Mainnetu slouží jako bezpečná decentralizovaná vrstva pro vypořádání optimalizovaná pro ukládání dat rollupů, což pomůže exponenciálně zlevnit transakce rollupů. Přechod na důkaz podílem (PoS) je kritickým předpokladem k realizaci tohoto cíle. [Více o gasu a poplatcích.](/developers/docs/gas/)
-
-</ExpandableCard>
-
-<ExpandableCard
-title="Mýtus: &quot;Transakce byly díky Merge podstatně zrychleny.&quot;"
-contentPreview="Nepravda. Ačkoli existují drobné změny, rychlost transakcí je nyní na vrstvě 1 většinou stejná jako před Merge.">
-„Rychlost“ transakce lze měřit několika způsoby, včetně času do zařazení do bloku a času do finalizace. Obojí se mírně mění, ale ne tak, aby si toho uživatelé všimli.
-
-Historicky bylo u důkazu prací (PoW) cílem mít nový blok každých ~13,3 sekundy. V rámci důkazu podílem (PoS) se sloty objevují přesně každých 12 sekund, přičemž každý z nich je příležitostí pro validátora publikovat blok. Většina slotů má bloky, ale ne nutně všechny (např. validátor je offline). V důkazu podílem (PoS) jsou bloky produkovány o ~10 % častěji než u důkazu prací (PoW). Byla to poměrně nevýznamná změna a je nepravděpodobné, že by si jí uživatelé všimli.
-
-Důkaz podílem (PoS) zavedl koncept finality transakcí, který dříve neexistoval. U důkazu prací (PoW) je schopnost zvrátit blok exponenciálně obtížnější s každým dalším blokem vytěženým nad transakcí, ale nikdy nedosáhne úplné nuly. V rámci důkazu podílem (PoS) jsou bloky sdružovány do epoch (časové úseky o délce 6,4 minuty obsahující 32 šancí na bloky), o kterých validátoři hlasují. Když epocha skončí, validátoři hlasují o tom, zda epochu považovat za „ospravedlněnou“. Pokud se validátoři shodnou na ospravedlnění epochy, je v další epoše finalizována. Zrušení finalizovaných transakcí je ekonomicky neproveditelné, protože by vyžadovalo získání a spálení více než jedné třetiny celkového stakovaného ETH.
+S <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">roadmapou zaměřenou na rollupy</a> se úsilí soustředí na škálování uživatelské aktivity na [vrstvě 2 (L2)](/layer-2/), zatímco Mainnet na vrstvě 1 (L1) slouží jako bezpečná decentralizovaná vrstva pro vypořádání, optimalizovaná pro ukládání dat rollupů, což pomáhá exponenciálně zlevnit transakce rollupů. Přechod na důkaz podílem je kritickým předpokladem k realizaci tohoto cíle. [Více o gasu a poplatcích.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Mýtus: &quot;Merge umožnil výběry ze stakingu.&quot;"
-contentPreview="Nepravda, ale výběry ze stakingu byly od té doby umožněny prostřednictvím upgradu Šanghaj/Capella.">
+title="Mylná představa: &quot;Transakce byly díky Merge podstatně zrychleny.&quot;"
+contentPreview="Nepravda. Ačkoli existují určité drobné změny, rychlost transakcí na vrstvě 1 je nyní v podstatě stejná jako před Merge.">
+„Rychlost“ transakce lze měřit několika způsoby, včetně času do zařazení do bloku a času do finalizace. Obojí se mírně změnilo, ale ne tak, aby si toho uživatelé všimli.
 
-Zpočátku po Merge měli stakeři přístup pouze ke spropitným z poplatků a MEV, které získali jako výsledek návrhů bloků. Tyto odměny jsou připisovány na nestakovací účet kontrolovaný validátorem (známý jako <em>příjemce poplatků</em>) a jsou k dispozici okamžitě. Tyto odměny jsou oddělené od odměn protokolu za plnění povinností validátora.
+Historicky bylo u důkazu prací cílem mít nový blok každých ~13,3 sekundy. V rámci důkazu podílem se sloty objevují přesně každých 12 sekund, přičemž každý z nich představuje příležitost pro validátora publikovat blok. Většina slotů obsahuje bloky, ale ne nutně všechny (např. když je validátor offline). V důkazu podílem jsou bloky produkovány o ~10 % častěji než u důkazu prací. Jednalo se o poměrně nevýznamnou změnu, které si uživatelé pravděpodobně nevšimnou.
 
-Od aktualizace sítě Šanghaj/Capella mohou nyní stakeři určit <em>adresu pro výběr</em>, aby začali dostávat automatické výplaty jakéhokoli přebytečného stakovacího zůstatku (ETH nad 32 z odměn protokolu). Tato aktualizace také umožnila validátorovi odemknout a získat zpět celý svůj zůstatek při výstupu ze sítě.
+Důkaz podílem zavedl koncept finality transakcí, který dříve neexistoval. U důkazu prací se schopnost zvrátit blok stává exponenciálně obtížnější s každým dalším vytěženým blokem navazujícím na transakci, ale nikdy nedosáhne úplné nuly. V rámci důkazu podílem jsou bloky seskupovány do epoch (časové úseky o délce 6,4 minuty obsahující 32 příležitostí pro bloky), o kterých validátoři hlasují. Když epocha skončí, validátoři hlasují o tom, zda epochu považovat za „ospravedlněnou“. Pokud se validátoři shodnou na ospravedlnění epochy, je v další epoše finalizována. Zrušení finalizovaných transakcí je ekonomicky neproveditelné, protože by vyžadovalo získání a spálení více než jedné třetiny celkového stakovaného ETH.
+
+</ExpandableCard>
+
+<ExpandableCard
+title="Mylná představa: &quot;Merge umožnil výběry ze stakingu.&quot;"
+contentPreview="Nepravda, ale výběry ze stakingu byly od té doby povoleny prostřednictvím aktualizace Šanghaj/Capella.">
+
+Zpočátku po Merge měli stakeři přístup pouze ke spropitnému z poplatků a MEV, které získali jako výsledek návrhů bloků. Tyto odměny jsou připisovány na nestakovací účet ovládaný validátorem (známý jako <em>příjemce poplatků</em>) a jsou k dispozici okamžitě. Tyto odměny jsou oddělené od odměn protokolu za plnění povinností validátora.
+
+Od aktualizace sítě Šanghaj/Capella mohou nyní stakeři určit <em>adresu pro výběr</em>, aby začali dostávat automatické výplaty jakéhokoli přebytečného zůstatku ze stakingu (ETH nad 32 z odměn protokolu). Tato aktualizace také umožnila validátorovi odemknout a získat zpět celý svůj zůstatek při výstupu ze sítě.
 
 [Více o výběrech ze stakingu](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Mýtus: &quot;Nyní, když je Merge dokončen a výběry jsou povoleny, by všichni stakeři mohli vystoupit najednou.&quot;"
+title="Mylná představa: &quot;Nyní, když je Merge dokončen a výběry jsou povoleny, by mohli všichni stakeři vystoupit najednou.&quot;"
 contentPreview="Nepravda. Výstupy validátorů jsou z bezpečnostních důvodů rychlostně omezeny.">
-Vzhledem k tomu, že aktualizace Šanghaj/Capella umožnila výběry, jsou validátoři motivováni k výběru svého stakovacího zůstatku nad 32 ETH, protože tyto prostředky nezvyšují výnos a jsou jinak uzamčeny. V závislosti na APR (určeném celkovým stakovaným ETH) mohou být motivováni k výstupu svého validátoru (nebo validátorů), aby získali zpět celý svůj zůstatek, nebo případně stakovali ještě více pomocí svých odměn, aby získali větší výnos.
+Vzhledem k tomu, že aktualizace Šanghaj/Capella umožnila výběry, jsou validátoři motivováni k výběru svého zůstatku ze stakingu nad 32 ETH, protože tyto prostředky nezvyšují výnos a jsou jinak uzamčeny. V závislosti na APR (určené celkovým stakovaným ETH) mohou být motivováni k výstupu svého validátora (nebo validátorů), aby získali zpět celý svůj zůstatek, nebo případně stakovali ještě více pomocí svých odměn, aby získali vyšší výnos.
 
-Důležité upozornění: úplné výstupy validátorů jsou protokolem rychlostně omezeny a za epochu (každých 6,4 minuty) může vystoupit pouze určitý počet validátorů. Tento limit kolísá v závislosti na počtu aktivních validátorů, ale vychází na přibližně 0,33 % z celkového stakovaného ETH, které může být ze sítě vybráno za jediný den.
+Důležité upozornění: úplné výstupy validátorů jsou protokolem rychlostně omezeny a v každé epoše (každých 6,4 minuty) může vystoupit pouze určitý počet validátorů. Tento limit kolísá v závislosti na počtu aktivních validátorů, ale vychází to tak, že za jediný den může ze sítě vystoupit přibližně 0,33 % z celkového stakovaného ETH.
 
-To zabraňuje masovému odlivu stakovaných prostředků. Dále to brání potenciálnímu útočníkovi s přístupem k velké části celkového stakovaného ETH spáchat přestupek podléhající penalizaci a vystoupit/vybrat všechny zůstatky provinilých validátorů ve stejné epoše, než protokol stihne uplatnit penalizaci (slashing).
+To zabraňuje masovému odlivu stakovaných prostředků. Dále to brání potenciálnímu útočníkovi s přístupem k velké části celkového stakovaného ETH spáchat přestupek podléhající penalizaci a vystoupit/vybrat všechny zůstatky provinilých validátorů ve stejné epoše dříve, než protokol stihne uplatnit penalizaci.
 
-APR je také záměrně dynamické, což umožňuje trhu stakerů vyvážit, kolik jsou ochotni dostat zaplaceno za pomoc se zabezpečením sítě. Pokud je sazba příliš nízká, validátoři budou vystupovat rychlostí omezenou protokolem. Postupně to zvýší APR pro všechny, kteří zůstanou, což opět přiláká nové nebo vracející se stakery.
+APR je také záměrně dynamická, což umožňuje trhu stakerů vyvážit, kolik jsou ochotni dostat zaplaceno za pomoc se zabezpečením sítě. Pokud je sazba příliš nízká, validátoři budou vystupovat rychlostí omezenou protokolem. Postupně to zvýší APR pro všechny, kteří zůstanou, což opět přiláká nové nebo vracející se stakery.
 </ExpandableCard>
 
 ## Co se stalo s „Eth2“? {#eth2}
@@ -219,9 +219,9 @@ Pro zvědavé, přečtěte si více o tom, [co se stane po Merge](https://youtu.
 
 ### Merge a sharding {#merge-and-data-sharding}
 
-Původně bylo v plánu pracovat na shardingu před Merge, aby se vyřešila škálovatelnost. S rozmachem [řešení škálování na vrstvě 2 (l2)](/layer-2/) se však priorita přesunula na to, aby se nejprve vyměnil důkaz prací (PoW) za důkaz podílem (PoS).
+Původně bylo v plánu pracovat na shardingu před Merge, aby se vyřešila škálovatelnost. S rozmachem [řešení škálování na vrstvě 2 (L2)](/layer-2/) se však priorita přesunula na to, aby se nejprve vyměnil důkaz prací (PoW) za důkaz podílem (PoS).
 
-Plány pro sharding se rychle vyvíjejí, ale vzhledem k vzestupu a úspěchu technologií vrstvy 2 (l2) pro škálování exekuce transakcí se plány shardingu přesunuly k nalezení nejoptimálnějšího způsobu, jak rozložit zátěž ukládání komprimovaných dat volání (call data) z kontraktů rollupů, což umožní exponenciální růst kapacity sítě. To by nebylo možné bez předchozího přechodu na důkaz podílem (PoS).
+Plány pro sharding se rychle vyvíjejí, ale vzhledem k vzestupu a úspěchu technologií vrstvy 2 (L2) pro škálování exekuce transakcí se plány shardingu přesunuly k nalezení nejoptimálnějšího způsobu, jak rozložit zátěž ukládání komprimovaných dat volání (call data) z kontraktů rollupů, což umožní exponenciální růst kapacity sítě. To by nebylo možné bez předchozího přechodu na důkaz podílem (PoS).
 
 <ButtonLink href="/roadmap/danksharding/">
   Sharding

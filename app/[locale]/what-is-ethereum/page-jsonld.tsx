@@ -6,16 +6,19 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
+import { getBreadcrumbListJsonLd } from "@/lib/jsonld/breadcrumbs"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function WhatIsEthereumPageJsonLD({
   locale,
-  lastEditLocaleTimestamp,
+  lastEditDate,
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditDate: string
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-what-is-ethereum")
@@ -45,29 +48,7 @@ export default async function WhatIsEthereumPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-        breadcrumb: {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: normalizeUrlForJsonLd(locale, "/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Learn",
-              item: normalizeUrlForJsonLd(locale, "/learn/"),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: t("page-what-is-ethereum-meta-title"),
-              item: url,
-            },
-          ],
-        },
+        breadcrumb: await getBreadcrumbListJsonLd(locale, "what-is-ethereum"),
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: articleId,
@@ -78,7 +59,7 @@ export default async function WhatIsEthereumPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-what-is-ethereum-title"),
         description: t("page-what-is-ethereum-meta-description"),
-        image: "https://ethereum.org/images/what-is-ethereum.png",
+        image: `${SITE_URL}/images/what-is-ethereum.png`,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
@@ -88,7 +69,7 @@ export default async function WhatIsEthereumPageJsonLD({
           description:
             "Comprehensive guide to Ethereum, its network, capabilities, and how it works",
         },
-        dateModified: lastEditLocaleTimestamp,
+        dateModified: lastEditDate,
       },
     ],
   }

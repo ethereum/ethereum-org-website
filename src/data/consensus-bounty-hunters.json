@@ -1,13 +1,13 @@
 [
   {
+    "username": "revofusion",
+    "name": "Revofusion",
+    "score": 48000
+  },
+  {
     "username": "protolambda",
     "name": "protolambda",
     "score": 42400
-  },
-  {
-    "username": "revofusion",
-    "name": "Revofusion",
-    "score": 46250
   },
   {
     "username": "cryptosubtlety",
@@ -37,6 +37,16 @@
   {
     "username": "gzeoneth",
     "name": "gzeon",
+    "score": 9000
+  },
+  {
+    "username": "therealgregoai",
+    "name": "Grego AI",
+    "score": 8500
+  },
+  {
+    "username": "hyunmini",
+    "name": "secuholic",
     "score": 8000
   },
   {
@@ -53,11 +63,6 @@
     "username": "link-infsec",
     "name": "InfiniteSec",
     "score": 6000
-  },
-  {
-    "username": "therealgregoai",
-    "name": "Grego AI",
-    "score": 5750
   },
   {
     "username": "atoulme",
@@ -80,11 +85,6 @@
     "score": 5000
   },
   {
-    "username": "hyunmini",
-    "name": "secuholic",
-    "score": 4500
-  },
-  {
     "username": "asanso",
     "name": "Antonio Sanso",
     "score": 4000
@@ -92,12 +92,12 @@
   {
     "username": "ustas-eth",
     "name": "ustas",
-    "score": 3500
+    "score": 4000
   },
   {
-    "username": "quasar",
-    "name": "Evgeny Legerov",
-    "score": 3250
+    "username": "lgprbs",
+    "name": "quasar",
+    "score": 3500
   },
   {
     "username": "karalabe",
@@ -135,14 +135,14 @@
     "score": 2500
   },
   {
+    "username": "eclipse07077",
+    "name": "eclipse07077",
+    "score": 2500
+  },
+  {
     "username": "0xalpharush",
     "name": "alpharush",
     "score": 2000
-  },
-  {
-    "username": "lgprbs",
-    "name": "quasar",
-    "score": 2500
   },
   {
     "username": "",
@@ -150,9 +150,24 @@
     "score": 1750
   },
   {
-    "username": "eclipse07077",
-    "name": "eclipse07077",
+    "username": "sujithsomraaj",
+    "name": "sujith",
     "score": 1500
+  },
+  {
+    "username": "Alleysira",
+    "name": "Jie Ma (UTUX Labs)",
+    "score": 1500
+  },
+  {
+    "username": "x15-eth",
+    "name": "0x15",
+    "score": 1250
+  },
+  {
+    "username": "colinlyguo",
+    "name": "colinlyguo (AlphaSec)",
+    "score": 1125
   },
   {
     "username": "nerolation",
@@ -185,11 +200,6 @@
     "score": 1000
   },
   {
-    "username": "Alleysira",
-    "name": "Jie Ma (UTUX Labs)",
-    "score": 1000
-  },
-  {
     "username": "aydarkhusaenov",
     "name": "Legat",
     "score": 1000
@@ -210,10 +220,25 @@
     "score": 1000
   },
   {
-    "username": "colinlyguo",
-    "name": "colinlyguo (AlphaSec)",
+    "username": "kaslovdmitri",
+    "name": "Dmitri Kaslov",
     "score": 1000
   }, 
+  {
+    "username": "justifyme22",
+    "name": "Juan Sukaton",
+    "score": 1000
+  },
+  {
+    "username": "D4r3-D3v1L",
+    "name": "d4r3d3v1l",
+    "score": 1000
+  },
+  {
+    "username": "srobins1205-sys",
+    "name": "Greenbean17",
+    "score": 1000
+  },  
   {
     "username": "sko94",
     "name": "XDZIBECX",
@@ -235,8 +260,13 @@
     "score": 500
   }, 
   {
-    "username": "sujithsomraaj",
-    "name": "sujith",
+    "username": "eliteaja11-dev",
+    "name": "AJA",
+    "score": 500
+  },
+  {
+    "username": "Giulio2002",
+    "name": "Giulio2002",
     "score": 500
   },  
   {
@@ -252,6 +282,21 @@
   {
     "username": "loopghost",
     "name": "LoopGhost",
+    "score": 250
+  },
+  {
+    "username": "the-red-ace",
+    "name": "redbaron",
+    "score": 250
+  },
+  {
+    "username": "Matgothmog",
+    "name": "Matgothmog",
+    "score": 250
+  },
+  {
+    "username": "daniel5713",
+    "name": "Tong CAO",
     "score": 250
   },
   {

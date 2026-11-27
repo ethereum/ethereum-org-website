@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { FileContributor, Lang, PageParams } from "@/lib/types"
 
@@ -22,14 +22,17 @@ export const revalidate = false
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const { locale } = await props.params
-  setRequestLocale(locale)
 
   const t = await getTranslations({
     locale,
     namespace: "page-wallets-find-wallet",
   })
 
-  const wallets = getCatalogWallets(locale)
+  const walletDescriptions = await getTranslations({
+    locale,
+    namespace: "page-wallet-descriptions",
+  })
+  const wallets = getCatalogWallets(locale, walletDescriptions)
   const networks = getWalletNetworks(wallets)
   const languages = getWalletLanguageOptions(wallets, locale)
 
@@ -76,7 +79,6 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await props.params
-  setRequestLocale(locale)
 
   const t = await getTranslations({
     locale,

@@ -238,6 +238,7 @@ ethers.utils.formatEther(balance)
 - [Vitendaji vya matumizi vya Ethers](https://docs.ethers.org/v6/api/utils/)
 
 ## Maktaba zinazopatikana {#available-libraries}
+
 **Web3.js -** **_API ya JavaScript ya Ethereum._**
 
 - [Nyaraka](https://docs.web3js.org)
@@ -299,9 +300,7 @@ _Unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 
 ## Mafunzo yanayohusiana {#related-tutorials}
 
-- [Sanidi Web3js ili kutumia mnyororo wa vitalu wa Ethereum katika JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Maagizo ya kusanidi web3.js katika mradi wako._
-- [Kuita mkataba mahiri kutoka JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Kwa kutumia tokeni ya DAI, ona jinsi ya kuita vitendaji vya mikataba kwa kutumia JavaScript._
-- [Kutuma miamala kwa kutumia web3 na Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Mwongozo wa hatua kwa hatua wa kutuma miamala kutoka nyuma (backend)._
+- [Kutuma miamala kwa kutumia Web3 na Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Mwongozo wa hatua kwa hatua wa kutuma miamala kutoka kwenye backend._
 
 ## Mafunzo: API za JavaScript & WebSockets kwenye Ethereum {#tutorials}
 

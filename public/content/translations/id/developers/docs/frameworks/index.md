@@ -1,6 +1,6 @@
 ---
 title: Kerangka Kerja Pengembangan Dapp
-description: Jelajahi keuntungan kerangka kerja dan bandingkan opsi yang tersedia.
+description: Bandingkan kerangka kerja pengembangan Ethereum seperti Foundry dan Hardhat. Pelajari apa yang diberikan kerangka kerja kepada Anda untuk mengompilasi, menguji, dan menyebarkan kontrak pintar.
 lang: id
 ---
 
@@ -41,7 +41,7 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Alat pengembangan kontrak pintar untuk Pengguna Python, Ilmuwan Data, dan Profesional Keamanan._**
+**Ape -** **_Alat pengembangan kontrak pintar untuk Pythonista, Ilmuwan Data, dan Profesional Keamanan._**
 
 - [Dokumentasi](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -58,12 +58,12 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [Contoh](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Buat aplikasi yang didukung Ethereum dengan satu perintah. Dilengkapi dengan berbagai pilihan kerangka kerja UI dan templat keuangan terdesentralisasi (DeFi) untuk dipilih._**
+**Create Eth App -** **_Buat aplikasi yang didukung Ethereum dengan satu perintah. Dilengkapi dengan berbagai pilihan kerangka kerja UI dan templat DeFi untuk dipilih._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Templat](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem, dan RainbowKit dengan pilihan Hardhat atau Foundry Anda: muat ulang panas kontrak, hook React kustom, dompet burner dan faucet lokal, serta modul ekstensi untuk pengembangan aplikasi terdesentralisasi (dapp) full-stack._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem, dan RainbowKit dengan pilihan Hardhat atau Foundry Anda: hot reload kontrak, hook React kustom, dompet burner dan faucet lokal, serta modul ekstensi untuk pengembangan dapp full-stack._**
 
 - [Situs Web](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
@@ -76,7 +76,7 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 **The Graph -** **_The Graph untuk mengkueri data rantai blok secara efisien._**
 
 - [Situs Web](https://thegraph.com/)
-- [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Dokumentasi](https://thegraph.com/docs/en/)
 
 **Alchemy -** **_Platform Pengembangan Ethereum._**
 
@@ -115,7 +115,6 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 
 **OpenZeppelin SDK -** **_Perangkat Kontrak Pintar Terbaik: Serangkaian alat untuk membantu Anda mengembangkan, mengompilasi, meningkatkan, menyebarkan, dan berinteraksi dengan kontrak pintar._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum Komunitas](https://forum.openzeppelin.com/c/support/17)
 - **Pengembangan OpenZeppelin SDK telah berakhir**
@@ -124,21 +123,21 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (didukung oleh Covalent) -** **_GoldRush menawarkan rangkaian API data rantai blok terlengkap untuk pengembang, analis, dan perusahaan. Baik Anda sedang membangun dasbor DeFi, dompet, bot perdagangan, agen AI, atau platform kepatuhan, API data menyediakan akses yang cepat, akurat, dan ramah pengembang ke data onchain penting yang Anda butuhkan_**
+**GoldRush (didukung oleh Covalent) -** **_GoldRush menawarkan rangkaian API data rantai blok paling komprehensif untuk pengembang, analis, dan perusahaan. Baik Anda sedang membangun dasbor DeFi, dompet, bot perdagangan, agen AI, atau platform kepatuhan, API data menyediakan akses yang cepat, akurat, dan ramah pengembang ke data onchain penting yang Anda butuhkan_**
 
 - [Situs Web](https://goldrush.dev/)
 - [Dokumentasi](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Kerangka kerja Python serba ada untuk pengujian kontrak, fuzzing, penyebaran, pemindaian kerentanan, dan navigasi kode._**
+**Wake -** **_Kerangka kerja Python lengkap untuk pengujian kontrak, fuzzing, penyebaran, pemindaian kerentanan, dan navigasi kode._**
 
 - [Beranda](https://getwake.io/)
 - [Dokumentasi](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Ekstensi VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Kerangka kerja sumber terbuka, modular, dan agnostik yang memudahkan pengembang aplikasi terdesentralisasi (dapp) untuk membangun identitas terdesentralisasi dan kredensial yang dapat diverifikasi ke dalam aplikasi mereka._**
+**Veramo -** **_Kerangka kerja sumber terbuka, modular, dan agnostik yang memudahkan pengembang aplikasi terdesentralisasi untuk membangun identitas terdesentralisasi dan kredensial yang dapat diverifikasi ke dalam aplikasi mereka._**
 
 - [Beranda](https://veramo.io/)
 - [Dokumentasi](https://veramo.io/docs/basics/introduction)
@@ -150,6 +149,7 @@ Sebelum mendalami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 
 - [Dokumentasi](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Bacaan lebih lanjut {#further-reading}
 
 _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
@@ -160,4 +160,4 @@ _Tahu sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
 ## Tutorial: Kerangka kerja pengembangan di Ethereum {#tutorials}
 
-- [Kontrak Pintar Hello World untuk Pemula – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Bangun dan sebarkan kontrak pintar hello world menggunakan Hardhat, lalu hubungkan ke frontend._
+- [Kontrak Pintar Hello World untuk Pemula](/developers/tutorials/hello-world-smart-contract/) _– Bangun dan sebarkan kontrak pintar hello world menggunakan Hardhat._

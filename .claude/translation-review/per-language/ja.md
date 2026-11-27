@@ -1,5 +1,32 @@
 # Japanese (ja) Translation Review Findings
 
+## PR #19983 (intl/pending-dev) -- 2026-11-27 -- Score 8.8/10
+Scope: 15 md pages (nodes-and-clients + subpages, frameworks, glossary, roadmap privacy/merge/statelessness/verkle, supply, data-structures, transactions, ethash), markdown only; changed lines only; sampled 8 md diffs plus scripted sweeps (no foreign script, U+2060, SPDX or untranslated sentences).
+
+Fixed (critical): client/brand names transliterated on changed lines restored to Latin (Geth, Nethermind, Besu, Erigon, Reth, Lighthouse, Lodestar, Nimbus, Prysm, Teku, MetaMask, Discord, Optimism, Arbitrum, Polygon; ~45 lines, `Besu（ベス）` hybrids collapsed, `ゴー・イーサリアム（略称ゲス）` to `Go Ethereum（略称Geth）`); long forms over bare English `DeFi`, `MEV`, `DAO` removed; glossary forms `ブロック・プロポーザー`, `ブロック・ビルダー`, `バリデータ`, `フル・ノード` restored on 7 lines.
+Open: 100+ untouched dev lines still katakana client names; `dapp` keeps the dev `分散型アプリケーション (dapp)` form; `ブロックヘッダー` etc. fine; English typo `Dankrad Fiest` in verkle-trees is mirrored.
+
+## PR #19979 (intl/pending-dev) -- 2026-11-27 -- Score 8.9/10
+Scope: 70 md pages + 20 JSON namespaces (incremental updates), changed lines only; sampled 7 md diffs and ~45 JSON keys, plus scripted sweeps (acronym parentheticals, brand names, tags, placeholders, Latin leftovers).
+
+Fixed (critical): `glossary.json:p2p-trading-definition` carried an extra `<a href="/glossary/#smart-contract">` not in English (removed); transliterated tool/brand names on changed md lines restored to Latin (Lodestar, Nethermind, Erigon, Reth, Geth, Besu, Slither, Echidna, Chainlink, Uniswap, MetaMask, Coinbase; 15 lines); `page-developers-tools-descriptions.json` アーベ/コインベース/メタマスク to Aave/Coinbase/MetaMask (4 values); `分散型金融 (DeFi)` over bare English `DeFi` (1 value); `Lighthouse (ライトハウス)` hybrid collapsed in rust.
+Open: roadmap/security list items switched from full-width `：` to `: `; `ベス`/`ゲス` etc. still katakana in 100+ untouched lines (tree convention conflicts with #113); `ERC-4626 vs ERC-7540` heading left English; mixed `<strong>`/`**` in dencun.
+
+## PR #19962 (intl/pending-dev) -- 2026-11-26 -- Score 9.2/10
+Scope: `component-diagrams.json`, 257 changed keys (Merkle proof, optimistic rollup, base fee, Gasper finality, ZK-rollup diagrams), changed lines only.
+
+Fixed: none needed. Open: `ギリ` (colloquial) for 'Just enough'; caption `...をファイナライズ済みになります` is ungrammatical (should end `にします`); `bond` rendered as `ステーク`.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.4/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: Blob to ブロブ x3 (regression of PR 19357 fix), Starknet to スタークネット. Open: transfer トランスファー vs 送金 split in erc-721, claim as 請求, at stake as ステーク, ファイナライズ済み used as verb, devnet.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in 5 JSON keys (validator-keys, peer-das caption/subnets, verkle), consensus client, fork choice, equivocation. Open: BLS key pair wording, colon style, head vs sentou.
+
 > **PR:** #18418 (intl/pending-dev)
 > **Date:** 2026-06-16
 > **Quality Score:** 9.6/10
@@ -161,3 +188,55 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `[EVM-based Chains]` -> `[EVMベースのチェーン]`; `Optimistic Sepolia` heading -> `オプティミスティック Sepolia` (dev form).
 - Open: L124 `Arbitrum Sepolia` heading Latin while body uses `アービトラム` (Latin is a glossary alias, not a deviation).
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 26 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- security:19 heading reverted to English (`## Guidelines for building secure Ethereum smart c` -> `## 安全なイーサリアムのスマート・コントラクトを構築するためのガイドライン`)
+
+**Open (native call needed):**
+
+- developers/tutorials/app-plasma/index.md:1190: ETHGlossary `revert` (scriptRule `translate`) is リバート. Dev had リバート. Flag for human. (`このステップはトランザクションを元に戻します` -> `このステップはトランザクションをリバートします`)
+- 9 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The ja translation is fluent and faithful, and the new prediction-markets, founders and wallet-description content reads well. The main defect is that the security-page retranslation reverted all 24 guideline headings to English (the same failure as #19115). That fix and the three founders tag labels are deterministic.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.6/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+- `_x_` italics next to CJK characters converted to `<em>` (3 sites; known-patterns #89)
+
+**Notes:**
+
+- Warnings: double を at write-deploy:12; ナンス/ノンス and ガス・リミット/ガスリミット differ between prose and code comments.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- None needed
+
+**Open / notes:**
+
+- `ディスカバリー` for discovery is glossary-literal but stiff; `ローカル・テストネット` vs `ローカルのテストネット` -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- "remain high indefinitely" rendered as "infinitely high" (gas:32); API over-expanded (#80).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

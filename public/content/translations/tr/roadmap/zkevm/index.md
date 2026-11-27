@@ -1,6 +1,6 @@
 ---
-title: L1 blok doğrulaması için zkEVM
-description: Sıfır bilgi ispatlarının Ethereum blok yürütmesini nasıl doğrulayabileceğini, daha yüksek işlem kapasitesi ve daha düşük doğrulayıcı gereksinimlerini nasıl sağlayabileceğini öğrenin.
+title: "L1 blok doğrulaması için zkEVM"
+description: "Sıfır bilgi ispatlarının Ethereum blok yürütmesini nasıl doğrulayabileceğini, daha yüksek işlem kapasitesi ve daha düşük doğrulayıcı gereksinimlerini nasıl sağlayabileceğini öğrenin."
 lang: tr
 template: roadmap
 ---
@@ -95,14 +95,14 @@ Ethereum blok kanıtlaması için çeşitli zkVM uygulamaları geliştirilmekte 
 
 Bunlar, EVM baytkodunu yürütmek için RISC-V tabanlı sanal makineler kullanır ve ardından doğru yürütmenin ZK ispatlarını üretir. Güncel test sonuçları ve ilerleme, [Ethereum Vakfı'nın zkVM izleyicisinde](https://zkevm.ethereum.foundation/zkvm-tracker) takip edilmektedir.
 
-## zkEVM diğer yükseltmelerle nasıl uyum sağlar {#related-upgrades}
+## zkEVM diğer güncellemelerle nasıl uyum sağlar {#related-upgrades}
 
 zkEVM L1 doğrulaması, diğer birkaç Ethereum yol haritası öğesiyle bağlantılıdır:
 
-- **[Verkle Ağaçları](/roadmap/verkle-trees/)**: Durumsuz doğrulama için daha küçük tanıklara olanak tanıyarak kanıtlayıcıların çalışması gereken verileri azaltır
-- **[Durumsuzluk](/roadmap/statelessness/)**: zkEVM önemli bir kolaylaştırıcıdır; ZK yürütme ispatları ile düğümlerin blokları doğrulamak için tam duruma ihtiyacı yoktur
-- **[Teklifçi-oluşturucu ayrımı (PBS)](/roadmap/pbs/)**: Blok oluşturucular potansiyel olarak ispat üretimini entegre edebilir veya ayrı bir kanıtlayıcı piyasası ortaya çıkabilir
-- **[Tek Slot Kesinliği](/roadmap/single-slot-finality/)**: Daha hızlı ispat üretimi, kriptografik garantilerle tek slot kesinliğini sağlayabilir
+- **Yeni durum ağacı**: Önceki [Verkle ağacı](/roadmap/verkle-trees/) tasarımının yerine önerilen birleşik bir ikili ağaç ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), durumsuz doğrulama için daha küçük tanıklara olanak tanır ve kanıtlanması daha kolay olacak şekilde tasarlanmıştır
+- **[Durumsuzluk](/roadmap/statelessness/)**: zkEVM kilit bir etkendir; yürütmenin ZK ispatları sayesinde, düğümlerin blokları doğrulamak için tam duruma ihtiyacı kalmaz
+- **[PBS](/roadmap/pbs/)**: Blok oluşturucular ispat üretimini potansiyel olarak entegre edebilir veya ayrı bir kanıtlayıcı piyasası ortaya çıkabilir
+- **[Tek slot kesinliği](/roadmap/single-slot-finality/)**: Daha hızlı ispat üretimi, kriptografik garantilerle tek slot kesinliğine olanak tanıyabilir
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />

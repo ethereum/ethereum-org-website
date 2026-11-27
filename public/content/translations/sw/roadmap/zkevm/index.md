@@ -1,5 +1,5 @@
 ---
-title: zkEVM kwa uthibitishaji wa kitalu cha tabaka la 1 (l1)
+title: zkEVM kwa uthibitishaji wa kitalu cha tabaka la 1 (L1)
 description: Jifunze jinsi uthibitisho wa maarifa-sifuri unavyoweza kuthibitisha utekelezaji wa kitalu cha Ethereum, kuwezesha uwezo wa upitishaji wa juu zaidi na mahitaji ya chini ya mthibitishaji.
 lang: sw
 template: roadmap
@@ -12,7 +12,7 @@ zkEVM ni teknolojia inayotumia [uthibitisho wa maarifa-sifuri](/zero-knowledge-p
 <AlertContent>
 <AlertTitle>Isichanganywe na mikusanyiko ya zkEVM</AlertTitle>
 <AlertDescription>
-Ukurasa huu unajadili matumizi ya zkEVM kuthibitisha utekelezaji wa kitalu cha tabaka la 1 (l1) cha Ethereum. Kwa mikusanyiko ya zkEVM inayotumia uthibitisho wa ZK kuongeza uwezo wa Ethereum kama suluhisho za tabaka la 2 (l2), tazama [mikusanyiko ya sifuri-maarifa](/developers/docs/scaling/zk-rollups/).
+Ukurasa huu unajadili matumizi ya zkEVM kuthibitisha utekelezaji wa kitalu cha tabaka la 1 (L1) cha Ethereum. Kwa mikusanyiko ya zkEVM inayotumia uthibitisho wa ZK kuongeza uwezo wa Ethereum kama suluhisho za tabaka la 2 (L2), tazama [mikusanyiko ya sifuri-maarifa](/developers/docs/scaling/zk-rollups/).
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -25,7 +25,7 @@ Tatizo ni kwamba uwezo wa upitishaji wa Ethereum unazuiwa na kile ambacho mthibi
 
 zkEVM inatoa njia ya kuepuka maelewano haya. Kwa kuhama kutoka "kila mtu anatekeleza upya" hadi "mmoja anatoa uthibitisho, kila mtu anahakiki," Ethereum inaweza kuongeza kikomo cha gesi kwa usalama bila kuongeza mahitaji ya vifaa vya mthibitishaji.
 
-## Jinsi uthibitishaji wa tabaka la 1 (l1) wa zkEVM unavyofanya kazi {#how-it-works}
+## Jinsi uthibitishaji wa tabaka la 1 (L1) wa zkEVM unavyofanya kazi {#how-it-works}
 
 Uthibitishaji wa zkEVM unabadilisha uthibitishaji wa kitalu kuwa muundo wa "1-ya-N":
 
@@ -42,7 +42,7 @@ zkEVMs zimeainishwa katika aina kulingana na utangamano wao na Ethereum:
 - **Aina ya 1**: Sawa kabisa na Ethereum. Hakuna marekebisho kwa EVM, kwa hivyo kitalu chochote cha Ethereum kinaweza kuthibitishwa kama kilivyo
 - **Aina ya 2-4**: Hufanya maelewano mbalimbali, kurekebisha tabia ya EVM ili kurahisisha uthibitishaji
 
-Kwa uthibitishaji wa tabaka la 1 (l1), Aina ya 1 ni muhimu. zkEVM lazima iweze kuthibitisha kitalu chochote halali cha Ethereum, ikijumuisha matukio ya nadra na vitalu vya kihistoria. Mkengeuko wowote kutoka kwa tabia halisi ya Ethereum ungesababisha matatizo ya mwafaka.
+Kwa uthibitishaji wa tabaka la 1 (L1), Aina ya 1 ni muhimu. zkEVM lazima iweze kuthibitisha kitalu chochote halali cha Ethereum, ikijumuisha matukio ya nadra na vitalu vya kihistoria. Mkengeuko wowote kutoka kwa tabia halisi ya Ethereum ungesababisha matatizo ya mwafaka.
 
 Utafiti wa zkEVM wa Taasisi ya Ethereum unalenga utekelezaji wa Aina ya 1 ambao unatangamana kikamilifu na utekelezaji uliopo wa Ethereum.
 
@@ -64,7 +64,7 @@ Uhakiki wa uthibitisho hufanya kazi kwa muda usiobadilika bila kujali ugumu wa k
 
 ## Changamoto za kutoa uthibitisho katika wakati halisi {#realtime-proving}
 
-Changamoto kuu kwa uthibitishaji wa tabaka la 1 (l1) wa zkEVM ni kasi. Vitalu vya Ethereum huzalishwa kila sekunde 12, ikimaanisha uthibitisho unahitaji kuzalishwa ndani ya muda sawa ili uwe na manufaa kwa mwafaka.
+Changamoto kuu kwa uthibitishaji wa tabaka la 1 (L1) wa zkEVM ni kasi. Vitalu vya Ethereum huzalishwa kila sekunde 12, ikimaanisha uthibitisho unahitaji kuzalishwa ndani ya muda sawa ili uwe na manufaa kwa mwafaka.
 
 Utekelezaji wa sasa wa zkEVM unaweza kuchukua dakika hadi saa kuthibitisha kitalu kimoja. Utafiti unalenga kuziba pengo hili kupitia:
 
@@ -97,18 +97,18 @@ Hizi zinatumia mashine pepe zinazotegemea RISC-V kutekeleza msimbo wa baiti wa E
 
 ## Jinsi zkEVM inavyoendana na maboresho mengine {#related-upgrades}
 
-Uthibitishaji wa tabaka la 1 (l1) wa zkEVM unaungana na vipengele vingine kadhaa vya ramani ya njia ya Ethereum:
+Uthibitishaji wa tabaka la 1 (L1) wa zkEVM unaungana na vipengele vingine kadhaa vya ramani ya njia ya Ethereum:
 
-- **[Miti ya Verkle](/roadmap/verkle-trees/)**: Huwezesha mashahidi wadogo kwa ajili ya uthibitishaji wa ubilahali, kupunguza data ambayo wathibitishaji wanahitaji kufanyia kazi
-- **[Ubilahali](/roadmap/statelessness/)**: zkEVM ni kiwezeshaji kikuu—pamoja na uthibitisho wa ZK wa utekelezaji, nodi hazihitaji hali kamili ili kuthibitisha vitalu
-- **[Utengano wa mpendekezaji na mjengaji (PBS)](/roadmap/pbs/)**: Wajengaji wa kitalu wangeweza kujumuisha uzalishaji wa uthibitisho, au soko tofauti la wathibitishaji linaweza kuibuka
-- **[Uthibitisho wa mwisho wa sloti moja](/roadmap/single-slot-finality/)**: Uzalishaji wa haraka wa uthibitisho unaweza kuwezesha uthibitisho wa mwisho wa sloti moja na dhamana za kificho
+- **Mti mpya wa hali**: Mti wa jozi uliounganishwa ([EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)), uliopendekezwa badala ya muundo wa awali wa [mti wa Verkle](/roadmap/verkle-trees/), ungewezesha mashahidi wadogo kwa ajili ya uthibitishaji wa ubilahali na umeundwa kuwa rahisi zaidi kuthibitisha
+- **[Ubilahali](/roadmap/statelessness/)**: zkEVM ni kiwezeshaji kikuu—kukiwa na uthibitisho wa ZK wa utekelezaji, nodi hazihitaji hali kamili ili kuthibitisha vitalu
+- **[PBS](/roadmap/pbs/)**: Wajengaji wa kitalu wangeweza kujumuisha uzalishaji wa uthibitisho, au soko tofauti la wathibitishaji lingeweza kuibuka
+- **[Uthibitisho wa mwisho wa sloti moja](/roadmap/single-slot-finality/)**: Uzalishaji wa uthibitisho wa haraka zaidi ungeweza kuwezesha uthibitisho wa mwisho wa sloti moja ukiwa na dhamana za kificho
 
 <Alert variant="warning">
 <AlertEmoji text="🧪" />
 <AlertContent>
 <AlertDescription>
-Uthibitishaji wa tabaka la 1 (l1) wa zkEVM upo katika utafiti unaoendelea na bado haujajumuishwa katika wateja wa uzalishaji wa Ethereum.
+Uthibitishaji wa tabaka la 1 (L1) wa zkEVM upo katika utafiti unaoendelea na bado haujajumuishwa katika wateja wa Ethereum walio katika uzalishaji.
 </AlertDescription>
 </AlertContent>
 </Alert>
@@ -117,7 +117,7 @@ Uthibitishaji wa tabaka la 1 (l1) wa zkEVM upo katika utafiti unaoendelea na bad
 
 - [Taasisi ya zkEVM](https://zkevm.ethereum.foundation) - Kituo rasmi cha utafiti cha zkEVM cha Taasisi ya Ethereum
 - [Ethproofs](https://ethproofs.org/) - Fuatilia mbio za kuthibitisha Ethereum katika wakati halisi
-- [zkevm.fyi](https://zkevm.fyi) - Kitabu cha kiufundi kuhusu zkEVM kwa tabaka la 1 (l1)
+- [zkevm.fyi](https://zkevm.fyi) - Kitabu cha kiufundi kuhusu zkEVM kwa tabaka la 1 (L1)
 - [Vipimo vya zkEVM vya PSE](https://github.com/privacy-scaling-explorations/zkevm-specs) - Vipimo vya kiufundi
 - [The Verge](https://vitalik.eth.limo/general/2024/10/23/futures4.html) - Muhtasari wa Vitalik wa maboresho ya uthibitishaji
 - [Blogu ya zkEVM ya EF](https://zkevm.ethereum.foundation/blog) - Uchambuzi wa utendaji kutoka kwa timu ya EF

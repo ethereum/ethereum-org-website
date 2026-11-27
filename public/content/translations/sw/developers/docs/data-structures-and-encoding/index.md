@@ -1,6 +1,6 @@
 ---
 title: Miundo ya data na usimbaji
-description: Muhtasari wa miundo ya kimsingi ya data ya Ethereum.
+description: Muhtasari wa miundo mikuu ya data na usimbaji wa Ethereum, ikiwa ni pamoja na trie za Patricia Merkle, RLP na SSZ, na jinsi zinavyohifadhi na kuthibitisha hali.
 lang: sw
 sidebarDepth: 2
 ---

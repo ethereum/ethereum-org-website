@@ -1,9 +1,16 @@
 "use client"
 
+import {
+  type ComponentProps,
+  type ReactNode,
+  startTransition,
+  useCallback,
+  useEffect,
+  useState,
+} from "react"
 import { X } from "lucide-react"
 import type { StaticImageData } from "next/image"
 import { useRouter } from "next/navigation"
-import type { ComponentProps, ReactNode } from "react"
 
 import { Image } from "@/components/Image"
 import {
@@ -91,6 +98,46 @@ const CatalogDetailModal = ({
       </DialogContent>
     </Dialog>
   )
+}
+
+/** Which item a client-side detail modal shows; Back closes it like a page. */
+export function useCatalogModal() {
+  const [openId, setOpenId] = useState<string | null>(null)
+
+  // The click paints immediately; the Dialog and its tooltips mount in a
+  // transition, like the intercepted route used to.
+  const open = useCallback(
+    (id: string) => startTransition(() => setOpenId(id)),
+    []
+  )
+
+  const close = useCallback(() => {
+    setOpenId(null)
+    // Drop the entry we pushed, or Back would have to be pressed twice.
+    if (window.history.state?.catalogModal) window.history.back()
+  }, [])
+
+  // Extra entry so Back closes the modal. Pushed a frame late (pushState inside
+  // the click costs +500ms INP) via the native method (Next patches the other).
+  useEffect(() => {
+    if (!openId) return
+    const frame = requestAnimationFrame(() => {
+      History.prototype.pushState.call(
+        window.history,
+        { ...window.history.state, catalogModal: openId },
+        "",
+        window.location.href
+      )
+    })
+    const onPopState = () => setOpenId(null)
+    window.addEventListener("popstate", onPopState)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener("popstate", onPopState)
+    }
+  }, [openId])
+
+  return { openId, open, close }
 }
 
 export default CatalogDetailModal

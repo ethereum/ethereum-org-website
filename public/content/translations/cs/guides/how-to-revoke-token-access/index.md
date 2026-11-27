@@ -1,6 +1,6 @@
 ---
 title: "Jak zrušit přístup chytrých kontraktů k vašim kryptoměnám"
-description: "Návod, jak zrušit přístup zneužívajících chytrých kontraktů k tokenům"
+description: "Podrobný průvodce zrušením schválení tokenů: zjistěte, které chytré kontrakty mohou utrácet vaše kryptoměny, a odeberte jim přístup, abyste ochránili své prostředky."
 lang: cs
 ---
 

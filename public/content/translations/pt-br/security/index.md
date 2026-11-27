@@ -1,6 +1,6 @@
 ---
-title: Segurança no Ethereum e prevenção de golpes
-description: Mantendo-se seguro no Ethereum
+title: "Segurança no Ethereum e prevenção de golpes"
+description: "Como se manter seguro no Ethereum: proteja sua carteira e frase de recuperação, identifique golpes cripto comuns e phishing, e saiba o que fazer se algo der errado."
 lang: pt-br
 ---
 

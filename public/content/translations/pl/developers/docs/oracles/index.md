@@ -385,33 +385,31 @@ Niektóre zdecentralizowane sieci wyroczni oferują usługi automatyzacji, któr
 
 ## Jak korzystać z wyroczni blockchainowych {#use-blockchain-oracles}
 
-Istnieje wiele aplikacji wyroczni, które możesz zintegrować ze swoim dappem Ethereum:
+Istnieje wiele aplikacji wyroczni, które możesz zintegrować ze swoim dappem na Ethereum:
 
-**[Chainlink](https://chain.link/)** - _Zdecentralizowane sieci wyroczni Chainlink zapewniają odporne na manipulacje wejścia, wyjścia i obliczenia w celu obsługi zaawansowanych inteligentnych kontraktów na dowolnym blockchainie._
+**[Chainlink](https://chain.link/)** - _Zdecentralizowane sieci wyroczni Chainlink zapewniają odporne na manipulacje dane wejściowe, wyjściowe i obliczenia, aby wspierać zaawansowane inteligentne kontrakty na dowolnym blockchainie._
 
-**[RedStone Oracles](https://redstone.finance/)** - _RedStone to zdecentralizowana modułowa wyrocznia, która zapewnia zoptymalizowane pod kątem gazu strumienie danych. Specjalizuje się w oferowaniu strumieni cen dla wschodzących aktywów, takich jak tokeny płynnego stakingu (LST), tokeny płynnego restakingu (LRT) i instrumenty pochodne stakingu Bitcoin._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone to zdecentralizowana, modułowa wyrocznia, która zapewnia zoptymalizowane pod kątem gazu strumienie danych. Specjalizuje się w oferowaniu strumieni cen dla wschodzących aktywów, takich jak tokeny płynnego stakingu (LST), tokeny płynnego restakingu (LRT) i instrumenty pochodne stakingu Bitcoina._
 
-**[Chronicle](https://chroniclelabs.org/)** - _Chronicle przezwycięża obecne ograniczenia przesyłania danych onchain, opracowując prawdziwie skalowalne, opłacalne, zdecentralizowane i weryfikowalne wyrocznie._
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle pokonuje obecne ograniczenia przesyłania danych onchain, rozwijając prawdziwie skalowalne, opłacalne, zdecentralizowane i weryfikowalne wyrocznie._
 
-**[Witnet](https://witnet.io/)** - _Witnet to niewymagająca pozwoleń, zdecentralizowana i odporna na cenzurę wyrocznia pomagająca inteligentnym kontraktom reagować na zdarzenia ze świata rzeczywistego z silnymi gwarancjami kryptoekonomicznymi._
+**[Witnet](https://witnet.io/)** - _Witnet to niewymagająca pozwoleń, zdecentralizowana i odporna na cenzurę wyrocznia, pomagająca inteligentnym kontraktom reagować na zdarzenia ze świata rzeczywistego z silnymi gwarancjami kryptoekonomicznymi._
 
-**[UMA Oracle](https://uma.xyz)** - _Optymistyczna wyrocznia UMA pozwala inteligentnym kontraktom szybko otrzymywać dowolnego rodzaju dane dla różnych aplikacji, w tym ubezpieczeń, finansowych instrumentów pochodnych i rynków predykcyjnych._
+**[UMA Oracle](https://uma.xyz)** - _Optymistyczna wyrocznia UMA pozwala inteligentnym kontraktom szybko otrzymywać dowolne rodzaje danych dla różnych aplikacji, w tym ubezpieczeń, finansowych instrumentów pochodnych i rynków predykcyjnych._
 
-**[Tellor](https://tellor.io/)** - _Tellor to przejrzysty i niewymagający pozwoleń protokół wyroczni dla Twojego inteligentnego kontraktu, aby łatwo uzyskać dowolne dane, kiedy tylko ich potrzebuje._
+**[Tellor](https://tellor.io/)** - _Tellor to przejrzysty i niewymagający pozwoleń protokół wyroczni, dzięki któremu Twój inteligentny kontrakt może łatwo uzyskać dowolne dane, kiedy tylko ich potrzebuje._
 
 **[Band Protocol](https://bandprotocol.com/)** - _Band Protocol to międzyłańcuchowa platforma wyroczni danych, która agreguje i łączy dane ze świata rzeczywistego oraz API z inteligentnymi kontraktami._
 
-**[Pyth Network](https://pyth.network/)** - _Sieć Pyth to sieć finansowych wyroczni pierwszej strony zaprojektowana do ciągłego publikowania danych ze świata rzeczywistego onchain w odpornym na manipulacje, zdecentralizowanym i samowystarczalnym środowisku._
+**[Pyth Network](https://pyth.network/)** - _Sieć Pyth to sieć finansowych wyroczni typu first-party, zaprojektowana do ciągłego publikowania danych ze świata rzeczywistego onchain w odpornym na manipulacje, zdecentralizowanym i samowystarczalnym środowisku._
 
-**[API3 DAO](https://api3.org/)** - _API3 DAO dostarcza rozwiązania wyroczni pierwszej strony, które zapewniają większą przejrzystość źródła, bezpieczeństwo i skalowalność w zdecentralizowanym rozwiązaniu dla inteligentnych kontraktów_
+**[API3 DAO](https://api3.org/)** - _API3 DAO dostarcza rozwiązania wyroczni typu first-party, które zapewniają większą przejrzystość źródeł, bezpieczeństwo i skalowalność w zdecentralizowanym rozwiązaniu dla inteligentnych kontraktów_
 
 **[Supra](https://supra.com/)** - Pionowo zintegrowany zestaw narzędzi rozwiązań międzyłańcuchowych, które łączą wszystkie blockchainy, publiczne (L1 i L2) lub prywatne (przedsiębiorstwa), zapewniając zdecentralizowane strumienie cen wyroczni, które mogą być używane w przypadkach użycia onchain i pozałańcuchowych. 
 
-**[Gas Network](https://gas.network/)** - Rozproszona platforma wyroczni dostarczająca dane o cenie gazu w czasie rzeczywistym w całym blockchainie. Przenosząc dane od wiodących dostawców danych o cenie gazu onchain, Gas Network pomaga napędzać interoperacyjność. Gas Network obsługuje dane dla ponad 35 łańcuchów, w tym sieci głównej Ethereum i wielu wiodących L2.
+**[DIA](https://www.diadata.org/)** - Międzyłańcuchowa sieć wyroczni dostarczająca weryfikowalne strumienie danych dla ponad 20 000 aktywów we wszystkich głównych klasach aktywów. DIA pozyskuje surowe dane handlowe bezpośrednio z ponad 100 rynków pierwotnych i przetwarza je onchain, zapewniając pełną przejrzystość i weryfikowalność danych z niestandardowymi konfiguracjami dla dowolnego przypadku użycia.
 
-**[DIA](https://www.diadata.org/)** - Międzyłańcuchowa sieć wyroczni dostarczająca weryfikowalne strumienie danych dla ponad 20 000 aktywów we wszystkich głównych klasach aktywów. DIA pozyskuje surowe dane handlowe bezpośrednio z ponad 100 rynków pierwotnych i oblicza je onchain, zapewniając pełną przejrzystość i weryfikowalność danych z niestandardowymi konfiguracjami dla każdego przypadku użycia.
-
-**[Stork](https://stork.network)** - Stork dostarcza dane cenowe z bardzo niskimi opóźnieniami, obsługując szeroki zakres przypadków użycia, w tym rynki kontraktów perpetual, protokoły pożyczkowe i ekosystemy DeFi, z nowymi aktywami obsługiwanymi szybko po wejściu na giełdę.
+**[Stork](https://stork.network)** - Stork dostarcza dane cenowe z bardzo niskimi opóźnieniami, obsługując szeroki zakres przypadków użycia, w tym rynki kontraktów perpetual, protokoły pożyczkowe i ekosystemy DeFi, z nowymi aktywami obsługiwanymi szybko po ich wylistowaniu.
 
 ## Dalsza lektura {#further-reading}
 

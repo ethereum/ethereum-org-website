@@ -1,6 +1,6 @@
 ---
 title: "탈중앙화 과학 (DeSci)"
-description: "이더리움의 탈중앙화 과학 개요"
+description: "탈중앙화 과학이란 무엇일까요? DeSci가 이더리움을 사용하여 연구에 자금을 지원하고, 데이터를 공개적으로 공유하며, 과학자들에게 보상하여 과학에 대한 접근성을 어떻게 높이는지 알아보세요."
 lang: ko
 template: use-cases
 sidebarDepth: 2

@@ -1,7 +1,7 @@
 ---
-title: Akıllı sözleşmelere giriş
+title: "Akıllı sözleşmelere giriş"
 metaTitle: "Akıllı sözleşmeler: Nedir ve faydaları nelerdir"
-description: Akıllı sözleşmelere teknik olmayan bir giriş
+description: "Akıllı sözleşmeler nedir? Ethereum üzerinde çalışan ve DeFi, NFT'ler ve DAO'lar gibi uygulamalara aracılar olmadan güç veren programlara teknik olmayan bir giriş."
 lang: tr
 ---
 

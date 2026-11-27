@@ -1,6 +1,6 @@
 ---
 title: Staking yang didelegasikan (staking sebagai layanan)
-description: Gambaran umum tentang cara memulai staking yang didelegasikan
+description: Apa itu staking sebagai layanan? Pelajari cara menyetorkan 32 ETH sementara operator node menjalankan validator Anda, dan kelebihan serta kekurangannya dibandingkan dengan staking mandiri atau staking gabungan.
 lang: id
 template: staking
 image: /images/staking/leslie-saas.png

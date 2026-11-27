@@ -1,7 +1,7 @@
 ---
-title: Einführung in die Ethereum-Governance
+title: "Einführung in die Ethereum-Governance"
 metaTitle: Ethereum-Governance
-description: Eine Einführung dazu, wie Entscheidungen über Ethereum getroffen werden.
+description: "Wie werden Entscheidungen über Ethereum getroffen? Erfahre, wie Protokolländerungen von Entwicklern, Knotenbetreibern und der Community vorgeschlagen, diskutiert und übernommen werden."
 lang: de
 ---
 
@@ -71,7 +71,7 @@ Der formelle Prozess zur Einführung von Änderungen am Ethereum-Protokoll sieht
 
 1. **Ein Core-EIP vorschlagen**: Wie in [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips) beschrieben, besteht der erste Schritt, um formell eine Änderung an Ethereum vorzuschlagen, darin, sie in einem Core-EIP detailliert zu beschreiben. Dies dient als offizielle Spezifikation für ein EIP, das die Protokollentwickler implementieren werden, falls es akzeptiert wird.
 
-2. **Präsentieren Sie Ihr EIP den Protokollentwicklern**: Sobald Sie ein Core-EIP haben, für das Sie Feedback aus der Community gesammelt haben, sollten Sie es den Protokollentwicklern präsentieren. Sie können dies tun, indem Sie es zur Diskussion in einem [AllCoreDevs-Call](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status) vorschlagen. Es ist wahrscheinlich, dass einige Diskussionen bereits asynchron im [Ethereum Magicians-Forum](https://ethereum-magicians.org/) oder im [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) stattgefunden haben.
+2. **Präsentieren Sie Ihr EIP den Protokollentwicklern**: Sobald Sie ein Core-EIP haben, für das Sie Feedback aus der Community gesammelt haben, sollten Sie es den Protokollentwicklern präsentieren. Sie können dies tun, indem Sie es zur Diskussion in einem [AllCoreDevs-Call](https://eips.ethereum.org/EIPS/eip-7723) vorschlagen. Es ist wahrscheinlich, dass einige Diskussionen bereits asynchron im [Ethereum Magicians-Forum](https://ethereum-magicians.org/) oder im [Ethereum R&D Discord](https://discord.gg/mncqtgVSVw) stattgefunden haben.
 
 > Mögliche Ergebnisse dieser Phase sind:
 

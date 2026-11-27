@@ -4,9 +4,9 @@ description: "⁦JavaScript⁩ پر مبنی پروجیکٹس اور ٹولنگ 
 lang: ur
 ---
 
-ایتھیریم ایکو سسٹم میں ⁦JavaScript⁩ سب سے مشہور زبانوں میں سے ایک ہے۔ درحقیقت، ایک [ٹیم](https://github.com/ethereumjs) موجود ہے جو زیادہ سے زیادہ ایتھیریم کو ⁦JavaScript⁩ میں لانے کے لیے وقف ہے۔
+ایتھیریم ایکو سسٹم میں <span dir="ltr">JavaScript</span> سب سے مقبول زبانوں میں سے ایک ہے، جس میں بنیادی پروٹوکول پریمیٹیوز سے لے کر پروڈکشن اتفاقِ رائے کا کلائنٹ تک ہر چیز کے <span dir="ltr">JavaScript</span> اور <span dir="ltr">TypeScript</span> کے نفاذ موجود ہیں۔
 
-[اسٹیک کی تمام سطحوں](/developers/docs/ethereum-stack/) پر ⁦JavaScript⁩ (یا اس سے ملتی جلتی کوئی چیز) لکھنے کے مواقع موجود ہیں۔
+[اسٹیک کی تمام سطحوں](/developers/docs/ethereum-stack/) پر <span dir="ltr">JavaScript</span> (یا اس سے ملتی جلتی کوئی چیز) لکھنے کے مواقع موجود ہیں۔
 
 ## ایتھیریم کے ساتھ تعامل کریں {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ lang: ur
 
 ### نوڈز اور کلائنٹس {#nodes-and-clients}
 
-ایک <span dir="ltr">EthereumJS</span> کلائنٹ فعال ڈیولپمنٹ کے مراحل میں ہے جو آپ کو یہ جاننے کی سہولت دیتا ہے کہ ایتھیریم کلائنٹس اس زبان میں کیسے کام کرتے ہیں جسے آپ سمجھتے ہیں؛ یعنی ⁦JavaScript⁩!
+[لوڈسٹار](https://lodestar.chainsafe.io/) ایک پروڈکشن کے لیے تیار اتفاقِ رائے کا کلائنٹ ہے جو <span dir="ltr">TypeScript</span> میں لکھا گیا ہے اور اسے <span dir="ltr">ChainSafe</span> کے ذریعے برقرار رکھا جاتا ہے۔ اس میں ایک بیکن نوڈ اور توثیق کار کلائنٹ شامل ہے، اور یہ دیکھنے کے لیے ایک بہترین جگہ ہے کہ ایتھیریم کا حصہ داری کا ثبوت (PoS) کا اتفاق رائے آپ کی جانی پہچانی زبان میں کیسے کام کرتا ہے۔
 
-**کلائنٹ کو دیکھیں**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**لوڈسٹار کو دیکھیں**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+ایگزیکیوشن کی طرف، <span dir="ltr">EthereumJS</span> کلائنٹ کو متروک اور آرکائیو کر دیا گیا ہے، لیکن اس کا سورس کوڈ اب بھی دستیاب ہے تاکہ یہ دریافت کیا جا سکے کہ ایتھیریم کلائنٹ <span dir="ltr">JavaScript</span> میں کیسے کام کرتا ہے۔
+
+**آرکائیو شدہ کلائنٹ کو دیکھیں**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## دیگر پروجیکٹس {#other-projects}
 

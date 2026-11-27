@@ -14,6 +14,18 @@ const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
+// Written by `pnpm learner-db:prepare` on Netlify: whether this deploy gets
+// the learner database, and a preview's own database name. Absent locally
+const learnerDb = (() => {
+  try {
+    return JSON.parse(
+      require("fs").readFileSync(".netlify/learner-db.json", "utf8")
+    )
+  } catch {
+    return {}
+  }
+})()
+
 const experimental = LIMIT_CPUS
   ? {
       // This option could be enabled in the future when flagged as stable, to speed up builds
@@ -47,6 +59,9 @@ module.exports = (phase) => {
       // (e.g. useStakingProductsCardGrid) can opt out of randomization during
       // visual test builds. Server code reads it from process.env directly.
       IS_VISUAL_TEST: process.env.IS_VISUAL_TEST,
+      LEARNER_DB_ENABLED:
+        learnerDb.enabled === undefined ? "" : String(learnerDb.enabled),
+      LEARNER_DB_NAME: learnerDb.database ?? "",
     },
     webpack: (config) => {
       config.module.rules.push({
@@ -126,6 +141,9 @@ module.exports = (phase) => {
     // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
     serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
+    // Show the proxy the raw path. Otherwise Netlify appends the trailing slash
+    // before the proxy runs, hiding slash-less URLs from its 301 (#19703).
+    skipProxyUrlNormalize: true,
     images: {
       // Disable Next's on-disk image LRU: its eager mkdir('.next/cache/images')
       // crashes on Netlify's read-only Lambda FS as an unhandled rejection.
@@ -200,10 +218,8 @@ module.exports = (phase) => {
         // English / default-locale: no prefix in source or destination
         const defaultRedirect = { source, destination, permanent }
 
-        // On Netlify the i18n proxy runs first and rewrites `/eth/` to
-        // `/en/eth/` before these rules are matched. Send the prefixed form
-        // straight to the unprefixed destination; mapping it to
-        // `/en/<destination>` adds a hop for the proxy to strip `/en/` again.
+        // On Netlify the proxy issues these redirects itself (resolvePathRoute);
+        // these rules cover environments where Next's redirects run first.
         const defaultLocaleRedirect = {
           source: `/${DEFAULT_LOCALE}${source}`,
           destination,
@@ -332,6 +348,15 @@ module.exports = (phase) => {
         "\\[locale\\]/developers": [
           "./public/content/latest/**/*.md",
           "./public/content/translations/*/latest/**/*.md",
+        ],
+        "\\[locale\\]/community": [
+          "./public/content/stories/**/*.md",
+          "./public/content/translations/*/stories/**/*.md",
+        ],
+        // Story pages also read co-located and hero images from disk.
+        "\\[locale\\]/stories": [
+          "./public/content/stories/**/*",
+          "./public/content/translations/*/stories/**/*.md",
         ],
       },
     }

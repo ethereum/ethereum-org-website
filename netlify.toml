@@ -12,7 +12,9 @@
   # larger than Next.js 14 (.segments trees, RSC payloads), leaving little
   # headroom on the build VM. The cache is only useful for incremental builds
   # which don't apply on Netlify (each build starts fresh).
-  command = "pnpm build && rm -rf .next/cache"
+  # `learner-db:prepare` first: which deploys get the courses database, plus
+  # preview databases and migrations (src/scripts/learner-db/prepare.ts).
+  command = "pnpm learner-db:prepare && pnpm build && rm -rf .next/cache"
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
@@ -27,23 +29,9 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Submits changed pages to IndexNow after production deploys (netlify/plugins/indexnow)
 [[plugins]]
-  package = "@netlify/plugin-lighthouse"
-
-  [[plugins.inputs.audits]]
-    path = "en/"
-  [[plugins.inputs.audits]]
-    path = "en/wallets/find-wallet/"
-  [[plugins.inputs.audits]]
-    path = "en/staking/"
-  [[plugins.inputs.audits]]
-    path = "en/whitepaper/"
-  [[plugins.inputs.audits]]
-    path = "en/nft/"
-  [[plugins.inputs.audits]]
-    path = "en/developers/docs/intro-to-ethereum/"
-  [[plugins.inputs.audits]]
-    path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
+  package = "./netlify/plugins/indexnow"
 
 [functions]
   included_files = ["i18n.config.json", "src/intl/**/*", "src/data-layer/mocks/**/*"]
@@ -68,6 +56,7 @@
     "/code-examples/*",
     "/reports/*",
     "/robots.txt",
+    "/fc6bce24ef26bd1222946b181a2d2197.txt",
     "/*.css",
     "/*.js",
     "/*.map",
@@ -76,6 +65,11 @@
     "/*.xml",
     "/*.webmanifest"
   ]
+
+# Previews build only a locale subset (other locales 404). All locales: staging, intl/* or full/* branches, or a "[full build]" commit message.
+# Keep the trailing `pnpm learner-db:prepare && pnpm build && rm -rf .next/cache` in sync with [build].command.
+[context.deploy-preview]
+  command = 'case "$HEAD" in staging|intl/*|full/*) ;; *) git log -1 --format=%B | grep -qF "[full build]" || export NEXT_PUBLIC_BUILD_LOCALES=en,es,zh,ar,ja ;; esac; pnpm learner-db:prepare && pnpm build && rm -rf .next/cache'
 
 # Override SITE_URL for named branches with custom subdomains so canonical
 # URLs and OG metadata use the custom domain instead of *.netlify.app.

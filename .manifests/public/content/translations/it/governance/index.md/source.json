@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/governance/index.md",
-  "generatedAt": "2026-06-08T09:41:50.839Z",
-  "rootHash": "45c7bf109bdb",
+  "generatedAt": "2026-11-27T10:02:20.389Z",
+  "rootHash": "9d8651fe3a39",
   "tree": {
-    "contentHash": "83b16d70a4e1",
-    "anchorHash": "6181cb43a24b",
+    "contentHash": "e311fb613c2a",
+    "anchorHash": "0f643f638610",
     "children": {
       "frontmatter:title": {
         "contentHash": "a3b7f0f45f1d",
@@ -16,7 +16,7 @@
         "anchorHash": "02273b8773a2"
       },
       "frontmatter:description": {
-        "contentHash": "870f509a97da",
+        "contentHash": "27f3004d43e1",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -280,7 +280,7 @@
       },
       "formal-process": {
         "contentHash": "f66232f7aec4",
-        "anchorHash": "ce2f391034a1",
+        "anchorHash": "835ea896653f",
         "labelHash": "ed5a763dff93",
         "children": {
           "_label": {
@@ -301,7 +301,7 @@
           },
           "link:1": {
             "contentHash": "ba86e5aaae8b",
-            "anchorHash": "15ee50112f14"
+            "anchorHash": "8a72fc25ee44"
           },
           "prose:6": {
             "contentHash": "b5ffbec6db57",
@@ -845,5 +845,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

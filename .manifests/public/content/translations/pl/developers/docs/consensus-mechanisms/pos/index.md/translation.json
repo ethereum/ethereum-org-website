@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "locale": "pl",
-  "translatedAt": "2026-06-18T21:09:00.649Z",
-  "englishManifestHash": "7367afbe696a",
+  "translatedAt": "2026-11-25T10:04:24.280Z",
+  "englishManifestHash": "9f48c9a15dbb",
   "placeholderOrder": [
     "LINK-74d94b",
     "LINK-8d5f08",
@@ -15,7 +15,7 @@
     "LINK-293225",
     "LINK-cf08c6",
     "LINK-46f60a",
-    "LINK-068df1",
+    "LINK-327594",
     "LINK-94f7b5",
     "LINK-b99e6b",
     "LINK-0b2ddf",
@@ -23,7 +23,7 @@
     "LINK-fa02c5",
     "LINK-3d4251",
     "LINK-02631b",
-    "LINK-663f61",
+    "LINK-73e1a0",
     "LINK-622ee2",
     "LINK-3b237e",
     "LINK-632354",
@@ -104,10 +104,10 @@
         "url": "/developers/docs/gas/#base-fee"
       }
     },
-    "LINK-068df1": {
+    "LINK-327594": {
       "type": "link",
       "values": {
-        "url": "/developers/docs/nodes-and-clients/#execution-client"
+        "url": "/developers/docs/nodes-and-clients/#execution-clients"
       }
     },
     "LINK-94f7b5": {
@@ -152,10 +152,10 @@
         "url": "https://eth2book.info/bellatrix/part2/incentives/inactivity"
       }
     },
-    "LINK-663f61": {
+    "LINK-73e1a0": {
       "type": "link",
       "values": {
-        "url": "https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty"
+        "url": "https://eth2book.info/latest/part2/incentives/slashing#the-correlation-penalty"
       }
     },
     "LINK-622ee2": {
@@ -233,7 +233,7 @@
   },
   "sections": {
     "_all": {
-      "translatedAt": "2026-06-18T21:09:00.649Z",
+      "translatedAt": "2026-11-25T10:04:24.280Z",
       "status": "success"
     }
   }

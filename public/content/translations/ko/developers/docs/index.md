@@ -1,6 +1,6 @@
 ---
 title: "이더리움 개발 문서"
-description: "ethereum.org 개발자 문서를 소개합니다."
+description: "이더리움 개발자 문서: 기초, 이더리움 스택, 스마트 컨트랙트, 노드 및 확장성에 대해 알아보고 첫 dapp을 구축하기 위한 가이드를 확인하세요."
 lang: ko
 ---
 

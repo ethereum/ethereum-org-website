@@ -7,17 +7,16 @@ skill: advanced
 breadcrumb: Interaksi kontrak
 lang: id
 published: 2020-04-05
-source: EthereumDev
-sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Dalam tutorial sebelumnya kita telah banyak belajar [cara menyebarkan kontrak pintar pertama Anda](/developers/tutorials/deploying-your-first-smart-contract/) dan menambahkan beberapa fitur ke dalamnya seperti [mengontrol akses dengan pengubah (modifier)](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) atau [penanganan kesalahan di Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). Dalam tutorial ini kita akan belajar cara menyebarkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengannya.
+Dalam tutorial sebelumnya, kita telah banyak belajar [cara menyebarkan kontrak pintar pertama Anda](/developers/tutorials/deploying-your-first-smart-contract/) dan menambahkan beberapa fitur ke dalamnya seperti [mengontrol akses dengan pengubah (modifier)](https://docs.soliditylang.org/en/latest/contracts.html#function-modifiers) atau [penanganan kesalahan di Solidity](https://docs.soliditylang.org/en/latest/control-structures.html#error-handling-assert-require-revert-and-exceptions). Dalam tutorial ini, kita akan belajar cara menyebarkan kontrak pintar dari kontrak yang sudah ada dan berinteraksi dengannya.
 
-Kita akan membuat kontrak yang memungkinkan siapa saja untuk memiliki `Counter` kontrak pintar mereka sendiri dengan membuat pabrik (factory) untuknya, namanya adalah `CounterFactory`. Pertama, berikut adalah kode dari kontrak pintar `Counter` awal kita:
+Kita akan membuat kontrak yang memungkinkan siapa saja untuk memiliki kontrak pintar `Counter` mereka sendiri dengan membuat pabrik (factory) untuknya, namanya adalah `CounterFactory`. Pertama, berikut adalah kode dari kontrak pintar `Counter` awal kita:
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
@@ -36,7 +35,7 @@ contract Counter {
         _;
     }
 
-     constructor(address owner) public {
+     constructor(address owner) {
         _owner = owner;
         _factory = msg.sender;
     }
@@ -52,34 +51,34 @@ contract Counter {
 }
 ```
 
-Perhatikan bahwa kita sedikit memodifikasi kode kontrak untuk melacak alamat pabrik dan alamat pemilik kontrak. Ketika Anda memanggil kode kontrak dari kontrak lain, msg.sender akan merujuk ke alamat pabrik kontrak kita. Ini adalah **poin yang sangat penting untuk dipahami** karena menggunakan kontrak untuk berinteraksi dengan kontrak lain adalah praktik yang umum. Oleh karena itu, Anda harus berhati-hati tentang siapa pengirimnya dalam kasus-kasus yang kompleks.
+Perhatikan bahwa kita sedikit memodifikasi kode kontrak untuk melacak alamat pabrik dan alamat pemilik kontrak. Saat Anda memanggil kode kontrak dari kontrak lain, msg.sender akan merujuk ke alamat pabrik kontrak kita. Ini adalah **poin yang sangat penting untuk dipahami** karena menggunakan kontrak untuk berinteraksi dengan kontrak lain adalah praktik yang umum. Oleh karena itu, Anda harus memperhatikan siapa pengirimnya dalam kasus-kasus yang kompleks.
 
-Untuk ini kita juga menambahkan pengubah `onlyFactory` yang memastikan bahwa fungsi pengubah state hanya dapat dipanggil oleh pabrik yang akan meneruskan pemanggil asli sebagai parameter.
+Untuk ini, kita juga menambahkan pengubah `onlyFactory` yang memastikan bahwa fungsi yang mengubah state hanya dapat dipanggil oleh pabrik yang akan meneruskan pemanggil asli sebagai parameter.
 
-Di dalam `CounterFactory` baru kita yang akan mengelola semua Counter lainnya, kita akan menambahkan pemetaan yang akan mengaitkan seorang pemilik dengan alamat kontrak counter miliknya:
+Di dalam `CounterFactory` baru kita yang akan mengelola semua Counter lainnya, kita akan menambahkan pemetaan (mapping) yang akan mengaitkan seorang pemilik dengan alamat kontrak counter miliknya:
 
 ```solidity
 mapping(address => Counter) _counters;
 ```
 
-Di Ethereum, pemetaan setara dengan objek di JavaScript, mereka memungkinkan untuk memetakan kunci bertipe A ke nilai bertipe B. Dalam hal ini kita memetakan alamat seorang pemilik dengan instansiasi dari Counter miliknya.
+Di Solidity, [pemetaan](https://docs.soliditylang.org/en/latest/types.html#mapping-types) mirip dengan objek di JavaScript: mereka memetakan kunci dari tipe A ke nilai dari tipe B. Dalam hal ini, kita memetakan alamat pemilik dengan instansiasi dari Counter miliknya.
 
 Menginstansiasi Counter baru untuk seseorang akan terlihat seperti ini:
 
 ```solidity
   function createCounter() public {
-      require (_counters[msg.sender] == Counter(0));
+      require(address(_counters[msg.sender]) == address(0), "You already have a counter");
       _counters[msg.sender] = new Counter(msg.sender);
   }
 ```
 
-Kita pertama-tama memeriksa apakah orang tersebut sudah memiliki counter. Jika dia belum memiliki counter, kita menginstansiasi counter baru dengan meneruskan alamat miliknya ke konstruktor `Counter` dan menetapkan instansiasi yang baru dibuat ke pemetaan.
+Pertama-tama kita memeriksa apakah orang tersebut sudah memiliki counter. Sebuah pemetaan mengembalikan nilai default untuk kunci yang tidak pernah diatur, yang mana untuk tipe kontrak adalah alamat nol, jadi kita membandingkan alamat kontrak yang disimpan dengan `address(0)`. Jika dia tidak memiliki counter, kita menginstansiasi counter baru dengan meneruskan alamatnya ke konstruktor `Counter` dan menetapkan instansiasi yang baru dibuat ke pemetaan tersebut.
 
-Untuk mendapatkan hitungan dari Counter tertentu, kodenya akan terlihat seperti ini:
+Untuk mendapatkan hitungan dari Counter tertentu, akan terlihat seperti ini:
 
 ```solidity
 function getCount(address account) public view returns (uint256) {
-    require (_counters[account] != Counter(0));
+    require(address(_counters[account]) != address(0), "This account has no counter");
     return (_counters[account].getCount());
 }
 
@@ -94,19 +93,20 @@ Fungsi `increment` cukup mirip tetapi meneruskan pengirim transaksi asli ke kont
 
 ```solidity
 function increment() public {
-      require (_counters[msg.sender] != Counter(0));
-      Counter(_counters[msg.sender]).increment(msg.sender);
+      require(address(_counters[msg.sender]) != address(0), "You need to create a counter first");
+      _counters[msg.sender].increment(msg.sender);
   }
 ```
 
-Perhatikan bahwa jika dipanggil terlalu banyak, counter kita mungkin bisa menjadi korban limpahan. Anda harus menggunakan [Pustaka SafeMath](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) sebanyak mungkin untuk melindungi dari kemungkinan kasus ini.
+Sejak Solidity 0.8, aritmatika [diperiksa secara default](https://docs.soliditylang.org/en/latest/control-structures.html#checked-or-unchecked-arithmetic): jika `_count` pernah meluap (overflow), `_count++` akan mengembalikan transaksi alih-alih membungkusnya secara diam-diam, sehingga tidak diperlukan Pustaka tambahan seperti SafeMath.
 
 Untuk menyebarkan kontrak kita, Anda perlu menyediakan kode `CounterFactory` dan `Counter`. Saat menyebarkan misalnya di Remix, Anda harus memilih CounterFactory.
 
 Berikut adalah kode lengkapnya:
 
 ```solidity
-pragma solidity 0.5.17;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
 
 contract Counter {
 
@@ -125,7 +125,7 @@ contract Counter {
         _;
     }
 
-     constructor(address owner) public {
+     constructor(address owner) {
         _owner = owner;
         _factory = msg.sender;
     }
@@ -145,17 +145,17 @@ contract CounterFactory {
     mapping(address => Counter) _counters;
 
     function createCounter() public {
-        require (_counters[msg.sender] == Counter(0));
+        require(address(_counters[msg.sender]) == address(0), "You already have a counter");
         _counters[msg.sender] = new Counter(msg.sender);
     }
 
     function increment() public {
-        require (_counters[msg.sender] != Counter(0));
-        Counter(_counters[msg.sender]).increment(msg.sender);
+        require(address(_counters[msg.sender]) != address(0), "You need to create a counter first");
+        _counters[msg.sender].increment(msg.sender);
     }
 
     function getCount(address account) public view returns (uint256) {
-        require (_counters[account] != Counter(0));
+        require(address(_counters[account]) != address(0), "This account has no counter");
         return (_counters[account].getCount());
     }
 
@@ -168,6 +168,6 @@ contract CounterFactory {
 
 Setelah kompilasi, di bagian penyebaran Remix Anda akan memilih pabrik yang akan disebarkan:
 
-![Selecting the factory to be deployed in Remix](./counterfactory-deploy.png)
+![Memilih pabrik yang akan disebarkan di Remix](./counterfactory-deploy.png)
 
 Kemudian Anda dapat bermain dengan pabrik kontrak Anda dan memeriksa perubahan nilainya. Jika Anda ingin memanggil kontrak pintar dari alamat yang berbeda, Anda perlu mengubah alamat di pilihan Akun pada Remix.

@@ -1,7 +1,7 @@
 ---
 title: Finanza decentralizzata (DeFi)
 metaTitle: "Cos'è la DeFi? | Vantaggi e utilizzo della finanza decentralizzata"
-description: Una panoramica sulla DeFi su Ethereum
+description: "Cos'è la DeFi? Scopri come la finanza decentralizzata su Ethereum permette a chiunque di prestare, assumere prestiti, fare trading e guadagnare interessi senza banche, e i rischi connessi."
 lang: it
 template: use-cases
 image: /images/use-cases/defi.png

@@ -6,11 +6,7 @@ import {
   ShieldCheck,
   TrendingUp,
 } from "lucide-react"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
@@ -54,6 +50,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { buildStablecoinRows } from "@/lib/utils/stablecoins"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import PageJsonLD from "./page-jsonld"
 
@@ -71,6 +68,7 @@ import ghoLargeImg from "@/public/images/stablecoins/gho-large.png"
 import gloLargeImg from "@/public/images/stablecoins/glo-large.png"
 import heroImg from "@/public/images/stablecoins/gold-rollup-spaceship-with-coins.png"
 import duneImg from "@/public/images/stablecoins/tools/dune.png"
+import pharosImg from "@/public/images/stablecoins/tools/pharos.png"
 import stablePulseImg from "@/public/images/stablecoins/tools/stable-pulse.png"
 import stablecoinsWtfImg from "@/public/images/stablecoins/tools/stablecoinswtf.png"
 import stablesInfoImg from "@/public/images/stablecoins/tools/stables-info.png"
@@ -86,8 +84,6 @@ import walletCardImg from "@/public/images/wallets/wallet-hero.png"
 async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-stablecoins")
   const tCommon = await getTranslations("common")
@@ -392,6 +388,16 @@ async function Page(props: { params: Promise<PageParams> }) {
         brand: t("page-stablecoins-tools-stablewars-title"),
       }),
     },
+    {
+      title: t("page-stablecoins-tools-pharos-title"),
+      description: t("page-stablecoins-tools-pharos-description"),
+      href: "https://pharos.watch/",
+      image: pharosImg,
+      className: "dark:[&_img]:invert",
+      ctaLabel: t("page-stablecoins-tools-visit-brand", {
+        brand: t("page-stablecoins-tools-pharos-title"),
+      }),
+    },
   ]
 
   const { contributors } = await getAppPageContributorInfo(
@@ -499,7 +505,10 @@ async function Page(props: { params: Promise<PageParams> }) {
                       className="gap-8 rounded-base bg-background-highlight p-6 text-start md:p-10"
                     >
                       <div>
-                        <h3 className="mb-4 text-2xl font-black">
+                        <h3
+                          id={slugify(type.title, { unicode: true })}
+                          className="mb-4 text-2xl font-black"
+                        >
                           {type.title}
                         </h3>
                         <div className="mb-6 text-body-medium">
@@ -861,8 +870,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-stablecoins")
 

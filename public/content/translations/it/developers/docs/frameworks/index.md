@@ -1,6 +1,6 @@
 ---
 title: Framework di sviluppo per dapp
-description: Esplora i vantaggi dei framework e confronta le opzioni disponibili.
+description: Confronta i framework di sviluppo di Ethereum come Foundry e Hardhat. Scopri cosa ti offre un framework per compilare, testare e distribuire gli smart contract.
 lang: it
 ---
 
@@ -25,7 +25,7 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 **Foundry** - **_Foundry è un toolkit incredibilmente veloce, portabile e modulare per lo sviluppo di applicazioni su Ethereum_**
 
 - [Installa Foundry](https://book.getfoundry.sh/)
-- [Libro di Foundry](https://book.getfoundry.sh/)
+- [Libro su Foundry](https://book.getfoundry.sh/)
 - [Chat della community di Foundry su Telegram](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
@@ -34,34 +34,34 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Lo strumento di sviluppo di smart contract per programmatori Python, data scientist e professionisti della sicurezza._**
+**Ape -** **_Lo strumento di sviluppo di smart contract per Pythonisti, Data Scientist e Professionisti della Sicurezza._**
 
 - [Documentazione](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_Una piattaforma per lo sviluppo di applicazioni blockchain sulla JVM._**
+**Web3j -** **_Una piattaforma per sviluppare applicazioni blockchain sulla JVM._**
 
 - [Homepage](https://www.web3labs.com/web3j-sdk)
 - [Documentazione](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt -** **_Libreria asincrona e ad alte prestazioni in Kotlin/Java/Android per blockchain basate su EVM._**
+**ethers-kt -** **_Libreria asincrona e ad alte prestazioni in Kotlin/Java/Android per blockchain basate sulla EVM._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Esempi](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Crea app basate su Ethereum con un solo comando. Include un'ampia offerta di framework per l'interfaccia utente e modelli di finanza decentralizzata (DeFi) tra cui scegliere._**
+**Create Eth App -** **_Crea app basate su Ethereum con un solo comando. Viene fornito con un'ampia offerta di framework per l'interfaccia utente e modelli DeFi tra cui scegliere._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modelli](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem e RainbowKit con la tua scelta tra Hardhat o Foundry: ricaricamento a caldo dei contratti, hook React personalizzati, un portafoglio usa e getta e un faucet locale, oltre a moduli di estensione per lo sviluppo di applicazioni decentralizzate (dapp) full-stack._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem e RainbowKit con la tua scelta tra Hardhat o Foundry: ricaricamento a caldo dei contratti, hook React personalizzati, un portafoglio usa e getta e un faucet locale, e moduli di estensione per lo sviluppo di dapp full-stack._**
 
 - [Sito web](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Piattaforma di sviluppo Web3 che consente agli sviluppatori blockchain di creare, testare, eseguire il debug, monitorare e gestire smart contract e migliorare l'esperienza utente (UX) delle dapp._**
+**Tenderly -** **_Piattaforma di sviluppo Web3 che consente agli sviluppatori blockchain di creare, testare, eseguire il debug, monitorare e gestire gli smart contract e migliorare l'esperienza utente delle dapp._**
 
 - [Sito web](https://tenderly.co/)
 - [Documentazione](https://docs.tenderly.co/)
@@ -69,7 +69,7 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 **The Graph -** **_The Graph per interrogare i dati della blockchain in modo efficiente._**
 
 - [Sito web](https://thegraph.com/)
-- [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Documentazione](https://thegraph.com/docs/en/)
 
 **Alchemy -** **_Piattaforma di sviluppo su Ethereum._**
 
@@ -83,12 +83,12 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_Crea applicazioni Web3 in grado di interagire con i tuoi smart contract utilizzando i nostri potenti SDK e la CLI._**
+**thirdweb SDK -** **_Crea applicazioni Web3 che possono interagire con i tuoi smart contract utilizzando i nostri potenti SDK e la CLI._**
 
 - [Documentazione](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Piattaforma di sviluppo Web3 (Ethereum e non solo)._**
+**Chainstack -** **_Piattaforma di sviluppo Web3 (Ethereum e altro)._**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
@@ -108,28 +108,27 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 
 **OpenZeppelin SDK -** **_Il toolkit definitivo per gli smart contract: una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con gli smart contract._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum della community](https://forum.openzeppelin.com/c/support/17)
 - **Lo sviluppo di OpenZeppelin SDK è terminato**
 
-**Catapulta -** **_Strumento di distribuzione di smart contract multi-catena, automatizza le verifiche negli esploratori di blocchi, tiene traccia degli smart contract distribuiti e condivide i report di distribuzione, plug-and-play per progetti Foundry e Hardhat._**
+**Catapulta -** **_Strumento di distribuzione di smart contract multi-catena, automatizza le verifiche negli esploratori di blocchi, tieni traccia degli smart contract distribuiti e condividi i report di distribuzione, plug-n-play per i progetti Foundry e Hardhat._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
-**GoldRush (basato su Covalent) -** **_GoldRush offre la suite di API di dati blockchain più completa per sviluppatori, analisti e aziende. Che tu stia creando una dashboard DeFi, un portafoglio, un bot di trading, un agente IA o una piattaforma di conformità, le API di dati forniscono un accesso rapido, accurato e intuitivo per gli sviluppatori ai dati onchain essenziali di cui hai bisogno_**
+**GoldRush (powered by Covalent) -** **_GoldRush offre la suite di API di dati blockchain più completa per sviluppatori, analisti e aziende. Che tu stia creando una dashboard DeFi, un portafoglio, un bot di trading, un agente IA o una piattaforma di conformità, le API di dati forniscono un accesso rapido, accurato e intuitivo per gli sviluppatori ai dati onchain essenziali di cui hai bisogno_**
 
 - [Sito web](https://goldrush.dev/)
 - [Documentazione](https://goldrush.dev/docs/chains/ethereum)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
 
-**Wake -** **_Framework Python all-in-one per test, fuzzing, distribuzione, scansione delle vulnerabilità e navigazione del codice dei contratti._**
+**Wake -** **_Framework Python all-in-one per test dei contratti, fuzzing, distribuzione, scansione delle vulnerabilità e navigazione del codice._**
 
 - [Homepage](https://getwake.io/)
 - [Documentazione](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
-- [Estensione per VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+- [Estensione VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 **Veramo -** **_Framework open source, modulare e agnostico che semplifica agli sviluppatori di applicazioni decentralizzate l'integrazione di identità decentralizzate e credenziali verificabili nelle loro applicazioni._**
 
@@ -143,6 +142,7 @@ Prima di immergerti nei framework, ti consigliamo di leggere la nostra introduzi
 
 - [Documentazione](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
@@ -153,4 +153,4 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 
 ## Tutorial: Framework di sviluppo su Ethereum {#tutorials}
 
-- [Smart contract Hello World per principianti – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Crea e distribuisci uno smart contract hello world utilizzando Hardhat, quindi connettilo a un frontend._
+- [Smart contract Hello World per principianti](/developers/tutorials/hello-world-smart-contract/) _– Crea e distribuisci uno smart contract hello world usando Hardhat._

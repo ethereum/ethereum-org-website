@@ -1,12 +1,9 @@
 import { pick } from "lodash"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -22,6 +19,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getCommunityStories } from "@/lib/utils/stories"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import tenYearEventRegions from "@/data/tenYearEventRegions"
 
@@ -43,8 +41,6 @@ const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const stories = await getCommunityStories(locale)
 
@@ -75,7 +71,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           )}
         >
           <div className="flex flex-1 flex-col gap-5">
-            <div>
+            <div className="flex flex-col gap-4">
+              <Breadcrumbs slug="10years" />
               <h1 className="text-2xl">{t("page-10-year-hero-title")}</h1>
             </div>
 
@@ -151,7 +148,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             key={country}
                             className={cn("flex flex-col border-b px-4 py-6")}
                           >
-                            <h3 className="mb-2 flex items-center gap-2 text-2xl text-body-medium">
+                            <h3
+                              id={slugify(`${key}-${country}`, {
+                                unicode: true,
+                              })}
+                              className="mb-2 flex items-center gap-2 text-2xl text-body-medium"
+                            >
                               <span className="flex min-h-6 min-w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
                                 <Emoji
                                   text={countryEvents[0].countryFlag}
@@ -374,8 +376,6 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-
-  setRequestLocale(locale)
 
   const t = await getTranslations("page-10-year-anniversary")
 

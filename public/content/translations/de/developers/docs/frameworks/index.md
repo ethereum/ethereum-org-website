@@ -1,6 +1,6 @@
 ---
 title: "Frameworks für die Dapp-Entwicklung"
-description: "Entdecken Sie die Vorteile von Frameworks und vergleichen Sie die verfügbaren Optionen."
+description: "Vergleichen Sie Ethereum-Entwicklungs-Frameworks wie Foundry und Hardhat. Erfahren Sie, was Ihnen ein Framework für das Kompilieren, Testen und Bereitstellen von Smart Contracts bietet."
 lang: de
 ---
 
@@ -30,7 +30,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 
 ## Verfügbare Frameworks {#available-frameworks}
 
-**Foundry** - **_Foundry ist ein blitzschnelles, portables und modulares Toolkit für die Entwicklung von Ethereum-Anwendungen._**
+**Foundry** - **_Foundry ist ein blitzschnelles, portables und modulares Toolkit für die Entwicklung von Ethereum-Anwendungen_**
 
 - [Foundry installieren](https://book.getfoundry.sh/)
 - [Foundry-Buch](https://book.getfoundry.sh/)
@@ -42,7 +42,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_Das Smart-Contract-Entwicklungstool für Python-Entwickler, Datenwissenschaftler und Sicherheitsexperten._**
+**Ape -** **_Das Smart-Contract-Entwicklungstool für Python-Entwickler, Data Scientists und Sicherheitsexperten._**
 
 - [Dokumentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -59,17 +59,17 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [Beispiele](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Erstellen Sie Ethereum-basierte Apps mit einem einzigen Befehl. Bietet eine große Auswahl an UI-Frameworks und Vorlagen für Dezentralisierte Finanzen (DeFi)._**
+**Create Eth App -** **_Erstellen Sie Ethereum-basierte Apps mit einem einzigen Befehl. Bietet eine große Auswahl an UI-Frameworks und DeFi-Vorlagen._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Vorlagen](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem und RainbowKit mit Hardhat oder Foundry nach Wahl: Hot-Reload für Verträge, benutzerdefinierte React-Hooks, eine Burner-Wallet und ein lokales Faucet sowie Erweiterungsmodule für die Full-Stack-Entwicklung von dezentralen Anwendungen (Dapps)._**
+**Scaffold-ETH 2 -** **_Next.js, Wagmi, Viem und RainbowKit mit Hardhat oder Foundry nach Wahl: Contract Hot Reload, benutzerdefinierte React-Hooks, eine Burner-Wallet und ein lokales Faucet sowie Erweiterungsmodule für die Full-Stack-Dapp-Entwicklung._**
 
 - [Website](https://scaffoldeth.io/)
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben sowie die UX von Dapps zu verbessern._**
+**Tenderly -** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben sowie die Dapp-UX zu verbessern._**
 
 - [Website](https://tenderly.co/)
 - [Dokumentation](https://docs.tenderly.co/)
@@ -77,7 +77,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 **The Graph -** **_The Graph für die effiziente Abfrage von Blockchain-Daten._**
 
 - [Website](https://thegraph.com/)
-- [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
+- [Dokumentation](https://thegraph.com/docs/en/)
 
 **Alchemy -** **_Ethereum-Entwicklungsplattform._**
 
@@ -91,7 +91,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_Erstellen Sie Web3-Anwendungen, die mit Ihren Smart Contracts interagieren können, indem Sie unsere leistungsstarken SDKs und CLI verwenden._**
+**thirdweb SDK -** **_Erstellen Sie Web3-Anwendungen, die mit Ihren Smart Contracts interagieren können, mithilfe unserer leistungsstarken SDKs und CLI._**
 
 - [Dokumentation](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -102,7 +102,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_Web3-Entwicklungsplattform auf Unternehmensniveau, mit der Sie NFT-Anwendungen auf allen wichtigen Chains, EVM-Chains (und anderen), erstellen können._**
+**Crossmint -** **_Web3-Entwicklungsplattform auf Unternehmensniveau, mit der Sie NFT-Anwendungen auf allen wichtigen EVM-Chains (und anderen) erstellen können._**
 
 - [Website](https://www.crossmint.com)
 - [Dokumentation](https://docs.crossmint.com)
@@ -114,14 +114,13 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie wird derzeit nicht mehr gepflegt**
 
-**OpenZeppelin SDK -** **_Das ultimative Smart-Contract-Toolkit: Eine Suite von Tools, die Ihnen helfen, Smart Contracts zu entwickeln, zu kompilieren, zu aktualisieren, bereitzustellen und mit ihnen zu interagieren._**
+**OpenZeppelin SDK -** **_Das ultimative Smart-Contract-Toolkit: Eine Suite von Tools, die Ihnen bei der Entwicklung, Kompilierung, Aktualisierung, Bereitstellung und Interaktion mit Smart Contracts helfen._**
 
-- [OpenZeppelin Defender SDK](https://docs.openzeppelin.com/defender/sdk)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community-Forum](https://forum.openzeppelin.com/c/support/17)
 - **Die Entwicklung des OpenZeppelin SDK wurde eingestellt**
 
-**Catapulta -** **_Multi-Chain-Tool zur Bereitstellung von Smart Contracts, automatisiert Verifizierungen in Block-Explorern, verfolgt bereitgestellte Smart Contracts und teilt Bereitstellungsberichte, Plug-and-Play für Foundry- und Hardhat-Projekte._**
+**Catapulta -** **_Multi-Chain-Bereitstellungstool für Smart Contracts, automatisiert Verifizierungen in Block-Explorern, verfolgt bereitgestellte Smart Contracts und teilt Bereitstellungsberichte, Plug-and-Play für Foundry- und Hardhat-Projekte._**
 
 - [GitHub](https://github.com/catapulta-sh)
 
@@ -139,7 +138,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code-Erweiterung](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
-**Veramo -** **_Modulares und agnostisches Open-Source-Framework, das es Entwicklern von Dapps leicht macht, dezentrale Identitäten und verifizierbare Nachweise in ihre Anwendungen zu integrieren._**
+**Veramo -** **_Modulares und agnostisches Open-Source-Framework, das es Entwicklern dezentraler Anwendungen erleichtert, dezentrale Identitäten und überprüfbare Anmeldeinformationen in ihre Anwendungen zu integrieren._**
 
 - [Startseite](https://veramo.io/)
 - [Dokumentation](https://veramo.io/docs/basics/introduction)
@@ -151,6 +150,7 @@ Bevor Sie sich mit Frameworks befassen, empfehlen wir Ihnen, zuerst unsere Einf�
 
 - [Dokumentation](https://cyfrin.github.io/moccasin/)
 - [GitHub](https://github.com/Cyfrin/moccasin)
+
 ## Weiterführende Literatur {#further-reading}
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
@@ -161,4 +161,4 @@ _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie die
 
 ## Tutorials: Entwicklungs-Frameworks auf Ethereum {#tutorials}
 
-- [Hello World Smart Contract für Anfänger – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Erstellen und stellen Sie einen Hello-World-Smart-Contract mit Hardhat bereit und verbinden Sie ihn dann mit einem Frontend._
+- [Hello-World-Smart-Contract für Anfänger](/developers/tutorials/hello-world-smart-contract/) _– Erstellen und stellen Sie einen Hello-World-Smart-Contract mit Hardhat bereit._

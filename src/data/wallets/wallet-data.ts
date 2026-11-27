@@ -54,6 +54,8 @@ import ZerionImage from "@/public/images/wallets/zerion.png"
  * the optional `supported_chains` array.
  */
 
+// Each wallet also needs `wallet-{slug}-description` in src/intl/en/page-wallet-descriptions.json,
+// copied from the "Wallet description" field of its listing issue.
 export const walletsData: WalletData[] = [
   {
     last_updated: "2024-10-30",
@@ -152,7 +154,7 @@ export const walletsData: WalletData[] = [
     privacy: true,
   },
   {
-    last_updated: "2025-07-15",
+    last_updated: "2025-09-29",
     name: "Ready Wallet",
     fees: [{ type: "swap", percent: 0.5 }],
     image: ReadyImage,
@@ -200,7 +202,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Starknet"],
   },
   {
-    last_updated: "2022-11-15",
+    last_updated: "2024-02-23",
     name: "Coinbase Wallet",
     fees: [{ type: "swap", percent: 1 }],
     image: CoinbaseImage,
@@ -313,7 +315,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-03-17",
+    last_updated: "2026-05-05",
     name: "MetaMask",
     fees: [
       { type: "swap-bridge", percent: 0.875 },
@@ -418,7 +420,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-11-06",
+    last_updated: "2024-11-21",
     name: "Safe",
     fees: [
       { type: "swap", percent: [0.05, 0.7] },
@@ -559,7 +561,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-12-04",
+    last_updated: "2025-12-05",
     name: "Ambire",
     fees: [{ type: "swap-bridge", percent: 0.5 }],
     image: AmbireImage,
@@ -615,7 +617,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-08-31",
+    last_updated: "2024-09-04",
     name: "imToken",
     fees: [
       {
@@ -689,7 +691,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-12-04",
+    last_updated: "2025-12-04",
     name: "io.finnet MPC wallet for Business",
     fees: [{ type: "free-tier-plans", usd: 399.99 }],
     image: IoFinnetImage,
@@ -738,7 +740,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
-    last_updated: "2024-08-30",
+    last_updated: "2025-12-04",
     name: "1inch Wallet",
     fees: [{ type: "swap", text: "variable" }],
     image: OneInchWalletImage,
@@ -806,7 +808,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-10-30",
+    last_updated: "2026-02-25",
     name: "FoxWallet",
     fees: [{ type: "swap", percent: 0 }],
     image: FoxWalletImage,
@@ -873,7 +875,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-01-12",
+    last_updated: "2026-01-13",
     name: "PillarX",
     fees: [{ type: "swap", percent: 1 }],
     image: PillarXImage,
@@ -927,7 +929,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-03-19",
+    last_updated: "2025-03-27",
     name: "MEW wallet",
     fees: [{ type: "swap", text: "variable" }],
     image: MewImage,
@@ -979,7 +981,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-01-25",
+    last_updated: "2025-10-17",
     name: "Unstoppable wallet",
     fees: [{ type: "swap", percent: 0 }],
     image: UnstoppableWalletImage,
@@ -1072,7 +1074,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-07-24",
+    last_updated: "2024-08-27",
     name: "Bridge wallet",
     fees: [
       { type: "swap", percent: 0.5 },
@@ -1127,7 +1129,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-11-06",
+    last_updated: "2026-07-13",
     name: "TokenPocket",
     fees: [
       { type: "swap", text: "undisclosed", qualifier: "tpt-holder-discounts" },
@@ -1208,7 +1210,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-06-30",
+    last_updated: "2023-09-21",
     name: "Rainbow",
     fees: [{ type: "swap", percent: 0.85 }],
     image: RainbowImage,
@@ -1350,7 +1352,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-10-23",
+    last_updated: "2024-11-21",
     name: "Ledger",
     fees: [
       { type: "device", usd: [79, 399] },
@@ -1416,7 +1418,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-08-19",
+    last_updated: "2025-09-08",
     name: "Exodus",
     fees: [{ type: "swap", percent: 0.5, from: true }],
     image: ExodusImage,
@@ -1473,7 +1475,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-07-24",
+    last_updated: "2024-07-25",
     name: "Rabby Wallet",
     fees: [{ type: "swap", percent: 0.25 }],
     image: RabbyWalletImage,
@@ -1533,7 +1535,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-09-26",
+    last_updated: "2024-10-20",
     name: "Zerion Wallet",
     fees: [
       { type: "swap-bridge", percent: 0.67, qualifier: "lower-with-premium" },
@@ -1609,7 +1611,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-09-26",
+    last_updated: "2024-11-21",
     name: "Enkrypt",
     fees: [{ type: "swap", text: "variable" }],
     image: EnkryptImage,
@@ -1662,7 +1664,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-10-31",
+    last_updated: "2022-11-01",
     name: "GridPlus Lattice1",
     fees: [{ type: "device", usd: 397 }],
     image: GridPlusImage,
@@ -1708,7 +1710,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
-    last_updated: "2024-11-20",
+    last_updated: "2024-11-21",
     name: "Bitget wallet",
     fees: [{ type: "swap", text: "variable" }],
     image: BitgetImage,
@@ -1851,7 +1853,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2023-04-21",
+    last_updated: "2024-04-18",
     name: "Taho",
     fees: [{ type: "swap", percent: 0.5 }],
     image: TahoImage,
@@ -1902,7 +1904,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-10-30",
+    last_updated: "2024-12-11",
     name: "Phantom",
     fees: [{ type: "swap", percent: 0.85 }],
     image: PhantomImage,
@@ -1975,7 +1977,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "Base"],
   },
   {
-    last_updated: "2023-11-02",
+    last_updated: "2026-08-07",
     name: "Trust Wallet",
     fees: [{ type: "buy", text: "set-by-provider" }],
     image: TrustWalletImage,
@@ -2050,7 +2052,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-10-20",
+    last_updated: "2026-06-16",
     name: "ShapeShift",
     fees: [
       {
@@ -2122,7 +2124,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2026-07-08",
+    last_updated: "2026-08-07",
     name: "Gem Wallet",
     fees: [
       { type: "swap", percent: 0 },
@@ -2214,7 +2216,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-08-24",
+    last_updated: "2024-11-21",
     name: "Cypherock X1",
     fees: [{ type: "device", usd: [99, 179] }],
     image: CypherockX1Image,
@@ -2330,7 +2332,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-10-31",
+    last_updated: "2025-05-16",
     name: "Clear Wallet",
     image: ClearWallet,
     twBackgroundColor: "bg-[#0500FF]",
@@ -2422,7 +2424,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Starknet"],
   },
   {
-    last_updated: "2024-11-03",
+    last_updated: "2026-05-05",
     name: "Coin98 Super Wallet",
     fees: [
       {
@@ -2497,7 +2499,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-05-19",
+    last_updated: "2026-07-13",
     name: "Burner",
     fees: [
       { type: "device", usd: 19, qualifier: "per-card" },
@@ -2547,7 +2549,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "Base"],
   },
   {
-    last_updated: "2025-09-09",
+    last_updated: "2025-09-13",
     name: "Edge Wallet",
     fees: [{ type: "swap", percent: [0.5, 2] }],
     image: EdgeImage,
@@ -2599,7 +2601,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-02-05",
+    last_updated: "2025-09-14",
     name: "NuFi",
     fees: [{ type: "swap", percent: 0.75 }],
     image: NuFiImage,
@@ -2652,7 +2654,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-09-24",
+    last_updated: "2025-09-27",
     name: "Clave",
     fees: [{ type: "swap", percent: 0.5 }],
     image: ClaveWallet,
@@ -2697,7 +2699,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Arbitrum One", "Base"],
   },
   {
-    last_updated: "2025-02-12",
+    last_updated: "2025-12-02",
     name: "Uniswap Wallet",
     fees: [{ type: "swap", percent: 0 }],
     image: UniswapWalletImage,
@@ -2761,7 +2763,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-12-17",
+    last_updated: "2026-05-05",
     name: "imKey Pro Hardware Wallet",
     fees: [
       { type: "device", usd: 110 },
@@ -2830,7 +2832,7 @@ export const walletsData: WalletData[] = [
   },
   {
     // https://github.com/ethereum/ethereum-org-website/issues/17586
-    last_updated: "2026-02-17",
+    last_updated: "2026-02-23",
     name: "Infinex Wallet & Crypto Superapp",
     fees: [{ type: "swap-bridge", percent: [0.03, 0.3] }],
     image: InfinexImage,

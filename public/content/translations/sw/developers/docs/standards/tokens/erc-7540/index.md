@@ -6,16 +6,16 @@ lang: sw
 
 ## Utangulizi {#introduction}
 
-ERC-7540 inapanua [Kiwango cha Hifadhi Iliyowekwa Tokeni cha ERC-4626](/developers/docs/standards/tokens/erc-4626/) kwa kuongeza usaidizi wa mtiririko wa uwekaji na ukombozi usiosawazishwa. Inaleta muundo wa omba-kisha-udai: watumiaji kwanza huwasilisha ombi (kufunga rasilimali au hisa zao), kisha kudai matokeo baada ya hifadhi kuyachakata.
+ERC-7540 inapanua [Kiwango cha Hifadhi Iliyowekwa Tokeni cha ERC-4626](/developers/docs/standards/tokens/erc-4626/) kwa kuongeza usaidizi wa mtiririko wa uwekaji na ukombozi usiosawazishwa. Inaleta muundo wa omba-kisha-dai: watumiaji kwanza huwasilisha ombi (wakikabidhi rasilimali au hisa zao kwenye hifadhi), kisha kudai matokeo baada ya hifadhi kuyachakata.
 
 Hili linahitajika wakati hifadhi haiwezi kufanya ukamilishaji papo hapo katika muamala mmoja, kwa mfano:
 
 - Itifaki za rasilimali za ulimwengu halisi (RWA) kama vile hazina zilizowekwa tokeni, mikopo ya kibinafsi, na rasilimali nyingine zenye mizunguko ya ukamilishaji ya T+1 au T+2
 - Ukopeshaji usio na dhamana ya kutosha ambapo tathmini za mikopo hufanyika nje ya mnyororo
 - Mikakati ya hifadhi ya mtambuko-mnyororo ambapo uunganishaji huleta ucheleweshaji
-- Tokani za uwekaji amana wenye ukwasi (lst) zenye vipindi vya kuondoa ufungaji
+- Tokani za uwekaji amana wenye ukwasi zenye vipindi vya kuondoa ufungaji
 
-Hifadhi zinaweza kuchagua kutokuwa zilizosawazishwa kwenye uwekaji pekee, ukombozi pekee, au yote mawili. Unyumbufu huu unawaruhusu wasanidi wa hifadhi kuongeza mtiririko usiosawazishwa tu pale ambapo mkakati wa msingi unauhitaji, huku wakiweka upande mwingine ukiwa umesawazishwa.
+Hifadhi zinaweza kuchagua kutokuwa zilizosawazishwa kwenye uwekaji pekee, ukombozi pekee, au vyote viwili. Unyumbufu huu unaruhusu wasanidi wa hifadhi kuongeza mtiririko usiosawazishwa tu pale ambapo mkakati wa msingi unauhitaji, huku wakiweka upande mwingine ukiwa umesawazishwa.
 
 ## Sharti za Awali {#prerequisites}
 
@@ -25,21 +25,21 @@ Ili kuelewa vyema ukurasa huu, tunapendekeza usome kwanza kuhusu [viwango vya to
 
 Katika ERC-4626, uwekaji hufanya ukamilishaji kwa pamoja: mwekezaji hutuma rasilimali na kupokea hisa katika muamala mmoja.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 inagawanya hili katika hatua mbili. Mwekezaji kwanza huita `requestDeposit()` ili kufunga rasilimali, kisha anasubiri meneja wa hifadhi kuchakata ombi. Baada ya kutimizwa, mwekezaji huita `deposit()` ili kudai hisa zao. Viwango vya ubadilishaji huamuliwa wakati wa utimizaji, si wakati wa ombi.
+ERC-7540 inagawanya hili katika hatua mbili. Mwekezaji kwanza huita `requestDeposit()`, ambayo hufanya hamisho la rasilimali zao kwenye hifadhi, kisha husubiri hifadhi kuchakata ombi. Jinsi na lini hilo linafanyika inategemea hifadhi, kwa mfano wakati ukamilishaji wa nje ya mnyororo unapokamilika. Pindi linapotimizwa, mwekezaji huita `deposit()` ili kudai hisa zao. Kiwango cha ubadilishaji hakijapangwa wakati wa ombi: hifadhi hukipanga, kwa kawaida inapotimiza ombi, hivyo hisa zinazopokelewa zinaweza kutofautiana na kile ambacho `convertToShares()` ilirejesha wakati ombi lilipofanywa.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-Mtiririko wa ukombozi hufanya kazi kwa njia sawa: `requestRedeem()` hufunga hisa, na baada ya kutimizwa mwekezaji huita `redeem()` ili kudai rasilimali.
+Mtiririko wa ukombozi hufanya kazi kwa njia sawa: `requestRedeem()` huchukua hisa kutoka kwa mwekezaji, na pindi linapotimizwa mwekezaji huita `redeem()` ili kudai rasilimali.
 
 ## Kazi na Vipengele vya ERC-7540 {#body}
 
-ERC-7540 inarithi kiolesura kamili cha ERC-4626 lakini inabadilisha matumizi ya `deposit`/`mint`/`withdraw`/`redeem` kuwa kazi za dai. Kazi mpya za `requestDeposit` na `requestRedeem` hushughulikia hatua ya awali ya ombi.
+ERC-7540 inarithi kiolesura kamili cha ERC-4626 lakini inabadilisha matumizi ya `deposit`/`mint`/`withdraw`/`redeem` kama kazi za kudai. Kazi mpya za `requestDeposit` na `requestRedeem` hushughulikia hatua ya awali ya ombi.
 
-Kila ombi hupitia hali tatu: inasubiri (imewasilishwa, inasubiri kuchakatwa), inayoweza kudaiwa (imetimizwa na kupangiwa bei), na iliyodaiwa (mwekezaji amekusanya hisa au rasilimali zake).
+Kila ombi hupitia hali tatu: inayosubiri (imewasilishwa, inasubiri kuchakatwa), inayoweza kudaiwa (imetimizwa na kupangiwa bei), na iliyodaiwa (mwekezaji amekusanya hisa au rasilimali zao). Hifadhi inaweza kufanya ombi liweze kudaiwa mara moja, ikiruka inayosubiri, lakini kudai daima ni wito tofauti. Kiwango hakifafanui tukio lolote kwa wakati ombi linapoweza kudaiwa.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Mtiririko wa ombi la uwekaji {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Pindi ombi la uwekaji linapoweza kudaiwa, mtumiaji huita kazi ya kawaida ya ERC-
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Hufunga `shares` kutoka `owner` na kuwasilisha ombi la kukomboa. Anwani ya `controller` hupokea udhibiti wa ombi.
+Huchukua udhibiti wa `shares` kutoka kwa `owner` na kuwasilisha ombi la kukomboa. Hifadhi inaweza kushikilia hisa hadi ombi lidaiwe au kuziteketeza mara moja. Anwani ya `controller` hupokea udhibiti wa ombi.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

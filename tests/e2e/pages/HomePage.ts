@@ -64,7 +64,7 @@ export class HomePage extends BasePage {
     await buildButton.hover()
 
     const builderHomeLink = this.primaryNav.getByRole("link", {
-      name: testData.navigation.menu[2].subsections[0], // Builder's home
+      name: new RegExp(`^${testData.navigation.menu[2].subsections[0]}`), // Developers hub
     })
     await builderHomeLink.click()
 
@@ -90,7 +90,7 @@ export class HomePage extends BasePage {
   ) {
     // Click on main section
     const sectionButton = this.mobileSidebar.getByRole("button", {
-      name: section,
+      name: new RegExp(`^${section}`, "i"),
     })
     await sectionButton.click()
 
@@ -121,7 +121,9 @@ export class HomePage extends BasePage {
   async verifyMobileNavigation() {
     for (const section of testData.navigation.menu) {
       await expect(
-        this.mobileSidebar.getByRole("button", { name: section.name })
+        this.mobileSidebar.getByRole("button", {
+          name: new RegExp(`^${section.name}`),
+        })
       ).toBeVisible()
     }
   }

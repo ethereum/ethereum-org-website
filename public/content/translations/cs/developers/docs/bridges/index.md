@@ -1,10 +1,10 @@
 ---
 title: Mosty
-description: "Přehled přemostění pro vývojáře"
+description: "Průvodce mosty pro vývojáře: jak funguje meziřetězcové předávání zpráv a přemosťování tokenů, typy mostů a předpoklady důvěry a jak je integrovat do dapp."
 lang: cs
 ---
 
-S rozvojem blockchainů vrstvy 1 (l1) a řešení [škálování](/developers/docs/scaling/) vrstvy 2 (l2), spolu se stále rostoucím počtem decentralizovaných aplikací (dapp), které se stávají meziřetězcovými, se potřeba komunikace a pohybu aktiv napříč řetězci stala nezbytnou součástí síťové infrastruktury. K tomu, aby to bylo možné, existují různé typy mostů.
+S rozvojem blockchainů vrstvy 1 (L1) a řešení [škálování](/developers/docs/scaling/) vrstvy 2 (L2), spolu se stále rostoucím počtem decentralizovaných aplikací (dapp), které se stávají meziřetězcovými, se potřeba komunikace a pohybu aktiv napříč řetězci stala nezbytnou součástí síťové infrastruktury. K tomu, aby to bylo možné, existují různé typy mostů.
 
 ## Potřeba mostů {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Vývojářům mosty umožňují následující:
 
 - převod jakýchkoli dat, informací a aktiv napříč řetězci.
 - odemknutí nových funkcí a případů užití pro protokoly, protože mosty rozšiřují designový prostor pro to, co mohou protokoly nabídnout. Například protokol pro výnosové farmaření původně nasazený na [Ethereum](/) Mainnetu může nabízet fondy likvidity napříč všemi řetězci kompatibilními s EVM.
-- příležitost využít silné stránky různých blockchainů. Vývojáři mohou například těžit z nižších poplatků, které nabízejí různá řešení vrstvy 2 (l2), nasazením svých dapp napříč rollupy a postranními řetězci (sidechains), a uživatelé mezi nimi mohou přemosťovat.
+- příležitost využít silné stránky různých blockchainů. Vývojáři mohou například těžit z nižších poplatků, které nabízejí různá řešení vrstvy 2 (L2), nasazením svých dapp napříč rollupy a postranními řetězci (sidechains), a uživatelé mezi nimi mohou přemosťovat.
 - spolupráci mezi vývojáři z různých blockchainových ekosystémů na budování nových produktů.
 - přilákání uživatelů a komunit z různých ekosystémů do jejich dapp.
 
@@ -123,16 +123,16 @@ Ke sledování aktivity kontraktů napříč řetězci mohou vývojáři použí
 ## Další čtení {#further-reading}
 
 - [Blockchainové mosty](/bridges/) – ethereum.org
-- [Rámec rizik mostů L2BEAT](https://l2beat.com/bridges/summary)
-- [Blockchainové mosty: Budování sítí kryptosítí](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8. září 2021 – Dmitriy Berenzon
-- [Trilema interoperability](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1. října 2021 – Arjun Bhuptani
-- [Klastry: Jak důvěryhodné mosty a mosty s minimalizovanou důvěrou utvářejí prostředí více řetězců](https://blog.celestia.org/clusters/) - 4. října 2021 – Mustafa Al-Bassam
-- [LI.FI: U mostů je důvěra spektrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28. dubna 2022 – Arjun Chand
-- [Stav řešení interoperability rollupů](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20. června 2024 – Alex Hook
-- [Využití sdílené bezpečnosti pro bezpečnou meziřetězcovou interoperabilitu: Lagrange State Committees a další](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12. června 2024 – Emmanuel Awosika
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
+- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8. září 2021 – Dmitriy Berenzon
+- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1. října 2021 – Arjun Bhuptani
+- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4. října 2021 – Mustafa Al-Bassam
+- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28. dubna 2022 – Arjun Chand
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20. června 2024 – Alex Hook
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12. června 2024 – Emmanuel Awosika
 
-Navíc zde je několik zasvěcených prezentací od [Jamese Prestwiche](https://twitter.com/_prestwich), které mohou pomoci k hlubšímu pochopení mostů:
+Kromě toho zde uvádíme několik zajímavých prezentací od [Jamese Prestwiche](https://twitter.com/_prestwich), které vám pomohou lépe porozumět mostům:
 
-- [Budování mostů, ne opevněných zahrad](https://youtu.be/ZQJWMiX4hT0)
-- [Rozebírání mostů](https://youtu.be/b0mC-ZqN8Oo)
-- [Proč mosty hoří](https://youtu.be/c7cm2kd20j8)
+- [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
+- [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)
+- [Why are the Bridges Burning](https://youtu.be/c7cm2kd20j8)

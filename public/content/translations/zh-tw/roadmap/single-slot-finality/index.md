@@ -1,6 +1,6 @@
 ---
-title: 單槽最終性
-description: 單槽最終性的解釋
+title: "單槽最終性"
+description: "單槽最終性可以將以太坊達到最終性的時間從大約 15 分鐘縮短到單一一個時槽。了解它的運作原理以及其中涉及的權衡。"
 lang: zh-tw
 template: roadmap
 ---
@@ -57,7 +57,7 @@ template: roadmap
 
 ## 目前進展 {#current-progress}
 
-SSF 目前處於研究階段。預計幾年內不會發布，可能會在其他重大升級（例如[沃克爾樹](/roadmap/verkle-trees/)和[丹克分片](/roadmap/danksharding/)）之後推出。
+SSF 目前處於研究階段。預計還需要幾年時間才能推出，可能會在其他重大升級之後，例如新的狀態樹（目前在 [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) 中被提議為二元樹）和[丹克分片](/roadmap/danksharding/)。
 
 ## 延伸閱讀 {#further-reading}
 

@@ -1,14 +1,22 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-10-14T17:26:09.567Z",
-  "rootHash": "5bc19d67c9ee",
+  "generatedAt": "2026-11-26T08:11:43.331Z",
+  "rootHash": "2adf7c6f03f1",
   "tree": {
-    "contentHash": "0d5544f134d2",
-    "anchorHash": "31268ce34114",
+    "contentHash": "0cfd4e69e372",
+    "anchorHash": "203955e39f93",
     "children": {
-      "about-ethereum-org": {
-        "contentHash": "9aafb3686977",
+      "7702": {
+        "contentHash": "caa43aab9927",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "10years": {
+        "contentHash": "7994d666af55",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "about": {
+        "contentHash": "4efca0d10c5f",
         "anchorHash": "e3b0c44298fc"
       },
       "about-us": {
@@ -24,47 +32,59 @@
         "anchorHash": "e3b0c44298fc"
       },
       "adding-community-stories": {
-        "contentHash": "53c41324fc82",
+        "contentHash": "8da277f75ebe",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-desci-projects": {
-        "contentHash": "92d45401c7e5",
+        "contentHash": "23dea4993da3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-design-resources": {
+        "contentHash": "8c7f9b6fe5ba",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-developer-tools": {
-        "contentHash": "29af1093250c",
+        "contentHash": "cf177ba9bc34",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-exchanges": {
-        "contentHash": "466b53f9bd45",
+        "contentHash": "1374aad8d5da",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-glossary-terms": {
-        "contentHash": "1bae78a1c7db",
+        "contentHash": "9a5324274e59",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-layer-2s": {
-        "contentHash": "6d923239d710",
+        "contentHash": "144fa3038d58",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-articles": {
-        "contentHash": "329a25cac231",
+        "contentHash": "dadd44a3827b",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-products": {
-        "contentHash": "2b0088c852a3",
+        "contentHash": "d681d3104389",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-reports": {
-        "contentHash": "8ece37aa3045",
+        "contentHash": "19f25349849a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-resources": {
+        "contentHash": "19197797bcf9",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-staking-products": {
-        "contentHash": "164d7d039b56",
+        "contentHash": "d5c33e27b525",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-videos": {
+        "contentHash": "7d8109c2dcca",
         "anchorHash": "e3b0c44298fc"
       },
       "adding-wallets": {
-        "contentHash": "fd215ca4b497",
+        "contentHash": "a322e6ac8a28",
         "anchorHash": "e3b0c44298fc"
       },
       "agent-tooling": {
@@ -91,8 +111,68 @@
         "contentHash": "7c8ae7cbc0a0",
         "anchorHash": "e3b0c44298fc"
       },
+      "assets": {
+        "contentHash": "adffff7250b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "back-to-developers": {
+        "contentHash": "6244d7f59179",
+        "anchorHash": "e3b0c44298fc"
+      },
       "beacon-chain": {
         "contentHash": "1c677c008e2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-2025-leaderboard": {
+        "contentHash": "0d75a01af010",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-adding-content-resources": {
+        "contentHash": "e75329bf0790",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-adding-quizzes": {
+        "contentHash": "2efd203a4ca6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-all-apps": {
+        "contentHash": "01bed311e7d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-delegated-staking": {
+        "contentHash": "fbbaa20b9c06",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-eip": {
+        "contentHash": "bf5e3323624b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-history": {
+        "contentHash": "0e7696009337",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-home-staking": {
+        "contentHash": "326821cf0e4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-resources": {
+        "contentHash": "e89b30aa1dc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-rwa": {
+        "contentHash": "f0483813f945",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-security-challenges-overview": {
+        "contentHash": "2e66138faef2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-what-is-ether": {
+        "contentHash": "34cf0a0dc30d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "breadcrumb-what-is-layer-2": {
+        "contentHash": "4c4b2e9e2566",
         "anchorHash": "e3b0c44298fc"
       },
       "bridges": {
@@ -107,16 +187,20 @@
         "contentHash": "bdd254b65baa",
         "anchorHash": "e3b0c44298fc"
       },
-      "build-menu": {
-        "contentHash": "67bae0edaaa5",
-        "anchorHash": "e3b0c44298fc"
-      },
       "clear": {
         "contentHash": "83b12c2216ef",
         "anchorHash": "e3b0c44298fc"
       },
       "close": {
         "contentHash": "7d9eb7acb13e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "code-of-conduct": {
+        "contentHash": "04b9f0eb98cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "collectibles": {
+        "contentHash": "185d8ef0ae5e",
         "anchorHash": "e3b0c44298fc"
       },
       "community": {
@@ -140,7 +224,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "content-resources": {
-        "contentHash": "deab638494f2",
+        "contentHash": "3794395217de",
         "anchorHash": "e3b0c44298fc"
       },
       "content-standardization": {
@@ -234,6 +318,10 @@
         "contentHash": "d5c7c6294c3d",
         "anchorHash": "e3b0c44298fc"
       },
+      "dao": {
+        "contentHash": "e08346b9b2fa",
+        "anchorHash": "e3b0c44298fc"
+      },
       "dao-page": {
         "contentHash": "3b8a14b99fc4",
         "anchorHash": "e3b0c44298fc"
@@ -266,12 +354,24 @@
         "contentHash": "4f2cedac6570",
         "anchorHash": "e3b0c44298fc"
       },
+      "defi": {
+        "contentHash": "3871f97fc9a1",
+        "anchorHash": "e3b0c44298fc"
+      },
       "defi-page": {
         "contentHash": "ba1a84f8388c",
         "anchorHash": "e3b0c44298fc"
       },
+      "dencun": {
+        "contentHash": "94c27cae4154",
+        "anchorHash": "e3b0c44298fc"
+      },
       "deposit-contract": {
         "contentHash": "10449017f4dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "desci": {
+        "contentHash": "7fba3cd12ff9",
         "anchorHash": "e3b0c44298fc"
       },
       "description": {
@@ -283,7 +383,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "design-principles": {
-        "contentHash": "213f16fc34b2",
+        "contentHash": "748e464b2b49",
         "anchorHash": "e3b0c44298fc"
       },
       "devcon": {
@@ -543,6 +643,10 @@
         "contentHash": "b86d11af7918",
         "anchorHash": "e3b0c44298fc"
       },
+      "dvt": {
+        "contentHash": "3e5b486ca3a4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "edit-page": {
         "contentHash": "5d2c6743b87c",
         "anchorHash": "e3b0c44298fc"
@@ -565,6 +669,126 @@
       },
       "enterprise": {
         "contentHash": "3fbe5ed156f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-forks": {
+        "contentHash": "47e47978caa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "faq": {
+        "contentHash": "dbc468a14b60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "foundation": {
+        "contentHash": "b1cc2e711844",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "fusaka": {
+        "contentHash": "8547dcd6bf46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "gaming": {
+        "contentHash": "0fadfa228814",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glamsterdam": {
+        "contentHash": "e2c1912b24c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "glossary": {
+        "contentHash": "4c4e436f9a45",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "governance": {
+        "contentHash": "86f8a694159b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "hegota": {
+        "contentHash": "72bdb517afef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-to-id-scam-tokens": {
+        "contentHash": "893f5f758f3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "issuance": {
+        "contentHash": "d67fe7000252",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "leaderboard": {
+        "contentHash": "31b471215872",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "mandate": {
+        "contentHash": "d9232514542a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "maxeb": {
+        "contentHash": "f584dbcca6ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "misconceptions": {
+        "contentHash": "d3e410d6fc39",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "networks": {
+        "contentHash": "ab2c47c3c77f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nft": {
+        "contentHash": "d185ae0e6c3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "organizing": {
+        "contentHash": "964841a84edb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments": {
+        "contentHash": "632e1c583941",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "pectra": {
+        "contentHash": "e84deb0fe6a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "peerdas": {
+        "contentHash": "87618f74444a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "playbook": {
+        "contentHash": "5d341f19c808",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "refi": {
+        "contentHash": "ad45f9a48481",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "restaking": {
+        "contentHash": "fee35e745a2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "scams": {
+        "contentHash": "562accc0c7cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "social-networks": {
+        "contentHash": "e9b357787b6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "start": {
+        "contentHash": "61e8d44ad423",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "supply": {
+        "contentHash": "bf428d3ff5c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translatathon": {
+        "contentHash": "4c70f758bbfb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translators-guide": {
+        "contentHash": "e50ceaf1b837",
         "anchorHash": "e3b0c44298fc"
       },
       "enterprise-l2s": {
@@ -621,10 +845,6 @@
       },
       "organizations": {
         "contentHash": "2730183d6b77",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "organizations-menu": {
-        "contentHash": "46c765b52d7f",
         "anchorHash": "e3b0c44298fc"
       },
       "public-sector": {
@@ -1224,11 +1444,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "learn-hub": {
-        "contentHash": "f5613d144d75",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "learn-menu": {
-        "contentHash": "b809ef263313",
+        "contentHash": "22ea313b228a",
         "anchorHash": "e3b0c44298fc"
       },
       "learn-more": {
@@ -1304,7 +1520,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-builder-tools-description": {
-        "contentHash": "e030e6dbfca4",
+        "contentHash": "831e20bcc49b",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-builder-tools-label": {
@@ -1471,10 +1687,6 @@
         "contentHash": "15803ba13e11",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-events-calendar-label": {
-        "contentHash": "3ac6ecc4b6ea",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-explore-apps-description": {
         "contentHash": "8a0470c6f29e",
         "anchorHash": "e3b0c44298fc"
@@ -1500,7 +1712,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-find-wallet-description": {
-        "contentHash": "e4350c966433",
+        "contentHash": "778e155fb235",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-find-wallet-label": {
@@ -1575,8 +1787,12 @@
         "contentHash": "20fb06948d5c",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-l2-networks-label": {
-        "contentHash": "0524acd8a386",
+      "nav-courses-description": {
+        "contentHash": "fa42ab94cb2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-courses-label": {
+        "contentHash": "0b387a6fe5ae",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-learn-by-coding-description": {
@@ -1605,6 +1821,14 @@
       },
       "nav-networks-learn-description": {
         "contentHash": "b91e9dc30d04",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-nft-description": {
+        "contentHash": "7718b1563b9d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-nft-label": {
+        "contentHash": "031f7477d6fe",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-online-communities-description": {
@@ -1639,10 +1863,6 @@
         "contentHash": "aab9db8847e2",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-prediction-markets-description": {
-        "contentHash": "6e3fe3fddddb",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-primary": {
         "contentHash": "efe10c80ec8a",
         "anchorHash": "e3b0c44298fc"
@@ -1652,7 +1872,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "nav-quizzes-label": {
-        "contentHash": "2a2499f1f86d",
+        "contentHash": "f1e638bae6e8",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-reports-description": {
@@ -1867,10 +2087,6 @@
         "contentHash": "e2718f208216",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-start-with-crypto-title": {
-        "contentHash": "2adc964c0847",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-start-with-crypto-description": {
         "contentHash": "c2c579b7f852",
         "anchorHash": "e3b0c44298fc"
@@ -1939,10 +2155,6 @@
         "contentHash": "ebc479b8955e",
         "anchorHash": "e3b0c44298fc"
       },
-      "nav-what-is-web3-label": {
-        "contentHash": "43c82fb496b4",
-        "anchorHash": "e3b0c44298fc"
-      },
       "nav-where-to-start-description": {
         "contentHash": "1c51fc229cdb",
         "anchorHash": "e3b0c44298fc"
@@ -1953,6 +2165,134 @@
       },
       "nav-whitepaper-description": {
         "contentHash": "2753fe349ea5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-back": {
+        "contentHash": "76900f1bfd16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-basics-label": {
+        "contentHash": "8fdd2ee8475e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-community-description": {
+        "contentHash": "c5639cdadf20",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-conferences-meetups-label": {
+        "contentHash": "fec84ddfc035",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-erc-20-label": {
+        "contentHash": "3e9b8d74d6bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-json-rpc-label": {
+        "contentHash": "376771824ebe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-pos-label": {
+        "contentHash": "c7a6db281618",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-smart-contracts-label": {
+        "contentHash": "c2697174c023",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-standards-label": {
+        "contentHash": "b9a136292f40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-dvt-label": {
+        "contentHash": "98bcec1ce939",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-enterprise-use-cases-label": {
+        "contentHash": "df04395f9ead",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-essentials-label": {
+        "contentHash": "98d94f75c7b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ether-label": {
+        "contentHash": "35ca1814c05c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-apps-label": {
+        "contentHash": "1b07d4230bf1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-network-label": {
+        "contentHash": "8973850f652f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-eyebrow-calendar": {
+        "contentHash": "d5d0a30b517e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-eyebrow-most-popular": {
+        "contentHash": "ad2ea9485094",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-eyebrow-most-read": {
+        "contentHash": "98988b9f3632",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-eyebrow-new": {
+        "contentHash": "18fdd549b2ed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-eyebrow-next-upgrade": {
+        "contentHash": "5d4c955c4abf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-get-a-wallet-label": {
+        "contentHash": "c96d704b5c33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-glamsterdam-description": {
+        "contentHash": "2315e38a1155",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-hegota-description": {
+        "contentHash": "b352ae9bd7ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-library-label": {
+        "contentHash": "dc20b3d5d2cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-network-fees-label": {
+        "contentHash": "598ce3ccc02e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-organizations-audiences-label": {
+        "contentHash": "3a50d9a17ea7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-popular-docs-label": {
+        "contentHash": "f352310abb18",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-goals-label": {
+        "contentHash": "116cd3982a9b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-privacy-goal-label": {
+        "contentHash": "070d39f7bc9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-rwa-label": {
+        "contentHash": "af4413b56eb5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-upgrades-label": {
+        "contentHash": "e02a5941602a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-web3-label": {
+        "contentHash": "1dccee4d2e1e",
         "anchorHash": "e3b0c44298fc"
       },
       "network-infrastructure": {
@@ -2011,19 +2351,13 @@
         "contentHash": "f9a3728f484a",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-languages-want-more-header": {
-        "contentHash": "64e76d18f94f",
+      "page-languages-no-results-header": {
+        "contentHash": "3b5fbf6711d3",
         "anchorHash": "e3b0c44298fc"
       },
-      "page-languages-want-more-paragraph": {
-        "contentHash": "84083a8122df",
-        "anchorHash": "4b9f7d802648",
-        "children": {
-          "prose:0": {
-            "contentHash": "d9299c2797bc",
-            "anchorHash": "e3b0c44298fc"
-          }
-        }
+      "page-languages-no-results-description": {
+        "contentHash": "1da8ac6cbcd5",
+        "anchorHash": "e3b0c44298fc"
       },
       "page-last-updated": {
         "contentHash": "381e0362f381",
@@ -2039,10 +2373,6 @@
       },
       "participate": {
         "contentHash": "38301e6935f3",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "participate-menu": {
-        "contentHash": "0ff5d9fb49b4",
         "anchorHash": "e3b0c44298fc"
       },
       "payments-page": {
@@ -2091,6 +2421,10 @@
         "contentHash": "ddd82e1196de",
         "anchorHash": "e3b0c44298fc"
       },
+      "courses": {
+        "contentHash": "aaad9d92e6b4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "references": {
         "contentHash": "69824d3b0e70",
         "anchorHash": "e3b0c44298fc"
@@ -2105,10 +2439,6 @@
       },
       "research": {
         "contentHash": "979d6300fd98",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "research-menu": {
-        "contentHash": "b5985ec8963a",
         "anchorHash": "e3b0c44298fc"
       },
       "resources": {
@@ -2175,6 +2505,22 @@
         "contentHash": "b956204c048c",
         "anchorHash": "e3b0c44298fc"
       },
+      "shortcut-course-check-navigate": {
+        "contentHash": "606a6f78bfa1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-course-continue": {
+        "contentHash": "1baa187d4e7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-course-pick-answer": {
+        "contentHash": "8ca302cda057",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "shortcut-group-courses": {
+        "contentHash": "aaad9d92e6b4",
+        "anchorHash": "e3b0c44298fc"
+      },
       "shortcut-group-display": {
         "contentHash": "34e108c0896d",
         "anchorHash": "e3b0c44298fc"
@@ -2237,6 +2583,10 @@
       },
       "show-less": {
         "contentHash": "94ea9b1d33a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sign-in-with-ethereum": {
+        "contentHash": "3a7181e1083b",
         "anchorHash": "e3b0c44298fc"
       },
       "single-slot-finality": {
@@ -2316,7 +2666,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "translation-program": {
-        "contentHash": "87730412fde5",
+        "contentHash": "3169d4c8c227",
         "anchorHash": "e3b0c44298fc"
       },
       "translator": {
@@ -2351,10 +2701,6 @@
         "contentHash": "c36d819e7bc6",
         "anchorHash": "e3b0c44298fc"
       },
-      "use-menu": {
-        "contentHash": "677cb74a3146",
-        "anchorHash": "e3b0c44298fc"
-      },
       "user-experience": {
         "contentHash": "c1729f0791a5",
         "anchorHash": "e3b0c44298fc"
@@ -2380,7 +2726,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "web3": {
-        "contentHash": "43c82fb496b4",
+        "contentHash": "f5d8be05c68e",
         "anchorHash": "e3b0c44298fc"
       },
       "website-last-updated": {
@@ -2401,6 +2747,10 @@
       },
       "what-is-the-ethereum-network": {
         "contentHash": "f914ad8e59c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "whitepaper": {
+        "contentHash": "fd9e98b6847e",
         "anchorHash": "e3b0c44298fc"
       },
       "withdrawals": {
@@ -2442,15 +2792,22 @@
       "region-sint-eustatius-netherlands": {
         "contentHash": "a01f3e34b65a",
         "anchorHash": "e3b0c44298fc"
+      },
+      "zkevm": {
+        "contentHash": "84685178c6df",
+        "anchorHash": "e3b0c44298fc"
       }
     },
     "childrenOrder": [
-      "about-ethereum-org",
+      "7702",
+      "10years",
+      "about",
       "about-us",
       "account-abstraction",
       "acknowledgements",
       "adding-community-stories",
       "adding-desci-projects",
+      "adding-design-resources",
       "adding-developer-tools",
       "adding-exchanges",
       "adding-glossary-terms",
@@ -2458,7 +2815,9 @@
       "adding-articles",
       "adding-products",
       "adding-reports",
+      "adding-resources",
       "adding-staking-products",
+      "adding-videos",
       "adding-wallets",
       "agent-tooling",
       "ai-agents",
@@ -2466,13 +2825,29 @@
       "apps",
       "aria-toggle-menu-button",
       "aria-toggle-search-button",
+      "assets",
+      "back-to-developers",
       "beacon-chain",
+      "breadcrumb-2025-leaderboard",
+      "breadcrumb-adding-content-resources",
+      "breadcrumb-adding-quizzes",
+      "breadcrumb-all-apps",
+      "breadcrumb-delegated-staking",
+      "breadcrumb-eip",
+      "breadcrumb-history",
+      "breadcrumb-home-staking",
+      "breadcrumb-resources",
+      "breadcrumb-rwa",
+      "breadcrumb-security-challenges-overview",
+      "breadcrumb-what-is-ether",
+      "breadcrumb-what-is-layer-2",
       "bridges",
       "bug-bounty",
       "build",
-      "build-menu",
       "clear",
       "close",
+      "code-of-conduct",
+      "collectibles",
       "community",
       "community-hub",
       "conferences",
@@ -2497,6 +2872,7 @@
       "copy-page-claude-title",
       "copy-page-claude-description",
       "danksharding",
+      "dao",
       "dao-page",
       "dark-mode",
       "dark-mode-aria-label",
@@ -2505,8 +2881,11 @@
       "decentralized-identity",
       "decentralized-science",
       "decentralized-social-networks",
+      "defi",
       "defi-page",
+      "dencun",
       "deposit-contract",
+      "desci",
       "description",
       "design",
       "design-principles",
@@ -2559,12 +2938,43 @@
       "docsearch-to-select",
       "documentation",
       "down",
+      "dvt",
       "edit-page",
       "education-standards",
       "ef-blog",
       "eips",
       "energy-consumption",
       "enterprise",
+      "ethereum-forks",
+      "faq",
+      "foundation",
+      "fusaka",
+      "gaming",
+      "glamsterdam",
+      "glossary",
+      "governance",
+      "hegota",
+      "how-to-id-scam-tokens",
+      "issuance",
+      "leaderboard",
+      "mandate",
+      "maxeb",
+      "misconceptions",
+      "networks",
+      "nft",
+      "organizing",
+      "payments",
+      "pectra",
+      "peerdas",
+      "playbook",
+      "refi",
+      "restaking",
+      "scams",
+      "social-networks",
+      "start",
+      "supply",
+      "translatathon",
+      "translators-guide",
       "enterprise-l2s",
       "nav-organizations-enterprise-description",
       "nav-organizations-enterprise-home-description",
@@ -2579,7 +2989,6 @@
       "nav-organizations-tokenization-description",
       "onchain-finance",
       "organizations",
-      "organizations-menu",
       "public-sector",
       "small-business",
       "tokenization",
@@ -2717,7 +3126,6 @@
       "learn",
       "learn-ethereum-development",
       "learn-hub",
-      "learn-menu",
       "learn-more",
       "less",
       "light-mode",
@@ -2778,7 +3186,6 @@
       "nav-ethereum-vs-bitcoin-description",
       "nav-ethereum-wallets-description",
       "nav-events-calendar-description",
-      "nav-events-calendar-label",
       "nav-explore-apps-description",
       "nav-explore-apps-label",
       "nav-explore-networks-description",
@@ -2804,7 +3211,8 @@
       "nav-join-ethereum-org-description",
       "nav-join-ethereum-org-label",
       "nav-l2-networks-description",
-      "nav-l2-networks-label",
+      "nav-courses-description",
+      "nav-courses-label",
       "nav-learn-by-coding-description",
       "nav-learn-by-coding-label",
       "nav-learn-ethereum-development-description",
@@ -2812,6 +3220,8 @@
       "nav-networks-explore-networks-label",
       "nav-networks-learn-label",
       "nav-networks-learn-description",
+      "nav-nft-description",
+      "nav-nft-label",
       "nav-online-communities-description",
       "nav-online-communities-label",
       "nav-open-research-description",
@@ -2820,7 +3230,6 @@
       "nav-overview-label",
       "nav-participate-overview-description",
       "nav-payments-description",
-      "nav-prediction-markets-description",
       "nav-primary",
       "nav-quizzes-description",
       "nav-quizzes-label",
@@ -2877,7 +3286,6 @@
       "nav-staking-solo-label",
       "nav-stories-description",
       "nav-stories-label",
-      "nav-start-with-crypto-title",
       "nav-start-with-crypto-description",
       "nav-translation-program-description",
       "nav-tutorials-description",
@@ -2895,10 +3303,41 @@
       "nav-what-is-ethereum-description",
       "nav-what-is-ethereum-network-description",
       "nav-what-is-web3-description",
-      "nav-what-is-web3-label",
       "nav-where-to-start-description",
       "nav-where-to-start-label",
       "nav-whitepaper-description",
+      "nav-back",
+      "nav-basics-label",
+      "nav-community-description",
+      "nav-conferences-meetups-label",
+      "nav-docs-erc-20-label",
+      "nav-docs-json-rpc-label",
+      "nav-docs-pos-label",
+      "nav-docs-smart-contracts-label",
+      "nav-docs-standards-label",
+      "nav-dvt-label",
+      "nav-enterprise-use-cases-label",
+      "nav-essentials-label",
+      "nav-ether-label",
+      "nav-ethereum-apps-label",
+      "nav-ethereum-network-label",
+      "nav-eyebrow-calendar",
+      "nav-eyebrow-most-popular",
+      "nav-eyebrow-most-read",
+      "nav-eyebrow-new",
+      "nav-eyebrow-next-upgrade",
+      "nav-get-a-wallet-label",
+      "nav-glamsterdam-description",
+      "nav-hegota-description",
+      "nav-library-label",
+      "nav-network-fees-label",
+      "nav-organizations-audiences-label",
+      "nav-popular-docs-label",
+      "nav-roadmap-goals-label",
+      "nav-roadmap-privacy-goal-label",
+      "nav-rwa-label",
+      "nav-upgrades-label",
+      "nav-web3-label",
       "network-infrastructure",
       "nft-page",
       "nfts",
@@ -2913,13 +3352,12 @@
       "page-languages-filter-label",
       "page-languages-filter-placeholder",
       "page-languages-learn-more",
-      "page-languages-want-more-header",
-      "page-languages-want-more-paragraph",
+      "page-languages-no-results-header",
+      "page-languages-no-results-description",
       "page-last-updated",
       "page-not-found",
       "page-not-found-description",
       "participate",
-      "participate-menu",
       "payments-page",
       "pbs",
       "pools",
@@ -2930,11 +3368,11 @@
       "quantum-resistance",
       "quizzes",
       "quizzes-title",
+      "courses",
       "references",
       "refresh",
       "regenerative-finance",
       "research",
-      "research-menu",
       "resources",
       "return-home",
       "roadmap",
@@ -2951,6 +3389,10 @@
       "see-contributors",
       "start-building",
       "shortcut-close-dialog",
+      "shortcut-course-check-navigate",
+      "shortcut-course-continue",
+      "shortcut-course-pick-answer",
+      "shortcut-group-courses",
       "shortcut-group-display",
       "shortcut-group-general",
       "shortcut-group-navigation",
@@ -2967,6 +3409,7 @@
       "show-all",
       "show-more",
       "show-less",
+      "sign-in-with-ethereum",
       "single-slot-finality",
       "site-description",
       "skip-to-main-content",
@@ -2995,7 +3438,6 @@
       "tutorials",
       "up",
       "use",
-      "use-menu",
       "user-experience",
       "values",
       "verkle-trees",
@@ -3008,6 +3450,7 @@
       "what-is-ether",
       "what-is-ethereum",
       "what-is-the-ethereum-network",
+      "whitepaper",
       "withdrawals",
       "wrapped-eth",
       "yes",
@@ -3017,8 +3460,9 @@
       "region-wake-island-usa",
       "region-bonaire-netherlands",
       "region-saba-netherlands",
-      "region-sint-eustatius-netherlands"
+      "region-sint-eustatius-netherlands",
+      "zkevm"
     ]
   },
-  "sourceCommitSha": "a63429a9b154ac158fc9c25a876eb2008126c473"
+  "sourceCommitSha": "f872a44d76783ef8a7fd2dd50a87c9658ab9e654"
 }

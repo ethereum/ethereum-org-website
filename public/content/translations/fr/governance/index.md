@@ -1,7 +1,7 @@
 ---
-title: Introduction à la gouvernance d'Ethereum
+title: "Introduction à la gouvernance d'Ethereum"
 metaTitle: Gouvernance d'Ethereum
-description: Une introduction à la façon dont les décisions concernant Ethereum sont prises.
+description: "Comment les décisions concernant Ethereum sont-elles prises ? Découvrez comment les modifications du protocole sont proposées, débattues et adoptées par les développeurs, les opérateurs de nœuds et la communauté."
 lang: fr
 ---
 
@@ -71,7 +71,7 @@ Le processus formel pour introduire des modifications au protocole Ethereum est 
 
 1. **Proposer une EIP Core** : comme décrit dans l'[EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), la première étape pour proposer formellement une modification à Ethereum est de la détailler dans une EIP Core (principale). Cela servira de spécification officielle pour une EIP que les développeurs du protocole mettront en œuvre si elle est acceptée.
 
-2. **Présenter votre EIP aux développeurs du protocole** : une fois que vous avez une EIP Core pour laquelle vous avez recueilli les commentaires de la communauté, vous devez la présenter aux développeurs du protocole. Vous pouvez le faire en la proposant pour discussion lors d'un [appel AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Il est probable que certaines discussions aient déjà eu lieu de manière asynchrone sur le [forum Ethereum Magicians](https://ethereum-magicians.org/) ou sur le [Discord R&D d'Ethereum](https://discord.gg/mncqtgVSVw).
+2. **Présenter votre EIP aux développeurs du protocole** : une fois que vous avez une EIP Core pour laquelle vous avez recueilli les commentaires de la communauté, vous devez la présenter aux développeurs du protocole. Vous pouvez le faire en la proposant pour discussion lors d'un [appel AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). Il est probable que certaines discussions aient déjà eu lieu de manière asynchrone sur le [forum Ethereum Magicians](https://ethereum-magicians.org/) ou sur le [Discord R&D d'Ethereum](https://discord.gg/mncqtgVSVw).
 
 > Les résultats potentiels de cette étape sont :
 

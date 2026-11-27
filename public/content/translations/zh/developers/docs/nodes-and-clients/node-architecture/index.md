@@ -4,17 +4,17 @@ description: "以太坊节点组织方式简介。"
 lang: zh
 ---
 
-一个以太坊节点由两个客户端组成：[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)。为了让节点能够提议新区块，它还必须运行一个[验证者客户端](#validators)。
+以太坊节点由两个客户端组成：[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)。为了让节点提议新区块，它还必须运行一个[验证者客户端](#validators)。
 
-当以太坊使用[工作量证明 (PoW)](/developers/docs/consensus-mechanisms/pow/)时，一个执行客户端就足以运行一个完整的以太坊节点。然而，自从实施[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos/)以来，执行客户端必须与另一个称为[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)的软件一起使用。
+当以太坊使用[工作量证明](/developers/docs/consensus-mechanisms/pow/)时，一个执行客户端就足以运行一个完整的以太坊节点。然而，自从实施[权益证明](/developers/docs/consensus-mechanisms/pos/)以来，执行客户端必须与另一个称为[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)的软件一起使用。
 
-下图展示了这两个以太坊客户端之间的关系。这两个客户端连接到各自的点对点 (P2P) 网络。需要独立的 P2P 网络，因为执行客户端在其 P2P 网络上广播交易，从而使它们能够管理本地交易池，而共识客户端在其 P2P 网络上广播区块，从而实现共识和链的增长。
+下图展示了这两个以太坊客户端之间的关系。这两个客户端连接到各自的点对点 (P2P) 网络。需要独立的 P2P 网络，因为执行客户端在其 P2P 网络上广播交易，使它们能够管理本地交易池，而共识客户端在其 P2P 网络上广播区块，从而实现共识和链的增长。
 
-![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
+<NodeArchitectureDiagram />
 
 _执行客户端有多种选择，包括埃里贡 (Erigon)、奈瑟曼德 (Nethermind) 和 Besu_。
 
-为了使这种双客户端结构发挥作用，共识客户端必须将打包的交易传递给执行客户端。执行客户端在本地执行这些交易，以验证交易没有违反任何以太坊规则，并且提议的以太坊状态更新是正确的。当一个节点被选为区块生产者时，其共识客户端实例会向执行客户端请求打包的交易，以将其包含在新区块中并执行它们以更新全局状态。共识客户端通过使用 [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的本地 RPC 连接来驱动执行客户端。
+为了使这种双客户端结构发挥作用，共识客户端必须将打包的交易传递给执行客户端。执行客户端在本地执行这些交易，以验证交易没有违反任何以太坊规则，并且提议的以太坊状态更新是正确的。当一个节点被选为区块生产者时，其共识客户端实例会向执行客户端请求打包的交易，以将其包含在新区块中，并执行它们以更新全局状态。共识客户端通过本地 RPC 连接使用 [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 驱动执行客户端。
 
 ## 执行客户端的作用是什么？ {#execution-client}
 

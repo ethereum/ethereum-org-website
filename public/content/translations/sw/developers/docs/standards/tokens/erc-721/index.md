@@ -244,10 +244,9 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [OpenZeppelin - Utekelezaji wa ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [API ya NFT ya Alchemy](https://www.alchemy.com/docs/reference/nft-api-quickstart)
 
-## Mafunzo: Jenga kwa kutumia tokeni zisizo mbadala (ERC-721) kwenye Ethereum {#tutorials}
+## Mafunzo: Jenga kwa kutumia tokani zisizobadilishika (ERC-721) kwenye Ethereum {#tutorials}
 
-- [Mwongozo wa Mkataba wa ERC-721 wa Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Mwongozo uliofafanuliwa wa mkataba kamili wa NFT wa ERC-721 ulioandikwa katika Vyper._
+- [Mwongozo wa Mkataba wa ERC-721 wa Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Mwongozo uliofafanuliwa wa mkataba kamili wa NFT wa ERC-721 ulioandikwa kwa Vyper._
 - [Jinsi ya Kuandika na Kusambaza NFT (Sehemu ya 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Mwongozo wa hatua kwa hatua wa kuandika na kusambaza mkataba wako mahiri wa kwanza wa ERC-721._
 - [Jinsi ya Kufua NFT (Sehemu ya 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Jinsi ya kufua NFT ya ERC-721 kwa kutumia mkataba wako mahiri uliosambazwa na Web3._
 - [Jinsi ya Kutazama NFT Yako kwenye Mkoba Wako (Sehemu ya 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Jinsi ya kuonyesha NFT yako iliyofuliwa kwenye MetaMask baada ya usambazaji._
-- [Mafunzo ya Kifua NFT](/developers/tutorials/nft-minter/) _– Jenga programu tumizi iliyogatuliwa (dapp) ya ufuzi wa NFT yenye mrundikano kamili ukiwa na mandhari ya mbele ya React, MetaMask, na Alchemy._

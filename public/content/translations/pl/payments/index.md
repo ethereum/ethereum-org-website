@@ -1,7 +1,7 @@
 ---
 title: "Płatności Ethereum"
 metaTitle: "Płatności na Ethereum"
-description: "Przegląd płatności na Ethereum"
+description: "Jak działają płatności w Ethereum? Dowiedz się, jak wysyłać pieniądze na całym świecie za pomocą ETH i stablecoinów, często w kilka sekund i przy niskich kosztach, bez pośrednictwa banku."
 lang: pl
 template: use-cases
 sidebarDepth: 2

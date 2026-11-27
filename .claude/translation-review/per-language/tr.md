@@ -1,5 +1,46 @@
 # Turkish (tr) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.8/10
+Scope: 15 markdown files, changed lines only; no JSON. Sweeps clean. 9 diffs read.
+
+**Fixed in this branch (6 critical):** #112 `Özyineli Uzunluk Öneki (RLP) kodlamasıdır` -> `RLP kodlamasıdır` (`patricia:221`); `katman 1 (L1)` / `(katman 2 (L2))` -> `L1` / `(L2)` (`nodes-and-clients:161`); `merkeziyetsiz uygulamalarının (dapp)` -> `dapp'lerinin` (`nodes-as-a-service:59`); `(DAO)` (`privacy:122`, `statelessness:29`). Glossary: `ücret bahşişlerine` -> `öncelik ücretlerine` (`merge:167`, glossary tip = öncelik ücreti).
+
+**Open (warnings):** `katman 2 (L2)` kept where English says the long form; `(PBS)` added to English long form (`statelessness:68,91`); mid-sentence `Gaz`, `Blokzincir`, `Cüzdanlar`, `Protokol` capitalized (`transactions:152`, `run-a-node:68,463`, `verkle-trees:21`); `bahşiş` still on unchanged lines `merge:70,74`.
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.8/10
+Scope: 73 markdown pages + 19 JSON namespaces, mostly small incremental updates (dev-tools descriptions not in this list). Sampled ~25 markdown diffs and ~90 changed JSON keys; scripted sweeps (U+3002, U+2060, foreign scripts, English leftovers, ICU/tag parity, anchors, component parity).
+
+**Fixed in this branch (5 critical):**
+
+- `developers/docs/smart-contracts/anatomy/index.md`: 60 code-comment lines regressed (about 25 comments left in English, `Sözleşme`/`Adres bilgisi` mid-sentence capitals, `işlev` -> `fonksiyon` drift). English only changed two URLs, so file restored from dev and the two URLs (OpenZeppelin 3.x SafeMath, Ethlint issue) applied.
+- `programming-languages/javascript/index.md:7`: garbled opening sentence rewritten.
+- `a-developers-guide-to-ethereum-part-one:151`: `` `Web3.` `` code span split from its period (`` `Web3`. ``) restored.
+- `roadmap/dencun`: `1-of-N güven modeli` -> `N'de 1 güven modeli` (earlier wording).
+- `oracles`: Stork `sürekli işlem piyasaları` -> `sürekli vadeli işlem piyasaları` (perpetuals). `payments` meta description `sabit paralarla` -> `sabitcoin'lerle` (locale convention).
+
+**Open (warnings):**
+
+- `developers/docs/bridges` further-reading titles now English (was translated); `ETHBEAT Bridge Risk Framework` etc.
+- Glossary-driven mid-sentence capitals: `Protokoller`, `Düğümler`, `Gaz` (dencun), `Likiditeyi` (page-stablecoins-tools-pharos-description), `Ana ağ` vs `Ana Ağ` (page-layer-2-networks-main-network).
+- `Harici olarak sahip olunan hesapların` (roadmap/security:78) for EOA vs glossary `harici sahipli hesap` (prior PR #19556 flag).
+- `teklifçi` vs `teklif edici` mixed within attestations; `gaz`/`gas` mixed across docs; `değiştirilemez token` (erc-721 heading) vs corpus `misli olmayan`.
+- Pre-existing, not this PR: data-and-analytics lacks `{#mobula}` and `{#envio}` anchors vs English.
+
+**Notes:** none of tr's historical failure modes recurred (istemci, Ana Ağ, no katillik/MeFi/EHT/BSL, no cross-script).
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 9.1/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: batch is `yigin` in 8 optimistic-rollup labels and `parti` in the zk-rollup set and in `optimistic-rollup-title`; glossary-capitalized `Protokol` mid-sentence x6; `(subgraphs)`/`(seedless)` English parentheticals added in dev-tools.
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 9.1/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: block proposer to blok teklifcisi (glamsterdam). Open: at stake rendered stake edilen, geçerlliğini typo (fixed in follow-up), bırak- for drop, suffix harmony on code names.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.4/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder rebinding in peer-das and verkle keys, catallanma secimi, inline code (gas, verkle), libp2p casing, cifte imza, oncelik ucreti, onden kosma. Open: hard-coded suffixes after numeric placeholders (`{signedA}'si`), relay naming, `islem` ambiguity.
+
 > **PR:** #18353 (stablecoins-2026-redesign, page-stablecoins.json)
 > **Date:** 2026-06-05
 > **Quality Score:** 9.2/10
@@ -164,3 +205,60 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 - Fixed: translated metavariables inside inline code restored to English (known-patterns #88).
 
 - Warning: hook/kanca drift within wagmi; `değere göre değerlendir` shifts "evaluate to".
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.6/10
+
+Scope: 25 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:896 encodes = encrypts (`şifrelediği işlemi` -> `kodladığı işlemi`)
+
+**Open (native call needed):**
+
+- developers/tutorials/scam-token-tricks/index.md:80: ETHGlossary deviation on a `translate` term: `eoa` → `harici sahipli hesap`. The PR moved this away from the glossary (it was `harici olarak sahip olunan`). Flag for human. (`[dışarıdan sahipli bir hesaptır]` -> `[harici sahipli bir hesaptır]`)
+- developers/tutorials/scam-token-tricks/index.md:316: Same EOA deviation, 2 occurrences on this line.
+- developers/tutorials/scam-token-tricks/index.md:382: Same EOA deviation. (`dışarıdan sahipli hesaplar` -> `harici sahipli hesaplar`)
+- developers/tutorials/scam-token-tricks/index.md:416: Same EOA deviation. (`dışarıdan sahipli bir hesaptan` -> `harici sahipli bir hesaptan`)
+- developers/tutorials/scam-token-tricks/index.md:425: Same EOA deviation. (`dışarıdan sahipli bir hesapsa` -> `harici sahipli bir hesapsa`)
+- 14 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The prose is fluent and faithful, and none of tr's historical failure modes recurred: client stays `istemci`, mainnet stays `Ana Ağ`, and there are no ticker transpositions or brand mistranslations. The real problems are three page-founders tags shipped in English and one encode/encrypt error. The EOA term drifting away from the glossary needs a human call.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.2/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Duplicated `json` response block in how-to-write-and-deploy-an-nft removed (known-patterns #93)
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Warnings: decimal separator and betik/komut dosyası differ between files; glossary-driven mid-sentence capitals (known).
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.4/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client: Kurtosis "enclave" rendered `yerleşim bölgesi` (residential area) at 6 sites; dev kept `Enclave` and the CLI flag is `--enclave` -> `enclave` with suffixes (`enclave'inizde`)
+- multi-client:35 "a major reason" overstated -> `başlıca nedenlerinden biridir`
+
+**Open / notes:**
+
+- multi-client "files artifacts" -> `dosya eserleri` (eser = creative work); dev had `Dosya Yapıları` -- native call
+- `hala` should be `hâlâ` (multi-client:163, echidna:513) -- informational
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- `tip` rendered `teşvik` at gas:36, :46 instead of glossary `öncelik ücreti`; left as is (tautology), the review agent called it critical -- native/maintainer call.
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

@@ -1,6 +1,6 @@
 ---
-title: Ethereum güvenliği ve dolandırıcılığı önleme
-description: Ethereum'da güvende kalmak
+title: "Ethereum güvenliği ve dolandırıcılığı önleme"
+description: "Ethereum'da nasıl güvende kalınır: cüzdanınızı ve kurtarma ifadenizi koruyun, yaygın kripto dolandırıcılıklarını ve kimlik avını fark edin ve bir şeyler ters giderse ne yapacağınızı bilin."
 lang: tr
 ---
 

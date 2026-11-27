@@ -1,6 +1,6 @@
 ---
 title: Como revogar o acesso de contratos inteligentes aos seus fundos de criptomoedas
-description: "Um guia prático sobre como revogar o acesso exploratório de contratos inteligentes a tokens"
+description: "Um guia passo a passo para revogar aprovações de tokens: descubra quais contratos inteligentes podem gastar suas criptomoedas e remova o acesso para proteger seus fundos."
 lang: pt-br
 ---
 

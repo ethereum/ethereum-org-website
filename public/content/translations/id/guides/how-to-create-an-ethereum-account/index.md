@@ -1,7 +1,7 @@
 ---
 title: Cara membuat akun Ethereum
 metaTitle: Cara "membuat" akun Ethereum
-description: Panduan langkah demi langkah tentang pembuatan akun Ethereum menggunakan dompet.
+description: "Panduan langkah demi langkah untuk membuat akun Ethereum: pilih dompet, cadangkan frasa pemulihan Anda dengan aman, dan dapatkan alamat Ethereum pertama Anda."
 lang: id
 ---
 

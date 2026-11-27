@@ -15,14 +15,13 @@ Pour mieux comprendre cette page, nous vous recommandons de lire d'abord ce qui 
 
 Le gaz désigne l'unité qui mesure la quantité d'effort de calcul nécessaire pour exécuter des opérations spécifiques sur le réseau Ethereum.
 
-Étant donné que chaque transaction Ethereum nécessite des ressources de calcul pour s'exécuter, ces ressources doivent être payées pour garantir qu'Ethereum n'est pas vulnérable au spam et ne peut pas rester bloqué dans des boucles de calcul infinies. Le paiement du calcul s'effectue sous la forme de frais de gaz.
+Puisque chaque transaction Ethereum nécessite des ressources de calcul pour s'exécuter, ces ressources doivent être payées pour s'assurer qu'Ethereum n'est pas vulnérable au spam et ne peut pas rester bloqué dans des boucles de calcul infinies. Le paiement pour le calcul s'effectue sous la forme de frais de gaz.
 
-Les frais de gaz correspondent à **la quantité de gaz utilisée pour effectuer une opération, multipliée par le coût par unité de gaz**. Les frais sont payés, que la transaction réussisse ou échoue.
+Les frais de gaz correspondent à **la quantité de gaz utilisée pour effectuer une opération, multipliée par le coût par unité de gaz**. Les frais sont payés indépendamment de la réussite ou de l'échec d'une transaction.
 
-![A diagram showing where gas is needed in EVM operations](./gas.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasEvmDiagram />
 
-Les frais de gaz doivent être payés dans la monnaie native d'Ethereum, l'ether (ETH). Les prix du gaz sont généralement indiqués en gwei, qui est une dénomination de l'ETH. Chaque gwei est égal à un milliardième d'ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
+Les frais de gaz doivent être payés dans la devise native d'Ethereum, l'ether (ETH). Les prix du gaz sont généralement indiqués en gwei, qui est une dénomination de l'ETH. Chaque gwei est égal à un milliardième d'ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
 
 Par exemple, au lieu de dire que votre gaz coûte 0,000000001 ether, vous pouvez dire que votre gaz coûte 1 gwei.
 
@@ -30,21 +29,21 @@ Le mot « gwei » est une contraction de « giga-wei », signifiant « un millia
 
 ## Comment les frais de gaz sont-ils calculés ? {#how-are-gas-fees-calculated}
 
-Vous pouvez définir la quantité de gaz que vous êtes prêt à payer lorsque vous soumettez une transaction. En offrant une certaine quantité de gaz, vous enchérissez pour que votre transaction soit incluse dans le prochain bloc. Si vous offrez trop peu, les validateurs sont moins susceptibles de choisir votre transaction pour l'inclure, ce qui signifie que votre transaction peut s'exécuter en retard ou pas du tout. Si vous offrez trop, vous risquez de gaspiller des ETH. Alors, comment savoir combien payer ?
+Vous pouvez définir la quantité de gaz que vous êtes prêt à payer lorsque vous soumettez une transaction. En offrant une certaine quantité de gaz, vous enchérissez pour que votre transaction soit incluse dans le prochain bloc. Si vous offrez trop peu, les validateurs sont moins susceptibles de choisir votre transaction pour l'inclure, ce qui signifie que votre transaction peut s'exécuter en retard ou pas du tout. Si vous offrez trop, vous pourriez gaspiller des ETH. Alors, comment savoir combien payer ?
 
-Le gaz total que vous payez est divisé en deux composantes : les `base fee` (frais de base) et les `priority fee` (frais de priorité).
+Le prix que vous payez par unité de gaz est divisé en deux composantes : les `base fee` (frais de base) et les `priority fee` (frais de priorité).
 
-Les `base fee` sont définis par le protocole — vous devez payer au moins ce montant pour que votre transaction soit considérée comme valide. Les `priority fee` sont des frais de priorité que vous ajoutez aux frais de base pour rendre votre transaction attrayante pour les validateurs afin qu'ils la choisissent pour l'inclure dans le prochain bloc.
+Les `base fee` sont fixés par le protocole — vous devez payer au moins ce montant pour que votre transaction soit considérée comme valide. Les `priority fee` sont un supplément que vous ajoutez aux frais de base pour rendre votre transaction attrayante pour les validateurs afin qu'ils la choisissent pour l'inclure dans le prochain bloc.
 
-Une transaction qui ne paie que les `base fee` est techniquement valide mais peu susceptible d'être incluse car elle n'offre aucune incitation aux validateurs à la choisir plutôt qu'une autre transaction. Les « bons » `priority` sont déterminés par l'utilisation du réseau au moment où vous envoyez votre transaction — s'il y a beaucoup de demande, vous devrez peut-être définir vos `priority` plus haut, mais lorsqu'il y a moins de demande, vous pouvez payer moins.
+Une transaction qui ne paie que les `base fee` est techniquement valide mais peu susceptible d'être incluse car elle n'offre aucune incitation aux validateurs pour la choisir par rapport à une autre transaction. Les `priority fee` « corrects » sont déterminés par l'utilisation du réseau au moment où vous envoyez votre transaction — s'il y a beaucoup de demande, vous devrez peut-être fixer vos `priority fee` plus haut, mais quand il y a moins de demande, vous pouvez payer moins.
 
 Par exemple, disons que Jordan doit payer 1 ETH à Taylor. Un transfert d'ETH nécessite 21 000 unités de gaz, et les frais de base sont de 10 gwei. Jordan inclut des frais de priorité de 2 gwei.
 
-Les frais totaux seraient désormais égaux à :
+Les frais totaux seraient alors égaux à :
 
 `units of gas used * (base fee + priority fee)`
 
-où les `base fee` sont une valeur définie par le protocole et les `priority fee` sont une valeur définie par l'utilisateur comme frais de priorité pour le validateur.
+où les `base fee` sont une valeur fixée par le protocole et les `priority fee` sont une valeur fixée par l'utilisateur pour le validateur.
 
 par ex., `21,000 * (10 + 2) = 252,000 gwei` (0,000252 ETH).
 
@@ -54,30 +53,32 @@ Lorsque Jordan envoie l'argent, 1,000252 ETH seront déduits du compte de Jordan
 
 Chaque bloc a des frais de base qui agissent comme un prix de réserve. Pour être éligible à l'inclusion dans un bloc, le prix offert par gaz doit au moins être égal aux frais de base. Les frais de base sont calculés indépendamment du bloc actuel et sont plutôt déterminés par les blocs qui le précèdent, ce qui rend les frais de transaction plus prévisibles pour les utilisateurs. Lorsque le bloc est créé, ces **frais de base sont « brûlés »**, les retirant de la circulation.
 
-Les frais de base sont calculés par une formule qui compare la taille du bloc précédent (la quantité de gaz utilisée pour toutes les transactions) avec la taille cible (la moitié de la limite de gaz). Les frais de base augmenteront ou diminueront d'un maximum de 12,5 % par bloc si la taille du bloc cible est respectivement supérieure ou inférieure à la cible. Cette croissance exponentielle rend économiquement non viable le maintien d'une taille de bloc élevée indéfiniment.
+Les frais de base sont calculés par une formule qui compare la taille du bloc précédent (la quantité de gaz utilisée pour toutes les transactions) avec la taille cible (la moitié de la limite de gaz). Les frais de base augmenteront ou diminueront d'un maximum de 12,5 % par bloc si la taille du bloc est respectivement supérieure ou inférieure à la cible. Cette croissance exponentielle rend économiquement non viable le maintien d'une taille de bloc élevée indéfiniment.
 
 | Numéro de bloc | Gaz inclus | Augmentation des frais | Frais de base actuels |
-| ------------ | -----------: | -----------: | ---------------: |
-| 1            |          18M |           0% |         100 gwei |
-| 2            |          36M |           0% |         100 gwei |
-| 3            |          36M |        12,5 % |       112,5 gwei |
-| 4            |          36M |        12,5 % |       126,6 gwei |
-| 5            |          36M |        12,5 % |       142,4 gwei |
-| 6            |          36M |        12,5 % |       160,2 gwei |
-| 7            |          36M |        12,5 % |       180,2 gwei |
-| 8            |          36M |        12,5 % |       202,7 gwei |
+| -------------- | ---------: | ---------------------: | --------------------: |
+| 1              |        30M |                    0 % |              0,1 gwei |
+| 2              |        60M |                    0 % |              0,1 gwei |
+| 3              |        60M |                 12,5 % |           0,1125 gwei |
+| 4              |        60M |                 12,5 % |           0,1266 gwei |
+| 5              |        60M |                 12,5 % |           0,1424 gwei |
+| 6              |        60M |                 12,5 % |           0,1602 gwei |
+| 7              |        60M |                 12,5 % |           0,1802 gwei |
+| 8              |        60M |                 12,5 % |           0,2027 gwei |
 
-Dans le tableau ci-dessus, un exemple est présenté en utilisant 36 millions comme limite de gaz. En suivant cet exemple, pour créer une transaction sur le bloc numéro 9, un portefeuille fera savoir à l'utilisateur avec certitude que les **frais de base maximum** à ajouter au prochain bloc sont de `current base fee * 112.5%` ou `202.7 gwei * 112.5% = 228.1 gwei`.
+Dans le tableau ci-dessus, un exemple est présenté en utilisant 60 millions comme limite de gaz. En suivant cet exemple, pour créer une transaction sur le bloc numéro 9, un portefeuille fera savoir à l'utilisateur avec certitude que les **frais de base maximums** à ajouter au prochain bloc sont `current base fee * 112.5%` ou `0.2027 gwei * 112.5% = 0.2281 gwei`.
 
-Il est également important de noter qu'il est peu probable que nous observions des pics prolongés de blocs pleins en raison de la vitesse à laquelle les frais de base augmentent avant un bloc plein.
+<BaseFeeDiagram />
+
+Il est également important de noter qu'il est peu probable que nous observions des pics prolongés de blocs pleins en raison de la vitesse à laquelle les frais de base augmentent suite à un bloc plein.
 
 | Numéro de bloc | Gaz inclus | Augmentation des frais | Frais de base actuels |
-| ------------ | -----------: | -----------: | ---------------: |
-| 30           |          36M |        12,5 % |      2705,6 gwei |
-| ...          |          ... |        12,5 % |              ... |
-| 50           |          36M |        12,5 % |     28531,3 gwei |
-| ...          |          ... |        12,5 % |              ... |
-| 100          |          36M |        12,5 % |  10302608,6 gwei |
+| -------------- | ---------: | ---------------------: | --------------------: |
+| 30             |        60M |                 12,5 % |           2,7056 gwei |
+| ...            |        ... |                 12,5 % |                   ... |
+| 50             |        60M |                 12,5 % |          28,5313 gwei |
+| ...            |        ... |                 12,5 % |                   ... |
+| 100            |        60M |                 12,5 % |       10302,6083 gwei |
 
 ### Frais de priorité {#priority-fee}
 
@@ -85,7 +86,7 @@ Les frais de priorité incitent les validateurs à maximiser le nombre de transa
 
 ### Frais maximum {#maxfee}
 
-Pour exécuter une transaction sur le réseau, les utilisateurs peuvent spécifier une limite maximale qu'ils sont prêts à payer pour que leur transaction soit exécutée. Ce paramètre facultatif est connu sous le nom de `maxFeePerGas` (frais maximum). Pour qu'une transaction soit exécutée, les frais maximum doivent dépasser la somme des frais de base et des frais de priorité. L'expéditeur de la transaction est remboursé de la différence entre les frais maximum et la somme des frais de base et des frais de priorité.
+Pour exécuter une transaction sur le réseau, les utilisateurs peuvent spécifier une limite maximale qu'ils sont prêts à payer pour que leur transaction soit exécutée. Ce paramètre optionnel est connu sous le nom de `maxFeePerGas`. Pour qu'une transaction soit exécutée, les frais maximum doivent être au moins égaux aux frais de base, et les frais de priorité payés sont plafonnés de sorte que les frais de base plus les frais de priorité ne dépassent jamais les frais maximum. L'expéditeur de la transaction est remboursé de la différence entre les frais maximum et la somme des frais de base et des frais de priorité.
 
 ### Taille de bloc {#block-size}
 
@@ -101,12 +102,11 @@ Vous pouvez indiquer explicitement combien vous êtes prêt à payer pour faire 
 
 ## Pourquoi les frais de gaz existent-ils ? {#why-do-gas-fees-exist}
 
-En bref, les frais de gaz aident à maintenir la sécurité du réseau Ethereum. En exigeant des frais pour chaque calcul exécuté sur le réseau, nous empêchons les acteurs malveillants de spammer le réseau. Afin d'éviter les boucles infinies accidentelles ou hostiles ou tout autre gaspillage de calcul dans le code, chaque transaction est tenue de définir une limite au nombre d'étapes de calcul d'exécution de code qu'elle peut utiliser. L'unité fondamentale de calcul est le « gaz ».
+En bref, les frais de gaz aident à maintenir la sécurité du réseau Ethereum. En exigeant des frais pour chaque calcul exécuté sur le réseau, nous empêchons les acteurs malveillants de spammer le réseau. Afin d'éviter les boucles infinies accidentelles ou hostiles ou tout autre gaspillage de calcul dans le code, chaque transaction doit définir une limite quant au nombre d'étapes de calcul d'exécution de code qu'elle peut utiliser. L'unité fondamentale de calcul est le « gaz ».
 
-Bien qu'une transaction inclue une limite, tout gaz non utilisé dans une transaction est restitué à l'utilisateur (par ex., `max fee - (base fee + tip)` est restitué).
+Bien qu'une transaction inclue une limite, tout gaz non utilisé dans une transaction est retourné à l'utilisateur (par ex., `max fee - (base fee + tip)` est retourné).
 
-![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
-_Schéma adapté de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 ## Qu'est-ce que la limite de gaz ? {#what-is-gas-limit}
 
@@ -132,14 +132,8 @@ Si vous souhaitez surveiller les prix du gaz, afin de pouvoir envoyer vos ETH po
 
 - [Etherscan](https://etherscan.io/gastracker) _Estimateur de prix du gaz de transaction_
 - [Blockscout](https://eth.blockscout.com/gas-tracker) _Estimateur open source de prix du gaz de transaction_
-- [ETH Gas Tracker](https://www.ethgastracker.com/) _Surveillez et suivez les prix du gaz sur Ethereum et les L2 pour réduire les frais de transaction et économiser de l'argent_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extension Chrome d'estimation de gaz prenant en charge à la fois les transactions héritées de Type 0 et les transactions EIP-1559 de Type 2._
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Surveillez et suivez les prix du gaz sur Ethereum et les couches 2 (l2) pour réduire les frais de transaction et faire des économies_
 - [Cryptoneur Gas Fees Calculator](https://cryptoneur.xyz/en/gas-fees-calculator) _Calculez les frais de gaz dans votre devise locale pour différents types de transactions sur le Réseau principal, Arbitrum et Polygon._
-
-## Outils connexes {#related-tools}
-
-- [Plateforme de gaz de Blocknative](https://www.blocknative.com/gas) _API d'estimation de gaz alimentée par la plateforme mondiale de données de mempool de Blocknative_
-- [Gas Network](https://gas.network) Oracles de gaz onchain. Prise en charge de plus de 35 chaînes. 
 
 ## Complément d'information {#further-reading}
 

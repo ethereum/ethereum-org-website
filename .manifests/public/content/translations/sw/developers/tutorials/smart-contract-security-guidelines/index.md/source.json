@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/tutorials/smart-contract-security-guidelines/index.md",
-  "generatedAt": "2026-06-17T00:56:44.978Z",
-  "rootHash": "c047896d5e44",
+  "generatedAt": "2026-11-27T10:18:54.752Z",
+  "rootHash": "93405b788cb4",
   "tree": {
-    "contentHash": "38338a295ef3",
-    "anchorHash": "c652d2f5078b",
+    "contentHash": "b8ab376aece9",
+    "anchorHash": "68cd63291941",
     "children": {
       "frontmatter:title": {
         "contentHash": "1ca096049f10",
@@ -72,7 +72,7 @@
       },
       "design-guidelines": {
         "contentHash": "16701b4e4a57",
-        "anchorHash": "7992d5bb315d",
+        "anchorHash": "9e55bc50635b",
         "labelHash": "19424e0429e1",
         "children": {
           "_label": {
@@ -85,7 +85,7 @@
           },
           "documentation-and-specifications": {
             "contentHash": "1fb3dcb93b9c",
-            "anchorHash": "13bde15c8f54",
+            "anchorHash": "2ee5a504fad9",
             "labelHash": "639aec15b9ba",
             "children": {
               "_label": {
@@ -106,7 +106,7 @@
               },
               "link:1": {
                 "contentHash": "3f08c4e7b0c1",
-                "anchorHash": "69bb69420081"
+                "anchorHash": "58a418316b45"
               },
               "prose:4": {
                 "contentHash": "27ded1992dde",
@@ -190,8 +190,8 @@
         ]
       },
       "implementation-guidelines": {
-        "contentHash": "44fbc513d404",
-        "anchorHash": "912ebb469bbe",
+        "contentHash": "40f40850cb40",
+        "anchorHash": "7114a670a341",
         "labelHash": "ba6f828bd949",
         "children": {
           "_label": {
@@ -358,15 +358,15 @@
             ]
           },
           "testing-and-verification": {
-            "contentHash": "aa785640509f",
-            "anchorHash": "db6bd1ff9ccf",
+            "contentHash": "cec625254aec",
+            "anchorHash": "93aadb37c2b8",
             "labelHash": "ce9975410b89",
             "children": {
               "_label": {
                 "contentHash": "ce9975410b89",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:4": {
+              "prose:3": {
                 "contentHash": "a8dc51e7150d",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -374,7 +374,7 @@
                 "contentHash": "058a42f29cd2",
                 "anchorHash": "032efa516517"
               },
-              "prose:5": {
+              "prose:4": {
                 "contentHash": "d03502c43d74",
                 "anchorHash": "e3b0c44298fc"
               },
@@ -382,67 +382,67 @@
                 "contentHash": "f83592d6e169",
                 "anchorHash": "983fa5f48cde"
               },
-              "prose:6": {
+              "prose:5": {
                 "contentHash": "6201111b83a0",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:2": {
-                "contentHash": "f571571f5f2d",
-                "anchorHash": "59bcda5c76a2"
+                "contentHash": "7def2d5ca100",
+                "anchorHash": "97150ff701ab"
               },
-              "prose:7": {
-                "contentHash": "bc03562aa2da",
-                "anchorHash": "e3b0c44298fc"
-              },
-              "link:3": {
-                "contentHash": "6bcec4344c78",
-                "anchorHash": "2b10330b9776"
-              },
-              "prose:8": {
-                "contentHash": "21c2d8b0e90c",
+              "prose:6": {
+                "contentHash": "a316eb840471",
                 "anchorHash": "e3b0c44298fc"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:4",
+              "prose:3",
               "link:0",
-              "prose:5",
+              "prose:4",
               "link:1",
-              "prose:6",
+              "prose:5",
               "link:2",
-              "prose:7",
-              "link:3",
-              "prose:8"
+              "prose:6"
             ]
           },
           "solidity": {
-            "contentHash": "a1482c4d7218",
-            "anchorHash": "c7932156fe25",
+            "contentHash": "2004d9954bc6",
+            "anchorHash": "be1a577f1c8d",
             "labelHash": "7ead9d0680ad",
             "children": {
               "_label": {
                 "contentHash": "7ead9d0680ad",
                 "anchorHash": "e3b0c44298fc"
               },
-              "prose:1": {
-                "contentHash": "2346620ea35d",
+              "prose:2": {
+                "contentHash": "b67f4a657e5f",
                 "anchorHash": "e3b0c44298fc"
               },
               "link:0": {
                 "contentHash": "52c03f304731",
-                "anchorHash": "130015a3de4a"
+                "anchorHash": "9901970953f9"
               },
-              "prose:2": {
-                "contentHash": "49517b67c351",
+              "prose:3": {
+                "contentHash": "161547e69b13",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "70b5168e23e6",
+                "anchorHash": "be685e084081"
+              },
+              "prose:4": {
+                "contentHash": "92b6005671db",
                 "anchorHash": "e3b0c44298fc"
               }
             },
             "childrenOrder": [
               "_label",
-              "prose:1",
+              "prose:2",
               "link:0",
-              "prose:2"
+              "prose:3",
+              "link:1",
+              "prose:4"
             ]
           }
         },
@@ -515,5 +515,5 @@
       "deployment-guidelines"
     ]
   },
-  "sourceCommitSha": "011881e8a574cb2bf80cd15a02cdf42419d97687"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

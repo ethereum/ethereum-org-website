@@ -38,7 +38,7 @@ _এমন কোনো কমিউনিটি রিসোর্স সম্
 - [টোকেন ইন্টিগ্রেশনের বিপদ (PDF)](https://github.com/OpenZeppelin/workshops/blob/master/11-dangers-token-integration/slides.pdf) - _ওপেনজেপেলিন_
 ## সম্পর্কিত টিউটোরিয়াল {#related-tutorials}
 
-- [টোকেন ইন্টিগ্রেশন চেকলিস্ট](/developers/tutorials/token-integration-checklist/) _– টোকেনগুলোর সাথে ইন্টারঅ্যাক্ট করার সময় যে বিষয়গুলো বিবেচনা করতে হবে তার একটি চেকলিস্ট।_
-- [ERC20 টোকেন স্মার্ট কন্ট্রাক্ট বুঝুন](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– একটি ইথেরিয়াম টেস্ট নেটওয়ার্কে আপনার প্রথম স্মার্ট কন্ট্রাক্ট ডিপ্লয় করার পরিচিতি।_
-- [একটি Solidity স্মার্ট কন্ট্রাক্ট থেকে ERC20 টোকেন ট্রান্সফার এবং অনুমোদন](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity ভাষা ব্যবহার করে একটি টোকেনের সাথে ইন্টারঅ্যাক্ট করতে কীভাবে স্মার্ট কন্ট্রাক্ট ব্যবহার করবেন।_
-- [একটি ERC721 মার্কেট বাস্তবায়ন [একটি নির্দেশিকা]](/developers/tutorials/how-to-implement-an-erc721-market/) _– কীভাবে একটি বিকেন্দ্রীকৃত ক্লাসিফাইড বোর্ডে বিক্রয়ের জন্য টোকেনাইজড আইটেমগুলো রাখা যায়।_
+- [টোকেন ইন্টিগ্রেশন চেকলিস্ট](/developers/tutorials/token-integration-checklist/) _– টোকেনগুলোর সাথে ইন্টারঅ্যাক্ট করার সময় বিবেচনা করার মতো বিষয়গুলোর একটি চেকলিস্ট।_
+- [ERC-20 কন্ট্রাক্ট ওয়াক-থ্রু](/developers/tutorials/erc20-annotated-code/) _– ওপেনজেপেলিন ERC-20 কন্ট্রাক্ট ইমপ্লিমেন্টেশনের একটি লাইন-বাই-লাইন টীকাযুক্ত ওয়াক-থ্রু।_
+- [একটি Solidity স্মার্ট কন্ট্রাক্ট থেকে ERC20 টোকেন ট্রান্সফার এবং অনুমোদন](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity ভাষা ব্যবহার করে একটি টোকেনের সাথে ইন্টারঅ্যাক্ট করতে কীভাবে একটি স্মার্ট কন্ট্রাক্ট ব্যবহার করবেন।_
+- [একটি ERC721 মার্কেট ইমপ্লিমেন্ট করা [একটি হাউ-টু গাইড]](/developers/tutorials/how-to-implement-an-erc721-market/) _– একটি বিকেন্দ্রীকৃত ক্লাসিফাইড বোর্ডে বিক্রির জন্য কীভাবে টোকেনাইজড আইটেমগুলো রাখবেন।_

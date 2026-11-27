@@ -1,6 +1,6 @@
 ---
 title: "Documentation de développement d'Ethereum"
-description: "Présentation de la documentation pour les développeurs d'ethereum.org."
+description: "Documentation de développement d'Ethereum : apprenez les fondamentaux, la pile Ethereum, les contrats intelligents, les nœuds et la mise à l'échelle, avec des guides pour construire votre première dapp."
 lang: fr
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Acerca de ethereum.org
 metaTitle: Acerca de nosotros
-description: "Acerca del equipo, la comunidad y la misión de ethereum.org"
+description: "Conoce al equipo y a la comunidad detrás de ethereum.org: nuestra misión, cómo se construye y gobierna el sitio de forma abierta, y cómo puedes ayudar a mejorarlo."
 lang: es
 ---
 
@@ -107,9 +107,11 @@ Utilizamos un conjunto de [principios de diseño](/contributing/design-principle
 
 ## Sistema de diseño {#design-system}
 
-Construimos y lanzamos un [sistema de diseño](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para enviar funciones más rápidamente y permitir que los miembros de la comunidad participen en el diseño abierto de ethereum.org.
+Construimos y publicamos un [sistema de diseño](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para lanzar funciones más rápido y permitir que los miembros de la comunidad participen en el diseño abierto de ethereum.org.
 
 ¿Quieres involucrarte? [Sigue el proceso en Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) y únete a la conversación en nuestro [canal de Discord #design](/discord/).
+
+¿Buscas logotipos, ilustraciones u otros archivos de la marca? Descárgalos desde nuestra [página de recursos](/assets/).
 
 ## Guía de estilo {#style-guide}
 
@@ -122,6 +124,10 @@ Agradecemos los comentarios sobre nuestros principios de diseño, el sistema de 
 ## Licencia {#license}
 
 El sitio web ethereum.org es de código abierto y está construido bajo una [Licencia MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) a menos que se especifique lo contrario. Más sobre los [términos de uso](/terms-of-use/) de ethereum.org.
+
+## Tu privacidad {#your-privacy}
+
+ethereum.org utiliza Matomo para realizar análisis que preservan la privacidad, y puedes optar por no participar en cualquier momento. Lee nuestra [política de cookies](/cookie-policy/) y [política de privacidad](/privacy-policy/) para obtener más detalles.
 
 ## Puestos de trabajo vacantes {#open-jobs}
 

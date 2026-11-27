@@ -1,6 +1,6 @@
 ---
 title: Zdecentralizowana nauka (DeSci)
-description: "Przegląd zdecentralizowanej nauki w Ethereum"
+description: "Czym jest zdecentralizowana nauka? Dowiedz się, jak DeSci wykorzystuje Ethereum do finansowania badań, otwartego udostępniania danych i nagradzania naukowców, czyniąc naukę bardziej dostępną."
 lang: pl
 template: use-cases
 sidebarDepth: 2

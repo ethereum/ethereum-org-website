@@ -34,11 +34,12 @@ export type SearchExplorer = {
 } & ({ search: string } | { address: string; tx: string })
 
 export interface Rollup {
+  /** Detail page URL segment; ours, so it never follows an upstream id. */
+  slug: string
   l2beatID: string
   growthepieID: string
   name: string
   chainName: ChainName | NonEVMChainName
-  canExpand?: boolean
   logo: StaticImageData
   networkType: "optimistic" | "zk"
   description: string
@@ -67,12 +68,12 @@ export const ethereumNetworkData = {
   },
   growthepieID: "ethereum",
   logo: EthereumLogo,
-  networkMaturity: "n/a",
-  canExpand: false,
+  feeToken: ["ETH"],
 }
 
 export const layer2Data: Rollups = [
   {
+    slug: "arbitrum",
     l2beatID: "arbitrum",
     growthepieID: "arbitrum",
     name: "Arbitrum One",
@@ -90,11 +91,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://portal.arbitrum.io/projects",
     blockExplorerLink: "https://arbiscan.io/",
     bridgeLink: "https://bridge.arbitrum.io/",
-    l2BeatLink: "https://l2beat.com/scaling/projects/arbitrum",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/arbitrum",
     growthepieLink: "https://www.growthepie.com/chains/arbitrum",
     feeToken: ["ETH"],
   },
   {
+    slug: "base",
     l2beatID: "base",
     growthepieID: "base",
     name: "Base",
@@ -112,11 +114,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://base.org/ecosystem",
     blockExplorerLink: "https://basescan.org/",
     bridgeLink: "https://bridge.base.org/deposit",
-    l2BeatLink: "https://l2beat.com/scaling/projects/base",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/base",
     growthepieLink: "https://www.growthepie.com/chains/base",
     feeToken: ["ETH"],
   },
   {
+    slug: "optimism",
     l2beatID: "optimism",
     growthepieID: "optimism",
     name: "Optimism",
@@ -134,11 +137,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://optimism.io/apps",
     blockExplorerLink: "https://optimistic.etherscan.io/",
     bridgeLink: "https://app.optimism.io/",
-    l2BeatLink: "https://l2beat.com/scaling/projects/optimism",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/optimism",
     growthepieLink: "https://www.growthepie.com/chains/optimism",
     feeToken: ["ETH"],
   },
   {
+    slug: "zksync-era",
     l2beatID: "zksync2",
     growthepieID: "zksync_era",
     name: "ZKSync Era",
@@ -156,11 +160,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://zksync.io/ecosystem",
     blockExplorerLink: "https://explorer.zksync.io/",
     bridgeLink: "https://portal.zksync.io/bridge/",
-    l2BeatLink: "https://l2beat.com/scaling/projects/zksync-era",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/zksync-era",
     growthepieLink: "https://www.growthepie.com/chains/zksync-era",
     feeToken: ["ETH"],
   },
   {
+    slug: "linea",
     l2beatID: "linea",
     growthepieID: "linea",
     name: "Linea",
@@ -178,11 +183,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://linea.build/apps",
     blockExplorerLink: "https://lineascan.build/",
     bridgeLink: "https://bridge.linea.build/",
-    l2BeatLink: "https://l2beat.com/scaling/projects/linea",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/linea",
     growthepieLink: "https://www.growthepie.com/chains/linea",
     feeToken: ["ETH"],
   },
   {
+    slug: "scroll",
     l2beatID: "scroll",
     growthepieID: "scroll",
     name: "Scroll",
@@ -200,11 +206,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://scroll.io/ecosystem",
     blockExplorerLink: "https://scrollscan.com",
     bridgeLink: "https://scroll.io/bridge",
-    l2BeatLink: "https://l2beat.com/scaling/projects/scroll",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/scroll",
     growthepieLink: "https://www.growthepie.com/chains/scroll",
     feeToken: ["ETH"],
   },
   {
+    slug: "starknet",
     l2beatID: "starknet",
     growthepieID: "starknet",
     name: "Starknet",
@@ -224,11 +231,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://www.starknet-ecosystem.com/",
     blockExplorerLink: "https://starkscan.co/",
     bridgeLink: "https://starkgate.starknet.io/",
-    l2BeatLink: "https://l2beat.com/scaling/projects/starknet",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/starknet",
     growthepieLink: "https://www.growthepie.com/chains/starknet",
     feeToken: ["ETH", "STRK"],
   },
   {
+    slug: "unichain",
     l2beatID: "unichain",
     growthepieID: "unichain",
     name: "Unichain",
@@ -246,11 +254,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://www.unichain.org/explore",
     blockExplorerLink: "https://uniscan.xyz/",
     bridgeLink: "https://www.unichain.org/bridge",
-    l2BeatLink: "https://l2beat.com/scaling/projects/unichain",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/unichain",
     growthepieLink: "https://www.growthepie.com/chains/unichain",
     feeToken: ["ETH"],
   },
   {
+    slug: "ink",
     l2beatID: "ink",
     growthepieID: "ink",
     name: "Ink",
@@ -268,11 +277,12 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://inkonchain.com/apps",
     blockExplorerLink: "https://explorer.inkonchain.com/",
     bridgeLink: "https://inkonchain.com/bridge",
-    l2BeatLink: "https://l2beat.com/scaling/projects/ink",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/ink",
     growthepieLink: "https://www.growthepie.com/chains/ink",
     feeToken: ["ETH"],
   },
   {
+    slug: "zircuit",
     l2beatID: "zircuit",
     growthepieID: "zircuit",
     name: "Zircuit",
@@ -292,7 +302,7 @@ export const layer2Data: Rollups = [
     applicationsLink: "https://www.zircuit.com/ecosystem",
     blockExplorerLink: "https://explorer.zircuit.com/",
     bridgeLink: "https://bridge.zircuit.com/",
-    l2BeatLink: "https://l2beat.com/scaling/projects/zircuit",
+    l2BeatLink: "https://ethbeat.org/layer2s/projects/zircuit",
     growthepieLink: "https://www.growthepie.com/chains/zircuit",
     feeToken: ["ETH"],
   },

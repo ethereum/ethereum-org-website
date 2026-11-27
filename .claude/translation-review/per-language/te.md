@@ -1,5 +1,47 @@
 # Telugu (te) Translation Review Findings
 
+## PR #19983 (intl/pending-dev, run 46014807045) -- 2026-11-27 -- Score 8.4/10
+Scope: 15 markdown pages, changed lines only; read 8 diffs (nodes-and-clients, run-a-node, statelessness, privacy, supply, patricia, frameworks via sweeps, nodes-as-a-service) plus scripted sweeps. No JSON in this PR. U+3002/U+2060/foreign-script/SPDX/untranslated sweeps clean.
+
+Fixed (critical): client names Latin in run-a-node table/notes (`బేసు/ఎరిగోన్/గెత్/నెథర్‌మైండ్/రెత్`, `Nethermind యొక్క`) and nodes-and-clients table rows, Erigon/Lodestar paragraphs, `టర్బో-గెత్` -> Turbo-Geth, nodes-as-a-service `బేసు` L225, patricia/verkle `గెత్` -> Geth, `Geth (Geth)` -> Geth; long forms added where English is bare (112): `వికేంద్రీకృత ఫైనాన్స్ (DeFi)` x2, `వికేంద్రీకృత అప్లికేషన్ (dapp)`, `నాన్-ఫంజిబుల్ టోకెన్ (NFT)` x4, `అప్లికేషన్ ప్రోగ్రామింగ్ ఇంటర్‌ఫేస్ (API)`, `వికేంద్రీకృత స్వయంప్రతిపత్త సంస్థ (DAO)` x2, `ప్రూఫ్-ఆఫ్-అథారిటీ (PoA)`, `లేయర్ 1 (L1)` (nodes-and-clients L161), `మైక్రోఎస్‌డి (MicroSD)`; `వాలిడేటర్‌లు` -> glossary `ధృవీకర్తలు` (statelessness 4, supply 6; same on dev, tree uses the glossary form in 98 files).
+
+Open (warnings): `జేసన్-ఆర్‌పీసీ` for JSON-RPC is tree-dominant (left); `(Async)`/`(Pythonic)` Latin glosses beside translated words in frameworks; `నెథర్‌మైండ్`, `లోడ్‌స్టార్`, `ప్రిజమ్`, `నింబస్`, `టెకు`, `లైట్‌హౌస్` on unchanged nodes-and-clients lines; `టర్బో-Geth` fixed but other mixed-script compounds may remain; nodes-and-clients L108 lacks the `pos/#what-is-pos` link (unchanged from dev, verify-structure error).
+
+## PR #19979 (intl/pending-dev, run 45975411591) -- 2026-11-27 -- Score 8.4/10
+Scope: 19 JSON namespaces + 76 incremental markdown pages; changed lines only, ~110 JSON keys and ~30 md files read against English. Reported-speech `-మని` negation flip did not recur.
+
+**Fixed in this branch (9 criticals):**
+
+- `interact-with-other-contracts-from-solidity` lines 23, 113: `// SPDX-లైసెన్స్-ఐడెంటిఫైయర్: MIT` -> `// SPDX-License-Identifier: MIT` (machine-parsed code comment translated).
+- `glossary.json` `liquid-staking-tokens-definition`: added `వికేంద్రీకృత ఫైనాన్స్ (DeFi)` where English has bare DeFi -> `DeFi` (#112).
+- `verifying`: `అప్లికేషన్ బైనరీ ఇంటర్‌ఫేస్ (ABI)` and 2x `అప్లికేషన్ ప్రోగ్రామింగ్ ఇంటర్‌ఫేస్ (API)` -> bare `ABI` / `API` (#112); "Verifiers can also compare" rendered `ధృవీకర్తలు` (validators, glossary polyseme) -> `ధృవీకరించేవారు`.
+- `staking/saas` description: `స్టాకింగ్` ("stacking", recurrence of the #19115 glossary misspelling) -> `స్టేకింగ్`.
+- `videos/devcon-mumbai-coming-2026` title, description, body: `దేవ్‌కాన్` -> `డెవ్‌కాన్` (PR #19142 form, matches the breadcrumb).
+- `programming-languages/rust`: `ఈథీరియం వర్చువల్ మెషీన్` -> locale spelling `ఎథీరియం వర్చువల్ మెషిన్` (dev form); `Awesome ఎథీరియం Rust` -> repo name `Awesome Ethereum Rust`.
+- `data-and-analytics`: reference links `గ్రాఫ్ నెట్‌వర్క్ అవలోకనం` / `గ్రాఫ్ ఎక్స్‌ప్లోరర్` -> `Graph ...` (body and dev use Latin `The Graph`).
+
+**Open (warnings):**
+
+- Ethereum client names (`ఎరిగోన్`, `రెత్`, `గెత్`, `బేసు`, `నెథర్‌మైండ్`, `లోడ్‌స్టార్`) transliterated in archive-nodes/light-clients/rust per ETHGlossary rows, against the "clients stay Latin" policy; glossary decision needed, not fixed.
+- event rendered `ఘటన` (ETHGlossary) mixed with `ఈవెంట్` inside one page (logging-events-smart-contracts, oracles, erc-7540); `ఘటనను విడుదల చేస్తుంది` for emit in anatomy comments.
+- verifying: `contract instance` -> `కాంట్రాక్ట్ ఉదాహరణ` (example) and `deterministic` -> `నిర్ణయాత్మకమైనది` (decisive); `ఇన్‌స్టాన్స్` was correct on dev.
+- contributing/index: `విజ్ఞానశాస్త్రంకి` missing sandhi; research: `లేయర్ 1 (L1)` expansion pattern is the locale standard (kept).
+- defi description: `వికేంద్రీకృత ఫైనాన్స్ (DeFi)` expansion where English says "decentralized finance on Ethereum" (new parenthetical, left).
+- Pre-existing, not touched: U+2066/U+2069 isolates remain in frontmatter titles (erc-7540, pectra, dao metaTitle); `ఈథీరియం` vs `ఎథీరియం` in the glossary EVM row.
+
+## PR #19973 (intl/pending-dev) -- 2026-11-26 -- Score 8.8/10
+Scope: component-diagrams (5 new diagrams) and dev-tools descriptions (277 keys). 0 critical. Open: `అప్లికేషన్ ప్రోగ్రామింగ్ ఇంటర్‌ఫేస్ (API)` expanded x10 where English has bare `API` (#112); `ZK-rollup` spelled out as `జీకే-రోలప్`; product names in dev-tools mixed (transliterated for Coinbase/MetaMask per glossary, Latin for Arbitrum/Optimism/Lido per glossary).
+
+## PR #19902 (intl/pending-dev) -- 2026-11-25 -- Score 8.6/10
+Scope: 7-8 re-translated pages (pos, portal-network, optimistic-rollups, zk-rollups, verifying, erc-721-vyper, SQL tutorial, glamsterdam), full PR review, sonnet agents.
+
+Fixed: block builder, peer, reorg, execution client x4, deleted paragraph restored (optimistic-rollups), epoch, optimistic rollup x5, actors as performers, dapp. Open: equivocation phrase, event vs ghatana, validated/attested collapsed.
+
+## PR #19815 (intl/pending-dev) -- 2026-11-24 -- Score 8.0/10
+Scope: 12 re-translated dev-docs/roadmap pages with interactive diagrams + new `component-diagrams.json` namespace (933 keys), reviewed against English at PR head 86deeb25cd.
+
+Fixed: placeholder swaps (peer-das caption, verkle), builder, execution client, fork choice, Ethereum spelling, gas inline code. Open: `saganiki paiga` for each-over-half, compounding sammelanam.
+
 > **PR:** #18739 (intl/pending-privacy-page)
 > **Date:** 2026-07-09
 > **Quality Score:** 8.3/10 (pre-fix) -> ~9.5 (post-fix, semantic fidelity restored)
@@ -149,3 +191,55 @@ Scope: full PR diff, ~27 files (8 new page-organizations*.json, common.json, sma
 
 - Fixed: `Chain Platform` transliterated -> Latin (L54, L83); stray U+2068/U+2069 around `ETH`.
 - Open: bare dApp/EVM expanded (#80); glossary EVM entry spells `ఈథీరియం` vs file `ఎథీరియం`.
+
+## PR #19556 (intl/pending-dev, run 39679413921) -- 2026-10-21 -- Score 8.2/10
+
+Scope: 27 files (smart-contracts/security + app-plasma retranslations, prediction-markets, scam-token-tricks, new `page-wallet-descriptions` / `component-catalog-item`, founders/stories JSON).
+
+**Fixed in this branch:**
+
+- `page-founders-tag-{accelerator,events,mentorship}` restored from dev (#81)
+- app-plasma:966 Solidity always_latin (`సోలిడిటీ ధృవీకర్తను` -> `Solidity ధృవీకర్తను`)
+- security/index.md:18-27 fabricated second frontmatter block deleted
+
+**Open (native call needed):**
+
+- None at critical level.
+- 17 warnings in the PR review (see the PR #19556 review body).
+
+**Summary:** The translation is fluent and mostly faithful. te's known reported-speech negation error (the `-మని` suffix flipping meaning) did not recur. The two te-specific must-fixes are the made-up frontmatter block in the security page and the transliterated Solidity; the founders tag regression affects other locales too.
+
+## PR #19568 (intl/pending-dev) -- 2026-10-22 -- Score 9.4/10
+Scope: 6 repaired developer tutorials (hello-world, mint/view/write NFT series, sending-transactions, using-websockets), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Code-fence drift restored from English: `sh` tags, `npm install dotenv` (known-patterns #92)
+
+**Notes:**
+
+- Retranslated in full (write-deploy correct). Warnings: English alt text; NFT spelled out too often.
+
+## PR #19803 (intl/pending-dev) -- 2026-11-16 -- Score 9.6/10
+Scope: 2 repaired developer tutorials (develop-and-test-dapps-with-a-multi-client-local-eth-testnet, how-to-use-echidna-to-test-smart-contracts), changed lines only. creating-a-wagmi-ui-for-your-contract was quarantined at the gate in all 24 locales (known-patterns #97). Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- multi-client:136 personal pronoun for accounts `ప్రతి ఒక్కరి` -> `ప్రతి ఒక్కదాని`
+
+**Open / notes:**
+
+- ABI/EVM spelled out (#80); `ఈథీరియం` vs locale `ఎథీరియం` in the EVM expansion (known glossary inconsistency)
+- Unchanged echidna:317 glossary verb pasted into heading; echidna:507 we/our mix -- out of scope
+
+## PR #19901 (intl/pending-dev) -- 2026-11-25 -- Score 9.0/10
+Scope: gas page, translation-program page, page-developers-index.json (3 files), changed lines only. Scores are for the PR's initial state.
+
+**Fixed in this branch:**
+
+- Gas page inline code spans restored to English (known-patterns #101 recurrence)
+
+**Open / notes:**
+
+- API over-expanded after a brand name (translation-program:21).
+- `page-developers-index.json` lost its final newline vs dev (matches en; cosmetic)

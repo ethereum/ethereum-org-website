@@ -1,7 +1,7 @@
 ---
-title: Wprowadzenie do propozycji ulepszeń Ethereum (EIP)
-metaTitle: Propozycje ulepszeń Ethereum (EIP)
-description: Podstawowe informacje potrzebne do zrozumienia EIP
+title: "Wprowadzenie do propozycji ulepszeń Ethereum (EIP)"
+metaTitle: "Propozycje ulepszeń Ethereum (EIP)"
+description: "Czym są Propozycje Ulepszeń Ethereum (EIP)? Dowiedz się, jak zmiany w Ethereum są proponowane, omawiane i przyjmowane, a także jak możesz wziąć w tym udział."
 lang: pl
 ---
 
@@ -15,7 +15,7 @@ Każdy członek społeczności Ethereum ma możliwość utworzenia EIP. Wytyczne
 
 EIP odgrywają kluczową rolę w tym, jak zmiany zachodzą i są dokumentowane w Ethereum. Są one sposobem na proponowanie, debatowanie i przyjmowanie zmian. Istnieją [różne typy EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), w tym główne EIP (core EIP) dla niskopoziomowych zmian protokołu, które wpływają na konsensus i wymagają aktualizacji sieci, takie jak [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), oraz ERC dla standardów aplikacji, takie jak [EIP-20](https://eips.ethereum.org/EIPS/eip-20) i [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Każda aktualizacja sieci składa się z zestawu EIP, które muszą zostać zaimplementowane przez każdego [klienta Ethereum](/learn/#clients-and-nodes) w sieci. Oznacza to, że aby pozostać w konsensusie z innymi klientami w sieci głównej Ethereum, programiści klientów muszą upewnić się, że zaimplementowali wszystkie wymagane EIP.
+Każda aktualizacja sieci składa się z zestawu EIP, które muszą zostać zaimplementowane przez każdego [klienta Ethereum](/developers/docs/nodes-and-clients/) w sieci. Oznacza to, że aby pozostać w konsensusie z innymi klientami w sieci głównej Ethereum, programiści klientów muszą upewnić się, że zaimplementowali wszystkie wymagane EIP.
 
 Oprócz dostarczania specyfikacji technicznej dla zmian, EIP są jednostką, wokół której odbywa się zarządzanie w Ethereum: każdy może zaproponować EIP, a następnie różni interesariusze w społeczności będą debatować, aby ustalić, czy powinien on zostać przyjęty jako standard lub włączony do aktualizacji sieci. Ponieważ EIP inne niż główne (non-core EIP) nie muszą być przyjmowane przez wszystkie aplikacje (na przykład możliwe jest utworzenie tokena zamiennego, który nie implementuje EIP-20), ale główne EIP muszą być powszechnie przyjęte (ponieważ wszystkie węzły muszą zostać zaktualizowane, aby pozostać częścią tej samej sieci), główne EIP wymagają szerszego konsensusu w społeczności niż EIP inne niż główne.
 

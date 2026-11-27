@@ -1,6 +1,6 @@
 ---
 title: Wie man Token tauscht
-description: Ein Leitfaden zum Tauschen von Token auf Ethereum.
+description: "Eine Schritt-für-Schritt-Anleitung zum Tauschen von Token auf Ethereum: Verbinden Sie Ihre Wallet mit einer dezentralen Börse, überprüfen Sie Gebühren und Slippage und bestätigen Sie den Handel."
 lang: de
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Czym jest DAO?
 metaTitle: Czym jest DAO? | Zdecentralizowana Organizacja Autonomiczna
-description: "Przegląd DAO na Ethereum"
+description: "Czym jest DAO? Dowiedz się, jak zdecentralizowane organizacje autonomiczne wykorzystują inteligentne kontrakty i tokeny do podejmowania decyzji i zarządzania wspólnymi funduszami na Ethereum."
 lang: pl
 template: use-cases
 sidebarDepth: 2

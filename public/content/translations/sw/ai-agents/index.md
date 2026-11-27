@@ -1,7 +1,7 @@
 ---
 title: Ajenti wa akili bandia
 metaTitle: Ajenti wa akili bandia | Ajenti wa akili bandia kwenye Ethereum
-description: Muhtasari wa ajenti wa akili bandia kwenye Ethereum
+description: Ajenti wa akili bandia kwenye Ethereum ni nini? Jifunze jinsi ajenti wanaojitegemea wanavyoshikilia mali, kufanya biashara, kutumia fedha zilizogatuliwa (DeFi) na kulipana mnyororoni, pamoja na hatari za kuzingatia.
 lang: sw
 template: use-cases
 sidebarDepth: 2

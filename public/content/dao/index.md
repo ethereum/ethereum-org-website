@@ -1,7 +1,7 @@
 ---
 title: What is a DAO?
 metaTitle: What is a DAO? | Decentralized Autonomous Organization
-description: An overview of DAOs on Ethereum
+description: "What is a DAO? Learn how decentralized autonomous organizations use smart contracts and tokens to make decisions and manage shared funds on Ethereum."
 lang: en
 template: use-cases
 sidebarDepth: 2
