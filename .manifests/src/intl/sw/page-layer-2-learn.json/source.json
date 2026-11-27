@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-layer-2-learn.json",
-  "generatedAt": "2026-07-22T22:39:57.901Z",
-  "rootHash": "baa833051f5f",
+  "generatedAt": "2026-11-27T09:54:33.557Z",
+  "rootHash": "75778f389497",
   "tree": {
-    "contentHash": "bd20b9dae414",
+    "contentHash": "46c85b6abf44",
     "anchorHash": "025fa2061822",
     "children": {
       "page-layer-2-learn-meta-title": {
@@ -231,11 +231,11 @@
         }
       },
       "page-layer-2-learn-dyor-2": {
-        "contentHash": "4dcbccab7443",
+        "contentHash": "56f869fdf5ec",
         "anchorHash": "e3b0c44298fc"
       },
       "page-layer-2-learn-dyor-link": {
-        "contentHash": "3d6661e4293f",
+        "contentHash": "f9f10c1120fb",
         "anchorHash": "e3b0c44298fc"
       },
       "page-layer-2-learn-note-on-alt-l1-title": {
@@ -360,5 +360,5 @@
       "page-layer-2-learn-explore-networks"
     ]
   },
-  "sourceCommitSha": "5b981c8a5bf1439902c9c764add8642d7f283824"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

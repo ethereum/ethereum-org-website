@@ -1,10 +1,10 @@
 ---
 title: Madaraja
-description: Muhtasari wa uunganishaji wa madaraja kwa wasanidi programu
+description: "Mwongozo wa msanidi programu kuhusu madaraja: jinsi utumaji ujumbe wa mtambuko-mnyororo na uvushaji wa tokeni unavyofanya kazi, aina za madaraja na dhana za uaminifu, na jinsi ya kuyaunganisha kwenye dapps."
 lang: sw
 ---
 
-Pamoja na kuongezeka kwa minyororo ya vitalu ya tabaka la 1 (l1) na suluhisho za [kuongeza viwango](/developers/docs/scaling/) za tabaka la 2 (l2), pamoja na idadi inayokua ya programu tumizi zilizogatuliwa (dapps) zinazokwenda mtambuko-mnyororo, hitaji la mawasiliano na usogezi wa rasilimali kwenye minyororo limekuwa sehemu muhimu ya miundombinu ya mtandao. Aina tofauti za madaraja zipo kusaidia kufanikisha hili.
+Pamoja na kuongezeka kwa minyororo ya vitalu ya tabaka la 1 (L1) na suluhisho za [kuongeza viwango](/developers/docs/scaling/) za tabaka la 2 (L2), pamoja na idadi inayokua ya programu tumizi zilizogatuliwa (dapps) zinazokwenda mtambuko-mnyororo, hitaji la mawasiliano na usogezi wa rasilimali kwenye minyororo limekuwa sehemu muhimu ya miundombinu ya mtandao. Aina tofauti za madaraja zipo kusaidia kufanikisha hili.
 
 ## Hitaji la madaraja {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Kwa wasanidi programu, madaraja huwezesha yafuatayo:
 
 - hamisho la data, taarifa, na rasilimali zozote mtambuko-mnyororo.
 - kufungua vipengele vipya na matukio ya matumizi kwa itifaki kwani madaraja hupanua nafasi ya muundo kwa kile ambacho itifaki zinaweza kutoa. Kwa mfano, itifaki ya ukulima wa faida iliyosambazwa awali kwenye Mtandao Mkuu wa [Ethereum](/) inaweza kutoa mabwawa ya ukwasi kwenye minyororo yote inayoendana na EVM.
-- fursa ya kutumia nguvu za minyororo tofauti ya vitalu. Kwa mfano, wasanidi programu wanaweza kufaidika na ada za chini zinazotolewa na suluhisho tofauti za tabaka la 2 (l2) kwa kusambaza dapps zao kwenye mikusanyiko, na minyororo ya kando na watumiaji wanaweza kuvusha kupitia hizo.
+- fursa ya kutumia nguvu za minyororo tofauti ya vitalu. Kwa mfano, wasanidi programu wanaweza kufaidika na ada za chini zinazotolewa na suluhisho tofauti za tabaka la 2 (L2) kwa kusambaza dapps zao kwenye mikusanyiko, na minyororo ya kando na watumiaji wanaweza kuvusha kupitia hizo.
 - ushirikiano kati ya wasanidi programu kutoka mifumo mbalimbali ya ikolojia ya mnyororo wa vitalu ili kujenga bidhaa mpya.
 - kuvutia watumiaji na jamii kutoka mifumo mbalimbali ya ikolojia kwenye dapps zao.
 
@@ -123,16 +123,16 @@ Ili kufuatilia shughuli za mkataba kwenye minyororo, wasanidi programu wanaweza 
 ## Usomaji zaidi {#further-reading}
 
 - [Madaraja ya Mnyororo wa Vitalu](/bridges/) – ethereum.org
-- [Mfumo wa Hatari wa Daraja la L2BEAT](https://l2beat.com/bridges/summary)
+- [Mfumo wa Hatari wa Daraja wa ETHBEAT](https://ethbeat.org/interop/summary)
 - [Madaraja ya Mnyororo wa Vitalu: Kujenga Mitandao ya Mitandao ya Kripto](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - Sep 8, 2021 – Dmitriy Berenzon
-- [Utatu wa Mwingiliano](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - Okt 1, 2021 – Arjun Bhuptani
+- [Tatizo la Utatu la Mwingiliano](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - Okt 1, 2021 – Arjun Bhuptani
 - [Makundi: Jinsi Madaraja Yanayoaminika na Yenye Uhitaji Mdogo wa Kuamini Yanavyounda Mandhari ya Minyororo Mingi](https://blog.celestia.org/clusters/) - Okt 4, 2021 – Mustafa Al-Bassam
 - [LI.FI: Kwa Madaraja, Uaminifu ni Wigo](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - Apr 28, 2022 – Arjun Chand
 - [Hali ya Suluhisho za Mwingiliano wa Rollup](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - Juni 20, 2024 – Alex Hook
 - [Kutumia Usalama wa Pamoja kwa Mwingiliano Salama wa Mtambuko-Mnyororo: Kamati za Hali za Lagrange na Zaidi](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - Juni 12, 2024 – Emmanuel Awosika
 
-Zaidi ya hayo, hapa kuna baadhi ya mawasilisho yenye ufahamu kutoka kwa [James Prestwich](https://twitter.com/_prestwich) ambayo yanaweza kusaidia kukuza uelewa wa kina wa madaraja:
+Zaidi ya hayo, hapa kuna baadhi ya mawasilisho yenye maarifa kutoka kwa [James Prestwich](https://twitter.com/_prestwich) ambayo yanaweza kusaidia kukuza uelewa wa kina wa madaraja:
 
-- [Kujenga Madaraja, Sio Bustani Zilizozungushiwa Ukuta](https://youtu.be/ZQJWMiX4hT0)
-- [Kuchanganua Madaraja](https://youtu.be/b0mC-ZqN8Oo)
+- [Kujenga Madaraja, Sio Bustani Zenye Kuta](https://youtu.be/ZQJWMiX4hT0)
+- [Kuchambua Madaraja](https://youtu.be/b0mC-ZqN8Oo)
 - [Kwa Nini Madaraja Yanateketea](https://youtu.be/c7cm2kd20j8)

@@ -12,7 +12,7 @@ Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo 
 ## Njia za kuchangia {#ways-to-contribute}
 
 **Tafsiri**
-- [Ripoti hitilafu ya tafsiri](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [Programu ya Tafsiri](/contributing/translation-program/) inafungwa na haifanyi tena uingizaji wa watafsiri wapya
+- [Ripoti kosa la tafsiri](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [Programu ya Tafsiri](/contributing/translation-program/) inafungwa na haifanyi tena uingizaji wa watafsiri wapya
 
 **Uendelezaji**
 - [Fanyia kazi suala lililo wazi](https://github.com/ethereum/ethereum-org-website/issues) – Kazi tuliyotambua inayohitaji kufanywa
@@ -22,25 +22,26 @@ Sisi ni jamii inayokaribisha ambayo itakusaidia kukua na kuelimika katika mfumo 
 
 **Maudhui**
 - [Unda/hariri maudhui](/contributing/#how-to-update-content) – Pendekeza kurasa mpya au fanya marekebisho kwa yale yaliyopo tayari
-- [Andika makala ya mjenzi](/contributing/adding-articles/) - Changia makala kwa ajili ya sehemu ya [Hivi Karibuni](/latest/)
+- [Andika makala ya mjenzi](/contributing/adding-articles/) - Changia makala kwa ajili ya sehemu ya [Hivi Punde](/latest/)
 - [Ongeza rasilimali za jamii](/contributing/content-resources/) – Ongeza makala au rasilimali muhimu kwenye ukurasa husika
 - [Pendekeza ripoti](/contributing/adding-reports/) - Pendekeza ripoti ya utafiti kwa ajili ya ukurasa wa [Ripoti](/reports/)
 - [Shiriki hadithi yako](/contributing/adding-community-stories/) - Wasilisha hadithi kuhusu uzoefu wako binafsi na teknolojia za programu huria na hifadhi, jinsi mfumo wa ikolojia wa Ethereum umeathiri maisha yako, au jinsi wewe na jamii yako mnavyotumia Ethereum
 - [Maswali](/contributing/quizzes/) – Ongeza, sasisha, na ufute benki za maswali kwa ajili ya ukurasa husika
 - [Pendekeza rasilimali ya usanifu](/contributing/design/adding-design-resources/) – Ongeza, sasisha, na ufute rasilimali muhimu za usanifu
 - [Pendekeza video](/contributing/adding-videos/) – Pendekeza video ya kuelimisha kwa ajili ya matunzio ya video
+- [Ongeza neno la faharasa](/contributing/adding-glossary-terms/) – Ongeza au sasisha neno katika [faharasa ya Ethereum](/glossary/)
 
 **Mawazo ya vipengele**
 - [Omba kipengele](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Tujulishe kuhusu mawazo yoyote uliyo nayo kwa ajili ya kipengele kipya au usanifu
 
 **Orodha za bidhaa**
-- [Ongeza ubadilishaji](/contributing/adding-exchanges/) – Ongeza ubadilishaji kwenye [kitafuta ubadilishaji](/get-eth/#country-picker) chetu
-- [Ongeza bidhaa](/contributing/adding-products/) – Ongeza programu tumizi iliyogatuliwa (dapp) au mkoba kwenye ukurasa husika
-- [Ongeza zana za msanidi](/contributing/adding-developer-tools/) – Ongeza zana ya msanidi kwenye ukurasa husika
-- [Ongeza tabaka la 2 (l2)](/contributing/adding-layer-2s/) – Ongeza tabaka la 2 (l2) kwenye ukurasa husika
+- [Ongeza soko la kubadilisha fedha](/contributing/adding-exchanges/) – Ongeza soko la kubadilisha fedha kwenye [kitafuta soko letu la kubadilisha fedha](/get-eth/#country-picker)
+- [Ongeza bidhaa](/contributing/adding-products/) – Ongeza dapp au mkoba kwenye ukurasa husika
+- [Ongeza zana za wasanidi](/contributing/adding-developer-tools/) – Ongeza zana ya msanidi kwenye ukurasa husika
+- [Ongeza tabaka la 2](/contributing/adding-layer-2s/) – Ongeza tabaka la 2 kwenye ukurasa husika
 - [Ongeza bidhaa au huduma ya uwekaji dhamana](/contributing/adding-staking-products/) – Ongeza mradi unaosaidia kuwezesha uwekaji dhamana wa kujitegemea, uwekaji dhamana wa pamoja, au kuweka hisa kama huduma
 - [Ongeza mkoba](/contributing/adding-wallets/) – Ongeza mkoba kwa ajili ya [ukurasa wa kutafuta mikoba](/wallets/find-wallet/)
-- [Pendekeza mradi kwa ajili ya ukurasa wetu wa sayansi iliyogatuliwa (desci)](/contributing/adding-desci-projects/) – Ongeza mradi uliojengwa kwenye Ethereum unaochangia katika sayansi iliyogatuliwa (desci)
+- [Pendekeza mradi kwa ajili ya ukurasa wetu wa DeSci](/contributing/adding-desci-projects/) – Ongeza mradi uliojengwa kwenye Ethereum unaochangia katika sayansi iliyogatuliwa
 - [Ongeza rasilimali](/contributing/adding-resources/) – Ongeza rasilimali muhimu kwenye ukurasa wowote husika
 
 Una maswali yoyote? 🤔 Jiunge na [seva yetu ya Discord](/discord/)
@@ -100,19 +101,9 @@ Ikiwa mchango wako utaunganishwa kwenye ethereum.org, utakuwa na nafasi ya kudai
 3. Subiri mwanachama wa timu yetu akutumie kiungo cha OAT yako.
 4. Dai OAT yako!
 
-Unapaswa kutumia tu mikoba ya uhifadhi binafsi kudai OAT. Usitumie akaunti za ubadilishaji au akaunti zingine ambazo huna funguo za faragha, kwani hizi hazitakuruhusu kufikia na kudhibiti OAT zako.
+Unapaswa kutumia tu mikoba ya uhifadhi binafsi kudai OAT. Usitumie akaunti za soko la kubadilisha fedha au akaunti nyingine ambazo humiliki funguo zake za siri, kwani hizi hazitakuruhusu kufikia na kudhibiti OAT zako.
 
-## Dai GitPOAP yako {#claim-gitpoap}
-
-GitPOAP pia itatambua kiotomatiki mchango wako uliounganishwa na kukuruhusu kufua POAP ya kipekee ya wachangiaji kwenye jukwaa lao lenyewe!
-
-
-### Jinsi ya kudai {#how-to-claim-2}
-
-1. Tembelea [GitPOAP](https://www.gitpoap.io).
-2. Unganisha na mkoba wako au hata na barua pepe yako kupitia chaguo la kuingia.
-3. Tafuta jina lako la mtumiaji la GitHub, anwani ya ETH, majina ya ENS au GitPOAP yoyote ili kuangalia kama unastahiki.
-4. Ikiwa akaunti yako ya GitHub inastahiki, basi utaweza kufua GitPOAP!
+<LinkWithArrow href="/collectibles/">Tazama vipengee vyako vya kukusanywa vya ethereum.org</LinkWithArrow>
 
 ## Wachangiaji {#contributors}
 

@@ -51,7 +51,7 @@ Kazi hii inarejesha anwani ya tokeni ya msingi inayotumika kwa hifadhi kwa uhasi
 function totalAssets() public view returns (uint256)
 ```
 
-Kazi hii inarejesha jumla ya kiasi cha mali za msingi zinazoshikiliwa na hifadhi.
+Kazi hii inarejesha jumla ya kiasi cha mali za msingi zinazosimamiwa na hifadhi, ikiwa ni pamoja na zozote ilizowekeza kwingineko na baada ya ada zozote.
 
 #### convertToShares {#convertoshares}
 
@@ -183,7 +183,7 @@ Inarejesha jumla ya kiasi cha hisa za hifadhi ambazo `owner` anazo kwa sasa.
 
 ### Ramani ya kiolesura {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### Matukio {#events}
 

@@ -1,7 +1,7 @@
 ---
 title: DAO ni nini?
 metaTitle: DAO ni nini? | Shirika Linalojitegemea Lililogatuliwa
-description: Muhtasari wa DAO kwenye Ethereum
+description: DAO ni nini? Jifunze jinsi mashirika yanayojitegemea na kugatuliwa yanavyotumia mikataba mahiri na tokeni kufanya maamuzi na kusimamia fedha za pamoja kwenye Ethereum.
 lang: sw
 template: use-cases
 sidebarDepth: 2

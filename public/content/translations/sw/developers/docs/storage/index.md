@@ -5,13 +5,13 @@ lang: sw
 authors: ["Patrick Collins"]
 ---
 
-Tofauti na seva kuu inayoendeshwa na kampuni au shirika moja, mifumo ya hifadhi iliyogatuliwa inajumuisha mtandao wa rika-kwa-rika wa waendeshaji-watumiaji ambao wanashikilia sehemu ya data yote, na kuunda mfumo thabiti wa kushiriki hifadhi ya faili. Hizi zinaweza kuwa katika programu inayotegemea mnyororo wa vitalu au mtandao wowote unaotegemea rika-kwa-rika.
+Tofauti na seva iliyojikita kati inayoendeshwa na kampuni au shirika moja, mifumo ya hifadhi iliyogatuliwa inajumuisha mtandao wa rika-kwa-rika wa watumiaji-waendeshaji wanaoshikilia sehemu ya data yote, na kuunda mfumo thabiti wa kushiriki hifadhi ya faili. Mifumo hii inaweza kuwa katika programu inayotegemea mnyororo wa vitalu au mtandao wowote unaotegemea rika-kwa-rika.
 
-Ethereum yenyewe inaweza kutumika kama mfumo wa hifadhi iliyogatuliwa, na inatumika inapokuja kwenye hifadhi ya msimbo katika mikataba yote mahiri. Hata hivyo, inapokuja kwenye kiasi kikubwa cha data, hilo sio ambalo Ethereum iliundwa kwa ajili yake. Mnyororo unakua kwa kasi, lakini wakati wa kuandika, mnyororo wa Ethereum ni karibu 500GB - 1TB ([kulingana na mteja](https://etherscan.io/chartsync/chaindefault)), na kila nodi kwenye mtandao inahitaji kuwa na uwezo wa kuhifadhi data yote. Ikiwa mnyororo ungepanuka hadi kiasi kikubwa cha data (tuseme 5TBs) isingewezekana kwa nodi zote kuendelea kufanya kazi. Pia, gharama ya kupeleka data nyingi hivi kwenye Mtandao Mkuu itakuwa ghali sana kutokana na ada za [gesi](/developers/docs/gas).
+Ethereum yenyewe inaweza kutumika kama mfumo wa hifadhi uliogatuliwa, na inatumika hivyo inapokuja kwenye hifadhi ya msimbo katika mikataba yote mahiri. Hata hivyo, inapokuja kwenye kiasi kikubwa cha data, hilo si jambo ambalo Ethereum iliundwa kufanya. Mnyororo unakua kwa uthabiti, lakini wakati wa kuandika haya, mnyororo wa Ethereum ni takriban 1-2TB ([kulingana na mteja](https://etherscan.io/chartsync/chaindefault)), na kila nodi kwenye mtandao inahitaji kuwa na uwezo wa kuhifadhi data yote. Ikiwa mnyororo ungepanuka hadi kiasi kikubwa cha data (tuseme 5TBs) isingewezekana kwa nodi zote kuendelea kufanya kazi. Pia, gharama ya kuweka data nyingi hivi kwenye Mtandao Mkuu ingekuwa ghali sana kutokana na ada za [gesi](/developers/docs/gas).
 
-Kutokana na vikwazo hivi, tunahitaji mnyororo tofauti au mbinu ya kuhifadhi kiasi kikubwa cha data kwa njia iliyogatuliwa.
+Kutokana na vikwazo hivi, tunahitaji mnyororo au mbinu tofauti ili kuhifadhi kiasi kikubwa cha data kwa njia iliyogatuliwa.
 
-Unapoangalia chaguzi za hifadhi iliyogatuliwa (dStorage), kuna mambo machache ambayo mtumiaji lazima akumbuke.
+Unapoangalia chaguo za hifadhi iliyogatuliwa (dStorage), kuna mambo machache ambayo mtumiaji lazima ayakumbuke.
 
 - Utaratibu wa kudumu / muundo wa motisha
 - Utekelezaji wa uhifadhi wa data

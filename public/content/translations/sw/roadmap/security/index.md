@@ -41,13 +41,13 @@ Kwa watumiaji, [ukamilifu](/glossary/#finality) ni wakati ambapo muamala unakuwa
 
 ## Wathibitishaji wastahimilivu {#resilient-validators}
 
-Mthibitishaji kwa kawaida ni mashine moja inayoshikilia ufunguo mmoja wa kusaini. **Teknolojia ya kithibitishaji kilichosambazwa (DVT)** inachukua nafasi ya mashine hiyo moja na kamati ya mashine zinazoshiriki ufunguo na kusaini pamoja, kwa hivyo kompyuta moja ikishindwa kufanya kazi au ufunguo mmoja ukiibiwa haimwangushi mthibitishaji. DVT inatumika kikamilifu na inatumiwa na waendeshaji wa uwekaji dhamana kwa kiwango kikubwa. Mnamo Januari 2026, Vitalik Buterin alitoa pendekezo la toleo lililorahisishwa la kiwango cha itifaki linaloitwa DVT-lite; ni pendekezo la mapema ambalo halijapangiwa mchepuo.
+Mthibitishaji kwa kawaida ni mashine moja inayoshikilia ufunguo mmoja wa kusaini. **Teknolojia ya kithibitishaji kilichosambazwa (DVT)** inachukua nafasi ya mashine hiyo moja na kamati ya mashine zinazoshiriki ufunguo na kusaini pamoja, kwa hivyo kompyuta moja ikishindwa kufanya kazi au ufunguo mmoja ukiibiwa haimwangushi mthibitishaji. DVT inatumika kikamilifu na inatumiwa na waendeshaji wa uwekaji dhamana kwa kiwango kikubwa. Mnamo Januari 2026, Vitalik Buterin alipendekeza toleo lililorahisishwa la kiwango cha itifaki linaloitwa DVT-lite; ni pendekezo la mapema ambalo halijapangiwa mchepuo.
 
-Mtandao pia unajilinda kupitia [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity/): Ethereum inaendeshwa kwenye utekelezaji kadhaa wa programu zilizojengwa kwa kujitegemea, kwa hivyo hitilafu katika mteja mmoja huiacha sehemu iliyosalia ya mtandao ikiwa salama.
+Mtandao pia unajilinda kupitia [anuwai ya wateja](/developers/docs/nodes-and-clients/client-diversity/): Ethereum inaendeshwa kwenye utekelezaji kadhaa wa programu zilizojengwa kwa kujitegemea, kwa hivyo hitilafu katika mteja mmoja inauacha mtandao uliosalia ukiwa salama.
 
-Mawazo mawili ya awali ya utafiti, view-merge na uchaguzi wa siri wa kiongozi, si vipengele vinavyoendelea tena kwenye ramani ya njia.
+Mawazo mawili ya awali ya utafiti, view-merge na [uchaguzi wa siri wa kiongozi](/roadmap/secret-leader-election/), si vipengele vinavyoendelea tena kwenye ramani ya njia.
 
-<ButtonLink variant="outline" href="/staking/dvt/">Zaidi kuhusu teknolojia ya kithibitishaji kilichosambazwa (DVT)</ButtonLink>
+<ButtonLink variant="outline" href="/staking/dvt/">Zaidi kuhusu teknolojia ya kithibitishaji kilichosambazwa</ButtonLink>
 
 ## Upinzani wa kwanta {#quantum-resistance}
 
@@ -71,21 +71,21 @@ Hapana. Hakuna kompyuta ya kwanta leo inayoweza kuvunja kriptografia ya Ethereum
 
 ## Itifaki rahisi na yenye ufanisi zaidi {#simpler-and-more-efficient-protocol}
 
-Utata hutengeneza fursa za hitilafu na udhaifu. Sehemu ya ramani ya njia inalenga **kurahisisha Ethereum na kuondoa deni la kiufundi** ili itifaki iwe rahisi kudumisha, kukagua, na kuelewa. Itifaki rahisi pia huwapa washambuliaji eneo dogo la kuchunguza.
+Utata hutengeneza fursa za hitilafu na udhaifu. Sehemu ya ramani ya njia inalenga **kurahisisha Ethereum na kuondoa deni la kiufundi** ili itifaki iwe rahisi kudumisha, kukagua, na kuelewa. Itifaki rahisi pia inawapa washambuliaji eneo dogo la kuchunguza.
 
-Zilizowasilishwa hadi sasa:
+Iliyowasilishwa hadi sasa:
 
-- **[Pectra (Mei 2025)](/roadmap/pectra/)**: Ilianzisha EIP-7702, ambayo inaruhusu akaunti zinazomilikiwa na watu wa nje kukaimisha kwa muda kwa msimbo wa mkataba mahiri, hatua kuelekea udhanifu wa akaunti kamili.
+- **[Pectra (Mei 2025)](/roadmap/pectra/)**: Ilianzisha EIP-7702, ambayo inaruhusu akaunti zinazomilikiwa na watu wa nje kukaimisha kwa muda kwa msimbo wa mkataba mahiri, hatua muhimu kuelekea udhanifu kamili wa akaunti.
 - **[Fusaka (Desemba 2025)](/roadmap/fusaka/)**: Ilisambaza PeerDAS (EIP-7594), ambayo inasambaza mzigo wa kazi wa upatikanaji wa data kwenye mtandao. Pia iliongeza vigezo vya blobu, ikipanua uwezo wa upitishaji wa data kwa mikusanyiko.
 - **[Dencun (Machi 2024)](/roadmap/dencun/)**: Ilianzisha miamala ya blobu (EIP-4844) kwa data ya rollup ya bei nafuu na kuzuia `SELFDESTRUCT` (EIP-6780) ili kuondoa chanzo cha muda mrefu cha utata.
-- **[Shapella (Aprili 2023)](/staking/withdrawals/)**: Iliwezesha wathibitishaji kutoa ETH iliyowekwa dhamana (EIP-4895), ikiondoa kizuizi cha mapema cha uwekaji dhamana wa [Uthibitisho wa Dau (PoS)](/glossary/#pos).
+- **[Shapella (Aprili 2023)](/staking/withdrawals/)**: Iliwezesha wathibitishaji kutoa ETH iliyowekwa dhamana (EIP-4895), na kuondoa kizuizi cha mapema cha uwekaji dhamana wa [Uthibitisho wa Dau (PoS)](/glossary/#pos).
 - **London (Agosti 2021)**: Ilifanyia marekebisho makubwa upangaji wa bei ya gesi kwa EIP-1559, ikianzisha ada ya msingi na utaratibu wa kuteketeza kwa gharama za muamala zinazotabirika zaidi.
 
-Zinazoendelea:
+Inayoendelea:
 
 - **Glamsterdam (inayolengwa kwa 2026)**: Vipengele vikuu ni ePBS (EIP-7732) na orodha za ufikiaji za kiwango cha kitalu (EIP-7928), huku upangaji upya wa bei ya gesi pia ukifikiriwa.
-- **Hegotá (inayolengwa kwa 2027)**: FOCIL (EIP-7805) ni kipengele kikuu cha tabaka la mwafaka. Inayofikiriwa kujumuishwa: EIP-8141 (udhanifu wa akaunti asilia).
-- **Inayoendelea**: Juhudi za kurahisisha [EVM](/developers/docs/evm/), kuoanisha utekelezaji wa wateja, na kuondoa hatua kwa hatua vipengele vilivyopitwa na wakati zinaendelea katika timu zote za wateja. Kazi kuhusu ubilahali (kuruhusu washiriki kuthibitisha mnyororo bila kuhifadhi data yake yote) inaundwa upya kuzunguka miti ya heshi ya mfumo wa jozi iliyo salama dhidi ya kwanta, huku mbinu ya mwisho bado haijathibitishwa.
+- **Hegotá (inayolengwa kwa 2027)**: FOCIL (EIP-7805) ndicho kipengele kikuu cha tabaka la mwafaka. Kinachofikiriwa kujumuishwa: EIP-8141 (udhanifu wa akaunti asilia).
+- **Inayoendelea**: Juhudi za kurahisisha [EVM](/developers/docs/evm/), kuoanisha utekelezaji wa wateja, na kuondoa hatua kwa hatua vipengele vilivyopitwa na wakati zinaendelea katika timu zote za wateja. Kazi kuhusu [ubilahali](/roadmap/statelessness/) (kuruhusu washiriki kuthibitisha mnyororo bila kuhifadhi data yake yote) inaundwa upya kulingana na miti ya heshi ya mfumo wa namba mbili iliyo salama dhidi ya kwanta, ambayo ingechukua nafasi ya muundo wa awali wa [mti wa Verkle](/roadmap/verkle-trees/). Mbinu ya mwisho bado haijathibitishwa.
 
 ## Maendeleo ya sasa {#current-progress}
 
@@ -101,7 +101,7 @@ Hakuna sehemu ya kazi hii iliyokamilika, na ratiba zote ni makadirio ambayo yana
 ## Kusoma zaidi {#further-reading}
 
 - [Forkcast: Kifuatiliaji cha uboreshaji wa mtandao wa Ethereum](https://forkcast.org)
-- [Strawmap: rasimu ya ramani ya njia ya tabaka la 1 (l1) la Ethereum](https://strawmap.org) - _Usanifu wa EF_
+- [Strawmap: rasimu ya ramani ya njia ya tabaka la 1 (L1) la Ethereum](https://strawmap.org) - _Usanifu wa EF_
 - [Ethereum ya Baada ya Kwanta](https://pq.ethereum.org) - _Taasisi ya Ethereum_
 - [Kifuatiliaji cha ramani ya njia ya Lean Ethereum](https://leanroadmap.org) - _ReamLabs_
 - [Uthibitisho wa Dau (PoS) na ukamilifu](/developers/docs/consensus-mechanisms/pos/#finality)

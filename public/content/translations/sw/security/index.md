@@ -1,6 +1,6 @@
 ---
 title: Usalama wa Ethereum na uzuiaji wa utapeli
-description: Kuwa salama kwenye Ethereum
+description: "Jinsi ya kusalia salama kwenye Ethereum: linda mkoba wako na kirai cha kurejesha, tambua utapeli wa kawaida wa kripto na hadaa, na ujue la kufanya ikiwa mambo yataenda vibaya."
 lang: sw
 ---
 

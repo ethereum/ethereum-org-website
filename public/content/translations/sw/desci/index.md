@@ -1,6 +1,6 @@
 ---
 title: Sayansi iliyogatuliwa (desci)
-description: Muhtasari wa sayansi iliyogatuliwa kwenye Ethereum
+description: Sayansi iliyogatuliwa ni nini? Jifunze jinsi desci inavyotumia Ethereum kufadhili utafiti, kushiriki data waziwazi na kutoa tuzo kwa wanasayansi, na kuifanya sayansi ifikike zaidi.
 lang: sw
 template: use-cases
 sidebarDepth: 2

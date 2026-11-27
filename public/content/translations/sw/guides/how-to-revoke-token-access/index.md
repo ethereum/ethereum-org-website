@@ -1,6 +1,6 @@
 ---
 title: Jinsi ya kubatilisha ufikiaji wa mkataba mahiri kwenye fedha zako za kripto
-description: Mwongozo wa jinsi ya kubatilisha ufikiaji wa tokeni wa mkataba mahiri unaonyonya
+description: "Mwongozo wa hatua kwa hatua wa kubatilisha vibali vya tokeni: tafuta ni mikataba mahiri ipi inayoweza kutumia fedha zako za kripto na uondoe ufikiaji ili kulinda fedha zako."
 lang: sw
 ---
 

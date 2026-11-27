@@ -1,6 +1,6 @@
 ---
 title: Uthibitisho wa mwisho wa sloti moja
-description: Maelezo ya uthibitisho wa mwisho wa sloti moja
+description: Uthibitisho wa mwisho wa sloti moja unaweza kupunguza muda wa ukamilifu wa Ethereum kutoka takriban dakika 15 hadi sloti moja. Jifunze jinsi inavyofanya kazi na ubadilishanaji unaohusika.
 lang: sw
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Tatizo la kupanua ujumuishaji kwa kukuza idadi ya wathibitishaji kwa kila mtanda
 
 ## Maendeleo ya sasa {#current-progress}
 
-SSF iko katika awamu ya utafiti. Haitegemewi kutolewa kwa miaka kadhaa, huenda baada ya uboreshaji mwingine mkubwa kama vile [Miti ya Verkle](/roadmap/verkle-trees/) na [danksharding](/roadmap/danksharding/).
+SSF iko katika awamu ya utafiti. Haitegemewi kutolewa kwa miaka kadhaa, huenda baada ya maboresho mengine makubwa kama vile mti mpya wa hali (kwa sasa unapendekezwa kama mti wa jozi katika [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) na [danksharding](/roadmap/danksharding/).
 
 ## Usomaji zaidi {#further-reading}
 

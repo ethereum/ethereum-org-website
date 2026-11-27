@@ -1,7 +1,7 @@
 ---
 title: Tokeni zisizoweza kubadilishana (NFT)
 metaTitle: NFT ni nini? | Faida na matumizi
-description: Muhtasari wa NFT kwenye Ethereum
+description: NFT ni nini? Jifunze jinsi tokani zisizobadilishika zinavyothibitisha umiliki wa sanaa ya kidijitali, vitu vya kukusanywa, tiketi na zaidi kwenye Ethereum, na jinsi ya kuwa salama wakati wa kuzitumia.
 lang: sw
 template: use-cases
 sidebarDepth: 2

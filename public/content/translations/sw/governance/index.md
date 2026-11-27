@@ -1,7 +1,7 @@
 ---
 title: Utangulizi wa utawala wa Ethereum
 metaTitle: Utawala wa Ethereum
-description: Utangulizi wa jinsi maamuzi kuhusu Ethereum yanavyofanywa.
+description: Maamuzi kuhusu Ethereum yanafanywaje? Jifunze jinsi mabadiliko ya itifaki yanavyopendekezwa, kujadiliwa na kupitishwa na wasanidi programu, waendeshaji wa nodi na jamii.
 lang: sw
 ---
 
@@ -71,7 +71,7 @@ Mchakato rasmi wa kuanzisha mabadiliko kwenye itifaki ya Ethereum ni kama ifuata
 
 1. **Pendekeza EIP Kuu**: kama ilivyoelezwa katika [EIP-1](https://eips.ethereum.org/EIPS/eip-1#core-eips), hatua ya kwanza ya kupendekeza rasmi mabadiliko kwenye Ethereum ni kuyaeleza kwa kina katika EIP Kuu. Hii itatumika kama ubainifu rasmi wa EIP ambao Wasanidi wa Itifaki watautekeleza ikiwa utakubaliwa.
 
-2. **Wasilisha EIP yako kwa Wasanidi wa Itifaki**: mara tu unapokuwa na EIP Kuu ambayo umekusanya maoni ya jamii, unapaswa kuiwasilisha kwa Wasanidi wa Itifaki. Unaweza kufanya hivyo kwa kuipendekeza kwa majadiliano kwenye [simu ya AllCoreDevs](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Kuna uwezekano baadhi ya majadiliano yatakuwa tayari yamefanyika kwa njia isiyo ya moja kwa moja kwenye [jukwaa la Ethereum Magicians](https://ethereum-magicians.org/) au katika [Discord ya R&D ya Ethereum](https://discord.gg/mncqtgVSVw).
+2. **Wasilisha EIP yako kwa Wasanidi wa Itifaki**: mara tu unapokuwa na EIP Kuu ambayo umekusanya maoni ya jamii, unapaswa kuiwasilisha kwa Wasanidi wa Itifaki. Unaweza kufanya hivyo kwa kuipendekeza kwa majadiliano kwenye [simu ya AllCoreDevs](https://eips.ethereum.org/EIPS/eip-7723). Kuna uwezekano baadhi ya majadiliano yatakuwa tayari yamefanyika kwa njia isiyo ya moja kwa moja kwenye [jukwaa la Ethereum Magicians](https://ethereum-magicians.org/) au katika [Discord ya R&D ya Ethereum](https://discord.gg/mncqtgVSVw).
 
 > Matokeo yanayowezekana ya hatua hii ni:
 

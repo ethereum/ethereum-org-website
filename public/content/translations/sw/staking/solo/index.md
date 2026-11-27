@@ -1,6 +1,6 @@
 ---
 title: Weka dhamana ya ETH yako ukiwa nyumbani
-description: Muhtasari wa jinsi ya kuanza kuweka dhamana ya ETH yako ukiwa nyumbani
+description: "Jinsi ya kuweka dhamana ya ETH yako ukiwa nyumbani: endesha mthibitishaji wako mwenyewe wa Ethereum ukiwa na ETH 32, pata tuzo moja kwa moja kutoka kwenye itifaki na usaidie kulinda mtandao."
 lang: sw
 template: staking
 image: /images/staking/leslie-solo.png
@@ -102,9 +102,9 @@ Ikiwa unaendesha wathibitishaji wengi, unaweza kuwaunganisha kuwa mthibitishaji 
 
 [Zaidi kuhusu utoaji wa uwekaji dhamana](/staking/withdrawals/)
 
-## Anza kwenye Jukwaa la Uwekaji Dhamana {#get-started-on-the-staking-launchpad}
+## Anza kwenye Staking Launchpad {#get-started-on-the-staking-launchpad}
 
-Jukwaa la Uwekaji Dhamana ni programu huria itakayokusaidia kuwa mweka dhamana. Itakuongoza katika kuchagua viteja vyako, kuzalisha funguo zako na kuweka amana ya ETH yako kwenye mkataba wa amana ya uwekaji dhamana. Orodha ya ukaguzi imetolewa ili kuhakikisha umeshughulikia kila kitu ili kusanidi mthibitishaji wako kwa usalama.
+Staking Launchpad ni programu huria itakayokusaidia kuwa mweka dhamana. Itakuongoza katika kuchagua viteja vyako, kuzalisha funguo zako na kuweka amana ya ETH yako kwenye [mkataba wa amana ya uwekaji dhamana](/staking/deposit-contract/). Orodha hakiki imetolewa ili kuhakikisha umeshughulikia kila kitu ili kusanidi mthibitishaji wako kwa usalama.
 
 <StakingLaunchpadWidget />
 

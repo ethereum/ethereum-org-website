@@ -1,7 +1,7 @@
 ---
 title: Utangulizi wa Mapendekezo ya Kuboresha Ethereum (EIPs)
 metaTitle: Mapendekezo ya Kuboresha Ethereum (EIPs)
-description: Taarifa za msingi unazohitaji ili kuelewa EIPs
+description: Mapendekezo ya Kuboresha Ethereum (EIPs) ni nini? Jifunze jinsi mabadiliko kwenye Ethereum yanavyopendekezwa, kujadiliwa na kupitishwa, na jinsi unavyoweza kushiriki.
 lang: sw
 ---
 
@@ -15,7 +15,7 @@ Mtu yeyote ndani ya jamii ya Ethereum ana uwezo wa kuunda EIP. Miongozo ya kuand
 
 EIPs zina jukumu kuu katika jinsi mabadiliko yanavyotokea na kurekodiwa kwenye Ethereum. Ndiyo njia ya watu kupendekeza, kujadili, na kupitisha mabadiliko. Kuna [aina tofauti za EIPs](https://eips.ethereum.org/EIPS/eip-1#eip-types), ikiwa ni pamoja na EIPs za msingi kwa mabadiliko ya itifaki ya kiwango cha chini yanayoathiri mwafaka na kuhitaji uboreshaji wa mtandao kama [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), na ERCs kwa viwango vya programu kama [EIP-20](https://eips.ethereum.org/EIPS/eip-20) na [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Kila uboreshaji wa mtandao unajumuisha seti ya EIPs ambazo zinahitaji kutekelezwa na kila [mteja wa Ethereum](/learn/#clients-and-nodes) kwenye mtandao. Hii inamaanisha kuwa ili kubaki katika mwafaka na wateja wengine kwenye Mtandao Mkuu wa Ethereum, waendelezaji wa wateja wanahitaji kuhakikisha wametekeleza EIPs zote zinazohitajika.
+Kila uboreshaji wa mtandao unajumuisha seti ya EIPs ambazo zinahitaji kutekelezwa na kila [mteja wa Ethereum](/developers/docs/nodes-and-clients/) kwenye mtandao. Hii inamaanisha kuwa ili kubaki katika mwafaka na wateja wengine kwenye Mtandao Mkuu wa Ethereum, waendelezaji wa wateja wanahitaji kuhakikisha wametekeleza EIPs zote zinazohitajika.
 
 Pamoja na kutoa vipimo vya kiufundi kwa mabadiliko, EIPs ni kitengo ambacho utawala hufanyika katika Ethereum: mtu yeyote yuko huru kupendekeza moja, na kisha wadau mbalimbali katika jamii watajadili ili kuamua ikiwa inapaswa kupitishwa kama kiwango au kujumuishwa katika uboreshaji wa mtandao. Kwa sababu EIPs zisizo za msingi hazilazimiki kupitishwa na programu zote (kwa mfano, inawezekana kuunda tokheni mbadala ambayo haitekelezi EIP-20), lakini EIPs za msingi lazima zipitishwe kwa upana (kwa sababu nodi zote lazima ziboreshwe ili kubaki sehemu ya mtandao huo huo), EIPs za msingi zinahitaji mwafaka mpana zaidi ndani ya jamii kuliko EIPs zisizo za msingi.
 

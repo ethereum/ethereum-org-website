@@ -40,15 +40,14 @@ Je, unahitaji mwongozo wa kimsingi zaidi kwanza? Angalia [ethereum.org/learn](/l
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Mkusanyiko wa externs ili kuingiliana na mtandao unaofanana na Ethereum_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Mteja wa haraka wa tabaka la mwafaka la Ethereum_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Usanifu mpya uliopendekezwa wa tabaka la utekelezaji la mkataba mahiri wa Ethereum kwa kutumia kitengo kidogo cha WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Rejeleo la API ya OASIS_
-- [Solaris](https://github.com/paritytech/sol-rs) - _Zana ya majaribio ya Mikataba Mahiri ya Solidity kwa kutumia EVM asili ya Mteja wa Parity._
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Utekelezaji wa Mashine Pepe ya Ethereum ya Rust_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Usanifu upya uliopendekezwa wa tabaka la utekelezaji la mkataba mahiri wa Ethereum kwa kutumia kitengo kidogo kinachotabirika cha WebAssembly_
+- [Solaris](https://github.com/paritytech/sol-rs) - _Zana ya majaribio ya kitengo cha Mikataba Mahiri ya Solidity kwa kutumia EVM asili ya Mteja wa Parity._
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Utekelezaji wa Mashine Pepe ya Ethereum katika Rust_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Mkataba mahiri wa Wavelet katika Rust_
 - [Foundry](https://github.com/foundry-rs/foundry) - _Zana za uundaji wa programu tumizi za Ethereum_
 - [Alloy](https://alloy.rs) - _Maktaba zenye utendaji wa juu, zilizojaribiwa vizuri na kurekodiwa kwa ajili ya kuingiliana na Ethereum na minyororo mingine inayotegemea EVM._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Maktaba ya Ethereum na utekelezaji wa mkoba_
-- [SewUp](https://github.com/second-state/SewUp) - _Maktaba ya kukusaidia kujenga mkataba wako wa webassembly wa Ethereum ukitumia Rust na kama vile kusanidi katika mazingira ya nyuma ya kawaida_
+- [SewUp](https://github.com/second-state/SewUp) - _Maktaba ya kukusaidia kujenga mkataba wako wa WebAssembly wa Ethereum ukitumia Rust na kama vile unavyounda katika mfumo wa nyuma wa kawaida_
 - [Substreams](https://github.com/streamingfast/substreams) - _Teknolojia ya kuorodhesha data ya mnyororo wa vitalu iliyosambamba_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (kifupi cha Rust Ethereum) ni utekelezaji mpya wa nodi kamili ya Ethereum
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Mkusanyiko ulioratibiwa wa miradi katika mfumo wa ikolojia wa Ethereum iliyoandikwa katika Rust_

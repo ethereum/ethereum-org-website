@@ -19,7 +19,7 @@ Hotuba kuu na **Naomi Brockwell** katika EthBoulder 2026 kuhusu mmomonyoko wa fa
 
 ### Mazungumzo ya sehemu mbili: onyo + suluhisho (00:00) {#two-part-talk-warning-solution-0000}
 
-**Naomi:** Vizuri sana. Karibuni nyote. Asanteni kwa kuwa hapa. Kwa hivyo, haya yatakuwa mazungumzo ya sehemu mbili. katika sehemu ya kwanza, mambo yanaweza kuwa mazito kidogo. Nimejulikana kuwa mzito sana linapokuja suala la mazungumzo ya faragha na ufuatiliaji. sehemu ya pili itakuwa na hali tofauti kidogo. Kwa hivyo katika sehemu ya kwanza nitawasimulia hadithi na katika sehemu ya pili tutaokoa ulimwengu. Kwa hivyo ikiwa nyote mko sawa na hilo tunaweza kuanza.
+**Naomi:** Vizuri sana. Karibuni nyote. Asanteni kwa kuwa hapa. Kwa hivyo, hii itakuwa hotuba ya sehemu mbili. katika sehemu ya kwanza, mambo yanaweza kuwa mazito kidogo. Nimejulikana kuwa mzito sana linapokuja suala la hotuba za faragha na ufuatiliaji. sehemu ya pili itakuwa na mwelekeo tofauti kidogo. Kwa hivyo katika sehemu ya kwanza nitawasimulia hadithi na katika sehemu ya pili tutaokoa ulimwengu. Kwa hivyo ikiwa nyote mko sawa na hilo tunaweza kuanza.
 
 ### Nguo mpya za mfalme (00:44) {#the-emperors-new-clothes-0044}
 
@@ -43,9 +43,9 @@ Tunahisi kwamba kuna kitu kibaya tunapopitia sera ya faragha na tunajua kwamba t
 
 ### Hali ya sasa ni mbaya kiasi gani? (05:12) {#how-bad-is-the-status-quo-0512}
 
-Kwa hivyo hali ya sasa ni mbaya kiasi gani? Mambo haya ni mabaya kiasi gani hasa? Au labda tunapaswa kuzungumzia hili kwa sababu baadhi ya watu wanafikiri kwamba hili ni suala tu la kampuni zinazojaribu kutuuzia viatu bora zaidi. Hili ni kama jambo la mlaji tu, sivyo? Au labda ni kuhusu tu kampuni za mitandao ya kijamii kujifunza kutuhusu ili kuunda algoriti iliyoboreshwa zaidi, sivyo? Hiyo haionekani kuwa mbaya sana. Kuna tatizo gani na hayo yote?
+Kwa hivyo hali ya sasa ni mbaya kiasi gani? Mambo haya ni mabaya kiasi gani kweli? Au labda tunapaswa kuzungumza kuhusu hili kwa sababu baadhi ya watu wanafikiri kwamba hili ni suala tu la kampuni zinazojaribu kutuuzia viatu bora zaidi. Hili ni kama jambo la mlaji tu, sivyo? Au labda ni kuhusu tu kampuni za mitandao ya kijamii kujifunza kutuhusu ili kuunda algoriti iliyoboreshwa zaidi, sivyo? Hiyo haionekani kuwa mbaya sana. Kuna tatizo gani na hayo yote?
 
-Lakini sasa hivi, sote tunakubaliana na mfumo wa ufuatiliaji ulioenea kila mahali ambao unaingilia kimyakimya kila eneo la faragha la maisha yetu. Sasa, katika baadhi ya maeneo kama vile tawala za kimabavu, mfumo huu unatumiwa kudhibiti upinzani kabla haujatokea kwa kuwatambua watu wanaoweza kuleta matatizo kama watu wenye uwezekano mkubwa wa kujiunga na vuguvugu la maandamano na kisha kuwalenga watu hao. Wakati mwingine mfumo huu unatumiwa kuunda hisia za umma au kushawishi maoni au kuyumbisha chaguzi au kufanya idadi nzima ya watu kuchukia aina fulani za watu kwa kuwashawishi kwamba makundi hayo yanawachukia. Na kisha kuna nchi ambazo hutangaza hadharani taarifa kuhusu raia ambao alama zao za sifa za kijamii zimeshuka na kisha wanatumia alama hizo kuzuia usafiri, kupunguza ajira zao, kuwazuia watoto wao kujiunga na shule fulani au kuwatenga kabisa na fursa.
+Lakini sasa hivi, sote tunakubaliana na mashine ya ufuatiliaji inayoenea kila mahali ambayo inaingilia kimya kimya kila eneo la faragha la maisha yetu. Sasa, katika baadhi ya maeneo kama tawala za kimabavu, mashine hii inatumiwa kudhibiti upinzani kabla haujatokea kwa kuweka alama kwa watu wanaoweza kuleta matatizo kama watu wenye uwezekano mkubwa wa kujiunga na vuguvugu la maandamano na kisha kuwalenga watu hao. Wakati mwingine mashine hii inatumiwa kujenga hisia za umma au kushawishi maoni au kushawishi chaguzi au kufanya idadi nzima ya watu kuchukia aina fulani za watu kwa kuwashawishi kwamba makundi hayo yanawachukia. Na kisha kuna nchi ambazo hutangaza hadharani taarifa kuhusu raia ambao alama zao za sifa za kijamii zimeshuka na kisha wanatumia alama hizo kuzuia usafiri, kuzuia ajira zao, kuwazuia watoto wao kutoka shule fulani au kuwatenga kabisa na fursa.
 
 ### Ukusanyaji wa data kwa kiwango cha trilioni ya dola (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  

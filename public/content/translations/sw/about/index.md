@@ -1,7 +1,7 @@
 ---
 title: Kuhusu ethereum.org
 metaTitle: Kuhusu Sisi
-description: Kuhusu timu, jamii na dhamira ya ethereum.org
+description: "Kutana na timu na jamii iliyo nyuma ya ethereum.org: dhamira yetu, jinsi tovuti inavyojengwa na kutawaliwa kwa uwazi, na jinsi unavyoweza kusaidia kuiboresha."
 lang: sw
 ---
 
@@ -107,9 +107,11 @@ Tunatumia seti ya [kanuni za muundo](/contributing/design-principles/) kuongoza 
 
 ## Mfumo wa muundo {#design-system}
 
-Tulijenga na kutoa [mfumo wa muundo](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) ili kusafirisha vipengele kwa haraka zaidi na kuruhusu wanajamii kushiriki katika muundo wazi wa ethereum.org.
+Tulijenga na kutoa [mfumo wa muundo](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) ili kuzindua vipengele kwa haraka zaidi na kuruhusu wanajamii kushiriki katika muundo wazi wa ethereum.org.
 
 Unataka kujihusisha? [Fuatilia katika Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) na ujiunge na mazungumzo katika [chaneli yetu ya Discord ya #design](/discord/).
+
+Unatafuta nembo, vielelezo au faili nyingine za chapa? Zipakue kutoka kwenye [ukurasa wetu wa rasilimali](/assets/).
 
 ## Mwongozo wa mtindo {#style-guide}
 
@@ -122,6 +124,10 @@ Tunakaribisha maoni kuhusu kanuni zetu za muundo, mfumo wa muundo na mwongozo wa
 ## Leseni {#license}
 
 Tovuti ya ethereum.org ni chanzo wazi na imejengwa chini ya [Leseni ya MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) isipokuwa imeelezwa vinginevyo. Zaidi kuhusu [masharti ya matumizi](/terms-of-use/) ya ethereum.org.
+
+## Faragha yako {#your-privacy}
+
+ethereum.org inatumia Matomo kwa uchanganuzi unaolinda faragha, na unaweza kujiondoa wakati wowote. Soma [sera yetu ya vidakuzi](/cookie-policy/) na [sera ya faragha](/privacy-policy/) kwa maelezo zaidi.
 
 ## Kazi zilizo wazi {#open-jobs}
 

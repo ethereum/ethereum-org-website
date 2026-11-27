@@ -66,7 +66,7 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 **Infura -** **_API ya Ethereum kama huduma._**
 
 - [infura.io](https://infura.io)
-- [Nyaraka](https://docs.infura.io/api)
+- [Nyaraka](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Mtoa huduma wa Mashine Pepe ya Ethereum (EVM) JSON-RPC wa gharama nafuu_**
@@ -77,7 +77,7 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 **NOWNodes - _Nodi Kamili na Vichunguzi vya Bloku._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Nyaraka](https://nownodes.gitbook.io/documentation)
+- [Nyaraka](https://docs.nownodes.io/)
 
 **QuickNode -** **_Miundombinu ya Mnyororo wa vitalu kama Huduma._**
 
@@ -150,37 +150,36 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Nyaraka](https://www.blockcypher.com/dev/ethereum/)
 
-**Chainbase -** **_Miundombinu ya data ya Web3 ya yote kwa moja kwa Ethereum._**
+**Chainbase -** **_Miundombinu ya data ya Web3 ya kila kitu kwa Ethereum._**
 
 - [chainbase.com](https://chainbase.com/)
 - [Nyaraka](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_Nodi za Ethereum zinazonyumbulika na zilizojitolea kama huduma._**
+**Chainstack -** **_Nodi za Ethereum zinazobadilika na maalum kama huduma._**
 
 - [chainstack.com](https://chainstack.com)
 - [Nyaraka](https://docs.chainstack.com/)
 - [Rejeleo la API ya Ethereum](https://docs.chainstack.com/reference/ethereum-getting-started)
 
-**Nodi ya Wingu ya Coinbase -** **_API ya Miundombinu ya Mnyororo wa vitalu._**
+**Coinbase Cloud Node -** **_API ya Miundombinu ya Mnyororo wa vitalu._**
 
-- [Nodi ya Wingu ya Coinbase](https://www.coinbase.com/developer-platform)
+- [Coinbase Cloud Node](https://www.coinbase.com/developer-platform)
 - [Nyaraka](https://docs.cdp.coinbase.com/)
 
-**DataHub na Figment -** **_Huduma za API za Web3 zilizo na Mtandao Mkuu wa Ethereum na mitandao ya majaribio._**
+**DataHub by Figment -** **_Huduma za API za Web3 zenye Mtandao Mkuu wa Ethereum na mitandao ya majaribio._**
 
 - [DataHub](https://www.figment.io/)
 - [Nyaraka](https://docs.figment.io/)
 
-**Moralis -** **_Mtoa Huduma wa API ya EVM ya Kiwango cha Biashara._**
+**Moralis -** **_Mtoa Huduma wa API ya EVM wa Kiwango cha Biashara._**
 
 - [moralis.io](https://moralis.io)
 - [Nyaraka](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Jukwaa](https://forum.moralis.io/)
 
-**NFTPort -** **_Data ya Ethereum na API za Kufua._**
+**NFTPort -** **_API za Data na Kufua za Ethereum._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Nyaraka](https://docs.nftport.xyz/)
@@ -207,13 +206,12 @@ Maktaba hizi huondoa ugumu mwingi wa kuingiliana moja kwa moja na nodi ya Ethere
 - [GitHub](https://github.com/Codex-Data)
 - [Discord](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent -** **_API zilizoboreshwa za mnyororo wa vitalu kwa Minyororo 200+._**
+**Covalent -** **_API za mnyororo wa vitalu zilizoboreshwa kwa Minyororo 200+._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Nyaraka](https://www.covalenthq.com/docs/api/)
+- [Nyaraka](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Usomaji zaidi {#further-reading}
 
@@ -226,5 +224,4 @@ _Je, unajua rasilimali ya jamii iliyokusaidia? Hariri ukurasa huu na uiongeze!_
 
 ## Mafunzo yanayohusiana {#related-tutorials}
 
-- [Sanidi Web3.js ili kutumia mnyororo wa vitalu wa Ethereum katika JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Maagizo ya kusanidi Web3.js katika mradi wako._
-- [Kuita mkataba mahiri kutoka kwenye JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Kwa kutumia tokeni ya DAI, angalia jinsi ya kuita utendakazi wa mikataba kwa kutumia JavaScript._
+- [Vipengele vya seva na mawakala kwa programu za Web3](/developers/tutorials/server-components/) _– Jinsi ya kuandika vipengele vya seva vya TypeScript vinavyosikiliza matukio ya mnyororo wa vitalu na kujibu kwa miamala._
