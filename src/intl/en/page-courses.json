@@ -3141,6 +3141,7 @@
   "page-courses-widget-mailbox-key-in-slot": "Keys go in the lock, not the slot.",
   "page-courses-widget-mailbox-wrong": "{key} doesn't fit. The door stays locked.",
   "page-courses-widget-mailbox-opened": "Your key fits. Only you can open the door and spend what's inside.",
+  "page-courses-widget-mailbox-opened-next": "Your key fits. Lock it again, then try the other keys: do they open it too?",
   "page-courses-widget-mailbox-relocked": "The door is locked again. The slot still takes payments.",
   "page-courses-widget-calls-read": "Read",
   "page-courses-widget-calls-read-note": "Free: no transaction, nothing changes",

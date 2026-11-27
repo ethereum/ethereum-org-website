@@ -116,7 +116,11 @@ const MailboxWidget = ({ onComplete }: WidgetProps) => {
           key: keyName(outcome.key),
         })
       case "opened":
-        return t("page-courses-widget-mailbox-opened")
+        return t(
+          seen.wrong
+            ? "page-courses-widget-mailbox-opened"
+            : "page-courses-widget-mailbox-opened-next"
+        )
       case "relocked":
         return t("page-courses-widget-mailbox-relocked")
     }
