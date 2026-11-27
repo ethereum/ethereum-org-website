@@ -1,6 +1,6 @@
 ---
 title: "⁦dapps⁩ کا تکنیکی تعارف"
-description: 
+description: "⁦dapps⁩ کا تکنیکی تعارف: کس طرح غیر مرکزی ایپلی کیشنز ایتھیریم پر سمارٹ کنٹریکٹس کو فرنٹ اینڈ کے ساتھ یکجا کرتی ہیں، اور وہ ویب ایپس سے کس طرح مختلف ہیں۔"
 lang: ur
 ---
 
@@ -96,8 +96,7 @@ _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہی�
 
 ## ٹیوٹوریلز: ایتھیریم پر ایپس اور فرنٹ اینڈز بنائیں {#tutorials}
 
-- [یونی سویپ-v2 کنٹریکٹ واک تھرو](/developers/tutorials/uniswap-v2-annotated-code/) _– یونی سویپ <span dir="ltr">v2</span> کے بنیادی کنٹریکٹس کا ایک تشریحی واک تھرو جو یہ بتاتا ہے کہ خودکار بازار ساز (اے ایم ایم) کیسے کام کرتا ہے۔_
-- [اپنے کنٹریکٹ کے لیے یوزر انٹرفیس بنانا](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– ایک جدید React + Wagmi فرنٹ اینڈ کیسے بنایا جائے جو آپ کے سمارٹ کنٹریکٹ سے جڑتا ہو۔_
-- [ابتدائی افراد کے لیے ہیلو ورلڈ سمارٹ کنٹریکٹ – فل اسٹیک](/developers/tutorials/hello-world-smart-contract-fullstack/) _– اینڈ ٹو اینڈ ٹیوٹوریل: ایک سادہ سمارٹ کنٹریکٹ لکھیں، تعینات کریں، اور اس کے لیے فرنٹ اینڈ بنائیں۔_
-- [Web3 ایپس کے لیے سرور کمپوننٹس اور ایجنٹس](/developers/tutorials/server-components/) _– TypeScript سرور کمپوننٹس کیسے لکھیں جو بلاک چین ایونٹس کو سنتے ہیں اور ٹرانزیکشنز کے ساتھ جواب دیتے ہیں۔_
-- [لامركزی یوزر انٹرفیسز کے لیے IPFS](/developers/tutorials/ipfs-decentralized-ui/) _– سنسرشپ کے خلاف مزاحمت کے لیے اپنی dapp کے فرنٹ اینڈ کو IPFS پر کیسے ہوسٹ کریں۔_
+- [یونی سویپ-<span dir="ltr">v2</span> کنٹریکٹ کا تفصیلی جائزہ](/developers/tutorials/uniswap-v2-annotated-code/) _– یونی سویپ <span dir="ltr">v2</span> کے بنیادی کنٹریکٹس کا ایک تشریحی جائزہ جو یہ بتاتا ہے کہ خودکار بازار ساز (اے ایم ایم) کیسے کام کرتا ہے۔_
+- [اپنے کنٹریکٹ کے لیے یوزر انٹرفیس بنانا](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– ایک جدید <span dir="ltr">React + Wagmi</span> فرنٹ اینڈ بنانے کا طریقہ جو آپ کے سمارٹ کنٹریکٹ سے جڑتا ہے۔_
+- [<span dir="ltr">Web3</span> ایپس کے لیے سرور کمپوننٹس اور ایجنٹس](/developers/tutorials/server-components/) _– <span dir="ltr">TypeScript</span> سرور کمپوننٹس لکھنے کا طریقہ جو بلاک چین ایونٹس کو سنتے ہیں اور ٹرانزیکشنز کے ساتھ جواب دیتے ہیں۔_
+- [لامركزی یوزر انٹرفیسز کے لیے <span dir="ltr">IPFS</span>](/developers/tutorials/ipfs-decentralized-ui/) _– سنسرشپ کے خلاف مزاحمت کے لیے اپنی <span dir="ltr">dapp</span> کے فرنٹ اینڈ کو <span dir="ltr">IPFS</span> پر ہوسٹ کرنے کا طریقہ۔_

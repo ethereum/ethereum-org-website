@@ -300,9 +300,7 @@ _کسی ایسے کمیونٹی وسیلے کے بارے میں جانتے ہی�
 
 ## متعلقہ ٹیوٹوریلز {#related-tutorials}
 
-- [JavaScript میں ایتھیریم بلاک چین استعمال کرنے کے لیے Web3js سیٹ اپ کریں](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– آپ کے پروجیکٹ میں web3.js سیٹ اپ کرنے کی ہدایات۔_
-- [JavaScript سے سمارٹ کنٹریکٹ کو کال کرنا](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI ٹوکن کا استعمال کرتے ہوئے، دیکھیں کہ JavaScript کا استعمال کرتے ہوئے کنٹریکٹس فنکشن کو کیسے کال کیا جائے۔_
-- [web3 اور Alchemy کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنا](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– بیک اینڈ سے ٹرانزیکشنز بھیجنے کے لیے مرحلہ وار رہنمائی۔_
+- [Web3 اور Alchemy کا استعمال کرتے ہوئے ٹرانزیکشنز بھیجنا](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– بیک اینڈ سے ٹرانزیکشنز بھیجنے کے لیے مرحلہ وار رہنمائی۔_
 
 ## ٹیوٹوریلز: ایتھیریم پر JavaScript APIs اور WebSockets {#tutorials}
 

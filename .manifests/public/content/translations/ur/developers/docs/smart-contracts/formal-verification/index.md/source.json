@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/developers/docs/smart-contracts/formal-verification/index.md",
-  "generatedAt": "2026-06-30T00:01:53.628Z",
-  "rootHash": "b7147b4fa8fa",
+  "generatedAt": "2026-11-27T10:26:44.976Z",
+  "rootHash": "63dd7f8eb0db",
   "tree": {
-    "contentHash": "24f321e1035e",
-    "anchorHash": "288a89184ec2",
+    "contentHash": "ba04d7952225",
+    "anchorHash": "9d71845084c0",
     "children": {
       "frontmatter:title": {
         "contentHash": "260cb17e0ffe",
@@ -133,8 +133,8 @@
         ]
       },
       "formal-specifications-for-smart-contracts": {
-        "contentHash": "57f1200b8b78",
-        "anchorHash": "128b138431c1",
+        "contentHash": "c2e32fd8963e",
+        "anchorHash": "e29c68c42602",
         "labelHash": "bbd719847aef",
         "children": {
           "_label": {
@@ -178,8 +178,8 @@
             "anchorHash": "e3b0c44298fc"
           },
           "high-level-specifications": {
-            "contentHash": "a3fb90b9e112",
-            "anchorHash": "3d14e1c350be",
+            "contentHash": "f4cabe1a443f",
+            "anchorHash": "6ca99d7f9790",
             "labelHash": "4808c9f00f77",
             "children": {
               "_label": {
@@ -208,10 +208,10 @@
               },
               "link:2": {
                 "contentHash": "4f6c0efa1a0f",
-                "anchorHash": "c3ed565752cf"
+                "anchorHash": "6cd8e6620f03"
               },
               "prose:9": {
-                "contentHash": "be3317cce45f",
+                "contentHash": "242dd557f895",
                 "anchorHash": "e3b0c44298fc"
               },
               "inline-code:3": {
@@ -1288,5 +1288,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "ba63911ff40cf440ccba7536fab2f94ce336ec57"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

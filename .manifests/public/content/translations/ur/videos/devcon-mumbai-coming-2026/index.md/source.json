@@ -1,18 +1,18 @@
 {
   "version": 2,
   "sourceFile": "public/content/videos/devcon-mumbai-coming-2026/index.md",
-  "generatedAt": "2026-09-30T18:37:43.247Z",
-  "rootHash": "6cca310f35bb",
+  "generatedAt": "2026-11-27T10:04:22.095Z",
+  "rootHash": "5e80957663ad",
   "tree": {
-    "contentHash": "2bf40006e644",
+    "contentHash": "df3daa3d8fdf",
     "anchorHash": "643aaafd4fe1",
     "children": {
       "frontmatter:title": {
-        "contentHash": "d8eb325eb766",
+        "contentHash": "13ea2586a6d3",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "62a827a5be2a",
+        "contentHash": "ba4b4f62e8df",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -58,7 +58,7 @@
         "anchorHash": "52edb2312afe"
       },
       "prose:1": {
-        "contentHash": "7f20ed7cffea",
+        "contentHash": "b277d20b9beb",
         "anchorHash": "e3b0c44298fc"
       },
       "link:0": {
@@ -87,5 +87,5 @@
       "prose:2"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

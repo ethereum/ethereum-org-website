@@ -1,7 +1,7 @@
 ---
 title: "ڈاؤ (DAO) کیا ہے؟"
 metaTitle: "ڈاؤ (DAO) کیا ہے؟ | ⁦Decentralized Autonomous Organization⁩"
-description: "⁦Ethereum⁩ پر ڈاؤز (DAOs) کا ایک جائزہ"
+description: "ڈاؤ (⁦DAO⁩) کیا ہے؟ جانیں کہ کس طرح غیر مرکزی خود مختار تنظیمیں ایتھیریم پر فیصلے کرنے اور مشترکہ فنڈز کا انتظام کرنے کے لیے سمارٹ کنٹریکٹس اور ٹوکنز کا استعمال کرتی ہیں۔"
 lang: ur
 template: use-cases
 sidebarDepth: 2
