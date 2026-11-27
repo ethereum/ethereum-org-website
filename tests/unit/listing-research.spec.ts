@@ -14,6 +14,7 @@ let blockers: Mod["blockers"],
   latest: Mod["latest"],
   MAX_FOLLOWUPS: Mod["MAX_FOLLOWUPS"],
   productSites: Mod["productSites"],
+  productAccounts: Mod["productAccounts"],
   coveringPr: Mod["coveringPr"],
   researchComment: Mod["researchComment"],
   esc: Mod["esc"],
@@ -36,6 +37,7 @@ test.beforeAll(async () => {
     latest,
     MAX_FOLLOWUPS,
     productSites,
+    productAccounts,
     coveringPr,
     researchComment,
     esc,
@@ -190,6 +192,30 @@ test("section marks product-only passes as claimed and nice criteria as preferre
   expect(out).toContain("| ✅ | Documented |")
   expect(out).toContain("| ☑️ | Widely used |")
   expect(out).toContain("| ✅ | Open source _(preferred)_ |")
+})
+
+test("section shows a GitHub account's creation date with the site ages", () => {
+  const out = section({
+    product: "X",
+    policy: { page: "adding-developer-tools", why: "" },
+    criteria: [],
+    facts: [],
+    existing: [],
+    askAuthor: [],
+    siteAge: [
+      { domain: "x.security", registered: null, firstArchived: "2026-10-06" },
+      {
+        domain: "github.com/x",
+        registered: null,
+        firstArchived: null,
+        created: "2022-03-12",
+      },
+    ],
+  })
+  expect(out).toContain(
+    "x.security: first archived 2026-10-06 (Wayback Machine)"
+  )
+  expect(out).toContain("github.com/x: account created 2022-03-12 (GitHub)")
 })
 
 const outsider = (over: Record<string, unknown> = {}) => ({
@@ -459,6 +485,21 @@ test("productSites falls back to the request's own links", () => {
   expect(
     productSites(item, "https://www.ethereum.org/developers/ https://foo.xyz")
   ).toEqual(["foo.xyz"])
+})
+
+test("productAccounts finds the product's GitHub owners, cited or linked", () => {
+  const item = {
+    criteria: JSON.stringify([
+      { url: "github.com/solana-foundation/explorer", source: "author" },
+      { url: "https://github.com/someone/else", source: "independent" },
+    ]),
+  }
+  expect(
+    productAccounts(
+      item,
+      "https://github.com/GuardianAudits/Audits https://github.com/guardianaudits https://github.com/ethereum/EIPs https://github.com/orgs/foo"
+    )
+  ).toEqual(["solana-foundation", "guardianaudits"])
 })
 
 test("registrableDomain keeps the subdomain on shared hosting", () => {

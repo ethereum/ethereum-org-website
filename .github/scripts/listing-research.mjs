@@ -415,6 +415,38 @@ export function productSites(item, request = "") {
   return cited.length ? cited : sitesOf(externalUrls(request))
 }
 
+const GH_RESERVED =
+  /^(ethereum|orgs|sponsors|apps|marketplace|features|topics|settings|search|login)$/i
+
+// GitHub accounts the product links to; their creation date outlives domain moves and rebrands.
+export function productAccounts(item, request = "") {
+  const urls = [
+    ...[...arr(item.criteria, 20), ...arr(item.facts, 15)]
+      .filter((c) => c.source === "author")
+      .map((c) => publicUrl(String(c.url || ""))),
+    ...externalUrls(request),
+  ]
+  const owners = urls
+    .map((u) => u?.match(/^https?:\/\/(?:www\.)?github\.com\/([\w-]+)/i)?.[1])
+    .filter((o) => o && !GH_RESERVED.test(o))
+  return [...new Set(owners.map((o) => o.toLowerCase()))].slice(0, 2)
+}
+
+function accountAge(owner) {
+  let created = null
+  try {
+    created = ghJson(`users/${owner}`).created_at?.slice(0, 10) || null
+  } catch {
+    // Without gh the account just has no date.
+  }
+  return {
+    domain: `github.com/${owner}`,
+    registered: null,
+    firstArchived: null,
+    created,
+  }
+}
+
 export const externalUrls = (text) =>
   [
     ...new Set(
@@ -771,10 +803,10 @@ export function section(r) {
     .filter((c) => c.status === "unknown")
     .map((c) => name(c) + (c.note ? ` _(${esc(c.note)})_` : ""))
   const age = (r.siteAge || [])
-    .filter((s) => s.registered || s.firstArchived)
+    .filter((s) => s.registered || s.firstArchived || s.created)
     .map(
       (s) =>
-        `${esc(s.domain)}: ${[s.registered && `registered ${s.registered} (RDAP)`, s.firstArchived && `first archived ${s.firstArchived} (Wayback Machine)`].filter(Boolean).join(", ")}`
+        `${esc(s.domain)}: ${[s.registered && `registered ${s.registered} (RDAP)`, s.firstArchived && `first archived ${s.firstArchived} (Wayback Machine)`, s.created && `account created ${s.created} (GitHub)`].filter(Boolean).join(", ")}`
     )
   const policy = r.policy.page
     ? `[\`${r.policy.page}\`](https://ethereum.org/contributing/${r.policy.page}/)`
@@ -987,7 +1019,10 @@ async function submit(n, item) {
     return console.log(`#${n} reached ${MAX_FOLLOWUPS} follow-ups`)
   const r = await check({ ...item, pr: isPr ? n : "", issue: isPr ? "" : n })
   r.domains = productSites(item, i.body || "")
-  r.siteAge = await pool(r.domains, 3, domainAge)
+  r.siteAge = [
+    ...(await pool(r.domains, 3, domainAge)),
+    ...productAccounts(item, i.body || "").map(accountAge),
+  ]
   r.related = related(r.domains, n)
   r.kind = replied ? "followup" : "research"
   r.blocking = blockers(r, prior.record)
@@ -1077,7 +1112,10 @@ async function main() {
       // Without the PR body, the sites come from the agent's citations alone.
     }
     r.domains = productSites(item, body)
-    r.siteAge = await pool(r.domains, 3, domainAge)
+    r.siteAge = [
+      ...(await pool(r.domains, 3, domainAge)),
+      ...productAccounts(item, body).map(accountAge),
+    ]
     r.related = related(r.domains, num(item.pr))
     process.stdout.write(JSON.stringify(r))
   } else if (cmd === "section")
