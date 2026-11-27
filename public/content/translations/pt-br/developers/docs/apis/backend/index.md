@@ -66,7 +66,7 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 **Infura -** **_A API do Ethereum como serviço._**
 
 - [infura.io](https://infura.io)
-- [Documentação](https://docs.infura.io/api)
+- [Documentação](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _Provedor JSON-RPC da EVM com bom custo-benefício_**
@@ -77,7 +77,7 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 **NOWNodes - _Nós completos e exploradores de blocos._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Documentação](https://nownodes.gitbook.io/documentation)
+- [Documentação](https://docs.nownodes.io/)
 
 **QuickNode -** **_Infraestrutura de blockchain como serviço._**
 
@@ -172,11 +172,10 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 - [DataHub](https://www.figment.io/)
 - [Documentação](https://docs.figment.io/)
 
-**Moralis -** **_Provedor de API EVM de nível corporativo._**
+**Moralis -** **_Provedor de API da EVM de nível corporativo._**
 
 - [moralis.io](https://moralis.io)
 - [Documentação](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Discord](https://moralis.io/joindiscord/)
 - [Fórum](https://forum.moralis.io/)
 
@@ -199,7 +198,7 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 - [Documentação](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Codex -** **_API de dados de blockchain enriquecidos em tempo real em dezenas de redes._**
+**Codex -** **_API de dados de blockchain enriquecidos e em tempo real em dezenas de redes._**
 
 - [codex.io](https://www.codex.io/)
 - [Documentação](https://docs.codex.io)
@@ -210,10 +209,9 @@ Essas bibliotecas abstraem grande parte da complexidade de interagir diretamente
 **Covalent -** **_APIs de blockchain enriquecidas para mais de 200 redes._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Documentação](https://www.covalenthq.com/docs/api/)
+- [Documentação](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Discord](https://www.covalenthq.com/discord/)
-
 
 ## Leitura adicional {#further-reading}
 
@@ -226,5 +224,4 @@ _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Configure o Web3.js para usar a blockchain do Ethereum em JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruções para configurar o Web3.js no seu projeto._
-- [Chamando um contrato inteligente a partir do JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando o token DAI, veja como chamar funções de contratos usando JavaScript._
+- [Componentes de servidor e agentes para aplicativos Web3](/developers/tutorials/server-components/) _– Como escrever componentes de servidor em TypeScript que escutam eventos da blockchain e respondem com transações._

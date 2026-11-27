@@ -24,23 +24,24 @@ Somos uma comunidade acolhedora que o ajudará a crescer e se educar no ecossist
 - [Criar/editar conteúdo](/contributing/#how-to-update-content) – Sugerir novas páginas ou fazer ajustes no que já está aqui
 - [Escrever um artigo de construtor](/contributing/adding-articles/) - Contribuir com um artigo para a seção [Mais recentes](/latest/)
 - [Adicionar recursos da comunidade](/contributing/content-resources/) – Adicionar um artigo ou recurso útil a uma página relevante
-- [Sugerir um relatório](/contributing/adding-reports/) - Sugerir um relatório de pesquisa para a página de [Relatórios](/reports/)
-- [Compartilhar sua história](/contributing/adding-community-stories/) - Enviar uma história sobre suas experiências pessoais com tecnologias de código aberto e de santuário, como o ecossistema Ethereum impactou sua vida, ou como você e sua comunidade usam o Ethereum
+- [Sugerir um relatório](/contributing/adding-reports/) - Sugerir um relatório de pesquisa para a página [Relatórios](/reports/)
+- [Compartilhar sua história](/contributing/adding-community-stories/) - Enviar uma história sobre suas experiências pessoais com tecnologias de código aberto e de santuário, como o ecossistema Ethereum impactou sua vida ou como você e sua comunidade usam o Ethereum
 - [Questionários](/contributing/quizzes/) – Adicionar, atualizar e excluir bancos de perguntas de questionários para uma página relevante
-- [Sugerir um recurso de design](/contributing/design/adding-design-resources/) – Adicionar, atualizar e excluir recursos úteis de design
+- [Sugerir um recurso de design](/contributing/design/adding-design-resources/) – Adicionar, atualizar e excluir recursos de design úteis
 - [Sugerir um vídeo](/contributing/adding-videos/) – Sugerir um vídeo educacional para a galeria de vídeos
+- [Adicionar um termo ao glossário](/contributing/adding-glossary-terms/) – Adicionar ou atualizar um termo no [Glossário do Ethereum](/glossary/)
 
 **Ideias de recursos**
-- [Solicitar um recurso](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Conte-nos sobre quaisquer ideias que você tenha para um novo recurso ou design
+- [Solicitar um recurso](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Informe-nos sobre quaisquer ideias que você tenha para um novo recurso ou design
 
 **Listagens de produtos**
 - [Adicionar uma exchange](/contributing/adding-exchanges/) – Adicionar uma exchange ao nosso [localizador de exchanges](/get-eth/#country-picker)
-- [Adicionar um produto](/contributing/adding-products/) – Adicionar um aplicativo descentralizado (dapp) ou carteira a uma página relevante
+- [Adicionar um produto](/contributing/adding-products/) – Adicionar um dapp ou carteira a uma página relevante
 - [Adicionar ferramentas de desenvolvedor](/contributing/adding-developer-tools/) – Adicionar uma ferramenta de desenvolvedor a uma página relevante
-- [Adicionar uma camada 2 (l2)](/contributing/adding-layer-2s/) – Adicionar uma camada 2 (l2) a uma página relevante
+- [Adicionar uma camada 2](/contributing/adding-layer-2s/) – Adicionar uma camada 2 a uma página relevante
 - [Adicionar um produto ou serviço de staking](/contributing/adding-staking-products/) – Adicionar um projeto que ajude a facilitar o staking solo, staking em pool ou staking como serviço
 - [Adicionar uma carteira](/contributing/adding-wallets/) – Adicionar uma carteira para a [página de encontrar carteiras](/wallets/find-wallet/)
-- [Sugerir um projeto para nossa página de ciência descentralizada (desci)](/contributing/adding-desci-projects/) – Adicionar um projeto construído no Ethereum que contribua para a ciência descentralizada (desci)
+- [Sugerir um projeto para nossa página de DeSci](/contributing/adding-desci-projects/) – Adicionar um projeto construído no Ethereum que contribua para a ciência descentralizada
 - [Adicionar um recurso](/contributing/adding-resources/) – Adicionar um recurso útil a qualquer página relevante
 
 Alguma dúvida? 🤔 Junte-se ao nosso [servidor do Discord](/discord/)
@@ -102,17 +103,7 @@ Se sua contribuição for mesclada no ethereum.org, você terá a chance de reiv
 
 Você deve usar apenas carteiras de autocustódia para reivindicar OATs. Não use contas de exchange ou outras contas para as quais você não possui as chaves privadas, pois elas não permitirão que você acesse e gerencie seus OATs.
 
-## Reivindicar seu GitPOAP {#claim-gitpoap}
-
-O GitPOAP também reconhecerá automaticamente sua contribuição mesclada e permitirá que você cunhe um POAP de colaborador exclusivo e separado na própria plataforma deles!
-
-
-### Como reivindicar {#how-to-claim-2}
-
-1. Visite o [GitPOAP](https://www.gitpoap.io).
-2. Conecte-se com sua carteira ou até mesmo com seu e-mail através da opção de login.
-3. Pesquise seu nome de usuário do GitHub, endereço ETH, nomes do Ethereum Name Service (ENS) ou qualquer GitPOAP para verificar se você é elegível.
-4. Se sua conta do GitHub for elegível, você poderá cunhar um GitPOAP!
+<LinkWithArrow href="/collectibles/">Veja seus colecionáveis do ethereum.org</LinkWithArrow>
 
 ## Colaboradores {#contributors}
 

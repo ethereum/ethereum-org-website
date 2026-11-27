@@ -1,6 +1,6 @@
 ---
 title: Como trocar tokens
-description: Um guia sobre como trocar tokens no Ethereum.
+description: "Um guia passo a passo para trocar tokens no Ethereum: conecte sua carteira a uma corretora descentralizada, revise as taxas e a derrapagem, e confirme a negociação."
 lang: pt-br
 ---
 

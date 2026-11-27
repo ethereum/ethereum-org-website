@@ -1,7 +1,7 @@
 ---
 title: Pectra
 metaTitle: Prague-Electra (Pectra)
-description: "Aprenda sobre a atualização do protocolo Pectra"
+description: "A Pectra foi ativada em 7 de maio de 2025. Saiba o que essa atualização do Ethereum mudou, incluindo as contas inteligentes da EIP-7702 e um saldo máximo de validador de 2048 ETH."
 lang: pt-br
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -75,9 +75,9 @@ O novo pré-compilado adiciona a capacidade para que todo desenvolvedor realize 
 
 ### Fornecer hashes de blocos históricos a partir do estado {#2935}
 
-A EVM atualmente fornece o código de operação `BLOCKHASH`, que permite aos desenvolvedores de contratos recuperar o hash de um bloco diretamente na camada de execução. No entanto, isso é limitado apenas aos últimos 256 blocos e pode se tornar problemático para clientes sem estado no futuro.
+Atualmente, a EVM fornece o código de operação `BLOCKHASH` que permite aos desenvolvedores de contratos recuperar o hash de um bloco diretamente na camada de execução. No entanto, isso é limitado apenas aos últimos 256 blocos e pode se tornar problemático para clientes sem estado no futuro.
 
-A [EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) cria um novo contrato de sistema que pode fornecer os últimos 8192 hashes de blocos como slots de armazenamento. Isso ajuda a preparar o protocolo para o futuro para execução sem estado e se torna mais eficiente quando as árvores verkle (verkle tries) forem adotadas. No entanto, além disso, os rollups podem se beneficiar disso imediatamente, pois podem consultar o contrato diretamente com uma janela histórica mais longa.
+A [EIP-2935](https://eips.ethereum.org/EIPS/eip-2935) cria um novo contrato de sistema que pode fornecer os últimos 8192 hashes de blocos como slots de armazenamento. Isso ajuda a preparar o protocolo para o futuro da execução sem estado. No entanto, além disso, os rollups podem se beneficiar disso imediatamente, pois podem consultar o contrato diretamente com uma janela histórica mais longa.
 
 ### Mover o índice do comitê para fora da Atestação {#7549}
 

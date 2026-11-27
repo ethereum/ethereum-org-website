@@ -1,7 +1,7 @@
 ---
-title: Introdução às Propostas de Melhoria do Ethereum (EIPs)
+title: "Introdução às Propostas de Melhoria do Ethereum (EIPs)"
 metaTitle: Propostas de Melhoria do Ethereum (EIPs)
-description: As informações básicas que você precisa para entender as EIPs
+description: "O que são as Propostas de Melhoria do Ethereum (EIPs)? Aprenda como as mudanças no Ethereum são propostas, discutidas e adotadas, e como você pode participar."
 lang: pt-br
 ---
 
@@ -15,7 +15,7 @@ Qualquer pessoa na comunidade do Ethereum tem a capacidade de criar uma EIP. As 
 
 As EIPs desempenham um papel central em como as mudanças acontecem e são documentadas no Ethereum. Elas são a maneira de as pessoas proporem, debaterem e adotarem mudanças. Existem [diferentes tipos de EIPs](https://eips.ethereum.org/EIPS/eip-1#eip-types), incluindo EIPs principais (core) para mudanças de protocolo de baixo nível que afetam o consenso e exigem uma atualização da rede, como a [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), e ERCs para padrões de aplicativos, como a [EIP-20](https://eips.ethereum.org/EIPS/eip-20) e a [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
-Cada atualização da rede consiste em um conjunto de EIPs que precisam ser implementadas por cada [cliente Ethereum](/learn/#clients-and-nodes) na rede. Isso significa que, para permanecer em consenso com outros clientes na Rede Principal do Ethereum, os desenvolvedores de clientes precisam garantir que todos implementaram as EIPs exigidas.
+Cada atualização da rede consiste em um conjunto de EIPs que precisam ser implementadas por cada [cliente Ethereum](/developers/docs/nodes-and-clients/) na rede. Isso significa que, para permanecer em consenso com outros clientes na Rede Principal do Ethereum, os desenvolvedores de clientes precisam garantir que todos implementaram as EIPs exigidas.
 
 Além de fornecer uma especificação técnica para as mudanças, as EIPs são a unidade em torno da qual a governança acontece no Ethereum: qualquer pessoa é livre para propor uma, e então várias partes interessadas na comunidade debaterão para determinar se ela deve ser adotada como um padrão ou incluída em uma atualização da rede. Como as EIPs não principais não precisam ser adotadas por todos os aplicativos (por exemplo, é possível criar um token fungível que não implemente a EIP-20), mas as EIPs principais devem ser amplamente adotadas (porque todos os nós devem ser atualizados para continuar fazendo parte da mesma rede), as EIPs principais exigem um consenso mais amplo dentro da comunidade do que as EIPs não principais.
 

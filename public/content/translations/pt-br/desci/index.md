@@ -1,6 +1,6 @@
 ---
 title: "Ciência descentralizada (desci)"
-description: "Uma visão geral da ciência descentralizada no Ethereum"
+description: "O que é a ciência descentralizada? Aprenda como a desci usa o Ethereum para financiar pesquisas, compartilhar dados abertamente e recompensar cientistas, tornando a ciência mais acessível."
 lang: pt-br
 template: use-cases
 sidebarDepth: 2

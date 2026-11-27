@@ -1,10 +1,10 @@
 ---
 title: Pontes
-description: "Uma visão geral sobre pontes para desenvolvedores"
+description: "Um guia para desenvolvedores sobre pontes: como funcionam as mensagens cross-chain e a transferência de tokens via ponte, tipos de pontes e premissas de confiança, e como integrá-las em dapps."
 lang: pt-br
 ---
 
-Com a proliferação de blockchains de camada 1 (l1) e soluções de [escalabilidade](/developers/docs/scaling/) de camada 2 (l2), juntamente com um número cada vez maior de aplicativos descentralizados (dapps) se tornando cross-chain, a necessidade de comunicação e movimentação de ativos entre cadeias tornou-se uma parte essencial da infraestrutura da rede. Diferentes tipos de pontes existem para ajudar a tornar isso possível.
+Com a proliferação de blockchains de camada 1 (L1) e soluções de [escalabilidade](/developers/docs/scaling/) de camada 2 (L2), juntamente com um número cada vez maior de aplicativos descentralizados (dapps) se tornando cross-chain, a necessidade de comunicação e movimentação de ativos entre cadeias tornou-se uma parte essencial da infraestrutura da rede. Diferentes tipos de pontes existem para ajudar a tornar isso possível.
 
 ## Necessidade de pontes {#need-for-bridges}
 
@@ -24,7 +24,7 @@ Para os desenvolvedores, as pontes permitem o seguinte:
 
 - a transferência de quaisquer dados, informações e ativos entre cadeias.
 - o desbloqueio de novos recursos e casos de uso para protocolos, pois as pontes expandem o espaço de design para o que os protocolos podem oferecer. Por exemplo, um protocolo para yield farming originalmente implantado na [Rede Principal do Ethereum](/) pode oferecer pools de liquidez em todas as cadeias compatíveis com a EVM.
-- a oportunidade de aproveitar os pontos fortes de diferentes blockchains. Por exemplo, os desenvolvedores podem se beneficiar das taxas mais baixas oferecidas pelas diferentes soluções de camada 2 (l2) implantando seus dapps em rollups e sidechains, e os usuários podem fazer bridge entre eles.
+- a oportunidade de aproveitar os pontos fortes de diferentes blockchains. Por exemplo, os desenvolvedores podem se beneficiar das taxas mais baixas oferecidas pelas diferentes soluções de camada 2 (L2) implantando seus dapps em rollups e sidechains, e os usuários podem fazer bridge entre eles.
 - a colaboração entre desenvolvedores de vários ecossistemas blockchain para construir novos produtos.
 - a atração de usuários e comunidades de vários ecossistemas para seus dapps.
 
@@ -51,7 +51,7 @@ Com as pontes, não existem soluções perfeitas. Em vez disso, existem apenas c
 
 - **Segurança –** Quem verifica o sistema? Pontes protegidas por validadores externos são normalmente menos seguras do que pontes que são protegidas local ou nativamente pelos validadores da blockchain.
 - **Conveniência –** Quanto tempo leva para concluir uma transação e quantas transações um usuário precisou assinar? Para um desenvolvedor, quanto tempo leva para integrar uma ponte e quão complexo é o processo?
-- **Conectividade –** Quais são as diferentes cadeias de destino que uma ponte pode conectar (ou seja, rollups, sidechains, outras blockchains de camada 1 (l1), etc.) e quão difícil é integrar uma nova blockchain?
+- **Conectividade –** Quais são as diferentes cadeias de destino que uma ponte pode conectar (ou seja, rollups, sidechains, outras blockchains de camada 1 (L1), etc.) e quão difícil é integrar uma nova blockchain?
 - **Capacidade de passar dados mais complexos –** Uma ponte pode permitir a transferência de mensagens e dados arbitrários mais complexos entre cadeias, ou ela suporta apenas transferências de ativos cross-chain?
 - **Custo-benefício –** Quanto custa transferir ativos entre cadeias por meio de uma ponte? Normalmente, as pontes cobram uma taxa fixa ou variável, dependendo dos custos de gás e da liquidez de rotas específicas. Também é fundamental avaliar o custo-benefício de uma ponte com base no capital necessário para garantir sua segurança.
 
@@ -122,17 +122,17 @@ Para monitorar a atividade de contratos entre cadeias, os desenvolvedores podem 
 
 ## Leitura adicional {#further-reading}
 
-- [Pontes de Blockchain](/bridges/) – ethereum.org
-- [Estrutura de Risco de Pontes da L2BEAT](https://l2beat.com/bridges/summary)
-- [Pontes de Blockchain: Construindo Redes de Criptoredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 de setembro de 2021 – Dmitriy Berenzon
-- [O Trilema da Interoperabilidade](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1º de outubro de 2021 – Arjun Bhuptani
-- [Clusters: Como Pontes Confiáveis e Minimizadas em Confiança Moldam o Cenário Multi-Chain](https://blog.celestia.org/clusters/) - 4 de outubro de 2021 – Mustafa Al-Bassam
-- [LI.FI: Com Pontes, a Confiança é um Espectro](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 de abril de 2022 – Arjun Chand
-- [O Estado das Soluções de Interoperabilidade de Rollups](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 de junho de 2024 – Alex Hook
-- [Aproveitando a Segurança Compartilhada para Interoperabilidade Cross-Chain Segura: Comitês de Estado Lagrange e Além](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 de junho de 2024 – Emmanuel Awosika
+- [Pontes de blockchain](/bridges/) – ethereum.org
+- [ETHBEAT Bridge Risk Framework](https://ethbeat.org/interop/summary)
+- [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) - 8 de setembro de 2021 – Dmitriy Berenzon
+- [The Interoperability Trilemma](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17) - 1 de outubro de 2021 – Arjun Bhuptani
+- [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) - 4 de outubro de 2021 – Mustafa Al-Bassam
+- [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) - 28 de abril de 2022 – Arjun Chand
+- [The State Of Rollup Interoperability Solutions](https://web.archive.org/web/20250428015516/https://research.2077.xyz/the-state-of-rollup-interoperability) - 20 de junho de 2024 – Alex Hook
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://web.archive.org/web/20250125035123/https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - 12 de junho de 2024 – Emmanuel Awosika
 
-Além disso, aqui estão algumas apresentações perspicazes de [James Prestwich](https://twitter.com/_prestwich) que podem ajudar a desenvolver uma compreensão mais profunda sobre pontes:
+Além disso, aqui estão algumas apresentações esclarecedoras de [James Prestwich](https://twitter.com/_prestwich) que podem ajudar a desenvolver um entendimento mais profundo sobre pontes:
 
-- [Construindo Pontes, Não Jardins Murados](https://youtu.be/ZQJWMiX4hT0)
-- [Desconstruindo Pontes](https://youtu.be/b0mC-ZqN8Oo)
-- [Por Que as Pontes Estão Queimando](https://youtu.be/c7cm2kd20j8)
+- [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
+- [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)
+- [Why are the Bridges Burning](https://youtu.be/c7cm2kd20j8)

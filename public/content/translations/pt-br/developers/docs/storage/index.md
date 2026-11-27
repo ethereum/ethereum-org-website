@@ -5,16 +5,16 @@ lang: pt-br
 authors: ["Patrick Collins"]
 ---
 
-Ao contrário de um servidor centralizado operado por uma única empresa ou organização, os sistemas de armazenamento descentralizado consistem em uma rede ponto a ponto de usuários-operadores que mantêm uma parte dos dados gerais, criando um sistema resiliente de compartilhamento de armazenamento de arquivos. Eles podem estar em um aplicativo baseado em blockchain ou em qualquer rede baseada em ponto a ponto.
+Ao contrário de um servidor centralizado operado por uma única empresa ou organização, os sistemas de armazenamento descentralizado consistem em uma rede ponto a ponto de usuários-operadores que mantêm uma parte dos dados gerais, criando um sistema resiliente de armazenamento e compartilhamento de arquivos. Esses sistemas podem estar em um aplicativo baseado em blockchain ou em qualquer rede baseada em ponto a ponto.
 
-A própria Ethereum pode ser usada como um sistema de armazenamento descentralizado, e é, quando se trata de armazenamento de código em todos os contratos inteligentes. No entanto, quando se trata de grandes quantidades de dados, não foi para isso que a Ethereum foi projetada. A cadeia está crescendo constantemente, mas no momento da redação deste artigo, a cadeia da Ethereum tem cerca de 500 GB a 1 TB ([dependendo do cliente](https://etherscan.io/chartsync/chaindefault)), e cada nó na rede precisa ser capaz de armazenar todos os dados. Se a cadeia se expandisse para grandes quantidades de dados (digamos, 5 TBs), não seria viável para todos os nós continuarem a funcionar. Além disso, o custo de implantação dessa quantidade de dados na Mainnet seria proibitivamente caro devido às taxas de [gás](/developers/docs/gas).
+A própria Ethereum pode ser usada como um sistema de armazenamento descentralizado, e de fato é, quando se trata de armazenamento de código em todos os contratos inteligentes. No entanto, quando se trata de grandes quantidades de dados, não foi para isso que a Ethereum foi projetada. A cadeia está crescendo constantemente, mas no momento da redação deste artigo, a cadeia da Ethereum tem cerca de 1-2 TB ([dependendo do cliente](https://etherscan.io/chartsync/chaindefault)), e cada nó na rede precisa ser capaz de armazenar todos os dados. Se a cadeia se expandisse para grandes quantidades de dados (digamos, 5 TBs), não seria viável para todos os nós continuarem a funcionar. Além disso, o custo de implantação dessa quantidade de dados na Mainnet seria proibitivamente caro devido às taxas de [gás](/developers/docs/gas).
 
 Devido a essas restrições, precisamos de uma cadeia ou metodologia diferente para armazenar grandes quantidades de dados de forma descentralizada.
 
-Ao analisar as opções de armazenamento descentralizado (dStorage), há algumas coisas que o usuário deve ter em mente.
+Ao analisar as opções de armazenamento descentralizado (dStorage), há algumas coisas que um usuário deve ter em mente.
 
 - Mecanismo de persistência / estrutura de incentivos
-- Aplicação de retenção de dados
+- Garantia de retenção de dados
 - Descentralização
 - Consenso
 
