@@ -1,10 +1,10 @@
 {
   "version": 2,
   "sourceFile": "src/intl/en/page-run-a-node.json",
-  "generatedAt": "2026-06-16T15:50:24.098Z",
-  "rootHash": "4c02db7f6bb0",
+  "generatedAt": "2026-11-27T09:56:17.320Z",
+  "rootHash": "e0b2ab94f8d9",
   "tree": {
-    "contentHash": "5162bc007278",
+    "contentHash": "b1fc16084f0b",
     "anchorHash": "bec48c9a9d99",
     "children": {
       "page-run-a-node-build-your-own-title": {
@@ -32,7 +32,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-run-a-node-build-your-own-min-ssd": {
-        "contentHash": "c5ee18948447",
+        "contentHash": "c9bccb92804e",
         "anchorHash": "e3b0c44298fc"
       },
       "page-run-a-node-build-your-own-ssd-note": {
@@ -820,5 +820,5 @@
       "page-run-a-node-why-title"
     ]
   },
-  "sourceCommitSha": "b4cc44352022b9220b8ea8c01a595ecb84789aeb"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

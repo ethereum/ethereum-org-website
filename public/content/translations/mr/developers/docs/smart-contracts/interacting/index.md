@@ -171,16 +171,15 @@ const result = await client.simulateContract({
 
 ## संबंधित ट्यूटोरियल्स {#related-tutorials}
 
-- [JavaScript मधून स्मार्ट कॉन्ट्रॅक्ट कॉल करणे](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [web3.js आणि Alchemy वापरून व्यवहार पाठवणे](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
-- [तुमच्या वॉलेटमध्ये तुमचा NFT कसा पाहायचा](/developers/tutorials/how-to-view-nft-in-metamask/)
+- [तुमच्या वॉलेटमध्ये तुमचे NFT कसे पाहायचे](/developers/tutorials/how-to-view-nft-in-metamask/)
 
 ## पुढील वाचन {#further-reading}
 
-- [Viem डॉक्युमेंटेशन: कॉन्ट्रॅक्ट्समध्ये वाचणे आणि लिहिणे](https://viem.sh/docs/contract/readContract)
+- [Viem डॉक्युमेंटेशन: कॉन्ट्रॅक्ट्समधून वाचणे आणि त्यात लिहिणे](https://viem.sh/docs/contract/readContract)
 - [ethers.js डॉक्युमेंटेशन: कॉन्ट्रॅक्ट्स](https://docs.ethers.org/v6/api/contract/)
 - [Solidity ABI स्पेसिफिकेशन](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [ABI म्हणजे काय? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [स्मार्ट कॉन्ट्रॅक्ट ABIs कसे काम करतात? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## संबंधित विषय {#related-topics}
 

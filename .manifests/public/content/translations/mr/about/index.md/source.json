@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/about/index.md",
-  "generatedAt": "2026-09-30T18:17:49.384Z",
-  "rootHash": "2c02605ff6a3",
+  "generatedAt": "2026-11-27T10:14:35.567Z",
+  "rootHash": "1fae31b2e76b",
   "tree": {
-    "contentHash": "3259ccd9ce64",
-    "anchorHash": "379201dca062",
+    "contentHash": "4a80f14827a4",
+    "anchorHash": "46bdb21e53d3",
     "children": {
       "frontmatter:title": {
         "contentHash": "9aafb3686977",
@@ -16,7 +16,7 @@
         "anchorHash": "5d8c71abc527"
       },
       "frontmatter:description": {
-        "contentHash": "29b335e72171",
+        "contentHash": "a71f0c1e6996",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -401,15 +401,15 @@
         ]
       },
       "design-system": {
-        "contentHash": "e2d897665de1",
-        "anchorHash": "49a5deb7fd04",
+        "contentHash": "308c40de5e70",
+        "anchorHash": "75e8f253bdcf",
         "labelHash": "4a866105af15",
         "children": {
           "_label": {
             "contentHash": "4a866105af15",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:3": {
+          "prose:4": {
             "contentHash": "a249f9ce03df",
             "anchorHash": "e3b0c44298fc"
           },
@@ -417,7 +417,7 @@
             "contentHash": "935b1d1de719",
             "anchorHash": "36e5908260cc"
           },
-          "prose:4": {
+          "prose:5": {
             "contentHash": "cd7c13f2a9d5",
             "anchorHash": "e3b0c44298fc"
           },
@@ -425,7 +425,7 @@
             "contentHash": "0669cdbbc090",
             "anchorHash": "d09f6ca47cd6"
           },
-          "prose:5": {
+          "prose:6": {
             "contentHash": "94b48c5f3708",
             "anchorHash": "e3b0c44298fc"
           },
@@ -433,20 +433,30 @@
             "contentHash": "122e2868797b",
             "anchorHash": "416d56f793cb"
           },
-          "prose:6": {
+          "prose:7": {
+            "contentHash": "d1efadddf278",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "f747c30c521e",
+            "anchorHash": "fdf33e30f8bc"
+          },
+          "prose:8": {
             "contentHash": "cdb4ee2aea69",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:3",
-          "link:0",
           "prose:4",
-          "link:1",
+          "link:0",
           "prose:5",
+          "link:1",
+          "prose:6",
           "link:2",
-          "prose:6"
+          "prose:7",
+          "link:3",
+          "prose:8"
         ]
       },
       "style-guide": {
@@ -547,6 +557,45 @@
           "prose:4"
         ]
       },
+      "your-privacy": {
+        "contentHash": "48f2002d4236",
+        "anchorHash": "a8d34be3c8c8",
+        "labelHash": "d2a7115d0455",
+        "children": {
+          "_label": {
+            "contentHash": "d2a7115d0455",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "00a26506f8b6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "1fac8e280209",
+            "anchorHash": "76d6b100c7ed"
+          },
+          "prose:3": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "2b72811d5f06",
+            "anchorHash": "77817e83e7ff"
+          },
+          "prose:4": {
+            "contentHash": "c14ed31f0bdf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
       "open-jobs": {
         "contentHash": "83dc583f9bd6",
         "anchorHash": "45752f912009",
@@ -603,8 +652,9 @@
       "design-system",
       "style-guide",
       "license",
+      "your-privacy",
       "open-jobs"
     ]
   },
-  "sourceCommitSha": "8091512f99874c31008351459e68ffcbfef78b79"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }

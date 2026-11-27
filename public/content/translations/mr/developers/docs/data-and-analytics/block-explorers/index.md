@@ -21,12 +21,13 @@ sidebarDepth: 3
 
 ## सेवा {#services}
 
-- [Blockchair](https://blockchair.com/ethereum) - खाजगी इथेरियम एक्सप्लोरर. तसेच (मेमपूल) डेटाची क्रमवारी लावण्यासाठी आणि फिल्टर करण्यासाठी. स्पॅनिश, फ्रेंच, इटालियन, डच, पोर्तुगीज, रशियन, चायनीज आणि फारसीमध्ये उपलब्ध
+- [Blockchair](https://blockchair.com/ethereum) - खाजगी इथेरियम एक्सप्लोरर. (मेमपूल) डेटाची क्रमवारी लावण्यासाठी आणि फिल्टर करण्यासाठी देखील. स्पॅनिश, फ्रेंच, इटालियन, डच, पोर्तुगीज, रशियन, चायनीज आणि फारसीमध्ये उपलब्ध
 - [Chainlens](https://www.chainlens.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
+- [DexGuru ब्लॉक एक्सप्लोरर](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Etherscan](https://etherscan.io/) - चायनीज, कोरियन, रशियन आणि जपानी भाषेतही उपलब्ध
-- [Ethplorer](https://ethplorer.io/) - टोकनवर लक्ष केंद्रित करणारा ब्लॉक एक्सप्लोरर. चायनीज, स्पॅनिश, फ्रेंच, तुर्की, रशियन, कोरियन आणि व्हिएतनामी भाषेतही उपलब्ध
+- [Etherscan](https://etherscan.io/) - चायनीज, कोरियन, रशियन आणि जपानीमध्ये देखील उपलब्ध
+- [Ethplorer](https://ethplorer.io/) - टोकन्सवर लक्ष केंद्रित करणारा ब्लॉक एक्सप्लोरर. चायनीज, स्पॅनिश, फ्रेंच, तुर्की, रशियन, कोरियन आणि व्हिएतनामीमध्ये देखील उपलब्ध
+- [Ethscanner](https://ethscanner.io/) - Routescan द्वारे. पडताळणीकर्ता अलायन्सच्या ओपन डेटासेटमध्ये पडताळणी केलेले कॉन्ट्रॅक्ट्स योगदान देते आणि क्रॉस-चेन व्यवहार दर्शवते
 - [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)

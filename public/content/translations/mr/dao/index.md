@@ -1,7 +1,7 @@
 ---
 title: "DAO म्हणजे काय?"
 metaTitle: "DAO म्हणजे काय? | विकेंद्रित स्वायत्त संस्था (Decentralized Autonomous Organization)"
-description: "इथेरियमवरील DAOs चा आढावा"
+description: "DAO म्हणजे काय? विकेंद्रित स्वायत्त संस्था (DAOs) निर्णय घेण्यासाठी आणि इथेरियमवरील सामायिक निधीचे व्यवस्थापन करण्यासाठी स्मार्ट कॉन्ट्रॅक्ट्स आणि टोकन्सचा वापर कसा करतात ते जाणून घ्या."
 lang: mr
 template: use-cases
 sidebarDepth: 2
