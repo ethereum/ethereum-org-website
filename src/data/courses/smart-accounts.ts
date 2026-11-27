@@ -52,6 +52,13 @@ export const smartAccountsCourse: Course = {
           options: ["everything", "small", "nothing"],
           correct: ["nothing"],
         },
+        {
+          id: "can",
+          type: "choice",
+          options: ["undo", "limit", "gas", "recover"],
+          correct: ["limit", "recover"],
+          multi: true,
+        },
         { id: "takeaway", type: "concept", paragraphs: 1, takeaway: true },
       ],
     },

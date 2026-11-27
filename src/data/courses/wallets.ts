@@ -113,6 +113,13 @@ export const walletsCourse: Course = {
           options: ["password", "exchange", "phrase"],
           correct: ["exchange"],
         },
+        {
+          id: "own",
+          type: "choice",
+          options: ["freeze", "reset", "backup", "exchange"],
+          correct: ["freeze", "backup"],
+          multi: true,
+        },
         { id: "storage", type: "concept", paragraphs: 2 },
         { id: "sort", type: "interactive", widget: "custody-sort" },
         {
