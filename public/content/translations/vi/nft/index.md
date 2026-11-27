@@ -1,7 +1,7 @@
 ---
 title: "Token không thể thay thế (NFT)"
 metaTitle: "NFT là gì? | Lợi ích và cách sử dụng"
-description: "Tổng quan về NFT trên Ethereum"
+description: "NFT là gì? Tìm hiểu cách các token không thể thay thế chứng minh quyền sở hữu đối với nghệ thuật kỹ thuật số, đồ sưu tầm, vé và nhiều thứ khác trên Ethereum, cũng như cách giữ an toàn khi sử dụng chúng."
 lang: vi
 template: use-cases
 sidebarDepth: 2

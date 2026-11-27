@@ -1,6 +1,6 @@
 ---
 title: "Cách hoán đổi token"
-description: "Hướng dẫn cách hoán đổi token trên Ethereum."
+description: "Hướng dẫn từng bước để hoán đổi token trên Ethereum: kết nối ví của bạn với một sàn giao dịch phi tập trung, kiểm tra phí và trượt giá, và xác nhận giao dịch."
 lang: vi
 ---
 

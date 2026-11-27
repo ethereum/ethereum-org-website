@@ -1,6 +1,6 @@
 ---
-title: Đặt cọc ủy quyền (staking như một dịch vụ)
-description: Tổng quan về cách bắt đầu với đặt cọc ủy quyền
+title: "Đặt cọc ủy quyền (staking như một dịch vụ)"
+description: "Staking như một dịch vụ là gì? Tìm hiểu cách nạp 32 ETH trong khi một nhà điều hành nút chạy trình xác thực của bạn, và những sự đánh đổi so với đặt cọc tại nhà hoặc đặt cọc chung."
 lang: vi
 template: staking
 image: /images/staking/leslie-saas.png

@@ -169,9 +169,8 @@ Trong một ứng dụng phi tập trung (dapp), ví của người dùng (như 
 
 [Các thư viện ví và công cụ kết nối](/developers/docs/apis/javascript/) trừu tượng hóa điều này để bạn có thể tập trung vào việc xây dựng logic ứng dụng của mình.
 
-## Các hướng dẫn liên quan {#related-tutorials}
+## Hướng dẫn liên quan {#related-tutorials}
 
-- [Gọi một hợp đồng thông minh từ JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [Gửi giao dịch bằng Web3.js và Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Cách xem NFT trong ví của bạn](/developers/tutorials/how-to-view-nft-in-metamask/)
 
@@ -180,7 +179,7 @@ Trong một ứng dụng phi tập trung (dapp), ví của người dùng (như 
 - [Tài liệu Viem: Đọc và ghi vào hợp đồng](https://viem.sh/docs/contract/readContract)
 - [Tài liệu ethers.js: Hợp đồng](https://docs.ethers.org/v6/api/contract/)
 - [Đặc tả ABI của Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
-- [ABI là gì? - Alchemy](https://www.alchemy.com/overviews/what-is-an-abi)
+- [ABI của hợp đồng thông minh hoạt động như thế nào? - Alchemy](https://www.alchemy.com/docs/smart-contract-abi)
 
 ## Các chủ đề liên quan {#related-topics}
 

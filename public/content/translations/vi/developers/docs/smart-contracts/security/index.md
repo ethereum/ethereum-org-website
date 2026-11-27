@@ -78,7 +78,7 @@ Phương pháp thông thường là viết các bài kiểm tra đơn vị (unit
 
 Thật không may, kiểm tra đơn vị có hiệu quả tối thiểu trong việc cải thiện bảo mật hợp đồng thông minh khi được sử dụng một cách cô lập. Một bài kiểm tra đơn vị có thể chứng minh một hàm thực thi đúng cách đối với dữ liệu giả, nhưng các bài kiểm tra đơn vị chỉ hiệu quả bằng chính các bài kiểm tra được viết ra. Điều này gây khó khăn cho việc phát hiện các trường hợp ngoại lệ bị bỏ sót và các lỗ hổng có thể phá vỡ sự an toàn của hợp đồng thông minh của bạn.
 
-Một cách tiếp cận tốt hơn là kết hợp kiểm tra đơn vị với kiểm tra dựa trên thuộc tính được thực hiện bằng cách sử dụng [phân tích tĩnh và động](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Phân tích tĩnh dựa trên các biểu diễn cấp thấp, chẳng hạn như [đồ thị luồng điều khiển](https://en.wikipedia.org/wiki/Control-flow_graph) và [cây cú pháp trừu tượng](https://deepsource.io/glossary/ast/) để phân tích các trạng thái chương trình và đường dẫn thực thi có thể tiếp cận được. Trong khi đó, các kỹ thuật phân tích động, chẳng hạn như [fuzzing hợp đồng thông minh](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), thực thi mã hợp đồng với các giá trị đầu vào ngẫu nhiên để phát hiện các hoạt động vi phạm các thuộc tính bảo mật.
+Một cách tiếp cận tốt hơn là kết hợp kiểm tra đơn vị với kiểm tra dựa trên thuộc tính được thực hiện bằng cách sử dụng [phân tích tĩnh và động](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts). Phân tích tĩnh dựa trên các biểu diễn cấp thấp, chẳng hạn như [đồ thị luồng điều khiển](https://en.wikipedia.org/wiki/Control-flow_graph) và [cây cú pháp trừu tượng](https://deepsource.io/glossary/ast/) để phân tích các trạng thái chương trình và đường dẫn thực thi có thể tiếp cận được. Trong khi đó, các kỹ thuật phân tích động, chẳng hạn như [fuzzing hợp đồng thông minh](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), thực thi mã hợp đồng với các giá trị đầu vào ngẫu nhiên để phát hiện các hoạt động vi phạm các thuộc tính bảo mật.
 
 [Xác minh hình thức](/developers/docs/smart-contracts/formal-verification) là một kỹ thuật khác để xác minh các thuộc tính bảo mật trong các hợp đồng thông minh. Không giống như kiểm tra thông thường, xác minh hình thức có thể chứng minh một cách thuyết phục sự vắng mặt của các lỗi trong một hợp đồng thông minh. Điều này đạt được bằng cách tạo ra một đặc tả hình thức nắm bắt các thuộc tính bảo mật mong muốn và chứng minh rằng một mô hình hình thức của các hợp đồng tuân thủ đặc tả này.
 
@@ -99,7 +99,7 @@ Mặc dù vậy, bạn nên tránh coi kiểm toán là một viên đạn bạc
 
 Thiết lập một chương trình tiền thưởng tìm lỗi là một cách tiếp cận khác để triển khai các đánh giá mã bên ngoài. Tiền thưởng tìm lỗi là một phần thưởng tài chính được trao cho các cá nhân (thường là các hacker mũ trắng) phát hiện ra các lỗ hổng trong một ứng dụng.
 
-Khi được sử dụng đúng cách, các khoản tiền thưởng tìm lỗi mang lại cho các thành viên của cộng đồng hacker động lực để kiểm tra mã của bạn nhằm tìm ra các lỗi nghiêm trọng. Một ví dụ thực tế là "lỗi tiền vô hạn" có thể đã cho phép kẻ tấn công tạo ra một lượng ether không giới hạn trên [Optimism](https://www.optimism.io/), một Giao thức [lớp 2 (l2)](/layer-2/) chạy trên Ethereum. May mắn thay, một hacker mũ trắng đã [phát hiện ra lỗ hổng](https://www.saurik.com/optimism.html) và thông báo cho nhóm, [kiếm được một khoản thanh toán lớn trong quá trình này](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Khi được sử dụng đúng cách, các khoản tiền thưởng tìm lỗi mang lại cho các thành viên của cộng đồng hacker động lực để kiểm tra mã của bạn nhằm tìm ra các lỗi nghiêm trọng. Một ví dụ thực tế là "lỗi tiền vô hạn" có thể đã cho phép kẻ tấn công tạo ra một lượng ether không giới hạn trên [Optimism](https://www.optimism.io/), một Giao thức [lớp 2 (L2)](/layer-2/) chạy trên Ethereum. May mắn thay, một hacker mũ trắng đã [phát hiện ra lỗ hổng](https://www.saurik.com/optimism.html) và thông báo cho nhóm, [kiếm được một khoản thanh toán lớn trong quá trình này](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Một chiến lược hữu ích là đặt mức thanh toán của một chương trình tiền thưởng tìm lỗi tỷ lệ thuận với số tiền đang bị đe dọa. Được mô tả là "[tiền thưởng tìm lỗi theo tỷ lệ](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", cách tiếp cận này cung cấp các ưu đãi tài chính cho các cá nhân để tiết lộ các lỗ hổng một cách có trách nhiệm thay vì khai thác chúng.
 
@@ -463,9 +463,9 @@ Nếu bạn dự định truy vấn một nguồn cấp dữ liệu trên chuỗ
 
 - **[Các công cụ xác minh hình thức](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _Các công cụ để xác minh tính chính xác về mặt chức năng trong các hợp đồng thông minh và kiểm tra các bất biến._
 
-- **[Các dịch vụ kiểm toán hợp đồng thông minh](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _Danh sách các tổ chức cung cấp dịch vụ kiểm toán hợp đồng thông minh cho các dự án phát triển Ethereum._
+- **[Các dịch vụ kiểm toán hợp đồng thông minh](#smart-contract-auditing-services)** - _Danh sách các tổ chức cung cấp dịch vụ kiểm toán hợp đồng thông minh cho các dự án phát triển Ethereum._
 
-- **[Các nền tảng tiền thưởng tìm lỗi](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _Các nền tảng để điều phối các chương trình tiền thưởng tìm lỗi và khen thưởng cho việc tiết lộ có trách nhiệm các lỗ hổng nghiêm trọng trong hợp đồng thông minh._
+- **[Các nền tảng tiền thưởng tìm lỗi](#bug-bounty-platforms)** - _Các nền tảng để điều phối các chương trình tiền thưởng tìm lỗi và khen thưởng cho việc tiết lộ có trách nhiệm các lỗ hổng nghiêm trọng trong hợp đồng thông minh._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _Một công cụ trực tuyến miễn phí để kiểm tra tất cả thông tin có sẵn liên quan đến một hợp đồng được phân nhánh._
 
@@ -567,10 +567,8 @@ Nếu bạn dự định truy vấn một nguồn cấp dữ liệu trên chuỗ
 
 - [Cách sử dụng Slither để tìm lỗi hợp đồng thông minh](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [Cách sử dụng Manticore để tìm lỗi hợp đồng thông minh](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
-- [Các hướng dẫn bảo mật hợp đồng thông minh](/developers/tutorials/smart-contract-security-guidelines/)
+- [Các nguyên tắc bảo mật hợp đồng thông minh](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Cách tích hợp an toàn hợp đồng token của bạn với các token tùy ý](/developers/tutorials/token-integration-checklist/)
 
-- [Cyfrin Updraft - Khóa học đầy đủ về kiểm toán và bảo mật hợp đồng thông minh](https://updraft.cyfrin.io/courses/security)
+- [Cyfrin Updraft - Khóa học đầy đủ về bảo mật và kiểm toán hợp đồng thông minh](https://updraft.cyfrin.io/courses/security)

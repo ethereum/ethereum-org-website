@@ -176,6 +176,7 @@ Một số tiêu chuẩn thay thế đã ra đời từ vấn đề này như [E
 - [Alchemy - Hướng dẫn về các token ERC20 trong Solidity](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## Các tiêu chuẩn token có thể thay thế khác {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -183,7 +184,6 @@ Một số tiêu chuẩn thay thế đã ra đời từ vấn đề này như [E
 - [ERC-7540 - Kho tiền được token hóa không đồng bộ](/developers/docs/standards/tokens/erc-7540)
 ## Hướng dẫn: Xây dựng với ERC-20 trên Ethereum {#tutorials}
 
-- [Hướng dẫn chi tiết về hợp đồng ERC-20](/developers/tutorials/erc20-annotated-code/) _– Hướng dẫn chi tiết có chú thích từng dòng về bản triển khai hợp đồng ERC-20 của OpenZeppelin._
-- [ERC-20 với các rào chắn an toàn](/developers/tutorials/erc20-with-safety-rails/) _– Cách thêm các biện pháp bảo vệ vào token ERC-20 để giúp người dùng tránh các sai lầm phổ biến._
-- [Gửi token bằng ethers.js](/developers/tutorials/send-token-ethersjs/) _– Hướng dẫn thân thiện với người mới bắt đầu về cách chuyển token ERC-20 bằng ethers.js._
-- [Một số thủ thuật được sử dụng bởi các token lừa đảo và cách phát hiện chúng](/developers/tutorials/scam-token-tricks/) _– Một cuộc khám phá chi tiết về các mô hình token ERC-20 lừa đảo và cách nhận diện chúng._
+- [Phân tích chi tiết hợp đồng ERC-20](/developers/tutorials/erc20-annotated-code/) _– Phân tích chi tiết từng dòng có chú thích về bản triển khai hợp đồng ERC-20 của OpenZeppelin._
+- [ERC-20 với cơ chế bảo vệ](/developers/tutorials/erc20-with-safety-rails/) _– Cách thêm các biện pháp bảo vệ vào token ERC-20 để giúp người dùng tránh các sai lầm phổ biến._
+- [Một số thủ thuật được sử dụng bởi các token lừa đảo và cách phát hiện chúng](/developers/tutorials/scam-token-tricks/) _– Tìm hiểu sâu về các mô hình token ERC-20 lừa đảo và cách nhận diện chúng._

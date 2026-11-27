@@ -57,7 +57,7 @@ Lớp thực thi liên quan đến việc thực thi các giao dịch, chạy [M
 - hết hạn lịch sử mà các nút không còn cần phải phục vụ;
 - danh sách truy cập cấp độ khối cho phép các giao dịch được xác thực song song;
 - thị trường phí đa chiều định giá trạng thái, dữ liệu và tính toán một cách riêng biệt;
-- và chứng minh việc thực thi các khối lớp 1 (l1) bằng một zkEVM.
+- và chứng minh việc thực thi các khối lớp 1 (L1) bằng một zkEVM.
 
 #### Tài liệu đọc thêm {#background-reading-1}
 
@@ -72,7 +72,7 @@ Lớp thực thi liên quan đến việc thực thi các giao dịch, chạy [M
 - [EIP-8037: Tăng chi phí Gas tạo trạng thái](https://eips.ethereum.org/EIPS/eip-8037)
 - [EIP-7999: Thị trường phí đa chiều thống nhất](https://eips.ethereum.org/EIPS/eip-7999)
 - [EIP-7642: eth/69, hết hạn lịch sử và biên lai đơn giản hơn](https://eips.ethereum.org/EIPS/eip-7642)
-- [Triển khai zkEVM lớp 1 (l1): chứng minh theo thời gian thực](https://blog.ethereum.org/2025/07/10/realtime-proving)
+- [Triển khai zkEVM lớp 1 (L1): chứng minh theo thời gian thực](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
 ### Khả năng chống kiểm duyệt và xây dựng khối {#censorship-resistance-and-block-building}
 
@@ -128,7 +128,7 @@ Một nút Ethereum được yêu cầu phải chạy hai phần mềm:
 1. một ứng dụng khách đồng thuận để theo dõi phần đầu của Chuỗi khối, truyền bá các khối và xử lý logic đồng thuận
 2. một máy khách thực thi để hỗ trợ Máy ảo Ethereum và thực thi các giao dịch cũng như hợp đồng thông minh
 
-Các lớp máy khách mới đang được tạo nguyên mẫu song song với hai loại trên, bao gồm các máy khách chứng minh việc thực thi các khối lớp 1 (l1) và các ứng dụng khách đồng thuận tinh gọn được xây dựng xoay quanh các chữ ký hậu lượng tử.
+Các lớp máy khách mới đang được tạo nguyên mẫu song song với hai loại trên, bao gồm các máy khách chứng minh việc thực thi các khối lớp 1 (L1) và các ứng dụng khách đồng thuận tinh gọn được xây dựng xoay quanh các chữ ký hậu lượng tử.
 
 Xem [trang các nút và máy khách](/developers/docs/nodes-and-clients/) để biết thêm chi tiết về các nút và máy khách cũng như danh sách tất cả các bản triển khai máy khách hiện tại. Bạn cũng có thể tìm thấy lịch sử của tất cả các bản nâng cấp Ethereum trên [trang lịch sử](/ethereum-forks/).
 
@@ -146,31 +146,31 @@ Xem [trang các nút và máy khách](/developers/docs/nodes-and-clients/) để
 
 - [zkEVM](/roadmap/zkevm/)
 - [Ethproofs](https://ethproofs.org/)
-- [Triển khai zkEVM lớp 1 (l1): nền tảng bảo mật](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Triển khai zkEVM lớp 1 (L1): nền tảng bảo mật](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## Mở rộng quy mô và hiệu suất {#scaling-and-performance}
 
-Mở rộng quy mô Ethereum là một lĩnh vực trọng tâm lớn đối với các nhà nghiên cứu Ethereum, và nó chạy trên hai hướng cùng một lúc: tăng thông lượng của chính lớp 1 (l1), và chuyển việc thực thi sang các bản cuộn đăng tải dữ liệu của chúng lên Ethereum. Công việc hiện tại bao gồm tăng giới hạn gas của khối, định giá lại sự gia tăng trạng thái, mở rộng dung lượng khối dữ liệu cho dữ liệu Rollup, và giảm bớt những gì một nút phải lưu trữ và xác minh. Thông tin giới thiệu về việc mở rộng quy mô Ethereum có sẵn trên [trang mở rộng quy mô](/developers/docs/scaling/) và [lộ trình mở rộng quy mô](/roadmap/scaling/) của chúng tôi.
+Mở rộng quy mô Ethereum là một lĩnh vực trọng tâm lớn đối với các nhà nghiên cứu Ethereum, và nó chạy trên hai hướng cùng một lúc: tăng thông lượng của chính lớp 1 (L1), và chuyển việc thực thi sang các bản cuộn đăng tải dữ liệu của chúng lên Ethereum. Công việc hiện tại bao gồm tăng giới hạn gas của khối, định giá lại sự gia tăng trạng thái, mở rộng dung lượng khối dữ liệu cho dữ liệu Rollup, và giảm bớt những gì một nút phải lưu trữ và xác minh. Thông tin giới thiệu về việc mở rộng quy mô Ethereum có sẵn trên [trang mở rộng quy mô](/developers/docs/scaling/) và [lộ trình mở rộng quy mô](/roadmap/scaling/) của chúng tôi.
 
 ### Lớp 2 {#layer-2}
 
-Hiện có một số giao thức lớp 2 (l2) mở rộng quy mô Ethereum bằng cách sử dụng các kỹ thuật khác nhau để gom lô các giao dịch và bảo mật chúng trên lớp 1 (l1) của Ethereum. Nghiên cứu mở bao gồm việc giảm độ trễ và chi phí chứng minh, rút ngắn thời gian cần thiết để một giao dịch đạt được tính chung cuộc không cần tin cậy, và mang đến cho người dùng một trải nghiệm nhất quán duy nhất trên nhiều bản cuộn.
+Hiện có một số giao thức lớp 2 (L2) mở rộng quy mô Ethereum bằng cách sử dụng các kỹ thuật khác nhau để gom lô các giao dịch và bảo mật chúng trên lớp 1 (L1) của Ethereum. Nghiên cứu mở bao gồm việc giảm độ trễ và chi phí chứng minh, rút ngắn thời gian cần thiết để một giao dịch đạt được tính chung cuộc không cần tin cậy, và mang đến cho người dùng một trải nghiệm nhất quán duy nhất trên nhiều bản cuộn.
 
 #### Tài liệu đọc thêm {#background-reading-2}
 
-- [Giới thiệu về lớp 2 (l2)](/layer-2/)
-- [L2BEAT: tóm tắt về mở rộng quy mô](https://l2beat.com/scaling/summary)
+- [Giới thiệu về lớp 2](/layer-2/)
+- [ETHBEAT: tóm tắt về mở rộng quy mô](https://ethbeat.org/layer2s/summary)
 - [Lộ trình Ethereum lấy Rollup làm trung tâm](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Nghiên cứu gần đây {#recent-research-2}
 
-- [Lớp 2 (l2) trên Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: chi phí trên chuỗi](https://l2beat.com/scaling/costs)
+- [Ethresear.ch Lớp 2](https://ethresear.ch/c/layer-2/32)
+- [ETHBEAT: chi phí trên chuỗi](https://ethbeat.org/layer2s/costs)
 - [Xây dựng trên Ethereum vào năm 2026: những gì đã thay đổi](/latest/building-on-ethereum-in-2026/)
 
 ### Khả năng tương tác {#interoperability}
 
-Người dùng và tài sản nằm rải rác trên lớp 1 (l1) của Ethereum và nhiều lớp 2 (l2), và vấn đề nghiên cứu là cho phép họ di chuyển và hoạt động trên các Chuỗi đó mà không cần tin cậy vào một bên trung gian. Công việc ở đây bao gồm các giao dịch chuyển dựa trên ý định, định danh và đặt tên chuỗi chéo được tiêu chuẩn hóa, truyền thông điệp chung, và trừu tượng hóa Chuỗi ở cấp độ Ví. Điều này thay thế một mô hình trong đó các cầu nối lưu ký nắm giữ tài sản, và các cầu nối trong lịch sử từng là một trong những nguồn gây thất thoát lớn nhất trong hệ sinh thái, vì vậy tính bảo mật của bất kỳ cơ chế chuỗi chéo nào vẫn là một mối quan tâm trọng tâm.
+Người dùng và tài sản nằm rải rác trên lớp 1 (L1) của Ethereum và nhiều lớp 2 (L2), và vấn đề nghiên cứu là cho phép họ di chuyển và hoạt động trên các Chuỗi đó mà không cần tin cậy vào một bên trung gian. Công việc ở đây bao gồm các giao dịch chuyển dựa trên ý định, định danh và đặt tên chuỗi chéo được tiêu chuẩn hóa, truyền thông điệp chung, và trừu tượng hóa Chuỗi ở cấp độ Ví. Điều này thay thế một mô hình trong đó các cầu nối lưu ký nắm giữ tài sản, và các cầu nối trong lịch sử từng là một trong những nguồn gây thất thoát lớn nhất trong hệ sinh thái, vì vậy tính bảo mật của bất kỳ cơ chế chuỗi chéo nào vẫn là một mối quan tâm trọng tâm.
 
 #### Tài liệu đọc thêm {#background-reading-3}
 
@@ -226,7 +226,7 @@ Bảo mật là một chủ đề rộng có thể bao gồm việc ngăn chặn
 
 ### Mật mã học & ZKP {#cryptography--zkp}
 
-Bằng chứng không kiến thức (ZKP) và mật mã học rất quan trọng để xây dựng quyền riêng tư và bảo mật vào Ethereum và các ứng dụng của nó. Việc chứng minh không tri thức đã chuyển từ nghiên cứu sang cơ sở hạ tầng sản xuất: các trình chứng minh (provers) chứng minh các khối Ethereum thực tế hiện đang được đánh giá chuẩn công khai về độ trễ, chi phí và tính hợp lệ. Các vấn đề mở đã thay đổi tương ứng, hướng tới việc chứng minh các khối lớp 1 (l1) đủ nhanh để thực hiện trong thời gian thực, tính toán chặt chẽ về tính bảo mật của các hệ thống chứng minh đang được sử dụng, và chuẩn bị cho mật mã học hậu lượng tử.
+Bằng chứng không kiến thức (ZKP) và mật mã học rất quan trọng để xây dựng quyền riêng tư và bảo mật vào Ethereum và các ứng dụng của nó. Việc chứng minh không tri thức đã chuyển từ nghiên cứu sang cơ sở hạ tầng sản xuất: các trình chứng minh (provers) chứng minh các khối Ethereum thực tế hiện đang được đánh giá chuẩn công khai về độ trễ, chi phí và tính hợp lệ. Các vấn đề mở đã thay đổi tương ứng, hướng tới việc chứng minh các khối lớp 1 (L1) đủ nhanh để thực hiện trong thời gian thực, tính toán chặt chẽ về tính bảo mật của các hệ thống chứng minh đang được sử dụng, và chuẩn bị cho mật mã học hậu lượng tử.
 
 #### Tài liệu đọc thêm {#background-reading-6}
 
@@ -239,7 +239,7 @@ Bằng chứng không kiến thức (ZKP) và mật mã học rất quan trọng
 - [ZK trên Ethresear.ch](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Mật mã học trên Ethresear.ch](https://ethresear.ch/c/cryptography/28)
 - [Công cụ tính toán tính hợp lệ cho các hệ thống chứng minh zkEVM dựa trên Mã băm](https://github.com/ethereum/soundcalc)
-- [Triển khai zkEVM lớp 1 (l1): nền tảng bảo mật](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Triển khai zkEVM lớp 1 (L1): nền tảng bảo mật](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Ví {#wallets}
 
@@ -298,7 +298,7 @@ Nghiên cứu kinh tế học trong Ethereum nhìn chung theo hai hướng tiế
 
 ### Không gian khối và thị trường phí {#blockspace-fee-markets}
 
-Thị trường không gian khối quản lý việc đưa vào các giao dịch của người dùng cuối, trực tiếp trên Ethereum (lớp 1 (l1)) hoặc trên các mạng lưới được kết nối, ví dụ: các bản cuộn (lớp 2 (l2)). Trên Ethereum, các giao dịch được gửi đến thị trường phí được triển khai trong giao thức dưới dạng EIP-1559, bảo vệ Chuỗi khỏi thư rác và định giá sự tắc nghẽn. Trên cả hai lớp, các giao dịch có thể tạo ra các ngoại ứng, được gọi là Giá trị có thể trích xuất tối đa (MEV), điều này dẫn đến các cấu trúc thị trường mới để nắm bắt hoặc quản lý các ngoại ứng này. Công việc hiện tại mở rộng điều này sang việc định giá nhiều tài nguyên cùng một lúc, vì trạng thái, dữ liệu và tính toán bị tắc nghẽn một cách độc lập, và thay đổi ai là người lắp ráp các khối và theo những điều khoản nào.
+Thị trường không gian khối quản lý việc đưa vào các giao dịch của người dùng cuối, trực tiếp trên Ethereum (lớp 1 (L1)) hoặc trên các mạng lưới được kết nối, ví dụ: các bản cuộn (lớp 2 (L2)). Trên Ethereum, các giao dịch được gửi đến thị trường phí được triển khai trong giao thức dưới dạng EIP-1559, bảo vệ Chuỗi khỏi thư rác và định giá sự tắc nghẽn. Trên cả hai lớp, các giao dịch có thể tạo ra các ngoại ứng, được gọi là Giá trị có thể trích xuất tối đa (MEV), điều này dẫn đến các cấu trúc thị trường mới để nắm bắt hoặc quản lý các ngoại ứng này. Công việc hiện tại mở rộng điều này sang việc định giá nhiều tài nguyên cùng một lúc, vì trạng thái, dữ liệu và tính toán bị tắc nghẽn một cách độc lập, và thay đổi ai là người lắp ráp các khối và theo những điều khoản nào.
 
 #### Tài liệu đọc thêm {#background-reading-10}
 
@@ -385,9 +385,9 @@ Cần có thêm các công cụ phân tích dữ liệu và bảng điều khi�
 
 #### Nghiên cứu gần đây {#recent-research-14}
 
-- [Phân tích Dữ liệu của Nhóm Ưu đãi Mạnh mẽ](https://rig.ethereum.org/)
-- [Dữ liệu mở ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: tóm tắt về mở rộng quy mô](https://l2beat.com/scaling/summary)
+- [Phân tích dữ liệu của Robust Incentives Group](https://rig.ethereum.org/)
+- [Dữ liệu mở của ethPandaOps](https://ethpandaops.io/data/)
+- [ETHBEAT: tóm tắt về mở rộng quy mô](https://ethbeat.org/layer2s/summary)
 
 ## Ứng dụng và công cụ {#apps-and-tooling}
 

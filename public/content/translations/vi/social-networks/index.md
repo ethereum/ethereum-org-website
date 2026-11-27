@@ -1,6 +1,6 @@
 ---
 title: "Mạng xã hội phi tập trung"
-description: "Tổng quan về các mạng xã hội phi tập trung trên Ethereum"
+description: "Mạng xã hội phi tập trung là gì? Tìm hiểu cách các ứng dụng xã hội dựa trên Ethereum cho phép bạn, chứ không phải nền tảng, sở hữu danh tính, nội dung và khán giả của mình."
 lang: vi
 template: use-cases
 sidebarDepth: 2

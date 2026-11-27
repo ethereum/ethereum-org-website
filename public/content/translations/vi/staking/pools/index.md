@@ -1,6 +1,6 @@
 ---
-title: Đặt cọc thanh khoản & đặt cọc chung
-description: Tổng quan về đặt cọc thanh khoản và đặt cọc chung trên Ethereum
+title: "Đặt cọc thanh khoản & đặt cọc chung"
+description: "Đặt cọc thanh khoản là gì? Tìm hiểu cách các nhóm đặt cọc cho phép bạn kiếm phần thưởng ETH với bất kỳ số lượng ETH nào, thường nhận được một token thanh khoản mà bạn vẫn có thể sử dụng."
 lang: vi
 template: staking
 image: /images/staking/leslie-pool.png

@@ -1,6 +1,6 @@
 ---
-title: Tính chung cuộc trong một slot
-description: Giải thích về tính chung cuộc trong một slot
+title: "Tính chung cuộc trong một slot"
+description: "Tính chung cuộc trong một slot có thể giảm thời gian đạt tính chung cuộc của Ethereum từ khoảng 15 phút xuống còn một khe duy nhất. Tìm hiểu cách thức hoạt động và những sự đánh đổi liên quan."
 lang: vi
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Vấn đề với việc mở rộng quy mô tổng hợp bằng cách tăng s�
 
 ## Tiến độ hiện tại {#current-progress}
 
-SSF đang trong giai đoạn nghiên cứu. Nó dự kiến sẽ không được phát hành trong vài năm tới, có khả năng là sau các bản nâng cấp đáng kể khác như [cây Verkle](/roadmap/verkle-trees/) và [Danksharding](/roadmap/danksharding/).
+SSF đang trong giai đoạn nghiên cứu. Nó dự kiến sẽ không được triển khai trong vài năm tới, có khả năng là sau các bản nâng cấp quan trọng khác như một cây trạng thái mới (hiện được đề xuất dưới dạng cây nhị phân trong [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) và [danksharding](/roadmap/danksharding/).
 
 ## Đọc thêm {#further-reading}
 

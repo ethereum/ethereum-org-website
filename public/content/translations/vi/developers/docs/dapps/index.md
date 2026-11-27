@@ -1,6 +1,6 @@
 ---
 title: "Giới thiệu kỹ thuật về dapp"
-description:
+description: "Giới thiệu kỹ thuật về dapp: cách các ứng dụng phi tập trung kết hợp các hợp đồng thông minh trên Ethereum với một frontend, và cách chúng khác biệt so với các ứng dụng web."
 lang: vi
 ---
 
@@ -48,6 +48,7 @@ Một hợp đồng thông minh là mã tồn tại trên Chuỗi khối Ethereu
 <VideoWatch slug="what-is-a-dapp" />
 
 ## Các công cụ để tạo ứng dụng phi tập trung (dapp) {#dapp-tools}
+
 **Scaffold-ETH 2 _- Nhanh chóng thử nghiệm với Solidity bằng cách sử dụng một frontend thích ứng với hợp đồng thông minh của bạn._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
@@ -93,10 +94,9 @@ _Bạn biết một tài nguyên cộng đồng nào đó đã giúp ích cho b�
 - [Giới thiệu về ngăn xếp Ethereum](/developers/docs/ethereum-stack/)
 - [Các framework phát triển](/developers/docs/frameworks/)
 
-## Hướng dẫn: Xây dựng ứng dụng và frontend trên Ethereum {#tutorials}
+## Hướng dẫn: Xây dựng các ứng dụng và frontend trên Ethereum {#tutorials}
 
-- [Hướng dẫn chi tiết về Hợp đồng Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Một hướng dẫn có chú thích về các hợp đồng cốt lõi của Uniswap v2 giải thích cách nhà tạo lập thị trường tự động (AMM) hoạt động._
+- [Hướng dẫn chi tiết về hợp đồng Uniswap-v2](/developers/tutorials/uniswap-v2-annotated-code/) _– Hướng dẫn chi tiết có chú thích về các hợp đồng cốt lõi của Uniswap v2 giải thích cách nhà tạo lập thị trường tự động (AMM) hoạt động._
 - [Xây dựng giao diện người dùng cho hợp đồng của bạn](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) _– Cách xây dựng một frontend React + Wagmi hiện đại kết nối với hợp đồng thông minh của bạn._
-- [Hợp đồng thông minh Hello World cho người mới bắt đầu – Fullstack](/developers/tutorials/hello-world-smart-contract-fullstack/) _– Hướng dẫn từ đầu đến cuối: viết, triển khai và xây dựng frontend cho một hợp đồng thông minh đơn giản._
-- [Các thành phần máy chủ và tác nhân cho ứng dụng Web3](/developers/tutorials/server-components/) _– Cách viết các thành phần máy chủ TypeScript lắng nghe các sự kiện Chuỗi khối và phản hồi bằng các giao dịch._
-- [IPFS cho các giao diện người dùng phi tập trung](/developers/tutorials/ipfs-decentralized-ui/) _– Cách lưu trữ frontend của dapp của bạn trên IPFS để chống kiểm duyệt._
+- [Các thành phần máy chủ và tác nhân cho các ứng dụng Web3](/developers/tutorials/server-components/) _– Cách viết các thành phần máy chủ TypeScript lắng nghe các sự kiện Chuỗi khối và phản hồi bằng các giao dịch._
+- [IPFS cho các giao diện người dùng phi tập trung](/developers/tutorials/ipfs-decentralized-ui/) _– Cách lưu trữ frontend dapp của bạn trên IPFS để có khả năng chống kiểm duyệt._

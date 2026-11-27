@@ -315,7 +315,7 @@ contract Token {
 pragma solidity ^0.5.10;
 
 // Nhập các ký hiệu từ các tệp khác vào hợp đồng hiện tại.
-// Trong trường hợp này, một loạt các hợp đồng trợ giúp từ OpenZeppelin.
+// Trong trường hợp này, một loạt các hợp đồng hỗ trợ từ OpenZeppelin.
 // Tìm hiểu thêm: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#importing-other-source-files
 
 import "../node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -328,7 +328,7 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // Tìm hiểu thêm: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Sử dụng thư viện SafeMath của OpenZeppelin để thực hiện các phép toán số học một cách an toàn.
-    // Tìm hiểu thêm: https://docs.openzeppelin.com/contracts/2.x/api/math#SafeMath
+    // Tìm hiểu thêm: https://docs.openzeppelin.com/contracts/3.x/api/math#safemath
     using SafeMath for uint256;
 
     // Các biến trạng thái hằng số trong Solidity tương tự như các ngôn ngữ khác
@@ -348,13 +348,13 @@ contract CryptoPizza is IERC721, ERC165 {
     // Tạo một mảng trống chứa các struct Pizza
     Pizza[] public pizzas;
 
-    // Ánh xạ từ ID của pizza đến Địa chỉ của chủ sở hữu nó
+    // Ánh xạ từ ID của pizza đến địa chỉ của chủ sở hữu
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Ánh xạ từ Địa chỉ của chủ sở hữu đến số lượng token được sở hữu
+    // Ánh xạ từ địa chỉ của chủ sở hữu đến số lượng token được sở hữu
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Ánh xạ từ ID của token đến Địa chỉ được phê duyệt
+    // Ánh xạ từ ID của token đến địa chỉ được phê duyệt
     mapping(uint256 => address) pizzaApprovals;
 
     // Bạn có thể lồng các ánh xạ, ví dụ này ánh xạ chủ sở hữu đến các phê duyệt của người vận hành
@@ -376,12 +376,12 @@ contract CryptoPizza is IERC721, ERC165 {
         // Kiểm tra xem chủ sở hữu Pizza có giống với người dùng hiện tại không
         // Tìm hiểu thêm: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // lưu ý rằng address(0) là Địa chỉ không,
+        // lưu ý rằng address(0) là địa chỉ 0,
         // chỉ ra rằng pizza[id] chưa được phân bổ cho một người dùng cụ thể.
 
         assert(pizzaToOwner[id] == address(0));
 
-        // Ánh xạ Pizza cho chủ sở hữu
+        // Ánh xạ Pizza đến chủ sở hữu
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -395,7 +395,7 @@ contract CryptoPizza is IERC721, ERC165 {
         _createPizza(_name, randDna);
     }
 
-    // Tạo DNA ngẫu nhiên từ chuỗi (tên) và Địa chỉ của chủ sở hữu (người tạo)
+    // Tạo DNA ngẫu nhiên từ chuỗi (tên) và địa chỉ của chủ sở hữu (người tạo)
     function generateRandomDna(string memory _str, address _owner)
         public
         // Các hàm được đánh dấu là `pure` cam kết không đọc hoặc sửa đổi trạng thái
@@ -403,7 +403,7 @@ contract CryptoPizza is IERC721, ERC165 {
         pure
         returns (uint256)
     {
-        // Tạo uint ngẫu nhiên từ chuỗi (tên) + Địa chỉ (chủ sở hữu)
+        // Tạo uint ngẫu nhiên từ chuỗi (tên) + địa chỉ (chủ sở hữu)
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
@@ -419,7 +419,7 @@ contract CryptoPizza is IERC721, ERC165 {
         returns (uint256[] memory)
     {
         // Sử dụng vị trí lưu trữ `memory` để lưu trữ các giá trị chỉ trong
-        // vòng đời của lần gọi hàm này.
+        // vòng đời của lệnh gọi hàm này.
         // Tìm hiểu thêm: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Chuyển nhượng Pizza và quyền sở hữu sang Địa chỉ khác
+    // Chuyển nhượng Pizza và quyền sở hữu sang địa chỉ khác
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -449,11 +449,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Chuyển nhượng an toàn quyền sở hữu của một ID token đã cho sang một Địa chỉ khác
-     * Nếu Địa chỉ đích là một hợp đồng, nó phải triển khai `onERC721Received`,
+     * Chuyển nhượng an toàn quyền sở hữu của một ID token nhất định sang một địa chỉ khác
+     * Nếu địa chỉ đích là một hợp đồng, nó phải triển khai `onERC721Received`,
      * hàm này được gọi khi chuyển nhượng an toàn và trả về giá trị ma thuật
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * nếu không, giao dịch chuyển nhượng sẽ bị hoàn tác.
+     * nếu không, việc chuyển nhượng sẽ bị hoàn tác.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +463,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Chuyển nhượng an toàn quyền sở hữu của một ID token đã cho sang một Địa chỉ khác
-     * Nếu Địa chỉ đích là một hợp đồng, nó phải triển khai `onERC721Received`,
+     * Chuyển nhượng an toàn quyền sở hữu của một ID token nhất định sang một địa chỉ khác
+     * Nếu địa chỉ đích là một hợp đồng, nó phải triển khai `onERC721Received`,
      * hàm này được gọi khi chuyển nhượng an toàn và trả về giá trị ma thuật
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * nếu không, giao dịch chuyển nhượng sẽ bị hoàn tác.
+     * nếu không, việc chuyển nhượng sẽ bị hoàn tác.
      */
     function safeTransferFrom(
         address from,
@@ -480,8 +480,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Hàm nội bộ để gọi `onERC721Received` trên một Địa chỉ đích
-     * Lời gọi không được thực thi nếu Địa chỉ đích không phải là một hợp đồng
+     * Hàm nội bộ để gọi `onERC721Received` trên một địa chỉ đích
+     * Lệnh gọi không được thực thi nếu địa chỉ đích không phải là một hợp đồng
      */
     function _checkOnERC721Received(
         address from,
@@ -517,7 +517,7 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Trả về số lượng Pizza theo Địa chỉ
+    // Trả về số lượng Pizza theo địa chỉ
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
@@ -529,14 +529,14 @@ contract CryptoPizza is IERC721, ERC165 {
         return owner;
     }
 
-    // Phê duyệt Địa chỉ khác để chuyển nhượng quyền sở hữu Pizza
+    // Phê duyệt địa chỉ khác để chuyển nhượng quyền sở hữu Pizza
     function approve(address _to, uint256 _pizzaId) public {
         require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Trả về Địa chỉ được phê duyệt cho Pizza cụ thể
+    // Trả về địa chỉ được phê duyệt cho Pizza cụ thể
     function getApproved(uint256 _pizzaId)
         public
         view
@@ -547,8 +547,8 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Hàm private để xóa phê duyệt hiện tại của một ID token đã cho
-     * Hoàn tác nếu Địa chỉ đã cho không thực sự là chủ sở hữu của token
+     * Hàm riêng tư để xóa phê duyệt hiện tại của một ID token nhất định
+     * Hoàn tác nếu địa chỉ được cung cấp không thực sự là chủ sở hữu của token
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
         require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
@@ -559,7 +559,7 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /*
-     * Thiết lập hoặc hủy thiết lập phê duyệt của một người vận hành đã cho
+     * Đặt hoặc hủy phê duyệt của một người vận hành nhất định
      * Một người vận hành được phép chuyển nhượng tất cả các token của người gửi thay mặt cho họ
      */
     function setApprovalForAll(address to, bool approved) public {
@@ -568,7 +568,7 @@ contract CryptoPizza is IERC721, ERC165 {
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Cho biết liệu một người vận hành có được phê duyệt bởi một chủ sở hữu đã cho hay không
+    // Cho biết liệu một người vận hành có được phê duyệt bởi một chủ sở hữu nhất định hay không
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -590,7 +590,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return owner != address(0);
     }
 
-    // Kiểm tra xem Địa chỉ có phải là chủ sở hữu hoặc được phê duyệt để chuyển nhượng Pizza không
+    // Kiểm tra xem địa chỉ có phải là chủ sở hữu hoặc được phê duyệt để chuyển nhượng Pizza không
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
@@ -598,14 +598,14 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         address owner = pizzaToOwner[pizzaId];
         // Vô hiệu hóa kiểm tra solium vì
-        // https://github.com/duaraghav8/Solium/issues/175
+        // https://github.com/duaraghav8/Ethlint/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
             this.getApproved(pizzaId) == spender ||
             this.isApprovedForAll(owner, spender));
     }
 
-    // Kiểm tra xem Pizza có phải là duy nhất và chưa tồn tại không
+    // Kiểm tra xem Pizza có phải là duy nhất và chưa tồn tại hay không
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -621,14 +621,14 @@ contract CryptoPizza is IERC721, ERC165 {
         _;
     }
 
-    // Trả về việc Địa chỉ đích có phải là một hợp đồng hay không
+    // Trả về liệu địa chỉ đích có phải là một hợp đồng hay không
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Hiện tại không có cách nào tốt hơn để kiểm tra xem có hợp đồng trong một Địa chỉ hay không
-        // ngoài việc kiểm tra kích thước của mã tại Địa chỉ đó.
+        // Hiện tại không có cách nào tốt hơn để kiểm tra xem có hợp đồng trong một địa chỉ hay không
+        // ngoài việc kiểm tra kích thước của mã tại địa chỉ đó.
         // Xem https://ethereum.stackexchange.com/a/14016/36603
         // để biết thêm chi tiết về cách thức hoạt động của nó.
-        // TODO Kiểm tra lại điều này trước bản phát hành Serenity, vì tất cả các Địa chỉ sẽ là
+        // TODO Kiểm tra lại điều này trước bản phát hành Serenity, vì tất cả các địa chỉ sẽ là
         // các hợp đồng sau đó.
         // solium-disable-next-line security/no-inline-assembly
         assembly {

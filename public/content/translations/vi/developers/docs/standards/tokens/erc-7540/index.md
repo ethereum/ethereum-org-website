@@ -1,21 +1,21 @@
 ---
-title: Tiêu chuẩn kho tiền được token hóa bất đồng bộ ERC-7540
-description: Một bản mở rộng của ERC-4626 bổ sung các luồng nạp và quy đổi bất đồng bộ cho các kho tiền được token hóa.
+title: "Tiêu chuẩn kho tiền được token hóa bất đồng bộ ERC-7540"
+description: "Một bản mở rộng của ERC-4626 bổ sung các luồng nạp và quy đổi bất đồng bộ cho các kho tiền được token hóa."
 lang: vi
 ---
 
 ## Giới thiệu {#introduction}
 
-ERC-7540 mở rộng [Tiêu chuẩn kho tiền được token hóa ERC-4626](/developers/docs/standards/tokens/erc-4626/) bằng cách bổ sung hỗ trợ cho các luồng nạp và quy đổi bất đồng bộ. Nó giới thiệu một mô hình yêu cầu-rồi-nhận (request-then-claim): người dùng trước tiên gửi một yêu cầu (khóa tài sản hoặc cổ phần của họ), sau đó yêu cầu nhận kết quả sau khi kho tiền đã xử lý nó.
+ERC-7540 mở rộng [Tiêu chuẩn kho tiền được token hóa ERC-4626](/developers/docs/standards/tokens/erc-4626/) bằng cách thêm hỗ trợ cho các luồng nạp và quy đổi bất đồng bộ. Nó giới thiệu một mô hình yêu cầu rồi yêu cầu nhận: người dùng trước tiên gửi một yêu cầu (giao tài sản hoặc cổ phần của họ cho kho tiền), sau đó yêu cầu nhận kết quả sau khi kho tiền đã xử lý nó.
 
 Điều này là cần thiết khi một kho tiền không thể quyết toán ngay lập tức trong một giao dịch, ví dụ:
 
 - Các giao thức tài sản thế giới thực (RWA) như trái phiếu kho bạc được token hóa, tín dụng tư nhân và các tài sản khác có chu kỳ quyết toán T+1 hoặc T+2
 - Cho vay dưới mức thế chấp nơi các đánh giá tín dụng diễn ra ngoài chuỗi
 - Các chiến lược kho tiền chuỗi chéo nơi việc bắc cầu gây ra sự chậm trễ
-- Các token staking thanh khoản (LST) có thời gian hủy liên kết (unbonding)
+- Các token staking thanh khoản có thời gian chờ rút
 
-Các kho tiền có thể chọn chỉ bất đồng bộ khi nạp, chỉ khi quy đổi, hoặc cả hai. Sự linh hoạt này cho phép các nhà phát triển kho tiền chỉ thêm các luồng bất đồng bộ ở nơi mà chiến lược cơ sở yêu cầu, trong khi vẫn giữ cho phía còn lại đồng bộ.
+Các kho tiền có thể chọn chỉ bất đồng bộ đối với các khoản nạp, chỉ các khoản quy đổi, hoặc cả hai. Sự linh hoạt này cho phép các nhà phát triển kho tiền chỉ thêm các luồng bất đồng bộ ở nơi mà chiến lược cơ sở yêu cầu, trong khi vẫn giữ cho phía bên kia đồng bộ.
 
 ## Điều kiện tiên quyết {#prerequisites}
 
@@ -25,21 +25,21 @@ Các kho tiền có thể chọn chỉ bất đồng bộ khi nạp, chỉ khi q
 
 Trong ERC-4626, một khoản nạp được quyết toán một cách nguyên tử: nhà đầu tư gửi tài sản và nhận lại cổ phần trong một giao dịch duy nhất.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 chia quá trình này thành hai bước. Nhà đầu tư trước tiên gọi `requestDeposit()` để khóa tài sản, sau đó chờ người quản lý kho tiền xử lý yêu cầu. Khi đã được hoàn thành, nhà đầu tư gọi `deposit()` để yêu cầu nhận cổ phần của họ. Tỷ giá hối đoái được xác định tại thời điểm hoàn thành, không phải tại thời điểm yêu cầu.
+ERC-7540 chia quá trình này thành hai bước. Nhà đầu tư trước tiên gọi `requestDeposit()`, hàm này chuyển tài sản của họ vào kho tiền, sau đó chờ kho tiền xử lý yêu cầu. Cách thức và thời điểm điều đó xảy ra tùy thuộc vào kho tiền, ví dụ như khi một quá trình quyết toán ngoài chuỗi hoàn tất. Sau khi được hoàn thành, nhà đầu tư gọi `deposit()` để yêu cầu nhận cổ phần của họ. Tỷ giá hối đoái không được cố định tại thời điểm yêu cầu: kho tiền sẽ thiết lập nó, thường là khi nó hoàn thành yêu cầu, vì vậy số cổ phần nhận được có thể khác với những gì `convertToShares()` đã trả về khi yêu cầu được thực hiện.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-Luồng quy đổi cũng hoạt động theo cách tương tự: `requestRedeem()` khóa cổ phần, và khi đã được hoàn thành, nhà đầu tư gọi `redeem()` để yêu cầu nhận tài sản.
+Luồng quy đổi cũng hoạt động theo cách tương tự: `requestRedeem()` lấy cổ phần từ nhà đầu tư, và sau khi được hoàn thành, nhà đầu tư gọi `redeem()` để yêu cầu nhận tài sản.
 
 ## Các hàm và tính năng của ERC-7540 {#body}
 
-ERC-7540 kế thừa toàn bộ giao diện ERC-4626 nhưng tái sử dụng `deposit`/`mint`/`withdraw`/`redeem` làm các hàm yêu cầu nhận. Các hàm mới `requestDeposit` và `requestRedeem` xử lý bước yêu cầu ban đầu.
+ERC-7540 kế thừa toàn bộ giao diện ERC-4626 nhưng chuyển đổi mục đích sử dụng của `deposit`/`mint`/`withdraw`/`redeem` thành các hàm yêu cầu nhận. Các hàm `requestDeposit` và `requestRedeem` mới xử lý bước yêu cầu ban đầu.
 
-Mỗi yêu cầu di chuyển qua ba trạng thái: đang chờ xử lý (đã gửi, đang chờ xử lý), có thể yêu cầu nhận (đã hoàn thành và định giá), và đã yêu cầu nhận (nhà đầu tư đã thu thập cổ phần hoặc tài sản của họ).
+Mỗi yêu cầu di chuyển qua ba trạng thái: đang chờ xử lý (đã gửi, đang chờ xử lý), có thể yêu cầu nhận (đã hoàn thành và được định giá), và đã yêu cầu nhận (nhà đầu tư đã thu nhận cổ phần hoặc tài sản của họ). Một kho tiền có thể làm cho một yêu cầu trở nên có thể yêu cầu nhận ngay lập tức, bỏ qua trạng thái đang chờ xử lý, nhưng việc yêu cầu nhận luôn là một lệnh gọi riêng biệt. Tiêu chuẩn không định nghĩa sự kiện nào cho thời điểm một yêu cầu trở nên có thể yêu cầu nhận.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Luồng yêu cầu nạp {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Khi một yêu cầu nạp trở nên có thể yêu cầu nhận, người dùn
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Khóa `shares` từ `owner` và gửi một yêu cầu quy đổi. Địa chỉ `controller` nhận quyền kiểm soát yêu cầu.
+Nắm quyền kiểm soát `shares` từ `owner` và gửi một yêu cầu quy đổi. Kho tiền có thể giữ các cổ phần cho đến khi yêu cầu được yêu cầu nhận hoặc đốt chúng ngay lập tức. Địa chỉ `controller` nhận quyền kiểm soát yêu cầu.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

@@ -1,6 +1,6 @@
 ---
 title: "Thiết kế và UX trong Web3"
-description: "Giới thiệu về thiết kế và nghiên cứu UX trong không gian Web3 và Ethereum"
+description: "Giới thiệu về thiết kế và UX trong Web3: các nghiên cứu, mô hình và tài nguyên giúp bạn xây dựng các ứng dụng Ethereum dễ sử dụng, an toàn và rõ ràng."
 lang: vi
 ---
 

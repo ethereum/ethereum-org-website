@@ -165,7 +165,7 @@ Kiểm thử dựa trên thuộc tính là quá trình kiểm tra xem một hợ
 
 Một bộ phân tích tĩnh lấy mã nguồn của một hợp đồng thông minh làm đầu vào và xuất ra kết quả tuyên bố xem một hợp đồng có thỏa mãn một thuộc tính hay không. Không giống như phân tích động, phân tích tĩnh không liên quan đến việc thực thi một hợp đồng để phân tích tính chính xác của nó. Thay vào đó, phân tích tĩnh suy luận về tất cả các đường dẫn có thể có mà một hợp đồng thông minh có thể thực hiện trong quá trình thực thi (tức là bằng cách kiểm tra cấu trúc của mã nguồn để xác định ý nghĩa của nó đối với hoạt động của hợp đồng trong thời gian chạy).
 
-[Linting](https://www.perforce.com/blog/qac/what-is-linting) và [kiểm thử tĩnh](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) là các phương pháp phổ biến để chạy phân tích tĩnh trên các hợp đồng. Cả hai đều yêu cầu phân tích các biểu diễn cấp thấp của việc thực thi hợp đồng, chẳng hạn như [cây cú pháp trừu tượng (abstract syntax trees)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) và [đồ thị luồng điều khiển (control flow graphs)](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/) do trình biên dịch xuất ra.
+[Linting](https://www.perforce.com/blog/qac/what-is-linting) và [kiểm thử tĩnh](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis) là các phương pháp phổ biến để chạy phân tích tĩnh trên các hợp đồng. Cả hai đều yêu cầu phân tích các biểu diễn cấp thấp của việc thực thi hợp đồng, chẳng hạn như [cây cú pháp trừu tượng (abstract syntax trees)](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree) và [đồ thị luồng điều khiển (control flow graphs)](https://www.geeksforgeeks.org/software-engineering/software-engineering-control-flow-graph-cfg/) do trình biên dịch xuất ra.
 
 Trong hầu hết các trường hợp, phân tích tĩnh rất hữu ích để phát hiện các vấn đề an toàn như sử dụng các cấu trúc không an toàn, lỗi cú pháp hoặc vi phạm các tiêu chuẩn mã hóa trong mã của hợp đồng. Tuy nhiên, các bộ phân tích tĩnh được biết là thường không đáng tin cậy trong việc phát hiện các lỗ hổng sâu hơn và có thể tạo ra quá nhiều kết quả dương tính giả.
 
@@ -238,7 +238,7 @@ Không giống như kiểm thử, xác minh hình thức có thể được sử
 
 Như đã đề cập, kiểm thử nghiêm ngặt hiếm khi có thể đảm bảo không có lỗi trong một hợp đồng; các phương pháp tiếp cận xác minh hình thức có thể cung cấp những đảm bảo mạnh mẽ hơn về tính chính xác nhưng hiện tại rất khó sử dụng và phát sinh chi phí đáng kể.
 
-Tuy nhiên, bạn có thể tăng thêm khả năng phát hiện các lỗ hổng của hợp đồng bằng cách nhờ đánh giá mã độc lập. [Kiểm toán hợp đồng thông minh](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/) và [tiền thưởng tìm lỗi](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) là hai cách để nhờ người khác phân tích các hợp đồng của bạn.
+Tuy nhiên, bạn có thể tăng thêm khả năng phát hiện các lỗ hổng của hợp đồng bằng cách nhờ đánh giá mã độc lập. [Kiểm toán hợp đồng thông minh](https://web.archive.org/web/20260410153159/https://immunebytes.com/blog/what-is-a-smart-contract-audit/) và [tiền thưởng tìm lỗi](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) là hai cách để nhờ người khác phân tích các hợp đồng của bạn.
 
 Các cuộc kiểm toán được thực hiện bởi các kiểm toán viên có kinh nghiệm trong việc tìm kiếm các trường hợp lỗ hổng bảo mật và các thực tiễn phát triển kém trong hợp đồng thông minh. Một cuộc kiểm toán thường sẽ bao gồm kiểm thử (và có thể là xác minh hình thức) cũng như đánh giá thủ công toàn bộ cơ sở mã.
 
@@ -276,7 +276,7 @@ Sự khác biệt lớn nhất là các chương trình tiền thưởng tìm l�
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter để thực thi các thực tiễn tốt nhất về phong cách và bảo mật cho ngôn ngữ lập trình hợp đồng thông minh Solidity._
 
-- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Bộ phân tích tĩnh dựa trên Rust được thiết kế đặc biệt cho bảo mật và phát triển hợp đồng thông minh Web3._
+- **[Cyfrin Aderyn](https://aderyn.cyfrin.io/overview)** - _Bộ phân tích tĩnh dựa trên Rust được thiết kế đặc biệt cho bảo mật và phát triển hợp đồng thông minh Web3._
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Framework phân tích tĩnh dựa trên Python với các trình phát hiện lỗ hổng và chất lượng mã, các trình in để trích xuất thông tin hữu ích từ mã và hỗ trợ viết các mô-đun con tùy chỉnh._
 
@@ -298,10 +298,9 @@ Sự khác biệt lớn nhất là các chương trình tiền thưởng tìm l�
 
 - [Tổng quan và so sánh các sản phẩm kiểm thử khác nhau](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Cách sử dụng Echidna để kiểm thử hợp đồng thông minh](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Cách sử dụng Manticore để tìm lỗi hợp đồng thông minh](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Cách sử dụng Slither để tìm lỗi hợp đồng thông minh](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Cách tạo mock cho các hợp đồng Solidity để kiểm thử](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Cách chạy kiểm thử đơn vị trong Solidity bằng Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
+- [Cách chạy các bài kiểm thử đơn vị trong Solidity bằng Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Đọc thêm {#further-reading}
 

@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: "Tìm hiểu về bản nâng cấp giao thức Fusaka"
+description: "Fusaka đã chính thức ra mắt vào ngày 3 tháng 12 năm 2025. Tìm hiểu những thay đổi trong bản nâng cấp Ethereum này, bao gồm PeerDAS, giúp mở rộng khối dữ liệu để các giao dịch lớp 2 rẻ hơn."
 lang: vi
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -27,11 +27,11 @@ Bản nâng cấp Fusaka chỉ là một bước tiến duy nhất trong các m�
 
 #### PeerDAS {#peerdas}
 
-Đây là _điểm nhấn chính_ của Phân nhánh Fusaka, tính năng chính được thêm vào trong bản nâng cấp này. Các lớp 2 (l2) hiện tại đăng dữ liệu của chúng lên Ethereum dưới dạng các khối dữ liệu, loại dữ liệu tạm thời được tạo riêng cho các lớp 2 (l2). Trước Fusaka, mọi nút đầy đủ phải lưu trữ mọi khối dữ liệu để đảm bảo rằng dữ liệu đó tồn tại. Khi thông lượng khối dữ liệu tăng lên, việc phải tải xuống tất cả dữ liệu này trở nên tiêu tốn tài nguyên một cách không thể duy trì được.
+Đây là _điểm nhấn chính_ của Phân nhánh Fusaka, tính năng chính được thêm vào trong bản nâng cấp này. Các lớp 2 (L2) hiện tại đăng dữ liệu của chúng lên Ethereum dưới dạng các khối dữ liệu, loại dữ liệu tạm thời được tạo riêng cho các lớp 2 (L2). Trước Fusaka, mọi nút đầy đủ phải lưu trữ mọi khối dữ liệu để đảm bảo rằng dữ liệu đó tồn tại. Khi thông lượng khối dữ liệu tăng lên, việc phải tải xuống tất cả dữ liệu này trở nên tiêu tốn tài nguyên một cách không thể duy trì được.
 
 Với [việc lấy mẫu tính khả dụng của dữ liệu](https://notes.ethereum.org/@fradamt/das-fork-choice), thay vì phải lưu trữ toàn bộ dữ liệu của khối dữ liệu, mỗi nút sẽ chịu trách nhiệm cho một tập hợp con của dữ liệu khối dữ liệu. Các khối dữ liệu được phân phối ngẫu nhiên đồng đều trên các nút trong mạng lưới với mỗi nút đầy đủ chỉ giữ 1/8 dữ liệu, do đó cho phép mở rộng quy mô theo lý thuyết lên đến 8 lần. Để đảm bảo tính khả dụng của dữ liệu, bất kỳ phần dữ liệu nào cũng có thể được tái tạo lại từ bất kỳ 50% dữ liệu hiện có nào của toàn bộ dữ liệu bằng các phương pháp giúp giảm xác suất dữ liệu sai hoặc bị thiếu xuống mức không đáng kể về mặt mật mã học (\~một phần 10<sup>20</sup> đến một phần 10<sup>24</sup>).
 
-Điều này giữ cho các yêu cầu về phần cứng và băng thông đối với các nút ở mức có thể duy trì được trong khi cho phép mở rộng khối dữ liệu, dẫn đến quy mô lớn hơn với mức phí nhỏ hơn cho các lớp 2 (l2).
+Điều này giữ cho các yêu cầu về phần cứng và băng thông đối với các nút ở mức có thể duy trì được trong khi cho phép mở rộng khối dữ liệu, dẫn đến quy mô lớn hơn với mức phí nhỏ hơn cho các lớp 2 (L2).
 
 [Tìm hiểu thêm về PeerDAS](/roadmap/fusaka/peerdas/)
 
@@ -43,11 +43,11 @@ Với [việc lấy mẫu tính khả dụng của dữ liệu](https://notes.et
 
 #### Các Phân nhánh chỉ dành cho tham số khối dữ liệu (Blob-Parameter-Only) {#blob-parameter-only-forks}
 
-Các lớp 2 (l2) mở rộng Ethereum - khi mạng lưới của chúng phát triển, chúng cần đăng nhiều dữ liệu hơn lên Ethereum. Điều này có nghĩa là Ethereum sẽ cần tăng số lượng khối dữ liệu có sẵn cho chúng theo thời gian. Mặc dù PeerDAS cho phép mở rộng dữ liệu khối dữ liệu, nhưng việc này cần được thực hiện dần dần và an toàn.
+Các lớp 2 (L2) mở rộng Ethereum - khi mạng lưới của chúng phát triển, chúng cần đăng nhiều dữ liệu hơn lên Ethereum. Điều này có nghĩa là Ethereum sẽ cần tăng số lượng khối dữ liệu có sẵn cho chúng theo thời gian. Mặc dù PeerDAS cho phép mở rộng dữ liệu khối dữ liệu, nhưng việc này cần được thực hiện dần dần và an toàn.
 
 Bởi vì Ethereum là mã chạy trên hàng nghìn nút độc lập yêu cầu sự đồng thuận về cùng các quy tắc, chúng ta không thể đơn giản đưa ra các thay đổi như tăng số lượng khối dữ liệu theo cách bạn triển khai một bản cập nhật trang web. Bất kỳ thay đổi quy tắc nào cũng phải là một bản nâng cấp có sự phối hợp, trong đó mọi nút, máy khách và phần mềm trình xác thực đều nâng cấp trước cùng một khối được xác định trước.
 
-Các bản nâng cấp phối hợp này thường bao gồm rất nhiều thay đổi, yêu cầu thử nghiệm nhiều và điều đó cần có thời gian. Để thích ứng nhanh hơn với nhu cầu khối dữ liệu thay đổi của lớp 2 (l2), các Phân nhánh chỉ dành cho tham số khối dữ liệu giới thiệu một cơ chế để tăng các khối dữ liệu mà không cần phải chờ đợi lịch trình nâng cấp đó.
+Các bản nâng cấp phối hợp này thường bao gồm rất nhiều thay đổi, yêu cầu thử nghiệm nhiều và điều đó cần có thời gian. Để thích ứng nhanh hơn với nhu cầu khối dữ liệu thay đổi của lớp 2 (L2), các Phân nhánh chỉ dành cho tham số khối dữ liệu giới thiệu một cơ chế để tăng các khối dữ liệu mà không cần phải chờ đợi lịch trình nâng cấp đó.
 
 Các Phân nhánh chỉ dành cho tham số khối dữ liệu có thể được thiết lập bởi các máy khách, tương tự như các cấu hình khác như giới hạn gas. Giữa các bản nâng cấp lớn của Ethereum, các máy khách có thể đồng ý tăng các khối dữ liệu `target` và `max` lên ví dụ như 9 và 12, sau đó các nhà điều hành nút sẽ cập nhật để tham gia vào Phân nhánh nhỏ đó. Các Phân nhánh chỉ dành cho tham số khối dữ liệu này có thể được cấu hình bất cứ lúc nào.
 
@@ -61,12 +61,12 @@ Nguồn biểu đồ: [Ethereum Blobs - @hildobby, Dune Analytics](https://dune.
 
 #### Phí cơ sở của khối dữ liệu bị giới hạn bởi chi phí thực thi {#blob-base-fee-bounded-by-execution-costs}
 
-Các lớp 2 (l2) thanh toán hai khoản phí khi chúng đăng dữ liệu: phí blob và Gas thực thi cần thiết để xác minh các khối dữ liệu đó. Nếu Gas thực thi chiếm ưu thế, cuộc đấu giá phí blob có thể giảm mạnh xuống còn 1 Wei và không còn là tín hiệu giá nữa.
+Các lớp 2 (L2) thanh toán hai khoản phí khi chúng đăng dữ liệu: phí blob và Gas thực thi cần thiết để xác minh các khối dữ liệu đó. Nếu Gas thực thi chiếm ưu thế, cuộc đấu giá phí blob có thể giảm mạnh xuống còn 1 Wei và không còn là tín hiệu giá nữa.
 
 EIP-7918 ghim một mức giá dự trữ theo tỷ lệ dưới mỗi khối dữ liệu. Khi mức dự trữ cao hơn phí cơ sở danh nghĩa của khối dữ liệu, thuật toán điều chỉnh phí sẽ coi khối đó là vượt quá mục tiêu và ngừng đẩy phí xuống, đồng thời cho phép nó tăng lên bình thường. Kết quả là:
 
 - thị trường phí blob luôn phản ứng với tình trạng tắc nghẽn
-- các lớp 2 (l2) trả ít nhất một phần có ý nghĩa cho khối lượng tính toán mà chúng áp đặt lên các nút
+- các lớp 2 (L2) trả ít nhất một phần có ý nghĩa cho khối lượng tính toán mà chúng áp đặt lên các nút
 - các đợt tăng đột biến phí cơ sở trên lớp thực thi (EL) không còn có thể khiến phí blob bị kẹt ở mức 1 Wei
 
 **Tài nguyên**:
@@ -74,7 +74,7 @@ EIP-7918 ghim một mức giá dự trữ theo tỷ lệ dưới mỗi khối d�
 - [Đặc tả kỹ thuật EIP-7918](https://eips.ethereum.org/EIPS/eip-7918)
 - [Giải thích trên Storybook](https://notes.ethereum.org/@anderselowsson/AIG)
 
-### Mở rộng lớp 1 (l1) {#scale-l1}
+### Mở rộng lớp 1 (L1) {#scale-l1}
 
 #### Hết hạn lịch sử và biên lai đơn giản hơn {#history-expiry}
 
@@ -161,11 +161,11 @@ Tính năng này thêm một lệnh EVM nhỏ, **đếm số không ở đầu (
 
 #### Hợp đồng tiền biên dịch hỗ trợ đường cong secp256r1 {#secp256r1-precompile}
 
-Giới thiệu một trình kiểm tra chữ ký secp256r1 (P-256) kiểu mã khóa, được tích hợp sẵn tại Địa chỉ cố định `0x100` sử dụng cùng định dạng lệnh gọi đã được nhiều lớp 2 (l2) áp dụng và khắc phục các trường hợp ngoại lệ, để các hợp đồng được viết cho các môi trường đó hoạt động trên lớp 1 (l1) mà không cần thay đổi.
+Giới thiệu một trình kiểm tra chữ ký secp256r1 (P-256) kiểu mã khóa, được tích hợp sẵn tại Địa chỉ cố định `0x100` sử dụng cùng định dạng lệnh gọi đã được nhiều lớp 2 (L2) áp dụng và khắc phục các trường hợp ngoại lệ, để các hợp đồng được viết cho các môi trường đó hoạt động trên lớp 1 (L1) mà không cần thay đổi.
 
 Nâng cấp UX! Đối với người dùng, điều này mở khóa việc ký gốc trên thiết bị và các mã khóa. Các ví có thể khai thác trực tiếp Apple Secure Enclave, kho khóa Android, các mô-đun bảo mật phần cứng (HSM) và FIDO2/WebAuthn - không cần cụm từ hạt giống, tiếp nhận người dùng mượt mà hơn và các luồng đa yếu tố mang lại cảm giác giống như các ứng dụng hiện đại. Điều này dẫn đến UX tốt hơn, phục hồi dễ dàng hơn và các mô hình trừu tượng hóa tài khoản phù hợp với những gì hàng tỷ thiết bị đã làm.
 
-Đối với các nhà phát triển, nó nhận đầu vào 160 byte và trả về đầu ra 32 byte, giúp dễ dàng chuyển đổi các thư viện hiện có và các hợp đồng lớp 2 (l2). Về mặt kỹ thuật, nó bao gồm các kiểm tra điểm ở vô cực và so sánh mô-đun để loại bỏ các trường hợp ngoại lệ phức tạp mà không làm hỏng các trình gọi hợp lệ.
+Đối với các nhà phát triển, nó nhận đầu vào 160 byte và trả về đầu ra 32 byte, giúp dễ dàng chuyển đổi các thư viện hiện có và các hợp đồng lớp 2 (L2). Về mặt kỹ thuật, nó bao gồm các kiểm tra điểm ở vô cực và so sánh mô-đun để loại bỏ các trường hợp ngoại lệ phức tạp mà không làm hỏng các trình gọi hợp lệ.
 
 **Tài nguyên**:
 
@@ -205,9 +205,9 @@ Ngựa vằn là "linh vật" do nhà phát triển chọn cho Fusaka vì các s
 
 The Merge vào năm 2022 [đã sử dụng một con gấu trúc](https://x.com/hwwonx/status/1431970802040127498) làm linh vật để báo hiệu sự kết hợp của lớp thực thi & lớp đồng thuận. Kể từ đó, các linh vật đã được chọn một cách không chính thức cho mỗi Phân nhánh và hiển thị dưới dạng nghệ thuật ASCII trong nhật ký máy khách tại thời điểm nâng cấp. Đó chỉ là một cách thú vị để ăn mừng.
 
-### Những cải tiến nào được bao gồm cho việc mở rộng lớp 2 (l2)? {#what-improvements-are-included-for-l2-scaling}
+### Những cải tiến nào được bao gồm cho việc mở rộng lớp 2 (L2)? {#what-improvements-are-included-for-l2-scaling}
 
-[PeerDAS](/roadmap/fusaka/peerdas) là tính năng chính của Phân nhánh. Nó triển khai việc lấy mẫu tính khả dụng của dữ liệu (DAS) giúp mở khóa khả năng mở rộng lớn hơn cho các bản cuộn, theo lý thuyết mở rộng không gian khối dữ liệu lên đến 8 lần kích thước hiện tại. Thị trường phí blob cũng sẽ được cải thiện để phản ứng hiệu quả với tình trạng tắc nghẽn và đảm bảo các lớp 2 (l2) trả một khoản phí có ý nghĩa cho khối lượng tính toán và không gian mà các khối dữ liệu áp đặt lên các nút.
+[PeerDAS](/roadmap/fusaka/peerdas) là tính năng chính của Phân nhánh. Nó triển khai việc lấy mẫu tính khả dụng của dữ liệu (DAS) giúp mở khóa khả năng mở rộng lớn hơn cho các bản cuộn, theo lý thuyết mở rộng không gian khối dữ liệu lên đến 8 lần kích thước hiện tại. Thị trường phí blob cũng sẽ được cải thiện để phản ứng hiệu quả với tình trạng tắc nghẽn và đảm bảo các lớp 2 (L2) trả một khoản phí có ý nghĩa cho khối lượng tính toán và không gian mà các khối dữ liệu áp đặt lên các nút.
 
 ### Các Phân nhánh BPO khác nhau như thế nào? {#how-are-bpo-forks-different}
 
@@ -226,9 +226,9 @@ Ví dụ về cách nó có thể diễn ra:
 - BPO1, vài tuần sau khi kích hoạt Fusaka: mục tiêu 10, tối đa 15, tăng thêm hai phần ba
 - BPO2, vài tuần sau BPO1: mục tiêu 14, tối đa 21
 
-### Điều này có làm giảm phí trên Ethereum (lớp 1 (l1)) không {#will-this-lower-gas}
+### Điều này có làm giảm phí trên Ethereum (lớp 1 (L1)) không {#will-this-lower-gas}
 
-Bản nâng cấp này không làm giảm phí Gas trên lớp 1 (l1), ít nhất là không trực tiếp. Trọng tâm chính là có thêm không gian khối dữ liệu cho dữ liệu Rollup, do đó làm giảm phí trên lớp 2 (l2). Điều này có thể có một số tác dụng phụ đối với thị trường phí lớp 1 (l1) nhưng không có thay đổi đáng kể nào được mong đợi.
+Bản nâng cấp này không làm giảm phí Gas trên lớp 1 (L1), ít nhất là không trực tiếp. Trọng tâm chính là có thêm không gian khối dữ liệu cho dữ liệu Rollup, do đó làm giảm phí trên lớp 2 (L2). Điều này có thể có một số tác dụng phụ đối với thị trường phí lớp 1 (L1) nhưng không có thay đổi đáng kể nào được mong đợi.
 
 ### Là một người đặt cọc, tôi cần làm gì cho bản nâng cấp? {#as-a-staker-what-do-i-need-to-do-for-the-upgrade}
 

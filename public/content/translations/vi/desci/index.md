@@ -1,6 +1,6 @@
 ---
 title: "Khoa học phi tập trung (DeSci)"
-description: "Tổng quan về khoa học phi tập trung trên Ethereum"
+description: "Khoa học phi tập trung là gì? Tìm hiểu cách DeSci sử dụng Ethereum để tài trợ cho nghiên cứu, chia sẻ dữ liệu công khai và trao phần thưởng cho các nhà khoa học, giúp khoa học trở nên dễ tiếp cận hơn."
 lang: vi
 template: use-cases
 sidebarDepth: 2

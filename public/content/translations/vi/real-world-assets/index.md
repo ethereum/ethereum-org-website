@@ -1,7 +1,7 @@
 ---
 title: "Tài sản thế giới thực (RWA)"
 metaTitle: "RWA là gì? | Lợi ích và Ứng dụng của Tài sản thế giới thực"
-description: "Tổng quan về Tài sản thế giới thực trên Ethereum"
+description: "Tài sản thế giới thực (RWA) là gì? Tìm hiểu cách các tài sản như trái phiếu kho bạc, bất động sản và hàng hóa được token hóa trên Ethereum, cũng như những lợi ích và rủi ro."
 lang: vi
 template: use-cases
 image: /images/man-and-dog-playing.png
