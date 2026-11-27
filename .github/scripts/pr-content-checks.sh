@@ -14,6 +14,7 @@ trap 'rm -rf "$base_root"' EXIT
 git archive "$base" app src ':(exclude)src/intl' | tar -x -C "$base_root"
 git archive "$base" src/intl/en | tar -x -C "$base_root"
 git ls-tree -d -r --name-only "$base" public/content | grep -v '^public/content/translations' | (cd "$base_root" && xargs -r mkdir -p)
+git archive "$base" ':(glob)public/content/**/*.md' ':(exclude)public/content/translations' | tar -x -C "$base_root"
 
 base_orphans=$("${intl_keys[@]}" orphans "$base_root" | sort)
 head_orphans=$("${intl_keys[@]}" orphans . | sort)

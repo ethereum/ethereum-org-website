@@ -216,7 +216,11 @@ export function scanTranslations(root: string): TranslationScan {
         ts.isNoSubstitutionTemplateLiteral(node)
       ) {
         if (!isRefArg(node)) literals.add(node.text)
-      } else if (ts.isTemplateExpression(node) && node.head.text) {
+      } else if (
+        ts.isTemplateExpression(node) &&
+        // Heads like `p${i}` or `nav-${id}` (DOM ids) would otherwise hide whole key families
+        (node.head.text.match(/-/g)?.length ?? 0) >= 2
+      ) {
         const [r] = resolve(node)
         if (r.kind === "template") looseTemplates.push(new RegExp(r.re))
       } else if (ts.isCallExpression(node)) {
@@ -304,6 +308,26 @@ function pageSegments(root: string) {
   return segs
 }
 
+/** `ns:key` strings in English markdown, e.g. `<UpgradeStatus dateKey="page-upgrades:...">` */
+function markdownKeyRefs(root: string) {
+  const refs = new Set<string>()
+  const collect = (dir: string) => {
+    if (!fs.existsSync(dir)) return
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name)
+      if (e.isDirectory()) {
+        if (e.name !== "translations") collect(p)
+      } else if (e.name.endsWith(".md"))
+        for (const [, ref] of fs
+          .readFileSync(p, "utf8")
+          .matchAll(/["']([a-z0-9-]+:[a-z0-9-]+)["']/g))
+          refs.add(ref)
+    }
+  }
+  collect(path.join(root, "public/content"))
+  return refs
+}
+
 function yamlIds(root: string) {
   const file = path.join(root, "src/data/developer-docs-links.yaml")
   if (!fs.existsSync(file)) return new Set<string>()
@@ -337,6 +361,7 @@ export async function findOrphanedKeys(root: string) {
   const pages = pageSegments(root)
   const docsNav = yamlIds(root)
   const courses = await courseIds(root)
+  const markdown = markdownKeyRefs(root)
 
   const direct = new Set<string>()
   const anyNs = new Set<string>()
@@ -359,6 +384,7 @@ export async function findOrphanedKeys(root: string) {
         anyNs.has(key) ||
         literals.has(key) ||
         literals.has(`${ns}:${key}`) ||
+        markdown.has(`${ns}:${key}`) ||
         literals.has(`${ns}.${key}`) ||
         (ns === "common" &&
           (/^(language|region)-/.test(key) || pages.has(key))) ||
