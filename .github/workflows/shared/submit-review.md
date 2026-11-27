@@ -72,7 +72,7 @@ safe-outputs:
           required: false
           type: string
         facts:
-          description: 'Listing lane with saved research only: JSON array of at most 5 {"fact": "neutral, checkable statement", "quote": "exact source text", "url": "source without scheme, or a repo path", "source": "author"|"independent"|"repo", "weighs": "against"|"for" (omit when neutral)}'
+          description: 'Listing lane with saved research only: JSON array of at most 5 {"fact": "neutral, checkable statement", "quote": "exact source text", "url": "source without scheme, or a repo path", "source": "author"|"independent"|"repo", "criterion": "policy criterion it bears on", "weighs": "against"|"for" (omit both when neutral)}'
           required: false
           type: string
         existing:

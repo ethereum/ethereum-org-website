@@ -47,7 +47,7 @@ A request to list a third-party product, service or resource on ethereum.org. A 
 
 **Listing fields.**
 - `criteria`: one per criterion in the table below, with its weight.
-- `facts`: at most 5 that most change the decision, each with an exact `quote` checked like criteria (a `repo` fact needs none); facts that fail the check are dropped. Set `weighs` to `against` when the fact counts against listing (the product promotes its operator, covers less than or defers to an already-listed link, contradicts the request) or `for` when it supports it; leave it out when neutral. It is not rendered.
+- `facts`: at most 5 that most change the decision, each with an exact `quote` checked like criteria (a `repo` fact needs none); facts that fail the check are dropped. When a fact bears on a policy criterion from the table below, set `criterion` to that criterion and `weighs` to `against` or `for`; leave both out otherwise. They are not rendered.
 - `ask_author`: at most 3, about `must` criteria that remain open. Plain questions: no greeting or thanks, since the comment already opens with one.
 - `existing`: where the site already lists the product, with `text` copied exactly from that file on `dev` (it is re-checked and dropped otherwise).
 - `product`, `policy_page`, `policy_why`.
@@ -63,7 +63,7 @@ A request to list a third-party product, service or resource on ethereum.org. A 
 - The product's own pages can't show that it is accurate, credible or widely used; without an independent source those criteria stay `unknown`.
 - The policy's own text is never evidence for a `fail`; something not shown is `unknown`.
 - Filing an issue first is not a criterion.
-- Judge "adds distinct value" / "meaningfully differentiated" yourself before asking: compare the entries already on the target page (a `repo` fact) with what the product's own pages say it covers. `fail` when its own pages show it covers less than, or sends readers to, a link the page already has (quote it); `pass` only with an independent quote; ask the author only when neither shows.
+- For "adds distinct value" or "meaningfully differentiated", compare the entries already on the target page with what the product's own pages say it covers before asking. Record overlap (it covers less than, or sends readers to, a link the page already has) as a fact with `weighs: against` on that criterion. The criterion itself stays `unknown` unless an independent source settles it; ask the author only when the comparison shows nothing.
 - The site's registration date, first archive snapshot and related requests are added automatically; don't repeat them as facts.
 - State the comparison as a `repo` fact, e.g. "This page already lists 30 node providers".
 
