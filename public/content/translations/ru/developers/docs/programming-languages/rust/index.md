@@ -38,21 +38,20 @@ incomplete: true
 
 ## Проекты и инструменты на Rust {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) — _Коллекция externs для взаимодействия с Ethereum-подобной сетью_
-- [Лайтхаус](https://github.com/sigp/lighthouse) — _Быстрый клиент уровня консенсуса Эфириума_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) — _Предлагаемый редизайн уровня исполнения смарт-контрактов Эфириума с использованием детерминированного подмножества WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) — _Справочник по API OASIS_
-- [Solaris](https://github.com/paritytech/sol-rs) — _Среда модульного тестирования смарт-контрактов Solidity с использованием нативной EVM клиента Parity._
-- [SputnikVM](https://github.com/rust-blockchain/evm) — _Реализация виртуальной машины Эфириума на Rust_
-- [Wavelet](https://github.com/perlin-network/smart-contract-rs) — _Смарт-контракт Wavelet на Rust_
-- [Foundry](https://github.com/foundry-rs/foundry) — _Набор инструментов для разработки приложений для Эфириума_
-- [Alloy](https://alloy.rs) — _Высокопроизводительные, хорошо протестированные и задокументированные библиотеки для взаимодействия с Эфириумом и другими сетями на базе EVM._
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) — _Библиотека Эфириума и реализация кошелька_
-- [SewUp](https://github.com/second-state/SewUp) — _Библиотека, которая поможет вам создать контракт WebAssembly для Эфириума на Rust так же просто, как при разработке обычного бэкенда_
-- [Substreams](https://github.com/streamingfast/substreams) — _Технология распараллеленного индексирования данных блокчейна_
-- [Рет](https://github.com/paradigmxyz/reth) Рет (сокращение от Rust Ethereum) — это новая реализация полного узла Эфириума
-- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) — _Курируемая коллекция проектов в экосистеме Эфириума, написанных на Rust_
-- [Stylus](https://github.com/OffchainLabs/stylus) — _Rust SDK для создания смарт-контрактов на Arbitrum_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Набор внешних функций (externs) для взаимодействия с сетью, подобной Эфириуму_
+- [Лайтхаус (Lighthouse)](https://github.com/sigp/lighthouse) - _Быстрый клиент уровня консенсуса Эфириума_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Предлагаемый редизайн уровня исполнения смарт-контрактов Эфириума с использованием детерминированного подмножества WebAssembly_
+- [Solaris](https://github.com/paritytech/sol-rs) - _Среда модульного тестирования смарт-контрактов на Solidity с использованием нативной виртуальной машины Ethereum (EVM) клиента Parity._
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Реализация виртуальной машины Ethereum (EVM) на Rust_
+- [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Смарт-контракт Wavelet на Rust_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Набор инструментов для разработки приложений для Эфириума_
+- [Alloy](https://alloy.rs) - _Высокопроизводительные, хорошо протестированные и задокументированные библиотеки для взаимодействия с Эфириумом и другими сетями на базе EVM._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Библиотека для Эфириума и реализация кошелька_
+- [SewUp](https://github.com/second-state/SewUp) - _Библиотека, помогающая создавать контракты WebAssembly для Эфириума на Rust так же просто, как при обычной бэкенд-разработке_
+- [Substreams](https://github.com/streamingfast/substreams) - _Технология распараллеленного индексирования данных блокчейна_
+- [Рет (Reth)](https://github.com/paradigmxyz/reth) Рет (сокращение от Rust Ethereum) — это новая реализация полного узла Эфириума
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Тщательно отобранная коллекция проектов в экосистеме Эфириума, написанных на Rust_
+- [Stylus](https://github.com/OffchainLabs/stylus) - _SDK на Rust для создания смарт-контрактов в Arbitrum_
 
 Ищете больше ресурсов? Посетите [ethereum.org/developers.](/developers/)
 

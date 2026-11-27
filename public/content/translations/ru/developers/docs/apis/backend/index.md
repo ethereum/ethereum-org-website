@@ -66,7 +66,7 @@ lang: ru
 **Infura —** **_API Эфириума как услуга._**
 
 - [infura.io](https://infura.io)
-- [Документация](https://docs.infura.io/api)
+- [Документация](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC — _Экономичный провайдер JSON-RPC для виртуальной машины Ethereum (EVM)_**
@@ -77,7 +77,7 @@ lang: ru
 **NOWNodes — _Полные узлы и обозреватели блоков._**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [Документация](https://nownodes.gitbook.io/documentation)
+- [Документация](https://docs.nownodes.io/)
 
 **QuickNode —** **_Блокчейн-инфраструктура как услуга._**
 
@@ -172,28 +172,27 @@ lang: ru
 - [DataHub](https://www.figment.io/)
 - [Документация](https://docs.figment.io/)
 
-**Moralis —** **_Провайдер EVM API корпоративного уровня._**
+**Moralis —** **_Провайдер API EVM корпоративного уровня._**
 
 - [moralis.io](https://moralis.io)
 - [Документация](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [Дискорд](https://moralis.io/joindiscord/)
 - [Форум](https://forum.moralis.io/)
 
-**NFTPort —** **_API данных Эфириума и чеканки._**
+**NFTPort —** **_API для данных Эфириума и чеканки._**
 
 - [nftport.xyz](https://www.nftport.xyz/)
 - [Документация](https://docs.nftport.xyz/)
 - [GitHub](https://github.com/nftport/)
 - [Дискорд](https://discord.com/invite/K8nNrEgqhE)
 
-**Tokenview —** **_Универсальная платформа API для мультивалютных блокчейнов._**
+**Tokenview —** **_Универсальная платформа блокчейн-API для различных криптовалют._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Документация](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata —** **_Предоставляет простой и надежный доступ к API блокчейна Эфириума._**
+**Watchdata —** **_Обеспечивает простой и надежный доступ к блокчейну Эфириума через API._**
 
 - [Watchdata](https://watchdata.io/)
 - [Документация](https://docs.watchdata.io/)
@@ -207,13 +206,12 @@ lang: ru
 - [GitHub](https://github.com/Codex-Data)
 - [Дискорд](https://discord.com/invite/mFpUhT3vAq)
 
-**Covalent —** **_Обогащенные API блокчейна для более чем 200 сетей._**
+**Covalent —** **_Обогащенные блокчейн-API для более чем 200 сетей._**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [Документация](https://www.covalenthq.com/docs/api/)
+- [Документация](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [Дискорд](https://www.covalenthq.com/discord/)
-
 
 ## Дополнительная литература {#further-reading}
 
@@ -226,5 +224,4 @@ _Знаете ресурс сообщества, который вам помо�
 
 ## Связанные руководства {#related-tutorials}
 
-- [Настройка Web3.js для использования блокчейна Эфириума в JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _— Инструкции по настройке Web3.js в вашем проекте._
-- [Вызов смарт-контракта из JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _— На примере токена DAI узнайте, как вызывать функции контрактов с помощью JavaScript._
+- [Серверные компоненты и агенты для приложений Web3](/developers/tutorials/server-components/) _— Как писать серверные компоненты на TypeScript, которые прослушивают события блокчейна и отвечают транзакциями._
