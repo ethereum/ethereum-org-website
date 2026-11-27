@@ -1,7 +1,7 @@
 ---
 title: "⁦ethereum.org⁩ সম্পর্কে"
 metaTitle: "আমাদের সম্পর্কে"
-description: "⁦ethereum.org⁩-এর টিম, কমিউনিটি এবং লক্ষ্য সম্পর্কে"
+description: "ethereum.org-এর পেছনের টিম এবং কমিউনিটির সাথে পরিচিত হোন: আমাদের মিশন, কীভাবে সাইটটি উন্মুক্তভাবে তৈরি এবং পরিচালিত হয় এবং কীভাবে আপনি এটিকে উন্নত করতে সাহায্য করতে পারেন।"
 lang: bn
 ---
 
@@ -107,9 +107,11 @@ ethereum.org হলো [ইথেরিয়াম](/) কমিউনিটির
 
 ## ডিজাইন সিস্টেম {#design-system}
 
-আমরা আরও দ্রুত ফিচারগুলো প্রকাশ করতে এবং কমিউনিটির সদস্যদের ethereum.org-এর ওপেন ডিজাইনে অংশগ্রহণ করার সুযোগ দিতে একটি [ডিজাইন সিস্টেম](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) তৈরি এবং রিলিজ করেছি।
+আমরা আরও দ্রুত ফিচারগুলো প্রকাশ করতে এবং কমিউনিটির সদস্যদের ethereum.org-এর উন্মুক্ত ডিজাইনে অংশগ্রহণ করার সুযোগ দিতে একটি [ডিজাইন সিস্টেম](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) তৈরি এবং রিলিজ করেছি।
 
-যুক্ত হতে চান? [Figma-তে অনুসরণ করুন](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) এবং আমাদের [#design ডিসকর্ড চ্যানেলে](/discord/) কথোপকথনে যোগ দিন।
+যুক্ত হতে চান? [Figma-তে অনুসরণ করুন](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) এবং আমাদের [#design ডিসকর্ড চ্যানেলে](/discord/) আলোচনায় যোগ দিন।
+
+লোগো, ইলাস্ট্রেশন বা অন্যান্য ব্র্যান্ড ফাইল খুঁজছেন? আমাদের [অ্যাসেট পেজ](/assets/) থেকে সেগুলো ডাউনলোড করুন।
 
 ## স্টাইল গাইড {#style-guide}
 
@@ -122,6 +124,10 @@ ethereum.org হলো [ইথেরিয়াম](/) কমিউনিটির
 ## লাইসেন্স {#license}
 
 অন্যথায় নির্দিষ্ট করা না থাকলে ethereum.org ওয়েবসাইটটি ওপেন সোর্স এবং একটি [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE)-এর অধীনে তৈরি। ethereum.org-এর [ব্যবহারের শর্তাবলী](/terms-of-use/) সম্পর্কে আরও জানুন।
+
+## আপনার গোপনীয়তা {#your-privacy}
+
+ethereum.org গোপনীয়তা-সংরক্ষণকারী অ্যানালিটিক্সের জন্য Matomo ব্যবহার করে এবং আপনি যেকোনো সময় অপ্ট আউট করতে পারেন। বিস্তারিত জানতে আমাদের [কুকি পলিসি](/cookie-policy/) এবং [গোপনীয়তা পলিসি](/privacy-policy/) পড়ুন।
 
 ## উন্মুক্ত চাকরি {#open-jobs}
 

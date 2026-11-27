@@ -1,6 +1,6 @@
 ---
 title: "ডেটা এবং অ্যানালিটিক্স"
-description: "আপনার ⁦dapp⁩-এ ব্যবহারের জন্য কীভাবে অনচেইন অ্যানালিটিক্স এবং ডেটা পাবেন"
+description: "আপনার dapp-এর জন্য কীভাবে অনচেইন ডেটা পাবেন: ইথেরিয়াম ডেটা কোয়েরি এবং বিশ্লেষণ করার জন্য ইনডেক্সার, সাবগ্রাফ, ব্লক এক্সপ্লোরার, SQL অ্যানালিটিক্স প্ল্যাটফর্ম এবং API।"
 lang: bn
 ---
 
@@ -75,9 +75,9 @@ EVM কোয়েরি ল্যাঙ্গুয়েজ (EQL) হলো �
 ## আরও পড়ুন {#further-reading}
 
 - [ক্রিপ্টো ডেটা এক্সপ্লোরিং I: ডেটা ফ্লো আর্কিটেকচার](https://web.archive.org/web/20250125012042/https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
-- [Graph নেটওয়ার্ক ওভারভিউ](https://thegraph.com/docs/en/about/)
-- [Graph কোয়েরি প্লেগ্রাউন্ড](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
-- [EtherScan-এ API কোডের উদাহরণ](https://etherscan.io/apis#contracts)
+- [গ্রাফ নেটওয়ার্ক ওভারভিউ](https://thegraph.com/docs/en/about/)
+- [গ্রাফ এক্সপ্লোরার](https://thegraph.com/explorer)
+- [Etherscan-এ API কোডের উদাহরণ](https://etherscan.io/apis#contracts)
 - [Blockscout-এ API ডকুমেন্টেশন](https://docs.blockscout.com/devs/apis)
 - [Beaconcha.in বিকন চেইন এক্সপ্লোরার](https://beaconcha.in)
 - [Dune বেসিকস](https://docs.dune.com/#dune-basics)

@@ -1,11 +1,11 @@
 {
   "version": 2,
   "sourceFile": "public/content/bridges/index.md",
-  "generatedAt": "2026-08-07T06:09:36.561Z",
-  "rootHash": "ffe835d9195b",
+  "generatedAt": "2026-11-27T10:11:05.689Z",
+  "rootHash": "441cdf7ebc66",
   "tree": {
-    "contentHash": "490b286b1df5",
-    "anchorHash": "dfdfd2eb2599",
+    "contentHash": "c9259e39ebef",
+    "anchorHash": "c25c14b9e9b3",
     "children": {
       "frontmatter:title": {
         "contentHash": "ed615810e7b2",
@@ -16,7 +16,7 @@
         "anchorHash": "932572708fce"
       },
       "frontmatter:description": {
-        "contentHash": "afaa2fc68925",
+        "contentHash": "e1828f25b861",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:lang": {
@@ -383,57 +383,47 @@
         ]
       },
       "use-bridge": {
-        "contentHash": "3d1439c54b83",
-        "anchorHash": "5b2ed888ab5c",
+        "contentHash": "f636bf0ebcfc",
+        "anchorHash": "034fdb5e87fe",
         "labelHash": "7c57a39036b0",
         "children": {
           "_label": {
             "contentHash": "7c57a39036b0",
             "anchorHash": "e3b0c44298fc"
           },
-          "prose:3": {
+          "prose:2": {
             "contentHash": "b2bf9132ffaf",
             "anchorHash": "e3b0c44298fc"
           },
           "link:0": {
-            "contentHash": "8465a66352b0",
-            "anchorHash": "956c61cfb445"
+            "contentHash": "88c3f15cac0c",
+            "anchorHash": "fb4749715325"
           },
-          "prose:4": {
-            "contentHash": "951dcee3a7a4",
+          "prose:3": {
+            "contentHash": "a18beb4d2287",
             "anchorHash": "e3b0c44298fc"
           },
           "link:1": {
-            "contentHash": "99de3910c84f",
-            "anchorHash": "956c61cfb445"
-          },
-          "prose:5": {
-            "contentHash": "ac8dd4cf76c8",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "link:2": {
             "contentHash": "67cf4f703c05",
             "anchorHash": "3160a0a4b8e5"
           },
-          "prose:6": {
+          "prose:4": {
             "contentHash": "ef19e0e60edb",
             "anchorHash": "e3b0c44298fc"
           },
-          "component:8": {
+          "component:6": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
           "_label",
-          "prose:3",
+          "prose:2",
           "link:0",
-          "prose:4",
+          "prose:3",
           "link:1",
-          "prose:5",
-          "link:2",
-          "prose:6",
-          "component:8"
+          "prose:4",
+          "component:6"
         ]
       },
       "bridge-risk": {
@@ -492,7 +482,7 @@
       },
       "further-reading": {
         "contentHash": "f3f224dbc338",
-        "anchorHash": "f018d118e6a8",
+        "anchorHash": "08b5ffb4da7b",
         "labelHash": "4082f515b2f4",
         "children": {
           "_label": {
@@ -513,7 +503,7 @@
           },
           "link:1": {
             "contentHash": "1731c066c655",
-            "anchorHash": "41615098eea7"
+            "anchorHash": "264c2c89d490"
           },
           "prose:7": {
             "contentHash": "0d5d372db9c0",
@@ -587,5 +577,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "3c76f545357f4d2d02a6f906d4b647d531be7088"
+  "sourceCommitSha": "20100c97b6cc086b525d20c680156c40512d38cc"
 }
