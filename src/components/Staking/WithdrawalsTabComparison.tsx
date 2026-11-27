@@ -7,6 +7,7 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { slugify } from "@/lib/utils/url"
 
 import { Strong } from "../IntlStringElements"
 import { ButtonLink } from "../ui/buttons/Button"
@@ -43,7 +44,13 @@ const WithdrawalsTabComparison = () => {
         value="current"
         className="space-y-4 bg-background-highlight"
       >
-        <h3>{t("comp-withdrawal-comparison-current-title")}</h3>
+        <h3
+          id={slugify(t("comp-withdrawal-comparison-current-title"), {
+            unicode: true,
+          })}
+        >
+          {t("comp-withdrawal-comparison-current-title")}
+        </h3>
         <UnorderedList>
           <ListItem>{t("comp-withdrawal-comparison-current-li-1")} </ListItem>
           <ListItem>
@@ -77,7 +84,13 @@ const WithdrawalsTabComparison = () => {
       </TabsContent>
 
       <TabsContent value="new" className="space-y-4 bg-background-highlight">
-        <h3>{t("comp-withdrawal-comparison-new-title")}</h3>
+        <h3
+          id={slugify(t("comp-withdrawal-comparison-new-title"), {
+            unicode: true,
+          })}
+        >
+          {t("comp-withdrawal-comparison-new-title")}
+        </h3>
         <UnorderedList>
           <ListItem>{t("comp-withdrawal-comparison-new-li-1")}</ListItem>
           <ListItem>{t("comp-withdrawal-comparison-new-li-2")}</ListItem>
