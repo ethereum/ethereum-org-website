@@ -51,12 +51,10 @@ export function WebErasPlayer({
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [era, setEra] = useState<EraId>(initialPreset)
-  const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
+  const { step, atEnd, advance, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
     last: WEB_ERAS_LAST_STEP,
     initial: initialStep,
-    dwellMs: 3200,
-    dwellReducedMs: 3600,
     paused: !inView.visible,
   })
   const view = useMemo(() => getWebErasView(era, step), [era, step])
@@ -84,17 +82,13 @@ export function WebErasPlayer({
 
   return (
     <InteractiveDiagram
+      layout="stacked"
       className={className}
       caption={t("web-eras-caption")}
       description={t("web-eras-description")}
       fig={fig}
       title={t("web-eras-title")}
-      status={t(`web-eras-status-${era}`)}
       parts={parts}
-      legend={[
-        { hue: "entity", label: t("web-eras-legend-data") },
-        { hue: "gas", label: t("web-eras-legend-money") },
-      ]}
       inViewRef={inView.ref}
       paused={!inView.visible}
       illustration={
@@ -107,6 +101,7 @@ export function WebErasPlayer({
       }
       presets={
         <DiagramPresets
+          inline
           label={t("web-eras-presets-label")}
           options={ERA_IDS.map((id) => ({
             id,
@@ -122,11 +117,14 @@ export function WebErasPlayer({
       }
       transport={
         <DiagramTransport
+          inline
           primary={{
-            label: t("web-eras-run"),
+            label:
+              view.step === IDLE_STEP || atEnd
+                ? t("web-eras-run")
+                : t("diagram-next-step"),
             icon: <CircleHelp />,
-            onClick: run,
-            disabled: isRunning,
+            onClick: advance,
           }}
           current={view.step}
           total={WEB_ERAS_LAST_STEP}

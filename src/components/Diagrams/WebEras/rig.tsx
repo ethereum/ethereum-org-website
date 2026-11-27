@@ -449,6 +449,8 @@ function WebErasRig({
         labels={labels}
         definitions={definitions}
         litId={view.litPart}
+        leaders={false}
+        tooltips
       />
     </div>
   )
