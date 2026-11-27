@@ -56,6 +56,7 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
 - [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Solidity and Hardhat support by the Hardhat team
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Code formatter using prettier
+- [Solidity Language Server](https://github.com/asyncswap/solidity-language-server) - Fast Solidity language server powered by solc and Foundry
 
 ## Further reading {#further-reading}
 
