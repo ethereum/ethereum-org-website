@@ -35,6 +35,7 @@ export const sendingCourse: Course = {
         {
           id: "predict",
           type: "choice",
+          predict: true,
           options: ["fails", "waits", "less"],
           correct: ["waits"],
         },
@@ -79,6 +80,7 @@ export const sendingCourse: Course = {
         {
           id: "predict",
           type: "choice",
+          predict: true,
           options: ["both", "fee", "nothing"],
           correct: ["fee"],
         },

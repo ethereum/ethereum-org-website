@@ -3,6 +3,8 @@
  * signed-in learners. Rationale: the courses skill's accounts reference.
  */
 
+import type { LessonStep } from "@/data/courses"
+
 export const XP_LESSON = 10
 export const XP_PERFECT_BONUS = 5
 export const XP_REPLAY = 5
@@ -34,6 +36,10 @@ export const samePicks = (a: string[], b: string[]) => {
   const other = new Set(b)
   return picked.size === other.size && [...picked].every((id) => other.has(id))
 }
+
+/** An ungraded prediction step (see `ChoiceStep.predict`) */
+export const isPrediction = (step: LessonStep) =>
+  step.type === "choice" && !!step.predict
 
 export const examAttemptExpired = (startedAt: Date, now = new Date()) =>
   now.getTime() - startedAt.getTime() >= EXAM_ATTEMPT_TTL_MS

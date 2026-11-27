@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef } from "react"
 import { Check, ListChecks } from "lucide-react"
 import { useTranslations } from "next-intl"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -22,6 +22,9 @@ import {
 
 import type { StepStatus } from "./types"
 
+import { isPrediction } from "@/lib/courses/rules"
+import { choiceOptionOrder } from "@/lib/courses/shuffle"
+
 interface ChoiceStepProps {
   step: ChoiceStepData
   keyFor: (suffix: string) => string
@@ -30,6 +33,8 @@ interface ChoiceStepProps {
   status: StepStatus
   /** Exam mode: one attempt, then the right answer shows */
   reveal?: boolean
+  /** The attempt's shuffle seed; null keeps the authored order */
+  seed: string | null
 }
 
 export const isChoiceCorrect = (step: ChoiceStepData, value: string[]) =>
@@ -97,10 +102,14 @@ const ChoiceStep = ({
   onChange,
   status,
   reveal,
+  seed,
 }: ChoiceStepProps) => {
   const t = useTranslations("page-courses")
-  const graded = status !== "answering"
-  const locked = status === "correct" || (reveal && graded)
+  // Shown order: the markers and the A, B, C keys follow it
+  const options = useMemo(() => choiceOptionOrder(step, seed), [step, seed])
+  // A prediction has no wrong pick, so nothing is marked right or wrong
+  const graded = status !== "answering" && !isPrediction(step)
+  const locked = status === "correct" || (reveal && status !== "answering")
 
   // Only the learner's picks are marked, so a wrong answer doesn't reveal the
   // right one before they try again. With `reveal` there is no retry.
@@ -115,7 +124,7 @@ const ChoiceStep = ({
   const pickRef = useRef<(index: number) => boolean>(() => false)
   useEffect(() => {
     pickRef.current = (index) => {
-      const id = step.options[index]
+      const id = options[index]
       if (!id || locked) return false
       if (!step.multi) {
         onChange([id])
@@ -162,7 +171,7 @@ const ChoiceStep = ({
       <fieldset>
         {prompt}
         <div className="flex flex-col gap-3">
-          {step.options.map((id, idx) => (
+          {options.map((id, idx) => (
             <CheckboxPrimitive.Root
               key={id}
               className={optionClasses}
@@ -208,7 +217,7 @@ const ChoiceStep = ({
         disabled={locked}
         onValueChange={(id) => onChange([id])}
       >
-        {step.options.map((id, idx) => (
+        {options.map((id, idx) => (
           <RadioGroup.Item
             key={id}
             value={id}

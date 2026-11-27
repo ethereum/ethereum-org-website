@@ -321,6 +321,7 @@ const ExamGate = ({
         key={attempt.attemptId}
         exam
         examSession={session}
+        shuffleSeed={attempt.attemptId}
         courseId={courseId}
         lesson={{ id: EXAM_ID, steps }}
         nextCourseId={nextCourseId}

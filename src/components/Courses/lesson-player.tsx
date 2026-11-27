@@ -64,7 +64,8 @@ import {
   lessonHref,
   stepKey,
 } from "@/lib/courses/constants"
-import { MIN_ANSWER_MS, samePicks } from "@/lib/courses/rules"
+import { isPrediction, MIN_ANSWER_MS, samePicks } from "@/lib/courses/rules"
+import { newAttemptSeed } from "@/lib/courses/shuffle"
 
 /** A max-w-3xl content column, plus page padding */
 const lessonColumn =
@@ -90,6 +91,8 @@ interface LessonPlayerProps {
   nextCourseId?: string
   /** Last lesson of a course with a check: completion points to it */
   examAfter?: boolean
+  /** Course Mastery: the attempt's id, so a resumed attempt keeps its order */
+  shuffleSeed?: string
 }
 
 /** Answer per step type: picks, placed order, widget done, or puzzle answer */
@@ -98,11 +101,14 @@ type StepValue = string[] | boolean | WidgetAnswer
 const isWidgetAnswer = (value: StepValue | undefined): value is WidgetAnswer =>
   typeof value === "object" && !Array.isArray(value)
 
-/** Steps with a right answer; they count toward accuracy and the combo */
+/** Steps with a right answer: the one check for accuracy, XP, combo and history */
 const isGraded = (step: LessonStep) =>
   step.type === "interactive"
     ? isGradedWidget(step.widget)
-    : step.type !== "concept"
+    : step.type !== "concept" && !isPrediction(step)
+
+/** Steps answered with Check: graded ones, plus predictions (any pick passes) */
+const isChecked = (step: LessonStep) => isGraded(step) || isPrediction(step)
 
 const isReady = (step: LessonStep, value: StepValue | undefined) => {
   switch (step.type) {
@@ -156,6 +162,7 @@ const LessonPlayer = ({
   learnMore,
   sources,
   examSession,
+  shuffleSeed,
 }: LessonPlayerProps) => {
   const t = useTranslations("page-courses")
   const locale = useLocale()
@@ -187,6 +194,13 @@ const LessonPlayer = ({
   const [firstTryCount, setFirstTryCount] = useState({ right: 0, total: 0 })
   // Furthest step reached: steps before it were passed and can be revisited
   const [furthest, setFurthest] = useState(0)
+  // Option order for this attempt. Made after mount so the server render
+  // (authored order) and hydration match; a restart makes a new one
+  const [attemptSeed, setAttemptSeed] = useState<string | null>(null)
+  useEffect(() => {
+    if (!shuffleSeed) setAttemptSeed(newAttemptSeed())
+  }, [shuffleSeed])
+  const seed = shuffleSeed ?? attemptSeed
 
   const restart = () => {
     trackCourseEvent("Lesson restart", `${courseId}/${lesson.id}`)
@@ -199,6 +213,7 @@ const LessonPlayer = ({
     setFirstTry({})
     setCombo(0)
     setReward(null)
+    setAttemptSeed(newAttemptSeed())
     window.scrollTo({ top: 0 })
   }
 
@@ -248,6 +263,8 @@ const LessonPlayer = ({
   }
 
   const handleCheck = () => {
+    // A prediction only reveals its feedback: no verdict, nothing recorded
+    if (isPrediction(step)) return setStatus("correct")
     const correct = grade(step, value)
     recordResult(correct)
     setStatus(correct ? "correct" : "incorrect")
@@ -382,7 +399,7 @@ const LessonPlayer = ({
   // are already recorded, so revisiting never changes XP or accuracy
   const goTo = (next: number) => {
     const target = lesson.steps[next]
-    const passed = next < furthest && isGraded(target)
+    const passed = next < furthest && isChecked(target)
     showStep(next)
     setFurthest((f) => Math.max(f, next))
     setStatus(passed ? "correct" : "answering")
@@ -425,7 +442,7 @@ const LessonPlayer = ({
 
   const canContinue =
     !reward &&
-    (status === "correct" || (!isGraded(step) && isReady(step, value)))
+    (status === "correct" || (!isChecked(step) && isReady(step, value)))
   const explored =
     step.type === "interactive" && !isGraded(step) && value === true
 
@@ -440,7 +457,7 @@ const LessonPlayer = ({
         ? "retry"
         : canContinue
           ? "continue"
-          : isGraded(step) && isReady(step, value)
+          : isChecked(step) && isReady(step, value)
             ? "check"
             : null
   const footerActionRef = useRef<(() => void) | null>(null)
@@ -522,7 +539,7 @@ const LessonPlayer = ({
   }, [reward, footerKind, isRtl])
 
   const feedbackKey = (() => {
-    if (status === "answering" || !isGraded(step)) return null
+    if (status === "answering" || !isChecked(step)) return null
     if (step.type === "choice")
       return (
         choiceFeedbackKey(step, value as string[], keyFor) ??
@@ -548,11 +565,13 @@ const LessonPlayer = ({
 
   // Footer flag: beside the main button from md; on mobile, in the verdict or
   // explanation row when there is one
-  const verdictText =
-    status === "correct"
+  const prediction = isPrediction(step)
+  const verdictText = prediction
+    ? courseText
+    : status === "correct"
       ? "text-green-700 dark:text-green-400"
       : "text-error dark:text-red-400"
-  const hasFeedbackRow = explored || (status !== "answering" && isGraded(step))
+  const hasFeedbackRow = explored || (status !== "answering" && isChecked(step))
 
   // Completion recap: each missed step's prompt and the note a right answer shows
   const missedSteps = reward
@@ -618,6 +637,7 @@ const LessonPlayer = ({
             onChange={handleEdit}
             status={status}
             reveal={exam}
+            seed={seed}
           />
         )
       case "order":
@@ -680,12 +700,12 @@ const LessonPlayer = ({
         className={cn(
           chunkyButton,
           "w-full md:w-auto",
-          status === "correct" && "border-green-800 bg-green-700"
+          status === "correct" && !prediction && "border-green-800 bg-green-700"
         )}
       >
         {t("page-courses-continue")}
       </Button>
-    ) : !isGraded(step) ? (
+    ) : !isChecked(step) ? (
       <Button
         variant="ghost"
         disabled
@@ -700,7 +720,9 @@ const LessonPlayer = ({
         disabled={!isReady(step, value)}
         className={cn(chunkyButton, "w-full md:w-auto")}
       >
-        {t("page-courses-check")}
+        {prediction
+          ? t("page-courses-predict-reveal")
+          : t("page-courses-check")}
       </Button>
     )
 
@@ -846,7 +868,9 @@ const LessonPlayer = ({
                 ? "border-transparent bg-(--course-soft)"
                 : "border-border bg-background"),
             status === "correct" &&
-              "border-transparent bg-success-light dark:bg-success-dark",
+              (prediction
+                ? "border-transparent bg-(--course-soft)"
+                : "border-transparent bg-success-light dark:bg-success-dark"),
             status === "incorrect" &&
               "border-transparent bg-error-light dark:bg-error-dark"
           )}
@@ -869,7 +893,7 @@ const LessonPlayer = ({
                   {reportFlag(cn("-my-1 md:hidden", courseText))}
                 </motion.div>
               )}
-              {status !== "answering" && isGraded(step) && (
+              {status !== "answering" && isChecked(step) && (
                 <motion.div
                   key={status}
                   initial={reduceMotion ? false : { opacity: 0, y: 16 }}
@@ -877,7 +901,12 @@ const LessonPlayer = ({
                   exit={{ opacity: 0 }}
                   className="flex items-start gap-3"
                 >
-                  {status === "correct" ? (
+                  {prediction ? (
+                    <Lightbulb
+                      className={cn("size-10 shrink-0", courseText)}
+                      aria-hidden
+                    />
+                  ) : status === "correct" ? (
                     <CheckCircle2
                       className="size-10 shrink-0 text-green-700 dark:text-green-400"
                       aria-hidden
@@ -896,9 +925,11 @@ const LessonPlayer = ({
                           verdictText
                         )}
                       >
-                        {status === "correct"
-                          ? t("page-courses-correct")
-                          : t("page-courses-incorrect")}
+                        {prediction
+                          ? t("page-courses-predict-heading")
+                          : status === "correct"
+                            ? t("page-courses-correct")
+                            : t("page-courses-incorrect")}
                         {showCombo && (
                           <motion.span
                             initial={reduceMotion ? false : { scale: 0.4 }}
