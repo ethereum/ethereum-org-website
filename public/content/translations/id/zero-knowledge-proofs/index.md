@@ -1,7 +1,7 @@
 ---
 title: Apa itu bukti tanpa pengetahuan?
 metaTitle: Bukti tanpa pengetahuan
-description: Pengantar non-teknis tentang bukti tanpa pengetahuan untuk pemula.
+description: Apa itu bukti tanpa pengetahuan? Pengantar yang ramah pemula tentang bagaimana bukti ZK memverifikasi sebuah klaim tanpa mengungkapkan datanya, dan bagaimana Ethereum menggunakannya.
 lang: id
 ---
 

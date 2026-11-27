@@ -1,6 +1,6 @@
 ---
 title: Identitas terdesentralisasi
-description: Apa itu identitas terdesentralisasi, dan mengapa hal ini penting?
+description: Apa itu identitas terdesentralisasi? Pelajari bagaimana Ethereum memungkinkan Anda untuk memiliki dan mengontrol identitas, kredensial, dan data Anda tanpa bergantung pada penyedia terpusat.
 lang: id
 template: use-cases
 sidebarDepth: 2

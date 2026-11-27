@@ -1,7 +1,7 @@
 ---
 title: Pembayaran Ethereum
 metaTitle: Pembayaran di Ethereum
-description: Gambaran umum tentang pembayaran di Ethereum
+description: Bagaimana cara kerja pembayaran di Ethereum? Pelajari cara mengirim uang secara global dengan ETH dan koin stabil, sering kali dalam hitungan detik dan dengan biaya rendah, tanpa perantara bank.
 lang: id
 template: use-cases
 sidebarDepth: 2
@@ -99,7 +99,7 @@ Kartu-kartu ini terhubung langsung ke dompet non-kustodial atau akun kontrak pin
 
 ## Pembayaran mikro untuk situs web & agen (x402) {#x402}
 
-[x402](https://www.x402.org/) adalah standar pembayaran terbuka yang menghadirkan pembayaran per penggunaan asli ke web. Dengan menggunakan [koin stabil](/stablecoins/) di [jaringan lapisan 2 (l2) Ethereum](/layer-2/) berbiaya rendah, standar x402 membuatnya ekonomis bagi manusia dan mesin untuk membayar langsung untuk satu tindakan, seperti membaca artikel berita atau memanggil API, alih-alih mengelola kunci API, langganan, atau "membayar" dengan memberikan perhatian pada iklan.
+[x402](https://www.x402.org/) adalah standar pembayaran terbuka yang menghadirkan pembayaran per penggunaan asli ke web. Dengan menggunakan [koin stabil](/stablecoins/) di [jaringan lapisan 2 (L2) Ethereum](/layer-2/) berbiaya rendah, standar x402 membuatnya ekonomis bagi manusia dan mesin untuk membayar langsung untuk satu tindakan, seperti membaca artikel berita atau memanggil API, alih-alih mengelola kunci API, langganan, atau "membayar" dengan memberikan perhatian pada iklan.
 
 - **Menghapus paywall dan login:** Alih-alih membuat akun dan membagikan informasi pribadi untuk membaca satu artikel berita, dompet Anda dapat membayar beberapa sen yang diperlukan untuk membukanya.
 - **Pembayaran untuk agen AI:** x402 memungkinkan perangkat lunak otonom ("Agen AI") untuk membayar data dan panggilan API yang mereka butuhkan untuk berfungsi, tanpa campur tangan manusia.

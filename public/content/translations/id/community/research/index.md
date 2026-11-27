@@ -57,7 +57,7 @@ Lapisan eksekusi berkaitan dengan mengeksekusi transaksi, menjalankan [Mesin Vir
 - kedaluwarsa riwayat yang tidak lagi perlu dilayani oleh node;
 - daftar akses tingkat blok yang memungkinkan transaksi divalidasi secara paralel;
 - pasar biaya multidimensi yang menetapkan harga state, data, dan komputasi secara terpisah;
-- dan membuktikan eksekusi blok l1 dengan zkEVM.
+- dan membuktikan eksekusi blok L1 dengan zkEVM.
 
 #### Bacaan latar belakang {#background-reading-1}
 
@@ -72,7 +72,7 @@ Lapisan eksekusi berkaitan dengan mengeksekusi transaksi, menjalankan [Mesin Vir
 - [EIP-8037: Peningkatan biaya gas pembuatan state](https://eips.ethereum.org/EIPS/eip-8037)
 - [EIP-7999: Pasar biaya multidimensi terpadu](https://eips.ethereum.org/EIPS/eip-7999)
 - [EIP-7642: eth/69, kedaluwarsa riwayat dan tanda terima yang lebih sederhana](https://eips.ethereum.org/EIPS/eip-7642)
-- [Meluncurkan zkEVM l1: pembuktian waktu nyata](https://blog.ethereum.org/2025/07/10/realtime-proving)
+- [Meluncurkan zkEVM L1: pembuktian waktu nyata](https://blog.ethereum.org/2025/07/10/realtime-proving)
 
 ### Ketahanan sensor dan pembangunan blok {#censorship-resistance-and-block-building}
 
@@ -128,7 +128,7 @@ Sebuah node Ethereum diharuskan untuk menjalankan dua perangkat lunak:
 1. klien konsensus untuk melacak kepala rantai blok, menggosipkan blok, dan menangani logika konsensus
 2. klien eksekusi untuk mendukung Mesin Virtual Ethereum dan mengeksekusi transaksi serta kontrak pintar
 
-Kelas klien baru sedang dibuat prototipenya bersama dengan kedua klien tersebut, termasuk klien yang membuktikan eksekusi blok l1 dan klien konsensus ramping yang dibangun di sekitar tanda tangan pasca-kuantum.
+Kelas klien baru sedang dibuat prototipenya bersama dengan kedua klien tersebut, termasuk klien yang membuktikan eksekusi blok L1 dan klien konsensus ramping yang dibangun di sekitar tanda tangan pasca-kuantum.
 
 Lihat [halaman node dan klien](/developers/docs/nodes-and-clients/) untuk detail lebih lanjut tentang node dan klien serta untuk daftar semua implementasi klien saat ini. Anda juga dapat menemukan riwayat semua peningkatan Ethereum di [halaman riwayat](/ethereum-forks/).
 
@@ -146,7 +146,7 @@ Lihat [halaman node dan klien](/developers/docs/nodes-and-clients/) untuk detail
 
 - [zkEVM](/roadmap/zkevm/)
 - [Ethproofs](https://ethproofs.org/)
-- [Meluncurkan zkEVM l1: fondasi keamanan](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Meluncurkan zkEVM L1: fondasi keamanan](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ## Penskalaan dan kinerja {#scaling-and-performance}
 
@@ -154,18 +154,18 @@ Penskalaan Ethereum adalah area fokus besar bagi para peneliti Ethereum, dan ini
 
 ### Lapisan 2 {#layer-2}
 
-Sekarang ada beberapa protokol lapisan 2 (l2) yang menskalakan Ethereum menggunakan teknik berbeda untuk pemrosesan batch transaksi dan mengamankannya di lapisan 1 Ethereum. Penelitian terbuka mencakup pengurangan latensi dan biaya pembuktian, mempersingkat waktu yang dibutuhkan transaksi untuk mencapai finalitas tanpa kepercayaan, dan memberi pengguna pengalaman tunggal yang koheren di banyak rollup.
+Sekarang ada beberapa protokol lapisan 2 (L2) yang menskalakan Ethereum menggunakan teknik berbeda untuk pemrosesan batch transaksi dan mengamankannya di lapisan 1 Ethereum. Penelitian terbuka mencakup pengurangan latensi dan biaya pembuktian, mempersingkat waktu yang dibutuhkan transaksi untuk mencapai finalitas tanpa kepercayaan, dan memberi pengguna pengalaman tunggal yang koheren di banyak rollup.
 
 #### Bacaan latar belakang {#background-reading-2}
 
 - [Pengantar lapisan 2](/layer-2/)
-- [L2BEAT: ringkasan penskalaan](https://l2beat.com/scaling/summary)
-- [Peta jalan ethereum yang berpusat pada rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
+- [ETHBEAT: ringkasan penskalaan](https://ethbeat.org/layer2s/summary)
+- [Peta jalan Ethereum yang berpusat pada rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 
 #### Penelitian terbaru {#recent-research-2}
 
-- [Lapisan 2 Ethresear.ch](https://ethresear.ch/c/layer-2/32)
-- [L2BEAT: biaya onchain](https://l2beat.com/scaling/costs)
+- [Ethresear.ch Lapisan 2](https://ethresear.ch/c/layer-2/32)
+- [ETHBEAT: biaya onchain](https://ethbeat.org/layer2s/costs)
 - [Membangun di Ethereum pada tahun 2026: apa yang telah berubah](/latest/building-on-ethereum-in-2026/)
 
 ### Interoperabilitas {#interoperability}
@@ -226,7 +226,7 @@ Keamanan adalah topik luas yang mungkin mencakup pencegahan spam dan penipuan, k
 
 ### Kriptografi & ZKP {#cryptography--zkp}
 
-Bukti tanpa pengetahuan (ZKP) dan kriptografi sangat penting untuk membangun privasi dan keamanan ke dalam Ethereum dan aplikasinya. Pembuktian zero-knowledge telah beralih dari penelitian ke infrastruktur produksi: pembukti yang membuktikan blok Ethereum nyata sekarang diukur secara publik berdasarkan latensi, biaya, dan keandalannya. Masalah terbuka telah bergeser sesuai dengan itu, menuju pembuktian blok l1 yang cukup cepat untuk melakukannya secara waktu nyata, memperhitungkan secara ketat keamanan sistem pembuktian yang digunakan, dan bersiap untuk kriptografi pasca-kuantum.
+Bukti tanpa pengetahuan (ZKP) dan kriptografi sangat penting untuk membangun privasi dan keamanan ke dalam Ethereum dan aplikasinya. Pembuktian zero-knowledge telah beralih dari penelitian ke infrastruktur produksi: pembukti yang membuktikan blok Ethereum nyata sekarang diukur secara publik berdasarkan latensi, biaya, dan keandalannya. Masalah terbuka telah bergeser sesuai dengan itu, menuju pembuktian blok L1 yang cukup cepat untuk melakukannya secara waktu nyata, memperhitungkan secara ketat keamanan sistem pembuktian yang digunakan, dan bersiap untuk kriptografi pasca-kuantum.
 
 #### Bacaan latar belakang {#background-reading-6}
 
@@ -239,7 +239,7 @@ Bukti tanpa pengetahuan (ZKP) dan kriptografi sangat penting untuk membangun pri
 - [ZK Ethresear.ch](https://ethresear.ch/c/zk-s-nt-arks/13)
 - [Kriptografi Ethresear.ch](https://ethresear.ch/c/cryptography/28)
 - [Kalkulator keandalan untuk sistem pembuktian zkEVM berbasis hash](https://github.com/ethereum/soundcalc)
-- [Meluncurkan zkEVM l1: fondasi keamanan](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
+- [Meluncurkan zkEVM L1: fondasi keamanan](https://blog.ethereum.org/2025/12/18/zkevm-security-foundations)
 
 ### Dompet {#wallets}
 
@@ -385,9 +385,9 @@ Ada kebutuhan akan lebih banyak alat analisis data dan dasbor yang memberikan in
 
 #### Penelitian terbaru {#recent-research-14}
 
-- [Analisis Data Grup Insentif Kuat](https://rig.ethereum.org/)
+- [Analisis Data Robust Incentives Group](https://rig.ethereum.org/)
 - [Data terbuka ethPandaOps](https://ethpandaops.io/data/)
-- [L2BEAT: ringkasan penskalaan](https://l2beat.com/scaling/summary)
+- [ETHBEAT: ringkasan penskalaan](https://ethbeat.org/layer2s/summary)
 
 ## Aplikasi dan perkakas {#apps-and-tooling}
 

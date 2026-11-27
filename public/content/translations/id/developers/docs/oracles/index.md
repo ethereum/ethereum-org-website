@@ -389,27 +389,25 @@ Ada beberapa aplikasi orakel yang dapat Anda integrasikan ke dalam dapp Ethereum
 
 **[Chainlink](https://chain.link/)** - _Jaringan orakel terdesentralisasi Chainlink menyediakan input, output, dan komputasi yang tahan kerusakan untuk mendukung kontrak pintar tingkat lanjut di rantai blok mana pun._
 
-**[Orakel RedStone](https://redstone.finance/)** - _RedStone adalah orakel modular terdesentralisasi yang menyediakan umpan data yang dioptimalkan untuk gas. Orakel ini berspesialisasi dalam menawarkan umpan harga untuk aset yang sedang berkembang, seperti token staking likuid (LST), token staking ulang likuid (LRT), dan derivatif staking Bitcoin._
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone adalah orakel modular terdesentralisasi yang menyediakan umpan data yang dioptimalkan untuk gas. Ini berspesialisasi dalam menawarkan umpan harga untuk aset yang sedang berkembang, seperti token staking likuid (LST), token staking ulang likuid (LRT), dan derivatif staking Bitcoin._
 
 **[Chronicle](https://chroniclelabs.org/)** - _Chronicle mengatasi keterbatasan saat ini dalam mentransfer data onchain dengan mengembangkan orakel yang benar-benar dapat diskalakan, hemat biaya, terdesentralisasi, dan dapat diverifikasi._
 
-**[Witnet](https://witnet.io/)** - _Witnet adalah orakel tanpa izin, terdesentralisasi, dan tahan sensor yang membantu kontrak pintar bereaksi terhadap peristiwa dunia nyata dengan jaminan kripto-ekonomi yang kuat._
+**[Witnet](https://witnet.io/)** - _Witnet adalah orakel tanpa izin, terdesentralisasi, dan tahan sensor yang membantu kontrak pintar untuk bereaksi terhadap kejadian dunia nyata dengan jaminan kripto-ekonomi yang kuat._
 
-**[Orakel UMA](https://uma.xyz)** - _Orakel optimis UMA memungkinkan kontrak pintar untuk dengan cepat menerima segala jenis data untuk berbagai aplikasi, termasuk asuransi, derivatif keuangan, dan pasar prediksi._
+**[UMA Oracle](https://uma.xyz)** - _Orakel optimis UMA memungkinkan kontrak pintar untuk dengan cepat menerima segala jenis data untuk berbagai aplikasi, termasuk asuransi, derivatif keuangan, dan pasar prediksi._
 
 **[Tellor](https://tellor.io/)** - _Tellor adalah protokol orakel yang transparan dan tanpa izin untuk kontrak pintar Anda agar dengan mudah mendapatkan data apa pun kapan pun dibutuhkan._
 
-**[Protokol Band](https://bandprotocol.com/)** - _Protokol Band adalah platform orakel data lintas rantai yang menggabungkan dan menghubungkan data dunia nyata dan API ke kontrak pintar._
+**[Band Protocol](https://bandprotocol.com/)** - _Band Protocol adalah platform orakel data lintas rantai yang menggabungkan dan menghubungkan data dunia nyata dan API ke kontrak pintar._
 
-**[Jaringan Pyth](https://pyth.network/)** - _Jaringan Pyth adalah jaringan orakel keuangan pihak pertama yang dirancang untuk memublikasikan data dunia nyata secara berkelanjutan onchain dalam lingkungan yang tahan kerusakan, terdesentralisasi, dan mandiri._
+**[Pyth Network](https://pyth.network/)** - _Jaringan Pyth adalah jaringan orakel keuangan pihak pertama yang dirancang untuk memublikasikan data dunia nyata secara berkelanjutan onchain dalam lingkungan yang tahan kerusakan, terdesentralisasi, dan mandiri._
 
 **[API3 DAO](https://api3.org/)** - _API3 DAO memberikan solusi orakel pihak pertama yang memberikan transparansi sumber, keamanan, dan skalabilitas yang lebih besar dalam solusi terdesentralisasi untuk kontrak pintar_
 
 **[Supra](https://supra.com/)** - Perangkat solusi lintas rantai yang terintegrasi secara vertikal yang menghubungkan semua rantai blok, publik (L1 dan L2) atau privat (perusahaan), menyediakan umpan harga orakel terdesentralisasi yang dapat digunakan untuk kasus penggunaan onchain dan offchain. 
 
-**[Jaringan Gas](https://gas.network/)** - Platform orakel terdistribusi yang menyediakan data harga gas waktu nyata di seluruh rantai blok. Dengan membawa data dari penyedia data harga gas terkemuka onchain, Jaringan Gas membantu mendorong interoperabilitas. Jaringan Gas mendukung data untuk lebih dari 35 rantai, termasuk Mainnet Ethereum dan banyak L2 terkemuka.
-
-**[DIA](https://www.diadata.org/)** - Jaringan orakel lintas rantai yang memberikan umpan data yang dapat diverifikasi untuk 20.000+ aset di semua kelas aset utama. DIA mengambil data perdagangan mentah langsung dari 100+ pasar primer dan menghitungnya onchain, memastikan transparansi dan verifiabilitas data yang lengkap dengan konfigurasi kustom untuk kasus penggunaan apa pun.
+**[DIA](https://www.diadata.org/)** - Jaringan orakel lintas rantai yang memberikan umpan data yang dapat diverifikasi untuk 20.000+ aset di semua kelas aset utama. DIA mengambil data perdagangan mentah secara langsung dari 100+ pasar primer dan menghitungnya onchain, memastikan transparansi dan verifiabilitas data yang lengkap dengan konfigurasi kustom untuk kasus penggunaan apa pun.
 
 **[Stork](https://stork.network)** - Stork memberikan data harga dengan latensi sangat rendah, mendukung berbagai kasus penggunaan termasuk pasar perpetual, protokol peminjaman, dan ekosistem DeFi, dengan aset baru yang didukung dengan cepat saat pencatatan.
 

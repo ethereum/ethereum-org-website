@@ -250,5 +250,4 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Panduan Kontrak ERC-721 Vyper](/developers/tutorials/erc-721-vyper-annotated-code/) _– Panduan beranotasi dari kontrak NFT ERC-721 lengkap yang ditulis dalam Vyper._
 - [Cara Menulis & Menyebarkan NFT (Bagian 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Panduan langkah demi langkah untuk menulis dan menyebarkan kontrak pintar ERC-721 pertama Anda._
 - [Cara Mencetak NFT (Bagian 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Cara mencetak NFT ERC-721 menggunakan kontrak pintar Anda yang telah disebarkan dan Web3._
-- [Cara Melihat NFT Anda di Dompet Anda (Bagian 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Cara menampilkan NFT yang Anda cetak di MetaMask setelah penyebaran._
-- [Tutorial Pencetak NFT](/developers/tutorials/nft-minter/) _– Membangun dapp pencetakan NFT full-stack dengan frontend React, MetaMask, dan Alchemy._
+- [Cara Melihat NFT Anda di Dompet Anda (Bagian 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Cara menampilkan NFT Anda yang telah dicetak di MetaMask setelah penyebaran._

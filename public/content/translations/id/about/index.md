@@ -1,7 +1,7 @@
 ---
 title: Tentang ethereum.org
 metaTitle: Tentang Kami
-description: Tentang tim, komunitas, dan misi ethereum.org
+description: "Temui tim dan komunitas di balik ethereum.org: misi kami, bagaimana situs ini dibangun dan dikelola secara terbuka, dan bagaimana Anda dapat membantu meningkatkannya."
 lang: id
 ---
 
@@ -107,9 +107,11 @@ Kami menggunakan serangkaian [prinsip desain](/contributing/design-principles/) 
 
 ## Sistem desain {#design-system}
 
-Kami membangun dan merilis [sistem desain](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) untuk meluncurkan fitur dengan lebih cepat dan membiarkan anggota komunitas berpartisipasi dalam desain terbuka ethereum.org.
+Kami membangun dan merilis [sistem desain](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) untuk meluncurkan fitur dengan lebih cepat dan memungkinkan anggota komunitas berpartisipasi dalam desain terbuka ethereum.org.
 
-Ingin terlibat? [Ikuti di Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) dan bergabunglah dengan percakapan di [saluran Discord #design kami](/discord/).
+Ingin terlibat? [Ikuti di Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) dan bergabunglah dalam percakapan di [saluran Discord #design kami](/discord/).
+
+Mencari logo, ilustrasi, atau file merek lainnya? Unduh dari [halaman aset kami](/assets/).
 
 ## Panduan gaya {#style-guide}
 
@@ -122,6 +124,10 @@ Kami menyambut umpan balik tentang prinsip desain, sistem desain, dan panduan ga
 ## Lisensi {#license}
 
 Situs web ethereum.org adalah sumber terbuka dan dibangun di bawah [Lisensi MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) kecuali ditentukan lain. Lebih lanjut tentang [ketentuan penggunaan](/terms-of-use/) ethereum.org.
+
+## Privasi Anda {#your-privacy}
+
+ethereum.org menggunakan Matomo untuk analitik yang menjaga privasi, dan Anda dapat menyisih kapan saja. Baca [kebijakan cookie](/cookie-policy/) dan [kebijakan privasi](/privacy-policy/) kami untuk detailnya.
 
 ## Lowongan pekerjaan {#open-jobs}
 

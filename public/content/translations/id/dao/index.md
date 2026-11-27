@@ -1,7 +1,7 @@
 ---
 title: Apa itu DAO?
 metaTitle: Apa itu DAO? | Organisasi Otonom Terdesentralisasi
-description: Gambaran umum tentang DAO di Ethereum
+description: Apa itu DAO? Pelajari bagaimana organisasi otonom terdesentralisasi menggunakan kontrak pintar dan token untuk membuat keputusan dan mengelola dana bersama di Ethereum.
 lang: id
 template: use-cases
 sidebarDepth: 2

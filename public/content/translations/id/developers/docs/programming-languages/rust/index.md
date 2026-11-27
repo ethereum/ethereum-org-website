@@ -41,16 +41,15 @@ Butuh panduan dasar terlebih dahulu? Kunjungi [ethereum.org/learn](/learn/) atau
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Koleksi eksternal untuk berinteraksi dengan jaringan mirip Ethereum_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Klien lapisan konsensus Ethereum yang cepat_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Usulan desain ulang lapisan eksekusi kontrak pintar Ethereum menggunakan subset deterministik dari WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Referensi API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Alat uji unit Kontrak Pintar Solidity menggunakan EVM Klien Parity asli._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementasi Mesin Virtual Ethereum Rust_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _Kontrak pintar Wavelet di Rust_
-- [Foundry](https://github.com/foundry-rs/foundry) - _Perangkat untuk pengembangan aplikasi Ethereum_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Perkakas untuk pengembangan aplikasi Ethereum_
 - [Alloy](https://alloy.rs) - _Pustaka berkinerja tinggi, teruji dengan baik & terdokumentasi untuk berinteraksi dengan Ethereum dan rantai berbasis EVM lainnya._
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Pustaka Ethereum dan implementasi dompet_
-- [SewUp](https://github.com/second-state/SewUp) - _Pustaka untuk membantu Anda membangun kontrak webassembly Ethereum Anda dengan Rust dan seperti mengembangkan di backend umum_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Implementasi pustaka dan dompet Ethereum_
+- [SewUp](https://github.com/second-state/SewUp) - _Pustaka untuk membantu Anda membangun kontrak WebAssembly Ethereum Anda dengan Rust dan seperti mengembangkan di backend umum_
 - [Substreams](https://github.com/streamingfast/substreams) - _Teknologi pengindeksan data rantai blok yang diparalelkan_
-- [Reth](https://github.com/paradigmxyz/reth) Reth (singkatan dari Rust Ethereum) adalah implementasi node penuh Ethereum yang baru
+- [Reth](https://github.com/paradigmxyz/reth) Reth (singkatan dari Rust Ethereum) adalah implementasi full node Ethereum baru
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Koleksi kurasi proyek dalam ekosistem Ethereum yang ditulis dalam Rust_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _SDK Rust untuk membangun kontrak pintar di Arbitrum_
 

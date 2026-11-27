@@ -1,7 +1,7 @@
 ---
 title: "Fusaka 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: Pelajari tentang pembaruan protokol Fusaka
+description: Fusaka diluncurkan pada 3 Desember 2025. Pelajari apa yang diubah oleh pembaruan Ethereum ini, termasuk PeerDAS, yang menskalakan blob untuk transaksi lapisan 2 yang lebih murah.
 lang: id
 template: upgrade
 authors: ["Nixo", "Mario Havel"]
@@ -27,7 +27,7 @@ Pembaruan Fusaka hanyalah satu langkah dalam tujuan pengembangan jangka panjang 
 
 #### PeerDAS {#peerdas}
 
-Ini adalah _sorotan utama_ dari percabangan Fusaka, fitur utama yang ditambahkan dalam pembaruan ini. Lapisan 2 (l2) saat ini memposting data mereka ke Ethereum dalam blob, tipe data sementara yang dibuat khusus untuk lapisan 2. Sebelum Fusaka, setiap full node harus menyimpan setiap blob untuk memastikan bahwa data tersebut ada. Seiring meningkatnya laju pemrosesan blob, keharusan mengunduh semua data ini menjadi sangat memakan sumber daya.
+Ini adalah _sorotan utama_ dari percabangan Fusaka, fitur utama yang ditambahkan dalam pembaruan ini. Lapisan 2 (L2) saat ini memposting data mereka ke Ethereum dalam blob, tipe data sementara yang dibuat khusus untuk lapisan 2. Sebelum Fusaka, setiap full node harus menyimpan setiap blob untuk memastikan bahwa data tersebut ada. Seiring meningkatnya laju pemrosesan blob, keharusan mengunduh semua data ini menjadi sangat memakan sumber daya.
 
 Dengan [pengambilan sampel ketersediaan data (DAS)](https://notes.ethereum.org/@fradamt/das-fork-choice), alih-alih harus menyimpan semua data blob, setiap node akan bertanggung jawab atas sebagian data blob. Blob didistribusikan secara acak dan seragam di seluruh node dalam jaringan dengan setiap full node hanya menyimpan 1/8 dari data, sehingga memungkinkan penskalaan teoretis hingga 8x. Untuk memastikan ketersediaan data, bagian mana pun dari data dapat direkonstruksi dari 50% keseluruhan data yang ada dengan metode yang menurunkan probabilitas data yang salah atau hilang ke tingkat yang dapat diabaikan secara kriptografis (\~satu dari 10<sup>20</sup> hingga satu dari 10<sup>24</sup>).
 

@@ -1,6 +1,6 @@
 ---
 title: Finalitas slot tunggal
-description: Penjelasan tentang finalitas slot tunggal
+description: Finalitas slot tunggal dapat memangkas waktu menuju finalitas Ethereum dari sekitar 15 menit menjadi satu slot tunggal. Pelajari cara kerjanya dan pertukaran yang terlibat.
 lang: id
 template: roadmap
 ---
@@ -57,7 +57,7 @@ Masalah dengan penskalaan agregasi dengan menumbuhkan jumlah validator per subne
 
 ## Kemajuan saat ini {#current-progress}
 
-SSF sedang dalam fase penelitian. Ini tidak diharapkan untuk diluncurkan selama beberapa tahun, kemungkinan setelah peningkatan substansial lainnya seperti [Pohon Verkle](/roadmap/verkle-trees/) dan [danksharding](/roadmap/danksharding/).
+SSF sedang dalam fase penelitian. Peningkatan ini diperkirakan tidak akan diluncurkan selama beberapa tahun, kemungkinan setelah peningkatan substansial lainnya seperti pohon state baru (saat ini diusulkan sebagai pohon biner dalam [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864)) dan [danksharding](/roadmap/danksharding/).
 
 ## Bacaan lebih lanjut {#further-reading}
 

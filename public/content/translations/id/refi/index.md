@@ -1,6 +1,6 @@
 ---
 title: Keuangan Regeneratif (ReFi)
-description: Gambaran umum tentang ReFi dan kasus penggunaannya saat ini.
+description: Apa itu keuangan regeneratif (ReFi)? Pelajari bagaimana alat-alat Ethereum mendanai barang publik, aksi iklim, dan proyek komunitas yang menciptakan dampak positif yang bertahan lama.
 lang: id
 template: use-cases
 sidebarDepth: 2

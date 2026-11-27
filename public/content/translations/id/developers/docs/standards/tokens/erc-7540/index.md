@@ -6,16 +6,16 @@ lang: id
 
 ## Pengantar {#introduction}
 
-ERC-7540 memperluas [Standar Brankas Tokenisasi ERC-4626](/developers/docs/standards/tokens/erc-4626/) dengan menambahkan dukungan untuk alur deposit dan penebusan asinkron. Ini memperkenalkan pola minta-lalu-klaim (request-then-claim): pengguna pertama-tama mengirimkan permintaan (mengunci aset atau saham mereka), lalu mengklaim hasilnya setelah brankas memprosesnya.
+ERC-7540 memperluas [Standar Brankas Tokenisasi ERC-4626](/developers/docs/standards/tokens/erc-4626/) dengan menambahkan dukungan untuk alur deposit dan penebusan asinkron. Ini memperkenalkan pola minta-lalu-klaim (request-then-claim): pengguna pertama-tama mengirimkan permintaan (menyerahkan aset atau saham mereka ke brankas), lalu mengklaim hasilnya setelah brankas memprosesnya.
 
 Ini diperlukan ketika sebuah brankas tidak dapat melakukan penyelesaian secara instan dalam satu transaksi, misalnya:
 
 - Protokol aset dunia nyata (RWA) seperti perbendaharaan yang ditokenisasi, kredit swasta, dan aset lainnya dengan siklus penyelesaian T+1 atau T+2
-- Peminjaman dengan agunan rendah (undercollateralized) di mana penilaian kredit terjadi secara offchain
-- Strategi brankas lintas rantai di mana proses bridging (penjembatanan) menimbulkan penundaan
-- Token staking likuid (LST) dengan periode pelepasan ikatan (unbonding)
+- Peminjaman dengan agunan kurang di mana penilaian kredit terjadi secara offchain
+- Strategi brankas lintas rantai di mana proses bridging menimbulkan penundaan
+- Token staking likuid dengan periode pelepasan ikatan
 
-Brankas dapat memilih untuk menjadi asinkron hanya pada deposit, hanya pada penebusan, atau keduanya. Fleksibilitas ini memungkinkan pengembang brankas menambahkan alur asinkron hanya di tempat strategi dasarnya membutuhkannya, sambil menjaga sisi lainnya tetap sinkron.
+Brankas dapat memilih untuk menjadi asinkron hanya pada deposit, hanya pada penebusan, atau keduanya. Fleksibilitas ini memungkinkan pengembang brankas untuk menambahkan alur asinkron hanya di mana strategi yang mendasarinya membutuhkannya, sambil menjaga sisi lainnya tetap sinkron.
 
 ## Prasyarat {#prerequisites}
 
@@ -25,21 +25,21 @@ Untuk lebih memahami halaman ini, kami sarankan Anda membaca terlebih dahulu ten
 
 Dalam ERC-4626, sebuah deposit diselesaikan secara atomik: investor mengirimkan aset dan menerima kembali saham dalam satu transaksi tunggal.
 
-![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
+<VaultDepositDiagram />
 
-ERC-7540 membagi ini menjadi dua langkah. Investor pertama-tama memanggil `requestDeposit()` untuk mengunci aset, lalu menunggu manajer brankas memproses permintaan tersebut. Setelah terpenuhi, investor memanggil `deposit()` untuk mengklaim saham mereka. Nilai tukar ditentukan pada saat pemenuhan, bukan pada saat permintaan.
+ERC-7540 membagi ini menjadi dua langkah. Investor pertama-tama memanggil `requestDeposit()`, yang mentransfer aset mereka ke dalam brankas, lalu menunggu brankas memproses permintaan tersebut. Bagaimana dan kapan hal itu terjadi bergantung pada brankas, misalnya ketika penyelesaian offchain selesai. Setelah terpenuhi, investor memanggil `deposit()` untuk mengklaim saham mereka. Nilai tukar tidak ditetapkan pada saat permintaan: brankas yang menetapkannya, biasanya ketika memenuhi permintaan tersebut, sehingga saham yang diterima dapat berbeda dari apa yang dikembalikan oleh `convertToShares()` ketika permintaan dibuat.
 
-![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
+<AsyncVaultDiagram />
 
-Alur penebusan bekerja dengan cara yang sama: `requestRedeem()` mengunci saham, dan setelah terpenuhi investor memanggil `redeem()` untuk mengklaim aset.
+Alur penebusan bekerja dengan cara yang sama: `requestRedeem()` mengambil saham dari investor, dan setelah terpenuhi, investor memanggil `redeem()` untuk mengklaim aset.
 
 ## Fungsi dan Fitur ERC-7540 {#body}
 
 ERC-7540 mewarisi antarmuka ERC-4626 secara penuh tetapi menggunakan kembali `deposit`/`mint`/`withdraw`/`redeem` sebagai fungsi klaim. Fungsi `requestDeposit` dan `requestRedeem` yang baru menangani langkah permintaan awal.
 
-Setiap permintaan bergerak melalui tiga state: tertunda (dikirimkan, menunggu pemrosesan), dapat diklaim (terpenuhi dan diberi harga), dan terklaim (investor telah mengumpulkan saham atau aset mereka).
+Setiap permintaan bergerak melalui tiga state: tertunda (dikirimkan, menunggu pemrosesan), dapat diklaim (terpenuhi dan diberi harga), dan terklaim (investor telah mengumpulkan saham atau aset mereka). Sebuah brankas dapat membuat permintaan menjadi dapat diklaim dengan segera, melewati tertunda, tetapi mengklaim selalu merupakan panggilan yang terpisah. Standar ini tidak mendefinisikan kejadian untuk saat sebuah permintaan menjadi dapat diklaim.
 
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+<VaultRequestDiagram />
 
 ### Alur permintaan deposit {#deposit-request-flow}
 
@@ -79,7 +79,7 @@ Setelah permintaan deposit menjadi dapat diklaim, pengguna memanggil fungsi stan
 function requestRedeem(uint256 shares, address controller, address owner) external returns (uint256 requestId)
 ```
 
-Mengunci `shares` dari `owner` dan mengirimkan permintaan untuk menebus. Alamat `controller` menerima kendali atas permintaan tersebut.
+Mengambil kendali atas `shares` dari `owner` dan mengirimkan permintaan untuk menebus. Brankas dapat menahan saham tersebut hingga permintaan diklaim atau membakarnya segera. Alamat `controller` menerima kendali atas permintaan tersebut.
 
 #### pendingRedeemRequest {#pendingredeemrequest}
 

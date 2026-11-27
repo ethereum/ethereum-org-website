@@ -4,9 +4,9 @@ description: Pelajari cara mengembangkan Ethereum menggunakan proyek dan perkaka
 lang: id
 ---
 
-JavaScript adalah salah satu bahasa paling populer di ekosistem Ethereum. Faktanya, ada sebuah [tim](https://github.com/ethereumjs) yang berdedikasi untuk membawa sebanyak mungkin bagian dari Ethereum ke JavaScript.
+JavaScript adalah salah satu bahasa paling populer di ekosistem Ethereum, dengan implementasi JavaScript dan TypeScript untuk segala hal mulai dari primitif protokol inti hingga klien konsensus produksi.
 
-Ada peluang untuk menulis JavaScript (atau sesuatu yang mirip) di [semua tingkat tumpukan (stack)](/developers/docs/ethereum-stack/).
+Ada peluang untuk menulis JavaScript (atau sesuatu yang mirip) di [semua tingkat tumpukan](/developers/docs/ethereum-stack/).
 
 ## Berinteraksi dengan Ethereum {#interact-with-ethereum}
 
@@ -52,10 +52,15 @@ Jika Anda lebih suka membaca kode, JavaScript ini bisa menjadi alternatif yang b
 
 ### Simpul dan klien {#nodes-and-clients}
 
-Klien EthereumJS sedang dalam pengembangan aktif yang memungkinkan Anda menggali bagaimana klien Ethereum bekerja dalam bahasa yang Anda pahami; JavaScript!
+[Lodestar](https://lodestar.chainsafe.io/) adalah klien konsensus siap produksi yang ditulis dalam TypeScript dan dikelola oleh ChainSafe. Ini mencakup simpul suar dan klien validator, dan merupakan tempat yang baik untuk melihat bagaimana konsensus Bukti Kepemilikan Ethereum bekerja dalam bahasa yang Anda ketahui.
 
-**Lihat klien**  
-[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Lihat Lodestar**  
+[`ChainSafe/lodestar`](https://github.com/ChainSafe/lodestar)
+
+Di sisi eksekusi, klien EthereumJS sudah usang dan diarsipkan, tetapi kode sumbernya tetap tersedia untuk menjelajahi bagaimana klien Ethereum bekerja dalam JavaScript.
+
+**Lihat klien yang diarsipkan**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/archive/client)
 
 ## Proyek lainnya {#other-projects}
 
