@@ -596,14 +596,13 @@ const STATUS = ["pass", "fail", "unknown"]
 const SOURCES = ["author", "independent", "repo"]
 const num = (v) => Number(String(v ?? "").replace(/\D/g, "")) || undefined
 const str = (v, n = 500) => String(v ?? "").slice(0, n)
+// Fails closed: a malformed list (e.g. JSON broken by URL redaction in transit) must not post as an empty one.
 const arr = (v, n = 15) => {
-  if (typeof v === "string")
-    try {
-      v = JSON.parse(v)
-    } catch {
-      v = []
-    }
-  return (Array.isArray(v) ? v : []).filter((x) => x != null).slice(0, n)
+  if (v == null || v === "") return []
+  if (typeof v === "string") v = JSON.parse(v)
+  if (!Array.isArray(v))
+    throw new Error(`expected a JSON array, got ${typeof v}`)
+  return v.filter((x) => x != null).slice(0, n)
 }
 
 // The quote must be ≥20 chars; "…" may join pieces of ≥12 chars that appear in order.
@@ -695,6 +694,7 @@ export async function check(item, fetchPage = fetchText, readFile = repoFile) {
     }
   }
 
+  if (!arr(item.criteria).length) throw new Error("no criteria submitted")
   let downgraded = 0
   const criteria = []
   for (const c of arr(item.criteria, 32)) {
