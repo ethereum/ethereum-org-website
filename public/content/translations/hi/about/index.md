@@ -1,7 +1,7 @@
 ---
 title: "ethereum.org के बारे में"
 metaTitle: "हमारे बारे में"
-description: "ethereum.org की टीम, समुदाय और मिशन के बारे में"
+description: "ethereum.org के पीछे की टीम और समुदाय से मिलें: हमारा मिशन, साइट को कैसे खुले में बनाया और प्रबंधित किया जाता है, और आप इसे बेहतर बनाने में कैसे मदद कर सकते हैं।"
 lang: hi
 ---
 
@@ -107,9 +107,11 @@ ethereum.org [इथेरियम](/) समुदाय के लिए ए�
 
 ## डिज़ाइन सिस्टम {#design-system}
 
-हमने सुविधाओं को अधिक तेज़ी से शिप करने और समुदाय के सदस्यों को ethereum.org के ओपन डिज़ाइन में भाग लेने देने के लिए एक [डिज़ाइन सिस्टम](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) बनाया और जारी किया है।
+हमने सुविधाओं को अधिक तेज़ी से शिप करने और समुदाय के सदस्यों को ethereum.org के खुले डिज़ाइन में भाग लेने देने के लिए एक [डिज़ाइन सिस्टम](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) बनाया और जारी किया है।
 
 शामिल होना चाहते हैं? [Figma में अनुसरण करें](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) और हमारे [#design डिस्कॉर्ड चैनल](/discord/) में बातचीत में शामिल हों।
+
+लोगो, चित्र या अन्य ब्रांड फ़ाइलें खोज रहे हैं? उन्हें हमारे [एसेट पेज](/assets/) से डाउनलोड करें।
 
 ## स्टाइल गाइड {#style-guide}
 
@@ -122,6 +124,10 @@ ethereum.org [इथेरियम](/) समुदाय के लिए ए�
 ## लाइसेंस {#license}
 
 ethereum.org वेबसाइट ओपन सोर्स है और जब तक अन्यथा निर्दिष्ट न हो, [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) के तहत बनाई गई है। ethereum.org के [उपयोग की शर्तों](/terms-of-use/) के बारे में अधिक जानकारी।
+
+## आपकी गोपनीयता {#your-privacy}
+
+ethereum.org गोपनीयता-संरक्षण एनालिटिक्स के लिए Matomo का उपयोग करता है, और आप किसी भी समय ऑप्ट आउट कर सकते हैं। विवरण के लिए हमारी [कुकी नीति](/cookie-policy/) और [गोपनीयता नीति](/privacy-policy/) पढ़ें।
 
 ## खुली नौकरियां {#open-jobs}
 

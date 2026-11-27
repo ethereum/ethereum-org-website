@@ -51,7 +51,7 @@ function asset() public view returns (address assetTokenAddress)
 function totalAssets() public view returns (uint256)
 ```
 
-यह फ़ंक्शन वॉल्ट द्वारा धारित अंतर्निहित एसेट की कुल मात्रा लौटाता है।
+यह फ़ंक्शन वॉल्ट द्वारा प्रबंधित अंतर्निहित एसेट की कुल मात्रा लौटाता है, जिसमें इसके द्वारा कहीं और काम पर लगाई गई कोई भी एसेट और किसी भी शुल्क के बाद की राशि शामिल है।
 
 #### convertToShares {#convertoshares}
 
@@ -183,7 +183,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 ### इंटरफ़ेस का नक्शा {#mapoftheinterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.png)
+<VaultInterfaceDiagram />
 
 ### घटनाएँ {#events}
 

@@ -176,6 +176,7 @@ print("Addr Balance:", addr_balance)
 - [Alchemy - Solidity ERC20 टोकन के लिए गाइड](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## अन्य विनिमेय टोकन मानक {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
@@ -183,7 +184,6 @@ print("Addr Balance:", addr_balance)
 - [ERC-7540 - एसिंक्रोनस टोकनाइज़्ड वॉल्ट](/developers/docs/standards/tokens/erc-7540)
 ## ट्यूटोरियल: इथेरियम पर ERC-20 के साथ निर्माण करें {#tutorials}
 
-- [ERC-20 अनुबंध वॉक-थ्रू](/developers/tutorials/erc20-annotated-code/) _– ओपनजेपेलिन ERC-20 अनुबंध कार्यान्वयन का एक पंक्ति-दर-पंक्ति एनोटेट किया गया वॉकथ्रू।_
-- [सुरक्षा रेल के साथ ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– उपयोगकर्ताओं को सामान्य गलतियों से बचने में मदद करने के लिए ERC-20 टोकन में सुरक्षा उपाय कैसे जोड़ें।_
-- [Ethers.js का उपयोग करके टोकन भेजना](/developers/tutorials/send-token-ethersjs/) _– Ethers.js का उपयोग करके ERC-20 टोकन ट्रांसफर करने के लिए शुरुआती-अनुकूल गाइड।_
-- [घोटाले वाले टोकन द्वारा उपयोग की जाने वाली कुछ तरकीबें और उनका पता कैसे लगाएं](/developers/tutorials/scam-token-tricks/) _– घोटाले वाले ERC-20 टोकन पैटर्न और उन्हें पहचानने के तरीके पर एक विस्तृत नज़र।_
+- [ERC-20 अनुबंध वॉक-थ्रू](/developers/tutorials/erc20-annotated-code/) _– ओपनजेपेलिन ERC-20 अनुबंध कार्यान्वयन का एक लाइन-बाय-लाइन एनोटेटेड वॉकथ्रू।_
+- [सेफ्टी रेल्स के साथ ERC-20](/developers/tutorials/erc20-with-safety-rails/) _– उपयोगकर्ताओं को सामान्य गलतियों से बचने में मदद करने के लिए ERC-20 टोकन में सुरक्षा उपाय कैसे जोड़ें।_
+- [स्कैम टोकन द्वारा उपयोग की जाने वाली कुछ तरकीबें और उनका पता कैसे लगाएं](/developers/tutorials/scam-token-tricks/) _– स्कैम ERC-20 टोकन पैटर्न और उन्हें पहचानने के तरीके का एक विस्तृत अन्वेषण।_

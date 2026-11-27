@@ -300,9 +300,7 @@ _क्या आप किसी ऐसे सामुदायिक सं�
 
 ## संबंधित ट्यूटोरियल {#related-tutorials}
 
-- [JavaScript में इथेरियम ब्लॉकचेन का उपयोग करने के लिए Web3js सेट अप करें](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– अपने प्रोजेक्ट में web3.js सेट अप करने के निर्देश।_
-- [JavaScript से स्मार्ट अनुबंध को कॉल करना](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI टोकन का उपयोग करके, देखें कि JavaScript का उपयोग करके अनुबंध फ़ंक्शन को कैसे कॉल किया जाए।_
-- [web3 और Alchemy का उपयोग करके लेन-देन भेजना](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– बैकएंड से लेन-देन भेजने के लिए चरण-दर-चरण वॉकथ्रू।_
+- [Web3 और Alchemy का उपयोग करके लेन-देन भेजना](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– बैकएंड से लेन-देन भेजने के लिए चरण-दर-चरण वॉकथ्रू।_
 
 ## ट्यूटोरियल: इथेरियम पर JavaScript API और WebSockets {#tutorials}
 
