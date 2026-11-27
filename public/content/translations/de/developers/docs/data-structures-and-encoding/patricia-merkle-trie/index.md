@@ -5,13 +5,13 @@ lang: de
 sidebarDepth: 2
 ---
 
-Der Zustand von [Ethereum](/) (die Gesamtheit aller Konten, Salden und Smart Contracts) ist in einer speziellen Version der Datenstruktur kodiert, die in der Informatik allgemein als Merkle-Baum bekannt ist. Diese Struktur ist für viele Anwendungen in der Kryptographie nützlich, da sie eine überprüfbare Beziehung zwischen all den einzelnen Datenstücken herstellt, die im Baum miteinander verflochten sind. Dies führt zu einem einzigen **Wurzel**-Wert (Root), der verwendet werden kann, um Dinge über die Daten zu beweisen.
+Der Zustand von [Ethereum](/) (die Gesamtheit aller Konten, Salden und Smart Contracts) ist in einer speziellen Version der Datenstruktur kodiert, die in der Informatik allgemein als Merkle-Baum bekannt ist. Diese Struktur ist für viele Anwendungen in der Kryptographie nützlich, da sie eine verifizierbare Beziehung zwischen all den einzelnen Datenstücken herstellt, die im Baum miteinander verflochten sind, was zu einem einzigen **Wurzel**-Wert führt, der verwendet werden kann, um Dinge über die Daten zu beweisen.
 
-Die Datenstruktur von Ethereum ist ein „modifizierter Merkle-Patricia-Trie“. Er wird so genannt, weil er einige Merkmale von PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric) entlehnt und weil er für den effizienten Datenabruf (re**trie**val) von Elementen konzipiert ist, die den Zustand von Ethereum ausmachen.
+Die Datenstruktur von Ethereum ist ein „modifizierter Merkle-Patricia-Trie“, der so genannt wird, weil er einige Merkmale von PATRICIA (Practical Algorithm To Retrieve Information Coded in Alphanumeric) entlehnt und weil er für den effizienten Datenabruf (engl. re**trie**val) von Elementen konzipiert ist, die den Zustand von Ethereum ausmachen.
 
-Ein Merkle-Patricia-Trie ist deterministisch und kryptographisch verifizierbar: Der einzige Weg, eine Zustandswurzel (State Root) zu generieren, besteht darin, sie aus jedem einzelnen Teil des Zustands zu berechnen. Dass zwei Zustände identisch sind, lässt sich leicht beweisen, indem man den Wurzel-Hash und die Hashes, die zu ihm geführt haben, vergleicht (_ein Merkle-Beweis_). Umgekehrt gibt es keine Möglichkeit, zwei verschiedene Zustände mit demselben Wurzel-Hash zu erstellen, und jeder Versuch, den Zustand mit anderen Werten zu ändern, führt zu einem anderen Wurzel-Hash des Zustands. Theoretisch bietet diese Struktur den „heiligen Gral“ der `O(log(n))`-Effizienz für Einfügungen, Suchvorgänge und Löschungen.
+Ein Merkle-Patricia-Trie ist deterministisch und kryptographisch verifizierbar: Der einzige Weg, eine Zustandswurzel zu generieren, besteht darin, sie aus jedem einzelnen Teil des Zustands zu berechnen, und zwei identische Zustände können leicht als solche bewiesen werden, indem man den Wurzel-Hash und die Hashes, die zu ihm geführt haben, vergleicht (_ein Merkle-Beweis_). Umgekehrt gibt es keine Möglichkeit, zwei verschiedene Zustände mit demselben Wurzel-Hash zu erstellen, und jeder Versuch, den Zustand mit anderen Werten zu ändern, führt zu einem anderen Wurzel-Hash des Zustands. Theoretisch bietet diese Struktur den „heiligen Gral“ der `O(log(n))`-Effizienz für Einfügungen, Suchvorgänge und Löschungen.
 
-In naher Zukunft plant Ethereum die Migration zu einer [Verkle-Baum](/roadmap/verkle-trees)-Struktur, was viele neue Möglichkeiten für zukünftige Protokollverbesserungen eröffnen wird.
+Ethereum plant, diesen Trie durch einen neuen Zustandsbaum zu ersetzen, der derzeit als vereinheitlichter Binärbaum in [EIP-7864](https://eips.ethereum.org/EIPS/eip-7864) vorgeschlagen wird. Ein früherer Vorschlag, einen [Verkle-Baum](/roadmap/verkle-trees/) zu verwenden, wurde zurückgestellt.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -206,7 +206,7 @@ Es gibt einen globalen Zustands-Trie, und er wird jedes Mal aktualisiert, wenn e
 
 ### Speicher-Trie {#storage-trie}
 
-Im Speicher-Trie befinden sich _alle_ Vertragsdaten. Es gibt einen separaten Speicher-Trie für jedes Konto. Um Werte an bestimmten Speicherpositionen bei einer gegebenen Adresse abzurufen, werden die Speicheradresse, die ganzzahlige Position der gespeicherten Daten im Speicher und die Block-ID benötigt. Diese können dann als Argumente an die in der JSON-RPC-API definierte `eth_getStorageAt` übergeben werden, z. B. um die Daten im Speicher-Slot 0 für die Adresse `0x295a70b2de5e3953354a6a8344e616ed314d7251` abzurufen:
+Im Speicher-Trie befinden sich _alle_ Vertragsdaten. Es gibt einen separaten Speicher-Trie für jedes Konto. Um Werte an bestimmten Speicherpositionen unter einer bestimmten Adresse abzurufen, werden die Speicheradresse, die ganzzahlige Position der gespeicherten Daten im Speicher und die Block-ID benötigt. Diese können dann als Argumente an die in der JSON-RPC-API definierte `eth_getStorageAt` übergeben werden, z. B. um die Daten im Speicher-Slot 0 für die Adresse `0x295a70b2de5e3953354a6a8344e616ed314d7251` abzurufen:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -215,13 +215,18 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Das Abrufen anderer Elemente im Speicher ist etwas aufwendiger, da die Position im Speicher-Trie zunächst berechnet werden muss. Die Position wird als `keccak256`-Hash der Adresse und der Speicherposition berechnet, die beide links mit Nullen auf eine Länge von 32 Bytes aufgefüllt werden. Zum Beispiel ist die Position für die Daten im Speicher-Slot 1 für die Adresse `0x391694e7e0b0cce554cb130d723a9d27458f9298`:
+Hierbei sind zwei verschiedene Arten von „Schlüsseln“ im Spiel, und es ist hilfreich, sie auseinanderzuhalten:
+
+1. **Der Speicher-Slot.** Dies ist der 32-Byte-Schlüssel, den ein Vertrag mit den Opcodes `SLOAD` und `SSTORE` liest und schreibt, und er ist das, was `eth_getStorageAt` als zweiten Parameter annimmt. Dem Protokoll ist es egal, wie ein Vertrag seine Slots wählt. Das wird durch das Speicherlayout des Compilers entschieden (siehe [Soliditys Layout im Speicher](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html)).
+2. **Der Pfad im Speicher-Trie.** Wie der Zustands-Trie verwendet auch der Speicher-Trie den Slot niemals direkt als seinen Pfad. Der Pfad ist immer `keccak256(slot)`, und der dort gespeicherte Wert ist die RLP-Kodierung des Slot-Wertes, bei der führende Nullen entfernt wurden. Das Hashing des Schlüssels hält die Pfade gleichmäßig verteilt, sodass niemand Schlüssel erstellen kann, die den Trie ungewöhnlich tief machen. Clients wenden diesen Hash selbst an, sodass Aufrufer von `eth_getStorageAt` immer nur den Slot übergeben.
+
+Einfache Zustandsvariablen befinden sich in den Slots, die der Compiler ihnen der Reihe nach zuweist (`0`, `1`, ...), wobei kleine Typen manchmal in einem einzigen Slot zusammengepackt werden, wie im obigen Beispiel. Für Werte innerhalb einer dynamischen Struktur muss ihr Slot zuerst berechnet werden. Zum Beispiel speichert Solidity den Wert für den Schlüssel `k` eines `mapping`, das in Slot `p` deklariert ist, in Slot `keccak256(pad32(k) ++ pad32(p))`. Wenn der Vertrag unter `0x295a70b2de5e3953354a6a8344e616ed314d7251` ein `mapping(address => uint)` in Slot 1 deklariert, ist der Slot, der den Eintrag für den Schlüssel `0x391694e7e0b0cce554cb130d723a9d27458f9298` enthält:
 
 ```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
-In einer Geth-Konsole kann dies wie folgt berechnet werden:
+Dieses Hashing stammt aus dem Speicherlayout von Solidity (das vom Vertrag zur Laufzeit berechnet wird), nicht aus dem Trie. In einer Geth-Konsole kann dies wie folgt berechnet werden:
 
 ```
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -230,7 +235,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Der `path` ist daher `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. Dies kann nun verwendet werden, um die Daten wie zuvor aus dem Speicher-Trie abzurufen:
+Der Speicher-Slot ist also `0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9`, und sein Pfad im Speicher-Trie ist `keccak256(0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9)`. Der Slot kann nun wie zuvor an `eth_getStorageAt` übergeben werden, und der Client hasht ihn, um den Wert im Trie zu finden:
 
 ```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545

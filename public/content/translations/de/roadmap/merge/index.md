@@ -1,10 +1,10 @@
 ---
 title: Der Merge
-description: "Erfahren Sie mehr über den Merge – als das Ethereum Mainnet Proof-of-Stake einführte."
+description: "Erfahren Sie mehr über den Merge, als das Ethereum Mainnet im September 2022 von Proof-of-Work zu Proof-of-Stake wechselte und seinen Energieverbrauch um etwa 99,95 % senkte."
 lang: de
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "Das Ethereum Mainnet verwendet Proof-of-Stake, aber das war nicht immer so."
   - "Das Upgrade vom ursprünglichen Proof-of-Work-Mechanismus auf Proof-of-Stake wurde der Merge genannt."
@@ -122,47 +122,47 @@ Der Merge bereitete auch die Bühne für weitere Skalierbarkeits-Upgrades, die u
 ## Missverständnisse über den Merge {#misconceptions}
 
 <ExpandableCard
-title="Irrglaube: &quot;Der Betrieb eines Knotens erfordert das Staking von 32 ETH.&quot;"
-contentPreview="Falsch. Es steht jedem frei, seine eigene selbstverifizierte Kopie von Ethereum zu synchronisieren (d. h. einen Knoten zu betreiben). Es sind keine ETH erforderlich – nicht vor dem Merge, nicht nach dem Merge, niemals.">
+title="Missverständnis: &quot;Um einen Knoten zu betreiben, müssen 32 ETH gestakt werden.&quot;"
+contentPreview="Falsch. Es steht jedem frei, seine eigene selbstverifizierte Kopie von Ethereum zu synchronisieren (d. h. einen Knoten zu betreiben). Es sind keine ETH erforderlich – weder vor dem Merge, noch nach dem Merge, noch jemals.">
 
-Es gibt zwei Arten von Ethereum-Knoten: Knoten, die Blöcke vorschlagen können, und Knoten, die dies nicht tun.
+Es gibt zwei Arten von Ethereum-Knoten: Knoten, die Blöcke vorschlagen können, und Knoten, die dies nicht können.
 
-Knoten, die Blöcke vorschlagen, machen nur eine kleine Anzahl der gesamten Knoten auf Ethereum aus. Diese Kategorie umfasst Mining-Knoten unter Proof-of-Work (PoW) und Validator-Knoten unter Proof-of-Stake (PoS). Diese Kategorie erfordert den Einsatz wirtschaftlicher Ressourcen (wie GPU-Hash-Leistung bei Proof-of-Work oder gestakte ETH bei Proof-of-Stake) im Austausch für die Fähigkeit, gelegentlich den nächsten Block vorzuschlagen und Protokollbelohnungen zu verdienen.
+Knoten, die Blöcke vorschlagen, machen nur einen kleinen Teil der gesamten Knoten auf Ethereum aus. Diese Kategorie umfasst Mining-Knoten unter Proof-of-Work (PoW) und Validator-Knoten unter Proof-of-Stake (PoS). Diese Kategorie erfordert den Einsatz wirtschaftlicher Ressourcen (wie GPU-Hash-Leistung bei Proof-of-Work oder gestakte ETH bei Proof-of-Stake) im Austausch für die Fähigkeit, gelegentlich den nächsten Block vorzuschlagen und Protokollbelohnungen zu verdienen.
 
-Die anderen Knoten im Netzwerk (d. h. die Mehrheit) müssen keine wirtschaftlichen Ressourcen über einen handelsüblichen Computer mit 1-2 TB verfügbarem Speicherplatz und einer Internetverbindung hinaus einsetzen. Diese Knoten schlagen keine Blöcke vor, spielen aber dennoch eine entscheidende Rolle bei der Sicherung des Netzwerks, indem sie alle Blockvorschlagenden zur Rechenschaft ziehen, indem sie auf neue Blöcke warten und deren Gültigkeit bei Ankunft gemäß den Konsensregeln des Netzwerks überprüfen. Wenn der Block gültig ist, verbreitet der Knoten ihn weiter im Netzwerk. Wenn der Block aus irgendeinem Grund ungültig ist, ignoriert die Knoten-Software ihn als ungültig und stoppt seine Verbreitung.
+Die anderen Knoten im Netzwerk (d. h. die Mehrheit) müssen keine wirtschaftlichen Ressourcen einsetzen, die über einen handelsüblichen Computer mit 4 TB verfügbarem Speicherplatz und einer Internetverbindung hinausgehen. Diese Knoten schlagen keine Blöcke vor, spielen aber dennoch eine entscheidende Rolle bei der Sicherung des Netzwerks, indem sie alle Block-Proposer zur Rechenschaft ziehen, indem sie auf neue Blöcke warten und deren Gültigkeit bei Ankunft gemäß den Konsensregeln des Netzwerks überprüfen. Wenn der Block gültig ist, verbreitet der Knoten ihn weiter im Netzwerk. Wenn der Block aus irgendeinem Grund ungültig ist, ignoriert die Knoten-Software ihn als ungültig und stoppt seine Verbreitung.
 
-Der Betrieb eines nicht blockproduzierenden Knotens ist für jeden unter beiden Konsensmechanismen (Proof-of-Work oder Proof-of-Stake) möglich; es wird allen Benutzern <em>dringend empfohlen</em>, wenn sie die Mittel dazu haben. Der Betrieb eines Knotens ist für Ethereum immens wertvoll und bietet jedem Einzelnen, der einen betreibt, zusätzliche Vorteile, wie verbesserte Sicherheit, Privatsphäre und Zensurresistenz.
+Der Betrieb eines nicht blockproduzierenden Knotens ist für jeden unter beiden Konsensmechanismen (Proof-of-Work oder Proof-of-Stake) möglich; es wird allen Benutzern <em>dringend empfohlen</em>, sofern sie über die entsprechenden Mittel verfügen. Der Betrieb eines Knotens ist für Ethereum von immensem Wert und bietet jedem Einzelnen, der einen betreibt, zusätzliche Vorteile wie verbesserte Sicherheit, Privatsphäre und Zensurresistenz.
 
-Die Fähigkeit für jeden, seinen eigenen Knoten zu betreiben, ist <em>absolut unerlässlich</em>, um die Dezentralisierung des Ethereum-Netzwerks aufrechtzuerhalten.
+Die Möglichkeit für jeden, einen eigenen Knoten zu betreiben, ist <em>absolut unerlässlich</em>, um die Dezentralisierung des Ethereum-Netzwerks aufrechtzuerhalten.
 
 [Mehr zum Betrieb eines eigenen Knotens](/run-a-node/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Irrglaube: &quot;Der Merge hat die Gasgebühren nicht gesenkt.&quot;"
+title="Missverständnis: &quot;Der Merge hat die Gasgebühren nicht gesenkt.&quot;"
 contentPreview="Falsch. Der Merge war eine Änderung des Konsensmechanismus, keine Erweiterung der Netzwerkkapazität, und war nie dazu gedacht, die Gasgebühren zu senken.">
 
-Gas-Gebühren sind ein Produkt der Netzwerknachfrage im Verhältnis zur Kapazität des Netzwerks. Der Merge hat die Verwendung von Proof-of-Work eingestellt und ist für den Konsens zu Proof-of-Stake übergegangen, hat aber keine Parameter wesentlich geändert, die die Netzwerkkapazität oder den Transaktionsdurchsatz direkt beeinflussen.
+Gasgebühren sind ein Produkt der Netzwerknachfrage im Verhältnis zur Kapazität des Netzwerks. Der Merge hat die Nutzung von Proof-of-Work eingestellt und ist für den Konsens zu Proof-of-Stake übergegangen, hat aber keine Parameter wesentlich geändert, die die Netzwerkkapazität oder den Transaktionsdurchsatz direkt beeinflussen.
 
-Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup-zentrierten Roadmap</a> konzentrieren sich die Bemühungen auf die Skalierung der Benutzeraktivität auf [Layer 2](/layer-2/), während das Layer 1 (L1) Mainnet als sichere dezentrale Abwicklungsschicht aktiviert wird, die für die Rollup-Datenspeicherung optimiert ist, um Rollup-Transaktionen exponentiell billiger zu machen. Der Übergang zu Proof-of-Stake ist eine entscheidende Voraussetzung, um dies zu verwirklichen. [Mehr zu Gas und Gebühren.](/developers/docs/gas/)
+Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup-zentrierten Roadmap</a> konzentrieren sich die Bemühungen auf die Skalierung der Benutzeraktivität auf [Layer 2](/layer-2/), während das Layer 1 Mainnet als sichere dezentrale Abwicklungsschicht aktiviert wird, die für die Rollup-Datenspeicherung optimiert ist, um Rollup-Transaktionen exponentiell günstiger zu machen. Der Übergang zu Proof-of-Stake ist eine entscheidende Voraussetzung, um dies zu verwirklichen. [Mehr zu Gas und Gebühren.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Irrglaube: &quot;Transaktionen wurden durch den Merge erheblich beschleunigt.&quot;"
+title="Missverständnis: &quot;Transaktionen wurden durch den Merge erheblich beschleunigt.&quot;"
 contentPreview="Falsch. Obwohl es einige leichte Änderungen gibt, ist die Transaktionsgeschwindigkeit auf Layer 1 jetzt größtenteils dieselbe wie vor dem Merge.">
-Die „Geschwindigkeit“ einer Transaktion kann auf verschiedene Weise gemessen werden, einschließlich der Zeit bis zur Aufnahme in einen Block und der Zeit bis zur Endgültigkeit. Beides ändert sich leicht, aber nicht so, dass Benutzer es bemerken werden.
+Die „Geschwindigkeit“ einer Transaktion kann auf verschiedene Weise gemessen werden, einschließlich der Zeit bis zur Aufnahme in einen Block und der Zeit bis zur Endgültigkeit. Beides ändert sich leicht, aber nicht so, dass Benutzer es bemerken würden.
 
-Historisch gesehen war es bei Proof-of-Work das Ziel, alle ~13,3 Sekunden einen neuen Block zu haben. Unter Proof-of-Stake treten Slots genau alle 12 Sekunden auf, von denen jeder eine Gelegenheit für einen Validator ist, einen Block zu veröffentlichen. Die meisten Slots haben Blöcke, aber nicht unbedingt alle (z. B. wenn ein Validator offline ist). Bei Proof-of-Stake werden Blöcke ~10 % häufiger produziert als bei Proof-of-Work. Dies war eine ziemlich unbedeutende Änderung und wird von Benutzern wahrscheinlich nicht bemerkt.
+Historisch gesehen war es bei Proof-of-Work das Ziel, etwa alle 13,3 Sekunden einen neuen Block zu haben. Unter Proof-of-Stake treten Slots genau alle 12 Sekunden auf, von denen jeder eine Gelegenheit für einen Validator darstellt, einen Block zu veröffentlichen. Die meisten Slots haben Blöcke, aber nicht unbedingt alle (z. B. wenn ein Validator offline ist). Bei Proof-of-Stake werden Blöcke etwa 10 % häufiger produziert als bei Proof-of-Work. Dies war eine ziemlich unbedeutende Änderung und wird von Benutzern wahrscheinlich nicht bemerkt.
 
-Proof-of-Stake führte das Konzept der Transaktions-Endgültigkeit ein, das es vorher nicht gab. Bei Proof-of-Work wird die Fähigkeit, einen Block rückgängig zu machen, mit jedem weiteren Block, der auf einer Transaktion gemint wird, exponentiell schwieriger, erreicht aber nie ganz null. Unter Proof-of-Stake werden Blöcke in Epochen gebündelt (Zeitspannen von 6,4 Minuten, die 32 Chancen für Blöcke enthalten), über die Validatoren abstimmen. Wenn eine Epoche endet, stimmen die Validatoren darüber ab, ob die Epoche als „gerechtfertigt“ betrachtet werden soll. Wenn die Validatoren zustimmen, die Epoche zu rechtfertigen, wird sie in der nächsten Epoche endgültig. Das Rückgängigmachen endgültiger Transaktionen ist wirtschaftlich nicht machbar, da es erforderlich machen würde, über ein Drittel der gesamten gestakten ETH zu beschaffen und zu verbrennen.
+Proof-of-Stake führte das Konzept der Endgültigkeit von Transaktionen ein, das es vorher nicht gab. Bei Proof-of-Work wird die Möglichkeit, einen Block rückgängig zu machen, mit jedem weiteren Block, der auf einer Transaktion gemint wird, exponentiell schwieriger, erreicht aber nie ganz null. Unter Proof-of-Stake werden Blöcke in Epochen gebündelt (Zeitspannen von 6,4 Minuten, die 32 Chancen für Blöcke enthalten), über die Validatoren abstimmen. Wenn eine Epoche endet, geben Validatoren ihre Stimme darüber ab, ob die Epoche als „gerechtfertigt“ betrachtet werden soll. Wenn Validatoren zustimmen, die Epoche zu rechtfertigen, wird sie in der nächsten Epoche endgültig. Das Rückgängigmachen endgültiger Transaktionen ist wirtschaftlich nicht machbar, da es erforderlich machen würde, über ein Drittel der gesamten gestakten ETH zu beschaffen und zu verbrennen.
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Irrglaube: &quot;Der Merge hat Staking-Abhebungen ermöglicht.&quot;"
-contentPreview="Falsch, aber Staking-Abhebungen wurden inzwischen durch das Shanghai/Capella-Upgrade ermöglicht.">
+title="Missverständnis: &quot;Der Merge hat Staking-Abhebungen ermöglicht.&quot;"
+contentPreview="Falsch, aber Staking-Abhebungen wurden seitdem durch das Shanghai/Capella-Upgrade ermöglicht.">
 
 Anfänglich nach dem Merge konnten Staker nur auf Gebühren-Trinkgelder und MEV zugreifen, die als Ergebnis von Blockvorschlägen verdient wurden. Diese Belohnungen werden einem Nicht-Staking-Konto gutgeschrieben, das vom Validator kontrolliert wird (bekannt als <em>Gebührenempfänger</em>), und sind sofort verfügbar. Diese Belohnungen sind getrennt von Protokollbelohnungen für die Erfüllung von Validator-Pflichten.
 
@@ -173,15 +173,15 @@ Seit dem Shanghai/Capella-Netzwerk-Upgrade können Staker nun eine <em>Abhebungs
 </ExpandableCard>
 
 <ExpandableCard
-title="Irrglaube: &quot;Jetzt, da der Merge abgeschlossen ist und Abhebungen möglich sind, könnten alle Staker auf einmal austreten.&quot;"
+title="Missverständnis: &quot;Jetzt, da der Merge abgeschlossen ist und Abhebungen aktiviert sind, könnten alle Staker auf einmal austreten.&quot;"
 contentPreview="Falsch. Validator-Austritte sind aus Sicherheitsgründen ratenlimitiert.">
-Da das Shanghai/Capella-Upgrade Abhebungen ermöglichte, haben Validatoren einen Anreiz, ihr Staking-Guthaben über 32 ETH abzuheben, da diese Gelder nicht zur Rendite beitragen und ansonsten gesperrt sind. Abhängig von der APR (bestimmt durch die gesamten gestakten ETH) können sie einen Anreiz haben, mit ihrem Validator (oder ihren Validatoren) einen Austritt durchzuführen, um ihr gesamtes Guthaben zurückzufordern, oder möglicherweise noch mehr zu staken, indem sie ihre Belohnungen verwenden, um mehr Rendite zu erzielen.
+Da das Shanghai/Capella-Upgrade Abhebungen ermöglicht hat, haben Validatoren einen Anreiz, ihr Staking-Guthaben über 32 ETH abzuheben, da diese Mittel nicht zur Rendite beitragen und ansonsten gesperrt sind. Abhängig von der APR (bestimmt durch die gesamten gestakten ETH) könnten sie einen Anreiz haben, mit ihrem Validator (oder ihren Validatoren) auszutreten, um ihr gesamtes Guthaben zurückzufordern, oder möglicherweise noch mehr zu staken, indem sie ihre Belohnungen verwenden, um mehr Rendite zu erzielen.
 
-Ein wichtiger Vorbehalt hierbei ist, dass vollständige Validator-Austritte durch das Protokoll ratenbegrenzt sind und nur eine bestimmte Anzahl von Validatoren pro Epoche (alle 6,4 Minuten) austreten darf. Dieses Limit schwankt je nach Anzahl der aktiven Validatoren, läuft aber darauf hinaus, dass an einem einzigen Tag etwa 0,33 % der gesamten gestakten ETH aus dem Netzwerk abgezogen werden können.
+Ein wichtiger Vorbehalt hierbei ist, dass vollständige Validator-Austritte durch das Protokoll ratenlimitiert sind und nur eine bestimmte Anzahl von Validatoren pro Epoche (alle 6,4 Minuten) austreten darf. Dieses Limit schwankt je nach Anzahl der aktiven Validatoren, läuft aber darauf hinaus, dass an einem einzigen Tag etwa 0,33 % der gesamten gestakten ETH aus dem Netzwerk abgezogen werden können.
 
-Dies verhindert einen Massenexodus von gestakten Geldern. Darüber hinaus verhindert es, dass ein potenzieller Angreifer mit Zugriff auf einen großen Teil der gesamten gestakten ETH ein Slashing-Vergehen begeht und alle betroffenen Validator-Guthaben in derselben Epoche abzieht/abhebt, bevor das Protokoll die Slashing-Strafe durchsetzen kann.
+Dies verhindert einen Massenexodus von gestakten Mitteln. Darüber hinaus verhindert es, dass ein potenzieller Angreifer mit Zugriff auf einen großen Teil der gesamten gestakten ETH ein Slashing-Vergehen begeht und alle Guthaben der betroffenen Validatoren in derselben Epoche abzieht/abhebt, bevor das Protokoll die Slashing-Strafe durchsetzen kann.
 
-Die APR ist auch absichtlich dynamisch, was es einem Markt von Stakern ermöglicht, auszugleichen, wie viel sie bereit sind, sich für die Sicherung des Netzwerks bezahlen zu lassen. Wenn die Rate zu niedrig ist, werden Validatoren mit einer durch das Protokoll begrenzten Rate austreten. Allmählich wird dies die APR für alle verbleibenden erhöhen und wieder neue oder zurückkehrende Staker anziehen.
+Die APR ist ebenfalls absichtlich dynamisch, was es einem Markt von Stakern ermöglicht, auszugleichen, wie viel sie bereit sind, sich für die Sicherung des Netzwerks bezahlen zu lassen. Wenn die Rate zu niedrig ist, werden Validatoren mit einer durch das Protokoll begrenzten Rate austreten. Allmählich wird dies die APR für alle Verbleibenden erhöhen und wieder neue oder zurückkehrende Staker anziehen.
 </ExpandableCard>
 
 ## Was ist mit „Eth2“ passiert? {#eth2}

@@ -83,7 +83,7 @@ Nun spezifizieren wir die Funktion zur Erstellung eines Caches:
 def mkcache(cache_size, seed):
     n = cache_size // HASH_BYTES
 
-    # Den anfänglichen Datensatz sequenziell erzeugen
+    # Den initialen Datensatz sequenziell erzeugen
     o = [sha3_512(seed)]
     for i in range(1, n):
         o.append(sha3_512(o[-1]))
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-Der Cache-Erstellungsprozess beinhaltet zunächst das sequentielle Auffüllen von 32 MB Speicher und anschließend die Durchführung von zwei Durchläufen von Sergio Demian Lerners _RandMemoHash_-Algorithmus aus [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Die Ausgabe ist ein Satz von 524288 64-Byte-Werten.
+Der Prozess der Cache-Erstellung beinhaltet zunächst das sequentielle Füllen von 32 MB Speicher und anschließend die Durchführung von drei Durchläufen (`CACHE_ROUNDS`) von Sergio Demian Lerners _RandMemoHash_-Algorithmus aus [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Die Ausgabe ist ein Satz von 524288 64-Byte-Werten.
 
 ## Datenaggregationsfunktion {#date-aggregation-function}
 
@@ -220,7 +220,7 @@ Der folgende Code sollte vorangestellt werden, wenn Sie daran interessiert sind,
 ```python
 import sha3, copy
 
-# Geht von Little-Endian-Bitreihenfolge aus (wie bei Intel-Architekturen)
+# Setzt Little-Endian-Bitreihenfolge voraus (wie bei Intel-Architekturen)
 def decode_int(s):
     return int(s[::-1].encode('hex'), 16) if s else 0
 
@@ -259,7 +259,7 @@ def xor(a, b):
     return a ^ b
 
 def isprime(x):
-    for i in range(2, int(x**0.5)):
+    for i in range(2, int(x**0.5) + 1):
          if x % i == 0:
              return False
     return True
