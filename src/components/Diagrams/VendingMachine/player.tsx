@@ -58,7 +58,7 @@ export function VendingMachinePlayer({
   const inView = useDiagramInView<HTMLDivElement>()
 
   const [presetId, setPresetId] = useState(initialPreset)
-  const { step, isRunning, atEnd, run, goTo, reset } = useStepPlayer({
+  const { step, atEnd, advance, goTo, reset } = useStepPlayer({
     idle: IDLE_STEP,
     last: VENDING_MACHINE_LAST_STEP,
     initial: initialStep,
@@ -125,6 +125,8 @@ export function VendingMachinePlayer({
 
   return (
     <InteractiveDiagram
+      layout="stacked"
+      illustrationClassName="max-w-2xl"
       className={className}
       caption={t("vending-machine-caption")}
       description={t("vending-machine-description", {
@@ -138,14 +140,7 @@ export function VendingMachinePlayer({
       })}
       fig={fig}
       title={t("vending-machine-title")}
-      status={t(
-        `vending-machine-status-${view.motion === "outcome" ? view.key : view.motion}`
-      )}
       parts={parts}
-      legend={[
-        { hue: "entity", label: t("vending-machine-legend-machine") },
-        { hue: "gas", label: t("vending-machine-legend-money") },
-      ]}
       inViewRef={inView.ref}
       paused={!inView.visible}
       illustration={
@@ -163,6 +158,7 @@ export function VendingMachinePlayer({
       }
       presets={
         <DiagramPresets
+          inline
           options={VENDING_MACHINE_PRESET_IDS.map((id) => ({
             id,
             label: t(`vending-machine-preset-${id}`),
@@ -177,11 +173,14 @@ export function VendingMachinePlayer({
       }
       transport={
         <DiagramTransport
+          inline
           primary={{
-            label: t("vending-machine-run"),
+            label:
+              view.step === IDLE_STEP || atEnd
+                ? t("vending-machine-run")
+                : t("diagram-next-step"),
             icon: <ShoppingCart />,
-            onClick: run,
-            disabled: isRunning,
+            onClick: advance,
           }}
           current={view.step}
           total={VENDING_MACHINE_LAST_STEP}

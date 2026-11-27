@@ -137,9 +137,9 @@ function Coin({
 
 const RULE_ICON: Record<RuleState, ReactNode> = {
   pending: null,
-  pass: <Check className="size-3.5" strokeWidth={3} />,
-  fail: <X className="size-3.5" strokeWidth={3} />,
-  skipped: <Minus className="size-3.5" strokeWidth={3} />,
+  pass: <Check className="size-3" strokeWidth={3} />,
+  fail: <X className="size-3" strokeWidth={3} />,
+  skipped: <Minus className="size-3" strokeWidth={3} />,
 }
 
 const RULE_MARK: Record<RuleState, string> = {
@@ -243,8 +243,13 @@ function VendingMachineRig({
   const coinInSlot = view.paid > 0 && !view.reverted && view.released === 0
 
   return (
-    <div className={cn("flex flex-col gap-3", className)}>
-      <div className="relative">
+    <div
+      className={cn(
+        "flex flex-col gap-3 @[640px]:flex-row @[640px]:items-center @[640px]:justify-center @[640px]:gap-6",
+        className
+      )}
+    >
+      <div className="relative @[640px]:w-[23rem] @[640px]:shrink-0">
         <svg
           aria-hidden
           data-anatomy-drawing=""
@@ -441,6 +446,8 @@ function VendingMachineRig({
           labels={labels}
           definitions={definitions}
           litId={view.litPart}
+          leaders={false}
+          tooltips
         />
       </div>
 
@@ -449,7 +456,7 @@ function VendingMachineRig({
         {...part("rules")}
         className={cn(
           ISO_DIM_CLASS,
-          "mx-auto flex w-full max-w-md flex-col gap-2 rounded-base border px-3 py-2",
+          "mx-auto flex w-full max-w-md flex-col gap-2 rounded-base border px-3 py-2 @[640px]:mx-0 @[640px]:w-60 @[640px]:shrink-0",
           rulesState === "hover"
             ? "border-diagram-line-strong"
             : rulesState === "lit"
@@ -459,7 +466,7 @@ function VendingMachineRig({
       >
         <p
           className={cn(
-            "m-0 text-sm font-bold",
+            "m-0 text-xs font-bold",
             rulesState === "lit" ? "text-diagram-entity" : "text-body"
           )}
         >
@@ -469,11 +476,11 @@ function VendingMachineRig({
           {rules.map(({ id, question }) => {
             const rule = view.rules[id]
             return (
-              <li key={id} className="m-0 flex items-center gap-2 text-sm">
+              <li key={id} className="m-0 flex items-center gap-2 text-xs">
                 <span
                   key={`${rule}-${runKey}`}
                   className={cn(
-                    "flex size-5 shrink-0 items-center justify-center rounded-full border",
+                    "flex size-4.5 shrink-0 items-center justify-center rounded-full border",
                     RULE_MARK[rule],
                     rule !== "pending" && POP
                   )}
