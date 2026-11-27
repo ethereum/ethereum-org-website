@@ -5,7 +5,7 @@
   "page-run-a-node-build-your-own-min-ram": "4〜8 GBのRAM",
   "page-run-a-node-build-your-own-ram-note-1": "ステーキングに関する注意事項を参照",
   "page-run-a-node-build-your-own-ram-note-2": "Raspberry Piに関する注意事項を参照",
-  "page-run-a-node-build-your-own-min-ssd": "2 TBのSSD",
+  "page-run-a-node-build-your-own-min-ssd": "4 TB SSD",
   "page-run-a-node-build-your-own-ssd-note": "必要な書き込み速度を得るためにSSDが必要です。",
   "page-run-a-node-build-your-own-recommended": "推奨",
   "page-run-a-node-build-your-own-nuc": "Intel NUC、第7世代以降",

@@ -1,7 +1,7 @@
 ---
 title: "DAOとは？"
 metaTitle: "DAOとは？ | 分散型自律組織 (Decentralized Autonomous Organization)"
-description: "イーサリアム上のDAOの概要"
+description: "DAOとは？分散型自律組織がスマート・コントラクトとトークンを使用して、イーサリアム上で意思決定を行い、共有資金を管理する方法を学びましょう。"
 lang: ja
 template: use-cases
 sidebarDepth: 2

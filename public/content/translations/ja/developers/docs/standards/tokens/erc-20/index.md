@@ -176,14 +176,14 @@ ERC-20でこの問題を完全に防ぐことはできませんが、エンド�
 - [Alchemy - Solidity ERC20トークンガイド](https://www.alchemy.com/overviews/erc20-solidity)
 
 ## その他の代替可能トークン標準 {#fungible-token-standards}
+
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - トークン化されたボールト](/developers/docs/standards/tokens/erc-4626)
 - [ERC-7540 - 非同期のトークン化されたボールト](/developers/docs/standards/tokens/erc-7540)
-## チュートリアル：イーサリアム上でERC-20を使って構築する {#tutorials}
+## チュートリアル: イーサリアム上でERC-20を使用して構築する {#tutorials}
 
-- [ERC-20コントラクトのウォークスルー](/developers/tutorials/erc20-annotated-code/) _– オープンツェッペリンのERC-20コントラクト実装の1行ごとの注釈付きウォークスルー。_
-- [安全対策付きのERC-20](/developers/tutorials/erc20-with-safety-rails/) _– ユーザーがよくある間違いを避けるために、ERC-20トークンにセーフガードを追加する方法。_
-- [Ethers.jsを使用したトークンの送信](/developers/tutorials/send-token-ethersjs/) _– Ethers.jsを使用してERC-20トークンを送金するための初心者向けガイド。_
-- [詐欺トークンが使用するいくつかの手口とそれらを検出する方法](/developers/tutorials/scam-token-tricks/) _– 詐欺的なERC-20トークンのパターンとそれらを特定する方法についての詳細な解説。_
+- [ERC-20コントラクトのウォークスルー](/developers/tutorials/erc20-annotated-code/) _– オープンツェッペリンのERC-20コントラクト実装に対する、1行ごとの注釈付きウォークスルー。_
+- [安全対策付きのERC-20](/developers/tutorials/erc20-with-safety-rails/) _– ユーザーがよくある間違いを回避できるように、ERC-20トークンに安全対策を追加する方法。_
+- [詐欺トークンが使用する手口とその検出方法](/developers/tutorials/scam-token-tricks/) _– 詐欺的なERC-20トークンのパターンと、その特定方法についての詳細な解説。_

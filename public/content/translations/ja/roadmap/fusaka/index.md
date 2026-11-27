@@ -1,7 +1,7 @@
 ---
 title: "フサカ 🦓"
 metaTitle: Fulu-Osaka (Fusaka)
-description: "フサカ・プロトコル・アップグレードについて学ぶ"
+description: "フサカは2025年12月3日に稼働しました。より安価なレイヤー2のトランザクションを実現するためにブロブをスケーリングするPeerDASなど、このイーサリアムのアップグレードによる変更点について学びましょう。"
 lang: ja
 template: upgrade
 authors: ["Nixo", "マリオ・ハベル"]

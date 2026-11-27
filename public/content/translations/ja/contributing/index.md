@@ -12,7 +12,7 @@ ethereum.org は、ウェブサイトの翻訳、執筆、デザイン、保守�
 ## 貢献する方法 {#ways-to-contribute}
 
 **翻訳**
-- [翻訳エラーを報告する](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [翻訳プログラム](/contributing/translation-program/)は縮小しており、新規翻訳者のオンボーディングは行っていません
+- [翻訳エラーを報告する](https://github.com/ethereum/ethereum-org-website/issues/new/choose) – [翻訳プログラム](/contributing/translation-program/)は縮小しており、新しい翻訳者のオンボーディングは行っていません
 
 **開発**
 - [オープンなIssueに取り組む](https://github.com/ethereum/ethereum-org-website/issues) – 私たちが特定した、対応が必要な作業
@@ -25,20 +25,21 @@ ethereum.org は、ウェブサイトの翻訳、執筆、デザイン、保守�
 - [ビルダー向けの記事を書く](/contributing/adding-articles/) - [最新情報](/latest/)セクションに記事を寄稿します
 - [コミュニティリソースを追加する](/contributing/content-resources/) – 関連するページに役立つ記事やリソースを追加します
 - [レポートを提案する](/contributing/adding-reports/) - [レポート](/reports/)ページに調査レポートを提案します
-- [あなたのストーリーを共有する](/contributing/adding-community-stories/) - オープンソースやサンクチュアリ技術に関する個人的な経験、イーサリアムエコシステムがあなたの人生にどのような影響を与えたか、またはあなたとあなたのコミュニティがイーサリアムをどのように使用しているかについてのストーリーを提出します
+- [あなたのストーリーを共有する](/contributing/adding-community-stories/) - オープンソースやサンクチュアリ・テクノロジーに関する個人的な経験、イーサリアムエコシステムがあなたの人生にどのような影響を与えたか、またはあなたやあなたのコミュニティがイーサリアムをどのように使用しているかについてのストーリーを提出します
 - [クイズ](/contributing/quizzes/) – 関連するページのクイズ問題バンクを追加、更新、削除します
 - [デザインリソースを提案する](/contributing/design/adding-design-resources/) – 役立つデザインリソースを追加、更新、削除します
 - [動画を提案する](/contributing/adding-videos/) – 動画ギャラリーに教育的な動画を提案します
+- [用語集の用語を追加する](/contributing/adding-glossary-terms/) – [イーサリアム用語集](/glossary/)に用語を追加または更新します
 
 **機能のアイデア**
 - [機能をリクエストする](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – 新しい機能やデザインに関するアイデアがあればお知らせください
 
-**プロダクトの掲載**
+**製品リスト**
 - [取引所を追加する](/contributing/adding-exchanges/) – [取引所検索](/get-eth/#country-picker)に取引所を追加します
-- [プロダクトを追加する](/contributing/adding-products/) – 関連するページに分散型アプリケーション (dapp) やウォレットを追加します
+- [製品を追加する](/contributing/adding-products/) – 関連するページにdappやウォレットを追加します
 - [開発者ツールを追加する](/contributing/adding-developer-tools/) – 関連するページに開発者ツールを追加します
 - [レイヤー2を追加する](/contributing/adding-layer-2s/) – 関連するページにレイヤー2を追加します
-- [ステーキングプロダクトまたはサービスを追加する](/contributing/adding-staking-products/) – ソロ・ステーキング、プール・ステーキング、またはステーキング・アズ・ア・サービスを促進するプロジェクトを追加します
+- [ステーキング製品またはサービスを追加する](/contributing/adding-staking-products/) – ソロ・ステーキング、プール・ステーキング、またはステーキング・アズ・ア・サービスを促進するプロジェクトを追加します
 - [ウォレットを追加する](/contributing/adding-wallets/) – [ウォレット検索ページ](/wallets/find-wallet/)にウォレットを追加します
 - [DeSciページにプロジェクトを提案する](/contributing/adding-desci-projects/) – 分散型科学に貢献する、イーサリアム上に構築されたプロジェクトを追加します
 - [リソースを追加する](/contributing/adding-resources/) – 関連するページに役立つリソースを追加します
@@ -100,19 +101,9 @@ ethereum.org にコンテンツや成果物を貢献する際は、あなた自�
 3. チームメンバーからOATへのリンクが送られてくるのを待ちます。
 4. OATを請求します！
 
-OATを請求する際は、セルフカストディウォレットのみを使用してください。取引所のアカウントや、あなたが秘密鍵を保持していないその他のアカウントは使用しないでください。これらを使用すると、OATにアクセスして管理することができなくなります。
+OATを請求するには、セルフカストディウォレットのみを使用する必要があります。取引所のアカウントや、秘密鍵を保持していないその他のアカウントは使用しないでください。これらを使用すると、OATにアクセスして管理することができなくなります。
 
-## GitPOAPを請求する {#claim-gitpoap}
-
-GitPOAPもマージされたあなたの貢献を自動的に認識し、彼らのプラットフォーム上で独自の貢献者POAPをミントできるようにします！
-
-
-### 請求方法 {#how-to-claim-2}
-
-1. [GitPOAP](https://www.gitpoap.io)にアクセスします。
-2. サインインオプションから、ウォレットまたはメールアドレスで接続します。
-3. GitHubのユーザー名、ETHアドレス、ENS名、または任意のGitPOAPを検索して、資格があるかどうかを確認します。
-4. あなたのGitHubアカウントに資格がある場合、GitPOAPをミントすることができます！
+<LinkWithArrow href="/collectibles/">あなたの ethereum.org コレクティブルを見る</LinkWithArrow>
 
 ## 貢献者 {#contributors}
 

@@ -66,7 +66,7 @@ lang: ja
 **Infura -** **_サービスとしてのイーサリアムAPI_**
 
 - [infura.io](https://infura.io)
-- [ドキュメント](https://docs.infura.io/api)
+- [ドキュメント](https://docs.infura.io/)
 - [GitHub](https://github.com/INFURA)
 
 **Node RPC - _費用対効果の高いイーサリアム仮想マシン（EVM）JSON-RPCプロバイダー_**
@@ -77,7 +77,7 @@ lang: ja
 **NOWNodes - _フルノードおよびブロック・エクスプローラー_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [ドキュメント](https://nownodes.gitbook.io/documentation)
+- [ドキュメント](https://docs.nownodes.io/)
 
 **QuickNode -** **_サービスとしてのブロックチェーンインフラストラクチャ_**
 
@@ -156,7 +156,7 @@ lang: ja
 - [ドキュメント](https://docs.chainbase.com/)
 - [ディスコード](https://discord.gg/Wx6qpqz4AF)
 
-**Chainstack -** **_サービスとしてのエラスティックおよび専用イーサリアムノード_**
+**Chainstack -** **_サービスとしての柔軟で専用のイーサリアムノード_**
 
 - [chainstack.com](https://chainstack.com)
 - [ドキュメント](https://docs.chainstack.com/)
@@ -176,7 +176,6 @@ lang: ja
 
 - [moralis.io](https://moralis.io)
 - [ドキュメント](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
 - [ディスコード](https://moralis.io/joindiscord/)
 - [フォーラム](https://forum.moralis.io/)
 
@@ -193,7 +192,7 @@ lang: ja
 - [ドキュメント](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-**Watchdata -** **_イーサリアムのブロックチェーンへのシンプルで信頼性の高いAPIアクセスを提供_**
+**Watchdata -** **_イーサリアムブロックチェーンへのシンプルで信頼性の高いAPIアクセスを提供_**
 
 - [Watchdata](https://watchdata.io/)
 - [ドキュメント](https://docs.watchdata.io/)
@@ -210,10 +209,9 @@ lang: ja
 **Covalent -** **_200以上のチェーン向けの充実したブロックチェーンAPI_**
 
 - [covalenthq.com](https://www.covalenthq.com/)
-- [ドキュメント](https://www.covalenthq.com/docs/api/)
+- [ドキュメント](https://goldrush.dev/docs/)
 - [GitHub](https://github.com/covalenthq)
 - [ディスコード](https://www.covalenthq.com/discord/)
-
 
 ## 参考文献 {#further-reading}
 
@@ -226,5 +224,4 @@ _役に立ったコミュニティリソースをご存知ですか？このペ�
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [JavaScriptでイーサリアムのブロックチェーンを使用するためのWeb3.jsのセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトでWeb3.jsをセットアップするための手順。_
-- [JavaScriptからスマート・コントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAIトークンを使用して、JavaScriptでコントラクトの関数を呼び出す方法を確認します。_
+- [Web3アプリ向けのサーバーコンポーネントとエージェント](/developers/tutorials/server-components/) _– ブロックチェーンのイベントをリッスンし、トランザクションで応答するTypeScriptサーバーコンポーネントの記述方法。_

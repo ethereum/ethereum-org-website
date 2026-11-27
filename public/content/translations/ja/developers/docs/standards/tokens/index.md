@@ -39,6 +39,6 @@ _役に立ったコミュニティリソースをご存知ですか？このペ�
 ## 関連チュートリアル {#related-tutorials}
 
 - [トークン統合チェックリスト](/developers/tutorials/token-integration-checklist/) _– トークンとやり取りする際に考慮すべき事項のチェックリスト。_
-- [ERC20トークンのスマート・コントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– イーサリアムのテストネットワークに初めてスマート・コントラクトをデプロイするための入門。_
-- [Solidityスマート・コントラクトからのERC20トークンの送金と承認](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity言語を使用して、スマート・コントラクトからトークンとやり取りする方法。_
-- [ERC721マーケットの実装 [ハウツーガイド]](/developers/tutorials/how-to-implement-an-erc721-market/) _– トークン化されたアイテムを分散型のクラシファイド掲示板で販売する方法。_
+- [ERC-20コントラクトのウォークスルー](/developers/tutorials/erc20-annotated-code/) _– オープンツェッペリンのERC-20コントラクト実装の1行ごとの注釈付きウォークスルー。_
+- [Solidityスマート・コントラクトからのERC-20トークンの送金と承認](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Solidity言語を使用してスマート・コントラクトからトークンとやり取りする方法。_
+- [ERC-721マーケットの実装 [ハウツーガイド]](/developers/tutorials/how-to-implement-an-erc721-market/) _– 分散型クラシファイドボードでトークン化されたアイテムを販売する方法。_

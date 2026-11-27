@@ -39,22 +39,21 @@ incomplete: true
 ## Rustのプロジェクトとツール {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _イーサリアムのようなネットワークと対話するためのexternsのコレクション_
-- [ライトハウス](https://github.com/sigp/lighthouse) - _高速なイーサリアムのコンセンサス・レイヤークライアント_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssemblyの決定論的サブセットを使用した、イーサリアムのスマート・コントラクト実行レイヤーの再設計の提案_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS APIリファレンス_
-- [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブのParityクライアントEVMを使用したSolidityスマート・コントラクトの単体テストハーネス。_
-- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rustによるイーサリアム仮想マシンの実装_
+- [Lighthouse (ライトハウス)](https://github.com/sigp/lighthouse) - _高速なイーサリアムのコンセンサス・レイヤークライアント_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssemblyの決定論的サブセットを使用した、イーサリアムのスマート・コントラクト実行レイヤーの再設計案_
+- [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブのParityクライアントEVMを使用したSolidityスマート・コントラクトのユニットテストハーネス。_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rustによるイーサリアム仮想マシン (EVM) の実装_
 - [Wavelet](https://github.com/perlin-network/smart-contract-rs) - _RustによるWaveletスマート・コントラクト_
 - [Foundry](https://github.com/foundry-rs/foundry) - _イーサリアムアプリケーション開発のためのツールキット_
-- [Alloy](https://alloy.rs) - _イーサリアムやその他のEVMベースのチェーンと対話するための、高性能で十分にテストされ文書化されたライブラリ。_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _イーサリアムライブラリとウォレットの実装_
-- [SewUp](https://github.com/second-state/SewUp) - _一般的なバックエンド開発のように、RustでイーサリアムのWebAssemblyコントラクトを構築するのに役立つライブラリ_
+- [Alloy](https://alloy.rs) - _イーサリアムやその他のEVMベースのチェーンと対話するための、高性能で十分にテストされ、文書化されたライブラリ。_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _イーサリアムのライブラリおよびウォレットの実装_
+- [SewUp](https://github.com/second-state/SewUp) - _Rustを使用してイーサリアムのWebAssemblyコントラクトを構築し、一般的なバックエンドでの開発と同じように行えるように支援するライブラリ_
 - [Substreams](https://github.com/streamingfast/substreams) - _並列化されたブロックチェーンデータインデックス技術_
-- [レス](https://github.com/paradigmxyz/reth) レス (Rust Ethereumの略) は、新しいイーサリアムのフルノード実装です
+- [Reth](https://github.com/paradigmxyz/reth) Reth (レス: Rust Ethereumの略) は、新しいイーサリアムのフル・ノード実装です
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rustで書かれたイーサリアムエコシステムのプロジェクトの厳選されたコレクション_
 - [Stylus](https://github.com/OffchainLabs/stylus) - _Arbitrum上でスマート・コントラクトを構築するためのRust SDK_
 
-さらにリソースをお探しですか？ [ethereum.org/developers.](/developers/)
+さらにリソースをお探しですか？[ethereum.org/developers](/developers/) を確認してください。
 
 ## Rustコミュニティの貢献者 {#rust-community-contributors}
 

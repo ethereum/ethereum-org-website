@@ -1,6 +1,6 @@
 ---
 title: "分散型科学 (DeSci)"
-description: "イーサリアム上の分散型科学の概要"
+description: "分散型科学とは何でしょうか？DeSciがイーサリアムを活用して研究に資金を提供し、データをオープンに共有し、科学者に報酬を与え、科学をより身近なものにする仕組みについて学びましょう。"
 lang: ja
 template: use-cases
 sidebarDepth: 2

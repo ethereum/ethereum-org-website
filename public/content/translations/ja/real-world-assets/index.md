@@ -1,7 +1,7 @@
 ---
 title: "リアル・ワールド・アセット (RWA)"
 metaTitle: "RWAとは？ | リアル・ワールド・アセットの利点と用途"
-description: "イーサリアム上のリアル・ワールド・アセットの概要"
+description: "リアル・ワールド・アセット (RWA) とは？国債、不動産、コモディティなどの資産がイーサリアム上でどのようにトークン化されるか、そしてその利点とリスクについて学びましょう。"
 lang: ja
 template: use-cases
 image: /images/man-and-dog-playing.png

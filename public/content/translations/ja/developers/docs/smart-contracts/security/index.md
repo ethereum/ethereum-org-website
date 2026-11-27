@@ -78,7 +78,7 @@ contract VendingMachine {
 
 残念ながら、単体テストを単独で使用した場合、スマート・コントラクトのセキュリティ向上に対する効果は最小限です。単体テストは、モックデータに対して関数が適切に実行されることを証明するかもしれませんが、単体テストの効果は作成されたテストの範囲にとどまります。そのため、スマート・コントラクトの安全性を損なう可能性のある、見落とされたエッジケースや脆弱性を検出することが困難になります。
 
-より良いアプローチは、単体テストと、[静的および動的解析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)を使用して実行されるプロパティベースのテストを組み合わせることです。静的解析は、[制御フローグラフ](https://en.wikipedia.org/wiki/Control-flow_graph)や[抽象構文木](https://deepsource.io/glossary/ast/)などの低レベルの表現に依存して、到達可能なプログラムの状態と実行パスを分析します。一方、[スマート・コントラクトのファジング](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)などの動的解析手法は、ランダムな入力値でコントラクトのコードを実行し、セキュリティ・プロパティに違反する操作を検出します。
+より良いアプローチは、単体テストと、[静的および動的解析](/developers/docs/smart-contracts/testing/#property-based-testing-for-smart-contracts)を使用して実行されるプロパティベースのテストを組み合わせることです。静的解析は、[制御フローグラフ](https://en.wikipedia.org/wiki/Control-flow_graph)や[抽象構文木](https://deepsource.io/glossary/ast/)などの低レベルの表現に依存して、到達可能なプログラムの状態と実行パスを分析します。一方、[スマート・コントラクトのファジング](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)などの動的解析手法は、ランダムな入力値でコントラクトのコードを実行し、セキュリティ・プロパティに違反する操作を検出します。
 
 [形式的検証](/developers/docs/smart-contracts/formal-verification)は、スマート・コントラクトのセキュリティ・プロパティを検証するためのもう1つの手法です。通常のテストとは異なり、形式的検証はスマート・コントラクトにエラーがないことを決定的に証明できます。これは、望ましいセキュリティ・プロパティを捉えた形式仕様を作成し、コントラクトの形式モデルがこの仕様に準拠していることを証明することによって達成されます。
 
@@ -461,9 +461,9 @@ contract Attack {
 
 - **[形式的検証ツール](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _スマート・コントラクトの機能的な正確性を検証し、不変条件を確認するためのツール。_
 
-- **[スマート・コントラクト監査サービス](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _イーサリアム開発プロジェクト向けにスマート・コントラクトの監査サービスを提供する組織のリスト。_
+- **[スマート・コントラクト監査サービス](#smart-contract-auditing-services)** - _イーサリアム開発プロジェクト向けにスマート・コントラクトの監査サービスを提供する組織のリスト。_
 
-- **[バグバウンティ・プラットフォーム](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _バグバウンティを調整し、スマート・コントラクトの重大な脆弱性の責任ある開示に報酬を与えるためのプラットフォーム。_
+- **[バグバウンティ・プラットフォーム](#bug-bounty-platforms)** - _バグバウンティを調整し、スマート・コントラクトの重大な脆弱性の責任ある開示に報酬を与えるためのプラットフォーム。_
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _フォークされたコントラクトに関する利用可能なすべての情報を確認するための無料オンラインツール。_
 
@@ -565,9 +565,7 @@ contract Attack {
 
 - [スリザーを使用してスマート・コントラクトのバグを見つける方法](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [マンティコアを使用してスマート・コントラクトのバグを見つける方法](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-
-- [スマート・コントラクト・セキュリティ・ガイドライン](/developers/tutorials/smart-contract-security-guidelines/)
+- [スマート・コントラクト・セキュリティのガイドライン](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [トークン・コントラクトを任意のトークンと安全に統合する方法](/developers/tutorials/token-integration-checklist/)
 
