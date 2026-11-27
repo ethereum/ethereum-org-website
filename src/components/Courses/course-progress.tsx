@@ -57,7 +57,10 @@ export const LessonsRemain = ({
   )
 }
 
-/** Lessons done, then the course check as a separate last step with its trophy */
+/**
+ * Lessons done as one bar that runs into the course check's trophy: a dashed
+ * ring until Course Mastery is passed, solid gold after
+ */
 const CourseProgress = ({
   courseId,
   lessonIds,
@@ -70,23 +73,28 @@ const CourseProgress = ({
   const { isLessonComplete, isExamPassed } = useCourseProgress()
   const total = lessonIds.length
   const done = lessonIds.filter((id) => isLessonComplete(courseId, id)).length
+  const allDone = total > 0 && done === total
   const passed = hasExam && isExamPassed(courseId)
 
   const label = passed
     ? t("page-courses-path-finish")
-    : hasExam && done === total
+    : hasExam && allDone
       ? t("page-courses-progress-check-next")
       : t("page-courses-lessons-done", { done, total })
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center">
         <Progress
           aria-hidden
           value={total ? (done / total) * 100 : 0}
-          style={{ flexGrow: total }}
           className={cn(
-            "h-3 w-auto basis-0 *:data-[slot=progress-indicator]:duration-700",
+            "h-3 *:data-[slot=progress-indicator]:duration-700",
+            // Square end where the bar meets the trophy ring
+            hasExam && "rounded-e-none",
+            hasExam &&
+              allDone &&
+              "*:data-[slot=progress-indicator]:rounded-e-none",
             onColor
               ? "bg-black/20 *:data-[slot=progress-indicator]:bg-white"
               : "bg-(--course-soft) *:data-[slot=progress-indicator]:bg-(--course)"
@@ -96,29 +104,43 @@ const CourseProgress = ({
           <span
             aria-hidden
             className={cn(
-              "h-3 flex-1 basis-0 rounded-full transition-colors duration-700",
+              "relative -ms-px grid size-9 shrink-0 place-items-center rounded-full border-2 transition-colors duration-700",
               passed
-                ? onColor
-                  ? "bg-white"
-                  : "bg-(--course)"
-                : onColor
-                  ? "bg-black/20"
-                  : "bg-(--course-soft)"
+                ? "border-yellow-500 bg-yellow-400"
+                : cn(
+                    "border-dashed",
+                    allDone
+                      ? onColor
+                        ? "border-white"
+                        : "border-(--course)"
+                      : onColor
+                        ? "border-white/60"
+                        : "border-(--course-soft)"
+                  )
             )}
-          />
-        )}
-        {hasExam && (
-          <Trophy
-            aria-hidden
-            className={cn(
-              "size-6 shrink-0 transition-colors",
-              passed
-                ? "fill-yellow-400 text-yellow-600"
-                : onColor
-                  ? "text-white/60"
-                  : "text-disabled"
-            )}
-          />
+          >
+            <Trophy
+              className={cn(
+                "size-5 transition-colors duration-700",
+                passed
+                  ? // Cup filled, handles (3rd and 6th paths) left open
+                    "fill-yellow-200 text-yellow-800 [&_path:nth-of-type(3)]:fill-none [&_path:nth-of-type(6)]:fill-none"
+                  : allDone
+                    ? onColor
+                      ? "text-white"
+                      : "text-(--course)"
+                    : onColor
+                      ? "text-white/60"
+                      : "text-disabled"
+              )}
+            >
+              {/* Lucide draws the base as two open strokes; this closes it so it can
+                  fill, with no stroke across the top where it meets the cup */}
+              {passed && (
+                <path d="M10 14.66V16.286A2 2 0 0 1 9.024 17.982A5 5 0 0 0 7 21.978H17A5 5 0 0 0 14.976 17.982A2 2 0 0 1 14 16.286V14.66" />
+              )}
+            </Trophy>
+          </span>
         )}
       </div>
       <div className="flex flex-wrap items-center gap-2">
