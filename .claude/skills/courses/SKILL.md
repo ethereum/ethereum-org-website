@@ -34,11 +34,11 @@ Gamified lessons at `/courses`: Brilliant-style interactive steps with Duolingo-
 
 Every course has a `level`, which limits what its copy may use:
 
-| Level          | Allows                                                                                                          |
-| -------------- | --------------------------------------------------------------------------------------------------------------- |
-| `beginner`     | Readers aged 10 to 12. Analogies first; no numbers, units, formulas, proofs or timings.                         |
-| `intermediate` | Numbers and mechanics welcome: working out fees, units, timings, thresholds.                                    |
-| `advanced`     | Internals: how nodes, the EVM and protocol upgrades work inside. Assumes the beginner and intermediate courses. |
+| Level          | Allows                                                                                                                                                                    |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `beginner`     | Newcomers aged 13 and up: plain words, no assumed background, never written as if the reader is a child. Analogies first; no numbers, units, formulas, proofs or timings. |
+| `intermediate` | Numbers and mechanics welcome: working out fees, units, timings, thresholds.                                                                                              |
+| `advanced`     | Internals: how nodes, the EVM and protocol upgrades work inside. Assumes the beginner and intermediate courses.                                                           |
 
 `TRACKS` are the hub sections, in order, and set the level of their courses: `essentials` (beginner: everyday, wallets, blockchains, ethereum, sending, smart-contracts), `using` (beginner, putting the essentials to work: tokens, nfts, layer-2, trading-and-lending, scams), `deeper` (intermediate: gas, proof-of-stake, rollups, eth, upgrades, smart-accounts) and `under-the-hood` (advanced, teasers only for now: nodes, evm, mev, roadmap, privacy). A track with no courses and no teasers doesn't render.
 
