@@ -113,7 +113,7 @@ Once you’ve tapped into local support, expand your outreach to global players 
 
 #### Alternative forms of funding your event {#alternative-forms-of-funding-your-event}
 
-Grants are another potential funding source that many organizers overlook. Programs like the Ethereum Foundation’s [Ecosystem Support Program](https://esp.ethereum.foundation/) (ESP) and [other grant initiatives](https://ethereum.org/community/grants/#ethereum-grants) exist to support community-driven events.
+Grants are another potential funding source that many organizers overlook. Programs like the Ethereum Foundation’s [Ecosystem Support Program](https://esp.ethereum.foundation/) (ESP) and [other grant initiatives](/community/grants/) exist to support community-driven events.
 
 Beyond financial sponsorships, consider in-kind partnerships, especially for food and beverages. Brands that align with the local culture or tech community can be great partners for your event. Coffee brands, beverage companies, or even local pizzerias might be willing to provide products in exchange for visibility at the event. These collaborations can help reduce costs while enhancing the attendee experience.
 
