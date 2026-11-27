@@ -719,6 +719,7 @@ export async function check(item, fetchPage = fetchText, readFile = repoFile) {
   const facts = []
   for (const f of arr(item.facts, 15)) {
     const x = { fact: str(f.fact, 300), ...base(f) }
+    if (f.weighs === "for" || f.weighs === "against") x.weighs = f.weighs
     if (facts.length < 5 && x.fact && (await verify(x, f)) === "ok")
       facts.push(x)
     else dropped++

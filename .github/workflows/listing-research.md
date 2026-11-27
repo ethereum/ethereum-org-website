@@ -124,7 +124,7 @@ safe-outputs:
           required: true
           type: string
         facts:
-          description: 'JSON array of at most 5 {"fact": "neutral, checkable statement", "quote": "exact source text", "url": "source without scheme, or a repo path", "source": "author"|"independent"|"repo"}'
+          description: 'JSON array of at most 5 {"fact": "neutral, checkable statement", "quote": "exact source text", "url": "source without scheme, or a repo path", "source": "author"|"independent"|"repo", "weighs": "against"|"for" (omit when neutral)}'
           required: false
           type: string
         existing:
