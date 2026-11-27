@@ -12,14 +12,13 @@ Para ayudarle a comprender mejor esta página, le recomendamos que primero lea [
 
 ## ¿Qué es una transacción? {#whats-a-transaction}
 
-Una transacción de Ethereum se refiere a una acción iniciada por una cuenta de propiedad externa, en otras palabras, una cuenta administrada por un humano, no por un contrato. Por ejemplo, si Bob envía a Alice 1 ETH, la cuenta de Bob debe ser debitada y la de Alice debe ser acreditada. Esta acción que cambia el estado tiene lugar dentro de una transacción.
+Una transacción de Ethereum se refiere a una acción iniciada por una cuenta de propiedad externa, en otras palabras, una cuenta administrada por un humano, no un contrato. Por ejemplo, si Bob envía a Alice 1 ETH, la cuenta de Bob debe ser debitada y la de Alice debe ser acreditada. Esta acción que cambia el estado tiene lugar dentro de una transacción.
 
-![Diagram showing a transaction cause state change](./tx.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<TxApplyDiagram />
 
 Las transacciones, que cambian el estado de la EVM, deben transmitirse a toda la red. Cualquier nodo puede transmitir una solicitud para que se ejecute una transacción en la EVM; después de que esto suceda, un validador ejecutará la transacción y propagará el cambio de estado resultante al resto de la red.
 
-Las transacciones requieren una tarifa y deben incluirse en un bloque validado. Para simplificar esta descripción general, cubriremos las tarifas de gas y la validación en otra parte.
+Las transacciones requieren una tarifa y deben incluirse en un bloque validado. Para hacer esta descripción general más simple, cubriremos las tarifas de gas y la validación en otra parte.
 
 Una transacción enviada incluye la siguiente información:
 
@@ -27,7 +26,7 @@ Una transacción enviada incluye la siguiente información:
 - `to`: la dirección receptora (si es una cuenta de propiedad externa, la transacción transferirá valor. Si es una cuenta de contrato, la transacción ejecutará el código del contrato).
 - `signature`: el identificador del remitente. Esto se genera cuando la clave privada del remitente firma la transacción y confirma que el remitente ha autorizado esta transacción.
 - `nonce`: un contador que se incrementa secuencialmente y que indica el número de transacción de la cuenta.
-- `value`: cantidad de ETH a transferir del remitente al destinatario (denominada en Wei, donde 1 ETH equivale a 1e+18 Wei).
+- `value`: la cantidad de ETH a transferir del remitente al destinatario (denominada en Wei, donde 1 ETH equivale a 1e+18 Wei).
 - `input data`: campo opcional para incluir datos arbitrarios.
 - `gasLimit`: la cantidad máxima de unidades de gas que puede consumir la transacción. La [EVM](/developers/docs/evm/opcodes) especifica las unidades de gas requeridas por cada paso computacional.
 - `maxPriorityFeePerGas`: el precio máximo del gas consumido que se incluirá como tarifa de prioridad para el validador.
@@ -49,7 +48,7 @@ El objeto de la transacción se verá un poco así:
 }
 ```
 
-Pero un objeto de transacción debe estar firmado usando la clave privada del remitente. Esto prueba que la transacción solo pudo provenir del remitente y no fue enviada de manera fraudulenta.
+Pero un objeto de transacción debe firmarse utilizando la clave privada del remitente. Esto prueba que la transacción solo pudo provenir del remitente y no se envió de manera fraudulenta.
 
 Un cliente de Ethereum como Geth manejará este proceso de firma.
 
@@ -100,7 +99,7 @@ Ejemplo de respuesta:
 }
 ```
 
-- el `raw` es la transacción firmada en forma codificada de [Prefijo de Longitud Recursiva (RLP)](/developers/docs/data-structures-and-encoding/rlp).
+- el `raw` es la transacción firmada en forma codificada de [Prefijo de longitud recursiva (RLP)](/developers/docs/data-structures-and-encoding/rlp).
 - el `tx` es la transacción firmada en formato JSON.
 
 Con el hash de la firma, se puede probar criptográficamente que la transacción provino del remitente y se envió a la red.
@@ -152,25 +151,23 @@ En Ethereum hay algunos tipos diferentes de transacciones:
 
 Como se mencionó, las transacciones cuestan [gas](/developers/docs/gas/) para ejecutarse. Las transacciones de transferencia simples requieren 21000 unidades de gas.
 
-Entonces, para que Bob envíe a Alice 1 ETH a una `baseFeePerGas` de 190 Gwei y una `maxPriorityFeePerGas` de 10 Gwei, Bob tendrá que pagar la siguiente tarifa:
+Entonces, para que Bob envíe a Alice 1 ETH a una `baseFeePerGas` de 190 Gwei y una `maxPriorityFeePerGas` de 10 Gwei, Bob deberá pagar la siguiente tarifa:
 
 ```
-(190 + 10) * 21000 = 4,200,000 Gwei
---o--
+(190 + 10) * 21000 = 4,200,000 gwei
+--or--
 0.0042 ETH
 ```
 
-La cuenta de Bob será debitada con **-1.0042 ETH** (1 ETH para Alice + 0.0042 ETH en tarifas de gas).
+La cuenta de Bob será debitada con **-1.0042 ETH** (1 ETH para Alice + 0.0042 ETH en tarifas de gas)
 
-La cuenta de Alice será acreditada con **+1.0 ETH**.
+La cuenta de Alice será acreditada con **+1.0 ETH**
 
-La tarifa base será quemada **-0.00399 ETH**.
+La tarifa base se quemará **-0.00399 ETH**
 
-El validador se queda con la tarifa de prioridad **+0.000210 ETH**.
+El validador se queda con la tarifa de prioridad **+0.000210 ETH**
 
-
-![Diagram showing how unused gas is refunded](./gas-tx.png)
-_Diagrama adaptado de [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+<GasTxDiagram />
 
 Cualquier gas no utilizado en una transacción se reembolsa a la cuenta del usuario.
 
@@ -225,7 +222,7 @@ Según el valor de `TransactionType`, una transacción se puede clasificar como:
 
 3. **Transacciones de tipo 2**, comúnmente conocidas como transacciones EIP-1559, son transacciones introducidas en [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), en la [actualización London](/ethereum-forks/#london) de Ethereum. Se han convertido en el tipo de transacción estándar en la red Ethereum. Estas transacciones introducen un nuevo mecanismo de mercado de tarifas que mejora la previsibilidad al separar la tarifa de transacción en una tarifa base y una tarifa de prioridad. Comienzan con el byte `0x02` e incluyen campos como `maxPriorityFeePerGas` y `maxFeePerGas`. Las transacciones de tipo 2 son ahora las predeterminadas debido a su flexibilidad y eficiencia, especialmente favorecidas durante períodos de alta congestión de la red por su capacidad para ayudar a los usuarios a administrar las tarifas de transacción de manera más predecible. El valor de TransactionType para estas transacciones es `0x2`.
 
-4. **Transacciones de tipo 3 (blob)** se introdujeron en [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) como parte de la [actualización Dencun](/ethereum-forks/#dencun) de Ethereum. Estas transacciones están diseñadas para manejar datos "blob" (objetos binarios grandes) de manera más eficiente, beneficiando particularmente a los rollup de capa 2 (l2) al proporcionar una forma de publicar datos en la red Ethereum a un costo menor. Las transacciones blob incluyen campos adicionales como `blobVersionedHashes`, `maxFeePerBlobGas` y `blobGasPrice`. Comienzan con el byte `0x03`, y su valor de TransactionType es `0x3`. Las transacciones blob representan una mejora significativa en la disponibilidad de datos y las capacidades de escalado de Ethereum.
+4. **Transacciones de tipo 3 (blob)** se introdujeron en [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) como parte de la [actualización Dencun](/ethereum-forks/#dencun) de Ethereum. Estas transacciones están diseñadas para manejar datos "blob" (objetos binarios grandes) de manera más eficiente, beneficiando particularmente a los rollup de capa 2 (L2) al proporcionar una forma de publicar datos en la red Ethereum a un costo menor. Las transacciones blob incluyen campos adicionales como `blobVersionedHashes`, `maxFeePerBlobGas` y `blobGasPrice`. Comienzan con el byte `0x03`, y su valor de TransactionType es `0x3`. Las transacciones blob representan una mejora significativa en la disponibilidad de datos y las capacidades de escalado de Ethereum.
 
 5. **Transacciones de tipo 4** se introdujeron en [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) como parte de la [actualización Pectra](/roadmap/pectra/) de Ethereum. Estas transacciones están diseñadas para ser compatibles con versiones futuras con la abstracción de cuentas. Permiten que las EOA se comporten temporalmente como cuentas de contrato inteligente sin comprometer su funcionalidad original. Incluyen un parámetro `authorization_list`, que especifica el contrato inteligente al que la EOA delega su autoridad. Después de la transacción, el campo de código de la EOA tendrá la dirección del contrato inteligente delegado.
 

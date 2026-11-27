@@ -1,6 +1,6 @@
 ---
 title: Pon en marcha tu propio nodo de Ethereum
-description: Introducción general a la ejecución de tu propia instancia de un cliente de Ethereum.
+description: "Introducción general a la ejecución de tu propia instancia de un cliente de Ethereum."
 lang: es
 sidebarDepth: 2
 ---
@@ -25,11 +25,11 @@ Para elegir entre las implementaciones de clientes, consulta todos los [clientes
 
 Decide si ejecutar el software en tu propio [hardware o en la nube](#local-vs-cloud), teniendo en cuenta los [requisitos](#requirements) de los clientes.
 
-Después de preparar el entorno, instala los clientes elegidos ya sea con una [interfaz amigable para principiantes](#automatized-setup) o [manualmente](#manual-setup) usando una terminal con opciones avanzadas.
+Después de preparar el entorno, instala los clientes elegidos ya sea con una [interfaz fácil de usar para principiantes](#automatized-setup) o [manualmente](#manual-setup) usando una terminal con opciones avanzadas.
 
-Cuando el nodo esté en funcionamiento y sincronizando, estarás listo para [usarlo](#using-the-node), pero asegúrate de vigilar su [mantenimiento](#operating-the-node).
+Cuando el nodo esté en funcionamiento y sincronizando, estarás listo para [usarlo](#using-the-node), pero asegúrate de estar atento a su [mantenimiento](#operating-the-node).
 
-![Configuración del cliente](./diagram.png)
+<ClientSetupDiagram />
 
 ### Entorno y hardware {#environment-and-hardware}
 
@@ -79,31 +79,32 @@ Todos los clientes son compatibles con los principales sistemas operativos: Linu
 
 - CPU con 2 o más núcleos
 - 16 GB de RAM (se recomiendan 32 GB para mayor estabilidad)
-- SSD NVMe de 2 TB (probablemente se supere para 2027, lee más sobre [SSD excelentes y menos excelentes para nodos de Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
-- Ancho de banda de más de 25 MBit/s
+- SSD NVMe de 4 TB (cubre un nodo con el historial completo de la cadena más espacio para crecer, consulta los tamaños de disco de los clientes a continuación; lee más sobre [SSD excelentes y no tan excelentes para nodos de Ethereum](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038))
+- Ancho de banda de 25+ MBit/s
 
 ##### Especificaciones recomendadas
 
-La guía de hardware actual para los operadores de nodos se identifica en [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Para un nodo completo se recomienda:
+La guía de hardware actual para los operadores de nodos se identifica en la [EIP-7870](https://eips.ethereum.org/EIPS/eip-7870). Para un nodo completo, recomienda:
 
 - CPU rápida con 4 o más núcleos (8 o más núcleos si se está validando)
 - 32 GB de RAM (se recomiendan 64 GB si se está validando para garantizar la estabilidad)
 - SSD NVMe de 4 TB (se desaconsejan las unidades sin DRAM y QLC)
-- Ancho de banda de 50 MBit/s de bajada / más de 15 MBit/s de subida (más de 25 MBit/s de subida si se está validando)
+- Ancho de banda de 50 MBit/s de bajada / 15+ MBit/s de subida (25+ MBit/s de subida si se está validando)
 
-El modo de sincronización y el cliente que elijas afectarán los requisitos de espacio, pero hemos estimado el espacio en disco que necesitarás para cada cliente a continuación.
+El modo de sincronización y el cliente que elijas afectarán los requisitos de espacio, pero a continuación hemos estimado el espacio en disco que necesitarás para cada cliente.
 
-| Cliente    | Tamaño en disco (sincronización rápida) | Tamaño en disco (archivo completo) |
-| ---------- | --------------------------------------- | ---------------------------------- |
-| Besu       | 800GB+                                  | 12TB+                              |
-| Erigon     | N/A                                     | 2.5TB+                             |
-| Geth       | 500GB+                                  | 12TB+                              |
-| Nethermind | 500GB+                                  | 12TB+                              |
-| Reth       | N/A                                     | 2.2TB+                             |
+| Cliente    | Tamaño en disco (nodo completo) | Tamaño en disco (archivo completo) |
+| ---------- | ------------------------------- | ---------------------------------- |
+| Besu       | 1.8TB+                          | 12TB+                              |
+| Erigon     | 1.7TB+                          | 2.7TB+                             |
+| Geth       | 1.8TB+                          | 2TB+                               |
+| Nethermind | 1.7TB+                          | 14TB+                              |
+| Reth       | 2.2TB+                          | 2.8TB+                             |
 
-- Nota: Erigon y Reth no ofrecen sincronización rápida (snap sync), pero es posible la poda completa (~2TB para Erigon, ~1.2TB para Reth)
+- Nota: Los tamaños de los nodos completos mantienen el historial completo de la cadena y fueron medidos en septiembre de 2026 por [Eth Docker](https://ethdocker.com/Usage/ResourceUsage). Los clientes que admiten la expiración del historial necesitan menos: alrededor de 1.2-1.4 TB solo con el historial posterior a La Fusión, o alrededor de 400-650 GB con expiración continua (aún no compatible con Geth).
+- Nota: Los tamaños de archivo provienen de la documentación de cada cliente ([Besu](https://docs.besu-eth.org/public-networks/concepts/data-storage-formats), [Erigon](https://docs.erigon.tech/get-started/hardware-requirements), [Geth](https://geth.ethereum.org/docs/fundamentals/archive), [Nethermind](https://docs.nethermind.io/get-started/system-requirements), [Reth](https://reth.rs/run/system-requirements)). La cifra de Geth es para su archivo basado en rutas; mantener también el historial del trie ocupa alrededor de 6.5 TB. La cifra de Nethermind data de julio de 2023 y ha crecido desde entonces.
 
-Para los clientes de consenso, el requisito de espacio también depende de la implementación del cliente y de las características habilitadas (por ejemplo, el penalizador del validador), pero generalmente cuenta con otros 200 GB necesarios para los datos de la baliza. Con un gran número de validadores, la carga de ancho de banda también crece. Puedes encontrar [detalles sobre los requisitos del cliente de consenso en este análisis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Para los clientes de consenso, el requisito de espacio también depende de la implementación del cliente y de las características habilitadas (por ejemplo, el penalizador del validador), pero generalmente cuenta con otros 15-90 GB para los datos de la baliza, más alrededor de 500 GB de datos de blob si se ejecuta un supernodo. Con una gran cantidad de validadores, la carga de ancho de banda también crece. Puedes encontrar [detalles sobre los requisitos de los clientes de consenso en este análisis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Soluciones listas para usar (Plug-and-play) {#plug-and-play}
 
@@ -459,7 +460,7 @@ Cada implementación de cliente tiene una cadena de versión legible por humanos
 
 #### Ejecutar servicios adicionales {#running-additional-services}
 
-Ejecutar tu propio nodo te permite usar servicios que requieren acceso directo al RPC del cliente de Ethereum. Estos son servicios construidos sobre Ethereum como [soluciones de capa 2 (l2)](/developers/docs/scaling/#layer-2-scaling), backend para billeteras, exploradores de bloques, herramientas para desarrolladores y otra infraestructura de Ethereum.
+Ejecutar tu propio nodo te permite usar servicios que requieren acceso directo al RPC del cliente de Ethereum. Estos son servicios construidos sobre Ethereum como [soluciones de capa 2 (L2)](/developers/docs/scaling/#layer-2-scaling), backend para billeteras, exploradores de bloques, herramientas para desarrolladores y otra infraestructura de Ethereum.
 
 #### Monitorear el nodo {#monitoring-the-node}
 

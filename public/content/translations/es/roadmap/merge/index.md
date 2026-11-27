@@ -1,10 +1,10 @@
 ---
 title: "La Fusión"
-description: "Aprenda sobre La Fusión: cuando la red principal de Ethereum adoptó la prueba de participación."
+description: "Aprenda sobre La Fusión, cuando la red principal de Ethereum pasó de la prueba de trabajo a la prueba de participación en septiembre de 2022, reduciendo su consumo de energía en aproximadamente un 99.95 %."
 lang: es
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
+alt:
 summaryPoints:
   - "La red principal de Ethereum utiliza la prueba de participación, pero esto no siempre fue así."
   - "La actualización del mecanismo original de prueba de trabajo a la prueba de participación se llamó La Fusión."
@@ -125,17 +125,17 @@ La Fusión también preparó el escenario para futuras actualizaciones de escala
 title="Concepto erróneo: &quot;Ejecutar un nodo requiere hacer staking de 32 ETH.&quot;"
 contentPreview="Falso. Cualquiera es libre de sincronizar su propia copia autoverificada de Ethereum (es decir, ejecutar un nodo). No se requiere ETH: ni antes de La Fusión, ni después de La Fusión, ni nunca.">
 
-Hay dos tipos de nodos de Ethereum: nodos que pueden proponer bloques y nodos que no.
+Hay dos tipos de nodos de Ethereum: los nodos que pueden proponer bloques y los nodos que no.
 
-Los nodos que proponen bloques son solo un pequeño número del total de nodos en Ethereum. Esta categoría incluye nodos de minería bajo la prueba de trabajo (PoW) y nodos validadores bajo la prueba de participación (PoS). Esta categoría requiere comprometer recursos económicos (como el poder de hash de la GPU en la prueba de trabajo o ETH en staking en la prueba de participación) a cambio de la capacidad de proponer ocasionalmente el siguiente bloque y ganar recompensas del protocolo.
+Los nodos que proponen bloques son solo una pequeña cantidad del total de nodos en Ethereum. Esta categoría incluye nodos de minería bajo la prueba de trabajo (PoW) y nodos validadores bajo la prueba de participación (PoS). Esta categoría requiere comprometer recursos económicos (como el poder de hash de la GPU en la prueba de trabajo o ETH en staking en la prueba de participación) a cambio de la capacidad de proponer ocasionalmente el siguiente bloque y ganar recompensas del protocolo.
 
-Los otros nodos de la red (es decir, la mayoría) no están obligados a comprometer ningún recurso económico más allá de una computadora de nivel de consumidor con 1-2 TB de almacenamiento disponible y una conexión a Internet. Estos nodos no proponen bloques, pero aún cumplen un papel fundamental en la seguridad de la red al responsabilizar a todos los proponentes de bloques al escuchar nuevos bloques y verificar su validez a su llegada de acuerdo con las reglas de consenso de la red. Si el bloque es válido, el nodo continúa propagándolo a través de la red. Si el bloque es inválido por cualquier motivo, el software del nodo lo descartará como inválido y detendrá su propagación.
+A los otros nodos de la red (es decir, la mayoría) no se les exige comprometer ningún recurso económico más allá de una computadora de nivel de consumidor con 4 TB de almacenamiento disponible y una conexión a Internet. Estos nodos no proponen bloques, pero aun así cumplen un papel fundamental en la seguridad de la red al responsabilizar a todos los proponentes de bloques, escuchando los nuevos bloques y verificando su validez a su llegada de acuerdo con las reglas de consenso de la red. Si el bloque es válido, el nodo continúa propagándolo por la red. Si el bloque es inválido por cualquier motivo, el software del nodo lo descartará como inválido y detendrá su propagación.
 
 Ejecutar un nodo que no produce bloques es posible para cualquier persona bajo cualquier mecanismo de consenso (prueba de trabajo o prueba de participación); se <em>recomienda encarecidamente</em> a todos los usuarios si tienen los medios. Ejecutar un nodo es inmensamente valioso para Ethereum y brinda beneficios adicionales a cualquier individuo que ejecute uno, como una mayor seguridad, privacidad y resistencia a la censura.
 
-La capacidad de que cualquier persona ejecute su propio nodo es <em>absolutamente esencial</em> para mantener la descentralización de la red Ethereum.
+La capacidad de que cualquier persona ejecute su propio nodo es <em>absolutamente esencial</em> para mantener la descentralización de la red de Ethereum.
 
-[Más sobre cómo ejecutar su propio nodo](/run-a-node/)
+[Más información sobre cómo ejecutar su propio nodo](/run-a-node/)
 
 </ExpandableCard>
 
@@ -145,43 +145,43 @@ contentPreview="Falso. La Fusión fue un cambio de mecanismo de consenso, no una
 
 Las tarifas de gas son un producto de la demanda de la red en relación con la capacidad de la red. La Fusión desaprobó el uso de la prueba de trabajo, haciendo la transición a la prueba de participación para el consenso, pero no cambió significativamente ningún parámetro que influya directamente en la capacidad de la red o la capacidad de procesamiento.
 
-Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">hoja de ruta centrada en los rollups</a>, los esfuerzos se centran en escalar la actividad del usuario en la [capa 2 (l2)](/layer-2/), al tiempo que se habilita la red principal de capa 1 (l1) como una capa de liquidación descentralizada segura optimizada para el almacenamiento de datos de rollup para ayudar a que las transacciones de rollup sean exponencialmente más baratas. La transición a la prueba de participación es un precursor crítico para lograr esto. [Más sobre el gas y las tarifas.](/developers/docs/gas/)
+Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">hoja de ruta centrada en los rollups</a>, los esfuerzos se centran en escalar la actividad del usuario en la [capa 2](/layer-2/), al tiempo que se habilita la red principal de capa 1 como una capa de liquidación descentralizada y segura optimizada para el almacenamiento de datos de los rollups para ayudar a que las transacciones de los rollups sean exponencialmente más baratas. La transición a la prueba de participación es un precursor crítico para lograr esto. [Más información sobre el gas y las tarifas.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Concepto erróneo: &quot;Las transacciones se aceleraron sustancialmente con La Fusión.&quot;"
-contentPreview="Falso. Aunque existen algunos cambios leves, la velocidad de las transacciones es prácticamente la misma en la capa 1 ahora que antes de La Fusión.">
+contentPreview="Falso. Aunque existen algunos cambios leves, la velocidad de las transacciones es en su mayoría la misma en la capa 1 ahora que antes de La Fusión.">
 La "velocidad" de una transacción se puede medir de varias maneras, incluido el tiempo para ser incluida en un bloque y el tiempo hasta la finalización. Ambos cambian ligeramente, pero no de una manera que los usuarios noten.
 
-Históricamente, en la prueba de trabajo, el objetivo era tener un nuevo bloque cada ~13.3 segundos. Bajo la prueba de participación, los slots ocurren precisamente cada 12 segundos, cada uno de los cuales es una oportunidad para que un validador publique un bloque. La mayoría de los slots tienen bloques, pero no necesariamente todos (es decir, un validador está fuera de línea). En la prueba de participación, los bloques se producen un ~10 % más frecuentemente que en la prueba de trabajo. Este fue un cambio bastante insignificante y es poco probable que los usuarios lo noten.
+Históricamente, en la prueba de trabajo, el objetivo era tener un nuevo bloque cada ~13.3 segundos. Bajo la prueba de participación, los slots ocurren exactamente cada 12 segundos, cada uno de los cuales es una oportunidad para que un validador publique un bloque. La mayoría de los slots tienen bloques, pero no necesariamente todos (es decir, un validador está desconectado). En la prueba de participación, los bloques se producen con una frecuencia ~10 % mayor que en la prueba de trabajo. Este fue un cambio bastante insignificante y es poco probable que los usuarios lo noten.
 
-La prueba de participación introdujo el concepto de finalidad de la transacción que no existía anteriormente. En la prueba de trabajo, la capacidad de revertir un bloque se vuelve exponencialmente más difícil con cada bloque extraído sobre una transacción, pero nunca llega a cero. Bajo la prueba de participación, los bloques se agrupan en épocas (períodos de tiempo de 6.4 minutos que contienen 32 oportunidades para bloques) sobre las cuales los validadores emiten su voto. Cuando termina una época, los validadores votan sobre si considerar la época 'justificada'. Si los validadores acuerdan justificar la época, se finaliza en la siguiente época. Deshacer transacciones finalizadas es económicamente inviable, ya que requeriría obtener y quemar más de un tercio del total de ETH en staking.
+La prueba de participación introdujo el concepto de finalidad de la transacción que no existía anteriormente. En la prueba de trabajo, la capacidad de revertir un bloque se vuelve exponencialmente más difícil con cada bloque minado sobre una transacción, pero nunca llega a cero. Bajo la prueba de participación, los bloques se agrupan en épocas (lapsos de tiempo de 6.4 minutos que contienen 32 oportunidades para bloques) sobre las cuales los validadores emiten su voto. Cuando termina una época, los validadores votan si consideran que la época está 'justificada'. Si los validadores acuerdan justificar la época, se finaliza en la siguiente época. Deshacer transacciones finalizadas es económicamente inviable, ya que requeriría obtener y quemar más de un tercio del total de ETH en staking.
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Concepto erróneo: &quot;La Fusión habilitó los retiros de staking.&quot;"
-contentPreview="Falso, pero los retiros de staking se han habilitado desde entonces mediante la actualización Shanghái/Capella.">
+contentPreview="Falso, pero los retiros de staking se han habilitado desde entonces a través de la actualización de Shanghái/Capella.">
 
-Inicialmente después de La Fusión, los stakers solo podían acceder a las propinas de tarifas y al MEV que se ganaban como resultado de las propuestas de bloques. Estas recompensas se acreditan a una cuenta que no es de staking controlada por el validador (conocida como el <em>destinatario de la tarifa</em>), y están disponibles de inmediato. Estas recompensas están separadas de las recompensas del protocolo por realizar las tareas del validador.
+Inicialmente después de La Fusión, los stakers solo podían acceder a las propinas de las tarifas y al MEV que se ganaban como resultado de las propuestas de bloques. Estas recompensas se acreditan a una cuenta que no es de staking controlada por el validador (conocida como el <em>receptor de tarifas</em>), y están disponibles de inmediato. Estas recompensas son independientes de las recompensas del protocolo por realizar las tareas del validador.
 
-Desde la actualización de la red Shanghái/Capella, los stakers ahora pueden designar una <em>dirección de retiro</em> para comenzar a recibir pagos automáticos de cualquier saldo de staking excedente (ETH por encima de 32 de las recompensas del protocolo). Esta actualización también habilitó la capacidad de un validador para desbloquear y reclamar todo su saldo al salir de la red.
+Desde la actualización de la red de Shanghái/Capella, los stakers ahora pueden designar una <em>dirección de retiro</em> para comenzar a recibir pagos automáticos de cualquier exceso de saldo de staking (ETH por encima de 32 de las recompensas del protocolo). Esta actualización también habilitó la capacidad de un validador para desbloquear y reclamar todo su saldo al salir de la red.
 
-[Más sobre los retiros de staking](/staking/withdrawals/)
+[Más información sobre los retiros de staking](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Concepto erróneo: &quot;Ahora que La Fusión está completa y los retiros están habilitados, todos los stakers podrían salir a la vez.&quot;"
-contentPreview="Falso. Las salidas de validadores están limitadas por frecuencia por razones de seguridad.">
-Dado que la actualización Shanghái/Capella habilitó los retiros, los validadores están incentivados a retirar su saldo de staking por encima de 32 ETH, ya que estos fondos no se suman al rendimiento y de otro modo estarían bloqueados. Dependiendo del APR (determinado por el total de ETH en staking), pueden estar incentivados a salir de su(s) validador(es) para reclamar todo su saldo o potencialmente hacer staking de aún más utilizando sus recompensas para ganar más rendimiento.
+contentPreview="Falso. Las salidas de los validadores tienen una tasa limitada por razones de seguridad.">
+Dado que la actualización de Shanghái/Capella habilitó los retiros, los validadores están incentivados a retirar su saldo de staking por encima de 32 ETH, ya que estos fondos no aumentan el rendimiento y, de lo contrario, estarían bloqueados. Dependiendo del APR (determinado por el total de ETH en staking), pueden estar incentivados a salir de su(s) validador(es) para reclamar todo su saldo o potencialmente hacer aún más staking utilizando sus recompensas para ganar más rendimiento.
 
-Una advertencia importante aquí, las salidas completas de validadores están limitadas en tasa por el protocolo, y solo un número determinado de validadores puede salir por época (cada 6.4 minutos). Este límite fluctúa dependiendo del número de validadores activos, pero resulta en que aproximadamente el 0.33 % del total de ETH en staking puede salir de la red en un solo día.
+Una advertencia importante aquí es que las salidas completas de los validadores tienen una tasa limitada por el protocolo, y solo un número determinado de validadores puede salir por época (cada 6.4 minutos). Este límite fluctúa dependiendo del número de validadores activos, pero resulta en que aproximadamente el 0.33 % del total de ETH en staking puede salir de la red en un solo día.
 
-Esto evita un éxodo masivo de fondos en staking. Además, evita que un atacante potencial con acceso a una gran parte del total de ETH en staking cometa una ofensa sujeta a recorte y salga/retire todos los saldos de los validadores infractores en la misma época antes de que el protocolo pueda aplicar la penalización de recorte.
+Esto evita un éxodo masivo de fondos en staking. Además, evita que un atacante potencial con acceso a una gran parte del total de ETH en staking cometa una infracción sujeta a recorte y salga/retire todos los saldos de los validadores infractores en la misma época antes de que el protocolo pueda aplicar la penalización de recorte.
 
-El APR también es intencionalmente dinámico, lo que permite que un mercado de stakers equilibre cuánto están dispuestos a que se les pague para ayudar a asegurar la red. Si la tasa es demasiado baja, entonces los validadores saldrán a una tasa limitada por el protocolo. Gradualmente, esto aumentará el APR para todos los que permanezcan, atrayendo a stakers nuevos o que regresan una vez más.
+El APR también es intencionalmente dinámico, lo que permite que un mercado de stakers equilibre cuánto están dispuestos a que se les pague para ayudar a asegurar la red. Si la tasa es demasiado baja, los validadores saldrán a una tasa limitada por el protocolo. Gradualmente, esto aumentará el APR para todos los que permanezcan, atrayendo a stakers nuevos o recurrentes una vez más.
 </ExpandableCard>
 
 ## ¿Qué pasó con 'Eth2'? {#eth2}
@@ -219,9 +219,9 @@ Para los curiosos, obtenga más información sobre [Qué sucede después de La F
 
 ### La Fusión y la cadena de fragmentos {#merge-and-data-sharding}
 
-Originalmente, el plan era trabajar en la cadena de fragmentos antes de La Fusión para abordar la escalabilidad. Sin embargo, con el auge de las [soluciones de escalado de capa 2 (l2)](/layer-2/), la prioridad cambió a cambiar la prueba de trabajo a la prueba de participación primero.
+Originalmente, el plan era trabajar en la cadena de fragmentos antes de La Fusión para abordar la escalabilidad. Sin embargo, con el auge de las [soluciones de escalado de capa 2 (L2)](/layer-2/), la prioridad cambió a cambiar la prueba de trabajo a la prueba de participación primero.
 
-Los planes para la cadena de fragmentos están evolucionando rápidamente, pero dado el aumento y el éxito de las tecnologías de capa 2 (l2) para escalar la ejecución de transacciones, los planes de la cadena de fragmentos han cambiado a encontrar la forma más óptima de distribuir la carga de almacenar datos de llamada comprimidos de los contratos de rollup, lo que permite un crecimiento exponencial en la capacidad de la red. Esto no sería posible sin antes hacer la transición a la prueba de participación.
+Los planes para la cadena de fragmentos están evolucionando rápidamente, pero dado el aumento y el éxito de las tecnologías de capa 2 (L2) para escalar la ejecución de transacciones, los planes de la cadena de fragmentos han cambiado a encontrar la forma más óptima de distribuir la carga de almacenar datos de llamada comprimidos de los contratos de rollup, lo que permite un crecimiento exponencial en la capacidad de la red. Esto no sería posible sin antes hacer la transición a la prueba de participación.
 
 <ButtonLink href="/roadmap/danksharding/">
   Cadena de fragmentos
